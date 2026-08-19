@@ -1,26 +1,26 @@
 "use strict";
-n.d(t, { I: () => c, h: () => u });
+n.d(t, { I: () => c, h: () => d });
 var i = n(17928),
     r = n(775602),
-    s = n(885386),
-    a = n(531685),
-    o = n(652215);
-function l(e, t, n) {
+    a = n(885386),
+    s = n(531685),
+    l = n(652215);
+function o(e, t, n) {
     var i;
     return (
-        (i = Math.ceil(1.05 * Math.ceil(e / ((t ? 65 : 91) * (n / o.hH7.FONT_SIZE_DEFAULT))))),
-        Math.max(10, Math.min(o.EMb, i))
+        (i = Math.ceil(1.05 * Math.ceil(e / ((t ? 65 : 91) * (n / l.hH7.FONT_SIZE_DEFAULT))))),
+        Math.max(10, Math.min(l.EMb, i))
     );
 }
-function u() {
+function d() {
     arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-    let e = Math.max(a.A.windowSize().height - 145, 400),
+    let e = Math.max(s.A.windowSize().height - 145, 400),
         t = r.Ay.fontSize;
-    return l(e, s.hH.getSetting(), t);
+    return o(e, a.hH.getSetting(), t);
 }
 function c(e, t) {
-    return l(
-        (0, i.bG)([a.A], () => Math.max(a.A.windowSize().height - 145, 400)),
+    return o(
+        (0, i.bG)([s.A], () => Math.max(s.A.windowSize().height - 145, 400)),
         e,
         t,
     );

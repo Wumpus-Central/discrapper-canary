@@ -1,73 +1,73 @@
 "use strict";
-n.d(t, { A: () => h }), n(321073);
+n.d(t, { A: () => E }), n(321073);
 var i = n(439372),
     r = n(736056),
-    s = n(710195),
-    a = n(967198),
-    o = n(38405);
-function l(e, t) {
+    a = n(710195),
+    s = n(967198),
+    l = n(38405);
+function o(e, t) {
     if (null == e) return !0;
     let n = e.variations[t];
     return null == n || JSON.stringify(n) === JSON.stringify(e.defaultConfig);
 }
-let u = new Set();
+let d = new Set();
 function c(e, t) {
-    for (let n of (e.sort(), e)) o.A.addFeatureFlag(n, !0), t?.add(n);
+    for (let n of (e.sort(), e)) l.A.addFeatureFlag(n, !0), t?.add(n);
 }
-function d() {
-    for (let e of u) o.A.addFeatureFlag(e, !1);
-    u.clear();
+function u() {
+    for (let e of d) l.A.addFeatureFlag(e, !1);
+    d.clear();
     let e = [],
         t = [],
         n = [],
         i = [],
-        d = [],
+        u = [],
         _ = [],
-        h = a.A.getGuildId(),
-        f = r.A.getAllExperimentAssignments();
-    for (let n in f) {
-        let i = f[n];
+        E = s.A.getGuildId(),
+        A = r.A.getAllExperimentAssignments();
+    for (let n in A) {
+        let i = A[n];
         null != i &&
             !(i <= 0) &&
             (n.includes(":")
-                ? null != h && n.startsWith(`${h}:`) && t.push(`${n.split(":")[1]}:${i}`)
+                ? null != E && n.startsWith(`${E}:`) && t.push(`${n.split(":")[1]}:${i}`)
                 : e.push(`${n}:${i}`));
     }
-    let p = s.A.getRegisteredExperiments(),
-        E = (function () {
-            let e = s.A.getRegisteredExperiments(),
+    let h = a.A.getRegisteredExperiments(),
+        I = (function () {
+            let e = a.A.getRegisteredExperiments(),
                 t = {};
-            for (let n in e) t[s.A.getHash(n)] = n;
+            for (let n in e) t[a.A.getHash(n)] = n;
             return t;
         })(),
-        { evaluatedExperiments: m } = s.A.getState();
+        { evaluatedExperiments: f } = a.A.getState();
     for (let e of ["user", "installation"])
-        for (let t in m?.[e]) {
-            let { assignments: i } = m[e]?.[t] ?? {};
+        for (let t in f?.[e]) {
+            let { assignments: i } = f[e]?.[t] ?? {};
             for (let e in i) {
-                let t = E[e];
+                let t = I[e];
                 if (null == t) continue;
                 let { variantId: r } = i[e];
                 if (null == r) continue;
-                let s = `${t}:${r}`;
-                (l(p[t], r) ? n : d).push(s);
+                let a = `${t}:${r}`;
+                (o(h[t], r) ? n : u).push(a);
             }
         }
-    if (null != h) {
-        let e = m?.guild?.[h];
+    if (null != E) {
+        let e = f?.guild?.[E];
         if (null != e)
             for (let t in e.assignments) {
-                let n = E[t];
+                let n = I[t];
                 if (null == n) continue;
                 let { variantId: r } = e.assignments[t];
                 if (null == r) continue;
-                let s = `${n}:${r}`;
-                (l(p[n], r) ? i : _).push(s);
+                let a = `${n}:${r}`;
+                (o(h[n], r) ? i : _).push(a);
             }
     }
-    c(e), c(t, u), c(n), c(i, u), c(d), c(_, u);
+    c(e), c(t, d), c(n), c(i, d), c(u), c(_, d);
 }
 class _ extends i.A {
-    stores = new Map().set(r.A, d).set(s.A, d).set(a.A, d);
+    stores = new Map().set(r.A, u).set(a.A, u).set(s.A, u);
 }
-let h = new _();
+let E = new _();

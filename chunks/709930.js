@@ -1,20 +1,20 @@
 "use strict";
-var i = n(626800),
-    r = n(133491),
-    s = n(356681),
-    a = n(634587);
-function o(e) {
+var n = r(626800),
+    o = r(133491),
+    i = r(356681),
+    a = r(634587);
+function s(e) {
     return e.call.bind(e);
 }
 var l = "u" > typeof BigInt,
     u = "u" > typeof Symbol,
-    c = o(Object.prototype.toString),
-    d = o(Number.prototype.valueOf),
-    _ = o(String.prototype.valueOf),
-    h = o(Boolean.prototype.valueOf);
-if (l) var f = o(BigInt.prototype.valueOf);
-if (u) var p = o(Symbol.prototype.valueOf);
-function E(e, t) {
+    c = s(Object.prototype.toString),
+    f = s(Number.prototype.valueOf),
+    p = s(String.prototype.valueOf),
+    d = s(Boolean.prototype.valueOf);
+if (l) var h = s(BigInt.prototype.valueOf);
+if (u) var m = s(Symbol.prototype.valueOf);
+function v(e, t) {
     if ("object" != typeof e) return !1;
     try {
         return t(e), !0;
@@ -22,32 +22,32 @@ function E(e, t) {
         return !1;
     }
 }
-function m(e) {
+function y(e) {
     return "[object Map]" === c(e);
 }
 function g(e) {
     return "[object Set]" === c(e);
 }
-function A(e) {
+function b(e) {
     return "[object WeakMap]" === c(e);
 }
-function I(e) {
+function w(e) {
     return "[object WeakSet]" === c(e);
 }
-function T(e) {
+function _(e) {
     return "[object ArrayBuffer]" === c(e);
 }
 function S(e) {
-    return !("u" < typeof ArrayBuffer) && (T.working ? T(e) : e instanceof ArrayBuffer);
+    return !("u" < typeof ArrayBuffer) && (_.working ? _(e) : e instanceof ArrayBuffer);
 }
-function y(e) {
+function E(e) {
     return "[object DataView]" === c(e);
 }
-function C(e) {
-    return !("u" < typeof DataView) && (y.working ? y(e) : e instanceof DataView);
+function x(e) {
+    return !("u" < typeof DataView) && (E.working ? E(e) : e instanceof DataView);
 }
-(t.isArgumentsObject = i),
-    (t.isGeneratorFunction = r),
+(t.isArgumentsObject = n),
+    (t.isGeneratorFunction = o),
     (t.isTypedArray = a),
     (t.isPromise = function (e) {
         return (
@@ -56,84 +56,84 @@ function C(e) {
         );
     }),
     (t.isArrayBufferView = function (e) {
-        return "u" > typeof ArrayBuffer && ArrayBuffer.isView ? ArrayBuffer.isView(e) : a(e) || C(e);
+        return "u" > typeof ArrayBuffer && ArrayBuffer.isView ? ArrayBuffer.isView(e) : a(e) || x(e);
     }),
     (t.isUint8Array = function (e) {
-        return "Uint8Array" === s(e);
+        return "Uint8Array" === i(e);
     }),
     (t.isUint8ClampedArray = function (e) {
-        return "Uint8ClampedArray" === s(e);
+        return "Uint8ClampedArray" === i(e);
     }),
     (t.isUint16Array = function (e) {
-        return "Uint16Array" === s(e);
+        return "Uint16Array" === i(e);
     }),
     (t.isUint32Array = function (e) {
-        return "Uint32Array" === s(e);
+        return "Uint32Array" === i(e);
     }),
     (t.isInt8Array = function (e) {
-        return "Int8Array" === s(e);
+        return "Int8Array" === i(e);
     }),
     (t.isInt16Array = function (e) {
-        return "Int16Array" === s(e);
+        return "Int16Array" === i(e);
     }),
     (t.isInt32Array = function (e) {
-        return "Int32Array" === s(e);
+        return "Int32Array" === i(e);
     }),
     (t.isFloat32Array = function (e) {
-        return "Float32Array" === s(e);
+        return "Float32Array" === i(e);
     }),
     (t.isFloat64Array = function (e) {
-        return "Float64Array" === s(e);
+        return "Float64Array" === i(e);
     }),
     (t.isBigInt64Array = function (e) {
-        return "BigInt64Array" === s(e);
+        return "BigInt64Array" === i(e);
     }),
     (t.isBigUint64Array = function (e) {
-        return "BigUint64Array" === s(e);
+        return "BigUint64Array" === i(e);
     }),
-    (m.working = "u" > typeof Map && m(new Map())),
+    (y.working = "u" > typeof Map && y(new Map())),
     (t.isMap = function (e) {
-        return !("u" < typeof Map) && (m.working ? m(e) : e instanceof Map);
+        return !("u" < typeof Map) && (y.working ? y(e) : e instanceof Map);
     }),
     (g.working = "u" > typeof Set && g(new Set())),
     (t.isSet = function (e) {
         return !("u" < typeof Set) && (g.working ? g(e) : e instanceof Set);
     }),
-    (A.working = "u" > typeof WeakMap && A(new WeakMap())),
+    (b.working = "u" > typeof WeakMap && b(new WeakMap())),
     (t.isWeakMap = function (e) {
-        return !("u" < typeof WeakMap) && (A.working ? A(e) : e instanceof WeakMap);
+        return !("u" < typeof WeakMap) && (b.working ? b(e) : e instanceof WeakMap);
     }),
-    (I.working = "u" > typeof WeakSet && I(new WeakSet())),
+    (w.working = "u" > typeof WeakSet && w(new WeakSet())),
     (t.isWeakSet = function (e) {
-        return I(e);
+        return w(e);
     }),
-    (T.working = "u" > typeof ArrayBuffer && T(new ArrayBuffer())),
+    (_.working = "u" > typeof ArrayBuffer && _(new ArrayBuffer())),
     (t.isArrayBuffer = S),
-    (y.working = "u" > typeof ArrayBuffer && "u" > typeof DataView && y(new DataView(new ArrayBuffer(1), 0, 1))),
-    (t.isDataView = C);
-var N = "u" > typeof SharedArrayBuffer ? SharedArrayBuffer : void 0;
-function v(e) {
+    (E.working = "u" > typeof ArrayBuffer && "u" > typeof DataView && E(new DataView(new ArrayBuffer(1), 0, 1))),
+    (t.isDataView = x);
+var k = "u" > typeof SharedArrayBuffer ? SharedArrayBuffer : void 0;
+function C(e) {
     return "[object SharedArrayBuffer]" === c(e);
 }
-function R(e) {
-    return void 0 !== N && (void 0 === v.working && (v.working = v(new N())), v.working ? v(e) : e instanceof N);
+function T(e) {
+    return void 0 !== k && (void 0 === C.working && (C.working = C(new k())), C.working ? C(e) : e instanceof k);
+}
+function M(e) {
+    return v(e, f);
+}
+function P(e) {
+    return v(e, p);
+}
+function A(e) {
+    return v(e, d);
 }
 function O(e) {
-    return E(e, d);
+    return l && v(e, h);
 }
-function b(e) {
-    return E(e, _);
+function I(e) {
+    return u && v(e, m);
 }
-function D(e) {
-    return E(e, h);
-}
-function L(e) {
-    return l && E(e, f);
-}
-function w(e) {
-    return u && E(e, p);
-}
-(t.isSharedArrayBuffer = R),
+(t.isSharedArrayBuffer = T),
     (t.isAsyncFunction = function (e) {
         return "[object AsyncFunction]" === c(e);
     }),
@@ -149,16 +149,16 @@ function w(e) {
     (t.isWebAssemblyCompiledModule = function (e) {
         return "[object WebAssembly.Module]" === c(e);
     }),
-    (t.isNumberObject = O),
-    (t.isStringObject = b),
-    (t.isBooleanObject = D),
-    (t.isBigIntObject = L),
-    (t.isSymbolObject = w),
+    (t.isNumberObject = M),
+    (t.isStringObject = P),
+    (t.isBooleanObject = A),
+    (t.isBigIntObject = O),
+    (t.isSymbolObject = I),
     (t.isBoxedPrimitive = function (e) {
-        return O(e) || b(e) || D(e) || L(e) || w(e);
+        return M(e) || P(e) || A(e) || O(e) || I(e);
     }),
     (t.isAnyArrayBuffer = function (e) {
-        return "u" > typeof Uint8Array && (S(e) || R(e));
+        return "u" > typeof Uint8Array && (S(e) || T(e));
     }),
     ["isProxy", "isExternal", "isModuleNamespaceObject"].forEach(function (e) {
         Object.defineProperty(t, e, {

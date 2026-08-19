@@ -1,26 +1,26 @@
 "use strict";
-n.d(t, { A: () => a });
-var i = n(627968),
+n.d(t, { A: () => s });
+var i = n(477900),
     r = n(452027),
-    s = n(839610);
-function a(e) {
-    let { checked: t, disabled: n, displayOnly: a, id: o, onChange: l, focusProps: u, hasIcon: c = !1, ...d } = e;
-    return a
-        ? (0, i.jsx)(s.I, { checked: t, disabled: n, displayOnly: !0, hasIcon: c })
+    a = n(489718);
+function s(e) {
+    let { checked: t, disabled: n, displayOnly: s, id: l, onChange: o, focusProps: d, hasIcon: c = !1, ...u } = e;
+    return s
+        ? (0, i.jsx)(a.I, { checked: t, disabled: n, displayOnly: !0, hasIcon: c })
         : (0, i.jsx)(r.D, {
-              ...d,
-              id: o,
+              ...u,
+              id: l,
               disabled: n,
               layout: "horizontal",
               interactiveLabel: !0,
               auxiliaryContentPosition: "under-label",
               children: (e) =>
-                  (0, i.jsx)(s.I, {
-                      focusProps: u,
+                  (0, i.jsx)(a.I, {
+                      focusProps: d,
                       id: e.controlId,
                       checked: t,
                       disabled: n,
-                      onChange: l,
+                      onChange: o,
                       hasIcon: c,
                       describedBy: e.describedById,
                       labelledBy: e.labelId,

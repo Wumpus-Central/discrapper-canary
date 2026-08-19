@@ -6,9 +6,9 @@ var r = n(503698),
     a = n.n(r),
     s = n(607399),
     l = n(259678),
-    o = n(349288),
-    d = n(939249),
-    c = n(789645),
+    o = n(939249),
+    d = n(789645),
+    c = n(349288),
     u = n(174459),
     _ = n(652215),
     E = n(375708),
@@ -47,7 +47,7 @@ function f(e) {
 }
 function p(e) {
     let { children: t, href: n, noticeType: r, ...a } = e;
-    return (0, i.jsx)(o.Anchor, {
+    return (0, i.jsx)(c.Anchor, {
         ...a,
         className: A.x6,
         href: n,
@@ -59,14 +59,14 @@ function p(e) {
 }
 function T(e) {
     let { onClick: t, noticeType: n, className: r } = e;
-    return (0, i.jsx)(d.D, {
+    return (0, i.jsx)(o.D, {
         focusProps: { offset: 6 },
         className: a()(A.b, r),
         onClick: () => {
             t(), null != n && u.default.track(_.HAw.APP_NOTICE_CLOSED, { notice_type: n });
         },
         "aria-label": E.intl.string(E.t.WAI6xu),
-        children: (0, i.jsx)(c.P, { size: "sm", color: "currentColor", className: A.ut }),
+        children: (0, i.jsx)(d.P, { size: "sm", color: "currentColor", className: A.ut }),
     });
 }
 function m(e) {

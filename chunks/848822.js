@@ -7,8 +7,8 @@ var t = {
     transformStyles: function (e) {
         return e;
     },
-    inject: function (e, n) {
-        (t.current = e), (t.transformStyles = n);
+    inject: function (e, r) {
+        (t.current = e), (t.transformStyles = r);
     },
 };
 e.exports = t;

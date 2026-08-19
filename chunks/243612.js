@@ -1,19 +1,19 @@
 "use strict";
-n.d(t, { JH: () => m, VC: () => d, b4: () => f, oQ: () => _, qv: () => h, tg: () => E, xl: () => p });
+n.d(t, { JH: () => f, VC: () => u, b4: () => A, oQ: () => _, qv: () => E, tg: () => I, xl: () => h });
 var i = n(17928),
     r = n(52133),
-    s = n(55730);
-n(313961);
-var a = n(952818);
-n(652896), n(567249), n(616356), n(495544), n(38502);
-var o = n(480595);
+    a = n(55730);
+n(198052);
+var s = n(952818);
+n(652896), n(567249), n(616356), n(280450), n(38502);
+var l = n(480595);
 n(309010);
-var l = n(461213);
+var o = n(461213);
 n(773371);
-var u = n(489277);
+var d = n(489277);
 n(897720), n(644434), n(392164);
 var c = n(652215);
-function d(e, t) {
+function u(e, t) {
     if (e === t) return !0;
     if (e.length !== t.length) return !1;
     for (let n = 0; n < e.length; n++) if (e[n].widget !== t[n].widget) return !1;
@@ -27,41 +27,41 @@ function _(e, t) {
             return !1;
     return !0;
 }
-function h() {
-    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : a.Ay,
-        t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : o.A,
-        n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : u.A,
+function E() {
+    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : s.Ay,
+        t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : l.A,
+        n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : d.A,
         i = n.getTargetPID(),
         r = e.getGameForPID(i),
-        s = t.getActivityForPID(i);
-    return (null == r || null == r.id || null == r.name) && (null == s || null == s.application_id)
+        a = t.getActivityForPID(i);
+    return (null == r || null == r.id || null == r.name) && (null == a || null == a.application_id)
         ? void 0
-        : { id: r?.id ?? s?.application_id, altId: s?.application_id, name: r?.name ?? s?.name };
+        : { id: r?.id ?? a?.application_id, altId: a?.application_id, name: r?.name ?? a?.name };
 }
-function f() {
-    return (0, i.bG)([a.Ay, o.A, u.A], () => h(a.Ay, o.A, u.A), [], r.A);
+function A() {
+    return (0, i.bG)([s.Ay, l.A, d.A], () => E(s.Ay, l.A, d.A), [], r.A);
 }
-function p(e) {
+function h(e) {
     return (0, i.bG)(
-        [l.A, o.A],
+        [o.A, l.A],
         () =>
             (function (e) {
-                let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : l.A,
-                    n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : o.A;
+                let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : o.A,
+                    n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : l.A;
                 return null == e ? null : (t.getApplicationActivity(e, !0) ?? n.getApplicationActivity(e) ?? null);
-            })(e, l.A, o.A),
+            })(e, o.A, l.A),
         [e],
     );
 }
-function E(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : l.A,
+function I(e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : o.A,
         n = t.getActivities(!0);
     return (
-        (null != e ? n.find((t) => (0, s.A)(t, c.jUm.JOIN) && t.application_id === e) : void 0) ??
-        n.find((e) => (0, s.A)(e, c.jUm.JOIN)) ??
+        (null != e ? n.find((t) => (0, a.A)(t, c.jUm.JOIN) && t.application_id === e) : void 0) ??
+        n.find((e) => (0, a.A)(e, c.jUm.JOIN)) ??
         null
     );
 }
-function m(e) {
-    return (0, i.bG)([l.A], () => E(e, l.A), [e]);
+function f(e) {
+    return (0, i.bG)([o.A], () => I(e, o.A), [e]);
 }

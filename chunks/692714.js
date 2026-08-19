@@ -1,5 +1,5 @@
-var i = n(72290);
+var n = r(72290);
 e.exports =
-    "object" == typeof i && i.env && i.env.NODE_DEBUG && /\bsemver\b/i.test(i.env.NODE_DEBUG)
+    "object" == typeof n && n.env && n.env.NODE_DEBUG && /\bsemver\b/i.test(n.env.NODE_DEBUG)
         ? (...e) => console.error("SEMVER", ...e)
         : () => {};

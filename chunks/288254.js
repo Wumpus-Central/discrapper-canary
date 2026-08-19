@@ -1,10 +1,10 @@
 "use strict";
-n.d(t, { BV: () => l, IL: () => u, Uf: () => o });
+n.d(t, { BV: () => o, IL: () => d, Uf: () => l });
 var i = n(17928),
     r = n(734057),
-    s = n(824492);
-function a(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : s.A,
+    a = n(824492);
+function s(e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : a.A,
         n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : r.A;
     if (null == e) return null;
     if (e.isSpoilerChannel()) return t.didAgree(e.id) ? null : e.id;
@@ -14,14 +14,14 @@ function a(e) {
     }
     return null;
 }
-function o(e) {
-    return (0, i.bG)([s.A, r.A], () => a(e, s.A, r.A), [e]);
-}
 function l(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : s.A,
-        n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : r.A;
-    return null != a(e, t, n);
+    return (0, i.bG)([a.A, r.A], () => s(e, a.A, r.A), [e]);
 }
-function u(e) {
-    return (0, i.bG)([s.A, r.A], () => l(e, s.A, r.A), [e]);
+function o(e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : a.A,
+        n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : r.A;
+    return null != s(e, t, n);
+}
+function d(e) {
+    return (0, i.bG)([a.A, r.A], () => o(e, a.A, r.A), [e]);
 }

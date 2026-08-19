@@ -1,21 +1,21 @@
 "use strict";
-r.d(t, { U: () => s });
-var n = r(183580),
-    i = r(26232),
-    o = r(120330),
-    a = r(518375);
-function s(e, t, r) {
+n.d(t, { U: () => u });
+var r = n(183580),
+    i = n(26232),
+    a = n(120330),
+    o = n(518375);
+function u(e, t, n) {
     return (
-        void 0 !== r &&
-            ((r = (0, o.BT)(r)), (0, a.W)(r, "localeMatcher", "string", ["lookup", "best fit"], "best fit")),
+        void 0 !== n &&
+            ((n = (0, a.BT)(n)), (0, o.W)(n, "localeMatcher", "string", ["lookup", "best fit"], "best fit")),
         (function (e, t) {
-            let r = [];
-            for (let o of t) {
-                let t = o.replace(i.KB, ""),
-                    a = (0, n.q)(e, t);
-                a && r.push(a);
+            let n = [];
+            for (let a of t) {
+                let t = a.replace(i.KB, ""),
+                    o = (0, r.q)(e, t);
+                o && n.push(o);
             }
-            return r;
+            return n;
         })(Array.from(e), t)
     );
 }

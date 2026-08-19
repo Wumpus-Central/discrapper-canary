@@ -1,5 +1,5 @@
 let l;
-n.d(t, { A: () => A, a: () => p }), n(667532);
+n.d(t, { A: () => x, a: () => p }), n(667532);
 var i = n(435558),
     s = n(17928),
     r = n(765178),
@@ -19,7 +19,7 @@ let g = [],
         let e = (0, u.fr)(m);
         r.O.announce(e, "polite"), (m = []);
     }, 500);
-class x extends s.Ay.Store {
+class A extends s.Ay.Store {
     static displayName = "VoiceChannelEffectsStore";
     get recentlyUsedEmojis() {
         return c;
@@ -34,7 +34,7 @@ class x extends s.Ay.Store {
         return d[e];
     }
 }
-let A = new x(a.h, {
+let x = new A(a.h, {
     VOICE_CHANNEL_EFFECT_CLEAR: function (e) {
         let { userId: t } = e;
         null != d[t] && delete d[t];

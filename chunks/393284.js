@@ -1,12 +1,12 @@
-i.d(t, { k: () => $ });
-var n = i(419954),
-    l = i(780964),
-    s = i(17928),
-    r = i(147248),
-    a = i(141343),
-    o = i(665267),
-    u = i(375708);
-let d = (0, n.E2)(l.X.APPEARANCE_CLIENT_THEMES, {
+n.d(t, { k: () => $ });
+var i = n(419954),
+    l = n(780964),
+    s = n(17928),
+    r = n(147248),
+    a = n(141343),
+    o = n(665267),
+    u = n(375708);
+let d = (0, i.E2)(l.X.APPEARANCE_CLIENT_THEMES, {
     useSearchTerms: () => [u.intl.string(u.t.Ksh3ik)],
     Component: o.sB,
     usePredicate: () => {
@@ -15,32 +15,32 @@ let d = (0, n.E2)(l.X.APPEARANCE_CLIENT_THEMES, {
         return !e || t;
     },
 });
-var c = i(477900);
-i(582128);
-var g = i(503698),
-    m = i.n(g),
-    A = i(562708),
-    h = i(821609),
-    E = i(297264),
-    S = i(834730),
-    T = i(688810),
-    x = i(139286),
-    p = i(793943),
-    f = i(996254),
-    N = i(830543),
-    _ = i(738419),
-    I = i(693227),
-    C = i(446673),
-    b = i(114149);
-function v(e) {
+var c = n(477900);
+n(582128);
+var g = n(503698),
+    m = n.n(g),
+    A = n(562708),
+    h = n(821609),
+    E = n(297264),
+    S = n(834730),
+    x = n(688810),
+    p = n(139286),
+    T = n(793943),
+    f = n(996254),
+    I = n(830543),
+    _ = n(738419),
+    N = n(693227),
+    C = n(446673),
+    b = n(114149);
+function y(e) {
     let { className: t } = e,
-        { analyticsLocations: i } = (0, T.Ay)();
-    (0, x.A)({
+        { analyticsLocations: n } = (0, x.Ay)();
+    (0, p.A)({
         name: A.ImpressionNames.CUSTOM_THEMES_APPEARANCE_SETTINGS_BANNER,
         type: A.ImpressionTypes.VIEW,
-        properties: { location_stack: i },
+        properties: { location_stack: n },
     });
-    let n = (0, f.X)({ "en-US": I.default["f/cLEi"], "en-GB": I.default["f/cLEi"] }, I.default.CARxAC);
+    let i = (0, f.X)({ "en-US": N.default["f/cLEi"], "en-GB": N.default["f/cLEi"] }, N.default.CARxAC);
     return (0, c.jsxs)("div", {
         className: m()(C.kL, t),
         children: [
@@ -48,8 +48,8 @@ function v(e) {
             (0, c.jsxs)("div", {
                 className: C.P_,
                 children: [
-                    (0, c.jsx)(E.D, { variant: "heading-lg/semibold", color: "text-strong", children: n }),
-                    (0, c.jsx)(S.E, { variant: "text-sm/normal", children: u.intl.string(I.default.nla4RG) }),
+                    (0, c.jsx)(E.D, { variant: "heading-lg/semibold", color: "text-strong", children: i }),
+                    (0, c.jsx)(S.E, { variant: "text-sm/normal", children: u.intl.string(N.default.nla4RG) }),
                 ],
             }),
             (0, c.jsx)("div", {
@@ -59,18 +59,18 @@ function v(e) {
                     text: u.intl.string(u.t.uw9zI7),
                     onClick: function () {
                         (0, _.b0)(_.G8.APPEARANCE_SETTINGS),
-                            (0, p.nf)(p.HP.CUSTOM_THEME, { from: p.xv.SETTING }),
-                            (0, N.default)();
+                            (0, T.nf)(T.HP.CUSTOM_THEME, { from: T.xv.SETTING }),
+                            (0, I.default)();
                     },
                 }),
             }),
         ],
     });
 }
-let y = (0, n.E2)(l.X.APPEARANCE_CUSTOM_THEMES_UPSELL, {
+let v = (0, i.E2)(l.X.APPEARANCE_CUSTOM_THEMES_UPSELL, {
     useSearchTerms: () => [u.intl.string(u.t.Ksh3ik)],
     Component: function () {
-        return (0, c.jsx)(v, { className: C.YH });
+        return (0, c.jsx)(y, { className: C.YH });
     },
     usePredicate: () => {
         let e = (0, a.V)(),
@@ -78,47 +78,47 @@ let y = (0, n.E2)(l.X.APPEARANCE_CUSTOM_THEMES_UPSELL, {
         return !e || t;
     },
 });
-var j = i(366010),
-    O = i(775602),
-    R = i(875317),
-    L = i(97469),
-    D = i(363195),
-    P = i(885386),
-    G = i(818348);
-let M = (0, n.zD)(l.X.APPEARANCE_DARK_SIDEBAR, {
+var j = n(366010),
+    O = n(775602),
+    L = n(875317),
+    D = n(97469),
+    R = n(363195),
+    P = n(885386),
+    G = n(818348);
+let M = (0, i.zD)(l.X.APPEARANCE_DARK_SIDEBAR, {
     useTitle: () => u.intl.string(u.t.EpSHAQ),
     useSearchTerms: () => [u.intl.string(u.t.Ksh3ik)],
     useValue: function () {
-        let e = (0, L.qo)();
-        return (0, s.bG)([D.A, O.Ay], () => {
-            let t = D.A.theme,
-                i = O.Ay.useForcedColors;
-            return e && (0, j.q)(t) && !i;
+        let e = (0, D.qo)();
+        return (0, s.bG)([R.A, O.Ay], () => {
+            let t = R.A.theme,
+                n = O.Ay.useForcedColors;
+            return e && (0, j.q)(t) && !n;
         });
     },
     usePredicate: function () {
         let e = null != P.eh.useSetting().customUserThemeSettings,
-            t = null != (0, R.Q)(),
-            i = (0, a.V)();
-        return (0, s.bG)([D.A, r.A], () => {
-            let n = D.A.theme,
+            t = null != (0, L.Q)(),
+            n = (0, a.V)();
+        return (0, s.bG)([R.A, r.A], () => {
+            let i = R.A.theme,
                 l = r.A.gradientPreset;
-            return !i && (0, j.q)(n) && null == l && !e && !t;
+            return !n && (0, j.q)(i) && null == l && !e && !t;
         });
     },
     useDisabled: function () {
-        return (0, s.bG)([D.A, O.Ay], () => {
-            let e = D.A.theme,
+        return (0, s.bG)([R.A, O.Ay], () => {
+            let e = R.A.theme,
                 t = O.Ay.useForcedColors;
             return e !== G.NJ.LIGHT || t;
         });
     },
     setValue: (e) => P.l$.updateSetting(e),
 });
-var U = i(331322),
-    V = i(487245),
-    k = i(385803);
-let w = (0, n.E2)(l.X.APPEARANCE_DEFAULT_THEMES, {
+var U = n(331322),
+    V = n(487245),
+    k = n(385803);
+let w = (0, i.E2)(l.X.APPEARANCE_DEFAULT_THEMES, {
     useSearchTerms: () => [u.intl.string(u.t.Ksh3ik)],
     Component: function () {
         return (0, c.jsxs)(V.Ay, {
@@ -141,28 +141,28 @@ let w = (0, n.E2)(l.X.APPEARANCE_DEFAULT_THEMES, {
     },
     usePredicate: () => !(0, a.V)(),
 });
-var F = i(873298),
-    B = i(793574),
-    z = i(653523),
-    X = i(973654),
-    Y = i(185928),
-    H = i(652215),
-    K = i(784149);
-let W = (0, n.E2)(l.X.APPEARANCE_DUAL_THEME_SELECTOR, {
+var F = n(873298),
+    B = n(793574),
+    z = n(653523),
+    X = n(973654),
+    Y = n(185928),
+    H = n(652215),
+    K = n(784149);
+let W = (0, i.E2)(l.X.APPEARANCE_DUAL_THEME_SELECTOR, {
     useSearchTerms: () => [u.intl.string(u.t.Ksh3ik), u.intl.string(u.t.NoFvjZ), u.intl.string(u.t["EgvHH/"])],
     Component: function () {
         var e;
-        let { analyticsLocations: t } = (0, T.Ay)(B.A.CLIENT_THEMES_THEME_SELECTOR),
-            [i, n, l, a, o] = (0, s.yK)([D.A, r.A], () => [
-                D.A.themePreferenceForSystemTheme(Y.Fc.LIGHT),
-                D.A.themePreferenceForSystemTheme(Y.Fc.DARK),
-                D.A.getSyncedClientTheme(Y.Fc.LIGHT)?.backgroundGradientPresetId,
-                D.A.getSyncedClientTheme(Y.Fc.DARK)?.backgroundGradientPresetId,
+        let { analyticsLocations: t } = (0, x.Ay)(B.A.CLIENT_THEMES_THEME_SELECTOR),
+            [n, i, l, a, o] = (0, s.yK)([R.A, r.A], () => [
+                R.A.themePreferenceForSystemTheme(Y.Fc.LIGHT),
+                R.A.themePreferenceForSystemTheme(Y.Fc.DARK),
+                R.A.getSyncedClientTheme(Y.Fc.LIGHT)?.backgroundGradientPresetId,
+                R.A.getSyncedClientTheme(Y.Fc.DARK)?.backgroundGradientPresetId,
                 r.A.isPreview,
             ]);
-        function d(e, i, n) {
-            (0, X.NA)({ [e]: i }), (0, X.qX)(e, null != n ? { backgroundGradientPresetId: n } : { theme: i });
-            let l = null != n ? `${e}-mode-${F.ju[n]}` : `${e}-mode-${i}`;
+        function d(e, n, i) {
+            (0, X.NA)({ [e]: n }), (0, X.qX)(e, null != i ? { backgroundGradientPresetId: i } : { theme: n });
+            let l = null != i ? `${e}-mode-${F.ju[i]}` : `${e}-mode-${n}`;
             (0, V.X8)({ isPersisted: !0, analyticsLocations: t, themeName: l });
         }
         let g = o ? [] : k.G$.filter(k.Qm),
@@ -187,7 +187,7 @@ let W = (0, n.E2)(l.X.APPEARANCE_DUAL_THEME_SELECTOR, {
                                 (0, c.jsx)(z.zy, {
                                     theme: H.NJ8.LIGHT,
                                     size: k.ni.SIZE_48,
-                                    isSelected: ((e = H.NJ8.LIGHT), (o || null == l) && i === e),
+                                    isSelected: ((e = H.NJ8.LIGHT), (o || null == l) && n === e),
                                     onSelect: () => d(Y.Fc.LIGHT, H.NJ8.LIGHT, void 0),
                                 }),
                                 g.map((e) =>
@@ -227,7 +227,7 @@ let W = (0, n.E2)(l.X.APPEARANCE_DUAL_THEME_SELECTOR, {
                                         {
                                             theme: e,
                                             size: k.ni.SIZE_48,
-                                            isSelected: (o || null == a) && n === e,
+                                            isSelected: (o || null == a) && i === e,
                                             onSelect: () => d(Y.Fc.DARK, e, void 0),
                                         },
                                         e,
@@ -255,36 +255,36 @@ let W = (0, n.E2)(l.X.APPEARANCE_DUAL_THEME_SELECTOR, {
     },
     usePredicate: a.V,
 });
-var Z = i(458024),
-    q = i(462887),
-    Q = i(817281);
-i(644235);
-let J = (0, n.zD)(l.X.APPEARANCE_SAME_AS_DEVICE_THEME, {
+var Z = n(458024),
+    q = n(462887),
+    Q = n(817281);
+n(644235);
+let J = (0, i.zD)(l.X.APPEARANCE_SAME_AS_DEVICE_THEME, {
         useTitle: () => u.intl.string(u.t.c445ix),
         useSubtitle: () => u.intl.string(u.t["+tBsvs"]),
         useSearchTerms: () => [u.intl.string(u.t.Ksh3ik)],
         useValue: function () {
-            return (0, s.bG)([D.A], () => D.A.isSameAsDeviceThemeEnabled());
+            return (0, s.bG)([R.A], () => R.A.isSameAsDeviceThemeEnabled());
         },
         setValue: function (e) {
             if (e) {
                 if (
                     (Q.Ay.setShouldSyncAppearanceSettings(!1),
-                    null == D.A.getSyncedClientTheme(Y.Fc.LIGHT) && null == D.A.getSyncedClientTheme(Y.Fc.DARK))
+                    null == R.A.getSyncedClientTheme(Y.Fc.LIGHT) && null == R.A.getSyncedClientTheme(Y.Fc.DARK))
                 ) {
-                    let e = D.A.theme,
+                    let e = R.A.theme,
                         t = (0, q.M)(e) ? Y.Fc.DARK : Y.Fc.LIGHT,
-                        i = r.A.isPreview ? void 0 : r.A.gradientPreset?.id;
+                        n = r.A.isPreview ? void 0 : r.A.gradientPreset?.id;
                     (0, X.NA)({ [t]: e }),
-                        null != i ? (0, X.qX)(t, { backgroundGradientPresetId: i }) : (0, X.qX)(t, { theme: e });
+                        null != n ? (0, X.qX)(t, { backgroundGradientPresetId: n }) : (0, X.qX)(t, { theme: e });
                 }
                 (0, X.ZM)(!0), (0, X.k7)(Y.Q_.ON);
             } else (0, X.k7)(Y.Q_.OFF), (0, X.ZM)(!1);
         },
         usePredicate: () => (0, Z.Ay)("SameAsDeviceThemeSetting"),
     }),
-    $ = (0, n.FW)(l.X.APPEARANCE_THEME_FIELDSET, {
+    $ = (0, i.FW)(l.X.APPEARANCE_THEME_FIELDSET, {
         useTitle: () => u.intl.string(u.t.Ksh3ik),
         isTitleHiddenVisually: !0,
-        buildLayout: () => [J, W, w, M, y, d],
+        buildLayout: () => [J, W, w, M, v, d],
     });

@@ -1,4 +1,4 @@
-n.d(t, { A: () => E });
+n.d(t, { A: () => f });
 var l,
     i,
     r = n(477900),
@@ -15,8 +15,8 @@ var l,
         l),
     p = (((i = p || {}).SMALL = "small"), (i.LARGE = "large"), (i.NONE = "none"), i);
 let m = { primary: c.cG, secondary: c.QU, warning: c.SO, error: c._r },
-    C = { small: c.EX, large: c.as, none: null };
-class h extends a.PureComponent {
+    h = { small: c.EX, large: c.as, none: null };
+class C extends a.PureComponent {
     static Colors = d;
     static Sizes = p;
     render() {
@@ -25,10 +25,10 @@ class h extends a.PureComponent {
             className: o()(c.N4, m[t], i),
             align: u.A.Align.CENTER,
             children: [
-                (0, r.jsx)(e, { className: o()(c.Kk, C[l], a), color: "currentColor" }),
+                (0, r.jsx)(e, { className: o()(c.Kk, h[l], a), color: "currentColor" }),
                 (0, r.jsx)("div", { children: n }),
             ],
         });
     }
 }
-let E = h;
+let f = C;

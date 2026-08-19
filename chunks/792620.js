@@ -2,7 +2,7 @@
 n.d(t, {
     Cr: () => C,
     F9: () => _,
-    GL: () => y,
+    GL: () => D,
     I6: () => m,
     IO: () => R,
     JC: () => H,
@@ -25,7 +25,7 @@ n.d(t, {
     uD: () => O,
     vS: () => E,
     vl: () => g,
-    vv: () => D,
+    vv: () => y,
     xZ: () => S,
     xc: () => A,
     xm: () => Y,
@@ -103,8 +103,8 @@ function C(e) {
 let O = N([r.n.PLAY_ON_XBOX, r.n.PLAY_ON_PLAYSTATION]),
     R = N([r.n.WATCH_VIDEO]),
     L = N([r.n.WATCH_VIDEO_ON_MOBILE]),
-    D = N([r.n.WATCH_VIDEO, r.n.WATCH_VIDEO_ON_MOBILE]),
-    y = N([
+    y = N([r.n.WATCH_VIDEO, r.n.WATCH_VIDEO_ON_MOBILE]),
+    D = N([
         r.n.PLAY_ON_DESKTOP,
         r.n.STREAM_ON_DESKTOP,
         r.n.PLAY_ON_PLAYSTATION,
@@ -161,7 +161,7 @@ function F(e) {
                 (function (e, t) {
                     let n = e.userStatus?.progress?.[t.type],
                         r = n?.value ?? e.userStatus?.streamProgressSeconds ?? 0;
-                    if (D(e)) {
+                    if (y(e)) {
                         let n = l.A.getOptimisticProgress(e.id, t.type);
                         return null == n || n < r ? r : n;
                     }
@@ -235,7 +235,7 @@ function B(e, t) {
                     }
                     return F({ quest: t, includeTaskTypes: n });
                 })({ quest: n, includeTaskTypes: i ?? (w(n) ? r.o.CONSOLE : r.o.ALL) })
-              : D(n)
+              : y(n)
                 ? F({ quest: n, taskType: V(n.config)?.type })
                 : S(n)
                   ? F({ quest: n, taskType: r.n.PLAY_ON_DESKTOP })

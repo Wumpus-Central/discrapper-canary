@@ -2,17 +2,17 @@ n.d(t, { A: () => d });
 var r = n(582128),
     l = n(412703);
 n(531443);
-var i = n(118356);
+var i = n(941426);
 n(141711), n(497329), new i.Vy("MobileCustomMuxIntegration"), new i.Vy("MobileMuxWrapper"), n(740644);
-var s = n(829097),
-    u = n(613373),
+var u = n(829097),
+    s = n(613373),
     a = n(291749),
     o = n(795068),
     c = n(190107);
 function d(e) {
     let { videoAssetUrl: t, videoRef: n, hls: i, videoAssetType: d } = e,
         { questConfig: E } = r.useContext(o.l),
-        f = (0, s._)({ location: c.rE.VIDEO_MODAL }).externalAnalyticsEnabled && null != t,
+        f = (0, u._)({ location: c.rE.VIDEO_MODAL }).externalAnalyticsEnabled && null != t,
         _ = d === a.fY.VIDEO_PLAYER_VIDEO_HLS,
         m = r.useMemo(
             () =>
@@ -28,5 +28,5 @@ function d(e) {
                     : void 0,
             [f, t, _, E],
         );
-    (0, u.P8)({ videoRef: n, hls: i, contentMetadata: m, isHls: _ });
+    (0, s.P8)({ videoRef: n, hls: i, contentMetadata: m, isHls: _ });
 }

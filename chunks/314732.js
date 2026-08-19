@@ -1,15 +1,15 @@
 "use strict";
-n.d(t, { A: () => u });
+n.d(t, { A: () => d });
 var i = n(626584),
     r = n(723176);
-let s = "version",
-    a = "force-resync-version",
-    o = "stable-298",
-    l = new i.A("KvCacheVersion"),
-    u = new (class {
+let a = "version",
+    s = "force-resync-version",
+    l = "stable-300",
+    o = new i.A("KvCacheVersion"),
+    d = new (class {
         hasSuccessfullyConnected = !1;
         async okAsync(e) {
-            let t = await r.A.cache(e).get(s);
+            let t = await r.A.cache(e).get(a);
             return null == t ? null : 3 === t;
         }
         canUseGuildVersions() {
@@ -18,9 +18,9 @@ let s = "version",
         async doesDatabaseVersionMatchJsConstants() {
             let e = r.A.forceResyncVersion();
             if (null == e) return !1;
-            let t = await e.get(a),
+            let t = await e.get(s),
                 n = t?.version;
-            return n === o || (l.info(`KVStore version mismatch: ${n} vs ${o}`), !1);
+            return n === l || (o.info(`KVStore version mismatch: ${n} vs ${l}`), !1);
         }
         actions = {
             BACKGROUND_SYNC: (e, t) => this.handleWrite(t),
@@ -36,8 +36,8 @@ let s = "version",
         handleWrite(e) {
             (this.hasSuccessfullyConnected = !0),
                 r.A.cacheTransaction(e).put("hello", "\uD83D\uDC4B"),
-                r.A.cacheTransaction(e).put(s, 3),
-                r.A.forceResyncVersionTransaction(e).put(a, { version: o });
+                r.A.cacheTransaction(e).put(a, 3),
+                r.A.forceResyncVersionTransaction(e).put(s, { version: l });
         }
         resetInMemoryState() {
             this.hasSuccessfullyConnected = !1;

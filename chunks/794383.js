@@ -1,9 +1,9 @@
 "use strict";
-n.d(t, { A: () => D }), n(321073);
+n.d(t, { A: () => y }), n(321073);
 var i = n(812729),
     r = n.n(i),
     a = n(17928),
-    s = n(562465),
+    s = n(636537),
     l = n(228366),
     o = n(77468),
     d = n(573648),
@@ -154,7 +154,7 @@ class L extends a.Ay.Store {
         return p;
     }
 }
-let D = new L(l.h, {
+let y = new L(l.h, {
     STREAMING_UPDATE: function (e) {
         if (r()(e.stream, p)) return !1;
         p = e.stream ?? null;

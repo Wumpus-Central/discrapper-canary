@@ -1,50 +1,50 @@
 "use strict";
-n.d(t, { I_: () => u, X7: () => c, Ay: () => d }), n(323874), n(14289), n(35956);
+n.d(t, { I_: () => d, X7: () => c, Ay: () => u }), n(323874), n(14289), n(35956);
 var i = n(214958),
     r = n.n(i),
-    s = n(835245);
-let a = () => "",
-    o = (a = n(539002).A),
-    l = "https://discordapp.onelink.me";
-function u() {
-    return (0, s.A)();
+    a = n(132500);
+let s = () => "",
+    l = (s = n(539002).A),
+    o = "https://discordapp.onelink.me";
+function d() {
+    return (0, a.A)();
 }
 function c(e) {
-    if (!e.startsWith(l)) return null;
+    if (!e.startsWith(o)) return null;
     try {
         let t = new URL(e).searchParams,
             n = t.get("deep_link_value");
         if (null == n) return null;
         let i = decodeURIComponent(n),
             r = new URL(i).searchParams,
-            s = { utmSource: t.get("pid") ?? void 0 };
-        for (let [e, t] of r.entries()) s[e] = t;
-        return s;
+            a = { utmSource: t.get("pid") ?? void 0 };
+        for (let [e, t] of r.entries()) a[e] = t;
+        return a;
     } catch {
         return null;
     }
 }
-function d(e, t) {
+function u(e, t) {
     let n,
         i,
-        s,
-        { utmSource: a, androidFallbackLink: u, iosFallbackLink: c, ...d } = t,
+        a,
+        { utmSource: s, androidFallbackLink: d, iosFallbackLink: c, ...u } = t,
         _ = new URL(e);
-    for (let e in d) {
-        let t = d[e];
+    for (let e in u) {
+        let t = u[e];
         null != t && _.searchParams.set(e, t);
     }
-    let h = encodeURIComponent(_.toString()),
-        f = encodeURIComponent(`discord://app/open#${_.toString()}`),
-        p = encodeURIComponent(o()),
-        E = ((n = RegExp("(WebView|(iPhone|iPod|iPad)(?!.*Safari/))", "ig")),
+    let E = encodeURIComponent(_.toString()),
+        A = encodeURIComponent(`discord://app/open#${_.toString()}`),
+        h = encodeURIComponent(l()),
+        I = ((n = RegExp("(WebView|(iPhone|iPod|iPad)(?!.*Safari/))", "ig")),
         (i = r()?.ua?.match(n) != null),
-        (s = r()?.name === "Safari" && !i),
-        r()?.os?.family !== "iOS" || s)
+        (a = r()?.name === "Safari" && !i),
+        r()?.os?.family !== "iOS" || a)
             ? "true"
             : "false",
-        m = null != u ? encodeURIComponent(u) : null,
-        g = null != c ? encodeURIComponent(c) : null,
-        A = `${l}/Hs5r/?deep_link_value=${h}&pid=${a}&af_force_deeplink=${E}&af_og_description=${p}&af_dp=${f}`;
-    return null != m && (A += `&af_android_url=${m}`), null != g && (A += `&af_ios_url=${g}`), A;
+        f = null != d ? encodeURIComponent(d) : null,
+        p = null != c ? encodeURIComponent(c) : null,
+        T = `${o}/Hs5r/?deep_link_value=${E}&pid=${s}&af_force_deeplink=${I}&af_og_description=${h}&af_dp=${A}`;
+    return null != f && (T += `&af_android_url=${f}`), null != p && (T += `&af_ios_url=${p}`), T;
 }

@@ -1,37 +1,37 @@
 "use strict";
-n.d(t, { v: () => o });
-let r = new Map(),
-    i = new Set();
-function a() {
+r.d(t, { v: () => a });
+let n = new Map(),
+    o = new Set();
+function i() {
     if ("u" < typeof window) return;
     function e(e) {
         return "propertyName" in e;
     }
-    let t = (n) => {
-        if (!e(n) || !n.target) return;
-        let a = r.get(n.target);
+    let t = (r) => {
+        if (!e(r) || !r.target) return;
+        let i = n.get(r.target);
         if (
-            a &&
-            (a.delete(n.propertyName),
-            0 === a.size && (n.target.removeEventListener("transitioncancel", t), r.delete(n.target)),
-            0 === r.size)
+            i &&
+            (i.delete(r.propertyName),
+            0 === i.size && (r.target.removeEventListener("transitioncancel", t), n.delete(r.target)),
+            0 === n.size)
         ) {
-            for (let e of i) e();
-            i.clear();
+            for (let e of o) e();
+            o.clear();
         }
     };
-    document.body.addEventListener("transitionrun", (n) => {
-        if (!e(n) || !n.target) return;
-        let i = r.get(n.target);
-        i || ((i = new Set()), r.set(n.target, i), n.target.addEventListener("transitioncancel", t, { once: !0 })),
-            i.add(n.propertyName);
+    document.body.addEventListener("transitionrun", (r) => {
+        if (!e(r) || !r.target) return;
+        let o = n.get(r.target);
+        o || ((o = new Set()), n.set(r.target, o), r.target.addEventListener("transitioncancel", t, { once: !0 })),
+            o.add(r.propertyName);
     }),
         document.body.addEventListener("transitionend", t);
 }
-function o(e) {
+function a(e) {
     requestAnimationFrame(() => {
-        for (let [e] of r) "isConnected" in e && !e.isConnected && r.delete(e);
-        0 === r.size ? e() : i.add(e);
+        for (let [e] of n) "isConnected" in e && !e.isConnected && n.delete(e);
+        0 === n.size ? e() : o.add(e);
     });
 }
-"u" > typeof document && ("loading" !== document.readyState ? a() : document.addEventListener("DOMContentLoaded", a));
+"u" > typeof document && ("loading" !== document.readyState ? i() : document.addEventListener("DOMContentLoaded", i));

@@ -1,48 +1,48 @@
 "use strict";
-n.d(t, { N: () => a, l2: () => l, zL: () => s });
-var r = n(447978),
-    i = n(582128);
-let a = {
-    CollectionRoot: ({ collection: e, renderDropIndicator: t }) => o(e, null, t),
-    CollectionBranch: ({ collection: e, parent: t, renderDropIndicator: n }) => o(e, t, n),
+r.d(t, { N: () => i, l2: () => l, zL: () => s });
+var n = r(447978),
+    o = r(582128);
+let i = {
+    CollectionRoot: ({ collection: e, renderDropIndicator: t }) => a(e, null, t),
+    CollectionBranch: ({ collection: e, parent: t, renderDropIndicator: r }) => a(e, t, r),
 };
-function o(e, t, n) {
-    return (0, r.p)({
+function a(e, t, r) {
+    return (0, n.p)({
         items: t ? e.getChildren(t.key) : e,
-        dependencies: [n],
+        dependencies: [r],
         children(t) {
-            let r = t.render(t);
-            return n && "item" === t.type
-                ? i.createElement(
-                      i.Fragment,
+            let n = t.render(t);
+            return r && "item" === t.type
+                ? o.createElement(
+                      o.Fragment,
                       null,
-                      n({ type: "item", key: t.key, dropPosition: "before" }),
-                      r,
-                      (function (e, t, n) {
-                          let r = t.key,
-                              a = e.getKeyAfter(r),
-                              o = null != a ? e.getItem(a) : null;
-                          for (; null != o && "item" !== o.type; )
-                              o = null != (a = e.getKeyAfter(o.key)) ? e.getItem(a) : null;
+                      r({ type: "item", key: t.key, dropPosition: "before" }),
+                      n,
+                      (function (e, t, r) {
+                          let n = t.key,
+                              i = e.getKeyAfter(n),
+                              a = null != i ? e.getItem(i) : null;
+                          for (; null != a && "item" !== a.type; )
+                              a = null != (i = e.getKeyAfter(a.key)) ? e.getItem(i) : null;
                           let s = null != t.nextKey ? e.getItem(t.nextKey) : null;
                           for (; null != s && "item" !== s.type; ) s = null != s.nextKey ? e.getItem(s.nextKey) : null;
                           let l = [];
                           if (null == s) {
-                              let r = t;
-                              for (; r && (!o || (r.parentKey !== o.parentKey && o.level < r.level)); ) {
-                                  let t = n({ type: "item", key: r.key, dropPosition: "after" });
-                                  (0, i.isValidElement)(t) && l.push((0, i.cloneElement)(t, { key: `${r.key}-after` })),
-                                      (r = null != r.parentKey ? e.getItem(r.parentKey) : null);
+                              let n = t;
+                              for (; n && (!a || (n.parentKey !== a.parentKey && a.level < n.level)); ) {
+                                  let t = r({ type: "item", key: n.key, dropPosition: "after" });
+                                  (0, o.isValidElement)(t) && l.push((0, o.cloneElement)(t, { key: `${n.key}-after` })),
+                                      (n = null != n.parentKey ? e.getItem(n.parentKey) : null);
                               }
                           }
                           return l;
-                      })(e, t, n),
+                      })(e, t, r),
                   )
-                : r;
+                : n;
         },
     });
 }
-let s = (0, i.createContext)(a);
+let s = (0, o.createContext)(i);
 function l(e) {
-    return (0, i.useMemo)(() => (null != e ? new Set([e]) : null), [e]);
+    return (0, o.useMemo)(() => (null != e ? new Set([e]) : null), [e]);
 }

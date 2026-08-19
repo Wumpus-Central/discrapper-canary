@@ -1,10 +1,10 @@
 "use strict";
-n.d(t, { M: () => s, q: () => r });
+n.d(t, { M: () => a, q: () => r });
 var i = n(680049);
 function r(e) {
     return e === i.NJ.LIGHT;
 }
-function s(e) {
+function a(e) {
     switch (e) {
         case i.NJ.DARK:
         case i.NJ.MIDNIGHT:

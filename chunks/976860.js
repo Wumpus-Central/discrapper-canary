@@ -1,92 +1,92 @@
 "use strict";
-let i, r, s;
+let i, r, a;
 n.d(t, {
-    EL: () => A,
-    JK: () => T,
-    MX: () => v,
+    EL: () => T,
+    JK: () => g,
+    MX: () => R,
     PR: () => S,
-    SB: () => N,
-    TX: () => p,
-    UC: () => y,
-    aX: () => R,
-    bG: () => I,
+    SB: () => O,
+    TX: () => h,
+    UC: () => N,
+    aX: () => L,
+    bG: () => m,
     m: () => C,
-    pX: () => m,
-    sY: () => O,
-    uh: () => g,
+    pX: () => f,
+    sY: () => y,
+    uh: () => p,
 }),
     n(321073),
     n(323874),
     n(14289),
     n(35956);
-var a = n(830845),
-    o = n(626584),
-    l = n(625494),
-    u = n(824865),
+var s = n(830845),
+    l = n(626584),
+    o = n(625494),
+    d = n(824865),
     c = n(652215);
-let d = new o.A("Routing/Utils"),
+let u = new l.A("Routing/Utils"),
     _ = [c.dSh.DEVELOPER_PORTAL];
 __OVERLAY__
-    ? (i = (0, a.sC)())
-    : (i = (0, a.zR)()).block((e, t) => {
-          if ("POP" === t && !p()) return !1;
+    ? (i = (0, s.sC)())
+    : (i = (0, s.zR)()).block((e, t) => {
+          if ("POP" === t && !h()) return !1;
       });
-let h = !1,
-    f = i.listen((e, t) => {
-        "REPLACE" !== t && ((h = !0), f());
+let E = !1,
+    A = i.listen((e, t) => {
+        "REPLACE" !== t && ((E = !0), A());
     });
-function p() {
-    if (l._.hasSubscribers(c.jej.MODAL_CLOSE)) {
+function h() {
+    if (o._.hasSubscribers(c.jej.MODAL_CLOSE)) {
         let { doesTopModalAllowNavigation: e } = n(192308);
         if (!e()) return !1;
     }
     return n(712687).A.close(), !0;
 }
-function E(e, t) {
+function I(e, t) {
     return (
         !!("string" == typeof e && _.some((t) => e.startsWith(t))) &&
-        (d.log(`${t} - route to external path ${e}`),
+        (u.log(`${t} - route to external path ${e}`),
         window.dispatchEvent(new Event("beforeunload")),
         window.location[t](e),
         !0)
     );
 }
-function m(e, t) {
-    if (E(e, "assign")) return;
-    d.log(`transitionTo - Transitioning to ${e}`);
+function f(e, t) {
+    if (I(e, "assign")) return;
+    u.log(`transitionTo - Transitioning to ${e}`);
     let n = t?.source,
-        a = t?.sourceLocationStack;
+        s = t?.sourceLocationStack;
     if (null == t) i.push(e);
     else {
         let n = new URL(e, `https:${window.GLOBAL_ENV.WEBAPP_ENDPOINT}`);
         i.push({ pathname: n.pathname, search: n.search, hash: n.hash, ...t });
     }
-    (r = n), (s = a);
+    (r = n), (a = s);
 }
-function g(e, t, n, i) {
-    d.log(`transitionToGuild - Transitioning to ${JSON.stringify({ guildId: e, channelId: t, messageId: n })}`),
-        m(c.BVt.CHANNEL(e, t, n), i);
-}
-function A() {
-    return null != r && u.n.has(r);
-}
-function I(e, t, n) {
-    E(e, "replace") ||
-        (d.log(`Replacing route with ${e}`), "string" == typeof e ? i.replace(e, t) : i.replace(e), (r = n));
+function p(e, t, n, i) {
+    u.log(`transitionToGuild - Transitioning to ${JSON.stringify({ guildId: e, channelId: t, messageId: n })}`),
+        f(c.BVt.CHANNEL(e, t, n), i);
 }
 function T() {
+    return null != r && d.n.has(r);
+}
+function m(e, t, n) {
+    I(e, "replace") ||
+        (u.log(`Replacing route with ${e}`), "string" == typeof e ? i.replace(e, t) : i.replace(e), (r = n));
+}
+function g() {
     return i;
 }
 function S() {
     return r;
 }
-function y() {
-    return s;
+function N() {
+    return a;
 }
 function C(e) {
     return null == e && (e = i.location.pathname ?? ""), !e.startsWith(c.BVt.HANDOFF);
 }
-function N(e) {
+function O(e) {
     if ((null == e && (e = i.location.pathname ?? ""), e.startsWith(c.BVt.LOGIN))) return c.S3d.LOGIN;
     if (e.startsWith(c.BVt.REGISTER)) return c.S3d.REGISTER;
     if (e.startsWith(c.BVt.INVITE(""))) return c.S3d.INVITE;
@@ -104,12 +104,12 @@ function N(e) {
     else if (e.startsWith(c.BVt.ACCOUNT_REVERT(""))) return c.S3d.ACCOUNT_REVERT;
     return e;
 }
-function v() {
-    return h;
-}
 function R() {
-    p() && ((r = null), i.goBack());
+    return E;
 }
-function O() {
-    p() && ((r = null), i.goForward());
+function L() {
+    h() && ((r = null), i.goBack());
+}
+function y() {
+    h() && ((r = null), i.goForward());
 }

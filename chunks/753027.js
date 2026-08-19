@@ -1,12 +1,12 @@
 "use strict";
-n.d(t, { A: () => d });
+n.d(t, { A: () => u });
 var i = n(17928),
     r = n(228366),
-    s = n(626584),
-    a = n(927813),
-    o = n(723176);
-let l = new s.A("FileSystemStore"),
-    u = 10 * a.A.Millis.MINUTE;
+    a = n(626584),
+    s = n(927813),
+    l = n(723176);
+let o = new a.A("FileSystemStore"),
+    d = 10 * s.A.Millis.MINUTE;
 class c extends i.Ay.Store {
     isLowDisk = !1;
     constructor() {
@@ -15,8 +15,8 @@ class c extends i.Ay.Store {
             POST_CONNECTION_OPEN: () => this.handlePostConnectionOpen(),
         }),
             this.refresh(),
-            this.waitFor(o.A),
-            setInterval(() => this.refresh(), u);
+            this.waitFor(l.A),
+            setInterval(() => this.refresh(), d);
     }
     handlePostConnectionOpen() {
         return this.refresh(), !1;
@@ -25,9 +25,9 @@ class c extends i.Ay.Store {
         return "active" !== e.state && this.refresh(), !1;
     }
     async refresh() {
-        let e = await o.A.database()
+        let e = await l.A.database()
             ?.fsInfo()
-            ?.catch((e) => l.warn("couldn't get fs info", e));
+            ?.catch((e) => o.warn("couldn't get fs info", e));
         if (null != e) {
             let t =
                     e.fs.available < 0x10000000 ||
@@ -42,4 +42,4 @@ class c extends i.Ay.Store {
         }
     }
 }
-let d = new c();
+let u = new c();

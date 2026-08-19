@@ -25,8 +25,8 @@ var l = n(477900),
     N = n(451988),
     b = n(765671),
     y = n(461782),
-    T = n(228366),
-    D = n(51092),
+    D = n(228366),
+    T = n(51092),
     R = n(40056),
     k = n(566541);
 function w(e) {
@@ -165,7 +165,7 @@ let O = i.memo(function (e) {
             if (null != n) {
                 var e;
                 (e = u && Y ? f : 1),
-                    T.h.dispatch({ type: "VIDEO_SIZE_UPDATE", streamId: n, dimensions: void 0, zoom: e });
+                    D.h.dispatch({ type: "VIDEO_SIZE_UPDATE", streamId: n, dimensions: void 0, zoom: e });
             }
         }, [u, Y, n, f]);
     let en = i.useMemo(() => {
@@ -191,7 +191,7 @@ let O = i.memo(function (e) {
             (0, l.jsx)("div", {
                 className: r()(k.j, k.L2),
                 style: en,
-                children: (0, l.jsx)(D.A, { ...t, onResize: Z, wrapperClassName: void 0 }),
+                children: (0, l.jsx)(T.A, { ...t, onResize: Z, wrapperClassName: void 0 }),
             }),
     });
 });
@@ -199,7 +199,7 @@ var L = n(919706),
     M = n(616356),
     F = n(280450),
     V = n(734057),
-    G = n(293246),
+    G = n(453028),
     P = n(531685),
     H = n(200749),
     U = n(566331),
@@ -279,17 +279,17 @@ function el(e) {
             paused: b = !1,
         } = e,
         y = G.Ay.getVideoComponent(),
-        T = (0, a.bG)([F.default], () => F.default.getId()),
-        D = (0, v.A)(),
+        D = (0, a.bG)([F.default], () => F.default.getId()),
+        T = (0, v.A)(),
         { stream: R, user: k, streamId: w } = t,
         $ = (0, a.bG)([V.A], () => V.A.getChannel(R.channelId)),
         B = (0, a.bG)([M.A], () => M.A.getActiveStreamForUser(k.id, R.guildId), [k.id, R.guildId]),
         Q = (0, a.bG)([M.A], () => M.A.getAllActiveStreams().length > 0),
         X = (0, a.bG)([P.A], () => P.A.isFocused()),
         en = (0, C.Qu)(),
-        el = B?.ownerId === T,
+        el = B?.ownerId === D,
         ei = el && !(X || en) && x === f.N.NO_POPOUT,
-        es = null != B ? (0, S.A)(B, k, k.id === T, ei) : null,
+        es = null != B ? (0, S.A)(B, k, k.id === D, ei) : null,
         er = _ < 195;
     (0, g.Ay)(() => {
         !Q &&
@@ -305,9 +305,9 @@ function el(e) {
                 `Stream Tile State - activeStream: ${null != B} | selected: ${n} | Video: ${null != y} | MediaEngine: ${G.Ay.supports(ee.O5.VIDEO)}`,
             );
         }, [y, B, n]),
-        D)
+        T)
     )
-        return (0, l.jsx)(K, { stream: t.stream, isSmall: er, selected: n, isSelfStream: k.id === T });
+        return (0, l.jsx)(K, { stream: t.stream, isSmall: er, selected: n, isSelfStream: k.id === D });
     if (B?.state === q.XYD.ENDED) return (0, l.jsx)(U.A, { selected: n, stream: B, width: _ });
     if (null != ea || B?.state === q.XYD.FAILED)
         return (0, l.jsx)(z.A, { avError: ea?.type, avErrorContext: ea, selected: n, stream: t.stream, width: _ });

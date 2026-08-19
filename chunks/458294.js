@@ -6,7 +6,7 @@ var i = n(435558),
     s = n(409686);
 n(252431);
 var l = n(395504),
-    o = n(695633),
+    o = n(863005),
     d = n(152007),
     c = n(882733),
     u = n(95701),
@@ -248,11 +248,11 @@ function z(e) {
     } = e;
     return V(n, [t]);
 }
-function q() {
+function Z() {
     let e = A.A.getChannel(T.Ay.getChannelId());
     return null != e && V(e.getGuildId(), [e.id]);
 }
-function Z(e) {
+function q(e) {
     let { user: t, guildId: n } = e;
     return t.id === E.default.getId() && H(n);
 }
@@ -392,7 +392,7 @@ class ef extends I.A {
             UPDATE_CHANNEL_DIMENSIONS: X,
             CHANNEL_SELECT: J,
             CHANNEL_DELETE: z,
-            WINDOW_FOCUS: q,
+            WINDOW_FOCUS: Z,
             GUILD_ACK: eu,
             GUILD_ROLE_CREATE: e_,
             GUILD_ROLE_DELETE: e_,
@@ -406,7 +406,7 @@ class ef extends I.A {
             THREAD_MEMBER_UPDATE: el,
             THREAD_MEMBERS_UPDATE: eo,
             PASSIVE_UPDATE_V2: ec,
-            GUILD_MEMBER_UPDATE: Z,
+            GUILD_MEMBER_UPDATE: q,
             USER_GUILD_SETTINGS_FULL_UPDATE: eE,
             USER_GUILD_SETTINGS_CHANNEL_UPDATE: eh,
             USER_GUILD_SETTINGS_CHANNEL_UPDATE_BULK: eh,

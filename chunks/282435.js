@@ -1,4 +1,4 @@
-l.d(a, { Bf: () => t, aA: () => o, cG: () => r });
+l.d(a, { aA: () => o, jN: () => t, sx: () => r });
 let o = [
         { name: "Soul", color: "#ff1c90" },
         { name: "Volcano", color: "#e81d1e" },

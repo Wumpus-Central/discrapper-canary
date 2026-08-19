@@ -1,11 +1,11 @@
 "use strict";
-n.d(t, { WI: () => f, hB: () => p, gO: () => d, Qo: () => c, yq: () => o.y, x: () => u.x, bg: () => l, Tr: () => _ });
+n.d(t, { WI: () => A, hB: () => h, gO: () => u, Qo: () => c, yq: () => l.y, x: () => d.x, bg: () => o, Tr: () => _ });
 var i,
     r,
-    s,
     a,
-    o = n(904986),
-    l =
+    s,
+    l = n(904986),
+    o =
         (((i = {}).Destroy = "destroy"),
         (i.Silence = "silence"),
         (i.Connection = "connection"),
@@ -37,31 +37,31 @@ var i,
         (i.SystemMicrophoneModeChange = "system-microphone-mode-change"),
         (i.SelectedDeviceChange = "selected-device-change"),
         i),
-    u = n(731854),
+    d = n(731854),
     c = (((r = {}).INPUT_DEVICE = "input_device"), (r.STREAM = "stream"), r),
-    d =
-        (((s = {}).NONE = ""),
-        (s.BACKGROUND_BLUR = "background_blur"),
-        (s.BACKGROUND_REPLACEMENT = "background_replacement"),
-        s),
+    u =
+        (((a = {}).NONE = ""),
+        (a.BACKGROUND_BLUR = "background_blur"),
+        (a.BACKGROUND_REPLACEMENT = "background_replacement"),
+        a),
     _ =
-        (((a = {}).CAMERA_BACKGROUND_PREVIEW = "cameraBackgroundPreview"),
-        (a.CAMERA_BACKGROUND_LIVE = "cameraBackgroundLive"),
-        a);
-function h(e) {
+        (((s = {}).CAMERA_BACKGROUND_PREVIEW = "cameraBackgroundPreview"),
+        (s.CAMERA_BACKGROUND_LIVE = "cameraBackgroundLive"),
+        s);
+function E(e) {
     switch (e) {
-        case u.Ku.NATIVE:
+        case d.Ku.NATIVE:
             return n(206959).A;
-        case u.Ku.WEBRTC:
+        case d.Ku.WEBRTC:
             return n(615061).A;
-        case u.Ku.DUMMY:
+        case d.Ku.DUMMY:
         default:
             return n(432351).A;
     }
 }
-function f() {
-    return [u.Ku.NATIVE, u.Ku.WEBRTC].find((e) => h(e).supported()) ?? u.Ku.DUMMY;
+function A() {
+    return [d.Ku.NATIVE, d.Ku.WEBRTC].find((e) => E(e).supported()) ?? d.Ku.DUMMY;
 }
-function p(e) {
-    return new (h(e))();
+function h(e) {
+    return new (E(e))();
 }

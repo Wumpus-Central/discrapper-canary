@@ -1,41 +1,41 @@
 "use strict";
-n.d(t, { kK: () => u, Yf: () => l });
+n.d(t, { kK: () => d, Yf: () => o });
 var i = n(121401),
     r = n(998218),
-    s = n(403362),
-    a = n(167189);
-let o = new Set([
-    a.I.APP_DIRECTORY_PROFILE,
-    a.I.ACTIVITY_BOOKMARK,
-    a.I.APP_DIRECTORY_STOREFRONT,
-    a.I.APP_DIRECTORY_STOREFRONT_SKU,
-    a.I.APP_OAUTH2_LINK,
+    a = n(403362),
+    s = n(167189);
+let l = new Set([
+    s.I.APP_DIRECTORY_PROFILE,
+    s.I.ACTIVITY_BOOKMARK,
+    s.I.APP_DIRECTORY_STOREFRONT,
+    s.I.APP_DIRECTORY_STOREFRONT_SKU,
+    s.I.APP_OAUTH2_LINK,
 ]);
-function l(e) {
-    return (0, s.Eo)(e, o);
+function o(e) {
+    return (0, a.Eo)(e, l);
 }
-function u(e, t, n) {
+function d(e, t, n) {
     switch (e) {
-        case a.I.APP_DIRECTORY_PROFILE:
-        case a.I.APP_OAUTH2_LINK:
-        case a.I.APP_DIRECTORY_STOREFRONT:
+        case s.I.APP_DIRECTORY_PROFILE:
+        case s.I.APP_OAUTH2_LINK:
+        case s.I.APP_DIRECTORY_STOREFRONT:
             return { type: e, applicationId: t };
-        case a.I.APP_DIRECTORY_STOREFRONT_SKU: {
+        case s.I.APP_DIRECTORY_STOREFRONT_SKU: {
             let n = (0, i.u)(t);
             if (null == n) return null;
-            let { applicationId: r, skuId: s } = n;
-            return { type: e, applicationId: r, skuId: s };
+            let { applicationId: r, skuId: a } = n;
+            return { type: e, applicationId: r, skuId: a };
         }
-        case a.I.ACTIVITY_BOOKMARK: {
-            let i, s;
+        case s.I.ACTIVITY_BOOKMARK: {
+            let i, a;
             return {
                 type: e,
                 applicationId: t,
                 params:
                     ((i = r.A.toURLSafe(n)),
-                    (s = i?.searchParams.get("referrer_id") ?? void 0),
+                    (a = i?.searchParams.get("referrer_id") ?? void 0),
                     {
-                        referrerId: s,
+                        referrerId: a,
                         customId: i?.searchParams.get("custom_id") ?? void 0,
                         linkId: i?.searchParams.get("link_id") ?? void 0,
                     }),
@@ -43,4 +43,4 @@ function u(e, t, n) {
         }
     }
 }
-a.I.APP_DIRECTORY_PROFILE, a.I.ACTIVITY_BOOKMARK, a.I.APP_OAUTH2_LINK;
+s.I.APP_DIRECTORY_PROFILE, s.I.ACTIVITY_BOOKMARK, s.I.APP_OAUTH2_LINK;

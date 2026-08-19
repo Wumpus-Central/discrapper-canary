@@ -25,8 +25,8 @@ var I = n(164956),
     S = n(773669),
     N = n(935208),
     C = n(280450),
-    R = n(734057),
-    O = n(72314),
+    O = n(734057),
+    R = n(72314),
     L = n(808728),
     y = n(696451),
     D = n(71393),
@@ -58,7 +58,7 @@ function V() {
 }
 async function B(e, t, n) {
     let i = u.A.database(),
-        r = R.A.getBasicChannel(e);
+        r = O.A.getBasicChannel(e);
     if (null != i && null != r)
         try {
             let n = u.A.messages(i),
@@ -82,7 +82,7 @@ function H(e) {
                 channel_id: e.channel_id,
                 message_id: e.media_mention.message_id,
                 type: w.SH7.DEFAULT,
-                guild_id: R.A.getChannel(e.channel_id)?.guild_id,
+                guild_id: O.A.getChannel(e.channel_id)?.guild_id,
             },
         };
     (n = n.receiveMessage(i, !1).mutate({ ready: !0 })), d.A.commit(n);
@@ -99,7 +99,7 @@ function j(e) {
 function W() {
     d.A.forEach((e) => {
         let { channelId: t } = e;
-        null == R.A.getChannel(t) && d.A.clear(t);
+        null == O.A.getChannel(t) && d.A.clear(t);
     });
 }
 function Y() {
@@ -127,7 +127,7 @@ function K(e) {
     let { type: t, channelId: n, messageId: i, userId: r, emoji: a, reactionType: s } = e,
         l = d.A.get(n);
     if (null == l || !(0, g.vp)(e)) return !1;
-    let o = R.A.getBasicChannel(n)?.type === w.rbe.DM,
+    let o = O.A.getBasicChannel(n)?.type === w.rbe.DM,
         c = C.default.getId() === r;
     (l = l.update(i, (n) =>
         "MESSAGE_REACTION_ADD" === t
@@ -156,12 +156,12 @@ function $(e) {
 class z extends s.Ay.Store {
     static displayName = "MessageStore";
     initialize() {
-        this.waitFor(C.default, R.A, O.A, f.A, L.Ay, y.Ay, D.A, I.A, S.default, v.A, b.A, M.Ay, P.A, U.default),
+        this.waitFor(C.default, O.A, R.A, f.A, L.Ay, y.Ay, D.A, I.A, S.default, v.A, b.A, M.Ay, P.A, U.default),
             this.syncWith([I.A], () => {});
     }
     getMessages(e) {
         if (I.A.hasViewingRoles()) {
-            let t = R.A.getChannel(e),
+            let t = O.A.getChannel(e),
                 n = t?.getGuildId();
             if (I.A.isViewingRoles(n) && !v.A.can(w.xBc.VIEW_CHANNEL, t)) return new d.A(e);
         }
@@ -360,7 +360,7 @@ let Z = new z(l.h, {
                           i.state !== w.cmJ.SENDING &&
                           G.has(i.nonce) &&
                           ((s = s.remove(i.nonce)), G.delete(i.nonce)),
-                      (s = s.receiveMessage(i, !0 === O.A.isAtBottom(t))),
+                      (s = s.receiveMessage(i, !0 === R.A.isAtBottom(t))),
                       d.A.commit(s),
                       H(i));
         },

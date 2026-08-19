@@ -1,29 +1,29 @@
-t.d(e, { A: () => c });
+t.d(a, { A: () => c });
 var l = t(477900);
 t(582128);
 var n = t(772707),
-    i = t(834730),
-    r = t(375708),
-    s = t(822264);
-function c(a) {
-    let e,
-        { transitionState: t, guild: c, guildBoostQuantity: o, isTransfer: h, graphic: d, onClose: u } = a,
+    r = t(834730),
+    s = t(375708),
+    i = t(822264);
+function c(e) {
+    let a,
+        { transitionState: t, guild: c, guildBoostQuantity: o, isTransfer: u, graphic: d, onClose: h } = e,
         m = c?.name;
-    e = h
+    a = u
         ? null == m
-            ? r.intl.format(r.t.mYRfYx, {})
-            : r.intl.format(r.t["Ps/5bb"], { guildName: m })
+            ? s.intl.format(s.t.mYRfYx, {})
+            : s.intl.format(s.t["Ps/5bb"], { guildName: m })
         : null == m
-          ? r.intl.format(r.t["4fw/T2"], { guildSubscriptionQuantity: o })
-          : r.intl.format(r.t.IeFTQu, { guildName: m, guildSubscriptionQuantity: o });
-    let p = h ? r.intl.string(r.t["5uYZHN"]) : r.intl.string(r.t.mpb7t3),
-        x = [{ variant: "primary", text: r.intl.string(r.t["/iTxgz"]), onClick: u }];
+          ? s.intl.format(s.t["4fw/T2"], { guildSubscriptionQuantity: o })
+          : s.intl.format(s.t.IeFTQu, { guildName: m, guildSubscriptionQuantity: o });
+    let p = u ? s.intl.string(s.t["5uYZHN"]) : s.intl.string(s.t.mpb7t3),
+        x = [{ variant: "primary", text: s.intl.string(s.t["/iTxgz"]), onClick: h }];
     return (0, l.jsx)(n.k, {
         transitionState: t,
-        onClose: u,
+        onClose: h,
         graphic: d,
         title: p,
         actions: x,
-        children: (0, l.jsx)(i.E, { variant: "text-md/normal", className: s.x, children: e }),
+        children: (0, l.jsx)(r.E, { variant: "text-md/normal", className: i.x, children: a }),
     });
 }

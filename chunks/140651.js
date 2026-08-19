@@ -1,27 +1,27 @@
 "use strict";
-n.d(t, { A: () => _ });
-var i = n(582128),
-    r = n(310784),
-    a = n.n(r);
+n.d(t, { A: () => h });
+var l = n(582128),
+    i = n(310784),
+    s = n.n(i);
 n(440745);
-var s = n(17928),
-    l = n(317097),
+var r = n(17928),
+    a = n(317097),
     o = n(775602),
-    d = n(654107),
+    u = n(654107),
     c = n(363195),
-    u = n(661531);
-let _ = function (e) {
+    d = n(661531);
+let h = function (e) {
     var t;
-    let n = (0, s.bG)([o.Ay], () => o.Ay.saturation),
-        r =
-            ((t = (0, s.bG)([c.A], () => c.A.theme)),
-            u.A.colors.BACKGROUND_SURFACE_HIGH.resolve?.({ theme: t, saturation: n })?.hex?.() ?? "#000"),
-        [_, E] = (0, d.rh)(e, r);
-    return i.useMemo(() => {
-        let e = (0, l.LX)(_),
-            t = (0, l.LX)(E);
-        for (let t = 1; t < 8 && !((0, l.OK)(e) >= 0.725); t++) e = a()(e).darken(0.5).num();
-        for (let e = 1; e < 8 && !((0, l.OK)(t) >= 0.725); e++) t = a()(t).darken(0.5).num();
-        return { primaryColor: (0, l.Hl)(e), secondaryColor: (0, l.Hl)(t) };
-    }, [_, E]);
+    let n = (0, r.bG)([o.Ay], () => o.Ay.saturation),
+        i =
+            ((t = (0, r.bG)([c.A], () => c.A.theme)),
+            d.A.colors.BACKGROUND_SURFACE_HIGH.resolve?.({ theme: t, saturation: n })?.hex?.() ?? "#000"),
+        [h, m] = (0, u.rh)(e, i);
+    return l.useMemo(() => {
+        let e = (0, a.LX)(h),
+            t = (0, a.LX)(m);
+        for (let t = 1; t < 8 && !((0, a.OK)(e) >= 0.725); t++) e = s()(e).darken(0.5).num();
+        for (let e = 1; e < 8 && !((0, a.OK)(t) >= 0.725); e++) t = s()(t).darken(0.5).num();
+        return { primaryColor: (0, a.Hl)(e), secondaryColor: (0, a.Hl)(t) };
+    }, [h, m]);
 };

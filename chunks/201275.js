@@ -1,32 +1,32 @@
 "use strict";
-n.d(t, { $7: () => d, ox: () => o, qE: () => c });
-var i = n(582128),
-    r = n(17928),
-    a = n(317525),
-    s = n(71393),
-    l = n(376304);
+n.d(t, { $7: () => u, ox: () => o, qE: () => c });
+var l = n(582128),
+    i = n(17928),
+    s = n(317525),
+    r = n(71393),
+    a = n(376304);
 function o(e, t) {
     if (null == e) return;
-    let { customIconSrc: n, unicodeEmoji: i } = (0, l.sE)(e, t) ?? {};
-    if (null != n || null != i) return { src: n, name: e.name, roleId: e.id, size: t, unicodeEmoji: i };
+    let { customIconSrc: n, unicodeEmoji: l } = (0, a.sE)(e, t) ?? {};
+    if (null != n || null != l) return { src: n, name: e.name, roleId: e.id, size: t, unicodeEmoji: l };
 }
-function d(e) {
-    let { guildId: t, roleId: n, size: d = 20, role: c, guild: u } = e,
-        { guild: _, role: E } = (0, r.cf)(
-            [s.A, a.A],
+function u(e) {
+    let { guildId: t, roleId: n, size: u = 20, role: c, guild: d } = e,
+        { guild: h, role: m } = (0, i.cf)(
+            [r.A, s.A],
             () => ({
-                guild: null == u ? s.A.getGuild(t) : void 0,
-                role: null == c && null != n ? a.A.getRole(t, n) : void 0,
+                guild: null == d ? r.A.getGuild(t) : void 0,
+                role: null == c && null != n ? s.A.getRole(t, n) : void 0,
             }),
-            [t, n, c, u],
+            [t, n, c, d],
         ),
-        A = u ?? _,
-        h = c ?? E;
-    return i.useMemo(() => {
-        if (null != A && null != h && (0, l.fm)(A, h)) return o(h, d);
-    }, [A, h, d]);
+        f = d ?? h,
+        p = c ?? m;
+    return l.useMemo(() => {
+        if (null != f && null != p && (0, a.fm)(f, p)) return o(p, u);
+    }, [f, p, u]);
 }
 function c(e, t) {
-    let n = (0, r.bG)([s.A], () => s.A.getGuild(e));
-    if (null != n && (0, l.fm)(n, t)) return o(t);
+    let n = (0, i.bG)([r.A], () => r.A.getGuild(e));
+    if (null != n && (0, a.fm)(n, t)) return o(t);
 }

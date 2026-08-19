@@ -1,11 +1,11 @@
 "use strict";
-n.d(t, { A: () => l });
+n.d(t, { A: () => o });
 var i = n(228366),
     r = n(95561),
-    s = n(174459),
-    a = n(625494),
-    o = n(652215);
-let l = {
+    a = n(174459),
+    s = n(625494),
+    l = n(652215);
+let o = {
     rebuildRTCActiveChannels() {
         i.h.dispatch({ type: "CHANNEL_RTC_ACTIVE_CHANNELS" });
     },
@@ -19,8 +19,8 @@ let l = {
         i.h.dispatch({ type: "CHANNEL_RTC_RETURN_PARTICIPANT", channelId: e, participantId: t });
     },
     updateLayout(e, t) {
-        let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : o.BRT.APP;
-        s.default.track(o.HAw.VIDEO_LAYOUT_TOGGLED, { video_layout: t, ...(0, r.QS)(e) }),
+        let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : l.BRT.APP;
+        a.default.track(l.HAw.VIDEO_LAYOUT_TOGGLED, { video_layout: t, ...(0, r.QS)(e) }),
             i.h.dispatch({ type: "CHANNEL_RTC_UPDATE_LAYOUT", channelId: e, layout: t, appContext: n });
     },
     toggleParticipants(e, t) {
@@ -47,9 +47,9 @@ let l = {
         i.h.dispatch({ type: "CHANNEL_RTC_UPDATE_CHAT_OPEN", channelId: e, chatOpen: t }),
             t
                 ? setTimeout(() => {
-                      a._.dispatch(o.jej.FOCUS_CHANNEL_TEXT_AREA, { channelId: e });
+                      s._.dispatch(l.jej.FOCUS_CHANNEL_TEXT_AREA, { channelId: e });
                   }, 0)
-                : a._.dispatch(o.jej.FOCUS_CHAT_BUTTON);
+                : s._.dispatch(l.jej.FOCUS_CHAT_BUTTON);
     },
     jumpToVoiceChannelMessage(e, t, n, r) {
         i.h.dispatch({

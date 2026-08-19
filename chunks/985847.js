@@ -1,8 +1,8 @@
 "use strict";
-function r(e, t) {
+function n(e, t) {
     if (!e) return !1;
-    let n = window.getComputedStyle(e),
-        r = /(auto|scroll)/.test(n.overflow + n.overflowX + n.overflowY);
-    return r && t && (r = e.scrollHeight !== e.clientHeight || e.scrollWidth !== e.clientWidth), r;
+    let r = window.getComputedStyle(e),
+        n = /(auto|scroll)/.test(r.overflow + r.overflowX + r.overflowY);
+    return n && t && (n = e.scrollHeight !== e.clientHeight || e.scrollWidth !== e.clientWidth), n;
 }
-n.d(t, { o: () => r });
+r.d(t, { o: () => n });

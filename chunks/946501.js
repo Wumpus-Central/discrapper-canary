@@ -3,14 +3,14 @@ var t = Object.prototype.toString,
     r = Math.max,
     n = function (e, t) {
         for (var r = [], n = 0; n < e.length; n += 1) r[n] = e[n];
-        for (var i = 0; i < t.length; i += 1) r[i + e.length] = t[i];
-        return r;
-    },
-    i = function (e, t) {
-        for (var r = [], n = t || 0, i = 0; n < e.length; n += 1, i += 1) r[i] = e[n];
+        for (var o = 0; o < t.length; o += 1) r[o + e.length] = t[o];
         return r;
     },
     o = function (e, t) {
+        for (var r = [], n = t || 0, o = 0; n < e.length; n += 1, o += 1) r[o] = e[n];
+        return r;
+    },
+    i = function (e, t) {
         for (var r = "", n = 0; n < e.length; n += 1) (r += e[n]), n + 1 < e.length && (r += t);
         return r;
     };
@@ -19,11 +19,11 @@ e.exports = function (e) {
         s = this;
     if ("function" != typeof s || "[object Function]" !== t.apply(s))
         throw TypeError("Function.prototype.bind called on incompatible " + s);
-    for (var l = i(arguments, 1), u = r(0, s.length - l.length), c = [], d = 0; d < u; d++) c[d] = "$" + d;
+    for (var l = o(arguments, 1), u = r(0, s.length - l.length), c = [], f = 0; f < u; f++) c[f] = "$" + f;
     if (
         ((a = Function(
             "binder",
-            "return function (" + o(c, ",") + "){ return binder.apply(this,arguments); }",
+            "return function (" + i(c, ",") + "){ return binder.apply(this,arguments); }",
         )(function () {
             if (this instanceof a) {
                 var t = s.apply(this, n(l, arguments));
@@ -33,8 +33,8 @@ e.exports = function (e) {
         })),
         s.prototype)
     ) {
-        var f = function () {};
-        (f.prototype = s.prototype), (a.prototype = new f()), (f.prototype = null);
+        var p = function () {};
+        (p.prototype = s.prototype), (a.prototype = new p()), (p.prototype = null);
     }
     return a;
 };

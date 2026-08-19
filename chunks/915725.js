@@ -30,8 +30,8 @@ let T = "default",
     O = 0,
     R = null,
     L = null,
-    D = null,
-    y = {},
+    y = null,
+    D = {},
     v = {},
     b = null,
     M = new Set(),
@@ -105,7 +105,7 @@ class F extends s.Ay.DeviceSettingsStore {
         (e) => ({ ...e, clipsSettings: { ...e.clipsSettings, decoupledClipsEnabled: w.decoupledClipsEnabled } }),
         (e) => ({ ...e, hardwareClassificationForDecoupled: e.hardwareClassificationForDecoupled ?? null }),
         (e) => {
-            let t = n(749983).Ay.getHardwareEncoding();
+            let t = n(453028).Ay.getHardwareEncoding();
             return {
                 ...e,
                 clipsSettings: {
@@ -211,10 +211,10 @@ class F extends s.Ay.DeviceSettingsStore {
         return L;
     }
     getCurrentClipsSession() {
-        return D;
+        return y;
     }
     getHistoricalClipsSessionById(e) {
-        return y[e];
+        return D[e];
     }
     devSetLastClipsSession(e) {
         (L = e), this.emitChange();
@@ -281,11 +281,11 @@ let V = new F(l.h, {
             let { clip: t } = e;
             (O = Math.max(O - 1, 0)),
                 t.isCandidate && ((C = [t, ...C]), (S[t.id] = t)),
-                null != D &&
-                    (D = {
-                        ...D,
-                        manualClipsSaved: D.manualClipsSaved + +("manual" === t.clipMethod),
-                        candidateClipsSaved: D.candidateClipsSaved + +!!t.isCandidate,
+                null != y &&
+                    (y = {
+                        ...y,
+                        manualClipsSaved: y.manualClipsSaved + +("manual" === t.clipMethod),
+                        candidateClipsSaved: y.candidateClipsSaved + +!!t.isCandidate,
                     }),
                 t.isCandidate ||
                     ((L = {
@@ -303,10 +303,10 @@ let V = new F(l.h, {
             let { clip: t } = e;
             (L = { applicationName: t.applicationName, ...L, ended: !0, newClipIds: [...(L?.newClipIds ?? []), t.id] }),
                 r()(
-                    null != D && D.id === t.gameSessionId,
+                    null != y && y.id === t.gameSessionId,
                     "Promoting clip candidates that do not match current autoclip session",
                 ),
-                (D = { ...D, candidateClipsPromoted: D.candidateClipsPromoted + 1 }),
+                (y = { ...y, candidateClipsPromoted: y.candidateClipsPromoted + 1 }),
                 (G = { ...G, newClipIds: [...(G.newClipIds ?? []), t.id] }),
                 (C = C.filter((e) => {
                     let { id: n } = e;
@@ -349,12 +349,12 @@ let V = new F(l.h, {
         },
         CLIPS_SESSION_START: function (e) {
             let { sessionId: t, gameId: n } = e;
-            null != D && (y[D.id] = D),
-                (D = { id: t, gameId: n, manualClipsSaved: 0, candidateClipsSaved: 0, candidateClipsPromoted: 0 });
+            null != y && (D[y.id] = y),
+                (y = { id: t, gameId: n, manualClipsSaved: 0, candidateClipsSaved: 0, candidateClipsPromoted: 0 });
         },
         CLIPS_SESSION_STOP: function () {
-            if (null == D) return !1;
-            (y[D.id] = D), (D = null);
+            if (null == y) return !1;
+            (D[y.id] = y), (y = null);
         },
         CLIPS_CLEAR_NEW_CLIP_IDS: function () {
             G.newClipIds = [];

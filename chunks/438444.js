@@ -1,4 +1,4 @@
-n(989349).defineLocale("ko", {
+d(989349).defineLocale("ko", {
     months: "1\uC6D4_2\uC6D4_3\uC6D4_4\uC6D4_5\uC6D4_6\uC6D4_7\uC6D4_8\uC6D4_9\uC6D4_10\uC6D4_11\uC6D4_12\uC6D4".split(
         "_",
     ),
@@ -47,26 +47,26 @@ n(989349).defineLocale("ko", {
         yy: "%d\uB144",
     },
     dayOfMonthOrdinalParse: /\d{1,2}(\uc77c|\uc6d4|\uc8fc)/,
-    ordinal: function (e, t) {
-        switch (t) {
+    ordinal: function (_, e) {
+        switch (e) {
             case "d":
             case "D":
             case "DDD":
-                return e + "\uC77C";
+                return _ + "\uC77C";
             case "M":
-                return e + "\uC6D4";
+                return _ + "\uC6D4";
             case "w":
             case "W":
-                return e + "\uC8FC";
+                return _ + "\uC8FC";
             default:
-                return e;
+                return _;
         }
     },
     meridiemParse: /\uc624\uc804|\uc624\ud6c4/,
-    isPM: function (e) {
-        return "\uC624\uD6C4" === e;
+    isPM: function (_) {
+        return "\uC624\uD6C4" === _;
     },
-    meridiem: function (e, t, n) {
-        return e < 12 ? "\uC624\uC804" : "\uC624\uD6C4";
+    meridiem: function (_, e, d) {
+        return _ < 12 ? "\uC624\uC804" : "\uC624\uD6C4";
     },
 });

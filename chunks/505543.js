@@ -1,7 +1,7 @@
 "use strict";
-n.d(t, { A: () => s });
+n.d(t, { A: () => a });
 var i = n(17928),
     r = n(446600);
-function s(e) {
+function a(e) {
     return (0, i.bG)([r.A], () => r.A.isLive(e), [e]);
 }

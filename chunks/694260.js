@@ -1,12 +1,12 @@
 "use strict";
-function i(e) {
+function r(e) {
     return "[object Object]" === Object.prototype.toString.call(e);
 }
-function r(e) {
+function i(e) {
     var t, n;
     return (
-        !1 !== i(e) &&
-        (void 0 === (t = e.constructor) || (!1 !== i((n = t.prototype)) && !1 !== n.hasOwnProperty("isPrototypeOf")))
+        !1 !== r(e) &&
+        (void 0 === (t = e.constructor) || (!1 !== r((n = t.prototype)) && !1 !== n.hasOwnProperty("isPrototypeOf")))
     );
 }
-n.d(t, { Q: () => r });
+n.d(t, { Q: () => i });

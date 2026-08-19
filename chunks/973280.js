@@ -1,15 +1,15 @@
-var i = n(306095);
-function r(e, t) {
-    for (var n = 0; n < t.length; n++) {
-        var r = t[n];
-        (r.enumerable = r.enumerable || !1),
-            (r.configurable = !0),
-            "value" in r && (r.writable = !0),
-            Object.defineProperty(e, i(r.key), r);
+var n = r(306095);
+function o(e, t) {
+    for (var r = 0; r < t.length; r++) {
+        var o = t[r];
+        (o.enumerable = o.enumerable || !1),
+            (o.configurable = !0),
+            "value" in o && (o.writable = !0),
+            Object.defineProperty(e, n(o.key), o);
     }
 }
-(e.exports = function (e, t, n) {
-    return t && r(e.prototype, t), n && r(e, n), Object.defineProperty(e, "prototype", { writable: !1 }), e;
+(e.exports = function (e, t, r) {
+    return t && o(e.prototype, t), r && o(e, r), Object.defineProperty(e, "prototype", { writable: !1 }), e;
 }),
     (e.exports.__esModule = !0),
     (e.exports.default = e.exports);

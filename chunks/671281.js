@@ -16,7 +16,7 @@ let h = i,
     f = o,
     g = new Set(u),
     E = {};
-function A(e) {
+function v(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         n = Object.entries(t)
             .sort((e, t) => {
@@ -31,7 +31,7 @@ function A(e) {
             .join("-");
     return "" !== n ? `${e}-${n}` : e;
 }
-class v extends r.Ay.Store {
+class A extends r.Ay.Store {
     static displayName = "LayoutSystemStore";
     getLayout(e, t) {
         return null == e || null == t ? null : (h[e]?.[t] ?? null);
@@ -44,18 +44,18 @@ class v extends r.Ay.Store {
     }
     getTemplateLayout(e, t, n) {
         if (null == e || null == t) return null;
-        let r = A(t, n);
+        let r = v(t, n);
         return f[e]?.[r] ?? null;
     }
     isFetchingTemplate(e, t, n) {
-        let r = A(t ?? "", n);
+        let r = v(t ?? "", n);
         return null != e && null != t && g.has(d(e, r));
     }
     getTemplateFetchError(e, t, n) {
-        return null == e || null == t ? null : (E[d(e, A(t ?? "", n))] ?? null);
+        return null == e || null == t ? null : (E[d(e, v(t ?? "", n))] ?? null);
     }
 }
-let x = new v(l.h, {
+let x = new A(l.h, {
     LAYOUT_SYSTEM_FETCH: function (e) {
         let { tenantId: t, layoutId: n } = e;
         m.add(d(t, n));
@@ -70,16 +70,16 @@ let x = new v(l.h, {
     },
     LAYOUT_SYSTEM_TEMPLATE_FETCH: function (e) {
         let { tenantId: t, templateId: n, requestParams: r } = e;
-        g.add(d(t, A(n, r)));
+        g.add(d(t, v(n, r)));
     },
     LAYOUT_SYSTEM_TEMPLATE_FETCH_SUCCESS: function (e) {
         let { tenantId: t, templateId: n, requestParams: r, layout: l } = e,
-            a = A(n, r);
+            a = v(n, r);
         ((f[t] ??= {})[a] = l), delete E[d(t, a)], g.delete(d(t, a));
     },
     LAYOUT_SYSTEM_TEMPLATE_FETCH_FAILURE: function (e) {
         let { tenantId: t, templateId: n, requestParams: r, apiError: l } = e,
-            a = A(n, r);
+            a = v(n, r);
         (E[d(t, a)] = l), g.delete(d(t, a));
     },
     LOGOUT: function () {

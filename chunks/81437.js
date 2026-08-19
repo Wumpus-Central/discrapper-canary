@@ -1,45 +1,45 @@
-i.d(n, { A: () => g });
-var r = i(157559),
-    e = i(734057),
-    o = i(576705),
-    a = i(994500),
-    s = i(694318),
-    l = i(652215),
-    d = i(375708);
-function g(t, n) {
-    if (a.A.isBlockedForMessage(t))
+n.d(t, { A: () => d });
+var s = n(157559),
+    i = n(734057),
+    a = n(576705),
+    r = n(994500),
+    l = n(694318),
+    o = n(652215),
+    c = n(375708);
+function d(e, t) {
+    if (r.A.isBlockedForMessage(e))
         return (
-            r.A.show({
-                title: d.intl.string(d.t["j7eA/g"]),
-                body: d.intl.formatToPlainString(d.t.dTNNgr, { name: t.author.username }),
-                confirmText: d.intl.string(d.t.BddRzS),
+            s.A.show({
+                title: c.intl.string(c.t["j7eA/g"]),
+                body: c.intl.formatToPlainString(c.t.dTNNgr, { name: e.author.username }),
+                confirmText: c.intl.string(c.t.BddRzS),
             }),
             !1
         );
-    if (a.A.isIgnoredForMessage(t))
+    if (r.A.isIgnoredForMessage(e))
         return (
-            r.A.show({
-                title: d.intl.string(d.t.XyWoKV),
-                body: d.intl.formatToPlainString(d.t["8t8doK"], { name: t.author.username }),
-                confirmText: d.intl.string(d.t.BddRzS),
+            s.A.show({
+                title: c.intl.string(c.t.XyWoKV),
+                body: c.intl.formatToPlainString(c.t["8t8doK"], { name: e.author.username }),
+                confirmText: c.intl.string(c.t.BddRzS),
             }),
             !1
         );
-    if ((0, s.kf)(t)) {
-        let i = e.A.getChannel(t.channel_id);
+    if ((0, l.kf)(e)) {
+        let n = i.A.getChannel(e.channel_id);
         return (
-            i?.isPrivate() || o.A.can(l.xBc.MODERATE_MEMBERS, i)
-                ? r.A.show({
-                      title: d.intl.string(d.t["cZcG+P"]),
-                      body: d.intl.formatToPlainString(d.t["1YTWty"], { name: t.author.username }),
-                      confirmText: d.intl.string(d.t["+TSRGD"]),
-                      cancelText: d.intl.string(d.t["ETE/oC"]),
-                      onConfirm: n,
+            n?.isPrivate() || a.A.can(o.xBc.MODERATE_MEMBERS, n)
+                ? s.A.show({
+                      title: c.intl.string(c.t["cZcG+P"]),
+                      body: c.intl.formatToPlainString(c.t["1YTWty"], { name: e.author.username }),
+                      confirmText: c.intl.string(c.t["+TSRGD"]),
+                      cancelText: c.intl.string(c.t["ETE/oC"]),
+                      onConfirm: t,
                   })
-                : r.A.show({
-                      title: d.intl.string(d.t["6vJKFk"]),
-                      body: d.intl.formatToPlainString(d.t.zKNgPF, { name: t.author.username }),
-                      confirmText: d.intl.string(d.t.BddRzS),
+                : s.A.show({
+                      title: c.intl.string(c.t["6vJKFk"]),
+                      body: c.intl.formatToPlainString(c.t.zKNgPF, { name: e.author.username }),
+                      confirmText: c.intl.string(c.t.BddRzS),
                   }),
             !1
         );

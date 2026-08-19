@@ -1,14 +1,14 @@
 "use strict";
-n.d(t, { M: () => a });
-var r = n(709157),
-    i = n(637096);
-function a(e) {
-    let { id: t, label: n, "aria-labelledby": a, "aria-label": o, labelElementType: s = "label" } = e;
-    t = (0, r.Bi)(t);
-    let l = (0, r.Bi)(),
+r.d(t, { M: () => i });
+var n = r(709157),
+    o = r(637096);
+function i(e) {
+    let { id: t, label: r, "aria-labelledby": i, "aria-label": a, labelElementType: s = "label" } = e;
+    t = (0, n.Bi)(t);
+    let l = (0, n.Bi)(),
         u = {};
     return (
-        n && ((a = a ? `${l} ${a}` : l), (u = { id: l, htmlFor: "label" === s ? t : void 0 })),
-        { labelProps: u, fieldProps: (0, i.b)({ id: t, "aria-label": o, "aria-labelledby": a }) }
+        r && ((i = i ? `${l} ${i}` : l), (u = { id: l, htmlFor: "label" === s ? t : void 0 })),
+        { labelProps: u, fieldProps: (0, o.b)({ id: t, "aria-label": a, "aria-labelledby": i }) }
     );
 }

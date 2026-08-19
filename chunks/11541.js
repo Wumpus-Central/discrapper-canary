@@ -1,31 +1,31 @@
 "use strict";
-n.d(t, { CI: () => m, UP: () => E, eN: () => A, uY: () => p, v8: () => g, vk: () => T }), n(321073);
+n.d(t, { CI: () => f, UP: () => I, eN: () => T, uY: () => h, v8: () => p, vk: () => g }), n(321073);
 var i,
     r = n(636537),
-    s = n(462887),
-    a = n(736653),
-    o = n(573648),
-    l = n(874490),
-    u = n(652215),
+    a = n(462887),
+    s = n(736653),
+    l = n(573648),
+    o = n(874490),
+    d = n(652215),
     c = n(375708);
-let d = {};
+let u = {};
 function _(e, t) {
     return t.map((t) => e + t);
 }
-function h(e) {
+function E(e) {
     return e.split("-")[1];
 }
-function f(e, t) {
+function A(e, t) {
     e.forEach((e) => {
-        d[e] = t;
+        u[e] = t;
     });
 }
-function p(e, t) {
+function h(e, t) {
     t.forEach((t) => {
-        d[e + t] = 3;
+        u[e + t] = 3;
     });
 }
-var E =
+var I =
     (((i = {})[(i.UNSPECIFIED = 0)] = "UNSPECIFIED"),
     (i[(i.BOT = 1)] = "BOT"),
     (i[(i.INTEGRATION = 2)] = "INTEGRATION"),
@@ -36,7 +36,7 @@ var E =
     (i[(i.MANUAL_MEMBER_VERIFICATION = 7)] = "MANUAL_MEMBER_VERIFICATION"),
     (i[(i.SOCIAL_LAYER_INTEGRATION_LINKED_CHANNEL = 8)] = "SOCIAL_LAYER_INTEGRATION_LINKED_CHANNEL"),
     i);
-function m(e) {
+function f(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
         n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
     switch (e) {
@@ -61,7 +61,7 @@ function m(e) {
             return c.intl.string(c.t.DvMBkS);
     }
 }
-function g(e) {
+function p(e) {
     switch (e) {
         case "twitch":
             return c.intl.string(c.t.AVGAkw);
@@ -71,14 +71,14 @@ function g(e) {
             return c.intl.string(c.t.gmCUFw);
     }
 }
-function A(e) {
-    let t = o.A.get((0, l.ML)(e)),
-        n = (0, a.Ay)();
+function T(e) {
+    let t = l.A.get((0, o.ML)(e)),
+        n = (0, s.Ay)();
     return null != t && ["twitch", "youtube"].includes(e)
-        ? `url('${((0, s.M))(n) ? t.icon.darkSVG : t.icon.lightSVG}')`
+        ? `url('${((0, a.M))(n) ? t.icon.darkSVG : t.icon.lightSVG}')`
         : null;
 }
-function I(e) {
+function m(e) {
     return {
         userId: e.user_id,
         sourceInviteCode: e.source_invite_code,
@@ -87,30 +87,30 @@ function I(e) {
         integrationType: e.integration_type,
     };
 }
-async function T(e, t) {
+async function g(e, t) {
     let n = _(e, t),
-        i = n.filter((e) => d[e] <= 1).map(h);
+        i = n.filter((e) => u[e] <= 1).map(E);
     if (0 === i.length) return [];
-    f(n, 2);
+    A(n, 2);
     try {
         let t = await r.Bo.post({
-            url: u.Rsh.MEMBER_SAFETY_SUPPLEMENTAL(e),
+            url: d.Rsh.MEMBER_SAFETY_SUPPLEMENTAL(e),
             body: { user_ids: i },
             rejectWithError: !0,
         });
-        if (!Array.isArray(t.body)) return f(n, 0), [];
-        let s = t.body.map(I),
-            a = [];
-        s.forEach((e) => {
+        if (!Array.isArray(t.body)) return A(n, 0), [];
+        let a = t.body.map(m),
+            s = [];
+        a.forEach((e) => {
             let { userId: t } = e;
-            return a.push(t);
+            return s.push(t);
         });
-        let o = _(e, a),
-            l = i.filter((e) => !a.includes(e)),
-            c = _(e, l);
-        return f(o, 3), f(c, 0), s;
+        let l = _(e, s),
+            o = i.filter((e) => !s.includes(e)),
+            c = _(e, o);
+        return A(l, 3), A(c, 0), a;
     } catch (e) {
-        f(n, 0);
+        A(n, 0);
     }
     return [];
 }

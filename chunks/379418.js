@@ -1,18 +1,18 @@
 "use strict";
-n.d(t, { EH: () => d, WA: () => c, kx: () => o, l9: () => u, tf: () => _ });
+n.d(t, { EH: () => u, WA: () => c, kx: () => l, l9: () => d, tf: () => _ });
 var i = n(989349),
     r = n.n(i),
-    s = n(58703),
-    a = n(927813);
-let o = {
-    t: (e) => (0, s.i$)(e, "LT"),
-    T: (e) => (0, s.i$)(e, "LTS"),
-    d: (e) => (0, s.i$)(e, "L"),
-    D: (e) => (0, s.i$)(e, "LL"),
-    f: (e) => (0, s.i$)(e, "LLL"),
-    F: (e) => (0, s.i$)(e, "LLLL"),
-    s: (e) => (0, s.i$)(e, "L LT"),
-    S: (e) => (0, s.i$)(e, "L LTS"),
+    a = n(58703),
+    s = n(927813);
+let l = {
+    t: (e) => (0, a.i$)(e, "LT"),
+    T: (e) => (0, a.i$)(e, "LTS"),
+    d: (e) => (0, a.i$)(e, "L"),
+    D: (e) => (0, a.i$)(e, "LL"),
+    f: (e) => (0, a.i$)(e, "LLL"),
+    F: (e) => (0, a.i$)(e, "LLLL"),
+    s: (e) => (0, a.i$)(e, "L LT"),
+    S: (e) => (0, a.i$)(e, "L LTS"),
     R: (e) => {
         let t = r().relativeTimeThreshold("s");
         r().relativeTimeThreshold("s", 60);
@@ -20,29 +20,29 @@ let o = {
         r().relativeTimeThreshold("ss", -1);
         let i = r().relativeTimeThreshold("m");
         r().relativeTimeThreshold("m", 60);
-        let s = null;
+        let a = null;
         try {
-            s = r()(e.toDate()).fromNow();
+            a = r()(e.toDate()).fromNow();
         } catch (e) {}
         return (
             r().relativeTimeThreshold("s", t),
             r().relativeTimeThreshold("ss", n),
             r().relativeTimeThreshold("m", i),
-            s ?? r()(e.toDate()).fromNow()
+            a ?? r()(e.toDate()).fromNow()
         );
     },
 };
-Object.setPrototypeOf(o, null);
-let l = Object.keys(o).join("|"),
-    u = RegExp(`^<t:(-?\\d{1,17})(?::(${l}))?>`);
+Object.setPrototypeOf(l, null);
+let o = Object.keys(l).join("|"),
+    d = RegExp(`^<t:(-?\\d{1,17})(?::(${o}))?>`);
 function c(e) {
     let { timestamp: t, format: n } = e,
-        i = r()(Number(t) * a.A.Millis.SECOND);
+        i = r()(Number(t) * s.A.Millis.SECOND);
     if (!i.isValid()) return null;
-    let s = null != n ? o[n] : void 0;
-    return null == s && (s = o.f), { timestamp: t, format: n, parsed: i, full: o.F(i), formatted: s(i) };
+    let a = null != n ? l[n] : void 0;
+    return null == a && (a = l.f), { timestamp: t, format: n, parsed: i, full: l.F(i), formatted: a(i) };
 }
-function d(e, t) {
+function u(e, t) {
     return c({ timestamp: e, format: t });
 }
 function _(e, t) {

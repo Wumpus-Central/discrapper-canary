@@ -1,9 +1,9 @@
 "use strict";
 n.d(t, {
-    $v: () => D,
+    $v: () => y,
     Ay: () => k,
     CK: () => P,
-    F4: () => y,
+    F4: () => D,
     KE: () => x,
     ME: () => M,
     R1: () => w,
@@ -53,11 +53,11 @@ function L(e) {
     let { className: t, src: n, size: r } = e;
     return (0, i.jsx)(N, { src: n, size: r, className: a()(S.yt, t), "aria-hidden": !0 });
 }
-function D(e) {
+function y(e) {
     let { guild: t, size: n, animate: r = !1, className: a } = e;
     return (0, i.jsx)(f.Ay, { active: !0, guild: t, size: n, animate: r, className: a });
 }
-function y(e) {
+function D(e) {
     let { className: t, channel: n, size: r } = e;
     return (0, i.jsx)(N, { src: (0, E.Y)(n), size: r, className: a()(S.TP, t), "aria-hidden": !0 });
 }
@@ -208,7 +208,7 @@ function x(e) {
         ],
     });
 }
-null == N && (N = () => null), (D.Sizes = f.Ay.Sizes), (y.Sizes = d._3);
+null == N && (N = () => null), (y.Sizes = f.Ay.Sizes), (D.Sizes = d._3);
 let k = function (e) {
     let {
         className: t,

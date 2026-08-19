@@ -38,23 +38,23 @@ function R() {
 function L(e) {
     E.has(e) || (E.add(e), C());
 }
-function D(e) {
+function y(e) {
     E.delete(e) && C();
 }
-let y = new Map();
+let D = new Map();
 function v(e, t) {
     let n = o.get(e);
     if (n === t) return;
-    null != n && y.get(n)?.delete(e), o.set(e, t);
-    let i = y.get(t);
-    null != i ? i.add(e) : y.set(t, new Set([e])), N(n), N(t);
+    null != n && D.get(n)?.delete(e), o.set(e, t);
+    let i = D.get(t);
+    null != i ? i.add(e) : D.set(t, new Set([e])), N(n), N(t);
 }
 function b(e) {
     let t = o.get(e);
-    null != t && (o.delete(e), y.get(t)?.delete(e), N(t));
+    null != t && (o.delete(e), D.get(t)?.delete(e), N(t));
 }
 function M() {
-    (T = _.size), (m = A.size), (p = Math.max((y.get(l.eA$.PENDING_INCOMING)?.size ?? 0) - T - m, 0)), I++;
+    (T = _.size), (m = A.size), (p = Math.max((D.get(l.eA$.PENDING_INCOMING)?.size ?? 0) - T - m, 0)), I++;
 }
 class P extends i.Ay.Store {
     static displayName = "RelationshipStore";
@@ -103,10 +103,10 @@ class P extends i.Ay.Store {
         return m;
     }
     getOutgoingCount() {
-        return y.get(l.eA$.PENDING_OUTGOING)?.size ?? 0;
+        return D.get(l.eA$.PENDING_OUTGOING)?.size ?? 0;
     }
     getFriendCount() {
-        return y.get(l.eA$.FRIEND)?.size ?? 0;
+        return D.get(l.eA$.FRIEND)?.size ?? 0;
     }
     getRelationshipCount() {
         return o.size;
@@ -137,10 +137,10 @@ class P extends i.Ay.Store {
         return u[e];
     }
     getFriendIDs() {
-        return null == g.friends && (g.friends = Array.from(y.get(l.eA$.FRIEND) ?? [])), g.friends;
+        return null == g.friends && (g.friends = Array.from(D.get(l.eA$.FRIEND) ?? [])), g.friends;
     }
     getBlockedIDs() {
-        return null == g.blocked && (g.blocked = Array.from(y.get(l.eA$.BLOCKED) ?? [])), g.blocked;
+        return null == g.blocked && (g.blocked = Array.from(D.get(l.eA$.BLOCKED) ?? [])), g.blocked;
     }
     getIgnoredIDs() {
         return null == g.ignored && (g.ignored = Array.from(E.values()).filter((e) => this.isIgnored(e))), g.ignored;
@@ -148,7 +148,7 @@ class P extends i.Ay.Store {
     getBlockedOrIgnoredIDs() {
         if (null == g.blockedOrIgnored) {
             let e = new Set(E),
-                t = y.get(l.eA$.BLOCKED);
+                t = D.get(l.eA$.BLOCKED);
             if (null != t) for (let n of t) e.add(n);
             g.blockedOrIgnored = e;
         }
@@ -164,7 +164,7 @@ class P extends i.Ay.Store {
 let U = new P(r.h, {
     CONNECTION_OPEN: function (e) {
         o.clear(),
-            y.clear(),
+            D.clear(),
             (d = {}),
             (c = {}),
             (u = {}),
@@ -187,7 +187,7 @@ let U = new P(r.h, {
             M();
     },
     OVERLAY_INITIALIZE: function (e) {
-        for (let [t, n] of (o.clear(), y.clear(), O(), e.relationships)) v(t, n);
+        for (let [t, n] of (o.clear(), D.clear(), O(), e.relationships)) v(t, n);
         R(), M();
     },
     RELATIONSHIP_ADD: function (e) {
@@ -204,7 +204,7 @@ let U = new P(r.h, {
                   e.relationship.type === l.eA$.PENDING_INCOMING
                       ? A.add(e.relationship.id)
                       : e.relationship.type === l.eA$.FRIEND && A.delete(e.relationship.id))
-                : (D(e.relationship.id), A.delete(e.relationship.id)),
+                : (y(e.relationship.id), A.delete(e.relationship.id)),
             R(),
             M(),
             e.relationship.type === l.eA$.FRIEND &&
@@ -217,7 +217,7 @@ let U = new P(r.h, {
             null != c[e.relationship.id] && ((c = { ...c }), delete c[e.relationship.id]),
             null != u[e.relationship.id] && ((u = { ...u }), delete u[e.relationship.id]),
             null != h[e.relationship.id] && ((h = { ...h }), delete h[e.relationship.id]),
-            e.relationship.userIgnored || D(e.relationship.id),
+            e.relationship.userIgnored || y(e.relationship.id),
             A.delete(e.relationship.id),
             _.delete(e.relationship.id),
             R(),
@@ -232,7 +232,7 @@ let U = new P(r.h, {
             t.isSpamRequest ? _.add(t.id) : _.delete(t.id),
             null != f[t.id] && delete f[t.id],
             null == t.originApplicationId ? delete h[t.id] : (h[t.id] = t.originApplicationId),
-            t.userIgnored ? (L(t.id), t.type === l.eA$.PENDING_INCOMING && A.add(t.id)) : (D(t.id), A.delete(t.id)),
+            t.userIgnored ? (L(t.id), t.type === l.eA$.PENDING_INCOMING && A.add(t.id)) : (y(t.id), A.delete(t.id)),
             R(),
             M();
     },

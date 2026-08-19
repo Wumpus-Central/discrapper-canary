@@ -1,18 +1,18 @@
 "use strict";
-n.d(t, { HT: () => l, WY: () => s });
+n.d(t, { HT: () => o, WY: () => a });
 var i = n(573648),
     r = n(395671);
-let s = "spotify",
-    a = i.A.get(s);
-class o extends r.Ay {
+let a = "spotify",
+    s = i.A.get(a);
+class l extends r.Ay {
     constructor() {
-        super({}), (this.id = s), (this.name = a.name);
+        super({}), (this.id = a), (this.name = s.name);
     }
     getIconURL(e) {
-        return a.icon.lightPNG;
+        return s.icon.lightPNG;
     }
     getWhiteIconURL() {
-        return a.icon.whitePNG;
+        return s.icon.whitePNG;
     }
 }
-let l = new o();
+let o = new l();

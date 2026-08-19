@@ -1,16 +1,16 @@
 "use strict";
-n.d(t, { V: () => l, e: () => o });
-var i = n(852015),
-    r = n(82180),
-    s = n(679314);
+r.d(t, { V: () => l, e: () => s });
+var n = r(852015),
+    o = r(82180),
+    i = r(679314);
 let a = { readUnknownField: !0, readerFactory: (e) => new l(e) };
-function o(e) {
+function s(e) {
     return e ? Object.assign(Object.assign({}, a), e) : a;
 }
 class l {
     constructor(e, t) {
-        (this.varint64 = s.ls),
-            (this.uint32 = s.Gn),
+        (this.varint64 = i.ls),
+            (this.uint32 = i.Gn),
             (this.buf = e),
             (this.len = e.length),
             (this.pos = 0),
@@ -20,28 +20,28 @@ class l {
     tag() {
         let e = this.uint32(),
             t = e >>> 3,
-            n = 7 & e;
-        if (t <= 0 || n < 0 || n > 5) throw Error("illegal tag: field no " + t + " wire type " + n);
-        return [t, n];
+            r = 7 & e;
+        if (t <= 0 || r < 0 || r > 5) throw Error("illegal tag: field no " + t + " wire type " + r);
+        return [t, r];
     }
     skip(e) {
         let t = this.pos;
         switch (e) {
-            case i.O0.Varint:
+            case n.O0.Varint:
                 for (; 128 & this.buf[this.pos++]; );
                 break;
-            case i.O0.Bit64:
+            case n.O0.Bit64:
                 this.pos += 4;
-            case i.O0.Bit32:
+            case n.O0.Bit32:
                 this.pos += 4;
                 break;
-            case i.O0.LengthDelimited:
-                let n = this.uint32();
-                this.pos += n;
+            case n.O0.LengthDelimited:
+                let r = this.uint32();
+                this.pos += r;
                 break;
-            case i.O0.StartGroup:
-                let r;
-                for (; (r = this.tag()[1]) !== i.O0.EndGroup; ) this.skip(r);
+            case n.O0.StartGroup:
+                let o;
+                for (; (o = this.tag()[1]) !== n.O0.EndGroup; ) this.skip(o);
                 break;
             default:
                 throw Error("cant skip wire type " + e);
@@ -59,15 +59,15 @@ class l {
         return (e >>> 1) ^ -(1 & e);
     }
     int64() {
-        return new r.h(...this.varint64());
+        return new o.h(...this.varint64());
     }
     uint64() {
-        return new r.e(...this.varint64());
+        return new o.e(...this.varint64());
     }
     sint64() {
         let [e, t] = this.varint64(),
-            n = -(1 & e);
-        return (e = ((e >>> 1) | ((1 & t) << 31)) ^ n), (t = (t >>> 1) ^ n), new r.h(e, t);
+            r = -(1 & e);
+        return (e = ((e >>> 1) | ((1 & t) << 31)) ^ r), (t = (t >>> 1) ^ r), new o.h(e, t);
     }
     bool() {
         let [e, t] = this.varint64();
@@ -80,10 +80,10 @@ class l {
         return this.view.getInt32((this.pos += 4) - 4, !0);
     }
     fixed64() {
-        return new r.e(this.sfixed32(), this.sfixed32());
+        return new o.e(this.sfixed32(), this.sfixed32());
     }
     sfixed64() {
-        return new r.h(this.sfixed32(), this.sfixed32());
+        return new o.h(this.sfixed32(), this.sfixed32());
     }
     float() {
         return this.view.getFloat32((this.pos += 4) - 4, !0);

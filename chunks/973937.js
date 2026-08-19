@@ -19,7 +19,7 @@ function h(e, n) {
             [e],
         ),
         p = h && C,
-        g = p ? E : null != t,
+        g = p ? E : null == t,
         f = i.useCallback(() => {
             p ? (0, o.UV)(!E, e) : null != t ? r.A.selectParticipant(e, null) : r.A.selectParticipant(e, A.jd.AUTO);
         }, [p, E, t, e]);

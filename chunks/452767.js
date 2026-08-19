@@ -1,40 +1,40 @@
 "use strict";
-var r = (function () {
+var n = (function () {
         function e(e, t) {
-            for (var n = 0; n < t.length; n++) {
-                var r = t[n];
-                (r.enumerable = r.enumerable || !1),
-                    (r.configurable = !0),
-                    "value" in r && (r.writable = !0),
-                    Object.defineProperty(e, r.key, r);
+            for (var r = 0; r < t.length; r++) {
+                var n = t[r];
+                (n.enumerable = n.enumerable || !1),
+                    (n.configurable = !0),
+                    "value" in n && (n.writable = !0),
+                    Object.defineProperty(e, n.key, n);
             }
         }
-        return function (t, n, r) {
-            return n && e(t.prototype, n), r && e(t, r), t;
+        return function (t, r, n) {
+            return r && e(t.prototype, r), n && e(t, n), t;
         };
     })(),
-    i = n(150433);
-n(498121);
-var a = n(703806),
-    o = n(151979),
-    s = n(934580),
-    l = a.inOut(a.ease);
+    o = r(150433);
+r(498121);
+var i = r(703806),
+    a = r(151979),
+    s = r(934580),
+    l = i.inOut(i.ease);
 e.exports = (function (e) {
     if ("function" != typeof e && null !== e)
         throw TypeError("Super expression must either be null or a function, not " + typeof e);
     function t(e) {
         if (!(this instanceof t)) throw TypeError("Cannot call a class as a function");
-        var n = (function (e, t) {
+        var r = (function (e, t) {
             if (!e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
             return t && ("object" == typeof t || "function" == typeof t) ? t : e;
         })(this, (t.__proto__ || Object.getPrototypeOf(t)).call(this));
         return (
-            (n._toValue = e.toValue),
-            (n._easing = void 0 !== e.easing ? e.easing : l),
-            (n._duration = void 0 !== e.duration ? e.duration : 500),
-            (n._delay = void 0 !== e.delay ? e.delay : 0),
-            (n.__isInteraction = void 0 === e.isInteraction || e.isInteraction),
-            n
+            (r._toValue = e.toValue),
+            (r._easing = void 0 !== e.easing ? e.easing : l),
+            (r._duration = void 0 !== e.duration ? e.duration : 500),
+            (r._delay = void 0 !== e.delay ? e.delay : 0),
+            (r.__isInteraction = void 0 === e.isInteraction || e.isInteraction),
+            r
         );
     }
     return (
@@ -42,18 +42,18 @@ e.exports = (function (e) {
             constructor: { value: t, enumerable: !1, writable: !0, configurable: !0 },
         })),
         e && (Object.setPrototypeOf ? Object.setPrototypeOf(t, e) : (t.__proto__ = e)),
-        r(t, [
+        n(t, [
             {
                 key: "start",
-                value: function (e, t, n) {
-                    var r = this;
-                    (this.__active = !0), (this._fromValue = e), (this._onUpdate = t), (this.__onEnd = n);
-                    var i = function () {
-                        0 === r._duration
-                            ? (r._onUpdate(r._toValue), r.__debouncedOnEnd({ finished: !0 }))
-                            : ((r._startTime = Date.now()), (r._animationFrame = o.current(r.onUpdate.bind(r))));
+                value: function (e, t, r) {
+                    var n = this;
+                    (this.__active = !0), (this._fromValue = e), (this._onUpdate = t), (this.__onEnd = r);
+                    var o = function () {
+                        0 === n._duration
+                            ? (n._onUpdate(n._toValue), n.__debouncedOnEnd({ finished: !0 }))
+                            : ((n._startTime = Date.now()), (n._animationFrame = a.current(n.onUpdate.bind(n))));
                     };
-                    this._delay ? (this._timeout = setTimeout(i, this._delay)) : i();
+                    this._delay ? (this._timeout = setTimeout(o, this._delay)) : o();
                 },
             },
             {
@@ -71,7 +71,7 @@ e.exports = (function (e) {
                         this._fromValue +
                             this._easing((e - this._startTime) / this._duration) * (this._toValue - this._fromValue),
                     ),
-                        this.__active && (this._animationFrame = o.current(this.onUpdate.bind(this)));
+                        this.__active && (this._animationFrame = a.current(this.onUpdate.bind(this)));
                 },
             },
             {
@@ -86,4 +86,4 @@ e.exports = (function (e) {
         ]),
         t
     );
-})(i);
+})(o);

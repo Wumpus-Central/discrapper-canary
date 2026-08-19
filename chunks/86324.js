@@ -1,10 +1,10 @@
-var s = t(889544),
-    a = t(872379);
+var a = t(889544),
+    s = t(872379);
 let o = new Map();
 self.addEventListener("message", (e) => {
     let { data: r } = e;
     switch (r.type) {
-        case a.l.INITIALIZE:
+        case s.l.INITIALIZE:
             ((e) => {
                 let {
                         canvas: r,
@@ -12,42 +12,42 @@ self.addEventListener("message", (e) => {
                         animationId: i,
                         assetUrl: l,
                         assetData: n,
-                        isVisible: d,
-                        shouldAnimate: p,
+                        isVisible: p,
+                        shouldAnimate: c,
                     } = e,
-                    f = new s.default({
+                    d = new a.default({
                         canvas: r,
                         id: i,
                         assetUrl: l,
                         assetData: n,
-                        isVisible: d,
-                        shouldAnimate: p,
+                        isVisible: p,
+                        shouldAnimate: c,
                         onInitialDraw: () => {
-                            self.postMessage({ type: a.l.FIRST_DRAW, canvasId: t });
+                            self.postMessage({ type: s.l.FIRST_DRAW, canvasId: t });
                         },
                         onError: () => {
-                            self.postMessage({ type: a.l.ERROR, canvasId: t });
+                            self.postMessage({ type: s.l.ERROR, canvasId: t });
                         },
                     });
-                o.set(t, f);
+                o.set(t, d);
             })(r);
             break;
-        case a.l.DROP:
+        case s.l.DROP:
             ((e) => {
                 let { canvasId: r } = e;
                 o.get(r)?.drop(), o.delete(r);
             })(r);
             break;
-        case a.l.VISIBILITY_CHANGE:
+        case s.l.VISIBILITY_CHANGE:
             ((e) => {
                 let { canvasId: r, isVisible: t } = e;
                 o.get(r)?.setVisibility(t);
             })(r);
             break;
-        case a.l.STATE_CHANGE:
+        case s.l.STATE_CHANGE:
             ((e) => {
-                let { canvasId: r, shouldAnimate: t, nextFrame: s } = e;
-                o.get(r)?.setState(t, s);
+                let { canvasId: r, shouldAnimate: t, nextFrame: a } = e;
+                o.get(r)?.setState(t, a);
             })(r);
     }
 });

@@ -1,14 +1,14 @@
 i.d(t, { G: () => o }), i(321073);
 var s = i(582128),
-    r = i(149995),
-    n = i(398523),
+    n = i(149995),
+    r = i(398523),
     a = i(881373),
     l = i(852218);
 function o(e, t) {
     let i = t?.isLockedCardView,
-        { enabled: o } = n.Ay.useConfig({ location: "useRecurring3PModalEligiblePartnerIds" }),
+        { enabled: o } = r.Ay.useConfig({ location: "useRecurring3PModalEligiblePartnerIds" }),
         d = (0, a.YS)({ location: "useRecurring3PModalEligiblePartnerIds" }).functionalityEnabled,
-        c = (0, r.Zk)({ location: "useRecurring3PModalEligiblePartnerIds" });
+        c = (0, n.Zk)({ location: "useRecurring3PModalEligiblePartnerIds" });
     return s.useMemo(() => {
         let t = [];
         return (

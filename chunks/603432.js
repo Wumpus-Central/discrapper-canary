@@ -1,16 +1,16 @@
 "use strict";
-n.d(t, { e: () => l, o: () => u });
-var r = n(59344),
-    i = n(731692),
-    a = n(944490),
-    o = n(582128);
+r.d(t, { e: () => l, o: () => u });
+var n = r(59344),
+    o = r(731692),
+    i = r(944490),
+    a = r(582128);
 let s = new WeakMap();
 function l(e, t) {
-    let n;
-    return (t && i.B.getGlobalDictionaryForPackage(t)) || ((n = s.get(e)) || ((n = new (0, i.B)(e)), s.set(e, n)), n);
+    let r;
+    return (t && o.B.getGlobalDictionaryForPackage(t)) || ((r = s.get(e)) || ((r = new (0, o.B)(e)), s.set(e, r)), r);
 }
 function u(e, t) {
-    let { locale: n } = (0, r.Y)(),
-        i = l(e, t);
-    return (0, o.useMemo)(() => new (0, a.J)(n, i), [n, i]);
+    let { locale: r } = (0, n.Y)(),
+        o = l(e, t);
+    return (0, a.useMemo)(() => new (0, i.J)(r, o), [r, o]);
 }

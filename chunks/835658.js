@@ -1,24 +1,24 @@
 e.exports = function (e) {
     var t = !0,
-        n = !0,
-        i = !1;
+        r = !0,
+        n = !1;
     if ("function" == typeof e) {
         try {
-            e.call("f", function (e, n, i) {
-                "object" != typeof i && (t = !1);
+            e.call("f", function (e, r, n) {
+                "object" != typeof n && (t = !1);
             }),
                 e.call(
                     [null],
                     function () {
                         "use strict";
-                        n = "string" == typeof this;
+                        r = "string" == typeof this;
                     },
                     "x",
                 );
         } catch (e) {
-            i = !0;
+            n = !0;
         }
-        return !i && t && n;
+        return !n && t && r;
     }
     return !1;
 };

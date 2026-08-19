@@ -1,7 +1,7 @@
-let T, I;
+let T, i;
 n.r(t), n.d(t, { default: () => U }), n(321073);
-var i = n(735438),
-    N = n.n(i),
+var I = n(435558),
+    N = n.n(I),
     l = n(17928),
     E = n(228366),
     r = n(824953),
@@ -11,8 +11,8 @@ var i = n(735438),
     o = n(652215);
 let u = [],
     s = [],
-    G = null,
     d = null,
+    G = null,
     c = null,
     A = !1,
     p = !1,
@@ -33,19 +33,19 @@ function g(e) {
         let e = a.A.getProps().integrations;
         null == e && (p = !0), (u = e ?? []);
     } else u = [];
-    if (((s = null != T && S.A.can(o.xBc.MANAGE_WEBHOOKS, T) ? _.A.getWebhooksForGuild(T.id) : []), !e && null != d)) {
-        let e = D(d.id);
-        null != e && (d = e);
+    if (((s = null != T && S.A.can(o.xBc.MANAGE_WEBHOOKS, T) ? _.A.getWebhooksForGuild(T.id) : []), !e && null != G)) {
+        let e = D(G.id);
+        null != e && (G = e);
     }
     if (null != c) {
         let e = M(c.id);
         null != e && (c = e);
     }
-    (G = null), (h = o.XlH.OPEN), (O = {}), (R = !1);
+    (d = null), (h = o.XlH.OPEN), (O = {}), (R = !1);
 }
 let C = N().debounce(() => {
     R &&
-        (null != d ? N().isEqual(d, D(d.id)) && (R = !1) : null != c && N().isEqual(c, M(c.id)) && (R = !1),
+        (null != G ? N().isEqual(G, D(G.id)) && (R = !1) : null != c && N().isEqual(c, M(c.id)) && (R = !1),
         R || m.emitChange());
 }, 500);
 function D(e) {
@@ -78,10 +78,10 @@ class P extends l.Ay.Store {
         return s;
     }
     get editedCommandId() {
-        return G;
+        return d;
     }
     get editedIntegration() {
-        return d;
+        return G;
     }
     get editedWebhook() {
         return c;
@@ -93,7 +93,7 @@ class P extends l.Ay.Store {
         return O;
     }
     getSection() {
-        return I ?? o.wLn.OVERVIEW;
+        return i ?? o.wLn.OVERVIEW;
     }
     getSectionId() {
         return f;
@@ -129,39 +129,39 @@ let m = new P(
                   GUILD_SETTINGS_SET_SECTION: y,
                   INTEGRATION_SETTINGS_SET_SECTION: function (e) {
                       let { section: t, sectionId: n } = e;
-                      (I = t), (f = n);
+                      (i = t), (f = n);
                   },
                   INTEGRATION_SETTINGS_START_EDITING_COMMAND: function (e) {
                       let { commandId: t } = e;
-                      (G = t), (d = null), (c = null), (O = {}), (R = !0);
+                      (d = t), (G = null), (c = null), (O = {}), (R = !0);
                   },
                   INTEGRATION_SETTINGS_STOP_EDITING_COMMAND: function (e) {
                       let { commandId: t } = e;
-                      if (null == G || G !== t) return !1;
-                      (G = null), (O = {}), (R = !1);
+                      if (null == d || d !== t) return !1;
+                      (d = null), (O = {}), (R = !1);
                   },
                   INTEGRATION_SETTINGS_START_EDITING_INTEGRATION: function (e) {
                       let { integrationId: t } = e,
                           n = D(t);
                       if (null == n) return !1;
-                      (d = n), (G = null), (c = null), (O = {}), (R = !1);
+                      (G = n), (d = null), (c = null), (O = {}), (R = !1);
                   },
                   INTEGRATION_SETTINGS_STOP_EDITING_INTEGRATION: function () {
-                      (d = null), (O = {}), (R = !1);
+                      (G = null), (O = {}), (R = !1);
                   },
                   INTEGRATION_SETTINGS_UPDATE_INTEGRATION: function (e) {
                       let { settings: t } = e;
-                      if (null == d) return !1;
-                      (d = { ...d }),
+                      if (null == G) return !1;
+                      (G = { ...G }),
                           null != t.enableEmoticons &&
-                              d.enable_emoticons !== t.enableEmoticons &&
-                              ((d.enable_emoticons = t.enableEmoticons), (R = !0)),
+                              G.enable_emoticons !== t.enableEmoticons &&
+                              ((G.enable_emoticons = t.enableEmoticons), (R = !0)),
                           null != t.expireBehavior &&
-                              d.expire_behavior !== t.expireBehavior &&
-                              ((d.expire_behavior = t.expireBehavior), (R = !0)),
+                              G.expire_behavior !== t.expireBehavior &&
+                              ((G.expire_behavior = t.expireBehavior), (R = !0)),
                           null != t.expireGracePeriod &&
-                              d.expire_grace_period !== t.expireGracePeriod &&
-                              ((d.expire_grace_period = t.expireGracePeriod), (R = !0)),
+                              G.expire_grace_period !== t.expireGracePeriod &&
+                              ((G.expire_grace_period = t.expireGracePeriod), (R = !0)),
                           R && C();
                   },
                   INTEGRATION_SETTINGS_UPDATE_WEBHOOK: function (e) {
@@ -179,13 +179,13 @@ let m = new P(
                       let { webhookId: t } = e,
                           n = M(t);
                       if (null == n) return !1;
-                      (c = n), (G = null), (d = null), (O = {}), (R = !1);
+                      (c = n), (d = null), (G = null), (O = {}), (R = !1);
                   },
                   INTEGRATION_SETTINGS_STOP_EDITING_WEBHOOK: function () {
                       (c = null), (O = {}), (R = !1);
                   },
                   GUILD_SETTINGS_CLOSE: function () {
-                      (T = null), (u = []), (s = []), (G = null), (d = null), (c = null), (h = o.XlH.CLOSED), (R = !1);
+                      (T = null), (u = []), (s = []), (d = null), (G = null), (c = null), (h = o.XlH.CLOSED), (R = !1);
                   },
                   GUILD_SETTINGS_LOADED_INTEGRATIONS: function (e) {
                       let { guildId: t, integrations: n } = e;
@@ -195,7 +195,7 @@ let m = new P(
                               u.find((t) => {
                                   let { id: n } = t;
                                   if (n === e.id) return !0;
-                              }) && (u.push(e), e.type === d?.type && e.account?.id === d.account?.id && (d = e));
+                              }) && (u.push(e), e.type === G?.type && e.account?.id === G.account?.id && (G = e));
                       for (let e = u.length - 1; e >= 0; e--) {
                           let t = u[e],
                               T = n.find((e) => {
@@ -204,18 +204,18 @@ let m = new P(
                               });
                           if (null != T) {
                               let n = { ...t, ...T };
-                              d?.id === n.id && (!1 === n.enabled ? (d = null) : R || (d = n)), (u[e] = n);
-                          } else d?.id === t.id && (d = null), u.splice(e, 1);
+                              G?.id === n.id && (!1 === n.enabled ? (G = null) : R || (G = n)), (u[e] = n);
+                          } else G?.id === t.id && (G = null), u.splice(e, 1);
                       }
                       (u = [...u]), C();
                   },
                   WEBHOOKS_UPDATE: function (e) {
-                      let { guildId: t, channelId: n, webhooks: I } = e;
-                      if (((A = !1), null != T && t === T.id && null != I && h !== o.XlH.SUBMITTING)) {
+                      let { guildId: t, channelId: n, webhooks: i } = e;
+                      if (((A = !1), null != T && t === T.id && null != i && h !== o.XlH.SUBMITTING)) {
                           for (let e = s.length - 1; e >= 0; e--) {
                               let t = s[e];
                               if (null != n && t?.channel_id !== n) continue;
-                              let T = I.find((e) => {
+                              let T = i.find((e) => {
                                   let { id: n } = e;
                                   if (n === t.id) return !0;
                               });
@@ -224,7 +224,7 @@ let m = new P(
                                   (s[e] = n), R || c?.id !== n.id || (c = n);
                               } else c?.id === t.id && (c = null), s.splice(e, 1);
                           }
-                          for (let e of I)
+                          for (let e of i)
                               null ==
                                   s.find((t) => {
                                       let { id: n } = t;

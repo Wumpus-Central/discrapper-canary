@@ -1,9 +1,9 @@
 "use strict";
-n.d(t, { BO: () => a, SQ: () => s });
+n.d(t, { BO: () => s, SQ: () => a });
 var i,
     r,
-    s = (((i = {}).MULTIPLE_CHOICE = "MC"), (i.TEXT_ENTRY = "TE"), (i.DESCRIPTIVE_BLOCK = "DB"), i),
-    a =
+    a = (((i = {}).MULTIPLE_CHOICE = "MC"), (i.TEXT_ENTRY = "TE"), (i.DESCRIPTIVE_BLOCK = "DB"), i),
+    s =
         (((r = {}).SINGLE_ANSWER = "SAVR"),
         (r.MULTIPLE_ANSWER = "MAVR"),
         (r.DROPDOWN = "DL"),

@@ -24,7 +24,7 @@ function d(e) {
         x = h && null != t.messageReference ? t.messageReference.message_id : t.id,
         f = h && null != t.messageReference ? t.messageReference.channel_id : n.id,
         E = h && t.messageReference?.guild_id != null ? t.messageReference.guild_id : n.guild_id,
-        C = i.useCallback(
+        I = i.useCallback(
             (e) => {
                 p &&
                     (e
@@ -62,6 +62,6 @@ function d(e) {
                     o.A.handleMessageLostVisibility(t.id, o.K.OFFICIAL_MESSAGE);
                 };
         }, [A, t.id]),
-        (0, l.K)(C, 0, p || A)
+        (0, l.K)(I, 0, p || A)
     );
 }

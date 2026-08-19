@@ -1,4 +1,4 @@
-_.exports = {
+e.exports = {
     ur: "spoilerContent__299eb",
     R: "hidden__299eb",
     OZ: "opaque__299eb",

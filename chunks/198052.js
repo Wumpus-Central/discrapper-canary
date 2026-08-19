@@ -30,9 +30,9 @@ let O = (0, n(240921).Ay)({
 });
 var R = n(806931),
     L = n(652215);
-let D = new c.A("ChannelRTCStore");
-D.enableNativeLogger(!0);
-let y = Object.freeze([]),
+let y = new c.A("ChannelRTCStore");
+y.enableNativeLogger(!0);
+let D = Object.freeze([]),
     v = [],
     b = new Set(),
     M = {},
@@ -122,10 +122,10 @@ function $(e, t) {
 function z(e) {
     return e.size(C.r4.STREAM) > 0 || e.size(C.r4.VIDEO) > 0 || e.hasEmbeddedActivity();
 }
-function q(e) {
+function Z(e) {
     delete M[e], delete P[e], delete w[e], delete G[e];
 }
-function Z() {
+function q() {
     let e, t, n, i, r, a;
     return H(
         (e) => e.rebuild(),
@@ -135,7 +135,7 @@ function Z() {
         (i = u.default.getRemoteSessionId()),
         (r = N.A.getVoiceStateForSession(h.default.getId(), i)),
         r?.channelId != null && e.push(r?.channelId),
-        s().difference(v, e).forEach(q),
+        s().difference(v, e).forEach(Z),
         (a = s().difference(e, v)),
         (v = e),
         a),
@@ -163,7 +163,7 @@ function en(e) {
     let {
         channel: { id: t },
     } = e;
-    return b.delete(t), delete F[t], q(t);
+    return b.delete(t), delete F[t], Z(t);
 }
 function ei(e) {
     let { streamKey: t } = e,
@@ -179,7 +179,7 @@ class ea extends l.Ay.PersistedStore {
     initialize(e) {
         this.waitFor(A.A, h.default, I.A, f.A, d.Ay, u.default, p.A, T.Ay, m.A, g.default, S.A, N.A),
             this.syncWith([d.Ay], Q),
-            this.syncWith([u.default], Z),
+            this.syncWith([u.default], q),
             e?.voiceParticipantsHidden !== void 0 && Object.assign(k, e?.voiceParticipantsHidden);
     }
     getState() {
@@ -189,23 +189,23 @@ class ea extends l.Ay.PersistedStore {
         return B(e).version;
     }
     getParticipants(e) {
-        return B(e).toArray() ?? y;
+        return B(e).toArray() ?? D;
     }
     getSpeakingParticipants(e) {
-        return B(e).toArray(C.r4.SPEAKING) ?? y;
+        return B(e).toArray(C.r4.SPEAKING) ?? D;
     }
     getFilteredParticipants(e) {
         let t = B(e);
         return k[e] ? t.toArray(C.r4.FILTERED) : t.toArray(C.r4.NOT_POPPED_OUT);
     }
     getVideoParticipants(e) {
-        return B(e).toArray(C.r4.VIDEO) ?? y;
+        return B(e).toArray(C.r4.VIDEO) ?? D;
     }
     getStreamParticipants(e) {
-        return B(e).toArray(C.r4.STREAM) ?? y;
+        return B(e).toArray(C.r4.STREAM) ?? D;
     }
     getActivityParticipants(e) {
-        return B(e).toArray(C.r4.ACTIVITY) ?? y;
+        return B(e).toArray(C.r4.ACTIVITY) ?? D;
     }
     getParticipant(e, t) {
         return B(e).getParticipant(t);
@@ -274,12 +274,12 @@ class ea extends l.Ay.PersistedStore {
 }
 let es = new ea(o.h, {
     CONNECTION_OPEN: function () {
-        for (let e of v) q(e);
-        Z();
+        for (let e of v) Z(e);
+        q();
     },
-    CONNECTION_OPEN_SUPPLEMENTAL: Z,
-    THREAD_LIST_SYNC: Z,
-    OVERLAY_INITIALIZE: Z,
+    CONNECTION_OPEN_SUPPLEMENTAL: q,
+    THREAD_LIST_SYNC: q,
+    OVERLAY_INITIALIZE: q,
     VOICE_CHANNEL_SELECT: function (e) {
         let { channelId: t, currentVoiceChannelId: n } = e,
             i = !1;
@@ -293,17 +293,17 @@ let es = new ea(o.h, {
             let e = B(n);
             e.guildRingingUsers.forEach((t) => e.updateGuildRingingUsers(t, !1)), (i = H((e) => e.rebuild(), [n]));
         }
-        let r = Z();
+        let r = q();
         return i || r;
     },
     CHANNEL_SELECT: function (e) {
         let { channelId: t, messageId: n } = e,
-            i = Z();
+            i = q();
         if (null == t || null == n || b.has(t)) return i;
         let r = f.A.getChannel(t);
         return null != r && r.isGuildVocal() ? (X(t, !0), !0) : i;
     },
-    CHANNEL_RTC_ACTIVE_CHANNELS: Z,
+    CHANNEL_RTC_ACTIVE_CHANNELS: q,
     VOICE_STATE_UPDATES: function (e) {
         let { voiceStates: t, initial: n } = e;
         return t.reduce((e, t) => {
@@ -332,7 +332,7 @@ let es = new ea(o.h, {
     CALL_UPDATE: et,
     CALL_DELETE: function (e) {
         let { channelId: t } = e;
-        return q(t);
+        return Z(t);
     },
     CHANNEL_RTC_SELECT_PARTICIPANT: function (e) {
         let { channelId: t, id: n } = e,
@@ -347,7 +347,7 @@ let es = new ea(o.h, {
                 let { ownerId: e } = (0, _.Iy)(n);
                 e === h.default.getId() && j(e, [t]);
             } catch (e) {
-                D.warn(`INVALID STREAM KEY FORMAT ${n}`, e);
+                y.warn(`INVALID STREAM KEY FORMAT ${n}`, e);
             }
             z(i) || (x[t] = !1);
         }
@@ -454,6 +454,6 @@ let es = new ea(o.h, {
             0 === n.length)
         )
             return !1;
-        s().forEach(n, (e) => q(e));
+        s().forEach(n, (e) => Z(e));
     },
 });

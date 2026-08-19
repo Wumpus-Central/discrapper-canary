@@ -1,7 +1,7 @@
-n.d(t, { N: () => a, g: () => i });
+n.d(t, { N: () => i, g: () => a });
 var l = n(582128);
 let r = l.createContext(void 0),
-    a = r.Provider;
-function i() {
+    i = r.Provider;
+function a() {
     return l.useContext(r);
 }

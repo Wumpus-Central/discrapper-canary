@@ -1,7 +1,7 @@
 "use strict";
 var n = r(589841),
-    i = Object.prototype.hasOwnProperty,
-    o = Array.isArray,
+    o = Object.prototype.hasOwnProperty,
+    i = Array.isArray,
     a = {
         allowDots: !1,
         allowEmptyArrays: !1,
@@ -45,62 +45,62 @@ var n = r(589841),
             c = l.split(t.delimiter, t.throwOnLimitExceeded ? u + 1 : u);
         if (t.throwOnLimitExceeded && c.length > u)
             throw RangeError("Parameter limit exceeded. Only " + u + " parameter" + (1 === u ? "" : "s") + " allowed.");
-        var d = -1,
-            f = t.charset;
+        var f = -1,
+            p = t.charset;
         if (t.charsetSentinel)
-            for (p = 0; p < c.length; ++p)
-                0 === c[p].indexOf("utf8=") &&
-                    ("utf8=%E2%9C%93" === c[p] ? (f = "utf-8") : "utf8=%26%2310003%3B" === c[p] && (f = "iso-8859-1"),
-                    (d = p),
-                    (p = c.length));
-        for (p = 0; p < c.length; ++p)
-            if (p !== d) {
-                var p,
+            for (d = 0; d < c.length; ++d)
+                0 === c[d].indexOf("utf8=") &&
+                    ("utf8=%E2%9C%93" === c[d] ? (p = "utf-8") : "utf8=%26%2310003%3B" === c[d] && (p = "iso-8859-1"),
+                    (f = d),
+                    (d = c.length));
+        for (d = 0; d < c.length; ++d)
+            if (d !== f) {
+                var d,
                     h,
                     m,
-                    g = c[p],
-                    v = g.indexOf("]="),
-                    y = -1 === v ? g.indexOf("=") : v + 1;
-                -1 === y
-                    ? ((h = t.decoder(g, a.decoder, f, "key")), (m = t.strictNullHandling ? null : ""))
-                    : ((h = t.decoder(g.slice(0, y), a.decoder, f, "key")),
-                      (m = n.maybeMap(s(g.slice(y + 1), t, o(r[h]) ? r[h].length : 0), function (e) {
-                          return t.decoder(e, a.decoder, f, "value");
+                    v = c[d],
+                    y = v.indexOf("]="),
+                    g = -1 === y ? v.indexOf("=") : y + 1;
+                -1 === g
+                    ? ((h = t.decoder(v, a.decoder, p, "key")), (m = t.strictNullHandling ? null : ""))
+                    : ((h = t.decoder(v.slice(0, g), a.decoder, p, "key")),
+                      (m = n.maybeMap(s(v.slice(g + 1), t, i(r[h]) ? r[h].length : 0), function (e) {
+                          return t.decoder(e, a.decoder, p, "value");
                       }))),
                     m &&
                         t.interpretNumericEntities &&
-                        "iso-8859-1" === f &&
+                        "iso-8859-1" === p &&
                         (m = String(m).replace(/&#(\d+);/g, function (e, t) {
                             return String.fromCharCode(parseInt(t, 10));
                         })),
-                    g.indexOf("[]=") > -1 && (m = o(m) ? [m] : m);
-                var b = i.call(r, h);
+                    v.indexOf("[]=") > -1 && (m = i(m) ? [m] : m);
+                var b = o.call(r, h);
                 b && "combine" === t.duplicates
                     ? (r[h] = n.combine(r[h], m))
                     : (b && "last" !== t.duplicates) || (r[h] = m);
             }
         return r;
     },
-    u = function (e, t, r, i) {
-        var o = 0;
+    u = function (e, t, r, o) {
+        var i = 0;
         if (e.length > 0 && "[]" === e[e.length - 1]) {
             var a = e.slice(0, -1).join("");
-            o = Array.isArray(t) && t[a] ? t[a].length : 0;
+            i = Array.isArray(t) && t[a] ? t[a].length : 0;
         }
-        for (var l = i ? t : s(t, r, o), u = e.length - 1; u >= 0; --u) {
+        for (var l = o ? t : s(t, r, i), u = e.length - 1; u >= 0; --u) {
             var c,
-                d = e[u];
-            if ("[]" === d && r.parseArrays)
+                f = e[u];
+            if ("[]" === f && r.parseArrays)
                 c = r.allowEmptyArrays && ("" === l || (r.strictNullHandling && null === l)) ? [] : n.combine([], l);
             else {
                 c = r.plainObjects ? { __proto__: null } : {};
-                var f = "[" === d.charAt(0) && "]" === d.charAt(d.length - 1) ? d.slice(1, -1) : d,
-                    p = r.decodeDotInKeys ? f.replace(/%2E/g, ".") : f,
-                    h = parseInt(p, 10);
-                r.parseArrays || "" !== p
-                    ? !isNaN(h) && d !== p && String(h) === p && h >= 0 && r.parseArrays && h <= r.arrayLimit
+                var p = "[" === f.charAt(0) && "]" === f.charAt(f.length - 1) ? f.slice(1, -1) : f,
+                    d = r.decodeDotInKeys ? p.replace(/%2E/g, ".") : p,
+                    h = parseInt(d, 10);
+                r.parseArrays || "" !== d
+                    ? !isNaN(h) && f !== d && String(h) === d && h >= 0 && r.parseArrays && h <= r.arrayLimit
                         ? ((c = [])[h] = l)
-                        : "__proto__" !== p && (c[p] = l)
+                        : "__proto__" !== d && (c[d] = l)
                     : (c = { 0: l });
             }
             l = c;
@@ -109,29 +109,29 @@ var n = r(589841),
     },
     c = function (e, t, r, n) {
         if (e) {
-            var o = r.allowDots ? e.replace(/\.([^.[]+)/g, "[$1]") : e,
+            var i = r.allowDots ? e.replace(/\.([^.[]+)/g, "[$1]") : e,
                 a = /(\[[^[\]]*])/g,
-                s = r.depth > 0 && /(\[[^[\]]*])/.exec(o),
-                l = s ? o.slice(0, s.index) : o,
+                s = r.depth > 0 && /(\[[^[\]]*])/.exec(i),
+                l = s ? i.slice(0, s.index) : i,
                 c = [];
             if (l) {
-                if (!r.plainObjects && i.call(Object.prototype, l) && !r.allowPrototypes) return;
+                if (!r.plainObjects && o.call(Object.prototype, l) && !r.allowPrototypes) return;
                 c.push(l);
             }
-            for (var d = 0; r.depth > 0 && null !== (s = a.exec(o)) && d < r.depth; ) {
-                if (((d += 1), !r.plainObjects && i.call(Object.prototype, s[1].slice(1, -1)) && !r.allowPrototypes))
+            for (var f = 0; r.depth > 0 && null !== (s = a.exec(i)) && f < r.depth; ) {
+                if (((f += 1), !r.plainObjects && o.call(Object.prototype, s[1].slice(1, -1)) && !r.allowPrototypes))
                     return;
                 c.push(s[1]);
             }
             if (s) {
                 if (!0 === r.strictDepth)
                     throw RangeError("Input depth exceeded depth option of " + r.depth + " and strictDepth is true");
-                c.push("[" + o.slice(s.index) + "]");
+                c.push("[" + i.slice(s.index) + "]");
             }
             return u(c, t, r, n);
         }
     },
-    d = function (e) {
+    f = function (e) {
         if (!e) return a;
         if (void 0 !== e.allowEmptyArrays && "boolean" != typeof e.allowEmptyArrays)
             throw TypeError("`allowEmptyArrays` option can only be `true` or `false`, when provided");
@@ -175,19 +175,19 @@ var n = r(589841),
         };
     };
 e.exports = function (e, t) {
-    var r = d(t);
+    var r = f(t);
     if ("" === e || null == e) return r.plainObjects ? { __proto__: null } : {};
     for (
-        var i = "string" == typeof e ? l(e, r) : e,
-            o = r.plainObjects ? { __proto__: null } : {},
-            a = Object.keys(i),
+        var o = "string" == typeof e ? l(e, r) : e,
+            i = r.plainObjects ? { __proto__: null } : {},
+            a = Object.keys(o),
             s = 0;
         s < a.length;
         ++s
     ) {
         var u = a[s],
-            f = c(u, i[u], r, "string" == typeof e);
-        o = n.merge(o, f, r);
+            p = c(u, o[u], r, "string" == typeof e);
+        i = n.merge(i, p, r);
     }
-    return !0 === r.allowSparse ? o : n.compact(o);
+    return !0 === r.allowSparse ? i : n.compact(i);
 };

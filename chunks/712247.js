@@ -1,25 +1,25 @@
 "use strict";
-n.d(t, { bq: () => o, sD: () => a, wt: () => s });
-var r = n(745391),
-    i = n(790637);
-function a(e, t) {
-    if (!(0, i.Nf)()) return !!t && !!e && e.contains(t);
+r.d(t, { bq: () => a, sD: () => i, wt: () => s });
+var n = r(745391),
+    o = r(790637);
+function i(e, t) {
+    if (!(0, o.Nf)()) return !!t && !!e && e.contains(t);
     if (!e || !t) return !1;
-    let n = t;
-    for (; null !== n; ) {
-        if (n === e) return !0;
-        n = "SLOT" === n.tagName && n.assignedSlot ? n.assignedSlot.parentNode : (0, r.Ng)(n) ? n.host : n.parentNode;
+    let r = t;
+    for (; null !== r; ) {
+        if (r === e) return !0;
+        r = "SLOT" === r.tagName && r.assignedSlot ? r.assignedSlot.parentNode : (0, n.Ng)(r) ? r.host : r.parentNode;
     }
     return !1;
 }
-let o = (e = document) => {
+let a = (e = document) => {
     var t;
-    if (!(0, i.Nf)()) return e.activeElement;
-    let n = e.activeElement;
-    for (; n && "shadowRoot" in n && (null == (t = n.shadowRoot) ? void 0 : t.activeElement); )
-        n = n.shadowRoot.activeElement;
-    return n;
+    if (!(0, o.Nf)()) return e.activeElement;
+    let r = e.activeElement;
+    for (; r && "shadowRoot" in r && (null == (t = r.shadowRoot) ? void 0 : t.activeElement); )
+        r = r.shadowRoot.activeElement;
+    return r;
 };
 function s(e) {
-    return (0, i.Nf)() && e.target.shadowRoot && e.composedPath ? e.composedPath()[0] : e.target;
+    return (0, o.Nf)() && e.target.shadowRoot && e.composedPath ? e.composedPath()[0] : e.target;
 }

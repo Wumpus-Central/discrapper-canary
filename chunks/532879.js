@@ -1,14 +1,14 @@
-let i = n(4144),
-    r = n(481558);
-e.exports = (e, t, n) => {
-    let s = [],
+let n = r(4144),
+    o = r(481558);
+e.exports = (e, t, r) => {
+    let i = [],
         a = null,
-        o = null,
-        l = e.sort((e, t) => r(e, t, n));
-    for (let e of l) i(e, t, n) ? ((o = e), a || (a = e)) : (o && s.push([a, o]), (o = null), (a = null));
-    a && s.push([a, null]);
+        s = null,
+        l = e.sort((e, t) => o(e, t, r));
+    for (let e of l) n(e, t, r) ? ((s = e), a || (a = e)) : (s && i.push([a, s]), (s = null), (a = null));
+    a && i.push([a, null]);
     let u = [];
-    for (let [e, t] of s)
+    for (let [e, t] of i)
         e === t
             ? u.push(e)
             : t || e !== l[0]
@@ -19,6 +19,6 @@ e.exports = (e, t, n) => {
                   : u.push(`>=${e}`)
               : u.push("*");
     let c = u.join(" || "),
-        d = "string" == typeof t.raw ? t.raw : String(t);
-    return c.length < d.length ? c : t;
+        f = "string" == typeof t.raw ? t.raw : String(t);
+    return c.length < f.length ? c : t;
 };

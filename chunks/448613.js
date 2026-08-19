@@ -1,22 +1,22 @@
 n.d(t, { p: () => d });
 var l = n(308528),
     r = n(148494),
-    a = n(355622),
-    i = n(428249),
+    i = n(355622),
+    a = n(428249),
     s = n(451909),
     o = n(734057),
     u = n(806150),
     c = n(381941);
 async function d(e) {
     let { userId: t, content: n, location: d, openChannel: f = !0, whenReady: h = !1, entry: m, nonce: A } = e,
-        { valid: x, failureReason: S } = await (0, u.i)({ type: a.oU.NORMAL, content: n, channel: null });
+        { valid: x, failureReason: S } = await (0, u.i)({ type: i.oU.NORMAL, content: n, channel: null });
     if (!x) throw Error(S);
-    let g = f ? await l.A.openPrivateChannel({ recipientIds: t, location: d }) : await l.A.getOrEnsurePrivateChannel(t),
-        T = o.A.getChannel(g);
-    if (null == T) throw Error("Failed to open private channel");
+    let T = f ? await l.A.openPrivateChannel({ recipientIds: t, location: d }) : await l.A.getOrEnsurePrivateChannel(t),
+        g = o.A.getChannel(T);
+    if (null == g) throw Error("Failed to open private channel");
     if (null != m)
-        (0, i.d)({
-            channel: T,
+        (0, a.d)({
+            channel: g,
             content: n,
             entry: m,
             whenReady: h,
@@ -24,7 +24,7 @@ async function d(e) {
             location: c.Hx.USER_PROFILE,
         });
     else {
-        let e = s.Ay.parse(T, n);
-        return r.A.sendMessage(T.id, e, h, { location: c.Hx.USER_PROFILE, nonce: A });
+        let e = s.Ay.parse(g, n);
+        return r.A.sendMessage(g.id, e, h, { location: c.Hx.USER_PROFILE, nonce: A });
     }
 }

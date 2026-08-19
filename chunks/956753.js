@@ -1,19 +1,19 @@
 "use strict";
-n.d(t, { U5: () => o, v$: () => a });
+n.d(t, { U5: () => l, v$: () => s });
 var i = n(291445),
     r = n(206885),
-    s = n(589051);
-function a(e, t) {
+    a = n(589051);
+function s(e, t) {
     return function () {
-        for (var n = arguments.length, a = Array(n), o = 0; o < n; o++) a[o] = arguments[o];
-        let l = (r.O || r.e) && (0, s.NI)(t).hasFriendList,
-            u = i.z.getConfig({ location: t }).hasFriendList;
-        return (!!l || !!u) && e(...a);
+        for (var n = arguments.length, s = Array(n), l = 0; l < n; l++) s[l] = arguments[l];
+        let o = (r.O || r.e) && (0, a.NI)(t).hasFriendList,
+            d = i.z.getConfig({ location: t }).hasFriendList;
+        return (!!o || !!d) && e(...s);
     };
 }
-function o(e, t) {
+function l(e, t) {
     return function () {
         for (var n = arguments.length, i = Array(n), r = 0; r < n; r++) i[r] = arguments[r];
-        return !!(0, s.NI)(t).hasChat && e(...i);
+        return !!(0, a.NI)(t).hasChat && e(...i);
     };
 }

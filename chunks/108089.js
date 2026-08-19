@@ -1,5 +1,5 @@
 "use strict";
-function i(e) {
+function l(e) {
     let t = (function (e) {
             let t = new Intl.NumberFormat(e, { useGrouping: !1 }),
                 n = new Map();
@@ -7,48 +7,48 @@ function i(e) {
             return n;
         })(e),
         n = new Intl.NumberFormat(e, { notation: "compact", compactDisplay: "short" }),
-        i = new Map();
+        l = new Map();
     return {
         format(e) {
-            var a;
-            let s, l;
+            var s;
+            let r, a;
             if (0 === e || !Number.isFinite(e)) return n.format(e);
-            let o = r(Math.abs(e)),
-                d =
+            let o = i(Math.abs(e)),
+                u =
                     o >= 0
                         ? (function (e) {
-                              let r = i.get(e);
-                              if (void 0 === r) {
-                                  let a = 10 ** e,
-                                      s = (function (e, t) {
+                              let i = l.get(e);
+                              if (void 0 === i) {
+                                  let s = 10 ** e,
+                                      r = (function (e, t) {
                                           let n = "";
-                                          for (let i of e)
-                                              "integer" === i.type || "fraction" === i.type
+                                          for (let l of e)
+                                              "integer" === l.type || "fraction" === l.type
                                                   ? (n += (function (e, t) {
                                                         let n = "";
-                                                        for (let i of e) n += t.get(i) ?? i;
+                                                        for (let l of e) n += t.get(l) ?? l;
                                                         return n;
-                                                    })(i.value, t))
-                                                  : "decimal" === i.type && (n += ".");
+                                                    })(l.value, t))
+                                                  : "decimal" === l.type && (n += ".");
                                           return Number(n);
-                                      })(n.formatToParts(a), t);
-                                  (r = s > 0 ? a / s : 1), i.set(e, r);
+                                      })(n.formatToParts(s), t);
+                                  (i = r > 0 ? s / r : 1), l.set(e, i);
                               }
-                              return r;
+                              return i;
                           })(o)
                         : 1,
                 c =
-                    ((s = Math.max(Math.min(r(Math.abs((a = e / d))) - 1, 0), -15)),
-                    (Math.floor(a * (l = 10 ** -s)) / l) * d);
+                    ((r = Math.max(Math.min(i(Math.abs((s = e / u))) - 1, 0), -15)),
+                    (Math.floor(s * (a = 10 ** -r)) / a) * u);
             return n.format(Number.isFinite(c) ? c : e);
         },
     };
 }
-function r(e) {
+function i(e) {
     if (0 === e) return 0;
     let t = Math.floor(Math.log10(e));
     for (; 10 ** t > e; ) t--;
     for (; 10 ** (t + 1) <= e; ) t++;
     return t;
 }
-n.d(t, { e: () => i });
+n.d(t, { e: () => l });

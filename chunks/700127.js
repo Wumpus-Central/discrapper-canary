@@ -1,7 +1,7 @@
 "use strict";
-var i = n(94867),
-    r = n(343920),
-    s = n(457846);
+var n = r(94867),
+    o = r(343920),
+    i = r(457846);
 e.exports = function () {
-    return s(i, r, arguments);
+    return i(n, o, arguments);
 };

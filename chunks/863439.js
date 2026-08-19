@@ -1,20 +1,20 @@
-n.d(t, { A: () => i, z: () => T });
+n.d(t, { A: () => O, z: () => u });
 var c = n(702841),
     r = n(885386),
-    E = n(576705),
-    O = n(652215);
-function i(e, t) {
+    i = n(576705),
+    E = n(652215);
+function O(e, t) {
     switch (e) {
-        case O.P6Q.ALWAYS:
+        case E.P6Q.ALWAYS:
             return !0;
-        case O.P6Q.IF_MODERATOR:
+        case E.P6Q.IF_MODERATOR:
             return t;
-        case O.P6Q.ON_CLICK:
+        case E.P6Q.ON_CLICK:
         default:
             return !1;
     }
 }
-function T(e) {
-    let t = (0, c.bG)([E.A], () => E.A.can(O.xBc.MANAGE_MESSAGES, e));
-    return !i(r.gs.useSetting(), t);
+function u(e) {
+    let t = (0, c.bG)([i.A], () => i.A.can(E.xBc.MANAGE_MESSAGES, e));
+    return !O(r.gs.useSetting(), t);
 }

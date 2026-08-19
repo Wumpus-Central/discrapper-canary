@@ -1,84 +1,84 @@
 "use strict";
 n.d(t, {
-    Aq: () => h,
-    Av: () => a,
-    Ct: () => f,
+    Aq: () => E,
+    Av: () => s,
+    Ct: () => A,
     HZ: () => _,
-    Ls: () => I,
+    Ls: () => m,
     R0: () => C,
-    Sn: () => p,
-    cX: () => u,
-    cZ: () => N,
+    Sn: () => h,
+    cX: () => d,
+    cZ: () => O,
     fg: () => r,
     j9: () => c,
-    m0: () => E,
-    q4: () => g,
-    r_: () => y,
+    m0: () => I,
+    q4: () => p,
+    r_: () => N,
     t1: () => S,
-    tn: () => A,
-    uF: () => l,
-    un: () => m,
-    uo: () => T,
-    xl: () => d,
+    tn: () => T,
+    uF: () => o,
+    un: () => f,
+    uo: () => g,
+    xl: () => u,
 });
 var i,
     r = (((i = {}).WINDOWS = "WINDOWS"), (i.OSX = "OSX"), (i.LINUX = "LINUX"), (i.WEB = "WEB"), i);
-let s = window.DiscordNative,
-    a = null != s,
-    o = null != s ? s.process.platform : "";
-function l() {
-    return /^win/.test(o);
-}
-function u() {
-    return "darwin" === o;
-}
-function c() {
-    return "linux" === o;
+let a = window.DiscordNative,
+    s = null != a,
+    l = null != a ? a.process.platform : "";
+function o() {
+    return /^win/.test(l);
 }
 function d() {
-    return l() || u() || c();
+    return "darwin" === l;
+}
+function c() {
+    return "linux" === l;
+}
+function u() {
+    return o() || d() || c();
 }
 function _() {
-    return "WEB" === T();
+    return "WEB" === g();
 }
-function h() {
+function E() {
     return (
         null != navigator.userAgent &&
         null != navigator.userAgent.toLowerCase().match("(android ).+chrome/[.0-9]* mobile")
     );
 }
-function f() {
+function A() {
     return navigator.userAgent?.match(/android/i) != null;
 }
-function p() {
+function h() {
     return navigator.userAgent?.match(/Macintosh/i) != null;
 }
-function E() {
-    return "android" === o;
+function I() {
+    return "android" === l;
 }
-function m() {
-    return "ios" === o;
+function f() {
+    return "ios" === l;
 }
-function g() {
+function p() {
     return navigator.userAgent?.match(/OculusBrowser/i) != null;
 }
-function A() {
-    return g();
-}
-function I() {
-    return d() || g() || a;
-}
 function T() {
-    return l() ? "WINDOWS" : u() ? "OSX" : c() ? "LINUX" : "WEB";
+    return p();
+}
+function m() {
+    return u() || p() || s;
+}
+function g() {
+    return o() ? "WINDOWS" : d() ? "OSX" : c() ? "LINUX" : "WEB";
 }
 function S() {
-    return o;
+    return l;
 }
-function y() {
-    switch (o) {
+function N() {
+    switch (l) {
         case "ios":
         case "android":
-            return o;
+            return l;
         default:
             return "web";
     }
@@ -93,6 +93,6 @@ function C() {
         return null != window.navigator.maxTouchPoints && window.navigator.maxTouchPoints > 2 ? "ios" : "macos";
     else if (/Linux/i.test(e)) return "linux";
 }
-function N() {
-    return l() ? "win" : u() ? "osx" : void 0;
+function O() {
+    return o() ? "win" : d() ? "osx" : void 0;
 }

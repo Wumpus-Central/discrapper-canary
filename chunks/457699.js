@@ -1,21 +1,21 @@
 "use strict";
-n.d(t, { A: () => d });
+n.d(t, { A: () => u });
 var i = n(17928),
     r = n(228366),
-    s = n(320095),
-    a = n(390248);
-let o = {};
-function l(e) {
+    a = n(320095),
+    s = n(390248);
+let l = {};
+function o(e) {
     return `${e.channel_id}:${e.id}`;
 }
-function u(e) {
+function d(e) {
     let { data: t } = e;
-    (o = {}),
+    (l = {}),
         t.forEach((e) => {
             let { messages: t } = e;
             t.forEach((e) => {
                 e.forEach((e) => {
-                    o[l(e)] = (0, s.rh)(e);
+                    l[o(e)] = (0, a.rh)(e);
                 });
             });
         });
@@ -23,29 +23,29 @@ function u(e) {
 class c extends i.Ay.Store {
     static displayName = "SearchMessageStore";
     getMessage(e, t) {
-        return o[l({ id: e, channel_id: t })];
+        return l[o({ id: e, channel_id: t })];
     }
 }
-let d = new c(r.h, {
-    SEARCH_MESSAGES_SUCCESS: u,
-    MOD_VIEW_SEARCH_MESSAGES_SUCCESS: u,
+let u = new c(r.h, {
+    SEARCH_MESSAGES_SUCCESS: d,
+    MOD_VIEW_SEARCH_MESSAGES_SUCCESS: d,
     MESSAGE_UPDATE: function (e) {
         let { message: t } = e;
         if (null == t.id || null == t.channel_id) return !1;
-        let n = l(t),
-            i = o[n];
-        return null != i && ((o[n] = (0, s.IU)(i, { attachments: t.attachments, embeds: t.embeds })), !0);
+        let n = o(t),
+            i = l[n];
+        return null != i && ((l[n] = (0, a.IU)(i, { attachments: t.attachments, embeds: t.embeds })), !0);
     },
     LOGOUT: function () {
-        o = {};
+        l = {};
     },
     CONNECTION_OPEN: function () {
-        o = {};
+        l = {};
     },
     MESSAGE_EXPLICIT_CONTENT_SCAN_TIMEOUT: function (e) {
         let { messageId: t, channelId: n } = e,
-            i = l({ id: t, channel_id: n }),
-            r = o[i];
-        null != r && (o[i] = (0, a.Td)(r));
+            i = o({ id: t, channel_id: n }),
+            r = l[i];
+        null != r && (l[i] = (0, s.Td)(r));
     },
 });

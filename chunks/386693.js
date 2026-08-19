@@ -1,5 +1,5 @@
 "use strict";
-r.d(t, { QP: () => eU, eV: () => n });
+r.d(t, { QP: () => eV, eV: () => n });
 let n = (e, t) => ({ event: e, check: t });
 var i,
     o,
@@ -10,9 +10,9 @@ var i,
     l = "dnd-core/BEGIN_DRAG",
     d = "dnd-core/PUBLISH_DRAG_SOURCE",
     f = "dnd-core/HOVER",
-    p = "dnd-core/DROP",
-    h = "dnd-core/END_DRAG";
-function g(e, t) {
+    h = "dnd-core/DROP",
+    g = "dnd-core/END_DRAG";
+function p(e, t) {
     return { type: c, payload: { sourceClientOffset: t || null, clientOffset: e || null } };
 }
 function v(e) {
@@ -30,8 +30,8 @@ function v(e) {
 function y(e) {
     return "object" === v(e);
 }
-var m = { type: c, payload: { clientOffset: null, sourceClientOffset: null } };
-function b(e, t) {
+var b = { type: c, payload: { clientOffset: null, sourceClientOffset: null } };
+function m(e, t) {
     return null === t
         ? null === e
         : Array.isArray(e)
@@ -40,7 +40,7 @@ function b(e, t) {
             })
           : e === t;
 }
-function E(e, t) {
+function O(e, t) {
     var r = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var n = Object.getOwnPropertySymbols(e);
@@ -52,11 +52,11 @@ function E(e, t) {
     }
     return r;
 }
-function O(e) {
+function w(e) {
     for (var t = 1; t < arguments.length; t++) {
         var r = null != arguments[t] ? arguments[t] : {};
         t % 2
-            ? E(Object(r), !0).forEach(function (t) {
+            ? O(Object(r), !0).forEach(function (t) {
                   var n, i, o;
                   (n = e),
                       (i = t),
@@ -67,13 +67,13 @@ function O(e) {
               })
             : Object.getOwnPropertyDescriptors
               ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(r))
-              : E(Object(r)).forEach(function (t) {
+              : O(Object(r)).forEach(function (t) {
                     Object.defineProperty(e, t, Object.getOwnPropertyDescriptor(r, t));
                 });
     }
     return e;
 }
-var T = (function () {
+var E = (function () {
     var e;
     function t(e, r) {
         var n = this;
@@ -143,12 +143,12 @@ var T = (function () {
                                         c = s.publishSource,
                                         d = s.clientOffset,
                                         f = s.getSourceClientOffset,
-                                        p = e.getMonitor(),
-                                        h = e.getRegistry();
-                                    e.dispatch(g(d)),
+                                        h = e.getMonitor(),
+                                        g = e.getRegistry();
+                                    e.dispatch(p(d)),
                                         (t = a),
-                                        (r = p),
-                                        (n = h),
+                                        (r = h),
+                                        (n = g),
                                         (0, u.V)(!r.isDragging(), "Cannot call beginDrag while dragging."),
                                         t.forEach(function (e) {
                                             (0, u.V)(n.getSource(e), "Expected sourceIds to be registered.");
@@ -160,9 +160,9 @@ var T = (function () {
                                                 break;
                                             }
                                         return r;
-                                    })(a, p);
-                                    if (null === v) return void e.dispatch(m);
-                                    var b = null;
+                                    })(a, h);
+                                    if (null === v) return void e.dispatch(b);
+                                    var m = null;
                                     if (d) {
                                         if (!f) throw Error("getSourceClientOffset must be defined");
                                         (i = f),
@@ -170,23 +170,23 @@ var T = (function () {
                                                 "function" == typeof i,
                                                 "When clientOffset is provided, getSourceClientOffset must be a function.",
                                             ),
-                                            (b = f(v));
+                                            (m = f(v));
                                     }
-                                    e.dispatch(g(d, b));
-                                    var E = h.getSource(v).beginDrag(p, v);
-                                    if (null != E) {
+                                    e.dispatch(p(d, m));
+                                    var O = g.getSource(v).beginDrag(h, v);
+                                    if (null != O) {
                                         return (
-                                            (o = E),
+                                            (o = O),
                                             (0, u.V)(y(o), "Item must be an object."),
-                                            h.pinSource(v),
+                                            g.pinSource(v),
                                             {
                                                 type: l,
                                                 payload: {
-                                                    itemType: h.getSourceType(v),
-                                                    item: E,
+                                                    itemType: g.getSourceType(v),
+                                                    item: O,
                                                     sourceId: v,
                                                     clientOffset: d || null,
-                                                    sourceClientOffset: b || null,
+                                                    sourceClientOffset: m || null,
                                                     isSourcePublic: !!(void 0 === c || c),
                                                 },
                                             }
@@ -228,7 +228,7 @@ var T = (function () {
                                         (function (e, t, r) {
                                             for (var n = e.length - 1; n >= 0; n--) {
                                                 var i = e[n];
-                                                b(t.getTargetType(i), r) || e.splice(n, 1);
+                                                m(t.getTargetType(i), r) || e.splice(n, 1);
                                             }
                                         })(c, d, l.getItemType()),
                                         (n = c),
@@ -260,20 +260,20 @@ var T = (function () {
                                                 l,
                                                 d,
                                                 f,
-                                                h,
-                                                g =
+                                                g,
+                                                p =
                                                     ((r = e),
                                                     (s = t),
                                                     (c = a),
                                                     (l = o),
-                                                    (h = f = (d = c.getTarget(r)) ? d.drop(l, r) : void 0),
+                                                    (g = f = (d = c.getTarget(r)) ? d.drop(l, r) : void 0),
                                                     (0, u.V)(
-                                                        void 0 === h || y(h),
+                                                        void 0 === g || y(g),
                                                         "Drop result must either be an object or undefined.",
                                                     ),
                                                     void 0 === f && (f = 0 === s ? {} : l.getDropResult()),
                                                     f),
-                                                v = { type: p, payload: { dropResult: O(O({}, i), g) } };
+                                                v = { type: h, payload: { dropResult: w(w({}, i), p) } };
                                             n.dispatch(v);
                                         });
                                 }),
@@ -286,7 +286,7 @@ var T = (function () {
                                     (e = t), (0, u.V)(e.isDragging(), "Cannot call endDrag while not dragging.");
                                     var n = t.getSourceId();
                                     return (
-                                        null != n && (r.getSource(n, !0).endDrag(t, n), r.unpinSource()), { type: h }
+                                        null != n && (r.getSource(n, !0).endDrag(t, n), r.unpinSource()), { type: g }
                                     );
                                 }),
                         };
@@ -332,21 +332,21 @@ function S(e) {
     );
 }
 r(416886);
-var w = ("function" == typeof Symbol && Symbol.observable) || "@@observable",
-    x = function () {
+var D = ("function" == typeof Symbol && Symbol.observable) || "@@observable",
+    T = function () {
         return Math.random().toString(36).substring(7).split("").join(".");
     },
-    C = {
-        INIT: "@@redux/INIT" + x(),
-        REPLACE: "@@redux/REPLACE" + x(),
+    I = {
+        INIT: "@@redux/INIT" + T(),
+        REPLACE: "@@redux/REPLACE" + T(),
         PROBE_UNKNOWN_ACTION: function () {
-            return "@@redux/PROBE_UNKNOWN_ACTION" + x();
+            return "@@redux/PROBE_UNKNOWN_ACTION" + T();
         },
     },
-    D = function (e, t) {
+    k = function (e, t) {
         return e === t;
     };
-function k(e, t) {
+function C(e, t) {
     var r = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var n = Object.getOwnPropertySymbols(e);
@@ -358,11 +358,11 @@ function k(e, t) {
     }
     return r;
 }
-function A(e) {
+function P(e) {
     for (var t = 1; t < arguments.length; t++) {
         var r = null != arguments[t] ? arguments[t] : {};
         t % 2
-            ? k(Object(r), !0).forEach(function (t) {
+            ? C(Object(r), !0).forEach(function (t) {
                   var n, i, o;
                   (n = e),
                       (i = t),
@@ -373,18 +373,18 @@ function A(e) {
               })
             : Object.getOwnPropertyDescriptors
               ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(r))
-              : k(Object(r)).forEach(function (t) {
+              : C(Object(r)).forEach(function (t) {
                     Object.defineProperty(e, t, Object.getOwnPropertyDescriptor(r, t));
                 });
     }
     return e;
 }
-var I = { initialSourceClientOffset: null, initialClientOffset: null, clientOffset: null },
-    P = "dnd-core/ADD_SOURCE",
+var x = { initialSourceClientOffset: null, initialClientOffset: null, clientOffset: null },
+    N = "dnd-core/ADD_SOURCE",
     j = "dnd-core/ADD_TARGET",
-    N = "dnd-core/REMOVE_SOURCE",
-    R = "dnd-core/REMOVE_TARGET";
-function L(e, t) {
+    A = "dnd-core/REMOVE_SOURCE",
+    L = "dnd-core/REMOVE_TARGET";
+function R(e, t) {
     var r = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var n = Object.getOwnPropertySymbols(e);
@@ -400,7 +400,7 @@ function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var r = null != arguments[t] ? arguments[t] : {};
         t % 2
-            ? L(Object(r), !0).forEach(function (t) {
+            ? R(Object(r), !0).forEach(function (t) {
                   var n, i, o;
                   (n = e),
                       (i = t),
@@ -411,7 +411,7 @@ function _(e) {
               })
             : Object.getOwnPropertyDescriptors
               ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(r))
-              : L(Object(r)).forEach(function (t) {
+              : R(Object(r)).forEach(function (t) {
                     Object.defineProperty(e, t, Object.getOwnPropertyDescriptor(r, t));
                 });
     }
@@ -426,9 +426,9 @@ var M = {
         didDrop: !1,
         isSourcePublic: null,
     },
-    U = [],
-    V = [];
-function F(e, t) {
+    V = [],
+    U = [];
+function H(e, t) {
     var r = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var n = Object.getOwnPropertySymbols(e);
@@ -440,11 +440,11 @@ function F(e, t) {
     }
     return r;
 }
-function H(e) {
+function W(e) {
     for (var t = 1; t < arguments.length; t++) {
         var r = null != arguments[t] ? arguments[t] : {};
         t % 2
-            ? F(Object(r), !0).forEach(function (t) {
+            ? H(Object(r), !0).forEach(function (t) {
                   var n, i, o;
                   (n = e),
                       (i = t),
@@ -455,7 +455,7 @@ function H(e) {
               })
             : Object.getOwnPropertyDescriptors
               ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(r))
-              : F(Object(r)).forEach(function (t) {
+              : H(Object(r)).forEach(function (t) {
                     Object.defineProperty(e, t, Object.getOwnPropertyDescriptor(r, t));
                 });
     }
@@ -475,13 +475,13 @@ function B() {
             switch (n.type) {
                 case f:
                     break;
-                case P:
-                case j:
-                case R:
                 case N:
-                    return U;
-                default:
+                case j:
+                case L:
+                case A:
                     return V;
+                default:
+                    return U;
             }
             var i = n.payload,
                 o = i.targetIds,
@@ -504,21 +504,21 @@ function B() {
                 !(
                     c.length > 0 ||
                     !(function (e, t) {
-                        var r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : D;
+                        var r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : k;
                         if (e.length !== t.length) return !1;
                         for (var n = 0; n < e.length; ++n) if (!r(e[n], t[n])) return !1;
                         return !0;
                     })(a, u)
                 )
             )
-                return U;
+                return V;
             var l = u[u.length - 1],
                 d = a[a.length - 1];
             return l !== d && (l && c.push(l), d && c.push(d)), c;
         })(t.dirtyHandlerIds, {
             type: r.type,
-            payload: H(
-                H({}, r.payload),
+            payload: W(
+                W({}, r.payload),
                 {},
                 {
                     prevTargetIds:
@@ -532,7 +532,7 @@ function B() {
         dragOffset: (function () {
             var e,
                 t,
-                r = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : I,
+                r = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : x,
                 n = arguments.length > 1 ? arguments[1] : void 0,
                 i = n.payload;
             switch (n.type) {
@@ -550,10 +550,10 @@ function B() {
                         (!e && !t) || (e && t && e.x === t.x && e.y === t.y))
                     )
                         return r;
-                    return A(A({}, r), {}, { clientOffset: i.clientOffset });
+                    return P(P({}, r), {}, { clientOffset: i.clientOffset });
+                case g:
                 case h:
-                case p:
-                    return I;
+                    return x;
                 default:
                     return r;
             }
@@ -562,11 +562,11 @@ function B() {
             var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
                 t = arguments.length > 1 ? arguments[1] : void 0;
             switch (t.type) {
-                case P:
+                case N:
                 case j:
                     return e + 1;
-                case N:
-                case R:
+                case A:
+                case L:
                     return e - 1;
                 default:
                     return e;
@@ -596,7 +596,7 @@ function B() {
                     return _(_({}, r), {}, { isSourcePublic: !0 });
                 case f:
                     return _(_({}, r), {}, { targetIds: i.targetIds });
-                case R:
+                case L:
                     if (-1 === r.targetIds.indexOf(i.targetId)) return r;
                     return _(
                         _({}, r),
@@ -610,9 +610,9 @@ function B() {
                                 })),
                         },
                     );
-                case p:
-                    return _(_({}, r), {}, { dropResult: i.dropResult, didDrop: !0, targetIds: [] });
                 case h:
+                    return _(_({}, r), {}, { dropResult: i.dropResult, didDrop: !0, targetIds: [] });
+                case g:
                     return _(
                         _({}, r),
                         {},
@@ -636,11 +636,11 @@ function B() {
         })(t.stateId),
     };
 }
-function q(e, t) {
+function G(e, t) {
     return { x: e.x - t.x, y: e.y - t.y };
 }
-(U.__IS_NONE__ = !0), (V.__IS_ALL__ = !0);
-var W = (function () {
+(V.__IS_NONE__ = !0), (U.__IS_ALL__ = !0);
+var X = (function () {
         var e;
         function t(e, r) {
             if (!(this instanceof t)) throw TypeError("Cannot call a class as a function");
@@ -668,8 +668,8 @@ var W = (function () {
                                     (o === i + 1 &&
                                         !(function (e, t) {
                                             return (
-                                                e !== U &&
-                                                (e === V ||
+                                                e !== V &&
+                                                (e === U ||
                                                     void 0 === t ||
                                                     t.filter(function (t) {
                                                         return e.indexOf(t) > -1;
@@ -714,7 +714,7 @@ var W = (function () {
                         return (
                             (0, u.V)(t, "Expected to find a valid target. targetId=".concat(e)),
                             !(!this.isDragging() || this.didDrop()) &&
-                                b(this.registry.getTargetType(e), this.getItemType()) &&
+                                m(this.registry.getTargetType(e), this.getItemType()) &&
                                 t.canDrop(this, e)
                         );
                     },
@@ -748,7 +748,7 @@ var W = (function () {
                         if (!this.isDragging()) return !1;
                         var n = this.registry.getTargetType(e),
                             i = this.getItemType();
-                        if (i && !b(n, i)) return !1;
+                        if (i && !m(n, i)) return !1;
                         var o = this.getTargetIds();
                         if (!o.length) return !1;
                         var a = o.indexOf(e);
@@ -822,7 +822,7 @@ var W = (function () {
                             var t = e.clientOffset,
                                 r = e.initialClientOffset,
                                 n = e.initialSourceClientOffset;
-                            return t && r && n ? q({ x: t.x + n.x, y: t.y + n.y }, r) : null;
+                            return t && r && n ? G({ x: t.x + n.x, y: t.y + n.y }, r) : null;
                         })(this.store.getState().dragOffset);
                     },
                 },
@@ -833,7 +833,7 @@ var W = (function () {
                         return (
                             (t = (e = this.store.getState().dragOffset).clientOffset),
                             (r = e.initialClientOffset),
-                            t && r ? q(t, r) : null
+                            t && r ? G(t, r) : null
                         );
                     },
                 },
@@ -850,9 +850,9 @@ var W = (function () {
             t
         );
     })(),
-    $ = 0;
-function Y(e) {
-    return (Y =
+    Y = 0;
+function F(e) {
+    return (F =
         "function" == typeof Symbol && "symbol" == typeof Symbol.iterator
             ? function (e) {
                   return typeof e;
@@ -863,22 +863,22 @@ function Y(e) {
                       : typeof e;
               })(e);
 }
-function z(e, t) {
+function q(e, t) {
     t && Array.isArray(e)
         ? e.forEach(function (e) {
-              return z(e, !1);
+              return q(e, !1);
           })
         : (0, u.V)(
-              "string" == typeof e || "symbol" === Y(e),
+              "string" == typeof e || "symbol" === F(e),
               t
                   ? "Type can only be a string, a symbol, or an array of either."
                   : "Type can only be a string or a symbol.",
           );
 }
 ((i = o || (o = {})).SOURCE = "SOURCE"), (i.TARGET = "TARGET");
-let G = "u" > typeof global ? global : self,
-    X = G.MutationObserver || G.WebKitMutationObserver;
-function K(e) {
+let K = "u" > typeof global ? global : self,
+    z = K.MutationObserver || K.WebKitMutationObserver;
+function J(e) {
     return function () {
         let t = setTimeout(n, 0),
             r = setInterval(n, 50);
@@ -887,11 +887,11 @@ function K(e) {
         }
     };
 }
-let J =
-    "function" == typeof X
+let $ =
+    "function" == typeof z
         ? function (e) {
               let t = 1,
-                  r = new X(e),
+                  r = new z(e),
                   n = document.createTextNode("");
               return (
                   r.observe(n, { characterData: !0 }),
@@ -900,8 +900,8 @@ let J =
                   }
               );
           }
-        : K;
-class Z {
+        : J;
+class Q {
     call() {
         try {
             this.task && this.task();
@@ -915,7 +915,7 @@ class Z {
         (this.onError = e), (this.release = t), (this.task = null);
     }
 }
-let Q = new (class {
+let Z = new (class {
         enqueueTask(e) {
             let { queue: t, requestFlush: r } = this;
             t.length || (r(), (this.flushing = !0)), (t[t.length] = e);
@@ -940,8 +940,8 @@ let Q = new (class {
                 (this.registerPendingError = (e) => {
                     this.pendingErrors.push(e), this.requestErrorThrow();
                 }),
-                (this.requestFlush = J(this.flush)),
-                (this.requestErrorThrow = K(() => {
+                (this.requestFlush = $(this.flush)),
+                (this.requestErrorThrow = J(() => {
                     if (this.pendingErrors.length) throw this.pendingErrors.shift();
                 }));
         }
@@ -949,13 +949,13 @@ let Q = new (class {
     ee = new (class {
         create(e) {
             let t = this.freeTasks,
-                r = t.length ? t.pop() : new Z(this.onError, (e) => (t[t.length] = e));
+                r = t.length ? t.pop() : new Q(this.onError, (e) => (t[t.length] = e));
             return (r.task = e), r;
         }
         constructor(e) {
             (this.onError = e), (this.freeTasks = []);
         }
-    })(Q.registerPendingError);
+    })(Z.registerPendingError);
 function et(e, t) {
     (null == t || t > e.length) && (t = e.length);
     for (var r = 0, n = Array(t); r < t; r++) n[r] = e[r];
@@ -1042,18 +1042,18 @@ var ei = (function () {
                 {
                     key: "addSource",
                     value: function (e, t) {
-                        z(e),
+                        q(e),
                             (0, u.V)("function" == typeof t.canDrag, "Expected canDrag to be a function."),
                             (0, u.V)("function" == typeof t.beginDrag, "Expected beginDrag to be a function."),
                             (0, u.V)("function" == typeof t.endDrag, "Expected endDrag to be a function.");
                         var r = this.addHandler(o.SOURCE, e, t);
-                        return this.store.dispatch({ type: P, payload: { sourceId: r } }), r;
+                        return this.store.dispatch({ type: N, payload: { sourceId: r } }), r;
                     },
                 },
                 {
                     key: "addTarget",
                     value: function (e, t) {
-                        z(e, !0),
+                        q(e, !0),
                             (0, u.V)("function" == typeof t.canDrop, "Expected canDrop to be a function."),
                             (0, u.V)("function" == typeof t.hover, "Expected hover to be a function."),
                             (0, u.V)("function" == typeof t.drop, "Expected beginDrag to be a function.");
@@ -1112,8 +1112,8 @@ var ei = (function () {
                     value: function (e) {
                         var t = this;
                         (0, u.V)(this.getSource(e), "Expected an existing source."),
-                            this.store.dispatch({ type: N, payload: { sourceId: e } }),
-                            Q.enqueueTask(
+                            this.store.dispatch({ type: A, payload: { sourceId: e } }),
+                            Z.enqueueTask(
                                 ee.create(function () {
                                     t.dragSources.delete(e), t.types.delete(e);
                                 }),
@@ -1124,7 +1124,7 @@ var ei = (function () {
                     key: "removeTarget",
                     value: function (e) {
                         (0, u.V)(this.getTarget(e), "Expected an existing target."),
-                            this.store.dispatch({ type: R, payload: { targetId: e } }),
+                            this.store.dispatch({ type: L, payload: { targetId: e } }),
                             this.dropTargets.delete(e),
                             this.types.delete(e);
                     },
@@ -1148,7 +1148,7 @@ var ei = (function () {
                     key: "addHandler",
                     value: function (e, t, r) {
                         var n = (function (e) {
-                            var t = ($++).toString();
+                            var t = (Y++).toString();
                             switch (e) {
                                 case o.SOURCE:
                                     return "S".concat(t);
@@ -1297,7 +1297,7 @@ var eu = 0,
                                                                           }
                                                                       );
                                                                   }
-                                                                  function p(e) {
+                                                                  function h(e) {
                                                                       if (
                                                                           !(function (e) {
                                                                               if ("object" != typeof e || null === e)
@@ -1323,17 +1323,17 @@ var eu = 0,
                                                                       return e;
                                                                   }
                                                                   return (
-                                                                      p({ type: C.INIT }),
+                                                                      h({ type: I.INIT }),
                                                                       ((i = {
-                                                                          dispatch: p,
+                                                                          dispatch: h,
                                                                           subscribe: f,
                                                                           getState: d,
                                                                           replaceReducer: function (e) {
                                                                               if ("function" != typeof e)
                                                                                   throw Error(S(10));
-                                                                              (o = e), p({ type: C.REPLACE });
+                                                                              (o = e), h({ type: I.REPLACE });
                                                                           },
-                                                                      })[w] = function () {
+                                                                      })[D] = function () {
                                                                           var e;
                                                                           return (
                                                                               ((e = {
@@ -1348,7 +1348,7 @@ var eu = 0,
                                                                                       }
                                                                                       return t(), { unsubscribe: f(t) };
                                                                                   },
-                                                                              })[w] = function () {
+                                                                              })[D] = function () {
                                                                                   return this;
                                                                               }),
                                                                               e
@@ -1362,8 +1362,8 @@ var eu = 0,
                                                                       r &&
                                                                       r({ name: "dnd-core", instanceId: "dnd-core" }),
                                                               )),
-                                                          s = new W(a, new ei(a)),
-                                                          u = new T(a, s),
+                                                          s = new X(a, new ei(a)),
+                                                          u = new E(a, s),
                                                           c = e(u, n, i);
                                                       return u.receiveBackend(c), u;
                                                   })(e, t, r, n),
@@ -1440,17 +1440,17 @@ function ef(e, t, r) {
         e
     );
 }
-function ep(e, t) {
+function eh(e, t) {
     var r,
         n,
-        i = eh(e, t, "get");
+        i = eg(e, t, "get");
     return (r = e), (n = i).get ? n.get.call(r) : n.value;
 }
-function eh(e, t, r) {
+function eg(e, t, r) {
     if (!t.has(e)) throw TypeError("attempted to " + r + " private field on non-instance");
     return t.get(e);
 }
-var eg = new WeakMap();
+var ep = new WeakMap();
 class ev {
     constructor() {
         !(function (e, t, r) {
@@ -1458,19 +1458,19 @@ class ev {
                 if (t.has(e)) throw TypeError("Cannot initialize the same private elements twice on an object");
             })(e, t),
                 t.set(e, r);
-        })(this, eg, { writable: !0, value: void 0 }),
+        })(this, ep, { writable: !0, value: void 0 }),
             ef(this, "register", (e) => {
-                ep(this, eg).push(e);
+                eh(this, ep).push(e);
             }),
             ef(this, "unregister", (e) => {
                 let t;
-                for (; -1 !== (t = ep(this, eg).indexOf(e)); ) ep(this, eg).splice(t, 1);
+                for (; -1 !== (t = eh(this, ep).indexOf(e)); ) eh(this, ep).splice(t, 1);
             }),
             ef(this, "backendChanged", (e) => {
-                for (let t of ep(this, eg)) t.backendChanged(e);
+                for (let t of eh(this, ep)) t.backendChanged(e);
             }),
             (function (e, t, r) {
-                var n = eh(e, t, "set"),
+                var n = eg(e, t, "set"),
                     i = e,
                     o = n,
                     a = r;
@@ -1479,7 +1479,7 @@ class ev {
                     if (!o.writable) throw TypeError("attempted to set read only private field");
                     o.value = a;
                 }
-            })(this, eg, []);
+            })(this, ep, []);
     }
 }
 function ey(e, t, r) {
@@ -1488,20 +1488,20 @@ function ey(e, t, r) {
     })(e, t),
         t.set(e, r);
 }
-function em(e, t, r) {
+function eb(e, t, r) {
     return (
         t in e ? Object.defineProperty(e, t, { value: r, enumerable: !0, configurable: !0, writable: !0 }) : (e[t] = r),
         e
     );
 }
-function eb(e, t) {
+function em(e, t) {
     var r,
         n,
-        i = eO(e, t, "get");
+        i = ew(e, t, "get");
     return (r = e), (n = i).get ? n.get.call(r) : n.value;
 }
-function eE(e, t, r) {
-    var n = eO(e, t, "set");
+function eO(e, t, r) {
+    var n = ew(e, t, "set");
     return (
         (function (e, t, r) {
             if (t.set) t.set.call(e, r);
@@ -1513,30 +1513,30 @@ function eE(e, t, r) {
         r
     );
 }
-function eO(e, t, r) {
+function ew(e, t, r) {
     if (!t.has(e)) throw TypeError("attempted to " + r + " private field on non-instance");
     return t.get(e);
 }
-var eT = new WeakMap(),
+var eE = new WeakMap(),
     eS = new WeakMap(),
-    ew = new WeakMap(),
-    ex = new WeakMap(),
-    eC = new WeakMap(),
     eD = new WeakMap(),
-    ek = new WeakMap(),
-    eA = new WeakMap(),
+    eT = new WeakMap(),
     eI = new WeakMap(),
+    ek = new WeakMap(),
+    eC = new WeakMap(),
     eP = new WeakMap(),
+    ex = new WeakMap(),
+    eN = new WeakMap(),
     ej = new WeakMap();
-class eN {
+class eA {
     constructor(e, t, r) {
         if (
-            (ey(this, eT, { writable: !0, value: void 0 }),
+            (ey(this, eE, { writable: !0, value: void 0 }),
             ey(this, eS, { writable: !0, value: void 0 }),
-            ey(this, ew, { writable: !0, value: void 0 }),
-            ey(this, ex, { writable: !0, value: void 0 }),
-            ey(this, eC, { writable: !0, value: void 0 }),
-            ey(this, eD, {
+            ey(this, eD, { writable: !0, value: void 0 }),
+            ey(this, eT, { writable: !0, value: void 0 }),
+            ey(this, eI, { writable: !0, value: void 0 }),
+            ey(this, ek, {
                 writable: !0,
                 value: (e, t, r) => {
                     var n, i;
@@ -1559,11 +1559,11 @@ class eN {
                                 "\n        see this guide: https://github.com/louisbrunner/dnd-multi-backend/tree/master/packages/react-dnd-multi-backend#migrating-from-5xx",
                             ),
                         );
-                    if (eb(this, ew)[a])
+                    if (em(this, eD)[a])
                         throw Error(
                             "You must specify a unique 'id' property in your Backend entry:\n        "
                                 .concat(JSON.stringify(r), " (conflicts with: ")
-                                .concat(JSON.stringify(eb(this, ew)[a]), ")"),
+                                .concat(JSON.stringify(em(this, eD)[a]), ")"),
                         );
                     return {
                         id: a,
@@ -1574,77 +1574,77 @@ class eN {
                     };
                 },
             }),
-            em(this, "setup", () => {
+            eb(this, "setup", () => {
                 if ("u" > typeof window) {
-                    if (eN.isSetUp) throw Error("Cannot have two MultiBackends at the same time.");
-                    (eN.isSetUp = !0), eb(this, ek).call(this, window), eb(this, ew)[eb(this, eT)].instance.setup();
+                    if (eA.isSetUp) throw Error("Cannot have two MultiBackends at the same time.");
+                    (eA.isSetUp = !0), em(this, eC).call(this, window), em(this, eD)[em(this, eE)].instance.setup();
                 }
             }),
-            em(this, "teardown", () => {
+            eb(this, "teardown", () => {
                 "u" > typeof window &&
-                    ((eN.isSetUp = !1),
-                    eb(this, eA).call(this, window),
-                    eb(this, ew)[eb(this, eT)].instance.teardown());
+                    ((eA.isSetUp = !1),
+                    em(this, eP).call(this, window),
+                    em(this, eD)[em(this, eE)].instance.teardown());
             }),
-            em(this, "connectDragSource", (e, t, r) => eb(this, ej).call(this, "connectDragSource", e, t, r)),
-            em(this, "connectDragPreview", (e, t, r) => eb(this, ej).call(this, "connectDragPreview", e, t, r)),
-            em(this, "connectDropTarget", (e, t, r) => eb(this, ej).call(this, "connectDropTarget", e, t, r)),
-            em(this, "profile", () => eb(this, ew)[eb(this, eT)].instance.profile()),
-            em(this, "previewEnabled", () => eb(this, ew)[eb(this, eT)].preview),
-            em(this, "previewsList", () => eb(this, eS)),
-            em(this, "backendsList", () => eb(this, ex)),
-            ey(this, ek, {
+            eb(this, "connectDragSource", (e, t, r) => em(this, ej).call(this, "connectDragSource", e, t, r)),
+            eb(this, "connectDragPreview", (e, t, r) => em(this, ej).call(this, "connectDragPreview", e, t, r)),
+            eb(this, "connectDropTarget", (e, t, r) => em(this, ej).call(this, "connectDropTarget", e, t, r)),
+            eb(this, "profile", () => em(this, eD)[em(this, eE)].instance.profile()),
+            eb(this, "previewEnabled", () => em(this, eD)[em(this, eE)].preview),
+            eb(this, "previewsList", () => em(this, eS)),
+            eb(this, "backendsList", () => em(this, eT)),
+            ey(this, eC, {
                 writable: !0,
                 value: (e) => {
-                    eb(this, ex).forEach((t) => {
-                        t.transition && e.addEventListener(t.transition.event, eb(this, eI));
+                    em(this, eT).forEach((t) => {
+                        t.transition && e.addEventListener(t.transition.event, em(this, ex));
                     });
                 },
             }),
-            ey(this, eA, {
+            ey(this, eP, {
                 writable: !0,
                 value: (e) => {
-                    eb(this, ex).forEach((t) => {
-                        t.transition && e.removeEventListener(t.transition.event, eb(this, eI));
+                    em(this, eT).forEach((t) => {
+                        t.transition && e.removeEventListener(t.transition.event, em(this, ex));
                     });
                 },
             }),
-            ey(this, eI, {
+            ey(this, ex, {
                 writable: !0,
                 value: (e) => {
-                    let t = eb(this, eT);
+                    let t = em(this, eE);
                     if (
-                        (eb(this, ex).some(
+                        (em(this, eT).some(
                             (t) =>
-                                !!(t.id !== eb(this, eT) && t.transition && t.transition.check(e)) &&
-                                (eE(this, eT, t.id), !0),
+                                !!(t.id !== em(this, eE) && t.transition && t.transition.check(e)) &&
+                                (eO(this, eE, t.id), !0),
                         ),
-                        eb(this, eT) !== t)
+                        em(this, eE) !== t)
                     ) {
                         var r;
-                        eb(this, ew)[t].instance.teardown(),
-                            Object.keys(eb(this, eC)).forEach((e) => {
-                                let t = eb(this, eC)[e];
-                                t.unsubscribe(), (t.unsubscribe = eb(this, eP).call(this, t.func, ...t.args));
+                        em(this, eD)[t].instance.teardown(),
+                            Object.keys(em(this, eI)).forEach((e) => {
+                                let t = em(this, eI)[e];
+                                t.unsubscribe(), (t.unsubscribe = em(this, eN).call(this, t.func, ...t.args));
                             }),
-                            eb(this, eS).backendChanged(this);
-                        let n = eb(this, ew)[eb(this, eT)];
+                            em(this, eS).backendChanged(this);
+                        let n = em(this, eD)[em(this, eE)];
                         if ((n.instance.setup(), n.skipDispatchOnTransition)) return;
                         let i = new e.constructor(e.type, e);
                         null == (r = e.target) || r.dispatchEvent(i);
                     }
                 },
             }),
-            ey(this, eP, { writable: !0, value: (e, t, r, n) => eb(this, ew)[eb(this, eT)].instance[e](t, r, n) }),
+            ey(this, eN, { writable: !0, value: (e, t, r, n) => em(this, eD)[em(this, eE)].instance[e](t, r, n) }),
             ey(this, ej, {
                 writable: !0,
                 value: (e, t, r, n) => {
                     let i = "".concat(e, "_").concat(t),
-                        o = eb(this, eP).call(this, e, t, r, n);
+                        o = em(this, eN).call(this, e, t, r, n);
                     return (
-                        (eb(this, eC)[i] = { func: e, args: [t, r, n], unsubscribe: o }),
+                        (em(this, eI)[i] = { func: e, args: [t, r, n], unsubscribe: o }),
                         () => {
-                            eb(this, eC)[i].unsubscribe(), delete eb(this, eC)[i];
+                            em(this, eI)[i].unsubscribe(), delete em(this, eI)[i];
                         }
                     );
                 },
@@ -1654,21 +1654,21 @@ class eN {
             throw Error(
                 "You must specify at least one Backend, if you are coming from 2.x.x (or don't understand this error)\n        see this guide: https://github.com/louisbrunner/dnd-multi-backend/tree/master/packages/react-dnd-multi-backend#migrating-from-2xx",
             );
-        eE(this, eS, new ev()),
-            eE(this, ew, {}),
-            eE(this, ex, []),
+        eO(this, eS, new ev()),
+            eO(this, eD, {}),
+            eO(this, eT, []),
             r.backends.forEach((r) => {
-                let n = eb(this, eD).call(this, e, t, r);
-                (eb(this, ew)[n.id] = n), eb(this, ex).push(n);
+                let n = em(this, ek).call(this, e, t, r);
+                (em(this, eD)[n.id] = n), em(this, eT).push(n);
             }),
-            eE(this, eT, eb(this, ex)[0].id),
-            eE(this, eC, {});
+            eO(this, eE, em(this, eT)[0].id),
+            eO(this, eI, {});
     }
 }
-em(eN, "isSetUp", !1);
-let eR = (e, t, r) => new eN(e, t, r);
-function eL() {
-    return (eL =
+eb(eA, "isSetUp", !1);
+let eL = (e, t, r) => new eA(e, t, r);
+function eR() {
+    return (eR =
         Object.assign ||
         function (e) {
             for (var t = 1; t < arguments.length; t++) {
@@ -1684,7 +1684,7 @@ function e_(e, t) {
     return n;
 }
 var eM = (0, a.createContext)(null),
-    eU = function (e) {
+    eV = function (e) {
         var t,
             r = e.portal,
             n = (function (e, t) {
@@ -1755,8 +1755,8 @@ var eM = (0, a.createContext)(null),
         return a.createElement(
             eM.Provider,
             { value: null != r ? r : o },
-            a.createElement(el, eL({ backend: eR }, n)),
+            a.createElement(el, eR({ backend: eL }, n)),
             r ? null : a.createElement("div", { ref: s }),
         );
     },
-    eV = (r(333007), r(686246));
+    eU = (r(333007), r(686246));

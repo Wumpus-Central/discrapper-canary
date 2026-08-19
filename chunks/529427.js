@@ -1,4 +1,4 @@
-n.d(t, { vd: () => r.v, Mw: () => C, UnifiedCheckoutFlowManagerSingletons: () => v, XZ: () => l.X, CL: () => l.C });
+n.d(t, { vd: () => r.v, Mw: () => h, UnifiedCheckoutFlowManagerSingletons: () => v, XZ: () => l.X, CL: () => l.C });
 var l = n(75304),
     i = n(675219),
     r = n(71804),
@@ -10,30 +10,30 @@ var l = n(75304),
     d = n(202475),
     p = n(375708),
     m = n(855844);
-function C(e) {
+function h(e) {
     let {
             paymentModalStepProps: { handleStepChange: t },
             layout: n,
             renderStepBody: i,
             renderLeftColumn: r,
-            renderRightColumn: C,
-            renderBottomContent: h,
+            renderRightColumn: h,
+            renderBottomContent: C,
             primaryCTAButtonProps: f,
             onBackClick: E,
         } = e,
         { hasPaymentSources: S } = (0, d.j)(),
-        A = S ? o.pn.REVIEW : o.pn.ADD_PAYMENT_STEPS,
-        y = s.useCallback(() => t(A), [t, A]),
+        y = S ? o.pn.REVIEW : o.pn.ADD_PAYMENT_STEPS,
+        A = s.useCallback(() => t(y), [t, y]),
         P = s.useMemo(
             () =>
                 n === l.X.CUSTOM_STEP_BODY
                     ? i()
                     : (0, a.jsxs)(a.Fragment, {
-                          children: [(0, a.jsxs)("div", { className: m.D, children: [r(), C()] }), null != h && h()],
+                          children: [(0, a.jsxs)("div", { className: m.D, children: [r(), h()] }), null != C && C()],
                       }),
-            [n, i, r, C, h],
+            [n, i, r, h, C],
         ),
-        I = s.useMemo(() => ({ ...f, onClick: y, text: p.intl.string(p.t.XiOHRX) }), [f, y]);
+        I = s.useMemo(() => ({ ...f, onClick: A, text: p.intl.string(p.t.XiOHRX) }), [f, A]);
     return (0, a.jsxs)(a.Fragment, {
         children: [
             (0, a.jsx)(u.dZ, { children: P }),
@@ -41,19 +41,19 @@ function C(e) {
         ],
     });
 }
-let h = null,
+let C = null,
     f = null,
     E = null,
     S = null,
-    A = null,
     y = null,
+    A = null,
     P = null,
     I = null,
     g = null,
     v = {
         [l.C.ORB_CHECKOUT]: {
             get: function () {
-                return null == h && (h = new i.od({ checkoutFlow: l.C.ORB_CHECKOUT })), h;
+                return null == C && (C = new i.od({ checkoutFlow: l.C.ORB_CHECKOUT })), C;
             },
         },
         [l.C.COLLECTIBLES_CHECKOUT]: {
@@ -73,12 +73,12 @@ let h = null,
         },
         [l.C.GUILD_PRODUCT_CHECKOUT]: {
             get: function () {
-                return null == A && (A = new i.od({ checkoutFlow: l.C.GUILD_PRODUCT_CHECKOUT })), A;
+                return null == y && (y = new i.od({ checkoutFlow: l.C.GUILD_PRODUCT_CHECKOUT })), y;
             },
         },
         [l.C.GUILD_ROLE_CHECKOUT]: {
             get: function () {
-                return null == y && (y = new i.od({ checkoutFlow: l.C.GUILD_ROLE_CHECKOUT })), y;
+                return null == A && (A = new i.od({ checkoutFlow: l.C.GUILD_ROLE_CHECKOUT })), A;
             },
         },
         [l.C.GUILD_BOOST_CHECKOUT]: {

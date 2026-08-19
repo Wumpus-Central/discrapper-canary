@@ -2,12 +2,12 @@
 n.d(t, {
     C5: () => H,
     CQ: () => U,
-    D6: () => Z,
+    D6: () => q,
     DA: () => X,
     EG: () => G,
     Fj: () => K,
     Nu: () => W,
-    O7: () => q,
+    O7: () => Z,
     QZ: () => $,
     V$: () => b,
     Wf: () => k,
@@ -29,7 +29,7 @@ var i = n(582128),
     a = n(132500),
     s = n(17928),
     l = n(95561),
-    o = n(159273),
+    o = n(236285),
     d = n(7584),
     c = n(17591),
     u = n(850992),
@@ -387,7 +387,7 @@ function z(e) {
         (0, s.yK)([o.Ay], () => o.Ay.getDisambiguatedEmojiContext(e).favoriteEmojisWithoutFetchingLatest)
     );
 }
-function q(e, t) {
+function Z(e, t) {
     return (
         i.useEffect(() => {
             E.bW.loadIfNecessary();
@@ -398,7 +398,7 @@ function q(e, t) {
         )
     );
 }
-function Z(e) {
+function q(e) {
     return (
         i.useEffect(() => {
             E.bW.loadIfNecessary();

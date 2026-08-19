@@ -13,8 +13,8 @@ var i = n(477900),
     h = n(164956),
     A = n(976860),
     _ = n(808728),
-    f = n(71393),
-    S = n(174459),
+    S = n(71393),
+    f = n(174459),
     I = n(486418),
     C = n(920814),
     m = n(284683),
@@ -27,7 +27,7 @@ function R() {
 }
 function L(e) {
     let { children: t, initialTab: n, guildId: r } = e,
-        s = (0, a.bG)([f.A], () => f.A.getGuild(r)),
+        s = (0, a.bG)([S.A], () => S.A.getGuild(r)),
         R = (0, a.bG)([h.A], () => h.A.isViewingServerShop(r)),
         L = (0, I.P)(s),
         P = (0, c.w)(r),
@@ -69,7 +69,7 @@ function L(e) {
                           (t.action_taken = p.hN.DISMISS_TAB_PREVIEW))
                         : ((0, A.bG)(v.BVt.CHANNEL(r, _.Ay.getDefaultChannel(r)?.id)),
                           (t.action_taken = p.hN.DISMISS_FULL_PREVIEW)),
-                        S.default.track(v.HAw.GUILD_SHOP_PREVIEW_CLICK, t);
+                        f.default.track(v.HAw.GUILD_SHOP_PREVIEW_CLICK, t);
                 },
             },
             children: t,

@@ -22,8 +22,8 @@ var d = i(297264),
     E = i(183555),
     S = i(735321),
     C = i(451395),
-    b = i(823016),
-    T = i(788593),
+    T = i(823016),
+    b = i(788593),
     N = i(492280),
     w = i(866665),
     y = i(789645),
@@ -250,7 +250,7 @@ function q(e) {
         !g && !m)
     )
         return null;
-    let b = A ? u : u.slice(0, u.length - I);
+    let T = A ? u : u.slice(0, u.length - I);
     return (0, s.jsxs)("div", {
         className: o()(K.I4, a),
         children: [
@@ -260,7 +260,7 @@ function q(e) {
                         (0, s.jsx)("ul", {
                             className: K.Tw,
                             "aria-label": U.intl.string(U.t.EfjTi4),
-                            children: b.map((e) =>
+                            children: T.map((e) =>
                                 (0, s.jsx)(
                                     J,
                                     {
@@ -390,7 +390,7 @@ var et = i(858808),
     en = i(445995);
 function el(e) {
     let { index: t, widgetType: i, game: n, children: l, getWidth: r } = e,
-        { manageFocusOnReorder: a } = (0, b.r)();
+        { manageFocusOnReorder: a } = (0, T.r)();
     return (0, s.jsx)(C.mG, {
         index: t,
         itemId: n.gameId,
@@ -450,8 +450,8 @@ function ed(e) {
         { trackUserProfileEditAction: I } = (0, E.NJ)(),
         [j, A] = r.useState("idle"),
         [v, C] = r.useState(t ?? ""),
-        b = r.useRef(null),
         T = r.useRef(null),
+        b = r.useRef(null),
         N = U.intl.string(U.t.xKSfBT),
         w = null != t && "" !== t.trim(),
         y = r.useCallback(() => {
@@ -472,7 +472,7 @@ function ed(e) {
             "editing" === j && C(t ?? "");
         }, [t, j]),
         r.useEffect(() => {
-            "completed" === j && b.current?.focus();
+            "completed" === j && T.current?.focus();
         }, [j]),
         "editing" === j
             ? (0, s.jsxs)("div", {
@@ -495,7 +495,7 @@ function ed(e) {
                   ],
               })
             : (0, s.jsxs)("div", {
-                  ref: T,
+                  ref: b,
                   role: "group",
                   "aria-labelledby": m,
                   onClick: y,
@@ -505,12 +505,12 @@ function ed(e) {
                       (0, s.jsx)(er, { user: i, guildId: n, channelId: l, id: m }),
                       (0, s.jsx)(ea, { text: t ?? N, className: o()(en.qC, !w && en.qf) }),
                       (0, s.jsx)(c.D, {
-                          innerRef: b,
+                          innerRef: T,
                           "aria-label": U.intl.string(U.t.ppb9MJ),
                           onClick: (e) => {
                               e.stopPropagation(), y();
                           },
-                          focusProps: { ringTarget: T },
+                          focusProps: { ringTarget: b },
                       }),
                   ],
               })
@@ -538,10 +538,10 @@ function ec(e) {
         R = 1 === (0, S.cv)(a),
         O = k && (0, S.y9)(a),
         _ = k && !R,
-        { registerDragHandleRef: L } = (0, b.r)();
+        { registerDragHandleRef: L } = (0, T.r)();
     if (w) return (0, s.jsx)(N.E, {});
     function P() {
-        return (0, s.jsx)(T.A, {
+        return (0, s.jsx)(b.A, {
             coverRef: x,
             className: null == v || u ? void 0 : ei.iL,
             imageSrc: v,

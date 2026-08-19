@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { OS: () => s, ht: () => r });
+n.d(t, { OS: () => a, ht: () => r });
 let i = (0, n(945810).mj)({
     kind: "user",
     name: "2026-05-server-theme-user",
@@ -9,6 +9,6 @@ let i = (0, n(945810).mj)({
 function r(e) {
     return i.getConfig({ location: e }).enabled;
 }
-function s(e) {
+function a(e) {
     return i.useConfig({ location: e }).enabled;
 }

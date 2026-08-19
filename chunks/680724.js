@@ -1,60 +1,60 @@
 "use strict";
-n.d(t, { A: () => f });
+n.d(t, { A: () => A });
 var i = n(17928),
     r = n(228366),
-    s = n(652896),
-    a = n(763827),
-    o = n(652215);
-let l = {},
-    u = {},
+    a = n(652896),
+    s = n(763827),
+    l = n(652215);
+let o = {},
+    d = {},
     c = null,
-    d = new Set();
+    u = new Set();
 function _() {
-    (u = {}), (l = {});
+    (d = {}), (o = {});
 }
-class h extends i.Ay.Store {
+class E extends i.Ay.Store {
     initialize() {
-        this.waitFor(a.A);
+        this.waitFor(s.A);
     }
     getPendingRequestForUser(e) {
-        return u[e];
+        return d[e];
     }
     isRequestOnCooldown(e) {
-        return d.has(e);
+        return u.has(e);
     }
 }
-let f = new h(r.h, {
+let A = new E(r.h, {
     STREAM_WATCH: function (e) {
         let { streamKey: t } = e,
-            { ownerId: n } = s.Iy(t);
-        if (null == u[n]) return !1;
-        delete u[n];
+            { ownerId: n } = a.Iy(t);
+        if (null == d[n]) return !1;
+        delete d[n];
     },
     STREAM_REQUEST_COOLDOWN_START: function (e) {
         let { userId: t } = e;
-        if (d.has(t)) return !1;
-        d.add(t);
+        if (u.has(t)) return !1;
+        u.add(t);
     },
     STREAM_REQUEST_COOLDOWN_END: function (e) {
         let { userId: t } = e;
-        if (!d.has(t)) return !1;
-        d.delete(t);
+        if (!u.has(t)) return !1;
+        u.delete(t);
     },
     MESSAGE_CREATE: function (e) {
         let { channelId: t, sendMessageOptions: n, message: i, optimistic: r } = e;
-        if (t !== a.A.getChannelId()) return !1;
+        if (t !== s.A.getChannelId()) return !1;
         if (r) {
             let e = n?.activityAction?.targetUserId;
-            return null != e && ((l[i.id] = e), !1);
+            return null != e && ((o[i.id] = e), !1);
         }
-        if (null == i.nonce || i.activity?.type !== o.xL.STREAM_REQUEST) return !1;
-        let s = l[i.nonce];
-        if (null == s) return !1;
-        delete l[i.nonce], (u = { ...u, [s]: i.id });
+        if (null == i.nonce || i.activity?.type !== l.xL.STREAM_REQUEST) return !1;
+        let a = o[i.nonce];
+        if (null == a) return !1;
+        delete o[i.nonce], (d = { ...d, [a]: i.id });
     },
     MESSAGE_DELETE: function (e) {
         let { id: t } = e;
-        for (let [e, n] of (delete l[t], Object.entries(u))) t === n && delete u[e];
+        for (let [e, n] of (delete o[t], Object.entries(d))) t === n && delete d[e];
     },
     VOICE_CHANNEL_SELECT: function (e) {
         let { channelId: t, currentVoiceChannelId: n } = e;
@@ -62,15 +62,15 @@ let f = new h(r.h, {
         _();
     },
     VOICE_STATE_UPDATES: function () {
-        if (a.A.getWasMoved()) {
-            if (a.A.getChannelId() === c) return !1;
-            (c = a.A.getChannelId()), _();
+        if (s.A.getWasMoved()) {
+            if (s.A.getChannelId() === c) return !1;
+            (c = s.A.getChannelId()), _();
         } else {
             if (null == c) return !1;
             c = null;
         }
     },
     LOGOUT: function () {
-        _(), d.clear();
+        _(), u.clear();
     },
 });

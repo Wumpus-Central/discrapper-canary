@@ -1,17 +1,17 @@
 "use strict";
 n.d(t, { A: () => s }), n(321073);
-var i = n(22098),
-    r = n(820066);
+var l = n(22098),
+    i = n(820066);
 function s(e, t) {
-    if (r.VW.areStylesDisabled(e)) return [];
+    if (i.VW.areStylesDisabled(e)) return [];
     let [n, s] = t,
-        a = [];
-    if (!r.AS.isType(n, "line") || null == n.codeBlockState) return a;
-    let { hljsTypes: o, isStyledCodeBlockLine: l } = n.codeBlockState;
-    if (null == o || 0 === o.length || !l) return [];
-    for (let t of o) {
-        let o = n.children.map((e) => (r.l5.isText(e) ? e.text : null));
-        a.push({ hljsTypes: t.types, anchor: (0, i.Q)(e, s, o, t.start), focus: (0, i.Q)(e, s, o, t.end) });
+        r = [];
+    if (!i.AS.isType(n, "line") || null == n.codeBlockState) return r;
+    let { hljsTypes: a, isStyledCodeBlockLine: o } = n.codeBlockState;
+    if (null == a || 0 === a.length || !o) return [];
+    for (let t of a) {
+        let a = n.children.map((e) => (i.l5.isText(e) ? e.text : null));
+        r.push({ hljsTypes: t.types, anchor: (0, l.Q)(e, s, a, t.start), focus: (0, l.Q)(e, s, a, t.end) });
     }
-    return a;
+    return r;
 }

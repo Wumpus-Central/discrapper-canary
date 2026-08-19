@@ -1,9 +1,9 @@
 "use strict";
-n.d(t, { Cx: () => s, Xb: () => o, k7: () => l });
+n.d(t, { Cx: () => a, Xb: () => l, k7: () => o });
 var i = n(4511),
     r = n(731854);
-let s = Object.freeze({ [r.K3.AUTO]: {}, [r.K3.FULL]: { encode: { width: 1280, height: 720 } } });
-class a {
+let a = Object.freeze({ [r.K3.AUTO]: {}, [r.K3.FULL]: { encode: { width: 1280, height: 720 } } });
+class s {
     capture;
     encode;
     bitrateMin;
@@ -12,15 +12,15 @@ class a {
     localWant;
     constructor(e) {
         if (null == e.capture && null == e.encode) throw Error("Invalid arguments.");
-        (this.capture = null == e.capture ? void 0 : new o(e.capture)),
-            (this.encode = null == e.encode ? void 0 : new o(e.encode)),
+        (this.capture = null == e.capture ? void 0 : new l(e.capture)),
+            (this.encode = null == e.encode ? void 0 : new l(e.encode)),
             (this.bitrateMin = e.bitrateMin),
             (this.bitrateMax = e.bitrateMax),
             (this.bitrateTarget = e.bitrateTarget),
             (this.localWant = e.localWant);
     }
 }
-class o {
+class l {
     width;
     height;
     framerate;
@@ -45,7 +45,7 @@ class o {
         return { width: n, height: i, framerate: t?.framerate ?? e?.framerate, pixelCount: n * i };
     }
 }
-class l {
+class o {
     contextType;
     connection;
     options;
@@ -77,9 +77,9 @@ class l {
         }
         let i = this.isStreamContext ? this.getGoliveQuality(t, n) : this.getVideoQuality(t);
         return null != this.qualityOverwrite
-            ? new a({
-                  encode: o.extend(i.encode, this.qualityOverwrite.encode),
-                  capture: o.extend(i.capture, this.qualityOverwrite.capture),
+            ? new s({
+                  encode: l.extend(i.encode, this.qualityOverwrite.encode),
+                  capture: l.extend(i.capture, this.qualityOverwrite.capture),
                   bitrateMin: this.qualityOverwrite.bitrateMin ?? i.bitrateMin,
                   bitrateMax: this.qualityOverwrite.bitrateMax ?? i.bitrateMax,
                   bitrateTarget: this.qualityOverwrite.bitrateTarget ?? i.bitrateTarget,
@@ -113,9 +113,9 @@ class l {
         this.qualityOverwrite = e;
     }
     setGoliveQuality(e) {
-        this.goliveMaxQuality = new a({
-            capture: o.extend(this.goliveMaxQuality.capture, e.capture),
-            encode: o.extend(this.goliveMaxQuality.encode, e.encode),
+        this.goliveMaxQuality = new s({
+            capture: l.extend(this.goliveMaxQuality.capture, e.capture),
+            encode: l.extend(this.goliveMaxQuality.encode, e.encode),
             bitrateMin: e.bitrateMin ?? this.goliveMaxQuality.bitrateMin,
             bitrateMax: e.bitrateMax ?? this.goliveMaxQuality.bitrateMax,
             bitrateTarget: e.bitrateTarget ?? this.goliveMaxQuality.bitrateTarget,
@@ -127,7 +127,7 @@ class l {
             n = this.options.videoBitrate.min * t.budgetPortion,
             i = this.options.videoBitrate.max * t.budgetPortion,
             r = this.isMuted ? t.mutedFramerate : t.framerate;
-        return new a({
+        return new s({
             encode: { ...t, framerate: r },
             capture: {
                 width: this.options.videoCapture.width,
@@ -154,8 +154,8 @@ class l {
                 this.goliveMaxQuality.bitrateMax,
             ),
             i = this.scaleLinearly(t, this.goliveMaxQuality.encode.pixelCount, this.goliveMaxQuality.bitrateMin),
-            s = this.scaleLinearly(t, this.goliveMaxQuality.encode.pixelCount, this.goliveMaxQuality.bitrateMax),
-            o =
+            a = this.scaleLinearly(t, this.goliveMaxQuality.encode.pixelCount, this.goliveMaxQuality.bitrateMax),
+            l =
                 null != this.goliveMaxQuality.bitrateTarget
                     ? this.scaleLinearly(
                           t,
@@ -163,17 +163,17 @@ class l {
                           this.goliveMaxQuality.bitrateTarget,
                       )
                     : void 0;
-        return new a({
+        return new s({
             encode: this.goliveMaxQuality.encode,
             capture: this.goliveMaxQuality.capture,
             bitrateMin: Math.max(Math.ceil(i), this.options.videoBitrateFloor),
-            bitrateMax: Math.max(Math.ceil(s), n),
-            bitrateTarget: null != o ? Math.max(Math.ceil(o), this.options.videoBitrateFloor) : void 0,
+            bitrateMax: Math.max(Math.ceil(a), n),
+            bitrateTarget: null != l ? Math.max(Math.ceil(l), this.options.videoBitrateFloor) : void 0,
             localWant: e,
         });
     }
     getDefaultGoliveQuality() {
-        return new a({
+        return new s({
             capture: { width: 1280, height: 720, framerate: r.sG },
             encode: { width: 1280, height: 720, framerate: r.sG, pixelCount: 921600 },
             bitrateMin: this.options.desktopBitrate.min,

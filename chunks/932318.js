@@ -1,13 +1,13 @@
 "use strict";
 e.exports = function (e, t) {
-    var i,
-        r,
-        s,
-        a,
+    var n,
         o,
+        i,
+        a,
+        s,
         l,
         u = [];
-    for (s = 0, i = n(246734)(e), a = n(976617), o = n(577360), l = n(921194); s < i.length; ++s)
-        a[(r = i[s])] && (r = a[r]), t && "keypress" !== t && o[r] && ((r = o[r]), u.push("shift")), l(r) && u.push(r);
-    return (t = this.pickBestAction(r, u, t)), { key: r, modifiers: u, action: t };
+    for (i = 0, n = r(246734)(e), a = r(976617), s = r(577360), l = r(921194); i < n.length; ++i)
+        a[(o = n[i])] && (o = a[o]), t && "keypress" !== t && s[o] && ((o = s[o]), u.push("shift")), l(o) && u.push(o);
+    return (t = this.pickBestAction(o, u, t)), { key: o, modifiers: u, action: t };
 };

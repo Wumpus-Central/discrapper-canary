@@ -1,15 +1,15 @@
 "use strict";
-var i = n(906046),
-    r = i("String.prototype.valueOf"),
-    s = function (e) {
+var n = r(906046),
+    o = n("String.prototype.valueOf"),
+    i = function (e) {
         try {
-            return r(e), !0;
+            return o(e), !0;
         } catch (e) {
             return !1;
         }
     },
-    a = i("Object.prototype.toString"),
-    o = n(581070)();
+    a = n("Object.prototype.toString"),
+    s = r(581070)();
 e.exports = function (e) {
-    return "string" == typeof e || (!!e && "object" == typeof e && (o ? s(e) : "[object String]" === a(e)));
+    return "string" == typeof e || (!!e && "object" == typeof e && (s ? i(e) : "[object String]" === a(e)));
 };

@@ -1,4 +1,4 @@
-e.exports = {
+_.exports = {
     oU: "text-md/medium__72ba7",
     fc: "addFriendInputWrapper__72ba7",
     z3: "error__72ba7",

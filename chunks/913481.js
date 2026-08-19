@@ -22,7 +22,7 @@ let I = { x: 50, y: 50 };
 function v(e) {
     return Math.min(100, Math.max(0, e));
 }
-function E(e) {
+function N(e) {
     let { channelId: t, roomWidth: n, onPlace: a } = e,
         s = (0, l.useRef)(null),
         o = (0, l.useRef)(I),
@@ -67,7 +67,7 @@ function E(e) {
         })
     );
 }
-function N(e) {
+function E(e) {
     let { channelId: t, roomWidth: n, containerRef: a, pointerRef: s, onPlace: o } = e,
         d = (0, g.F)(n).numericAvatarSize / 2,
         [u, p] = (0, c.z)(() => ({ x: -1 * d, y: -1 * d, config: { clamp: !0, tension: 300 } })),
@@ -118,8 +118,8 @@ function b(e) {
             [t],
         );
     return r
-        ? (0, i.jsx)(E, { channelId: t, roomWidth: n, onPlace: u })
-        : (0, i.jsx)(N, { channelId: t, roomWidth: n, containerRef: a, pointerRef: s, onPlace: u });
+        ? (0, i.jsx)(N, { channelId: t, roomWidth: n, onPlace: u })
+        : (0, i.jsx)(E, { channelId: t, roomWidth: n, containerRef: a, pointerRef: s, onPlace: u });
 }
 function _(e) {
     let { channelId: t, roomWidth: n } = e,

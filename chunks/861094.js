@@ -26,23 +26,23 @@ function i(e, t, n, i) {
                 h = s.y - i.y,
                 p = r - c,
                 m = u - c,
-                A = -r + c - u,
-                x = o - d,
-                f = h - d,
+                f = -r + c - u,
+                A = o - d,
+                x = h - d,
                 g = -o + d - h,
-                y = 0,
-                C = 0;
-            if (0 !== A || 0 !== g) {
-                let e = p * f - x * m;
-                (y = (A * f - m * g) / e), (C = (p * g - x * A) / e);
+                C = 0,
+                y = 0;
+            if (0 !== f || 0 !== g) {
+                let e = p * x - A * m;
+                (C = (f * x - m * g) / e), (y = (p * g - A * f) / e);
             }
-            let j = r + y * r,
-                v = u + C * u,
-                E = o + y * o,
-                N = h + C * h,
-                I = y / t,
-                b = C / n;
-            return `matrix3d(${[j / t, E / t, 0, I, v / n, N / n, 0, b, 0, 0, 1, 0, 0, 0, 0, 1].join(", ")})`;
+            let j = r + C * r,
+                I = u + y * u,
+                v = o + C * o,
+                N = h + y * h,
+                E = C / t,
+                b = y / n;
+            return `matrix3d(${[j / t, v / t, 0, E, I / n, N / n, 0, b, 0, 0, 1, 0, 0, 0, 0, 1].join(", ")})`;
         })(l, t, a),
     };
 }

@@ -1,11 +1,11 @@
 "use strict";
-n.d(t, { A: () => a, s: () => s });
+n.d(t, { A: () => s, s: () => a });
 var i = n(575593),
-    r = n(149807);
-function s(e) {
-    return e instanceof a;
+    r = n(338535);
+function a(e) {
+    return e instanceof s;
 }
-class a extends r.A {
+class s extends r.A {
     label;
     layers;
     innerWidth;
@@ -23,10 +23,10 @@ class a extends r.A {
             (this.overflowHorizontal = e.overflowHorizontal);
     }
     static fromServer(e) {
-        let { inner_width: t, overflow_top: n, overflow_bottom: i, overflow_horizontal: r, ...s } = e;
-        return new a({
-            ...super.fromServer(s),
-            ...s,
+        let { inner_width: t, overflow_top: n, overflow_bottom: i, overflow_horizontal: r, ...a } = e;
+        return new s({
+            ...super.fromServer(a),
+            ...a,
             innerWidth: t,
             overflowTop: n,
             overflowBottom: i,

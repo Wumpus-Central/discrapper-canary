@@ -1,8 +1,8 @@
 "use strict";
-n.d(t, { Q: () => s });
-var i = n(495544),
+n.d(t, { Q: () => a });
+var i = n(280450),
     r = n(768349);
-function s(e) {
+function a(e) {
     return {
         id: e?.id ?? "0",
         linkType: e?.linkType ?? r.J.UNKNOWN,

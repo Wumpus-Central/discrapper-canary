@@ -1,4 +1,4 @@
-e.exports = {
+_.exports = {
     kL: "container__3782a",
     r3: "dialog__3782a",
     Qs: "content__3782a",

@@ -1,8 +1,8 @@
 n.d(t, { A: () => A });
 var l = n(477900),
     r = n(582128),
-    a = n(503698),
-    i = n.n(a),
+    i = n(503698),
+    a = n.n(i),
     s = n(123292),
     o = n(688810),
     u = n(183555),
@@ -15,32 +15,32 @@ let A = r.memo(function (e) {
     let {
             userId: t,
             userBio: n,
-            heading: a,
+            heading: i,
             onClose: A,
             animateOnHoverOrFocusOnly: x = !1,
             isHoveringOrFocusing: S = !1,
-            hidePersonalInformation: g = !1,
-            hideRestrictedProfile: T = !1,
+            hidePersonalInformation: T = !1,
+            hideRestrictedProfile: g = !1,
             viewFullBioDisabled: E = !1,
         } = e,
         { context: p } = (0, u.NJ)(),
         { analyticsLocations: v } = (0, o.Ay)(),
-        [y, R] = r.useState(!1),
+        [R, y] = r.useState(!1),
         [j, C] = r.useState(!1),
         N = r.useRef(null);
-    return g || null == n || "" === n
+    return T || null == n || "" === n
         ? null
         : (0, l.jsxs)(f.A, {
-              heading: a,
+              heading: i,
               children: [
                   (0, l.jsx)("div", {
                       ref: (e) => {
                           (N.current = e),
                               null == e ||
-                                  (R(!j && e.scrollHeight - e.clientHeight > 1),
+                                  (y(!j && e.scrollHeight - e.clientHeight > 1),
                                   e.getBoundingClientRect().height > 57.75 && C(!0));
                       },
-                      className: i()(m.mA, j && m.Em),
+                      className: a()(m.mA, j && m.Em),
                       onBlur: function (e) {
                           null == N.current ||
                               N.current.contains(e.relatedTarget) ||
@@ -56,7 +56,7 @@ let A = r.memo(function (e) {
                           isHoveringOrFocusing: S,
                       }),
                   }),
-                  (y || j) &&
+                  (R || j) &&
                       (0, l.jsx)("div", {
                           className: m.HV,
                           children: (0, l.jsx)(s.Q, {
@@ -69,7 +69,7 @@ let A = r.memo(function (e) {
                                       (0, c.openUserProfileModal)({
                                           ...p,
                                           userId: t,
-                                          hideRestrictedProfile: T,
+                                          hideRestrictedProfile: g,
                                           sourceAnalyticsLocations: v,
                                       });
                               },

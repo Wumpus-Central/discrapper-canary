@@ -1,9 +1,9 @@
 "use strict";
-n.d(t, { H: () => s, _: () => u });
+n.d(t, { H: () => a, _: () => d });
 var i = n(423034);
 n(321073);
 var r = n(143236);
-class s {
+class a {
     emitter = new r.EventEmitter();
     options;
     _savedDispatches = {};
@@ -93,20 +93,20 @@ class s {
         return this.unsubscribe(`${e}_${t}`, n);
     }
 }
-var a = n(626584),
-    o = n(652215);
-let l = new a.A("ComponentDispatchUtils"),
-    u = new s({
+var s = n(626584),
+    l = n(652215);
+let o = new s.A("ComponentDispatchUtils"),
+    d = new a({
         maxListeners: 100,
         enableDevtools: !1,
         logger: {
             warn: function (e) {
                 for (var t = arguments.length, n = Array(t > 1 ? t - 1 : 0), i = 1; i < t; i++) n[i - 1] = arguments[i];
-                return l.warn(e, ...n);
+                return o.warn(e, ...n);
             },
         },
         devtoolsReporter: function (e, t, n) {
-            let r = Object.values(o.zOV).find((t) => e.startsWith(t)) ?? e;
+            let r = Object.values(l.zOV).find((t) => e.startsWith(t)) ?? e;
             i.HF({
                 type: "ComponentDispatch",
                 description: r,

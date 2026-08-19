@@ -1,15 +1,15 @@
 "use strict";
 let i, r;
-n.d(t, { A: () => y }), n(321073);
-var s,
-    a = n(735438),
-    o = n.n(a),
-    l = n(835245),
-    u = n(17928),
+n.d(t, { A: () => N }), n(321073);
+var a,
+    s = n(435558),
+    l = n.n(s),
+    o = n(132500),
+    d = n(17928),
     c = n(506774),
-    d = n(228366),
+    u = n(228366),
     _ = n(315069);
-class h extends _.A {
+class E extends _.A {
     id;
     widgets;
     version;
@@ -17,7 +17,7 @@ class h extends _.A {
         super(), (this.version = Number(e.version) ?? 0), (this.id = e.id || ""), (this.widgets = e.widgets || []);
     }
 }
-class f extends _.A {
+class A extends _.A {
     id;
     layoutId;
     type;
@@ -35,14 +35,14 @@ class f extends _.A {
             n = e.size ?? {};
         let i = "number" == typeof t.top ? t.top : void 0,
             r = "number" == typeof t.bottom ? t.bottom : void 0,
-            s = "number" == typeof t.left ? t.left : void 0,
-            a = "number" == typeof t.right ? t.right : void 0;
-        const o = null != i && null != r && "auto" === n.height;
-        o || (null != r ? (i = void 0) : (r = void 0)),
-            (null != s && null != a && "auto" === n.width) || (null != a ? (s = void 0) : (a = void 0)),
+            a = "number" == typeof t.left ? t.left : void 0,
+            s = "number" == typeof t.right ? t.right : void 0;
+        const l = null != i && null != r && "auto" === n.height;
+        l || (null != r ? (i = void 0) : (r = void 0)),
+            (null != a && null != s && "auto" === n.width) || (null != s ? (a = void 0) : (s = void 0)),
             null == i && null == r && (i = 0),
-            null == s && null == a && (s = 0),
-            (this.anchor = { top: i, left: s, bottom: r, right: a }),
+            null == a && null == s && (a = 0),
+            (this.anchor = { top: i, left: a, bottom: r, right: s }),
             (this.size = { width: 0, height: 0, ...e.size }),
             (this.minSize = { width: void 0, height: void 0, ...e.minSize }),
             (this.pinned = !!e.pinned),
@@ -52,22 +52,22 @@ class f extends _.A {
             null != e.showExtrasHintTimestamp && (this.showExtrasHintTimestamp = e.showExtrasHintTimestamp);
     }
 }
-var p = n(5463),
-    E =
-        (((s = {}).DEBUG = "DEBUG"),
-        (s.REQUIRED = "REQUIRED"),
-        (s.OPTIONAL = "OPTIONAL"),
-        (s.OPTIONAL_DEFAULT = "OPTIONAL_DEFAULT"),
-        s),
-    m = n(652215);
+var h = n(5463),
+    I =
+        (((a = {}).DEBUG = "DEBUG"),
+        (a.REQUIRED = "REQUIRED"),
+        (a.OPTIONAL = "OPTIONAL"),
+        (a.OPTIONAL_DEFAULT = "OPTIONAL_DEFAULT"),
+        a),
+    f = n(652215);
 n(644434);
-let g = "migrated",
-    A = {
-        [m.uss.GUILDS]: {
+let p = "migrated",
+    T = {
+        [f.uss.GUILDS]: {
             resizeX: !1,
             resizeY: !0,
             dragAnywhere: !1,
-            layoutPolicy: E.OPTIONAL,
+            layoutPolicy: I.OPTIONAL,
             defaultSettings: {
                 anchor: { left: 0.175, top: 0.05, bottom: void 0, right: void 0 },
                 size: { width: "auto", height: 0.65 },
@@ -76,11 +76,11 @@ let g = "migrated",
             },
             version: 0,
         },
-        [m.uss.TEXT]: {
+        [f.uss.TEXT]: {
             resizeX: !0,
             resizeY: !0,
             dragAnywhere: !1,
-            layoutPolicy: E.OPTIONAL,
+            layoutPolicy: I.OPTIONAL,
             defaultSettings: {
                 anchor: { left: 0.26, top: 0.05, bottom: void 0, right: void 0 },
                 size: { width: 0.565, height: 0.65 },
@@ -89,11 +89,11 @@ let g = "migrated",
             },
             version: 0,
         },
-        [m.uss.VOICE]: {
+        [f.uss.VOICE]: {
             resizeX: !1,
             resizeY: !1,
             dragAnywhere: !0,
-            layoutPolicy: E.REQUIRED,
+            layoutPolicy: I.REQUIRED,
             defaultSettings: {
                 anchor: { left: 0.011, top: 0.011, bottom: void 0, right: void 0 },
                 size: { width: "auto", height: "auto" },
@@ -102,11 +102,11 @@ let g = "migrated",
             },
             version: 0,
         },
-        [m.uss.GUILDS_TEXT]: {
+        [f.uss.GUILDS_TEXT]: {
             resizeX: !0,
             resizeY: !0,
             dragAnywhere: !1,
-            layoutPolicy: E.OPTIONAL_DEFAULT,
+            layoutPolicy: I.OPTIONAL_DEFAULT,
             defaultSettings: {
                 anchor: { left: void 0, top: 0.05, bottom: void 0, right: 0.25 },
                 size: { width: 0.6, height: 0.45 },
@@ -115,11 +115,11 @@ let g = "migrated",
             },
             version: 0,
         },
-        [m.uss.VOICE_V3]: {
+        [f.uss.VOICE_V3]: {
             resizeX: !1,
             resizeY: !1,
             dragAnywhere: !0,
-            layoutPolicy: E.REQUIRED,
+            layoutPolicy: I.REQUIRED,
             defaultSettings: {
                 anchor: { left: 0.01, top: 0.35, bottom: void 0, right: void 0 },
                 size: { width: "auto", height: "auto" },
@@ -128,11 +128,11 @@ let g = "migrated",
             },
             version: 4,
         },
-        [m.uss.VIDEO]: {
+        [f.uss.VIDEO]: {
             resizeX: !0,
             resizeY: !0,
             dragAnywhere: !0,
-            layoutPolicy: E.OPTIONAL_DEFAULT,
+            layoutPolicy: I.OPTIONAL_DEFAULT,
             defaultSettings: {
                 anchor: { left: 0.01, top: void 0, bottom: 0.02, right: void 0 },
                 size: { fixed: !0, width: 408, height: 128 },
@@ -141,11 +141,11 @@ let g = "migrated",
             },
             version: 4,
         },
-        [m.uss.GO_LIVE]: {
+        [f.uss.GO_LIVE]: {
             resizeX: !0,
             resizeY: !0,
             dragAnywhere: !0,
-            layoutPolicy: E.OPTIONAL_DEFAULT,
+            layoutPolicy: I.OPTIONAL_DEFAULT,
             defaultSettings: {
                 anchor: { left: void 0, top: void 0, bottom: 0.02, right: 0.01 },
                 size: { fixed: !0, width: 256, height: 144 },
@@ -154,11 +154,11 @@ let g = "migrated",
             },
             version: 4,
         },
-        [m.uss.QUICK_ACTIONS]: {
+        [f.uss.QUICK_ACTIONS]: {
             resizeX: !1,
             resizeY: !1,
             dragAnywhere: !0,
-            layoutPolicy: E.REQUIRED,
+            layoutPolicy: I.REQUIRED,
             defaultSettings: {
                 anchor: { left: 0.34, top: 0.02, bottom: void 0, right: void 0 },
                 size: { width: "auto", height: "auto" },
@@ -167,11 +167,11 @@ let g = "migrated",
             },
             version: 4,
         },
-        [m.uss.NOTIFICATIONS]: {
+        [f.uss.NOTIFICATIONS]: {
             resizeX: !1,
             resizeY: !1,
             dragAnywhere: !0,
-            layoutPolicy: E.REQUIRED,
+            layoutPolicy: I.REQUIRED,
             defaultSettings: {
                 anchor: { left: 0.01, top: 0.02, bottom: void 0, right: void 0 },
                 size: { height: "auto", width: "auto" },
@@ -180,11 +180,11 @@ let g = "migrated",
             },
             version: 4,
         },
-        [m.uss.ACTIVITY]: {
+        [f.uss.ACTIVITY]: {
             resizeX: !1,
             resizeY: !1,
             dragAnywhere: !0,
-            layoutPolicy: E.REQUIRED,
+            layoutPolicy: I.REQUIRED,
             defaultSettings: {
                 anchor: { left: void 0, top: 0.35, bottom: void 0, right: 0.01 },
                 size: { height: "auto", width: "auto" },
@@ -193,11 +193,11 @@ let g = "migrated",
             },
             version: 4,
         },
-        [m.uss.TEXT_CHAT_V3]: {
+        [f.uss.TEXT_CHAT_V3]: {
             resizeX: !0,
             resizeY: !0,
             dragAnywhere: !1,
-            layoutPolicy: E.REQUIRED,
+            layoutPolicy: I.REQUIRED,
             defaultSettings: {
                 anchor: { left: void 0, top: 0.14, bottom: void 0, right: 0.26 },
                 size: { fixed: !0, height: 372, width: 500 },
@@ -206,12 +206,12 @@ let g = "migrated",
             },
             version: 4,
         },
-        [m.uss.FRIENDS]: {
+        [f.uss.FRIENDS]: {
             resizeX: !1,
             resizeY: !0,
             dragAnywhere: !0,
             constrainAutoSizeToExplicitResizeEvents: !0,
-            layoutPolicy: E.REQUIRED,
+            layoutPolicy: I.REQUIRED,
             defaultSettings: {
                 anchor: { left: void 0, top: 0.14, bottom: 0.3, right: 0.01 },
                 size: { fixed: !0, height: "auto", width: 350 },
@@ -220,11 +220,11 @@ let g = "migrated",
             },
             version: 4,
         },
-        [m.uss.CLICK_ZONE_DEBUG]: {
+        [f.uss.CLICK_ZONE_DEBUG]: {
             resizeX: !0,
             resizeY: !0,
             dragAnywhere: !0,
-            layoutPolicy: E.DEBUG,
+            layoutPolicy: I.DEBUG,
             defaultSettings: {
                 anchor: { left: void 0, top: 0.35, bottom: void 0, right: 0.35 },
                 size: { height: "auto", width: "auto" },
@@ -233,11 +233,11 @@ let g = "migrated",
             },
             version: 4,
         },
-        [m.uss.PERFORMANCE_DEBUG]: {
+        [f.uss.PERFORMANCE_DEBUG]: {
             resizeX: !1,
             resizeY: !1,
             dragAnywhere: !0,
-            layoutPolicy: E.DEBUG,
+            layoutPolicy: I.DEBUG,
             defaultSettings: {
                 anchor: { left: void 0, top: 0.1, bottom: void 0, right: 0.1 },
                 size: { height: "auto", width: "auto" },
@@ -247,17 +247,17 @@ let g = "migrated",
             version: 4,
         },
     };
-function I(e, t) {
+function m(e, t) {
     let n = r[e];
     if (null == n) return !1;
-    let s = i[n.layoutId];
-    return null != s && t(n, s);
+    let a = i[n.layoutId];
+    return null != a && t(n, a);
 }
-function T(e) {
-    let t = A[e];
+function g(e) {
+    let t = T[e];
     if (null != t) return t.defaultSettings;
 }
-class S extends u.Ay.PersistedStore {
+class S extends d.Ay.PersistedStore {
     static displayName = "LayoutStore";
     static persistKey = "LayoutStore";
     static migrations = [
@@ -267,38 +267,38 @@ class S extends u.Ay.PersistedStore {
                 let i = [],
                     r = e.map((e) => {
                         let r = null != t ? t[e] : null,
-                            s = null != n ? n[e] : null,
-                            a = {
+                            a = null != n ? n[e] : null,
+                            s = {
                                 id: e,
-                                layoutId: g,
+                                layoutId: p,
                                 type: e,
                                 anchor: r || { top: -1, left: -1, bottom: null, right: null },
-                                size: s || { width: -1, height: -1 },
+                                size: a || { width: -1, height: -1 },
                                 pinned: !0,
                                 zIndex: 0,
                             };
-                        return i.push([a.id, a]), a.id;
+                        return i.push([s.id, s]), s.id;
                     });
-                return { layouts: [[g, { id: g, widgets: r }]], widgets: i };
+                return { layouts: [[p, { id: p, widgets: r }]], widgets: i };
             }
             return { layouts: [], widgets: [] };
         },
         (e) => {
             let { layouts: t, widgets: n } = e,
-                i = new Set(Object.keys(m.uss)),
+                i = new Set(Object.keys(f.uss)),
                 r = Array.from(n).filter((e) => {
                     let [t] = e;
                     return !i.has(t);
                 }),
-                s = Array.from(t).filter((e) => {
+                a = Array.from(t).filter((e) => {
                     let [t] = e;
-                    return t !== g;
+                    return t !== p;
                 });
             return (
-                s.forEach((e) => {
+                a.forEach((e) => {
                     let [t, n] = e,
                         i = null,
-                        s = null;
+                        a = null;
                     if (
                         (n.widgets.find((e) => {
                             let n = r.find((n) => {
@@ -307,20 +307,20 @@ class S extends u.Ay.PersistedStore {
                             });
                             return (
                                 null != n &&
-                                (null == s && n[1].type === m.uss.VOICE && (s = n[0]),
-                                null == i && n[1].type === m.uss.TEXT && (i = n[1].pinned),
-                                (null != i && null != s) || void 0)
+                                (null == a && n[1].type === f.uss.VOICE && (a = n[0]),
+                                null == i && n[1].type === f.uss.TEXT && (i = n[1].pinned),
+                                (null != i && null != a) || void 0)
                             );
                         }),
-                        i || null == s)
+                        i || null == a)
                     )
                         return;
-                    let a = (0, l.A)();
-                    n.widgets = [s, a];
-                    let o = T(m.uss.GUILDS_TEXT);
-                    null != o && r.push([a, { ...o, type: m.uss.GUILDS_TEXT, id: a, layoutId: t, zIndex: 2 }]);
+                    let s = (0, o.A)();
+                    n.widgets = [a, s];
+                    let l = g(f.uss.GUILDS_TEXT);
+                    null != l && r.push([s, { ...l, type: f.uss.GUILDS_TEXT, id: s, layoutId: t, zIndex: 2 }]);
                 }),
-                { widgets: r, layouts: s }
+                { widgets: r, layouts: a }
             );
         },
         (e) => {
@@ -349,40 +349,40 @@ class S extends u.Ay.PersistedStore {
     initialize(e) {
         if (null != e && null != e.layouts && null != e.widgets) {
             var t, n;
-            let s, a;
+            let a, s;
             (t = e.layouts),
-                (s = {}),
-                o().forEach(t, (e, t) => {
-                    s[t] = new h(e);
-                }),
-                (i = s),
-                (n = e.widgets),
                 (a = {}),
-                o().forEach(n, (e, t) => {
-                    a[t] = new f(e);
+                l().forEach(t, (e, t) => {
+                    a[t] = new E(e);
                 }),
-                (r = a);
+                (i = a),
+                (n = e.widgets),
+                (s = {}),
+                l().forEach(n, (e, t) => {
+                    s[t] = new A(e);
+                }),
+                (r = s);
         } else (i = {}), (r = {});
-        let s = !1,
-            a = [];
-        o().forEach(A, (e, t) => {
-            e.layoutPolicy === E.REQUIRED && a.push(t);
+        let a = !1,
+            s = [];
+        l().forEach(T, (e, t) => {
+            e.layoutPolicy === I.REQUIRED && s.push(t);
         }),
-            o().forEach(i, (e, t) => {
+            l().forEach(i, (e, t) => {
                 let n = this.getWidgetsForLayout(t),
-                    o = !1;
-                for (let i of a) {
-                    let a = n.find((e) => e.type === i);
-                    if (null != a || A[i].version !== e.version) continue;
-                    o = s = !0;
-                    let u = (0, l.A)(),
-                        c = T(i);
+                    l = !1;
+                for (let i of s) {
+                    let s = n.find((e) => e.type === i);
+                    if (null != s || T[i].version !== e.version) continue;
+                    l = a = !0;
+                    let d = (0, o.A)(),
+                        c = g(i);
                     if (null == c) return;
-                    (a = new f({ ...c, type: i, id: u, layoutId: t, zIndex: n.length })),
-                        n.push(a),
-                        (r = { ...r, [u]: a });
+                    (s = new A({ ...c, type: i, id: d, layoutId: t, zIndex: n.length })),
+                        n.push(s),
+                        (r = { ...r, [d]: s });
                 }
-                o &&
+                l &&
                     ((e = e.set(
                         "widgets",
                         n.map((e) => {
@@ -392,11 +392,11 @@ class S extends u.Ay.PersistedStore {
                     )),
                     (i = { ...i, [t]: e }));
             }),
-            o().forEach(r, (e, t) => {
+            l().forEach(r, (e, t) => {
                 let n = i[e.layoutId];
-                (null == n || 0 > n.widgets.indexOf(t)) && ((r = { ...r }), delete r[t], (s = !0));
+                (null == n || 0 > n.widgets.indexOf(t)) && ((r = { ...r }), delete r[t], (a = !0));
             }),
-            s && (this.persist(), this.emitChange());
+            a && (this.persist(), this.emitChange());
     }
     getState() {
         return { layouts: i, widgets: r };
@@ -432,16 +432,16 @@ class S extends u.Ay.PersistedStore {
                     e.pinned || n.push(e.type);
                     return;
                 }
-                t.layoutPolicy === E.REQUIRED || e.pinned || n.push(e.type);
+                t.layoutPolicy === I.REQUIRED || e.pinned || n.push(e.type);
             }),
             n
         );
     }
     getWidgetConfig(e) {
-        return A[e];
+        return T[e];
     }
     getWidgetDefaultSettings(e) {
-        return T(e);
+        return g(e);
     }
     getWidgetType(e) {
         let t = r[e];
@@ -454,20 +454,20 @@ class S extends u.Ay.PersistedStore {
         return Object.values(r).filter((n) => n.type === e && n.layoutId === t);
     }
     getRegisteredWidgets() {
-        return A;
+        return T;
     }
     getDefaultLayout(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
             n = [];
         return (
-            o().forEach(this.getRegisteredWidgets(), (i, r) => {
+            l().forEach(this.getRegisteredWidgets(), (i, r) => {
                 switch (i.layoutPolicy) {
-                    case E.REQUIRED:
-                    case E.OPTIONAL_DEFAULT:
+                    case I.REQUIRED:
+                    case I.OPTIONAL_DEFAULT:
                         if ((i.version ?? 0) === t) {
-                            let t = T(r);
+                            let t = g(r);
                             if (null == t) return;
-                            n.push({ ...t, type: r, id: (0, l.A)(), layoutId: e });
+                            n.push({ ...t, type: r, id: (0, o.A)(), layoutId: e });
                         }
                 }
             }),
@@ -475,14 +475,14 @@ class S extends u.Ay.PersistedStore {
         );
     }
 }
-let y = new S(d.h, {
+let N = new S(u.h, {
     LAYOUT_CREATE: function (e) {
-        let { layoutId: t, widgets: n, version: s, defaultResolution: a } = e;
-        if (null != i[t] && i[t].version === s) return !1;
-        let o = [];
+        let { layoutId: t, widgets: n, version: a, defaultResolution: s } = e;
+        if (null != i[t] && i[t].version === a) return !1;
+        let l = [];
         n.forEach((e, t) => {
             let n = (function (e) {
-                    let t = i[g];
+                    let t = i[p];
                     if (null != t)
                         for (let n of t.widgets) {
                             let t = r[n];
@@ -490,50 +490,50 @@ let y = new S(d.h, {
                         }
                     return null;
                 })(e.type),
-                s = { ...e, zIndex: t };
-            "" === s.id && (s.id = (0, l.A)()),
+                a = { ...e, zIndex: t };
+            "" === a.id && (a.id = (0, o.A)()),
                 null != n &&
-                    ((s.pinned = n.pinned),
-                    -1 !== n.anchor.left && (s.anchor = (0, p.NO)(n.anchor, a)),
-                    -1 !== n.size.width && (s.size = (0, p.R9)(n.size, a))),
-                (r = { ...r, [s.id]: new f(s) }),
-                o.push(s.id);
+                    ((a.pinned = n.pinned),
+                    -1 !== n.anchor.left && (a.anchor = (0, h.NO)(n.anchor, s)),
+                    -1 !== n.size.width && (a.size = (0, h.R9)(n.size, s))),
+                (r = { ...r, [a.id]: new A(a) }),
+                l.push(a.id);
         }),
-            (i = { ...i, [t]: new h({ id: t, widgets: o, version: s }) });
+            (i = { ...i, [t]: new E({ id: t, widgets: l, version: a }) });
     },
     LAYOUT_SET_PINNED: function (e) {
         let { widgetId: t, pinned: n } = e;
-        return I(t, (e, t) => {
-            var i, s;
-            (i = e), (s = n), (r = { ...r, [i.id]: i.set("pinned", s ?? !i.pinned) });
+        return m(t, (e, t) => {
+            var i, a;
+            (i = e), (a = n), (r = { ...r, [i.id]: i.set("pinned", a ?? !i.pinned) });
         });
     },
     LAYOUT_UPDATE_WIDGET: function (e) {
-        let { widgetId: t, anchor: n, size: i, opacity: s, minSize: a, defaultSize: o } = e;
-        return I(t, (e, t) =>
+        let { widgetId: t, anchor: n, size: i, opacity: a, minSize: s, defaultSize: l } = e;
+        return m(t, (e, t) =>
             (function (e) {
-                let { widget: t, anchor: n, size: i, opacity: s, minSize: a, defaultSize: o } = e;
+                let { widget: t, anchor: n, size: i, opacity: a, minSize: s, defaultSize: l } = e;
                 if (
                     ((r = {
                         ...r,
                         [t.id]: t.merge({
                             anchor: n ?? t.anchor,
                             size: i ?? t.size,
-                            opacity: s ?? t.opacity,
-                            minSize: a ?? t.minSize,
+                            opacity: a ?? t.opacity,
+                            minSize: s ?? t.minSize,
                         }),
                     }),
-                    null != o)
+                    null != l)
                 ) {
-                    let e = A[t.type];
-                    null != e && (e.defaultSettings.size = { fixed: e.defaultSettings.size.fixed, ...o });
+                    let e = T[t.type];
+                    null != e && (e.defaultSettings.size = { fixed: e.defaultSettings.size.fixed, ...l });
                 }
-            })({ widget: e, anchor: n, size: i, opacity: s, minSize: a, defaultSize: o }),
+            })({ widget: e, anchor: n, size: i, opacity: a, minSize: s, defaultSize: l }),
         );
     },
     LAYOUT_SET_TOP_WIDGET: function (e) {
         let { widgetId: t } = e;
-        return I(t, (e, t) =>
+        return m(t, (e, t) =>
             (function (e, t) {
                 let n,
                     i =
@@ -544,12 +544,12 @@ let y = new S(d.h, {
                         }),
                         n);
                 i.sort((e, t) => e.zIndex - t.zIndex);
-                let s = i.findIndex((e) => e.id === t);
-                if (s === i.length - 1) return !1;
-                i.push(i.splice(s, 1)[0]);
+                let a = i.findIndex((e) => e.id === t);
+                if (a === i.length - 1) return !1;
+                i.push(i.splice(a, 1)[0]);
                 for (let e = 0; e < i.length; e++) {
-                    var a, o;
-                    (a = i[e]), (o = e), (r = { ...r, [a.id]: a.set("zIndex", o) });
+                    var s, l;
+                    (s = i[e]), (l = e), (r = { ...r, [s.id]: s.set("zIndex", l) });
                 }
                 return !0;
             })(t, e.id),
@@ -559,8 +559,8 @@ let y = new S(d.h, {
         let { widgetId: t } = e;
         (r = { ...r }),
             delete r[t],
-            o().forEach(i, (e, n) => {
-                if (n === g) return;
+            l().forEach(i, (e, n) => {
+                if (n === p) return;
                 let r = e.widgets.indexOf(t);
                 if (r >= 0) {
                     let t = [...e.widgets];
@@ -580,29 +580,29 @@ let y = new S(d.h, {
     LAYOUT_CREATE_WIDGETS: function (e) {
         let { widgetConfigs: t } = e;
         t.forEach((e) => {
-            let t = new f(e),
+            let t = new A(e),
                 n = i[t.layoutId];
             if (null == n) throw Error("LayoutStore - handleAddWidget: Invalid layoutId");
             (t = t.set("zIndex", n.widgets.length)), (r = { ...r, [t.id]: t });
-            let s = [...n.widgets, t.id];
-            i = { ...i, [n.id]: n.set("widgets", s) };
+            let a = [...n.widgets, t.id];
+            i = { ...i, [n.id]: n.set("widgets", a) };
         });
     },
     LAYOUT_SET_WIDGET_META: function (e) {
         let { widgetId: t, meta: n } = e;
-        return I(t, (e, t) => {
-            var i, s;
-            (i = e), (s = n), (r = { ...r, [i.id]: i.merge({ meta: { ...(i.meta ?? {}), ...s } }) });
+        return m(t, (e, t) => {
+            var i, a;
+            (i = e), (a = n), (r = { ...r, [i.id]: i.merge({ meta: { ...(i.meta ?? {}), ...a } }) });
         });
     },
     LAYOUT_SHOW_OVERLAY_EXTRAS_HINT: function (e) {
         let { widgetId: t } = e;
-        return I(t, (e, t) => {
+        return m(t, (e, t) => {
             r = { ...r, [e.id]: e.merge({ showExtrasHintTimestamp: Date.now() }) };
         });
     },
     LAYOUT_SET_DEFAULT_CONFIG: function (e) {
         let { widgetType: t, defaultConfig: n } = e;
-        A[t] = { ...A[t], ...n };
+        T[t] = { ...T[t], ...n };
     },
 });

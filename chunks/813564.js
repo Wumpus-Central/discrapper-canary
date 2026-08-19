@@ -6,8 +6,8 @@ n.d(t, {
     Ni: () => J,
     Au: () => Y,
     Ak: () => K,
-    Dv: () => q,
-    un: () => Z,
+    Dv: () => Z,
+    un: () => q,
     fh: () => $,
     Ir: () => W,
     wH: () => H,
@@ -25,7 +25,7 @@ var r = n(702841),
     E = n(435558),
     A = n(636537),
     h = n(793574),
-    I = n(159273),
+    I = n(236285),
     f = n(807348),
     p = n(952818),
     T = n(734057),
@@ -35,7 +35,7 @@ var r = n(702841),
 n(980504);
 var N = n(652215),
     C = n(202541);
-function R(e, t, n, i, r) {
+function O(e, t, n, i, r) {
     let a = T.A.getChannel(g.Ay.getVoiceChannelId()),
         s = a?.getGuildId(),
         l = m.A.getMediaSessionId(),
@@ -60,9 +60,9 @@ function R(e, t, n, i, r) {
         sequence_number: null != r ? r + 1 : null,
     });
 }
-var O = n(17928),
+var R = n(17928),
     L = n(194486);
-class y extends O.Ay.PersistedStore {
+class y extends R.Ay.PersistedStore {
     static displayName = "VoiceChannelEffectsPersistedStore";
     static persistKey = "VoiceChannelEffectsPersistedStore";
     initialize(e) {
@@ -88,7 +88,7 @@ function b(e) {
 var M = n(95701),
     P = n(576705),
     U = n(287809),
-    w = n(428262),
+    w = n(158045),
     G = n(427262),
     x = n(796774),
     k = n(209932),
@@ -132,7 +132,7 @@ function K(e, t, n, i) {
                 }).then(N.FXj, () => {
                     if (s.signal.aborted) return;
                 }),
-                R(i ?? [], n, t, f.ib.DEFAULT, r);
+                O(i ?? [], n, t, f.ib.DEFAULT, r);
         })(t, e, __OVERLAY__, n, i),
         s.h.dispatch({ type: "SOUNDBOARD_TRACK_USAGE", soundId: e.soundId });
 }
@@ -162,7 +162,7 @@ async function $(e) {
                 }).then(N.FXj, () => {
                     if (i.signal.aborted) return;
                 }),
-                    R([h.A.CHANNEL_CALL], n, t, f.ib.ENTRY);
+                    O([h.A.CHANNEL_CALL], n, t, f.ib.ENTRY);
             })(s, a, __OVERLAY__);
     }
 }
@@ -176,7 +176,7 @@ function z(e) {
     }
     return i;
 }
-function q(e, t) {
+function Z(e, t) {
     (0, c.TG)(
         e,
         (n) => {
@@ -185,7 +185,7 @@ function q(e, t) {
         c.Sb.INFREQUENT_USER_ACTION,
     );
 }
-function Z(e, t, n) {
+function q(e, t, n) {
     (0, c.TG)(
         e,
         (i) => {

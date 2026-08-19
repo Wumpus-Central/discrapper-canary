@@ -1,4 +1,4 @@
-n.d(t, { A: () => T }), n(321073);
+n.d(t, { A: () => b }), n(321073);
 var i = n(477900),
     l = n(582128),
     a = n(562708),
@@ -8,70 +8,70 @@ var i = n(477900),
     c = n(933958),
     d = n(782091),
     u = n(139286),
-    h = n(313961),
+    h = n(198052),
     p = n(333204),
     m = n(826673),
-    A = n(855687),
-    f = n(267102),
+    f = n(855687),
+    A = n(267102),
     x = n(511205),
     g = n(530804),
     C = n(71393),
     y = n(576705),
     j = n(686502),
-    v = n(175203),
-    E = n(263854),
+    I = n(175203),
+    v = n(263854),
     N = n(652215),
-    I = n(310554);
-function T(e) {
+    E = n(310554);
+function b(e) {
     let {
             participants: t,
             onClick: n,
-            onDoubleClick: T,
-            onContextMenu: b,
-            channel: _,
+            onDoubleClick: b,
+            onContextMenu: _,
+            channel: T,
             className: R,
             inCall: S,
-            totalNumberOfParticipants: P,
-            popoutType: L,
+            totalNumberOfParticipants: L,
+            popoutType: O,
         } = e,
-        O = (0, f.Us)() === N.BRT.POPOUT,
-        w = (0, r.bG)([C.A], () => C.A.getGuild(_.guild_id), [_.guild_id]),
-        { dismissedActivityEntryPointTileChannel: M } = (0, E.P)(),
-        D = (0, r.bG)([h.A], () => h.A.getUserParticipantCount(_.id), [_]),
-        U = (0, g.vp)(_.id, t),
-        k = l.useCallback(() => {
+        P = (0, A.Us)() === N.BRT.POPOUT,
+        M = (0, r.bG)([C.A], () => C.A.getGuild(T.guild_id), [T.guild_id]),
+        { dismissedActivityEntryPointTileChannel: w } = (0, v.P)(),
+        D = (0, r.bG)([h.A], () => h.A.getUserParticipantCount(T.id), [T]),
+        U = (0, g.vp)(T.id, t),
+        V = l.useCallback(() => {
             (0, s.r)(() => {
-                E.P.setState({ dismissedActivityEntryPointTileChannel: _.id });
+                v.P.setState({ dismissedActivityEntryPointTileChannel: T.id });
             });
-        }, [_.id]);
+        }, [T.id]);
     l.useEffect(() => {
-        null != M &&
-            _.id !== M &&
+        null != w &&
+            T.id !== w &&
             (0, s.r)(() => {
-                E.P.setState({ dismissedActivityEntryPointTileChannel: null });
+                v.P.setState({ dismissedActivityEntryPointTileChannel: null });
             });
-    }, [_.id, M]);
-    let V = (0, r.bG)([y.A], () => _.isPrivate() || (0, A.K)(y.A, w, _), [w, _]),
-        G = w?.afkChannelId === _.id,
-        B = _.userLimit <= 0 || _.userLimit > 1,
-        H = (0, r.bG)([c.Ay], () => c.Ay.getEmbeddedActivitiesForChannel(_.id).length <= 0),
-        F = (0, m.HX)(o.M.VC_TILE_ACTIVITIES_ENTRY_POINT),
-        z = (0, d.et)(_.id) !== d.xy.CAN_LAUNCH,
-        W = null != M && M === _.id,
-        Y = U.map(
+    }, [T.id, w]);
+    let k = (0, r.bG)([y.A], () => T.isPrivate() || (0, f.K)(y.A, M, T), [M, T]),
+        G = M?.afkChannelId === T.id,
+        B = T.userLimit <= 0 || T.userLimit > 1,
+        F = (0, r.bG)([c.Ay], () => c.Ay.getEmbeddedActivitiesForChannel(T.id).length <= 0),
+        z = (0, m.HX)(o.M.VC_TILE_ACTIVITIES_ENTRY_POINT),
+        H = (0, d.et)(T.id) !== d.xy.CAN_LAUNCH,
+        W = null != w && w === T.id,
+        $ = U.map(
             (e) => (t) =>
                 (0, i.jsx)(
-                    v.Ay,
+                    I.Ay,
                     {
                         participant: e,
-                        channel: _,
-                        className: I.V,
+                        channel: T,
+                        className: E.V,
                         onClick: n,
-                        onDoubleClick: T,
-                        onContextMenu: b,
+                        onDoubleClick: b,
+                        onContextMenu: _,
                         inCall: S,
                         width: t,
-                        popoutType: L,
+                        popoutType: O,
                     },
                     e.id,
                 ),
@@ -80,42 +80,42 @@ function T(e) {
         {
             type: a.ImpressionTypes.VIEW,
             name: a.ImpressionNames.CHANNEL_CALL_VIDEO_GRID_VIEW,
-            properties: { total_participants: P, can_invite: V, is_afk_channel: G, channel_user_limit: _.userLimit },
+            properties: { total_participants: L, can_invite: k, is_afk_channel: G, channel_user_limit: T.userLimit },
         },
         { trackOnInitialLoad: !0 },
         [],
     );
-    let K = H && !z,
-        [X, $] = (0, p._)();
-    null != w &&
+    let Y = F && !H,
+        [K, q] = (0, p._)();
+    null != M &&
         !G &&
-        (X
-            ? Y.push((e) => (0, i.jsx)(p.V, { width: e, handleClose: $ }, "clips-video-call-tile"))
-            : D >= 2 && K && !F && !W
-              ? Y.push((e) =>
+        (K
+            ? $.push((e) => (0, i.jsx)(p.V, { width: e, handleClose: q }, "clips-video-call-tile"))
+            : D >= 2 && Y && !z && !W
+              ? $.push((e) =>
                     (0, i.jsx)(j.y, {
-                        channel: _,
-                        guild: w,
+                        channel: T,
+                        guild: M,
                         width: e,
-                        inPopout: O,
-                        handleClose: k,
+                        inPopout: P,
+                        handleClose: V,
                         userParticipantCount: D,
                     }),
                 )
               : B &&
                 1 === D &&
-                V &&
-                Y.push((e) =>
+                k &&
+                $.push((e) =>
                     (0, i.jsx)(j.y, {
-                        channel: _,
-                        guild: w,
+                        channel: T,
+                        guild: M,
                         width: e,
-                        inPopout: O,
-                        handleClose: k,
+                        inPopout: P,
+                        handleClose: V,
                         userParticipantCount: D,
-                        activitiesEnabled: K,
+                        activitiesEnabled: Y,
                     }),
                 ));
-    let Z = l.useCallback((e) => U[e]?.id ?? "empty-tile", [U]);
-    return (0, i.jsx)(x.A, { className: R, keyExtractor: Z, paddingTop: 64, paddingBottom: 64, children: Y });
+    let X = l.useCallback((e) => U[e]?.id ?? "empty-tile", [U]);
+    return (0, i.jsx)(x.A, { className: R, keyExtractor: X, paddingTop: 64, paddingBottom: 64, children: $ });
 }

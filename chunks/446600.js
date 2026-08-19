@@ -2,62 +2,62 @@
 n.d(t, { A: () => _ });
 var i = n(17928),
     r = n(228366),
-    s = n(988794);
-let a = {},
-    o = {};
-function l(e, t) {
-    let n = { ...(a[e] ?? {}) };
+    a = n(988794);
+let s = {},
+    l = {};
+function o(e, t) {
+    let n = { ...(s[e] ?? {}) };
     t?.forEach((e) => {
-        (o[e.channel_id] = e), (n[e.channel_id] = e);
+        (l[e.channel_id] = e), (n[e.channel_id] = e);
     }),
-        (a[e] = n);
+        (s[e] = n);
 }
-function u(e) {
+function d(e) {
     let { instance: t } = e;
-    l(t.guild_id, [t]);
+    o(t.guild_id, [t]);
 }
 function c(e, t) {
-    if ((delete o[t], null == e)) return;
-    let n = { ...(a[e] ?? {}) };
-    delete n[t], (a[e] = n);
+    if ((delete l[t], null == e)) return;
+    let n = { ...(s[e] ?? {}) };
+    delete n[t], (s[e] = n);
 }
-class d extends i.Ay.Store {
+class u extends i.Ay.Store {
     static displayName = "StageInstanceStore";
     getStageInstanceByChannel(e) {
-        if (null != e) return o[e];
+        if (null != e) return l[e];
     }
     isLive(e) {
         return null != this.getStageInstanceByChannel(e);
     }
     isPublic(e) {
-        return this.getStageInstanceByChannel(e)?.privacy_level === s.dD.PUBLIC;
+        return this.getStageInstanceByChannel(e)?.privacy_level === a.dD.PUBLIC;
     }
     getStageInstancesByGuild(e) {
-        return null == e ? {} : (a[e] ?? {});
+        return null == e ? {} : (s[e] ?? {});
     }
     getAllStageInstances() {
-        return Object.values(o);
+        return Object.values(l);
     }
 }
-let _ = new d(r.h, {
+let _ = new u(r.h, {
     CONNECTION_OPEN: function (e) {
         let { guilds: t } = e;
-        (a = {}), (o = {}), t.forEach((e) => l(e.id, e.stage_instances));
+        (s = {}), (l = {}), t.forEach((e) => o(e.id, e.stage_instances));
     },
     GUILD_CREATE: function (e) {
         let { guild: t } = e;
-        l(t.id, t.stage_instances);
+        o(t.id, t.stage_instances);
     },
     GUILD_DELETE: function (e) {
         let { guild: t } = e,
-            n = a[t.id] ?? {};
-        delete a[t.id],
+            n = s[t.id] ?? {};
+        delete s[t.id],
             Object.keys(n).forEach((e) => {
-                delete o[e];
+                delete l[e];
             });
     },
-    STAGE_INSTANCE_CREATE: u,
-    STAGE_INSTANCE_UPDATE: u,
+    STAGE_INSTANCE_CREATE: d,
+    STAGE_INSTANCE_UPDATE: d,
     STAGE_INSTANCE_DELETE: function (e) {
         let { instance: t } = e;
         c(t.guild_id, t.channel_id);
@@ -67,6 +67,6 @@ let _ = new d(r.h, {
         c(t.guild_id, t.id);
     },
     LOGOUT: function () {
-        (o = {}), (a = {});
+        (l = {}), (s = {});
     },
 });

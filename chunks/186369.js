@@ -1,8 +1,8 @@
 "use strict";
-n.d(t, { S: () => s, b: () => a });
+n.d(t, { S: () => a, b: () => s });
 var i = n(600975),
     r = n(688151);
-let s = (0, i.C)({
+let a = (0, i.C)({
     kind: "guild",
     id: "2025-12_voice_channel_hoisting",
     label: "Voice Channel Hoisting",
@@ -13,6 +13,6 @@ let s = (0, i.C)({
         { id: 2, label: "Waveform icon only", config: { enableWaveformIcon: !0, enableHighlight: !1 } },
     ],
 });
-function a(e, t) {
-    return s.useExperiment({ guildId: e, location: t }, { autoTrackExposure: !1 });
+function s(e, t) {
+    return a.useExperiment({ guildId: e, location: t }, { autoTrackExposure: !1 });
 }

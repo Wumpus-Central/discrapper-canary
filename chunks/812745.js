@@ -1,4 +1,4 @@
-n.d(t, { Ay: () => h, Be: () => f, Nj: () => p, y3: () => x });
+n.d(t, { Ay: () => g, Be: () => p, Nj: () => f, y3: () => x });
 var s,
     r = n(477900),
     i = n(582128),
@@ -9,7 +9,7 @@ var s,
     o = n(637956),
     d = n(352224),
     m = n(646838),
-    f =
+    p =
         (((s = {}).UNKNOWN = "unknown"),
         (s.VISA = "visa"),
         (s.DISCOVER = "discover"),
@@ -41,7 +41,7 @@ var s,
         (s.GIFT_CARD = "gift_card"),
         (s.PIX = "pix"),
         s);
-function p(e) {
+function f(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "dark";
     if ("light" === t) {
         if ("apple" === e) return n(685430);
@@ -99,11 +99,11 @@ function p(e) {
     }
 }
 let x = { SMALL: m.cardIconSmall, MEDIUM: m.cardIconMedium, LARGE: m.cardIconLarge, XLARGE: m.cardIconXLarge };
-class g extends i.PureComponent {
-    static Types = f;
+class v extends i.PureComponent {
+    static Types = p;
     static Sizes = x;
     static getType(e) {
-        return null == e ? "unknown" : f[e.replace(/[^a-z0-9_]/gi, "").toUpperCase()] || "unknown";
+        return null == e ? "unknown" : p[e.replace(/[^a-z0-9_]/gi, "").toUpperCase()] || "unknown";
     }
     static defaultProps = { size: x.SMALL, flipped: !1 };
     render() {
@@ -123,4 +123,4 @@ class g extends i.PureComponent {
                     });
     }
 }
-let h = g;
+let g = v;

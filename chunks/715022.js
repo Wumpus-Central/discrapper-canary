@@ -9,12 +9,12 @@ function r(e, t, n) {
     let i = [...t];
     return t.includes(n) ? (i = t.filter((e) => e.id !== n.id)) : "multiple" === e ? i.push(n) : (i = [n]), i;
 }
-function s() {
+function a() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "listbox",
         t = arguments.length > 1 ? arguments[1] : void 0;
     return `${e}-option-${t}`;
 }
-function a(e) {
+function s(e) {
     if (
         !(function (e) {
             if (0 === e.length) return !1;
@@ -29,4 +29,4 @@ function a(e) {
         0 !== i.options.length && (t.push(...i.options), n.push({ label: i.label, count: i.options.length }));
     return { flatOptions: t, groups: n };
 }
-n.d(t, { ZN: () => s, fI: () => i, qH: () => r, yG: () => a }), n(321073);
+n.d(t, { ZN: () => a, fI: () => i, qH: () => r, yG: () => s }), n(321073);

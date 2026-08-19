@@ -1,4 +1,4 @@
-n.d(t, { h: () => _ });
+n.d(t, { h: () => u });
 var i = n(477900);
 n(582128);
 var l = n(192308),
@@ -8,9 +8,9 @@ var l = n(192308),
     E = n(158045),
     o = n(598653),
     c = n(202541),
-    u = n(652215);
-function _(e) {
-    let { processedCode: t, channelContext: _, customGiftMessage: A, giftInfo: T } = e,
+    _ = n(652215);
+function u(e) {
+    let { processedCode: t, channelContext: u, customGiftMessage: A, giftInfo: T } = e,
         d = !1,
         I = null,
         N = r.default.getCurrentUser(),
@@ -27,7 +27,7 @@ function _(e) {
             return (n) =>
                 (0, i.jsx)(e, {
                     code: t,
-                    channelContext: _,
+                    channelContext: u,
                     customGiftMessage: A,
                     emojiName: T?.emoji?.name,
                     soundId: T?.sound?.id,
@@ -45,7 +45,7 @@ function _(e) {
                     !R &&
                     I.isSubscription &&
                     I?.subscriptionPlan?.premiumSubscriptionType === c.PremiumTypes.TIER_2 &&
-                    a._.dispatch(u.jej.PREMIUM_SUBSCRIPTION_CREATED);
+                    a._.dispatch(_.jej.PREMIUM_SUBSCRIPTION_CREATED);
             },
         },
     );

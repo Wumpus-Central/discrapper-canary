@@ -15,8 +15,8 @@ var n = l(477900),
     i = l(503698),
     s = l.n(i),
     r = l(661531),
-    c = l(602853),
-    o = l(765671),
+    o = l(602853),
+    c = l(765671),
     u = l(602674),
     d = l(696016),
     m = l(335416),
@@ -24,25 +24,25 @@ var n = l(477900),
 let f = new Map(),
     x = a.memo(function (e) {
         let { clipId: t, voiceAudioTracks: i, onMouseDown: x, className: v, alwaysRenderContainer: p = !1 } = e,
-            j = a.useRef(null),
-            { ref: g, width: b, height: C } = (0, o.Ay)(),
+            g = a.useRef(null),
+            { ref: j, width: b, height: C } = (0, c.Ay)(),
             [y, N] = a.useState(null),
-            E = (0, c.r)(r.A.colors.BACKGROUND_MOD_STRONG).hex();
+            E = (0, o.r)(r.A.colors.BACKGROUND_MOD_STRONG).hex();
         return (a.useEffect(
             () => (
-                (j.current = new Worker(new URL("/assets/" + l.u("33197"), l.b))),
+                (g.current = new Worker(new URL("/assets/" + l.u("33197"), l.b))),
                 () => {
-                    j.current?.terminate();
+                    g.current?.terminate();
                 }
             ),
             [],
         ),
         a.useEffect(() => {
-            if (0 === b || 0 === i.length || null == j.current) return;
+            if (0 === b || 0 === i.length || null == g.current) return;
             let e = `${t}-${i.map((e) => e.trackName).join(",")}-${b}`,
                 l = f.get(e);
             if (null != l) return void N(l.waveform);
-            let n = j.current,
+            let n = g.current,
                 a = !1;
             function s(t) {
                 if (a) return;
@@ -78,8 +78,8 @@ let f = new Map(),
             );
         }, [i, t, b]),
         a.useEffect(() => {
-            if (null == g.current || null == y || (b ?? 0) === 0 || (C ?? 0) === 0) return;
-            let e = g.current,
+            if (null == j.current || null == y || (b ?? 0) === 0 || (C ?? 0) === 0) return;
+            let e = j.current,
                 t = e.getContext("2d");
             if (null == t) return;
             let { width: l, height: n } = e,
@@ -91,7 +91,7 @@ let f = new Map(),
                     s = e * a + i;
                 t.fillRect(s, n, a - i, -l);
             }
-        }, [E, b, g, C, y]),
+        }, [E, b, j, C, y]),
         0 === i.length)
             ? p
                 ? (0, n.jsx)("div", { className: s()(h.k, v), onMouseDown: x })
@@ -100,7 +100,7 @@ let f = new Map(),
                   className: s()(h.k, v),
                   children: (0, n.jsx)("canvas", {
                       className: h.s,
-                      ref: g,
+                      ref: j,
                       width: (b ?? 0) * 2,
                       height: (C ?? 0) * 2,
                       onMouseDown: x,

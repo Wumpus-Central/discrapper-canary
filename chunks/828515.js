@@ -12,28 +12,28 @@ var s = n(477900),
     g = n(661531),
     _ = n(775602),
     A = n(607470),
-    S = n(531685),
-    L = n(993408),
-    m = n(812993),
-    p = n(375708),
+    p = n(531685),
+    S = n(993408),
+    L = n(812993),
+    m = n(375708),
     C = n(247875);
 let h = function (e) {
-    let { category: t, daysRemainingText: n = p.t.Io7ozn, className: l } = e;
-    if (!(0, L.HF)(t.unpublishedAt)) return null;
-    let r = (0, L.WU)(t.unpublishedAt),
-        i = r > 1 ? p.intl.formatToPlainString(n, { days: r }) : p.intl.string(p.t.Bc13HF);
-    return (0, s.jsx)(m.Lp, { disableColor: !0, text: i, className: a()(C.q, l) });
+    let { category: t, daysRemainingText: n = m.t.Io7ozn, className: l } = e;
+    if (!(0, S.HF)(t.unpublishedAt)) return null;
+    let r = (0, S.WU)(t.unpublishedAt),
+        i = r > 1 ? m.intl.formatToPlainString(n, { days: r }) : m.intl.string(m.t.Bc13HF);
+    return (0, s.jsx)(L.Lp, { disableColor: !0, text: i, className: a()(C.q, l) });
 };
-var y = n(212407),
-    O = n(346448);
+var O = n(212407),
+    y = n(346448);
 function I(e) {
     let { category: t, onSelect: n } = e,
         r = (0, o.bG)([_.Ay], () => _.Ay.useReducedMotion),
-        L = (0, o.bG)([S.A], () => S.A.isFocused()),
-        { catalogBannerStatic: m, catalogBannerAnimated: C, catalogBannerRive: I } = (0, y.MV)(t),
-        k = l.useRef(null),
-        x = null != I,
-        f =
+        S = (0, o.bG)([p.A], () => p.A.isFocused()),
+        { catalogBannerStatic: L, catalogBannerAnimated: C, catalogBannerRive: I } = (0, O.MV)(t),
+        x = l.useRef(null),
+        f = null != I,
+        k =
             null != n
                 ? {
                       role: "button",
@@ -46,38 +46,38 @@ function I(e) {
                   }
                 : {};
     return (0, s.jsxs)("div", {
-        ref: k,
-        className: a()(O.sW, { [O.by]: x, [O.vk]: null != n }),
-        ...f,
+        ref: x,
+        className: a()(y.sW, { [y.by]: f, [y.vk]: null != n }),
+        ...k,
         children: [
             (0, s.jsx)(i.s, { children: (0, s.jsx)(c.D, { variant: "heading-lg/semibold", children: t.name }) }),
             (0, s.jsx)("div", {
-                className: O.Db,
-                children: x
+                className: y.Db,
+                children: f
                     ? (0, s.jsx)(u._, {
                           src: I,
                           fit: "cover",
                           alignment: "center-left",
                           style: { width: "100%", height: "100%" },
-                          eventTargetRef: k,
+                          eventTargetRef: x,
                           autoplay: !0,
                       })
                     : (0, s.jsxs)(s.Fragment, {
                           children: [
-                              (0, s.jsx)("img", { className: O.ze, src: m, alt: "" }),
+                              (0, s.jsx)("img", { className: y.ze, src: L, alt: "" }),
                               null != C &&
                                   !r &&
-                                  L &&
-                                  (0, s.jsx)(A.A, { src: C, className: O.tr, autoPlay: !0, loop: !0 }),
+                                  S &&
+                                  (0, s.jsx)(A.A, { src: C, className: y.tr, autoPlay: !0, loop: !0 }),
                           ],
                       }),
             }),
-            (0, s.jsx)(h, { category: t, className: O.v0, daysRemainingText: p.t["8gsP5M"] }),
+            (0, s.jsx)(h, { category: t, className: y.v0, daysRemainingText: m.t["8gsP5M"] }),
             null != n &&
                 (0, s.jsx)("div", {
-                    className: O.IG,
+                    className: y.IG,
                     children: (0, s.jsx)(d.m, {
-                        text: p.intl.string(p.t["o1ol+T"]),
+                        text: m.intl.string(m.t["o1ol+T"]),
                         children: (0, s.jsx)(E.u, {
                             "aria-hidden": "true",
                             size: "sm",
@@ -88,4 +88,4 @@ function I(e) {
         ],
     });
 }
-(0, L.$b)(90);
+(0, S.$b)(90);

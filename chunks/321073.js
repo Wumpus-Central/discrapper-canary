@@ -1,8 +1,8 @@
 var n = e(557939),
     o = e(250594),
-    i = e(503199),
-    a = e(496538),
-    u = e(732376);
+    a = e(503199),
+    i = e(496538),
+    p = e(732376);
 n(
     {
         target: "Array",
@@ -23,11 +23,11 @@ n(
     {
         push: function (r) {
             var t = o(this),
-                e = i(t),
+                e = a(t),
                 n = arguments.length;
-            u(e + n);
-            for (var c = 0; c < n; c++) (t[e] = arguments[c]), e++;
-            return a(t, e), e;
+            p(e + n);
+            for (var f = 0; f < n; f++) (t[e] = arguments[f]), e++;
+            return i(t, e), e;
         },
     },
 );

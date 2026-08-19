@@ -1,31 +1,31 @@
 "use strict";
-n.d(t, { A: () => o });
+n.d(t, { A: () => l });
 var i = n(417146);
 function r() {
     let e = i.A.getIsExperimentEligible();
-    return a() && e;
-}
-function s() {
-    let e = i.A.useIsExperimentEligible();
-    return a() && e;
+    return s() && e;
 }
 function a() {
+    let e = i.A.useIsExperimentEligible();
+    return s() && e;
+}
+function s() {
     let e = Date.now();
     return e >= i.A.startTimeMs && e <= i.A.endTimeMs;
 }
-let o = {
+let l = {
     isEligible: r,
     useHolidaySoundpack: function () {
-        return s() && null != i.A.soundpack && null != i.A.soundpackLabel
+        return a() && null != i.A.soundpack && null != i.A.soundpackLabel
             ? { soundpack: i.A.soundpack, soundpackLabel: i.A.soundpackLabel }
             : null;
     },
-    useIsEligible: s,
+    useIsEligible: a,
     getAppSpinnerSources: function () {
-        return a() ? i.A.appSpinnerSources : null;
+        return s() ? i.A.appSpinnerSources : null;
     },
     getLoadingTips: function () {
-        return a() ? i.A.getLoadingTips?.() : null;
+        return s() ? i.A.getLoadingTips?.() : null;
     },
     getHolidaySoundpack: function () {
         return r() && null != i.A.soundpack ? i.A.soundpack : null;

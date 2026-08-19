@@ -1,17 +1,17 @@
 "use strict";
-n.d(t, { A: () => v }), n(323874), n(14289), n(35956);
+n.d(t, { A: () => R }), n(323874), n(14289), n(35956);
 var i = n(477450),
     r = n.n(i),
-    s = n(735438),
-    a = n.n(s),
-    o = n(567243),
-    l = n(403362),
-    u = n(998218),
+    a = n(435558),
+    s = n.n(a),
+    l = n(567243),
+    o = n(403362),
+    d = n(998218),
     c = n(652215);
-let d = /(?:^|\.)(?:discordapp|discord|discordmerch)\.com$/i,
+let u = /(?:^|\.)(?:discordapp|discord|discordmerch)\.com$/i,
     _ = /^.*\.discordapp\.net$/,
-    h = /^.*\.media\.discordapp\.net$/,
-    f = new Set([
+    E = /^.*\.media\.discordapp\.net$/,
+    A = new Set([
         "media.tenor.com",
         "media.tenor.co",
         "c.tenor.com",
@@ -19,86 +19,86 @@ let d = /(?:^|\.)(?:discordapp|discord|discordmerch)\.com$/i,
         "media.giphy.com",
         "i.giphy.com",
     ]),
-    p = r().v4().source,
-    E = RegExp(
-        `(?:(?:(?:[a-z]+:)?//)|www\\.)(?:[^\\s:@]+(?::[^\\s@]*)?@)?(?:localhost|${p}|(?:[a-z\\u00a1-\\uffff0-9-_]+\\.)+(?:(?:[a-z\\u00a1-\\uffff]{2,})))(?::\\d{2,5})?(?:[/?#][^\\s"]*)?`,
+    h = r().v4().source,
+    I = RegExp(
+        `(?:(?:(?:[a-z]+:)?//)|www\\.)(?:[^\\s:@]+(?::[^\\s@]*)?@)?(?:localhost|${h}|(?:[a-z\\u00a1-\\uffff0-9-_]+\\.)+(?:(?:[a-z\\u00a1-\\uffff]{2,})))(?::\\d{2,5})?(?:[/?#][^\\s"]*)?`,
         "ig",
     ),
-    m = new Set([
+    f = new Set([
         window.GLOBAL_ENV.CDN_HOST,
         window.GLOBAL_ENV.INVITE_HOST,
         window.GLOBAL_ENV.GIFT_CODE_HOST,
         window.GLOBAL_ENV.GUILD_TEMPLATE_HOST,
     ]);
-function g(e, t) {
+function p(e, t) {
     return null != e && null != t && e !== t;
 }
-function A(e) {
+function T(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-    return null != e && (d.test(e) || (t && m.has(e.toLowerCase())));
+    return null != e && (u.test(e) || (t && f.has(e.toLowerCase())));
 }
-function I(e) {
+function m(e) {
     return null != e && "discord:" === e;
 }
-function T(e) {
+function g(e) {
     if (null == e) return !1;
-    let t = u.A.toURLSafe(e);
+    let t = d.A.toURLSafe(e);
     return (
         null != t &&
-        ((!!(0, l.iT)() && ("localhost" === t.hostname || "127.0.0.1" === t.hostname)) ||
+        ((!!(0, o.iT)() && ("localhost" === t.hostname || "127.0.0.1" === t.hostname)) ||
             t.hostname === window.GLOBAL_ENV.CDN_HOST ||
             _.test(t.hostname))
     );
 }
 function S(e, t, n) {
-    if (!g(t, n) || null == e) return !1;
-    let i = u.A.toURLSafe(e);
+    if (!p(t, n) || null == e) return !1;
+    let i = d.A.toURLSafe(e);
     return (
         null != i &&
-        ((!!(0, l.iT)() && ("localhost" === i.hostname || "127.0.0.1" === i.hostname) && "4000" === i.port) ||
-            h.test(i.hostname))
+        ((!!(0, o.iT)() && ("localhost" === i.hostname || "127.0.0.1" === i.hostname) && "4000" === i.port) ||
+            E.test(i.hostname))
     );
 }
-function y(e) {
+function N(e) {
     if (null == e) return !1;
-    let t = u.A.toURLSafe(e);
-    return null != t && f.has(t.hostname);
+    let t = d.A.toURLSafe(e);
+    return null != t && A.has(t.hostname);
 }
 function C(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
     if (null != e) {
-        let n = u.A.toURLSafe(e)?.hostname;
-        if (null != n && A(n, t)) return !0;
+        let n = d.A.toURLSafe(e)?.hostname;
+        if (null != n && T(n, t)) return !0;
     }
     return !1;
 }
-function N(e) {
-    return null != e && I(o.parse(e).protocol);
+function O(e) {
+    return null != e && m(l.parse(e).protocol);
 }
-let v = {
-    URL_REGEX: E,
+let R = {
+    URL_REGEX: I,
     makeUrl: function (e, t) {
-        let n = (t ?? (0, l.m6)()) ? window.GLOBAL_ENV.INVITE_HOST : location.host;
+        let n = (t ?? (0, o.m6)()) ? window.GLOBAL_ENV.INVITE_HOST : location.host;
         return `${location.protocol}//${n}${e}`;
     },
-    isOriginalContentTypeDifferent: g,
-    isDiscordHostname: A,
+    isOriginalContentTypeDifferent: p,
+    isDiscordHostname: T,
     isDiscordLocalhost: function (e, t) {
         return null != e && null != t && window.location.host === e;
     },
-    isDiscordProtocol: I,
+    isDiscordProtocol: m,
     isDiscordUrl: C,
-    isDiscordUri: N,
+    isDiscordUri: O,
     isDiscordCdnUrl: function (e) {
-        return null != e && o.parse(e).hostname === window.GLOBAL_ENV.CDN_HOST;
+        return null != e && l.parse(e).hostname === window.GLOBAL_ENV.CDN_HOST;
     },
-    isDiscordDirectAssetUrl: T,
+    isDiscordDirectAssetUrl: g,
     isDiscordProxiedAssetUrl: S,
-    isAllowedGifProviderUrl: y,
+    isAllowedGifProviderUrl: N,
     isDiscordAssetUrl: function (e, t, n) {
-        return !!(T(e) || S(e, t, n) || y(e));
+        return !!(g(e) || S(e, t, n) || N(e));
     },
-    isDiscordUrlOrUri: (e) => C(e) || N(e),
+    isDiscordUrlOrUri: (e) => C(e) || O(e),
     isAppRoute: (e) => {
         let t = e.toLowerCase();
         return (
@@ -113,12 +113,12 @@ let v = {
             t.startsWith(c.BVt.ACTIVITY)
         );
     },
-    format: (e) => o.format(e),
-    formatPathWithQuery: (e, t) => o.format({ pathname: e, query: a().pickBy(t) }),
-    formatSearch: (e) => o.format({ query: a().pickBy(e) }),
+    format: (e) => l.format(e),
+    formatPathWithQuery: (e, t) => l.format({ pathname: e, query: s().pickBy(t) }),
+    formatSearch: (e) => l.format({ query: s().pickBy(e) }),
     safeParseWithQuery(e) {
         try {
-            return o.parse(e, !0);
+            return l.parse(e, !0);
         } catch (e) {
             return null;
         }

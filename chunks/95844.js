@@ -12,7 +12,7 @@ var i = n(691540),
     _ = n(324029),
     E = n(616356),
     A = n(280450),
-    h = n(293246),
+    h = n(453028),
     I = n(741394),
     f = n(459838),
     p = n(439372),
@@ -25,8 +25,8 @@ var i = n(691540),
     O = n(734066),
     R = n(915725),
     L = n(974293),
-    D = n(915618),
-    y = n(572164),
+    y = n(915618),
+    D = n(572164),
     v = n(696016),
     b = n(652215),
     M = n(325278);
@@ -101,7 +101,7 @@ class P extends p.A {
         g.A.getUserIds()?.forEach((e) => this.maybeShowClipsWarning(e));
     }
     handlePostConnectionOpen() {
-        !(0, D.A)(h.Ay) ||
+        !(0, y.A)(h.Ay) ||
             (this.applyNativeClipsSettings(),
             (0, O.Pm)() &&
                 (this.loadClipsFromStorage(),
@@ -115,7 +115,7 @@ class P extends p.A {
     loadClipsFromStorage() {}
     handleRTCConnectionVideo(e) {
         let { userId: t, context: n, channelId: i, guildId: r } = e;
-        if (n !== f.x.STREAM || !(0, D.A)(h.Ay)) return;
+        if (n !== f.x.STREAM || !(0, y.A)(h.Ay)) return;
         let a = S.A.getRTCConnection(
             u._z({ streamType: null != r ? M.U4.GUILD : M.U4.CALL, ownerId: t, channelId: i, guildId: r }),
         );
@@ -165,27 +165,27 @@ class P extends p.A {
             : v.k9.UNKNOWN;
     }
     applyUserVoiceRecording(e) {
-        if (!(0, D.A)(h.Ay)) return;
+        if (!(0, y.A)(h.Ay)) return;
         let t = g.A.getRTCConnection();
         if (null == t) return;
-        if (e === A.default.getId()) return void t.setClipRecordUser(e, "audio", (0, y.TD)());
+        if (e === A.default.getId()) return void t.setClipRecordUser(e, "audio", (0, D.TD)());
         let n = R.Ay.isVoiceRecordingAllowedForUser(e);
         t.setClipRecordUser(e, "audio", n);
     }
     applyUserSoundboardRecording(e) {
-        if (!(0, D.A)(h.Ay)) return;
+        if (!(0, y.A)(h.Ay)) return;
         let t = g.A.getRTCConnection();
-        null != t && t.setClipRecordUser(e, "soundboard", (0, y.TD)());
+        null != t && t.setClipRecordUser(e, "soundboard", (0, D.TD)());
     }
     applyStreamRecording(e, t) {
-        if ((0, D.A)(h.Ay) && A.default.getId() === e) {
-            let n = (0, y.TD)();
+        if ((0, y.A)(h.Ay) && A.default.getId() === e) {
+            let n = (0, D.TD)();
             t.setClipRecordUser(e, "audio", n), t.setClipRecordUser(e, "video", n);
             return;
         }
     }
 }
-var U = n(430795);
+var U = n(539572);
 n(822151);
 var w = n(201538),
     G = n(409067),
@@ -246,13 +246,13 @@ class V extends P {
         });
     }
     applyNativeClipsSettings(e) {
-        if ((e?.settings.enableAutoclipping != null && (0, _.se)(e.settings.enableAutoclipping), !(0, D.A)(h.Ay)))
+        if ((e?.settings.enableAutoclipping != null && (0, _.se)(e.settings.enableAutoclipping), !(0, y.A)(h.Ay)))
             return;
         let { midSessionV3Flip: t } = (0, w.UW)(),
             n = h.Ay.getMediaEngine(),
             i = () => {
                 let i = R.Ay.getSettings(),
-                    r = (0, y.TD)();
+                    r = (0, D.TD)();
                 if (
                     (n.setClipsRecordingEnabled(r),
                     n.setClipBufferLength(r ? i.clipsLength / 1e3 : 0),
@@ -269,7 +269,7 @@ class V extends P {
                     (v.nx.info("clips v3 effective state flipped; dispatching CLIPS_RESTART"),
                     a.h.dispatch({ type: "CLIPS_RESTART" }));
             };
-        (0, y.TD)() && (0, L.qi)("applyNativeClipsSettings") && !(0, w.t_)() ? (0, w.so)().then(i) : i();
+        (0, D.TD)() && (0, L.qi)("applyNativeClipsSettings") && !(0, w.t_)() ? (0, w.so)().then(i) : i();
     }
     handleClipsInitOnToggleDetection(e) {
         let t = d.Ay.getVisibleGame();
@@ -289,13 +289,13 @@ class V extends P {
         c.I.fetchMany([e]), l.YY.fetchMany([e]);
     }
     handleStreamEnded(e) {
-        if (!(0, y.TD)()) return;
+        if (!(0, D.TD)()) return;
         let { ownerId: t } = (0, u.Iy)(e.streamKey);
         t !== A.default.getId() || ((0, L.qi)("handleStreamEnded") && this.fireClipsInitEvent());
     }
     fireClipsInitEvent() {
         let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        if (!(0, y.TD)() || (!e && null != E.A.getCurrentUserActiveStream())) return;
+        if (!(0, D.TD)() || (!e && null != E.A.getCurrentUserActiveStream())) return;
         let t = d.Ay.getVisibleGame();
         if (t?.pid == null || t?.windowHandle == null || null == t.name || "" === t.name) return;
         if ((0, L.qi)("fireClipsInitEvent") && !(0, w.t_)())

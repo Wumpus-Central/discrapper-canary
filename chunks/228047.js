@@ -1,29 +1,29 @@
 "use strict";
-var i = n(353841),
-    r = n(741623),
-    s = n(547210),
-    a = n(33831),
-    o = n(227106);
+var n = r(353841),
+    o = r(741623),
+    i = r(547210),
+    a = r(33831),
+    s = r(227106);
 e.exports = function (e) {
-    if (!o(e)) throw new r("ToPropertyDescriptor requires an object");
+    if (!s(e)) throw new o("ToPropertyDescriptor requires an object");
     var t = {};
     if (
-        (i(e, "enumerable") && (t["[[Enumerable]]"] = a(e.enumerable)),
-        i(e, "configurable") && (t["[[Configurable]]"] = a(e.configurable)),
-        i(e, "value") && (t["[[Value]]"] = e.value),
-        i(e, "writable") && (t["[[Writable]]"] = a(e.writable)),
-        i(e, "get"))
+        (n(e, "enumerable") && (t["[[Enumerable]]"] = a(e.enumerable)),
+        n(e, "configurable") && (t["[[Configurable]]"] = a(e.configurable)),
+        n(e, "value") && (t["[[Value]]"] = e.value),
+        n(e, "writable") && (t["[[Writable]]"] = a(e.writable)),
+        n(e, "get"))
     ) {
-        var n = e.get;
-        if (void 0 !== n && !s(n)) throw new r("getter must be a function");
-        t["[[Get]]"] = n;
+        var r = e.get;
+        if (void 0 !== r && !i(r)) throw new o("getter must be a function");
+        t["[[Get]]"] = r;
     }
-    if (i(e, "set")) {
+    if (n(e, "set")) {
         var l = e.set;
-        if (void 0 !== l && !s(l)) throw new r("setter must be a function");
+        if (void 0 !== l && !i(l)) throw new o("setter must be a function");
         t["[[Set]]"] = l;
     }
-    if ((i(t, "[[Get]]") || i(t, "[[Set]]")) && (i(t, "[[Value]]") || i(t, "[[Writable]]")))
-        throw new r("Invalid property descriptor. Cannot both specify accessors and a value or writable attribute");
+    if ((n(t, "[[Get]]") || n(t, "[[Set]]")) && (n(t, "[[Value]]") || n(t, "[[Writable]]")))
+        throw new o("Invalid property descriptor. Cannot both specify accessors and a value or writable attribute");
     return t;
 };

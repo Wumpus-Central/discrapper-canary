@@ -30,7 +30,7 @@ function A(e) {
         C = (0, r.useRef)(null),
         [O, R] = (0, r.useState)(void 0),
         L = (0, r.useRef)(!1),
-        D = null != p ? p : null;
+        y = null != p ? p : null;
     (0, r.useEffect)(() => {
         if (!L.current) {
             L.current = !0;
@@ -38,7 +38,7 @@ function A(e) {
         }
         R(t ? "animateIn" : "animateOut");
     }, [t]);
-    let y = s()(E.checkboxOption, "string" == typeof O && E[O], "indicator" !== g && E.spacing),
+    let D = s()(E.checkboxOption, "string" == typeof O && E[O], "indicator" !== g && E.spacing),
         v = (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsxs)("div", {
@@ -72,8 +72,8 @@ function A(e) {
                             (0, i.jsxs)(l.J, {
                                 className: E.label,
                                 children: [
-                                    null != D &&
-                                        (0, i.jsx)(D, {
+                                    null != y &&
+                                        (0, i.jsx)(y, {
                                             className: E.leadingIcon,
                                             size: "sm",
                                             color: "currentColor",
@@ -95,7 +95,7 @@ function A(e) {
             ],
         });
     return h
-        ? (0, i.jsx)("div", { className: y, "data-selected": t || void 0, "data-disabled": A || void 0, children: v })
+        ? (0, i.jsx)("div", { className: D, "data-selected": t || void 0, "data-disabled": A || void 0, children: v })
         : (0, i.jsx)(d.vN, {
               focusTarget: N,
               ringTarget: C,
@@ -110,7 +110,7 @@ function A(e) {
                   isDisabled: A,
                   isReadOnly: h,
                   "data-mana-component": "checkbox",
-                  className: y,
+                  className: D,
                   value: String(T),
                   children: v,
               }),

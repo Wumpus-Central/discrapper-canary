@@ -25,8 +25,8 @@ var i = n(121197),
     O = n(56595),
     R = n(871123),
     L = n(353202),
-    D = n(683180),
-    y = n(317525),
+    y = n(683180),
+    D = n(317525),
     v = n(71393),
     b = n(403362),
     M = n(652215),
@@ -34,13 +34,13 @@ var i = n(121197),
 async function U(e) {
     let { guildId: t, channelId: n } = e,
         i = v.A.getGuild(t),
-        r = y.A.getUnsafeMutableRoles(t);
+        r = D.A.getUnsafeMutableRoles(t);
     if (null == i && t !== M.ME && n !== P.VV.GAME_SHOP) return !1;
     if (null == n) return !0;
     if ((0, P.jq)(n))
         switch (n) {
             case P.VV.VIBEGRATIONS:
-                return null != i && (0, D.pi)(i, "isAccessibleChannelOrThreadPath");
+                return null != i && (0, y.pi)(i, "isAccessibleChannelOrThreadPath");
             case P.VV.ROLE_SUBSCRIPTIONS:
                 return (0, p.l8)(t, r);
             case P.VV.SERVER_MONETIZATION_ONBOARDING:

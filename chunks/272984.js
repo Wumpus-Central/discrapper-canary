@@ -1,25 +1,25 @@
 "use strict";
 n.d(t, {
     HD: () => c,
-    HS: () => u,
+    HS: () => d,
     M0: () => _,
-    NJ: () => g,
-    Qp: () => h,
-    RQ: () => m,
-    UN: () => f,
-    gY: () => l,
-    pH: () => d,
+    NJ: () => p,
+    Qp: () => E,
+    RQ: () => f,
+    UN: () => A,
+    gY: () => o,
+    pH: () => u,
 });
 var i,
     r,
-    s = n(573648),
-    a = n(723702),
-    o = n(652215);
-let l = "spotify",
-    u = "spotify:",
-    c = s.A.get(o.fg2.SPOTIFY).name;
-function d(e) {
-    return null != e && e.startsWith(u);
+    a = n(573648),
+    s = n(723702),
+    l = n(652215);
+let o = "spotify",
+    d = "spotify:",
+    c = a.A.get(l.fg2.SPOTIFY).name;
+function u(e) {
+    return null != e && e.startsWith(d);
 }
 var _ =
         (((i = {}).TRACK = "track"),
@@ -29,45 +29,45 @@ var _ =
         (i.EPISODE = "episode"),
         (i.SHOW = "show"),
         i),
-    h =
+    E =
         (((r = {}).USER_ACTIVITY_PLAY = "user_activity_play"),
         (r.USER_ACTIVITY_SYNC = "user_activity_sync"),
         (r.EMBED_SYNC = "embed_sync"),
         r);
-let f = ["open.spotify.com", "www.spotify.com"],
-    p = "https://api.spotify.com/v1";
-function E(e) {
+let A = ["open.spotify.com", "www.spotify.com"],
+    h = "https://api.spotify.com/v1";
+function I(e) {
     return `?utm_source=discord&utm_medium=${e}`;
 }
-let m = Object.freeze({
-    PROFILE: `${p}/me`,
-    NOTIFICATIONS_PLAYER: `${p}/me/notifications/player`,
-    PLAYER: `${p}/me/player`,
-    PLAYER_DEVICES: `${p}/me/player/devices`,
-    PLAYER_PLAY: `${p}/me/player/play`,
-    PLAYER_PAUSE: `${p}/me/player/pause`,
-    PLAYER_REPEAT: `${p}/me/player/repeat`,
+let f = Object.freeze({
+    PROFILE: `${h}/me`,
+    NOTIFICATIONS_PLAYER: `${h}/me/notifications/player`,
+    PLAYER: `${h}/me/player`,
+    PLAYER_DEVICES: `${h}/me/player/devices`,
+    PLAYER_PLAY: `${h}/me/player/play`,
+    PLAYER_PAUSE: `${h}/me/player/pause`,
+    PLAYER_REPEAT: `${h}/me/player/repeat`,
     WEB_OPEN: function (e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "desktop";
-        return `https://open.spotify.com/${encodeURIComponent(e)}/${encodeURIComponent(t)}${E(n)}`;
+        return `https://open.spotify.com/${encodeURIComponent(e)}/${encodeURIComponent(t)}${I(n)}`;
     },
     EMBED: function (e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "desktop";
-        return `https://open.spotify.com/embed${e}${E(t)}`;
+        return `https://open.spotify.com/embed${e}${I(t)}`;
     },
     PLAYER_OPEN: function (e, t) {
         let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
             i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "desktop";
-        return `${l}:${encodeURIComponent(e)}:${encodeURIComponent(t)}${n ? E(i) : ""}`;
+        return `${o}:${encodeURIComponent(e)}:${encodeURIComponent(t)}${n ? I(i) : ""}`;
     },
-    PREMIUM_SITE: `https://www.spotify.com/premium/${E("desktop")}`,
+    PREMIUM_SITE: `https://www.spotify.com/premium/${I("desktop")}`,
     INSTALL_ATTRIBUTION: (e) => `https://app.adjust.com/bdyga9?campaign=${e}`,
-    APP_STORE: (0, a.isAndroid)()
+    APP_STORE: (0, s.isAndroid)()
         ? "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_US&gl=US"
         : "https://itunes.apple.com/us/app/spotify-music/id324684580?mt=8",
     IOS_APP_STORE: "https://itunes.apple.com/us/app/spotify-music/id324684580?mt=8",
 });
-function g(e) {
+function p(e) {
     if ("string" != typeof e) return null;
     switch (e) {
         case "track":

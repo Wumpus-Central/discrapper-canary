@@ -1,9 +1,9 @@
 "use strict";
-n.d(t, { g: () => s, t: () => r });
+n.d(t, { g: () => r, t: () => s });
 var l,
     i,
-    r =
+    s =
         (((l = {})[(l.GRID_NAVIGATOR_EVENT = 0)] = "GRID_NAVIGATOR_EVENT"),
         (l[(l.MOUSE_EVENT = 1)] = "MOUSE_EVENT"),
         l),
-    s = (((i = {}).EMOJI = "emoji"), (i.STICKER = "sticker"), (i.PACK_ICON = "pack-icon"), i);
+    r = (((i = {}).EMOJI = "emoji"), (i.STICKER = "sticker"), (i.PACK_ICON = "pack-icon"), i);

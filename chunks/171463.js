@@ -1,21 +1,21 @@
 "use strict";
-var i = n(721602),
-    r = n(870064),
-    s = "object" == typeof StopIteration ? StopIteration : null;
+var n = r(721602),
+    o = r(870064),
+    i = "object" == typeof StopIteration ? StopIteration : null;
 e.exports = function (e) {
-    if (!s) throw new r("this environment lacks StopIteration");
-    i.set(e, "[[Done]]", !1);
+    if (!i) throw new o("this environment lacks StopIteration");
+    n.set(e, "[[Done]]", !1);
     var t = {
         next: function () {
-            var e = i.get(this, "[[Iterator]]"),
-                t = !!i.get(e, "[[Done]]");
+            var e = n.get(this, "[[Iterator]]"),
+                t = !!n.get(e, "[[Done]]");
             try {
                 return { done: t, value: t ? void 0 : e.next() };
             } catch (t) {
-                if ((i.set(e, "[[Done]]", !0), t !== s)) throw t;
+                if ((n.set(e, "[[Done]]", !0), t !== i)) throw t;
                 return { done: !0, value: void 0 };
             }
         },
     };
-    return i.set(t, "[[Iterator]]", e), t;
+    return n.set(t, "[[Iterator]]", e), t;
 };

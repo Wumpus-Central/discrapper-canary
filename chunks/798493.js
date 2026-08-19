@@ -1,17 +1,17 @@
 "use strict";
-var i = n(473560),
-    r = n(969001),
-    s = i.hasArrayLengthDefineBug(),
-    a = s && n(677480),
-    o = n(906046)("Object.prototype.propertyIsEnumerable");
-e.exports = function (e, t, n, i, l, u) {
-    if (!r) {
-        if (!e(u) || !u["[[Configurable]]"] || !u["[[Writable]]"] || (l in i && o(i, l) !== !!u["[[Enumerable]]"]))
+var n = r(473560),
+    o = r(969001),
+    i = n.hasArrayLengthDefineBug(),
+    a = i && r(677480),
+    s = r(906046)("Object.prototype.propertyIsEnumerable");
+e.exports = function (e, t, r, n, l, u) {
+    if (!o) {
+        if (!e(u) || !u["[[Configurable]]"] || !u["[[Writable]]"] || (l in n && s(n, l) !== !!u["[[Enumerable]]"]))
             return !1;
         var c = u["[[Value]]"];
-        return (i[l] = c), t(i[l], c);
+        return (n[l] = c), t(n[l], c);
     }
-    return s && "length" === l && "[[Value]]" in u && a(i) && i.length !== u["[[Value]]"]
-        ? ((i.length = u["[[Value]]"]), i.length === u["[[Value]]"])
-        : (r(i, l, n(u)), !0);
+    return i && "length" === l && "[[Value]]" in u && a(n) && n.length !== u["[[Value]]"]
+        ? ((n.length = u["[[Value]]"]), n.length === u["[[Value]]"])
+        : (o(n, l, r(u)), !0);
 };

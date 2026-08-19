@@ -1,4 +1,4 @@
-t.d(n, { f: () => V }), t(938796);
+t.d(n, { f: () => U }), t(938796);
 var l = t(477900),
     i = t(582128),
     s = t(132500),
@@ -9,14 +9,14 @@ var l = t(477900),
     u = t(939249),
     d = t(305866),
     A = t(707554),
-    h = t(140735),
-    m = t(323384),
+    m = t(140735),
+    h = t(323384),
     C = t(834730),
     E = t(320448),
     p = t(793574),
     g = t(688810),
-    x = t(735991),
-    f = t(786115),
+    f = t(735991),
+    x = t(786115),
     I = t(975412),
     T = t(392054),
     v = t(993748),
@@ -28,17 +28,17 @@ var l = t(477900),
     O = t(174459),
     y = t(795816),
     R = t(648027),
-    L = t(855446),
-    M = t(652215),
+    M = t(855446),
+    L = t(652215),
     D = t(375708),
     P = t(716660);
 let G = r.K.APP_LAUNCHER_IN_VOICE_BANNER,
     k = `vc-activities-${(0, s.A)()}`;
-function U(e) {
+function V(e) {
     let n,
         t,
         { channel: s, openInPopout: r, onClick: d } = e,
-        { fetchState: A, voiceBannerCollection: h } =
+        { fetchState: A, voiceBannerCollection: m } =
             ((n = (0, c.bG)([S.default], () => S.default.onlyShowPreviewAppCollections) ? a.W.PREVIEW : a.W.ACTIVE),
             i.useEffect(() => {
                 (0, v.An)({ surface: G, activeState: n });
@@ -47,20 +47,20 @@ function U(e) {
                 fetchState: (0, c.bG)([_.A], () => _.A.getFetchState({ surface: G, activeState: n })),
                 voiceBannerCollection: (0, c.bG)([_.A], () => _.A.getCollections({ surface: G, activeState: n }))[0],
             }),
-        m = A === _.e.FETCHING,
+        h = A === _.e.FETCHING,
         C = i.useMemo(() => {
-            let e = h?.application_directory_collection_items[0];
+            let e = m?.application_directory_collection_items[0];
             return null == e ? null : e.type === o.L.APPLICATION_BANNER ? e : null;
-        }, [h?.application_directory_collection_items]),
-        { trackItemImpressionRef: E } = (0, f.A)({
+        }, [m?.application_directory_collection_items]),
+        { trackItemImpressionRef: E } = (0, x.A)({
             applicationId: C?.application.id ?? "",
             applicationFlags: C?.application.flags,
             sectionName: "app_launcher_in_voice_banner",
             sectionPosition: C?.position,
             sectionOverallPosition: 0,
-            promotionalLabel: null != C ? (0, x.Ii)(C.application) : void 0,
+            promotionalLabel: null != C ? (0, f.Ii)(C.application) : void 0,
         });
-    return null == C || null == h || m
+    return null == C || null == m || h
         ? null
         : (null != C.id &&
               null != C.image_hash &&
@@ -83,19 +83,19 @@ function U(e) {
               ],
           }));
 }
-let V = i.forwardRef(function (e, n) {
+let U = i.forwardRef(function (e, n) {
     var t;
-    let { channel: s, isHovered: a, closePopout: r, onMouseEnter: o, onMouseLeave: c, onClick: x, className: f } = e,
+    let { channel: s, isHovered: a, closePopout: r, onMouseEnter: o, onMouseLeave: c, onClick: f, className: x } = e,
         { id: v, guild_id: _ } = s;
     i.useEffect(() => {
-        O.default.track(M.HAw.ACTIVITIES_CENTER_CONTROL_TRAY_BUTTON_HOVERED, { channel_id: v, guild_id: _ });
+        O.default.track(L.HAw.ACTIVITIES_CENTER_CONTROL_TRAY_BUTTON_HOVERED, { channel_id: v, guild_id: _ });
     }, [v, _]),
         i.useEffect(() => {
             a || r();
         }, [r, a]);
     let j = (0, N.Us)(),
         { analyticsLocations: S, newestAnalyticsLocation: G } = (0, g.Ay)(p.A.ACTIVITIES_MINI_SHELF),
-        V = j === M.BRT.POPOUT,
+        U = j === L.BRT.POPOUT,
         B = ((t = s.getGuildId()), (0, R.A)({ guildId: t }).slice(0, 5));
     i.useEffect(() => {
         let e = setTimeout(() => y.LK(), 1e3);
@@ -104,16 +104,16 @@ let V = i.forwardRef(function (e, n) {
     let H = i.useCallback(() => {
             (0, I.A)({
                 context: null != s ? { type: "channel", channel: s } : { type: "contextless" },
-                openInPopout: V,
+                openInPopout: U,
                 analyticsLocation: G,
             }),
                 c(),
-                x();
-        }, [s, G, x, c, V]),
+                f();
+        }, [s, G, f, c, U]),
         w = i.useCallback(
             (e) => {
                 o(),
-                    O.default.track(M.HAw.ACTIVITIES_MINI_SHELF_HOVERED, {
+                    O.default.track(L.HAw.ACTIVITIES_MINI_SHELF_HOVERED, {
                         channel_id: s.id,
                         guild_id: s.getGuildId(),
                     });
@@ -126,11 +126,11 @@ let V = i.forwardRef(function (e, n) {
             children: (0, l.jsxs)(d.l, {
                 ref: n,
                 "aria-labelledby": k,
-                className: f,
+                className: x,
                 children: [
                     (0, l.jsx)(A.F, {
                         forceLevel: 2,
-                        children: (0, l.jsx)(h.A, {
+                        children: (0, l.jsx)(m.A, {
                             children: (0, l.jsx)(A.H, { id: k, children: D.intl.string(D.t["2lnYtB"]) }),
                         }),
                     }),
@@ -145,7 +145,7 @@ let V = i.forwardRef(function (e, n) {
                                     (0, l.jsxs)("div", {
                                         className: P.gH,
                                         children: [
-                                            (0, l.jsx)(m.k, {
+                                            (0, l.jsx)(h.k, {
                                                 size: "md",
                                                 className: P.ch,
                                                 color: "var(--interactive-text-active)",
@@ -175,25 +175,25 @@ let V = i.forwardRef(function (e, n) {
                                     }),
                                 ],
                             }),
-                            (0, l.jsx)(U, {
-                                openInPopout: V,
+                            (0, l.jsx)(V, {
+                                openInPopout: U,
                                 channel: s,
                                 onClick: () => {
-                                    x(), r();
+                                    f(), r();
                                 },
                             }),
                             (0, l.jsx)("div", {
                                 className: P.ht,
                                 children: B.map((e) =>
                                     (0, l.jsx)(
-                                        L.C,
+                                        M.C,
                                         {
                                             context: { channel: s, type: "channel" },
                                             activityItem: e,
                                             onClick: () => {
-                                                r(), x();
+                                                r(), f();
                                             },
-                                            aspectRatio: L.C.AspectRatio.THIRTEEN_BY_ELEVEN,
+                                            aspectRatio: M.C.AspectRatio.THIRTEEN_BY_ELEVEN,
                                             animatedDivClass: P.KU,
                                             commandOrigin: T.iw.MINI_SHELF,
                                         },

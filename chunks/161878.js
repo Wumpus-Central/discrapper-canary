@@ -1,4 +1,4 @@
-e.exports = {
+t.exports = {
     vi: "thumbnailButton__1692d",
     N4: "titleButton__1692d",
     DK: "cloudPlaySection__1692d",

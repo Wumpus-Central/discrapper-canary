@@ -1,10 +1,10 @@
 function t() {
     try {
-        var n = !Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {}));
+        var r = !Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {}));
     } catch (e) {}
     return ((e.exports = t =
         function () {
-            return !!n;
+            return !!r;
         }),
     (e.exports.__esModule = !0),
     (e.exports.default = e.exports))();

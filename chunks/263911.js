@@ -1,8 +1,8 @@
-n.d(t, { I: () => u });
-var i = n(627968),
-    a = n(508770),
-    r = n(111159),
-    s = n(375708);
+r.d(e, { I: () => u });
+var i = r(477900),
+    n = r(508770),
+    l = r(111159),
+    o = r(375708);
 function u() {
-    return (0, i.jsx)(a.E, { type: { text: s.intl.string(s.t.RiDMFz) }, variant: "brand", icon: r.p });
+    return (0, i.jsx)(n.E, { type: { text: o.intl.string(o.t.RiDMFz) }, variant: "brand", icon: l.p });
 }

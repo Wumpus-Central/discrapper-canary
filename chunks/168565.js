@@ -1,4 +1,4 @@
-_.exports = {
+e.exports = {
     jk: "richTooltipContent_a89985",
     Sx: "richTooltipContentLg_a89985",
     s: "assetContainer_a89985",

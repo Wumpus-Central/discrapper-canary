@@ -1,6 +1,6 @@
-var i = n(795139).default;
-(n.g.IntlPolyfill = i),
-    n(897975),
-    n.g.Intl || ((n.g.Intl = i), i.__applyLocaleSensitivePrototypes()),
-    (e.exports = t = i),
-    (t.default = i);
+var n = r(795139).default;
+(r.g.IntlPolyfill = n),
+    r(897975),
+    r.g.Intl || ((r.g.Intl = n), n.__applyLocaleSensitivePrototypes()),
+    (e.exports = t = n),
+    (t.default = n);

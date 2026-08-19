@@ -2,18 +2,18 @@
 n.d(t, { B: () => c }), n(142703), n(321073);
 var i = n(228366),
     r = n(426620),
-    s = n(617710);
-let a = [];
-function o() {
+    a = n(617710);
+let s = [];
+function l() {
     return null != r.A.getType();
 }
-function l() {
-    o() || (a.forEach((e) => u(e)), (a = []));
+function o() {
+    l() || (s.forEach((e) => d(e)), (s = []));
 }
-function u(e) {
+function d(e) {
     setImmediate(() => e());
 }
 function c(e) {
-    s.A.isConnectedOrOverlay() && !o() ? u(e) : a.push(e);
+    a.A.isConnectedOrOverlay() && !l() ? d(e) : s.push(e);
 }
-i.h.subscribe("CONNECTION_OPEN", l), i.h.subscribe("CONNECTION_RESUMED", l), i.h.subscribe("NUF_COMPLETE", l);
+i.h.subscribe("CONNECTION_OPEN", o), i.h.subscribe("CONNECTION_RESUMED", o), i.h.subscribe("NUF_COMPLETE", o);

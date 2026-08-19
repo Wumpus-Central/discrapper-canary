@@ -17,12 +17,12 @@ var i = n(477900),
     f = n(475825),
     N = n(39255),
     p = n(47167),
-    A = n(713654),
+    A = n(174355),
     I = n(915089),
     S = n(201275),
     C = n(967144),
-    _ = n(657048),
-    v = n(963307),
+    v = n(657048),
+    _ = n(963307),
     T = n(734057),
     b = n(317525),
     y = n(994500),
@@ -38,7 +38,7 @@ function k(e) {
     return 0 === e.type;
 }
 function U(e) {
-    let t = `${!e.name.includes(v.QP) ? "@" : ""}${e.name}`;
+    let t = `${!e.name.includes(_.QP) ? "@" : ""}${e.name}`;
     return { tag: { type: N._.ROLE, label: t }, row: { id: e.id, display: t, type: 1, record: e } };
 }
 function P(e) {
@@ -50,7 +50,7 @@ let w = l.memo(function (e) {
         { id: s, name: a } = t.record,
         o = (0, S.$7)({ guildId: n, roleId: s, size: 16 }),
         d = (0, c.bG)([b.A], () => b.A.getRole(n, s)),
-        h = a.includes(v.QP) ? "" : "@",
+        h = a.includes(_.QP) ? "" : "@",
         E = (0, u.r)(m.A.unsafe_rawColors.PRIMARY_300).hsl(),
         j = d?.colorString ?? E,
         f = (0, C.X_)(n, d, d?.colorStrings);
@@ -58,7 +58,7 @@ let w = l.memo(function (e) {
         className: r()(G.xZ, G.ex, l),
         children: [
             (0, i.jsx)(g.W, { className: G.__invalid_roleDot, color: j, colors: f, background: !1, tooltip: !1 }),
-            null != o ? (0, i.jsx)(_.A, { className: G.YS, ...o, enableTooltip: !1 }) : h,
+            null != o ? (0, i.jsx)(v.A, { className: G.YS, ...o, enableTooltip: !1 }) : h,
             (0, i.jsx)(x.E, { variant: O, className: G.pP, children: a }),
         ],
     });
@@ -96,7 +96,7 @@ function H(e) {
         } = e,
         S = (0, I.GV)(),
         C = (0, c.bG)([b.A], () => b.A.getRolesSnapshot(t)),
-        _ = l.useMemo(
+        v = l.useMemo(
             () =>
                 (function (e, t, n) {
                     if (null == e) return {};
@@ -114,7 +114,7 @@ function H(e) {
                 })(a, u, C),
             [a, u, C],
         ),
-        v = l.useMemo(() => Object.keys(_), [_]),
+        _ = l.useMemo(() => Object.keys(v), [v]),
         [y, R] = l.useState(""),
         [O, w] = l.useState(!1),
         [F, H] = l.useState(!1),
@@ -163,7 +163,7 @@ function H(e) {
     }, [O, F]);
     let $ = l.useCallback(
             (e) => {
-                let t = { ..._ };
+                let t = { ...v };
                 k(e) ? (t[e.id] = P(e.record)) : M(e) && (t[e.id] = U(e.record)),
                     J(t),
                     R(""),
@@ -174,7 +174,7 @@ function H(e) {
                         null != t && t.scrollTo({ top: t.scrollHeight, behavior: "smooth" });
                     }, 16);
             },
-            [J, _],
+            [J, v],
         ),
         ee = l.useCallback(
             (e) => {
@@ -196,11 +196,11 @@ function H(e) {
         ),
         et = l.useMemo(
             () =>
-                v.map((e) => {
+                _.map((e) => {
                     var n;
-                    return (n = _[e]), { ...n.tag, label: B(n.row, t, G.yS) };
+                    return (n = v[e]), { ...n.tag, label: B(n.row, t, G.yS) };
                 }),
-            [_, v, t],
+            [v, _, t],
         );
     return (0, i.jsxs)("div", {
         className: r()(G.MT, A),
@@ -216,15 +216,15 @@ function H(e) {
                         query: y,
                         ref: Y,
                         onRemoveTag: (e) => {
-                            let t = v[e],
-                                { [t]: n, ...i } = _;
+                            let t = _[e],
+                                { [t]: n, ...i } = v;
                             J(i), R(""), Q();
                         },
                         onQueryChange: function (e) {
                             R(e.trim().toLocaleLowerCase());
                         },
                         placeholder: g ?? L.intl.string(L.t.uqHLzW),
-                        sections: [v.length],
+                        sections: [_.length],
                         inputProps: {
                             "aria-controls": D,
                             "aria-describedby": null != p ? S : void 0,

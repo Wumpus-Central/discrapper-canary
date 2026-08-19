@@ -1,40 +1,40 @@
 "use strict";
-n.d(t, { A: () => E });
-var i = n(477900),
-    r = n(582128),
-    a = n(503698),
-    s = n.n(a),
-    l = n(866665),
+n.d(t, { A: () => m });
+var l = n(477900),
+    i = n(582128),
+    s = n(503698),
+    r = n.n(s),
+    a = n(866665),
     o = n(565645),
-    d = n(7584),
+    u = n(7584),
     c = n(885386),
-    u = n(350593);
+    d = n(350593);
 n(851883);
-var _ = n(491160);
-function E(e) {
-    let { emoji: t, className: n, animate: a = !0, hideTooltip: E = !1, tooltipDelay: A = 150 } = e,
-        h = c.Sf.useSetting(),
-        I = r.useRef(null),
-        f = null != t.id ? `:${t.name}:` : d.Ay.translateSurrogatesToInlineEmoji(t.name);
-    if (null == t.id && u.V.has(t.name)) return (0, i.jsx)("span", { className: s()(_.Zg, n), children: t.name });
-    let p = {
-        className: s()(_.Zg, n),
+var h = n(491160);
+function m(e) {
+    let { emoji: t, className: n, animate: s = !0, hideTooltip: m = !1, tooltipDelay: f = 150 } = e,
+        p = c.Sf.useSetting(),
+        g = i.useRef(null),
+        x = null != t.id ? `:${t.name}:` : u.Ay.translateSurrogatesToInlineEmoji(t.name);
+    if (null == t.id && d.V.has(t.name)) return (0, l.jsx)("span", { className: r()(h.Zg, n), children: t.name });
+    let A = {
+        className: r()(h.Zg, n),
         emojiId: t.id,
         emojiName: t.name,
-        alt: f,
+        alt: x,
         autoplay: !0,
-        animated: !!(t.animated && h && a),
+        animated: !!(t.animated && p && s),
         registerInnerRef: (e) => {
-            I.current = e;
+            g.current = e;
         },
     };
-    return E
-        ? (0, i.jsx)(o.A, { ...p })
-        : (0, i.jsx)(l.m, {
-              targetElementRef: I,
-              text: f,
-              delay: A,
+    return m
+        ? (0, l.jsx)(o.A, { ...A })
+        : (0, l.jsx)(a.m, {
+              targetElementRef: g,
+              text: x,
+              delay: f,
               ariaHidden: !0,
-              children: (0, i.jsx)(o.A, { ...p }),
+              children: (0, l.jsx)(o.A, { ...A }),
           });
 }

@@ -1,6 +1,6 @@
 "use strict";
 let i;
-n.d(t, { Ay: () => eD, zy: () => eh, XA: () => eI, L3: () => em, X3: () => eT }), n(321073), n(667532);
+n.d(t, { Ay: () => ey, zy: () => eh, XA: () => eI, L3: () => em, X3: () => eT }), n(321073), n(667532);
 var r = n(91871),
     a = n.n(r),
     s = n(435558),
@@ -30,7 +30,7 @@ function h(e, t) {
     return r < a ? -1 : +(r > a);
 }
 var I = n(626584),
-    f = n(159273);
+    f = n(236285);
 (0, n(945810).mj)({
     name: "2026-07-game-mentions-v2-mobile",
     kind: "user",
@@ -52,8 +52,8 @@ var p = n(202776),
     O = n(931959),
     R = n(750385),
     L = n(194004),
-    D = n(695633),
-    y = n(152007),
+    y = n(863005),
+    D = n(152007),
     v = n(885386),
     b = n(594061),
     M = n(95701),
@@ -73,8 +73,8 @@ var p = n(202776),
     K = n(287809),
     $ = n(67480),
     z = n(583613),
-    q = n(403362),
-    Z = n(860689),
+    Z = n(403362),
+    q = n(149790),
     X = n(695184),
     Q = n(488926),
     J = n(257120),
@@ -140,7 +140,7 @@ class ef {
             i = [];
         switch (e) {
             case ei.rD.GUILD:
-                i = t.filter((e) => (0, Z.fh)(e));
+                i = t.filter((e) => (0, q.fh)(e));
                 break;
             case ei.rD.USER:
                 i = t.filter((e) => e instanceof M.YB && e.type === E.rbe.DM);
@@ -328,14 +328,14 @@ let eL = (0, z.L_)((e, t, n) => {
             { channelsByRecipientId: i, recipientsById: r, recipients: a }
         );
     }),
-    eD = {
+    ey = {
         queryFriends(e) {
             let { query: t, limit: n = 10, _fuzzy: i = !0, filter: r } = e;
             return eC({
                 query: t,
                 members: j.A.getFriendIDs()
                     .map((e) => K.default.getUser(e))
-                    .filter(q.Vq),
+                    .filter(Z.Vq),
                 limit: n,
                 filter: r,
             });
@@ -346,7 +346,7 @@ let eL = (0, z.L_)((e, t, n) => {
                 query: t,
                 members: _.A.getDMUserIds()
                     .map((e) => K.default.getUser(e))
-                    .filter(q.Vq),
+                    .filter(Z.Vq),
                 limit: n,
                 filter: i,
             });
@@ -469,11 +469,11 @@ let eL = (0, z.L_)((e, t, n) => {
                 null != s
                     ? l()(G.Ay.getChannels(s)[h])
                           .map((e) => e.channel)
-                          .concat(S ? (m ? _.A.getAllThreadsForGuild(s) : D.A.computeAllActiveJoinedThreads(s)) : [])
+                          .concat(S ? (m ? _.A.getAllThreadsForGuild(s) : y.A.computeAllActiveJoinedThreads(s)) : [])
                           .value()
                     : l()(_.A.loadAllGuildAndPrivateChannelsFromDisk())
                           .values()
-                          .concat(S ? D.A.computeAllActiveJoinedThreads() : [])
+                          .concat(S ? y.A.computeAllActiveJoinedThreads() : [])
                           .value();
             let N = {},
                 C = [],
@@ -528,7 +528,7 @@ let eL = (0, z.L_)((e, t, n) => {
                         (1 !== r.length || r[0].isFullMatch || o) &&
                         ((i = e.type),
                         h === G.I6 && (0, M.ay)(i) && (c = Math.max(c - 1, 0.5)),
-                        e.isThread() && (e.isActiveThread() || (c -= 3), y.A.hasJoined(e.id) || (c -= 5)),
+                        e.isThread() && (e.isActiveThread() || (c -= 3), D.A.hasJoined(e.id) || (c -= 5)),
                         (c = Math.min(
                             c + 3 * Math.min(w.A.getScoreWithoutFetchingLatest(e.id) ?? 0 / O, 1),
                             c >= 7 ? 10 : 7,
@@ -843,7 +843,7 @@ let eL = (0, z.L_)((e, t, n) => {
                         );
                         return n > 0 ? { choice: e, score: n, originalIndex: t } : null;
                     })
-                    .filter(q.Vq)
+                    .filter(Z.Vq)
                     .sortBy((e) => -1 * e.score);
             return null !== i && (d = d.take(i)), d.value();
         },

@@ -31,7 +31,7 @@ var i,
     S = t(807098),
     k = t(412260),
     G = t(753261),
-    B = t(380619),
+    B = t(580194),
     D = t(80435);
 function w(e) {
     let { title: r, body: t, image: i, badge: l, className: a } = e;

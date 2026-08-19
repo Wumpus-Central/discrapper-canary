@@ -1,32 +1,32 @@
 "use strict";
-n.d(t, { A: () => A });
-var i = n(582128),
-    r = n(176999),
-    a = n(17928),
-    s = n(549699),
-    l = n(29496),
+n.d(t, { A: () => f });
+var l = n(582128),
+    i = n(176999),
+    s = n(17928),
+    r = n(549699),
+    a = n(29496),
     o = n(201718),
-    d = n(339580),
+    u = n(339580),
     c = n(773669),
-    u = n(403362),
-    _ = n(352003);
-let E = [];
-function A(e, t) {
+    d = n(403362),
+    h = n(352003);
+let m = [];
+function f(e, t) {
     (0, o.P)(e);
-    let n = (0, a.bG)([d.A], () => d.A.getUserIdentityByApplication(e, t)),
-        A = (0, a.bG)([c.default], () => c.default.locale),
-        h = i.useMemo(() => [t], [t]),
-        [I] = (0, _.A)(h),
-        f = i.useMemo(() => (0, r.VG)(n?.profile ?? void 0), [n?.profile]),
-        p = (0, a.bG)([d.A], () => d.A.getFetchState(e) !== d.e.FETCHED),
-        T = (0, a.bG)([l.A], () => l.A.getAssets(t)),
-        m = i.useMemo(() => Object.values(T ?? {}).filter(u.Vq), [T]),
-        g = i.useCallback((e) => (0, s.Q)(t, e, e.metadata.width), [t]);
+    let n = (0, s.bG)([u.A], () => u.A.getUserIdentityByApplication(e, t)),
+        f = (0, s.bG)([c.default], () => c.default.locale),
+        p = l.useMemo(() => [t], [t]),
+        [g] = (0, h.A)(p),
+        x = l.useMemo(() => (0, i.VG)(n?.profile ?? void 0), [n?.profile]),
+        A = (0, s.bG)([u.A], () => u.A.getFetchState(e) !== u.e.FETCHED),
+        E = (0, s.bG)([a.A], () => a.A.getAssets(t)),
+        C = l.useMemo(() => Object.values(E ?? {}).filter(d.Vq), [E]),
+        I = l.useCallback((e) => (0, r.Q)(t, e, e.metadata.width), [t]);
     return {
-        locale: A,
-        surfaceConfigs: I?.surfaces ?? {},
-        isLoading: p,
+        locale: f,
+        surfaceConfigs: g?.surfaces ?? {},
+        isLoading: A,
         hasIdentity: null != n,
-        resolutionContext: { data: f, applicationAssets: m, getApplicationAssetUrl: g, localizedStrings: E },
+        resolutionContext: { data: x, applicationAssets: C, getApplicationAssetUrl: I, localizedStrings: m },
     };
 }

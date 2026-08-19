@@ -1,4 +1,4 @@
-a.exports = {
+e.exports = {
     kR: "cards__5ae41",
     wx: "header__5ae41",
     Nr: "card__5ae41",

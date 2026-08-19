@@ -11,16 +11,16 @@ self.addEventListener("message", (e) => {
                     { PI: a, min: l, max: f, cos: i, round: n } = Math,
                     s = e[0] | (e[1] << 8) | (e[2] << 16),
                     p = e[3] | (e[4] << 8),
-                    d = (63 & s) / 63,
-                    c = ((s >> 6) & 63) / 31.5 - 1,
-                    u = ((s >> 12) & 63) / 31.5 - 1,
-                    h = s >> 23,
-                    b = p >> 15,
-                    v = f(3, b ? (h ? 5 : 7) : 7 & p),
-                    g = f(3, b ? 7 & p : h ? 5 : 7),
-                    y = h ? (15 & e[5]) / 15 : 1,
+                    c = (63 & s) / 63,
+                    u = ((s >> 6) & 63) / 31.5 - 1,
+                    d = ((s >> 12) & 63) / 31.5 - 1,
+                    b = s >> 23,
+                    h = p >> 15,
+                    v = f(3, h ? (b ? 5 : 7) : 7 & p),
+                    g = f(3, h ? 7 & p : b ? 5 : 7),
+                    y = b ? (15 & e[5]) / 15 : 1,
                     O = (e[5] >> 4) / 15,
-                    m = h ? 6 : 5,
+                    m = b ? 6 : 5,
                     w = 0;
                 function x(r, t, o) {
                     let a = [];
@@ -32,7 +32,7 @@ self.addEventListener("message", (e) => {
                 let j = x(v, g, ((s >> 18) & 31) / 31 / 2),
                     k = x(3, 3, (((p >> 3) & 63) / 63) * t),
                     P = x(3, 3, (((p >> 9) & 63) / 63) * t),
-                    A = h ? x(5, 5, O) : [],
+                    A = b ? x(5, 5, O) : [],
                     C = (0, o.HM)(e),
                     M = n(C > 1 ? 32 : 32 * C),
                     T = n(C > 1 ? 32 / C : 32),
@@ -41,12 +41,12 @@ self.addEventListener("message", (e) => {
                     E = [];
                 for (let e = 0, t = 0; e < T; e++)
                     for (let o = 0; o < M; o++, t += 4) {
-                        let n = d,
-                            s = c,
-                            p = u,
-                            b = y;
-                        for (let e = 0, r = f(v, h ? 5 : 3); e < r; e++) _[e] = i((a / M) * (o + 0.5) * e);
-                        for (let r = 0, t = f(g, h ? 5 : 3); r < t; r++) E[r] = i((a / T) * (e + 0.5) * r);
+                        let n = c,
+                            s = u,
+                            p = d,
+                            h = y;
+                        for (let e = 0, r = f(v, b ? 5 : 3); e < r; e++) _[e] = i((a / M) * (o + 0.5) * e);
+                        for (let r = 0, t = f(g, b ? 5 : 3); r < t; r++) E[r] = i((a / T) * (e + 0.5) * r);
                         for (let e = 0, t = 0; e < g; e++)
                             for (let o = +!e, a = 2 * E[e]; o * g < v * (g - e); o++, t++)
                                 o > r || e > r || (n += j[t] * _[o] * a);
@@ -55,16 +55,16 @@ self.addEventListener("message", (e) => {
                                 let e = _[t] * o;
                                 (s += k[r] * e), (p += P[r] * e);
                             }
-                        if (h)
+                        if (b)
                             for (let e = 0, r = 0; e < 5; e++)
-                                for (let t = +!e, o = 2 * E[e]; t < 5 - e; t++, r++) b += A[r] * _[t] * o;
+                                for (let t = +!e, o = 2 * E[e]; t < 5 - e; t++, r++) h += A[r] * _[t] * o;
                         let O = n - (2 / 3) * s,
                             m = (3 * n - O + p) / 2,
                             w = m - p;
                         (U[t] = f(0, 255 * l(1, m))),
                             (U[t + 1] = f(0, 255 * l(1, w))),
                             (U[t + 2] = f(0, 255 * l(1, O))),
-                            (U[t + 3] = f(0, 255 * l(1, b)));
+                            (U[t + 3] = f(0, 255 * l(1, h)));
                     }
                 return { w: M, h: T, rgba: U };
             })(

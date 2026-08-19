@@ -1,10 +1,10 @@
 "use strict";
-var i = n(381265),
-    r = n(189891);
+var n = r(381265),
+    o = r(189891);
 e.exports = function () {
-    var e = r();
+    var e = o();
     return (
-        i(
+        n(
             Array.prototype,
             { map: e },
             {

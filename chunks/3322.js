@@ -53,7 +53,7 @@ function N(e) {
         !x)
     )
         return null;
-    let R = j ? d.default.TWuDTt : d.default["25YCHl"];
+    let E = j ? d.default.TWuDTt : d.default["25YCHl"];
     return (0, i.jsx)(s.A, {
         targetElementRef: t,
         gradientColor: "nitro-pink",
@@ -64,7 +64,7 @@ function N(e) {
         popoverRef: p,
         badge: { type: "beta", variant: "expressive" },
         graphic: { src: A.A, type: "image", aspectRatio: "16/9" },
-        title: f.intl.string(R),
+        title: f.intl.string(E),
         body: f.intl.string(d.default.DFjrWw),
         onRequestClose: () => _(c.i.USER_DISMISS),
     });

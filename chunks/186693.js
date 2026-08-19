@@ -240,7 +240,7 @@ class k extends A.A {
         return RegExp("^\\s*(T|um|am|,|-)?\\s*$");
     }
 }
-var j = r(881190);
+var j = r(658809);
 class B extends F.c {
     innerPattern(e) {
         return /(diesen)?\s*(morgen|vormittag|mittags?|nachmittag|abend|nacht|mitternacht)(?=\W|$)/i;

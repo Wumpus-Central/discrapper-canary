@@ -1,13 +1,13 @@
 "use strict";
-n.d(t, { Ay: () => s, P8: () => r, sK: () => a });
-var i = n(945810);
-let r = { CHANNEL_TEXT_AREA_BARS: "ChannelTextAreaBars", TYPING_USERS: "TypingUsers" },
-    a = (0, i.mj)({
+n.d(t, { Ay: () => r, P8: () => i, sK: () => s });
+var l = n(945810);
+let i = { CHANNEL_TEXT_AREA_BARS: "ChannelTextAreaBars", TYPING_USERS: "TypingUsers" },
+    s = (0, l.mj)({
         kind: "user",
         name: "2026-08-rich-presence-invite-banner",
         defaultConfig: { showBanner: !1 },
         variations: { 1: { showBanner: !0 } },
     });
-function s(e) {
-    return a.useConfig({ location: e }).showBanner;
+function r(e) {
+    return s.useConfig({ location: e }).showBanner;
 }

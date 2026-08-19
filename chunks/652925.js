@@ -1,16 +1,16 @@
 "use strict";
-var r = (function () {
+var n = (function () {
     function e(e, t) {
-        for (var n = 0; n < t.length; n++) {
-            var r = t[n];
-            (r.enumerable = r.enumerable || !1),
-                (r.configurable = !0),
-                "value" in r && (r.writable = !0),
-                Object.defineProperty(e, r.key, r);
+        for (var r = 0; r < t.length; r++) {
+            var n = t[r];
+            (n.enumerable = n.enumerable || !1),
+                (n.configurable = !0),
+                "value" in n && (n.writable = !0),
+                Object.defineProperty(e, n.key, n);
         }
     }
-    return function (t, n, r) {
-        return n && e(t.prototype, n), r && e(t, r), t;
+    return function (t, r, n) {
+        return r && e(t.prototype, r), n && e(t, n), t;
     };
 })();
 e.exports = (function (e) {
@@ -29,7 +29,7 @@ e.exports = (function (e) {
             constructor: { value: t, enumerable: !1, writable: !0, configurable: !0 },
         })),
         e && (Object.setPrototypeOf ? Object.setPrototypeOf(t, e) : (t.__proto__ = e)),
-        r(t, [
+        n(t, [
             {
                 key: "__addChild",
                 value: function (e) {
@@ -54,4 +54,4 @@ e.exports = (function (e) {
         ]),
         t
     );
-})(n(562210));
+})(r(562210));

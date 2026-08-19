@@ -19,8 +19,8 @@ var l = n(477900),
     E = n(375708);
 function S(e) {
     var t, S;
-    let _,
-        I,
+    let I,
+        _,
         j,
         y,
         b,
@@ -30,10 +30,10 @@ function S(e) {
         { channel: M, children: R } = e,
         D = (0, s.bG)([A.A], () => A.A.isBlocked(M.getRecipientId()));
     (S = t = M.id),
-        (_ = (0, s.bG)([m.A], () => m.A.getLastMessage(S))),
-        (I = _?.changelogId),
+        (I = (0, s.bG)([m.A], () => m.A.getLastMessage(S))),
+        (_ = I?.changelogId),
         (j = (0, s.bG)([c.default], () => c.default.locale)),
-        (y = (0, s.bG)([h.A], () => h.A.getChangelog(I ?? "", j), [I, j])),
+        (y = (0, s.bG)([h.A], () => h.A.getChangelog(_ ?? "", j), [_, j])),
         (b = (0, g.A)(t)),
         (N = i.useRef(b ? Date.now() : null)),
         (v = (0, s.bG)([d.Ay], () => d.Ay.getUnreadCount(t), [t])),
@@ -45,8 +45,8 @@ function S(e) {
             N.current = Date.now();
         }, [b]),
         i.useEffect(() => {
-            b && null != I && o.A.fetchChangelog(I, j, !0);
-        }, [I, j, b]),
+            b && null != _ && o.A.fetchChangelog(_, j, !0);
+        }, [_, j, b]),
         i.useEffect(() => {
             b &&
                 null != y &&

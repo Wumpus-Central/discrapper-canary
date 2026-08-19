@@ -1,69 +1,69 @@
-n.d(t, { A: () => M });
-var s = n(627968),
-    l = n(284009),
-    i = n.n(l),
+n.d(t, { A: () => f });
+var l = n(477900),
+    i = n(284009),
+    r = n.n(i),
     a = n(17928),
-    r = n(821609),
-    d = n(534514),
-    c = n(344346),
-    u = n(303136),
-    C = n(287809),
-    o = n(676279),
-    L = n(659746),
-    m = n(375708),
-    g = n(521916);
-let M = function (e) {
-    let { type: t, text: n, buttonText: l, buttonLoading: M, hideClose: H, onClose: h } = e,
-        E = (0, a.bG)([C.default], () => {
-            let e = C.default.getCurrentUser();
-            return i()(null != e, "UserSettingsProfileCustomization: user cannot be undefined"), e;
+    s = n(821609),
+    o = n(297264),
+    u = n(344346),
+    c = n(303136),
+    d = n(287809),
+    p = n(676279),
+    m = n(659746),
+    h = n(375708),
+    C = n(649412);
+let f = function (e) {
+    let { type: t, text: n, buttonText: i, buttonLoading: f, hideClose: E, onClose: S } = e,
+        y = (0, a.bG)([d.default], () => {
+            let e = d.default.getCurrentUser();
+            return r()(null != e, "UserSettingsProfileCustomization: user cannot be undefined"), e;
         }),
-        p = (0, o.TM)()
+        A = (0, p.TM)()
             ? "https://cdn.discordapp.com/assets/content/239903eff27463f888314f6f702385c58dc4f6ef0e8e1a999e0c1051d86f2f11.mov"
             : "https://cdn.discordapp.com/assets/content/2688d55b4d0db6d6e603fdc61131d6e8d8c691bd159952078f166ea177fc970b.webm",
-        x = (function (e) {
+        P = (function (e) {
             switch (e) {
-                case L.Or.PREMIUM_UPDATED:
-                    return m.intl.string(m.t["75Wt0E"]);
-                case L.Or.PREMIUM_ACTIVATED:
-                    return m.intl.string(m.t.QWljxE);
+                case m.Or.PREMIUM_UPDATED:
+                    return h.intl.string(h.t["75Wt0E"]);
+                case m.Or.PREMIUM_ACTIVATED:
+                    return h.intl.string(h.t.QWljxE);
                 default:
-                    return m.intl.string(m.t.X79Az5);
+                    return h.intl.string(h.t.X79Az5);
             }
         })(t);
-    return (0, s.jsxs)("div", {
-        className: g.kL,
+    return (0, l.jsxs)("div", {
+        className: C.kL,
         children: [
-            (0, s.jsx)(d.D, { className: g.wx, variant: "display-md", color: "text-strong", children: x }),
-            (0, s.jsxs)("div", {
-                className: g.Dz,
+            (0, l.jsx)(o.D, { className: C.wx, variant: "display-md", color: "text-strong", children: P }),
+            (0, l.jsxs)("div", {
+                className: C.Dz,
                 children: [
-                    (0, s.jsx)(u.A, {
+                    (0, l.jsx)(c.A, {
                         fallbackImage:
                             "https://cdn.discordapp.com/assets/content/3ce3d676b7d77ce5184982326720c020ad6ba69d47068473e0096a62472a81d6.png",
-                        className: g.d9,
-                        children: (0, s.jsx)("source", { src: p }),
+                        className: C.d9,
+                        children: (0, l.jsx)("source", { src: A }),
                     }),
-                    (0, s.jsx)(c.A, {
-                        user: E,
+                    (0, l.jsx)(u.A, {
+                        user: y,
                         isHighlighted: !0,
                         nameplate: null,
-                        nameplateData: E.nameplate,
-                        className: g.M4,
+                        nameplateData: y.nameplate,
+                        className: C.M4,
                         nameplatePreviewSize: "large",
                     }),
                 ],
             }),
-            (0, s.jsx)("div", { className: g.FS, children: n }),
-            !H &&
-                (0, s.jsx)("div", {
-                    className: g.qr,
-                    children: (0, s.jsx)(r.$, {
+            (0, l.jsx)("div", { className: C.FS, children: n }),
+            !E &&
+                (0, l.jsx)("div", {
+                    className: C.qr,
+                    children: (0, l.jsx)(s.$, {
                         variant: "expressive",
                         fullWidth: !0,
-                        text: l,
-                        onClick: h,
-                        loading: M,
+                        text: i,
+                        onClick: S,
+                        loading: f,
                     }),
                 }),
         ],

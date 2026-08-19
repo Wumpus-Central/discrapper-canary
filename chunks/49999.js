@@ -1,8 +1,8 @@
 "use strict";
-n.d(t, { i: () => s, m: () => a });
+n.d(t, { i: () => a, m: () => s });
 var i,
     r,
-    s =
+    a =
         (((i = {}).PRIMARY = "primary"),
         (i.SECONDARY = "secondary"),
         (i.DISMISS = "dismiss"),
@@ -14,7 +14,7 @@ var i,
         (i.INDIRECT_ACTION = "indirect_action"),
         (i.UNKNOWN = "unknown"),
         i),
-    a =
+    s =
         (((r = {}).GUILD_HEADER_TOOLTIPS = "GUILD_HEADER_TOOLTIPS"),
         (r.CHANNEL_NOTICES = "CHANNEL_NOTICES"),
         (r.CALL_CHAT_BUTTON = "CALL_CHAT_BUTTON"),

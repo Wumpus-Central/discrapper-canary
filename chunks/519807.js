@@ -1,4 +1,4 @@
-e.exports = {
+_.exports = {
     Dm: "text-sm/semibold__9271d",
     GI: "spine__9271d",
     E_: "systemMessageSpine__9271d",

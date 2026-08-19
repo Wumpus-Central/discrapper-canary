@@ -19,8 +19,8 @@ var n = i(477900),
     j = i(808728),
     C = i(317525),
     I = i(994500),
-    N = i(287809),
-    b = i(174459),
+    b = i(287809),
+    N = i(174459),
     v = i(975571),
     A = i(488926),
     y = i(455207),
@@ -60,7 +60,7 @@ function B(t) {
     return (
         u[j.I6].forEach((t) => {
             let { channel: e } = t;
-            e.type === M.rbe.GUILD_TEXT && g.push({ value: e.id, label: (0, S.m1)(e, N.default, I.A, !0) });
+            e.type === M.rbe.GUILD_TEXT && g.push({ value: e.id, label: (0, S.m1)(e, b.default, I.A, !0) });
         }),
         (0, n.jsxs)(o.B, {
             gap: 16,
@@ -238,7 +238,7 @@ function F(t) {
 function w(t) {
     let { ...e } = t;
     s.useEffect(() => {
-        b.default.track(M.HAw.OPEN_MODAL, { type: P.bK });
+        N.default.track(M.HAw.OPEN_MODAL, { type: P.bK });
     }, []);
     let { guild: i } = (0, r.cf)([m.A], () => m.A.getProps()),
         [a, o] = s.useState("intro"),
@@ -249,16 +249,16 @@ function w(t) {
         g = !(u && p),
         [S, h] = s.useState(P.SP),
         [j, I] = s.useState(P.SP),
-        [N] = s.useState(() => !P.dR.some((t) => A.Ib(t, i))),
+        [b] = s.useState(() => !P.dR.some((t) => A.Ib(t, i))),
         [v] = s.useState(() => i?.defaultMessageNotifications),
         O = v === M.orn.ONLY_MENTIONS,
-        G = !O || !N,
+        G = !O || !b,
         R = (0, r.bG)([C.A], () => (null != i ? C.A.getEveryoneRole(i) : void 0)),
         [T, Y] = s.useState(!1);
     if (null == i) return null;
     async function w() {
         if (null == i || null == R || !T) return;
-        let t = N ? null : l.TF(R.permissions, P.e$);
+        let t = b ? null : l.TF(R.permissions, P.e$);
         if (null != t && t !== R.permissions) {
             let e = { ...R, permissions: t };
             await (0, E.JY)(i.id, [e], void 0, void 0, void 0, { throwErr: !0 });
@@ -274,7 +274,7 @@ function w(t) {
         f.A.updateGuild(e), await f.A.saveGuild(i.id, e, { throwErr: !0 });
     }
     async function K() {
-        b.default.track(M.HAw.MODAL_DISMISSED, { type: P.bK }), await e.onClose();
+        N.default.track(M.HAw.MODAL_DISMISSED, { type: P.bK }), await e.onClose();
     }
     let U = [
             {
@@ -283,7 +283,7 @@ function w(t) {
                     title: L.intl.string(L.t.ElKTeb),
                     subtitle: L.intl.string(L.t["CwC/ll"]),
                     graphic: {
-                        src: "https://cdn.discordapp.com/assets/content/39ae5093418120ef53ca1dbdd6841a468a3a038fef4770c803599a8229034977.svg",
+                        src: "https://cdn.discordapp.com/assets/content/3956ff6cb15230c8f21653fee2a8cea719aebeb9dceda42ac326d0e4bccff159.svg",
                         type: "image",
                     },
                     gradientColor: "green",
@@ -310,7 +310,7 @@ function w(t) {
             {
                 stepKey: P.pj.FINISH,
                 modalProps: { title: L.intl.string(L.t.EzGuSr) },
-                body: (0, n.jsx)(D, { guild: i, defaultNotificationSettingsMet: O, everyonePermissionsMet: N }),
+                body: (0, n.jsx)(D, { guild: i, defaultNotificationSettingsMet: O, everyonePermissionsMet: b }),
                 nextButtonProps: { text: L.intl.string(L.t.JFfins) },
             },
             {

@@ -2,7 +2,7 @@ n.d(t, { A: () => A });
 var u = n(582128),
     l = n(17928),
     r = n(993408),
-    i = n(522055),
+    i = n(475669),
     o = n(645619);
 let s = (0, n(240921).Ay)({
     name: "2026-02-expiring-powerup-coachmark",

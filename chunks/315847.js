@@ -1,33 +1,33 @@
 "use strict";
-function n(e, t) {
-    let r = t && t.cache ? t.cache : l,
-        n = t && t.serializer ? t.serializer : a;
+function r(e, t) {
+    let n = t && t.cache ? t.cache : s,
+        r = t && t.serializer ? t.serializer : o;
     return (
         t && t.strategy
             ? t.strategy
             : function (e, t) {
-                  var r, n;
-                  let a = 1 === e.length ? i : o;
-                  return (r = t.cache.create()), (n = t.serializer), a.bind(this, e, r, n);
+                  var n, r;
+                  let o = 1 === e.length ? i : a;
+                  return (n = t.cache.create()), (r = t.serializer), o.bind(this, e, n, r);
               }
-    )(e, { cache: r, serializer: n });
+    )(e, { cache: n, serializer: r });
 }
-function i(e, t, r, n) {
-    let i = null == n || "number" == typeof n || "boolean" == typeof n ? n : r(n),
-        o = t.get(i);
-    return void 0 === o && ((o = e.call(this, n)), t.set(i, o)), o;
+function i(e, t, n, r) {
+    let i = null == r || "number" == typeof r || "boolean" == typeof r ? r : n(r),
+        a = t.get(i);
+    return void 0 === a && ((a = e.call(this, r)), t.set(i, a)), a;
 }
-function o(e, t, r) {
-    let n = Array.prototype.slice.call(arguments, 3),
-        i = r(n),
-        o = t.get(i);
-    return void 0 === o && ((o = e.apply(this, n)), t.set(i, o)), o;
+function a(e, t, n) {
+    let r = Array.prototype.slice.call(arguments, 3),
+        i = n(r),
+        a = t.get(i);
+    return void 0 === a && ((a = e.apply(this, r)), t.set(i, a)), a;
 }
-r.d(t, { B: () => n, W: () => u });
-let a = function () {
+n.d(t, { B: () => r, W: () => l });
+let o = function () {
     return JSON.stringify(arguments);
 };
-class s {
+class u {
     cache;
     constructor() {
         this.cache = Object.create(null);
@@ -39,18 +39,18 @@ class s {
         this.cache[e] = t;
     }
 }
-let l = {
+let s = {
         create: function () {
-            return new s();
+            return new u();
         },
     },
-    u = {
+    l = {
         variadic: function (e, t) {
-            var r, n;
-            return (r = t.cache.create()), (n = t.serializer), o.bind(this, e, r, n);
+            var n, r;
+            return (n = t.cache.create()), (r = t.serializer), a.bind(this, e, n, r);
         },
         monadic: function (e, t) {
-            var r, n;
-            return (r = t.cache.create()), (n = t.serializer), i.bind(this, e, r, n);
+            var n, r;
+            return (n = t.cache.create()), (r = t.serializer), i.bind(this, e, n, r);
         },
     };

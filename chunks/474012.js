@@ -3,8 +3,8 @@ n.d(t, {
     K: () => c,
     T: () =>
         function e(t) {
-            if (t.productLine !== u.EZt.COLLECTIBLES) return;
-            if (t.type === u.Puh.BUNDLE) {
+            if (t.productLine !== d.EZt.COLLECTIBLES) return;
+            if (t.type === d.Puh.BUNDLE) {
                 let n = [];
                 for (let i of t.bundledSkus ?? []) {
                     let t = e(i);
@@ -14,53 +14,53 @@ n.d(t, {
                 return { type: "bundle", items: n, previewAssets: t.previewAssetPaths ?? void 0 };
             }
             let n = t.tenantMetadata?.collectibles,
-                l = n?.item;
-            if (null != l)
-                switch (l.type) {
+                o = n?.item;
+            if (null != o)
+                switch (o.type) {
                     case i.R.AVATAR_DECORATION:
                         return {
                             type: "single",
-                            item: new r.A({ skuId: t.id, type: l.type, asset: l.asset, label: l.label }),
+                            item: new r.A({ skuId: t.id, type: o.type, asset: o.asset, label: o.label }),
                         };
                     case i.R.NAMEPLATE:
                         return {
                             type: "single",
-                            item: new s.A({
+                            item: new a.A({
                                 skuId: t.id,
-                                type: l.type,
-                                asset: l.asset,
-                                label: l.label,
-                                palette: l.palette,
+                                type: o.type,
+                                asset: o.asset,
+                                label: o.label,
+                                palette: o.palette,
                             }),
                         };
                     case i.R.PROFILE_EFFECT:
                         return {
                             type: "single",
-                            item: new a.Ay({
+                            item: new s.Ay({
                                 skuId: t.id,
-                                type: l.type,
-                                title: l.title,
-                                description: l.description,
-                                thumbnailPreviewSrc: l.thumbnailPreviewSrc,
-                                reducedMotionSrc: l.reducedMotionSrc,
-                                effects: l.effects ?? [],
-                                accessibilityLabel: l.accessibilityLabel,
-                                animationType: l.animationType,
-                                staticFrameSrc: l.staticFrameSrc,
+                                type: o.type,
+                                title: o.title,
+                                description: o.description,
+                                thumbnailPreviewSrc: o.thumbnailPreviewSrc,
+                                reducedMotionSrc: o.reducedMotionSrc,
+                                effects: o.effects ?? [],
+                                accessibilityLabel: o.accessibilityLabel,
+                                animationType: o.animationType,
+                                staticFrameSrc: o.staticFrameSrc,
                             }),
                         };
                     case i.R.PROFILE_FRAME:
                         return {
                             type: "single",
-                            item: new o.A({
+                            item: new l.A({
                                 skuId: t.id,
-                                type: l.type,
-                                label: l.label,
-                                layers: l.layers,
-                                innerWidth: l.innerWidth,
-                                overflowTop: l.overflowTop,
-                                overflowBottom: l.overflowBottom,
-                                overflowHorizontal: l.overflowHorizontal,
+                                type: o.type,
+                                label: o.label,
+                                layers: o.layers,
+                                innerWidth: o.innerWidth,
+                                overflowTop: o.overflowTop,
+                                overflowBottom: o.overflowBottom,
+                                overflowHorizontal: o.overflowHorizontal,
                             }),
                         };
                     default:
@@ -71,11 +71,11 @@ n.d(t, {
     n(321073);
 var i = n(575593),
     r = n(898461),
-    s = n(837015),
-    a = n(203632),
-    o = n(892118),
-    l = n(166590),
-    u = n(652215);
+    a = n(837015),
+    s = n(203632),
+    l = n(892118),
+    o = n(166590),
+    d = n(652215);
 function c(e) {
     return null == e
         ? []
@@ -85,16 +85,16 @@ function c(e) {
                       e.push(r.A.fromServer(t));
                       break;
                   case i.R.NAMEPLATE:
-                      e.push(s.A.fromServer(t));
+                      e.push(a.A.fromServer(t));
                       break;
                   case i.R.PROFILE_EFFECT:
-                      e.push(a.Ay.fromServer(t));
+                      e.push(s.Ay.fromServer(t));
                       break;
                   case i.R.PROFILE_FRAME:
-                      e.push(o.A.fromServer(t));
+                      e.push(l.A.fromServer(t));
                       break;
                   default:
-                      e.push(l.A.fromServer(t));
+                      e.push(o.A.fromServer(t));
               }
               return e;
           }, []);

@@ -1,8 +1,8 @@
 "use strict";
 for (
     var n = "u" > typeof window && /Mac|iPod|iPhone|iPad/.test(window.navigator.platform),
-        i = { alt: "altKey", control: "ctrlKey", meta: "metaKey", shift: "shiftKey" },
-        r = {
+        r = { alt: "altKey", control: "ctrlKey", meta: "metaKey", shift: "shiftKey" },
+        i = {
             add: "+",
             break: "pause",
             cmd: "meta",
@@ -25,7 +25,7 @@ for (
             win: "meta",
             windows: "meta",
         },
-        s = {
+        a = {
             backspace: 8,
             tab: 9,
             enter: 13,
@@ -61,78 +61,78 @@ for (
             "]": 221,
             "'": 222,
         },
-        a = 1;
-    a < 20;
-    a++
+        o = 1;
+    o < 20;
+    o++
 )
-    s["f" + a] = 111 + a;
-function o(e) {
-    return r[(e = e.toLowerCase())] || e;
+    a["f" + o] = 111 + o;
+function u(e) {
+    return i[(e = e.toLowerCase())] || e;
 }
 t.isKeyHotkey = function (e, t) {
-    var n, r, a, l, u;
+    var n, i, o, s, l;
     return (
         (n = e),
-        (r = { byKey: !0 }),
-        (a = t),
-        !r || "byKey" in r || ((a = r), (r = null)),
+        (i = { byKey: !0 }),
+        (o = t),
+        !i || "byKey" in i || ((o = i), (i = null)),
         Array.isArray(n) || (n = [n]),
-        (l = n.map(function (e) {
+        (s = n.map(function (e) {
             return (function (e, t) {
                 var n = t && t.byKey,
-                    r = {},
-                    a = (e = e.replace("++", "+add")).split("+"),
-                    l = a.length;
-                for (var u in i) r[i[u]] = !1;
-                var c = !0,
-                    d = !1,
-                    _ = void 0;
+                    i = {},
+                    o = (e = e.replace("++", "+add")).split("+"),
+                    s = o.length;
+                for (var l in r) i[r[l]] = !1;
+                var d = !0,
+                    c = !1,
+                    f = void 0;
                 try {
-                    for (var h, f = a[Symbol.iterator](); !(c = (h = f.next()).done); c = !0) {
-                        var p = h.value,
-                            E = p.endsWith("?") && p.length > 1;
-                        E && (p = p.slice(0, -1));
-                        var m = o(p),
-                            g = i[m];
-                        (1 !== l && g) ||
+                    for (var h, p = o[Symbol.iterator](); !(d = (h = p.next()).done); d = !0) {
+                        var m = h.value,
+                            v = m.endsWith("?") && m.length > 1;
+                        v && (m = m.slice(0, -1));
+                        var _ = u(m),
+                            g = r[_];
+                        (1 !== s && g) ||
                             (n
-                                ? (r.key = m)
-                                : (r.which = (function (e) {
-                                      return s[(e = o(e))] || e.toUpperCase().charCodeAt(0);
-                                  })(p))),
-                            g && (r[g] = !E || null);
+                                ? (i.key = _)
+                                : (i.which = (function (e) {
+                                      return a[(e = u(e))] || e.toUpperCase().charCodeAt(0);
+                                  })(m))),
+                            g && (i[g] = !v || null);
                     }
                 } catch (e) {
-                    (d = !0), (_ = e);
+                    (c = !0), (f = e);
                 } finally {
                     try {
-                        !c && f.return && f.return();
+                        !d && p.return && p.return();
                     } finally {
-                        if (d) throw _;
+                        if (c) throw f;
                     }
                 }
-                return r;
-            })(e, r);
+                return i;
+            })(e, i);
         })),
-        (u = function (e) {
-            return l.some(function (t) {
+        (l = function (e) {
+            return s.some(function (t) {
                 return (function (e, t) {
                     for (var n in e) {
-                        var i = e[n],
-                            r = void 0;
+                        var r = e[n],
+                            i = void 0;
                         if (
-                            null != i &&
+                            null != r &&
                             (null !=
-                                (r =
+                                (i =
                                     "key" === n && null != t.key
                                         ? t.key.toLowerCase()
                                         : "which" === n
-                                          ? 91 === i && 93 === t.which
+                                          ? 91 === r && 93 === t.which
                                               ? 91
                                               : t.which
                                           : t[n]) ||
-                                !1 !== i) &&
-                            r !== i
+                                !1 !== r) &&
+                            i !== r
                         )
                             return !1;
                     }
@@ -140,6 +140,6 @@ t.isKeyHotkey = function (e, t) {
                 })(t, e);
             });
         }),
-        null == a ? u : u(a)
+        null == o ? l : l(o)
     );
 };

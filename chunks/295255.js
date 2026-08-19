@@ -1,4 +1,4 @@
-t.exports = {
+e.exports = {
     wx: "header_c04f35",
     b: "closeButton_c04f35",
     KA: "templatesList_c04f35",

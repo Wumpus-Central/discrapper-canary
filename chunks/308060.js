@@ -1,108 +1,108 @@
-var i = n(72290);
+var n = r(72290);
 !(function (e) {
     "use strict";
     if (!e.setImmediate) {
         var t,
-            n,
             r,
-            s,
+            o,
+            i,
             a,
-            o = 1,
+            s = 1,
             l = {},
             u = !1,
             c = e.document,
-            d = Object.getPrototypeOf && Object.getPrototypeOf(e);
-        (d = d && d.setTimeout ? d : e),
+            f = Object.getPrototypeOf && Object.getPrototypeOf(e);
+        (f = f && f.setTimeout ? f : e),
             "[object process]" === {}.toString.call(e.process)
                 ? (a = function (e) {
-                      i.nextTick(function () {
-                          h(e);
+                      n.nextTick(function () {
+                          d(e);
                       });
                   })
                 : (function () {
                         if (e.postMessage && !e.importScripts) {
                             var t = !0,
-                                n = e.onmessage;
+                                r = e.onmessage;
                             return (
                                 (e.onmessage = function () {
                                     t = !1;
                                 }),
                                 e.postMessage("", "*"),
-                                (e.onmessage = n),
+                                (e.onmessage = r),
                                 t
                             );
                         }
                     })()
                   ? ((t = "setImmediate$" + Math.random() + "$"),
-                    (n = function (n) {
-                        n.source === e &&
-                            "string" == typeof n.data &&
-                            0 === n.data.indexOf(t) &&
-                            h(+n.data.slice(t.length));
+                    (r = function (r) {
+                        r.source === e &&
+                            "string" == typeof r.data &&
+                            0 === r.data.indexOf(t) &&
+                            d(+r.data.slice(t.length));
                     }),
-                    e.addEventListener ? e.addEventListener("message", n, !1) : e.attachEvent("onmessage", n),
-                    (a = function (n) {
-                        e.postMessage(t + n, "*");
+                    e.addEventListener ? e.addEventListener("message", r, !1) : e.attachEvent("onmessage", r),
+                    (a = function (r) {
+                        e.postMessage(t + r, "*");
                     }))
                   : e.MessageChannel
-                    ? (((r = new MessageChannel()).port1.onmessage = function (e) {
-                          h(e.data);
+                    ? (((o = new MessageChannel()).port1.onmessage = function (e) {
+                          d(e.data);
                       }),
                       (a = function (e) {
-                          r.port2.postMessage(e);
+                          o.port2.postMessage(e);
                       }))
                     : c && "onreadystatechange" in c.createElement("script")
-                      ? ((s = c.documentElement),
+                      ? ((i = c.documentElement),
                         (a = function (e) {
                             var t = c.createElement("script");
                             (t.onreadystatechange = function () {
-                                h(e), (t.onreadystatechange = null), s.removeChild(t), (t = null);
+                                d(e), (t.onreadystatechange = null), i.removeChild(t), (t = null);
                             }),
-                                s.appendChild(t);
+                                i.appendChild(t);
                         }))
                       : (a = function (e) {
-                            setTimeout(h, 0, e);
+                            setTimeout(d, 0, e);
                         }),
-            (d.setImmediate = function (e) {
+            (f.setImmediate = function (e) {
                 "function" != typeof e && (e = Function("" + e));
-                for (var t = Array(arguments.length - 1), n = 0; n < t.length; n++) t[n] = arguments[n + 1];
-                var i = { callback: e, args: t };
-                return (l[o] = i), a(o), o++;
+                for (var t = Array(arguments.length - 1), r = 0; r < t.length; r++) t[r] = arguments[r + 1];
+                var n = { callback: e, args: t };
+                return (l[s] = n), a(s), s++;
             }),
-            (d.clearImmediate = _);
+            (f.clearImmediate = p);
     }
-    function _(e) {
+    function p(e) {
         delete l[e];
     }
-    function h(e) {
-        if (u) setTimeout(h, 0, e);
+    function d(e) {
+        if (u) setTimeout(d, 0, e);
         else {
             var t = l[e];
             if (t) {
                 u = !0;
                 try {
-                    var n = t.callback,
-                        i = t.args;
-                    switch (i.length) {
+                    var r = t.callback,
+                        n = t.args;
+                    switch (n.length) {
                         case 0:
-                            n();
+                            r();
                             break;
                         case 1:
-                            n(i[0]);
+                            r(n[0]);
                             break;
                         case 2:
-                            n(i[0], i[1]);
+                            r(n[0], n[1]);
                             break;
                         case 3:
-                            n(i[0], i[1], i[2]);
+                            r(n[0], n[1], n[2]);
                             break;
                         default:
-                            n.apply(void 0, i);
+                            r.apply(void 0, n);
                     }
                 } finally {
-                    _(e), (u = !1);
+                    p(e), (u = !1);
                 }
             }
         }
     }
-})("u" < typeof self ? (void 0 === n.g ? this : n.g) : self);
+})("u" < typeof self ? (void 0 === r.g ? this : r.g) : self);

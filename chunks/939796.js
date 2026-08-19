@@ -1,6 +1,6 @@
-e.exports = (function () {
+t.exports = (function () {
     "use strict";
-    function e() {
+    function t() {
         (this.dataPoints_ = []),
             (this.color_ = "red"),
             (this.isVisible_ = !0),
@@ -8,61 +8,61 @@ e.exports = (function () {
             (this.cacheStepSize_ = 0),
             (this.cacheValues_ = []);
     }
-    function t(e, t) {
-        (this.time = e), (this.value = t);
+    function i(t, i) {
+        (this.time = t), (this.value = i);
     }
     return (
-        (e.prototype = {
+        (t.prototype = {
             toJSON: function () {
                 if (this.dataPoints_.length < 1) return {};
-                for (var e = [], t = 0; t < this.dataPoints_.length; ++t) e.push(this.dataPoints_[t].value);
+                for (var t = [], i = 0; i < this.dataPoints_.length; ++i) t.push(this.dataPoints_[i].value);
                 return {
                     startTime: this.dataPoints_[0].time,
                     endTime: this.dataPoints_[this.dataPoints_.length - 1].time,
-                    values: JSON.stringify(e),
+                    values: JSON.stringify(t),
                 };
             },
-            addPoint: function (e, n) {
-                var i = new Date(e);
-                this.dataPoints_.push(new t(i, n)), this.dataPoints_.length > 1e3 && this.dataPoints_.shift();
+            addPoint: function (t, e) {
+                var s = new Date(t);
+                this.dataPoints_.push(new i(s, e)), this.dataPoints_.length > 1e3 && this.dataPoints_.shift();
             },
-            setPoints: function (e) {
-                let t = Math.max(0, e.length - 1e3);
-                this.dataPoints_ = e.slice(t);
+            setPoints: function (t) {
+                let i = Math.max(0, t.length - 1e3);
+                this.dataPoints_ = t.slice(i);
             },
             isVisible: function () {
                 return this.isVisible_;
             },
-            show: function (e) {
-                this.isVisible_ = e;
+            show: function (t) {
+                this.isVisible_ = t;
             },
             getColor: function () {
                 return this.color_;
             },
-            setColor: function (e) {
-                this.color_ = e;
+            setColor: function (t) {
+                this.color_ = t;
             },
             getCount: function () {
                 return this.dataPoints_.length;
             },
-            getValues: function (e, t, n) {
+            getValues: function (t, i, e) {
                 return (
-                    (this.cacheStartTime_ == e && this.cacheStepSize_ == t && this.cacheValues_.length == n) ||
-                        ((this.cacheValues_ = this.getValuesInternal_(e, t, n)),
-                        (this.cacheStartTime_ = e),
-                        (this.cacheStepSize_ = t)),
+                    (this.cacheStartTime_ == t && this.cacheStepSize_ == i && this.cacheValues_.length == e) ||
+                        ((this.cacheValues_ = this.getValuesInternal_(t, i, e)),
+                        (this.cacheStartTime_ = t),
+                        (this.cacheStepSize_ = i)),
                     this.cacheValues_
                 );
             },
-            getValuesInternal_: function (e, t, n) {
-                for (var i = [], r = 0, s = 0, a = e, o = 0; o < n; ++o) {
-                    for (; r < this.dataPoints_.length && this.dataPoints_[r].time < a; )
-                        (s = this.dataPoints_[r].value), ++r;
-                    (i[o] = s), (a += t);
+            getValuesInternal_: function (t, i, e) {
+                for (var s = [], a = 0, h = 0, n = t, r = 0; r < e; ++r) {
+                    for (; a < this.dataPoints_.length && this.dataPoints_[a].time < n; )
+                        (h = this.dataPoints_[a].value), ++a;
+                    (s[r] = h), (n += i);
                 }
-                return i;
+                return s;
             },
         }),
-        e
+        t
     );
 })();

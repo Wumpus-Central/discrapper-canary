@@ -1,20 +1,20 @@
 "use strict";
-n.d(t, { n: () => s });
-var r = n(163675),
-    i = n(654978),
-    a = n(576024),
-    o = n(582128);
+r.d(t, { n: () => s });
+var n = r(163675),
+    o = r(654978),
+    i = r(576024),
+    a = r(582128);
 function s(e, t) {
-    let { collection: n, onLoadMore: s, scrollOffset: l = 1 } = e,
-        u = (0, o.useRef)(null),
-        c = (0, i.J)((e) => {
+    let { collection: r, onLoadMore: s, scrollOffset: l = 1 } = e,
+        u = (0, a.useRef)(null),
+        c = (0, o.J)((e) => {
             for (let t of e) t.isIntersecting && s && s();
         });
-    (0, a.N)(
+    (0, i.N)(
         () => (
             t.current &&
                 ((u.current = new IntersectionObserver(c, {
-                    root: (0, r.m)(null == t ? void 0 : t.current),
+                    root: (0, n.m)(null == t ? void 0 : t.current),
                     rootMargin: `0px ${100 * l}% ${100 * l}% ${100 * l}%`,
                 })),
                 u.current.observe(t.current)),
@@ -22,6 +22,6 @@ function s(e, t) {
                 u.current && u.current.disconnect();
             }
         ),
-        [n, c, t, l],
+        [r, c, t, l],
     );
 }

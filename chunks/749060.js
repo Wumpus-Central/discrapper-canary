@@ -18,9 +18,9 @@ function h(e) {
         f = (0, C.bG)([u.A], () => u.A.getEstimatedMemberSearchCountByGuildId(t), [t]),
         j = (0, C.cf)([u.A], () => u.A.getPaginationStateByGuildId(t), [t]),
         p = (0, c.Ms)(t),
-        V = i.useMemo(() => o.MO.map((e) => ({ id: e.toString(), value: e, label: Number(e).toLocaleString() })), []),
-        v = new Intl.NumberFormat(H.intl.currentLocale).format(f),
-        A = H.intl.formatToPlainString(H.t["RNDnQ/"], { count: p ? "..." : v }),
+        v = i.useMemo(() => o.MO.map((e) => ({ id: e.toString(), value: e, label: Number(e).toLocaleString() })), []),
+        V = new Intl.NumberFormat(H.intl.currentLocale).format(f),
+        A = H.intl.formatToPlainString(H.t["RNDnQ/"], { count: p ? "..." : V }),
         M = f > j.pageSize || p,
         L = f > o.MO["0"];
     return (0, n.jsxs)("div", {
@@ -40,7 +40,7 @@ function h(e) {
                                   selectionMode: "single",
                                   label: A,
                                   hideLabel: !0,
-                                  options: V,
+                                  options: v,
                                   value: j.pageSize,
                                   onSelectionChange: function (e) {
                                       g(() => {

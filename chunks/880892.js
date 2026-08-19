@@ -1,4 +1,4 @@
-a.exports = {
+_.exports = {
     x6: "button__06eda",
     zB: "primary__06eda",
     r9: "disabled__06eda",

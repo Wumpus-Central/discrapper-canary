@@ -9,16 +9,16 @@ var t = {
         propTypes: !0,
         type: !0,
     },
-    n = { name: !0, length: !0, prototype: !0, caller: !0, arguments: !0, arity: !0 },
-    i = "function" == typeof Object.getOwnPropertySymbols;
-e.exports = function (e, r, s) {
-    if ("string" != typeof r) {
-        var a = Object.getOwnPropertyNames(r);
-        i && (a = a.concat(Object.getOwnPropertySymbols(r)));
-        for (var o = 0; o < a.length; ++o)
-            if (!t[a[o]] && !n[a[o]] && (!s || !s[a[o]]))
+    r = { name: !0, length: !0, prototype: !0, caller: !0, arguments: !0, arity: !0 },
+    n = "function" == typeof Object.getOwnPropertySymbols;
+e.exports = function (e, o, i) {
+    if ("string" != typeof o) {
+        var a = Object.getOwnPropertyNames(o);
+        n && (a = a.concat(Object.getOwnPropertySymbols(o)));
+        for (var s = 0; s < a.length; ++s)
+            if (!t[a[s]] && !r[a[s]] && (!i || !i[a[s]]))
                 try {
-                    e[a[o]] = r[a[o]];
+                    e[a[s]] = o[a[s]];
                 } catch (e) {}
     }
     return e;

@@ -1,8 +1,8 @@
-n.d(t, { A: () => s });
+n.d(t, { A: () => a });
 var r = n(778712),
-    i = n(486020),
-    l = n(562819);
-let s = function (e) {
-    let { legacyAssetId: t, skuId: n, size: s = r._3.SIZE_80, canAnimate: a } = e;
-    return (0, i.F_)({ avatarDecoration: { asset: t, skuId: n }, size: (0, l.Te)(s), canAnimate: a });
+    l = n(486020),
+    i = n(562819);
+let a = function (e) {
+    let { legacyAssetId: t, skuId: n, size: a = r._3.SIZE_80, canAnimate: s } = e;
+    return (0, l.F_)({ avatarDecoration: { asset: t, skuId: n }, size: (0, i.Te)(a), canAnimate: s });
 };

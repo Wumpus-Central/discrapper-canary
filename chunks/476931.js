@@ -1,32 +1,32 @@
 "use strict";
 n.d(t, {
-    BC: () => l,
-    It: () => v,
-    Qy: () => g,
-    U6: () => I,
-    XY: () => y,
-    Yt: () => m,
-    Z8: () => o,
-    Zq: () => E,
-    _k: () => N,
-    a0: () => u,
-    iq: () => d,
-    kI: () => T,
-    oE: () => A,
-    sR: () => O,
+    BC: () => o,
+    It: () => R,
+    Qy: () => p,
+    U6: () => m,
+    XY: () => N,
+    Yt: () => f,
+    Z8: () => l,
+    Zq: () => I,
+    _k: () => O,
+    a0: () => d,
+    iq: () => u,
+    kI: () => g,
+    oE: () => T,
+    sR: () => y,
     w3: () => C,
     wS: () => c,
-    z3: () => R,
+    z3: () => L,
 });
 var i = n(310784),
     r = n.n(i),
-    s = n(935444),
-    a = n(818348);
-let o = { TWILIGHT: 1, PLUM: 2, FIRE: 3, GOLD_DUST: 4, MOSS: 5, JADE: 6, OBSIDIAN: 7, OCEAN: 8, DENIM: 9, BLURPLE: 10 },
-    l = 74,
-    u = "#5865F2",
+    a = n(935444),
+    s = n(818348);
+let l = { TWILIGHT: 1, PLUM: 2, FIRE: 3, GOLD_DUST: 4, MOSS: 5, JADE: 6, OBSIDIAN: 7, OCEAN: 8, DENIM: 9, BLURPLE: 10 },
+    o = 74,
+    d = "#5865F2",
     c = 15,
-    d = 75;
+    u = 75;
 function _(e, t, n) {
     return {
         color: e,
@@ -38,72 +38,72 @@ function _(e, t, n) {
         ],
     };
 }
-let h = [o.TWILIGHT, o.DENIM, o.OCEAN, o.BLURPLE, o.OBSIDIAN, o.PLUM, o.FIRE, o.GOLD_DUST, o.MOSS, o.JADE],
-    f = {
-        [o.TWILIGHT]: {
-            id: o.TWILIGHT,
+let E = [l.TWILIGHT, l.DENIM, l.OCEAN, l.BLURPLE, l.OBSIDIAN, l.PLUM, l.FIRE, l.GOLD_DUST, l.MOSS, l.JADE],
+    A = {
+        [l.TWILIGHT]: {
+            id: l.TWILIGHT,
             darkAppearance: _("#69426A", "#111731", 100),
             lightAppearance: _("#FA9EFF", "#5A7EFE", 100),
         },
-        [o.DENIM]: {
-            id: o.DENIM,
+        [l.DENIM]: {
+            id: l.DENIM,
             darkAppearance: _("#5359AD", "#121238", 100),
             lightAppearance: _("#DBDBFF", "#6060FF", 100),
         },
-        [o.OCEAN]: {
-            id: o.OCEAN,
+        [l.OCEAN]: {
+            id: l.OCEAN,
             darkAppearance: _("#245B92", "#141D40", 100),
             lightAppearance: _("#9ADBF7", "#2D3CCA", 100),
         },
-        [o.BLURPLE]: {
-            id: o.BLURPLE,
+        [l.BLURPLE]: {
+            id: l.BLURPLE,
             darkAppearance: _("#533D9E", "#1A1035", 100),
             lightAppearance: _("#C3BFFF", "#816BDC", 100),
         },
-        [o.OBSIDIAN]: {
-            id: o.OBSIDIAN,
+        [l.OBSIDIAN]: {
+            id: l.OBSIDIAN,
             darkAppearance: _("#5E4C85", "#1E1740", 100),
             lightAppearance: _("#B59DF2", "#8F89D2", 100),
         },
-        [o.PLUM]: {
-            id: o.PLUM,
+        [l.PLUM]: {
+            id: l.PLUM,
             darkAppearance: _("#8A3F7F", "#2C0D25", 100),
             lightAppearance: _("#E893FF", "#FFADDC", 100),
         },
-        [o.FIRE]: {
-            id: o.FIRE,
+        [l.FIRE]: {
+            id: l.FIRE,
             darkAppearance: _("#9B2C2C", "#2A0C0C", 50),
             lightAppearance: _("#FFEBCA", "#FF8989", 50),
         },
-        [o.GOLD_DUST]: {
-            id: o.GOLD_DUST,
+        [l.GOLD_DUST]: {
+            id: l.GOLD_DUST,
             darkAppearance: _("#6C523D", "#241912", 50),
             lightAppearance: _("#FFE7DA", "#FFD89B", 50),
         },
-        [o.MOSS]: {
-            id: o.MOSS,
+        [l.MOSS]: {
+            id: l.MOSS,
             darkAppearance: _("#58694E", "#222A1C", 50),
             lightAppearance: _("#B7D19F", "#B1DCA4", 50),
         },
-        [o.JADE]: {
-            id: o.JADE,
+        [l.JADE]: {
+            id: l.JADE,
             darkAppearance: _("#297071", "#18203F", 50),
             lightAppearance: _("#C5F0D2", "#60ADB2", 50),
         },
     },
-    p = new Set(Object.values(o)),
-    E = h.map((e) => f[e]);
-function m(e) {
-    return null != e && p.has(e) ? f[e] : null;
+    h = new Set(Object.values(l)),
+    I = E.map((e) => A[e]);
+function f(e) {
+    return null != e && h.has(e) ? A[e] : null;
 }
-function g() {
-    return { presetId: E[0].id, customUserThemeSettings: void 0 };
+function p() {
+    return { presetId: I[0].id, customUserThemeSettings: void 0 };
 }
-function A(e, t) {
-    return t === a.NJ.LIGHT ? e.lightAppearance : e.darkAppearance;
+function T(e, t) {
+    return t === s.NJ.LIGHT ? e.lightAppearance : e.darkAppearance;
 }
-function I(e, t) {
-    let n = A(e, t),
+function m(e, t) {
+    let n = T(e, t),
         i = n.colors
             .map((e) => {
                 let { hex: t, stop: n } = e;
@@ -112,38 +112,38 @@ function I(e, t) {
             .join(", ");
     return `linear-gradient(${n.angle}deg, ${i})`;
 }
-function T(e, t) {
-    let n = R(e, t),
+function g(e, t) {
+    let n = L(e, t),
         i = r()(n),
-        s = t === a.NJ.LIGHT ? 0.2 : -0.2,
-        o = Math.max(0, Math.min(1, i.get("hsl.l") + s));
-    return [n, i.set("hsl.l", o).hex()];
+        a = t === s.NJ.LIGHT ? 0.2 : -0.2,
+        l = Math.max(0, Math.min(1, i.get("hsl.l") + a));
+    return [n, i.set("hsl.l", l).hex()];
 }
 function S(e, t) {
     return Math.floor(Math.random() * (t - e + 1)) + e;
 }
-function y() {
-    let e = s.yK[S(0, s.yK.length - 1)],
+function N() {
+    let e = a.yK[S(0, a.yK.length - 1)],
         t = Math.min(45, Math.round(100 * r()(e).get("hsl.l")));
-    return { color: C(N(e, t)), baseMix: S(70, 80) };
+    return { color: C(O(e, t)), baseMix: S(70, 80) };
 }
 function C(e) {
     return r()(e).set("hsl.s", 0.4).hex();
 }
-function N(e, t) {
+function O(e, t) {
     return r()(e)
-        .set("hsl.l", Math.max(c / 100, Math.min(d / 100, t / 100)))
+        .set("hsl.l", Math.max(c / 100, Math.min(u / 100, t / 100)))
         .hex();
 }
-function v(e) {
-    return e === a.NJ.LIGHT ? { minTone: c + 40, maxTone: d } : { minTone: c, maxTone: d - 40 };
+function R(e) {
+    return e === s.NJ.LIGHT ? { minTone: c + 40, maxTone: u } : { minTone: c, maxTone: u - 40 };
 }
-function R(e, t) {
-    let { minTone: n, maxTone: i } = v(t),
-        s = r()(e),
-        a = Math.max(c, Math.min(d, 100 * s.get("hsl.l")));
-    return s.set("hsl.l", (n + ((a - c) / (d - c)) * (i - n)) / 100).hex();
+function L(e, t) {
+    let { minTone: n, maxTone: i } = R(t),
+        a = r()(e),
+        s = Math.max(c, Math.min(u, 100 * a.get("hsl.l")));
+    return a.set("hsl.l", (n + ((s - c) / (u - c)) * (i - n)) / 100).hex();
 }
-function O(e, t) {
+function y(e, t) {
     return r()(e).set("hsl.h", t).hex();
 }

@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => O }), n(938796), n(321073), n(323874), n(14289), n(35956);
+n.d(t, { A: () => R }), n(938796), n(321073), n(323874), n(14289), n(35956);
 var i = n(435558),
     r = n.n(i),
     a = n(132500),
@@ -156,7 +156,7 @@ class C {
                 : this._subscribed || this.subscribe());
     }
 }
-class R extends l.A {
+class O extends l.A {
     _worker;
     actions = {
         LOGOUT: () => this._handleLogout(),
@@ -445,4 +445,4 @@ class R extends l.A {
             this.updateUsers(i, "guild_scheduled_event_users_fetch_success");
     };
 }
-let O = new R();
+let R = new O();

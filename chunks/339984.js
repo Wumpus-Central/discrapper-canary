@@ -2,7 +2,7 @@
 n.d(t, {
     AB: () => T,
     CK: () => A,
-    G9: () => D,
+    G9: () => y,
     HL: () => s,
     Ip: () => l,
     Jz: () => C,
@@ -24,7 +24,7 @@ n.d(t, {
     sW: () => L,
     wL: () => p,
     yZ: () => d,
-    yi: () => y,
+    yi: () => D,
 });
 var i,
     r,
@@ -62,8 +62,8 @@ let l = 432,
     O = 172.8,
     R = 108,
     L = 432 / (16 / 9),
-    D = a.Im.width / a.Im.height,
-    y = l / D;
+    y = a.Im.width / a.Im.height,
+    D = l / y;
 var v =
     (((r = {})[(r.CROP_ANIMATED_IMAGE_START = 0)] = "CROP_ANIMATED_IMAGE_START"),
     (r[(r.CROP_ANIMATED_IMAGE_COMPLETE = 1)] = "CROP_ANIMATED_IMAGE_COMPLETE"),

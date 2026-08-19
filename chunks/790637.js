@@ -1,8 +1,8 @@
 "use strict";
-function i() {
+function n() {
     return !1;
 }
-function r() {
+function o() {
     return !1;
 }
-n.d(t, { D5: () => i, Nf: () => r });
+r.d(t, { D5: () => n, Nf: () => o });

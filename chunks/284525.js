@@ -1,38 +1,38 @@
 "use strict";
-n.d(t, { A: () => l });
-var i = n(477900);
+n.d(t, { A: () => a });
+var l = n(477900);
 n(582128);
-var r = n(866665),
-    a = n(821609),
-    s = n(102853);
-function l(e) {
+var i = n(866665),
+    s = n(821609),
+    r = n(102853);
+function a(e) {
     let {
             activity: t,
             embeddedActivity: n,
-            user: l,
+            user: a,
             onAction: o,
-            location: d,
+            location: u,
             variant: c = "secondary",
-            size: u = "sm",
-            ..._
+            size: d = "sm",
+            ...h
         } = e,
-        E = (0, s.l)({ activity: t ?? void 0, embeddedActivity: n, user: l, onGameJoin: o, location: d });
-    if (null == E) return null;
-    let { isJoining: A, handleJoinRequest: h, buttonCTA: I, tooltip: f, isEnabled: p } = E;
-    return (0, i.jsx)(
-        r.m,
+        m = (0, r.l)({ activity: t ?? void 0, embeddedActivity: n, user: a, onGameJoin: o, location: u });
+    if (null == m) return null;
+    let { isJoining: f, handleJoinRequest: p, buttonCTA: g, tooltip: x, isEnabled: A } = m;
+    return (0, l.jsx)(
+        i.m,
         {
-            text: f,
-            asContainer: !p,
-            children: (0, i.jsx)(a.$, {
+            text: x,
+            asContainer: !A,
+            children: (0, l.jsx)(s.$, {
                 variant: c,
-                size: u,
-                text: I,
-                onClick: h,
-                disabled: !p,
-                loading: A,
+                size: d,
+                text: g,
+                onClick: p,
+                disabled: !A,
+                loading: f,
                 fullWidth: !0,
-                ..._,
+                ...h,
             }),
         },
         "join",

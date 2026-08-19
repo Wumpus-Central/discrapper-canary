@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { D: () => s, M: () => r });
+n.d(t, { D: () => a, M: () => r });
 var i,
     r =
         (((i = {}).Unknown = "unknown"),
@@ -10,7 +10,7 @@ var i,
         (i.Crashpad = "crashpad"),
         (i.Clips = "clips"),
         i);
-class s {
+class a {
     cpuCoreCount;
     getSystemMetrics() {
         return Promise.resolve(null);

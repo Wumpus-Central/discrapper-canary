@@ -25,12 +25,12 @@ var i = n(477900),
     O = n(309010),
     R = n(287809),
     L = n(795816),
-    D = n(933958),
-    y = n(851907),
+    y = n(933958),
+    D = n(851907),
     v = n(838274),
     b = n(536246),
     M = n(108959),
-    P = n(809239),
+    P = n(835228),
     U = n(56129),
     w = n(51250),
     G = n(360469),
@@ -43,18 +43,18 @@ var i = n(477900),
 function j(e) {
     let { channel: t, isLoading: n } = e,
         [a, E] = r.useState(!1),
-        A = (0, l.bG)([D.Ay], () => D.Ay.getCurrentEmbeddedActivity()),
+        A = (0, l.bG)([y.Ay], () => y.Ay.getCurrentEmbeddedActivity()),
         v = A?.applicationId,
-        j = (0, l.bG)([D.Ay], () => null != v && D.Ay.isProxyTicketRefreshing(v), [v]),
-        W = (0, l.bG)([D.Ay], () => D.Ay.getActivityPanelMode()),
+        j = (0, l.bG)([y.Ay], () => null != v && y.Ay.isProxyTicketRefreshing(v), [v]),
+        W = (0, l.bG)([y.Ay], () => y.Ay.getActivityPanelMode()),
         Y = (0, h.h)(v),
         K = A?.launchId,
         $ = (0, l.bG)([O.Ay], () => O.Ay.getChannelId() === t?.id),
-        { dockedRect: z, isHidden: q } = (0, l.cf)([C.A], () => {
+        { dockedRect: z, isHidden: Z } = (0, l.cf)([C.A], () => {
             let e = C.A.pipWindow;
             return { dockedRect: null != e ? C.A.getDockedRect(e.id) : null, isHidden: C.A.isEmbeddedActivityHidden() };
         }),
-        Z = (0, y.xi)({ channelId: t?.id }),
+        q = (0, D.xi)({ channelId: t?.id }),
         {
             activityParticipant: X,
             selectedParticipant: Q,
@@ -70,7 +70,7 @@ function j(e) {
             selectedParticipant: null != t ? f.A.getSelectedParticipant(t.id) : null,
             participantsOpen: null != t && f.A.getParticipantsOpen(t.id),
         })),
-        ee = $ || null != Z,
+        ee = $ || null != q,
         et = (0, M.A)(t?.id),
         en = t?.id,
         ei = t?.getGuildId(),
@@ -79,7 +79,7 @@ function j(e) {
         es = et && er && ea,
         el = et && Q?.type !== F.lp.ACTIVITY,
         eo = !et && W === x.Gd.PIP,
-        ed = (!ee || (ee && (el || eo || es) && null == z)) && !q,
+        ed = (!ee || (ee && (el || eo || es) && null == z)) && !Z,
         ec = ed && null != C.A.pipVideoWindow && null != C.A.pipActivityWindow;
     function eu() {
         if (null != t) {
@@ -88,11 +88,11 @@ function j(e) {
                     t.id,
                     (0, I.Qt)({ applicationId: A.applicationId, instanceId: A.compositeInstanceId }),
                 ),
-                es && (0, p.zD)(t.id, !0);
+                es && (0, p.UV)(!0, t.id);
             let e = t.getGuildId() ?? k.ME;
             u.A.channelListScrollTo(e, t.id), (0, g.uh)(e, t.id);
         }
-        null == Z && (0, _.bz)();
+        null == q && (0, _.bz)();
     }
     function e_() {
         E(!a);
@@ -122,7 +122,7 @@ function j(e) {
                     [B.N7]: r && !A.config?.useInteractivePIP,
                     [V.p0]: ed && !a,
                     [V.ST]: ed && a,
-                    [V.R]: q,
+                    [V.R]: Z,
                     [V.Gq]: ec,
                 }),
                 noBorder: !ed,
@@ -211,7 +211,7 @@ function j(e) {
 }
 let W = (e) => {
     let { channel: t, ...n } = e,
-        r = D.Ay.getCurrentEmbeddedActivity();
+        r = y.Ay.getCurrentEmbeddedActivity();
     (0, v.A)({ connectedEmbeddedActivity: r });
     let { analyticsLocations: a } = (0, A.Ay)(E.A.ACTIVITY_PIP);
     return (0, i.jsx)(A.f5, { value: a, children: (0, i.jsx)(j, { channel: t, isLoading: null == r, ...n }) });

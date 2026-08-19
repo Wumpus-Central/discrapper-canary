@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => s });
+n.d(t, { A: () => a });
 var i = n(187522);
 class r extends i.V {
     requestPermissionCore(e, t) {
@@ -14,4 +14,4 @@ class r extends i.V {
     }
     openAlertModal(e) {}
 }
-let s = new r();
+let a = new r();

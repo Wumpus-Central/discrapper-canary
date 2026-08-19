@@ -18,22 +18,22 @@ var n = s(562708),
 function g(e) {
     let { componentId: t, promotionId: s, promotionBannerMarketingComponentFields: g } = e,
         { analyticsLocations: f } = (0, m.Ay)(),
-        A = (0, x.p)();
+        E = (0, x.p)();
     (0, p.A)({
         type: n.ImpressionTypes.VIEW,
         name: n.ImpressionNames.PREMIUM_MARKETING_COMPONENT,
         properties: { component_type: i.C.MARKETING_PAGE_BANNER, component_id: t, promotion_id: s },
     });
-    let E = (0, h.h)({
+    let A = (0, h.h)({
             buttonAction: g.button?.buttonAction ?? o.d.OPEN_TIER_2_PAYMENT_MODAL,
             deeplinkSection: g.button?.deeplinkSection,
             applicationId: g.button?.navigableStorefrontApplicationId?.value,
             analyticsLocations: f,
-            analyticsLocation: A.location,
+            analyticsLocation: E.location,
         }),
         C = (0, j.a)(g.body),
         T = (0, j.C)(g.helpArticle, g.helpArticleId),
-        { icon: I } = (0, h.x)({ buttonAction: g.button?.buttonAction });
+        { icon: N } = (0, h.x)({ buttonAction: g.button?.buttonAction });
     return (0, l.jsxs)("div", {
         className: _.kL,
         children: [
@@ -68,9 +68,9 @@ function g(e) {
                     children: (0, l.jsx)(d.$, {
                         variant: g.buttonVariant === c.F.PRIMARY ? "primary" : "expressive",
                         size: "md",
-                        onClick: E,
+                        onClick: A,
                         text: g.button.copy,
-                        icon: I,
+                        icon: N,
                     }),
                 }),
         ],

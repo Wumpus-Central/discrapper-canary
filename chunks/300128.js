@@ -18,7 +18,7 @@ function E() {
         children: (0, a.jsxs)(s.E, {
             variant: "text-sm/normal",
             className: _.Q,
-            children: [u.intl.string(u.t.UoW002), " ", u.intl.format(u.t.BPDKoA, { helpdeskArticle: c.B })],
+            children: [u.intl.string(u.t.UoW002), " ", u.intl.format(u.t.BPDKoA, { helpdeskArticle: c.M })],
         }),
     });
 }

@@ -1,38 +1,38 @@
-r.d(t, { A: () => R });
-var i = r(636537),
-    n = r(626584),
-    a = r(152007),
-    l = r(867455),
-    _ = r(734057),
-    S = r(232835),
-    s = r(222823),
-    u = r(287809),
-    o = r(935208),
-    d = r(652215);
-let I = new n.A("markUnread");
-async function R(e, t) {
-    let r = u.default.getCurrentUser();
-    if (null == r) return;
-    let n = S.A.getMessages(e),
-        R = n
+n.d(t, { A: () => h });
+var i = n(636537),
+    l = n(626584),
+    r = n(152007),
+    s = n(867455),
+    a = n(734057),
+    o = n(232835),
+    d = n(568548),
+    u = n(287809),
+    c = n(935208),
+    E = n(652215);
+let g = new l.A("markUnread");
+async function h(e, t) {
+    let n = u.default.getCurrentUser();
+    if (null == n) return;
+    let l = o.A.getMessages(e),
+        h = l
             .toArray()
-            .filter((e) => 0 > o.default.compare(e.id, t))
-            .sort((e, t) => o.default.compare(e.id, t.id))
+            .filter((e) => 0 > c.default.compare(e.id, t))
+            .sort((e, t) => c.default.compare(e.id, t.id))
             .reverse()[0],
-        E = null == R ? o.default.atPreviousMillisecond(t) : R.id,
-        C = 0;
-    n.forAll((e) => {
-        o.default.compare(e.id, E) > 0 && (0, s.Wm)(e, r) && C++;
+        A = null == h ? c.default.atPreviousMillisecond(t) : h.id,
+        _ = 0;
+    l.forAll((e) => {
+        c.default.compare(e.id, A) > 0 && (0, d.Wm)(e, n) && _++;
     });
-    let h = _.A.getChannel(e);
-    null != h &&
-        h.isThread() &&
-        (h.isArchivedThread() && (await l.A.unarchiveThread(h, !1)),
-        a.A.hasJoined(e) || (await l.A.joinThread(h, "Mark Unread"))),
-        I.log("Marking unread", { channelId: e, messageId: t }),
+    let S = a.A.getChannel(e);
+    null != S &&
+        S.isThread() &&
+        (S.isArchivedThread() && (await s.A.unarchiveThread(S, !1)),
+        r.A.hasJoined(e) || (await s.A.joinThread(S, "Mark Unread"))),
+        g.log("Marking unread", { channelId: e, messageId: t }),
         i.Bo.post({
-            url: d.Rsh.MESSAGE_ACK(e, E),
-            body: { manual: !0, mention_count: C },
+            url: E.Rsh.MESSAGE_ACK(e, A),
+            body: { manual: !0, mention_count: _ },
             oldFormErrors: !0,
             rejectWithError: !0,
         });

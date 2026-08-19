@@ -1,10 +1,10 @@
 "use strict";
-n.d(t, { Br: () => s, I2: () => a, Ms: () => o, Oy: () => r });
+n.d(t, { Br: () => a, I2: () => s, Ms: () => l, Oy: () => r });
 var i = n(41984);
 function r(e) {
     return e;
 }
-function s(e) {
+function a(e) {
     switch (e) {
         case "click":
         case "unknown":
@@ -19,7 +19,7 @@ function s(e) {
             return "mousemove";
     }
 }
-function a() {
+function s() {
     return {
         popoutOpened: !1,
         windowHandleSentToNative: !1,
@@ -32,7 +32,7 @@ function a() {
         errorMessage: null,
     };
 }
-let o = new Set([
+let l = new Set([
     i.AR.WAITING_FOR_POPOUT_OPEN,
     i.AR.WAITING_FOR_REACT_INITIALIZATION,
     i.AR.WAITING_FOR_PID_FOCUS,

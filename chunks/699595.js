@@ -9,19 +9,19 @@ function o(e) {
         { priceOptions: n, trialId: o, metadata: u, discountInvoicePreview: c } = e,
         { isEligibleForDiscount: d, discountOffer: p } = (0, s.i)(),
         m = (0, r.YJ)(p),
-        C = !0 === n.loaded,
-        h = null != c,
+        h = !0 === n.loaded,
+        C = null != c,
         [f, E] = (0, i.YV)({
             items: null != m ? [{ planId: m, quantity: 1 }] : [],
             renewal: !1,
-            preventFetch: h || !d || null == m || !C,
+            preventFetch: C || !d || null == m || !h,
             trialId: o,
             paymentSourceId: n.paymentSourceId,
             currency: n.currency,
             metadata: u,
         }),
-        S = h ? c : f,
-        A = l.useMemo(() => {
+        S = C ? c : f,
+        y = l.useMemo(() => {
             let e = d ? (S ?? null) : null;
             return {
                 discountOffer: p,
@@ -38,13 +38,13 @@ function o(e) {
         })),
         l.useEffect(
             () => (
-                t(A),
+                t(y),
                 () => {
                     t(r.TI);
                 }
             ),
-            [A, t],
+            [y, t],
         ),
-        A
+        y
     );
 }

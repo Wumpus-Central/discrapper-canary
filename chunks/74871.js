@@ -1,8 +1,8 @@
 n.d(t, { A: () => i });
-var r = n(627968),
+var r = n(477900),
     l = n(498381),
     a = n(891167),
-    s = n(394666);
+    s = n(349986);
 let i = function (e) {
     let { bannerSrc: t, logoSrc: n, backgroundColor: i, href: c, children: o } = e;
     return (0, r.jsxs)("div", {

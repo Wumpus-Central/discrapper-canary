@@ -1,9 +1,9 @@
 "use strict";
-n.r(t), n.d(t, { XXH64: () => u, hash: () => c });
-let i = 2n ** 64n - 1n,
-    r = new TextEncoder();
-function s(e, t, n, i) {
-    return BigInt(e) | (BigInt(t) << 16n) | (BigInt(n) << 32n) | (BigInt(i) << 48n);
+r.r(t), r.d(t, { XXH64: () => u, hash: () => c });
+let n = 2n ** 64n - 1n,
+    o = new TextEncoder();
+function i(e, t, r, n) {
+    return BigInt(e) | (BigInt(t) << 16n) | (BigInt(r) << 32n) | (BigInt(n) << 48n);
 }
 function a(e, t) {
     return (
@@ -17,131 +17,131 @@ function a(e, t) {
         (BigInt(e[t + 7]) << 56n)
     );
 }
-function o(e, t) {
-    return ((e << t) & i) | (e >> (64n - t));
+function s(e, t) {
+    return ((e << t) & n) | (e >> (64n - t));
 }
 function l(e) {
     return BigInt.asUintN(64, e);
 }
 class u {
-    #s;
-    #a;
+    #e;
+    #t;
+    #r;
+    #n;
     #o;
-    #l;
-    #u;
-    #c;
-    #d;
-    #_;
+    #i;
+    #a;
+    #s;
     constructor(e = 0) {
         this.reset(e);
     }
-    reset(e = this.#s) {
+    reset(e = this.#e) {
         return (
-            (this.#s = BigInt.asUintN(32, BigInt(e))),
-            (this.#a = l(this.#s + 0x9e3779b185ebca87n + 0xc2b2ae3d27d4eb4fn)),
-            (this.#o = l(this.#s + 0xc2b2ae3d27d4eb4fn)),
-            (this.#l = this.#s),
-            (this.#u = l(this.#s - 0x9e3779b185ebca87n)),
-            (this.#c = null),
-            (this.#d = 0),
-            (this.#_ = 0),
+            (this.#e = BigInt.asUintN(32, BigInt(e))),
+            (this.#t = l(this.#e + 0x9e3779b185ebca87n + 0xc2b2ae3d27d4eb4fn)),
+            (this.#r = l(this.#e + 0xc2b2ae3d27d4eb4fn)),
+            (this.#n = this.#e),
+            (this.#o = l(this.#e - 0x9e3779b185ebca87n)),
+            (this.#i = null),
+            (this.#a = 0),
+            (this.#s = 0),
             this
         );
     }
     update(e) {
-        "string" == typeof e && (e = r.encode(e));
+        "string" == typeof e && (e = o.encode(e));
         let t = 0,
-            n = e.length,
-            i = t + n;
-        if (0 === n) return this;
-        if (((this.#d += n), 0 === this.#_ && (this.#c = new Uint8Array(32)), this.#_ + n < 32))
-            return this.#c.set(e.subarray(0, n), this.#_), (this.#_ += n), this;
-        if (this.#_ > 0) {
-            let n;
-            this.#c.set(e.subarray(0, 32 - this.#_), this.#_);
-            let i = 0;
-            (n = a(this.#c, i)),
-                (this.#a = l(0x9e3779b185ebca87n * o(l(this.#a + 0xc2b2ae3d27d4eb4fn * n), 31n))),
-                (i += 8),
-                (n = a(this.memory, i)),
-                (this.#o = l(0x9e3779b185ebca87n * o(l(this.#o + 0xc2b2ae3d27d4eb4fn * n), 31n))),
-                (i += 8),
-                (n = a(this.memory, i)),
-                (this.#l = l(0x9e3779b185ebca87n * o(l(this.#l + 0xc2b2ae3d27d4eb4fn * n), 31n))),
-                (i += 8),
-                (n = a(this.memory, i)),
-                (this.#u = l(0x9e3779b185ebca87n * o(l(this.#u + 0xc2b2ae3d27d4eb4fn * n), 31n))),
-                (t += 32 - this.#_),
-                (this.#_ = 0);
+            r = e.length,
+            n = t + r;
+        if (0 === r) return this;
+        if (((this.#a += r), 0 === this.#s && (this.#i = new Uint8Array(32)), this.#s + r < 32))
+            return this.#i.set(e.subarray(0, r), this.#s), (this.#s += r), this;
+        if (this.#s > 0) {
+            let r;
+            this.#i.set(e.subarray(0, 32 - this.#s), this.#s);
+            let n = 0;
+            (r = a(this.#i, n)),
+                (this.#t = l(0x9e3779b185ebca87n * s(l(this.#t + 0xc2b2ae3d27d4eb4fn * r), 31n))),
+                (n += 8),
+                (r = a(this.memory, n)),
+                (this.#r = l(0x9e3779b185ebca87n * s(l(this.#r + 0xc2b2ae3d27d4eb4fn * r), 31n))),
+                (n += 8),
+                (r = a(this.memory, n)),
+                (this.#n = l(0x9e3779b185ebca87n * s(l(this.#n + 0xc2b2ae3d27d4eb4fn * r), 31n))),
+                (n += 8),
+                (r = a(this.memory, n)),
+                (this.#o = l(0x9e3779b185ebca87n * s(l(this.#o + 0xc2b2ae3d27d4eb4fn * r), 31n))),
+                (t += 32 - this.#s),
+                (this.#s = 0);
         }
-        if (t <= i - 32) {
-            let n = i - 32;
+        if (t <= n - 32) {
+            let r = n - 32;
             do {
-                let n;
-                (n = a(e, t)),
-                    (this.#a = l(0x9e3779b185ebca87n * o(l(this.#a + 0xc2b2ae3d27d4eb4fn * n), 31n))),
+                let r;
+                (r = a(e, t)),
+                    (this.#t = l(0x9e3779b185ebca87n * s(l(this.#t + 0xc2b2ae3d27d4eb4fn * r), 31n))),
                     (t += 8),
-                    (n = a(e, t)),
-                    (this.#o = l(0x9e3779b185ebca87n * o(l(this.#o + 0xc2b2ae3d27d4eb4fn * n), 31n))),
+                    (r = a(e, t)),
+                    (this.#r = l(0x9e3779b185ebca87n * s(l(this.#r + 0xc2b2ae3d27d4eb4fn * r), 31n))),
                     (t += 8),
-                    (n = a(e, t)),
-                    (this.#l = l(0x9e3779b185ebca87n * o(l(this.#l + 0xc2b2ae3d27d4eb4fn * n), 31n))),
+                    (r = a(e, t)),
+                    (this.#n = l(0x9e3779b185ebca87n * s(l(this.#n + 0xc2b2ae3d27d4eb4fn * r), 31n))),
                     (t += 8),
-                    (n = a(e, t)),
-                    (this.#u = l(0x9e3779b185ebca87n * o(l(this.#u + 0xc2b2ae3d27d4eb4fn * n), 31n))),
+                    (r = a(e, t)),
+                    (this.#o = l(0x9e3779b185ebca87n * s(l(this.#o + 0xc2b2ae3d27d4eb4fn * r), 31n))),
                     (t += 8);
-            } while (t <= n);
+            } while (t <= r);
         }
-        return t < i && (this.#c.set(e.subarray(t, i), this.#_), (this.#_ = i - t)), this;
+        return t < n && (this.#i.set(e.subarray(t, n), this.#s), (this.#s = n - t)), this;
     }
     digest() {
-        let e = this.#c,
-            t = this.#_,
-            n = 0,
-            i = 0n,
-            r = 0n,
+        let e = this.#i,
+            t = this.#s,
+            r = 0,
+            n = 0n,
+            o = 0n,
             u = 0n;
         for (
-            this.#d >= 32
-                ? ((i = l(
-                      (i = o(this.#a, 1n) + o(this.#o, 7n) + o(this.#l, 12n) + o(this.#u, 18n)) ^
-                          (0x9e3779b185ebca87n * o(l(0xc2b2ae3d27d4eb4fn * this.#a), 31n)),
+            this.#a >= 32
+                ? ((n = l(
+                      (n = s(this.#t, 1n) + s(this.#r, 7n) + s(this.#n, 12n) + s(this.#o, 18n)) ^
+                          (0x9e3779b185ebca87n * s(l(0xc2b2ae3d27d4eb4fn * this.#t), 31n)),
                   )),
-                  (i = l(0x9e3779b185ebca87n * i + 0x85ebca77c2b2ae63n)),
-                  (i = l(i ^ (0x9e3779b185ebca87n * o(l(0xc2b2ae3d27d4eb4fn * this.#o), 31n)))),
-                  (i = l(0x9e3779b185ebca87n * i + 0x85ebca77c2b2ae63n)),
-                  (i = l(i ^ (0x9e3779b185ebca87n * o(l(0xc2b2ae3d27d4eb4fn * this.#l), 31n)))),
-                  (i = l(0x9e3779b185ebca87n * i + 0x85ebca77c2b2ae63n)),
-                  (i = l(i ^ (0x9e3779b185ebca87n * o(l(0xc2b2ae3d27d4eb4fn * this.#u), 31n)))),
-                  (i = l(0x9e3779b185ebca87n * i + 0x85ebca77c2b2ae63n)))
-                : (i = l(this.#s + 0x27d4eb2f165667c5n)),
-                i += BigInt(this.#d);
-            n <= t - 8;
+                  (n = l(0x9e3779b185ebca87n * n + 0x85ebca77c2b2ae63n)),
+                  (n = l(n ^ (0x9e3779b185ebca87n * s(l(0xc2b2ae3d27d4eb4fn * this.#r), 31n)))),
+                  (n = l(0x9e3779b185ebca87n * n + 0x85ebca77c2b2ae63n)),
+                  (n = l(n ^ (0x9e3779b185ebca87n * s(l(0xc2b2ae3d27d4eb4fn * this.#n), 31n)))),
+                  (n = l(0x9e3779b185ebca87n * n + 0x85ebca77c2b2ae63n)),
+                  (n = l(n ^ (0x9e3779b185ebca87n * s(l(0xc2b2ae3d27d4eb4fn * this.#o), 31n)))),
+                  (n = l(0x9e3779b185ebca87n * n + 0x85ebca77c2b2ae63n)))
+                : (n = l(this.#e + 0x27d4eb2f165667c5n)),
+                n += BigInt(this.#a);
+            r <= t - 8;
         )
-            (u = l(0x9e3779b185ebca87n * o(l(0xc2b2ae3d27d4eb4fn * (u = a(e, n))), 31n))),
-                (i = l(0x9e3779b185ebca87n * o(i ^ u, 27n) + 0x85ebca77c2b2ae63n)),
-                (n += 8);
+            (u = l(0x9e3779b185ebca87n * s(l(0xc2b2ae3d27d4eb4fn * (u = a(e, r))), 31n))),
+                (n = l(0x9e3779b185ebca87n * s(n ^ u, 27n) + 0x85ebca77c2b2ae63n)),
+                (r += 8);
         for (
-            n + 4 <= t &&
-            ((i = l(
+            r + 4 <= t &&
+            ((n = l(
                 0xc2b2ae3d27d4eb4fn *
-                    o(
-                        i ^ l(0x9e3779b185ebca87n * (u = s((e[n + 1] << 8) | e[n], (e[n + 3] << 8) | e[n + 2], 0, 0))),
+                    s(
+                        n ^ l(0x9e3779b185ebca87n * (u = i((e[r + 1] << 8) | e[r], (e[r + 3] << 8) | e[r + 2], 0, 0))),
                         23n,
                     ) +
                     0x165667b19e3779f9n,
             )),
-            (n += 4));
-            n < t;
+            (r += 4));
+            r < t;
         )
-            i = l(0x9e3779b185ebca87n * o(i ^ l(0x27d4eb2f165667c5n * (u = s(e[n++], 0, 0, 0))), 11n));
+            n = l(0x9e3779b185ebca87n * s(n ^ l(0x27d4eb2f165667c5n * (u = i(e[r++], 0, 0, 0))), 11n));
         return (
-            (r = l(i >> 33n)),
-            (i = l((i ^ r) * 0xc2b2ae3d27d4eb4fn)),
-            (r = l(i >> 29n)),
-            (i = l((i ^ r) * 0x165667b19e3779f9n)),
-            (r = l(i >> 32n)),
-            (i = l(i ^ r))
+            (o = l(n >> 33n)),
+            (n = l((n ^ o) * 0xc2b2ae3d27d4eb4fn)),
+            (o = l(n >> 29n)),
+            (n = l((n ^ o) * 0x165667b19e3779f9n)),
+            (o = l(n >> 32n)),
+            (n = l(n ^ o))
         );
     }
 }

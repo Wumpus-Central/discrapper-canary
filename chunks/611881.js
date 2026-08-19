@@ -1,38 +1,38 @@
 "use strict";
-n.d(t, { Ls: () => E, Ig: () => _, F5: () => u, GZ: () => c });
-var i = n(17928),
-    r = n(554146),
-    a = n(982240),
-    s = n(826673),
-    l = n(287809);
+n.d(t, { Ls: () => m, Ig: () => h, F5: () => d, GZ: () => c });
+var l = n(17928),
+    i = n(554146),
+    s = n(982240),
+    r = n(826673),
+    a = n(287809);
 let o = (0, n(945810).mj)({
     name: "2026-06-gifting-badge-desktop",
     kind: "user",
     defaultConfig: { enabled: !1 },
     variations: { 1: { enabled: !0 } },
 });
-var d = n(998370);
+var u = n(998370);
 function c(e, t, n) {
-    let i = (0, a.rL)(t),
-        r = (0, a.rL)(n);
+    let l = (0, s.rL)(t),
+        i = (0, s.rL)(n);
     return Math.min(
-        Math.max(null != n ? (r > 0 ? (e / r) * 100 : 100) : i > 0 ? (Math.min(i, e) / i) * 100 : 100, 0),
+        Math.max(null != n ? (i > 0 ? (e / i) * 100 : 100) : l > 0 ? (Math.min(l, e) / l) * 100 : 100, 0),
         100,
     );
 }
-function u(e) {
-    let { enabled: t } = d.J.useConfig({ location: e }),
+function d(e) {
+    let { enabled: t } = u.J.useConfig({ location: e }),
         { enabled: n } = o.useConfig({ location: `${e}${t ? "" : "-DISABLED"}` });
     return n && t;
 }
-function _(e) {
-    return !!d.J.getConfig({ location: e }).enabled && o.getConfig({ location: e }).enabled;
+function h(e) {
+    return !!u.J.getConfig({ location: e }).enabled && o.getConfig({ location: e }).enabled;
 }
-function E(e) {
+function m(e) {
     let { platform: t, location: n } = e,
-        { enabled: a } = d.J.useConfig({ location: n }),
+        { enabled: s } = u.J.useConfig({ location: n }),
         { enabled: c } = o.useConfig({ location: `${n}${"web" === t ? "" : "-DISABLED"}` }),
-        u = (0, i.bG)([l.default], () => l.default.getCurrentUser()?.hasHadPremium() ?? !1),
-        _ = (0, s.JZ)(r.M.NEW_GIFTING_BADGES_COACHMARK);
-    return ("web" === t ? c && a : a) && u && !_;
+        d = (0, l.bG)([a.default], () => a.default.getCurrentUser()?.hasHadPremium() ?? !1),
+        h = (0, r.HX)(i.M.NEW_GIFTING_BADGES_COACHMARK);
+    return ("web" === t ? c && s : s) && d && !h;
 }

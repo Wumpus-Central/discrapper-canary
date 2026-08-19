@@ -1,4 +1,4 @@
-t.d(n, { A: () => f });
+t.d(n, { A: () => x });
 var l = t(477900),
     i = t(582128),
     s = t(17928),
@@ -9,24 +9,24 @@ var l = t(477900),
     u = t(267102),
     d = t(931991),
     A = t(246356),
-    h = t(404355),
-    m = t(734057),
+    m = t(404355),
+    h = t(734057),
     C = t(707592),
     E = t(496092),
     p = t(132860),
     g = t(508654),
-    x = t(375708);
-function f(e) {
+    f = t(375708);
+function x(e) {
     let { channelId: n, onClick: t } = e,
-        f = (0, u.Us)(),
+        x = (0, u.Us)(),
         I = (0, g.Qs)(n),
-        T = (0, s.bG)([m.A], () => m.A.getChannel(n), [n]),
+        T = (0, s.bG)([h.A], () => h.A.getChannel(n), [n]),
         { canManageGuildEvent: v } = (0, d.nr)(T),
         _ = v(I),
         j = i.useRef(null);
     if (null == I) return null;
     function N() {
-        null != T && (0, p.A)(T) ? (0, C.Py)(T, f) : t();
+        null != T && (0, p.A)(T) ? (0, C.Py)(T, x) : t();
     }
     function b() {
         null != I && E.default.endEvent(I.id, I.guild_id);
@@ -41,13 +41,13 @@ function f(e) {
                           "data-menu-migrated": !0,
                           navId: "exit-options",
                           onSelect: () => {},
-                          "aria-label": x.intl.string(x.t["K6/mk3"]),
+                          "aria-label": f.intl.string(f.t["K6/mk3"]),
                           onClose: n,
                           children: (0, l.jsx)(o.Dr, {
                               id: "end-voice-event",
                               color: "danger",
                               action: b,
-                              label: x.intl.string(x.t.qaYzPA),
+                              label: f.intl.string(f.t.qaYzPA),
                               leadingAccessory: { type: "icon", icon: c.a },
                               icon: c.a,
                           }),
@@ -59,13 +59,13 @@ function f(e) {
               animation: a.Y.Animation.FADE,
               children: (e) => {
                   let { onClick: n } = e;
-                  return (0, l.jsx)(h.A, {
+                  return (0, l.jsx)(m.A, {
                       buttonRef: j,
-                      label: x.intl.string(x.t["6vrfgt"]),
+                      label: f.intl.string(f.t["6vrfgt"]),
                       onClick: N,
                       onPopoutClick: n,
                   });
               },
           })
-        : (0, l.jsx)(h.A, { label: x.intl.string(x.t["6vrfgt"]), onClick: t });
+        : (0, l.jsx)(m.A, { label: f.intl.string(f.t["6vrfgt"]), onClick: t });
 }

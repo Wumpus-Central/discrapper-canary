@@ -4,7 +4,7 @@ _.exports = {
     p_: "list__07f91",
     m3: "listDefault__07f91",
     GT: "listCollapse__07f91",
-    ZJ: "voiceUser__07f91",
+    q7: "voiceUser__07f91",
     vk: "clickable__07f91",
     Qs: "content__07f91",
     zq: "flipped__07f91",
@@ -31,5 +31,5 @@ _.exports = {
     r9: "disabled__07f91",
     DF: "ringing__07f91",
     IW: "guestSuffix__07f91",
-    Gt: "gameIcon__07f91",
+    n8: "gameIcon__07f91",
 };

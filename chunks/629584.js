@@ -6,9 +6,9 @@ var i = t(477900),
     n = t(837381),
     o = t(887129),
     c = t(741918),
-    u = t(866665),
-    d = t(939249),
-    p = t(834730),
+    u = t(939249),
+    d = t(834730),
+    p = t(866665),
     m = t(207059);
 let h = () => Promise.resolve();
 function b(l) {
@@ -29,7 +29,7 @@ function b(l) {
         return (0, i.jsx)("div", {
             role: "listitem" === e ? "listitem" : void 0,
             className: r()(m.xp, { [m.iK]: "pill" === c }),
-            children: (0, i.jsx)(d.D, {
+            children: (0, i.jsx)(u.D, {
                 ...k,
                 role: "listitem" === e ? "button" : e,
                 className: r()(
@@ -61,7 +61,7 @@ function b(l) {
                 "aria-selected": s,
                 "aria-controls": t["aria-controls"] ?? void 0,
                 onClick: b ? void 0 : f,
-                children: (0, i.jsxs)(p.E, {
+                children: (0, i.jsxs)(d.E, {
                     className: r()(m.JU, "pill" === c ? m.up : void 0),
                     variant: "text-sm/medium",
                     color: "none",
@@ -70,7 +70,7 @@ function b(l) {
             }),
         });
     }
-    return null == v ? N() : (0, i.jsx)(u.m, { shouldShow: !b, __unsupportedReactNodeAsText: v, children: N() });
+    return null == v ? N() : (0, i.jsx)(p.m, { shouldShow: !b, __unsupportedReactNodeAsText: v, children: N() });
 }
 function v(l) {
     let {

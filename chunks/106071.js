@@ -1,35 +1,35 @@
-function t(e, t, n, i) {
-    Object.defineProperty(e, t, { get: n, set: i, enumerable: !0, configurable: !0 });
+function t(e, t, r, n) {
+    Object.defineProperty(e, t, { get: r, set: n, enumerable: !0, configurable: !0 });
 }
-t(e.exports, "announce", () => r),
-    t(e.exports, "createAnnouncer", () => i),
-    t(e.exports, "clearAnnouncer", () => s),
+t(e.exports, "announce", () => i),
+    t(e.exports, "createAnnouncer", () => n),
+    t(e.exports, "clearAnnouncer", () => o),
     t(e.exports, "destroyAnnouncer", () => a),
-    t(e.exports, "moveAnnouncer", () => o);
-let n = null;
-function i(e = null) {
-    n || (n = new l(e));
+    t(e.exports, "moveAnnouncer", () => s);
+let r = null;
+function n(e = null) {
+    r || (r = new u(e));
 }
-function r(e, t = "assertive", i = 7e3) {
-    n
-        ? n.announce(e, t, i)
-        : ((n = new l()),
+function i(e, t = "assertive", n = 7e3) {
+    r
+        ? r.announce(e, t, n)
+        : ((r = new u()),
           ("boolean" == typeof IS_REACT_ACT_ENVIRONMENT ? IS_REACT_ACT_ENVIRONMENT : "u" > typeof jest)
-              ? n.announce(e, t, i)
+              ? r.announce(e, t, n)
               : setTimeout(() => {
-                    (null == n ? void 0 : n.isAttached()) && (null == n || n.announce(e, t, i));
+                    (null == r ? void 0 : r.isAttached()) && (null == r || r.announce(e, t, n));
                 }, 100));
 }
-function s(e) {
-    n && n.clear(e);
+function o(e) {
+    r && r.clear(e);
 }
 function a() {
-    n && (n.destroy(), (n = null));
+    r && (r.destroy(), (r = null));
 }
-function o(e = null) {
-    n ? n.move(e) : i(e);
+function s(e = null) {
+    r ? r.move(e) : n(e);
 }
-class l {
+class u {
     isAttached() {
         var e;
         return null == (e = this.node) ? void 0 : e.isConnected;
@@ -49,20 +49,20 @@ class l {
     move(e = null) {
         this.node && ((this.parentNode = null != e ? e : document.body), this.parentNode.prepend(this.node));
     }
-    announce(e, t = "assertive", n = 7e3) {
-        var i, r;
+    announce(e, t = "assertive", r = 7e3) {
+        var n, i;
         if (!this.node) return;
-        let s = document.createElement("div");
+        let o = document.createElement("div");
         "object" == typeof e
-            ? (s.setAttribute("role", "img"), s.setAttribute("aria-labelledby", e["aria-labelledby"]))
-            : (s.textContent = e),
+            ? (o.setAttribute("role", "img"), o.setAttribute("aria-labelledby", e["aria-labelledby"]))
+            : (o.textContent = e),
             "assertive" === t
-                ? null == (i = this.assertiveLog) || i.appendChild(s)
-                : null == (r = this.politeLog) || r.appendChild(s),
+                ? null == (n = this.assertiveLog) || n.appendChild(o)
+                : null == (i = this.politeLog) || i.appendChild(o),
             "" !== e &&
                 setTimeout(() => {
-                    s.remove();
-                }, n);
+                    o.remove();
+                }, r);
     }
     clear(e) {
         this.node &&

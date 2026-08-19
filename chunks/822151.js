@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => D, i: () => L }), n(321073);
+n.d(t, { A: () => y, i: () => L }), n(321073);
 var i = n(284009),
     r = n.n(i),
     a = n(459838),
@@ -53,7 +53,7 @@ class f {
 var p = n(439818),
     T = n(572164),
     m = n(796617),
-    g = n(430795),
+    g = n(539572),
     S = n(31048),
     N = n(997649),
     C = n(786661),
@@ -465,4 +465,4 @@ class L extends l.A {
         this.timeline.updateLength(Math.max(I.Ay.getSettings().clipsLength, 6e4));
     }
 }
-let D = new L();
+let y = new L();

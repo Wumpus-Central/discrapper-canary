@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Av: () => b, uz: () => y, d1: () => D, kv: () => L, nL: () => M, rK: () => v, TT: () => C });
+n.d(t, { Av: () => b, uz: () => D, d1: () => y, kv: () => L, nL: () => M, rK: () => v, TT: () => C });
 var i = n(77729);
 n(321073);
 var r = n(87955),
@@ -375,11 +375,11 @@ async function L(e) {
     let t = await O;
     null != t && (t.enabled = e);
 }
-async function D(e) {
+async function y(e) {
     let t = await O;
     null != t && t.setLearnedWords(e);
 }
-async function y() {
+async function D() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 5,
         t = await O;
     if (null == t) return { misspelledWord: "", corrections: [] };

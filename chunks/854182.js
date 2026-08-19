@@ -4,7 +4,7 @@ e(582128);
 var c = e(17928),
     d = e(477782),
     n = e(367513),
-    a = e(313961),
+    a = e(198052),
     r = e(375708);
 function o(i) {
     let t = (0, c.bG)([a.A], () => a.A.getVoiceParticipantsHidden(i));

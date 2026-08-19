@@ -1,16 +1,16 @@
-e.d(n, { A: () => o });
-var i = e(477900);
-e(582128);
-var r = e(477782),
-    l = e(192308),
-    a = e(435183),
-    d = e(406704),
-    s = e(375708);
+n.d(e, { A: () => o });
+var i = n(477900);
+n(582128);
+var r = n(477782),
+    l = n(192308),
+    a = n(435183),
+    d = n(406704),
+    s = n(375708);
 function o(t) {
-    let n = (0, d.NI)(t),
-        e = (0, d.Id)(t),
+    let e = (0, d.NI)(t),
+        n = (0, d.Id)(t),
         o = (0, d.s5)(t);
-    return !n || !e || o || t.isModeratorReportChannel() || __OVERLAY__
+    return !e || !n || o || t.isModeratorReportChannel() || __OVERLAY__
         ? null
         : (0, i.jsx)(r.Dr, {
               id: "edit-thread",

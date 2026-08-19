@@ -1,18 +1,18 @@
 "use strict";
-n.d(t, { Ay: () => l });
+n.d(t, { Ay: () => o });
 var i = n(240921),
     r = n(753070);
-let s = { videoPresetResolutionMax: r.on.RESOLUTION_1440 },
-    a = (0, i.Ay)({
+let a = { videoPresetResolutionMax: r.on.RESOLUTION_1440 },
+    s = (0, i.Ay)({
         name: "2026-02-go-live-video-preset-resolution",
         kind: "user",
-        defaultConfig: s,
-        variations: { 1: { ...s, videoPresetResolutionMax: r.on.RESOLUTION_1080 } },
+        defaultConfig: a,
+        variations: { 1: { ...a, videoPresetResolutionMax: r.on.RESOLUTION_1080 } },
     });
-var o = n(327649);
-function l(e, t, n) {
+var l = n(327649);
+function o(e, t, n) {
     let i = (function () {
-        let { videoPresetResolutionMax: e } = a.getConfig({ location: "getApplicationStreamPresetValues" });
+        let { videoPresetResolutionMax: e } = s.getConfig({ location: "getApplicationStreamPresetValues" });
         return {
             [r.jQ.PRESET_DOCUMENTS]: [
                 { resolution: r.on.RESOLUTION_SOURCE, fps: r.kn.FPS_15 },
@@ -32,6 +32,6 @@ function l(e, t, n) {
         };
     })()[e];
     if (null == i) return null;
-    for (let r of i) if ((0, o.A)(e, r.resolution, r.fps, t, n)) return [r.resolution, r.fps];
+    for (let r of i) if ((0, l.A)(e, r.resolution, r.fps, t, n)) return [r.resolution, r.fps];
     return null;
 }

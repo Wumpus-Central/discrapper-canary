@@ -1,12 +1,12 @@
 "use strict";
-n.d(t, { A: () => u });
+n.d(t, { A: () => d });
 var i = n(913290),
     r = n(315069),
-    s = n(32731),
-    a = n(428262),
-    o = n(889227),
-    l = n(652215);
-class u extends r.A {
+    a = n(32731),
+    s = n(158045),
+    l = n(889227),
+    o = n(652215);
+class d extends r.A {
     id;
     skuId;
     applicationId;
@@ -28,11 +28,11 @@ class u extends r.A {
     sourceType;
     fulfillmentStatus;
     static createFromServer(e) {
-        return new u({
+        return new d({
             id: e.id,
             skuId: e.sku_id,
             applicationId: e.application_id,
-            user: null != e.user ? new o.A(e.user) : null,
+            user: null != e.user ? new l.A(e.user) : null,
             userId: e.user_id,
             gifterId: e.gifter_user_id,
             type: e.type,
@@ -47,13 +47,13 @@ class u extends r.A {
             giftStyle: e.gift_style,
             guildId: e.guild_id,
             deleted: e.deleted,
-            sku: null != e.sku ? s.A.createFromServer(e.sku) : null,
+            sku: null != e.sku ? a.A.createFromServer(e.sku) : null,
             sourceType: e.source_type ?? null,
             fulfillmentStatus: e.fulfillment_status ?? null,
         });
     }
     get isGiftable() {
-        return this.type === l.zF_.USER_GIFT && null == this.gifterId;
+        return this.type === o.zF_.USER_GIFT && null == this.gifterId;
     }
     constructor(e) {
         super(),
@@ -81,9 +81,9 @@ class u extends r.A {
     isValid(e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
         if (this.isGiftable || this.deleted) return !1;
-        if (this.type === l.zF_.PREMIUM_SUBSCRIPTION) {
+        if (this.type === o.zF_.PREMIUM_SUBSCRIPTION) {
             let n = t.get(this.skuId);
-            if ((null != n && !n.premium) || !a.Ay.canInstallPremiumApplications(e)) return !1;
+            if ((null != n && !n.premium) || !s.Ay.canInstallPremiumApplications(e)) return !1;
         }
         let i = new Date();
         if ((null != this.startsAt && i < this.startsAt) || (null != this.endsAt && i >= this.endsAt)) return !1;

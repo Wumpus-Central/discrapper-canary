@@ -1,4 +1,4 @@
-e.exports = {
+_.exports = {
     wx: "header_a14595",
     Vg: "grid_a14595",
     kL: "container_a14595",

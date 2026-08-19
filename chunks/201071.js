@@ -93,11 +93,11 @@ self.addEventListener("message", (e) => {
                 maxSearchResults: d,
             },
         } = e,
-        b = [];
+        g = [];
     for (let e of s(l))
         switch (h) {
             case u.n.REGEX:
-                b.push(
+                g.push(
                     ...(function (e, t) {
                         let r = RegExp(e, "i");
                         return t.reduce((e, t, n) => (f(t).some((e) => r.test(e)) ? [...e, n] : e), []);
@@ -105,7 +105,7 @@ self.addEventListener("message", (e) => {
                 );
                 break;
             case u.n.FUZZY:
-                b.push(
+                g.push(
                     ...(function (e, t) {
                         return t.reduce(
                             (t, r, n) =>
@@ -121,14 +121,14 @@ self.addEventListener("message", (e) => {
                 );
                 break;
             case u.n.JARO_WINKLER:
-                b.push(
+                g.push(
                     ...(function (e, t, r) {
                         return t.reduce((t, n, a) => (Math.max(...f(n).map((t) => i(e, t))) >= r ? [...t, a] : t), []);
                     })(e, c, m),
                 );
                 break;
             case u.n.EXACT:
-                b.push(
+                g.push(
                     ...(function (e, t) {
                         return t.reduce(
                             (t, r, n) =>
@@ -138,18 +138,18 @@ self.addEventListener("message", (e) => {
                     })(e, c),
                 );
         }
-    let g = [...new Set(b)];
+    let b = [...new Set(g)];
     p === u.r.JARO_WINKLER &&
-        ((t = g),
+        ((t = b),
         (r = s(l)),
-        (g = t
+        (b = t
             .map((e) => {
                 let t = f(c[e]);
                 return { index: e, rank: Math.max(...r.flatMap((e) => t.map((t) => i(e, t)))) };
             })
             .sort((e, t) => t.rank - e.rank)
             .map((e) => e.index))),
-        d > 0 && (g = g.slice(0, d));
-    let v = { id: n, foundItemIndexes: g };
+        d > 0 && (b = b.slice(0, d));
+    let v = { id: n, foundItemIndexes: b };
     self.postMessage(v);
 });

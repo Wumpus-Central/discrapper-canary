@@ -1,47 +1,47 @@
 "use strict";
-n.d(t, { Cy: () => _, IS: () => h, UW: () => d, eL: () => c });
-var i = n(495544),
+n.d(t, { Cy: () => _, IS: () => E, UW: () => u, eL: () => c });
+var i = n(280450),
     r = n(734057),
-    s = n(71393),
-    a = n(312006),
-    o = n(516607),
-    l = n(652215);
-let u = "stage:";
+    a = n(71393),
+    s = n(312006),
+    l = n(516607),
+    o = n(652215);
+let d = "stage:";
 function c(e, t) {
     let n = 0,
         r = i.default.getId();
-    a.Ay.isSpeaker(r, e.id) && (n |= 1);
-    let o = s.A.getGuild(e.getGuildId());
-    null != o &&
-        (o.features.has(l.GuildFeatures.PARTNERED) && (n |= 2), o.features.has(l.GuildFeatures.VERIFIED) && (n |= 4));
+    s.Ay.isSpeaker(r, e.id) && (n |= 1);
+    let l = a.A.getGuild(e.getGuildId());
+    null != l &&
+        (l.features.has(o.GuildFeatures.PARTNERED) && (n |= 2), l.features.has(o.GuildFeatures.VERIFIED) && (n |= 4));
     let c = n.toString(16);
-    return `${u}${e.guild_id}:${e.id}:${c}:${t.id}`;
+    return `${d}${e.guild_id}:${e.id}:${c}:${t.id}`;
 }
-function d(e) {
+function u(e) {
     if (null == e || null == e.party) return;
     let { id: t, size: n } = e.party;
     try {
-        if (null == t || !t.startsWith(u)) return;
-        let [, e, i, r, s] = t.split(":"),
-            a = parseInt(r, 16);
+        if (null == t || !t.startsWith(d)) return;
+        let [, e, i, r, a] = t.split(":"),
+            s = parseInt(r, 16);
         return {
             guildId: e,
             channelId: i,
             size: n,
-            userIsSpeaker: (1 & a) != 0,
-            guildIsPartnered: (2 & a) != 0,
-            guildIsVerified: (4 & a) != 0,
-            stageInstanceId: s,
+            userIsSpeaker: (1 & s) != 0,
+            guildIsPartnered: (2 & s) != 0,
+            guildIsVerified: (4 & s) != 0,
+            stageInstanceId: a,
         };
     } catch (e) {
         return null;
     }
 }
 function _(e) {
-    return e?.application_id === o.SS;
+    return e?.application_id === l.SS;
 }
-function h(e) {
-    let t = d(e);
+function E(e) {
+    let t = u(e);
     if (null == t) return !1;
     let { channelId: n } = t;
     return null != r.A.getChannel(n);

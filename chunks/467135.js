@@ -1,12 +1,12 @@
 "use strict";
-n.d(t, { OT: () => s, kJ: () => a, ko: () => o });
-var i = n(353640),
+n.d(t, { OT: () => a, kJ: () => s, ko: () => l });
+var i = n(196765),
     r = n(121894);
-let s = "#5865F2",
-    a = 74,
-    o = (0, i.v)((e, t) => ({
+let a = "#5865F2",
+    s = 74,
+    l = (0, i.v)((e, t) => ({
         colors: [],
-        chassisMixAmount: a,
+        chassisMixAmount: s,
         gradientAngle: 0,
         setColors: (t) => {
             (0, r.r)(() => {
@@ -24,9 +24,9 @@ let s = "#5865F2",
             });
         },
         setAll: (t) => {
-            let { colors: n, chassisMixAmount: i, gradientAngle: s } = t;
+            let { colors: n, chassisMixAmount: i, gradientAngle: a } = t;
             (0, r.r)(() => {
-                e({ colors: n, chassisMixAmount: i, gradientAngle: s });
+                e({ colors: n, chassisMixAmount: i, gradientAngle: a });
             });
         },
         isEditorActive: () => t().colors.length > 0,

@@ -1,35 +1,35 @@
 "use strict";
-n.d(t, { P: () => _, x: () => h });
+n.d(t, { P: () => _, x: () => E });
 var i = n(941426),
     r = n(31436);
-let s = null,
-    a = new i.Vy("libdiscore");
-function o(e) {
-    a.error(e);
-}
+let a = null,
+    s = new i.Vy("libdiscore");
 function l(e) {
-    a.warn(e);
+    s.error(e);
 }
-function u(e) {
-    a.info(e);
-}
-function c(e) {
-    a.verbose(e);
+function o(e) {
+    s.warn(e);
 }
 function d(e) {
-    a.trace(e);
+    s.info(e);
+}
+function c(e) {
+    s.verbose(e);
+}
+function u(e) {
+    s.trace(e);
 }
 function _() {
     return (
-        null == s &&
-            (s = (async () => {
+        null == a &&
+            (a = (async () => {
                 await r.Bf();
                 let e = r.vZ();
-                e.installLogCallback(o, l, u, c, d), await e.initLibdiscore(), (window._libdiscoreInitialized = !0);
+                e.installLogCallback(l, o, d, c, u), await e.initLibdiscore(), (window._libdiscoreInitialized = !0);
             })()),
-        s
+        a
     );
 }
-function h() {
+function E() {
     return !0 === window._libdiscoreInitialized;
 }

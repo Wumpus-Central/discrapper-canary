@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { $T: () => A, Ay: () => j, C6: () => C, C7: () => v, O$: () => _, Oz: () => E, sK: () => I, s_: () => y });
+n.d(t, { $T: () => A, Ay: () => j, C6: () => E, C7: () => S, O$: () => N, Oz: () => C, sK: () => I, s_: () => y });
 var l = n(582128),
     i = n(435558),
     s = n.n(i),
@@ -55,10 +55,10 @@ async function A(e) {
             receivedAt: Date.now(),
         });
 }
-function C(e, t) {
+function E(e, t) {
     o.h.dispatch({ type: "SET_HIGHLIGHTED_SUMMARY", channelId: e, summaryId: t ?? null });
 }
-function E() {
+function C() {
     o.h.dispatch({ type: "TOGGLE_TOPICS_BAR" });
 }
 function I(e, t) {
@@ -68,10 +68,10 @@ function I(e, t) {
 function y(e, t) {
     o.h.dispatch({ type: "UPDATE_VISIBLE_MESSAGES", topVisibleMessage: e ?? null, bottomVisibleMessage: t ?? null });
 }
-function v(e, t) {
+function S(e, t) {
     o.h.dispatch({ type: "SET_SUMMARY_FEEDBACK", summary: e, rating: t });
 }
-async function S() {
+async function v() {
     let e, t;
     if (!f.A.shouldFetchChannelAffinities()) return Promise.resolve(null);
     let n = Date.now();
@@ -90,7 +90,7 @@ async function S() {
         receivedAt: Date.now(),
     });
 }
-async function N(e) {
+async function _(e) {
     let t,
         n,
         { useQuickSwitcher: l = !0, useChannelAffinities: i = !0 } =
@@ -131,7 +131,7 @@ async function N(e) {
         error: t,
     });
 }
-async function _(e) {
+async function N(e) {
     try {
         await a.Bo.del({ url: p.BVt.CHANNEL_SUMMARY(e.channelId, e.id), rejectWithError: !1 }),
             o.h.dispatch({ type: "DELETE_SUMMARY", summary: e });
@@ -142,12 +142,12 @@ async function _(e) {
 let T =
         221552 == n.j
             ? {
-                  setSummaryFeedback: v,
+                  setSummaryFeedback: S,
                   updateVisibleMessages: y,
                   setSelectedSummary: I,
-                  setHighlightedSummary: C,
+                  setHighlightedSummary: E,
                   fetchSummaries: A,
-                  fetchSummariesBulk: N,
+                  fetchSummariesBulk: _,
                   useChannelSummaries: function (e) {
                       let { channelIds: t = [] } = e;
                       return (
@@ -159,16 +159,16 @@ let T =
                                   t && e();
                                   async function e() {
                                       try {
-                                          await S();
+                                          await v();
                                       } catch (e) {}
-                                      await N(n.split(","));
+                                      await _(n.split(","));
                                   }
                               }, [n, t]);
                           })(t),
                           (0, r.yK)([f.A], () => f.A.topSummaries(), [])
                       );
                   },
-                  deleteSummary: _,
+                  deleteSummary: N,
               }
             : null,
     j = 221552 == n.j ? T : null;

@@ -15,7 +15,7 @@ var i = n(412703),
     h = n(607567),
     I = n(927813),
     f = n(403362),
-    p = n(352774),
+    p = n(396813),
     T = n(859703),
     m = n(24001),
     g = n(759366),
@@ -25,11 +25,11 @@ var i = n(412703),
     O = n(639214),
     R = n(792620),
     L = n(814793),
-    D = n(190107),
-    y = n(165610);
+    y = n(190107),
+    D = n(165610);
 let v = +I.A.Millis.MINUTE,
     b = +I.A.Millis.SECOND,
-    M = (0, N.L)({ location: D.rE.QUESTS_MANAGER });
+    M = (0, N.L)({ location: y.rE.QUESTS_MANAGER });
 function P(e) {
     return !(0, C.Ic)(e) && null != e.userStatus && null != e.userStatus.enrolledAt && null == e.userStatus.completedAt;
 }
@@ -233,7 +233,7 @@ class G extends a.A {
             n = l.A.getMainFrame(),
             i = new Set(t.keys());
         if (
-            ((0, y.x1)(n) && i.add(n.applicationId),
+            ((0, D.x1)(n) && i.add(n.applicationId),
             M.log("~ getActivelyProgressingActivityQuestIds -> Running activity applicationIds: ", Array.from(i)),
             0 === i.size)
         )
@@ -244,7 +244,7 @@ class G extends a.A {
                 let i = (0, R.vS)(n);
                 P(n) && null != i && i === t && e.set(n.id, { applicationId: t });
             }
-        for (let t of r.values()) P(t) && (0, L._e)(t) && e.set(t.id, { applicationId: D.ej });
+        for (let t of r.values()) P(t) && (0, L._e)(t) && e.set(t.id, { applicationId: y.ej });
         return (
             M.log("~ getActivelyProgressingActivityQuestIds -> Actively progressing questIds: ", Array.from(e.keys())),
             e

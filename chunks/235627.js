@@ -1,9 +1,9 @@
 "use strict";
-n.d(t, { p: () => a, w: () => s });
+n.d(t, { p: () => s, w: () => a });
 var i,
     r,
-    s = (((i = {})[(i.SPAM = 1)] = "SPAM"), (i[(i.IGNORED = 2)] = "IGNORED"), i),
-    a =
+    a = (((i = {})[(i.SPAM = 1)] = "SPAM"), (i[(i.IGNORED = 2)] = "IGNORED"), i),
+    s =
         (((r = {}).GOTO_IGNORE = "GOTO_IGNORE"),
         (r.GOTO_BLOCK = "GOTO_BLOCK"),
         (r.EXPLORE_FEATURE_GUILD = "EXPLORE_FEATURE_GUILD"),

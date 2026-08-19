@@ -1,39 +1,39 @@
 "use strict";
-n.d(t, { A: () => s });
+n.d(t, { A: () => a });
 var i = n(280889),
     r = n(652215);
-async function s(e) {
+async function a(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         n = arguments.length > 2 ? arguments[2] : void 0,
-        s = e.map(
+        a = e.map(
             (e) =>
-                new Promise((s, a) => {
+                new Promise((a, s) => {
                     switch (e.status) {
                         case i.jP.NOT_STARTED:
                             e.upload();
                             break;
                         case i.jP.COMPLETED:
-                            s("complete");
+                            a("complete");
                             break;
                         case i.jP.ERROR:
-                            t && e.error !== r.t02.ENTITY_TOO_LARGE ? e.upload() : a(Error("File failed to upload"));
+                            t && e.error !== r.t02.ENTITY_TOO_LARGE ? e.upload() : s(Error("File failed to upload"));
                             break;
                         case i.jP.CANCELED:
-                            a(Error("Upload is canceled"));
+                            s(Error("Upload is canceled"));
                             break;
                         case i.jP.REMOVED_FROM_MSG_DRAFT:
-                            a(Error("Upload is removed from draft"));
+                            s(Error("Upload is removed from draft"));
                     }
                     e.on("complete", () => {
-                        s("complete");
+                        a("complete");
                     }),
                         e.on("error", () => {
-                            a(Error(`File ${e.id} failed to upload`));
+                            s(Error(`File ${e.id} failed to upload`));
                         }),
                         e.on("progress", (e, t) => {
                             n?.(e, t);
                         });
                 }),
         );
-    await Promise.all(s);
+    await Promise.all(a);
 }

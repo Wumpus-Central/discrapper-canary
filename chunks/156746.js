@@ -1,10 +1,10 @@
-var i = n(949499).default;
+var n = r(949499).default;
 (e.exports = function (e, t) {
-    if ("object" != i(e) || !e) return e;
-    var n = e[Symbol.toPrimitive];
-    if (void 0 !== n) {
-        var r = n.call(e, t || "default");
-        if ("object" != i(r)) return r;
+    if ("object" != n(e) || !e) return e;
+    var r = e[Symbol.toPrimitive];
+    if (void 0 !== r) {
+        var o = r.call(e, t || "default");
+        if ("object" != n(o)) return o;
         throw TypeError("@@toPrimitive must return a primitive value.");
     }
     return ("string" === t ? String : Number)(e);

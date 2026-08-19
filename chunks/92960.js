@@ -21,25 +21,25 @@ var i = n(367513),
     S = n(309010),
     y = n(967198),
     O = n(712687),
-    T = n(531685),
-    _ = n(625494),
+    _ = n(531685),
+    T = n(625494),
     x = n(652215);
 function j(e) {
     return {
         binds: ["esc", "shift+pagedown"],
         comboKeysBindGlobal: !0,
         action(t) {
-            if (T.A.isElementFullScreen()) return !1;
-            if (_._.hasSubscribers(x.jej.CALL_DECLINE)) return _._.dispatch(x.jej.CALL_DECLINE), !1;
+            if (_.A.isElementFullScreen()) return !1;
+            if (T._.hasSubscribers(x.jej.CALL_DECLINE)) return T._.dispatch(x.jej.CALL_DECLINE), !1;
             if (O.A.close()) return !1;
-            if (_._.hasSubscribers(x.jej.MEDIA_MODAL_CLOSE)) return _._.dispatch(x.jej.MEDIA_MODAL_CLOSE), !1;
+            if (T._.hasSubscribers(x.jej.MEDIA_MODAL_CLOSE)) return T._.dispatch(x.jej.MEDIA_MODAL_CLOSE), !1;
             let n = (0, o.wp)(t);
             if (n?.hasSubscribers(x.jej.POPOUT_CLOSE)) return n.dispatch(x.jej.POPOUT_CLOSE), !1;
-            if (_._.hasSubscribers(x.jej.CLOSE_GIF_PICKER)) return _._.dispatch(x.jej.CLOSE_GIF_PICKER), !1;
-            if (_._.hasSubscribers(x.jej.MODAL_CLOSE)) return _._.dispatch(x.jej.MODAL_CLOSE), !1;
-            if (_._.hasSubscribers(x.jej.CONVERSATIONS_FOCUS_MODE_CLOSE))
-                return _._.dispatch(x.jej.CONVERSATIONS_FOCUS_MODE_CLOSE), !1;
-            if (_._.hasSubscribers(x.jej.SEARCH_RESULTS_CLOSE)) return _._.dispatch(x.jej.SEARCH_RESULTS_CLOSE), !1;
+            if (T._.hasSubscribers(x.jej.CLOSE_GIF_PICKER)) return T._.dispatch(x.jej.CLOSE_GIF_PICKER), !1;
+            if (T._.hasSubscribers(x.jej.MODAL_CLOSE)) return T._.dispatch(x.jej.MODAL_CLOSE), !1;
+            if (T._.hasSubscribers(x.jej.CONVERSATIONS_FOCUS_MODE_CLOSE))
+                return T._.dispatch(x.jej.CONVERSATIONS_FOCUS_MODE_CLOSE), !1;
+            if (T._.hasSubscribers(x.jej.SEARCH_RESULTS_CLOSE)) return T._.dispatch(x.jej.SEARCH_RESULTS_CLOSE), !1;
             if (n?.hasSubscribers(x.jej.POPOUT_CLOSE_AFTER_MODALS))
                 return n.dispatch(x.jej.POPOUT_CLOSE_AFTER_MODALS), !1;
             let r = y.A.getGuildId(),
@@ -48,8 +48,8 @@ function j(e) {
                 c = g.Ay.getSection(l, s?.isDM()) === x.YvQ.SIDEBAR_CHAT ? g.Ay.getSidebarState(l) : null,
                 u = c?.type === A.PE.VIEW_THREAD || c?.type === A.PE.VIEW_CHANNEL ? c.channelId : null;
             if (!1 === I(l) || !1 === I(u)) return !1;
-            if (_._.hasSubscribers(x.jej.GUILD_ROOM_VIDEO_TILE_COLLAPSE))
-                return _._.dispatch(x.jej.GUILD_ROOM_VIDEO_TILE_COLLAPSE), !1;
+            if (T._.hasSubscribers(x.jej.GUILD_ROOM_VIDEO_OVERLAY_CLOSE))
+                return T._.dispatch(x.jej.GUILD_ROOM_VIDEO_OVERLAY_CLOSE), !1;
             if (null != l && c?.type === A.PE.CREATE_THREAD) return d.A.closeChannelSidebar(l), !1;
             let h = R(l),
                 m = R(u);
@@ -57,7 +57,7 @@ function j(e) {
                 null == l || h || m || null == c
                     ? null != l && !h && !1 !== f.A.isAtBottom(l) && a.A.getChatOpen(l)
                         ? i.A.updateChatOpen(l, !1)
-                        : _._.dispatch(x.jej.SCROLLTO_PRESENT)
+                        : T._.dispatch(x.jej.SCROLLTO_PRESENT)
                     : d.A.closeChannelSidebar(l),
                 !1
             );

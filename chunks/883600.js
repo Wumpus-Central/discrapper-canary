@@ -1,34 +1,34 @@
 "use strict";
-n.d(t, { A: () => T });
+n.d(t, { A: () => g });
 var i = n(17928),
     r = n(506774),
-    s = n(228366),
-    a = n(773669),
-    o = n(885386),
-    l = n(617617),
-    u = n(559868);
+    a = n(228366),
+    s = n(773669),
+    l = n(885386),
+    o = n(617617),
+    d = n(559868);
 let c = {},
-    d = {},
+    u = {},
     _ = null,
-    h = null,
-    f = null,
-    p = "lastChangeLogDate",
     E = null,
-    m = null,
-    g = new Set();
-function A() {
-    E = o.pK.getSetting();
+    A = null,
+    h = "lastChangeLogDate",
+    I = null,
+    f = null,
+    p = new Set();
+function T() {
+    I = l.pK.getSetting();
 }
-class I extends i.Ay.Store {
+class m extends i.Ay.Store {
     static displayName = "ChangelogStore";
     initialize() {
-        this.waitFor(a.default, l.A), this.syncWith([a.default], () => !0), this.syncWith([l.A], A);
-        let e = r.w.get(p);
+        this.waitFor(s.default, o.A), this.syncWith([s.default], () => !0), this.syncWith([o.A], T);
+        let e = r.w.get(h);
         if (null != e)
             try {
-                m = new Date(e);
+                f = new Date(e);
             } catch {
-                r.w.remove(p);
+                r.w.remove(h);
             }
     }
     getChangelog(e, t) {
@@ -38,44 +38,44 @@ class I extends i.Ay.Store {
         return _;
     }
     getChangelogLoadStatus(e, t) {
-        return d[e]?.[t] ?? u._f.NOT_LOADED;
+        return u[e]?.[t] ?? d._f.NOT_LOADED;
     }
     hasLoadedConfig() {
-        return null != f;
+        return null != A;
     }
     getConfig() {
-        return f;
+        return A;
     }
     overrideId() {
-        return h;
-    }
-    lastSeenChangelogId() {
         return E;
     }
+    lastSeenChangelogId() {
+        return I;
+    }
     lastSeenChangelogDate() {
-        return m;
+        return f;
     }
     getStateForDebugging() {
-        return { changelogConfig: f, loadedChangelogs: d, lastSeenChangelogId: E, lastSeenChangelogDate: m };
+        return { changelogConfig: A, loadedChangelogs: u, lastSeenChangelogId: I, lastSeenChangelogDate: f };
     }
     isLocked() {
-        return g.size > 0;
+        return p.size > 0;
     }
 }
-let T = new I(s.h, {
+let g = new m(a.h, {
     CHANGE_LOG_LOCK: function (e) {
         let { key: t } = e;
-        if (g.has(t)) return !1;
-        (g = new Set(g)).add(t);
+        if (p.has(t)) return !1;
+        (p = new Set(p)).add(t);
     },
     CHANGE_LOG_UNLOCK: function (e) {
         let { key: t } = e;
-        if (!g.has(t)) return !1;
-        (g = new Set(g)).delete(t);
+        if (!p.has(t)) return !1;
+        (p = new Set(p)).delete(t);
     },
     CHANGE_LOG_SET_CONFIG: function (e) {
         let { config: t, latestChangelogId: n } = e;
-        (_ = n), (f = t);
+        (_ = n), (A = t);
     },
     CHANGE_LOG_FETCH_SUCCESS: function (e) {
         let { id: t, changelog: n } = e;
@@ -86,22 +86,22 @@ let T = new I(s.h, {
                 body: n.content,
                 revision: 1,
                 locale: n.locale,
-                [n.asset_type === u.PW.YOUTUBE_VIDEO_ID ? "youtube_video_id" : "image"]: n.asset,
+                [n.asset_type === d.PW.YOUTUBE_VIDEO_ID ? "youtube_video_id" : "image"]: n.asset,
             }),
-            null == d[t] && (d[t] = {}),
-            (d[t][n.locale] = u._f.LOADED_SUCCESS);
+            null == u[t] && (u[t] = {}),
+            (u[t][n.locale] = d._f.LOADED_SUCCESS);
     },
     CHANGE_LOG_FETCH_FAILED: function (e) {
         let { id: t, locale: n } = e;
         if (null != c[t] && null != c[t][n]) return !1;
-        null == d[t] && (d[t] = {}), (d[t][n] = u._f.LOADED_FAILURE);
+        null == u[t] && (u[t] = {}), (u[t][n] = d._f.LOADED_FAILURE);
     },
     CHANGE_LOG_SET_OVERRIDE: function (e) {
         let { id: t } = e;
-        h = t;
+        E = t;
     },
     CHANGE_LOG_MARK_SEEN: function (e) {
         let { changelogDate: t } = e;
-        (m = new Date(t)), r.w.set(p, t);
+        (f = new Date(t)), r.w.set(h, t);
     },
 });

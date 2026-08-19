@@ -1,8 +1,8 @@
 "use strict";
-n.d(t, { A: () => s });
+n.d(t, { A: () => a });
 var i = n(945810);
 let r = { showPTTJoinTooltip: !1, showPTTIconIndicator: !1, showPTTNoKeybindWarning: !1, showPTTSpeakingIndicator: !1 },
-    s = (0, i.mj)({
+    a = (0, i.mj)({
         name: "2025-12-09-ptt-education",
         kind: "user",
         defaultConfig: r,

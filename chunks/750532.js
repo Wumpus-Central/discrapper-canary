@@ -10,33 +10,33 @@ var l = n(477900),
     d = n(580133),
     p = n(87725),
     m = n(242874),
-    C = n(573359),
-    h = n(35587),
+    h = n(573359),
+    C = n(35587),
     f = n(165191),
     E = n(237412),
     S = n(45938),
-    A = n(951305),
-    y = n(166532),
+    y = n(951305),
+    A = n(166532),
     P = n(906234),
     I = n(652215),
     g = n(202541),
     v = n(375708),
-    T = n(562575);
-function _(e) {
+    _ = n(562575);
+function T(e) {
     let { onClose: t } = e,
         { selectedSkuId: n, purchaseState: d } = (0, p.t4)((e) => ({
             selectedSkuId: e.selectedSkuId,
             purchaseState: e.purchaseState,
         })),
-        h = (0, r.bG)([C.A], () => C.A.isDisplayingWowMomentConfirmation),
-        { isPremium: P, isPremiumGroupPurchase: _, isEligibleForTrial: x, isEligibleForDiscount: N } = (0, o.i)(),
+        C = (0, r.bG)([h.A], () => h.A.isDisplayingWowMomentConfirmation),
+        { isPremium: P, isPremiumGroupPurchase: T, isEligibleForTrial: x, isEligibleForDiscount: N } = (0, o.i)(),
         b = (0, c.S3)(),
         R = (0, u.s2)(),
-        { isGift: j, selectedGiftStyle: M, giftRecipient: O } = (0, A.Pv)(),
+        { isGift: j, selectedGiftStyle: M, giftRecipient: O } = (0, y.Pv)(),
         L = b?.productLine === I.EZt.COLLECTIBLES,
         k = b?.productLine === I.EZt.SOCIAL_LAYER_GAME_ITEM,
-        w = j && (0, S.Ik)(O) && R === y.pn.CONFIRM && null != M && !L && !k,
-        U = [y.pn.SKU_SELECT, y.pn.SELECT_FREE_SKU],
+        w = j && (0, S.Ik)(O) && R === A.pn.CONFIRM && null != M && !L && !k,
+        U = [A.pn.SKU_SELECT, A.pn.SELECT_FREE_SKU],
         D = null != R && !U.includes(R) && null != n,
         G = i.useCallback(() => t(!1), [t]);
     return i.useMemo(() => {
@@ -45,7 +45,7 @@ function _(e) {
         return (
             w
                 ? (e = (0, l.jsxs)("div", {
-                      className: T.kL,
+                      className: _.kL,
                       children: [
                           (0, l.jsx)("div", {
                               "aria-hidden": !0,
@@ -53,10 +53,10 @@ function _(e) {
                               children: (0, l.jsx)(f.A, {
                                   defaultAnimationState: m.oA.LOOP,
                                   giftStyle: M,
-                                  className: T.qq,
+                                  className: _.qq,
                               }),
                           }),
-                          (0, l.jsx)(s.s_, { onClick: G, className: T.b, "data-migration-pending": !0 }),
+                          (0, l.jsx)(s.s_, { onClick: G, className: _.b, "data-migration-pending": !0 }),
                       ],
                   }))
                 : D &&
@@ -73,13 +73,13 @@ function _(e) {
                                 giftRecipient: O,
                                 isEligibleForTrial: x,
                                 enablePremiumBrandRefresh: P,
-                                isDisplayingWowMomentConfirmation: h,
-                                isPremiumGroupPurchase: _,
+                                isDisplayingWowMomentConfirmation: C,
+                                isPremiumGroupPurchase: T,
                             })
                           : (0, l.jsx)(a.rQ, { title: v.intl.string(v.t.q9EGps) })),
             e
         );
-    }, [M, G, d, n, R, x, N, w, D, j, O, P, h, _]);
+    }, [M, G, d, n, R, x, N, w, D, j, O, P, C, T]);
 }
 function x(e) {
     let {
@@ -93,7 +93,7 @@ function x(e) {
         })),
         { isPremiumGroupPurchase: r, isEligibleForTrial: a, isEligibleForDiscount: s } = (0, o.i)(),
         u = (0, P.G)(n ?? "") && !a,
-        c = (0, h.Sq)();
+        c = (0, C.Sq)();
     return i.useMemo(() => {
         let n, i;
         return (r
@@ -114,6 +114,6 @@ function N() {
     return (0, l.jsx)(d.f, { headerBadgeConfig: e });
 }
 function b(e) {
-    let { isGift: t } = (0, A.Pv)();
-    return e.step !== y.pn.PLAN_SELECT || t ? (0, l.jsx)(_, { ...e }) : (0, l.jsx)(N, {});
+    let { isGift: t } = (0, y.Pv)();
+    return e.step !== A.pn.PLAN_SELECT || t ? (0, l.jsx)(T, { ...e }) : (0, l.jsx)(N, {});
 }

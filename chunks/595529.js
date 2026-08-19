@@ -1,11 +1,11 @@
 "use strict";
 n.d(t, {
     b5: () => b,
-    Bo: () => y,
+    Bo: () => D,
     gc: () => w,
     AA: () => P,
     PP: () => U,
-    eE: () => D,
+    eE: () => y,
     Vu: () => v,
     DP: () => O,
     Tr: () => M,
@@ -97,7 +97,7 @@ function L(e) {
         () => (null !== e ? _.A.settings.userContent?.recurringDismissibleContentStates?.[e] : null) ?? R,
     );
 }
-function D(e, t, n) {
+function y(e, t, n) {
     let { lastDismissedVersion: a } = L(e),
         s = (0, r.bG)([E.A], () => E.A.getGuildId()),
         l = null;
@@ -117,7 +117,7 @@ function D(e, t, n) {
         ),
     ];
 }
-function y(e, t, n) {
+function D(e, t, n) {
     let { lastDismissedAtMs: a, numTimesDismissed: s } = L(e),
         l = (0, r.bG)([E.A], () => E.A.getGuildId()),
         o = null;

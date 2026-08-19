@@ -1,44 +1,44 @@
 "use strict";
-n.d(t, { Ay: () => h, LU: () => f, xi: () => p });
+n.d(t, { Ay: () => E, LU: () => A, xi: () => h });
 var i = n(17928),
     r = n(587895),
-    s = n(20015),
-    a = n(567249),
-    o = n(646865),
-    l = n(933958),
-    u = n(969151),
+    a = n(20015),
+    s = n(567249),
+    l = n(646865),
+    o = n(933958),
+    d = n(969151),
     c = n(108959),
-    d = n(5867),
+    u = n(5867),
     _ = n(652215);
-function h(e) {
+function E(e) {
     let { application: t, channelId: n } = e;
-    if (null != t && (0, s.n)(t, _.gfo.EMBEDDED)) {
-        if (a.A.getWindowOpen(_.MLl.ACTIVITY_POPOUT) && l.Ay.getActivityPanelMode() === d.Gd.ACTIVITY_POPOUT_WINDOW)
+    if (null != t && (0, a.n)(t, _.gfo.EMBEDDED)) {
+        if (s.A.getWindowOpen(_.MLl.ACTIVITY_POPOUT) && o.Ay.getActivityPanelMode() === u.Gd.ACTIVITY_POPOUT_WINDOW)
             return _.MLl.ACTIVITY_POPOUT;
-        if (a.A.getWindowOpen(_.MLl.CHANNEL_CALL_POPOUT) && (0, c.A)(n) && !(0, o.f)())
+        if (s.A.getWindowOpen(_.MLl.CHANNEL_CALL_POPOUT) && (0, c.A)(n) && !(0, l.f)())
             return _.MLl.CHANNEL_CALL_POPOUT;
     }
 }
-function f(e) {
+function A(e) {
     let { applicationId: t } = e,
-        n = l.Ay.getCurrentEmbeddedActivity();
+        n = o.Ay.getCurrentEmbeddedActivity();
     if (null == n || n.applicationId !== t) return;
     let i = r.A.getApplication(t);
-    if (null != i) return h({ application: i, channelId: (0, u.H)(n.location) });
+    if (null != i) return E({ application: i, channelId: (0, d.H)(n.location) });
 }
-function p(e) {
+function h(e) {
     let { channelId: t } = e;
-    return (0, i.bG)([a.A, l.Ay, r.A], () => {
+    return (0, i.bG)([s.A, o.Ay, r.A], () => {
         let e = (function (e) {
             let { channelId: t, EmbeddedActivitiesStore: n, ApplicationStore: i } = e,
                 r = n.getSelfEmbeddedActivityForChannel(t),
-                s = i.getApplication(r?.applicationId);
-            if (null != s) return h({ application: s, channelId: t });
+                a = i.getApplication(r?.applicationId);
+            if (null != a) return E({ application: a, channelId: t });
         })({
-            channelId: t ?? l.Ay.getConnectedActivityChannelId(),
-            EmbeddedActivitiesStore: l.Ay,
+            channelId: t ?? o.Ay.getConnectedActivityChannelId(),
+            EmbeddedActivitiesStore: o.Ay,
             ApplicationStore: r.A,
         });
-        return null != e ? a.A.getWindow(e) : void 0;
+        return null != e ? s.A.getWindow(e) : void 0;
     });
 }

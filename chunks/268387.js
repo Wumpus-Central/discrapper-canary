@@ -1,27 +1,27 @@
 "use strict";
 let i;
-n.d(t, { A: () => m });
-var r = n(735438),
-    s = n.n(r),
-    a = n(17928),
-    o = n(506774),
-    l = n(228366),
-    u = n(652215);
+n.d(t, { A: () => f });
+var r = n(435558),
+    a = n.n(r),
+    s = n(17928),
+    l = n(506774),
+    o = n(228366),
+    d = n(652215);
 let c = "GameLibraryViewStore",
-    d = u.tSW.ASCENDING,
-    _ = u.DpB.LAST_PLAYED,
-    h = !1,
-    f = s().debounce(() => {
-        (h = !1), E.emitChange();
+    u = d.tSW.ASCENDING,
+    _ = d.DpB.LAST_PLAYED,
+    E = !1,
+    A = a().debounce(() => {
+        (E = !1), I.emitChange();
     }, 200);
-class p extends a.Ay.Store {
+class h extends s.Ay.Store {
     static displayName = "GameLibraryViewStore";
     initialize() {
-        let e = o.w.get(c) ?? {};
-        null != e.sortDirection && null != e.sortKey && ((d = e.sortDirection), (_ = e.sortKey));
+        let e = l.w.get(c) ?? {};
+        null != e.sortDirection && null != e.sortKey && ((u = e.sortDirection), (_ = e.sortKey));
     }
     get sortDirection() {
-        return d;
+        return u;
     }
     get sortKey() {
         return _;
@@ -30,17 +30,17 @@ class p extends a.Ay.Store {
         return i;
     }
     get isNavigatingByKeyboard() {
-        return h;
+        return E;
     }
 }
-let E = new p(l.h, {
+let I = new h(o.h, {
         LIBRARY_TABLE_SORT_UPDATE: function (e) {
             let { direction: t, key: n } = e;
-            (d = t), (_ = n), o.w.set(c, { sortDirection: d, sortKey: _ });
+            (u = t), (_ = n), l.w.set(c, { sortDirection: u, sortKey: _ });
         },
         LIBRARY_TABLE_ACTIVE_ROW_ID_UPDATE: function (e) {
             let { key: t, isKeyboardEvent: n } = e;
-            n && ((h = !0), f()), (i = t);
+            n && ((E = !0), A()), (i = t);
         },
     }),
-    m = E;
+    f = I;

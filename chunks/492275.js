@@ -11,19 +11,19 @@ var i = n(503698),
     d = n(375708),
     p = n(425504);
 function m(e) {
-    let { giftsToNextTier: t, nextTierName: n, nextTierIcon: i, analyticsLocations: m, className: C } = e,
-        { analyticsLocations: h } = (0, o.Ay)();
+    let { giftsToNextTier: t, nextTierName: n, nextTierIcon: i, analyticsLocations: m, className: h } = e,
+        { analyticsLocations: C } = (0, o.Ay)();
     return (
         (0, u.A)(
             {
                 name: a.ImpressionNames.GIFTING_BADGE_PROGRESS_BANNER,
                 type: a.ImpressionTypes.VIEW,
-                properties: { gifts_to_next_tier: t, next_tier: n, location_stack: m ?? h },
+                properties: { gifts_to_next_tier: t, next_tier: n, location_stack: m ?? C },
             },
             { trackOnInitialLoad: !0 },
         ),
         (0, l.jsxs)("div", {
-            className: r()(p.kL, C),
+            className: r()(p.kL, h),
             children: [
                 (0, l.jsx)("div", {
                     className: p.zc,

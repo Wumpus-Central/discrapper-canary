@@ -1,9 +1,9 @@
-l.d(t, { A: () => a });
-var n = l(652215);
-function a(e) {
+e.d(n, { A: () => r });
+var l = e(652215);
+function r(t) {
     return (
-        (e.type === n.$pd.LISTENING || e.type === n.$pd.WATCHING) &&
-        e.timestamps?.start != null &&
-        null != e.timestamps.end
+        (t.type === l.$pd.LISTENING || t.type === l.$pd.WATCHING) &&
+        t.timestamps?.start != null &&
+        null != t.timestamps.end
     );
 }

@@ -65,10 +65,10 @@ function A(e) {
     let { imageUrl: t, animatedUrl: n, className: i, autoPlayOnMount: a = !0 } = e,
         c = (0, s.bG)([r.Ay], () => r.Ay.useReducedMotion),
         A = o.kt.useSetting(),
-        m = a && A && !c;
+        g = a && A && !c;
     return null != n && (0, d.LG)(n)
-        ? (0, l.jsx)(u, { src: n, className: i, autoPlayOnMount: m })
+        ? (0, l.jsx)(u, { src: n, className: i, autoPlayOnMount: g })
         : null != n
-          ? (0, l.jsx)(h, { animatedSrc: n, staticSrc: t, className: i, autoPlayOnMount: m }, n)
+          ? (0, l.jsx)(h, { animatedSrc: n, staticSrc: t, className: i, autoPlayOnMount: g }, n)
           : (0, l.jsx)("img", { className: i, src: t, alt: "" });
 }

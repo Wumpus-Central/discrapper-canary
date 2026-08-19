@@ -1,1 +1,1 @@
-a.exports = { Qs: "content_ced382" };
+e.exports = { Qs: "content_ced382" };

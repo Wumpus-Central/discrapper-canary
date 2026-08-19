@@ -1,6 +1,6 @@
 "use strict";
-n.d(t, { B: () => i });
-var r = n(361037);
-function i(e) {
-    return (0, r.cX)() ? e.metaKey : e.ctrlKey;
+r.d(t, { B: () => o });
+var n = r(361037);
+function o(e) {
+    return (0, n.cX)() ? e.metaKey : e.ctrlKey;
 }

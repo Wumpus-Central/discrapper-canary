@@ -12,8 +12,8 @@ var i = n(582128),
     g = n(317525),
     h = n(71393),
     x = n(576705),
-    A = n(287809),
-    p = n(403362),
+    p = n(287809),
+    A = n(403362),
     f = n(803378),
     b = n(200662),
     j = n(652215);
@@ -40,9 +40,9 @@ function N(e, t, n) {
         E = (0, o.bG)([f.A], () => (null == n ? f.A.getEditedApplication() : f.A.getEditedCommand()?.permissions), [n]),
         C = n ?? t,
         v = null != n ? N : a,
-        T = i.useMemo(() => E ?? { ...(v ?? {}) }, [E, v]),
-        I = i.useMemo(() => Object.keys(T).length, [T]),
-        S = i.useMemo(() => (null == v || null == T ? null : !r().isEqual(v, T)), [v, T]);
+        I = i.useMemo(() => E ?? { ...(v ?? {}) }, [E, v]),
+        T = i.useMemo(() => Object.keys(I).length, [I]),
+        S = i.useMemo(() => (null == v || null == I ? null : !r().isEqual(v, I)), [v, I]);
     return (
         i.useEffect(() => {
             C === t && (S ? c.A.startEditingCommandPermissions(C) : c.A.stopEditingCommandPermissions(C));
@@ -54,7 +54,7 @@ function N(e, t, n) {
                 let n = (0, o.bG)([h.A], () => h.A.getGuild(e), [e]);
                 s()(null != n, "guild must be present to be editing its integration settings");
                 let l = (0, o.bG)([x.A], () => x.A.getHighestRole(n), [n]),
-                    a = (0, o.bG)([A.default], () => A.default.getCurrentUser()?.id);
+                    a = (0, o.bG)([p.default], () => p.default.getCurrentUser()?.id);
                 s()(null != a, "useComputePermissions: currentUserId must not be null");
                 let r = a === n.ownerId,
                     {
@@ -87,7 +87,7 @@ function N(e, t, n) {
                             Object.fromEntries(
                                 c
                                     .map(m.A.getChannel)
-                                    .filter(p.Vq)
+                                    .filter(A.Vq)
                                     .map((e) => [e.id, e]),
                             ),
                         [c],
@@ -98,18 +98,18 @@ function N(e, t, n) {
                             Object.fromEntries(
                                 f
                                     .map((t) => g.A.getRole(e, t))
-                                    .filter(p.Vq)
+                                    .filter(A.Vq)
                                     .map((e) => [e.id, e]),
                             ),
                         [f, e],
                     ),
                     C = (0, o.cf)(
-                        [A.default],
+                        [p.default],
                         () =>
                             Object.fromEntries(
                                 b
-                                    .map(A.default.getUser)
-                                    .filter(p.Vq)
+                                    .map(p.default.getUser)
+                                    .filter(A.Vq)
                                     .map((e) => [e.id, e]),
                             ),
                         [b],
@@ -147,9 +147,9 @@ function N(e, t, n) {
                     }
                     return s;
                 }, [N, n, l, r, t, E, C]);
-            })(e, T),
+            })(e, I),
             hasChanges: S,
-            selectedPermissionCount: I,
+            selectedPermissionCount: T,
         }
     );
 }

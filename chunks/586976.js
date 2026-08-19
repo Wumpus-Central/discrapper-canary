@@ -1,31 +1,31 @@
 "use strict";
-n.r(t), n.d(t, { Manager: () => o, usePopper: () => v, Reference: () => S, Popper: () => w });
-var r = n(582128),
-    i = r.createContext(),
-    a = r.createContext();
-function o(e) {
+r.r(t), r.d(t, { Manager: () => a, usePopper: () => y, Reference: () => x, Popper: () => _ });
+var n = r(582128),
+    o = n.createContext(),
+    i = n.createContext();
+function a(e) {
     var t = e.children,
-        n = r.useState(null),
-        o = n[0],
-        s = n[1],
-        l = r.useRef(!1);
-    r.useEffect(function () {
+        r = n.useState(null),
+        a = r[0],
+        s = r[1],
+        l = n.useRef(!1);
+    n.useEffect(function () {
         return function () {
             l.current = !0;
         };
     }, []);
-    var u = r.useCallback(function (e) {
+    var u = n.useCallback(function (e) {
         l.current || s(e);
     }, []);
-    return r.createElement(i.Provider, { value: o }, r.createElement(a.Provider, { value: u }, t));
+    return n.createElement(o.Provider, { value: a }, n.createElement(i.Provider, { value: u }, t));
 }
 var s = function (e) {
         return Array.isArray(e) ? e[0] : e;
     },
     l = function (e) {
         if ("function" == typeof e) {
-            for (var t = arguments.length, n = Array(t > 1 ? t - 1 : 0), r = 1; r < t; r++) n[r - 1] = arguments[r];
-            return e.apply(void 0, n);
+            for (var t = arguments.length, r = Array(t > 1 ? t - 1 : 0), n = 1; n < t; n++) r[n - 1] = arguments[n];
+            return e.apply(void 0, r);
         }
     },
     u = function (e, t) {
@@ -34,49 +34,49 @@ var s = function (e) {
     },
     c = function (e) {
         return e.reduce(function (e, t) {
-            var n = t[0],
-                r = t[1];
-            return (e[n] = r), e;
+            var r = t[0],
+                n = t[1];
+            return (e[r] = n), e;
         }, {});
     },
-    d = "u" > typeof window && window.document && window.document.createElement ? r.useLayoutEffect : r.useEffect,
-    f = n(333007),
-    p = n(888767),
-    h = n(412700),
-    m = n.n(h),
-    g = [],
-    v = function (e, t, n) {
-        void 0 === n && (n = {});
-        var i = r.useRef(null),
-            a = {
-                onFirstUpdate: n.onFirstUpdate,
-                placement: n.placement || "bottom",
-                strategy: n.strategy || "absolute",
-                modifiers: n.modifiers || g,
+    f = "u" > typeof window && window.document && window.document.createElement ? n.useLayoutEffect : n.useEffect,
+    p = r(333007),
+    d = r(888767),
+    h = r(412700),
+    m = r.n(h),
+    v = [],
+    y = function (e, t, r) {
+        void 0 === r && (r = {});
+        var o = n.useRef(null),
+            i = {
+                onFirstUpdate: r.onFirstUpdate,
+                placement: r.placement || "bottom",
+                strategy: r.strategy || "absolute",
+                modifiers: r.modifiers || v,
             },
-            o = r.useState({
-                styles: { popper: { position: a.strategy, left: "0", top: "0" }, arrow: { position: "absolute" } },
+            a = n.useState({
+                styles: { popper: { position: i.strategy, left: "0", top: "0" }, arrow: { position: "absolute" } },
                 attributes: {},
             }),
-            s = o[0],
-            l = o[1],
-            u = r.useMemo(function () {
+            s = a[0],
+            l = a[1],
+            u = n.useMemo(function () {
                 return {
                     name: "updateState",
                     enabled: !0,
                     phase: "write",
                     fn: function (e) {
                         var t = e.state,
-                            n = Object.keys(t.elements);
-                        f.flushSync(function () {
+                            r = Object.keys(t.elements);
+                        p.flushSync(function () {
                             l({
                                 styles: c(
-                                    n.map(function (e) {
+                                    r.map(function (e) {
                                         return [e, t.styles[e] || {}];
                                     }),
                                 ),
                                 attributes: c(
-                                    n.map(function (e) {
+                                    r.map(function (e) {
                                         return [e, t.attributes[e]];
                                     }),
                                 ),
@@ -86,138 +86,138 @@ var s = function (e) {
                     requires: ["computeStyles"],
                 };
             }, []),
-            h = r.useMemo(
+            h = n.useMemo(
                 function () {
                     var e = {
-                        onFirstUpdate: a.onFirstUpdate,
-                        placement: a.placement,
-                        strategy: a.strategy,
-                        modifiers: [].concat(a.modifiers, [u, { name: "applyStyles", enabled: !1 }]),
+                        onFirstUpdate: i.onFirstUpdate,
+                        placement: i.placement,
+                        strategy: i.strategy,
+                        modifiers: [].concat(i.modifiers, [u, { name: "applyStyles", enabled: !1 }]),
                     };
-                    return m()(i.current, e) ? i.current || e : ((i.current = e), e);
+                    return m()(o.current, e) ? o.current || e : ((o.current = e), e);
                 },
-                [a.onFirstUpdate, a.placement, a.strategy, a.modifiers, u],
+                [i.onFirstUpdate, i.placement, i.strategy, i.modifiers, u],
             ),
-            v = r.useRef();
+            y = n.useRef();
         return (
-            d(
+            f(
                 function () {
-                    v.current && v.current.setOptions(h);
+                    y.current && y.current.setOptions(h);
                 },
                 [h],
             ),
-            d(
+            f(
                 function () {
                     if (null != e && null != t) {
-                        var r = (n.createPopper || p.n)(e, t, h);
+                        var n = (r.createPopper || d.n)(e, t, h);
                         return (
-                            (v.current = r),
+                            (y.current = n),
                             function () {
-                                r.destroy(), (v.current = null);
+                                n.destroy(), (y.current = null);
                             }
                         );
                     }
                 },
-                [e, t, n.createPopper],
+                [e, t, r.createPopper],
             ),
             {
-                state: v.current ? v.current.state : null,
+                state: y.current ? y.current.state : null,
                 styles: s.styles,
                 attributes: s.attributes,
-                update: v.current ? v.current.update : null,
-                forceUpdate: v.current ? v.current.forceUpdate : null,
+                update: y.current ? y.current.update : null,
+                forceUpdate: y.current ? y.current.forceUpdate : null,
             }
         );
     },
-    y = function () {},
+    g = function () {},
     b = function () {
         return Promise.resolve(null);
     },
-    _ = [];
-function w(e) {
+    w = [];
+function _(e) {
     var t = e.placement,
-        n = void 0 === t ? "bottom" : t,
-        a = e.strategy,
-        o = void 0 === a ? "absolute" : a,
+        r = void 0 === t ? "bottom" : t,
+        i = e.strategy,
+        a = void 0 === i ? "absolute" : i,
         l = e.modifiers,
-        c = void 0 === l ? _ : l,
-        d = e.referenceElement,
-        f = e.onFirstUpdate,
-        p = e.innerRef,
+        c = void 0 === l ? w : l,
+        f = e.referenceElement,
+        p = e.onFirstUpdate,
+        d = e.innerRef,
         h = e.children,
-        m = r.useContext(i),
-        g = r.useState(null),
-        w = g[0],
-        x = g[1],
-        E = r.useState(null),
-        S = E[0],
+        m = n.useContext(o),
+        v = n.useState(null),
+        _ = v[0],
+        S = v[1],
+        E = n.useState(null),
+        x = E[0],
         k = E[1];
-    r.useEffect(
+    n.useEffect(
         function () {
-            u(p, w);
+            u(d, _);
         },
-        [p, w],
+        [d, _],
     );
-    var T = v(
-            d || m,
-            w,
-            r.useMemo(
+    var C = y(
+            f || m,
+            _,
+            n.useMemo(
                 function () {
                     return {
-                        placement: n,
-                        strategy: o,
-                        onFirstUpdate: f,
-                        modifiers: [].concat(c, [{ name: "arrow", enabled: null != S, options: { element: S } }]),
+                        placement: r,
+                        strategy: a,
+                        onFirstUpdate: p,
+                        modifiers: [].concat(c, [{ name: "arrow", enabled: null != x, options: { element: x } }]),
                     };
                 },
-                [n, o, f, c, S],
+                [r, a, p, c, x],
             ),
         ),
-        C = T.state,
-        P = T.styles,
-        A = T.forceUpdate,
-        M = T.update,
-        R = r.useMemo(
+        T = C.state,
+        M = C.styles,
+        P = C.forceUpdate,
+        A = C.update,
+        O = n.useMemo(
             function () {
                 return {
-                    ref: x,
-                    style: P.popper,
-                    placement: C ? C.placement : n,
-                    hasPopperEscaped: C && C.modifiersData.hide ? C.modifiersData.hide.hasPopperEscaped : null,
-                    isReferenceHidden: C && C.modifiersData.hide ? C.modifiersData.hide.isReferenceHidden : null,
-                    arrowProps: { style: P.arrow, ref: k },
-                    forceUpdate: A || y,
-                    update: M || b,
+                    ref: S,
+                    style: M.popper,
+                    placement: T ? T.placement : r,
+                    hasPopperEscaped: T && T.modifiersData.hide ? T.modifiersData.hide.hasPopperEscaped : null,
+                    isReferenceHidden: T && T.modifiersData.hide ? T.modifiersData.hide.isReferenceHidden : null,
+                    arrowProps: { style: M.arrow, ref: k },
+                    forceUpdate: P || g,
+                    update: A || b,
                 };
             },
-            [x, k, n, C, P, M, A],
+            [S, k, r, T, M, A, P],
         );
-    return s(h)(R);
+    return s(h)(O);
 }
-var x = n(916822),
-    E = n.n(x);
-function S(e) {
+var S = r(916822),
+    E = r.n(S);
+function x(e) {
     var t = e.children,
-        n = e.innerRef,
-        i = r.useContext(a),
-        o = r.useCallback(
+        r = e.innerRef,
+        o = n.useContext(i),
+        a = n.useCallback(
             function (e) {
-                u(n, e), l(i, e);
+                u(r, e), l(o, e);
             },
-            [n, i],
+            [r, o],
         );
     return (
-        r.useEffect(function () {
+        n.useEffect(function () {
             return function () {
-                return u(n, null);
+                return u(r, null);
             };
         }, []),
-        r.useEffect(
+        n.useEffect(
             function () {
-                E()(!!i, "`Reference` should not be used outside of a `Manager` component.");
+                E()(!!o, "`Reference` should not be used outside of a `Manager` component.");
             },
-            [i],
+            [o],
         ),
-        s(t)({ ref: o })
+        s(t)({ ref: a })
     );
 }

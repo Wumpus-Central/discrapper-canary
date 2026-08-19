@@ -1,54 +1,54 @@
 "use strict";
-n.d(t, { f: () => d });
+n.d(t, { f: () => u });
 var i = n(744230),
     r = n(113267),
-    s = n(743738),
-    a = n(885386),
-    o = n(10716),
-    l = n(795816),
-    u = n(652215),
+    a = n(743738),
+    s = n(885386),
+    l = n(10716),
+    o = n(795816),
+    d = n(652215),
     c = n(375708);
-async function d(e, t) {
+async function u(e, t) {
     let n,
-        d,
+        u,
         _,
-        h = c.intl.string(c.t["IOy+I5"]);
+        E = c.intl.string(c.t["IOy+I5"]);
     if (e instanceof i.A) {
         (n = 0), (_ = e.reason);
-        let r = o.A.getFetchState();
-        switch ((a.Q_.getSetting() && r !== o.$.LOADED && (await (0, l.SE)()), e.reason)) {
+        let r = l.A.getFetchState();
+        switch ((s.Q_.getSetting() && r !== l.$.LOADED && (await (0, o.SE)()), e.reason)) {
             case i.A.Reasons.PRIMARY_APP_COMMAND_NOT_FOUND:
-                o.A.inDevModeForApplication(t) && (h = c.intl.string(c.t.hXRXfz));
+                l.A.inDevModeForApplication(t) && (E = c.intl.string(c.t.hXRXfz));
                 break;
             case i.A.Reasons.INVALID_CHANNEL:
-                h = c.intl.string(c.t.j29zCr);
+                E = c.intl.string(c.t.j29zCr);
                 break;
             case i.A.Reasons.LEGACY_LAUNCH_CLIENT_VALIDATION_FAILED:
-                d = e.detailCode;
+                u = e.detailCode;
         }
-    } else if (e instanceof r.A) (n = 1), (_ = e.reason), (h = (0, s.sW)(e.reason, t) ?? h);
+    } else if (e instanceof r.A) (n = 1), (_ = e.reason), (E = (0, a.sW)(e.reason, t) ?? E);
     else
-        switch (((n = 2), (d = e.status), (_ = e.code), e.code)) {
-            case u.t02.INVALID_ACTIVITY_LAUNCH_NO_ACCESS:
-                h = c.intl.string(c.t.GyzcrS);
+        switch (((n = 2), (u = e.status), (_ = e.code), e.code)) {
+            case d.t02.INVALID_ACTIVITY_LAUNCH_NO_ACCESS:
+                E = c.intl.string(c.t.GyzcrS);
                 break;
-            case u.t02.INVALID_ACTIVITY_LAUNCH_PREMIUM_TIER:
-                h = c.intl.string(c.t.zxv7EF);
+            case d.t02.INVALID_ACTIVITY_LAUNCH_PREMIUM_TIER:
+                E = c.intl.string(c.t.zxv7EF);
                 break;
-            case u.t02.INVALID_PERMISSIONS:
-                h = c.intl.string(c.t.hHGrWz);
+            case d.t02.INVALID_PERMISSIONS:
+                E = c.intl.string(c.t.hHGrWz);
                 break;
-            case u.t02.INVALID_ACTIVITY_LAUNCH_AFK_CHANNEL:
-                h = c.intl.string(c.t.j29zCr);
+            case d.t02.INVALID_ACTIVITY_LAUNCH_AFK_CHANNEL:
+                E = c.intl.string(c.t.j29zCr);
                 break;
-            case u.t02.INVALID_ACTIVITY_LAUNCH_AGE_GATED:
-                h = c.intl.string(c.t["4WuFRE"]);
+            case d.t02.INVALID_ACTIVITY_LAUNCH_AGE_GATED:
+                E = c.intl.string(c.t["4WuFRE"]);
                 break;
-            case u.t02.INVALID_ACTIVITY_LAUNCH_DEV_PREVIEW_GUILD_SIZE:
-                h = c.intl.string(c.t.RvkXdb);
+            case d.t02.INVALID_ACTIVITY_LAUNCH_DEV_PREVIEW_GUILD_SIZE:
+                E = c.intl.string(c.t.RvkXdb);
                 break;
-            case u.t02.ACTIVITY_CONFIGURATION_DOES_NOT_SUPPORT_PLATFORM:
-                h = c.intl.string(c.t.uGDCcw);
+            case d.t02.ACTIVITY_CONFIGURATION_DOES_NOT_SUPPORT_PLATFORM:
+                E = c.intl.string(c.t.uGDCcw);
         }
-    return { message: h, errorType: n, errorStatus: d, errorCode: _ };
+    return { message: E, errorType: n, errorStatus: u, errorCode: _ };
 }

@@ -3,7 +3,7 @@ function i(e) {
     let t = null,
         n = null;
     return function () {
-        for (var i = arguments.length, r = Array(i), s = 0; s < i; s++) r[s] = arguments[s];
+        for (var i = arguments.length, r = Array(i), a = 0; a < i; a++) r[a] = arguments[a];
         return (
             !(function (e, t) {
                 if (e === t) return !0;
@@ -33,11 +33,11 @@ class r {
         let { force: n = !1 } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
             i = [...new Set(e)],
             r = [],
-            s = new Map();
+            a = new Map();
         for (let e of i) {
             let t = this.#t.get(e);
             if (!n && null != t) {
-                s.set(e, t);
+                a.set(e, t);
                 continue;
             }
             r.push(e);
@@ -58,12 +58,12 @@ class r {
                     .finally(() => {
                         this.#t.get(t) === n && this.#t.delete(t);
                     });
-                this.#t.set(t, n), s.set(t, n);
+                this.#t.set(t, n), a.set(t, n);
             }
         }
         return Promise.all(
             i.map(async (e) => {
-                let t = await s.get(e);
+                let t = await a.get(e);
                 return [e, t];
             }),
         ).then((e) => {

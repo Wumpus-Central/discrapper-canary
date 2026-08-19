@@ -51,10 +51,10 @@ let y = (0, m.UT)(N.A, {
 var b = n(451909),
     M = n(118517),
     R = n(747926),
-    w = n(280450),
-    k = n(734057),
-    O = n(625494),
-    P = n(475815);
+    O = n(280450),
+    w = n(734057),
+    P = n(625494),
+    k = n(475815);
 let L = (0, n(945810).mj)({
     kind: "user",
     name: "2026-05-clips-media-comments",
@@ -65,8 +65,8 @@ var D = n(307731),
     U = n(381941),
     G = n(16590),
     F = n(375708),
-    H = n(731686);
-function V(e, t) {
+    V = n(731686);
+function H(e, t) {
     let n = t?.current?.currentTime;
     return null == n ? { attachment_id: e, timestamp: 0 } : { attachment_id: e, timestamp: Math.floor(1e3 * n) };
 }
@@ -85,8 +85,8 @@ function B(e) {
         Z = null != I && I < 460,
         z = B.slice(0, Z ? 2 : 3),
         K = (0, m.bG)([N.A], () => N.A.getMessage(a, r), [a, r]),
-        q = (0, m.bG)([k.A], () => k.A.getChannel(a), [a]),
-        Y = (0, m.bG)([k.A], () => k.A.getChannel(j), [j]),
+        q = (0, m.bG)([w.A], () => w.A.getChannel(a), [a]),
+        Y = (0, m.bG)([w.A], () => w.A.getChannel(j), [j]),
         { enableMediaComments: $ } = L.useConfig({ location: "ClipEmbedMediaMentionBar" }),
         { activeLayer: X, videoRef: J } = (0, c.X$)(),
         Q = (0, h.Lt)(n.flags ?? 0, S.sbO.HAS_TIMELINE_COMMENTS),
@@ -104,13 +104,13 @@ function B(e) {
                             : "surrogates" in e && null != e.surrogates
                               ? e.surrogates
                               : e.name,
-                    n = K.author.id === w.default.getId();
+                    n = K.author.id === O.default.getId();
                 C.A.sendMessage(q.id, b.Ay.parse(q, t), !1, {
                     location: U.Hx.MEDIA_MENTION,
                     doNotScroll: !0,
                     messageReference: { channel_id: q.id, guild_id: q.getGuildId() ?? void 0, message_id: r },
                     allowedMentions: { replied_user: !n },
-                    mediaMention: V(j, J),
+                    mediaMention: H(j, J),
                 });
             })(t);
     }
@@ -118,7 +118,7 @@ function B(e) {
     if (!$ || null == q || null == r) return null;
     let el = F.intl.formatToPlainString(G.default.OYDyt2, { count: ei });
     return (0, i.jsxs)(u.animated.div, {
-        className: s()(H.M0, { [H.pd]: d }),
+        className: s()(V.M0, { [V.pd]: d }),
         inert: d,
         style: {
             opacity: (0, u.to)(t.to({ range: [0, 1], output: [0, 1] }), (e) => (d ? 0 : `${e}`)),
@@ -129,7 +129,7 @@ function B(e) {
         },
         children: [
             (0, i.jsx)("div", {
-                className: H.gm,
+                className: V.gm,
                 children: z.map((e) =>
                     (0, i.jsx)(
                         p.u,
@@ -138,7 +138,7 @@ function B(e) {
                             body: F.intl.string(G.default.wQFVGI),
                             children: (0, i.jsx)("button", {
                                 type: "button",
-                                className: H.x6,
+                                className: V.x6,
                                 onClick: (t) => en(t, e),
                                 children: (0, i.jsx)(E.A, {
                                     emojiId: e.id,
@@ -182,7 +182,7 @@ function B(e) {
                             ...e,
                             ref: et,
                             type: "button",
-                            className: H.x6,
+                            className: V.x6,
                             children: (0, i.jsx)(f.n, { size: "sm" }),
                         }),
                     }),
@@ -192,19 +192,19 @@ function B(e) {
                 body: F.intl.string(G.default.c3OIMS),
                 children: (0, i.jsx)("button", {
                     type: "button",
-                    className: H.x6,
+                    className: V.x6,
                     onClick: function (e) {
                         if ((e.stopPropagation(), null == q || null == K || null == J?.current?.currentTime)) return;
-                        P._U(J.current) && P.sP(J.current);
-                        let t = K.author.id === w.default.getId();
+                        k._U(J.current) && k.sP(J.current);
+                        let t = K.author.id === O.default.getId();
                         (0, M.Yf)({
                             channel: q,
                             message: K,
                             shouldMention: !e.shiftKey && !t,
                             showMentionToggle: !q.isPrivate() && !t,
-                            mediaMention: V(j, J),
+                            mediaMention: H(j, J),
                         }),
-                            O._.dispatch(S.jej.FOCUS_CHANNEL_TEXT_AREA, { channelId: q.id });
+                            P._.dispatch(S.jej.FOCUS_CHANNEL_TEXT_AREA, { channelId: q.id });
                     },
                     children: (0, i.jsx)(A.W, { size: "sm" }),
                 }),
@@ -215,10 +215,10 @@ function B(e) {
                     children: [
                         (0, i.jsx)(W, {}),
                         (0, i.jsx)(x.D, {
-                            className: H.jC,
+                            className: V.jC,
                             tag: "span",
                             onClick: function (e) {
-                                e.stopPropagation(), null != Y && (P._U(J.current) && P.sP(J.current), (0, R.JA)(Y));
+                                e.stopPropagation(), null != Y && (k._U(J.current) && k.sP(J.current), (0, R.JA)(Y));
                             },
                             "aria-label": el,
                             children: (0, i.jsx)(v.E, {
@@ -234,7 +234,7 @@ function B(e) {
     });
 }
 function W() {
-    return (0, i.jsx)("div", { className: H.yF });
+    return (0, i.jsx)("div", { className: V.yF });
 }
 var Z = n(555115),
     z = n(717421),
@@ -386,7 +386,7 @@ function ei(e) {
               children: S,
           });
 }
-var el = n(478531),
+var el = n(783384),
     ea = n(972117),
     es = n(376595),
     er = n(773503);

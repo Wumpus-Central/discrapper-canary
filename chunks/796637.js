@@ -8,8 +8,8 @@ var i = n(582128),
     d = n(698441),
     c = n(297469),
     u = n(863005),
-    h = n(152007),
-    A = n(353202),
+    A = n(152007),
+    h = n(353202),
     E = n(95701),
     g = n(924985),
     C = n(734057),
@@ -24,8 +24,8 @@ var i = n(582128),
     f = n(774452),
     O = n(349828),
     b = n(281405),
-    R = n(818348);
-let v = 221552 == n.j ? [a.Ay, L.A, o.A, d.Ay, u.A, h.A, g.A, C.A, I.A, T.Ay, p.Ay, S.Ay] : null;
+    v = n(818348);
+let R = 221552 == n.j ? [a.Ay, L.A, o.A, d.Ay, u.A, A.A, g.A, C.A, I.A, T.Ay, p.Ay, S.Ay] : null;
 function U(e) {
     let { limit: t, includeLoading: n } = e,
         i = L.A.getFavoriteChannels(),
@@ -40,7 +40,7 @@ function U(e) {
             null != C.A.getChannel(e)
         )
             continue;
-        let a = A.A.getLoadState(e);
+        let a = h.A.getLoadState(e);
         "NOT_FOUND" !== a && (n || "LOADING" !== a) && l.push(e);
     }
     return l;
@@ -58,21 +58,21 @@ function D() {
         t();
         let n = r().throttle(t, 100);
         return (
-            v.forEach((e) => e.addChangeListener(n)),
+            R.forEach((e) => e.addChangeListener(n)),
             () => {
-                n.cancel(), v.forEach((e) => e.removeChangeListener(n));
+                n.cancel(), R.forEach((e) => e.removeChangeListener(n));
             }
         );
     }, [e]),
         i.useEffect(() => {
             if (t && s) {
                 let e;
-                0 === (e = U({ limit: O.lj, includeLoading: !1 })).length ? Promise.resolve() : A.A.loadThreadsBulk(e);
+                0 === (e = U({ limit: O.lj, includeLoading: !1 })).length ? Promise.resolve() : h.A.loadThreadsBulk(e);
             }
         }, [t, s]);
     let d = t ? n : a,
         u = t && U({ limit: 1, includeLoading: !0 }).length > 0,
-        h = (function (e) {
+        A = (function (e) {
             if (e.getSections().length > c.TF) return !1;
             let t = !1;
             return (
@@ -82,7 +82,7 @@ function D() {
                 !t
             );
         })(d);
-    return { guildChannels: d, shouldShowEmptyState: h && !u, hasNoChannels: h };
+    return { guildChannels: d, shouldShowEmptyState: A && !u, hasNoChannels: A };
 }
 function G(e) {
     let { withSuggestionsNotice: t = !1 } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
@@ -92,7 +92,7 @@ function G(e) {
         a = C.A.getChannel(l),
         o = p.Ay.getVoiceChannelId(),
         d = [],
-        A = {};
+        h = {};
     for (let e in n) {
         let t = n[e],
             i = C.A.getChannel(t.id);
@@ -103,22 +103,22 @@ function G(e) {
             continue;
         }
         let r = t.parentId;
-        r in A || (A[r] = []), A[r].push(l);
+        r in h || (h[r] = []), h[r].push(l);
     }
-    function v(e, t) {
+    function R(e, t) {
         let { isCollapsed: l, isMuted: s } = t;
         return r()(e)
             .map((e) => {
-                if (!e.isPrivate() && !I.A.can(R.xB.VIEW_CHANNEL, e)) return null;
+                if (!e.isPrivate() && !I.A.can(v.xB.VIEW_CHANNEL, e)) return null;
                 let d = null != a && (a.id === e.id || o === e.id),
-                    A = null != a && a.isThread() && a.parent_id === e.id,
+                    h = null != a && a.isThread() && a.parent_id === e.id,
                     g =
-                        (d || A || !l
+                        (d || h || !l
                             ? u.A.getActiveJoinedRelevantThreadsForParent(e.guild_id, e.id)
                             : u.A.getActiveJoinedUnreadThreadsForParent(e.guild_id, e.id)) ?? {},
                     C = (0, c.wF)(e, g, a, o, i),
                     p = _.A.isCollapsed(e.id),
-                    N = e.isThread() ? h.A.isMuted(e.id) : S.Ay.isChannelMuted(e.guild_id, e.id),
+                    N = e.isThread() ? A.A.isMuted(e.id) : S.Ay.isChannelMuted(e.guild_id, e.id),
                     L = {
                         id: e.id,
                         record: e,
@@ -131,7 +131,7 @@ function G(e) {
                         isFirstVoiceChannel: !1,
                         subtitle: (0, c.go)(e, p, !1),
                     };
-                return d || A || !r().isEmpty(g) || T.Ay.getMentionCount(e.id) > 0
+                return d || h || !r().isEmpty(g) || T.Ay.getMentionCount(e.id) > 0
                     ? L
                     : (i && N) ||
                         (l && (N || s || (0, E.gV)(e.type) || ((0, E.ig)(e.type) && !1 === T.Ay.hasUnread(e.id))))
@@ -152,7 +152,7 @@ function G(e) {
             getShownChannelAndThreadIds: () => d.map((e) => e.id),
             isEmpty: () => 0 === d.length,
             get channelList() {
-                return null == U && (U = v(d, this)), U;
+                return null == U && (U = R(d, this)), U;
             },
         },
         G = (0, m.m_)(n)
@@ -161,7 +161,7 @@ function G(e) {
                 let { id: t } = e,
                     i = L.A.getCategoryRecord(t);
                 if (null == i) return null;
-                let l = A[t] ?? [],
+                let l = h[t] ?? [],
                     r = S.Ay.isChannelMuted(O.Vc, t),
                     s = g.A.isCollapsed(t),
                     a = null;
@@ -176,7 +176,7 @@ function G(e) {
                     getShownChannelAndThreadIds: () => l.map((e) => e.id),
                     isEmpty: () => 0 === l.length,
                     get channelList() {
-                        return null == a && (a = v(l, this)), a;
+                        return null == a && (a = R(l, this)), a;
                     },
                 };
             })

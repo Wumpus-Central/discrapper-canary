@@ -1,4 +1,4 @@
-t.exports = {
+e.exports = {
     r$: "dots_bc2923",
     Sp: "themed_bc2923",
     Om: "dot_bc2923",

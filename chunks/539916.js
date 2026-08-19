@@ -9,11 +9,11 @@ n.d(t, {
     Mc: () => L,
     QY: () => A,
     Q_: () => E,
-    SA: () => y,
+    SA: () => D,
     SD: () => C,
     Sq: () => w,
     Uh: () => b,
-    a5: () => D,
+    a5: () => y,
     fs: () => I,
     hv: () => M,
     iD: () => h,
@@ -73,10 +73,10 @@ function L() {
         type: 0,
     };
 }
-function D(e) {
+function y(e) {
     return { id: String(Date.now()), title: "", options: [], singleSelect: !1, required: !1, inOnboarding: e, type: 0 };
 }
-function y(e) {
+function D(e) {
     return {
         id: e.id,
         options: e.options.map((e) => ({

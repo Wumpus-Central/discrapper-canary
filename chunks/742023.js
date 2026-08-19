@@ -1,26 +1,26 @@
 "use strict";
-n.d(t, { Ay: () => E });
-var i = n(735438),
+n.d(t, { Ay: () => I });
+var i = n(435558),
     r = n.n(i),
-    s = n(17928),
-    a = n(506774),
-    o = n(228366);
+    a = n(17928),
+    s = n(506774),
+    l = n(228366);
 n(677313);
-var l = n(185928),
-    u = n(355097),
+var o = n(185928),
+    d = n(355097),
     c = n(652215),
-    d = n(698279);
+    u = n(698279);
 let _ = (window.innerWidth - c.MdR) / 2,
-    h = null,
-    f = {};
-class p extends s.Ay.DeviceSettingsStore {
+    E = null,
+    A = {};
+class h extends a.Ay.DeviceSettingsStore {
     static displayName = "UnsyncedUserSettingsStore";
     static persistKey = "UnsyncedUserSettingsStore";
     static migrations = [
         () => {
-            let e = a.w.get("UserSettingsStore");
+            let e = s.w.get("UserSettingsStore");
             return (
-                a.w.remove("UserSettingsStore"),
+                s.w.remove("UserSettingsStore"),
                 r().pick(
                     e,
                     "dataSavingMode",
@@ -47,105 +47,105 @@ class p extends s.Ay.DeviceSettingsStore {
         },
     ];
     initialize(e) {
-        (f = e ?? {}).hdrDynamicRange = f.hdrDynamicRange ?? "no-limit";
+        (A = e ?? {}).hdrDynamicRange = A.hdrDynamicRange ?? "no-limit";
     }
     getUserAgnosticState() {
-        return f;
+        return A;
     }
     get displayCompactAvatars() {
-        return f.displayCompactAvatars ?? !1;
+        return A.displayCompactAvatars ?? !1;
     }
     get lowQualityImageMode() {
-        return f.lowQualityImageMode ?? !1;
+        return A.lowQualityImageMode ?? !1;
     }
     get videoUploadQuality() {
-        return f.videoUploadQuality ?? "standard";
+        return A.videoUploadQuality ?? "standard";
     }
     get dataSavingMode() {
-        return f.dataSavingMode ?? f.lowQualityImageMode ?? !1;
+        return A.dataSavingMode ?? A.lowQualityImageMode ?? !1;
     }
     get expressionPickerWidth() {
-        return f.expressionPickerWidth ?? d.wp.MIN;
+        return A.expressionPickerWidth ?? u.wp.MIN;
     }
     get messageRequestSidebarWidth() {
-        return f.messageRequestSidebarWidth ?? c.ItT;
+        return A.messageRequestSidebarWidth ?? c.ItT;
     }
     get threadSidebarWidth() {
-        return f.threadSidebarWidth ?? c.da6;
+        return A.threadSidebarWidth ?? c.da6;
     }
     get postSidebarWidth() {
-        return f.postSidebarWidth ?? _;
+        return A.postSidebarWidth ?? _;
     }
     get callChatSidebarWidth() {
-        return f.callChatSidebarWidth ?? c.da6;
+        return A.callChatSidebarWidth ?? c.da6;
     }
     get homeSidebarWidth() {
-        return f.homeSidebarWidth ?? (null == h && (h = Math.max((window.innerWidth - c.MdR) * 0.4, c.da6)), h);
+        return A.homeSidebarWidth ?? (null == E && (E = Math.max((window.innerWidth - c.MdR) * 0.4, c.da6)), E);
     }
     get callHeaderHeight() {
-        return f.callHeaderHeight;
+        return A.callHeaderHeight;
     }
     get useSystemTheme() {
-        return f.useSystemTheme ?? l.Q_.UNSET;
+        return A.useSystemTheme ?? o.Q_.UNSET;
     }
     get activityPanelHeight() {
-        return f.activityPanelHeight;
+        return A.activityPanelHeight;
     }
     get disableVoiceChannelChangeAlert() {
-        return f.disableVoiceChannelChangeAlert ?? !1;
+        return A.disableVoiceChannelChangeAlert ?? !1;
     }
     get disableHardwareMuteSilenceAlert() {
-        return f.disableHardwareMuteSilenceAlert ?? !1;
+        return A.disableHardwareMuteSilenceAlert ?? !1;
     }
     get disableEmbeddedActivityPopOutAlert() {
-        return f.disableEmbeddedActivityPopOutAlert ?? !1;
+        return A.disableEmbeddedActivityPopOutAlert ?? !1;
     }
     get disableActivityHardwareAccelerationPrompt() {
-        return f.disableActivityHardwareAccelerationPrompt ?? !1;
+        return A.disableActivityHardwareAccelerationPrompt ?? !1;
     }
     get disableInviteWithTextChannelActivityLaunch() {
-        return f.disableInviteWithTextChannelActivityLaunch ?? !1;
+        return A.disableInviteWithTextChannelActivityLaunch ?? !1;
     }
     get disableHideSelfStreamAndVideoConfirmationAlert() {
-        return f.disableHideSelfStreamAndVideoConfirmationAlert ?? !1;
+        return A.disableHideSelfStreamAndVideoConfirmationAlert ?? !1;
     }
     get pushUpsellUserSettingsDismissed() {
-        return f.pushUpsellDismissed ?? !1;
+        return A.pushUpsellDismissed ?? !1;
     }
     get disableActivityHostLeftNitroUpsell() {
-        return f.disableActivityHostLeftNitroUpsell ?? !1;
+        return A.disableActivityHostLeftNitroUpsell ?? !1;
     }
     get disableCallUserConfirmationPrompt() {
-        return f.disableCallUserConfirmationPrompt ?? !1;
+        return A.disableCallUserConfirmationPrompt ?? !1;
     }
     get disableApplicationSubscriptionCancellationSurvey() {
-        return f.disableApplicationSubscriptionCancellationSurvey ?? !1;
+        return A.disableApplicationSubscriptionCancellationSurvey ?? !1;
     }
     get darkSidebar() {
-        return f.darkSidebar ?? !1;
+        return A.darkSidebar ?? !1;
     }
     get saveCameraUploadsToDevice() {
-        return f.saveCameraUploadsToDevice ?? !0;
+        return A.saveCameraUploadsToDevice ?? !0;
     }
     isVisualRefreshDisabled(e) {
-        return f.disableVisualRefresh ?? e;
+        return A.disableVisualRefresh ?? e;
     }
     get listDensity() {
-        return f.listDensity ?? u.YP.COZY;
+        return A.listDensity ?? d.YP.COZY;
     }
     get hdrDynamicRange() {
-        return f.hdrDynamicRange ?? "no-limit";
+        return A.hdrDynamicRange ?? "no-limit";
     }
 }
-let E = new p(o.h, {
+let I = new h(l.h, {
     UNSYNCED_USER_SETTINGS_UPDATE: function (e) {
-        f = { ...f, ...e.settings };
+        A = { ...A, ...e.settings };
     },
     LOGOUT: function () {
-        f = { useSystemTheme: f.useSystemTheme };
+        A = { useSystemTheme: A.useSystemTheme };
     },
     LOGIN_SUCCESS: function () {
-        null == f && (f = {});
+        null == A && (A = {});
     },
     REGISTER_SUCCESS: function () {},
 });

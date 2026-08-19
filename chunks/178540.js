@@ -1,8 +1,8 @@
 "use strict";
-n.d(t, { A: () => a, O: () => s });
-var i = n(353640);
+n.d(t, { A: () => s, O: () => a });
+var i = n(196765);
 let r = [],
-    s = (0, i.v)((e, t) => ({
+    a = (0, i.v)((e, t) => ({
         errorHintsByQuestId: new Map(),
         setErrorHints: (t, n) => {
             e((e) => {
@@ -25,12 +25,12 @@ let r = [],
                 if (null == i) return e;
                 let r = i.filter((e) => e.type !== n);
                 if (r.length === i.length) return e;
-                let s = new Map(e.errorHintsByQuestId);
-                return 0 === r.length ? s.delete(t) : s.set(t, r), { errorHintsByQuestId: s };
+                let a = new Map(e.errorHintsByQuestId);
+                return 0 === r.length ? a.delete(t) : a.set(t, r), { errorHintsByQuestId: a };
             });
         },
         reset: () => {
             e({ errorHintsByQuestId: new Map() });
         },
     })),
-    a = s;
+    s = a;

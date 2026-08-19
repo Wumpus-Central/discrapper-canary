@@ -1,8 +1,8 @@
 "use strict";
-n.d(t, { R: () => s });
+n.d(t, { R: () => a });
 var i = n(157347),
     r = n(70738);
-function s(e, t) {
+function a(e, t) {
     let n = (0, i.vn)(e.joinedAt);
     switch (t) {
         case r.mF.ORDER_BY_GUILD_JOINED_AT_ASC:

@@ -1,13 +1,13 @@
 "use strict";
-var i = Array.prototype.slice,
-    r = n(560332),
-    s = Object.keys,
-    a = s
+var n = Array.prototype.slice,
+    o = r(560332),
+    i = Object.keys,
+    a = i
         ? function (e) {
-              return s(e);
+              return i(e);
           }
-        : n(963980),
-    o = Object.keys;
+        : r(963980),
+    s = Object.keys;
 (a.shim = function () {
     return (
         Object.keys
@@ -16,7 +16,7 @@ var i = Array.prototype.slice,
                   return e && e.length === arguments.length;
               })(1, 2) &&
               (Object.keys = function (e) {
-                  return r(e) ? o(i.call(e)) : o(e);
+                  return o(e) ? s(n.call(e)) : s(e);
               })
             : (Object.keys = a),
         Object.keys || a

@@ -1,4 +1,4 @@
-_.exports = {
+e.exports = {
     b9: "applicationEducation__526cc",
     a9: "sectionLabel__526cc",
     f_: "entry__526cc",

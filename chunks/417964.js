@@ -1,16 +1,16 @@
 "use strict";
-n.d(t, { El: () => d, Fd: () => o, nK: () => h, sJ: () => l });
+n.d(t, { El: () => u, Fd: () => l, nK: () => E, sJ: () => o });
 var i = n(998218);
 let r = ["\u034F", "\u17B4", "\u17B5", "\u1160", "\u3164", "\uFFA0"],
-    s = RegExp(`${/\p{Cf}|\p{Zl}|\p{Zp}|[^\P{Cc}\n]|[^\P{Zs} ]/gu.source}|${r.join("|")}`, "gu"),
-    a = RegExp(`${/\p{Cf}|\p{Zl}|\p{Zp}|[^\P{Cc}\n\t]|[^\P{Zs} ]/gu.source}|${r.join("|")}`, "gu");
-function o(e) {
-    return e.replace(s, "");
-}
+    a = RegExp(`${/\p{Cf}|\p{Zl}|\p{Zp}|[^\P{Cc}\n]|[^\P{Zs} ]/gu.source}|${r.join("|")}`, "gu"),
+    s = RegExp(`${/\p{Cf}|\p{Zl}|\p{Zp}|[^\P{Cc}\n\t]|[^\P{Zs} ]/gu.source}|${r.join("|")}`, "gu");
 function l(e) {
     return e.replace(a, "");
 }
-let u = [
+function o(e) {
+    return e.replace(s, "");
+}
+let d = [
     {
         character: "h",
         matcher: c([
@@ -162,10 +162,10 @@ let u = [
 function c(e) {
     return RegExp(e.join("|"), "gu");
 }
-function d(e) {
+function u(e) {
     let t = e;
     return (
-        u.forEach((e) => {
+        d.forEach((e) => {
             t = t.replace(e.matcher, e.character);
         }),
         t
@@ -177,7 +177,7 @@ let _ = [
     1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
     1, 1, 1, 1, 1, 1, 0, 0, 0, 1, 0,
 ];
-function h(e) {
+function E(e) {
     let t = (function (e) {
         if ("null" === e.origin && e.pathname.startsWith("//")) return e.protocol;
         let t = "";
@@ -185,25 +185,25 @@ function h(e) {
         let n = "//" === e.href.substr(e.protocol.length, 2);
         return `${e.protocol}${n ? "//" : ""}${t}${e.host}`;
     })(e);
-    return (t += f(e.pathname)), (t += f(e.search)), (t += f(e.hash));
+    return (t += A(e.pathname)), (t += A(e.search)), (t += A(e.hash));
 }
-function f(e) {
+function A(e) {
     let t = i.A.safeDecodeURIComponent(e);
     if (null == t) return e;
     let n = "",
         r = e,
-        s = t;
+        a = t;
     for (; r.length > 0; ) {
         let e = r.codePointAt(0),
-            t = s.codePointAt(0);
+            t = a.codePointAt(0);
         if (e === t) {
             let t = String.fromCodePoint(e);
-            (n += t), (r = r.substring(t.length)), (s = s.substring(t.length));
+            (n += t), (r = r.substring(t.length)), (a = a.substring(t.length));
             continue;
         }
         let i = String.fromCodePoint(t),
-            a = encodeURIComponent(i),
-            o = a === i ? 3 : a.length;
+            s = encodeURIComponent(i),
+            l = s === i ? 3 : s.length;
         (n += (
             t >= 0 && t < 128
                 ? 1 !== _[t]
@@ -282,10 +282,10 @@ function f(e) {
                   (t >= 119155 && t <= 119162) ||
                   (t >= 917504 && t <= 921599)
         )
-            ? a
+            ? s
             : i),
-            (r = r.substring(o)),
-            (s = s.substring(i.length));
+            (r = r.substring(l)),
+            (a = a.substring(i.length));
     }
     return n;
 }

@@ -1,13 +1,13 @@
 "use strict";
-function i() {
-    return (i = Object.assign
+function n() {
+    return (n = Object.assign
         ? Object.assign.bind()
-        : function (e) {
-              for (var t = 1; t < arguments.length; t++) {
-                  var n = arguments[t];
-                  for (var i in n) ({}).hasOwnProperty.call(n, i) && (e[i] = n[i]);
+        : function (t) {
+              for (var r = 1; r < arguments.length; r++) {
+                  var e = arguments[r];
+                  for (var n in e) ({}).hasOwnProperty.call(e, n) && (t[n] = e[n]);
               }
-              return e;
+              return t;
           }).apply(null, arguments);
 }
-n.d(t, { A: () => i });
+e.d(r, { A: () => n });

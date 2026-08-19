@@ -1,7 +1,7 @@
 "use strict";
-var i = n(147205),
-    r = "u" < typeof globalThis ? n.g : globalThis;
+var n = r(147205),
+    o = "u" < typeof globalThis ? r.g : globalThis;
 e.exports = function () {
-    for (var e = [], t = 0; t < i.length; t++) "function" == typeof r[i[t]] && (e[e.length] = i[t]);
+    for (var e = [], t = 0; t < n.length; t++) "function" == typeof o[n[t]] && (e[e.length] = n[t]);
     return e;
 };

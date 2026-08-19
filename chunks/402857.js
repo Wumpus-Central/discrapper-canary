@@ -21,8 +21,8 @@ var e = l(477900),
     v = l(915089),
     f = l(172710),
     O = l(92240),
-    E = l(257367),
-    I = l(160376),
+    I = l(257367),
+    E = l(160376),
     L = l(939496),
     y = l(282197),
     S = l(584904),
@@ -109,12 +109,12 @@ function Q(i) {
         u = (0, v.GV)(),
         { themeType: A } = (0, L.E)(),
         h = (0, _.A)({ activity: a, user: l }),
-        x = (0, I.A)(a),
+        x = (0, E.A)(a),
         T = null != x.text && "" !== x.text,
         { largeImage: M } = (0, C.XN)(a, void 0, "user_profile_spotify"),
         { analyticsLocations: P } = (0, j.Ay)(p.A.USER_PROFILE_LIVE_ACTIVITY_CARD),
         w = (0, O.A)({ display: "live", user: l, activity: a, entry: h, analyticsLocations: P }),
-        G = (0, E.A)({ userId: l.id, onAction: w });
+        G = (0, I.A)({ userId: l.id, onAction: w });
     if (!(0, d.A)(a)) return null;
     function U() {
         return l.id === s.id

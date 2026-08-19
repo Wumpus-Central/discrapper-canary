@@ -1,54 +1,54 @@
 "use strict";
 n.d(t, {
-    $r: () => E,
+    $r: () => I,
     Hi: () => c,
-    Ik: () => u,
-    NH: () => a,
-    Ob: () => d,
-    Ss: () => l,
-    YC: () => p,
-    iW: () => h,
-    oW: () => o,
-    tE: () => m,
-    uA: () => f,
+    Ik: () => d,
+    NH: () => s,
+    Ob: () => u,
+    Ss: () => o,
+    YC: () => h,
+    iW: () => E,
+    oW: () => l,
+    tE: () => f,
+    uA: () => A,
     v4: () => _,
 });
 var i,
     r = n(155718),
-    s = n(375708);
-let a = "True",
-    o = "False",
-    l = [
-        { name: a, displayName: a, value: "true" },
-        { name: o, displayName: o, value: "false" },
+    a = n(375708);
+let s = "True",
+    l = "False",
+    o = [
+        { name: s, displayName: s, value: "true" },
+        { name: l, displayName: l, value: "false" },
     ];
-var u = (((i = {}).BUILT_IN = "-1"), (i.FRECENCY = "-2"), i);
+var d = (((i = {}).BUILT_IN = "-1"), (i.FRECENCY = "-2"), i);
 let c = 10,
-    d = 5,
+    u = 5,
     _ = "\0",
-    h = 100,
-    f = 3,
-    p = 10,
-    E = 500;
-function m(e) {
-    if (null != e.choices) return s.intl.string(s.t.xi5aah);
+    E = 100,
+    A = 3,
+    h = 10,
+    I = 500;
+function f(e) {
+    if (null != e.choices) return a.intl.string(a.t.xi5aah);
     switch (e.type) {
         case r.n4.BOOLEAN:
-            return s.intl.string(s.t.ATIx6O);
+            return a.intl.string(a.t.ATIx6O);
         case r.n4.CHANNEL:
-            return s.intl.string(s.t.Q0z2Gx);
+            return a.intl.string(a.t.Q0z2Gx);
         case r.n4.INTEGER:
-            return s.intl.string(s.t["d/9Rk4"]);
+            return a.intl.string(a.t["d/9Rk4"]);
         case r.n4.NUMBER:
-            return s.intl.string(s.t["FDyk/V"]);
+            return a.intl.string(a.t["FDyk/V"]);
         case r.n4.ROLE:
-            return s.intl.string(s.t.vrRQn0);
+            return a.intl.string(a.t.vrRQn0);
         case r.n4.USER:
-            return s.intl.string(s.t.i2r7j5);
+            return a.intl.string(a.t.i2r7j5);
         case r.n4.MENTIONABLE:
-            return s.intl.string(s.t.I7imec);
+            return a.intl.string(a.t.I7imec);
         default:
-            return s.intl.string(s.t.EkDo1i);
+            return a.intl.string(a.t.EkDo1i);
     }
 }
 Object.freeze([]), Object.freeze([]);

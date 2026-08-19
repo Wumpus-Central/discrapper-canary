@@ -1,24 +1,24 @@
 "use strict";
-n.d(t, { A: () => d, j: () => c }), n(938796);
+n.d(t, { A: () => u, j: () => c }), n(938796);
 var i = n(665260),
     r = n(17928),
-    s = n(164956),
-    a = n(696451),
-    o = n(927813),
-    l = n(340837);
-function u(e, t, n) {
+    a = n(164956),
+    s = n(696451),
+    l = n(927813),
+    o = n(340837);
+function d(e, t, n) {
     if (n.isFullServerPreview(e)) return !0;
     let r = t.getSelfMember(e);
     if (null == r) return !1;
-    let s = t.getSelfMemberJoinedAt(e);
+    let a = t.getSelfMemberJoinedAt(e);
     return (
-        !(null == s || (0, i.Lt)(r.flags ?? 0, l.D.COMPLETED_HOME_ACTIONS)) &&
-        Date.now() - s.getTime() < o.A.Millis.WEEK
+        !(null == a || (0, i.Lt)(r.flags ?? 0, o.D.COMPLETED_HOME_ACTIONS)) &&
+        Date.now() - a.getTime() < l.A.Millis.WEEK
     );
 }
 function c(e) {
-    return u(e, a.Ay, s.A);
+    return d(e, s.Ay, a.A);
 }
-function d(e) {
-    return (0, r.bG)([a.Ay, s.A], () => u(e, a.Ay, s.A));
+function u(e) {
+    return (0, r.bG)([s.Ay, a.A], () => d(e, s.Ay, a.A));
 }

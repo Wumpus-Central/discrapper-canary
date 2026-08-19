@@ -1,34 +1,34 @@
 "use strict";
-n.d(t, { MO: () => s, NB: () => a, n4: () => l, qi: () => u, vg: () => o }), n(321073);
+n.d(t, { MO: () => a, NB: () => s, n4: () => o, qi: () => d, vg: () => l }), n(321073);
 var i = n(696451),
     r = n(70738);
-let s = [12, 25, 50, 100],
-    a = 7;
-function o() {
+let a = [12, 25, 50, 100],
+    s = 7;
+function l() {
     return {
-        pageSize: s[0],
+        pageSize: a[0],
         currentPage: 1,
         continuationToken: null,
         sort: r.mF.ORDER_BY_UNSPECIFIED,
         elasticSearchCursor: null,
     };
 }
-function l(e) {
+function o(e) {
     return Math.max(5 * e.pageSize, 250);
 }
-class u {
+class d {
     guildId;
     _sortedMemberIds;
     _paginationState;
     _version;
     _cachedPaginationChunks;
     constructor(e, t) {
-        (this.guildId = e), (this._paginationState = o()), (this._version = 0);
+        (this.guildId = e), (this._paginationState = l()), (this._version = 0);
         const [n, i] = this._initPaginationFromRawMembers(t);
         (this._sortedMemberIds = n), (this._cachedPaginationChunks = i), (this._version += 1);
     }
     reset() {
-        (this._paginationState = o()),
+        (this._paginationState = l()),
             (this._sortedMemberIds = []),
             (this._cachedPaginationChunks = {}),
             (this._version += 1);
@@ -101,10 +101,10 @@ class u {
             n = e;
         n < this._sortedMemberIds.length && (n = this._sortedMemberIds.length - 1), n < 0 && (n = 0);
         let r = this._sortedMemberIds[e],
-            s = i.Ay.getMember(this.guildId, r);
-        for (; null == s && !((e += t) < 0) && !(e >= this._sortedMemberIds.length); )
-            (r = this._sortedMemberIds[e]), (s = i.Ay.getMember(this.guildId, r)), s?.joinedAt == null && (s = null);
-        return s;
+            a = i.Ay.getMember(this.guildId, r);
+        for (; null == a && !((e += t) < 0) && !(e >= this._sortedMemberIds.length); )
+            (r = this._sortedMemberIds[e]), (a = i.Ay.getMember(this.guildId, r)), a?.joinedAt == null && (a = null);
+        return a;
     }
     getElasticSearchPagination() {
         return this.getPaginationState().elasticSearchCursor;

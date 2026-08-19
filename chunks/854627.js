@@ -1,8 +1,8 @@
 n.d(t, { A: () => A });
 var r = n(582128),
     a = n(17928),
-    l = n(778712),
-    i = n(562819),
+    i = n(778712),
+    l = n(562819),
     u = n(963977),
     o = n(287809),
     s = n(62199);
@@ -11,40 +11,40 @@ function A(e) {
             userId: t,
             guildId: n,
             size: A,
-            showPending: d = !1,
-            animateOnHover: c = !1,
-            avatarDecorationOverride: v,
+            showPending: c = !1,
+            animateOnHover: d = !1,
+            avatarDecorationOverride: g,
             avatarOverride: E,
         } = e,
-        f = (0, a.bG)([o.default], () => o.default.getUser(t)),
+        v = (0, a.bG)([o.default], () => o.default.getUser(t)),
         {
-            avatarSrc: g,
+            avatarSrc: f,
             isAvatarAnimating: p,
-            eventHandlers: R,
-        } = (0, s.A)({ user: f, guildId: n, size: (0, l.FT)(A), showPending: d, animateOnHover: c, avatarOverride: E }),
+            eventHandlers: m,
+        } = (0, s.A)({ user: v, guildId: n, size: (0, i.FT)(A), showPending: c, animateOnHover: d, avatarOverride: E }),
         {
-            avatarPlaceholderSrc: m,
-            avatarDecorationSrc: T,
-            eventHandlers: _,
+            avatarPlaceholderSrc: R,
+            avatarDecorationSrc: I,
+            eventHandlers: T,
         } = (0, u.A)({
-            user: f,
+            user: v,
             guildId: n,
-            avatarDecorationOverride: v,
-            size: (0, i.Te)(A),
-            onlyAnimateOnHoverOrFocus: c,
+            avatarDecorationOverride: g,
+            size: (0, l.Te)(A),
+            onlyAnimateOnHoverOrFocus: d,
         });
     return {
-        avatarPlaceholderSrc: m,
-        avatarDecorationSrc: T,
-        avatarSrc: g,
+        avatarPlaceholderSrc: R,
+        avatarDecorationSrc: I,
+        avatarSrc: f,
         isAnimating: p,
         eventHandlers: {
             onMouseEnter: r.useCallback(() => {
-                R.onMouseEnter(), _.onMouseEnter();
-            }, [R, _]),
+                m.onMouseEnter(), T.onMouseEnter();
+            }, [m, T]),
             onMouseLeave: r.useCallback(() => {
-                R.onMouseLeave(), _.onMouseLeave();
-            }, [R, _]),
+                m.onMouseLeave(), T.onMouseLeave();
+            }, [m, T]),
         },
     };
 }

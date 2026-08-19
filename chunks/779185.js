@@ -1,9 +1,9 @@
 "use strict";
-n.d(t, { AZ: () => N, Ay: () => y, Qn: () => O, cR: () => R }), n(321073);
+n.d(t, { AZ: () => N, Ay: () => D, Qn: () => O, cR: () => R }), n(321073);
 var i,
     r = n(284009),
     a = n.n(r),
-    s = n(562465),
+    s = n(636537),
     l = n(155718),
     o = n(95561),
     d = n(626584),
@@ -57,7 +57,7 @@ function R(e) {
     return C(e) ? e.message.nonce : O(e) ? e.message.messageId : e.message.data.id;
 }
 let L = [+f.A.Millis.MINUTE, 5 * f.A.Millis.MINUTE];
-class D extends T.A {
+class y extends T.A {
     maxSize;
     requests = new Map();
     analyticsTimeouts = new Map();
@@ -254,4 +254,4 @@ class D extends T.A {
             );
     }
 }
-let y = new D();
+let D = new y();

@@ -1,16 +1,16 @@
 "use strict";
-n.d(t, { A: () => o });
+n.d(t, { A: () => l });
 var i = n(17928),
     r = n(228366);
-let s = { surveys: new Map() };
-class a extends i.Ay.Store {
+let a = { surveys: new Map() };
+class s extends i.Ay.Store {
     static displayName = "QualtricsStore";
     getSurvey(e) {
-        return s.surveys.get(e) ?? null;
+        return a.surveys.get(e) ?? null;
     }
 }
-let o = new a(r.h, {
+let l = new s(r.h, {
     QUALTRICS_SURVEY_FETCH_SUCCESS: function (e) {
-        s.surveys.set(e.surveyId, e.surveyDetails);
+        a.surveys.set(e.surveyId, e.surveyDetails);
     },
 });

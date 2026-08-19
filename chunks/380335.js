@@ -1,51 +1,51 @@
 "use strict";
-n.d(t, { A: () => m });
+n.d(t, { A: () => f });
 var i = n(734057),
     r = n(536802);
-let s = new Set(),
-    a = new Set(),
-    o = !1;
-function l(e) {
+let a = new Set(),
+    s = new Set(),
+    l = !1;
+function o(e) {
     return e.isMessageRequest && !e.isSpam;
 }
-function u(e) {
+function d(e) {
     let t = !1;
     return (
-        l(e) && !s.has(e.id) && (s.add(e.id), (t = !0)),
-        !l(e) && s.has(e.id) && (s.delete(e.id), (t = !0)),
-        !l(e) && a.has(e.id) && (a.delete(e.id), (t = !0)),
+        o(e) && !a.has(e.id) && (a.add(e.id), (t = !0)),
+        !o(e) && a.has(e.id) && (a.delete(e.id), (t = !0)),
+        !o(e) && s.has(e.id) && (s.delete(e.id), (t = !0)),
         t
     );
 }
 function c(e) {
-    s.clear(),
-        a.clear(),
+    a.clear(),
+        s.clear(),
         Object.values(i.A.getMutablePrivateChannels()).forEach((e) => {
-            u(e);
+            d(e);
         }),
-        (o = !0);
+        (l = !0);
 }
-function d(e) {
+function u(e) {
     let { channelId: t } = e;
-    a.add(t);
+    s.add(t);
 }
 function _(e) {
     let { channel: t } = e;
-    return u(t);
+    return d(t);
+}
+function E(e) {
+    let { channels: t } = e;
+    for (let e of t) d(e);
+}
+function A(e) {
+    let { channel: t } = e;
+    return !!a.has(t.id) && (a.delete(t.id), !0);
 }
 function h(e) {
-    let { channels: t } = e;
-    for (let e of t) u(e);
-}
-function f(e) {
-    let { channel: t } = e;
-    return !!s.has(t.id) && (s.delete(t.id), !0);
-}
-function p(e) {
     let { messageRequestChannelIds: t } = e;
-    t.forEach((e) => s.add(e));
+    t.forEach((e) => a.add(e));
 }
-class E extends r.A {
+class I extends r.A {
     static displayName = "MessageRequestStore";
     static LATEST_SNAPSHOT_VERSION = 1;
     constructor() {
@@ -53,37 +53,37 @@ class E extends r.A {
             CONNECTION_OPEN: c,
             CONNECTION_OPEN_SUPPLEMENTAL: c,
             CACHE_LOADED_LAZY: () => this.loadCache(),
-            OVERLAY_INITIALIZE: p,
+            OVERLAY_INITIALIZE: h,
             CHANNEL_CREATE: _,
-            CHANNEL_UPDATES: h,
-            CHANNEL_DELETE: f,
-            MESSAGE_REQUEST_ACCEPT_OPTIMISTIC: d,
+            CHANNEL_UPDATES: E,
+            CHANNEL_DELETE: A,
+            MESSAGE_REQUEST_ACCEPT_OPTIMISTIC: u,
         });
     }
     initialize() {
         this.waitFor(i.A);
     }
     loadCache() {
-        let e = this.readSnapshot(E.LATEST_SNAPSHOT_VERSION);
-        null != e && (s = new Set(e));
+        let e = this.readSnapshot(I.LATEST_SNAPSHOT_VERSION);
+        null != e && (a = new Set(e));
     }
     takeSnapshot() {
-        return { version: E.LATEST_SNAPSHOT_VERSION, data: Array.from(s) };
+        return { version: I.LATEST_SNAPSHOT_VERSION, data: Array.from(a) };
     }
     getMessageRequestChannelIds() {
-        return s;
+        return a;
     }
     getMessageRequestsCount() {
-        return s.size;
+        return a.size;
     }
     isMessageRequest(e) {
-        return s.has(e);
-    }
-    isAcceptedOptimistic(e) {
         return a.has(e);
     }
+    isAcceptedOptimistic(e) {
+        return s.has(e);
+    }
     isReady() {
-        return o;
+        return l;
     }
 }
-let m = new E();
+let f = new I();

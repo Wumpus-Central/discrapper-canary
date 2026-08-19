@@ -1,12 +1,12 @@
 (e.exports = function (e, t) {
     if (null == e) return {};
-    var n = {};
-    for (var i in e)
-        if ({}.hasOwnProperty.call(e, i)) {
-            if (-1 !== t.indexOf(i)) continue;
-            n[i] = e[i];
+    var r = {};
+    for (var n in e)
+        if ({}.hasOwnProperty.call(e, n)) {
+            if (-1 !== t.indexOf(n)) continue;
+            r[n] = e[n];
         }
-    return n;
+    return r;
 }),
     (e.exports.__esModule = !0),
     (e.exports.default = e.exports);

@@ -1,4 +1,4 @@
-e.exports = {
+_.exports = {
     sn: "infoHeader__4c2e9",
     R_: "heading__4c2e9",
     H$: "disabledReason__4c2e9",

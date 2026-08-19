@@ -1,17 +1,17 @@
-var i = { "./spritesheet-emoji-40.png.js": "617057", "./spritesheet-emoji-48.png.js": "587353" };
-function r(e) {
+var l = { "./spritesheet-emoji-40.png.js": "617057", "./spritesheet-emoji-48.png.js": "587353" };
+function i(e) {
     return n(s(e));
 }
 function s(e) {
-    if (!n.o(i, e)) {
+    if (!n.o(l, e)) {
         var t = Error("Cannot find module '" + e + "'");
         throw ((t.code = "MODULE_NOT_FOUND"), t);
     }
-    return i[e];
+    return l[e];
 }
-(r.keys = function () {
-    return Object.keys(i);
+(i.keys = function () {
+    return Object.keys(l);
 }),
-    (r.resolve = s),
-    (e.exports = r),
-    (r.id = 145519);
+    (i.resolve = s),
+    (e.exports = i),
+    (i.id = 145519);

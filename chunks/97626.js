@@ -1,9 +1,9 @@
 "use strict";
-function n(e, t, r, n, i) {
-    var o = e[t];
-    if (void 0 === o) return i;
-    let a = Number(o);
-    if (isNaN(a) || a < r || a > n) throw RangeError(`${a} is outside of range [${r}, ${n}]`);
-    return Math.floor(a);
+function r(e, t, n, r, i) {
+    var a = e[t];
+    if (void 0 === a) return i;
+    let o = Number(a);
+    if (isNaN(o) || o < n || o > r) throw RangeError(`${o} is outside of range [${n}, ${r}]`);
+    return Math.floor(o);
 }
-r.d(t, { z: () => n });
+n.d(t, { z: () => r });

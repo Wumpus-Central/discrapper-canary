@@ -14,12 +14,12 @@ function o(e) {
             canStartAuthorization: d,
             startAuthorization: f,
         } = (0, r.RD)(t ? o : null, { allowedFlows: [a._.WEB] }),
-        g = (0, i.z)(f, c, { showInGameModal: !1, showToastOnSuccess: !0 });
+        m = (0, i.z)(f, c, { showInGameModal: !1, showToastOnSuccess: !0 });
     return {
         isInGameQuest: t,
         fetched: u,
         hasAlreadyLinked: u ? c : void 0,
         canStartAuthorization: d,
-        startAuthorization: g,
+        startAuthorization: m,
     };
 }

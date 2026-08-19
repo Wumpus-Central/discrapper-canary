@@ -1,80 +1,80 @@
 "use strict";
-var i, r, s, a, o, l, u;
-n.d(t, { u5: () => d, FO: () => _, fL: () => c }),
+var i, r, a, s, l, o, d;
+n.d(t, { u5: () => u, FO: () => _, fL: () => c }),
     n(321073),
     (i = n.g),
     (r = Date.now ? Date.now() : +new Date()),
-    (s = i.performance || {}),
-    (a = []),
-    (o = {}),
-    (l = function (e, t) {
-        for (var n = 0, i = a.length, r = []; n < i; n++) a[n][e] == t && r.push(a[n]);
+    (a = i.performance || {}),
+    (s = []),
+    (l = {}),
+    (o = function (e, t) {
+        for (var n = 0, i = s.length, r = []; n < i; n++) s[n][e] == t && r.push(s[n]);
         return r;
     }),
-    (u = function (e, t) {
-        for (var n, i = a.length; i--; ) (n = a[i]).entryType == e && (void 0 === t || n.name == t) && a.splice(i, 1);
+    (d = function (e, t) {
+        for (var n, i = s.length; i--; ) (n = s[i]).entryType == e && (void 0 === t || n.name == t) && s.splice(i, 1);
     }),
-    s.now ||
-        (s.now =
-            s.webkitNow ||
-            s.mozNow ||
-            s.msNow ||
+    a.now ||
+        (a.now =
+            a.webkitNow ||
+            a.mozNow ||
+            a.msNow ||
             function () {
                 return (Date.now ? Date.now() : +new Date()) - r;
             }),
-    s.mark ||
-        (s.mark =
-            s.webkitMark ||
+    a.mark ||
+        (a.mark =
+            a.webkitMark ||
             function (e) {
-                var t = { name: e, entryType: "mark", startTime: s.now(), duration: 0 };
-                a.push(t), (o[e] = t);
+                var t = { name: e, entryType: "mark", startTime: a.now(), duration: 0 };
+                s.push(t), (l[e] = t);
             }),
-    s.measure ||
-        (s.measure =
-            s.webkitMeasure ||
+    a.measure ||
+        (a.measure =
+            a.webkitMeasure ||
             function (e, t, n) {
                 var i, r;
-                if (void 0 !== n && void 0 === o[n])
+                if (void 0 !== n && void 0 === l[n])
                     throw SyntaxError(
                         "Failed to execute 'measure' on 'Performance': The mark '" + n + "' does not exist.",
                     );
-                if (void 0 !== t && void 0 === o[t])
+                if (void 0 !== t && void 0 === l[t])
                     throw SyntaxError(
                         "Failed to execute 'measure' on 'Performance': The mark '" + t + "' does not exist.",
                     );
-                (i = o[t] ? o[t].startTime : 0),
-                    (r = o[n] ? o[n].startTime : s.now()),
-                    a.push({ name: e, entryType: "measure", startTime: i, duration: r - i });
+                (i = l[t] ? l[t].startTime : 0),
+                    (r = l[n] ? l[n].startTime : a.now()),
+                    s.push({ name: e, entryType: "measure", startTime: i, duration: r - i });
             }),
-    s.getEntriesByType ||
-        (s.getEntriesByType =
-            s.webkitGetEntriesByType ||
+    a.getEntriesByType ||
+        (a.getEntriesByType =
+            a.webkitGetEntriesByType ||
             function (e) {
-                return l("entryType", e);
+                return o("entryType", e);
             }),
-    s.getEntriesByName ||
-        (s.getEntriesByName =
-            s.webkitGetEntriesByName ||
+    a.getEntriesByName ||
+        (a.getEntriesByName =
+            a.webkitGetEntriesByName ||
             function (e) {
-                return l("name", e);
+                return o("name", e);
             }),
-    s.clearMarks ||
-        (s.clearMarks =
-            s.webkitClearMarks ||
+    a.clearMarks ||
+        (a.clearMarks =
+            a.webkitClearMarks ||
             function (e) {
-                u("mark", e);
+                d("mark", e);
             }),
-    s.clearMeasures ||
-        (s.clearMeasures =
-            s.webkitClearMeasures ||
+    a.clearMeasures ||
+        (a.clearMeasures =
+            a.webkitClearMeasures ||
             function (e) {
-                u("measure", e);
+                d("measure", e);
             }),
-    (i.performance = s),
+    (i.performance = a),
     "function" == typeof define &&
         (define.amd || define.ajs) &&
         define("performance", [], function () {
-            return s;
+            return a;
         });
 try {
     null == Date.now && (Date.now = () => new Date().valueOf());
@@ -85,7 +85,7 @@ let c = (() => {
         } catch (e) {}
         return Date.now();
     })(),
-    d = (() => {
+    u = (() => {
         try {
             return n.g.performance.timeOrigin ?? c;
         } catch (e) {}
@@ -97,6 +97,6 @@ if (null == n.g.performance.timing)
     } catch (e) {}
 if (null == n.g.performance.timeOrigin)
     try {
-        n.g.performance.timeOrigin = d;
+        n.g.performance.timeOrigin = u;
     } catch (e) {}
 let _ = n.g.performance;

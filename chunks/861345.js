@@ -1,40 +1,40 @@
-let i = n(864886),
-    r = n(46666),
-    { ANY: s } = r,
-    a = n(74509),
-    o = n(4144),
-    l = n(800670),
-    u = n(596641),
-    c = n(738018),
-    d = n(569671);
-e.exports = (e, t, n, _) => {
-    let h, f, p, E, m;
-    switch (((e = new i(e, _)), (t = new a(t, _)), n)) {
+let n = r(864886),
+    o = r(46666),
+    { ANY: i } = o,
+    a = r(74509),
+    s = r(4144),
+    l = r(800670),
+    u = r(596641),
+    c = r(738018),
+    f = r(569671);
+e.exports = (e, t, r, p) => {
+    let d, h, m, v, y;
+    switch (((e = new n(e, p)), (t = new a(t, p)), r)) {
         case ">":
-            (h = l), (f = c), (p = u), (E = ">"), (m = ">=");
+            (d = l), (h = c), (m = u), (v = ">"), (y = ">=");
             break;
         case "<":
-            (h = u), (f = d), (p = l), (E = "<"), (m = "<=");
+            (d = u), (h = f), (m = l), (v = "<"), (y = "<=");
             break;
         default:
             throw TypeError('Must provide a hilo val of "<" or ">"');
     }
-    if (o(e, t, _)) return !1;
-    for (let n = 0; n < t.set.length; ++n) {
-        let i = t.set[n],
+    if (s(e, t, p)) return !1;
+    for (let r = 0; r < t.set.length; ++r) {
+        let n = t.set[r],
             a = null,
-            o = null;
+            s = null;
         if (
-            (i.forEach((e) => {
-                e.semver === s && (e = new r(">=0.0.0")),
+            (n.forEach((e) => {
+                e.semver === i && (e = new o(">=0.0.0")),
                     (a = a || e),
-                    (o = o || e),
-                    h(e.semver, a.semver, _) ? (a = e) : p(e.semver, o.semver, _) && (o = e);
+                    (s = s || e),
+                    d(e.semver, a.semver, p) ? (a = e) : m(e.semver, s.semver, p) && (s = e);
             }),
-            a.operator === E ||
-                a.operator === m ||
-                ((!o.operator || o.operator === E) && f(e, o.semver)) ||
-                (o.operator === m && p(e, o.semver)))
+            a.operator === v ||
+                a.operator === y ||
+                ((!s.operator || s.operator === v) && h(e, s.semver)) ||
+                (s.operator === y && m(e, s.semver)))
         )
             return !1;
     }

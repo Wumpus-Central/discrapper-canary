@@ -1,4 +1,4 @@
-n.d(t, { QR: () => h, b: () => C, oc: () => E });
+n.d(t, { QR: () => _, b: () => C, oc: () => E });
 var r,
     l = n(582128),
     i = n(17928),
@@ -29,7 +29,7 @@ function C(e, t, n, r) {
                       : 3 === t && (i ? (null != o ? o() : n(a.pn.REVIEW)) : (r(c.h.COMPLETED), n(a.pn.CONFIRM)))));
     }, [e, t, n, r, i, o, u]);
 }
-function h(e) {
+function _(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         n = (0, i.bG)([d.A], () => d.A.awaitingPaymentId),
         r = (0, i.bG)([s.A], () => s.A.isConnected()),

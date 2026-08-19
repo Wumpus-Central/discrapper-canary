@@ -1,5 +1,5 @@
 "use strict";
-function i(e) {
+function n(e) {
     let t = typeof e;
     if ("object" == t) {
         if (Array.isArray(e)) return "array";
@@ -7,7 +7,7 @@ function i(e) {
     }
     return t;
 }
-function r(e) {
+function o(e) {
     return null !== e && "object" == typeof e && !Array.isArray(e);
 }
-n.d(t, { O: () => r, V: () => i });
+r.d(t, { O: () => o, V: () => n });

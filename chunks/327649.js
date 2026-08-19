@@ -1,13 +1,13 @@
 "use strict";
-n.d(t, { A: () => l });
+n.d(t, { A: () => o });
 var i = n(258585),
     r = n(473145),
-    s = n(428262),
-    a = n(788868),
-    o = n(753070);
-function l(e, t, n, l, u, c) {
-    if (e === o.jQ.PRESET_AUTO) return (0, i.eO)({ location: "canStreamWithSettings" }).allowAutoQuality;
-    for (let i of o.ZV)
+    a = n(158045),
+    s = n(202541),
+    l = n(753070);
+function o(e, t, n, o, d, c) {
+    if (e === l.jQ.PRESET_AUTO) return (0, i.eO)({ location: "canStreamWithSettings" }).allowAutoQuality;
+    for (let i of l.ZV)
         if (
             (null == i.preset || e === i.preset) &&
             t === i.resolution &&
@@ -17,17 +17,17 @@ function l(e, t, n, l, u, c) {
                 let i = !1;
                 if (null != e.quality)
                     switch (e.quality) {
-                        case a.uP.HIGH_STREAMING_QUALITY:
-                            i = i || s.Ay.canStreamQuality(s.Ay.StreamQuality.HIGH, t);
+                        case s.uP.HIGH_STREAMING_QUALITY:
+                            i = i || a.Ay.canStreamQuality(a.Ay.StreamQuality.HIGH, t);
                             break;
-                        case a.uP.MID_STREAMING_QUALITY:
-                            i = i || s.Ay.canStreamQuality(s.Ay.StreamQuality.MID, t);
+                        case s.uP.MID_STREAMING_QUALITY:
+                            i = i || a.Ay.canStreamQuality(a.Ay.StreamQuality.MID, t);
                             break;
                         default:
                             e.quality;
                     }
                 return null != e.guildPremiumTier && (i = i || (0, r.yS)(n, e.guildPremiumTier)), i;
-            })(i, l, u)
+            })(i, o, d)
         )
             return !0;
     return !1;

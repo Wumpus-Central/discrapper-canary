@@ -1,7 +1,7 @@
-function n(e) {
+function r(e) {
     return "[object Arguments]" == Object.prototype.toString.call(e);
 }
-function i(e) {
+function n(e) {
     return (
         (e &&
             "object" == typeof e &&
@@ -16,6 +16,6 @@ function i(e) {
     (function () {
         return Object.prototype.toString.call(arguments);
     })()
-        ? n
-        : i).supported = n),
-    (t.unsupported = i);
+        ? r
+        : n).supported = r),
+    (t.unsupported = n);

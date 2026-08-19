@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => s });
+n.d(t, { A: () => a });
 var i = n(235079);
 let r = {
     [i.i.CLASSIC]: {
@@ -58,6 +58,6 @@ let r = {
         user_leave: "winter_user_leave",
     },
 };
-function s(e) {
+function a(e) {
     return r[e];
 }

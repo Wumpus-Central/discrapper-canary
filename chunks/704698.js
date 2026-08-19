@@ -1,16 +1,16 @@
 "use strict";
-var i = n(906046),
-    r = i("Object.prototype.toString"),
-    s = n(912877)(),
-    a = n(429013);
-if (s) {
-    var o = i("Symbol.prototype.toString"),
+var n = r(906046),
+    o = n("Object.prototype.toString"),
+    i = r(912877)(),
+    a = r(429013);
+if (i) {
+    var s = n("Symbol.prototype.toString"),
         l = a(/^Symbol\(.*\)$/);
     e.exports = function (e) {
         if ("symbol" == typeof e) return !0;
-        if (!e || "object" != typeof e || "[object Symbol]" !== r(e)) return !1;
+        if (!e || "object" != typeof e || "[object Symbol]" !== o(e)) return !1;
         try {
-            return "symbol" == typeof e.valueOf() && l(o(e));
+            return "symbol" == typeof e.valueOf() && l(s(e));
         } catch (e) {
             return !1;
         }

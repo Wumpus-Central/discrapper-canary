@@ -11,12 +11,12 @@ var i = n(477900),
     h = n(538638),
     p = n(558076),
     m = n(996752),
-    A = n(375708),
-    f = n(120546);
+    f = n(375708),
+    A = n(120546);
 function x() {
     let e = l.useId();
     return (0, i.jsxs)("svg", {
-        className: f.fA,
+        className: A.fA,
         width: "80",
         height: "80",
         viewBox: "0 0 80 80",
@@ -25,10 +25,10 @@ function x() {
         xmlns: "http://www.w3.org/2000/svg",
         children: [
             (0, i.jsx)("g", {
-                className: f.ys,
+                className: A.ys,
                 opacity: "0.2",
                 filter: `url(#${e})`,
-                children: (0, i.jsx)("circle", { className: f.GS, cx: "40", cy: "40", r: "20", fill: "white" }),
+                children: (0, i.jsx)("circle", { className: A.GS, cx: "40", cy: "40", r: "20", fill: "white" }),
             }),
             (0, i.jsx)("defs", {
                 children: (0, i.jsxs)("filter", {
@@ -60,23 +60,23 @@ function g(e) {
                 .some((e) => e.position?.x === n && e.position?.y === g),
         ),
         v = (0, s.bG)([c.A], () => c.A.getChannel(t)?.guild_id),
-        E = l.useCallback(async () => {
+        N = l.useCallback(async () => {
             null != v &&
                 (j
                     ? (0, u.AQ)(v, t, { user_position: { x: n, y: g } }).catch((e) => (0, h.b)({ silent: !0 }))
                     : ((0, u.TJ)({ x: n, y: g }), (await (0, o.A)({ channelId: t })) || (0, u.Ys)()));
         }, [j, v, t, n, g]);
     if (I || null == v) return null;
-    let { numericAvatarSize: N } = (0, m.F)(y),
-        b = 1.2 * Math.max(N, 24);
+    let { numericAvatarSize: E } = (0, m.F)(y),
+        b = 1.2 * Math.max(E, 24);
     return (0, i.jsx)(r.m, {
-        text: j ? null : A.intl.string(A.t["96ANUN"]),
+        text: j ? null : f.intl.string(f.t["96ANUN"]),
         children: (0, i.jsx)(a.D, {
             role: "listitem",
             "aria-label": C,
-            className: f.am,
+            className: A.am,
             style: { width: b, height: b, left: `calc(${n}% - ${b / 2}px)`, top: `calc(${g}% - ${b / 2}px)` },
-            onClick: E,
+            onClick: N,
             children: (0, i.jsx)(x, {}),
         }),
     });

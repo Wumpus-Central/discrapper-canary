@@ -1,33 +1,33 @@
 "use strict";
-n.d(t, { v: () => o });
-var r = n(582128);
-let i = (e) => {
+r.d(t, { v: () => a });
+var n = r(582128);
+let o = (e) => {
         let t,
-            n = new Set(),
-            r = (e, r) => {
-                let i = "function" == typeof e ? e(t) : e;
-                if (!Object.is(i, t)) {
+            r = new Set(),
+            n = (e, n) => {
+                let o = "function" == typeof e ? e(t) : e;
+                if (!Object.is(o, t)) {
                     let e = t;
-                    (t = (null != r ? r : "object" != typeof i || null === i) ? i : Object.assign({}, t, i)),
-                        n.forEach((n) => n(t, e));
+                    (t = (null != n ? n : "object" != typeof o || null === o) ? o : Object.assign({}, t, o)),
+                        r.forEach((r) => r(t, e));
                 }
             },
-            i = () => t,
-            a = { setState: r, getState: i, getInitialState: () => o, subscribe: (e) => (n.add(e), () => n.delete(e)) },
-            o = (t = e(r, i, a));
-        return a;
+            o = () => t,
+            i = { setState: n, getState: o, getInitialState: () => a, subscribe: (e) => (r.add(e), () => r.delete(e)) },
+            a = (t = e(n, o, i));
+        return i;
     },
-    a = (e) => {
-        let t = e ? i(e) : i,
-            n = (e) =>
+    i = (e) => {
+        let t = e ? o(e) : o,
+            r = (e) =>
                 (function (e, t = (e) => e) {
-                    let n = r.useSyncExternalStore(
+                    let r = n.useSyncExternalStore(
                         e.subscribe,
                         () => t(e.getState()),
                         () => t(e.getInitialState()),
                     );
-                    return r.useDebugValue(n), n;
+                    return n.useDebugValue(r), r;
                 })(t, e);
-        return Object.assign(n, t), n;
+        return Object.assign(r, t), r;
     },
-    o = (e) => (e ? a(e) : a);
+    a = (e) => (e ? i(e) : i);

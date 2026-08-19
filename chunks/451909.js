@@ -25,8 +25,8 @@ var i = n(435558),
     O = n(287809),
     R = n(237116),
     L = n(690521),
-    D = n(403362),
-    y = n(562153),
+    y = n(403362),
+    D = n(562153),
     v = n(427262),
     b = n(652215);
 n(827669);
@@ -208,7 +208,7 @@ let x = u.Ay.RULES,
                 if (null == l) return { content: e[0] };
                 let o = v.Ay.getUserTag(l, { identifiable: i && C.A.enabled ? "never" : "always" });
                 if (i) {
-                    let e = y.Ay.getNickname(a?.id, s, l) ?? v.Ay.getGlobalName(l);
+                    let e = D.Ay.getNickname(a?.id, s, l) ?? v.Ay.getGlobalName(l);
                     return { content: null != e ? `@${e}` : `@${o}` };
                 }
                 {
@@ -281,7 +281,7 @@ let x = u.Ay.RULES,
 });
 let $ = s().parserFor(Y),
     z = /(?:<a?:\w+:(\d+)>)|:(?:([^\s:]+?)(?:::skin-tone-\d)?:)/g;
-function q(e, t, n, i) {
+function Z(e, t, n, i) {
     let r = "",
         a = [];
     return (
@@ -317,7 +317,7 @@ function q(e, t, n, i) {
                         r += n(e.content);
                 }
             else if (e.content.constructor === Array) {
-                let { content: s, emoji: l } = q(e.content, t, n, i);
+                let { content: s, emoji: l } = Z(e.content, t, n, i);
                 for (let e of l) a.push({ position: r.length + e.position, length: e.length, id: e.id });
                 r += s;
             } else console.warn("Unknown message item type: ", e);
@@ -325,7 +325,7 @@ function q(e, t, n, i) {
         { content: r, emoji: a }
     );
 }
-function Z(e, t) {
+function q(e, t) {
     let n,
         i = e?.getGuildId(),
         a = null != i ? g.A.getGuild(i) : null,
@@ -373,7 +373,7 @@ function Z(e, t) {
                                   : { id: e.channel.id, text: (0, o.m1)(e.channel, O.default, N.A) },
                           ),
                       )
-                      .filter(D.Vq)
+                      .filter(y.Vq)
                       .value()
                 : [],
         E = h.A.computeAllActiveJoinedThreads(i).map((e) => ({ id: e.id, text: (0, o.m1)(e, O.default, N.A) })),
@@ -409,14 +409,14 @@ function Q(e, t, n) {
         d = n ? X : c.Ay.translateSurrogatesToInlineEmoji,
         u = s().parserFor(o),
         _ = { inline: !0, guild: l, channelId: t, isNotification: n };
-    return q(u(e, _), _, d);
+    return Z(u(e, _), _, d);
 }
 let J = {
     parse(e, t) {
         var n, i;
         let r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : void 0,
             a = arguments.length > 3 ? arguments[3] : void 0,
-            s = r ?? Z(e, a),
+            s = r ?? q(e, a),
             l = { content: t, tts: !1, invalidEmojis: [], validNonShortcutEmojis: [] };
         return (
             (n = l.content),
@@ -425,11 +425,11 @@ let J = {
                     ? l.invalidEmojis.push(t)
                     : n || l.validNonShortcutEmojis.push(t);
             }),
-            (l.content = q($(n, s), s, c.Ay.translateInlineEmojiToSurrogates, i).content),
+            (l.content = Z($(n, s), s, c.Ay.translateInlineEmojiToSurrogates, i).content),
             l
         );
     },
-    parsePreprocessor: (e, t) => $(t, Z(e)),
+    parsePreprocessor: (e, t) => $(t, q(e)),
     unparse: (e, t, n) => Q(e, t, n).content,
     unparseWithMeta: Q,
 };

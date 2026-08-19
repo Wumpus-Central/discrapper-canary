@@ -1,8 +1,8 @@
 i.d(t, { A: () => d });
 var s = i(477900);
 i(582128);
-var r = i(866665),
-    n = i(821609),
+var n = i(866665),
+    r = i(821609),
     a = i(721157),
     l = i(555393),
     o = i(375708);
@@ -13,10 +13,10 @@ function d(e) {
                 ? o.intl.string(o.t.yxMJHw)
                 : o.intl.string(o.t.GcPSts);
     return t?.state === a.zE.BLOCK_CLAIM
-        ? (0, s.jsx)(r.m, {
+        ? (0, s.jsx)(n.m, {
               text: i,
               asContainer: !0,
-              children: (0, s.jsx)(n.$, {
+              children: (0, s.jsx)(r.$, {
                   fullWidth: e.fullWidth,
                   variant: "overlay-primary",
                   size: e.size,
@@ -24,5 +24,5 @@ function d(e) {
                   disabled: !0,
               }),
           })
-        : (0, s.jsx)(n.$, { ...e });
+        : (0, s.jsx)(r.$, { ...e });
 }

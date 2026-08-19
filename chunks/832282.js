@@ -1,46 +1,46 @@
-var i = n(225063),
-    r = n(993001);
-(e.exports = function e(t, n) {
-    var s;
+var n = r(225063),
+    o = r(993001);
+(e.exports = function e(t, r) {
+    var i;
     this.next ||
-        (r(e.prototype),
-        r(e.prototype, ("function" == typeof Symbol && Symbol.asyncIterator) || "@asyncIterator", function () {
+        (o(e.prototype),
+        o(e.prototype, ("function" == typeof Symbol && Symbol.asyncIterator) || "@asyncIterator", function () {
             return this;
         })),
-        r(
+        o(
             this,
             "_invoke",
-            function (e, r, a) {
-                function o() {
-                    return new n(function (r, s) {
-                        !(function e(r, s, a, o) {
+            function (e, o, a) {
+                function s() {
+                    return new r(function (o, i) {
+                        !(function e(o, i, a, s) {
                             try {
-                                var l = t[r](s),
+                                var l = t[o](i),
                                     u = l.value;
-                                return u instanceof i
-                                    ? n.resolve(u.v).then(
+                                return u instanceof n
+                                    ? r.resolve(u.v).then(
                                           function (t) {
-                                              e("next", t, a, o);
+                                              e("next", t, a, s);
                                           },
                                           function (t) {
-                                              e("throw", t, a, o);
+                                              e("throw", t, a, s);
                                           },
                                       )
-                                    : n.resolve(u).then(
+                                    : r.resolve(u).then(
                                           function (e) {
                                               (l.value = e), a(l);
                                           },
                                           function (t) {
-                                              return e("throw", t, a, o);
+                                              return e("throw", t, a, s);
                                           },
                                       );
                             } catch (e) {
-                                o(e);
+                                s(e);
                             }
-                        })(e, a, r, s);
+                        })(e, a, o, i);
                     });
                 }
-                return (s = s ? s.then(o, o) : o());
+                return (i = i ? i.then(s, s) : s());
             },
             !0,
         );

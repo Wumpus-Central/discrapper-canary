@@ -1,80 +1,80 @@
 "use strict";
 var t = Object.prototype.hasOwnProperty,
-    n = "~";
-function i() {}
-function r(e, t, n) {
-    (this.fn = e), (this.context = t), (this.once = n || !1);
+    r = "~";
+function n() {}
+function o(e, t, r) {
+    (this.fn = e), (this.context = t), (this.once = r || !1);
 }
-function s(e, t, i, s, a) {
-    if ("function" != typeof i) throw TypeError("The listener must be a function");
-    var o = new r(i, s || e, a),
-        l = n ? n + t : t;
+function i(e, t, n, i, a) {
+    if ("function" != typeof n) throw TypeError("The listener must be a function");
+    var s = new o(n, i || e, a),
+        l = r ? r + t : t;
     return (
         e._events[l]
             ? e._events[l].fn
-                ? (e._events[l] = [e._events[l], o])
-                : e._events[l].push(o)
-            : ((e._events[l] = o), e._eventsCount++),
+                ? (e._events[l] = [e._events[l], s])
+                : e._events[l].push(s)
+            : ((e._events[l] = s), e._eventsCount++),
         e
     );
 }
 function a(e, t) {
-    0 == --e._eventsCount ? (e._events = new i()) : delete e._events[t];
+    0 == --e._eventsCount ? (e._events = new n()) : delete e._events[t];
 }
-function o() {
-    (this._events = new i()), (this._eventsCount = 0);
+function s() {
+    (this._events = new n()), (this._eventsCount = 0);
 }
-Object.create && ((i.prototype = Object.create(null)), new i().__proto__ || (n = !1)),
-    (o.prototype.eventNames = function () {
+Object.create && ((n.prototype = Object.create(null)), new n().__proto__ || (r = !1)),
+    (s.prototype.eventNames = function () {
         var e,
-            i,
-            r = [];
-        if (0 === this._eventsCount) return r;
-        for (i in (e = this._events)) t.call(e, i) && r.push(n ? i.slice(1) : i);
-        return Object.getOwnPropertySymbols ? r.concat(Object.getOwnPropertySymbols(e)) : r;
+            n,
+            o = [];
+        if (0 === this._eventsCount) return o;
+        for (n in (e = this._events)) t.call(e, n) && o.push(r ? n.slice(1) : n);
+        return Object.getOwnPropertySymbols ? o.concat(Object.getOwnPropertySymbols(e)) : o;
     }),
-    (o.prototype.listeners = function (e) {
-        var t = n ? n + e : e,
-            i = this._events[t];
-        if (!i) return [];
-        if (i.fn) return [i.fn];
-        for (var r = 0, s = i.length, a = Array(s); r < s; r++) a[r] = i[r].fn;
+    (s.prototype.listeners = function (e) {
+        var t = r ? r + e : e,
+            n = this._events[t];
+        if (!n) return [];
+        if (n.fn) return [n.fn];
+        for (var o = 0, i = n.length, a = Array(i); o < i; o++) a[o] = n[o].fn;
         return a;
     }),
-    (o.prototype.listenerCount = function (e) {
-        var t = n ? n + e : e,
-            i = this._events[t];
-        return i ? (i.fn ? 1 : i.length) : 0;
+    (s.prototype.listenerCount = function (e) {
+        var t = r ? r + e : e,
+            n = this._events[t];
+        return n ? (n.fn ? 1 : n.length) : 0;
     }),
-    (o.prototype.emit = function (e, t, i, r, s, a) {
-        var o = n ? n + e : e;
-        if (!this._events[o]) return !1;
+    (s.prototype.emit = function (e, t, n, o, i, a) {
+        var s = r ? r + e : e;
+        if (!this._events[s]) return !1;
         var l,
             u,
-            c = this._events[o],
-            d = arguments.length;
+            c = this._events[s],
+            f = arguments.length;
         if (c.fn) {
-            switch ((c.once && this.removeListener(e, c.fn, void 0, !0), d)) {
+            switch ((c.once && this.removeListener(e, c.fn, void 0, !0), f)) {
                 case 1:
                     return c.fn.call(c.context), !0;
                 case 2:
                     return c.fn.call(c.context, t), !0;
                 case 3:
-                    return c.fn.call(c.context, t, i), !0;
+                    return c.fn.call(c.context, t, n), !0;
                 case 4:
-                    return c.fn.call(c.context, t, i, r), !0;
+                    return c.fn.call(c.context, t, n, o), !0;
                 case 5:
-                    return c.fn.call(c.context, t, i, r, s), !0;
+                    return c.fn.call(c.context, t, n, o, i), !0;
                 case 6:
-                    return c.fn.call(c.context, t, i, r, s, a), !0;
+                    return c.fn.call(c.context, t, n, o, i, a), !0;
             }
-            for (u = 1, l = Array(d - 1); u < d; u++) l[u - 1] = arguments[u];
+            for (u = 1, l = Array(f - 1); u < f; u++) l[u - 1] = arguments[u];
             c.fn.apply(c.context, l);
         } else {
-            var _,
-                h = c.length;
-            for (u = 0; u < h; u++)
-                switch ((c[u].once && this.removeListener(e, c[u].fn, void 0, !0), d)) {
+            var p,
+                d = c.length;
+            for (u = 0; u < d; u++)
+                switch ((c[u].once && this.removeListener(e, c[u].fn, void 0, !0), f)) {
                     case 1:
                         c[u].fn.call(c[u].context);
                         break;
@@ -82,48 +82,48 @@ Object.create && ((i.prototype = Object.create(null)), new i().__proto__ || (n =
                         c[u].fn.call(c[u].context, t);
                         break;
                     case 3:
-                        c[u].fn.call(c[u].context, t, i);
+                        c[u].fn.call(c[u].context, t, n);
                         break;
                     case 4:
-                        c[u].fn.call(c[u].context, t, i, r);
+                        c[u].fn.call(c[u].context, t, n, o);
                         break;
                     default:
-                        if (!l) for (_ = 1, l = Array(d - 1); _ < d; _++) l[_ - 1] = arguments[_];
+                        if (!l) for (p = 1, l = Array(f - 1); p < f; p++) l[p - 1] = arguments[p];
                         c[u].fn.apply(c[u].context, l);
                 }
         }
         return !0;
     }),
-    (o.prototype.on = function (e, t, n) {
-        return s(this, e, t, n, !1);
+    (s.prototype.on = function (e, t, r) {
+        return i(this, e, t, r, !1);
     }),
-    (o.prototype.once = function (e, t, n) {
-        return s(this, e, t, n, !0);
+    (s.prototype.once = function (e, t, r) {
+        return i(this, e, t, r, !0);
     }),
-    (o.prototype.removeListener = function (e, t, i, r) {
-        var s = n ? n + e : e;
-        if (!this._events[s]) return this;
-        if (!t) return a(this, s), this;
-        var o = this._events[s];
-        if (o.fn) o.fn !== t || (r && !o.once) || (i && o.context !== i) || a(this, s);
+    (s.prototype.removeListener = function (e, t, n, o) {
+        var i = r ? r + e : e;
+        if (!this._events[i]) return this;
+        if (!t) return a(this, i), this;
+        var s = this._events[i];
+        if (s.fn) s.fn !== t || (o && !s.once) || (n && s.context !== n) || a(this, i);
         else {
-            for (var l = 0, u = [], c = o.length; l < c; l++)
-                (o[l].fn !== t || (r && !o[l].once) || (i && o[l].context !== i)) && u.push(o[l]);
-            u.length ? (this._events[s] = 1 === u.length ? u[0] : u) : a(this, s);
+            for (var l = 0, u = [], c = s.length; l < c; l++)
+                (s[l].fn !== t || (o && !s[l].once) || (n && s[l].context !== n)) && u.push(s[l]);
+            u.length ? (this._events[i] = 1 === u.length ? u[0] : u) : a(this, i);
         }
         return this;
     }),
-    (o.prototype.removeAllListeners = function (e) {
+    (s.prototype.removeAllListeners = function (e) {
         var t;
         return (
             e
-                ? ((t = n ? n + e : e), this._events[t] && a(this, t))
-                : ((this._events = new i()), (this._eventsCount = 0)),
+                ? ((t = r ? r + e : e), this._events[t] && a(this, t))
+                : ((this._events = new n()), (this._eventsCount = 0)),
             this
         );
     }),
-    (o.prototype.off = o.prototype.removeListener),
-    (o.prototype.addListener = o.prototype.on),
-    (o.prefixed = n),
-    (o.EventEmitter = o),
-    (e.exports = o);
+    (s.prototype.off = s.prototype.removeListener),
+    (s.prototype.addListener = s.prototype.on),
+    (s.prefixed = r),
+    (s.EventEmitter = s),
+    (e.exports = s);

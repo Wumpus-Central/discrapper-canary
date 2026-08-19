@@ -1,8 +1,8 @@
 "use strict";
-n.d(t, { P: () => s, e: () => a });
+n.d(t, { P: () => a, e: () => s });
 var i,
     r,
-    s =
+    a =
         (((i = {})[(i.CHANNEL = 0)] = "CHANNEL"),
         (i[(i.GUILD_EVENT = 1)] = "GUILD_EVENT"),
         (i[(i.NOTIFICATION_CENTER = 2)] = "NOTIFICATION_CENTER"),
@@ -10,7 +10,7 @@ var i,
         (i[(i.GUILD_ONBOARDING_QUESTION = 4)] = "GUILD_ONBOARDING_QUESTION"),
         (i[(i.MESSAGE_REQUESTS = 5)] = "MESSAGE_REQUESTS"),
         i),
-    a =
+    s =
         (((r = {})[(r.UNSET = 0)] = "UNSET"),
         (r[(r.ALL_MESSAGES = 1)] = "ALL_MESSAGES"),
         (r[(r.ONLY_MENTIONS = 2)] = "ONLY_MENTIONS"),

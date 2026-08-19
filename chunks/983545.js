@@ -25,13 +25,13 @@ let u = {
                 var t;
                 return (0, i.dF)(e) || (t = e) === i.G2.COLLABS || t === i.G2.OFFER_ELIGIBLE ? i.G2.CATALOG : e;
             }, [e]),
-            [E, p] = n.useState(m),
-            [C, A] = n.useState(i.Pf.VISIBLE);
+            [p, E] = n.useState(m),
+            [C, h] = n.useState(i.Pf.VISIBLE);
         n.useEffect(() => {
-            b(E);
-        }, [E, b]),
+            b(p);
+        }, [p, b]),
             n.useEffect(() => {
-                if ((p(m), e === i.G2.CATALOG)) d();
+                if ((E(m), e === i.G2.CATALOG)) d();
                 else if (e === i.G2.COLLABS) l();
                 else if (e === i.G2.OFFER_ELIGIBLE) s();
                 else if ((0, i.dF)(e)) {
@@ -39,29 +39,29 @@ let u = {
                     null != l ? t(l) : d();
                 }
             }, [m, e, t, l, s, d]);
-        let { clearError: S } = (0, o.S)(),
-            f = (0, a.W6)(),
-            h = n.useCallback(
+        let { clearError: f } = (0, o.S)(),
+            S = (0, a.W6)(),
+            A = n.useCallback(
                 async (e, n) => {
-                    if ((S(), e === i.G2.CATALOG)) d();
+                    if ((f(), e === i.G2.CATALOG)) d();
                     else if (e === i.G2.COLLABS) l();
                     else if (e === i.G2.OFFER_ELIGIBLE) s();
-                    else if ((0, i.dF)(e) && e !== E) {
+                    else if ((0, i.dF)(e) && e !== p) {
                         let l = u[e];
                         null != l ? t(l) : d();
                     }
-                    if (E !== e) {
+                    if (p !== e) {
                         if (n) {
                             var a;
-                            A(i.Pf.OUT), await ((a = 1.1 * i.H1), new Promise((e) => setTimeout(e, a)));
+                            h(i.Pf.OUT), await ((a = 1.1 * i.H1), new Promise((e) => setTimeout(e, a)));
                         }
-                        p(e === i.G2.HOME || e === i.G2.ORBS || e === i.G2.GAME_SERVERS ? e : i.G2.CATALOG),
-                            n && A(i.Pf.IN),
-                            f.push(c.BVt.COLLECTIBLES_SHOP_WITH_TAB(e), { shallow: !0 }),
-                            A(i.Pf.VISIBLE);
+                        E(e === i.G2.HOME || e === i.G2.ORBS || e === i.G2.GAME_SERVERS ? e : i.G2.CATALOG),
+                            n && h(i.Pf.IN),
+                            S.push(c.BVt.COLLECTIBLES_SHOP_WITH_TAB(e), { shallow: !0 }),
+                            h(i.Pf.VISIBLE);
                     }
                 },
-                [f, t, l, s, d, E, S],
+                [S, t, l, s, d, p, f],
             );
-        return { selectedTab: E, transitionState: C, transitionToTab: h };
+        return { selectedTab: p, transitionState: C, transitionToTab: A };
     };

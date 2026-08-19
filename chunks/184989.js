@@ -1,8 +1,8 @@
 "use strict";
-n.d(t, { A: () => a });
+n.d(t, { A: () => s });
 var i = n(17928),
     r = n(228366);
-class s extends i.Ay.Store {
+class a extends i.Ay.Store {
     guildIds = new Set();
     allGuildIds() {
         return this.guildIds;
@@ -39,4 +39,4 @@ class s extends i.Ay.Store {
         !0 !== e.guild.unavailable && this.guildIds.delete(e.guild.id);
     }
 }
-let a = new s();
+let s = new a();

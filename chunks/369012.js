@@ -1,6 +1,6 @@
 e.exports = {
     yt: "streamPreviewWrapper__0489e",
-    Rh: "streamPreview__0489e " + r(753094).popover,
+    Rh: "streamPreview__0489e " + t(753094).popover,
     WG: "streamHeader__0489e",
     mg: "streamHeaderVoiceUserActivities__0489e",
     lK: "streamHeaderIcon__0489e",

@@ -3,58 +3,58 @@ function i(e) {
     return Math.max(Math.min(e, 1), 0);
 }
 function r(e, t) {
-    let { top: n, bottom: r, left: s, right: a } = e;
+    let { top: n, bottom: r, left: a, right: s } = e;
     return {
         top: null != n ? Math.floor(i(n) * t.height) : void 0,
-        left: null != s ? Math.floor(i(s) * t.width) : void 0,
+        left: null != a ? Math.floor(i(a) * t.width) : void 0,
         bottom: null != r ? Math.floor(i(r) * t.height) : void 0,
-        right: null != a ? Math.floor(i(a) * t.width) : void 0,
+        right: null != s ? Math.floor(i(s) * t.width) : void 0,
     };
 }
-function s(e, t) {
-    let { width: n, height: r, fixed: s = !1 } = e;
-    return s
-        ? { width: n, height: r, fixed: s }
+function a(e, t) {
+    let { width: n, height: r, fixed: a = !1 } = e;
+    return a
+        ? { width: n, height: r, fixed: a }
         : {
               width: "auto" === n ? n : Math.floor(i(n) * t.width),
               height: "auto" === r ? r : Math.floor(i(r) * t.height),
-              fixed: s,
+              fixed: a,
           };
 }
-function a(e, t) {
-    let { top: n, bottom: r, left: s, right: a } = e;
+function s(e, t) {
+    let { top: n, bottom: r, left: a, right: s } = e;
     return {
         top: null != n ? i(n / t.height) : void 0,
-        left: null != s ? i(s / t.width) : void 0,
+        left: null != a ? i(a / t.width) : void 0,
         bottom: null != r ? i(r / t.height) : void 0,
-        right: null != a ? i(a / t.width) : void 0,
+        right: null != s ? i(s / t.width) : void 0,
     };
 }
-function o(e, t) {
+function l(e, t) {
     let { width: n, height: i, fixed: r } = e;
     return r
         ? { width: n, height: i, fixed: r }
         : { width: "auto" === n ? n : n / t.width, height: "auto" === i ? i : i / t.height, fixed: r };
 }
-function l(e, t, n, i, r) {
-    let { top: s, bottom: a, left: o, right: l } = e;
+function o(e, t, n, i, r) {
+    let { top: a, bottom: s, left: l, right: o } = e;
     if (
-        (null == s && null == a
-            ? ((s = 0), (a = n - r))
-            : null == s && null != a
-              ? (s = n - (a + r))
-              : null != s && (a = n - (s + r)),
-        null == o && null == l
-            ? ((o = 0), (l = t - i))
-            : null == o && null != l
-              ? (o = t - (l + i))
-              : null == l && null != o && (l = t - (o + i)),
-        null == s || null == a || null == o || null == l)
+        (null == a && null == s
+            ? ((a = 0), (s = n - r))
+            : null == a && null != s
+              ? (a = n - (s + r))
+              : null != a && (s = n - (a + r)),
+        null == l && null == o
+            ? ((l = 0), (o = t - i))
+            : null == l && null != o
+              ? (l = t - (o + i))
+              : null == o && null != l && (o = t - (l + i)),
+        null == a || null == s || null == l || null == o)
     )
         throw Error("Logically this can never happen based on our if/else statements");
-    return { top: s, left: o, bottom: a, right: l };
+    return { top: a, left: l, bottom: s, right: o };
 }
-function u(e) {
+function d(e) {
     let { top: t, left: n, bottom: i, right: r } = e;
     return (
         0 === t || t <= i ? (i = null) : (t = null),
@@ -72,56 +72,56 @@ function c(e) {
         { top: t, left: n, bottom: i, right: r }
     );
 }
-function d(e, t, n) {
+function u(e, t, n) {
     e = r(e, n);
-    let { width: i, height: a } = s(t, n);
-    return (i = "string" == typeof i ? 0 : i), (a = "string" == typeof a ? 0 : a), l(e, n.width, n.height, i, a);
+    let { width: i, height: s } = a(t, n);
+    return (i = "string" == typeof i ? 0 : i), (s = "string" == typeof s ? 0 : s), o(e, n.width, n.height, i, s);
 }
 function _(e, t, n) {
     let { top: i, left: r } = e,
-        { x: s, y: d } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : { x: 0, y: 0 },
-        { width: _, height: h } = t;
+        { x: a, y: u } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : { x: 0, y: 0 },
+        { width: _, height: E } = t;
     return [
-        a(
-            u(
+        s(
+            d(
                 c(
-                    l(
-                        { top: i + d, left: r + s, bottom: void 0, right: void 0 },
+                    o(
+                        { top: i + u, left: r + a, bottom: void 0, right: void 0 },
                         n.width,
                         n.height,
                         "number" == typeof _ ? _ : 0,
-                        "number" == typeof h ? h : 0,
+                        "number" == typeof E ? E : 0,
                     ),
                 ),
             ),
             n,
         ),
-        o(t, n),
+        l(t, n),
     ];
 }
-function h(e, t, n) {
+function E(e, t, n) {
     let { top: i, right: r } = e,
-        { x: s, y: d } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : { x: 0, y: 0 },
-        { width: _, height: h } = t;
+        { x: a, y: u } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : { x: 0, y: 0 },
+        { width: _, height: E } = t;
     return [
-        a(
-            u(
+        s(
+            d(
                 c(
-                    l(
-                        { top: i + d, left: void 0, bottom: void 0, right: r - s },
+                    o(
+                        { top: i + u, left: void 0, bottom: void 0, right: r - a },
                         n.width,
                         n.height,
                         "number" == typeof _ ? _ : 0,
-                        "number" == typeof h ? h : 0,
+                        "number" == typeof E ? E : 0,
                     ),
                 ),
             ),
             n,
         ),
-        o(t, n),
+        l(t, n),
     ];
 }
-function f(e, t) {
+function A(e, t) {
     let n = { top: void 0, bottom: void 0, left: void 0, right: void 0 };
     return (
         null != t.top && (n.top = e.top),
@@ -132,15 +132,15 @@ function f(e, t) {
     );
 }
 n.d(t, {
-    Ly: () => l,
+    Ly: () => o,
     M4: () => _,
-    NO: () => a,
-    NR: () => d,
+    NO: () => s,
+    NR: () => u,
     Nv: () => r,
-    R9: () => o,
-    af: () => f,
-    fd: () => s,
+    R9: () => l,
+    af: () => A,
+    fd: () => a,
     fh: () => c,
-    h1: () => u,
-    n7: () => h,
+    h1: () => d,
+    n7: () => E,
 });

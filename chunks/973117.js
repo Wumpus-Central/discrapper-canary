@@ -1,6 +1,6 @@
 "use strict";
 let i;
-n.d(t, { J: () => s, n: () => a });
+n.d(t, { J: () => a, n: () => s });
 let r = "__d6gp33cibjs";
 try {
     (i = window.localStorage), null == i && ((i = window[r]), delete window[r]);
@@ -8,7 +8,7 @@ try {
 try {
     null != window.localStorage && (window[r] = window.localStorage), delete window.localStorage;
 } catch (e) {}
-class s {
+class a {
     storage;
     constructor() {
         this.storage = {};
@@ -41,7 +41,7 @@ class s {
         return Promise.resolve(this.get(e));
     }
 }
-let a = !(function () {
+let s = !(function () {
     let e = "test";
     try {
         return i.setItem(e, e), i.removeItem(e), !0;
@@ -49,7 +49,7 @@ let a = !(function () {
         return !1;
     }
 })()
-    ? new s()
+    ? new a()
     : new (class {
           get(e, t) {
               let n = i.getItem(e);

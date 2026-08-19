@@ -6,8 +6,8 @@ var s = l(17928),
     a = l(50820),
     d = l(35903),
     r = l(587895),
-    c = l(172710),
-    o = l(616356),
+    o = l(172710),
+    c = l(616356),
     p = l(734057),
     u = l(71393),
     m = l(977997),
@@ -15,7 +15,7 @@ var s = l(17928),
     h = l(652215),
     x = l(891784);
 function v(e) {
-    let { type: t, source: l, activity: s, applicationStream: n, user: a, guildId: r, channelId: c, onAction: o } = e;
+    let { type: t, source: l, activity: s, applicationStream: n, user: a, guildId: r, channelId: o, onAction: c } = e;
     return (0, i.jsx)(d.A, {
         className: (0, A.t)(x, "actions", t),
         type: t,
@@ -25,8 +25,8 @@ function v(e) {
         user: a,
         guildId: r,
         buttonVariant: "primary",
-        channelId: c,
-        onAction: o,
+        channelId: o,
+        onAction: c,
     });
 }
 let j = a.A.Types,
@@ -40,8 +40,8 @@ let j = a.A.Types,
                 showChannelDetails: j = !1,
                 ...g
             } = e,
-            y = (0, s.bG)([m.A, p.A], () => p.A.getChannel(m.A.getVoiceStateForUser(l.id)?.channelId)),
-            I = (0, s.bG)([o.A], () => (d ? o.A.getAnyStreamForUser(l.id) : null)),
+            I = (0, s.bG)([m.A, p.A], () => p.A.getChannel(m.A.getVoiceStateForUser(l.id)?.channelId)),
+            y = (0, s.bG)([c.A], () => (d ? c.A.getAnyStreamForUser(l.id) : null)),
             N = (0, s.bG)([u.A, m.A, p.A], () =>
                 (0, n.A)(t, h.jUm.EMBEDDED)
                     ? u.A.getGuild(
@@ -49,7 +49,7 @@ let j = a.A.Types,
                       )
                     : null,
             ),
-            f = (0, s.bG)([u.A], () => (null != I ? u.A.getGuild(I.guildId) : null)),
+            f = (0, s.bG)([u.A], () => (null != y ? u.A.getGuild(y.guildId) : null)),
             T = (0, s.bG)([r.A], () => {
                 if (null != t)
                     if (null != t.application_id) return r.A.getApplication(t.application_id);
@@ -66,10 +66,10 @@ let j = a.A.Types,
                   hideHeader: x,
                   activityGuild: N ?? f,
                   showChannelDetails: j,
-                  channel: j ? y : void 0,
-                  renderActions: A ? () => (0, i.jsx)(v, { ...g, applicationStream: I, activity: t, user: l }) : null,
-                  onOpenSpotifyTrack: c.Mp,
-                  onOpenSpotifyArtist: c.mN,
-                  onOpenSpotifyAlbum: c.QX,
+                  channel: j ? I : void 0,
+                  renderActions: A ? () => (0, i.jsx)(v, { ...g, applicationStream: y, activity: t, user: l }) : null,
+                  onOpenSpotifyTrack: o.Mp,
+                  onOpenSpotifyArtist: o.mN,
+                  onOpenSpotifyAlbum: o.QX,
               });
     };

@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => y, a: () => A }), n(321073);
+n.d(t, { A: () => D, a: () => A }), n(321073);
 var i,
     r = n(635377),
     a = n.n(r),
@@ -114,18 +114,18 @@ function N(e) {
 function C(e) {
     return T.deleteChannelCache(e.channel.id);
 }
-function R(e, t) {
+function O(e, t) {
     if (!T.has(e, t)) return !1;
     T.set(e, t, { state: 2 });
 }
-function O() {
+function R() {
     T.clear();
 }
 function L(e) {
     let { firstMessages: t } = e;
     return null != t && g(t, (e) => m(e));
 }
-class D extends s.Ay.Store {
+class y extends s.Ay.Store {
     static displayName = "ReferencedMessageStore";
     initialize() {
         this.waitFor(_.A, u.A, o.A);
@@ -142,7 +142,7 @@ class D extends s.Ay.Store {
         return null != e && (t = T.getCachedMessageIdsForChannel(e)), t ?? I;
     }
 }
-let y = new D(l.h, {
+let D = new y(l.h, {
     CACHE_LOADED: function (e) {
         let { messages: t } = e;
         return g(Object.values(t), (e) => g(Object.values(e), (e) => m(e)));
@@ -194,11 +194,11 @@ let y = new D(l.h, {
     },
     MESSAGE_DELETE: function (e) {
         let { id: t, channelId: n } = e;
-        return R(n, t);
+        return O(n, t);
     },
     MESSAGE_DELETE_BULK: function (e) {
         let { ids: t, channelId: n } = e;
-        return g(t, (e) => R(n, e));
+        return g(t, (e) => O(n, e));
     },
     CREATE_PENDING_REPLY: function (e) {
         let { message: t } = e;
@@ -209,6 +209,6 @@ let y = new D(l.h, {
     GUILD_DELETE: function () {
         if (0 === T.retainWhere((e) => null != u.A.getChannel(e))) return !1;
     },
-    CONNECTION_OPEN: O,
-    LOGOUT: O,
+    CONNECTION_OPEN: R,
+    LOGOUT: R,
 });

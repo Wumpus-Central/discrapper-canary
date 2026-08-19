@@ -1,54 +1,54 @@
 "use strict";
-n.d(t, { A: () => _ });
-var i = n(477900),
-    r = n(582128),
-    a = n(503698),
-    s = n.n(a),
-    l = n(259678),
+n.d(t, { A: () => h });
+var l = n(477900),
+    i = n(582128),
+    s = n(503698),
+    r = n.n(s),
+    a = n(259678),
     o = n(939249),
-    d = n(866665),
+    u = n(866665),
     c = n(375708),
-    u = n(23481);
-let _ = r.forwardRef(function (e, t) {
+    d = n(23481);
+let h = i.forwardRef(function (e, t) {
     let n,
         {
-            className: r,
-            src: a,
-            unicodeEmoji: _,
-            name: E,
-            size: A = 20,
-            enableTooltip: h = !0,
-            enableHeight: I = !0,
-            onClick: f,
+            className: i,
+            src: s,
+            unicodeEmoji: h,
+            name: m,
+            size: f = 20,
+            enableTooltip: p = !0,
+            enableHeight: g = !0,
+            onClick: x,
         } = e;
-    return null == a && null == _
+    return null == s && null == h
         ? null
-        : (0, i.jsx)(d.m, {
+        : (0, l.jsx)(u.m, {
               asContainer: !0,
-              text: E,
+              text: m,
               "aria-label": !1,
-              shouldShow: h,
+              shouldShow: p,
               tag: "span",
               children:
-                  ((n = (0, i.jsx)("img", {
+                  ((n = (0, l.jsx)("img", {
                       ref: t,
-                      alt: c.intl.formatToPlainString(c.t["9+YWrE"], { name: E }),
-                      className: s()(u.U, r, { [u.v]: null != f }),
-                      height: I ? A : void 0,
-                      src: a,
-                      width: A,
+                      alt: c.intl.formatToPlainString(c.t["9+YWrE"], { name: m }),
+                      className: r()(d.U, i, { [d.v]: null != x }),
+                      height: g ? f : void 0,
+                      src: s,
+                      width: f,
                   })),
-                  (null != _ &&
-                      (n = (0, i.jsx)("img", {
+                  (null != h &&
+                      (n = (0, l.jsx)("img", {
                           ref: t,
-                          alt: _.allNamesString,
-                          className: s()(u.U, r, { [u.v]: null != f }),
-                          height: I ? A : void 0,
-                          src: _.url,
-                          width: A,
+                          alt: h.allNamesString,
+                          className: r()(d.U, i, { [d.v]: null != x }),
+                          height: g ? f : void 0,
+                          src: h.url,
+                          width: f,
                       })),
-                  null == f)
-                      ? (0, i.jsx)(l.vN, { offset: { left: 5 }, children: n })
-                      : (0, i.jsx)(o.D, { onClick: f, tag: "span", focusProps: { offset: { left: 5 } }, children: n })),
+                  null == x)
+                      ? (0, l.jsx)(a.vN, { offset: { left: 5 }, children: n })
+                      : (0, l.jsx)(o.D, { onClick: x, tag: "span", focusProps: { offset: { left: 5 } }, children: n })),
           });
 });

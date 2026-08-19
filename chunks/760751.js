@@ -25,8 +25,8 @@ let T = "GameStoreReportedGames",
     O = "",
     R = null,
     L = !1,
-    D = null,
-    y = !1,
+    y = null,
+    D = !1,
     v = "",
     b = [],
     M = [],
@@ -196,7 +196,7 @@ class W extends r.Ay.PersistedStore {
         return !0 !== i && (null == R || Date.now() >= R + m);
     }
     canFetchExecutableBlocklist() {
-        return !y && (null == D || Date.now() >= D + m);
+        return !D && (null == y || Date.now() >= y + m);
     }
     getGameByExecutable(e) {
         if (null == e) return;
@@ -299,15 +299,15 @@ let Y = new W(s.h, {
         (i = void 0), (R = Date.now()), (L = !0);
     },
     GAMES_BLOCKLIST_FETCH: function () {
-        y = !0;
+        D = !0;
     },
     GAMES_BLOCKLIST_FETCH_FAIL: function () {
-        y = !1;
+        D = !1;
     },
     GAMES_BLOCKLIST_UPDATE: function (e) {
         let { executables: t, patterns: n, etag: i } = e;
         null != i && v !== i && ((v = i), (b = t.map((e) => e.toLowerCase())), (M = n.map((e) => RegExp(e, "i")))),
-            (y = !1),
-            (D = Date.now());
+            (D = !1),
+            (y = Date.now());
     },
 });

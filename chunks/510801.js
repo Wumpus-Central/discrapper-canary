@@ -1,14 +1,14 @@
 "use strict";
-n.d(t, { A: () => u }), n(321073);
+n.d(t, { A: () => d }), n(321073);
 var i = n(575593),
     r = n(993408),
-    s = n(623373),
-    a = n(986630),
-    o = n(931772);
-function l(e) {
+    a = n(623373),
+    s = n(986630),
+    l = n(931772);
+function o(e) {
     return e === i.R.VARIANTS_GROUP || e === i.R.EXTERNAL_SKU;
 }
-class u extends o.A {
+class d extends l.A {
     products;
     heroRanking;
     unpublishedAt;
@@ -33,7 +33,7 @@ class u extends o.A {
             (this.heroRanking = e.heroRanking),
             (this.unpublishedAt = e.unpublishedAt),
             (this.isOrbsExclusive =
-                Array.isArray(e.products) && e.products.length > 0 && void 0 === e.products.find((e) => !(0, s.Ab)(e))),
+                Array.isArray(e.products) && e.products.length > 0 && void 0 === e.products.find((e) => !(0, a.Ab)(e))),
             (this.heroBannerUrl = e.heroBannerUrl),
             (this.heroBannerAnimatedUrl = e.heroBannerAnimatedUrl),
             (this.heroRiveUrl = e.heroRiveUrl),
@@ -54,48 +54,48 @@ class u extends o.A {
             products: t,
             unpublished_at: n,
             hero_ranking: i,
-            hero_logo_display_config: s,
-            hero_banner_display_config: o,
+            hero_logo_display_config: a,
+            hero_banner_display_config: l,
             hero_banner_url: c,
-            hero_banner_animated_url: d,
+            hero_banner_animated_url: u,
             hero_rive_url: _,
-            hero_logo_url: h,
-            catalog_banner_url: f,
-            catalog_banner_animated_url: p,
-            catalog_banner_rive_url: E,
-            featured_block_url: m,
-            logo_url: g,
-            pdp_bg_url: A,
-            mobile_banner_url: I,
-            mobile_bg_url: T,
+            hero_logo_url: E,
+            catalog_banner_url: A,
+            catalog_banner_animated_url: h,
+            catalog_banner_rive_url: I,
+            featured_block_url: f,
+            logo_url: p,
+            pdp_bg_url: T,
+            mobile_banner_url: m,
+            mobile_bg_url: g,
             ...S
         } = e;
-        return new u({
+        return new d({
             ...super.fromServer(S),
             products: t.reduce((e, t) => {
-                let n = a.A.fromServer(t);
-                return (l(n.type) || 0 !== n.items.length) && e.push(n), e;
+                let n = s.A.fromServer(t);
+                return (o(n.type) || 0 !== n.items.length) && e.push(n), e;
             }, []),
             unpublishedAt: null != n ? new Date(n) : null,
             heroRanking: i,
             heroBannerUrl: c,
-            heroBannerAnimatedUrl: d,
+            heroBannerAnimatedUrl: u,
             heroRiveUrl: _,
-            heroLogoUrl: h,
-            catalogBannerUrl: f,
-            catalogBannerAnimatedUrl: p,
-            catalogBannerRiveUrl: E,
-            featuredBlockUrl: m,
-            logoUrl: g,
-            pdpBgUrl: A,
-            mobileBannerUrl: I,
-            mobileBgUrl: T,
-            heroLogoDisplayConfig: (0, r.f6)(s),
-            heroBannerDisplayConfig: (0, r.f6)(o),
+            heroLogoUrl: E,
+            catalogBannerUrl: A,
+            catalogBannerAnimatedUrl: h,
+            catalogBannerRiveUrl: I,
+            featuredBlockUrl: f,
+            logoUrl: p,
+            pdpBgUrl: T,
+            mobileBannerUrl: m,
+            mobileBgUrl: g,
+            heroLogoDisplayConfig: (0, r.f6)(a),
+            heroBannerDisplayConfig: (0, r.f6)(l),
         });
     }
     static fromStorefrontCollectionRecord(e) {
-        return new u({
+        return new d({
             storeListingId: e.id,
             skuId: e.id,
             name: e.name,
@@ -103,8 +103,8 @@ class u extends o.A {
             unpublishedAt: e.unpublishedAt,
             styles: e.styles,
             products: e.products.reduce((e, t) => {
-                let n = a.A.fromStorefrontProductRecord(t);
-                return null != n && (l(n.type) || 0 !== n.items.length) && e.push(n), e;
+                let n = s.A.fromStorefrontProductRecord(t);
+                return null != n && (o(n.type) || 0 !== n.items.length) && e.push(n), e;
             }, []),
             heroRanking: e.heroRanking,
             heroBannerUrl: e.heroBannerUrl,

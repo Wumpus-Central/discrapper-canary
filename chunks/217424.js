@@ -16,9 +16,9 @@ var i = n(477900),
     x = n(811024),
     f = n(795816),
     E = n(793574),
-    C = n(688810),
-    _ = n(735991),
-    I = n(975412),
+    I = n(688810),
+    C = n(735991),
+    _ = n(975412),
     v = n(168186),
     N = n(597929),
     j = n(589022),
@@ -37,8 +37,8 @@ var i = n(477900),
     G = n(332173),
     w = n(975732),
     H = n(734057),
-    B = n(317525),
-    V = n(71393),
+    V = n(317525),
+    B = n(71393),
     F = n(994500);
 n(827669);
 var z = n(375708),
@@ -54,7 +54,7 @@ let X = l.memo(function (e) {
         s,
         a,
         { channel: r, messageId: o, interactionData: c } = e,
-        { analyticsLocations: d } = (0, C.Ay)(),
+        { analyticsLocations: d } = (0, I.Ay)(),
         { onCopy: m, copyRef: h } =
             ((t = c?.application_command?.id),
             (n = l.useRef(null)),
@@ -65,7 +65,7 @@ let X = l.memo(function (e) {
             }, [])),
             D.D3({ channel: r, type: "channel" }, t),
             { onCopy: s, copyRef: n }),
-        g = (0, u.bG)([V.A], () => V.A.getGuild(r.guild_id), [r.guild_id]);
+        g = (0, u.bG)([B.A], () => B.A.getGuild(r.guild_id), [r.guild_id]);
     if (
         (l.useEffect(() => {
             (null == c || (c.type === A.kc.CHAT && void 0 === c.application_command)) && U.S7(r.id, o);
@@ -150,13 +150,13 @@ let X = l.memo(function (e) {
                             }
                             case A.n4.ROLE: {
                                 let e = s.value.toString(),
-                                    t = null != r ? B.A.getRole(r.id, e) : void 0;
+                                    t = null != r ? V.A.getRole(r.id, e) : void 0;
                                 null != t && (n = (0, i.jsxs)(G.A, { ...K, children: ["@", t.name] }));
                                 break;
                             }
                             case A.n4.MENTIONABLE: {
                                 let e = s.value.toString(),
-                                    t = null != r ? B.A.getRole(r.id, e) : void 0;
+                                    t = null != r ? V.A.getRole(r.id, e) : void 0;
                                 if (null != t) n = (0, i.jsxs)(G.A, { children: ["@", t.name] });
                                 else {
                                     let t = S.default.getUser(e);
@@ -254,18 +254,18 @@ function ee(e, t, n, l, s, r) {
         onUserContextMenu: x,
         onClickTargetAvatar: f,
         onTargetUserContextMenu: E,
-        onPopoutRequestClose: C,
+        onPopoutRequestClose: I,
     } = e;
     if (c && 1 === n) return null;
     if ((c && null == o.activityInstance) || u || h)
         return (0, i.jsx)("div", { className: Q.Cz, children: (0, i.jsx)($, { className: Q.Jx }) });
-    let _ =
+    let C =
         y.Ay.getGuildMemberAvatarURL({
             avatar: l.guildMemberAvatar ?? void 0,
             userId: t.id,
             guildId: d?.guild_id ?? "",
         }) ?? void 0;
-    function I() {
+    function _() {
         return (function (e) {
             let { user: t, guildId: n, guildAvatar: l, onClick: s, onContextMenu: r, onMouseDown: o, ref: c } = e;
             return (0, i.jsx)("img", {
@@ -280,7 +280,7 @@ function ee(e, t, n, l, s, r) {
         })({
             user: t,
             guildId: d.guild_id,
-            guildAvatar: _,
+            guildAvatar: C,
             onClick: 1 === n ? f : A,
             onContextMenu: 1 === n ? E : x,
             ref: r,
@@ -293,10 +293,10 @@ function ee(e, t, n, l, s, r) {
               renderPopout: s,
               shouldShow: v,
               position: "right",
-              onRequestClose: C,
-              children: I,
+              onRequestClose: I,
+              children: _,
           })
-        : I();
+        : _();
 }
 function et(e, t, n, l, s) {
     let {
@@ -330,7 +330,7 @@ function en() {
 function ei(e) {
     let t,
         { message: n, channel: s } = e,
-        { analyticsLocations: r, newestAnalyticsLocation: c } = (0, C.Ay)(E.A.EXECUTED_COMMAND),
+        { analyticsLocations: r, newestAnalyticsLocation: c } = (0, I.Ay)(E.A.EXECUTED_COMMAND),
         p = (0, u.bG)([S.default], () => S.default.getCurrentUser()),
         y = l.useRef(null),
         M = l.useRef(null),
@@ -364,13 +364,13 @@ function ei(e) {
         G = (0, L.d8)(n.interaction?.user, s),
         w = (0, L.d8)(D, s),
         H = l.useMemo(() => (e.compact ? (0, Z.A)((0, R.i$)(d()(), "LT")) : null), [e.compact]),
-        B = (0, x.Gp)(s.id),
-        V = n.interaction;
-    if (null == V || null == G) return null;
+        V = (0, x.Gp)(s.id),
+        B = n.interaction;
+    if (null == B || null == G) return null;
     function F() {
-        if (null == V) return null;
-        let t = ee(e, V.user, 0, G, (e) => k(e, V.user, [E.A.AVATAR]), y),
-            n = et(e, V.user, 0, G, (e) => k(e, V.user));
+        if (null == B) return null;
+        let t = ee(e, B.user, 0, G, (e) => k(e, B.user, [E.A.AVATAR]), y),
+            n = et(e, B.user, 0, G, (e) => k(e, B.user));
         return (0, i.jsxs)(l.Fragment, { children: [t, n] }, "user");
     }
     if (n?.activityInstance === null || (0, N.V)(n))
@@ -413,7 +413,7 @@ function ei(e) {
                                 });
                             if (!(0, N.V)(s)) return (0, i.jsx)("div", { className: Q.p6, ref: n, children: c });
                             {
-                                let e = (0, _.kF)(c);
+                                let e = (0, C.kF)(c);
                                 return (0, i.jsx)(h.D, {
                                     ...l,
                                     tag: "span",
@@ -461,14 +461,14 @@ function ei(e) {
                   }));
     else {
         function J() {
-            (0, I.A)({
+            (0, _.A)({
                 context: null != s ? { type: "channel", channel: s } : { type: "contextless" },
                 openInPopout: !1,
                 analyticsLocation: c,
             }),
                 (0, f.LV)({ guildId: s.guild_id });
         }
-        t = B
+        t = V
             ? z.intl.format(z.t.kfV8WM, {
                   userHook: F,
                   activityHook: function () {
@@ -484,7 +484,7 @@ function ei(e) {
               })
             : z.intl.format(z.t["6FeSyT"], { userHook: F });
     }
-    return (0, i.jsx)(C.f5, {
+    return (0, i.jsx)(I.f5, {
         value: r,
         children: (0, i.jsx)("div", { className: a()(Q.JZ, Q.NB, Q.JE, H), "aria-hidden": !e.compact, children: t }),
     });

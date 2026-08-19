@@ -1,24 +1,24 @@
 "use strict";
-n.d(t, { A: () => u });
+n.d(t, { A: () => d });
 var i = n(636537),
     r = n(228366),
-    s = n(885386),
-    a = n(38405),
-    o = n(859524),
-    l = n(652215);
-let u = {
+    a = n(885386),
+    s = n(38405),
+    l = n(859524),
+    o = n(652215);
+let d = {
     async fetchPopularGuildsFromCategories(e, t) {
         try {
             let { guilds: n } = (
                 await i.Bo.post({
-                    url: l.Rsh.GRAVITY_TOPIC_GUILDS,
+                    url: o.Rsh.GRAVITY_TOPIC_GUILDS,
                     body: { category_ids: e, offset: t },
                     rejectWithError: !1,
                 })
             ).body;
             return r.h.dispatch({ type: "LOAD_ICYMI_POPULAR_GUILDS", categoryIds: e, guilds: n, offset: t }), !0;
         } catch (e) {
-            a.A.captureException(e);
+            s.A.captureException(e);
         }
         return !1;
     },
@@ -28,64 +28,64 @@ let u = {
             isReloading: t,
             forceRefresh: n,
         } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-        if ((0, o.Lg)("fetchDehydrated")) {
+        if ((0, l.Lg)("fetchDehydrated")) {
             t && r.h.dispatch({ type: "ICYMI_SET_REFRESHING", refreshing: !0 });
             try {
-                let s = Date.now(),
-                    a = await i.Bo.get({
-                        url: l.Rsh.GRAVITY_ITEMS_DEHYDRATED,
+                let a = Date.now(),
+                    s = await i.Bo.get({
+                        url: o.Rsh.GRAVITY_ITEMS_DEHYDRATED,
                         query: { refresh: n },
                         rejectWithError: !1,
                     });
                 await r.h.dispatch({
                     type: "LOAD_ICYMI_DEHYDRATED",
-                    items: a.body.items,
-                    loadId: a.body.load_id,
-                    startTime: s,
+                    items: s.body.items,
+                    loadId: s.body.load_id,
+                    startTime: a,
                     isReloading: t,
                     isInitialLoad: e,
                 });
             } catch (e) {
-                a.A.captureException(e);
+                s.A.captureException(e);
             }
         }
     },
     async gravityJoinGuild(e, t) {
-        if ((0, o.Lg)("gravityJoinGuild") && 0 !== e.length)
+        if ((0, l.Lg)("gravityJoinGuild") && 0 !== e.length)
             try {
                 return (
                     await i.Bo.post({
-                        url: l.Rsh.GRAVITY_JOIN_GUILD,
+                        url: o.Rsh.GRAVITY_JOIN_GUILD,
                         body: { guild_ids: e, location: t },
                         rejectWithError: !1,
                     }),
                     !0
                 );
             } catch (e) {
-                return a.A.captureException(e), !1;
+                return s.A.captureException(e), !1;
             }
     },
     async fetchForNotification(e, t) {
-        if ((0, o.Lg)("fetchInitial"))
+        if ((0, l.Lg)("fetchInitial"))
             try {
                 let n = await i.Bo.post({
-                    url: l.Rsh.GRAVITY_ITEMS_HYDRATE,
+                    url: o.Rsh.GRAVITY_ITEMS_HYDRATE,
                     body: { message_items: [{ channel_id: e, message_id: t }], activity_items: [] },
                     rejectWithError: !1,
                 });
                 if (0 === n.body.message_items.length) return;
                 r.h.dispatch({ type: "LOAD_ICYMI_FROM_NOTIFICATION", messageItem: n.body.message_items[0] });
             } catch (e) {
-                a.A.captureException(e);
+                s.A.captureException(e);
             }
     },
     fetchForStatusNotification(e) {
-        (0, o.Lg)("fetchInitialStatus") && r.h.dispatch({ type: "LOAD_ICYMI_FROM_NOTIFICATION", customStatusItem: e });
+        (0, l.Lg)("fetchInitialStatus") && r.h.dispatch({ type: "LOAD_ICYMI_FROM_NOTIFICATION", customStatusItem: e });
     },
     async fetchHydrated(e, t, n) {
-        if (!(0, o.Lg)("fetchHydrated")) return;
-        let { messageItems: s, activityItems: u } = n;
-        if (0 === s.length && 0 === u.length)
+        if (!(0, l.Lg)("fetchHydrated")) return;
+        let { messageItems: a, activityItems: d } = n;
+        if (0 === a.length && 0 === d.length)
             return void r.h.dispatch({
                 type: "LOAD_ICYMI_HYDRATED",
                 requestMessageItems: [],
@@ -97,56 +97,56 @@ let u = {
             });
         try {
             let n = await i.Bo.post({
-                url: l.Rsh.GRAVITY_ITEMS_HYDRATE,
-                body: { message_items: s, activity_items: u },
+                url: o.Rsh.GRAVITY_ITEMS_HYDRATE,
+                body: { message_items: a, activity_items: d },
                 rejectWithError: !1,
             });
             r.h.dispatch({
                 type: "LOAD_ICYMI_HYDRATED",
-                requestMessageItems: s,
-                requestActivityItems: u,
+                requestMessageItems: a,
+                requestActivityItems: d,
                 messageItems: n.body.message_items,
                 activityItems: n.body.activity_items,
                 startingIndex: e,
                 endingIndex: t,
             });
         } catch (i) {
-            a.A.captureException(i);
-            let n = (0, o.Vq)(e, t);
+            s.A.captureException(i);
+            let n = (0, l.Vq)(e, t);
             r.h.dispatch({ type: "LOAD_ICYMI_HYDRATED_FAILED", hydrationId: n });
         }
     },
     async getGuildChannelScores() {
-        if ((0, o.Lg)("guildChannelScores"))
+        if ((0, l.Lg)("guildChannelScores"))
             try {
-                let e = await i.Bo.get({ url: l.Rsh.GRAVITY_CUSTOM_SCORES, rejectWithError: !1 });
+                let e = await i.Bo.get({ url: o.Rsh.GRAVITY_CUSTOM_SCORES, rejectWithError: !1 });
                 r.h.dispatch({ type: "LOAD_ICYMI_CUSTOM_SCORES", scores: e.body });
             } catch (e) {
-                a.A.captureException(e);
+                s.A.captureException(e);
             }
     },
     async getRecommendedGuilds() {
-        if ((0, o.Lg)("recommendedGuilds"))
+        if ((0, l.Lg)("recommendedGuilds"))
             try {
-                let e = await i.Bo.get({ url: l.Rsh.GRAVITY_RECOMMENDED_GUILDS, rejectWithError: !1 });
+                let e = await i.Bo.get({ url: o.Rsh.GRAVITY_RECOMMENDED_GUILDS, rejectWithError: !1 });
                 r.h.dispatch({ type: "LOAD_ICYMI_RECOMMENDED_GUILDS", guilds: e.body.guilds });
             } catch (e) {
-                a.A.captureException(e);
+                s.A.captureException(e);
             }
     },
     async getMediaForCurrentStatus() {
-        if (!(0, o.Lg)("mediaForCurrentStatus")) return;
-        let e = s.G2.getSetting();
+        if (!(0, l.Lg)("mediaForCurrentStatus")) return;
+        let e = a.G2.getSetting();
         if (null != e && null != e.createdAtMs)
             try {
-                let t = await i.Bo.get({ url: l.Rsh.GRAVITY_ATTACHMENTS, rejectWithError: !1 });
+                let t = await i.Bo.get({ url: o.Rsh.GRAVITY_ATTACHMENTS, rejectWithError: !1 });
                 r.h.dispatch({
                     type: "LOAD_ICYMI_CURRENT_STATUS_MEDIA",
                     attachments: t.body.attachments,
                     createdAtMs: Number(e.createdAtMs),
                 });
             } catch (e) {
-                a.A.captureException(e);
+                s.A.captureException(e);
             }
     },
     reloadICYMITab() {

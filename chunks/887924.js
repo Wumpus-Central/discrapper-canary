@@ -1,12 +1,12 @@
 "use strict";
-let i = n(20816),
-    r = n(978884),
-    s = n(597084),
+let n = r(20816),
+    o = r(978884),
+    i = r(597084),
     a = () => {},
-    o = new r.TimeoutError();
-t.default = class extends i {
+    s = new o.TimeoutError();
+t.default = class extends n {
     constructor(e) {
-        var t, n, i, r;
+        var t, r, n, o;
         if (
             (super(),
             (this._intervalCount = 0),
@@ -23,18 +23,18 @@ t.default = class extends i {
                             interval: 0,
                             concurrency: 1 / 0,
                             autoStart: !0,
-                            queueClass: s.default,
+                            queueClass: i.default,
                         },
                         e,
                     )).intervalCap && e.intervalCap >= 1
             ))
         )
             throw TypeError(
-                `Expected \`intervalCap\` to be a number from 1 and up, got \`${null != ((n = null == (t = e.intervalCap) ? void 0 : t.toString())) ? n : ""}\` (${typeof e.intervalCap})`,
+                `Expected \`intervalCap\` to be a number from 1 and up, got \`${null != ((r = null == (t = e.intervalCap) ? void 0 : t.toString())) ? r : ""}\` (${typeof e.intervalCap})`,
             );
         if (void 0 === e.interval || !(Number.isFinite(e.interval) && e.interval >= 0))
             throw TypeError(
-                `Expected \`interval\` to be a finite number >= 0, got \`${null != ((r = null == (i = e.interval) ? void 0 : i.toString())) ? r : ""}\` (${typeof e.interval})`,
+                `Expected \`interval\` to be a finite number >= 0, got \`${null != ((o = null == (n = e.interval) ? void 0 : n.toString())) ? o : ""}\` (${typeof e.interval})`,
             );
         (this._carryoverConcurrencyCount = e.carryoverConcurrencyCount),
             (this._isIntervalIgnored = e.intervalCap === 1 / 0 || 0 === e.interval),
@@ -125,23 +125,23 @@ t.default = class extends i {
         (this._concurrency = e), this._processQueue();
     }
     async add(e, t = {}) {
-        return new Promise((n, i) => {
-            let s = async () => {
+        return new Promise((r, n) => {
+            let i = async () => {
                 this._pendingCount++, this._intervalCount++;
                 try {
-                    let s =
+                    let i =
                         void 0 === this._timeout && void 0 === t.timeout
                             ? e()
-                            : r.default(Promise.resolve(e()), void 0 === t.timeout ? this._timeout : t.timeout, () => {
-                                  (void 0 === t.throwOnTimeout ? this._throwOnTimeout : t.throwOnTimeout) && i(o);
+                            : o.default(Promise.resolve(e()), void 0 === t.timeout ? this._timeout : t.timeout, () => {
+                                  (void 0 === t.throwOnTimeout ? this._throwOnTimeout : t.throwOnTimeout) && n(s);
                               });
-                    n(await s);
+                    r(await i);
                 } catch (e) {
-                    i(e);
+                    n(e);
                 }
                 this._next();
             };
-            this._queue.enqueue(s, t), this._tryToStartAnother(), this.emit("add");
+            this._queue.enqueue(i, t), this._tryToStartAnother(), this.emit("add");
         });
     }
     async addAll(e, t) {

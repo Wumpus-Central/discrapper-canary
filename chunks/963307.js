@@ -1,30 +1,30 @@
 "use strict";
-n.d(t, { Ay: () => G, QP: () => N, S9: () => R, sN: () => v }), n(321073);
+n.d(t, { Ay: () => k, QP: () => O, S9: () => L, sN: () => R }), n(321073);
 var i,
-    r = n(735438),
-    s = n.n(r),
-    a = n(181370),
-    o = n.n(a),
-    l = n(136722),
-    u = n(17928),
+    r = n(435558),
+    a = n.n(r),
+    s = n(181370),
+    l = n.n(s),
+    o = n(136722),
+    d = n(17928),
     c = n(228366),
-    d = n(736056),
+    u = n(736056),
     _ = n(488926),
-    h = n(616356),
-    f = n(495544),
-    p = n(734057),
-    E = n(498642),
-    m = n(696451),
-    g = n(317525),
-    A = n(71393),
-    I = n(290863),
-    T = n(461213),
+    E = n(616356),
+    A = n(280450),
+    h = n(734057),
+    I = n(498642),
+    f = n(696451),
+    p = n(317525),
+    T = n(71393),
+    m = n(290863),
+    g = n(461213),
     S = n(287809),
-    y = n(652215),
+    N = n(652215),
     C = n(375708);
-let N = "everyone",
-    v = 0;
-var R =
+let O = "everyone",
+    R = 0;
+var L =
     (((i = {}).GROUP = "GROUP"),
     (i.MEMBER = "MEMBER"),
     (i.CONTENT_INVENTORY = "CONTENT_INVENTORY"),
@@ -32,20 +32,20 @@ var R =
     (i.HIDDEN_CONTENT_INVENTORY = "HIDDEN_CONTENT_INVENTORY"),
     (i.CONTENT_INVENTORY_LEADERBOARD = "CONTENT_INVENTORY_LEADERBOARD"),
     i);
-function O(e, t, n, i) {
+function y(e, t, n, i) {
     switch (t) {
-        case y.clD.ONLINE:
-        case y.clD.OFFLINE:
-        case y.clD.UNKNOWN:
+        case N.clD.ONLINE:
+        case N.clD.OFFLINE:
+        case N.clD.UNKNOWN:
             return {
                 type: "GROUP",
                 key: t,
                 id: t,
                 get title() {
                     switch (t) {
-                        case y.clD.ONLINE:
+                        case N.clD.ONLINE:
                             return C.intl.string(C.t.WbGtnH);
-                        case y.clD.OFFLINE:
+                        case N.clD.OFFLINE:
                             return C.intl.string(C.t.Vv0abJ);
                         default:
                             return C.intl.string(C.t["UQMV/E"]);
@@ -55,51 +55,51 @@ function O(e, t, n, i) {
                 index: i,
             };
         default:
-            let r = A.A.getGuild(e),
-                s = null != r ? g.A.getRole(r.id, t) : null;
-            return { type: "GROUP", key: t, id: t, title: null != s ? s.name : "", count: n, index: i };
+            let r = T.A.getGuild(e),
+                a = null != r ? p.A.getRole(r.id, t) : null;
+            return { type: "GROUP", key: t, id: t, title: null != a ? a.name : "", count: n, index: i };
     }
 }
-function b(e, t, n) {
-    let i = n === f.default.getId(),
-        r = I.A.isMobileOnline(n),
-        s = I.A.isVROnline(n),
-        a = i ? T.A.getStatus() : I.A.getStatus(n, e),
-        o = i ? T.A.getActivities() : I.A.getActivities(n, e),
-        l = h.A.getStreamForUser(n, e),
-        u = S.default.getUser(n);
-    return null == u
+function D(e, t, n) {
+    let i = n === A.default.getId(),
+        r = m.A.isMobileOnline(n),
+        a = m.A.isVROnline(n),
+        s = i ? g.A.getStatus() : m.A.getStatus(n, e),
+        l = i ? g.A.getActivities() : m.A.getActivities(n, e),
+        o = E.A.getStreamForUser(n, e),
+        d = S.default.getUser(n);
+    return null == d
         ? null
         : {
               type: "MEMBER",
-              ...m.Ay.getMember(e, n),
-              user: u,
-              status: a,
-              activities: o,
-              applicationStream: l,
+              ...f.Ay.getMember(e, n),
+              user: d,
+              status: s,
+              activities: l,
+              applicationStream: o,
               isOwner: t === n,
               isMobileOnline: r,
-              isVROnline: s,
+              isVROnline: a,
           };
 }
-function D(e) {
+function v(e) {
     var t;
-    let n = p.A.getChannel(e);
+    let n = h.A.getChannel(e);
     return null == n
-        ? N
+        ? O
         : null == n.memberListId
           ? ((t = n),
-            _.Ib(y.xBc.VIEW_CHANNEL, t)
-                ? N
-                : o()
+            _.Ib(N.xBc.VIEW_CHANNEL, t)
+                ? O
+                : l()
                       .v3(
-                          s()(t.permissionOverwrites)
+                          a()(t.permissionOverwrites)
                               .reduce((e, t) => {
                                   let { id: n, allow: i, deny: r } = t;
                                   return (
-                                      l.zy(i, y.xBc.VIEW_CHANNEL)
+                                      o.zy(i, N.xBc.VIEW_CHANNEL)
                                           ? e.push(`allow:${n}`)
-                                          : l.zy(r, y.xBc.VIEW_CHANNEL) && e.push(`deny:${n}`),
+                                          : o.zy(r, N.xBc.VIEW_CHANNEL) && e.push(`deny:${n}`),
                                       e
                                   );
                               }, [])
@@ -109,7 +109,7 @@ function D(e) {
                       .toString())
           : n.memberListId;
 }
-class L {
+class b {
     guildId;
     listId;
     ownerId;
@@ -121,7 +121,7 @@ class L {
         (this.guildId = e), (this.listId = t), this.updateOwnerId();
     }
     updateOwnerId() {
-        let e = A.A.getGuild(this.guildId);
+        let e = T.A.getGuild(this.guildId);
         if (null == e) return !1;
         let t = _.wT(e);
         return this.ownerId !== t && ((this.ownerId = t), !0);
@@ -131,7 +131,7 @@ class L {
         (this.groups = e.map((e) => {
             let n = t,
                 i = Math.max(0, e.count ?? 0);
-            return (t += i + 1), O(this.guildId, e.id, i, n);
+            return (t += i + 1), y(this.guildId, e.id, i, n);
         })),
             (this.rows.length = t);
     }
@@ -150,9 +150,9 @@ class L {
     }
     insert(e, t) {
         let { group: n, member: i } = t;
-        if (null != n) this.rows.splice(e, 0, O(this.guildId, n.id, n.count));
+        if (null != n) this.rows.splice(e, 0, y(this.guildId, n.id, n.count));
         else if (null != i) {
-            let t = b(this.guildId, this.ownerId, i.user.id);
+            let t = D(this.guildId, this.ownerId, i.user.id);
             if (null == t) return;
             this.rows.splice(e, 0, t), (this.members[i.user.id] = t);
         }
@@ -162,9 +162,9 @@ class L {
         let { group: n, member: i } = t,
             r = this.rows[e];
         if ((null != r && "MEMBER" === r.type && delete this.members[r.user.id], null != n))
-            this.rows[e] = O(this.guildId, n.id, n.count);
+            this.rows[e] = y(this.guildId, n.id, n.count);
         else if (null != i) {
-            let t = b(this.guildId, this.ownerId, i.user.id);
+            let t = D(this.guildId, this.ownerId, i.user.id);
             if (null == t) return;
             (this.rows[e] = t), (this.members[i.user.id] = t);
         }
@@ -176,7 +176,7 @@ class L {
     }
     rebuildMember(e) {
         let t = this.members[e];
-        null != t && (Object.assign(t, b(this.guildId, this.ownerId, e)), this.version++);
+        null != t && (Object.assign(t, D(this.guildId, this.ownerId, e)), this.version++);
     }
     rebuildMembers() {
         let e = Object.keys(this.members);
@@ -188,25 +188,25 @@ class L {
     rebuildGroup(e) {
         let t = this.groups.findIndex((t) => t.id === e),
             n = this.groups[t];
-        null != n && (this.groups.splice(t, 1, O(this.guildId, e, n.count, n.index)), this.version++);
+        null != n && (this.groups.splice(t, 1, y(this.guildId, e, n.count, n.index)), this.version++);
     }
 }
-let w = new (class {
+let M = new (class {
     _guildLists = {};
     get(e, t) {
         let n = this._guildLists[e];
         null == n && (n = this._guildLists[e] = {});
         let i = n[t];
-        return null == i && ((i = new L(e, t)).setGroups([{ id: y.clD.UNKNOWN, count: 0 }]), (n[t] = i)), i;
+        return null == i && ((i = new b(e, t)).setGroups([{ id: N.clD.UNKNOWN, count: 0 }]), (n[t] = i)), i;
     }
     forEach(e, t) {
         if (null == e)
-            s().forEach(this._guildLists, (e) => {
-                s().forEach(e, t);
+            a().forEach(this._guildLists, (e) => {
+                a().forEach(e, t);
             });
         else {
             let n = this._guildLists[e];
-            null != n && s().forEach(n, t);
+            null != n && a().forEach(n, t);
         }
     }
     delete(e) {
@@ -216,42 +216,42 @@ let w = new (class {
         this._guildLists = {};
     }
 })();
-function M() {
-    w.reset();
+function P() {
+    M.reset();
 }
-let P = [];
-function x() {
-    let e = h.A.getAllApplicationStreams(),
-        t = P.concat(e);
-    (P = e),
+let U = [];
+function w() {
+    let e = E.A.getAllApplicationStreams(),
+        t = U.concat(e);
+    (U = e),
         t.forEach((e) => {
-            w.forEach(null, (t) => t.rebuildMember(e.ownerId));
+            M.forEach(null, (t) => t.rebuildMember(e.ownerId));
         });
 }
-function k() {
-    let e = f.default.getId();
-    w.forEach(null, (t) => t.rebuildMember(e));
+function G() {
+    let e = A.default.getId();
+    M.forEach(null, (t) => t.rebuildMember(e));
 }
-class U extends u.Ay.Store {
+class x extends d.Ay.Store {
     static displayName = "ChannelMemberStore";
     initialize() {
-        this.waitFor(S.default, A.A, g.A, p.A, m.Ay, I.A, T.A, f.default, E.A, h.A, d.A),
-            this.syncWith([T.A], k),
-            this.syncWith([h.A], x);
+        this.waitFor(S.default, T.A, p.A, h.A, f.Ay, m.A, g.A, A.default, I.A, E.A, u.A),
+            this.syncWith([g.A], G),
+            this.syncWith([E.A], w);
     }
     getProps(e, t) {
-        let n = w.get(e, D(t));
+        let n = M.get(e, v(t));
         return { listId: `${n.guildId}:${n.listId}`, groups: n.groups, rows: n.rows, version: n.version };
     }
     getRows(e, t) {
-        return w.get(e, D(t)).rows;
+        return M.get(e, v(t)).rows;
     }
 }
-let G = new U(c.h, {
-    CONNECTION_OPEN: M,
-    OVERLAY_INITIALIZE: M,
+let k = new x(c.h, {
+    CONNECTION_OPEN: P,
+    OVERLAY_INITIALIZE: P,
     GUILD_MEMBER_LIST_UPDATE: function (e) {
-        let t = w.get(e.guildId, e.id);
+        let t = M.get(e.guildId, e.id);
         e.ops.forEach((e) => {
             switch (e.op) {
                 case "SYNC":
@@ -274,23 +274,23 @@ let G = new U(c.h, {
     },
     GUILD_UPDATE: function (e) {
         let { guild: t } = e;
-        w.forEach(t.id, (e) => {
+        M.forEach(t.id, (e) => {
             e.updateOwnerId() && e.rebuildMembers();
         });
     },
     GUILD_DELETE: function (e) {
         let { guild: t } = e;
-        w.delete(t.id);
+        M.delete(t.id);
     },
     GUILD_ROLE_UPDATE: function (e) {
         let { guildId: t, role: n } = e;
-        w.forEach(t, (e) => {
+        M.forEach(t, (e) => {
             e.rebuildGroup(n.id), e.rebuildMembers();
         });
     },
     GUILD_MEMBER_UPDATE: function (e) {
         let { guildId: t, user: n } = e;
-        w.forEach(t, (e) => e.rebuildMember(n.id));
+        M.forEach(t, (e) => e.rebuildMember(n.id));
     },
     CHANNEL_UPDATES: function () {
         return !0;

@@ -9,9 +9,9 @@ var i = t(582128),
     c = t(218152),
     u = t(451909),
     h = t(31717),
-    m = t(522602),
-    A = t(659617),
-    g = t(381941),
+    A = t(522602),
+    g = t(659617),
+    m = t(381941),
     x = t(375708);
 function p(e) {
     let {
@@ -26,7 +26,7 @@ function p(e) {
         I = i.useCallback((e, n, t, i) => {
             a.A.sendMessage(e.id, u.Ay.parse(e, t), void 0, {
                 eagerDispatch: !1,
-                location: g.Hx.THREAD_CREATION,
+                location: m.Hx.THREAD_CREATION,
                 stickerIds: i,
                 attachmentsToUpload: n,
                 onAttachmentUploadError: (i, l, a, o) => {
@@ -37,12 +37,12 @@ function p(e) {
                         "" !== t &&
                             "" === h.A.getDraft(e.id, h.C.FirstThreadMessage) &&
                             s.A.saveDraft(e.id, t, h.C.FirstThreadMessage),
-                        0 === m.A.getUploadCount(e.id, h.C.FirstThreadMessage) &&
+                        0 === A.A.getUploadCount(e.id, h.C.FirstThreadMessage) &&
                             r.A.setUploads({ channelId: e.id, uploads: n, draftType: h.C.FirstThreadMessage });
                 },
             });
         }, []);
-    return (0, A.r$)({
+    return (0, g.r$)({
         parentChannel: n,
         parentMessageId: t,
         threadSettings: l,
@@ -64,5 +64,5 @@ function I(e) {
             let { name: n, appliedTags: t } = e;
             return { name: n, appliedTags: t };
         }, l.x);
-    return (0, A.w0)({ parentChannel: n, name: t, appliedTags: i, upload: f });
+    return (0, g.w0)({ parentChannel: n, name: t, appliedTags: i, upload: f });
 }

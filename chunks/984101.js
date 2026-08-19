@@ -5,8 +5,8 @@ function t() {
                 ? Object.assign.bind()
                 : function (e) {
                       for (var t = 1; t < arguments.length; t++) {
-                          var n = arguments[t];
-                          for (var i in n) ({}).hasOwnProperty.call(n, i) && (e[i] = n[i]);
+                          var r = arguments[t];
+                          for (var n in r) ({}).hasOwnProperty.call(r, n) && (e[n] = r[n]);
                       }
                       return e;
                   }),

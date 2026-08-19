@@ -1,8 +1,8 @@
 "use strict";
-n.d(t, { Xq: () => s, bS: () => a, kn: () => o, uZ: () => l });
-var i = n(735438),
+n.d(t, { Xq: () => a, bS: () => s, kn: () => l, uZ: () => o });
+var i = n(435558),
     r = n(628856);
-function s(e) {
+function a(e) {
     if ("object" != typeof e || null == e) return null;
     let t = (0, r.V)(e);
     if (null == t) return null;
@@ -14,12 +14,12 @@ function s(e) {
         n
     );
 }
-function a(e) {
+function s(e) {
     return e?.expiresAt != null && 1e3 * e.expiresAt < Date.now();
 }
-function o(e, t) {
-    return null == e || null == t ? e === t : (0, i.isEqual)(s(e), s(t));
-}
 function l(e, t) {
-    return null != t && !a(e?.avatarDecoration) && e?.avatarDecoration?.asset != null;
+    return null == e || null == t ? e === t : (0, i.isEqual)(a(e), a(t));
+}
+function o(e, t) {
+    return null != t && !s(e?.avatarDecoration) && e?.avatarDecoration?.asset != null;
 }

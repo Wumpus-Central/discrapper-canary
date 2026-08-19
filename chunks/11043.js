@@ -1,18 +1,18 @@
 "use strict";
-n.d(t, { A: () => s });
-var r = n(582128),
-    i = n(859141),
-    a = n.n(i),
-    o = {};
+r.d(t, { A: () => s });
+var n = r(582128),
+    o = r(859141),
+    i = r.n(o),
+    a = {};
 function s(e, t) {
-    void 0 === t && (t = a());
-    var n = (0, r.useRef)(o),
-        i = n.current;
+    void 0 === t && (t = i());
+    var r = (0, n.useRef)(a),
+        o = r.current;
     return (
-        (0, r.useEffect)(function () {
-            n.current = i;
+        (0, n.useEffect)(function () {
+            r.current = o;
         }),
-        (n.current !== o && t(e, n.current)) || (i = e),
-        i
+        (r.current !== a && t(e, r.current)) || (o = e),
+        o
     );
 }

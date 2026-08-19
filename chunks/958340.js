@@ -1,34 +1,34 @@
 "use strict";
-n.d(t, { A: () => l });
+n.d(t, { A: () => o });
 var i = n(17928),
     r = n(228366);
-let s = 0,
-    a = {};
-class o extends i.Ay.Store {
+let a = 0,
+    s = {};
+class l extends i.Ay.Store {
     static displayName = "BasicGuildStore";
     getGuild(e) {
-        let t = a[e];
+        let t = s[e];
         if (null != t && !("type" in t)) return t;
     }
     isGuildFetching(e) {
-        let t = a[e];
+        let t = s[e];
         return null != t && "type" in t && "loading" === t.type;
     }
     getGuildOrStatus(e) {
-        return a[e];
+        return s[e];
     }
     getVersion() {
-        return s;
+        return a;
     }
 }
-let l = new o(r.h, {
+let o = new l(r.h, {
     BASIC_GUILD_FETCH: function (e) {
-        return (a[e.guildId] = { type: "loading" }), !1;
+        return (s[e.guildId] = { type: "loading" }), !1;
     },
     BASIC_GUILD_FETCH_SUCCESS: function (e) {
-        (a[e.guildId] = e.guildInfo), s++;
+        (s[e.guildId] = e.guildInfo), a++;
     },
     BASIC_GUILD_FETCH_FAILURE: function (e) {
-        return (a[e.guildId] = { type: "failed" }), !1;
+        return (s[e.guildId] = { type: "failed" }), !1;
     },
 });

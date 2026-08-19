@@ -17,17 +17,17 @@ function c(e) {
             isPrepaidPaymentSource: p = !1,
         } = e,
         m = (0, a.$g)(t, n),
-        C = null;
+        h = null;
     return (
         i === s.WT.YEAR
-            ? (C = o.intl.format(o.t["3U719t"], { price: m }))
+            ? (h = o.intl.format(o.t["3U719t"], { price: m }))
             : i === s.WT.MONTH && 1 === d
-              ? (C = o.intl.format(o.t.NkR7BU, { price: m }))
-              : i === s.WT.MONTH && d > 1 && (C = o.intl.format(o.t.CNAGg4, { price: m, intervalCount: d })),
+              ? (h = o.intl.format(o.t.NkR7BU, { price: m }))
+              : i === s.WT.MONTH && d > 1 && (h = o.intl.format(o.t.CNAGg4, { price: m, intervalCount: d })),
         (0, l.jsx)("div", {
             className: r()(u.zz, c),
             "data-testid": `PricePerInterval-${n}`,
-            children: null == i || p ? (0, l.jsx)("strong", { children: m }) : C,
+            children: null == i || p ? (0, l.jsx)("strong", { children: m }) : h,
         })
     );
 }

@@ -1,4 +1,4 @@
-n.d(t, { Ay: () => S, UX: () => y, dZ: () => A });
+n.d(t, { Ay: () => S, UX: () => A, dZ: () => y });
 var l = n(477900),
     i = n(582128),
     r = n(503698),
@@ -10,8 +10,8 @@ var l = n(477900),
     d = n(529427),
     p = n(883645),
     m = n(601194),
-    C = n(87725),
-    h = n(573359),
+    h = n(87725),
+    C = n(573359),
     f = n(166532),
     E = n(239945);
 function S(e) {
@@ -20,25 +20,25 @@ function S(e) {
             return { header: t, stepProps: n };
         })(e),
         { step: r, stepConfigs: s } = (0, p.Ay)(),
-        { setBodyNode: S, setFooterNode: A, setModalOverlayNode: y } = (0, m.Gm)(),
-        P = (0, u.bG)([h.A], () => h.A.isDisplayingWowMomentConfirmation),
-        { setReadySlideId: I, unifiedCheckoutFlow: g } = (0, C.t4)((e) => ({
+        { setBodyNode: S, setFooterNode: y, setModalOverlayNode: A } = (0, m.Gm)(),
+        P = (0, u.bG)([C.A], () => C.A.isDisplayingWowMomentConfirmation),
+        { setReadySlideId: I, unifiedCheckoutFlow: g } = (0, h.t4)((e) => ({
             setReadySlideId: e.setReadySlideId,
             unifiedCheckoutFlow: e.unifiedCheckoutFlow,
         })),
         v = s.find((e) => e.key === r);
     if (
         (i.useEffect(() => {
-            y(null);
-        }, [r, y]),
+            A(null);
+        }, [r, A]),
         null == v)
     )
         throw new d.vd({
             message: "Unknown step for current payment flow (PaymentModalStep)",
             extraSentryInformation: { stepConfig: v, step: r, unifiedCheckoutFlow: g, stepConfigs: s },
         });
-    let T = v?.options?.hideSlider ?? !1,
-        _ = v?.options?.hideDefaultModalBody ?? !1,
+    let _ = v?.options?.hideSlider ?? !1,
+        T = v?.options?.hideDefaultModalBody ?? !1,
         x = v?.options?.sliderBodyClassName,
         N = r === f.pn.REVIEW,
         b = i.useCallback(
@@ -51,11 +51,11 @@ function S(e) {
         children: [
             (v?.options?.renderHeader ?? !0) ? t : null,
             v.renderStep(n),
-            null == r || T
+            null == r || _
                 ? null
                 : (0, l.jsxs)(l.Fragment, {
                       children: [
-                          _
+                          T
                               ? null
                               : (0, l.jsx)(o.c, {
                                     children: (0, l.jsx)(c.t, {
@@ -84,10 +84,10 @@ function S(e) {
                                             ),
                                     }),
                                 }),
-                          (0, l.jsx)("div", { ref: (e) => A(e) }),
+                          (0, l.jsx)("div", { ref: (e) => y(e) }),
                           (0, l.jsx)("div", {
                               ref: (e) => {
-                                  y(e);
+                                  A(e);
                               },
                           }),
                       ],
@@ -95,12 +95,12 @@ function S(e) {
         ],
     });
 }
-function A(e) {
+function y(e) {
     let { children: t } = e,
         { bodyNode: n } = (0, m.Gm)();
     return null == n ? null : s.createPortal(t, n);
 }
-function y(e) {
+function A(e) {
     let { children: t } = e,
         { footerNode: n } = (0, m.Gm)();
     return null == n ? null : s.createPortal(t, n);

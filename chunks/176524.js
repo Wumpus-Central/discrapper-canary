@@ -1,13 +1,13 @@
-i.d(t, { A: () => r });
-var n = i(477900);
-i(582128);
-var s = i(661531),
-    l = i(640531);
+n.d(t, { A: () => r });
+var i = n(477900);
+n(582128);
+var l = n(661531),
+    s = n(640531);
 let r = function (e) {
-    let { Icon: t, color: i = "currentColor", backgroundColor: r = s.A.colors.BACKGROUND_MOD_MUTED } = e;
-    return (0, n.jsx)("div", {
-        className: l.K,
+    let { icon: t, color: n = "currentColor", backgroundColor: r = l.A.colors.BACKGROUND_MOD_MUTED } = e;
+    return (0, i.jsx)("div", {
+        className: s.K,
         style: { backgroundColor: r?.css },
-        children: (0, n.jsx)(t, { color: i }),
+        children: (0, i.jsx)(t, { color: n }),
     });
 };

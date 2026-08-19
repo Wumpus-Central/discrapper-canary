@@ -13,7 +13,7 @@ var _ = n(15552),
     E = n(53943),
     A = n(626584),
     h = n(620233),
-    I = n(562465),
+    I = n(636537),
     f = n(652215),
     p = n(976860);
 let T = function () {
@@ -27,8 +27,8 @@ var m = n(252919),
     O = n(536802),
     R = n(204925);
 let L = new A.A("AuthenticationStore"),
-    D = "fingerprint",
-    y = "installation_id_v3",
+    y = "fingerprint",
+    D = "installation_id_v3",
     v = "user_id_cache",
     b = null,
     M = null,
@@ -48,8 +48,8 @@ let L = new A.A("AuthenticationStore"),
     K = !1,
     $ = null,
     z = null,
-    q = !1,
     Z = !1,
+    q = !1,
     X = [];
 function Q(e) {
     let t = null != a.getToken(),
@@ -57,14 +57,14 @@ function Q(e) {
     L.verbose(e, { tokenManagerHasToken: t, storageHasToken: n });
 }
 function J() {
-    let e = o.w.get(y);
+    let e = o.w.get(D);
     if (null != e && e.length > 0) return e;
     let t = o.w.get("analytics_installation");
-    return null != t && t.length > 0 ? (o.w.set(y, t), t) : null;
+    return null != t && t.length > 0 ? (o.w.set(D, t), t) : null;
 }
 function ee() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
-    if (((w = o.w.get(D)), (x = J()), null != $)) return $;
+    if (((w = o.w.get(y)), (x = J()), null != $)) return $;
     let t = null != w ? w : a.getToken();
     return !(0, p.m)() || (!e && null != t) || C.A.isHandoffAvailable()
         ? Promise.resolve()
@@ -109,7 +109,7 @@ function et(e) {
     );
 }
 function en() {
-    (G = w), (w = null), o.w.remove(D);
+    (G = w), (w = null), o.w.remove(y);
 }
 function ei(e, t) {
     Q("setAuthToken called."), (null == t || t !== b) && a.removeAnalyticsToken(), a.setToken(e, t);
@@ -131,7 +131,7 @@ function es() {
 function el(e) {
     let { installation: t } = e;
     if (null != x && x.length > 0) return !1;
-    (x = t), T() && o.w.set(y, t);
+    (x = t), T() && o.w.set(D, t);
 }
 function eo() {
     (V = !0),
@@ -172,8 +172,8 @@ function ed(e) {
         (H = ""),
         (W = null),
         (j = !1),
-        (q = !1),
         (Z = !1),
+        (q = !1),
         es();
 }
 class ec extends l.Ay.Store {
@@ -244,10 +244,10 @@ class ec extends l.Ay.Store {
         return z;
     }
     getIsPasswordlessActive() {
-        return q;
+        return Z;
     }
     attemptedPasswordLogin() {
-        return Z;
+        return q;
     }
 }
 let eu = new ec(
@@ -302,11 +302,11 @@ let eu = new ec(
         },
         LOGIN: function (e) {
             let { isPasswordAttempt: t } = e;
-            (F = f.aUe.LOGGING_IN), (Z = Z || !0 === t);
+            (F = f.aUe.LOGGING_IN), (q = q || !0 === t);
         },
         LOGIN_SUCCESS: function (e) {
             let { token: t } = e;
-            (F = f.aUe.NONE), ei(t), en(), (H = ""), (j = !1), (W = null), (r = null), es(), (q = !1);
+            (F = f.aUe.NONE), ei(t), en(), (H = ""), (j = !1), (W = null), (r = null), es(), (Z = !1);
         },
         LOGIN_FAILURE: function (e) {
             let { error: t } = e;
@@ -345,7 +345,7 @@ let eu = new ec(
         },
         LOGIN_SUSPENDED_USER: function (e) {
             let { suspendedUserToken: t } = e;
-            (q = !1), (z = t), setImmediate(() => (0, p.pX)(f.BVt.ACCOUNT_STANDING));
+            (Z = !1), (z = t), setImmediate(() => (0, p.pX)(f.BVt.ACCOUNT_STANDING));
         },
         LOGOUT: ed,
         FINGERPRINT: function (e) {
@@ -358,7 +358,7 @@ let eu = new ec(
                       }),
                       (w = t),
                       (G = t),
-                      o.w.set(D, w))
+                      o.w.set(y, w))
                     : ee()
                 : null != t &&
                   w !== t &&
@@ -398,12 +398,12 @@ let eu = new ec(
             (H = ""),
                 (j = !1),
                 (W = null),
-                (q = !1),
+                (Z = !1),
                 (r = null),
                 (F = t instanceof c.A && null != (0, _.W)(t).date_of_birth ? f.aUe.LOGIN_AGE_GATE : f.aUe.NONE);
         },
         PASSWORDLESS_START: function () {
-            q = !0;
+            Z = !0;
         },
     },
     d.A.Early,

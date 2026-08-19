@@ -1,39 +1,39 @@
 var n = e(860511),
     o = e(446474),
-    i = e(739305),
-    a = e(503199),
-    u = e(777718),
-    c = e(250594),
-    f = e(503628),
-    p = n.RangeError,
-    s = n.Int8Array,
-    y = s && s.prototype,
-    v = y && y.set,
-    l = i.aTypedArray,
-    h = i.exportTypedArrayMethod,
-    d = !f(function () {
+    a = e(739305),
+    i = e(503199),
+    p = e(777718),
+    f = e(250594),
+    u = e(503628),
+    y = n.RangeError,
+    c = n.Int8Array,
+    s = c && c.prototype,
+    d = s && s.set,
+    h = a.aTypedArray,
+    v = a.exportTypedArrayMethod,
+    A = !u(function () {
         var r = new Uint8ClampedArray(2);
-        return o(v, r, { length: 1, 0: 3 }, 1), 3 !== r[1];
+        return o(d, r, { length: 1, 0: 3 }, 1), 3 !== r[1];
     }),
     g =
-        d &&
-        i.NATIVE_ARRAY_BUFFER_VIEWS &&
-        f(function () {
-            var r = new s(2);
+        A &&
+        a.NATIVE_ARRAY_BUFFER_VIEWS &&
+        u(function () {
+            var r = new c(2);
             return r.set(1), r.set("2", 1), 0 !== r[0] || 2 !== r[1];
         });
-h(
+v(
     "set",
     function (r) {
-        l(this);
-        var t = u(arguments.length > 1 ? arguments[1] : void 0, 1),
-            e = c(r);
-        if (d) return o(v, this, e, t);
+        h(this);
+        var t = p(arguments.length > 1 ? arguments[1] : void 0, 1),
+            e = f(r);
+        if (A) return o(d, this, e, t);
         var n = this.length,
-            i = a(e),
-            f = 0;
-        if (i + t > n) throw new p("Wrong length");
-        for (; f < i; ) this[t + f] = e[f++];
+            a = i(e),
+            u = 0;
+        if (a + t > n) throw new y("Wrong length");
+        for (; u < a; ) this[t + u] = e[u++];
     },
-    !d || g,
+    !A || g,
 );

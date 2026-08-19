@@ -1,137 +1,137 @@
 "use strict";
-n.d(t, { A: () => P });
-var i = n(477900),
-    r = n(582128),
-    a = n(503698),
-    s = n.n(a),
-    l = n(508770),
+n.d(t, { A: () => M });
+var l = n(477900),
+    i = n(582128),
+    s = n(503698),
+    r = n.n(s),
+    a = n(508770),
     o = n(935462),
-    d = n(462824),
+    u = n(462824),
     c = n(315629),
-    u = n(305866),
-    _ = n(353795),
-    E = n(297264),
-    A = n(834730),
-    h = n(821609),
-    I = n(398590),
-    f = n(523527),
-    p = n(976860),
-    T = n(174459),
-    m = n(676279),
-    g = n(158045),
-    S = n(732280),
-    N = n(369805),
-    C = n(862990),
-    R = n(632150),
-    O = n(792656),
-    L = n(202541),
-    D = n(652215),
-    y = n(466919),
-    v = n(375708),
-    b = n(469867),
-    M = n(617736);
-function P(e) {
+    d = n(305866),
+    h = n(353795),
+    m = n(297264),
+    f = n(834730),
+    p = n(821609),
+    g = n(398590),
+    x = n(523527),
+    A = n(976860),
+    E = n(174459),
+    C = n(676279),
+    I = n(158045),
+    y = n(732280),
+    S = n(369805),
+    v = n(862990),
+    _ = n(632150),
+    N = n(792656),
+    T = n(202541),
+    j = n(652215),
+    b = n(466919),
+    R = n(375708),
+    L = n(469867),
+    O = n(617736);
+function M(e) {
     let t,
         {
             title: n,
-            description: a,
-            analyticsLocationSection: P,
-            upsellViewedTrackingData: U,
-            onClose: w,
-            onDisplay: G,
-            onUpsellClicked: x,
-            isEmojiPickerOverlay: k = !1,
+            description: s,
+            analyticsLocationSection: M,
+            upsellViewedTrackingData: w,
+            onClose: k,
+            onDisplay: P,
+            onUpsellClicked: D,
+            isEmojiPickerOverlay: U = !1,
         } = e;
-    r.useEffect(() => {
-        T.default.track(D.HAw.PREMIUM_UPSELL_VIEWED, U), G?.();
-    }, [G, U]);
-    let F = (0, S.V)(),
-        V = r.useCallback(() => (0, g.LE)(F, L.pe.TIER_2) ?? v.intl.string(v.t.pj0XBN), [F]),
-        B = (0, N.A)(L.pe.TIER_2),
-        H = (0, C.O9)();
+    i.useEffect(() => {
+        E.default.track(j.HAw.PREMIUM_UPSELL_VIEWED, w), P?.();
+    }, [P, w]);
+    let G = (0, y.V)(),
+        V = i.useCallback(() => (0, I.LE)(G, T.pe.TIER_2) ?? R.intl.string(R.t.pj0XBN), [G]),
+        F = (0, S.A)(T.pe.TIER_2),
+        H = (0, v.O9)();
     return (
-        (t = k
-            ? (0, m.TM)()
+        (t = U
+            ? (0, C.TM)()
                 ? "https://cdn.discordapp.com/assets/content/c0f100da7d39f5e84ae361150c05077f9ca94ea62d0f7dd086ba1aa8fe17ae68.mov"
                 : "https://cdn.discordapp.com/assets/content/75e94ffcd07b3b84cdd4305c93b43b3c94bf3ae56ace551f59b8dba7f3616c1c.webm"
-            : (0, m.TM)()
+            : (0, C.TM)()
               ? "https://cdn.discordapp.com/assets/content/f1a56c8da8561a47006a76435c179b24321640c79e997c64a71ef7a84c960829.mov"
               : "https://cdn.discordapp.com/assets/content/c6188b952b5f1901da6986f4f06d690db24c805dfed5df35db3537ed5efb35a5.webm"),
-        (0, i.jsxs)(i.Fragment, {
+        (0, l.jsxs)(l.Fragment, {
             children: [
-                (0, i.jsx)(d.p, { onClick: w, isVisible: !0 }),
-                (0, i.jsx)(c.h, {
-                    color: k ? "nitro-pink" : "green",
-                    className: b.kL,
-                    children: (0, i.jsxs)(u.l, {
+                (0, l.jsx)(u.p, { onClick: k, isVisible: !0 }),
+                (0, l.jsx)(c.h, {
+                    color: U ? "nitro-pink" : "green",
+                    className: L.kL,
+                    children: (0, l.jsxs)(d.l, {
                         "aria-label": n,
-                        className: b.r3,
+                        className: L.r3,
                         children: [
-                            (0, i.jsxs)("div", {
-                                className: b.Qs,
+                            (0, l.jsxs)("div", {
+                                className: L.Qs,
                                 children: [
-                                    (0, i.jsx)(o.s_, { "data-migration-pending": !0, onClick: w, className: b.b }),
-                                    (0, i.jsxs)("div", {
-                                        className: b.hQ,
+                                    (0, l.jsx)(o.s_, { "data-migration-pending": !0, onClick: k, className: L.b }),
+                                    (0, l.jsxs)("div", {
+                                        className: L.hQ,
                                         children: [
-                                            (0, i.jsx)("div", {
-                                                className: M.headerGraphic,
-                                                children: (0, i.jsx)(_.v, {
+                                            (0, l.jsx)("div", {
+                                                className: O.headerGraphic,
+                                                children: (0, l.jsx)(h.v, {
                                                     type: "video",
                                                     src: t,
                                                     loop: !0,
                                                     loopAt: 5,
                                                 }),
                                             }),
-                                            null != B && (0, i.jsx)(l.E, { type: { text: B }, variant: "brand" }),
-                                            (0, i.jsx)(E.D, {
-                                                className: s()(b.DD, { [b.GU]: null != B }),
+                                            null != F && (0, l.jsx)(a.E, { type: { text: F }, variant: "brand" }),
+                                            (0, l.jsx)(m.D, {
+                                                className: r()(L.DD, { [L.GU]: null != F }),
                                                 variant: "heading-xl/bold",
                                                 color: "text-strong",
                                                 children: n,
                                             }),
-                                            (0, i.jsx)(A.E, {
+                                            (0, l.jsx)(f.E, {
                                                 variant: "text-md/medium",
                                                 color: "text-subtle",
-                                                className: b.rf,
-                                                children: a,
+                                                className: L.rf,
+                                                children: s,
                                             }),
                                         ],
                                     }),
-                                    k &&
+                                    U &&
                                         H &&
-                                        (0, i.jsx)("div", {
-                                            className: b.Zr,
-                                            children: (0, i.jsx)(R.A, { subtitle: v.intl.string(y.default.BkJYQ5) }),
+                                        (0, l.jsx)("div", {
+                                            className: L.Zr,
+                                            children: (0, l.jsx)(_.A, { subtitle: R.intl.string(b.default.BkJYQ5) }),
                                         }),
                                 ],
                             }),
-                            (0, i.jsx)("div", {
-                                className: b.qr,
-                                children: (0, i.jsxs)("div", {
-                                    className: b.UD,
+                            (0, l.jsx)("div", {
+                                className: L.qr,
+                                children: (0, l.jsxs)("div", {
+                                    className: L.UD,
                                     children: [
-                                        (0, i.jsx)(h.$, {
+                                        (0, l.jsx)(p.$, {
                                             variant: "secondary",
                                             onClick: function () {
-                                                T.default.track(D.HAw.PREMIUM_PROMOTION_OPENED, {
-                                                    location_section: P,
-                                                    location_object: D.ZSU.NAVIGATION_LINK,
+                                                E.default.track(j.HAw.PREMIUM_PROMOTION_OPENED, {
+                                                    location_section: M,
+                                                    location_object: j.ZSU.NAVIGATION_LINK,
                                                 }),
-                                                    x?.(),
-                                                    (0, f.A)(),
-                                                    w(),
-                                                    (0, I.jH)(),
-                                                    (0, p.pX)(D.BVt.APPLICATION_STORE);
+                                                    D?.(),
+                                                    (0, x.A)(),
+                                                    k(),
+                                                    (0, g.jH)(),
+                                                    (0, A.pX)(j.BVt.APPLICATION_STORE);
                                             },
-                                            text: v.intl.string(v.t.ZnqyZ2),
+                                            text: R.intl.string(R.t.ZnqyZ2),
                                             fullWidth: !0,
                                         }),
-                                        (0, i.jsx)(O.A, {
-                                            premiumModalAnalyticsLocation: { section: P, object: D.ZSU.BUTTON_CTA },
-                                            subscriptionTier: L.pe.TIER_2,
+                                        (0, l.jsx)(N.A, {
+                                            premiumModalAnalyticsLocation: { section: M, object: j.ZSU.BUTTON_CTA },
+                                            subscriptionTier: T.pe.TIER_2,
                                             onClick: () => {
-                                                w(), x?.();
+                                                k(), D?.();
                                             },
                                             defaultTextOverride: V(),
                                             fullWidth: !0,

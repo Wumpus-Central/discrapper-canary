@@ -1,40 +1,40 @@
 "use strict";
-n.d(t, { A: () => f }), n(938796);
+n.d(t, { A: () => A }), n(938796);
 var i = n(665260),
     r = n(17928),
-    s = n(228366),
-    a = n(734057),
-    o = n(320095),
-    l = n(652215);
-let u = [],
+    a = n(228366),
+    s = n(734057),
+    l = n(320095),
+    o = n(652215);
+let d = [],
     c = new Map();
-function d(e, t) {
+function u(e, t) {
     0 === t.size && c.delete(e);
 }
 function _() {
     if (0 === c.size) return !1;
     c.clear();
 }
-class h extends r.Ay.Store {
+class E extends r.Ay.Store {
     static displayName = "EphemeralMessageStore";
     initialize() {
-        this.waitFor(a.A);
+        this.waitFor(s.A);
     }
     getMessages(e) {
         let t = c.get(e);
-        return null == t || 0 === t.size ? u : Array.from(t.values());
+        return null == t || 0 === t.size ? d : Array.from(t.values());
     }
 }
-let f = new h(s.h, {
+let A = new E(a.h, {
     MESSAGE_CREATE: function (e) {
         let t,
             { channelId: n, message: r } = e;
-        if (!(0, i.Lt)(r.flags ?? 0, l.pr7.EPHEMERAL)) return !1;
-        let s = (null == (t = c.get(n)) && ((t = new Map()), c.set(n, t)), t);
-        for (s.set(r.id, (0, o.rh)(r)); s.size > 50; ) {
-            let e = s.keys().next();
+        if (!(0, i.Lt)(r.flags ?? 0, o.pr7.EPHEMERAL)) return !1;
+        let a = (null == (t = c.get(n)) && ((t = new Map()), c.set(n, t)), t);
+        for (a.set(r.id, (0, l.rh)(r)); a.size > 50; ) {
+            let e = a.keys().next();
             if (!0 === e.done) break;
-            s.delete(e.value);
+            a.delete(e.value);
         }
     },
     MESSAGE_UPDATE: function (e) {
@@ -44,15 +44,15 @@ let f = new h(s.h, {
         if (null == n || null == i) return !1;
         let r = c.get(n);
         if (null == r) return !1;
-        let s = r.get(i);
-        if (null == s) return !1;
-        r.set(i, (0, o.IU)(s, t));
+        let a = r.get(i);
+        if (null == a) return !1;
+        r.set(i, (0, l.IU)(a, t));
     },
     MESSAGE_DELETE: function (e) {
         let { channelId: t, id: n } = e,
             i = c.get(t);
         if (null == i || !i.delete(n)) return !1;
-        d(t, i);
+        u(t, i);
     },
     MESSAGE_DELETE_BULK: function (e) {
         let { channelId: t, ids: n } = e,
@@ -61,7 +61,7 @@ let f = new h(s.h, {
         let r = !1;
         for (let e of n) i.delete(e) && (r = !0);
         if (!r) return !1;
-        d(t, i);
+        u(t, i);
     },
     CLEAR_MESSAGES: function (e) {
         let { channelId: t } = e;
@@ -79,7 +79,7 @@ let f = new h(s.h, {
     GUILD_DELETE: function () {
         if (0 === c.size) return !1;
         let e = !1;
-        for (let t of c.keys()) null == a.A.getChannel(t) && (c.delete(t), (e = !0));
+        for (let t of c.keys()) null == s.A.getChannel(t) && (c.delete(t), (e = !0));
         if (!e) return !1;
     },
     CACHE_LOADED: _,

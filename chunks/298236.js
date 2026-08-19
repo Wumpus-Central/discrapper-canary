@@ -21,7 +21,7 @@ var l = n(477900),
     f = n(284009),
     h = n.n(f),
     y = n(375708);
-function O(t) {
+function L(t) {
     switch (t.type) {
         case o.I5.BUTTON:
             return t.style !== o.in.LINK;
@@ -37,7 +37,7 @@ function O(t) {
             return !1;
     }
 }
-function L(t, e) {
+function O(t, e) {
     let n = i.useContext(R),
         l = i.useCallback(
             (e) => {
@@ -157,7 +157,7 @@ function N(t, e, n, l) {
                     r = (0, E.lK)(e);
                 return !!(!n || l || i || (e?.isLockedThread() && !o) || (e?.isArchivedThread() && !r)) || !!u;
             })(t.channel_id) || e,
-        { error: f, validate: h } = L(n, u),
+        { error: f, validate: h } = O(n, u),
         y = t.applicationId ?? t.author.id;
     return {
         state: u,
@@ -184,7 +184,7 @@ function N(t, e, n, l) {
             },
             [t.channel_id, t.flags, t.id, n.customId, n.type, n.id, y, h],
         ),
-        isDisabled: S && O(n),
+        isDisabled: S && L(n),
         visualState: (function (t, e) {
             let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
                 l = C.BB.NORMAL;
@@ -193,8 +193,8 @@ function N(t, e, n, l) {
                     t.state !== c.m.FAILED &&
                     (t.data.interactionType === o.G4.MESSAGE_COMPONENT && t.data.componentId === e.id
                         ? (l = C.BB.LOADING)
-                        : O(e) && (l = C.BB.DISABLED)),
-                n && O(e) && (l = C.BB.DISABLED),
+                        : L(e) && (l = C.BB.DISABLED)),
+                n && L(e) && (l = C.BB.DISABLED),
                 l
             );
         })(r, n, S),
@@ -204,7 +204,7 @@ function N(t, e, n, l) {
 function v(t, e, n) {
     let l = (0, a.bG)([_.A], () => _.A.getInteractionComponentState(t.customId, e.id)),
         [o] = i.useState(n),
-        { error: d, validate: s } = L(e, l),
+        { error: d, validate: s } = O(e, l),
         c = i.useCallback(
             (n) =>
                 null == n ||

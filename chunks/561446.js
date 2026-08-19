@@ -21,8 +21,8 @@ function x(e) {
         E = h.default.cast(t),
         {
             joinRequest: S,
-            isModmin: _,
-            guildId: I,
+            isModmin: I,
+            guildId: _,
             maxMembers: j,
         } = (0, i.cf)([m.A, d.A, u.A], () => {
             let e = m.A.getRequest(E),
@@ -34,10 +34,10 @@ function x(e) {
                 maxMembers: t?.maxMembers,
             };
         }),
-        y = (0, i.bG)([c.A], () => (null != I ? c.A.getMemberCount(I) : 0)),
+        y = (0, i.bG)([c.A], () => (null != _ ? c.A.getMemberCount(_) : 0)),
         b = null != j && (y ?? 0) >= j,
         { approveRequest: N, rejectRequest: v, submitting: T } = (0, p.W)(S?.guildId, S?.userId, S?.joinRequestId);
-    return null != S && S.applicationStatus === g.B5.SUBMITTED && _
+    return null != S && S.applicationStatus === g.B5.SUBMITTED && I
         ? (0, l.jsxs)("div", {
               className: C.U,
               children: [

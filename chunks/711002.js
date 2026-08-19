@@ -1,2 +1,2 @@
-let i = n(74509);
-e.exports = (e, t, n) => ((e = new i(e, n)), (t = new i(t, n)), e.intersects(t, n));
+let n = r(74509);
+e.exports = (e, t, r) => ((e = new n(e, r)), (t = new n(t, r)), e.intersects(t, r));

@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Wb: () => l, _U: () => o, a3: () => u, qf: () => r, sP: () => a, tl: () => s });
+n.d(t, { Wb: () => o, _U: () => l, a3: () => d, qf: () => r, sP: () => s, tl: () => a });
 var i = n(626584);
 function r() {
     for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
@@ -15,7 +15,7 @@ function r() {
         );
     });
 }
-function s(e) {
+function a(e) {
     "function" == typeof e.requestFullscreen
         ? e.requestFullscreen()
         : "function" == typeof e.webkitRequestFullscreen
@@ -28,9 +28,9 @@ function s(e) {
                 ? e.msRequestFullscreen()
                 : new i.A("FullScreenUtils").warn("Fullscreen API is not supported.");
 }
-function a(e, t) {
+function s(e, t) {
     let n = null != t ? t : document;
-    o(null, n) &&
+    l(null, n) &&
         ("function" == typeof n.exitFullscreen
             ? n.exitFullscreen()
             : "function" == typeof n.webkitExitFullscreen
@@ -43,7 +43,7 @@ function a(e, t) {
                     ? n.msExitFullscreen()
                     : new i.A("FullScreenUtils").warn("Fullscreen API is not supported."));
 }
-function o(e, t) {
+function l(e, t) {
     let n = null != t ? t : document;
     return !!(
         null != n.fullscreenElement ||
@@ -53,7 +53,7 @@ function o(e, t) {
         (null != e && e.webkitDisplayingFullscreen)
     );
 }
-let l = (() => {
+let o = (() => {
     if ("u" > typeof document) {
         let e = document.createElement("video");
         if ("function" == typeof e.requestFullscreen);
@@ -64,12 +64,12 @@ let l = (() => {
     } else console.warn("FullScreenUtils has been imported in a non-web environment");
     return "fullscreenchange";
 })();
-function u(e, t) {
+function d(e, t) {
     return (
-        e.addEventListener(l, t),
+        e.addEventListener(o, t),
         e.addEventListener("webkitfullscreenchange", t),
         () => {
-            e.removeEventListener(l, t), e.removeEventListener("webkitfullscreenchange", t);
+            e.removeEventListener(o, t), e.removeEventListener("webkitfullscreenchange", t);
         }
     );
 }

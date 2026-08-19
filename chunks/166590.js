@@ -1,15 +1,15 @@
 "use strict";
-n.d(t, { A: () => a, g: () => s });
+n.d(t, { A: () => s, g: () => a });
 var i = n(575593),
-    r = n(149807);
-function s(e) {
-    return e instanceof a;
+    r = n(338535);
+function a(e) {
+    return e instanceof s;
 }
-class a extends r.A {
+class s extends r.A {
     constructor(e) {
         super(e), (this.type = i.R.NONE);
     }
     static fromServer(e) {
-        return new a({ ...super.fromServer(e), type: i.R.NONE });
+        return new s({ ...super.fromServer(e), type: i.R.NONE });
     }
 }

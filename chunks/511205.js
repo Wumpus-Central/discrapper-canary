@@ -20,15 +20,15 @@ function u(e, t, n) {
 }
 function h(e) {
     let { className: t, children: n, keyExtractor: a, paddingTop: h = 0, paddingBottom: p = 0 } = e,
-        [m, A] = l.useState({ width: 0, height: 0 }),
-        { width: f, height: x } = m,
+        [m, f] = l.useState({ width: 0, height: 0 }),
+        { width: A, height: x } = m,
         g = n?.length ?? 0,
-        C = f - 16,
+        C = A - 16,
         y = x - (h + p),
         {
             tileStyle: j,
-            tileWidth: v,
-            rows: E,
+            tileWidth: I,
+            rows: v,
             columns: N,
         } = l.useMemo(
             () =>
@@ -41,7 +41,7 @@ function h(e) {
                         {
                             rows: p,
                             columns: m,
-                            tileWidth: A,
+                            tileWidth: f,
                         } = ((i = e),
                         (l = t),
                         (a = n),
@@ -58,18 +58,18 @@ function h(e) {
                                   }) - 1),
                         (h = Math.ceil(i / (o = d(s, l)))),
                         { tileWidth: s, columns: Math.max(1, o), rows: h });
-                    return { tileStyle: { width: A }, tileWidth: A, rows: p, columns: m };
+                    return { tileStyle: { width: f }, tileWidth: f, rows: p, columns: m };
                 })(g, C, y),
             [g, C, y],
         ),
-        I = N + 1,
-        T = I * v + (I - 1) * 8 <= f,
-        b = Math.floor(v / c) + 8,
-        _ = Math.max(0, y - b * E) / 2;
+        E = N + 1,
+        b = E * I + (E - 1) * 8 <= A,
+        _ = Math.floor(I / c) + 8,
+        T = Math.max(0, y - _ * v) / 2;
     return (0, i.jsx)(r.A, {
         fade: !0,
         className: t,
-        listPadding: [h + _, 0, p + _ - 8, 8],
+        listPadding: [h + T, 0, p + T - 8, 8],
         renderRow: function (e) {
             let t = e * N;
             return (0, i.jsx)(
@@ -83,11 +83,11 @@ function h(e) {
                             {
                                 style: j,
                                 className: s()(o.Vs, {
-                                    [o.E3]: T,
-                                    [o.k4]: l >= (E - 1) * N,
+                                    [o.E3]: b,
+                                    [o.k4]: l >= (v - 1) * N,
                                     [o.Kk]: (l + 1) % N == 0 || l === g - 1,
                                 }),
-                                children: (0, i.jsx)("div", { className: o.eP, children: e(v) }),
+                                children: (0, i.jsx)("div", { className: o.eP, children: e(I) }),
                             },
                             a?.(l) ?? l,
                         );
@@ -96,9 +96,9 @@ function h(e) {
                 e,
             );
         },
-        rowCount: E,
-        rowCountBySection: [E],
-        rowHeight: b,
-        onResize: A,
+        rowCount: v,
+        rowCountBySection: [v],
+        rowHeight: _,
+        onResize: f,
     });
 }

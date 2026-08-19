@@ -1,4 +1,4 @@
-e.exports = {
+f.exports = {
     GU: "blockedUsersContainer__97cfe",
     Zd: "form__97cfe",
     kz: "formItem__97cfe",

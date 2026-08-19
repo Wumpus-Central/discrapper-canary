@@ -1,9 +1,9 @@
 "use strict";
-n.d(t, { sK: () => o, AL: () => r, RK: () => a });
+n.d(t, { sK: () => l, AL: () => r, RK: () => s });
 var i = n(945810);
 n(506774);
 let r = "private_channel_obfuscation",
-    s = (0, i.mj)({
+    a = (0, i.mj)({
         name: "2026-02-private-channel-hiding",
         kind: "user",
         defaultConfig: { enableObfuscation: !1, enableIntegrityCheck: !1 },
@@ -13,9 +13,9 @@ let r = "private_channel_obfuscation",
             3: { enableObfuscation: !1, enableIntegrityCheck: !1 },
         },
     });
-function a(e) {
-    return s.getConfig({ location: e }).enableObfuscation;
+function s(e) {
+    return a.getConfig({ location: e }).enableObfuscation;
 }
-function o(e) {
-    return s.useConfig({ location: e }).enableObfuscation;
+function l(e) {
+    return a.useConfig({ location: e }).enableObfuscation;
 }

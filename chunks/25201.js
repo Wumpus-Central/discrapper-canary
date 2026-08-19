@@ -1,9 +1,9 @@
 "use strict";
-n.d(t, { Ay: () => o, N_: () => r, vR: () => a });
-var i = n(353640);
+n.d(t, { Ay: () => l, N_: () => r, vR: () => s });
+var i = n(196765);
 let r = { channelId: null, rolling: !1, dismissing: !1, diceCount: 1, diceSides: 6, results: null },
-    s = (0, i.v)(() => r);
-function a(e) {
-    return s((t) => (t.channelId === e ? t : null));
+    a = (0, i.v)(() => r);
+function s(e) {
+    return a((t) => (t.channelId === e ? t : null));
 }
-let o = s;
+let l = a;

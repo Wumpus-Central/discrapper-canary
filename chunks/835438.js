@@ -1,37 +1,37 @@
 "use strict";
-n.d(t, { A: () => f });
+n.d(t, { A: () => A });
 var i = n(459838),
     r = n(827343),
-    s = n(439372),
-    a = n(710195),
-    o = n(941327),
-    l = n(723702),
-    u = n(240921);
+    a = n(439372),
+    s = n(710195),
+    l = n(453028),
+    o = n(723702),
+    d = n(240921);
 let c = { enableStats: !1 },
-    d = (0, u.Ay)({
+    u = (0, d.Ay)({
         kind: "user",
         name: "2026-03-krisp-stats-collection",
         defaultConfig: c,
         variations: { 1: { ...c, enableStats: !0 } },
     });
 var _ = n(652215);
-class h extends s.A {
+class E extends a.A {
     handleExperimentChange = () => {
-        if ((0, l.isWeb)()) return;
-        let { enableStats: e } = d.getConfig({ location: "KrispExperimentManager handleExperimentChange" });
+        if ((0, o.isWeb)()) return;
+        let { enableStats: e } = u.getConfig({ location: "KrispExperimentManager handleExperimentChange" });
         r.A.setNoiseCancellationEnableStats(e);
     };
     handleRtcConnectionState = (e) => {
         let { state: t, context: n } = e;
-        (0, l.isWeb)() ||
+        (0, o.isWeb)() ||
             (n === i.x.DEFAULT &&
                 t !== _.S7L.DISCONNECTED &&
                 t === _.S7L.RTC_CONNECTED &&
-                o.Ay.getKrispEnableStats() &&
-                o.Ay.getNoiseCancellation() &&
+                l.Ay.getKrispEnableStats() &&
+                l.Ay.getNoiseCancellation() &&
                 (r.A.setNoiseCancellation(!1), r.A.setNoiseCancellation(!0)));
     };
-    stores = new Map().set(a.A, this.handleExperimentChange);
+    stores = new Map().set(s.A, this.handleExperimentChange);
     actions = { RTC_CONNECTION_STATE: this.handleRtcConnectionState };
 }
-let f = new h();
+let A = new E();

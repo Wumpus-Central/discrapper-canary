@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { AA: () => r, Ym: () => a, tj: () => s });
+n.d(t, { AA: () => r, Ym: () => s, tj: () => a });
 let i = (0, n(945810).mj)({
     name: "2026-03-soundmoji-sending",
     kind: "user",
@@ -13,11 +13,11 @@ function r(e) {
     let { location: t } = e;
     return i.getConfig({ location: t }).enabled;
 }
-function s(e) {
+function a(e) {
     let { location: t } = e;
     return i.useConfig({ location: t }).enabled;
 }
-function a(e) {
+function s(e) {
     let { location: t } = e;
     return i.useConfig({ location: t }).showSoundmojiInEmojiPicker;
 }

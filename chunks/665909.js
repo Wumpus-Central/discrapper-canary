@@ -1,37 +1,37 @@
 "use strict";
-n.d(t, { QF: () => c, Wm: () => d, Wu: () => h, _$: () => _, gN: () => u, mO: () => l });
+n.d(t, { QF: () => c, Wm: () => u, Wu: () => E, _$: () => _, gN: () => d, mO: () => o });
 var i,
     r,
-    s = n(287809),
-    a = n(174459),
-    o = n(652215);
-function l(e, t) {
-    let { channelId: n, warningId: i, senderId: r, warningType: s } = t;
-    a.default.track(e, {
+    a = n(287809),
+    s = n(174459),
+    l = n(652215);
+function o(e, t) {
+    let { channelId: n, warningId: i, senderId: r, warningType: a } = t;
+    s.default.track(e, {
         channel_id: n,
         warning_id: null != i ? parseInt(i) : void 0,
-        warning_type: s,
+        warning_type: a,
         other_user_id: r,
     });
 }
-var u =
+var d =
     (((i = {}).SAFETY_WARNING_BANNER = "safety_warning_banner"),
     (i.SAFETY_TAKEOVER_MODAL = "safety_takeover_modal"),
     (i.SAFETY_TOOLS_NUDGE_TOOLTIP = "safety_tools_nudge_tooltip"),
     (i.SAFETY_TOOLS_BUTTON = "safety_tools_button"),
     i);
 function c(e) {
-    let { channelId: t, warningId: n, senderId: i, warningType: r, viewName: s, isNudgeWarning: l } = e;
-    a.default.track(o.HAw.SAFETY_WARNING_VIEWED, {
+    let { channelId: t, warningId: n, senderId: i, warningType: r, viewName: a, isNudgeWarning: o } = e;
+    s.default.track(l.HAw.SAFETY_WARNING_VIEWED, {
         channel_id: t,
         warning_id: null != n ? parseInt(n) : void 0,
         warning_type: r,
         other_user_id: i,
-        view_name: s,
-        is_nudge_warning: l,
+        view_name: a,
+        is_nudge_warning: o,
     });
 }
-var d =
+var u =
     (((r = {}).OPEN_MORE_TIPS = "open_more_tips"),
     (r.USER_BANNER_DISMISS = "user_banner_dismiss"),
     (r.USER_BANNER_BLOCK_CONFIRM = "user_banner_block_confirm"),
@@ -80,16 +80,16 @@ var d =
     (r.FEEDBACK_DOWNVOTE = "feedback_downvote"),
     r);
 function _(e) {
-    let { channelId: t, warningId: n, senderId: i, warningType: r, cta: s, isNudgeWarning: l } = e;
-    a.default.track(o.HAw.SAFETY_WARNING_CTA_CLICKED, {
+    let { channelId: t, warningId: n, senderId: i, warningType: r, cta: a, isNudgeWarning: o } = e;
+    s.default.track(l.HAw.SAFETY_WARNING_CTA_CLICKED, {
         channel_id: t,
         warning_id: null != n ? parseInt(n) : void 0,
         warning_type: r,
         other_user_id: i,
-        cta: s,
-        is_nudge_warning: l,
+        cta: a,
+        is_nudge_warning: o,
     });
 }
-function h() {
-    return !1 === s.default.getCurrentUser()?.nsfwAllowed;
+function E() {
+    return !1 === a.default.getCurrentUser()?.nsfwAllowed;
 }

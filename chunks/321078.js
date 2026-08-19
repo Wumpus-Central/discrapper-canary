@@ -1,27 +1,27 @@
-d.d(t, { A: () => s });
-var a = d(582128),
-    c = d(201718),
-    n = d(360308);
-function s(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-        { includeHidden: d = !1 } = t,
-        { isLoading: s, data: o } = (0, c.P)(e);
+n.d(i, { A: () => u });
+var t = n(582128),
+    l = n(201718),
+    r = n(534952);
+function u(e) {
+    let i = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+        { includeHidden: n = !1 } = i,
+        { isLoading: u, data: d } = (0, l.P)(e);
     return {
-        isLoading: s,
-        filteredAppIdentities: a.useMemo(
+        isLoading: u,
+        filteredAppIdentities: t.useMemo(
             () =>
-                (o ?? []).filter(
+                (d ?? []).filter(
                     (e) =>
-                        n.APPLICATION_IDENTITY_CONNECTIONS_ALLOWED_APPLICATIONS.some(
-                            (t) =>
-                                t.applicationId === e.application_id &&
-                                t.getMigrationExperimentEnabled("useConnectionFilteredAppIdentities"),
+                        r.APPLICATION_IDENTITY_CONNECTIONS_ALLOWED_APPLICATIONS.some(
+                            (i) =>
+                                i.applicationId === e.application_id &&
+                                i.getMigrationExperimentEnabled("useConnectionFilteredAppIdentities"),
                         ) &&
                         null != e.profile &&
                         null != e.profile.username &&
-                        (!0 === e.profile.connection_visible || d),
+                        (!0 === e.profile.connection_visible || n),
                 ),
-            [o, d],
+            [d, n],
         ),
     };
 }

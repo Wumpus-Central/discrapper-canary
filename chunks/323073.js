@@ -4,7 +4,7 @@ n.d(t, {
     Bc: () => S,
     F2: () => b,
     Gc: () => U,
-    Gn: () => D,
+    Gn: () => y,
     Jm: () => w,
     Tv: () => M,
     UK: () => v,
@@ -92,7 +92,7 @@ function L(e) {
                 modalType: a.A5.NSFW_CHANNEL_VERIFIED,
             };
 }
-function D(e) {
+function y(e) {
     let t = (0, s.b8)(),
         n = R(),
         i = e === f.w_.NSFW_SERVER || e === f.w_.NSFW_SERVER_INVITE || e === f.w_.NSFW_SERVER_INVITE_EMBED,
@@ -133,14 +133,14 @@ function D(e) {
                   verifyTitle: i ? T.intl.string(T.t.xi46lg) : T.intl.string(T.t.ZmwvDc),
               };
 }
-function y() {
+function D() {
     let e = E.default.getCurrentUser();
     if (null == e) return !1;
     let t = O();
     return !0 !== e.nsfwAllowed || t;
 }
 function v(e) {
-    return !!y() && null != e && x(c.A.getChannel(e));
+    return !!D() && null != e && x(c.A.getChannel(e));
 }
 function b(e) {
     return O() && v(e);
@@ -152,7 +152,7 @@ function P(e, t, n) {
     let i;
     if (
         (function (e) {
-            if (!y() || null == e) return !1;
+            if (!D() || null == e) return !1;
             let t = _.A.getGuild(e);
             return null != t && (0, d.wh)(t);
         })(e)

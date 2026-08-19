@@ -1,4 +1,4 @@
 "use strict";
-n.r(t), n.d(t, { useLayoutEffect: () => i });
-var r = n(582128),
-    i = "u" > typeof window && window.document && window.document.createElement ? r.useLayoutEffect : r.useEffect;
+r.r(t), r.d(t, { useLayoutEffect: () => o });
+var n = r(582128),
+    o = "u" > typeof window && window.document && window.document.createElement ? n.useLayoutEffect : n.useEffect;

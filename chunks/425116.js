@@ -1,29 +1,29 @@
 "use strict";
-n.d(t, { $: () => f, A: () => N });
+n.d(t, { $: () => A, A: () => O });
 var i = n(228366),
     r = n(439372),
-    s = n(803224),
-    a = n(287809),
-    o = n(244284),
-    l = n(219893),
-    u = n(695515),
+    a = n(803224),
+    s = n(287809),
+    l = n(244284),
+    o = n(219893),
+    d = n(695515),
     c = n(936926),
-    d = n(580296),
+    u = n(580296),
     _ = n(602339),
-    h = n(375708);
-function f() {
-    return u.A.isCurrentUserInRestrictedHours();
-}
-let p = !1,
-    E = null,
-    m = null,
-    g = null;
+    E = n(375708);
 function A() {
-    null != m && (clearTimeout(m), (m = null));
+    return d.A.isCurrentUserInRestrictedHours();
+}
+let h = !1,
+    I = null,
+    f = null,
+    p = null;
+function T() {
+    null != f && (clearTimeout(f), (f = null));
     let e = (function () {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : new Date();
-        if (!(0, c.Eq)({ location: "RestrictedHoursManager" }) || !s.A.screenDowntimeReminder) return null;
-        let t = a.default.getCurrentUser()?.restrictedSchedule;
+        if (!(0, c.Eq)({ location: "RestrictedHoursManager" }) || !a.A.screenDowntimeReminder) return null;
+        let t = s.default.getCurrentUser()?.restrictedSchedule;
         if (null == t) return null;
         let n = t.getNextStartInfo(e);
         return null == n
@@ -38,70 +38,70 @@ function A() {
         (e.minutesUntil <= 16
             ? (!(function (e) {
                   let t = `${e.rule.ruleId}:${e.startAtMs}`;
-                  if (t !== g) {
+                  if (t !== p) {
                       var n, r;
-                      let s, a, u;
+                      let a, s, d;
                       (n = e.rule),
                           (r = e.startAtMs),
-                          (s = h.intl.string(_.default["0JlDg0"])),
-                          (a = o.bV[new Date(r).getDay()]),
-                          (u = `${(0, l.n1)([a])} ${(0, l.li)(n)}`.trim()),
-                          i.h.dispatch({ type: "RESTRICTED_HOURS_WARNING", title: s, subtitle: u }),
-                          (g = t);
+                          (a = E.intl.string(_.default["0JlDg0"])),
+                          (s = l.bV[new Date(r).getDay()]),
+                          (d = `${(0, o.n1)([s])} ${(0, o.li)(n)}`.trim()),
+                          i.h.dispatch({ type: "RESTRICTED_HOURS_WARNING", title: a, subtitle: d }),
+                          (p = t);
                   }
               })(e),
-              (m = setTimeout(() => {
-                  (m = null), A();
+              (f = setTimeout(() => {
+                  (f = null), T();
               }, 6e4)))
-            : (m = setTimeout(
+            : (f = setTimeout(
                   () => {
-                      (m = null), A();
+                      (f = null), T();
                   },
                   Math.max(0, (e.minutesUntil - 16) * 6e4),
               )));
 }
-function I() {
-    let e = f();
-    e !== p &&
-        ((p = e),
-        i.h.dispatch({ type: "RESTRICTED_HOURS_STATE_CHANGE", isInRestrictedHours: p }),
-        p ? (0, d.openRestrictedHoursModal)() : (0, d.k)(),
-        A());
+function m() {
+    let e = A();
+    e !== h &&
+        ((h = e),
+        i.h.dispatch({ type: "RESTRICTED_HOURS_STATE_CHANGE", isInRestrictedHours: h }),
+        h ? (0, u.openRestrictedHoursModal)() : (0, u.k)(),
+        T());
 }
-function T() {
-    (p = !1),
-        (g = null),
+function g() {
+    (h = !1),
+        (p = null),
         i.h.dispatch({ type: "RESTRICTED_HOURS_STATE_CHANGE", isInRestrictedHours: !1 }),
-        (0, d.k)(),
-        null != m && (clearTimeout(m), (m = null));
+        (0, u.k)(),
+        null != f && (clearTimeout(f), (f = null));
 }
 function S() {
-    I(), A();
+    m(), T();
 }
-function y() {
-    A();
+function N() {
+    T();
 }
 class C extends r.A {
-    stores = new Map().set(a.default, S).set(u.A, S);
+    stores = new Map().set(s.default, S).set(d.A, S);
     actions = {
         POST_CONNECTION_OPEN: S,
         CURRENT_USER_UPDATE: S,
-        NOTIFICATIONS_SET_SCREEN_DOWNTIME_REMINDER: y,
-        LOGOUT: T,
+        NOTIFICATIONS_SET_SCREEN_DOWNTIME_REMINDER: N,
+        LOGOUT: g,
     };
     _initialize() {
-        (p = f()),
-            i.h.dispatch({ type: "RESTRICTED_HOURS_STATE_CHANGE", isInRestrictedHours: p }),
-            p && (0, d.openRestrictedHoursModal)(),
-            (E = setInterval(I, 6e4)),
-            A();
+        (h = A()),
+            i.h.dispatch({ type: "RESTRICTED_HOURS_STATE_CHANGE", isInRestrictedHours: h }),
+            h && (0, u.openRestrictedHoursModal)(),
+            (I = setInterval(m, 6e4)),
+            T();
     }
     _terminate() {
-        null != E && (clearInterval(E), (E = null)),
-            null != m && (clearTimeout(m), (m = null)),
-            (g = null),
-            (0, d.k)(),
-            (p = !1);
+        null != I && (clearInterval(I), (I = null)),
+            null != f && (clearTimeout(f), (f = null)),
+            (p = null),
+            (0, u.k)(),
+            (h = !1);
     }
 }
-let N = new C();
+let O = new C();

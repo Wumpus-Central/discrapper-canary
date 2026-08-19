@@ -1,4 +1,4 @@
-e.exports = {
+_.exports = {
     Nr: "card_d7e618",
     yo: "hovered_d7e618",
     q4: "artBackdrop_d7e618",

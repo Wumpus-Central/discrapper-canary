@@ -1,4 +1,4 @@
-n(989349).defineLocale("en-gb", {
+d(989349).defineLocale("en-gb", {
     months: "January_February_March_April_May_June_July_August_September_October_November_December".split("_"),
     monthsShort: "Jan_Feb_Mar_Apr_May_Jun_Jul_Aug_Sep_Oct_Nov_Dec".split("_"),
     weekdays: "Sunday_Monday_Tuesday_Wednesday_Thursday_Friday_Saturday".split("_"),
@@ -37,10 +37,10 @@ n(989349).defineLocale("en-gb", {
         yy: "%d years",
     },
     dayOfMonthOrdinalParse: /\d{1,2}(st|nd|rd|th)/,
-    ordinal: function (e) {
-        var t = e % 10,
-            n = 1 == ~~((e % 100) / 10) ? "th" : 1 === t ? "st" : 2 === t ? "nd" : 3 === t ? "rd" : "th";
-        return e + n;
+    ordinal: function (a) {
+        var e = a % 10,
+            d = 1 == ~~((a % 100) / 10) ? "th" : 1 === e ? "st" : 2 === e ? "nd" : 3 === e ? "rd" : "th";
+        return a + d;
     },
     week: { dow: 1, doy: 4 },
 });

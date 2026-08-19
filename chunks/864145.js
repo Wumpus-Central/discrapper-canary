@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { K: () => r, X: () => s });
+n.d(t, { K: () => r, X: () => a });
 let i = (0, n(945810).mj)({
     name: "2026-03-soundmoji-rendering",
     kind: "user",
@@ -10,7 +10,7 @@ function r(e) {
     let { location: t } = e;
     return i.getConfig({ location: t }).enabled;
 }
-function s(e) {
+function a(e) {
     let { location: t } = e;
     return i.useConfig({ location: t }).enabled;
 }

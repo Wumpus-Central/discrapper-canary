@@ -6,45 +6,45 @@ var r = n(477900),
     s = n(87725),
     o = n(242874),
     c = n(998370),
-    u = n(380619),
+    u = n(580194),
     d = n(17928),
     m = n(192308),
     g = n(982240),
     x = n(566980),
     T = n(315693),
     I = n(287809),
-    f = n(174459),
-    h = n(786300),
+    h = n(174459),
+    f = n(786300),
     p = n(45938),
     E = n(652215),
-    A = n(202541),
-    P = n(375708);
-let j = A.o2.STANDARD_BOX,
-    v,
-    [R, _, M] = (0, h.A)();
+    P = n(202541),
+    j = n(375708);
+let v = P.o2.STANDARD_BOX,
+    A,
+    [R, _, M] = (0, f.A)();
 function N(e) {
     let {
             isGift: t = !1,
-            giftRecipient: h,
-            giftMessage: A,
+            giftRecipient: f,
+            giftMessage: P,
             giftStyle: _,
             giftingOrigin: M,
             children: N,
             additionalUserIds: S,
         } = e,
         y = (0, s.t4)((e) => e.selectedSkuId),
-        [C, U] = l.useState(h),
-        [L, b] = l.useState(),
-        [G, O] = l.useState(!1),
-        k = (0, p.Ik)(C),
-        w = v;
-    k && (w = null != _ ? _ : j);
+        [C, L] = l.useState(f),
+        [U, b] = l.useState(),
+        [G, k] = l.useState(!1),
+        O = (0, p.Ik)(C),
+        w = A;
+    O && (w = null != _ ? _ : v);
     let [D, F] = l.useState(w),
         H = (0, u.JW)(),
         Z = null != H && H.length > 0,
         [B, V] = l.useState(),
-        [J, W] = l.useState(
-            t && (0, p.lo)(C) === p.tB.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD && null == A ? P.intl.string(P.t.ZkOo1U) : A,
+        [W, J] = l.useState(
+            t && (0, p.lo)(C) === p.tB.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD && null == P ? j.intl.string(j.t.ZkOo1U) : P,
         ),
         [z, Y] = l.useState(void 0),
         [K, Q] = l.useState(void 0),
@@ -107,26 +107,26 @@ function N(e) {
         l.useEffect(() => {
             if (Z) {
                 let e = I.default.getCurrentUser();
-                f.default.track(E.HAw.GIFT_PROMOTION_REWARD_SELECTED, { user_id: e?.id, reward_sku_id: B });
+                h.default.track(E.HAw.GIFT_PROMOTION_REWARD_SELECTED, { user_id: e?.id, reward_sku_id: B });
             }
         }, [B, Z]),
         (0, r.jsx)(R.Provider, {
             value: {
                 isGift: t,
                 giftCode: ee,
-                giftMessage: A,
+                giftMessage: P,
                 giftRecipient: C,
-                setGiftRecipient: U,
-                giftRecipientError: L,
+                setGiftRecipient: L,
+                giftRecipientError: U,
                 setGiftRecipientError: b,
                 validatingGiftRecipient: G,
-                setValidatingGiftRecipient: O,
+                setValidatingGiftRecipient: k,
                 soundEffect: z,
                 setSoundEffect: Y,
                 emojiConfetti: K,
                 setEmojiConfetti: Q,
-                customGiftMessage: J,
-                setCustomGiftMessage: W,
+                customGiftMessage: W,
+                setCustomGiftMessage: J,
                 selectedGiftStyle: D,
                 setSelectedGiftStyle: F,
                 sendGiftMessage: es,

@@ -1,21 +1,21 @@
 "use strict";
-var r = n(582128),
-    i =
+var n = r(582128),
+    o =
         "function" == typeof Object.is
             ? Object.is
             : function (e, t) {
                   return (e === t && (0 !== e || 1 / e == 1 / t)) || (e != e && t != t);
               },
-    a = r.useState,
-    o = r.useEffect,
-    s = r.useLayoutEffect,
-    l = r.useDebugValue;
+    i = n.useState,
+    a = n.useEffect,
+    s = n.useLayoutEffect,
+    l = n.useDebugValue;
 function u(e) {
     var t = e.getSnapshot;
     e = e.value;
     try {
-        var n = t();
-        return !i(e, n);
+        var r = t();
+        return !o(e, r);
     } catch (e) {
         return !0;
     }
@@ -26,30 +26,30 @@ var c =
               return t();
           }
         : function (e, t) {
-              var n = t(),
-                  r = a({ inst: { value: n, getSnapshot: t } }),
-                  i = r[0].inst,
-                  c = r[1];
+              var r = t(),
+                  n = i({ inst: { value: r, getSnapshot: t } }),
+                  o = n[0].inst,
+                  c = n[1];
               return (
                   s(
                       function () {
-                          (i.value = n), (i.getSnapshot = t), u(i) && c({ inst: i });
+                          (o.value = r), (o.getSnapshot = t), u(o) && c({ inst: o });
                       },
-                      [e, n, t],
+                      [e, r, t],
                   ),
-                  o(
+                  a(
                       function () {
                           return (
-                              u(i) && c({ inst: i }),
+                              u(o) && c({ inst: o }),
                               e(function () {
-                                  u(i) && c({ inst: i });
+                                  u(o) && c({ inst: o });
                               })
                           );
                       },
                       [e],
                   ),
-                  l(n),
-                  n
+                  l(r),
+                  r
               );
           };
-t.useSyncExternalStore = void 0 !== r.useSyncExternalStore ? r.useSyncExternalStore : c;
+t.useSyncExternalStore = void 0 !== n.useSyncExternalStore ? n.useSyncExternalStore : c;

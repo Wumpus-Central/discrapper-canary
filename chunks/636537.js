@@ -4,7 +4,7 @@ n.d(t, {
     tr: () => U,
     Cu: () => M,
     $F: () => l.LG,
-    TP: () => D,
+    TP: () => y,
     oh: () => h,
     ni: () => d,
     IA: () => v,
@@ -166,7 +166,7 @@ function f(e, t, n, i, s) {
                 (t.retried = (null != t.retried ? t.retried : 0) + 1),
                 t.backoff.fail(() => b(t.url).then(() => f(e, t, n, i, s)));
         },
-        c = y?.prepareRequest?.(l);
+        c = D?.prepareRequest?.(l);
     l.ok((e) => null != e.status),
         l.then(
             (r) => {
@@ -188,7 +188,7 @@ function f(e, t, n, i, s) {
                     _ = (e) => {
                         l || (i(e), s?.({ ok: !1, hasErr: !0, err: e }));
                     };
-                if (t?.interceptResponse?.(r, u, _) !== !0 && y?.interceptResponse?.(r, u, _, c) !== !0) {
+                if (t?.interceptResponse?.(r, u, _) !== !0 && D?.interceptResponse?.(r, u, _, c) !== !0) {
                     if (r.ok) n(a);
                     else {
                         if (t.oldFormErrors && a?.body?.code === 50035) {
@@ -282,20 +282,20 @@ function g(e, t, n) {
 let S = g.bind(null, "get"),
     N = g.bind(null, "post"),
     C = g.bind(null, "put"),
-    R = g.bind(null, "patch"),
-    O = g.bind(null, "del"),
-    L = { get: S, post: N, put: C, patch: R, del: O };
+    O = g.bind(null, "patch"),
+    R = g.bind(null, "del"),
+    L = { get: S, post: N, put: C, patch: O, del: R };
 if (n.g.isServerRendering) {
     let e = (e, t) => Promise.resolve({ ok: !0, status: 200, headers: {}, body: null, text: "" });
-    (S = e), (N = e), (C = e), (R = e), (O = e);
+    (S = e), (N = e), (C = e), (O = e), (R = e);
 }
-function D() {
+function y() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
     return "https:" + window.GLOBAL_ENV.API_ENDPOINT + (e ? `/v${window.GLOBAL_ENV.API_VERSION}` : "");
 }
-let y = null;
+let D = null;
 function v(e) {
-    y = e;
+    D = e;
 }
 let b = () => Promise.resolve();
 function M(e) {

@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => s });
+n.d(t, { A: () => a });
 var i,
     r =
         (((i = r || {})[(i.UNKNOWN = 1)] = "UNKNOWN"),
@@ -29,7 +29,7 @@ var i,
         (i[(i.ACTIVITY_LAUNCH_INVALID_USER_REGION_FOR_APPLICATION = 20)] =
             "ACTIVITY_LAUNCH_INVALID_USER_REGION_FOR_APPLICATION"),
         i);
-class s {
+class a {
     reason;
     static ReasonCodes = r;
     constructor(e) {

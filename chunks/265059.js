@@ -1,10 +1,10 @@
 "use strict";
-n.d(t, { A: () => u, q: () => a });
+n.d(t, { A: () => d, q: () => s });
 var i = n(17928),
     r = n(228366),
-    s = n(540999);
-let a = 460,
-    o = {
+    a = n(540999);
+let s = 460,
+    l = {
         sidebarWidth: 460,
         lastOpenTabId: null,
         lastOpenSubTabId: null,
@@ -13,39 +13,39 @@ let a = 460,
         devWidgetPosition: { x: 0, y: 0 },
         sortedScreenKeys: [],
     };
-class l extends i.Ay.DeviceSettingsStore {
+class o extends i.Ay.DeviceSettingsStore {
     static displayName = "DevToolsSettingsStore";
     static persistKey = "DevToolsSettingsStore";
     initialize(e) {
-        (o = e ?? o), (r.h.actionLogger.persist = s.A.isDeveloper);
+        (l = e ?? l), (r.h.actionLogger.persist = a.A.isDeveloper);
     }
     getUserAgnosticState() {
-        return o;
+        return l;
     }
     get sidebarWidth() {
-        return this.displayTools ? o.sidebarWidth : 0;
+        return this.displayTools ? l.sidebarWidth : 0;
     }
     get lastOpenTabId() {
-        return o.lastOpenTabId ?? null;
+        return l.lastOpenTabId ?? null;
     }
     get lastOpenSubTabId() {
-        return o.lastOpenSubTabId ?? null;
+        return l.lastOpenSubTabId ?? null;
     }
     get displayTools() {
-        return s.A.isDeveloper && o.displayTools;
+        return a.A.isDeveloper && l.displayTools;
     }
     get showDevWidget() {
-        return s.A.isDeveloper && o.showDevWidget;
+        return a.A.isDeveloper && l.showDevWidget;
     }
     get devWidgetPosition() {
-        return o.devWidgetPosition;
+        return l.devWidgetPosition;
     }
     get sortedScreenKeys() {
-        return o.sortedScreenKeys;
+        return l.sortedScreenKeys;
     }
 }
-let u = new l(r.h, {
+let d = new o(r.h, {
     DEV_TOOLS_SETTINGS_UPDATE: function (e) {
-        s.A.isDeveloper && (o = { ...o, ...e.settings });
+        a.A.isDeveloper && (l = { ...l, ...e.settings });
     },
 });

@@ -1,9 +1,9 @@
 "use strict";
-n.d(t, { $Y: () => h, Cs: () => f, Iz: () => u, Oz: () => o, WA: () => c, jG: () => _, kP: () => l, os: () => d });
-var i = n(353640),
-    r = n(499867),
-    s = n(932607);
-let a = (0, i.v)(
+n.d(t, { $Y: () => E, Cs: () => A, Iz: () => d, Oz: () => l, WA: () => c, jG: () => _, kP: () => o, os: () => u });
+var i = n(196765),
+    r = n(537812),
+    a = n(932607);
+let s = (0, i.v)(
     (0, r.Zr)(
         (e) => ({
             channelDismissTimestamps: {},
@@ -11,36 +11,36 @@ let a = (0, i.v)(
             globalDismissTimestamp: null,
             queuedWarning: !1,
         }),
-        { name: "shared-spaces-warning-storage", storage: (0, r.KU)(() => s.A) },
+        { name: "shared-spaces-warning-storage", storage: (0, r.KU)(() => a.A) },
     ),
 );
-function o(e) {
-    return a.getState().channelDismissTimestamps[e];
-}
 function l(e) {
-    return a.getState().userDismissTimestamps[e];
+    return s.getState().channelDismissTimestamps[e];
 }
-function u() {
-    return a.getState().globalDismissTimestamp;
-}
-function c() {
-    return a.getState().queuedWarning;
+function o(e) {
+    return s.getState().userDismissTimestamps[e];
 }
 function d() {
-    a.setState({ queuedWarning: !1 });
+    return s.getState().globalDismissTimestamp;
+}
+function c() {
+    return s.getState().queuedWarning;
+}
+function u() {
+    s.setState({ queuedWarning: !1 });
 }
 function _(e) {
-    a.setState((t) => ({ channelDismissTimestamps: { ...t.channelDismissTimestamps, [e]: Date.now() } }));
+    s.setState((t) => ({ channelDismissTimestamps: { ...t.channelDismissTimestamps, [e]: Date.now() } }));
 }
-function h(e) {
-    a.setState((t) => ({
+function E(e) {
+    s.setState((t) => ({
         userDismissTimestamps: { ...t.userDismissTimestamps, [e]: Date.now() },
         globalDismissTimestamp: Date.now(),
     }));
 }
-function f(e) {
+function A(e) {
     let t = Array.from(e).reduce((e, t) => ((e[t] = Date.now()), e), {});
-    a.setState((e) => ({
+    s.setState((e) => ({
         userDismissTimestamps: { ...e.userDismissTimestamps, ...t },
         globalDismissTimestamp: Date.now(),
     }));

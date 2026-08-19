@@ -1,4 +1,4 @@
-e.exports = {
+i.exports = {
     gg: "nitroTopDividerContainer_b3fb5f",
     d6: "nitroTopDividerUpper_b3fb5f",
     FV: "nitroTopDividerShadow_b3fb5f",

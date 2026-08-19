@@ -1,12 +1,12 @@
-s.d(l, { D: () => m });
-var e = s(477900),
-    i = s(582128),
-    r = s(855522),
-    n = s(297264),
-    a = s(834730),
-    o = s(760714);
-function c(t) {
-    let { benefits: l, description: s, imgSrc: i, title: c, tag: d, FallbackIcon: x } = t,
+l.d(t, { D: () => m });
+var e = l(477900),
+    i = l(582128),
+    n = l(855522),
+    r = l(297264),
+    a = l(834730),
+    o = l(760714);
+function c(s) {
+    let { benefits: t, description: l, imgSrc: i, title: c, tag: d, FallbackIcon: x } = s,
         u = null != i ? { "--custom-background-url": `url(${i.toString()})` } : void 0;
     return (0, e.jsxs)("div", {
         className: o.kL,
@@ -31,27 +31,27 @@ function c(t) {
                         className: o.zH,
                         children: [
                             null != d && (0, e.jsx)("div", { children: d }),
-                            (0, e.jsx)(n.D, { color: "text-strong", variant: "heading-xl/semibold", children: c }),
-                            null != s &&
-                                "" !== s &&
+                            (0, e.jsx)(r.D, { color: "text-strong", variant: "heading-xl/semibold", children: c }),
+                            null != l &&
+                                "" !== l &&
                                 (0, e.jsx)(a.E, {
                                     color: "text-default",
                                     variant: "text-md/normal",
                                     className: o.h_,
-                                    children: s,
+                                    children: l,
                                 }),
                         ],
                     }),
-                    null != l &&
+                    null != t &&
                         (0, e.jsxs)("div", {
                             className: o.PX,
                             children: [
                                 (0, e.jsx)(a.E, {
                                     color: "text-default",
                                     variant: "eyebrow",
-                                    children: r.A.Messages.STOREFRONT_BENEFITS_TITLE,
+                                    children: n.A.Messages.STOREFRONT_BENEFITS_TITLE,
                                 }),
-                                l,
+                                t,
                             ],
                         }),
                 ],
@@ -59,20 +59,20 @@ function c(t) {
         ],
     });
 }
-var d = s(688810),
-    x = s(174459),
-    u = s(652215);
-function m(t) {
-    let { appId: l, skuId: s, ...r } = t,
-        { analyticsLocations: n } = (0, d.Ay)();
+var d = l(688810),
+    x = l(174459),
+    u = l(652215);
+function m(s) {
+    let { appId: t, skuId: l, ...n } = s,
+        { analyticsLocations: r } = (0, d.Ay)();
     return (
         i.useEffect(() => {
             x.default.track(u.HAw.VIEW_PREMIUM_APP_EXPANDED_PRODUCT_CARD, {
-                application_id: l,
-                sku_id: s,
-                location_stack: n,
+                application_id: t,
+                sku_id: l,
+                location_stack: r,
             });
-        }, [n, l, s]),
-        (0, e.jsx)(c, { ...r })
+        }, [r, t, l]),
+        (0, e.jsx)(c, { ...n })
     );
 }

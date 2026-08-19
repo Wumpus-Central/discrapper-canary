@@ -1,8 +1,8 @@
 "use strict";
-n.d(t, { D8: () => a, _U: () => s });
+n.d(t, { D8: () => s, _U: () => a });
 var i = n(600975),
     r = n(688151);
-let s = (0, i.C)({
+let a = (0, i.C)({
     id: "2026-03_voice_badge",
     kind: "guild",
     commonTriggerPoint: r.$G.VOICE_CALL,
@@ -13,7 +13,7 @@ let s = (0, i.C)({
         { id: 1, label: "Show voice badges", config: { enabled: !0 } },
     ],
 });
-function a(e) {
+function s(e) {
     let { guildId: t, location: n } = e;
-    return s.useExperiment({ guildId: t, location: n }, { autoTrackExposure: !0 });
+    return a.useExperiment({ guildId: t, location: n }, { autoTrackExposure: !0 });
 }

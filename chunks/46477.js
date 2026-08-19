@@ -1,21 +1,21 @@
 "use strict";
-n.d(t, { CA: () => g, _W: () => I, we: () => T, zl: () => A });
+n.d(t, { CA: () => p, _W: () => m, we: () => g, zl: () => T });
 var i,
     r = n(284009),
-    s = n.n(r),
-    a = n(485845),
-    o = n(136722),
-    l = n(155718),
-    u = n(457408),
+    a = n.n(r),
+    s = n(485845),
+    l = n(136722),
+    o = n(155718),
+    d = n(457408),
     c = n(200662),
-    d = n(95701),
+    u = n(95701),
     _ = n(71393),
-    h = n(392054),
-    f = n(168186),
-    p = n(240591),
-    E = n(73510),
-    m = n(652215),
-    g =
+    E = n(392054),
+    A = n(168186),
+    h = n(240591),
+    I = n(73510),
+    f = n(652215),
+    p =
         (((i = {})[(i.ALLOWED = 0)] = "ALLOWED"),
         (i[(i.NSFW_NOT_ALLOWED = 1)] = "NSFW_NOT_ALLOWED"),
         (i[(i.WRONG_COMMAND_TYPE = 2)] = "WRONG_COMMAND_TYPE"),
@@ -25,80 +25,80 @@ var i,
         (i[(i.CHANNEL_DENIED = 6)] = "CHANNEL_DENIED"),
         (i[(i.USER_DENIED = 7)] = "USER_DENIED"),
         i);
-function A(e, t, n) {
+function T(e, t, n) {
     let {
             context: i,
             commandTypes: r,
             allowNsfw: c,
-            computedPermissions: g,
-            userId: A,
+            computedPermissions: p,
+            userId: T,
             roleIds: S,
-            isImpersonating: y,
+            isImpersonating: N,
             hasBaseAccessPermissions: C,
-            hasSendMessagesPermission: N,
+            hasSendMessagesPermission: O,
         } = t,
         {
-            applicationAllowedForUser: v,
-            applicationAllowedForChannel: R,
-            isGuildInstalled: O,
-            isUserInstalled: b,
-            commandBotId: D,
+            applicationAllowedForUser: R,
+            applicationAllowedForChannel: L,
+            isGuildInstalled: y,
+            isUserInstalled: D,
+            commandBotId: v,
         } = n;
     if (!r.includes(e.type)) return 2;
-    if ((e.nsfw || (0, u.A)(e.applicationId)) && !c) return 1;
-    let L = null != i ? (0, p.ud)(i, D) : void 0;
+    if ((e.nsfw || (0, d.A)(e.applicationId)) && !c) return 1;
+    let b = null != i ? (0, h.ud)(i, v) : void 0;
     if (null != e.contexts) {
-        if (null != L && !e.contexts.includes(L)) return 4;
-    } else if (e.inputType === h.y$.BOT && ((!1 === e.dmPermission && L === l.OL.BOT_DM) || L === l.OL.PRIVATE_CHANNEL))
+        if (null != b && !e.contexts.includes(b)) return 4;
+    } else if (e.inputType === E.y$.BOT && ((!1 === e.dmPermission && b === o.OL.BOT_DM) || b === o.OL.PRIVATE_CHANNEL))
         return 4;
-    if (null != e.predicate && i instanceof d.YB) {
+    if (null != e.predicate && i instanceof u.YB) {
         let t = _.A.getGuild(i.guild_id);
         if (!e.predicate({ channel: i, guild: t })) return 3;
     }
-    if (e.applicationId === E.Ik.BUILT_IN) return 0;
-    let w = null != i ? (0, p.wz)(i) : void 0;
-    if (null == w || o.zy(g, m.xBc.ADMINISTRATOR) || (b && e.integration_types?.includes(a.b.USER_INSTALL))) return 0;
-    if ((!C || !N) && O && (null == e.integration_types || e.integration_types.includes(a.b.GUILD_INSTALL))) return 5;
-    if (i instanceof d.YB) {
-        s()(void 0 !== R, "missing applicationAllowedForChannel");
-        let t = I(e.permissions, i, w);
-        if (!1 === t || (!0 !== t && !1 === R)) return 6;
+    if (e.applicationId === I.Ik.BUILT_IN) return 0;
+    let M = null != i ? (0, h.wz)(i) : void 0;
+    if (null == M || l.zy(p, f.xBc.ADMINISTRATOR) || (D && e.integration_types?.includes(s.b.USER_INSTALL))) return 0;
+    if ((!C || !O) && y && (null == e.integration_types || e.integration_types.includes(s.b.GUILD_INSTALL))) return 5;
+    if (i instanceof u.YB) {
+        a()(void 0 !== L, "missing applicationAllowedForChannel");
+        let t = m(e.permissions, i, M);
+        if (!1 === t || (!0 !== t && !1 === L)) return 6;
     }
-    let M = T(e.permissions, w, A, S, y);
-    if (!0 === M) return 0;
-    if (!1 === M) return 7;
-    if (!1 === v) return 7;
+    let P = g(e.permissions, M, T, S, N);
+    if (!0 === P) return 0;
+    if (!1 === P) return 7;
+    if (!1 === R) return 7;
     if (
         null != e.defaultMemberPermissions &&
-        !(!o.aI(e.defaultMemberPermissions, f.Cq) && o.zy(g, e.defaultMemberPermissions))
+        !(!l.aI(e.defaultMemberPermissions, A.Cq) && l.zy(p, e.defaultMemberPermissions))
     )
         return 7;
     return 0;
 }
-function I(e, t, n) {
+function m(e, t, n) {
     if (null == e) return null;
     let i = t.id;
     t.isThread() && (i = t.parent_id ?? t.id);
-    let r = e[(0, c.Eu)(i, h.RA.CHANNEL)];
+    let r = e[(0, c.Eu)(i, E.RA.CHANNEL)];
     if (null != r) return r.permission;
-    let s = e[(0, c.Eu)((0, f.Ap)(n), h.RA.CHANNEL)];
-    return null != s ? s.permission : null;
+    let a = e[(0, c.Eu)((0, A.Ap)(n), E.RA.CHANNEL)];
+    return null != a ? a.permission : null;
 }
-function T(e, t, n, i, r) {
+function g(e, t, n, i, r) {
     if (null == e) return null;
     if (!r) {
-        let t = e[(0, c.Eu)(n, h.RA.USER)];
+        let t = e[(0, c.Eu)(n, E.RA.USER)];
         if (null != t) return t.permission;
     }
-    let s = !1;
+    let a = !1;
     for (let t of i) {
-        let n = e[(0, c.Eu)(t, h.RA.ROLE)];
+        let n = e[(0, c.Eu)(t, E.RA.ROLE)];
         if (null != n) {
             if (n.permission) return !0;
-            s = !0;
+            a = !0;
         }
     }
-    if (s) return !1;
-    let a = null != t ? e[(0, c.Eu)(t, h.RA.ROLE)] : null;
-    return null != a ? a.permission : null;
+    if (a) return !1;
+    let s = null != t ? e[(0, c.Eu)(t, E.RA.ROLE)] : null;
+    return null != s ? s.permission : null;
 }

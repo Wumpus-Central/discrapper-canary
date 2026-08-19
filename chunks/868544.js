@@ -30,7 +30,7 @@ function i(e) {
     });
 }
 let r =
-    "https://cdn.discordapp.com/assets/content/3cff702a266643a7a3adc7f15befbdb9a25b0d4355e46e312dd99671a99f21c0.png";
+    "https://cdn.discordapp.com/assets/content/9470b4e19ec49337673178fdeca9d571eb95eaf8e01e026453765e4e35f86a23.png";
 function l(e) {
     let { alt: a, ariaLabel: d, ariaHidden: t, role: s, width: n = 100, height: i = 100 } = e;
     return (0, c.jsx)("img", {
@@ -44,7 +44,7 @@ function l(e) {
     });
 }
 let f =
-    "https://cdn.discordapp.com/assets/content/9c992565eab6cbb4f2f565a074e39a75c6b168b5df2e779a96bc325819af03a1.png";
+    "https://cdn.discordapp.com/assets/content/48b5779e466d0cee65cf2a8e330c84c1de5bb578c939fdba64cd56f0204229f1.png";
 function o(e) {
     let { alt: a, ariaLabel: d, ariaHidden: t, role: s, width: n = 100, height: i = 100 } = e;
     return (0, c.jsx)("img", {
@@ -58,23 +58,23 @@ function o(e) {
     });
 }
 let h =
-    "https://cdn.discordapp.com/assets/content/5872ee723b5960f2ca267d399475a1211259b9e91308f0ce18f8db96e17ea33d.png";
-function p(e) {
+    "https://cdn.discordapp.com/assets/content/9a8eba88273235e38b10fd9e4437d8d4ebda9687041d7081995695716d050187.png";
+function b(e) {
     let { alt: a, ariaLabel: d, ariaHidden: t, role: s, width: n = 100, height: i = 100 } = e;
     return (0, c.jsx)("img", {
         style: { width: n, height: i },
         src: h,
-        srcSet: `${h} 1x, https://cdn.discordapp.com/assets/content/44f8af61f60d0d3de9e9897c0691cdd472a7a5c29cc6e88164cf07fa670c980c.png 2x`,
+        srcSet: `${h} 1x, https://cdn.discordapp.com/assets/content/a66c43bfd9ceb690a9c1bc5fa69be9a1cb3f87b1fbbb498b7e0bafac162505f8.png 2x`,
         alt: a,
         "aria-label": d,
         "aria-hidden": t,
         role: s ?? "img",
     });
 }
-var b = d(240960);
+var p = d(240960);
 function x() {
     return (0, c.jsxs)("div", {
-        className: b.Re,
+        className: p.Re,
         "aria-hidden": !0,
         children: [
             (0, c.jsx)(s, { alt: "", ariaHidden: !0, width: 40, height: 40 }),
@@ -85,22 +85,22 @@ function x() {
 }
 function u(e) {
     let { iconUrl: a } = e;
-    return (0, c.jsx)("img", { className: b.rF, src: a, alt: "", "aria-hidden": !0, draggable: !1 });
+    return (0, c.jsx)("img", { className: p.rF, src: a, alt: "", "aria-hidden": !0, draggable: !1 });
 }
 function g(e) {
     let { badgeIconUrls: a = [] } = e,
         [d, t, s] = a;
     return null != d && null == t
-        ? (0, c.jsx)("div", { className: b.R2, "aria-hidden": !0, children: (0, c.jsx)(u, { iconUrl: d }) })
+        ? (0, c.jsx)("div", { className: p.R2, "aria-hidden": !0, children: (0, c.jsx)(u, { iconUrl: d }) })
         : null != d && null != t && null == s
           ? (0, c.jsxs)("div", {
-                className: b.$Z,
+                className: p.$Z,
                 "aria-hidden": !0,
                 children: [(0, c.jsx)(u, { iconUrl: t }), (0, c.jsx)(u, { iconUrl: d })],
             })
           : null != d && null != t && null != s
             ? (0, c.jsxs)("div", {
-                  className: b.no,
+                  className: p.no,
                   "aria-hidden": !0,
                   children: [
                       (0, c.jsx)(u, { iconUrl: t }),
@@ -109,11 +109,11 @@ function g(e) {
                   ],
               })
             : (0, c.jsxs)("div", {
-                  className: b.U6,
+                  className: p.U6,
                   "aria-hidden": !0,
                   children: [
                       (0, c.jsx)(o, { alt: "", ariaHidden: !0, width: 42, height: 42 }),
-                      (0, c.jsx)(p, { alt: "", ariaHidden: !0, width: 60, height: 60 }),
+                      (0, c.jsx)(b, { alt: "", ariaHidden: !0, width: 60, height: 60 }),
                       (0, c.jsx)(l, { alt: "", ariaHidden: !0, width: 42, height: 42 }),
                   ],
               });

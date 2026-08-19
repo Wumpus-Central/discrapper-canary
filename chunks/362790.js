@@ -1,4 +1,4 @@
-n.d(t, { A: () => _ });
+n.d(t, { A: () => u });
 var i = n(17928),
     l = n(228366),
     r = n(927813),
@@ -7,7 +7,7 @@ var i = n(17928),
     E = n(994500);
 let o = 180 * r.A.Millis.DAY,
     c = !1;
-class u extends i.Ay.Store {
+class _ extends i.Ay.Store {
     static displayName = "PremiumPromoStore";
     initialize() {
         this.waitFor(E.A, a.default);
@@ -16,7 +16,7 @@ class u extends i.Ay.Store {
         return c;
     }
 }
-let _ = new u(l.h, {
+let u = new _(l.h, {
     CONNECTION_OPEN: function () {
         return (
             c !==

@@ -1,12 +1,12 @@
 "use strict";
-n.d(t, { Ao: () => u, id: () => d, mG: () => l }), n(321073);
+n.d(t, { Ao: () => d, id: () => u, mG: () => o }), n(321073);
 var i,
     r,
-    s = n(284009),
-    a = n.n(s),
-    o = n(228366),
-    l = (((i = {}).FORUM_CHANNEL = "forum_channel"), i),
-    u =
+    a = n(284009),
+    s = n.n(a),
+    l = n(228366),
+    o = (((i = {}).FORUM_CHANNEL = "forum_channel"), i),
+    d =
         (((r = {})[(r.IMMEDIATE = 0)] = "IMMEDIATE"),
         (r[(r.IMMEDIATE_WITH_COOLDOWN = 1)] = "IMMEDIATE_WITH_COOLDOWN"),
         (r[(r.IMMEDIATE_WITH_DELAY = 2)] = "IMMEDIATE_WITH_DELAY"),
@@ -44,11 +44,11 @@ class c {
             n.push(i);
         }
         return (
-            a()(n.length < 2, "there should only be a single left over data"), (this.seenIntervals = n), Math.round(t)
+            s()(n.length < 2, "there should only be a single left over data"), (this.seenIntervals = n), Math.round(t)
         );
     }
 }
-class d {
+class u {
     trackedFeedItems;
     _lastFlushTimeMillis;
     _pausedFeedItemIds;
@@ -70,19 +70,19 @@ class d {
     onFeedItemSeen;
     onFeedItemUnseen;
     initialize = () => {
-        o.h.subscribe("ANALYTICS_FEED_ITEM_SEEN", this.handleFeedItemSeen),
-            o.h.subscribe("ANALYTICS_FEED_ITEM_UNSEEN", this.handleFeedItemUnseen),
-            o.h.subscribe("ANALYTICS_FEED_FLUSH", this.handleFeedItemFlush),
-            o.h.subscribe("APP_STATE_UPDATE", this.handleAppStateUpdate),
-            o.h.subscribe("WINDOW_FOCUS", this.handleWindowFocus),
+        l.h.subscribe("ANALYTICS_FEED_ITEM_SEEN", this.handleFeedItemSeen),
+            l.h.subscribe("ANALYTICS_FEED_ITEM_UNSEEN", this.handleFeedItemUnseen),
+            l.h.subscribe("ANALYTICS_FEED_FLUSH", this.handleFeedItemFlush),
+            l.h.subscribe("APP_STATE_UPDATE", this.handleAppStateUpdate),
+            l.h.subscribe("WINDOW_FOCUS", this.handleWindowFocus),
             this.onInitialize?.();
     };
     terminate = () => {
-        o.h.unsubscribe("ANALYTICS_FEED_ITEM_SEEN", this.handleFeedItemSeen),
-            o.h.unsubscribe("ANALYTICS_FEED_ITEM_UNSEEN", this.handleFeedItemUnseen),
-            o.h.unsubscribe("ANALYTICS_FEED_FLUSH", this.handleFeedItemFlush),
-            o.h.unsubscribe("APP_STATE_UPDATE", this.handleAppStateUpdate),
-            o.h.unsubscribe("WINDOW_FOCUS", this.handleWindowFocus),
+        l.h.unsubscribe("ANALYTICS_FEED_ITEM_SEEN", this.handleFeedItemSeen),
+            l.h.unsubscribe("ANALYTICS_FEED_ITEM_UNSEEN", this.handleFeedItemUnseen),
+            l.h.unsubscribe("ANALYTICS_FEED_FLUSH", this.handleFeedItemFlush),
+            l.h.unsubscribe("APP_STATE_UPDATE", this.handleAppStateUpdate),
+            l.h.unsubscribe("WINDOW_FOCUS", this.handleWindowFocus),
             this.onTerminate?.(),
             this.maybeFlushSeenItems(0);
     };

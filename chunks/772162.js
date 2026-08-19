@@ -2,50 +2,50 @@
 n.d(t, { A: () => _ });
 var i = n(439372),
     r = n(815706),
-    s = n(592598),
-    a = n(672396),
-    o = n(652215);
-let l = null,
-    u = new Map(),
+    a = n(592598),
+    s = n(672396),
+    l = n(652215);
+let o = null,
+    d = new Map(),
     c = null;
-class d extends i.A {
+class u extends i.A {
     _initialize() {
-        (l = null), u.clear(), (c = null);
+        (o = null), d.clear(), (c = null);
     }
     _terminate() {
-        (l = null), u.clear(), (c = null);
+        (o = null), d.clear(), (c = null);
     }
     handleOverlayMounted = (e) => {
-        l = Date.now();
+        o = Date.now();
     };
     handleNotificationEvent = (e) => {
-        if (e.action !== a.uj.Viewed) return;
+        if (e.action !== s.uj.Viewed) return;
         let t = Date.now(),
             n = e.notificationType;
-        (c = { timestamp: t, notificationType: n }), u.set(n, t);
+        (c = { timestamp: t, notificationType: n }), d.set(n, t);
     };
     handleSetNotificationDisabledSetting = (e) => {
         let { shouldTrack: t, setting: n, disabled: i } = e;
         if (!t) return;
-        let a = Date.now(),
-            d = null != l ? a - l : null,
+        let s = Date.now(),
+            u = null != o ? s - o : null,
             _ = null,
-            h = null;
-        for (let [e, t] of u.entries()) {
-            let i = s.A.getDisabledSettingByNotificationType(e);
+            E = null;
+        for (let [e, t] of d.entries()) {
+            let i = a.A.getDisabledSettingByNotificationType(e);
             if (null != i && i === n) {
-                let n = a - t;
-                (null == _ || n < _) && ((_ = n), (h = { notificationType: e, timestamp: t }));
+                let n = s - t;
+                (null == _ || n < _) && ((_ = n), (E = { notificationType: e, timestamp: t }));
             }
         }
-        let f = null != c && null != h && c.notificationType === h.notificationType && c.timestamp === h.timestamp;
-        (0, r.z)(o.HAw.OVERLAY_NOTIFICATION_SETTING_UPDATED, {
+        let A = null != c && null != E && c.notificationType === E.notificationType && c.timestamp === E.timestamp;
+        (0, r.z)(l.HAw.OVERLAY_NOTIFICATION_SETTING_UPDATED, {
             setting: n,
             disabled: i,
-            time_since_last_seen_overlay: d,
+            time_since_last_seen_overlay: u,
             time_since_last_seen_notification: _,
-            is_most_recent_notification: f,
-            most_recent_notification_type: h?.notificationType,
+            is_most_recent_notification: A,
+            most_recent_notification_type: E?.notificationType,
         });
     };
     actions = {
@@ -54,4 +54,4 @@ class d extends i.A {
         OVERLAY_NOTIFICATION_EVENT: this.handleNotificationEvent,
     };
 }
-let _ = new d();
+let _ = new u();

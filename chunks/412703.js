@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { n: () => r, o: () => s });
+n.d(t, { n: () => r, o: () => a });
 var i,
     r =
         (((i = {}).STREAM_ON_DESKTOP = "STREAM_ON_DESKTOP"),
@@ -12,7 +12,7 @@ var i,
         (i.ACHIEVEMENT_IN_GAME = "ACHIEVEMENT_IN_GAME"),
         (i.ACHIEVEMENT_IN_ACTIVITY = "ACHIEVEMENT_IN_ACTIVITY"),
         i);
-let s = {
+let a = {
     ALL: new Set([
         "PLAY_ACTIVITY",
         "PLAY_ON_DESKTOP",

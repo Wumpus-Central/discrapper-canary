@@ -2,54 +2,54 @@
 n.d(t, { A: () => _ });
 var i = n(17928),
     r = n(228366),
-    s = n(166403);
-let a = !1,
-    o = !1,
-    l = {};
-function u(e) {
+    a = n(166403);
+let s = !1,
+    l = !1,
+    o = {};
+function d(e) {
     let { guildBoostSlot: t } = e;
-    l = { ...l, [t.id]: t };
+    o = { ...o, [t.id]: t };
 }
 function c() {
     let e = {};
-    for (let t of Object.values(l)) (e[t.id] = t), (t.subscription = s.A.getSubscriptionById(t.subscriptionId));
-    l = e;
+    for (let t of Object.values(o)) (e[t.id] = t), (t.subscription = a.A.getSubscriptionById(t.subscriptionId));
+    o = e;
 }
-class d extends i.Ay.Store {
+class u extends i.Ay.Store {
     static displayName = "GuildBoostSlotStore";
     initialize() {
-        this.syncWith([s.A], c);
+        this.syncWith([a.A], c);
     }
     get hasFetched() {
-        return a;
+        return s;
     }
     get isFetching() {
-        return o;
-    }
-    get boostSlots() {
         return l;
     }
+    get boostSlots() {
+        return o;
+    }
     getGuildBoostSlot(e) {
-        return l[e];
+        return o[e];
     }
 }
-let _ = new d(r.h, {
+let _ = new u(r.h, {
     GUILD_BOOST_SLOTS_FETCH: function () {
-        o = !0;
+        l = !0;
     },
     GUILD_BOOST_SLOTS_FETCH_SUCCESS: function (e) {
         let { guildBoostSlots: t } = e;
-        (l = {}),
+        (o = {}),
             t.forEach((e) => {
-                l[e.id] = e;
+                o[e.id] = e;
             }),
-            (o = !1),
-            (a = !0);
+            (l = !1),
+            (s = !0);
     },
-    GUILD_BOOST_SLOT_UPDATE_SUCCESS: u,
-    GUILD_BOOST_SLOT_CREATE: u,
-    GUILD_BOOST_SLOT_UPDATE: u,
+    GUILD_BOOST_SLOT_UPDATE_SUCCESS: d,
+    GUILD_BOOST_SLOT_CREATE: d,
+    GUILD_BOOST_SLOT_UPDATE: d,
     LOGOUT: function () {
-        (l = {}), (a = !1), (o = !1);
+        (o = {}), (s = !1), (l = !1);
     },
 });

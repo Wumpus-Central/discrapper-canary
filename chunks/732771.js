@@ -45,8 +45,8 @@ let R = r.createContext({
     setIsEditing: C.tEg,
 });
 var L = n(571247),
-    D = n(375708),
-    y = n(37712),
+    y = n(375708),
+    D = n(37712),
     v = n(579240);
 let b = { keys: ["label"] };
 function M(e) {
@@ -74,8 +74,8 @@ function M(e) {
         S = r.useId(),
         N = r.useRef(null),
         [C, O] = r.useState(null),
-        [L, D] = r.useState(!1),
-        [y, v] = r.useState(""),
+        [L, y] = r.useState(!1),
+        [D, v] = r.useState(""),
         [M, P] = r.useState(""),
         {
             options: U,
@@ -87,11 +87,11 @@ function M(e) {
             P(e), v(t ?? e);
         }, []);
     r.useEffect(() => {
-        x(y);
-    }, [x, y]);
-    let F = r.useCallback((e) => (null != T ? T(e, y) : (0, l.Ht)(e, y, m ?? b)), [y, T, m]),
+        x(D);
+    }, [x, D]);
+    let F = r.useCallback((e) => (null != T ? T(e, D) : (0, l.Ht)(e, D, m ?? b)), [D, T, m]),
         { flatOptions: V, groups: B } = r.useMemo(() => {
-            if ("" === y) return { flatOptions: U, groups: w };
+            if ("" === D) return { flatOptions: U, groups: w };
             if (0 === w.length) return { flatOptions: F(U), groups: [] };
             let e = [],
                 t = [],
@@ -101,7 +101,7 @@ function M(e) {
                 (n += i.count), 0 !== r.length && (e.push(...r), t.push({ label: i.label, count: r.length }));
             }
             return { flatOptions: e, groups: t };
-        }, [U, w, y, F]),
+        }, [U, w, D, F]),
         H = r.useRef(void 0),
         j = r.useMemo(
             () =>
@@ -127,7 +127,7 @@ function M(e) {
                 let t = Array.from(e);
                 "multiple" === u && t.length < 1 ? f([]) : "multiple" === u ? f(t.map((e) => e.value)) : f(t[0]?.value),
                     h && s && o?.(!1),
-                    D(!1);
+                    y(!1);
             },
             [W, u, f, h, s, o, g],
         ),
@@ -154,7 +154,7 @@ function M(e) {
             isOpen: s,
             setIsOpen: o,
             isEditing: L,
-            setIsEditing: D,
+            setIsEditing: y,
             ...c,
         },
         children: t,
@@ -176,7 +176,7 @@ function U(e) {
     let {
             id: t,
             autoFocus: n,
-            placeholder: a = D.intl.string(L.default["A+pfVR"]),
+            placeholder: a = y.intl.string(L.default["A+pfVR"]),
             hideTags: l,
             name: d,
             form: u,
@@ -207,8 +207,8 @@ function U(e) {
             isInert: K,
             isCollapsible: $,
             hasValue: z,
-            handleSelectionChange: q,
-            onSelectionChange: Z,
+            handleSelectionChange: Z,
+            onSelectionChange: q,
             isOpen: X,
             setIsOpen: Q,
             options: J,
@@ -225,8 +225,8 @@ function U(e) {
             K || Q?.((e) => (e || M.current?.focus(), !e));
         }, [K, Q]),
         ed = r.useCallback(() => {
-            !0 === B && ("multiple" === x ? Z([]) : Z(null), ei(""), M.current?.focus());
-        }, [Z, x, B, ei]),
+            !0 === B && ("multiple" === x ? q([]) : q(null), ei(""), M.current?.focus());
+        }, [q, x, B, ei]),
         ec = r.useCallback(
             (e) => {
                 ea(!0), g?.(e), M.current?.setSelectionRange(en?.length ?? 0, en?.length ?? 0);
@@ -259,9 +259,9 @@ function U(e) {
             (e) => {
                 if (K) return;
                 let t = Array.from(e)[0];
-                q(ee.filter((e) => e.id !== t));
+                Z(ee.filter((e) => e.id !== t));
             },
-            [q, ee, K],
+            [Z, ee, K],
         ),
         eI = r.useCallback(
             (e) => {
@@ -301,8 +301,8 @@ function U(e) {
                         if (null == w || t - 1 < w) return;
                         let i = et[w];
                         if (null == i || !0 === i.disabled) return;
-                        if (H && 1 === ee.length && ee.includes(i)) return void q(ee);
-                        q("single" === x ? [i] : (0, A.qH)(x, ee, i));
+                        if (H && 1 === ee.length && ee.includes(i)) return void Z(ee);
+                        Z("single" === x ? [i] : (0, A.qH)(x, ee, i));
                         break;
                     case "Backspace":
                         "multiple" === x &&
@@ -323,7 +323,7 @@ function U(e) {
                         G(t - 1);
                 }
             },
-            [x, H, B, z, Y, X, N, ed, q, ee, en, Q, et, w, G],
+            [x, H, B, z, Y, X, N, ed, Z, ee, en, Q, et, w, G],
         ),
         ef = r.useCallback(
             (e) => {
@@ -337,7 +337,7 @@ function U(e) {
                 if (er) return null;
                 let e = Array.from(ee)[0];
                 return (0, i.jsx)("div", {
-                    className: y.OS,
+                    className: D.OS,
                     children: (0, i.jsx)(h.c, { ...e, onClick: eA, "aria-hidden": !0, inInput: !0 }),
                 });
             }
@@ -351,13 +351,13 @@ function U(e) {
                         label: e.label,
                         icon: t,
                         isDisabled: k || e.disabled,
-                        accessibilityHint: D.intl.string(L.default["/Y7vRd"]),
+                        accessibilityHint: y.intl.string(L.default["/Y7vRd"]),
                     }
                 );
             });
             return (0, i.jsx)(T.C, {
                 listRef: b,
-                label: D.intl.string(L.default.VMNfsY),
+                label: y.intl.string(L.default.VMNfsY),
                 items: e,
                 layout: "inline",
                 onRemove: eh,
@@ -381,10 +381,10 @@ function U(e) {
                 handleToggle: eo,
                 handleClear: ed,
                 children: (0, i.jsx)("div", {
-                    className: s()(y._U, { [y.kS]: es, [y.kj]: es && C }),
+                    className: s()(D._U, { [D.kS]: es, [D.kj]: es && C }),
                     onClick: eE,
                     children: (0, i.jsxs)("div", {
-                        className: y.P$,
+                        className: D.P$,
                         children: [
                             ep,
                             (0, i.jsx)(m.vN, {
@@ -392,7 +392,7 @@ function U(e) {
                                 children: (0, i.jsx)(p.p, {
                                     ref: M,
                                     id: t,
-                                    className: s()(v.input, y.kk, { [y.kK]: "single" === x && z && !er }),
+                                    className: s()(v.input, D.kk, { [D.kK]: "single" === x && z && !er }),
                                     autoFocus: n,
                                     placeholder: a,
                                     role: "combobox",
@@ -427,7 +427,7 @@ function U(e) {
                 disabled: K,
                 selectionMode: x,
                 selectedItems: ee,
-                onSelectionChange: q,
+                onSelectionChange: Z,
                 listItems: J,
             }),
         ],

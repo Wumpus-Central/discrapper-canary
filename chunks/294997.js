@@ -1,35 +1,35 @@
 "use strict";
-n.d(t, { T: () => o }), n(321073);
+n.d(t, { T: () => l }), n(321073);
 var i = n(143236),
     r = n(941426),
-    s = n(179689);
-let a = new r.Vy("Flux");
-class o extends i.EventEmitter {
+    a = n(179689);
+let s = new r.Vy("Flux");
+class l extends i.EventEmitter {
     logs = [];
     persist;
     constructor({ persist: e = !1 } = {}) {
         super(), (this.persist = e);
     }
     log(e, t) {
-        let n = new u(e),
+        let n = new d(e),
             i = (t, i) => {
                 let r,
-                    a = { name: t, time: -1 },
-                    o = s.FO.now();
+                    s = { name: t, time: -1 },
+                    l = a.FO.now();
                 try {
                     r = i();
                 } finally {
-                    (a.time = s.FO.now() - o), this.persist && n.traces.push(a), this.emit("trace", e.type, t, a.time);
+                    (s.time = a.FO.now() - l), this.persist && n.traces.push(s), this.emit("trace", e.type, t, s.time);
                 }
                 return r;
             };
-        n.startTime = s.FO.now();
+        n.startTime = a.FO.now();
         try {
             t(i);
         } catch (e) {
             throw ((n.error = e), e);
         } finally {
-            (n.totalTime = s.FO.now() - n.startTime),
+            (n.totalTime = a.FO.now() - n.startTime),
                 this.persist && n.totalTime > 0 && this.logs.push(n),
                 this.logs.length > 1e3 && this.logs.shift(),
                 this.emit("log", e);
@@ -43,33 +43,33 @@ class o extends i.EventEmitter {
             if (null == e || t.name === e) for (let e of t.traces) i.push([e.name, t.name, e.time]);
         i.sort((e, t) => t[2] - e[2]), i.length > t && (i.length = t);
         let r = 0,
-            s = 0,
-            o = i
+            a = 0,
+            l = i
                 .map((t) => {
-                    let [n, i, s] = t,
-                        a = `${n}`;
-                    return null == e && (a += `<${i}>`), (r = Math.max(a.length, r)), [a, s];
+                    let [n, i, a] = t,
+                        s = `${n}`;
+                    return null == e && (s += `<${i}>`), (r = Math.max(s.length, r)), [s, a];
                 })
                 .map((e) => {
                     let [t, n] = e;
-                    return (s += n), `${t.padEnd(r + 1, " ")} - ${n}ms`;
+                    return (a += n), `${t.padEnd(r + 1, " ")} - ${n}ms`;
                 })
                 .join("\n");
         return (
             0 === i.length ||
                 i[0][2] < 10 ||
-                s < 20 ||
-                (a.log("Using Hermes:", void 0 !== n.g?.HermesInternal),
-                a.log(`${
+                a < 20 ||
+                (s.log("Using Hermes:", void 0 !== n.g?.HermesInternal),
+                s.log(`${
                     null != e
                         ? `
 
 === ${e} ===`
                         : ""
                 }
-${o}
+${l}
 `),
-                a.log(`Total Time: ${s}ms`)),
+                s.log(`Total Time: ${a}ms`)),
             i
         );
     }
@@ -79,30 +79,30 @@ ${o}
         for (let e of this.logs) for (let t of e.traces) i[t.name] = [t.name, e.name, t.time];
         let r = Object.values(i);
         r.sort((e, t) => t[2] - e[2]), r.length > t && (r.length = t);
-        let s = 0,
-            o = 0,
-            l = r
+        let a = 0,
+            l = 0,
+            o = r
                 .map((e) => {
                     let [t, n, i] = e;
-                    return (s = Math.max(t.length, s)), [t, i];
+                    return (a = Math.max(t.length, a)), [t, i];
                 })
                 .map((e) => {
                     let [t, n] = e;
-                    return (o += n), `${t.padEnd(s + 1, " ")} - ${n}ms`;
+                    return (l += n), `${t.padEnd(a + 1, " ")} - ${n}ms`;
                 })
                 .join("\n");
         return (
             0 === r.length ||
-                o < 8 ||
-                a.log(
+                l < 8 ||
+                s.log(
                     `
 Using Hermes: ${void 0 !== n.g?.HermesInternal}`,
                     `
 
 === ${e} ===
-${l}`,
+${o}`,
                     `
-Total Time: ${o}ms
+Total Time: ${l}ms
 
 `,
                 ),
@@ -110,8 +110,8 @@ Total Time: ${o}ms
         );
     }
 }
-let l = 0;
-class u {
+let o = 0;
+class d {
     id;
     action;
     createdAt;
@@ -120,7 +120,7 @@ class u {
     traces = [];
     error;
     constructor(e) {
-        (this.id = l++), (this.action = e), (this.createdAt = new Date());
+        (this.id = o++), (this.action = e), (this.createdAt = new Date());
     }
     get name() {
         return this.action.type;

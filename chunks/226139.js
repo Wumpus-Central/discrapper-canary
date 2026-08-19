@@ -1,14 +1,14 @@
 "use strict";
-n.d(t, { D3: () => o, J9: () => a, oL: () => s });
+n.d(t, { D3: () => l, J9: () => s, oL: () => a });
 var i = n(194004),
     r = n(375708);
-function s() {
+function a() {
     return [r.intl.string(r.t.b6wEe6), r.intl.string(r.t.i8o9hX)];
 }
-function a() {
+function s() {
     return [r.intl.string(r.t.vqnToc), r.intl.string(r.t["9yh+dM"])];
 }
-let o = [
+let l = [
     {
         id: "781323471249604648",
         format_type: i.TG.APNG,

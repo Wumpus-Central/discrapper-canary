@@ -1,6 +1,6 @@
-!(function (e) {
+!(function (a) {
     "use strict";
-    var t = {
+    var s = {
         1: "'inci",
         5: "'inci",
         8: "'inci",
@@ -20,7 +20,7 @@
         60: "'\u0131nc\u0131",
         90: "'\u0131nc\u0131",
     };
-    e.defineLocale("tr", {
+    a.defineLocale("tr", {
         months: "Ocak_\u015Eubat_Mart_Nisan_May\u0131s_Haziran_Temmuz_A\u011Fustos_Eyl\xfcl_Ekim_Kas\u0131m_Aral\u0131k".split(
             "_",
         ),
@@ -60,19 +60,19 @@
             y: "bir y\u0131l",
             yy: "%d y\u0131l",
         },
-        ordinal: function (e, n) {
-            switch (n) {
+        ordinal: function (a, e) {
+            switch (e) {
                 case "d":
                 case "D":
                 case "Do":
                 case "DD":
-                    return e;
+                    return a;
                 default:
-                    if (0 === e) return e + "'\u0131nc\u0131";
-                    var i = e % 10;
-                    return e + (t[i] || t[(e % 100) - i] || t[e >= 100 ? 100 : null]);
+                    if (0 === a) return a + "'\u0131nc\u0131";
+                    var i = a % 10;
+                    return a + (s[i] || s[(a % 100) - i] || s[a >= 100 ? 100 : null]);
             }
         },
         week: { dow: 1, doy: 7 },
     });
-})(n(989349));
+})(e(989349));

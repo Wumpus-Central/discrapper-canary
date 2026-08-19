@@ -1,4 +1,4 @@
-n.d(t, { A: () => b });
+n.d(t, { A: () => y });
 var r = n(477900),
     i = n(503698),
     s = n.n(i),
@@ -34,7 +34,7 @@ function R(e) {
                 className: s()(v.mA, { [v.zj]: (a || o) && !n, [v.Ge]: u }),
                 children: (0, r.jsx)(k, { product: t, isCardHovered: n }),
             }),
-            a && (0, r.jsx)(y, { hidden: n }),
+            a && (0, r.jsx)(b, { hidden: n }),
         ],
     });
 }
@@ -65,7 +65,7 @@ function k(e) {
             return null;
     }
 }
-function y(e) {
+function b(e) {
     let { hidden: t } = e;
     return (0, r.jsx)(a.r, {
         size: "custom",
@@ -75,7 +75,7 @@ function y(e) {
         className: s()(v.zo, { [v.R]: t }),
     });
 }
-let b = function (e) {
+let y = function (e) {
     let { skuId: t, isCardHovered: n, overrideVariantIndex: i } = e,
         s = (0, A.Vm)(t),
         l = (0, p.Q)(s);

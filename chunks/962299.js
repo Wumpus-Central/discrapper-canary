@@ -1,71 +1,71 @@
-r.d(e, { M: () => k });
-var n = r(477900),
-    l = r(582128),
-    s = r(403581),
-    c = r(834730),
-    o = r(821609),
-    i = r(396583),
-    a = r(812095),
-    u = r(532794),
-    d = r(871123),
-    m = r(69236),
-    x = r(31969),
-    h = r(421108),
-    v = r(647474),
-    j = r(202541),
-    f = r(375708),
-    N = r(848618);
-function k(t) {
-    let { applicationId: e, analyticsLocations: r } = t,
-        k = (0, x.F)("storefront_banner", { applicationId: e }),
+n.d(e, { M: () => N });
+var r = n(477900),
+    l = n(582128),
+    s = n(403581),
+    c = n(834730),
+    o = n(821609),
+    i = n(396583),
+    a = n(812095),
+    u = n(532794),
+    d = n(871123),
+    m = n(69236),
+    x = n(31969),
+    h = n(421108),
+    v = n(647474),
+    j = n(202541),
+    f = n(375708),
+    k = n(848618);
+function N(t) {
+    let { applicationId: e, analyticsLocations: n } = t,
+        N = (0, x.F)("storefront_banner", { applicationId: e }),
         p = (0, m.W8)(),
-        g = k?.endsAt ?? null,
+        g = N?.endsAt ?? null,
         [, b] = l.useReducer((t) => t + 1, 0);
     (0, i.A)(b, null != g ? 1e3 : null);
-    let A = null != g && null == (0, h.ZH)(g),
-        C = l.useCallback(() => {
+    let C = null != g && null == (0, h.ZH)(g),
+        A = l.useCallback(() => {
             (0, u.A)({
                 subscriptionTier: j.pe.TIER_2,
-                analyticsLocations: r,
+                analyticsLocations: n,
                 applicationId: e,
-                ...(0, d.zl)(k?.rewardRequirements ?? []),
+                ...(0, d.zl)(N?.rewardRequirements ?? []),
             });
-        }, [r, e, k]);
-    if (null == k || A) return null;
-    if ("nitro" === k.flavor && !p)
-        return (0, n.jsx)(v.A, {
+        }, [n, e, N]);
+    if (null == N || C) return null;
+    if ("nitro" === N.flavor && !p)
+        return (0, r.jsx)(v.A, {
             color: "nitro-pink",
             sticky: !0,
-            children: (0, n.jsxs)("div", {
-                className: N.kL,
+            children: (0, r.jsxs)("div", {
+                className: k.kL,
                 children: [
-                    (0, n.jsxs)("div", {
-                        className: N.FS,
+                    (0, r.jsxs)("div", {
+                        className: k.FS,
                         children: [
-                            (0, n.jsx)(s.t, { size: "xs", color: "currentColor", className: N.Kk }),
-                            (0, n.jsx)(c.E, {
+                            (0, r.jsx)(s.t, { size: "xs", color: "currentColor", className: k.Kk }),
+                            (0, r.jsx)(c.E, {
                                 variant: "text-sm/normal",
                                 color: "currentColor",
-                                children: (0, a.U)(k.text),
+                                children: (0, a.U)(N.text),
                             }),
                         ],
                     }),
-                    (0, n.jsx)(o.$, {
+                    (0, r.jsx)(o.$, {
                         variant: "expressive",
                         size: "sm",
                         icon: s.t,
                         text: f.intl.string(f.t.pj0XBN),
-                        onClick: C,
+                        onClick: A,
                     }),
                 ],
             }),
         });
-    let y = "nitro" === k.flavor;
-    return (0, n.jsx)(v.e, {
+    let y = "nitro" === N.flavor;
+    return (0, r.jsx)(v.e, {
         sticky: !0,
-        Icon: y ? s.t : k.Icon,
-        endDatetime: k.endsAt,
+        Icon: y ? s.t : N.Icon,
+        endDatetime: N.endsAt,
         color: y ? "nitro-pink" : void 0,
-        children: (0, n.jsx)(c.E, { variant: "text-sm/normal", color: "currentColor", children: (0, a.U)(k.text) }),
+        children: (0, r.jsx)(c.E, { variant: "text-sm/normal", color: "currentColor", children: (0, a.U)(N.text) }),
     });
 }

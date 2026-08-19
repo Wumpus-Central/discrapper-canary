@@ -37,9 +37,9 @@ function h(e) {
             eventCapture: O,
             assetLoader: R,
             onLoad: L,
-            stateMachine: D,
+            stateMachine: y,
         } = e,
-        y = r.useContext(o.C),
+        D = r.useContext(o.C),
         v = (0, l.R)(),
         b = (0, d.G9)().isWindowFocused?.() ?? v,
         [M, P] = (0, l.X)(3e4),
@@ -49,7 +49,7 @@ function h(e) {
             eventTarget: h?.current,
             buffer: t,
             autoplay: n,
-            stateMachines: null != D ? [D] : U,
+            stateMachines: null != y ? [y] : U,
             artboard: I,
             useOffscreenRenderer: !0,
             layout: new s.Layout({
@@ -240,7 +240,7 @@ function h(e) {
             onDataBindingChange: g,
         }),
         r.useEffect(() => {
-            if (null != x && "short-loop" === f && y.reducedMotion.enabled) {
+            if (null != x && "short-loop" === f && D.reducedMotion.enabled) {
                 function e() {
                     null != x &&
                         x.isPlaying &&
@@ -260,7 +260,7 @@ function h(e) {
                     }
                 );
             }
-        }, [x, f, y.reducedMotion.enabled]),
+        }, [x, f, D.reducedMotion.enabled]),
         r.useLayoutEffect(() => {
             if (null != x) {
                 "layout" === c && x.resizeDrawingSurfaceToCanvas();
@@ -273,7 +273,7 @@ function h(e) {
             }
         }, [x, c]),
         r.useEffect(() => {
-            if (null == x || !y.reducedMotion.enabled) return;
+            if (null == x || !D.reducedMotion.enabled) return;
             let e = x.canvas;
             if (null == e) return;
             let t = new ResizeObserver(() => {
@@ -281,15 +281,15 @@ function h(e) {
                     x.isPlaying || (x.startRendering(), requestAnimationFrame(() => x.stopRendering()));
             });
             return t.observe(e), () => t.disconnect();
-        }, [x, y.reducedMotion.enabled]),
+        }, [x, D.reducedMotion.enabled]),
         r.useEffect(() => {
             null != x &&
                 null == U &&
-                null == D &&
+                null == y &&
                 (w(x.stateMachineNames),
                 x.reset({ stateMachines: x.stateMachineNames, autoplay: n, artboard: I, autoBind: !0 }),
                 x.setupRiveListeners());
-        }, [x, n, U, I, D]);
+        }, [x, n, U, I, y]);
     let F = r.useRef(0);
     r.useEffect(() => {
         if (null == x) return;
@@ -298,7 +298,7 @@ function h(e) {
                 "number" == typeof t.data &&
                 ((F.current = t.data),
                 t.data > 0 &&
-                    ("halt" === f && y.reducedMotion.enabled && x.isPlaying && x.pause(),
+                    ("halt" === f && D.reducedMotion.enabled && x.isPlaying && x.pause(),
                     x.off(s.EventType.Advance, e)));
         };
         return (
@@ -308,7 +308,7 @@ function h(e) {
                 x.off(s.EventType.Advance, e);
             }
         );
-    }, [x, y.reducedMotion.enabled, f, n]),
+    }, [x, D.reducedMotion.enabled, f, n]),
         r.useEffect(() => {
             P();
         }, [P, I, c, u, m, N, T]);

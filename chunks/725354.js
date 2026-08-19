@@ -1,88 +1,88 @@
 "use strict";
-var n, i;
-function r(e) {
-    for (let t = 0; t < e.length; t++) e[t] = s(e[t]);
+var r, n;
+function o(e) {
+    for (let t = 0; t < e.length; t++) e[t] = i(e[t]);
     return !0;
 }
-function s(e) {
+function i(e) {
     if ("string" == typeof e) return { type: 0, value: e };
-    let [i] = e;
-    switch (i) {
-        case n.Argument:
-            return { type: i, value: e[1] };
-        case n.Number:
-        case n.Date:
-        case n.Time:
-            return { type: i, value: e[1], style: e[2] };
-        case n.Select:
-        case n.Plural:
+    let [n] = e;
+    switch (n) {
+        case r.Argument:
+            return { type: n, value: e[1] };
+        case r.Number:
+        case r.Date:
+        case r.Time:
+            return { type: n, value: e[1], style: e[2] };
+        case r.Select:
+        case r.Plural:
             return (function (e) {
-                let [t, i, s, a, o] = e;
-                for (let e in s) r(s[e]), (s[e] = { value: s[e] });
-                return t === n.Plural
-                    ? { type: t, value: i, options: s, offset: a, pluralType: o }
-                    : { type: t, value: i, options: s, offset: a };
+                let [t, n, i, a, s] = e;
+                for (let e in i) o(i[e]), (i[e] = { value: i[e] });
+                return t === r.Plural
+                    ? { type: t, value: n, options: i, offset: a, pluralType: s }
+                    : { type: t, value: n, options: i, offset: a };
             })(e);
-        case n.Pound:
+        case r.Pound:
             return t.FORMAT_JS_POUND;
-        case n.Tag: {
-            let [t, n, i, s] = e;
-            return r(i), null != s && r(s), { type: t, value: n, children: i, control: s };
+        case r.Tag: {
+            let [t, r, n, i] = e;
+            return o(n), null != i && o(i), { type: t, value: r, children: n, control: i };
         }
         default:
-            throw Error(`FormatJS keyless JSON encountered an unknown type: ${i}`);
+            throw Error(`FormatJS keyless JSON encountered an unknown type: ${n}`);
     }
 }
 Object.defineProperty(t, "__esModule", { value: !0 }),
     (t.FORMAT_JS_POUND = t.FormatJsNodeType = void 0),
     (t.hydrateFormatJsAst = function (e) {
         return "string" == typeof e
-            ? s(e)
+            ? i(e)
             : "string" == typeof e[0]
-              ? (r(e), e)
+              ? (o(e), e)
               : 0 === e.length
                 ? e
                 : Array.isArray(e[0])
-                  ? (r(e), e)
-                  : s(e);
+                  ? (o(e), e)
+                  : i(e);
     }),
     (t.compressFormatJsToAst = function e(t) {
         if (Array.isArray(t)) return t.map((t) => e(t));
         switch (t.type) {
-            case n.Literal:
+            case r.Literal:
                 return t.value;
-            case n.Argument:
+            case r.Argument:
                 return [t.type, t.value];
-            case n.Number:
-            case n.Date:
-            case n.Time:
+            case r.Number:
+            case r.Date:
+            case r.Time:
                 return [t.type, t.value, t.style];
-            case n.Select: {
-                let n = {};
-                for (let [i, r] of Object.entries(t.options)) n[i] = e(r.value);
-                return [t.type, t.value, n];
+            case r.Select: {
+                let r = {};
+                for (let [n, o] of Object.entries(t.options)) r[n] = e(o.value);
+                return [t.type, t.value, r];
             }
-            case n.Plural: {
-                let n = {};
-                for (let [i, r] of Object.entries(t.options)) n[i] = e(r.value);
-                return [t.type, t.value, n, t.offset, t.pluralType];
+            case r.Plural: {
+                let r = {};
+                for (let [n, o] of Object.entries(t.options)) r[n] = e(o.value);
+                return [t.type, t.value, r, t.offset, t.pluralType];
             }
-            case n.Pound:
+            case r.Pound:
                 return [t.type];
-            case n.Tag:
+            case r.Tag:
                 return [t.type, t.value, e(t.children), e(t.control)];
         }
     }),
     (t.isCompressedAst = function (e) {
         return "string" == typeof e || (!!Array.isArray(e) && (Array.isArray(e[0]) || "string" == typeof e[0]));
     }),
-    ((i = n || (t.FormatJsNodeType = n = {}))[(i.Literal = 0)] = "Literal"),
-    (i[(i.Argument = 1)] = "Argument"),
-    (i[(i.Number = 2)] = "Number"),
-    (i[(i.Date = 3)] = "Date"),
-    (i[(i.Time = 4)] = "Time"),
-    (i[(i.Select = 5)] = "Select"),
-    (i[(i.Plural = 6)] = "Plural"),
-    (i[(i.Pound = 7)] = "Pound"),
-    (i[(i.Tag = 8)] = "Tag"),
+    ((n = r || (t.FormatJsNodeType = r = {}))[(n.Literal = 0)] = "Literal"),
+    (n[(n.Argument = 1)] = "Argument"),
+    (n[(n.Number = 2)] = "Number"),
+    (n[(n.Date = 3)] = "Date"),
+    (n[(n.Time = 4)] = "Time"),
+    (n[(n.Select = 5)] = "Select"),
+    (n[(n.Plural = 6)] = "Plural"),
+    (n[(n.Pound = 7)] = "Pound"),
+    (n[(n.Tag = 8)] = "Tag"),
     (t.FORMAT_JS_POUND = Object.freeze({ type: 7 }));

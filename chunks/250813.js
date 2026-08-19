@@ -1,4 +1,4 @@
-e.exports = {
+_.exports = {
     Gd: "scrollerBase__99f8c",
     GV: "scrollbarGutter__99f8c",
     x2: "scrollbarGutterStable__99f8c",

@@ -1,27 +1,27 @@
 "use strict";
-n.d(t, { iP: () => r, pA: () => s, vS: () => a });
-let i = null;
-function r(e, t = "assertive", n = 7e3) {
-    i
-        ? i.announce(e, t, n)
-        : ((i = new o()),
+r.d(t, { iP: () => o, pA: () => i, vS: () => a });
+let n = null;
+function o(e, t = "assertive", r = 7e3) {
+    n
+        ? n.announce(e, t, r)
+        : ((n = new s()),
           ("boolean" == typeof IS_REACT_ACT_ENVIRONMENT ? IS_REACT_ACT_ENVIRONMENT : "u" > typeof jest)
-              ? i.announce(e, t, n)
+              ? n.announce(e, t, r)
               : setTimeout(() => {
-                    (null == i ? void 0 : i.isAttached()) && (null == i || i.announce(e, t, n));
+                    (null == n ? void 0 : n.isAttached()) && (null == n || n.announce(e, t, r));
                 }, 100));
 }
-function s(e) {
-    i && i.clear(e);
+function i(e) {
+    n && n.clear(e);
 }
 function a(e = null) {
-    i
-        ? i.move(e)
+    n
+        ? n.move(e)
         : (function (e = null) {
-              i || (i = new o(e));
+              n || (n = new s(e));
           })(e);
 }
-class o {
+class s {
     isAttached() {
         var e;
         return null == (e = this.node) ? void 0 : e.isConnected;
@@ -41,20 +41,20 @@ class o {
     move(e = null) {
         this.node && ((this.parentNode = null != e ? e : document.body), this.parentNode.prepend(this.node));
     }
-    announce(e, t = "assertive", n = 7e3) {
-        var i, r;
+    announce(e, t = "assertive", r = 7e3) {
+        var n, o;
         if (!this.node) return;
-        let s = document.createElement("div");
+        let i = document.createElement("div");
         "object" == typeof e
-            ? (s.setAttribute("role", "img"), s.setAttribute("aria-labelledby", e["aria-labelledby"]))
-            : (s.textContent = e),
+            ? (i.setAttribute("role", "img"), i.setAttribute("aria-labelledby", e["aria-labelledby"]))
+            : (i.textContent = e),
             "assertive" === t
-                ? null == (i = this.assertiveLog) || i.appendChild(s)
-                : null == (r = this.politeLog) || r.appendChild(s),
+                ? null == (n = this.assertiveLog) || n.appendChild(i)
+                : null == (o = this.politeLog) || o.appendChild(i),
             "" !== e &&
                 setTimeout(() => {
-                    s.remove();
-                }, n);
+                    i.remove();
+                }, r);
     }
     clear(e) {
         this.node &&

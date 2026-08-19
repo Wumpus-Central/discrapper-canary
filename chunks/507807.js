@@ -12,11 +12,11 @@ n(989349).defineLocale("vi", {
     weekdaysMin: "CN_T2_T3_T4_T5_T6_T7".split("_"),
     weekdaysParseExact: !0,
     meridiemParse: /sa|ch/i,
-    isPM: function (e) {
-        return /^ch$/i.test(e);
+    isPM: function (t) {
+        return /^ch$/i.test(t);
     },
-    meridiem: function (e, t, n) {
-        return e < 12 ? (n ? "sa" : "SA") : n ? "ch" : "CH";
+    meridiem: function (t, h, n) {
+        return t < 12 ? (n ? "sa" : "SA") : n ? "ch" : "CH";
     },
     longDateFormat: {
         LT: "HH:mm",
@@ -55,8 +55,8 @@ n(989349).defineLocale("vi", {
         yy: "%d n\u0103m",
     },
     dayOfMonthOrdinalParse: /\d{1,2}/,
-    ordinal: function (e) {
-        return e;
+    ordinal: function (t) {
+        return t;
     },
     week: { dow: 1, doy: 4 },
 });

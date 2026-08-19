@@ -1,15 +1,15 @@
 "use strict";
-n.d(t, { S7: () => s, TR: () => o, nu: () => a });
+n.d(t, { S7: () => a, TR: () => l, nu: () => s });
 var i,
     r,
-    s =
+    a =
         (((i = {})[(i.DEPRECATED_GAME = 1)] = "DEPRECATED_GAME"),
         (i[(i.TICKETED_EVENTS = 3)] = "TICKETED_EVENTS"),
         (i[(i.GUILD_ROLE_SUBSCRIPTIONS = 4)] = "GUILD_ROLE_SUBSCRIPTIONS"),
         (i[(i.GAME = 5)] = "GAME"),
         (i[(i.NON_GAME_DETECTABLE = 6)] = "NON_GAME_DETECTABLE"),
         i),
-    a =
+    s =
         (((r = {})[(r.BOT = 0)] = "BOT"),
         (r[(r.SERVER = 1)] = "SERVER"),
         (r[(r.SYSTEM_DM = 2)] = "SYSTEM_DM"),
@@ -19,7 +19,7 @@ var i,
         (r[(r.ORIGINAL_POSTER = 6)] = "ORIGINAL_POSTER"),
         (r[(r.AI = 7)] = "AI"),
         r);
-let o = [
+let l = [
     "1102741339122188349",
     "1211781489931452447",
     "1211780388607885393",

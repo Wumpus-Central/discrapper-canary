@@ -1,4 +1,4 @@
-e.exports = {
+_.exports = {
     m7: "scrollerWrapper__8dd17",
     sF: "maskLeft__8dd17",
     RC: "maskRight__8dd17",

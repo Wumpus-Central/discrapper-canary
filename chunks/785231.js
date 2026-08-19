@@ -1,4 +1,4 @@
-e.exports = {
+a.exports = {
     UP: "eyebrow_a7acae",
     VD: "live_a7acae",
     qG: "liveShapeRound_a7acae",

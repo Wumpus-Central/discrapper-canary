@@ -1,4 +1,4 @@
-n.d(t, { GQ: () => T, NF: () => N, QG: () => I, Tp: () => S, ZR: () => d, ne: () => R });
+n.d(t, { GQ: () => T, NF: () => N, QG: () => I, Tp: () => O, ZR: () => d, ne: () => R });
 var i = n(17928),
     l = n(554146),
     r = n(826673),
@@ -7,8 +7,8 @@ var i = n(17928),
     E = n(935208),
     o = n(851746),
     c = n(894374),
-    u = n(103411),
-    _ = n(49999),
+    _ = n(103411),
+    u = n(49999),
     A = n(375708);
 function T(e) {
     let t = (e - Date.now()) / a.A.Millis.HOUR;
@@ -35,12 +35,12 @@ function N(e) {
 }
 function R(e) {
     null != e
-        ? (0, s.qr)(l.M.REFERRAL_PROGRAM_POPOVER_V2, e, { dismissAction: _.i.INDIRECT_ACTION })
+        ? (0, s.qr)(l.M.REFERRAL_PROGRAM_POPOVER_V2, e, { dismissAction: u.i.INDIRECT_ACTION })
         : (0, r.Dr)(l.M.REFERRAL_PROGRAM_POPOVER);
 }
-function S() {
+function O() {
     let e,
-        t = (0, u.m)(!1),
+        t = (0, _.m)(!1),
         n = (0, i.bG)([o.A], () => o.A.getReferralsRemaining()),
         s = (0, i.bG)([o.A], () => o.A.getReminderStateId());
     return (

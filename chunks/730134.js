@@ -1,19 +1,19 @@
 "use strict";
 n.d(t, { A: () => o });
-var i = n(477900),
-    r = n(582128),
-    a = n(778712),
-    s = n(97808),
-    l = n(386467);
-let o = r.memo(function (e) {
+var l = n(477900),
+    i = n(582128),
+    s = n(778712),
+    r = n(97808),
+    a = n(386467);
+let o = i.memo(function (e) {
     var t;
-    let { user: n, size: o = a._3.SIZE_32, animate: d = !1, "aria-hidden": c = !1, ...u } = e,
-        _ = r.useContext(l.A);
-    return (0, i.jsx)(s.eu, {
-        src: ((t = (0, a.FT)(o)), n.getAvatarURL(_, t, d)),
+    let { user: n, size: o = s._3.SIZE_32, animate: u = !1, "aria-hidden": c = !1, ...d } = e,
+        h = i.useContext(a.A);
+    return (0, l.jsx)(r.eu, {
+        src: ((t = (0, s.FT)(o)), n.getAvatarURL(h, t, u)),
         size: o,
         "aria-label": c ? void 0 : n.username,
         "aria-hidden": c,
-        ...u,
+        ...d,
     });
 });

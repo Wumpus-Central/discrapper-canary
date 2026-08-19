@@ -1,10 +1,10 @@
 "use strict";
-n.d(t, { Iy: () => s, _z: () => a, wL: () => r });
+n.d(t, { Iy: () => a, _z: () => s, wL: () => r });
 var i = n(325278);
 function r(e) {
     return null != e && (e.startsWith(i.U4.GUILD) || e.startsWith(i.U4.CALL));
 }
-function s(e) {
+function a(e) {
     let t = e.split(":"),
         n = t[0];
     switch (n) {
@@ -20,13 +20,13 @@ function s(e) {
             throw Error(`Unknown stream type ${n}`);
     }
 }
-function a(e) {
-    let { streamType: t, guildId: n, channelId: r, ownerId: s } = e;
+function s(e) {
+    let { streamType: t, guildId: n, channelId: r, ownerId: a } = e;
     switch (t) {
         case i.U4.GUILD:
-            return [t, n, r, s].join(":");
+            return [t, n, r, a].join(":");
         case i.U4.CALL:
-            return [t, r, s].join(":");
+            return [t, r, a].join(":");
         default:
             throw Error(`Unknown stream type ${t}`);
     }

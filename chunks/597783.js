@@ -1,55 +1,55 @@
-n.d(t, { Z: () => C });
+n.d(t, { Z: () => p });
 var r = n(582128),
     i = n(17928),
     s = n(174459),
-    l = n(428262),
+    l = n(158045),
     a = n(440938),
     o = n(590180),
     u = n(993408),
     c = n(331884),
     d = n(652215);
-function C(e, t) {
+function p(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "product",
-        C = (0, a.uM)(),
-        p = (0, i.bG)([o.A], () => o.A.getProduct(e)),
+        p = (0, a.uM)(),
+        g = (0, i.bG)([o.A], () => o.A.getProduct(e)),
         I = (0, c.i)(),
-        x = l.Ay.canUseShopDiscounts(I),
-        g = r.useRef(null),
-        f = r.useCallback(() => {
-            let r = null != p ? (0, u.Br)(p, x, !1) : null,
-                i = null != p ? (0, u.c7)(p, x, !1) : void 0;
+        _ = l.Ay.canUseShopDiscounts(I),
+        C = r.useRef(null),
+        A = r.useCallback(() => {
+            let r = null != g ? (0, u.Br)(g, _, !1) : null,
+                i = null != g ? (0, u.c7)(g, _, !1) : void 0;
             s.default.track(d.HAw.COLLECTIBLES_TILE_IMPRESSION, {
-                collectibles_shop_session_id: C?.sessionId,
+                collectibles_shop_session_id: p?.sessionId,
                 sku_id: e,
                 display_price: r?.amount,
                 display_price_currency: r?.currency.toString(),
                 display_price_strikethrough: i,
-                position: C?.tilePosition,
+                position: p?.tilePosition,
                 page_type: t,
-                page_category: C?.pageCategory,
-                page_section: C?.pageSection,
+                page_category: p?.pageCategory,
+                page_section: p?.pageSection,
                 type: n,
-                category_position: C?.categoryPosition,
+                category_position: p?.categoryPosition,
             });
-        }, [C?.sessionId, C?.categoryPosition, C?.pageCategory, C?.pageSection, C?.tilePosition, x, t, p, e, n]),
-        A = r.useCallback(
+        }, [p?.sessionId, p?.categoryPosition, p?.pageCategory, p?.pageSection, p?.tilePosition, _, t, g, e, n]),
+        f = r.useCallback(
             (e) => {
                 e
-                    ? null === g.current &&
-                      (g.current = setTimeout(() => {
-                          f(), (g.current = null);
+                    ? null === C.current &&
+                      (C.current = setTimeout(() => {
+                          A(), (C.current = null);
                       }, 1e3))
-                    : null !== g.current && (clearTimeout(g.current), (g.current = null));
+                    : null !== C.current && (clearTimeout(C.current), (C.current = null));
             },
-            [f],
+            [A],
         );
     return (
         r.useEffect(
             () => () => {
-                null !== g.current && (clearTimeout(g.current), (g.current = null));
+                null !== C.current && (clearTimeout(C.current), (C.current = null));
             },
             [e],
         ),
-        { handleCardVisibilityChange: A }
+        { handleCardVisibilityChange: f }
     );
 }

@@ -1,32 +1,32 @@
-let i = Symbol("SemVer ANY");
-class r {
+let n = Symbol("SemVer ANY");
+class o {
     static get ANY() {
-        return i;
+        return n;
     }
     constructor(e, t) {
-        if (((t = s(t)), e instanceof r))
+        if (((t = i(t)), e instanceof o))
             if (!!t.loose === e.loose) return e;
             else e = e.value;
         u("comparator", (e = e.trim().split(/\s+/).join(" ")), t),
             (this.options = t),
             (this.loose = !!t.loose),
             this.parse(e),
-            this.semver === i ? (this.value = "") : (this.value = this.operator + this.semver.version),
+            this.semver === n ? (this.value = "") : (this.value = this.operator + this.semver.version),
             u("comp", this);
     }
     parse(e) {
-        let t = this.options.loose ? a[o.COMPARATORLOOSE] : a[o.COMPARATOR],
-            n = e.match(t);
-        if (!n) throw TypeError(`Invalid comparator: ${e}`);
-        (this.operator = void 0 !== n[1] ? n[1] : ""),
+        let t = this.options.loose ? a[s.COMPARATORLOOSE] : a[s.COMPARATOR],
+            r = e.match(t);
+        if (!r) throw TypeError(`Invalid comparator: ${e}`);
+        (this.operator = void 0 !== r[1] ? r[1] : ""),
             "=" === this.operator && (this.operator = ""),
-            n[2] ? (this.semver = new c(n[2], this.options.loose)) : (this.semver = i);
+            r[2] ? (this.semver = new c(r[2], this.options.loose)) : (this.semver = n);
     }
     toString() {
         return this.value;
     }
     test(e) {
-        if ((u("Comparator.test", e, this.options.loose), this.semver === i || e === i)) return !0;
+        if ((u("Comparator.test", e, this.options.loose), this.semver === n || e === n)) return !0;
         if ("string" == typeof e)
             try {
                 e = new c(e, this.options);
@@ -36,13 +36,13 @@ class r {
         return l(e, this.operator, this.semver, this.options);
     }
     intersects(e, t) {
-        if (!(e instanceof r)) throw TypeError("a Comparator is required");
+        if (!(e instanceof o)) throw TypeError("a Comparator is required");
         return "" === this.operator
-            ? "" === this.value || new d(e.value, t).test(this.value)
+            ? "" === this.value || new f(e.value, t).test(this.value)
             : "" === e.operator
-              ? "" === e.value || new d(this.value, t).test(e.semver)
+              ? "" === e.value || new f(this.value, t).test(e.semver)
               : !(
-                    ((t = s(t)).includePrerelease && ("<0.0.0-0" === this.value || "<0.0.0-0" === e.value)) ||
+                    ((t = i(t)).includePrerelease && ("<0.0.0-0" === this.value || "<0.0.0-0" === e.value)) ||
                     (!t.includePrerelease && (this.value.startsWith("<0.0.0") || e.value.startsWith("<0.0.0")))
                 ) &&
                 !!(
@@ -56,10 +56,10 @@ class r {
                 );
     }
 }
-e.exports = r;
-let s = n(131077),
-    { safeRe: a, t: o } = n(64672),
-    l = n(88701),
-    u = n(692714),
-    c = n(864886),
-    d = n(74509);
+e.exports = o;
+let i = r(131077),
+    { safeRe: a, t: s } = r(64672),
+    l = r(88701),
+    u = r(692714),
+    c = r(864886),
+    f = r(74509);

@@ -1,4 +1,4 @@
-n.d(t, { M$: () => R, Fv: () => O, kF: () => m, Oc: () => f, GY: () => b }), n(667532);
+n.d(t, { M$: () => v, Fv: () => O, kF: () => m, Oc: () => f, GY: () => b }), n(667532);
 var i = n(310953),
     l = n(473529),
     r = n(519059),
@@ -8,8 +8,8 @@ var i = n(310953),
     d = n(885386),
     c = n(189081),
     u = n(839067),
-    h = n(645959),
-    A = n(403362),
+    A = n(645959),
+    h = n(403362),
     E = n(265422),
     g = n(652215),
     C = n(746080);
@@ -24,7 +24,7 @@ let _ = () => {
         g.BVt.COLLECTIBLES_SHOP,
         d.dm.getSetting() ? g.BVt.FAMILY_CENTER : null,
         g.BVt.QUEST_HOME,
-    ].filter(A.Vq);
+    ].filter(h.Vq);
 };
 function I() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
@@ -33,7 +33,7 @@ function I() {
         !(function (e) {
             var t, n;
             let { channelId: i, path: l, basePath: r } = o.A.getState(),
-                s = h.A.getPrivateChannelIds(),
+                s = A.A.getPrivateChannelIds(),
                 a = __OVERLAY__ ? s : [..._(), ...s],
                 d =
                     (null == i ? ((t = l ?? r), _().findIndex((e) => t.startsWith(e))) : null != i ? a.indexOf(i) : 0) +
@@ -82,7 +82,7 @@ let m = { binds: ["alt+down"], comboKeysBindGlobal: !0, action: () => (I(), !1) 
         comboKeysBindGlobal: !0,
         action: () => ((0, T.OE)("keybind"), !1),
     },
-    R = {
+    v = {
         binds: (0, L.isMac)() || (0, L.isMacWeb)() ? ["mod+]"] : ["alt+right"],
         comboKeysBindGlobal: !0,
         action: () => ((0, T.Qb)("keybind"), !1),

@@ -1,8 +1,8 @@
 "use strict";
-var i = n(473560)(),
-    r = n(207001),
-    s = n(878562);
+var n = r(473560)(),
+    o = r(207001),
+    i = r(878562);
 e.exports = function () {
-    var e = s();
-    return String.prototype.trim !== e && (i ? r(String.prototype, "trim", e, !0) : r(String.prototype, "trim", e)), e;
+    var e = i();
+    return String.prototype.trim !== e && (n ? o(String.prototype, "trim", e, !0) : o(String.prototype, "trim", e)), e;
 };

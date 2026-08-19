@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => y });
+n.d(t, { A: () => D });
 var i = n(448761),
     r = n(17928),
     a = n(228366),
@@ -22,10 +22,10 @@ let d = null,
     S = !1,
     N = null,
     C = null;
-function R() {
+function O() {
     return !0;
 }
-function O(e) {
+function R(e) {
     let { messages: t } = e;
     t.forEach((e) => L(e));
 }
@@ -34,10 +34,10 @@ function L(e) {
     if (null == t) return !1;
     !A.has(t) && !E.has(t) && (E.add(t), a.h.wait(() => (0, l.kZ)(t).catch(o.FXj)));
 }
-class D extends r.Ay.Store {
+class y extends r.Ay.Store {
     static displayName = "ReferralTrialStore";
     initialize() {
-        this.waitFor(s.default), this.syncWith([s.default], R);
+        this.waitFor(s.default), this.syncWith([s.default], O);
     }
     checkAndFetchReferralsRemaining() {
         null == d && !_ && I < 6 && (null == f || f < Date.now()) && (0, l.xM)();
@@ -86,7 +86,7 @@ class D extends r.Ay.Store {
         return C;
     }
 }
-let y = new D(a.h, {
+let D = new y(a.h, {
     BILLING_REFERRAL_TRIAL_OFFER_UPDATE: function (e) {
         let { userTrialOfferId: t } = e;
         (_ || (0, l.xM)(), !E.has(t)) && (E.add(t), a.h.wait(() => (0, l.kZ)(t).catch(o.FXj)));
@@ -138,12 +138,12 @@ let y = new D(a.h, {
     REFERRALS_FETCH_ELIGIBLE_USER_FAIL: function () {
         T = !1;
     },
-    LOAD_MESSAGES_SUCCESS: O,
+    LOAD_MESSAGES_SUCCESS: R,
     MESSAGE_CREATE: function (e) {
         let { message: t } = e;
         L(t);
     },
-    LOAD_MESSAGES_AROUND_SUCCESS: O,
+    LOAD_MESSAGES_AROUND_SUCCESS: R,
     LOGOUT: function () {
         (d = null),
             (c = new Set()),

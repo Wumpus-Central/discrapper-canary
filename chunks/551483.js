@@ -1,8 +1,8 @@
 "use strict";
-n.d(t, { Dl: () => i, K: () => a, XR: () => l, Xg: () => r, fP: () => s, ug: () => o });
-let i = [],
-    r = [0],
+n.d(t, { Dl: () => l, K: () => r, XR: () => o, Xg: () => i, fP: () => s, ug: () => a });
+let l = [],
+    i = [0],
     s = [0, 0],
-    a = { path: [0, 0], offset: 0 },
-    o = /(\t|\s)/,
-    l = ["applicationCommandOption"];
+    r = { path: [0, 0], offset: 0 },
+    a = /(\t|\s)/,
+    o = ["applicationCommandOption"];

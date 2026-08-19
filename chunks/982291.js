@@ -5,13 +5,13 @@ var l = n(477900),
     a = n(166532),
     s = n(735305),
     o = n(169801),
-    u = n(380619),
+    u = n(580194),
     c = n(295405),
     d = n(75304),
     p = n(558620),
     m = n(87725),
-    C = n(818348);
-function h(e) {
+    h = n(818348);
+function C(e) {
     let { returnStep: t = a.pn.REVIEW, returnStepIfNoPaymentSources: n, paymentModalStepProps: r } = e,
         { purchaseType: o } = (0, m.t4)((e) => ({ purchaseType: e.purchaseType })),
         u = i.useCallback(
@@ -25,7 +25,7 @@ function h(e) {
                     } = e;
                     if (0 === Object.keys(c.A.paymentSources).length) {
                         if (null != l) return void t.handleStepChange(l);
-                        i === C.VV.SUBSCRIPTION
+                        i === h.VV.SUBSCRIPTION
                             ? t.handleStepChange(n, { trackedFromStep: a.pn.ADD_PAYMENT_STEPS })
                             : t.handleClose();
                     } else t.handleStepChange(n, { trackedFromStep: a.pn.ADD_PAYMENT_STEPS });
@@ -39,18 +39,18 @@ function f(e) {
         { selectedSkuId: n } = (0, m.t4)((e) => ({ selectedSkuId: e.selectedSkuId })),
         s = (0, p.A)(),
         { isGift: c, claimableRewards: d } = (0, r.Pv)(),
-        C = (0, o.A)({ isGift: c, skuId: n }),
-        f = (0, m.t4)((e) => e.getIsInOneStepSubscriptionCheckout({ isTrial: C })),
+        h = (0, o.A)({ isGift: c, skuId: n }),
+        f = (0, m.t4)((e) => e.getIsInOneStepSubscriptionCheckout({ isTrial: h })),
         E = (0, u.px)(s, c, d),
         S = i.useMemo(() => {
             let e = null == t ? a.pn.PLAN_SELECT : a.pn.REVIEW;
             return f && (e = a.pn.REVIEW), E && (e = a.pn.SELECT_FREE_SKU), e;
         }, [f, E, t]);
-    return (0, l.jsx)(h, { paymentModalStepProps: e, returnStep: a.pn.REVIEW, returnStepIfNoPaymentSources: S });
+    return (0, l.jsx)(C, { paymentModalStepProps: e, returnStep: a.pn.REVIEW, returnStepIfNoPaymentSources: S });
 }
 function E(e) {
     let { checkoutFlow: t, returnStep: n = a.pn.REVIEW, returnStepIfNoPaymentSources: i, paymentModalStepProps: r } = e;
     return t === d.C.PREMIUM_CHECKOUT
         ? (0, l.jsx)(f, { ...r })
-        : (0, l.jsx)(h, { paymentModalStepProps: r, returnStep: n, returnStepIfNoPaymentSources: i });
+        : (0, l.jsx)(C, { paymentModalStepProps: r, returnStep: n, returnStepIfNoPaymentSources: i });
 }

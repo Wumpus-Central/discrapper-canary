@@ -1,24 +1,24 @@
 "use strict";
-var i, r, s, a;
-let o;
-n.d(t, { O0: () => r, f$: () => i }),
-    ((s = i || (i = {})).symbol = Symbol.for("protobuf-ts/unknown")),
-    (s.onRead = (e, t, n, i, r) => {
-        (o(t) ? t[s.symbol] : (t[s.symbol] = [])).push({ no: n, wireType: i, data: r });
+var n, o, i, a;
+let s;
+r.d(t, { O0: () => o, f$: () => n }),
+    ((i = n || (n = {})).symbol = Symbol.for("protobuf-ts/unknown")),
+    (i.onRead = (e, t, r, n, o) => {
+        (s(t) ? t[i.symbol] : (t[i.symbol] = [])).push({ no: r, wireType: n, data: o });
     }),
-    (s.onWrite = (e, t, n) => {
-        for (let { no: e, wireType: i, data: r } of s.list(t)) n.tag(e, i).raw(r);
+    (i.onWrite = (e, t, r) => {
+        for (let { no: e, wireType: n, data: o } of i.list(t)) r.tag(e, n).raw(o);
     }),
-    (s.list = (e, t) => {
-        if (o(e)) {
-            let n = e[s.symbol];
-            return t ? n.filter((e) => e.no == t) : n;
+    (i.list = (e, t) => {
+        if (s(e)) {
+            let r = e[i.symbol];
+            return t ? r.filter((e) => e.no == t) : r;
         }
         return [];
     }),
-    (s.last = (e, t) => s.list(e, t).slice(-1)[0]),
-    (o = (e) => e && Array.isArray(e[s.symbol])),
-    ((a = r || (r = {}))[(a.Varint = 0)] = "Varint"),
+    (i.last = (e, t) => i.list(e, t).slice(-1)[0]),
+    (s = (e) => e && Array.isArray(e[i.symbol])),
+    ((a = o || (o = {}))[(a.Varint = 0)] = "Varint"),
     (a[(a.Bit64 = 1)] = "Bit64"),
     (a[(a.LengthDelimited = 2)] = "LengthDelimited"),
     (a[(a.StartGroup = 3)] = "StartGroup"),

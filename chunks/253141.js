@@ -1,10 +1,10 @@
-n.d(t, { EY: () => d, KW: () => c, a: () => r, ig: () => o, kt: () => a });
+n.d(t, { EY: () => c, KW: () => d, a: () => a, ig: () => o, kt: () => r });
 var i = n(913122);
 n(576705);
 var l = n(652215),
     s = n(375708);
-let r = "_role";
-function a(e) {
+let a = "_role";
+function r(e) {
     if (!(e >= 0))
         switch (-e) {
             case l.t02.ENTITY_TOO_LARGE:
@@ -25,40 +25,40 @@ function o(e) {
             (n = s.intl.string(s.t["V0B/k6"])),
             new i.LG({
                 status: 400,
-                body: { message: "Invalid form body", errors: { [r]: { _errors: [{ code: "", message: n }] } } },
+                body: { message: "Invalid form body", errors: { [a]: { _errors: [{ code: "", message: n }] } } },
             })
         );
     }
 }
-function d(e) {
+function c(e) {
     let {
             guildProductListing: t,
             name: n,
             priceTier: i,
             description: l,
             image: s,
-            imageName: r,
-            isImageChanged: a,
+            imageName: a,
+            isImageChanged: r,
             newRoleParams: o,
-            hasUnsavedAttachmentChanges: d,
+            hasUnsavedAttachmentChanges: c,
         } = e,
-        c = {};
-    t?.name !== n && "" !== n.trim() && (c.name = n),
-        (t?.description ?? "") !== l && (c.description = l),
-        t?.price_tier !== i && null != i && (c.priceTier = i),
-        null != o && "" !== o.name.trim() ? (c.createNewRole = !0) : null === o && (c.unlinkRole = !0),
+        d = {};
+    t?.name !== n && "" !== n.trim() && (d.name = n),
+        (t?.description ?? "") !== l && (d.description = l),
+        t?.price_tier !== i && null != i && (d.priceTier = i),
+        null != o && "" !== o.name.trim() ? (d.createNewRole = !0) : null === o && (d.unlinkRole = !0),
         s.startsWith("data:") &&
-            (a || (null == t && (Object.keys(c).length > 0 || d))) &&
-            ((c.image = s), (c.imageName = r));
-    let u = Object.keys(c).length > 0 || d;
+            (r || (null == t && (Object.keys(d).length > 0 || c))) &&
+            ((d.image = s), (d.imageName = a));
+    let u = Object.keys(d).length > 0 || c;
     return {
-        changes: c,
+        changes: d,
         hasUnsavedChanges: u,
         canSaveForDraft: u,
         canSaveForPublished: u,
         canPublishOrUnpublish: !(null == t || u),
     };
 }
-function c(e, t) {
+function d(e, t) {
     return `${location.protocol}//${location.host}${l.BVt.GUILD_PRODUCT(e, t)}`;
 }

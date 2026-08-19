@@ -1,18 +1,18 @@
 "use strict";
-r.d(t, { W: () => i });
-var n = r(120330);
-function i(e, t, r, i, o) {
+n.d(t, { W: () => i });
+var r = n(120330);
+function i(e, t, n, i, a) {
     if ("object" != typeof e) throw TypeError("Options must be an object");
-    let a = e[t];
-    if (void 0 !== a) {
-        if ("boolean" !== r && "string" !== r) throw TypeError("invalid type");
+    let o = e[t];
+    if (void 0 !== o) {
+        if ("boolean" !== n && "string" !== n) throw TypeError("invalid type");
         if (
-            ("boolean" === r && (a = !!a),
-            "string" === r && (a = (0, n.bf)(a)),
-            void 0 !== i && !i.filter((e) => e == a).length)
+            ("boolean" === n && (o = !!o),
+            "string" === n && (o = (0, r.bf)(o)),
+            void 0 !== i && !i.filter((e) => e == o).length)
         )
-            throw RangeError(`${a} is not within ${i.join(", ")}`);
-        return a;
+            throw RangeError(`${o} is not within ${i.join(", ")}`);
+        return o;
     }
-    return o;
+    return a;
 }

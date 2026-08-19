@@ -1,26 +1,26 @@
 "use strict";
 var n = r(439619),
-    i = r(906046),
-    o = r(315646),
+    o = r(906046),
+    i = r(315646),
     a = r(741623),
     s = n("%Map%", !0),
-    l = i("Map.prototype.get", !0),
-    u = i("Map.prototype.set", !0),
-    c = i("Map.prototype.has", !0),
-    d = i("Map.prototype.delete", !0),
-    f = i("Map.prototype.size", !0);
+    l = o("Map.prototype.get", !0),
+    u = o("Map.prototype.set", !0),
+    c = o("Map.prototype.has", !0),
+    f = o("Map.prototype.delete", !0),
+    p = o("Map.prototype.size", !0);
 e.exports =
     !!s &&
     function () {
         var e,
             t = {
                 assert: function (e) {
-                    if (!t.has(e)) throw new a("Side channel does not contain " + o(e));
+                    if (!t.has(e)) throw new a("Side channel does not contain " + i(e));
                 },
                 delete: function (t) {
                     if (e) {
-                        var r = d(e, t);
-                        return 0 === f(e) && (e = void 0), r;
+                        var r = f(e, t);
+                        return 0 === p(e) && (e = void 0), r;
                     }
                     return !1;
                 },

@@ -1,84 +1,84 @@
 "use strict";
 Object.defineProperty(t, "__esModule", { value: !0 }), (t.InternalIntlMessage = void 0);
-let r = n(725354);
+let n = r(725354);
 t.InternalIntlMessage = class {
     constructor(e, t) {
-        (this.locale = t), (this.ast = (0, r.isCompressedAst)(e) ? e : (0, r.compressFormatJsToAst)(e));
+        (this.locale = t), (this.ast = (0, n.isCompressedAst)(e) ? e : (0, n.compressFormatJsToAst)(e));
     }
     reserialize() {
         if ("string" == typeof this.ast) return this.ast;
         let e = { value: "" };
         return (
-            (function e(t, n) {
-                for (let i of t) {
-                    if ("string" == typeof i) {
-                        n.value += i;
+            (function e(t, r) {
+                for (let o of t) {
+                    if ("string" == typeof o) {
+                        r.value += o;
                         continue;
                     }
-                    switch (i[0]) {
-                        case r.FormatJsNodeType.Argument:
-                            n.value += "{" + i[1] + "}";
+                    switch (o[0]) {
+                        case n.FormatJsNodeType.Argument:
+                            r.value += "{" + o[1] + "}";
                             break;
-                        case r.FormatJsNodeType.Date:
-                            (n.value += "{" + i[1] + ", date"),
-                                null != i[2] && (n.value += ", " + i[2]),
-                                (n.value += "}");
+                        case n.FormatJsNodeType.Date:
+                            (r.value += "{" + o[1] + ", date"),
+                                null != o[2] && (r.value += ", " + o[2]),
+                                (r.value += "}");
                             break;
-                        case r.FormatJsNodeType.Time:
-                            (n.value += "{" + i[1] + ", time"),
-                                null != i[2] && (n.value += ", " + i[2]),
-                                (n.value += "}");
+                        case n.FormatJsNodeType.Time:
+                            (r.value += "{" + o[1] + ", time"),
+                                null != o[2] && (r.value += ", " + o[2]),
+                                (r.value += "}");
                             break;
-                        case r.FormatJsNodeType.Number:
-                            (n.value += "{" + i[1] + ", number"),
-                                null != i[2] && (n.value += ", " + i[2]),
-                                (n.value += "}");
+                        case n.FormatJsNodeType.Number:
+                            (r.value += "{" + o[1] + ", number"),
+                                null != o[2] && (r.value += ", " + o[2]),
+                                (r.value += "}");
                             break;
-                        case r.FormatJsNodeType.Plural: {
-                            let t = "ordinal" == i[4] ? "selectordinal" : "plural";
-                            for (let [r, a] of ((n.value += "{" + i[1] + ", " + t + ","),
-                            i[3] && (n.value += " offset:" + i[3]),
-                            Object.entries(i[2])))
-                                (n.value += " " + r + " {"), e(a, n), (n.value += "}");
-                            n.value += "}";
+                        case n.FormatJsNodeType.Plural: {
+                            let t = "ordinal" == o[4] ? "selectordinal" : "plural";
+                            for (let [n, i] of ((r.value += "{" + o[1] + ", " + t + ","),
+                            o[3] && (r.value += " offset:" + o[3]),
+                            Object.entries(o[2])))
+                                (r.value += " " + n + " {"), e(i, r), (r.value += "}");
+                            r.value += "}";
                             break;
                         }
-                        case r.FormatJsNodeType.Pound:
-                            n.value += "#";
+                        case n.FormatJsNodeType.Pound:
+                            r.value += "#";
                             break;
-                        case r.FormatJsNodeType.Select:
-                            for (let [t, r] of ((n.value += "{" + i[1] + ", select,"), Object.entries(i[2])))
-                                (n.value += " " + t + " {"), e(r, n), (n.value += "}");
-                            n.value += "}";
+                        case n.FormatJsNodeType.Select:
+                            for (let [t, n] of ((r.value += "{" + o[1] + ", select,"), Object.entries(o[2])))
+                                (r.value += " " + t + " {"), e(n, r), (r.value += "}");
+                            r.value += "}";
                             break;
-                        case r.FormatJsNodeType.Tag:
-                            !(function (t, n) {
+                        case n.FormatJsNodeType.Tag:
+                            !(function (t, r) {
                                 switch (t[1]) {
                                     case "$b":
-                                        (n.value += "**"), e(t[2], n), (n.value += "**");
+                                        (r.value += "**"), e(t[2], r), (r.value += "**");
                                         break;
                                     case "$i":
-                                        (n.value += "*"), e(t[2], n), (n.value += "*");
+                                        (r.value += "*"), e(t[2], r), (r.value += "*");
                                         break;
                                     case "$code":
-                                        (n.value += "`"), e(t[2], n), (n.value += "`");
+                                        (r.value += "`"), e(t[2], r), (r.value += "`");
                                         break;
                                     case "$p":
-                                        e(t[2], n), (n.value += "\n\n");
+                                        e(t[2], r), (r.value += "\n\n");
                                         break;
                                     case "$link":
-                                        let r = t[2],
-                                            i = t[3];
-                                        (n.value += "["),
-                                            e(r, n),
-                                            (n.value += "]("),
-                                            null != i && e(i, n),
-                                            (n.value += ")");
+                                        let n = t[2],
+                                            o = t[3];
+                                        (r.value += "["),
+                                            e(n, r),
+                                            (r.value += "]("),
+                                            null != o && e(o, r),
+                                            (r.value += ")");
                                         break;
                                     default:
-                                        (n.value += "$["), e(t[2], n), (n.value += "](" + t[1] + ")");
+                                        (r.value += "$["), e(t[2], r), (r.value += "](" + t[1] + ")");
                                 }
-                            })(i, n);
+                            })(o, r);
                     }
                 }
             })(this.ast, e),

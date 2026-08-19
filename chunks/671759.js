@@ -1,9 +1,9 @@
 "use strict";
-n.d(t, { A: () => a }), n(938796);
+n.d(t, { A: () => s }), n(938796);
 var i = n(989349),
     r = n.n(i),
-    s = n(315069);
-class a extends s.A {
+    a = n(315069);
+class s extends a.A {
     code;
     temporary;
     revoked;
@@ -40,7 +40,7 @@ class a extends s.A {
             (this.roles = e.roles || []);
     }
     static createFromServer(e) {
-        return new a({
+        return new s({
             ...e,
             maxUses: e.max_uses,
             maxAge: e.max_age,

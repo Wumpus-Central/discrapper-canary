@@ -1,4 +1,4 @@
-n(989349).defineLocale("fr", {
+s(989349).defineLocale("fr", {
     months: "janvier_f\xe9vrier_mars_avril_mai_juin_juillet_ao\xfbt_septembre_octobre_novembre_d\xe9cembre".split("_"),
     monthsShort: "janv._f\xe9vr._mars_avr._mai_juin_juil._ao\xfbt_sept._oct._nov._d\xe9c.".split("_"),
     monthsParseExact: !0,
@@ -39,8 +39,8 @@ n(989349).defineLocale("fr", {
         yy: "%d ans",
     },
     dayOfMonthOrdinalParse: /\d{1,2}(er|)/,
-    ordinal: function (e, t) {
-        switch (t) {
+    ordinal: function (e, a) {
+        switch (a) {
             case "D":
                 return e + (1 === e ? "er" : "");
             default:

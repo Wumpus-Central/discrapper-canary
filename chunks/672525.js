@@ -1,11 +1,11 @@
-n.d(t, { Ay: () => C, D3: () => d, Ls: () => p, yS: () => m });
+n.d(t, { Ay: () => h, D3: () => d, Ls: () => p, yS: () => m });
 var l = n(477900);
 n(582128);
 var i = n(503698),
     r = n.n(i),
     a = n(939249),
     s = n(331322),
-    o = n(968066),
+    o = n(126186),
     u = n(202541),
     c = n(323616);
 function d(e) {
@@ -73,7 +73,7 @@ function m(e) {
         ],
     });
 }
-let C = function (e) {
+let h = function (e) {
     let { onSelectSku: t, isGift: n, priceOptions: i, showPromotionalGiftBanner: r } = e;
     return (0, l.jsxs)(s.B, {
         direction: "vertical",

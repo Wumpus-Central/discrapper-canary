@@ -2,28 +2,28 @@
 n.d(t, { A: () => c });
 var i = n(17928),
     r = n(228366),
-    s = n(823448),
-    a = n(351022);
-let o = [];
-function l() {
-    o = [];
+    a = n(823448),
+    s = n(351022);
+let l = [];
+function o() {
+    l = [];
 }
-class u extends i.Ay.Store {
+class d extends i.Ay.Store {
     static displayName = "GlobalDiscoveryServersSearchLayoutStore";
     initialize() {
-        this.waitFor(s.A, a.A);
+        this.waitFor(a.A, s.A);
     }
     getVisibleTabs() {
-        return o;
+        return l;
     }
 }
-let c = new u(r.h, {
-    CONNECTION_OPEN: l,
-    GLOBAL_DISCOVERY_SERVERS_SEARCH_LAYOUT_RESET: l,
+let c = new d(r.h, {
+    CONNECTION_OPEN: o,
+    GLOBAL_DISCOVERY_SERVERS_SEARCH_LAYOUT_RESET: o,
     GLOBAL_DISCOVERY_SERVERS_SEARCH_COUNT_SUCCESS: function (e) {
         let { query: t } = e,
-            n = s.A.getCounts(t);
+            n = a.A.getCounts(t);
         if (null == n) return !1;
-        o = n;
+        l = n;
     },
 });

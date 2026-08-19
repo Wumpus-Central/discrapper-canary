@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { GM: () => r, f0: () => s });
+n.d(t, { GM: () => r, f0: () => a });
 let i = (0, n(945810).mj)({
     name: "2026-03-crepe",
     kind: "user",
@@ -10,7 +10,7 @@ function r(e) {
     let { enabled: t } = i.useConfig({ location: e });
     return t;
 }
-function s(e) {
+function a(e) {
     let { enabled: t } = i.getConfig({ location: e });
     return t;
 }

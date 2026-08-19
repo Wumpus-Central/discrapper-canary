@@ -1,39 +1,39 @@
 "use strict";
-var r = (function () {
+var n = (function () {
     function e(e, t) {
-        for (var n = 0; n < t.length; n++) {
-            var r = t[n];
-            (r.enumerable = r.enumerable || !1),
-                (r.configurable = !0),
-                "value" in r && (r.writable = !0),
-                Object.defineProperty(e, r.key, r);
+        for (var r = 0; r < t.length; r++) {
+            var n = t[r];
+            (n.enumerable = n.enumerable || !1),
+                (n.configurable = !0),
+                "value" in n && (n.writable = !0),
+                Object.defineProperty(e, n.key, n);
         }
     }
-    return function (t, n, r) {
-        return n && e(t.prototype, n), r && e(t, r), t;
+    return function (t, r, n) {
+        return r && e(t.prototype, r), n && e(t, n), t;
     };
 })();
-n(562210);
-var i = n(652925),
-    a = n(439834),
-    o = n(540017);
+r(562210);
+var o = r(652925),
+    i = r(439834),
+    a = r(540017);
 e.exports = (function (e) {
     if ("function" != typeof e && null !== e)
         throw TypeError("Super expression must either be null or a function, not " + typeof e);
-    function t(e, n) {
+    function t(e, r) {
         if (!(this instanceof t)) throw TypeError("Cannot call a class as a function");
-        var r = (function (e, t) {
+        var n = (function (e, t) {
             if (!e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
             return t && ("object" == typeof t || "function" == typeof t) ? t : e;
         })(this, (t.__proto__ || Object.getPrototypeOf(t)).call(this));
-        return (r._a = e), (r._modulus = n), (r._listeners = {}), r;
+        return (n._a = e), (n._modulus = r), (n._listeners = {}), n;
     }
     return (
         (t.prototype = Object.create(e && e.prototype, {
             constructor: { value: t, enumerable: !1, writable: !0, configurable: !0 },
         })),
         e && (Object.setPrototypeOf ? Object.setPrototypeOf(t, e) : (t.__proto__ = e)),
-        r(t, [
+        n(t, [
             {
                 key: "__getValue",
                 value: function () {
@@ -48,8 +48,8 @@ e.exports = (function (e) {
                         (this._aListener = this._a.addListener(function () {
                             for (var e in t._listeners) t._listeners[e]({ value: t.__getValue() });
                         }));
-                    var n = guid();
-                    return (this._listeners[n] = e), n;
+                    var r = guid();
+                    return (this._listeners[r] = e), r;
                 },
             },
             {
@@ -61,7 +61,7 @@ e.exports = (function (e) {
             {
                 key: "interpolate",
                 value: function (e) {
-                    return new a(this, o.create(e));
+                    return new i(this, a.create(e));
                 },
             },
             {
@@ -79,4 +79,4 @@ e.exports = (function (e) {
         ]),
         t
     );
-})(i);
+})(o);

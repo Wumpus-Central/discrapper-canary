@@ -5,7 +5,7 @@ function i(e) {
 function r(e) {
     return `${location.protocol}//${window.GLOBAL_ENV.GUILD_TEMPLATE_HOST}/${e}`;
 }
-function s() {
+function a() {
     return `${location.protocol}//${window.GLOBAL_ENV.WEBAPP_ENDPOINT}/channels/@me`;
 }
-n.d(t, { BH: () => s, FH: () => r, jN: () => i });
+n.d(t, { BH: () => a, FH: () => r, jN: () => i });

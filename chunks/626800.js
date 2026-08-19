@@ -1,23 +1,23 @@
 "use strict";
-var i = n(581070)(),
-    r = n(906046)("Object.prototype.toString"),
-    s = function (e) {
-        return (!i || !e || "object" != typeof e || !(Symbol.toStringTag in e)) && "[object Arguments]" === r(e);
+var n = r(581070)(),
+    o = r(906046)("Object.prototype.toString"),
+    i = function (e) {
+        return (!n || !e || "object" != typeof e || !(Symbol.toStringTag in e)) && "[object Arguments]" === o(e);
     },
     a = function (e) {
         return (
-            !!s(e) ||
+            !!i(e) ||
             (null !== e &&
                 "object" == typeof e &&
                 "length" in e &&
                 "number" == typeof e.length &&
                 e.length >= 0 &&
-                "[object Array]" !== r(e) &&
+                "[object Array]" !== o(e) &&
                 "callee" in e &&
-                "[object Function]" === r(e.callee))
+                "[object Function]" === o(e.callee))
         );
     },
-    o = (function () {
-        return s(arguments);
+    s = (function () {
+        return i(arguments);
     })();
-(s.isLegacyArguments = a), (e.exports = o ? s : a);
+(i.isLegacyArguments = a), (e.exports = s ? i : a);

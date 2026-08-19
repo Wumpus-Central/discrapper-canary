@@ -1,16 +1,16 @@
 "use strict";
-n.d(t, { F5: () => a, hL: () => o, iL: () => l });
+n.d(t, { F5: () => s, hL: () => l, iL: () => o });
 var i,
     r,
-    s,
-    a =
+    a,
+    s =
         (((i = {}).AUTHORIZED = "authorized"),
         (i.DENIED = "denied"),
         (i.RESTRICTED = "restricted"),
         (i.LIMITED = "limited"),
         (i.UNDETERMINED = "undetermined"),
         i),
-    o =
+    l =
         (((r = {}).DISMISSED = "dismissed"),
         (r.DENIED = "denied"),
         (r.ACCEPTED = "accepted"),
@@ -18,14 +18,14 @@ var i,
         (r.ERROR = "error"),
         (r.NONE = "none"),
         r),
-    l =
-        (((s = {}).AUDIO = "audio"),
-        (s.CAMERA = "camera"),
-        (s.HEADSET_CAMERA = "headset_camera"),
-        (s.STORAGE = "storage"),
-        (s.NOTIFICATIONS = "notifications"),
-        (s.PHOTOS = "photos"),
-        (s.CONTACTS = "contacts"),
-        (s.INPUT_MONITORING = "input_monitoring"),
-        (s.SCREEN_RECORDING = "screen_recording"),
-        s);
+    o =
+        (((a = {}).AUDIO = "audio"),
+        (a.CAMERA = "camera"),
+        (a.HEADSET_CAMERA = "headset_camera"),
+        (a.STORAGE = "storage"),
+        (a.NOTIFICATIONS = "notifications"),
+        (a.PHOTOS = "photos"),
+        (a.CONTACTS = "contacts"),
+        (a.INPUT_MONITORING = "input_monitoring"),
+        (a.SCREEN_RECORDING = "screen_recording"),
+        a);

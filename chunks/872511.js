@@ -1,46 +1,46 @@
 "use strict";
-var r =
+var n =
         Object.assign ||
         function (e) {
             for (var t = 1; t < arguments.length; t++) {
-                var n = arguments[t];
-                for (var r in n) Object.prototype.hasOwnProperty.call(n, r) && (e[r] = n[r]);
+                var r = arguments[t];
+                for (var n in r) Object.prototype.hasOwnProperty.call(r, n) && (e[n] = r[n]);
             }
             return e;
         },
-    i = (function () {
+    o = (function () {
         function e(e, t) {
-            for (var n = 0; n < t.length; n++) {
-                var r = t[n];
-                (r.enumerable = r.enumerable || !1),
-                    (r.configurable = !0),
-                    "value" in r && (r.writable = !0),
-                    Object.defineProperty(e, r.key, r);
+            for (var r = 0; r < t.length; r++) {
+                var n = t[r];
+                (n.enumerable = n.enumerable || !1),
+                    (n.configurable = !0),
+                    "value" in n && (n.writable = !0),
+                    Object.defineProperty(e, n.key, n);
             }
         }
-        return function (t, n, r) {
-            return n && e(t.prototype, n), r && e(t, r), t;
+        return function (t, r, n) {
+            return r && e(t.prototype, r), n && e(t, n), t;
         };
     })(),
-    a = n(562210);
-n(498121),
+    i = r(562210);
+r(498121),
     (e.exports = (function (e) {
         if ("function" != typeof e && null !== e)
             throw TypeError("Super expression must either be null or a function, not " + typeof e);
-        function t(e, n, r, i, a) {
+        function t(e, r, n, o, i) {
             if (!(this instanceof t)) throw TypeError("Cannot call a class as a function");
-            var o = (function (e, t) {
+            var a = (function (e, t) {
                 if (!e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
                 return t && ("object" == typeof t || "function" == typeof t) ? t : e;
             })(this, (t.__proto__ || Object.getPrototypeOf(t)).call(this));
             return (
-                (o._value = e),
-                (o._parent = n),
-                (o._animationClass = r),
-                (o._animationConfig = i),
-                (o._callback = a),
-                o.__attach(),
-                o
+                (a._value = e),
+                (a._parent = r),
+                (a._animationClass = n),
+                (a._animationConfig = o),
+                (a._callback = i),
+                a.__attach(),
+                a
             );
         }
         return (
@@ -48,7 +48,7 @@ n(498121),
                 constructor: { value: t, enumerable: !1, writable: !0, configurable: !0 },
             })),
             e && (Object.setPrototypeOf ? Object.setPrototypeOf(t, e) : (t.__proto__ = e)),
-            i(t, [
+            o(t, [
                 {
                     key: "__getValue",
                     value: function () {
@@ -72,7 +72,7 @@ n(498121),
                     value: function () {
                         this._value.animate(
                             new this._animationClass(
-                                r({}, this._animationConfig, { toValue: this._animationConfig.toValue.__getValue() }),
+                                n({}, this._animationConfig, { toValue: this._animationConfig.toValue.__getValue() }),
                             ),
                             this._callback,
                         );
@@ -81,4 +81,4 @@ n(498121),
             ]),
             t
         );
-    })(a));
+    })(i));

@@ -1,16 +1,16 @@
 "use strict";
-n.d(t, { A: () => l });
-var i = n(887129),
-    r = n(17928),
+n.d(t, { A: () => o });
+var l = n(887129),
+    i = n(17928),
     s = n(775602);
-function a() {
+function r() {
     return Promise.resolve();
 }
-function o(e) {
+function a(e) {
     let t = document.querySelector(e);
     null != t && t.focus();
 }
-function l(e, t) {
-    let n = (0, r.bG)([s.Ay], () => s.Ay.keyboardModeEnabled);
-    return (0, i.Ay)({ id: e, isEnabled: n, orientation: t, setFocus: o, scrollToStart: a, scrollToEnd: a });
+function o(e, t) {
+    let n = (0, i.bG)([s.Ay], () => s.Ay.keyboardModeEnabled);
+    return (0, l.Ay)({ id: e, isEnabled: n, orientation: t, setFocus: a, scrollToStart: r, scrollToEnd: r });
 }

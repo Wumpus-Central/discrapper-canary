@@ -1,39 +1,39 @@
-e.d(n, { A: () => g });
-var i = e(477900);
-e(582128);
-var r = e(17928),
-    l = e(477782),
-    a = e(442433),
-    d = e(565645),
-    s = e(159273),
-    o = e(919577),
-    u = e(691060),
-    c = e(406704),
-    h = e(734057),
-    A = e(690521);
-e(253913);
-var m = e(375708);
+n.d(e, { A: () => g });
+var i = n(477900);
+n(582128);
+var r = n(17928),
+    l = n(477782),
+    a = n(442433),
+    d = n(565645),
+    s = n(236285),
+    o = n(919577),
+    u = n(691060),
+    c = n(406704),
+    h = n(734057),
+    A = n(690521);
+n(253913);
+var m = n(375708);
 function g(t) {
-    let n = (0, r.bG)([h.A], () => h.A.getChannel(t), [t]),
-        e = (0, c.NI)(n),
-        g = (0, r.bG)([h.A], () => h.A.getChannel(n?.parent_id), [n]),
+    let e = (0, r.bG)([h.A], () => h.A.getChannel(t), [t]),
+        n = (0, c.NI)(e),
+        g = (0, r.bG)([h.A], () => h.A.getChannel(e?.parent_id), [e]),
         b = (0, u.OT)(g),
-        j = (0, u.kt)(n),
+        j = (0, u.kt)(e),
         p = j.length >= 5,
-        f = (0, c.Id)(n),
+        f = (0, c.Id)(e),
         v = (0, r.bG)([s.Ay], () => {
             let t = new Set();
-            for (let n of b ?? [])
-                if (null != n.emojiId) {
-                    let e = s.Ay.getUsableCustomEmojiById(n.emojiId);
-                    e?.animated && t.add(n.emojiId);
+            for (let e of b ?? [])
+                if (null != e.emojiId) {
+                    let n = s.Ay.getUsableCustomEmojiById(e.emojiId);
+                    n?.animated && t.add(e.emojiId);
                 }
             return t;
         }, [b]);
-    if (null == n) return (0, a.Z_)(), null;
-    if (!e || __OVERLAY__ || !n.isForumPost() || b?.length === 0 || !f || n.isModeratorReportChannel()) return null;
-    let _ = b?.map((t) => {
-        let e = j.includes(t),
+    if (null == e) return (0, a.Z_)(), null;
+    if (!n || __OVERLAY__ || !e.isForumPost() || b?.length === 0 || !f || e.isModeratorReportChannel()) return null;
+    let I = b?.map((t) => {
+        let n = j.includes(t),
             r = null != t.emojiId || null != t.emojiName;
         return (0, i.jsx)(
             l.sL,
@@ -47,33 +47,33 @@ function g(t) {
                           animated: null != t.emojiId && v.has(t.emojiId),
                       })
                     : void 0,
-                leadingAccessory: (function (t, n) {
-                    let { emojiId: e, emojiName: i } = t;
-                    if (null != e || null != i)
+                leadingAccessory: (function (t, e) {
+                    let { emojiId: n, emojiName: i } = t;
+                    if (null != n || null != i)
                         return {
                             type: "emoji",
-                            emojiId: e,
-                            src: null == e && null != i ? A.Ay.getURL(i) : void 0,
-                            animated: null != e && n.has(e),
+                            emojiId: n,
+                            src: null == n && null != i ? A.Ay.getURL(i) : void 0,
+                            animated: null != n && e.has(n),
                         };
                 })(t, v),
-                disabled: p && !e,
+                disabled: p && !n,
                 action: () =>
                     (function (t) {
-                        if (null == n) return;
-                        let e = new Set(j);
-                        if (e.has(t)) e.delete(t);
+                        if (null == e) return;
+                        let n = new Set(j);
+                        if (n.has(t)) n.delete(t);
                         else {
                             if (p) return;
-                            e.add(t);
+                            n.add(t);
                         }
-                        let i = Array.from(e).map((t) => t.id);
-                        o.A.updateForumPostTags(n.id, i);
+                        let i = Array.from(n).map((t) => t.id);
+                        o.A.updateForumPostTags(e.id, i);
                     })(t),
-                checked: e,
+                checked: n,
             },
             t.id,
         );
     });
-    return (0, i.jsx)(l.Dr, { id: "edit-tags", label: m.intl.string(m.t["436ZFw"]), children: _ });
+    return (0, i.jsx)(l.Dr, { id: "edit-tags", label: m.intl.string(m.t["436ZFw"]), children: I });
 }

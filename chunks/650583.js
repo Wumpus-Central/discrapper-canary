@@ -1,35 +1,35 @@
 "use strict";
 n.d(t, {
     C8: () => _,
-    G1: () => u,
-    N$: () => o.Key,
-    Nu: () => f,
-    RX: () => m,
-    V8: () => h,
+    G1: () => d,
+    N$: () => l.Key,
+    Nu: () => A,
+    RX: () => f,
+    V8: () => E,
     Yy: () => c,
-    dh: () => E,
-    g$: () => p,
-    mi: () => l,
-    zY: () => d,
+    dh: () => I,
+    g$: () => h,
+    mi: () => o,
+    zY: () => u,
 });
 var i,
     r,
-    s,
     a,
-    o = n(16336);
-let l = o.Key.F6,
-    u = new Map([
-        [o.Key.F6, "f6"],
-        [o.Key.Tab, "tab"],
-        [o.Key.ArrowDown, "down"],
-        [o.Key.ArrowUp, "up"],
-        [o.Key.ArrowLeft, "left"],
-        [o.Key.ArrowRight, "right"],
-        [o.Key.Home, "home"],
-        [o.Key.End, "end"],
+    s,
+    l = n(16336);
+let o = l.Key.F6,
+    d = new Map([
+        [l.Key.F6, "f6"],
+        [l.Key.Tab, "tab"],
+        [l.Key.ArrowDown, "down"],
+        [l.Key.ArrowUp, "up"],
+        [l.Key.ArrowLeft, "left"],
+        [l.Key.ArrowRight, "right"],
+        [l.Key.Home, "home"],
+        [l.Key.End, "end"],
     ]),
     c = new Set(["tab", "shift+tab", "down", "up", "left", "right", "home", "end"]);
-var d =
+var u =
     (((i = {})[(i.KEYBOARD_KEY = 0)] = "KEYBOARD_KEY"),
     (i[(i.MOUSE_BUTTON = 1)] = "MOUSE_BUTTON"),
     (i[(i.KEYBOARD_MODIFIER_KEY = 2)] = "KEYBOARD_MODIFIER_KEY"),
@@ -154,7 +154,7 @@ let _ = Object.freeze({
         "track back": 173,
         "track skip": 171,
     }),
-    h = Object.freeze({
+    E = Object.freeze({
         a: 4,
         s: 22,
         d: 7,
@@ -269,7 +269,7 @@ let _ = Object.freeze({
         down: 81,
         up: 82,
     }),
-    f = Object.freeze({
+    A = Object.freeze({
         a: 65,
         s: 83,
         d: 68,
@@ -404,32 +404,32 @@ let _ = Object.freeze({
             "'": 222,
         }),
     });
-var p =
+var h =
         (((r = {})[(r.WINDOWS = 1)] = "WINDOWS"),
         (r[(r.MACOS = 2)] = "MACOS"),
         (r[(r.LINUX = 3)] = "LINUX"),
         (r[(r.BROWSER = 4)] = "BROWSER"),
         r),
-    E =
-        (((s = {}).ENTER = "Enter"),
-        (s.TAB = "Tab"),
-        (s.SPACE = " "),
-        (s.ESCAPE = "Escape"),
-        (s.SHIFT = "Shift"),
-        (s.ARROW_UP = "ArrowUp"),
-        (s.ARROW_DOWN = "ArrowDown"),
-        (s.ARROW_LEFT = "ArrowLeft"),
-        (s.ARROW_RIGHT = "ArrowRight"),
-        (s.HOME = "Home"),
-        (s.END = "End"),
-        (s.BACKSPACE = "Backspace"),
-        (s.DELETE = "Delete"),
-        (s.COMMA = ","),
-        s),
-    m =
-        (((a = {})[(a.Left = 0)] = "Left"),
-        (a[(a.Right = 1)] = "Right"),
-        (a[(a.Center = 2)] = "Center"),
-        (a[(a.Back = 3)] = "Back"),
-        (a[(a.Forward = 4)] = "Forward"),
-        a);
+    I =
+        (((a = {}).ENTER = "Enter"),
+        (a.TAB = "Tab"),
+        (a.SPACE = " "),
+        (a.ESCAPE = "Escape"),
+        (a.SHIFT = "Shift"),
+        (a.ARROW_UP = "ArrowUp"),
+        (a.ARROW_DOWN = "ArrowDown"),
+        (a.ARROW_LEFT = "ArrowLeft"),
+        (a.ARROW_RIGHT = "ArrowRight"),
+        (a.HOME = "Home"),
+        (a.END = "End"),
+        (a.BACKSPACE = "Backspace"),
+        (a.DELETE = "Delete"),
+        (a.COMMA = ","),
+        a),
+    f =
+        (((s = {})[(s.Left = 0)] = "Left"),
+        (s[(s.Right = 1)] = "Right"),
+        (s[(s.Center = 2)] = "Center"),
+        (s[(s.Back = 3)] = "Back"),
+        (s[(s.Forward = 4)] = "Forward"),
+        s);

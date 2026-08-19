@@ -1,14 +1,14 @@
-l.d(t, { A: () => s });
-var n = l(776231),
-    r = l(652215);
-function s(e, t) {
-    if (null == e.image) return null;
-    null == t && (t = window.screen.width * (0, n.mZ)()), (t = (0, n.kr)(t));
-    let l = window.GLOBAL_ENV.CDN_HOST;
+n.d(e, { A: () => i });
+var l = n(776231),
+    r = n(652215);
+function i(t, e) {
+    if (null == t.image) return null;
+    null == e && (e = window.screen.width * (0, l.mZ)()), (e = (0, l.kr)(e));
+    let n = window.GLOBAL_ENV.CDN_HOST;
     return (
-        (null != l
-            ? `https://${l}/guild-events/${e.id}/${e.image}`
-            : location.protocol + window.GLOBAL_ENV.API_ENDPOINT + r.Rsh.GUILD_EVENT_IMAGE(e.id, e.image, "png")) +
-        `?size=${t}`
+        (null != n
+            ? `https://${n}/guild-events/${t.id}/${t.image}`
+            : location.protocol + window.GLOBAL_ENV.API_ENDPOINT + r.Rsh.GUILD_EVENT_IMAGE(t.id, t.image, "png")) +
+        `?size=${e}`
     );
 }

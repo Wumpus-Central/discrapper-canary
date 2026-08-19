@@ -1,4 +1,4 @@
-e.exports = {
+_.exports = {
     Qs: "content__45458",
     xV: "rarityCorner__45458",
     rf: "body__45458",

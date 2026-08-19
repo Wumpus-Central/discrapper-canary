@@ -1,4 +1,4 @@
-e.exports = {
+_.exports = {
     FO: "guildRowIcon__7db08",
     QH: "guildRowSwitch__7db08",
     gO: "controlsContainer__7db08",

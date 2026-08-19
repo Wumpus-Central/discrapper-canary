@@ -1,4 +1,4 @@
-n.d(t, { x: () => y });
+n.d(t, { x: () => A });
 var l = n(284009),
     i = n.n(l),
     r = n(999129),
@@ -10,26 +10,26 @@ var l = n(284009),
     d = n(87725),
     p = n(61299),
     m = n(174459),
-    C = n(723702),
-    h = n(951305),
+    h = n(723702),
+    C = n(951305),
     f = n(166532),
     E = n(566980),
     S = n(652215),
-    A = n(202541);
-function y(e) {
+    y = n(202541);
+function A(e) {
     let {
             analyticsData: t,
             initialPlanId: n,
             breadcrumbSteps: l,
-            handleStepChange: y,
+            handleStepChange: A,
             onReturn: P,
             continueSessionToInitialStep: I,
         } = e,
         { paymentSources: g } = (0, a.j)(),
         {
             selectedSkuId: v,
-            setPurchaseState: T,
-            contextMetadata: _,
+            setPurchaseState: _,
+            contextMetadata: T,
             paymentSourceId: x,
             setPaymentSourceId: N,
             purchaseError: b,
@@ -49,7 +49,7 @@ function y(e) {
         { paymentAuthenticationState: O } = (0, s.o)(),
         { isPremiumGroupPurchase: L, isEligibleForTrial: k } = (0, o.i)(),
         { step: w } = (0, u.Ay)(),
-        { isGift: U } = (0, h.Pv)(),
+        { isGift: U } = (0, C.Pv)(),
         D = {
             ...(0, p._V)(),
             paymentSources: g,
@@ -65,16 +65,16 @@ function y(e) {
         G =
             P ??
             function () {
-                y(Object.values(g).length < 1 && null == n ? f.pn.PLAN_SELECT : f.pn.REVIEW, {
+                A(Object.values(g).length < 1 && null == n ? f.pn.PLAN_SELECT : f.pn.REVIEW, {
                     trackedFromStep: f.pn.PAYMENT_ELEMENT,
                 });
             };
     i()(null != w, "Step should be set here");
     let F = (0, r.A)(() => Date.now(), [w]),
-        H = f.pn.PAYMENT_ELEMENT;
+        B = f.pn.PAYMENT_ELEMENT;
     return (0, p.Y)({
         paymentModalArgs: D,
-        initialStep: H,
+        initialStep: B,
         prependSteps: [f.pn.PROMOTION_INFO],
         appendSteps: [f.pn.REVIEW, f.pn.CONFIRM],
         breadcrumpSteps: l,
@@ -84,8 +84,8 @@ function y(e) {
         onReturn: L ? void 0 : G,
         onComplete: (e) => {
             f.l_.has(e)
-                ? (T(E.h.COMPLETED), y(f.pn.CONFIRM, { trackedFromStep: e }))
-                : y(f.pn.REVIEW, { trackedFromStep: e });
+                ? (_(E.h.COMPLETED), A(f.pn.CONFIRM, { trackedFromStep: e }))
+                : A(f.pn.REVIEW, { trackedFromStep: e });
         },
         onStepChange: (e) => {
             let { currentStep: n, toStep: l } = e,
@@ -95,12 +95,12 @@ function y(e) {
                 from_step: n,
                 to_step: l,
                 step_duration_ms: i - F,
-                flow_duration_ms: i - _.startTime,
+                flow_duration_ms: i - T.startTime,
             });
         },
         isEligibleForTrial: k,
         allowDesktopRedirectPurchase:
-            (0, C.isDesktop)() && null != v && [A.pe.TIER_0, A.pe.TIER_2].includes(v) && !U && null == j,
+            (0, h.isDesktop)() && null != v && [y.pe.TIER_0, y.pe.TIER_2].includes(v) && !U && null == j,
         continueSessionToInitialStep: I,
         shouldUseManaModal: !0,
     });

@@ -1,4 +1,4 @@
-_.exports = {
+c.exports = {
     kL: "container_c9d15c",
     Dk: "textXs_c9d15c",
     WV: "textSm_c9d15c",

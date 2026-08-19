@@ -1,16 +1,16 @@
 "use strict";
-n.d(t, { A: () => l, b: () => o });
+n.d(t, { A: () => o, b: () => l });
 var i = n(702841),
-    r = n(159273),
-    s = n(307731);
-let a = [];
-function o(e) {
+    r = n(236285),
+    a = n(307731);
+let s = [];
+function l(e) {
     let { emojiStoreInstance: t = r.Ay, guildId: n, pickerIntention: i } = e;
     return {
-        topEmojis: i !== s.EmojiIntention.REACTION ? t.getTopEmoji(n) : a,
-        newlyAddedEmojis: i !== s.EmojiIntention.REACTION ? t.getNewlyAddedEmoji(n) : a,
+        topEmojis: i !== a.EmojiIntention.REACTION ? t.getTopEmoji(n) : s,
+        newlyAddedEmojis: i !== a.EmojiIntention.REACTION ? t.getNewlyAddedEmoji(n) : s,
     };
 }
-function l(e, t) {
-    return (0, i.cf)([r.Ay], () => o({ emojiStoreInstance: r.Ay, guildId: e, pickerIntention: t }), [e, t]);
+function o(e, t) {
+    return (0, i.cf)([r.Ay], () => l({ emojiStoreInstance: r.Ay, guildId: e, pickerIntention: t }), [e, t]);
 }

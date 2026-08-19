@@ -1,14 +1,14 @@
 "use strict";
 e.exports = function (e) {
     var t = {},
-        n = e.stopCallback;
+        r = e.stopCallback;
     return (
-        (e.stopCallback = function (e, i, r, s) {
-            return !t[r] && !t[s] && n(e, i, r);
+        (e.stopCallback = function (e, n, o, i) {
+            return !t[o] && !t[i] && r(e, n, o);
         }),
-        (e.bindGlobal = function (e, n, i) {
-            if ((this.bind(e, n, i), e instanceof Array)) {
-                for (var r = 0; r < e.length; r++) t[e[r]] = !0;
+        (e.bindGlobal = function (e, r, n) {
+            if ((this.bind(e, r, n), e instanceof Array)) {
+                for (var o = 0; o < e.length; o++) t[e[o]] = !0;
                 return;
             }
             t[e] = !0;

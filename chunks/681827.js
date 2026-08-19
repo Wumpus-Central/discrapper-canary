@@ -1,14 +1,14 @@
-n.d(t, { A: () => l });
-var s = n(477900);
+n.d(t, { A: () => a });
+var r = n(477900);
 n(582128);
-var r = n(503698),
-    a = n.n(r),
-    i = n(130234);
-let l = function (e) {
-    let { aspectRatio: t, style: n, className: r, children: l } = e;
-    return (0, s.jsx)("div", {
-        className: a()(i.A, r),
+var l = n(503698),
+    i = n.n(l),
+    s = n(130234);
+let a = function (e) {
+    let { aspectRatio: t, style: n, className: l, children: a } = e;
+    return (0, r.jsx)("div", {
+        className: i()(s.A, l),
         style: { paddingTop: `${(1 / t) * 100}%`, ...n },
-        children: (0, s.jsx)("div", { className: i.v, children: l }),
+        children: (0, r.jsx)("div", { className: s.v, children: a }),
     });
 };

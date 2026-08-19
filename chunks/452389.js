@@ -1,4 +1,4 @@
-e.exports = {
+_.exports = {
     U6: "pulse__214a5",
     s7: "skeletonCard__214a5",
     qr: "footer__214a5",

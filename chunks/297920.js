@@ -4,55 +4,55 @@ function t(e) {
         ? e >>> 0 === e && e >= 0 && e <= 0xffffffff
             ? e
             : null
-        : (t = o.hex6.exec(e))
+        : (t = s.hex6.exec(e))
           ? parseInt(t[1] + "ff", 16) >>> 0
-          : _.hasOwnProperty(e)
-            ? _[e]
-            : (t = o.rgb.exec(e))
+          : p.hasOwnProperty(e)
+            ? p[e]
+            : (t = s.rgb.exec(e))
               ? ((l(t[1]) << 24) | (l(t[2]) << 16) | (l(t[3]) << 8) | 255) >>> 0
-              : (t = o.rgba.exec(e))
+              : (t = s.rgba.exec(e))
                 ? ((l(t[1]) << 24) | (l(t[2]) << 16) | (l(t[3]) << 8) | c(t[4])) >>> 0
-                : (t = o.hex3.exec(e))
+                : (t = s.hex3.exec(e))
                   ? parseInt(t[1] + t[1] + t[2] + t[2] + t[3] + t[3] + "ff", 16) >>> 0
-                  : (t = o.hex8.exec(e))
+                  : (t = s.hex8.exec(e))
                     ? parseInt(t[1], 16) >>> 0
-                    : (t = o.hex4.exec(e))
+                    : (t = s.hex4.exec(e))
                       ? parseInt(t[1] + t[1] + t[2] + t[2] + t[3] + t[3] + t[4] + t[4], 16) >>> 0
-                      : (t = o.hsl.exec(e))
-                        ? (255 | i(u(t[1]), d(t[2]), d(t[3]))) >>> 0
-                        : (t = o.hsla.exec(e))
-                          ? (i(u(t[1]), d(t[2]), d(t[3])) | c(t[4])) >>> 0
+                      : (t = s.hsl.exec(e))
+                        ? (255 | n(u(t[1]), f(t[2]), f(t[3]))) >>> 0
+                        : (t = s.hsla.exec(e))
+                          ? (n(u(t[1]), f(t[2]), f(t[3])) | c(t[4])) >>> 0
                           : null;
 }
-function n(e, t, n) {
-    return (n < 0 && (n += 1), n > 1 && (n -= 1), n < 1 / 6)
-        ? e + (t - e) * 6 * n
-        : n < 0.5
+function r(e, t, r) {
+    return (r < 0 && (r += 1), r > 1 && (r -= 1), r < 1 / 6)
+        ? e + (t - e) * 6 * r
+        : r < 0.5
           ? t
-          : n < 2 / 3
-            ? e + (t - e) * (2 / 3 - n) * 6
+          : r < 2 / 3
+            ? e + (t - e) * (2 / 3 - r) * 6
             : e;
 }
-function i(e, t, i) {
-    var r = i < 0.5 ? i * (1 + t) : i + t - i * t,
-        s = 2 * i - r;
+function n(e, t, n) {
+    var o = n < 0.5 ? n * (1 + t) : n + t - n * t,
+        i = 2 * n - o;
     return (
-        (Math.round(255 * n(s, r, e + 1 / 3)) << 24) |
-        (Math.round(255 * n(s, r, e)) << 16) |
-        (Math.round(255 * n(s, r, e - 1 / 3)) << 8)
+        (Math.round(255 * r(i, o, e + 1 / 3)) << 24) |
+        (Math.round(255 * r(i, o, e)) << 16) |
+        (Math.round(255 * r(i, o, e - 1 / 3)) << 8)
     );
 }
-var r = "[-+]?\\d*\\.?\\d+",
-    s = r + "%";
+var o = "[-+]?\\d*\\.?\\d+",
+    i = o + "%";
 function a() {
     var e;
     return "\\(\\s*(" + ((e = arguments), Array.prototype.slice.call(e, 0)).join(")\\s*,\\s*(") + ")\\s*\\)";
 }
-var o = {
-    rgb: RegExp("rgb" + a(r, r, r)),
-    rgba: RegExp("rgba" + a(r, r, r, r)),
-    hsl: RegExp("hsl" + a(r, s, s)),
-    hsla: RegExp("hsla" + a(r, s, s, r)),
+var s = {
+    rgb: RegExp("rgb" + a(o, o, o)),
+    rgba: RegExp("rgba" + a(o, o, o, o)),
+    hsl: RegExp("hsl" + a(o, i, i)),
+    hsla: RegExp("hsla" + a(o, i, i, o)),
     hex3: /^#([0-9a-fA-F]{1})([0-9a-fA-F]{1})([0-9a-fA-F]{1})$/,
     hex4: /^#([0-9a-fA-F]{1})([0-9a-fA-F]{1})([0-9a-fA-F]{1})([0-9a-fA-F]{1})$/,
     hex6: /^#([0-9a-fA-F]{6})$/,
@@ -69,11 +69,11 @@ function c(e) {
     var t = parseFloat(e);
     return t < 0 ? 0 : t > 1 ? 255 : Math.round(255 * t);
 }
-function d(e) {
+function f(e) {
     var t = parseFloat(e, 10);
     return t < 0 ? 0 : t > 100 ? 1 : t / 100;
 }
-var _ = {
+var p = {
     transparent: 0,
     aliceblue: 0xf0f8ffff,
     antiquewhite: 0xfaebd7ff,

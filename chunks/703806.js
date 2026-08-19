@@ -1,25 +1,25 @@
 "use strict";
-var r = (function () {
+var n = (function () {
         function e(e, t) {
-            for (var n = 0; n < t.length; n++) {
-                var r = t[n];
-                (r.enumerable = r.enumerable || !1),
-                    (r.configurable = !0),
-                    "value" in r && (r.writable = !0),
-                    Object.defineProperty(e, r.key, r);
+            for (var r = 0; r < t.length; r++) {
+                var n = t[r];
+                (n.enumerable = n.enumerable || !1),
+                    (n.configurable = !0),
+                    "value" in n && (n.writable = !0),
+                    Object.defineProperty(e, n.key, n);
             }
         }
-        return function (t, n, r) {
-            return n && e(t.prototype, n), r && e(t, r), t;
+        return function (t, r, n) {
+            return r && e(t.prototype, r), n && e(t, n), t;
         };
     })(),
-    i = n(371404),
-    a = (function () {
+    o = r(371404),
+    i = (function () {
         function e() {
             if (!(this instanceof e)) throw TypeError("Cannot call a class as a function");
         }
         return (
-            r(e, null, [
+            n(e, null, [
                 {
                     key: "step0",
                     value: function (e) {
@@ -41,7 +41,7 @@ var r = (function () {
                 {
                     key: "ease",
                     value: function (e) {
-                        return o(e);
+                        return a(e);
                     },
                 },
                 {
@@ -117,8 +117,8 @@ var r = (function () {
                 },
                 {
                     key: "bezier",
-                    value: function (e, t, n, r) {
-                        return i(e, t, n, r);
+                    value: function (e, t, r, n) {
+                        return o(e, t, r, n);
                     },
                 },
                 {
@@ -147,5 +147,5 @@ var r = (function () {
             e
         );
     })(),
-    o = a.bezier(0.42, 0, 1, 1);
-e.exports = a;
+    a = i.bezier(0.42, 0, 1, 1);
+e.exports = i;

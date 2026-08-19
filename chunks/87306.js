@@ -1,18 +1,18 @@
 "use strict";
-n.d(t, { A: () => o }), n(817476);
+n.d(t, { A: () => l }), n(817476);
 let { getDeviceState: i, logger: r } = n(82193);
-var s = n(321034),
-    a = n(687658);
-class o {
-    cpuHistogram = new a.d();
-    memoryHistogram = new a.d();
-    startCPU = s.A.getCumulativeCPUUsage();
+var a = n(321034),
+    s = n(687658);
+class l {
+    cpuHistogram = new s.d();
+    memoryHistogram = new s.d();
+    startCPU = a.A.getCumulativeCPUUsage();
     lastCPU = this.startCPU;
     lastBattery = null;
     getStats() {
         let e = this.cpuHistogram.getReport(),
             t = this.memoryHistogram.getReport(),
-            n = s.A.getCumulativeCPUUsage(),
+            n = a.A.getCumulativeCPUUsage(),
             i =
                 null == this.startCPU || null == n
                     ? void 0
@@ -35,8 +35,8 @@ class o {
         };
     }
     takeSample() {
-        let e = s.A.getCumulativeCPUUsage(),
-            t = s.A.getCurrentMemoryUsageKB();
+        let e = a.A.getCumulativeCPUUsage(),
+            t = a.A.getCurrentMemoryUsageKB();
         if (null != e) {
             let t = !0;
             if (null != this.lastCPU) {
@@ -48,7 +48,7 @@ class o {
             }
             t && (this.lastCPU = e);
         } else {
-            let e = s.A.getCurrentCPUUsagePercent();
+            let e = a.A.getCurrentCPUUsagePercent();
             null != e && this.cpuHistogram.addSample(e);
         }
         null != t && this.memoryHistogram.addSample(t);

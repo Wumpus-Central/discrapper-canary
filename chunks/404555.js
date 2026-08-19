@@ -399,16 +399,16 @@ var t = {
         Z\u0327: "Z",
         z\u0327: "z",
     },
-    n = Object.keys(t).join("|"),
-    i = RegExp(n, "g"),
-    r = RegExp(n, ""),
-    s = function (e) {
-        return e.replace(i, function (e) {
+    r = Object.keys(t).join("|"),
+    n = RegExp(r, "g"),
+    o = RegExp(r, ""),
+    i = function (e) {
+        return e.replace(n, function (e) {
             return t[e];
         });
     };
-(e.exports = s),
+(e.exports = i),
     (e.exports.has = function (e) {
-        return !!e.match(r);
+        return !!e.match(o);
     }),
-    (e.exports.remove = s);
+    (e.exports.remove = i);

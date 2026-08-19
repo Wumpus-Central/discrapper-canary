@@ -1,13 +1,13 @@
 "use strict";
 n.d(t, {
     G8: () => U,
-    NV: () => y,
-    QY: () => D,
+    NV: () => D,
+    QY: () => y,
     V: () => b,
     Xk: () => M,
     ax: () => x,
     ds: () => w,
-    fK: () => O,
+    fK: () => R,
     fS: () => G,
     nL: () => P,
     nh: () => L,
@@ -44,7 +44,7 @@ function C(e) {
     let { width: t, height: n } = e;
     return t > 0 && n > 0;
 }
-function R(e) {
+function O(e) {
     let {
         url: t,
         proxy_url: n,
@@ -69,7 +69,7 @@ function R(e) {
         contentType: c ?? void 0,
     };
 }
-function O(e, t, n) {
+function R(e, t, n) {
     var i, a;
     let o,
         I = {
@@ -101,13 +101,13 @@ function O(e, t, n) {
         switch (I.type) {
             case u.Auw.ARTICLE:
             case u.Auw.IMAGE:
-                I.image = R(n.thumbnail);
+                I.image = O(n.thumbnail);
                 break;
             default:
-                I.thumbnail = R(n.thumbnail);
+                I.thumbnail = O(n.thumbnail);
         }
     if (
-        (null != n.image && C(n.image) && (I.image = R(n.image)),
+        (null != n.image && C(n.image) && (I.image = O(n.image)),
         null != n.video &&
             (null == I.thumbnail &&
                 null != n.video.proxy_url &&
@@ -136,7 +136,7 @@ function O(e, t, n) {
                         i
                     );
                 })(t, n.provider, n.video) &&
-                (I.video = R(n.video))),
+                (I.video = O(n.video))),
         _.p.has(I.type)
             ? (I.fields = (n.fields ?? []).map((e) => {
                   let { name: t, value: n, inline: i } = e;
@@ -168,7 +168,7 @@ function L(e) {
         n
     );
 }
-function D(e, t) {
+function y(e, t) {
     if ("YouTube" === e || "TikTok" === e) return e;
     if (null != t)
         try {
@@ -178,7 +178,7 @@ function D(e, t) {
         } catch {}
     return e;
 }
-function y(e) {
+function D(e) {
     let { image: t, video: n, type: i, author: r, rawTitle: a } = e;
     return (null != t || null != n) && (i === u.Auw.GIFV || (i !== u.Auw.RICH && null == r && null == a));
 }
@@ -201,7 +201,7 @@ function w(e, t, n) {
     return null != t && null != n
         ? { maxMediaWidth: t, maxMediaHeight: n }
         : e.provider?.name === "TikTok" ||
-            (null != e.video && e.video.height > e.video.width && "YouTube" === D(e.provider?.name, e.video.url))
+            (null != e.video && e.video.height > e.video.width && "YouTube" === y(e.provider?.name, e.video.url))
           ? { maxMediaWidth: 400, maxMediaHeight: 450 }
           : { maxMediaWidth: 400, maxMediaHeight: 300 };
 }

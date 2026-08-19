@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { k: () => L, p: () => D });
+n.d(t, { k: () => L, p: () => y });
 var i = n(477900),
     r = n(582128),
     a = n(503698),
@@ -90,7 +90,7 @@ function L(e) {
             error: T,
             defaultDirty: m = !1,
             leading: L,
-            trailing: y,
+            trailing: D,
             validateOn: v = "change",
             size: b = "md",
             fullWidth: M = !1,
@@ -128,7 +128,7 @@ function L(e) {
                       });
               },
           }))
-        : null != y && (Y = (0, i.jsx)(O, { accessory: y, inputSize: b }));
+        : null != D && (Y = (0, i.jsx)(O, { accessory: D, inputSize: b }));
     let K = null;
     null != L && (K = (0, i.jsx)(O, { accessory: L, inputSize: b }));
     let $ = U ? (0, i.jsx)(g.n, { value: h, maxLength: A }) : null;
@@ -152,7 +152,7 @@ function L(e) {
                 (0, i.jsx)(u.vN, {
                     ringTarget: j,
                     ...o,
-                    children: (0, i.jsx)(D, {
+                    children: (0, i.jsx)(y, {
                         name: d,
                         className: N.input,
                         disabled: t,
@@ -184,7 +184,7 @@ function L(e) {
         }),
     });
 }
-function D(e) {
+function y(e) {
     let { value: t, defaultValue: n, "aria-labelledby": a, ...s } = e,
         l = C(t, n),
         o = r.useContext(E._);

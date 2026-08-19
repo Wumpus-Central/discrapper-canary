@@ -1,9 +1,9 @@
 i.d(e, { A: () => h });
 var n = i(477900),
     l = i(582128),
-    c = i(866665),
-    t = i(862482),
-    r = i(259678),
+    c = i(259678),
+    t = i(866665),
+    r = i(862482),
     a = i(625494),
     d = i(652215),
     o = i(375708),
@@ -41,7 +41,7 @@ let h = function (s) {
             children: (0, n.jsx)("div", {
                 className: u.nP,
                 ref: b,
-                children: (0, n.jsxs)(r.xp, {
+                children: (0, n.jsxs)(c.xp, {
                     containerRef: b,
                     children: [
                         (0, n.jsx)("div", {
@@ -55,20 +55,20 @@ let h = function (s) {
                             className: u.o1,
                             children: [
                                 null != j &&
-                                    (0, n.jsx)(t.$n, {
+                                    (0, n.jsx)(r.$n, {
                                         className: u.WA,
-                                        size: t.$n.Sizes.SMALL,
-                                        color: t.$n.Colors.PRIMARY,
-                                        look: t.$n.Looks.LINK,
+                                        size: r.$n.Sizes.SMALL,
+                                        color: r.$n.Colors.PRIMARY,
+                                        look: r.$n.Looks.LINK,
                                         onClick: j,
                                         children: (0, n.jsx)("span", { children: m ?? o.intl.string(o.t.yBZMsQ) }),
                                     }),
                                 null != x
-                                    ? (0, n.jsx)(c.m, {
+                                    ? (0, n.jsx)(t.m, {
                                           text: N,
-                                          children: (0, n.jsx)(t.$n, {
-                                              size: t.$n.Sizes.SMALL,
-                                              color: p ?? t.$n.Colors.GREEN,
+                                          children: (0, n.jsx)(r.$n, {
+                                              size: r.$n.Sizes.SMALL,
+                                              color: p ?? r.$n.Colors.GREEN,
                                               submitting: h,
                                               disabled: E,
                                               onClick: x,

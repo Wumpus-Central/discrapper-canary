@@ -1,9 +1,9 @@
 "use strict";
-n.d(t, { Ck: () => a, jg: () => l, xJ: () => o });
+n.d(t, { Ck: () => s, jg: () => o, xJ: () => l });
 var i,
     r,
-    s = n(652215),
-    a =
+    a = n(652215),
+    s =
         (((i = {}).MESSAGE = "message"),
         (i.SUCCESS = "success"),
         (i.FAILURE = "failure"),
@@ -17,5 +17,5 @@ var i,
         (i.AI = "ai"),
         (i.FAVORITE = "favorite"),
         i),
-    o = (((r = {})[(r.TOP = 0)] = "TOP"), (r[(r.BOTTOM = 1)] = "BOTTOM"), r);
-let l = { position: 0, component: null, duration: 3e3, appContext: s.BRT.APP };
+    l = (((r = {})[(r.TOP = 0)] = "TOP"), (r[(r.BOTTOM = 1)] = "BOTTOM"), r);
+let o = { position: 0, component: null, duration: 3e3, appContext: a.BRT.APP };

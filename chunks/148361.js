@@ -1,58 +1,58 @@
 "use strict";
-n.r(t), n.d(t, { default: () => h });
-var i = n(477900);
+n.r(t), n.d(t, { default: () => p });
+var l = n(477900);
 n(582128);
-var r = n(793574),
-    a = n(688810),
-    s = n(151271),
-    l = n(2181),
+var i = n(793574),
+    s = n(688810),
+    r = n(151271),
+    a = n(2181),
     o = n(690521),
-    d = n(428262),
+    u = n(158045),
     c = n(732139),
-    u = n(652215),
-    _ = n(307731),
-    E = n(202541),
-    A = n(375708);
-let h = function (e) {
+    d = n(652215),
+    h = n(307731),
+    m = n(202541),
+    f = n(375708);
+let p = function (e) {
     let t,
         {
             onClose: n,
-            onUpsellClicked: h,
-            channel: I,
-            emojiDescriptor: f,
-            pickerIntention: p,
-            analyticsLocation: T,
+            onUpsellClicked: p,
+            channel: g,
+            emojiDescriptor: x,
+            pickerIntention: A,
+            analyticsLocation: E,
         } = e,
-        m = (0, s.RQ)((e) => e.searchQuery),
-        { analyticsLocations: g } = (0, a.Ay)(r.A.EMOJI_PICKER);
+        C = (0, r.RQ)((e) => e.searchQuery),
+        { analyticsLocations: I } = (0, s.Ay)(i.A.EMOJI_PICKER);
     t =
-        p === _.EmojiIntention.REACTION
-            ? E.e.EMOJI_PICKER_REACTION_EMOJI_CLICKED
-            : null == f
-              ? E.e.EMOJI_PICKER_FLOATING_UPSELL
-              : f.subCategory === c.tm.TOP_GUILD_EMOJI
-                ? E.e.EMOJI_PICKER_TOP_SERVER_EMOJI_CLICKED
-                : f.subCategory === c.tm.NEWLY_ADDED_EMOJI
-                  ? E.e.EMOJI_PICKER_NEWLY_ADDED_EMOJI_CLICKED
-                  : E.e.EMOJI_PICKER_EMOJI_CLICKED;
-    let S = null != f ? f.emoji : void 0,
-        N = null != S && S.animated,
-        C = null != S && !o.Ay.isInternalEmojiForGuildId(S, I?.getGuildId()),
-        O = null != S ? u.ZSU.EMOJI : u.ZSU.EMOJI_PICKER_FLOATING_UPSELL;
-    return (0, i.jsx)(l.A, {
-        title: A.intl.string(A.t["0+11FF"]),
-        description: A.intl.string(A.t.dURIzS),
-        analyticsLocationSection: u.JJy.EMOJI_UPSELL_POPOUT,
+        A === h.EmojiIntention.REACTION
+            ? m.e.EMOJI_PICKER_REACTION_EMOJI_CLICKED
+            : null == x
+              ? m.e.EMOJI_PICKER_FLOATING_UPSELL
+              : x.subCategory === c.tm.TOP_GUILD_EMOJI
+                ? m.e.EMOJI_PICKER_TOP_SERVER_EMOJI_CLICKED
+                : x.subCategory === c.tm.NEWLY_ADDED_EMOJI
+                  ? m.e.EMOJI_PICKER_NEWLY_ADDED_EMOJI_CLICKED
+                  : m.e.EMOJI_PICKER_EMOJI_CLICKED;
+    let y = null != x ? x.emoji : void 0,
+        S = null != y && y.animated,
+        v = null != y && !o.Ay.isInternalEmojiForGuildId(y, g?.getGuildId()),
+        _ = null != y ? d.ZSU.EMOJI : d.ZSU.EMOJI_PICKER_FLOATING_UPSELL;
+    return (0, l.jsx)(a.A, {
+        title: f.intl.string(f.t["0+11FF"]),
+        description: f.intl.string(f.t.dURIzS),
+        analyticsLocationSection: d.JJy.EMOJI_UPSELL_POPOUT,
         onClose: n,
-        onUpsellClicked: h,
+        onUpsellClicked: p,
         upsellViewedTrackingData: {
             type: t,
-            is_external: C,
-            location: { ...T, object: O },
-            location_stack: g,
-            sku_id: (0, d.mH)(d.Ay.getSkuIdForPremiumType(E.PremiumTypes.TIER_2)),
-            has_search_query: null != m && "" !== m,
-            is_animated: N,
+            is_external: v,
+            location: { ...E, object: _ },
+            location_stack: I,
+            sku_id: (0, u.mH)(u.Ay.getSkuIdForPremiumType(m.PremiumTypes.TIER_2)),
+            has_search_query: null != C && "" !== C,
+            is_animated: S,
         },
         isEmojiPickerOverlay: !0,
     });

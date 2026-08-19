@@ -1,23 +1,23 @@
 "use strict";
 var t = Object.getOwnPropertySymbols,
-    n = Object.prototype.hasOwnProperty,
-    i = Object.prototype.propertyIsEnumerable;
+    r = Object.prototype.hasOwnProperty,
+    n = Object.prototype.propertyIsEnumerable;
 e.exports = !(function () {
     try {
         if (!Object.assign) return !1;
         var e = new String("abc");
         if (((e[5] = "de"), "5" === Object.getOwnPropertyNames(e)[0])) return !1;
-        for (var t = {}, n = 0; n < 10; n++) t["_" + String.fromCharCode(n)] = n;
-        var i = Object.getOwnPropertyNames(t).map(function (e) {
+        for (var t = {}, r = 0; r < 10; r++) t["_" + String.fromCharCode(r)] = r;
+        var n = Object.getOwnPropertyNames(t).map(function (e) {
             return t[e];
         });
-        if ("0123456789" !== i.join("")) return !1;
-        var r = {};
+        if ("0123456789" !== n.join("")) return !1;
+        var o = {};
         if (
             ("abcdefghijklmnopqrst".split("").forEach(function (e) {
-                r[e] = e;
+                o[e] = e;
             }),
-            "abcdefghijklmnopqrst" !== Object.keys(Object.assign({}, r)).join(""))
+            "abcdefghijklmnopqrst" !== Object.keys(Object.assign({}, o)).join(""))
         )
             return !1;
         return !0;
@@ -25,11 +25,11 @@ e.exports = !(function () {
         return !1;
     }
 })()
-    ? function (e, r) {
+    ? function (e, o) {
           for (
-              var s,
+              var i,
                   a,
-                  o = (function (e) {
+                  s = (function (e) {
                       if (null == e) throw TypeError("Object.assign cannot be called with null or undefined");
                       return Object(e);
                   })(e),
@@ -37,12 +37,12 @@ e.exports = !(function () {
               l < arguments.length;
               l++
           ) {
-              for (var u in (s = Object(arguments[l]))) n.call(s, u) && (o[u] = s[u]);
+              for (var u in (i = Object(arguments[l]))) r.call(i, u) && (s[u] = i[u]);
               if (t) {
-                  a = t(s);
-                  for (var c = 0; c < a.length; c++) i.call(s, a[c]) && (o[a[c]] = s[a[c]]);
+                  a = t(i);
+                  for (var c = 0; c < a.length; c++) n.call(i, a[c]) && (s[a[c]] = i[a[c]]);
               }
           }
-          return o;
+          return s;
       }
     : Object.assign;

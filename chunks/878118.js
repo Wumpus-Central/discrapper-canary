@@ -1,36 +1,36 @@
 "use strict";
-n.d(t, { A: () => u });
+n.d(t, { A: () => d });
 var i = n(17928),
     r = n(228366),
-    s = n(546183);
-let a = new Map(),
-    o = new Set();
-class l extends i.Ay.Store {
+    a = n(733110);
+let s = new Map(),
+    l = new Set();
+class o extends i.Ay.Store {
     initialize() {
-        this.waitFor(s.default);
+        this.waitFor(a.default);
     }
     static displayName = "AccountLinkStore";
     getPendingAuthorizations() {
-        return a;
+        return s;
     }
     deletePendingAuthorization(e) {
-        a.delete(e);
+        s.delete(e);
     }
     getGloballyDisabledAuthorizationFlows() {
-        return o;
+        return l;
     }
 }
-let u = new l(r.h, {
+let d = new o(r.h, {
     ACCOUNT_LINK_AUTHORIZATION_STARTED: function (e) {
-        null != s.default.getNewestTokenForApplication(e.applicationId) ||
+        null != a.default.getNewestTokenForApplication(e.applicationId) ||
             (null != e.accountLinkCallbacks &&
-                a.set(e.applicationId, {
+                s.set(e.applicationId, {
                     applicationId: e.applicationId,
                     startedAt: Date.now(),
                     accountLinkCallbacks: e.accountLinkCallbacks,
                 }));
     },
     ACCOUNT_LINK_DEVTOOLS_SET_GLOBALLY_DISBLED_FLOWS: function (e) {
-        o = new Set(e.flows);
+        l = new Set(e.flows);
     },
 });

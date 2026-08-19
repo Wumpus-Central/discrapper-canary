@@ -1,26 +1,26 @@
 "use strict";
-n.d(t, { A: () => o });
+n.d(t, { A: () => l });
 var i = n(17928),
     r = n(228366);
-let s = !0;
-class a extends i.Ay.DeviceSettingsStore {
+let a = !0;
+class s extends i.Ay.DeviceSettingsStore {
     static displayName = "ConversationVisibilityStore";
     static persistKey = "ConversationVisibilityStore";
     initialize(e) {
-        s = e?.highlightingEnabled ?? !0;
+        a = e?.highlightingEnabled ?? !0;
     }
     isHighlightingEnabled() {
-        return s;
+        return a;
     }
     getState() {
-        return { highlightingEnabled: s };
+        return { highlightingEnabled: a };
     }
     getUserAgnosticState() {
-        return { highlightingEnabled: s };
+        return { highlightingEnabled: a };
     }
 }
-let o = new a(r.h, {
+let l = new s(r.h, {
     CONVERSATIONS_TOGGLE_HIGHLIGHTING: function () {
-        s = !s;
+        a = !a;
     },
 });

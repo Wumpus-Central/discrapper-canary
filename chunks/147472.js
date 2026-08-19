@@ -1,55 +1,55 @@
 "use strict";
-n.d(t, { lG: () => f });
+n.d(t, { lG: () => A });
 var i = n(91871),
     r = n.n(i),
-    s = n(111956),
-    a = n.n(s),
-    o = n(159273),
-    l = n(7584),
-    u = n(174459),
+    a = n(649852),
+    s = n.n(a),
+    l = n(236285),
+    o = n(7584),
+    d = n(174459),
     c = n(813564),
-    d = n(652215);
-let _ = a()(function (e, t) {
-        u.default.track(d.HAw.SEARCH_STARTED, { channel_id: t, search_type: d.I4_.SOUNDBOARD, location_stack: e });
+    u = n(652215);
+let _ = s()(function (e, t) {
+        d.default.track(u.HAw.SEARCH_STARTED, { channel_id: t, search_type: u.I4_.SOUNDBOARD, location_stack: e });
     }, 350),
-    h = a()(function (e, t, n, i) {
-        u.default.track(d.HAw.SEARCH_RESULT_VIEWED, {
-            search_type: d.I4_.SOUNDBOARD,
+    E = s()(function (e, t, n, i) {
+        d.default.track(u.HAw.SEARCH_RESULT_VIEWED, {
+            search_type: u.I4_.SOUNDBOARD,
             channel_id: n,
             query: i,
             total_results: e.length,
             location_stack: t,
         });
     }, 350);
-function f(e, t, n, i, s) {
-    let a = t.reduce((t, a) => {
-            var u;
-            let d, h, f, p, E, m;
+function A(e, t, n, i, a) {
+    let s = t.reduce((t, s) => {
+            var d;
+            let u, E, A, h, I, f;
             return (
-                _(s, i?.id),
-                (t[a.soundId] =
-                    ((u = e.toLocaleLowerCase()),
-                    (d = 0),
-                    (h = a.name.toLocaleLowerCase()),
-                    (f = null != a.emojiId ? o.Ay.getCustomEmojiById(a.emojiId) : null),
-                    (E =
-                        null != (p = null != a.emojiName ? l.Ay.convertSurrogateToName(a.emojiName, !1) : null)
-                            ? l.Ay.getByName(p)
+                _(a, i?.id),
+                (t[s.soundId] =
+                    ((d = e.toLocaleLowerCase()),
+                    (u = 0),
+                    (E = s.name.toLocaleLowerCase()),
+                    (A = null != s.emojiId ? l.Ay.getCustomEmojiById(s.emojiId) : null),
+                    (I =
+                        null != (h = null != s.emojiName ? o.Ay.convertSurrogateToName(s.emojiName, !1) : null)
+                            ? o.Ay.getByName(h)
                             : null),
-                    (m = null != f ? [f.name] : (E?.names ?? [])),
-                    u === h && (d += 8),
-                    m.includes(u) && (d += 7),
-                    h.startsWith(u) && (d += 6),
-                    m.some((e) => e.startsWith(u)) && (d += 5),
-                    h.endsWith(u) && (d += 4),
-                    m.some((e) => e.endsWith(u)) && (d += 3),
-                    r()(u, a.name.toLocaleLowerCase()) && (d += 2),
-                    m.some((e) => r()(u, e)) && (d += 1),
-                    d > 0 && (0, c.Ir)(n, a, i) && (d += 100),
-                    d)),
+                    (f = null != A ? [A.name] : (I?.names ?? [])),
+                    d === E && (u += 8),
+                    f.includes(d) && (u += 7),
+                    E.startsWith(d) && (u += 6),
+                    f.some((e) => e.startsWith(d)) && (u += 5),
+                    E.endsWith(d) && (u += 4),
+                    f.some((e) => e.endsWith(d)) && (u += 3),
+                    r()(d, s.name.toLocaleLowerCase()) && (u += 2),
+                    f.some((e) => r()(d, e)) && (u += 1),
+                    u > 0 && (0, c.Ir)(n, s, i) && (u += 100),
+                    u)),
                 t
             );
         }, {}),
-        u = t.filter((e) => a[e.soundId] > 0).sort((e, t) => a[t.soundId] - a[e.soundId]);
-    return h(u, s, i?.id, e), u;
+        d = t.filter((e) => s[e.soundId] > 0).sort((e, t) => s[t.soundId] - s[e.soundId]);
+    return E(d, a, i?.id, e), d;
 }

@@ -1,4 +1,4 @@
-n.d(t, { Rs: () => H, fw: () => Y, Ay: () => B });
+n.d(t, { Rs: () => B, fw: () => Y, Ay: () => H });
 var l,
     i = n(477900),
     r = n(582128),
@@ -10,19 +10,19 @@ var l,
     d = n(821609),
     p = n(830382),
     m = n(71804),
-    C = n(87725),
-    h = n(951305),
+    h = n(87725),
+    C = n(951305),
     f = n(972607),
     E = n(419212),
     S = n(97352),
-    A = n(67480),
-    y = n(975571),
+    y = n(67480),
+    A = n(975571),
     P = n(158045),
     I = n(615396),
     g = n(573359),
     v = n(462887),
-    T = n(659746);
-function _(e) {
+    _ = n(659746);
+function T(e) {
     let { color: t = "white", className: n } = e;
     return (0, i.jsx)("svg", {
         className: n,
@@ -77,11 +77,11 @@ let R = function (e) {
             children: (function (e, t) {
                 let n = (0, v.M)(t) ? "white" : "black";
                 switch (e) {
-                    case T.Or.PREMIUM_UPDATED:
+                    case _.Or.PREMIUM_UPDATED:
                         return (0, i.jsx)(N, { color: n, className: b.gd });
-                    case T.Or.PREMIUM_ACTIVATED:
-                        return (0, i.jsx)(_, { color: n, className: b.gd });
-                    case T.Or.PREMIUM_PAYMENT_STARTED:
+                    case _.Or.PREMIUM_ACTIVATED:
+                        return (0, i.jsx)(T, { color: n, className: b.gd });
+                    case _.Or.PREMIUM_PAYMENT_STARTED:
                         return (0, i.jsx)(x, { color: n, className: b.gd });
                     default:
                         return null;
@@ -158,57 +158,57 @@ function F(e) {
         children: t,
     });
 }
-var H = (((l = {}).DEEPLINK_TO_DESKTOP_APP = "deeplink_to_desktop_app"), l);
-function B(e) {
+var B = (((l = {}).DEEPLINK_TO_DESKTOP_APP = "deeplink_to_desktop_app"), l);
+function H(e) {
     let t,
         n,
         {
             planId: l,
             startingPremiumSubscriptionPlanId: a,
             onClose: m,
-            followupSKUInfo: h,
+            followupSKUInfo: C,
             isDowngrade: f,
             hideClose: E,
             postSuccessGuild: v,
-            paymentSourceType: _,
+            paymentSourceType: T,
             startingFractionalPremiumEndsAt: x,
             customCTAType: N,
         } = e,
         b = (0, o.bG)([g.A], () => g.A.isDisplayingWowMomentConfirmation),
         {
-            isPremiumGroupPurchase: H,
-            customCheckoutFlow: B,
+            isPremiumGroupPurchase: B,
+            customCheckoutFlow: H,
             startingIsInPastDueCheckout: Y,
-        } = (0, C.t4)((e) => ({
+        } = (0, h.t4)((e) => ({
             isPremiumGroupPurchase: e.get("isPremiumGroupPurchase"),
             customCheckoutFlow: e.customCheckoutFlow,
             startingIsInPastDueCheckout: e.startingIsInPastDueCheckout,
         })),
         { theme: W } = (0, c.wR)(),
-        V = (0, o.bG)([A.A], () => (null != h ? A.A.get(h.id) : null)),
+        V = (0, o.bG)([y.A], () => (null != C ? y.A.get(C.id) : null)),
         K = (0, I.b2)(x),
-        Z = B === k.uH.META_QUEST_WEB_REDIRECT_CHECKOUT;
-    function q(e) {
-        return H
+        q = H === k.uH.META_QUEST_WEB_REDIRECT_CHECKOUT;
+    function Z(e) {
+        return B
             ? U.intl.formatToPlainString(w.default.pDiwHe, { premiumGroupProductName: (0, O.DP)(), totalSeats: O.LM })
             : e.skuId === M.pe.TIER_0
-              ? L.NcF.has(_ ?? L.hes.UNKNOWN)
+              ? L.NcF.has(T ?? L.hes.UNKNOWN)
                   ? U.intl.format(U.t.o6hBiR, {})
                   : U.intl.string(U.t["AGf/ye"])
               : e.skuId === M.pe.TIER_1
-                ? L.NcF.has(_ ?? L.hes.UNKNOWN)
+                ? L.NcF.has(T ?? L.hes.UNKNOWN)
                     ? U.intl.format(U.t.o6hBiR, {})
                     : U.intl.string(U.t.knvOVz)
-                : L.NcF.has(_ ?? L.hes.UNKNOWN)
+                : L.NcF.has(T ?? L.hes.UNKNOWN)
                   ? U.intl.format(U.t.A4THYt, {})
                   : U.intl.string(U.t.aTUr3Z);
     }
     if (
         (r.useEffect(() => {
-            if (null == h || null != V) return;
-            let { applicationId: e, id: t } = h;
+            if (null == C || null != V) return;
+            let { applicationId: e, id: t } = C;
             (0, p.EX)(e, t).catch(L.FXj);
-        }, [h, V]),
+        }, [C, V]),
         Y)
     )
         t = (0, i.jsx)(u.E, {
@@ -217,7 +217,7 @@ function B(e) {
             className: G.Qq,
             children: U.intl.string(D.default["t+xzd8"]),
         });
-    else if ("deeplink_to_desktop_app" === N || B === k.uH.META_QUEST_WEB_REDIRECT_CHECKOUT)
+    else if ("deeplink_to_desktop_app" === N || H === k.uH.META_QUEST_WEB_REDIRECT_CHECKOUT)
         t = (0, i.jsx)(u.E, {
             variant: "text-md/medium",
             color: "interactive-text-default",
@@ -243,7 +243,7 @@ function B(e) {
                           (0, i.jsx)("p", { children: U.intl.string(U.t["L9lcG/"]) }),
                           (0, i.jsx)("p", {
                               children: U.intl.format(U.t.EoDFuN, {
-                                  helpCenterLink: y.A.getArticleURL(L.MVz.FRACTIONAL_PREMIUM_ABOUT),
+                                  helpCenterLink: A.A.getArticleURL(L.MVz.FRACTIONAL_PREMIUM_ABOUT),
                               }),
                           }),
                       ],
@@ -257,7 +257,7 @@ function B(e) {
                           (0, i.jsx)("p", { children: U.intl.string(U.t.UPpbP3) }),
                           (0, i.jsx)("p", {
                               children: U.intl.format(U.t.EoDFuN, {
-                                  helpCenterLink: y.A.getArticleURL(L.MVz.FRACTIONAL_PREMIUM_ABOUT),
+                                  helpCenterLink: A.A.getArticleURL(L.MVz.FRACTIONAL_PREMIUM_ABOUT),
                               }),
                           }),
                       ],
@@ -272,7 +272,7 @@ function B(e) {
                         variant: "text-md/medium",
                         color: "interactive-text-default",
                         className: G.Qq,
-                        children: q(e),
+                        children: Z(e),
                     }),
                     (0, i.jsx)(u.E, {
                         variant: "text-md/medium",
@@ -289,24 +289,24 @@ function B(e) {
                 variant: "text-md/medium",
                 color: "interactive-text-default",
                 className: G.Qq,
-                children: q(e),
+                children: Z(e),
             }));
     }
-    let [z, $] = r.useState(!1),
-        Q = r.useCallback(() => {
-            null != m && (m(), B === k.uH.MOBILE_WEB_REDIRECT_CHECKOUT && $(!0));
-        }, [m, B]);
+    let [z, Q] = r.useState(!1),
+        $ = r.useCallback(() => {
+            null != m && (m(), H === k.uH.MOBILE_WEB_REDIRECT_CHECKOUT && Q(!0));
+        }, [m, H]);
     function J() {
-        return L.NcF.has(_ ?? L.hes.UNKNOWN)
-            ? T.Ay.Types.PREMIUM_PAYMENT_STARTED
+        return L.NcF.has(T ?? L.hes.UNKNOWN)
+            ? _.Ay.Types.PREMIUM_PAYMENT_STARTED
             : null != a
-              ? T.Ay.Types.PREMIUM_UPDATED
-              : T.Ay.Types.PREMIUM_ACTIVATED;
+              ? _.Ay.Types.PREMIUM_UPDATED
+              : _.Ay.Types.PREMIUM_ACTIVATED;
     }
     if (
-        ((n = H
+        ((n = B
             ? U.intl.string(w.default.clIveA)
-            : "deeplink_to_desktop_app" === N || B === k.uH.MOBILE_WEB_REDIRECT_CHECKOUT
+            : "deeplink_to_desktop_app" === N || H === k.uH.MOBILE_WEB_REDIRECT_CHECKOUT
               ? U.intl.string(U.t.sRApon)
               : null != V
                 ? U.intl.formatToPlainString(U.t["1qGgm4"], { skuName: V.name })
@@ -317,19 +317,19 @@ function B(e) {
                     : U.intl.string(U.t.TkTvBz)),
         b)
     )
-        return (0, i.jsx)(j.A, { type: J(), text: t, buttonText: n, hideClose: E || Z, onClose: Q, buttonLoading: z });
+        return (0, i.jsx)(j.A, { type: J(), text: t, buttonText: n, hideClose: E || q, onClose: $, buttonLoading: z });
     let X = (0, P.z4)(l);
     return (0, i.jsxs)("div", {
         className: G.EL,
         children: [
             !X && (0, i.jsx)(R, { type: J(), theme: W }),
             t,
-            E || Z
+            E || q
                 ? null
                 : (0, i.jsx)("div", {
                       "data-button-hoisted-classname-wrapper": !0,
                       className: G.x6,
-                      children: (0, i.jsx)(d.$, { variant: "primary", text: n, onClick: Q, loading: z }),
+                      children: (0, i.jsx)(d.$, { variant: "primary", text: n, onClick: $, loading: z }),
                   }),
         ],
     });
@@ -342,7 +342,7 @@ function Y(e) {
             hasSentMessage: a,
             giftMessageError: u,
             isSendingMessage: c,
-        } = (0, h.Pv)(),
+        } = (0, C.Pv)(),
         d = (0, o.bG)([S.A], () => S.A.get(t));
     s()(null != d, "Missing plan");
     let p = (0, o.bG)([E.A], () => E.A.getGiftCode(d.skuId));

@@ -116,7 +116,7 @@ var to = i(387755),
     tK = i(480870),
     tG = i(355622),
     tF = i(408018),
-    tY = i(138617),
+    tY = i(273754),
     tH = i(451909),
     tJ = i(135621),
     tB = i(381941),
@@ -195,13 +195,13 @@ var tQ = i(554146),
     t0 = i(429913),
     t1 = i(263577),
     t2 = i(826673),
-    t8 = i(626822),
+    t8 = i(453028),
     t9 = i(308726),
     t5 = i(46282),
     t7 = i(360469),
     t3 = i(731854),
-    t6 = i(615297),
-    t4 = i(808476);
+    t4 = i(615297),
+    t6 = i(808476);
 function et(t) {
     let { game: e } = t,
         i = (0, t0.h)(e.id);
@@ -638,7 +638,7 @@ let eS = new eN(s.h, {
                                     gamingId: t?.altId ?? t?.id,
                                     maxUserShowCount: 5,
                                     variant: "default",
-                                    className: t4.kL,
+                                    className: t6.kL,
                                 }));
                 }
             let r = (0, t2.k8)(tQ.M.OVERLAY_OOP_WELCOME_NUX),
@@ -647,7 +647,7 @@ let eS = new eN(s.h, {
                 icon:
                     null != t
                         ? (0, z.jsx)(et, { game: t })
-                        : (0, z.jsx)("img", { src: i(513653), className: t6.Kk, alt: "" }),
+                        : (0, z.jsx)("img", { src: i(513653), className: t4.Kk, alt: "" }),
                 title: s,
                 hint: function () {
                     return (0, tX.sI)((0, Y.Jn)(), J.t["z8/sgJ"], { highlightAdminWarningIfElevated: !0 });

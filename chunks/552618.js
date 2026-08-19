@@ -1,16 +1,16 @@
 "use strict";
-n.d(t, { J: () => u, c: () => l });
+n.d(t, { J: () => d, c: () => o });
 var i = n(95701),
     r = n(734057),
-    s = n(576705),
-    a = n(652215);
-let o = a.hVb.VIEW_CHANNEL | a.hVb.READ_MESSAGE_HISTORY;
-function l(e) {
+    a = n(576705),
+    s = n(652215);
+let l = s.hVb.VIEW_CHANNEL | s.hVb.READ_MESSAGE_HISTORY;
+function o(e) {
     return (
         null != e &&
-        (e.type === a.rbe.DM || e.type === a.rbe.GROUP_DM || ((0, i.pQ)(e.type) && s.A.canBasicChannel(o, e)))
+        (e.type === s.rbe.DM || e.type === s.rbe.GROUP_DM || ((0, i.pQ)(e.type) && a.A.canBasicChannel(l, e)))
     );
 }
-function u(e) {
-    return null != e && l(r.A.getBasicChannel(e));
+function d(e) {
+    return null != e && o(r.A.getBasicChannel(e));
 }

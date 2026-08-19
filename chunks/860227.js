@@ -1,8 +1,8 @@
-n.d(t, { CJ: () => a, JH: () => o, XL: () => u, ZD: () => p, d$: () => c, fF: () => d, nS: () => l, xl: () => m });
+n.d(t, { CJ: () => r, JH: () => d, XL: () => o, ZD: () => p, d$: () => c, fF: () => u, nS: () => l, xl: () => m });
 var s = n(264927),
     i = n(143413),
-    r = n(652215);
-function a(e) {
+    a = n(652215);
+function r(e) {
     return `message-content-${e.id}`;
 }
 function l(e) {
@@ -15,45 +15,45 @@ function c(e, t) {
 function m(e) {
     return `message-timestamp-${e.id}`;
 }
-function o(e) {
+function d(e) {
     return `message-reactions-${e.id}`;
 }
-function u(e) {
+function o(e) {
     return `message-accessories-${e.id}`;
 }
-function d(e, t, n) {
-    let o = e.type === r.lAJ.REPLY && null != e.messageReference,
-        d = e.embeds.length > 0,
+function u(e, t, n) {
+    let d = e.type === a.lAJ.REPLY && null != e.messageReference,
+        u = e.embeds.length > 0,
         p = e.attachments.length > 0,
         E = e.stickerItems.length > 0,
         g = e.codedLinks.length > 0,
         A = e.components.length > 0,
-        T = e.hasFlag(r.pr7.HAS_THREAD),
-        f = d || p || E || g || T || A || e.isPoll() || e.type === r.lAJ.THREAD_CREATED,
-        I = d && e.content === e.embeds[0].url && e.embeds[0].type === r.Auw.GIFV,
-        h = e.type !== r.lAJ.DEFAULT || (!I && "" !== e.content),
-        S = (0, i.A)(e),
-        _ = !S && n?.hasTimestamp !== !1,
-        C = e.hasFlag(r.pr7.IS_GUILD_OFFICIAL),
+        h = e.hasFlag(a.pr7.HAS_THREAD),
+        I = u || p || E || g || h || A || e.isPoll() || e.type === a.lAJ.THREAD_CREATED,
+        T = u && e.content === e.embeds[0].url && e.embeds[0].type === a.Auw.GIFV,
+        f = e.type !== a.lAJ.DEFAULT || (!T && "" !== e.content),
+        _ = (0, i.A)(e),
+        S = !_ && n?.hasTimestamp !== !1,
+        C = e.hasFlag(a.pr7.IS_GUILD_OFFICIAL),
         N = c(e, t),
-        $ = l(e),
-        F = S ? "" : `${o ? $ : N} ${s.lW}`;
-    if (h) {
-        let t = a(e);
-        F += ` ${t}`;
-    }
+        O = l(e),
+        $ = _ ? "" : `${d ? O : N} ${s.lW}`;
     if (f) {
-        let t = u(e);
-        F += ` ${t}`;
+        let t = r(e);
+        $ += ` ${t}`;
     }
-    if (_) {
+    if (I) {
+        let t = o(e);
+        $ += ` ${t}`;
+    }
+    if (S) {
         let t = m(e);
-        F += ` ${s.l6} ${t}`;
+        $ += ` ${s.l6} ${t}`;
     }
-    return C && (F += ` ${s.zV}`), F.trim();
+    return C && ($ += ` ${s.zV}`), $.trim();
 }
 function p(e) {
     if (0 === e.reactions.length) return;
-    let t = o(e);
+    let t = d(e);
     return `${s.oz} ${t}`;
 }

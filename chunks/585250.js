@@ -1,17 +1,17 @@
 "use strict";
-n.d(t, { A: () => o });
+n.d(t, { A: () => l });
 var i = n(439372),
     r = n(763827),
-    s = n(313961);
-class a extends i.A {
-    stores = new Map().set(s.A, this.handleFocusParticipant);
+    a = n(198052);
+class s extends i.A {
+    stores = new Map().set(a.A, this.handleFocusParticipant);
     handleFocusParticipant() {
         let e = r.A.getChannelId();
         if (null != e) {
-            let t = s.A.getSelectedParticipantId(e),
-                n = s.A.getVideoParticipants(e);
+            let t = a.A.getSelectedParticipantId(e),
+                n = a.A.getVideoParticipants(e);
             r.A.getRTCConnection()?.setSelectedParticipant(n.find((e) => e.id === t && !e.localVideoDisabled)?.id);
         }
     }
 }
-let o = new a();
+let l = new s();

@@ -68,8 +68,8 @@ let C = (0, n(945810).mj)({
 var O = n(750506),
     R = n(869146),
     L = n(773669),
-    D = n(363195),
-    y = n(531685),
+    y = n(363195),
+    D = n(531685),
     v = n(19575),
     b = n(418842),
     M = n(597619),
@@ -96,11 +96,11 @@ function G(e) {
             useReducedMotion: K,
             alwaysShowLinkDecorations: $,
             highContrastMode: z,
-        } = (0, c.cf)([L.default, f.Ay, D.A, R.A, y.A], () => ({
+        } = (0, c.cf)([L.default, f.Ay, y.A, R.A, D.A], () => ({
             locale: L.default.locale,
-            theme: n ?? D.A.theme,
-            focused: l ? R.A.getWindowFocused(t) : y.A.isFocused(),
-            mainWindowVisible: y.A.isVisible(),
+            theme: n ?? y.A.theme,
+            focused: l ? R.A.getWindowFocused(t) : D.A.isFocused(),
+            mainWindowVisible: D.A.isVisible(),
             currentWindow: l ? (R.A.getWindow(t) ?? window) : window,
             fontScale: f.Ay.fontScale,
             fontScaleClass: f.Ay.fontScaleClass,
@@ -113,7 +113,7 @@ function G(e) {
             alwaysShowLinkDecorations: f.Ay.alwaysShowLinkDecorations,
             highContrastMode: f.Ay.isHighContrastModeEnabled,
         })),
-        q = (function (e, t) {
+        Z = (function (e, t) {
             let [n, i] = a.useState(0),
                 r = (0, m.aL)();
             a.useEffect(() => {
@@ -148,8 +148,8 @@ function G(e) {
                 t && 0 === n && s
             );
         })(k, __OVERLAY__ || G),
-        Z = 0;
-    1 !== H && (Z |= _.REDUCE_SATURATION_ENABLED);
+        q = 0;
+    1 !== H && (q |= _.REDUCE_SATURATION_ENABLED);
     let X = (0, b.C)(),
         Q = (0, N.qK)("RootThemeContextProvider"),
         J = (0, N.k5)("RootThemeContextProvider"),
@@ -277,7 +277,7 @@ function G(e) {
         value: ei,
         children: (0, r.jsx)(I, {
             theme: h,
-            flags: Z,
+            flags: q,
             saturation: H,
             density: X,
             children: (0, r.jsx)(M.fs, {
@@ -288,7 +288,7 @@ function G(e) {
                 fontScale: F,
                 fontScaleClass: V,
                 keyboardModeEnabled: B,
-                mouseMode: q,
+                mouseMode: Z,
                 saturation: H,
                 desaturateUserColors: j,
                 useForcedColors: W,

@@ -2,15 +2,15 @@ E.d(i, {
     BK: () => o,
     LZ: () => s,
     Nk: () => R,
-    Si: () => T,
+    Si: () => x,
     eD: () => _,
     iG: () => N,
-    k6: () => x,
+    k6: () => T,
     m6: () => l,
     mL: () => B,
     od: () => g,
-    qI: () => I,
-    xd: () => M,
+    qI: () => M,
+    xd: () => I,
 }),
     E(321073);
 var n = E(403362),
@@ -440,7 +440,7 @@ function N(t, i) {
         ),
     };
 }
-function x(t, i, E) {
+function T(t, i, E) {
     let n = [
         S.xB.SEND_MESSAGES,
         S.xB.EMBED_LINKS,
@@ -462,7 +462,7 @@ function x(t, i, E) {
         { title: i, description: E.sectionDescription, permissions: e(n, t) }
     );
 }
-function T(t, i) {
+function x(t, i) {
     let E = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : { showActivities: !0 };
     return {
         title: i,
@@ -487,10 +487,10 @@ function g(t, i, E) {
         ),
     };
 }
-function I(t, i) {
+function M(t, i) {
     return { title: i, permissions: e([S.xB.REQUEST_TO_SPEAK, S.xB.MENTION_EVERYONE], t) };
 }
-function M(t, i) {
+function I(t, i) {
     return { title: i, permissions: e([S.xB.CREATE_EVENTS, S.xB.MANAGE_EVENTS], t) };
 }
 function R(t) {

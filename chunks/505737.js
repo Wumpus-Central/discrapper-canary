@@ -42,13 +42,13 @@ var t = {
         strokeOpacity: !0,
         strokeWidth: !0,
     },
-    n = ["Webkit", "ms", "Moz", "O"];
+    r = ["Webkit", "ms", "Moz", "O"];
 Object.keys(t).forEach(function (e) {
-    n.forEach(function (n) {
-        t[n + e.charAt(0).toUpperCase() + e.substring(1)] = t[e];
+    r.forEach(function (r) {
+        t[r + e.charAt(0).toUpperCase() + e.substring(1)] = t[e];
     });
 });
-var i = {
+var n = {
         background: {
             backgroundAttachment: !0,
             backgroundColor: !0,
@@ -66,32 +66,32 @@ var i = {
         font: { fontStyle: !0, fontVariant: !0, fontWeight: !0, fontSize: !0, lineHeight: !0, fontFamily: !0 },
         outline: { outlineWidth: !0, outlineStyle: !0, outlineColor: !0 },
     },
-    r = !!("u" > typeof window && window.document && window.document.createElement),
-    s = {
-        canUseDOM: r,
+    o = !!("u" > typeof window && window.document && window.document.createElement),
+    i = {
+        canUseDOM: o,
         canUseWorkers: "u" > typeof Worker,
-        canUseEventListeners: r && !!(window.addEventListener || window.attachEvent),
-        canUseViewport: r && !!window.screen,
-        isInWorker: !r,
+        canUseEventListeners: o && !!(window.addEventListener || window.attachEvent),
+        canUseViewport: o && !!window.screen,
+        isInWorker: !o,
     };
 function a(e) {
     return function () {
         return e;
     };
 }
-var o = function () {};
-(o.thatReturns = a),
-    (o.thatReturnsFalse = a(!1)),
-    (o.thatReturnsTrue = a(!0)),
-    (o.thatReturnsNull = a(null)),
-    (o.thatReturnsThis = function () {
+var s = function () {};
+(s.thatReturns = a),
+    (s.thatReturnsFalse = a(!1)),
+    (s.thatReturnsTrue = a(!0)),
+    (s.thatReturnsNull = a(null)),
+    (s.thatReturnsThis = function () {
         return this;
     }),
-    (o.thatReturnsArgument = function (e) {
+    (s.thatReturnsArgument = function (e) {
         return e;
     });
 var l = !1;
-if (s.canUseDOM) {
+if (i.canUseDOM) {
     var u = document.createElement("div").style;
     try {
         u.font = "";
@@ -101,27 +101,27 @@ if (s.canUseDOM) {
 }
 e.exports = {
     createDangerousStringForStyles: function (e) {},
-    setValueForStyles: function (e, n, r) {
-        var s = e.style;
-        for (var a in n)
-            if (n.hasOwnProperty(a)) {
-                var o,
+    setValueForStyles: function (e, r, o) {
+        var i = e.style;
+        for (var a in r)
+            if (r.hasOwnProperty(a)) {
+                var s,
                     u,
                     c = 0 === a.indexOf("--"),
-                    d =
-                        ((o = a),
-                        (u = n[a]),
+                    f =
+                        ((s = a),
+                        (u = r[a]),
                         null == u || "boolean" == typeof u || "" === u
                             ? ""
-                            : c || "number" != typeof u || 0 === u || (t.hasOwnProperty(o) && t[o])
+                            : c || "number" != typeof u || 0 === u || (t.hasOwnProperty(s) && t[s])
                               ? ("" + u).trim()
                               : u + "px");
-                if (("float" === a && (a = "cssFloat"), c)) s.setProperty(a, d);
-                else if (d) s[a] = d;
+                if (("float" === a && (a = "cssFloat"), c)) i.setProperty(a, f);
+                else if (f) i[a] = f;
                 else {
-                    var _ = l && i[a];
-                    if (_) for (var h in _) s[h] = "";
-                    else s[a] = "";
+                    var p = l && n[a];
+                    if (p) for (var d in p) i[d] = "";
+                    else i[a] = "";
                 }
             }
     },

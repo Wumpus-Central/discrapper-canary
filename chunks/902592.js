@@ -1,4 +1,4 @@
-a.r(t), a.d(t, { default: () => O, openDevToolsPopout: () => D });
+a.r(t), a.d(t, { default: () => O, openDevToolsPopout: () => I });
 var n = a(477900),
     l = a(582128),
     s = a(503698),
@@ -35,7 +35,7 @@ function k(e) {
         });
     return (0, n.jsx)("div", { onMouseDown: s, className: N.Di });
 }
-function D() {
+function I() {
     (0, v.open)(
         C.MLl.DEVTOOLS_POPOUT,
         () =>
@@ -48,7 +48,7 @@ function D() {
         { width: 800, height: 600 },
     );
 }
-function I(e) {
+function D(e) {
     let { isPopout: t = !1 } = e,
         a = (0, E.x)(),
         {
@@ -79,7 +79,7 @@ function I(e) {
                         ? null
                         : (0, n.jsxs)(n.Fragment, {
                               children: [
-                                  (0, n.jsx)(p.Ay.Icon, { icon: d.t, tooltip: "Pop Out", onClick: D }),
+                                  (0, n.jsx)(p.Ay.Icon, { icon: d.t, tooltip: "Pop Out", onClick: I }),
                                   (0, n.jsx)(p.Ay.Icon, {
                                       icon: c.P,
                                       tooltip: S.intl.string(S.t.cpT0Cq),
@@ -116,7 +116,7 @@ function T() {
               "data-app-right-panel": !0,
               children: [
                   (0, n.jsx)(k, { resizableNode: e, onResize: s, onResizeEnd: i }),
-                  (0, n.jsx)("div", { className: N.wp, children: (0, n.jsx)(I, {}) }),
+                  (0, n.jsx)("div", { className: N.wp, children: (0, n.jsx)(D, {}) }),
               ],
           });
 }
@@ -124,7 +124,7 @@ function R() {
     return (0, o.bG)([b.A], () => b.A.displayTools)
         ? (0, n.jsx)("div", {
               className: i()(N.kL, N.PQ),
-              children: (0, n.jsx)("div", { className: N.wp, children: (0, n.jsx)(I, {}) }),
+              children: (0, n.jsx)("div", { className: N.wp, children: (0, n.jsx)(D, {}) }),
           })
         : (0, n.jsx)("div", {
               className: N.kL,
@@ -146,6 +146,6 @@ function O(e) {
     return t
         ? (0, n.jsx)(R, {})
         : a
-          ? (0, n.jsx)("div", { className: N.jC, children: (0, n.jsx)(I, { isPopout: !0 }) })
+          ? (0, n.jsx)("div", { className: N.jC, children: (0, n.jsx)(D, { isPopout: !0 }) })
           : (0, n.jsx)(T, {});
 }

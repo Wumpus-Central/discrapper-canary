@@ -16,12 +16,12 @@ function r(e, t, n) {
         i
     );
 }
-function s() {
+function a() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "listbox",
         t = arguments.length > 1 ? arguments[1] : void 0;
     return `${e}-option-${t}`;
 }
-function a(e, t) {
+function s(e, t) {
     let n = 0;
     for (let i = 0; i < e.length; i++) {
         let r = e[i].count;
@@ -30,9 +30,9 @@ function a(e, t) {
     }
     return [0, t];
 }
-function o(e, t, n) {
+function l(e, t, n) {
     let i = 0;
     for (let n = 0; n < t; n++) i += e[n].count;
     return i + n;
 }
-n.d(t, { LE: () => a, ZN: () => s, fI: () => i, qH: () => r, rp: () => o }), n(321073);
+n.d(t, { LE: () => s, ZN: () => a, fI: () => i, qH: () => r, rp: () => l }), n(321073);

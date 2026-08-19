@@ -1,18 +1,18 @@
 "use strict";
-n.d(t, { AN: () => o, Uj: () => l, iR: () => a });
+n.d(t, { AN: () => l, Uj: () => o, iR: () => s });
 var i = n(136722),
     r = n(34457),
-    s = n(652215);
-function a(e) {
-    return (0, r._m)(e, s.xBc.VIEW_CHANNEL);
-}
-function o(e, t) {
-    return null != t && (!!i.zy(t.deny, s.xBc.VIEW_CHANNEL) || (e.isGuildVocal() && i.zy(t.deny, s.xBc.CONNECT)));
+    a = n(652215);
+function s(e) {
+    return (0, r._m)(e, a.xBc.VIEW_CHANNEL);
 }
 function l(e, t) {
+    return null != t && (!!i.zy(t.deny, a.xBc.VIEW_CHANNEL) || (e.isGuildVocal() && i.zy(t.deny, a.xBc.CONNECT)));
+}
+function o(e, t) {
     return (
-        !(null == t || o(e, t)) &&
-        !!i.zy(t.allow, s.xBc.VIEW_CHANNEL) &&
-        (!e.isGuildVocal() || i.zy(t.allow, s.xBc.CONNECT))
+        !(null == t || l(e, t)) &&
+        !!i.zy(t.allow, a.xBc.VIEW_CHANNEL) &&
+        (!e.isGuildVocal() || i.zy(t.allow, a.xBc.CONNECT))
     );
 }

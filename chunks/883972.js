@@ -1,44 +1,44 @@
 var n,
     o,
     i,
-    a = e(993767),
-    u = e(860511),
+    u = e(993767),
+    a = e(860511),
     c = e(598349),
     f = e(706938),
-    p = e(210140),
-    s = e(121536),
-    y = e(583178),
+    s = e(210140),
+    p = e(121536),
+    l = e(583178),
     v = e(239586),
-    l = "Object already initialized",
-    h = u.TypeError,
-    d = u.WeakMap;
-if (a || s.state) {
-    var g = s.state || (s.state = new d());
-    (g.get = g.get),
-        (g.has = g.has),
-        (g.set = g.set),
+    y = "Object already initialized",
+    b = a.TypeError,
+    g = a.WeakMap;
+if (u || p.state) {
+    var h = p.state || (p.state = new g());
+    (h.get = h.get),
+        (h.has = h.has),
+        (h.set = h.set),
         (n = function (r, t) {
-            if (g.has(r)) throw new h(l);
-            return (t.facade = r), g.set(r, t), t;
+            if (h.has(r)) throw new b(y);
+            return (t.facade = r), h.set(r, t), t;
         }),
         (o = function (r) {
-            return g.get(r) || {};
+            return h.get(r) || {};
         }),
         (i = function (r) {
-            return g.has(r);
+            return h.has(r);
         });
 } else {
-    var b = y("state");
-    (v[b] = !0),
+    var x = l("state");
+    (v[x] = !0),
         (n = function (r, t) {
-            if (p(r, b)) throw new h(l);
-            return (t.facade = r), f(r, b, t), t;
+            if (s(r, x)) throw new b(y);
+            return (t.facade = r), f(r, x, t), t;
         }),
         (o = function (r) {
-            return p(r, b) ? r[b] : {};
+            return s(r, x) ? r[x] : {};
         }),
         (i = function (r) {
-            return p(r, b);
+            return s(r, x);
         });
 }
 r.exports = {
@@ -51,7 +51,7 @@ r.exports = {
     getterFor: function (r) {
         return function (t) {
             var e;
-            if (!c(t) || (e = o(t)).type !== r) throw new h("Incompatible receiver, " + r + " required");
+            if (!c(t) || (e = o(t)).type !== r) throw new b("Incompatible receiver, " + r + " required");
             return e;
         };
     },

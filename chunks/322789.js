@@ -1,122 +1,122 @@
 "use strict";
-n.d(t, { A: () => M, n: () => b });
-var i = n(477900),
-    r = n(582128),
-    a = n(696292),
-    s = n(554146),
-    l = n(939249),
+n.d(t, { A: () => O, n: () => L });
+var l = n(477900),
+    i = n(582128),
+    s = n(696292),
+    r = n(554146),
+    a = n(939249),
     o = n(414499),
-    d = n(661531),
+    u = n(661531),
     c = n(834730),
-    u = n(812993),
-    _ = n(737393),
-    E = n(627363),
-    A = n(131607),
-    h = n(409626),
-    I = n(692969),
-    f = n(932413),
-    p = n(975732),
-    T = n(964195),
-    m = n(939341),
-    g = n(99066),
-    S = n(291594),
-    N = n(263577),
-    C = n(506326),
-    O = n(868065),
-    R = n(424994),
-    L = n(518477),
-    y = n(375708),
-    D = n(161878),
-    v = n(685504);
-let b = [C.iq, C.Zc, C.Xy, C.$X, C.tR, C.K7, C.fg, C.sp, C.MK],
-    M = r.memo(function (e) {
+    d = n(812993),
+    h = n(146779),
+    m = n(627363),
+    f = n(131607),
+    p = n(409626),
+    g = n(692969),
+    x = n(932413),
+    A = n(975732),
+    E = n(964195),
+    C = n(939341),
+    I = n(99066),
+    y = n(291594),
+    S = n(263577),
+    v = n(506326),
+    _ = n(868065),
+    N = n(424994),
+    T = n(518477),
+    j = n(375708),
+    b = n(161878),
+    R = n(685504);
+let L = [v.iq, v.Zc, v.Xy, v.$X, v.tR, v.K7, v.fg, v.sp, v.MK],
+    O = i.memo(function (e) {
         let {
                 entry: t,
                 channel: n,
-                selected: r,
-                hovered: M,
-                isFirstApplicationOccurrence: P,
-                trackRankingItemInteraction: U,
+                selected: i,
+                hovered: O,
+                isFirstApplicationOccurrence: M,
+                trackRankingItemInteraction: w,
             } = e,
-            { largeImage: w } = (0, m.nO)({
+            { largeImage: k } = (0, C.nO)({
                 entry: t,
                 showCoverImage: !1,
                 trackingSource: "memberlist_gaming_content_row",
             }),
-            { data: G } = (0, E.YY)(t.extra.application_id),
-            x = (0, _.JC)(G) && P,
-            k = x ? [s.M.CLOUD_PLAY_NEW_BADGE] : [],
-            [F] = (0, A.kn)(k),
-            V = (0, g.dN)("MemberListGamingContent"),
-            B = (0, I.A)(
+            { data: P } = (0, m.YY)(t.extra.application_id),
+            D = (0, h.JC)(P) && M,
+            U = D ? [r.M.CLOUD_PLAY_NEW_BADGE] : [],
+            [G] = (0, f.kn)(U),
+            V = (0, I.dN)("MemberListGamingContent"),
+            F = (0, g.A)(
                 {
                     location: "Member List Activity Card",
                     applicationId: V ? t.extra.application_id : void 0,
-                    source: h.GameProfileSources.ActivityCard,
+                    source: p.GameProfileSources.ActivityCard,
                     trackEntryPointImpression: V,
                     sourceUserId: t.author_id,
                 },
-                { onOpened: () => U(R.PA.OPENED_GAME_PROFILE) },
+                { onOpened: () => w(N.PA.OPENED_GAME_PROFILE) },
             ),
-            H = V ? B : void 0,
-            j = y.intl.formatToPlainString(y.t["9sZWVp"], { gameName: t.extra.game_name }),
-            W = (0, i.jsx)(N.V, {
-                alt: w?.text ?? w?.alt,
-                src: w?.src,
+            H = V ? F : void 0,
+            B = j.intl.formatToPlainString(j.t["9sZWVp"], { gameName: t.extra.game_name }),
+            W = (0, l.jsx)(S.V, {
+                alt: k?.text ?? k?.alt,
+                src: k?.src,
                 size: 48,
-                className: v.xn,
-                showTooltip: w?.text != null,
+                className: R.xn,
+                showTooltip: k?.text != null,
             }),
-            Y = (0, i.jsx)(O.ZB, { children: t.extra.game_name });
-        return (0, i.jsxs)(O.Zp, {
-            selected: r,
+            K = (0, l.jsx)(_.ZB, { children: t.extra.game_name });
+        return (0, l.jsxs)(_.Zp, {
+            selected: i,
             usesCardRows: !0,
             children: [
-                (0, i.jsx)(f.A, {
+                (0, l.jsx)(x.A, {
                     applicationId: t.extra.application_id,
-                    questContent: a.u.MEMBERS_LIST_CARD,
+                    questContent: s.u.MEMBERS_LIST_CARD,
                     children: (e) =>
-                        (0, i.jsxs)(O.dM, {
+                        (0, l.jsxs)(_.dM, {
                             ref: e,
                             children: [
-                                (0, i.jsxs)(O.UA, {
+                                (0, l.jsxs)(_.UA, {
                                     children: [
-                                        (0, i.jsx)(O.Hp, { entry: t, channelId: n.id, guildId: n.guild_id }),
-                                        null != H ? (0, i.jsx)(S.A, { className: D.N4, onClick: H, children: Y }) : Y,
-                                        (0, i.jsx)(C.mG, {
-                                            location: C.N5.CARD,
-                                            children: b.map((e, n) => (0, i.jsx)(e, { entry: t, hovered: M }, n)),
+                                        (0, l.jsx)(_.Hp, { entry: t, channelId: n.id, guildId: n.guild_id }),
+                                        null != H ? (0, l.jsx)(y.A, { className: b.N4, onClick: H, children: K }) : K,
+                                        (0, l.jsx)(v.mG, {
+                                            location: v.N5.CARD,
+                                            children: L.map((e, n) => (0, l.jsx)(e, { entry: t, hovered: O }, n)),
                                         }),
                                     ],
                                 }),
                                 null != H
-                                    ? (0, i.jsx)(l.D, { className: D.vi, onClick: H, "aria-label": j, children: W })
+                                    ? (0, l.jsx)(a.D, { className: b.vi, onClick: H, "aria-label": B, children: W })
                                     : W,
                             ],
                         }),
                 }),
-                x &&
-                    (0, i.jsxs)(i.Fragment, {
+                D &&
+                    (0, l.jsxs)(l.Fragment, {
                         children: [
-                            (0, i.jsx)(O.ik, {}),
-                            (0, i.jsxs)(O.dM, {
-                                className: D.DK,
+                            (0, l.jsx)(_.ik, {}),
+                            (0, l.jsxs)(_.dM, {
+                                className: b.DK,
                                 children: [
-                                    (0, i.jsxs)("div", {
-                                        className: D.tJ,
+                                    (0, l.jsxs)("div", {
+                                        className: b.tJ,
                                         children: [
-                                            (0, i.jsx)(o.h, { color: d.A.colors.ICON_SUBTLE, size: "xxs" }),
-                                            (0, i.jsx)(c.E, {
+                                            (0, l.jsx)(o.h, { color: u.A.colors.ICON_SUBTLE, size: "xxs" }),
+                                            (0, l.jsx)(c.E, {
                                                 variant: "text-xs/normal",
                                                 color: "text-subtle",
-                                                children: y.intl.string(y.t["5HiF2i"]),
+                                                children: j.intl.string(j.t["5HiF2i"]),
                                             }),
                                         ],
                                     }),
-                                    F === s.M.CLOUD_PLAY_NEW_BADGE &&
-                                        (0, i.jsx)(u.Lp, {
-                                            text: y.intl.string(y.t.y2b7CA),
-                                            color: d.A.colors.BACKGROUND_BRAND.css,
+                                    G === r.M.CLOUD_PLAY_NEW_BADGE &&
+                                        (0, l.jsx)(d.Lp, {
+                                            text: j.intl.string(j.t.y2b7CA),
+                                            color: u.A.colors.BACKGROUND_BRAND.css,
                                         }),
                                 ],
                             }),
@@ -124,15 +124,15 @@ let b = [C.iq, C.Zc, C.Xy, C.$X, C.tR, C.K7, C.fg, C.sp, C.MK],
                     }),
                 "applicationWidgetPreview" in t &&
                     null != t.applicationWidgetPreview &&
-                    (0, i.jsx)(T.F, {
+                    (0, l.jsx)(E.F, {
                         userId: t.author_id,
                         widgetApplicationId: t.applicationWidgetPreview.widgetApplicationId,
                         hasWidget: t.applicationWidgetPreview.hasWidget,
-                        className: D.AB,
+                        className: b.AB,
                         compactViewMore: !0,
                         onClickViewMore: () => {
-                            U(R.PA.APPLICATION_WIDGET_PREVIEW_VIEW_MORE),
-                                (0, p.openUserProfileModal)({ userId: t.author_id, tabSection: L.RP.WIDGETS });
+                            w(N.PA.APPLICATION_WIDGET_PREVIEW_VIEW_MORE),
+                                (0, A.openUserProfileModal)({ userId: t.author_id, tabSection: T.RP.WIDGETS });
                         },
                     }),
             ],

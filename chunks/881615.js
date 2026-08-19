@@ -1,37 +1,37 @@
 "use strict";
-n.d(t, { Db: () => d, sN: () => c });
-var i = n(835245),
+n.d(t, { Db: () => u, sN: () => c });
+var i = n(132500),
     r = n(228366),
-    s = n(927813),
-    a = n(38405),
-    o = n(604594);
-let l = 12 * s.A.Millis.HOUR,
-    u = null;
+    a = n(927813),
+    s = n(38405),
+    l = n(604594);
+let o = 12 * a.A.Millis.HOUR,
+    d = null;
 function c() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
         t = Date.now();
     return (
-        null == u ||
+        null == d ||
         (function (e) {
             let t = Date.now();
             if (t < e.createdAtTimestamp)
                 return (
-                    a.A.addBreadcrumb({
+                    s.A.addBreadcrumb({
                         category: "ad",
                         message: `future facing timestamp Date.now(): ${t}, initialized timestamp: ${e.createdAtTimestamp}`,
                     }),
                     !0
                 );
-            let n = t - e.lastUsedTimestamp > o.jj,
-                i = t - e.createdAtTimestamp > l;
+            let n = t - e.lastUsedTimestamp > l.jj,
+                i = t - e.createdAtTimestamp > o;
             return n || i;
-        })(u)
-            ? ((u = { uuid: (0, i.A)(), createdAtTimestamp: t, lastUsedTimestamp: t, version: o.Ir }),
+        })(d)
+            ? ((d = { uuid: (0, i.A)(), createdAtTimestamp: t, lastUsedTimestamp: t, version: l.Ir }),
               r.h.dispatch({ type: "AD_SESSION_RESET" }))
-            : e && (u.lastUsedTimestamp = t),
-        u
+            : e && (d.lastUsedTimestamp = t),
+        d
     );
 }
-function d() {
-    u = null;
+function u() {
+    d = null;
 }

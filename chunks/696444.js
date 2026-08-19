@@ -17,7 +17,7 @@ class r {
             (this.summary = e.summary);
     }
     static fromServer(e) {
-        let { prices: t, type: n, premium_type: s, name: a, sku_id: o, summary: l } = e;
-        return new r({ prices: (0, i.A)(t), type: n, premiumType: s, name: a, skuId: o, summary: l });
+        let { prices: t, type: n, premium_type: a, name: s, sku_id: l, summary: o } = e;
+        return new r({ prices: (0, i.A)(t), type: n, premiumType: a, name: s, skuId: l, summary: o });
     }
 }

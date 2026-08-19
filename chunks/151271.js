@@ -1,6 +1,6 @@
 r.d(t, { RQ: () => I, Ri: () => f, U: () => g, bf: () => d, ed: () => m, r$: () => p, v8: () => h });
-var s = r(277057),
-    n = r.n(s),
+var n = r(277057),
+    s = r.n(n),
     l = r(537812),
     i = r(882035),
     a = r(121894),
@@ -14,7 +14,7 @@ let u = Object.freeze({
         isSearchSuggestion: !1,
         pickerId: (function () {
             let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "uid_";
-            return n()(e);
+            return s()(e);
         })(),
         isNitroLockedSectionVisible: !1,
         areOnlyNitroLockedSectionsVisible: !1,
@@ -53,8 +53,8 @@ function m(e, t) {
           : h();
 }
 function p(e, t, r) {
-    let s = c.getState();
-    s.activeView === e && s.activeViewType === t && s.activeChannelId === r ? h() : d(e, t, r);
+    let n = c.getState();
+    n.activeView === e && n.activeViewType === t && n.activeChannelId === r ? h() : d(e, t, r);
 }
 function g(e) {
     (0, a.r)(() => c.setState({ activeView: e, lastActiveView: c.getState().activeView }));

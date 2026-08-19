@@ -1,18 +1,18 @@
 "use strict";
-n.d(t, { A: () => m });
+n.d(t, { A: () => f });
 var i = n(280889),
     r = n(143236),
-    s = n(735438),
-    a = n.n(s),
-    o = n(626584),
-    l = n(550642),
-    u = n(509929),
+    a = n(435558),
+    s = n.n(a),
+    l = n(626584),
+    o = n(550642),
+    d = n(509929),
     c = n(787458),
-    d = n(972711),
+    u = n(972711),
     _ = n(652215),
-    h = n(381941);
-let f = new o.A("UploaderBase.tsx");
-class p extends r.EventEmitter {
+    E = n(381941);
+let A = new l.A("UploaderBase.tsx");
+class h extends r.EventEmitter {
     id;
     _file;
     _aborted = !1;
@@ -25,7 +25,7 @@ class p extends r.EventEmitter {
     _cancel;
     constructor() {
         super(),
-            (this.id = a().uniqueId("Uploader")),
+            (this.id = s().uniqueId("Uploader")),
             (this._file = {
                 id: this.id,
                 currentSize: 0,
@@ -45,14 +45,14 @@ class p extends r.EventEmitter {
     async compressAndCheckFileSize() {
         let e = (0, c.B)(this.files[0]?.item?.target);
         return this.files.length > e.getMaxAttachmentsCount()
-            ? (f.log(`Too many attachments for ${this.id}`),
+            ? (A.log(`Too many attachments for ${this.id}`),
               this._handleError({ code: _.t02.TOO_MANY_ATTACHMENTS }),
               !1)
-            : ((0, l.R8)({ location: "UploaderBase.compressAndCheckFileSize" }),
+            : ((0, o.R8)({ location: "UploaderBase.compressAndCheckFileSize" }),
               !(this._fileSize() > e.getMaxTotalAttachmentSize()) ||
                   (this._handleError({
                       code: _.t02.ENTITY_TOO_LARGE,
-                      reason: { type: h.ty.POSTCOMPRESSION_SUM_TOO_LARGE },
+                      reason: { type: E.ty.POSTCOMPRESSION_SUM_TOO_LARGE },
                   }),
                   !1));
     }
@@ -60,7 +60,7 @@ class p extends r.EventEmitter {
         let e = this.files.some((e) => e.isImage),
             t = this.files.some((e) => e.isVideo),
             n = this._fileSize();
-        f.log(`setUploadingTextForUI - total content: ${n} bytes and ${this.files.length} attachments for ${this.id}`),
+        A.log(`setUploadingTextForUI - total content: ${n} bytes and ${this.files.length} attachments for ${this.id}`),
             (this._file = {
                 ...this._file,
                 totalPostCompressionSize: n,
@@ -84,34 +84,34 @@ class p extends r.EventEmitter {
         let e = {};
         return (
             this.files.forEach((t) => {
-                e[t.id] = (0, d.YL)(t.loaded, t.currentSize);
+                e[t.id] = (0, u.YL)(t.loaded, t.currentSize);
             }),
             e
         );
     }
     _addAttachmentsToPayload(e, t, n) {
         let i = { ...e },
-            r = [...a().get(i, t, []), ...n];
-        return a().set(i, t, r);
+            r = [...s().get(i, t, []), ...n];
+        return s().set(i, t, r);
     }
     _handleStart = (e) => {
         (this._cancel = e), this.alreadyStarted || this.emit("start", this._file), (this.alreadyStarted = !0);
     };
     _handleProgress = (e, t, n) => {
         let i = Date.now(),
-            r = (0, d.YL)(e, t),
-            s = Math.floor((e - this._loaded) / ((i - this._lastUpdate) / 1e3));
+            r = (0, u.YL)(e, t),
+            a = Math.floor((e - this._loaded) / ((i - this._lastUpdate) / 1e3));
         null != n &&
             this._file.items?.forEach((e) => {
                 e.item.progress = n[e.id];
             }),
             (this._lastUpdate = i),
             (this._loaded = e),
-            (this._file = { ...this._file, currentSize: t, progress: r, rate: s }),
+            (this._file = { ...this._file, currentSize: t, progress: r, rate: a }),
             this.emit("progress", this._file);
     };
     _handleException = (e) => {
-        this._handleError({ reason: { type: h.ty.ERROR_SOURCE_UNKNOWN, msg: e.toString() } });
+        this._handleError({ reason: { type: E.ty.ERROR_SOURCE_UNKNOWN, msg: e.toString() } });
     };
     _handleAborted = () => {
         this.clearProcessingMessageInterval();
@@ -121,13 +121,13 @@ class p extends r.EventEmitter {
         this.clearProcessingMessageInterval(),
             this._aborted ||
                 ((this._errored = !0),
-                f.log(`_handleError: ${t} (${JSON.stringify(n)}) for ${this.id}`),
+                A.log(`_handleError: ${t} (${JSON.stringify(n)}) for ${this.id}`),
                 this.emit("error", this._file, t, i, n),
                 this.removeAllListeners());
     };
     _handleComplete = (e) => {
         this.clearProcessingMessageInterval(),
-            f.log(`_handleComplete for ${this.id}`),
+            A.log(`_handleComplete for ${this.id}`),
             this.emit("complete", this._file, e),
             this.removeAllListeners();
     };
@@ -136,18 +136,18 @@ class p extends r.EventEmitter {
             (clearInterval(this.processingMessageChangeInterval), (this.processingMessageChangeInterval = void 0));
     }
     cancel() {
-        f.log(`cancel() for ${this.id}`),
+        A.log(`cancel() for ${this.id}`),
             this._aborted ||
                 ((this._aborted = !0), this._cancel?.(), this.files.forEach((e) => e.cancel()), this._handleComplete());
     }
     async cancelItem(e) {
-        f.log(`Cancel called for ${this.id} for item ${e}`);
+        A.log(`Cancel called for ${this.id} for item ${e}`);
         let t = this.files.find((t) => t.id === e);
         if (null == t || t.isCancelled()) return;
         let n = this.files.indexOf(t);
         (this.files = [...this.files.slice(0, n), ...this.files.slice(n + 1)]),
             (this._file = { ...this._file, items: this.files }),
-            await (0, u.sm)(t),
+            await (0, d.sm)(t),
             t.cancel(),
             this.emit("cancel-upload-item", this._file),
             0 === this.files.length && this.cancel();
@@ -170,8 +170,8 @@ class p extends r.EventEmitter {
             });
     }
 }
-var E = n(358579);
-class m extends p {
+var I = n(358579);
+class f extends h {
     async uploadFiles(e) {
         super.upload(e);
         let t = new Promise((e, t) => {
@@ -189,12 +189,12 @@ class m extends p {
                 this._aborted || (this._handleStart(() => n.abort()), !(await this.compressAndCheckFileSize())))
             )
                 return t;
-            this.setUploadingTextForUI(), await (0, E.A)(this.files, !0, this._recomputeProgress.bind(this));
-        } catch (s) {
+            this.setUploadingTextForUI(), await (0, I.A)(this.files, !0, this._recomputeProgress.bind(this));
+        } catch (a) {
             let e = this.files.find((e) => e.status === i.jP.ERROR),
                 t = e?.error,
-                n = s instanceof Error ? s.message : String(s),
-                r = { type: h.ty.ERROR_SOURCE_UNKNOWN, msg: n };
+                n = a instanceof Error ? a.message : String(a),
+                r = { type: E.ty.ERROR_SOURCE_UNKNOWN, msg: n };
             throw (this._handleError({ code: t, reason: r }), { file: this._file, code: t, reason: r });
         }
         return this._handleComplete(), this.files;

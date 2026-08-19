@@ -1,20 +1,20 @@
 "use strict";
-n.d(t, { $N: () => a, l6: () => o, tv: () => l });
-var i = n(835245),
+n.d(t, { $N: () => s, l6: () => l, tv: () => o });
+var i = n(132500),
     r = n(604594);
-let s = null;
-function a() {
+let a = null;
+function s() {
     let e = Date.now();
-    return null == s
+    return null == a
         ? {
-              searchSession: (s = { uuid: (0, i.A)(), createdAtTimestamp: e, lastUsedTimestamp: e, version: r.Ir }),
+              searchSession: (a = { uuid: (0, i.A)(), createdAtTimestamp: e, lastUsedTimestamp: e, version: r.Ir }),
               isNew: !0,
           }
-        : ((s.lastUsedTimestamp = e), { searchSession: s, isNew: !1 });
-}
-function o() {
-    s = null;
+        : ((a.lastUsedTimestamp = e), { searchSession: a, isNew: !1 });
 }
 function l() {
-    return s;
+    a = null;
+}
+function o() {
+    return a;
 }

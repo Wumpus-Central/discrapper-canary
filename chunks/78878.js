@@ -1,8 +1,8 @@
 "use strict";
-n.d(t, { A: () => a }), n(321073);
+n.d(t, { A: () => s }), n(321073);
 var i = n(439372),
     r = n(635731);
-class s extends i.A {
+class a extends i.A {
     _recentActions = new r.A(1e3);
     trackAction = (e) => {
         let { type: t } = e;
@@ -45,4 +45,4 @@ class s extends i.A {
         OVERLAY_SET_INPUT_LOCKED: this.handleTrackAction,
     };
 }
-let a = new s();
+let s = new a();

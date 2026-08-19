@@ -1,27 +1,27 @@
 "use strict";
-n.d(t, { A: () => s });
+n.d(t, { A: () => a });
 var i = n(587895),
     r = n(652215);
-function s(e) {
+function a(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
-        s = i.A.getApplication(e.applicationId),
-        a = e.getPrice(),
-        o = e.getPrice(null, !1),
-        l = {
+        a = i.A.getApplication(e.applicationId),
+        s = e.getPrice(),
+        l = e.getPrice(null, !1),
+        o = {
             sku_id: e.id,
             sku_type: e.type,
             application_id: e.applicationId,
-            application_name: null != s ? s.name : null,
+            application_name: null != a ? a.name : null,
             store_title: e.name,
             distribution_type: e.premium ? "premium" : "distribution",
         },
-        u = null;
+        d = null;
     n &&
-        (u = {
-            price: null != a ? a.amount : null,
-            regular_price: null != o ? o.amount : null,
-            currency: null != a ? a.currency : null,
+        (d = {
+            price: null != s ? s.amount : null,
+            regular_price: null != l ? l.amount : null,
+            currency: null != s ? s.currency : null,
         });
     let c = null;
     return (
@@ -41,6 +41,6 @@ function s(e) {
                 has_cloud_saves: e.hasFeature(r.x0t.CLOUD_SAVES),
                 has_secure_networking: e.hasFeature(r.x0t.SECURE_NETWORKING),
             }),
-        { ...l, ...u, ...c }
+        { ...o, ...d, ...c }
     );
 }

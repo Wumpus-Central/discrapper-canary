@@ -1,12 +1,12 @@
 "use strict";
-n.d(t, { P3: () => _, Sg: () => d });
+n.d(t, { P3: () => _, Sg: () => u });
 var i = n(702841),
     r = n(554146),
-    s = n(495544),
-    a = n(927813),
-    o = n(935208),
-    l = n(199773);
-let u = {
+    a = n(280450),
+    s = n(927813),
+    l = n(935208),
+    o = n(199773);
+let d = {
         [r.M.MJ_NEW_USER_CHAT_BAR]: 0,
         [r.M.NUX_GUILD_CHANNEL_EXPLAINER]: 0,
         [r.M.SEEN_LAUNCH_WELCOME]: 0,
@@ -36,17 +36,17 @@ let u = {
         [r.M.NITRO_DROP_REWARD]: 0,
         [r.M.BOUNTIES_SWIPE_UP_NUX]: 0,
     },
-    c = a.A.Millis.DAY;
-function d(e) {
-    let { userId: t, newUserMinAgeRequiredOverridden: n } = (0, i.cf)([s.default, l.A], () => ({
-        userId: s.default.getId(),
-        newUserMinAgeRequiredOverridden: l.A.newUserMinAgeRequiredOverridden,
+    c = s.A.Millis.DAY;
+function u(e) {
+    let { userId: t, newUserMinAgeRequiredOverridden: n } = (0, i.cf)([a.default, o.A], () => ({
+        userId: a.default.getId(),
+        newUserMinAgeRequiredOverridden: o.A.newUserMinAgeRequiredOverridden,
     }));
-    return n ? e : e.filter((e) => h(t, e));
+    return n ? e : e.filter((e) => E(t, e));
 }
 function _(e) {
-    return !l.A.newUserMinAgeRequiredOverridden && !h(s.default.getId(), e);
+    return !o.A.newUserMinAgeRequiredOverridden && !E(a.default.getId(), e);
 }
-function h(e, t) {
-    return null != e && o.default.age(e) >= (u[t] ?? c);
+function E(e, t) {
+    return null != e && l.default.age(e) >= (d[t] ?? c);
 }

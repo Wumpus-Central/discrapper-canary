@@ -1,18 +1,18 @@
 var n = e(710821),
     o = e(739305),
-    i = e(464046),
-    a = e(120394),
-    u = e(900923),
-    c = o.aTypedArray,
-    f = o.getTypedArrayConstructor;
+    a = e(464046),
+    i = e(120394),
+    p = e(900923),
+    f = o.aTypedArray,
+    u = o.getTypedArrayConstructor;
 (0, o.exportTypedArrayMethod)(
     "with",
     {
         with: function (r, t) {
-            var e = c(this),
-                o = a(r),
-                p = i(e) ? u(t) : +t;
-            return n(e, f(e), o, p);
+            var e = f(this),
+                o = i(r),
+                y = a(e) ? p(t) : +t;
+            return n(e, u(e), o, y);
         },
     }.with,
     !(function () {

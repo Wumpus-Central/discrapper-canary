@@ -1,8 +1,8 @@
 n.d(t, { A: () => m });
 var l = n(477900),
     r = n(582128),
-    a = n(503698),
-    i = n.n(a),
+    i = n(503698),
+    a = n.n(i),
     s = n(297264),
     o = n(834730),
     u = n(707554),
@@ -14,23 +14,23 @@ function m(e) {
     let {
             children: t,
             heading: n,
-            headingIcon: a,
+            headingIcon: i,
             introText: m,
             className: A,
             scrollTargetId: x,
             headingClassName: S,
-            headingVariant: g = "text-xs/semibold",
-            headingColor: T = "text-default",
+            headingVariant: T = "text-xs/semibold",
+            headingColor: g = "text-default",
         } = e,
         E = (0, c.GV)(),
         p = r.useRef(null),
         v = (0, f.g)(),
-        y = null != x && v === x;
+        R = null != x && v === x;
     return (
-        (0, d.A)(p, y),
+        (0, d.A)(p, R),
         (0, l.jsxs)("section", {
-            ref: y ? p : void 0,
-            className: i()(h.uW, A),
+            ref: R ? p : void 0,
+            className: a()(h.uW, A),
             "aria-labelledby": null != n ? E : void 0,
             children: [
                 null != n &&
@@ -40,8 +40,8 @@ function m(e) {
                             (0, l.jsxs)("div", {
                                 className: h.wx,
                                 children: [
-                                    (0, l.jsx)(s.D, { variant: g, color: T, className: S, id: E, children: n }),
-                                    a,
+                                    (0, l.jsx)(s.D, { variant: T, color: g, className: S, id: E, children: n }),
+                                    i,
                                 ],
                             }),
                             null != m && (0, l.jsx)(o.E, { variant: "text-xs/normal", children: m }),

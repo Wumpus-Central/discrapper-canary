@@ -1,46 +1,46 @@
-e.d(l, { A: () => d });
-var n = e(599026),
-    i = e(440594),
-    a = e(541806),
-    s = e(765379),
-    o = e(90644),
-    r = e(82149),
-    u = e(652215),
-    p = e(375708);
-function d(t) {
-    let l = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-        e = t?.name === "" ? null : t?.name,
-        d = t?.details === "" ? null : t?.details,
-        c = t?.state === "" ? null : t?.state,
-        A = t?.type === u.$pd.STREAMING ? (d ?? e) : e;
+l.d(t, { A: () => u });
+var n = l(599026),
+    i = l(440594),
+    r = l(541806),
+    a = l(765379),
+    s = l(90644),
+    o = l(82149),
+    c = l(652215),
+    d = l(375708);
+function u(e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+        l = e?.name === "" ? null : e?.name,
+        u = e?.details === "" ? null : e?.details,
+        h = e?.state === "" ? null : e?.state,
+        E = e?.type === c.$pd.STREAMING ? (u ?? l) : l;
     if (
-        (t?.status_display_type === n.A.NAME && null != e
-            ? (A = e)
-            : t?.status_display_type === n.A.STATE && null != c
-              ? (A = c)
-              : t?.status_display_type === n.A.DETAILS && null != d && (A = d),
-        (0, s.A)(t))
+        (e?.status_display_type === n.A.NAME && null != l
+            ? (E = l)
+            : e?.status_display_type === n.A.STATE && null != h
+              ? (E = h)
+              : e?.status_display_type === n.A.DETAILS && null != u && (E = u),
+        (0, a.A)(e))
     ) {
-        let t = (0, i.A)(e);
-        return { text: t, tooltip: t };
+        let e = (0, i.A)(l);
+        return { text: e, tooltip: e };
     }
-    if (t?.type === u.$pd.PLAYING && null != A)
-        return { text: A, tooltip: p.intl.formatToPlainString(p.t.lFApmz, { game: A }) };
-    if ((0, o.A)(t) && l && null != c) {
-        let t = c.split("; ")?.join(", ");
-        return { text: t, tooltip: p.intl.formatToPlainString(p.t.Vnuxue, { name: t }) };
+    if (e?.type === c.$pd.PLAYING && null != E)
+        return { text: E, tooltip: d.intl.formatToPlainString(d.t.lFApmz, { game: E }) };
+    if ((0, s.A)(e) && t && null != h) {
+        let e = h.split("; ")?.join(", ");
+        return { text: e, tooltip: d.intl.formatToPlainString(d.t.Vnuxue, { name: e }) };
     }
-    return (0, r.Cy)(t) && null != e
-        ? { text: e, tooltip: p.intl.formatToPlainString(p.t.pW3Ip3, { name: e }) }
-        : t?.type === u.$pd.LISTENING && null != A
-          ? { text: A, tooltip: p.intl.formatToPlainString(p.t.Vnuxue, { name: A }) }
-          : (0, a.A)(t) && l && null != d
-            ? { text: d, tooltip: p.intl.formatToPlainString(p.t.pW3Ip3, { name: d }) }
-            : t?.type === u.$pd.WATCHING && null != A
-              ? { text: A, tooltip: p.intl.formatToPlainString(p.t.pW3Ip3, { name: A }) }
-              : t?.type === u.$pd.COMPETING && null != A
-                ? { text: A, tooltip: p.intl.formatToPlainString(p.t.QQ2wVE, { name: A }) }
-                : t?.type === u.$pd.STREAMING && null != A
-                  ? { text: A, tooltip: p.intl.formatToPlainString(p.t["0wJXSh"], { name: A }) }
+    return (0, o.Cy)(e) && null != l
+        ? { text: l, tooltip: d.intl.formatToPlainString(d.t.pW3Ip3, { name: l }) }
+        : e?.type === c.$pd.LISTENING && null != E
+          ? { text: E, tooltip: d.intl.formatToPlainString(d.t.Vnuxue, { name: E }) }
+          : (0, r.A)(e) && t && null != u
+            ? { text: u, tooltip: d.intl.formatToPlainString(d.t.pW3Ip3, { name: u }) }
+            : e?.type === c.$pd.WATCHING && null != E
+              ? { text: E, tooltip: d.intl.formatToPlainString(d.t.pW3Ip3, { name: E }) }
+              : e?.type === c.$pd.COMPETING && null != E
+                ? { text: E, tooltip: d.intl.formatToPlainString(d.t.QQ2wVE, { name: E }) }
+                : e?.type === c.$pd.STREAMING && null != E
+                  ? { text: E, tooltip: d.intl.formatToPlainString(d.t["0wJXSh"], { name: E }) }
                   : {};
 }

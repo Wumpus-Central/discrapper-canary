@@ -1,11 +1,11 @@
 "use strict";
-function r(e) {
+function n(e) {
     var t;
     if ("u" < typeof window || null == window.navigator) return !1;
-    let n = null == (t = window.navigator.userAgentData) ? void 0 : t.brands;
-    return (Array.isArray(n) && n.some((t) => e.test(t.brand))) || e.test(window.navigator.userAgent);
+    let r = null == (t = window.navigator.userAgentData) ? void 0 : t.brands;
+    return (Array.isArray(r) && r.some((t) => e.test(t.brand))) || e.test(window.navigator.userAgent);
 }
-function i(e) {
+function o(e) {
     var t;
     return (
         "u" > typeof window &&
@@ -13,35 +13,35 @@ function i(e) {
         e.test((null == (t = window.navigator.userAgentData) ? void 0 : t.platform) || window.navigator.platform)
     );
 }
-function a(e) {
+function i(e) {
     let t = null;
     return () => (null == t && (t = e()), t);
 }
-n.d(t, { H8: () => f, Tc: () => d, bh: () => l, cX: () => o, gm: () => h, lg: () => c, m0: () => p, un: () => u });
-let o = a(function () {
-        return i(/^Mac/i);
+r.d(t, { H8: () => p, Tc: () => f, bh: () => l, cX: () => a, gm: () => h, lg: () => c, m0: () => d, un: () => u });
+let a = i(function () {
+        return o(/^Mac/i);
     }),
-    s = a(function () {
-        return i(/^iPhone/i);
+    s = i(function () {
+        return o(/^iPhone/i);
     }),
-    l = a(function () {
-        return i(/^iPad/i) || (o() && navigator.maxTouchPoints > 1);
+    l = i(function () {
+        return o(/^iPad/i) || (a() && navigator.maxTouchPoints > 1);
     }),
-    u = a(function () {
+    u = i(function () {
         return s() || l();
     }),
-    c = a(function () {
-        return o() || u();
+    c = i(function () {
+        return a() || u();
     }),
-    d = a(function () {
-        return r(/AppleWebKit/i) && !f();
+    f = i(function () {
+        return n(/AppleWebKit/i) && !p();
     }),
-    f = a(function () {
-        return r(/Chrome/i);
+    p = i(function () {
+        return n(/Chrome/i);
     }),
-    p = a(function () {
-        return r(/Android/i);
+    d = i(function () {
+        return n(/Android/i);
     }),
-    h = a(function () {
-        return r(/Firefox/i);
+    h = i(function () {
+        return n(/Firefox/i);
     });

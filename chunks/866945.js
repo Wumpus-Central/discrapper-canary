@@ -8,21 +8,21 @@ if (221552 == n.j) var o = n(834730);
 if (221552 == n.j) var d = n(349288);
 if (221552 == n.j) var c = n(939249);
 if (221552 == n.j) var u = n(789645);
-var h = n(558001),
-    A = n(835002),
+var A = n(558001),
+    h = n(835002),
     E = n(375708),
     g = n(937666);
 function C(e) {
     let { label: t, labelHook: n, count: r, dismissNotice: C, className: _, noticeType: I } = e,
         T = null != C;
     l.useEffect(() => {
-        (0, h.N)(I, A.YX.VIEWED);
+        (0, A.N)(I, h.YX.VIEWED);
     }, [I]);
     let p = l.useCallback(() => {
-            null != C && (C(), (0, h.N)(I, A.YX.DISMISS));
+            null != C && (C(), (0, A.N)(I, h.YX.DISMISS));
         }, [I, C]),
         S = l.useCallback(() => {
-            n(), (0, h.N)(I, A.YX.LEARN_MORE);
+            n(), (0, A.N)(I, h.YX.LEARN_MORE);
         }, [I, n]);
     return (0, i.jsxs)("div", {
         className: s()(g.I, _),

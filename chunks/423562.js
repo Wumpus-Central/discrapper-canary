@@ -1,19 +1,19 @@
 "use strict";
-n.d(t, { A: () => _ });
-var i = n(477900);
+n.d(t, { A: () => h });
+var l = n(477900);
 n(582128);
-var r = n(17928),
-    a = n(86147),
-    s = n(729475),
-    l = n(869146),
+var i = n(17928),
+    s = n(86147),
+    r = n(729475),
+    a = n(869146),
     o = n(531685),
-    d = n(475815),
+    u = n(475815),
     c = n(204651),
-    u = n(375708);
-function _(e) {
-    let { node: t, guestWindow: n, ..._ } = e,
-        E = (0, r.bG)([o.A, l.A], () => (0, d._U)(t, n?.document), [t, n]),
-        A = E ? u.intl.string(u.t.Z7MyNB) : u.intl.string(u.t.OIDkcp),
-        h = E ? a.z : s.T;
-    return (0, i.jsx)(c.A, { label: A, iconComponent: h, ..._ });
+    d = n(375708);
+function h(e) {
+    let { node: t, guestWindow: n, ...h } = e,
+        m = (0, i.bG)([o.A, a.A], () => (0, u._U)(t, n?.document), [t, n]),
+        f = m ? d.intl.string(d.t.Z7MyNB) : d.intl.string(d.t.OIDkcp),
+        p = m ? s.z : r.T;
+    return (0, l.jsx)(c.A, { label: f, iconComponent: p, ...h });
 }

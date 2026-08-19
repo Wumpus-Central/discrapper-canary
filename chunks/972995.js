@@ -1,24 +1,24 @@
 "use strict";
-n.d(t, { q: () => d });
+n.d(t, { q: () => u });
 var i = n(485845),
     r = n(95561),
-    s = n(887909),
-    a = n(395671),
-    o = n(627363),
-    l = n(587895),
-    u = n(204776),
+    a = n(887909),
+    s = n(395671),
+    l = n(627363),
+    o = n(587895),
+    d = n(204776),
     c = n(652215);
-async function d(e) {
-    let { applicationId: t, channel: n, commandIntegrationTypes: d, appLauncherContext: _ } = e;
-    if (!(0, u.Rx)({ applicationId: t, channel: n, commandIntegrationTypes: d }))
+async function u(e) {
+    let { applicationId: t, channel: n, commandIntegrationTypes: u, appLauncherContext: _ } = e;
+    if (!(0, d.Rx)({ applicationId: t, channel: n, commandIntegrationTypes: u }))
         return Promise.resolve({ isAuthorized: !0 });
-    let h = l.A.getApplication(t);
-    if (null == h) {
-        let e = await (0, o.TA)(t);
-        h = a.Ay.createFromServer(e);
+    let E = o.A.getApplication(t);
+    if (null == E) {
+        let e = await (0, l.TA)(t);
+        E = s.Ay.createFromServer(e);
     }
-    let f = i.b.USER_INSTALL,
-        p = h?.integrationTypesConfig?.[f]?.oauth2InstallParams?.scopes;
+    let A = i.b.USER_INSTALL,
+        h = E?.integrationTypesConfig?.[A]?.oauth2InstallParams?.scopes;
     return (
         null != _ &&
             (0, r.zV)(c.HAw.APP_LAUNCHER_OAUTH2_AUTHORIZE_OPENED, {
@@ -28,11 +28,11 @@ async function d(e) {
                 source: _.entrypoint,
             }),
         new Promise((e) => {
-            (0, s.openOAuth2Modal)(
+            (0, a.openOAuth2Modal)(
                 {
                     clientId: t,
-                    integrationType: f,
-                    scopes: p,
+                    integrationType: A,
+                    scopes: h,
                     callback: (n) => {
                         let { location: i } = n;
                         null != i

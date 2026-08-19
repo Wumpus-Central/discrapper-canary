@@ -26,8 +26,8 @@ var r,
     E = l(775602),
     T = l(793574),
     R = l(688810),
-    P = l(429913),
-    I = l(713517),
+    I = l(429913),
+    P = l(713517),
     M = l(427209),
     S = l(976860),
     D = l(288106),
@@ -142,7 +142,7 @@ function eg(e) {
         eh = (0, b.bG)([L.A], () => (0, x.M)(L.A.theme)),
         eC = (0, b.bG)([E.Ay], () => E.Ay.useReducedMotion),
         eb = w.Q_.useSetting(),
-        { isHoveringOrFocusing: ej } = (0, I.A)(M),
+        { isHoveringOrFocusing: ej } = (0, P.A)(M),
         ev = (0, W.jM)(),
         { analyticsLocations: eN } = (0, R.Ay)(p ?? []),
         ey = a.useRef({ positionInSection: t, analyticsLocations: eN }),
@@ -189,9 +189,9 @@ function eg(e) {
             );
         })(r, eA),
         eR = (0, H.JL)({ sku: eo }),
-        eP = eR?.amount,
-        eI = (0, $.oG)({ orbPriceAmount: eP, applicationId: eg, location: "social_layer_storefront_card" }),
-        eM = (0, P.h)(eo?.applicationId),
+        eI = eR?.amount,
+        eP = (0, $.oG)({ orbPriceAmount: eI, applicationId: eg, location: "social_layer_storefront_card" }),
+        eM = (0, I.h)(eo?.applicationId),
         {
             priceComponent: eS,
             extendedHeight: eD,
@@ -317,8 +317,8 @@ function eg(e) {
             }, [t, i, u, c, d, o, r, l, x, s, p]);
         })({
             sku: eo,
-            orbsGate: eI,
-            orbPriceAmount: eP,
+            orbsGate: eP,
+            orbPriceAmount: eI,
             promotion: (0, K.F)("card", { applicationId: eg, skuId: r }),
             showOrbsOnly: u,
         }),
@@ -602,14 +602,14 @@ function eg(e) {
         e7 = eo?.exclusive === !0 && 2 !== i,
         e5 = a.useMemo(
             () =>
-                "CAN_CHECKOUT" === eI
+                "CAN_CHECKOUT" === eP
                     ? (0, n.jsx)(f.$, {
                           variant: "primary",
                           onMouseDown: eJ,
                           onClick: e9,
-                          "aria-label": eu.intl.formatToPlainString(eu.t.yi41qQ, { orbPrice: eP }),
+                          "aria-label": eu.intl.formatToPlainString(eu.t.yi41qQ, { orbPrice: eI }),
                           text: eu.intl.format(eu.t.JC15qj, {
-                              orbPrice: eP,
+                              orbPrice: eI,
                               orbIconHook: () =>
                                   (0, n.jsx)(m.C, { className: el.fN, size: "sm", color: "currentColor" }, "orbs-icon"),
                           }),
@@ -622,7 +622,7 @@ function eg(e) {
                           text: null != eH ? eu.intl.format(eu.t.Xp5WTn, { price: eH }) : eu.intl.string(eu.t.boqtTA),
                           fullWidth: !0,
                       }),
-            [eI, e9, e2, eJ, eP, eH],
+            [eP, e9, e2, eJ, eI, eH],
         );
     if (null == eo) return null;
     let e6 = (0, F.fq)(eo),

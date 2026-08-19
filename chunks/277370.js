@@ -67,15 +67,15 @@ var j = n(717398),
     Z = n(131607),
     $ = n(66442),
     K = n(774300);
-let X = (0, n(240921).Ay)({
+let q = (0, n(240921).Ay)({
     kind: "user",
     name: "2026-02-longer-group-dm-invites",
     defaultConfig: { inviteMaxAgeSeconds: 86400 },
     variations: { 0: { inviteMaxAgeSeconds: 86400 }, 1: { inviteMaxAgeSeconds: 604800 } },
 });
-function q(e) {
+function X(e) {
     let { location: t } = e,
-        { inviteMaxAgeSeconds: n } = X.getConfig({ location: t });
+        { inviteMaxAgeSeconds: n } = q.getConfig({ location: t });
     return n;
 }
 var Q = n(287809),
@@ -91,7 +91,7 @@ async function ei(e, t) {
     }
     if (0 !== n.length)
         try {
-            let t = await b.Ay.createInvite(e, { max_age: q({ location: "5326c5_1" }) }, et.PE1.GROUP_DM),
+            let t = await b.Ay.createInvite(e, { max_age: X({ location: "5326c5_1" }) }, et.PE1.GROUP_DM),
                 i = await Promise.all(
                     n.map(async (e) => {
                         var n;
@@ -373,14 +373,14 @@ function eK(e) {
             .map((e) => (0, i.jsx)(e$, { onClose: l.onClose, channel: e }, e.id)),
     });
 }
-function eX(e) {
+function eq(e) {
     let { targetElementRef: t } = e,
         [n, l] = (0, Z.kn)([d.M.INVITE_NONFRIENDS_TO_GDM_COACHMARK]);
     return n !== d.M.INVITE_NONFRIENDS_TO_GDM_COACHMARK
         ? null
         : (0, i.jsx)(eV, { targetElementRef: t, markAsDismissed: l });
 }
-class eq extends l.PureComponent {
+class eX extends l.PureComponent {
     state = { separator: !1, copied: !1, newChannelName: "", previewIcon: void 0, collapsedSections: new Set() };
     static contextType = es.Ay;
     copyTimeout;
@@ -481,7 +481,7 @@ class eq extends l.PureComponent {
     createInvite() {
         let { channel: e } = this.props;
         if (null == e || !e.isMultiUserDM() || this.isPartyFull()) return;
-        let t = q({ location: "5326c5_1" });
+        let t = X({ location: "5326c5_1" });
         b.Ay.createInvite(e.id, { max_age: t }, et.PE1.GROUP_DM);
     }
     isPartyFull() {
@@ -632,7 +632,7 @@ class eq extends l.PureComponent {
                     "aria-activedescendant": d ? `user-row-${o}` : void 0,
                 }),
                 this.renderAddUsersButton(),
-                (0, i.jsx)(eX, { targetElementRef: this.searchBarRef }),
+                (0, i.jsx)(eq, { targetElementRef: this.searchBarRef }),
             ],
         });
     }
@@ -1232,7 +1232,7 @@ function e0(e) {
         { enabled: o } = eN.s.useConfig({
             location: t?.isDM() ? "DM Channel Invite Modal" : "Invalid Channel for Experiment",
         });
-    return (0, i.jsx)(eq, {
+    return (0, i.jsx)(eX, {
         channel: t,
         isStaffOnlyDM: a,
         onComplete: n,

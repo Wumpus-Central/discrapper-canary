@@ -8,8 +8,8 @@ var i = n(477900),
     c = n(772707),
     u = n(815021),
     d = n(696208),
-    f = n(821609),
-    E = n(331322),
+    E = n(821609),
+    f = n(331322),
     C = n(289873),
     m = n(97808),
     R = n(778712),
@@ -79,7 +79,7 @@ function w(t) {
         size: "sm",
         "aria-label": L.intl.string(F.default.GH11eI),
         children: (0, i.jsx)(l.c, {
-            children: (0, i.jsx)(E.B, {
+            children: (0, i.jsx)(f.B, {
                 justify: "center",
                 align: "center",
                 className: M.g4,
@@ -129,7 +129,7 @@ function z(t) {
         size: "md",
         graphic: {
             type: "image",
-            src: "https://cdn.discordapp.com/assets/content/215a589ac30f4af7a3c1721324e9f8f9f844d97a0fb5ec09f7816e94acbfc534.svg",
+            src: "https://cdn.discordapp.com/assets/content/975deecc3d5e4b611014ce1ed2e2918334c523c2cf13708678052a58bc4c04c2.svg",
             aspectRatio: "16/9",
         },
         title: L.intl.formatToPlainString(F.default.pQQMJ7, { username: r?.global_name ?? r?.username ?? "" }),
@@ -231,9 +231,9 @@ function H(t) {
     });
 }
 function J(t) {
-    let { transitionState: e, onClose: n, userId: s, linkCode: o, teenIdentity: c, onSent: E, onError: C } = t,
+    let { transitionState: e, onClose: n, userId: s, linkCode: o, teenIdentity: c, onSent: f, onError: C } = t,
         m = (0, S.A)(() => {
-            y.Ay.clearPendingConnection(), E();
+            y.Ay.clearPendingConnection(), f();
         }),
         R = (0, S.A)((t) => {
             C((0, O.Nv)(t));
@@ -266,7 +266,7 @@ function J(t) {
             }),
             (0, i.jsx)(l.c, { controls: (0, i.jsx)("div", {}), children: (0, i.jsx)(D.A, {}) }),
             (0, i.jsx)(d.H, {
-                leading: (0, i.jsx)(f.$, {
+                leading: (0, i.jsx)(E.$, {
                     variant: "secondary",
                     text: L.intl.string(L.t["ETE/oC"]),
                     onClick: j,
@@ -298,7 +298,7 @@ function Z(t) {
         c = (0, s.bG)([A.default], () => A.default.getCurrentUser()?.ageVerificationStatus),
         u = a.useRef(!1),
         d = (0, S.A)(n),
-        f = (0, S.A)(r);
+        E = (0, S.A)(r);
     return (
         a.useEffect(() => {
             if (!u.current) {
@@ -306,15 +306,15 @@ function Z(t) {
                     (u.current = !0), d();
                     return;
                 }
-                c === I.Tk.UNVERIFIED && ((u.current = !0), f());
+                c === I.Tk.UNVERIFIED && ((u.current = !0), E());
             }
-        }, [o, c, d, f]),
+        }, [o, c, d, E]),
         a.useEffect(() => {
             let t = setTimeout(() => {
-                u.current || ((u.current = !0), f());
+                u.current || ((u.current = !0), E());
             }, v.tN);
             return () => clearTimeout(t);
-        }, [f]),
+        }, [E]),
         (0, i.jsx)(w, { transitionState: e, onClose: l })
     );
 }
@@ -322,19 +322,19 @@ function K(t) {
     let { userId: e, linkCode: n, transitionState: s, onClose: r } = t,
         [l, o] = a.useState(T.PREREQ_LOADING),
         [c, u] = a.useState(v.vW.GENERIC_ERROR),
-        [d, f] = a.useState(void 0),
-        E = a.useCallback(function () {
+        [d, E] = a.useState(void 0),
+        f = a.useCallback(function () {
             let t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : v.vW.GENERIC_ERROR;
             u(t), o(T.ERROR);
         }, []),
         C = a.useCallback(
             (t) => {
                 t.section === T.ERROR
-                    ? E(t.params.failureCode)
-                    : ((t.section === T.REQUEST || t.section === T.CONFIRM_AGE) && f(t.params.teenIdentity),
+                    ? f(t.params.failureCode)
+                    : ((t.section === T.REQUEST || t.section === T.CONFIRM_AGE) && E(t.params.teenIdentity),
                       o(t.section));
             },
-            [E],
+            [f],
         ),
         m = a.useCallback(() => {
             o(T.VERIFYING);
@@ -343,8 +343,8 @@ function K(t) {
             o(T.PREREQ_LOADING);
         }, []),
         N = a.useCallback(() => {
-            E();
-        }, [E]),
+            f();
+        }, [f]),
         x = a.useCallback(() => {
             o(T.SENT);
         }, []);
@@ -364,7 +364,7 @@ function K(t) {
                 linkCode: n,
                 teenIdentity: d,
                 onSent: x,
-                onError: E,
+                onError: f,
                 onClose: r,
             });
         case T.SENT:

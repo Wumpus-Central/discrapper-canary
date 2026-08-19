@@ -1,4 +1,4 @@
-n.d(t, { Cm: () => D, $b: () => m, mf: () => P, h6: () => p });
+n.d(t, { Cm: () => D, $b: () => m, mf: () => p, h6: () => P });
 var i = n(554146),
     l = n(367727),
     r = n(994500),
@@ -12,8 +12,8 @@ let o = (0, E.Ay)({
     variations: { 0: { enabled: !1 }, 1: { enabled: !0 } },
 });
 var c = n(17928),
-    u = n(228366);
-let _ = A();
+    _ = n(228366);
+let u = A();
 function A() {
     return { ignoreTimestamps: {} };
 }
@@ -22,19 +22,19 @@ class T extends c.Ay.PersistedStore {
     static persistKey = "IgnoreNoticeStore";
     initialize(e) {
         let t = e?.ignoreTimestamps ?? {};
-        _ = { ...A(), ignoreTimestamps: t };
+        u = { ...A(), ignoreTimestamps: t };
     }
     getState() {
-        return _;
+        return u;
     }
     getIgnoreTimestamps() {
-        return _.ignoreTimestamps;
+        return u.ignoreTimestamps;
     }
 }
-let d = new T(u.h, {
+let d = new T(_.h, {
         RELATIONSHIP_IGNORE_USER_SUCCESS: function (e) {
             let { userId: t, timestamp: n } = e;
-            _.ignoreTimestamps[t] = n;
+            u.ignoreTimestamps[t] = n;
         },
     }),
     I = (0, E.Ay)({
@@ -49,32 +49,32 @@ let d = new T(u.h, {
     });
 var N = n(14594),
     R = n(652215);
-let S = 3 * a.A.Millis.DAY,
-    O = a.A.Millis.WEEK,
+let O = 3 * a.A.Millis.DAY,
+    S = a.A.Millis.WEEK,
     C = a.A.Millis.DAYS_30;
 function D() {
     if (!o.getConfig({ location: "block_user_feedback_utils" }).enabled) return !1;
     let e = r.A.getSinces();
     return Object.keys(e).some((t) => {
         let n = Date.now() - Date.parse(e[t]);
-        return r.A.isBlocked(t) && n > O && n < C;
+        return r.A.isBlocked(t) && n > S && n < C;
     });
 }
 function m(e, t, n, i) {
     s.default.track(R.HAw.BLOCK_USER_FEEDBACK_SUBMITTED, { rating: e, feedback: t, reason: n, skipped: i });
 }
-function p() {
+function P() {
     let { enabled: e, shouldGetShorterIgnoreDuration: t } = I.getConfig({ location: "ignore_user_feedback_utils" });
     if (!e) return !1;
     let { isDismissed: n } = (0, l.FZ)(i.M.NAGBAR_NOTICE_IGNORE_USER_FEEDBACK, { cooldownDurationMs: N.aH });
     if (n) return !1;
-    let s = t ? S : O,
+    let s = t ? O : S,
         a = d.getIgnoreTimestamps();
     return Object.keys(a).some((e) => {
         let t = Date.now() - Number(a[e]);
         return r.A.isIgnored(e) && t > s && t < C;
     });
 }
-function P(e, t, n, i) {
+function p(e, t, n, i) {
     s.default.track(R.HAw.IGNORE_USER_FEEDBACK_SUBMITTED, { rating: e, feedback: t, reason: n, skipped: i });
 }

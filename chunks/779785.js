@@ -1,20 +1,20 @@
 "use strict";
-n.d(t, { w: () => i });
-var r = n(582128);
-function i(e, t) {
-    let n = (0, r.useRef)(!0),
-        i = (0, r.useRef)(null);
-    (0, r.useEffect)(
+r.d(t, { w: () => o });
+var n = r(582128);
+function o(e, t) {
+    let r = (0, n.useRef)(!0),
+        o = (0, n.useRef)(null);
+    (0, n.useEffect)(
         () => (
-            (n.current = !0),
+            (r.current = !0),
             () => {
-                n.current = !1;
+                r.current = !1;
             }
         ),
         [],
     ),
-        (0, r.useEffect)(() => {
-            let r = i.current;
-            n.current ? (n.current = !1) : (!r || t.some((e, t) => !Object.is(e, r[t]))) && e(), (i.current = t);
+        (0, n.useEffect)(() => {
+            let n = o.current;
+            r.current ? (r.current = !1) : (!n || t.some((e, t) => !Object.is(e, n[t]))) && e(), (o.current = t);
         }, t);
 }

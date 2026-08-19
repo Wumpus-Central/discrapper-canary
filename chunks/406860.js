@@ -1,7 +1,7 @@
 i.d(t, { A: () => l });
 var s = i(582128),
-    r = i(435558),
-    n = i(174459),
+    n = i(435558),
+    r = i(174459),
     a = i(652215);
 function l(e) {
     let { boxType: t, thirdPartyPartner: i } = e,
@@ -13,9 +13,9 @@ function l(e) {
             (e) => {
                 if (e && !o.current) {
                     o.current = !0;
-                    let e = { box_type: (0, r.snakeCase)(t) };
+                    let e = { box_type: (0, n.snakeCase)(t) };
                     null != i && (e.third_party_partner = i),
-                        n.default.track(a.HAw.PREMIUM_MARKETING_BENTO_BOX_IMPRESSION, e);
+                        r.default.track(a.HAw.PREMIUM_MARKETING_BENTO_BOX_IMPRESSION, e);
                 }
             },
             [t, i],

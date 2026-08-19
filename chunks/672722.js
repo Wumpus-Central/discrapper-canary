@@ -1,66 +1,66 @@
 "use strict";
-n.r(t),
-    n.d(t, {
-        assign: () => f,
-        batchedUpdates: () => _,
+r.r(t),
+    r.d(t, {
+        assign: () => h,
+        batchedUpdates: () => p,
         colorNames: () => u,
-        createStringInterpolator: () => i,
-        frameLoop: () => o,
+        createStringInterpolator: () => n,
+        frameLoop: () => s,
         now: () => l,
-        requestAnimationFrame: () => d,
+        requestAnimationFrame: () => f,
         skipAnimation: () => c,
-        to: () => r,
-        willAdvance: () => h,
+        to: () => o,
+        willAdvance: () => d,
     });
-var i,
-    r,
-    s = n(572377),
-    a = n(132803),
-    o = new s.c(),
+var n,
+    o,
+    i = r(572377),
+    a = r(132803),
+    s = new i.c(),
     l = function () {
         return performance.now();
     },
     u = null,
     c = !1,
-    d =
+    f =
         "u" > typeof window
             ? window.requestAnimationFrame
             : function () {
                   return -1;
               },
-    _ = function (e) {
+    p = function (e) {
         return e();
     },
-    h = a.lQ,
-    f = function (e) {
+    d = a.lQ,
+    h = function (e) {
         var t;
         return (
-            (r = (t = Object.assign(
+            (o = (t = Object.assign(
                 {
-                    to: r,
+                    to: o,
                     now: l,
-                    frameLoop: o,
+                    frameLoop: s,
                     colorNames: u,
                     skipAnimation: c,
-                    createStringInterpolator: i,
-                    requestAnimationFrame: d,
-                    batchedUpdates: _,
-                    willAdvance: h,
+                    createStringInterpolator: n,
+                    requestAnimationFrame: f,
+                    batchedUpdates: p,
+                    willAdvance: d,
                 },
                 (function (e) {
                     var t = {};
-                    for (var n in e) void 0 !== e[n] && (t[n] = e[n]);
+                    for (var r in e) void 0 !== e[r] && (t[r] = e[r]);
                     return t;
                 })(e),
             )).to),
             (l = t.now),
-            (o = t.frameLoop),
+            (s = t.frameLoop),
             (u = t.colorNames),
             (c = t.skipAnimation),
-            (i = t.createStringInterpolator),
-            (d = t.requestAnimationFrame),
-            (_ = t.batchedUpdates),
-            (h = t.willAdvance),
+            (n = t.createStringInterpolator),
+            (f = t.requestAnimationFrame),
+            (p = t.batchedUpdates),
+            (d = t.willAdvance),
             t
         );
     };

@@ -1,11 +1,11 @@
 "use strict";
-n.d(t, { $G: () => d, Ps: () => _, RE: () => l, Vh: () => u, vf: () => c });
+n.d(t, { $G: () => u, Ps: () => _, RE: () => o, Vh: () => d, vf: () => c });
 var i,
     r,
-    s,
     a,
-    o,
-    l =
+    s,
+    l,
+    o =
         (((i = {})[(i.NOT_ELIGIBLE = -1)] = "NOT_ELIGIBLE"),
         (i[(i.CONTROL = 0)] = "CONTROL"),
         (i[(i.TREATMENT_1 = 1)] = "TREATMENT_1"),
@@ -34,19 +34,19 @@ var i,
         (i[(i.TREATMENT_24 = 24)] = "TREATMENT_24"),
         (i[(i.TREATMENT_25 = 25)] = "TREATMENT_25"),
         i),
-    u = (((r = {}).NONE_LEGACY = "none"), (r.GUILD = "guild"), (r.USER = "user"), r),
-    c = (((s = {}).MANUAL = "manual"), (s.AUTO = "auto"), (s.AUTO_FALLBACK = "auto_fallback"), s),
-    d =
-        (((a = {})[(a.NONE = 0)] = "NONE"),
-        (a[(a.CONNECTION_OPEN = 1)] = "CONNECTION_OPEN"),
-        (a[(a.VOICE_CALL = 2)] = "VOICE_CALL"),
-        (a[(a.PAYMENT_FLOW_STARTED = 3)] = "PAYMENT_FLOW_STARTED"),
-        (a[(a.COLLECTIBLES_SHOP_OPEN = 4)] = "COLLECTIBLES_SHOP_OPEN"),
-        (a[(a.OPEN_USER_SETTINGS = 5)] = "OPEN_USER_SETTINGS"),
-        (a[(a.OPEN_NITRO = 6)] = "OPEN_NITRO"),
-        (a[(a.DM_GDM_LIST_RENDER = 7)] = "DM_GDM_LIST_RENDER"),
-        (a[(a.CONNECTION_OPEN_MOBILE = 8)] = "CONNECTION_OPEN_MOBILE"),
-        (a[(a.QUEST_HOME_OPEN = 9)] = "QUEST_HOME_OPEN"),
-        (a[(a.QUEST_BAR_RENDERED = 10)] = "QUEST_BAR_RENDERED"),
-        a),
-    _ = (((o = {})[(o.EXPERIMENT = 0)] = "EXPERIMENT"), (o[(o.EXPERIMENT_TREATMENT = 1)] = "EXPERIMENT_TREATMENT"), o);
+    d = (((r = {}).NONE_LEGACY = "none"), (r.GUILD = "guild"), (r.USER = "user"), r),
+    c = (((a = {}).MANUAL = "manual"), (a.AUTO = "auto"), (a.AUTO_FALLBACK = "auto_fallback"), a),
+    u =
+        (((s = {})[(s.NONE = 0)] = "NONE"),
+        (s[(s.CONNECTION_OPEN = 1)] = "CONNECTION_OPEN"),
+        (s[(s.VOICE_CALL = 2)] = "VOICE_CALL"),
+        (s[(s.PAYMENT_FLOW_STARTED = 3)] = "PAYMENT_FLOW_STARTED"),
+        (s[(s.COLLECTIBLES_SHOP_OPEN = 4)] = "COLLECTIBLES_SHOP_OPEN"),
+        (s[(s.OPEN_USER_SETTINGS = 5)] = "OPEN_USER_SETTINGS"),
+        (s[(s.OPEN_NITRO = 6)] = "OPEN_NITRO"),
+        (s[(s.DM_GDM_LIST_RENDER = 7)] = "DM_GDM_LIST_RENDER"),
+        (s[(s.CONNECTION_OPEN_MOBILE = 8)] = "CONNECTION_OPEN_MOBILE"),
+        (s[(s.QUEST_HOME_OPEN = 9)] = "QUEST_HOME_OPEN"),
+        (s[(s.QUEST_BAR_RENDERED = 10)] = "QUEST_BAR_RENDERED"),
+        s),
+    _ = (((l = {})[(l.EXPERIMENT = 0)] = "EXPERIMENT"), (l[(l.EXPERIMENT_TREATMENT = 1)] = "EXPERIMENT_TREATMENT"), l);

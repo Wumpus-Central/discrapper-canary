@@ -1,8 +1,8 @@
 "use strict";
-n.d(t, { q: () => s, z: () => a });
+n.d(t, { q: () => a, z: () => s });
 var i,
     r,
-    s =
+    a =
         (((i = {}).CHANNEL_ADD_FLOW = "channel_add_flow"),
         (i.CONTACT_SYNC_FLOW = "contact_sync_flow"),
         (i.DIRECTORY_GUILD_ADD_FLOW = "directory_guild_add_flow"),
@@ -19,7 +19,7 @@ var i,
         (i.APPEAL_INGESTION = "appeal_ingestion"),
         (i.ACCOUNT_REVERT_FLOW = "account_revert_flow"),
         i),
-    a =
+    s =
         (((r = {}).PAGE = "page"),
         (r.MODAL = "modal"),
         (r.POPOUT = "popout"),

@@ -1,15 +1,15 @@
-e.d(a, { A: () => i });
-var n = e(575593),
+e.d(t, { A: () => o });
+var i = e(575593),
     r = e(13875),
-    s = e(32206),
-    l = e(482947);
-function i(t) {
-    let { location: a, product: e } = t,
-        i = (function (t) {
-            let a = (0, s.c)(t),
-                { bucket: e } = l.A.useConfig({ location: t });
-            return a && e === l.H.PAID_PREMIUM_SUBSCRIBERS_ONLY;
-        })(a),
-        o = (0, r.Ay)(a);
-    return i && !o && e.type === n.R.PROFILE_FRAME;
+    u = e(32206),
+    a = e(482947);
+function o(n) {
+    let { location: t, product: e } = n,
+        o = (function (n) {
+            let t = (0, u.c)(n),
+                { bucket: e } = a.A.useConfig({ location: n });
+            return t && e === a.H.PAID_PREMIUM_SUBSCRIBERS_ONLY;
+        })(t),
+        c = (0, r.Ay)(t);
+    return o && !c && e.type === i.R.PROFILE_FRAME;
 }

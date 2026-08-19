@@ -1,28 +1,28 @@
 "use strict";
-n.d(t, { AR: () => _, So: () => A, fh: () => h, uA: () => E });
-var i = n(95561),
-    r = n(597184),
-    a = n(194004),
-    s = n(885386),
-    l = n(174459),
+n.d(t, { AR: () => h, So: () => f, fh: () => p, uA: () => m });
+var l = n(95561),
+    i = n(597184),
+    s = n(194004),
+    r = n(885386),
+    a = n(174459),
     o = n(652215);
-let d = new Map(),
+let u = new Map(),
     c = null;
-function u() {
+function d() {
     c = null;
-    for (let [e, t] of d)
-        l.default.track(o.HAw.DETECTABLE_GAME_SEARCHED_BATCHED, { surface: e, search_count: t, interval: 1 });
-    d.clear();
+    for (let [e, t] of u)
+        a.default.track(o.HAw.DETECTABLE_GAME_SEARCHED_BATCHED, { surface: e, search_count: t, interval: 1 });
+    u.clear();
 }
-function _(e, t) {
-    if (!s.BQ.getSetting() || e !== r.DB.GAME) return;
+function h(e, t) {
+    if (!r.BQ.getSetting() || e !== i.DB.GAME) return;
     let n = "game_mention_autocomplete";
-    d.set(n, (d.get(n) ?? 0) + 1), null == c && (c = setTimeout(u, 1e3));
+    u.set(n, (u.get(n) ?? 0) + 1), null == c && (c = setTimeout(d, 1e3));
 }
-function E(e, t, n) {
-    l.default.track(o.HAw.CHANNEL_AUTOCOMPLETE_OPEN, {
-        ...(0, i.dI)(t),
-        ...(0, i.H$)(t.guild_id),
+function m(e, t, n) {
+    a.default.track(o.HAw.CHANNEL_AUTOCOMPLETE_OPEN, {
+        ...(0, l.dI)(t),
+        ...(0, l.H$)(t.guild_id),
         autocomplete_type: e,
         num_emoji_results: n?.numEmojiResults ?? 0,
         num_locked_emoji_results: n?.numLockedEmojiResults ?? 0,
@@ -30,39 +30,39 @@ function E(e, t, n) {
         game_mentions_available: n?.gameMentionsAvailable,
     });
 }
-function A(e, t, n, r) {
-    l.default.track(o.HAw.CHANNEL_AUTOCOMPLETE_SELECTED, {
-        ...(0, i.dI)(n),
-        ...(0, i.H$)(n.guild_id),
+function f(e, t, n, i) {
+    a.default.track(o.HAw.CHANNEL_AUTOCOMPLETE_SELECTED, {
+        ...(0, l.dI)(n),
+        ...(0, l.H$)(n.guild_id),
         autocomplete_type: e,
         selection_type: t,
-        emoji_id: r?.emojiId,
-        sticker_id: r?.stickerId,
-        num_emoji_results: r?.numEmojiResults ?? 0,
-        num_sticker_results: r?.numStickerResults ?? 0,
-        emoji_name: r?.expressionName ?? "",
-        is_custom: r?.isCustom ?? !1,
-        is_animated: r?.isAnimated ?? !1,
-        application_id: r?.gameId,
+        emoji_id: i?.emojiId,
+        sticker_id: i?.stickerId,
+        num_emoji_results: i?.numEmojiResults ?? 0,
+        num_sticker_results: i?.numStickerResults ?? 0,
+        emoji_name: i?.expressionName ?? "",
+        is_custom: i?.isCustom ?? !1,
+        is_animated: i?.isAnimated ?? !1,
+        application_id: i?.gameId,
     });
 }
-function h(e) {
-    let { sticker: t, stickerSelectLocation: n, isReplacement: i, analyticsLocations: r } = e;
-    l.default.track(o.HAw.STICKER_ATTACHED, {
-        replaced: i,
+function p(e) {
+    let { sticker: t, stickerSelectLocation: n, isReplacement: l, analyticsLocations: i } = e;
+    a.default.track(o.HAw.STICKER_ATTACHED, {
+        replaced: l,
         source: (function (e) {
             switch (e) {
-                case a.D6.AUTOCOMPLETE:
+                case s.D6.AUTOCOMPLETE:
                     return "autocomplete";
-                case a.D6.STICKER_PICKER:
+                case s.D6.STICKER_PICKER:
                     return "picker";
-                case a.D6.BUILT_IN_INTEGRATION:
+                case s.D6.BUILT_IN_INTEGRATION:
                     return "built_in_integration";
                 default:
                     return null;
             }
         })(n),
         sticker_id: t.id,
-        location_stack: r,
+        location_stack: i,
     });
 }

@@ -1,16 +1,16 @@
-e.d(n, { A: () => o });
-var i = e(477900);
-e(582128);
-var r = e(477782),
-    l = e(715757),
-    a = e(867455),
-    d = e(406704),
-    s = e(375708);
+n.d(e, { A: () => o });
+var i = n(477900);
+n(582128);
+var r = n(477782),
+    l = n(715757),
+    a = n(867455),
+    d = n(406704),
+    s = n(375708);
 function o(t) {
-    let n = (0, l.V)(t),
-        e = (0, d.NI)(t),
+    let e = (0, l.V)(t),
+        n = (0, d.NI)(t),
         o = (0, d.lK)(t);
-    if ((t.isArchivedThread() ? o : e) && !n)
+    if ((t.isArchivedThread() ? o : n) && !e)
         return t.threadMetadata?.archived
             ? (0, i.jsx)(r.Dr, {
                   id: "unarchive-thread",

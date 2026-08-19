@@ -1,5 +1,5 @@
-e.exports =
+t.exports =
     Array.isArray ||
-    function (e) {
-        return "[object Array]" == Object.prototype.toString.call(e);
+    function (t) {
+        return "[object Array]" == Object.prototype.toString.call(t);
     };

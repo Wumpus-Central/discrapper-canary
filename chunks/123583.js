@@ -16,24 +16,24 @@ var l = n(477900),
     g = n(86379),
     x = n(503698),
     A = n.n(x),
-    C = n(939249),
-    E = n(697744),
+    E = n(939249),
+    C = n(697744),
     I = n(795816),
     y = n(211401),
-    v = n(989837),
-    S = n(500049),
-    N = n(598071),
-    _ = n(60809),
+    S = n(989837),
+    v = n(500049),
+    _ = n(598071),
+    N = n(60809),
     T = n(375708),
     j = n(431008);
 let b = i.forwardRef(function (e, t) {
         let { type: n, channelId: s } = e,
             a = (0, r.bG)(
-                [v.A],
-                () => v.A.shouldShowPopup() && v.A.activeViewType() === n && v.A.activeChannelId() === s,
+                [S.A],
+                () => S.A.shouldShowPopup() && S.A.activeViewType() === n && S.A.activeChannelId() === s,
             ),
-            { Component: o, events: u, play: c } = (0, E.c)(),
-            d = i.useContext(N.Ay);
+            { Component: o, events: u, play: c } = (0, C.c)(),
+            d = i.useContext(_.Ay);
         i.useEffect(() => {
             function e() {
                 u.onMouseEnter();
@@ -46,13 +46,13 @@ let b = i.forwardRef(function (e, t) {
             );
         }, [d, u]);
         let h = i.useCallback(() => {
-                a ? y.k(S.Se.DISMISSED) : (y.R(S.s4.TEXT, n, void 0, s), I.LK()), c();
+                a ? y.k(v.Se.DISMISSED) : (y.R(v.s4.TEXT, n, void 0, s), I.LK()), c();
             }, [a, n, s, c]),
             m = (0, l.jsx)(o, { size: "refresh_sm", color: "currentColor" });
         return (0, l.jsx)("div", {
-            className: A()(j.UD, _.KG),
+            className: A()(j.UD, N.KG),
             ref: t,
-            children: (0, l.jsx)(C.D, {
+            children: (0, l.jsx)(E.D, {
                 tabIndex: 0,
                 className: A()(j.x6, { [j.rK]: a }),
                 onClick: h,
@@ -69,10 +69,10 @@ let b = i.forwardRef(function (e, t) {
         let { type: t, channelId: n } = e;
         return (0, l.jsx)(b, { type: t, channelId: n });
     });
-var O = n(931664),
-    M = n(951260),
-    w = n(522602),
-    L = n(158045),
+var L = n(931664),
+    O = n(951260),
+    M = n(522602),
+    w = n(158045),
     k = n(462180),
     P = n(375499),
     D = n(151271),
@@ -128,12 +128,12 @@ let Y = i.memo(
                     }, 2e3));
             }, []);
         (0, z.Vo)({ event: p.jej.FAVORITE_GIF, handler: x });
-        let C = i.useCallback(() => {
+        let E = i.useCallback(() => {
                 (0, D.r$)(G.kx.GIF, s, a.id);
             }, [s, a.id]),
-            { Component: E, events: I, play: y } = (0, B.V)();
+            { Component: C, events: I, play: y } = (0, B.V)();
         if (n) return null;
-        let v = d === G.kx.GIF && h === s && f === a.id;
+        let S = d === G.kx.GIF && h === s && f === a.id;
         return (0, l.jsx)(W.m, {
             text: T.intl.string(c ? T.t.mE2e8A : T.t.nffuyb),
             shouldShow: c,
@@ -146,41 +146,41 @@ let Y = i.memo(
                     onMouseEnter: I.onMouseEnter,
                     onMouseLeave: I.onMouseLeave,
                     onClick: () => {
-                        C(), y();
+                        E(), y();
                     },
-                    isActive: v,
+                    isActive: S,
                     pulse: o,
                     "aria-label": T.intl.string(T.t.PtVpk2),
-                    "aria-expanded": v,
+                    "aria-expanded": S,
                     "aria-haspopup": "dialog",
                     "aria-controls": m,
-                    children: (0, l.jsx)(E, { size: "refresh_sm", color: "currentColor" }),
+                    children: (0, l.jsx)(C, { size: "refresh_sm", color: "currentColor" }),
                 }),
             }),
         });
     }),
 );
 var q = n(365990),
-    J = n(559647),
-    $ = n(773548);
+    $ = n(559647),
+    J = n(773548);
 let X = i.memo(function (e) {
     let { onClick: t, disabled: n = !1 } = e;
     return (0, l.jsxs)(l.Fragment, {
         children: [
-            (0, l.jsx)("div", { className: $.me }),
+            (0, l.jsx)("div", { className: J.me }),
             (0, l.jsx)("div", {
-                className: $.kL,
+                className: J.kL,
                 children: (0, l.jsx)("div", {
-                    className: $.UD,
+                    className: J.UD,
                     children: (0, l.jsx)(Z.A, {
-                        className: $.x6,
-                        childClassName: A()($.Z4, { [$.r9]: n, [$.xb]: !n }),
+                        className: J.x6,
+                        childClassName: A()(J.Z4, { [J.r9]: n, [J.xb]: !n }),
                         onClick: t,
                         disabled: n,
                         isActive: !1,
                         noHover: n,
                         "aria-label": T.intl.string(T.t.oeb1vg),
-                        children: (0, l.jsx)(J.SendMessageIcon, { size: "xs", color: "currentColor", className: $.AO }),
+                        children: (0, l.jsx)($.SendMessageIcon, { size: "xs", color: "currentColor", className: J.AO }),
                     }),
                 }),
             }),
@@ -199,11 +199,11 @@ let ee = { click: { name: "click", start: 0, duration: 66 }, hover: { name: "hov
                 { disabled: c, type: d, channel: h } = e,
                 [m, f, p, g] = (0, D.RQ)((e) => [e.activeView, e.pickerId, e.activeChannelId, e.activeViewType], k.x),
                 x = m === G.kx.STICKER && g === d && p === h.id,
-                C = i.useCallback(() => {
+                E = i.useCallback(() => {
                     (0, D.r$)(G.kx.STICKER, d, h.id);
                 }, [d, h.id]),
                 {
-                    Component: E,
+                    Component: C,
                     events: I,
                     play: y,
                 } = ((s = i.useRef(null)),
@@ -242,7 +242,7 @@ let ee = { click: { name: "click", start: 0, duration: 66 }, hover: { name: "hov
                           className: A()(V.x6, V.KE),
                           ...I,
                           onClick: () => {
-                              C(), y();
+                              E(), y();
                           },
                           isActive: x,
                           "aria-label": T.intl.string(T.t.rZpidU),
@@ -250,7 +250,7 @@ let ee = { click: { name: "click", start: 0, duration: 66 }, hover: { name: "hov
                           "aria-haspopup": "dialog",
                           "aria-controls": f,
                           sparkle: !1,
-                          children: (0, l.jsx)(E, { size: "refresh_sm", color: "currentColor" }),
+                          children: (0, l.jsx)(C, { size: "refresh_sm", color: "currentColor" }),
                       }),
                   });
         }),
@@ -260,42 +260,42 @@ let ee = { click: { name: "click", start: 0, duration: 66 }, hover: { name: "hov
         let {
                 type: x,
                 disabled: A,
-                channel: C,
-                handleSubmit: E,
+                channel: E,
+                handleSubmit: C,
                 isEmpty: I,
                 showAllButtons: y,
-                expressionButtonsHidden: v,
+                expressionButtonsHidden: S,
             } = e,
-            S = (0, M.n)("ChannelTextAreaButtons"),
-            N = (0, r.cf)([o.Ay], () => ({
+            v = (0, O.n)("ChannelTextAreaButtons"),
+            _ = (0, r.cf)([o.Ay], () => ({
                 isSubmitButtonEnabled: o.Ay.isSubmitButtonEnabled,
                 isAppsButtonEnabled: o.Ay.isAppsButtonEnabled,
                 isEmojiButtonEnabled: o.Ay.isEmojiButtonEnabled,
                 isGifButtonEnabled: o.Ay.isGifButtonEnabled,
                 isStickerButtonEnabled: o.Ay.isStickerButtonEnabled,
             })),
-            _ = N.isSubmitButtonEnabled,
-            T = !S || N.isAppsButtonEnabled,
-            j = !S || N.isEmojiButtonEnabled,
-            b = !S || N.isGifButtonEnabled,
-            k = !S || N.isStickerButtonEnabled,
+            N = _.isSubmitButtonEnabled,
+            T = !v || _.isAppsButtonEnabled,
+            j = !v || _.isEmojiButtonEnabled,
+            b = !v || _.isGifButtonEnabled,
+            k = !v || _.isStickerButtonEnabled,
             P =
-                ((t = C.id),
+                ((t = E.id),
                 (n = x),
                 (i = I),
-                (0, r.bG)([O.A, w.A], () => {
-                    let e = O.A.getStickerPreview(t, n.drafts.type),
+                (0, r.bG)([L.A, M.A], () => {
+                    let e = L.A.getStickerPreview(t, n.drafts.type),
                         l = null != e && e.length > 0;
-                    return 0 === w.A.getUploads(t, n.drafts.type).length && i && !l;
+                    return 0 === M.A.getUploads(t, n.drafts.type).length && i && !l;
                 })),
             { activeCommand: D, activeCommandOption: U } = (0, r.cf)([u.A], () => ({
-                activeCommand: u.A.getActiveCommand(C.id),
-                activeCommandOption: u.A.getActiveOption(C.id),
+                activeCommand: u.A.getActiveCommand(E.id),
+                activeCommandOption: u.A.getActiveOption(E.id),
             })),
             G = (0, g.dw)(),
             B = [],
-            W = !C.isDM() || void 0 === C.recipients || C.recipients.length > 1,
-            K = (0, r.bG)([f.default], () => (W ? null : f.default.getUser(C.recipients[0]))),
+            W = !E.isDM() || void 0 === E.recipients || E.recipients.length > 1,
+            K = (0, r.bG)([f.default], () => (W ? null : f.default.getUser(E.recipients[0]))),
             z = (function (e) {
                 let { channel: t, chatInputType: n } = e,
                     l = n.commands?.enabled ?? !1,
@@ -318,35 +318,35 @@ let ee = { click: { name: "click", start: 0, duration: 66 }, hover: { name: "hov
                         activeCommand: l ? u.A.getActiveCommand(t.id) : null,
                     }));
                 return l && i && null == s;
-            })({ channel: C, chatInputType: x }),
-            Z = x.submit?.button != null && (x.submit?.ignorePreference || _),
-            J = null == D || (null != U && U.type !== a.n4.ATTACHMENT);
+            })({ channel: E, chatInputType: x }),
+            Z = x.submit?.button != null && (x.submit?.ignorePreference || N),
+            $ = null == D || (null != U && U.type !== a.n4.ATTACHMENT);
         return (!s.Fr &&
             (x.gifts?.button != null &&
                 null == D &&
                 !G &&
-                (null == K || L.Ay.isPremiumEligible(K)) &&
-                B.push((0, l.jsx)(q.A, { disabled: A, channel: C }, "gift")),
+                (null == K || w.Ay.isPremiumEligible(K)) &&
+                B.push((0, l.jsx)(q.A, { disabled: A, channel: E }, "gift")),
             x.gifs?.button != null &&
                 null == D &&
                 y &&
                 b &&
-                !v &&
-                B.push((0, l.jsx)(Y, { disabled: A, type: x, channel: C }, "gif")),
+                !S &&
+                B.push((0, l.jsx)(Y, { disabled: A, type: x, channel: E }, "gif")),
             x.stickers?.button != null &&
                 null == D &&
                 y &&
                 k &&
-                !v &&
-                B.push((0, l.jsx)(et, { disabled: A, type: x, channel: C }, "sticker"))),
+                !S &&
+                B.push((0, l.jsx)(et, { disabled: A, type: x, channel: E }, "sticker"))),
         x.emojis?.button != null &&
-            !v &&
-            J &&
-            (y || v
-                ? j && B.push((0, l.jsx)(F, { disabled: A, type: x, channelId: C.id }, "emoji"))
-                : B.push((0, l.jsx)(H.A, { disabled: A, type: x, channel: C }, "expression"))),
-        z && T && B.push((0, l.jsx)(R, { channelId: C.id, type: x }, "appLauncher")),
-        Z && B.push((0, l.jsx)(X, { onClick: E, disabled: A || P }, "submit")),
+            !S &&
+            $ &&
+            (y || S
+                ? j && B.push((0, l.jsx)(F, { disabled: A, type: x, channelId: E.id }, "emoji"))
+                : B.push((0, l.jsx)(H.A, { disabled: A, type: x, channel: E }, "expression"))),
+        z && T && B.push((0, l.jsx)(R, { channelId: E.id, type: x }, "appLauncher")),
+        Z && B.push((0, l.jsx)(X, { onClick: C, disabled: A || P }, "submit")),
         0 === B.length)
             ? null
             : (0, l.jsx)("div", { className: V.Uo, children: B });

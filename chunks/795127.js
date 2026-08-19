@@ -1,5 +1,5 @@
-n.d(t, { g: () => a });
-function a(e) {
+n.d(t, { g: () => i });
+function i(e) {
     switch (e) {
         case "top":
             return "bottom";

@@ -2,62 +2,62 @@
 n.d(t, { A: () => c });
 var i = n(734057),
     r = n(287809),
-    s = n(646865),
-    a = n(909206),
-    o = n(795816),
-    l = n(817636),
-    u = n(574152);
+    a = n(646865),
+    s = n(909206),
+    l = n(795816),
+    o = n(817636),
+    d = n(574152);
 async function c(e) {
     let t;
     if (null == e.targetApplicationId) return !1;
     let n = !1;
     try {
-        (t = await (0, l.A)(e.targetApplicationId, e.channelId)), (n = (0, s.f)());
+        (t = await (0, o.A)(e.targetApplicationId, e.channelId)), (n = (0, a.f)());
     } catch {
         return !1;
     }
-    return (0, s.w)(n, () => d({ ...e, targetApplication: t }));
+    return (0, a.w)(n, () => u({ ...e, targetApplication: t }));
 }
-async function d(e) {
+async function u(e) {
     let {
             targetApplication: t,
             locationObject: n,
-            channelId: s,
-            analyticsLocations: l,
+            channelId: a,
+            analyticsLocations: o,
             componentId: c,
-            commandOrigin: d,
+            commandOrigin: u,
             sectionName: _,
-            source: h,
-            onExecutedCallback: f,
-            referrerId: p,
-            customId: E,
-            inviterUserId: m,
-            onConfirmActivityLaunchChecksAlertOpen: g,
+            source: E,
+            onExecutedCallback: A,
+            referrerId: h,
+            customId: I,
+            inviterUserId: f,
+            onConfirmActivityLaunchChecksAlertOpen: p,
         } = e,
-        A = (0, u.A)(),
-        I = r.default.getCurrentUser();
+        T = (0, d.A)(),
+        m = r.default.getCurrentUser();
     return (
-        null != s &&
-        null != i.A.getChannel(s) &&
-        null != I &&
+        null != a &&
+        null != i.A.getChannel(a) &&
+        null != m &&
         null != t &&
-        (a.MJ(t.id),
-        await (0, o.su)({
-            channelId: s,
+        (s.MJ(t.id),
+        await (0, l.su)({
+            channelId: a,
             applicationId: t.id,
             isStart: !0,
-            embeddedActivitiesManager: A,
+            embeddedActivitiesManager: T,
             componentId: c,
-            commandOrigin: d,
+            commandOrigin: u,
             sectionName: _,
             locationObject: n,
-            analyticsLocations: l,
-            source: h,
-            onExecutedCallback: f,
-            referrerId: p,
-            customId: E,
-            inviterUserId: m,
-            onConfirmActivityLaunchChecksAlertOpen: g,
+            analyticsLocations: o,
+            source: E,
+            onExecutedCallback: A,
+            referrerId: h,
+            customId: I,
+            inviterUserId: f,
+            onConfirmActivityLaunchChecksAlertOpen: p,
         }))
     );
 }

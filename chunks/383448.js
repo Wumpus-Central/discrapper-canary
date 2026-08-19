@@ -10,8 +10,8 @@ var l = n(503698),
     u = n(994500),
     d = n(946356),
     E = n(652215),
-    m = n(375708),
-    f = n(219575);
+    f = n(375708),
+    m = n(219575);
 function x(e) {
     let { user: t, className: n } = e,
         {
@@ -25,13 +25,13 @@ function x(e) {
         }));
     return x || (R && !l)
         ? (0, i.jsxs)(d.A.Overlay, {
-              className: r()(f.k, n),
+              className: r()(m.k, n),
               children: [
                   x &&
                       (0, i.jsx)(s.E, {
                           variant: "text-sm/semibold",
                           color: "text-default",
-                          children: m.intl.string(m.t["oC/fU6"]),
+                          children: f.intl.string(f.t["oC/fU6"]),
                       }),
                   R &&
                       (0, i.jsxs)(i.Fragment, {
@@ -39,7 +39,7 @@ function x(e) {
                               (0, i.jsx)(s.E, {
                                   variant: "text-sm/semibold",
                                   color: "text-default",
-                                  children: m.intl.string(m.t.HXz5An),
+                                  children: f.intl.string(f.t.HXz5An),
                               }),
                               (0, i.jsxs)(i.Fragment, {
                                   children: [
@@ -51,7 +51,7 @@ function x(e) {
                                       (0, i.jsx)(s.E, {
                                           variant: "text-sm/semibold",
                                           color: "text-default",
-                                          children: m.intl.format(m.t.PrtAqy, {
+                                          children: f.intl.format(f.t.PrtAqy, {
                                               unignoreHook: (e, n) =>
                                                   (0, i.jsx)(
                                                       o.Anchor,

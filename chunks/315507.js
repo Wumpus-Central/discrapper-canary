@@ -1,19 +1,19 @@
 "use strict";
-n.r(t),
-    n.d(t, { parseNumberSkeleton: () => p, parseNumberSkeletonFromString: () => o, parseDateTimeSkeleton: () => r });
-var i =
+r.r(t),
+    r.d(t, { parseNumberSkeleton: () => m, parseNumberSkeletonFromString: () => s, parseDateTimeSkeleton: () => o });
+var n =
     /(?:[Eec]{1,6}|G{1,5}|[Qq]{1,5}|(?:[yYur]+|U{1,5})|[ML]{1,5}|d{1,2}|D{1,3}|F{1}|[abB]{1,5}|[hkHK]{1,2}|w{1,2}|W{1}|m{1,2}|s{1,2}|[zZOvVxX]{1,4})(?=([^']*'[^']*')*[^']*$)/g;
-function r(e) {
+function o(e) {
     var t = {};
     return (
-        e.replace(i, function (e) {
-            var n = e.length;
+        e.replace(n, function (e) {
+            var r = e.length;
             switch (e[0]) {
                 case "G":
-                    t.era = 4 === n ? "long" : 5 === n ? "narrow" : "short";
+                    t.era = 4 === r ? "long" : 5 === r ? "narrow" : "short";
                     break;
                 case "y":
-                    t.year = 2 === n ? "2-digit" : "numeric";
+                    t.year = 2 === r ? "2-digit" : "numeric";
                     break;
                 case "Y":
                 case "u":
@@ -25,28 +25,28 @@ function r(e) {
                     throw RangeError("`q/Q` (quarter) patterns are not supported");
                 case "M":
                 case "L":
-                    t.month = ["numeric", "2-digit", "short", "long", "narrow"][n - 1];
+                    t.month = ["numeric", "2-digit", "short", "long", "narrow"][r - 1];
                     break;
                 case "w":
                 case "W":
                     throw RangeError("`w/W` (week) patterns are not supported");
                 case "d":
-                    t.day = ["numeric", "2-digit"][n - 1];
+                    t.day = ["numeric", "2-digit"][r - 1];
                     break;
                 case "D":
                 case "F":
                 case "g":
                     throw RangeError("`D/F/g` (day) patterns are not supported, use `d` instead");
                 case "E":
-                    t.weekday = 4 === n ? "long" : 5 === n ? "narrow" : "short";
+                    t.weekday = 4 === r ? "long" : 5 === r ? "narrow" : "short";
                     break;
                 case "e":
-                    if (n < 4) throw RangeError("`e..eee` (weekday) patterns are not supported");
-                    t.weekday = ["short", "long", "narrow", "short"][n - 4];
+                    if (r < 4) throw RangeError("`e..eee` (weekday) patterns are not supported");
+                    t.weekday = ["short", "long", "narrow", "short"][r - 4];
                     break;
                 case "c":
-                    if (n < 4) throw RangeError("`c..ccc` (weekday) patterns are not supported");
-                    t.weekday = ["short", "long", "narrow", "short"][n - 4];
+                    if (r < 4) throw RangeError("`c..ccc` (weekday) patterns are not supported");
+                    t.weekday = ["short", "long", "narrow", "short"][r - 4];
                     break;
                 case "a":
                     t.hour12 = !0;
@@ -55,32 +55,32 @@ function r(e) {
                 case "B":
                     throw RangeError("`b/B` (period) patterns are not supported, use `a` instead");
                 case "h":
-                    (t.hourCycle = "h12"), (t.hour = ["numeric", "2-digit"][n - 1]);
+                    (t.hourCycle = "h12"), (t.hour = ["numeric", "2-digit"][r - 1]);
                     break;
                 case "H":
-                    (t.hourCycle = "h23"), (t.hour = ["numeric", "2-digit"][n - 1]);
+                    (t.hourCycle = "h23"), (t.hour = ["numeric", "2-digit"][r - 1]);
                     break;
                 case "K":
-                    (t.hourCycle = "h11"), (t.hour = ["numeric", "2-digit"][n - 1]);
+                    (t.hourCycle = "h11"), (t.hour = ["numeric", "2-digit"][r - 1]);
                     break;
                 case "k":
-                    (t.hourCycle = "h24"), (t.hour = ["numeric", "2-digit"][n - 1]);
+                    (t.hourCycle = "h24"), (t.hour = ["numeric", "2-digit"][r - 1]);
                     break;
                 case "j":
                 case "J":
                 case "C":
                     throw RangeError("`j/J/C` (hour) patterns are not supported, use `h/H/K/k` instead");
                 case "m":
-                    t.minute = ["numeric", "2-digit"][n - 1];
+                    t.minute = ["numeric", "2-digit"][r - 1];
                     break;
                 case "s":
-                    t.second = ["numeric", "2-digit"][n - 1];
+                    t.second = ["numeric", "2-digit"][r - 1];
                     break;
                 case "S":
                 case "A":
                     throw RangeError("`S/A` (second) patterns are not supported, use `s` instead");
                 case "z":
-                    t.timeZoneName = n < 4 ? "short" : "long";
+                    t.timeZoneName = r < 4 ? "short" : "long";
                     break;
                 case "Z":
                 case "O":
@@ -95,54 +95,54 @@ function r(e) {
         t
     );
 }
-var s = n(56636),
+var i = r(56636),
     a = /[\t-\r \x85\u200E\u200F\u2028\u2029]/i;
-function o(e) {
+function s(e) {
     if (0 === e.length) throw Error("Number skeleton cannot be empty");
     for (
         var t = e.split(a).filter(function (e) {
                 return e.length > 0;
             }),
-            n = [],
-            i = 0;
-        i < t.length;
-        i++
+            r = [],
+            n = 0;
+        n < t.length;
+        n++
     ) {
-        var r = t[i].split("/");
-        if (0 === r.length) throw Error("Invalid number skeleton");
-        for (var s = r[0], o = r.slice(1), l = 0; l < o.length; l++)
-            if (0 === o[l].length) throw Error("Invalid number skeleton");
-        n.push({ stem: s, options: o });
+        var o = t[n].split("/");
+        if (0 === o.length) throw Error("Invalid number skeleton");
+        for (var i = o[0], s = o.slice(1), l = 0; l < s.length; l++)
+            if (0 === s[l].length) throw Error("Invalid number skeleton");
+        r.push({ stem: i, options: s });
     }
-    return n;
+    return r;
 }
 var l = /^\.(?:(0+)(\*)?|(#+)|(0+)(#+))$/g,
     u = /^(@+)?(\+|#+)?[rs]?$/g,
     c = /(\*)(0+)|(#+)(0+)|(0+)/g,
-    d = /^(0+)$/;
-function _(e) {
+    f = /^(0+)$/;
+function p(e) {
     var t = {};
     return (
         "r" === e[e.length - 1]
             ? (t.roundingPriority = "morePrecision")
             : "s" === e[e.length - 1] && (t.roundingPriority = "lessPrecision"),
-        e.replace(u, function (e, n, i) {
+        e.replace(u, function (e, r, n) {
             return (
-                "string" != typeof i
-                    ? ((t.minimumSignificantDigits = n.length), (t.maximumSignificantDigits = n.length))
-                    : "+" === i
-                      ? (t.minimumSignificantDigits = n.length)
-                      : "#" === n[0]
-                        ? (t.maximumSignificantDigits = n.length)
-                        : ((t.minimumSignificantDigits = n.length),
-                          (t.maximumSignificantDigits = n.length + ("string" == typeof i ? i.length : 0))),
+                "string" != typeof n
+                    ? ((t.minimumSignificantDigits = r.length), (t.maximumSignificantDigits = r.length))
+                    : "+" === n
+                      ? (t.minimumSignificantDigits = r.length)
+                      : "#" === r[0]
+                        ? (t.maximumSignificantDigits = r.length)
+                        : ((t.minimumSignificantDigits = r.length),
+                          (t.maximumSignificantDigits = r.length + ("string" == typeof n ? n.length : 0))),
                 ""
             );
         }),
         t
     );
 }
-function h(e) {
+function d(e) {
     switch (e) {
         case "sign-auto":
             return { signDisplay: "auto" };
@@ -166,14 +166,14 @@ function h(e) {
             return { signDisplay: "never" };
     }
 }
-function f(e) {
-    var t = h(e);
+function h(e) {
+    var t = d(e);
     return t || {};
 }
-function p(e) {
-    for (var t = {}, n = 0; n < e.length; n++) {
-        var i = e[n];
-        switch (i.stem) {
+function m(e) {
+    for (var t = {}, r = 0; r < e.length; r++) {
+        var n = e[r];
+        switch (n.stem) {
             case "percent":
             case "%":
                 t.style = "percent";
@@ -182,7 +182,7 @@ function p(e) {
                 (t.style = "percent"), (t.scale = 100);
                 continue;
             case "currency":
-                (t.style = "currency"), (t.currency = i.options[0]);
+                (t.style = "currency"), (t.currency = n.options[0]);
                 continue;
             case "group-off":
             case ",_":
@@ -194,7 +194,7 @@ function p(e) {
                 continue;
             case "measure-unit":
             case "unit":
-                (t.style = "unit"), (t.unit = i.options[0].replace(/^(.*?)-/, ""));
+                (t.style = "unit"), (t.unit = n.options[0].replace(/^(.*?)-/, ""));
                 continue;
             case "compact-short":
             case "K":
@@ -205,18 +205,18 @@ function p(e) {
                 (t.notation = "compact"), (t.compactDisplay = "long");
                 continue;
             case "scientific":
-                t = (0, s.Cl)(
-                    (0, s.Cl)((0, s.Cl)({}, t), { notation: "scientific" }),
-                    i.options.reduce(function (e, t) {
-                        return (0, s.Cl)((0, s.Cl)({}, e), f(t));
+                t = (0, i.Cl)(
+                    (0, i.Cl)((0, i.Cl)({}, t), { notation: "scientific" }),
+                    n.options.reduce(function (e, t) {
+                        return (0, i.Cl)((0, i.Cl)({}, e), h(t));
                     }, {}),
                 );
                 continue;
             case "engineering":
-                t = (0, s.Cl)(
-                    (0, s.Cl)((0, s.Cl)({}, t), { notation: "engineering" }),
-                    i.options.reduce(function (e, t) {
-                        return (0, s.Cl)((0, s.Cl)({}, e), f(t));
+                t = (0, i.Cl)(
+                    (0, i.Cl)((0, i.Cl)({}, t), { notation: "engineering" }),
+                    n.options.reduce(function (e, t) {
+                        return (0, i.Cl)((0, i.Cl)({}, e), h(t));
                     }, {}),
                 );
                 continue;
@@ -236,7 +236,7 @@ function p(e) {
                 t.currencyDisplay = "symbol";
                 continue;
             case "scale":
-                t.scale = parseFloat(i.options[0]);
+                t.scale = parseFloat(n.options[0]);
                 continue;
             case "rounding-mode-floor":
                 t.roundingMode = "floor";
@@ -260,46 +260,46 @@ function p(e) {
                 t.roundingMode = "halfExpand";
                 continue;
             case "integer-width":
-                if (i.options.length > 1) throw RangeError("integer-width stems only accept a single optional option");
-                i.options[0].replace(c, function (e, n, i, r, s, a) {
-                    if (n) t.minimumIntegerDigits = i.length;
-                    else if (r && s) throw Error("We currently do not support maximum integer digits");
+                if (n.options.length > 1) throw RangeError("integer-width stems only accept a single optional option");
+                n.options[0].replace(c, function (e, r, n, o, i, a) {
+                    if (r) t.minimumIntegerDigits = n.length;
+                    else if (o && i) throw Error("We currently do not support maximum integer digits");
                     else if (a) throw Error("We currently do not support exact integer digits");
                     return "";
                 });
                 continue;
         }
-        if (d.test(i.stem)) {
-            t.minimumIntegerDigits = i.stem.length;
+        if (f.test(n.stem)) {
+            t.minimumIntegerDigits = n.stem.length;
             continue;
         }
-        if (l.test(i.stem)) {
-            if (i.options.length > 1) throw RangeError("Fraction-precision stems only accept a single optional option");
-            i.stem.replace(l, function (e, n, i, r, s, a) {
+        if (l.test(n.stem)) {
+            if (n.options.length > 1) throw RangeError("Fraction-precision stems only accept a single optional option");
+            n.stem.replace(l, function (e, r, n, o, i, a) {
                 return (
-                    "*" === i
-                        ? (t.minimumFractionDigits = n.length)
-                        : r && "#" === r[0]
-                          ? (t.maximumFractionDigits = r.length)
-                          : s && a
-                            ? ((t.minimumFractionDigits = s.length), (t.maximumFractionDigits = s.length + a.length))
-                            : ((t.minimumFractionDigits = n.length), (t.maximumFractionDigits = n.length)),
+                    "*" === n
+                        ? (t.minimumFractionDigits = r.length)
+                        : o && "#" === o[0]
+                          ? (t.maximumFractionDigits = o.length)
+                          : i && a
+                            ? ((t.minimumFractionDigits = i.length), (t.maximumFractionDigits = i.length + a.length))
+                            : ((t.minimumFractionDigits = r.length), (t.maximumFractionDigits = r.length)),
                     ""
                 );
             });
-            var r = i.options[0];
-            "w" === r
-                ? (t = (0, s.Cl)((0, s.Cl)({}, t), { trailingZeroDisplay: "stripIfInteger" }))
-                : r && (t = (0, s.Cl)((0, s.Cl)({}, t), _(r)));
+            var o = n.options[0];
+            "w" === o
+                ? (t = (0, i.Cl)((0, i.Cl)({}, t), { trailingZeroDisplay: "stripIfInteger" }))
+                : o && (t = (0, i.Cl)((0, i.Cl)({}, t), p(o)));
             continue;
         }
-        if (u.test(i.stem)) {
-            t = (0, s.Cl)((0, s.Cl)({}, t), _(i.stem));
+        if (u.test(n.stem)) {
+            t = (0, i.Cl)((0, i.Cl)({}, t), p(n.stem));
             continue;
         }
-        var a = h(i.stem);
-        a && (t = (0, s.Cl)((0, s.Cl)({}, t), a));
-        var o = (function (e) {
+        var a = d(n.stem);
+        a && (t = (0, i.Cl)((0, i.Cl)({}, t), a));
+        var s = (function (e) {
             var t;
             if (
                 ("E" === e[0] && "E" === e[1]
@@ -307,19 +307,19 @@ function p(e) {
                     : "E" === e[0] && ((t = { notation: "scientific" }), (e = e.slice(1))),
                 t)
             ) {
-                var n = e.slice(0, 2);
+                var r = e.slice(0, 2);
                 if (
-                    ("+!" === n
+                    ("+!" === r
                         ? ((t.signDisplay = "always"), (e = e.slice(2)))
-                        : "+?" === n && ((t.signDisplay = "exceptZero"), (e = e.slice(2))),
-                    !d.test(e))
+                        : "+?" === r && ((t.signDisplay = "exceptZero"), (e = e.slice(2))),
+                    !f.test(e))
                 )
                     throw Error("Malformed concise eng/scientific notation");
                 t.minimumIntegerDigits = e.length;
             }
             return t;
-        })(i.stem);
-        o && (t = (0, s.Cl)((0, s.Cl)({}, t), o));
+        })(n.stem);
+        s && (t = (0, i.Cl)((0, i.Cl)({}, t), s));
     }
     return t;
 }

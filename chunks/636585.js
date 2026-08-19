@@ -1,66 +1,66 @@
 "use strict";
-n.d(t, { A: () => h }), n(321073);
-var i = n(477900),
-    r = n(582128),
-    a = n(503698),
-    s = n.n(a),
-    l = n(778712),
+n.d(t, { A: () => p }), n(321073);
+var l = n(477900),
+    i = n(582128),
+    s = n(503698),
+    r = n.n(s),
+    a = n(778712),
     o = n(97808),
-    d = n(983851),
+    u = n(983851),
     c = n(889227),
-    u = n(957132),
-    _ = n(666420);
-function E(e, t, n) {
-    return (0, i.jsx)("div", { className: t, children: e }, n);
+    d = n(957132),
+    h = n(666420);
+function m(e, t, n) {
+    return (0, l.jsx)("div", { className: t, children: e }, n);
 }
-class A extends r.PureComponent {
+class f extends i.PureComponent {
     _ref;
-    static defaultProps = { max: 10, renderMoreUsers: E, size: l._3.SIZE_24 };
-    defaultRenderUser = (e, t, n, r) => {
-        let { onClick: a, size: d, guildId: E } = this.props,
-            A = e instanceof c.A ? e : null != e ? e.user : null;
-        return null == A
-            ? (0, i.jsx)("div", { className: s()(u.F2, t), style: { width: (0, l.FT)(d), height: (0, l.FT)(d) } }, n)
-            : (0, i.jsx)(
+    static defaultProps = { max: 10, renderMoreUsers: m, size: a._3.SIZE_24 };
+    defaultRenderUser = (e, t, n, i) => {
+        let { onClick: s, size: u, guildId: m } = this.props,
+            f = e instanceof c.A ? e : null != e ? e.user : null;
+        return null == f
+            ? (0, l.jsx)("div", { className: r()(d.F2, t), style: { width: (0, a.FT)(u), height: (0, a.FT)(u) } }, n)
+            : (0, l.jsx)(
                   o.eu,
                   {
                       tabIndex: 0,
-                      src: A.getAvatarURL(E, (0, l.FT)(d)),
-                      size: d,
-                      "aria-label": A.username,
-                      className: s()(t, _.or),
-                      onClick: (e) => (null != a ? a(e, A, this._ref) : null),
+                      src: f.getAvatarURL(m, (0, a.FT)(u)),
+                      size: u,
+                      "aria-label": f.username,
+                      className: r()(t, h.or),
+                      onClick: (e) => (null != s ? s(e, f, this._ref) : null),
                   },
-                  A.id,
+                  f.id,
               );
     };
     renderUsers() {
-        let { users: e, max: t, renderUser: n = this.defaultRenderUser, renderMoreUsers: i } = this.props,
-            r = [],
-            a = e.length === t ? e.length : t - 1,
-            s = 0;
-        for (; s < a && s < e.length; ) {
-            let t = s === e.length - 1;
-            r.push(n(e[s] || null, t ? null : u.hC, `user-${s}`, t)), s++;
+        let { users: e, max: t, renderUser: n = this.defaultRenderUser, renderMoreUsers: l } = this.props,
+            i = [],
+            s = e.length === t ? e.length : t - 1,
+            r = 0;
+        for (; r < s && r < e.length; ) {
+            let t = r === e.length - 1;
+            i.push(n(e[r] || null, t ? null : d.hC, `user-${r}`, t)), r++;
         }
-        if (s < e.length) {
-            let t = Math.min(e.length - s, 99);
-            r.push(i(`+${t}`, u.In, "more-users", t));
+        if (r < e.length) {
+            let t = Math.min(e.length - r, 99);
+            i.push(l(`+${t}`, d.In, "more-users", t));
         }
-        return r;
+        return i;
     }
     renderIcon() {
         return this.props.icon
-            ? (0, i.jsx)("div", {
-                  className: u.zc,
-                  children: (0, i.jsx)(d.H, { size: "xs", color: "currentColor", colorClass: u.CU, className: u.Kk }),
+            ? (0, l.jsx)("div", {
+                  className: d.zc,
+                  children: (0, l.jsx)(u.H, { size: "xs", color: "currentColor", colorClass: d.CU, className: d.Kk }),
               })
             : null;
     }
     render() {
         let { className: e } = this.props;
-        return (0, i.jsxs)("div", {
-            className: s()(e, u.kL),
+        return (0, l.jsxs)("div", {
+            className: r()(e, d.kL),
             ref: (e) => {
                 this._ref = e;
             },
@@ -68,4 +68,4 @@ class A extends r.PureComponent {
         });
     }
 }
-let h = A;
+let p = f;

@@ -9075,7 +9075,7 @@ let { Themes: c } = d.zv,
         },
     },
     L = o()(p, (e) => r()(e)),
-    D = {
+    y = {
         themes: I,
         modules: N,
         colors: o()(f, (e, t) => ({
@@ -9093,16 +9093,16 @@ let { Themes: c } = d.zv,
                     let e = m[t]?.[n.theme];
                     null != e && ((r = e.raw ?? r), (a = e.opacity ?? a));
                 }
-                if (1 === a) return D.unsafe_rawColors[r].resolve(n);
+                if (1 === a) return y.unsafe_rawColors[r].resolve(n);
                 {
                     let e = L[r];
-                    return 0 !== e.alpha() && 1 !== a && (e = e.alpha(a)), y(e, n.saturation);
+                    return 0 !== e.alpha() && 1 !== a && (e = e.alpha(a)), D(e, n.saturation);
                 }
             },
         })),
         unsafe_rawColors: o()(p, (e, t) => {
             let n = L[t];
-            return { css: M(t), resolve: (e) => y(n, e?.saturation ?? 1) };
+            return { css: M(t), resolve: (e) => D(n, e?.saturation ?? 1) };
         }),
         shadows: o()(g, (e, t) => ({
             css: M(t),
@@ -9126,7 +9126,7 @@ let { Themes: c } = d.zv,
             ...o()(R, (e) => `${e}px`),
         },
     };
-function y(e, t) {
+function D(e, t) {
     return {
         spring() {
             let n = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
@@ -9165,4 +9165,4 @@ function M(e, t) {
         i = b(e);
     return `var(--${[n, i].filter(Boolean).join("-")})`;
 }
-let P = D;
+let P = y;

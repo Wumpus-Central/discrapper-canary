@@ -1,24 +1,24 @@
 "use strict";
-n.d(t, { A: () => u });
+n.d(t, { A: () => d });
 var i = n(574381),
     r = n(439372),
-    s = n(710195),
-    a = n(19575);
-let o = (0, n(945810).mj)({
+    a = n(710195),
+    s = n(19575);
+let l = (0, n(945810).mj)({
     name: "2026-03-requiremodule-caching-redux",
     kind: "user",
     defaultConfig: { moduleCacheEnabled: !1 },
     variations: { 1: { moduleCacheEnabled: !0 } },
 });
-class l extends r.A {
+class o extends r.A {
     handleExperimentChange = () => {
         if (!i.Av) return;
-        let { moduleCacheEnabled: e } = o.getConfig({
+        let { moduleCacheEnabled: e } = l.getConfig({
             location: "CacheRequireModuleExperimentManager handleExperimentChange",
         });
-        a.Ay.setUseRequireModuleCache(e);
+        s.Ay.setUseRequireModuleCache(e);
     };
-    stores = new Map().set(s.A, this.handleExperimentChange);
+    stores = new Map().set(a.A, this.handleExperimentChange);
     actions = {};
 }
-let u = new l();
+let d = new o();

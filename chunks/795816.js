@@ -18,7 +18,7 @@ n.d(t, {
 });
 var i = n(562708),
     r = n(344351),
-    a = n(562465),
+    a = n(636537),
     s = n(554146),
     l = n(228366),
     o = n(157559),
@@ -41,8 +41,8 @@ var i = n(562708),
     O = n(113267),
     R = n(625180),
     L = n(207371),
-    D = n(451909),
-    y = n(195880),
+    y = n(451909),
+    D = n(195880),
     v = n(567249),
     b = n(192552),
     M = n(395671),
@@ -62,8 +62,8 @@ var i = n(562708),
     K = n(817636),
     $ = n(782091),
     z = n(108959),
-    q = n(400115),
-    Z = n(90804),
+    Z = n(400115),
+    q = n(90804),
     X = n(946255),
     Q = n(859007),
     J = n(360469),
@@ -97,11 +97,11 @@ async function el(e) {
             onConfirmActivityLaunchChecksAlertOpen: S,
         } = e,
         N = U.A.getChannel(t),
-        D = N?.getGuildId() ?? void 0;
-    if (null == D && !N?.isPrivate()) return !1;
+        y = N?.getGuildId() ?? void 0;
+    if (null == y && !N?.isPrivate()) return !1;
     let b = p.A.getApplication(i),
         M = null != b && (0, L.x)(b),
-        P = (0, y.m)();
+        P = (0, D.m)();
     try {
         if (v.A.getWindowOpen(et.MLl.ACTIVITY_POPOUT)) {
             let { close: e } = n(574172);
@@ -109,12 +109,12 @@ async function el(e) {
         }
         if ((!0 !== g && R.A.clearMainFrameSlot(), (0, Q.y)({ applicationId: i })))
             return (
-                (0, q.j$)(i, {
+                (0, Z.j$)(i, {
                     isStart: a,
                     inviterUserId: T,
                     channelId: t ?? null,
-                    guildId: D ?? null,
-                    locationKind: null != D ? r.T.GUILD_CHANNEL : r.T.PRIVATE_CHANNEL,
+                    guildId: y ?? null,
+                    locationKind: null != y ? r.T.GUILD_CHANNEL : r.T.PRIVATE_CHANNEL,
                 }),
                 !0
             );
@@ -143,7 +143,7 @@ async function el(e) {
                 (0, X.A)({
                     type: a ? et.UqL.LAUNCH : et.UqL.JOIN,
                     userId: E?.id,
-                    guildId: D,
+                    guildId: y,
                     channelId: t,
                     channelType: N?.type,
                     applicationId: i,
@@ -172,7 +172,7 @@ async function el(e) {
                 applicationId: i,
                 nonce: P,
                 channelId: t,
-                guildId: D,
+                guildId: y,
                 commandOrigin: u,
                 sectionName: _,
                 source: A,
@@ -193,21 +193,21 @@ async function el(e) {
                     );
                 else throw new C.A(C.A.Reasons.PRIMARY_APP_COMMAND_NOT_FOUND);
         } else {
-            let e = await ed({ applicationId: i, channelId: t, embeddedActivitiesManager: d, isStart: a, guildId: D });
+            let e = await ed({ applicationId: i, channelId: t, embeddedActivitiesManager: d, isStart: a, guildId: y });
             if ((h?.(), "failure" === e.result))
                 throw new C.A(C.A.Reasons.LEGACY_LAUNCH_CLIENT_VALIDATION_FAILED, e.reason);
         }
         l.h.dispatch({ type: "EMBEDDED_ACTIVITY_LAUNCH_SUCCESS", nonce: P, applicationId: i, channelId: t ?? null });
     } catch (n) {
         if (M) return !1;
-        let e = null != D ? r.T.GUILD_CHANNEL : r.T.PRIVATE_CHANNEL;
+        let e = null != y ? r.T.GUILD_CHANNEL : r.T.PRIVATE_CHANNEL;
         return (
             l.h.dispatch({
                 type: "EMBEDDED_ACTIVITY_LAUNCH_FAIL",
                 nonce: P,
                 applicationId: i,
                 channelId: t ?? null,
-                guildId: D ?? null,
+                guildId: y ?? null,
                 isStart: a,
                 error: n instanceof C.A || n instanceof E.A || n instanceof O.A ? n : new E.A(n),
                 locationKind: e,
@@ -358,7 +358,7 @@ async function ed(e) {
         let e = (0, z.A)(_.id),
             n = J.lk.includes(_.type);
         if (e) {
-            if (!(await (0, Z.A)({ channelId: _.id, bypassChangeModal: null != t })))
+            if (!(await (0, q.A)({ channelId: _.id, bypassChangeModal: null != t })))
                 return { result: "failure", reason: 8 };
         } else if (!(0, H.pE)(_) || !n) return { result: "failure", reason: 9 };
     }
@@ -504,7 +504,7 @@ async function eI(e) {
         let t,
             n = U.A.getChannel(e);
         if (null == n) throw Error("Private channel not found");
-        null != s && (t = D.Ay.parse(n, s).content), _.A.sendInvite(e, l.code, r, a, t);
+        null != s && (t = y.Ay.parse(n, s).content), _.A.sendInvite(e, l.code, r, a, t);
     });
 }
 function ef() {
@@ -553,7 +553,7 @@ async function eN(e, t) {
         return (
             l.h.dispatch({
                 type: "EMBEDDED_ACTIVITY_LAUNCH_FAIL",
-                nonce: (0, y.m)(),
+                nonce: (0, D.m)(),
                 applicationId: e,
                 channelId: t,
                 guildId: i,

@@ -4,7 +4,7 @@ n.d(t, {
     Fw: () => F,
     Ko: () => C,
     ej: () => G,
-    K3: () => q,
+    K3: () => Z,
     hK: () => H,
     ZV: () => N,
     J6: () => Y,
@@ -27,14 +27,14 @@ n.d(t, {
     uz: () => W,
     Tz: () => g,
     aA: () => O,
-    i$: () => y,
+    i$: () => D,
     WQ: () => J,
     aJ: () => V,
     CI: () => U,
     pc: () => et,
     GD: () => P,
-    qh: () => D,
-    kL: () => Z,
+    qh: () => y,
+    kL: () => q,
     TY: () => T,
 });
 var i,
@@ -53,7 +53,7 @@ var i,
         (((i = {})[(i.ConsecutiveHeartbeatPeriodMinutes = 2)] = "ConsecutiveHeartbeatPeriodMinutes"),
         (i[(i.StatusLookbackPeriodDays = 30)] = "StatusLookbackPeriodDays"),
         i),
-    I = n(562465),
+    I = n(636537),
     f = n(927813),
     p = n(24001);
 let T = {
@@ -126,8 +126,8 @@ let g = new Set([A.L.NITRO_2_POINT_0_CTA, A.L.ORBS_MULTIPLIER_QUEST, A.L.XBOX_GA
     O = 6,
     R = 2;
 var L = (((a = {}).CONSOLE = "CONSOLE"), (a.DESKTOP = "DESKTOP"), a),
-    D = (((s = {}).IN_GAME = "in_game"), (s.WEB = "web"), s);
-let y = 454,
+    y = (((s = {}).IN_GAME = "in_game"), (s.WEB = "web"), s);
+let D = 454,
     v = 190,
     b = 2,
     M = (0, I.TP)(),
@@ -184,8 +184,8 @@ let F = "1333839522189938740",
         E.n.PLAY_ON_PLAYSTATION,
         E.n.PLAY_ACTIVITY,
     ]),
-    q = { is_targeted: !1 };
-var Z =
+    Z = { is_targeted: !1 };
+var q =
         (((d = {}).SUGGESTED = "suggested"),
         (d.MOST_RECENT = "most_recent"),
         (d.EXPIRING_SOON = "expiring_soon"),

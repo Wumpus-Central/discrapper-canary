@@ -9,6 +9,6 @@ e.exports = {
     R_: "heading_b558e5",
     U9: "headingActions_b558e5",
     f$: "timeLeft_b558e5",
-    $2: "cardGrid_b558e5",
+    Ko: "cardItem_b558e5",
     Ok: "marvelRivalsCopyright_b558e5",
 };

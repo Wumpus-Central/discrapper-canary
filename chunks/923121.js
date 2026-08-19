@@ -1,4 +1,4 @@
-n.d(t, { Bq: () => x, fH: () => N, p2: () => h, q3: () => E, sF: () => u, yM: () => g, zN: () => m }), n(321073);
+n.d(t, { Bq: () => x, fH: () => f, p2: () => h, q3: () => E, sF: () => u, yM: () => g, zN: () => m }), n(321073);
 var i = n(228366),
     l = n(157559),
     s = n(913122),
@@ -53,7 +53,7 @@ async function E(e) {
 function j(e) {
     i.h.dispatch({ type: "GUILD_SETTINGS_ONBOARDING_CONNECTIONS_SAVE_FAILED", errors: e });
 }
-function N(e) {
+function f(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
     return t || a.A.hasChanges() ? E(e) : Promise.resolve();
 }

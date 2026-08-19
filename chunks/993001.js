@@ -1,4 +1,4 @@
-function t(n, i, r, s) {
+function t(r, n, o, i) {
     var a = Object.defineProperty;
     try {
         a({}, "", {});
@@ -6,20 +6,20 @@ function t(n, i, r, s) {
         a = 0;
     }
     (e.exports = t =
-        function (e, n, i, r) {
-            function s(n, i) {
-                t(e, n, function (e) {
-                    return this._invoke(n, i, e);
+        function (e, r, n, o) {
+            function i(r, n) {
+                t(e, r, function (e) {
+                    return this._invoke(r, n, e);
                 });
             }
-            n
+            r
                 ? a
-                    ? a(e, n, { value: i, enumerable: !r, configurable: !r, writable: !r })
-                    : (e[n] = i)
-                : (s("next", 0), s("throw", 1), s("return", 2));
+                    ? a(e, r, { value: n, enumerable: !o, configurable: !o, writable: !o })
+                    : (e[r] = n)
+                : (i("next", 0), i("throw", 1), i("return", 2));
         }),
         (e.exports.__esModule = !0),
         (e.exports.default = e.exports),
-        t(n, i, r, s);
+        t(r, n, o, i);
 }
 (e.exports = t), (e.exports.__esModule = !0), (e.exports.default = e.exports);

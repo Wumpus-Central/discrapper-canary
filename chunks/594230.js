@@ -1,2 +1,2 @@
 "use strict";
-e.exports = n(624462).setPrototypeOf || null;
+e.exports = r(624462).setPrototypeOf || null;

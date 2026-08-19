@@ -1,28 +1,28 @@
 "use strict";
 let i;
-n.d(t, { A: () => E });
+n.d(t, { A: () => I });
 var r = n(17928),
-    s = n(228366),
-    a = n(194862),
-    o = n(395671),
-    l = n(927813),
-    u = n(723702);
-let c = l.A.Millis.DAY,
-    d = new a.A(),
+    a = n(228366),
+    s = n(194862),
+    l = n(395671),
+    o = n(927813),
+    d = n(723702);
+let c = o.A.Millis.DAY,
+    u = new s.A(),
     _ = "",
-    h = null,
-    f = !1;
-class p extends r.Ay.PersistedStore {
+    E = null,
+    A = !1;
+class h extends r.Ay.PersistedStore {
     static displayName = "NonGameStore";
     static persistKey = "NonGameStore";
     initialize(e) {
-        null != e && (null != e.etag && (_ = e.etag), e.nonGames?.forEach((e) => d.set(e.id, e)));
+        null != e && (null != e.etag && (_ = e.etag), e.nonGames?.forEach((e) => u.set(e.id, e)));
     }
     getState() {
-        return (0, u.isDesktop)() ? { etag: _, nonGames: d.values() } : { etag: "", nonGames: [] };
+        return (0, d.isDesktop)() ? { etag: _, nonGames: u.values() } : { etag: "", nonGames: [] };
     }
     get nonGames() {
-        return d.values();
+        return u.values();
     }
     get fetching() {
         return !0 === i;
@@ -31,39 +31,39 @@ class p extends r.Ay.PersistedStore {
         return _;
     }
     get lastFetched() {
-        return h;
+        return E;
     }
     get hasAttemptedFetch() {
-        return f;
+        return A;
     }
     get ttl() {
         return c;
     }
     getById(e) {
-        return d.get(e);
+        return u.get(e);
     }
     canFetch() {
-        return !i && (null == h || Date.now() >= h + c);
+        return !i && (null == E || Date.now() >= E + c);
     }
 }
-let E = new p(s.h, {
+let I = new h(a.h, {
     NON_GAMES_DATABASE_FETCH: function () {
         i = !0;
     },
     NON_GAMES_DATABASE_FETCH_FAIL: function () {
-        (i = !1), (f = !0);
+        (i = !1), (A = !0);
     },
     NON_GAMES_DATABASE_UPDATE: function (e) {
         let { nonGames: t, etag: n } = e;
-        for (let e of (null != n && _ !== n && (d.clear(), (_ = n)), t))
-            d.set(e.id, {
+        for (let e of (null != n && _ !== n && (u.clear(), (_ = n)), t))
+            u.set(e.id, {
                 id: e.id,
                 name: e.name,
-                executables: (e.executables ?? []).map(o.lg),
+                executables: (e.executables ?? []).map(l.lg),
                 aliases: e.aliases ?? [],
                 icon: e.icon_hash ?? void 0,
                 thirdPartySkus: e.third_party_skus ?? [],
             });
-        (i = void 0), (h = Date.now()), (f = !0);
+        (i = void 0), (E = Date.now()), (A = !0);
     },
 });

@@ -22,8 +22,8 @@ let p = function (e) {
             onButtonClick: x,
             imageSrc: E,
             animationSrc: S,
-            secondaryButtonText: _,
-            onSecondaryButtonClick: I,
+            secondaryButtonText: I,
+            onSecondaryButtonClick: _,
             children: j,
             useReducedMotion: y = !1,
             buttonVariant: b,
@@ -56,10 +56,10 @@ let p = function (e) {
                 (0, l.jsxs)("div", {
                     className: g.UD,
                     children: [
-                        null != _ &&
+                        null != I &&
                             (0, l.jsx)("div", {
                                 className: g.x6,
-                                children: (0, l.jsx)(d.Q, { textVariant: "text-sm/semibold", text: _, onClick: I }),
+                                children: (0, l.jsx)(d.Q, { textVariant: "text-sm/semibold", text: I, onClick: _ }),
                             }),
                         null != A &&
                             (0, l.jsx)("div", {

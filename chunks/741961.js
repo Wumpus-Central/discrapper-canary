@@ -1,155 +1,155 @@
 "use strict";
-let i;
-n.d(t, { A: () => C });
-var r = n(17928),
+let l;
+n.d(t, { A: () => v });
+var i = n(17928),
     s = n(636537),
-    a = n(228366),
-    o = n(695870),
-    l = n(927813),
-    u = n(495544),
+    r = n(228366),
+    a = n(695870),
+    o = n(927813),
+    u = n(280450),
     c = n(734057),
     d = n(101392),
-    _ = n(652215);
-let h = 10 * l.A.Millis.SECOND,
-    f = 1.5 * l.A.Millis.SECOND,
+    h = n(652215);
+let m = 10 * o.A.Millis.SECOND,
+    f = 1.5 * o.A.Millis.SECOND,
     p = {},
-    E = {},
-    m = Object.freeze({}),
-    g = Object.freeze({});
-function A(e) {
+    g = {},
+    x = Object.freeze({}),
+    A = Object.freeze({});
+function E(e) {
     return c.A.getChannel(e)?.getGuildId() ?? void 0;
 }
-function I(e) {
-    var t, n, i, r;
+function C(e) {
+    var t, n, l, i;
     let s,
-        o,
-        { channelId: l, userId: u, guildId: c } = e,
-        d = { ...(p[l] ?? m) };
+        a,
+        { channelId: o, userId: u, guildId: c } = e,
+        d = { ...(p[o] ?? x) };
     clearTimeout(d[u]);
-    let _ = setTimeout(() => {
-        a.h.dispatch({ type: "TYPING_STOP", channelId: l, userId: u, guildId: c });
-    }, h);
-    (d[u] = _),
-        (p[l] = d),
+    let h = setTimeout(() => {
+        r.h.dispatch({ type: "TYPING_STOP", channelId: o, userId: u, guildId: c });
+    }, m);
+    (d[u] = h),
+        (p[o] = d),
         null != c &&
             ((t = c),
-            (n = l),
-            (i = u),
-            (r = _),
-            clearTimeout((o = { ...((s = { ...(E[t] ?? g) })[n] ?? m) })[i]),
-            (o[i] = r),
-            (s[n] = o),
-            (E[t] = s));
+            (n = o),
+            (l = u),
+            (i = h),
+            clearTimeout((a = { ...((s = { ...(g[t] ?? A) })[n] ?? x) })[l]),
+            (a[l] = i),
+            (s[n] = a),
+            (g[t] = s));
 }
-function T(e) {
-    let { channelId: t, userId: n, guildId: i } = e,
-        r = p[t];
-    if (null == r || null == r[n]) return !1;
-    let s = { ...r };
+function I(e) {
+    let { channelId: t, userId: n, guildId: l } = e,
+        i = p[t];
+    if (null == i || null == i[n]) return !1;
+    let s = { ...i };
     clearTimeout(s[n]),
         delete s[n],
         (p[t] = s),
-        null != i &&
+        null != l &&
             (function (e, t, n) {
-                let i = E[e];
-                if (null == i) return;
-                let r = i[t];
-                if (null == r || null == r[n]) return;
-                let s = { ...r };
+                let l = g[e];
+                if (null == l) return;
+                let i = l[t];
+                if (null == i || null == i[n]) return;
+                let s = { ...i };
                 delete s[n];
-                let a = { ...i };
-                0 === Object.keys(s).length ? delete a[t] : (a[t] = s),
-                    0 === Object.keys(a).length ? delete E[e] : (E[e] = a);
-            })(i, t, n);
+                let r = { ...l };
+                0 === Object.keys(s).length ? delete r[t] : (r[t] = s),
+                    0 === Object.keys(r).length ? delete g[e] : (g[e] = r);
+            })(l, t, n);
 }
-function S() {
-    (p = {}), (E = {});
+function y() {
+    (p = {}), (g = {});
 }
-class y extends r.Ay.Store {
+class S extends i.Ay.Store {
     initialize() {
         this.waitFor(u.default, c.A);
     }
     static displayName = "TypingStore";
     getTypingUsers(e) {
-        return p[e] ?? m;
+        return p[e] ?? x;
     }
     getTypingUsersByGuild(e) {
-        return E[e] ?? g;
+        return g[e] ?? A;
     }
     isTyping(e, t) {
-        return null != (p[e] ?? m)[t];
+        return null != (p[e] ?? x)[t];
     }
 }
-let C = new y(a.h, {
-    TYPING_START: I,
-    TYPING_STOP: T,
+let v = new S(r.h, {
+    TYPING_START: C,
+    TYPING_STOP: I,
     TYPING_START_LOCAL: function (e) {
         let { channelId: t } = e,
             n = u.default.getId();
-        if (null == n || t === o.E) return !1;
-        null != i && i.channelId !== t && (null != i.timeout && clearTimeout(i.timeout), (i = null));
-        let r = Date.now(),
-            l = 0.8 * h;
-        if (null != i && (null != i.timeout || i.prevSend + l > r)) return !1;
+        if (null == n || t === a.E) return !1;
+        null != l && l.channelId !== t && (null != l.timeout && clearTimeout(l.timeout), (l = null));
+        let i = Date.now(),
+            o = 0.8 * m;
+        if (null != l && (null != l.timeout || l.prevSend + o > i)) return !1;
         let c = setTimeout(
             () => {
                 let e;
-                null == i ||
-                    i.channelId !== t ||
+                null == l ||
+                    l.channelId !== t ||
                     n !== u.default.getId() ||
-                    null == i.timeout ||
-                    ((i.timeout = null),
-                    ((e = p[t] ?? m) === m ? 0 : Object.keys(e).length) > 5 ||
-                        s.Bo.post({ url: _.Rsh.TYPING(t), oldFormErrors: !0, rejectWithError: !0 }).then((e) => {
+                    null == l.timeout ||
+                    ((l.timeout = null),
+                    ((e = p[t] ?? x) === x ? 0 : Object.keys(e).length) > 5 ||
+                        s.Bo.post({ url: h.Rsh.TYPING(t), oldFormErrors: !0, rejectWithError: !0 }).then((e) => {
                             if (200 === e.status) {
                                 let n = e.body.message_send_cooldown_ms ?? 0,
-                                    i = e.body.thread_create_cooldown_ms ?? 0;
+                                    l = e.body.thread_create_cooldown_ms ?? 0;
                                 n > 0 &&
-                                    a.h.dispatch({
+                                    r.h.dispatch({
                                         type: "SLOWMODE_SET_COOLDOWN",
                                         channelId: t,
                                         slowmodeType: d.R.SendMessage,
                                         cooldownMs: n,
                                     }),
-                                    i > 0 &&
-                                        a.h.dispatch({
+                                    l > 0 &&
+                                        r.h.dispatch({
                                             type: "SLOWMODE_SET_COOLDOWN",
                                             channelId: t,
                                             slowmodeType: d.R.CreateThread,
-                                            cooldownMs: i,
+                                            cooldownMs: l,
                                         });
                             }
                         }));
             },
-            null == i || i.prevSend > r - 2 * l ? f : 0,
+            null == l || l.prevSend > i - 2 * o ? f : 0,
         );
-        return (i = { channelId: t, timeout: c, prevSend: r }), I({ channelId: t, userId: n, guildId: A(t) });
+        return (l = { channelId: t, timeout: c, prevSend: i }), C({ channelId: t, userId: n, guildId: E(t) });
     },
     TYPING_STOP_LOCAL: function (e) {
         let { channelId: t } = e,
             n = u.default.getId();
         return (
             null != n &&
-            null != i &&
-            i.channelId === t &&
-            null != i.timeout &&
-            (clearTimeout(i.timeout), (i = null), T({ channelId: t, userId: n, guildId: A(t) }))
+            null != l &&
+            l.channelId === t &&
+            null != l.timeout &&
+            (clearTimeout(l.timeout), (l = null), I({ channelId: t, userId: n, guildId: E(t) }))
         );
     },
-    CONNECTION_OPEN: S,
-    OVERLAY_INITIALIZE: S,
+    CONNECTION_OPEN: y,
+    OVERLAY_INITIALIZE: y,
     MESSAGE_CREATE: function (e) {
         var t;
         let {
             channelId: n,
-            guildId: r,
+            guildId: i,
             message: { author: s },
-            optimistic: a,
+            optimistic: r,
         } = e;
         return (
-            a &&
-                ((t = n), null == i || i.channelId !== t || (null != i.timeout && clearTimeout(i.timeout), (i = null))),
-            null != s && T({ channelId: n, userId: s.id, guildId: r ?? A(n) })
+            r &&
+                ((t = n), null == l || l.channelId !== t || (null != l.timeout && clearTimeout(l.timeout), (l = null))),
+            null != s && I({ channelId: n, userId: s.id, guildId: i ?? E(n) })
         );
     },
 });

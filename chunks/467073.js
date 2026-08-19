@@ -1,7 +1,7 @@
-i.d(t, { A: () => p });
+i.d(t, { A: () => m });
 var n = i(17928),
-    l = i(229527),
-    s = i(870136),
+    s = i(229527),
+    l = i(870136),
     a = i(857071),
     r = i(406704),
     d = i(696451),
@@ -9,15 +9,15 @@ var n = i(17928),
     u = i(576705),
     c = i(707985),
     h = i(652215);
-function p(e) {
+function m(e) {
     let t = e?.guild_id,
         i = (0, n.bG)([o.A], () => null == t || o.A.canChatInGuild(t), [t]),
-        p = (0, n.bG)([a.A], () => null != t && a.A.isLurking(t), [t]),
-        m = (0, n.bG)([d.Ay], () => null != t && d.Ay.isCurrentUserGuest(t), [t]),
+        m = (0, n.bG)([a.A], () => null != t && a.A.isLurking(t), [t]),
+        p = (0, n.bG)([d.Ay], () => null != t && d.Ay.isCurrentUserGuest(t), [t]),
         A = (0, n.bG)([u.A], () => i && u.A.can(h.xBc.ADD_REACTIONS, e), [i, e]),
-        I = (0, l.ix)(t),
-        [, g] = (0, s.c)(t),
-        f = (0, r.Id)(e);
+        g = (0, s.ix)(t),
+        [, I] = (0, l.c)(t),
+        E = (0, r.Id)(e);
     return null == e
         ? {
               disableReactionReads: !0,
@@ -33,13 +33,13 @@ function p(e) {
                   canChat: i,
                   renderReactions: !0,
                   canAddNewReactions: A,
-                  isLurking: p,
-                  communicationDisabled: g,
-                  isActiveChannelOrUnarchivableThread: f,
-                  isAutomodQuarantined: I,
+                  isLurking: m,
+                  communicationDisabled: I,
+                  isActiveChannelOrUnarchivableThread: E,
+                  isAutomodQuarantined: g,
               }),
-              isLurking: p,
-              isGuest: m,
+              isLurking: m,
+              isGuest: p,
               isPendingMember: !1,
           };
 }

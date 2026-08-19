@@ -7,20 +7,20 @@ function o(e, t) {
     return n;
 }
 function a(e, t, r) {
-    var a, s, u, c, l, f;
+    var a, u, c, s, l, d;
     return (
         (a =
             e ||
             function () {
                 return {};
             }),
-        (s = function () {
+        (u = function () {
             return r.reconnect();
         }),
-        (l = (c =
+        (l = (s =
             (function (e) {
                 if (Array.isArray(e)) return e;
-            })((u = (0, i.F)(t, a, s))) ||
+            })((c = (0, i.F)(t, a, u))) ||
             (function (e) {
                 var t,
                     r,
@@ -42,7 +42,7 @@ function a(e, t, r) {
                     }
                     return i;
                 }
-            })(u) ||
+            })(c) ||
             (function (e) {
                 if (e) {
                     if ("string" == typeof e) return o(e, 2);
@@ -51,19 +51,19 @@ function a(e, t, r) {
                         return Array.from(e);
                     if ("Arguments" === t || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t)) return o(e, 2);
                 }
-            })(u) ||
+            })(c) ||
             (function () {
                 throw TypeError(
                     "Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.",
                 );
             })())[0]),
-        (f = c[1]),
+        (d = s[1]),
         (0, n.E)(
             function () {
                 var e = t.getHandlerId();
-                if (null != e) return t.subscribeToStateChange(f, { handlerIds: [e] });
+                if (null != e) return t.subscribeToStateChange(d, { handlerIds: [e] });
             },
-            [t, f],
+            [t, d],
         ),
         l
     );

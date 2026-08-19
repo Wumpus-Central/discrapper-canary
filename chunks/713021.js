@@ -1,17 +1,17 @@
 "use strict";
-n.d(t, { Ay: () => h, dx: () => u, k0: () => l });
-var i,
-    r = n(635377),
-    s = n.n(r),
-    a = n(17928),
-    o = n(228366),
-    l = (((i = {}).VOICE_MESSAGE = "voice_message"), i);
+n.d(t, { Ay: () => m, dx: () => u, k0: () => o });
+var l,
+    i = n(635377),
+    s = n.n(i),
+    r = n(17928),
+    a = n(228366),
+    o = (((l = {}).VOICE_MESSAGE = "voice_message"), l);
 function u(e, t) {
     return `${e}-${t}`;
 }
 let c = { rates: { voice_message: 1 }, positions: new (s())({ max: 25 }) },
     d = { ...c };
-class _ extends a.Ay.DeviceSettingsStore {
+class h extends r.Ay.DeviceSettingsStore {
     static displayName = "MediaPlaybackStore";
     static persistKey = "MediaPlaybackStore";
     initialize(e) {
@@ -28,13 +28,13 @@ class _ extends a.Ay.DeviceSettingsStore {
         return d.positions.get(e) ?? 0;
     }
 }
-let h = new _(o.h, {
+let m = new h(a.h, {
     MEDIA_PLAYBACK_RATE_UPDATE: function (e) {
         let { rate: t, playbackType: n } = e;
         d = { ...d, rates: { ...d.rates, [n]: t } };
     },
     MEDIA_PLAYBACK_POSITION_UPDATE: function (e) {
-        let { cacheKey: t, position: n, duration: i } = e;
-        n > 0.5 && n < 0.95 * i ? d.positions.set(t, n) : d.positions.del(t);
+        let { cacheKey: t, position: n, duration: l } = e;
+        n > 0.5 && n < 0.95 * l ? d.positions.set(t, n) : d.positions.del(t);
     },
 });

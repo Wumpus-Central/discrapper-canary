@@ -1,26 +1,26 @@
 "use strict";
-n.d(t, { A: () => o });
+n.d(t, { A: () => l });
 var i = n(17928),
     r = n(228366);
-let s = { isDisplayingWowMomentConfirmation: !1, isAnimated: !1 };
-class a extends i.Ay.Store {
+let a = { isDisplayingWowMomentConfirmation: !1, isAnimated: !1 };
+class s extends i.Ay.Store {
     static displayName = "WowMomentConfirmationStore";
     getState() {
-        return s;
+        return a;
     }
     get isDisplayingWowMomentConfirmation() {
-        return s.isDisplayingWowMomentConfirmation;
+        return a.isDisplayingWowMomentConfirmation;
     }
     get isAnimated() {
-        return s.isAnimated;
+        return a.isAnimated;
     }
 }
-let o = new a(r.h, {
+let l = new s(r.h, {
     LOGOUT: function () {
-        s = { isDisplayingWowMomentConfirmation: !1, isAnimated: !1 };
+        a = { isDisplayingWowMomentConfirmation: !1, isAnimated: !1 };
     },
     WOW_MOMENT_CONFIRMATION_SET_IS_DISPLAYING_WOW_MOMENT_CONFIRMATION: function (e) {
         let { value: t, isAnimated: n } = e;
-        (s.isDisplayingWowMomentConfirmation = t), (s.isAnimated = n);
+        (a.isDisplayingWowMomentConfirmation = t), (a.isAnimated = n);
     },
 });

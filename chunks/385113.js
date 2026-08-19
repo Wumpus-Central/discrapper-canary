@@ -1,88 +1,88 @@
-i.d(t, { A: () => R, e: () => r });
-var E,
-    s = i(17928),
-    n = i(228366),
-    r =
-        (((E = {}).NOT_FETCHED = "NOT_FETCHED"),
-        (E.FETCHING = "FETCHING"),
-        (E.SUCCESS = "SUCCESS"),
-        (E.FAILURE = "FAILURE"),
-        E);
-let l = [],
-    a = {},
-    _ = {},
-    S = "NOT_FETCHED",
-    A = [],
+n.d(t, { A: () => h, e: () => l });
+var i,
+    s = n(17928),
+    a = n(228366),
+    l =
+        (((i = {}).NOT_FETCHED = "NOT_FETCHED"),
+        (i.FETCHING = "FETCHING"),
+        (i.SUCCESS = "SUCCESS"),
+        (i.FAILURE = "FAILURE"),
+        i);
+let r = [],
+    E = {},
+    o = {},
     c = "NOT_FETCHED",
-    o = [];
-function T(e) {
+    d = [],
+    _ = "NOT_FETCHED",
+    S = [];
+function u(e) {
     if (0 !== Object.keys(e).length) {
-        for (let [t, i] of Object.entries(e)) {
-            let e = new Set(i.map((e) => e.config_id)),
-                E = a[t]?.filter((t) => !e.has(t.config_id)) ?? [];
-            a[t] = [...E, ...i];
+        for (let [t, n] of Object.entries(e)) {
+            let e = new Set(n.map((e) => e.config_id)),
+                i = E[t]?.filter((t) => !e.has(t.config_id)) ?? [];
+            E[t] = [...i, ...n];
         }
-        (a = { ...a }), (_ = { ..._, ...Object.fromEntries(Object.keys(e).map((e) => [e, "SUCCESS"])) });
+        (E = { ...E }), (o = { ...o, ...Object.fromEntries(Object.keys(e).map((e) => [e, "SUCCESS"])) });
     }
 }
-function I() {
-    (a = {}), (_ = {}), (S = "NOT_FETCHED"), (A = []), (c = "NOT_FETCHED"), (o = []);
+function A() {
+    (E = {}), (o = {}), (c = "NOT_FETCHED"), (d = []), (_ = "NOT_FETCHED"), (S = []);
 }
-class d extends s.Ay.Store {
+class I extends s.Ay.Store {
     static displayName = "ApplicationWidgetConfigStore";
     getConfig(e) {
-        return a[e]?.[0] ?? void 0;
+        return E[e]?.[0] ?? void 0;
     }
     getConfigs(e) {
-        return a[e] ?? l;
+        return E[e] ?? r;
     }
     getFetchState(e) {
-        return _[e] ?? "NOT_FETCHED";
+        return o[e] ?? "NOT_FETCHED";
     }
     getFeaturedFetchState() {
-        return S;
-    }
-    getDeveloperFetchState() {
         return c;
     }
+    getDeveloperFetchState() {
+        return _;
+    }
     getAllConfigsByApplication() {
-        return a;
+        return E;
     }
     getFeaturedApplicationIds() {
-        return A;
+        return d;
     }
     getDeveloperApplicationIds() {
-        return o;
+        return S;
     }
 }
-let R = new d(n.h, {
-    LOGOUT: I,
-    APPLICATION_WIDGET_CONFIG_DEBUG_RESET: I,
+let h = new I(a.h, {
+    LOGOUT: A,
+    APPLICATION_WIDGET_CONFIG_DEBUG_RESET: A,
     APPLICATION_WIDGET_CONFIG_FEATURED_FETCH_START: function (e) {
-        S = "FETCHING";
-    },
-    APPLICATION_WIDGET_CONFIG_FEATURED_FETCH_SUCCESS: function (e) {
-        (S = "SUCCESS"), (A = Object.keys(e.configs)), T(e.configs);
-    },
-    APPLICATION_WIDGET_CONFIG_FEATURED_FETCH_FAILURE: function () {
-        S = "FAILURE";
-    },
-    APPLICATION_WIDGET_CONFIG_DEVELOPER_FETCH_START: function () {
         c = "FETCHING";
     },
-    APPLICATION_WIDGET_CONFIG_DEVELOPER_FETCH_SUCCESS: function (e) {
-        (c = "SUCCESS"), (o = Object.keys(e.configs)), T(e.configs);
+    APPLICATION_WIDGET_CONFIG_FEATURED_FETCH_SUCCESS: function (e) {
+        (c = "SUCCESS"), (d = Object.keys(e.configs)), u(e.configs);
     },
-    APPLICATION_WIDGET_CONFIG_DEVELOPER_FETCH_FAILURE: function () {
+    APPLICATION_WIDGET_CONFIG_FEATURED_FETCH_FAILURE: function () {
         c = "FAILURE";
     },
+    APPLICATION_WIDGET_CONFIG_DEVELOPER_FETCH_START: function () {
+        _ = "FETCHING";
+    },
+    APPLICATION_WIDGET_CONFIG_DEVELOPER_FETCH_SUCCESS: function (e) {
+        (_ = "SUCCESS"), (S = Object.keys(e.configs)), u(e.configs);
+    },
+    APPLICATION_WIDGET_CONFIG_DEVELOPER_FETCH_FAILURE: function () {
+        _ = "FAILURE";
+    },
     APPLICATION_WIDGET_CONFIG_FETCH_START: function (e) {
-        _ = { ..._, [e.applicationId]: "FETCHING" };
+        o = { ...o, [e.applicationId]: "FETCHING" };
     },
     APPLICATION_WIDGET_CONFIG_FETCH_SUCCESS: function (e) {
-        T({ [e.applicationId]: e.configs });
+        u({ [e.applicationId]: e.configs });
     },
     APPLICATION_WIDGET_CONFIG_FETCH_FAILURE: function (e) {
-        _ = { ..._, [e.applicationId]: "FAILURE" };
+        o = { ...o, [e.applicationId]: "FAILURE" };
     },
 });

@@ -1,18 +1,18 @@
 IntlMessageFormat.__addLocaleData({
     locale: "lt",
     pluralRuleFunction: function (e, t) {
-        var n = String(e).split("."),
-            i = n[1] || "",
-            r = Number(n[0]) == e,
-            s = r && n[0].slice(-1),
-            a = r && n[0].slice(-2);
+        var r = String(e).split("."),
+            n = r[1] || "",
+            o = Number(r[0]) == e,
+            i = o && r[0].slice(-1),
+            a = o && r[0].slice(-2);
         return t
             ? "other"
-            : 1 == s && (a < 11 || a > 19)
+            : 1 == i && (a < 11 || a > 19)
               ? "one"
-              : s >= 2 && s <= 9 && (a < 11 || a > 19)
+              : i >= 2 && i <= 9 && (a < 11 || a > 19)
                 ? "few"
-                : 0 != i
+                : 0 != n
                   ? "many"
                   : "other";
     },

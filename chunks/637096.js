@@ -1,14 +1,14 @@
 "use strict";
-n.d(t, { b: () => i });
-var r = n(709157);
-function i(e, t) {
-    let { id: n, "aria-label": i, "aria-labelledby": a } = e;
+r.d(t, { b: () => o });
+var n = r(709157);
+function o(e, t) {
+    let { id: r, "aria-label": o, "aria-labelledby": i } = e;
     return (
-        (n = (0, r.Bi)(n)),
-        a && i
-            ? (a = [...new Set([n, ...a.trim().split(/\s+/)])].join(" "))
-            : a && (a = a.trim().split(/\s+/).join(" ")),
-        i || a || !t || (i = t),
-        { id: n, "aria-label": i, "aria-labelledby": a }
+        (r = (0, n.Bi)(r)),
+        i && o
+            ? (i = [...new Set([r, ...i.trim().split(/\s+/)])].join(" "))
+            : i && (i = i.trim().split(/\s+/).join(" ")),
+        o || i || !t || (o = t),
+        { id: r, "aria-label": o, "aria-labelledby": i }
     );
 }

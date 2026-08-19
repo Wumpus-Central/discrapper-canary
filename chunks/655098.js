@@ -16,22 +16,22 @@ var l = n(477900),
     g = n(654821),
     x = n(35277),
     A = n(820066),
-    C = n(112107),
-    E = n(17928),
+    E = n(112107),
+    C = n(17928),
     I = n(866665),
     y = n(778712),
-    v = n(939249),
-    S = n(545442),
-    N = n(922016),
-    _ = n(565645),
+    S = n(939249),
+    v = n(545442),
+    _ = n(922016),
+    N = n(565645),
     T = n(730134),
     j = n(775602),
     b = n(47167),
     R = n(442247),
-    O = n(569926),
-    M = n(106191),
-    w = n(545868),
-    L = n(376943),
+    L = n(569926),
+    O = n(106191),
+    M = n(545868),
+    w = n(376943),
     k = n(465365),
     P = n(78390),
     D = n(785562),
@@ -48,15 +48,15 @@ var H = n(734057),
     Z = n(871237),
     Y = n(562153),
     q = n(427262),
-    J = n(375708),
-    $ = n(913691);
+    $ = n(375708),
+    J = n(913691);
 function X(e) {
     let { emoji: t } = e;
     return (0, l.jsx)(I.m, {
         text: t.name,
         delay: 750,
         position: "top",
-        children: (0, l.jsx)(_.A, { src: t.src, emojiName: t.name, animated: !1, surrogate: t.surrogate }),
+        children: (0, l.jsx)(N.A, { src: t.src, emojiName: t.name, animated: !1, surrogate: t.surrogate }),
     });
 }
 function Q(e) {
@@ -65,7 +65,7 @@ function Q(e) {
         text: t.name,
         delay: 750,
         position: "top",
-        children: (0, l.jsx)(_.A, { emojiId: t.emojiId, emojiName: t.name, animated: t.animated }),
+        children: (0, l.jsx)(N.A, { emojiId: t.emojiId, emojiName: t.name, animated: t.animated }),
     });
 }
 function ee(e) {
@@ -74,37 +74,37 @@ function ee(e) {
 }
 function et(e) {
     let { id: t, guildId: n, channelId: i } = e,
-        s = (0, E.bG)([z.default], () => z.default.getUser(t)),
-        r = (0, E.bG)([K.A], () => K.A.hidePersonalInformation),
+        s = (0, C.bG)([z.default], () => z.default.getUser(t)),
+        r = (0, C.bG)([K.A], () => K.A.hidePersonalInformation),
         a = Y.Ay.useName(n, i, s),
         o = (0, l.jsx)(U.A, { children: null == a ? `<@${t}>` : `@${a}` });
     if (null != s) {
         let e = r || s.hasUniqueUsername() ? null : `#${s.discriminator}`;
         return (0, l.jsx)(I.m, {
             __unsupportedReactNodeAsText: (0, l.jsxs)("div", {
-                className: $.fX,
+                className: J.fX,
                 children: [
-                    (0, l.jsx)(T.A, { user: s, animate: !0, size: y._3.SIZE_16, className: $.my }),
+                    (0, l.jsx)(T.A, { user: s, animate: !0, size: y._3.SIZE_16, className: J.my }),
                     q.Ay.getUserTag(s, { mode: "username", identifiable: r ? "never" : "always" }),
-                    (0, l.jsx)("span", { className: $.D2, children: e }),
+                    (0, l.jsx)("span", { className: J.D2, children: e }),
                 ],
             }),
             delay: 750,
             position: "top",
             "aria-label": q.Ay.getUserTag(s, { decoration: "never" }),
             asContainer: !0,
-            children: (0, l.jsx)(v.D, { tag: "span", children: o }),
+            children: (0, l.jsx)(S.D, { tag: "span", children: o }),
         });
     }
     return o;
 }
 function en(e) {
     let { id: t, guildId: n, channelId: s } = e,
-        r = (0, E.bG)([B.A], () => (null != n ? B.A.getRole(n, t) : void 0)),
-        a = (0, E.bG)([j.Ay], () => j.Ay.roleStyle),
+        r = (0, C.bG)([B.A], () => (null != n ? B.A.getRole(n, t) : void 0)),
+        a = (0, C.bG)([j.Ay], () => j.Ay.roleStyle),
         o = (0, F.X_)(n, r, r?.colorStrings),
         u = i.useRef(null);
-    if (null == r) return (0, l.jsxs)("span", { children: ["@", J.intl.string(J.t["YV4F/n"])] });
+    if (null == r) return (0, l.jsxs)("span", { children: ["@", $.intl.string($.t["YV4F/n"])] });
     let c = null != r.color && 0 !== r.color,
         d = "dot" === a,
         h = "username" === a && c;
@@ -117,7 +117,7 @@ function en(e) {
                   roleColors: h ? o : null,
                   ...e,
                   children: [
-                      d && (0, l.jsx)(S.W, { color: r.colorString, colors: o, background: !1, tooltip: !1 }),
+                      d && (0, l.jsx)(v.W, { color: r.colorString, colors: o, background: !1, tooltip: !1 }),
                       "@",
                       r.name,
                   ],
@@ -125,10 +125,10 @@ function en(e) {
     }
     return null == n || null == s
         ? m()
-        : (0, l.jsx)(N.Y, {
+        : (0, l.jsx)(_.Y, {
               targetElementRef: u,
               preload: async () => {
-                  await (0, w.a)(n, t);
+                  await (0, M.a)(n, t);
               },
               renderPopout: (e) => (0, l.jsx)(V.Y, { guildId: n, channelId: s, roleId: t, popoutProps: e }),
               position: "top",
@@ -137,13 +137,13 @@ function en(e) {
 }
 function el(e) {
     let { id: t } = e,
-        n = (0, E.bG)([H.A], () => H.A.getChannel(t)),
-        i = J.intl.string(J.t.zLZPmk).toLowerCase(),
+        n = (0, C.bG)([H.A], () => H.A.getChannel(t)),
+        i = $.intl.string($.t.zLZPmk).toLowerCase(),
         s = "text",
         r = !0;
     return (null != n &&
-        ((i = (0, L.nc)(n) ? (0, b.m1)(n, z.default, W.A) : J.intl.string(J.t["/YzI63"])),
-        (s = (0, L.nc)(n) ? ((0, Z.QG)(n) ?? "text") : "locked"),
+        ((i = (0, w.nc)(n) ? (0, b.m1)(n, z.default, W.A) : $.intl.string($.t["/YzI63"])),
+        (s = (0, w.nc)(n) ? ((0, Z.QG)(n) ?? "text") : "locked"),
         (r = (0, k.Y)(n.type))),
     r)
         ? (0, l.jsx)(U.A, { iconType: s, children: i })
@@ -161,17 +161,17 @@ function es(e) {
 }
 function er(e) {
     let { timestamp: t } = e;
-    return (0, l.jsx)(D.A, { node: t, className: "R" === t.format ? $.gS : null });
+    return (0, l.jsx)(D.A, { node: t, className: "R" === t.format ? J.gS : null });
 }
 function ea(e) {
     let { id: t } = e,
         n = (0, R.K)(t),
         i = null != n;
-    return ((0, O.I)(i ? void 0 : t), i)
+    return ((0, L.I)(i ? void 0 : t), i)
         ? (0, l.jsxs)(U.A, {
-              children: [(0, l.jsx)(M.A, { game: { id: t, icon: n.gameIcon }, iconClassName: $.Kk }), n.gameName],
+              children: [(0, l.jsx)(O.A, { game: { id: t, icon: n.gameIcon }, iconClassName: J.Kk }), n.gameName],
           })
-        : (0, l.jsxs)("span", { children: ["@", J.intl.string(J.t["11pdXZ"])] });
+        : (0, l.jsxs)("span", { children: ["@", $.intl.string($.t["11pdXZ"])] });
 }
 var eo = n(870322),
     eu = n(487411),
@@ -324,7 +324,7 @@ class eg extends i.PureComponent {
                         return (0, l.jsxs)(em, {
                             attributes: i,
                             className: u,
-                            children: [(0, l.jsx)(C.LF, { soundId: a.soundId }), s],
+                            children: [(0, l.jsx)(E.LF, { soundId: a.soundId }), s],
                         });
                     case "commandMention":
                         return (0, l.jsxs)(em, {
@@ -610,7 +610,7 @@ class eg extends i.PureComponent {
             onKeyUp: g,
             renderExtraElement: x,
             renderExtraLeaf: A,
-            ...C
+            ...E
         } = this.props;
         return (0, l.jsxs)("div", {
             ref: this.containerRef,
@@ -628,7 +628,7 @@ class eg extends i.PureComponent {
                     editor: e,
                     value: [...this.state.initialValue],
                     children: (0, l.jsx)(a.Fo, {
-                        ...C,
+                        ...E,
                         className: r()(eh.PT, ep.E, t),
                         decorate: u,
                         renderElement: this.renderElement,

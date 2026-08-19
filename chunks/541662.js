@@ -1,4 +1,4 @@
-_.exports = {
+d.exports = {
     YS: "text-xs/medium_cf09d8",
     oU: "text-md/medium_cf09d8",
     iE: "wrapper_cf09d8",

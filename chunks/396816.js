@@ -1,7 +1,7 @@
 let i, l, s;
 n.d(t, { A: () => ee, y: () => _ }), n(321073);
 var r,
-    a = n(735438),
+    a = n(435558),
     o = n.n(a),
     d = n(136722),
     c = n(317097),
@@ -12,11 +12,11 @@ var r,
     h = n(176201),
     E = n(676608),
     j = n(34457),
-    N = n(317525),
-    f = n(111613),
+    f = n(317525),
+    N = n(111613),
     p = n(403362),
     A = n(488926),
-    I = n(913758),
+    I = n(555337),
     S = n(927573),
     C = n(652215),
     v = n(178758),
@@ -47,8 +47,8 @@ function F(e) {
 function B() {
     return null == i || null == G
         ? []
-        : f.Ay.calculatePositionDeltas({
-              oldOrdering: N.A.getSortedRoles(i.id),
+        : N.Ay.calculatePositionDeltas({
+              oldOrdering: f.A.getSortedRoles(i.id),
               newOrdering: G,
               idGetter: (e) => e.id,
               existingPositionGetter: (e) => e.position,
@@ -69,7 +69,7 @@ function V() {
         b.clear(),
         P.clear(),
         (y = C.XlH.OPEN),
-        (D = [...(G = null != i ? [...N.A.getSortedRoles(i.id)] : [])]),
+        (D = [...(G = null != i ? [...f.A.getSortedRoles(i.id)] : [])]),
         z(i?.id, D),
         (O = !1),
         e &&
@@ -158,7 +158,7 @@ function J(e) {
 function Q(e) {
     let { guildId: t } = e;
     if (null == (i = I.A.getProps().guild) || t !== i.id || y === C.XlH.SUBMITTING) return !1;
-    let n = [...N.A.getSortedRoles(i.id)];
+    let n = [...f.A.getSortedRoles(i.id)];
     b.forEach((e) => {
         let t = q(e),
             i = -1;
@@ -186,7 +186,7 @@ function Q(e) {
 class Z extends u.Ay.Store {
     static displayName = "GuildSettingsRolesStore";
     initialize() {
-        this.waitFor(I.A, x.A, N.A);
+        this.waitFor(I.A, x.A, f.A);
     }
     hasChanges() {
         return R || L || O;

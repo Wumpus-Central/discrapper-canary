@@ -1,12 +1,12 @@
 "use strict";
-n.d(t, { A: () => d });
+n.d(t, { A: () => u });
 var i = n(439372),
-    r = n(495544),
-    s = n(287809),
-    a = n(917136),
-    o = n(976910),
-    l = n(652215);
-let u = !1;
+    r = n(280450),
+    a = n(287809),
+    s = n(917136),
+    l = n(976910),
+    o = n(652215);
+let d = !1;
 class c extends i.A {
     actions = {
         POST_CONNECTION_OPEN: this.handlePossibleCredentialFetch,
@@ -15,19 +15,19 @@ class c extends i.A {
     };
     stores = new Map()
         .set(r.default, this.handlePossibleCredentialFetch)
-        .set(s.default, this.handlePossibleCredentialFetch)
-        .set(o.A, this.handlePossibleCredentialFetch);
+        .set(a.default, this.handlePossibleCredentialFetch)
+        .set(l.A, this.handlePossibleCredentialFetch);
     handlePossibleCredentialFetch() {
-        if (!(u || __OVERLAY__) && r.default.getLoginStatus() === l.aUe.NONE) {
-            if (o.A.hasFetchedCredentials()) {
-                u = !0;
+        if (!(d || __OVERLAY__) && r.default.getLoginStatus() === o.aUe.NONE) {
+            if (l.A.hasFetchedCredentials()) {
+                d = !0;
                 return;
             }
-            void 0 !== s.default.getCurrentUser() && ((u = !0), (0, a.JQ)());
+            void 0 !== a.default.getCurrentUser() && ((d = !0), (0, s.JQ)());
         }
     }
     handleLogout() {
-        u = !1;
+        d = !1;
     }
 }
-let d = new c();
+let u = new c();

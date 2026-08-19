@@ -1,24 +1,24 @@
 "use strict";
-n.d(t, { G: () => _ });
-var i = n(582128),
-    r = n(17928),
-    a = n(49491),
-    s = n(311043),
-    l = n(569926),
+n.d(t, { G: () => h });
+var l = n(582128),
+    i = n(17928),
+    s = n(49491),
+    r = n(311043),
+    a = n(569926),
     o = n(287809),
-    d = n(240248),
+    u = n(240248),
     c = n(827669),
-    u = n(375708);
-function _(e) {
-    let t = i.useMemo(() => (0, c.EZ)(e ?? ""), [e]);
+    d = n(375708);
+function h(e) {
+    let t = l.useMemo(() => (0, c.EZ)(e ?? ""), [e]);
     return (
-        (0, l.x)(t),
-        (0, r.bG)([s.A, o.default], () => {
-            if ((0, d.uJ)(e) || 0 === t.length) return e;
+        (0, a.x)(t),
+        (0, i.bG)([r.A, o.default], () => {
+            if ((0, u.uJ)(e) || 0 === t.length) return e;
             let n = o.default.getCurrentUser()?.nsfwAllowed;
             return e.replace(c.Dx, (e, t) => {
-                let i = s.A.getGame(t);
-                return (0, a.b)(i, n) ? u.intl.string(u.t["11pdXZ"]) : (i?.name ?? u.intl.string(u.t["11pdXZ"]));
+                let l = r.A.getGame(t);
+                return (0, s.b)(l, n) ? d.intl.string(d.t["11pdXZ"]) : (l?.name ?? d.intl.string(d.t["11pdXZ"]));
             });
         }, [e, t])
     );

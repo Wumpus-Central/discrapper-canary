@@ -1,23 +1,23 @@
 "use strict";
-n.d(t, { A: () => d });
-var i = n(735438),
+n.d(t, { A: () => u });
+var i = n(435558),
     r = n.n(i),
-    s = n(17928),
-    a = n(506774),
-    o = n(228366),
-    l = n(652215);
-let u = {};
-class c extends s.Ay.PersistedStore {
+    a = n(17928),
+    s = n(506774),
+    l = n(228366),
+    o = n(652215);
+let d = {};
+class c extends a.Ay.PersistedStore {
     static displayName = "SelectivelySyncedUserSettingsStore";
     static persistKey = "SelectivelySyncedUserSettingsStore";
     static migrations = [
         () => {
-            let e = a.w.get("UserSettingsSync") ?? {},
-                t = a.w.get("UserSettingsStore") ?? {};
-            a.w.remove("UserSettingsSync");
+            let e = s.w.get("UserSettingsSync") ?? {},
+                t = s.w.get("UserSettingsStore") ?? {};
+            s.w.remove("UserSettingsSync");
             let n = {};
             return (
-                !1 === e[l.nc_.TEXT] &&
+                !1 === e[o.nc_.TEXT] &&
                     (n.text = {
                         shouldSync: !1,
                         settings: r().pick(t, [
@@ -31,7 +31,7 @@ class c extends s.Ay.PersistedStore {
                             "defaultReactionEmoji",
                         ]),
                     }),
-                !1 === e[l.nc_.APPEARANCE] &&
+                !1 === e[o.nc_.APPEARANCE] &&
                     (n.appearance = {
                         shouldSync: !1,
                         settings: r().pick(t, ["theme", "clientThemeSettings", "developerMode"]),
@@ -48,35 +48,35 @@ class c extends s.Ay.PersistedStore {
         },
     ];
     initialize(e) {
-        u = e ?? {};
+        d = e ?? {};
     }
     getState() {
-        return u;
+        return d;
     }
     shouldSync(e) {
-        return u[e]?.shouldSync !== !1;
+        return d[e]?.shouldSync !== !1;
     }
     getTextSettings() {
-        return u.text?.settings;
+        return d.text?.settings;
     }
     getAppearanceSettings() {
-        return u.appearance?.settings;
+        return d.appearance?.settings;
     }
 }
-let d = new c(o.h, {
+let u = new c(l.h, {
     SELECTIVELY_SYNCED_USER_SETTINGS_UPDATE: function (e) {
         let { changes: t } = e;
         for (let e in t) {
             let { shouldSync: n, settings: i } = t[e];
             if (!0 === n) {
-                delete u[e];
+                delete d[e];
                 continue;
             }
-            if ((!1 === n && (u[e] = { shouldSync: n, settings: {} }), u[e]?.shouldSync === !1))
-                for (let t in i) u[e].settings[t] = i[t];
+            if ((!1 === n && (d[e] = { shouldSync: n, settings: {} }), d[e]?.shouldSync === !1))
+                for (let t in i) d[e].settings[t] = i[t];
         }
     },
     LOGOUT: function () {
-        u = {};
+        d = {};
     },
 });

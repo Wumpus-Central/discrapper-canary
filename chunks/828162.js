@@ -1,10 +1,10 @@
-t.d(u, { A: () => p });
-var r = t(492462),
-    l = t(976860),
-    o = t(568065),
-    n = t(652215),
-    i = t(746080);
-function p(e, u, t) {
-    let p = null != t ? { search: (0, r.stringify)({ [o.G0]: t }) } : void 0;
-    (0, l.pX)(n.BVt.CHANNEL(e, i.VV.GUILD_BOOSTS), { ...p, source: u });
+i.d(t, { A: () => o });
+var s = i(492462),
+    n = i(976860),
+    r = i(568065),
+    l = i(652215),
+    a = i(746080);
+function o(e, t, i) {
+    let o = null != i ? { search: (0, s.stringify)({ [r.G0]: i }) } : void 0;
+    (0, n.pX)(l.BVt.CHANNEL(e, a.VV.GUILD_BOOSTS), { ...o, source: t });
 }

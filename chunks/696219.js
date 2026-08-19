@@ -1,17 +1,17 @@
 "use strict";
 var t,
-    n,
-    i = Function.prototype.toString,
-    r = "object" == typeof Reflect && null !== Reflect && Reflect.apply;
-if ("function" == typeof r && "function" == typeof Object.defineProperty)
+    r,
+    n = Function.prototype.toString,
+    o = "object" == typeof Reflect && null !== Reflect && Reflect.apply;
+if ("function" == typeof o && "function" == typeof Object.defineProperty)
     try {
         (t = Object.defineProperty({}, "length", {
             get: function () {
-                throw n;
+                throw r;
             },
         })),
-            (n = {}),
-            r(
+            (r = {}),
+            o(
                 function () {
                     throw 42;
                 },
@@ -19,22 +19,22 @@ if ("function" == typeof r && "function" == typeof Object.defineProperty)
                 t,
             );
     } catch (e) {
-        e !== n && (r = null);
+        e !== r && (o = null);
     }
-else r = null;
-var s = /^\s*class\b/,
+else o = null;
+var i = /^\s*class\b/,
     a = function (e) {
         try {
-            var t = i.call(e);
-            return s.test(t);
+            var t = n.call(e);
+            return i.test(t);
         } catch (e) {
             return !1;
         }
     },
-    o = function (e) {
+    s = function (e) {
         try {
             if (a(e)) return !1;
-            return i.call(e), !0;
+            return n.call(e), !0;
         } catch (e) {
             return !1;
         }
@@ -42,13 +42,13 @@ var s = /^\s*class\b/,
     l = Object.prototype.toString,
     u = "function" == typeof Symbol && !!Symbol.toStringTag,
     c = !(0 in [,]),
-    d = function () {
+    f = function () {
         return !1;
     };
 if ("object" == typeof document) {
-    var _ = document.all;
-    l.call(_) === l.call(document.all) &&
-        (d = function (e) {
+    var p = document.all;
+    l.call(p) === l.call(document.all) &&
+        (f = function (e) {
             if ((c || !e) && (void 0 === e || "object" == typeof e))
                 try {
                     var t = l.call(e);
@@ -63,24 +63,24 @@ if ("object" == typeof document) {
             return !1;
         });
 }
-e.exports = r
+e.exports = o
     ? function (e) {
-          if (d(e)) return !0;
+          if (f(e)) return !0;
           if (!e || ("function" != typeof e && "object" != typeof e)) return !1;
           try {
-              r(e, null, t);
+              o(e, null, t);
           } catch (e) {
-              if (e !== n) return !1;
+              if (e !== r) return !1;
           }
-          return !a(e) && o(e);
+          return !a(e) && s(e);
       }
     : function (e) {
-          if (d(e)) return !0;
+          if (f(e)) return !0;
           if (!e || ("function" != typeof e && "object" != typeof e)) return !1;
-          if (u) return o(e);
+          if (u) return s(e);
           if (a(e)) return !1;
           var t = l.call(e);
           return (
-              ("[object Function]" === t || "[object GeneratorFunction]" === t || !!/^\[object HTML/.test(t)) && o(e)
+              ("[object Function]" === t || "[object GeneratorFunction]" === t || !!/^\[object HTML/.test(t)) && s(e)
           );
       };

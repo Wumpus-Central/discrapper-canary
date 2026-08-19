@@ -1,8 +1,8 @@
 "use strict";
-n.d(t, { Ht: () => l });
-var i = n(542113),
-    r = n(404555),
-    s = n.n(r),
+r.d(t, { Ht: () => l });
+var n = r(542113),
+    o = r(404555),
+    i = r.n(o),
     a = {
         CASE_SENSITIVE_EQUAL: 7,
         EQUAL: 6,
@@ -14,133 +14,133 @@ var i = n(542113),
         NO_MATCH: 0,
     };
 l.rankings = a;
-var o = function (e, t) {
+var s = function (e, t) {
     return String(e.rankedValue).localeCompare(String(t.rankedValue));
 };
-function l(e, t, n) {
-    void 0 === n && (n = {});
-    var r = n,
-        s = r.keys,
-        l = r.threshold,
+function l(e, t, r) {
+    void 0 === r && (r = {});
+    var o = r,
+        i = o.keys,
+        l = o.threshold,
         c = void 0 === l ? a.MATCHES : l,
-        _ = r.baseSort,
-        h = void 0 === _ ? o : _,
-        f = r.sorter;
+        p = o.baseSort,
+        d = void 0 === p ? s : p,
+        h = o.sorter;
     return (
-        void 0 === f
+        void 0 === h
             ? function (e) {
                   return e.sort(function (e, t) {
-                      var n, i, r, s, a, o, l;
+                      var r, n, o, i, a, s, l;
                       return (
-                          (n = e),
-                          (i = t),
-                          (r = h),
+                          (r = e),
+                          (n = t),
+                          (o = d),
+                          (i = r.rank),
+                          (a = r.keyIndex),
                           (s = n.rank),
-                          (a = n.keyIndex),
-                          (o = i.rank),
-                          (l = i.keyIndex),
-                          s !== o ? (s > o ? -1 : 1) : a === l ? r(n, i) : a < l ? -1 : 1
+                          (l = n.keyIndex),
+                          i !== s ? (i > s ? -1 : 1) : a === l ? o(r, n) : a < l ? -1 : 1
                       );
                   });
               }
-            : f
+            : h
     )(
-        e.reduce(function (e, r, o) {
+        e.reduce(function (e, o, s) {
             var l,
-                _,
+                p,
+                d,
                 h,
-                f,
-                p =
-                    ((l = r),
-                    (_ = s),
-                    (h = t),
-                    (f = n),
-                    _
+                m =
+                    ((l = o),
+                    (p = i),
+                    (d = t),
+                    (h = r),
+                    p
                         ? (function (e, t) {
-                              for (var n = [], r = 0, s = t.length; r < s; r++) {
+                              for (var r = [], o = 0, i = t.length; o < i; o++) {
                                   for (
                                       var a,
-                                          o = t[r],
-                                          l = "string" == typeof (a = o) ? d : (0, i.A)({}, d, a),
+                                          s = t[o],
+                                          l = "string" == typeof (a = s) ? f : (0, n.A)({}, f, a),
                                           u = (function (e, t) {
-                                              var n;
+                                              var r;
                                               if (("object" == typeof t && (t = t.key), "function" == typeof t))
-                                                  n = t(e);
-                                              else if (null == e) n = null;
-                                              else if (Object.hasOwnProperty.call(e, t)) n = e[t];
+                                                  r = t(e);
+                                              else if (null == e) r = null;
+                                              else if (Object.hasOwnProperty.call(e, t)) r = e[t];
                                               else {
                                                   if (t.includes("."))
                                                       return (function (e, t) {
                                                           for (
-                                                              var n = e.split("."), i = [t], r = 0, s = n.length;
-                                                              r < s;
-                                                              r++
+                                                              var r = e.split("."), n = [t], o = 0, i = r.length;
+                                                              o < i;
+                                                              o++
                                                           ) {
                                                               for (
-                                                                  var a = n[r], o = [], l = 0, u = i.length;
+                                                                  var a = r[o], s = [], l = 0, u = n.length;
                                                                   l < u;
                                                                   l++
                                                               ) {
-                                                                  var c = i[l];
+                                                                  var c = n[l];
                                                                   if (null != c)
                                                                       if (Object.hasOwnProperty.call(c, a)) {
-                                                                          var d = c[a];
-                                                                          null != d && o.push(d);
-                                                                      } else "*" === a && (o = o.concat(c));
+                                                                          var f = c[a];
+                                                                          null != f && s.push(f);
+                                                                      } else "*" === a && (s = s.concat(c));
                                                               }
-                                                              i = o;
+                                                              n = s;
                                                           }
-                                                          if (Array.isArray(i[0])) {
-                                                              var _ = [];
-                                                              return _.concat.apply(_, i);
+                                                          if (Array.isArray(n[0])) {
+                                                              var p = [];
+                                                              return p.concat.apply(p, n);
                                                           }
-                                                          return i;
+                                                          return n;
                                                       })(t, e);
-                                                  n = null;
+                                                  r = null;
                                               }
-                                              return null == n ? [] : Array.isArray(n) ? n : [String(n)];
-                                          })(e, o),
+                                              return null == r ? [] : Array.isArray(r) ? r : [String(r)];
+                                          })(e, s),
                                           c = 0,
-                                          _ = u.length;
-                                      c < _;
+                                          p = u.length;
+                                      c < p;
                                       c++
                                   )
-                                      n.push({ itemValue: u[c], attributes: l });
+                                      r.push({ itemValue: u[c], attributes: l });
                               }
-                              return n;
-                          })(l, _).reduce(
-                              function (e, t, n) {
-                                  var i = e.rank,
-                                      r = e.rankedValue,
-                                      s = e.keyIndex,
-                                      o = e.keyThreshold,
+                              return r;
+                          })(l, p).reduce(
+                              function (e, t, r) {
+                                  var n = e.rank,
+                                      o = e.rankedValue,
+                                      i = e.keyIndex,
+                                      s = e.keyThreshold,
                                       l = t.itemValue,
                                       c = t.attributes,
-                                      d = u(l, h, f),
-                                      _ = r,
-                                      p = c.minRanking,
-                                      E = c.maxRanking,
-                                      m = c.threshold;
+                                      f = u(l, d, h),
+                                      p = o,
+                                      m = c.minRanking,
+                                      v = c.maxRanking,
+                                      y = c.threshold;
                                   return (
-                                      d < p && d >= a.MATCHES ? (d = p) : d > E && (d = E),
-                                      d > i && ((i = d), (s = n), (o = m), (_ = l)),
-                                      { rankedValue: _, rank: i, keyIndex: s, keyThreshold: o }
+                                      f < m && f >= a.MATCHES ? (f = m) : f > v && (f = v),
+                                      f > n && ((n = f), (i = r), (s = y), (p = l)),
+                                      { rankedValue: p, rank: n, keyIndex: i, keyThreshold: s }
                                   );
                               },
-                              { rankedValue: l, rank: a.NO_MATCH, keyIndex: -1, keyThreshold: f.threshold },
+                              { rankedValue: l, rank: a.NO_MATCH, keyIndex: -1, keyThreshold: h.threshold },
                           )
-                        : { rankedValue: l, rank: u(l, h, f), keyIndex: -1, keyThreshold: f.threshold }),
-                E = p.rank,
-                m = p.keyThreshold;
-            return E >= (void 0 === m ? c : m) && e.push((0, i.A)({}, p, { item: r, index: o })), e;
+                        : { rankedValue: l, rank: u(l, d, h), keyIndex: -1, keyThreshold: h.threshold }),
+                v = m.rank,
+                y = m.keyThreshold;
+            return v >= (void 0 === y ? c : y) && e.push((0, n.A)({}, m, { item: o, index: s })), e;
         }, []),
     ).map(function (e) {
         return e.item;
     });
 }
-function u(e, t, n) {
-    var i;
-    return ((e = c(e, n)), (t = c(t, n)).length > e.length)
+function u(e, t, r) {
+    var n;
+    return ((e = c(e, r)), (t = c(t, r)).length > e.length)
         ? a.NO_MATCH
         : e === t
           ? a.CASE_SENSITIVE_EQUAL
@@ -154,32 +154,32 @@ function u(e, t, n) {
                   ? a.CONTAINS
                   : 1 === t.length
                     ? a.NO_MATCH
-                    : ((i = ""),
+                    : ((n = ""),
                         e.split(" ").forEach(function (e) {
                             e.split("-").forEach(function (e) {
-                                i += e.substr(0, 1);
+                                n += e.substr(0, 1);
                             });
                         }),
-                        i).includes(t)
+                        n).includes(t)
                       ? a.ACRONYM
                       : (function (e, t) {
-                            var n,
-                                i,
-                                r = 0,
-                                s = 0;
-                            function o(e, t, n) {
-                                for (var i = n, s = t.length; i < s; i++) if (t[i] === e) return (r += 1), i + 1;
+                            var r,
+                                n,
+                                o = 0,
+                                i = 0;
+                            function s(e, t, r) {
+                                for (var n = r, i = t.length; n < i; n++) if (t[n] === e) return (o += 1), n + 1;
                                 return -1;
                             }
-                            var l = o(t[0], e, 0);
+                            var l = s(t[0], e, 0);
                             if (l < 0) return a.NO_MATCH;
-                            s = l;
+                            i = l;
                             for (var u = 1, c = t.length; u < c; u++)
-                                if (!((s = o(t[u], e, s)) > -1)) return a.NO_MATCH;
-                            return (n = s - l), (i = r / t.length), a.MATCHES + (1 / n) * i;
+                                if (!((i = s(t[u], e, i)) > -1)) return a.NO_MATCH;
+                            return (r = i - l), (n = o / t.length), a.MATCHES + (1 / r) * n;
                         })(e, t);
 }
 function c(e, t) {
-    return (e = "" + e), t.keepDiacritics || (e = s()(e)), e;
+    return (e = "" + e), t.keepDiacritics || (e = i()(e)), e;
 }
-var d = { maxRanking: 1 / 0, minRanking: -1 / 0 };
+var f = { maxRanking: 1 / 0, minRanking: -1 / 0 };

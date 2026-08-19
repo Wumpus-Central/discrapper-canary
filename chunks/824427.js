@@ -24,11 +24,11 @@ var i = n(132500),
 function C() {
     return !__OVERLAY__ && (0, N.Q)(window.location.pathname);
 }
-var R = n(604594),
-    O = n(4043),
+var O = n(604594),
+    R = n(4043),
     L = n(287809),
-    D = n(652215);
-let y = 15 * h.A.Millis.MINUTE,
+    y = n(652215);
+let D = 15 * h.A.Millis.MINUTE,
     v = h.A.Millis.SECOND,
     b = "LAST_CLIENT_HEARTBEAT_SESSION",
     M = "user",
@@ -118,12 +118,12 @@ async function W() {
             is_system_locked: _.A.getSystemLocked(),
         }),
     };
-    A.default.track(D.HAw.CLIENT_HEARTBEAT, u), (x = performance.now()), (0, o.p)();
+    A.default.track(y.HAw.CLIENT_HEARTBEAT, u), (x = performance.now()), (0, o.p)();
 }
 function Y() {
     let e = [];
     return (
-        null != H && B && (V && e.push("foregrounded"), F === D.S7L.RTC_CONNECTED && e.push("rtc_connected")),
+        null != H && B && (V && e.push("foregrounded"), F === y.S7L.RTC_CONNECTED && e.push("rtc_connected")),
         { active: e.length > 0, ver: 30, reasons: e }
     );
 }
@@ -134,7 +134,7 @@ function $() {
     K()
         ? (function () {
               if (null != U) return;
-              let e = 0 === x ? 0 : y - (performance.now() - x);
+              let e = 0 === x ? 0 : D - (performance.now() - x);
               I.A.addBreadcrumb({
                   message: `Received Last Heartbeat Event Timestamp. Time Until Next Heartbeat: ${e / 1e3} seconds. Scheduling Heartbeat`,
               }),
@@ -146,7 +146,7 @@ function $() {
                                   type: "interval",
                                   id: setInterval(() => {
                                       W();
-                                  }, y),
+                                  }, D),
                               });
                       }, e),
                   });
@@ -157,8 +157,8 @@ function $() {
 function z(e) {
     return null == e
         ? null
-        : e.version !== R.Ir
-          ? (P.warn(`Throwing away client session with invalid version: ${e.version}, expected ${R.Ir}`), null)
+        : e.version !== O.Ir
+          ? (P.warn(`Throwing away client session with invalid version: ${e.version}, expected ${O.Ir}`), null)
           : e;
 }
 async function Z() {
@@ -183,7 +183,7 @@ function J() {
 }
 function ee(e) {
     let { state: t } = e,
-        n = t === D.g6G.ACTIVE;
+        n = t === y.g6G.ACTIVE;
     V !== n && ((V = n), $());
 }
 function et() {
@@ -202,10 +202,10 @@ function en() {
             (w = {
                 id: setInterval(() => {
                     let e;
-                    !(null != H && null != (e = L.default.getCurrentUser()) && (e.isStaff() || (0, O.r)(e.id, 0.02))) ||
-                        performance.now() - x <= y ||
-                        A.default.track(D.HAw.CLIENT_HEARTBEAT_SKIPPED, { client_heartbeat_version: 30 });
-                }, y),
+                    !(null != H && null != (e = L.default.getCurrentUser()) && (e.isStaff() || (0, R.r)(e.id, 0.02))) ||
+                        performance.now() - x <= D ||
+                        A.default.track(y.HAw.CLIENT_HEARTBEAT_SKIPPED, { client_heartbeat_version: 30 });
+                }, D),
                 type: "interval",
             }),
         a.Ay.initialized.then(et);
@@ -221,8 +221,8 @@ async function ei() {
     }
     let a = Date.now();
     if (K()) {
-        (null == t || (0, R.aE)(t)) &&
-            ((t = { uuid: (0, i.A)(), createdAtTimestamp: a, lastUsedTimestamp: a, version: R.Ir }), (G = 0)),
+        (null == t || (0, O.aE)(t)) &&
+            ((t = { uuid: (0, i.A)(), createdAtTimestamp: a, lastUsedTimestamp: a, version: O.Ir }), (G = 0)),
             (t.lastUsedTimestamp = a);
         var l = t;
         let e = performance.now();
@@ -232,7 +232,7 @@ async function ei() {
             } catch (e) {
                 I.A.captureException(e);
             }
-    } else null != t && (0, R.aE)(t) && (t = null);
+    } else null != t && (0, O.aE)(t) && (t = null);
     return (
         (k = { state: "loaded", session: t }),
         null != t &&
@@ -244,5 +244,5 @@ async function ei() {
 }
 function er() {
     let e = "uninitialized" === k.state ? z(s.w.get(b)) : k.session;
-    return null == e || (0, R.aE)(e) ? null : e;
+    return null == e || (0, O.aE)(e) ? null : e;
 }

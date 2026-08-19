@@ -6,8 +6,8 @@ n.d(t, {
     HW: () => Y,
     K8: () => Q,
     Gz: () => ee,
-    jz: () => Z,
-    bo: () => J,
+    jz: () => J,
+    bo: () => Z,
     Gw: () => el,
     UB: () => X,
     lw: () => q,
@@ -32,20 +32,20 @@ var l = n(477900),
     x = n(976860),
     N = n(71393),
     _ = n(645619),
-    S = n(379229);
-let I = (0, n(240921).Ay)({
+    I = n(379229);
+let S = (0, n(240921).Ay)({
     name: "2026-07-powerups-coachmark-scroll-close",
     kind: "user",
     defaultConfig: { enabled: !1 },
     variations: { 0: { enabled: !1 }, 1: { enabled: !0 } },
 });
 function b(e) {
-    return I.useConfig({ location: e }).enabled;
+    return S.useConfig({ location: e }).enabled;
 }
 var G = n(990208),
-    R = n(864310),
+    j = n(864310),
     v = n(363487),
-    j = n(828162),
+    R = n(828162),
     y = n(490557),
     M = n(565553),
     L = n(168900),
@@ -87,7 +87,7 @@ function Y(e) {
             {
                 text: F.intl.string(F.t.RzWDqY),
                 variant: "primary",
-                onClick: () => (0, j.A)(t, g.A.GUILD_POWERUPS_COACHMARK_LEVEL_UP, n.skuId),
+                onClick: () => (0, R.A)(t, g.A.GUILD_POWERUPS_COACHMARK_LEVEL_UP, n.skuId),
             },
         ],
         targetElementRef: i,
@@ -113,7 +113,7 @@ function X(e) {
             text: F.intl.string(F.t.RzWDqY),
             variant: "primary",
             onClick: () => {
-                (0, j.A)(t, g.A.GUILD_POWERUPS_COACHMARK_NEW_PERKS);
+                (0, R.A)(t, g.A.GUILD_POWERUPS_COACHMARK_NEW_PERKS);
             },
         },
         onRequestClose: () => n?.(H.i.USER_DISMISS),
@@ -149,7 +149,7 @@ function q(e) {
                 text: m ? F.intl.string(k.default.gSxlHf) : F.intl.string(F.t.RzWDqY),
                 variant: "primary",
                 onClick: (e) => {
-                    e.stopPropagation(), m ? o() : (0, j.A)(t, g.A.GUILD_POWERUPS_COACHMARK_PURCHASEABLE_PERKS);
+                    e.stopPropagation(), m ? o() : (0, R.A)(t, g.A.GUILD_POWERUPS_COACHMARK_PURCHASEABLE_PERKS);
                 },
                 loading: c,
             },
@@ -158,7 +158,7 @@ function q(e) {
         markAsDismissed: s,
     });
 }
-function J(e) {
+function Z(e) {
     let { guildId: t, powerups: n, channelRowRef: i, markAsDismissed: s } = e,
         r = n.find((e) => e.skuId === a.d0),
         o = (0, G.A)(r, !0) ?? W,
@@ -175,7 +175,7 @@ function J(e) {
                     text: F.intl.string(F.t.RzWDqY),
                     variant: "primary",
                     onClick: () => {
-                        (0, j.A)(t, g.A.GUILD_POWERUPS_COACHMARK_NEW_PERK_AVAILABLE, r.skuId);
+                        (0, R.A)(t, g.A.GUILD_POWERUPS_COACHMARK_NEW_PERK_AVAILABLE, r.skuId);
                     },
                 },
             ],
@@ -193,7 +193,7 @@ function J(e) {
                     text: F.intl.string(F.t.RzWDqY),
                     variant: "primary",
                     onClick: () => {
-                        (0, j.A)(t, g.A.GUILD_POWERUPS_COACHMARK_NEW_PERK_AVAILABLE, d.skuId);
+                        (0, R.A)(t, g.A.GUILD_POWERUPS_COACHMARK_NEW_PERK_AVAILABLE, d.skuId);
                     },
                 },
             ],
@@ -215,7 +215,7 @@ function J(e) {
                     text: F.intl.string(F.t.RzWDqY),
                     variant: "primary",
                     onClick: () => {
-                        (0, j.A)(t, g.A.GUILD_POWERUPS_COACHMARK_NEW_PERK_AVAILABLE, c.skuId);
+                        (0, R.A)(t, g.A.GUILD_POWERUPS_COACHMARK_NEW_PERK_AVAILABLE, c.skuId);
                     },
                 },
             ],
@@ -237,7 +237,7 @@ function J(e) {
                     text: F.intl.string(F.t.RzWDqY),
                     variant: "primary",
                     onClick: () => {
-                        (0, j.A)(t, g.A.GUILD_POWERUPS_COACHMARK_NEW_PERK_AVAILABLE, u.skuId);
+                        (0, R.A)(t, g.A.GUILD_POWERUPS_COACHMARK_NEW_PERK_AVAILABLE, u.skuId);
                     },
                 },
             ],
@@ -260,7 +260,7 @@ function J(e) {
                       text: F.intl.string(F.t.RzWDqY),
                       variant: "primary",
                       onClick: () => {
-                          (0, j.A)(t, g.A.GUILD_POWERUPS_COACHMARK_NEW_PERK_AVAILABLE, h.skuId);
+                          (0, R.A)(t, g.A.GUILD_POWERUPS_COACHMARK_NEW_PERK_AVAILABLE, h.skuId);
                       },
                   },
               ],
@@ -268,9 +268,9 @@ function J(e) {
           })
         : null;
 }
-function Z(e) {
+function J(e) {
     let { guildId: t, type: n, markAsDismissed: i, channelRowRef: s } = e,
-        { available: r } = (0, R.A)(t),
+        { available: r } = (0, j.A)(t),
         { gameName: a, gameName2: c } = (0, f.A)(),
         u = (0, d.bG)([A.Ay], () => A.Ay.useReducedMotion);
     return (0, l.jsx)(es, {
@@ -282,16 +282,16 @@ function Z(e) {
             className: z.Sl,
             stateMachine: u ? "SM_Main_Int" : "SM_Auto",
         }),
-        title: F.intl.string(n === S.o.GAME_SERVER_HOSTING_AVAILABLE ? K.default.wXLChx : K.default["8z8RpY"]),
+        title: F.intl.string(n === I.o.GAME_SERVER_HOSTING_AVAILABLE ? K.default.wXLChx : K.default["8z8RpY"]),
         body:
-            n === S.o.GAME_SERVER_HOSTING_AVAILABLE
+            n === I.o.GAME_SERVER_HOSTING_AVAILABLE
                 ? F.intl.formatToPlainString(K.default["7KXp9J"], { gameName: a, gameName2: c })
                 : F.intl.format(K.default["IQ1E+d"], { boostCount: r }),
         actions: [
             {
                 text: F.intl.string(F.t.RzWDqY),
                 variant: "primary",
-                onClick: () => (0, j.A)(t, g.A.GUILD_POWERUPS_COACHMARK_GAME_SERVER_HOSTING_AVAILABLE),
+                onClick: () => (0, R.A)(t, g.A.GUILD_POWERUPS_COACHMARK_GAME_SERVER_HOSTING_AVAILABLE),
             },
         ],
         markAsDismissed: i,
@@ -363,7 +363,7 @@ function ee(e) {
     let { guildId: t, markAsDismissed: n, channelRowRef: i } = e,
         s = (0, d.bG)([_.A], () => _.A.getStateForGuild(t)?.allPowerups[a.d0]),
         r = (0, G.A)(s, !0) ?? W,
-        { available: o } = (0, R.A)(t),
+        { available: o } = (0, j.A)(t),
         c = P.fe - o,
         { analyticsLocations: u } = (0, m.Ay)(g.A.GUILD_POWERUPS_COACHMARK_GUILD_THEME_MEMBER);
     return (0, l.jsx)(es, {
@@ -419,7 +419,7 @@ function et(e) {
                 onClick: () => {
                     n(H.i.TAKE_ACTION),
                         r
-                            ? (0, j.A)(t, g.A.GUILD_POWERUPS_COACHMARK_GAME_SERVER_NEW_GAMES, B.W5)
+                            ? (0, R.A)(t, g.A.GUILD_POWERUPS_COACHMARK_GAME_SERVER_NEW_GAMES, B.W5)
                             : (0, C.K4)({
                                   guildId: t,
                                   location: { section: V.JJy.GUILD_HEADER, object: V.ZSU.BUTTON_CTA },
@@ -453,7 +453,7 @@ function en(e) {
                 variant: "primary",
                 onClick: () => {
                     r
-                        ? (0, j.A)(t, g.A.GUILD_POWERUPS_COACHMARK_GAME_SERVER_PRICING_CHANGE, B.W5)
+                        ? (0, R.A)(t, g.A.GUILD_POWERUPS_COACHMARK_GAME_SERVER_PRICING_CHANGE, B.W5)
                         : (n(H.i.TAKE_ACTION),
                           (0, C.K4)({
                               guildId: t,
@@ -468,7 +468,7 @@ function en(e) {
 }
 function el(e) {
     let { guildId: t, powerup: n, channelRowRef: s, markAsDismissed: r, ...a } = e,
-        { available: o } = (0, R.A)(t),
+        { available: o } = (0, j.A)(t),
         d = n.cost - o,
         c = (0, G.A)(n, !0),
         { analyticsLocations: u } = (0, m.Ay)(g.A.GUILD_POWERUPS_COACHMARK_BOOST_TO_UNLOCK),
@@ -520,8 +520,8 @@ function ei(e) {
     let x = n.isGameServer
             ? F.intl.string(k.default["9L0pAN"])
             : F.intl.formatToPlainString(k.default.gG8bI8, { perkName: n.name }),
-        S = 0 === n.daysUntilExpiry ? k.default.BNS5zl : k.default["Xla/TL"],
-        I = F.intl.formatToPlainString(S, { boostCount: n.numExpiringBoosts, days: n.daysUntilExpiry });
+        I = 0 === n.daysUntilExpiry ? k.default.BNS5zl : k.default["Xla/TL"],
+        S = F.intl.formatToPlainString(I, { boostCount: n.numExpiringBoosts, days: n.daysUntilExpiry });
     return (0, l.jsx)(es, {
         size: n.isGameServer ? "video" : void 0,
         asset: n.isGameServer
@@ -535,7 +535,7 @@ function ei(e) {
               ? (0, l.jsx)(U, { powerup: h, eventTargetRef: p, className: z.Lj })
               : (0, l.jsx)("img", { alt: "", src: f, className: z.Sl }),
         title: x,
-        body: I,
+        body: S,
         actions: [
             {
                 text: F.intl.string(F.t.oPAx73),

@@ -9,7 +9,7 @@ var i = n(435558),
     d = n(47167),
     c = n(181079),
     u = n(5180),
-    _ = n(424345),
+    _ = n(774452),
     E = n(95701),
     A = n(488926),
     h = n(280450),
@@ -65,7 +65,7 @@ function k(e) {
                                 let i = I.A.getChannel(n);
                                 if (null == i) continue;
                                 let r = t[n],
-                                    a = (0, _.K)(t, r, i);
+                                    a = (0, _.R)(t, r, i);
                                 e[n] = { channel: a, comparator: a.position };
                             }
                             return e;

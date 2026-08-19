@@ -28,12 +28,12 @@ Object.defineProperty(t, "__esModule", { value: !0 }),
         getRelativeTimeFormatter(...e) {
             return this._getCached(this.relativeTime, e, (e) => new Intl.RelativeTimeFormat(...e));
         }
-        _getCached(e, t, n) {
-            let r = this._getKey(t),
-                i = e.get(r);
-            if (i) return i;
-            let a = n(t);
-            return e.set(r, a), a;
+        _getCached(e, t, r) {
+            let n = this._getKey(t),
+                o = e.get(n);
+            if (o) return o;
+            let i = r(t);
+            return e.set(n, i), i;
         }
         _getKey(...e) {
             return JSON.stringify(e);

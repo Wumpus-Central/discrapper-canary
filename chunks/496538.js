@@ -1,7 +1,7 @@
 var n = e(257943),
     o = e(703441),
-    i = TypeError,
-    a = Object.getOwnPropertyDescriptor;
+    a = TypeError,
+    i = Object.getOwnPropertyDescriptor;
 r.exports =
     n &&
     !(function () {
@@ -13,7 +13,7 @@ r.exports =
         }
     })()
         ? function (r, t) {
-              if (o(r) && !a(r, "length").writable) throw new i("Cannot set read only .length");
+              if (o(r) && !i(r, "length").writable) throw new a("Cannot set read only .length");
               return (r.length = t);
           }
         : function (r, t) {

@@ -1,7 +1,7 @@
-r.d(t, { jQ: () => n, v7: () => l, wT: () => i });
-var s = r(375708);
-let n = "klipy",
+r.d(t, { jQ: () => s, v7: () => l, wT: () => i });
+var n = r(375708);
+let s = "klipy",
     l = "Klipy";
 function i() {
-    return s.intl.string(s.t.T1Frnm);
+    return n.intl.string(n.t.T1Frnm);
 }

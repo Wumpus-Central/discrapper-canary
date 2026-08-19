@@ -1,15 +1,15 @@
 "use strict";
-n.d(t, { Uo: () => l, e1: () => a, hW: () => o });
+n.d(t, { Uo: () => o, e1: () => s, hW: () => l });
 var i,
     r,
-    s,
-    a =
+    a,
+    s =
         (((i = {}).MARK_ALL_READ = "mark_all_read"),
         (i.CLICKED = "clicked"),
         (i.FRIEND_REQUESTS_BUTTON_CLICK = "friend_requests_button_click"),
         (i.ACTION_BUTTON = "action_button"),
         i),
-    o =
+    l =
         (((r = {}).GO_LIVE_PUSH = "go_live_push"),
         (r.FRIEND_REQUEST_ACCEPTED = "friend_request_accepted"),
         (r.FRIEND_REQUEST_PENDING = "friend_request_pending"),
@@ -28,11 +28,11 @@ var i,
         (r.REACTION_SENT = "reaction_sent"),
         (r.REFERRAL_PROGRAM_ENTRYPOINT_REMINDER = "referral_program_entrypoint_reminder"),
         r),
-    l =
-        (((s = {}).INCOMING_FRIEND_REQUESTS = "INCOMING_FRIEND_REQUESTS"),
-        (s.INCOMING_FRIEND_REQUESTS_ACCEPTED = "INCOMING_FRIEND_REQUESTS_ACCEPTED"),
-        (s.FRIEND_REQUESTS_GROUPED = "FRIEND_REQUESTS_GROUPED"),
-        (s.MOBILE_NATIVE_UPDATE_AVAILABLE = "MOBILE_NATIVE_UPDATE_AVAILABLE"),
-        (s.INCOMING_GAME_FRIEND_REQUESTS = "INCOMING_GAME_FRIEND_REQUESTS"),
-        (s.INCOMING_GAME_FRIEND_REQUESTS_ACCEPTED = "INCOMING_GAME_FRIEND_REQUESTS_ACCEPTED"),
-        s);
+    o =
+        (((a = {}).INCOMING_FRIEND_REQUESTS = "INCOMING_FRIEND_REQUESTS"),
+        (a.INCOMING_FRIEND_REQUESTS_ACCEPTED = "INCOMING_FRIEND_REQUESTS_ACCEPTED"),
+        (a.FRIEND_REQUESTS_GROUPED = "FRIEND_REQUESTS_GROUPED"),
+        (a.MOBILE_NATIVE_UPDATE_AVAILABLE = "MOBILE_NATIVE_UPDATE_AVAILABLE"),
+        (a.INCOMING_GAME_FRIEND_REQUESTS = "INCOMING_GAME_FRIEND_REQUESTS"),
+        (a.INCOMING_GAME_FRIEND_REQUESTS_ACCEPTED = "INCOMING_GAME_FRIEND_REQUESTS_ACCEPTED"),
+        a);

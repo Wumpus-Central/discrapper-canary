@@ -1,15 +1,15 @@
 "use strict";
 let i;
-n.d(t, { A: () => o });
+n.d(t, { A: () => l });
 var r = n(17928),
-    s = n(228366);
-class a extends r.Ay.Store {
+    a = n(228366);
+class s extends r.Ay.Store {
     static displayName = "StorefrontPromotionOverrideStore";
     getPromotionIdOverride() {
         return i;
     }
 }
-let o = new a(s.h, {
+let l = new s(a.h, {
     LOGOUT: function () {
         i = void 0;
     },

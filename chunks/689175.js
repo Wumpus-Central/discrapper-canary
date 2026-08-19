@@ -27,34 +27,34 @@ function h(e, t, n) {
                 gap: O,
                 experimental_useStack: R,
                 disableFocusRingScope: L = !1,
-                ...D
+                ...y
             } = a,
-            { scrollerRef: y, getScrollerState: v } = (0, d.A)(),
-            b = (0, c.A)(y, T);
+            { scrollerRef: D, getScrollerState: v } = (0, d.A)(),
+            b = (0, c.A)(D, T);
         r.useImperativeHandle(
             h,
-            () => ({ getScrollerNode: () => y.current, getScrollerState: v, ...(0, u.A)(y, v, b, T) }),
-            [y, v, T, b],
+            () => ({ getScrollerNode: () => D.current, getScrollerState: v, ...(0, u.A)(D, v, b, T) }),
+            [D, v, T, b],
         );
-        let M = (0, _.A)({ scrollbarGutter: N, orientation: T, className: f, scrollerRef: y }),
+        let M = (0, _.A)({ scrollbarGutter: N, orientation: T, className: f, scrollerRef: D }),
             P = !1 === N || "vertical" !== T ? void 0 : "stable" === N ? A.x2 : A.GV;
         return R
             ? (0, i.jsx)(l.B, {
                   gap: O,
-                  ref: y,
+                  ref: D,
                   className: s()(f, P, { [e]: !0, [t]: g, [n]: S }),
                   style: (0, E.Ay)(C, T, m),
                   dir: p,
-                  ...D,
-                  children: (0, i.jsxs)(o.t, { disableFocusRingScope: L, containerRef: y, children: [I, M] }),
+                  ...y,
+                  children: (0, i.jsxs)(o.t, { disableFocusRingScope: L, containerRef: D, children: [I, M] }),
               })
             : (0, i.jsx)("div", {
-                  ref: y,
+                  ref: D,
                   className: s()(f, P, { [e]: !0, [t]: g, [n]: S }),
                   style: (0, E.Ay)(C, T, m),
                   dir: p,
-                  ...D,
-                  children: (0, i.jsxs)(o.t, { disableFocusRingScope: L, containerRef: y, children: [I, M] }),
+                  ...y,
+                  children: (0, i.jsxs)(o.t, { disableFocusRingScope: L, containerRef: D, children: [I, M] }),
               });
     });
 }

@@ -1,22 +1,22 @@
 "use strict";
-n.d(t, { A: () => I }), n(321073);
+n.d(t, { A: () => m }), n(321073);
 var i = n(636537),
     r = n(506774),
-    s = n(228366),
-    a = n(439372),
-    o = n(380610),
-    l = n(626584),
-    u = n(927813),
+    a = n(228366),
+    s = n(439372),
+    l = n(380610),
+    o = n(626584),
+    d = n(927813),
     c = n(723702),
-    d = n(38405),
+    u = n(38405),
     _ = n(19575);
-let h = +u.A.Millis.HOUR,
-    f = 7 * u.A.Millis.DAY,
-    p = +u.A.Millis.DAY,
-    E = r.w.get("lastNonRequiredUpdateShown", Date.now()),
-    m = ["win", "osx"],
-    g = new l.A("AutoUpdateManager");
-class A extends a.A {
+let E = +d.A.Millis.HOUR,
+    A = 7 * d.A.Millis.DAY,
+    h = +d.A.Millis.DAY,
+    I = r.w.get("lastNonRequiredUpdateShown", Date.now()),
+    f = ["win", "osx"],
+    p = new o.A("AutoUpdateManager");
+class T extends s.A {
     _checkInterval = null;
     _callbacks = [];
     _bootstrapper = null;
@@ -49,7 +49,7 @@ class A extends a.A {
                 : location.reload(!0));
     }
     isNewUpdater() {
-        return m.includes((0, c.getNewUpdaterPlatformName)() ?? "");
+        return f.includes((0, c.getNewUpdaterPlatformName)() ?? "");
     }
     canBootstrapNewUpdater() {
         return "win32" === (0, c.getPlatformName)();
@@ -57,7 +57,7 @@ class A extends a.A {
     handlePostConnectionOpen() {
         this.checkForUpdates(),
             clearInterval(this._checkInterval),
-            (this._checkInterval = setInterval(this.checkForUpdates, h));
+            (this._checkInterval = setInterval(this.checkForUpdates, E));
     }
     checkForUpdates = (() => {
         var e = this;
@@ -79,7 +79,7 @@ class A extends a.A {
     })();
     async _requestNewUpdaterBootstrap() {
         let e;
-        g.log("Bootstrapping new updater host...");
+        p.log("Bootstrapping new updater host...");
         try {
             await _.Ay.ensureModule("discord_updater_bootstrap"),
                 (e = _.Ay.requireModule("discord_updater_bootstrap")),
@@ -95,16 +95,16 @@ class A extends a.A {
                 (this.nativeUpdateAvailable = !0),
                 this._handleUpdateDownloaded(!0);
         } catch (e) {
-            g.log("Failed to bootstrap new updater:", e),
+            p.log("Failed to bootstrap new updater:", e),
                 this._handleNativeUpdateNotAvailable(),
-                d.A.captureException(e);
+                u.A.captureException(e);
         }
     }
     _emitCallbacks() {
         this._callbacks.forEach((e) => e(this.updateAvailable)), (this._callbacks = []);
     }
     _handleCheckingForUpdates = () => {
-        s.h.dispatch({ type: "CHECKING_FOR_UPDATES" });
+        a.h.dispatch({ type: "CHECKING_FOR_UPDATES" });
     };
     _handleNativeUpdateNotAvailable = () => {
         this._handleCheckingForUpdates(),
@@ -115,33 +115,33 @@ class A extends a.A {
                 rejectWithError: !0,
             }).then(
                 (e) => {
-                    if (null == e.body || "ca7cb477e5f46133bb3f0eba97731ee2d4b4b463" === e.body.hash)
+                    if (null == e.body || "31b61b10912e7e127cd96332f0d2848e8bee5e2c" === e.body.hash)
                         return this._handleUpdateNotAvailable();
-                    if (e.body.required || (0, o.kK)()) return this._handleUpdateDownloaded(!1);
-                    let t = "stable" === window.GLOBAL_ENV.RELEASE_CHANNEL ? f : p;
-                    if (Date.now() - E > t)
+                    if (e.body.required || (0, l.kK)()) return this._handleUpdateDownloaded(!1);
+                    let t = "stable" === window.GLOBAL_ENV.RELEASE_CHANNEL ? A : h;
+                    if (Date.now() - I > t)
                         return r.w.set("lastNonRequiredUpdateShown", Date.now()), this._handleUpdateDownloaded(!1);
                 },
                 () => this._handleUpdateError(),
             );
     };
     _handleUpdateNotAvailable = () => {
-        s.h.dispatch({ type: "UPDATE_NOT_AVAILABLE" }), this._emitCallbacks();
+        a.h.dispatch({ type: "UPDATE_NOT_AVAILABLE" }), this._emitCallbacks();
     };
     _handleUpdateAvailable = (e) => {
-        (this.updateAvailable = !0), (this.nativeUpdateAvailable = e), s.h.dispatch({ type: "UPDATE_AVAILABLE" });
+        (this.updateAvailable = !0), (this.nativeUpdateAvailable = e), a.h.dispatch({ type: "UPDATE_AVAILABLE" });
     };
     _handleUpdateManually = () => {
-        (this.updateAvailable = !0), (this.nativeUpdateAvailable = !0), s.h.dispatch({ type: "UPDATE_MANUALLY" });
+        (this.updateAvailable = !0), (this.nativeUpdateAvailable = !0), a.h.dispatch({ type: "UPDATE_MANUALLY" });
     };
     _handleUpdateError = (e) => {
-        (this.updateAvailable = !1), s.h.dispatch({ type: "UPDATE_ERROR", message: e });
+        (this.updateAvailable = !1), a.h.dispatch({ type: "UPDATE_ERROR", message: e });
     };
     _handleUpdateDownloaded = (e, t, n, i, r) => {
         e && (this.nativeUpdatesDownloaded += 1),
             this._handleUpdateAvailable(e),
-            s.h.dispatch({ type: "UPDATE_DOWNLOADED", releaseNotes: t, releaseName: n, releaseDate: i, updateURL: r }),
+            a.h.dispatch({ type: "UPDATE_DOWNLOADED", releaseNotes: t, releaseName: n, releaseDate: i, updateURL: r }),
             this._emitCallbacks();
     };
 }
-let I = new A();
+let m = new T();

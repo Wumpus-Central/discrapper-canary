@@ -1,16 +1,16 @@
 "use strict";
-n.d(t, { A: () => o });
+n.d(t, { A: () => l });
 var i = n(724066),
     r = n(439372),
-    s = n(822382);
-class a extends r.A {
-    actions = { USER_SETTINGS_PROTO_UPDATE: s.IY, POST_CONNECTION_OPEN: s.IY };
+    a = n(822382);
+class s extends r.A {
+    actions = { USER_SETTINGS_PROTO_UPDATE: a.IY, POST_CONNECTION_OPEN: a.IY };
     _unsubscribeIntlLoadingStore;
     _initialize() {
-        this._unsubscribeIntlLoadingStore = (0, i.I)(s.IY);
+        this._unsubscribeIntlLoadingStore = (0, i.I)(a.IY);
     }
     _terminate() {
         this._unsubscribeIntlLoadingStore?.();
     }
 }
-let o = new a();
+let l = new s();

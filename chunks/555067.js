@@ -4,14 +4,14 @@ n.r(t),
         transformAvailableForumTagChange: () => ei,
         getStringForPermission: () => et,
         getSimpleAuditLogTitleContextFromChange: () => Q,
-        getChangeTitle: () => Z,
+        getChangeTitle: () => q,
         getStringForRemovedChannelFlag: () => ee,
         checkChangesToRender: () => w,
         getSimpleAuditLogTitleFromChange: () => z,
         ACTION_FILTER_ITEMS: () => W,
         shouldNotRenderChangeDetail: () => H,
         getStringForAddedChannelFlag: () => $,
-        getSimpleAuditLogChangeDetails: () => q,
+        getSimpleAuditLogChangeDetails: () => Z,
         getChangeStrings: () => B,
         findChangeByKey: () => Y,
         transformLogs: () => en,
@@ -57,8 +57,8 @@ var l,
     P = n(243277),
     j = n(988794),
     v = n(375708);
-let X = new T.A("AuditLogUtils"),
-    b = [d.pJ.DAYS, d.pJ.HOURS, d.pJ.MINUTES, d.pJ.SECONDS];
+let b = new T.A("AuditLogUtils"),
+    X = [d.pJ.DAYS, d.pJ.HOURS, d.pJ.MINUTES, d.pJ.SECONDS];
 function y() {
     return { [k.gGk.REASON]: () => v.t["2IW3C5"] };
 }
@@ -461,7 +461,7 @@ function Q(e) {
         if (t?.newValue != null) {
             let n = new Date(t?.newValue).getTime() - U.default.extractTimestamp(e.id),
                 l = Math.round(n / 1e3 / 60),
-                r = (0, d.$l)(l, b);
+                r = (0, d.$l)(l, X);
             if (null == r.unit || null == r.time) return null;
             if (r.unit in J) {
                 let e = r.unit,
@@ -474,7 +474,7 @@ function Q(e) {
     else if (l) return v.intl.string(v.t["8mQ6x0"]);
     return null;
 }
-function q(e) {
+function Z(e) {
     let t = K(k.gGk.ROLES_ADD, e),
         n = K(k.gGk.ROLES_REMOVE, e),
         l = t
@@ -507,7 +507,7 @@ function q(e) {
             ? v.intl.formatToPlainString(v.t.Wk4pAJ, { roleNames: r })
             : null;
 }
-function Z(e) {
+function q(e) {
     switch (e.action) {
         case k.F_X.GUILD_UPDATE:
             return v.t.LjZO31;
@@ -978,7 +978,7 @@ function en(e, t) {
                                 (e) => (0, g.m1)(e, C.default, L.A, !0),
                             );
                         default:
-                            return X.warn("Unknown targetType for log", e), null;
+                            return b.warn("Unknown targetType for log", e), null;
                     }
                 })(e, t),
                 r = C.default.getUser(e.userId);

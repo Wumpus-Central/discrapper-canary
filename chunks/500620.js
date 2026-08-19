@@ -1,9 +1,9 @@
 "use strict";
-n.d(t, { o: () => r });
-var i,
-    r =
-        (((i = {}).DATA = "data"),
-        (i.CUSTOM_STRING = "custom_string"),
-        (i.APPLICATION_ASSET = "application_asset"),
-        (i.APPLICATION_LOCALIZED_STRING = "application_localized_string"),
-        i);
+n.d(t, { o: () => i });
+var l,
+    i =
+        (((l = {}).DATA = "data"),
+        (l.CUSTOM_STRING = "custom_string"),
+        (l.APPLICATION_ASSET = "application_asset"),
+        (l.APPLICATION_LOCALIZED_STRING = "application_localized_string"),
+        l);

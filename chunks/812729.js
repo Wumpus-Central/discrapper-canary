@@ -1,40 +1,40 @@
-var i = Array.prototype.slice,
-    r = n(66529),
-    s = n(295394),
-    a = (e.exports = function (e, t, n) {
+var n = Array.prototype.slice,
+    o = r(66529),
+    i = r(295394),
+    a = (e.exports = function (e, t, r) {
         return (
-            n || (n = {}),
+            r || (r = {}),
             e === t ||
                 (e instanceof Date && t instanceof Date
                     ? e.getTime() === t.getTime()
                     : e && t && ("object" == typeof e || "object" == typeof t)
-                      ? (function (e, t, n) {
+                      ? (function (e, t, r) {
                             if (null == e || null == t || e.prototype !== t.prototype) return !1;
-                            if (s(e)) return !!s(t) && a((e = i.call(e)), (t = i.call(t)), n);
-                            if (o(e)) {
-                                if (!o(t) || e.length !== t.length) return !1;
+                            if (i(e)) return !!i(t) && a((e = n.call(e)), (t = n.call(t)), r);
+                            if (s(e)) {
+                                if (!s(t) || e.length !== t.length) return !1;
                                 for (l = 0; l < e.length; l++) if (e[l] !== t[l]) return !1;
                                 return !0;
                             }
                             try {
                                 var l,
                                     u,
-                                    c = r(e),
-                                    d = r(t);
+                                    c = o(e),
+                                    f = o(t);
                             } catch (e) {
                                 return !1;
                             }
-                            if (c.length != d.length) return !1;
-                            for (c.sort(), d.sort(), l = c.length - 1; l >= 0; l--) if (c[l] != d[l]) return !1;
-                            for (l = c.length - 1; l >= 0; l--) if (!a(e[(u = c[l])], t[u], n)) return !1;
+                            if (c.length != f.length) return !1;
+                            for (c.sort(), f.sort(), l = c.length - 1; l >= 0; l--) if (c[l] != f[l]) return !1;
+                            for (l = c.length - 1; l >= 0; l--) if (!a(e[(u = c[l])], t[u], r)) return !1;
                             return typeof e == typeof t;
-                        })(e, t, n)
-                      : n.strict
+                        })(e, t, r)
+                      : r.strict
                         ? e === t
                         : e == t)
         );
     });
-function o(e) {
+function s(e) {
     return (
         !!e &&
         "object" == typeof e &&

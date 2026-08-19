@@ -1,55 +1,55 @@
 "use strict";
-n.d(t, { A: () => p });
+n.d(t, { A: () => h });
 var i = n(734057),
     r = n(536802);
-let s = new Set(),
-    a = new Set(),
-    o = !1;
-function l(e) {
+let a = new Set(),
+    s = new Set(),
+    l = !1;
+function o(e) {
     let t = !1;
     return (
-        e.isSpam && !s.has(e.id) && (s.add(e.id), (t = !0)),
-        !e.isSpam && s.has(e.id) && (s.delete(e.id), (t = !0)),
+        e.isSpam && !a.has(e.id) && (a.add(e.id), (t = !0)),
         !e.isSpam && a.has(e.id) && (a.delete(e.id), (t = !0)),
+        !e.isSpam && s.has(e.id) && (s.delete(e.id), (t = !0)),
         t
     );
 }
-function u() {
-    s.clear(),
-        a.clear(),
+function d() {
+    a.clear(),
+        s.clear(),
         Object.values(i.A.getMutablePrivateChannels()).forEach((e) => {
-            l(e);
+            o(e);
         }),
-        (o = !0);
+        (l = !0);
 }
 function c(e) {
     let { channelId: t } = e;
-    a.add(t);
+    s.add(t);
 }
-function d(e) {
+function u(e) {
     let { channel: t } = e;
-    return l(t);
+    return o(t);
 }
 function _(e) {
     let { channels: t } = e;
-    for (let e of t) l(e);
+    for (let e of t) o(e);
 }
-function h(e) {
+function E(e) {
     let { channel: t } = e,
         n = !1;
-    return s.has(t.id) && (s.delete(t.id), (n = !0)), n;
+    return a.has(t.id) && (a.delete(t.id), (n = !0)), n;
 }
-class f extends r.A {
+class A extends r.A {
     static displayName = "SpamMessageRequestStore";
     static LATEST_SNAPSHOT_VERSION = 1;
     constructor() {
         super({
-            CONNECTION_OPEN: u,
-            CONNECTION_OPEN_SUPPLEMENTAL: u,
+            CONNECTION_OPEN: d,
+            CONNECTION_OPEN_SUPPLEMENTAL: d,
             CACHE_LOADED_LAZY: () => this.loadCache(),
-            CHANNEL_CREATE: d,
+            CHANNEL_CREATE: u,
             CHANNEL_UPDATES: _,
-            CHANNEL_DELETE: h,
+            CHANNEL_DELETE: E,
             MESSAGE_REQUEST_ACCEPT_OPTIMISTIC: c,
         });
     }
@@ -57,26 +57,26 @@ class f extends r.A {
         this.waitFor(i.A);
     }
     loadCache() {
-        let e = this.readSnapshot(f.LATEST_SNAPSHOT_VERSION);
-        null != e && (s = new Set(e));
+        let e = this.readSnapshot(A.LATEST_SNAPSHOT_VERSION);
+        null != e && (a = new Set(e));
     }
     takeSnapshot() {
-        return { version: f.LATEST_SNAPSHOT_VERSION, data: Array.from(s) };
+        return { version: A.LATEST_SNAPSHOT_VERSION, data: Array.from(a) };
     }
     getSpamChannelIds() {
-        return s;
+        return a;
     }
     getSpamChannelsCount() {
-        return s.size;
+        return a.size;
     }
     isSpam(e) {
-        return s.has(e);
-    }
-    isAcceptedOptimistic(e) {
         return a.has(e);
     }
+    isAcceptedOptimistic(e) {
+        return s.has(e);
+    }
     isReady() {
-        return o;
+        return l;
     }
 }
-let p = new f();
+let h = new A();

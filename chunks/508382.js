@@ -30,8 +30,8 @@ function A(e) {
             crossAccessFlip: O = !0,
             autoShift: R = !0,
             strategy: L = "fixed",
-            portal: D = !0,
-            blockPointerEvents: y = !1,
+            portal: y = !0,
+            blockPointerEvents: D = !1,
             children: v,
             renderLayer: b,
             viewportPadding: M = 8,
@@ -95,13 +95,13 @@ function A(e) {
     }, [B, m, T]);
     let $ = (0, s.s9)(K),
         z = (0, s.Mk)(K, { restMs: G, delay: { open: G, close: 0 }, enabled: "hover" === w, handleClose: (0, s.iB)() }),
-        { getReferenceProps: q, getFloatingProps: Z } = (0, s.bv)([$, z]),
+        { getReferenceProps: Z, getFloatingProps: q } = (0, s.bv)([$, z]),
         X = W.hide?.referenceHidden ? "hidden" : "visible",
-        Q = D ? c.sM : r.Fragment,
+        Q = y ? c.sM : r.Fragment,
         J = r.useMemo(() => ({ focus: n }), [n]);
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            v({ ref: B.setReference, props: q() }),
+            v({ ref: B.setReference, props: Z() }),
             (0, i.jsx)(s.$c, {
                 id: V,
                 children:
@@ -109,14 +109,14 @@ function A(e) {
                     (0, i.jsxs)(Q, {
                         ownerDocument: A,
                         children: [
-                            y ? (0, i.jsx)(s.zR, { lockScroll: !0 }) : null,
+                            D ? (0, i.jsx)(s.zR, { lockScroll: !0 }) : null,
                             ((t = (0, i.jsx)("div", {
                                 id: f,
                                 className: d()(p, u.q),
                                 [_]: !0,
                                 style: { ...H, visibility: X },
                                 ref: B.setFloating,
-                                ...Z(),
+                                ...q(),
                                 children: (0, i.jsx)(E.Provider, {
                                     value: J,
                                     children: b({ placement: j, update: Y, hidden: "hidden" === X, shift: W.shift }),

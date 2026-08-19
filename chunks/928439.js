@@ -1,9 +1,9 @@
 "use strict";
-n.d(t, { n: () => a }), n(321073);
+n.d(t, { n: () => s }), n(321073);
 var i = n(228366);
 let r = {},
-    s = !1;
-function a(e) {
+    a = !1;
+function s(e) {
     for (let t in e) {
         let n = e[t];
         n.actions,
@@ -19,12 +19,12 @@ function a(e) {
                     n in r || (r[n] = []), r[n].push(e);
             })(n);
     }
-    i.h.addInterceptor(o);
+    i.h.addInterceptor(l);
 }
-function o(e) {
-    if ((("CONNECTION_OPEN" === e.type || "OVERLAY_INITIALIZE" === e.type) && (s = !0), e.type in r)) {
+function l(e) {
+    if ((("CONNECTION_OPEN" === e.type || "OVERLAY_INITIALIZE" === e.type) && (a = !0), e.type in r)) {
         let t = [];
-        for (let n of r[e.type]) !s && n.neverLoadBeforeConnectionOpen ? t.push(n) : n.inlineRequire().initialize();
+        for (let n of r[e.type]) !a && n.neverLoadBeforeConnectionOpen ? t.push(n) : n.inlineRequire().initialize();
         t.length > 0 ? (r[e.type] = t) : delete r[e.type];
     }
     return !1;

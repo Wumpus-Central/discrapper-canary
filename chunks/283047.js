@@ -1,17 +1,17 @@
 "use strict";
-n.d(t, { A: () => u }), n(205816), n(321073);
-var i = n(735438),
+n.d(t, { A: () => d }), n(205816), n(321073);
+var i = n(435558),
     r = n.n(i),
-    s = n(989349),
-    a = n.n(s);
-let o = (e, t, n) => Math.ceil(e * (t / n.numOfRecentUses)),
-    l = (e) => {
+    a = n(989349),
+    s = n.n(a);
+let l = (e, t, n) => Math.ceil(e * (t / n.numOfRecentUses)),
+    o = (e) => {
         let t = 1;
         return (
             e <= 3 ? (t = 100) : e <= 15 ? (t = 70) : e <= 30 ? (t = 50) : e <= 45 ? (t = 30) : e <= 80 && (t = 10), t
         );
     },
-    u = class {
+    d = class {
         dirty;
         version;
         _frequently;
@@ -26,24 +26,24 @@ let o = (e, t, n) => Math.ceil(e * (t / n.numOfRecentUses)),
         afterCompute;
         constructor({
             computeBonus: e,
-            computeWeight: t = l,
-            computeFrecency: n = o,
+            computeWeight: t = o,
+            computeFrecency: n = l,
             calculateMaxTotalUse: i = !1,
             lookupKey: r,
-            afterCompute: s,
-            numFrequentlyItems: a = 32,
-            maxSamples: u = 10,
+            afterCompute: a,
+            numFrequentlyItems: s = 32,
+            maxSamples: d = 10,
         }) {
             (this.computeBonus = e),
                 (this.computeWeight = t),
                 (this.computeFrecency = n),
                 (this.calculateMaxTotalUse = i),
-                (this.afterCompute = s),
+                (this.afterCompute = a),
                 (this.lookupKey = r),
                 (this.usageHistory = {}),
                 (this.frequently = []),
-                (this.maxSamples = u),
-                (this.numFrequentlyItems = a),
+                (this.maxSamples = d),
+                (this.numFrequentlyItems = s),
                 (this.dirty = !1),
                 (this.version = 0);
         }
@@ -92,22 +92,22 @@ let o = (e, t, n) => Math.ceil(e * (t / n.numOfRecentUses)),
             return null != t ? t.frecency : null;
         }
         compute() {
-            let e = a()(),
+            let e = s()(),
                 t = this.calculateMaxTotalUse ? r().maxBy(Object.values(this.usageHistory), (e) => e.totalUses) : null;
             r().forEach(this.usageHistory, (n, i) => {
-                let { totalUses: s, recentUses: o, frecency: l } = n;
-                if (-1 !== l) return;
-                let u = this.computeBonus(i) / 100;
+                let { totalUses: a, recentUses: l, frecency: o } = n;
+                if (-1 !== o) return;
+                let d = this.computeBonus(i) / 100;
                 (n.score = 0),
-                    r().forEach(o, (t, i) => {
+                    r().forEach(l, (t, i) => {
                         if (i >= this.maxSamples) return !1;
-                        let r = this.computeWeight(e.diff(a()(t), "days"));
-                        n.score += u * r;
+                        let r = this.computeWeight(e.diff(s()(t), "days"));
+                        n.score += d * r;
                     }),
                     n.score > 0
                         ? (n.recentUses.length > 0 &&
-                              (n.frecency = this.computeFrecency(s, n.score, {
-                                  numOfRecentUses: o.length,
+                              (n.frecency = this.computeFrecency(a, n.score, {
+                                  numOfRecentUses: l.length,
                                   maxTotalUse: t?.totalUses,
                               })),
                           (this.usageHistory[i] = n))

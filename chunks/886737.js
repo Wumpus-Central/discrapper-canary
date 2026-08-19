@@ -1,4 +1,4 @@
-n.d(t, { A: () => r });
+n.d(t, { A: () => a });
 let i = new Set(["link", "url", "autolink", "mailto", "tel", "attachmentLink", "devLink"]);
 function l(e) {
     return null == e
@@ -19,11 +19,11 @@ function s(e) {
     if ("customEmoji" === e.type) return { type: "text", content: `:${String(e.name ?? "").replace(/^:+|:+$/g, "")}:` };
     let t = { ...e };
     return (
-        null != e.content && "string" != typeof e.content && (t.content = r(e.content)),
-        null != e.items && (t.items = e.items.map((e) => r(e))),
+        null != e.content && "string" != typeof e.content && (t.content = a(e.content)),
+        null != e.items && (t.items = e.items.map((e) => a(e))),
         t
     );
 }
-function r(e) {
+function a(e) {
     return Array.isArray(e) ? e.map(s) : s(e);
 }

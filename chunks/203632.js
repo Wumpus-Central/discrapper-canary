@@ -1,13 +1,13 @@
 "use strict";
-n.d(t, { Ay: () => l, C3: () => o, HL: () => a });
+n.d(t, { Ay: () => o, C3: () => l, HL: () => s });
 var i,
     r = n(575593),
-    s = n(149807),
-    a = (((i = {}).FromLoop = "fromLoop"), (i.FromStart = "fromStart"), i);
-function o(e) {
-    return e instanceof l;
+    a = n(338535),
+    s = (((i = {}).FromLoop = "fromLoop"), (i.FromStart = "fromStart"), i);
+function l(e) {
+    return e instanceof o;
 }
-class l extends s.A {
+class o extends a.A {
     title;
     description;
     accessibilityLabel;
@@ -29,6 +29,6 @@ class l extends s.A {
             (this.staticFrameSrc = e.staticFrameSrc);
     }
     static fromServer(e) {
-        return new l({ ...super.fromServer(e), ...e });
+        return new o({ ...super.fromServer(e), ...e });
     }
 }

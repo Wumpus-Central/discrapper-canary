@@ -18,8 +18,8 @@ var i = n(477900),
     d = n(173936),
     c = n(99677),
     u = n(194261),
-    h = n(34188),
-    A = n(577473),
+    A = n(34188),
+    h = n(577473),
     E = n(403581),
     g = n(323384),
     C = n(625903),
@@ -27,7 +27,7 @@ var i = n(477900),
     I = n(329308),
     T = n(571694),
     p = n(47167),
-    S = n(713654),
+    S = n(174355),
     N = n(652215),
     L = n(375708);
 function m(e) {
@@ -63,7 +63,7 @@ function m(e) {
 var f = n(503698),
     O = n.n(f),
     b = n(610371);
-let R = function (e) {
+let v = function (e) {
     let { value: t = 0, text: n, className: l, lowImportance: r, ...s } = e;
     return null != n
         ? (0, i.jsx)("div", { className: O()(b.i, l, r && b.H), ...s, children: n })
@@ -71,7 +71,7 @@ let R = function (e) {
           ? (0, i.jsx)("div", { className: O()(b.i, l, r && b.H), ...s, children: t })
           : null;
 };
-var v = n(769015),
+var R = n(769015),
     U = n(106191),
     D = n(548118),
     G = n(376943),
@@ -188,7 +188,7 @@ class B extends l.Component {
             t,
             { mentions: n, category: l, channel: r, isMentionLowImportance: s } = this.props;
         return (
-            null != n && n > 0 && (e = (0, i.jsx)(R, { className: V.qS, value: n, lowImportance: s })),
+            null != n && n > 0 && (e = (0, i.jsx)(v, { className: V.qS, value: n, lowImportance: s })),
             null != l && (t = (0, i.jsx)("span", { className: V.N4, children: (0, p.m1)(l, x.default, P.A) })),
             (0, i.jsxs)("div", {
                 className: V.UU,
@@ -257,7 +257,7 @@ class F extends l.Component {
         let e,
             { mentions: t, channel: n } = this.props;
         return (
-            null != t && t > 0 && (e = (0, i.jsx)(R, { className: V.qS, value: t })),
+            null != t && t > 0 && (e = (0, i.jsx)(v, { className: V.qS, value: t })),
             (0, i.jsxs)("div", {
                 className: V.UU,
                 children: [(0, i.jsx)("span", { className: V.YW, children: (0, p.m1)(n, x.default, P.A) }), e],
@@ -322,7 +322,7 @@ class k extends l.Component {
             { user: t, mentions: n } = this.props,
             l = this.getDisplayNickname();
         return (
-            null != n && n > 0 && (e = (0, i.jsx)(R, { className: V.qS, value: n })),
+            null != n && n > 0 && (e = (0, i.jsx)(v, { className: V.qS, value: n })),
             (0, i.jsxs)("div", {
                 className: V.UU,
                 children: [
@@ -371,7 +371,7 @@ class W extends l.Component {
             children: [
                 (0, i.jsx)("div", {
                     className: V.zc,
-                    children: (0, i.jsx)(v.A, { tabIndex: -1, className: V.Gt, game: t, size: V.D0 }),
+                    children: (0, i.jsx)(R.A, { tabIndex: -1, className: V.Gt, game: t, size: V.D0 }),
                 }),
                 t.name,
                 (0, i.jsx)("div", { className: V.Lr, children: e }),
@@ -471,20 +471,20 @@ class z extends l.Component {
             { navigationRecord: n, children: l } = this.props;
         switch (n.type) {
             case I.t1.SHOP:
-                (e = L.intl.string(L.t.pWG4ze)), (t = (0, i.jsx)(h.U, { size: "xs", color: "currentColor" }));
+                (e = L.intl.string(L.t.pWG4ze)), (t = (0, i.jsx)(A.U, { size: "xs", color: "currentColor" }));
                 break;
             case I.t1.SHOP_ORBS_TAB:
-                (e = L.intl.string(L.t.EBYkzk)), (t = (0, i.jsx)(h.U, { size: "xs", color: "currentColor" }));
+                (e = L.intl.string(L.t.EBYkzk)), (t = (0, i.jsx)(A.U, { size: "xs", color: "currentColor" }));
                 break;
             case I.t1.QUEST_ORBS:
                 (e = `${L.intl.string(L.t.ElYQFS)} ${L.intl.string(L.t.JALI2K)}`),
-                    (t = (0, i.jsx)(A.r, { size: "xs", color: "currentColor" }));
+                    (t = (0, i.jsx)(h.r, { size: "xs", color: "currentColor" }));
                 break;
             case I.t1.NITRO_HOME:
                 (e = L.intl.string(L.t.Ipxkog)), (t = (0, i.jsx)(E.t, { size: "xs", color: "currentColor" }));
                 break;
             case I.t1.QUEST_HOME:
-                (e = L.intl.string(L.t.JALI2K)), (t = (0, i.jsx)(A.r, { size: "xs", color: "currentColor" }));
+                (e = L.intl.string(L.t.JALI2K)), (t = (0, i.jsx)(h.r, { size: "xs", color: "currentColor" }));
                 break;
             case I.t1.APPS_HOME:
                 (e = L.intl.string(L.t.PHjkRE)), (t = (0, i.jsx)(g.k, { size: "xs", color: "currentColor" }));

@@ -1,8 +1,8 @@
-l.d(t, { A: () => a, G: () => c });
+i.d(t, { A: () => s, G: () => d });
 var n,
-    a = (((n = {}).WithinAppContent = "within-app-content"), (n.AboveAppContent = "above-app-content"), n);
-let i = { "within-app-content": 1, "above-app-content": 1002 };
-class s {
+    s = (((n = {}).WithinAppContent = "within-app-content"), (n.AboveAppContent = "above-app-content"), n);
+let a = { "within-app-content": 1, "above-app-content": 1002 };
+class l {
     _pool = null;
     setPool(e) {
         this._pool = e;
@@ -12,7 +12,7 @@ class s {
         return this._pool;
     }
 }
-class r extends s {
+class r extends l {
     placed = new Map();
     rafHandle = null;
     initialize(e) {
@@ -23,8 +23,8 @@ class r extends s {
             (e.style.display = "none"),
             this.pool.appendChild(e);
     }
-    place(e, t, l) {
-        this.placed.set(e, { target: t, level: l }), this.position(e, t, l), this.ensureTicking();
+    place(e, t, i) {
+        this.placed.set(e, { target: t, level: i }), this.position(e, t, i), this.ensureTicking();
     }
     unplace(e) {
         this.placed.delete(e), (e.style.display = "none");
@@ -32,20 +32,20 @@ class r extends s {
     ensureTicking() {
         null == this.rafHandle && (this.rafHandle = requestAnimationFrame(this.tick));
     }
-    position(e, t, l) {
+    position(e, t, i) {
         let n = t.getBoundingClientRect();
         (e.style.display = "block"),
-            (e.style.zIndex = String(i[l])),
+            (e.style.zIndex = String(a[i])),
             (e.style.transform = `translate(${n.left}px, ${n.top}px)`),
             (e.style.width = `${n.width}px`),
             (e.style.height = `${n.height}px`);
     }
     tick = () => {
-        for (let [e, { target: t, level: l }] of this.placed) this.position(e, t, l);
+        for (let [e, { target: t, level: i }] of this.placed) this.position(e, t, i);
         this.rafHandle = this.placed.size > 0 ? requestAnimationFrame(this.tick) : null;
     };
 }
-class o extends s {
+class o extends l {
     initialize(e) {
         (e.style.width = "100%"),
             (e.style.height = "100%"),
@@ -53,13 +53,13 @@ class o extends s {
             (e.style.display = "none"),
             this.pool.appendChild(e);
     }
-    place(e, t, l) {
+    place(e, t, i) {
         e.parentElement !== t && t.moveBefore(e, null), (e.style.display = "block");
     }
     unplace(e) {
         e.parentElement !== this.pool && this.pool.moveBefore(e, null), (e.style.display = "none");
     }
 }
-function c() {
+function d() {
     return "function" == typeof Element.prototype.moveBefore ? new o() : new r();
 }

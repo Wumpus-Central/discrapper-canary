@@ -1,6 +1,6 @@
 "use strict";
 let i;
-n.d(t, { $: () => r.$, X: () => a, aV: () => s });
+n.d(t, { $: () => r.$, X: () => s, aV: () => a });
 var r = n(919535);
-let s = (i = n(891600).A).reactParserFor,
-    a = i.astParserFor;
+let a = (i = n(891600).A).reactParserFor,
+    s = i.astParserFor;

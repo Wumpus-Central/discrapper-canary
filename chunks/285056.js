@@ -1,69 +1,69 @@
 !(function (e) {
     "use strict";
-    var t =
+    var n =
             "leden_\xfanor_b\u0159ezen_duben_kv\u011Bten_\u010Derven_\u010Dervenec_srpen_z\xe1\u0159\xed_\u0159\xedjen_listopad_prosinec".split(
                 "_",
             ),
-        n = "led_\xfano_b\u0159e_dub_kv\u011B_\u010Dvn_\u010Dvc_srp_z\xe1\u0159_\u0159\xedj_lis_pro".split("_");
-    function i(e) {
+        r = "led_\xfano_b\u0159e_dub_kv\u011B_\u010Dvn_\u010Dvc_srp_z\xe1\u0159_\u0159\xedj_lis_pro".split("_");
+    function t(e) {
         return e > 1 && e < 5 && 1 != ~~(e / 10);
     }
-    function r(e, t, n, r) {
-        var s = e + " ";
-        switch (n) {
+    function s(e, n, r, s) {
+        var u = e + " ";
+        switch (r) {
             case "s":
-                return t || r ? "p\xe1r sekund" : "p\xe1r sekundami";
+                return n || s ? "p\xe1r sekund" : "p\xe1r sekundami";
             case "ss":
-                if (t || r) return s + (i(e) ? "sekundy" : "sekund");
-                return s + "sekundami";
+                if (n || s) return u + (t(e) ? "sekundy" : "sekund");
+                return u + "sekundami";
             case "m":
-                return t ? "minuta" : r ? "minutu" : "minutou";
+                return n ? "minuta" : s ? "minutu" : "minutou";
             case "mm":
-                if (t || r) return s + (i(e) ? "minuty" : "minut");
-                return s + "minutami";
+                if (n || s) return u + (t(e) ? "minuty" : "minut");
+                return u + "minutami";
             case "h":
-                return t ? "hodina" : r ? "hodinu" : "hodinou";
+                return n ? "hodina" : s ? "hodinu" : "hodinou";
             case "hh":
-                if (t || r) return s + (i(e) ? "hodiny" : "hodin");
-                return s + "hodinami";
+                if (n || s) return u + (t(e) ? "hodiny" : "hodin");
+                return u + "hodinami";
             case "d":
-                return t || r ? "den" : "dnem";
+                return n || s ? "den" : "dnem";
             case "dd":
-                if (t || r) return s + (i(e) ? "dny" : "dn\xed");
-                return s + "dny";
+                if (n || s) return u + (t(e) ? "dny" : "dn\xed");
+                return u + "dny";
             case "M":
-                return t || r ? "m\u011Bs\xedc" : "m\u011Bs\xedcem";
+                return n || s ? "m\u011Bs\xedc" : "m\u011Bs\xedcem";
             case "MM":
-                if (t || r) return s + (i(e) ? "m\u011Bs\xedce" : "m\u011Bs\xedc\u016F");
-                return s + "m\u011Bs\xedci";
+                if (n || s) return u + (t(e) ? "m\u011Bs\xedce" : "m\u011Bs\xedc\u016F");
+                return u + "m\u011Bs\xedci";
             case "y":
-                return t || r ? "rok" : "rokem";
+                return n || s ? "rok" : "rokem";
             case "yy":
-                if (t || r) return s + (i(e) ? "roky" : "let");
-                return s + "lety";
+                if (n || s) return u + (t(e) ? "roky" : "let");
+                return u + "lety";
         }
     }
     e.defineLocale("cs", {
-        months: t,
-        monthsShort: n,
-        monthsParse: (function (e, t) {
-            var n,
-                i = [];
-            for (n = 0; n < 12; n++) i[n] = RegExp("^" + e[n] + "$|^" + t[n] + "$", "i");
-            return i;
-        })(t, n),
+        months: n,
+        monthsShort: r,
+        monthsParse: (function (e, n) {
+            var r,
+                t = [];
+            for (r = 0; r < 12; r++) t[r] = RegExp("^" + e[r] + "$|^" + n[r] + "$", "i");
+            return t;
+        })(n, r),
         shortMonthsParse: (function (e) {
-            var t,
-                n = [];
-            for (t = 0; t < 12; t++) n[t] = RegExp("^" + e[t] + "$", "i");
-            return n;
-        })(n),
+            var n,
+                r = [];
+            for (n = 0; n < 12; n++) r[n] = RegExp("^" + e[n] + "$", "i");
+            return r;
+        })(r),
         longMonthsParse: (function (e) {
-            var t,
-                n = [];
-            for (t = 0; t < 12; t++) n[t] = RegExp("^" + e[t] + "$", "i");
-            return n;
-        })(t),
+            var n,
+                r = [];
+            for (n = 0; n < 12; n++) r[n] = RegExp("^" + e[n] + "$", "i");
+            return r;
+        })(n),
         weekdays: "ned\u011Ble_pond\u011Bl\xed_\xfater\xfd_st\u0159eda_\u010Dtvrtek_p\xe1tek_sobota".split("_"),
         weekdaysShort: "ne_po_\xfat_st_\u010Dt_p\xe1_so".split("_"),
         weekdaysMin: "ne_po_\xfat_st_\u010Dt_p\xe1_so".split("_"),
@@ -118,21 +118,21 @@
         relativeTime: {
             future: "za %s",
             past: "p\u0159ed %s",
-            s: r,
-            ss: r,
-            m: r,
-            mm: r,
-            h: r,
-            hh: r,
-            d: r,
-            dd: r,
-            M: r,
-            MM: r,
-            y: r,
-            yy: r,
+            s: s,
+            ss: s,
+            m: s,
+            mm: s,
+            h: s,
+            hh: s,
+            d: s,
+            dd: s,
+            M: s,
+            MM: s,
+            y: s,
+            yy: s,
         },
         dayOfMonthOrdinalParse: /\d{1,2}\./,
         ordinal: "%d.",
         week: { dow: 1, doy: 4 },
     });
-})(n(989349));
+})(r(989349));

@@ -1,2 +1,2 @@
-a.d(e, { N: () => r });
+a.d(s, { N: () => r });
 let r = { tension: 250, friction: 20 };

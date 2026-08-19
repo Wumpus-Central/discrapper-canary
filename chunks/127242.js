@@ -1,36 +1,36 @@
 "use strict";
 let i;
-n.d(t, { A: () => v }), n(321073);
+n.d(t, { A: () => R }), n(321073);
 var r = n(812729),
-    s = n.n(r),
-    a = n(17928),
-    o = n(713402),
-    l = n(228366),
-    u = n(935208),
+    a = n.n(r),
+    s = n(17928),
+    l = n(713402),
+    o = n(228366),
+    d = n(935208),
     c = n(9302),
-    d = n(206885),
+    u = n(206885),
     _ = n(181435),
-    h = n(614455);
-let f = null,
-    p = new Set(),
-    E = null,
-    m = null,
-    g = new u.SnowflakeSequence();
-function A(e) {
+    E = n(614455);
+let A = null,
+    h = new Set(),
+    I = null,
+    f = null,
+    p = new d.SnowflakeSequence();
+function T(e) {
     return (0, _.Vx)(e) ? `native-${e.id}` : null != e.nativeId ? `native-${e.nativeId}` : null;
 }
-function I(e) {
+function m(e) {
     let t = Math.floor(e);
     try {
-        return g.willOverflowNext() && g.reset(), u.default.fromTimestampWithSequence(t, g);
+        return p.willOverflowNext() && p.reset(), d.default.fromTimestampWithSequence(t, p);
     } catch {
-        return g.reset(), u.default.fromTimestampWithSequence(t, g);
+        return p.reset(), d.default.fromTimestampWithSequence(t, p);
     }
 }
-let T = new o.J(
+let g = new l.J(
         function (e) {
             let t = [e.type, e.pid?.toString() ?? "null-pid"],
-                n = A(e);
+                n = T(e);
             return null != n && t.push(n), t;
         },
         function (e) {
@@ -38,80 +38,80 @@ let T = new o.J(
         },
     ),
     S = 0;
-function y(e) {
-    return T.set(e.id, e);
+function N(e) {
+    return g.set(e.id, e);
 }
-class C extends a.Ay.Store {
+class C extends s.Ay.Store {
     static displayName = "Overlay-v3-Native-Debug-Module-Store";
     initialize() {
-        this.waitFor(h.A);
+        this.waitFor(E.A);
     }
     getDebuggingState() {
         return i;
     }
     hasRenderDebugMode(e) {
-        return p.has(e);
+        return h.has(e);
     }
     getRenderDebugModes() {
-        return p;
+        return h;
     }
     getOverlayLoggingBreadcrumbs(e) {
-        return [T.values(e, !0), T.version];
+        return [g.values(e, !0), g.version];
     }
     isModuleLoggingEnabled() {
-        return null != m;
+        return null != f;
     }
     isStateDebuggingEnabled() {
-        return null != E;
+        return null != I;
     }
 }
-let N = new C(
-        l.h,
-        __OVERLAY__ || !d.O
+let O = new C(
+        o.h,
+        __OVERLAY__ || !u.O
             ? {}
             : {
                   OVERLAY_V3_LOAD_NATIVE_MODULE_SUCCESS: function () {
-                      f = h.A.getNativeModule();
+                      A = E.A.getNativeModule();
                   },
                   OVERLAY_V3_LOAD_NATIVE_MODULE_FAILED: function () {
-                      f = null;
+                      A = null;
                   },
                   OVERLAY_SET_STATE_DEBUGGING: function (e) {
                       let { enabled: t } = e;
                       return (
                           t
-                              ? null == E &&
-                                (E = setInterval(() => {
-                                    f?.getDebuggingState?.((e) => {
-                                        s()(i, e) || ((i = e), N.emitChange());
+                              ? null == I &&
+                                (I = setInterval(() => {
+                                    A?.getDebuggingState?.((e) => {
+                                        a()(i, e) || ((i = e), O.emitChange());
                                     });
                                 }, 300))
-                              : null != E && (clearInterval(E), (E = null)),
+                              : null != I && (clearInterval(I), (I = null)),
                           !0
                       );
                   },
                   OVERLAY_RENDER_DEBUG_MODE: function (e) {
                       let { enabled: t, mode: n } = e;
-                      t ? p.add(n) : p.delete(n), (p = new Set(p));
+                      t ? h.add(n) : h.delete(n), (h = new Set(h));
                   },
                   OVERLAY_SET_DETAILED_LOGGING: function (e) {
                       let { enabled: t } = e;
-                      f?.setDetailedLogging?.(t);
+                      A?.setDetailedLogging?.(t);
                   },
                   OVERLAY_ADD_DEBUG_BREADCRUMB: function (e) {
                       let {
-                          breadcrumb: { pid: t, name: n, data: i, type: r, logType: s },
+                          breadcrumb: { pid: t, name: n, data: i, type: r, logType: a },
                       } = e;
                       return (
                           !(function (e, t, n, i) {
                               let r = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : _.QJ.Info,
-                                  s = performance.timeOrigin + performance.now(),
-                                  a = I(s);
-                              y({
-                                  id: a,
-                                  key: a,
+                                  a = performance.timeOrigin + performance.now(),
+                                  s = m(a);
+                              N({
+                                  id: s,
+                                  key: s,
                                   nativeId: null,
-                                  timestamp: s,
+                                  timestamp: a,
                                   name: e,
                                   data: t,
                                   type: n,
@@ -119,7 +119,7 @@ let N = new C(
                                   logType: r,
                                   stack: void 0,
                               });
-                          })(n, i ?? {}, r, t, s),
+                          })(n, i ?? {}, r, t, a),
                           !0
                       );
                   },
@@ -127,20 +127,20 @@ let N = new C(
                       let { enabled: t } = e;
                       return (
                           t
-                              ? null == m &&
-                                (m = setInterval(() => {
-                                    let e = f?.getLastAssociatedPID() ?? null;
-                                    f?.getNativeBreadcrumbs({ minBreadcrumbId: S }, (t) => {
+                              ? null == f &&
+                                (f = setInterval(() => {
+                                    let e = A?.getLastAssociatedPID() ?? null;
+                                    A?.getNativeBreadcrumbs({ minBreadcrumbId: S }, (t) => {
                                         let { breadcrumbs: n } = t;
                                         for (let t of n)
                                             !(function (e, t, n) {
                                                 let i,
-                                                    r = A(e);
+                                                    r = T(e);
                                                 if (null == r) throw Error("Native breadcrumb has no native id");
-                                                T.size(r) > 0 ||
+                                                g.size(r) > 0 ||
                                                     ((S = Math.max(S, Number(e.id))),
-                                                    y({
-                                                        id: (i = I(e.timestamp)),
+                                                    N({
+                                                        id: (i = m(e.timestamp)),
                                                         key: i,
                                                         nativeId: Number(e.id),
                                                         timestamp: e.timestamp,
@@ -152,13 +152,13 @@ let N = new C(
                                                         stack: Error().stack ?? "",
                                                     }));
                                             })(t, _.ON.NativeOOP, e ?? c.UNSET_PID);
-                                        N.emitChange();
+                                        O.emitChange();
                                     });
                                 }, 3e3))
-                              : null != m && (clearInterval(m), (m = null)),
+                              : null != f && (clearInterval(f), (f = null)),
                           !0
                       );
                   },
               },
     ),
-    v = N;
+    R = O;

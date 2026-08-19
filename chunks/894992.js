@@ -1,13 +1,13 @@
 "use strict";
-n.d(t, { A: () => l });
+n.d(t, { A: () => o });
 var i = n(517846),
     r = n(439372),
-    s = n(27620),
-    a = n(859703);
-class o extends r.A {
+    a = n(27620),
+    s = n(859703);
+class l extends r.A {
     questCompletionStates = new Map();
     handleQuestStoreChange = () => {
-        let e = a.A.quests;
+        let e = s.A.quests;
         e.forEach((e) => {
             this.checkQuestCompletion(e.id, e);
         });
@@ -23,16 +23,16 @@ class o extends r.A {
             this.questCompletionStates.set(e, n);
     };
     onQuestCompleted = (e) => {
-        (0, s.hs)(i.w.QUEST_COMPLETED, { quest_id: e });
+        (0, a.hs)(i.w.QUEST_COMPLETED, { quest_id: e });
     };
     _terminate() {
         this.questCompletionStates.clear();
     }
-    stores = new Map([[a.A, this.handleQuestStoreChange]]);
+    stores = new Map([[s.A, this.handleQuestStoreChange]]);
     actions = {
         LOGOUT: () => {
             this.questCompletionStates.clear();
         },
     };
 }
-let l = new o();
+let o = new l();

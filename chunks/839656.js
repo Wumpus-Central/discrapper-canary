@@ -1,4 +1,4 @@
-n.d(t, { A: () => C });
+n.d(t, { A: () => I });
 var i = n(477900),
     l = n(582128),
     s = n(503698),
@@ -23,7 +23,7 @@ let g = d().omit(m.Ay.RULES, ["codeBlock", "heading"]),
     x = h.A.reactParserFor(A);
 var f = n(34193),
     E = n(742715);
-function C(e) {
+function I(e) {
     let { color: t, className: n, variant: s, text: c, lineClamp: d } = e,
         u = (0, r.$)(),
         m = l.useMemo(

@@ -1,82 +1,82 @@
 "use strict";
-n.d(t, { A: () => f });
+n.d(t, { A: () => A });
 var i = n(17928),
     r = n(228366),
-    s = n(177773),
-    a = n(401755);
-let o = new Map(),
-    l = null;
-function u(e, t) {
+    a = n(177773),
+    s = n(401755);
+let l = new Map(),
+    o = null;
+function d(e, t) {
     if (null == e) return;
-    let n = o.get(e),
-        i = null != n ? { ...n } : { code: e, state: a.QB.RESOLVING };
-    t(i), (o = new Map(o)).set(e, i);
+    let n = l.get(e),
+        i = null != n ? { ...n } : { code: e, state: s.QB.RESOLVING };
+    t(i), (l = new Map(l)).set(e, i);
 }
 function c(e) {
-    d(e.guildTemplate);
+    u(e.guildTemplate);
 }
-function d(e) {
-    return u(e.code, (t) => {
-        let n = (0, s.A)(e);
+function u(e) {
+    return d(e.code, (t) => {
+        let n = (0, a.A)(e);
         for (let e in n) t[e] = n[e];
     });
 }
 function _(e) {
-    return u(e.code, (e) => {
-        e.state = a.QB.EXPIRED;
+    return d(e.code, (e) => {
+        e.state = s.QB.EXPIRED;
     });
 }
-class h extends i.Ay.Store {
+class E extends i.Ay.Store {
     static displayName = "GuildTemplateStore";
     getGuildTemplate(e) {
-        if (null != e) return o.get(e);
+        if (null != e) return l.get(e);
     }
     getGuildTemplates() {
-        return o;
+        return l;
     }
     getForGuild(e) {
-        for (let t of o.keys()) {
-            let n = o.get(t);
-            if (null != n && "sourceGuildId" in n && n.sourceGuildId === e && n.state !== a.QB.EXPIRED) return n;
+        for (let t of l.keys()) {
+            let n = l.get(t);
+            if (null != n && "sourceGuildId" in n && n.sourceGuildId === e && n.state !== s.QB.EXPIRED) return n;
         }
     }
     getDisplayedGuildTemplateCode() {
-        return l;
+        return o;
     }
 }
-let f = new h(r.h, {
+let A = new E(r.h, {
     GUILD_TEMPLATE_RESOLVE: function (e) {
         let { code: t } = e;
-        (o = new Map(o)).set(t, { code: t, state: a.QB.RESOLVING });
+        (l = new Map(l)).set(t, { code: t, state: s.QB.RESOLVING });
     },
     GUILD_TEMPLATE_CREATE_SUCCESS: c,
     GUILD_TEMPLATE_SYNC_SUCCESS: c,
     GUILD_TEMPLATE_RESOLVE_SUCCESS: c,
     GUILD_TEMPLATE_LOAD_FOR_GUILD_SUCCESS: function (e) {
         let { guildTemplates: t } = e;
-        t.forEach((e) => d(e));
+        t.forEach((e) => u(e));
     },
     GUILD_TEMPLATE_RESOLVE_FAILURE: _,
     GUILD_TEMPLATE_DELETE_SUCCESS: _,
     GUILD_TEMPLATE_ACCEPT: function (e) {
-        return u(e.code, (e) => {
-            e.state = a.QB.ACCEPTING;
+        return d(e.code, (e) => {
+            e.state = s.QB.ACCEPTING;
         });
     },
     GUILD_TEMPLATE_ACCEPT_SUCCESS: function (e) {
-        return u(e.code, (e) => {
-            (e.state = a.QB.ACCEPTED), (e.usageCount = (e.usageCount ?? 0) + 1);
+        return d(e.code, (e) => {
+            (e.state = s.QB.ACCEPTED), (e.usageCount = (e.usageCount ?? 0) + 1);
         });
     },
     GUILD_TEMPLATE_ACCEPT_FAILURE: function (e) {
-        return u(e.code, (e) => {
-            e.state = a.QB.RESOLVED;
+        return d(e.code, (e) => {
+            e.state = s.QB.RESOLVED;
         });
     },
     GUILD_TEMPLATE_MODAL_SHOW: function (e) {
-        l = e.code;
+        o = e.code;
     },
     GUILD_TEMPLATE_MODAL_HIDE: function (e) {
-        l = null;
+        o = null;
     },
 });

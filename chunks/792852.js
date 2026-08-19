@@ -1,6 +1,6 @@
 "use strict";
 n.d(t, { P: () => s });
-var i = n(353640),
+var i = n(196765),
     r = n(111994);
 let a = {
         currentPage: r.fB.GALLERY,

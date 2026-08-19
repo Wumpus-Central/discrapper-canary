@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { AK: () => a, KO: () => s, Wj: () => o, Z6: () => l, fc: () => r });
+n.d(t, { AK: () => s, KO: () => a, Wj: () => l, Z6: () => o, fc: () => r });
 var i = n(88686);
 let r = {
         [i.W.Crimson]: { darkBackground: "#900007", lightBackground: "#E7040F", name: i.W.Crimson },
@@ -15,7 +15,7 @@ let r = {
         [i.W.White]: { darkBackground: "#FFFFFF", lightBackground: "#FFFFFF", name: i.W.White },
         [i.W.Black]: { darkBackground: "#000000", lightBackground: "#000000", name: i.W.Black },
     },
-    s = "invalid_palette",
-    a = "custom_palette",
-    o = { name: s, darkBackground: "", lightBackground: "" },
-    l = Object.values(r);
+    a = "invalid_palette",
+    s = "custom_palette",
+    l = { name: a, darkBackground: "", lightBackground: "" },
+    o = Object.values(r);

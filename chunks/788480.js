@@ -1,4 +1,4 @@
-o.r(
+i.r(
     (e.exports = {
         qrCodeOverlay: "qrCodeOverlay_c28498",
         "size-40": "size-40_c28498",

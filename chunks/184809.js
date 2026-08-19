@@ -1,52 +1,52 @@
 "use strict";
-n.r(t), n.d(t, { default: () => ea });
+n.r(t), n.d(t, { default: () => es });
 var i = n(17928),
     r = n(506774),
-    s = n(228366),
-    a = n(350723),
-    o = n(996308),
-    l = n(211753);
+    a = n(228366),
+    s = n(350723),
+    l = n(996308),
+    o = n(211753);
 n(321073);
-var u = n(941426),
+var d = n(941426),
     c = n(92277),
-    d = n(9302),
+    u = n(9302),
     _ = n(635731),
-    h = n(41984),
-    f = n(127242);
-let p = new u.Vy("LegacyOverlayClient"),
-    E = "Heartbeat",
-    m = new _.A(1e3),
-    g = null,
-    A = null;
-function I() {
-    null == A &&
-        (A = setInterval(() => {
-            if (null != g) {
-                let e = Date.now() - g;
+    E = n(41984),
+    A = n(127242);
+let h = new d.Vy("LegacyOverlayClient"),
+    I = "Heartbeat",
+    f = new _.A(1e3),
+    p = null,
+    T = null;
+function m() {
+    null == T &&
+        (T = setInterval(() => {
+            if (null != p) {
+                let e = Date.now() - p;
                 e > 2e4 &&
-                    (p.warn(`No heartbeat for ${Math.round(e / 1e3)}s - overlay may be unresponsive`), (g = null));
+                    (h.warn(`No heartbeat for ${Math.round(e / 1e3)}s - overlay may be unresponsive`), (p = null));
             }
         }, 1e4));
 }
-class T extends i.Ay.Store {
+class g extends i.Ay.Store {
     static displayName = "OverlayRPCLogStore";
     initialize() {
-        this.waitFor(f.A), f.A.hasRenderDebugMode(h.x7.LegacyOverlayLogging) && I();
+        this.waitFor(A.A), A.A.hasRenderDebugMode(E.x7.LegacyOverlayLogging) && m();
     }
     getAllLogs() {
-        return m;
+        return f;
     }
     getLogsByLevel(e) {
-        return m.filter((t) => t.level === e);
+        return f.filter((t) => t.level === e);
     }
     getErrorLogs() {
-        return m.filter((e) => "error" === e.level || "crash" === e.level);
+        return f.filter((e) => "error" === e.level || "crash" === e.level);
     }
 }
-new T(s.h, {
+new g(a.h, {
     OVERLAY_RENDER_DEBUG_MODE: function (e) {
         let { enabled: t, mode: n } = e;
-        return n === h.x7.LegacyOverlayLogging && (t ? I() : null != A && (clearInterval(A), (A = null))), !1;
+        return n === E.x7.LegacyOverlayLogging && (t ? m() : null != T && (clearInterval(T), (T = null))), !1;
     },
     OVERLAY_ADD_LOGS_BATCH: function (e) {
         let { logs: t } = e;
@@ -54,25 +54,25 @@ new T(s.h, {
             t.forEach((e) =>
                 (function (e) {
                     let { level: t, message: n, timestamp: i, context: r } = e;
-                    if (!f.A.hasRenderDebugMode(h.x7.LegacyOverlayLogging) || __OVERLAY__) return !1;
+                    if (!A.A.hasRenderDebugMode(E.x7.LegacyOverlayLogging) || __OVERLAY__) return !1;
                     if (
-                        (m.push({ level: t, message: n, timestamp: i, context: r }),
-                        n === E && (g = Date.now()),
-                        n !== E)
+                        (f.push({ level: t, message: n, timestamp: i, context: r }),
+                        n === I && (p = Date.now()),
+                        n !== I)
                     )
                         switch (t) {
                             case "error":
                             case "crash":
-                                p.error(n);
+                                h.error(n);
                                 break;
                             case "warn":
-                                p.warn(n);
+                                h.warn(n);
                                 break;
                             case "info":
-                                p.info(n);
+                                h.info(n);
                                 break;
                             default:
-                                p.log(n);
+                                h.log(n);
                         }
                     return !0;
                 })(e),
@@ -82,47 +82,47 @@ new T(s.h, {
     },
 });
 var S = n(652215);
-let y = new u.Vy("LegacyOverlayLogger"),
+let N = new d.Vy("LegacyOverlayLogger"),
     C = null,
-    N = !1,
-    v = null,
-    R = {
+    O = !1,
+    R = null,
+    L = {
         log: console.log.bind(console),
         info: console.info.bind(console),
         warn: console.warn.bind(console),
         error: console.error.bind(console),
     },
-    O = 0;
-async function b(e, t) {
-    if (!__OVERLAY__) return void y.warn("sendLegacyOverlayLog called from main app context, logging locally instead");
-    if (O > 10) return;
+    y = 0;
+async function D(e, t) {
+    if (!__OVERLAY__) return void N.warn("sendLegacyOverlayLog called from main app context, logging locally instead");
+    if (y > 10) return;
     let { level: n, message: i, context: r } = e,
-        s = null;
+        a = null;
     if (null != r)
         try {
-            s = (0, c.g)(r);
+            a = (0, c.g)(r);
         } catch (e) {
             try {
-                s = { _error: "Failed to serialize context", _type: Object.prototype.toString.call(r) };
+                a = { _error: "Failed to serialize context", _type: Object.prototype.toString.call(r) };
             } catch (e) {
-                s = { _error: "Context not serializable" };
+                a = { _error: "Context not serializable" };
             }
         }
-    let a = {
+    let s = {
         type: S.kGV.LOG_MESSAGES,
         token: t,
-        pid: (0, d.getPID)(),
-        payload: { level: n, message: i, timestamp: Date.now(), context: s },
+        pid: (0, u.getPID)(),
+        payload: { level: n, message: i, timestamp: Date.now(), context: a },
     };
     try {
-        await o.tN(a), (O = 0);
+        await l.tN(s), (y = 0);
     } catch (e) {
-        ++O <= 3 &&
-            (y.error(`Failed to send log to main app (failure ${O}):`, e),
-            3 === O && y.error("Too many RPC send failures, suppressing further error logs"));
+        ++y <= 3 &&
+            (N.error(`Failed to send log to main app (failure ${y}):`, e),
+            3 === y && N.error("Too many RPC send failures, suppressing further error logs"));
     }
 }
-function D(e) {
+function v(e) {
     if (0 === e.length) return e;
     let t = [];
     for (let n = 0; n < e.length; n++) {
@@ -136,7 +136,7 @@ function D(e) {
     }
     return t;
 }
-function L(e) {
+function b(e) {
     if (null === e) return "null";
     if (void 0 === e) return "undefined";
     if ("string" == typeof e) return e;
@@ -164,13 +164,13 @@ function L(e) {
         }
     }
 }
-var w = n(761821),
-    M = n(95701),
-    P = n(495544),
-    x = n(734057),
-    k = n(808728),
-    U = n(38502),
-    G = n(967198),
+var M = n(761821),
+    P = n(95701),
+    U = n(280450),
+    w = n(734057),
+    G = n(808728),
+    x = n(38502),
+    k = n(967198),
     F = n(531685),
     V = n(672396);
 let B = Object.freeze({
@@ -188,73 +188,73 @@ let B = Object.freeze({
         showGameInviteNotification: !0,
         customInviteMessage: void 0,
     }),
-    j = null,
-    H = {},
-    Y = null,
-    W = new Set(),
+    H = null,
+    j = {},
+    W = null,
+    Y = new Set(),
     K = !1,
     $ = !1,
     z = !1,
-    q = new Set(),
-    Z = !1;
+    Z = new Set(),
+    q = !1;
 function X(e) {
-    let t = H[e];
-    return null == t && (t = H[e] = { ...B }), t;
+    let t = j[e];
+    return null == t && (t = j[e] = { ...B }), t;
 }
 __OVERLAY__ &&
     (function (e) {
         if (__OVERLAY__) {
-            if (N) return R.warn("Overlay logger already set up, skipping duplicate setup");
-            (N = !0),
+            if (O) return L.warn("Overlay logger already set up, skipping duplicate setup");
+            (O = !0),
                 (C = {
-                    log: (t, n) => b({ level: "log", message: t, context: n }, e),
-                    info: (t, n) => b({ level: "info", message: t, context: n }, e),
-                    warn: (t, n) => b({ level: "warn", message: t, context: n }, e),
-                    error: (t, n) => b({ level: "error", message: t, context: n }, e),
-                    crash: (t, n) => b({ level: "crash", message: t, context: n }, e),
+                    log: (t, n) => D({ level: "log", message: t, context: n }, e),
+                    info: (t, n) => D({ level: "info", message: t, context: n }, e),
+                    warn: (t, n) => D({ level: "warn", message: t, context: n }, e),
+                    error: (t, n) => D({ level: "error", message: t, context: n }, e),
+                    crash: (t, n) => D({ level: "crash", message: t, context: n }, e),
                 }).info("Overlay logger initialized"),
                 (console.log = function () {
                     for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
-                    if ((R.log(...t), null != C))
+                    if ((L.log(...t), null != C))
                         try {
-                            let e = D(t)
-                                .map((e) => L(e))
+                            let e = v(t)
+                                .map((e) => b(e))
                                 .join(" ");
                             C.log(e);
                         } catch (e) {
-                            R.error("[Logger Error]", e);
+                            L.error("[Logger Error]", e);
                         }
                 }),
                 (console.info = function () {
                     for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
-                    if ((R.info(...t), null != C))
+                    if ((L.info(...t), null != C))
                         try {
-                            let e = D(t)
-                                .map((e) => L(e))
+                            let e = v(t)
+                                .map((e) => b(e))
                                 .join(" ");
                             C.info(e);
                         } catch (e) {
-                            R.error("[Logger Error]", e);
+                            L.error("[Logger Error]", e);
                         }
                 }),
                 (console.warn = function () {
                     for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
-                    if ((R.warn(...t), null != C))
+                    if ((L.warn(...t), null != C))
                         try {
-                            let e = D(t)
-                                .map((e) => L(e))
+                            let e = v(t)
+                                .map((e) => b(e))
                                 .join(" ");
                             C.warn(e);
                         } catch (e) {
-                            R.error("[Logger Error]", e);
+                            L.error("[Logger Error]", e);
                         }
                 }),
                 (console.error = function () {
                     for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
-                    if ((R.error(...t), null != C))
+                    if ((L.error(...t), null != C))
                         try {
-                            let e = D(t)
-                                .map((e) => L(e))
+                            let e = v(t)
+                                .map((e) => b(e))
                                 .join(" ");
                             C.error(e);
                         } catch (e) {}
@@ -283,7 +283,7 @@ __OVERLAY__ &&
                                             : null,
                                     });
                             } catch (t) {
-                                R.error("[Failed to log error]", t, e);
+                                L.error("[Failed to log error]", t, e);
                             }
                     },
                     !0,
@@ -300,7 +300,7 @@ __OVERLAY__ &&
                                   (n = { reason: e.reason })),
                                 C.crash(t, n);
                         } catch (t) {
-                            R.error("[Failed to log rejection]", t, e);
+                            L.error("[Failed to log rejection]", t, e);
                         }
                 }),
                 window.addEventListener("securitypolicyviolation", (e) => {
@@ -315,16 +315,16 @@ __OVERLAY__ &&
                                 columnNumber: e.columnNumber,
                             });
                         } catch (t) {
-                            R.error("[Failed to log security violation]", t, e);
+                            L.error("[Failed to log security violation]", t, e);
                         }
                 }),
                 window.addEventListener("beforeunload", () => {
-                    null != C && C.info("Overlay unloading"), null != v && clearInterval(v);
+                    null != C && C.info("Overlay unloading"), null != R && clearInterval(R);
                 }),
-                (v = window.setInterval(() => {
+                (R = window.setInterval(() => {
                     if (null != C)
                         try {
-                            C.log(E, {
+                            C.log(I, {
                                 timestamp: Date.now(),
                                 memory: performance.memory
                                     ? {
@@ -334,12 +334,12 @@ __OVERLAY__ &&
                                     : void 0,
                             });
                         } catch (e) {
-                            R.error("[Heartbeat Error]", e);
+                            L.error("[Heartbeat Error]", e);
                         }
                 }, 1e4)),
-                R.log("Overlay error handlers and console interception set up");
+                L.log("Overlay error handlers and console interception set up");
         }
-    })((0, d.getRPCAuthToken)());
+    })((0, u.getRPCAuthToken)());
 let Q = { ...B },
     J = new Set([
         "AUDIO_SET_INPUT_DEVICE",
@@ -435,16 +435,16 @@ let Q = { ...B },
     ]);
 function et() {
     if (!__OVERLAY__) return !1;
-    let e = j === (0, d.getPID)(),
-        t = W.has((0, d.getPID)()) || q.size > 0;
-    e && t ? (0, a.XC)(window, !0) : (0, a.XC)(window, !1);
+    let e = H === (0, u.getPID)(),
+        t = Y.has((0, u.getPID)()) || Z.size > 0;
+    e && t ? (0, s.XC)(window, !0) : (0, s.XC)(window, !1);
 }
 function en() {
-    if (j !== (0, d.getPID)()) return !1;
-    q.clear();
+    if (H !== (0, u.getPID)()) return !1;
+    Z.clear();
 }
 function ei(e) {
-    let t = (0, d.getPID)();
+    let t = (0, u.getPID)();
     if (null == e.pid || e.pid === t)
         switch (e.type) {
             case S.kGV.STORAGE_SYNC:
@@ -457,9 +457,9 @@ function ei(e) {
                         (function (e) {
                             if (
                                 ("OVERLAY_INITIALIZE" === e.type &&
-                                    ((null == e.version && 1 === d.OVERLAY_VERSION) ||
-                                        e.version === d.OVERLAY_VERSION ||
-                                        (s.h.dispatch({ type: "OVERLAY_INCOMPATIBLE_APP" }), (0, o.Zf)(), 0)) &&
+                                    ((null == e.version && 1 === u.OVERLAY_VERSION) ||
+                                        e.version === u.OVERLAY_VERSION ||
+                                        (a.h.dispatch({ type: "OVERLAY_INCOMPATIBLE_APP" }), (0, l.Zf)(), 0)) &&
                                     (z = !0),
                                 z)
                             )
@@ -469,30 +469,30 @@ function ei(e) {
                                     case "THREAD_UPDATE":
                                     case "CHANNEL_DELETE":
                                     case "THREAD_DELETE":
-                                        let t = (0, M.createChannelRecord)(e.channel);
-                                        if (!M.A_.has(t.type)) break;
-                                        s.h.dispatch({ type: e.type, channel: t });
+                                        let t = (0, P.createChannelRecord)(e.channel);
+                                        if (!P.A_.has(t.type)) break;
+                                        a.h.dispatch({ type: e.type, channel: t });
                                         break;
                                     case "CHANNEL_UPDATES":
-                                        s.h.dispatch({
+                                        a.h.dispatch({
                                             type: e.type,
-                                            channels: e.channels.map((e) => (0, M.createChannelRecord)(e)),
+                                            channels: e.channels.map((e) => (0, P.createChannelRecord)(e)),
                                         });
                                         break;
                                     case "CONNECTION_OPEN_SUPPLEMENTAL":
                                         (e.lazyPrivateChannels = (e.lazyPrivateChannels ?? []).map((e) =>
-                                            (0, M.createChannelRecord)(e),
+                                            (0, P.createChannelRecord)(e),
                                         )),
-                                            s.h.dispatch(e);
+                                            a.h.dispatch(e);
                                         break;
                                     case "THREAD_LIST_SYNC":
-                                        s.h.dispatch({
+                                        a.h.dispatch({
                                             ...e,
-                                            threads: e.threads.map((e) => (0, M.createChannelRecord)(e)),
+                                            threads: e.threads.map((e) => (0, P.createChannelRecord)(e)),
                                         });
                                         break;
                                     case "GUILD_CREATE":
-                                        let n = (e) => (0, M.createChannelRecord)(e),
+                                        let n = (e) => (0, P.createChannelRecord)(e),
                                             i = e.guild;
                                         switch (((i.threads = i.threads?.map(n)), i.channels.op)) {
                                             case "full_sync":
@@ -504,19 +504,19 @@ function ei(e) {
                                             default:
                                                 i.channels;
                                         }
-                                        s.h.dispatch({ type: "GUILD_CREATE", guild: i });
+                                        a.h.dispatch({ type: "GUILD_CREATE", guild: i });
                                         break;
                                     case "USER_SETTINGS_PROTO_UPDATE":
-                                        s.h.dispatch({
+                                        a.h.dispatch({
                                             ...e,
                                             settings: {
-                                                proto: (0, w.Y5)(e.settings.type, e.settings.proto),
+                                                proto: (0, M.Y5)(e.settings.type, e.settings.proto),
                                                 type: e.settings.type,
                                             },
                                         });
                                         break;
                                     default:
-                                        s.h.dispatch(e);
+                                        a.h.dispatch(e);
                                 }
                         })(e),
                     ),
@@ -524,31 +524,31 @@ function ei(e) {
         }
 }
 let er = new Map();
-class es extends i.Ay.PersistedStore {
+class ea extends i.Ay.PersistedStore {
     static displayName = "OverlayStore";
     static persistKey = "OverlayStoreV2";
     static migrations = [
         () => {
-            let { pinnedWidgets: e, positions: t, sizes: n, v: i, ...s } = { ...r.w.get("OverlayStore") };
-            return { ...B, ...(5 === i ? s : null) };
+            let { pinnedWidgets: e, positions: t, sizes: n, v: i, ...a } = { ...r.w.get("OverlayStore") };
+            return { ...B, ...(5 === i ? a : null) };
         },
         (e) => {
-            let t = P.default.getId();
+            let t = U.default.getId();
             return null == e || null == t ? {} : { [t]: { ...e } };
         },
     ];
     initialize(e) {
         if (
-            (this.waitFor(P.default, x.A, k.Ay, U.A, G.A, F.A),
-            this.syncWith([P.default], () => {
-                let e = P.default.getId();
+            (this.waitFor(U.default, w.A, G.Ay, x.A, k.A, F.A),
+            this.syncWith([U.default], () => {
+                let e = U.default.getId();
                 Q = null != e ? X(e) : { ...B };
             }),
-            __OVERLAY__ && W.delete((0, d.getPID)()),
+            __OVERLAY__ && Y.delete((0, u.getPID)()),
             null != e)
         ) {
-            H = e;
-            let t = P.default.getId();
+            j = e;
+            let t = U.default.getId();
             null != t &&
                 (null == (Q = X(t)).textChatNotifications && (Q.textChatNotifications = B.textChatNotifications),
                 null == Q.textWidgetOpacity && (Q.textWidgetOpacity = B.textWidgetOpacity),
@@ -556,27 +556,27 @@ class es extends i.Ay.PersistedStore {
         }
     }
     getState() {
-        return H;
+        return j;
     }
     isLocked(e) {
-        return !W.has(e);
+        return !Y.has(e);
     }
     isInstanceLocked() {
-        return !W.has((0, d.getPID)());
+        return !Y.has((0, u.getPID)());
     }
     isInstanceFocused() {
-        return j === (0, d.getPID)();
+        return H === (0, u.getPID)();
     }
     isFocused(e) {
-        return j === e;
+        return H === e;
     }
     isPinned(e) {
-        let t = U.A.getLayout(d.OVERLAY_LAYOUT_ID);
+        let t = x.A.getLayout(u.OVERLAY_LAYOUT_ID);
         return (
             null != t &&
             null !=
                 t.widgets.find((t) => {
-                    let n = U.A.getWidget(t);
+                    let n = x.A.getWidget(t);
                     return null != n && n.type === e && !!n.pinned;
                 })
         );
@@ -588,7 +588,7 @@ class es extends i.Ay.PersistedStore {
         return Q.selectedChannelId;
     }
     getSelectedCallId() {
-        return Y;
+        return W;
     }
     getDisplayUserMode() {
         return Q.displayUserMode;
@@ -615,7 +615,7 @@ class es extends i.Ay.PersistedStore {
         return Q.disableExternalLinkAlert;
     }
     getFocusedPID() {
-        return j;
+        return H;
     }
     get initialized() {
         return z;
@@ -624,39 +624,39 @@ class es extends i.Ay.PersistedStore {
         return K;
     }
     getActiveRegions() {
-        return q;
+        return Z;
     }
     getTextWidgetOpacity() {
         return Q.textWidgetOpacity;
     }
     isPreviewingInGame() {
-        return Z;
+        return q;
     }
     getTrackedGame(e) {
         return er.get(e) ?? null;
     }
 }
-let ea = new es(s.h, {
+let es = new ea(a.h, {
     LOGOUT: function (e) {
-        e.isSwitchingAccount || (H = {});
+        e.isSwitchingAccount || (j = {});
     },
     MULTI_ACCOUNT_REMOVE_ACCOUNT: function (e) {
-        e.userId in H && delete H[e.userId];
+        e.userId in j && delete j[e.userId];
     },
     CONNECTION_CLOSED: function () {
-        W.clear();
+        Y.clear();
     },
     OVERLAY_START_SESSION: function () {
-        s.h.addInterceptor((e) => {
+        a.h.addInterceptor((e) => {
             if ($ || !ee.has(e.type)) return !1;
             if ("CHANNEL_SELECT" === e.type) {
                 let { guildId: t, channelId: n } = e;
                 return (
                     null != n &&
-                    ((0, o.tN)({
+                    ((0, l.tN)({
                         type: S.kGV.DISPATCH,
-                        pid: (0, d.getPID)(),
-                        token: (0, d.getRPCAuthToken)(),
+                        pid: (0, u.getPID)(),
+                        token: (0, u.getRPCAuthToken)(),
                         payloads: [
                             { type: "CHANNEL_PRELOAD", guildId: t === S.ME ? null : t, channelId: n, context: S.QCW },
                             { type: "OVERLAY_SELECT_CHANNEL", guildId: t, channelId: n },
@@ -666,47 +666,47 @@ let ea = new es(s.h, {
                 );
             }
             return (
-                (0, o.tN)({
+                (0, l.tN)({
                     type: S.kGV.DISPATCH,
-                    pid: (0, d.getPID)(),
-                    token: (0, d.getRPCAuthToken)(),
+                    pid: (0, u.getPID)(),
+                    token: (0, u.getRPCAuthToken)(),
                     payloads: [e],
                 }),
                 !J.has(e.type)
             );
         }),
-            (0, o.QZ)(ei, (0, d.getRPCAuthToken)()),
-            (0, o.Ng)(),
-            (0, o.tN)({ type: S.kGV.CONNECT, pid: (0, d.getPID)(), token: (0, d.getRPCAuthToken)() });
+            (0, l.QZ)(ei, (0, u.getRPCAuthToken)()),
+            (0, l.Ng)(),
+            (0, l.tN)({ type: S.kGV.CONNECT, pid: (0, u.getPID)(), token: (0, u.getRPCAuthToken)() });
     },
     OVERLAY_INITIALIZE: function (e) {
         let { focusedPID: t, trackedGames: n, overlayStoredSettings: i } = e;
-        (j = t),
+        (H = t),
             __OVERLAY__ &&
                 (n.forEach((e) => {
                     er.set(e.pid, e);
                 }),
-                l.x.update({ legacyEnabled: i.legacyEnabled, oopEnabled: i.oopEnabled }));
+                o.x.update({ legacyEnabled: i.legacyEnabled, oopEnabled: i.oopEnabled }));
     },
     OVERLAY_READY: function () {
         let e = Q.selectedGuildId,
             t = Q.selectedChannelId;
         if (
             (null == e ||
-                (k.Ay.hasChannels(e) && (null == t || k.Ay.hasSelectableChannel(e, t))) ||
+                (G.Ay.hasChannels(e) && (null == t || G.Ay.hasSelectableChannel(e, t))) ||
                 ((e = null), (t = null)),
-            null != t && null == x.A.getChannel(t) && ((e = null), (t = null)),
-            null == e && null == t && (e = G.A.getGuildId()),
+            null != t && null == w.A.getChannel(t) && ((e = null), (t = null)),
+            null == e && null == t && (e = k.A.getGuildId()),
             null != e && null == t)
         ) {
-            let n = k.Ay.getDefaultChannel(e);
+            let n = G.Ay.getDefaultChannel(e);
             null != n && (t = n.id);
         }
         (Q.selectedGuildId = e), (Q.selectedChannelId = t);
     },
     OVERLAY_FOCUSED: function (e) {
         let { pid: t } = e;
-        (j = t), et();
+        (H = t), et();
     },
     OVERLAY_SELECT_CHANNEL: function (e) {
         let { guildId: t, channelId: n } = e;
@@ -714,14 +714,14 @@ let ea = new es(s.h, {
     },
     OVERLAY_SELECT_CALL: function (e) {
         let { callId: t } = e;
-        Y = t;
+        W = t;
     },
     CALL_DELETE: function () {
-        Y = null;
+        W = null;
     },
     LAYOUT_CREATE: function () {},
     OVERLAY_SET_ENABLED: function (e) {
-        __OVERLAY__ && l.x.update({ legacyEnabled: e.legacyEnabled, oopEnabled: e.oopEnabled });
+        __OVERLAY__ && o.x.update({ legacyEnabled: e.legacyEnabled, oopEnabled: e.oopEnabled });
     },
     OVERLAY_SET_DISPLAY_NAME_MODE: function (e) {
         let { mode: t } = e;
@@ -766,25 +766,25 @@ let ea = new es(s.h, {
     },
     OVERLAY_SET_INPUT_LOCKED: function (e) {
         let { locked: t, pid: n } = e;
-        t ? W.delete(n) : W.add(n), en(), et(), (Z = !1);
+        t ? Y.delete(n) : Y.add(n), en(), et(), (q = !1);
     },
     OVERLAY_ACTIVATE_REGION: function (e) {
         let { region: t } = e;
-        if (j !== (0, d.getPID)() || q.has(t)) return !1;
-        q.add(t);
+        if (H !== (0, u.getPID)() || Z.has(t)) return !1;
+        Z.add(t);
     },
     OVERLAY_DEACTIVATE_ALL_REGIONS: en,
     OVERLAY_SET_PREVIEW_IN_GAME_MODE: function (e) {
-        Z = e.isPreviewingInGame;
+        q = e.isPreviewingInGame;
     },
     WINDOW_RESIZED: function () {
         if (__OVERLAY__) {
             let e = F.A.windowSize();
-            (0, d.validResolution)(e) || (Z = !1);
+            (0, u.validResolution)(e) || (q = !1);
         }
     },
     OVERLAY_SET_ASSOCIATED_GAME: function (e) {
-        W.delete(e.previousAssociatedGamePID);
+        Y.delete(e.previousAssociatedGamePID);
     },
     OVERLAY_TRACKED_GAME_UPDATE: function (e) {
         __OVERLAY__ && (null != e.trackedGame ? er.set(e.pid, e.trackedGame) : er.delete(e.pid));

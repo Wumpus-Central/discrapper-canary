@@ -1,10 +1,10 @@
 !(function (e) {
     "use strict";
-    function t(e, t, n) {
-        var i = " ";
+    function i(e, i, a) {
+        var _ = " ";
         return (
-            (e % 100 >= 20 || (e >= 100 && e % 100 == 0)) && (i = " de "),
-            e + i + { ss: "secunde", mm: "minute", hh: "ore", dd: "zile", MM: "luni", yy: "ani" }[n]
+            (e % 100 >= 20 || (e >= 100 && e % 100 == 0)) && (_ = " de "),
+            e + _ + { ss: "secunde", mm: "minute", hh: "ore", dd: "zile", MM: "luni", yy: "ani" }[a]
         );
     }
     e.defineLocale("ro", {
@@ -36,18 +36,18 @@
             future: "peste %s",
             past: "%s \xeen urm\u0103",
             s: "c\xe2teva secunde",
-            ss: t,
+            ss: i,
             m: "un minut",
-            mm: t,
+            mm: i,
             h: "o or\u0103",
-            hh: t,
+            hh: i,
             d: "o zi",
-            dd: t,
+            dd: i,
             M: "o lun\u0103",
-            MM: t,
+            MM: i,
             y: "un an",
-            yy: t,
+            yy: i,
         },
         week: { dow: 1, doy: 7 },
     });
-})(n(989349));
+})(a(989349));

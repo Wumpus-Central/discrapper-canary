@@ -15,8 +15,8 @@ var i = n(477900),
     E = n(192308),
     y = n(964486),
     g = n(235986),
-    _ = n(174459),
-    A = n(859703),
+    A = n(174459),
+    _ = n(859703),
     I = n(309593),
     h = n(590202),
     S = n(652215),
@@ -26,20 +26,20 @@ let T = "/assets/1929535a8397f7f0.png";
 function w(e) {
     let { questId: t, survey: n, transitionState: a, onClose: s, onSubmit: p } = e,
         C = (0, I.C5)(t),
-        [E, A] = o.useState(0),
+        [E, _] = o.useState(0),
         [h, w] = (0, u.z)(() => ({ from: { width: "0%" }, config: { duration: 2500 } }));
     function N(e) {
         p(),
-            A(1),
+            _(1),
             null != C &&
-                _.default.track(S.HAw.QUEST_SURVEY_SUBMITTED, { ...b(C, n), choice: e.text, choice_id: e.key });
+                A.default.track(S.HAw.QUEST_SURVEY_SUBMITTED, { ...b(C, n), choice: e.text, choice_id: e.key });
     }
     async function q(e) {
         1 === e && (await w({ width: "100%" }), s());
     }
     return (
         (0, y.Ay)(() => {
-            null != C && _.default.track(S.HAw.QUEST_SURVEY_DISPLAYED, b(C, n));
+            null != C && A.default.track(S.HAw.QUEST_SURVEY_DISPLAYED, b(C, n));
         }),
         null == C && s(),
         (0, i.jsx)(r.EO, {
@@ -144,8 +144,8 @@ function N(e) {
         },
         {
             onCloseCallback: () => {
-                let n = A.A.getQuest(e.questId);
-                null != n && _.default.track(S.HAw.QUEST_SURVEY_DISMISSED, { ...b(n, e.survey), submitted: t });
+                let n = _.A.getQuest(e.questId);
+                null != n && A.default.track(S.HAw.QUEST_SURVEY_DISMISSED, { ...b(n, e.survey), submitted: t });
             },
         },
     );

@@ -19,11 +19,11 @@ t.a(e, async function (e, l) {
             I = t(62849),
             v = t(558447),
             A = t(886609),
-            y = t(580019),
-            k = t(375708),
-            b = t(166444),
-            C = e([x, i]);
-        [x, i] = C.then ? (await C)() : C;
+            k = t(580019),
+            y = t(375708),
+            C = t(944063),
+            b = e([x, i]);
+        [x, i] = b.then ? (await b)() : b;
         let S = {
             text: o.EY,
             paragraph: o.fz,
@@ -43,7 +43,7 @@ t.a(e, async function (e, l) {
             heading: g.D,
             small: g.O,
             spoiler: A.d,
-            timestamp: y.D,
+            timestamp: k.D,
         };
         function N(e) {
             let { content: n } = e;
@@ -67,8 +67,8 @@ t.a(e, async function (e, l) {
                         (0, r.jsxs)(c.E, {
                             variant: "text-md/normal",
                             color: "text-feedback-critical",
-                            className: b.g,
-                            children: [(0, r.jsx)(d.A, { width: 16, height: 16 }), k.intl.string(k.t.dpFK4M)],
+                            className: C.g,
+                            children: [(0, r.jsx)(d.A, { width: 16, height: 16 }), y.intl.string(y.t.dpFK4M)],
                         }),
                     ],
                 })

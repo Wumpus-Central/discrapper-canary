@@ -14,9 +14,9 @@ var n = r(477900),
     g = r(151271),
     f = r(821102),
     I = r(996566),
-    R = r(336807),
-    E = r(435558),
-    _ = r.n(E),
+    E = r(336807),
+    R = r(435558),
+    _ = r.n(R),
     y = r(803805),
     S = r(661531),
     v = r(27232),
@@ -226,13 +226,13 @@ class V extends s.PureComponent {
         });
     }
 }
-function W(e) {
+function H(e) {
     let t = (0, a.bG)([f.A], () => f.A.getTrendingCategories()),
         r = (0, I.rM)(),
         s = (0, L.d5)();
     return (0, n.jsx)(V, { ...e, ...s, trendingCategories: t, favorites: r });
 }
-var H = r(732139),
+var W = r(732139),
     Q = r(650583),
     K = r(658150);
 function q(e) {
@@ -331,7 +331,7 @@ class B extends s.PureComponent {
                     children: M.intl.string(M.t.H6zNFz),
                 });
             default: {
-                let t = (0, R.wT)();
+                let t = (0, E.wT)();
                 return (0, n.jsx)(u.I, {
                     query: e,
                     onChange: this.handleChangeQuery,
@@ -373,7 +373,7 @@ class B extends s.PureComponent {
             } = this.props,
             { resultType: d } = this.state;
         return null == d
-            ? (0, n.jsx)(W, { className: e, hideFavoritesTile: c, onSelectItem: this.handleSelectItem })
+            ? (0, n.jsx)(H, { className: e, hideFavoritesTile: c, onSelectItem: this.handleSelectItem })
             : (0, n.jsx)(L.Ay, {
                   className: e,
                   data:
@@ -402,9 +402,9 @@ class B extends s.PureComponent {
     render() {
         let { className: e, forwardedRef: t } = this.props;
         return (0, n.jsxs)("div", {
-            id: H.ni,
+            id: W.ni,
             role: "tabpanel",
-            "aria-labelledby": H.g9,
+            "aria-labelledby": W.g9,
             className: i()(K.kL, e),
             onClick: q,
             ref: t,

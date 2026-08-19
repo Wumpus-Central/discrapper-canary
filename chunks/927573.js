@@ -1,4 +1,4 @@
-n.d(e, { $s: () => u, Qy: () => i, T$: () => c, Ug: () => a, _4: () => s, mu: () => b });
+n.d(e, { $s: () => u, Qy: () => i, T$: () => c, Ug: () => a, _4: () => s, mu: () => o });
 var r,
     l = n(375708);
 let s = 5,
@@ -22,4 +22,4 @@ function u(t) {
         n = d[e]?.();
     return null != n ? `(${n}) ${t[e]}` : t[e];
 }
-let b = "https://discord.gg";
+let o = "https://discord.gg";

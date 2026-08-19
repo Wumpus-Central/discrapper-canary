@@ -1,57 +1,57 @@
-(t.parse = function (e, t) {
-    if ("string" != typeof e) throw TypeError("argument str must be a string");
-    var i = {},
-        s = e.split(r),
-        a = (t || {}).decode || n;
+(t.parse = function (r, t) {
+    if ("string" != typeof r) throw TypeError("argument str must be a string");
+    var e = {},
+        a = r.split(n),
+        o = (t || {}).decode || i;
     return (
-        s.forEach(function (e) {
-            var t = e.indexOf("=");
+        a.forEach(function (r) {
+            var t = r.indexOf("=");
             if (!(t < 0)) {
-                var n = e.substr(0, t).trim(),
-                    r = e.substr(++t, e.length).trim();
-                '"' == r[0] && (r = r.slice(1, -1)),
-                    void 0 == i[n] &&
-                        (i[n] = (function (e, t) {
+                var i = r.substr(0, t).trim(),
+                    n = r.substr(++t, r.length).trim();
+                '"' == n[0] && (n = n.slice(1, -1)),
+                    void 0 == e[i] &&
+                        (e[i] = (function (r, t) {
                             try {
-                                return t(e);
+                                return t(r);
                             } catch (t) {
-                                return e;
+                                return r;
                             }
-                        })(r, a));
+                        })(n, o));
             }
         }),
-        i
+        e
     );
 }),
-    (t.serialize = function (e, t, n) {
-        var r = n || {},
-            a = r.encode || i;
-        if (!s.test(e)) throw TypeError("argument name is invalid");
-        var o = a(t);
-        if (o && !s.test(o)) throw TypeError("argument val is invalid");
-        var l = [e + "=" + o];
-        if (null != r.maxAge) {
-            var u = r.maxAge - 0;
+    (t.serialize = function (r, t, i) {
+        var n = i || {},
+            o = n.encode || e;
+        if (!a.test(r)) throw TypeError("argument name is invalid");
+        var s = o(t);
+        if (s && !a.test(s)) throw TypeError("argument val is invalid");
+        var p = [r + "=" + s];
+        if (null != n.maxAge) {
+            var u = n.maxAge - 0;
             if (isNaN(u)) throw Error("maxAge should be a Number");
-            l.push("Max-Age=" + Math.floor(u));
+            p.push("Max-Age=" + Math.floor(u));
         }
-        if (r.domain) {
-            if (!s.test(r.domain)) throw TypeError("option domain is invalid");
-            l.push("Domain=" + r.domain);
+        if (n.domain) {
+            if (!a.test(n.domain)) throw TypeError("option domain is invalid");
+            p.push("Domain=" + n.domain);
         }
-        if (r.path) {
-            if (!s.test(r.path)) throw TypeError("option path is invalid");
-            l.push("Path=" + r.path);
+        if (n.path) {
+            if (!a.test(n.path)) throw TypeError("option path is invalid");
+            p.push("Path=" + n.path);
         }
         return (
-            r.expires && l.push("Expires=" + r.expires.toUTCString()),
-            r.httpOnly && l.push("HttpOnly"),
-            r.secure && l.push("Secure"),
-            r.firstPartyOnly && l.push("First-Party-Only"),
-            l.join("; ")
+            n.expires && p.push("Expires=" + n.expires.toUTCString()),
+            n.httpOnly && p.push("HttpOnly"),
+            n.secure && p.push("Secure"),
+            n.firstPartyOnly && p.push("First-Party-Only"),
+            p.join("; ")
         );
     });
-var n = decodeURIComponent,
-    i = encodeURIComponent,
-    r = /; */,
-    s = /^[\u0009\u0020-\u007e\u0080-\u00ff]+$/;
+var i = decodeURIComponent,
+    e = encodeURIComponent,
+    n = /; */,
+    a = /^[\u0009\u0020-\u007e\u0080-\u00ff]+$/;

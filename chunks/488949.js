@@ -1,4 +1,4 @@
-e.exports = {
+r.exports = {
     em: "gradientButtonContainer__488d9",
     fX: "dropperRow__488d9",
     tj: "colorSelectorPopoutContainer__488d9",

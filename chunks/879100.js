@@ -1,41 +1,41 @@
-t.d(e, { W: () => M, _: () => I });
+t.d(a, { W: () => I, _: () => y });
 var l = t(477900),
     n = t(582128),
-    i = t(284009),
-    r = t.n(i),
-    s = t(364840),
+    r = t(284009),
+    s = t.n(r),
+    i = t(364840),
     c = t(331322),
     o = t(123292),
-    h = t(38021),
+    u = t(38021),
     d = t(834730),
-    u = t(821609),
+    h = t(821609),
     m = t(480642),
     p = t(166532),
-    x = t(796012),
-    E = t(659746),
-    j = t(975571),
-    v = t(652215),
-    A = t(26279),
-    C = t(202541),
-    f = t(818348),
-    g = t(375708),
+    x = t(997330),
+    C = t(659746),
+    E = t(975571),
+    g = t(652215),
+    v = t(26279),
+    f = t(202541),
+    j = t(818348),
+    A = t(375708),
     b = t(443593);
-function I(a) {
+function y(e) {
     let {
-        currentStep: e,
+        currentStep: a,
         isRefreshEnabled: t,
         backStep: n,
-        handleStepChange: i,
-        primaryButtonProps: h,
+        handleStepChange: r,
+        primaryButtonProps: u,
         secondaryButton: d,
-        legacySubmitButton: u,
-    } = a;
-    return e === p.pn.CONFIRM
+        legacySubmitButton: h,
+    } = e;
+    return a === p.pn.CONFIRM
         ? null
-        : e === p.pn.REVIEW
-          ? (r()(null != h, "Missing primaryButtonProps for review step"),
-            (0, l.jsx)(m.lo, { onBackClick: null != n ? () => i(n) : void 0, primaryButtonProps: h }))
-          : (0, l.jsx)(s.j, {
+        : a === p.pn.REVIEW
+          ? (s()(null != u, "Missing primaryButtonProps for review step"),
+            (0, l.jsx)(m.lo, { onBackClick: null != n ? () => r(n) : void 0, primaryButtonProps: u }))
+          : (0, l.jsx)(i.j, {
                 children: (0, l.jsxs)(c.B, {
                     direction: "horizontal",
                     align: "center",
@@ -44,8 +44,8 @@ function I(a) {
                     children: [
                         null != n
                             ? (0, l.jsx)(o.Q, {
-                                  text: g.intl.string(g.t["13/7kX"]),
-                                  onClick: () => i(n),
+                                  text: A.intl.string(A.t["13/7kX"]),
+                                  onClick: () => r(n),
                                   variant: "secondary",
                               })
                             : null,
@@ -53,91 +53,91 @@ function I(a) {
                             direction: "horizontal",
                             align: "center",
                             justify: "space-between",
-                            ...(t && e === p.pn.PLAN_SELECT ? { gap: 8 } : {}),
+                            ...(t && a === p.pn.PLAN_SELECT ? { gap: 8 } : {}),
                             fullWidth: !1,
-                            children: [d, u],
+                            children: [d, h],
                         }),
                     ],
                 }),
             });
 }
-function M(a) {
-    let e,
+function I(e) {
+    let a,
         {
             onClose: t,
-            guild: i,
-            guildBoostQuantity: r,
-            isTransfer: s = !1,
+            guild: r,
+            guildBoostQuantity: s,
+            isTransfer: i = !1,
             withAnimation: c = !0,
             paymentSourceType: o,
             didPurchaseOnFractionalPremium: m = !1,
             fallbackGuildName: p,
-            customCheckoutFlow: I,
-        } = a,
-        { theme: M } = (0, h.wR)(),
-        [R, L] = n.useState(x.V1.Scenes.ENTRY),
-        [T, y] = n.useState(!1),
-        P = i?.name ?? p;
+            customCheckoutFlow: y,
+        } = e,
+        { theme: I } = (0, u.wR)(),
+        [M, T] = n.useState(x.V1.Scenes.ENTRY),
+        [R, L] = n.useState(!1),
+        P = r?.name ?? p;
     return (
-        (e = s
+        (a = i
             ? null == P
-                ? g.intl.format(g.t.P52e1r, {})
-                : g.intl.format(g.t["4UnIk9"], { guildName: P })
+                ? A.intl.format(A.t.P52e1r, {})
+                : A.intl.format(A.t["4UnIk9"], { guildName: P })
             : m
-              ? g.intl.format(g.t.gFaKd1, { helpCenterLink: j.A.getArticleURL(v.MVz.FRACTIONAL_PREMIUM_ABOUT) })
+              ? A.intl.format(A.t.gFaKd1, { helpCenterLink: E.A.getArticleURL(g.MVz.FRACTIONAL_PREMIUM_ABOUT) })
               : null == P
-                ? g.intl.format(g.t.SZ5ohR, { guildSubscriptionQuantity: r })
-                : g.intl.format(g.t.GxK3Mv, { guildName: P, guildSubscriptionQuantity: r })),
+                ? A.intl.format(A.t.SZ5ohR, { guildSubscriptionQuantity: s })
+                : A.intl.format(A.t.GxK3Mv, { guildName: P, guildSubscriptionQuantity: s })),
         (0, l.jsxs)("div", {
             className: b.RP,
             children: [
                 c
                     ? (0, l.jsx)(x.V1, {
                           className: b.ud,
-                          nextScene: R,
-                          onScenePlay: (a) => {
-                              if (!T)
-                                  switch (a) {
+                          nextScene: M,
+                          onScenePlay: (e) => {
+                              if (!R)
+                                  switch (e) {
                                       case x.V1.Scenes.ENTRY:
-                                          return L(x.V1.Scenes.IDLE);
+                                          return T(x.V1.Scenes.IDLE);
                                       case x.V1.Scenes.IDLE:
-                                          return L(x.V1.Scenes.SUCCESS);
+                                          return T(x.V1.Scenes.SUCCESS);
                                       case x.V1.Scenes.SUCCESS:
-                                          return y(!0), L(x.V1.Scenes.IDLE);
+                                          return L(!0), T(x.V1.Scenes.IDLE);
                                   }
                           },
                           pauseWhileUnfocused: !1,
                       })
                     : null,
-                (0, l.jsx)(E.Ay, {
+                (0, l.jsx)(C.Ay, {
                     className: b.E,
-                    theme: M,
-                    premiumType: C.PremiumTypes.TIER_2,
-                    type: f.Nc.has(o ?? f.he.UNKNOWN)
-                        ? E.Ay.Types.PREMIUM_PAYMENT_STARTED
-                        : E.Ay.Types.GUILD_BOOST_APPLIED,
+                    theme: I,
+                    premiumType: f.PremiumTypes.TIER_2,
+                    type: j.Nc.has(o ?? j.he.UNKNOWN)
+                        ? C.Ay.Types.PREMIUM_PAYMENT_STARTED
+                        : C.Ay.Types.GUILD_BOOST_APPLIED,
                 }),
                 (0, l.jsx)(d.E, {
                     variant: "text-md/medium",
                     color: "interactive-text-default",
                     className: b.xR,
-                    children: e,
+                    children: a,
                 }),
-                I === A.uH.META_QUEST_WEB_REDIRECT_CHECKOUT
+                y === v.uH.META_QUEST_WEB_REDIRECT_CHECKOUT
                     ? (0, l.jsx)(d.E, {
                           variant: "text-md/medium",
                           color: "interactive-text-default",
                           className: b.xR,
                           children: (0, l.jsxs)("p", {
-                              children: [g.intl.string(g.t.bIVRSQ), " ", g.intl.string(g.t["0UJqOy"])],
+                              children: [A.intl.string(A.t.bIVRSQ), " ", A.intl.string(A.t["0UJqOy"])],
                           }),
                       })
-                    : (0, l.jsx)(u.$, {
+                    : (0, l.jsx)(h.$, {
                           variant: "primary",
                           text:
-                              I === A.uH.MOBILE_WEB_REDIRECT_CHECKOUT
-                                  ? g.intl.string(g.t.sRApon)
-                                  : g.intl.string(g.t["/iTxgz"]),
+                              y === v.uH.MOBILE_WEB_REDIRECT_CHECKOUT
+                                  ? A.intl.string(A.t.sRApon)
+                                  : A.intl.string(A.t["/iTxgz"]),
                           onClick: t,
                       }),
             ],

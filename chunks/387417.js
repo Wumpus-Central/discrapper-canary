@@ -1,4 +1,4 @@
-e.exports = {
+_.exports = {
     h1: "avatarPreviewContainer__349b1",
     sm: "pfxPreviewContainer__349b1",
     VY: "pfxPreviewContainerSolo__349b1 pfxPreviewContainer__349b1",

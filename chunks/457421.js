@@ -1,26 +1,26 @@
 "use strict";
-n.d(t, { A: () => l });
+n.d(t, { A: () => o });
 var i = n(17928),
     r = n(228366);
-let s = {},
-    a = "NOT_FETCHED";
-class o extends i.Ay.Store {
+let a = {},
+    s = "NOT_FETCHED";
+class l extends i.Ay.Store {
     static displayName = "CollectiblesMarketingsStore";
     getMarketingBySurface(e) {
-        return s[e];
+        return a[e];
     }
     get fetchState() {
-        return a;
+        return s;
     }
 }
-let l = new o(r.h, {
+let o = new l(r.h, {
     COLLECTIBLES_MARKETING_FETCH: function () {
-        a = "FETCHING";
+        s = "FETCHING";
     },
     COLLECTIBLES_MARKETING_FETCH_SUCCESS: function (e) {
-        (s = e.marketings.marketingsBySurfaces), (a = "FETCHED");
+        (a = e.marketings.marketingsBySurfaces), (s = "FETCHED");
     },
     LOGOUT: function () {
-        (s = {}), (a = "NOT_FETCHED");
+        (a = {}), (s = "NOT_FETCHED");
     },
 });

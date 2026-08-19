@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { k5: () => s, lV: () => a, qK: () => r });
+n.d(t, { k5: () => a, lV: () => s, qK: () => r });
 let i = (0, n(945810).mj)({
     kind: "user",
     name: "2025-04-desktop-refresh-fast-follows",
@@ -15,9 +15,9 @@ let i = (0, n(945810).mj)({
 function r(e) {
     return !1;
 }
-function s(e) {
+function a(e) {
     return i.useConfig({ location: e }).darkerGuildListBackground;
 }
-function a(e) {
+function s(e) {
     return i.useConfig({ location: e }).distinctBorders;
 }

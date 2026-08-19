@@ -1,43 +1,43 @@
 "use strict";
-var r = n(582128),
-    i = n(937787),
-    a =
+var n = r(582128),
+    o = r(937787),
+    i =
         "function" == typeof Object.is
             ? Object.is
             : function (e, t) {
                   return (e === t && (0 !== e || 1 / e == 1 / t)) || (e != e && t != t);
               },
-    o = i.useSyncExternalStore,
-    s = r.useRef,
-    l = r.useEffect,
-    u = r.useMemo,
-    c = r.useDebugValue;
-t.useSyncExternalStoreWithSelector = function (e, t, n, r, i) {
-    var d = s(null);
-    if (null === d.current) {
-        var f = { hasValue: !1, value: null };
-        d.current = f;
-    } else f = d.current;
-    var p = o(
+    a = o.useSyncExternalStore,
+    s = n.useRef,
+    l = n.useEffect,
+    u = n.useMemo,
+    c = n.useDebugValue;
+t.useSyncExternalStoreWithSelector = function (e, t, r, n, o) {
+    var f = s(null);
+    if (null === f.current) {
+        var p = { hasValue: !1, value: null };
+        f.current = p;
+    } else p = f.current;
+    var d = a(
         e,
-        (d = u(
+        (f = u(
             function () {
                 function e(e) {
                     if (!l) {
-                        if (((l = !0), (o = e), (e = r(e)), void 0 !== i && f.hasValue)) {
-                            var t = f.value;
-                            if (i(t, e)) return (s = t);
+                        if (((l = !0), (a = e), (e = n(e)), void 0 !== o && p.hasValue)) {
+                            var t = p.value;
+                            if (o(t, e)) return (s = t);
                         }
                         return (s = e);
                     }
-                    if (((t = s), a(o, e))) return t;
-                    var n = r(e);
-                    return void 0 !== i && i(t, n) ? ((o = e), t) : ((o = e), (s = n));
+                    if (((t = s), i(a, e))) return t;
+                    var r = n(e);
+                    return void 0 !== o && o(t, r) ? ((a = e), t) : ((a = e), (s = r));
                 }
-                var o,
+                var a,
                     s,
                     l = !1,
-                    u = void 0 === n ? null : n;
+                    u = void 0 === r ? null : r;
                 return [
                     function () {
                         return e(t());
@@ -49,18 +49,18 @@ t.useSyncExternalStoreWithSelector = function (e, t, n, r, i) {
                           },
                 ];
             },
-            [t, n, r, i],
+            [t, r, n, o],
         ))[0],
-        d[1],
+        f[1],
     );
     return (
         l(
             function () {
-                (f.hasValue = !0), (f.value = p);
+                (p.hasValue = !0), (p.value = d);
             },
-            [p],
+            [d],
         ),
-        c(p),
-        p
+        c(d),
+        d
     );
 };

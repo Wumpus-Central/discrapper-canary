@@ -1,8 +1,8 @@
 "use strict";
-n.r(t), n.d(t, { collectNonHeapMetrics: () => a, initWasmTracking: () => s }), n(321073);
+n.r(t), n.d(t, { collectNonHeapMetrics: () => s, initWasmTracking: () => a }), n(321073);
 let i = [],
     r = !1;
-function s() {
+function a() {
     if (r) return;
     function e(e) {
         for (let t in e) e[t] instanceof WebAssembly.Memory && i.push(new WeakRef(e[t]));
@@ -12,26 +12,26 @@ function s() {
     if (
         ((WebAssembly.instantiate = async function () {
             for (var n = arguments.length, i = Array(n), r = 0; r < n; r++) i[r] = arguments[r];
-            let s = await t(...i);
+            let a = await t(...i);
             try {
-                "instance" in s && null != s.instance ? e(s.instance.exports) : "exports" in s && e(s.exports);
+                "instance" in a && null != a.instance ? e(a.instance.exports) : "exports" in a && e(a.exports);
             } catch {}
-            return s;
+            return a;
         }),
         "function" == typeof WebAssembly.instantiateStreaming)
     ) {
         let t = WebAssembly.instantiateStreaming;
         WebAssembly.instantiateStreaming = async function () {
             for (var n = arguments.length, i = Array(n), r = 0; r < n; r++) i[r] = arguments[r];
-            let s = await t(...i);
+            let a = await t(...i);
             try {
-                e(s.instance.exports);
+                e(a.instance.exports);
             } catch {}
-            return s;
+            return a;
         };
     }
 }
-function a() {
+function s() {
     return {
         wasm_memory_bytes: (function () {
             let e = 0;

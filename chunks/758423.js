@@ -2,8 +2,8 @@ n.d(t, { A: () => f });
 var r = n(582128),
     l = n(412703),
     i = n(902173),
-    s = n(53200),
-    u = n(718499),
+    u = n(53200),
+    s = n(718499),
     a = n(291749),
     o = n(795068),
     c = n(652215);
@@ -16,21 +16,21 @@ function f(e, t, n, c) {
         p = r.useRef(!1),
         S = r.useRef(null),
         [C, v] = r.useState(null),
-        [A, g] = r.useState(!1),
-        h = m.taskConfigV2.tasks[l.n.WATCH_VIDEO]?.assets,
+        [A, h] = r.useState(!1),
+        g = m.taskConfigV2.tasks[l.n.WATCH_VIDEO]?.assets,
         I = r.useMemo(() => m.features.includes(i.L.FULL_EPISODE_VIDEO_QUEST), [m.features]),
         T = r.useMemo(
             () =>
-                null != h
-                    ? !A && (0, s.Ap)() && null != h.videoHls
+                null != g
+                    ? !A && (0, u.Ap)() && null != g.videoHls
                         ? a.fY.VIDEO_PLAYER_VIDEO_HLS
                         : I
                           ? null
-                          : E.has(t) || null == h.videoLowRes
+                          : E.has(t) || null == g.videoLowRes
                             ? a.fY.VIDEO_PLAYER_VIDEO
                             : a.fY.VIDEO_PLAYER_VIDEO_LOW_RES
                     : null,
-            [h, t, I, A],
+            [g, t, I, A],
         ),
         D = r.useMemo(
             () =>
@@ -42,10 +42,10 @@ function f(e, t, n, c) {
             [_, T, c],
         );
     function R() {
-        null != S.current && S.current.config.minAutoBitrate !== u.XY && (S.current.config.minAutoBitrate = u.XY);
+        null != S.current && S.current.config.minAutoBitrate !== s.XY && (S.current.config.minAutoBitrate = s.XY);
     }
     let x = r.useCallback(() => {
-        null != S.current && (S.current.config.minAutoBitrate = u.XY);
+        null != S.current && (S.current.config.minAutoBitrate = s.XY);
     }, []);
     return (
         r.useEffect(() => {
@@ -53,12 +53,12 @@ function f(e, t, n, c) {
             let t = !1,
                 r = null;
             return (
-                (0, s.E)().then((l) => {
+                (0, u.E)().then((l) => {
                     if (!t && null != e.current && !p.current) {
-                        if (!l.isSupported()) return void g(!0);
+                        if (!l.isSupported()) return void h(!0);
                         (r = new l({
-                            backBufferLength: u.OJ,
-                            maxBufferLength: u.Bu,
+                            backBufferLength: s.OJ,
+                            maxBufferLength: s.Bu,
                             startPosition: n,
                             startFragPrefetch: !0,
                             startLevel: -1,
@@ -72,7 +72,7 @@ function f(e, t, n, c) {
                 }),
                 () => {
                     t = !0;
-                    let e = (0, s.LA)();
+                    let e = (0, u.LA)();
                     null != r && null != e && r.off(e.Events.FRAG_LOADING, R);
                 }
             );

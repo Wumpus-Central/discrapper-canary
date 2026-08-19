@@ -6,35 +6,35 @@ e.exports.parse = function (e) {
         );
     if (!t) return null;
     t.shift();
-    var n = null,
-        i = [];
-    t[2] && ((n = (a = t[2].split("-")).shift()), (i = a));
-    var r = [];
-    t[5] && (r = t[5].split("-")).shift();
-    var s = [];
+    var r = null,
+        n = [];
+    t[2] && ((r = (a = t[2].split("-")).shift()), (n = a));
+    var o = [];
+    t[5] && (o = t[5].split("-")).shift();
+    var i = [];
     if (t[6]) {
         (a = t[6].split("-")).shift();
-        for (var a, o, l = []; a.length; ) {
+        for (var a, s, l = []; a.length; ) {
             var u = a.shift();
-            1 === u.length ? (o ? (s.push({ singleton: o, extension: l }), (o = u), (l = [])) : (o = u)) : l.push(u);
+            1 === u.length ? (s ? (i.push({ singleton: s, extension: l }), (s = u), (l = [])) : (s = u)) : l.push(u);
         }
-        s.push({ singleton: o, extension: l });
+        i.push({ singleton: s, extension: l });
     }
     var c = [];
     t[7] && ((c = t[7].split("-")).shift(), c.shift());
-    var d = [];
+    var f = [];
     return (
-        t[8] && (d = t[8].split("-")).shift(),
+        t[8] && (f = t[8].split("-")).shift(),
         {
             langtag: {
-                language: { language: n, extlang: i },
+                language: { language: r, extlang: n },
                 script: t[3] || null,
                 region: t[4] || null,
-                variant: r,
-                extension: s,
+                variant: o,
+                extension: i,
                 privateuse: c,
             },
-            privateuse: d,
+            privateuse: f,
             grandfathered: { irregular: t[0] || null, regular: t[1] || null },
         }
     );

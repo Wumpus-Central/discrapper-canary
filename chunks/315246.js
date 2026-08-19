@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => I, n: () => E });
+n.d(t, { A: () => I, n: () => C });
 var l = n(477900),
     i = n(582128),
     s = n(922016),
@@ -16,26 +16,26 @@ var l = n(477900),
     g = n(20805),
     x = n(742424),
     A = n(375708),
-    C = n(725335);
-let E = "content-inventory-context";
+    E = n(725335);
+let C = "content-inventory-context";
 function I(e) {
-    let { user: t, guildId: n, channel: I, entry: y, onSelect: v, disableGameProfileLinks: S } = e,
-        N = i.useRef(null),
-        _ = i.useContext(x.Jd),
-        T = (0, p.A)({ userId: t.id, guildId: n, channelId: I?.id, onAction: _ }),
+    let { user: t, guildId: n, channel: I, entry: y, onSelect: S, disableGameProfileLinks: v } = e,
+        _ = i.useRef(null),
+        N = i.useContext(x.Jd),
+        T = (0, p.A)({ userId: t.id, guildId: n, channelId: I?.id, onAction: N }),
         j = (0, h.A)({ id: t.id, label: A.intl.string(A.t["/AXYnE"]) }),
         b = "application_id" in y.extra ? y.extra.application_id : null,
         R = (0, h.A)({ id: b, label: A.intl.string(A.t["FfCL+6"]) }),
-        O = (0, g.zD)(y),
-        M = (0, f.A)({
+        L = (0, g.zD)(y),
+        O = (0, f.A)({
             location: "ContentPopoutContextMenu",
-            applicationId: O && !0 !== S ? y.extra?.application_id : void 0,
+            applicationId: L && !0 !== v ? y.extra?.application_id : void 0,
             source: m.GameProfileSources.ActivityCardContextMenu,
             trackEntryPointImpression: !0,
             sourceUserId: y.author_id,
         });
     return (0, l.jsx)(s.Y, {
-        targetElementRef: N,
+        targetElementRef: _,
         align: "top",
         position: "right",
         disablePointerEvents: !1,
@@ -43,23 +43,23 @@ function I(e) {
             let { closePopout: t } = e;
             return (0, l.jsx)(r.W, {
                 "data-menu-migrated-auto": !0,
-                navId: E,
+                navId: C,
                 onClose: () => {
                     (0, d.Z_)(), t();
                 },
                 "aria-label": A.intl.string(A.t.liqwPJ),
-                onSelect: v,
+                onSelect: S,
                 children: (0, l.jsxs)(l.Fragment, {
                     children: [
                         (0, l.jsxs)(a.rX, {
                             children: [
                                 T,
-                                null != M &&
+                                null != O &&
                                     (0, l.jsx)(a.Dr, {
                                         id: "game-profile",
                                         label: A.intl.string(A.t.f7aVGn),
                                         action: (e) => {
-                                            M(e), _?.();
+                                            O(e), N?.();
                                         },
                                     }),
                             ],
@@ -74,8 +74,8 @@ function I(e) {
                 asContainer: !0,
                 text: A.intl.string(A.t["UKOtz+"]),
                 children: (0, l.jsx)(u.D, {
-                    innerRef: N,
-                    className: C.r,
+                    innerRef: _,
+                    className: E.r,
                     ...e,
                     children: (0, l.jsx)(c.MoreHorizontalIcon, {
                         color: "currentColor",

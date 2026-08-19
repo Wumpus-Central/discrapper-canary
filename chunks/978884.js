@@ -1,29 +1,29 @@
 "use strict";
-let i = n(221180);
-class r extends Error {
+let n = r(221180);
+class o extends Error {
     constructor(e) {
         super(e), (this.name = "TimeoutError");
     }
 }
-let s = (e, t, n) =>
-    new Promise((s, a) => {
+let i = (e, t, r) =>
+    new Promise((i, a) => {
         if ("number" != typeof t || t < 0) throw TypeError("Expected `milliseconds` to be a positive number");
-        if (t === 1 / 0) return void s(e);
-        let o = setTimeout(() => {
-            if ("function" == typeof n) {
+        if (t === 1 / 0) return void i(e);
+        let s = setTimeout(() => {
+            if ("function" == typeof r) {
                 try {
-                    s(n());
+                    i(r());
                 } catch (e) {
                     a(e);
                 }
                 return;
             }
-            let i = "string" == typeof n ? n : `Promise timed out after ${t} milliseconds`,
-                o = n instanceof Error ? n : new r(i);
-            "function" == typeof e.cancel && e.cancel(), a(o);
+            let n = "string" == typeof r ? r : `Promise timed out after ${t} milliseconds`,
+                s = r instanceof Error ? r : new o(n);
+            "function" == typeof e.cancel && e.cancel(), a(s);
         }, t);
-        i(e.then(s, a), () => {
-            clearTimeout(o);
+        n(e.then(i, a), () => {
+            clearTimeout(s);
         });
     });
-(e.exports = s), (e.exports.default = s), (e.exports.TimeoutError = r);
+(e.exports = i), (e.exports.default = i), (e.exports.TimeoutError = o);

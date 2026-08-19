@@ -1,23 +1,23 @@
-s.d(t, { b: () => d, l: () => m });
-var a = s(627968),
-    r = s(503698),
-    c = s.n(r),
-    n = s(512750),
-    u = s(990208),
-    i = s(568065),
-    l = s(945249),
-    o = s(107836);
-function d(e) {
-    let { className: t } = e;
-    return (0, a.jsx)("img", { className: t, alt: "", src: o });
+a.d(t, { b: () => d, l: () => h });
+var c = a(477900),
+    e = a(503698),
+    r = a.n(e),
+    i = a(512750),
+    n = a(990208),
+    u = a(568065),
+    p = a(657334),
+    l = a(107836);
+function d(s) {
+    let { className: t } = s;
+    return (0, c.jsx)("img", { className: t, alt: "", src: l });
 }
-function m(e) {
-    let { className: t, powerup: s, isHovering: r, forceStaticImage: o } = e,
-        m = (0, u.A)(s, r, o);
-    switch (s.type) {
-        case i.o9.LEVEL:
-            return (0, a.jsx)(d, {});
-        case i.o9.PERK:
-            return (0, a.jsx)("img", { alt: "", src: m, className: c()(l.T, { [l.W]: s.skuId === n.aN }, t) });
+function h(s) {
+    let { className: t, powerup: a, isHovering: e, forceStaticImage: l } = s,
+        h = (0, n.A)(a, e, l);
+    switch (a.type) {
+        case u.o9.LEVEL:
+            return (0, c.jsx)(d, {});
+        case u.o9.PERK:
+            return (0, c.jsx)("img", { alt: "", src: h, className: r()(p.T, { [p.W]: a.skuId === i.aN }, t) });
     }
 }

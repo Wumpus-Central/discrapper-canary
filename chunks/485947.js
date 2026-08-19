@@ -1,17 +1,17 @@
 "use strict";
 n.d(t, { A: () => o });
-var i = n(477900);
+var l = n(477900);
 n(582128);
-var r = n(503698),
-    a = n.n(r),
-    s = n(297264),
-    l = n(443884);
+var i = n(503698),
+    s = n.n(i),
+    r = n(297264),
+    a = n(443884);
 let o = function (e) {
-    let { className: t, children: n, "aria-label": r, id: o } = e;
-    return (0, i.jsx)(s.D, {
+    let { className: t, children: n, "aria-label": i, id: o } = e;
+    return (0, l.jsx)(r.D, {
         variant: "text-sm/medium",
-        className: a()(t, l.k),
-        "aria-label": r,
+        className: s()(t, a.k),
+        "aria-label": i,
         id: o,
         color: "none",
         children: n,

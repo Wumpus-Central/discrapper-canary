@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => R });
+n.d(t, { A: () => O });
 var i = n(385244),
     r = n(718564),
     a = n(807081),
@@ -46,7 +46,7 @@ function N(e) {
 function C(e) {
     return (0, a.$)(o.intl.formatToParts(o.t.ihxM9x, { username: e, usernameOnClick: l.tEg }));
 }
-let R = {
+let O = {
     stringify: function (e, t) {
         let n = (function (e) {
                 let [t] = e.mentions ?? [];
@@ -73,8 +73,8 @@ let R = {
                 );
             case l.lAJ.RECIPIENT_REMOVE:
                 if (null == n) return;
-                let R = e.author;
-                if (null == R || R.id === n.id)
+                let O = e.author;
+                if (null == O || O.id === n.id)
                     return (0, a.$)(o.intl.formatToParts(o.t["Qn5+Lf"], { username: S, usernameOnClick: l.tEg }));
                 return (0, a.$)(
                     o.intl.formatToParts(o.t.QtZ0RD, {
@@ -85,8 +85,8 @@ let R = {
                     }),
                 );
             case l.lAJ.CALL:
-                let { call: O } = e;
-                if (null != O && -1 === O.participants.indexOf(h.default.getId()))
+                let { call: R } = e;
+                if (null != R && -1 === R.participants.indexOf(h.default.getId()))
                     return (0, a.$)(o.intl.formatToParts(o.t.DbgSA0, { username: S, usernameOnClick: l.tEg }));
                 return;
             case l.lAJ.CHANNEL_NAME_CHANGE:
@@ -135,8 +135,8 @@ let R = {
                 );
             case l.lAJ.GUILD_APPLICATION_PREMIUM_SUBSCRIPTION:
                 if (e instanceof A.Ay) return null;
-                let D = (0, u.p_)((0, c.rh)(e));
-                return (0, a.$)((0, _.P)({ application: e.application, username: D.nick }));
+                let y = (0, u.p_)((0, c.rh)(e));
+                return (0, a.$)((0, _.P)({ application: e.application, username: y.nick }));
             case l.lAJ.PRIVATE_CHANNEL_INTEGRATION_ADDED:
                 if (e instanceof A.Ay) return null;
                 return (0, a.$)((0, E.g6)({ application: e.application, username: (0, u.p_)((0, c.rh)(e)).nick }));
@@ -171,7 +171,7 @@ let R = {
                 }
                 return e.content;
             case l.lAJ.GUILD_INCIDENT_ALERT_MODE_ENABLED:
-                var y = e.content;
+                var D = e.content;
                 let v = I.A.getChannel(g);
                 if (null == v) return null;
                 let b = f.A.getGuild(v.getGuildId());
@@ -182,8 +182,8 @@ let R = {
                               username: S,
                               guildName: b.name,
                               time:
-                                  "" !== y
-                                      ? new Date(y).toLocaleString(o.intl.currentLocale, {
+                                  "" !== D
+                                      ? new Date(D).toLocaleString(o.intl.currentLocale, {
                                             hour: "numeric",
                                             minute: "2-digit",
                                         })

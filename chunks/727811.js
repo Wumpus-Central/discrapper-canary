@@ -1,8 +1,8 @@
-A.d(e, { P: () => I });
-var r,
-    I =
-        (((r = {}).NOT_CLAIMED = "NOT_CLAIMED"),
-        (r.CLAIM_IN_PROGRESS = "CLAIM_IN_PROGRESS"),
-        (r.CLAIMED = "CLAIMED"),
-        (r.CANCELLATION_IN_PROGRESS = "CANCELLATION_IN_PROGRESS"),
-        r);
+n.d(e, { P: () => A });
+var i,
+    A =
+        (((i = {}).NOT_CLAIMED = "NOT_CLAIMED"),
+        (i.CLAIM_IN_PROGRESS = "CLAIM_IN_PROGRESS"),
+        (i.CLAIMED = "CLAIMED"),
+        (i.CANCELLATION_IN_PROGRESS = "CANCELLATION_IN_PROGRESS"),
+        i);

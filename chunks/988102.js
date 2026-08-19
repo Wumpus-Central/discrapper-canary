@@ -2,10 +2,10 @@
 n.d(t, { A: () => c });
 let i = /^([\w-+]+(?:\.[\w-+]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,63}(?:\.[a-z]{2})?)$/i,
     r = /^((https:\/\/)?(discord\.gg\/)|(discord\.com\/)(invite\/)?)?[A-Za-z0-9]{8,8}$/,
-    s = /^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$/,
-    a = /^(.*)#[0-9]{1,5}$/,
-    o = /^(https:\/\/)?(discord\.com\/discovery\/game\/)([0-9-]+)\/?/,
-    l = [
+    a = /^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$/,
+    s = /^(.*)#[0-9]{1,5}$/,
+    l = /^(https:\/\/)?(discord\.com\/discovery\/game\/)([0-9-]+)\/?/,
+    o = [
         "@",
         "#",
         ":",
@@ -17,7 +17,7 @@ let i = /^([\w-+]+(?:\.[\w-+]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,63}(?:\
         "sustem message",
         "sustem mesage",
     ],
-    u = ["discordtag", "everyone", "here", "discord nitro", "discord"],
+    d = ["discordtag", "everyone", "here", "discord nitro", "discord"],
     c = {
         isEmail: function (e) {
             return i.test(e);
@@ -26,19 +26,19 @@ let i = /^([\w-+]+(?:\.[\w-+]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,63}(?:\
             return r.test(e);
         },
         isPhoneNumber: function (e) {
-            return s.test(e);
+            return a.test(e);
         },
         isUserTagLike: function (e) {
-            let t = a.exec(e);
+            let t = s.exec(e);
             if (null != t && t.length > 1) {
                 let e = t[1],
-                    n = l.some((t) => e.includes(t)),
-                    i = u.includes(e);
+                    n = o.some((t) => e.includes(t)),
+                    i = d.includes(e);
                 return !n && !i;
             }
             return !1;
         },
         isDiscoveryLink: function (e) {
-            return o.test(e);
+            return l.test(e);
         },
     };

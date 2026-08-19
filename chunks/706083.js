@@ -1,37 +1,37 @@
 "use strict";
-n.d(t, { o: () => h });
-var i = n(730852),
-    r = n(235393),
+n.d(t, { o: () => m });
+var l = n(730852),
+    i = n(235393),
     s = n(376943),
-    a = n(741231),
-    o = n(734057),
-    l = n(696451),
+    r = n(741231),
+    a = n(734057),
+    o = n(696451),
     u = n(71393),
-    c = n(385648);
+    c = n(449054);
 let d = (0, n(945810).mj)({
     name: "2026-02-voice-channel-link-click",
     kind: "user",
     defaultConfig: { navigateOnly: !1 },
     variations: { 1: { navigateOnly: !0 } },
 });
-var _ = n(652215);
-async function h(e, t, n) {
+var h = n(652215);
+async function m(e, t, n) {
     if (null == t) return;
     if (
-        (r.A.trackDiscordLinkClicked({ guildId: e, channelId: t, messageId: n }),
-        null != e && !l.Ay.isCurrentUserGuest(e))
+        (i.A.trackDiscordLinkClicked({ guildId: e, channelId: t, messageId: n }),
+        null != e && !o.Ay.isCurrentUserGuest(e))
     ) {
-        let i = u.A.getGuild(e);
-        if (i?.joinedAt == null)
+        let l = u.A.getGuild(e);
+        if (l?.joinedAt == null)
             try {
                 await c.Z2(e, {}, { channelId: t, messageId: n });
                 return;
             } catch {}
     }
-    let h = o.A.getChannel(t);
-    if (null != h && null == n && h.isGuildVocal() && (0, s.nc)(h)) {
+    let m = a.A.getChannel(t);
+    if (null != m && null == n && m.isGuildVocal() && (0, s.nc)(m)) {
         let { navigateOnly: e } = d.getConfig({ location: "channel_mention" });
-        if (!e) return void i.default.selectVoiceChannel(h.id);
+        if (!e) return void l.default.selectVoiceChannel(m.id);
     }
-    (0, a.A)(_.BVt.CHANNEL(e, t, n));
+    (0, r.A)(h.BVt.CHANNEL(e, t, n));
 }

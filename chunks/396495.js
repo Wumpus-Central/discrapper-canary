@@ -10,8 +10,8 @@ var i = t(503698),
     u = t(403581),
     d = t(139286),
     A = t(174459),
-    h = t(222643),
-    m = t(652215),
+    m = t(222643),
+    h = t(652215),
     C = t(375708),
     E = t(177138);
 function p(e) {
@@ -35,7 +35,7 @@ function p(e) {
                     look: r.$n.Looks.BLANK,
                     size: r.$n.Sizes.NONE,
                     onClick: () => {
-                        t(), A.default.track(m.HAw.HD_STREAMING_POPOUT_DISMISSED);
+                        t(), A.default.track(h.HAw.HD_STREAMING_POPOUT_DISMISSED);
                     },
                     children: (0, l.jsx)(o.P, { size: "xs", className: E.ut, color: "white" }),
                 }),
@@ -69,5 +69,5 @@ function p(e) {
 }
 function g(e) {
     let { ...n } = e;
-    return (0, l.jsx)(h.x, { ...n, renderComponent: (e) => (0, l.jsx)(p, { ...e }) });
+    return (0, l.jsx)(m.x, { ...n, renderComponent: (e) => (0, l.jsx)(p, { ...e }) });
 }

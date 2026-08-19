@@ -10,15 +10,15 @@ var t = l(477900),
     c = l(562819),
     g = l(674658),
     v = l(536572),
-    h = l(919395),
-    f = l(71393),
+    f = l(919395),
+    h = l(71393),
     p = l(19575),
     m = l(84540),
     b = l(854627),
-    I = l(930349),
-    A = l(582128),
-    x = l(993408),
-    C = l(841702),
+    A = l(930349),
+    I = l(582128),
+    C = l(993408),
+    x = l(841702),
     k = l(486020),
     y = l(515718),
     N = l(195292);
@@ -28,8 +28,8 @@ function j(e) {
 var E = l(375708),
     w = l(172742),
     P = l(462397);
-let S = s._3.SIZE_72,
-    R = p.Ay.getEnableHardwareAcceleration() ? u.Js : u.eu;
+let R = s._3.SIZE_72,
+    S = p.Ay.getEnableHardwareAcceleration() ? u.Js : u.eu;
 function D(e) {
     let {
             user: n,
@@ -43,9 +43,9 @@ function D(e) {
         } = e,
         g = (function (e) {
             let { size: n, enabled: l, isInteracting: t } = e,
-                { categories: a, purchases: r } = (0, C.Ay)({ stalePurchasesOK: !0 }),
-                i = A.useMemo(() => (0, x.ps)(r, a).filter(j), [r, a]),
-                s = A.useCallback(
+                { categories: a, purchases: r } = (0, x.Ay)({ stalePurchasesOK: !0 }),
+                i = I.useMemo(() => (0, C.ps)(r, a).filter(j), [r, a]),
+                s = I.useCallback(
                     (e) => {
                         let l = (0, k.F_)({
                             avatarDecoration: { asset: e.asset, skuId: e.skuId },
@@ -58,47 +58,47 @@ function D(e) {
                 ),
                 u = (0, N.A)({ enabled: l, isInteracting: t, items: i, preload: s });
             return null != u ? { asset: u.asset, skuId: u.skuId } : null;
-        })({ size: S, enabled: a && !i && !d, isInteracting: o }),
+        })({ size: R, enabled: a && !i && !d, isInteracting: o }),
         v = null != g,
-        h = v ? "placeholder" : i ? "fallback" : "default",
+        f = v ? "placeholder" : i ? "fallback" : "default",
         {
-            avatarDecorationSrc: f,
+            avatarDecorationSrc: h,
             avatarSrc: p,
             avatarPlaceholderSrc: m,
         } = (0, b.A)({
             userId: n.id,
             guildId: l,
-            size: S,
+            size: R,
             showPending: !0,
             avatarDecorationOverride: v ? g : s ? u : void 0,
             animateOnHover: !o,
         }),
-        I = "default" === h && null != f && o;
-    return (0, t.jsx)(R, {
-        className: r()({ [w.yT]: null == f, [P.O]: "placeholder" === h }),
-        src: I ? p : m,
-        imageClassName: I ? w.WG : void 0,
-        avatarDecoration: f,
-        size: S,
+        A = "default" === f && null != h && o;
+    return (0, t.jsx)(S, {
+        className: r()({ [w.yT]: null == h, [P.O]: "placeholder" === f }),
+        src: A ? p : m,
+        imageClassName: A ? w.WG : void 0,
+        avatarDecoration: h,
+        size: R,
         "aria-hidden": !0,
     });
 }
 function M(e) {
     let { user: n, guildId: l, disabled: a, errorMessageId: r } = e,
         { analyticsLocations: s } = (0, o.Ay)(),
-        u = (0, i.bG)([f.A], () => (null != l ? f.A.getGuild(l) : null)),
+        u = (0, i.bG)([h.A], () => (null != l ? h.A.getGuild(l) : null)),
         p = null != l,
-        b = (0, h.a4)({ user: n }),
-        A = (0, h.a4)({ user: n, guildId: l ?? void 0 }),
-        { pendingAvatarDecoration: x } = (0, h.CP)(l ?? void 0),
-        C = void 0 !== x,
-        k = null === x || (!C && null == A),
+        b = (0, f.a4)({ user: n }),
+        I = (0, f.a4)({ user: n, guildId: l ?? void 0 }),
+        { pendingAvatarDecoration: C } = (0, f.CP)(l ?? void 0),
+        x = void 0 !== C,
+        k = null === C || (!x && null == I),
         y = p && null != b,
         N = k && y,
-        j = (0, d.A)((0, h.lw)({ userValue: b, guildValue: A, pendingValue: x, guildId: l })),
+        j = (0, d.A)((0, f.lw)({ userValue: b, guildValue: I, pendingValue: C, guildId: l })),
         { product: w } = (0, g.q)(j?.skuId),
-        P = C ? null != x : null != A,
-        S =
+        P = x ? null != C : null != I,
+        R =
             null != j && P
                 ? {
                       onClick: () => (0, m.p)({ guildId: l ?? void 0, avatarDecoration: null }),
@@ -106,8 +106,8 @@ function M(e) {
                       accessibleLabel: E.intl.string(y ? E.t.pJsnPf : E.t["2U4Bga"]),
                   }
                 : void 0;
-    return (0, t.jsx)(I.V, {
-        affordance: k && !y ? "add" : S,
+    return (0, t.jsx)(A.A, {
+        affordance: k && !y ? "add" : R,
         variant: "square",
         onClick: function () {
             return (0, c.L)({ analyticsLocations: s, guild: u ?? void 0, stackingBehavior: "stack" });
@@ -120,7 +120,7 @@ function M(e) {
                 : null != l && "" !== l
                   ? l
                   : E.intl.string(t ? E.t.SZPJG4 : E.t.K77yQe);
-        })({ avatarDecorationPreview: j, productName: (0, v.VG)(w), hasPendingSelection: null != x }),
+        })({ avatarDecorationPreview: j, productName: (0, v.VG)(w), hasPendingSelection: null != C }),
         "aria-haspopup": "dialog",
         disabled: a,
         errorMessageId: r,
@@ -130,7 +130,7 @@ function M(e) {
                 guildId: l,
                 isEmpty: k,
                 isPreviewingMainProfileFallback: N,
-                hasPendingChange: C,
+                hasPendingChange: x,
                 avatarDecorationPreview: j,
                 isInteracting: e,
                 disabled: a,

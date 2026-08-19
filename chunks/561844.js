@@ -1,10 +1,10 @@
 "use strict";
 n.d(t, {
     DZ: () => x,
-    LW: () => y,
+    LW: () => D,
     Mm: () => G,
     OQ: () => P,
-    Qg: () => D,
+    Qg: () => y,
     XH: () => U,
     Y5: () => v,
     YE: () => L,
@@ -18,7 +18,7 @@ var i = n(132500),
     r = n(323889),
     a = n(345353),
     s = n(881615),
-    l = n(404851),
+    l = n(824427),
     o = n(95561),
     d = n(69114),
     c = n(265059),
@@ -119,7 +119,7 @@ function L(e, t, n, i, r) {
         o =
             (i === m.HAw.QUEST_APP_STORE_OVERLAY_CLOSED || i === m.HAw.QUEST_APP_STORE_OVERLAY_RETURNED) &&
             void 0 !== r;
-    D({
+    y({
         adContentId: a,
         adCreativeType: s,
         event: i,
@@ -127,7 +127,7 @@ function L(e, t, n, i, r) {
         sourceQuestContent: t.sourceQuestContent,
     });
 }
-function D(e) {
+function y(e) {
     let {
             adContentId: t,
             relatedQuestId: n,
@@ -159,7 +159,7 @@ function D(e) {
         };
     C(r, d, s, !1);
 }
-async function y(e) {
+async function D(e) {
     let {
             questContent: t,
             questContentPosition: n,
@@ -196,7 +196,7 @@ async function v(e) {
         questId: t,
         event: m.HAw.QUEST_CONTENT_CLICKED,
         properties: {
-            ...(await y({
+            ...(await D({
                 questContent: n,
                 questContentPosition: r,
                 questContentRowIndex: a,
@@ -226,12 +226,12 @@ async function b(e) {
         trackGuildAndChannelMetadata: d,
         sourceQuestContent: c,
     } = e;
-    D({
+    y({
         adContentId: t,
         relatedQuestId: n,
         adCreativeType: i,
         event: m.HAw.QUEST_CONTENT_CLICKED,
-        properties: await y({
+        properties: await D({
             questContent: r,
             questContentPosition: s,
             questContentRowIndex: l,

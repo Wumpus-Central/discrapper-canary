@@ -1,10 +1,10 @@
 "use strict";
-n.d(t, { A: () => a });
+n.d(t, { A: () => s });
 var i = n(174459),
     r = n(933024),
-    s = n(652215);
-function a(e) {
+    a = n(652215);
+function s(e) {
     let { tab_opened: t, source: n } = e,
-        a = (0, r.A)();
-    i.default.track(s.HAw.FRIENDS_LIST_CLICKED, { tab_opened: t, source: n, ...a });
+        s = (0, r.A)();
+    i.default.track(a.HAw.FRIENDS_LIST_CLICKED, { tab_opened: t, source: n, ...s });
 }

@@ -34,8 +34,8 @@ function j(e) {
             let { selected: t, isHovered: l } = e;
             return l ? o.A.colors.TEXT_STRONG : t ? o.A.colors.TEXT_BRAND : o.A.colors.INTERACTIVE_TEXT_DEFAULT;
         })({ selected: r, isHovered: p }),
-        _ = i.useCallback(() => j(!0), []),
-        I = i.useCallback(() => j(!1), []),
+        I = i.useCallback(() => j(!0), []),
+        _ = i.useCallback(() => j(!1), []),
         E = i.useRef(null);
     return (0, s.jsx)(c.Y, {
         targetElementRef: E,
@@ -59,8 +59,8 @@ function j(e) {
                 "aria-label": x.intl.string(x.t["UKOtz+"]),
                 children: (0, s.jsxs)("div", {
                     className: v.OS,
-                    onMouseEnter: _,
-                    onMouseLeave: I,
+                    onMouseEnter: I,
+                    onMouseLeave: _,
                     children: [
                         (0, s.jsx)(u.E, {
                             variant: "text-sm/semibold",
@@ -82,9 +82,9 @@ function A(e) {
             lastVisibleIndex: x,
             onItemLayout: A,
             overflowItemsRef: C,
-            itemWidthsRef: _,
+            itemWidthsRef: I,
         } = (0, r.Wv)({ items: a, itemGapPx: 20, maxLines: 1, containerWidth: h }),
-        I = i.useMemo(() => a.slice(0, x + 1), [x, a]),
+        _ = i.useMemo(() => a.slice(0, x + 1), [x, a]),
         E = i.useMemo(() => a.slice(x + 1), [x, a]),
         f = i.useRef(null),
         N = i.useCallback(
@@ -92,10 +92,10 @@ function A(e) {
                 let t = e.contentRect.width;
                 if (null == t || g.current === t) return;
                 m(t), (g.current = t);
-                let l = t - _.current.reduce((e, t, l) => e + t + 20 * (0 !== l));
+                let l = t - I.current.reduce((e, t, l) => e + t + 20 * (0 !== l));
                 c?.(l);
             },
-            [_, c],
+            [I, c],
         );
     (0, p.g)(f, N);
     let S = 0 !== h;
@@ -133,7 +133,7 @@ function A(e) {
                     onItemSelect: o,
                     className: v.vR,
                     children: [
-                        I.map((e) =>
+                        _.map((e) =>
                             (0, s.jsx)(
                                 d.V.Item,
                                 { id: e.id, look: "brand", "aria-label": e.label, className: v.Mf, children: e.label },

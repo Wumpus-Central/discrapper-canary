@@ -10,7 +10,7 @@ function r(e, t) {
     }
     return (e[n] |= 1 << (t % 8)), e;
 }
-function s(e, t) {
+function a(e, t) {
     if (i(e, t)) {
         let n = Math.floor(t / 8),
             i = t % 8;
@@ -18,13 +18,13 @@ function s(e, t) {
     }
     return e;
 }
-function a(e) {
+function s(e) {
     return e instanceof Uint8Array;
 }
-function o(e) {
+function l(e) {
     return null != e && "object" == typeof e && "uint8array" === e.__tag__;
 }
-n.d(t, { I: () => o, Vf: () => r, We: () => s, c0: () => i, mg: () => a }),
+n.d(t, { I: () => l, Vf: () => r, We: () => a, c0: () => i, mg: () => s }),
     n(393431),
     n(532706),
     n(42231),

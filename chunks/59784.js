@@ -1,7 +1,7 @@
-n.d(t, { A: () => A });
+n.d(t, { A: () => x });
 var i = n(448761),
-    s = n(17928),
-    l = n(228366),
+    l = n(17928),
+    s = n(228366),
     a = n(935208),
     r = n(751877),
     o = n(88001),
@@ -9,14 +9,14 @@ var i = n(448761),
 let d = new Map(),
     u = !1,
     m = !1;
-function x(e) {
+function h(e) {
     return null != e.removed_at ? o.xI.REMOVED : null != e.accepted_at ? o.xI.ACCEPTED : o.xI.PENDING;
 }
-function h(e) {
-    let { messages: t } = e;
-    return t.map((e) => g(e)).some(Boolean);
-}
 function g(e) {
+    let { messages: t } = e;
+    return t.map((e) => p(e)).some(Boolean);
+}
+function p(e) {
     if (e.type !== i.l.PREMIUM_GROUP_INVITE) return !1;
     let t = e.content;
     if (null == t || "" === t || !a.default.isProbablyAValidSnowflake(t)) return !1;
@@ -24,11 +24,11 @@ function g(e) {
     return (
         (null == n || n.state === o.xI.UNKNOWN) &&
         (d.set(t, { state: o.xI.FETCHING, invite: null, errorStatus: null }),
-        l.h.wait(() => (0, r.el)(t).catch(c.FXj)),
+        s.h.wait(() => (0, r.el)(t).catch(c.FXj)),
         !0)
     );
 }
-class _ extends s.Ay.Store {
+class A extends l.Ay.Store {
     static displayName = "PremiumGroupInviteStore";
     getInvite(e) {
         return d.get(e) ?? null;
@@ -53,13 +53,13 @@ class _ extends s.Ay.Store {
         return m;
     }
 }
-let A = new _(l.h, {
+let x = new A(s.h, {
     PREMIUM_GROUP_INVITES_FETCH_START: function () {
         m = !0;
     },
     PREMIUM_GROUP_INVITES_FETCH_SUCCESS: function (e) {
         let { invites: t } = e;
-        for (let e of ((m = !1), (u = !0), t)) d.set(e.id, { state: x(e), invite: e, errorStatus: null });
+        for (let e of ((m = !1), (u = !0), t)) d.set(e.id, { state: h(e), invite: e, errorStatus: null });
     },
     PREMIUM_GROUP_INVITES_FETCH_FAIL: function () {
         m = !1;
@@ -70,7 +70,7 @@ let A = new _(l.h, {
     },
     PREMIUM_GROUP_INVITE_FETCH_SUCCESS: function (e) {
         let { subscriptionGroupMemberId: t, invite: n } = e;
-        d.set(t, { state: x(n), invite: n, errorStatus: null });
+        d.set(t, { state: h(n), invite: n, errorStatus: null });
     },
     PREMIUM_GROUP_INVITE_FETCH_FAIL: function (e) {
         let { subscriptionGroupMemberId: t, status: n } = e,
@@ -89,11 +89,11 @@ let A = new _(l.h, {
             n = d.get(t);
         if (n?.invite == null) return !1;
         let i = n.invite.subscription,
-            s = new Date().toISOString();
+            l = new Date().toISOString();
         for (let [e, n] of d)
             e !== t &&
                 n.invite?.subscription === i &&
-                d.set(e, { state: o.xI.REMOVED, invite: { ...n.invite, removed_at: s }, errorStatus: null });
+                d.set(e, { state: o.xI.REMOVED, invite: { ...n.invite, removed_at: l }, errorStatus: null });
     },
     PREMIUM_GROUP_ACCEPT_INVITE_FAIL: function (e) {
         let { subscriptionGroupMemberId: t } = e,
@@ -134,11 +134,11 @@ let A = new _(l.h, {
     },
     MESSAGE_CREATE: function (e) {
         let { message: t } = e;
-        return g(t);
+        return p(t);
     },
-    LOCAL_MESSAGES_LOADED: h,
-    LOAD_MESSAGES_SUCCESS: h,
-    LOAD_MESSAGES_AROUND_SUCCESS: h,
+    LOCAL_MESSAGES_LOADED: g,
+    LOAD_MESSAGES_SUCCESS: g,
+    LOAD_MESSAGES_AROUND_SUCCESS: g,
     LOGOUT: function () {
         (d = new Map()), (u = !1), (m = !1);
     },

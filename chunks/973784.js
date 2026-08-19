@@ -1,29 +1,29 @@
 "use strict";
-e.exports = function (e, t, n, i) {
-    (t = t || "&"), (n = n || "=");
-    var r = {};
-    if ("string" != typeof e || 0 === e.length) return r;
-    var s = /\+/g;
+e.exports = function (e, t, r, n) {
+    (t = t || "&"), (r = r || "=");
+    var o = {};
+    if ("string" != typeof e || 0 === e.length) return o;
+    var i = /\+/g;
     e = e.split(t);
     var a = 1e3;
-    i && "number" == typeof i.maxKeys && (a = i.maxKeys);
-    var o = e.length;
-    a > 0 && o > a && (o = a);
-    for (var l = 0; l < o; ++l) {
+    n && "number" == typeof n.maxKeys && (a = n.maxKeys);
+    var s = e.length;
+    a > 0 && s > a && (s = a);
+    for (var l = 0; l < s; ++l) {
         var u,
             c,
-            d,
-            _,
-            h = e[l].replace(s, "%20"),
-            f = h.indexOf(n);
-        (f >= 0 ? ((u = h.substr(0, f)), (c = h.substr(f + 1))) : ((u = h), (c = "")),
-        (d = decodeURIComponent(u)),
-        (_ = decodeURIComponent(c)),
-        Object.prototype.hasOwnProperty.call(r, d))
-            ? Array.isArray(r[d])
-                ? r[d].push(_)
-                : (r[d] = [r[d], _])
-            : (r[d] = _);
+            f,
+            p,
+            d = e[l].replace(i, "%20"),
+            h = d.indexOf(r);
+        (h >= 0 ? ((u = d.substr(0, h)), (c = d.substr(h + 1))) : ((u = d), (c = "")),
+        (f = decodeURIComponent(u)),
+        (p = decodeURIComponent(c)),
+        Object.prototype.hasOwnProperty.call(o, f))
+            ? Array.isArray(o[f])
+                ? o[f].push(p)
+                : (o[f] = [o[f], p])
+            : (o[f] = p);
     }
-    return r;
+    return o;
 };

@@ -1,4 +1,4 @@
-n.d(t, { Ay: () => S, CY: () => E, ti: () => h });
+n.d(t, { Ay: () => y, CY: () => f, ti: () => C });
 var l,
     i = n(477900);
 n(582128);
@@ -11,16 +11,16 @@ var r = n(503698),
     d = n(866665),
     p = n(999784),
     m = n(375708),
-    C = n(864004),
-    h =
+    h = n(864004),
+    C =
         (((l = {})[(l.CONTINUE = 0)] = "CONTINUE"),
         (l[(l.UPGRADE = 1)] = "UPGRADE"),
         (l[(l.PURCHASE = 2)] = "PURCHASE"),
         l);
-function E(e) {
+function f(e) {
     return 2 === e ? "expressive" : 0 === e ? "primary" : "active";
 }
-function f(e) {
+function E(e) {
     let {
             primaryIcon: t,
             primaryCTA: n,
@@ -34,24 +34,24 @@ function f(e) {
             type: l,
             disabled: a,
             onClick: u,
-            icon: null == t ? void 0 : () => (0, i.jsx)(t, { color: "currentColor", className: C.C4 }),
+            icon: null == t ? void 0 : () => (0, i.jsx)(t, { color: "currentColor", className: h.C4 }),
             loading: s,
             text: r,
         };
-    return 2 === n ? (0, i.jsx)(o.$, { variant: E(n), ...c }) : (0, i.jsx)(o.$, { ...c, variant: E(n) });
+    return 2 === n ? (0, i.jsx)(o.$, { variant: f(n), ...c }) : (0, i.jsx)(o.$, { ...c, variant: f(n) });
 }
-function A(e) {
+function S(e) {
     let {
             onBack: t,
             backText: n,
             primaryIcon: l,
             primaryCTA: r,
             primaryType: o,
-            primaryText: h,
-            primaryTooltip: E,
-            primaryDisabled: A,
-            primarySubmitting: S,
-            onPrimary: y,
+            primaryText: C,
+            primaryTooltip: f,
+            primaryDisabled: S,
+            primarySubmitting: y,
+            onPrimary: A,
         } = e,
         P =
             null == t
@@ -66,25 +66,25 @@ function A(e) {
             children: [
                 (0, i.jsx)(p.A, {}),
                 (function () {
-                    if (null == r || null == h) return null;
+                    if (null == r || null == C) return null;
                     let e = {
                         primaryIcon: l,
                         primaryCTA: r,
                         primaryType: o,
-                        primaryText: h,
-                        primaryDisabled: A,
-                        primarySubmitting: S,
-                        onPrimary: y,
+                        primaryText: C,
+                        primaryDisabled: S,
+                        primarySubmitting: y,
+                        onPrimary: A,
                     };
-                    return null != E
-                        ? (0, i.jsx)(d.m, { text: E, asContainer: !0, children: (0, i.jsx)(f, { ...e }) })
-                        : (0, i.jsx)(f, { ...e, onPrimary: y });
+                    return null != f
+                        ? (0, i.jsx)(d.m, { text: f, asContainer: !0, children: (0, i.jsx)(E, { ...e }) })
+                        : (0, i.jsx)(E, { ...e, onPrimary: A });
                 })(),
             ],
         });
     return (0, i.jsx)(c.j, {
-        children: (0, i.jsxs)("div", { className: a()(C.eT, { [C.T$]: null == P }), children: [P, I] }),
+        children: (0, i.jsxs)("div", { className: a()(h.eT, { [h.T$]: null == P }), children: [P, I] }),
     });
 }
-A.CTAType = h;
-let S = A;
+S.CTAType = C;
+let y = S;

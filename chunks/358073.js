@@ -1,10 +1,10 @@
 "use strict";
-var i = n(603763),
-    r = n(949893),
-    s = n(591082),
-    a = n(862400);
+var n = r(603763),
+    o = r(949893),
+    i = r(591082),
+    a = r(862400);
 e.exports = function (e) {
-    if ("number" != typeof e || s(e) || !a(e)) return !1;
-    var t = i(e);
-    return r(t) === t;
+    if ("number" != typeof e || i(e) || !a(e)) return !1;
+    var t = n(e);
+    return o(t) === t;
 };

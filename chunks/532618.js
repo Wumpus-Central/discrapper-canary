@@ -1,10 +1,10 @@
-let i = n(864886);
-e.exports = (e, t, n = !1) => {
-    if (e instanceof i) return e;
+let n = r(864886);
+e.exports = (e, t, r = !1) => {
+    if (e instanceof n) return e;
     try {
-        return new i(e, t);
+        return new n(e, t);
     } catch (e) {
-        if (!n) return null;
+        if (!r) return null;
         throw e;
     }
 };

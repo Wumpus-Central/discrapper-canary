@@ -1,42 +1,42 @@
 "use strict";
-var i = n(933373);
-function r() {}
-function s() {}
-(s.resetWarningCache = r),
-    (e.exports = function () {
-        function e(e, t, n, r, s, a) {
-            if (a !== i) {
-                var o = Error(
+var n = e(933373);
+function o() {}
+function i() {}
+(i.resetWarningCache = o),
+    (t.exports = function () {
+        function t(t, r, e, o, i, f) {
+            if (f !== n) {
+                var u = Error(
                     "Calling PropTypes validators directly is not supported by the `prop-types` package. Use PropTypes.checkPropTypes() to call them. Read more at http://fb.me/use-check-prop-types",
                 );
-                throw ((o.name = "Invariant Violation"), o);
+                throw ((u.name = "Invariant Violation"), u);
             }
         }
-        function t() {
-            return e;
+        function r() {
+            return t;
         }
-        e.isRequired = e;
-        var n = {
-            array: e,
-            bool: e,
-            func: e,
-            number: e,
-            object: e,
-            string: e,
-            symbol: e,
-            any: e,
-            arrayOf: t,
-            element: e,
-            elementType: e,
-            instanceOf: t,
-            node: e,
-            objectOf: t,
-            oneOf: t,
-            oneOfType: t,
-            shape: t,
-            exact: t,
-            checkPropTypes: s,
-            resetWarningCache: r,
+        t.isRequired = t;
+        var e = {
+            array: t,
+            bool: t,
+            func: t,
+            number: t,
+            object: t,
+            string: t,
+            symbol: t,
+            any: t,
+            arrayOf: r,
+            element: t,
+            elementType: t,
+            instanceOf: r,
+            node: t,
+            objectOf: r,
+            oneOf: r,
+            oneOfType: r,
+            shape: r,
+            exact: r,
+            checkPropTypes: i,
+            resetWarningCache: o,
         };
-        return (n.PropTypes = n), n;
+        return (e.PropTypes = e), e;
     });

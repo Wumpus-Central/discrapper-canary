@@ -1,8 +1,8 @@
 "use strict";
-n.d(t, { A: () => a });
+n.d(t, { A: () => s });
 var i = n(306173),
     r = n(439372);
-class s extends r.A {
+class a extends r.A {
     intervalID;
     _initialize() {
         if ((0, i.xd)()) {
@@ -12,4 +12,4 @@ class s extends r.A {
         }
     }
 }
-let a = new s();
+let s = new a();

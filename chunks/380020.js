@@ -1,17 +1,17 @@
 "use strict";
-n.d(t, { A: () => l });
+n.d(t, { A: () => o });
 var i = n(228366),
     r = n(439372),
-    s = n(461213);
-class a extends r.A {
-    stores = new Map().set(s.A, o);
+    a = n(461213);
+class s extends r.A {
+    stores = new Map().set(a.A, l);
 }
-function o() {
+function l() {
     i.h.dispatch({
         type: "SELF_PRESENCE_STORE_UPDATE",
-        status: s.A.getStatus(),
-        activities: s.A.getActivities(!0),
-        hiddenActivities: s.A.getHiddenActivities(),
+        status: a.A.getStatus(),
+        activities: a.A.getActivities(!0),
+        hiddenActivities: a.A.getHiddenActivities(),
     });
 }
-let l = new a();
+let o = new s();

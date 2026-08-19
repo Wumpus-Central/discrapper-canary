@@ -46,15 +46,15 @@ t(393431),
                         n = [];
                     for (let r = 0; r < t; r++) {
                         let t = o * r,
-                            l = 0;
+                            a = 0;
                         for (let r = 0; r < o; r++) {
                             let o = t + r;
-                            o < e.length && (l += Math.abs(e[o]));
+                            o < e.length && (a += Math.abs(e[o]));
                         }
-                        n.push(l / o);
+                        n.push(a / o);
                     }
-                    let l = Math.max(...n, 0.001);
-                    return n.map((e) => e / l);
+                    let a = Math.max(...n, 0.001);
+                    return n.map((e) => e / a);
                 })(o, t);
             self.postMessage({ waveform: n });
         } catch (r) {

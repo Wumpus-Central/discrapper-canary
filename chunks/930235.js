@@ -1,4 +1,4 @@
-r.d(t, { i: () => y });
+r.d(t, { i: () => p });
 var n = r(72867),
     i = r(914707),
     o = r(582128);
@@ -14,19 +14,19 @@ function a(e) {
                       : typeof e;
               })(e);
 }
-function s(e, t, r) {
+function u(e, t, r) {
     return (
         t in e ? Object.defineProperty(e, t, { value: r, enumerable: !0, configurable: !0, writable: !0 }) : (e[t] = r),
         e
     );
 }
-var u = (function () {
+var c = (function () {
         var e;
         function t(e, r, n) {
             if (!(this instanceof t)) throw TypeError("Cannot call a class as a function");
-            s(this, "spec", void 0),
-                s(this, "monitor", void 0),
-                s(this, "connector", void 0),
+            u(this, "spec", void 0),
+                u(this, "monitor", void 0),
+                u(this, "connector", void 0),
                 (this.spec = e),
                 (this.monitor = r),
                 (this.connector = n);
@@ -87,96 +87,96 @@ var u = (function () {
             t
         );
     })(),
-    c = r(225995),
+    s = r(225995),
     l = r(321733);
-function f(e, t) {
+function d(e, t) {
     (null == t || t > e.length) && (t = e.length);
     for (var r = 0, n = Array(t); r < t; r++) n[r] = e[r];
     return n;
 }
-var d = r(25444),
-    h = r(894189),
-    g = r(875428),
-    p = r(619740);
-function y(e, t) {
+var f = r(25444),
+    g = r(894189),
+    h = r(875428),
+    v = r(619740);
+function p(e, t) {
     var r,
         a,
-        s,
+        u,
+        p,
         y,
-        v,
         b,
         m,
-        w,
+        D,
         I,
-        O = (0, d.I)(e, t);
+        S = (0, f.I)(e, t);
     (0, l.V)(
-        !O.begin,
+        !S.begin,
         "useDrag::spec.begin was deprecated in v14. Replace spec.begin() with spec.item(). (see more here - https://react-dnd.github.io/react-dnd/docs/api/use-drag)",
     );
     var k =
-            ((r = (0, c.u)()),
+            ((r = (0, s.u)()),
             (0, o.useMemo)(
                 function () {
-                    return new h.G(r);
+                    return new g.G(r);
                 },
                 [r],
             )),
-        D =
-            ((a = O.options),
-            (s = O.previewOptions),
-            (y = (0, c.u)()),
-            (v = (0, o.useMemo)(
+        O =
+            ((a = S.options),
+            (u = S.previewOptions),
+            (p = (0, s.u)()),
+            (y = (0, o.useMemo)(
                 function () {
-                    return new g.b(y.getBackend());
+                    return new h.b(p.getBackend());
                 },
-                [y],
+                [p],
             )),
             (0, i.E)(
                 function () {
                     return (
-                        (v.dragSourceOptions = a || null),
-                        v.reconnect(),
+                        (y.dragSourceOptions = a || null),
+                        y.reconnect(),
                         function () {
-                            return v.disconnectDragSource();
+                            return y.disconnectDragSource();
                         }
                     );
                 },
-                [v, a],
+                [y, a],
             ),
             (0, i.E)(
                 function () {
                     return (
-                        (v.dragPreviewOptions = s || null),
-                        v.reconnect(),
+                        (y.dragPreviewOptions = u || null),
+                        y.reconnect(),
                         function () {
-                            return v.disconnectDragPreview();
+                            return y.disconnectDragPreview();
                         }
                     );
                 },
-                [v, s],
+                [y, u],
             ),
-            v);
+            y);
     return (
-        (b = (0, c.u)()),
+        (b = (0, s.u)()),
         (m = (0, o.useMemo)(
             function () {
-                return new u(O, k, D);
+                return new c(S, k, O);
             },
-            [k, D],
+            [k, O],
         )),
         (0, o.useEffect)(
             function () {
-                m.spec = O;
+                m.spec = S;
             },
-            [O],
+            [S],
         ),
-        (w = m),
+        (D = m),
         (I = (0, o.useMemo)(
             function () {
-                var e = O.type;
+                var e = S.type;
                 return (0, l.V)(null != e, "spec.type must be defined"), e;
             },
-            [O],
+            [S],
         )),
         (0, i.E)(
             function () {
@@ -185,7 +185,7 @@ function y(e, t) {
                         t =
                             (function (e) {
                                 if (Array.isArray(e)) return e;
-                            })((e = (0, n.V)(I, w, b))) ||
+                            })((e = (0, n.V)(I, D, b))) ||
                             (function (e) {
                                 var t,
                                     r,
@@ -217,7 +217,7 @@ function y(e, t) {
                             })(e) ||
                             (function (e) {
                                 if (e) {
-                                    if ("string" == typeof e) return f(e, 2);
+                                    if ("string" == typeof e) return d(e, 2);
                                     var t = Object.prototype.toString.call(e).slice(8, -1);
                                     if (
                                         ("Object" === t && e.constructor && (t = e.constructor.name),
@@ -225,7 +225,7 @@ function y(e, t) {
                                     )
                                         return Array.from(e);
                                     if ("Arguments" === t || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t))
-                                        return f(e, 2);
+                                        return d(e, 2);
                                 }
                             })(e) ||
                             (function () {
@@ -235,24 +235,24 @@ function y(e, t) {
                             })(),
                         r = t[0],
                         i = t[1];
-                    return k.receiveHandlerId(r), D.receiveHandlerId(r), i;
+                    return k.receiveHandlerId(r), O.receiveHandlerId(r), i;
                 }
             },
-            [b, k, D, w, I],
+            [b, k, O, D, I],
         ),
         [
-            (0, p.j)(O.collect, k, D),
+            (0, v.j)(S.collect, k, O),
             (0, o.useMemo)(
                 function () {
-                    return D.hooks.dragSource();
+                    return O.hooks.dragSource();
                 },
-                [D],
+                [O],
             ),
             (0, o.useMemo)(
                 function () {
-                    return D.hooks.dragPreview();
+                    return O.hooks.dragPreview();
                 },
-                [D],
+                [O],
             ),
         ]
     );

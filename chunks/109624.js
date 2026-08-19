@@ -1,12 +1,12 @@
 "use strict";
-n.d(t, { A: () => d });
+n.d(t, { A: () => u });
 var i = n(439372),
     r = n(952818),
-    s = n(616356),
-    a = n(495544),
-    o = n(458977),
-    l = n(572164),
-    u = n(696016);
+    a = n(616356),
+    s = n(280450),
+    l = n(458977),
+    o = n(572164),
+    d = n(696016);
 class c extends i.A {
     callback = null;
     actions = { CLIPS_REMOTE_TRIGGER: (e) => this.handleRemoteClipTrigger(e) };
@@ -18,12 +18,12 @@ class c extends i.A {
     }
     handleRemoteClipTrigger(e) {
         let { userId: t, applicationId: n, partyId: i, remoteClipId: c } = e;
-        !o.A.getConfig({ location: "maybeSendRemoteClipTrigger" }).enableDistributedClips ||
-            t === a.default.getId() ||
-            (u.nx.info("Received remote clip trigger", { userId: t, applicationId: n, partyId: i }),
+        !l.A.getConfig({ location: "maybeSendRemoteClipTrigger" }).enableDistributedClips ||
+            t === s.default.getId() ||
+            (d.nx.info("Received remote clip trigger", { userId: t, applicationId: n, partyId: i }),
             null == r.Ay.getVisibleRunningGames().find((e) => e.id === n) ||
-                (null != s.A.getCurrentUserActiveStream() && s.A.getStreamerActiveStreamMetadata()?.id !== n) ||
-                ((null != s.A.getCurrentUserActiveStream() || (0, l.Ao)()) && this.callback?.(t, c)));
+                (null != a.A.getCurrentUserActiveStream() && a.A.getStreamerActiveStreamMetadata()?.id !== n) ||
+                ((null != a.A.getCurrentUserActiveStream() || (0, o.Ao)()) && this.callback?.(t, c)));
     }
 }
-let d = new c();
+let u = new c();

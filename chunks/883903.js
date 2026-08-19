@@ -39,8 +39,8 @@ i.r(n),
         gzipSync: () => tZ,
         inflate: () => tD,
         inflateSync: () => tU,
-        strFromU8: () => t8,
-        strToU8: () => t5,
+        strFromU8: () => t5,
+        strToU8: () => t8,
         unzip: () => nv,
         unzipSync: () => nd,
         unzlib: () => tR,
@@ -1344,12 +1344,12 @@ var t0 = function (t) {
         }
         return (
             (t.prototype.push = function (t, n) {
-                this.ondata || Z(5), this.d && Z(4), this.ondata(t5(t), (this.d = n || !1));
+                this.ondata || Z(5), this.d && Z(4), this.ondata(t8(t), (this.d = n || !1));
             }),
             t
         );
     })();
-function t5(t, n) {
+function t8(t, n) {
     if (n) {
         for (var i = new e(t.length), r = 0; r < t.length; ++r) i[r] = t.charCodeAt(r);
         return i;
@@ -1380,7 +1380,7 @@ function t5(t, n) {
     }
     return I(s, 0, a);
 }
-function t8(t, n) {
+function t5(t, n) {
     if (n) {
         for (var i = "", r = 0; r < t.length; r += 16384)
             i += String.fromCharCode.apply(null, t.subarray(r, r + 16384));
@@ -1399,7 +1399,7 @@ var t6 = function (t) {
     },
     t7 = function (t, n, i) {
         var r = tl(t, n + 28),
-            e = t8(t.subarray(n + 46, n + 46 + r), !(2048 & tl(t, n + 8))),
+            e = t5(t.subarray(n + 46, n + 46 + r), !(2048 & tl(t, n + 8))),
             o = n + 46 + r,
             s = tp(t, n + 20),
             a = i && 0xffffffff == s ? t9(t, o) : [s, tp(t, n + 24), tp(t, n + 42)],
@@ -1543,10 +1543,10 @@ var t6 = function (t) {
                 var n = this;
                 if ((this.ondata || Z(5), 2 & this.d)) this.ondata(Z(4 + 8 * (1 & this.d), 0, 1), null, !1);
                 else {
-                    var i = t5(t.filename),
+                    var i = t8(t.filename),
                         r = i.length,
                         o = t.comment,
-                        s = o && t5(o),
+                        s = o && t8(o),
                         a = r != t.filename.length || (s && o.length != s.length),
                         u = r + nt(t.extra) + 30;
                     r > 65535 && this.ondata(Z(11, 0, 1), null, !1);
@@ -1677,10 +1677,10 @@ function na(t, n, i) {
                     d = Y(),
                     g = e.length;
                 d.p(e);
-                var y = t5(n),
+                var y = t8(n),
                     m = y.length,
                     b = h.comment,
-                    w = b && t5(b),
+                    w = b && t8(b),
                     z = w && w.length,
                     x = nt(h.extra),
                     k = 8 * (0 != h.level),
@@ -1731,9 +1731,9 @@ function nu(t, n) {
             h = u[0],
             f = u[1],
             c = 8 * (0 != f.level),
-            l = (S = t5(a)).length,
+            l = (S = t8(a)).length,
             p = f.comment,
-            v = p && t5(p),
+            v = p && t8(p),
             d = v && v.length,
             g = nt(f.extra);
         l > 65535 && Z(11);
@@ -1859,7 +1859,7 @@ var nh = (function () {
                                         var g,
                                             y = tp(h, a + 18),
                                             m = tp(h, a + 22),
-                                            b = t8(h.subarray(a + 30, (a += 30 + l)), !(2048 & r));
+                                            b = t5(h.subarray(a + 30, (a += 30 + l)), !(2048 & r));
                                         0xffffffff == y
                                             ? ((y = (t = o ? [-2] : t9(h, a))[0]), (m = t[1]))
                                             : o && (y = -1),

@@ -8,7 +8,7 @@ var a = n(477900),
     c = n(892227),
     o = n(492462),
     d = n(17928),
-    m = n(312640),
+    m = n(273875),
     f = n(916845),
     x = n(834730),
     h = n(43990),
@@ -23,8 +23,8 @@ var a = n(477900),
     k = n(920050),
     E = n(94264),
     p = n(549384),
-    S = n(566119),
-    y = n(202541),
+    y = n(566119),
+    S = n(202541),
     O = n(652215),
     D = n(901123),
     M = n(490285),
@@ -40,13 +40,13 @@ function B() {
     });
 }
 function F() {
-    (0, S.RQ)(), (0, C.pX)(D.BV.NITRO_HOME, { search: (0, o.stringify)({ perk: k.NITRO_ORBS_REWARDS_CARD_ID }) });
+    (0, y.RQ)(), (0, C.pX)(D.BV.NITRO_HOME, { search: (0, o.stringify)({ perk: k.NITRO_ORBS_REWARDS_CARD_ID }) });
 }
 function U() {
-    (0, S.gP)(), (0, C.pX)(D.BV.NITRO_HOME, { search: (0, o.stringify)({ section: p.L }) });
+    (0, y.gP)(), (0, C.pX)(D.BV.NITRO_HOME, { search: (0, o.stringify)({ section: p.L }) });
 }
 function I() {
-    (0, S.b)(), window.open(N.A.getArticleURL(O.MVz.ORBS_FAQ), "_blank");
+    (0, y.b)(), window.open(N.A.getArticleURL(O.MVz.ORBS_FAQ), "_blank");
 }
 function $(e) {
     let { targetElementRef: t, shouldShow: n, onRequestClose: r, ctaText: i, ctaOnClick: u } = e,
@@ -56,8 +56,8 @@ function $(e) {
         N = (0, d.bG)([A.default], () => A.default.getCurrentUser()),
         { balance: k } = (0, b.W)(),
         p = !(0, R.ki)(N),
-        S = l.useMemo(() => {
-            let e = (0, R.YE)(N, y.PremiumTypes.TIER_2);
+        y = l.useMemo(() => {
+            let e = (0, R.YE)(N, S.PremiumTypes.TIER_2);
             if (!o || p) return null;
             if (e && null != C) {
                 let e = (0, c.default)(new Date(C.next_reward_date), new Date());
@@ -120,7 +120,7 @@ function $(e) {
                                                             }),
                                                         ],
                                                     }),
-                                                S,
+                                                y,
                                             ],
                                         }),
                                         (0, a.jsx)(j.$, {
@@ -223,7 +223,7 @@ function Z(e) {
                 }),
             [c, n, o, R, r],
         ),
-        S = l.useMemo(
+        y = l.useMemo(
             () =>
                 (0, a.jsx)($, {
                     targetElementRef: N,
@@ -249,7 +249,7 @@ function Z(e) {
                 onClick: R,
                 showNotificationBadge: t,
             }),
-            x ? S : v && (0, a.jsx)("div", { className: s()(Y.Ui, d, { [Y.R]: C, [Y.RK]: !C }), ref: E, children: p }),
+            x ? y : v && (0, a.jsx)("div", { className: s()(Y.Ui, d, { [Y.R]: C, [Y.RK]: !C }), ref: E, children: p }),
         ],
     });
 }

@@ -1,6 +1,6 @@
 "use strict";
-var i = n(249759),
-    r = n(242841);
+var n = r(249759),
+    o = r(242841);
 e.exports = function () {
-    return i(), "function" == typeof Promise.allSettled ? Promise.allSettled : r;
+    return n(), "function" == typeof Promise.allSettled ? Promise.allSettled : o;
 };

@@ -4,39 +4,39 @@
             "stycze\u0144_luty_marzec_kwiecie\u0144_maj_czerwiec_lipiec_sierpie\u0144_wrzesie\u0144_pa\u017Adziernik_listopad_grudzie\u0144".split(
                 "_",
             ),
-        n =
+        i =
             "stycznia_lutego_marca_kwietnia_maja_czerwca_lipca_sierpnia_wrze\u015Bnia_pa\u017Adziernika_listopada_grudnia".split(
                 "_",
             );
-    function i(e) {
+    function a(e) {
         return e % 10 < 5 && e % 10 > 1 && ~~(e / 10) % 10 != 1;
     }
-    function r(e, t, n) {
-        var r = e + " ";
-        switch (n) {
+    function s(e, t, i) {
+        var s = e + " ";
+        switch (i) {
             case "ss":
-                return r + (i(e) ? "sekundy" : "sekund");
+                return s + (a(e) ? "sekundy" : "sekund");
             case "m":
                 return t ? "minuta" : "minut\u0119";
             case "mm":
-                return r + (i(e) ? "minuty" : "minut");
+                return s + (a(e) ? "minuty" : "minut");
             case "h":
                 return t ? "godzina" : "godzin\u0119";
             case "hh":
-                return r + (i(e) ? "godziny" : "godzin");
+                return s + (a(e) ? "godziny" : "godzin");
             case "MM":
-                return r + (i(e) ? "miesi\u0105ce" : "miesi\u0119cy");
+                return s + (a(e) ? "miesi\u0105ce" : "miesi\u0119cy");
             case "yy":
-                return r + (i(e) ? "lata" : "lat");
+                return s + (a(e) ? "lata" : "lat");
         }
     }
     e.defineLocale("pl", {
-        months: function (e, i) {
+        months: function (e, a) {
             return e
-                ? "" === i
-                    ? "(" + n[e.month()] + "|" + t[e.month()] + ")"
-                    : /D MMMM/.test(i)
-                      ? n[e.month()]
+                ? "" === a
+                    ? "(" + i[e.month()] + "|" + t[e.month()] + ")"
+                    : /D MMMM/.test(a)
+                      ? i[e.month()]
                       : t[e.month()]
                 : t;
         },
@@ -88,20 +88,20 @@
             future: "za %s",
             past: "%s temu",
             s: "kilka sekund",
-            ss: r,
-            m: r,
-            mm: r,
-            h: r,
-            hh: r,
+            ss: s,
+            m: s,
+            mm: s,
+            h: s,
+            hh: s,
             d: "1 dzie\u0144",
             dd: "%d dni",
             M: "miesi\u0105c",
-            MM: r,
+            MM: s,
             y: "rok",
-            yy: r,
+            yy: s,
         },
         dayOfMonthOrdinalParse: /\d{1,2}\./,
         ordinal: "%d.",
         week: { dow: 1, doy: 4 },
     });
-})(n(989349));
+})(i(989349));

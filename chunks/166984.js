@@ -1,6 +1,6 @@
 "use strict";
 n(823560);
-var r = n(452162).Object,
+var r = n(229781).Object,
     a = (e.exports = function (e, t) {
         return r.getOwnPropertyDescriptor(e, t);
     });

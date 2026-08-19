@@ -1,43 +1,43 @@
 "use strict";
-n.d(t, { A: () => m });
+n.d(t, { A: () => f });
 var i = n(439372),
     r = n(91777),
-    s = n(312006),
-    a = n(105530),
-    o = n(288737),
-    l = n(495544),
-    u = n(734057),
-    c = n(941327),
-    d = n(763827),
+    a = n(312006),
+    s = n(105530),
+    l = n(288737),
+    o = n(280450),
+    d = n(734057),
+    c = n(453028),
+    u = n(763827),
     _ = n(652215),
-    h = n(765682);
-let f = null;
-function p() {
-    r.A.requestPermission(h.iL.AUDIO).then((e) => {}),
-        c.Ay.getMode() === _.TBI.PUSH_TO_TALK && r.A.requestPermission(h.iL.INPUT_MONITORING);
+    E = n(765682);
+let A = null;
+function h() {
+    r.A.requestPermission(E.iL.AUDIO).then((e) => {}),
+        c.Ay.getMode() === _.TBI.PUSH_TO_TALK && r.A.requestPermission(E.iL.INPUT_MONITORING);
 }
-class E extends i.A {
+class I extends i.A {
     actions = {
         VOICE_STATE_UPDATES: this.handleVoiceStateUpdates,
         VOICE_CHANNEL_SELECT: this.handleVoiceChannelSelect,
     };
     handleVoiceChannelSelect(e) {
         let { channelId: t } = e;
-        null == t && (f = null);
+        null == t && (A = null);
     }
     handleVoiceStateUpdates(e) {
         let { voiceStates: t } = e;
         t.forEach((e) => {
             var t;
             let { userId: n, channelId: i } = e;
-            if (null != i && l.default.getId() === n && null != d.A.getRTCConnectionId() && f !== i) {
-                if (!u.A.getChannel(i)?.isListenModeCapable() || s.Ay.isSpeaker(n, i)) {
-                    (f = i), p();
+            if (null != i && o.default.getId() === n && null != u.A.getRTCConnectionId() && A !== i) {
+                if (!d.A.getChannel(i)?.isListenModeCapable() || a.Ay.isSpeaker(n, i)) {
+                    (A = i), h();
                     return;
                 }
-                (t = new o.A(e)), (0, a.eY)(t) === a.zF.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK && ((f = i), p());
+                (t = new l.A(e)), (0, s.eY)(t) === s.zF.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK && ((A = i), h());
             }
         });
     }
 }
-let m = new E();
+let f = new I();

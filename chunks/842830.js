@@ -1,5 +1,5 @@
 "use strict";
-function n(e) {
+function r(e) {
     return Intl.getCanonicalLocales(e);
 }
-r.d(t, { N: () => n });
+n.d(t, { N: () => r });

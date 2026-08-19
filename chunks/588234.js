@@ -1,7 +1,7 @@
-p.exports = function (p) {
-    for (var r = -1, n = null == p ? 0 : p.length, a = 0, h = []; ++r < n; ) {
-        var s = p[r];
-        s && (h[a++] = s);
+e.exports = function (e) {
+    for (var t = -1, n = null == e ? 0 : e.length, r = 0, i = []; ++t < n; ) {
+        var a = e[t];
+        a && (i[r++] = a);
     }
-    return h;
+    return i;
 };

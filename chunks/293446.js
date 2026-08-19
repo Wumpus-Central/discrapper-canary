@@ -1,2 +1,2 @@
 "use strict";
-n(355200), (e.exports = n(452162).Reflect.construct);
+n(355200), (e.exports = n(229781).Reflect.construct);

@@ -6,7 +6,7 @@ var i = n(17928),
     a = n(775602),
     s = n(235986),
     o = n(899343),
-    u = n(796012),
+    u = n(997330),
     c = n(249787);
 function d(e) {
     let { purchaseState: t, currentStep: n, onClose: d } = e,
@@ -18,7 +18,7 @@ function d(e) {
             errorScene: u.V1.Scenes.ERROR,
             successScene: u.V1.Scenes.SUCCESS,
         }),
-        C = (0, i.bG)([a.Ay], () => a.Ay.useReducedMotion);
+        h = (0, i.bG)([a.Ay], () => a.Ay.useReducedMotion);
     return (0, l.jsxs)(r.rQ, {
         "data-migration-pending": !0,
         align: s.A.Align.START,
@@ -30,7 +30,7 @@ function d(e) {
                 nextScene: p,
                 onScenePlay: (e) => m(u.V1.getNextScene(e)),
                 pauseWhileUnfocused: !1,
-                pause: C,
+                pause: h,
             }),
             (0, l.jsx)("div", { className: c.qd }),
             (0, l.jsx)(r.s_, { "data-migration-pending": !0, onClick: d, className: c.b }),

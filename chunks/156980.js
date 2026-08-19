@@ -1,4 +1,4 @@
-e.exports = {
+a.exports = {
     oK: "overlayHeader__0a5bd",
     aS: "isFullscreen__0a5bd",
     Lu: "overlayGradient__0a5bd",

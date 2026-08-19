@@ -31,9 +31,9 @@ function t(e) {
                     n = this._callbacks["$" + e];
                 if (!n) return this;
                 if (1 == arguments.length) return delete this._callbacks["$" + e], this;
-                for (var i = 0; i < n.length; i++)
-                    if ((r = n[i]) === t || r.fn === t) {
-                        n.splice(i, 1);
+                for (var o = 0; o < n.length; o++)
+                    if ((r = n[o]) === t || r.fn === t) {
+                        n.splice(o, 1);
                         break;
                     }
                 return 0 === n.length && delete this._callbacks["$" + e], this;
@@ -44,7 +44,7 @@ function t(e) {
             t[n - 1] = arguments[n];
         if (r) {
             r = r.slice(0);
-            for (var n = 0, i = r.length; n < i; ++n) r[n].apply(this, t);
+            for (var n = 0, o = r.length; n < o; ++n) r[n].apply(this, t);
         }
         return this;
     }),

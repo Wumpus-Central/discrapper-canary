@@ -1,5 +1,5 @@
 n.d(e, { A: () => g });
-var i = n(735438),
+var i = n(435558),
     l = n.n(i),
     s = n(17928),
     r = n(228366),
@@ -7,19 +7,19 @@ var i = n(735438),
     d = n(555337),
     o = n(652215),
     c = n(539916);
-let u = !1,
-    E = null,
-    I = [],
+let I = !1,
+    u = null,
+    E = [],
     N = !1,
     S = [];
 function m() {
-    (u = !1),
-        (E = null),
+    (I = !1),
+        (u = null),
         (S = []),
         (N = !1),
-        null != (E = d.A.getGuildId()) &&
+        null != (u = d.A.getGuildId()) &&
             d.A.getSection() === o.BEX.ONBOARDING &&
-            ((I = a.A.getOnboardingPrompts(E)), (N = a.A.isAdvancedMode(E)));
+            ((E = a.A.getOnboardingPrompts(u)), (N = a.A.isAdvancedMode(u)));
 }
 class _ extends s.Ay.Store {
     static displayName = "GuildSettingsOnboardingPromptsStore";
@@ -27,27 +27,27 @@ class _ extends s.Ay.Store {
         this.waitFor(d.A, a.A);
     }
     hasChanges() {
-        return null != E && !l().isEqual(a.A.getOnboardingPrompts(E), I);
+        return null != u && !l().isEqual(a.A.getOnboardingPrompts(u), E);
     }
     getChangedPrompts() {
-        if (null == E) return [];
-        let t = a.A.getOnboardingPrompts(E);
-        return I.filter((e) => {
+        if (null == u) return [];
+        let t = a.A.getOnboardingPrompts(u);
+        return E.filter((e) => {
             let n = t.find((t) => t.id === e.id);
             return null == n || !l().isEqual(e, n);
         });
     }
     get guildId() {
-        return E;
+        return u;
     }
     get submitting() {
-        return u;
+        return I;
     }
     get errors() {
         return S;
     }
     get editedOnboardingPrompts() {
-        return I;
+        return E;
     }
     get advancedMode() {
         return N;
@@ -61,14 +61,14 @@ let g = new _(r.h, {
     GUILD_SETTINGS_DEFAULT_CHANNELS_RESET: m,
     GUILD_SETTINGS_ONBOARDING_PROMPTS_SAVE_SUCCESS: m,
     GUILD_SETTINGS_ONBOARDING_PROMPTS_SAVE_FAILED: function (t) {
-        (S = t.errors ?? []), (u = !1);
+        (S = t.errors ?? []), (I = !1);
     },
     GUILD_SETTINGS_ONBOARDING_PROMPTS_EDIT: function (t) {
         let { prompts: e } = t;
-        I = e;
+        E = e;
     },
     GUILD_SETTINGS_ONBOARDING_PROMPTS_SUBMIT: function () {
-        (u = !0), (S = []);
+        (I = !0), (S = []);
     },
     GUILD_SETTINGS_ONBOARDING_PROMPTS_ERRORS: function (t) {
         S = t.errors ?? [];

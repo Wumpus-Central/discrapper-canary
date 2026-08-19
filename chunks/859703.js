@@ -1,5 +1,5 @@
 "use strict";
-let i, r, a, s, l, o, d, c, u, _, E, A, h, I, f, p, T, m, g, S, N, C, R, O, L, D, y, v, b, M;
+let i, r, a, s, l, o, d, c, u, _, E, A, h, I, f, p, T, m, g, S, N, C, O, R, L, y, D, v, b, M;
 n.d(t, { A: () => eh });
 var P = n(435558),
     U = n(158390),
@@ -51,15 +51,15 @@ function ea() {
         (N = new Map()),
         (C = new Map()),
         (T = new Set()),
-        (R = new Map()),
         (O = new Map()),
+        (R = new Map()),
         eu(),
         (L = null),
-        (D = null),
+        (y = null),
         e_(),
         (M = new Map()),
         (er = new Map()),
-        (y = new Map()),
+        (D = new Map()),
         (v = new Map()),
         (b = new Map()),
         (et = null),
@@ -153,13 +153,13 @@ class eE extends k.Ay.Store {
         return L;
     }
     get questAccessSuspendedUntil() {
-        return D;
+        return y;
     }
     get isQuestAccessSuspended() {
-        return null != D;
+        return null != y;
     }
     get questAdDecisionByPlacement() {
-        return y;
+        return D;
     }
     getFetchQuestPreviewError(e) {
         return er.get(e);
@@ -201,10 +201,10 @@ class eE extends k.Ay.Store {
         return q.get(e)?.get(t);
     }
     getExpiredQuestsMap() {
-        return O;
+        return R;
     }
     isQuestExpired(e) {
-        return O.get(e) ?? !1;
+        return R.get(e) ?? !1;
     }
     getQuestLoadedViaPreview(e) {
         return M.get(e);
@@ -225,7 +225,7 @@ class eE extends k.Ay.Store {
         return o?.get(e) ?? !1;
     }
     get earnedQuestForPlacement() {
-        return R;
+        return O;
     }
 }
 let eA = new eE(F.h, {
@@ -259,16 +259,16 @@ let eA = new eE(F.h, {
                         );
             for (let e of ((c = new Map()), n)) c.set(e.id, e);
             for (let e of M?.values()) d.has(e.id) || (d.set(e.id, e), u.set(e.id, (0, $.Ic)(e)));
-            (O = u),
+            (R = u),
                 eu(),
                 (function e() {
                     let t, n;
                     (t = !1),
-                        (n = new Map(O)),
+                        (n = new Map(R)),
                         d.forEach((e, i) => {
                             !0 !== n.get(i) && ((0, $.Ic)(e) ? (n.set(i, !0), (t = !0)) : n.has(i) || n.set(i, !1));
                         }),
-                        t && ((O = n), eA.emitChange());
+                        t && ((R = n), eA.emitChange());
                     let i = (0, $.v1)(Array.from(d.values()));
                     if (null == i) return;
                     let r = Math.max(5e3, i - Date.now() + 2e3);
@@ -278,14 +278,14 @@ let eA = new eE(F.h, {
                         }, r));
                 })(),
                 (L = null != r ? new Date(r) : null),
-                (D = null != a ? new Date(a) : null),
+                (y = null != a ? new Date(a) : null),
                 (function () {
-                    if ((e_(), null == D)) return;
-                    let e = D.getTime() - Date.now();
+                    if ((e_(), null == y)) return;
+                    let e = y.getTime() - Date.now();
                     e > 864e6 ||
                         (Q = setTimeout(
                             () => {
-                                (Q = null), (D = null), eA.emitChange();
+                                (Q = null), (y = null), eA.emitChange();
                             },
                             Math.max(e, 0),
                         ));
@@ -329,7 +329,7 @@ let eA = new eE(F.h, {
                 metadataSealed: o,
                 trafficMetadataSealed: d,
             };
-            (y = new Map(y)).set(n, u);
+            (D = new Map(D)).set(n, u);
         },
         QUESTS_FETCH_QUEST_TO_DELIVER_FAILURE: function (e) {
             let { placement: t } = e;
@@ -341,7 +341,7 @@ let eA = new eE(F.h, {
             let { placement: t, responseTtlSeconds: n, fetchedAt: i } = e;
             (r = !1), (a = new Map(a)).set(t, !1);
             let s = { creative: null, fetchedAt: i, ttlMillis: (0, V.Ce)(n) };
-            (y = new Map(y)).set(t, s);
+            (D = new Map(D)).set(t, s);
         },
         QUESTS_FETCH_EARNED_QUEST_TO_DELIVER_BEGIN: function (e) {
             let { content: t } = e;
@@ -351,15 +351,15 @@ let eA = new eE(F.h, {
             let { serverQuests: t, content: n, fetchedAt: i, responseTtlSeconds: r } = e;
             (l = !1), (o = new Map(o)).set(n, !1);
             let a = (0, V.Ce)(r),
-                s = R.get(n),
+                s = O.get(n),
                 c = new Map(s?.earnedDecisionByQuestId);
             for (let [e, n] of t)
                 if ((c.set(e, { fetchedAt: i, ttlMillis: a, shouldDeliver: null != n }), null != n)) {
                     let t = d.get(e),
                         i = (0, z.rO)(n);
-                    null != t ? es(e, i) : ((d = new Map(d)).set(e, i), (O = new Map(O)).set(e, (0, $.Ic)(i)));
+                    null != t ? es(e, i) : ((d = new Map(d)).set(e, i), (R = new Map(R)).set(e, (0, $.Ic)(i)));
                 }
-            R.set(n, { earnedDecisionByQuestId: c });
+            O.set(n, { earnedDecisionByQuestId: c });
         },
         QUESTS_FETCH_EARNED_QUEST_TO_DELIVER_FAILURE: function (e) {
             let { content: t } = e;
@@ -480,7 +480,7 @@ let eA = new eE(F.h, {
             let r = d.get(t.quest_id);
             if (null != r) {
                 let e = (0, $.Ic)(r);
-                O.get(t.quest_id) !== e && (O = new Map(O).set(t.quest_id, e));
+                R.get(t.quest_id) !== e && (R = new Map(R).set(t.quest_id, e));
             }
             0 === Object.keys(i.progress).length &&
                 q.has(i.questId) &&
@@ -502,7 +502,7 @@ let eA = new eE(F.h, {
             let n = d.get(t.questId);
             if (null != n) {
                 let e = (0, $.Ic)(n);
-                O.get(t.questId) !== e && (O = new Map(O).set(t.questId, e));
+                R.get(t.questId) !== e && (R = new Map(R).set(t.questId, e));
             }
         },
         QUESTS_PREVIEW_OVERRIDE: function (e) {
@@ -543,7 +543,7 @@ let eA = new eE(F.h, {
                 metadataSealed: e.metadataSealed,
                 trafficMetadataSealed: e.trafficMetadataSealed,
             };
-            (y = new Map(y)).set(e.placement, t);
+            (D = new Map(D)).set(e.placement, t);
         },
         QUESTS_FETCH_QUEST_HOME_HERO_FAILURE: function (e) {
             let { placement: t } = e;

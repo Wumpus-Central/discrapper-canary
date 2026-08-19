@@ -31,18 +31,18 @@ class c extends i.PureComponent {
                 renderInput: d,
                 title: p,
                 name: m,
-                id: C,
-                placeholder: h,
-                helperText: E,
-                ...f
+                id: h,
+                placeholder: C,
+                helperText: f,
+                ...E
             } = e,
-            A = {
-                ...f,
-                placeholder: h?.(),
+            S = {
+                ...E,
+                placeholder: C?.(),
                 error: this.getError(m),
                 value: t[m],
                 name: m,
-                "aria-labelledby": C,
+                "aria-labelledby": h,
                 onChange: n,
                 onFocus: i,
                 onBlur: r,
@@ -51,7 +51,7 @@ class c extends i.PureComponent {
             "div",
             {
                 className: a()(c?.(o)),
-                children: (0, l.jsx)(s.D, { id: C, label: p(), helperText: E?.(), children: d(A, u, o) }),
+                children: (0, l.jsx)(s.D, { id: h, label: p(), helperText: f?.(), children: d(S, u, o) }),
             },
             m,
         );

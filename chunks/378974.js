@@ -7,8 +7,8 @@ var i = n(477900),
     E = n(834730),
     o = n(27620),
     c = n(668131),
-    u = n(797632);
-function _(e, t) {
+    _ = n(797632);
+function u(e, t) {
     let { Operator: n, QuestionID: i, ChoiceLocator: l, LeftOperand: r, RightOperand: s } = e;
     if (null == i) return !0;
     let a = t[i];
@@ -59,8 +59,8 @@ var d = n(503698),
     I = n.n(d),
     N = n(939249),
     R = n(144228),
-    S = n(658675),
-    O = n(95477),
+    O = n(658675),
+    S = n(95477),
     C = n(640425);
 function D(e) {
     let {
@@ -73,7 +73,7 @@ function D(e) {
             onTextInputChange: o,
         } = e,
         c = "true" === n.TextEntry,
-        u = `choice-label-${t}`;
+        _ = `choice-label-${t}`;
     return (0, i.jsxs)("div", {
         className: C.NV,
         children: [
@@ -84,17 +84,17 @@ function D(e) {
                 },
                 role: s,
                 "aria-checked": l,
-                "aria-labelledby": u,
+                "aria-labelledby": _,
                 children: [
                     (0, i.jsx)("div", {
                         className: C.jl,
                         children:
                             "radio" === s
                                 ? (0, i.jsx)(R.T, { disabled: !1, checked: l })
-                                : (0, i.jsx)(S.P, { disabled: !1, checked: l }),
+                                : (0, i.jsx)(O.P, { disabled: !1, checked: l }),
                     }),
                     (0, i.jsx)(E.E, {
-                        id: u,
+                        id: _,
                         variant: "text-md/normal",
                         color: "text-subtle",
                         children: (0, i.jsx)("div", { dangerouslySetInnerHTML: { __html: n.Display } }),
@@ -104,7 +104,7 @@ function D(e) {
             c &&
                 (0, i.jsx)("div", {
                     className: C.Vi,
-                    children: (0, i.jsx)(O.k, {
+                    children: (0, i.jsx)(S.k, {
                         value: a ?? "",
                         onChange: function (e) {
                             l || r(t), o?.(t, e);
@@ -116,8 +116,8 @@ function D(e) {
     });
 }
 var m = n(880652),
-    p = n(264092);
-function P(e) {
+    P = n(264092);
+function p(e) {
     let { question: t, questionId: n, value: l, onValueChange: r } = e,
         { selectedChoice: s, textInputs: a } = (function (e) {
             if (null == e || "" === e) return { selectedChoice: null, textInputs: {} };
@@ -139,17 +139,17 @@ function P(e) {
     }
     return null == t.Choices
         ? (0, i.jsx)("div", {
-              className: p.kL,
+              className: P.kL,
               children: (0, i.jsx)(E.E, {
                   variant: "text-sm/medium",
-                  className: p.WN,
+                  className: P.WN,
                   children: "No choices available for this question",
               }),
           })
         : (0, i.jsx)("div", {
-              className: p.kL,
+              className: P.kL,
               children: (0, i.jsx)("div", {
-                  className: p.Me,
+                  className: P.Me,
                   children: Object.entries(t.Choices).map((e) => {
                       let [t, n] = e;
                       return (0, i.jsx)(
@@ -169,7 +169,7 @@ function P(e) {
               }),
           });
 }
-function M(e) {
+function f(e) {
     let { question: t, questionId: n, value: l, onValueChange: r } = e,
         { selectedChoices: s, textInputs: a } = (function (e) {
             if (null == e || "" === e) return { selectedChoices: [], textInputs: {} };
@@ -198,22 +198,22 @@ function M(e) {
             i = { ...a };
         t.includes(e) || delete i[e], r(n, o(t, i));
     }
-    function u(e, t) {
+    function _(e, t) {
         r(n, o(s, { ...a, [e]: t }));
     }
     return null == t.Choices || 0 === Object.keys(t.Choices).length
         ? (0, i.jsx)("div", {
-              className: p.kL,
+              className: P.kL,
               children: (0, i.jsx)(E.E, {
                   variant: "text-sm/medium",
-                  className: p.WN,
+                  className: P.WN,
                   children: "No choices available for this question",
               }),
           })
         : (0, i.jsx)("div", {
-              className: p.kL,
+              className: P.kL,
               children: (0, i.jsx)("div", {
-                  className: p.Me,
+                  className: P.Me,
                   children: Object.entries(t.Choices).map((e) => {
                       let [t, n] = e;
                       return (0, i.jsx)(
@@ -225,7 +225,7 @@ function M(e) {
                               onSelectionChange: c,
                               inputType: "checkbox",
                               textInputValue: a[t],
-                              onTextInputChange: u,
+                              onTextInputChange: _,
                           },
                           t,
                       );
@@ -233,11 +233,11 @@ function M(e) {
               }),
           });
 }
-function f(e) {
+function M(e) {
     let { question: t, questionId: n, value: l, onValueChange: r } = e;
     return t.Selector === m.BO.SINGLE_ANSWER
-        ? (0, i.jsx)(P, { question: t, questionId: n, value: l, onValueChange: r })
-        : (0, i.jsx)(M, { question: t, questionId: n, value: l, onValueChange: r });
+        ? (0, i.jsx)(p, { question: t, questionId: n, value: l, onValueChange: r })
+        : (0, i.jsx)(f, { question: t, questionId: n, value: l, onValueChange: r });
 }
 var g = n(260598),
     h = n(981218);
@@ -248,11 +248,11 @@ function U(e) {
         className: h.k,
         children: s
             ? (0, i.jsx)(g.f, { value: l, onChange: (e) => r(n, e), placeholder: "Enter your response...", rows: 4 })
-            : (0, i.jsx)(O.k, { value: l, onChange: (e) => r(n, e), placeholder: "Enter your response..." }),
+            : (0, i.jsx)(S.k, { value: l, onChange: (e) => r(n, e), placeholder: "Enter your response..." }),
     });
 }
-var y = n(909912),
-    L = n(742715);
+var L = n(909912),
+    y = n(742715);
 function k(e) {
     let { question: t, questionId: n, responses: l, onResponseChange: r } = e,
         s = (function () {
@@ -260,7 +260,7 @@ function k(e) {
                 case m.SQ.TEXT_ENTRY:
                     return (0, i.jsx)(U, { question: t, questionId: n, value: l[n] ?? "", onValueChange: r });
                 case m.SQ.MULTIPLE_CHOICE:
-                    return (0, i.jsx)(f, { question: t, questionId: n, value: l[n] ?? "", onValueChange: r });
+                    return (0, i.jsx)(M, { question: t, questionId: n, value: l[n] ?? "", onValueChange: r });
                 case m.SQ.DESCRIPTIVE_BLOCK:
                     return (0, i.jsx)("div", {});
                 default:
@@ -270,7 +270,7 @@ function k(e) {
     return null == s
         ? null
         : (0, i.jsxs)("div", {
-              className: I()(L.PT, y.k),
+              className: I()(y.PT, L.k),
               children: [
                   (0, i.jsx)(E.E, {
                       variant: "text-lg/normal",
@@ -284,10 +284,10 @@ function k(e) {
 var x = n(375708),
     G = n(370706);
 function v(e) {
-    let { surveyId: t, survey: n, onClose: s, transitionState: u } = e,
+    let { surveyId: t, survey: n, onClose: s, transitionState: _ } = e,
         { getSurveyResponses: d, setResponse: I, trackDisplayedQuestions: N } = (0, c.i)(),
         R = d(t),
-        S = (function (e) {
+        O = (function (e) {
             for (let t of A(e)) {
                 let n = T(e.Blocks[t]);
                 if (n.length > 0 && n[0].length > 0)
@@ -295,15 +295,15 @@ function v(e) {
             }
             return { blockId: null, pageIndex: 0, questionIds: [], isComplete: !0 };
         })(n),
-        [O, C] = l.useState(S.blockId),
-        [D, m] = l.useState(S.pageIndex),
-        [p, P] = l.useState(!1);
-    function M(e, n) {
+        [S, C] = l.useState(O.blockId),
+        [D, m] = l.useState(O.pageIndex),
+        [P, p] = l.useState(!1);
+    function f(e, n) {
         I(t, e, n);
     }
-    let f = l.useCallback(
+    let M = l.useCallback(
             () => (
-                p
+                P
                     ? s()
                     : (0, a.openModal)((e) =>
                           (0, i.jsx)(r.Modal, {
@@ -327,11 +327,11 @@ function v(e) {
                       ),
                 Promise.resolve()
             ),
-            [s, p],
+            [s, P],
         ),
         g = l.useMemo(
             () =>
-                null == O
+                null == S
                     ? []
                     : (function (e, t) {
                           let { blockId: n, pageIndex: i, responses: l } = t,
@@ -358,10 +358,10 @@ function v(e) {
                                                                         "object" == typeof e[t] &&
                                                                         n.push(e[t]);
                                                                 if (0 === n.length) return !0;
-                                                                let i = _(n[0], t);
+                                                                let i = u(n[0], t);
                                                                 for (let e = 1; e < n.length; e++) {
                                                                     let l = n[e],
-                                                                        r = _(l, t);
+                                                                        r = u(l, t);
                                                                     i =
                                                                         "Or" ===
                                                                         (l.Conjuction ?? l.Conjunction ?? "And")
@@ -382,11 +382,11 @@ function v(e) {
                                         return !1;
                                     })(e.Questions[t], l),
                                 );
-                      })(n, { blockId: O, pageIndex: D, responses: R }),
-            [n, O, D, R],
+                      })(n, { blockId: S, pageIndex: D, responses: R }),
+            [n, S, D, R],
         ),
         h = l.useCallback(() => {
-            if (null == n || null == O) return;
+            if (null == n || null == S) return;
             let e = (function (e, t) {
                 let { blockId: n, pageIndex: i, responses: l } = t,
                     r = A(e),
@@ -474,14 +474,14 @@ function v(e) {
                         return { blockId: n, pageIndex: 0, questionIds: i[0], isComplete: !1 };
                 }
                 return { blockId: null, pageIndex: 0, questionIds: [], isComplete: !0 };
-            })(n, { blockId: O, pageIndex: D, responses: R });
-            N(t, g), e.isComplete && o.Ay.submitSurveyResponse(t, R), C(e.blockId), m(e.pageIndex), P(e.isComplete);
-        }, [n, O, D, R, t, g, N]);
+            })(n, { blockId: S, pageIndex: D, responses: R });
+            N(t, g), e.isComplete && o.Ay.submitSurveyResponse(t, R), C(e.blockId), m(e.pageIndex), p(e.isComplete);
+        }, [n, S, D, R, t, g, N]);
     l.useEffect(() => {
         0 === g.length && h();
     }, [g, h]);
     let U = l.useMemo(() => {
-        if (p) return !1;
+        if (P) return !1;
         for (let e of g) {
             let t = n.Questions[e];
             if (t?.Validation?.Settings?.ForceResponse === "ON") {
@@ -490,10 +490,10 @@ function v(e) {
             }
         }
         return !0;
-    }, [p, g, n, R]);
-    return p
+    }, [P, g, n, R]);
+    return P
         ? (0, i.jsxs)(r.Modal, {
-              transitionState: u,
+              transitionState: _,
               onClose: s,
               size: "md",
               title: x.intl.string(x.t.OSqLUF),
@@ -504,8 +504,8 @@ function v(e) {
               ],
           })
         : (0, i.jsx)(r.Modal, {
-              transitionState: u,
-              onClose: f,
+              transitionState: _,
+              onClose: M,
               title: x.intl.string(x.t.OSqLUF),
               size: "md",
               actions: [{ variant: "primary", text: x.intl.string(x.t.PDTjLN), onClick: h, disabled: !U }],
@@ -522,7 +522,7 @@ function v(e) {
                                         ? null
                                         : (0, i.jsx)(
                                               k,
-                                              { question: t, questionId: e, responses: R, onResponseChange: M },
+                                              { question: t, questionId: e, responses: R, onResponseChange: f },
                                               e,
                                           );
                                 }),
@@ -543,7 +543,7 @@ async function j(e) {
 }
 function q(e) {
     let { surveyId: t, onClose: n, transitionState: l } = e,
-        r = (0, s.bG)([u.A], () => u.A.getSurvey(t));
+        r = (0, s.bG)([_.A], () => _.A.getSurvey(t));
     return null == r
         ? (0, i.jsx)(E.E, { variant: "text-md/medium", className: G.Lq, children: x.intl.string(x.t.MKDeyL) })
         : (0, i.jsx)(v, { surveyId: t, survey: r, onClose: n, transitionState: l });

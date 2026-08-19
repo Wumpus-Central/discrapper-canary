@@ -1,11 +1,11 @@
 "use strict";
-n.d(t, { A: () => o });
+n.d(t, { A: () => l });
 var i = n(439372),
     r = n(201718);
-function s(e) {
+function a(e) {
     r.P.refetch(e.user_id);
 }
-class a extends i.A {
-    actions = { USER_APPLICATION_IDENTITY_UPDATE: s, USER_APPLICATION_IDENTITY_REMOVE: s };
+class s extends i.A {
+    actions = { USER_APPLICATION_IDENTITY_UPDATE: a, USER_APPLICATION_IDENTITY_REMOVE: a };
 }
-let o = new a();
+let l = new s();

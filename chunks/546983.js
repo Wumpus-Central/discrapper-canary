@@ -1,45 +1,45 @@
-n.d(t, { Au: () => f, d5: () => _, j7: () => A, kS: () => p, l6: () => m });
+n.d(t, { Au: () => f, d5: () => g, j7: () => A, kS: () => p, l6: () => E });
 var o = n(684013),
-    i = n(296027),
-    r = n(489277),
-    s = n(19575),
-    l = n(350535),
-    c = n(636401),
+    r = n(296027),
+    s = n(489277),
+    i = n(19575),
+    c = n(350535),
+    l = n(636401),
     a = n(90924),
-    u = n(613057),
-    d = n(652215);
+    d = n(613057),
+    u = n(652215);
 let h = ["207646673902501888"];
 function p(e) {
-    return null != e && !!i.default.isOverlayOOPEnabledForPid(e) && r.A.isReady(e);
+    return null != e && !!r.default.isOverlayOOPEnabledForPid(e) && s.A.isReady(e);
 }
-function _(e) {
+function g(e) {
     return null == e
-        ? { lock: d.FXj, context: d.BRT.APP }
+        ? { lock: u.FXj, context: u.BRT.APP }
         : p(e)
           ? (o.A.setInputLocked(!1, e),
             {
                 lock() {
                     o.A.setInputLocked(!0, e);
                 },
-                context: d.BRT.POPOUT,
+                context: u.BRT.POPOUT,
             })
-          : (s.Ay.focus(null, !0),
+          : (i.Ay.focus(null, !0),
             {
                 lock() {
-                    s.Ay.setForegroundProcess(e);
+                    i.Ay.setForegroundProcess(e);
                 },
-                context: d.BRT.APP,
+                context: u.BRT.APP,
             });
 }
 let A = async (e, t, n) => {
         if (((0, a.sq)(e, t), (null == n || "" === n) && (0, a.IR)(t)))
-            return (e.authorization.scopes = [u.LQ, u.kw]), Promise.resolve();
+            return (e.authorization.scopes = [d.LQ, d.kw]), Promise.resolve();
         if (null == n || "" === n)
-            return Promise.reject(new c.A({ closeCode: d.YI$.INVALID_CLIENTID }, "No Client ID Specified"));
-        let o = s.Ay.releaseChannel !== d.BIo.CANARY && !h.includes(n) && e.transport !== u.z4.POST_MESSAGE;
+            return Promise.reject(new l.A({ closeCode: u.YI$.INVALID_CLIENTID }, "No Client ID Specified"));
+        let o = i.Ay.releaseChannel !== u.BIo.CANARY && !h.includes(n) && e.transport !== d.z4.POST_MESSAGE;
         return await (0, a.e2)(n, o, e.abortController.signal), (0, a.uM)(e, n, t);
     },
-    m = () =>
+    E = () =>
         (0, a.BB)((e) => {
             let t = [];
             return (
@@ -48,7 +48,7 @@ let A = async (e, t, n) => {
                     (t = e.modeOptions.shortcut.map((e) => ({
                         type: e[0],
                         code: e[1],
-                        name: (0, l.Qd)(e) ?? "unknown",
+                        name: (0, c.Qd)(e) ?? "unknown",
                     }))),
                 t
             );
@@ -59,7 +59,7 @@ let A = async (e, t, n) => {
             return (
                 null != e.modeOptions.shortcut &&
                     Array.isArray(e.modeOptions.shortcut) &&
-                    (t = (0, l.dI)(e.modeOptions.shortcut)),
+                    (t = (0, c.dI)(e.modeOptions.shortcut)),
                 t
             );
         });

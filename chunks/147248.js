@@ -26,10 +26,10 @@ var p = n(95701),
 let O = !0,
     R = !1,
     L = !1;
-function D() {
+function y() {
     return (0, d.$Y)("ClientThemesBackgroundStore");
 }
-function y() {
+function D() {
     O && (i = void 0), (L = !1), (R = !1);
 }
 function v() {
@@ -49,14 +49,14 @@ function b() {
     }
 }
 function M() {
-    return f(D);
+    return f(y);
 }
 function P() {
-    return D();
+    return y();
 }
 function U() {
     let e = A.eh.getSetting().backgroundGradientPresetId;
-    if ((E.Ay.useSystemTheme !== I.Q_.ON || null == e || f(D) || (0, u.k7)(I.Q_.OFF), null == e)) {
+    if ((E.Ay.useSystemTheme !== I.Q_.ON || null == e || f(y) || (0, u.k7)(I.Q_.OFF), null == e)) {
         null != i && (i = void 0);
         return;
     }
@@ -81,7 +81,7 @@ class w extends a.Ay.PersistedStore {
         return O ? {} : { gradientPresetId: i?.id, canUseClientThemes: !0 };
     }
     get gradientPreset() {
-        if (f(D)) {
+        if (f(y)) {
             if (O) return L ? i : void 0;
             let e = _.A.getSyncedClientTheme(_.A.systemTheme)?.backgroundGradientPresetId;
             return null != e ? C.ag[e] : void 0;
@@ -121,7 +121,7 @@ let G = new w(l.h, {
     RESET_PREVIEW_CLIENT_THEME: function (e) {
         (i = void 0), (L = !1);
     },
-    CLIENT_THEMES_EDITOR_CLOSE: y,
+    CLIENT_THEMES_EDITOR_CLOSE: D,
     CHANNEL_SELECT: function (e) {
         let { channelId: t, guildId: n } = e,
             i = m.default.getCurrentUser();
@@ -129,7 +129,7 @@ let G = new w(l.h, {
         let r = T.A.getChannel(t);
         null != r && (0, p.ke)(r.type) && (R = !0);
     },
-    LOGOUT: y,
+    LOGOUT: D,
     CACHE_LOADED: U,
     CONNECTION_OPEN: U,
     OVERLAY_INITIALIZE: U,

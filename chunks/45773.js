@@ -1,32 +1,32 @@
 "use strict";
-n.d(t, { A: () => d });
+n.d(t, { A: () => u });
 var i = n(17928),
-    r = n(412198),
-    s = n(228366),
-    a = n(626584),
-    o = n(495544);
-let l = new a.A("DatabaseManager");
-class u extends i.Ay.Store {
+    r = n(979096),
+    a = n(228366),
+    s = n(626584),
+    l = n(280450);
+let o = new s.A("DatabaseManager");
+class d extends i.Ay.Store {
     databases = new Map();
     activeUserId = null;
     preventWritingCachesAgainThisSession = !1;
     constructor() {
         super(
-            s.h,
+            a.h,
             {
                 CLEAR_CACHES: (e) => this.handleClearCaches(e),
                 CONNECTION_CLOSED: () => this.handleAuthenticationStoreChanged(),
                 CONNECTION_OPEN: () => this.handleConnectionOpen(),
                 LOGOUT: () => this.handleAuthenticationStoreChanged(),
             },
-            s.A.Early,
+            a.A.Early,
         );
     }
     initialize() {
-        this.waitFor(o.default),
+        this.waitFor(l.default),
             this.carefullySpeculativelyOpen(null),
             this.handleAuthenticationStoreChanged(),
-            o.default.addChangeListener(() => this.handleAuthenticationStoreChanged());
+            l.default.addChangeListener(() => this.handleAuthenticationStoreChanged());
     }
     databaseName(e) {
         return (function (e) {
@@ -38,14 +38,14 @@ class u extends i.Ay.Store {
     }
     carefullyOpenDatabase(e) {
         return this.preventWritingCachesAgainThisSession
-            ? (l.verbose("Not opening database because caches have been manually cleared."), null)
+            ? (o.verbose("Not opening database because caches have been manually cleared."), null)
             : (null == e ||
                   this.databases.has(e) ||
-                  (l.verbose(`added database (${e} \u{2192} null)`), this.databases.set(e, null), this.emitChange()),
+                  (o.verbose(`added database (${e} \u{2192} null)`), this.databases.set(e, null), this.emitChange()),
               this.database(e));
     }
     replaceDisableAllDatabases(e) {
-        for (let t of (l.info(`disabling and nulling all databases (reason: ${e})`), this.databases.keys())) {
+        for (let t of (o.info(`disabling and nulling all databases (reason: ${e})`), this.databases.keys())) {
             let n = this.databases.get(t);
             n?.disable(e), n?.close(), this.databases.set(t, null);
         }
@@ -53,7 +53,7 @@ class u extends i.Ay.Store {
     }
     remove(e) {
         let t = this.databases.get(e);
-        l.log(`removing database (user: ${e}, database: ${t})`),
+        o.log(`removing database (user: ${e}, database: ${t})`),
             t?.close(),
             this.databases.delete(e),
             this.emitChange();
@@ -63,17 +63,17 @@ class u extends i.Ay.Store {
             this.replaceDisableAllDatabases(`DatabaseManager (${e.reason})`);
     }
     handleConnectionOpen() {
-        let e = o.default.getId(),
+        let e = l.default.getId(),
             t = this.databases.get(e),
             n = t?.state();
         null == t && n !== r.z9.Open && this.remove(e), this.carefullyOpenDatabase(e);
     }
     handleAuthenticationStoreChanged() {
-        let e = o.default.getId(),
+        let e = l.default.getId(),
             t = this.activeUserId;
         if (e !== t) {
             let n = this.databases.get(t);
-            l.verbose(`active user changed (now: ${e}, was: ${t}, was: ${n})`),
+            o.verbose(`active user changed (now: ${e}, was: ${t}, was: ${n})`),
                 n?.close(),
                 (this.activeUserId = e),
                 this.databases.delete(t);
@@ -81,12 +81,12 @@ class u extends i.Ay.Store {
     }
     async carefullySpeculativelyOpen(e) {
         if (this.preventWritingCachesAgainThisSession)
-            return void l.verbose("Not opening database because caches have been manually cleared.");
+            return void o.verbose("Not opening database because caches have been manually cleared.");
         if (null != e) {
             let t = await c(e);
             null == t || this.databases.has(e)
-                ? (l.verbose(`discarding speculative database (${e} \u{2192} ${t})`), t?.close())
-                : (l.verbose(`added speculative database (${e} \u{2192} ${t})`),
+                ? (o.verbose(`discarding speculative database (${e} \u{2192} ${t})`), t?.close())
+                : (o.verbose(`added speculative database (${e} \u{2192} ${t})`),
                   this.databases.set(e, t),
                   this.emitChange());
         }
@@ -95,4 +95,4 @@ class u extends i.Ay.Store {
 async function c(e) {
     return null;
 }
-let d = new u();
+let u = new d();

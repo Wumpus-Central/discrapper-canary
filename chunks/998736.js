@@ -11,22 +11,22 @@ var t = function (e) {
             return "";
     }
 };
-e.exports = function (e, n, i, r) {
-    return ((n = n || "&"), (i = i || "="), null === e && (e = void 0), "object" == typeof e)
+e.exports = function (e, r, n, o) {
+    return ((r = r || "&"), (n = n || "="), null === e && (e = void 0), "object" == typeof e)
         ? Object.keys(e)
-              .map(function (r) {
-                  var s = encodeURIComponent(t(r)) + i;
-                  return Array.isArray(e[r])
-                      ? e[r]
+              .map(function (o) {
+                  var i = encodeURIComponent(t(o)) + n;
+                  return Array.isArray(e[o])
+                      ? e[o]
                             .map(function (e) {
-                                return s + encodeURIComponent(t(e));
+                                return i + encodeURIComponent(t(e));
                             })
-                            .join(n)
-                      : s + encodeURIComponent(t(e[r]));
+                            .join(r)
+                      : i + encodeURIComponent(t(e[o]));
               })
               .filter(Boolean)
-              .join(n)
-        : r
-          ? encodeURIComponent(t(r)) + i + encodeURIComponent(t(e))
+              .join(r)
+        : o
+          ? encodeURIComponent(t(o)) + n + encodeURIComponent(t(e))
           : "";
 };

@@ -4,7 +4,7 @@ n.r(t),
     n.d(t, {
         encodeProperties: () => I,
         isThrottled: () => em,
-        analyticsTrackingStoreMaker: () => Z,
+        analyticsTrackingStoreMaker: () => q,
         getOS: () => ed,
         getDevice: () => eu,
         getCampaignParams: () => eE,
@@ -35,16 +35,16 @@ var f = n(132500);
 n(423034);
 var p = n(80703),
     T = n(17928),
-    m = n(562465),
+    m = n(636537),
     g = n(187207),
-    S = n(118356),
+    S = n(941426),
     N = n(818348);
 let C = "x-science-test",
     O = new S.Vy("AnalyticsTrackingStore"),
     R = [0, 100, 1e3],
     L = 1500,
-    D = 0,
     y = 0,
+    D = 0,
     v = 0,
     b = 0,
     M = 0,
@@ -73,13 +73,13 @@ let j = window.requestIdleCallback ?? ((e) => setImmediate(() => e())),
     K = [],
     $ = null,
     z = !1,
-    q = () => Promise.resolve({ sessionId: void 0 }),
-    Z = (e) => {
+    Z = () => Promise.resolve({ sessionId: void 0 }),
+    q = (e) => {
         let {
             dispatcher: t,
             actionHandler: n,
             getFingerprint: a,
-            getSessionId: s = q,
+            getSessionId: s = Z,
             TRACKING_URL: l,
             drainTimeoutOverride: o,
             waitFor: d,
@@ -145,7 +145,7 @@ let j = window.requestIdleCallback ?? ((e) => setImmediate(() => e())),
                 ((K = []), ($ = null), e.forEach((e) => e.resolve?.()), !0)
             );
         }
-        function Z() {
+        function q() {
             let e = {
                 type: N.bZ.CLIENT_TELEMETRY,
                 properties: {
@@ -153,10 +153,10 @@ let j = window.requestIdleCallback ?? ((e) => setImmediate(() => e())),
                     rpc_success_count: v,
                     rpc_failure_count: b,
                     first_seen_event_sequence_number: M,
-                    last_seen_event_sequence_number: D,
+                    last_seen_event_sequence_number: y,
                     telemetry_period_start_timestamp: P,
                     telemetry_period_end_timestamp: Date.now(),
-                    event_queue_rejection_count: y,
+                    event_queue_rejection_count: D,
                     event_queue_batch_count: U,
                     event_queue_batch_min_size: w === Number.MAX_SAFE_INTEGER ? 0 : w,
                     event_queue_batch_max_size: G,
@@ -167,7 +167,7 @@ let j = window.requestIdleCallback ?? ((e) => setImmediate(() => e())),
                 },
             };
             return (
-                (y = 0),
+                (D = 0),
                 (v = 0),
                 (b = 0),
                 (U = 0),
@@ -175,7 +175,7 @@ let j = window.requestIdleCallback ?? ((e) => setImmediate(() => e())),
                 (G = 0),
                 (x = 0),
                 (P = Date.now()),
-                (M = D),
+                (M = y),
                 g([e], N.mX.CLIENT_TELEMETRY).catch((e) => {
                     O.trace(`client telemetry flush failed (status ${e?.status ?? "unknown"})`);
                 })
@@ -201,7 +201,7 @@ let j = window.requestIdleCallback ?? ((e) => setImmediate(() => e())),
                                 type: "timeout",
                                 id: setTimeout(
                                     () => {
-                                        Z(), e();
+                                        q(), e();
                                     },
                                     Math.max(36e5 + (Math.floor(36e4 * Math.random() * 2) - 36e4), 6e4),
                                 ),
@@ -211,7 +211,7 @@ let j = window.requestIdleCallback ?? ((e) => setImmediate(() => e())),
                             type: "timeout",
                             id: setTimeout(
                                 () => {
-                                    Z(), e();
+                                    q(), e();
                                 },
                                 Math.floor(354e4 * Math.random() + 6e4),
                             ),
@@ -257,7 +257,7 @@ let j = window.requestIdleCallback ?? ((e) => setImmediate(() => e())),
                                 properties: {
                                     client_track_timestamp: Date.now(),
                                     client_heartbeat_session_id: s,
-                                    event_sequence_number: ++D,
+                                    event_sequence_number: ++y,
                                     ...n,
                                 },
                                 resolve: o,
@@ -269,7 +269,7 @@ let j = window.requestIdleCallback ?? ((e) => setImmediate(() => e())),
                             })(d);
                         if ((null != c && (d.properties.client_uuid = W.generate(c)), K.push(d), K.length > 1e4)) {
                             let e = K.length - 1e4;
-                            (y = H(y, e)), (K = K.slice(-1e4));
+                            (D = H(D, e)), (K = K.slice(-1e4));
                         }
                         i ? h({ shouldFlushOnNextTick: !0 }) : h({ shouldFlushOnNextTick: !1 });
                     }),
@@ -494,7 +494,7 @@ eh(
     (o = window.GLOBAL_ENV.RELEASE_CHANNEL) &&
         (null == l.release_channel || "" === l.release_channel) &&
         (l.release_channel = o.split("-")[0]),
-    isNaN((d = parseInt("587411", 10))) || (l.client_build_number = d),
+    isNaN((d = parseInt("595955", 10))) || (l.client_build_number = d),
     null == (c = eo?.app.getBuildNumber()) || isNaN(c) || (l.native_build_number = c),
     (l.client_event_source = (function () {
         try {

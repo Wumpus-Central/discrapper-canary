@@ -3,8 +3,8 @@ var l = n(477900);
 n(582128);
 var r = n(503698),
     i = n.n(r),
-    s = n(17928),
-    a = n(866665),
+    a = n(17928),
+    s = n(866665),
     c = n(97808),
     u = n(778712),
     o = n(177953),
@@ -26,7 +26,7 @@ function L(t) {
     let { className: e, creator: n, guildId: r, isNew: m, guildEvent: v, eventPreview: j, recurrenceId: L } = t,
         D = (0, N.A)(r, v.id, L),
         _ = v ?? j,
-        p = (0, s.bG)([x.Ay], () => x.Ay.getNick(r, n?.id), [r, n]);
+        p = (0, a.bG)([x.Ay], () => x.Ay.getNick(r, n?.id), [r, n]);
     L = null == _ || null != L ? L : (0, E.G3)(_);
     let { startTime: w } = (0, f.Ay)(v ?? j, L),
         S = (0, h.A)(L, v.id),
@@ -47,7 +47,7 @@ function L(t) {
             }),
             (0, l.jsx)("div", { className: C.jH }),
             null != n &&
-                (0, l.jsx)(a.m, {
+                (0, l.jsx)(s.m, {
                     text: I.intl.formatToPlainString(I.t["+3iypQ"], { username: p ?? g.Ay.getName(n) }),
                     children: (0, l.jsx)(c.eu, {
                         src: n.getAvatarURL(r, 20),
@@ -56,7 +56,7 @@ function L(t) {
                         className: C.xL,
                     }),
                 }),
-            (0, l.jsx)(a.m, {
+            (0, l.jsx)(s.m, {
                 ariaHidden: !0,
                 text: I.intl.formatToPlainString(I.t["+DLsD8"], { count: D }),
                 children: (0, l.jsxs)("div", {
@@ -77,8 +77,8 @@ function D(t) {
         headerVariant: e = "heading-lg/medium",
         descriptionClassName: n,
         name: r,
-        description: s,
-        truncate: a,
+        description: a,
+        truncate: s,
         guildId: c,
         imageSource: u,
     } = t;
@@ -89,7 +89,7 @@ function D(t) {
                 className: i()({ [C.FD]: null != u }),
                 children: [
                     (0, l.jsx)(m.D, { variant: e, selectable: !0, className: C.eq, children: r }),
-                    null != s && (0, l.jsx)(v.A, { description: s, className: i()(n, C.h_), truncate: a, guildId: c }),
+                    null != a && (0, l.jsx)(v.A, { description: a, className: i()(n, C.h_), truncate: s, guildId: c }),
                 ],
             }),
             null != u &&
@@ -103,8 +103,8 @@ function _(t) {
         descriptionClassName: n,
         creator: r,
         name: i,
-        description: s,
-        imageSource: a,
+        description: a,
+        imageSource: s,
         truncate: c,
         guildId: u,
         isNew: o,
@@ -115,8 +115,8 @@ function _(t) {
     return (0, l.jsxs)("div", {
         className: C.kL,
         children: [
-            null != a
-                ? (0, l.jsx)("div", { className: C.iT, children: (0, l.jsx)(j.A, { source: a, className: C.xn }) })
+            null != s
+                ? (0, l.jsx)("div", { className: C.iT, children: (0, l.jsx)(j.A, { source: s, className: C.xn }) })
                 : null,
             (0, l.jsx)(L, {
                 className: C.kj,
@@ -129,7 +129,7 @@ function _(t) {
             }),
             (0, l.jsx)(D, {
                 name: i,
-                description: s,
+                description: a,
                 headerVariant: e,
                 descriptionClassName: n,
                 truncate: c,

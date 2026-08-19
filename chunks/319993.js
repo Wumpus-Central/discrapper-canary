@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Gq: () => q, WE: () => Y, qn: () => z, Ay: () => J });
+n.d(t, { Gq: () => q, WE: () => Y, qn: () => z, Ay: () => $ });
 var l,
     i = n(477900),
     s = n(582128),
@@ -16,22 +16,22 @@ var l,
     g = n(922016),
     x = n(866665),
     A = n(983851),
-    C = n(885574),
-    E = n(967198),
+    E = n(885574),
+    C = n(967198),
     I = n(287809),
     y = n(824744),
-    v = n(158045),
-    S = n(926972),
-    N = n(885386),
-    _ = n(862482),
+    S = n(158045),
+    v = n(926972),
+    _ = n(885386),
+    N = n(862482),
     T = n(821609),
     j = n(66834),
     b = n(624793),
     R = n(639245),
-    O = n(966245),
-    M = n(796774),
-    w = n(807348),
-    L = n(805945),
+    L = n(966245),
+    O = n(796774),
+    M = n(807348),
+    w = n(805945),
     k = n(71393),
     P = n(725807);
 n(801541);
@@ -60,8 +60,8 @@ function B(e) {
               showGradient: !0,
               premiumModalAnalyticsLocation: { section: F.JJy.PREMIUM_SOUNDMOJI_GUILD_INFO_POPOUT },
               subscriptionTier: V.pe.TIER_2,
-              size: _.$n.Sizes.SMALL,
-              color: _.$n.Colors.CUSTOM,
+              size: N.$n.Sizes.SMALL,
+              color: N.$n.Colors.CUSTOM,
               onClick: n,
               textOptions: { textOverride: U.intl.string(U.t.pj0XBN) },
           })
@@ -84,25 +84,25 @@ function W(e) {
         p = "0" === a.guildId,
         g = (0, o.bG)([k.A], () => k.A.getGuild(a.guildId)),
         x = !p && null != g,
-        [A, C] = s.useState(),
-        E = (0, S.tj)({ location: "SoundmojiGuildInfo" }),
-        y = p || x || null != A || !E,
-        [N, _] = s.useState(!y);
+        [A, E] = s.useState(),
+        C = (0, v.tj)({ location: "SoundmojiGuildInfo" }),
+        y = p || x || null != A || !C,
+        [_, N] = s.useState(!y);
     s.useEffect(() => {
         y ||
-            (_(!0),
-            (0, M.nh)(a.soundId, a.guildId)
+            (N(!0),
+            (0, O.nh)(a.soundId, a.guildId)
                 .then((e) => {
-                    C(e);
+                    E(e);
                 })
                 .finally(() => {
-                    _(!1), f();
+                    N(!1), f();
                 }));
     }, [f, y, a.guildId, a.soundId]);
     let { buttonType: T, description: j } =
             ((t = "0" === a.guildId),
-            (n = (0, o.bG)([I.default], () => v.Ay.canUseSoundboardEverywhere(I.default.getCurrentUser()))),
-            (l = (0, S.tj)({ location: "useSoundmojiGuildInfoData" })),
+            (n = (0, o.bG)([I.default], () => S.Ay.canUseSoundboardEverywhere(I.default.getCurrentUser()))),
+            (l = (0, v.tj)({ location: "useSoundmojiGuildInfoData" })),
             (r = a.guildId !== c?.guild_id),
             {
                 buttonType: s.useMemo(() => (t || !l ? 2 : n ? (x || null == A ? 2 : 0) : 1), [t, n, l, x, A]),
@@ -147,23 +147,23 @@ function W(e) {
                 }, [t, A, n, x, r, l]),
             }),
         P = T === G.JOIN_GUILD,
-        V = !p && N,
+        V = !p && _,
         F = s.useMemo(
             () => (x ? b.GO.createFromGuildRecord(g) : null != A ? b.GO.createFromDiscoverableGuild(A) : void 0),
             [g, x, A],
         );
     return V
-        ? (0, i.jsx)(O.Y0, {})
+        ? (0, i.jsx)(L.Y0, {})
         : (0, i.jsxs)("div", {
               className: H.op,
               children: [
-                  (0, i.jsxs)(O.Uq, {
+                  (0, i.jsxs)(L.Uq, {
                       children: [
                           (0, i.jsxs)("div", {
                               className: H.g4,
                               children: [
-                                  (0, i.jsx)(L.Ay, {
-                                      buttonOverlay: w.If.NONE,
+                                  (0, i.jsx)(w.Ay, {
+                                      buttonOverlay: M.If.NONE,
                                       sound: a,
                                       channel: void 0,
                                       isSoundmoji: !0,
@@ -203,12 +203,12 @@ function W(e) {
 var K = n(753502);
 function z() {
     let { volume: e, onVolumeChange: t } = (function () {
-        let [e, t] = s.useState(N.HO.getSetting());
+        let [e, t] = s.useState(_.HO.getSetting());
         return {
             volume: e,
             onVolumeChange: s.useCallback((e) => {
                 let n = (0, y.w)(e);
-                t(n), N.HO.updateSetting(n);
+                t(n), _.HO.updateSetting(n);
             }, []),
         };
     })();
@@ -223,9 +223,9 @@ function z() {
 }
 function Z(e) {
     let { sound: t, forceShowBetaLabel: n = !1 } = e,
-        l = (0, S.tj)({ location: "SoundmojiBanner" }),
-        s = (0, o.bG)([I.default], () => v.Ay.canUseSoundboardEverywhere(I.default.getCurrentUser())),
-        r = (0, o.bG)([E.A], () => E.A.getGuildId());
+        l = (0, v.tj)({ location: "SoundmojiBanner" }),
+        s = (0, o.bG)([I.default], () => S.Ay.canUseSoundboardEverywhere(I.default.getCurrentUser())),
+        r = (0, o.bG)([C.A], () => C.A.getGuildId());
     return n || s || "0" === t.guildId || t.guildId === r || !l
         ? (0, i.jsx)(m.Lp, { text: "BETA", color: u.A.colors.BACKGROUND_BRAND.css, className: H.aZ })
         : (0, i.jsxs)("div", {
@@ -290,7 +290,7 @@ function q(e) {
     s.useEffect(() => {
         u ? A.current?.focus() : A.current?.blur(), a?.(u);
     }, [u, a]);
-    let C = !u;
+    let E = !u;
     return (0, i.jsx)(g.Y, {
         targetElementRef: A,
         renderPopout: (e) =>
@@ -310,14 +310,14 @@ function q(e) {
         children: (e) =>
             (0, i.jsx)(x.m, {
                 onTooltipHide: () => {
-                    C && a?.(!1);
+                    E && a?.(!1);
                 },
                 onTooltipShow: () => {
-                    C && a?.(!0);
+                    E && a?.(!0);
                 },
                 text: l,
                 position: "top",
-                shouldShow: C,
+                shouldShow: E,
                 children: (0, i.jsx)(c.D, {
                     ...e,
                     innerRef: A,
@@ -329,7 +329,7 @@ function q(e) {
             }),
     });
 }
-function J(e) {
+function $(e) {
     let { sound: t, channel: n, setTooltipShowing: l } = e;
     return (0, i.jsxs)(i.Fragment, {
         children: [
@@ -345,7 +345,7 @@ function J(e) {
                 renderPopout: (e) => (0, i.jsx)(W, { sound: t, channel: n, ...e }),
                 tooltipText: U.intl.string(U.t["KVbJU/"]),
                 position: "right",
-                children: (0, i.jsx)(C.CircleInformationIcon, { size: "md", color: "currentColor", className: K.Wo }),
+                children: (0, i.jsx)(E.CircleInformationIcon, { size: "md", color: "currentColor", className: K.Wo }),
             }),
         ],
     });

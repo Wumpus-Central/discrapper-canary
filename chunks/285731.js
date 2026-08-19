@@ -1,4 +1,4 @@
-n(989349).defineLocale("ja", {
+_(989349).defineLocale("ja", {
     months: "1\u6708_2\u6708_3\u6708_4\u6708_5\u6708_6\u6708_7\u6708_8\u6708_9\u6708_10\u6708_11\u6708_12\u6708".split(
         "_",
     ),
@@ -26,7 +26,7 @@ n(989349).defineLocale("ja", {
     isPM: function (e) {
         return "\u5348\u5F8C" === e;
     },
-    meridiem: function (e, t, n) {
+    meridiem: function (e, d, _) {
         return e < 12 ? "\u5348\u524D" : "\u5348\u5F8C";
     },
     calendar: {
@@ -42,8 +42,8 @@ n(989349).defineLocale("ja", {
         sameElse: "L",
     },
     dayOfMonthOrdinalParse: /\d{1,2}\u65e5/,
-    ordinal: function (e, t) {
-        switch (t) {
+    ordinal: function (e, d) {
+        switch (d) {
             case "d":
             case "D":
             case "DDD":

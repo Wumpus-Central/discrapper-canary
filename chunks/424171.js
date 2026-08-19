@@ -187,9 +187,9 @@ function et(e) {
             if (null != e0) return e0.options;
         }, [e0]),
         e5 = (0, f.qv)(),
-        e8 = "sm";
-    eT ? (e8 = "xl") : (ef || e1 === x.pn.ADD_PAYMENT_STEPS) && (e8 = "md");
-    let e4 = null != e2 ? e2.modalSizeGetter : void 0,
+        e4 = "sm";
+    eT ? (e4 = "xl") : (ef || e1 === x.pn.ADD_PAYMENT_STEPS) && (e4 = "md");
+    let e8 = null != e2 ? e2.modalSizeGetter : void 0,
         e6 = (0, O.O)(),
         e3 = null != $ && !eZ && (0, R.U9)(e6, $),
         [e9, e7] = l.useState({
@@ -320,8 +320,8 @@ function et(e) {
                 isGift: eZ,
                 giftRecipient: eB,
                 returnRef: em,
-                manaModalSize: e8,
-                modalSizeGetter: e4,
+                manaModalSize: e4,
+                modalSizeGetter: e8,
                 handleClose: ta,
                 children: (0, i.jsx)(Z.Ay, {
                     header: (0, i.jsx)(K, { handleClose: ta, renderHeader: ed }),

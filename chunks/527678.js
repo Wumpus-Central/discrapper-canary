@@ -1,4 +1,4 @@
-n.d(e, { Ay: () => f, CP: () => G, X$: () => L, _k: () => p, e_: () => O, kP: () => x });
+n.d(e, { Ay: () => O, CP: () => G, X$: () => L, _k: () => p, e_: () => f, kP: () => x });
 var i = n(228366),
     l = n(157559),
     s = n(181658),
@@ -7,9 +7,9 @@ var i = n(228366),
     d = n(713125),
     o = n(961973),
     c = n(608401),
-    u = n(529942),
-    E = n(209700),
-    I = n(734057),
+    I = n(529942),
+    u = n(209700),
+    E = n(734057),
     N = n(71393),
     S = n(403362),
     m = n(468689),
@@ -19,15 +19,15 @@ var i = n(228366),
     T = n(746080),
     A = n(539916),
     D = n(375708);
-function O(t) {
+function f(t) {
     i.h.dispatch({ type: "GUILD_SETTINGS_ONBOARDING_STEP", step: t });
 }
-function f(t) {
+function O(t) {
     null != t && i.h.dispatch({ type: "GUILD_SETTINGS_ONBOARDING_EDUCATION_UPSELL_DISMISSED", upsellType: t });
 }
 async function G(t, e) {
     let n = a.A.getEnabled(t),
-        r = Array.from(_.A.editedDefaultChannelIds).filter((t) => null != I.A.getChannel(t)),
+        r = Array.from(_.A.editedDefaultChannelIds).filter((t) => null != E.A.getChannel(t)),
         [d] = (0, o.ui)(t, [...r]);
     if (n && e === A.SD.ONBOARDING_DEFAULT && d.length < A.Kd)
         return void l.A.show({ title: D.intl.string(D.t.iLdiqY), body: D.intl.string(D.t.JOT74c) });
@@ -41,18 +41,18 @@ async function G(t, e) {
 }
 function p(t, e) {
     let n = h.kd.findIndex((t) => t === e);
-    -1 !== n && n !== h.kd.length - 1 && O(h.kd[n + 1]);
+    -1 !== n && n !== h.kd.length - 1 && f(h.kd[n + 1]);
 }
 function x(t, e) {
     let n = h.kd.findIndex((t) => t === e);
-    -1 !== n && 0 !== n && O(h.kd[n - 1]);
+    -1 !== n && 0 !== n && f(h.kd[n - 1]);
 }
 async function L(t) {
     let e = N.A.getGuild(t);
     null != e &&
         (m.A.close(),
-        (0, u.Tk)(e.id, {
-            type: E._.NEW_MEMBER,
+        (0, I.Tk)(e.id, {
+            type: u._.NEW_MEMBER,
             roles: {},
             optInChannels: new Set(),
             optInEnabled: !1,

@@ -5,16 +5,16 @@ var a = s(477900),
     i = s.n(r),
     n = s(132500),
     o = s(772707),
-    d = s(441574),
-    c = s(991049),
+    c = s(441574),
+    d = s(991049),
     h = s(280645),
     u = s(952146),
     m = s(331322),
     v = s(289873),
     p = s(512950),
-    f = s(821609),
-    E = s(109112),
-    x = s(939249),
+    E = s(821609),
+    x = s(109112),
+    f = s(939249),
     g = s(834730),
     A = s(320448),
     _ = s(975571),
@@ -22,7 +22,7 @@ var a = s(477900),
     w = s(847599),
     R = s(36149),
     I = s(228366),
-    C = s(562465),
+    C = s(636537),
     M = s(652215);
 async function y() {
     let e = (await C.Bo.get({ url: M.Rsh.AGE_VERIFICATION_METHODS_V2, rejectWithError: !0 })).body;
@@ -77,8 +77,8 @@ let L = function (e) {
                 [s, a] = l.useState(() => N.A.methodsV2FooterMessage),
                 [r, i] = l.useState(() => null == N.A.methodsV2),
                 [n, o] = l.useState(!1),
-                d = l.useRef(!0),
-                c = l.useCallback(async (e) => {
+                c = l.useRef(!0),
+                d = l.useCallback(async (e) => {
                     let s = N.A.methodsV2;
                     if (!e && null != s) {
                         t(s), a(N.A.methodsV2FooterMessage), i(!1), o(!1);
@@ -92,23 +92,23 @@ let L = function (e) {
                             methods: e.methods,
                             footerMessage: e.footerMessage,
                         }),
-                            d.current && (t(e.methods), a(e.footerMessage));
+                            c.current && (t(e.methods), a(e.footerMessage));
                     } catch {
-                        d.current && o(!0);
+                        c.current && o(!0);
                     } finally {
-                        d.current && i(!1);
+                        c.current && i(!1);
                     }
                 }, []);
             return (
                 l.useEffect(
                     () => (
-                        (d.current = !0),
-                        c(!1),
+                        (c.current = !0),
+                        d(!1),
                         () => {
-                            d.current = !1;
+                            c.current = !1;
                         }
                     ),
-                    [c],
+                    [d],
                 ),
                 {
                     loading: r,
@@ -116,8 +116,8 @@ let L = function (e) {
                     methods: e,
                     footerMessage: s,
                     refetch: l.useCallback(() => {
-                        c(!0);
-                    }, [c]),
+                        d(!0);
+                    }, [d]),
                 }
             );
         })(),
@@ -150,7 +150,7 @@ let L = function (e) {
         dismissable: C,
         graphic: {
             type: "image",
-            src: "https://cdn.discordapp.com/assets/content/f76008165147c5af20b933379e590f857bab9a8c0d80e1222e16dcd34b4b75c2.svg",
+            src: "https://cdn.discordapp.com/assets/content/78be134dd5dcecb7d0b26e1aead0c61f79a95c93893a4acc82c9828c87d2165a.svg",
             aspectRatio: "21/9",
         },
         title: (0, R.ST)(s),
@@ -165,7 +165,7 @@ let L = function (e) {
                 !G &&
                 (0, a.jsx)(p.p, {
                     messageType: p.Y.ERROR,
-                    action: (0, a.jsx)(f.$, {
+                    action: (0, a.jsx)(E.$, {
                         variant: "overlay-secondary",
                         size: "sm",
                         text: V.intl.string(T.default.hDvmYP),
@@ -181,11 +181,11 @@ let L = function (e) {
                         let t,
                             s = (function (e) {
                                 switch (e) {
-                                    case d.mG.FACIAL_AGE_ESTIMATION:
-                                        return c.t;
-                                    case d.mG.ID_SELFIE_MATCH:
+                                    case c.mG.FACIAL_AGE_ESTIMATION:
+                                        return d.t;
+                                    case c.mG.ID_SELFIE_MATCH:
                                         return h.H;
-                                    case d.mG.GOOGLE_WALLET:
+                                    case c.mG.GOOGLE_WALLET:
                                         return u.A;
                                     default:
                                         return;
@@ -196,11 +196,11 @@ let L = function (e) {
                                 ? (0, a.jsx)(s, { size: "md", color: "var(--text-strong)" })
                                 : null != e.icon
                                   ? (0, a.jsx)(S, { icon: e.icon })
-                                  : (0, a.jsx)(E._, { size: "md", color: "var(--text-strong)" });
+                                  : (0, a.jsx)(x._, { size: "md", color: "var(--text-strong)" });
                         let l = `${e.method}-${e.vendor}`,
                             r = U === l;
                         return (0, a.jsxs)(
-                            x.D,
+                            f.D,
                             {
                                 className: i()(b.kZ, { [b.w1]: P }),
                                 "aria-busy": r,

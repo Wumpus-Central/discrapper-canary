@@ -1,8 +1,8 @@
 "use strict";
-n.d(t, { J: () => s, f: () => a });
+n.d(t, { J: () => a, f: () => s });
 var i,
     r,
-    s =
+    a =
         (((i = {}).ACTIVITY = "activity"),
         (i.APP_DISCOVERY = "app_discovery"),
         (i.OAUTH = "oauth"),
@@ -14,4 +14,4 @@ var i,
         (i.REQUEST_TO_STREAM = "request_to_stream"),
         (i.UNKNOWN = "unknown"),
         i),
-    a = (((r = {}).ACTIVE = "active"), (r.DEAD = "dead"), r);
+    s = (((r = {}).ACTIVE = "active"), (r.DEAD = "dead"), r);

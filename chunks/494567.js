@@ -9,4 +9,4 @@ n(6258),
     n(782859),
     n(363958),
     n(601301),
-    (e.exports = n(452162).Promise);
+    (e.exports = n(229781).Promise);

@@ -124,9 +124,9 @@ function I(e) {
                 (0, o.openModalLazy)(
                     async () => {
                         let { default: i } = await Promise.all([
-                            l.e("250112"),
+                            l.e("814520"),
                             l.e("454722"),
-                            l.e("821581"),
+                            l.e("983199"),
                             l.e("731278"),
                             l.e("863232"),
                             l.e("343437"),

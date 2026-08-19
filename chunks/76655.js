@@ -1,4 +1,4 @@
-_.exports = {
+e.exports = {
     gt: "serverCard__7bc6f",
     $f: "guildIcon__7bc6f",
     CR: "serverInfo__7bc6f",

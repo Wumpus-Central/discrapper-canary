@@ -1,4 +1,4 @@
-n.d(t, { A: () => v, w: () => N });
+n.d(t, { A: () => x, w: () => N });
 var i,
     l = n(477900),
     a = n(582128),
@@ -16,14 +16,14 @@ var i,
     A = n(375708),
     E = n(64227),
     N = (((i = {})[(i.CHAT = 0)] = "CHAT"), (i[(i.REACTIONS = 1)] = "REACTIONS"), i);
-let v = function (e) {
-    let { type: t, guild: i, closePopout: N, ctaRef: v } = e,
-        x = (0, h.GV)(),
-        [j, I] = a.useState(!1),
+let x = function (e) {
+    let { type: t, guild: i, closePopout: N, ctaRef: x } = e,
+        j = (0, h.GV)(),
+        [v, I] = a.useState(!1),
         T = (0, r.bG)([g.A], () => g.A.isLurking(i.id), [i.id]);
     a.useEffect(() => {
-        j && !T && N();
-    }, [j, T, N]);
+        v && !T && N();
+    }, [v, T, N]);
     let R = null,
         b = A.intl.string(A.t.d7b1p6);
     switch (t) {
@@ -47,13 +47,13 @@ let v = function (e) {
     }
     return (0, l.jsxs)(s.l, {
         className: E.kL,
-        "aria-labelledby": x,
+        "aria-labelledby": j,
         children: [
             (0, l.jsx)("img", { alt: "", className: E.Sl, src: n(303528) }),
             (0, l.jsxs)("div", {
                 className: E.Qs,
                 children: [
-                    (0, l.jsx)(u.D, { variant: "heading-md/semibold", id: x, children: R }),
+                    (0, l.jsx)(u.D, { variant: "heading-md/semibold", id: j, children: R }),
                     (0, l.jsx)(c.E, { color: "text-default", variant: "text-sm/normal", children: b }),
                     (0, l.jsxs)("div", {
                         className: E.UD,
@@ -61,9 +61,9 @@ let v = function (e) {
                             (0, l.jsx)(d.$, {
                                 variant: "primary",
                                 text: A.intl.string(A.t["9VLmlZ"]),
-                                buttonRef: v,
+                                buttonRef: x,
                                 onClick: S,
-                                loading: j,
+                                loading: v,
                             }),
                             (0, l.jsx)(o.$n, {
                                 onClick: N,

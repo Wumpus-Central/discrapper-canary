@@ -1,10 +1,10 @@
 "use strict";
-n.d(t, { B1: () => d, B6: () => u, QW: () => c, iy: () => o });
+n.d(t, { B1: () => u, B6: () => d, QW: () => c, iy: () => l });
 var i,
     r,
-    s = n(228366);
-let a = new (n(626584).A)("AVError");
-var o =
+    a = n(228366);
+let s = new (n(626584).A)("AVError");
+var l =
     (((i = {}).STREAM_FAILED_TO_START = "stream-failed-to-start"),
     (i.NO_INPUT_DEVICES = "no-input-devices"),
     (i.NO_AUDIO_INPUT_DETECTED = "no-audio-input-detected"),
@@ -30,7 +30,7 @@ var o =
     (i.SCREENSHARE_OS_ERROR = "screenshare-os-error"),
     (i.VIDEO_BACKGROUND_UNAVAILABLE = "video-background-unavailable"),
     i);
-let l = {
+let o = {
     "stream-soundshare-failed": { errorCode: 1001, severity: "warning", category: "audio", isErrorOutbound: !0 },
     "noise-canceller-error": { errorCode: 1002, severity: "warning", category: "audio", isErrorOutbound: !0 },
     "audio-capture-sample-rate-mismatch": {
@@ -86,7 +86,7 @@ let l = {
     "screenshare-os-error": { errorCode: 3004, severity: "critical", category: "devices", isErrorOutbound: !0 },
     "debug-log-upload-failed": { errorCode: 4001, severity: "info", category: "debug", isErrorOutbound: !0 },
 };
-var u =
+var d =
     (((r = {}).Unknown = "Unknown"),
     (r.UploadErrorGeneral = "UploadErrorCodes.GENERAL"),
     (r.UploadErrorNoFile = "UploadErrorCodes.NO_FILE"),
@@ -111,9 +111,9 @@ var u =
     r);
 function c(e) {
     let { type: t, ...n } = e;
-    a.error(`AV error reported: ${t} ${JSON.stringify(n)}`);
-    let i = l[t];
-    s.h.dispatch({
+    s.error(`AV error reported: ${t} ${JSON.stringify(n)}`);
+    let i = o[t];
+    a.h.dispatch({
         type: "REPORT_AV_ERROR",
         error: t,
         errorCode: i.errorCode,
@@ -122,14 +122,14 @@ function c(e) {
         context: e,
     });
 }
-function d(e) {
-    return l[e];
+function u(e) {
+    return o[e];
 }
-let _ = Object.values(l).map((e) => e.errorCode),
-    h = new Set(_);
-if (_.length !== h.size) {
+let _ = Object.values(o).map((e) => e.errorCode),
+    E = new Set(_);
+if (_.length !== E.size) {
     let e = _.filter((e, t) => _.indexOf(e) !== t),
-        t = Object.entries(l)
+        t = Object.entries(o)
             .filter((t) => {
                 let [n, i] = t;
                 return e.includes(i.errorCode);

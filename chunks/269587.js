@@ -20,8 +20,8 @@ var i = e(477900),
     g = e(541806),
     C = e(261020),
     I = e(83971),
-    y = e(780964),
-    j = e(766075),
+    j = e(780964),
+    y = e(766075),
     O = e(30370),
     S = e(652215),
     h = e(375708),
@@ -48,8 +48,8 @@ function Y(t) {
             targetElementRef: W,
         } = t,
         [H, B] = l.useState(!1),
-        { analyticsLocations: w } = (0, x.Ay)(A.A.USER_PROFILE_ACTIVITY_CONTEXT_MENU),
-        z = (0, f.A)({ display: s, user: e, activity: a, entry: r, analyticsLocations: w }),
+        { analyticsLocations: z } = (0, x.Ay)(A.A.USER_PROFILE_ACTIVITY_CONTEXT_MENU),
+        w = (0, f.A)({ display: s, user: e, activity: a, entry: r, analyticsLocations: z }),
         $ = (0, _.NR)(),
         F = l.useRef(null),
         X = $?.interactionPopoutTargetRef ?? F,
@@ -75,7 +75,7 @@ function Y(t) {
                             label: h.intl.formatToPlainString(h.t.XWSHTb, { platform: M.HD }),
                             action: () => {
                                 a?.({ action: "PRESS_CONNECT_SPOTIFY_MENU_ITEM" }),
-                                    (0, j.openUserSettings)(y.X.CONNECTIONS_CATEGORY),
+                                    (0, y.openUserSettings)(j.X.CONNECTIONS_CATEGORY),
                                     r?.();
                             },
                         });
@@ -121,7 +121,7 @@ function Y(t) {
                             }),
                             action: () => {
                                 a?.({ action: "PRESS_CONNECT_CRUNCHYROLL_MENU_ITEM" }),
-                                    (0, j.openUserSettings)(y.X.CONNECTIONS_CATEGORY),
+                                    (0, y.openUserSettings)(j.X.CONNECTIONS_CATEGORY),
                                     r?.();
                             },
                         });
@@ -139,7 +139,7 @@ function Y(t) {
                 })(t),
                 (0, P.s)(t),
             ].filter((t) => null != t);
-        })({ entry: r, activity: a, user: e, display: s, onClose: Y, onAction: z, isMenuOpen: H, appContext: k });
+        })({ entry: r, activity: a, user: e, display: s, onClose: Y, onAction: w, isMenuOpen: H, appContext: k });
     return 0 === Q.length || e.bot
         ? null
         : (0, i.jsx)(c.Y, {
@@ -148,7 +148,7 @@ function Y(t) {
               position: "right",
               disablePointerEvents: !1,
               onRequestOpen: () => {
-                  z({ action: "OPEN_MENU" }), B(!0);
+                  w({ action: "OPEN_MENU" }), B(!0);
               },
               renderPopout: (t) => {
                   let { closePopout: n } = t;

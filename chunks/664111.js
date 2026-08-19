@@ -19,14 +19,14 @@ var r = n(477900),
     b = n(607470),
     S = n(475815),
     C = n(718499),
-    y = n(23590),
-    w = n(683574),
+    w = n(23590),
+    y = n(683574),
     A = n(671897),
     N = n(906892),
     R = n(565164),
     T = n(275664),
-    P = n(408121),
-    L = n(984212),
+    L = n(408121),
+    P = n(984212),
     M = n(739416),
     j = n(931853),
     D = n(90721),
@@ -43,11 +43,11 @@ let _ = { tension: 250, friction: 5, clamp: !0 },
                 orientation: K = "landscape",
                 videoUrlOverride: O,
                 alt: $,
-                src: Q,
-                poster: V,
+                src: V,
+                poster: Q,
                 initialActive: G = !0,
-                initialTimeSec: Y = 0,
-                onProgressUpdate: H,
+                initialTimeSec: H = 0,
+                onProgressUpdate: Y,
                 onEnded: Z,
                 onError: z,
                 maxSeekableTimeSec: X,
@@ -77,14 +77,14 @@ let _ = { tension: 250, friction: 5, clamp: !0 },
                 onClick: eb,
                 preload: eS,
                 downloadUrl: eC,
-                downloadContentType: ey,
-                extraButtons: ew,
+                downloadContentType: ew,
+                extraButtons: ey,
                 hideFullScreenBtn: eA = !1,
                 hideSkipButtons: eN,
                 compactTimeDisplay: eR = !1,
                 hidePlaybackSpeedBtn: eT = !1,
-                getPlaybackBlockedMessage: eP,
-                progressClassName: eL,
+                getPlaybackBlockedMessage: eL,
+                progressClassName: eP,
                 pauseOnLostVisibility: eM = !1,
                 persistTimeline: ej = !1,
                 persistPlayhead: eD = !0,
@@ -97,14 +97,14 @@ let _ = { tension: 250, friction: 5, clamp: !0 },
                 crossOrigin: eK = "anonymous",
                 withVideoHalo: eO = !1,
                 objectFit: e$ = "contain",
-                minWidth: eQ = 240,
-                minHeight: eV = 180,
+                minWidth: eV = 240,
+                minHeight: eQ = 180,
                 muxContentMetadata: eG,
-                awaitMuxReady: eY = !1,
-                playerRef: eH,
+                awaitMuxReady: eH = !1,
+                playerRef: eY,
             } = e,
-            eZ = O ?? Q,
-            ez = eP ?? j.u,
+            eZ = O ?? V,
+            ez = eL ?? j.u,
             { focused: eX, focusedChanged: eW } = (0, M.A7)(),
             { visible: eJ, visibleChanged: eq, targetRef: e0 } = (0, M.O7)(),
             [e1, e2] = l.useState(a ? c.Q6.PLAYING : c.Q6.PAUSED),
@@ -131,10 +131,10 @@ let _ = { tension: 250, friction: 5, clamp: !0 },
             tb = l.useRef(!0),
             tS = l.useRef(null),
             tC = l.useRef(null),
-            [ty, tw] = l.useState(a || G),
+            [tw, ty] = l.useState(a || G),
             [tA, tN] = l.useState(el),
             [tR, tT] = l.useState(ea),
-            [tP, tL] = l.useState(!eI),
+            [tL, tP] = l.useState(!eI),
             [tM, tj] = l.useState(!1),
             [tD, tk] = l.useState(!1),
             [tI, tB] = l.useState(!1),
@@ -143,12 +143,12 @@ let _ = { tension: 250, friction: 5, clamp: !0 },
             tU = (0, l.useRef)(null),
             tK = (0, l.useRef)(null),
             tO = l.useRef(!0),
-            [t$, tQ] = l.useState(null),
-            tV = l.useRef(null),
-            tG = (0, R.z5)(ty, tV, eF, e_),
-            tY = l.useCallback(() => t_.current?.currentTime ?? null, []);
-        (0, D.A)({ videoRef: t_, canvasRef: tU, enabled: ty && eO && !tF, canvasWidth: 32, canvasHeight: 18 });
-        let tH = l.useCallback(
+            [t$, tV] = l.useState(null),
+            tQ = l.useRef(null),
+            tG = (0, R.z5)(tw, tQ, eF, e_),
+            tH = l.useCallback(() => t_.current?.currentTime ?? null, []);
+        (0, D.A)({ videoRef: t_, canvasRef: tU, enabled: tw && eO && !tF, canvasWidth: 32, canvasHeight: 18 });
+        let tY = l.useCallback(
                 (e, t) => {
                     z?.(e, t);
                 },
@@ -156,13 +156,13 @@ let _ = { tension: 250, friction: 5, clamp: !0 },
             ),
             { isHlsActive: tZ, hls: tz } = (0, C.Ay)(t_, {
                 src: eZ,
-                initialTimeSec: Y,
-                onError: tH,
+                initialTimeSec: H,
+                onError: tY,
                 onHlsInstance: eE,
                 crossOrigin: eK,
             }),
-            { isReady: tX } = (0, y.A)({ videoRef: t_, hls: tz, contentMetadata: eG, isHls: tZ }),
-            tW = eY && !tX && !tZ,
+            { isReady: tX } = (0, w.A)({ videoRef: t_, hls: tz, contentMetadata: eG, isHls: tZ }),
+            tW = eH && !tX && !tZ,
             [tJ, tq] = l.useState(null),
             [t0, t1] = l.useState(0),
             [t2, t6] = l.useState(!1),
@@ -178,7 +178,7 @@ let _ = { tension: 250, friction: 5, clamp: !0 },
                 if (((tx.current = !0), e2(e), ee?.(e, t), null != t_.current))
                     switch (e) {
                         case c.Q6.PLAYING:
-                            tQ(null), tw(!0), t_.current.play();
+                            tV(null), ty(!0), t_.current.play();
                             break;
                         case c.Q6.PAUSED:
                             (th.current = !1), t_.current.pause(), (tb.current = !1);
@@ -196,17 +196,17 @@ let _ = { tension: 250, friction: 5, clamp: !0 },
                 r = eW && !eX;
             if ((e || t || r) && null != t_.current && e1 === c.Q6.PLAYING) {
                 let n = e || t ? c.KB.VISIBILITY : c.KB.FOCUS;
-                tQ(n), t7(c.Q6.PAUSED, n);
+                tV(n), t7(c.Q6.PAUSED, n);
             }
         }, [eM, n, eX, eW, eJ, eq, e1, t7]),
             (0, k.A)({
                 videoRef: t_,
                 enabled: eM,
                 onPipPause: () => {
-                    tQ(c.KB.PICTURE_IN_PICTURE), t7(c.Q6.PAUSED, c.KB.PICTURE_IN_PICTURE);
+                    tV(c.KB.PICTURE_IN_PICTURE), t7(c.Q6.PAUSED, c.KB.PICTURE_IN_PICTURE);
                 },
                 onHiddenPause: () => {
-                    tQ(c.KB.FOCUS), t7(c.Q6.PAUSED, c.KB.FOCUS);
+                    tV(c.KB.FOCUS), t7(c.Q6.PAUSED, c.KB.FOCUS);
                 },
             }),
             l.useEffect(() => {
@@ -304,14 +304,14 @@ let _ = { tension: 250, friction: 5, clamp: !0 },
                         nc(0), t7(c.Q6.PLAYING, c.KB.USER);
                         break;
                     case c.Q6.PLAYING:
-                        tQ(c.KB.USER), t7(c.Q6.PAUSED, c.KB.USER);
+                        tV(c.KB.USER), t7(c.Q6.PAUSED, c.KB.USER);
                         break;
                     default:
                         t7(c.Q6.PLAYING, c.KB.USER);
                 }
         }
         function nm(e) {
-            null != eb ? eb(e) : (tw(!0), nd());
+            null != eb ? eb(e) : (ty(!0), nd());
         }
         let nf = l.useCallback(() => {
             if (null == t_.current || 0 === t_.current.textTracks.length) return;
@@ -319,7 +319,7 @@ let _ = { tension: 250, friction: 5, clamp: !0 },
             if (((e.mode = "hidden"), null != e.cues))
                 for (let t = 0; t < e.cues.length; t++) {
                     let n = e.cues[t];
-                    (0, L.C)(n) &&
+                    (0, P.C)(n) &&
                         ((n.id = `cue-${t}`),
                         (n.onenter = () => {
                             tq(n);
@@ -396,15 +396,15 @@ let _ = { tension: 250, friction: 5, clamp: !0 },
                 },
                 [nc, t7],
             ),
-            ny = l.useRef(null),
-            nw = l.useCallback(
+            nw = l.useRef(null),
+            ny = l.useCallback(
                 (e) => {
-                    nl(), ny.current?.(e.nativeEvent);
+                    nl(), nw.current?.(e.nativeEvent);
                 },
                 [nl],
             );
         l.useImperativeHandle(
-            eH,
+            eY,
             () => ({
                 play: () => {
                     t7(c.Q6.PLAYING, c.KB.USER);
@@ -419,19 +419,19 @@ let _ = { tension: 250, friction: 5, clamp: !0 },
             [t7, nc],
         );
         let nA = (0, r.jsx)(N.BK, {
-            children: (0, r.jsx)(w.pT, {
+            children: (0, r.jsx)(y.pT, {
                 activeLayer: tI ? N.$W : void 0,
                 isFullscreen: tI,
                 videoRef: t_,
-                isActive: ty,
+                isActive: tw,
                 isControlBarExpanded: na,
                 children: (0, r.jsx)(f.D, {
-                    className: i()(F.W6, { [F.nZ]: !ty }),
-                    style: { minWidth: eQ, minHeight: eV },
+                    className: i()(F.W6, { [F.nZ]: !tw }),
+                    style: { minWidth: eV, minHeight: eQ },
                     "data-fullscreen": tI,
                     "data-testid": "discord-web-video-player-container",
-                    tabIndex: ty ? -1 : 0,
-                    focusProps: ty ? void 0 : { ringTarget: tn },
+                    tabIndex: tw ? -1 : 0,
+                    focusProps: tw ? void 0 : { ringTarget: tn },
                     onMouseEnter: function () {
                         e4(!0),
                             ne(!1),
@@ -441,13 +441,13 @@ let _ = { tension: 250, friction: 5, clamp: !0 },
                     onMouseLeave: function () {
                         e4(!1), ne(!1);
                     },
-                    "aria-label": ty ? void 0 : B.intl.string(B.t.RscU7I),
-                    onClick: ty ? void 0 : nm,
+                    "aria-label": tw ? void 0 : B.intl.string(B.t.RscU7I),
+                    onClick: tw ? void 0 : nm,
                     onMouseMove: nl,
                     children: (0, r.jsxs)("div", {
                         className: i()(F.NS, { [F.DO]: "portrait" === K, [F.r7]: "landscape" === K }),
                         tabIndex: -1,
-                        onKeyDown: nw,
+                        onKeyDown: ny,
                         style: { "--custom-footer-horizontal-padding": "20px", "--custom-footer-bottom": "4px" },
                         children: [
                             eO && !tF && (0, r.jsx)("canvas", { ref: tU, className: F.Xm }),
@@ -464,13 +464,13 @@ let _ = { tension: 250, friction: 5, clamp: !0 },
                                 mediaLayoutType: tI ? I.dG.STATIC : I.dG.RESPONSIVE,
                                 className: i()({ [F.R]: nS, [F.IR]: !0, [F.FP]: "cover" === e$ && !tI }),
                                 controls: !1,
-                                poster: V,
-                                preload: ty ? eS : "none",
+                                poster: Q,
+                                preload: tw ? eS : "none",
                                 disablePictureInPicture: !0,
                                 "data-testid": "discord-web-video-player-video",
                                 onTimeUpdate: function (e) {
                                     null != t_.current &&
-                                        (H?.(t_.current.currentTime, t_.current.duration),
+                                        (Y?.(t_.current.currentTime, t_.current.duration),
                                         ts.current || tt((t_.current.currentTime / t_.current.duration) * 100));
                                 },
                                 onEnded: function (e) {
@@ -484,7 +484,7 @@ let _ = { tension: 250, friction: 5, clamp: !0 },
                                 },
                                 onLoadedMetadata: function (e) {
                                     if (null == t_.current) return;
-                                    Y > 0 && !tZ && nc(Y, !1);
+                                    H > 0 && !tZ && nc(H, !1);
                                     let t = ei?.() ?? tA,
                                         n = eu?.() ?? tR;
                                     t !== tA && tN(t), n !== tR && tT(n), (t_.current.volume = n ? 0 : t);
@@ -522,16 +522,16 @@ let _ = { tension: 250, friction: 5, clamp: !0 },
                                         null != t_.current && tt((t_.current.currentTime / t_.current.duration) * 100);
                                 },
                                 onAbort: function () {
-                                    return tH(c.SB.ABORT);
+                                    return tY(c.SB.ABORT);
                                 },
                                 onError: function () {
-                                    return tH(c.SB.ERROR);
+                                    return tY(c.SB.ERROR);
                                 },
                                 onEmptied: function () {
-                                    return tH(c.SB.EMPTIED);
+                                    return tY(c.SB.EMPTIED);
                                 },
                                 onStalled: function () {
-                                    return tH(c.SB.STALLED);
+                                    return tY(c.SB.STALLED);
                                 },
                                 onClick: nm,
                                 crossOrigin: eK ?? void 0,
@@ -545,12 +545,12 @@ let _ = { tension: 250, friction: 5, clamp: !0 },
                                             srcLang: "en",
                                             default: !0,
                                         }),
-                                    null != eF && (0, r.jsx)("track", { ref: tV, src: eF, kind: "metadata" }),
+                                    null != eF && (0, r.jsx)("track", { ref: tQ, src: eF, kind: "metadata" }),
                                     !tZ &&
                                         !tW &&
                                         (0, r.jsx)("source", {
                                             onError: function () {
-                                                return tH(c.SB.SOURCE_ERROR);
+                                                return tY(c.SB.SOURCE_ERROR);
                                             },
                                             src: eZ,
                                         }),
@@ -600,7 +600,7 @@ let _ = { tension: 250, friction: 5, clamp: !0 },
                                             style: {
                                                 marginBottom: (0, u.to)([nv, nE], (e, t) => `${e * t9[t8] + t}px`),
                                             },
-                                            children: (0, r.jsx)(P.X, {
+                                            children: (0, r.jsx)(L.X, {
                                                 text: J,
                                                 onClose: function () {
                                                     tj(!1);
@@ -609,7 +609,7 @@ let _ = { tension: 250, friction: 5, clamp: !0 },
                                         }),
                                     ],
                                 }),
-                            ty &&
+                            tw &&
                                 (0, r.jsx)(u.animated.div, {
                                     className: F.Jp,
                                     style: {
@@ -651,7 +651,7 @@ let _ = { tension: 250, friction: 5, clamp: !0 },
                                         children: tJ.text,
                                     }),
                                 }),
-                            ty &&
+                            tw &&
                                 (0, r.jsxs)(u.animated.div, {
                                     className: F.r8,
                                     style: {
@@ -685,7 +685,7 @@ let _ = { tension: 250, friction: 5, clamp: !0 },
                                                     durationSec: t0 > 0 ? t0 : +!t2,
                                                     isFullyVisible: na && tg,
                                                     maxSeekableTime: null != X && t4 > 0 ? t4 : void 0,
-                                                    progressClassName: eL,
+                                                    progressClassName: eP,
                                                     persistPlayhead: eD,
                                                     onClick: np,
                                                     onScrubBack: ns,
@@ -719,7 +719,7 @@ let _ = { tension: 250, friction: 5, clamp: !0 },
                                                     indicatorConfig: eB,
                                                     scrubPreviewCues: tG,
                                                     onIndicatorSeek: np,
-                                                    getCurrentTimeSec: tY,
+                                                    getCurrentTimeSec: tH,
                                                     "data-testid": "discord-web-video-player-timeline",
                                                 }),
                                             }),
@@ -761,10 +761,10 @@ let _ = { tension: 250, friction: 5, clamp: !0 },
                                                 compactTimeDisplay: eR,
                                                 size: t8,
                                                 downloadUrl: eC,
-                                                downloadContentType: ey,
-                                                extraButtons: ew,
+                                                downloadContentType: ew,
+                                                extraButtons: ey,
                                                 autoFocus: ek,
-                                                keyDownHandlerRef: ny,
+                                                keyDownHandlerRef: nw,
                                                 volume: tA,
                                                 muted: tR,
                                                 transcriptEnabled: tM,
@@ -803,7 +803,7 @@ let _ = { tension: 250, friction: 5, clamp: !0 },
                                                     tT(e), er?.(e);
                                                 },
                                                 onVolumeExpandedChange: function (e) {
-                                                    tL(e);
+                                                    tP(e);
                                                 },
                                             }),
                                         }),
@@ -817,11 +817,11 @@ let _ = { tension: 250, friction: 5, clamp: !0 },
                                         isControlBarExpanded: na,
                                         controlBarAnimationSpring: nv,
                                         videoRef: t_,
-                                        isActive: ty,
-                                        isVolumeExpanded: tP,
+                                        isActive: tw,
+                                        isVolumeExpanded: tL,
                                     }),
                                 }),
-                            !ty &&
+                            !tw &&
                                 (0, r.jsx)("div", {
                                     className: F.mF,
                                     ref: tn,

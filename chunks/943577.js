@@ -22,8 +22,8 @@ var i = n(435558),
     S = n(907459),
     N = n(666176),
     C = n(823441),
-    R = n(47407),
-    O = n(616356),
+    O = n(47407),
+    R = n(616356),
     L = n(734057),
     y = n(153488),
     D = n(629016),
@@ -60,11 +60,11 @@ function $() {
 function z(e) {
     return M.A.findActivity(e, (e) => e.type !== x.$pd.CUSTOM_STATUS);
 }
-function q(e) {
-    let t = j.get(e);
-    return null == t && ((t = new R.A({ name: e })), j.set(e, t)), t;
-}
 function Z(e) {
+    let t = j.get(e);
+    return null == t && ((t = new O.A({ name: e })), j.set(e, t)), t;
+}
+function q(e) {
     return null == W[e] && (W = { ...W, [e]: new C.A({ url: e }) }), W[e];
 }
 function X(e) {
@@ -77,7 +77,7 @@ function Q(e) {
         if (null != t) return t;
         X(e.application_id);
     }
-    return (0, _.A)(e) && null != e.url ? Z(e.url) : (0, u.A)(e) ? q(e.name) : null;
+    return (0, _.A)(e) && null != e.url ? q(e.url) : (0, u.A)(e) ? Z(e.name) : null;
 }
 function J(e) {
     let t = w.A.getVoiceStateForUser(e);
@@ -102,7 +102,7 @@ function et(e, t, n) {
         x = !1,
         k = [];
     for (let e of u) {
-        let t = O.A.getAnyStreamForUser(e.id),
+        let t = R.A.getAnyStreamForUser(e.id),
             n = L.A.getChannel(t?.channelId);
         if ((0, E.qR)(n)) continue;
         let i = z(e.id);
@@ -119,8 +119,8 @@ function et(e, t, n) {
                     null
                 );
             if (e === N.WY) return N.HT;
-            if (e.startsWith(R.W)) return q(e.slice(R.W.length));
-            if (e.startsWith(C.K)) return Z(e.slice(C.K.length));
+            if (e.startsWith(O.W)) return Z(e.slice(O.W.length));
+            if (e.startsWith(C.K)) return q(e.slice(C.K.length));
             let t = h.A.getApplication(e);
             return null != t ? t : (X(e), null);
         })(a);
@@ -314,8 +314,8 @@ function ea() {
 class es extends a.Ay.Store {
     static displayName = "NowPlayingViewStore";
     initialize() {
-        this.syncWith([U.default, h.A, M.A, D.A, w.A, O.A, P.A, y.A, m.A], ea),
-            this.waitFor(h.A, O.A, L.A, y.A, D.A, f.A, v.A, b.A, M.A, P.A, m.A, U.default, w.A);
+        this.syncWith([U.default, h.A, M.A, D.A, w.A, R.A, P.A, y.A, m.A], ea),
+            this.waitFor(h.A, R.A, L.A, y.A, D.A, f.A, v.A, b.A, M.A, P.A, m.A, U.default, w.A);
     }
     get currentActivityParties() {
         return B;

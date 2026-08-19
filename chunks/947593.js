@@ -1,14 +1,14 @@
 "use strict";
-n.d(t, { D: () => a, I: () => o });
-var i = n(174459),
-    r = n(424994),
+n.d(t, { D: () => r, I: () => a });
+var l = n(174459),
+    i = n(424994),
     s = n(652215);
-let a = i.default.track;
-function o(e, t) {
-    a(s.HAw.RANKING_ITEM_INTERACTED_MUST_BE_SAMPLED, {
+let r = l.default.track;
+function a(e, t) {
+    r(s.HAw.RANKING_ITEM_INTERACTED_MUST_BE_SAMPLED, {
         request_id: t.requestId,
         item_id: t.entry.id,
-        surface_type: r.UG.GUILD_MEMBER_LIST,
+        surface_type: i.UG.GUILD_MEMBER_LIST,
         channel_id: t.channelId,
         guild_id: t.guildId,
         interaction_type: e,

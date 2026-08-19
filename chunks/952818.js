@@ -100,8 +100,8 @@ let H = new h.A("RunningGameStore"),
     ],
     $ = [],
     z = !0,
-    q = { "input-service": { state: "unknown" }, "tool-service": { state: "unknown" } },
-    Z = new Set(),
+    Z = { "input-service": { state: "unknown" }, "tool-service": { state: "unknown" } },
+    q = new Set(),
     X = [],
     Q = [],
     J = [],
@@ -326,7 +326,7 @@ function eB() {
                 if (null == i) return t;
                 for (let r of M.A.getLaunchOptions(n.id, n.branchId)) {
                     let a = `${n.id}:${n.branchId}`;
-                    Z.has(a) || ((e = !0), Z.add(a));
+                    q.has(a) || ((e = !0), q.add(a));
                     let { fullExecutablePath: s } = r,
                         l = s.replace(/\\/g, "/").toLowerCase();
                     (es[l] = i.id),
@@ -741,10 +741,10 @@ class eK extends d.Ay.Store {
         ef.add((0, A.v)(e) ?? e);
     }
     getSystemServiceStatus(e) {
-        return q[e] ?? { state: "unknown" };
+        return Z[e] ?? { state: "unknown" };
     }
     isSystemServiceInitialized(e) {
-        return q[e]?.state === "running";
+        return Z[e]?.state === "running";
     }
 }
 let e$ = new eK(u.h, {
@@ -889,7 +889,7 @@ let e$ = new eK(u.h, {
         },
         SYSTEM_SERVICE_INITIALIZE: function (e) {
             let { status: t, modules: n } = e;
-            for (let e of n) q[e] = t;
+            for (let e of n) Z[e] = t;
         },
         RUNNING_GAME_SET_DEBUG_GAME: function (e) {
             null != ee && (J = J.filter((e) => e !== ee)), null != (ee = e.game) && (J = [ee, ...J]), eD();

@@ -1,9 +1,9 @@
 "use strict";
-n.d(t, { A: () => r });
-var i = n(582128);
-function r(e) {
+n.d(t, { A: () => i });
+var l = n(582128);
+function i(e) {
     let t = e?.getBoundingClientRect(),
         n = t?.left,
-        r = t?.top;
-    return (0, i.useMemo)(() => (null != n && null != r ? { x: n, y: r } : null), [n, r]);
+        i = t?.top;
+    return (0, l.useMemo)(() => (null != n && null != i ? { x: n, y: i } : null), [n, i]);
 }

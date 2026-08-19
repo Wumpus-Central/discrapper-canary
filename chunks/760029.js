@@ -1,58 +1,58 @@
 "use strict";
-n.d(t, { CC: () => d, JT: () => f, Kq: () => u, P_: () => l, SK: () => h, Sl: () => c, _E: () => p });
-var r = n(334887),
-    i = n(909630),
-    a = n(192734),
-    o = n(576024),
-    s = n(582128);
+r.d(t, { CC: () => f, JT: () => p, Kq: () => u, P_: () => l, SK: () => h, Sl: () => c, _E: () => d });
+var n = r(334887),
+    o = r(909630),
+    i = r(192734),
+    a = r(576024),
+    s = r(582128);
 let l = Symbol("default");
 function u({ values: e, children: t }) {
-    for (let [n, r] of e) t = s.createElement(n.Provider, { value: r }, t);
+    for (let [r, n] of e) t = s.createElement(r.Provider, { value: n }, t);
     return t;
 }
 function c(e) {
     let {
         className: t,
-        style: n,
-        children: r,
-        defaultClassName: i,
-        defaultChildren: a,
-        defaultStyle: o,
+        style: r,
+        children: n,
+        defaultClassName: o,
+        defaultChildren: i,
+        defaultStyle: a,
         values: l,
     } = e;
     return (0, s.useMemo)(() => {
         let e, s, u;
         return (
-            (e = "function" == typeof t ? t({ ...l, defaultClassName: i }) : t),
-            (s = "function" == typeof n ? n({ ...l, defaultStyle: o || {} }) : n),
-            (u = "function" == typeof r ? r({ ...l, defaultChildren: a }) : null == r ? a : r),
+            (e = "function" == typeof t ? t({ ...l, defaultClassName: o }) : t),
+            (s = "function" == typeof r ? r({ ...l, defaultStyle: a || {} }) : r),
+            (u = "function" == typeof n ? n({ ...l, defaultChildren: i }) : null == n ? i : n),
             {
-                className: null != e ? e : i,
-                style: s || o ? { ...o, ...s } : void 0,
-                children: null != u ? u : a,
+                className: null != e ? e : o,
+                style: s || a ? { ...a, ...s } : void 0,
+                children: null != u ? u : i,
                 "data-rac": "",
             }
         );
-    }, [t, n, r, i, a, o, l]);
+    }, [t, r, n, o, i, a, l]);
 }
-function d(e, t) {
-    let n = (0, s.useContext)(e);
+function f(e, t) {
+    let r = (0, s.useContext)(e);
     if (null === t) return null;
-    if (n && "object" == typeof n && "slots" in n && n.slots) {
+    if (r && "object" == typeof r && "slots" in r && r.slots) {
         let e = t || l;
-        if (!n.slots[e]) {
-            let e = new Intl.ListFormat().format(Object.keys(n.slots).map((e) => `"${e}"`)),
-                r = t ? `Invalid slot "${t}".` : "A slot prop is required.";
-            throw Error(`${r} Valid slot names are ${e}.`);
+        if (!r.slots[e]) {
+            let e = new Intl.ListFormat().format(Object.keys(r.slots).map((e) => `"${e}"`)),
+                n = t ? `Invalid slot "${t}".` : "A slot prop is required.";
+            throw Error(`${n} Valid slot names are ${e}.`);
         }
-        return n.slots[e];
+        return r.slots[e];
     }
-    return n;
+    return r;
 }
-function f(e, t, n) {
-    let { ref: o, ...l } = d(n, e.slot) || {},
-        u = (0, r.U)((0, s.useMemo)(() => (0, i.P)(t, o), [t, o])),
-        c = (0, a.v)(l, e);
+function p(e, t, r) {
+    let { ref: a, ...l } = f(r, e.slot) || {},
+        u = (0, n.U)((0, s.useMemo)(() => (0, o.P)(t, a), [t, a])),
+        c = (0, i.v)(l, e);
     return (
         "style" in l &&
             l.style &&
@@ -60,31 +60,31 @@ function f(e, t, n) {
             e.style &&
             ("function" == typeof l.style || "function" == typeof e.style
                 ? (c.style = (t) => {
-                      let n = "function" == typeof l.style ? l.style(t) : l.style,
-                          r = { ...t.defaultStyle, ...n },
-                          i = "function" == typeof e.style ? e.style({ ...t, defaultStyle: r }) : e.style;
-                      return { ...r, ...i };
+                      let r = "function" == typeof l.style ? l.style(t) : l.style,
+                          n = { ...t.defaultStyle, ...r },
+                          o = "function" == typeof e.style ? e.style({ ...t, defaultStyle: n }) : e.style;
+                      return { ...n, ...o };
                   })
                 : (c.style = { ...l.style, ...e.style })),
         [c, u]
     );
 }
-function p(e = !0) {
-    let [t, n] = (0, s.useState)(e),
-        r = (0, s.useRef)(!1),
-        i = (0, s.useCallback)((e) => {
-            (r.current = !0), n(!!e);
+function d(e = !0) {
+    let [t, r] = (0, s.useState)(e),
+        n = (0, s.useRef)(!1),
+        o = (0, s.useCallback)((e) => {
+            (n.current = !0), r(!!e);
         }, []);
     return (
-        (0, o.N)(() => {
-            r.current || n(!1);
+        (0, a.N)(() => {
+            n.current || r(!1);
         }, []),
-        [i, t]
+        [o, t]
     );
 }
 function h(e) {
     let t = /^(data-.*)$/,
-        n = {};
-    for (let r in e) t.test(r) || (n[r] = e[r]);
-    return n;
+        r = {};
+    for (let n in e) t.test(n) || (r[n] = e[n]);
+    return r;
 }

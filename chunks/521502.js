@@ -1,57 +1,57 @@
-t.d(r, { A: () => h, U: () => a });
-var o,
-    i = t(17928),
-    l = t(228366),
-    n = t(380610),
-    a =
-        (((o = {})[(o.NotResolved = 0)] = "NotResolved"),
-        (o[(o.Resolving = 1)] = "Resolving"),
-        (o[(o.Resolved = 2)] = "Resolved"),
-        (o[(o.Invalid = 3)] = "Invalid"),
-        o);
-let u = 0,
-    d = null,
-    s = {};
-class c extends i.Ay.Store {
+r.d(t, { A: () => v, U: () => s });
+var l,
+    n = r(17928),
+    i = r(228366),
+    a = r(380610),
+    s =
+        (((l = {})[(l.NotResolved = 0)] = "NotResolved"),
+        (l[(l.Resolving = 1)] = "Resolving"),
+        (l[(l.Resolved = 2)] = "Resolved"),
+        (l[(l.Invalid = 3)] = "Invalid"),
+        l);
+let d = 0,
+    o = null,
+    u = {};
+class c extends n.Ay.Store {
     static displayName = "BuildOverrideStore";
     getCurrentBuildOverride() {
         return (
-            0 === u &&
-                ((u = 1),
-                (0, n.bD)().then((e) => {
-                    l.h.dispatch({ type: "CURRENT_BUILD_OVERRIDE_RESOLVED", overrides: e });
+            0 === d &&
+                ((d = 1),
+                (0, a.bD)().then((e) => {
+                    i.h.dispatch({ type: "CURRENT_BUILD_OVERRIDE_RESOLVED", overrides: e });
                 })),
-            { state: u, overrides: d }
+            { state: d, overrides: o }
         );
     }
     getBuildOverride(e) {
         return (
             !(function (e) {
-                if (e in s) return;
-                let r = (0, n.qU)(e);
-                if (null == r) {
-                    s = { ...s, [e]: { url: e, state: 3 } };
+                if (e in u) return;
+                let t = (0, a.qU)(e);
+                if (null == t) {
+                    u = { ...u, [e]: { url: e, state: 3 } };
                     return;
                 }
-                (s = { ...s, [e]: { url: e, validatedURL: r.url, payload: String(r.payload), state: 1 } }),
-                    (0, n.k9)(r.url).then((r) => {
-                        l.h.dispatch({ type: "BUILD_OVERRIDE_RESOLVED", url: e, override: r });
+                (u = { ...u, [e]: { url: e, validatedURL: t.url, payload: String(t.payload), state: 1 } }),
+                    (0, a.k9)(t.url).then((t) => {
+                        i.h.dispatch({ type: "BUILD_OVERRIDE_RESOLVED", url: e, override: t });
                     });
             })(e),
-            s[e]
+            u[e]
         );
     }
     getBuildOverrides() {
-        return s;
+        return u;
     }
 }
-let h = new c(l.h, {
+let v = new c(i.h, {
     BUILD_OVERRIDE_RESOLVED: function (e) {
-        let { url: r, override: t } = e;
-        s = { ...s, [r]: { ...s[r], state: null == t ? 3 : 2, override: t } };
+        let { url: t, override: r } = e;
+        u = { ...u, [t]: { ...u[t], state: null == r ? 3 : 2, override: r } };
     },
     CURRENT_BUILD_OVERRIDE_RESOLVED: function (e) {
-        let { overrides: r } = e;
-        (u = 2), (d = r);
+        let { overrides: t } = e;
+        (d = 2), (o = t);
     },
 });

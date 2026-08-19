@@ -1,30 +1,30 @@
-function n(e) {
+function r(e) {
     if (e && "object" == typeof e) {
         var t = e.which || e.keyCode || e.charCode;
         t && (e = t);
     }
     if ("number" == typeof e) return a[e];
-    var n = String(e),
-        s = i[n.toLowerCase()];
-    if (s) return s;
-    var s = r[n.toLowerCase()];
-    return s || (1 === n.length ? n.charCodeAt(0) : void 0);
+    var r = String(e),
+        i = n[r.toLowerCase()];
+    if (i) return i;
+    var i = o[r.toLowerCase()];
+    return i || (1 === r.length ? r.charCodeAt(0) : void 0);
 }
-n.isEventKey = function (e, t) {
+r.isEventKey = function (e, t) {
     if (e && "object" == typeof e) {
-        var n = e.which || e.keyCode || e.charCode;
-        if (null == n) return !1;
+        var r = e.which || e.keyCode || e.charCode;
+        if (null == r) return !1;
         if ("string" == typeof t) {
-            var s = i[t.toLowerCase()];
-            if (s) return s === n;
-            var s = r[t.toLowerCase()];
-            if (s) return s === n;
-        } else if ("number" == typeof t) return t === n;
+            var i = n[t.toLowerCase()];
+            if (i) return i === r;
+            var i = o[t.toLowerCase()];
+            if (i) return i === r;
+        } else if ("number" == typeof t) return t === r;
         return !1;
     }
 };
-var i =
-        ((t = e.exports = n).code =
+var n =
+        ((t = e.exports = r).code =
         t.codes =
             {
                 backspace: 8,
@@ -71,7 +71,7 @@ var i =
                 "]": 221,
                 "'": 222,
             }),
-    r = (t.aliases = {
+    o = (t.aliases = {
         windows: 91,
         "\u21E7": 16,
         "\u2325": 18,
@@ -93,10 +93,10 @@ var i =
         del: 46,
         cmd: 91,
     });
-for (s = 97; s < 123; s++) i[String.fromCharCode(s)] = s - 32;
-for (var s = 48; s < 58; s++) i[s - 48] = s;
-for (s = 1; s < 13; s++) i["f" + s] = s + 111;
-for (s = 0; s < 10; s++) i["numpad " + s] = s + 96;
+for (i = 97; i < 123; i++) n[String.fromCharCode(i)] = i - 32;
+for (var i = 48; i < 58; i++) n[i - 48] = i;
+for (i = 1; i < 13; i++) n["f" + i] = i + 111;
+for (i = 0; i < 10; i++) n["numpad " + i] = i + 96;
 var a = (t.names = t.title = {});
-for (s in i) a[i[s]] = s;
-for (var o in r) i[o] = r[o];
+for (i in n) a[n[i]] = i;
+for (var s in o) n[s] = o[s];

@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Ly: () => D, Q4: () => O, Tv: () => y, pn: () => v, GC: () => R, lq: () => b }), n(321073);
+n.d(t, { Ly: () => y, Q4: () => O, Tv: () => D, pn: () => v, GC: () => R, lq: () => b }), n(321073);
 var i = n(284009),
     r = n.n(i),
     a = n(997649),
@@ -211,7 +211,7 @@ function L(e) {
         ? { startMs: t + 1e3 * e.editMetadata.start, endMs: t + 1e3 * e.editMetadata.end }
         : { startMs: t, endMs: e.decision.timestamp };
 }
-function D(e, t, n, i) {
+function y(e, t, n, i) {
     let s,
         l = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {},
         { requestedCount: o = 3, preTrimmedSignalsByFilepath: d, debug: c = !1 } = l,
@@ -251,7 +251,7 @@ function D(e, t, n, i) {
         E = Object.keys(t.audioModelDataPerUser).length,
         C = [...t.gameEventData].sort((e, t) => e.timestamp_ms - t.timestamp_ms),
         R = O(i, C),
-        D = null != R ? C : [],
+        y = null != R ? C : [],
         M = Number.MAX_VALUE,
         P = -Number.MAX_VALUE;
     for (let e in t.audioModelDataPerUser) {
@@ -281,7 +281,7 @@ function D(e, t, n, i) {
             if (null != a) {
                 let t = 1e3 * Math.floor(s / 1e3);
                 function o(i) {
-                    return y(
+                    return D(
                         i.map((e) => ({ ...e, timestamp_ms: e.timestamp_ms + t })),
                         e,
                         n,
@@ -295,9 +295,9 @@ function D(e, t, n, i) {
                 for (let i in t.audioModelDataPerUser) {
                     let r = t.audioModelDataPerUser[i];
                     l[i] = {
-                        laughterData: y(r.laughterData, e, n),
-                        shoutingData: y(r.shoutingData, e, n),
-                        rmsData: y(r.rmsData, e, n),
+                        laughterData: D(r.laughterData, e, n),
+                        shoutingData: D(r.shoutingData, e, n),
+                        rmsData: D(r.rmsData, e, n),
                     };
                 }
             let c = (function (e) {
@@ -347,7 +347,7 @@ function D(e, t, n, i) {
         let { startMs: l, endMs: o } = L(i),
             { userIds: C, pLaughter: O, pShouting: R, rms: M, gridStartMs: P, chunkCount: k } = x(l, o),
             F = C.indexOf(n),
-            V = (0, a.p)(D, l, o),
+            V = (0, a.p)(y, l, o),
             B = V.filter(G);
         null != P &&
             k > 0 &&
@@ -386,7 +386,7 @@ function D(e, t, n, i) {
                     {
                         mainEventScore: R,
                         anchors: L,
-                        events: D,
+                        events: y,
                     } = (function (e, t, n, i) {
                         if (n < 0 || n >= e.laughter.length) return { mainEventScore: 0, anchors: [], events: [] };
                         let r = [],
@@ -431,7 +431,7 @@ function D(e, t, n, i) {
                         }
                         return { mainEventScore: l, anchors: m(a, i.eventChainGapChunks), events: r };
                     })({ laughter: _, shouting: E }, { laughter: C, shouting: O }, s, t),
-                    y = m(
+                    D = m(
                         [
                             ...L,
                             ...(t.gameEventsAsReactionAnchors && null != l
@@ -459,7 +459,7 @@ function D(e, t, n, i) {
                             l.push(1 - c);
                         }
                         return Math.max(0, ...l);
-                    })(y, C, O, s, t),
+                    })(D, C, O, s, t),
                     { laughter: b, shouting: M } = p(d, c, a, t),
                     { coOccurrenceScore: P, coContribPerChunk: U } = (function (e, t, n) {
                         let i = e.length,
@@ -496,8 +496,8 @@ function D(e, t, n, i) {
                         intensityLaughter: C,
                         intensityShouting: O,
                         rmsWeighted: N,
-                        mainEvents: D,
-                        reactionAnchors: y,
+                        mainEvents: y,
+                        reactionAnchors: D,
                         coContribPerChunk: U,
                     },
                 };
@@ -643,7 +643,7 @@ function D(e, t, n, i) {
     })(_, u, o, R?.gameAxisScoreThreshold);
     return { allClipsRanked: _, selected: k };
 }
-function y(e, t, n) {
+function D(e, t, n) {
     return e.filter((e) => e.timestamp_ms >= t && e.timestamp_ms <= n);
 }
 let v = 1e3;

@@ -2,20 +2,20 @@
 n.d(t, { A: () => _ });
 var i = n(439372),
     r = n(967198),
-    s = n(698441),
-    a = n(496092);
-let o = {},
-    l = new Set(),
-    u = new Set();
+    a = n(698441),
+    s = n(496092);
+let l = {},
+    o = new Set(),
+    d = new Set();
 async function c(e) {
-    if (!(0 === s.Ay.getGuildScheduledEventsForGuild(e).length || l.has(e)) && !u.has(e))
+    if (!(0 === a.Ay.getGuildScheduledEventsForGuild(e).length || o.has(e)) && !d.has(e))
         try {
-            l.add(e), await a.default.getGuildEventsForCurrentUser(e), u.add(e);
+            o.add(e), await s.default.getGuildEventsForCurrentUser(e), d.add(e);
         } catch (t) {
-            l.delete(e);
+            o.delete(e);
         }
 }
-class d extends i.A {
+class u extends i.A {
     actions = {
         POST_CONNECTION_OPEN: () => this.handleConnectionOpen(),
         GUILD_DELETE: (e) => this.handleGuildDelete(e),
@@ -24,31 +24,31 @@ class d extends i.A {
         CHANNEL_SELECT: (e) => this.handleChannelSelect(e),
     };
     async getGuildEventUserCounts(e, t, n) {
-        let i = n.filter((n) => null == o[`${e}-${t}-${n}`] || Date.now() - o[`${e}-${t}-${n}`] > 18e5);
-        if (!(Date.now() - o[`${e}-${t}`] < 18e5) || 0 !== i.length) {
-            (o[`${e}-${t}`] = Date.now()), i.forEach((n) => (o[`${e}-${t}-${n}`] = Date.now()));
+        let i = n.filter((n) => null == l[`${e}-${t}-${n}`] || Date.now() - l[`${e}-${t}-${n}`] > 18e5);
+        if (!(Date.now() - l[`${e}-${t}`] < 18e5) || 0 !== i.length) {
+            (l[`${e}-${t}`] = Date.now()), i.forEach((n) => (l[`${e}-${t}-${n}`] = Date.now()));
             try {
-                await a.default.fetchGuildEventUserCounts(e, t, i);
+                await s.default.fetchGuildEventUserCounts(e, t, i);
             } catch (e) {}
         }
     }
     getGuildEventUsers(e, t, n) {
-        return a.default.fetchUsersForGuildEvent(e, t, n);
+        return s.default.fetchUsersForGuildEvent(e, t, n);
     }
     getGuildEventsForCurrentUser(e) {
         return c(e);
     }
     async handleConnectionOpen() {
-        l.clear(), u.clear(), (o = {}), r.A.getLastSelectedGuildId();
+        o.clear(), d.clear(), (l = {}), r.A.getLastSelectedGuildId();
     }
     handleGuildUnavailable(e) {
         let { guildId: t } = e;
-        l.delete(t), u.delete(t), delete o[t];
+        o.delete(t), d.delete(t), delete l[t];
     }
     handleGuildDelete(e) {
         let { guild: t } = e,
             n = t.id;
-        l.delete(n), u.delete(n), delete o[n];
+        o.delete(n), d.delete(n), delete l[n];
     }
     handleInviteResolveSuccess(e) {
         let { invite: t } = e,
@@ -59,7 +59,7 @@ class d extends i.A {
     async handleChannelSelect(e) {
         let { guildId: t } = e;
         if (null != t)
-            for (let e of s.Ay.getGuildScheduledEventsForGuild(t))
+            for (let e of a.Ay.getGuildScheduledEventsForGuild(t))
                 try {
                     await this.getGuildEventUserCounts(t, e.id, []);
                 } finally {
@@ -67,4 +67,4 @@ class d extends i.A {
                 }
     }
 }
-let _ = new d();
+let _ = new u();

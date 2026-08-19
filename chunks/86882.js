@@ -2,12 +2,12 @@
 e.exports = function (e) {
     "number" != typeof e.which && (e.which = e.keyCode);
     var t,
-        i = n(780594)(e);
-    if (i) {
-        if ("keyup" === e.type && this.ignoreNextKeyup === i) {
+        n = r(780594)(e);
+    if (n) {
+        if ("keyup" === e.type && this.ignoreNextKeyup === n) {
             this.ignoreNextKeyup = !1;
             return;
         }
-        (t = n(767721)), this.handleKey(i, t(e), e);
+        (t = r(767721)), this.handleKey(n, t(e), e);
     }
 };

@@ -10,15 +10,15 @@ var i = n(477900),
     u = n(778712),
     h = n(890856),
     p = n(736653),
-    m = n(505643),
+    m = n(453028),
     f = n(531685),
     A = n(85448),
     x = n(806931),
     g = n(375708),
-    y = n(506682),
-    C = n(582835),
+    C = n(506682),
+    y = n(582835),
     j = n(197692);
-let v = {
+let I = {
     SCALE_MIN: 0.7,
     SCALE_MAX: 1,
     DURATION_IN: 300,
@@ -26,7 +26,7 @@ let v = {
     EASING_IN: r.A.Easing.inOut(r.A.Easing.back()),
     EASING_OUT: r.A.Easing.quad,
 };
-class E extends l.PureComponent {
+class v extends l.PureComponent {
     scaleAnimation = new r.A.Value(0);
     spriteAnimation = new r.A.Value(0);
     spriteOpacity = new r.A.Value(0);
@@ -43,7 +43,7 @@ class E extends l.PureComponent {
         t.setValue(0),
             n.setValue(0),
             r.A.parallel([
-                r.A.timing(t, { toValue: 1, duration: v.DURATION_IN, easing: v.EASING_IN }),
+                r.A.timing(t, { toValue: 1, duration: I.DURATION_IN, easing: I.EASING_IN }),
                 r.A.timing(n, { toValue: 1, duration: 200 }),
             ]).start(e);
     }
@@ -53,7 +53,7 @@ class E extends l.PureComponent {
         let a = [];
         for (let e = 0; e < 23; e++) a.push(r.A.timing(n, { toValue: -26 * e, duration: 17 }));
         r.A.sequence([
-            r.A.timing(t, { toValue: 0, duration: v.DURATION_OUT, easing: v.EASING_OUT }),
+            r.A.timing(t, { toValue: 0, duration: I.DURATION_OUT, easing: I.EASING_OUT }),
             r.A.sequence(a),
             r.A.timing(l, { toValue: 0, duration: 125 }),
         ]).start(e);
@@ -61,7 +61,7 @@ class E extends l.PureComponent {
     getScaleStyle() {
         let { scaleAnimation: e } = this;
         return r.A.accelerate({
-            transform: [{ scale: e.interpolate({ inputRange: [0, 1], outputRange: [v.SCALE_MIN, v.SCALE_MAX] }) }],
+            transform: [{ scale: e.interpolate({ inputRange: [0, 1], outputRange: [I.SCALE_MIN, I.SCALE_MAX] }) }],
             opacity: e,
         });
     }
@@ -80,14 +80,14 @@ class E extends l.PureComponent {
     render() {
         let { theme: e, children: t, className: n } = this.props,
             l = (0, d.M)(e),
-            a = s()(y._y, { [j.cp]: l, [j.QB]: !l });
+            a = s()(C._y, { [j.cp]: l, [j.QB]: !l });
         return (0, i.jsxs)(r.A.div, {
             role: "listitem",
-            className: s()(y.kY, n),
+            className: s()(C.kY, n),
             style: this.getWidthStyle(),
             children: [
                 (0, i.jsx)("div", {
-                    className: s()(y.XY, C.xM, C.wq, C.Hu),
+                    className: s()(C.XY, y.xM, y.wq, y.Hu),
                     children: (0, i.jsx)(r.A.div, { className: a, style: this.getSpriteStyle() }),
                 }),
                 (0, i.jsx)(r.A.div, { style: this.getScaleStyle(), children: t }),
@@ -97,16 +97,16 @@ class E extends l.PureComponent {
 }
 function N(e) {
     var t;
-    let { participants: n, onContextMenu: l, className: a, onClick: r, width: d, guildId: C } = e,
+    let { participants: n, onContextMenu: l, className: a, onClick: r, width: d, guildId: y } = e,
         j = (0, p.Ay)(),
-        v = ((t = n.length), ((0, u.FT)(u._3.SIZE_80) + 16) * t > d ? u._3.SIZE_40 : u._3.SIZE_80),
+        I = ((t = n.length), ((0, u.FT)(u._3.SIZE_80) + 16) * t > d ? u._3.SIZE_40 : u._3.SIZE_80),
         N = (0, o.bG)([f.A], () => f.A.isFocused()),
-        I = (0, o.bG)([m.Ay], () => new Map(n.filter(x.Xw).map((e) => [e.user.id, m.Ay.isLocalMute(e.user.id)])), [n]),
+        E = (0, o.bG)([m.Ay], () => new Map(n.filter(x.Xw).map((e) => [e.user.id, m.Ay.isLocalMute(e.user.id)])), [n]),
         b = n.map((e) => {
             if (e.type !== x.lp.USER) return null;
             let { user: t, voiceState: n, speaking: a, ringing: s } = e,
                 o = null;
-            !0 === I.get(t.id)
+            !0 === E.get(t.id)
                 ? (o = g.intl.string(g.t.Q8Uzof))
                 : n?.isVoiceDeafened() === !0
                   ? (o = g.intl.string(g.t.NjmiOL))
@@ -114,10 +114,10 @@ function N(e) {
             let c =
                 null != o ? g.intl.formatToPlainString(g.t["1+MVBP"], { userName: t.username, status: o }) : t.username;
             return (0, i.jsx)(
-                E,
+                v,
                 {
-                    className: y.Wp,
-                    width: (0, u.FT)(v),
+                    className: C.Wp,
+                    width: (0, u.FT)(I),
                     theme: j,
                     children: (0, i.jsx)(h.s, {
                         "aria-label": c,
@@ -127,8 +127,8 @@ function N(e) {
                             A.Ay,
                             {
                                 userId: t.id,
-                                src: t.getAvatarURL(C, (0, u.FT)(v), a && N),
-                                size: v,
+                                src: t.getAvatarURL(y, (0, u.FT)(I), a && N),
+                                size: I,
                                 muted: n?.isVoiceMuted() ?? !1,
                                 deafen: n?.isVoiceDeafened() ?? !1,
                                 speaking: a,
@@ -141,5 +141,5 @@ function N(e) {
                 t.id,
             );
         });
-    return (0, i.jsx)(c.F, { component: "div", role: "list", className: s()(y.zr, a), children: b });
+    return (0, i.jsx)(c.F, { component: "div", role: "list", className: s()(C.zr, a), children: b });
 }

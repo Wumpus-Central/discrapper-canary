@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { M: () => r, e: () => s });
+n.d(t, { M: () => r, e: () => a });
 var i = n(927813);
 let r = 10 * i.A.Millis.MINUTE,
-    s = 30 * i.A.Millis.SECOND;
+    a = 30 * i.A.Millis.SECOND;

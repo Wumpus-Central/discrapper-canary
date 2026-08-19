@@ -1,50 +1,50 @@
 "use strict";
-n.d(t, { k: () => h, p: () => f }), n(321073);
-var i = n(495544),
+n.d(t, { k: () => E, p: () => A }), n(321073);
+var i = n(280450),
     r = n(763827),
-    s = n(174459),
-    a = n(935208),
-    o = n(652215);
-let l = (0, n(945810).mj)({
+    a = n(174459),
+    s = n(935208),
+    l = n(652215);
+let o = (0, n(945810).mj)({
         name: "2026-06-clickstream-analytics",
         kind: "user",
         defaultConfig: { enabled: !1 },
         variations: { 1: { enabled: !0 } },
     }),
-    u = new Map(),
+    d = new Map(),
     c = -1,
-    d = !1;
+    u = !1;
 function _() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
     if (e) {
-        let e = a.default.extractTimestamp(i.default.getId());
-        e !== c && (f(!1), (c = e)),
-            (d = (function () {
-                let { enabled: e } = l.getConfig({ location: "clickstream" });
+        let e = s.default.extractTimestamp(i.default.getId());
+        e !== c && (A(!1), (c = e)),
+            (u = (function () {
+                let { enabled: e } = o.getConfig({ location: "clickstream" });
                 return e;
             })());
     }
-    return d;
+    return u;
 }
-function h(e, t) {
-    _() && (u.has(e) || u.set(e, []), u.get(e)?.push({ timestamp: new Date(), rtc_state: r.A.getState(), ...t }));
+function E(e, t) {
+    _() && (d.has(e) || d.set(e, []), d.get(e)?.push({ timestamp: new Date(), rtc_state: r.A.getState(), ...t }));
 }
-function f() {
+function A() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
-    if (!_(e)) return void u.clear();
-    for (let [e, t] of u)
-        s.default.track(
+    if (!_(e)) return void d.clear();
+    for (let [e, t] of d)
+        a.default.track(
             e,
             (function (e, t) {
                 let n = new Date();
                 switch (e) {
-                    case o.HAw.GUILD_VIEWED_CLICKSTREAM:
+                    case l.HAw.GUILD_VIEWED_CLICKSTREAM:
                         return {
                             time_minus: t.map((e) => n.getTime() - e.timestamp.getTime()),
                             rtc_states: t.map((e) => e.rtc_state),
                             guild_ids: t.map((e) => e.guild_id),
                         };
-                    case o.HAw.FRIENDS_LIST_VIEWED_CLICKSTREAM:
+                    case l.HAw.FRIENDS_LIST_VIEWED_CLICKSTREAM:
                         return {
                             time_minus: t.map((e) => n.getTime() - e.timestamp.getTime()),
                             rtc_states: t.map((e) => e.rtc_state),
@@ -53,14 +53,14 @@ function f() {
                             now_playing_visible: t.map((e) => e.now_playing_visible),
                             now_playing_num_cards: t.map((e) => e.now_playing_num_cards),
                         };
-                    case o.HAw.CHANNEL_OPENED_CLICKSTREAM:
+                    case l.HAw.CHANNEL_OPENED_CLICKSTREAM:
                         return {
                             time_minus: t.map((e) => n.getTime() - e.timestamp.getTime()),
                             rtc_states: t.map((e) => e.rtc_state),
                             channel_ids: t.map((e) => e.channel_id),
                             channel_types: t.map((e) => e.channel_type),
                         };
-                    case o.HAw.CHANNEL_LATEST_MESSAGES_LOADED_CLICKSTREAM:
+                    case l.HAw.CHANNEL_LATEST_MESSAGES_LOADED_CLICKSTREAM:
                         return {
                             time_minus: t.map((e) => n.getTime() - e.timestamp.getTime()),
                             rtc_states: t.map((e) => e.rtc_state),
@@ -73,5 +73,5 @@ function f() {
                 }
             })(e, t),
         );
-    u.clear();
+    d.clear();
 }

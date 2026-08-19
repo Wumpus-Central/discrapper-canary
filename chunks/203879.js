@@ -1,38 +1,38 @@
-s.d(e, { B: () => a, p: () => r });
-var n = s(582128),
-    i = s(206692);
+n.d(e, { B: () => a, p: () => r });
+var s = n(582128),
+    i = n(206692);
 let l = {};
 function a(t) {
     let e = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : l,
-        s = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
-        a = (0, n.useRef)(null),
-        r = (0, n.useRef)(null),
-        o = (0, n.useRef)(t);
+        n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
+        a = (0, s.useRef)(null),
+        r = (0, s.useRef)(null),
+        o = (0, s.useRef)(t);
     return (
-        (0, n.useEffect)(() => {
+        (0, s.useEffect)(() => {
             o.current = t;
         }, [t]),
-        (0, n.useEffect)(() => {
-            if (!s) return;
+        (0, s.useEffect)(() => {
+            if (!n) return;
             null == r.current && (r.current = (0, i.e)(e));
             let t = a.current,
-                n = r.current;
-            if (null != t && null != n)
+                s = r.current;
+            if (null != t && null != s)
                 return (
-                    (0, i.wB)(n, t, o.current),
+                    (0, i.wB)(s, t, o.current),
                     () => {
-                        (0, i.$v)(n, t), (r.current = null);
+                        (0, i.$v)(s, t), (r.current = null);
                     }
                 );
-        }, [s, e]),
+        }, [n, e]),
         a
     );
 }
 function r() {
-    let [t, e] = (0, n.useState)(!1);
+    let [t, e] = (0, s.useState)(!1);
     return {
         ref: a(
-            (0, n.useCallback)((t) => {
+            (0, s.useCallback)((t) => {
                 e(t.isIntersecting);
             }, []),
         ),

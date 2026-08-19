@@ -1,15 +1,15 @@
 "use strict";
-n.d(t, { it: () => o, ju: () => a, yL: () => l });
-var i = n(126020),
+n.d(t, { it: () => l, ju: () => s, yL: () => o });
+var i = n(277057),
     r = n.n(i);
-let s = {};
-function a(e) {
+let a = {};
+function s(e) {
     let t = r()("VideoStream");
-    return (s[t] = e), t;
-}
-function o(e) {
-    delete s[e];
+    return (a[t] = e), t;
 }
 function l(e) {
-    return s[e];
+    delete a[e];
+}
+function o(e) {
+    return a[e];
 }

@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, { A: () => s });
-var i = n(17928),
-    r = n(933958);
+var l = n(17928),
+    i = n(933958);
 function s() {
-    return (0, i.bG)([r.Ay], () => r.Ay.getCurrentEmbeddedActivity());
+    return (0, l.bG)([i.Ay], () => i.Ay.getCurrentEmbeddedActivity());
 }

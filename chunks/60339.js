@@ -1,20 +1,20 @@
 "use strict";
-n.d(t, { H: () => a });
-var r = n(992533),
-    i = n(582128);
-function a(e = {}) {
+r.d(t, { H: () => i });
+var n = r(992533),
+    o = r(582128);
+function i(e = {}) {
     var t;
-    let { isReadOnly: n } = e,
-        [o, s] = (0, r.P)(e.isSelected, e.defaultSelected || !1, e.onChange),
-        [l] = (0, i.useState)(o);
+    let { isReadOnly: r } = e,
+        [a, s] = (0, n.P)(e.isSelected, e.defaultSelected || !1, e.onChange),
+        [l] = (0, o.useState)(a);
     return {
-        isSelected: o,
+        isSelected: a,
         defaultSelected: null != (t = e.defaultSelected) ? t : l,
         setSelected: function (e) {
-            n || s(e);
+            r || s(e);
         },
         toggle: function () {
-            n || s(!o);
+            r || s(!a);
         },
     };
 }

@@ -1,10 +1,10 @@
 "use strict";
-n.d(t, { X: () => l });
+n.d(t, { X: () => o });
 var i = n(852015),
     r = n(144367),
-    s = n(428420),
-    a = n(535384);
-class o extends a.G {
+    a = n(428420),
+    s = n(535384);
+class l extends s.G {
     constructor() {
         super("discord_protos.common.v1.LocalizedString", [
             { no: 1, name: "default", kind: "scalar", T: 9 },
@@ -14,46 +14,46 @@ class o extends a.G {
     create(e) {
         let t = { default: "", localizations: {} };
         return (
-            globalThis.Object.defineProperty(t, s.$, { enumerable: !1, value: this }),
+            globalThis.Object.defineProperty(t, a.$, { enumerable: !1, value: this }),
             void 0 !== e && (0, r.x)(this, t, e),
             t
         );
     }
     internalBinaryRead(e, t, n, r) {
-        let s = r ?? this.create(),
-            a = e.pos + t;
-        for (; e.pos < a; ) {
+        let a = r ?? this.create(),
+            s = e.pos + t;
+        for (; e.pos < s; ) {
             let [t, r] = e.tag();
             switch (t) {
                 case 1:
-                    s.default = e.string();
+                    a.default = e.string();
                     break;
                 case 2:
-                    this.binaryReadMap2(s.localizations, e, n);
+                    this.binaryReadMap2(a.localizations, e, n);
                     break;
                 default:
-                    let a = n.readUnknownField;
-                    if ("throw" === a)
+                    let s = n.readUnknownField;
+                    if ("throw" === s)
                         throw new globalThis.Error(`Unknown field ${t} (wire type ${r}) for ${this.typeName}`);
-                    let o = e.skip(r);
-                    !1 !== a && (!0 === a ? i.f$.onRead : a)(this.typeName, s, t, r, o);
+                    let l = e.skip(r);
+                    !1 !== s && (!0 === s ? i.f$.onRead : s)(this.typeName, a, t, r, l);
             }
         }
-        return s;
+        return a;
     }
     binaryReadMap2(e, t, n) {
         let i = t.uint32(),
             r = t.pos + i,
-            s,
-            a;
+            a,
+            s;
         for (; t.pos < r; ) {
             let [e, n] = t.tag();
             switch (e) {
                 case 1:
-                    s = t.string();
+                    a = t.string();
                     break;
                 case 2:
-                    a = t.string();
+                    s = t.string();
                     break;
                 default:
                     throw new globalThis.Error(
@@ -61,7 +61,7 @@ class o extends a.G {
                     );
             }
         }
-        e[s ?? ""] = a ?? "";
+        e[a ?? ""] = s ?? "";
     }
     internalBinaryWrite(e, t, n) {
         for (let n of ("" !== e.default && t.tag(1, i.O0.LengthDelimited).string(e.default),
@@ -77,8 +77,8 @@ class o extends a.G {
         return !1 !== r && (!0 == r ? i.f$.onWrite : r)(this.typeName, e, t), t;
     }
 }
-let l = new o();
-class u extends a.G {
+let o = new l();
+class d extends s.G {
     constructor() {
         super("discord_protos.common.v1.LocalizedSnowflake", [
             { no: 1, name: "default", kind: "scalar", T: 6 },
@@ -88,46 +88,46 @@ class u extends a.G {
     create(e) {
         let t = { default: "0", localizations: {} };
         return (
-            globalThis.Object.defineProperty(t, s.$, { enumerable: !1, value: this }),
+            globalThis.Object.defineProperty(t, a.$, { enumerable: !1, value: this }),
             void 0 !== e && (0, r.x)(this, t, e),
             t
         );
     }
     internalBinaryRead(e, t, n, r) {
-        let s = r ?? this.create(),
-            a = e.pos + t;
-        for (; e.pos < a; ) {
+        let a = r ?? this.create(),
+            s = e.pos + t;
+        for (; e.pos < s; ) {
             let [t, r] = e.tag();
             switch (t) {
                 case 1:
-                    s.default = e.fixed64().toString();
+                    a.default = e.fixed64().toString();
                     break;
                 case 2:
-                    this.binaryReadMap2(s.localizations, e, n);
+                    this.binaryReadMap2(a.localizations, e, n);
                     break;
                 default:
-                    let a = n.readUnknownField;
-                    if ("throw" === a)
+                    let s = n.readUnknownField;
+                    if ("throw" === s)
                         throw new globalThis.Error(`Unknown field ${t} (wire type ${r}) for ${this.typeName}`);
-                    let o = e.skip(r);
-                    !1 !== a && (!0 === a ? i.f$.onRead : a)(this.typeName, s, t, r, o);
+                    let l = e.skip(r);
+                    !1 !== s && (!0 === s ? i.f$.onRead : s)(this.typeName, a, t, r, l);
             }
         }
-        return s;
+        return a;
     }
     binaryReadMap2(e, t, n) {
         let i = t.uint32(),
             r = t.pos + i,
-            s,
-            a;
+            a,
+            s;
         for (; t.pos < r; ) {
             let [e, n] = t.tag();
             switch (e) {
                 case 1:
-                    s = t.string();
+                    a = t.string();
                     break;
                 case 2:
-                    a = t.fixed64().toString();
+                    s = t.fixed64().toString();
                     break;
                 default:
                     throw new globalThis.Error(
@@ -135,7 +135,7 @@ class u extends a.G {
                     );
             }
         }
-        e[s ?? ""] = a ?? "0";
+        e[a ?? ""] = s ?? "0";
     }
     internalBinaryWrite(e, t, n) {
         for (let n of ("0" !== e.default && t.tag(1, i.O0.Bit64).fixed64(e.default), Object.keys(e.localizations)))
@@ -150,4 +150,4 @@ class u extends a.G {
         return !1 !== r && (!0 == r ? i.f$.onWrite : r)(this.typeName, e, t), t;
     }
 }
-new u();
+new d();

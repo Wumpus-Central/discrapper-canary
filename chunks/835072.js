@@ -1,57 +1,57 @@
-e.d(l, { A: () => T, f: () => m });
-var n = e(477900);
-e(582128);
-var a = e(451394),
-    i = e(687966),
-    s = e(323384),
-    o = e(432017),
-    r = e(748562),
-    u = e(765379),
-    p = e(82149),
-    d = e(566903),
-    c = e(864436),
-    A = e(200041),
-    x = e(652215);
-function m(t) {
-    let l = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-    return (0, p.Cy)(t)
-        ? a.q
-        : (0, u.A)(t)
-          ? l
-              ? i.GameControllerIcon
-              : s.k
-          : t.type === x.$pd.PLAYING
-            ? i.GameControllerIcon
-            : t.type === x.$pd.LISTENING
-              ? o.T
-              : t.type === x.$pd.WATCHING || t.type === x.$pd.STREAMING
-                ? r.U
-                : t.type === x.$pd.COMPETING
-                  ? i.GameControllerIcon
+l.d(t, { A: () => T, f: () => _ });
+var n = l(477900);
+l(582128);
+var i = l(451394),
+    r = l(687966),
+    a = l(323384),
+    s = l(432017),
+    o = l(748562),
+    c = l(765379),
+    d = l(82149),
+    u = l(566903),
+    h = l(864436),
+    E = l(200041),
+    I = l(652215);
+function _(e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+    return (0, d.Cy)(e)
+        ? i.q
+        : (0, c.A)(e)
+          ? t
+              ? r.GameControllerIcon
+              : a.k
+          : e.type === I.$pd.PLAYING
+            ? r.GameControllerIcon
+            : e.type === I.$pd.LISTENING
+              ? s.T
+              : e.type === I.$pd.WATCHING || e.type === I.$pd.STREAMING
+                ? o.U
+                : e.type === I.$pd.COMPETING
+                  ? r.GameControllerIcon
                   : null;
 }
-function T(t) {
+function T(e) {
     let {
-            activity: l,
-            textVariant: e,
-            textClassName: a,
-            iconClassName: i,
-            hideIcon: s = !1,
-            hideText: o = !1,
-            hideTooltip: r = !1,
-            canTruncate: u = !0,
-        } = t,
-        { text: p, tooltip: x } = (0, d.A)(l, !0),
-        T = m(l),
-        h = null != T && !s;
-    return (0, n.jsx)(A.A, {
-        icon: h ? (0, n.jsx)(c.A, { icon: T, className: i }) : void 0,
-        text: p ?? "",
-        textVariant: e,
-        textClassName: a,
-        hideTooltip: r,
-        canTruncate: u,
-        "aria-label": x ?? "",
-        hideText: o,
+            activity: t,
+            textVariant: l,
+            textClassName: i,
+            iconClassName: r,
+            hideIcon: a = !1,
+            hideText: s = !1,
+            hideTooltip: o = !1,
+            canTruncate: c = !0,
+        } = e,
+        { text: d, tooltip: I } = (0, u.A)(t, !0),
+        T = _(t),
+        f = null != T && !a;
+    return (0, n.jsx)(E.A, {
+        icon: f ? (0, n.jsx)(h.A, { icon: T, className: r }) : void 0,
+        text: d ?? "",
+        textVariant: l,
+        textClassName: i,
+        hideTooltip: o,
+        canTruncate: c,
+        "aria-label": I ?? "",
+        hideText: s,
     });
 }

@@ -1,19 +1,19 @@
 "use strict";
-n.d(t, { E: () => h, u: () => d });
+n.d(t, { E: () => E, u: () => u });
 var i,
     r = n(852015),
-    s = n(144367),
-    a = n(428420),
-    o = n(535384),
-    l = n(991023),
-    u = n(453360),
+    a = n(144367),
+    s = n(428420),
+    l = n(535384),
+    o = n(991023),
+    d = n(453360),
     c = n(414525),
-    d =
+    u =
         (((i = {})[(i.UNSPECIFIED = 0)] = "UNSPECIFIED"),
         (i[(i.NORMAL = 1)] = "NORMAL"),
         (i[(i.LARGE_TILTED = 2)] = "LARGE_TILTED"),
         i);
-class _ extends o.G {
+class _ extends l.G {
     constructor() {
         super("discord_protos.premium_marketing.v1.GiftCustomizationBanner", [
             { no: 1, name: "asset_url", kind: "scalar", T: 9 },
@@ -21,79 +21,79 @@ class _ extends o.G {
             { no: 3, name: "mobile_body", kind: "scalar", T: 9 },
             { no: 4, name: "gradient", kind: "message", T: () => c.H },
             { no: 5, name: "background_asset_url", kind: "scalar", T: 9 },
-            { no: 6, name: "asset", kind: "message", T: () => u.i },
-            { no: 7, name: "background_asset", kind: "message", T: () => u.i },
-            { no: 8, name: "mobile_background_asset", kind: "message", T: () => u.i },
+            { no: 6, name: "asset", kind: "message", T: () => d.i },
+            { no: 7, name: "background_asset", kind: "message", T: () => d.i },
+            { no: 8, name: "mobile_background_asset", kind: "message", T: () => d.i },
             {
                 no: 9,
                 name: "asset_variant",
                 kind: "enum",
                 T: () => [
                     "discord_protos.premium_marketing.v1.GiftCustomizationBanner.AssetVariant",
-                    d,
+                    u,
                     "ASSET_VARIANT_",
                 ],
             },
-            { no: 10, name: "desktop_body_localized", kind: "message", T: () => l.X },
-            { no: 11, name: "mobile_body_localized", kind: "message", T: () => l.X },
+            { no: 10, name: "desktop_body_localized", kind: "message", T: () => o.X },
+            { no: 11, name: "mobile_body_localized", kind: "message", T: () => o.X },
         ]);
     }
     create(e) {
         let t = { assetUrl: "", desktopBody: "", mobileBody: "", backgroundAssetUrl: "", assetVariant: 0 };
         return (
-            globalThis.Object.defineProperty(t, a.$, { enumerable: !1, value: this }),
-            void 0 !== e && (0, s.x)(this, t, e),
+            globalThis.Object.defineProperty(t, s.$, { enumerable: !1, value: this }),
+            void 0 !== e && (0, a.x)(this, t, e),
             t
         );
     }
     internalBinaryRead(e, t, n, i) {
-        let s = i ?? this.create(),
-            a = e.pos + t;
-        for (; e.pos < a; ) {
+        let a = i ?? this.create(),
+            s = e.pos + t;
+        for (; e.pos < s; ) {
             let [t, i] = e.tag();
             switch (t) {
                 case 1:
-                    s.assetUrl = e.string();
+                    a.assetUrl = e.string();
                     break;
                 case 2:
-                    s.desktopBody = e.string();
+                    a.desktopBody = e.string();
                     break;
                 case 3:
-                    s.mobileBody = e.string();
+                    a.mobileBody = e.string();
                     break;
                 case 4:
-                    s.gradient = c.H.internalBinaryRead(e, e.uint32(), n, s.gradient);
+                    a.gradient = c.H.internalBinaryRead(e, e.uint32(), n, a.gradient);
                     break;
                 case 5:
-                    s.backgroundAssetUrl = e.string();
+                    a.backgroundAssetUrl = e.string();
                     break;
                 case 6:
-                    s.asset = u.i.internalBinaryRead(e, e.uint32(), n, s.asset);
+                    a.asset = d.i.internalBinaryRead(e, e.uint32(), n, a.asset);
                     break;
                 case 7:
-                    s.backgroundAsset = u.i.internalBinaryRead(e, e.uint32(), n, s.backgroundAsset);
+                    a.backgroundAsset = d.i.internalBinaryRead(e, e.uint32(), n, a.backgroundAsset);
                     break;
                 case 8:
-                    s.mobileBackgroundAsset = u.i.internalBinaryRead(e, e.uint32(), n, s.mobileBackgroundAsset);
+                    a.mobileBackgroundAsset = d.i.internalBinaryRead(e, e.uint32(), n, a.mobileBackgroundAsset);
                     break;
                 case 9:
-                    s.assetVariant = e.int32();
+                    a.assetVariant = e.int32();
                     break;
                 case 10:
-                    s.desktopBodyLocalized = l.X.internalBinaryRead(e, e.uint32(), n, s.desktopBodyLocalized);
+                    a.desktopBodyLocalized = o.X.internalBinaryRead(e, e.uint32(), n, a.desktopBodyLocalized);
                     break;
                 case 11:
-                    s.mobileBodyLocalized = l.X.internalBinaryRead(e, e.uint32(), n, s.mobileBodyLocalized);
+                    a.mobileBodyLocalized = o.X.internalBinaryRead(e, e.uint32(), n, a.mobileBodyLocalized);
                     break;
                 default:
-                    let a = n.readUnknownField;
-                    if ("throw" === a)
+                    let s = n.readUnknownField;
+                    if ("throw" === s)
                         throw new globalThis.Error(`Unknown field ${t} (wire type ${i}) for ${this.typeName}`);
-                    let o = e.skip(i);
-                    !1 !== a && (!0 === a ? r.f$.onRead : a)(this.typeName, s, t, i, o);
+                    let l = e.skip(i);
+                    !1 !== s && (!0 === s ? r.f$.onRead : s)(this.typeName, a, t, i, l);
             }
         }
-        return s;
+        return a;
     }
     internalBinaryWrite(e, t, n) {
         "" !== e.assetUrl && t.tag(1, r.O0.LengthDelimited).string(e.assetUrl),
@@ -101,18 +101,18 @@ class _ extends o.G {
             "" !== e.mobileBody && t.tag(3, r.O0.LengthDelimited).string(e.mobileBody),
             e.gradient && c.H.internalBinaryWrite(e.gradient, t.tag(4, r.O0.LengthDelimited).fork(), n).join(),
             "" !== e.backgroundAssetUrl && t.tag(5, r.O0.LengthDelimited).string(e.backgroundAssetUrl),
-            e.asset && u.i.internalBinaryWrite(e.asset, t.tag(6, r.O0.LengthDelimited).fork(), n).join(),
+            e.asset && d.i.internalBinaryWrite(e.asset, t.tag(6, r.O0.LengthDelimited).fork(), n).join(),
             e.backgroundAsset &&
-                u.i.internalBinaryWrite(e.backgroundAsset, t.tag(7, r.O0.LengthDelimited).fork(), n).join(),
+                d.i.internalBinaryWrite(e.backgroundAsset, t.tag(7, r.O0.LengthDelimited).fork(), n).join(),
             e.mobileBackgroundAsset &&
-                u.i.internalBinaryWrite(e.mobileBackgroundAsset, t.tag(8, r.O0.LengthDelimited).fork(), n).join(),
+                d.i.internalBinaryWrite(e.mobileBackgroundAsset, t.tag(8, r.O0.LengthDelimited).fork(), n).join(),
             0 !== e.assetVariant && t.tag(9, r.O0.Varint).int32(e.assetVariant),
             e.desktopBodyLocalized &&
-                l.X.internalBinaryWrite(e.desktopBodyLocalized, t.tag(10, r.O0.LengthDelimited).fork(), n).join(),
+                o.X.internalBinaryWrite(e.desktopBodyLocalized, t.tag(10, r.O0.LengthDelimited).fork(), n).join(),
             e.mobileBodyLocalized &&
-                l.X.internalBinaryWrite(e.mobileBodyLocalized, t.tag(11, r.O0.LengthDelimited).fork(), n).join();
+                o.X.internalBinaryWrite(e.mobileBodyLocalized, t.tag(11, r.O0.LengthDelimited).fork(), n).join();
         let i = n.writeUnknownFields;
         return !1 !== i && (!0 == i ? r.f$.onWrite : i)(this.typeName, e, t), t;
     }
 }
-let h = new _();
+let E = new _();

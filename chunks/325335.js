@@ -1,8 +1,8 @@
 "use strict";
-n.d(t, { A: () => s });
+n.d(t, { A: () => a });
 let i = /^#[0-9a-f]{3,8}$/i,
     r = /^((?:rgb|hsl)a?)\s*\(([^)]*)\)/i;
-class s {
+class a {
     red;
     green;
     blue;
@@ -22,7 +22,7 @@ class s {
         return null != e.match(r) ? this.parseColorFnString(e) : null != e.match(i) ? this.parseHexString(e) : void 0;
     }
     static parseRgbString(e) {
-        return "transparent" === e ? new s(0, 0, 0, 0) : this.parseColorFnString(e);
+        return "transparent" === e ? new a(0, 0, 0, 0) : this.parseColorFnString(e);
     }
     static parseHexString(e) {
         if (!(null == e.match(i) || [6, 8].includes(e.length))) {
@@ -32,7 +32,7 @@ class s {
             }
             var t = e.match(/.{1,2}/g);
             if (null != t)
-                return new s(
+                return new a(
                     parseInt(t[0], 16),
                     parseInt(t[1], 16),
                     parseInt(t[2], 16),
@@ -60,52 +60,52 @@ class s {
         if ("hsl" === t.substr(0, 3)) {
             let e = (function (e) {
                 let { hue: t, saturation: n, lightness: i, alpha: r } = e,
-                    s = (1 - Math.abs(2 * (i /= 255) - 1)) * (n /= 255),
-                    a = s * (1 - Math.abs(((t / 60) % 2) - 1)),
-                    o = i - s / 2,
-                    l = (
+                    a = (1 - Math.abs(2 * (i /= 255) - 1)) * (n /= 255),
+                    s = a * (1 - Math.abs(((t / 60) % 2) - 1)),
+                    l = i - a / 2,
+                    o = (
                         t < 60
-                            ? [s, a, 0]
+                            ? [a, s, 0]
                             : t < 120
-                              ? [a, s, 0]
+                              ? [s, a, 0]
                               : t < 180
-                                ? [0, s, a]
+                                ? [0, a, s]
                                 : t < 240
-                                  ? [0, a, s]
+                                  ? [0, s, a]
                                   : t < 300
-                                    ? [a, 0, s]
-                                    : [s, 0, a]
-                    ).map((e) => Math.round((e + o) * 255));
-                return { red: l[0], green: l[1], blue: l[2], alpha: r };
+                                    ? [s, 0, a]
+                                    : [a, 0, s]
+                    ).map((e) => Math.round((e + l) * 255));
+                return { red: o[0], green: o[1], blue: o[2], alpha: r };
             })({ hue: i[0], saturation: i[1], lightness: i[2], alpha: i[3] });
-            return new s(e.red, e.green, e.blue, e.alpha);
+            return new a(e.red, e.green, e.blue, e.alpha);
         }
-        return new s(i[0], i[1], i[2], "number" == typeof i[3] ? i[3] : 1);
+        return new a(i[0], i[1], i[2], "number" == typeof i[3] ? i[3] : 1);
     }
     toHSL() {
         return (function (e) {
             let { red: t, green: n, blue: i, alpha: r } = e,
-                s = t / 255,
-                a = n / 255,
-                o = i / 255,
-                l = Math.max(s, a, o),
-                u = Math.min(s, a, o),
-                c = l - u,
-                d = (l + u) / 2,
-                _ = c > 0 ? c / (1 - Math.abs(2 * d - 1)) : 0;
-            if (0 === c) return { hue: 0, saturation: _, lightness: d, alpha: r };
-            let h = 0;
-            switch (l) {
-                case s:
-                    h = ((a - o) / c) % 6;
-                    break;
+                a = t / 255,
+                s = n / 255,
+                l = i / 255,
+                o = Math.max(a, s, l),
+                d = Math.min(a, s, l),
+                c = o - d,
+                u = (o + d) / 2,
+                _ = c > 0 ? c / (1 - Math.abs(2 * u - 1)) : 0;
+            if (0 === c) return { hue: 0, saturation: _, lightness: u, alpha: r };
+            let E = 0;
+            switch (o) {
                 case a:
-                    h = (o - s) / c + 2;
+                    E = ((s - l) / c) % 6;
                     break;
-                case o:
-                    h = (a - o) / c + 4;
+                case s:
+                    E = (l - a) / c + 2;
+                    break;
+                case l:
+                    E = (s - l) / c + 4;
             }
-            return { hue: 60 * h, saturation: _, lightness: d, alpha: r };
+            return { hue: 60 * E, saturation: _, lightness: u, alpha: r };
         })({ red: this.red, green: this.green, blue: this.blue, alpha: this.alpha });
     }
     getRelativeLuminance() {

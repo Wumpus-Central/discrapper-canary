@@ -16,9 +16,9 @@ var i = n(477900),
     x = n(815807),
     f = n(429433),
     E = n(652215),
-    C = n(307731),
-    _ = n(375708),
-    I = n(435153),
+    I = n(307731),
+    C = n(375708),
+    _ = n(435153),
     v = n(129821);
 class N extends l.Component {
     state = { isReactionPickerActive: !1 };
@@ -50,7 +50,7 @@ class N extends l.Component {
         return (0, i.jsx)(d.M.Consumer, {
             children: (e) => {
                 let { inDialog: t } = e;
-                return t ? (0, i.jsx)(d.l, { "aria-label": _.intl.string(_.t["7Xqzdj"]), children: s }) : s;
+                return t ? (0, i.jsx)(d.l, { "aria-label": C.intl.string(C.t["7Xqzdj"]), children: s }) : s;
             },
         });
     };
@@ -58,7 +58,7 @@ class N extends l.Component {
         let { message: e, className: t, children: n, useChatFontScaling: l, tabIndex: s = 0 } = this.props,
             { isReactionPickerActive: r } = this.state;
         if (e.state === E.cmJ.SENDING || (0, c.Lt)(e.flags, E.pr7.EPHEMERAL)) return null;
-        let o = l ? v : I,
+        let o = l ? v : _,
             d = { size: "sm", color: "currentColor", className: o.icon };
         return (0, i.jsx)(u.Y, {
             targetElementRef: this.ref,
@@ -70,7 +70,7 @@ class N extends l.Component {
                 let { isShown: r } = l;
                 return (0, i.jsx)(m.m, {
                     asContainer: !0,
-                    text: _.intl.string(_.t.lfIHs4),
+                    text: C.intl.string(C.t.lfIHs4),
                     children: (0, i.jsxs)(h.D, {
                         ...e,
                         innerRef: this.ref,
@@ -78,8 +78,8 @@ class N extends l.Component {
                         onClick: (e) => {
                             this.handleAddReactionClick(e);
                         },
-                        onMouseEnter: () => (0, p.K)(C.EmojiInteractionPoint.AddReactionPopoutMouseEntered),
-                        onFocus: () => (0, p.K)(C.EmojiInteractionPoint.AddReactionPopoutFocused),
+                        onMouseEnter: () => (0, p.K)(I.EmojiInteractionPoint.AddReactionPopoutMouseEntered),
+                        onFocus: () => (0, p.K)(I.EmojiInteractionPoint.AddReactionPopoutFocused),
                         className: a()(o.reactionBtn, { [o.active]: r }, t),
                         children: [(0, i.jsx)(g.n, { ...d }), n],
                     }),

@@ -11,7 +11,7 @@ var l = n(477900),
     m = n(793574),
     h = n(355622),
     x = n(408018),
-    g = n(138617),
+    g = n(273754),
     f = n(376310),
     j = n(659617),
     v = n(474078),
@@ -60,8 +60,8 @@ function w(e) {
 }
 var L = n(652215);
 n(253913);
-var D = n(649734);
-let P = h.oU.CREATE_GAME_INVITE_POST_DESCRIPTION,
+var P = n(649734);
+let D = h.oU.CREATE_GAME_INVITE_POST_DESCRIPTION,
     O = "create-game-invite-post";
 function F(e) {
     (0, c.openModalLazy)(
@@ -139,13 +139,13 @@ function z(e) {
             { variant: "primary", text: M.intl.string(M.t.CumH4u), onClick: ee, disabled: !Z, loading: H },
         ],
         children: (0, l.jsxs)("div", {
-            className: D.rf,
+            className: P.rf,
             children: [
                 (0, l.jsx)(a.D, {
                     required: !0,
                     label: M.intl.string(k.default["/mEbGf"]),
                     children: (0, l.jsx)(g.Ay, {
-                        type: P,
+                        type: D,
                         channel: n,
                         placeholder: M.intl.string(k.default["SU/IAE"]),
                         textValue: T,
@@ -159,7 +159,7 @@ function z(e) {
                         disableThemedBackground: !0,
                         maxCharacterCount: 120,
                         showRemainingCharsAfterCount: 120,
-                        editorClassName: D.s7,
+                        editorClassName: P.s7,
                     }),
                 }),
                 E.length > 0
@@ -167,7 +167,7 @@ function z(e) {
                           label: M.intl.string(M.t.KM6lRG),
                           description: M.intl.formatToPlainString(k.default["yoIAe/"], { tagsMax: 5 }),
                           children: (0, l.jsx)("div", {
-                              className: D.GA,
+                              className: P.GA,
                               children: E.map((e) =>
                                   (0, l.jsx)(
                                       f.A,

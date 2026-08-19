@@ -1,39 +1,39 @@
 "use strict";
-n.d(t, { A: () => u }), n(321073);
+n.d(t, { A: () => d }), n(321073);
 var i = n(17928),
     r = n(228366);
-let s = [],
-    a = !1,
-    o = s;
-class l extends i.Ay.PersistedStore {
+let a = [],
+    s = !1,
+    l = a;
+class o extends i.Ay.PersistedStore {
     static displayName = "SecureFramesPersistedStore";
     static persistKey = "SecureFramesPersistedStore";
     initialize(e) {
-        (a = e?.persistentCodesEnabled ?? !1), (o = e?.uploadedKeyVersions ?? s);
+        (s = e?.persistentCodesEnabled ?? !1), (l = e?.uploadedKeyVersions ?? a);
     }
     getState() {
-        return { persistentCodesEnabled: a, uploadedKeyVersions: o };
+        return { persistentCodesEnabled: s, uploadedKeyVersions: l };
     }
     getPersistentCodesEnabled() {
-        return a;
+        return s;
     }
     getUploadedKeyVersionsCached() {
-        return o;
+        return l;
     }
 }
-let u = new l(r.h, {
+let d = new o(r.h, {
     SECURE_FRAMES_SETTINGS_UPDATE: function (e) {
-        a = e.persistentCodesEnabled;
+        s = e.persistentCodesEnabled;
     },
     SECURE_FRAMES_UPLOADED_KEY_VERSION_ADD: function (e) {
         let t = [];
-        for (let n of o) {
+        for (let n of l) {
             if (n === e.keyVersion) return;
             t.push(n);
         }
-        t.push(e.keyVersion), (o = t);
+        t.push(e.keyVersion), (l = t);
     },
     SECURE_FRAMES_UPLOADED_KEY_VERSION_CLEAR: function () {
-        o = s;
+        l = a;
     },
 });

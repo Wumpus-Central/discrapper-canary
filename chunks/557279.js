@@ -1,21 +1,21 @@
 "use strict";
-n.d(t, { Di: () => l, S: () => u, gz: () => o });
+n.d(t, { Di: () => o, S: () => d, gz: () => l });
 var i = n(617617),
     r = n(287809),
-    s = n(349435),
-    a = n(665909);
-function o() {
+    a = n(349435),
+    s = n(665909);
+function l() {
     let e = r.default.getCurrentUser()?.isStaff() === !0,
         t = i.A.settings.privacy?.inappropriateConversationWarnings?.value ?? !0;
-    return ((0, a.Wu)() || e) && t;
+    return ((0, s.Wu)() || e) && t;
 }
-function l(e) {
-    let t = s.Ay.getChannelSafetyWarnings(e).filter((e) => e.type === s._j.INAPPROPRIATE_CONVERSATION_TIER_1);
+function o(e) {
+    let t = a.Ay.getChannelSafetyWarnings(e).filter((e) => e.type === a._j.INAPPROPRIATE_CONVERSATION_TIER_1);
     if (t.filter((e) => null != e.dismiss_timestamp).length > 0) return null;
     let n = t.filter((e) => null == e.dismiss_timestamp);
     return 1 === n.length ? n[0] : null;
 }
-function u(e) {
-    let t = e.filter((e) => e.type === s._j.INAPPROPRIATE_CONVERSATION_TIER_1);
+function d(e) {
+    let t = e.filter((e) => e.type === a._j.INAPPROPRIATE_CONVERSATION_TIER_1);
     return t.length > 0 && t.every((e) => null == e.dismiss_timestamp);
 }

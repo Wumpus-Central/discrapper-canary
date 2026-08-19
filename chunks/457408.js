@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => a });
+n.d(t, { A: () => s });
 let i = (0, n(240921).Ay)({
     kind: "user",
     name: "2026-05-age-restricted-application-commands",
@@ -7,9 +7,9 @@ let i = (0, n(240921).Ay)({
     variations: { 1: { enabled: !0 } },
 });
 var r = n(501592),
-    s = n(587895);
-function a(e) {
+    a = n(587895);
+function s(e) {
     if (!i.getConfig({ location: "isApplicationAgeRestricted" }).enabled) return !1;
-    let t = s.A.getApplication(e);
+    let t = a.A.getApplication(e);
     return (0, r.K)(t?.contentClassification);
 }

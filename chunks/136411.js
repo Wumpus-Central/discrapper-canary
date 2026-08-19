@@ -1,9 +1,9 @@
 "use strict";
-var i = n(696367),
-    r = TypeError,
-    s = n(359268);
+var n = r(696367),
+    o = TypeError,
+    i = r(359268);
 e.exports = function (e) {
-    var t = i(e);
-    if (!t) throw new r("non-iterable value provided");
-    return arguments.length > 1 ? s(t, arguments[1]) : s(t);
+    var t = n(e);
+    if (!t) throw new o("non-iterable value provided");
+    return arguments.length > 1 ? i(t, arguments[1]) : i(t);
 };

@@ -1,8 +1,8 @@
 "use strict";
-n.d(t, { n: () => a });
-var r = n(340231),
-    i = n(985847);
-class a {
+r.d(t, { n: () => i });
+var n = r(340231),
+    o = r(985847);
+class i {
     isDisabled(e) {
         var t;
         return (
@@ -11,11 +11,11 @@ class a {
         );
     }
     findNextNonDisabled(e, t) {
-        let n = e;
-        for (; null != n; ) {
-            let e = this.collection.getItem(n);
-            if ((null == e ? void 0 : e.type) === "item" && !this.isDisabled(e)) return n;
-            n = t(n);
+        let r = e;
+        for (; null != r; ) {
+            let e = this.collection.getItem(r);
+            if ((null == e ? void 0 : e.type) === "item" && !this.isDisabled(e)) return r;
+            r = t(r);
         }
         return null;
     }
@@ -29,16 +29,16 @@ class a {
             (t = this.collection.getKeyBefore(t)), this.findNextNonDisabled(t, (e) => this.collection.getKeyBefore(e))
         );
     }
-    findKey(e, t, n) {
-        let r = e,
-            i = this.layoutDelegate.getItemRect(r);
-        if (!i || null == r) return null;
-        let a = i;
+    findKey(e, t, r) {
+        let n = e,
+            o = this.layoutDelegate.getItemRect(n);
+        if (!o || null == n) return null;
+        let i = o;
         do {
-            if (null == (r = t(r))) break;
-            i = this.layoutDelegate.getItemRect(r);
-        } while (i && n(a, i) && null != r);
-        return r;
+            if (null == (n = t(n))) break;
+            o = this.layoutDelegate.getItemRect(n);
+        } while (o && r(i, o) && null != n);
+        return n;
     }
     isSameRow(e, t) {
         return e.y === t.y || e.x !== t.x;
@@ -87,54 +87,54 @@ class a {
     }
     getKeyPageAbove(e) {
         let t = this.ref.current,
-            n = this.layoutDelegate.getItemRect(e);
-        if (!n) return null;
-        if (t && !(0, i.o)(t)) return this.getFirstKey();
-        let r = e;
+            r = this.layoutDelegate.getItemRect(e);
+        if (!r) return null;
+        if (t && !(0, o.o)(t)) return this.getFirstKey();
+        let n = e;
         if ("horizontal" === this.orientation) {
-            let e = Math.max(0, n.x + n.width - this.layoutDelegate.getVisibleRect().width);
-            for (; n && n.x > e && null != r; )
-                n = null == (r = this.getKeyAbove(r)) ? null : this.layoutDelegate.getItemRect(r);
+            let e = Math.max(0, r.x + r.width - this.layoutDelegate.getVisibleRect().width);
+            for (; r && r.x > e && null != n; )
+                r = null == (n = this.getKeyAbove(n)) ? null : this.layoutDelegate.getItemRect(n);
         } else {
-            let e = Math.max(0, n.y + n.height - this.layoutDelegate.getVisibleRect().height);
-            for (; n && n.y > e && null != r; )
-                n = null == (r = this.getKeyAbove(r)) ? null : this.layoutDelegate.getItemRect(r);
+            let e = Math.max(0, r.y + r.height - this.layoutDelegate.getVisibleRect().height);
+            for (; r && r.y > e && null != n; )
+                r = null == (n = this.getKeyAbove(n)) ? null : this.layoutDelegate.getItemRect(n);
         }
-        return null != r ? r : this.getFirstKey();
+        return null != n ? n : this.getFirstKey();
     }
     getKeyPageBelow(e) {
         let t = this.ref.current,
-            n = this.layoutDelegate.getItemRect(e);
-        if (!n) return null;
-        if (t && !(0, i.o)(t)) return this.getLastKey();
-        let r = e;
+            r = this.layoutDelegate.getItemRect(e);
+        if (!r) return null;
+        if (t && !(0, o.o)(t)) return this.getLastKey();
+        let n = e;
         if ("horizontal" === this.orientation) {
             let e = Math.min(
                 this.layoutDelegate.getContentSize().width,
-                n.y - n.width + this.layoutDelegate.getVisibleRect().width,
+                r.y - r.width + this.layoutDelegate.getVisibleRect().width,
             );
-            for (; n && n.x < e && null != r; )
-                n = null == (r = this.getKeyBelow(r)) ? null : this.layoutDelegate.getItemRect(r);
+            for (; r && r.x < e && null != n; )
+                r = null == (n = this.getKeyBelow(n)) ? null : this.layoutDelegate.getItemRect(n);
         } else {
             let e = Math.min(
                 this.layoutDelegate.getContentSize().height,
-                n.y - n.height + this.layoutDelegate.getVisibleRect().height,
+                r.y - r.height + this.layoutDelegate.getVisibleRect().height,
             );
-            for (; n && n.y < e && null != r; )
-                n = null == (r = this.getKeyBelow(r)) ? null : this.layoutDelegate.getItemRect(r);
+            for (; r && r.y < e && null != n; )
+                r = null == (n = this.getKeyBelow(n)) ? null : this.layoutDelegate.getItemRect(n);
         }
-        return null != r ? r : this.getLastKey();
+        return null != n ? n : this.getLastKey();
     }
     getKeyForSearch(e, t) {
         if (!this.collator) return null;
-        let n = this.collection,
-            r = t || this.getFirstKey();
-        for (; null != r; ) {
-            let t = n.getItem(r);
+        let r = this.collection,
+            n = t || this.getFirstKey();
+        for (; null != n; ) {
+            let t = r.getItem(n);
             if (!t) break;
-            let i = t.textValue.slice(0, e.length);
-            if (t.textValue && 0 === this.collator.compare(i, e)) return r;
-            r = this.getNextKey(r);
+            let o = t.textValue.slice(0, e.length);
+            if (t.textValue && 0 === this.collator.compare(o, e)) return n;
+            n = this.getNextKey(n);
         }
         return null;
     }
@@ -149,7 +149,7 @@ class a {
                 (this.orientation = t.orientation || "vertical"),
                 (this.direction = t.direction),
                 (this.layout = t.layout || "stack"),
-                (this.layoutDelegate = t.layoutDelegate || new (0, r.K)(t.ref));
+                (this.layoutDelegate = t.layoutDelegate || new (0, n.K)(t.ref));
         } else
             (this.collection = e[0]),
                 (this.disabledKeys = e[1]),
@@ -158,7 +158,7 @@ class a {
                 (this.layout = "stack"),
                 (this.orientation = "vertical"),
                 (this.disabledBehavior = "all"),
-                (this.layoutDelegate = new (0, r.K)(this.ref));
+                (this.layoutDelegate = new (0, n.K)(this.ref));
         "stack" === this.layout &&
             "vertical" === this.orientation &&
             ((this.getKeyLeftOf = void 0), (this.getKeyRightOf = void 0));

@@ -18,7 +18,7 @@ let p = function () {
         [E, S] = n.useState("blanchedalmond"),
         [C, j] = n.useState("pink"),
         [T, I] = n.useState(!0),
-        P = n.useMemo(
+        A = n.useMemo(
             () =>
                 Object.entries(d.fh).map((e) => {
                     let [t, l] = e;
@@ -26,7 +26,7 @@ let p = function () {
                 }),
             [],
         ),
-        A = n.useMemo(
+        P = n.useMemo(
             () =>
                 Object.entries(d.qP).map((e) => {
                     let [t, l] = e;
@@ -85,7 +85,7 @@ let p = function () {
                         null !== e && f(e);
                     },
                     value: y,
-                    options: A,
+                    options: P,
                     selectionMode: "single",
                     fullWidth: !0,
                 }),
@@ -99,7 +99,7 @@ let p = function () {
                         null !== e && x(e);
                     },
                     value: h,
-                    options: P,
+                    options: A,
                 }),
             }),
             (0, a.jsx)(c.MG, {

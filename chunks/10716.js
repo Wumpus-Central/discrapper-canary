@@ -1,31 +1,31 @@
 "use strict";
-n.d(t, { $: () => d, A: () => p });
+n.d(t, { $: () => u, A: () => h });
 var i,
     r = n(17928),
-    s = n(228366),
-    a = n(20015),
-    o = n(885386),
-    l = n(652215);
-function u() {
+    a = n(228366),
+    s = n(20015),
+    l = n(885386),
+    o = n(652215);
+function d() {
     return { lastUsedObject: {}, useActivityUrlOverride: !1, activityUrlOverride: null, filter: "" };
 }
-let c = u();
-var d =
+let c = d();
+var u =
     (((i = {}).INITIALIZED = "INITIALIZED"), (i.LOADING = "LOADING"), (i.LOADED = "LOADED"), (i.ERROR = "ERROR"), i);
 let _ = "INITIALIZED",
-    h = [];
-class f extends r.Ay.PersistedStore {
+    E = [];
+class A extends r.Ay.PersistedStore {
     static displayName = "DeveloperActivityShelfStore";
     static persistKey = "DeveloperActivityShelfStore";
     initialize(e) {
-        c = { ...u(), ...(e ?? {}) };
+        c = { ...d(), ...(e ?? {}) };
     }
     static migrations = [(e) => (delete e.isEnabled, { ...e })];
     getState() {
         return c;
     }
     getIsEnabled() {
-        return o.Q_.getSetting() && h.length > 0;
+        return l.Q_.getSetting() && E.length > 0;
     }
     getLastUsedObject() {
         return c.lastUsedObject;
@@ -43,15 +43,15 @@ class f extends r.Ay.PersistedStore {
         return this.getIsEnabled() ? c.filter : "";
     }
     getDeveloperShelfItems() {
-        return this.getIsEnabled() ? h : [];
+        return this.getIsEnabled() ? E : [];
     }
     inDevModeForApplication(e) {
-        return this.getIsEnabled() && null != h.find((t) => t.id === e);
+        return this.getIsEnabled() && null != E.find((t) => t.id === e);
     }
 }
-let p = new f(s.h, {
+let h = new A(a.h, {
     LOGOUT: function () {
-        (c = u()), (_ = "INITIALIZED"), (h = []);
+        (c = d()), (_ = "INITIALIZED"), (E = []);
     },
     DEVELOPER_ACTIVITY_SHELF_TOGGLE_USE_ACTIVITY_URL_OVERRIDE: function () {
         c.useActivityUrlOverride = !c.useActivityUrlOverride;
@@ -62,7 +62,7 @@ let p = new f(s.h, {
     },
     DEVELOPER_ACTIVITY_SHELF_MARK_ACTIVITY_USED: function (e) {
         let { applicationId: t, timestamp: n } = e;
-        if (null == h.find((e) => e.id === t)) return !1;
+        if (null == E.find((e) => e.id === t)) return !1;
         c.lastUsedObject[t] = n;
     },
     DEVELOPER_ACTIVITY_SHELF_FETCH_START() {
@@ -70,7 +70,7 @@ let p = new f(s.h, {
     },
     DEVELOPER_ACTIVITY_SHELF_FETCH_SUCCESS: function (e) {
         let { applications: t } = e;
-        (_ = "LOADED"), (h = t.filter((e) => (0, a.n)(e, l.gfo.EMBEDDED)));
+        (_ = "LOADED"), (E = t.filter((e) => (0, s.n)(e, o.gfo.EMBEDDED)));
     },
     DEVELOPER_ACTIVITY_SHELF_FETCH_FAIL: function (e) {
         let { type: t } = e;

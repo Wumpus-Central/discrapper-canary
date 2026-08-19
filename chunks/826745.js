@@ -1,14 +1,14 @@
 "use strict";
-let i;
-n.d(t, { y: () => E });
-var r = n(477900),
-    a = n(582128),
-    s = n(503698),
-    l = n.n(s),
+let l;
+n.d(t, { y: () => m });
+var i = n(477900),
+    s = n(582128),
+    r = n(503698),
+    a = n.n(r),
     o = n(745262),
-    d = n(259678),
+    u = n(259678),
     c = n(15328);
-let u = `
+let d = `
   visibility:hidden;
   overflow:hidden;
   position:absolute;
@@ -16,7 +16,7 @@ let u = `
   top:0;
   right:0;
 `,
-    _ = [
+    h = [
         "letter-spacing",
         "line-height",
         "padding-top",
@@ -31,7 +31,7 @@ let u = `
         "border-width",
         "box-sizing",
     ];
-class E extends a.PureComponent {
+class m extends s.PureComponent {
     static defaultProps = { autoFocus: !1, disabled: !1, autoCorrect: "off" };
     _textArea;
     constructor(e) {
@@ -51,16 +51,16 @@ class E extends a.PureComponent {
         let e = this._textArea;
         if (null == e) return;
         let { fontWidthEstimate: t, rows: n } = this.props,
-            r = this.props.value ?? e.value;
-        if (null != t && -1 === r.indexOf("\n") && r.length * t < 0.8 * e.offsetWidth)
+            i = this.props.value ?? e.value;
+        if (null != t && -1 === i.indexOf("\n") && i.length * t < 0.8 * e.offsetWidth)
             return void this.setState({ height: void 0 });
-        null == i && null != document.body && ((i = document.createElement("textarea")), document.body.appendChild(i));
-        let { paddingSize: a, borderSize: s, boxSizing: l, sizingStyle: o } = this.calculateNodeStyling(e);
-        i.setAttribute("style", o + ";" + u),
-            (i.value = r),
-            null != n ? i.setAttribute("rows", `${n}`) : i.removeAttribute("rows");
-        let d = i.scrollHeight;
-        "border-box" === l ? (d += s) : "content-box" === l && (d -= a), this.setState({ height: d });
+        null == l && null != document.body && ((l = document.createElement("textarea")), document.body.appendChild(l));
+        let { paddingSize: s, borderSize: r, boxSizing: a, sizingStyle: o } = this.calculateNodeStyling(e);
+        l.setAttribute("style", o + ";" + d),
+            (l.value = i),
+            null != n ? l.setAttribute("rows", `${n}`) : l.removeAttribute("rows");
+        let u = l.scrollHeight;
+        "border-box" === a ? (u += r) : "content-box" === a && (u -= s), this.setState({ height: u });
     }
     calculateNodeStyling(e) {
         let t = window.getComputedStyle(e),
@@ -69,14 +69,14 @@ class E extends a.PureComponent {
                 t.getPropertyValue("-moz-box-sizing"),
                 t.getPropertyValue("-webkit-box-sizing"),
             ),
-            i = parseFloat(t.getPropertyValue("padding-bottom")) + parseFloat(t.getPropertyValue("padding-top")),
-            r =
+            l = parseFloat(t.getPropertyValue("padding-bottom")) + parseFloat(t.getPropertyValue("padding-top")),
+            i =
                 parseFloat(t.getPropertyValue("border-bottom-width")) +
                 parseFloat(t.getPropertyValue("border-top-width"));
         return {
-            sizingStyle: _.map((e) => `${e}:${t.getPropertyValue(e)}`).join(";"),
-            paddingSize: i,
-            borderSize: r,
+            sizingStyle: h.map((e) => `${e}:${t.getPropertyValue(e)}`).join(";"),
+            paddingSize: l,
+            borderSize: i,
             boxSizing: n,
         };
     }
@@ -104,15 +104,15 @@ class E extends a.PureComponent {
         return this._textArea?.value ?? "";
     }
     render() {
-        let { style: e, className: t, onResize: n, ...i } = this.props;
-        delete i.fontWidthEstimate;
-        let a = { ...this.state, ...e };
-        return (0, r.jsx)(d.vN, {
-            children: (0, r.jsx)("textarea", {
-                ...i,
-                className: l()(t, c.kw),
+        let { style: e, className: t, onResize: n, ...l } = this.props;
+        delete l.fontWidthEstimate;
+        let s = { ...this.state, ...e };
+        return (0, i.jsx)(u.vN, {
+            children: (0, i.jsx)("textarea", {
+                ...l,
+                className: a()(t, c.kw),
                 ref: this.handleSetRef,
-                style: a,
+                style: s,
                 onChange: this.handleChange,
             }),
         });

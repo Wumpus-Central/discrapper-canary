@@ -1,18 +1,18 @@
-let i = n(864886),
-    r = n(74509);
-e.exports = (e, t, n) => {
-    let s = null,
+let n = r(864886),
+    o = r(74509);
+e.exports = (e, t, r) => {
+    let i = null,
         a = null,
-        o = null;
+        s = null;
     try {
-        o = new r(t, n);
+        s = new o(t, r);
     } catch (e) {
         return null;
     }
     return (
         e.forEach((e) => {
-            o.test(e) && (!s || 1 === a.compare(e)) && (a = new i((s = e), n));
+            s.test(e) && (!i || 1 === a.compare(e)) && (a = new n((i = e), r));
         }),
-        s
+        i
     );
 };

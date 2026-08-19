@@ -1,1 +1,1 @@
-s.exports = { i: "wishlistButton__7b466" };
+_.exports = { i: "wishlistButton__7b466" };

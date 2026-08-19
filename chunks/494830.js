@@ -1,7 +1,7 @@
 "use strict";
-n.d(t, { A: () => r });
-var r = {};
-r = {
+r.d(t, { A: () => n });
+var n = {};
+n = {
     "ar-AE": {
         deselectedItem: (e) => `${e.item} \u{63A}\u{64A}\u{631} \u{627}\u{644}\u{645}\u{62D}\u{62F}\u{62F}`,
         longPressToSelect:

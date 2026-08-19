@@ -1,56 +1,56 @@
 "use strict";
-n.d(t, { A: () => h });
+n.d(t, { A: () => E });
 var i = n(17928),
     r = n(228366),
-    s = n(184809),
-    a = n(403362),
-    o = n(93465),
-    l = n(672396);
-function u() {
+    a = n(184809),
+    s = n(403362),
+    l = n(93465),
+    o = n(672396);
+function d() {
     return { gameSettings: {}, notificationSettings: new Set() };
 }
-let c = u();
-function d(e) {
+let c = d();
+function u(e) {
     switch (e) {
-        case l.KS.TextChat:
-            return o.M.TEXT_CHAT;
-        case l.KS.WelcomeNudge:
-            return o.M.WELCOME_GENERAL;
-        case l.KS.GoLiveNudge:
-        case l.KS.GoLiveNonVoiceNudge:
-            return o.M.GO_LIVE_NUDGE;
-        case l.KS.NowPlayingNotification:
-            return o.M.NOW_PLAYING;
-        case l.KS.ClipsReminderNotification:
-        case l.KS.ClipsNotification:
-        case l.KS.ClipsDebugFeaturesEnabled:
-        case l.KS.ClipsDebugAutoSignal:
-        case l.KS.ClipsDebugSaveSuccess:
-        case l.KS.ClipsDebugSaveError:
-        case l.KS.ClipsDebugSaveNoOp:
-        case l.KS.ClipsDebugSaveTimeout:
-            return o.M.CLIPS;
-        case l.KS.RequestToStream:
-            return o.M.REQUEST_TO_STREAM;
-        case l.KS.ActivityUserJoin:
-        case l.KS.ActivityInvite:
-        case l.KS.SendGameInvitesNotification:
-            return o.M.GAME_ACTIVITY;
-        case l.KS.IncomingCall:
-        case l.KS.NewsNudge:
-        case l.KS.OverlayCrashed:
+        case o.KS.TextChat:
+            return l.M.TEXT_CHAT;
+        case o.KS.WelcomeNudge:
+            return l.M.WELCOME_GENERAL;
+        case o.KS.GoLiveNudge:
+        case o.KS.GoLiveNonVoiceNudge:
+            return l.M.GO_LIVE_NUDGE;
+        case o.KS.NowPlayingNotification:
+            return l.M.NOW_PLAYING;
+        case o.KS.ClipsReminderNotification:
+        case o.KS.ClipsNotification:
+        case o.KS.ClipsDebugFeaturesEnabled:
+        case o.KS.ClipsDebugAutoSignal:
+        case o.KS.ClipsDebugSaveSuccess:
+        case o.KS.ClipsDebugSaveError:
+        case o.KS.ClipsDebugSaveNoOp:
+        case o.KS.ClipsDebugSaveTimeout:
+            return l.M.CLIPS;
+        case o.KS.RequestToStream:
+            return l.M.REQUEST_TO_STREAM;
+        case o.KS.ActivityUserJoin:
+        case o.KS.ActivityInvite:
+        case o.KS.SendGameInvitesNotification:
+            return l.M.GAME_ACTIVITY;
+        case o.KS.IncomingCall:
+        case o.KS.NewsNudge:
+        case o.KS.OverlayCrashed:
             return null;
         default:
-            (0, a.xb)(e);
+            (0, s.xb)(e);
     }
 }
 class _ extends i.Ay.PersistedStore {
     static displayName = "OverlaySettingsStore";
     static persistKey = "OverlaySettingsStore";
     initialize(e) {
-        let t = u();
+        let t = d();
         (c = { ...t, ...(e ?? {}), notificationSettings: new Set(e?.notificationSettings ?? t.notificationSettings) }),
-            this.waitFor(s.default);
+            this.waitFor(a.default);
     }
     getInitialOverlayState() {
         return {
@@ -73,19 +73,19 @@ class _ extends i.Ay.PersistedStore {
         return c.notificationSettings.has(e);
     }
     isNotificationDisabled(e) {
-        let t = d(e);
+        let t = u(e);
         return null != t && c.notificationSettings.has(t);
     }
     getDisabledNotifications() {
         return c.notificationSettings;
     }
     getDisabledSettingByNotificationType(e) {
-        return d(e);
+        return u(e);
     }
 }
-let h = new _(r.h, {
+let E = new _(r.h, {
     LOGOUT: function () {
-        c = u();
+        c = d();
     },
     OVERLAY_SET_LIMITED_INTERACTION_OVERRIDE: function (e) {
         let { applicationId: t, enabled: n } = e;

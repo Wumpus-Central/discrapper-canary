@@ -1,51 +1,51 @@
 "use strict";
 n.d(t, {
-    Cp: () => N,
-    D$: () => M,
-    I5: () => j,
-    Nc: () => P,
+    Cp: () => O,
+    D$: () => P,
+    I5: () => H,
+    Nc: () => U,
     Os: () => B,
-    P7: () => L,
-    Qu: () => O,
-    Ry: () => v,
-    TP: () => I,
-    Ys: () => b,
+    P7: () => b,
+    Qu: () => y,
+    Ry: () => R,
+    TP: () => m,
+    Ys: () => D,
     aG: () => C,
-    ax: () => y,
+    ax: () => N,
     fA: () => F,
     fi: () => S,
-    gb: () => R,
-    k1: () => D,
-    kN: () => H,
-    os: () => x,
+    gb: () => L,
+    k1: () => v,
+    kN: () => j,
+    os: () => w,
     sN: () => V,
-    tO: () => G,
-    yA: () => U,
-    yS: () => w,
+    tO: () => k,
+    yA: () => x,
+    yS: () => M,
 });
 var i,
-    r = n(735438),
-    s = n.n(r);
+    r = n(435558),
+    a = n.n(r);
 n(989349);
-var a = n(336934),
-    o = n(820739),
-    l = n(864310);
+var s = n(336934),
+    l = n(820739),
+    o = n(864310);
 n(434564);
-var u = n(71393),
+var d = n(71393),
     c = n(287809),
-    d = n(178368),
+    u = n(178368),
     _ = n(166403);
 n(255438), n(403362), n(975571);
-var h = n(428262);
+var E = n(158045);
 n(38405);
-var f = n(652215),
-    p = n(307731),
-    E = n(788868),
-    m = n(88001),
-    g = n(375708),
-    A = n(466919);
+var A = n(652215),
+    h = n(307731),
+    I = n(202541),
+    f = n(88001),
+    p = n(375708),
+    T = n(466919);
 Object.freeze({ 1: 1, 2: 2, 3: 3, 4: 6, 5: 9, 6: 12, 7: 15, 8: 18, 9: 24 });
-var I =
+var m =
     (((i = {})[(i.EMOJI = 1)] = "EMOJI"),
     (i[(i.AUDIO = 2)] = "AUDIO"),
     (i[(i.ANIMATED = 3)] = "ANIMATED"),
@@ -58,147 +58,147 @@ var I =
     (i[(i.STAGE_VIDEO = 12)] = "STAGE_VIDEO"),
     (i[(i.SOUNDBOARD = 13)] = "SOUNDBOARD"),
     i);
-let T = [f.TVA.NONE, f.TVA.TIER_1, f.TVA.TIER_2, f.TVA.TIER_3],
-    S = T.slice().reverse();
-function y(e) {
-    return e === f.TVA.NONE ? f.TVA.TIER_1 : k.find((t) => t.tier === e)?.nextTier;
+let g = [A.TVA.NONE, A.TVA.TIER_1, A.TVA.TIER_2, A.TVA.TIER_3],
+    S = g.slice().reverse();
+function N(e) {
+    return e === A.TVA.NONE ? A.TVA.TIER_1 : G.find((t) => t.tier === e)?.nextTier;
 }
 function C(e, t) {
-    return null != t && t.features.has(f.GuildFeatures.MORE_STICKERS) && e === f.TVA.TIER_3
-        ? a.K.MAX_STICKER_SLOTS
-        : E.d8[e];
+    return null != t && t.features.has(A.GuildFeatures.MORE_STICKERS) && e === A.TVA.TIER_3
+        ? s.K.MAX_STICKER_SLOTS
+        : I.d8[e];
 }
-function N(e) {
-    return E.nk[e];
-}
-function v(e) {
-    if (e === f.TVA.NONE) return E.y7[e];
-    let t = T[T.indexOf(e) - 1];
-    return E.y7[e] - E.y7[t];
+function O(e) {
+    return I.nk[e];
 }
 function R(e) {
+    if (e === A.TVA.NONE) return I.y7[e];
+    let t = g[g.indexOf(e) - 1];
+    return I.y7[e] - I.y7[t];
+}
+function L(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         { useLevels: n = !0 } = t;
     switch (e) {
-        case f.TVA.NONE:
-            return n ? g.intl.string(g.t.LcKgJd) : g.intl.string(g.t.mx8j2m);
-        case f.TVA.TIER_1:
-            return g.intl.string(g.t.nzXtaS);
-        case f.TVA.TIER_2:
-            return g.intl.string(g.t["h33/uW"]);
-        case f.TVA.TIER_3:
-            return g.intl.string(g.t.BfF6ED);
+        case A.TVA.NONE:
+            return n ? p.intl.string(p.t.LcKgJd) : p.intl.string(p.t.mx8j2m);
+        case A.TVA.TIER_1:
+            return p.intl.string(p.t.nzXtaS);
+        case A.TVA.TIER_2:
+            return p.intl.string(p.t["h33/uW"]);
+        case A.TVA.TIER_3:
+            return p.intl.string(p.t.BfF6ED);
         default:
             throw Error("Not a valid tier type");
     }
 }
-function O(e) {
+function y(e) {
     switch (e) {
-        case f.TVA.NONE:
-            return g.intl.string(g.t.LcKgJd);
-        case f.TVA.TIER_1:
-            return g.intl.string(g.t.xRjU1V);
-        case f.TVA.TIER_2:
-            return g.intl.string(g.t.C7e2Bo);
-        case f.TVA.TIER_3:
-            return g.intl.string(g.t.avGxmk);
+        case A.TVA.NONE:
+            return p.intl.string(p.t.LcKgJd);
+        case A.TVA.TIER_1:
+            return p.intl.string(p.t.xRjU1V);
+        case A.TVA.TIER_2:
+            return p.intl.string(p.t.C7e2Bo);
+        case A.TVA.TIER_3:
+            return p.intl.string(p.t.avGxmk);
         default:
             throw Error("Not a valid tier type");
     }
 }
-let b = s().memoize((e) =>
-    E.TG[f.TVA.TIER_1].features.includes(e)
-        ? f.TVA.TIER_1
-        : E.TG[f.TVA.TIER_2].features.includes(e)
-          ? f.TVA.TIER_2
-          : E.TG[f.TVA.TIER_3].features.includes(e)
-            ? f.TVA.TIER_3
+let D = a().memoize((e) =>
+    I.TG[A.TVA.TIER_1].features.includes(e)
+        ? A.TVA.TIER_1
+        : I.TG[A.TVA.TIER_2].features.includes(e)
+          ? A.TVA.TIER_2
+          : I.TG[A.TVA.TIER_3].features.includes(e)
+            ? A.TVA.TIER_3
             : null,
 );
-function D(e) {
+function v(e) {
     switch (e) {
-        case f.TVA.NONE:
-            return f.AnalyticsObjectTypes.NONE;
-        case f.TVA.TIER_1:
-            return f.AnalyticsObjectTypes.TIER_1;
-        case f.TVA.TIER_2:
-            return f.AnalyticsObjectTypes.TIER_2;
-        case f.TVA.TIER_3:
-            return f.AnalyticsObjectTypes.TIER_3;
+        case A.TVA.NONE:
+            return A.AnalyticsObjectTypes.NONE;
+        case A.TVA.TIER_1:
+            return A.AnalyticsObjectTypes.TIER_1;
+        case A.TVA.TIER_2:
+            return A.AnalyticsObjectTypes.TIER_2;
+        case A.TVA.TIER_3:
+            return A.AnalyticsObjectTypes.TIER_3;
         default:
             return null;
     }
 }
-function L(e) {
-    return u.A.getGuild(e)?.premiumTier ?? f.TVA.NONE;
+function b(e) {
+    return d.A.getGuild(e)?.premiumTier ?? A.TVA.NONE;
 }
-function w(e, t) {
+function M(e, t) {
     return null == t || (null != e && e >= t);
 }
-function M(e) {
-    return s()
+function P(e) {
+    return a()
         .values(e)
         .filter((e) => e.isAvailable());
 }
-function P(e) {
+function U(e) {
     let { fractionalState: t } = e,
         n = _.A.getPremiumTypeSubscription(),
         i = c.default.getCurrentUser();
-    d.A.hasFetched || d.A.isFetching || (0, o.CD)();
-    let r = M(d.A.boostSlots),
-        s = n?.isPausedOrPausePending,
-        a = r.length > 0;
-    if (s && t === E.xc.NONE && !a) return g.intl.string(g.t.mOWsF1);
+    u.A.hasFetched || u.A.isFetching || (0, l.CD)();
+    let r = P(u.A.boostSlots),
+        a = n?.isPausedOrPausePending,
+        s = r.length > 0;
+    if (a && t === I.xc.NONE && !s) return p.intl.string(p.t.mOWsF1);
     if (i?.isPremiumGroupMember())
-        return g.intl.formatToPlainString(A.default["5xN/C1"], { premiumGroupProductName: (0, m.DP)() });
-    let { numAvailableGuildBoostSlots: l, numCanceledGuildBoostSlots: u } = Object.values(d.A.boostSlots).reduce(
-        (e, t) => (j(t) && e.numCanceledGuildBoostSlots++, t.isAvailable() && e.numAvailableGuildBoostSlots++, e),
+        return p.intl.formatToPlainString(T.default["5xN/C1"], { premiumGroupProductName: (0, f.DP)() });
+    let { numAvailableGuildBoostSlots: o, numCanceledGuildBoostSlots: d } = Object.values(u.A.boostSlots).reduce(
+        (e, t) => (H(t) && e.numCanceledGuildBoostSlots++, t.isAvailable() && e.numAvailableGuildBoostSlots++, e),
         { numAvailableGuildBoostSlots: 0, numCanceledGuildBoostSlots: 0 },
     );
-    if (null == n || l > 0) return null;
-    if (n.status === f.Dmq.PAST_DUE) return g.intl.string(g.t.De4Vm6);
-    if (n.status === f.Dmq.ACCOUNT_HOLD) return g.intl.string(g.t.JakNQ8);
-    if (u > 0) return g.intl.string(g.t.x25mZR);
+    if (null == n || o > 0) return null;
+    if (n.status === A.Dmq.PAST_DUE) return p.intl.string(p.t.De4Vm6);
+    if (n.status === A.Dmq.ACCOUNT_HOLD) return p.intl.string(p.t.JakNQ8);
+    if (d > 0) return p.intl.string(p.t.x25mZR);
     if (null == n.renewalMutations) return null;
-    let p = h.bx(n.renewalMutations.additionalPlans);
-    return h.bx(n.additionalPlans) > p ? g.intl.string(g.t.x25mZR) : g.intl.string(g.t["W/bb8f"]);
+    let h = E.bx(n.renewalMutations.additionalPlans);
+    return E.bx(n.additionalPlans) > h ? p.intl.string(p.t.x25mZR) : p.intl.string(p.t["W/bb8f"]);
 }
-function x(e) {
+function w(e) {
     return !e.ended && (null == e.endsAt || e.endsAt.getTime() > Date.now());
 }
-let k = [
-    { tier: f.TVA.TIER_3, amount: f.M2T[f.TVA.TIER_3], nextTier: null },
-    { tier: f.TVA.TIER_2, amount: f.M2T[f.TVA.TIER_2], nextTier: f.TVA.TIER_3 },
-    { tier: f.TVA.TIER_1, amount: f.M2T[f.TVA.TIER_1], nextTier: f.TVA.TIER_2 },
+let G = [
+    { tier: A.TVA.TIER_3, amount: A.M2T[A.TVA.TIER_3], nextTier: null },
+    { tier: A.TVA.TIER_2, amount: A.M2T[A.TVA.TIER_2], nextTier: A.TVA.TIER_3 },
+    { tier: A.TVA.TIER_1, amount: A.M2T[A.TVA.TIER_1], nextTier: A.TVA.TIER_2 },
 ];
-function U(e, t) {
-    let n = N(t),
-        i = T.indexOf(t);
+function x(e, t) {
+    let n = O(t),
+        i = g.indexOf(t);
     if (-1 === i) return 0;
-    let r = T[i - 1],
-        s = null != r ? C(r) : 0,
-        a = C(t);
-    return Math.max(0, n - e.slice(s, a).length);
+    let r = g[i - 1],
+        a = null != r ? C(r) : 0,
+        s = C(t);
+    return Math.max(0, n - e.slice(a, s).length);
 }
-function G(e, t, n) {
-    return -1 === T.indexOf(n) ? 0 : Math.max(0, F(e) - t.length);
+function k(e, t, n) {
+    return -1 === g.indexOf(n) ? 0 : Math.max(0, F(e) - t.length);
 }
 function F(e) {
-    let t = E.OW + (e.premiumFeatures?.additionalSoundSlots ?? 0);
-    return Math.max(e.features.has(f.GuildFeatures.MORE_SOUNDBOARD) ? E.xs : E.OW, t);
+    let t = I.OW + (e.premiumFeatures?.additionalSoundSlots ?? 0);
+    return Math.max(e.features.has(A.GuildFeatures.MORE_SOUNDBOARD) ? I.xs : I.OW, t);
 }
 function V(e) {
-    let t = p.DEFAULT_EMOJI_SLOTS + (e.premiumFeatures?.additionalEmojiSlots ?? 0);
-    return Math.max(e.features.has(f.GuildFeatures.MORE_EMOJI) ? p.EMOJI_MAX_SLOTS_MORE : p.DEFAULT_EMOJI_SLOTS, t);
+    let t = h.DEFAULT_EMOJI_SLOTS + (e.premiumFeatures?.additionalEmojiSlots ?? 0);
+    return Math.max(e.features.has(A.GuildFeatures.MORE_EMOJI) ? h.EMOJI_MAX_SLOTS_MORE : h.DEFAULT_EMOJI_SLOTS, t);
 }
 function B(e, t) {
-    let n = (0, l.Z)(e.id).available;
-    return Math.max(0, f.M2T[t] - n);
-}
-function j(e) {
-    return e.subscription?.status === f.Dmq.CANCELED || e.canceled;
+    let n = (0, o.Z)(e.id).available;
+    return Math.max(0, A.M2T[t] - n);
 }
 function H(e) {
-    return S.find((t) => e >= f.M2T[t]) ?? f.TVA.NONE;
+    return e.subscription?.status === A.Dmq.CANCELED || e.canceled;
 }
-f.TVA.NONE, f.TVA.TIER_1, f.TVA.TIER_2, f.TVA.TIER_3;
+function j(e) {
+    return S.find((t) => e >= A.M2T[t]) ?? A.TVA.NONE;
+}
+A.TVA.NONE, A.TVA.TIER_1, A.TVA.TIER_2, A.TVA.TIER_3;

@@ -1,3 +1,3 @@
 n.d(t, { A: () => i });
 let i =
-    "https://cdn.discordapp.com/assets/content/32bba2dd0afd18039d4a86a6aa68a13ae871d52e743e1738a917ad16e1425dea.png";
+    "https://cdn.discordapp.com/assets/content/0950f5d9a0385d0f099ee96e70f278a05de20178ba7d06c9986bf9f55c0208bc.png";

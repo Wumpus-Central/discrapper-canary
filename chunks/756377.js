@@ -1,9 +1,9 @@
 "use strict";
-n.d(t, { Dd: () => a, Yf: () => s, iz: () => o, x6: () => l });
+n.d(t, { Dd: () => s, Yf: () => a, iz: () => l, x6: () => o });
 var i,
     r = n(320095),
-    s = (((i = {}).ALL = "ALL"), (i.REMINDER = "REMINDER"), (i.BOOKMARK = "BOOKMARK"), i);
-function a(e) {
+    a = (((i = {}).ALL = "ALL"), (i.REMINDER = "REMINDER"), (i.BOOKMARK = "BOOKMARK"), i);
+function s(e) {
     return {
         channelId: e.channel_id,
         messageId: e.message_id,
@@ -17,9 +17,9 @@ function a(e) {
         dueAt: null != e.due_at ? new Date(e.due_at) : void 0,
     };
 }
-function o(e) {
-    return { message: null != e.message ? (0, r.rh)(e.message) : null, saveData: a(e.save_data) };
-}
 function l(e) {
+    return { message: null != e.message ? (0, r.rh)(e.message) : null, saveData: s(e.save_data) };
+}
+function o(e) {
     return { channelId: e.channel_id, messageId: e.message_id };
 }

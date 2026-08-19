@@ -13,17 +13,17 @@ t(321073),
                     a = e.slice(r, t);
                 } else a = e;
                 let h = Math.floor(a.length / i),
-                    f = [];
+                    p = [];
                 for (let e = 0; e < i; e++) {
                     let r = h * e,
                         t = 0;
                     for (let e = 0; e < h; e++) t += Math.abs(a[r + e]);
-                    f.push(t / h);
+                    p.push(t / h);
                 }
-                let p = Math.pow(Math.max(...f), -1),
-                    u = f.map((e) => e * p),
-                    d = [...f].sort()[Math.floor(0.95 * f.length)];
-                return { normalizedData: u, normalizedVolumeMultipler: Math.min((o.loudnessThreshold ?? d) / d, 1) };
+                let f = Math.pow(Math.max(...p), -1),
+                    u = p.map((e) => e * f),
+                    c = [...p].sort()[Math.floor(0.95 * p.length)];
+                return { normalizedData: u, normalizedVolumeMultipler: Math.min((o.loudnessThreshold ?? c) / c, 1) };
             })(r, t, o, a);
         self.postMessage({ waveform: s, id: l, normalizedVolumeMultipler: n });
     });

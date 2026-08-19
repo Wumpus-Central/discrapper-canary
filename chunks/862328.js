@@ -4,8 +4,8 @@ var i = n(477900),
     r = n(582128),
     a = n(503698),
     s = n.n(a),
-    l = n(602853),
-    o = n(661531),
+    l = n(661531),
+    o = n(602853),
     d = n(534409),
     c = n(135295);
 function u(e) {
@@ -18,8 +18,8 @@ function u(e) {
         } = e,
         c = !!s.isFolder,
         u = (0, d.qK)("BlobMask"),
-        E = (0, l.r)(o.A.modules.guildbar.AVATAR_SIZE),
-        A = (0, l.r)(o.A.modules.guildbar.FOLDER_SIZE),
+        E = (0, o.r)(l.A.modules.guildbar.AVATAR_SIZE),
+        A = (0, o.r)(l.A.modules.guildbar.FOLDER_SIZE),
         h = !u && c ? A : E,
         I = h / 2;
     return (0, i.jsx)(_, {
@@ -40,7 +40,7 @@ function _(e) {
             children: t,
             viewBoxSize: n,
             className: a,
-            style: l,
+            style: o,
             innerClassName: d,
             isFolder: u,
             lowerBadgeSize: _,
@@ -96,7 +96,7 @@ function _(e) {
         "div",
         {
             className: s()(a, c.iE),
-            style: l,
+            style: o,
             onFocus: function () {
                 g(!0);
             },
@@ -194,7 +194,7 @@ function _(e) {
                             E &&
                                 (0, i.jsx)("path", {
                                     d: U,
-                                    stroke: o.A.unsafe_rawColors.BRAND_500.css,
+                                    stroke: l.A.unsafe_rawColors.BRAND_500.css,
                                     strokeWidth: 2,
                                     className: c.Zt,
                                     mask: `url(#${y})`,

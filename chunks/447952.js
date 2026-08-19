@@ -1,4 +1,4 @@
-n.d(t, { Ky: () => g, _i: () => x, eR: () => _, wD: () => b });
+n.d(t, { Ky: () => g, _i: () => x, eR: () => T, wD: () => b });
 var l = n(477900),
     i = n(582128),
     r = n(643909),
@@ -10,13 +10,13 @@ var l = n(477900),
     d = n(550238),
     p = n(648335),
     m = n(211528),
-    C = n(87725),
-    h = n(783327),
+    h = n(87725),
+    C = n(783327),
     f = n(166532),
     E = n(38405),
     S = n(240248),
-    A = n(891640),
-    y = n(818348),
+    y = n(891640),
+    A = n(818348),
     P = n(426125);
 let I = [f.pn.PAYMENT_ELEMENT],
     g = [
@@ -28,7 +28,7 @@ let I = [f.pn.PAYMENT_ELEMENT],
         f.pn.IDEAL_INFORMATION,
     ],
     v = new Set([f.pn.PAYMENT_ELEMENT, ...g]);
-function T(e) {
+function _(e) {
     let {
             step: t,
             billingAddressInfo: n,
@@ -38,8 +38,8 @@ function T(e) {
             stripeElementsRef: c,
             paymentElementSelectedType: d,
             paymentMethodOrder: p,
-            addressElementKey: C,
-            analyticsContext: h,
+            addressElementKey: h,
+            analyticsContext: C,
             paymentElementFooter: E,
         } = e,
         S = (0, r.useElements)();
@@ -48,8 +48,8 @@ function T(e) {
     }, [S, c]);
     let {
             shouldShowPaymentElement: v,
-            shouldShowAddressElement: T,
-            excludeBodySpacing: _,
+            shouldShowAddressElement: _,
+            excludeBodySpacing: T,
         } = i.useMemo(
             () => ({
                 shouldShowPaymentElement: I.includes(t),
@@ -60,19 +60,19 @@ function T(e) {
         ),
         x = i.useMemo(() => {
             if (null == d) return !1;
-            if ((0, A.i)(d)) {
-                let { renderAddressElementInStandaloneMode: e } = A.F[d];
+            if ((0, y.i)(d)) {
+                let { renderAddressElementInStandaloneMode: e } = y.F[d];
                 return e ?? !1;
             }
         }, [d]);
     return (0, l.jsxs)("div", {
-        className: s()(P.kL, { [P.rf]: !_ }),
+        className: s()(P.kL, { [P.rf]: !T }),
         children: [
             (0, l.jsxs)("div", {
                 className: s()(v ? P.RK : [P.R, P.$u], {
                     [P.df]: null == d,
-                    [P._m]: d === y.he.CARD,
-                    [P.JD]: d === y.he.PAYPAL,
+                    [P._m]: d === A.he.CARD,
+                    [P.JD]: d === A.he.PAYPAL,
                 }),
                 children: [
                     (0, l.jsx)(m.Wf, {
@@ -80,16 +80,16 @@ function T(e) {
                         paymentMethodOrder: p,
                         customPaymentMethodIdsToSourceTypes: a,
                         step: t,
-                        analyticsContext: h,
+                        analyticsContext: C,
                     }),
                     v && E,
                 ],
             }),
             (0, l.jsx)("div", {
-                className: s()(P.K_, T ? P.RK : [P.R, P.vg]),
+                className: s()(P.K_, _ ? P.RK : [P.R, P.vg]),
                 children: (0, l.jsx)(m.KS, {
                     ...u,
-                    internalKey: C,
+                    internalKey: h,
                     renderAsStandaloneElement: x,
                     billingAddressInfo: n,
                 }),
@@ -97,7 +97,7 @@ function T(e) {
         ],
     });
 }
-function _() {
+function T() {
     return (0, l.jsx)("div", {
         className: s()(P.kL, P.rf, P.g4),
         children: (0, l.jsx)(o.y, { type: o.y.Type.PULSING_ELLIPSIS }),
@@ -112,13 +112,13 @@ function x(e) {
             customPaymentMethodIdsToSourceTypes: o,
             paymentMethodOrder: u,
         } = (0, c.p)({ onSetupError: t }),
-        d = (0, h.S)();
+        d = (0, C.S)();
     return a || null != s || null == d
-        ? (0, l.jsx)(_, {})
+        ? (0, l.jsx)(T, {})
         : (0, l.jsx)(r.Elements, {
               stripe: d,
               options: i,
-              children: (0, l.jsx)(T, { ...n, customPaymentMethodIdsToSourceTypes: o, paymentMethodOrder: u }),
+              children: (0, l.jsx)(_, { ...n, customPaymentMethodIdsToSourceTypes: o, paymentMethodOrder: u }),
           });
 }
 let N = ["applePay", "googlePay", "link"];
@@ -132,28 +132,28 @@ function b(e) {
             continueSessionToInitialStep: o,
         } = e,
         c = i.useRef(null),
-        h = i.useRef(null),
-        [A, P] = i.useState(!1),
+        C = i.useRef(null),
+        [y, P] = i.useState(!1),
         [I, g] = i.useState(!1),
-        [T, _] = i.useState(o === f.pn.CREDIT_CARD_INFORMATION ? y.he.CARD : null),
+        [_, T] = i.useState(o === f.pn.CREDIT_CARD_INFORMATION ? A.he.CARD : null),
         [x, b] = i.useState(!1),
         [R, j] = i.useState(void 0),
         M = (function (e) {
             let { step: t, paymentElementSelectedType: n } = e;
             return v.has(t) || (t === f.pn.ADDRESS && null != n);
-        })({ step: t, paymentElementSelectedType: T }),
+        })({ step: t, paymentElementSelectedType: _ }),
         O = i.useCallback(() => {
             j(Date.now().toString());
         }, []);
     i.useEffect(() => {
-        t === f.pn.PAYMENT_ELEMENT && (h.current = null);
+        t === f.pn.PAYMENT_ELEMENT && (C.current = null);
     }, [t]);
-    let L = (0, C.t4)((e) => e.linkWalletEnabled),
+    let L = (0, h.t4)((e) => e.linkWalletEnabled),
         k = i.useMemo(() => (L ? N : N.filter((e) => "link" !== e)), [L]),
         w = i.useMemo(
             () => ({
                 onChange: (e, t) => {
-                    s && null != l && l.log("PaymentElements onChange event:", e), P(e.complete), _(t);
+                    s && null != l && l.log("PaymentElements onChange event:", e), P(e.complete), T(t);
                 },
                 onReady: () => {
                     g(!0);
@@ -232,9 +232,9 @@ function b(e) {
         G = i.useCallback(
             function (e) {
                 let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
-                void 0 !== e && _(e), n(f.pn.PAYMENT_ELEMENT, t), b(!1), null != T && (0, p.R8)(T) && D();
+                void 0 !== e && T(e), n(f.pn.PAYMENT_ELEMENT, t), b(!1), null != _ && (0, p.R8)(_) && D();
             },
-            [n, D, T],
+            [n, D, _],
         );
     i.useEffect(() => {
         function e() {
@@ -248,18 +248,18 @@ function b(e) {
         );
     }, [G]);
     let F = i.useCallback(() => {
-        _(null);
+        T(null);
     }, []);
     return {
         shouldRenderPaymentElement: M,
         stripePaymentElementProps: w,
         stripeAddressElementProps: U,
         stripeElementsRef: c,
-        lastConfirmedSetupIntentRef: h,
-        paymentElementReady: A,
+        lastConfirmedSetupIntentRef: C,
+        paymentElementReady: y,
         paymentElementLoaded: I,
-        paymentElementSelectedType: T,
-        setPaymentElementSelectedType: _,
+        paymentElementSelectedType: _,
+        setPaymentElementSelectedType: T,
         returnToPaymentElementStep: G,
         onBackFromPaymentElement: F,
         addressElementKey: R,

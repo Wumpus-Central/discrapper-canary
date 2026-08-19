@@ -1,9 +1,9 @@
 "use strict";
-n.d(t, { A: () => o });
+n.d(t, { A: () => l });
 var i = n(439372),
     r = n(174459),
-    s = n(652215);
-class a extends i.A {
+    a = n(652215);
+class s extends i.A {
     actions = {
         MESSAGE_CREATE: (e) => this.handleMessageCreate(e),
         MESSAGE_UPDATE: (e) => this.handleMessageUpdate(e),
@@ -25,7 +25,7 @@ class a extends i.A {
     }
     _trackIfSessionMetadataExists(e) {
         null != e.session_metadata &&
-            r.default.track(s.HAw.MESSAGE_DISPATCH_SESSION_METADATA_FOUND, {
+            r.default.track(a.HAw.MESSAGE_DISPATCH_SESSION_METADATA_FOUND, {
                 message_id: e.id,
                 channel_id: e.channel_id,
                 author_id: e.author?.id,
@@ -33,4 +33,4 @@ class a extends i.A {
             });
     }
 }
-let o = new a();
+let l = new s();

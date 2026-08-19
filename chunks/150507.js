@@ -1,4 +1,4 @@
-e.exports = {
+_.exports = {
     XM: "popoutWrapper__9ac28",
     XG: "scroller__9ac28",
     HD: "avatars__9ac28",

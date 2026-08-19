@@ -1,34 +1,34 @@
 "use strict";
-var i, r, s, a, o, l;
+var n, o, i, a, s, l;
 function u(e) {
     let t = !1,
-        n = [];
-    for (let i = 0; i < e.length; i++) {
-        let r = e.charAt(i);
-        "_" == r
+        r = [];
+    for (let n = 0; n < e.length; n++) {
+        let o = e.charAt(n);
+        "_" == o
             ? (t = !0)
-            : /\d/.test(r)
-              ? (n.push(r), (t = !0))
+            : /\d/.test(o)
+              ? (r.push(o), (t = !0))
               : t
-                ? (n.push(r.toUpperCase()), (t = !1))
-                : 0 == i
-                  ? n.push(r.toLowerCase())
-                  : n.push(r);
+                ? (r.push(o.toUpperCase()), (t = !1))
+                : 0 == n
+                  ? r.push(o.toLowerCase())
+                  : r.push(o);
     }
-    return n.join("");
+    return r.join("");
 }
 function c(e) {
-    var t, n, i, r;
+    var t, r, n, o;
     return (
         (e.localName = null != (t = e.localName) ? t : u(e.name)),
-        (e.jsonName = null != (n = e.jsonName) ? n : u(e.name)),
-        (e.repeat = null != (i = e.repeat) ? i : s.NO),
-        (e.opt = null != (r = e.opt) ? r : !e.repeat && !e.oneof && "message" == e.kind),
+        (e.jsonName = null != (r = e.jsonName) ? r : u(e.name)),
+        (e.repeat = null != (n = e.repeat) ? n : i.NO),
+        (e.opt = null != (o = e.opt) ? o : !e.repeat && !e.oneof && "message" == e.kind),
         e
     );
 }
-n.d(t, { sA: () => s, LN: () => i, rO: () => r, mS: () => c }),
-    ((a = i || (i = {}))[(a.DOUBLE = 1)] = "DOUBLE"),
+r.d(t, { sA: () => i, LN: () => n, rO: () => o, mS: () => c }),
+    ((a = n || (n = {}))[(a.DOUBLE = 1)] = "DOUBLE"),
     (a[(a.FLOAT = 2)] = "FLOAT"),
     (a[(a.INT64 = 3)] = "INT64"),
     (a[(a.UINT64 = 4)] = "UINT64"),
@@ -43,9 +43,9 @@ n.d(t, { sA: () => s, LN: () => i, rO: () => r, mS: () => c }),
     (a[(a.SFIXED64 = 16)] = "SFIXED64"),
     (a[(a.SINT32 = 17)] = "SINT32"),
     (a[(a.SINT64 = 18)] = "SINT64"),
-    ((o = r || (r = {}))[(o.BIGINT = 0)] = "BIGINT"),
-    (o[(o.STRING = 1)] = "STRING"),
-    (o[(o.NUMBER = 2)] = "NUMBER"),
-    ((l = s || (s = {}))[(l.NO = 0)] = "NO"),
+    ((s = o || (o = {}))[(s.BIGINT = 0)] = "BIGINT"),
+    (s[(s.STRING = 1)] = "STRING"),
+    (s[(s.NUMBER = 2)] = "NUMBER"),
+    ((l = i || (i = {}))[(l.NO = 0)] = "NO"),
     (l[(l.PACKED = 1)] = "PACKED"),
     (l[(l.UNPACKED = 2)] = "UNPACKED");

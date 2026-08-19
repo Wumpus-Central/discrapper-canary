@@ -1,6 +1,6 @@
 "use strict";
-e.exports = function (e, t, n) {
+e.exports = function (e, t, r) {
     return (
-        n || (n = this.getReverseMap()[e] ? "keydown" : "keypress"), "keypress" === n && t.length && (n = "keydown"), n
+        r || (r = this.getReverseMap()[e] ? "keydown" : "keypress"), "keypress" === r && t.length && (r = "keydown"), r
     );
 };

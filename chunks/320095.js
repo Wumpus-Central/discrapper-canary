@@ -100,8 +100,8 @@ function N(e) {
             referralTrialOfferId: t,
             premiumGroupInviteId: n,
             call: R(e.call, a.timestamp),
-            messageSnapshots: y(e),
-            reactions: D(i ?? e.reactions, e.poll),
+            messageSnapshots: D(e),
+            reactions: y(i ?? e.reactions, e.poll),
             interaction: L,
             interactionData: r ?? e.interaction_data,
             interactionMetadata: e.interaction_metadata,
@@ -131,13 +131,13 @@ function O(e, t) {
         null != t.activity && (n = n.set("activity", t.activity)),
         null != t.content && "" !== t.content && (n = n.set("content", t.content)),
         null != t.embeds && (n = n.set("embeds", L(t))),
-        null != t.message_snapshots && (n = n.set("messageSnapshots", y(t))),
+        null != t.message_snapshots && (n = n.set("messageSnapshots", D(t))),
         t.pinned !== n.pinned && (n = n.set("pinned", t.pinned)),
         null != n.webhookId && null != t.author && (n = n.set("author", new c.A(t.author))),
         null != t.flags && t.flags !== n.flags && (n = n.set("flags", t.flags)),
         null != t.components && (n = n.set("components", (0, s.ZV)(t.components))),
         null != t.role_subscription_data && (n = n.set("roleSubscriptionData", t.role_subscription_data)),
-        null != t.reactions && (n = n.set("reactions", D(e.reactions ?? t.reactions))),
+        null != t.reactions && (n = n.set("reactions", y(e.reactions ?? t.reactions))),
         null != t.poll && (n = n.set("poll", l(t.poll))),
         null != t.mentions &&
             ((n = n.set(
@@ -164,7 +164,7 @@ function L(e) {
     let t = e.embeds.map((t) => (0, I.fK)(e.channel_id, e.id, t));
     return (0, I.nh)(t);
 }
-function D(e, t) {
+function y(e, t) {
     return null == e && t?.results == null
         ? []
         : [
@@ -189,7 +189,7 @@ function D(e, t) {
               );
           });
 }
-function y(e) {
+function D(e) {
     return null == e.message_snapshots
         ? []
         : e.message_snapshots.map((e) => {

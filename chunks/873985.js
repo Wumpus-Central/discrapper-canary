@@ -1,14 +1,14 @@
 "use strict";
 n.d(t, { A: () => _ });
-var i = n(735438),
+var i = n(435558),
     r = n.n(i),
-    s = n(17928),
-    a = n(228366),
-    o = n(927813);
-let l = { preferredRegions: null, lastTestTimestamp: null, lastGeoRankedOrder: null },
-    u = l,
-    c = +o.A.Millis.HOUR;
-class d extends s.Ay.DeviceSettingsStore {
+    a = n(17928),
+    s = n(228366),
+    l = n(927813);
+let o = { preferredRegions: null, lastTestTimestamp: null, lastGeoRankedOrder: null },
+    d = o,
+    c = +l.A.Millis.HOUR;
+class u extends a.Ay.DeviceSettingsStore {
     static displayName = "RTCRegionStore";
     static persistKey = "RTCRegionStore";
     static migrations = [
@@ -19,35 +19,35 @@ class d extends s.Ay.DeviceSettingsStore {
         ),
     ];
     initialize(e) {
-        u = e ?? l;
+        d = e ?? o;
     }
     shouldIncludePreferredRegion() {
-        return null != u.preferredRegions;
+        return null != d.preferredRegions;
     }
     getPreferredRegion() {
-        return u.preferredRegions?.[0] ?? null;
+        return d.preferredRegions?.[0] ?? null;
     }
     getPreferredRegions() {
-        return u.preferredRegions;
+        return d.preferredRegions;
     }
     getRegion(e) {
         if (null != e) return e.substr(0, e.search(/\d/));
     }
     getUserAgnosticState() {
-        return u;
+        return d;
     }
     shouldPerformLatencyTest(e) {
         return (
-            null === u.preferredRegions ||
-            !r().isEqual(e, u.lastGeoRankedOrder ?? []) ||
-            Date.now() - (u.lastTestTimestamp ?? 0) >= c
+            null === d.preferredRegions ||
+            !r().isEqual(e, d.lastGeoRankedOrder ?? []) ||
+            Date.now() - (d.lastTestTimestamp ?? 0) >= c
         );
     }
 }
-let _ = new d(a.h, {
+let _ = new u(s.h, {
     RTC_LATENCY_TEST_COMPLETE: function (e) {
         e.latencyRankedRegions.length > 0 &&
-            ((u.lastGeoRankedOrder = e.geoRankedRegions), (u.preferredRegions = e.latencyRankedRegions)),
-            (u.lastTestTimestamp = Date.now());
+            ((d.lastGeoRankedOrder = e.geoRankedRegions), (d.preferredRegions = e.latencyRankedRegions)),
+            (d.lastTestTimestamp = Date.now());
     },
 });

@@ -1,20 +1,20 @@
 IntlMessageFormat.__addLocaleData({
     locale: "en",
     pluralRuleFunction: function (e, t) {
-        var n = String(e).split("."),
-            i = !n[1],
-            r = Number(n[0]) == e,
-            s = r && n[0].slice(-1),
-            a = r && n[0].slice(-2);
+        var r = String(e).split("."),
+            n = !r[1],
+            o = Number(r[0]) == e,
+            i = o && r[0].slice(-1),
+            a = o && r[0].slice(-2);
         return t
-            ? 1 == s && 11 != a
+            ? 1 == i && 11 != a
                 ? "one"
-                : 2 == s && 12 != a
+                : 2 == i && 12 != a
                   ? "two"
-                  : 3 == s && 13 != a
+                  : 3 == i && 13 != a
                     ? "few"
                     : "other"
-            : 1 == e && i
+            : 1 == e && n
               ? "one"
               : "other";
     },

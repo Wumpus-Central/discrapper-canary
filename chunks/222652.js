@@ -1,7 +1,7 @@
-s.d(t, { N: () => x, z: () => p });
+s.d(t, { N: () => x, z: () => f });
 var i,
-    a = s(743368),
-    n = s(975807),
+    n = s(743368),
+    a = s(975807),
     l = s(723702),
     r = s(196099);
 s(375776);
@@ -12,12 +12,12 @@ var c = s(727811),
     m = s(933287),
     g = s(375708),
     x = (((i = {}).DEFAULT = "default"), (i.SUBSCRIBE = "subscribe"), i);
-function p() {
+function f() {
     let e,
         t = (0, u.$)(),
         { status: s, requestInProgress: i, redirect: x } = (0, d.L)(),
-        p = (0, o.A)(x),
-        f = (0, r.M)("xbox");
+        f = (0, o.A)(x),
+        p = (0, r.M)("xbox");
     if (t === u.C.NO_ACCESS) return { kind: "subscribe", text: g.intl.string(g.t.sEAnVH) };
     let h = (function (e) {
         switch (e) {
@@ -25,7 +25,7 @@ function p() {
             case c.P.CLAIM_IN_PROGRESS:
                 return { text: g.intl.string(m.default.EL3rU4) };
             case c.P.CLAIMED:
-                return { text: g.intl.string(m.default["0mQ2U6"]), icon: a.W, iconPosition: "end" };
+                return { text: g.intl.string(m.default["0mQ2U6"]), icon: n.W, iconPosition: "end" };
             case c.P.CANCELLATION_IN_PROGRESS:
                 return { text: g.intl.string(m.default.wBz9aO), disabled: !0 };
         }
@@ -43,12 +43,12 @@ function p() {
         };
     if (s === c.P.NOT_CLAIMED || s === c.P.CLAIM_IN_PROGRESS)
         e = () => {
-            p();
+            f();
         };
     else if (s === c.P.CLAIMED) {
         let t = (0, l.isWindows)() ? "msxbox://" : "https://xbox.com/play";
         e = () => {
-            (0, n.A)(t), f(r.H.PARTNER_PAGE_REDIRECT, t);
+            (0, a.A)(t), p(r.H.PARTNER_PAGE_REDIRECT, t);
         };
     }
     return {

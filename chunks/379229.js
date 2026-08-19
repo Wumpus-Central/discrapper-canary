@@ -1,11 +1,11 @@
-n.d(t, { bW: () => l, cD: () => s, lE: () => u, mD: () => r, o: () => E });
+n.d(t, { bW: () => l, cD: () => s, lE: () => u, mD: () => r, o: () => A });
 let u = 216e5,
     l = 2592e6,
     r = 2592e5;
 var i,
     o,
     s = (((i = {}).WARNING = "warning"), (i.UNREAD = "unread"), i),
-    E =
+    A =
         (((o = {})[(o.LEVEL_REACHED = 0)] = "LEVEL_REACHED"),
         (o[(o.PERKS_PURCHASABLE = 1)] = "PERKS_PURCHASABLE"),
         (o[(o.PERKS_AVAILABLE = 2)] = "PERKS_AVAILABLE"),

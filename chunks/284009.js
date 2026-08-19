@@ -1,5 +1,5 @@
 "use strict";
-e.exports = function (e, t, n, i, r, s, a, o) {
+e.exports = function (e, t, r, n, o, i, a, s) {
     if (!e) {
         var l;
         if (void 0 === t)
@@ -7,7 +7,7 @@ e.exports = function (e, t, n, i, r, s, a, o) {
                 "Minified exception occurred; use the non-minified dev environment for the full error message and additional helpful warnings.",
             );
         else {
-            var u = [n, i, r, s, a, o],
+            var u = [r, n, o, i, a, s],
                 c = 0;
             (l = Error(
                 t.replace(/%s/g, function () {

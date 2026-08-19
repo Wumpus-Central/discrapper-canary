@@ -1,6 +1,6 @@
-var i = n(937092);
-(e.exports = function (e, t, n, r, s) {
-    var a = i(e, t, n, r, s);
+var n = r(937092);
+(e.exports = function (e, t, r, o, i) {
+    var a = n(e, t, r, o, i);
     return a.next().then(function (e) {
         return e.done ? e.value : a.next();
     });

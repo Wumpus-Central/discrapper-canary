@@ -1,71 +1,71 @@
 "use strict";
-n.d(t, { CQ: () => E, CT: () => p, eo: () => m, vz: () => f, zP: () => g }), n(321073);
+n.d(t, { CQ: () => I, CT: () => h, eo: () => f, vz: () => A, zP: () => p }), n(321073);
 var i = n(17928),
     r = n(323073),
-    s = n(890615),
-    a = n(643501),
-    o = n(95701);
+    a = n(890615),
+    s = n(643501),
+    l = n(95701);
 n(808728);
-var l = n(71393),
-    u = n(576705),
+var o = n(71393),
+    d = n(576705),
     c = n(977997),
-    d = n(871237),
+    u = n(871237),
     _ = n(652215),
-    h = n(375708);
-function f(e, t, n) {
+    E = n(375708);
+function A(e, t, n) {
     let i = !(arguments.length > 3) || void 0 === arguments[3] || arguments[3];
     if (e.isPrivate()) return !0;
     let r = t.getGuild(e.getGuildId()),
-        a = r?.maxStageVideoChannelUsers ?? 0;
+        s = r?.maxStageVideoChannelUsers ?? 0;
     return (
-        (!e.isGuildStageVoice() || !(a <= 0)) &&
-        (!i || !!(0, s.A)(e, n)) &&
+        (!e.isGuildStageVoice() || !(s <= 0)) &&
+        (!i || !!(0, a.A)(e, n)) &&
         !!n.can(_.xBc.STREAM, e) &&
         null != r &&
         r.afkChannelId !== e.id
     );
 }
-function p(e) {
+function h(e) {
     switch (e) {
         case 0:
-            return h.intl.string(h.t["1i3tSY"]);
+            return E.intl.string(E.t["1i3tSY"]);
         case 1:
-            return h.intl.string(h.t.elyVbv);
+            return E.intl.string(E.t.elyVbv);
         case 2:
-            return h.intl.string(h.t.pgUTZC);
+            return E.intl.string(E.t.pgUTZC);
         case 3:
-            return h.intl.string(h.t.b5FqhF);
+            return E.intl.string(E.t.b5FqhF);
         default:
-            return h.intl.string(h.t["7Xq/nV"]);
+            return E.intl.string(E.t["7Xq/nV"]);
     }
 }
-function E(e) {
+function I(e) {
     switch (e) {
         case 0:
-            return `${h.intl.string(h.t["7Xq/nV"])}: ${h.intl.string(h.t["1i3tSY"])}`;
+            return `${E.intl.string(E.t["7Xq/nV"])}: ${E.intl.string(E.t["1i3tSY"])}`;
         case 1:
-            return `${h.intl.string(h.t["7Xq/nV"])}: ${h.intl.string(h.t.elyVbv)}`;
+            return `${E.intl.string(E.t["7Xq/nV"])}: ${E.intl.string(E.t.elyVbv)}`;
         case 2:
-            return `${h.intl.string(h.t["7Xq/nV"])}: ${h.intl.string(h.t.pgUTZC)}`;
+            return `${E.intl.string(E.t["7Xq/nV"])}: ${E.intl.string(E.t.pgUTZC)}`;
         case 3:
-            return `${h.intl.string(h.t["7Xq/nV"])}: ${h.intl.string(h.t.b5FqhF)}`;
+            return `${E.intl.string(E.t["7Xq/nV"])}: ${E.intl.string(E.t.b5FqhF)}`;
         default:
-            return `${h.intl.string(h.t["7Xq/nV"])}: ${h.intl.string(h.t["9C444m"])}`;
+            return `${E.intl.string(E.t["7Xq/nV"])}: ${E.intl.string(E.t["9C444m"])}`;
     }
 }
-function m(e, t, n, i, a) {
-    let l;
+function f(e, t, n, i, s) {
+    let o;
     if (null == e) return [!1, 2];
-    let u = t.isInChannel(e.id),
-        c = e instanceof o.YB && (0, d.Pd)(e, t, n),
-        _ = (0, s.A)(e, i),
-        h = null != a.getAwaitingRemoteSessionInfo() || null != a.getRemoteSessionId(),
-        f = (0, r.r9)() && (0, r.UK)(e.id);
+    let d = t.isInChannel(e.id),
+        c = e instanceof l.YB && (0, u.Pd)(e, t, n),
+        _ = (0, a.A)(e, i),
+        E = null != s.getAwaitingRemoteSessionInfo() || null != s.getRemoteSessionId(),
+        A = (0, r.r9)() && (0, r.UK)(e.id);
     return (
-        h ? (l = 0) : f ? (l = 3) : _ || u ? c && !u && (l = 1) : (l = 2),
-        [!__OVERLAY__ && !h && !f && (u || (_ && !c)), l]
+        E ? (o = 0) : A ? (o = 3) : _ || d ? c && !d && (o = 1) : (o = 2),
+        [!__OVERLAY__ && !E && !A && (d || (_ && !c)), o]
     );
 }
-function g(e) {
-    return (0, i.yK)([c.A, l.A, u.A, a.default], () => m(e, c.A, l.A, u.A, a.default));
+function p(e) {
+    return (0, i.yK)([c.A, o.A, d.A, s.default], () => f(e, c.A, o.A, d.A, s.default));
 }

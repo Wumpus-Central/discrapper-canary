@@ -1,5 +1,5 @@
 "use strict";
-n.r(t), n.d(t, { getKrispModel: () => r, setKrispModelOverride: () => a, setKrispSuppressionLevel: () => s });
+n.r(t), n.d(t, { getKrispModel: () => r, setKrispModelOverride: () => s, setKrispSuppressionLevel: () => a });
 var i = n(19575);
 function r() {
     try {
@@ -8,12 +8,12 @@ function r() {
         return Promise.resolve(null);
     }
 }
-function s(e) {
+function a(e) {
     try {
         i.Ay.requireModule("discord_krisp").setSuppressionLevel?.(e);
     } catch (e) {}
 }
-function a(e) {
+function s(e) {
     try {
         i.Ay.requireModule("discord_krisp").setNcModel(e);
     } catch (e) {}

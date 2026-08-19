@@ -1,27 +1,27 @@
 "use strict";
-n.d(t, { P: () => i });
-var r = n(582128);
-function i(e, t, n) {
-    let [i, a] = (0, r.useState)(e || t),
-        o = (0, r.useRef)(void 0 !== e),
+r.d(t, { P: () => o });
+var n = r(582128);
+function o(e, t, r) {
+    let [o, i] = (0, n.useState)(e || t),
+        a = (0, n.useRef)(void 0 !== e),
         s = void 0 !== e;
-    (0, r.useEffect)(() => {
-        o.current, (o.current = s);
+    (0, n.useEffect)(() => {
+        a.current, (a.current = s);
     }, [s]);
-    let l = s ? e : i,
-        u = (0, r.useCallback)(
+    let l = s ? e : o,
+        u = (0, n.useCallback)(
             (e, ...t) => {
-                let r = (e, ...t) => {
-                    n && !Object.is(l, e) && n(e, ...t), s || (l = e);
+                let n = (e, ...t) => {
+                    r && !Object.is(l, e) && r(e, ...t), s || (l = e);
                 };
                 "function" == typeof e
-                    ? a((n, ...i) => {
-                          let a = e(s ? l : n, ...i);
-                          return (r(a, ...t), s) ? n : a;
+                    ? i((r, ...o) => {
+                          let i = e(s ? l : r, ...o);
+                          return (n(i, ...t), s) ? r : i;
                       })
-                    : (s || a(e), r(e, ...t));
+                    : (s || i(e), n(e, ...t));
             },
-            [s, l, n],
+            [s, l, r],
         );
     return [l, u];
 }

@@ -31,7 +31,7 @@ let g = 0,
     O = null,
     R = {},
     L = !1;
-function D() {
+function y() {
     let e =
         __OVERLAY__ || null == O
             ? (function (e, t) {
@@ -58,7 +58,7 @@ function D() {
             : O;
     return e !== C && (p((C = e)), !0);
 }
-class y extends i.Ay.PersistedStore {
+class D extends i.Ay.PersistedStore {
     static displayName = "ThemeStore";
     static persistKey = "ThemeStore";
     static migrations = [
@@ -97,8 +97,8 @@ class y extends i.Ay.PersistedStore {
         return L;
     }
 }
-let v = new y(a.h, {
-    CACHE_LOADED: D,
+let v = new D(a.h, {
+    CACHE_LOADED: y,
     CONNECTION_OPEN: function () {
         return (
             0 === g && ((S = { ...S, [A.Fc.DARK]: E.NJ8.DARKER }), (g = 1)),
@@ -114,25 +114,25 @@ let v = new y(a.h, {
                 a.h.wait(() => {
                     a.h.dispatch({ type: "UNSYNCED_USER_SETTINGS_UPDATE", settings: { darkSidebar: !1 } });
                 })),
-            D()
+            y()
         );
     },
     LOGOUT: function (e) {
-        return (O = null), (R = {}), (L = !1), !e.isSwitchingAccount && C !== E.NJ8.DARK && (p((C = E.NJ8.DARK)), D());
+        return (O = null), (R = {}), (L = !1), !e.isSwitchingAccount && C !== E.NJ8.DARK && (p((C = E.NJ8.DARK)), y());
     },
-    OVERLAY_INITIALIZE: D,
+    OVERLAY_INITIALIZE: y,
     SELECTIVELY_SYNCED_USER_SETTINGS_UPDATE: function (e) {
-        return null != e.changes.appearance && (O = null), D();
+        return null != e.changes.appearance && (O = null), y();
     },
-    UNSYNCED_USER_SETTINGS_UPDATE: D,
-    USER_SETTINGS_PROTO_UPDATE: D,
-    RESET_PREVIEW_CLIENT_THEME: D,
+    UNSYNCED_USER_SETTINGS_UPDATE: y,
+    USER_SETTINGS_PROTO_UPDATE: y,
+    RESET_PREVIEW_CLIENT_THEME: y,
     SYSTEM_THEME_CHANGE: function (e) {
         let { systemTheme: t } = e;
-        return (N = t), D();
+        return (N = t), y();
     },
     UPDATE_THEME_PREFERENCES: function (e) {
-        return (S = { ...S, ...e.preferences }), D();
+        return (S = { ...S, ...e.preferences }), y();
     },
     UPDATE_SYNCED_CLIENT_THEME: function (e) {
         return (R = { ...R, [e.systemTheme]: e.clientTheme }), !0;
@@ -145,12 +145,12 @@ let v = new y(a.h, {
         return (R = {}), (L = !1), e;
     },
     SET_THEME_OVERRIDE: function (e) {
-        return (O = e.theme), D();
+        return (O = e.theme), y();
     },
     CLEAR_THEME_OVERRIDE: function () {
-        return (O = null), D();
+        return (O = null), y();
     },
     REFRESH_THEME: function () {
-        return D();
+        return y();
     },
 });

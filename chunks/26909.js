@@ -1,15 +1,15 @@
 "use strict";
-n.d(t, { Ay: () => E, RG: () => _ }), n(321073);
-var i = n(735438),
+n.d(t, { Ay: () => I, RG: () => _ }), n(321073);
+var i = n(435558),
     r = n.n(i),
-    s = n(17928),
-    a = n(228366),
-    o = n(283047),
-    l = n(617617);
+    a = n(17928),
+    s = n(228366),
+    l = n(283047),
+    o = n(617617);
 n(73510), n(705751);
-var u = n(355097);
+var d = n(355097);
 let c = { pendingUsages: [] },
-    d = new o.A({ computeBonus: () => 1, lookupKey: (e) => e, afterCompute: () => {}, numFrequentlyItems: 100 });
+    u = new l.A({ computeBonus: () => 1, lookupKey: (e) => e, afterCompute: () => {}, numFrequentlyItems: 100 });
 function _(e, t) {
     return e
         .filter((e) => {
@@ -20,22 +20,22 @@ function _(e, t) {
         })
         .map((e) => e.split(":")[0]);
 }
-function h(e, t) {
+function E(e, t) {
     return 0 > Number(t.id) ? t.id : e?.guild != null && null != t.guildId ? `${t.id}:${e.guild.id}` : t.id;
 }
-function f() {
-    let e = l.A.frecencyWithoutFetchingLatest,
+function A() {
+    let e = o.A.frecencyWithoutFetchingLatest,
         t = e.applicationCommandFrecency?.applicationCommands ?? {};
-    d.overwriteHistory(
+    u.overwriteHistory(
         r().mapValues(t, (e) => ({ ...e, recentUses: e.recentUses.map(Number).filter((e) => e > 0) })),
         c.pendingUsages,
     );
 }
-class p extends s.Ay.PersistedStore {
+class h extends a.Ay.PersistedStore {
     static displayName = "ApplicationCommandFrecencyStore";
     static persistKey = "ApplicationCommandFrecencyV2";
     initialize(e) {
-        null != e && (c = e), this.syncWith([l.A], f);
+        null != e && (c = e), this.syncWith([o.A], A);
     }
     getState() {
         return c;
@@ -44,27 +44,27 @@ class p extends s.Ay.PersistedStore {
         return c.pendingUsages.length > 0;
     }
     getCommandFrecencyWithoutLoadingLatest() {
-        return d;
+        return u;
     }
     getScoreWithoutLoadingLatest(e, t) {
-        return d.getScore(h(e, t)) ?? 0;
+        return u.getScore(E(e, t)) ?? 0;
     }
     getTopCommandsWithoutLoadingLatest() {
-        return d.frequently;
+        return u.frequently;
     }
 }
-let E = new p(a.h, {
+let I = new h(s.h, {
     APPLICATION_COMMAND_USED: function (e) {
         let { command: t, context: n } = e,
-            i = h(n, t);
-        c.pendingUsages.push({ key: i, timestamp: Date.now() }), d.track(i), d.compute();
+            i = E(n, t);
+        c.pendingUsages.push({ key: i, timestamp: Date.now() }), u.track(i), u.compute();
     },
     USER_SETTINGS_PROTO_UPDATE: function (e) {
         let {
             settings: { type: t },
             wasSaved: n,
         } = e;
-        if (t !== u.oD.FRECENCY_AND_FAVORITES_SETTINGS || !n) return !1;
+        if (t !== d.oD.FRECENCY_AND_FAVORITES_SETTINGS || !n) return !1;
         c.pendingUsages = [];
     },
 });

@@ -1,16 +1,16 @@
 "use strict";
-n.d(t, { A: () => a });
+n.d(t, { A: () => s });
 var i = n(636537),
     r = n(652215),
-    s = n(375708);
-class a extends i.Wl {
+    a = n(375708);
+class s extends i.Wl {
     constructor(e, t) {
         super(
             e,
             t,
             null != t
-                ? s.intl.formatToPlainString(s.t.aKRa0Q, { statusPageURL: r.qF7.STATUS, details: `${t}` })
-                : s.intl.formatToPlainString(s.t.aTVNes, { statusPageURL: r.qF7.STATUS }),
+                ? a.intl.formatToPlainString(a.t.aKRa0Q, { statusPageURL: r.qF7.STATUS, details: `${t}` })
+                : a.intl.formatToPlainString(a.t.aTVNes, { statusPageURL: r.qF7.STATUS }),
         );
     }
 }

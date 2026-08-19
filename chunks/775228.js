@@ -1,45 +1,45 @@
 "use strict";
 let i;
-n.d(t, { A: () => m });
+n.d(t, { A: () => f });
 var r = n(17928),
-    s = n(228366),
-    a = n(77729),
-    o = n(723702),
-    l = n(340829),
-    u = n(375708);
+    a = n(228366),
+    s = n(77729),
+    l = n(723702),
+    o = n(340829),
+    d = n(375708);
 let c = {},
-    d = (0, o.isWindows)()
-        ? `${a.A.process.env.LOCALAPPDATA}\\DiscordGames`
-        : (0, o.isMac)()
+    u = (0, l.isWindows)()
+        ? `${s.A.process.env.LOCALAPPDATA}\\DiscordGames`
+        : (0, l.isMac)()
           ? "/Applications/DiscordGames"
           : "/tmp";
 function _(e, t) {
     c = { ...c, [e]: { ...(c[e] ?? {}), ...t } };
 }
-function h(e) {
+function E(e) {
     let { applicationId: t, branchId: n, installationPath: r } = e;
     null == i.installations[t] && (i.installations[t] = {}),
         (i.installations[t][n] = { installationPath: r }),
-        i.installationPaths.has(r) || p({ path: r, metadata: {} });
+        i.installationPaths.has(r) || h({ path: r, metadata: {} });
 }
-function f(e) {
+function A(e) {
     let { applicationId: t, branchId: n } = e;
     if (null == i.installations[t]) return !1;
     delete i.installations[t][n], 0 === Object.keys(i.installations[t]).length && delete i.installations[t];
 }
-function p(e) {
+function h(e) {
     if (i.installationPaths.has(e.path)) return !1;
     _(e.path, e.metadata);
     let t = new Set(i.installationPaths);
     t.add(e.path), (i.installationPaths = t);
 }
-class E extends r.Ay.PersistedStore {
+class I extends r.Ay.PersistedStore {
     static displayName = "InstallationManagerStore";
     static persistKey = "InstallationManagerStore";
     initialize(e) {
         let t = { ...e };
         null == t.installations && (t.installations = {}),
-            null == t.defaultInstallationPath && (t.defaultInstallationPath = d),
+            null == t.defaultInstallationPath && (t.defaultInstallationPath = u),
             null == t.installationPaths
                 ? (t.installationPaths = new Set([t.defaultInstallationPath]))
                 : (t.installationPaths = new Set(Array.from(t.installationPaths))),
@@ -72,9 +72,9 @@ class E extends r.Ay.PersistedStore {
             : i.installations[e][t].installationPath;
     }
     getLabelFromPath(e) {
-        return e === d
-            ? u.intl.string(u.t.VdDrjm)
-            : (a.A.fileManager.basename(e) ??
+        return e === u
+            ? d.intl.string(d.t.VdDrjm)
+            : (s.A.fileManager.basename(e) ??
                   e
                       .replace(/[/\\]+$/, "")
                       .split(/[/\\]+/g)
@@ -82,15 +82,15 @@ class E extends r.Ay.PersistedStore {
                   "?");
     }
 }
-let m = new E(s.h, {
-    DISPATCH_APPLICATION_INSTALL: h,
-    DISPATCH_APPLICATION_UNINSTALL: f,
+let f = new I(a.h, {
+    DISPATCH_APPLICATION_INSTALL: E,
+    DISPATCH_APPLICATION_UNINSTALL: A,
     DISPATCH_APPLICATION_CANCEL: function (e) {
         let { applicationId: t, branchId: n } = e,
-            i = l.A.getState(t, n);
-        null != i && null == i.buildId && null == i.manifestIds && f({ applicationId: t, branchId: n });
+            i = o.A.getState(t, n);
+        null != i && null == i.buildId && null == i.manifestIds && A({ applicationId: t, branchId: n });
     },
-    INSTALLATION_LOCATION_ADD: p,
+    INSTALLATION_LOCATION_ADD: h,
     INSTALLATION_LOCATION_REMOVE: function (e) {
         var t;
         let { path: n } = e;
@@ -113,5 +113,5 @@ let m = new E(s.h, {
         let { metadataPayload: t } = e;
         for (let e in t) _(e, t[e]);
     },
-    DISPATCH_APPLICATION_ADD_TO_INSTALLATIONS: h,
+    DISPATCH_APPLICATION_ADD_TO_INSTALLATIONS: E,
 });

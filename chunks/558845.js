@@ -7,7 +7,7 @@ n.d(t, {
     uW: () => C,
     oo: () => m,
     pd: () => g,
-    Tc: () => D,
+    Tc: () => y,
     mB: () => N,
 }),
     n(667532);
@@ -173,10 +173,10 @@ function L() {
         });
     });
 }
-function D() {
+function y() {
     return _.getState().postConnectionOpen;
 }
-class y extends a.Ay.Store {
+class D extends a.Ay.Store {
     static displayName = "DismissibleContentShownStateStore";
     initialize() {
         this.waitFor(l.A, o.A), this.syncWith([l.A, o.A], () => this.setHasRequiredAction());
@@ -192,4 +192,4 @@ class y extends a.Ay.Store {
 function v(e, t) {
     return _(e, t);
 }
-new y(s.h, { CONNECTION_OPEN: () => R(), LOGOUT: () => R() });
+new D(s.h, { CONNECTION_OPEN: () => R(), LOGOUT: () => R() });

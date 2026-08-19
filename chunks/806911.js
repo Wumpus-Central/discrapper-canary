@@ -16,7 +16,7 @@ var i = n(477900),
     I = n(398590),
     f = n(793574),
     p = n(95561),
-    T = n(313961),
+    T = n(198052),
     m = n(94247),
     g = n(520698),
     S = n(525788),
@@ -41,13 +41,13 @@ var i = n(477900),
     B = n(352018),
     H = n(616356),
     j = n(280450),
-    W = n(293246),
+    W = n(453028),
     Y = n(994500),
     K = n(287809),
     $ = n(803301),
     z = n(531685),
-    q = n(174459),
-    Z = n(562153),
+    Z = n(174459),
+    q = n(562153),
     X = n(427262),
     Q = n(712577),
     J = n(566331),
@@ -93,11 +93,11 @@ class ed extends r.PureComponent {
     }
     componentDidMount() {
         let { channel: e } = this.props;
-        q.default.track(ea.HAw.VIDEO_LAYOUT_TOGGLED, { video_layout: "pip", ...(0, p.QS)(e.id) });
+        Z.default.track(ea.HAw.VIDEO_LAYOUT_TOGGLED, { video_layout: "pip", ...(0, p.QS)(e.id) });
     }
     componentWillUnmount() {
         let { channel: e } = this.props;
-        q.default.track(ea.HAw.VIDEO_LAYOUT_TOGGLED, { video_layout: T.A.getLayout(e.id), ...(0, p.QS)(e.id) });
+        Z.default.track(ea.HAw.VIDEO_LAYOUT_TOGGLED, { video_layout: T.A.getLayout(e.id), ...(0, p.QS)(e.id) });
     }
     handleVideo = (e) => {
         E.A.setVideoEnabled(e);
@@ -213,7 +213,7 @@ class ed extends r.PureComponent {
     renderParticipantName() {
         let { channel: e, participantOnScreen: t } = this.props;
         if (t?.type === es.lp.STREAM || t?.type === es.lp.USER) {
-            let n = Z.Ay.getNickname(e.getGuildId(), e.id, t.user) ?? X.Ay.getName(t.user);
+            let n = q.Ay.getNickname(e.getGuildId(), e.id, t.user) ?? X.Ay.getName(t.user);
             return (0, i.jsx)(u.E, {
                 variant: "text-md/normal",
                 color: "text-overlay-light",

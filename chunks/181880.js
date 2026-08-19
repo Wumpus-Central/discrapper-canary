@@ -12,10 +12,10 @@ var i = n(477900),
     E = n(967198),
     h = n(594061),
     g = n(617617);
-function _() {
+function I() {
     return g.A.getDefaultGuildThemePreference() === c.tI.PERSONAL ? c.tI.PERSONAL : c.tI.GUILD;
 }
-async function I(e, t) {
+async function _(e, t) {
     let n = t ? c.tI.PERSONAL : c.tI.GUILD;
     await (0, h.JM)(n), await (0, h.Sh)(e);
 }
@@ -27,7 +27,7 @@ let T = "GUILD_THEME_NUX_MODAL",
     p = new A.A("GuildThemeNuxModal");
 function M(e) {
     let { guildId: t, markAsDismissed: n, transitionState: A, onClose: h } = e,
-        [g, T] = s.useState(_),
+        [g, T] = s.useState(I),
         [M, f] = s.useState(null),
         [O, L] = s.useState("init"),
         R = g === c.tI.PERSONAL,
@@ -48,7 +48,7 @@ function M(e) {
                 if (x !== t) return void (await h());
                 L("submitting"), f(null);
                 try {
-                    await I(t, R);
+                    await _(t, R);
                 } catch (e) {
                     p.error("Failed to save guild theme NUX preference", e), f(C.intl.string(C.t.fEptJP)), L("init");
                     return;

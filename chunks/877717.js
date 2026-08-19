@@ -1,24 +1,24 @@
 "use strict";
-n.d(t, { A: () => l });
+n.d(t, { A: () => o });
 var i = n(17928),
     r = n(228366),
-    s = n(652215);
-let a = {};
-class o extends i.Ay.Store {
+    a = n(652215);
+let s = {};
+class l extends i.Ay.Store {
     static displayName = "HookErrorStore";
     getHookError(e) {
-        return a[e];
+        return s[e];
     }
 }
-let l = new o(r.h, {
+let o = new l(r.h, {
     MEDIA_ENGINE_SET_GO_LIVE_SOURCE: function () {
-        a = {};
+        s = {};
     },
     MEDIA_ENGINE_SOUNDSHARE_TRANSMITTING: function () {
-        delete a[s.LU7.SOUND];
+        delete s[a.LU7.SOUND];
     },
     MEDIA_ENGINE_SOUNDSHARE_FAILED: function (e) {
         let { errorMessage: t, errorCode: n } = e;
-        a[s.LU7.SOUND] = { errorMessage: t, errorCode: n };
+        s[a.LU7.SOUND] = { errorMessage: t, errorCode: n };
     },
 });

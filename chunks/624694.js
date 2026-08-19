@@ -1,18 +1,18 @@
 "use strict";
-n.d(t, { A: () => m }), n(321073);
+n.d(t, { A: () => f }), n(321073);
 var i = n(17928),
     r = n(228366),
-    s = n(652896),
-    a = n(495544),
-    o = n(116956);
-let l = {},
-    u = {},
+    a = n(652896),
+    s = n(280450),
+    l = n(116956);
+let o = {},
+    d = {},
     c = {};
-function d(e) {
+function u(e) {
     return "packetsSent" in e;
 }
 function _(e, t, n, i, r) {
-    let s = i.find((e) => "video" === e.type);
+    let a = i.find((e) => "video" === e.type);
     if (
         (null == n &&
             (n = {
@@ -28,29 +28,29 @@ function _(e, t, n, i, r) {
                 entropyAggregated: 0,
                 minVersion: e,
             }),
-        null == s)
+        null == a)
     )
         return n;
-    let a = d(s) ? (s.packetsSent ?? 0) : (s.packetsReceived ?? 0),
-        o = (d(s), s.packetsLost ?? 0),
-        l = d(s) ? (s.frameRateEncode ?? 0) : (s.frameRateDecode ?? 0),
-        u = s.resolution?.height ?? 0,
-        c = d(s) ? (s.videoEntropy ?? 0) : 0;
-    (n.numDatapoints += 1), (n.frameRateAggregated += l), (n.resolutionAggregated += u), (n.entropyAggregated += c);
+    let s = u(a) ? (a.packetsSent ?? 0) : (a.packetsReceived ?? 0),
+        l = (u(a), a.packetsLost ?? 0),
+        o = u(a) ? (a.frameRateEncode ?? 0) : (a.frameRateDecode ?? 0),
+        d = a.resolution?.height ?? 0,
+        c = u(a) ? (a.videoEntropy ?? 0) : 0;
+    (n.numDatapoints += 1), (n.frameRateAggregated += o), (n.resolutionAggregated += d), (n.entropyAggregated += c);
     let _ = r?.find((e) => "video" === e.type);
     if (null != _ && t >= n.minVersion) {
         n.numDatapoints -= 1;
-        let e = d(_) ? (_.packetsSent ?? 0) : (_.packetsReceived ?? 0),
-            t = (d(_), _.packetsLost ?? 0),
-            i = d(_) ? (_.frameRateEncode ?? 0) : (_.frameRateDecode ?? 0),
-            r = d(_) ? (_.videoEntropy ?? 0) : 0,
-            s = _.resolution?.height ?? 0;
+        let e = u(_) ? (_.packetsSent ?? 0) : (_.packetsReceived ?? 0),
+            t = (u(_), _.packetsLost ?? 0),
+            i = u(_) ? (_.frameRateEncode ?? 0) : (_.frameRateDecode ?? 0),
+            r = u(_) ? (_.videoEntropy ?? 0) : 0,
+            a = _.resolution?.height ?? 0;
         (n.frameRateAggregated -= i),
-            (n.resolutionAggregated -= s),
+            (n.resolutionAggregated -= a),
             (n.entropyAggregated -= r),
-            (n.packetsSentOrReceived = a - e),
-            (n.packetsLost = o - t);
-    } else (n.packetsSentOrReceived = a), (n.packetsLost = o);
+            (n.packetsSentOrReceived = s - e),
+            (n.packetsLost = l - t);
+    } else (n.packetsSentOrReceived = s), (n.packetsLost = l);
     return (
         (n.frameRate = n.frameRateAggregated / n.numDatapoints),
         (n.resolution = n.resolutionAggregated / n.numDatapoints),
@@ -59,42 +59,42 @@ function _(e, t, n, i, r) {
         n
     );
 }
-function h(e, t, n, i) {
+function E(e, t, n, i) {
     null == e[t] && (e[t] = {});
-    let r = a.default.getId();
-    for (let s of ((e[t][r] = _(n.version, i?.version ?? 0, e[t][r], n.stats.rtp.outbound, i?.stats.rtp.outbound)),
+    let r = s.default.getId();
+    for (let a of ((e[t][r] = _(n.version, i?.version ?? 0, e[t][r], n.stats.rtp.outbound, i?.stats.rtp.outbound)),
     Object.keys(n.stats.rtp.inbound)))
-        e[t][s] = _(n.version, i?.version ?? 0, e[t][s], n.stats.rtp.inbound[s], i?.stats.rtp.inbound[s]);
+        e[t][a] = _(n.version, i?.version ?? 0, e[t][a], n.stats.rtp.inbound[a], i?.stats.rtp.inbound[a]);
 }
-function f(e, t) {
-    u[e]?.[t] != null && delete u[e][t], c[e]?.[t] != null && delete c[e][t];
+function A(e, t) {
+    d[e]?.[t] != null && delete d[e][t], c[e]?.[t] != null && delete c[e][t];
 }
-function p(e, t) {
+function h(e, t) {
     if (null == e) return null;
-    let n = l[e];
+    let n = o[e];
     return null == n || n.length <= t ? null : n[n.length - t - 1];
 }
-class E extends i.Ay.Store {
+class I extends i.Ay.Store {
     initialize() {
-        this.waitFor(a.default, o.A);
+        this.waitFor(s.default, l.A);
     }
     static displayName = "MediaEngineStatsStore";
     getConnectionStats(e) {
-        return p(e, 0);
+        return h(e, 0);
     }
     getLastConnectionStats(e) {
-        return p(e, 1);
+        return h(e, 1);
     }
     getStatsHistory(e) {
-        return null == e ? [] : (l[e] ?? []);
+        return null == e ? [] : (o[e] ?? []);
     }
     getAccumulatedPerformanceStats(e, t, n) {
         if (null == e) return null;
-        let i = "long" === n ? u : c;
+        let i = "long" === n ? d : c;
         return i[e]?.[t] ?? null;
     }
 }
-let m = new E(r.h, {
+let f = new I(r.h, {
     MEDIA_ENGINE_CONNECTION_STATS: function (e) {
         let { connectionStats: t } = e,
             n = {};
@@ -103,27 +103,27 @@ let m = new E(r.h, {
                 { mediaEngineConnectionId: i } = e;
             0 !== i.length &&
                 ((n[i] = e),
-                i in l || (l[i] = []),
-                l[i].push(e),
-                l[i].length > 30 && (t = l[i].shift()),
-                h(c, i, e, p(i, 15) ?? void 0),
-                h(u, i, e, t));
+                i in o || (o[i] = []),
+                o[i].push(e),
+                o[i].length > 30 && (t = o[i].shift()),
+                E(c, i, e, h(i, 15) ?? void 0),
+                E(d, i, e, t));
         }
     },
     MEDIA_ENGINE_CONNECTION_STATS_HISTORY_RESET: function (e) {
         let { mediaEngineConnectionId: t } = e;
-        null != t && (delete l[t], delete u[t], delete c[t]);
+        null != t && (delete o[t], delete d[t], delete c[t]);
     },
     STREAM_UPDATE: function (e) {
         let { streamKey: t, paused: n } = e;
         if (n) return !1;
-        let i = o.A.getRTCConnection(t)?.getMediaEngineConnectionId();
+        let i = l.A.getRTCConnection(t)?.getMediaEngineConnectionId();
         if (null == i) return !1;
-        f(i, (0, s.Iy)(t).ownerId);
+        A(i, (0, a.Iy)(t).ownerId);
     },
     RTC_CONNECTION_VIDEO: function (e) {
         let { userId: t, mediaEngineConnectionId: n } = e;
         if (null == n) return !1;
-        f(n, t);
+        A(n, t);
     },
 });

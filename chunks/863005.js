@@ -27,14 +27,14 @@ function R() {
     for (let e in ((p = {}), (S = {}), (T = {}), (m = {}), (g = {}), (C = _.Ay.getChannelId()), O)) clearTimeout(O[e]);
     (O = {}),
         A.A.forEachGuild((e) => {
-            D(e);
+            y(e);
         }),
-        y();
+        D();
 }
 function L(e) {
-    for (let t in (delete p[e], delete S[e], delete T[e], delete m[e], delete g[e], D(e), m[e])) b(e, t);
+    for (let t in (delete p[e], delete S[e], delete T[e], delete m[e], delete g[e], y(e), m[e])) b(e, t);
 }
-function D(e) {
+function y(e) {
     let t = A.A.getThreadsForGuild(e);
     for (let e in t)
         for (let n in t[e]) {
@@ -53,7 +53,7 @@ function D(e) {
             }
         }
 }
-function y() {
+function D() {
     for (let e in ((N = {}), m)) for (let t in m[e]) b(e, t);
 }
 function v(e) {
@@ -153,7 +153,7 @@ function G() {
                 let i = m[e][t][n];
                 u.Ay.isForumPostUnread(n) && B(g, i, i, !1);
             }
-    y();
+    D();
 }
 function x() {
     let e = C;
@@ -211,8 +211,8 @@ let Y = {},
     K = {},
     $ = {},
     z = {},
-    q = {};
-class Z extends a.Ay.Store {
+    Z = {};
+class q extends a.Ay.Store {
     static displayName = "ActiveJoinedThreadsStore";
     initialize() {
         this.waitFor(A.A, d.A, c.A, h.A, u.Ay, _.Ay), this.syncWith([_.Ay], x);
@@ -254,7 +254,7 @@ class Z extends a.Ay.Store {
         return this.getActiveUnjoinedUnreadThreadsForGuild(e)[t] ?? $;
     }
     getNewThreadCountsForGuild(e) {
-        return N[e] ?? q;
+        return N[e] ?? Z;
     }
     computeAllActiveJoinedThreads(e) {
         let t = [];
@@ -269,7 +269,7 @@ class Z extends a.Ay.Store {
         return r().size(p[e]?.[t] ?? {}) + r().size(m[e]?.[t] ?? {});
     }
 }
-let X = new Z(s.h, {
+let X = new q(s.h, {
     CONNECTION_OPEN: R,
     OVERLAY_INITIALIZE: R,
     THREAD_LIST_SYNC: function (e) {

@@ -1,78 +1,78 @@
 "use strict";
-n.d(t, { Ay: () => u, IQ: () => E, Rz: () => A, a1: () => _ }), n(321073);
-var i = n(582128),
-    r = n(17928),
-    a = n(429913),
-    s = n(290863),
-    l = n(287809),
+n.d(t, { Ay: () => d, IQ: () => m, Rz: () => f, a1: () => h }), n(321073);
+var l = n(582128),
+    i = n(17928),
+    s = n(429913),
+    r = n(290863),
+    a = n(287809),
     o = n(403362),
-    d = n(933958),
+    u = n(933958),
     c = n(969151);
-function u(e, t) {
-    return E(
-        (0, r.yK)([d.Ay], () =>
-            null != e && null != e.id && "" !== e.id ? d.Ay.getEmbeddedActivitiesForChannel(e.id) : d.Am,
+function d(e, t) {
+    return m(
+        (0, i.yK)([u.Ay], () =>
+            null != e && null != e.id && "" !== e.id ? u.Ay.getEmbeddedActivitiesForChannel(e.id) : u.Am,
         ),
         t,
     );
 }
-function _(e) {
-    let t = E((0, r.bG)([d.Ay], () => (null != e ? d.Ay.getEmbeddedActivitiesForGuild(e) : d.Am)));
-    return i.useMemo(() => {
+function h(e) {
+    let t = m((0, i.bG)([u.Ay], () => (null != e ? u.Ay.getEmbeddedActivitiesForGuild(e) : u.Am)));
+    return l.useMemo(() => {
         let e = new Map();
         return (
             t.forEach((t) => {
                 let n = (0, c.H)(t.embeddedActivity.location);
                 if (null == n) return;
-                let i = e.get(n) ?? [];
-                i.push(t), e.set(n, i);
+                let l = e.get(n) ?? [];
+                l.push(t), e.set(n, l);
             }),
             e
         );
     }, [t]);
 }
-function E(e, t) {
+function m(e, t) {
     let n = e.map((e) => e.applicationId),
-        s = (0, a.A)(n),
-        d = new Set([]);
-    for (let t of e) for (let e of t.userIds) d.add(e);
-    let c = (0, r.yK)([l.default], () => {
+        r = (0, s.A)(n),
+        u = new Set([]);
+    for (let t of e) for (let e of t.userIds) u.add(e);
+    let c = (0, i.yK)([a.default], () => {
         let e = [];
-        for (let t of d) e.push(l.default.getUser(t));
+        for (let t of u) e.push(a.default.getUser(t));
         return e;
-    }, [d]);
-    return i.useMemo(() => {
+    }, [u]);
+    return l.useMemo(() => {
         let n = new Map();
         return (
             c.forEach((e) => {
                 null != e && n.set(e.id, e);
             }),
             e
-                .map((e, i) => {
-                    let r = s[i],
-                        a = [];
-                    if (null != a)
-                        for (let i of e.userIds) {
-                            let e = n.get(i);
+                .map((e, l) => {
+                    let i = r[l],
+                        s = [];
+                    if (null != s)
+                        for (let l of e.userIds) {
+                            let e = n.get(l);
                             if (null != e && null != t) {
                                 let n = t(e);
-                                null != n && a.push(n);
+                                null != n && s.push(n);
                             }
                         }
-                    return null == r ? null : { embeddedActivity: e, application: r, userParticipantAvatarUrls: a };
+                    return null == i ? null : { embeddedActivity: e, application: i, userParticipantAvatarUrls: s };
                 })
                 .filter(o.Vq)
         );
-    }, [e, s, c, t]);
+    }, [e, r, c, t]);
 }
-function A(e) {
-    return (0, r.bG)(
-        [s.A],
+function f(e) {
+    return (0, i.bG)(
+        [r.A],
         () => {
             let t = new Map();
             return (
                 e.forEach((e) => {
-                    let n = s.A.findActivity(
+                    let n = r.A.findActivity(
                         e?.embeddedActivity.userIds.values().next().value,
                         (t) => t.application_id === e?.application?.id,
                     );
@@ -82,6 +82,6 @@ function A(e) {
             );
         },
         [e],
-        r.My,
+        i.My,
     );
 }

@@ -1,19 +1,19 @@
 "use strict";
-e.exports = function (e, t, n, i, r) {
-    this.directMap[e + ":" + n] = t;
-    var s,
+e.exports = function (e, t, r, n, o) {
+    this.directMap[e + ":" + r] = t;
+    var i,
         a = (e = e.replace(/\s+/g, " ")).split(" ");
     a.length > 1
-        ? this.bindSequence(e, a, t, n)
-        : ((s = this.getKeyInfo(e, n)),
-          (this.callbacks[s.key] = this.callbacks[s.key] || []),
-          this.getMatches(s.key, s.modifiers, { type: s.action }, i, e, r),
-          this.callbacks[s.key][i ? "unshift" : "push"]({
+        ? this.bindSequence(e, a, t, r)
+        : ((i = this.getKeyInfo(e, r)),
+          (this.callbacks[i.key] = this.callbacks[i.key] || []),
+          this.getMatches(i.key, i.modifiers, { type: i.action }, n, e, o),
+          this.callbacks[i.key][n ? "unshift" : "push"]({
               callback: t,
-              modifiers: s.modifiers,
-              action: s.action,
-              seq: i,
-              level: r,
+              modifiers: i.modifiers,
+              action: i.action,
+              seq: n,
+              level: o,
               combo: e,
           }));
 };

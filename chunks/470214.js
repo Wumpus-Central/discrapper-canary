@@ -2,51 +2,51 @@
 n.d(t, { A: () => S });
 var i = n(636537),
     r = n(228366),
-    s = n(439372),
-    a = n(885386),
-    o = n(461213),
-    l = n(927813),
-    u = n(38405),
+    a = n(439372),
+    s = n(885386),
+    l = n(461213),
+    o = n(927813),
+    d = n(38405),
     c = n(17928);
-let d = l.A.Millis.HOUR,
+let u = o.A.Millis.HOUR,
     _ = { lastReportedAtMs: null },
-    h = _;
-class f extends c.Ay.PersistedStore {
+    E = _;
+class A extends c.Ay.PersistedStore {
     static displayName = "FriendOnlineTimerStore";
     static persistKey = "FriendOnlineTimerStore";
     initialize() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : _;
-        h = e ?? _;
+        E = e ?? _;
     }
     isCooldownElapsed() {
-        return null == h.lastReportedAtMs || Date.now() - h.lastReportedAtMs >= d;
+        return null == E.lastReportedAtMs || Date.now() - E.lastReportedAtMs >= u;
     }
     getState() {
-        return h;
+        return E;
     }
 }
-let p = new f(r.h, {
+let h = new A(r.h, {
     FRIEND_ONLINE_TIMER_REPORTED: function (e) {
         let { timestampMs: t } = e;
-        return (h.lastReportedAtMs = t), !0;
+        return (E.lastReportedAtMs = t), !0;
     },
 });
-var E = n(652215),
-    m = n(818348);
-let g = 5 * l.A.Millis.MINUTE;
-async function A() {
+var I = n(652215),
+    f = n(818348);
+let p = 5 * o.A.Millis.MINUTE;
+async function T() {
     try {
-        await i.Bo.post({ url: E.Rsh.USER_MEANINGFULLY_ONLINE, rejectWithError: !0 });
+        await i.Bo.post({ url: I.Rsh.USER_MEANINGFULLY_ONLINE, rejectWithError: !0 });
     } catch (e) {
         if (!(e instanceof i.oh) || 429 !== e.status)
-            return void u.A.captureException(e, { tags: { app_context: "session_timer" } });
+            return void d.A.captureException(e, { tags: { app_context: "session_timer" } });
     }
     r.h.dispatch({ type: "FRIEND_ONLINE_TIMER_REPORTED", timestampMs: Date.now() });
 }
-function I(e) {
-    return [m.cl.ONLINE, m.cl.STREAMING].includes(e);
+function m(e) {
+    return [f.cl.ONLINE, f.cl.STREAMING].includes(e);
 }
-class T extends s.A {
+class g extends a.A {
     timerId = null;
     actions = {
         POST_CONNECTION_OPEN: () => this.start(),
@@ -60,16 +60,16 @@ class T extends s.A {
         this.clear();
     }
     start = () => {
-        a.hV.getSetting() &&
-            p.isCooldownElapsed() &&
+        s.hV.getSetting() &&
+            h.isCooldownElapsed() &&
             null == this.timerId &&
-            I(o.A.getStatus()) &&
+            m(l.A.getStatus()) &&
             (this.timerId = setTimeout(() => {
-                (this.timerId = null), !I(o.A.getStatus()) || (p.isCooldownElapsed() && A());
-            }, g));
+                (this.timerId = null), !m(l.A.getStatus()) || (h.isCooldownElapsed() && T());
+            }, p));
     };
     clear = () => {
         null != this.timerId && (clearTimeout(this.timerId), (this.timerId = null));
     };
 }
-let S = new T();
+let S = new g();

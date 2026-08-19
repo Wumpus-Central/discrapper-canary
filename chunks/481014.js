@@ -1,21 +1,21 @@
-let i = n(532618);
+let n = r(532618);
 e.exports = (e, t) => {
-    let n = i(e, null, !0),
-        r = i(t, null, !0),
-        s = n.compare(r);
-    if (0 === s) return null;
-    let a = s > 0,
-        o = a ? n : r,
-        l = a ? r : n,
-        u = !!o.prerelease.length;
+    let r = n(e, null, !0),
+        o = n(t, null, !0),
+        i = r.compare(o);
+    if (0 === i) return null;
+    let a = i > 0,
+        s = a ? r : o,
+        l = a ? o : r,
+        u = !!s.prerelease.length;
     if (l.prerelease.length && !u)
-        return l.patch || l.minor ? (o.patch ? "patch" : o.minor ? "minor" : "major") : "major";
+        return l.patch || l.minor ? (s.patch ? "patch" : s.minor ? "minor" : "major") : "major";
     let c = u ? "pre" : "";
-    return n.major !== r.major
+    return r.major !== o.major
         ? c + "major"
-        : n.minor !== r.minor
+        : r.minor !== o.minor
           ? c + "minor"
-          : n.patch !== r.patch
+          : r.patch !== o.patch
             ? c + "patch"
             : "prerelease";
 };

@@ -1,7 +1,7 @@
 n.d(t, { A: () => l });
 var T = n(228366),
-    I = n(468689),
-    i = n(542580),
+    i = n(468689),
+    I = n(542580),
     N = n(824953);
 let l = {
     init() {
@@ -38,7 +38,7 @@ let l = {
     async saveApplicationPermissions(e, t, n) {
         try {
             T.h.dispatch({ type: "INTEGRATION_SETTINGS_SUBMITTING" }),
-                await i.Ni({
+                await I.Ni({
                     applicationId: e,
                     commandId: e,
                     defaultEveryoneValue: !0,
@@ -54,7 +54,7 @@ let l = {
     async saveIntegration(e, t) {
         try {
             T.h.dispatch({ type: "INTEGRATION_SETTINGS_SUBMITTING" }),
-                await I.A.updateIntegration(e, t.id, t.expire_behavior, t.expire_grace_period, t.enable_emoticons),
+                await i.A.updateIntegration(e, t.id, t.expire_behavior, t.expire_grace_period, t.enable_emoticons),
                 T.h.dispatch({ type: "INTEGRATION_SETTINGS_SAVE_SUCCESS" });
         } catch (e) {
             T.h.dispatch({ type: "INTEGRATION_SETTINGS_SAVE_FAILURE", errors: e.body });

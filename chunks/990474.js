@@ -1,108 +1,108 @@
 "use strict";
-n.d(t, { Ay: () => R, Oh: () => O, gn: () => C });
-var i = n(477900),
-    r = n(582128),
-    a = n(17928),
-    s = n(314116),
-    l = n(866665),
+n.d(t, { Ay: () => N, Oh: () => _, gn: () => v });
+var l = n(477900),
+    i = n(582128),
+    s = n(17928),
+    r = n(314116),
+    a = n(866665),
     o = n(821609),
-    d = n(721768),
+    u = n(721768),
     c = n(842209),
-    u = n(392054),
-    _ = n(332173),
-    E = n(406704),
-    A = n(885386),
-    h = n(734057),
-    I = n(31717),
-    f = n(576705),
-    p = n(309010),
-    T = n(625494),
-    m = n(652215),
-    g = n(73510);
+    d = n(392054),
+    h = n(332173),
+    m = n(406704),
+    f = n(885386),
+    p = n(734057),
+    g = n(31717),
+    x = n(576705),
+    A = n(309010),
+    E = n(625494),
+    C = n(652215),
+    I = n(73510);
 n(827669);
-var S = n(375708);
-function N(e, t, n, i, r) {
+var y = n(375708);
+function S(e, t, n, l, i) {
     null != e &&
-        ("" !== I.A.getDraft(e, I.C.ChannelMessage)
-            ? (0, s.A)({
-                  title: S.intl.string(S.t.pe26Cj),
-                  subtitle: S.intl.string(S.t["+awCIy"]),
-                  confirmText: S.intl.string(S.t.VkKicb),
-                  onConfirm: () => a(),
+        ("" !== g.A.getDraft(e, g.C.ChannelMessage)
+            ? (0, r.A)({
+                  title: y.intl.string(y.t.pe26Cj),
+                  subtitle: y.intl.string(y.t["+awCIy"]),
+                  confirmText: y.intl.string(y.t.VkKicb),
+                  onConfirm: () => s(),
                   onCloseCallback: () => {
-                      T._.dispatch(m.jej.FOCUS_CHANNEL_TEXT_AREA, { channelId: e });
+                      E._.dispatch(C.jej.FOCUS_CHANNEL_TEXT_AREA, { channelId: e });
                   },
               })
-            : a());
-    function a() {
+            : s());
+    function s() {
         if (null == e) return;
-        let a = h.A.getChannel(e);
-        if (null == a) return;
-        let { command: s, application: l } = c.EW({ channel: a, type: "channel" }, n, r);
-        if (null != s && s.untranslatedName === t) {
-            T._.dispatch(m.jej.FOCUS_CHANNEL_TEXT_AREA, { channelId: e });
+        let s = p.A.getChannel(e);
+        if (null == s) return;
+        let { command: r, application: a } = c.EW({ channel: s, type: "channel" }, n, i);
+        if (null != r && r.untranslatedName === t) {
+            E._.dispatch(C.jej.FOCUS_CHANNEL_TEXT_AREA, { channelId: e });
             let t =
-                null != l
+                null != a
                     ? {
-                          type: u.Hf.APPLICATION,
-                          id: l.id,
-                          icon: l.icon,
-                          name: l?.bot?.username ?? l.name,
-                          application: l,
+                          type: d.Hf.APPLICATION,
+                          id: a.id,
+                          icon: a.icon,
+                          name: a?.bot?.username ?? a.name,
+                          application: a,
                       }
                     : null;
-            d.Gf({ channelId: e, command: null, section: null }),
-                d.Gf({ channelId: e, command: s, section: t, location: i });
+            u.Gf({ channelId: e, command: null, section: null }),
+                u.Gf({ channelId: e, command: r, section: t, location: l });
         }
     }
 }
-function C(e) {
-    let { node: t, stateKey: n, children: s } = e,
-        l = (0, a.bG)([h.A, p.Ay], () => h.A.getChannel(t.channelId ?? p.Ay.getChannelId()), [t.channelId]),
-        { hasSendMessagePerm: o, hasUseAppCommandsPerm: d } = (0, a.cf)([f.A], () => ({
-            hasSendMessagePerm: f.A.can(m.xBc.SEND_MESSAGES, l),
-            hasUseAppCommandsPerm: f.A.can(m.xBc.USE_APPLICATION_COMMANDS, l),
+function v(e) {
+    let { node: t, stateKey: n, children: r } = e,
+        a = (0, s.bG)([p.A, A.Ay], () => p.A.getChannel(t.channelId ?? A.Ay.getChannelId()), [t.channelId]),
+        { hasSendMessagePerm: o, hasUseAppCommandsPerm: u } = (0, s.cf)([x.A], () => ({
+            hasSendMessagePerm: x.A.can(C.xBc.SEND_MESSAGES, a),
+            hasUseAppCommandsPerm: x.A.can(C.xBc.USE_APPLICATION_COMMANDS, a),
         })),
-        I = void 0 !== l ? { type: "channel", channel: l } : { type: "contextless" },
-        { command: T } = c.D3(I, t.commandKey ?? ""),
-        S = A.D_.useSetting(),
-        C = r.useMemo(() => {
-            if (null == T || null == l || T.untranslatedName !== t.commandName || S) return !1;
-            let e = l.isPrivate();
-            if ((0, E.UJ)(l) || (!e && !o)) return !1;
-            let n = T?.applicationId === g.Ik.BUILT_IN;
-            return !!e || !!n || !!d;
-        }, [l, T, o, d, t.commandName, S]),
-        O = r.useCallback(
+        g = void 0 !== a ? { type: "channel", channel: a } : { type: "contextless" },
+        { command: E } = c.D3(g, t.commandKey ?? ""),
+        y = f.D_.useSetting(),
+        v = i.useMemo(() => {
+            if (null == E || null == a || E.untranslatedName !== t.commandName || y) return !1;
+            let e = a.isPrivate();
+            if ((0, m.UJ)(a) || (!e && !o)) return !1;
+            let n = E?.applicationId === I.Ik.BUILT_IN;
+            return !!e || !!n || !!u;
+        }, [a, E, o, u, t.commandName, y]),
+        _ = i.useCallback(
             (e) => {
                 e?.stopPropagation(),
-                    null != l &&
+                    null != a &&
                         null != t.commandName &&
                         null != t.commandKey &&
-                        N(l.id, t.commandName, t.commandKey, u.Oh.MENTION);
+                        S(a.id, t.commandName, t.commandKey, d.Oh.MENTION);
             },
-            [l, t.commandKey, t.commandName],
+            [a, t.commandKey, t.commandName],
         );
-    return C
-        ? (0, i.jsxs)(_.A, { role: "link", onClick: O, children: ["/", s] }, n)
-        : (0, i.jsxs)("span", { children: ["/", s] });
+    return v
+        ? (0, l.jsxs)(h.A, { role: "link", onClick: _, children: ["/", r] }, n)
+        : (0, l.jsxs)("span", { children: ["/", r] });
 }
-function O(e) {
-    let { commandId: t, commandName: n, commandDescription: r, applicationId: s, onClick: d } = e,
-        c = (0, a.bG)([p.Ay], () => p.Ay.getChannelId());
-    return (0, i.jsx)(l.m, {
-        text: r,
+function _(e) {
+    let { commandId: t, commandName: n, commandDescription: i, applicationId: r, onClick: u } = e,
+        c = (0, s.bG)([A.Ay], () => A.Ay.getChannelId());
+    return (0, l.jsx)(a.m, {
+        text: i,
         position: "top",
-        children: (0, i.jsx)(o.$, {
+        children: (0, l.jsx)(o.$, {
             size: "sm",
             variant: "secondary",
             onClick: function (e) {
-                e?.stopPropagation(), N(c, n, t, u.Oh.POPULAR_COMMANDS, s), d?.(t);
+                e?.stopPropagation(), S(c, n, t, d.Oh.POPULAR_COMMANDS, r), u?.(t);
             },
             text: `/${n}`,
         }),
     });
 }
-function R(e) {
-    return { react: (e, t, n) => (0, i.jsx)(C, { node: e, stateKey: n.key, children: t(e.content, n) }) };
+function N(e) {
+    return { react: (e, t, n) => (0, l.jsx)(v, { node: e, stateKey: n.key, children: t(e.content, n) }) };
 }

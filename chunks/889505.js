@@ -1,4 +1,4 @@
-_.exports = {
+e.exports = {
     ie: "discordLogo__921c5",
     sL: "authBox__921c5",
     PR: "authBoxExpanded__921c5 authBox__921c5",

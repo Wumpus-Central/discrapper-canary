@@ -2,18 +2,18 @@ i.d(t, { A: () => f });
 var e = i(477900),
     l = i(95561),
     o = i(990474),
-    a = i(174459),
-    r = i(183555),
+    r = i(174459),
+    a = i(183555),
     c = i(582128),
     d = i(155718),
     s = i(842209),
     u = i(900179),
     p = i(652215),
     A = i(375708),
-    g = i(426051);
+    I = i(426051);
 function f(n) {
-    let { applicationId: t, commandIds: i, guildId: f, channel: m, onClick: I } = n,
-        { trackUserProfileAction: P } = (0, r.NJ)(),
+    let { applicationId: t, commandIds: i, guildId: f, channel: g, onClick: m } = n,
+        { trackUserProfileAction: P } = (0, a.NJ)(),
         { commands: _ } = (function (n, t, i) {
             let { commands: e, application: l } = s.ZV(n, t, i);
             return {
@@ -31,22 +31,22 @@ function f(n) {
                     [e],
                 ),
             };
-        })(m, t, i);
+        })(g, t, i);
     if (null == _ || 0 === _.length) return null;
     function O(n) {
-        I?.(),
+        m?.(),
             P({ action: "PRESS_APP_COMMAND" }),
-            a.default.track(p.HAw.POPULAR_APPLICATION_COMMAND_CLICKED, {
+            r.default.track(p.HAw.POPULAR_APPLICATION_COMMAND_CLICKED, {
                 application_id: t,
                 command_id: n,
                 guild_id: f,
-                ...(0, l.Ou)(m.id),
+                ...(0, l.Ou)(g.id),
             });
     }
     return (0, e.jsx)(u.A, {
         heading: A.intl.string(A.t["0hKkS+"]),
         children: (0, e.jsx)("ul", {
-            className: g.p,
+            className: I.p,
             children: _.map((n) =>
                 (0, e.jsx)(
                     "li",
@@ -57,7 +57,7 @@ function f(n) {
                             commandDescription: n.displayDescription,
                             onClick: O,
                             guildId: f,
-                            channelId: m.id,
+                            channelId: g.id,
                             applicationId: n.applicationId,
                         }),
                     },

@@ -1,42 +1,42 @@
 "use strict";
-n.d(t, { A: () => u });
+n.d(t, { A: () => d });
 var i = n(17928),
     r = n(228366),
-    s = n(935208);
-let a = new Set(),
-    o = !1;
-(a = new Set()), (o = !1);
-class l extends i.Ay.PersistedStore {
+    a = n(935208);
+let s = new Set(),
+    l = !1;
+(s = new Set()), (l = !1);
+class o extends i.Ay.PersistedStore {
     static displayName = "UnenrolledActivityQuestStore";
     static persistKey = "UnenrolledActivityQuestStore";
     initialize(e) {
-        (a = new Set(e?.dismissedQuestIds ?? [])), (o = e?.autoEnroll ?? !1);
+        (s = new Set(e?.dismissedQuestIds ?? [])), (l = e?.autoEnroll ?? !1);
     }
     getState() {
-        return { dismissedQuestIds: [...a], autoEnroll: o };
+        return { dismissedQuestIds: [...s], autoEnroll: l };
     }
     isDismissed(e) {
-        return null != e && a.has(e);
+        return null != e && s.has(e);
     }
     getDismissedQuestIds() {
-        return a;
+        return s;
     }
 }
-let u = new l(r.h, {
+let d = new o(r.h, {
     UNENROLLED_ACTIVITY_QUEST_DISMISS: function (e) {
         return (
-            a.size >= 20 &&
-                (a = new Set(
-                    Array.from(a)
-                        .sort(s.default.compare)
+            s.size >= 20 &&
+                (s = new Set(
+                    Array.from(s)
+                        .sort(a.default.compare)
                         .slice(Math.floor(10))
                         .map((e) => e.toString()),
                 )),
-            a.add(e.questId),
+            s.add(e.questId),
             !0
         );
     },
     UNENROLLED_ACTIVITY_QUEST_AUTO_ENROLL: function (e) {
-        return (o = e.autoEnroll), !0;
+        return (l = e.autoEnroll), !0;
     },
 });

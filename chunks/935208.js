@@ -1,16 +1,16 @@
 "use strict";
-n.r(t), n.d(t, { DISCORD_EPOCH: () => o, default: () => d, SnowflakeSequence: () => c });
-var i = n(735438),
+n.r(t), n.d(t, { DISCORD_EPOCH: () => l, default: () => u, SnowflakeSequence: () => c });
+var i = n(435558),
     r = n.n(i),
-    s = n(824120),
-    a = n.n(s);
-let o = 14200704e5;
-function l(e) {
-    return Math.floor(Number(e) / 4194304) + o;
+    a = n(824120),
+    s = n.n(a);
+let l = 14200704e5;
+function o(e) {
+    return Math.floor(Number(e) / 4194304) + l;
 }
-function u(e) {
-    let t = e - o;
-    return t <= 0 ? "0" : a()(t).shiftLeft(22).toString();
+function d(e) {
+    let t = e - l;
+    return t <= 0 ? "0" : s()(t).shiftLeft(22).toString();
 }
 class c {
     seq;
@@ -28,12 +28,12 @@ class c {
         this.seq = 0;
     }
 }
-let d = {
+let u = {
     age: function (e) {
-        return Date.now() - l(e);
+        return Date.now() - o(e);
     },
     extractTimestamp: function (e) {
-        return l(e);
+        return o(e);
     },
     compare: function (e, t) {
         return e === t
@@ -51,19 +51,19 @@ let d = {
                       : -1;
     },
     atPreviousMillisecond: function (e) {
-        return u(l(e) - 1);
+        return d(o(e) - 1);
     },
     atNextMillisecond: function (e) {
-        return u(l(e) + 1);
+        return d(o(e) + 1);
     },
     fromTimestamp: function (e) {
-        return u(e);
+        return d(e);
     },
     fromTimestampWithSequence: function (e, t) {
         let n;
         return (
-            (n = e - o),
-            a()(n <= 0 ? 0 : n)
+            (n = e - l),
+            s()(n <= 0 ? 0 : n)
                 .shiftLeft(22)
                 .add(t.next())
                 .toString()
@@ -84,7 +84,7 @@ let d = {
     isProbablyAValidSnowflake: function (e) {
         if (null == e || !/^\d{17,19}$/.test(e)) return !1;
         try {
-            return l(e) >= o;
+            return o(e) >= l;
         } catch {
             return !1;
         }

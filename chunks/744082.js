@@ -1,8 +1,8 @@
-i.d(e, { A: () => s });
-var t = i(582128),
-    o = i(758445);
-function s(n) {
+p.d(c, { A: () => i });
+var t = p(582128),
+    u = p(758445);
+function i(s) {
     t.useEffect(() => {
-        null != n && (0, o.tx)([n]);
-    }, [n]);
+        null != s && (0, u.tx)([s]);
+    }, [s]);
 }

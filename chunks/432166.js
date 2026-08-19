@@ -5,12 +5,12 @@ var i = l(477900),
     a = l.n(n),
     d = l(451988),
     r = l(235986),
-    c = l(818383);
-function o(e) {
+    o = l(818383);
+function c(e) {
     let { percentage: t, isSingleLine: l } = e;
     return (0, i.jsx)("div", {
-        className: a()({ [c.M0]: l, [c.Sg]: !l }),
-        children: (0, i.jsx)("div", { className: c.qT, style: { width: `${100 * Math.max(Math.min(t, 1), 0)}%` } }),
+        className: a()({ [o.M0]: l, [o.Sg]: !l }),
+        children: (0, i.jsx)("div", { className: o.qT, style: { width: `${100 * Math.max(Math.min(t, 1), 0)}%` } }),
     });
 }
 function p(e) {
@@ -42,30 +42,30 @@ class m extends s.PureComponent {
             m = Math.max(Math.min((d - e) / 1e3, p), 0);
         return n
             ? (0, i.jsxs)("div", {
-                  className: a()(l, { [c.Sp]: s }, c.Od),
+                  className: a()(l, { [o.Sp]: s }, o.Od),
                   children: [
-                      (0, i.jsx)("div", { className: c.Iq, children: u({ time: m, padLargestUnit: !0 }) }),
+                      (0, i.jsx)("div", { className: o.Iq, children: u({ time: m, padLargestUnit: !0 }) }),
                       (0, i.jsx)("div", {
-                          className: c.h7,
-                          children: (0, i.jsx)(o, { percentage: m / p, isSingleLine: !0 }),
+                          className: o.h7,
+                          children: (0, i.jsx)(c, { percentage: m / p, isSingleLine: !0 }),
                       }),
-                      (0, i.jsx)("div", { className: c.EL, children: u({ time: p, padLargestUnit: !0 }) }),
+                      (0, i.jsx)("div", { className: o.EL, children: u({ time: p, padLargestUnit: !0 }) }),
                   ],
               })
             : (0, i.jsxs)("div", {
-                  className: a()(l, { [c.Sp]: s }),
+                  className: a()(l, { [o.Sp]: s }),
                   children: [
-                      (0, i.jsx)(o, { percentage: m / p, isSingleLine: !1 }),
+                      (0, i.jsx)(c, { percentage: m / p, isSingleLine: !1 }),
                       (0, i.jsxs)(r.A, {
                           children: [
                               (0, i.jsx)(r.A.Child, {
                                   grow: 1,
-                                  className: c.n_,
+                                  className: o.n_,
                                   children: u({ time: m, padLargestUnit: !1 }),
                               }),
                               (0, i.jsx)(r.A.Child, {
                                   grow: 0,
-                                  className: c.EL,
+                                  className: o.EL,
                                   children: u({ time: p, padLargestUnit: !1 }),
                               }),
                           ],

@@ -1,12 +1,12 @@
 "use strict";
 t.default = (function () {
-    function e(e, t, n, i, r, s) {
+    function e(e, t, r, n, o, i) {
         (this.message = e),
             (this.expected = t),
-            (this.found = n),
-            (this.offset = i),
-            (this.line = r),
-            (this.column = s),
+            (this.found = r),
+            (this.offset = n),
+            (this.line = o),
+            (this.column = i),
             (this.name = "SyntaxError");
     }
     function t() {
@@ -18,444 +18,444 @@ t.default = (function () {
         {
             SyntaxError: e,
             parse: function (t) {
-                var n,
+                var r,
+                    n,
+                    o,
                     i,
-                    r,
-                    s,
                     a,
-                    o = arguments.length > 1 ? arguments[1] : {},
+                    s = arguments.length > 1 ? arguments[1] : {},
                     l = {},
-                    u = { start: ei },
-                    c = ei,
-                    d = function (e) {
+                    u = { start: en },
+                    c = en,
+                    f = function (e) {
                         var t,
-                            n,
-                            i,
                             r,
-                            s,
+                            n,
+                            o,
+                            i,
                             a = "";
-                        for (t = 0, i = e.length; t < i; t += 1)
-                            for (n = 0, s = (r = e[t]).length; n < s; n += 1) a += r[n];
+                        for (t = 0, n = e.length; t < n; t += 1)
+                            for (r = 0, i = (o = e[t]).length; r < i; r += 1) a += o[r];
                         return a;
                     },
-                    _ = /^[^ \t\n\r,.+={}#]/,
-                    h = { type: "class", value: "[^ \\t\\n\\r,.+={}#]", description: "[^ \\t\\n\\r,.+={}#]" },
-                    f = { type: "literal", value: "{", description: '"{"' },
-                    p = { type: "literal", value: ",", description: '","' },
-                    E = { type: "literal", value: "}", description: '"}"' },
-                    m = "number",
+                    p = /^[^ \t\n\r,.+={}#]/,
+                    d = { type: "class", value: "[^ \\t\\n\\r,.+={}#]", description: "[^ \\t\\n\\r,.+={}#]" },
+                    h = { type: "literal", value: "{", description: '"{"' },
+                    m = { type: "literal", value: ",", description: '","' },
+                    v = { type: "literal", value: "}", description: '"}"' },
+                    y = "number",
                     g = { type: "literal", value: "number", description: '"number"' },
-                    A = "date",
-                    I = { type: "literal", value: "date", description: '"date"' },
-                    T = "time",
+                    b = "date",
+                    w = { type: "literal", value: "date", description: '"date"' },
+                    _ = "time",
                     S = { type: "literal", value: "time", description: '"time"' },
-                    y = "plural",
-                    C = { type: "literal", value: "plural", description: '"plural"' },
-                    N = "selectordinal",
-                    v = { type: "literal", value: "selectordinal", description: '"selectordinal"' },
-                    R = "select",
-                    O = { type: "literal", value: "select", description: '"select"' },
-                    b = { type: "literal", value: "=", description: '"="' },
-                    D = "offset:",
-                    L = { type: "literal", value: "offset:", description: '"offset:"' },
-                    w = { type: "other", description: "whitespace" },
-                    M = /^[ \t\n\r]/,
-                    P = { type: "class", value: "[ \\t\\n\\r]", description: "[ \\t\\n\\r]" },
-                    x = { type: "other", description: "optionalWhitespace" },
-                    k = /^[0-9]/,
-                    U = { type: "class", value: "[0-9]", description: "[0-9]" },
-                    G = /^[0-9a-f]/i,
-                    F = { type: "class", value: "[0-9a-f]i", description: "[0-9a-f]i" },
-                    V = { type: "literal", value: "0", description: '"0"' },
-                    B = /^[1-9]/,
-                    j = { type: "class", value: "[1-9]", description: "[1-9]" },
-                    H = /^[^{}\\\0-\x1F \t\n\r]/,
-                    Y = {
+                    E = "plural",
+                    x = { type: "literal", value: "plural", description: '"plural"' },
+                    k = "selectordinal",
+                    C = { type: "literal", value: "selectordinal", description: '"selectordinal"' },
+                    T = "select",
+                    M = { type: "literal", value: "select", description: '"select"' },
+                    P = { type: "literal", value: "=", description: '"="' },
+                    A = "offset:",
+                    O = { type: "literal", value: "offset:", description: '"offset:"' },
+                    I = { type: "other", description: "whitespace" },
+                    D = /^[ \t\n\r]/,
+                    L = { type: "class", value: "[ \\t\\n\\r]", description: "[ \\t\\n\\r]" },
+                    R = { type: "other", description: "optionalWhitespace" },
+                    F = /^[0-9]/,
+                    N = { type: "class", value: "[0-9]", description: "[0-9]" },
+                    j = /^[0-9a-f]/i,
+                    B = { type: "class", value: "[0-9a-f]i", description: "[0-9a-f]i" },
+                    $ = { type: "literal", value: "0", description: '"0"' },
+                    K = /^[1-9]/,
+                    V = { type: "class", value: "[1-9]", description: "[1-9]" },
+                    U = /^[^{}\\\0-\x1F \t\n\r]/,
+                    z = {
                         type: "class",
                         value: "[^{}\\\\\\0-\\x1F\x7f \\t\\n\\r]",
                         description: "[^{}\\\\\\0-\\x1F\x7f \\t\\n\\r]",
                     },
                     W = { type: "literal", value: "\\\\", description: '"\\\\\\\\"' },
-                    K = { type: "literal", value: "\\#", description: '"\\\\#"' },
-                    $ = { type: "literal", value: "\\{", description: '"\\\\{"' },
-                    z = { type: "literal", value: "\\}", description: '"\\\\}"' },
-                    q = { type: "literal", value: "\\u", description: '"\\\\u"' },
-                    Z = 0,
-                    X = 0,
-                    Q = { line: 1, column: 1, seenCR: !1 },
+                    H = { type: "literal", value: "\\#", description: '"\\\\#"' },
+                    G = { type: "literal", value: "\\{", description: '"\\\\{"' },
+                    q = { type: "literal", value: "\\}", description: '"\\\\}"' },
+                    Y = { type: "literal", value: "\\u", description: '"\\\\u"' },
                     J = 0,
+                    X = 0,
+                    Z = { line: 1, column: 1, seenCR: !1 },
+                    Q = 0,
                     ee = [],
                     et = 0;
-                if ("startRule" in o) {
-                    if (!(o.startRule in u)) throw Error("Can't start parsing from rule \"" + o.startRule + '".');
-                    c = u[o.startRule];
+                if ("startRule" in s) {
+                    if (!(s.startRule in u)) throw Error("Can't start parsing from rule \"" + s.startRule + '".');
+                    c = u[s.startRule];
                 }
-                function en(e) {
-                    Z < J || (Z > J && ((J = Z), (ee = [])), ee.push(e));
+                function er(e) {
+                    J < Q || (J > Q && ((Q = J), (ee = [])), ee.push(e));
                 }
-                function ei() {
-                    return er();
+                function en() {
+                    return eo();
                 }
-                function er() {
+                function eo() {
                     var e, t;
-                    for (e = [], t = es(); t !== l; ) e.push(t), (t = es());
+                    for (e = [], t = ei(); t !== l; ) e.push(t), (t = ei());
                     return e !== l && (e = { type: "messageFormatPattern", elements: e }), e;
                 }
-                function es() {
-                    var e, n;
+                function ei() {
+                    var e, r;
                     return (
-                        (n = (function () {
-                            var e, n, i, r, s, a;
+                        (r = (function () {
+                            var e, r, n, o, i, a;
                             if (
-                                ((e = Z),
-                                (n = []),
-                                (i = Z),
-                                (r = eu()) !== l && (s = ef()) !== l && (a = eu()) !== l
-                                    ? (i = r = [r, s, a])
-                                    : ((Z = i), (i = l)),
-                                i !== l)
+                                ((e = J),
+                                (r = []),
+                                (n = J),
+                                (o = eu()) !== l && (i = eh()) !== l && (a = eu()) !== l
+                                    ? (n = o = [o, i, a])
+                                    : ((J = n), (n = l)),
+                                n !== l)
                             )
-                                for (; i !== l; )
-                                    n.push(i),
-                                        (i = Z),
-                                        (r = eu()) !== l && (s = ef()) !== l && (a = eu()) !== l
-                                            ? (i = r = [r, s, a])
-                                            : ((Z = i), (i = l));
-                            else n = l;
+                                for (; n !== l; )
+                                    r.push(n),
+                                        (n = J),
+                                        (o = eu()) !== l && (i = eh()) !== l && (a = eu()) !== l
+                                            ? (n = o = [o, i, a])
+                                            : ((J = n), (n = l));
+                            else r = l;
                             return (
-                                n !== l && (n = d(n)),
-                                (e = n) === l && ((e = Z), (n = el()) !== l && (n = t.substring(e, Z)), (e = n)),
+                                r !== l && (r = f(r)),
+                                (e = r) === l && ((e = J), (r = el()) !== l && (r = t.substring(e, J)), (e = r)),
                                 e
                             );
-                        })()) !== l && (n = { type: "messageTextElement", value: n }),
-                        (e = n) === l &&
+                        })()) !== l && (r = { type: "messageTextElement", value: r }),
+                        (e = r) === l &&
                             (e = (function () {
-                                var e, n, i, r, s, a, o, u, c, d, b, D, L, w, M, P;
+                                var e, r, n, o, i, a, s, u, c, f, P, A, O, I, D, L;
                                 if (
-                                    ((e = Z),
-                                    123 === t.charCodeAt(Z) ? ((n = "{"), Z++) : ((n = l), 0 === et && en(f)),
-                                    n !== l)
+                                    ((e = J),
+                                    123 === t.charCodeAt(J) ? ((r = "{"), J++) : ((r = l), 0 === et && er(h)),
+                                    r !== l)
                                 )
                                     if (eu() !== l)
                                         if (
-                                            (i = (function () {
-                                                var e, n, i;
-                                                if ((e = e_()) === l) {
+                                            (n = (function () {
+                                                var e, r, n;
+                                                if ((e = ep()) === l) {
                                                     if (
-                                                        ((e = Z),
-                                                        (n = []),
-                                                        _.test(t.charAt(Z))
-                                                            ? ((i = t.charAt(Z)), Z++)
-                                                            : ((i = l), 0 === et && en(h)),
-                                                        i !== l)
+                                                        ((e = J),
+                                                        (r = []),
+                                                        p.test(t.charAt(J))
+                                                            ? ((n = t.charAt(J)), J++)
+                                                            : ((n = l), 0 === et && er(d)),
+                                                        n !== l)
                                                     )
-                                                        for (; i !== l; )
-                                                            n.push(i),
-                                                                _.test(t.charAt(Z))
-                                                                    ? ((i = t.charAt(Z)), Z++)
-                                                                    : ((i = l), 0 === et && en(h));
-                                                    else n = l;
-                                                    n !== l && (n = t.substring(e, Z)), (e = n);
+                                                        for (; n !== l; )
+                                                            r.push(n),
+                                                                p.test(t.charAt(J))
+                                                                    ? ((n = t.charAt(J)), J++)
+                                                                    : ((n = l), 0 === et && er(d));
+                                                    else r = l;
+                                                    r !== l && (r = t.substring(e, J)), (e = r);
                                                 }
                                                 return e;
                                             })()) !== l
                                         )
                                             if (eu() !== l) {
                                                 if (
-                                                    ((r = Z),
-                                                    44 === t.charCodeAt(Z)
-                                                        ? ((s = ","), Z++)
-                                                        : ((s = l), 0 === et && en(p)),
-                                                    s !== l &&
+                                                    ((o = J),
+                                                    44 === t.charCodeAt(J)
+                                                        ? ((i = ","), J++)
+                                                        : ((i = l), 0 === et && er(m)),
+                                                    i !== l &&
                                                     (a = eu()) !== l &&
-                                                    (((d = Z),
-                                                    t.substr(Z, 6) === m
-                                                        ? ((b = m), (Z += 6))
-                                                        : ((b = l), 0 === et && en(g)),
-                                                    b === l &&
-                                                        (t.substr(Z, 4) === A
-                                                            ? ((b = A), (Z += 4))
-                                                            : ((b = l), 0 === et && en(I)),
-                                                        b === l &&
-                                                            (t.substr(Z, 4) === T
-                                                                ? ((b = T), (Z += 4))
-                                                                : ((b = l), 0 === et && en(S)))),
-                                                    b !== l &&
+                                                    (((f = J),
+                                                    t.substr(J, 6) === y
+                                                        ? ((P = y), (J += 6))
+                                                        : ((P = l), 0 === et && er(g)),
+                                                    P === l &&
+                                                        (t.substr(J, 4) === b
+                                                            ? ((P = b), (J += 4))
+                                                            : ((P = l), 0 === et && er(w)),
+                                                        P === l &&
+                                                            (t.substr(J, 4) === _
+                                                                ? ((P = _), (J += 4))
+                                                                : ((P = l), 0 === et && er(S)))),
+                                                    P !== l &&
                                                         eu() !== l &&
-                                                        ((D = Z),
-                                                        44 === t.charCodeAt(Z)
-                                                            ? ((L = ","), Z++)
-                                                            : ((L = l), 0 === et && en(p)),
-                                                        L !== l && (w = eu()) !== l && (M = ef()) !== l
-                                                            ? (D = L = [L, w, M])
-                                                            : ((Z = D), (D = l)),
-                                                        D === l && (D = null),
-                                                        D !== l))
-                                                        ? (d = b = { type: b + "Format", style: (P = D) && P[2] })
-                                                        : ((Z = d), (d = l)),
-                                                    (c = d) === l &&
+                                                        ((A = J),
+                                                        44 === t.charCodeAt(J)
+                                                            ? ((O = ","), J++)
+                                                            : ((O = l), 0 === et && er(m)),
+                                                        O !== l && (I = eu()) !== l && (D = eh()) !== l
+                                                            ? (A = O = [O, I, D])
+                                                            : ((J = A), (A = l)),
+                                                        A === l && (A = null),
+                                                        A !== l))
+                                                        ? (f = P = { type: P + "Format", style: (L = A) && L[2] })
+                                                        : ((J = f), (f = l)),
+                                                    (c = f) === l &&
                                                         (c = (function () {
-                                                            var e, n, i, r;
+                                                            var e, r, n, o;
                                                             return (
-                                                                ((e = Z),
-                                                                t.substr(Z, 6) === y
-                                                                    ? ((n = y), (Z += 6))
-                                                                    : ((n = l), 0 === et && en(C)),
-                                                                n !== l &&
+                                                                ((e = J),
+                                                                t.substr(J, 6) === E
+                                                                    ? ((r = E), (J += 6))
+                                                                    : ((r = l), 0 === et && er(x)),
+                                                                r !== l &&
                                                                     eu() !== l &&
-                                                                    (44 === t.charCodeAt(Z)
-                                                                        ? ((i = ","), Z++)
-                                                                        : ((i = l), 0 === et && en(p)),
-                                                                    i !== l && eu() !== l && (r = eo()) !== l))
-                                                                    ? (e = n =
+                                                                    (44 === t.charCodeAt(J)
+                                                                        ? ((n = ","), J++)
+                                                                        : ((n = l), 0 === et && er(m)),
+                                                                    n !== l && eu() !== l && (o = es()) !== l))
+                                                                    ? (e = r =
                                                                           {
-                                                                              type: r.type,
+                                                                              type: o.type,
                                                                               ordinal: !1,
-                                                                              offset: r.offset || 0,
-                                                                              options: r.options,
+                                                                              offset: o.offset || 0,
+                                                                              options: o.options,
                                                                           })
-                                                                    : ((Z = e), (e = l)),
+                                                                    : ((J = e), (e = l)),
                                                                 e
                                                             );
                                                         })()) === l &&
                                                         (c = (function () {
-                                                            var e, n, i, r;
+                                                            var e, r, n, o;
                                                             return (
-                                                                ((e = Z),
-                                                                t.substr(Z, 13) === N
-                                                                    ? ((n = N), (Z += 13))
-                                                                    : ((n = l), 0 === et && en(v)),
-                                                                n !== l &&
+                                                                ((e = J),
+                                                                t.substr(J, 13) === k
+                                                                    ? ((r = k), (J += 13))
+                                                                    : ((r = l), 0 === et && er(C)),
+                                                                r !== l &&
                                                                     eu() !== l &&
-                                                                    (44 === t.charCodeAt(Z)
-                                                                        ? ((i = ","), Z++)
-                                                                        : ((i = l), 0 === et && en(p)),
-                                                                    i !== l && eu() !== l && (r = eo()) !== l))
-                                                                    ? (e = n =
+                                                                    (44 === t.charCodeAt(J)
+                                                                        ? ((n = ","), J++)
+                                                                        : ((n = l), 0 === et && er(m)),
+                                                                    n !== l && eu() !== l && (o = es()) !== l))
+                                                                    ? (e = r =
                                                                           {
-                                                                              type: r.type,
+                                                                              type: o.type,
                                                                               ordinal: !0,
-                                                                              offset: r.offset || 0,
-                                                                              options: r.options,
+                                                                              offset: o.offset || 0,
+                                                                              options: o.options,
                                                                           })
-                                                                    : ((Z = e), (e = l)),
+                                                                    : ((J = e), (e = l)),
                                                                 e
                                                             );
                                                         })()) === l &&
                                                         (c = (function () {
-                                                            var e, n, i, r, s;
+                                                            var e, r, n, o, i;
                                                             if (
-                                                                ((e = Z),
-                                                                t.substr(Z, 6) === R
-                                                                    ? ((n = R), (Z += 6))
-                                                                    : ((n = l), 0 === et && en(O)),
-                                                                n !== l)
+                                                                ((e = J),
+                                                                t.substr(J, 6) === T
+                                                                    ? ((r = T), (J += 6))
+                                                                    : ((r = l), 0 === et && er(M)),
+                                                                r !== l)
                                                             )
                                                                 if (eu() !== l)
                                                                     if (
-                                                                        (44 === t.charCodeAt(Z)
-                                                                            ? ((i = ","), Z++)
-                                                                            : ((i = l), 0 === et && en(p)),
-                                                                        i !== l)
+                                                                        (44 === t.charCodeAt(J)
+                                                                            ? ((n = ","), J++)
+                                                                            : ((n = l), 0 === et && er(m)),
+                                                                        n !== l)
                                                                     )
                                                                         if (eu() !== l) {
-                                                                            if (((r = []), (s = ea()) !== l))
-                                                                                for (; s !== l; ) r.push(s), (s = ea());
-                                                                            else r = l;
-                                                                            r !== l
-                                                                                ? (e = n =
+                                                                            if (((o = []), (i = ea()) !== l))
+                                                                                for (; i !== l; ) o.push(i), (i = ea());
+                                                                            else o = l;
+                                                                            o !== l
+                                                                                ? (e = r =
                                                                                       {
                                                                                           type: "selectFormat",
-                                                                                          options: r,
+                                                                                          options: o,
                                                                                       })
-                                                                                : ((Z = e), (e = l));
-                                                                        } else (Z = e), (e = l);
-                                                                    else (Z = e), (e = l);
-                                                                else (Z = e), (e = l);
-                                                            else (Z = e), (e = l);
+                                                                                : ((J = e), (e = l));
+                                                                        } else (J = e), (e = l);
+                                                                    else (J = e), (e = l);
+                                                                else (J = e), (e = l);
+                                                            else (J = e), (e = l);
                                                             return e;
                                                         })()),
-                                                    (o = c) !== l)
-                                                        ? (r = s = [s, a, o])
-                                                        : ((Z = r), (r = l)),
-                                                    r === l && (r = null),
-                                                    r !== l)
+                                                    (s = c) !== l)
+                                                        ? (o = i = [i, a, s])
+                                                        : ((J = o), (o = l)),
+                                                    o === l && (o = null),
+                                                    o !== l)
                                                 )
-                                                    (s = eu()) !== l &&
-                                                    (125 === t.charCodeAt(Z)
-                                                        ? ((a = "}"), Z++)
-                                                        : ((a = l), 0 === et && en(E)),
+                                                    (i = eu()) !== l &&
+                                                    (125 === t.charCodeAt(J)
+                                                        ? ((a = "}"), J++)
+                                                        : ((a = l), 0 === et && er(v)),
                                                     a !== l)
-                                                        ? (e = n =
+                                                        ? (e = r =
                                                               {
                                                                   type: "argumentElement",
-                                                                  id: i,
-                                                                  format: (u = r) && u[2],
+                                                                  id: n,
+                                                                  format: (u = o) && u[2],
                                                               })
-                                                        : ((Z = e), (e = l));
-                                                else (Z = e), (e = l);
-                                            } else (Z = e), (e = l);
-                                        else (Z = e), (e = l);
-                                    else (Z = e), (e = l);
-                                else (Z = e), (e = l);
+                                                        : ((J = e), (e = l));
+                                                else (J = e), (e = l);
+                                            } else (J = e), (e = l);
+                                        else (J = e), (e = l);
+                                    else (J = e), (e = l);
+                                else (J = e), (e = l);
                                 return e;
                             })()),
                         e
                     );
                 }
                 function ea() {
-                    var e, n, i, r, s, a, o, u, c;
+                    var e, r, n, o, i, a, s, u, c;
                     return (
-                        ((e = Z),
+                        ((e = J),
                         eu() !== l &&
-                            ((a = Z),
-                            (o = Z),
-                            61 === t.charCodeAt(Z) ? ((u = "="), Z++) : ((u = l), 0 === et && en(b)),
-                            u !== l && (c = e_()) !== l ? (o = u = [u, c]) : ((Z = o), (o = l)),
-                            o !== l && (o = t.substring(a, Z)),
-                            (a = o) === l && (a = ef()),
-                            (n = a) !== l &&
+                            ((a = J),
+                            (s = J),
+                            61 === t.charCodeAt(J) ? ((u = "="), J++) : ((u = l), 0 === et && er(P)),
+                            u !== l && (c = ep()) !== l ? (s = u = [u, c]) : ((J = s), (s = l)),
+                            s !== l && (s = t.substring(a, J)),
+                            (a = s) === l && (a = eh()),
+                            (r = a) !== l &&
                                 eu() !== l &&
-                                (123 === t.charCodeAt(Z) ? ((i = "{"), Z++) : ((i = l), 0 === et && en(f)),
-                                i !== l &&
+                                (123 === t.charCodeAt(J) ? ((n = "{"), J++) : ((n = l), 0 === et && er(h)),
+                                n !== l &&
                                     eu() !== l &&
-                                    (r = er()) !== l &&
+                                    (o = eo()) !== l &&
                                     eu() !== l &&
-                                    (125 === t.charCodeAt(Z) ? ((s = "}"), Z++) : ((s = l), 0 === et && en(E)),
-                                    s !== l))))
-                            ? (e = { type: "optionalFormatPattern", selector: n, value: r })
-                            : ((Z = e), (e = l)),
+                                    (125 === t.charCodeAt(J) ? ((i = "}"), J++) : ((i = l), 0 === et && er(v)),
+                                    i !== l))))
+                            ? (e = { type: "optionalFormatPattern", selector: r, value: o })
+                            : ((J = e), (e = l)),
                         e
                     );
                 }
-                function eo() {
-                    var e, n, i, r, s, a, o;
+                function es() {
+                    var e, r, n, o, i, a, s;
                     if (
-                        ((e = Z),
-                        ((s = Z),
-                        t.substr(Z, 7) === D ? ((a = D), (Z += 7)) : ((a = l), 0 === et && en(L)),
-                        a !== l && eu() !== l && (o = e_()) !== l)
-                            ? (s = a = o)
-                            : ((Z = s), (s = l)),
-                        (n = s) === l && (n = null),
-                        n !== l)
+                        ((e = J),
+                        ((i = J),
+                        t.substr(J, 7) === A ? ((a = A), (J += 7)) : ((a = l), 0 === et && er(O)),
+                        a !== l && eu() !== l && (s = ep()) !== l)
+                            ? (i = a = s)
+                            : ((J = i), (i = l)),
+                        (r = i) === l && (r = null),
+                        r !== l)
                     )
                         if (eu() !== l) {
-                            if (((i = []), (r = ea()) !== l)) for (; r !== l; ) i.push(r), (r = ea());
-                            else i = l;
-                            i !== l ? (e = n = { type: "pluralFormat", offset: n, options: i }) : ((Z = e), (e = l));
-                        } else (Z = e), (e = l);
-                    else (Z = e), (e = l);
+                            if (((n = []), (o = ea()) !== l)) for (; o !== l; ) n.push(o), (o = ea());
+                            else n = l;
+                            n !== l ? (e = r = { type: "pluralFormat", offset: r, options: n }) : ((J = e), (e = l));
+                        } else (J = e), (e = l);
+                    else (J = e), (e = l);
                     return e;
                 }
                 function el() {
-                    var e, n;
+                    var e, r;
                     if (
                         (et++,
                         (e = []),
-                        M.test(t.charAt(Z)) ? ((n = t.charAt(Z)), Z++) : ((n = l), 0 === et && en(P)),
-                        n !== l)
+                        D.test(t.charAt(J)) ? ((r = t.charAt(J)), J++) : ((r = l), 0 === et && er(L)),
+                        r !== l)
                     )
-                        for (; n !== l; )
-                            e.push(n), M.test(t.charAt(Z)) ? ((n = t.charAt(Z)), Z++) : ((n = l), 0 === et && en(P));
+                        for (; r !== l; )
+                            e.push(r), D.test(t.charAt(J)) ? ((r = t.charAt(J)), J++) : ((r = l), 0 === et && er(L));
                     else e = l;
-                    return et--, e === l && ((n = l), 0 === et && en(w)), e;
+                    return et--, e === l && ((r = l), 0 === et && er(I)), e;
                 }
                 function eu() {
-                    var e, n, i;
-                    for (et++, e = Z, n = [], i = el(); i !== l; ) n.push(i), (i = el());
+                    var e, r, n;
+                    for (et++, e = J, r = [], n = el(); n !== l; ) r.push(n), (n = el());
                     return (
-                        n !== l && (n = t.substring(e, Z)), (e = n), et--, e === l && ((n = l), 0 === et && en(x)), e
+                        r !== l && (r = t.substring(e, J)), (e = r), et--, e === l && ((r = l), 0 === et && er(R)), e
                     );
                 }
                 function ec() {
                     var e;
-                    return k.test(t.charAt(Z)) ? ((e = t.charAt(Z)), Z++) : ((e = l), 0 === et && en(U)), e;
+                    return F.test(t.charAt(J)) ? ((e = t.charAt(J)), J++) : ((e = l), 0 === et && er(N)), e;
                 }
-                function ed() {
+                function ef() {
                     var e;
-                    return G.test(t.charAt(Z)) ? ((e = t.charAt(Z)), Z++) : ((e = l), 0 === et && en(F)), e;
+                    return j.test(t.charAt(J)) ? ((e = t.charAt(J)), J++) : ((e = l), 0 === et && er(B)), e;
                 }
-                function e_() {
-                    var e, n, i, r, s;
-                    if ((48 === t.charCodeAt(Z) ? ((e = "0"), Z++) : ((e = l), 0 === et && en(V)), e === l)) {
+                function ep() {
+                    var e, r, n, o, i;
+                    if ((48 === t.charCodeAt(J) ? ((e = "0"), J++) : ((e = l), 0 === et && er($)), e === l)) {
                         if (
-                            ((e = Z),
-                            (n = Z),
-                            B.test(t.charAt(Z)) ? ((i = t.charAt(Z)), Z++) : ((i = l), 0 === et && en(j)),
-                            i !== l)
+                            ((e = J),
+                            (r = J),
+                            K.test(t.charAt(J)) ? ((n = t.charAt(J)), J++) : ((n = l), 0 === et && er(V)),
+                            n !== l)
                         ) {
-                            for (r = [], s = ec(); s !== l; ) r.push(s), (s = ec());
-                            r !== l ? (n = i = [i, r]) : ((Z = n), (n = l));
-                        } else (Z = n), (n = l);
-                        n !== l && (n = t.substring(e, Z)), (e = n);
+                            for (o = [], i = ec(); i !== l; ) o.push(i), (i = ec());
+                            o !== l ? (r = n = [n, o]) : ((J = r), (r = l));
+                        } else (J = r), (r = l);
+                        r !== l && (r = t.substring(e, J)), (e = r);
                     }
                     return e !== l && (e = parseInt(e, 10)), e;
                 }
-                function eh() {
-                    var e, n, i, r, s, a, o, u;
+                function ed() {
+                    var e, r, n, o, i, a, s, u;
                     return (
-                        H.test(t.charAt(Z)) ? ((e = t.charAt(Z)), Z++) : ((e = l), 0 === et && en(Y)),
+                        U.test(t.charAt(J)) ? ((e = t.charAt(J)), J++) : ((e = l), 0 === et && er(z)),
                         e === l &&
-                            ((e = Z),
-                            "\\\\" === t.substr(Z, 2) ? ((n = "\\\\"), (Z += 2)) : ((n = l), 0 === et && en(W)),
-                            n !== l && (n = "\\"),
-                            (e = n) === l &&
-                                ((e = Z),
-                                "\\#" === t.substr(Z, 2) ? ((n = "\\#"), (Z += 2)) : ((n = l), 0 === et && en(K)),
-                                n !== l && (n = "\\#"),
-                                (e = n) === l &&
-                                    ((e = Z),
-                                    "\\{" === t.substr(Z, 2) ? ((n = "\\{"), (Z += 2)) : ((n = l), 0 === et && en($)),
-                                    n !== l && (n = "{"),
-                                    (e = n) === l))) &&
-                            ((e = Z),
-                            "\\}" === t.substr(Z, 2) ? ((n = "\\}"), (Z += 2)) : ((n = l), 0 === et && en(z)),
-                            n !== l && (n = "}"),
-                            (e = n) === l) &&
-                            (((e = Z),
-                            "\\u" === t.substr(Z, 2) ? ((n = "\\u"), (Z += 2)) : ((n = l), 0 === et && en(q)),
-                            n !== l &&
-                                ((i = Z),
-                                (r = Z),
-                                (s = ed()) !== l && (a = ed()) !== l && (o = ed()) !== l && (u = ed()) !== l
-                                    ? (r = s = [s, a, o, u])
-                                    : ((Z = r), (r = l)),
-                                r !== l && (r = t.substring(i, Z)),
-                                (i = r) !== l))
-                                ? (e = n = String.fromCharCode(parseInt(i, 16)))
-                                : ((Z = e), (e = l))),
+                            ((e = J),
+                            "\\\\" === t.substr(J, 2) ? ((r = "\\\\"), (J += 2)) : ((r = l), 0 === et && er(W)),
+                            r !== l && (r = "\\"),
+                            (e = r) === l &&
+                                ((e = J),
+                                "\\#" === t.substr(J, 2) ? ((r = "\\#"), (J += 2)) : ((r = l), 0 === et && er(H)),
+                                r !== l && (r = "\\#"),
+                                (e = r) === l &&
+                                    ((e = J),
+                                    "\\{" === t.substr(J, 2) ? ((r = "\\{"), (J += 2)) : ((r = l), 0 === et && er(G)),
+                                    r !== l && (r = "{"),
+                                    (e = r) === l))) &&
+                            ((e = J),
+                            "\\}" === t.substr(J, 2) ? ((r = "\\}"), (J += 2)) : ((r = l), 0 === et && er(q)),
+                            r !== l && (r = "}"),
+                            (e = r) === l) &&
+                            (((e = J),
+                            "\\u" === t.substr(J, 2) ? ((r = "\\u"), (J += 2)) : ((r = l), 0 === et && er(Y)),
+                            r !== l &&
+                                ((n = J),
+                                (o = J),
+                                (i = ef()) !== l && (a = ef()) !== l && (s = ef()) !== l && (u = ef()) !== l
+                                    ? (o = i = [i, a, s, u])
+                                    : ((J = o), (o = l)),
+                                o !== l && (o = t.substring(n, J)),
+                                (n = o) !== l))
+                                ? (e = r = String.fromCharCode(parseInt(n, 16)))
+                                : ((J = e), (e = l))),
                         e
                     );
                 }
-                function ef() {
+                function eh() {
                     var e, t;
-                    if (((e = []), (t = eh()) !== l)) for (; t !== l; ) e.push(t), (t = eh());
+                    if (((e = []), (t = ed()) !== l)) for (; t !== l; ) e.push(t), (t = ed());
                     else e = l;
                     return e !== l && (e = e.join("")), e;
                 }
-                if ((a = c()) !== l && Z === t.length) return a;
+                if ((a = c()) !== l && J === t.length) return a;
                 throw (
-                    (a !== l && Z < t.length && en({ type: "end", description: "end of input" }),
-                    (n = ee),
-                    (r = (function (e) {
+                    (a !== l && J < t.length && er({ type: "end", description: "end of input" }),
+                    (r = ee),
+                    (o = (function (e) {
                         if (X !== e) {
-                            X > e && ((X = 0), (Q = { line: 1, column: 1, seenCR: !1 }));
-                            var n,
-                                i,
-                                r = Q;
-                            for (n = X; n < e; n++)
-                                "\n" === (i = t.charAt(n))
-                                    ? (!r.seenCR && r.line++, (r.column = 1), (r.seenCR = !1))
-                                    : "\r" === i || "\u2028" === i || "\u2029" === i
-                                      ? (r.line++, (r.column = 1), (r.seenCR = !0))
-                                      : (r.column++, (r.seenCR = !1));
+                            X > e && ((X = 0), (Z = { line: 1, column: 1, seenCR: !1 }));
+                            var r,
+                                n,
+                                o = Z;
+                            for (r = X; r < e; r++)
+                                "\n" === (n = t.charAt(r))
+                                    ? (!o.seenCR && o.line++, (o.column = 1), (o.seenCR = !1))
+                                    : "\r" === n || "\u2028" === n || "\u2029" === n
+                                      ? (o.line++, (o.column = 1), (o.seenCR = !0))
+                                      : (o.column++, (o.seenCR = !1));
                             X = e;
                         }
-                        return Q;
-                    })((i = J))),
-                    (s = i < t.length ? t.charAt(i) : null),
-                    null !== n &&
+                        return Z;
+                    })((n = Q))),
+                    (i = n < t.length ? t.charAt(n) : null),
+                    null !== r &&
                         (function (e) {
                             var t = 1;
                             for (
@@ -465,15 +465,15 @@ t.default = (function () {
                                 t < e.length;
                             )
                                 e[t - 1] === e[t] ? e.splice(t, 1) : t++;
-                        })(n),
+                        })(r),
                     new e(
                         (function (e, t) {
-                            var n,
-                                i = Array(e.length);
-                            for (n = 0; n < e.length; n++) i[n] = e[n].description;
+                            var r,
+                                n = Array(e.length);
+                            for (r = 0; r < e.length; r++) n[r] = e[r].description;
                             return (
                                 "Expected " +
-                                (e.length > 1 ? i.slice(0, -1).join(", ") + " or " + i[e.length - 1] : i[0]) +
+                                (e.length > 1 ? n.slice(0, -1).join(", ") + " or " + n[e.length - 1] : n[0]) +
                                 " but " +
                                 (t
                                     ? '"' +
@@ -506,12 +506,12 @@ t.default = (function () {
                                     : "end of input") +
                                 " found."
                             );
-                        })(n, s),
-                        n,
-                        s,
+                        })(r, i),
+                        r,
                         i,
-                        r.line,
-                        r.column,
+                        n,
+                        o.line,
+                        o.column,
                     ))
                 );
             },

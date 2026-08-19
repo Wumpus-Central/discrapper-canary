@@ -1,4 +1,4 @@
-n(989349).defineLocale("bg", {
+d(989349).defineLocale("bg", {
     months: "\u044F\u043D\u0443\u0430\u0440\u0438_\u0444\u0435\u0432\u0440\u0443\u0430\u0440\u0438_\u043C\u0430\u0440\u0442_\u0430\u043F\u0440\u0438\u043B_\u043C\u0430\u0439_\u044E\u043D\u0438_\u044E\u043B\u0438_\u0430\u0432\u0433\u0443\u0441\u0442_\u0441\u0435\u043F\u0442\u0435\u043C\u0432\u0440\u0438_\u043E\u043A\u0442\u043E\u043C\u0432\u0440\u0438_\u043D\u043E\u0435\u043C\u0432\u0440\u0438_\u0434\u0435\u043A\u0435\u043C\u0432\u0440\u0438".split(
         "_",
     ),
@@ -63,14 +63,14 @@ n(989349).defineLocale("bg", {
     },
     dayOfMonthOrdinalParse: /\d{1,2}-(\u0435\u0432|\u0435\u043d|\u0442\u0438|\u0432\u0438|\u0440\u0438|\u043c\u0438)/,
     ordinal: function (e) {
-        var t = e % 10,
-            n = e % 100;
+        var _ = e % 10,
+            d = e % 100;
         if (0 === e) return e + "-\u0435\u0432";
-        if (0 === n) return e + "-\u0435\u043D";
-        if (n > 10 && n < 20) return e + "-\u0442\u0438";
-        if (1 === t) return e + "-\u0432\u0438";
-        if (2 === t) return e + "-\u0440\u0438";
-        else if (7 === t || 8 === t) return e + "-\u043C\u0438";
+        if (0 === d) return e + "-\u0435\u043D";
+        if (d > 10 && d < 20) return e + "-\u0442\u0438";
+        if (1 === _) return e + "-\u0432\u0438";
+        if (2 === _) return e + "-\u0440\u0438";
+        else if (7 === _ || 8 === _) return e + "-\u043C\u0438";
         else return e + "-\u0442\u0438";
     },
     week: { dow: 1, doy: 7 },

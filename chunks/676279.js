@@ -1,33 +1,33 @@
 "use strict";
-n.d(t, { EL: () => c, TM: () => E, Z5: () => o, cy: () => h, gm: () => p, nr: () => f });
+n.d(t, { EL: () => c, TM: () => I, Z5: () => l, cy: () => E, gm: () => h, nr: () => A });
 var i = n(481613),
     r = n.n(i);
-let s = (r().name ?? "unknown").toLowerCase(),
-    a = "chrome" === s.toLowerCase() ? parseInt(r().version ?? "", 10) : -1;
-function o() {
-    return a;
+let a = (r().name ?? "unknown").toLowerCase(),
+    s = "chrome" === a.toLowerCase() ? parseInt(r().version ?? "", 10) : -1;
+function l() {
+    return s;
 }
-let l = "electron" === s.toLowerCase() ? parseInt(r().version ?? "", 10) : -1,
-    u = "firefox" === s.toLowerCase() ? parseInt(r().version ?? "", 10) : -1;
+let o = "electron" === a.toLowerCase() ? parseInt(r().version ?? "", 10) : -1,
+    d = "firefox" === a.toLowerCase() ? parseInt(r().version ?? "", 10) : -1;
 function c() {
-    return u;
+    return d;
 }
-let d = "edge" === s.toLowerCase() ? parseInt(r().version ?? "", 10) : -1,
-    _ = "safari" === s.toLowerCase() ? parseInt(r().version ?? "", 10) : -1;
-function h() {
-    return -1 !== a || -1 !== l || -1 !== u || -1 !== d || _ >= 14;
+let u = "edge" === a.toLowerCase() ? parseInt(r().version ?? "", 10) : -1,
+    _ = "safari" === a.toLowerCase() ? parseInt(r().version ?? "", 10) : -1;
+function E() {
+    return -1 !== s || -1 !== o || -1 !== d || -1 !== u || _ >= 14;
 }
-function f() {
+function A() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : navigator.userAgent,
         t = e.toLowerCase();
     return -1 !== t.indexOf("safari") && -1 === t.indexOf("chrome") && -1 !== t.indexOf("version/");
 }
-function p() {
+function h() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : navigator.userAgent;
     return -1 !== e.toLowerCase().indexOf("firefox");
 }
-function E() {
+function I() {
     let e = window.navigator,
         t = e.mediaCapabilities?.decodingInfo != null;
-    return f(e.userAgent) && t;
+    return A(e.userAgent) && t;
 }

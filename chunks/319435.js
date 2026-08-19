@@ -1,18 +1,18 @@
 "use strict";
-n.d(t, { _: () => a });
-var r = n(654978),
-    i = n(582128);
-function a(e, t, n, a) {
-    let o = (0, r.J)(n),
-        s = null == n;
-    (0, i.useEffect)(() => {
+r.d(t, { _: () => i });
+var n = r(654978),
+    o = r(582128);
+function i(e, t, r, i) {
+    let a = (0, n.J)(r),
+        s = null == r;
+    (0, o.useEffect)(() => {
         if (s || !e.current) return;
-        let n = e.current;
+        let r = e.current;
         return (
-            n.addEventListener(t, o, a),
+            r.addEventListener(t, a, i),
             () => {
-                n.removeEventListener(t, o, a);
+                r.removeEventListener(t, a, i);
             }
         );
-    }, [e, t, a, s, o]);
+    }, [e, t, i, s, a]);
 }

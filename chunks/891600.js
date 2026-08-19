@@ -1,16 +1,16 @@
 "use strict";
-n.d(t, { A: () => o });
-var i = n(791332),
+n.d(t, { A: () => l });
+var i = n(478676),
     r = n.n(i),
-    s = n(919535);
-function a(e, t, n, i, r) {
-    let a;
-    n || (t += "\n\n"), (a = e(t, { inline: n, ...i })), (a = (0, s.rI)(i, a));
-    let o = (0, s.Ae)(a),
-        l = o.hasBailedAst;
-    return (a = o.ast), null != r && (a = r(a, n, l)), a;
+    a = n(919535);
+function s(e, t, n, i, r) {
+    let s;
+    n || (t += "\n\n"), (s = e(t, { inline: n, ...i })), (s = (0, a.rI)(i, s));
+    let l = (0, a.Ae)(s),
+        o = l.hasBailedAst;
+    return (s = l.ast), null != r && (s = r(s, n, o)), s;
 }
-let o = {
+let l = {
     reactParserFor(e) {
         let t = r().parserFor(e),
             n = r().reactFor(r().ruleOutput(e, "react"));
@@ -18,8 +18,8 @@ let o = {
             let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "",
                 i = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
                 r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-                s = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
-            return n(a(t, e, i, r, s), r);
+                a = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
+            return n(s(t, e, i, r, a), r);
         };
     },
     astParserFor(e) {
@@ -29,7 +29,7 @@ let o = {
                 n = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
                 i = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
                 r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
-            return a(t, e, n, i, r);
+            return s(t, e, n, i, r);
         };
     },
 };

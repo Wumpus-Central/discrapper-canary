@@ -1,12 +1,12 @@
 "use strict";
-n.d(t, { b9: () => a, bH: () => r, jA: () => s });
-let i = "discord7937464",
-    r = "www.xbox.com";
+n.d(t, { b9: () => r, bH: () => i, jA: () => s });
+let l = "discord7937464",
+    i = "www.xbox.com";
 function s(e) {
     let t = encodeURIComponent(e);
-    return `https://${r}/games/store/title/${t}?ocid=${i}`;
+    return `https://${i}/games/store/title/${t}?ocid=${l}`;
 }
-function a(e) {
+function r(e) {
     let t = encodeURIComponent(e);
-    return `msxbox://game/?productid=${t}&ocid=${i}`;
+    return `msxbox://game/?productid=${t}&ocid=${l}`;
 }

@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => v });
+n.d(t, { A: () => S });
 var l = n(477900),
     i = n(582128),
     s = n(192308),
@@ -37,11 +37,11 @@ function A(e) {
     let t = e.nodeType === Node.ELEMENT_NODE ? e : e.parentElement;
     return t?.closest('[contenteditable="true"]') != null;
 }
-function C(e) {
+function E(e) {
     let t = e.nodeType === Node.ELEMENT_NODE ? e : e.parentElement;
     return t?.closest(`[${g}]`) ?? null;
 }
-function E(e) {
+function C(e) {
     let t;
     if (null == e.clipboardData) return;
     let n = window.getSelection();
@@ -54,8 +54,8 @@ function E(e) {
     if (t.collapsed || A(t.startContainer) || A(t.endContainer)) return;
     let l = t.cloneContents(),
         i = null != l.querySelector(`[${g}]`),
-        s = C(t.startContainer),
-        r = C(t.endContainer),
+        s = E(t.startContainer),
+        r = E(t.endContainer),
         a = !i && null != s && s === r;
     if (i || a) {
         let t, n;
@@ -108,22 +108,22 @@ function E(e) {
 }
 var I = n(375708),
     y = n(156452);
-let v = function (e) {
+let S = function (e) {
     let { gameId: t, authorId: f } = e,
         g = (0, o.K)(t),
         x = null != g,
         A = g?.gameName ?? I.intl.string(I.t["11pdXZ"]),
-        C = g?.gameIcon;
+        E = g?.gameIcon;
     i.useEffect(
         () => (
-            1 === (p += 1) && document.addEventListener("copy", E),
+            1 === (p += 1) && document.addEventListener("copy", C),
             () => {
-                0 == (p -= 1) && document.removeEventListener("copy", E);
+                0 == (p -= 1) && document.removeEventListener("copy", C);
             }
         ),
         [],
     );
-    let v = i.useCallback(
+    let S = i.useCallback(
             (e) => {
                 x &&
                     (0, a.L3)(e, async () => {
@@ -135,13 +135,13 @@ let v = function (e) {
             },
             [x, t, A, f],
         ),
-        S = i.useCallback(() => {
+        v = i.useCallback(() => {
             (0, s.openModalLazy)(async () => {
                 let { default: e } = await n.e("256466").then(n.bind(n, 188841));
                 return (t) => (0, l.jsx)(e, { ...t });
             });
         }, []),
-        N = i.useCallback(
+        _ = i.useCallback(
             (e) => {
                 (e.stopPropagation(), e.preventDefault(), x)
                     ? u.default.openGameProfileModal({
@@ -150,27 +150,27 @@ let v = function (e) {
                           source: c.GameProfileSources.GameMention,
                           sourceUserId: f,
                       })
-                    : S();
+                    : v();
             },
-            [t, x, S, f],
+            [t, x, v, f],
         ),
-        _ = x ? `@game ${A}` : void 0;
+        N = x ? `@game ${A}` : void 0;
     return (0, l.jsx)(r.m, {
         asContainer: !0,
         tag: "span",
-        text: _,
-        "aria-label": _,
+        text: N,
+        "aria-label": N,
         delay: 750,
         children: (0, l.jsxs)(h.A, {
             "data-mention-game-id": t,
-            onContextMenu: v,
-            onClick: N,
+            onContextMenu: S,
+            onClick: _,
             children: [
                 (0, l.jsx)(m.A, {
                     children: (0, l.jsx)("span", {
                         "aria-hidden": "true",
                         className: y.P0,
-                        children: (0, l.jsx)(d.A, { game: { id: t, icon: C }, iconClassName: y.Kk, allowFetch: !1 }),
+                        children: (0, l.jsx)(d.A, { game: { id: t, icon: E }, iconClassName: y.Kk, allowFetch: !1 }),
                     }),
                 }),
                 (0, l.jsx)("span", { className: y.UU, children: A }),

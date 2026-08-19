@@ -1,13 +1,13 @@
 "use strict";
 n.d(t, { A: () => c });
-var i = n(735438),
-    r = n(17928),
-    a = n(228366);
-let s = new Map();
-function l(e) {
+var l = n(435558),
+    i = n(17928),
+    s = n(228366);
+let r = new Map();
+function a(e) {
     let t = !1;
     return (
-        Object.entries((0, i.groupBy)(e, (e) => e.application_id))
+        Object.entries((0, l.groupBy)(e, (e) => e.application_id))
             .map((e) => {
                 let [t, n] = e;
                 return [
@@ -16,7 +16,7 @@ function l(e) {
                         .flatMap((e) => e.resolved_assets ?? [])
                         .filter((e) => {
                             let n;
-                            return null == (n = s.get(t)?.[e.key]) || new Date(e.updated_at) > new Date(n.updated_at);
+                            return null == (n = r.get(t)?.[e.key]) || new Date(e.updated_at) > new Date(n.updated_at);
                         }),
                 ];
             })
@@ -25,27 +25,27 @@ function l(e) {
                 return n.length > 0;
             })
             .forEach((e) => {
-                let [n, i] = e;
-                return (t = !0), s.set(n, { ...s.get(n), ...Object.fromEntries(i.map((e) => [e.key, e])) });
+                let [n, l] = e;
+                return (t = !0), r.set(n, { ...r.get(n), ...Object.fromEntries(l.map((e) => [e.key, e])) });
             }),
         t
     );
 }
 function o(e) {
-    return l(Object.values(e.configs).flat());
+    return a(Object.values(e.configs).flat());
 }
-class d extends r.Ay.Store {
+class u extends i.Ay.Store {
     static displayName = "ApplicationAssetsV2Store";
     getAssets(e) {
-        return s.get(e);
+        return r.get(e);
     }
 }
-let c = new d(a.h, {
+let c = new u(s.h, {
     LOGOUT: function () {
-        s.clear();
+        r.clear();
     },
     APPLICATION_WIDGET_CONFIG_FETCH_SUCCESS: function (e) {
-        return l(e.configs);
+        return a(e.configs);
     },
     APPLICATION_WIDGET_CONFIG_FEATURED_FETCH_SUCCESS: o,
     APPLICATION_WIDGET_CONFIG_DEVELOPER_FETCH_SUCCESS: o,

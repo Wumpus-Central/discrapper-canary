@@ -7,8 +7,8 @@ var i,
     E = n(390248),
     o = n(320095),
     c = n(773669),
-    u = n(734057),
-    _ = n(696451),
+    _ = n(734057),
+    u = n(696451),
     A = n(71393),
     T = n(232835),
     d = n(994500),
@@ -20,11 +20,11 @@ var i,
         (i.FAILED = "FAILED"),
         i);
 let R = {};
-function S(e) {
+function O(e) {
     let { channel: t } = e;
     delete R[t.id];
 }
-function O() {
+function S() {
     r().forEach(R, (e) => {
         e.items.forEach((e) => {
             let { message: t } = e;
@@ -36,7 +36,7 @@ function O() {
 class C extends s.Ay.Store {
     static displayName = "ChannelPinsStore";
     initialize() {
-        this.waitFor(u.A, _.Ay, A.A, c.default, T.A, d.A, I.default);
+        this.waitFor(_.A, u.Ay, A.A, c.default, T.A, d.A, I.default);
     }
     getPins(e) {
         return R[e];
@@ -52,7 +52,7 @@ let D = new C(a.h, {
             R[t].state = "LOADING";
             return;
         }
-        let i = u.A.getChannel(t)?.getGuildId() ?? void 0;
+        let i = _.A.getChannel(t)?.getGuildId() ?? void 0;
         R[t] = { id: t, items: [], state: "LOADING", guildId: i };
     },
     LOAD_PINNED_MESSAGES_SUCCESS: function (e) {
@@ -71,8 +71,8 @@ let D = new C(a.h, {
         if (null == n) return !1;
         n.state = "FAILED";
     },
-    CHANNEL_DELETE: S,
-    THREAD_DELETE: S,
+    CHANNEL_DELETE: O,
+    THREAD_DELETE: O,
     GUILD_DELETE: function (e) {
         let { guild: t } = e;
         R = r()(R)
@@ -141,9 +141,9 @@ let D = new C(a.h, {
         if (-1 === l) return !1;
         (i.items = i.items.slice()), i.items.splice(l, 1);
     },
-    RELATIONSHIP_ADD: O,
-    RELATIONSHIP_REMOVE: O,
-    RELATIONSHIP_UPDATE: O,
+    RELATIONSHIP_ADD: S,
+    RELATIONSHIP_REMOVE: S,
+    RELATIONSHIP_UPDATE: S,
     MESSAGE_EXPLICIT_CONTENT_SCAN_TIMEOUT: function (e) {
         let { messageId: t, channelId: n } = e,
             i = R[n];

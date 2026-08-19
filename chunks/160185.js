@@ -1,4 +1,4 @@
-s.d(t, { i: () => q });
+s.d(t, { i: () => I });
 var n = s(477900),
     i = s(582128),
     a = s(503698),
@@ -14,8 +14,8 @@ var n = s(477900),
     E = s(18437),
     C = s(590202),
     f = s(617986),
-    j = s(770178),
-    g = s(765548),
+    g = s(770178),
+    j = s(765548),
     N = s(652215),
     v = s(375708),
     A = s(662237);
@@ -49,17 +49,17 @@ function _(e) {
         }),
     });
 }
-function q(e) {
+function I(e) {
     let { questId: t, fallbackReason: s, bodyText: a, questContent: r } = e,
         { containerRef: o, size: d } = (function () {
             let [e, t] = i.useState("lg"),
                 [s, n] = i.useState(void 0),
-                a = (0, g.A)((e) => {
+                a = (0, j.A)((e) => {
                     let s = e.target,
                         i = e.contentRect.width;
                     return (n(s.scrollHeight), null == i || i > 460) ? t("lg") : i > 280 ? t("sm") : t("xs");
                 });
-            return { containerRef: (0, j.w)(a), size: e, height: s };
+            return { containerRef: (0, g.w)(a), size: e, height: s };
         })();
     return (
         (0, E.Ii)(s, t),

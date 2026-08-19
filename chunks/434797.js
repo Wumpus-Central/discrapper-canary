@@ -1,6 +1,6 @@
 "use strict";
 n.d(t, { L: () => a });
-var i = n(562465),
+var i = n(636537),
     r = n(618651);
 function a(e, t) {
     if ("function" != typeof fetch || new Blob([t]).size > 57344) return !1;

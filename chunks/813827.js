@@ -1,10 +1,10 @@
 "use strict";
-n.d(t, { u: () => l });
+n.d(t, { u: () => o });
 var i = n(852015),
     r = n(144367),
-    s = n(428420),
-    a = n(535384);
-class o extends a.G {
+    a = n(428420),
+    s = n(535384);
+class l extends s.G {
     constructor() {
         super("discord_protos.discord_users.v1.Versions", [
             { no: 1, name: "client_version", kind: "scalar", T: 13 },
@@ -15,35 +15,35 @@ class o extends a.G {
     create(e) {
         let t = { clientVersion: 0, serverVersion: 0, dataVersion: 0 };
         return (
-            globalThis.Object.defineProperty(t, s.$, { enumerable: !1, value: this }),
+            globalThis.Object.defineProperty(t, a.$, { enumerable: !1, value: this }),
             void 0 !== e && (0, r.x)(this, t, e),
             t
         );
     }
     internalBinaryRead(e, t, n, r) {
-        let s = r ?? this.create(),
-            a = e.pos + t;
-        for (; e.pos < a; ) {
+        let a = r ?? this.create(),
+            s = e.pos + t;
+        for (; e.pos < s; ) {
             let [t, r] = e.tag();
             switch (t) {
                 case 1:
-                    s.clientVersion = e.uint32();
+                    a.clientVersion = e.uint32();
                     break;
                 case 2:
-                    s.serverVersion = e.uint32();
+                    a.serverVersion = e.uint32();
                     break;
                 case 3:
-                    s.dataVersion = e.uint32();
+                    a.dataVersion = e.uint32();
                     break;
                 default:
-                    let a = n.readUnknownField;
-                    if ("throw" === a)
+                    let s = n.readUnknownField;
+                    if ("throw" === s)
                         throw new globalThis.Error(`Unknown field ${t} (wire type ${r}) for ${this.typeName}`);
-                    let o = e.skip(r);
-                    !1 !== a && (!0 === a ? i.f$.onRead : a)(this.typeName, s, t, r, o);
+                    let l = e.skip(r);
+                    !1 !== s && (!0 === s ? i.f$.onRead : s)(this.typeName, a, t, r, l);
             }
         }
-        return s;
+        return a;
     }
     internalBinaryWrite(e, t, n) {
         0 !== e.clientVersion && t.tag(1, i.O0.Varint).uint32(e.clientVersion),
@@ -53,4 +53,4 @@ class o extends a.G {
         return !1 !== r && (!0 == r ? i.f$.onWrite : r)(this.typeName, e, t), t;
     }
 }
-let l = new o();
+let o = new l();

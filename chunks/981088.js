@@ -1,7 +1,7 @@
 "use strict";
-n.d(t, { xv: () => s });
+n.d(t, { xv: () => a });
 var i = n(723702),
     r = n(809733);
-function s() {
+function a() {
     return (0, i.isAndroid)() && !(0, r.IA)();
 }

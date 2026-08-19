@@ -1,8 +1,8 @@
 "use strict";
-n.d(t, { h: () => a });
+n.d(t, { h: () => s });
 var i = n(785401),
     r = n(102609);
-let s = { id: -1, label: "Not Eligible", shortLabel: "Not Eligible", type: i.FZ.OVERRIDE };
-function a(e) {
-    return e.system !== r.l5.APEX ? e.variants : [s].concat(e.variants);
+let a = { id: -1, label: "Not Eligible", shortLabel: "Not Eligible", type: i.FZ.OVERRIDE };
+function s(e) {
+    return e.system !== r.l5.APEX ? e.variants : [a].concat(e.variants);
 }

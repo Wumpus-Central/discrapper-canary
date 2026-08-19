@@ -1,12 +1,12 @@
 "use strict";
-n.d(t, { A: () => h }), n(321073);
+n.d(t, { A: () => E }), n(321073);
 var i = n(810531),
     r = n(7584),
-    s = n(892842),
-    a = n(137903),
-    o = n(71393),
-    l = n(194004);
-function u(e) {
+    a = n(892842),
+    s = n(137903),
+    l = n(71393),
+    o = n(194004);
+function d(e) {
     return {
         id: e.id,
         tags: e.tags,
@@ -23,10 +23,10 @@ function u(e) {
 }
 function c(e) {
     let t = {};
-    for (let n of e) t[n.id] = u(n);
+    for (let n of e) t[n.id] = d(n);
     return t;
 }
-class d extends a.yW {
+class u extends s.yW {
     static displayName = "GuildStickersStore";
     database = this.addKKVDatabase("guildStickers");
     stickerByIdIndex = this.database.addSecondaryKVIndex("id");
@@ -38,30 +38,30 @@ class d extends a.yW {
     getStickerMetadataMap = this.database.memoized((e) => {
         let t = new Map();
         for (let n in e)
-            for (let [i, s] of Object.entries(e[n].root))
+            for (let [i, a] of Object.entries(e[n].root))
                 t.set(
                     i,
                     (function (e, t) {
                         let n = [],
                             { tags: i } = t,
-                            s = { type: l.cG.STICKER_NAME, value: t.name.trim().toLocaleLowerCase() };
-                        if ((n.push(s), null != i)) {
-                            let t = { type: l.cG.TAG, value: i.trim().toLocaleLowerCase() };
+                            a = { type: o.cG.STICKER_NAME, value: t.name.trim().toLocaleLowerCase() };
+                        if ((n.push(a), null != i)) {
+                            let t = { type: o.cG.TAG, value: i.trim().toLocaleLowerCase() };
                             n.push(t);
-                            let s = o.A.getGuild(e);
-                            if (null != s) {
-                                let e = s.name.trim().toLocaleLowerCase();
-                                null != e && "" !== e && n.push({ type: l.cG.GUILD_NAME, value: e });
+                            let a = l.A.getGuild(e);
+                            if (null != a) {
+                                let e = a.name.trim().toLocaleLowerCase();
+                                null != e && "" !== e && n.push({ type: o.cG.GUILD_NAME, value: e });
                             }
-                            let a = r.Ay.getByName(i);
-                            null != a &&
-                                (n.push({ type: l.cG.CORRELATED_EMOJI, value: a.surrogates }),
-                                a.forEachDiversity((e) =>
-                                    n.push({ type: l.cG.CORRELATED_EMOJI, value: e.surrogates }),
+                            let s = r.Ay.getByName(i);
+                            null != s &&
+                                (n.push({ type: o.cG.CORRELATED_EMOJI, value: s.surrogates }),
+                                s.forEachDiversity((e) =>
+                                    n.push({ type: o.cG.CORRELATED_EMOJI, value: e.surrogates }),
                                 ));
                         }
                         return n;
-                    })(n, s),
+                    })(n, a),
                 );
         return t;
     });
@@ -81,12 +81,12 @@ function _(e, t, n) {
         else if (t.writes.length > 0 || t.deletes.length > 0) {
             let r = { ...i };
             for (let e of t.deletes) delete r[e];
-            for (let e of t.writes) r[e.id] = u(e);
+            for (let e of t.writes) r[e.id] = d(e);
             n.setPartition(e, r);
         }
     }
 }
-let h = new d(
+let E = new u(
     {
         LOGOUT: (e, t) => t.clear(),
         BACKGROUND_SYNC: (e, t) => t.clear(),
@@ -106,10 +106,10 @@ let h = new d(
             t.removePartition(e.guild.id);
         },
         GUILD_STICKERS_CREATE_SUCCESS: (e, t) => {
-            t.setRecord(e.guildId, e.sticker.id, u(e.sticker));
+            t.setRecord(e.guildId, e.sticker.id, d(e.sticker));
         },
         GUILD_STICKER_FETCH_SUCCESS: (e, t) => {
-            t.setRecord(e.sticker.guild_id, e.sticker.id, u(e.sticker));
+            t.setRecord(e.sticker.guild_id, e.sticker.id, d(e.sticker));
         },
         GUILD_STICKERS_UPDATE: (e, t) => {
             let n = t.getPartition(e.guildId),
@@ -129,5 +129,5 @@ let h = new d(
             t.setPartition(e.guildId, c(e.stickers));
         },
     },
-    s.P4.getCachedBridgedStoreMode(),
+    a.P4.getCachedBridgedStoreMode(),
 );

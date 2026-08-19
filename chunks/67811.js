@@ -5,10 +5,10 @@ var i = n(477900),
     a = n(503698),
     s = n.n(a),
     l = n(806163),
-    o = n(602853),
-    d = n(661531),
-    c = n(939249),
-    u = n(140735),
+    o = n(939249),
+    d = n(140735),
+    c = n(661531),
+    u = n(602853),
     _ = n(240248),
     E = n(641018);
 let A = [18, 18, 16, 16, 14, 12, 10];
@@ -45,15 +45,15 @@ function I(e) {
             },
             [R, S, N],
         ),
-        y = (0, o.r)(d.A.modules.guildbar.AVATAR_SIZE);
-    return (0, i.jsxs)(c.D, {
+        y = (0, u.r)(c.A.modules.guildbar.AVATAR_SIZE);
+    return (0, i.jsxs)(o.D, {
         ...O,
         onClick: L,
         className: s()(m, E.iE, { [E.wH]: C }),
         style: { ...g, fontSize: n },
         focusProps: { enabled: !1 },
         children: [
-            (0, i.jsx)(u.A, { children: null != T && "" !== T ? T : (p ?? "") }),
+            (0, i.jsx)(d.A, { children: null != T && "" !== T ? T : (p ?? "") }),
             null != t ? (0, i.jsx)("div", { className: s()(h(a, !1), E.q9), "aria-hidden": !0, children: t }) : null,
             null != f
                 ? (0, i.jsx)("img", { className: E.Kk, src: f, alt: " ", width: y, height: y, "aria-hidden": !0 })

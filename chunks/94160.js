@@ -21,8 +21,8 @@ var n = i(477900),
     E = i(146655),
     S = i(489379),
     C = i(402857),
-    b = i(353394),
-    T = i(64622),
+    T = i(353394),
+    b = i(64622),
     N = i(986712),
     w = i(435558),
     y = i(297264),
@@ -194,7 +194,7 @@ function et(e) {
                                     children: [
                                         null != c &&
                                             (0, n.jsx)("li", {
-                                                children: (0, n.jsx)(T.A, {
+                                                children: (0, n.jsx)(b.A, {
                                                     user: t,
                                                     currentUser: i,
                                                     stream: c,
@@ -250,7 +250,7 @@ function et(e) {
                                     children: d.map((e) =>
                                         (0, n.jsx)(
                                             "li",
-                                            { children: (0, n.jsx)(b.A, { user: t, entry: e, onClose: a }) },
+                                            { children: (0, n.jsx)(T.A, { user: t, entry: e, onClose: a }) },
                                             e.id,
                                         ),
                                     ),
@@ -395,8 +395,8 @@ var ex = i(875422),
     eE = i(885574),
     eS = i(444927),
     eC = i(793574),
-    eb = i(429913),
-    eT = i(839534),
+    eT = i(429913),
+    eb = i(839534),
     eN = i(895360),
     ew = i(152472),
     ey = i(267102),
@@ -411,7 +411,7 @@ var eO = i(721932),
     eG = i(808247),
     eM = i(909536),
     eU = i(673843),
-    eW = i(594832),
+    eW = i(561794),
     eF = i(855052),
     eH = i(287809),
     eV = i(321191),
@@ -730,7 +730,7 @@ function tC(e) {
                     }),
                 [t, i],
             );
-        })({ applications: (0, eb.A)(o), handleOpenGameShop: r }),
+        })({ applications: (0, eT.A)(o), handleOpenGameShop: r }),
         m = l.useMemo(
             () =>
                 (0, n.jsxs)(th.rX, {
@@ -792,8 +792,8 @@ function tC(e) {
             }),
     });
 }
-var tb = i(509434),
-    tT = i(365199);
+var tT = i(509434),
+    tb = i(365199);
 let tN = v.A.getArticleURL(f.MVz.CUSTOM_PROFILES_WISHLIST);
 function tw(e) {
     let { isOwner: t, isWishlistPublic: i, onToggleVisibility: s } = e,
@@ -815,8 +815,8 @@ function tw(e) {
                               (0, n.jsx)(th.Dr, {
                                   id: "wishlist-privacy-setting2",
                                   label: W.intl.string(W.t.hvVgAZ),
-                                  icon: tb.I,
-                                  trailingIndicator: { type: "icon", icon: tb.I },
+                                  icon: tT.I,
+                                  trailingIndicator: { type: "icon", icon: tT.I },
                                   action: () => window.open(tN),
                               }),
                           ],
@@ -844,7 +844,7 @@ function tw(e) {
                   children: (e) =>
                       (0, n.jsx)(U.q3, {
                           buttonRef: r,
-                          icon: tT.MoreHorizontalIcon,
+                          icon: tb.MoreHorizontalIcon,
                           tooltipText: W.intl.string(W.t["UKOtz+"]),
                           action: "PRESS_OPTIONS",
                           ...e,
@@ -930,7 +930,7 @@ function tL(e) {
             handleOpenGameShopMouseDown: a,
         } = e,
         o = (0, ey.Us)() === f.BRT.OVERLAY,
-        d = (0, eb.A)(i),
+        d = (0, eT.A)(i),
         c = l.useMemo(() => {
             if (o || 0 === i.length) return null;
             let e = d.reduce((e, t) => (null == t || (e[t.id] = t), e), {});
@@ -1115,7 +1115,7 @@ function tD(e) {
         I = (0, eM.Gh)("user-profile-modal-v2-wishlist"),
         j = (0, eS.A)(() => (0, ef.A)()),
         A = l.useCallback(() => {
-            (0, eT.Cz)({ analyticsLocations: d, analyticsSource: eC.A.USER_PROFILE_WISHLIST });
+            (0, eb.Cz)({ analyticsLocations: d, analyticsSource: eC.A.USER_PROFILE_WISHLIST });
         }, [d]),
         v = l.useCallback((e) => {
             (0, eD.G)({ applicationId: e });

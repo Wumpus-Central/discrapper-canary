@@ -1,4 +1,4 @@
-e.exports = {
+_.exports = {
     kR: "cards__1bfce",
     Nr: "card__1bfce",
     MY: "cardHeader__1bfce",

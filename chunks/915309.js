@@ -1,7 +1,7 @@
 !(function (e) {
     "use strict";
-    function t(e, t, n, i) {
-        var r = {
+    function n(e, n, a, t) {
+        var i = {
             m: ["eine Minute", "einer Minute"],
             h: ["eine Stunde", "einer Stunde"],
             d: ["ein Tag", "einem Tag"],
@@ -11,7 +11,7 @@
             y: ["ein Jahr", "einem Jahr"],
             yy: [e + " Jahre", e + " Jahren"],
         };
-        return t ? r[n][0] : r[n][1];
+        return n ? i[a][0] : i[a][1];
     }
     e.defineLocale("de", {
         months: "Januar_Februar_M\xe4rz_April_Mai_Juni_Juli_August_September_Oktober_November_Dezember".split("_"),
@@ -42,19 +42,19 @@
             past: "vor %s",
             s: "ein paar Sekunden",
             ss: "%d Sekunden",
-            m: t,
+            m: n,
             mm: "%d Minuten",
-            h: t,
+            h: n,
             hh: "%d Stunden",
-            d: t,
-            dd: t,
-            M: t,
-            MM: t,
-            y: t,
-            yy: t,
+            d: n,
+            dd: n,
+            M: n,
+            MM: n,
+            y: n,
+            yy: n,
         },
         dayOfMonthOrdinalParse: /\d{1,2}\./,
         ordinal: "%d.",
         week: { dow: 1, doy: 4 },
     });
-})(n(989349));
+})(a(989349));

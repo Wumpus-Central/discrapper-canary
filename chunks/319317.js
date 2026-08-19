@@ -2,12 +2,12 @@
 n.d(t, { A: () => c }), n(938796);
 var i = n(989349),
     r = n.n(i),
-    s = n(665260),
-    a = n(315069),
-    o = n(587895),
-    l = n(557009),
-    u = n(652215);
-class c extends a.A {
+    a = n(665260),
+    s = n(315069),
+    l = n(587895),
+    o = n(557009),
+    d = n(652215);
+class c extends s.A {
     id;
     branchId;
     flags;
@@ -20,7 +20,7 @@ class c extends a.A {
         return new c({
             id: e.application.id,
             branchId: e.branch_id,
-            entitlements: null != e.entitlements ? e.entitlements.map((e) => l.A.createFromServer(e)) : [],
+            entitlements: null != e.entitlements ? e.entitlements.map((e) => o.A.createFromServer(e)) : [],
             branch: e.branch,
             flags: e.flags,
             createdAt: e.created_at,
@@ -40,9 +40,9 @@ class c extends a.A {
             entitlements: [],
             branchId: e.branch.id,
             branch: e.branch,
-            flags: u.hM6.ENTITLED,
+            flags: d.hM6.ENTITLED,
             createdAt: e.branch.created_at,
-            sku: { id: e.skuId, type: u.Puh.DURABLE_PRIMARY, premium: !1 },
+            sku: { id: e.skuId, type: d.Puh.DURABLE_PRIMARY, premium: !1 },
             isTestMode: !0,
         });
     }
@@ -61,16 +61,16 @@ class c extends a.A {
         return this.flags;
     }
     hasFlag(e) {
-        return s.Lt(this.flags, e);
+        return a.Lt(this.flags, e);
     }
     isHidden() {
-        return this.hasFlag(u.hM6.HIDDEN);
+        return this.hasFlag(d.hM6.HIDDEN);
     }
     isLegacyOverlayEnabled() {
-        return !this.hasFlag(u.hM6.OVERLAY_DISABLED);
+        return !this.hasFlag(d.hM6.OVERLAY_DISABLED);
     }
     isOverlayV3Enabled() {
-        return !this.hasFlag(u.hM6.OVERLAY_V3_DISABLED);
+        return !this.hasFlag(d.hM6.OVERLAY_V3_DISABLED);
     }
     isOverlayEnabled() {
         return this.isLegacyOverlayEnabled() || this.isOverlayV3Enabled();
@@ -88,7 +88,7 @@ class c extends a.A {
         return null != this.sku.preorderReleaseAt || null != this.sku.preorderApproximateReleaseDate;
     }
     getDistributor() {
-        return u.d3x.DISCORD;
+        return d.d3x.DISCORD;
     }
     getBranchName() {
         return null != this.branch ? this.branch.name : "master";
@@ -100,7 +100,7 @@ class c extends a.A {
         return this.sku.id;
     }
     getAnalyticsData() {
-        let e = o.A.getApplication(this.id);
+        let e = l.A.getApplication(this.id);
         return {
             application_id: null != e ? e.id : null,
             application_name: null != e ? e.name : null,

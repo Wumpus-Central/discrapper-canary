@@ -2,12 +2,12 @@
 n.d(t, { A: () => _ });
 var i = n(17928),
     r = n(506774),
-    s = n(228366),
-    a = n(617617);
-let o = {},
-    l = {};
-function u() {
-    let e = a.A.settings;
+    a = n(228366),
+    s = n(617617);
+let l = {},
+    o = {};
+function d() {
+    let e = s.A.settings;
     return {
         gifAutoPlay: e.textAndImages?.gifAutoPlay?.value,
         animateEmoji: e.textAndImages?.animateEmoji?.value,
@@ -15,9 +15,9 @@ function u() {
     };
 }
 function c() {
-    return (l = u()), !1;
+    return (o = d()), !1;
 }
-class d extends i.Ay.PersistedStore {
+class u extends i.Ay.PersistedStore {
     static displayName = "UserSettingsOverridesStore";
     static persistKey = "UserSettingsOverridesStore";
     static migrations = [
@@ -27,37 +27,37 @@ class d extends i.Ay.PersistedStore {
         },
     ];
     initialize(e) {
-        (o = e ?? {}), this.syncWith([a.A], c);
+        (l = e ?? {}), this.syncWith([s.A], c);
     }
     getState() {
-        return o;
+        return l;
     }
     getAppliedOverrideReasonKey(e) {
-        return o[e]?.reasonKey;
+        return l[e]?.reasonKey;
     }
     getOverride(e) {
-        return o[e];
+        return l[e];
     }
 }
-let _ = new d(s.h, {
+let _ = new u(a.h, {
     USER_SETTINGS_PROTO_UPDATE: function () {
-        let e = u(),
+        let e = d(),
             t = !1;
-        for (let n in e) e[n] !== l[n] && (delete o[n], (t = !0));
+        for (let n in e) e[n] !== o[n] && (delete l[n], (t = !0));
         return t;
     },
     USER_SETTINGS_OVERRIDE_APPLY: function (e) {
         let { settings: t } = e;
-        o = { ...o, ...t };
+        l = { ...l, ...t };
     },
     USER_SETTINGS_OVERRIDE_CLEAR: function (e) {
         let { settings: t } = e;
-        for (let e of t) delete o[e];
+        for (let e of t) delete l[e];
     },
     LOGOUT: function () {
-        o = {};
+        l = {};
     },
     LOGIN_SUCCESS: function () {
-        o = {};
+        l = {};
     },
 });

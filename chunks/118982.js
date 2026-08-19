@@ -1,11 +1,11 @@
-l.d(t, { dI: () => m, k3: () => c, x0: () => x });
+l.d(t, { dI: () => m, k3: () => d, x0: () => x });
 var n = l(811996),
     r = l(773669),
-    i = l(832163);
+    a = l(832163);
 l(652215);
-var a = l(430825),
+var i = l(430825),
     s = l(375708);
-let u = {
+let o = {
         [n.U.DESKTOP]: "PC",
         [n.U.XBOX]: "Xbox",
         [n.U.PLAYSTATION]: "PlayStation",
@@ -14,30 +14,30 @@ let u = {
         [n.U.NETFLIX]: "Netflix",
         [n.U.AMAZON_KIDS_PLUS]: "Amazon Kids+",
     },
-    o = [n.U.PLAYSTATION];
-function d(e) {
+    c = [n.U.PLAYSTATION];
+function u(e) {
     let t = (function (e) {
-        if (null == e) return o;
-        let t = i.A.getConfigForApplicationId(e);
-        return null == t ? o : t.excludedPlatforms;
+        if (null == e) return c;
+        let t = a.A.getConfigForApplicationId(e);
+        return null == t ? c : t.excludedPlatforms;
     })(e);
     return 0 === t.length
         ? ""
-        : s.intl.formatToPlainString(a.default["5h8p5P"], {
-              platforms: new Intl.ListFormat(r.default.locale).format(t.map((e) => u[e])),
+        : s.intl.formatToPlainString(i.default["5h8p5P"], {
+              platforms: new Intl.ListFormat(r.default.locale).format(t.map((e) => o[e])),
               count: t.length,
           });
 }
-function c(e) {
-    return s.intl.format(a.default.Q0dHYO, { platforms_info: d(e?.id) });
+function d(e) {
+    return s.intl.format(i.default.Q0dHYO, { platforms_info: u(e?.id) });
 }
 function m(e) {
     let t = e.name;
-    return s.intl.format(a.default.fO4b1C, { applicationName: t, platforms_info: d(e.id) });
+    return s.intl.format(i.default.fO4b1C, { applicationName: t, platforms_info: u(e.id) });
 }
 function x(e, t) {
     let { hasAlreadyLinked: l } = t,
         n = e.name,
-        r = l ? a.default.yqAKVO : a.default.vyAtfo;
-    return s.intl.format(r, { applicationName: n, platforms_info: d(e.id) });
+        r = l ? i.default.yqAKVO : i.default.vyAtfo;
+    return s.intl.format(r, { applicationName: n, platforms_info: u(e.id) });
 }

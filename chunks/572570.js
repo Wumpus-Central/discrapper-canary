@@ -1,4 +1,4 @@
-_.exports = {
+e.exports = {
     pm: "gradientBackground__41626",
     M: "leftDarkEllipse__41626",
     CB: "leftLightEllipse__41626",

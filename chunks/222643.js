@@ -13,13 +13,13 @@ function d(e) {
             dismissed: t,
             onDismiss: d,
             renderComponent: A,
-            nudgeAlignIntoViewport: h = !1,
-            skipForceHide: m = !1,
+            nudgeAlignIntoViewport: m = !1,
+            skipForceHide: h = !1,
         } = e,
         C = i.useContext(c.vG),
         [E, p] = i.useState(""),
-        [g, x] = i.useState(!1),
-        f = (0, s.bG)([o.Ay], () => o.Ay.callHeaderHeight),
+        [g, f] = i.useState(!1),
+        x = (0, s.bG)([o.Ay], () => o.Ay.callHeaderHeight),
         I = i.useRef(null),
         T = i.useRef(0);
     i.useEffect(() => {
@@ -27,8 +27,8 @@ function d(e) {
         if (null != e) return e.addEventListener("click", d), () => e.removeEventListener("click", d);
     }),
         i.useEffect(() => {
-            m || (p(String(T.current)), x(void 0 !== f && f < (I.current?.clientHeight ?? 300) + 24), (T.current += 1));
-        }, [f, I, m]);
+            h || (p(String(T.current)), f(void 0 !== x && x < (I.current?.clientHeight ?? 300) + 24), (T.current += 1));
+        }, [x, I, h]);
     let { preventIdle: v, allowIdle: _ } = (0, u.o)("popup");
     return n?.current == null
         ? null
@@ -39,7 +39,7 @@ function d(e) {
                   align: "center",
                   spacing: 0,
                   positionKey: E,
-                  nudgeAlignIntoViewport: h,
+                  nudgeAlignIntoViewport: m,
                   children: () =>
                       (0, l.jsx)("div", {
                           ref: I,

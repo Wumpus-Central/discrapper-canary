@@ -1,16 +1,16 @@
 "use strict";
-n.d(t, { A: () => d });
+n.d(t, { A: () => u });
 var i = n(228366),
     r = n(439372),
-    s = n(696451),
-    a = n(287809),
-    o = n(316031);
-let l = null;
-function u(e, t) {
-    let n = s.Ay.getMember(e, t),
-        r = a.default.getUser(t);
-    if (null == n || null == r || (0, o.Z)(n)) return;
-    let l = {
+    a = n(696451),
+    s = n(287809),
+    l = n(316031);
+let o = null;
+function d(e, t) {
+    let n = a.Ay.getMember(e, t),
+        r = s.default.getUser(t);
+    if (null == n || null == r || (0, l.Z)(n)) return;
+    let o = {
         ...n,
         guildId: e,
         nick: n.nick ?? r.username,
@@ -21,23 +21,23 @@ function u(e, t) {
         user: { ...r, email: r.email ?? void 0, phone: r.phone ?? void 0 },
         communicationDisabledUntil: null,
     };
-    i.h.dispatch({ type: "GUILD_MEMBER_UPDATE", ...l });
+    i.h.dispatch({ type: "GUILD_MEMBER_UPDATE", ...o });
 }
 class c extends r.A {
     _initialize() {
-        l = setInterval(() => {
+        o = setInterval(() => {
             let e;
-            Object.keys((e = s.Ay.getCommunicationDisabledUserMap())).forEach((t) => {
-                let n = (0, s.DL)(t),
-                    i = (0, s.vg)(t),
+            Object.keys((e = a.Ay.getCommunicationDisabledUserMap())).forEach((t) => {
+                let n = (0, a.DL)(t),
+                    i = (0, a.vg)(t),
                     r = e[t];
-                (0, o.n)(r) || u(n, i);
+                (0, l.n)(r) || d(n, i);
             });
         }, 1e4);
     }
     _terminate() {
-        clearInterval(l);
+        clearInterval(o);
     }
-    clearGuildMemberTimeout = u;
+    clearGuildMemberTimeout = d;
 }
-let d = new c();
+let u = new c();

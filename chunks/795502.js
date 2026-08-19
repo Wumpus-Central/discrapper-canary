@@ -1,4 +1,4 @@
-e.exports = {
+_.exports = {
     HD: "avatars_a05532",
     nc: "size16_a05532",
     qV: "size20_a05532",

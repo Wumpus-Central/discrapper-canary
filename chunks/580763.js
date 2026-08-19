@@ -20,8 +20,8 @@ var i = e(477900),
     g = e(365185),
     C = e(915089),
     I = e(932413),
-    y = e(345942),
-    j = e(82149),
+    j = e(345942),
+    y = e(82149),
     O = e(92240),
     S = e(257367),
     h = e(160376),
@@ -40,8 +40,8 @@ var i = e(477900),
     W = e(540185),
     H = e(569926),
     B = e(289173),
-    w = e(735321),
-    z = e(999291),
+    z = e(735321),
+    w = e(999291),
     $ = e(993401),
     F = e(280450),
     X = e(518477),
@@ -49,7 +49,7 @@ var i = e(477900),
 function q(t) {
     let { application: n, onAction: e, onClose: a } = t,
         r = (0, U.bG)([F.default], () => F.default.getId()),
-        s = (0, z.Ay)(r, null),
+        s = (0, w.Ay)(r, null),
         o = n.getCanonicalGameId(),
         { data: c } = (0, H.I)(o),
         u = l.useMemo(
@@ -61,7 +61,7 @@ function q(t) {
                         (t) =>
                             t instanceof B.Yy && t.type === W.x.CURRENT_GAMES && t.games?.some((t) => t.gameId === o),
                     )
-                ) && (0, w.XX)(c),
+                ) && (0, z.XX)(c),
             [o, s?.widgets, c],
         ),
         d = l.useCallback(
@@ -69,7 +69,7 @@ function q(t) {
                 null != o &&
                     (t.stopPropagation(),
                     e?.({ action: "PRESS_ADD_TO_CURRENT_GAMES_WIDGET" }),
-                    (0, w.ew)({ widgetType: W.x.CURRENT_GAMES, game: { gameId: o }, ignoreMaxGames: !0 }),
+                    (0, z.ew)({ widgetType: W.x.CURRENT_GAMES, game: { gameId: o }, ignoreMaxGames: !0 }),
                     (0, v.openUserProfileModal)({
                         userId: r,
                         tabSection: X.RP.WIDGETS,
@@ -224,14 +224,14 @@ function tC(t) {
         : null;
 }
 var tI = e(573648),
-    ty = e(968309),
-    tj = e(30370);
+    tj = e(968309),
+    ty = e(30370);
 function tO(t) {
     let { platformType: n, icon: e, onAction: l } = t,
         { newestAnalyticsLocation: a } = (0, _.Ay)(),
         { themeType: r } = (0, R.E)(),
         s = r === ta.d.MODAL_V2;
-    return (0, U.bG)([tj.A], () => null != tj.A.getAccount(null, n))
+    return (0, U.bG)([ty.A], () => null != ty.A.getAccount(null, n))
         ? null
         : (0, i.jsx)($.FD, {
               icon: e,
@@ -241,7 +241,7 @@ function tO(t) {
                   t.stopPropagation();
                   let e = n === tg.fg2.XBOX;
                   l?.({ action: e ? "PRESS_CONNECT_XBOX_BUTTON" : "PRESS_CONNECT_PLAYSTATION_BUTTON" }),
-                      (0, ty.A)({ platformType: n, location: a });
+                      (0, tj.A)({ platformType: n, location: a });
               },
           });
 }
@@ -255,13 +255,13 @@ function tU(t) {
     let { activity: n, onAction: e, onClose: l } = t,
         { themeType: a } = (0, R.E)(),
         r = a === ta.d.MODAL_V2,
-        { channelId: s, guildId: o } = (0, j.UW)(n) ?? {},
+        { channelId: s, guildId: o } = (0, y.UW)(n) ?? {},
         c = (0, U.bG)([tL.A], () => null != s && tL.A.isInChannel(s), [s]),
         u = (0, U.bG)([tv.A, tR.A], () => {
             let t = tv.A.getBasicChannel(s);
             return null != t && (0, tS.A)(t, tR.A);
         }, [s]);
-    return (0, j.Cy)(n) && u && null != o && null != s
+    return (0, y.Cy)(n) && u && null != o && null != s
         ? (0, i.jsx)($.FD, {
               text: Q.intl.string(Q.t.ZYO5OK),
               fullWidth: !r,
@@ -304,7 +304,7 @@ function tG(t) {
         { fetched: T, canStartAuthorization: E, hasAlreadyLinked: N, startAuthorization: g } = (0, K.RD)(r),
         C = o === ta.d.MODAL || o === ta.d.MODAL_V2,
         I = o === ta.d.POPOUT,
-        y = o === ta.d.MODAL_V2 ? tr.g6 : tr.Zu,
+        j = o === ta.d.MODAL_V2 ? tr.g6 : tr.Zu,
         O =
             m.length > 0
                 ? (0, i.jsx)(J.A, {
@@ -326,21 +326,21 @@ function tG(t) {
             if (e?.buttons != null && e?.buttons.length >= 1)
                 return null != O
                     ? (0, i.jsxs)("div", {
-                          className: y,
+                          className: j,
                           children: [(0, i.jsx)(to, { user: n, activity: e, onAction: l }), O],
                       })
                     : (0, i.jsx)(to, { user: n, activity: e, onAction: l });
             if (!d && u && null != r && !C) {
                 let t = (0, i.jsx)(tD.A, { application: r, onAction: l, onClose: a, analyticsLocations: x });
-                return null != O ? (0, i.jsxs)("div", { className: y, children: [t, O] }) : t;
+                return null != O ? (0, i.jsxs)("div", { className: j, children: [t, O] }) : t;
             }
             if ((0, A.A)(e) || ((0, D.Ay)(e) && d)) {
                 let t = (0, i.jsx)(tm, { user: n, activity: e, onAction: l, onClose: a });
-                return null != O ? (0, i.jsxs)("div", { className: y, children: [t, O] }) : t;
+                return null != O ? (0, i.jsxs)("div", { className: j, children: [t, O] }) : t;
             }
             if (T && E && !N) {
                 let t = (0, i.jsx)(tE, { startAuthorization: g, onAction: l });
-                return null != O ? (0, i.jsxs)("div", { className: y, children: [t, O] }) : t;
+                return null != O ? (0, i.jsxs)("div", { className: j, children: [t, O] }) : t;
             }
             if (null != O) return O;
             if (!(0, M.A)(e)) {
@@ -359,7 +359,7 @@ function tG(t) {
                   ? (0, i.jsx)(tm, { user: n, activity: e, onAction: l, onClose: a })
                   : (0, b.A)(e, tg.jUm.INSTANCE)
                     ? (0, i.jsx)(tC, { user: n, activity: e, onAction: l })
-                    : (0, j.Cy)(e)
+                    : (0, y.Cy)(e)
                       ? (0, i.jsx)(tU, { activity: e, onAction: l, onClose: a })
                       : null;
         })();
@@ -371,8 +371,8 @@ var tV = e(282197),
     tW = e(351638),
     tH = e(531648),
     tB = e(910607),
-    tw = e(753713),
-    tz = e(269587),
+    tz = e(753713),
+    tw = e(269587),
     t$ = e(409626),
     tF = e(692969),
     tX = e(534465),
@@ -395,8 +395,8 @@ function tq(t) {
         { themeType: W } = (0, R.E)(),
         H = (0, g.A)({ activity: l, user: n }),
         B = (0, O.A)({ display: "live", user: n, activity: l, entry: H, analyticsLocations: k }),
-        w = (0, S.A)({ userId: n.id, onAction: B }),
-        z = (0, m.Ay)(b),
+        z = (0, S.A)({ userId: n.id, onAction: B }),
+        w = (0, m.Ay)(b),
         $ = (0, h.A)(l),
         F = null != $.text && "" !== $.text,
         { largeImage: q, smallImage: J } = (0, T.XN)(l, a, "user_profile_activity_card"),
@@ -432,10 +432,10 @@ function tq(t) {
                   className: tr.FH,
                   children: [
                       (0, i.jsx)(o.H, { size: "xxs", color: c.A.colors.TEXT_DEFAULT, className: tr.Ow }),
-                      (0, i.jsx)(tH.Q, { variant: "heading-sm/semibold", text: z, id: V }),
+                      (0, i.jsx)(tH.Q, { variant: "heading-sm/semibold", text: w, id: V }),
                   ],
               })
-            : (0, x.A)(l) || (0, j.Cy)(l)
+            : (0, x.A)(l) || (0, y.Cy)(l)
               ? (0, i.jsx)(tH.Q, { variant: "heading-sm/semibold", text: l.name, id: V })
               : null != l.details
                 ? (0, i.jsx)(E.O, {
@@ -452,7 +452,7 @@ function tq(t) {
                     variant: "text-xs/normal",
                     text: Q.intl.formatToPlainString(Q.t["hq/Qze"], { guildName: U.name }),
                     onClick: () => {
-                        (0, y.u)(U.id), B({ action: "OPEN_VOICE_GUILD" }), D?.();
+                        (0, j.u)(U.id), B({ action: "OPEN_VOICE_GUILD" }), D?.();
                     },
                 })
               : (0, x.A)(l)
@@ -460,7 +460,7 @@ function tq(t) {
                       href: l.details_url,
                       children: (0, i.jsx)(tH.A, { variant: "text-xs/normal", text: l.details }),
                   })
-                : (0, j.Cy)(l)
+                : (0, y.Cy)(l)
                   ? (0, i.jsx)(tH.A, { variant: "text-xs/normal", text: l?.assets?.small_text })
                   : (0, i.jsx)(E.O, {
                         href: l.state_url,
@@ -513,7 +513,7 @@ function tq(t) {
                           children: (0, i.jsx)(tH.A, { variant: "text-xs/normal", text: l.state }),
                       })
                     : null;
-        if ((0, j.Cy)(l) && l.party?.size != null && l.party?.size.length >= 2) {
+        if ((0, y.Cy)(l) && l.party?.size != null && l.party?.size.length >= 2) {
             let t = Q.intl.formatToPlainString(Q.t["JC/3xw"], {
                 numSpeakers: l.party?.size[0],
                 numListeners: l.party?.size[1] - l.party?.size[0],
@@ -540,7 +540,7 @@ function tq(t) {
     return (0, i.jsx)(_.f5, {
         value: k,
         children: (0, i.jsxs)(tk.A, {
-            ref: w,
+            ref: z,
             className: r()(tr.Nr, M),
             onAction: B,
             onClose: D,
@@ -549,7 +549,7 @@ function tq(t) {
                 (0, i.jsx)(tW.A, {
                     textId: Y,
                     ...$,
-                    contextMenu: (0, i.jsx)(tz.A, {
+                    contextMenu: (0, i.jsx)(tw.A, {
                         display: "live",
                         user: n,
                         activity: l,
@@ -607,7 +607,7 @@ function tq(t) {
                                                 (function () {
                                                     if (!(0, P.A)(l)) return null;
                                                     let { start: t, end: n } = l.timestamps;
-                                                    return (0, i.jsx)(tw.A, { start: t, end: n });
+                                                    return (0, i.jsx)(tz.A, { start: t, end: n });
                                                 })(),
                                                 W === ta.d.MODAL_V2 && te(),
                                             ],

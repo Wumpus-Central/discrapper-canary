@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { VP: () => s, ZR: () => a, fL: () => r, v_: () => i });
+n.d(t, { VP: () => a, ZR: () => s, fL: () => r, v_: () => i });
 let i = {
         discord_marketing: "Discord Marketing",
         discord_web: "Discord Web",
@@ -16,11 +16,11 @@ let i = {
         { id: "3weeks", value: 1814400, label: "3 Weeks" },
         { id: "1month", value: 2628e3, label: "1 Month" },
     ],
-    s = [
+    a = [
         { id: "all", value: "all", label: "All" },
         { id: "canary", value: "canary", label: "Canary" },
         { id: "ptb", value: "ptb", label: "PTB" },
         { id: "stable", value: "stable", label: "Stable" },
         { id: "staging", value: "staging", label: "Staging" },
     ],
-    a = "buildOverride";
+    s = "buildOverride";

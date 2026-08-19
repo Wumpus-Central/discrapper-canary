@@ -1,22 +1,22 @@
 "use strict";
-n.d(t, { L: () => a });
+n.d(t, { L: () => s });
 var i = n(626584),
     r = n(111162),
-    s = n(818348);
-function a() {
+    a = n(818348);
+function s() {
     let { quest: e, location: t } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
         n = r.default.isLoggingQuestEvents,
-        a = e?.config.messages.questName,
-        o = null != t ? `-${t}` : "",
-        l = null != a ? `-${a})` : "",
-        u = `QuestLogger${o}${l}`,
-        c = new i.A(u);
+        s = e?.config.messages.questName,
+        l = null != t ? `-${t}` : "",
+        o = null != s ? `-${s})` : "",
+        d = `QuestLogger${l}${o}`,
+        c = new i.A(d);
     return {
-        log: n ? c.log : s.tE,
-        warn: n ? c.warn : s.tE,
-        error: n ? c.error : s.tE,
-        info: n ? c.info : s.tE,
-        verbose: n ? c.verbose : s.tE,
-        trace: n ? c.trace : s.tE,
+        log: n ? c.log : a.tE,
+        warn: n ? c.warn : a.tE,
+        error: n ? c.error : a.tE,
+        info: n ? c.info : a.tE,
+        verbose: n ? c.verbose : a.tE,
+        trace: n ? c.trace : a.tE,
     };
 }

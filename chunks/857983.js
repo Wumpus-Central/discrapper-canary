@@ -1,4 +1,4 @@
-e.exports = {
+_.exports = {
     gM: "channelTextArea__74017",
     mr: "highlighted__74017",
     z3: "error__74017",

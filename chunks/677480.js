@@ -1,8 +1,8 @@
 "use strict";
-var i = n(439619)("%Array%"),
-    r = !i.isArray && n(906046)("Object.prototype.toString");
+var n = r(439619)("%Array%"),
+    o = !n.isArray && r(906046)("Object.prototype.toString");
 e.exports =
-    i.isArray ||
+    n.isArray ||
     function (e) {
-        return "[object Array]" === r(e);
+        return "[object Array]" === o(e);
     };

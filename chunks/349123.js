@@ -1,4 +1,4 @@
-e.exports = {
+_.exports = {
     uW: "section_fa7eb1",
     wx: "header_fa7eb1",
     $s: "headerActions_fa7eb1",

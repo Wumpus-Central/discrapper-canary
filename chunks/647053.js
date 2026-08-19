@@ -1,8 +1,8 @@
 "use strict";
-n.d(t, { A8: () => l, O_: () => s, RM: () => c, gX: () => o, i4: () => d, k$: () => a, rY: () => u }), n(321073);
+n.d(t, { A8: () => o, O_: () => a, RM: () => c, gX: () => l, i4: () => u, k$: () => s, rY: () => d }), n(321073);
 var i = n(179771),
     r = n(375708);
-let s = [
+let a = [
         () => r.intl.string(r.t["6xfSCq"]),
         () => r.intl.string(r.t.ymSk0r),
         () => r.intl.string(r.t.EnN7c5),
@@ -12,7 +12,7 @@ let s = [
         () => r.intl.string(r.t.sGOSG4),
         () => r.intl.string(r.t.JfibUq),
     ],
-    a = [
+    s = [
         i.F.BOT,
         i.F.OPENID,
         i.F.IDENTIFY,
@@ -60,9 +60,9 @@ let s = [
         i.F.SDK_SOCIAL_LAYER_PRESENCE,
         i.F.SDK_SOCIAL_LAYER,
     ],
-    o = a.concat([i.F.WEBHOOK_INCOMING, i.F.BOT]),
-    l = ["rpc.api"];
-function u(e, t) {
+    l = s.concat([i.F.WEBHOOK_INCOMING, i.F.BOT]),
+    o = ["rpc.api"];
+function d(e, t) {
     switch (e) {
         case i.F.IDENTIFY:
             return [r.intl.string(r.t.DD9KQh)];
@@ -179,7 +179,7 @@ function u(e, t) {
 function c(e) {
     return e === i.F.SDK_SOCIAL_LAYER_PRESENCE || e === i.F.SDK_SOCIAL_LAYER;
 }
-function d(e) {
+function u(e) {
     return e.includes(i.F.DM_CHANNELS_MESSAGES_WRITE) || e.includes(i.F.SDK_SOCIAL_LAYER)
         ? r.intl.format(r.t.o0GMBD, {})
         : e.includes(i.F.MESSAGES_READ) || e.includes(i.F.DM_CHANNELS_MESSAGES_READ)

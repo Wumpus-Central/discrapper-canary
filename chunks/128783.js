@@ -25,8 +25,8 @@ var A = n(832712),
     x = n(393432),
     E = n(652215),
     S = n(790782),
-    _ = n(355097),
-    I = n(375708),
+    I = n(355097),
+    _ = n(375708),
     j = n(137093);
 function y(e) {
     let { channel: t, clearUnreadsNotice: n } = e;
@@ -36,23 +36,23 @@ function y(e) {
             (0, l.jsx)(p, { id: t.id }),
             (0, l.jsx)("div", {
                 className: j.p,
-                children: (0, l.jsx)(d.E, { variant: "text-sm/medium", children: I.intl.format(I.t.P6Y2N1, {}) }),
+                children: (0, l.jsx)(d.E, { variant: "text-sm/medium", children: _.intl.format(_.t.P6Y2N1, {}) }),
             }),
             (0, l.jsx)(u.$, {
                 variant: "secondary",
-                text: I.intl.string(I.t.KyUKhT),
+                text: _.intl.string(_.t.KyUKhT),
                 icon: h.e,
                 size: "sm",
                 onClick: () => {
                     var e, l, i;
                     (e = t.guild_id),
                         (l = t.id),
-                        (i = _.vv.UNREADS_ONLY_MENTIONS),
+                        (i = I.vv.UNREADS_ONLY_MENTIONS),
                         A.A.updateChannelOverrideSettings(
                             e,
                             l,
                             { flags: (0, x.mD)(f.Ay.getChannelIdFlags(e, l), i) },
-                            C.G_.unreads(i === _.vv.UNREADS_ALL_MESSAGES ? S.e.ALL_MESSAGES : S.e.ONLY_MENTIONS),
+                            C.G_.unreads(i === I.vv.UNREADS_ALL_MESSAGES ? S.e.ALL_MESSAGES : S.e.ONLY_MENTIONS),
                             { object: E.ZSU.NOTIFICATION_SETTING_UNREAD_NOTICE },
                         ),
                         n();
@@ -88,12 +88,12 @@ function P(e) {
                     className: k.E5,
                     variant: "text-sm/normal",
                     color: "text-default",
-                    children: t.isForumPost() ? I.intl.string(I.t["833FDn"]) : I.intl.string(I.t.rEeodK),
+                    children: t.isForumPost() ? _.intl.string(_.t["833FDn"]) : _.intl.string(_.t.rEeodK),
                 }),
                 s
                     ? (0, l.jsx)(u.$, {
                           variant: "secondary",
-                          text: I.intl.string(I.t["0dvvEi"]),
+                          text: _.intl.string(_.t["0dvvEi"]),
                           onClick: function () {
                               R.default.track(E.HAw.CHANNEL_BANNER_CTA_CLICKED, {
                                   ...(0, M.H$)(t.getGuildId()),
@@ -128,12 +128,12 @@ function O(e) {
                     className: k.E5,
                     variant: "text-sm/normal",
                     color: "text-default",
-                    children: t.isForumPost() ? I.intl.string(I.t.E7oO8u) : I.intl.string(I.t["V/JF2N"]),
+                    children: t.isForumPost() ? _.intl.string(_.t.E7oO8u) : _.intl.string(_.t["V/JF2N"]),
                 }),
                 s
                     ? (0, l.jsx)(u.$, {
                           variant: "secondary",
-                          text: I.intl.string(I.t.zA9d1J),
+                          text: _.intl.string(_.t.zA9d1J),
                           onClick: function () {
                               R.default.track(E.HAw.CHANNEL_BANNER_CTA_CLICKED, {
                                   ...(0, M.H$)(t.getGuildId()),

@@ -1,7 +1,7 @@
-var i = n(459476)();
-e.exports = i;
+var n = r(459476)();
+e.exports = n;
 try {
-    regeneratorRuntime = i;
+    regeneratorRuntime = n;
 } catch (e) {
-    "object" == typeof globalThis ? (globalThis.regeneratorRuntime = i) : Function("r", "regeneratorRuntime = r")(i);
+    "object" == typeof globalThis ? (globalThis.regeneratorRuntime = n) : Function("r", "regeneratorRuntime = r")(n);
 }

@@ -1,22 +1,22 @@
-let i = n(864886),
-    r = n(74509),
-    s = n(800670);
+let n = r(864886),
+    o = r(74509),
+    i = r(800670);
 e.exports = (e, t) => {
-    e = new r(e, t);
-    let n = new i("0.0.0");
-    if (e.test(n) || ((n = new i("0.0.0-0")), e.test(n))) return n;
-    n = null;
+    e = new o(e, t);
+    let r = new n("0.0.0");
+    if (e.test(r) || ((r = new n("0.0.0-0")), e.test(r))) return r;
+    r = null;
     for (let t = 0; t < e.set.length; ++t) {
-        let r = e.set[t],
+        let o = e.set[t],
             a = null;
-        r.forEach((e) => {
-            let t = new i(e.semver.version);
+        o.forEach((e) => {
+            let t = new n(e.semver.version);
             switch (e.operator) {
                 case ">":
                     0 === t.prerelease.length ? t.patch++ : t.prerelease.push(0), (t.raw = t.format());
                 case "":
                 case ">=":
-                    (!a || s(t, a)) && (a = t);
+                    (!a || i(t, a)) && (a = t);
                     break;
                 case "<":
                 case "<=":
@@ -25,7 +25,7 @@ e.exports = (e, t) => {
                     throw Error(`Unexpected operation: ${e.operator}`);
             }
         }),
-            a && (!n || s(n, a)) && (n = a);
+            a && (!r || i(r, a)) && (r = a);
     }
-    return n && e.test(n) ? n : null;
+    return r && e.test(r) ? r : null;
 };

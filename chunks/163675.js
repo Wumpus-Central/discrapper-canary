@@ -1,8 +1,8 @@
 "use strict";
-n.d(t, { m: () => i });
-var r = n(985847);
-function i(e, t) {
-    let n = e;
-    for ((0, r.o)(n, t) && (n = n.parentElement); n && !(0, r.o)(n, t); ) n = n.parentElement;
-    return n || document.scrollingElement || document.documentElement;
+r.d(t, { m: () => o });
+var n = r(985847);
+function o(e, t) {
+    let r = e;
+    for ((0, n.o)(r, t) && (r = r.parentElement); r && !(0, n.o)(r, t); ) r = r.parentElement;
+    return r || document.scrollingElement || document.documentElement;
 }

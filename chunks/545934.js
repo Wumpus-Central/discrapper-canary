@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => s });
+n.d(t, { A: () => a });
 var i = n(315069);
 class r extends i.A {
     id;
@@ -37,4 +37,4 @@ class r extends i.A {
             (this.subscription = e.subscription);
     }
 }
-let s = r;
+let a = r;

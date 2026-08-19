@@ -10,7 +10,7 @@ var i = n(477900),
     u = n(216418),
     h = n(80051),
     p = n(280450),
-    m = n(626822),
+    m = n(453028),
     f = n(625494),
     A = n(220144),
     x = n(175203),
@@ -20,8 +20,8 @@ var i = n(477900),
     j = n(652215),
     I = n(806931),
     v = n(562200),
-    E = n(227486);
-let N = 16 / 9,
+    N = n(227486);
+let E = 16 / 9,
     b = 8 + y.Vp;
 function _(e) {
     let t,
@@ -35,8 +35,8 @@ function _(e) {
             inCall: L,
             channel: O,
             selectedParticipant: P,
-            showParticipants: w = !0,
-            className: M,
+            showParticipants: M = !0,
+            className: w,
             width: D,
             height: U,
             layout: V,
@@ -52,7 +52,7 @@ function _(e) {
         X = (0, u.A)(q ? P.applicationId : void 0),
         Z = !q && null != P.streamId,
         Q = U <= 2 * b + 144,
-        J = w && !Q,
+        J = M && !Q,
         ee = (0, d.Ay)(J),
         et = V === j.DUB.MINIMUM || V === j.DUB.NORMAL,
         en = !Q && (!et || q),
@@ -61,7 +61,7 @@ function _(e) {
         ea = 0;
     (q || J) && (ea += 72), q && !J && (en ? (ea += 48) : (ea += 8)), J && (ea += 0.5 * b + 8);
     let es = l.useMemo(
-            () => (q && X ? D / (U - 2 * ea) : Z && null != F && F.width > 0 && F.height > 0 ? F.width / F.height : N),
+            () => (q && X ? D / (U - 2 * ea) : Z && null != F && F.width > 0 && F.height > 0 ? F.width / F.height : E),
             [Z, F, q, D, U, ea, X],
         ),
         er = U - 2 * ea,
@@ -117,19 +117,19 @@ function _(e) {
         ey = J ? [] : (0, C.Cf)(T, P, B),
         { visibleParticipants: ej, participantTileWidth: eI } = (0, y.i4)(D, R);
     return (0, i.jsxs)("div", {
-        className: s()(E.zr, v.tR, M),
+        className: s()(N.zr, v.tR, w),
         children: [
             (0, i.jsxs)("div", {
-                className: E.QX,
+                className: N.QX,
                 style: { opacity: Z && W ? 0 : 1 },
                 children: [
                     (0, i.jsxs)(r.animated.div, {
-                        className: E.pc,
+                        className: N.pc,
                         style: { top: ef.value.to((e) => (-e * b) / 2) },
                         children: [
                             (0, i.jsx)(r.animated.div, {
                                 style: { width: eA.value },
-                                className: E.tN,
+                                className: N.tN,
                                 children: (0, i.jsx)("div", {
                                     className: v.xS,
                                     style: { aspectRatio: es },
@@ -166,11 +166,11 @@ function _(e) {
                             }),
                             en
                                 ? (0, i.jsx)(r.animated.div, {
-                                      className: s()(E.$l, { [E.N7]: k }),
+                                      className: s()(N.$l, { [N.N7]: k }),
                                       style: { bottom: ex.value },
                                       children: (0, i.jsx)(h.A, {
                                           channelId: O.id,
-                                          isParticipantsOpen: w,
+                                          isParticipantsOpen: M,
                                           isVertical: !0,
                                       }),
                                   })
@@ -178,7 +178,7 @@ function _(e) {
                         ],
                     }),
                     (0, i.jsx)(r.animated.div, {
-                        className: E.Vx,
+                        className: N.Vx,
                         style: {
                             translateY: em.value.to((e) => (e * b) / 2),
                             opacity: em.value,
@@ -194,7 +194,7 @@ function _(e) {
                             selectedParticipantId: P.id,
                             inCall: L,
                             popoutType: S,
-                            paused: Y || !w,
+                            paused: Y || !M,
                         }),
                     }),
                 ],

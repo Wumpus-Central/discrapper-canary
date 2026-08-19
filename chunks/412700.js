@@ -1,61 +1,61 @@
 var t = "u" > typeof Element,
-    n = "function" == typeof Map,
-    i = "function" == typeof Set,
-    r = "function" == typeof ArrayBuffer && !!ArrayBuffer.isView;
-e.exports = function (e, s) {
+    r = "function" == typeof Map,
+    n = "function" == typeof Set,
+    o = "function" == typeof ArrayBuffer && !!ArrayBuffer.isView;
+e.exports = function (e, i) {
     try {
-        return (function e(s, a) {
-            if (s === a) return !0;
-            if (s && a && "object" == typeof s && "object" == typeof a) {
-                var o, l, u, c;
-                if (s.constructor !== a.constructor) return !1;
-                if (Array.isArray(s)) {
-                    if ((o = s.length) != a.length) return !1;
-                    for (l = o; 0 != l--; ) if (!e(s[l], a[l])) return !1;
+        return (function e(i, a) {
+            if (i === a) return !0;
+            if (i && a && "object" == typeof i && "object" == typeof a) {
+                var s, l, u, c;
+                if (i.constructor !== a.constructor) return !1;
+                if (Array.isArray(i)) {
+                    if ((s = i.length) != a.length) return !1;
+                    for (l = s; 0 != l--; ) if (!e(i[l], a[l])) return !1;
                     return !0;
                 }
-                if (n && s instanceof Map && a instanceof Map) {
-                    if (s.size !== a.size) return !1;
-                    for (c = s.entries(); !(l = c.next()).done; ) if (!a.has(l.value[0])) return !1;
-                    for (c = s.entries(); !(l = c.next()).done; ) if (!e(l.value[1], a.get(l.value[0]))) return !1;
+                if (r && i instanceof Map && a instanceof Map) {
+                    if (i.size !== a.size) return !1;
+                    for (c = i.entries(); !(l = c.next()).done; ) if (!a.has(l.value[0])) return !1;
+                    for (c = i.entries(); !(l = c.next()).done; ) if (!e(l.value[1], a.get(l.value[0]))) return !1;
                     return !0;
                 }
-                if (i && s instanceof Set && a instanceof Set) {
-                    if (s.size !== a.size) return !1;
-                    for (c = s.entries(); !(l = c.next()).done; ) if (!a.has(l.value[0])) return !1;
+                if (n && i instanceof Set && a instanceof Set) {
+                    if (i.size !== a.size) return !1;
+                    for (c = i.entries(); !(l = c.next()).done; ) if (!a.has(l.value[0])) return !1;
                     return !0;
                 }
-                if (r && ArrayBuffer.isView(s) && ArrayBuffer.isView(a)) {
-                    if ((o = s.length) != a.length) return !1;
-                    for (l = o; 0 != l--; ) if (s[l] !== a[l]) return !1;
+                if (o && ArrayBuffer.isView(i) && ArrayBuffer.isView(a)) {
+                    if ((s = i.length) != a.length) return !1;
+                    for (l = s; 0 != l--; ) if (i[l] !== a[l]) return !1;
                     return !0;
                 }
-                if (s.constructor === RegExp) return s.source === a.source && s.flags === a.flags;
+                if (i.constructor === RegExp) return i.source === a.source && i.flags === a.flags;
                 if (
-                    s.valueOf !== Object.prototype.valueOf &&
-                    "function" == typeof s.valueOf &&
+                    i.valueOf !== Object.prototype.valueOf &&
+                    "function" == typeof i.valueOf &&
                     "function" == typeof a.valueOf
                 )
-                    return s.valueOf() === a.valueOf();
+                    return i.valueOf() === a.valueOf();
                 if (
-                    s.toString !== Object.prototype.toString &&
-                    "function" == typeof s.toString &&
+                    i.toString !== Object.prototype.toString &&
+                    "function" == typeof i.toString &&
                     "function" == typeof a.toString
                 )
-                    return s.toString() === a.toString();
-                if ((o = (u = Object.keys(s)).length) !== Object.keys(a).length) return !1;
-                for (l = o; 0 != l--; ) if (!Object.prototype.hasOwnProperty.call(a, u[l])) return !1;
-                if (t && s instanceof Element) return !1;
-                for (l = o; 0 != l--; )
+                    return i.toString() === a.toString();
+                if ((s = (u = Object.keys(i)).length) !== Object.keys(a).length) return !1;
+                for (l = s; 0 != l--; ) if (!Object.prototype.hasOwnProperty.call(a, u[l])) return !1;
+                if (t && i instanceof Element) return !1;
+                for (l = s; 0 != l--; )
                     if (
-                        (("_owner" !== u[l] && "__v" !== u[l] && "__o" !== u[l]) || !s.$$typeof) &&
-                        !e(s[u[l]], a[u[l]])
+                        (("_owner" !== u[l] && "__v" !== u[l] && "__o" !== u[l]) || !i.$$typeof) &&
+                        !e(i[u[l]], a[u[l]])
                     )
                         return !1;
                 return !0;
             }
-            return s != s && a != a;
-        })(e, s);
+            return i != i && a != a;
+        })(e, i);
     } catch (e) {
         if ((e.message || "").match(/stack|recursion/i))
             return console.warn("react-fast-compare cannot handle circular refs"), !1;

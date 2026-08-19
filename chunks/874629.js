@@ -894,7 +894,7 @@ var i = {
     "./1f468-1f3fb-200d-1f91d-200d-1f468-1f3ff.svg": "502114",
     "./1f468-1f3fb-200d-1f9af-200d-27a1-fe0f.svg": "384111",
     "./1f468-1f3fb-200d-1f9af.svg": "496586",
-    "./1f468-1f3fb-200d-1f9b0.svg": "534573",
+    "./1f468-1f3fb-200d-1f9b0.svg": "756954",
     "./1f468-1f3fb-200d-1f9b1.svg": "454860",
     "./1f468-1f3fb-200d-1f9b2.svg": "210207",
     "./1f468-1f3fb-200d-1f9b3.svg": "805454",
@@ -3847,9 +3847,9 @@ var i = {
     "./e50a.svg": "137892",
 };
 function r(e) {
-    return n(s(e));
+    return n(a(e));
 }
-function s(e) {
+function a(e) {
     if (!n.o(i, e)) {
         var t = Error("Cannot find module '" + e + "'");
         throw ((t.code = "MODULE_NOT_FOUND"), t);
@@ -3859,6 +3859,6 @@ function s(e) {
 (r.keys = function () {
     return Object.keys(i);
 }),
-    (r.resolve = s),
+    (r.resolve = a),
     (e.exports = r),
     (r.id = 874629);

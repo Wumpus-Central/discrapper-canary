@@ -1,13 +1,13 @@
 "use strict";
 n.d(t, {
-    CI: () => D,
+    CI: () => y,
     V0: () => g,
     XM: () => C,
     c_: () => m,
     e0: () => L,
     kb: () => S,
-    s: () => O,
-    tu: () => R,
+    s: () => R,
+    tu: () => O,
     xP: () => N,
 }),
     n(938796),
@@ -50,7 +50,7 @@ async function C(e) {
         N(e.message);
     }
 }
-async function R(e) {
+async function O(e) {
     try {
         await (0, h.mk)(e), (0, E.Dc)({ message: T.intl.string(T.t["JF/LWn"]), icon: s.Ck.CLOCK });
     } catch (e) {
@@ -58,7 +58,7 @@ async function R(e) {
         (t = e.message), (0, l.P0)((0, o.o)(T.intl.formatToPlainString(T.t.sUvyW3, { error: t }), s.Ck.FAILURE));
     }
 }
-function O(e) {
+function R(e) {
     let { channel: t } = e,
         n = a()().add(1, "day").startOf("day").set("hours", 9),
         r = a()().add(1, "day").startOf("day").set("hours", 13),
@@ -122,7 +122,7 @@ function L(e) {
         { modalKey: f.t },
     );
 }
-function D(e) {
+function y(e) {
     let { scheduledMessage: t } = e;
     (0, c.openModalLazy)(
         async () => {

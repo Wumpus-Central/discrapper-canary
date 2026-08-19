@@ -1,35 +1,35 @@
 "use strict";
-var i = n(267768),
-    r = n(870064),
-    s = n(741623),
-    a = n(14665),
-    o = n(899204),
-    l = n(904283),
-    u = n(732937),
-    c = n(228047),
-    d = n(94535),
-    _ = n(444139),
-    h = n(227106);
-e.exports = function (e, t, n) {
-    if (!h(e)) throw new s("Assertion failed: O must be an Object");
-    if (!u(t)) throw new s("Assertion failed: P must be a Property Key");
-    if (!a(n)) throw new s("Assertion failed: Desc must be a Property Descriptor");
-    if (!i) {
-        if (o(n)) throw new r("This environment does not support accessor property descriptors.");
-        var f = !(t in e) && n["[[Writable]]"] && n["[[Enumerable]]"] && n["[[Configurable]]"] && "[[Value]]" in n,
-            p =
+var n = r(267768),
+    o = r(870064),
+    i = r(741623),
+    a = r(14665),
+    s = r(899204),
+    l = r(904283),
+    u = r(732937),
+    c = r(228047),
+    f = r(94535),
+    p = r(444139),
+    d = r(227106);
+e.exports = function (e, t, r) {
+    if (!d(e)) throw new i("Assertion failed: O must be an Object");
+    if (!u(t)) throw new i("Assertion failed: P must be a Property Key");
+    if (!a(r)) throw new i("Assertion failed: Desc must be a Property Descriptor");
+    if (!n) {
+        if (s(r)) throw new o("This environment does not support accessor property descriptors.");
+        var h = !(t in e) && r["[[Writable]]"] && r["[[Enumerable]]"] && r["[[Configurable]]"] && "[[Value]]" in r,
+            m =
                 t in e &&
-                (!("[[Configurable]]" in n) || n["[[Configurable]]"]) &&
-                (!("[[Enumerable]]" in n) || n["[[Enumerable]]"]) &&
-                (!("[[Writable]]" in n) || n["[[Writable]]"]) &&
-                "[[Value]]" in n;
-        if (f || p) return (e[t] = n["[[Value]]"]), d(e[t], n["[[Value]]"]);
-        throw new r(
+                (!("[[Configurable]]" in r) || r["[[Configurable]]"]) &&
+                (!("[[Enumerable]]" in r) || r["[[Enumerable]]"]) &&
+                (!("[[Writable]]" in r) || r["[[Writable]]"]) &&
+                "[[Value]]" in r;
+        if (h || m) return (e[t] = r["[[Value]]"]), f(e[t], r["[[Value]]"]);
+        throw new o(
             "This environment does not support defining non-writable, non-enumerable, or non-configurable properties",
         );
     }
-    var E = i(e, t),
-        m = E && c(E),
+    var v = n(e, t),
+        y = v && c(v),
         g = l(e);
-    return _(e, t, g, n, m);
+    return p(e, t, g, r, y);
 };

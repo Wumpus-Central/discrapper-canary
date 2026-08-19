@@ -1,21 +1,21 @@
 "use strict";
-n.d(t, { $G: () => a, EJ: () => o, S8: () => c, oN: () => l, sS: () => u, xI: () => i.xI });
+n.d(t, { $G: () => s, EJ: () => l, S8: () => c, oN: () => o, sS: () => d, xI: () => i.xI });
 var i = n(621466);
 let r = /[\u0300-\u036f]/g,
-    s = /[\uD800-\uDBFF][\uDC00-\uDFFF]/;
-function a(e) {
+    a = /[\uD800-\uDBFF][\uDC00-\uDFFF]/;
+function s(e) {
     return null == e ? "" : `${e.charAt(0).toUpperCase()}${e.slice(1)}`;
 }
-let o = function (e, t) {
+let l = function (e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "\u2026";
     if (null == e || null == t) return "";
     if (e.length > t) {
-        let i = s.test(e) ? [...e].slice(0, t - n.length).join("") : e.substring(0, t - n.length);
+        let i = a.test(e) ? [...e].slice(0, t - n.length).join("") : e.substring(0, t - n.length);
         return `${i.replace(/[\s.]+$/, "")}${n}`;
     }
     return e;
 };
-function l(e) {
+function o(e) {
     return null != e
         ? e
               .replace(/'s /g, " ")
@@ -23,7 +23,7 @@ function l(e) {
               .replace(/\s/g, "")
         : "";
 }
-let u = null == String.prototype.normalize ? (e) => e : (e) => e.normalize("NFD").replace(r, "").normalize("NFC"),
+let d = null == String.prototype.normalize ? (e) => e : (e) => e.normalize("NFD").replace(r, "").normalize("NFC"),
     c =
         null == String.prototype.normalize
             ? (e) => e

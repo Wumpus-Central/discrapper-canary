@@ -1,112 +1,112 @@
-r.d(e, { A: () => s }), r(321073);
-var o = r(17928),
-    l = r(228366);
-let c = {},
+r.d(t, { A: () => s }), r(321073);
+var l = r(17928),
+    o = r(228366);
+let u = {},
     n = {};
-class u extends o.Ay.Store {
+class c extends l.Ay.Store {
     static displayName = "StorefrontProductStore";
-    getFetchState(t) {
-        return null != t ? c[t]?.state : void 0;
+    getFetchState(e) {
+        return null != e ? u[e]?.state : void 0;
     }
-    getFetchStateForSku(t) {
-        return null != t ? n[t]?.state : void 0;
+    getFetchStateForSku(e) {
+        return null != e ? n[e]?.state : void 0;
     }
-    getFetchedAt(t) {
-        return null != t ? c[t]?.fetchedAt : void 0;
+    getFetchedAt(e) {
+        return null != e ? u[e]?.fetchedAt : void 0;
     }
-    getFetchedAtForSku(t) {
-        return null != t ? n[t]?.fetchedAt : void 0;
+    getFetchedAtForSku(e) {
+        return null != e ? n[e]?.fetchedAt : void 0;
     }
-    getFetchError(t) {
-        return null != t ? c[t]?.fetchError : void 0;
+    getFetchError(e) {
+        return null != e ? u[e]?.fetchError : void 0;
     }
-    getFetchErrorForSku(t) {
-        return null != t ? n[t]?.fetchError : void 0;
+    getFetchErrorForSku(e) {
+        return null != e ? n[e]?.fetchError : void 0;
     }
-    getProduct(t) {
-        let e = null != t ? c[t] : null;
-        return null == e || e?.state === "error" || null == e.product ? null : e.product;
+    getProduct(e) {
+        let t = null != e ? u[e] : null;
+        return null == t || t?.state === "error" || null == t.product ? null : t.product;
     }
-    getProductsForSku(t) {
-        return null != t ? n[t]?.products : void 0;
+    getProductsForSku(e) {
+        return null != e ? n[e]?.products : void 0;
     }
 }
-let s = new u(l.h, {
-    STOREFRONT_PRODUCTS_WITH_SKUS_FETCH: function (t) {
-        let { productIds: e } = t;
-        e.forEach((t) => {
-            c[t] = { state: "loading", product: c[t]?.product };
+let s = new c(o.h, {
+    STOREFRONT_PRODUCTS_WITH_SKUS_FETCH: function (e) {
+        let { productIds: t } = e;
+        t.forEach((e) => {
+            u[e] = { state: "loading", product: u[e]?.product };
         });
     },
-    STOREFRONT_PRODUCTS_WITH_SKUS_FETCH_SUCCESS: function (t) {
-        let { productIds: e, products: r } = t,
-            o = Date.now(),
-            l = new Set();
-        r.forEach((t) => {
-            l.add(t.id), (c[t.id] = { state: "success", product: t, fetchedAt: o });
+    STOREFRONT_PRODUCTS_WITH_SKUS_FETCH_SUCCESS: function (e) {
+        let { productIds: t, products: r } = e,
+            l = Date.now(),
+            o = new Set();
+        r.forEach((e) => {
+            o.add(e.id), (u[e.id] = { state: "success", product: e, fetchedAt: l });
         }),
-            e.forEach((t) => {
-                l.has(t) || delete c[t];
+            t.forEach((e) => {
+                o.has(e) || delete u[e];
             });
     },
-    STOREFRONT_PRODUCTS_WITH_SKUS_FETCH_FAILURE: function (t) {
-        let { productIds: e, apiError: r } = t,
-            o = Date.now();
-        e.forEach((t) => {
-            c[t] = { state: "error", fetchedAt: o, fetchError: r };
+    STOREFRONT_PRODUCTS_WITH_SKUS_FETCH_FAILURE: function (e) {
+        let { productIds: t, apiError: r } = e,
+            l = Date.now();
+        t.forEach((e) => {
+            u[e] = { state: "error", fetchedAt: l, fetchError: r };
         });
     },
-    STOREFRONT_PRODUCTS_BY_SKU_IDS_FETCH: function (t) {
-        let { skuIds: e } = t;
-        e.forEach((t) => {
-            n[t] = { state: "loading", products: n[t]?.products };
+    STOREFRONT_PRODUCTS_BY_SKU_IDS_FETCH: function (e) {
+        let { skuIds: t } = e;
+        t.forEach((e) => {
+            n[e] = { state: "loading", products: n[e]?.products };
         });
     },
-    STOREFRONT_PRODUCTS_BY_SKU_IDS_FETCH_SUCCESS: function (t) {
-        let { skuIds: e, products: r } = t,
-            o = Date.now(),
-            l = r.reduce(
-                (t, e) => (
-                    e.skuIds.forEach((r) => {
-                        null == t[r] ? (t[r] = [e]) : t[r].push(e);
+    STOREFRONT_PRODUCTS_BY_SKU_IDS_FETCH_SUCCESS: function (e) {
+        let { skuIds: t, products: r } = e,
+            l = Date.now(),
+            o = r.reduce(
+                (e, t) => (
+                    t.skuIds.forEach((r) => {
+                        null == e[r] ? (e[r] = [t]) : e[r].push(t);
                     }),
-                    t
+                    e
                 ),
                 {},
             );
-        e.forEach((t) => {
-            null == l[t] ? delete n[t] : (n[t] = { state: "success", products: l[t], fetchedAt: o });
+        t.forEach((e) => {
+            null == o[e] ? delete n[e] : (n[e] = { state: "success", products: o[e], fetchedAt: l });
         }),
-            r.forEach((t) => {
-                c[t.id] = { state: "success", product: t, fetchedAt: o };
+            r.forEach((e) => {
+                u[e.id] = { state: "success", product: e, fetchedAt: l };
             });
     },
-    STOREFRONT_PRODUCTS_BY_SKU_IDS_FETCH_FAILURE: function (t) {
-        let { skuIds: e, apiError: r } = t,
-            o = Date.now();
-        e.forEach((t) => {
-            n[t] = { state: "error", fetchedAt: o, fetchError: r };
+    STOREFRONT_PRODUCTS_BY_SKU_IDS_FETCH_FAILURE: function (e) {
+        let { skuIds: t, apiError: r } = e,
+            l = Date.now();
+        t.forEach((e) => {
+            n[e] = { state: "error", fetchedAt: l, fetchError: r };
         });
     },
-    STOREFRONT_COLLECTIONS_WITH_PRODUCTS_FETCH_SUCCESS: function (t) {
-        let { collections: e } = t,
+    STOREFRONT_COLLECTIONS_WITH_PRODUCTS_FETCH_SUCCESS: function (e) {
+        let { collections: t } = e,
             r = Date.now();
-        e.forEach((t) => {
-            t.products.forEach((t) => {
-                c[t.id] = { state: "success", product: t, fetchedAt: r };
+        t.forEach((e) => {
+            e.products.forEach((e) => {
+                u[e.id] = { state: "success", product: e, fetchedAt: r };
             });
         });
     },
-    STOREFRONT_COLLECTIONS_FOR_APPLICATION_FETCH_SUCCESS: function (t) {
-        let { collections: e } = t,
+    STOREFRONT_COLLECTIONS_FOR_APPLICATION_FETCH_SUCCESS: function (e) {
+        let { collections: t } = e,
             r = Date.now();
-        e.forEach((t) => {
-            t.products.forEach((t) => {
-                c[t.id] = { state: "success", product: t, fetchedAt: r };
+        t.forEach((e) => {
+            e.products.forEach((e) => {
+                u[e.id] = { state: "success", product: e, fetchedAt: r };
             });
         });
     },
-    LOGOUT: function (t) {
-        (c = {}), (n = {});
+    LOGOUT: function (e) {
+        (u = {}), (n = {});
     },
 });

@@ -1,42 +1,42 @@
-var i = function (e) {
+var n = function (e) {
         return String(Number(e)) === e ? Number(e) : e;
     },
-    r = function (e, t, n, r) {
-        if (r && !n) t[r] = i(e[1]);
-        else for (var s = 0; s < n.length; s += 1) null != e[s + 1] && (t[n[s]] = i(e[s + 1]));
+    o = function (e, t, r, o) {
+        if (o && !r) t[o] = n(e[1]);
+        else for (var i = 0; i < r.length; i += 1) null != e[i + 1] && (t[r[i]] = n(e[i + 1]));
     },
-    s = function (e, t, n) {
-        var i = e.name && e.names;
-        e.push && !t[e.push] ? (t[e.push] = []) : i && !t[e.name] && (t[e.name] = {});
-        var s = e.push ? {} : i ? t[e.name] : t;
-        r(n.match(e.reg), s, e.names, e.name), e.push && t[e.push].push(s);
+    i = function (e, t, r) {
+        var n = e.name && e.names;
+        e.push && !t[e.push] ? (t[e.push] = []) : n && !t[e.name] && (t[e.name] = {});
+        var i = e.push ? {} : n ? t[e.name] : t;
+        o(r.match(e.reg), i, e.names, e.name), e.push && t[e.push].push(i);
     },
-    a = n(150594),
-    o = RegExp.prototype.test.bind(/^([a-z])=(.*)/);
+    a = r(150594),
+    s = RegExp.prototype.test.bind(/^([a-z])=(.*)/);
 t.parse = function (e) {
     var t = {},
-        n = [],
-        i = t;
+        r = [],
+        n = t;
     return (
         e
             .split(/(\r\n|\r|\n)/)
-            .filter(o)
+            .filter(s)
             .forEach(function (e) {
                 var t = e[0],
-                    r = e.slice(2);
-                "m" === t && (n.push({ rtp: [], fmtp: [] }), (i = n[n.length - 1]));
-                for (var o = 0; o < (a[t] || []).length; o += 1) {
-                    var l = a[t][o];
-                    if (l.reg.test(r)) return s(l, i, r);
+                    o = e.slice(2);
+                "m" === t && (r.push({ rtp: [], fmtp: [] }), (n = r[r.length - 1]));
+                for (var s = 0; s < (a[t] || []).length; s += 1) {
+                    var l = a[t][s];
+                    if (l.reg.test(o)) return i(l, n, o);
                 }
             }),
-        (t.media = n),
+        (t.media = r),
         t
     );
 };
 var l = function (e, t) {
-    var n = t.split(/=(.+)/, 2);
-    return 2 === n.length ? (e[n[0]] = i(n[1])) : 1 === n.length && t.length > 1 && (e[n[0]] = void 0), e;
+    var r = t.split(/=(.+)/, 2);
+    return 2 === r.length ? (e[r[0]] = n(r[1])) : 1 === r.length && t.length > 1 && (e[r[0]] = void 0), e;
 };
 (t.parseParams = function (e) {
     return e.split(/;\s?/).reduce(l, {});
@@ -46,8 +46,8 @@ var l = function (e, t) {
         return e.toString().split(" ").map(Number);
     }),
     (t.parseRemoteCandidates = function (e) {
-        for (var t = [], n = e.split(" ").map(i), r = 0; r < n.length; r += 3)
-            t.push({ component: n[r], ip: n[r + 1], port: n[r + 2] });
+        for (var t = [], r = e.split(" ").map(n), o = 0; o < r.length; o += 3)
+            t.push({ component: r[o], ip: r[o + 1], port: r[o + 2] });
         return t;
     }),
     (t.parseImageAttributes = function (e) {
@@ -62,9 +62,9 @@ var l = function (e, t) {
         return e.split(";").map(function (e) {
             return e.split(",").map(function (e) {
                 var t,
-                    n = !1;
+                    r = !1;
                 return (
-                    "~" !== e[0] ? (t = i(e)) : ((t = i(e.substring(1, e.length))), (n = !0)), { scid: t, paused: n }
+                    "~" !== e[0] ? (t = n(e)) : ((t = n(e.substring(1, e.length))), (r = !0)), { scid: t, paused: r }
                 );
             });
         });

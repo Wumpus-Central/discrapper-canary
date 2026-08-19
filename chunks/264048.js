@@ -1,26 +1,26 @@
 "use strict";
-var i = n(691262),
-    r = (function () {
+var n = r(691262),
+    o = (function () {
         try {
             return !!Object.defineProperty({}, "a", {});
         } catch (e) {
             return !1;
         }
     })();
-r || Object.prototype.__defineGetter__;
-var s = r
+o || Object.prototype.__defineGetter__;
+var i = o
         ? Object.defineProperty
-        : function (e, t, n) {
-              "get" in n && e.__defineGetter__
-                  ? e.__defineGetter__(t, n.get)
-                  : (!i.hop.call(e, t) || "value" in n) && (e[t] = n.value);
+        : function (e, t, r) {
+              "get" in r && e.__defineGetter__
+                  ? e.__defineGetter__(t, r.get)
+                  : (!n.hop.call(e, t) || "value" in r) && (e[t] = r.value);
           },
     a =
         Object.create ||
         function (e, t) {
-            var n, r;
+            var r, o;
             function a() {}
-            for (r in ((a.prototype = e), (n = new a()), t)) i.hop.call(t, r) && s(n, r, t[r]);
-            return n;
+            for (o in ((a.prototype = e), (r = new a()), t)) n.hop.call(t, o) && i(r, o, t[o]);
+            return r;
         };
-(t.defineProperty = s), (t.objCreate = a);
+(t.defineProperty = i), (t.objCreate = a);

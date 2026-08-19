@@ -2,11 +2,11 @@
 n.d(t, { D: () => c });
 var i = n(852015),
     r = n(144367),
-    s = n(428420),
-    a = n(467276),
-    o = n(82180),
-    l = n(535384);
-class u extends l.G {
+    a = n(428420),
+    s = n(467276),
+    l = n(82180),
+    o = n(535384);
+class d extends o.G {
     constructor() {
         super("google.protobuf.Timestamp", [
             { no: 1, name: "seconds", kind: "scalar", T: 3 },
@@ -16,18 +16,18 @@ class u extends l.G {
     now() {
         let e = this.create(),
             t = Date.now();
-        return (e.seconds = o.h.from(Math.floor(t / 1e3)).toString()), (e.nanos = (t % 1e3) * 1e6), e;
+        return (e.seconds = l.h.from(Math.floor(t / 1e3)).toString()), (e.nanos = (t % 1e3) * 1e6), e;
     }
     toDate(e) {
-        return new Date(1e3 * o.h.from(e.seconds).toNumber() + Math.ceil(e.nanos / 1e6));
+        return new Date(1e3 * l.h.from(e.seconds).toNumber() + Math.ceil(e.nanos / 1e6));
     }
     fromDate(e) {
         let t = this.create(),
             n = e.getTime();
-        return (t.seconds = o.h.from(Math.floor(n / 1e3)).toString()), (t.nanos = (n % 1e3) * 1e6), t;
+        return (t.seconds = l.h.from(Math.floor(n / 1e3)).toString()), (t.nanos = (n % 1e3) * 1e6), t;
     }
     internalJsonWrite(e, t) {
-        let n = 1e3 * o.h.from(e.seconds).toNumber();
+        let n = 1e3 * l.h.from(e.seconds).toNumber();
         if (n < Date.parse("0001-01-01T00:00:00Z") || n > Date.parse("9999-12-31T23:59:59Z"))
             throw Error(
                 "Unable to encode Timestamp to JSON. Must be from 0001-01-01T00:00:00Z to 9999-12-31T23:59:59Z inclusive.",
@@ -46,7 +46,7 @@ class u extends l.G {
         return new Date(n).toISOString().replace(".000Z", i);
     }
     internalJsonRead(e, t, n) {
-        if ("string" != typeof e) throw Error("Unable to parse Timestamp from JSON " + (0, a.V)(e) + ".");
+        if ("string" != typeof e) throw Error("Unable to parse Timestamp from JSON " + (0, s.V)(e) + ".");
         let i = e.match(
             /^([0-9]{4})-([0-9]{2})-([0-9]{2})T([0-9]{2}):([0-9]{2}):([0-9]{2})(?:Z|\.([0-9]{3,9})Z|([+-][0-9][0-9]:[0-9][0-9]))$/,
         );
@@ -59,7 +59,7 @@ class u extends l.G {
             );
         return (
             n || (n = this.create()),
-            (n.seconds = o.h.from(r / 1e3).toString()),
+            (n.seconds = l.h.from(r / 1e3).toString()),
             (n.nanos = 0),
             i[7] && (n.nanos = parseInt("1" + i[7] + "0".repeat(9 - i[7].length)) - 1e9),
             n
@@ -68,32 +68,32 @@ class u extends l.G {
     create(e) {
         let t = { seconds: "0", nanos: 0 };
         return (
-            globalThis.Object.defineProperty(t, s.$, { enumerable: !1, value: this }),
+            globalThis.Object.defineProperty(t, a.$, { enumerable: !1, value: this }),
             void 0 !== e && (0, r.x)(this, t, e),
             t
         );
     }
     internalBinaryRead(e, t, n, r) {
-        let s = r ?? this.create(),
-            a = e.pos + t;
-        for (; e.pos < a; ) {
+        let a = r ?? this.create(),
+            s = e.pos + t;
+        for (; e.pos < s; ) {
             let [t, r] = e.tag();
             switch (t) {
                 case 1:
-                    s.seconds = e.int64().toString();
+                    a.seconds = e.int64().toString();
                     break;
                 case 2:
-                    s.nanos = e.int32();
+                    a.nanos = e.int32();
                     break;
                 default:
-                    let a = n.readUnknownField;
-                    if ("throw" === a)
+                    let s = n.readUnknownField;
+                    if ("throw" === s)
                         throw new globalThis.Error(`Unknown field ${t} (wire type ${r}) for ${this.typeName}`);
-                    let o = e.skip(r);
-                    !1 !== a && (!0 === a ? i.f$.onRead : a)(this.typeName, s, t, r, o);
+                    let l = e.skip(r);
+                    !1 !== s && (!0 === s ? i.f$.onRead : s)(this.typeName, a, t, r, l);
             }
         }
-        return s;
+        return a;
     }
     internalBinaryWrite(e, t, n) {
         "0" !== e.seconds && t.tag(1, i.O0.Varint).int64(e.seconds),
@@ -102,4 +102,4 @@ class u extends l.G {
         return !1 !== r && (!0 == r ? i.f$.onWrite : r)(this.typeName, e, t), t;
     }
 }
-let c = new u();
+let c = new d();

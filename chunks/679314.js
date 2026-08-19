@@ -1,72 +1,72 @@
 "use strict";
-function i() {
+function n() {
     let e = 0,
         t = 0;
-    for (let n = 0; n < 28; n += 7) {
-        let i = this.buf[this.pos++];
-        if (((e |= (127 & i) << n), (128 & i) == 0)) return this.assertBounds(), [e, t];
+    for (let r = 0; r < 28; r += 7) {
+        let n = this.buf[this.pos++];
+        if (((e |= (127 & n) << r), (128 & n) == 0)) return this.assertBounds(), [e, t];
     }
-    let n = this.buf[this.pos++];
-    if (((e |= (15 & n) << 28), (t = (112 & n) >> 4), (128 & n) == 0)) return this.assertBounds(), [e, t];
-    for (let n = 3; n <= 31; n += 7) {
-        let i = this.buf[this.pos++];
-        if (((t |= (127 & i) << n), (128 & i) == 0)) return this.assertBounds(), [e, t];
+    let r = this.buf[this.pos++];
+    if (((e |= (15 & r) << 28), (t = (112 & r) >> 4), (128 & r) == 0)) return this.assertBounds(), [e, t];
+    for (let r = 3; r <= 31; r += 7) {
+        let n = this.buf[this.pos++];
+        if (((t |= (127 & n) << r), (128 & n) == 0)) return this.assertBounds(), [e, t];
     }
     throw Error("invalid varint");
 }
-function r(e, t, n) {
-    for (let i = 0; i < 28; i += 7) {
-        let r = e >>> i,
-            s = r >>> 7 != 0 || 0 != t,
-            a = (s ? 128 | r : r) & 255;
-        if ((n.push(a), !s)) return;
+function o(e, t, r) {
+    for (let n = 0; n < 28; n += 7) {
+        let o = e >>> n,
+            i = o >>> 7 != 0 || 0 != t,
+            a = (i ? 128 | o : o) & 255;
+        if ((r.push(a), !i)) return;
     }
-    let i = ((e >>> 28) & 15) | ((7 & t) << 4),
-        r = t >> 3 != 0;
-    if ((n.push((r ? 128 | i : i) & 255), r)) {
+    let n = ((e >>> 28) & 15) | ((7 & t) << 4),
+        o = t >> 3 != 0;
+    if ((r.push((o ? 128 | n : n) & 255), o)) {
         for (let e = 3; e < 31; e += 7) {
-            let i = t >>> e,
-                r = i >>> 7 != 0,
-                s = (r ? 128 | i : i) & 255;
-            if ((n.push(s), !r)) return;
+            let n = t >>> e,
+                o = n >>> 7 != 0,
+                i = (o ? 128 | n : n) & 255;
+            if ((r.push(i), !o)) return;
         }
-        n.push((t >>> 31) & 1);
+        r.push((t >>> 31) & 1);
     }
 }
-function s(e) {
+function i(e) {
     let t = "-" == e[0];
     t && (e = e.slice(1));
-    let n = 0,
-        i = 0;
-    function r(t, r) {
-        let s = Number(e.slice(t, r));
-        (i *= 1e6), (n = 1e6 * n + s) >= 0x100000000 && ((i += (n / 0x100000000) | 0), (n %= 0x100000000));
+    let r = 0,
+        n = 0;
+    function o(t, o) {
+        let i = Number(e.slice(t, o));
+        (n *= 1e6), (r = 1e6 * r + i) >= 0x100000000 && ((n += (r / 0x100000000) | 0), (r %= 0x100000000));
     }
-    return r(-24, -18), r(-18, -12), r(-12, -6), r(-6), [t, n, i];
+    return o(-24, -18), o(-18, -12), o(-12, -6), o(-6), [t, r, n];
 }
 function a(e, t) {
     if (t <= 2097151) return "" + (0x100000000 * t + (e >>> 0));
-    let n = (((e >>> 24) | (t << 8)) >>> 0) & 0xffffff,
-        i = (t >> 16) & 65535,
-        r = (0xffffff & e) + 6777216 * n + 6710656 * i,
-        s = n + 8147497 * i,
-        a = 2 * i;
-    function o(e, t) {
-        let n = e ? String(e) : "";
-        return t ? "0000000".slice(n.length) + n : n;
+    let r = (((e >>> 24) | (t << 8)) >>> 0) & 0xffffff,
+        n = (t >> 16) & 65535,
+        o = (0xffffff & e) + 6777216 * r + 6710656 * n,
+        i = r + 8147497 * n,
+        a = 2 * n;
+    function s(e, t) {
+        let r = e ? String(e) : "";
+        return t ? "0000000".slice(r.length) + r : r;
     }
     return (
-        r >= 1e7 && ((s += Math.floor(r / 1e7)), (r %= 1e7)),
-        s >= 1e7 && ((a += Math.floor(s / 1e7)), (s %= 1e7)),
-        o(a, 0) + o(s, a) + o(r, 1)
+        o >= 1e7 && ((i += Math.floor(o / 1e7)), (o %= 1e7)),
+        i >= 1e7 && ((a += Math.floor(i / 1e7)), (i %= 1e7)),
+        s(a, 0) + s(i, a) + s(o, 1)
     );
 }
-function o(e, t) {
+function s(e, t) {
     if (e >= 0) {
         for (; e > 127; ) t.push((127 & e) | 128), (e >>>= 7);
         t.push(e);
     } else {
-        for (let n = 0; n < 9; n++) t.push((127 & e) | 128), (e >>= 7);
+        for (let r = 0; r < 9; r++) t.push((127 & e) | 128), (e >>= 7);
         t.push(1);
     }
 }
@@ -85,4 +85,4 @@ function l() {
     if ((128 & e) != 0) throw Error("invalid varint");
     return this.assertBounds(), t >>> 0;
 }
-n.d(t, { Gn: () => l, Jg: () => s, cV: () => r, f7: () => o, ls: () => i, oJ: () => a });
+r.d(t, { Gn: () => l, Jg: () => i, cV: () => o, f7: () => s, ls: () => n, oJ: () => a });

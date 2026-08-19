@@ -1,14 +1,14 @@
 "use strict";
-n.d(t, { A: () => a }), n(938796);
-var i = n(613373),
-    r = n(652215);
-function a(e, t) {
+n.d(t, { A: () => s }), n(938796);
+var l = n(613373),
+    i = n(652215);
+function s(e, t) {
     if (null == e) return null;
     let n = t?.find((t) => t.id === e.attachment_id);
     return {
-        timestamp: (0, i.rB)(e.timestamp / 1e3),
+        timestamp: (0, l.rB)(e.timestamp / 1e3),
         title: n?.title ?? null,
-        isClip: ((n?.flags ?? 0) & r.sbO.IS_CLIP) != 0,
+        isClip: ((n?.flags ?? 0) & i.sbO.IS_CLIP) != 0,
         attachment: n,
     };
 }

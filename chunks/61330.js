@@ -1,7 +1,7 @@
 "use strict";
-n.d(t, { A: () => s });
+n.d(t, { A: () => a });
 var i = n(360469),
     r = n(652215);
-function s(e) {
+function a(e) {
     return e?.application_id === i.$W || e?.platform === r.yTV.XBOX;
 }

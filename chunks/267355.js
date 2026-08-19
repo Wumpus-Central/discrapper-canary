@@ -1,19 +1,19 @@
 "use strict";
-n.r(t), n.d(t, { isOverlayChannelVisible: () => c, isOverlayCurrentlyVisibleAndUnlocked: () => u });
+n.r(t), n.d(t, { isOverlayChannelVisible: () => c, isOverlayCurrentlyVisibleAndUnlocked: () => d });
 var i = n(567249),
     r = n(9302),
-    s = n(140069),
-    a = n(489277),
-    o = n(222506),
-    l = n(392164);
-function u() {
-    let e = a.A.getTargetPID();
+    a = n(140069),
+    s = n(489277),
+    l = n(222506),
+    o = n(392164);
+function d() {
+    let e = s.A.getTargetPID();
     return (
-        !(null == e || e === r.UNSET_PID || !a.A.isFocused(e) || o.A.isInputLocked(e)) && !!i.A.getWindowVisible(l.f)
+        !(null == e || e === r.UNSET_PID || !s.A.isFocused(e) || l.A.isInputLocked(e)) && !!i.A.getWindowVisible(o.f)
     );
 }
 function c(e) {
     if (__OVERLAY__) return !1;
-    let t = s.A.getSelectedChannelId();
-    return null != t && t === e && u();
+    let t = a.A.getSelectedChannelId();
+    return null != t && t === e && d();
 }

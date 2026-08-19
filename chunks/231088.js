@@ -57,19 +57,19 @@ function p(e) {
             },
             [u, E],
         ),
-        b = l.useCallback(() => {
+        T = l.useCallback(() => {
             (p.current = !0), v();
         }, [v]),
-        T = l.useCallback(() => {
+        b = l.useCallback(() => {
             (p.current = !0), E();
         }, [E]),
         N = l.useCallback(
             (e) => {
                 "Enter" !== e.key || e.shiftKey
-                    ? "Escape" === e.key && (e.preventDefault(), e.stopPropagation(), T())
-                    : (e.preventDefault(), b());
+                    ? "Escape" === e.key && (e.preventDefault(), e.stopPropagation(), b())
+                    : (e.preventDefault(), T());
             },
-            [b, T],
+            [T, b],
         );
     return {
         isEditing: u,
@@ -82,8 +82,8 @@ function p(e) {
         handleStartEditing: j,
         handleCommit: v,
         handleCancel: E,
-        handleInputCommit: b,
-        handleInputCancel: T,
+        handleInputCommit: T,
+        handleInputCancel: b,
         onInputKeyDown: N,
         onBlur: S,
         onContainerKeyDown: C,
@@ -127,8 +127,8 @@ function A(e) {
             onBlur: E,
             onKeyDown: S,
             disabled: C = !1,
-            growWidth: b = !1,
-            removeVerticalPadding: T = !1,
+            growWidth: T = !1,
+            removeVerticalPadding: b = !1,
         } = e,
         N = l.useRef(null),
         w = l.useId(),
@@ -175,7 +175,7 @@ function A(e) {
         });
     return (0, n.jsx)("div", {
         ref: v,
-        className: r()(h.kL, { [h.oE]: "compact" === u, [h.c1]: "multiline" === u, [h.CP]: b, [h.WK]: T }, A),
+        className: r()(h.kL, { [h.oE]: "compact" === u, [h.c1]: "multiline" === u, [h.CP]: T, [h.WK]: b }, A),
         onBlur: E,
         onKeyDown: S,
         children: (0, n.jsx)(

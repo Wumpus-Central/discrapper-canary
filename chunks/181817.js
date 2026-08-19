@@ -1,2 +1,2 @@
-let i = n(861345);
-e.exports = (e, t, n) => i(e, t, ">", n);
+let n = r(861345);
+e.exports = (e, t, r) => n(e, t, ">", r);

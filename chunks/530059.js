@@ -1,4 +1,4 @@
-d.r(
+r.r(
     (e.exports = {
         ring: "ring_ddf8f1",
         lg: "lg_ddf8f1",

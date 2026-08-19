@@ -14,14 +14,14 @@ var i = n(477900),
     f = n(471993),
     A = n(734057),
     x = n(71393),
-    g = n(626822),
+    g = n(453028),
     C = n(576705),
     y = n(309010),
     j = n(920639),
     I = n(82715),
     v = n(731854),
-    E = n(375708),
-    N = n(660443),
+    N = n(375708),
+    E = n(660443),
     b = n(726123);
 function _(e) {
     let { channelId: t, center: n, iconSize: a } = e,
@@ -32,28 +32,28 @@ function _(e) {
         L = (0, r.bG)([x.A, C.A], () => null != _ && (0, h.vz)(_, x.A, C.A, !0)),
         { analyticsLocations: O } = (0, u.Ay)(d.A.GUILD_ROOM),
         { Component: P } = (0, o.c)("enable"),
-        w = (0, r.bG)([g.Ay], () => g.Ay.supports(v.O5.VIDEO)),
-        M = l.useRef(null),
+        M = (0, r.bG)([g.Ay], () => g.Ay.supports(v.O5.VIDEO)),
+        w = l.useRef(null),
         D = l.useCallback(() => {
             if (null != T) {
                 if (!S) return void (0, m.A)();
                 (0, f.A)(T, t, O), (0, j.n0)({ channelId: t, interactionType: "tv_stream_clicked" });
             }
         }, [T, S, t, O]);
-    return null != _ && null != T && L && R && w
+    return null != _ && null != T && L && R && M
         ? (0, i.jsxs)(c.D, {
-              "aria-label": E.intl.string(E.t.fjBNo1),
+              "aria-label": N.intl.string(N.t.fjBNo1),
               className: b.XI,
               onClick: D,
-              focusProps: { ringTarget: M },
+              focusProps: { ringTarget: w },
               children: [
-                  (0, i.jsx)(I.A, { className: s()(b.ys, N.zq) }),
+                  (0, i.jsx)(I.A, { className: s()(b.ys, E.zq) }),
                   (0, i.jsx)("div", {
                       className: b.F$,
                       style: { left: `${n.x}%`, top: `${n.y}%` },
                       children: (0, i.jsx)("div", {
-                          className: N.zq,
-                          ref: M,
+                          className: E.zq,
+                          ref: w,
                           children: (0, i.jsx)(P, {
                               className: b.Kk,
                               color: "currentColor",

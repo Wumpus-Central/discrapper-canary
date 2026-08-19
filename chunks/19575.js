@@ -186,19 +186,19 @@ let g = window.DiscordNative,
     S = new Set(["jpg", "jpeg", "jfif", "png"]),
     N = new Set(["webp", "avif"]),
     C = new Set(["jpg", "jpeg", "jfif", "png", "webp", "gif", "tiff", "bmp", "avif"]),
-    R = null,
     O = null,
+    R = null,
     L = null,
-    D = {},
-    y = !1,
+    y = {},
+    D = !1,
     v = {};
 null != g &&
-    ((R = g.app
+    ((O = g.app
         .getVersion()
         .split(".")
         .map((e) => parseInt(e))),
     (L = g.app.getModuleVersions()),
-    (O = g.app.getBuildNumber()));
+    (R = g.app.getBuildNumber()));
 let b = new Set([
         "discord_erlpack",
         "discord_game_utils",
@@ -253,7 +253,7 @@ var W =
     (a[(a.ScreenRecording = 4)] = "ScreenRecording"),
     a);
 function Y(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : D;
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : y;
     return {
         id: t[e.id ?? ""],
         nativeProcessObserverId: parseInt(e.id ?? "", 10),
@@ -286,9 +286,9 @@ function K(e) {
 }
 let $ = {
         requireModule(e) {
-            if (y && v.hasOwnProperty(e) && null != v[e]) return v[e];
+            if (D && v.hasOwnProperty(e) && null != v[e]) return v[e];
             let t = g.nativeModules.requireModule(e);
-            return y && (v[e] = t), t;
+            return D && (v[e] = t), t;
         },
         ensureModule: (e) =>
             f.isPlatformEmbedded
@@ -339,14 +339,14 @@ let $ = {
         },
         setObservedGamesCallback(e, t, n, i) {
             try {
-                D = {};
+                y = {};
                 let a = 0,
                     s = this.getDiscordUtils(),
                     l = e.map((e) => {
                         let t = ++a;
-                        return null != e.id && (D[t] = e.id), { ...e, cmdline: e.cmdLine, id: t };
+                        return null != e.id && (y[t] = e.id), { ...e, cmdline: e.cmdLine, id: t };
                     }),
-                    o = D;
+                    o = y;
                 function r(e) {
                     return n(e.map((e) => Y(e, o)));
                 }
@@ -476,10 +476,10 @@ let $ = {
             return g.app.getReleaseChannel();
         },
         get version() {
-            return R;
+            return O;
         },
         get buildNumber() {
-            return O;
+            return R;
         },
         get moduleVersions() {
             return L;
@@ -1033,7 +1033,7 @@ let $ = {
             if (null != t) return t(e);
         },
         isModuleVersionAtLeast(e, t) {
-            let n = [...(R ?? [0, 0, 0])];
+            let n = [...(O ?? [0, 0, 0])];
             n.push(this.moduleVersions?.[e] ?? 0);
             let i = t[this.releaseChannel] ?? t.stable;
             for (let [e, t] of n.entries())
@@ -1072,7 +1072,7 @@ let $ = {
             K(c.APP_ASYNC_INDEX_TSX_LOADED);
         },
         setUseRequireModuleCache(e) {
-            y = e;
+            D = e;
         },
         async GetSystemGpuStats(e) {
             if (!f.isPlatformEmbedded) return [];

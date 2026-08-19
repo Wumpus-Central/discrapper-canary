@@ -1,4 +1,4 @@
-n.d(t, { t: () => C });
+n.d(t, { t: () => h });
 var l = n(477900);
 n(582128);
 var i = n(503698),
@@ -11,22 +11,22 @@ var i = n(503698),
     d = n(165191),
     p = n(238017),
     m = n(860262);
-function C(e) {
+function h(e) {
     let { isShopGift: t } = e,
         {
             giftRecipient: n,
             selectedGiftStyle: i,
-            emojiConfetti: C,
-            soundEffect: h,
-            setEmojiConfetti: E,
-            setSoundEffect: f,
+            emojiConfetti: h,
+            soundEffect: C,
+            setEmojiConfetti: f,
+            setSoundEffect: E,
         } = (0, s.Pv)(),
-        A = (0, u.lo)(n, t),
-        S = A === u.tB.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD,
-        y = A !== u.tB.DEFAULT;
+        S = (0, u.lo)(n, t),
+        y = S === u.tB.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD,
+        A = S !== u.tB.DEFAULT;
     return (0, l.jsxs)("div", {
         children: [
-            y &&
+            A &&
                 (0, l.jsxs)("div", {
                     className: m.Os,
                     children: [
@@ -44,17 +44,17 @@ function C(e) {
                                       })
                                     : (0, l.jsx)(a.y, { className: m.u1 }),
                         }),
-                        S &&
+                        y &&
                             (0, l.jsxs)("div", {
                                 className: r()(m.b7, m.Ow),
                                 children: [
                                     (0, l.jsx)(o.A, {
-                                        sound: h,
+                                        sound: C,
                                         onSelect: function (e) {
-                                            null != f && f(null == e ? void 0 : e);
+                                            null != E && E(null == e ? void 0 : e);
                                         },
                                     }),
-                                    (0, l.jsx)(p.A, { setEmojiConfetti: E, emojiConfetti: null == C ? void 0 : C }),
+                                    (0, l.jsx)(p.A, { setEmojiConfetti: f, emojiConfetti: null == h ? void 0 : h }),
                                 ],
                             }),
                     ],

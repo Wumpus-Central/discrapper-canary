@@ -1,23 +1,23 @@
-i.d(t, { A: () => a });
-var n = i(582128),
-    l = i(207803),
-    s = i(591179),
-    r = i(485745);
-function a(e) {
+u.d(t, { A: () => l });
+var i = u(582128),
+    n = u(207803),
+    r = u(591179),
+    s = u(485745);
+function l(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-        i = !(0, s.X)("useUnsavedProfileChangesGuard"),
-        a = (0, r.A)(i),
-        o = n.useRef(e);
+        u = !(0, r.X)("useUnsavedProfileChangesGuard"),
+        l = (0, s.A)(u),
+        d = i.useRef(e);
     return (
-        n.useLayoutEffect(() => {
-            o.current = e;
+        i.useLayoutEffect(() => {
+            d.current = e;
         }),
-        n.useCallback(
+        i.useCallback(
             function () {
-                for (var e = arguments.length, i = Array(e), n = 0; n < e; n++) i[n] = arguments[n];
-                t && a ? (0, l.VQ)() : o.current(...i);
+                for (var e = arguments.length, u = Array(e), i = 0; i < e; i++) u[i] = arguments[i];
+                t && l ? (0, n.VQ)() : d.current(...u);
             },
-            [t, a],
+            [t, l],
         )
     );
 }

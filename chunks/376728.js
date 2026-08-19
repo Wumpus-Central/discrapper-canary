@@ -36,8 +36,8 @@ var m = n(612200),
     O = n(202384),
     R = n(51758),
     L = n(473529),
-    D = n(707592),
-    y = n(698441),
+    y = n(707592),
+    D = n(698441),
     v = n(610101),
     b = n(224536),
     M = n(842241),
@@ -57,8 +57,8 @@ var m = n(612200),
     K = n(576705),
     $ = n(994500),
     z = n(967198),
-    q = n(287809),
-    Z = n(174459),
+    Z = n(287809),
+    q = n(174459),
     X = n(927813),
     Q = n(499785),
     J = n(877062),
@@ -103,7 +103,7 @@ function e_(e, t) {
     let i = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
     V.A.addConditionalChangeListener(() => {
         let r = V.A.getChannel(e),
-            a = q.default.getCurrentUser();
+            a = Z.default.getCurrentUser();
         return (
             null == r ||
             null == a ||
@@ -118,7 +118,7 @@ function e_(e, t) {
                           null != t &&
                               (0, C.B)(() => {
                                   let e = { guildScheduledEventId: t.id };
-                                  null != n && (e.welcomeModalChannelId = n), (0, D.Ul)(t, e);
+                                  null != n && (e.welcomeModalChannelId = n), (0, y.Ul)(t, e);
                               });
                       })(t)
                     : !(function (e) {
@@ -191,7 +191,7 @@ function e_(e, t) {
                                                                 commandOrigin: S.iw.CHAT,
                                                             }));
                                                 };
-                                            !u && (0, R.V)(t, [j.A, q.default, H.Ay]) ? (0, O.Ze)(t, s) : s();
+                                            !u && (0, R.V)(t, [j.A, Z.default, H.Ay]) ? (0, O.Ze)(t, s) : s();
                                         });
                                 })
                               : (0, p.AX)(h) &&
@@ -231,7 +231,7 @@ function e_(e, t) {
 }
 async function eE(e) {
     let { guild_id: t, channel_id: n } = e;
-    (0, y.Fd)(e) && null != n ? e_(n) : await et.A.transitionToGuildSync(t);
+    (0, D.Fd)(e) && null != n ? e_(n) : await et.A.transitionToGuildSync(t);
 }
 function eA(e, t) {
     let {
@@ -244,7 +244,7 @@ function eA(e, t) {
         stream_key: o,
         number_of_users_in_channel: d,
     } = e;
-    Z.default.track(ei.HAw.INVITE_EMBED_ACTIONED, {
+    q.default.track(ei.HAw.INVITE_EMBED_ACTIONED, {
         action: i,
         invite_code: n.code,
         invite_type: n.type?.toString(),
@@ -258,7 +258,7 @@ function eA(e, t) {
     });
 }
 function eh(e, t, n) {
-    Z.default.track(ei.HAw.INVITE_SERVER_CLICKED, { guild_id: e, action: t, location_stack: n ?? null });
+    q.default.track(ei.HAw.INVITE_SERVER_CLICKED, { guild_id: e, action: t, location_stack: n ?? null });
 }
 let eI = {
     resolveInvite: function e(t, n, i) {
@@ -399,7 +399,7 @@ let eI = {
             (s = e.guildScheduledEventId), (r = e.targetChannelId), (a = e.targetMessageId);
         }
         let g = ((t = s), { ...c, invite_guild_scheduled_event_id: t }),
-            S = q.default.getCurrentUser();
+            S = Z.default.getCurrentUser();
         return S?.hasFlag(ei.nhx.QUARANTINED)
             ? ((0, U.default)(), new Promise((e, t) => t(Error())))
             : (h.h.dispatch({ type: "INVITE_ACCEPT", code: d }),
@@ -413,7 +413,7 @@ let eI = {
                   async (e) => {
                       null != p && this.clearReceivedInstallationIdForInviteCode(A),
                           h.h.dispatch({ type: "INVITE_ACCEPT_SUCCESS", invite: e.body, code: d });
-                      let t = i ?? y.Ay.getGuildScheduledEvent(s),
+                      let t = i ?? D.Ay.getGuildScheduledEvent(s),
                           c = {
                               ...e.body,
                               guild_scheduled_event: t,
@@ -524,7 +524,7 @@ let eI = {
                 message: E,
                 iosFallbackLink: `https://discord.com/api/download/mobile?invite_code=${_}`,
             })),
-                Z.default.track(ei.HAw.DEEP_LINK_CLICKED, {
+                q.default.track(ei.HAw.DEEP_LINK_CLICKED, {
                     fingerprint: (0, u.v)(n),
                     attempt_id: t,
                     source: ed,

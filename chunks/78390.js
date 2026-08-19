@@ -1,8 +1,8 @@
 "use strict";
-n.d(t, { Q: () => s, f: () => a });
+n.d(t, { Q: () => a, f: () => s });
 var i = n(317525),
     r = n(375708);
-function s(e) {
+function a(e) {
     switch (e) {
         case "home":
         case "guide":
@@ -16,7 +16,7 @@ function s(e) {
     }
     return null;
 }
-function a(e, t, n) {
+function s(e, t, n) {
     if ("linked-roles" === e) {
         if (null == n) return null;
         let e = i.A.getRole(n, t);

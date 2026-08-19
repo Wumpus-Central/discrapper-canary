@@ -30,7 +30,7 @@ let b = 10 * g.A.Millis.SECOND,
 function L(e) {
     let { streams: t, fit: n, tooltipSpacing: g, containerWidthPx: L } = e,
         [O, P] = l.useState({ streamKey: null, sequence: 0 }),
-        [w, M] = l.useState(!1),
+        [M, w] = l.useState(!1),
         [D, U] = l.useState(!1),
         V = Math.max(
             0,
@@ -51,10 +51,10 @@ function L(e) {
             P((t) => ({ streamKey: e, sequence: t.sequence + 1 }));
         }, [G]);
     l.useEffect(() => {
-        if (!B || !W || w) return;
+        if (!B || !W || M) return;
         let e = setTimeout(q, b);
         return () => clearTimeout(e);
-    }, [B, W, w, q]);
+    }, [B, W, M, q]);
     let X = l.useCallback(() => (0, I.k)(k), [k]),
         Z = { left: `${n.originX}%`, top: `${n.originY}%`, transform: n.matrix },
         Q = (0, r.p)(k, {
@@ -66,10 +66,10 @@ function L(e) {
             config: _,
         });
     function J() {
-        M(!0);
+        w(!0);
     }
     function ee() {
-        M(!1), U(!1);
+        w(!1), U(!1);
     }
     return (0, i.jsxs)("div", {
         className: E.VH,

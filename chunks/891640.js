@@ -1,4 +1,4 @@
-n.d(t, { F: () => E, i: () => C });
+n.d(t, { F: () => f, i: () => C });
 var l = n(284009),
     i = n.n(l),
     r = n(277984),
@@ -52,9 +52,9 @@ async function h(e, t) {
     return { paymentSource: await (0, r.A8)(n.info, t, l), responseType: "payment-source" };
 }
 function C(e) {
-    return e in E;
+    return e in f;
 }
-let E = {
+let f = {
     [u.he.CARD]: {
         submitAddressStep: async (e) =>
             e.shouldUsePaymentElement

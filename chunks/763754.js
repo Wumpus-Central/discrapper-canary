@@ -1,120 +1,120 @@
 "use strict";
-n.d(t, { Ay: () => f, FT: () => A, X4: () => p, d8: () => g, m2: () => m, p_: () => E });
+n.d(t, { Ay: () => A, FT: () => T, X4: () => h, d8: () => p, m2: () => f, p_: () => I });
 var i = n(284009),
     r = n.n(i),
-    s = n(17928),
-    a = n(609425),
-    o = n(734057),
-    l = n(696451),
-    u = n(317525),
+    a = n(17928),
+    s = n(609425),
+    l = n(734057),
+    o = n(696451),
+    d = n(317525),
     c = n(71393),
-    d = n(994500),
+    u = n(994500),
     _ = n(287809),
-    h = n(427262);
-function f(e, t) {
-    let n = p(e);
+    E = n(427262);
+function A(e, t) {
+    let n = h(e);
     return r()(null != n, "Result cannot be null because the message is not null"), t ?? n;
 }
-function p(e) {
-    let t = (0, s.bG)([o.A], () => (null == e ? null : o.A.getChannel(e.channel_id))),
+function h(e) {
+    let t = (0, a.bG)([l.A], () => (null == e ? null : l.A.getChannel(e.channel_id))),
         n = e?.author?.id,
         i = t?.guild_id,
-        r = (0, s.bG)([l.Ay], () => (null == i || null == n ? null : l.Ay.getMember(i, n))),
-        f = (0, s.bG)([_.default], () => _.default.getUser(n), [n]),
-        p = h.Ay.useName(e?.author.bot ? e?.author : f),
-        E = (0, s.bG)([c.A], () => c.A.getGuild(i), [i]),
-        m = r?.colorRoleId,
-        g = (0, s.bG)([u.A], () => (null != i && null != m ? u.A.getRole(i, m) : void 0), [i, m]),
-        A = (0, s.bG)([d.A], () => (null != n && t?.isPrivate() ? d.A.getNickname(n) : null)),
-        T = (0, a.A)({ userId: n, guildId: i });
+        r = (0, a.bG)([o.Ay], () => (null == i || null == n ? null : o.Ay.getMember(i, n))),
+        A = (0, a.bG)([_.default], () => _.default.getUser(n), [n]),
+        h = E.Ay.useName(e?.author.bot ? e?.author : A),
+        I = (0, a.bG)([c.A], () => c.A.getGuild(i), [i]),
+        f = r?.colorRoleId,
+        p = (0, a.bG)([d.A], () => (null != i && null != f ? d.A.getRole(i, f) : void 0), [i, f]),
+        T = (0, a.bG)([u.A], () => (null != n && t?.isPrivate() ? u.A.getNickname(n) : null)),
+        g = (0, s.A)({ userId: n, guildId: i });
     return null == e
         ? null
-        : I({
+        : m({
               user: e.author,
               channel: t,
-              guild: E,
-              memberColorRole: g,
-              userName: p,
+              guild: I,
+              memberColorRole: p,
+              userName: h,
               member: r,
-              friendNickname: A,
-              displayNameStyles: T,
+              friendNickname: T,
+              displayNameStyles: g,
           });
 }
-function E(e) {
-    let t = o.A.getChannel(e.channel_id);
-    return A(e.author, t);
+function I(e) {
+    let t = l.A.getChannel(e.channel_id);
+    return T(e.author, t);
 }
-function m(e, t) {
-    let n = g(e, t);
+function f(e, t) {
+    let n = p(e, t);
     return r()(null != n, "Result cannot be null because user and channel are not null"), n;
 }
-function g(e, t) {
+function p(e, t) {
     let n = e?.id,
         i = t?.guild_id,
-        r = (0, s.bG)([l.Ay], () => (null == i || null == n ? null : l.Ay.getMember(i, n))),
-        a = (0, s.bG)([c.A], () => c.A.getGuild(i), [i]),
-        o = r?.colorRoleId,
-        _ = (0, s.bG)([u.A], () => (null != i && null != o ? u.A.getRole(i, o) : void 0), [i, o]),
-        f = (0, s.bG)([d.A], () => (null != n && t?.isPrivate() ? d.A.getNickname(n) : null)),
-        p = h.Ay.useName(e);
-    return I({
+        r = (0, a.bG)([o.Ay], () => (null == i || null == n ? null : o.Ay.getMember(i, n))),
+        s = (0, a.bG)([c.A], () => c.A.getGuild(i), [i]),
+        l = r?.colorRoleId,
+        _ = (0, a.bG)([d.A], () => (null != i && null != l ? d.A.getRole(i, l) : void 0), [i, l]),
+        A = (0, a.bG)([u.A], () => (null != n && t?.isPrivate() ? u.A.getNickname(n) : null)),
+        h = E.Ay.useName(e);
+    return m({
         user: e,
         channel: t,
-        guild: a,
+        guild: s,
         memberColorRole: _,
         member: r,
-        userName: p,
-        friendNickname: f,
+        userName: h,
+        friendNickname: A,
         displayNameStyles: e?.displayNameStyles,
     });
 }
-function A(e, t) {
+function T(e, t) {
     let n = e?.id,
         i = t?.guild_id,
         r = c.A.getGuild(i),
-        s = null == i || null == n ? null : l.Ay.getMember(i, n),
-        a = null != i && s?.colorRoleId != null ? u.A.getRole(i, s.colorRoleId) : void 0,
-        o = null != n && null != t && t.isPrivate() ? d.A.getNickname(n) : null;
-    return I({
+        a = null == i || null == n ? null : o.Ay.getMember(i, n),
+        s = null != i && a?.colorRoleId != null ? d.A.getRole(i, a.colorRoleId) : void 0,
+        l = null != n && null != t && t.isPrivate() ? u.A.getNickname(n) : null;
+    return m({
         user: e,
         channel: t,
         guild: r,
-        memberColorRole: a,
-        member: s,
-        friendNickname: o,
+        memberColorRole: s,
+        member: a,
+        friendNickname: l,
         displayNameStyles: e?.displayNameStyles,
     });
 }
-function I(e) {
+function m(e) {
     let {
             user: t,
             channel: n,
             guild: i,
             memberColorRole: r,
-            member: s,
-            userName: a,
-            friendNickname: o,
-            displayNameStyles: l,
+            member: a,
+            userName: s,
+            friendNickname: l,
+            displayNameStyles: o,
         } = e,
-        u = null == t ? "???" : (a ?? h.Ay.getName(t));
+        d = null == t ? "???" : (s ?? E.Ay.getName(t));
     return t?.id == null || null == n
-        ? { nick: u, colorString: null, colorStrings: null, displayNameStyles: l }
+        ? { nick: d, colorString: null, colorStrings: null, displayNameStyles: o }
         : i?.id == null
-          ? { nick: o ?? u, colorString: null, colorStrings: null, displayNameStyles: l }
-          : null == s
-            ? { nick: u, colorString: null, colorStrings: null, displayNameStyles: l }
+          ? { nick: l ?? d, colorString: null, colorStrings: null, displayNameStyles: o }
+          : null == a
+            ? { nick: d, colorString: null, colorStrings: null, displayNameStyles: o }
             : {
-                  nick: s.nick ?? u,
-                  colorString: s.colorString,
-                  colorStrings: s.colorStrings,
+                  nick: a.nick ?? d,
+                  colorString: a.colorString,
+                  colorStrings: a.colorStrings,
                   colorRoleName: r?.name,
                   colorRoleId: r?.id,
-                  iconRoleId: s.iconRoleId,
-                  guildMemberAvatar: s.avatar,
-                  guildMemberAvatarDecoration: s.avatarDecoration,
+                  iconRoleId: a.iconRoleId,
+                  guildMemberAvatar: a.avatar,
+                  guildMemberAvatarDecoration: a.avatarDecoration,
                   primaryGuild: t.primaryGuild ?? void 0,
                   guildId: i.id,
                   authorId: t.id,
-                  displayNameStyles: l,
+                  displayNameStyles: o,
               };
 }

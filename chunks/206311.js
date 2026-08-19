@@ -1,6 +1,6 @@
 "use strict";
-r.d(t, { B: () => n, u: () => i }), r(632459);
-let n = [
+n.d(t, { B: () => r, u: () => i }), n(632459);
+let r = [
         "years",
         "months",
         "weeks",

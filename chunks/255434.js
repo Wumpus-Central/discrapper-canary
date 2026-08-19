@@ -84,24 +84,24 @@ function f(e) {
             positionKey: N,
         } = e,
         { isRichTooltip: C } = (0, _.w6)(),
-        [R, O] = r.useState(u?.ownerDocument);
+        [O, R] = r.useState(u?.ownerDocument);
     if (
         (r.useLayoutEffect(() => {
             var e, t;
-            O(((e = E?.current), (t = a.current), e?.ownerDocument ?? u?.ownerDocument ?? t?.ownerDocument));
+            R(((e = E?.current), (t = a.current), e?.ownerDocument ?? u?.ownerDocument ?? t?.ownerDocument));
         }, [E, u, a]),
         !n)
     )
         return null;
     let L = (0, o.Pv)(p, T),
-        D = u ?? a.current;
+        y = u ?? a.current;
     return (0, i.jsx)(o.Ow, {
         className: c.BM,
         open: n,
         spacing: m,
         placement: L,
-        reference: D,
-        ownerDocument: R,
+        reference: y,
+        ownerDocument: O,
         autoUpdate: null != N,
         renderLayer: (e) => {
             let { placement: t, shift: n } = e,

@@ -1,4 +1,4 @@
-e.exports = {
+a.exports = {
     h4: "imageWrapper_af017a",
     w8: "clickableWrapper_af017a",
     bX: "loadingOverlay_af017a",

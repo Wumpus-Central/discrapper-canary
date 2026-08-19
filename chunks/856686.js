@@ -1,14 +1,14 @@
-r.d(t, { S: () => s });
-var l = r(353640);
-let n = { skus: [], currentPage: 0, totalCount: 0, hasMorePages: !1, searchError: null, isFetchingResults: !1 },
-    s = (0, l.v)((e) => ({
-        ...n,
+r.d(t, { S: () => l });
+var s = r(196765);
+let i = { skus: [], currentPage: 0, totalCount: 0, hasMorePages: !1, searchError: null, isFetchingResults: !1 },
+    l = (0, s.v)((e) => ({
+        ...i,
         onSetResponse: (t) => {
             let r = Math.floor(t.pageOffset / t.pageLimit) + 1;
             e({ ...t, currentPage: r });
         },
         setSearchError: (t) => {
-            e({ ...n, searchError: t });
+            e({ ...i, searchError: t });
         },
         setIsFetchingResults: (t) => {
             e({ isFetchingResults: t });
@@ -17,6 +17,6 @@ let n = { skus: [], currentPage: 0, totalCount: 0, hasMorePages: !1, searchError
             e({ searchError: null });
         },
         clear: () => {
-            e({ ...n });
+            e({ ...i });
         },
     }));

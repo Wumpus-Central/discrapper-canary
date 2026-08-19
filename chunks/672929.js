@@ -1,8 +1,8 @@
-n.d(t, { A: () => a });
-var s = n(17928),
-    l = n(91242);
-function a(e, t) {
-    return (0, s.bG)([l.A], () => {
-        if (null != e) return l.A.getFrameBySurface(e, t);
+n.d(t, { A: () => s });
+var l = n(17928),
+    a = n(91242);
+function s(e, t) {
+    return (0, l.bG)([a.A], () => {
+        if (null != e) return a.A.getFrameBySurface(e, t);
     }, [e, t]);
 }

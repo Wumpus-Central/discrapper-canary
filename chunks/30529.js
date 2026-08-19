@@ -1,8 +1,8 @@
 "use strict";
-n.d(t, { X: () => s });
+n.d(t, { X: () => a });
 var i = n(544105),
     r = n(652215);
-function s(e) {
+function a(e) {
     switch (e) {
         case r.fg2.XBOX:
             return i.f$.XBOX;

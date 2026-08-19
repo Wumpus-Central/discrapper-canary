@@ -1,10 +1,10 @@
 "use strict";
-n.d(t, { H: () => l }), n(321073);
+n.d(t, { H: () => o }), n(321073);
 var i = n(852015),
     r = n(144367),
-    s = n(428420),
-    a = n(535384);
-class o extends a.G {
+    a = n(428420),
+    s = n(535384);
+class l extends s.G {
     constructor() {
         super("discord_protos.premium_marketing.v1.Gradient", [
             { no: 1, name: "colors", kind: "scalar", repeat: 2, T: 9 },
@@ -14,32 +14,32 @@ class o extends a.G {
     create(e) {
         let t = { colors: [], angle: 0 };
         return (
-            globalThis.Object.defineProperty(t, s.$, { enumerable: !1, value: this }),
+            globalThis.Object.defineProperty(t, a.$, { enumerable: !1, value: this }),
             void 0 !== e && (0, r.x)(this, t, e),
             t
         );
     }
     internalBinaryRead(e, t, n, r) {
-        let s = r ?? this.create(),
-            a = e.pos + t;
-        for (; e.pos < a; ) {
+        let a = r ?? this.create(),
+            s = e.pos + t;
+        for (; e.pos < s; ) {
             let [t, r] = e.tag();
             switch (t) {
                 case 1:
-                    s.colors.push(e.string());
+                    a.colors.push(e.string());
                     break;
                 case 2:
-                    s.angle = e.float();
+                    a.angle = e.float();
                     break;
                 default:
-                    let a = n.readUnknownField;
-                    if ("throw" === a)
+                    let s = n.readUnknownField;
+                    if ("throw" === s)
                         throw new globalThis.Error(`Unknown field ${t} (wire type ${r}) for ${this.typeName}`);
-                    let o = e.skip(r);
-                    !1 !== a && (!0 === a ? i.f$.onRead : a)(this.typeName, s, t, r, o);
+                    let l = e.skip(r);
+                    !1 !== s && (!0 === s ? i.f$.onRead : s)(this.typeName, a, t, r, l);
             }
         }
-        return s;
+        return a;
     }
     internalBinaryWrite(e, t, n) {
         for (let n = 0; n < e.colors.length; n++) t.tag(1, i.O0.LengthDelimited).string(e.colors[n]);
@@ -48,4 +48,4 @@ class o extends a.G {
         return !1 !== r && (!0 == r ? i.f$.onWrite : r)(this.typeName, e, t), t;
     }
 }
-let l = new o();
+let o = new l();

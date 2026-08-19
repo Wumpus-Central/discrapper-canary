@@ -1,4 +1,4 @@
-r.d(t, { P: () => s });
+r.d(t, { P: () => u });
 var n = r(816885),
     i = r(186615),
     o = r(728433);
@@ -8,7 +8,7 @@ function a(e, t, r) {
         e
     );
 }
-var s = (function () {
+var u = (function () {
     var e;
     function t(e) {
         var r = this;

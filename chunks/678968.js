@@ -1,9 +1,9 @@
-n.d(t, { A: () => h });
+n.d(t, { A: () => g });
 var r = n(477900),
     l = n(582128),
     i = n(554830),
-    s = n(613373),
-    u = n(475815),
+    u = n(613373),
+    s = n(475815),
     a = n(24001),
     o = n(192444),
     c = n(291749),
@@ -28,16 +28,16 @@ function C(e) {
 }
 var v = n(781121),
     A = n(190107),
-    g = n(375708);
-function h(e) {
+    h = n(375708);
+function g(e) {
     let { videoRef: t, onTrackQuestContentClick: n, orientation: m } = e,
-        { onClose: p, sourceQuestContent: h, quest: I, isFullscreenEnabled: T } = l.useContext(_.a),
-        D = (0, v.H)({ quest: I, onClose: p, sourceQuestContent: h }),
+        { onClose: p, sourceQuestContent: g, quest: I, isFullscreenEnabled: T } = l.useContext(_.a),
+        D = (0, v.H)({ quest: I, onClose: p, sourceQuestContent: g }),
         R = l.useCallback(
             (e) => {
                 if (T) {
-                    let e = (0, u.qf)(t.current?.parentNode, t.current);
-                    null != e && (0, u.sP)(e);
+                    let e = (0, s.qf)(t.current?.parentNode, t.current);
+                    null != e && (0, s.sP)(e);
                 }
                 n(e, d.Cy.LEARN_MORE), D(e, d.Cy.OPEN_GAME_LINK);
             },
@@ -45,25 +45,25 @@ function h(e) {
         ),
         { title: x, subtitle: L } = {
             title: (0, E.wr)(I),
-            subtitle: I.config.ctaConfig.subtitle ?? g.intl.string(g.t.mxaHfx),
+            subtitle: I.config.ctaConfig.subtitle ?? h.intl.string(h.t.mxaHfx),
         },
         { enabled: O } = o.uK.useConfig({ location: A.rE.VIDEO_MODAL }),
         P = l.useMemo(() => (0, c.tW)(I, c.fY.VIDEO_PLAYER_THUMBNAIL, void 0, !1)?.url ?? null, [I]);
     return O
         ? (0, r.jsxs)(r.Fragment, {
               children: [
-                  (0, r.jsx)(s.nY, { url: P }),
-                  (0, r.jsx)(s.KP, {}),
-                  (0, r.jsxs)(s.zj, {
+                  (0, r.jsx)(u.nY, { url: P }),
+                  (0, r.jsx)(u.KP, {}),
+                  (0, r.jsxs)(u.zj, {
                       orientation: m,
                       children: [
                           null != P &&
                               (0, r.jsx)(f.R, {
                                   questOrQuests: I,
                                   questContent: a.uF.VIDEO_MODAL_END_CARD,
-                                  sourceQuestContent: h,
+                                  sourceQuestContent: g,
                                   children: (e) =>
-                                      (0, r.jsx)(s.Kb, {
+                                      (0, r.jsx)(u.Kb, {
                                           ref: (t) => {
                                               e.current = t;
                                           },
@@ -71,7 +71,7 @@ function h(e) {
                                           orientation: m,
                                       }),
                               }),
-                          (0, r.jsx)(s.lx, {
+                          (0, r.jsx)(u.lx, {
                               title: x,
                               subtitle: L,
                               ctaBtnLabel: I.config.ctaConfig.buttonLabel,
@@ -89,9 +89,9 @@ function h(e) {
                       (0, r.jsx)(f.R, {
                           questOrQuests: I,
                           questContent: a.uF.VIDEO_MODAL_END_CARD,
-                          sourceQuestContent: h,
+                          sourceQuestContent: g,
                           children: (e) =>
-                              (0, r.jsx)(s.pK, {
+                              (0, r.jsx)(u.pK, {
                                   ref: (t) => {
                                       e.current = t;
                                   },
@@ -99,7 +99,7 @@ function h(e) {
                               }),
                       }),
                   (0, r.jsx)("div", { className: S.MT, "data-testid": "discord-web-video-player-end-screen" }),
-                  (0, r.jsx)(s.OH, {
+                  (0, r.jsx)(u.OH, {
                       title: x,
                       subtitle: L,
                       icon: i.K,

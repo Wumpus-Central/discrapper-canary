@@ -1,4 +1,4 @@
-e.exports = {
+_.exports = {
     zt: "dnsFont__89a31",
     u_: "cherryBomb__89a31",
     VM: "safari__89a31",

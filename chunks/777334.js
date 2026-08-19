@@ -1,8 +1,8 @@
 "use strict";
-n.d(t, { St: () => o, pj: () => a });
+n.d(t, { St: () => l, pj: () => s });
 var i = n(38405),
     r = n(41984);
-function s() {
+function a() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
         t = arguments.length > 1 ? arguments[1] : void 0;
     return {
@@ -14,13 +14,13 @@ function s() {
         },
     };
 }
-function a(e) {
+function s(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
         n = arguments.length > 2 ? arguments[2] : void 0;
-    i.A.captureException(e, s(t, n));
+    i.A.captureException(e, a(t, n));
 }
-function o(e) {
+function l(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
         n = arguments.length > 2 ? arguments[2] : void 0;
-    return i.A.captureCrash(e, s(t, n));
+    return i.A.captureCrash(e, a(t, n));
 }

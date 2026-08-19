@@ -213,7 +213,7 @@ if (null == i)
     (l = window.GLOBAL_ENV.RELEASE_CHANNEL) &&
         (null == I.release_channel || "" === I.release_channel) &&
         (I.release_channel = l.split("-")[0]),
-    isNaN((s = parseInt("583966", 10))) || (I.client_build_number = s),
+    isNaN((s = parseInt("595955", 10))) || (I.client_build_number = s),
     null == (a = U?.app.getBuildNumber()) || isNaN(a) || (I.native_build_number = a),
     (I.client_event_source = (function () {
         try {
@@ -1007,7 +1007,7 @@ let ec = {
         return eN(e, `${E}|\\d+`, { optional: t });
     },
 };
-var eu = E(873263);
+var eu = E(806163);
 let eL = new Set([
     eO.APP_WITH_INVITE_AND_GUILD_ONBOARDING(":inviteCode"),
     eO.APP_WITH_GIFT_CODE(":giftCode"),

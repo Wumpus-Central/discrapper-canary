@@ -1,9 +1,9 @@
-l.d(e, { U: () => i });
+l.d(e, { U: () => s });
 var a = l(228366),
-    u = l(617710),
-    s = l(309698);
-function i(t) {
-    s.A.hasRequestedStatuses(t) ||
+    C = l(617710),
+    i = l(309698);
+function s(t) {
+    i.A.hasRequestedStatuses(t) ||
         (a.h.dispatch({ type: "FETCH_CHANNEL_INFO", guildId: t }),
-        u.A.getSocket().requestChannelInfo(t, ["status", "voice_start_time"]));
+        C.A.getSocket().requestChannelInfo(t, ["status", "voice_start_time"]));
 }

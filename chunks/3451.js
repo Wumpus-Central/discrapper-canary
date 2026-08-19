@@ -1,12 +1,12 @@
 "use strict";
-n.d(t, { q: () => s, A: () => a });
+n.d(t, { q: () => a, A: () => s });
 var i = n(676279),
     r = n(705194);
-function s() {
+function a() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
     return e ? "/assets/d9bd8932f55dc4ba.gif" : "/assets/32336875baac6ac1.png";
 }
-let a = {
+let s = {
     DEFAULT_AVATARS: [
         n(513653),
         "/assets/788f05731f8aa02e.png",

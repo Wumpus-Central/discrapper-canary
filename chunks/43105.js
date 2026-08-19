@@ -1,74 +1,74 @@
-n.d(t, { A: () => p, h: () => _ });
-var a = n(477900),
-    r = n(582128),
-    l = n(503698),
-    i = n.n(l),
-    s = n(353795),
-    o = n(273875),
-    c = n(208756),
-    d = n(798618),
-    u = n(916845),
-    m = n(627330),
-    h = n(753094);
-function p(e) {
+n.d(t, { A: () => u, h: () => A });
+var i = n(477900),
+    s = n(582128),
+    a = n(503698),
+    l = n.n(a),
+    r = n(353795),
+    E = n(273875),
+    o = n(208756),
+    c = n(798618),
+    d = n(916845),
+    _ = n(627330),
+    S = n(753094);
+function u(e) {
     let {
             title: t,
             body: n,
-            badge: l,
-            graphic: p,
-            size: _ = "md",
-            actions: g,
-            textLink: f,
-            gradientColor: E,
-            onRequestClose: x,
-            popoverRef: v,
-            position: b,
-            caretConfig: I,
-            scrollBehavior: C,
-            ...S
+            badge: a,
+            graphic: u,
+            size: A = "md",
+            actions: I,
+            textLink: h,
+            gradientColor: T,
+            onRequestClose: R,
+            popoverRef: N,
+            position: m,
+            caretConfig: C,
+            scrollBehavior: P,
+            ...O
         } = e,
-        k = r.useCallback(
+        x = s.useCallback(
             (e, t) => {
-                x?.(t);
+                R?.(t);
             },
-            [x],
+            [R],
         ),
-        y = r.useCallback(() => {
-            x?.("user:explicit");
-        }, [x]),
-        A = {
-            targetElementRef: S.targetElementRef,
-            shouldShow: S.shouldShow,
-            hasVideo: S.hasVideo,
-            position: b,
-            caretConfig: I,
-            onRequestClose: k,
-            gradientColor: E,
-            scrollBehavior: C,
-            ...("edge" === S.alignmentStrategy
-                ? { alignmentStrategy: "edge", align: S.align }
+        f = s.useCallback(() => {
+            R?.("user:explicit");
+        }, [R]),
+        v = {
+            targetElementRef: O.targetElementRef,
+            shouldShow: O.shouldShow,
+            hasVideo: O.hasVideo,
+            position: m,
+            caretConfig: C,
+            onRequestClose: x,
+            gradientColor: T,
+            scrollBehavior: P,
+            ...("edge" === O.alignmentStrategy
+                ? { alignmentStrategy: "edge", align: O.align }
                 : { alignmentStrategy: "trigger-center" }),
         };
-    return (0, a.jsx)(o.x, {
-        ...A,
-        children: (0, a.jsxs)("div", {
-            ref: v,
+    return (0, i.jsx)(E.x, {
+        ...v,
+        children: (0, i.jsxs)("div", {
+            ref: N,
             "data-mana-component": "popover",
             children: [
-                (0, a.jsx)(u.q, { onClick: y, variant: null != E ? "color-mix" : void 0 }),
-                null != p &&
-                    (0, a.jsx)("div", {
-                        className: i()(h.graphic, { [h[`graphic--${_}`]]: null != _ }),
-                        children: (0, a.jsx)(s.v, {
-                            ...p,
-                            aspectRatio: p.aspectRatio ?? ("sm" === _ ? "2/1" : "16/9"),
+                (0, i.jsx)(d.q, { onClick: f, variant: null != T ? "color-mix" : void 0 }),
+                null != u &&
+                    (0, i.jsx)("div", {
+                        className: l()(S.graphic, { [S[`graphic--${A}`]]: null != A }),
+                        children: (0, i.jsx)(r.v, {
+                            ...u,
+                            aspectRatio: u.aspectRatio ?? ("sm" === A ? "2/1" : "16/9"),
                         }),
                     }),
-                (0, a.jsx)(m.D, { title: t, body: n, badge: l, textLink: f }),
-                null != g && g.length > 0 ? (0, a.jsx)(c.Z, { actions: g }) : null,
-                (0, a.jsx)(d.F, {}),
+                (0, i.jsx)(_.D, { title: t, body: n, badge: a, textLink: h }),
+                null != I && I.length > 0 ? (0, i.jsx)(o.Z, { actions: I }) : null,
+                (0, i.jsx)(c.F, {}),
             ],
         }),
     });
 }
-let _ = 221552 == n.j ? p : null;
+let A = 221552 == n.j ? u : null;

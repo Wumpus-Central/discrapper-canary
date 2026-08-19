@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => s });
+n.d(t, { A: () => a });
 var i,
     r =
         (((i = r || {}).CHANNEL_CHAT_RESIZABLE_SIDEBAR_RESIZE_HANDLE_WIDTH = "8px"),
@@ -91,4 +91,4 @@ var i,
         (i.INTERACTION_IFRAME_MODAL_MODAL_HEADER_HEIGHT = "52px"),
         (i.APPLICATION_DIRECTORY_PROFILE_ICON_SIZE = "122px"),
         i);
-let s = r;
+let a = r;

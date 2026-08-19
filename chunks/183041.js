@@ -32,8 +32,8 @@ function g(e) {
 var S = n(135598),
     N = n(930125),
     C = n(390248),
-    R = n(457699),
-    O = n(811602),
+    O = n(457699),
+    R = n(811602),
     L = n(282108),
     y = n(652215),
     D = n(355097);
@@ -59,8 +59,8 @@ function U(e, t) {
                 if (t === C.VL.UPDATE) {
                     let t = e.attachments ?? [],
                         n = e.embeds ?? [],
-                        i = t.filter((e) => (0, L.gh)(O.kn.EXPLICIT, { type: N.D.Attachment, media: e })),
-                        r = n.filter((e) => (0, L.gh)(O.kn.EXPLICIT, { type: N.D.Embed, media: e }));
+                        i = t.filter((e) => (0, L.gh)(R.kn.EXPLICIT, { type: N.D.Attachment, media: e })),
+                        r = n.filter((e) => (0, L.gh)(R.kn.EXPLICIT, { type: N.D.Embed, media: e }));
                     (0, C.Kl)({
                         messageId: e.id,
                         channelId: e.channel_id,
@@ -166,19 +166,19 @@ function k(e) {
             (o.numOfAttachments += i),
                 (o.numOfEmbeds += r),
                 (o.numOfExplicitAttachments =
-                    e.attachments?.filter((e) => (0, L.gh)(O.kn.EXPLICIT, { type: N.D.Attachment, media: e })).length ??
+                    e.attachments?.filter((e) => (0, L.gh)(R.kn.EXPLICIT, { type: N.D.Attachment, media: e })).length ??
                     0),
                 (o.numOfExplicitEmbeds =
-                    e.embeds?.filter((e) => (0, L.gh)(O.kn.EXPLICIT, { type: N.D.Embed, media: e })).length ?? 0),
+                    e.embeds?.filter((e) => (0, L.gh)(R.kn.EXPLICIT, { type: N.D.Embed, media: e })).length ?? 0),
                 (o.numOfGoreAttachments =
-                    e.attachments?.filter((e) => (0, L.gh)(O.kn.GORE, { type: N.D.Attachment, media: e })).length ?? 0),
+                    e.attachments?.filter((e) => (0, L.gh)(R.kn.GORE, { type: N.D.Attachment, media: e })).length ?? 0),
                 (o.numOfGoreEmbeds =
-                    e.embeds?.filter((e) => (0, L.gh)(O.kn.GORE, { type: N.D.Embed, media: e })).length ?? 0),
+                    e.embeds?.filter((e) => (0, L.gh)(R.kn.GORE, { type: N.D.Embed, media: e })).length ?? 0),
                 (o.numOfSelfHarmAttachments =
-                    e.attachments?.filter((e) => (0, L.gh)(O.kn.SELF_HARM, { type: N.D.Attachment, media: e }))
+                    e.attachments?.filter((e) => (0, L.gh)(R.kn.SELF_HARM, { type: N.D.Attachment, media: e }))
                         .length ?? 0),
                 (o.numOfSelfHarmEmbeds =
-                    e.embeds?.filter((e) => (0, L.gh)(O.kn.SELF_HARM, { type: N.D.Embed, media: e })).length ?? 0);
+                    e.embeds?.filter((e) => (0, L.gh)(R.kn.SELF_HARM, { type: N.D.Embed, media: e })).length ?? 0);
         }),
         { channelLookup: t, messageLookup: n }
     );
@@ -260,7 +260,7 @@ function V(e) {
     if (!(0, L.mS)(t)) {
         let e =
             I.A.getMessage(t.channel_id, t.id) ??
-            R.A.getMessage(t.id, t.channel_id) ??
+            O.A.getMessage(t.id, t.channel_id) ??
             _.A.getMessage(t.channel_id, t.id)?.message;
         null == e || (0, L.mS)((0, c.IU)(e, t)) || U(e, C.VL.UPDATE);
     }
@@ -326,13 +326,13 @@ function z(e) {
     let { channelId: t } = e;
     return null != t && t === f.Ay.getChannelId() && X(t);
 }
-function q(e) {
+function Z(e) {
     let { settings: t, local: n } = e;
     if (!n || t.type !== D.oD.PRELOADED_USER_SETTINGS) return !1;
     let i = f.Ay.getChannelId();
     return null != i && X(i);
 }
-function Z(e) {
+function q(e) {
     let { channelId: t, chatOpen: n } = e;
     return !!n && X(t);
 }
@@ -420,8 +420,8 @@ class Q extends d.A {
         MOD_VIEW_SEARCH_MESSAGES_SUCCESS: j,
         CHANNEL_SELECT: z,
         LOAD_PINNED_MESSAGES_SUCCESS: W,
-        USER_SETTINGS_PROTO_UPDATE: q,
-        CHANNEL_RTC_UPDATE_CHAT_OPEN: Z,
+        USER_SETTINGS_PROTO_UPDATE: Z,
+        CHANNEL_RTC_UPDATE_CHAT_OPEN: q,
     };
 }
 let J = new Q();

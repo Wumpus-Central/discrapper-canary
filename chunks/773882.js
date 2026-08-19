@@ -9,7 +9,7 @@ var l = n(477900),
     c = n(375708);
 let d = (e) => {
     let { handlePaymentSourceAdd: t } = e;
-    return (0, l.jsx)(a.Ay, { handlePaymentSourceAdd: t });
+    return (0, l.jsx)(a.RL, { handlePaymentSourceAdd: t });
 };
 class p {
     isGift;

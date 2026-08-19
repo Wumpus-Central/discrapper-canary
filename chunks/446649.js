@@ -1,42 +1,42 @@
 "use strict";
-n.d(t, { Cc: () => l, wR: () => f });
-var r = n(582128);
-let i = { prefix: String(Math.round(1e10 * Math.random())), current: 0 },
-    a = r.createContext(i),
-    o = r.createContext(!1),
+r.d(t, { Cc: () => l, wR: () => p });
+var n = r(582128);
+let o = { prefix: String(Math.round(1e10 * Math.random())), current: 0 },
+    i = n.createContext(o),
+    a = n.createContext(!1),
     s = ("u" > typeof window && window.document && window.document.createElement, new WeakMap()),
     l =
-        "function" == typeof r.useId
+        "function" == typeof n.useId
             ? function (e) {
-                  let t = r.useId(),
-                      [n] = (0, r.useState)(f()),
-                      a = n ? "react-aria" : `react-aria${i.prefix}`;
-                  return e || `${a}-${t}`;
+                  let t = n.useId(),
+                      [r] = (0, n.useState)(p()),
+                      i = r ? "react-aria" : `react-aria${o.prefix}`;
+                  return e || `${i}-${t}`;
               }
             : function (e) {
-                  let t = (0, r.useContext)(a),
-                      n = (function (e = !1) {
-                          let t = (0, r.useContext)(a),
-                              n = (0, r.useRef)(null);
-                          if (null === n.current && !e) {
-                              var i, o;
+                  let t = (0, n.useContext)(i),
+                      r = (function (e = !1) {
+                          let t = (0, n.useContext)(i),
+                              r = (0, n.useRef)(null);
+                          if (null === r.current && !e) {
+                              var o, a;
                               let e =
-                                  null == (o = r.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED) ||
-                                  null == (i = o.ReactCurrentOwner)
+                                  null == (a = n.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED) ||
+                                  null == (o = a.ReactCurrentOwner)
                                       ? void 0
-                                      : i.current;
+                                      : o.current;
                               if (e) {
-                                  let n = s.get(e);
-                                  null == n
+                                  let r = s.get(e);
+                                  null == r
                                       ? s.set(e, { id: t.current, state: e.memoizedState })
-                                      : e.memoizedState !== n.state && ((t.current = n.id), s.delete(e));
+                                      : e.memoizedState !== r.state && ((t.current = r.id), s.delete(e));
                               }
-                              n.current = ++t.current;
+                              r.current = ++t.current;
                           }
-                          return n.current;
+                          return r.current;
                       })(!!e),
-                      i = `react-aria${t.prefix}`;
-                  return e || `${i}-${n}`;
+                      o = `react-aria${t.prefix}`;
+                  return e || `${o}-${r}`;
               };
 function u() {
     return !1;
@@ -44,9 +44,9 @@ function u() {
 function c() {
     return !0;
 }
-function d(e) {
+function f(e) {
     return () => {};
 }
-function f() {
-    return "function" == typeof r.useSyncExternalStore ? r.useSyncExternalStore(d, u, c) : (0, r.useContext)(o);
+function p() {
+    return "function" == typeof n.useSyncExternalStore ? n.useSyncExternalStore(f, u, c) : (0, n.useContext)(a);
 }

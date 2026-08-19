@@ -1,38 +1,38 @@
 "use strict";
-n.d(t, { A: () => l });
+n.d(t, { A: () => o });
 var i = n(17928),
     r = n(228366),
-    s = n(495544);
-let a = { users: {} };
-class o extends i.Ay.DeviceSettingsStore {
+    a = n(280450);
+let s = { users: {} };
+class l extends i.Ay.DeviceSettingsStore {
     static displayName = "ChannelSpoilerAgreeStore";
     static persistKey = "ChannelSpoilerAgreeStore";
     initialize(e) {
-        this.waitFor(s.default), (a = null != e && null != e.users ? { users: e.users } : { users: {} });
+        this.waitFor(a.default), (s = null != e && null != e.users ? { users: e.users } : { users: {} });
     }
     didAgree(e) {
         if (null == e) return !1;
-        let t = s.default.getId();
-        return null != t && (a.users[t]?.channels[e] || !1);
+        let t = a.default.getId();
+        return null != t && (s.users[t]?.channels[e] || !1);
     }
     getState() {
-        return a;
+        return s;
     }
     getUserAgnosticState() {
-        return a;
+        return s;
     }
 }
-let l = new o(r.h, {
+let o = new l(r.h, {
     CHANNEL_SPOILER_AGREE: function (e) {
         let { channelId: t } = e,
-            n = s.default.getId();
+            n = a.default.getId();
         if (null == n) return !1;
-        null == a.users[n] && (a.users[n] = { channels: {} }), (a.users[n].channels[t] = !0);
+        null == s.users[n] && (s.users[n] = { channels: {} }), (s.users[n].channels[t] = !0);
     },
     CHANNEL_SPOILER_AGREE_CLEAR: function (e) {
         let { channelId: t } = e,
-            n = s.default.getId();
-        if (null == n || null == a.users[n]) return !1;
-        delete a.users[n].channels[t];
+            n = a.default.getId();
+        if (null == n || null == s.users[n]) return !1;
+        delete s.users[n].channels[t];
     },
 });

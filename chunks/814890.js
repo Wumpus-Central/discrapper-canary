@@ -2,7 +2,7 @@
 n.d(t, {
     Lr: () => m,
     We: () => N,
-    ZV: () => D,
+    ZV: () => y,
     c7: () => T,
     fw: () => L,
     j2: () => R,
@@ -174,7 +174,7 @@ function L(e, t, n, i) {
             : h.intl.format(h.t["ZG+3Ck"], { minValues: e, maxValues: t, maxSize: i })
         : h.intl.format(h.t.tyxwW1, { maxValues: t, maxSize: i });
 }
-function D(e) {
+function y(e) {
     return e
         .map((e, t) =>
             (function e(t, n) {
@@ -218,13 +218,13 @@ function D(e) {
                 switch (t.type) {
                     case a.I5.ACTION_ROW: {
                         let e = t.components.map((e, t) => i(e, t)).filter(u.Vq);
-                        return { type: a.I5.ACTION_ROW, id: y(n), components: e };
+                        return { type: a.I5.ACTION_ROW, id: D(n), components: e };
                     }
                     case a.I5.BUTTON: {
                         let e = null != t.emoji ? f(t.emoji, !1) : void 0;
                         return {
                             type: a.I5.BUTTON,
-                            id: y(n),
+                            id: D(n),
                             customId: t.custom_id,
                             style: t.style,
                             disabled: t.disabled,
@@ -237,7 +237,7 @@ function D(e) {
                     case a.I5.STRING_SELECT:
                         return {
                             type: a.I5.STRING_SELECT,
-                            id: y(n),
+                            id: D(n),
                             customId: t.custom_id,
                             disabled: t.disabled,
                             required: t.required ?? !1,
@@ -256,7 +256,7 @@ function D(e) {
                     case a.I5.TEXT_INPUT:
                         return {
                             type: t.type,
-                            id: y(n),
+                            id: D(n),
                             style: t.style,
                             customId: t.custom_id,
                             label: t.label,
@@ -270,7 +270,7 @@ function D(e) {
                     case a.I5.USER_SELECT:
                         return {
                             type: a.I5.USER_SELECT,
-                            id: y(n),
+                            id: D(n),
                             customId: t.custom_id,
                             disabled: t.disabled,
                             required: t.required ?? !1,
@@ -282,7 +282,7 @@ function D(e) {
                     case a.I5.ROLE_SELECT:
                         return {
                             type: a.I5.ROLE_SELECT,
-                            id: y(n),
+                            id: D(n),
                             customId: t.custom_id,
                             disabled: t.disabled,
                             required: t.required ?? !1,
@@ -294,7 +294,7 @@ function D(e) {
                     case a.I5.MENTIONABLE_SELECT:
                         return {
                             type: a.I5.MENTIONABLE_SELECT,
-                            id: y(n),
+                            id: D(n),
                             customId: t.custom_id,
                             disabled: t.disabled,
                             required: t.required ?? !1,
@@ -306,7 +306,7 @@ function D(e) {
                     case a.I5.CHANNEL_SELECT:
                         return {
                             type: a.I5.CHANNEL_SELECT,
-                            id: y(n),
+                            id: D(n),
                             customId: t.custom_id,
                             disabled: t.disabled,
                             required: t.required ?? !1,
@@ -320,14 +320,14 @@ function D(e) {
                         let e = t.components.map((e, t) => i(e, t)).filter(u.Vq),
                             r = i(t.accessory, e.length);
                         if (0 === e.length || null == r) return null;
-                        return { type: a.I5.SECTION, id: y(n), components: e, accessory: r };
+                        return { type: a.I5.SECTION, id: D(n), components: e, accessory: r };
                     }
                     case a.I5.TEXT_DISPLAY:
-                        return { type: a.I5.TEXT_DISPLAY, id: y(n), content: t.content };
+                        return { type: a.I5.TEXT_DISPLAY, id: D(n), content: t.content };
                     case a.I5.THUMBNAIL:
                         return {
                             type: a.I5.THUMBNAIL,
-                            id: y(n),
+                            id: D(n),
                             media: (0, d.Uv)(t.media),
                             description: t.description,
                             spoiler: t.spoiler,
@@ -335,7 +335,7 @@ function D(e) {
                     case a.I5.MEDIA_GALLERY:
                         return {
                             type: a.I5.MEDIA_GALLERY,
-                            id: y(n),
+                            id: D(n),
                             items: t.items.map((e) => ({
                                 media: (0, d.Uv)(e.media),
                                 description: e.description,
@@ -345,7 +345,7 @@ function D(e) {
                     case a.I5.FILE:
                         return {
                             type: a.I5.FILE,
-                            id: y(n),
+                            id: D(n),
                             file: (0, d.Uv)(t.file),
                             name: t.name,
                             size: t.size,
@@ -354,7 +354,7 @@ function D(e) {
                     case a.I5.SEPARATOR:
                         return {
                             type: a.I5.SEPARATOR,
-                            id: y(n),
+                            id: D(n),
                             divider: t.divider ?? !0,
                             spacing: t.spacing ?? a.C8.SMALL,
                         };
@@ -362,14 +362,14 @@ function D(e) {
                         if (null == t.content_inventory_entry) return null;
                         return {
                             type: a.I5.CONTENT_INVENTORY_ENTRY,
-                            id: y(n),
+                            id: D(n),
                             contentInventoryEntry: t.content_inventory_entry,
                         };
                     case a.I5.CONTAINER: {
                         let e = t.components.map((e, t) => i(e, t)).filter(u.Vq);
                         return {
                             type: a.I5.CONTAINER,
-                            id: y(n),
+                            id: D(n),
                             accentColor: null != t.accent_color ? (0, r.$k)(t.accent_color, !0) : void 0,
                             spoiler: t.spoiler,
                             components: e,
@@ -378,12 +378,12 @@ function D(e) {
                     case a.I5.LABEL: {
                         let e = i(t.component, 0);
                         if (null == e) return null;
-                        return { type: a.I5.LABEL, id: y(n), label: t.label, description: t.description, component: e };
+                        return { type: a.I5.LABEL, id: D(n), label: t.label, description: t.description, component: e };
                     }
                     case a.I5.FILE_UPLOAD:
                         return {
                             type: t.type,
-                            id: y(n),
+                            id: D(n),
                             customId: t.custom_id,
                             disabled: t.disabled,
                             required: t.required ?? !1,
@@ -400,7 +400,7 @@ function D(e) {
                             (o = s.checkpoint_data).version === A.w.V2025
                                 ? {
                                       type: s.type,
-                                      id: y(l),
+                                      id: D(l),
                                       checkpointData: {
                                           version: o.version,
                                           cardId: o.card_id,
@@ -443,7 +443,7 @@ function D(e) {
                     case a.I5.RADIO_GROUP:
                         return {
                             type: t.type,
-                            id: y(n),
+                            id: D(n),
                             customId: t.custom_id,
                             options: t.options,
                             required: t.required ?? !1,
@@ -451,7 +451,7 @@ function D(e) {
                     case a.I5.CHECKBOX_GROUP:
                         return {
                             type: t.type,
-                            id: y(n),
+                            id: D(n),
                             customId: t.custom_id,
                             options: t.options,
                             minValues: t.min_values,
@@ -459,7 +459,7 @@ function D(e) {
                             required: t.required ?? !1,
                         };
                     case a.I5.CHECKBOX:
-                        return { type: t.type, id: y(n), customId: t.custom_id, default: t.default };
+                        return { type: t.type, id: D(n), customId: t.custom_id, default: t.default };
                     default:
                         return I.warn("transformComponent: Unknown component type", t.type), null;
                 }
@@ -467,6 +467,6 @@ function D(e) {
         )
         .filter((e) => null != e);
 }
-function y(e) {
+function D(e) {
     return (0, E.X1)(e.join(","));
 }

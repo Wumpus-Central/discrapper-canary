@@ -92,7 +92,7 @@ var O = n(652215),
     R = n(672396);
 let L = new d.A("OverlayUsageStatsManager");
 L.verbose = () => {};
-class D {
+class y {
     actions = { [R.uj.Viewed]: 0, [R.uj.Clicked]: 0 };
     increment(e) {
         ++this.actions[e];
@@ -103,10 +103,10 @@ class D {
         return 0 === n && 0 === i ? null : { event_uuid: t, notification_type: e, viewed_count: n, clicked_count: i };
     }
 }
-class y {
+class D {
     actionCounters = { [R.uj.Viewed]: 0, [R.uj.Clicked]: 0 };
-    groupCounters = { [R.uj.Viewed]: y.makeEmptyGroupAnalytics(), [R.uj.Clicked]: y.makeEmptyGroupAnalytics() };
-    counters = y.makeCounters();
+    groupCounters = { [R.uj.Viewed]: D.makeEmptyGroupAnalytics(), [R.uj.Clicked]: D.makeEmptyGroupAnalytics() };
+    counters = D.makeCounters();
     static makeEmptyGroupAnalytics() {
         return {
             [R.BR.Nudge]: 0,
@@ -120,7 +120,7 @@ class y {
     static makeCounters() {
         let e = {},
             t = Object.values(R.KS);
-        for (let n of t) e[n] = new D();
+        for (let n of t) e[n] = new y();
         if (Object.keys(e).length !== t.length) throw Error("NotificationAnalytics: Failed to make counters");
         return e;
     }
@@ -293,7 +293,7 @@ class M {
     overlayStateRaw = null;
     overlayStateReason = null;
     overlayStateRawReason = null;
-    notificationAnalytics = new y();
+    notificationAnalytics = new D();
     widgetAnalytics = new v();
     screenAnalytics;
     uiUnlockedCount = 0;
@@ -663,7 +663,7 @@ class z {
         z.previousHasConnection !== n && (M.toggleRtcConnection(n), (z.previousHasConnection = n));
     }
 }
-class q {
+class Z {
     static handleMessageAcked(e) {
         L.verbose("MESSAGE_ACKED", e);
         let t = h.A.getGame();
@@ -685,9 +685,9 @@ class q {
               });
     }
 }
-class Z extends l.A {
+class q extends l.A {
     actions = __OVERLAY__
-        ? { MESSAGE_ACKED: q.handleMessageAcked, MESSAGE_CREATE: q.handleMessageCreate }
+        ? { MESSAGE_ACKED: Z.handleMessageAcked, MESSAGE_CREATE: Z.handleMessageCreate }
         : {
               OVERLAY_FOCUSED: k,
               OVERLAY_NOTIFICATION_EVENT: G,
@@ -706,4 +706,4 @@ class Z extends l.A {
               OVERLAY_TRACK_STATE_CHANGED: $,
           };
 }
-let X = new Z();
+let X = new q();

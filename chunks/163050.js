@@ -18,8 +18,8 @@ var s = n(477900),
     y = n(976860),
     A = n(210714),
     x = n(280450),
-    w = n(625494),
-    I = n(652215),
+    I = n(625494),
+    w = n(652215),
     C = n(375708),
     v = n(522826);
 c.Ay.initialize();
@@ -49,7 +49,7 @@ class S extends r.PureComponent {
         let { location: t, onLoginSuccess: n, source: s, resetToken: r } = this.props,
             { password: a, error: i } = this.state;
         if ((e.preventDefault(), 0 === a.length)) {
-            this.setState({ error: C.intl.string(C.t.R98xD5) }), w._.dispatch(I.jej.WAVE_EMPHASIZE);
+            this.setState({ error: C.intl.string(C.t.R98xD5) }), I._.dispatch(w.jej.WAVE_EMPHASIZE);
             return;
         }
         null != i && this.setState({ error: null });
@@ -94,11 +94,11 @@ class S extends r.PureComponent {
     };
     handlePasswordChangeSuccess = () => {
         let { replaceWith: e } = this.props;
-        o.v1 || o.Fr ? this.setState({ success: !0 }) : e(I.BVt.APP);
+        o.v1 || o.Fr ? this.setState({ success: !0 }) : e(w.BVt.APP);
     };
     handleGoToLogin = () => {
         let { transitionTo: e } = this.props;
-        p.A.loginReset(), e(I.BVt.LOGIN, { source: "reset_password" });
+        p.A.loginReset(), e(w.BVt.LOGIN, { source: "reset_password" });
     };
     handleOpenApp = () => {
         (0, f.A)("password_reset");

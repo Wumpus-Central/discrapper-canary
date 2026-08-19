@@ -1,32 +1,32 @@
 "use strict";
-n.d(t, { A: () => h });
+n.d(t, { A: () => E });
 var i = n(17928),
     r = n(228366),
-    s = n(209489),
-    a = n(652215);
-let o = a.wY_.UNKNOWN,
-    l = a.NKC.UNKNOWN,
-    u = null;
+    a = n(209489),
+    s = n(652215);
+let l = s.wY_.UNKNOWN,
+    o = s.NKC.UNKNOWN,
+    d = null;
 function c(e) {
-    (o = null != e.type ? e.type : a.wY_.UNKNOWN),
-        (l = e.effectiveSpeed ?? a.NKC.UNKNOWN),
-        (u = e.serviceProvider),
+    (l = null != e.type ? e.type : s.wY_.UNKNOWN),
+        (o = e.effectiveSpeed ?? s.NKC.UNKNOWN),
+        (d = e.serviceProvider),
         _.emitChange();
 }
-class d extends i.Ay.Store {
+class u extends i.Ay.Store {
     static displayName = "NetworkStore";
     initialize() {
-        s.A.getNetworkInformation().then(c), s.A.addChangeCallback(c);
+        a.A.getNetworkInformation().then(c), a.A.addChangeCallback(c);
     }
     getType() {
-        return o;
-    }
-    getEffectiveConnectionSpeed() {
         return l;
     }
+    getEffectiveConnectionSpeed() {
+        return o;
+    }
     getServiceProvider() {
-        return u;
+        return d;
     }
 }
-let _ = new d(r.h, {}),
-    h = _;
+let _ = new u(r.h, {}),
+    E = _;

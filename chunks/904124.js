@@ -1,35 +1,35 @@
-var i = n(150594),
-    r = /%[sdv%]/g,
-    s = function (e) {
+var n = r(150594),
+    o = /%[sdv%]/g,
+    i = function (e) {
         var t = 1,
-            n = arguments,
-            i = n.length;
-        return e.replace(r, function (e) {
-            if (t >= i) return e;
-            var r = n[t];
+            r = arguments,
+            n = r.length;
+        return e.replace(o, function (e) {
+            if (t >= n) return e;
+            var o = r[t];
             switch (((t += 1), e)) {
                 case "%%":
                     return "%";
                 case "%s":
-                    return String(r);
+                    return String(o);
                 case "%d":
-                    return Number(r);
+                    return Number(o);
                 case "%v":
                     return "";
             }
         });
     },
-    a = function (e, t, n) {
-        var i = [e + "=" + (t.format instanceof Function ? t.format(t.push ? n : n[t.name]) : t.format)];
+    a = function (e, t, r) {
+        var n = [e + "=" + (t.format instanceof Function ? t.format(t.push ? r : r[t.name]) : t.format)];
         if (t.names)
-            for (var r = 0; r < t.names.length; r += 1) {
-                var a = t.names[r];
-                t.name ? i.push(n[t.name][a]) : i.push(n[t.names[r]]);
+            for (var o = 0; o < t.names.length; o += 1) {
+                var a = t.names[o];
+                t.name ? n.push(r[t.name][a]) : n.push(r[t.names[o]]);
             }
-        else i.push(n[t.name]);
-        return s.apply(null, i);
+        else n.push(r[t.name]);
+        return i.apply(null, n);
     },
-    o = ["v", "o", "s", "i", "u", "e", "p", "c", "b", "t", "r", "z", "a"],
+    s = ["v", "o", "s", "i", "u", "e", "p", "c", "b", "t", "r", "z", "a"],
     l = ["i", "c", "b", "a"];
 e.exports = function (e, t) {
     (t = t || {}),
@@ -38,35 +38,35 @@ e.exports = function (e, t) {
         e.media.forEach(function (e) {
             null == e.payloads && (e.payloads = "");
         });
-    var n = t.outerOrder || o,
-        r = t.innerOrder || l,
-        s = [];
+    var r = t.outerOrder || s,
+        o = t.innerOrder || l,
+        i = [];
     return (
-        n.forEach(function (t) {
-            i[t].forEach(function (n) {
-                n.name in e && null != e[n.name]
-                    ? s.push(a(t, n, e))
-                    : n.push in e &&
-                      null != e[n.push] &&
-                      e[n.push].forEach(function (e) {
-                          s.push(a(t, n, e));
+        r.forEach(function (t) {
+            n[t].forEach(function (r) {
+                r.name in e && null != e[r.name]
+                    ? i.push(a(t, r, e))
+                    : r.push in e &&
+                      null != e[r.push] &&
+                      e[r.push].forEach(function (e) {
+                          i.push(a(t, r, e));
                       });
             });
         }),
         e.media.forEach(function (e) {
-            s.push(a("m", i.m[0], e)),
-                r.forEach(function (t) {
-                    i[t].forEach(function (n) {
-                        n.name in e && null != e[n.name]
-                            ? s.push(a(t, n, e))
-                            : n.push in e &&
-                              null != e[n.push] &&
-                              e[n.push].forEach(function (e) {
-                                  s.push(a(t, n, e));
+            i.push(a("m", n.m[0], e)),
+                o.forEach(function (t) {
+                    n[t].forEach(function (r) {
+                        r.name in e && null != e[r.name]
+                            ? i.push(a(t, r, e))
+                            : r.push in e &&
+                              null != e[r.push] &&
+                              e[r.push].forEach(function (e) {
+                                  i.push(a(t, r, e));
                               });
                     });
                 });
         }),
-        s.join("\r\n") + "\r\n"
+        i.join("\r\n") + "\r\n"
     );
 };

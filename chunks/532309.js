@@ -1,20 +1,20 @@
 "use strict";
-n.d(t, { V: () => h, A: () => m });
+n.d(t, { V: () => E, A: () => f });
 var i,
     r = n(410530),
-    s = n(107678),
-    a = n(582972),
-    o = n(17928),
-    l = n(228366),
-    u = n(287809),
+    a = n(107678),
+    s = n(582972),
+    l = n(17928),
+    o = n(228366),
+    d = n(287809),
     c = n(927813),
-    d = n(440005),
-    _ = n(49132),
-    h =
+    u = n(440005),
+    _ = n(26508),
+    E =
         (((i = {}).NOT_ELIGIBLE_FOR_ANY_PROGRAM_REWARD = "NOT_ELIGIBLE_FOR_ANY_PROGRAM_REWARD"),
         (i.CACHE_SHOULD_NOT_FETCH = "CACHE_SHOULD_NOT_FETCH"),
         i);
-let f = new (class {
+let A = new (class {
     value = null;
     fetchState = "idle";
     fetchedAt = null;
@@ -86,35 +86,35 @@ let f = new (class {
         null != e && ((this.value = e.value), (this.fetchedAt = e.fetchedAt), (this.fetchState = "success"));
     }
 })({ ttlMs: 864e5 });
-function p() {
+function h() {
     let { state: e, msUntilReward: t } = (function () {
-        let e = f.getValue();
+        let e = A.getValue();
         if (null == e) return { state: "MORE_THAN_24H_BEFORE_REWARD" };
         let t = new Date();
         for (let n of e.values()) {
             let e = new Date(n.next_reward_date);
             if (isNaN(e.getTime())) continue;
-            let i = (0, s.default)(e, 10);
+            let i = (0, a.default)(e, 10);
             if (t >= i) return { state: "PAST_REWARD_DATE" };
             if (t >= e || t >= (0, r.default)(e, -1))
-                return { state: "LESS_THAN_24H_BEFORE_REWARD", msUntilReward: (0, a.A)(i, t) };
+                return { state: "LESS_THAN_24H_BEFORE_REWARD", msUntilReward: (0, s.A)(i, t) };
         }
         return { state: "MORE_THAN_24H_BEFORE_REWARD" };
     })();
-    f.setTtl("LESS_THAN_24H_BEFORE_REWARD" === e ? (t ?? 864e5) : 864e5);
+    A.setTtl("LESS_THAN_24H_BEFORE_REWARD" === e ? (t ?? 864e5) : 864e5);
 }
-class E extends o.Ay.PersistedStore {
+class I extends l.Ay.PersistedStore {
     static displayName = "ProgramRewardsStore";
     static persistKey = "ProgramRewardsStore";
     initialize(e) {
-        if ((this.waitFor(u.default), e?.cache != null)) {
+        if ((this.waitFor(d.default), e?.cache != null)) {
             let t = new Map(e.cache.value);
-            f.restore({ value: t, fetchedAt: e.cache.fetchedAt });
+            A.restore({ value: t, fetchedAt: e.cache.fetchedAt });
         }
-        p();
+        h();
     }
     getState() {
-        let e = f.serialize();
+        let e = A.serialize();
         return { cache: null != e ? { value: Array.from(e.value.entries()), fetchedAt: e.fetchedAt } : null };
     }
     getTotalDaysInDuration(e) {
@@ -124,41 +124,41 @@ class E extends o.Ay.PersistedStore {
         return null == n || n <= 0 ? null : Math.ceil(n / c.A.Millis.DAY);
     }
     isFetching() {
-        return f.isLoading();
+        return A.isLoading();
     }
     isFetched() {
-        return f.isValid();
+        return A.isValid();
     }
     hasCachedValue() {
-        return null != f.getValue();
+        return null != A.getValue();
     }
     isReady() {
         return !this.isFetching() && (this.hasCachedValue() || !(0, _.CZ)("ProgramRewardsStore") || this.isError());
     }
     shouldFetch() {
         return (0, _.CZ)("ProgramRewardsStore.shouldFetch")
-            ? f.shouldFetch()
+            ? A.shouldFetch()
                 ? { shouldFetch: !0 }
                 : { shouldFetch: !1, reason: "CACHE_SHOULD_NOT_FETCH" }
             : { shouldFetch: !1, reason: "NOT_ELIGIBLE_FOR_ANY_PROGRAM_REWARD" };
     }
     isError() {
-        return f.isError();
+        return A.isError();
     }
     getStatus() {
-        return f.getStatus();
+        return A.getStatus();
     }
     getRewardForProgram(e) {
-        return f.getValue()?.get(e);
+        return A.getValue()?.get(e);
     }
     forceExpire() {
-        f.forceExpire();
+        A.forceExpire();
     }
     __getLocalVars = () => {
         let e = this.getState(),
             t = e.cache?.value ?? [],
             n = {};
-        for (let [e, i] of t) n[d.W[e] ?? String(e)] = i;
+        for (let [e, i] of t) n[u.W[e] ?? String(e)] = i;
         return {
             status: this.getStatus(),
             isFetching: this.isFetching(),
@@ -181,34 +181,34 @@ class E extends o.Ay.PersistedStore {
                 : {
                       programRewards: Object.entries(t).map((e) => {
                           let [t, n] = e;
-                          return { ...n, reward_program: d.W[t] ?? Number(t) };
+                          return { ...n, reward_program: u.W[t] ?? Number(t) };
                       }),
                   };
         },
         getPurgeVars: () => ({ rewards: null }),
     });
 }
-let m = new E(l.h, {
+let f = new I(o.h, {
     LOGOUT: function () {
-        f.clear();
+        A.clear();
     },
     PROGRAM_REWARDS_FETCH: function () {
-        f.setLoading();
+        A.setLoading();
     },
     PROGRAM_REWARDS_FETCH_SUCCESS: function (e) {
         let { programRewards: t } = e;
-        if (!f.isLoading()) return !1;
+        if (!A.isLoading()) return !1;
         let n = new Map();
         t.forEach((e) => {
             n.set(e.reward_program, e);
         }),
-            f.setValue(n),
-            p();
+            A.setValue(n),
+            h();
     },
     PROGRAM_REWARDS_FETCH_FAILURE: function () {
-        if (!f.isLoading()) return !1;
-        f.setError();
+        if (!A.isLoading()) return !1;
+        A.setError();
     },
-    CURRENT_USER_UPDATE: p,
-    CONNECTION_OPEN: p,
+    CURRENT_USER_UPDATE: h,
+    CONNECTION_OPEN: h,
 });

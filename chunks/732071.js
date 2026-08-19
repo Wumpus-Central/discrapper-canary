@@ -1,32 +1,32 @@
 "use strict";
-n.d(t, { A: () => p, K: () => _ }), n(321073);
+n.d(t, { A: () => h, K: () => _ }), n(321073);
 var i,
     r = n(635377),
-    s = n.n(r),
-    a = n(562708),
-    o = n(439372),
-    l = n(793574),
-    u = n(174459),
+    a = n.n(r),
+    s = n(562708),
+    l = n(439372),
+    o = n(793574),
+    d = n(174459),
     c = n(403362),
-    d = n(652215),
+    u = n(652215),
     _ =
         (((i = {}).ANNOUNCEMENT = "announcement"),
         (i.APP_EMBED = "app_embed"),
         (i.OFFICIAL_MESSAGE = "official_message"),
         (i.VOICE_INVITE_EMBED = "voice_invite_embed"),
         i);
-function h(e) {
+function E(e) {
     return "voice_invite_embed" === e.type ? `${e.messageId}-${e.inviteCode}-${e.type}` : `${e.messageId}-${e.type}`;
 }
-class f extends o.A {
+class A extends l.A {
     currentlyVisibleMessageTimers = {};
     viewsInCurrentChannel = new Set();
-    recentViewTimes = new (s())({ max: 500, maxAge: 6e4 });
+    recentViewTimes = new (a())({ max: 500, maxAge: 6e4 });
     batchBuffer = [];
     batchTimerId = null;
     actions = { CHANNEL_SELECT: () => this.handleChannelSelect() };
     handleMessageBecameVisible(e) {
-        let t = h(e);
+        let t = E(e);
         if (null != this.currentlyVisibleMessageTimers[t] || this.viewsInCurrentChannel.has(t)) return;
         let n = this.recentViewTimes.get(t);
         if (null != n && Date.now() - n < 6e4) return;
@@ -47,7 +47,7 @@ class f extends o.A {
         for (let t of e) this.handleMessageBecameVisible(t);
         let n = Object.keys(this.currentlyVisibleMessageTimers);
         if (n.length > 0) {
-            let i = new Set(e.map(h));
+            let i = new Set(e.map(E));
             for (let e of n) e.endsWith(`-${t}`) && !i.has(e) && this.clearTimer(e);
         }
     }
@@ -65,7 +65,7 @@ class f extends o.A {
                 switch (e.type) {
                     case "announcement":
                         return {
-                            event: d.HAw.ANNOUNCEMENT_MESSAGE_VIEWED,
+                            event: u.HAw.ANNOUNCEMENT_MESSAGE_VIEWED,
                             properties: {
                                 message_id: e.messageId,
                                 channel_id: e.channelId,
@@ -76,7 +76,7 @@ class f extends o.A {
                         };
                     case "app_embed":
                         return {
-                            event: d.HAw.APP_EMBED_VIEWED,
+                            event: u.HAw.APP_EMBED_VIEWED,
                             properties: {
                                 application_id: e.applicationId,
                                 link_type: e.linkType,
@@ -87,29 +87,29 @@ class f extends o.A {
                         };
                     case "official_message":
                         return {
-                            event: d.HAw.OFFICIAL_MESSAGE_VIEWED,
+                            event: u.HAw.OFFICIAL_MESSAGE_VIEWED,
                             properties: { message_id: e.messageId, channel_id: e.channelId, guild_id: e.guildId },
                         };
                     case "voice_invite_embed":
                         return {
-                            event: a.ImpressionNames.VOICE_INVITE_EMBED,
+                            event: s.ImpressionNames.VOICE_INVITE_EMBED,
                             properties: {
-                                impression_type: a.ImpressionTypes.VIEW,
+                                impression_type: s.ImpressionTypes.VIEW,
                                 invite_code: e.inviteCode,
                                 invite_guild_id: e.inviteGuildId,
                                 invite_channel_id: e.inviteChannelId,
                                 invite_instance_id: e.inviteInstanceId,
                                 has_active_stream: e.hasActiveStream,
                                 location_stack: e.treatmentRendered
-                                    ? [l.A.INVITE_EMBED, l.A.VOICE_CHANNEL_LIST_INVITE_EMBED]
-                                    : [l.A.INVITE_EMBED],
+                                    ? [o.A.INVITE_EMBED, o.A.VOICE_CHANNEL_LIST_INVITE_EMBED]
+                                    : [o.A.INVITE_EMBED],
                             },
                         };
                     default:
                         return (0, c.xb)(e);
                 }
             })(e);
-            u.default.track(t.event, t.properties);
+            d.default.track(t.event, t.properties);
         }
         (this.batchBuffer = []),
             null != this.batchTimerId && (clearTimeout(this.batchTimerId), (this.batchTimerId = null));
@@ -120,4 +120,4 @@ class f extends o.A {
             null == this.batchTimerId && (this.batchTimerId = setTimeout(() => this.drainBuffer(), 2e3));
     }
 }
-let p = new f();
+let h = new A();

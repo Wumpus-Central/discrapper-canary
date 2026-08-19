@@ -9,7 +9,7 @@ function l(t) {
 }
 var d = s(820284),
     A = s(803842),
-    I = s(549406),
+    I = s(367385),
     c = s(652215);
 let u = { ...I.zR, [c.IWg.CAROUSEL_NEXT]: A.FK, [c.IWg.CAROUSEL_PREV]: A.B0 };
 var T = s(775121),

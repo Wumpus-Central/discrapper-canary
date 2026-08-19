@@ -16,13 +16,13 @@ var i = n(477900),
     x = n(285059),
     f = n(698441),
     E = n(496092),
-    _ = n(427080),
+    I = n(427080),
     C = n(652215);
-let I = /^\d+$/;
+let _ = /^\d+$/;
 function v(e) {
     let { code: t } = e,
         [n, v, N] = t.split("-"),
-        j = I.test(n) && I.test(v) && (null == N || I.test(N)),
+        j = _.test(n) && _.test(v) && (null == N || _.test(N)),
         { analyticsLocations: T } = (0, r.Ay)(),
         {
             guildScheduledEvent: S,
@@ -47,7 +47,7 @@ function v(e) {
             x.A.getGuildEventsForCurrentUser(n));
     }, [v, n, S?.id, j, N]),
     j)
-        ? (0, i.jsx)(_.Ay, {
+        ? (0, i.jsx)(I.Ay, {
               guild: y,
               channel: b,
               guildScheduledEvent: S,

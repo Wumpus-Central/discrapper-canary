@@ -1,10 +1,10 @@
-c.d(a, { A: () => n });
-var i = c(477900);
-c(582128);
-var r = c(503698),
-    d = c.n(r),
-    e = c(546386);
-function n(s) {
-    let { children: a, fitContent: c } = s;
-    return (0, i.jsx)("div", { className: d()(e.k, c && e.Q), children: a });
+a.d(s, { A: () => n });
+var r = a(477900);
+a(582128);
+var t = a(503698),
+    i = a.n(t),
+    l = a(546386);
+function n(e) {
+    let { children: s, fitContent: a } = e;
+    return (0, r.jsx)("div", { className: i()(l.k, a && l.Q), children: s });
 }

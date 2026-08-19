@@ -1,10 +1,10 @@
 "use strict";
-var r = {
+var n = {
     current: function (e) {
-        return n.g.requestAnimationFrame(e);
+        return r.g.requestAnimationFrame(e);
     },
     inject: function (e) {
-        r.current = e;
+        n.current = e;
     },
 };
-e.exports = r;
+e.exports = n;

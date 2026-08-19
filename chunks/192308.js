@@ -1,99 +1,99 @@
 "use strict";
 n.r(t),
     n.d(t, {
-        closeAllModals: () => R,
-        closeAllModalsInContext: () => O,
-        closeModal: () => m,
-        closeModalInAllContexts: () => g,
-        doesTopModalAllowNavigation: () => w,
+        closeAllModals: () => L,
+        closeAllModalsInContext: () => y,
+        closeModal: () => f,
+        closeModalInAllContexts: () => p,
+        doesTopModalAllowNavigation: () => M,
         getInteractingModalContext: () => _,
         getOpenModalKeys: () => S,
-        hasAnyModalOpen: () => T,
-        hasAnyModalOpenSelector: () => I,
-        hasModalOpen: () => D,
-        hasModalOpenSelector: () => b,
-        hasModalOpenedSince: () => y,
-        modalContextFromAppContext: () => h,
-        openModal: () => E,
-        openModalLazy: () => p,
+        hasAnyModalOpen: () => g,
+        hasAnyModalOpenSelector: () => m,
+        hasModalOpen: () => v,
+        hasModalOpenSelector: () => D,
+        hasModalOpenedSince: () => N,
+        modalContextFromAppContext: () => E,
+        openModal: () => I,
+        openModalLazy: () => h,
         subscribeToModalChanges: () => C,
-        updateModal: () => A,
-        useHasAnyModalOpen: () => N,
-        useHasModalOpen: () => L,
-        useIsModalAtTop: () => v,
-        useModalsStore: () => f,
+        updateModal: () => T,
+        useHasAnyModalOpen: () => O,
+        useHasModalOpen: () => b,
+        useIsModalAtTop: () => R,
+        useModalsStore: () => A,
     }),
     n(134528),
     n(947204);
-var i = n(296489),
+var i = n(277057),
     r = n.n(i),
-    s = n(353640),
-    a = n(121894),
-    o = n(267102),
-    l = n(231723),
-    u = n(652215);
+    a = n(196765),
+    s = n(121894),
+    l = n(267102),
+    o = n(231723),
+    d = n(652215);
 let c = n(450507).A,
-    d = [l.SY, l.KX];
+    u = [o.SY, o.KX];
 function _() {
-    let e = (0, o.zd)();
-    return null != e ? h(e) : l.SY;
-}
-function h(e) {
-    switch (e) {
-        case u.BRT.POPOUT:
-            return l.KX;
-        case u.BRT.OVERLAY:
-            if (__OVERLAY__) return l.SY;
-            return l.KX;
-        default:
-            return l.SY;
-    }
-}
-let f = (0, s.v)((e) => ({ [l.SY]: [], [l.KX]: [] }));
-async function p(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-        { contextKey: n = _(), ...i } = t,
-        s = null != t.modalKey ? t.modalKey : r()(),
-        a = !1,
-        o = setTimeout(() => {
-            (a = !0), E(c, { ...i, modalKey: s }, n);
-        }, 300),
-        l = await e();
-    return (
-        clearTimeout(o),
-        a ? D(s, n) && A(s, l, i.onCloseRequest, i.onCloseCallback, n) : E(l, { ...i, modalKey: s }, n),
-        s
-    );
+    let e = (0, l.zd)();
+    return null != e ? E(e) : o.SY;
 }
 function E(e) {
+    switch (e) {
+        case d.BRT.POPOUT:
+            return o.KX;
+        case d.BRT.OVERLAY:
+            if (__OVERLAY__) return o.SY;
+            return o.KX;
+        default:
+            return o.SY;
+    }
+}
+let A = (0, a.v)((e) => ({ [o.SY]: [], [o.KX]: [] }));
+async function h(e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+        { contextKey: n = _(), ...i } = t,
+        a = null != t.modalKey ? t.modalKey : r()(),
+        s = !1,
+        l = setTimeout(() => {
+            (s = !0), I(c, { ...i, modalKey: a }, n);
+        }, 300),
+        o = await e();
+    return (
+        clearTimeout(l),
+        s ? v(a, n) && T(a, o, i.onCloseRequest, i.onCloseCallback, n) : I(o, { ...i, modalKey: a }, n),
+        a
+    );
+}
+function I(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Object.freeze({}),
         n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : _(),
         {
             modalKey: i,
-            dismissable: s,
-            instant: o,
-            Layer: l,
-            onCloseRequest: u,
+            dismissable: a,
+            instant: l,
+            Layer: o,
+            onCloseRequest: d,
             onCloseCallback: c,
-            backdropStyle: d,
-            stackingBehavior: h,
-            stackNextByDefault: p,
-            allowsNavigation: E,
+            backdropStyle: u,
+            stackingBehavior: E,
+            stackNextByDefault: h,
+            allowsNavigation: I,
         } = t,
-        g = null != i ? i : r()();
+        p = null != i ? i : r()();
     return (
-        (0, a.r)(() => {
-            f.setState((t) => {
+        (0, s.r)(() => {
+            A.setState((t) => {
                 let i = t[n];
                 if (
                     void 0 !== i &&
                     i.some((e) => {
                         let { key: t } = e;
-                        return t === g;
+                        return t === p;
                     })
                 )
                     return t;
-                let r = h;
+                let r = E;
                 return (
                     null == r && (r = i.at(-1)?.stackNextByDefault === !0 ? "stack" : "replace"),
                     {
@@ -101,29 +101,29 @@ function E(e) {
                         [n]: [
                             ...i,
                             {
-                                key: g,
-                                dismissable: s,
-                                Layer: l,
+                                key: p,
+                                dismissable: a,
+                                Layer: o,
                                 render: e,
-                                onCloseRequest: u ?? (() => m(g, n)),
+                                onCloseRequest: d ?? (() => f(p, n)),
                                 onCloseCallback: c,
-                                instant: o,
-                                backdropStyle: d,
+                                instant: l,
+                                backdropStyle: u,
                                 stackingBehavior: r,
-                                stackNextByDefault: p,
-                                allowsNavigation: E,
+                                stackNextByDefault: h,
+                                allowsNavigation: I,
                             },
                         ],
                     }
                 );
             });
         }),
-        g
+        p
     );
 }
-function m(e) {
+function f(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : _(),
-        n = f.getState()[t],
+        n = A.getState()[t],
         i =
             null != n
                 ? n.find((t) => {
@@ -132,8 +132,8 @@ function m(e) {
                   })
                 : null;
     return (
-        (0, a.r)(() => {
-            f.setState((n) =>
+        (0, s.r)(() => {
+            A.setState((n) =>
                 void 0 === n[t]
                     ? n
                     : {
@@ -149,9 +149,9 @@ function m(e) {
         null != i
     );
 }
-function g(e) {
-    let t = f.getState(),
-        n = d
+function p(e) {
+    let t = A.getState(),
+        n = u
             .map((e) => t[e] ?? [])
             .map(
                 (t) =>
@@ -161,11 +161,11 @@ function g(e) {
                     }) ?? null,
             );
     n.some((e) => null != e) &&
-        ((0, a.r)(() => {
-            f.setState((t) => {
+        ((0, s.r)(() => {
+            A.setState((t) => {
                 let n = { ...t };
                 return (
-                    d.forEach((t) => {
+                    u.forEach((t) => {
                         n[t] = n[t]?.filter((t) => {
                             let { key: n } = t;
                             return n !== e;
@@ -179,78 +179,78 @@ function g(e) {
             e?.onCloseCallback?.();
         }));
 }
-function A(e, t, n, i) {
+function T(e, t, n, i) {
     let r = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : _();
-    (0, a.r)(() => {
-        f.setState((s) =>
-            void 0 === s[r]
-                ? s
+    (0, s.r)(() => {
+        A.setState((a) =>
+            void 0 === a[r]
+                ? a
                 : {
-                      ...s,
-                      [r]: s[r].map((s) =>
-                          s.key === e
-                              ? { ...s, render: t, onCloseRequest: null == n ? () => m(e, r) : n, onCloseCallback: i }
-                              : s,
+                      ...a,
+                      [r]: a[r].map((a) =>
+                          a.key === e
+                              ? { ...a, render: t, onCloseRequest: null == n ? () => f(e, r) : n, onCloseCallback: i }
+                              : a,
                       ),
                   },
         );
     });
 }
-function I(e) {
-    for (let t of d) {
+function m(e) {
+    for (let t of u) {
         let n = e[t];
         if (null != n && n.length > 0) return !0;
     }
     return !1;
 }
-function T() {
-    return I(f.getState());
+function g() {
+    return m(A.getState());
 }
 function S() {
-    let e = f.getState(),
+    let e = A.getState(),
         t = new Set();
-    for (let n of d) for (let i of e[n] ?? []) t.add(i.key);
+    for (let n of u) for (let i of e[n] ?? []) t.add(i.key);
     return t;
 }
-function y(e) {
-    let t = f.getState();
-    for (let n of d) for (let i of t[n] ?? []) if (!e.has(i.key)) return !0;
+function N(e) {
+    let t = A.getState();
+    for (let n of u) for (let i of t[n] ?? []) if (!e.has(i.key)) return !0;
     return !1;
 }
 function C(e) {
-    return f.subscribe(e);
-}
-function N() {
-    return I(f());
-}
-function v(e) {
-    let { default: t, popout: n } = f();
-    return n.length > 0 ? n.at(-1)?.key === e : t.at(-1)?.key === e;
-}
-function R() {
-    let e = f.getState();
-    for (let t in e) for (let n of e[t]) m(n.key, t);
+    return A.subscribe(e);
 }
 function O() {
-    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : _(),
-        t = f.getState()[e];
-    if (null != t) for (let n of t) m(n.key, e);
+    return m(A());
 }
-function b(e, t) {
-    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : l.SY,
+function R(e) {
+    let { default: t, popout: n } = A();
+    return n.length > 0 ? n.at(-1)?.key === e : t.at(-1)?.key === e;
+}
+function L() {
+    let e = A.getState();
+    for (let t in e) for (let n of e[t]) f(n.key, t);
+}
+function y() {
+    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : _(),
+        t = A.getState()[e];
+    if (null != t) for (let n of t) f(n.key, e);
+}
+function D(e, t) {
+    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : o.SY,
         i = e[n];
     return null != i && i.some((e) => e.key === t);
 }
-function D(e, t) {
-    return b(f.getState(), e, t);
+function v(e, t) {
+    return D(A.getState(), e, t);
 }
-function L(e, t) {
-    return b(f(), e, t);
+function b(e, t) {
+    return D(A(), e, t);
 }
-function w() {
-    let e = f.getState(),
+function M() {
+    let e = A.getState(),
         t = _();
-    if (t !== l.SY && null != e[t] && e[t].length > 0) return !1;
-    let n = e[l.SY];
+    if (t !== o.SY && null != e[t] && e[t].length > 0) return !1;
+    let n = e[o.SY];
     return null == n || !(n.length > 0) || (n.at(-1)?.allowsNavigation ?? !1);
 }

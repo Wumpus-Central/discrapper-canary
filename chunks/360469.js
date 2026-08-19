@@ -2,7 +2,7 @@
 n.d(t, {
     $W: () => E,
     AM: () => m,
-    CS: () => O,
+    CS: () => R,
     D4: () => A,
     DY: () => g,
     Gl: () => P,
@@ -10,7 +10,7 @@ n.d(t, {
     I4: () => p,
     Ig: () => u,
     M1: () => x,
-    N7: () => y,
+    N7: () => D,
     NW: () => I,
     W9: () => L,
     _J: () => v,
@@ -21,10 +21,10 @@ n.d(t, {
     i6: () => G,
     iu: () => S,
     lk: () => U,
-    mO: () => R,
+    mO: () => O,
     qA: () => h,
     qG: () => N,
-    vu: () => D,
+    vu: () => y,
     xW: () => C,
     yz: () => _,
 });
@@ -62,8 +62,8 @@ let u = 160,
         "1235205910863806484",
         "1227719606223765687",
     ],
-    R = ["1247266306231898122", "1257458870390099989", "1276239071764680926"];
-var O =
+    O = ["1247266306231898122", "1257458870390099989", "1276239071764680926"];
+var R =
         (((i = {}).ADS = "ADS"),
         (i.FAILED_LOAD = "FAILED_LOAD"),
         (i.LAGGING = "LAGGING"),
@@ -72,8 +72,8 @@ var O =
         (i.OTHER = "OTHER"),
         i),
     L = (((r = {})[(r.PLAY = 0)] = "PLAY"), (r[(r.SPECTATE = 1)] = "SPECTATE"), r),
-    D = (((a = {}).DESKTOP = "desktop"), (a.MOBILE = "mobile"), a),
-    y =
+    y = (((a = {}).DESKTOP = "desktop"), (a.MOBILE = "mobile"), a),
+    D =
         (((s = {})[(s.UNLOCKED = 1)] = "UNLOCKED"),
         (s[(s.PORTRAIT = 2)] = "PORTRAIT"),
         (s[(s.LANDSCAPE = 3)] = "LANDSCAPE"),

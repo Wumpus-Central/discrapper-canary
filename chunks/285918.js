@@ -1,14 +1,14 @@
 "use strict";
-n.d(t, { pW: () => p, F9: () => f, Mj: () => A, HR: () => h, wq: () => m, _C: () => E, Oo: () => g });
+n.d(t, { pW: () => h, F9: () => A, Mj: () => T, HR: () => E, wq: () => f, _C: () => I, Oo: () => p });
 var i = n(636537),
     r = n(228366),
-    s = n(594061),
-    a = n(941327),
-    o = n(287809),
-    l = n(329551),
-    u = n(965162),
+    a = n(594061),
+    s = n(453028),
+    l = n(287809),
+    o = n(329551),
+    d = n(965162),
     c = n(375708);
-class d extends i.$F {
+class u extends i.$F {
     constructor(e, t) {
         super(e, t, c.intl.string(c.t.Mt8yDB));
         const n = this.getFieldErrors("asset");
@@ -16,7 +16,7 @@ class d extends i.$F {
     }
 }
 var _ = n(652215);
-async function h() {
+async function E() {
     try {
         let e = await i.Bo.get({ url: _.Rsh.VIDEO_FILTER_ASSETS, rejectWithError: !1 });
         return r.h.dispatch({ type: "VIDEO_FILTER_ASSETS_FETCH_SUCCESS", assets: e.body }), e;
@@ -24,45 +24,45 @@ async function h() {
         throw (r.h.dispatch({ type: "VIDEO_FILTER_ASSETS_FETCH_FAILURE", error: e }), e);
     }
 }
-async function f(e, t, n) {
+async function A(e, t, n) {
     try {
-        let s = await i.Bo.post({
+        let a = await i.Bo.post({
             url: _.Rsh.VIDEO_FILTER_ASSETS,
             body: { type: t, asset: e, last_used: n?.toISOString() },
             rejectWithError: !1,
         });
-        return r.h.dispatch({ type: "VIDEO_FILTER_ASSET_UPLOAD_SUCCESS", videoFilterAsset: s.body }), s.body;
+        return r.h.dispatch({ type: "VIDEO_FILTER_ASSET_UPLOAD_SUCCESS", videoFilterAsset: a.body }), a.body;
     } catch (e) {
-        throw new d(e);
+        throw new u(e);
     }
 }
-async function p(e) {
+async function h(e) {
     await i.Bo.del({ url: _.Rsh.VIDEO_FILTER_ASSET(e.id), rejectWithError: !1 });
-    let t = (0, l.i)(o.default.getCurrentUser());
-    (0, u.d1)(t) && t.id === e.id && E(null),
+    let t = (0, o.i)(l.default.getCurrentUser());
+    (0, d.d1)(t) && t.id === e.id && I(null),
         r.h.dispatch({ type: "VIDEO_FILTER_ASSET_DELETE_SUCCESS", videoFilterAsset: e });
 }
-async function E(e) {
+async function I(e) {
     if (
-        (await s.wc.updateAsync(
+        (await a.wc.updateAsync(
             "voiceAndVideo",
             (t) => {
-                t.videoBackgroundFilterDesktop = (0, u.R4)(e);
+                t.videoBackgroundFilterDesktop = (0, d.R4)(e);
             },
-            s.Sb.FREQUENT_USER_ACTION,
+            a.Sb.FREQUENT_USER_ACTION,
         ),
-        (0, u.d1)(e))
+        (0, d.d1)(e))
     ) {
         let t = await i.Bo.post({ url: _.Rsh.VIDEO_FILTER_ASSET_LAST_USED(e.id), rejectWithError: !1 });
         r.h.dispatch({ type: "VIDEO_SAVE_LAST_USED_BACKGROUND_OPTION", backgroundOption: t.body });
     } else r.h.dispatch({ type: "VIDEO_SAVE_LAST_USED_BACKGROUND_OPTION", backgroundOption: e });
 }
-function m(e) {
-    a.Ay.isSupported() && r.h.dispatch({ type: "MEDIA_ENGINE_APPLY_MEDIA_FILTER_SETTINGS", settings: e });
+function f(e) {
+    s.Ay.isSupported() && r.h.dispatch({ type: "MEDIA_ENGINE_APPLY_MEDIA_FILTER_SETTINGS", settings: e });
 }
-function g() {
-    a.Ay.isSupported() && r.h.dispatch({ type: "MEDIA_ENGINE_APPLY_MEDIA_FILTER_SETTINGS_START" });
+function p() {
+    s.Ay.isSupported() && r.h.dispatch({ type: "MEDIA_ENGINE_APPLY_MEDIA_FILTER_SETTINGS_START" });
 }
-function A() {
+function T() {
     r.h.dispatch({ type: "MEDIA_ENGINE_APPLY_MEDIA_FILTER_SETTINGS_ERROR" });
 }

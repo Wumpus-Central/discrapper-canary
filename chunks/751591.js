@@ -1,13 +1,13 @@
 "use strict";
-n.d(t, { Ay: () => l });
+n.d(t, { Ay: () => o });
 let i = Object.freeze({ overflowY: "scroll", overflowX: "hidden" }),
     r = Object.freeze({ overflowY: "auto", overflowX: "hidden" }),
-    s = Object.freeze({ overflowX: "scroll", overflowY: "hidden" }),
-    a = Object.freeze({ overflowX: "auto", overflowY: "hidden" }),
-    o = Object.freeze({ overflow: "auto" });
-function l(e) {
+    a = Object.freeze({ overflowX: "scroll", overflowY: "hidden" }),
+    s = Object.freeze({ overflowX: "auto", overflowY: "hidden" }),
+    l = Object.freeze({ overflow: "auto" });
+function o(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "vertical",
         n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "scroll",
-        l = "vertical" === t ? ("auto" === n ? r : i) : "horizontal" === t ? ("auto" === n ? a : s) : o;
-    return null != e ? { ...l, ...e } : l;
+        o = "vertical" === t ? ("auto" === n ? r : i) : "horizontal" === t ? ("auto" === n ? s : a) : l;
+    return null != e ? { ...o, ...e } : o;
 }

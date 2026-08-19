@@ -24,10 +24,10 @@ var t = l(477900),
     N = l(702483),
     j = l(490682),
     E = l(683167),
-    P = l(375499),
-    w = l(267889),
-    S = l(267102),
-    R = l(363195),
+    w = l(375499),
+    P = l(267889),
+    R = l(267102),
+    S = l(363195),
     D = l(885386),
     M = l(95701),
     L = l(652215),
@@ -38,7 +38,7 @@ var t = l(477900),
 let z = (0, M.createChannelRecord)({ id: "1", type: L.rbe.DM });
 function _(e) {
     let { editor: n, pickerIntention: l, containerClassName: r } = e,
-        s = (0, g.bG)([R.A], () => R.A.theme),
+        s = (0, g.bG)([S.A], () => S.A.theme),
         u = a.useRef(null),
         o = a.useCallback(
             (e, l) => {
@@ -68,7 +68,7 @@ function _(e) {
                     children: (e) =>
                         (0, t.jsx)("div", {
                             className: e,
-                            children: (0, t.jsx)(w.A, {
+                            children: (0, t.jsx)(P.A, {
                                 persistSearch: !0,
                                 closePopout: n,
                                 onSelectEmoji: (e) => {
@@ -93,7 +93,7 @@ function _(e) {
             align: "right",
             children: (e, n) => {
                 let { isShown: l } = n;
-                return (0, t.jsx)(P.A, { ...e, ref: u, active: l, tabIndex: 0, className: V.Z8 });
+                return (0, t.jsx)(w.A, { ...e, ref: u, active: l, tabIndex: 0, className: V.Z8 });
             },
         }),
     });
@@ -139,13 +139,13 @@ function H(e) {
         C = a.useContext(o._),
         y = C?.errorMessageId != null,
         E = a.useRef(null),
-        P = a.useRef(null),
-        w = a.useCallback(() => n, [n]),
-        S = a.useCallback((e) => [...(0, j.A)(n, e, void 0), ...(0, N.A)(n, e)], [n]);
+        w = a.useRef(null),
+        P = a.useCallback(() => n, [n]),
+        R = a.useCallback((e) => [...(0, j.A)(n, e, void 0), ...(0, N.A)(n, e)], [n]);
     return (
         a.useEffect(() => {
             if ("floating" !== l) return;
-            let e = P.current;
+            let e = w.current;
             if (null != e)
                 return (
                     e.ownerDocument.addEventListener("scroll", n, { capture: !0 }),
@@ -157,7 +157,7 @@ function H(e) {
         }, [l]),
         (0, t.jsxs)(t.Fragment, {
             children: [
-                "floating" === l && (0, t.jsx)(x.A, { ref: E, getSlateEditor: w, containerRef: P }),
+                "floating" === l && (0, t.jsx)(x.A, { ref: E, getSlateEditor: P, containerRef: w }),
                 (0, t.jsx)(d.vN, {
                     children: (0, t.jsxs)("div", {
                         className: i()(V.I6, { [V.mq]: "static" === l }),
@@ -166,7 +166,7 @@ function H(e) {
                         children: [
                             "static" === l && !s && (0, t.jsx)(B, { editor: n, pickerIntention: f }),
                             (0, t.jsx)("div", {
-                                ref: P,
+                                ref: w,
                                 className: i()(V.XG, G.yL),
                                 style: { "--custom-rich-text-area-rows": v },
                                 onMouseDown: (e) => {
@@ -183,7 +183,7 @@ function H(e) {
                                     readOnly: s,
                                     canFocus: !s,
                                     autoFocus: c,
-                                    decorate: S,
+                                    decorate: R,
                                     onChange: h,
                                     onKeyDown: p,
                                     onFocus: m,
@@ -222,11 +222,11 @@ function F(e) {
             onKeyDown: y,
             onFocus: N,
             onBlur: j,
-            "aria-labelledby": P,
-            ...w
+            "aria-labelledby": w,
+            ...P
         } = e,
-        R = (function (e) {
-            let n = a.useContext(S.Ay),
+        S = (function (e) {
+            let n = a.useContext(R.Ay),
                 l = D.SI.useSetting(),
                 [t] = a.useState(() => {
                     let t = (0, s.ie)();
@@ -258,51 +258,51 @@ function F(e) {
             );
         })(n),
         [M, L] = a.useState(n),
-        [V, G] = a.useState(() => R.children.length);
+        [V, G] = a.useState(() => S.children.length);
     a.useImperativeHandle(
         I,
         () => ({
             focus(e) {
-                k.b.resetSelectionToEditorEnd(R), u.rL.toDOMNode(R, R).focus(e);
+                k.b.resetSelectionToEditorEnd(S), u.rL.toDOMNode(S, S).focus(e);
             },
             blur() {
-                u.rL.toDOMNode(R, R).blur();
+                u.rL.toDOMNode(S, S).blur();
             },
         }),
-        [R],
+        [S],
     );
-    let { fieldProps: _ } = (0, c.n)(w),
+    let { fieldProps: _ } = (0, c.n)(P),
         { disabled: B, required: F } = _,
         {
             setShouldValidate: K,
             errorMessage: q,
-            hasError: W,
+            hasError: X,
         } = (0, h.Y)({ validateOn: "change", error: v, value: M, minLength: r, maxLength: i }),
-        X = a.useRef(M);
-    X.current = M;
+        W = a.useRef(M);
+    W.current = M;
     let Y = a.useCallback(
         (e) => {
             let n = (0, C.WO)(e, { mode: "raw" });
-            n !== X.current && (L(n), K(!0), x?.(n)), d && G(e.length);
+            n !== W.current && (L(n), K(!0), x?.(n)), d && G(e.length);
         },
         [d, x, K],
     );
     a.useEffect(() => {
-        n !== X.current &&
-            ((R.children = (0, b.x7)(n)),
-            (R.selection = { anchor: T.K, focus: T.K }),
-            R.onChange(),
+        n !== W.current &&
+            ((S.children = (0, b.x7)(n)),
+            (S.selection = { anchor: T.K, focus: T.K }),
+            S.onChange(),
             L(n),
-            d && G(R.children.length));
-    }, [d, n, R]);
+            d && G(S.children.length));
+    }, [d, n, S]);
     let U = d ? Math.max(o, Math.min(V, 15)) : o,
         $ = null != i ? (0, t.jsx)(p.n, { value: M, maxLength: i }) : null;
     return (0, t.jsx)(c.D, {
         ..._,
         trailingAuxiliaryContent: $,
-        errorMessage: W ? q : void 0,
+        errorMessage: X ? q : void 0,
         children: (0, t.jsx)(H, {
-            editor: R,
+            editor: S,
             toolbarVariant: A,
             placeholder: l,
             readOnly: B,
@@ -314,7 +314,7 @@ function F(e) {
             onKeyDown: y,
             onFocus: N,
             onBlur: j,
-            ariaLabelledByProp: P,
+            ariaLabelledByProp: w,
         }),
     });
 }

@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => y, i: () => c });
+n.d(t, { A: () => D, i: () => c });
 var i = n(17928),
     r = n(228366),
     a = n(280450),
@@ -22,25 +22,25 @@ let d = new Map(),
     S = {},
     N = {},
     C = [];
-function R(e) {
+function O(e) {
     let { x: t, y: n } = e;
     return `${t},${n}`;
 }
-function O(e, t) {
+function R(e, t) {
     let n = N[e];
     if (null == n || 0 === n.length) return;
     let i = t.get(o.N.NOTE);
     if (null == i || 0 === i.length) return;
     let r = a.default.getId(),
-        s = new Set(i.filter((e) => e.createdBy === r).map((e) => R(e.position))),
-        l = n.filter((e) => !s.has(R(e.position)));
+        s = new Set(i.filter((e) => e.createdBy === r).map((e) => O(e.position))),
+        l = n.filter((e) => !s.has(O(e.position)));
     l.length !== n.length && (0 === l.length ? delete N[e] : (N[e] = l));
 }
 function L() {
     let e = l.Ay.getVoiceChannelId();
     null != e && (p.delete(e), (f[e] = f[e] ?? !0));
 }
-class D extends i.Ay.PersistedStore {
+class y extends i.Ay.PersistedStore {
     static displayName = "GuildRoomStore";
     static persistKey = "GuildRoomStore";
     initialize(e) {
@@ -85,11 +85,11 @@ class D extends i.Ay.PersistedStore {
         return m;
     }
 }
-let y = new D(r.h, {
+let D = new y(r.h, {
     GUILD_ROOM_CONNECT: function (e) {
         let { room: t, guildId: n } = e,
             { users: i, objects: r, ...a } = t;
-        (E[t.roomId] = a), (A[t.roomId] = i), (h[t.roomId] = r), O(t.roomId, r), null != n && null != I && (I = null);
+        (E[t.roomId] = a), (A[t.roomId] = i), (h[t.roomId] = r), R(t.roomId, r), null != n && null != I && (I = null);
     },
     GUILD_ROOM_CONNECT_FAILURE: function (e) {
         let { roomId: t } = e;
@@ -110,7 +110,7 @@ let y = new D(r.h, {
     GUILD_ROOM_UPDATE: function (e) {
         let { room: t } = e,
             { users: n, objects: i, ...r } = t;
-        (E[t.roomId] = r), (h[t.roomId] = i), O(t.roomId, i);
+        (E[t.roomId] = r), (h[t.roomId] = i), R(t.roomId, i);
         let s = a.default.getId(),
             l = A[t.roomId]?.get(s);
         (A[t.roomId] = n), null != l && A[t.roomId]?.set(s, l);

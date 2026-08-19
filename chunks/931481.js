@@ -13,36 +13,36 @@ var i = n(477900),
     m = n(17928),
     x = n(885386),
     R = n(994500),
-    p = n(22212),
-    g = n(375708),
-    A = n(461777);
-function I(e) {
+    g = n(22212),
+    p = n(375708),
+    I = n(461777);
+function A(e) {
     let { userId: t, analyticsLocation: n } = e,
         r = x.Zd.useSetting(),
         s = (0, m.bG)([R.A], () => R.A.getNote(t)),
         [c, u] = l.useState(!1),
         d = l.useCallback(() => {
-            u(!0), (0, p.Yq)({ analyticsLocation: n, noteLength: s?.length ?? 0 });
+            u(!0), (0, g.Yq)({ analyticsLocation: n, noteLength: s?.length ?? 0 });
         }, [n, s]);
     return r || null == s || "" === s
         ? null
         : (0, i.jsxs)("div", {
-              className: A.kL,
+              className: I.kL,
               children: [
                   c
                       ? null
                       : (0, i.jsx)("div", {
-                            className: A.p6,
+                            className: I.p6,
                             children: (0, i.jsx)(o.$, {
                                 icon: f.EyeIcon,
                                 variant: "secondary",
                                 size: "sm",
                                 onClick: d,
-                                text: g.intl.string(g.t.sB0q4C),
+                                text: p.intl.string(p.t.sB0q4C),
                             }),
                         }),
                   (0, i.jsx)(a.E, {
-                      className: c ? void 0 : A.R,
+                      className: c ? void 0 : I.R,
                       "aria-label": c ? s : "",
                       variant: "redesign/message-preview/normal",
                       children: s,
@@ -58,8 +58,8 @@ var _ = n(562153),
 function b(e) {
     let { user: t, guildId: n, channelId: r, applicationId: f, isGameRelationship: m = !1, className: x } = e,
         { themeType: R } = (0, N.E)(),
-        p = R === v.d.MODAL_V2,
-        A = _.Ay.getName(n, r, t),
+        g = R === v.d.MODAL_V2,
+        I = _.Ay.getName(n, r, t),
         { trackUserProfileAction: b } = (0, h.NJ)(),
         { newestAnalyticsLocation: j } = (0, c.Ay)(),
         { acceptFriendRequest: C, cancelFriendRequest: T } = (0, E.I)({
@@ -84,8 +84,8 @@ function b(e) {
                   P
                       ? (0, i.jsx)(a.E, {
                             variant: "text-sm/normal",
-                            children: g.intl.format(m ? g.t.syHjLL : g.t.V15uUI, {
-                                username: A,
+                            children: p.intl.format(m ? p.t.syHjLL : p.t.V15uUI, {
+                                username: I,
                                 applicationIcon: () =>
                                     (0, i.jsx)(d.A, { className: O.Gt, game: k, size: d.M.XXSMALL }, k?.id),
                                 applicationName: k?.name,
@@ -93,23 +93,23 @@ function b(e) {
                         })
                       : (0, i.jsx)(a.E, {
                             variant: "text-sm/normal",
-                            children: g.intl.format(g.t.uIomXw, { username: A }),
+                            children: p.intl.format(p.t.uIomXw, { username: I }),
                         }),
-                  (0, i.jsx)(I, { userId: t.id, analyticsLocation: "User Profile" }),
+                  (0, i.jsx)(A, { userId: t.id, analyticsLocation: "User Profile" }),
                   (0, i.jsxs)("div", {
                       className: O.UD,
                       children: [
                           (0, i.jsx)(o.$, {
-                              variant: p ? "secondary" : "primary",
+                              variant: g ? "secondary" : "primary",
                               size: "sm",
                               onClick: S,
-                              text: g.intl.string(g.t.Zcibdf),
+                              text: p.intl.string(p.t.Zcibdf),
                           }),
                           (0, i.jsx)(o.$, {
                               variant: "secondary",
                               size: "sm",
                               onClick: M,
-                              text: g.intl.string(g.t.xuio0C),
+                              text: p.intl.string(p.t.xuio0C),
                           }),
                       ],
                   }),

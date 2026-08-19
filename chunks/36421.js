@@ -1,6 +1,6 @@
 !(function (e) {
     "use strict";
-    var t = {
+    var _ = {
             1: "\u0967",
             2: "\u0968",
             3: "\u0969",
@@ -12,7 +12,7 @@
             9: "\u096F",
             0: "\u0966",
         },
-        n = {
+        t = {
             "\u0967": "1",
             "\u0968": "2",
             "\u0969": "3",
@@ -76,31 +76,31 @@
         },
         preparse: function (e) {
             return e.replace(/[\u0967\u0968\u0969\u096a\u096b\u096c\u096d\u096e\u096f\u0966]/g, function (e) {
-                return n[e];
+                return t[e];
             });
         },
         postformat: function (e) {
             return e.replace(/\d/g, function (e) {
-                return t[e];
+                return _[e];
             });
         },
         meridiemParse: /\u0930\u093e\u0924|\u0938\u0941\u092c\u0939|\u0926\u094b\u092a\u0939\u0930|\u0936\u093e\u092e/,
-        meridiemHour: function (e, t) {
-            return (12 === e && (e = 0), "\u0930\u093E\u0924" === t)
+        meridiemHour: function (e, _) {
+            return (12 === e && (e = 0), "\u0930\u093E\u0924" === _)
                 ? e < 4
                     ? e
                     : e + 12
-                : "\u0938\u0941\u092C\u0939" === t
+                : "\u0938\u0941\u092C\u0939" === _
                   ? e
-                  : "\u0926\u094B\u092A\u0939\u0930" === t
+                  : "\u0926\u094B\u092A\u0939\u0930" === _
                     ? e >= 10
                         ? e
                         : e + 12
-                    : "\u0936\u093E\u092E" === t
+                    : "\u0936\u093E\u092E" === _
                       ? e + 12
                       : void 0;
         },
-        meridiem: function (e, t, n) {
+        meridiem: function (e, _, t) {
             return e < 4
                 ? "\u0930\u093E\u0924"
                 : e < 10
@@ -113,4 +113,4 @@
         },
         week: { dow: 0, doy: 6 },
     });
-})(n(989349));
+})(t(989349));

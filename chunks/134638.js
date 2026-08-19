@@ -11,7 +11,7 @@ var l = n(477900),
     p = n(548118),
     m = n(511484),
     h = n(815545),
-    C = n(135314),
+    C = n(958720),
     f = n(71393),
     E = n(967198),
     S = n(67480),
@@ -20,8 +20,8 @@ var l = n(477900),
     P = n(580630),
     I = n(888751),
     g = n(652215),
-    _ = n(202541),
-    v = n(88001),
+    v = n(202541),
+    _ = n(88001),
     T = n(375708),
     x = n(327105),
     N = n(466919);
@@ -52,7 +52,7 @@ function b(e) {
             if (i)
                 return null != s
                     ? (0, h.Tp)(s, l)
-                    : T.intl.formatToPlainString(N.default["8bPDtb"], { premiumGroupProductName: (0, v.DP)() });
+                    : T.intl.formatToPlainString(N.default["8bPDtb"], { premiumGroupProductName: (0, _.DP)() });
             if (j(t)) {
                 let e = (0, I.iK)(l);
                 return a > 1 ? T.intl.format(x.default.kyGViz, { quantity: a, label: e }) : e;
@@ -136,16 +136,16 @@ function b(e) {
                         S = (0, P.CE)(E, n.interval, n.intervalCount),
                         y = null,
                         g = null,
-                        v = !1,
+                        _ = !1,
                         N = S,
                         b = o?.discountOffer;
                     if (p)
                         (y = (0, C.O7)(n, { amount: f, currency: l.currency })),
                             (N = (0, I.ib)(l.currency, { includeNowSuffix: !0 }));
                     else if (d) {
-                        if (((N = E), n.interval === _.WT.YEAR && (0, A.xq)(n.id))) {
+                        if (((N = E), n.interval === v.WT.YEAR && (0, A.xq)(n.id))) {
                             let e = (0, A.VA)({ subscriptionPlan: n, isGift: d, priceOptions: i });
-                            (y = null != e ? (0, P.$g)(e * u, l.currency) : null), (v = !0);
+                            (y = null != e ? (0, P.$g)(e * u, l.currency) : null), (_ = !0);
                         }
                     } else if (r) {
                         let e = (0, m.pg)(l, n.id);
@@ -171,7 +171,7 @@ function b(e) {
                                       }));
                         }
                     }
-                    return { price: N, priceStrikethroughText: g, priceSubText: y, priceSubTextHasStrikethrough: v };
+                    return { price: N, priceStrikethroughText: g, priceSubText: y, priceSubTextHasStrikethrough: _ };
                 })({
                     invoiceSummaryType: t,
                     subscriptionPlan: c,
@@ -184,7 +184,7 @@ function b(e) {
                 }),
             [t, c, n, U, O, K, q, D],
         ),
-        J = ((0, A.ys)(c.id) ? (0, A.m6)(c.id) : void 0) === _.PremiumTypes.TIER_2;
+        J = ((0, A.ys)(c.id) ? (0, A.m6)(c.id) : void 0) === v.PremiumTypes.TIER_2;
     return (0, l.jsx)(u.f7, {
         label: G,
         description: B,

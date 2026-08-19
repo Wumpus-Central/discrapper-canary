@@ -1,9 +1,9 @@
-c.d(s, { A: () => p });
-var t = c(492462),
-    a = c(873263),
-    i = c(758836);
-let p = function () {
+n.d(t, { A: () => l });
+var s = n(492462),
+    a = n(806163),
+    i = n(758836);
+let l = function () {
     let e = (0, a.zy)(),
-        { tab: s } = (0, t.parse)(e.search);
-    if (Object.values(i.G2).includes(s)) return s;
+        { tab: t } = (0, s.parse)(e.search);
+    if (Object.values(i.G2).includes(t)) return t;
 };

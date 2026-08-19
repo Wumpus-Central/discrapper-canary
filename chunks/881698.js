@@ -1,6 +1,6 @@
 "use strict";
-n.d(t, { A: () => r });
-var i = n(155718);
-function r(e) {
-    return e?.find((e) => e.type === i.Mh.NVIDIA) ?? null;
+n.d(t, { A: () => i });
+var l = n(155718);
+function i(e) {
+    return e?.find((e) => e.type === l.Mh.NVIDIA) ?? null;
 }

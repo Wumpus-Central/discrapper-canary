@@ -1,19 +1,19 @@
-i.d(n, { E: () => o });
-var e = i(477900);
-i(582128);
-var r = i(189213),
-    l = i(192308),
-    s = i(375708);
+n.d(e, { E: () => u });
+var r = n(477900);
+n(582128);
+var i = n(189213),
+    o = n(192308),
+    s = n(375708);
 function a(t) {
-    let { transitionState: n, title: i, body: l, onClose: a } = t;
-    return (0, e.jsx)(r.Modal, {
-        title: i,
+    let { transitionState: e, title: n, body: o, onClose: a } = t;
+    return (0, r.jsx)(i.Modal, {
+        title: n,
         actions: [{ text: s.intl.string(s.t["NX+WJN"]), onClick: a }],
-        transitionState: n,
+        transitionState: e,
         onClose: a,
-        subtitle: l,
+        subtitle: o,
     });
 }
-function o(t) {
-    (0, l.openModal)((n) => (0, e.jsx)(a, { ...n, ...t }));
+function u(t) {
+    (0, o.openModal)((e) => (0, r.jsx)(a, { ...e, ...t }));
 }

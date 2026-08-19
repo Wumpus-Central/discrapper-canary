@@ -1,4 +1,4 @@
-n.d(t, { Ag: () => u, Ay: () => A, QO: () => c, pq: () => _ });
+n.d(t, { Ag: () => u, Ay: () => d, QO: () => c, pq: () => o });
 var l = n(989349),
     r = n.n(l),
     a = n(315069),
@@ -41,7 +41,7 @@ function u(e) {
     else if (e <= E.F_X.GUILD_MIGRATE_BYPASS_SLOWMODE_PERMISSION) return E.GaG.GUILD;
     return i.A.captureMessage(`Unknown target type for: ${e}`), E.GaG.UNKNOWN;
 }
-function _(e) {
+function o(e) {
     switch (e) {
         case E.F_X.CHANNEL_CREATE:
         case E.F_X.CHANNEL_OVERWRITE_CREATE:
@@ -136,7 +136,7 @@ class c {
         (this.key = e), (this.oldValue = t), (this.newValue = n);
     }
 }
-class o extends a.A {
+class _ extends a.A {
     id;
     actionType;
     action;
@@ -153,7 +153,7 @@ class o extends a.A {
         super(),
             (this.id = e.id),
             (this.action = e.action),
-            (this.actionType = _(this.action)),
+            (this.actionType = o(this.action)),
             (this.targetId = e.targetId),
             (this.timestampStart = e.timestampStart ?? r()(s.default.extractTimestamp(this.id))),
             (this.timestampEnd = e.timestampEnd ?? this.timestampStart),
@@ -165,4 +165,4 @@ class o extends a.A {
             (this.user = e.user ?? null);
     }
 }
-let A = o;
+let d = _;

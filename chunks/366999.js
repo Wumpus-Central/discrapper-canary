@@ -1,18 +1,18 @@
 "use strict";
-n.d(t, { Ay: () => c, Vb: () => u, yE: () => l });
+n.d(t, { Ay: () => c, Vb: () => d, yE: () => o });
 var i,
     r = n(496431),
-    s = n(58703),
-    a = n(38405),
-    o = n(375708),
-    l =
+    a = n(58703),
+    s = n(38405),
+    l = n(375708),
+    o =
         (((i = {})[(i.SHORT_TIME_LEFT = 0)] = "SHORT_TIME_LEFT"),
         (i[(i.LONG_TIME_LEFT = 1)] = "LONG_TIME_LEFT"),
         (i[(i.ENDS_IN = 2)] = "ENDS_IN"),
         (i[(i.SHORT_TIME = 3)] = "SHORT_TIME"),
         (i[(i.CREDITS_ENDS_IN = 4)] = "CREDITS_ENDS_IN"),
         i);
-function u(e) {
+function d(e) {
     let t = { ...e };
     if (
         (t.seconds > 0 && ((t.minutes = t.minutes + 1), (t.seconds = 0)),
@@ -36,29 +36,29 @@ function c(e, t) {
     let n;
     switch (t) {
         case 0:
-            n = { days: o.t["/wnvqA"], hours: o.t.Jsq0XN, minutes: o.t["SBd+Bs"] };
+            n = { days: l.t["/wnvqA"], hours: l.t.Jsq0XN, minutes: l.t["SBd+Bs"] };
             break;
         case 1:
-            n = { days: o.t.UD5nn5, hours: o.t.Hg8Fee, minutes: o.t.XSbQZZ };
+            n = { days: l.t.UD5nn5, hours: l.t.Hg8Fee, minutes: l.t.XSbQZZ };
             break;
         case 2:
-            n = { days: o.t.rLqNad, hours: o.t.d1LvCA, minutes: o.t.Z2LX7K };
+            n = { days: l.t.rLqNad, hours: l.t.d1LvCA, minutes: l.t.Z2LX7K };
             break;
         case 4:
-            n = { days: o.t.xQ3zuN, hours: o.t.SFU7QN, minutes: o.t.Y4FNdL };
+            n = { days: l.t.xQ3zuN, hours: l.t.SFU7QN, minutes: l.t.Y4FNdL };
             break;
         case 3:
-            n = { days: o.t.fYmirx, hours: o.t["C3RO+g"], minutes: o.t.r77oHc };
+            n = { days: l.t.fYmirx, hours: l.t["C3RO+g"], minutes: l.t.r77oHc };
             break;
         default:
             throw Error(`Unknown messageType (${t}) when rendering time left`);
     }
-    let i = u((0, r.A)(e.toDate(), 6e4)),
-        l = "";
+    let i = d((0, r.A)(e.toDate(), 6e4)),
+        o = "";
     try {
-        l = (0, s.uN)(i, n);
+        o = (0, a.uN)(i, n);
     } catch {
-        a.A.captureMessage("Error trying to format string for fractional nitro duration pill");
+        s.A.captureMessage("Error trying to format string for fractional nitro duration pill");
     }
-    return l;
+    return o;
 }

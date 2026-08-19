@@ -1,56 +1,56 @@
 "use strict";
-n.d(t, { K: () => o });
-let i = new Map(),
-    r = !1;
+r.d(t, { K: () => s });
+let n = new Map(),
+    o = !1;
 try {
-    r = "exceptZero" === new Intl.NumberFormat("de-DE", { signDisplay: "exceptZero" }).resolvedOptions().signDisplay;
+    o = "exceptZero" === new Intl.NumberFormat("de-DE", { signDisplay: "exceptZero" }).resolvedOptions().signDisplay;
 } catch {}
-let s = !1;
+let i = !1;
 try {
-    s = "unit" === new Intl.NumberFormat("de-DE", { style: "unit", unit: "degree" }).resolvedOptions().style;
+    i = "unit" === new Intl.NumberFormat("de-DE", { style: "unit", unit: "degree" }).resolvedOptions().style;
 } catch {}
 let a = { degree: { narrow: { default: "\xb0", "ja-JP": " \u5EA6", "zh-TW": "\u5EA6", "sl-SI": " \xb0" } } };
-class o {
+class s {
     format(e) {
         let t = "";
         if (
             ((t =
-                r || null == this.options.signDisplay
+                o || null == this.options.signDisplay
                     ? this.numberFormatter.format(e)
-                    : (function (e, t, n) {
-                          if ("auto" === t) return e.format(n);
+                    : (function (e, t, r) {
+                          if ("auto" === t) return e.format(r);
                           {
-                              if ("never" === t) return e.format(Math.abs(n));
-                              let i = !1;
+                              if ("never" === t) return e.format(Math.abs(r));
+                              let n = !1;
                               if (
                                   ("always" === t
-                                      ? (i = n > 0 || Object.is(n, 0))
+                                      ? (n = r > 0 || Object.is(r, 0))
                                       : "exceptZero" === t &&
-                                        (Object.is(n, -0) || Object.is(n, 0) ? (n = Math.abs(n)) : (i = n > 0)),
-                                  !i)
+                                        (Object.is(r, -0) || Object.is(r, 0) ? (r = Math.abs(r)) : (n = r > 0)),
+                                  !n)
                               )
-                                  return e.format(n);
+                                  return e.format(r);
                               {
-                                  let t = e.format(-n),
-                                      i = e.format(n),
-                                      r = t.replace(i, "").replace(/\u200e|\u061C/, "");
+                                  let t = e.format(-r),
+                                      n = e.format(r),
+                                      o = t.replace(n, "").replace(/\u200e|\u061C/, "");
                                   return (
-                                      1 != [...r].length &&
+                                      1 != [...o].length &&
                                           console.warn(
                                               "@react-aria/i18n polyfill for NumberFormat signDisplay: Unsupported case",
                                           ),
-                                      t.replace(i, "!!!").replace(r, "+").replace("!!!", i)
+                                      t.replace(n, "!!!").replace(o, "+").replace("!!!", n)
                                   );
                               }
                           }
                       })(this.numberFormatter, this.options.signDisplay, e)),
-            "unit" === this.options.style && !s)
+            "unit" === this.options.style && !i)
         ) {
-            var n;
-            let { unit: e, unitDisplay: i = "short", locale: r } = this.resolvedOptions();
+            var r;
+            let { unit: e, unitDisplay: n = "short", locale: o } = this.resolvedOptions();
             if (!e) return t;
-            let s = null == (n = a[e]) ? void 0 : n[i];
-            t += s[r] || s.default;
+            let i = null == (r = a[e]) ? void 0 : r[n];
+            t += i[o] || i.default;
         }
         return t;
     }
@@ -66,19 +66,19 @@ class o {
         if ("function" == typeof this.numberFormatter.formatRangeToParts)
             return this.numberFormatter.formatRangeToParts(e, t);
         if (t < e) throw RangeError("End date must be >= start date");
-        let n = this.numberFormatter.formatToParts(e),
-            i = this.numberFormatter.formatToParts(t);
+        let r = this.numberFormatter.formatToParts(e),
+            n = this.numberFormatter.formatToParts(t);
         return [
-            ...n.map((e) => ({ ...e, source: "startRange" })),
+            ...r.map((e) => ({ ...e, source: "startRange" })),
             { type: "literal", value: " \u2013 ", source: "shared" },
-            ...i.map((e) => ({ ...e, source: "endRange" })),
+            ...n.map((e) => ({ ...e, source: "endRange" })),
         ];
     }
     resolvedOptions() {
         let e = this.numberFormatter.resolvedOptions();
         return (
-            r || null == this.options.signDisplay || (e = { ...e, signDisplay: this.options.signDisplay }),
-            s ||
+            o || null == this.options.signDisplay || (e = { ...e, signDisplay: this.options.signDisplay }),
+            i ||
                 "unit" !== this.options.style ||
                 (e = { ...e, style: "unit", unit: this.options.unit, unitDisplay: this.options.unitDisplay }),
             e
@@ -86,27 +86,27 @@ class o {
     }
     constructor(e, t = {}) {
         (this.numberFormatter = (function (e, t = {}) {
-            let { numberingSystem: n } = t;
+            let { numberingSystem: r } = t;
             if (
-                (n && e.includes("-nu-") && (e.includes("-u-") || (e += "-u-"), (e += `-nu-${n}`)),
-                "unit" === t.style && !s)
+                (r && e.includes("-nu-") && (e.includes("-u-") || (e += "-u-"), (e += `-nu-${r}`)),
+                "unit" === t.style && !i)
             ) {
-                var r;
-                let { unit: e, unitDisplay: n = "short" } = t;
+                var o;
+                let { unit: e, unitDisplay: r = "short" } = t;
                 if (!e) throw Error('unit option must be provided with style: "unit"');
-                if (!(null == (r = a[e]) ? void 0 : r[n])) throw Error(`Unsupported unit ${e} with unitDisplay = ${n}`);
+                if (!(null == (o = a[e]) ? void 0 : o[r])) throw Error(`Unsupported unit ${e} with unitDisplay = ${r}`);
                 t = { ...t, style: "decimal" };
             }
-            let o =
+            let s =
                 e +
                 (t
                     ? Object.entries(t)
                           .sort((e, t) => (e[0] < t[0] ? -1 : 1))
                           .join()
                     : "");
-            if (i.has(o)) return i.get(o);
+            if (n.has(s)) return n.get(s);
             let l = new Intl.NumberFormat(e, t);
-            return i.set(o, l), l;
+            return n.set(s, l), l;
         })(e, t)),
             (this.options = t);
     }

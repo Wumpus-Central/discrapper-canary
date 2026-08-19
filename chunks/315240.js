@@ -409,7 +409,7 @@ function K() {
         t = Z({ includeVcProbability: !0 });
     H.rebuildSortedIndexIfDirty((t) => $(t, e)), B.rebuildSortedIndexIfDirty((e) => $(e, t));
 }
-function X() {
+function q() {
     return {
         mentionCount: 0,
         lastDirectMentionAtMs: null,
@@ -425,9 +425,9 @@ function X() {
         unreadOrMentionAgeMs: null,
     };
 }
-function q() {
+function X() {
     return {
-        ...X(),
+        ...q(),
         voiceUsersWithJoinTimestampMs: new Map(),
         lastVoiceJoinAtMs: null,
         lastUnmuteActivityAtMs: new Map(),
@@ -508,7 +508,7 @@ function ei() {
                     if (null == e) continue;
                     let n = p.default.extractTimestamp(e);
                     if (n < t || null != H.getChannel(i)) continue;
-                    let s = X();
+                    let s = q();
                     (s.lastMessageAtMs = n),
                         (s.unread = g.Ay.hasUnread(i)),
                         (s.mentionCount = g.Ay.getMentionCount(i)),
@@ -522,7 +522,7 @@ function ei() {
                     if (0 === t.length) continue;
                     let n = new Map();
                     for (let [i] of t) n.set(i, e);
-                    et(i, { ...q(), voiceUsersWithJoinTimestampMs: n, lastVoiceJoinAtMs: e }, s);
+                    et(i, { ...X(), voiceUsersWithJoinTimestampMs: n, lastVoiceJoinAtMs: e }, s);
                 }
             }
         }
@@ -644,7 +644,7 @@ let ea = new es(
                       })
                   )
                       return !1;
-                  let a = ee(e.channelId, X(), s);
+                  let a = ee(e.channelId, q(), s);
                   if (null == a) return !1;
                   let d = (e.message?.mentions ?? []).some((e) => e?.id === t),
                       c = e.message?.mention_roles,
@@ -708,7 +708,7 @@ let ea = new es(
                       })
                   )
                       return !1;
-                  let r = ee(e.channelId, X(), l);
+                  let r = ee(e.channelId, q(), l);
                   if (null == r) return !1;
                   let a = new Map(r.prepareForUpdate(i).typingUserIdsWithTimestampMs);
                   a.set(e.userId, i);
@@ -777,7 +777,7 @@ let ea = new es(
                                       })
                                   )
                                       continue;
-                                  let d = et(s, q(), n);
+                                  let d = et(s, X(), n);
                                   if (null == d) continue;
                                   let c = d.prepareForUpdate(t),
                                       h = null == r || r !== s,

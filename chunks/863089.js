@@ -1,6 +1,6 @@
-e.d(t, { A: () => i });
-var l = e(17928),
-    n = e(485296);
-function i(s, t) {
-    return (0, l.bG)([n.A], () => (null != s ? n.A.getVoiceVolume(s, t) : -1 / 0), [s, t]);
+e.d(t, { A: () => a });
+var A = e(17928),
+    l = e(485296);
+function a(s, t) {
+    return (0, A.bG)([l.A], () => (null != s ? l.A.getVoiceVolume(s, t) : -1 / 0), [s, t]);
 }

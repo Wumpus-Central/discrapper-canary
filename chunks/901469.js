@@ -1,4 +1,4 @@
-e.exports = {
+_.exports = {
     uK: "option_a19535",
     mG: "inline_a19535",
     hZ: "set_a19535",

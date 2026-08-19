@@ -3,14 +3,14 @@ function i() {
     return { textValue: "", richValue: [{ type: "line", children: [{ text: "" }] }] };
 }
 function r(e) {
-    return { textValue: e, richValue: a(e) };
+    return { textValue: e, richValue: s(e) };
 }
-n.d(t, { N3: () => i, QR: () => o, ur: () => r, x7: () => a });
-let s = Object.freeze([Object.freeze({ type: "line", children: Object.freeze([Object.freeze({ text: "" })]) })]);
-function a(e) {
-    return "" !== e ? e.split("\n").map((e) => ({ type: "line", children: [{ text: e }] })) : s;
+n.d(t, { N3: () => i, QR: () => l, ur: () => r, x7: () => s });
+let a = Object.freeze([Object.freeze({ type: "line", children: Object.freeze([Object.freeze({ text: "" })]) })]);
+function s(e) {
+    return "" !== e ? e.split("\n").map((e) => ({ type: "line", children: [{ text: e }] })) : a;
 }
-function o(e) {
+function l(e) {
     switch (e.type) {
         case "userMention":
             return { type: "userMention", userId: e.userId };

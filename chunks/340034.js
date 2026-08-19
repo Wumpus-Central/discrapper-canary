@@ -37,12 +37,12 @@ function m(e) {
                     ? o.I0.SubscriptionTrial
                     : o.I0.Subscription;
         })({ isGift: t, isTrial: n, unifiedCheckoutFlow: p }),
-        { discountOffer: C, premiumGroupDiscountOffer: h } = (0, s.i)();
+        { discountOffer: h, premiumGroupDiscountOffer: C } = (0, s.i)();
     return (0, l.jsx)(a.$, {
         ...d,
         isInvoiceBilledImmediately: i,
         subscriptionTrial: c,
-        discountOffer: h ?? C,
+        discountOffer: C ?? h,
         unifiedLegalType: m,
     });
 }

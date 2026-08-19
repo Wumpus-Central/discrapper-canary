@@ -19,7 +19,7 @@ function o() {
                     children: (0, i.jsx)(a.E, {
                         variant: "text-sm/normal",
                         color: "text-subtle",
-                        children: l.intl.format(l.t.BPDKoA, { helpdeskArticle: s.B }),
+                        children: l.intl.format(l.t.BPDKoA, { helpdeskArticle: s.M }),
                     }),
                 });
         });

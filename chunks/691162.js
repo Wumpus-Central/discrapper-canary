@@ -1,31 +1,31 @@
 "use strict";
-var i = n(757431),
-    r = n(567242),
-    s = n(933300),
-    a = n(605468),
-    o = n(154613),
-    l = n(547210),
-    u = n(475694),
-    c = n(499018),
-    d = n(795734),
-    _ = n(906046),
-    h = n(400696),
-    f = Object("a"),
-    p = "a" !== f[0] || !(0 in f),
-    E = _("String.prototype.split");
+var n = r(757431),
+    o = r(567242),
+    i = r(933300),
+    a = r(605468),
+    s = r(154613),
+    l = r(547210),
+    u = r(475694),
+    c = r(499018),
+    f = r(795734),
+    p = r(906046),
+    d = r(400696),
+    h = Object("a"),
+    m = "a" !== h[0] || !(0 in h),
+    v = p("String.prototype.split");
 e.exports = function (e) {
     var t,
-        n = c(this),
-        _ = u((p && h(n) ? E(n, "") : n).length);
+        r = c(this),
+        p = u((m && d(r) ? v(r, "") : r).length);
     if (!l(e)) throw TypeError("Array.prototype.map callback must be a function");
     arguments.length > 1 && (t = arguments[1]);
-    for (var f = i(n, _), m = 0; m < _; ) {
-        var g = d(m);
-        if (o(n, g)) {
-            var A = r(e, t, [a(n, g), m, n]);
-            s(f, g, A);
+    for (var h = n(r, p), y = 0; y < p; ) {
+        var g = f(y);
+        if (s(r, g)) {
+            var b = o(e, t, [a(r, g), y, r]);
+            i(h, g, b);
         }
-        m += 1;
+        y += 1;
     }
-    return f;
+    return h;
 };

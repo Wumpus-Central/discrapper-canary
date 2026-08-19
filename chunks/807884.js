@@ -1,32 +1,32 @@
-n.d(l, { A: () => o });
-var t = n(17928),
-    i = n(828488),
-    a = n(256331),
-    s = n(619065);
-function r(e, l) {
+l.d(n, { A: () => o });
+var t = l(17928),
+    i = l(828488),
+    a = l(256331),
+    s = l(619065);
+function r(e, n) {
     return (
-        e === l ||
+        e === n ||
         (null != e &&
-            null != l &&
-            e.color === l.color &&
-            e.conversation.color === l.conversation.color &&
-            e.conversation.conversation === l.conversation.conversation &&
-            e.messageMetadata.conversationId === l.messageMetadata.conversationId &&
-            e.messageMetadata.moderationLabel === l.messageMetadata.moderationLabel)
+            null != n &&
+            e.color === n.color &&
+            e.conversation.color === n.conversation.color &&
+            e.conversation.conversation === n.conversation.conversation &&
+            e.messageMetadata.conversationId === n.messageMetadata.conversationId &&
+            e.messageMetadata.moderationLabel === n.messageMetadata.moderationLabel)
     );
 }
-function o(e, l) {
-    let { enabled: n } = i.LX.useConfig({ location: "useMessageConversation" });
+function o(e, n) {
+    let { enabled: l } = i.LX.useConfig({ location: "useMessageConversation" });
     return (0, t.bG)(
         [s.A, a.A],
         () => {
-            if (!n || !a.A.isHighlightingEnabled()) return null;
-            let t = s.A.getMessageMetadata(e, l);
+            if (!l || !a.A.isHighlightingEnabled()) return null;
+            let t = s.A.getMessageMetadata(e, n);
             if (t?.conversationId == null) return null;
             let i = s.A.getConversationMetadata(e, t.conversationId);
             return null == i ? null : { conversation: i, messageMetadata: t, color: i.color };
         },
-        [e, l, n],
+        [e, n, l],
         r,
     );
 }

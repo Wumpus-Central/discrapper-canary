@@ -1,21 +1,21 @@
 "use strict";
-var i = n(439619),
-    r = i("%RegExp%"),
-    s = n(741623),
-    a = i("%parseInt%"),
-    o = n(906046),
-    l = n(429013),
-    u = o("String.prototype.slice"),
+var n = r(439619),
+    o = n("%RegExp%"),
+    i = r(741623),
+    a = n("%parseInt%"),
+    s = r(906046),
+    l = r(429013),
+    u = s("String.prototype.slice"),
     c = l(/^0b[01]+$/i),
-    d = l(/^0o[0-7]+$/i),
-    _ = l(/^[-+]0x[0-9a-f]+$/i),
-    h = l(new r("[\x85\u200B\uFFFE]", "g")),
-    f = n(886309);
+    f = l(/^0o[0-7]+$/i),
+    p = l(/^[-+]0x[0-9a-f]+$/i),
+    d = l(new o("[\x85\u200B\uFFFE]", "g")),
+    h = r(886309);
 e.exports = function e(t) {
-    if ("string" != typeof t) throw new s("Assertion failed: `argument` is not a String");
+    if ("string" != typeof t) throw new i("Assertion failed: `argument` is not a String");
     if (c(t)) return +a(u(t, 2), 2);
-    if (d(t)) return +a(u(t, 2), 8);
-    if (h(t) || _(t)) return NaN;
-    var n = f(t);
-    return n !== t ? e(n) : +t;
+    if (f(t)) return +a(u(t, 2), 8);
+    if (d(t) || p(t)) return NaN;
+    var r = h(t);
+    return r !== t ? e(r) : +t;
 };

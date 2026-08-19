@@ -1,9 +1,9 @@
 "use strict";
-n.d(t, { A: () => f });
+n.d(t, { A: () => p });
 var l = n(607399),
     i = n(17928),
-    r = n(228366),
-    s = n(617710);
+    s = n(228366),
+    r = n(617710);
 let a = Object.freeze({
     "voice-conversations": { popoutOffset: { x: 45, y: 0 } },
     "writing-messages": { prerequisites: ["voice-conversations"], popoutOffset: { x: -36, y: 0 } },
@@ -21,21 +21,21 @@ let o = {},
     u = {},
     c = !0,
     d = {},
-    m = !1;
-function h() {
+    h = !1;
+function m() {
     if (((d = {}), !c))
         for (let [e, t] of Object.entries(a)) {
             let n = !1 !== o[e];
             if (((d[e] = n), n && null != t.prerequisites)) for (let n of t.prerequisites) !1 !== o[n] && (d[e] = !1);
         }
 }
-class p extends i.Ay.Store {
+class f extends i.Ay.Store {
     static displayName = "TutorialIndicatorStore";
     initialize() {
-        h(), this.mustEmitChanges((e) => "CONNECTION_OPEN" !== e.type), this.waitFor(s.A);
+        m(), this.mustEmitChanges((e) => "CONNECTION_OPEN" !== e.type), this.waitFor(r.A);
     }
     shouldShow(e) {
-        return !(!m || c || (l.Fr && ["writing-messages", "organize-by-topic"].includes(e))) && (d[e] || !1);
+        return !(!h || c || (l.Fr && ["writing-messages", "organize-by-topic"].includes(e))) && (d[e] || !1);
     }
     shouldShowAnyIndicators() {
         return !c;
@@ -51,20 +51,20 @@ class p extends i.Ay.Store {
         return null != t ? t[e] : null;
     }
 }
-let f = new p(r.h, {
+let p = new f(s.h, {
     CONNECTION_OPEN: function (e) {
         let { tutorial: t } = e;
-        (m = !0),
+        (h = !0),
             (c = !0),
             (o = {}),
             null != t && ((c = t.indicators_suppressed), t.indicators_confirmed.forEach((e) => (o[e] = !1))),
-            h();
+            m();
     },
     CONNECTION_CLOSED: function () {
-        m = !1;
+        h = !1;
     },
     TUTORIAL_INDICATOR_DISMISS: function (e) {
-        (o = { ...o, [e.tutorialId]: !1 }), (u = { ...u }), delete u[e.tutorialId], h();
+        (o = { ...o, [e.tutorialId]: !1 }), (u = { ...u }), delete u[e.tutorialId], m();
     },
     TUTORIAL_INDICATOR_SHOW: function (e) {
         u = { ...u, [e.tutorialId]: e.renderData };

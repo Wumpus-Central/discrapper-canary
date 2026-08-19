@@ -17,7 +17,7 @@ n.d(t, {
     lU: () => M,
     lW: () => K,
     mK: () => et,
-    nn: () => Z,
+    nn: () => q,
     p9: () => w,
     tC: () => ei,
     uE: () => V,
@@ -49,8 +49,8 @@ var i,
     O = n(652215),
     R = n(204925),
     L = n(835002),
-    D = n(516761),
-    y = n(375708);
+    y = n(516761),
+    D = n(375708);
 let v = new Set([m.q1.STAGE_CHANNEL_AGE_VERIFICATION_PROMPT, m.q1.START_STAGE_PROMPT, m.q1.STAGE_CHANNEL_RAISE_HAND]),
     b = new Set([
         R.w_.NSFW_SERVER,
@@ -152,7 +152,7 @@ function z() {
     let e = (0, l.bG)([p.default], () => p.default.getCurrentUser());
     return e?.ageVerificationStatus !== d.Tk.UNVERIFIED && e?.ageVerificationStatus !== d.Tk.CLIENT_ONLY_PENDING;
 }
-function q(e) {
+function Z(e) {
     let { onComplete: t, entryPoint: n, shouldShowExpressiveModal: i = !1, onMethodUnavailable: r } = e,
         [s, d] = a.useState(!1),
         c = (0, l.bG)([p.default], () => p.default.getCurrentUser()),
@@ -193,9 +193,9 @@ function q(e) {
         ),
     };
 }
-function Z(e) {
+function q(e) {
     let { onComplete: t, entryPoint: n, shouldShowExpressiveModal: i = !1, classificationId: r = null } = e,
-        { loading: s, startVerification: l } = q({ onComplete: t, entryPoint: n, shouldShowExpressiveModal: i });
+        { loading: s, startVerification: l } = Z({ onComplete: t, entryPoint: n, shouldShowExpressiveModal: i });
     return {
         loading: s,
         initiateAgeVerification: a.useCallback(
@@ -206,7 +206,7 @@ function Z(e) {
 }
 function X(e) {
     let { onComplete: t, entryPoint: n, onMethodUnavailable: i } = e,
-        { loading: r, startVerification: s } = q({
+        { loading: r, startVerification: s } = Z({
             onComplete: t,
             entryPoint: n,
             shouldShowExpressiveModal: !0,
@@ -229,17 +229,17 @@ function J(e) {
     return null != e && C.zn.has(e);
 }
 function ee(e) {
-    return v.has(e) ? y.intl.string(y.t.lSWVTM) : y.intl.string(y.t.xYXsr6);
+    return v.has(e) ? D.intl.string(D.t.lSWVTM) : D.intl.string(D.t.xYXsr6);
 }
 function et(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
     return v.has(e)
-        ? y.intl.string(y.t["S/xS/w"])
+        ? D.intl.string(D.t["S/xS/w"])
         : n
-          ? y.intl.string(D.default.h7qzoa)
+          ? D.intl.string(y.default.h7qzoa)
           : null != t
-            ? y.intl.format(D.default.RpMIT0, { handleOnHelpUrlHook: t })
-            : y.intl.string(y.t.HxS3oQ);
+            ? D.intl.format(y.default.RpMIT0, { handleOnHelpUrlHook: t })
+            : D.intl.string(D.t.HxS3oQ);
 }
 function en(e) {
     let t,

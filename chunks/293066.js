@@ -1,15 +1,15 @@
 "use strict";
 let i;
-n.d(t, { A: () => l }), n(321073);
+n.d(t, { A: () => o }), n(321073);
 var r = n(17928),
-    s = n(228366);
-let a = { hasAcceptedStoreTerms: !1, hasAcceptedEulaIds: [] };
-class o extends r.Ay.PersistedStore {
+    a = n(228366);
+let s = { hasAcceptedStoreTerms: !1, hasAcceptedEulaIds: [] };
+class l extends r.Ay.PersistedStore {
     static displayName = "ApplicationStoreUserSettingsStore";
     static persistKey = "ApplicationStoreUserSettingsStore";
     static migrations = [(e) => (null == e.hasAcceptedEulaIds ? { ...e, hasAcceptedEulaIds: [] } : e)];
     initialize(e) {
-        i = e ?? a;
+        i = e ?? s;
     }
     getState() {
         return i;
@@ -21,7 +21,7 @@ class o extends r.Ay.PersistedStore {
         return i.hasAcceptedEulaIds.includes(e);
     }
 }
-let l = new o(s.h, {
+let o = new l(a.h, {
     APPLICATION_STORE_ACCEPT_STORE_TERMS: function () {
         i.hasAcceptedStoreTerms = !0;
     },

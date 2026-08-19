@@ -1,6 +1,6 @@
-!(function (e) {
+!(function (i) {
     "use strict";
-    var t = {
+    var e = {
         ss: "sekund\u0117_sekund\u017Ei\u0173_sekundes",
         m: "minut\u0117_minut\u0117s_minut\u0119",
         mm: "minut\u0117s_minu\u010Di\u0173_minutes",
@@ -13,26 +13,26 @@
         y: "metai_met\u0173_metus",
         yy: "metai_met\u0173_metus",
     };
-    function n(e, t, n, i) {
-        return t ? r(n)[0] : i ? r(n)[1] : r(n)[2];
+    function s(i, e, s, a) {
+        return e ? n(s)[0] : a ? n(s)[1] : n(s)[2];
     }
-    function i(e) {
-        return e % 10 == 0 || (e > 10 && e < 20);
+    function a(i) {
+        return i % 10 == 0 || (i > 10 && i < 20);
     }
-    function r(e) {
-        return t[e].split("_");
+    function n(i) {
+        return e[i].split("_");
     }
-    function s(e, t, s, a) {
-        var o = e + " ";
-        return 1 === e
-            ? o + n(e, t, s[0], a)
-            : t
-              ? o + (i(e) ? r(s)[1] : r(s)[0])
-              : a
-                ? o + r(s)[1]
-                : o + (i(e) ? r(s)[1] : r(s)[2]);
+    function _(i, e, _, d) {
+        var t = i + " ";
+        return 1 === i
+            ? t + s(i, e, _[0], d)
+            : e
+              ? t + (a(i) ? n(_)[1] : n(_)[0])
+              : d
+                ? t + n(_)[1]
+                : t + (a(i) ? n(_)[1] : n(_)[2]);
     }
-    e.defineLocale("lt", {
+    i.defineLocale("lt", {
         months: {
             format: "sausio_vasario_kovo_baland\u017Eio_gegu\u017E\u0117s_bir\u017Eelio_liepos_rugpj\u016B\u010Dio_rugs\u0117jo_spalio_lapkri\u010Dio_gruod\u017Eio".split(
                 "_",
@@ -80,25 +80,25 @@
         relativeTime: {
             future: "po %s",
             past: "prie\u0161 %s",
-            s: function (e, t, n, i) {
-                return t ? "kelios sekund\u0117s" : i ? "keli\u0173 sekund\u017Ei\u0173" : "kelias sekundes";
+            s: function (i, e, s, a) {
+                return e ? "kelios sekund\u0117s" : a ? "keli\u0173 sekund\u017Ei\u0173" : "kelias sekundes";
             },
-            ss: s,
-            m: n,
-            mm: s,
-            h: n,
-            hh: s,
-            d: n,
-            dd: s,
-            M: n,
-            MM: s,
-            y: n,
-            yy: s,
+            ss: _,
+            m: s,
+            mm: _,
+            h: s,
+            hh: _,
+            d: s,
+            dd: _,
+            M: s,
+            MM: _,
+            y: s,
+            yy: _,
         },
         dayOfMonthOrdinalParse: /\d{1,2}-oji/,
-        ordinal: function (e) {
-            return e + "-oji";
+        ordinal: function (i) {
+            return i + "-oji";
         },
         week: { dow: 1, doy: 4 },
     });
-})(n(989349));
+})(s(989349));

@@ -1,39 +1,39 @@
-r.d(t, { J: () => d });
-var l = r(811315),
-    n = r.n(l),
-    s = r(17928),
-    a = r(5180),
-    i = r(885386),
-    u = r(734057),
-    o = r(71393),
-    c = r(967198),
-    h = r(652215);
-function d(e) {
-    let { guildId: t, channelId: r } = e,
-        l = i.Hu.useSetting();
-    return (0, s.bG)(
-        [o.A, u.A, c.A],
+l.d(e, { J: () => A });
+var u = l(811315),
+    n = l.n(u),
+    i = l(17928),
+    r = l(5180),
+    d = l(885386),
+    p = l(734057),
+    s = l(71393),
+    I = l(967198),
+    a = l(652215);
+function A(t) {
+    let { guildId: e, channelId: l } = t,
+        u = d.Hu.useSetting();
+    return (0, i.bG)(
+        [s.A, p.A, I.A],
         () => {
-            let e = o.A.getGuild(t),
-                n = u.A.getChannel(r),
-                s = c.A.getGuildId();
-            if ((0, a.ai)(s)) {
+            let t = s.A.getGuild(e),
+                n = p.A.getChannel(l),
+                i = I.A.getGuildId();
+            if ((0, r.ai)(i)) {
                 if (null != n) {
-                    if (n.isPrivate()) return { type: h.I4_.CHANNEL, channelId: r };
-                    let e = n.getGuildId();
-                    if (null != e) return { type: h.I4_.GUILD_CHANNEL, guildId: e, channelId: r };
+                    if (n.isPrivate()) return { type: a.I4_.CHANNEL, channelId: l };
+                    let t = n.getGuildId();
+                    if (null != t) return { type: a.I4_.GUILD_CHANNEL, guildId: t, channelId: l };
                 }
                 return null;
             }
-            return null != t && null != e
-                ? { type: h.I4_.GUILD, guildId: t }
-                : null != r && null != n && n.isPrivate()
-                  ? l
-                      ? { type: h.I4_.DMS }
-                      : { type: h.I4_.CHANNEL, channelId: r }
+            return null != e && null != t
+                ? { type: a.I4_.GUILD, guildId: e }
+                : null != l && null != n && n.isPrivate()
+                  ? u
+                      ? { type: a.I4_.DMS }
+                      : { type: a.I4_.CHANNEL, channelId: l }
                   : null;
         },
-        [r, t, l],
+        [l, e, u],
         n(),
     );
 }

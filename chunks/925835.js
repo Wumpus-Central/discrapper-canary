@@ -1,16 +1,16 @@
 IntlMessageFormat.__addLocaleData({
     locale: "ro",
     pluralRuleFunction: function (e, t) {
-        var n = String(e).split("."),
-            i = !n[1],
-            r = Number(n[0]) == e && n[0].slice(-2);
+        var r = String(e).split("."),
+            n = !r[1],
+            o = Number(r[0]) == e && r[0].slice(-2);
         return t
             ? 1 == e
                 ? "one"
                 : "other"
-            : 1 == e && i
+            : 1 == e && n
               ? "one"
-              : !i || 0 == e || (1 != e && r >= 1 && r <= 19)
+              : !n || 0 == e || (1 != e && o >= 1 && o <= 19)
                 ? "few"
                 : "other";
     },

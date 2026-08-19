@@ -2,8 +2,8 @@
 n.d(t, { A: () => _ });
 var i = n(439372),
     r = n(710195),
-    s = n(723702);
-let a = (0, n(945810).mj)({
+    a = n(723702);
+let s = (0, n(945810).mj)({
     name: "2026-04-overlay-fps-limit",
     kind: "user",
     defaultConfig: { overlayFPSLimit: void 0, mainWindowFPSLimit: void 0 },
@@ -13,35 +13,35 @@ let a = (0, n(945810).mj)({
         3: { overlayFPSLimit: 30, mainWindowFPSLimit: 30 },
     },
 });
-function o(e) {
+function l(e) {
     let { location: t } = e;
-    return a.getConfig({ location: t });
+    return s.getConfig({ location: t });
 }
-let l = !1,
-    u = null;
+let o = !1,
+    d = null;
 function c() {
-    (0, s.isWindows)() && (u = o({ location: "updateSwitch" }));
+    (0, a.isWindows)() && (d = l({ location: "updateSwitch" }));
 }
-class d extends i.A {
+class u extends i.A {
     stores = new Map().set(r.A, () => {
-        if (l) {
-            let e = o({ location: "experimentStoreUpdate" });
-            u !== e && c();
+        if (o) {
+            let e = l({ location: "experimentStoreUpdate" });
+            d !== e && c();
         }
     });
     actions = {
         POST_CONNECTION_OPEN: async () => {
-            l || ((0, s.isWindows)() && ((l = !0), await c()));
+            o || ((0, a.isWindows)() && ((o = !0), await c()));
         },
         LOGOUT: () => {
-            (l = !1), (u = null);
+            (o = !1), (d = null);
         },
     };
     getOverlayFPSLimit() {
-        return u?.overlayFPSLimit;
+        return d?.overlayFPSLimit;
     }
     getMainWindowFPSLimit() {
-        return u?.mainWindowFPSLimit;
+        return d?.mainWindowFPSLimit;
     }
 }
-let _ = new d();
+let _ = new u();

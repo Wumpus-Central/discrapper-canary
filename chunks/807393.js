@@ -22,11 +22,11 @@ let i = {
     ]),
 };
 var r = n(636537),
-    s = n(723702),
-    a = n(290805);
-let o = { design_id: n(689953).z.DESIGN_TABS_IA };
-var l = n(652215);
-let u = new Set(["darwin", "linux", "win32", "ios", "android"]),
+    a = n(723702),
+    s = n(290805);
+let l = { design_id: n(689953).z.DESIGN_TABS_IA };
+var o = n(652215);
+let d = new Set(["darwin", "linux", "win32", "ios", "android"]),
     c = new (class {
         constructor() {
             (this._metrics = []),
@@ -36,21 +36,21 @@ let u = new Set(["darwin", "linux", "win32", "ios", "android"]),
         }
         _getMetricWithDefaults(e, t) {
             let n,
-                { name: r, tags: l } = e,
-                c = { name: r, type: t, tags: Object.keys(o).map((e) => `${e}:${o[e]}`) };
-            null != l &&
-                l.forEach((e) => {
+                { name: r, tags: o } = e,
+                c = { name: r, type: t, tags: Object.keys(l).map((e) => `${e}:${l[e]}`) };
+            null != o &&
+                o.forEach((e) => {
                     c.tags.push(e);
                 });
-            let d = (function () {
-                if ((0, s.isWeb)()) return "web";
+            let u = (function () {
+                if ((0, a.isWeb)()) return "web";
                 {
-                    let e = (0, s.getPlatformName)();
-                    return u.has(e) ? e : null;
+                    let e = (0, a.getPlatformName)();
+                    return d.has(e) ? e : null;
                 }
             })();
-            null != d && c.tags.push(`platform:${d}`);
-            let _ = null != (n = a.y) && i.ALL.has(n) ? n : null;
+            null != u && c.tags.push(`platform:${u}`);
+            let _ = null != (n = s.y) && i.ALL.has(n) ? n : null;
             return null != _ && c.tags.push(`release_channel:${_}`), c;
         }
         increment(e) {
@@ -67,8 +67,8 @@ let u = new Set(["darwin", "linux", "win32", "ios", "android"]),
             if (this._metrics.length > 0) {
                 let e = [...this._metrics];
                 r.Bo.post({
-                    url: l.Rsh.METRICS_V2,
-                    body: { metrics: e, client_info: { built_at: "1781640804075", build_number: "564083" } },
+                    url: o.Rsh.METRICS_V2,
+                    body: { metrics: e, client_info: { built_at: "1787098198647", build_number: "595955" } },
                     retries: 1,
                     rejectWithError: !0,
                 }).catch((t) => {

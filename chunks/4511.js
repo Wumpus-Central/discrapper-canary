@@ -49,25 +49,25 @@ class r {
                 n.push({ pixelCount: t, width: r, height: i, budgetPortion: t / e, wantValue: 0 });
             }
         }
-        let s = {},
-            a = 0,
-            o = 100;
+        let a = {},
+            s = 0,
+            l = 100;
         for (let t = 1; t <= 25; ++t) {
-            let l = 0,
-                u = 0,
+            let o = 0,
+                d = 0,
                 c = 0;
             for (let i of n) {
                 if (i.pixelCount * t > e) break;
-                (l = i.width), (u = i.height), (c = i.budgetPortion);
+                (o = i.width), (d = i.height), (c = i.budgetPortion);
             }
-            if (a !== l) {
-                let e = r.getMutedFramerate(o);
-                (s[o] = { width: l, height: u, budgetPortion: c, mutedFramerate: e, framerate: i.sG }),
-                    (o -= 10),
-                    (a = l);
+            if (s !== o) {
+                let e = r.getMutedFramerate(l);
+                (a[l] = { width: o, height: d, budgetPortion: c, mutedFramerate: e, framerate: i.sG }),
+                    (l -= 10),
+                    (s = o);
             }
         }
-        return s;
+        return a;
     }
     static getMutedFramerate(e) {
         return e <= 20 ? i.XA : i.kc;

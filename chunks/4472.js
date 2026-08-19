@@ -1,19 +1,19 @@
 "use strict";
-n.d(t, { A: () => l }), n(321073);
+n.d(t, { A: () => o }), n(321073);
 var i = n(652215);
 let r = [],
-    s = !1;
-function a() {
+    a = !1;
+function s() {
     let e = window.navigator.connection;
     return null == e
         ? { type: i.wY_.UNKNOWN, effectiveSpeed: i.NKC.UNKNOWN }
         : { type: null != e.type ? e.type : i.wY_.UNKNOWN, effectiveSpeed: e.effectiveType };
 }
-function o() {
-    let e = a();
+function l() {
+    let e = s();
     r.forEach((t) => t(e));
 }
-let l = {
+let o = {
     addOnlineCallback(e) {
         window.addEventListener("online", e);
     },
@@ -29,9 +29,9 @@ let l = {
     addChangeCallback(e) {
         r.push(e),
             (function () {
-                if (!0 === s) return;
+                if (!0 === a) return;
                 let e = window.navigator.connection;
-                null != e && ((s = !0), e.addEventListener("change", o));
+                null != e && ((a = !0), e.addEventListener("change", l));
             })();
     },
     removeChangeCallback(e) {
@@ -39,12 +39,12 @@ let l = {
         -1 !== (t = r.indexOf(e)) &&
             (r.splice(t, 1),
             (function () {
-                if (!1 === s) return;
+                if (!1 === a) return;
                 let e = window.navigator.connection;
-                null != e && 0 === r.length && null != e && (e.removeEventListener("change", o), (s = !1));
+                null != e && 0 === r.length && null != e && (e.removeEventListener("change", l), (a = !1));
             })());
     },
-    getNetworkInformation: () => Promise.resolve(a()),
+    getNetworkInformation: () => Promise.resolve(s()),
     isOnline() {
         let e = navigator.onLine;
         return void 0 === e || e;

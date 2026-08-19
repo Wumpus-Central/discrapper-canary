@@ -1,25 +1,25 @@
 "use strict";
-n.d(t, { A: () => d });
-var i = n(735438),
+n.d(t, { A: () => u });
+var i = n(435558),
     r = n.n(i),
-    s = n(937724),
-    a = n(626584),
-    o = n(967198),
-    l = n(927813),
-    u = n(723176);
-let c = new a.A("NonGuildVersions"),
-    d = new (class {
+    a = n(937724),
+    s = n(626584),
+    l = n(967198),
+    o = n(927813),
+    d = n(723176);
+let c = new s.A("NonGuildVersions"),
+    u = new (class {
         constructor() {
-            if (!(0, s.O)()) return;
-            o.A.addChangeListener(
+            if (!(0, a.O)()) return;
+            l.A.addChangeListener(
                 r().throttle(() => {
-                    u.A.database()?.transaction((e) => {
-                        let t = o.A.getGuildId();
+                    d.A.database()?.transaction((e) => {
+                        let t = l.A.getGuildId();
                         null == t || isNaN(Number(t))
-                            ? u.A.nonGuildVersionsTransaction(e).delete("initial_guild_id")
-                            : u.A.nonGuildVersionsTransaction(e).put({ id: "initial_guild_id", versionString: t });
+                            ? d.A.nonGuildVersionsTransaction(e).delete("initial_guild_id")
+                            : d.A.nonGuildVersionsTransaction(e).put({ id: "initial_guild_id", versionString: t });
                     });
-                }, 10 * l.A.Millis.SECOND),
+                }, 10 * o.A.Millis.SECOND),
             );
         }
         actions = {
@@ -28,7 +28,7 @@ let c = new a.A("NonGuildVersions"),
         };
         async getCommittedVersions() {
             try {
-                let e = u.A.nonGuildVersions();
+                let e = d.A.nonGuildVersions();
                 if (null == e) return {};
                 let t = (await e.getMany()).map((e) => [e.id, "version" in e ? e.version : e.versionString]);
                 return Object.fromEntries(t ?? []);
@@ -38,7 +38,7 @@ let c = new a.A("NonGuildVersions"),
         }
         handleConnectionOpen(e, t) {
             null != e.apiCodeVersion &&
-                u.A.nonGuildVersionsTransaction(t).put({ id: "api_code_version", version: e.apiCodeVersion });
+                d.A.nonGuildVersionsTransaction(t).put({ id: "api_code_version", version: e.apiCodeVersion });
         }
         resetInMemoryState() {}
     })();

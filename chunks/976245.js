@@ -1,19 +1,19 @@
 "use strict";
-n.d(t, { y: () => i });
-let r = (e) => {
+r.d(t, { y: () => o });
+let n = (e) => {
         let t,
-            n = new Set(),
-            r = (e, r) => {
-                let i = "function" == typeof e ? e(t) : e;
-                if (!Object.is(i, t)) {
+            r = new Set(),
+            n = (e, n) => {
+                let o = "function" == typeof e ? e(t) : e;
+                if (!Object.is(o, t)) {
                     let e = t;
-                    (t = (null != r ? r : "object" != typeof i || null === i) ? i : Object.assign({}, t, i)),
-                        n.forEach((n) => n(t, e));
+                    (t = (null != n ? n : "object" != typeof o || null === o) ? o : Object.assign({}, t, o)),
+                        r.forEach((r) => r(t, e));
                 }
             },
-            i = () => t,
-            a = { setState: r, getState: i, getInitialState: () => o, subscribe: (e) => (n.add(e), () => n.delete(e)) },
-            o = (t = e(r, i, a));
-        return a;
+            o = () => t,
+            i = { setState: n, getState: o, getInitialState: () => a, subscribe: (e) => (r.add(e), () => r.delete(e)) },
+            a = (t = e(n, o, i));
+        return i;
     },
-    i = (e) => (e ? r(e) : r);
+    o = (e) => (e ? n(e) : n);

@@ -1,12 +1,12 @@
-!(function (e) {
+!(function (a) {
     "use strict";
-    var t = "nolla yksi kaksi kolme nelj\xe4 viisi kuusi seitsem\xe4n kahdeksan yhdeks\xe4n".split(" "),
-        n = ["nolla", "yhden", "kahden", "kolmen", "nelj\xe4n", "viiden", "kuuden", t[7], t[8], t[9]];
-    function i(e, i, r, s) {
-        var a,
-            o,
+    var u = "nolla yksi kaksi kolme nelj\xe4 viisi kuusi seitsem\xe4n kahdeksan yhdeks\xe4n".split(" "),
+        e = ["nolla", "yhden", "kahden", "kolmen", "nelj\xe4n", "viiden", "kuuden", u[7], u[8], u[9]];
+    function n(a, n, t, s) {
+        var i,
+            k,
             l = "";
-        switch (r) {
+        switch (t) {
             case "s":
                 return s ? "muutaman sekunnin" : "muutama sekunti";
             case "ss":
@@ -36,9 +36,9 @@
             case "yy":
                 l = s ? "vuoden" : "vuotta";
         }
-        return (a = e), (o = s), (a < 10 ? (o ? n[a] : t[a]) : a) + " " + l;
+        return (i = a), (k = s), (i < 10 ? (k ? e[i] : u[i]) : i) + " " + l;
     }
-    e.defineLocale("fi", {
+    a.defineLocale("fi", {
         months: "tammikuu_helmikuu_maaliskuu_huhtikuu_toukokuu_kes\xe4kuu_hein\xe4kuu_elokuu_syyskuu_lokakuu_marraskuu_joulukuu".split(
             "_",
         ),
@@ -69,21 +69,21 @@
         relativeTime: {
             future: "%s p\xe4\xe4st\xe4",
             past: "%s sitten",
-            s: i,
-            ss: i,
-            m: i,
-            mm: i,
-            h: i,
-            hh: i,
-            d: i,
-            dd: i,
-            M: i,
-            MM: i,
-            y: i,
-            yy: i,
+            s: n,
+            ss: n,
+            m: n,
+            mm: n,
+            h: n,
+            hh: n,
+            d: n,
+            dd: n,
+            M: n,
+            MM: n,
+            y: n,
+            yy: n,
         },
         dayOfMonthOrdinalParse: /\d{1,2}\./,
         ordinal: "%d.",
         week: { dow: 1, doy: 4 },
     });
-})(n(989349));
+})(e(989349));

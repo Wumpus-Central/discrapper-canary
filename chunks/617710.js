@@ -13,7 +13,7 @@ var i = n(435558),
     E = n(280450),
     A = n(470710),
     h = n(734057),
-    I = n(505643),
+    I = n(453028),
     f = n(763827),
     p = n(873985),
     T = n(309010),
@@ -25,9 +25,9 @@ var i = n(435558),
     O = n(183636),
     R = n(174459),
     L = n(209489),
-    D = n(655404),
-    y = n(812729),
-    v = n.n(y);
+    y = n(655404),
+    D = n(812729),
+    v = n.n(D);
 class b {
     alwaysUpdateState;
     dirty = !1;
@@ -110,7 +110,7 @@ var P = n(665260),
     k = n(652215),
     F = n(469177);
 let V = new d.A("ConnectionStore"),
-    B = new D.A(),
+    B = new y.A(),
     H = new M(B),
     j = new (class extends b {
         socket;
@@ -241,8 +241,8 @@ var Y = n(73825),
     K = n(803306),
     $ = n(821956),
     z = n(628856),
-    q = n(945096),
-    Z = n(996512),
+    Z = n(945096),
+    q = n(996512),
     X = n(814890),
     Q = n(505527),
     J = n(159993);
@@ -312,7 +312,7 @@ function eL(e) {
               stage_instances: e.stage_instances,
               stickers: { op: "full_sync", items: e.stickers },
               threads: e.threads?.map((t) => (0, es.UE)(t, e.id)) ?? [],
-              threadMessages: ey(e.threads),
+              threadMessages: eD(e.threads),
               channels: { op: "full_sync", items: e.channels.map((t) => ((t.guild_id = e.id), (0, es.UE)(t, e.id))) },
               version: e.version,
               hasThreadsSubscription: e.has_threads_subscription,
@@ -352,12 +352,12 @@ function eL(e) {
               },
               unableToSyncDeletes: e.unable_to_sync_deletes,
               threads: e.threads?.map((t) => (0, es.UE)(t, e.id)) ?? [],
-              threadMessages: ey(e.threads),
+              threadMessages: eD(e.threads),
               version: e.version,
               hasThreadsSubscription: e.has_threads_subscription,
           };
 }
-function eD(e) {
+function ey(e) {
     return "partial" !== e.data_mode
         ? {
               id: e.id,
@@ -372,7 +372,7 @@ function eD(e) {
               roles: { op: "full_sync", items: e.roles },
               stage_instances: e.stage_instances,
               threads: e.threads?.map((t) => (0, es.UE)(t, e.id)) ?? [],
-              threadMessages: ey(e.threads),
+              threadMessages: eD(e.threads),
               presences: e.presences,
               activity_instances: e.activity_instances,
               voice_states: e.voice_states,
@@ -418,13 +418,13 @@ function eD(e) {
               },
               unableToSyncDeletes: e.unable_to_sync_deletes,
               threads: e.threads?.map((t) => (0, es.UE)(t, e.id)) ?? [],
-              threadMessages: ey(e.threads),
+              threadMessages: eD(e.threads),
               voice_states: e.voice_states,
               version: e.version,
               hasThreadsSubscription: e.has_threads_subscription,
           };
 }
-function ey(e) {
+function eD(e) {
     let t = [];
     if (null != e) for (let n of e) null != n.most_recent_message && t.push(n.most_recent_message);
     return t;
@@ -534,7 +534,7 @@ function eH(e, t, n) {
         } = n,
         I = ed.Ay.getMember(e, t.id),
         f = (0, z.t)(A),
-        p = (0, q.mT)(h);
+        p = (0, Z.mT)(h);
     (null != I &&
         I.nick === a &&
         I.avatar === s &&
@@ -623,7 +623,7 @@ eF(
             a.Ay.Emitter.batched(() => {
                 var t;
                 let n,
-                    i = ((t = B.identifyStartTime), (n = eD(e)), (eN = { guild: e, identifyTime: t }), n);
+                    i = ((t = B.identifyStartTime), (n = ey(e)), (eN = { guild: e, identifyTime: t }), n);
                 null != ec.default.getCurrentUser() &&
                     (eB({ type: "GUILD_CREATE", guild: i }),
                     eB({
@@ -1050,7 +1050,7 @@ eF(
         (e) => {
             if (e.unavailable) eB({ type: "GUILD_UNAVAILABLE", guildId: e.id });
             else {
-                let t = eD(e);
+                let t = ey(e);
                 eB({ type: "GUILD_CREATE", guild: t }),
                     eB({
                         type: "VOICE_STATE_UPDATES",
@@ -1135,7 +1135,7 @@ eF(
                 unusualDMActivityUntil: e.unusual_dm_activity_until,
                 flags: e.flags,
                 collectibles: (0, z.t)(e.collectibles),
-                displayNameStyles: (0, q.mT)(e.display_name_styles),
+                displayNameStyles: (0, Z.mT)(e.display_name_styles),
             });
         },
     ),
@@ -1933,13 +1933,13 @@ eF(
         });
     }),
     ek(["GUILD_ROOM_CONNECT"], (e, t) => {
-        eB({ type: t, room: (0, Z.S)(e) });
+        eB({ type: t, room: (0, q.S)(e) });
     }),
     ek(["GUILD_ROOM_DISCONNECT"], (e, t) => {
         eB({ type: t, userId: e.user_id, roomId: e.room_id });
     }),
     ek(["GUILD_ROOM_UPDATE"], (e, t) => {
-        eB({ type: t, room: (0, Z.S)(e) });
+        eB({ type: t, room: (0, q.S)(e) });
     }),
     ek(["GUILD_OFFICIAL_GAME_APPLICATIONS_UPDATE"], (e, t) => {
         eB({ type: t, gameApplicationIds: e.game_application_ids, guildId: e.guild_id });
@@ -1952,11 +1952,11 @@ eF(
         });
     });
 var ez = n(355097);
-let eq = window.DiscordNative;
+let eZ = window.DiscordNative;
 B.dispatcher.getDispatchHandler = function (e) {
     return ex[e];
 };
-let eZ = new d.A("ConnectionStore"),
+let eq = new d.A("ConnectionStore"),
     eX = 0,
     eQ = null,
     eJ = !0,
@@ -1973,7 +1973,7 @@ async function e2(e) {
             (s.w.remove("discord_watchdog_restart_timestamp"),
             window?.performance?.getEntriesByType?.("navigation")?.[0]?.type === "reload" ||
                 i ||
-                (await eq?.processUtils?.getLastCrash?.())?.rendererCrashReason != null ||
+                (await eZ?.processUtils?.getLastCrash?.())?.rendererCrashReason != null ||
                 !eJ)
         ) {
             let e = h.A.getChannel(n);
@@ -2020,17 +2020,17 @@ class e7 extends a.Ay.Store {
 let e8 = new e7(l.h, {
     START_SESSION: function () {
         return B.isClosed()
-            ? (eZ.verbose("Socket is reconnecting because of starting new session"), B.connect())
-            : (eZ.verbose("Socket is not reconnecting during a new session because it is not closed"), !1);
+            ? (eq.verbose("Socket is reconnecting because of starting new session"), B.connect())
+            : (eq.verbose("Socket is not reconnecting during a new session because it is not closed"), !1);
     },
     LOGIN_SUCCESS: function () {
         return (
-            eZ.verbose("session refresh dispatched", { isEstablished: B.isSessionEstablished() }),
+            eq.verbose("session refresh dispatched", { isEstablished: B.isSessionEstablished() }),
             !!B.isSessionEstablished() && (B.close(), B.connect())
         );
     },
     LOGOUT: function (e) {
-        e.isSwitchingAccount && H.handleAccountSwitch(), eZ.verbose("Closing socket because of logout"), B.close();
+        e.isSwitchingAccount && H.handleAccountSwitch(), eq.verbose("Closing socket because of logout"), B.close();
     },
     CLEAR_CACHES: function (e) {
         return e.resetSocket && (B.close(), B.dispatcher.clear(), B.connect()), !1;
@@ -2042,7 +2042,7 @@ let e8 = new e7(l.h, {
         e1 = null;
     },
     CONNECTION_CLOSED: function () {
-        eZ.verbose("connection closed dispatched"), (eX = Date.now());
+        eq.verbose("connection closed dispatched"), (eX = Date.now());
     },
     RTC_CONNECTION_STATE: function (e) {
         if (e.state !== k.S7L.DISCONNECTED) return !1;
@@ -2064,7 +2064,7 @@ let e8 = new e7(l.h, {
             if (E.default.getId() !== t.userId) return e;
             if (t.sessionId === eQ) {
                 if (null != e1)
-                    return eZ.verbose("Ignoring voice state for own session due to VSU lock on channel:", e1), e;
+                    return eq.verbose("Ignoring voice state for own session due to VSU lock on channel:", e1), e;
                 j.setState({ guildId: t.guildId, channelId: t.channelId });
             } else {
                 if (t.guildId !== j.guildId) return e;

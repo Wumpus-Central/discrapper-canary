@@ -105,7 +105,7 @@ function f(e) {
         }, [a, g, t]),
         C = (0, c.useRef)(S);
     C.current = S;
-    let y = (0, c.useCallback)((e, t) => {
+    let w = (0, c.useCallback)((e, t) => {
             switch (e) {
                 case s.Q6.PLAYING:
                     o(!0);
@@ -115,12 +115,12 @@ function f(e) {
                     C.current(), o(!1);
             }
         }, []),
-        w = (0, c.useCallback)((e) => {
+        y = (0, c.useCallback)((e) => {
             m(!0);
         }, []);
     return {
-        handlePlayerStateChange: y,
-        handleLoadEnd: w,
+        handlePlayerStateChange: w,
+        handleLoadEnd: y,
         handleFirstFrame: (0, c.useCallback)((e) => {
             h(!0);
         }, []),

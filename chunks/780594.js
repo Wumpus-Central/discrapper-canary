@@ -1,9 +1,9 @@
 "use strict";
 e.exports = function (e) {
-    var t, i;
-    if (((t = n(883134)), (i = n(391986)), "keypress" === e.type)) {
-        var r = String.fromCharCode(e.which);
-        return e.shiftKey || (r = r.toLowerCase()), r;
+    var t, n;
+    if (((t = r(883134)), (n = r(391986)), "keypress" === e.type)) {
+        var o = String.fromCharCode(e.which);
+        return e.shiftKey || (o = o.toLowerCase()), o;
     }
-    return t[e.which] ? t[e.which] : i[e.which] ? i[e.which] : String.fromCharCode(e.which).toLowerCase();
+    return t[e.which] ? t[e.which] : n[e.which] ? n[e.which] : String.fromCharCode(e.which).toLowerCase();
 };

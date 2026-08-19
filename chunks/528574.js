@@ -1,16 +1,16 @@
 "use strict";
-var i = n(655310),
-    r = n(594230),
-    s = n(868089),
-    a = n(741623);
-e.exports = i
+var n = r(655310),
+    o = r(594230),
+    i = r(868089),
+    a = r(741623);
+e.exports = n
     ? function (e, t) {
-          if (i(e, t)) return e;
+          if (n(e, t)) return e;
           throw new a("Reflect.setPrototypeOf: failed to set [[Prototype]]");
       }
-    : r ||
-      (s
+    : o ||
+      (i
           ? function (e, t) {
-                return s(e, t), e;
+                return i(e, t), e;
             }
           : null);

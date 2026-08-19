@@ -1,12 +1,12 @@
 "use strict";
-n.d(t, { Y: () => a, i: () => s });
+n.d(t, { Y: () => s, i: () => a });
 var i,
     r,
-    s =
+    a =
         (((i = {})[(i.USE_NEW_NOTIFICATIONS = 16)] = "USE_NEW_NOTIFICATIONS"),
         (i[(i.MENTION_ON_ALL_MESSAGES = 32)] = "MENTION_ON_ALL_MESSAGES"),
         i),
-    a =
+    s =
         (((r = {}).GUILD = "guild"),
         (r.CHANNEL = "channel"),
         (r.ACCOUNT = "account"),

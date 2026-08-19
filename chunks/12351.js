@@ -1,4 +1,4 @@
-n.d(t, { A: () => _ });
+n.d(t, { A: () => u });
 var i = n(477900),
     l = n(582128),
     r = n(503698),
@@ -7,7 +7,7 @@ var i = n(477900),
     E = n(375708),
     o = n(110458);
 let c = { BLOCK: o.om, INLINE: o.mG };
-class u extends l.PureComponent {
+class _ extends l.PureComponent {
     static Types = c;
     render() {
         let { children: e, className: t, textClassName: n, type: l = c.BLOCK, style: r } = this.props;
@@ -27,4 +27,4 @@ class u extends l.PureComponent {
         });
     }
 }
-let _ = u;
+let u = _;

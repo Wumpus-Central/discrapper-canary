@@ -4,9 +4,9 @@ r.exports = function (r, n) {
         e = r.length,
         o = e - 1;
     for (n = void 0 === n ? e : n; ++t < n; ) {
-        var a = u(t, o),
-            i = r[a];
-        (r[a] = r[t]), (r[t] = i);
+        var p = u(t, o),
+            a = r[p];
+        (r[p] = r[t]), (r[t] = a);
     }
     return (r.length = n), r;
 };

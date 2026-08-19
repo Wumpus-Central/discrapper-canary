@@ -1,16 +1,16 @@
 "use strict";
-n.d(t, { A: () => l });
+n.d(t, { A: () => o });
 var i = n(439372),
     r = n(734057),
-    s = n(473503),
-    a = n(746080);
-class o extends i.A {
+    a = n(473503),
+    s = n(746080);
+class l extends i.A {
     actions = { CHANNEL_PRELOAD: this.handleChannelPreload };
     handleChannelPreload(e) {
         let { channelId: t } = e;
-        if ((0, a.jq)(t)) return;
+        if ((0, s.jq)(t)) return;
         let n = r.A.getChannel(t);
-        null != n && n.isForumLikeChannel() && (0, s.kB)(n);
+        null != n && n.isForumLikeChannel() && (0, a.kB)(n);
     }
 }
-let l = new o();
+let o = new l();

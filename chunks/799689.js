@@ -3,7 +3,7 @@ e.exports = function () {
     var e,
         t = this.constructor;
     if (!t.REVERSE_MAP)
-        for (var i in ((t.REVERSE_MAP = {}), (e = n(883134))))
-            (i > 95 && i < 112) || (e.hasOwnProperty(i) && (t.REVERSE_MAP[e[i]] = i));
+        for (var n in ((t.REVERSE_MAP = {}), (e = r(883134))))
+            (n > 95 && n < 112) || (e.hasOwnProperty(n) && (t.REVERSE_MAP[e[n]] = n));
     return t.REVERSE_MAP;
 };

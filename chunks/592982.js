@@ -31,8 +31,8 @@ function j(e) {
         L = M?.type === T.lp.STREAM ? M.stream : null,
         D = (0, i.bG)([r.A], () => (M?.type === T.lp.ACTIVITY ? r.A.getApplication(M.applicationId) : void 0)),
         P = (0, C.A)(O),
-        k = (0, x.A)(O),
-        G = (0, p.A)(j, R, L?.ownerId, D?.id),
+        G = (0, x.A)(O),
+        k = (0, p.A)(j, R, L?.ownerId, D?.id),
         V = (0, h.A)(O, j.guild_id),
         U = (0, I.A)(),
         B = (0, u.RQ)(O),
@@ -50,7 +50,7 @@ function j(e) {
         navId: "more-settings-context",
         "aria-label": _.intl.string(_.t.FTLzdR),
         children: [
-            (0, l.jsx)(a.rX, { children: y !== v.rbe.GUILD_STAGE_VOICE ? G : null }),
+            (0, l.jsx)(a.rX, { children: y !== v.rbe.GUILD_STAGE_VOICE ? k : null }),
             (0, l.jsxs)(a.rX, {
                 children: [
                     y === v.rbe.GUILD_STAGE_VOICE ? B : null,
@@ -58,7 +58,7 @@ function j(e) {
                     N || y === v.rbe.GUILD_STAGE_VOICE ? null : V,
                     K,
                     y !== v.rbe.GUILD_STAGE_VOICE ? P : null,
-                    y === v.rbe.GUILD_STAGE_VOICE || y === v.rbe.GUILD_VOICE ? k : null,
+                    y === v.rbe.GUILD_STAGE_VOICE || y === v.rbe.GUILD_VOICE ? G : null,
                 ],
             }),
             (0, l.jsx)(a.rX, { children: F }),

@@ -1,6 +1,6 @@
-l.d(t, { C8: () => r, Ej: () => i, Ot: () => a, oP: () => s, uG: () => n });
+n.d(t, { C8: () => r, Ej: () => i, Ot: () => a, oP: () => s, uG: () => l });
 let r = "dummy-tenant",
-    n = {
+    l = {
         id: "dummy-shop-home",
         children: [
             {

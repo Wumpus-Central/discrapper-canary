@@ -1,34 +1,34 @@
 "use strict";
-n.d(t, { A: () => u });
+n.d(t, { A: () => d });
 var i = n(17928),
     r = n(228366),
-    s = n(652215);
-let a = {},
-    o = null;
-class l extends i.Ay.Store {
+    a = n(652215);
+let s = {},
+    l = null;
+class o extends i.Ay.Store {
     static displayName = "LibraryApplicationStatisticsStore";
     get applicationStatistics() {
-        return a;
+        return s;
     }
     get lastFetched() {
-        return o;
+        return l;
     }
     getGameDuration(e) {
-        let t = a[e];
+        let t = s[e];
         return null != t ? t.total_duration : 0;
     }
     getLastPlayedDateTime(e) {
-        let t = a[e];
+        let t = s[e];
         return null != t ? new Date(t.last_played_at).getTime() : null;
     }
     hasApplicationStatistic(e) {
-        return null != a[e];
+        return null != s[e];
     }
     getCurrentUserStatisticsForApplication(e) {
-        return a[e];
+        return s[e];
     }
     getQuickSwitcherScoreForApplication(e) {
-        let t = a[e],
+        let t = s[e],
             n = 0;
         if (null != t) {
             let e = Math.floor((Date.now() - new Date(t.last_played_at).getTime()) / 864e5),
@@ -55,26 +55,26 @@ class l extends i.Ay.Store {
         return n;
     }
 }
-let u = new l(r.h, {
+let d = new o(r.h, {
     USER_ACTIVITY_STATISTICS_FETCH_SUCCESS: function (e) {
         let { statistics: t } = e;
         t.forEach((e) => {
-            a[e.application_id] = e;
+            s[e.application_id] = e;
         }),
-            (o = Date.now());
+            (l = Date.now());
     },
     ACTIVITY_UPDATE_START: function (e) {
         let { duration: t, applicationId: n, distributor: i } = e,
-            r = a[n],
-            o = new Date().toISOString(),
-            l = 0,
-            u = 0;
-        null != r && ((l = r.total_duration), (u = r.total_discord_sku_duration ?? 0)),
-            (l += t),
-            i === s.d3x.DISCORD && (u += t),
-            (a[n] = { application_id: n, total_duration: l, last_played_at: o, total_discord_sku_duration: u });
+            r = s[n],
+            l = new Date().toISOString(),
+            o = 0,
+            d = 0;
+        null != r && ((o = r.total_duration), (d = r.total_discord_sku_duration ?? 0)),
+            (o += t),
+            i === a.d3x.DISCORD && (d += t),
+            (s[n] = { application_id: n, total_duration: o, last_played_at: l, total_discord_sku_duration: d });
     },
     LOGOUT: function () {
-        (a = {}), (o = null);
+        (s = {}), (l = null);
     },
 });

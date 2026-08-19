@@ -1,8 +1,8 @@
 IntlMessageFormat.__addLocaleData({
     locale: "de",
     pluralRuleFunction: function (e, t) {
-        var n = !String(e).split(".")[1];
-        return t ? "other" : 1 == e && n ? "one" : "other";
+        var r = !String(e).split(".")[1];
+        return t ? "other" : 1 == e && r ? "one" : "other";
     },
 }),
     IntlMessageFormat.__addLocaleData({ locale: "de-AT", parentLocale: "de" }),

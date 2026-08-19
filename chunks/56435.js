@@ -1,4 +1,4 @@
-n(989349).defineLocale("el", {
+e(989349).defineLocale("el", {
     monthsNominativeEl:
         "\u0399\u03B1\u03BD\u03BF\u03C5\u03AC\u03C1\u03B9\u03BF\u03C2_\u03A6\u03B5\u03B2\u03C1\u03BF\u03C5\u03AC\u03C1\u03B9\u03BF\u03C2_\u039C\u03AC\u03C1\u03C4\u03B9\u03BF\u03C2_\u0391\u03C0\u03C1\u03AF\u03BB\u03B9\u03BF\u03C2_\u039C\u03AC\u03B9\u03BF\u03C2_\u0399\u03BF\u03CD\u03BD\u03B9\u03BF\u03C2_\u0399\u03BF\u03CD\u03BB\u03B9\u03BF\u03C2_\u0391\u03CD\u03B3\u03BF\u03C5\u03C3\u03C4\u03BF\u03C2_\u03A3\u03B5\u03C0\u03C4\u03AD\u03BC\u03B2\u03C1\u03B9\u03BF\u03C2_\u039F\u03BA\u03C4\u03CE\u03B2\u03C1\u03B9\u03BF\u03C2_\u039D\u03BF\u03AD\u03BC\u03B2\u03C1\u03B9\u03BF\u03C2_\u0394\u03B5\u03BA\u03AD\u03BC\u03B2\u03C1\u03B9\u03BF\u03C2".split(
             "_",
@@ -7,11 +7,11 @@ n(989349).defineLocale("el", {
         "\u0399\u03B1\u03BD\u03BF\u03C5\u03B1\u03C1\u03AF\u03BF\u03C5_\u03A6\u03B5\u03B2\u03C1\u03BF\u03C5\u03B1\u03C1\u03AF\u03BF\u03C5_\u039C\u03B1\u03C1\u03C4\u03AF\u03BF\u03C5_\u0391\u03C0\u03C1\u03B9\u03BB\u03AF\u03BF\u03C5_\u039C\u03B1\u0390\u03BF\u03C5_\u0399\u03BF\u03C5\u03BD\u03AF\u03BF\u03C5_\u0399\u03BF\u03C5\u03BB\u03AF\u03BF\u03C5_\u0391\u03C5\u03B3\u03BF\u03CD\u03C3\u03C4\u03BF\u03C5_\u03A3\u03B5\u03C0\u03C4\u03B5\u03BC\u03B2\u03C1\u03AF\u03BF\u03C5_\u039F\u03BA\u03C4\u03C9\u03B2\u03C1\u03AF\u03BF\u03C5_\u039D\u03BF\u03B5\u03BC\u03B2\u03C1\u03AF\u03BF\u03C5_\u0394\u03B5\u03BA\u03B5\u03BC\u03B2\u03C1\u03AF\u03BF\u03C5".split(
             "_",
         ),
-    months: function (e, t) {
-        return e
-            ? "string" == typeof t && /D/.test(t.substring(0, t.indexOf("MMMM")))
-                ? this._monthsGenitiveEl[e.month()]
-                : this._monthsNominativeEl[e.month()]
+    months: function (t, _) {
+        return t
+            ? "string" == typeof _ && /D/.test(_.substring(0, _.indexOf("MMMM")))
+                ? this._monthsGenitiveEl[t.month()]
+                : this._monthsNominativeEl[t.month()]
             : this._monthsNominativeEl;
     },
     monthsShort:
@@ -29,11 +29,11 @@ n(989349).defineLocale("el", {
     weekdaysMin: "\u039A\u03C5_\u0394\u03B5_\u03A4\u03C1_\u03A4\u03B5_\u03A0\u03B5_\u03A0\u03B1_\u03A3\u03B1".split(
         "_",
     ),
-    meridiem: function (e, t, n) {
-        return e > 11 ? (n ? "\u03BC\u03BC" : "\u039C\u039C") : n ? "\u03C0\u03BC" : "\u03A0\u039C";
+    meridiem: function (t, _, e) {
+        return t > 11 ? (e ? "\u03BC\u03BC" : "\u039C\u039C") : e ? "\u03C0\u03BC" : "\u03A0\u039C";
     },
-    isPM: function (e) {
-        return "\u03BC" === (e + "").toLowerCase()[0];
+    isPM: function (t) {
+        return "\u03BC" === (t + "").toLowerCase()[0];
     },
     meridiemParse: /[\u03a0\u039c]\.?\u039c?\.?/i,
     longDateFormat: {
@@ -56,14 +56,14 @@ n(989349).defineLocale("el", {
         },
         sameElse: "L",
     },
-    calendar: function (e, t) {
-        var n,
-            i = this._calendarEl[e],
-            r = t && t.hours();
+    calendar: function (t, _) {
+        var e,
+            n = this._calendarEl[t],
+            i = _ && _.hours();
         return (
-            ((n = i) instanceof Function || "[object Function]" === Object.prototype.toString.call(n)) &&
-                (i = i.apply(t)),
-            i.replace("{}", r % 12 == 1 ? "\u03C3\u03C4\u03B7" : "\u03C3\u03C4\u03B9\u03C2")
+            ((e = n) instanceof Function || "[object Function]" === Object.prototype.toString.call(e)) &&
+                (n = n.apply(_)),
+            n.replace("{}", i % 12 == 1 ? "\u03C3\u03C4\u03B7" : "\u03C3\u03C4\u03B9\u03C2")
         );
     },
     relativeTime: {

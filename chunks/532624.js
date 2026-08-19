@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Ay: () => X, DV: () => O, aS: () => y }), n(321073);
+n.d(t, { Ay: () => X, DV: () => R, aS: () => y }), n(321073);
 var i = n(812729),
     r = n.n(i),
     a = n(435558),
@@ -9,7 +9,7 @@ var i = n(812729),
     d = n(775121),
     c = n(626584),
     u = n(549205),
-    _ = n(186295),
+    _ = n(453028),
     E = n(174459),
     A = n(723702),
     h = n(19575),
@@ -26,11 +26,11 @@ function C() {
     let e = (0, I.Ze)(!1).get("Backquote") ?? "`";
     return "+" === e ? (e = "plus") : 0 === e.length && (e = "`"), `shift+${e}`;
 }
-function R(e) {
+function O(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
     return { id: "1001", action: T.hCu.TOGGLE_OVERLAY_INPUT_LOCK, shortcut: e, enabled: t, managed: !0, params: {} };
 }
-function O(e) {
+function R(e) {
     let t = (0, f.Z0)("shift");
     return null != t && (1 !== e.length || e[0][1] !== t);
 }
@@ -68,14 +68,14 @@ function y() {
         (t = (0, f.OH)(e)),
         (n = (0, I.Q_)("`")),
         (i = n?.keyCode ?? (0, f.Z0)("`")),
-        O(t)
+        R(t)
             ? t
             : null == i
               ? (L("Unable to get backtick code for overlay default keybind", e, t, { rawBacktickShape: n }), null)
               : (L("Default overlay keybind is unsupported", e, t, { rawBacktickCode: i }),
                 [...t, [g.zY.KEYBOARD_KEY, i, (0, f._$)()]]));
-    if (null == a) return R([], !1);
-    if (O(a)) return R(a, !0);
+    if (null == a) return O([], !1);
+    if (R(a)) return O(a, !0);
     let s = (0, f.Z0)("shift"),
         l = (0, I.Q_)("`");
     return (
@@ -84,7 +84,7 @@ function y() {
             : null == s
               ? L("Unable to get shift code", r, a, { shiftCode: s })
               : null == l && L("Unable to get backtick code", r, a),
-        R(a, !1)
+        O(a, !1)
     );
 }
 let D = {},
@@ -309,7 +309,7 @@ d.A.setGetKeybindList(() => {
     for (let t in v) v.hasOwnProperty(t) && e.push((0, f.dI)(v[t].shortcut));
     return e;
 });
-class q extends l.Ay.DeviceSettingsStore {
+class Z extends l.Ay.DeviceSettingsStore {
     static displayName = "KeybindsStore";
     static persistKey = "keybinds";
     static migrations = [
@@ -405,12 +405,12 @@ class q extends l.Ay.DeviceSettingsStore {
         return this.getKeybindForAction(T.hCu.OVERLAY_ACTIVATE_REGION_TEXT_WIDGET, !0);
     }
 }
-let Z = new q(o.h, {
+let q = new Z(o.h, {
         CONNECTION_OPEN: z,
         LOGIN_SUCCESS: function () {
             return (
                 (async () => {
-                    await (0, I.AD)(), z() && Z.emitChange();
+                    await (0, I.AD)(), z() && q.emitChange();
                 })(),
                 !1
             );
@@ -456,4 +456,4 @@ let Z = new q(o.h, {
                 (M = !0);
         },
     }),
-    X = Z;
+    X = q;

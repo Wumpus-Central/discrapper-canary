@@ -2,7 +2,7 @@ i.d(e, { G: () => p, X: () => s, default: () => g, navigateToSocialLayerStorefro
 var t = i(376728),
     n = i(976860),
     u = i(71393),
-    a = i(385648),
+    a = i(449054),
     o = i(871123),
     d = i(733391),
     r = i(832163),

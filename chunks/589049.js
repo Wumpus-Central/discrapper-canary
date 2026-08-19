@@ -1,4 +1,4 @@
-l.d(t, { A: () => L }), l(321073);
+l.d(t, { A: () => R }), l(321073);
 var n = l(477900),
     a = l(582128),
     i = l(503698),
@@ -9,15 +9,15 @@ var n = l(477900),
     u = l(17928),
     d = l(661531),
     m = l(459192),
-    f = l(7807),
-    h = l(565645),
+    h = l(7807),
+    f = l(565645),
     x = l(287809),
     v = l(562153),
     p = l(260612),
     g = l(953727),
     j = l(696016),
-    C = l(16590),
-    b = l(375708),
+    b = l(16590),
+    C = l(375708),
     y = l(427445);
 function N(e) {
     let { icon: t, title: l, body: a, position: i, compact: r } = e;
@@ -33,7 +33,7 @@ function N(e) {
     });
 }
 let E = {
-    [j.Gy.LAUGHTER]: { icon: o.i, title: C.default.bTC23D },
+    [j.Gy.LAUGHTER]: { icon: o.i, title: b.default.bTC23D },
     [j.Gy.SHOUTING]: {
         icon: function (e) {
             let {
@@ -71,23 +71,23 @@ let E = {
                 ],
             });
         },
-        title: C.default["3gqpuo"],
+        title: b.default["3gqpuo"],
     },
 };
-function k(e, t, l, a) {
+function w(e, t, l, a) {
     let { icon: i, title: s } = E[e];
     return (0, n.jsx)(
         N,
-        { icon: i, title: b.intl.string(s), body: b.intl.string(C.default["ry+jxm"]), position: l, compact: a },
+        { icon: i, title: C.intl.string(s), body: C.intl.string(b.default["ry+jxm"]), position: l, compact: a },
         t,
     );
 }
-function w(e) {
+function k(e) {
     let { signal: t, guildId: l, position: a, compact: i } = e,
         r = (0, u.bG)([x.default], () => x.default.getUser(t.userId)),
         o = (0, v.tx)(l, null, r);
     return null == t.emojiId && null == t.emojiName
-        ? (0, n.jsx)(N, { icon: f.J, title: t.name, body: o, position: a, compact: i })
+        ? (0, n.jsx)(N, { icon: h.J, title: t.name, body: o, position: a, compact: i })
         : (0, n.jsx)(m.u, {
               title: t.name,
               body: o,
@@ -95,7 +95,7 @@ function w(e) {
               children: (0, n.jsx)("div", {
                   className: s()(y.H, { [y.c]: i }),
                   style: { left: `${a}%` },
-                  children: (0, n.jsx)(h.A, {
+                  children: (0, n.jsx)(f.A, {
                       emojiId: t.emojiId ?? null,
                       emojiName: t.emojiName ?? null,
                       animated: t.emojiAnimated,
@@ -137,7 +137,7 @@ let A = a.memo(function (e) {
         ...(r
             ? s.map(function (e, t) {
                   let l = u(e.peakMs);
-                  return null == l ? null : k(e.type, `audio-${e.peakMs}-${e.type}-${t}`, l, i);
+                  return null == l ? null : w(e.type, `audio-${e.peakMs}-${e.type}-${t}`, l, i);
               })
             : []),
         ...o.map(function (e) {
@@ -147,16 +147,16 @@ let A = a.memo(function (e) {
             let a = `${e.timestamp}-${e.signal.type}`;
             switch (e.signal.type) {
                 case j.Gy.LAUGHTER:
-                    return k(j.Gy.LAUGHTER, a, l, i);
+                    return w(j.Gy.LAUGHTER, a, l, i);
                 case j.Gy.SHOUTING:
-                    return k(j.Gy.SHOUTING, a, l, i);
+                    return w(j.Gy.SHOUTING, a, l, i);
                 case j.Gy.GAME_EVENT:
                     return (0, n.jsx)(
                         N,
                         {
                             icon: c.q,
                             title: e.signal.title ?? "",
-                            body: b.intl.string(C.default["347DBb"]),
+                            body: C.intl.string(b.default["347DBb"]),
                             position: l,
                             compact: i,
                         },
@@ -164,15 +164,15 @@ let A = a.memo(function (e) {
                     );
                 case j.Gy.SOUNDBOARD:
                     if (!e.signal.playing) return null;
-                    return (0, n.jsx)(w, { signal: e.signal, guildId: t.guildId, position: l, compact: i }, a);
+                    return (0, n.jsx)(k, { signal: e.signal, guildId: t.guildId, position: l, compact: i }, a);
                 default:
                     return null;
             }
         }),
     ];
 });
-var R = l(200853);
-let L = a.memo(function (e) {
+var L = l(200853);
+let R = a.memo(function (e) {
     let { videoLength: t, clip: l, onMouseDown: i, noBottomMargin: o = !1, compact: c = !1 } = e,
         { timeNotches: u, subNotches: d } = a.useMemo(() => {
             let e;
@@ -210,18 +210,18 @@ let L = a.memo(function (e) {
             return { timeNotches: l, subNotches: a };
         }, [t]);
     return (0, n.jsx)("div", {
-        className: s()(R.ZX, { [R.dZ]: o, [R.oE]: c }),
+        className: s()(L.ZX, { [L.dZ]: o, [L.oE]: c }),
         onMouseDown: i,
         children: (0, n.jsxs)("div", {
-            className: R.QY,
+            className: L.QY,
             children: [
                 d.map((e, t) =>
                     (0, n.jsx)(
                         "div",
                         {
-                            className: R.MJ,
+                            className: L.MJ,
                             style: { left: `${e.position}%` },
-                            children: (0, n.jsx)("div", { className: R.p }),
+                            children: (0, n.jsx)("div", { className: L.p }),
                         },
                         `sub-${t}`,
                     ),
@@ -230,14 +230,14 @@ let L = a.memo(function (e) {
                     (0, n.jsxs)(
                         "div",
                         {
-                            className: R.Cv,
+                            className: L.Cv,
                             style: { left: `${e.position}%` },
                             children: [
-                                (0, n.jsx)("div", { className: R.d9 }),
+                                (0, n.jsx)("div", { className: L.d9 }),
                                 (0, n.jsxs)(r.E, {
                                     variant: "text-xxs/normal",
                                     color: "text-muted",
-                                    className: R.Mz,
+                                    className: L.Mz,
                                     children: [Math.round(e.time), "s"],
                                 }),
                             ],

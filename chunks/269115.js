@@ -53,17 +53,17 @@ class r {
             (this._nodes.delete(i), this._components.delete(e), this._visibleComponents.delete(e), t.unobserve(i));
     }
 }
-var a = i(582128),
-    l = i(132500);
-let o = (0, l.A)(),
+var l = i(582128),
+    a = i(132500);
+let o = (0, a.A)(),
     c = new Map(),
     d = new Map();
-class u extends a.Component {
+class u extends l.Component {
     elementId;
     isVisible = !1;
     static defaultProps = {
         active: !0,
-        children: a.createElement("span"),
+        children: l.createElement("span"),
         root: null,
         rootMargin: "0px 0px 0px 0px",
         threshold: [0, 5e-324],
@@ -71,7 +71,7 @@ class u extends a.Component {
     constructor(e) {
         super(e);
         const { root: t, rootMargin: i, threshold: s } = e;
-        t ? (c.has(t) ? (this.elementId = c.get(t) || "") : c.set(t, (0, l.A)())) : (this.elementId = o);
+        t ? (c.has(t) ? (this.elementId = c.get(t) || "") : c.set(t, (0, a.A)())) : (this.elementId = o);
         const n = this.getVisibilityObserverId();
         d.has(n) || d.set(n, new r({ root: t, rootMargin: i, threshold: s }));
     }
@@ -106,6 +106,6 @@ class u extends a.Component {
         return t;
     }
     render() {
-        return a.Children.only(this.props.children);
+        return l.Children.only(this.props.children);
     }
 }

@@ -1,13 +1,13 @@
-i.d(t, { _: () => d });
-var n = i(477900);
+i.d(t, { _: () => c });
+var s = i(477900);
 i(582128);
-var r = i(194261),
-    s = i(297264),
+var n = i(194261),
+    r = i(297264),
     a = i(144165),
     l = i(772167),
     o = i(375708),
-    c = i(640886);
-function d(e) {
+    d = i(640886);
+function c(e) {
     let { partnerIds: t } = e;
     return (
         null != t
@@ -18,29 +18,29 @@ function d(e) {
             : Object.entries((0, l.Cf)())
     ).map((e) => {
         let [t, i] = e;
-        return (0, n.jsx)(
+        return (0, s.jsx)(
             "div",
             {
-                className: c.lA,
-                children: (0, n.jsxs)("div", {
-                    className: c.LV,
+                className: d.lA,
+                children: (0, s.jsxs)("div", {
+                    className: d.LV,
                     children: [
-                        (0, n.jsxs)("div", {
-                            className: c.JN,
+                        (0, s.jsxs)("div", {
+                            className: d.JN,
                             children: [
-                                (0, n.jsx)("div", {
-                                    className: c.MC,
-                                    children: (0, n.jsx)(r.LockIcon, { size: "refresh_sm" }),
+                                (0, s.jsx)("div", {
+                                    className: d.MC,
+                                    children: (0, s.jsx)(n.LockIcon, { size: "refresh_sm" }),
                                 }),
-                                (0, n.jsxs)("div", {
-                                    className: c.yO,
+                                (0, s.jsxs)("div", {
+                                    className: d.yO,
                                     children: [
-                                        (0, n.jsx)(s.D, {
+                                        (0, s.jsx)(r.D, {
                                             variant: "heading-lg/semibold",
                                             color: "text-strong",
                                             children: o.intl.formatToPlainString(i.title, i.titleParams ?? {}),
                                         }),
-                                        (0, n.jsx)(s.D, {
+                                        (0, s.jsx)(r.D, {
                                             variant: "heading-sm/medium",
                                             color: "text-subtle",
                                             children: o.intl.formatToPlainString(i.body, i.bodyParams ?? {}),
@@ -49,15 +49,15 @@ function d(e) {
                                 }),
                             ],
                         }),
-                        (0, n.jsx)("div", {
-                            className: c.R4,
-                            children: (0, n.jsx)(a._, {
+                        (0, s.jsx)("div", {
+                            className: d.R4,
+                            children: (0, s.jsx)(a._, {
                                 src: i.asset,
-                                className: c.Ys,
+                                className: d.Ys,
                                 width: 100,
                                 height: 100,
                                 zoomable: !1,
-                                imageClassName: c.EM,
+                                imageClassName: d.EM,
                             }),
                         }),
                     ],

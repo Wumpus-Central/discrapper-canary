@@ -1,23 +1,23 @@
-let i = n(864886),
-    r = n(532618),
-    { safeRe: s, t: a } = n(64672);
+let n = r(864886),
+    o = r(532618),
+    { safeRe: i, t: a } = r(64672);
 e.exports = (e, t) => {
-    if (e instanceof i) return e;
+    if (e instanceof n) return e;
     if (("number" == typeof e && (e = String(e)), "string" != typeof e)) return null;
-    let n = null;
+    let r = null;
     if ((t = t || {}).rtl) {
-        let i,
-            r = t.includePrerelease ? s[a.COERCERTLFULL] : s[a.COERCERTL];
-        for (; (i = r.exec(e)) && (!n || n.index + n[0].length !== e.length); )
-            (n && i.index + i[0].length === n.index + n[0].length) || (n = i),
-                (r.lastIndex = i.index + i[1].length + i[2].length);
-        r.lastIndex = -1;
-    } else n = e.match(t.includePrerelease ? s[a.COERCEFULL] : s[a.COERCE]);
-    if (null === n) return null;
-    let o = n[2],
-        l = n[3] || "0",
-        u = n[4] || "0",
-        c = t.includePrerelease && n[5] ? `-${n[5]}` : "",
-        d = t.includePrerelease && n[6] ? `+${n[6]}` : "";
-    return r(`${o}.${l}.${u}${c}${d}`, t);
+        let n,
+            o = t.includePrerelease ? i[a.COERCERTLFULL] : i[a.COERCERTL];
+        for (; (n = o.exec(e)) && (!r || r.index + r[0].length !== e.length); )
+            (r && n.index + n[0].length === r.index + r[0].length) || (r = n),
+                (o.lastIndex = n.index + n[1].length + n[2].length);
+        o.lastIndex = -1;
+    } else r = e.match(t.includePrerelease ? i[a.COERCEFULL] : i[a.COERCE]);
+    if (null === r) return null;
+    let s = r[2],
+        l = r[3] || "0",
+        u = r[4] || "0",
+        c = t.includePrerelease && r[5] ? `-${r[5]}` : "",
+        f = t.includePrerelease && r[6] ? `+${r[6]}` : "";
+    return o(`${s}.${l}.${u}${c}${f}`, t);
 };

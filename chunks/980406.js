@@ -1,10 +1,10 @@
-E.d(r, { r: () => R });
-var o = E(975571),
-    i = E(652215),
-    T = E(375708);
+T.d(r, { r: () => R });
+var E = T(975571),
+    o = T(652215),
+    i = T(375708);
 function R() {
-    return T.intl.format(T.t["+ALa7+"], {
-        fullTermsUrl: o.A.getArticleURL(i.MVz.CREATOR_TERMS),
-        creatorRevenuePolicyUrl: o.A.getArticleURL(i.MVz.CREATOR_POLICY),
+    return i.intl.format(i.t["+ALa7+"], {
+        fullTermsUrl: E.A.getArticleURL(o.MVz.CREATOR_TERMS),
+        creatorRevenuePolicyUrl: E.A.getArticleURL(o.MVz.CREATOR_POLICY),
     });
 }

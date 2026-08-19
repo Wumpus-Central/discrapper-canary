@@ -1,8 +1,8 @@
-t.d(e, { A: () => i });
-var n = t(477900);
+t.d(e, { A: () => s });
+var r = t(477900);
 t(582128);
-var r = t(952052);
-function i(a) {
+var n = t(952052);
+function s(a) {
     let { children: e } = a;
-    return (0, n.jsx)("div", { className: r.BU, children: e });
+    return (0, r.jsx)("div", { className: n.BU, children: e });
 }

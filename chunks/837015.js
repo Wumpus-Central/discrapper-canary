@@ -1,11 +1,11 @@
 "use strict";
-n.d(t, { A: () => a, F: () => s });
+n.d(t, { A: () => s, F: () => a });
 var i = n(575593),
-    r = n(149807);
-function s(e) {
-    return e instanceof a;
+    r = n(338535);
+function a(e) {
+    return e instanceof s;
 }
-class a extends r.A {
+class s extends r.A {
     asset;
     label;
     palette;
@@ -17,6 +17,6 @@ class a extends r.A {
             (this.palette = e.palette);
     }
     static fromServer(e) {
-        return new a({ ...super.fromServer(e), ...e });
+        return new s({ ...super.fromServer(e), ...e });
     }
 }

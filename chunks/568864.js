@@ -1,59 +1,59 @@
 "use strict";
-n.d(t, { e: () => l });
-var r = n(192734),
-    i = n(201092),
-    a = n(103564),
-    o = n(404903),
-    s = n(126024);
-function l(e, t, n) {
+r.d(t, { e: () => l });
+var n = r(192734),
+    o = r(201092),
+    i = r(103564),
+    a = r(404903),
+    s = r(126024);
+function l(e, t, r) {
     let {
             isDisabled: l = !1,
             isReadOnly: u = !1,
             value: c,
-            name: d,
-            form: f,
-            children: p,
+            name: f,
+            form: p,
+            children: d,
             "aria-label": h,
             "aria-labelledby": m,
-            validationState: g = "valid",
-            isInvalid: v,
-            onPressStart: y,
+            validationState: v = "valid",
+            isInvalid: y,
+            onPressStart: g,
             onPressEnd: b,
-            onPressChange: _,
-            onPress: w,
-            onPressUp: x,
+            onPressChange: w,
+            onPress: _,
+            onPressUp: S,
             onClick: E,
         } = e,
-        { pressProps: S, isPressed: k } = (0, o.d)({
-            onPressStart: y,
+        { pressProps: x, isPressed: k } = (0, a.d)({
+            onPressStart: g,
             onPressEnd: b,
-            onPressChange: _,
-            onPress: w,
-            onPressUp: x,
+            onPressChange: w,
+            onPress: _,
+            onPressUp: S,
             onClick: E,
             isDisabled: l,
         }),
-        { pressProps: T, isPressed: C } = (0, o.d)({
-            onPressStart: y,
+        { pressProps: C, isPressed: T } = (0, a.d)({
+            onPressStart: g,
             onPressEnd: b,
-            onPressChange: _,
-            onPressUp: x,
+            onPressChange: w,
+            onPressUp: S,
             onClick: E,
             onPress(e) {
-                var r;
-                null == w || w(e), t.toggle(), null == (r = n.current) || r.focus();
+                var n;
+                null == _ || _(e), t.toggle(), null == (n = r.current) || n.focus();
             },
             isDisabled: l || u,
         }),
-        { focusableProps: P } = (0, s.Wc)(e, n),
-        A = (0, r.v)(S, P),
-        M = (0, i.$)(e, { labelable: !0 });
+        { focusableProps: M } = (0, s.Wc)(e, r),
+        P = (0, n.v)(x, M),
+        A = (0, o.$)(e, { labelable: !0 });
     return (
-        (0, a.F)(n, t.defaultSelected, t.setSelected),
+        (0, i.F)(r, t.defaultSelected, t.setSelected),
         {
-            labelProps: (0, r.v)(T, { onClick: (e) => e.preventDefault() }),
-            inputProps: (0, r.v)(M, {
-                "aria-invalid": v || "invalid" === g || void 0,
+            labelProps: (0, n.v)(C, { onClick: (e) => e.preventDefault() }),
+            inputProps: (0, n.v)(A, {
+                "aria-invalid": y || "invalid" === v || void 0,
                 "aria-errormessage": e["aria-errormessage"],
                 "aria-controls": e["aria-controls"],
                 "aria-readonly": u || void 0,
@@ -62,16 +62,16 @@ function l(e, t, n) {
                 },
                 disabled: l,
                 ...(null == c ? {} : { value: c }),
-                name: d,
-                form: f,
+                name: f,
+                form: p,
                 type: "checkbox",
-                ...A,
+                ...P,
             }),
             isSelected: t.isSelected,
-            isPressed: k || C,
+            isPressed: k || T,
             isDisabled: l,
             isReadOnly: u,
-            isInvalid: v || "invalid" === g,
+            isInvalid: y || "invalid" === v,
         }
     );
 }

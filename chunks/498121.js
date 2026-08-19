@@ -1,42 +1,42 @@
 "use strict";
-var r = (function () {
+var n = (function () {
         function e(e, t) {
-            for (var n = 0; n < t.length; n++) {
-                var r = t[n];
-                (r.enumerable = r.enumerable || !1),
-                    (r.configurable = !0),
-                    "value" in r && (r.writable = !0),
-                    Object.defineProperty(e, r.key, r);
+            for (var r = 0; r < t.length; r++) {
+                var n = t[r];
+                (n.enumerable = n.enumerable || !1),
+                    (n.configurable = !0),
+                    "value" in n && (n.writable = !0),
+                    Object.defineProperty(e, n.key, n);
             }
         }
-        return function (t, n, r) {
-            return n && e(t.prototype, n), r && e(t, r), t;
+        return function (t, r, n) {
+            return r && e(t.prototype, r), n && e(t, n), t;
         };
     })(),
-    i = n(652925),
-    a = n(667794),
-    o = n(439834),
-    s = n(540017);
-n(150433);
-var l = n(140526),
-    u = n.g.Set || n(155392);
+    o = r(652925),
+    i = r(667794),
+    a = r(439834),
+    s = r(540017);
+r(150433);
+var l = r(140526),
+    u = r.g.Set || r(155392);
 e.exports = (function (e) {
     if ("function" != typeof e && null !== e)
         throw TypeError("Super expression must either be null or a function, not " + typeof e);
     function t(e) {
         if (!(this instanceof t)) throw TypeError("Cannot call a class as a function");
-        var n = (function (e, t) {
+        var r = (function (e, t) {
             if (!e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
             return t && ("object" == typeof t || "function" == typeof t) ? t : e;
         })(this, (t.__proto__ || Object.getPrototypeOf(t)).call(this));
-        return (n._value = e), (n._offset = 0), (n._animation = null), (n._listeners = {}), n;
+        return (r._value = e), (r._offset = 0), (r._animation = null), (r._listeners = {}), r;
     }
     return (
         (t.prototype = Object.create(e && e.prototype, {
             constructor: { value: t, enumerable: !1, writable: !0, configurable: !0 },
         })),
         e && (Object.setPrototypeOf ? Object.setPrototypeOf(t, e) : (t.__proto__ = e)),
-        r(t, [
+        n(t, [
             {
                 key: "__detach",
                 value: function () {
@@ -98,27 +98,27 @@ e.exports = (function (e) {
             {
                 key: "interpolate",
                 value: function (e) {
-                    return new o(this, s.create(e));
+                    return new a(this, s.create(e));
                 },
             },
             {
                 key: "animate",
                 value: function (e, t) {
-                    var n = this,
-                        r = null;
-                    e.__isInteraction && (r = a.current.createInteractionHandle());
-                    var i = this._animation;
+                    var r = this,
+                        n = null;
+                    e.__isInteraction && (n = i.current.createInteractionHandle());
+                    var o = this._animation;
                     this._animation && this._animation.stop(),
                         (this._animation = e),
                         e.start(
                             this._value,
                             function (e) {
-                                n._updateValue(e);
+                                r._updateValue(e);
                             },
                             function (e) {
-                                (n._animation = null), null !== r && a.current.clearInteractionHandle(r), t && t(e);
+                                (r._animation = null), null !== n && i.current.clearInteractionHandle(n), t && t(e);
                             },
-                            i,
+                            o,
                         );
                 },
             },
@@ -137,21 +137,21 @@ e.exports = (function (e) {
             {
                 key: "_updateValue",
                 value: function (e) {
-                    var t, n;
-                    for (var r in ((this._value = e),
+                    var t, r;
+                    for (var n in ((this._value = e),
                     (t = this),
-                    (n = new u()),
+                    (r = new u()),
                     !(function e(t) {
-                        "function" == typeof t.update ? n.add(t) : t.__getChildren().forEach(e);
+                        "function" == typeof t.update ? r.add(t) : t.__getChildren().forEach(e);
                     })(t),
-                    n.forEach(function (e) {
+                    r.forEach(function (e) {
                         return e.update();
                     }),
                     this._listeners))
-                        this._listeners[r]({ value: this.__getValue() });
+                        this._listeners[n]({ value: this.__getValue() });
                 },
             },
         ]),
         t
     );
-})(i);
+})(o);

@@ -1,9 +1,9 @@
 "use strict";
-n.d(t, { D$: () => o, Gl: () => l, X2: () => a });
+n.d(t, { D$: () => l, Gl: () => o, X2: () => s });
 var i,
     r,
-    s,
-    a =
+    a,
+    s =
         (((i = {}).NAVIGATE_UP = "NAVIGATE_UP"),
         (i.NAVIGATE_DOWN = "NAVIGATE_DOWN"),
         (i.NAVIGATE_LEFT = "NAVIGATE_LEFT"),
@@ -22,7 +22,7 @@ var i,
         (i.QUERY_START = "QUERY_START"),
         (i.QUERY_CLEAR = "QUERY_CLEAR"),
         i),
-    o =
+    l =
         (((r = {}).ENTER = "Enter"),
         (r.SPACE = " "),
         (r.ESCAPE = "Escape"),
@@ -37,4 +37,4 @@ var i,
         (r.PAGE_UP = "PageUp"),
         (r.PAGE_DOWN = "PageDown"),
         r),
-    l = (((s = {}).HORIZONTAL = "horizontal"), (s.VERTICAL = "vertical"), s);
+    o = (((a = {}).HORIZONTAL = "horizontal"), (a.VERTICAL = "vertical"), a);

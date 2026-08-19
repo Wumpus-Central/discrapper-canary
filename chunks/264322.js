@@ -111,7 +111,7 @@ async function z(e) {
     W(e, { fetchState: { fetching: !0, abort: t, promise: n.promise } }, !0),
         await (0, O.E)(e, t).then(n.resolve).catch(n.reject);
 }
-function q(e) {
+function Z(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         { target: n, index: i } = e,
         r = m.default.getCurrentUser()?.id;
@@ -183,7 +183,7 @@ function q(e) {
         t,
     );
 }
-function Z() {
+function q() {
     W({ type: "user" }, { serverVersion: w });
 }
 class X extends l.Ay.Store {
@@ -291,7 +291,7 @@ let Q = new X(o.h, {
         LOGOUT: K,
         CONNECTION_OPEN: function () {
             for (let e of Object.values(Q.indices)) e.serverVersion = w;
-            for (let e of H) q(e);
+            for (let e of H) Z(e);
             (H = []), (B = !0);
         },
         APPLICATION_COMMAND_INDEX_FETCH_REQUEST: function (e) {
@@ -299,7 +299,7 @@ let Q = new X(o.h, {
                 n = j(t);
             ed(Q.indices[n] ?? F) && z(t);
         },
-        APPLICATION_COMMAND_INDEX_FETCH_SUCCESS: q,
+        APPLICATION_COMMAND_INDEX_FETCH_SUCCESS: Z,
         APPLICATION_COMMAND_INDEX_FETCH_FAILURE: function (e) {
             let { target: t } = e;
             W(t, { fetchState: { fetching: !1, retryAfter: Date.now() + 5e3 } });
@@ -319,8 +319,8 @@ let Q = new X(o.h, {
             let { guild: t } = e;
             Y({ type: "guild", guildId: t.id });
         },
-        USER_APPLICATION_UPDATE: Z,
-        USER_APPLICATION_REMOVE: Z,
+        USER_APPLICATION_UPDATE: q,
+        USER_APPLICATION_REMOVE: q,
         GUILD_APPLICATION_COMMAND_INDEX_UPDATE: function (e) {
             let { guildId: t, version: n } = e,
                 i = W({ type: "guild", guildId: t }, { serverVersion: n ?? w }),

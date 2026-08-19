@@ -1,18 +1,18 @@
 "use strict";
-function r(e) {
+function n(e) {
     return e && "object" == typeof e && "default" in e ? e.default : e;
 }
 Object.defineProperty(t, "__esModule", { value: !0 });
-var i = r(n(901012)),
-    a = n(666764),
-    o = n(333007),
-    s = n(54482),
-    l = r(n(271104)),
-    u = n(472090),
-    c = n(675106),
-    d = r(n(269274)),
-    f = /^--/,
-    p = {},
+var o = n(r(901012)),
+    i = r(666764),
+    a = r(333007),
+    s = r(54482),
+    l = n(r(271104)),
+    u = r(472090),
+    c = r(675106),
+    f = n(r(269274)),
+    p = /^--/,
+    d = {},
     h = {
         animationIterationCount: !0,
         borderImageOutset: !0,
@@ -59,38 +59,38 @@ var i = r(n(901012)),
     m = ["Webkit", "Ms", "Moz", "O"];
 h = Object.keys(h).reduce(function (e, t) {
     return (
-        m.forEach(function (n) {
-            return (e[n + t.charAt(0).toUpperCase() + t.substring(1)] = e[t]);
+        m.forEach(function (r) {
+            return (e[r + t.charAt(0).toUpperCase() + t.substring(1)] = e[t]);
         }),
         e
     );
 }, h);
-var g = /^(matrix|translate|scale|rotate|skew)/,
-    v = /^(translate)/,
-    y = /^(rotate|skew)/,
+var v = /^(matrix|translate|scale|rotate|skew)/,
+    y = /^(translate)/,
+    g = /^(rotate|skew)/,
     b = function (e, t) {
         return c.is.num(e) && 0 !== e ? e + t : e;
     },
-    _ = function e(t, n) {
+    w = function e(t, r) {
         return c.is.arr(t)
             ? t.every(function (t) {
-                  return e(t, n);
+                  return e(t, r);
               })
             : c.is.num(t)
-              ? t === n
-              : parseFloat(t) === n;
+              ? t === r
+              : parseFloat(t) === r;
     },
-    w = (function (e) {
+    _ = (function (e) {
         function t(t) {
-            var n = t.x,
-                r = t.y,
-                a = t.z,
-                o = i(t, ["x", "y", "z"]),
+            var r = t.x,
+                n = t.y,
+                i = t.z,
+                a = o(t, ["x", "y", "z"]),
                 s = [],
                 l = [];
             return (
-                (n || r || a) &&
-                    (s.push([n || 0, r || 0, a || 0]),
+                (r || n || i) &&
+                    (s.push([r || 0, n || 0, i || 0]),
                     l.push(function (e) {
                         return [
                             "translate3d(" +
@@ -100,27 +100,27 @@ var g = /^(matrix|translate|scale|rotate|skew)/,
                                     })
                                     .join(",") +
                                 ")",
-                            _(e, 0),
+                            w(e, 0),
                         ];
                     })),
-                c.each(o, function (e, t) {
+                c.each(a, function (e, t) {
                     if ("transform" === t)
                         s.push([e || ""]),
                             l.push(function (e) {
                                 return [e, "" === e];
                             });
-                    else if (g.test(t)) {
-                        if ((delete o[t], c.is.und(e))) return;
-                        var n = v.test(t) ? "px" : y.test(t) ? "deg" : "";
+                    else if (v.test(t)) {
+                        if ((delete a[t], c.is.und(e))) return;
+                        var r = y.test(t) ? "px" : g.test(t) ? "deg" : "";
                         s.push(c.toArray(e)),
                             l.push(
                                 "rotate3d" === t
                                     ? function (e) {
                                           var t = e[0],
-                                              r = e[1],
-                                              i = e[2],
-                                              a = e[3];
-                                          return ["rotate3d(" + t + "," + r + "," + i + "," + b(a, n) + ")", _(a, 0)];
+                                              n = e[1],
+                                              o = e[2],
+                                              i = e[3];
+                                          return ["rotate3d(" + t + "," + n + "," + o + "," + b(i, r) + ")", w(i, 0)];
                                       }
                                     : function (e) {
                                           return [
@@ -128,77 +128,77 @@ var g = /^(matrix|translate|scale|rotate|skew)/,
                                                   "(" +
                                                   e
                                                       .map(function (e) {
-                                                          return b(e, n);
+                                                          return b(e, r);
                                                       })
                                                       .join(",") +
                                                   ")",
-                                              _(e, +!!t.startsWith("scale")),
+                                              w(e, +!!t.startsWith("scale")),
                                           ];
                                       },
                             );
                     }
                 }),
-                s.length && (o.transform = new x(s, l)),
-                e.call(this, o) || this
+                s.length && (a.transform = new S(s, l)),
+                e.call(this, a) || this
             );
         }
-        return d(t, e), t;
+        return f(t, e), t;
     })(u.AnimatedObject),
-    x = (function (e) {
-        function t(t, n) {
-            var r;
+    S = (function (e) {
+        function t(t, r) {
+            var n;
             return (
-                ((r = e.call(this) || this).inputs = t),
-                (r.transforms = n),
-                (r._value = null),
-                (r._children = new Set()),
-                r
+                ((n = e.call(this) || this).inputs = t),
+                (n.transforms = r),
+                (n._value = null),
+                (n._children = new Set()),
+                n
             );
         }
-        d(t, e);
-        var n = t.prototype;
+        f(t, e);
+        var r = t.prototype;
         return (
-            (n.get = function () {
+            (r.get = function () {
                 return this._value || (this._value = this._get());
             }),
-            (n._get = function () {
+            (r._get = function () {
                 var e = this,
                     t = "",
-                    n = !0;
+                    r = !0;
                 return (
-                    c.each(this.inputs, function (r, i) {
-                        var a = c.getFluidValue(r[0]),
-                            o = e.transforms[i](c.is.arr(a) ? a : r.map(c.getFluidValue)),
-                            s = o[0],
-                            l = o[1];
-                        (t += " " + s), (n = n && l);
+                    c.each(this.inputs, function (n, o) {
+                        var i = c.getFluidValue(n[0]),
+                            a = e.transforms[o](c.is.arr(i) ? i : n.map(c.getFluidValue)),
+                            s = a[0],
+                            l = a[1];
+                        (t += " " + s), (r = r && l);
                     }),
-                    n ? "none" : t
+                    r ? "none" : t
                 );
             }),
-            (n.addChild = function (e) {
+            (r.addChild = function (e) {
                 var t = this;
                 this._children.size ||
                     c.each(this.inputs, function (e) {
                         return c.each(e, function (e) {
-                            var n = c.getFluidConfig(e);
-                            n && n.addChild(t);
+                            var r = c.getFluidConfig(e);
+                            r && r.addChild(t);
                         });
                     }),
                     this._children.add(e);
             }),
-            (n.removeChild = function (e) {
+            (r.removeChild = function (e) {
                 var t = this;
                 this._children.delete(e),
                     this._children.size ||
                         c.each(this.inputs, function (e) {
                             return c.each(e, function (e) {
-                                var n = c.getFluidConfig(e);
-                                n && n.removeChild(t);
+                                var r = c.getFluidConfig(e);
+                                r && r.removeChild(t);
                             });
                         });
             }),
-            (n.onParentChange = function (e) {
+            (r.onParentChange = function (e) {
                 "change" == e.type && (this._value = null),
                     c.each(this._children, function (t) {
                         t.onParentChange(e);
@@ -207,10 +207,10 @@ var g = /^(matrix|translate|scale|rotate|skew)/,
             t
         );
     })(c.FluidValue);
-a.Globals.assign({
+i.Globals.assign({
     colorNames: l,
     createStringInterpolator: s.createStringInterpolator,
-    batchedUpdates: o.unstable_batchedUpdates,
+    batchedUpdates: a.unstable_batchedUpdates,
 });
 var E = u.createHost(
     [
@@ -351,56 +351,56 @@ var E = u.createHost(
     {
         applyAnimatedValues: function (e, t) {
             if (!e.nodeType || !e.setAttribute) return !1;
-            var n = "filter" === e.nodeName || (e.parentNode && "filter" === e.parentNode.nodeName),
-                r = t.style,
-                a = t.children,
-                o = t.scrollTop,
+            var r = "filter" === e.nodeName || (e.parentNode && "filter" === e.parentNode.nodeName),
+                n = t.style,
+                i = t.children,
+                a = t.scrollTop,
                 s = t.scrollLeft,
-                l = i(t, ["style", "children", "scrollTop", "scrollLeft"]),
+                l = o(t, ["style", "children", "scrollTop", "scrollLeft"]),
                 u = Object.values(l),
-                d = Object.keys(l).map(function (t) {
-                    return n || e.hasAttribute(t)
+                f = Object.keys(l).map(function (t) {
+                    return r || e.hasAttribute(t)
                         ? t
-                        : p[t] ||
-                              (p[t] = t.replace(/([A-Z])/g, function (e) {
+                        : d[t] ||
+                              (d[t] = t.replace(/([A-Z])/g, function (e) {
                                   return "-" + e.toLowerCase();
                               }));
                 });
             c.Globals.frameLoop.onWrite(function () {
-                for (var t in (void 0 !== a && (e.textContent = a), r))
-                    if (r.hasOwnProperty(t)) {
-                        var n,
-                            i,
+                for (var t in (void 0 !== i && (e.textContent = i), n))
+                    if (n.hasOwnProperty(t)) {
+                        var r,
+                            o,
                             l =
-                                ((n = t),
-                                null == (i = r[t]) || "boolean" == typeof i || "" === i
+                                ((r = t),
+                                null == (o = n[t]) || "boolean" == typeof o || "" === o
                                     ? ""
-                                    : "number" != typeof i || 0 === i || f.test(n) || (h.hasOwnProperty(n) && h[n])
-                                      ? ("" + i).trim()
-                                      : i + "px");
-                        "float" === t ? (t = "cssFloat") : f.test(t) ? e.style.setProperty(t, l) : (e.style[t] = l);
+                                    : "number" != typeof o || 0 === o || p.test(r) || (h.hasOwnProperty(r) && h[r])
+                                      ? ("" + o).trim()
+                                      : o + "px");
+                        "float" === t ? (t = "cssFloat") : p.test(t) ? e.style.setProperty(t, l) : (e.style[t] = l);
                     }
-                d.forEach(function (t, n) {
-                    e.setAttribute(t, u[n]);
+                f.forEach(function (t, r) {
+                    e.setAttribute(t, u[r]);
                 }),
-                    void 0 !== o && (e.scrollTop = o),
+                    void 0 !== a && (e.scrollTop = a),
                     void 0 !== s && (e.scrollLeft = s);
             });
         },
         createAnimatedStyle: function (e) {
-            return new w(e);
+            return new _(e);
         },
         getComponentProps: function (e) {
-            return e.scrollTop, e.scrollLeft, i(e, ["scrollTop", "scrollLeft"]);
+            return e.scrollTop, e.scrollLeft, o(e, ["scrollTop", "scrollLeft"]);
         },
     },
 ).animated;
-Object.keys(a).forEach(function (e) {
+Object.keys(i).forEach(function (e) {
     "default" !== e &&
         Object.defineProperty(t, e, {
             enumerable: !0,
             get: function () {
-                return a[e];
+                return i[e];
             },
         });
 }),

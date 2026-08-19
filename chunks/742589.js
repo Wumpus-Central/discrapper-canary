@@ -9,8 +9,8 @@ var l = n(607399),
     d = n(723702),
     c = n(19575),
     u = n(58736),
-    h = n(746080),
-    A = n(717770);
+    A = n(746080),
+    h = n(717770);
 let E = (0, a.Fe)({
     createPromise: () =>
         Promise.all([
@@ -67,8 +67,8 @@ function C(e) {
                 : (0, i.jsxs)(i.Fragment, {
                       children: [
                           c,
-                          e && !(0, h.jq)(r)
-                              ? (0, i.jsx)(E, { guildId: s, channelId: r, className: A.$P }, s ?? r)
+                          e && !(0, A.jq)(r)
+                              ? (0, i.jsx)(E, { guildId: s, channelId: r, className: h.$P }, s ?? r)
                               : null,
                       ],
                   });

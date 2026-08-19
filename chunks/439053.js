@@ -14,15 +14,15 @@ var l = n(503698),
     m = n(289873),
     x = n(308528),
     R = n(775602),
-    p = n(183555),
-    g = n(679492),
-    A = n(518477),
-    I = n(375708),
+    g = n(183555),
+    p = n(679492),
+    I = n(518477),
+    A = n(375708),
     _ = n(167388),
     h = n(871645);
 function N(e) {
     let { message: t, userId: n, onClose: l } = e,
-        { trackUserProfileAction: s } = (0, p.NJ)();
+        { trackUserProfileAction: s } = (0, g.NJ)();
     return (0, i.jsxs)("div", {
         className: r()(h.oR, _.d6),
         children: [
@@ -33,7 +33,7 @@ function N(e) {
                     (0, i.jsx)(f.E, { color: "text-strong", variant: "text-sm/semibold", children: t }),
                     (0, i.jsx)(f.E, {
                         variant: "text-sm/semibold",
-                        children: I.intl.format(I.t.QEW8Mq, {
+                        children: A.intl.format(A.t.QEW8Mq, {
                             onClick: () => {
                                 s({ action: "PRESS_REACT_REPLY_TOAST" }),
                                     l?.(),
@@ -51,14 +51,14 @@ function v() {
         className: r()(h.oR, _.d6),
         children: [
             (0, i.jsx)(m.y, { type: m.t.SPINNING_CIRCLE_SIMPLE, className: _.RC }),
-            (0, i.jsx)(f.E, { color: "text-strong", variant: "text-sm/semibold", children: I.intl.string(I.t.tcARX0) }),
+            (0, i.jsx)(f.E, { color: "text-strong", variant: "text-sm/semibold", children: A.intl.string(A.t.tcARX0) }),
         ],
     });
 }
 let O = (e) => {
     let { userId: t, onClose: n, className: l } = e,
-        { interactionTypeSent: d, showInteractionToast: E } = (0, g.Pq)(),
-        f = d === A.AQ.REPLY ? I.intl.string(I.t.BPaiaa) : I.intl.string(I.t.Ry2EtG),
+        { interactionTypeSent: d, showInteractionToast: E } = (0, p.Pq)(),
+        f = d === I.AQ.REPLY ? A.intl.string(A.t.BPaiaa) : A.intl.string(A.t.Ry2EtG),
         m = (0, a.bG)([R.Ay], () => R.Ay.useReducedMotion),
         x = (0, o.p)(
             E,

@@ -127,13 +127,13 @@ let f = new (n(626584).A)("GuildEmojis"),
 var S = n(736056),
     N = n(98318),
     C = n(492494),
-    R = n(384684);
+    O = n(384684);
 n(582128), n(702841);
-var O = n(71393),
+var R = n(71393),
     L = n(723702),
-    D = n(652215);
-D.GuildFeatures.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE;
-var y = n(773669),
+    y = n(652215);
+y.GuildFeatures.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE;
+var D = n(773669),
     v = n(617617),
     b = n(696451),
     M = n(184989),
@@ -302,7 +302,7 @@ class eu {
                 this.emoticonsByName.has(e.name) || (n.push(F.A.escape(e.name)), this.emoticonsByName.set(e.name, e));
             };
         function l(e) {
-            let t = er[null == e ? D.eGj : e];
+            let t = er[null == e ? y.eGj : e];
             null != t && (o().each(t.usableEmojis, r), o().each(t.emoticons, a));
         }
         for (const e of (j.Ay.forEach(i), l(this.guildId), this.newlyAddedEmoji.keys())) {
@@ -564,7 +564,7 @@ class eg extends _.Ay.PersistedStore {
     static displayName = "EmojiStore";
     static persistKey = "EmojiStoreV2";
     initialize(e) {
-        this.waitFor(S.A, b.Ay, M.A, P.A, O.A, y.default, H.A, U.Ay, R.A, W.A, v.A, w.default),
+        this.waitFor(S.A, b.Ay, M.A, P.A, R.A, D.default, H.A, U.Ay, O.A, W.A, v.A, w.default),
             null != e &&
                 (null != e.pendingUsages && (q.pendingUsages = e.pendingUsages),
                 null != e.emojiReactionPendingUsages && (q.emojiReactionPendingUsages = e.emojiReactionPendingUsages),
@@ -780,7 +780,7 @@ let eS = new eg(E.h, {
             settings: { type: t },
             wasSaved: n,
         } = e;
-        if ((m(y.default.locale), t !== z.oD.FRECENCY_AND_FAVORITES_SETTINGS || !n)) return !1;
+        if ((m(D.default.locale), t !== z.oD.FRECENCY_AND_FAVORITES_SETTINGS || !n)) return !1;
         (q.pendingUsages = []), (q.emojiReactionPendingUsages = []);
     },
     GUILD_ROLE_CREATE: em,

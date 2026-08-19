@@ -2,14 +2,14 @@ n.d(t, { A: () => u });
 var i = n(17928),
     l = n(228366),
     a = n(967198);
-let s = null,
-    r = null,
+let r = null,
+    s = null,
     o = { reportedMessages: {} };
-function d() {
+function c() {
     let e = a.A.getLastSelectedGuildId();
-    e !== s && ((r = null), (s = e ?? null));
+    e !== r && ((s = null), (r = e ?? null));
 }
-class c extends i.Ay.PersistedStore {
+class d extends i.Ay.PersistedStore {
     static displayName = "ReportToModStore";
     static persistKey = "ReportToModStore";
     static migrations = [(e) => ({ reportedMessages: e?.reportedMessages ?? {} })];
@@ -21,13 +21,13 @@ class c extends i.Ay.PersistedStore {
                     return [t, new Set(n)];
                 }),
             )),
-            this.syncWith([a.A], d);
+            this.syncWith([a.A], c);
     }
     getState() {
         return o;
     }
     isUserBanned(e) {
-        return r?.get(e) ?? null;
+        return s?.get(e) ?? null;
     }
     getReportedMessages() {
         return o.reportedMessages;
@@ -36,33 +36,33 @@ class c extends i.Ay.PersistedStore {
         return o.reportedMessages[e]?.has(t) ?? !1;
     }
 }
-let u = new c(l.h, {
+let u = new d(l.h, {
     REPORT_TO_MOD_REPORT_MESSAGE_SUCCESS: function (e) {
         let { channelId: t, messageId: n } = e;
         null == o.reportedMessages[t] && (o.reportedMessages[t] = new Set()), o.reportedMessages[t].add(n);
     },
     GUILD_BAN_ADD: function (e) {
         let { user: t, guildId: n } = e;
-        n !== s || (null != r && r.set(t.id, !0));
+        n !== r || (null != s && s.set(t.id, !0));
     },
     GUILD_BAN_REMOVE: function (e) {
         let { user: t, guildId: n } = e;
-        n !== s || (null != r && r.set(t.id, !1));
+        n !== r || (null != s && s.set(t.id, !1));
     },
     GUILD_SETTINGS_LOADED_BANS_BATCH: function (e) {
         let { bans: t, guildId: n, userIds: i } = e;
-        if (n !== s) return;
+        if (n !== r) return;
         let l = new Set(t.map((e) => e.user?.id)),
             a = Array.from(new Set(i ?? [])).filter((e) => !l.has(e));
-        null == r && (r = new Map()),
+        null == s && (s = new Map()),
             l.forEach((e) => {
-                r?.set(e, !0);
+                s?.set(e, !0);
             }),
             a.forEach((e) => {
-                r?.set(e, !1);
+                s?.set(e, !1);
             });
     },
     LOGOUT: function () {
-        (s = null), (r = null), (o.reportedMessages = {});
+        (r = null), (s = null), (o.reportedMessages = {});
     },
 });

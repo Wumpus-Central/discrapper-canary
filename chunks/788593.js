@@ -1,8 +1,8 @@
 i.d(e, { A: () => E, R: () => v });
 var l = i(477900),
-    s = i(582128),
-    t = i(503698),
-    n = i.n(t),
+    t = i(582128),
+    s = i(503698),
+    n = i.n(s),
     r = i(834730),
     c = i(866665),
     d = i(259678),
@@ -16,9 +16,9 @@ var l = i(477900),
     j = i(350956);
 function v(a) {
     let { imageSrc: e, gameName: i } = a,
-        [t, n] = s.useState(!1),
+        [s, n] = t.useState(!1),
         c = i ?? N.intl.string(N.t.GIWFlF);
-    return t || null == e
+    return s || null == e
         ? (0, l.jsx)("div", {
               role: "img",
               "aria-label": c,
@@ -28,27 +28,27 @@ function v(a) {
         : (0, l.jsx)("img", { src: e, alt: c, className: j.$_, onError: () => n(!0), onLoad: () => n(!1) });
 }
 function I(a) {
-    let { imageSrc: e, gameName: i, gameId: t, userId: r, className: I, hideTooltip: E = !1, coverRef: g } = a,
-        h = !(0, p.X)("GameCover"),
-        L = (0, A.A)(h),
+    let { imageSrc: e, gameName: i, gameId: s, userId: r, className: I, hideTooltip: E = !1, coverRef: g } = a,
+        L = !(0, p.X)("GameCover"),
+        h = (0, A.A)(L),
         f = (0, u.A)({
             location: "GameCover",
-            gameId: t,
+            gameId: s,
             source: m.GameProfileSources.UserProfile,
             sourceUserId: r,
             trackEntryPointImpression: !0,
         }),
         _ = i ?? N.intl.string(N.t.GIWFlF),
         R = N.intl.formatToPlainString(N.t["8QLQB+"], { gameName: _ }),
-        T = s.useCallback(
+        T = t.useCallback(
             (a) => {
-                if (L) {
+                if (h) {
                     a.preventDefault(), a.stopPropagation(), (0, x.VQ)();
                     return;
                 }
                 f?.(a);
             },
-            [L, f],
+            [h, f],
         );
     function D(a) {
         return E ? a : (0, l.jsx)(c.m, { text: _, ariaHidden: !0, children: a });
@@ -73,9 +73,9 @@ function I(a) {
     );
 }
 function E(a) {
-    let { gameId: e, userId: i, className: s, disableInteraction: t = !1, hideTooltip: r, coverRef: c, ...o } = a,
-        m = n()(j.PY, s);
-    return t
+    let { gameId: e, userId: i, className: t, disableInteraction: s = !1, hideTooltip: r, coverRef: c, ...o } = a,
+        m = n()(j.PY, t);
+    return s
         ? (0, l.jsx)(d.vN, {
               children: (0, l.jsx)("div", { ref: c, className: m, tabIndex: -1, children: (0, l.jsx)(v, { ...o }) }),
           })

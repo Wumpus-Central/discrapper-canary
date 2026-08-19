@@ -1,4 +1,4 @@
 "use strict";
-n.d(t, { P: () => r });
-var i,
-    r = (((i = {}).TEXT = "text"), (i.NUMBER = "number"), (i.IMAGE = "image"), (i.DURATION = "duration"), i);
+n.d(t, { P: () => i });
+var l,
+    i = (((l = {}).TEXT = "text"), (l.NUMBER = "number"), (l.IMAGE = "image"), (l.DURATION = "duration"), l);

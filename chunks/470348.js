@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => s, r: () => r });
+n.d(t, { A: () => a, r: () => r });
 let i = (0, n(945810).mj)({
     name: "2026-02-pubsub-bulk-ban-users",
     kind: "user",
@@ -10,4 +10,4 @@ function r(e) {
     let { location: t } = e;
     return i.useConfig({ location: t });
 }
-let s = i;
+let a = i;

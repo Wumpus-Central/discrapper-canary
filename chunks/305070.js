@@ -1,263 +1,263 @@
 "use strict";
 n.d(t, { A: () => V });
-var i = n(477900),
-    r = n(582128),
-    a = n(503698),
-    s = n.n(a),
-    l = n(837381),
+var l = n(477900),
+    i = n(582128),
+    s = n(503698),
+    r = n.n(s),
+    a = n(837381),
     o = n(17928),
-    d = n(689175),
+    u = n(689175),
     c = n(623646),
-    u = n(811024),
-    _ = n(933958),
-    E = n(969151),
-    A = n(659280),
-    h = n(579940),
-    I = n(915089),
-    f = n(750506),
-    p = n(513609),
-    T = n(71393),
-    m = n(597184),
-    g = n(105330),
-    S = n(265431),
-    N = n(459016),
-    C = n(861382),
-    O = n(355622),
-    R = n(820066),
-    L = n(696451),
-    D = n(576705),
-    y = n(351906),
-    v = n(287809),
-    b = n(31498),
-    M = n(887129),
-    P = n(741918),
-    U = n(267102),
-    w = n(652215),
-    G = n(307731);
-let x = new Map([["thread", new Set(["name"])]]);
-var k = n(5867),
-    F = n(175916);
-let V = r.forwardRef(function (e, t) {
-    let { channel: n, type: a, editorHeight: V, onVisibilityChange: B, editorScrollerRef: H, barsHeight: j } = e,
-        W = (0, I.GV)(),
-        Y = (0, o.bG)([T.A], () => T.A.getGuild(n.guild_id) ?? null, [n.guild_id]),
-        K = r.useRef(null),
-        [$, z, q] = (function (e, t, n) {
-            let { channel: i, type: a } = e,
-                [s, l] = r.useState(() => (0, b.Ur)()),
-                d = (0, S.A)(),
-                c = (0, o.bG)([L.Ay, v.default], () => {
-                    let e = v.default.getCurrentUser();
-                    return (null != i.guild_id && null != e ? L.Ay.getMember(i.guild_id, e.id)?.isPending : null) ?? !1;
+    d = n(811024),
+    h = n(933958),
+    m = n(969151),
+    f = n(659280),
+    p = n(579940),
+    g = n(915089),
+    x = n(750506),
+    A = n(513609),
+    E = n(71393),
+    C = n(597184),
+    I = n(105330),
+    y = n(265431),
+    S = n(459016),
+    v = n(861382),
+    _ = n(355622),
+    N = n(820066),
+    T = n(696451),
+    j = n(576705),
+    b = n(351906),
+    R = n(287809),
+    L = n(31498),
+    O = n(887129),
+    M = n(741918),
+    w = n(267102),
+    k = n(652215),
+    P = n(307731);
+let D = new Map([["thread", new Set(["name"])]]);
+var U = n(5867),
+    G = n(175916);
+let V = i.forwardRef(function (e, t) {
+    let { channel: n, type: s, editorHeight: V, onVisibilityChange: F, editorScrollerRef: H, barsHeight: B } = e,
+        W = (0, g.GV)(),
+        K = (0, o.bG)([E.A], () => E.A.getGuild(n.guild_id) ?? null, [n.guild_id]),
+        z = i.useRef(null),
+        [Z, Y, q] = (function (e, t, n) {
+            let { channel: l, type: s } = e,
+                [r, a] = i.useState(() => (0, L.Ur)()),
+                u = (0, y.A)(),
+                c = (0, o.bG)([T.Ay, R.default], () => {
+                    let e = R.default.getCurrentUser();
+                    return (null != l.guild_id && null != e ? T.Ay.getMember(l.guild_id, e.id)?.isPending : null) ?? !1;
                 }),
-                { canMentionEveryone: u, hidePersonalInformation: _ } = (0, o.cf)(
-                    [D.A, y.A],
+                { canMentionEveryone: d, hidePersonalInformation: h } = (0, o.cf)(
+                    [j.A, b.A],
                     () => ({
                         canMentionEveryone:
-                            i.isPrivate() || c || a === O.oU.RULES_INPUT || D.A.can(w.xBc.MENTION_EVERYONE, i),
-                        hidePersonalInformation: y.A.hidePersonalInformation,
+                            l.isPrivate() || c || s === _.oU.RULES_INPUT || j.A.can(k.xBc.MENTION_EVERYONE, l),
+                        hidePersonalInformation: b.A.hidePersonalInformation,
                     }),
-                    [i, a, c],
+                    [l, s, c],
                 ),
-                { activeCommand: E, activeCommandOption: A } = (0, o.cf)([C.A], () => ({
-                    activeCommand: C.A.getActiveCommand(i.id),
-                    activeCommandOption: C.A.getActiveOption(i.id),
+                { activeCommand: m, activeCommandOption: f } = (0, o.cf)([v.A], () => ({
+                    activeCommand: v.A.getActiveCommand(l.id),
+                    activeCommandOption: v.A.getActiveOption(l.id),
                 })),
-                h = r.useMemo(
+                p = i.useMemo(
                     () =>
-                        E?.untranslatedName != null &&
-                        A?.name != null &&
-                        (x.get(E.untranslatedName)?.has(A.name) ?? !1),
-                    [E?.untranslatedName, A?.name],
+                        m?.untranslatedName != null &&
+                        f?.name != null &&
+                        (D.get(m.untranslatedName)?.has(f.name) ?? !1),
+                    [m?.untranslatedName, f?.name],
                 ),
-                I = (function (e) {
-                    let { navId: t, scrollerRef: n, state: i, onFocus: a } = e,
-                        { renderWindow: s } = r.useContext(U.Ay);
-                    function l(e, t, r) {
-                        if ((n.current?.scrollToTop(), e && null != i.query)) {
-                            let e = i.query.typeInfo.focusMode,
+                g = (function (e) {
+                    let { navId: t, scrollerRef: n, state: l, onFocus: s } = e,
+                        { renderWindow: r } = i.useContext(w.Ay);
+                    function a(e, t, i) {
+                        if ((n.current?.scrollToTop(), e && null != l.query)) {
+                            let e = l.query.typeInfo.focusMode,
                                 n =
-                                    e !== m.e.MANUAL &&
-                                    (e !== m.e.AUTO_WHEN_FILTERED || 0 !== i.query.queryText.length);
-                            i.isVisible && (!0 !== t || !1 !== n) && !0 !== r
-                                ? (d.setFocus("0"), a?.(0))
-                                : (d.setFocus(null), a?.(null));
+                                    e !== C.e.MANUAL &&
+                                    (e !== C.e.AUTO_WHEN_FILTERED || 0 !== l.query.queryText.length);
+                            l.isVisible && (!0 !== t || !1 !== n) && !0 !== i
+                                ? (u.setFocus("0"), s?.(0))
+                                : (u.setFocus(null), s?.(null));
                         }
                     }
                     function o(e) {
-                        if ((n.current?.scrollToBottom(), e && null != i.query && i.query.resultCount > 0)) {
-                            let e = i.query.resultCount - 1;
-                            d.setFocus(e.toString()), a?.(e);
+                        if ((n.current?.scrollToBottom(), e && null != l.query && l.query.resultCount > 0)) {
+                            let e = l.query.resultCount - 1;
+                            u.setFocus(e.toString()), s?.(e);
                         }
                     }
-                    let d = (0, M.Ay)({
+                    let u = (0, O.Ay)({
                             id: t,
-                            isEnabled: i.isVisible,
-                            orientation: P.Gl.VERTICAL,
+                            isEnabled: l.isVisible,
+                            orientation: M.Gl.VERTICAL,
                             useVirtualFocus: !0,
                             setFocus: function (e, t) {
-                                let i = s.document.querySelector(e);
-                                null != i && n.current?.scrollIntoViewNode({ node: i }), a?.(+t);
+                                let l = r.document.querySelector(e);
+                                null != l && n.current?.scrollIntoViewNode({ node: l }), s?.(+t);
                             },
-                            onNavigateNextAtEnd: () => l(!0),
+                            onNavigateNextAtEnd: () => a(!0),
                             onNavigatePreviousAtStart: () => o(!0),
-                            scrollToStart: () => (l(!1, !1), Promise.resolve()),
+                            scrollToStart: () => (a(!1, !1), Promise.resolve()),
                             scrollToEnd: () => (o(!1), Promise.resolve()),
                         }),
-                        c = r.useRef(l);
+                        c = i.useRef(a);
                     return (
-                        r.useEffect(() => {
-                            c.current = l;
+                        i.useEffect(() => {
+                            c.current = a;
                         }),
-                        r.useEffect(() => {
-                            c.current(!0, !0, i.isInitialAfterError);
-                        }, [i.query?.type, i.query?.queryText, i.query?.isLoading, i.isVisible, i.isInitialAfterError]),
-                        d
+                        i.useEffect(() => {
+                            c.current(!0, !0, l.isInitialAfterError);
+                        }, [l.query?.type, l.query?.queryText, l.query?.isLoading, l.isVisible, l.isInitialAfterError]),
+                        u
                     );
-                })({ navId: "channel-autocomplete", scrollerRef: n, state: s, onFocus: (e) => k.setSelectedIndex(e) }),
-                f = e.editorRef.current?.getCurrentWord(),
-                p = e.editorRef.current?.getSlateEditor(),
-                T = null;
-            null != p && (T = R.VW.getSelectedParentOfType(p, b.mk)?.[0] ?? null);
-            let g = {
+                })({ navId: "channel-autocomplete", scrollerRef: n, state: r, onFocus: (e) => U.setSelectedIndex(e) }),
+                x = e.editorRef.current?.getCurrentWord(),
+                A = e.editorRef.current?.getSlateEditor(),
+                E = null;
+            null != A && (E = N.VW.getSelectedParentOfType(A, L.mk)?.[0] ?? null);
+            let I = {
                     ...e,
-                    navigator: I,
-                    activeCommand: E,
-                    activeCommandOption: A,
-                    activeInlineAutocompleteInput: T,
-                    canMentionUsers: a.users?.allowMentioning ?? !1,
-                    canMentionEveryone: u,
-                    hidePersonalInformation: _,
-                    hideMentionDescription: a === O.oU.RULES_INPUT,
+                    navigator: g,
+                    activeCommand: m,
+                    activeCommandOption: f,
+                    activeInlineAutocompleteInput: E,
+                    canMentionUsers: s.users?.allowMentioning ?? !1,
+                    canMentionEveryone: d,
+                    hidePersonalInformation: h,
+                    hideMentionDescription: s === _.oU.RULES_INPUT,
                     emojiIntention:
-                        a === O.oU.RULES_INPUT
-                            ? G.EmojiIntention.COMMUNITY_CONTENT
-                            : h
-                              ? G.EmojiIntention.NO_CUSTOM_EMOJI
-                              : G.EmojiIntention.CHAT,
-                    currentWord: f?.word ?? "",
-                    currentWordIsAtStart: f?.isAtStart === !0,
+                        s === _.oU.RULES_INPUT
+                            ? P.EmojiIntention.COMMUNITY_CONTENT
+                            : p
+                              ? P.EmojiIntention.NO_CUSTOM_EMOJI
+                              : P.EmojiIntention.CHAT,
+                    currentWord: x?.word ?? "",
+                    currentWordIsAtStart: x?.isAtStart === !0,
                     optionText:
-                        null != A
-                            ? (0, N.getString)(
-                                  { [A.name]: e.editorRef.current?.getCurrentCommandOptionValue() ?? [] },
-                                  A.name,
+                        null != f
+                            ? (0, S.getString)(
+                                  { [f.name]: e.editorRef.current?.getCurrentCommandOptionValue() ?? [] },
+                                  f.name,
                               )
                             : "",
                 },
-                [k] = r.useState(() => new b.Ay(g));
+                [U] = i.useState(() => new L.Ay(I));
             return (
-                r.useEffect(() => {
-                    k.updateProps(g);
+                i.useEffect(() => {
+                    U.updateProps(I);
                 }),
-                r.useImperativeHandle(t, () => k, [k]),
-                r.useEffect(() => {
+                i.useImperativeHandle(t, () => U, [U]),
+                i.useEffect(() => {
                     function e(e) {
-                        return l(e);
+                        return a(e);
                     }
                     return (
-                        k.on("change", e),
-                        k.on("update", d),
+                        U.on("change", e),
+                        U.on("update", u),
                         () => {
-                            k.off("change", e), k.off("update", d);
+                            U.off("change", e), U.off("update", u);
                         }
                     );
-                }, [d, k]),
-                r.useEffect(() => {
-                    let e = s.query?.typeInfo.stores;
+                }, [u, U]),
+                i.useEffect(() => {
+                    let e = r.query?.typeInfo.stores;
                     if (null != e) {
                         function t() {
-                            return k.queryResults();
+                            return U.queryResults();
                         }
                         for (let n of e) n.addChangeListener(t);
                         return () => {
                             for (let n of e) n.removeChangeListener(t);
                         };
                     }
-                }, [k, s.query?.typeInfo]),
-                [s, k, I]
+                }, [U, r.query?.typeInfo]),
+                [r, U, g]
             );
-        })({ ...e, guild: Y }, t, K),
-        Z = a.autocomplete?.forceChatLayer ? p.Ay : f.Ay,
-        X = (0, A.aI)($.selectedIndex);
-    (0, h.gf)(W, $.isVisible, X);
-    let Q = (0, g.l)({ editorHeight: V, type: a, state: $ }),
-        J = (0, o.bG)([_.Ay], () => {
-            let e = _.Ay.getSelfEmbeddedActivityForChannel(n.id),
-                t = _.Ay.getActivityPanelMode();
-            return (0, u.AX)(n) && null != e && (0, E.H)(e.location) === n.id && t === k.Gd.PANEL;
+        })({ ...e, guild: K }, t, z),
+        $ = s.autocomplete?.forceChatLayer ? A.Ay : x.Ay,
+        J = (0, f.aI)(Z.selectedIndex);
+    (0, p.gf)(W, Z.isVisible, J);
+    let X = (0, I.l)({ editorHeight: V, type: s, state: Z }),
+        Q = (0, o.bG)([h.Ay], () => {
+            let e = h.Ay.getSelfEmbeddedActivityForChannel(n.id),
+                t = h.Ay.getActivityPanelMode();
+            return (0, d.AX)(n) && null != e && (0, m.H)(e.location) === n.id && t === U.Gd.PANEL;
         }, [n]),
-        ee = r.useMemo(
+        ee = i.useMemo(
             () =>
-                Q?.top == null && Q?.left == null && Q?.bottom == null && Q?.right == null ? "" : String(Date.now()),
-            [Q?.top, Q?.left, Q?.bottom, Q?.right],
+                X?.top == null && X?.left == null && X?.bottom == null && X?.right == null ? "" : String(Date.now()),
+            [X?.top, X?.left, X?.bottom, X?.right],
         );
     if (
-        (r.useEffect(() => {
-            B($.isVisible);
-        }, [B, $.isVisible]),
-        !$.isVisible || null == $.query || void 0 === Q)
+        (i.useEffect(() => {
+            F(Z.isVisible);
+        }, [F, Z.isVisible]),
+        !Z.isVisible || null == Z.query || void 0 === X)
     )
         return null;
     let et =
-        $.query.typeInfo.renderResults({
-            results: $.query.results,
-            selectedIndex: $.selectedIndex,
+        Z.query.typeInfo.renderResults({
+            results: Z.query.results,
+            selectedIndex: Z.selectedIndex,
             channel: n,
-            guild: Y,
-            query: $.query.queryText,
-            options: $.query.options,
-            onHover: (e) => z.onResultHover(e),
-            onClick: (e) => z.onResultClick(e),
+            guild: K,
+            query: Z.query.queryText,
+            options: Z.query.options,
+            onHover: (e) => Y.onResultHover(e),
+            onClick: (e) => Y.onResultClick(e),
         }) ?? null;
     if (null == et) return null;
-    let en = { [F.pK]: null == Q, [F.YB]: null != Q, [F.sQ]: null == Q && "bottom" === e.position, [F.mO]: J },
-        ei = 490;
-    null != Q && (ei = a.autocomplete?.small ? 200 : $.query?.type === m.DB.EMOJIS_AND_STICKERS ? 490 : 245);
-    let er = Math.max(V, H?.current?.clientHeight ?? 0),
-        ea = Math.min(0.5 * window.innerHeight, er);
-    ei = Math.min(window.innerHeight - 120 - ea - (j ?? 0), ei);
-    let es = (0, i.jsx)(A.Ay, {
+    let en = { [G.pK]: null == X, [G.YB]: null != X, [G.sQ]: null == X && "bottom" === e.position, [G.mO]: Q },
+        el = 490;
+    null != X && (el = s.autocomplete?.small ? 200 : Z.query?.type === C.DB.EMOJIS_AND_STICKERS ? 490 : 245);
+    let ei = Math.max(V, H?.current?.clientHeight ?? 0),
+        es = Math.min(0.5 * window.innerHeight, ei);
+    el = Math.min(window.innerHeight - 120 - es - (B ?? 0), el);
+    let er = (0, l.jsx)(f.Ay, {
         id: W,
-        className: s()(F.nx, en),
-        innerClassName: F.Fv,
+        className: r()(G.nx, en),
+        innerClassName: G.Fv,
         onMouseDown: (e) => e.preventDefault(),
-        children: (0, i.jsx)(l.hD, {
+        children: (0, l.jsx)(a.hD, {
             navigator: q,
-            children: (0, i.jsx)(l.PR, {
+            children: (0, l.jsx)(a.PR, {
                 children: (e) => {
                     let { ref: t, ...n } = e;
-                    return (0, i.jsx)(d.Ch, {
+                    return (0, l.jsx)(u.Ch, {
                         id: W,
                         ref: (e) => {
-                            (t.current = e?.getScrollerNode() ?? null), (K.current = e);
+                            (t.current = e?.getScrollerNode() ?? null), (z.current = e);
                         },
                         orientation: "vertical",
                         overflow: "auto",
                         ...n,
-                        className: F.XG,
-                        style: { maxHeight: ei },
+                        className: G.XG,
+                        style: { maxHeight: el },
                         role: "listbox",
-                        "aria-labelledby": (0, A.Sz)(W),
+                        "aria-labelledby": (0, f.Sz)(W),
                         children: et,
                     });
                 },
             }),
         }),
     });
-    return null != Q
-        ? (0, i.jsx)(Z, {
-              children: (0, i.jsx)(c.Q, {
+    return null != X
+        ? (0, l.jsx)($, {
+              children: (0, l.jsx)(c.Q, {
                   targetRef: e.targetRef,
-                  overrideTargetRect: Q,
+                  overrideTargetRect: X,
                   positionKey: ee,
                   position: e.position ?? "top",
                   align: "left",
                   spacing: 8,
                   autoInvert: !0,
                   nudgeAlignIntoViewport: !0,
-                  children: () => es,
+                  children: () => er,
               }),
           })
-        : es;
+        : er;
 });

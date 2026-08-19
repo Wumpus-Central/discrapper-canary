@@ -108,18 +108,18 @@ function N(e, t, n) {
     a.h.dispatch({ type: "SET_SOCIAL_LAYER_STOREFRONT_STATE", applicationId: e, pageIndex: t, skuId: n });
 }
 let C = 5 * o.A.Millis.MINUTE,
-    R = 30 * o.A.Millis.SECOND,
-    O = 5 * o.A.Millis.MINUTE;
+    O = 30 * o.A.Millis.SECOND,
+    R = 5 * o.A.Millis.MINUTE;
 function L(e, t) {
     let n = e.get(t);
-    return null == n && ((n = new i.A(R, O)), e.set(t, n)), n;
+    return null == n && ((n = new i.A(O, R)), e.set(t, n)), n;
 }
-let D = new Map(),
-    y = new Map();
+let y = new Map(),
+    D = new Map();
 async function v(e) {
     let t = u.A.getStorefrontEntries(e);
     if (t?.state === "loading") return;
-    let n = L(D, e);
+    let n = L(y, e);
     if (
         !(t?.state === "error" && Date.now() - t.fetchedAt < n.current) &&
         !(t?.state === "fetched" && Date.now() - t.fetchedAt < C)
@@ -141,7 +141,7 @@ async function v(e) {
 async function b(e, t) {
     let n = u.A.getStorefrontById(t);
     if (n?.state === "loading") return;
-    let i = L(y, t);
+    let i = L(D, t);
     if (
         !(n?.state === "error" && null != n.fetchedAt && Date.now() - n.fetchedAt < i.current) &&
         !(n?.state === "fetched" && null != n.fetchedAt && Date.now() - n.fetchedAt < A)

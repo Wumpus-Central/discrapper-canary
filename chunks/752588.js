@@ -1,23 +1,23 @@
 "use strict";
-Object.defineProperty(t, "__esModule", { value: !0 }), (t.markdownFormatter = void 0), (t.formatToMarkdownString = o);
-let r = n(830728),
-    i = {
+Object.defineProperty(t, "__esModule", { value: !0 }), (t.markdownFormatter = void 0), (t.formatToMarkdownString = a);
+let n = r(830728),
+    o = {
         $b: (e) => "**" + e.join("") + "**",
         $i: (e) => "*" + e.join("") + "*",
         $del: (e) => "~~" + e.join("") + "~~",
         $code: (e) => "`" + e.join("") + "`",
-        $link: (e, t, [n]) => "[" + e.join("") + "](" + n + ")",
+        $link: (e, t, [r]) => "[" + e.join("") + "](" + r + ")",
         $p: (e) => e.join("") + "\n\n",
     };
-class a extends r.StringBuilder {
+class i extends n.StringBuilder {
     constructor() {
         super(...arguments), (this.result = "");
     }
-    pushRichTextTag(e, t, n) {
-        this.result += i[e](t, "", n);
+    pushRichTextTag(e, t, r) {
+        this.result += o[e](t, "", r);
     }
 }
-function o(e, t, n = a) {
-    return "string" == typeof e ? e : this.bindFormatValues(n, e, t)[0];
+function a(e, t, r = i) {
+    return "string" == typeof e ? e : this.bindFormatValues(r, e, t)[0];
 }
-t.markdownFormatter = { format: o, builder: a };
+t.markdownFormatter = { format: a, builder: i };

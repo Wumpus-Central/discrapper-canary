@@ -1,16 +1,16 @@
 "use strict";
-n.d(t, { A: () => a });
+n.d(t, { A: () => s });
 var i = n(636537),
     r = n(174459);
-function s(e, t, n) {
-    let { trackedActionData: i, ...s } = t,
-        a = { url: s.url, request_method: n };
+function a(e, t, n) {
+    let { trackedActionData: i, ...a } = t,
+        s = { url: a.url, request_method: n };
     return new Promise((t, n) => {
-        e(s)
+        e(a)
             .then((e) => {
                 let n = i.properties;
                 "function" == typeof i.properties && (n = i.properties(e)),
-                    (0, r.trackNetworkAction)(i.event, { status_code: e.status, ...a, ...n }),
+                    (0, r.trackNetworkAction)(i.event, { status_code: e.status, ...s, ...n }),
                     t(e);
             })
             .catch((e) => {
@@ -20,27 +20,27 @@ function s(e, t, n) {
                         status_code: e.status,
                         error_code: e.body?.code,
                         error_message: e.body?.message,
-                        ...a,
+                        ...s,
                         ...t,
                     }),
                     n(e);
             });
     });
 }
-let a = {
+let s = {
     get: function (e) {
-        return s(i.Bo.get, e, "get");
+        return a(i.Bo.get, e, "get");
     },
     post: function (e) {
-        return s(i.Bo.post, e, "post");
+        return a(i.Bo.post, e, "post");
     },
     put: function (e) {
-        return s(i.Bo.put, e, "put");
+        return a(i.Bo.put, e, "put");
     },
     patch: function (e) {
-        return s(i.Bo.patch, e, "patch");
+        return a(i.Bo.patch, e, "patch");
     },
     delete: function (e) {
-        return s(i.Bo.del, e, "del");
+        return a(i.Bo.del, e, "del");
     },
 };

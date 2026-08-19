@@ -1,8 +1,8 @@
 var n = e(344815),
     o = e(339626),
     i = e(647055),
-    a = e(380744)("toStringTag"),
-    u = Object,
+    u = e(380744)("toStringTag"),
+    a = Object,
     c =
         "Arguments" ===
         i(
@@ -23,7 +23,7 @@ r.exports = n
               ? "Undefined"
               : null === r
                 ? "Null"
-                : "string" == typeof (e = f((t = u(r)), a))
+                : "string" == typeof (e = f((t = a(r)), u))
                   ? e
                   : c
                     ? i(t)

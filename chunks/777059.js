@@ -1,4 +1,4 @@
-n(989349).defineLocale("sv", {
+d(989349).defineLocale("sv", {
     months: "januari_februari_mars_april_maj_juni_juli_augusti_september_oktober_november_december".split("_"),
     monthsShort: "jan_feb_mar_apr_maj_jun_jul_aug_sep_okt_nov_dec".split("_"),
     weekdays: "s\xf6ndag_m\xe5ndag_tisdag_onsdag_torsdag_fredag_l\xf6rdag".split("_"),
@@ -40,9 +40,9 @@ n(989349).defineLocale("sv", {
     },
     dayOfMonthOrdinalParse: /\d{1,2}(e|a)/,
     ordinal: function (e) {
-        var t = e % 10,
-            n = 1 == ~~((e % 100) / 10) ? "e" : 1 === t || 2 === t ? "a" : "e";
-        return e + n;
+        var a = e % 10,
+            d = 1 == ~~((e % 100) / 10) ? "e" : 1 === a || 2 === a ? "a" : "e";
+        return e + d;
     },
     week: { dow: 1, doy: 4 },
 });

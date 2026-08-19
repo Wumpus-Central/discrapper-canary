@@ -41,7 +41,7 @@ let C = {
         [h.pJ.HOURS]: (e, t) => S.intl.formatToPlainString(S.t["3IQDUi"], { name: e, timeRemaining: t }),
     },
 };
-class R extends r.PureComponent {
+class O extends r.PureComponent {
     renderProgressBody = (e, t) => {
         let { state: n, application: i } = this.props,
             { stage: r, progress: a, total: s, type: l } = n;
@@ -75,7 +75,7 @@ class R extends r.PureComponent {
         return null != e ? e : S.intl.string(S.t.cw57ar);
     }
 }
-class O extends r.PureComponent {
+class R extends r.PureComponent {
     static defaultProps = { strokeSize: u.a.StrokeSizes.MEDIUM };
     state = { animationScale: new l.A.Value(0) };
     componentWillAppear(e) {
@@ -95,7 +95,7 @@ class O extends r.PureComponent {
         let { firstApplication: e, firstState: t, isPaused: n } = this.props;
         return null == e || null == t
             ? S.intl.string(S.t.cw57ar)
-            : (0, i.jsx)(R, { application: e, state: t, isPaused: n });
+            : (0, i.jsx)(O, { application: e, state: t, isPaused: n });
     }
     render() {
         let { percent: e, isPaused: t, className: n } = this.props;
@@ -140,7 +140,7 @@ let y = o.Ay.connectStores([p.A, f.A, A.A], () => {
     return t
         ? (0, i.jsx)(c.F, {
               component: r.Fragment,
-              children: n.percent > 0 && n.percent < 100 ? (0, i.jsx)(O, { ...n }) : null,
+              children: n.percent > 0 && n.percent < 100 ? (0, i.jsx)(R, { ...n }) : null,
           })
-        : (0, i.jsx)(O, { ...n });
+        : (0, i.jsx)(R, { ...n });
 });

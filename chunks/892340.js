@@ -1,67 +1,67 @@
 "use strict";
 n.d(t, {
-    C$: () => T,
-    KB: () => E,
-    Fo: () => g,
-    xJ: () => A,
+    C$: () => g,
+    KB: () => I,
+    Fo: () => p,
+    xJ: () => T,
     Mn: () => S,
-    uW: () => I,
+    uW: () => m,
     G9: () => C,
-    Yj: () => y,
-    iU: () => m,
+    Yj: () => N,
+    iU: () => f,
 });
 var i = n(136722),
     r = n(811602),
-    s = n(282108);
-let a = "1004";
-var o = n(969043);
+    a = n(282108);
+let s = "1004";
+var l = n(969043);
 n(134413);
-var l = n(203389),
-    u = n(734057),
+var o = n(203389),
+    d = n(734057),
     c = n(71393),
-    d = n(232835);
+    u = n(232835);
 n(287809), n(488926);
 var _ = n(628691),
-    h = n(272720),
-    f = n(56595),
-    p = n(652215);
-function E(e) {
+    E = n(272720),
+    A = n(56595),
+    h = n(652215);
+function I(e) {
     if (!(0, _.UN)(e.author)) return !1;
-    let t = u.A.getChannel(e.channel_id);
+    let t = d.A.getChannel(e.channel_id);
     if (null == t) return !1;
     let n = c.A.getGuild(t.guild_id);
     if (null == n) return !1;
-    let i = (0, f.A)(n),
-        r = (0, h.A)(n);
+    let i = (0, A.A)(n),
+        r = (0, E.A)(n);
     return i && null != r;
 }
-function m(e) {
-    return g(u.A.getChannel(e));
+function f(e) {
+    return p(d.A.getChannel(e));
 }
-function g(e) {
+function p(e) {
     return null != e && e.isModeratorReportChannel() && e.isForumChannel();
 }
-function A(e) {
+function T(e) {
     return null != e && e.isModeratorReportChannel() && e.isForumPost();
 }
-function I(e) {
-    return null != e && (g(e) || A(e));
+function m(e) {
+    return null != e && (p(e) || T(e));
 }
-function T(e) {
-    if (null == e || !(0, l.L)() || !I(u.A.getChannel(e))) return !0;
-    let { loaded: t, firstMessage: n } = o.A.getMessage(e);
-    return !t || null == n || !(0, s.y5)(n, r.LO.EXPLICIT);
+function g(e) {
+    if (null == e || !(0, o.L)() || !m(d.A.getChannel(e))) return !0;
+    let { loaded: t, firstMessage: n } = l.A.getMessage(e);
+    return !t || null == n || !(0, a.y5)(n, r.LO.EXPLICIT);
 }
 function S(e, t) {
-    return !!e.isFirstMessageInForumPost(t) && !!e.isSystemDM() && A(t);
+    return !!e.isFirstMessageInForumPost(t) && !!e.isSystemDM() && T(t);
 }
-function y(e) {
-    return e.sort((e, t) => (e.id == a ? -1 : +(t.id == a)));
+function N(e) {
+    return e.sort((e, t) => (e.id == s ? -1 : +(t.id == s)));
 }
 function C(e, t) {
-    let n = u.A.getChannel(e);
+    let n = d.A.getChannel(e);
     if (null == n || !n.isModeratorReportChannel()) return !1;
-    let i = d.A.getMessages(e).first();
+    let i = u.A.getMessages(e).first();
     return i?.messageSnapshots?.[0]?.moderatorReport?.reported_user_id === t;
 }
-i.kg(p.xBc.ADMINISTRATOR, p.xBc.BAN_MEMBERS, p.xBc.KICK_MEMBERS, p.xBc.MODERATE_MEMBERS);
+i.kg(h.xBc.ADMINISTRATOR, h.xBc.BAN_MEMBERS, h.xBc.KICK_MEMBERS, h.xBc.MODERATE_MEMBERS);

@@ -1,4 +1,4 @@
-_.exports = {
+d.exports = {
     u1: "spinner__4d95d",
     kL: "container__4d95d",
     FS: "textContainer__4d95d",

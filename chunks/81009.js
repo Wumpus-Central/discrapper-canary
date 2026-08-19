@@ -1,25 +1,25 @@
 "use strict";
-n.d(t, { A: () => m });
+n.d(t, { A: () => f });
 var i = n(691540),
     r = n(857250),
-    s = n(97483),
-    a = n(192308),
-    o = n(976860),
-    l = n(228366),
-    u = n(439372),
-    c = n(364711),
-    d = n(287809),
+    a = n(97483),
+    s = n(192308),
+    l = n(976860),
+    o = n(228366),
+    d = n(439372),
+    c = n(655404),
+    u = n(287809),
     _ = n(376463);
-class h extends u.A {
+class E extends d.A {
     actions = {
         LOGOUT: (e) => this.handleLogout(e),
         MULTI_ACCOUNT_SWITCH_START: (e) => this.handleMultiAccountSwitchStart(e),
     };
     _initialize() {
-        l.h.subscribe("CONNECTION_OPEN", this.handleConnectionOpen), this.handleConnectionOpen();
+        o.h.subscribe("CONNECTION_OPEN", this.handleConnectionOpen), this.handleConnectionOpen();
     }
     _terminate() {
-        l.h.unsubscribe("CONNECTION_OPEN", this.handleConnectionOpen);
+        o.h.unsubscribe("CONNECTION_OPEN", this.handleConnectionOpen);
     }
     handleLogout(e) {
         e.isSwitchingAccount && this.onSwitchStart();
@@ -30,28 +30,28 @@ class h extends u.A {
     handleConnectionOpen = () => {
         let e = _.A.getSwitchResult();
         if (null == e) return;
-        let t = d.default.getCurrentUser();
+        let t = u.default.getCurrentUser();
         null != t &&
             (e.success ? this.onSwitchSuccess(t, e.navigateHome) : this.onSwitchError(t),
             (0, c.m)(null),
             this.onSwitchComplete());
     };
 }
-var f = n(573879),
-    p = n(652215),
-    E = n(375708);
-let m = new (class extends h {
+var A = n(573879),
+    h = n(652215),
+    I = n(375708);
+let f = new (class extends E {
     onSwitchStart() {}
     onSwitchSuccess(e, t) {
         setTimeout(() => {
-            t && (0, o.pX)(p.BVt.ME),
-                (0, i.P0)((0, r.o)(E.intl.formatToPlainString(E.t.wx7O3L, { username: e.username }), s.Ck.SUCCESS));
+            t && (0, l.pX)(h.BVt.ME),
+                (0, i.P0)((0, r.o)(I.intl.formatToPlainString(I.t.wx7O3L, { username: e.username }), a.Ck.SUCCESS));
         }, 100);
     }
     onSwitchError() {
-        (0, i.P0)((0, r.o)(E.intl.string(E.t.pqvKWA), s.Ck.FAILURE));
+        (0, i.P0)((0, r.o)(I.intl.string(I.t.pqvKWA), a.Ck.FAILURE));
     }
     onSwitchComplete() {
-        (0, a.closeModal)(f.ov), (0, a.closeModal)(f.Gl);
+        (0, s.closeModal)(A.ov), (0, s.closeModal)(A.Gl);
     }
 })();

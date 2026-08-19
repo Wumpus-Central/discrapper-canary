@@ -10,18 +10,18 @@ var i = n(811315),
     c = n(116956),
     u = n(174459),
     _ = n(915725),
-    E = n(372684),
-    A = n(974293),
+    E = n(974293),
+    A = n(696016),
     h = n(652215);
 function I(e) {
     switch (e.decision?.signal?.type) {
-        case E.Gy.MANUAL:
+        case A.Gy.MANUAL:
             return "manual";
-        case E.Gy.DISTRIBUTED:
+        case A.Gy.DISTRIBUTED:
             return "distributed";
-        case E.Gy.LAUGHTER:
-        case E.Gy.SHOUTING:
-        case E.Gy.GAME_EVENT:
+        case A.Gy.LAUGHTER:
+        case A.Gy.SHOUTING:
+        case A.Gy.GAME_EVENT:
             return "auto_ml";
         default:
             return "unknown";
@@ -36,7 +36,7 @@ function f(e) {
     };
 }
 function p(e) {
-    return { clip_runtime: (0, A.GN)(e), current_clip_session_id: _.Ay.getCurrentClipsSession()?.id };
+    return { clip_runtime: (0, E.GN)(e), current_clip_session_id: _.Ay.getCurrentClipsSession()?.id };
 }
 function T(e) {
     let t = o.A.getCurrentUserActiveStream(),
@@ -115,19 +115,19 @@ function g(e, t, n, i) {
             let t = [];
             for (let n of e.timeline)
                 switch (n.signal.type) {
-                    case E.Gy.MANUAL:
+                    case A.Gy.MANUAL:
                         t.push("manual");
                         break;
-                    case E.Gy.DISTRIBUTED:
+                    case A.Gy.DISTRIBUTED:
                         t.push("distributed");
                         break;
-                    case E.Gy.LAUGHTER:
+                    case A.Gy.LAUGHTER:
                         t.push("laughter");
                         break;
-                    case E.Gy.SHOUTING:
+                    case A.Gy.SHOUTING:
                         t.push("shouting");
                         break;
-                    case E.Gy.GAME_EVENT:
+                    case A.Gy.GAME_EVENT:
                         t.push(`game_event:${n.signal.eventType}`);
                 }
             return t;

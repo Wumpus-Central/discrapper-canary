@@ -1,24 +1,24 @@
 "use strict";
 Object.defineProperty(t, "__esModule", { value: !0 }), (t.IntlManager = t.DEFAULT_LOCALE = void 0);
-let r = n(533658),
-    i = n(619398),
-    a = n(605458);
+let n = r(533658),
+    o = r(619398),
+    i = r(605458);
 (t.DEFAULT_LOCALE = "en-US"),
     (t.IntlManager = class {
         constructor({
             initialLocale: e = t.DEFAULT_LOCALE,
-            defaultLocale: n = t.DEFAULT_LOCALE,
-            formatConfig: i = r.DEFAULT_FORMAT_CONFIG,
-            forceLookupMatcher: o = !1,
+            defaultLocale: r = t.DEFAULT_LOCALE,
+            formatConfig: o = n.DEFAULT_FORMAT_CONFIG,
+            forceLookupMatcher: a = !1,
         }) {
             (this.onLocaleChange = (e) => (
                 this._localeSubscriptions.add(e), () => this._localeSubscriptions.delete(e)
             )),
                 (this.currentLocale = e),
-                (this.defaultLocale = n),
-                (this.formatConfig = i),
-                (this._forceLookupMatcher = o),
-                (this.data = (0, a.makeDataFormatters)(
+                (this.defaultLocale = r),
+                (this.formatConfig = o),
+                (this._forceLookupMatcher = a),
+                (this.data = (0, i.makeDataFormatters)(
                     [this.currentLocale, this.defaultLocale],
                     this.formatConfig,
                     this._forceLookupMatcher,
@@ -26,16 +26,16 @@ let r = n(533658),
                 (this._localeSubscriptions = new Set());
         }
         withFormatters(e) {
-            for (let [t, n] of Object.entries(e)) this[t] = this.makeFormatFunction(n);
+            for (let [t, r] of Object.entries(e)) this[t] = this.makeFormatFunction(r);
             return this;
         }
         makeFormatFunction({ format: e, builder: t }) {
-            let n = e.bind(this);
-            return (e, r) => (null == e ? null : n(e(this.currentLocale), r, t));
+            let r = e.bind(this);
+            return (e, n) => (null == e ? null : r(e(this.currentLocale), n, t));
         }
         setLocale(e) {
             (this.currentLocale = e),
-                (this.data = (0, a.makeDataFormatters)(
+                (this.data = (0, i.makeDataFormatters)(
                     [this.currentLocale, this.defaultLocale],
                     this.formatConfig,
                     this._forceLookupMatcher,
@@ -53,14 +53,14 @@ let r = n(533658),
             let t = e(this.currentLocale);
             return "string" == typeof t ? t : t.reserialize();
         }
-        bindFormatValues(e, t, n) {
-            return (0, i.bindFormatValues)({
+        bindFormatValues(e, t, r) {
+            return (0, o.bindFormatValues)({
                 Builder: e,
                 nodes: t.ast,
                 locales: [this.currentLocale, this.defaultLocale],
                 dataFormatters: this.data,
                 formatConfig: this.formatConfig,
-                values: n,
+                values: r,
                 keyPrefix: "",
             });
         }

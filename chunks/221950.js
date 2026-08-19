@@ -1,4 +1,4 @@
-n.d(t, { Cw: () => A, Ld: () => T, UD: () => _, aZ: () => d, jo: () => I, uO: () => u });
+n.d(t, { Cw: () => A, Ld: () => T, UD: () => u, aZ: () => d, jo: () => I, uO: () => _ });
 var i = n(228366),
     l = n(468689),
     r = n(976860),
@@ -7,10 +7,10 @@ var i = n(228366),
     E = n(11541),
     o = n(652215),
     c = n(746080);
-async function u(e) {
+async function _(e) {
     await i.h.dispatch({ type: "INITIALIZE_MEMBER_SAFETY_STORE", guildId: e });
 }
-function _(e) {
+function u(e) {
     i.h.dispatch({ type: "MEMBER_SAFETY_NEW_MEMBER_TIMESTAMP_REFRESH", guildId: e });
 }
 function A(e, t) {

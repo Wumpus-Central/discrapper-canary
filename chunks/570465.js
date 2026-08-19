@@ -1,4 +1,4 @@
-e.d(n, { p: () => p, v: () => d });
+e.d(n, { p: () => c, v: () => d });
 var i,
     a = e(136722),
     r = e(488926),
@@ -14,7 +14,7 @@ var i,
         (i.LOCAL_COMMUNITY = "LOCAL_COMMUNITY"),
         (i.SCHOOL_CLUB = "SCHOOL_CLUB"),
         i);
-function p() {
+function c() {
     return {
         CREATE: {
             id: "CREATE",

@@ -16,8 +16,8 @@ function h(e) {
             innerClassName: i,
             renderIcon: h,
             text: A,
-            selected: m,
-            trailing: g,
+            selected: g,
+            trailing: m,
             background: f,
             showUnread: p = !1,
             ref: C,
@@ -39,7 +39,7 @@ function h(e) {
                     : (e) => {
                           e.stopPropagation();
                       },
-            className: s()(c.fx, u.iE, { [u.J1]: m }, n),
+            className: s()(c.fx, u.iE, { [u.J1]: g }, n),
             children: [
                 f,
                 p ? (0, l.jsx)("div", { className: s()(u.gy, u.WS) }) : null,
@@ -54,7 +54,7 @@ function h(e) {
                             "aria-hidden": !0,
                             children: A,
                         }),
-                        g,
+                        m,
                     ],
                 }),
             ],

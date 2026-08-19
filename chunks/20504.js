@@ -1,18 +1,18 @@
 "use strict";
-n.d(t, { A: () => h });
-var i = n(477900),
-    r = n(582128),
-    a = n(503698),
-    s = n.n(a),
-    l = n(983851),
+n.d(t, { A: () => p });
+var l = n(477900),
+    i = n(582128),
+    s = n(503698),
+    r = n.n(s),
+    a = n(983851),
     o = n(358618),
-    d = n(793920),
+    u = n(793920),
     c = n(939249),
-    u = n(122641),
-    _ = n(375708),
-    E = n(476133);
-class A extends r.PureComponent {
-    _mediaBar = r.createRef();
+    d = n(122641),
+    h = n(375708),
+    m = n(476133);
+class f extends i.PureComponent {
+    _mediaBar = i.createRef();
     _hoverTimeout;
     state = { hovered: !1, focused: !1, dragging: !1 };
     static defaultProps = { minValue: 0, maxValue: 100, handleSize: 16 };
@@ -24,8 +24,8 @@ class A extends r.PureComponent {
     }
     updateMediaBar() {
         let { muted: e, value: t, maxValue: n } = this.props,
-            i = this._mediaBar.current;
-        null != i && (e ? i.setGrabber(0) : i.setGrabber(t / n));
+            l = this._mediaBar.current;
+        null != l && (e ? l.setGrabber(0) : l.setGrabber(t / n));
     }
     handleValueChange = (e) => {
         let { maxValue: t, onValueChange: n } = this.props;
@@ -36,22 +36,22 @@ class A extends r.PureComponent {
         e?.();
     };
     handleKeyDown = (e) => {
-        let { minValue: t, value: n, maxValue: i, onValueChange: r } = this.props,
-            a = 0.05 * (i - t);
+        let { minValue: t, value: n, maxValue: l, onValueChange: i } = this.props,
+            s = 0.05 * (l - t);
         switch (e.key) {
             case "ArrowUp":
                 if ((e.stopPropagation(), e.preventDefault(), !this.state.focused)) {
                     this.setState({ focused: !0 });
                     break;
                 }
-                r?.(Math.min(i, n + a));
+                i?.(Math.min(l, n + s));
                 break;
             case "ArrowDown":
                 if ((e.stopPropagation(), e.preventDefault(), !this.state.focused)) {
                     this.setState({ focused: !0 });
                     break;
                 }
-                r?.(Math.max(t, n - a));
+                i?.(Math.max(t, n - s));
                 break;
             case "Escape":
                 this.setState({ focused: !1 }), e.stopPropagation(), e.preventDefault();
@@ -71,36 +71,36 @@ class A extends r.PureComponent {
                 iconClassName: e,
                 iconColor: t,
                 className: n,
-                sliderWrapperClassName: r,
-                sliderClassName: a,
-                currentWindow: A,
-                muted: h,
-                minValue: I,
-                maxValue: f,
-                value: p,
-                onVolumeShow: T,
-                onVolumeHide: m,
+                sliderWrapperClassName: i,
+                sliderClassName: s,
+                currentWindow: f,
+                muted: p,
+                minValue: g,
+                maxValue: x,
+                value: A,
+                onVolumeShow: E,
+                onVolumeHide: C,
             } = this.props,
-            { hovered: g, focused: S, dragging: N } = this.state,
-            C = l.H;
+            { hovered: I, focused: y, dragging: S } = this.state,
+            v = a.H;
         return (
-            h || p === I ? (C = o._) : p < f / 2 && (C = d.S),
-            (0, i.jsxs)("div", {
-                className: s()(n, E.kL),
+            p || A === g ? (v = o._) : A < x / 2 && (v = u.S),
+            (0, l.jsxs)("div", {
+                className: r()(n, m.kL),
                 onMouseEnter: () => {
-                    clearTimeout(this._hoverTimeout), this.setState({ hovered: !0 }), T?.();
+                    clearTimeout(this._hoverTimeout), this.setState({ hovered: !0 }), E?.();
                 },
                 onMouseLeave: () => {
                     clearTimeout(this._hoverTimeout),
                         (this._hoverTimeout = setTimeout(() => {
-                            this.setState({ hovered: !1 }), m?.();
+                            this.setState({ hovered: !1 }), C?.();
                         }, 150));
                 },
                 onBlur: () => this.setState({ focused: !1 }),
                 onKeyDown: this.handleKeyDown,
                 children: [
-                    (0, i.jsx)("div", {
-                        className: s()(E.QS, r, { [E.OZ]: g || S || N }),
+                    (0, l.jsx)("div", {
+                        className: r()(m.QS, i, { [m.OZ]: I || y || S }),
                         onMouseEnter: () => {
                             clearTimeout(this._hoverTimeout), this.setState({ hovered: !0 });
                         },
@@ -108,27 +108,27 @@ class A extends r.PureComponent {
                             clearTimeout(this._hoverTimeout),
                                 (this._hoverTimeout = setTimeout(() => this.setState({ hovered: !1 }), 150));
                         },
-                        children: (0, i.jsx)(u.A, {
-                            className: E.YZ,
-                            sliderClassName: a,
-                            type: u.A.Types.VOLUME,
-                            value: p / f,
+                        children: (0, l.jsx)(d.A, {
+                            className: m.YZ,
+                            sliderClassName: s,
+                            type: d.A.Types.VOLUME,
+                            value: A / x,
                             onDrag: this.handleValueChange,
                             onDragStart: this.handleDragStart,
                             onDragEnd: this.handleDragEnd,
-                            currentWindow: A,
+                            currentWindow: f,
                             ref: this._mediaBar,
                         }),
                     }),
-                    (0, i.jsx)(c.D, {
-                        className: E.bk,
-                        "aria-label": _.intl.string(_.t["19lt24"]),
+                    (0, l.jsx)(c.D, {
+                        className: m.bk,
+                        "aria-label": h.intl.string(h.t["19lt24"]),
                         onClick: this.handleToggleMute,
-                        children: (0, i.jsx)(C, { color: t, className: e }),
+                        children: (0, l.jsx)(v, { color: t, className: e }),
                     }),
                 ],
             })
         );
     }
 }
-let h = A;
+let p = f;

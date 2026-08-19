@@ -1,4 +1,4 @@
-n.d(t, { h: () => v, u: () => _ }), n(323874), n(14289), n(35956);
+n.d(t, { h: () => v, u: () => C }), n(323874), n(14289), n(35956);
 var i,
     l = n(477900),
     s = n(582128),
@@ -16,12 +16,12 @@ var i,
     x = n(354287),
     f = n(878369),
     E = n(838541),
-    C = n(772008),
-    _ = (((i = {})[(i.BOT = 0)] = "BOT"), (i[(i.ACTIVITY = 1)] = "ACTIVITY"), i);
-function I(e) {
+    I = n(772008),
+    C = (((i = {})[(i.BOT = 0)] = "BOT"), (i[(i.ACTIVITY = 1)] = "ACTIVITY"), i);
+function _(e) {
     let { onClick: t, children: n, className: i } = e;
     return null != t
-        ? (0, l.jsx)(c.D, { onClick: t, className: r()({ [C.or]: null != t }, i), children: n })
+        ? (0, l.jsx)(c.D, { onClick: t, className: r()({ [I.or]: null != t }, i), children: n })
         : (0, l.jsx)("div", { className: i, children: n });
 }
 function v(e) {
@@ -31,7 +31,7 @@ function v(e) {
         footer: i,
         info: a,
         staticBannerSrc: c,
-        videoBannerSrc: _,
+        videoBannerSrc: C,
         hideBanner: v = !1,
         bannerAspectRatio: N = 0,
         iconSrc: j,
@@ -47,15 +47,15 @@ function v(e) {
         O = (0, h.bG)([p.Ay], () => p.Ay.useReducedMotion),
         P = (0, x.DC)(y),
         D = null != c && !v,
-        U = null != _ && !1 === O && !v,
+        U = null != C && !1 === O && !v,
         G = D || U,
-        w = 0 === N ? C.pv : C.$g,
+        w = 0 === N ? I.pv : I.$g,
         H = s.useRef(null),
-        B = s.useCallback(() => {
+        V = s.useCallback(() => {
             let e = H.current;
             null == e || ("hidden" === getComputedStyle(e).visibility ? e.pause() : e.play());
         }, []),
-        V = s.useMemo(() => !!U && new URL(_).pathname.endsWith(".gif"), [U, _]),
+        B = s.useMemo(() => !!U && new URL(C).pathname.endsWith(".gif"), [U, C]),
         F = s.useMemo(() => {
             if (null != b)
                 return (e) => {
@@ -88,69 +88,69 @@ function v(e) {
         }, [R, y]);
     return (0, l.jsxs)("div", {
         ref: P,
-        className: C.E6,
+        className: I.E6,
         style: { background: k },
         children: [
             G &&
-                (0, l.jsxs)(I, {
+                (0, l.jsxs)(_, {
                     onClick: z,
-                    className: r()(C.cy, w, { [C.wk]: U }),
+                    className: r()(I.cy, w, { [I.wk]: U }),
                     children: [
                         U &&
-                            (V
-                                ? (0, l.jsx)("div", { className: C.O9, style: { backgroundImage: `url(${_})` } })
+                            (B
+                                ? (0, l.jsx)("div", { className: I.O9, style: { backgroundImage: `url(${C})` } })
                                 : (0, l.jsx)(o.A, {
                                       ref: H,
-                                      src: _,
+                                      src: C,
                                       mediaLayoutType: E.dG.MOSAIC,
                                       loop: !0,
                                       muted: !0,
-                                      className: C.O9,
+                                      className: I.O9,
                                   })),
                         D &&
                             (0, l.jsx)("div", {
-                                className: C.LR,
+                                className: I.LR,
                                 style: { backgroundImage: `url(${c})` },
-                                onTransitionEnd: B,
+                                onTransitionEnd: V,
                             }),
                     ],
                 }),
             (0, l.jsxs)("div", {
                 children: [
                     (0, l.jsxs)("div", {
-                        className: C.hQ,
+                        className: I.hQ,
                         children: [
                             null != n &&
                                 (0, l.jsx)(d.E, {
                                     variant: "text-sm/semibold",
                                     color: "none",
-                                    className: C.wx,
+                                    className: I.wx,
                                     children: n,
                                 }),
-                            (0, l.jsxs)(I, {
+                            (0, l.jsxs)(_, {
                                 onClick: F,
-                                className: r()(C.FG, { [C.ry]: null != F }),
+                                className: r()(I.FG, { [I.ry]: null != F }),
                                 children: [
                                     null != j &&
-                                        (0, l.jsx)("div", { className: C._8, style: { backgroundImage: `url(${j})` } }),
+                                        (0, l.jsx)("div", { className: I._8, style: { backgroundImage: `url(${j})` } }),
                                     (0, l.jsxs)("div", {
-                                        className: C.Qs,
+                                        className: I.Qs,
                                         children: [
                                             (0, l.jsx)(d.E, {
                                                 variant: "text-md/semibold",
                                                 color: "none",
                                                 lineClamp: 1,
-                                                className: C.eu,
+                                                className: I.eu,
                                                 children: t,
                                             }),
-                                            (0, l.jsx)("div", { className: C.rj, children: a }),
+                                            (0, l.jsx)("div", { className: I.rj, children: a }),
                                         ],
                                     }),
                                 ],
                             }),
                             T.length > 0 &&
                                 (0, l.jsx)("div", {
-                                    className: r()(C.AC, S ? C.ad : null),
+                                    className: r()(I.AC, S ? I.ad : null),
                                     children: T.map((e, t) => {
                                         let {
                                                 label: n,
@@ -197,7 +197,7 @@ function v(e) {
                                             : (0, l.jsxs)(
                                                   "div",
                                                   {
-                                                      className: C.uc,
+                                                      className: I.uc,
                                                       children: [
                                                           (0, l.jsx)(m.$, {
                                                               variant: f ? "overlay-primary" : "overlay-secondary",
@@ -224,7 +224,7 @@ function v(e) {
                                                               (0, l.jsx)(d.E, {
                                                                   variant: "text-xs/medium",
                                                                   color: "none",
-                                                                  className: C.H$,
+                                                                  className: I.H$,
                                                                   children: r,
                                                               }),
                                                       ],

@@ -6,22 +6,22 @@ var i = n(582128),
     s = n(17928),
     l = n(287809),
     o = n(915725),
-    d = n(372684),
-    c = n(111994),
-    u = n(792852);
+    d = n(111994),
+    c = n(792852),
+    u = n(696016);
 let _ = new Set();
 function E(e) {
-    return e.decision?.signal?.type === d.Gy.DISTRIBUTED;
+    return e.decision?.signal?.type === u.Gy.DISTRIBUTED;
 }
 function A(e, t) {
-    return t === c.mu.OLDEST
+    return t === d.mu.OLDEST
         ? e.sort((e, t) => e.createdAt - t.createdAt)
         : e.sort((e, t) => t.createdAt - e.createdAt);
 }
 function h() {
     let e = (0, s.yK)([o.Ay], () => Object.values(o.Ay.getClips())),
         t = (0, s.yK)([o.Ay], () => o.Ay.getNewClipIds()),
-        n = (0, u.P)(),
+        n = (0, c.P)(),
         r = (0, s.bG)([o.Ay], () => o.Ay.getSettings().showPovClipsInGallery),
         h = (0, s.bG)([l.default], () => l.default.getCurrentUser()?.id);
     return i.useMemo(() => {
@@ -29,7 +29,7 @@ function h() {
             s = new Set(t),
             l = [],
             o = new Map(),
-            u = new Map(),
+            c = new Map(),
             I = new Map(),
             f = { allClips: 0, autoClips: 0, favorites: 0 },
             p = new Map(),
@@ -40,14 +40,14 @@ function h() {
                     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : _;
                     if (
                         (!n.has(0) &&
-                            ((t.activeMainLink === c.oH.AUTO_CLIPS && "auto" !== e.clipMethod) ||
-                                (t.activeMainLink === c.oH.FAVORITES && !e.isFavorite))) ||
+                            ((t.activeMainLink === d.oH.AUTO_CLIPS && "auto" !== e.clipMethod) ||
+                                (t.activeMainLink === d.oH.FAVORITES && !e.isFavorite))) ||
                         (!n.has(1) && null != t.gameFacet && e.applicationId !== t.gameFacet)
                     )
                         return !1;
                     if (!n.has(2) && null != t.clippedWithFacet) {
                         let n = e.decision?.signal;
-                        if (n?.type !== d.Gy.DISTRIBUTED || n.remoteTriggerUserId !== t.clippedWithFacet) return !1;
+                        if (n?.type !== u.Gy.DISTRIBUTED || n.remoteTriggerUserId !== t.clippedWithFacet) return !1;
                     }
                     if (
                         !n.has(3) &&
@@ -102,8 +102,8 @@ function h() {
                 let t = o.get(e.applicationId);
                 null == t ? o.set(e.applicationId, { name: e.applicationName, count: 1 }) : (t.count += 1);
             }
-            for (let t of e.users) t !== h && u.set(t, (u.get(t) ?? 0) + 1);
-            let t = e.decision?.signal?.type === d.Gy.DISTRIBUTED ? e.decision.signal : null;
+            for (let t of e.users) t !== h && c.set(t, (c.get(t) ?? 0) + 1);
+            let t = e.decision?.signal?.type === u.Gy.DISTRIBUTED ? e.decision.signal : null;
             if (null != t && t.remoteTriggerUserId !== h) {
                 let e = t.remoteTriggerUserId;
                 I.set(e, (I.get(e) ?? 0) + 1);
@@ -127,15 +127,15 @@ function h() {
                     };
                 })
                 .sort((e, t) => e.name.toLowerCase().localeCompare(t.name.toLowerCase())),
-            O = Array.from(u.entries())
+            O = Array.from(c.entries())
                 .map((e) => {
                     let [t, i] = e,
                         r = n.clippedWithFacet === t;
                     return { key: t, name: t, count: r ? g : i, isSelected: r, isDisabled: !1, newCount: 0 };
                 })
                 .sort((e, t) => {
-                    let n = u.get(e.key) ?? 0,
-                        i = u.get(t.key) ?? 0;
+                    let n = c.get(e.key) ?? 0,
+                        i = c.get(t.key) ?? 0;
                     return n !== i ? i - n : e.key.localeCompare(t.key);
                 }),
             R = Array.from(I.entries())
@@ -157,9 +157,9 @@ function h() {
             participantsFacet: O,
             distributedClipInitiatorsFacet: R,
             mainLinkCounts: {
-                allClips: L && n.activeMainLink === c.oH.ALL_CLIPS ? g : f.allClips,
-                autoClips: L && n.activeMainLink === c.oH.AUTO_CLIPS ? g : f.autoClips,
-                favorites: L && n.activeMainLink === c.oH.FAVORITES ? g : f.favorites,
+                allClips: L && n.activeMainLink === d.oH.ALL_CLIPS ? g : f.allClips,
+                autoClips: L && n.activeMainLink === d.oH.AUTO_CLIPS ? g : f.autoClips,
+                favorites: L && n.activeMainLink === d.oH.FAVORITES ? g : f.favorites,
             },
             mainLinkNewCounts: T,
         };

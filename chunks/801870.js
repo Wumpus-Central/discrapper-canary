@@ -1,16 +1,16 @@
 i.d(e, { A: () => o });
 var s = i(477900);
 i(582128);
-var a = i(834730),
-    n = i(375708),
+var n = i(834730),
+    a = i(375708),
     l = i(972196);
 function r(t) {
     let { rewardName: e } = t;
-    return (0, s.jsx)(a.E, {
+    return (0, s.jsx)(n.E, {
         variant: "text-xs/medium",
         className: l.tI,
-        children: n.intl.format(n.t.loyTil, {
-            rewardName: (t, i) => (0, s.jsx)(a.E, { variant: "text-xs/medium", className: l.Ht, children: e }, i),
+        children: a.intl.format(a.t.loyTil, {
+            rewardName: (t, i) => (0, s.jsx)(n.E, { variant: "text-xs/medium", className: l.Ht, children: e }, i),
             verticalDivider: (t, e) => (0, s.jsx)("div", { className: l.yF }, e),
         }),
     });

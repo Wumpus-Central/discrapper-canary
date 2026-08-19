@@ -9,7 +9,7 @@ n.d(t, {
     CI: () => tp,
     DS: () => e0,
     Dn: () => eW,
-    E1: () => eq,
+    E1: () => eZ,
     EH: () => eV,
     FH: () => Q,
     FP: () => ef,
@@ -47,9 +47,9 @@ n.d(t, {
     RR: () => ev,
     RX: () => eE,
     Rj: () => tL,
-    Ry: () => eD,
+    Ry: () => ey,
     SJ: () => eN,
-    Tb: () => q,
+    Tb: () => Z,
     Tp: () => th,
     U8: () => tw,
     Ux: () => ea,
@@ -57,15 +57,15 @@ n.d(t, {
     Xb: () => ec,
     Xc: () => en,
     Y6: () => t_,
-    YN: () => ey,
+    YN: () => eD,
     ZA: () => j,
     ZJ: () => F,
     _U: () => X,
     _h: () => tn,
-    _i: () => Z,
-    _m: () => eZ,
+    _i: () => q,
+    _m: () => eq,
     aI: () => eP,
-    bL: () => ty,
+    bL: () => tD,
     c6: () => eb,
     cV: () => Y,
     ce: () => tT,
@@ -130,7 +130,7 @@ n.d(t, {
     xy: () => S,
     yc: () => tV,
     yq: () => ej,
-    zE: () => tD,
+    zE: () => ty,
 }),
     n(393431),
     n(532706),
@@ -273,10 +273,10 @@ function L(e, t) {
         t,
     );
 }
-function D(e, t, n) {
+function y(e, t, n) {
     i.closure738_externref_shim(e, t, n);
 }
-let y = ["bytes"],
+let D = ["bytes"],
     v = ["omit", "same-origin", "include"],
     b = ["same-origin", "no-cors", "cors", "navigate"],
     M =
@@ -400,7 +400,7 @@ class F {
         i.intounderlyingbytesource_start(this.__wbg_ptr, e);
     }
     get type() {
-        return y[i.intounderlyingbytesource_type(this.__wbg_ptr)];
+        return D[i.intounderlyingbytesource_type(this.__wbg_ptr)];
     }
     cancel() {
         let e = this.__destroy_into_raw();
@@ -489,12 +489,12 @@ function $(e, t) {
 function z(e) {
     e.abort();
 }
-function q() {
+function Z() {
     return I(function (e, t, n, i, r) {
         e.append(A(t, n), A(i, r));
     }, arguments);
 }
-function Z() {
+function q() {
     return I(function (e) {
         return e.arrayBuffer();
     }, arguments);
@@ -642,10 +642,10 @@ function eR() {
 function eL(e) {
     return e.length;
 }
-function eD(e) {
+function ey(e) {
     return e.length;
 }
-function ey(e, t) {
+function eD(e, t) {
     return e.match(t);
 }
 function ev() {
@@ -732,10 +732,10 @@ function e$(e) {
 function ez(e, t) {
     return e.push(t);
 }
-function eq(e, t, n) {
+function eZ(e, t, n) {
     return e.put(t, n);
 }
-function eZ(e) {
+function eq(e) {
     queueMicrotask(e);
 }
 function eX(e) {
@@ -871,7 +871,7 @@ function tC(e, t, n) {
     return T(e, t, 595, L);
 }
 function tO(e, t, n) {
-    return T(e, t, 739, D);
+    return T(e, t, 739, y);
 }
 function tR(e, t) {
     let n = c(
@@ -917,10 +917,10 @@ ${t.stack}`
 function tL(e, t) {
     return Error(A(e, t));
 }
-function tD(e, t) {
+function ty(e, t) {
     return e in t;
 }
-function ty() {
+function tD() {
     let e = i.__wbindgen_export_4,
         t = e.grow(4);
     e.set(0, void 0), e.set(t + 0, void 0), e.set(t + 1, null), e.set(t + 2, !0), e.set(t + 3, !1);

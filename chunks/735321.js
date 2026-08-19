@@ -8,7 +8,7 @@ n.d(t, {
     Un: () => B,
     XW: () => M,
     XX: () => K,
-    Y5: () => y,
+    Y5: () => D,
     cv: () => C,
     ef: () => H,
     ew: () => F,
@@ -74,7 +74,7 @@ function L(e) {
             .find((t) => t.type === e) ?? null
     );
 }
-function D(e) {
+function y(e) {
     let t = R(),
         n = t.findIndex((t) => t.getUniqueKey() === e.getUniqueKey());
     if (-1 === n) return [e, ...t];
@@ -83,7 +83,7 @@ function D(e) {
         return (i[n] = e), i;
     }
 }
-function y(e) {
+function D(e) {
     let t = R();
     null == t.find((t) => t.getUniqueKey() === e.getUniqueKey()) &&
         (e.type === a.x.PERSONAL &&
@@ -102,23 +102,23 @@ function M(e) {
         n = t?.clips ?? [];
     if (n.length >= 4) return;
     let i = new u.k({ id: t?.id, clips: [...n, e] });
-    h.A.setPendingWidgets(D(i));
+    h.A.setPendingWidgets(y(i));
 }
 function P(e, t) {
     let n = b();
     if (null == n) return;
     let i = t.trim(),
         r = new u.k({ id: n.id, clips: n.clips.map((t) => (t.id === e ? { ...t, title: "" === i ? void 0 : i } : t)) });
-    h.A.setPendingWidgets(D(r));
+    h.A.setPendingWidgets(y(r));
 }
 function U(e) {
     let t = b();
     if (null == t) return;
     let n = new u.k({ id: t.id, clips: t.clips.filter((t) => t.id !== e) });
-    h.A.setPendingWidgets(D(n));
+    h.A.setPendingWidgets(y(n));
 }
 function w(e) {
-    let t = D(e(R().find((e) => e instanceof E.Tu) ?? null ?? (0, E.g0)()));
+    let t = y(e(R().find((e) => e instanceof E.Tu) ?? null ?? (0, E.g0)()));
     h.A.setPendingWidgets(t);
 }
 function G(e, t, n) {
@@ -130,7 +130,7 @@ function G(e, t, n) {
     if (null == s) return;
     let l = { ...s, tags: n },
         o = a.games.map((e) => (e.gameId === t ? l : e)),
-        d = D(new _.Yy({ ...a, games: o }));
+        d = y(new _.Yy({ ...a, games: o }));
     h.A.setPendingWidgets(d);
 }
 function x(e, t, n) {
@@ -148,7 +148,7 @@ function k(e, t, n) {
     if (null == r || n === r.comment) return;
     let a = { ...r, comment: n },
         s = i.games.map((e) => (e.gameId === t ? a : e)),
-        l = D(new _.Yy({ ...i, games: s }));
+        l = y(new _.Yy({ ...i, games: s }));
     h.A.setPendingWidgets(l);
 }
 function F(e) {
@@ -162,7 +162,7 @@ function F(e) {
     }
     let l = { gameId: i.gameId, comment: i.comment, tags: i.tags };
     t = null != a ? [l, ...(a.games ?? [])] : [l];
-    let o = D(new _.Yy({ ...(a ?? { type: n }), games: t }));
+    let o = y(new _.Yy({ ...(a ?? { type: n }), games: t }));
     h.A.setPendingWidgets(o), d.I.fetchMany([i.gameId]);
 }
 function V(e, t) {
@@ -180,14 +180,14 @@ function B(e, t, n) {
     if (t < 0 || t >= r.length || n < 0 || n >= r.length) return;
     let [a] = r.splice(t, 1);
     r.splice(n, 0, a);
-    let s = D(new _.Yy({ ...i, games: r }));
+    let s = y(new _.Yy({ ...i, games: r }));
     h.A.setPendingWidgets(s);
 }
 function H(e, t) {
     let n = L(e);
     if (null == n) return;
     let i = (null != n.games ? n.games : []).filter((e) => e.gameId !== t),
-        r = D(new _.Yy({ ...n, games: i }));
+        r = y(new _.Yy({ ...n, games: i }));
     h.A.setPendingWidgets(r);
 }
 function j(e) {

@@ -1,40 +1,40 @@
 "use strict";
-n.d(t, { D: () => o });
-var i = n(499867),
-    r = n(265690),
-    s = n(121894);
-function a(e, t) {
+n.d(t, { D: () => l });
+var i = n(537812),
+    r = n(882035),
+    a = n(121894);
+function s(e, t) {
     return e === t;
 }
-function o(e) {
-    let t = (0, r.h)((0, i.eh)((t, n, i) => e((e) => (0, s.r)(() => t(e)), n, i)));
+function l(e) {
+    let t = (0, r.h)((0, i.eh)((t, n, i) => e((e) => (0, a.r)(() => t(e)), n, i)));
     function n(e) {
-        let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : a;
+        let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : s;
         return t(e, n);
     }
-    function o(e) {
+    function l(e) {
         let n = t.getState();
         return null != e ? e(n) : n;
     }
-    let l = (e) => {
-        (0, s.r)(() => t.setState(e));
+    let o = (e) => {
+        (0, a.r)(() => t.setState(e));
     };
     return {
         useState: n,
-        getState: o,
+        getState: l,
         useField: function (e) {
-            let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : a;
+            let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : s;
             return n((t) => t[e], t);
         },
         getField: function (e) {
-            return o((t) => t[e]);
+            return l((t) => t[e]);
         },
         subscribe: function (e, n, i) {
             return t.subscribe(e, n, i);
         },
-        setState: l,
+        setState: o,
         resetState: function () {
-            l(t.getInitialState());
+            o(t.getInitialState());
         },
     };
 }

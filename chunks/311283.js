@@ -1,61 +1,61 @@
 n.d(t, { A: () => u });
-var a = n(582128);
+var s = n(582128);
 let i = new Map(),
-    s = new Map(),
-    l = new Map();
-function r(e) {
+    l = new Map(),
+    a = new Map();
+function o(e) {
     return i.has(e) || i.set(e, !1), i.get(e);
 }
-function o(e) {
+function r(e) {
     var t;
-    let n, a, i, r;
+    let n, s, i, o;
     return (
-        s.has(e) ||
-            (s.set(e, new Set()),
-            l.set(
+        l.has(e) ||
+            (l.set(e, new Set()),
+            a.set(
                 e,
                 ((t = e),
                 (n = (e) => {
-                    d(e.shiftKey, t);
+                    c(e.shiftKey, t);
                 }),
-                (a = (e) => {
-                    d(e.shiftKey, t);
+                (s = (e) => {
+                    c(e.shiftKey, t);
                 }),
                 (i = (e) => {
-                    d(e.shiftKey, t);
+                    c(e.shiftKey, t);
                 }),
-                (r = () => {
-                    d(!1, t);
+                (o = () => {
+                    c(!1, t);
                 }),
                 t.addEventListener("keydown", n),
-                t.addEventListener("keyup", a),
+                t.addEventListener("keyup", s),
                 t.addEventListener("mousemove", i),
-                t.addEventListener("blur", r),
+                t.addEventListener("blur", o),
                 () => {
                     t.removeEventListener("keydown", n),
-                        t.removeEventListener("keyup", a),
+                        t.removeEventListener("keyup", s),
                         t.removeEventListener("mousemove", i),
-                        t.removeEventListener("blur", r);
+                        t.removeEventListener("blur", o);
                 }),
             )),
-        s.get(e)
+        l.get(e)
     );
 }
-function d(e, t) {
-    e !== r(t) && (i.set(t, e), o(t).forEach((t) => t(e)));
+function c(e, t) {
+    e !== o(t) && (i.set(t, e), r(t).forEach((t) => t(e)));
 }
 function u() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : window,
-        [t, n] = a.useState(r(e));
+        [t, n] = s.useState(o(e));
     return (
-        a.useEffect(() => {
+        s.useEffect(() => {
             let t = (e) => {
                 n(e);
             };
             return (
-                o(e).add(t),
+                r(e).add(t),
                 () => {
-                    o(e).delete(t), 0 === o(e).size && (l.get(e)?.(), l.delete(e), s.delete(e), i.delete(e));
+                    r(e).delete(t), 0 === r(e).size && (a.get(e)?.(), a.delete(e), l.delete(e), i.delete(e));
                 }
             );
         }, [e]),

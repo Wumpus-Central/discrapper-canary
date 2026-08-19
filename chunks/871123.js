@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
     Cv: () => k,
-    NE: () => y,
+    NE: () => D,
     OY: () => H,
     Q6: () => j,
     Ri: () => C,
@@ -10,9 +10,9 @@ n.d(t, {
     bF: () => R,
     fq: () => F,
     jd: () => O,
-    jz: () => D,
+    jz: () => y,
     mC: () => S,
-    mq: () => Z,
+    mq: () => q,
     n5: () => Q,
     nG: () => z,
     nY: () => X,
@@ -79,14 +79,14 @@ function L() {
     let e = _.A.getGuild(f.v8);
     return null != e && e.features.has(p.GuildFeatures.SOCIAL_LAYER_STOREFRONT) ? e.id : f.Kf;
 }
-function D(e) {
+function y(e) {
     if (h.A.getStorefrontGuildIds().has(e.id)) return !0;
     if ("type" in e) return !1;
-    let t = q(e, h.A.getApplicationIdFromGuildId(e.id)),
+    let t = Z(e, h.A.getApplicationIdFromGuildId(e.id)),
         n = h.A.getStorefrontApplicationIds();
     return !!(null != t && n.has(t)) || (e.features?.has(p.GuildFeatures.SOCIAL_LAYER_STOREFRONT) ?? !1);
 }
-function y(e) {
+function D(e) {
     return { logoAssetId: e.logo_asset_id ?? null, lightThemeLogoAssetId: e.light_theme_logo_asset_id ?? null };
 }
 function v(e) {
@@ -202,7 +202,7 @@ function j(e, t) {
 }
 function W(e) {
     let t = _.A.getGuild(e);
-    return null != t && D(t);
+    return null != t && y(t);
 }
 function Y(e, t, n) {
     return 0 === e.length
@@ -238,16 +238,16 @@ function z(e) {
         n = (0, o.h)(e);
     return { guildId: t ?? n?.guildId, application: n };
 }
-function q(e, t) {
+function Z(e, t) {
     return t ?? (e?.gameApplicationIds?.length === 1 ? e.gameApplicationIds[0] : void 0);
 }
-function Z(e) {
+function q(e) {
     let t = h.A.getApplicationIdFromGuildId(e);
-    return q(_.A.getGuild(e), t);
+    return Z(_.A.getGuild(e), t);
 }
 function X(e) {
     let t = (0, s.bG)([h.A], () => h.A.getApplicationIdFromGuildId(e));
-    return q(
+    return Z(
         (0, s.bG)([_.A], () => _.A.getGuild(e), [e]),
         t,
     );

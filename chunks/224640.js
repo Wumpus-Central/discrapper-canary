@@ -28,26 +28,26 @@ function A(e) {
             trackingProps: N,
             children: C,
         } = e,
-        R = r.useId(),
-        O = r.useMemo(() => ({ id: R, headingId: `heading-${R}`, onClose: g, dismissable: T }), [T, R, g]),
+        O = r.useId(),
+        R = r.useMemo(() => ({ id: O, headingId: `heading-${O}`, onClose: g, dismissable: T }), [T, O, g]),
         L = (0, _.kS)(t, n),
-        D = r.useRef(null);
+        y = r.useRef(null);
     return (0, i.jsx)(u.V.Provider, {
-        value: O,
+        value: R,
         children: (0, i.jsx)(o.lG, {
-            id: R,
+            id: O,
             role: f,
             "aria-label": p,
-            "aria-labelledby": null != p ? void 0 : O.headingId,
+            "aria-labelledby": null != p ? void 0 : R.headingId,
             returnRef: I,
             trackingProps: N,
             trackingComponentName: "Modal",
             children: (0, i.jsx)(d.xp, {
-                containerRef: D,
+                containerRef: y,
                 children: (0, i.jsx)(c.F, {
                     forceLevel: 1,
                     children: (0, i.jsxs)("div", {
-                        ref: D,
+                        ref: y,
                         className: s()(E.outerContainer, { [E.fullScreenOnMobile]: h }),
                         children: [
                             S,

@@ -1,13 +1,13 @@
 "use strict";
 Object.defineProperty(t, "__esModule", { value: !0 }),
     (t.stringFormatter = t.StringBuilder = void 0),
-    (t.formatToPlainString = a);
-let r = n(619398);
-class i extends r.FormatBuilder {
+    (t.formatToPlainString = i);
+let n = r(619398);
+class o extends n.FormatBuilder {
     constructor() {
         super(...arguments), (this.result = "");
     }
-    pushRichTextTag(e, t, n) {
+    pushRichTextTag(e, t, r) {
         for (let e of t) this.result += e;
     }
     pushLiteralText(e) {
@@ -20,7 +20,7 @@ class i extends r.FormatBuilder {
         return [this.result];
     }
 }
-function a(e, t) {
-    return "string" == typeof e ? e : this.bindFormatValues(i, e, t)[0];
+function i(e, t) {
+    return "string" == typeof e ? e : this.bindFormatValues(o, e, t)[0];
 }
-(t.StringBuilder = i), (t.stringFormatter = { format: a, builder: i });
+(t.StringBuilder = o), (t.stringFormatter = { format: i, builder: o });

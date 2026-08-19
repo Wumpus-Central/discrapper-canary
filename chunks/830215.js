@@ -1,6 +1,6 @@
 "use strict";
 let i;
-n.d(t, { A: () => y, W: () => R }), n(142703);
+n.d(t, { A: () => D, W: () => R }), n(142703);
 var r,
     a = n(562708),
     s = n(247775),
@@ -31,13 +31,13 @@ function L(e) {
         throw (C.error("Error while dispatching LOGOUT", e), window.DiscordErrors?.softCrash(e), e);
     });
 }
-function D(e) {
+function y(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : S.BVt.DEFAULT_LOGGED_OUT;
     if ((L(), null == t)) return;
     let n = (0, E.Y)();
     null == n ? (0, A.pX)(t, { source: e }) : (g.A.popAll(), n.reset({ index: 0, routes: [{ name: "auth" }] }));
 }
-let y = {
+let D = {
     startSession(e) {
         d.h.wait(() => {
             d.h.dispatch({ type: "START_SESSION", token: e });
@@ -256,7 +256,7 @@ let y = {
             ...(null != n && { headers: { authorization: s.getToken(n) ?? "" } }),
             rejectWithError: (0, l.fT)(),
         }).finally(() => {
-            (null == n || n === f.default.getId()) && D(e, t);
+            (null == n || n === f.default.getId()) && y(e, t);
         });
     },
     switchAccountToken(e) {
@@ -273,7 +273,7 @@ let y = {
     },
     verifySSOToken(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : S.BVt.DEFAULT_LOGGED_OUT;
-        return l.Bo.get({ url: S.Rsh.ME, oldFormErrors: !0, rejectWithError: !0 }).catch(() => D(e, t));
+        return l.Bo.get({ url: S.Rsh.ME, oldFormErrors: !0, rejectWithError: !0 }).catch(() => y(e, t));
     },
     async verify(e) {
         let t = await m.A.post({

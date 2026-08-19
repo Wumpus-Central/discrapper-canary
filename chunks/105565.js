@@ -1,37 +1,37 @@
 "use strict";
-n.d(t, { A: () => c, r: () => a }), n(321073);
+n.d(t, { A: () => c, r: () => s }), n(321073);
 var i,
     r = n(17928),
-    s = n(228366),
-    a =
+    a = n(228366),
+    s =
         (((i = {})[(i.DC_SHOWN = 0)] = "DC_SHOWN"),
         (i[(i.DC_SHOW_REQUEST = 1)] = "DC_SHOW_REQUEST"),
         (i[(i.DC_DISMISSED = 2)] = "DC_DISMISSED"),
         i);
-let o = [];
-function l(e) {
+let l = [];
+function o(e) {
     let { eventType: t, dismissibleContent: n } = e;
 }
-class u extends r.Ay.Store {
+class d extends r.Ay.Store {
     static displayName = "DCFEventStore";
     getDCFEvents() {
-        return o;
+        return l;
     }
 }
-let c = new u(s.h, {
+let c = new d(a.h, {
     LOGOUT: function () {
-        o = [];
+        l = [];
     },
     DCF_EVENT_LOGGED: function (e) {
         let { eventType: t, dismissibleContent: n } = e;
-        l({ eventType: t, dismissibleContent: n });
+        o({ eventType: t, dismissibleContent: n });
     },
     DCF_HANDLE_DC_DISMISSED: function (e) {
         let { dismissibleContent: t } = e;
-        l({ eventType: 2, dismissibleContent: t });
+        o({ eventType: 2, dismissibleContent: t });
     },
     DCF_HANDLE_DC_SHOWN: function (e) {
         let { dismissibleContent: t } = e;
-        l({ eventType: 0, dismissibleContent: t });
+        o({ eventType: 0, dismissibleContent: t });
     },
 });

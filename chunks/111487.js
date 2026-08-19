@@ -1,20 +1,20 @@
 "use strict";
-n.d(t, { A: () => o, g: () => l });
-var i = n(477900);
+n.d(t, { A: () => o, g: () => a });
+var l = n(477900);
 n(582128);
-var r = n(565645),
-    a = n(202027),
-    s = n(630828);
-let l = { SMALL: s.EX, MEDIUM: s.Y, LARGE: s.as };
+var i = n(565645),
+    s = n(202027),
+    r = n(630828);
+let a = { SMALL: r.EX, MEDIUM: r.Y, LARGE: r.as };
 function o(e) {
-    let { emojiId: t, emojiName: n, defaultComponent: s, size: o = l.MEDIUM } = e,
-        { customEmoji: d, unicodeEmoji: c } = (0, a.A)(t, n);
-    return null == d && null == c
-        ? s
-        : (0, i.jsx)(r.A, {
-              emojiName: null != d ? d?.name : n,
-              animated: null != d && d.animated,
-              emojiId: d?.id,
+    let { emojiId: t, emojiName: n, defaultComponent: r, size: o = a.MEDIUM } = e,
+        { customEmoji: u, unicodeEmoji: c } = (0, s.A)(t, n);
+    return null == u && null == c
+        ? r
+        : (0, l.jsx)(i.A, {
+              emojiName: null != u ? u?.name : n,
+              animated: null != u && u.animated,
+              emojiId: u?.id,
               autoplay: !0,
               className: o,
           });

@@ -1,24 +1,24 @@
 "use strict";
-var r = (function () {
+var n = (function () {
         function e(e, t) {
-            for (var n = 0; n < t.length; n++) {
-                var r = t[n];
-                (r.enumerable = r.enumerable || !1),
-                    (r.configurable = !0),
-                    "value" in r && (r.writable = !0),
-                    Object.defineProperty(e, r.key, r);
+            for (var r = 0; r < t.length; r++) {
+                var n = t[r];
+                (n.enumerable = n.enumerable || !1),
+                    (n.configurable = !0),
+                    "value" in n && (n.writable = !0),
+                    Object.defineProperty(e, n.key, n);
             }
         }
-        return function (t, n, r) {
-            return n && e(t.prototype, n), r && e(t, r), t;
+        return function (t, r, n) {
+            return r && e(t.prototype, r), n && e(t, n), t;
         };
     })(),
-    i = n(150433);
-n(498121);
-var a = n(151979),
-    o = n(934580),
-    s = n(284009),
-    l = n(735556);
+    o = r(150433);
+r(498121);
+var i = r(151979),
+    a = r(934580),
+    s = r(284009),
+    l = r(735556);
 function u(e, t) {
     return null == e ? t : e;
 }
@@ -27,29 +27,29 @@ e.exports = (function (e) {
         throw TypeError("Super expression must either be null or a function, not " + typeof e);
     function t(e) {
         if (!(this instanceof t)) throw TypeError("Cannot call a class as a function");
-        var n,
-            r = (function (e, t) {
+        var r,
+            n = (function (e, t) {
                 if (!e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
                 return t && ("object" == typeof t || "function" == typeof t) ? t : e;
             })(this, (t.__proto__ || Object.getPrototypeOf(t)).call(this));
         return (
-            (r._overshootClamping = u(e.overshootClamping, !1)),
-            (r._restDisplacementThreshold = u(e.restDisplacementThreshold, 0.001)),
-            (r._restSpeedThreshold = u(e.restSpeedThreshold, 0.001)),
-            (r._initialVelocity = e.velocity),
-            (r._lastVelocity = u(e.velocity, 0)),
-            (r._toValue = e.toValue),
-            (r.__isInteraction = void 0 === e.isInteraction || e.isInteraction),
+            (n._overshootClamping = u(e.overshootClamping, !1)),
+            (n._restDisplacementThreshold = u(e.restDisplacementThreshold, 0.001)),
+            (n._restSpeedThreshold = u(e.restSpeedThreshold, 0.001)),
+            (n._initialVelocity = e.velocity),
+            (n._lastVelocity = u(e.velocity, 0)),
+            (n._toValue = e.toValue),
+            (n.__isInteraction = void 0 === e.isInteraction || e.isInteraction),
             void 0 !== e.bounciness || void 0 !== e.speed
                 ? (s(
                       void 0 === e.tension && void 0 === e.friction,
                       "You can only define bounciness/speed or tension/friction but not both",
                   ),
-                  (n = l.fromBouncinessAndSpeed(u(e.bounciness, 8), u(e.speed, 12))))
-                : (n = l.fromOrigamiTensionAndFriction(u(e.tension, 40), u(e.friction, 7))),
-            (r._tension = n.tension),
-            (r._friction = n.friction),
-            r
+                  (r = l.fromBouncinessAndSpeed(u(e.bounciness, 8), u(e.speed, 12))))
+                : (r = l.fromOrigamiTensionAndFriction(u(e.tension, 40), u(e.friction, 7))),
+            (n._tension = r.tension),
+            (n._friction = r.friction),
+            n
         );
     }
     return (
@@ -57,23 +57,23 @@ e.exports = (function (e) {
             constructor: { value: t, enumerable: !1, writable: !0, configurable: !0 },
         })),
         e && (Object.setPrototypeOf ? Object.setPrototypeOf(t, e) : (t.__proto__ = e)),
-        r(t, [
+        n(t, [
             {
                 key: "start",
-                value: function (e, n, r, i) {
+                value: function (e, r, n, o) {
                     if (
                         ((this.__active = !0),
                         (this._startPosition = e),
                         (this._lastPosition = this._startPosition),
-                        (this._onUpdate = n),
-                        (this.__onEnd = r),
+                        (this._onUpdate = r),
+                        (this.__onEnd = n),
                         (this._lastTime = Date.now()),
-                        i instanceof t)
+                        o instanceof t)
                     ) {
-                        var a = i.getInternalState();
-                        (this._lastPosition = a.lastPosition),
-                            (this._lastVelocity = a.lastVelocity),
-                            (this._lastTime = a.lastTime);
+                        var i = o.getInternalState();
+                        (this._lastPosition = i.lastPosition),
+                            (this._lastVelocity = i.lastVelocity),
+                            (this._lastTime = i.lastTime);
                     }
                     void 0 !== this._initialVelocity &&
                         null !== this._initialVelocity &&
@@ -96,60 +96,60 @@ e.exports = (function (e) {
                 value: function () {
                     var e = this._lastPosition,
                         t = this._lastVelocity,
-                        n = this._lastPosition,
-                        r = this._lastVelocity,
-                        i = Date.now();
-                    i > this._lastTime + 64 && (i = this._lastTime + 64);
-                    for (var o = Math.floor((i - this._lastTime) / 1), s = 0; s < o; ++s) {
+                        r = this._lastPosition,
+                        n = this._lastVelocity,
+                        o = Date.now();
+                    o > this._lastTime + 64 && (o = this._lastTime + 64);
+                    for (var a = Math.floor((o - this._lastTime) / 1), s = 0; s < a; ++s) {
                         var l = t,
-                            u = this._tension * (this._toValue - n) - this._friction * r,
-                            n = e + (0.001 * l) / 2,
-                            r = t + (0.001 * u) / 2,
-                            c = r,
-                            d = this._tension * (this._toValue - n) - this._friction * r;
-                        n = e + (0.001 * c) / 2;
-                        var f = (r = t + (0.001 * d) / 2),
-                            p = this._tension * (this._toValue - n) - this._friction * r;
-                        n = e + (0.001 * f) / 2;
-                        var h = (r = t + (0.001 * p) / 2),
-                            m = this._tension * (this._toValue - n) - this._friction * r;
-                        (n = e + (0.001 * f) / 2), (r = t + (0.001 * p) / 2);
-                        var g = (u + 2 * (d + p) + m) / 6;
-                        (e += ((l + 2 * (c + f) + h) / 6) * 0.001), (t += 0.001 * g);
+                            u = this._tension * (this._toValue - r) - this._friction * n,
+                            r = e + (0.001 * l) / 2,
+                            n = t + (0.001 * u) / 2,
+                            c = n,
+                            f = this._tension * (this._toValue - r) - this._friction * n;
+                        r = e + (0.001 * c) / 2;
+                        var p = (n = t + (0.001 * f) / 2),
+                            d = this._tension * (this._toValue - r) - this._friction * n;
+                        r = e + (0.001 * p) / 2;
+                        var h = (n = t + (0.001 * d) / 2),
+                            m = this._tension * (this._toValue - r) - this._friction * n;
+                        (r = e + (0.001 * p) / 2), (n = t + (0.001 * d) / 2);
+                        var v = (u + 2 * (f + d) + m) / 6;
+                        (e += ((l + 2 * (c + p) + h) / 6) * 0.001), (t += 0.001 * v);
                     }
                     if (
-                        ((this._lastTime = i),
+                        ((this._lastTime = o),
                         (this._lastPosition = e),
                         (this._lastVelocity = t),
                         this._onUpdate(e),
                         this.__active)
                     ) {
-                        var v = !1;
+                        var y = !1;
                         this._overshootClamping &&
                             0 !== this._tension &&
-                            (v = this._startPosition < this._toValue ? e > this._toValue : e < this._toValue);
-                        var y = Math.abs(t) <= this._restSpeedThreshold,
+                            (y = this._startPosition < this._toValue ? e > this._toValue : e < this._toValue);
+                        var g = Math.abs(t) <= this._restSpeedThreshold,
                             b = !0;
                         if (
                             (0 !== this._tension &&
                                 (b = Math.abs(this._toValue - e) <= this._restDisplacementThreshold),
-                            v || (y && b))
+                            y || (g && b))
                         ) {
                             0 !== this._tension && this._onUpdate(this._toValue),
                                 this.__debouncedOnEnd({ finished: !0 });
                             return;
                         }
-                        this._animationFrame = a.current(this.onUpdate.bind(this));
+                        this._animationFrame = i.current(this.onUpdate.bind(this));
                     }
                 },
             },
             {
                 key: "stop",
                 value: function () {
-                    (this.__active = !1), o.current(this._animationFrame), this.__debouncedOnEnd({ finished: !1 });
+                    (this.__active = !1), a.current(this._animationFrame), this.__debouncedOnEnd({ finished: !1 });
                 },
             },
         ]),
         t
     );
-})(i);
+})(o);

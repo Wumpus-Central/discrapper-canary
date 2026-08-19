@@ -1,31 +1,31 @@
 (function () {
-    var n = this,
-        i = n.humanize,
-        r = {};
-    e.exports && (t = e.exports = r),
-        (t.humanize = r),
-        (r.noConflict = function () {
-            return (n.humanize = i), this;
+    var r = this,
+        n = r.humanize,
+        o = {};
+    e.exports && (t = e.exports = o),
+        (t.humanize = o),
+        (o.noConflict = function () {
+            return (r.humanize = n), this;
         }),
-        (r.pad = function (e, t, n, i) {
+        (o.pad = function (e, t, r, n) {
             if (
                 ((e += ""),
-                n ? n.length > 1 && (n = n.charAt(0)) : (n = " "),
-                "right" == (i = void 0 === i ? "left" : "right"))
+                r ? r.length > 1 && (r = r.charAt(0)) : (r = " "),
+                "right" == (n = void 0 === n ? "left" : "right"))
             )
-                for (; e.length < t; ) e += n;
-            else for (; e.length < t; ) e = n + e;
+                for (; e.length < t; ) e += r;
+            else for (; e.length < t; ) e = r + e;
             return e;
         }),
-        (r.time = function () {
+        (o.time = function () {
             return new Date().getTime() / 1e3;
         });
-    var s = [0, 0, 31, 59, 90, 120, 151, 181, 212, 243, 273, 304, 334],
+    var i = [0, 0, 31, 59, 90, 120, 151, 181, 212, 243, 273, 304, 334],
         a = [0, 0, 31, 60, 91, 121, 152, 182, 213, 244, 274, 305, 335];
-    (r.date = function (e, t) {
-        var n = void 0 === t ? new Date() : new Date(t instanceof Date ? t : 1e3 * t),
-            i = /\\?([a-z])/gi,
-            o = function (e, t) {
+    (o.date = function (e, t) {
+        var r = void 0 === t ? new Date() : new Date(t instanceof Date ? t : 1e3 * t),
+            n = /\\?([a-z])/gi,
+            s = function (e, t) {
                 return c[e] ? c[e]() : t;
             },
             l = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
@@ -45,13 +45,13 @@
             ],
             c = {
                 d: function () {
-                    return r.pad(c.j(), 2, "0");
+                    return o.pad(c.j(), 2, "0");
                 },
                 D: function () {
                     return c.l().slice(0, 3);
                 },
                 j: function () {
-                    return n.getDate();
+                    return r.getDate();
                 },
                 l: function () {
                     return l[c.w()];
@@ -64,26 +64,26 @@
                     return e > 4 && e < 21 ? "th" : { 1: "st", 2: "nd", 3: "rd" }[e % 10] || "th";
                 },
                 w: function () {
-                    return n.getDay();
+                    return r.getDay();
                 },
                 z: function () {
-                    return (c.L() ? a[c.n()] : s[c.n()]) + c.j() - 1;
+                    return (c.L() ? a[c.n()] : i[c.n()]) + c.j() - 1;
                 },
                 W: function () {
                     var e = c.z() - c.N() + 1.5;
-                    return r.pad(1 + Math.floor(Math.abs(e) / 7) + +(e % 7 > 3.5), 2, "0");
+                    return o.pad(1 + Math.floor(Math.abs(e) / 7) + +(e % 7 > 3.5), 2, "0");
                 },
                 F: function () {
-                    return u[n.getMonth()];
+                    return u[r.getMonth()];
                 },
                 m: function () {
-                    return r.pad(c.n(), 2, "0");
+                    return o.pad(c.n(), 2, "0");
                 },
                 M: function () {
                     return c.F().slice(0, 3);
                 },
                 n: function () {
-                    return n.getMonth() + 1;
+                    return r.getMonth() + 1;
                 },
                 t: function () {
                     return new Date(c.Y(), c.n(), 0).getDate();
@@ -97,156 +97,156 @@
                     return c.Y() + (12 === e && t < 9 ? -1 : 1 === e && t > 9);
                 },
                 Y: function () {
-                    return n.getFullYear();
+                    return r.getFullYear();
                 },
                 y: function () {
                     return String(c.Y()).slice(-2);
                 },
                 a: function () {
-                    return n.getHours() > 11 ? "pm" : "am";
+                    return r.getHours() > 11 ? "pm" : "am";
                 },
                 A: function () {
                     return c.a().toUpperCase();
                 },
                 B: function () {
-                    var e = n.getTime() / 1e3,
+                    var e = r.getTime() / 1e3,
                         t = (e % 86400) + 3600;
                     t < 0 && (t += 86400);
-                    var i = (t / 86.4) % 1e3;
-                    return e < 0 ? Math.ceil(i) : Math.floor(i);
+                    var n = (t / 86.4) % 1e3;
+                    return e < 0 ? Math.ceil(n) : Math.floor(n);
                 },
                 g: function () {
                     return c.G() % 12 || 12;
                 },
                 G: function () {
-                    return n.getHours();
+                    return r.getHours();
                 },
                 h: function () {
-                    return r.pad(c.g(), 2, "0");
+                    return o.pad(c.g(), 2, "0");
                 },
                 H: function () {
-                    return r.pad(c.G(), 2, "0");
+                    return o.pad(c.G(), 2, "0");
                 },
                 i: function () {
-                    return r.pad(n.getMinutes(), 2, "0");
+                    return o.pad(r.getMinutes(), 2, "0");
                 },
                 s: function () {
-                    return r.pad(n.getSeconds(), 2, "0");
+                    return o.pad(r.getSeconds(), 2, "0");
                 },
                 u: function () {
-                    return r.pad(1e3 * n.getMilliseconds(), 6, "0");
+                    return o.pad(1e3 * r.getMilliseconds(), 6, "0");
                 },
                 O: function () {
-                    var e = n.getTimezoneOffset(),
+                    var e = r.getTimezoneOffset(),
                         t = Math.abs(e);
-                    return (e > 0 ? "-" : "+") + r.pad(100 * Math.floor(t / 60) + (t % 60), 4, "0");
+                    return (e > 0 ? "-" : "+") + o.pad(100 * Math.floor(t / 60) + (t % 60), 4, "0");
                 },
                 P: function () {
                     var e = c.O();
                     return e.substr(0, 3) + ":" + e.substr(3, 2);
                 },
                 Z: function () {
-                    return -(60 * n.getTimezoneOffset());
+                    return -(60 * r.getTimezoneOffset());
                 },
                 c: function () {
-                    return "Y-m-d\\TH:i:sP".replace(i, o);
+                    return "Y-m-d\\TH:i:sP".replace(n, s);
                 },
                 r: function () {
-                    return "D, d M Y H:i:s O".replace(i, o);
+                    return "D, d M Y H:i:s O".replace(n, s);
                 },
                 U: function () {
-                    return n.getTime() / 1e3 || 0;
+                    return r.getTime() / 1e3 || 0;
                 },
             };
-        return e.replace(i, o);
+        return e.replace(n, s);
     }),
-        (r.numberFormat = function (e, t, n, i) {
-            (t = isNaN(t) ? 2 : Math.abs(t)), (n = void 0 === n ? "." : n), (i = void 0 === i ? "," : i);
-            var r = e < 0 ? "-" : "",
-                s = parseInt((e = Math.abs(+e || 0)).toFixed(t), 10) + "",
-                a = s.length > 3 ? s.length % 3 : 0;
+        (o.numberFormat = function (e, t, r, n) {
+            (t = isNaN(t) ? 2 : Math.abs(t)), (r = void 0 === r ? "." : r), (n = void 0 === n ? "," : n);
+            var o = e < 0 ? "-" : "",
+                i = parseInt((e = Math.abs(+e || 0)).toFixed(t), 10) + "",
+                a = i.length > 3 ? i.length % 3 : 0;
             return (
-                r +
-                (a ? s.substr(0, a) + i : "") +
-                s.substr(a).replace(/(\d{3})(?=\d)/g, "$1" + i) +
+                o +
+                (a ? i.substr(0, a) + n : "") +
+                i.substr(a).replace(/(\d{3})(?=\d)/g, "$1" + n) +
                 (t
-                    ? n +
-                      Math.abs(e - s)
+                    ? r +
+                      Math.abs(e - i)
                           .toFixed(t)
                           .slice(2)
                     : "")
             );
         }),
-        (r.naturalDay = function (e, t) {
-            (e = void 0 === e ? r.time() : e), (t = void 0 === t ? "Y-m-d" : t);
-            var n = new Date(),
-                i = new Date(n.getFullYear(), n.getMonth(), n.getDate()).getTime() / 1e3;
-            return e < i && e >= i - 86400
+        (o.naturalDay = function (e, t) {
+            (e = void 0 === e ? o.time() : e), (t = void 0 === t ? "Y-m-d" : t);
+            var r = new Date(),
+                n = new Date(r.getFullYear(), r.getMonth(), r.getDate()).getTime() / 1e3;
+            return e < n && e >= n - 86400
                 ? "yesterday"
-                : e >= i && e < i + 86400
+                : e >= n && e < n + 86400
                   ? "today"
-                  : e >= i + 86400 && e < i + 172800
+                  : e >= n + 86400 && e < n + 172800
                     ? "tomorrow"
-                    : r.date(t, e);
+                    : o.date(t, e);
         }),
-        (r.relativeTime = function (e) {
-            e = void 0 === e ? r.time() : e;
-            var t = r.time(),
-                n = t - e;
-            if (n < 2 && n > -2) return (n >= 0 ? "just " : "") + "now";
-            if (n < 60 && n > -60) return n >= 0 ? Math.floor(n) + " seconds ago" : "in " + Math.floor(-n) + " seconds";
-            if (n < 120 && n > -120) return n >= 0 ? "about a minute ago" : "in about a minute";
-            if (n < 3600 && n > -3600)
-                return n >= 0 ? Math.floor(n / 60) + " minutes ago" : "in " + Math.floor(-n / 60) + " minutes";
-            if (n < 7200 && n > -7200) return n >= 0 ? "about an hour ago" : "in about an hour";
-            if (n < 86400 && n > -86400)
-                return n >= 0 ? Math.floor(n / 3600) + " hours ago" : "in " + Math.floor(-n / 3600) + " hours";
-            if (n < 172800 && n > -172800) return n >= 0 ? "1 day ago" : "in 1 day";
-            if (n < 2505600 && n > -2505600)
-                return n >= 0 ? Math.floor(n / 86400) + " days ago" : "in " + Math.floor(-n / 86400) + " days";
-            if (n < 5184e3 && n > -5184e3) return n >= 0 ? "about a month ago" : "in about a month";
-            var i = parseInt(r.date("Y", t), 10),
-                s = parseInt(r.date("Y", e), 10),
-                a = 12 * i + parseInt(r.date("n", t), 10) - (12 * s + parseInt(r.date("n", e), 10));
+        (o.relativeTime = function (e) {
+            e = void 0 === e ? o.time() : e;
+            var t = o.time(),
+                r = t - e;
+            if (r < 2 && r > -2) return (r >= 0 ? "just " : "") + "now";
+            if (r < 60 && r > -60) return r >= 0 ? Math.floor(r) + " seconds ago" : "in " + Math.floor(-r) + " seconds";
+            if (r < 120 && r > -120) return r >= 0 ? "about a minute ago" : "in about a minute";
+            if (r < 3600 && r > -3600)
+                return r >= 0 ? Math.floor(r / 60) + " minutes ago" : "in " + Math.floor(-r / 60) + " minutes";
+            if (r < 7200 && r > -7200) return r >= 0 ? "about an hour ago" : "in about an hour";
+            if (r < 86400 && r > -86400)
+                return r >= 0 ? Math.floor(r / 3600) + " hours ago" : "in " + Math.floor(-r / 3600) + " hours";
+            if (r < 172800 && r > -172800) return r >= 0 ? "1 day ago" : "in 1 day";
+            if (r < 2505600 && r > -2505600)
+                return r >= 0 ? Math.floor(r / 86400) + " days ago" : "in " + Math.floor(-r / 86400) + " days";
+            if (r < 5184e3 && r > -5184e3) return r >= 0 ? "about a month ago" : "in about a month";
+            var n = parseInt(o.date("Y", t), 10),
+                i = parseInt(o.date("Y", e), 10),
+                a = 12 * n + parseInt(o.date("n", t), 10) - (12 * i + parseInt(o.date("n", e), 10));
             if (a < 12 && a > -12) return a >= 0 ? a + " months ago" : "in " + -a + " months";
-            var o = i - s;
-            return o < 2 && o > -2
-                ? o >= 0
+            var s = n - i;
+            return s < 2 && s > -2
+                ? s >= 0
                     ? "a year ago"
                     : "in a year"
-                : o >= 0
-                  ? o + " years ago"
-                  : "in " + -o + " years";
+                : s >= 0
+                  ? s + " years ago"
+                  : "in " + -s + " years";
         }),
-        (r.ordinal = function (e) {
+        (o.ordinal = function (e) {
             var t = (e = isNaN((e = parseInt(e, 10))) ? 0 : e) < 0 ? "-" : "",
-                n = (e = Math.abs(e)) % 100;
-            return t + e + (n > 4 && n < 21 ? "th" : { 1: "st", 2: "nd", 3: "rd" }[e % 10] || "th");
+                r = (e = Math.abs(e)) % 100;
+            return t + e + (r > 4 && r < 21 ? "th" : { 1: "st", 2: "nd", 3: "rd" }[e % 10] || "th");
         }),
-        (r.filesize = function (e, t, n, i, s, a) {
+        (o.filesize = function (e, t, r, n, i, a) {
             return ((t = void 0 === t ? 1024 : t), e <= 0)
                 ? "0 bytes"
-                : (e < t && void 0 === n && (n = 0),
+                : (e < t && void 0 === r && (r = 0),
                   void 0 === a && (a = " "),
-                  r.intword(e, ["bytes", "KB", "MB", "GB", "TB", "PB"], t, n, i, s, a));
+                  o.intword(e, ["bytes", "KB", "MB", "GB", "TB", "PB"], t, r, n, i, a));
         }),
-        (r.intword = function (e, t, n, i, s, a, o) {
+        (o.intword = function (e, t, r, n, i, a, s) {
             (u = (t = t || ["", "K", "M", "B", "T"]).length - 1),
-                (n = n || 1e3),
-                (i = isNaN(i) ? 2 : Math.abs(i)),
-                (s = s || "."),
+                (r = r || 1e3),
+                (n = isNaN(n) ? 2 : Math.abs(n)),
+                (i = i || "."),
                 (a = a || ","),
-                (o = o || "");
+                (s = s || "");
             for (var l, u, c = 0; c < t.length; c++)
-                if (e < Math.pow(n, c + 1)) {
+                if (e < Math.pow(r, c + 1)) {
                     u = c;
                     break;
                 }
-            l = e / Math.pow(n, u);
-            var d = t[u] ? o + t[u] : "";
-            return r.numberFormat(l, i, s, a) + d;
+            l = e / Math.pow(r, u);
+            var f = t[u] ? s + t[u] : "";
+            return o.numberFormat(l, n, i, a) + f;
         }),
-        (r.linebreaks = function (e) {
+        (o.linebreaks = function (e) {
             return (
                 "<p>" +
                 (e = (e = (e = (e = (e = e.replace(/^([\n|\r]*)/, "")).replace(/([\n|\r]*)$/, "")).replace(
@@ -256,14 +256,14 @@
                 "</p>"
             );
         }),
-        (r.nl2br = function (e) {
+        (o.nl2br = function (e) {
             return e.replace(/(\r\n|\n|\r)/g, "<br />");
         }),
-        (r.truncatechars = function (e, t) {
+        (o.truncatechars = function (e, t) {
             return e.length <= t ? e : e.substr(0, t) + "\u2026";
         }),
-        (r.truncatewords = function (e, t) {
-            var n = e.split(" ");
-            return n.length < t ? e : n.slice(0, t).join(" ") + "\u2026";
+        (o.truncatewords = function (e, t) {
+            var r = e.split(" ");
+            return r.length < t ? e : r.slice(0, t).join(" ") + "\u2026";
         });
 }).call(this);

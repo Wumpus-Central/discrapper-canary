@@ -1,23 +1,23 @@
 "use strict";
-e.exports = function (e, t, i, r) {
-    var s = this;
+e.exports = function (e, t, n, o) {
+    var i = this;
     function a(t) {
-        s.fireCallback(i, t, e),
-            "keyup" !== r && (s.ignoreNextKeyup = n(780594)(t)),
+        i.fireCallback(n, t, e),
+            "keyup" !== o && (i.ignoreNextKeyup = r(780594)(t)),
             setTimeout(function () {
-                s.resetSequences();
+                i.resetSequences();
             }, 10);
     }
-    s.sequenceLevels[e] = 0;
-    for (var o = 0; o < t.length; ++o) {
+    i.sequenceLevels[e] = 0;
+    for (var s = 0; s < t.length; ++s) {
         var l =
-            o + 1 === t.length
+            s + 1 === t.length
                 ? a
                 : (function (t) {
                       return function () {
-                          (s.nextExpectedAction = t), ++s.sequenceLevels[e], s.resetSequenceTimer();
+                          (i.nextExpectedAction = t), ++i.sequenceLevels[e], i.resetSequenceTimer();
                       };
-                  })(r || s.getKeyInfo(t[o + 1]).action);
-        s.bindSingle(t[o], l, r, e, o);
+                  })(o || i.getKeyInfo(t[s + 1]).action);
+        i.bindSingle(t[s], l, o, e, s);
     }
 };

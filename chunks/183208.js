@@ -4,7 +4,7 @@ var i = n(488428),
     r = n(562708),
     a = n(179771),
     s = n(665260),
-    l = n(562465),
+    l = n(636537),
     o = n(933681),
     d = n(228366),
     c = n(62583),
@@ -33,8 +33,8 @@ var m = n(952818),
     O = n(340829),
     R = n(174459),
     L = n(738533),
-    D = n(723702),
-    y = n(499785),
+    y = n(723702),
+    D = n(499785),
     v = n(308368),
     b = n(59636),
     M = n(912851),
@@ -281,7 +281,7 @@ let Y = {
             t = N.A.detectableGamesEtag;
         d.h.wait(() => {
             d.h.dispatch({ type: "GAMES_DATABASE_FETCH" }),
-                y.A.get({
+                D.A.get({
                     url: e,
                     headers: { "If-None-Match": t },
                     retries: 1,
@@ -353,7 +353,7 @@ let Y = {
             t = f.A.etag;
         d.h.wait(() => {
             d.h.dispatch({ type: "NON_GAMES_DATABASE_FETCH" }),
-                y.A.get({
+                D.A.get({
                     url: e,
                     headers: { "If-None-Match": t },
                     retries: 1,
@@ -396,7 +396,7 @@ let Y = {
                 url: P.Rsh.UNVERIFIED_APPLICATIONS,
                 body: {
                     name: t,
-                    os: (0, D.getPlatformName)(),
+                    os: (0, y.getPlatformName)(),
                     icon: n,
                     distributor_application: null == r || "" === r ? null : { distributor: r, sku: a },
                     executable: o,
@@ -454,7 +454,7 @@ let Y = {
             );
         d.h.dispatch({ type: "ACTIVITY_JOIN_LOADING", applicationId: i, remotePartyId: _ });
         try {
-            let e = (0, D.platformPrefersDeepLink)(),
+            let e = (0, y.platformPrefersDeepLink)(),
                 { secret: d, joinUrl: E } = await v.A.getJoinSecret(t, n, i, r, a);
             return (
                 null == _ &&

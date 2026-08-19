@@ -1,4 +1,4 @@
-n.d(t, { K7: () => u, LG: () => A, Sq: () => c, W6: () => p, je: () => f, lr: () => g });
+n.d(t, { K7: () => u, LG: () => A, Sq: () => c, W6: () => f, je: () => p, lr: () => g });
 var l = n(488428),
     i = n(17928),
     s = n(776231),
@@ -34,9 +34,9 @@ function g(e) {
     return e.voiceHangout?.banner_hash != null;
 }
 let m = [d.xB.SET_VOICE_CHANNEL_STATUS, d.xB.CONNECT, d.xB.VIEW_CHANNEL];
-function p(e) {
+function f(e) {
     return (0, i.bG)([r.A], () => m.every((t) => r.A.can(t, e)), [e]);
 }
-function f(e) {
+function p(e) {
     return (0, i.bG)([r.A], () => r.A.can(d.xB.MANAGE_CHANNELS, e), [e]);
 }

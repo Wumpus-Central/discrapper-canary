@@ -1,37 +1,37 @@
 "use strict";
-n.r(t), n.d(t, { useCallback: () => s, useCallbackOne: () => a, useMemo: () => o, useMemoOne: () => i });
-var r = n(582128);
-function i(e, t) {
-    var n = (0, r.useState)(function () {
+r.r(t), r.d(t, { useCallback: () => s, useCallbackOne: () => i, useMemo: () => a, useMemoOne: () => o });
+var n = r(582128);
+function o(e, t) {
+    var r = (0, n.useState)(function () {
             return { inputs: t, result: e() };
         })[0],
-        i = (0, r.useRef)(!0),
-        a = (0, r.useRef)(n),
-        o =
-            i.current ||
+        o = (0, n.useRef)(!0),
+        i = (0, n.useRef)(r),
+        a =
+            o.current ||
             (t &&
-                a.current.inputs &&
+                i.current.inputs &&
                 (function (e, t) {
                     if (e.length !== t.length) return !1;
-                    for (var n = 0; n < e.length; n++) if (e[n] !== t[n]) return !1;
+                    for (var r = 0; r < e.length; r++) if (e[r] !== t[r]) return !1;
                     return !0;
-                })(t, a.current.inputs))
-                ? a.current
+                })(t, i.current.inputs))
+                ? i.current
                 : { inputs: t, result: e() };
     return (
-        (0, r.useEffect)(
+        (0, n.useEffect)(
             function () {
-                (i.current = !1), (a.current = o);
+                (o.current = !1), (i.current = a);
             },
-            [o],
+            [a],
         ),
-        o.result
+        a.result
     );
 }
-function a(e, t) {
-    return i(function () {
+function i(e, t) {
+    return o(function () {
         return e;
     }, t);
 }
-var o = i,
-    s = a;
+var a = o,
+    s = i;

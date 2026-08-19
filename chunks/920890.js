@@ -1,19 +1,19 @@
 IntlMessageFormat.__addLocaleData({
     locale: "hr",
     pluralRuleFunction: function (e, t) {
-        var n = String(e).split("."),
-            i = n[0],
-            r = n[1] || "",
-            s = !n[1],
-            a = i.slice(-1),
-            o = i.slice(-2),
-            l = r.slice(-1),
-            u = r.slice(-2);
+        var r = String(e).split("."),
+            n = r[0],
+            o = r[1] || "",
+            i = !r[1],
+            a = n.slice(-1),
+            s = n.slice(-2),
+            l = o.slice(-1),
+            u = o.slice(-2);
         return t
             ? "other"
-            : (s && 1 == a && 11 != o) || (1 == l && 11 != u)
+            : (i && 1 == a && 11 != s) || (1 == l && 11 != u)
               ? "one"
-              : (s && a >= 2 && a <= 4 && (o < 12 || o > 14)) || (l >= 2 && l <= 4 && (u < 12 || u > 14))
+              : (i && a >= 2 && a <= 4 && (s < 12 || s > 14)) || (l >= 2 && l <= 4 && (u < 12 || u > 14))
                 ? "few"
                 : "other";
     },

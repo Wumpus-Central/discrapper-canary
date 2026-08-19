@@ -1,16 +1,16 @@
 "use strict";
-n.d(t, { Wj: () => u, cH: () => h, hd: () => l, j_: () => d, lj: () => _, np: () => c }), n(938796);
+n.d(t, { Wj: () => d, cH: () => E, hd: () => o, j_: () => u, lj: () => _, np: () => c }), n(938796);
 var i = n(136722),
     r = n(317097),
-    s = n(867051),
-    a = n(176201),
-    o = n(34457);
-function l(e, t) {
+    a = n(867051),
+    s = n(176201),
+    l = n(34457);
+function o(e, t) {
     let n = {};
-    for (let i of t) n[i.id] = u(e, i);
+    for (let i of t) n[i.id] = d(e, i);
     return n;
 }
-function u(e, t) {
+function d(e, t) {
     return c({
         id: t.id,
         name: t.name,
@@ -21,7 +21,7 @@ function u(e, t) {
         color: t.color,
         colorString: 0 !== t.color ? (0, r.Hl)(t.color) : null,
         colors: t.colors ?? null,
-        colorStrings: null != t.colors ? (0, a.K3)(t.colors) : null,
+        colorStrings: null != t.colors ? (0, s.K3)(t.colors) : null,
         hoist: t.hoist,
         managed: t.managed ?? !1,
         tags: t.tags ?? {},
@@ -33,43 +33,43 @@ function u(e, t) {
     });
 }
 function c(e) {
-    return (0, s.yE)(o.xh, e);
+    return (0, a.yE)(l.xh, e);
 }
-function d(e, t, n) {
-    if ("full_sync" === t.op) return l(e, t.items);
+function u(e, t, n) {
+    if ("full_sync" === t.op) return o(e, t.items);
     let i = { ...n };
     for (let e of t.deletes) delete i[e];
-    for (let n of t.writes) i[n.id] = u(e, n);
+    for (let n of t.writes) i[n.id] = d(e, n);
     return i;
 }
 function _(e, t) {
     let n = {};
-    for (let o in t) {
-        var s;
-        n[o] = c({
-            id: (s = t[o]).id,
-            name: s.name,
+    for (let l in t) {
+        var a;
+        n[l] = c({
+            id: (a = t[l]).id,
+            name: a.name,
             guildId: e,
-            permissions: i.iu(s.permissions),
-            mentionable: s.mentionable,
-            position: s.position,
-            color: s.color,
-            colorString: null != s.color && 0 !== s.color ? (0, r.Hl)(s.color) : null,
-            colors: s.colors ?? null,
-            colorStrings: null != s.colors ? (0, a.K3)(s.colors) : null,
-            hoist: s.hoist,
-            managed: s.managed ?? !1,
-            tags: s.tags ?? {},
-            icon: s.icon,
-            unicodeEmoji: s.unicodeEmoji,
-            flags: s.flags ?? 0,
-            description: s.description ?? null,
-            version: s.version,
+            permissions: i.iu(a.permissions),
+            mentionable: a.mentionable,
+            position: a.position,
+            color: a.color,
+            colorString: null != a.color && 0 !== a.color ? (0, r.Hl)(a.color) : null,
+            colors: a.colors ?? null,
+            colorStrings: null != a.colors ? (0, s.K3)(a.colors) : null,
+            hoist: a.hoist,
+            managed: a.managed ?? !1,
+            tags: a.tags ?? {},
+            icon: a.icon,
+            unicodeEmoji: a.unicodeEmoji,
+            flags: a.flags ?? 0,
+            description: a.description ?? null,
+            version: a.version,
         });
     }
     return n;
 }
-function h(e) {
+function E(e) {
     let t = {};
     for (let n in e) {
         let i = e[n];

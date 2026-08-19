@@ -1,14 +1,14 @@
 "use strict";
-n.d(t, { ie: () => h, nr: () => A, p_: () => E });
-var i = n(582128),
-    r = n(136722),
-    a = n(17928),
-    s = n(576705),
-    l = n(287809),
-    o = n(860689),
-    d = n(219935),
+n.d(t, { ie: () => p, nr: () => f, p_: () => m });
+var l = n(582128),
+    i = n(136722),
+    s = n(17928),
+    r = n(576705),
+    a = n(287809),
+    o = n(149790),
+    u = n(219935),
     c = n(818348);
-let u = {
+let d = {
     canCreateExpressions: !1,
     canCreateGuildEvent: !1,
     canManageAllExpressions: !1,
@@ -16,64 +16,64 @@ let u = {
     canManageGuildExpression: () => !1,
     canManageGuildEvent: () => !1,
 };
-function _(e, t, n, i) {
+function h(e, t, n, l) {
     return (
         null != e &&
         (!!n ||
             ("creator_id" in e
-                ? i && null != t && e.creator_id === t.id
+                ? l && null != t && e.creator_id === t.id
                 : "userId" in e
-                  ? i && null != t && e.userId === t.id
-                  : "user" in e && i && null != t && e.user?.id === t.id))
+                  ? l && null != t && e.userId === t.id
+                  : "user" in e && l && null != t && e.user?.id === t.id))
     );
 }
-function E(e) {
+function m(e) {
     if (null == e) return [c.xB.CREATE_EVENTS, c.xB.MANAGE_EVENTS];
-    let t = d.d5;
+    let t = u.d5;
     return (
-        e.isGuildStageVoice() ? (t = d.Ou) : e.isGuildVoice() && (t = d.EN),
-        [r.kg(t, c.xB.CREATE_EVENTS), r.kg(t, c.xB.MANAGE_EVENTS)]
+        e.isGuildStageVoice() ? (t = u.Ou) : e.isGuildVoice() && (t = u.EN),
+        [i.kg(t, c.xB.CREATE_EVENTS), i.kg(t, c.xB.MANAGE_EVENTS)]
     );
 }
-function A(e) {
-    let [t, n] = (0, o.fh)(e) ? [c.xB.CREATE_EVENTS, c.xB.MANAGE_EVENTS] : E(e),
-        [r, d, A, h] = (0, a.yK)([s.A], () => [
-            s.A.can(c.xB.CREATE_GUILD_EXPRESSIONS, e),
-            s.A.can(c.xB.MANAGE_GUILD_EXPRESSIONS, e),
-            s.A.can(t, e),
-            s.A.can(n, e),
+function f(e) {
+    let [t, n] = (0, o.fh)(e) ? [c.xB.CREATE_EVENTS, c.xB.MANAGE_EVENTS] : m(e),
+        [i, u, f, p] = (0, s.yK)([r.A], () => [
+            r.A.can(c.xB.CREATE_GUILD_EXPRESSIONS, e),
+            r.A.can(c.xB.MANAGE_GUILD_EXPRESSIONS, e),
+            r.A.can(t, e),
+            r.A.can(n, e),
         ]),
-        I = (0, a.bG)([l.default], () => l.default.getCurrentUser()),
-        f = i.useCallback((e) => _(e, I, d, r), [r, d, I]),
-        p = i.useCallback((e) => _(e, I, h, A), [h, A, I]);
+        g = (0, s.bG)([a.default], () => a.default.getCurrentUser()),
+        x = l.useCallback((e) => h(e, g, u, i), [i, u, g]),
+        A = l.useCallback((e) => h(e, g, p, f), [p, f, g]);
     return null == e
-        ? u
+        ? d
         : {
-              canCreateExpressions: r,
-              canCreateGuildEvent: A,
-              canManageAllExpressions: d,
-              canManageAllEvents: h,
-              canManageGuildExpression: f,
-              canManageGuildEvent: p,
+              canCreateExpressions: i,
+              canCreateGuildEvent: f,
+              canManageAllExpressions: u,
+              canManageAllEvents: p,
+              canManageGuildExpression: x,
+              canManageGuildEvent: A,
           };
 }
-function h(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : s.A,
-        n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : l.default,
-        [i, r] = (0, o.fh)(e) ? [c.xB.CREATE_EVENTS, c.xB.MANAGE_EVENTS] : E(e),
-        a = t.can(c.xB.CREATE_GUILD_EXPRESSIONS, e),
-        d = t.can(c.xB.MANAGE_GUILD_EXPRESSIONS, e),
-        A = t.can(i, e),
-        h = t.can(r, e),
-        I = n.getCurrentUser();
+function p(e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : r.A,
+        n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : a.default,
+        [l, i] = (0, o.fh)(e) ? [c.xB.CREATE_EVENTS, c.xB.MANAGE_EVENTS] : m(e),
+        s = t.can(c.xB.CREATE_GUILD_EXPRESSIONS, e),
+        u = t.can(c.xB.MANAGE_GUILD_EXPRESSIONS, e),
+        f = t.can(l, e),
+        p = t.can(i, e),
+        g = n.getCurrentUser();
     return null == e
-        ? u
+        ? d
         : {
-              canCreateExpressions: a,
-              canCreateGuildEvent: A,
-              canManageAllExpressions: d,
-              canManageAllEvents: h,
-              canManageGuildExpression: (e) => _(e, I, d, a),
-              canManageGuildEvent: (e) => _(e, I, h, A),
+              canCreateExpressions: s,
+              canCreateGuildEvent: f,
+              canManageAllExpressions: u,
+              canManageAllEvents: p,
+              canManageGuildExpression: (e) => h(e, g, u, s),
+              canManageGuildEvent: (e) => h(e, g, p, f),
           };
 }

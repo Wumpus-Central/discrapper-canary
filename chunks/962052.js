@@ -1,34 +1,34 @@
 "use strict";
 let i, r;
-n.d(t, { A: () => A });
-var s = n(228366),
-    a = n(274593),
-    o = n(626584),
-    l = n(287809),
-    u = n(422033),
+n.d(t, { A: () => T });
+var a = n(228366),
+    s = n(274593),
+    l = n(626584),
+    o = n(287809),
+    d = n(422033),
     c = n(174459),
-    d = n(723702),
+    u = n(723702),
     _ = n(19575),
-    h = n(652215),
-    f = n(613057);
-let p = new o.A("NativeDispatchUtils");
-function E() {
-    return null == r && p.warn("Tried getting Dispatch instance before instantiated"), r;
+    E = n(652215),
+    A = n(613057);
+let h = new l.A("NativeDispatchUtils");
+function I() {
+    return null == r && h.warn("Tried getting Dispatch instance before instantiated"), r;
 }
-function m(e) {
+function f(e) {
     let t = JSON.parse(e);
-    return p.log("Native Dispatch error", t), new a.A(t);
+    return h.log("Native Dispatch error", t), new s.A(t);
 }
-function g(e, t) {
-    "" !== e && m(e);
+function p(e, t) {
+    "" !== e && f(e);
 }
-let A = {
+let T = {
     init(e) {
-        let { userToken: t, userId: n, installPaths: s, platform: a, stateCallback: o, errorCallback: u } = e;
+        let { userToken: t, userId: n, installPaths: a, platform: s, stateCallback: l, errorCallback: d } = e;
         null == r &&
             (null != i
                 ? Promise.resolve(i)
-                : (0, d.isDesktop)()
+                : (0, u.isDesktop)()
                   ? Promise.all([_.Ay.ensureModule("discord_dispatch"), _.Ay.ensureModule("discord_modules")]).then(
                         () => {
                             _.Ay.requireModule("discord_modules");
@@ -38,26 +38,26 @@ let A = {
                     )
                   : Promise.reject(Error("not desktop client"))
             ).then((e) => {
-                let i = { environment: window.GLOBAL_ENV.RELEASE_CHANNEL, build_number: "564083" },
-                    d = l.default.getCurrentUser();
-                null != d && ((i.user_id = d.id), (i.user_name = d.tag), null != d.email && (i.email = d.email));
+                let i = { environment: window.GLOBAL_ENV.RELEASE_CHANNEL, build_number: "595955" },
+                    u = o.default.getCurrentUser();
+                null != u && ((i.user_id = u.id), (i.user_name = u.tag), null != u.email && (i.email = u.email));
                 let _ = {
                     user_token: t,
                     user_id: n,
-                    install_paths: s.map((e) => {
+                    install_paths: a.map((e) => {
                         let { path: t } = e;
                         return t;
                     }),
                     api_endpoint: `https:${window.GLOBAL_ENV.API_ENDPOINT}`,
                     environment: window.GLOBAL_ENV.PROJECT_ENV,
                     sentry: i,
-                    platform: a,
+                    platform: s,
                 };
                 r = new e.Dispatch(
                     JSON.stringify(_),
                     (e) => {
                         let t = JSON.parse(e);
-                        o({
+                        l({
                             applications: t.applications,
                             paused: t.paused,
                             currentTask:
@@ -74,7 +74,7 @@ let A = {
                         });
                     },
                     (e) => {
-                        u(m(e));
+                        d(f(e));
                     },
                     (e) => {
                         !(function (e) {
@@ -82,13 +82,13 @@ let A = {
                             switch (
                                 (null != t.stage && null != t.stage.type && (t.stage = t.stage.type), e.event_name)
                             ) {
-                                case h.HAw.DISPATCH_PATCH_STARTED:
-                                case h.HAw.DISPATCH_PATCH_PAUSED:
-                                case h.HAw.DISPATCH_PATCH_FAILED:
-                                case h.HAw.DISPATCH_PATCH_VERIFICATION_FAILED:
-                                case h.HAw.DISPATCH_PATCH_COMPLETE:
-                                case h.HAw.DISPATCH_PATCH_CANCELLED:
-                                case h.HAw.DISPATCH_APPLICATION_UNINSTALLED:
+                                case E.HAw.DISPATCH_PATCH_STARTED:
+                                case E.HAw.DISPATCH_PATCH_PAUSED:
+                                case E.HAw.DISPATCH_PATCH_FAILED:
+                                case E.HAw.DISPATCH_PATCH_VERIFICATION_FAILED:
+                                case E.HAw.DISPATCH_PATCH_COMPLETE:
+                                case E.HAw.DISPATCH_PATCH_CANCELLED:
+                                case E.HAw.DISPATCH_APPLICATION_UNINSTALLED:
                                     c.default.track(e.event_name, t);
                             }
                         })(JSON.parse(e));
@@ -97,7 +97,7 @@ let A = {
             });
     },
     destroy() {
-        let e = E();
+        let e = I();
         null != e && void 0 !== e.destroy && (e.destroy(), (r = null));
     },
     setTargetManifest(e) {
@@ -106,31 +106,31 @@ let A = {
                 applicationName: n,
                 applicationIcon: i,
                 branchId: r,
-                buildId: s,
-                manifestIds: a,
-                installationPath: o,
+                buildId: a,
+                manifestIds: s,
+                installationPath: l,
             } = e,
-            l = E();
-        null != l &&
-            l.command(
+            o = I();
+        null != o &&
+            o.command(
                 JSON.stringify({
                     command: "SetTargetManifest",
                     application_id: t,
                     application_name: n,
                     application_icon: i,
                     branch_id: r,
-                    build_id: s,
-                    manifest_ids: a,
-                    install_path: o,
+                    build_id: a,
+                    manifest_ids: s,
+                    install_path: l,
                 }),
-                g,
+                p,
             );
     },
     setCurrentTask(e, t, n, i, r) {
-        let s = E();
+        let a = I();
         return (
-            null != s &&
-            (s.command(
+            null != a &&
+            (a.command(
                 JSON.stringify({
                     command: "SetCurrentTask",
                     application_id: e,
@@ -139,33 +139,33 @@ let A = {
                     user_id: i,
                     user_token: r,
                 }),
-                g,
+                p,
             ),
             !0)
         );
     },
     setCredentials(e, t) {
-        let n = E();
-        null != n && n.command(JSON.stringify({ command: "SetCredentials", user_id: e, user_token: t }), g);
+        let n = I();
+        null != n && n.command(JSON.stringify({ command: "SetCredentials", user_id: e, user_token: t }), p);
     },
     cancel(e, t) {
-        let n = E();
-        null != n && n.command(JSON.stringify({ command: "Cancel", application_id: e, branch_id: t }), g);
+        let n = I();
+        null != n && n.command(JSON.stringify({ command: "Cancel", application_id: e, branch_id: t }), p);
     },
     uninstall(e, t) {
-        let n = E();
-        null != n && n.command(JSON.stringify({ command: "Uninstall", application_id: e, branch_id: t }), g);
+        let n = I();
+        null != n && n.command(JSON.stringify({ command: "Uninstall", application_id: e, branch_id: t }), p);
     },
     pause() {
-        let e = E();
-        null != e && e.command(JSON.stringify({ command: "Pause" }), g);
+        let e = I();
+        null != e && e.command(JSON.stringify({ command: "Pause" }), p);
     },
     resume() {
-        let e = E();
-        null != e && e.command(JSON.stringify({ command: "Resume" }), g);
+        let e = I();
+        null != e && e.command(JSON.stringify({ command: "Resume" }), p);
     },
     queryDirectory(e, t) {
-        let n = E();
+        let n = I();
         null != n &&
             n.command(JSON.stringify({ command: "QueryDirectory", path: e }), (e, n) => {
                 if ("" !== e) t(JSON.parse(e));
@@ -180,30 +180,30 @@ let A = {
             });
     },
     runLaunchSetup: (e, t) =>
-        u.A.isRunning()
+        d.A.isRunning()
             ? Promise.reject(Error("Already running launch setup."))
-            : (s.h.dispatch({ type: "DISPATCH_APPLICATION_LAUNCH_SETUP_START" }),
+            : (a.h.dispatch({ type: "DISPATCH_APPLICATION_LAUNCH_SETUP_START" }),
               new Promise((n, i) => {
-                  let r = E();
+                  let r = I();
                   null == r
                       ? i(Error("native dispatch instance not found"))
                       : r.command(
                             JSON.stringify({ command: "RunLaunchSetup", application_id: e, branch_id: t }),
                             (e, t, r) => {
                                 if ("" !== e) {
-                                    s.h.dispatch({ type: "DISPATCH_APPLICATION_LAUNCH_SETUP_COMPLETE" });
-                                    let t = m(e);
-                                    s.h.dispatch({ type: "DISPATCH_APPLICATION_ERROR", error: t }),
-                                        null != t.code && t.code === f.Hi.POST_INSTALL_CANCELLED ? i(t) : n();
+                                    a.h.dispatch({ type: "DISPATCH_APPLICATION_LAUNCH_SETUP_COMPLETE" });
+                                    let t = f(e);
+                                    a.h.dispatch({ type: "DISPATCH_APPLICATION_ERROR", error: t }),
+                                        null != t.code && t.code === A.Hi.POST_INSTALL_CANCELLED ? i(t) : n();
                                     return;
                                 }
                                 if ("" !== t) {
-                                    s.h.dispatch({ type: "DISPATCH_APPLICATION_LAUNCH_SETUP_COMPLETE" }), n();
+                                    a.h.dispatch({ type: "DISPATCH_APPLICATION_LAUNCH_SETUP_COMPLETE" }), n();
                                     return;
                                 }
                                 if ("" !== r) {
                                     let e = JSON.parse(r);
-                                    s.h.dispatch({
+                                    a.h.dispatch({
                                         type: "DISPATCH_APPLICATION_INSTALL_SCRIPTS_PROGRESS_UPDATE",
                                         progress: e.progress,
                                         total: e.total,
@@ -214,11 +214,11 @@ let A = {
                         );
               })),
     launch: (e, t, n, i) =>
-        new Promise((r, s) => {
-            let a = E();
-            null == a
-                ? s(Error("native dispatch instance not found"))
-                : a.command(
+        new Promise((r, a) => {
+            let s = I();
+            null == s
+                ? a(Error("native dispatch instance not found"))
+                : s.command(
                       JSON.stringify({
                           command: "Launch",
                           application_id: e,
@@ -227,7 +227,7 @@ let A = {
                           environment: i,
                       }),
                       function (e, t) {
-                          "" !== e ? s(m(e)) : r([JSON.parse(t).pid]);
+                          "" !== e ? a(f(e)) : r([JSON.parse(t).pid]);
                       },
                   );
         }),

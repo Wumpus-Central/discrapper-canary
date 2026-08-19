@@ -1,20 +1,20 @@
 "use strict";
-n.d(t, { A: () => a });
+n.d(t, { A: () => s });
 var i = n(626584),
     r = n(723176);
-let s = new i.A("ChannelReader");
-class a {
+let a = new i.A("ChannelReader");
+class s {
     static getSync(e, t) {
         let n = performance.now(),
             i = r.A.channels(e).getManySyncUnsafe(t),
-            a = performance.now() - n;
-        return s.log(`synchronously loaded in ${a}ms (guild: ${t}, channels: ${i.length})`), [i, a];
+            s = performance.now() - n;
+        return a.log(`synchronously loaded in ${s}ms (guild: ${t}, channels: ${i.length})`), [i, s];
     }
     static async getAsync(e, t) {
         let n = performance.now(),
             i = await r.A.channels(e).getMany(t),
-            a = performance.now() - n;
-        return s.verbose(`loaded in ${a}ms (guild: ${t}, channels: ${i.length})`), i;
+            s = performance.now() - n;
+        return a.verbose(`loaded in ${s}ms (guild: ${t}, channels: ${i.length})`), i;
     }
     static async getGuildIds() {
         try {
@@ -23,7 +23,7 @@ class a {
             let t = ((await e.getGuildIds()) ?? []).filter((e) => null !== e && "string" == typeof e);
             return new Set(t);
         } catch (e) {
-            return s.warn("couldn't get guild ids", e), new Set();
+            return a.warn("couldn't get guild ids", e), new Set();
         }
     }
 }

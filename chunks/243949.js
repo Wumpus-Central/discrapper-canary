@@ -1,28 +1,28 @@
-i.d(n, { A: () => s });
-var e = i(477900);
-i(582128);
-var l = i(477782),
-    r = i(688810),
-    a = i(267102),
-    o = i(183555),
-    u = i(975732),
-    c = i(652215),
-    d = i(375708);
-function s(t) {
-    let { label: n, onAction: i, icon: s, ...p } = t,
-        { analyticsLocations: A } = (0, r.Ay)(),
-        { context: y } = (0, o.NJ)(),
-        _ = (0, a.aL)(),
-        f = (0, a.Us)();
-    return (0, e.jsx)(l.Dr, {
+n.d(e, { A: () => d });
+var i = n(477900);
+n(582128);
+var r = n(477782),
+    l = n(688810),
+    o = n(267102),
+    a = n(183555),
+    u = n(975732),
+    c = n(652215),
+    s = n(375708);
+function d(t) {
+    let { label: e, onAction: n, icon: d, ...p } = t,
+        { analyticsLocations: A } = (0, l.Ay)(),
+        { context: y } = (0, a.NJ)(),
+        f = (0, o.aL)(),
+        _ = (0, o.Us)();
+    return (0, i.jsx)(r.Dr, {
         id: "user-profile",
-        label: n ?? d.intl.string(d.t.LYju5J),
+        label: e ?? s.intl.string(s.t.LYju5J),
         action: () => {
-            i?.(),
-                (0, u.openUserProfileModal)({ sourceAnalyticsLocations: A, appContext: f, ...y, ...p }),
-                _.dispatch(c.jej.POPOUT_CLOSE);
+            n?.(),
+                (0, u.openUserProfileModal)({ sourceAnalyticsLocations: A, appContext: _, ...y, ...p }),
+                f.dispatch(c.jej.POPOUT_CLOSE);
         },
-        icon: s,
-        leadingAccessory: null != s ? { type: "icon", icon: s } : void 0,
+        icon: d,
+        leadingAccessory: null != d ? { type: "icon", icon: d } : void 0,
     });
 }

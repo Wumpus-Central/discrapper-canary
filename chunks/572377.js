@@ -1,22 +1,22 @@
 "use strict";
-n.d(t, { c: () => a });
-var i = n(672722),
-    r =
-        (n(72290),
+r.d(t, { c: () => a });
+var n = r(672722),
+    o =
+        (r(72290),
         function (e) {
-            return (0, i.requestAnimationFrame)(e);
+            return (0, n.requestAnimationFrame)(e);
         }),
-    s = function (e) {
-        void 0 === e && (e = r);
+    i = function (e) {
+        void 0 === e && (e = o);
         var t = !0,
-            n = !1,
-            s = 0,
+            r = !1,
+            i = 0,
             a = [],
             l = 0,
             u = new Set(),
             c = new Set(),
-            d = new Set(),
-            _ = function (e) {
+            f = new Set(),
+            p = function (e) {
                 var t = a.indexOf(e);
                 t < 0 &&
                     ((t = a.findIndex(function (t) {
@@ -24,52 +24,52 @@ var i = n(672722),
                     })),
                     a.splice(~t ? t : a.length, 0, e));
             },
-            h = function () {
+            d = function () {
                 if (!t)
                     try {
-                        E(), e(h);
+                        v(), e(d);
                     } catch (e) {
                         console.error(e);
                     }
             },
-            f = function () {
-                t && ((t = !1), 0 == s && ((s = i.now()), e(h)));
+            h = function () {
+                t && ((t = !1), 0 == i && ((i = n.now()), e(d)));
             },
-            p = [];
+            m = [];
         this.setTimeout = function (e, t) {
-            var n = i.now() + t,
-                r = function () {
-                    var e = p.findIndex(function (e) {
-                        return e.cancel == r;
+            var r = n.now() + t,
+                o = function () {
+                    var e = m.findIndex(function (e) {
+                        return e.cancel == o;
                     });
-                    e >= 0 && p.splice(e, 1);
+                    e >= 0 && m.splice(e, 1);
                 },
-                s = o(p, function (e) {
-                    return e.time > n;
+                i = s(m, function (e) {
+                    return e.time > r;
                 }),
-                a = { time: n, handler: e, cancel: r };
-            return p.splice(s, 0, a), f(), a;
+                a = { time: r, handler: e, cancel: o };
+            return m.splice(i, 0, a), h(), a;
         };
-        var E = (this.advance = function () {
-            var e = i.now();
+        var v = (this.advance = function () {
+            var e = n.now();
             if (
-                (u.size && (u.forEach(_), u.clear()),
-                p.length &&
-                    i.batchedUpdates(function () {
-                        var t = o(p, function (t) {
+                (u.size && (u.forEach(p), u.clear()),
+                m.length &&
+                    n.batchedUpdates(function () {
+                        var t = s(m, function (t) {
                             return t.time > e;
                         });
-                        p.splice(0, t).forEach(function (e) {
+                        m.splice(0, t).forEach(function (e) {
                             return e.handler();
                         });
                     }),
-                e > s)
+                e > i)
             ) {
-                var t = Math.min(64, e - s);
-                (s = e),
-                    i.batchedUpdates(function () {
+                var t = Math.min(64, e - i);
+                (i = e),
+                    n.batchedUpdates(function () {
                         a.length &&
-                            (i.willAdvance(a),
+                            (n.willAdvance(a),
                             (a = a.filter(function (e) {
                                 return (l = e.priority), e.idle || e.advance(t), !e.idle;
                             })),
@@ -79,30 +79,30 @@ var i = n(672722),
                                     return t(e);
                                 }),
                                 c.clear()),
-                            d.size &&
-                                ((n = !0),
-                                d.forEach(function (t) {
+                            f.size &&
+                                ((r = !0),
+                                f.forEach(function (t) {
                                     return t(e);
                                 }),
-                                d.clear(),
-                                (n = !1));
+                                f.clear(),
+                                (r = !1));
                     });
             }
         });
         (this.start = function (e) {
-            l > e.priority ? u.add(e) : (_(e), f());
+            l > e.priority ? u.add(e) : (p(e), h());
         }),
             (this.onFrame = function (e) {
-                c.add(e), f();
+                c.add(e), h();
             }),
             (this.onWrite = function (e) {
-                n ? e(s) : d.add(e);
+                r ? e(i) : f.add(e);
             });
     };
-class a extends s {
+class a extends i {
     constructor() {
         super(...arguments),
-            (this._requestAnimationFrame = (e) => r(e)),
+            (this._requestAnimationFrame = (e) => o(e)),
             (this._cancelAnimationFrame = (e) => cancelAnimationFrame(e)),
             (this.writing = !1),
             (this.id = 0),
@@ -136,24 +136,24 @@ class a extends s {
                     }
             }),
             (this.startLoop = () => {
-                this.lastTime > 0 || ((this.lastTime = i.now()), (this.id = this._requestAnimationFrame(this.loop)));
+                this.lastTime > 0 || ((this.lastTime = n.now()), (this.id = this._requestAnimationFrame(this.loop)));
             }),
             (this.advance = () => {
-                let e = i.now();
+                let e = n.now();
                 if (
                     (this.startQueue.size > 0 && (this.startQueue.forEach(this.addAnimation), this.startQueue.clear()),
                     this.timeoutQueue.length > 0 &&
-                        i.batchedUpdates(() => {
-                            let t = o(this.timeoutQueue, (t) => t.time > e);
+                        n.batchedUpdates(() => {
+                            let t = s(this.timeoutQueue, (t) => t.time > e);
                             this.timeoutQueue.splice(0, t).forEach((e) => e.handler());
                         }),
                     e > this.lastTime)
                 ) {
                     let t = Math.min(64, e - this.lastTime);
                     (this.lastTime = e),
-                        i.batchedUpdates(() => {
+                        n.batchedUpdates(() => {
                             this.animations.length > 0 &&
-                                (i.willAdvance(this.animations),
+                                (n.willAdvance(this.animations),
                                 (this.animations = this.animations.filter(
                                     (e) => ((this.priority = e.priority), e.idle || e.advance(t), !e.idle),
                                 )),
@@ -172,14 +172,14 @@ class a extends s {
                 this.priority > e.priority ? this.startQueue.add(e) : (this.addAnimation(e), this.startLoop());
             }),
             (this.setTimeout = (e, t) => {
-                let n = i.now() + t,
-                    r = () => {
-                        let e = this.timeoutQueue.findIndex((e) => e.cancel === r);
+                let r = n.now() + t,
+                    o = () => {
+                        let e = this.timeoutQueue.findIndex((e) => e.cancel === o);
                         e >= 0 && this.timeoutQueue.splice(e, 1);
                     },
-                    s = o(this.timeoutQueue, (e) => e.time > n),
-                    a = { time: n, handler: e, cancel: r };
-                return this.timeoutQueue.splice(s, 0, a), this.startLoop(), a;
+                    i = s(this.timeoutQueue, (e) => e.time > r),
+                    a = { time: r, handler: e, cancel: o };
+                return this.timeoutQueue.splice(i, 0, a), this.startLoop(), a;
             }),
             (this.onFrame = (e) => {
                 this.frameQueue.add(e), this.startLoop();
@@ -195,7 +195,7 @@ class a extends s {
             this.loop();
     }
 }
-function o(e, t) {
-    var n = e.findIndex(t);
-    return n < 0 ? e.length : n;
+function s(e, t) {
+    var r = e.findIndex(t);
+    return r < 0 ? e.length : r;
 }

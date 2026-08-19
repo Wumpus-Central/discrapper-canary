@@ -1,20 +1,20 @@
-r.d(t, { H: () => p });
+r.d(t, { H: () => v });
 var n = r(72867),
     i = r(225995),
     o = r(914707),
     a = r(321733),
-    s = r(582128);
-function u(e, t, r) {
+    u = r(582128);
+function c(e, t, r) {
     return (
         t in e ? Object.defineProperty(e, t, { value: r, enumerable: !0, configurable: !0, writable: !0 }) : (e[t] = r),
         e
     );
 }
-var c = (function () {
+var s = (function () {
     var e;
     function t(e, r) {
         if (!(this instanceof t)) throw TypeError("Cannot call a class as a function");
-        u(this, "spec", void 0), u(this, "monitor", void 0), (this.spec = e), (this.monitor = r);
+        c(this, "spec", void 0), c(this, "monitor", void 0), (this.spec = e), (this.monitor = r);
     }
     return (
         (e = [
@@ -60,72 +60,72 @@ function l(e, t) {
     for (var r = 0, n = Array(t); r < t; r++) n[r] = e[r];
     return n;
 }
-var f = r(25444),
-    d = r(682012),
-    h = r(207220),
-    g = r(619740);
-function p(e, t) {
+var d = r(25444),
+    f = r(682012),
+    g = r(207220),
+    h = r(619740);
+function v(e, t) {
     var r,
-        u,
+        c,
+        v,
         p,
         y,
-        v,
         b,
         m,
-        w,
+        D,
         I,
-        O = (0, f.I)(e, t),
+        S = (0, d.I)(e, t),
         k =
             ((r = (0, i.u)()),
-            (0, s.useMemo)(
+            (0, u.useMemo)(
                 function () {
-                    return new d.b(r);
+                    return new f.b(r);
                 },
                 [r],
             )),
-        D =
-            ((u = O.options),
-            (p = (0, i.u)()),
-            (y = (0, s.useMemo)(
+        O =
+            ((c = S.options),
+            (v = (0, i.u)()),
+            (p = (0, u.useMemo)(
                 function () {
-                    return new h.P(p.getBackend());
+                    return new g.P(v.getBackend());
                 },
-                [p],
+                [v],
             )),
             (0, o.E)(
                 function () {
                     return (
-                        (y.dropTargetOptions = u || null),
-                        y.reconnect(),
+                        (p.dropTargetOptions = c || null),
+                        p.reconnect(),
                         function () {
-                            return y.disconnectDropTarget();
+                            return p.disconnectDropTarget();
                         }
                     );
                 },
-                [u],
+                [c],
             ),
-            y);
+            p);
     return (
-        (v = (0, i.u)()),
-        (b = (0, s.useMemo)(
+        (y = (0, i.u)()),
+        (b = (0, u.useMemo)(
             function () {
-                return new c(O, k);
+                return new s(S, k);
             },
             [k],
         )),
-        (0, s.useEffect)(
+        (0, u.useEffect)(
             function () {
-                b.spec = O;
+                b.spec = S;
             },
-            [O],
+            [S],
         ),
         (m = b),
-        (w = O.accept),
-        (I = (0, s.useMemo)(
+        (D = S.accept),
+        (I = (0, u.useMemo)(
             function () {
-                return (0, a.V)(null != O.accept, "accept must be defined"), Array.isArray(w) ? w : [w];
+                return (0, a.V)(null != S.accept, "accept must be defined"), Array.isArray(D) ? D : [D];
             },
-            [w],
+            [D],
         )),
         (0, o.E)(
             function () {
@@ -133,7 +133,7 @@ function p(e, t) {
                     t =
                         (function (e) {
                             if (Array.isArray(e)) return e;
-                        })((e = (0, n.l)(I, m, v))) ||
+                        })((e = (0, n.l)(I, m, y))) ||
                         (function (e) {
                             var t,
                                 r,
@@ -180,25 +180,25 @@ function p(e, t) {
                         })(),
                     r = t[0],
                     i = t[1];
-                return k.receiveHandlerId(r), D.receiveHandlerId(r), i;
+                return k.receiveHandlerId(r), O.receiveHandlerId(r), i;
             },
             [
-                v,
+                y,
                 k,
                 m,
-                D,
+                O,
                 I.map(function (e) {
                     return e.toString();
                 }).join("|"),
             ],
         ),
         [
-            (0, g.j)(O.collect, k, D),
-            (0, s.useMemo)(
+            (0, h.j)(S.collect, k, O),
+            (0, u.useMemo)(
                 function () {
-                    return D.hooks.dropTarget();
+                    return O.hooks.dropTarget();
                 },
-                [D],
+                [O],
             ),
         ]
     );

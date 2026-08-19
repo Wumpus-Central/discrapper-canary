@@ -1,29 +1,29 @@
-let i = n(177335),
-    r = n(601861),
-    s = n(800670),
-    a = n(569671),
-    o = n(596641),
-    l = n(738018);
-e.exports = (e, t, n, u) => {
+let n = r(177335),
+    o = r(601861),
+    i = r(800670),
+    a = r(569671),
+    s = r(596641),
+    l = r(738018);
+e.exports = (e, t, r, u) => {
     switch (t) {
         case "===":
-            return "object" == typeof e && (e = e.version), "object" == typeof n && (n = n.version), e === n;
+            return "object" == typeof e && (e = e.version), "object" == typeof r && (r = r.version), e === r;
         case "!==":
-            return "object" == typeof e && (e = e.version), "object" == typeof n && (n = n.version), e !== n;
+            return "object" == typeof e && (e = e.version), "object" == typeof r && (r = r.version), e !== r;
         case "":
         case "=":
         case "==":
-            return i(e, n, u);
+            return n(e, r, u);
         case "!=":
-            return r(e, n, u);
+            return o(e, r, u);
         case ">":
-            return s(e, n, u);
+            return i(e, r, u);
         case ">=":
-            return a(e, n, u);
+            return a(e, r, u);
         case "<":
-            return o(e, n, u);
+            return s(e, r, u);
         case "<=":
-            return l(e, n, u);
+            return l(e, r, u);
         default:
             throw TypeError(`Invalid operator: ${t}`);
     }

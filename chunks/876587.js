@@ -3,8 +3,8 @@ var i = s(477900);
 s(582128);
 var n = s(554146),
     a = s(43105),
-    r = s(691540),
-    l = s(857250),
+    l = s(691540),
+    r = s(857250),
     c = s(97483),
     o = s(765178),
     d = s(131607),
@@ -34,7 +34,7 @@ function p(e) {
                           try {
                               await u.A.addSkuToWishlist(m.pe.TIER_2), h(g.i.TAKE_ACTION);
                           } catch {
-                              (0, r.P0)((0, l.o)(x.intl.string(x.t.F8FvUy), c.Ck.FAILURE)),
+                              (0, l.P0)((0, r.o)(x.intl.string(x.t.F8FvUy), c.Ck.FAILURE)),
                                   o.O.announce(x.intl.string(x.t.F8FvUy));
                           }
                       },

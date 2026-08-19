@@ -1,7 +1,7 @@
 i.d(t, { ON: () => o, P3: () => u, ij: () => d, zE: () => c });
 var s,
-    r,
-    n = i(428262),
+    n,
+    r = i(158045),
     a = i(202541);
 let l = new Set([a.k4, a.Dw, a.pX, a.Hp, a.fY, a.bi, a.J7, a.a7, a.Tt]);
 var o =
@@ -12,7 +12,7 @@ var o =
     s);
 function d(e, t) {
     if (null == e) return { isEligible: !1, reason: "no_subscription" };
-    let i = (0, n.EL)(e);
+    let i = (0, r.EL)(e);
     return null == i || a.hd[i.planId]?.premiumType !== a.PremiumTypes.TIER_2
         ? { isEligible: !1, reason: "not_tier_2_subscription" }
         : e.statusAllowsPerks || t === a.xc.FP_SUB_PAUSED
@@ -21,7 +21,7 @@ function d(e, t) {
               : { isEligible: !0, reason: null }
           : { isEligible: !1, reason: "subscription_status_not_allowed" };
 }
-var c = (((r = {}).CAN_CLAIM = "CAN_CLAIM"), (r.BLOCK_CLAIM = "BLOCKED"), (r.UPSELL = "UPSELL"), r);
+var c = (((n = {}).CAN_CLAIM = "CAN_CLAIM"), (n.BLOCK_CLAIM = "BLOCKED"), (n.UPSELL = "UPSELL"), n);
 function u(e) {
     switch (e) {
         case null:

@@ -1,4 +1,4 @@
-n.d(e, { Ay: () => I, C8: () => T });
+n.d(e, { Ay: () => T, C8: () => I });
 var s,
     i = n(477900);
 n(582128);
@@ -13,21 +13,21 @@ var o = n(503698),
     E = n(557637),
     x = n(652215),
     A = n(676989),
-    T = (((s = {})[(s.SMALL = 2)] = "SMALL"), (s[(s.MEDIUM = 8)] = "MEDIUM"), s);
-let I = function (t) {
+    I = (((s = {})[(s.SMALL = 2)] = "SMALL"), (s[(s.MEDIUM = 8)] = "MEDIUM"), s);
+let T = function (t) {
     let {
             className: e,
             logotypeClassName: n,
             gameTileSize: s = 24,
             quest: o,
-            separatorSpacing: T = 2,
-            theme: I = x.NJ8.DARK,
+            separatorSpacing: I = 2,
+            theme: T = x.NJ8.DARK,
             withCosponsor: f = !0,
             withGameTile: O = !0,
             logotypeStyle: _,
             onLoadComplete: L,
         } = t,
-        y = (0, u.M)(I) ? x.NJ8.DARK : x.NJ8.LIGHT,
+        y = (0, u.M)(T) ? x.NJ8.DARK : x.NJ8.LIGHT,
         N = (0, C.a5)(o.id, y),
         g = f && null != o.config.cosponsorMetadata && null != N;
     return (0, i.jsxs)("div", {
@@ -74,7 +74,7 @@ let I = function (t) {
                     children: [
                         (0, i.jsx)("div", {
                             className: A.ub,
-                            style: { margin: `0 ${T}px` },
+                            style: { margin: `0 ${I}px` },
                             children: (0, i.jsx)(c.a, { className: A.JB, color: l.A.colors.WHITE }),
                         }),
                         (0, i.jsx)(E._M, {

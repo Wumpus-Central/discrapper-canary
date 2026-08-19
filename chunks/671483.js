@@ -1,41 +1,41 @@
-t.d(n, { A: () => h });
+t.d(i, { A: () => p });
 var e = t(477900);
 t(582128);
 var l = t(17928),
     a = t(477782),
-    s = t(192308),
-    c = t(435183),
+    c = t(192308),
+    s = t(435183),
     r = t(532622),
     o = t(136523),
     d = t(345640),
     u = t(576705),
     A = t(882840),
     b = t(652215),
-    p = t(375708);
-function h(i, n) {
-    let h = (0, l.bG)([u.A], () => u.A.can(b.xBc.MANAGE_CHANNELS, n)),
-        C = (0, r.Ay)(i),
-        g = (0, d.b)(i),
-        y = (0, A.l)(i),
+    g = t(375708);
+function p(n, i) {
+    let p = (0, l.bG)([u.A], () => u.A.can(b.xBc.MANAGE_CHANNELS, i)),
+        h = (0, r.Ay)(n),
+        C = (0, d.b)(n),
+        y = (0, A.l)(n),
         j = null != y && y.length > 0;
-    return i.isGuildVoice() && (h || C)
-        ? !g && h && j
+    return n.isGuildVoice() && (p || h)
+        ? !C && p && j
             ? (0, e.jsx)(a.Dr, {
                   id: "clear-status",
-                  label: p.intl.string(p.t["22CYiZ"]),
+                  label: g.intl.string(g.t["22CYiZ"]),
                   action: () => {
-                      c.Ay.updateVoiceChannelStatus(i.id, "");
+                      s.Ay.updateVoiceChannelStatus(n.id, "");
                   },
               })
-            : g && C
+            : C && h
               ? (0, e.jsx)(a.Dr, {
                     id: "set-status",
-                    label: p.intl.string(p.t.RBd5PW),
+                    label: g.intl.string(g.t.RBd5PW),
                     action: () => {
-                        (0, s.openModalLazy)(
+                        (0, c.openModalLazy)(
                             async () => {
-                                let { default: n } = await Promise.resolve().then(t.bind(t, 136523));
-                                return (t) => (0, e.jsx)(n, { channel: i, ...t });
+                                let { default: i } = await Promise.resolve().then(t.bind(t, 136523));
+                                return (t) => (0, e.jsx)(i, { channel: n, ...t });
                             },
                             { modalKey: o.m },
                         );

@@ -1,10 +1,10 @@
 "use strict";
 function i(e) {
     let { getFocusableElements: t, getActiveElement: n, scrollToStart: i, scrollToEnd: r } = e;
-    function s() {
+    function a() {
         return t()[0] ?? null;
     }
-    function a() {
+    function s() {
         let e = t();
         return e[e.length - 1] ?? null;
     }
@@ -12,7 +12,7 @@ function i(e) {
         getNextFocusableElement: async function e(e) {
             let r = e?.from || n();
             if (null == r) return null;
-            let a =
+            let s =
                 t().find(
                     (e) =>
                         !!(
@@ -20,12 +20,12 @@ function i(e) {
                             (Node.DOCUMENT_POSITION_FOLLOWING | Node.DOCUMENT_POSITION_CONTAINED_BY)
                         ),
                 ) ?? null;
-            return null == a && e?.wrap ? (await i?.(), s()) : a;
+            return null == s && e?.wrap ? (await i?.(), a()) : s;
         },
         getPreviousFocusableElement: async function (e) {
             let i = e?.from || n();
             if (null == i) return null;
-            let s = (function (e) {
+            let a = (function (e) {
                 let n = t();
                 for (let t = n.length - 1; t >= 0; t--) {
                     let i = n[t];
@@ -37,10 +37,10 @@ function i(e) {
                 }
                 return null;
             })(i);
-            return null == s && e?.wrap ? (await r?.(), a()) : s;
+            return null == a && e?.wrap ? (await r?.(), s()) : a;
         },
-        getFirstFocusableElement: s,
-        getLastFocusableElement: a,
+        getFirstFocusableElement: a,
+        getLastFocusableElement: s,
     };
 }
 n.d(t, { C: () => i });

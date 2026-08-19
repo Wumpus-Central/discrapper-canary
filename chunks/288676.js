@@ -1,4 +1,4 @@
-_.exports = {
+e.exports = {
     Yi: "splash__15293",
     Gt: "gameIcon__15293",
     mO: "gameName__15293",

@@ -1,9 +1,9 @@
 "use strict";
-n.d(t, { A: () => o }), n(142703);
+n.d(t, { A: () => l }), n(142703);
 var i = n(439372),
     r = n(885386);
-let s = !1;
-class a extends i.A {
+let a = !1;
+class s extends i.A {
     actions = {
         POST_CONNECTION_OPEN: () => {
             this.setVerifyTimezone();
@@ -12,13 +12,13 @@ class a extends i.A {
         USER_SETTINGS_PROTO_UPDATE: this.ensureTimezoneUpdated,
     };
     setVerifyTimezone() {
-        s = !0;
+        a = !0;
     }
     ensureTimezoneUpdated() {
-        if (!s) return;
-        s = !1;
+        if (!a) return;
+        a = !1;
         let e = new Date().getTimezoneOffset();
         r.JI.getSetting() !== e && setImmediate(() => r.JI.updateSetting(e));
     }
 }
-let o = new a();
+let l = new s();

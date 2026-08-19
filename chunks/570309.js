@@ -1,12 +1,12 @@
 IntlMessageFormat.__addLocaleData({
     locale: "sv",
     pluralRuleFunction: function (e, t) {
-        var n = String(e).split("."),
-            i = !n[1],
-            r = Number(n[0]) == e,
-            s = r && n[0].slice(-1),
-            a = r && n[0].slice(-2);
-        return t ? ((1 == s || 2 == s) && 11 != a && 12 != a ? "one" : "other") : 1 == e && i ? "one" : "other";
+        var r = String(e).split("."),
+            n = !r[1],
+            o = Number(r[0]) == e,
+            i = o && r[0].slice(-1),
+            a = o && r[0].slice(-2);
+        return t ? ((1 == i || 2 == i) && 11 != a && 12 != a ? "one" : "other") : 1 == e && n ? "one" : "other";
     },
 }),
     IntlMessageFormat.__addLocaleData({ locale: "sv-AX", parentLocale: "sv" }),

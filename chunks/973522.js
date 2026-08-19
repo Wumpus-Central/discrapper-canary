@@ -1,15 +1,15 @@
 "use strict";
-n.d(t, { Ic: () => o, PQ: () => u, wH: () => l });
+n.d(t, { Ic: () => l, PQ: () => d, wH: () => o });
 var i = n(871633),
     r = n(760751),
-    s = n(723702);
-function a(e) {
+    a = n(723702);
+function s(e) {
     return (e = e.toLowerCase()).endsWith("/") && (e = e.slice(0, -1)), e;
 }
-function o(e) {
-    return a(e).split("/").slice(-2).join("/");
-}
 function l(e) {
+    return s(e).split("/").slice(-2).join("/");
+}
+function o(e) {
     if (null == e)
         return {
             gameName: void 0,
@@ -22,20 +22,20 @@ function l(e) {
         };
     let t = "exePath" in e ? e.exePath : e.exe,
         n = { id: e.id ?? void 0, name: e.name ?? void 0, exePath: t ?? "", cmdLine: t ?? "", lastFocused: 0 },
-        s = r.A.findGame(n);
+        a = r.A.findGame(n);
     return {
         gameName: e.name ?? void 0,
-        gameId: e.id ?? s?.id ?? void 0,
-        exe: null != t ? o(t) : void 0,
+        gameId: e.id ?? a?.id ?? void 0,
+        exe: null != t ? l(t) : void 0,
         distributor: e.distributor ?? void 0,
         sku: e.sku ?? void 0,
         gameMetadata: null != e ? (0, i.MT)(e) : void 0,
         rawExePath: t,
     };
 }
-function u(e, t) {
+function d(e, t) {
     if (null == e || null == t) return !1;
-    let n = a(e),
-        i = (0, s.getPlatformName)();
+    let n = s(e),
+        i = (0, a.getPlatformName)();
     return t.some((e) => e.os === i && n?.endsWith(e.name));
 }

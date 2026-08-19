@@ -1,5 +1,5 @@
 "use strict";
-var i = n(640847);
+var n = r(640847);
 e.exports = function () {
-    return i() && !!Symbol.toStringTag;
+    return n() && !!Symbol.toStringTag;
 };

@@ -1,8 +1,8 @@
 "use strict";
-n.d(t, { A: () => a }), n(667532), n(321073);
+n.d(t, { A: () => s }), n(667532), n(321073);
 let i = globalThis.__getTotalRequireTime ?? (() => 0),
     r = "u" > typeof performance;
-class s {
+class a {
     isTracing_ = !0;
     endTime_ = Date.now() + 15e3;
     lastImportDuration = 0;
@@ -66,20 +66,20 @@ class s {
         let i = this.prefix;
         this.mark(e, `Start ${t}`), (this.prefix += "| ");
         let r = Date.now(),
-            s = n(),
-            a = Date.now() - r;
-        return (this.prefix = i), this.mark(e, `Finish ${t}`, a), s;
+            a = n(),
+            s = Date.now() - r;
+        return (this.prefix = i), this.mark(e, `Finish ${t}`, s), a;
     }
     async timeAsync(e, t, n) {
         if (!this.isTracing) return n();
         this.mark(e, `Start ${t}`);
         let i = Date.now(),
             r = await n(),
-            s = Date.now() - i;
-        return this.mark(e, `Finish ${t}`, s), r;
+            a = Date.now() - i;
+        return this.mark(e, `Finish ${t}`, a), r;
     }
     setServerTrace(e) {
         this.logGroups[0].serverTrace = e;
     }
 }
-let a = new s();
+let s = new a();

@@ -36,13 +36,13 @@ let r = new (class {
             t.addEventListener("scroll", this.scrollListener, { once: !0 }));
     }
     scrollIntoView(e) {
-        let { scrollerRef: t, target: n, options: r, padding: s } = e;
+        let { scrollerRef: t, target: n, options: r, padding: a } = e;
         return new Promise((e) => {
             t.scrollIntoViewNode({
                 node: n,
                 animate: !!r.animate && !i.Ay.useReducedMotion,
                 shouldScrollToStart: "start" === r.block,
-                padding: s,
+                padding: a,
                 callback: () => {
                     requestAnimationFrame(() => e(!0));
                 },

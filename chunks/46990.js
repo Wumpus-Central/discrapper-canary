@@ -1,5 +1,5 @@
 "use strict";
-var i = n(949893);
+var n = r(949893);
 e.exports = function (e) {
-    return "bigint" == typeof e ? e : i(e);
+    return "bigint" == typeof e ? e : n(e);
 };

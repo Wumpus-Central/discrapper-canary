@@ -11,13 +11,13 @@ var i = n(477900),
     h = n(334463),
     p = n(175203),
     m = n(652215),
-    A = n(806931),
-    f = n(705379),
+    f = n(806931),
+    A = n(705379),
     x = n(997213);
 let g = "CameraPreviewPosition";
 function C(e) {
     let { width: t, onContextMenuParticipant: n, height: a, channel: C, participants: y, onSelectParticipant: j } = e,
-        [v, E] = (function () {
+        [I, v] = (function () {
             let [e, t] = l.useState(() => o.w.get(g, m.CUs.BOTTOM_RIGHT));
             return [
                 e,
@@ -27,51 +27,51 @@ function C(e) {
             ];
         })(),
         N = l.useRef(null),
-        I = null == C.getGuildId() ? 70 : 50,
-        T = (0, r.bG)([h.A], () => h.A.pipWidth(A.R8.CAMERA_PREVIEW)),
-        b = y.length,
-        _ = T * b + 8 * (b - 1),
+        E = null == C.getGuildId() ? 70 : 50,
+        b = (0, r.bG)([h.A], () => h.A.pipWidth(f.R8.CAMERA_PREVIEW)),
+        _ = y.length,
+        T = b * _ + 8 * (_ - 1),
         R = l.useMemo(
             () => ({
-                minWidth: A.mn[A.R8.CAMERA_PREVIEW] * b + 8 * (b - 1),
-                maxWidth: A.cF[A.R8.CAMERA_PREVIEW] * b + 8 * (b - 1),
+                minWidth: f.mn[f.R8.CAMERA_PREVIEW] * _ + 8 * (_ - 1),
+                maxWidth: f.cF[f.R8.CAMERA_PREVIEW] * _ + 8 * (_ - 1),
             }),
-            [b],
+            [_],
         );
     l.useLayoutEffect(() => {
         N.current?.ensureIsInPosition();
     }, [y.length]);
     let S = l.useCallback(
             (e) => {
-                let t = 0 === b ? e : (e - 8 * (b - 1)) / b;
-                c.EB(t, A.R8.CAMERA_PREVIEW);
+                let t = 0 === _ ? e : (e - 8 * (_ - 1)) / _;
+                c.EB(t, f.R8.CAMERA_PREVIEW);
             },
-            [b],
+            [_],
         ),
-        P = l.useCallback(
+        L = l.useCallback(
             (e, t) => {
-                E(t);
+                v(t);
             },
-            [E],
+            [v],
         );
     return (0, i.jsx)("div", {
-        className: f.kL,
+        className: A.kL,
         children: (0, i.jsx)(u.S, {
-            position: v,
+            position: I,
             id: 0,
-            width: _,
+            width: T,
             ref: N,
-            onMove: P,
+            onMove: L,
             onResize: S,
             maxX: t,
             maxY: a,
-            edgeOffsetTop: I,
+            edgeOffsetTop: E,
             edgeOffsetBottom: 70,
             edgeOffsetLeft: 16,
             edgeOffsetRight: 16,
             resizeConfig: R,
             children: (0, i.jsx)("div", {
-                className: f.iA,
+                className: A.iA,
                 children: y.map((e) =>
                     (0, i.jsx)(
                         p.Ay,
@@ -79,7 +79,7 @@ function C(e) {
                             participant: e,
                             channel: C,
                             onContextMenu: n,
-                            className: s()(f.Vs, x.a8),
+                            className: s()(A.Vs, x.a8),
                             fit: p.Yl.COVER,
                             inCall: !0,
                             popoutType: d.N.NO_POPOUT,

@@ -1,10 +1,10 @@
 "use strict";
-n.d(t, { i: () => l });
+n.d(t, { i: () => o });
 var i = n(852015),
     r = n(144367),
-    s = n(428420),
-    a = n(535384);
-class o extends a.G {
+    a = n(428420),
+    s = n(535384);
+class l extends s.G {
     constructor() {
         super("discord_protos.premium_marketing.v1.ThemeAwareAsset", [
             { no: 1, name: "light_url", kind: "scalar", T: 9 },
@@ -16,38 +16,38 @@ class o extends a.G {
     create(e) {
         let t = { lightUrl: "", darkUrl: "", lightStaticUrl: "", darkStaticUrl: "" };
         return (
-            globalThis.Object.defineProperty(t, s.$, { enumerable: !1, value: this }),
+            globalThis.Object.defineProperty(t, a.$, { enumerable: !1, value: this }),
             void 0 !== e && (0, r.x)(this, t, e),
             t
         );
     }
     internalBinaryRead(e, t, n, r) {
-        let s = r ?? this.create(),
-            a = e.pos + t;
-        for (; e.pos < a; ) {
+        let a = r ?? this.create(),
+            s = e.pos + t;
+        for (; e.pos < s; ) {
             let [t, r] = e.tag();
             switch (t) {
                 case 1:
-                    s.lightUrl = e.string();
+                    a.lightUrl = e.string();
                     break;
                 case 2:
-                    s.darkUrl = e.string();
+                    a.darkUrl = e.string();
                     break;
                 case 3:
-                    s.lightStaticUrl = e.string();
+                    a.lightStaticUrl = e.string();
                     break;
                 case 4:
-                    s.darkStaticUrl = e.string();
+                    a.darkStaticUrl = e.string();
                     break;
                 default:
-                    let a = n.readUnknownField;
-                    if ("throw" === a)
+                    let s = n.readUnknownField;
+                    if ("throw" === s)
                         throw new globalThis.Error(`Unknown field ${t} (wire type ${r}) for ${this.typeName}`);
-                    let o = e.skip(r);
-                    !1 !== a && (!0 === a ? i.f$.onRead : a)(this.typeName, s, t, r, o);
+                    let l = e.skip(r);
+                    !1 !== s && (!0 === s ? i.f$.onRead : s)(this.typeName, a, t, r, l);
             }
         }
-        return s;
+        return a;
     }
     internalBinaryWrite(e, t, n) {
         "" !== e.lightUrl && t.tag(1, i.O0.LengthDelimited).string(e.lightUrl),
@@ -58,4 +58,4 @@ class o extends a.G {
         return !1 !== r && (!0 == r ? i.f$.onWrite : r)(this.typeName, e, t), t;
     }
 }
-let l = new o();
+let o = new l();

@@ -1,5 +1,5 @@
-a.r(
-    (e.exports = {
+_.r(
+    (t.exports = {
         textButton: "textButton__7a01b",
         text: "text__7a01b",
         primary: "primary__7a01b",

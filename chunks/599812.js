@@ -62,7 +62,7 @@ function L(e) {
         min: t.min,
     };
 }
-class D {
+class y {
     cpuHistogram = new N.d();
     memoryHistogram = new N.d();
     discordMemoryHistogram = new N.d();
@@ -155,7 +155,7 @@ class D {
         }
     }
 }
-let y = new D();
+let D = new y();
 var v = n(652215);
 let b = new l.A("RunningGameHeartbeatManager"),
     M = 5 * f.A.Millis.MINUTE;
@@ -184,11 +184,11 @@ class U extends s.A {
         n.includes("tool-service") && ("running" === t.state ? g.enable() : g.reset());
     }
     _terminate() {
-        this.heartbeatInterval.stop(), g.disable(), y.disable(), this.disableWindowTracking();
+        this.heartbeatInterval.stop(), g.disable(), D.disable(), this.disableWindowTracking();
     }
     handleLogout() {
         g.disable(),
-            y.disable(),
+            D.disable(),
             this.disableWindowTracking(),
             this.gameSessions.clear(),
             this.heartbeatInterval.stop();
@@ -237,10 +237,10 @@ class U extends s.A {
     }
     scheduleHeartbeatTracking() {
         if ((this.processSessionChanges(), 0 === this.gameSessions.size)) {
-            this.heartbeatInterval.stop(), y.disable(), this.disableWindowTracking();
+            this.heartbeatInterval.stop(), D.disable(), this.disableWindowTracking();
             return;
         }
-        y.enable(),
+        D.enable(),
             this.enableWindowTracking(),
             this.heartbeatInterval.isStarted() || this.heartbeatInterval.start(M, this.logRunningGameHeartbeats);
     }
@@ -341,7 +341,7 @@ class U extends s.A {
             }
     }
     logRunningGameHeartbeats = () => {
-        let e = y.getSnapshot(),
+        let e = D.getSnapshot(),
             t = this.getWindowStateDurationsSnapshot();
         for (let n of this.gameSessions.values()) this.logHeartbeat(n, !1, !1, e, t);
     };

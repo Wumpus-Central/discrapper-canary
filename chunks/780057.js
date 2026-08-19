@@ -1,25 +1,25 @@
 "use strict";
-n.d(t, { A: () => l });
+n.d(t, { A: () => o });
 var i = n(17928),
     r = n(228366);
-let s = !1;
-function a() {
-    s = !1;
+let a = !1;
+function s() {
+    a = !1;
 }
-class o extends i.Ay.Store {
+class l extends i.Ay.Store {
     static displayName = "ThreadSummaryStore";
     summaryInProgress = !1;
     initialize() {
-        s = !1;
+        a = !1;
     }
     isInProgress() {
-        return s;
+        return a;
     }
 }
-let l = new o(r.h, {
+let o = new l(r.h, {
     SUMMARIZE_THREAD_START: function () {
-        s = !0;
+        a = !0;
     },
-    SUMMARIZE_THREAD_SUCCESS: a,
-    SUMMARIZE_THREAD_FAILURE: a,
+    SUMMARIZE_THREAD_SUCCESS: s,
+    SUMMARIZE_THREAD_FAILURE: s,
 });

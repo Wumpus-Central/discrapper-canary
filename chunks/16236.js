@@ -35,11 +35,11 @@ var i = n(435558),
     S = n(635233),
     N = n(771959),
     C = n(928424),
-    R = n(691540),
-    O = n(857250),
+    O = n(691540),
+    R = n(857250),
     L = n(97483),
-    D = n(375708),
-    y = n(349828),
+    y = n(375708),
+    D = n(349828),
     v = n(652215),
     b = n(818348);
 function M(e) {
@@ -76,15 +76,15 @@ function P(e) {
 }
 function U(e, t) {
     let n = e[t];
-    if (null == n || n.parentId === y.O8) return;
+    if (null == n || n.parentId === D.O8) return;
     let i = null != n.parentId ? e[n.parentId] : null;
-    (null == i || i.type !== a.Ip.CATEGORY) && (n.parentId = y.O8);
+    (null == i || i.type !== a.Ip.CATEGORY) && (n.parentId = D.O8);
 }
 function w(e) {
     return r().filter(e, (e) => e.type !== a.Ip.CATEGORY).length;
 }
 function G(e, t) {
-    if ((P(e), r().size(e) >= y.lj)) return { limit: y.lj, canUpsell: !1 };
+    if ((P(e), r().size(e) >= D.lj)) return { limit: D.lj, canUpsell: !1 };
     let { favoriteLimit: n, canUpsellFavoriteLimit: i } = (0, m.ad)();
     return n <= 0 || t === a.Ip.CATEGORY || w(e) < n ? null : { limit: n, canUpsell: i };
 }
@@ -92,12 +92,12 @@ function x(e) {
     let { limit: t, canUpsell: n } = e;
     n
         ? (0, C.A)(t)
-        : l.A.show({ title: D.intl.string(D.t["+XYXtZ"]), body: D.intl.formatToPlainString(D.t.JaIyFi, { count: t }) });
+        : l.A.show({ title: y.intl.string(y.t["+XYXtZ"]), body: y.intl.formatToPlainString(y.t.JaIyFi, { count: t }) });
 }
 function k(e) {
     e?.status === 403 &&
         (u.wc.loadIfNecessary(!0).catch(v.tEg),
-        l.A.show({ title: D.intl.string(D.t.iufib1), body: D.intl.string(D.t.eAn6z2) }));
+        l.A.show({ title: y.intl.string(y.t.iufib1), body: y.intl.string(y.t.eAn6z2) }));
 }
 function F(e) {
     let { update: t, batched: n = !1 } = e;
@@ -105,7 +105,7 @@ function F(e) {
 }
 function V(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : f.default.fromTimestamp(Date.now());
-    return (e[n] = a.wL.create({ nickname: t, type: a.Ip.CATEGORY, position: M(e), parentId: y.O8 })), n;
+    return (e[n] = a.wL.create({ nickname: t, type: a.Ip.CATEGORY, position: M(e), parentId: D.O8 })), n;
 }
 async function B(e, t, n) {
     let i = e.filter((e) => !p.A.isFavorite(e));
@@ -114,7 +114,7 @@ async function B(e, t, n) {
     await F({
         update: (e) => {
             let l = !1,
-                o = ("parentId" in t ? t.parentId : null) ?? y.O8;
+                o = ("parentId" in t ? t.parentId : null) ?? D.O8;
             for (let r of i) {
                 let i = G(e.favoriteChannels, a.Ip.REFERENCE_ORIGINAL);
                 if (null != i) {
@@ -149,7 +149,7 @@ async function B(e, t, n) {
             l && r && ((e.guildVisible = s._t.create({ value: !0 })), (0, S.uS)("auto", !0));
         },
     }),
-        i.some((e) => p.A.isFavorite(e)) && (0, R.P0)((0, O.o)(D.intl.string(D.t["4tSWQg"]), L.Ck.FAVORITE));
+        i.some((e) => p.A.isFavorite(e)) && (0, O.P0)((0, R.o)(y.intl.string(y.t["4tSWQg"]), L.Ck.FAVORITE));
 }
 async function H(e) {
     let { channelIds: t, parentId: n, source: i } = e;
@@ -165,7 +165,7 @@ function j(e) {
             update: (t) => {
                 if ((delete t.favoriteChannels[e], r.type === a.Ip.CATEGORY))
                     for (let n in t.favoriteChannels)
-                        t.favoriteChannels[n].parentId === e && (t.favoriteChannels[n].parentId = y.O8);
+                        t.favoriteChannels[n].parentId === e && (t.favoriteChannels[n].parentId = D.O8);
                 P(t.favoriteChannels),
                     i &&
                         (0, S.TX)(
@@ -230,7 +230,7 @@ function Z(e) {
                     let e = n.id;
                     null != n.position && (t.favoriteChannels[e].position = n.position),
                         void 0 !== n.parent_id &&
-                            ((t.favoriteChannels[e].parentId = n.parent_id ?? y.O8), U(t.favoriteChannels, e));
+                            ((t.favoriteChannels[e].parentId = n.parent_id ?? D.O8), U(t.favoriteChannels, e));
                 }
                 (0, S.P)();
             },
@@ -239,7 +239,7 @@ function Z(e) {
 function q(e, t) {
     F({
         update: (n) => {
-            (n.favoriteChannels[e].parentId = t ?? y.O8), U(n.favoriteChannels, e), (0, S.P)();
+            (n.favoriteChannels[e].parentId = t ?? D.O8), U(n.favoriteChannels, e), (0, S.P)();
         },
     });
 }

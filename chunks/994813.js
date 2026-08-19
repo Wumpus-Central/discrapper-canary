@@ -1,4 +1,4 @@
-e.exports = {
+d.exports = {
     gP: "statsOverlay__1219f",
     wx: "header__1219f",
     Pz: "headerButtons__1219f",

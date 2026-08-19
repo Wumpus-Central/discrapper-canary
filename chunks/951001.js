@@ -2,16 +2,16 @@
 n.d(t, { A: () => r });
 var i = n(228366);
 let r = {
-    updateChannelDimensions(e, t, n, r, s, a) {
+    updateChannelDimensions(e, t, n, r, a, s) {
         i.h.dispatch({
             type: "UPDATE_CHANNEL_DIMENSIONS",
             channelId: e,
             timestamp: t,
             scrollTop: n,
             scrollHeight: r,
-            offsetHeight: s,
+            offsetHeight: a,
         }),
-            a?.();
+            s?.();
     },
     updateChannelListScroll(e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];

@@ -2,8 +2,8 @@ a.d(t, { ShopAssetsPreviewInstructionModal: () => u, ShopPFXPreviewInstructionMo
 var n = a(477900);
 a(582128);
 var l = a(189213),
-    i = a(834730),
-    s = a(297264),
+    s = a(834730),
+    i = a(297264),
     r = a(25176),
     o = a(731538);
 let d = "shop-assets-preview-instructions-modal",
@@ -18,46 +18,46 @@ function u(e) {
         children: (0, n.jsxs)("div", {
             className: o.jE,
             children: [
-                (0, n.jsx)(i.E, {
+                (0, n.jsx)(s.E, {
                     variant: "text-md/bold",
                     children: "This tool allows you to upload and preview assets in the app.",
                 }),
-                (0, n.jsx)(i.E, {
+                (0, n.jsx)(s.E, {
                     variant: "text-md/normal",
                     children: 'Toggle "Enable Preview" to switch between viewing the live and preview assets.',
                 }),
-                (0, n.jsxs)(i.E, {
+                (0, n.jsxs)(s.E, {
                     variant: "text-md/normal",
                     children: [
                         "Easiest option: drop the whole drop package. This is a folder containing the named subfolders for each asset grouping (",
-                        (0, n.jsx)(i.E, { tag: "span", variant: "text-md/bold", children: "collection" }),
+                        (0, n.jsx)(s.E, { tag: "span", variant: "text-md/bold", children: "collection" }),
                         ",",
                         " ",
-                        (0, n.jsx)(i.E, { tag: "span", variant: "text-md/bold", children: "avatar_decorations" }),
+                        (0, n.jsx)(s.E, { tag: "span", variant: "text-md/bold", children: "avatar_decorations" }),
                         ",",
                         " ",
-                        (0, n.jsx)(i.E, { tag: "span", variant: "text-md/bold", children: "frames" }),
+                        (0, n.jsx)(s.E, { tag: "span", variant: "text-md/bold", children: "frames" }),
                         ").",
                     ],
                 }),
-                (0, n.jsx)(i.E, {
+                (0, n.jsx)(s.E, {
                     variant: "text-md/normal",
                     children: "You can also drop just the subfolders you want to preview.",
                 }),
-                (0, n.jsx)(i.E, {
+                (0, n.jsx)(s.E, {
                     variant: "text-md/normal",
                     children: "These are only visible to you. Reloading the app will reset the uploads.",
                 }),
                 (0, n.jsxs)("div", {
                     className: o.CT,
                     children: [
-                        (0, n.jsx)(s.D, { variant: "heading-lg/bold", children: "Avatar Decorations" }),
-                        (0, n.jsxs)(i.E, {
+                        (0, n.jsx)(i.D, { variant: "heading-lg/bold", children: "Avatar Decorations" }),
+                        (0, n.jsxs)(s.E, {
                             variant: "text-md/normal",
                             children: [
                                 "Drop an",
                                 " ",
-                                (0, n.jsx)(i.E, {
+                                (0, n.jsx)(s.E, {
                                     tag: "span",
                                     variant: "text-md/bold",
                                     children: "avatar_decorations",
@@ -66,12 +66,12 @@ function u(e) {
                                 "folder containing the PNG files for each Avatar Decoration.",
                             ],
                         }),
-                        (0, n.jsxs)(i.E, {
+                        (0, n.jsxs)(s.E, {
                             variant: "text-md/normal",
                             children: [
                                 "Then, select from in the",
                                 " ",
-                                (0, n.jsx)(i.E, {
+                                (0, n.jsx)(s.E, {
                                     tag: "span",
                                     variant: "text-md/bold",
                                     children: "Avatar Decoration",
@@ -85,40 +85,40 @@ function u(e) {
                 (0, n.jsxs)("div", {
                     className: o.CT,
                     children: [
-                        (0, n.jsx)(s.D, { variant: "heading-lg/bold", children: "Profile Frames" }),
-                        (0, n.jsxs)(i.E, {
+                        (0, n.jsx)(i.D, { variant: "heading-lg/bold", children: "Profile Frames" }),
+                        (0, n.jsxs)(s.E, {
                             variant: "text-md/normal",
                             children: [
                                 "Drop a",
                                 " ",
-                                (0, n.jsx)(i.E, { tag: "span", variant: "text-md/bold", children: "frames" }),
+                                (0, n.jsx)(s.E, { tag: "span", variant: "text-md/bold", children: "frames" }),
                                 " ",
                                 "folder which contains subfolders for each Profile Frame.",
                             ],
                         }),
-                        (0, n.jsxs)(i.E, {
+                        (0, n.jsxs)(s.E, {
                             variant: "text-md/normal",
                             children: [
                                 "Each Profile Frame subfolder should contain these folders:",
                                 " ",
-                                (0, n.jsx)(i.E, { tag: "span", variant: "text-md/bold", children: "foreground" }),
+                                (0, n.jsx)(s.E, { tag: "span", variant: "text-md/bold", children: "foreground" }),
                                 " ",
                                 "and",
                                 " ",
-                                (0, n.jsx)(i.E, { tag: "span", variant: "text-md/bold", children: "background" }),
+                                (0, n.jsx)(s.E, { tag: "span", variant: "text-md/bold", children: "background" }),
                                 ".",
                             ],
                         }),
-                        (0, n.jsx)(i.E, {
+                        (0, n.jsx)(s.E, {
                             variant: "text-md/normal",
                             children: "Each of those folders should contain the actual layer image files.",
                         }),
-                        (0, n.jsxs)(i.E, {
+                        (0, n.jsxs)(s.E, {
                             variant: "text-md/normal",
                             children: [
                                 "Then, select from the",
                                 " ",
-                                (0, n.jsx)(i.E, { tag: "span", variant: "text-md/bold", children: "Profile Frame" }),
+                                (0, n.jsx)(s.E, { tag: "span", variant: "text-md/bold", children: "Profile Frame" }),
                                 " ",
                                 "dropdown to preview everywhere that already has a Profile Frame.",
                             ],
@@ -128,22 +128,22 @@ function u(e) {
                 (0, n.jsxs)("div", {
                     className: o.CT,
                     children: [
-                        (0, n.jsx)(s.D, { variant: "heading-lg/bold", children: "Profile Effects" }),
-                        (0, n.jsx)(i.E, {
+                        (0, n.jsx)(i.D, { variant: "heading-lg/bold", children: "Profile Effects" }),
+                        (0, n.jsx)(s.E, {
                             variant: "text-md/normal",
                             children: "First draft your Profile Effect in the Profile Effect Editor tool, found here:",
                         }),
-                        (0, n.jsx)(i.E, {
+                        (0, n.jsx)(s.E, {
                             className: o.Ou,
                             variant: "text-md/bold",
                             children: "DevTools > Collectibles Preview > Profile Effects",
                         }),
-                        (0, n.jsxs)(i.E, {
+                        (0, n.jsxs)(s.E, {
                             variant: "text-md/normal",
                             children: [
                                 "Then, in this devtools",
                                 " ",
-                                (0, n.jsx)(i.E, { tag: "span", variant: "text-md/bold", children: "Profile Effect" }),
+                                (0, n.jsx)(s.E, { tag: "span", variant: "text-md/bold", children: "Profile Effect" }),
                                 " ",
                                 "dropdown, select from your drafts to preview everywhere that already has a Profile Effect.",
                             ],
@@ -153,12 +153,12 @@ function u(e) {
                 (0, n.jsxs)("div", {
                     className: o.CT,
                     children: [
-                        (0, n.jsx)(s.D, { variant: "heading-lg/bold", children: "Nameplates" }),
-                        (0, n.jsx)(i.E, {
+                        (0, n.jsx)(i.D, { variant: "heading-lg/bold", children: "Nameplates" }),
+                        (0, n.jsx)(s.E, {
                             variant: "text-md/normal",
                             children: "Nameplate previews live elsewhere! Find the tool at:",
                         }),
-                        (0, n.jsx)(i.E, {
+                        (0, n.jsx)(s.E, {
                             className: o.Ou,
                             variant: "text-md/bold",
                             children: "DevTools > Collectibles Preview > Nameplates",
@@ -168,18 +168,18 @@ function u(e) {
                 (0, n.jsxs)("div", {
                     className: o.CT,
                     children: [
-                        (0, n.jsx)(s.D, { variant: "heading-lg/bold", children: "Collection Assets" }),
-                        (0, n.jsxs)(i.E, {
+                        (0, n.jsx)(i.D, { variant: "heading-lg/bold", children: "Collection Assets" }),
+                        (0, n.jsxs)(s.E, {
                             variant: "text-md/normal",
                             children: [
                                 "Put these in a",
                                 " ",
-                                (0, n.jsx)(i.E, { tag: "span", variant: "text-md/bold", children: "collection" }),
+                                (0, n.jsx)(s.E, { tag: "span", variant: "text-md/bold", children: "collection" }),
                                 " ",
                                 "folder, or drop the files directly. The tool will recognize them by filename.",
                             ],
                         }),
-                        (0, n.jsx)(s.D, {
+                        (0, n.jsx)(i.D, {
                             className: o.J2,
                             variant: "heading-md/bold",
                             children: "Valid Upload Types",
@@ -191,7 +191,7 @@ function u(e) {
                                 (0, n.jsx)("li", { children: "A folder containing image or video files" }),
                             ],
                         }),
-                        (0, n.jsx)(s.D, { className: o.J2, variant: "heading-md/bold", children: "Valid File Names" }),
+                        (0, n.jsx)(i.D, { className: o.J2, variant: "heading-md/bold", children: "Valid File Names" }),
                         (0, n.jsx)("ul", {
                             className: o.SS,
                             children: Array.from(r.Li).map((e) => (0, n.jsx)("li", { children: e }, e)),
@@ -212,20 +212,20 @@ function m(e) {
         children: (0, n.jsxs)("div", {
             className: o.jE,
             children: [
-                (0, n.jsx)(i.E, {
+                (0, n.jsx)(s.E, {
                     variant: "text-md/normal",
                     children: "1. Draft your PFX in the PFX Editor (in User Settings)",
                 }),
-                (0, n.jsx)(i.E, {
+                (0, n.jsx)(s.E, {
                     variant: "text-md/normal",
                     children: "2. In this devtools dropdown, select one of your PFX drafts",
                 }),
-                (0, n.jsx)(i.E, {
+                (0, n.jsx)(s.E, {
                     variant: "text-md/normal",
                     children:
                         "The selected PFX should now be visible everywhere that already has a PFX, such as Shop cards, Shop PDPs, and user profiles (with PFX applied).",
                 }),
-                (0, n.jsx)(i.E, {
+                (0, n.jsx)(s.E, {
                     variant: "text-md/normal",
                     children: 'Toggle "Enable Preview" to switch between viewing the live and preview PFX.',
                 }),

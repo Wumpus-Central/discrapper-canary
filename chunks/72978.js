@@ -1,23 +1,23 @@
 "use strict";
 Object.defineProperty(t, "__esModule", { value: !0 }),
     (t.stringSimilarity = void 0),
-    (t.stringSimilarity = function (e, t, n, i) {
+    (t.stringSimilarity = function (e, t, r, n) {
         if (
-            (void 0 === n && (n = 2),
-            void 0 === i && (i = !1),
-            i || ((e = e.toLowerCase()), (t = t.toLowerCase())),
-            e.length < n || t.length < n)
+            (void 0 === r && (r = 2),
+            void 0 === n && (n = !1),
+            n || ((e = e.toLowerCase()), (t = t.toLowerCase())),
+            e.length < r || t.length < r)
         )
             return 0;
-        for (var r = new Map(), s = 0; s < e.length - (n - 1); s++) {
-            var a = e.substr(s, n);
-            r.set(a, r.has(a) ? r.get(a) + 1 : 1);
+        for (var o = new Map(), i = 0; i < e.length - (r - 1); i++) {
+            var a = e.substr(i, r);
+            o.set(a, o.has(a) ? o.get(a) + 1 : 1);
         }
-        for (var o = 0, l = 0; l < t.length - (n - 1); l++) {
-            var u = t.substr(l, n),
-                c = r.has(u) ? r.get(u) : 0;
-            c > 0 && (r.set(u, c - 1), o++);
+        for (var s = 0, l = 0; l < t.length - (r - 1); l++) {
+            var u = t.substr(l, r),
+                c = o.has(u) ? o.get(u) : 0;
+            c > 0 && (o.set(u, c - 1), s++);
         }
-        return (2 * o) / (e.length + t.length - (n - 1) * 2);
+        return (2 * s) / (e.length + t.length - (r - 1) * 2);
     }),
     (t.default = t.stringSimilarity);

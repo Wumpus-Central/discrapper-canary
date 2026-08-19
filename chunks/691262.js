@@ -1,12 +1,12 @@
 "use strict";
 t.extend = function (e) {
     var t,
+        n,
+        o,
         i,
-        r,
-        s,
         a = Array.prototype.slice.call(arguments, 1);
-    for (t = 0, i = a.length; t < i; t += 1) if ((r = a[t])) for (s in r) n.call(r, s) && (e[s] = r[s]);
+    for (t = 0, n = a.length; t < n; t += 1) if ((o = a[t])) for (i in o) r.call(o, i) && (e[i] = o[i]);
     return e;
 };
-var n = Object.prototype.hasOwnProperty;
-t.hop = n;
+var r = Object.prototype.hasOwnProperty;
+t.hop = r;

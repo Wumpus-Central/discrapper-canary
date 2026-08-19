@@ -34,23 +34,23 @@ var o = n(118517),
     x = n(935208),
     f = n(965407),
     E = n(439147),
-    _ = n(249700),
+    I = n(249700),
     C = n(145530),
-    I = n(652215);
+    _ = n(652215);
 function v(e) {
     let t = e.getGuildId();
-    null != t && r.A.open(t, I.BEX.ENGAGEMENT);
+    null != t && r.A.open(t, _.BEX.ENGAGEMENT);
 }
 function N(e, t, n) {
     (0, p.C)(n.shiftKey ? `${t.channel_id}-${t.id}` : t.id);
 }
 function j(e, t) {
-    h.default.track(I.HAw.MESSAGE_LINK_COPIED, { message_id: t.id, channel: t.channel_id }),
+    h.default.track(_.HAw.MESSAGE_LINK_COPIED, { message_id: t.id, channel: t.channel_id }),
         (0, p.C)((0, g.n)(e.guild_id, e.id, t.id));
 }
 function T(e, t, n) {
-    t.state === I.cmJ.SEND_FAILED || n.shiftKey
-        ? l.A.deleteMessage(e.id, t.id, t.state === I.cmJ.SEND_FAILED)
+    t.state === _.cmJ.SEND_FAILED || n.shiftKey
+        ? l.A.deleteMessage(e.id, t.id, t.state === _.cmJ.SEND_FAILED)
         : C.A.confirmDelete(e, t);
 }
 function S(e, t) {
@@ -72,13 +72,13 @@ function R(e, t) {
     (0, s.A)(e.id, t.id);
 }
 function L(e, t) {
-    (0, _.A)(e, t, void 0, f.A.getOptions(t.id));
+    (0, I.A)(e, t, void 0, f.A.getOptions(t.id));
 }
 function M(e, t, n) {
     let i = e.isPrivate(),
         l = t.author.id === u.default.getId();
     (0, o.Yf)({ channel: e, message: t, shouldMention: !n.shiftKey && !l, showMentionToggle: !i && !l }),
-        A._.dispatch(I.jej.FOCUS_CHANNEL_TEXT_AREA, { channelId: e.id });
+        A._.dispatch(_.jej.FOCUS_CHANNEL_TEXT_AREA, { channelId: e.id });
 }
 function k(e, t) {
     (0, d.Tv)(e, t, "Message");

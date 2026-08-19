@@ -1,8 +1,8 @@
 "use strict";
-n.d(t, { $8: () => o, ON: () => s, QJ: () => a, Vx: () => l, tn: () => c });
+n.d(t, { $8: () => l, ON: () => a, QJ: () => s, Vx: () => o, tn: () => c });
 var i,
     r,
-    s =
+    a =
         (((i = {}).NativeOOP = "native_oop"),
         (i.NativeLegacy = "native_legacy"),
         (i.OOPModule = "oop_module"),
@@ -10,18 +10,18 @@ var i,
         (i.Flux = "flux"),
         (i.Renderer = "renderer"),
         i),
-    a = (((r = {}).Info = "info"), (r.Error = "error"), (r.Warning = "warn"), r);
-function o(e, t) {
+    s = (((r = {}).Info = "info"), (r.Error = "error"), (r.Warning = "warn"), r);
+function l(e, t) {
     return e.name === t;
 }
-function l(e) {
+function o(e) {
     return !("nativeId" in e) && !("pid" in e);
 }
-function u(e) {
+function d(e) {
     return { timestamp: e.timestamp, name: e.name, data: e.data, type: e.type, pid: e.pid };
 }
 function c(e, t) {
-    let n = e.map(u),
+    let n = e.map(d),
         i = null != t ? n.filter(t) : n,
         r = {};
     for (let e of i) {

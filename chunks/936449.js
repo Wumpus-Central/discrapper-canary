@@ -121,12 +121,12 @@ function C(e, t) {
         isUpdate: n,
     };
 }
-function R(e) {
+function O(e) {
     return null != e ? N(_.Ay.getGuildIconURL({ id: e.id, icon: e.icon, size: 128 })) : void 0;
 }
-function O(e) {
+function R(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-        n = R(e),
+        n = O(e),
         i = m.BVt.CHANNEL(e.id),
         r = [
             {
@@ -214,7 +214,7 @@ function D(e) {
                 s = i[n];
             if (null != s) s.push(a);
             else {
-                let r = R(e),
+                let r = O(e),
                     s = [a];
                 t.push({ id: n, items: s, defaultThumbnailURL: r }), (i[n] = s);
             }
@@ -246,7 +246,7 @@ class v extends i.A {
             g() &&
                 (function () {
                     if (!g()) return;
-                    let e = l.A.getGuildsArray().map((e) => O(e)),
+                    let e = l.A.getGuildsArray().map((e) => R(e)),
                         t = [],
                         n = s.A.getMutablePrivateChannels();
                     for (let e in n) {
@@ -268,7 +268,7 @@ class v extends i.A {
         if (!g() || !o.A.can(m.xBc.VIEW_CHANNEL, t)) return;
         let n = l.A.getGuild(t.guild_id);
         if (null == n && null != t.guild_id) return;
-        let i = R(n);
+        let i = O(n);
         p.indexDomains([{ id: n?.id ?? m.ME, items: [C(t, n)], defaultThumbnailURL: i }]);
     }
     handleChannelDelete(e) {
@@ -283,7 +283,7 @@ class v extends i.A {
         let { guild: t, type: n } = e;
         if (g()) {
             let e = l.A.getGuild(t.id);
-            null != e ? p.indexDomains([O(e, "GUILD_UPDATE" === n)]) : p.deleteSearchDomains([t.id]);
+            null != e ? p.indexDomains([R(e, "GUILD_UPDATE" === n)]) : p.deleteSearchDomains([t.id]);
         }
     }
     handleGuildDelete(e) {

@@ -1,5 +1,5 @@
 "use strict";
-n.r(t), n.d(t, { default: () => r, metadata: () => i });
-let i = { fileBytes: 260723 },
-    r =
-        "https://cdn.discordapp.com/assets/content/3ff454933f81e14f619472a4fba921158608afc495e452205b1317b46f76d19b.png";
+n.r(t), n.d(t, { default: () => i, metadata: () => l });
+let l = { fileBytes: 260723 },
+    i =
+        "https://cdn.discordapp.com/assets/content/050dcea8f727152a7eb98afdced8d85c1ccdfe9bcb81eb7a14989f2e452e4ad8.png";

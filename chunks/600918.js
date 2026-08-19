@@ -1,14 +1,14 @@
 "use strict";
-n.d(t, { CH: () => a, H5: () => i, NQ: () => o });
-var r = n(582128),
-    i = function (e) {
-        return (0, r.useEffect)(e, []);
+r.d(t, { CH: () => i, H5: () => o, NQ: () => a });
+var n = r(582128),
+    o = function (e) {
+        return (0, n.useEffect)(e, []);
     },
-    a = function () {
-        var e = (0, r.useState)(0)[1],
-            t = (0, r.useRef)(!1);
+    i = function () {
+        var e = (0, n.useState)(0)[1],
+            t = (0, n.useRef)(!1);
         return (
-            i(function () {
+            o(function () {
                 return function () {
                     t.current = !0;
                 };
@@ -18,10 +18,10 @@ var r = n(582128),
             }
         );
     };
-function o(e) {
-    var t = (0, r.useRef)(void 0);
+function a(e) {
+    var t = (0, n.useRef)(void 0);
     return (
-        (0, r.useEffect)(function () {
+        (0, n.useEffect)(function () {
             t.current = e;
         }),
         t.current

@@ -6,32 +6,32 @@ var i = n(477900),
     r = n(775602),
     o = n(355622),
     c = n(408018),
-    d = n(138617),
+    d = n(273754),
     u = n(7584),
     h = n(446243),
     p = n(538638),
     m = n(662731),
-    A = n(375708),
-    f = n(696034);
+    f = n(375708),
+    A = n(696034);
 function x(e) {
     let { channel: t, position: n, setEditorRef: x } = e,
         g = (0, a.bG)([r.Ay], () => r.Ay.keyboardModeEnabled),
         [C, y] = (0, l.useState)(""),
         [j, I] = (0, l.useState)(""),
-        [v, E] = (0, l.useState)((0, c.x7)("")),
-        [N, b] = (0, l.useState)(g),
-        T = (0, l.useRef)(!1);
+        [v, N] = (0, l.useState)((0, c.x7)("")),
+        [E, b] = (0, l.useState)(g),
+        _ = (0, l.useRef)(!1);
     return (0, i.jsx)(s.l, {
-        className: f.kL,
+        className: A.kL,
         children: (0, i.jsx)(d.Ay, {
-            className: f.Kf,
-            innerClassName: f.Kf,
+            className: A.Kf,
+            innerClassName: A.Kf,
             maxCharacterCount: 512,
             showRemainingCharsAfterCount: 10,
             onChange: function (e, t, n) {
-                I(t), E(n), y(u.Ay.translateInlineEmojiToSurrogates(t));
+                I(t), N(n), y(u.Ay.translateInlineEmojiToSurrogates(t));
             },
-            placeholder: A.intl.string(m.default.IAcEEn),
+            placeholder: f.intl.string(m.default.IAcEEn),
             channel: t,
             textValue: j,
             richValue: v,
@@ -42,14 +42,14 @@ function x(e) {
             onBlur: () => {
                 b(!1);
             },
-            focused: N,
+            focused: E,
             onSubmit: function () {
                 let e = t.guild_id;
                 return 0 === C.trim().length || null == e
                     ? Promise.resolve({ shouldClear: !1, shouldRefocus: !0 })
-                    : T.current
+                    : _.current
                       ? Promise.resolve({ shouldClear: !1, shouldRefocus: !1 })
-                      : ((T.current = !0),
+                      : ((_.current = !0),
                         (0, h.zK)(e, t.id, C, n).catch((e) => (0, p.b)()),
                         Promise.resolve({ shouldClear: !0, shouldRefocus: !1 }));
             },

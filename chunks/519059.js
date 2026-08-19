@@ -1,63 +1,63 @@
 "use strict";
-n.d(t, { HF: () => h, f8: () => f, c: () => _ });
+n.d(t, { HF: () => E, f8: () => A, c: () => _ });
 var i = n(945810),
     r = n(17928),
-    s = n(228366);
-let a = {
+    a = n(228366);
+let s = {
         hide_icymi_tab: { description: "Hide ICYMI tab" },
         go_back_to_regular_input: { description: "Go back to regular input" },
     },
-    o = {};
-class l extends r.Ay.DeviceSettingsStore {
+    l = {};
+class o extends r.Ay.DeviceSettingsStore {
     static displayName = "LabFeatureStore";
     static persistKey = "LabFeatureStore";
     getUserAgnosticState() {
-        return { toggleStates: o };
+        return { toggleStates: l };
     }
     initialize(e) {
-        for (var t in a) o[t] = e?.toggleStates?.[t] ?? !1;
+        for (var t in s) l[t] = e?.toggleStates?.[t] ?? !1;
     }
     get(e) {
-        return o[e] ?? !1;
+        return l[e] ?? !1;
     }
     set(e, t) {
-        return (o[e] = t), t;
+        return (l[e] = t), t;
     }
 }
-let u = new l(s.h, {
+let d = new o(a.h, {
         LAB_FEATURE_TOGGLE: function (e) {
             let { labFeature: t, enabled: n } = e;
-            o[t] = n;
+            l[t] = n;
         },
     }),
     c = "hide_icymi_tab",
-    d = (0, i.mj)({
+    u = (0, i.mj)({
         name: "2026-04-icymi-staff-only",
         kind: "user",
         defaultConfig: { enabled: !1 },
         variations: { 1: { enabled: !0 } },
     });
 function _(e) {
-    let t = (0, r.bG)([u], () => u.get(c), [c]),
-        { enabled: n } = d.useConfig({ location: e }),
-        i = p.useConfig({ location: e });
+    let t = (0, r.bG)([d], () => d.get(c), [c]),
+        { enabled: n } = u.useConfig({ location: e }),
+        i = h.useConfig({ location: e });
     return !t && n && i.icymiDesktopEnabled;
 }
-function h(e) {
-    let t = u.get(c),
-        { enabled: n } = d.getConfig({ location: e });
+function E(e) {
+    let t = d.get(c),
+        { enabled: n } = u.getConfig({ location: e });
     {
-        let { icymiDesktopEnabled: i } = p.getConfig({ location: e });
+        let { icymiDesktopEnabled: i } = h.getConfig({ location: e });
         return !t && n && i;
     }
 }
-let f = (0, i.mj)({
+let A = (0, i.mj)({
         name: "2026-03-icymi-staff-debugging-utility",
         kind: "user",
         defaultConfig: { enabled: !1 },
         variations: { 1: { enabled: !0 } },
     }),
-    p = (0, i.mj)({
+    h = (0, i.mj)({
         name: "2026-03-icymi-desktop",
         kind: "user",
         defaultConfig: { icymiDesktopEnabled: !1 },

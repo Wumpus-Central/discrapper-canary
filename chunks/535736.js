@@ -1,8 +1,8 @@
 "use strict";
-n.d(t, { A: () => s });
+n.d(t, { A: () => a });
 var i = n(500208),
     r = n(652215);
-class s {
+class a {
     getCreateAttachmentURL(e) {
         return r.Rsh.GUILD_PRODUCT_CREATE_ATTACHMENT_UPLOAD(e);
     }

@@ -1,29 +1,29 @@
 "use strict";
-n.d(t, { K: () => d });
-var i = n(17928),
-    r = n(52133),
-    a = n(49491),
-    s = n(311043),
-    l = n(243264),
+n.d(t, { K: () => u });
+var l = n(17928),
+    i = n(52133),
+    s = n(49491),
+    r = n(311043),
+    a = n(243264),
     o = n(287809);
-function d(e) {
-    return (0, i.bG)(
-        [s.A, l.A, o.default],
+function u(e) {
+    return (0, l.bG)(
+        [r.A, a.A, o.default],
         () =>
             (function (e) {
-                let { gameId: t, user: n, game: i, autocompleteGame: r } = e;
-                if (null != i) {
-                    if ((0, a.b)(i, n?.nsfwAllowed)) return;
-                    return { gameId: t, gameName: i.name, gameIcon: i.media?.icon };
+                let { gameId: t, user: n, game: l, autocompleteGame: i } = e;
+                if (null != l) {
+                    if ((0, s.b)(l, n?.nsfwAllowed)) return;
+                    return { gameId: t, gameName: l.name, gameIcon: l.media?.icon };
                 }
-                if (null != r) return { gameId: t, gameName: r.name, gameIcon: r.icon };
+                if (null != i) return { gameId: t, gameName: i.name, gameIcon: i.icon };
             })({
                 gameId: e,
                 user: o.default.getCurrentUser(),
-                game: s.A.getGame(e),
-                autocompleteGame: l.A.getGameById(e),
+                game: r.A.getGame(e),
+                autocompleteGame: a.A.getGameById(e),
             }),
         [e],
-        r.A,
+        i.A,
     );
 }

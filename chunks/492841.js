@@ -1,17 +1,17 @@
-e.d(i, { A: () => o });
+e.d(i, { A: () => a });
 var t = e(406704),
     c = e(576705),
     r = e(143413),
-    a = e(652215);
-function o(n, i) {
+    o = e(652215);
+function a(n, i) {
     let e = !i.isSystemDM() && !(0, r.A)(n),
-        o = c.A.can(a.xBc.PIN_MESSAGES, i) && c.A.can(a.xBc.READ_MESSAGE_HISTORY, i);
+        a = c.A.can(o.xBc.PIN_MESSAGES, i) && c.A.can(o.xBc.READ_MESSAGE_HISTORY, i);
     return (
         e &&
-        (o || i.isPrivate()) &&
+        (a || i.isPrivate()) &&
         (0, t.jr)(i) &&
-        i.type !== a.rbe.GUILD_VOICE &&
-        i.type !== a.rbe.GUILD_STAGE_VOICE &&
-        i.type !== a.rbe.MEDIA_THREAD
+        i.type !== o.rbe.GUILD_VOICE &&
+        i.type !== o.rbe.GUILD_STAGE_VOICE &&
+        i.type !== o.rbe.MEDIA_THREAD
     );
 }

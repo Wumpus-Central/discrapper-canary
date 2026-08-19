@@ -14,12 +14,12 @@ var i = n(17928),
     h = n(72533),
     E = n(652215);
 let j = new Set(),
-    N = x.Hy.LANDING,
-    f = null;
+    f = x.Hy.LANDING,
+    N = null;
 function p(e) {
     let { subsection: t } = e;
-    if (a.A.getGuildId() === f) return !1;
-    (N = t === E.nd0.SERVER_GUIDE ? x.Hy.HOME_SETTINGS : x.Hy.LANDING), (f = a.A.getGuildId());
+    if (a.A.getGuildId() === N) return !1;
+    (f = t === E.nd0.SERVER_GUIDE ? x.Hy.HOME_SETTINGS : x.Hy.LANDING), (N = a.A.getGuildId());
 }
 class A extends i.Ay.Store {
     static displayName = "GuildSettingsOnboardingStore";
@@ -30,41 +30,41 @@ class A extends i.Ay.Store {
         return j.has(e);
     }
     getCurrentPage() {
-        return N;
+        return f;
     }
     hasChanges() {
-        if (null == f) return !1;
-        let e = s.A.isAdvancedMode(f);
-        if (N === x.Hy.DEFAULT_CHANNELS)
+        if (null == N) return !1;
+        let e = s.A.isAdvancedMode(N);
+        if (f === x.Hy.DEFAULT_CHANNELS)
             if (e) return c.A.hasChanges() || g.A.hasChanges();
             else return c.A.hasChanges();
-        return N === x.Hy.CUSTOMIZATION_QUESTIONS
+        return f === x.Hy.CUSTOMIZATION_QUESTIONS
             ? g.A.hasChanges() || u.A.hasChanges()
-            : N === x.Hy.HOME_SETTINGS
+            : f === x.Hy.HOME_SETTINGS
               ? m.A.hasChanges()
-              : N === x.Hy.CONNECTIONS && u.A.hasChanges();
+              : f === x.Hy.CONNECTIONS && u.A.hasChanges();
     }
     hasConfiguredAnythingForCurrentStep() {
-        if (null == f) return !1;
-        if (N === x.Hy.SAFETY_CHECK) return !0;
-        if (N === x.Hy.DEFAULT_CHANNELS) return c.A.editedDefaultChannelIds.size > 0;
-        if (N === x.Hy.CUSTOMIZATION_QUESTIONS)
+        if (null == N) return !1;
+        if (f === x.Hy.SAFETY_CHECK) return !0;
+        if (f === x.Hy.DEFAULT_CHANNELS) return c.A.editedDefaultChannelIds.size > 0;
+        if (f === x.Hy.CUSTOMIZATION_QUESTIONS)
             return g.A.editedOnboardingPrompts.length > 0 || u.A.getEditedConnections().length > 0;
-        if (N === x.Hy.HOME_SETTINGS) return !(0, r.jJ)(m.A.getSettings());
-        if (N === x.Hy.CONNECTIONS) return u.A.getEditedConnections().length > 0;
+        if (f === x.Hy.HOME_SETTINGS) return !(0, r.jJ)(m.A.getSettings());
+        if (f === x.Hy.CONNECTIONS) return u.A.getEditedConnections().length > 0;
         return !1;
     }
     hasErrors() {
-        return N === x.Hy.CUSTOMIZATION_QUESTIONS && null != g.A.errors.find((e) => null != e);
+        return f === x.Hy.CUSTOMIZATION_QUESTIONS && null != g.A.errors.find((e) => null != e);
     }
     showNotice() {
-        if (null == f) return !1;
-        if ((0, h.o)(f)) return this.hasChanges();
+        if (null == N) return !1;
+        if ((0, h.o)(N)) return this.hasChanges();
         let e = o.A.getCurrentPage();
-        return (N !== x.Hy.SAFETY_CHECK || e === d.C.OVERVIEW) && null != N && N !== x.Hy.LANDING;
+        return (f !== x.Hy.SAFETY_CHECK || e === d.C.OVERVIEW) && null != f && f !== x.Hy.LANDING;
     }
     canCloseEarly() {
-        return null == f || (!this.hasErrors() && (!(0, h.o)(f) || !this.hasChanges()));
+        return null == N || (!this.hasErrors() && (!(0, h.o)(N) || !this.hasChanges()));
     }
 }
 let I = new A(l.h, {
@@ -72,7 +72,7 @@ let I = new A(l.h, {
     GUILD_SETTINGS_SET_SECTION: p,
     GUILD_SETTINGS_ONBOARDING_STEP: function (e) {
         let { step: t } = e;
-        N = t;
+        f = t;
     },
     GUILD_SETTINGS_ONBOARDING_EDUCATION_UPSELL_DISMISSED: function (e) {
         let { upsellType: t } = e;

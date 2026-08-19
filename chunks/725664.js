@@ -1,12 +1,12 @@
 "use strict";
-function i(e, t) {
-    if (null == e) return {};
-    var n = {};
-    for (var i in e)
-        if ({}.hasOwnProperty.call(e, i)) {
-            if (-1 !== t.indexOf(i)) continue;
-            n[i] = e[i];
+function n(t, r) {
+    if (null == t) return {};
+    var e = {};
+    for (var n in t)
+        if ({}.hasOwnProperty.call(t, n)) {
+            if (-1 !== r.indexOf(n)) continue;
+            e[n] = t[n];
         }
-    return n;
+    return e;
 }
-n.d(t, { A: () => i });
+e.d(r, { A: () => n });

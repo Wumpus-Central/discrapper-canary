@@ -1,4 +1,4 @@
-n.d(t, { A: () => O, Y: () => S }), n(321073);
+n.d(t, { A: () => O, Y: () => m }), n(321073);
 var i,
     l = n(17928),
     s = n(713402),
@@ -15,8 +15,8 @@ var i,
     E = n(648427),
     I = n(315240),
     p = n(652215),
-    S = (((i = {}).ACTIVE_NOW = "ACTIVE_NOW"), (i.DMS = "DMS"), (i.RECENT_TEXT = "RECENT_TEXT"), i);
-let m = new s.J(
+    m = (((i = {}).ACTIVE_NOW = "ACTIVE_NOW"), (i.DMS = "DMS"), (i.RECENT_TEXT = "RECENT_TEXT"), i);
+let S = new s.J(
         function (e) {
             let t = [];
             return (
@@ -79,18 +79,18 @@ function T(e) {
             sortKey: f,
         };
     })(e);
-    return null == t ? m.delete(e) : m.set(e, t);
+    return null == t ? S.delete(e) : S.set(e, t);
 }
 function v() {
     let e = I.A.getActiveNowChannelIds({ kind: I.u.Text }),
         t = new Set(e),
         n = !1;
     for (let t of e) n = T(t) || n;
-    for (let e of [...m.values("ACTIVE_NOW")]) t.has(e.channelId) || (n = T(e.channelId) || n);
+    for (let e of [...S.values("ACTIVE_NOW")]) t.has(e.channelId) || (n = T(e.channelId) || n);
     return (C = t), n;
 }
 function M() {
-    m.clear(), (C = new Set());
+    S.clear(), (C = new Set());
     let e = !1;
     for (let t of h.A.getPrivateChannelIds()) e = T(t) || e;
     for (let t of a.A.getChannelHistory()) e = T(t) || e;
@@ -109,10 +109,10 @@ class D extends l.Ay.Store {
         this.waitFor(u.A, I.A, a.A, d.Ay, c.A, h.A, E.A), M();
     }
     getRows(e) {
-        return [m.values(e), m.version];
+        return [S.values(e), S.version];
     }
     getChannel(e) {
-        return m.get(e);
+        return S.get(e);
     }
 }
 function R(e) {
@@ -184,8 +184,8 @@ let O = new D(
               CACHE_LOADED_LAZY: R(M),
               FRIENDS_LIST_POPOUT_MOUNTED: R(M),
               LOGOUT: R(function () {
-                  let e = m.size() > 0;
-                  return m.clear(), (_ = null), (C = new Set()), e;
+                  let e = S.size() > 0;
+                  return S.clear(), (_ = null), (C = new Set()), e;
               }),
           },
 );

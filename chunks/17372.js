@@ -1,10 +1,10 @@
-n.d(t, { TS: () => s, Wb: () => E, Yw: () => o, t0: () => l, tY: () => u });
+n.d(t, { TS: () => s, Wb: () => E, Yw: () => l, t0: () => o, tY: () => u });
 var i,
     a,
     _,
     r,
     d,
-    l =
+    o =
         (((i = {}).GUILD = "guild"),
         (i.GUILD_DISCOVERY = "guild_discovery"),
         (i.GUILD_DIRECTORY_ENTRY = "guild_directory_entry"),
@@ -16,7 +16,7 @@ var i,
         (i.APPLICATION = "application"),
         (i.WIDGET = "widget"),
         i),
-    o = (((a = {}).MESSAGE = "report_to_mod_message"), a),
+    l = (((a = {}).MESSAGE = "report_to_mod_message"), a),
     u =
         (((_ = {}).MESSAGE = "message_urf"),
         (_.USER = "user_urf"),

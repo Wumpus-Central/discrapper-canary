@@ -1,32 +1,32 @@
 "use strict";
-let i, r, s;
-n.d(t, { A: () => A }), n(142703);
-var a = n(17928),
-    o = n(228366),
-    l = n(284016),
-    u = n(885386),
+let i, r, a;
+n.d(t, { A: () => T }), n(142703);
+var s = n(17928),
+    l = n(228366),
+    o = n(284016),
+    d = n(885386),
     c = n(617617),
-    d = n(189081);
+    u = n(189081);
 let _ = { applicationId: null, originURL: null },
-    h = _,
-    f = new Set(),
-    p = !1;
-function E() {
-    s = null;
+    E = _,
+    A = new Set(),
+    h = !1;
+function I() {
+    a = null;
 }
-function m() {
-    (i = null), (r = null), (f = new Set()), (h.applicationId = null), (h.originURL = null), E();
+function f() {
+    (i = null), (r = null), (A = new Set()), (E.applicationId = null), (E.originURL = null), I();
 }
-class g extends a.Ay.PersistedStore {
+class p extends s.Ay.PersistedStore {
     static displayName = "TestModeStore";
     static persistKey = "TestModeStore";
     initialize(e) {
-        (i = (h = { ...(e ?? _) }).applicationId),
-            (r = h.originURL),
-            this.waitFor(d.A, l.A, c.A),
-            this.syncWith([c.A, l.A], () => !0),
-            d.A.whenInitialized(() => {
-                p = !0;
+        (i = (E = { ...(e ?? _) }).applicationId),
+            (r = E.originURL),
+            this.waitFor(u.A, o.A, c.A),
+            this.syncWith([c.A, o.A], () => !0),
+            u.A.whenInitialized(() => {
+                h = !0;
             });
     }
     getTestModeApplicationId() {
@@ -39,16 +39,16 @@ class g extends a.Ay.PersistedStore {
         return i === e && null != r;
     }
     shouldDisplayTestMode(e) {
-        return u.Q_.getSetting() && this.inTestModeForApplication(e);
+        return d.Q_.getSetting() && this.inTestModeForApplication(e);
     }
     getState() {
-        return h;
+        return E;
     }
     get isTestMode() {
         return null != i;
     }
     get isFetchingAuthorization() {
-        return f.size > 0;
+        return A.size > 0;
     }
     get testModeEmbeddedApplicationId() {
         return null != r ? i : null;
@@ -60,32 +60,32 @@ class g extends a.Ay.PersistedStore {
         return r;
     }
     get error() {
-        return s;
+        return a;
     }
     whenInitialized(e) {
         this.addConditionalChangeListener(() => {
-            if (p) return setImmediate(e), !1;
+            if (h) return setImmediate(e), !1;
         });
     }
 }
-let A = new g(o.h, {
+let T = new p(l.h, {
     DEVELOPER_TEST_MODE_AUTHORIZATION_START: function (e) {
         let { applicationId: t } = e;
-        f.add(t), (s = null);
+        A.add(t), (a = null);
     },
     DEVELOPER_TEST_MODE_AUTHORIZATION_SUCCESS: function (e) {
         let { applicationId: t, originURL: n } = e;
-        (i = t), (r = n), f.delete(t), (s = null), (h.applicationId = t), (h.originURL = n);
+        (i = t), (r = n), A.delete(t), (a = null), (E.applicationId = t), (E.originURL = n);
     },
     DEVELOPER_TEST_MODE_AUTHORIZATION_FAIL: function (e) {
         let { applicationId: t, error: n } = e;
-        f.delete(t), (s = n);
+        A.delete(t), (a = n);
     },
     OVERLAY_INITIALIZE: function (e) {
         let { testModeApplicationId: t } = e;
         i = t;
     },
-    DEVELOPER_TEST_MODE_RESET_ERROR: E,
-    LOGOUT: m,
-    DEVELOPER_TEST_MODE_RESET: m,
+    DEVELOPER_TEST_MODE_RESET_ERROR: I,
+    LOGOUT: f,
+    DEVELOPER_TEST_MODE_RESET: f,
 });

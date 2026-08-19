@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { o: () => s, t: () => r });
+n.d(t, { o: () => a, t: () => r });
 var i,
     r =
         (((i = {}).NEW_PURCHASES_DISABLED = "NEW_PURCHASES_DISABLED"),
@@ -8,4 +8,4 @@ var i,
         (i.SUBSCRIPTIONS_ENDED_FULL_REFUND = "SUBSCRIPTIONS_ENDED_FULL_REFUND"),
         (i.SUBSCRIPTIONS_ENDED_PRORATED_REFUND = "SUBSCRIPTIONS_ENDED_PRORATED_REFUND"),
         i);
-let s = ["NEW_PURCHASES_DISABLED", "REAPPLICATION_DISABLED", "SETTINGS_READ_ONLY"];
+let a = ["NEW_PURCHASES_DISABLED", "REAPPLICATION_DISABLED", "SETTINGS_READ_ONLY"];

@@ -20,15 +20,15 @@ function A() {
     return "u" < typeof document || "visible" === document.visibilityState;
 }
 var x = n(414121),
-    w =
+    I =
         (((s = {})[(s.INITIALIZING = 0)] = "INITIALIZING"),
         (s[(s.PENDING_REMOTE_INIT = 1)] = "PENDING_REMOTE_INIT"),
         (s[(s.PENDING_TICKET = 2)] = "PENDING_TICKET"),
         (s[(s.PENDING_LOGIN = 3)] = "PENDING_LOGIN"),
         (s[(s.FINISH = 4)] = "FINISH"),
         s),
-    I = n(158390),
-    C = n(562465),
+    w = n(158390),
+    C = n(636537),
     v = n(765548),
     S = n(626584),
     j = n(751124),
@@ -153,10 +153,10 @@ function X(e) {
         horizontal: o,
     } = e;
     switch (t.step) {
-        case w.INITIALIZING:
-        case w.PENDING_REMOTE_INIT: {
+        case I.INITIALIZING:
+        case I.PENDING_REMOTE_INIT: {
             let e = (0, r.jsx)(q, {
-                    text: t.step === w.PENDING_REMOTE_INIT ? `https://discord.com/ra/${t.fingerprint}` : "",
+                    text: t.step === I.PENDING_REMOTE_INIT ? `https://discord.com/ra/${t.fingerprint}` : "",
                 }),
                 n = o
                     ? {
@@ -215,7 +215,7 @@ function X(e) {
                       children: [e, c, (0, r.jsx)(m.B, { padding: 8, align: "center", children: d })],
                   });
         }
-        case w.PENDING_TICKET: {
+        case I.PENDING_TICKET: {
             let { user: e } = t;
             return (0, r.jsxs)(r.Fragment, {
                 children: [
@@ -248,8 +248,8 @@ function X(e) {
                 ],
             });
         }
-        case w.PENDING_LOGIN:
-        case w.FINISH:
+        case I.PENDING_LOGIN:
+        case I.FINISH:
             return (0, r.jsx)(d.y, { type: d.y.Type.WANDERING_CUBES });
     }
 }
@@ -265,11 +265,11 @@ function Y(e) {
             let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
                 [s, r] = a.useState(0),
                 [i, l] = a.useState(!1),
-                [o, c] = a.useState({ step: w.INITIALIZING }),
+                [o, c] = a.useState({ step: I.INITIALIZING }),
                 d = a.useRef(null),
-                u = a.useMemo(() => new I.A(1500, 3e4), []),
+                u = a.useMemo(() => new w.A(1500, 3e4), []),
                 h = (0, v.A)(() => {
-                    c({ step: w.INITIALIZING }),
+                    c({ step: I.INITIALIZING }),
                         t
                             ? r((e) => e + 1)
                             : (M.info(
@@ -279,14 +279,14 @@ function Y(e) {
                 }),
                 p = a.useCallback(() => {
                     M.error("Could not complete Remote Auth login, trying to restart with a new Remote Auth session."),
-                        c({ step: w.INITIALIZING }),
+                        c({ step: I.INITIALIZING }),
                         u.pending || u.fail(h);
                 }, [h, u]);
             return (
                 a.useEffect(() => {
                     t &&
                         i &&
-                        o.step === w.INITIALIZING &&
+                        o.step === I.INITIALIZING &&
                         (M.info("reconnecting, now that document is visible"), l(!1), r((e) => e + 1));
                 }, [o, t, i, l]),
                 a.useEffect(() => {
@@ -330,13 +330,13 @@ function Y(e) {
                                 let e = await D.publicKeyFingerprint(f());
                                 if (e !== l.fingerprint) throw Error(`bad fingerprint ${e} !== ${l.fingerprint}`);
                                 r("handshake complete awaiting remote auth."),
-                                    c({ step: w.PENDING_REMOTE_INIT, fingerprint: e });
+                                    c({ step: I.PENDING_REMOTE_INIT, fingerprint: e });
                                 return;
                             }
                             case "pending_login": {
                                 let t = l.ticket;
                                 if (null == t) return void p();
-                                c({ step: w.PENDING_LOGIN, ticket: t }),
+                                c({ step: I.PENDING_LOGIN, ticket: t }),
                                     C.Bo.post({
                                         url: F.Rsh.REMOTE_AUTH_LOGIN,
                                         body: { ticket: t },
@@ -357,7 +357,7 @@ function Y(e) {
                                     r("remote auth handshake started, awaiting ticket/cancel.");
                                 let e = l.encrypted_user_payload,
                                     t = await P(f(), e);
-                                c({ step: w.PENDING_TICKET, user: t });
+                                c({ step: I.PENDING_TICKET, user: t });
                                 return;
                             }
                             case "cancel":
@@ -388,7 +388,7 @@ function Y(e) {
                             i.send(JSON.stringify({ op: "init", encoded_public_key: o })),
                             (d.current = l);
                     }
-                    function I(e) {
+                    function w(e) {
                         r(`disconnected, code: ${e.code} ${e.reason}`), p();
                     }
                     function v(e) {
@@ -397,13 +397,13 @@ function Y(e) {
                     return (
                         i.addEventListener("open", x),
                         i.addEventListener("message", A),
-                        i.addEventListener("close", I),
+                        i.addEventListener("close", w),
                         i.addEventListener("error", v),
                         () => {
                             r("cleaning up"),
                                 i.removeEventListener("open", x),
                                 i.removeEventListener("message", A),
-                                i.removeEventListener("close", I),
+                                i.removeEventListener("close", w),
                                 i.removeEventListener("error", v),
                                 i.close(1e3),
                                 u.cancel(),
@@ -438,12 +438,12 @@ function Y(e) {
         ),
         h = (function (e) {
             switch (e) {
-                case w.INITIALIZING:
-                case w.PENDING_REMOTE_INIT:
+                case I.INITIALIZING:
+                case I.PENDING_REMOTE_INIT:
                     return 0;
-                case w.PENDING_TICKET:
-                case w.PENDING_LOGIN:
-                case w.FINISH:
+                case I.PENDING_TICKET:
+                case I.PENDING_LOGIN:
+                case I.FINISH:
                     return 1;
             }
         })(d.step);

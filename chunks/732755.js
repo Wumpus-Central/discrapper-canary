@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => R });
+n.d(t, { A: () => O });
 var i = n(812729),
     r = n.n(i),
     a = n(17928),
@@ -36,14 +36,14 @@ function N() {
             c = s.filter((e) => e.type === I.wY.STREAM).length,
             N = s.length - c,
             C = h.A.getParticipantCount(e) - c,
-            R = a?.party?.size != null ? a.party.size[1] : 0;
+            O = a?.party?.size != null ? a.party.size[1] : 0;
         return {
             application_id: m.SS,
             name: t.topic ?? n.topic ?? (0, l.m1)(n, E.default, u.A),
             type: (0, T.xn)(n.id) ? g.$pd.WATCHING : g.$pd.LISTENING,
             timestamps: { start: a?.timestamps?.start ?? new Date().getTime() },
             assets: { small_image: i.icon ?? void 0, small_text: i.name },
-            party: { id: r, size: [N, Math.max(C, R)] },
+            party: { id: r, size: [N, Math.max(C, O)] },
         };
     })();
     return !r()(e, S) && ((S = e), !0);
@@ -57,7 +57,7 @@ class C extends a.Ay.Store {
         return S;
     }
 }
-let R = new C(s.h, {
+let O = new C(s.h, {
     CONNECTION_OPEN: N,
     STAGE_INSTANCE_CREATE: N,
     STAGE_INSTANCE_UPDATE: N,

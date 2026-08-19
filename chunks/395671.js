@@ -77,7 +77,7 @@ class h extends s.A {
             (this.contentClassification = e.content_classification ?? e.contentClassification);
     }
     get connectionEntrypointUrl() {
-        let { APPLICATION_IDENTITY_CONNECTIONS_WITH_OVERRIDE_ENTRYPOINT_URLS: e } = n(360308),
+        let { APPLICATION_IDENTITY_CONNECTIONS_WITH_OVERRIDE_ENTRYPOINT_URLS: e } = n(534952),
             t = e[this.id];
         return t?.connectionEntrypointUrlOverride != null && t.getMigrationExperimentEnabled("ApplicationRecord")
             ? t.connectionEntrypointUrlOverride

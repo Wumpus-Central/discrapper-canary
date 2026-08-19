@@ -36,8 +36,8 @@ function m(e, t, n, a) {
                 onScroll: O,
                 onResize: R = null,
                 onContentResize: L = null,
-                sections: D,
-                sectionHeight: y,
+                sections: y,
+                sectionHeight: D,
                 rowHeight: v,
                 footerHeight: b = 0,
                 sidebarHeight: M,
@@ -57,8 +57,8 @@ function m(e, t, n, a) {
                 customTheme: K = !1,
                 chunkSize: $,
                 style: z,
-                innerId: q,
-                innerRole: Z,
+                innerId: Z,
+                innerRole: q,
                 innerAriaLabel: X,
                 innerAriaMultiselectable: Q,
                 innerAriaOrientation: J,
@@ -117,7 +117,7 @@ function m(e, t, n, a) {
                         let e = Math.max(0, g * o);
                         return null != s && e < s;
                     }, [o, g, s]),
-                    D = (0, r.useMemo)(
+                    y = (0, r.useMemo)(
                         () =>
                             m > 0
                                 ? p.current
@@ -136,13 +136,13 @@ function m(e, t, n, a) {
                     );
                 return (
                     (0, r.useLayoutEffect)(() => {
-                        p.current = D;
+                        p.current = y;
                     }),
-                    { ...D, listComputer: T, forceUpdateOnChunkChange: N, anchor: O, isSidebarVisible: L }
+                    { ...y, listComputer: T, forceUpdateOnChunkChange: N, anchor: O, isSidebarVisible: L }
                 );
             })({
-                sections: D,
-                sectionHeight: y,
+                sections: y,
+                sectionHeight: D,
                 rowHeight: v,
                 footerHeight: b,
                 sidebarHeight: M,
@@ -176,10 +176,10 @@ function m(e, t, n, a) {
                 }, [e_]),
                 r.useCallback(() => S.current, [])),
             eN =
-                ((N = r.useRef(D)),
+                ((N = r.useRef(y)),
                 r.useEffect(() => {
-                    N.current = D;
-                }, [D]),
+                    N.current = y;
+                }, [y]),
                 r.useCallback((e) => {
                     let { current: t } = N,
                         n = 0;
@@ -294,8 +294,8 @@ function m(e, t, n, a) {
                     r.useMemo(
                         () =>
                             (0, i.jsx)(et, {
-                                id: q,
-                                role: Z,
+                                id: Z,
+                                role: q,
                                 "aria-label": X,
                                 "aria-multiselectable": Q,
                                 "aria-orientation": J,
@@ -364,7 +364,7 @@ function m(e, t, n, a) {
                                     }),
                                 }),
                             }),
-                        [et, q, Z, X, Q, J, eu, ee, e_, k, F, U, w, G, V, ec],
+                        [et, Z, q, X, Q, J, eu, ee, e_, k, F, U, w, G, V, ec],
                     ),
                     r.useMemo(
                         () =>

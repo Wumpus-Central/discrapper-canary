@@ -1,9 +1,9 @@
-var i = n(106071);
-function r(e, t, n, i) {
-    Object.defineProperty(e, t, { get: n, set: i, enumerable: !0, configurable: !0 });
+var n = r(106071);
+function i(e, t, r, n) {
+    Object.defineProperty(e, t, { get: r, set: n, enumerable: !0, configurable: !0 });
 }
-r(e.exports, "announce", () => i.announce),
-    r(e.exports, "createAnnouncer", () => i.createAnnouncer),
-    r(e.exports, "clearAnnouncer", () => i.clearAnnouncer),
-    r(e.exports, "destroyAnnouncer", () => i.destroyAnnouncer),
-    r(e.exports, "moveAnnouncer", () => i.moveAnnouncer);
+i(e.exports, "announce", () => n.announce),
+    i(e.exports, "createAnnouncer", () => n.createAnnouncer),
+    i(e.exports, "clearAnnouncer", () => n.clearAnnouncer),
+    i(e.exports, "destroyAnnouncer", () => n.destroyAnnouncer),
+    i(e.exports, "moveAnnouncer", () => n.moveAnnouncer);

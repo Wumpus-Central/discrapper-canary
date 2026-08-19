@@ -13,14 +13,14 @@ if (221552 == n.j) var x = n(276293);
 if (221552 == n.j) var h = n(297264);
 if (221552 == n.j) var g = n(622629);
 var j = n(47167),
-    A = n(713654),
+    A = n(174355),
     N = n(734057),
     f = n(696451),
     v = n(71393),
-    b = n(576705),
-    I = n(44234),
-    p = n(486020),
-    C = n(225142),
+    I = n(576705),
+    b = n(44234),
+    C = n(486020),
+    p = n(225142),
     E = n(701785),
     G = n(65995),
     M = n(111487),
@@ -32,7 +32,7 @@ function U(e) {
     let { title: l, emojiId: n, emojiName: t, icon: a, completed: r, Icon: c, onClick: x, ...h } = e,
         g = "channel" === h.variant ? h.channelId : null,
         j = "static" === h.variant ? h.subtitle : h.channelName,
-        A = null != g ? p.Ay.getNewMemberActionIconURL({ channelId: g, icon: a }) : null,
+        A = null != g ? C.Ay.getNewMemberActionIconURL({ channelId: g, icon: a }) : null,
         N = (0, s.jsxs)(d.Z, {
             className: i()(k.XI, { [k.xU]: null != x }),
             children: [
@@ -58,7 +58,7 @@ function U(e) {
                 }),
                 r
                     ? (0, s.jsx)(o.y, { size: "md", color: "currentColor", secondaryColor: "#fff", className: k.Yb })
-                    : (0, s.jsx)(I.A, { className: k.t3, width: 24, height: 24 }),
+                    : (0, s.jsx)(b.A, { className: k.t3, width: 24, height: 24 }),
             ],
         });
     return null != x
@@ -78,9 +78,9 @@ function R(e) {
         { id: u, name: o } = r ?? {},
         m = (0, c.bG)([N.A], () => N.A.getChannel(a)),
         h = (0, j.Ay)(m, !0),
-        g = (0, c.bG)([b.A], () => b.A.can(y.xBc.VIEW_CHANNEL, m)),
+        g = (0, c.bG)([I.A], () => I.A.can(y.xBc.VIEW_CHANNEL, m)),
         f = t.useMemo(() => {
-            if (null != m) return () => (0, C.qo)(m.guild_id, m.id);
+            if (null != m) return () => (0, p.qo)(m.guild_id, m.id);
         }, [m]);
     if (null == m || !g) return null;
     let v = (0, A.gU)(m) ?? x.N;
@@ -104,10 +104,10 @@ function D(e) {
         o = (0, c.bG)([f.Ay], () => f.Ay.getSelfMember(l)),
         x = (0, c.bG)([v.A], () => v.A.getGuild(l));
     t.useEffect(() => {
-        null == a && o?.flags != null && (0, r.Lt)(o.flags ?? 0, L.D.STARTED_HOME_ACTIONS) && (0, C.aW)(l);
+        null == a && o?.flags != null && (0, r.Lt)(o.flags ?? 0, L.D.STARTED_HOME_ACTIONS) && (0, p.aW)(l);
     }, [a, l, o?.flags]);
     let j = t.useCallback(() => {
-        null != x && null != x.rulesChannelId && (0, C.qo)(x.id, x.rulesChannelId);
+        null != x && null != x.rulesChannelId && (0, p.qo)(x.id, x.rulesChannelId);
     }, [x]);
     return null == o || null == n || 0 === n.length
         ? null

@@ -33,9 +33,9 @@ var i = {
     "./zh-TW.json": "567721",
 };
 function r(e) {
-    return n(s(e));
+    return n(a(e));
 }
-function s(e) {
+function a(e) {
     if (!n.o(i, e)) {
         var t = Error("Cannot find module '" + e + "'");
         throw ((t.code = "MODULE_NOT_FOUND"), t);
@@ -45,6 +45,6 @@ function s(e) {
 (r.keys = function () {
     return Object.keys(i);
 }),
-    (r.resolve = s),
+    (r.resolve = a),
     (e.exports = r),
     (r.id = 121312);

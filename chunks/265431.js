@@ -1,7 +1,7 @@
 "use strict";
-n.d(t, { A: () => i });
-var r = n(582128);
-function i() {
-    let [, e] = (0, r.useState)({});
-    return (0, r.useCallback)(() => e({}), []);
+r.d(t, { A: () => o });
+var n = r(582128);
+function o() {
+    let [, e] = (0, n.useState)({});
+    return (0, n.useCallback)(() => e({}), []);
 }

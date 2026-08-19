@@ -1,4 +1,4 @@
-n.d(t, { Ay: () => o, BQ: () => h, Gf: () => c, Z8: () => f, qv: () => x, s2: () => p }), n(321073);
+n.d(t, { Ay: () => o, BQ: () => g, Gf: () => c, Z8: () => p, qv: () => x, s2: () => f }), n(321073);
 var s = n(477900),
     r = n(582128),
     i = n(284009),
@@ -45,19 +45,19 @@ function d(e) {
 function m(e) {
     return e.setStep;
 }
-function f() {
+function p() {
     let { step: e, stepConfigs: t } = o();
     return t.find((t) => t.key === e) ?? null;
 }
-function p() {
+function f() {
     return o(d);
 }
 function x() {
     return o(m);
 }
-function g(e) {
+function v(e) {
     return e.stepsHistory;
 }
-function h() {
-    return o(g);
+function g() {
+    return o(v);
 }

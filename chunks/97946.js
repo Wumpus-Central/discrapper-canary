@@ -1,24 +1,24 @@
 "use strict";
-let r;
+let n;
 Object.defineProperty(t, "__esModule", { value: !0 }),
     (t.runtimeHashMessageKey = function (e) {
         let t = (function (e) {
             e = BigInt(e);
             let t = [],
-                n = Math.ceil(Math.floor(Math.log2(Number(e)) + 1) / 8);
-            for (let r = 0; r < n; r++) t.unshift(Number((e >> BigInt(8 * r)) & BigInt(255)));
-            let r = new Uint8Array(t);
-            return o ? r : r.reverse();
-        })((0, i.hash)(e, 0));
+                r = Math.ceil(Math.floor(Math.log2(Number(e)) + 1) / 8);
+            for (let n = 0; n < r; n++) t.unshift(Number((e >> BigInt(8 * n)) & BigInt(255)));
+            let n = new Uint8Array(t);
+            return a ? n : n.reverse();
+        })((0, o.hash)(e, 0));
         return [
-            a[t[0] >> 2],
-            a[((3 & t[0]) << 4) | (t[1] >> 4)],
-            a[((15 & t[1]) << 2) | (t[2] >> 6)],
-            a[63 & t[2]],
-            a[t[3] >> 2],
-            a[((3 & t[3]) << 4) | (t[4] >> 4)],
+            i[t[0] >> 2],
+            i[((3 & t[0]) << 4) | (t[1] >> 4)],
+            i[((15 & t[1]) << 2) | (t[2] >> 6)],
+            i[63 & t[2]],
+            i[t[3] >> 2],
+            i[((3 & t[3]) << 4) | (t[4] >> 4)],
         ].join("");
     });
-let i = n(618830),
-    a = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/".split(""),
-    o = !((new Uint32Array((r = new Uint8Array(4)).buffer)[0] = 1) & r[0]);
+let o = r(618830),
+    i = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/".split(""),
+    a = !((new Uint32Array((n = new Uint8Array(4)).buffer)[0] = 1) & n[0]);

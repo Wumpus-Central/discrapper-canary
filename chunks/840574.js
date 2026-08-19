@@ -1,8 +1,8 @@
 "use strict";
 r.d(t, { t: () => z });
 var n,
-    i,
     o,
+    i,
     a = [],
     s = "ResizeObserver loop completed with undelivered notifications.",
     l = function () {
@@ -12,7 +12,7 @@ var n,
             : ((e = document.createEvent("Event")).initEvent("error", !1, !1), (e.message = s)),
             window.dispatchEvent(e);
     };
-((n = i || (i = {})).BORDER_BOX = "border-box"),
+((n = o || (o = {})).BORDER_BOX = "border-box"),
     (n.CONTENT_BOX = "content-box"),
     (n.DEVICE_PIXEL_CONTENT_BOX = "device-pixel-content-box");
 var u = (function () {
@@ -58,16 +58,16 @@ var u = (function () {
                 n = t.height;
             return !r && !n;
         }
-        var i = e.offsetWidth,
-            o = e.offsetHeight;
-        return !(i || o || e.getClientRects().length);
+        var o = e.offsetWidth,
+            i = e.offsetHeight;
+        return !(o || i || e.getClientRects().length);
     },
-    d = function (e) {
+    p = function (e) {
         var t,
             r = null == (t = null == e ? void 0 : e.ownerDocument) ? void 0 : t.defaultView;
         return !!(r && e instanceof r.Element);
     },
-    p = function (e) {
+    d = function (e) {
         switch (e.tagName) {
             case "INPUT":
                 if ("image" !== e.type) break;
@@ -84,9 +84,9 @@ var u = (function () {
     },
     h = "u" > typeof window ? window : {},
     m = new WeakMap(),
-    g = /auto|scroll/,
-    v = /^tb|vertical/,
-    y = /msie|trident/i.test(h.navigator && h.navigator.userAgent),
+    v = /auto|scroll/,
+    y = /^tb|vertical/,
+    g = /msie|trident/i.test(h.navigator && h.navigator.userAgent),
     b = function (e) {
         return parseFloat(e || "0");
     },
@@ -104,57 +104,57 @@ var u = (function () {
         contentBoxSize: w(),
         contentRect: new u(0, 0, 0, 0),
     }),
-    x = function (e, t) {
+    S = function (e, t) {
         if ((void 0 === t && (t = !1), m.has(e) && !t)) return m.get(e);
         if (f(e)) return m.set(e, _), _;
         var r = getComputedStyle(e),
             n = c(e) && e.ownerSVGElement && e.getBBox(),
-            i = !y && "border-box" === r.boxSizing,
-            o = v.test(r.writingMode || ""),
-            a = !n && g.test(r.overflowY || ""),
-            s = !n && g.test(r.overflowX || ""),
+            o = !g && "border-box" === r.boxSizing,
+            i = y.test(r.writingMode || ""),
+            a = !n && v.test(r.overflowY || ""),
+            s = !n && v.test(r.overflowX || ""),
             l = n ? 0 : b(r.paddingTop),
-            d = n ? 0 : b(r.paddingRight),
-            p = n ? 0 : b(r.paddingBottom),
+            p = n ? 0 : b(r.paddingRight),
+            d = n ? 0 : b(r.paddingBottom),
             h = n ? 0 : b(r.paddingLeft),
-            x = n ? 0 : b(r.borderTopWidth),
+            S = n ? 0 : b(r.borderTopWidth),
             E = n ? 0 : b(r.borderRightWidth),
-            S = n ? 0 : b(r.borderBottomWidth),
+            x = n ? 0 : b(r.borderBottomWidth),
             k = n ? 0 : b(r.borderLeftWidth),
-            T = h + d,
-            C = l + p,
-            P = k + E,
-            A = x + S,
-            O = s ? e.offsetHeight - A - e.clientHeight : 0,
-            M = a ? e.offsetWidth - P - e.clientWidth : 0,
-            I = n ? n.width : b(r.width) - (i ? T + P : 0) - M,
-            R = n ? n.height : b(r.height) - (i ? C + A : 0) - O,
-            D = I + T + M + P,
-            L = R + C + O + A,
+            C = h + p,
+            T = l + d,
+            M = k + E,
+            P = S + x,
+            A = s ? e.offsetHeight - P - e.clientHeight : 0,
+            O = a ? e.offsetWidth - M - e.clientWidth : 0,
+            I = n ? n.width : b(r.width) - (o ? C + M : 0) - O,
+            D = n ? n.height : b(r.height) - (o ? T + P : 0) - A,
+            L = I + C + O + M,
+            R = D + T + A + P,
             F = Object.freeze({
-                devicePixelContentBoxSize: w(Math.round(I * devicePixelRatio), Math.round(R * devicePixelRatio), o),
-                borderBoxSize: w(D, L, o),
-                contentBoxSize: w(I, R, o),
-                contentRect: new u(h, l, I, R),
+                devicePixelContentBoxSize: w(Math.round(I * devicePixelRatio), Math.round(D * devicePixelRatio), i),
+                borderBoxSize: w(L, R, i),
+                contentBoxSize: w(I, D, i),
+                contentRect: new u(h, l, I, D),
             });
         return m.set(e, F), F;
     },
     E = function (e, t, r) {
-        var n = x(e, r),
-            o = n.borderBoxSize,
+        var n = S(e, r),
+            i = n.borderBoxSize,
             a = n.contentBoxSize,
             s = n.devicePixelContentBoxSize;
         switch (t) {
-            case i.DEVICE_PIXEL_CONTENT_BOX:
+            case o.DEVICE_PIXEL_CONTENT_BOX:
                 return s;
-            case i.BORDER_BOX:
-                return o;
+            case o.BORDER_BOX:
+                return i;
             default:
                 return a;
         }
     },
-    S = function (e) {
-        var t = x(e);
+    x = function (e) {
+        var t = S(e);
         (this.target = e),
             (this.contentRect = t.contentRect),
             (this.borderBoxSize = [t.borderBoxSize]),
@@ -166,16 +166,16 @@ var u = (function () {
         for (var t = 0, r = e.parentNode; r; ) (t += 1), (r = r.parentNode);
         return t;
     },
-    T = function () {
+    C = function () {
         var e = 1 / 0,
             t = [];
         a.forEach(function (r) {
             if (0 !== r.activeTargets.length) {
                 var n = [];
                 r.activeTargets.forEach(function (t) {
-                    var r = new S(t.target),
-                        i = k(t.target);
-                    n.push(r), (t.lastReportedSize = E(t.target, t.observedBox)), i < e && (e = i);
+                    var r = new x(t.target),
+                        o = k(t.target);
+                    n.push(r), (t.lastReportedSize = E(t.target, t.observedBox)), o < e && (e = o);
                 }),
                     t.push(function () {
                         r.callback.call(r.observer, n, r.observer);
@@ -186,7 +186,7 @@ var u = (function () {
         for (var r = 0; r < t.length; r++) (0, t[r])();
         return e;
     },
-    C = function (e) {
+    T = function (e) {
         a.forEach(function (t) {
             t.activeTargets.splice(0, t.activeTargets.length),
                 t.skippedTargets.splice(0, t.skippedTargets.length),
@@ -195,15 +195,15 @@ var u = (function () {
                 });
         });
     },
-    P = function () {
+    M = function () {
         var e = 0;
         for (
-            C(0);
+            T(0);
             a.some(function (e) {
                 return e.activeTargets.length > 0;
             });
         )
-            C((e = T()));
+            T((e = C()));
         return (
             a.some(function (e) {
                 return e.skippedTargets.length > 0;
@@ -211,30 +211,30 @@ var u = (function () {
             e > 0
         );
     },
-    A = [],
-    O = function (e) {
-        if (!o) {
+    P = [],
+    A = function (e) {
+        if (!i) {
             var t = 0,
                 r = document.createTextNode("");
             new MutationObserver(function () {
-                return A.splice(0).forEach(function (e) {
+                return P.splice(0).forEach(function (e) {
                     return e();
                 });
             }).observe(r, { characterData: !0 }),
-                (o = function () {
+                (i = function () {
                     r.textContent = "" + (t ? t-- : t++);
                 });
         }
-        A.push(e), o();
+        P.push(e), i();
     },
-    M = function (e) {
-        O(function () {
+    O = function (e) {
+        A(function () {
             requestAnimationFrame(e);
         });
     },
     I = 0,
-    R = { attributes: !0, characterData: !0, childList: !0, subtree: !0 },
-    D = [
+    D = { attributes: !0, characterData: !0, childList: !0, subtree: !0 },
+    L = [
         "resize",
         "load",
         "transitionend",
@@ -250,7 +250,7 @@ var u = (function () {
         "blur",
         "focus",
     ],
-    L = function (e) {
+    R = function (e) {
         return void 0 === e && (e = 0), Date.now() + e;
     },
     F = !1,
@@ -267,13 +267,13 @@ var u = (function () {
                 var t = this;
                 if ((void 0 === e && (e = 250), !F)) {
                     F = !0;
-                    var r = L(e);
-                    M(function () {
+                    var r = R(e);
+                    O(function () {
                         var n = !1;
                         try {
-                            n = P();
+                            n = M();
                         } finally {
-                            if (((F = !1), (e = r - L()), !I)) return;
+                            if (((F = !1), (e = r - R()), !I)) return;
                             n ? t.run(1e3) : e > 0 ? t.run(e) : t.start();
                         }
                     });
@@ -285,7 +285,7 @@ var u = (function () {
             (e.prototype.observe = function () {
                 var e = this,
                     t = function () {
-                        return e.observer && e.observer.observe(document.body, R);
+                        return e.observer && e.observer.observe(document.body, D);
                     };
                 document.body ? t() : h.addEventListener("DOMContentLoaded", t);
             }),
@@ -295,7 +295,7 @@ var u = (function () {
                     ((this.stopped = !1),
                     (this.observer = new MutationObserver(this.listener)),
                     this.observe(),
-                    D.forEach(function (t) {
+                    L.forEach(function (t) {
                         return h.addEventListener(t, e.listener, !0);
                     }));
             }),
@@ -303,7 +303,7 @@ var u = (function () {
                 var e = this;
                 this.stopped ||
                     (this.observer && this.observer.disconnect(),
-                    D.forEach(function (t) {
+                    L.forEach(function (t) {
                         return h.removeEventListener(t, e.listener, !0);
                     }),
                     (this.stopped = !0));
@@ -314,10 +314,10 @@ var u = (function () {
     j = function (e) {
         !I && e > 0 && N.start(), (I += e) || N.stop();
     },
-    V = (function () {
+    B = (function () {
         function e(e, t) {
             (this.target = e),
-                (this.observedBox = t || i.CONTENT_BOX),
+                (this.observedBox = t || o.CONTENT_BOX),
                 (this.lastReportedSize = { inlineSize: 0, blockSize: 0 });
         }
         return (
@@ -326,7 +326,7 @@ var u = (function () {
                     t = E(this.target, this.observedBox, !0);
                 return (
                     c((e = this.target)) ||
-                        p(e) ||
+                        d(e) ||
                         "inline" !== getComputedStyle(e).display ||
                         (this.lastReportedSize = t),
                     this.lastReportedSize.inlineSize !== t.inlineSize || this.lastReportedSize.blockSize !== t.blockSize
@@ -335,40 +335,40 @@ var u = (function () {
             e
         );
     })(),
-    B = function (e, t) {
+    $ = function (e, t) {
         (this.activeTargets = []),
             (this.skippedTargets = []),
             (this.observationTargets = []),
             (this.observer = e),
             (this.callback = t);
     },
-    U = new WeakMap(),
-    K = function (e, t) {
+    K = new WeakMap(),
+    V = function (e, t) {
         for (var r = 0; r < e.length; r += 1) if (e[r].target === t) return r;
         return -1;
     },
-    $ = (function () {
+    U = (function () {
         function e() {}
         return (
             (e.connect = function (e, t) {
-                var r = new B(e, t);
-                U.set(e, r);
+                var r = new $(e, t);
+                K.set(e, r);
             }),
             (e.observe = function (e, t, r) {
-                var n = U.get(e),
-                    i = 0 === n.observationTargets.length;
-                0 > K(n.observationTargets, t) &&
-                    (i && a.push(n), n.observationTargets.push(new V(t, r && r.box)), j(1), N.schedule());
+                var n = K.get(e),
+                    o = 0 === n.observationTargets.length;
+                0 > V(n.observationTargets, t) &&
+                    (o && a.push(n), n.observationTargets.push(new B(t, r && r.box)), j(1), N.schedule());
             }),
             (e.unobserve = function (e, t) {
-                var r = U.get(e),
-                    n = K(r.observationTargets, t),
-                    i = 1 === r.observationTargets.length;
-                n >= 0 && (i && a.splice(a.indexOf(r), 1), r.observationTargets.splice(n, 1), j(-1));
+                var r = K.get(e),
+                    n = V(r.observationTargets, t),
+                    o = 1 === r.observationTargets.length;
+                n >= 0 && (o && a.splice(a.indexOf(r), 1), r.observationTargets.splice(n, 1), j(-1));
             }),
             (e.disconnect = function (e) {
                 var t = this,
-                    r = U.get(e);
+                    r = K.get(e);
                 r.observationTargets.slice().forEach(function (r) {
                     return t.unobserve(e, r.target);
                 }),
@@ -385,7 +385,7 @@ var u = (function () {
                 throw TypeError(
                     "Failed to construct 'ResizeObserver': The callback provided as parameter 1 is not a function.",
                 );
-            $.connect(this, e);
+            U.connect(this, e);
         }
         return (
             (e.prototype.observe = function (e, t) {
@@ -393,25 +393,25 @@ var u = (function () {
                     throw TypeError(
                         "Failed to execute 'observe' on 'ResizeObserver': 1 argument required, but only 0 present.",
                     );
-                if (!d(e))
+                if (!p(e))
                     throw TypeError(
                         "Failed to execute 'observe' on 'ResizeObserver': parameter 1 is not of type 'Element",
                     );
-                $.observe(this, e, t);
+                U.observe(this, e, t);
             }),
             (e.prototype.unobserve = function (e) {
                 if (0 == arguments.length)
                     throw TypeError(
                         "Failed to execute 'unobserve' on 'ResizeObserver': 1 argument required, but only 0 present.",
                     );
-                if (!d(e))
+                if (!p(e))
                     throw TypeError(
                         "Failed to execute 'unobserve' on 'ResizeObserver': parameter 1 is not of type 'Element",
                     );
-                $.unobserve(this, e);
+                U.unobserve(this, e);
             }),
             (e.prototype.disconnect = function () {
-                $.disconnect(this);
+                U.disconnect(this);
             }),
             (e.toString = function () {
                 return "function ResizeObserver () { [polyfill code] }";

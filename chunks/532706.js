@@ -1,6 +1,6 @@
 var n = e(739305),
     o = e(304052).findLast,
-    i = n.aTypedArray;
+    a = n.aTypedArray;
 (0, n.exportTypedArrayMethod)("findLast", function (r) {
-    return o(i(this), r, arguments.length > 1 ? arguments[1] : void 0);
+    return o(a(this), r, arguments.length > 1 ? arguments[1] : void 0);
 });

@@ -1,4 +1,4 @@
-e.exports = {
+_.exports = {
     iE: "wrapper__926d7",
     P0: "iconWrapper__926d7",
     y7: "disableInteractions__926d7",

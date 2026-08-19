@@ -31,7 +31,7 @@ let O = {
     },
     R = [],
     L = [];
-class D {
+class y {
     items = [];
     cachedVisible = null;
     cachedHidden = null;
@@ -60,7 +60,7 @@ class D {
         (this.cachedVisible = null), (this.cachedHidden = null);
     }
 }
-let y = new Map(),
+let D = new Map(),
     v = new Map(),
     b = new Map(),
     M = new Map();
@@ -84,12 +84,12 @@ function K(e) {
 }
 function $(e, t) {
     let n = e.get(t);
-    return null == n && ((n = new D()), e.set(t, n)), n;
+    return null == n && ((n = new y()), e.set(t, n)), n;
 }
 function z(e) {
     return { userId: e.user_id, sessionId: e.session_id, nonce: e.nonce };
 }
-function q(e) {
+function Z(e) {
     var t;
     let n,
         {
@@ -112,12 +112,12 @@ function q(e) {
     let S = (0, T.H)(o),
         O = 0 === (null != S ? (b.get(S)?.getItems("all") ?? R) : R).length,
         L = (M.get(o.id)?.getItems("all") ?? R).find((e) => e.applicationId === r),
-        D = A.map((e) => e.userId),
+        y = A.map((e) => e.userId),
         w = d.default.getId(),
-        G = D.some((e) => e === w),
+        G = y.some((e) => e === w),
         x = A.find((e) => e.userId === w)?.sessionId,
         k = A.some((e) => (0, p.S)(e)),
-        F = y.get(r),
+        F = D.get(r),
         V = U.get(P(S ?? null, r)),
         B = V?.launchParams,
         W = {
@@ -126,14 +126,14 @@ function q(e) {
             launchId: s,
             compositeInstanceId: l,
             url: m,
-            userIds: new Set(D),
+            userIds: new Set(y),
             participants: A,
             contentClassification: I,
             referrerId: F?.referrerId ?? B?.referrerId,
             customId: F?.customId ?? B?.customId,
             proxyTicket: V?.proxyTicket,
         };
-    G && null != F && y.set(F.applicationId, { ...F, ...W, proxyTicket: W.proxyTicket ?? F.proxyTicket }),
+    G && null != F && D.set(F.applicationId, { ...F, ...W, proxyTicket: W.proxyTicket ?? F.proxyTicket }),
         null != F &&
         o.id === F.location.id &&
         r === F.applicationId &&
@@ -159,9 +159,9 @@ function q(e) {
                           } = e,
                           R = (0, f.Ay)(t),
                           L = d.default.getSessionId();
-                      if (null == R || null == L || y.get(t)?.location.id === s.id) return;
-                      let D = (0, T.H)(s),
-                          v = c.A.getChannel(D),
+                      if (null == R || null == L || D.get(t)?.location.id === s.id) return;
+                      let y = (0, T.H)(s),
+                          v = c.A.getChannel(y),
                           b = v?.getGuildId();
                       if (null == _.default.getCurrentUser() || (null == b && !v?.isPrivate())) return;
                       i = s;
@@ -179,7 +179,7 @@ function q(e) {
                           proxyTicket: S,
                           renderInFramePool: O,
                       };
-                      y.set(t, M),
+                      D.set(t, M),
                           E._.dispatch(C.jej.OPEN_EMBEDDED_ACTIVITY, {
                               location: s,
                               applicationId: t,
@@ -197,7 +197,7 @@ function q(e) {
                               a.h.wait(() => {
                                   a.h.dispatch({ type: "ACTIVITY_POPOUT_WINDOW_OPEN" });
                               }))
-                            : (j = D !== u.Ay.getChannelId() || (0, g.A)(D) ? N.Gd.PIP : N.Gd.PANEL),
+                            : (j = y !== u.Ay.getChannelId() || (0, g.A)(y) ? N.Gd.PIP : N.Gd.PANEL),
                           H.set(
                               (function (e, t) {
                                   return `${e}:${t}`;
@@ -219,17 +219,17 @@ function q(e) {
                       renderInFramePool: B?.renderInFramePool,
                   }),
               Q({ channelId: S ?? null, applicationId: r })),
-        (t = D.length > 0 ? W : null),
+        (t = y.length > 0 ? W : null),
         $(M, o.id).upsert(r, o.id, t),
         null != (n = (0, T.H)(o)) && ($(b, n).upsert(r, o.id, t), $(v, K((0, T.D)(o))).upsert(r, o.id, t));
 }
-function Z(e) {
+function q(e) {
     e.activity_instances?.forEach((e) => {
-        q(e);
+        Z(e);
     });
 }
 function X(e) {
-    y.delete(e.applicationId), E._.dispatch(C.jej.RELEASE_ACTIVITY_WEB_VIEW);
+    D.delete(e.applicationId), E._.dispatch(C.jej.RELEASE_ACTIVITY_WEB_VIEW);
 }
 function Q(e) {
     let { applicationId: t, channelId: n } = e;
@@ -273,13 +273,13 @@ class J extends r.Ay.PersistedStore {
         (e) => (delete e.surfacesToShowNewActivityIndicator, { ...e, dateRangesForSurfaces: {} }),
     ];
     getSelfEmbeddedActivityForChannel(e) {
-        return null == e ? null : (Array.from(y.values()).find((t) => (0, T.H)(t.location) === e) ?? null);
+        return null == e ? null : (Array.from(D.values()).find((t) => (0, T.H)(t.location) === e) ?? null);
     }
     getSelfEmbeddedActivityForLocation(e) {
-        return null == e ? null : (Array.from(y.values()).find((t) => t.location.id === e.id) ?? null);
+        return null == e ? null : (Array.from(D.values()).find((t) => t.location.id === e.id) ?? null);
     }
     getSelfEmbeddedActivities() {
-        return y;
+        return D;
     }
     getEmbeddedActivitiesForGuild(e) {
         return v.get(e)?.getItems("visible") ?? R;
@@ -393,9 +393,9 @@ let ee = new J(a.h, {
         },
         CONNECTION_OPEN_SUPPLEMENTAL: function (e) {
             let { guilds: t } = e;
-            b.clear(), v.clear(), M.clear(), t.forEach((e) => Z(e));
+            b.clear(), v.clear(), M.clear(), t.forEach((e) => q(e));
             let n = d.default.getId();
-            for (let e of Array.from(y.values()))
+            for (let e of Array.from(D.values()))
                 ee
                     .getEmbeddedActivitiesForLocationIncludingHidden(e.location)
                     .some(
@@ -404,7 +404,7 @@ let ee = new J(a.h, {
         },
         GUILD_CREATE: function (e) {
             let { guild: t } = e;
-            Z(t);
+            q(t);
         },
         CHANNEL_DELETE: function (e) {
             let { channel: t } = e,
@@ -438,9 +438,9 @@ let ee = new J(a.h, {
         },
         EMBEDDED_ACTIVITY_UPDATE_CONNECTED_PROXY_TICKET: function (e) {
             let { applicationId: t, proxyTicket: n } = e,
-                i = y.get(t);
+                i = D.get(t);
             if (null == i) return !1;
-            y.set(t, { ...i, proxyTicket: n });
+            D.set(t, { ...i, proxyTicket: n });
         },
         EMBEDDED_ACTIVITY_SET_PROXY_TICKET_REFRESHING: function (e) {
             let { applicationId: t, refreshing: n } = e;
@@ -460,8 +460,8 @@ let ee = new J(a.h, {
         },
         EMBEDDED_ACTIVITY_CLOSE: function (e) {
             let { applicationId: t } = e,
-                n = y.get(t);
-            y.delete(t), n?.location.id === i?.id && (i = void 0);
+                n = D.get(t);
+            D.delete(t), n?.location.id === i?.id && (i = void 0);
         },
         EMBEDDED_ACTIVITY_UPDATE_POPOUT_WINDOW_LAYOUT: function (e) {
             let { layout: t } = e;
@@ -469,19 +469,19 @@ let ee = new J(a.h, {
         },
         EMBEDDED_ACTIVITY_UPDATE_V2: function (e) {
             let { instance: t } = e;
-            q(t);
+            Z(t);
         },
         LOCAL_ACTIVITY_UPDATE: function (e) {
             let { activity: t } = e;
             if (null == t) return !1;
-            let n = y.get(t.application_id ?? "");
+            let n = D.get(t.application_id ?? "");
             if (null == n) return !1;
-            y.set(n.applicationId, { ...n });
+            D.set(n.applicationId, { ...n });
         },
         EMBEDDED_ACTIVITY_SET_CONFIG: function (e) {
             let { applicationId: t, config: n } = e,
-                i = y.get(t);
-            null != i && y.set(i.applicationId, { ...i, config: n });
+                i = D.get(t);
+            null != i && D.set(i.applicationId, { ...i, config: n });
         },
         EMBEDDED_ACTIVITY_FETCH_SHELF: function (e) {
             let { guildId: t } = e,

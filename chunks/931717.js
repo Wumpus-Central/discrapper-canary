@@ -1,7 +1,7 @@
 let t = /^[0-9]+$/,
-    n = (e, n) => {
-        let i = t.test(e),
-            r = t.test(n);
-        return i && r && ((e *= 1), (n *= 1)), e === n ? 0 : i && !r ? -1 : r && !i ? 1 : e < n ? -1 : 1;
+    r = (e, r) => {
+        let n = t.test(e),
+            o = t.test(r);
+        return n && o && ((e *= 1), (r *= 1)), e === r ? 0 : n && !o ? -1 : o && !n ? 1 : e < r ? -1 : 1;
     };
-e.exports = { compareIdentifiers: n, rcompareIdentifiers: (e, t) => n(t, e) };
+e.exports = { compareIdentifiers: r, rcompareIdentifiers: (e, t) => r(t, e) };

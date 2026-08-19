@@ -1,46 +1,46 @@
 "use strict";
-var r =
+var n =
         Object.assign ||
         function (e) {
             for (var t = 1; t < arguments.length; t++) {
-                var n = arguments[t];
-                for (var r in n) Object.prototype.hasOwnProperty.call(n, r) && (e[r] = n[r]);
+                var r = arguments[t];
+                for (var n in r) Object.prototype.hasOwnProperty.call(r, n) && (e[n] = r[n]);
             }
             return e;
         },
-    i = (function () {
+    o = (function () {
         function e(e, t) {
-            for (var n = 0; n < t.length; n++) {
-                var r = t[n];
-                (r.enumerable = r.enumerable || !1),
-                    (r.configurable = !0),
-                    "value" in r && (r.writable = !0),
-                    Object.defineProperty(e, r.key, r);
+            for (var r = 0; r < t.length; r++) {
+                var n = t[r];
+                (n.enumerable = n.enumerable || !1),
+                    (n.configurable = !0),
+                    "value" in n && (n.writable = !0),
+                    Object.defineProperty(e, n.key, n);
             }
         }
-        return function (t, n, r) {
-            return n && e(t.prototype, n), r && e(t, r), t;
+        return function (t, r, n) {
+            return r && e(t.prototype, r), n && e(t, n), t;
         };
     })(),
-    a = n(582128),
-    o = n(518118),
-    s = n(848822);
+    i = r(582128),
+    a = r(518118),
+    s = r(848822);
 e.exports = function (e) {
     var t = (function (t) {
         if ("function" != typeof t && null !== t)
             throw TypeError("Super expression must either be null or a function, not " + typeof t);
-        function n() {
-            if (!(this instanceof n)) throw TypeError("Cannot call a class as a function");
-            var e = (n.__proto__ || Object.getPrototypeOf(n)).apply(this, arguments);
+        function r() {
+            if (!(this instanceof r)) throw TypeError("Cannot call a class as a function");
+            var e = (r.__proto__ || Object.getPrototypeOf(r)).apply(this, arguments);
             if (!this) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
             return e && ("object" == typeof e || "function" == typeof e) ? e : this;
         }
         return (
-            (n.prototype = Object.create(t && t.prototype, {
-                constructor: { value: n, enumerable: !1, writable: !0, configurable: !0 },
+            (r.prototype = Object.create(t && t.prototype, {
+                constructor: { value: r, enumerable: !1, writable: !0, configurable: !0 },
             })),
-            t && (Object.setPrototypeOf ? Object.setPrototypeOf(n, t) : (n.__proto__ = t)),
-            i(n, [
+            t && (Object.setPrototypeOf ? Object.setPrototypeOf(r, t) : (r.__proto__ = t)),
+            o(r, [
                 {
                     key: "componentWillUnmount",
                     value: function () {
@@ -63,12 +63,12 @@ e.exports = function (e) {
                     key: "attachProps",
                     value: function (e) {
                         var t = this,
-                            n = this._propsAnimated;
-                        (this._propsAnimated = new o(e, function () {
+                            r = this._propsAnimated;
+                        (this._propsAnimated = new a(e, function () {
                             !1 === s.current(t.componentRef, t._propsAnimated.__getAnimatedValue(), t) &&
                                 t.forceUpdate();
                         })),
-                            n && n.__detach();
+                            r && r.__detach();
                     },
                 },
                 {
@@ -81,18 +81,18 @@ e.exports = function (e) {
                     key: "render",
                     value: function () {
                         var t = this,
-                            n = this._propsAnimated.__getValue(),
-                            i = n.style,
-                            o = (function (e, t) {
-                                var n = {};
-                                for (var r in e)
-                                    !(t.indexOf(r) >= 0) && Object.prototype.hasOwnProperty.call(e, r) && (n[r] = e[r]);
-                                return n;
-                            })(n, ["style"]);
-                        return a.createElement(
+                            r = this._propsAnimated.__getValue(),
+                            o = r.style,
+                            a = (function (e, t) {
+                                var r = {};
+                                for (var n in e)
+                                    !(t.indexOf(n) >= 0) && Object.prototype.hasOwnProperty.call(e, n) && (r[n] = e[n]);
+                                return r;
+                            })(r, ["style"]);
+                        return i.createElement(
                             e,
-                            r({}, o, {
-                                style: s.transformStyles(i),
+                            n({}, a, {
+                                style: s.transformStyles(o),
                                 ref: function (e) {
                                     t.componentRef = e;
                                 },
@@ -108,12 +108,12 @@ e.exports = function (e) {
                     },
                 },
             ]),
-            n
+            r
         );
-    })(a.Component);
+    })(i.Component);
     return (
         (t.propTypes = {
-            style: function (t, n, r) {
+            style: function (t, r, n) {
                 if (!e.propTypes) return;
             },
         }),

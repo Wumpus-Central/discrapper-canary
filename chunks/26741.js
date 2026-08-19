@@ -1,4 +1,4 @@
-n.d(t, { $s: () => f, J_: () => x, P9: () => m, cM: () => p, dX: () => g, nK: () => E, pZ: () => N, z6: () => C });
+n.d(t, { $s: () => f, J_: () => x, P9: () => g, cM: () => p, dX: () => m, nK: () => E, pZ: () => N, z6: () => C });
 var l,
     i = n(582128),
     s = n(562708),
@@ -12,17 +12,17 @@ var l,
 function A(e) {
     return Object.keys(d.A.getVoiceStatesForChannel(e)).length;
 }
-function m(e) {
+function g(e) {
     let { guildId: t, channelId: n, bannerHash: l } = e,
         [d, c] = i.useState(!1),
         u = i.useRef(null),
         h = (0, r.K)(c, 0.1),
-        m = `${n}:${l}`;
+        g = `${n}:${l}`;
     return (
         i.useEffect(() => {
             d &&
-                u.current !== m &&
-                ((u.current = m),
+                u.current !== g &&
+                ((u.current = g),
                 (function (e) {
                     let { guildId: t, channelId: n, bannerHash: l } = e;
                     (0, a.x)({
@@ -37,11 +37,11 @@ function m(e) {
                         },
                     });
                 })({ guildId: t, channelId: n, bannerHash: l }));
-        }, [d, m, t, n, l]),
+        }, [d, g, t, n, l]),
         h
     );
 }
-function g(e) {
+function m(e) {
     let { guildId: t, channelId: n } = e,
         [l, d] = i.useState(!1),
         c = i.useRef(null),
