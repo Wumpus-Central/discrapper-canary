@@ -84,7 +84,7 @@
     border-inline-start: 1px solid var(--background-base-lower);
     border-top: 1px solid var(--background-base-lower);
     bottom: 0;
-    filter: drop-shadow(0 8px 40px var(--opacity-black-32));
+    box-shadow: 0 8px 40px var(--opacity-black-52);
     inset-inline-end: 0;
     position: absolute;
     top: 0;
@@ -106,6 +106,10 @@
 
 .chatTarget__01ae2 {
     background-color: var(--background-base-lowest)
+}
+
+.chatTarget__01ae2.floating__01ae2 {
+    box-shadow: none
 }
 
 .chatLayerWrapper__01ae2 {
@@ -157,4 +161,4 @@
     width: 580px
 }
 
-/*# sourceMappingURL=668458.175f3b8bd61f30b0.css.map*/
+/*# sourceMappingURL=668458.4a4dd9299f9cb63d.css.map*/
