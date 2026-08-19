@@ -21,11 +21,11 @@ var t = i(477900),
     A = i.n(N),
     C = i(794248),
     R = i(331322),
-    _ = i(834730),
-    v = i(890856),
+    v = i(834730),
+    _ = i(890856),
     P = i(619517),
     M = i(946356),
-    b = i(259853);
+    b = i(981006);
 function S(e) {
     let { applicationName: a, applicationIcon: i } = e;
     return (0, t.jsxs)(R.B, {
@@ -35,7 +35,7 @@ function S(e) {
             null != i
                 ? (0, t.jsx)(P.Ay, { width: 16, height: 16, src: i, className: b.In })
                 : (0, t.jsx)("div", { className: b.Fi }),
-            (0, t.jsx)(_.E, { variant: "text-xs/medium", children: a }),
+            (0, t.jsx)(v.E, { variant: "text-xs/medium", children: a }),
         ],
     });
 }
@@ -53,7 +53,7 @@ function k(e) {
     })(o),
     null == d)
         ? null
-        : (0, t.jsx)(v.s, {
+        : (0, t.jsx)(_.s, {
               onClick: () => {
                   c({ action: "PRESS_APPLICATION_WIDGET_PREVIEW", applicationId: o }), r?.();
               },
@@ -76,15 +76,15 @@ var w = i(403581),
     L = i(448766),
     V = i(326009),
     G = i(375708),
-    T = i(995919),
-    y = i(943919);
+    T = i(892572),
+    y = i(564118);
 function B(e) {
     let { header: a } = e;
     return (0, t.jsxs)("div", {
         className: y.wx,
         children: [
             (0, t.jsx)(w.t, { className: y.nr, size: "xxs", color: W.A.colors.ICON_DEFAULT }),
-            (0, t.jsx)(_.E, { className: y.TK, variant: "text-xs/medium", lineClamp: 1, children: a }),
+            (0, t.jsx)(v.E, { className: y.TK, variant: "text-xs/medium", lineClamp: 1, children: a }),
         ],
     });
 }
@@ -93,27 +93,32 @@ function F(e) {
     return (0, t.jsxs)("div", {
         className: y.PY,
         children: [
+            (0, t.jsx)(B, { header: a }),
             (0, t.jsxs)("div", {
-                className: y.rD,
+                className: y.eo,
                 children: [
-                    (0, t.jsx)(B, { header: a }),
-                    (0, t.jsx)(D.D, {
-                        className: A()(y.CH, T.Y),
-                        variant: "heading-sm/semibold",
-                        color: "text-default",
-                        lineClamp: 1,
-                        children: (0, L.j)(i.title),
+                    (0, t.jsxs)("div", {
+                        className: y.rD,
+                        children: [
+                            (0, t.jsx)(D.D, {
+                                className: A()(y.CH, T.Y),
+                                variant: "heading-sm/semibold",
+                                color: "text-default",
+                                lineClamp: 2,
+                                children: (0, L.j)(i.title),
+                            }),
+                            (0, t.jsx)(v.E, {
+                                className: y.G6,
+                                variant: "text-xs/normal",
+                                color: "text-subtle",
+                                lineClamp: 1,
+                                children: G.intl.string(G.t["8L/eYB"]),
+                            }),
+                        ],
                     }),
-                    (0, t.jsx)(_.E, {
-                        className: y.G6,
-                        variant: "text-xs/normal",
-                        color: "text-subtle",
-                        lineClamp: 1,
-                        children: G.intl.string(G.t["8L/eYB"]),
-                    }),
+                    null != i.image ? (0, t.jsx)(V.N, { className: y.N4, userId: n, image: i.image }) : null,
                 ],
             }),
-            null != i.image ? (0, t.jsx)(V.N, { className: y.N4, userId: n, image: i.image }) : null,
         ],
     });
 }
@@ -141,7 +146,7 @@ function z(e) {
         className: y.$R,
         children: [
             (0, t.jsx)(B, { header: a }),
-            (0, t.jsx)(_.E, {
+            (0, t.jsx)(v.E, {
                 className: y.VC,
                 variant: "text-xs/medium",
                 color: "text-subtle",
@@ -184,7 +189,7 @@ function U(e) {
 var Y = i(321108),
     H = i(939496),
     K = i(996988),
-    Q = i(107562);
+    Q = i(580065);
 function $(e) {
     var a;
     let i,
@@ -248,7 +253,7 @@ function $(e) {
             children: (0, t.jsxs)(M.A.Overlay, {
                 className: A()(Q.WH, r),
                 children: [
-                    (0, t.jsx)(_.E, {
+                    (0, t.jsx)(v.E, {
                         variant: p ? "text-sm/medium" : "text-xs/medium",
                         children: G.intl.string(G.t.JjiwFx),
                     }),
@@ -281,7 +286,7 @@ function Z(e) {
             n &&
                 (0, t.jsx)("div", {
                     className: Q.pp,
-                    children: (0, t.jsxs)(_.E, { variant: "text-xs/medium", className: Q.gq, children: ["+", s] }),
+                    children: (0, t.jsxs)(v.E, { variant: "text-xs/medium", className: Q.gq, children: ["+", s] }),
                 }),
         ],
     });
@@ -302,10 +307,10 @@ function ee(e) {
             return { openModal: s, onExpand: l };
         })({ user: a, widgets: i, ...N }),
         R = n.useMemo(() => i.filter((e) => e instanceof I.R), [i]),
-        _ = n.useMemo(() => R.map((e) => e.applicationId), [R]),
-        v = (0, m.A)(_),
-        P = n.useMemo(() => new Map(v.filter(x.Vq).map((e) => [e.id, e])), [v]),
-        M = (0, u.A)(_),
+        v = n.useMemo(() => R.map((e) => e.applicationId), [R]),
+        _ = (0, m.A)(v),
+        P = n.useMemo(() => new Map(_.filter(x.Vq).map((e) => [e.id, e])), [_]),
+        M = (0, u.A)(v),
         b = n.useMemo(() => new Map(M.map((e) => [e.application_id, e])), [M]),
         { data: S } = (0, p.P)(a.id),
         w = n.useMemo(() => new Map(S?.map((e) => [e.application_id, e])), [S]),
