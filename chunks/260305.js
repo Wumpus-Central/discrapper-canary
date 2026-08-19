@@ -2747,12 +2747,12 @@ function tB(e) {
 }
 var tU = n(120426),
     tV = n(775602),
-    tF = n(147248),
-    tW = n(363195),
-    tq = n(885386),
-    t$ = n(940107);
-let tz = ["custom-theme-background", "custom-client-theme"];
-var tX = n(171936);
+    tF = n(873727),
+    tW = n(147248),
+    tq = n(363195),
+    t$ = n(885386),
+    tz = n(940107),
+    tX = n(171936);
 function tK(e) {
     let t,
         n,
@@ -2766,21 +2766,10 @@ function tK(e) {
         [v, k] = i.useState(null),
         j = (0, s.A)(m, p),
         y = j?.id ?? null;
-    (t = (0, b.bG)([tW.A], () =>
-        (function (e) {
-            switch (e) {
-                case "light":
-                case "midnight":
-                case "darker":
-                    return e;
-                default:
-                    return "dark";
-            }
-        })(tW.A.theme),
-    )),
-        (n = (0, b.bG)([tF.A], () => tF.A.gradientPreset)),
+    (t = (0, b.bG)([tq.A], () => (0, tF.x4)(tq.A.theme))),
+        (n = (0, b.bG)([tW.A], () => tW.A.gradientPreset)),
         (l = (0, b.bG)([tV.Ay], () => tV.Ay.useReducedMotion)),
-        (r = tq.hH.useSetting()),
+        (r = t$.hH.useSetting()),
         (o = i.useRef(null)),
         (c = i.useRef(0)),
         (d = i.useCallback(() => {
@@ -2789,22 +2778,11 @@ function tK(e) {
             let n = {
                 revision: ++c.current,
                 baseTheme: t,
-                customTheme: (function () {
-                    let e = document.documentElement,
-                        t = tz.filter((t) => e.classList.contains(t));
-                    if (0 === t.length) return null;
-                    let n = window.getComputedStyle(e),
-                        l = {};
-                    for (let e = 0; e < n.length; e++) {
-                        let t = n.item(e);
-                        t.startsWith("--custom-") && (l[t] = n.getPropertyValue(t).trim());
-                    }
-                    return { classNames: t, variables: l };
-                })(),
+                customTheme: (0, tF.Lq)(),
                 messageDisplayCompact: r,
                 reducedMotion: l,
             };
-            (0, t$.W)(e, "set-env", n, {
+            (0, tz.W)(e, "set-env", n, {
                 timeoutMs: 6e3,
                 retryMs: 250,
                 sourceMatch: "origin",
