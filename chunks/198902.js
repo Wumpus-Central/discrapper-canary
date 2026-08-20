@@ -1,1 +1,3 @@
-s.exports = { OkmBx0: ["Temas"] };
+e.exports = JSON.parse(
+    '{"B9PPxE":["Este contenido est\xe1 oculto actualmente."],"Y9ZOp8":["Este contenido est\xe1 visible actualmente."],"pmIitA":["Juegos con dinero real"],"foQaI1":["Gestionar contenido patrocinado"],"z/MfaY":["Discord te permite controlar si ves contenido patrocinado asociado a ciertos temas. Si ocultas un tema a continuaci\xf3n, no ver\xe1s contenido patrocinado de ese tema. La Pol\xedtica de anuncios de Discord controlar\xe1 parte del contenido que ves independientemente de estas selecciones. ",[8,"$link",["M\xe1s informaci\xf3n"],[[1,"helpdeskArticle"]]]],"yyhs9L":["Gestionar contenido patrocinado"],"OkmBx0":["Temas"],"tLA5Ft":["Gestiona c\xf3mo personalizamos el contenido patrocinado y controla los temas de anuncios que ves."],"i8WB+Y":["Preferencias de contenido patrocinado"],"XUj46U":["Contenido patrocinado"]}',
+);

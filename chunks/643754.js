@@ -1,1 +1,3 @@
-p.exports = { OkmBx0: ["Emner"] };
+e.exports = JSON.parse(
+    '{"B9PPxE":["Dette indhold er i \xf8jeblikket skjult."],"Y9ZOp8":["Dette indhold vises i \xf8jeblikket."],"pmIitA":["Spil om rigtige penge"],"foQaI1":["Administrer sponsoreret indhold"],"z/MfaY":["Discord giver dig mulighed for at administrere visningen af sponsoreret indhold, der er knyttet til visse emner. Hvis du skjuler et emne nedenfor, vil du f\xe5 vist noget sponsoreret indhold fra emnet. Discords reklamepolitik vil administrere noget af det indhold, du ser - uanset hvad du v\xe6lger. ",[8,"$link",["F\xe5 mere at vide"],[[1,"helpdeskArticle"]]]],"yyhs9L":["Administrer sponsoreret indhold"],"OkmBx0":["Emner"],"tLA5Ft":["Administrer, hvordan vi tilpasser sponsoreret indhold, og administrer selv det reklameindhold, du ser."],"i8WB+Y":["Pr\xe6ferencer for sponsoreret indhold"],"XUj46U":["Sponsoreret indhold"]}',
+);

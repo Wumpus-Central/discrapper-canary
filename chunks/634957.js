@@ -1,1 +1,3 @@
-p.exports = JSON.parse('{"OkmBx0":["\xc4mnen"]}');
+n.exports = JSON.parse(
+    '{"B9PPxE":["Det h\xe4r inneh\xe5llet d\xf6ljs f\xf6r n\xe4rvarande."],"Y9ZOp8":["Det h\xe4r inneh\xe5llet visas f\xf6r n\xe4rvarande."],"pmIitA":["Spel om riktiga pengar"],"foQaI1":["Hantera sponsrat inneh\xe5ll"],"z/MfaY":["Discord l\xe5ter dig v\xe4lja om du vill se sponsrat inneh\xe5ll kopplat till vissa \xe4mnen. Om du d\xf6ljer ett \xe4mne nedan ser du inget sponsrat inneh\xe5ll fr\xe5n det \xe4mnet. Discords annonspolicy kommer att styra visst inneh\xe5ll som du ser oavsett vilka inst\xe4llningar du v\xe4ljer. ",[8,"$link",["L\xe4s mer"],[[1,"helpdeskArticle"]]]],"yyhs9L":["Hantera sponsrat inneh\xe5ll"],"OkmBx0":["\xc4mnen"],"tLA5Ft":["Hantera hur vi anpassar sponsrat inneh\xe5ll och styr \xf6ver vilka annons\xe4mnen du ser."],"i8WB+Y":["Inst\xe4llningar f\xf6r sponsrat inneh\xe5ll"],"XUj46U":["Sponsrat inneh\xe5ll"]}',
+);
