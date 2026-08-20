@@ -9,87 +9,87 @@
     z-index: 100
 }
 
-.scrollbar__506b3::-webkit-scrollbar-corner {
+.scrollbar_da3286::-webkit-scrollbar-corner {
     background: none;
     border: none
 }
 
-.scrollbarDefault__506b3 {}
+.scrollbarDefault_da3286 {}
 
-.scrollbarDefault__506b3::-webkit-scrollbar {
-    height: var(--custom-scrollbar-scrollbar-width);
-    width: var(--custom-scrollbar-scrollbar-width)
+.scrollbarDefault_da3286::-webkit-scrollbar {
+    height: var(--custom-scrollbar-scrollbar-width, 14px);
+    width: var(--custom-scrollbar-scrollbar-width, 14px)
 }
 
-.scrollbarDefault__506b3::-webkit-scrollbar-thumb,
-.scrollbarDefault__506b3::-webkit-scrollbar-track {
+.scrollbarDefault_da3286::-webkit-scrollbar-thumb,
+.scrollbarDefault_da3286::-webkit-scrollbar-track {
     background-clip: padding-box;
     border-color: transparent;
-    border-radius: var(--custom-scrollbar-border-radius);
+    border-radius: var(--custom-scrollbar-border-radius, calc(var(--custom-scrollbar-scrollbar-width, 14px)/2));
     border-style: solid;
-    border-width: var(--custom-scrollbar-scrollbar-margin)
+    border-width: var(--custom-scrollbar-scrollbar-margin, 3px)
 }
 
-.scrollbarDefault__506b3::-webkit-scrollbar-thumb {
+.scrollbarDefault_da3286::-webkit-scrollbar-thumb {
     background-color: var(--scrollbar-auto-thumb)
 }
 
-.scrollbarDefault__506b3::-webkit-scrollbar-track {
+.scrollbarDefault_da3286::-webkit-scrollbar-track {
     background-color: var(--scrollbar-auto-track);
     border-width: initial
 }
 
-.scrollbarGhost__506b3 {}
+.scrollbarGhost_da3286 {}
 
-.scrollbarGhost__506b3::-webkit-scrollbar {
-    height: var(--custom-scrollbar-scrollbar-width);
-    width: var(--custom-scrollbar-scrollbar-width)
+.scrollbarGhost_da3286::-webkit-scrollbar {
+    height: var(--custom-scrollbar-scrollbar-width, 14px);
+    width: var(--custom-scrollbar-scrollbar-width, 14px)
 }
 
-.scrollbarGhost__506b3::-webkit-scrollbar-thumb,
-.scrollbarGhost__506b3::-webkit-scrollbar-track {
+.scrollbarGhost_da3286::-webkit-scrollbar-thumb,
+.scrollbarGhost_da3286::-webkit-scrollbar-track {
     background-clip: padding-box;
-    border-radius: var(--custom-scrollbar-border-radius);
+    border-radius: var(--custom-scrollbar-border-radius, calc(var(--custom-scrollbar-scrollbar-width, 14px)/2));
     border-style: solid;
-    border-width: var(--custom-scrollbar-scrollbar-margin)
+    border-width: var(--custom-scrollbar-scrollbar-margin, 3px)
 }
 
-.scrollbarGhost__506b3::-webkit-scrollbar-thumb {
+.scrollbarGhost_da3286::-webkit-scrollbar-thumb {
     background-color: var(--opacity-black-40);
     border-color: transparent
 }
 
-.scrollbarGhost__506b3::-webkit-scrollbar-track {
+.scrollbarGhost_da3286::-webkit-scrollbar-track {
     background-color: var(--opacity-black-8);
     border-color: transparent;
     border-width: initial
 }
 
-.scrollbarGhostHairline__506b3 {}
+.scrollbarGhostHairline_da3286 {}
 
-.scrollbarGhostHairline__506b3::-webkit-scrollbar {
+.scrollbarGhostHairline_da3286::-webkit-scrollbar {
     height: 4px;
     width: 4px
 }
 
-.scrollbarGhostHairline__506b3::-webkit-scrollbar-thumb {
+.scrollbarGhostHairline_da3286::-webkit-scrollbar-thumb {
     background-color: hsl(var(--primary-800-hsl)/.6);
     border-radius: 2px;
     cursor: move
 }
 
-.scrollbarGhostHairline__506b3::-webkit-scrollbar-track {
+.scrollbarGhostHairline_da3286::-webkit-scrollbar-track {
     background-color: transparent;
     border: none
 }
 
-.enable-forced-colors .scrollbar__506b3::-webkit-scrollbar-track {
+.enable-forced-colors .scrollbar_da3286::-webkit-scrollbar-track {
     background-color: Canvas;
     border-radius: 0;
     border-width: 1px
 }
 
-.enable-forced-colors .scrollbar__506b3::-webkit-scrollbar-thumb {
+.enable-forced-colors .scrollbar_da3286::-webkit-scrollbar-thumb {
     background-color: CanvasText;
     border-width: 1px
 }
@@ -153,4 +153,4 @@
     color: var(--interactive-text-default)
 }
 
-/*# sourceMappingURL=770431.9a30055aacca58a6.css.map*/
+/*# sourceMappingURL=186856.2ce8bd0e27a62f69.css.map*/
