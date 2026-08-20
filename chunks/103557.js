@@ -26,60 +26,63 @@ function m(e) {
             showCharacterCount: v,
             showRemainingCharacterCount: w = !0,
             rows: j = 3,
-            inputRef: z,
-            ...C
+            maxRows: z,
+            inputRef: C,
+            ...V
         } = e,
-        { fieldProps: V, props: M } = (0, d.n)(C),
-        { disabled: P } = V,
-        A = (0, b.Y)({ validateOn: "change", error: m, value: t, minLength: s, maxLength: p, defaultDirty: f }),
-        F = o.useMemo(() => {
+        { fieldProps: M, props: P } = (0, d.n)(V),
+        { disabled: A } = M,
+        F = (0, b.Y)({ validateOn: "change", error: m, value: t, minLength: s, maxLength: p, defaultDirty: f }),
+        $ = o.useMemo(() => {
             if (!v || null == p) return 10;
             let e = `${p}`.length;
             return 7.23 * (e += `${p} / `.length) + 10;
         }, [p, v]),
         k = v ? (0, a.jsx)(g.n, { value: t, maxLength: w && null != p ? p : void 0 }) : null;
     return (0, a.jsx)(d.D, {
-        ...V,
+        ...M,
         trailingAuxiliaryContent: k,
-        errorMessage: A.hasError ? (A.errorMessage ?? void 0) : void 0,
+        errorMessage: F.hasError ? (F.errorMessage ?? void 0) : void 0,
         children: (0, a.jsx)(c.F, {
-            validation: A,
-            disabled: P,
+            validation: F,
+            disabled: A,
             children: (0, a.jsx)(i.vN, {
                 children: (0, a.jsx)(y, {
                     autosize: u,
+                    maxRows: z,
                     className: n()(h.Tg, x.qD),
-                    style: { paddingRight: F },
+                    style: { paddingRight: $ },
                     placeholder: r,
                     value: t,
                     autoFocus: l,
                     minLength: s,
                     maxLength: p,
                     rows: j,
-                    disabled: P,
+                    disabled: A,
                     "data-mana-component": "text-area",
-                    ...M,
+                    ...P,
                     onChange: (e) => {
-                        let { onChange: t } = M;
-                        t?.(e.currentTarget.value), A.setShouldValidate(!0);
+                        let { onChange: t } = P;
+                        t?.(e.currentTarget.value), F.setShouldValidate(!0);
                     },
-                    ref: z,
+                    ref: C,
                 }),
             }),
         }),
     });
 }
 function y(e) {
-    let { "aria-labelledby": t, autosize: r, ...l } = e,
-        n = (0, s.xW)(),
-        i = o.useContext(u._),
-        d = r ? p.d : "textarea";
-    return (0, a.jsx)(d, {
-        ...l,
-        id: i?.controlId,
-        "aria-labelledby": t ?? n.titleId,
-        "aria-describedby": i?.describedById,
-        "aria-errormessage": i?.errorMessageId,
-        "aria-invalid": i?.errorMessageId != null,
+    let { "aria-labelledby": t, autosize: r, maxRows: l, ...n } = e,
+        i = (0, s.xW)(),
+        d = o.useContext(u._),
+        c = r ? p.d : "textarea";
+    return (0, a.jsx)(c, {
+        ...n,
+        ...(r ? { maxRows: l } : null),
+        id: d?.controlId,
+        "aria-labelledby": t ?? i.titleId,
+        "aria-describedby": d?.describedById,
+        "aria-errormessage": d?.errorMessageId,
+        "aria-invalid": d?.errorMessageId != null,
     });
 }
