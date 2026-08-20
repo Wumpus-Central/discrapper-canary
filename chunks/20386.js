@@ -21,8 +21,8 @@ function g(e) {
 }
 function h(e) {
     let { projectId: t } = e,
-        n = (0, a.bG)([d.A], () => null != t && d.A.isThinking(t), [t]),
-        r = (0, a.bG)([d.A], () => (null != t ? d.A.getFinishedAt(t) : null), [t]),
+        n = (0, a.bG)([d.Ay], () => null != t && d.Ay.isThinking(t), [t]),
+        r = (0, a.bG)([d.Ay], () => (null != t ? d.Ay.getFinishedAt(t) : null), [t]),
         [s, c] = i.useState(() => (null != r && Date.now() - r >= 6e4 ? r : null));
     i.useEffect(() => {
         if (n || null == r) return;
@@ -43,12 +43,12 @@ function h(e) {
 function p(e) {
     let { guildId: t } = e,
         n = (0, a.bG)(
-            [d.A, c.A],
+            [d.Ay, c.A],
             () =>
-                d.A.getActivityOrderedProjectIds().find((e) => {
+                d.Ay.getActivityOrderedProjectIds().find((e) => {
                     if (!(0, s.X0)(c.A.getProject(e), t)) return !1;
-                    if (d.A.isThinking(e)) return !0;
-                    let n = d.A.getFinishedAt(e);
+                    if (d.Ay.isThinking(e)) return !0;
+                    let n = d.Ay.getFinishedAt(e);
                     return null != n && Date.now() - n < 6e4;
                 }) ?? null,
             [t],

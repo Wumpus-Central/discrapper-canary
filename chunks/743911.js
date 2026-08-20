@@ -309,7 +309,7 @@ function tb(t) {
 }
 function tN(t) {
     let { project: e, onSelect: l, onFork: i } = t,
-        a = (0, c.bG)([H.A], () => H.A.isThinking(e.id), [e.id]),
+        a = (0, c.bG)([H.Ay], () => H.Ay.isThinking(e.id), [e.id]),
         s =
             null == e.updated_at
                 ? null

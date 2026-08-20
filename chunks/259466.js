@@ -1451,7 +1451,7 @@ if (
     n.e("859864").then(n.t.bind(n, 122123, 19));
 let e2 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 new eB.A().log(
-    `[BUILD INFO] Release Channel: ${e2}, Build Number: 597442, Version Hash: c6a3e16550b99c586a15081f05172ea43cdbcfc9`,
+    `[BUILD INFO] Release Channel: ${e2}, Build Number: 597458, Version Hash: 206e2469b486690405582e36ecf22c533421f991`,
 ),
     D.A.setTags({ appContext: G.QCW }),
     eI.A.initBasic(),
@@ -4463,7 +4463,7 @@ function ah(e) {
         E = (0, el.bG)([r1.A], () => r1.A.isBuilderPreviewMobile()),
         A = u && E,
         h = (0, el.bG)([rJ.Ay], () => rJ.Ay.callChatSidebarWidth),
-        I = (0, el.bG)([r2.A], () => r2.A.getSidebarWidth()),
+        I = (0, el.bG)([r2.Ay], () => r2.Ay.getSidebarWidth()),
         f = (0, rH.r)(iv.A.modules.chat.RESIZE_HANDLE_WIDTH),
         p = eu.useRef(null),
         T = eu.useRef(null),
@@ -20733,7 +20733,7 @@ let Na = "isHideDevBanner",
                     className: ta()(Nr.Wz, Nr.mr),
                     children: [
                         (0, O.jsx)(Ni, { className: Nr.Kk }),
-                        tT.intl.format(tT.t.uyrfYF, { buildNumber: "597442" }),
+                        tT.intl.format(tT.t.uyrfYF, { buildNumber: "597458" }),
                         (0, O.jsx)(r, {}),
                     ],
                 })

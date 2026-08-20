@@ -2230,7 +2230,7 @@ function td(e) {
                               proposal: e.proposal,
                               interrupted: !0 === e.interrupted,
                               provisionalTodo: e.provisionalTodo,
-                              active: !(0, el.B)(e),
+                              active: !(0, el.BL)(e),
                               todos: e.todos,
                               onApprove: e === o ? l : void 0,
                               ideas: e.ideas,
@@ -2574,12 +2574,12 @@ let tM = "shownVibegrationsFeedbackProjectIds";
 var tL = n(348800);
 function tD(e) {
     let { projectId: t, onRegionCapture: l } = e,
-        s = (0, j.bG)([el.A], () => el.A.getMessages(t), [t]),
+        s = (0, j.bG)([el.Ay], () => el.Ay.getMessages(t), [t]),
         r = (0, j.bG)([o.Ay], () => o.Ay.getConnState(t), [t]),
         c = (0, j.bG)([o.Ay], () => o.Ay.isChatStopped(t), [t]),
-        d = (0, j.bG)([el.A], () => el.A.getProjectUsage(t), [t]),
-        u = (0, j.bG)([el.A], () => el.A.getThinkingActivity(t), [t]),
-        h = (0, j.bG)([el.A], () => el.A.isCompacting(t), [t]),
+        d = (0, j.bG)([el.Ay], () => el.Ay.getProjectUsage(t), [t]),
+        u = (0, j.bG)([el.Ay], () => el.Ay.getThinkingActivity(t), [t]),
+        h = (0, j.bG)([el.Ay], () => el.Ay.isCompacting(t), [t]),
         m = (0, j.bG)([o.Ay], () => o.Ay.getModelSettings(t), [t]),
         p = i.useRef(null),
         f = i.useRef(null),
@@ -2618,8 +2618,8 @@ function tD(e) {
         i.useEffect(
             () => () =>
                 (function (e) {
-                    let t = el.A.getMessages(e).filter(
-                        (e) => "assistant" === e.role && "side_reply" !== e.kind && (0, el.B)(e),
+                    let t = el.Ay.getMessages(e).filter(
+                        (e) => "assistant" === e.role && "side_reply" !== e.kind && (0, el.BL)(e),
                     ).length;
                     !(t < 3) &&
                         ((tR.w.get(tM) ?? []).includes(e) ||
@@ -2662,7 +2662,7 @@ function tD(e) {
         T = i.useMemo(() => {
             for (let e = s.length - 1; e >= 0; e--) {
                 let t = s[e];
-                if ("assistant" === t.role && !(0, el.B)(t)) return t;
+                if ("assistant" === t.role && !(0, el.BL)(t)) return t;
             }
         }, [s]),
         O = null != T,
@@ -2844,7 +2844,7 @@ function tX(e) {
 }
 function tK(e) {
     let { projectId: t } = e,
-        n = (0, j.bG)([el.A], () => el.A.isThinking(t), [t]);
+        n = (0, j.bG)([el.Ay], () => el.Ay.isThinking(t), [t]);
     return (0, a.jsx)("div", { className: tt.MP, "data-active": n, "aria-hidden": !0 });
 }
 var tY = n(120426),
