@@ -1,87 +1,91 @@
-t.d(l, { default: () => h });
-var a = t(477900),
-    n = t(582128),
-    i = t(189213),
-    s = t(834730),
-    r = t(95477),
-    d = t(297264),
-    o = t(821609),
-    c = t(957565),
-    u = t(998939),
-    m = t(295813),
-    x = t(375708),
-    f = t(652140);
-function h(e) {
-    let { projectId: l, request: t, transitionState: h, onClose: j } = e,
-        p = t.connection,
-        b = null == p ? "" : p.label,
-        [v, g] = n.useState({}),
+e.d(l, { default: () => h });
+var a = e(477900),
+    n = e(582128),
+    i = e(189213),
+    s = e(834730),
+    r = e(95477),
+    o = e(297264),
+    c = e(821609),
+    d = e(957565),
+    u = e(998939),
+    m = e(459864),
+    x = e(375708),
+    f = e(652140);
+function h(t) {
+    let { projectId: l, request: e, transitionState: h, onClose: p } = t,
+        j = e.connection,
+        b = null == j ? "" : j.label,
+        [g, v] = n.useState({}),
         [k, C] = n.useState(""),
-        [y, S] = n.useState(""),
-        [_, N] = n.useState(!1),
-        [E, w] = n.useState(!1),
-        [T, q] = n.useState(null),
-        z = n.useCallback((e) => {
-            (0, c.C)(e, () => q(e));
+        [S, _] = n.useState(""),
+        [y, E] = n.useState(!1),
+        [N, T] = n.useState(!1),
+        [w, z] = n.useState(null),
+        P = n.useCallback((t) => {
+            (0, d.C)(t, () => z(t));
         }, []),
-        W = n.useCallback((e, l) => {
-            null != l && (w(!1), g((t) => ({ ...t, [l]: e })));
+        V = n.useCallback((t, l) => {
+            null != l && (T(!1), v((e) => ({ ...e, [l]: t })));
         }, []),
-        Z = t.fields.every((e) => "" !== (v[e.name] ?? "").trim()),
-        A = null == p || ("" !== k.trim() && "" !== y.trim()),
-        J = Z && A && (t.fields.length > 0 || null != p),
-        P = n.useCallback(
-            async (e) => {
-                if ((e.preventDefault(), !J || _)) return;
-                let a = {};
-                t.fields.length > 0 &&
-                    (a.secrets = Object.fromEntries(t.fields.map((e) => [e.name, v[e.name].trim()]))),
-                    null != p &&
-                        (a.connection = {
-                            connection_type: p.connection_type,
+        W = e.fields.map((t) => t.name).filter((t) => "" !== (g[t] ?? "").trim()),
+        Z = null != j && "" !== k.trim() && "" !== S.trim(),
+        A = null != j && !Z && ("" !== k.trim() || "" !== S.trim()),
+        F = !A && (W.length > 0 || Z),
+        J = W.length < e.fields.length || (null != j && !Z),
+        q = n.useCallback(
+            async (t) => {
+                if ((t.preventDefault(), !F || y)) return;
+                let e = {};
+                W.length > 0 && (e.secrets = Object.fromEntries(W.map((t) => [t, g[t].trim()]))),
+                    Z &&
+                        null != j &&
+                        (e.connection = {
+                            connection_type: j.connection_type,
                             client_id: k.trim(),
-                            client_secret: y.trim(),
-                            authorize_url: p.authorize_url,
-                            token_url: p.token_url,
+                            client_secret: S.trim(),
+                            authorize_url: j.authorize_url,
+                            token_url: j.token_url,
                         }),
-                    N(!0),
-                    w(!1);
+                    E(!0),
+                    T(!1);
                 try {
-                    await (0, u.$S)(l, a), (0, u.dv)(l, x.intl.string(m.default.lM98yZ)), await j();
+                    await (0, u.$S)(l, e),
+                        (0, u.dv)(l, x.intl.string(J ? m.default.pu8e3p : m.default.lM98yZ)),
+                        await p();
                 } catch {
-                    w(!0);
+                    T(!0);
                 } finally {
-                    N(!1);
+                    E(!1);
                 }
             },
-            [J, k, y, p, j, l, t.fields, _, v],
+            [F, k, S, j, Z, W, J, p, l, y, g],
         );
     return (0, a.jsx)("form", {
-        onSubmit: P,
+        onSubmit: q,
         children: (0, a.jsx)(i.Modal, {
             transitionState: h,
-            onClose: j,
+            onClose: p,
             title: x.intl.string(m.default.ACvhVC),
             size: "md",
             actions: [
-                { text: x.intl.string(x.t["ETE/oC"]), variant: "secondary", onClick: j, disabled: _ },
+                { text: x.intl.string(x.t["ETE/oC"]), variant: "secondary", onClick: p, disabled: y },
                 {
                     text: x.intl.string(m.default["8SWZaW"]),
                     variant: "primary",
                     type: "submit",
-                    loading: _,
-                    disabled: !J,
+                    loading: y,
+                    disabled: !F,
                 },
             ],
             children: (0, a.jsxs)("div", {
                 className: f._I,
                 children: [
-                    null != t.note && "" !== t.note
+                    null != e.note && "" !== e.note
                         ? (0, a.jsx)(s.E, {
                               variant: "text-sm/normal",
                               color: "text-default",
                               selectable: !0,
-                              children: t.note,
+                              children: e.note,
                           })
                         : null,
                     (0, a.jsx)(s.E, {
@@ -90,29 +94,36 @@ function h(e) {
                         selectable: !0,
                         children: x.intl.string(m.default.p0Ay4J),
                     }),
-                    t.fields.map((e) =>
+                    e.fields.length + +(null != j) > 1
+                        ? (0, a.jsx)(s.E, {
+                              variant: "text-xs/normal",
+                              color: "text-muted",
+                              selectable: !0,
+                              children: x.intl.string(m.default.LpnmXm),
+                          })
+                        : null,
+                    e.fields.map((t) =>
                         (0, a.jsx)(
                             r.k,
                             {
-                                label: e.label,
-                                helperText: null != e.hint && "" !== e.hint ? e.hint : void 0,
-                                name: e.name,
+                                label: t.label,
+                                helperText: null != t.hint && "" !== t.hint ? t.hint : void 0,
+                                name: t.name,
                                 type: "password",
                                 autoComplete: "off",
-                                required: !0,
-                                value: v[e.name] ?? "",
-                                onChange: W,
-                                disabled: _,
+                                value: g[t.name] ?? "",
+                                onChange: V,
+                                disabled: y,
                                 fullWidth: !0,
                             },
-                            e.name,
+                            t.name,
                         ),
                     ),
-                    null != p
+                    null != j
                         ? (0, a.jsxs)("div", {
                               className: f.uJ,
                               children: [
-                                  (0, a.jsx)(d.D, {
+                                  (0, a.jsx)(o.D, {
                                       variant: "heading-sm/semibold",
                                       color: "text-default",
                                       children: x.intl.formatToPlainString(m.default.zqgV1t, { platform: b }),
@@ -140,8 +151,8 @@ function h(e) {
                                                   }),
                                                   (0, a.jsx)("ul", {
                                                       className: f.Dl,
-                                                      children: [p.callback_urls.stable, p.callback_urls.preview].map(
-                                                          (e) =>
+                                                      children: [j.callback_urls.stable, j.callback_urls.preview].map(
+                                                          (t) =>
                                                               (0, a.jsxs)(
                                                                   "li",
                                                                   {
@@ -153,20 +164,20 @@ function h(e) {
                                                                                   variant: "text-xs/normal",
                                                                                   color: "text-default",
                                                                                   selectable: !0,
-                                                                                  children: e,
+                                                                                  children: t,
                                                                               }),
                                                                           }),
-                                                                          (0, a.jsx)(o.$, {
+                                                                          (0, a.jsx)(c.$, {
                                                                               variant: "secondary",
                                                                               size: "sm",
                                                                               text: x.intl.string(
-                                                                                  T === e ? x.t.t5VZ88 : x.t.OpuAlK,
+                                                                                  w === t ? x.t.t5VZ88 : x.t.OpuAlK,
                                                                               ),
-                                                                              onClick: () => z(e),
+                                                                              onClick: () => P(t),
                                                                           }),
                                                                       ],
                                                                   },
-                                                                  e,
+                                                                  t,
                                                               ),
                                                       ),
                                                   }),
@@ -189,12 +200,11 @@ function h(e) {
                                                               }),
                                                               name: "client_id",
                                                               autoComplete: "off",
-                                                              required: !0,
                                                               value: k,
-                                                              onChange: (e) => {
-                                                                  w(!1), C(e);
+                                                              onChange: (t) => {
+                                                                  T(!1), C(t);
                                                               },
-                                                              disabled: _,
+                                                              disabled: y,
                                                               fullWidth: !0,
                                                           }),
                                                           (0, a.jsx)(r.k, {
@@ -204,12 +214,11 @@ function h(e) {
                                                               name: "client_secret",
                                                               type: "password",
                                                               autoComplete: "off",
-                                                              required: !0,
-                                                              value: y,
-                                                              onChange: (e) => {
-                                                                  w(!1), S(e);
+                                                              value: S,
+                                                              onChange: (t) => {
+                                                                  T(!1), _(t);
                                                               },
-                                                              disabled: _,
+                                                              disabled: y,
                                                               fullWidth: !0,
                                                           }),
                                                       ],
@@ -218,10 +227,18 @@ function h(e) {
                                           }),
                                       ],
                                   }),
+                                  A
+                                      ? (0, a.jsx)(s.E, {
+                                            variant: "text-xs/normal",
+                                            color: "text-feedback-critical",
+                                            role: "alert",
+                                            children: x.intl.formatToPlainString(m.default.VqmTFn, { platform: b }),
+                                        })
+                                      : null,
                               ],
                           })
                         : null,
-                    E
+                    N
                         ? (0, a.jsx)(s.E, {
                               variant: "text-xs/normal",
                               color: "text-feedback-critical",
