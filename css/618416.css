@@ -494,6 +494,7 @@
 
 .repliedTextPreview_c19a55 .emoji {
     height: 1.25em;
+    vertical-align: text-top;
     width: 1.25em
 }
 
@@ -3324,4 +3325,4 @@
     transition: padding-left .2s ease
 }
 
-/*# sourceMappingURL=618416.0310e98dbae4ccd2.css.map*/
+/*# sourceMappingURL=618416.2fdf985b9c74599f.css.map*/
