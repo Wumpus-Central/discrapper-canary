@@ -1,0 +1,36 @@
+.previewDmChat__8f086 {
+    min-height: 0;
+    overflow: hidden
+}
+
+.previewDmChat__8f086,
+.previewDmEmpty__8f086 {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column
+}
+
+.previewDmEmpty__8f086 {
+    align-items: center;
+    gap: var(--space-8);
+    justify-content: center;
+    padding: var(--space-16);
+    text-align: center
+}
+
+.previewEmpty__914bb {
+    align-items: center;
+    background: var(--background-gradient-chat, var(--background-base-lower));
+    box-sizing: border-box;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: var(--space-4);
+    justify-content: center;
+    min-height: 0;
+    min-width: 0;
+    padding: var(--space-24);
+    text-align: center
+}
+
+/*# sourceMappingURL=d333be5badb2aa37.css.map*/

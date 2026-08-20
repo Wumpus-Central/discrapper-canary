@@ -1,162 +1,65 @@
-.full-motion .arrow__6c50b {
-    transition: transform .2s ease-in-out
+.trigger__8d3b5 {
+    align-items: center;
+    display: inline-flex
 }
 
-.up__6c50b {
-    transform: rotate(180deg)
+.unreadDot__863f9 {
+    fill: currentColor
 }
 
-.container_f0df50 {
-    inset-inline-start: 48px;
-    position: absolute
+.mentionDot__863f9 {
+    fill: var(--background-feedback-notification)
 }
 
-.emoji_f0df50 {
-    opacity: 0;
-    position: absolute
+.previewStatusCard__2c622 {
+    align-items: center;
+    background: var(--background-mod-subtle);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-sm);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-16);
+    max-width: 100%;
+    padding: var(--space-24) var(--space-32)
 }
 
-.full-motion .emoji1_f0df50 {
-    animation: floating-animation-1_f0df50 1.4s cubic-bezier(.25, .25, .75, .75)
+.previewStatusCardWide__2c622 {
+    max-width: 414px;
+    width: 100%
 }
 
-.full-motion .emoji2_f0df50 {
-    animation: floating-animation-2_f0df50 1.4s cubic-bezier(.25, .25, .75, .75)
+.previewStatusCopy__2c622 {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+    min-width: 0
 }
 
-.full-motion .emoji3_f0df50 {
-    animation: floating-animation-3_f0df50 1.4s cubic-bezier(.25, .25, .75, .75)
+.previewEmpty__61d51 {
+    align-items: center;
+    background: var(--background-gradient-chat, var(--background-base-lower));
+    box-sizing: border-box;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: var(--space-4);
+    justify-content: center;
+    min-height: 0;
+    min-width: 0;
+    padding: var(--space-24);
+    text-align: center
 }
 
-.full-motion .emoji4_f0df50 {
-    animation: floating-animation-4_f0df50 1.4s cubic-bezier(.25, .25, .75, .75)
+.previewEmptyText__61d51 {
+    max-width: 360px
 }
 
-@keyframes floating-animation-1_f0df50 {
-    0% {
-        bottom: 0;
-        inset-inline-start: 0;
-        opacity: .6;
-        transform: scale(1)
-    }
-
-    33% {
-        bottom: 100px;
-        inset-inline-start: -10px;
-        opacity: .8;
-        transform: scale(1.75)
-    }
-
-    66% {
-        bottom: 200px;
-        inset-inline-start: -20px;
-        opacity: .8;
-        transform: scale(1.75)
-    }
-
-    to {
-        bottom: 300px;
-        inset-inline-start: -20px;
-        opacity: 0;
-        transform: scale(1.25)
-    }
-}
-
-@keyframes floating-animation-2_f0df50 {
-    0% {
-        bottom: 25px;
-        inset-inline-start: 0;
-        opacity: 0;
-        transform: scale(1.4)
-    }
-
-    25% {
-        bottom: 100px;
-        inset-inline-start: 15px;
-        opacity: .6;
-        transform: scale(2)
-    }
-
-    50% {
-        bottom: 175px;
-        inset-inline-start: 10px;
-        opacity: .8;
-        transform: scale(1.75)
-    }
-
-    75% {
-        bottom: 250px;
-        inset-inline-start: 15px;
-        opacity: .8;
-        transform: scale(1.5)
-    }
-
-    to {
-        bottom: 325px;
-        inset-inline-start: 20px;
-        opacity: 0;
-        transform: scale(1)
-    }
-}
-
-@keyframes floating-animation-3_f0df50 {
-    0% {
-        bottom: -20px;
-        inset-inline-start: 0;
-        opacity: 0;
-        transform: scale(1)
-    }
-
-    33% {
-        bottom: 80px;
-        inset-inline-start: 5px;
-        opacity: .8;
-        transform: scale(1.6)
-    }
-
-    66% {
-        bottom: 190px;
-        inset-inline-start: 10px;
-        opacity: .8;
-        transform: scale(1.3)
-    }
-
-    to {
-        bottom: 290px;
-        inset-inline-start: 15px;
-        opacity: 0;
-        transform: scale(1)
-    }
-}
-
-@keyframes floating-animation-4_f0df50 {
-    0% {
-        bottom: 60px;
-        inset-inline-start: 0;
-        opacity: .4;
-        transform: scale(1)
-    }
-
-    33% {
-        bottom: 160px;
-        inset-inline-start: -5px;
-        opacity: .8;
-        transform: scale(1.75)
-    }
-
-    66% {
-        bottom: 260px;
-        inset-inline-start: -10px;
-        opacity: .8;
-        transform: scale(1.25)
-    }
-
-    to {
-        bottom: 360px;
-        inset-inline-start: -15px;
-        opacity: 0;
-        transform: scale(1)
-    }
+.frameTarget__61d51 {
+    flex: 1;
+    min-height: 0;
+    min-width: 0
 }
 
 .slowModeIcon_b21699 {
@@ -378,4 +281,4 @@
     background-image: url(/assets/6ad5446be34bb27a.svg)
 }
 
-/*# sourceMappingURL=449734.4fa1fd0727640298.css.map*/
+/*# sourceMappingURL=103648.c6a39cc3e76a9400.css.map*/

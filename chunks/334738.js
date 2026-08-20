@@ -1,5 +1,16 @@
 "use strict";
-n.d(t, { Uq: () => _, Z5: () => h, _9: () => A, ack: () => c, fb: () => E, hK: () => I, hS: () => u }), n(321073);
+n.d(t, {
+    Uq: () => _,
+    Z5: () => f,
+    _9: () => A,
+    ack: () => c,
+    dm: () => I,
+    fb: () => E,
+    hK: () => p,
+    hS: () => u,
+    yl: () => h,
+}),
+    n(321073);
 var i = n(228366),
     r = n(863005),
     a = n(95701),
@@ -62,8 +73,14 @@ function A(e, t) {
     i.h.dispatch({ type: "ENABLE_AUTOMATIC_ACK", channelId: e, windowId: t });
 }
 function h(e, t) {
+    i.h.dispatch({ type: "REGISTER_VISIBLE_INLINE_CHANNEL", channelId: e, windowId: t });
+}
+function I(e, t) {
+    i.h.dispatch({ type: "UNREGISTER_VISIBLE_INLINE_CHANNEL", channelId: e, windowId: t });
+}
+function f(e, t) {
     i.h.dispatch({ type: "DISABLE_AUTOMATIC_ACK", channelId: e, windowId: t });
 }
-function I(e, t, n) {
+function p(e, t, n) {
     i.h.dispatch({ type: "GUILD_FEATURE_ACK", id: e, ackType: t, ackedId: n, local: !1 });
 }

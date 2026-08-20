@@ -26,8 +26,8 @@ var i,
     w = l(289873),
     I = l(152367),
     S = l(661531),
-    z = l(627363),
-    _ = l(976860),
+    _ = l(627363),
+    z = l(976860),
     V = l(673724),
     R = l(948230),
     P = l(148555),
@@ -38,7 +38,7 @@ var i,
     G = l(998939),
     B = l(972786),
     K = l(20386),
-    M = l(191502),
+    M = l(429880),
     O = l(379307),
     X = l(922016),
     L = l(980707),
@@ -200,7 +200,7 @@ function tu(t) {
         c = Z.intl.formatToPlainString(W.default.CC69wK, { projectName: i }),
         o = a.useCallback(() => {
             let t = (0, T.SH)(l, e);
-            (0, _.pX)(null == t ? td.BVt.CHANNEL(l) : td.BVt.CHANNEL(l, t)), r();
+            (0, z.pX)(null == t ? td.BVt.CHANNEL(l) : td.BVt.CHANNEL(l, t)), r();
         }, [e, l, r]);
     return (0, n.jsx)(ts.d, {
         transitionState: s,
@@ -358,7 +358,7 @@ function tC(t) {
         y = a.useRef(null);
     k.current = p;
     let A = (0, o.bG)([B.A], () => (null == p ? null : B.A.getIntegrationStatus(p)), [p]),
-        { data: w, isLoading: I } = (0, z.YY)(e?.preview_application_id ?? void 0),
+        { data: w, isLoading: I } = (0, _.YY)(e?.preview_application_id ?? void 0),
         S = null != p && x !== p,
         V = A?.preview_ready === !0,
         T = V && null != A && (!A.integration_installed || A.bot_permissions_changed),
@@ -448,7 +448,7 @@ function tC(t) {
         }, [ts, tl, w, e]),
         tc = T ? { type: "permissions", onReviewPermissions: tr, loading: I || S } : S ? { type: "checking" } : void 0;
     a.useEffect(() => {
-        null == e && l && (0, _.pX)(td.BVt.CHANNEL(s, tp.VV.VIBEGRATIONS));
+        null == e && l && (0, z.pX)(td.BVt.CHANNEL(s, tp.VV.VIBEGRATIONS));
     }, [s, e, l]);
     let to = a.useCallback(async () => {
         if (null != e) {
@@ -560,6 +560,7 @@ function tC(t) {
                               {
                                   projectId: e.id,
                                   applicationId: e.preview_application_id,
+                                  previewApplicationId: e.preview_application_id,
                                   surface: th.sd,
                                   chatOpen: c,
                                   previewReady: V,
@@ -599,8 +600,8 @@ function tE(t) {
                     ),
             [e, s],
         ),
-        z = Z.intl.string(W.default.TU9IGR),
-        _ = [
+        _ = Z.intl.string(W.default.TU9IGR),
+        z = [
             Z.intl.string(W.default["E+Q26x"]),
             Z.intl.string(W.default["06/jqP"]),
             Z.intl.string(W.default["7MCiK9"]),
@@ -630,7 +631,7 @@ function tE(t) {
                                     }),
                                     (0, n.jsx)("div", {
                                         className: tf.Aw,
-                                        children: _.map((t) =>
+                                        children: z.map((t) =>
                                             (0, n.jsx)(
                                                 p.D,
                                                 {
@@ -652,11 +653,11 @@ function tE(t) {
                                         className: tf.DA,
                                         children: [
                                             (0, n.jsx)(y.f, {
-                                                label: z,
+                                                label: _,
                                                 hideLabel: !0,
                                                 rows: 5,
                                                 value: i,
-                                                placeholder: z,
+                                                placeholder: _,
                                                 error: c,
                                                 onChange: g,
                                                 onKeyDown: P,
@@ -808,7 +809,7 @@ function tk(t) {
                         (0, G.Hc)(t),
                             null != p && (0, G.r2)(t, p),
                             (0, G.dv)(t, l),
-                            (0, _.pX)(td.BVt.CHANNEL(e, tp.VV.VIBEGRATIONS, t)),
+                            (0, z.pX)(td.BVt.CHANNEL(e, tp.VV.VIBEGRATIONS, t)),
                             d(""),
                             h(null);
                     } catch (t) {
@@ -830,7 +831,7 @@ function tk(t) {
                 try {
                     (i = await (0, R.gA)({ guild_id: e })),
                         await tm(i, t, Z.intl.string(W.default.KjEtrZ)),
-                        (0, _.pX)(td.BVt.CHANNEL(e, tp.VV.VIBEGRATIONS, i));
+                        (0, z.pX)(td.BVt.CHANNEL(e, tp.VV.VIBEGRATIONS, i));
                 } catch {
                     null != i && (await (0, R.xx)(i).catch(() => void 0)),
                         (0, f.P0)((0, j.o)(Z.intl.string(W.default["02GpNr"]), v.Ck.FAILURE));
@@ -842,12 +843,12 @@ function tk(t) {
         ),
         y = a.useCallback(
             (t) => {
-                (0, _.pX)(td.BVt.CHANNEL(e, tp.VV.VIBEGRATIONS, t));
+                (0, z.pX)(td.BVt.CHANNEL(e, tp.VV.VIBEGRATIONS, t));
             },
             [e],
         ),
         A = a.useCallback(() => {
-            (0, _.pX)(td.BVt.CHANNEL(e, tp.VV.VIBEGRATIONS));
+            (0, z.pX)(td.BVt.CHANNEL(e, tp.VV.VIBEGRATIONS));
         }, [e]),
         w = a.useCallback((t) => {
             d(t), g(null);

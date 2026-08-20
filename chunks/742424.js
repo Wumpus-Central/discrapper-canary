@@ -407,8 +407,8 @@ var eq = n(47167),
     e0 = n(822123),
     e1 = n(643501),
     e2 = n(409626),
-    e8 = n(692969),
-    e3 = n(279250),
+    e3 = n(692969),
+    e8 = n(279250),
     e5 = n(607407),
     e6 = n(548118),
     e7 = n(499211),
@@ -623,7 +623,7 @@ let tW = (0, eX.Fe)({
                 n.e("28945"),
                 n.e("767311"),
                 n.e("261204"),
-                n.e("840599"),
+                n.e("25300"),
                 n.e("379134"),
                 n.e("279774"),
                 n.e("175997"),
@@ -1344,7 +1344,7 @@ function tQ(e) {
         E = A ? x.extra?.application_id : void 0,
         C = (0, tt.W)();
     null != C && (E = C);
-    let I = (0, e8.A)(
+    let I = (0, e3.A)(
             {
                 location: "ContentPopout",
                 applicationId: h ? void 0 : E,
@@ -1446,13 +1446,13 @@ function t0(e) {
             ...f
         } = e,
         p = (0, u.bG)([td.A], () => td.A.getChannel(a?.channelId)),
-        [g] = i.useMemo(() => (0, e3.eo)(p, tg.A, th.A, tm.A, e1.default), [p]),
+        [g] = i.useMemo(() => (0, e8.eo)(p, tg.A, th.A, tm.A, e1.default), [p]),
         { entry: x } = f,
         A = (0, tC.zD)(x),
         E = A ? x.extra?.application_id : void 0,
         C = (0, tt.W)();
     null != C && (E = C);
-    let I = (0, e8.A)(
+    let I = (0, e3.A)(
             {
                 location: "ContentPopout",
                 applicationId: E,
@@ -1672,8 +1672,8 @@ let t2 = function (e) {
         ],
     });
 };
-var t8 = n(322789),
-    t3 = n(808380),
+var t3 = n(322789),
+    t8 = n(808380),
     t5 = n(687966),
     t6 = n(39623),
     t7 = n(960076),
@@ -1799,16 +1799,16 @@ function nd(e) {
     if (null != e) return t ? void 0 : n;
 }
 var nh = n(18282);
-let nm = [...t8.n, ed.Yq],
+let nm = [...t3.n, ed.Yq],
     nf = {
-        [t3.Y.DESKTOP]: null,
-        [t3.Y.LINUX]: null,
-        [t3.Y.MACOS]: null,
-        [t3.Y.NINTENDO]: null,
-        [t3.Y.IOS]: null,
-        [t3.Y.ANDROID]: null,
-        [t3.Y.XBOX]: na.A,
-        [t3.Y.PLAYSTATION]: nr.A,
+        [t8.Y.DESKTOP]: null,
+        [t8.Y.LINUX]: null,
+        [t8.Y.MACOS]: null,
+        [t8.Y.NINTENDO]: null,
+        [t8.Y.IOS]: null,
+        [t8.Y.ANDROID]: null,
+        [t8.Y.XBOX]: na.A,
+        [t8.Y.PLAYSTATION]: nr.A,
     },
     np = function (e) {
         let {
@@ -1829,7 +1829,7 @@ let nm = [...t8.n, ed.Yq],
             U = n.extra.platform,
             G = n.extra.application_id,
             V = null != U ? nf[U] : null,
-            F = nd(U === t3.Y.XBOX ? eW.fg2.XBOX : U === t3.Y.PLAYSTATION ? eW.fg2.PLAYSTATION : void 0),
+            F = nd(U === t8.Y.XBOX ? eW.fg2.XBOX : U === t8.Y.PLAYSTATION ? eW.fg2.PLAYSTATION : void 0),
             { data: H } = (0, b.YY)(G),
             B = (0, t4.A)(G),
             { analyticsLocations: W } = (0, ne.Ay)(T.A.MEMBER_LIST_GAMING_CONTENT_POPOUT),
@@ -2589,11 +2589,11 @@ function n2(e) {
             : n1
         : 0;
 }
-function n8(e) {
+function n3(e) {
     let { entry: t, ...n } = e;
     switch (t.content_type) {
         case o.ContentInventoryEntryType.PLAYED_GAME:
-            return (0, l.jsx)(t8.A, { ...n, entry: t });
+            return (0, l.jsx)(t3.A, { ...n, entry: t });
         case o.ContentInventoryEntryType.WATCHED_MEDIA:
             return (0, l.jsx)(nq.A, { ...n, entry: t });
         case o.ContentInventoryEntryType.TOP_GAME:
@@ -2608,7 +2608,7 @@ function n8(e) {
             return null;
     }
 }
-function n3(e) {
+function n8(e) {
     let { entry: t, targetElementRef: n, ...i } = e;
     return t.content_type === o.ContentInventoryEntryType.PLAYED_GAME
         ? (0, l.jsx)(nA, {
@@ -2724,7 +2724,7 @@ let n7 = i.createContext(void 0),
         }
         return (0, l.jsxs)(l.Fragment, {
             children: [
-                C && (0, l.jsx)(n3, { ...o, targetElementRef: p }),
+                C && (0, l.jsx)(n8, { ...o, targetElementRef: p }),
                 (0, l.jsx)("div", {
                     ref: s,
                     onMouseEnter: () => {
@@ -2768,7 +2768,7 @@ let n7 = i.createContext(void 0),
                                     j || b(!0);
                                 },
                                 onContextMenu: M,
-                                children: (0, l.jsx)(n8, {
+                                children: (0, l.jsx)(n3, {
                                     ...o,
                                     selected: n,
                                     hovered: T.current,

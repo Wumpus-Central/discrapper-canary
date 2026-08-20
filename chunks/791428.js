@@ -14,28 +14,28 @@ var l = i(477900),
 i(321073);
 var x = i(866665),
     m = i(408278),
-    C = i(811893),
-    p = i(70688),
+    p = i(811893),
+    C = i(70688),
     I = i(47294),
-    j = i(16961),
-    A = i(625180),
+    A = i(16961),
+    j = i(625180),
     b = i(91242),
     y = i(580954),
-    k = i(672929),
-    v = i(494126),
+    v = i(672929),
+    k = i(494126),
     E = i(5867);
 async function N(e) {
     null == b.A.getFrame(e) ||
-        ((await (0, v.refreshProxyTicket)(e)) &&
-            ((0, v.promoteFrame)(e),
-            (0, v.updateFramePanelMode)(e, E.Gd.ACTIVITY_POPOUT_WINDOW),
+        ((await (0, k.refreshProxyTicket)(e)) &&
+            ((0, k.promoteFrame)(e),
+            (0, k.updateFramePanelMode)(e, E.Gd.ACTIVITY_POPOUT_WINDOW),
             r.h.dispatch({ type: "ACTIVITY_POPOUT_WINDOW_OPEN" })));
 }
 var T = i(574172),
     _ = i(869146),
-    O = i(976860),
-    P = i(808728),
-    w = i(576705),
+    w = i(976860),
+    O = i(808728),
+    P = i(576705),
     F = i(621466),
     R = i(453903),
     S = i(922016),
@@ -149,12 +149,12 @@ function q(e) {
     });
 }
 var X = i(594483),
-    Z = i(568548),
+    Z = i(573163),
     $ = i(652215),
     J = i(165610);
 function Q(e) {
     let { applicationId: n, surface: i, guildId: r, channelId: s, project: c, chatOpen: d, onToggleChat: o } = e,
-        u = (0, k.A)(n, i),
+        u = (0, v.A)(n, i),
         { badge: h, mentionCount: g } = (0, a.cf)([Z.Ay], () => {
             let e = Z.Ay.getMentionCount(s);
             return e > 0
@@ -163,9 +163,9 @@ function Q(e) {
                   ? { badge: "unread", mentionCount: e }
                   : { badge: null, mentionCount: e };
         }, [s]),
-        f = (0, j.G)(),
+        f = (0, A.G)(),
         {
-            fork: v,
+            fork: k,
             forking: E,
             canFork: F,
         } = (function (e, n) {
@@ -188,7 +188,7 @@ function Q(e) {
         })(c, r),
         R = (0, J.x1)(u) && u.data.proxyTicketRefreshing,
         S = t.useCallback(() => {
-            null == u || R || A.A.refreshProxyTicket(u.id);
+            null == u || R || j.A.refreshProxyTicket(u.id);
         }, [u, R]),
         M = t.useCallback(() => {
             null != u && (0, I.A)({ onConfirm: () => N(u.id) });
@@ -200,14 +200,14 @@ function Q(e) {
                 b.A.getMainFrame()?.id === e &&
                 (0, T.close)($.MLl.ACTIVITY_POPOUT),
                 (0, y.A)().leaveFrame(e),
-                (0, O.pX)(
+                (0, w.pX)(
                     (function (e, n) {
                         if (null == e) return $.BVt.FRIENDS;
-                        let i = P.Ay.getDefaultChannel(e);
+                        let i = O.Ay.getDefaultChannel(e);
                         if (null != i && i.id !== n) return $.BVt.CHANNEL(e, i.id);
-                        let l = P.Ay.getFirstChannel(e, (e) => {
+                        let l = O.Ay.getFirstChannel(e, (e) => {
                             let { channel: i } = e;
-                            return i.id !== n && w.A.can($.xBc.VIEW_CHANNEL, i);
+                            return i.id !== n && P.A.can($.xBc.VIEW_CHANNEL, i);
                         });
                         return null != l ? $.BVt.CHANNEL(e, l.id) : $.BVt.FRIENDS;
                     })(r, (0, J.h)(i)),
@@ -240,7 +240,7 @@ function Q(e) {
         K = B.intl.string(W.default.Ea0Wrr);
     return (0, l.jsxs)(l.Fragment, {
         children: [
-            (0, l.jsx)(L, { onRefresh: S, isRefreshing: R, canFork: F, forking: E, onFork: v }),
+            (0, l.jsx)(L, { onRefresh: S, isRefreshing: R, canFork: F, forking: E, onFork: k }),
             U,
             f
                 ? (0, l.jsx)(x.m, {
@@ -248,7 +248,7 @@ function Q(e) {
                       ariaHidden: !0,
                       children: (0, l.jsx)(m.K, {
                           "aria-label": Y,
-                          icon: C.t,
+                          icon: p.t,
                           variant: "icon-only",
                           size: "sm",
                           onClick: M,
@@ -260,7 +260,7 @@ function Q(e) {
                 ariaHidden: !0,
                 children: (0, l.jsx)(m.K, {
                     "aria-label": K,
-                    icon: p.DoorExitIcon,
+                    icon: C.DoorExitIcon,
                     variant: "icon-only",
                     size: "sm",
                     onClick: z,
@@ -269,7 +269,7 @@ function Q(e) {
         ],
     });
 }
-var ee = i(260305),
+var ee = i(429880),
     en = i(957907),
     ei = i(955999),
     el = i(999900);
@@ -278,34 +278,34 @@ function et(e) {
         i = (0, f.B9)(n.topic),
         x = (0, en.A)(n),
         m = (0, s.Ay)(n),
-        C = (0, a.bG)([h.A], () => h.A.getGuild(n.guild_id), [n.guild_id]),
-        [p, I] = t.useState(!1),
-        j = t.useRef(!1),
-        A = t.useCallback((e) => {
-            (j.current = !e), I(e);
+        p = (0, a.bG)([h.A], () => h.A.getGuild(n.guild_id), [n.guild_id]),
+        [C, I] = t.useState(!1),
+        A = t.useRef(!1),
+        j = t.useCallback((e) => {
+            (A.current = !e), I(e);
         }, []),
-        b = t.useCallback(() => A(!p), [p, A]),
-        y = t.useCallback(() => A(!1), [A]);
+        b = t.useCallback(() => j(!C), [C, j]),
+        y = t.useCallback(() => j(!1), [j]);
     t.useEffect(() => {
         function e(e) {
             e.optimistic ||
                 e.channelId !== n.id ||
                 e.message.author?.id === u.default.getId() ||
                 g.Ay.getCurrentlySelectedChannelId() !== n.id ||
-                j.current ||
+                A.current ||
                 I(!0);
         }
-        return (j.current = !1), r.h.subscribe("MESSAGE_CREATE", e), () => r.h.unsubscribe("MESSAGE_CREATE", e);
+        return (A.current = !1), r.h.subscribe("MESSAGE_CREATE", e), () => r.h.unsubscribe("MESSAGE_CREATE", e);
     }, [n.id]);
-    let k = t.useMemo(() => ({ channel: n, guild: C ?? void 0, open: p, onClose: y }), [n, C, p, y]),
-        v = t.useMemo(() => ({ type: J.U4.APP_CHANNEL, channelId: n.id, guildId: n.guild_id ?? void 0 }), [n]);
+    let v = t.useMemo(() => ({ channel: n, guild: p ?? void 0, open: C, onClose: y }), [n, p, C, y]),
+        k = t.useMemo(() => ({ type: J.U4.APP_CHANNEL, channelId: n.id, guildId: n.guild_id ?? void 0 }), [n]);
     return null == i
         ? null
         : (0, l.jsxs)("div", {
               "data-has-border": !0,
               className: el.TE,
               children: [
-                  (0, l.jsx)(c.HI, { location: C?.name, subsection: m ?? void 0 }),
+                  (0, l.jsx)(c.HI, { location: p?.name, subsection: m ?? void 0 }),
                   (0, l.jsx)("div", {
                       className: el.SC,
                       children: (0, l.jsx)(
@@ -317,16 +317,16 @@ function et(e) {
                               hideSearch: !0,
                               toolbar: (0, l.jsx)(Q, {
                                   applicationId: i,
-                                  surface: v,
+                                  surface: k,
                                   guildId: n.guild_id,
                                   channelId: n.id,
                                   project: x ?? null,
-                                  chatOpen: p,
+                                  chatOpen: C,
                                   onToggleChat: b,
                               }),
                               className: el.DD,
                               "aria-label": B.intl.string(B.t.BIYAqa),
-                              children: (0, o.zF)({ channel: n, channelName: m, guild: C }),
+                              children: (0, o.zF)({ channel: n, channelName: m, guild: p }),
                           },
                           `header-${n.id}`,
                       ),
@@ -336,11 +336,12 @@ function et(e) {
                       "data-vibegrations-channel": !0,
                       children: (0, l.jsx)(ee.A, {
                           projectId: x?.id ?? null,
+                          previewApplicationId: x?.preview_application_id ?? null,
                           applicationId: i,
-                          surface: v,
+                          surface: k,
                           chatOpen: !1,
                           previewReady: !0,
-                          channelMessages: k,
+                          channelMessages: v,
                       }),
                   }),
               ],
