@@ -72,8 +72,8 @@ n.r(C),
         BluetoothIcon: () => c1.y,
         BlurBackgroundIcon: () => c2.f,
         BoldIcon: () => c3.$,
-        BookCheckIcon: () => c4.B,
-        BookIcon: () => c5.BookIcon,
+        BookCheckIcon: () => c5.B,
+        BookIcon: () => c4.BookIcon,
         BookmarkIcon: () => c6.BookmarkIcon,
         BookmarkOutlineIcon: () => c7.c,
         BoostGemIcon: () => c8._,
@@ -141,9 +141,9 @@ n.r(C),
         CircleInformationIcon: () => u1.CircleInformationIcon,
         CircleMinusIcon: () => u2,
         CirclePlayIcon: () => u3.S,
-        CirclePlusIcon: () => u4.U,
+        CirclePlusIcon: () => u5.U,
         CircleQuestionIcon: () => ib.CircleQuestionIcon,
-        CircleXIcon: () => u5.a,
+        CircleXIcon: () => u4.a,
         ClapperboardIcon: () => u6,
         ClipboardCheckIcon: () => u7.O,
         ClipboardListIcon: () => u8.ClipboardListIcon,
@@ -211,12 +211,12 @@ n.r(C),
         EmojiFaceWithHeadBandageIcon: () => _1,
         EmojiFaceWithMedicalMaskIcon: () => _2,
         EmojiFaceWithMonocleIcon: () => _3,
-        EmojiFaceWithOpenMouthIcon: () => _4,
+        EmojiFaceWithOpenMouthIcon: () => _5,
         EmojiFaceWithRaisedEyebrowIcon: () => _6,
         EmojiFaceWithSpiralEyesIcon: () => _7,
         EmojiFaceWithTearsOfJoyIcon: () => _8,
         EmojiFaceWithTongueIcon: () => _9,
-        EmojiFaceWithoutMouthIcon: () => _5,
+        EmojiFaceWithoutMouthIcon: () => _4,
         EmojiFrowningFaceIcon: () => Ee,
         EmojiFrowningFaceWithOpenMouthIcon: () => Et,
         EmojiGrimacingFaceIcon: () => En,
@@ -277,8 +277,8 @@ n.r(C),
         ExperimentalGameControllerLinkIcon: () => sP.A,
         ExperimentalLfgIcon: () => E2.t,
         ExperimentalLfgLockIcon: () => E3.s,
-        ExperimentalLootboxIcon: () => E4,
-        ExperimentalMicrophoneSparkleIcon: () => E5,
+        ExperimentalLootboxIcon: () => E5,
+        ExperimentalMicrophoneSparkleIcon: () => E4,
         ExperimentalMicrophoneSparkleMutedIcon: () => E6,
         ExperimentalMicrophoneSpeakingIcon: () => E7,
         ExperimentalMythicIcon: () => E8.O,
@@ -347,8 +347,8 @@ n.r(C),
         HeartOutlineIcon: () => A1.y,
         HomeIcon: () => A2.HomeIcon,
         HomeSlashIcon: () => A3,
-        HourglassIcon: () => A4.Q,
-        HubIcon: () => A5.P,
+        HourglassIcon: () => A5.Q,
+        HubIcon: () => A4.P,
         IdCardIcon: () => A6.H,
         IdIcon: () => A7.L,
         ImageBrokenIcon: () => A8,
@@ -416,8 +416,8 @@ n.r(C),
         ModerationIcon: () => h2.q,
         MoreHorizontalIcon: () => h3.MoreHorizontalIcon,
         MoreVerticalIcon: () => o0.F,
-        MusicIcon: () => h4.T,
-        MusicSlashIcon: () => h5.C,
+        MusicIcon: () => h5.T,
+        MusicSlashIcon: () => h4.C,
         NatureIcon: () => h6.p,
         NearbyScanIcon: () => h7,
         NewUserIcon: () => h8.N,
@@ -481,8 +481,8 @@ n.r(C),
         PaymentTypeUnionPayIcon: () => I1,
         PaymentTypeVenmoIcon: () => I2,
         PaymentTypeVisaIcon: () => I3,
-        PencilIcon: () => I4.PencilIcon,
-        PencilSparkleIcon: () => I5,
+        PencilIcon: () => I5.PencilIcon,
+        PencilSparkleIcon: () => I4,
         PhoneCallIcon: () => I6._,
         PhoneHangUpIcon: () => I7.z,
         PhoneIcon: () => I8.E,
@@ -548,8 +548,8 @@ n.r(C),
         SettingsPlusIcon: () => f1,
         ShareIcon: () => f2.ShareIcon,
         ShieldAtIcon: () => f3.E,
-        ShieldIcon: () => f4.ShieldIcon,
-        ShieldLockIcon: () => f5.m,
+        ShieldIcon: () => f5.ShieldIcon,
+        ShieldLockIcon: () => f4.m,
         ShieldUserIcon: () => f6.i,
         ShopCircleIcon: () => f7,
         ShopIcon: () => rl.U,
@@ -614,8 +614,8 @@ n.r(C),
         ThemeDarkIcon: () => p1.Z,
         ThemeGrayIcon: () => p2,
         ThemeLightIcon: () => p3.F,
-        ThemeMidnightIcon: () => p4.L,
-        ThreadIcon: () => p5.y,
+        ThemeMidnightIcon: () => p5.L,
+        ThreadIcon: () => p4.y,
         ThreadLockIcon: () => p6.t,
         ThreadMinusIcon: () => p7,
         ThreadPlusIcon: () => p8.G,
@@ -679,8 +679,8 @@ n.r(C),
         WidgetsMinusIcon: () => T1,
         WidgetsPlusIcon: () => T2.X,
         WidgetsRetryIcon: () => T3,
-        WindowLaunchIcon: () => T4.t,
-        WindowReturnIcon: () => T5._,
+        WindowLaunchIcon: () => T5.t,
+        WindowReturnIcon: () => T4._,
         WindowTopIcon: () => T6,
         WindowTopOutlineIcon: () => T7.l,
         WrenchIcon: () => ic.WrenchIcon,
@@ -1451,7 +1451,7 @@ if (
     n.e("859864").then(n.t.bind(n, 122123, 19));
 let e2 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 new eB.A().log(
-    `[BUILD INFO] Release Channel: ${e2}, Build Number: 597567, Version Hash: c04b6070393b8286e61aad80d6f1e1979baff710`,
+    `[BUILD INFO] Release Channel: ${e2}, Build Number: 597600, Version Hash: 1caa9bcfc00d9c47b7f4393e2a803b6de50f1635`,
 ),
     D.A.setTags({ appContext: G.QCW }),
     eI.A.initBasic(),
@@ -1523,8 +1523,8 @@ try {
     (0, eH.v)();
 } catch {}
 var e3 = n(379800),
-    e4 = n(284009),
-    e5 = n.n(e4),
+    e5 = n(284009),
+    e4 = n.n(e5),
     e6 = n(965830),
     e7 = n(481613),
     e8 = n.n(e7),
@@ -1859,8 +1859,8 @@ function t2(e) {
     return (t.displayName = `Deeplink(${e.displayName ?? e.name ?? "<Unknown>"})`), t;
 }
 var t3 = n(836753),
-    t4 = n(196492),
-    t5 = n(869003),
+    t5 = n(196492),
+    t4 = n(869003),
     t6 = n(315206),
     t7 = n(892491),
     t8 = n(272355),
@@ -2148,7 +2148,7 @@ class nP extends eu.Component {
                 i = Math.max(0, Math.cbrt(e.duration - e.progress / 1e3));
             (e.intensity *= Math.min(1, i)),
                 (e.lastDirection *= -1),
-                e5()(null != this.ref.current, "Shakeable style set when not mounted"),
+                e4()(null != this.ref.current, "Shakeable style set when not mounted"),
                 (this.ref.current.style.transform = `translate3d(${t}px,${n}px,0px)`);
         }
         (e.frameCount += 1), (this._animationFrame = requestAnimationFrame(this._animate));
@@ -2214,7 +2214,8 @@ let nJ = (0, nX.Fe)({
             n.e("976888"),
             n.e("919659"),
             n.e("388474"),
-            n.e("783687"),
+            n.e("82937"),
+            n.e("282050"),
             n.e("894292"),
             n.e("436101"),
             n.e("774188"),
@@ -2233,7 +2234,7 @@ let nJ = (0, nX.Fe)({
             n.e("344057"),
             n.e("128504"),
             n.e("402368"),
-            n.e("409692"),
+            n.e("730760"),
             n.e("174630"),
             n.e("448948"),
             n.e("963244"),
@@ -2263,8 +2264,8 @@ var n0 = n(761929),
     n1 = n(458518),
     n2 = n(107361),
     n3 = n(549711),
-    n4 = n(824579),
-    n5 = n(702841),
+    n5 = n(824579),
+    n4 = n(702841),
     n6 = n(131607),
     n7 = n(533550),
     n8 = n(49999),
@@ -2282,7 +2283,7 @@ let ie = eu.memo(function (e) {
           });
 });
 function it() {
-    let e = (0, n5.bG)([ni.A], () => ni.A.getGuildId()),
+    let e = (0, n4.bG)([ni.A], () => ni.A.getGuildId()),
         t = (0, n7.RX)(e),
         [n, i] = (0, n6.kn)(
             Object.values(t)
@@ -2369,7 +2370,9 @@ let ir = (0, nX.Fe)({
                 n.e("894292"),
                 n.e("153302"),
                 n.e("836576"),
-                n.e("884390"),
+                n.e("253453"),
+                n.e("82937"),
+                n.e("531547"),
                 n.e("450926"),
                 n.e("923981"),
                 n.e("750370"),
@@ -2379,7 +2382,7 @@ let ir = (0, nX.Fe)({
                 n.e("636909"),
                 n.e("466592"),
                 n.e("742752"),
-                n.e("783687"),
+                n.e("282050"),
                 n.e("436101"),
                 n.e("976888"),
                 n.e("387970"),
@@ -2432,7 +2435,7 @@ let ir = (0, nX.Fe)({
                 n.e("293159"),
                 n.e("755936"),
                 n.e("489088"),
-                n.e("409692"),
+                n.e("730760"),
                 n.e("994723"),
                 n.e("330316"),
                 n.e("362931"),
@@ -2548,7 +2551,9 @@ let ir = (0, nX.Fe)({
                 n.e("894292"),
                 n.e("153302"),
                 n.e("836576"),
-                n.e("884390"),
+                n.e("253453"),
+                n.e("82937"),
+                n.e("531547"),
                 n.e("450926"),
                 n.e("923981"),
                 n.e("750370"),
@@ -2558,7 +2563,7 @@ let ir = (0, nX.Fe)({
                 n.e("636909"),
                 n.e("466592"),
                 n.e("742752"),
-                n.e("783687"),
+                n.e("282050"),
                 n.e("436101"),
                 n.e("976888"),
                 n.e("387970"),
@@ -2625,7 +2630,7 @@ let ir = (0, nX.Fe)({
                 n.e("293159"),
                 n.e("755936"),
                 n.e("489088"),
-                n.e("409692"),
+                n.e("730760"),
                 n.e("994723"),
                 n.e("330316"),
                 n.e("362931"),
@@ -2757,7 +2762,9 @@ let ir = (0, nX.Fe)({
                 n.e("894292"),
                 n.e("153302"),
                 n.e("836576"),
-                n.e("884390"),
+                n.e("253453"),
+                n.e("82937"),
+                n.e("531547"),
                 n.e("450926"),
                 n.e("923981"),
                 n.e("750370"),
@@ -2767,7 +2774,7 @@ let ir = (0, nX.Fe)({
                 n.e("636909"),
                 n.e("466592"),
                 n.e("742752"),
-                n.e("783687"),
+                n.e("282050"),
                 n.e("436101"),
                 n.e("976888"),
                 n.e("387970"),
@@ -2824,7 +2831,7 @@ let ir = (0, nX.Fe)({
                 n.e("293159"),
                 n.e("755936"),
                 n.e("489088"),
-                n.e("409692"),
+                n.e("730760"),
                 n.e("994723"),
                 n.e("330316"),
                 n.e("362931"),
@@ -3160,13 +3167,13 @@ var i0 = n(912592),
     i1 = n(554146),
     i2 = n(43105),
     i3 = n(269073),
-    i4 = n(936037);
-let i5 = i1.M.FOR_LATER_POPOUT_COACHMARK;
+    i5 = n(936037);
+let i4 = i1.M.FOR_LATER_POPOUT_COACHMARK;
 function i6(e) {
     let { location: t, targetElementRef: n } = e,
         i = (0, i3.jv)("ForLaterCoachmarkWeb"),
-        [r, a] = (0, n6.kn)(i && "inbox-button" === t ? [i5] : [], void 0);
-    return r !== i5
+        [r, a] = (0, n6.kn)(i && "inbox-button" === t ? [i4] : [], void 0);
+    return r !== i4
         ? null
         : (0, O.jsx)(i2.A, {
               targetElementRef: n,
@@ -3179,7 +3186,7 @@ function i6(e) {
               title: tT.intl.string(tT.t.qPbFK2),
               body: tT.intl.string(tT.t.URrJq1),
               actions: [{ text: tT.intl.string(tT.t["NX+WJN"]), onClick: () => a(n8.i.USER_DISMISS) }],
-              graphic: { type: "image", src: i4 },
+              graphic: { type: "image", src: i5 },
           });
 }
 var i7 = n(938483),
@@ -3462,7 +3469,9 @@ let rM = (0, nX.Fe)({
                 n.e("894292"),
                 n.e("153302"),
                 n.e("836576"),
-                n.e("884390"),
+                n.e("253453"),
+                n.e("82937"),
+                n.e("531547"),
                 n.e("450926"),
                 n.e("923981"),
                 n.e("750370"),
@@ -3472,7 +3481,7 @@ let rM = (0, nX.Fe)({
                 n.e("636909"),
                 n.e("466592"),
                 n.e("742752"),
-                n.e("783687"),
+                n.e("282050"),
                 n.e("436101"),
                 n.e("976888"),
                 n.e("387970"),
@@ -3780,7 +3789,7 @@ let rM = (0, nX.Fe)({
                 n.e("293159"),
                 n.e("755936"),
                 n.e("489088"),
-                n.e("409692"),
+                n.e("730760"),
                 n.e("994723"),
                 n.e("330316"),
                 n.e("362931"),
@@ -4336,8 +4345,8 @@ var rF = n(920814),
     r1 = n(805332),
     r2 = n(783791),
     r3 = n(204651),
-    r4 = n(520006),
-    r5 = n(128286),
+    r5 = n(520006),
+    r4 = n(128286),
     r6 = n(625180),
     r7 = n(580954),
     r8 = n(31728),
@@ -4545,7 +4554,7 @@ function aI(e) {
     return (0, O.jsxs)("div", {
         className: aE.qr,
         children: [
-            (0, O.jsx)(r4.A, {
+            (0, O.jsx)(r5.A, {
                 appContext: G.BRT.APP,
                 applicationId: t.id,
                 shouldPrioritizeGroupPlusIcon: !0,
@@ -4579,7 +4588,7 @@ function aI(e) {
                 ],
             }),
             i
-                ? (0, O.jsx)(r5.A, {
+                ? (0, O.jsx)(r4.A, {
                       popoutOpen: !1,
                       onOpenPopout: () => {
                           (0, rq.zV)(G.HAw.ACTIVITY_POPOUT_POP_OUT_BUTTON_CLICKED),
@@ -4741,8 +4750,8 @@ var aJ = n(376463),
     a1 = n(765178),
     a2 = n(812993),
     a3 = n(761508),
-    a4 = n(944791),
-    a5 = n(711950),
+    a5 = n(944791),
+    a4 = n(711950),
     a6 = n(915089),
     a7 = n(586774),
     a8 = n(742589),
@@ -4892,8 +4901,8 @@ var s$ = n(146779),
     s1 = n(826673),
     s2 = n(609425),
     s3 = n(73392),
-    s4 = n(769015),
-    s5 = n(409626),
+    s5 = n(769015),
+    s4 = n(409626),
     s6 = n(692969),
     s7 = n(569926),
     s8 = n(279250),
@@ -5270,7 +5279,7 @@ function lb(e) {
             s = (0, s6.A)({
                 applicationId: r.application_id,
                 location: "FriendsActivityFeed",
-                source: s5.GameProfileSources.FriendsActivityFeed,
+                source: s4.GameProfileSources.FriendsActivityFeed,
             }),
             { data: l } = (0, s7.I)(t.getCanonicalGameId()),
             o = l?.getIconURL(64) ?? t.getIconURL(64),
@@ -5303,7 +5312,7 @@ function lb(e) {
             l = (0, s6.A)({
                 applicationId: t.application_id,
                 location: "FriendsActivityFeed",
-                source: s5.GameProfileSources.FriendsActivityFeed,
+                source: s4.GameProfileSources.FriendsActivityFeed,
             }),
             { assets: o, details: d, state: c, application_id: u } = t,
             { hasButton: _ } = lO({ activity: t, user: r }),
@@ -5534,7 +5543,7 @@ function lb(e) {
                 (0, O.jsxs)("div", {
                     className: lf.h1,
                     children: [
-                        (0, O.jsx)(s4.A, { game: u, size: s4.M.XSMALL, className: lf.VZ }),
+                        (0, O.jsx)(s5.A, { game: u, size: s5.M.XSMALL, className: lf.VZ }),
                         (0, O.jsx)("div", {
                             className: lf.F0,
                             children: (0, O.jsx)(ru.E, { variant: "text-sm/semibold", children: u.name }),
@@ -5867,7 +5876,7 @@ function lF(e) {
                 let e = a.find((e) => null != e.activity);
                 if (null == e) return { subtitle: null, icon: null };
                 let { activity: t, application: n, startedPlayingTime: i } = e;
-                e5()(null != t, "Activity was null somehow");
+                e4()(null != t, "Activity was null somehow");
                 let r = (0, O.jsx)(le.Ay, { start: i, location: le.Ay.Locations.ACTIVITY_FEED_NEW, messageProps: u });
                 return (0, lx.A)(t)
                     ? { subtitle: r, icon: (0, O.jsx)(lb.Header.Icon, { src: sB.A.get(G.fg2.XBOX).icon.lightPNG }) }
@@ -5887,7 +5896,7 @@ function lF(e) {
         _ = (0, s6.A)({
             applicationId: t.currentActivities[0]?.activity?.application_id,
             location: "FriendsActivityFeed",
-            source: s5.GameProfileSources.FriendsActivityFeed,
+            source: s4.GameProfileSources.FriendsActivityFeed,
         }),
         E = (0, s2.A)({ userId: o.user.id, guildId: l?.id }),
         A = (0, s3.a)({ displayNameStyles: E }),
@@ -5928,8 +5937,8 @@ var lV = n(964486),
     l1 = n(689168),
     l2 = n(340829),
     l3 = n(144914),
-    l4 = n(113673);
-let l5 = sB.A.get(G.fg2.XBOX).name;
+    l5 = n(113673);
+let l4 = sB.A.get(G.fg2.XBOX).name;
 var l6 = n(975732),
     l7 = n(297413),
     l8 = n(942813);
@@ -6177,7 +6186,7 @@ function ou(e) {
                         : (0, O.jsx)(iw.Dr, {
                               id: "xbox-connect",
                               action: () => (0, so.openUserSettings)(sl.X.CONNECTIONS_CATEGORY),
-                              label: tT.intl.formatToPlainString(tT.t.XWSHTb, { platform: l5 }),
+                              label: tT.intl.formatToPlainString(tT.t.XWSHTb, { platform: l4 }),
                           });
                 })(e),
                 r = (function (e) {
@@ -6325,7 +6334,7 @@ function ou(e) {
                             return (0, O.jsx)(iw.Dr, {
                                 id: `play-${n.session_id}`,
                                 action: function () {
-                                    (0, l4.playApplication)(i.id, r, {
+                                    (0, l5.playApplication)(i.id, r, {
                                         analyticsParams: { location: { ...a, object: G.ZSU.LIST_ITEM } },
                                     });
                                 },
@@ -6630,7 +6639,9 @@ let oh = 15 * n_.A.Millis.MINUTE,
                             n.e("894292"),
                             n.e("153302"),
                             n.e("836576"),
-                            n.e("884390"),
+                            n.e("253453"),
+                            n.e("82937"),
+                            n.e("531547"),
                             n.e("450926"),
                             n.e("750370"),
                             n.e("972281"),
@@ -6639,7 +6650,7 @@ let oh = 15 * n_.A.Millis.MINUTE,
                             n.e("636909"),
                             n.e("466592"),
                             n.e("742752"),
-                            n.e("783687"),
+                            n.e("282050"),
                             n.e("436101"),
                             n.e("976888"),
                             n.e("387970"),
@@ -6835,7 +6846,7 @@ let oh = 15 * n_.A.Millis.MINUTE,
                             n.e("293159"),
                             n.e("755936"),
                             n.e("489088"),
-                            n.e("409692"),
+                            n.e("730760"),
                             n.e("994723"),
                             n.e("330316"),
                             n.e("362931"),
@@ -7356,13 +7367,13 @@ function ok(e) {
     return (
         eu.useEffect(() => {
             null != d &&
-                (e5()(null != n.current, "Input is submitting when not mounted"),
+                (e4()(null != n.current, "Input is submitting when not mounted"),
                 (n.current.value = ""),
                 n.current.focus());
         }, [d, n]),
         (0, O.jsxs)("form", {
             onSubmit: function (e) {
-                e.preventDefault(), e5()(null != n.current, "Input is submitted when not mounted");
+                e.preventDefault(), e4()(null != n.current, "Input is submitted when not mounted");
                 let t = n.current.value.trim();
                 !t.includes("#") && t.startsWith("@") && (t = t.substring(1));
                 let i = (0, oy.Ty)(t);
@@ -7416,7 +7427,7 @@ function ok(e) {
                                         onKeyPress: function (e) {
                                             let t = e.currentTarget.value;
                                             if (e.key !== oD.N$.Enter && t.includes("#")) {
-                                                e5()(null != n.current, "Input is handling keypress when not mounted");
+                                                e4()(null != n.current, "Input is handling keypress when not mounted");
                                                 let i = t.indexOf("#"),
                                                     r = n.current.selectionStart,
                                                     a =
@@ -7630,8 +7641,8 @@ var oK = n(123292),
     o1 = n(3203),
     o2 = n(408278),
     o3 = n(597770),
-    o4 = n(414711),
-    o5 = n(397244),
+    o5 = n(414711),
+    o4 = n(397244),
     o6 = n(714114),
     o7 = n(394871),
     o8 = n(806744);
@@ -7640,7 +7651,7 @@ let o9 = function (e) {
         { voiceChannel: l } = (0, o6.Ay)({ userId: a?.id });
     return s
         ? (0, O.jsx)("div", { className: o8.Q, children: tT.intl.string(tT.t.tFY5Zb) })
-        : (0, o5.A)({ activities: n, status: r, applicationStream: i, voiceChannel: l })
+        : (0, o4.A)({ activities: n, status: r, applicationStream: i, voiceChannel: l })
           ? (0, O.jsx)(o7.A, {
                 textClassName: o8.q,
                 activities: n,
@@ -7708,7 +7719,7 @@ function di(e) {
                 properties: { gift_intent_type: h, affinity: e?.communicationProbability },
             });
         }, [E, h]),
-        (0, O.jsx)(o4.A, {
+        (0, O.jsx)(o5.A, {
             ref: t,
             isFocused: i,
             isActive: r,
@@ -7915,7 +7926,7 @@ class dc extends eu.PureComponent {
                       name: nj.A.getNickname(e.id) ?? iM.Ay.getName(e),
                   }),
               })
-            : (0, O.jsx)(o4.A, {
+            : (0, O.jsx)(o5.A, {
                   ref: this.peopleListItemRef,
                   isFocused: t,
                   isActive: u,
@@ -8189,7 +8200,7 @@ function dy(e) {
                 (0, O.jsxs)(O.Fragment, {
                     children: [
                         !s && (0, O.jsx)(dN.A, { height: 2, width: 2 }),
-                        (0, O.jsx)(s4.A, { game: o, size: s4.M.XXSMALL }),
+                        (0, O.jsx)(s5.A, { game: o, size: s5.M.XXSMALL }),
                         (0, O.jsx)(ru.E, { variant: "text-sm/medium", color: "text-subtle", children: o.name }),
                     ],
                 }),
@@ -8222,7 +8233,7 @@ function dv(e) {
             () => (0, l6.openUserProfileModal)({ userId: t.id, sourceAnalyticsLocations: l }),
             [l, t.id],
         );
-    return (0, O.jsx)(o4.A, {
+    return (0, O.jsx)(o5.A, {
         isFocused: r,
         user: t,
         analyticsLocations: l,
@@ -8496,7 +8507,7 @@ function dz(e) {
         e?.stopPropagation(), dK.A.ignore(t.id);
     }
     let o = i === G.clD.OFFLINE ? G.clD.UNKNOWN : i;
-    return (0, O.jsx)(o4.A, {
+    return (0, O.jsx)(o5.A, {
         isFocused: r,
         user: t,
         analyticsLocations: a,
@@ -8535,7 +8546,7 @@ function dz(e) {
 }
 let dZ = [];
 function dq() {
-    a5.A.transitionToSection(G.m3P.ADD_FRIEND, { explicit: !0 });
+    a4.A.transitionToSection(G.m3P.ADD_FRIEND, { explicit: !0 });
 }
 function dX() {
     (0, tB.openModalLazy)(async () => {
@@ -8804,7 +8815,7 @@ function d2(e) {
             });
     }, [i, n]),
         eu.useEffect(() => {
-            a4.I(G.BVt.FRIENDS), (0, og.d0)("friends");
+            a5.I(G.BVt.FRIENDS), (0, og.d0)("friends");
         }, []);
     let r = (0, el.bG)([eT.A], () => eT.A.theme),
         a = (0, nV.kX)(),
@@ -8812,15 +8823,15 @@ function d2(e) {
         o = (0, el.bG)([a7.A], () => a7.A.getSuggestionCount()),
         d = eu.useMemo(() => l.getRelationshipCounts(), [l]);
     function c(e) {
-        a5.A.transitionToSection(e, { explicit: !0 });
+        a4.A.transitionToSection(e, { explicit: !0 });
     }
     eu.useEffect(() => {
-        null != t && a5.A.setInitialSection(t),
+        null != t && a4.A.setInitialSection(t),
             0 === d[G.eA$.FRIEND] &&
                 0 === d[G.eA$.PENDING_INCOMING] &&
                 0 === d[G.eA$.PENDING_OUTGOING] &&
                 0 === d[G.eA$.BLOCKED] &&
-                a5.A.transitionToSection(G.m3P.ADD_FRIEND);
+                a4.A.transitionToSection(G.m3P.ADD_FRIEND);
     }, [t, d]);
     let u = (0, a6.GV)(),
         _ = (0, a6.GV)(),
@@ -8947,10 +8958,10 @@ function d2(e) {
 function d3() {
     return (0, O.jsx)("div", { className: d0.Lq, children: (0, O.jsx)(nz.y, {}) });
 }
-function d4(e) {
+function d5(e) {
     return (0, el.bG)([oS.Ay], () => oS.Ay.isInitialized()) ? (0, O.jsx)(d2, { ...e }) : (0, O.jsx)(d3, {});
 }
-var d5 = n(462180);
+var d4 = n(462180);
 function d6(e) {
     let { alt: t, ariaLabel: n, ariaHidden: i, role: r, size: a = 64 } = e;
     return (0, O.jsx)("img", {
@@ -9470,8 +9481,8 @@ var c0 = n(967492),
     c1 = n(12054),
     c2 = n(635739),
     c3 = n(902001),
-    c4 = n(622629),
-    c5 = n(435271),
+    c5 = n(622629),
+    c4 = n(435271),
     c6 = n(606096),
     c7 = n(997146),
     c8 = n(104510),
@@ -10079,8 +10090,8 @@ function u2(e) {
     });
 }
 var u3 = n(65154),
-    u4 = n(245604),
-    u5 = n(285796);
+    u5 = n(245604),
+    u4 = n(285796);
 function u6(e) {
     let {
             size: t = "md",
@@ -11178,7 +11189,7 @@ function _3(e) {
         ],
     });
 }
-function _4(e) {
+function _5(e) {
     let {
             size: t = "md",
             width: n,
@@ -11204,7 +11215,7 @@ function _4(e) {
         }),
     });
 }
-function _5(e) {
+function _4(e) {
     let {
             size: t = "md",
             width: n,
@@ -12883,7 +12894,7 @@ function E0(e) {
 var E1 = n(907085),
     E2 = n(434831),
     E3 = n(107086);
-function E4(e) {
+function E5(e) {
     let {
             size: t = "md",
             width: n,
@@ -12909,7 +12920,7 @@ function E4(e) {
         }),
     });
 }
-function E5(e) {
+function E4(e) {
     let {
             size: t = "md",
             width: n,
@@ -13638,8 +13649,8 @@ function A3(e) {
         }),
     });
 }
-var A4 = n(339350),
-    A5 = n(101277),
+var A5 = n(339350),
+    A4 = n(101277),
     A6 = n(280645),
     A7 = n(473935);
 function A8(e) {
@@ -14231,8 +14242,8 @@ function h1(e) {
 }
 var h2 = n(713608),
     h3 = n(365199),
-    h4 = n(432017),
-    h5 = n(532676),
+    h5 = n(432017),
+    h4 = n(532676),
     h6 = n(413249);
 function h7(e) {
     let {
@@ -16429,8 +16440,8 @@ function I3(e) {
         ],
     });
 }
-var I4 = n(22231);
-function I5(e) {
+var I5 = n(22231);
+function I4(e) {
     let {
             size: t = "md",
             width: n,
@@ -17043,8 +17054,8 @@ function f1(e) {
 }
 var f2 = n(405433),
     f3 = n(626900),
-    f4 = n(231483),
-    f5 = n(254138),
+    f5 = n(231483),
+    f4 = n(254138),
     f6 = n(957485);
 function f7(e) {
     let {
@@ -17956,8 +17967,8 @@ function p2(e) {
     });
 }
 var p3 = n(575181),
-    p4 = n(308323),
-    p5 = n(163328),
+    p5 = n(308323),
+    p4 = n(163328),
     p6 = n(425557);
 function p7(e) {
     let {
@@ -18484,8 +18495,8 @@ function T3(e) {
         }),
     });
 }
-var T4 = n(811893),
-    T5 = n(12470);
+var T5 = n(811893),
+    T4 = n(12470);
 function T6(e) {
     let {
             size: t = "md",
@@ -19009,8 +19020,8 @@ var mJ = n(192444),
     m1 = n(909536),
     m2 = n(166403),
     m3 = n(158045),
-    m4 = n(683760),
-    m5 = n(960851),
+    m5 = n(683760),
+    m4 = n(960851),
     m6 = n(236056),
     m7 = n(881489),
     m8 = n(592909);
@@ -19417,8 +19428,8 @@ function g3(e) {
         });
     return (0, O.jsxs)(O.Fragment, { children: [(0, O.jsx)("div", { children: i }), s] });
 }
-var g4 = n(277984),
-    g5 = n(615405),
+var g5 = n(277984),
+    g4 = n(615405),
     g6 = n(295405),
     g7 = n(241988);
 function g8(e) {
@@ -19429,7 +19440,7 @@ function g8(e) {
     async function l() {
         null != a &&
             (i(n8.i.TAKE_ACTION),
-            g6.A.hasFetchedPaymentSources || (await (g5.A.paymentSourcesFetchRequest ?? (0, g4.$o)())),
+            g6.A.hasFetchedPaymentSources || (await (g4.A.paymentSourcesFetchRequest ?? (0, g5.$o)())),
             (0, gG.A)({ subscription: n, initialPlanId: a.yearlyPlanId, analyticsLocations: s }));
     }
     return (0, O.jsxs)(O.Fragment, {
@@ -19746,10 +19757,10 @@ let SA = new Set([i1.M.PREMIUM_WISHLIST_COACHMARK]),
             i = (0, el.bG)([m2.A], () => m2.A.getPremiumTypeSubscription()),
             r = (0, gu.V)(),
             a = (0, gc.O)({ includePremiumGroupDiscount: !0 }),
-            s = (0, m5.cg)(),
+            s = (0, m4.cg)(),
             [l] = mQ(),
             o = (0, m3.Of)(n, i),
-            d = (0, el.bG)([m4.A], () => m4.A.getCreatedAtOverride()),
+            d = (0, el.bG)([m5.A], () => m5.A.getCreatedAtOverride()),
             c = t || null != r || null != a || s || null != l || o,
             u = null != d ? d : n?.createdAt;
         return c || (null != n && null != u && Date.now() - u.getTime() > 12096e5);
@@ -19769,7 +19780,7 @@ function SI(e) {
         f = (0, gc.O)({ includePremiumGroupDiscount: !0 }),
         p = (0, gd.p)(),
         T = (0, m7.ds)(),
-        m = (0, m5.cg)(),
+        m = (0, m4.cg)(),
         g = (0, m8._d)({ location: "NitroTabButton" }),
         S = (0, m8.rl)({ location: "NitroTabButton" }),
         N = (0, gm.NF)({ trialOffer: I }),
@@ -20362,7 +20373,7 @@ function Sj(e) {
         o
             ? (x.default.track(G.HAw.GIFT_INTENT_BADGE_CLICKED, { gift_intent_type: dl.np.FRIEND_ANNIVERSARY }),
               (e = G.m3P.ALL),
-              a5.A.setSection(G.m3P.ALL),
+              a4.A.setSection(G.m3P.ALL),
               l(n8.i.TAKE_ACTION))
             : (e = oS.Ay.getState().section),
             (0, cr.A)({ tab_opened: e });
@@ -20652,7 +20663,7 @@ function SJ() {
         [o, d] = (0, Sw.A)((e) => {
             let { channelId: t, path: n } = e;
             return [t, n];
-        }, d5.x),
+        }, d4.x),
         c = Sh({ selected: null == d ? i : d.startsWith(G.BVt.APPLICATION_STORE) }),
         u = (0, gm.Tp)(),
         _ = (0, el.bG)([mH.A], () => mH.A.getReminderStateId()),
@@ -20683,8 +20694,8 @@ var S0 = n(892340),
     S1 = n(272720),
     S2 = n(320989),
     S3 = n(463347),
-    S4 = n(334465),
-    S5 = n(718446),
+    S5 = n(334465),
+    S4 = n(718446),
     S6 = n(906786),
     S7 = n(650048),
     S8 = n(696451),
@@ -20733,7 +20744,7 @@ let Na = "isHideDevBanner",
                     className: ta()(Nr.Wz, Nr.mr),
                     children: [
                         (0, O.jsx)(Ni, { className: Nr.Kk }),
-                        tT.intl.format(tT.t.uyrfYF, { buildNumber: "597567" }),
+                        tT.intl.format(tT.t.uyrfYF, { buildNumber: "597600" }),
                         (0, O.jsx)(r, {}),
                     ],
                 })
@@ -21030,7 +21041,7 @@ function NV() {
         u = (0, s6.A)({
             applicationId: n ?? void 0,
             location: "ClipsReminder",
-            source: s5.GameProfileSources.ClipsReminder,
+            source: s4.GameProfileSources.ClipsReminder,
         }),
         _ = eu.useCallback(() => {
             (0, NI.p)(), (0, Np.kF)();
@@ -21083,7 +21094,7 @@ function NV() {
                             (0, O.jsxs)("div", {
                                 className: NG.IL,
                                 children: [
-                                    (0, O.jsx)(s4.A, { className: NG.Gt, game: s, size: s4.M.SMALL }),
+                                    (0, O.jsx)(s5.A, { className: NG.Gt, game: s, size: s5.M.SMALL }),
                                     null != u
                                         ? (0, O.jsx)(ts.D, {
                                               tag: "span",
@@ -21266,8 +21277,8 @@ function NZ() {
                                                   id: "ignore",
                                                   label: tT.intl.format(tT.t.cwS3E6, { device: t.displayName }),
                                                   color: "danger",
-                                                  icon: u5.a,
-                                                  trailingIndicator: { type: "icon", icon: u5.a },
+                                                  icon: u4.a,
+                                                  trailingIndicator: { type: "icon", icon: u4.a },
                                                   action: a,
                                               }),
                                           ],
@@ -21308,8 +21319,8 @@ var Nq = n(757780),
     N1 = n(235986),
     N2 = n(636585),
     N3 = n(42473),
-    N4 = n(994314),
-    N5 = n(485599),
+    N5 = n(994314),
+    N4 = n(485599),
     N6 = n(970111);
 class N7 extends eu.PureComponent {
     partyMemberAvatarRef = eu.createRef();
@@ -21321,12 +21332,12 @@ class N7 extends eu.PureComponent {
     renderTitle() {
         return (0, O.jsxs)("div", {
             children: [
-                (0, O.jsx)(N5.A, {
+                (0, O.jsx)(N4.A, {
                     children: this.isHost()
                         ? tT.intl.formatToPlainString(tT.t["6UJ7mh"], { count: this.props.party.length })
                         : tT.intl.string(tT.t.RZufbH),
                 }),
-                (0, O.jsx)(N4.A, { children: tT.intl.string(tT.t["0ZHLIi"]) }),
+                (0, O.jsx)(N5.A, { children: tT.intl.string(tT.t["0ZHLIi"]) }),
             ],
         });
     }
@@ -21650,7 +21661,7 @@ function CK(e) {
     let { channel: t, ...i } = e,
         r = eu.useRef(null),
         { mute: a, suppress: s } = (0, CV.A)(t),
-        l = (0, n5.bG)([eM.Ay], () => eM.Ay.isDeaf()),
+        l = (0, n4.bG)([eM.Ay], () => eM.Ay.isDeaf()),
         o = a || s || l,
         [d, c] = eu.useState(!1),
         u = t.getGuildId(),
@@ -21760,8 +21771,8 @@ var C$ = n(63995),
     C1 = n(405018),
     C2 = n(704877),
     C3 = n(848362),
-    C4 = n(222692),
-    C5 = n(702904),
+    C5 = n(222692),
+    C4 = n(702904),
     C6 = n(471993),
     C7 = n(442353),
     C8 = n(970636),
@@ -22147,7 +22158,7 @@ function OL() {
         n = t ? tT.intl.string(tT.t.ScHlfl) : tT.intl.string(tT.t.zqxfrf);
     return (0, O.jsx)(N3.A, {
         tooltipText: n,
-        icon: t ? h5.C : h4.T,
+        icon: t ? h4.C : h5.T,
         onClick: () => {
             (0, Cg.X)(e, Cg.O.STAGE_MUSIC, t), (0, Cq.k)(!t);
         },
@@ -22166,7 +22177,7 @@ function Oy(e) {
         d = (0, Ck.Ay)(t),
         { reachedLimit: c, limit: u } = (0, C1.A)(t),
         _ = eu.useCallback(() => {
-            (0, C4.A)();
+            (0, C5.A)();
         }, []),
         E = (0, tc.Us)(),
         A = eu.useCallback(
@@ -22322,7 +22333,7 @@ function Ov(e) {
         }, [_, n.id, o]),
         I = c.find((e) => e.ownerId === d?.id),
         f = (0, C3.T)(n, d, c);
-    t = null == I ? (i ? h : C5.A) : () => (0, CP.A)(I);
+    t = null == I ? (i ? h : C4.A) : () => (0, CP.A)(I);
     let p = null != I || f.length > 0,
         T = u ? tT.intl.string(tT.t.fjBNo1) : tT.intl.string(tT.t.uQn9B8),
         m = E || r || A,
@@ -22339,7 +22350,7 @@ function Ov(e) {
                 currentUser: d,
                 activeStreams: c,
                 onClose: t,
-                handleGoLive: i ? h : C5.A,
+                handleGoLive: i ? h : C4.A,
                 onInteraction: (0, CS.s)("ManageStreamsMenu", l, { entrypoint: Og.GK.OTHER_BUTTON }),
             });
         },
@@ -22445,7 +22456,7 @@ function Ob(e) {
                             });
                     });
                 },
-                children: (0, O.jsx)(N4.A, {
+                children: (0, O.jsx)(N5.A, {
                     className: CY.Ix,
                     children: (0, O.jsx)(ru.E, {
                         variant: "text-xs/medium",
@@ -22937,7 +22948,9 @@ let OZ = (0, tV.Fe)({
                 n.e("894292"),
                 n.e("153302"),
                 n.e("836576"),
-                n.e("884390"),
+                n.e("253453"),
+                n.e("82937"),
+                n.e("531547"),
                 n.e("450926"),
                 n.e("923981"),
                 n.e("750370"),
@@ -22947,7 +22960,7 @@ let OZ = (0, tV.Fe)({
                 n.e("636909"),
                 n.e("466592"),
                 n.e("742752"),
-                n.e("783687"),
+                n.e("282050"),
                 n.e("436101"),
                 n.e("976888"),
                 n.e("387970"),
@@ -23088,7 +23101,7 @@ let OZ = (0, tV.Fe)({
                 n.e("293159"),
                 n.e("755936"),
                 n.e("489088"),
-                n.e("409692"),
+                n.e("730760"),
                 n.e("994723"),
                 n.e("330316"),
                 n.e("362931"),
@@ -23316,7 +23329,9 @@ let OZ = (0, tV.Fe)({
                 n.e("894292"),
                 n.e("153302"),
                 n.e("836576"),
-                n.e("884390"),
+                n.e("253453"),
+                n.e("82937"),
+                n.e("531547"),
                 n.e("450926"),
                 n.e("923981"),
                 n.e("750370"),
@@ -23326,7 +23341,7 @@ let OZ = (0, tV.Fe)({
                 n.e("636909"),
                 n.e("466592"),
                 n.e("742752"),
-                n.e("783687"),
+                n.e("282050"),
                 n.e("436101"),
                 n.e("976888"),
                 n.e("387970"),
@@ -23375,7 +23390,7 @@ let OZ = (0, tV.Fe)({
                 n.e("293159"),
                 n.e("755936"),
                 n.e("489088"),
-                n.e("409692"),
+                n.e("730760"),
                 n.e("994723"),
                 n.e("330316"),
                 n.e("362931"),
@@ -23468,7 +23483,9 @@ let OZ = (0, tV.Fe)({
                 n.e("894292"),
                 n.e("153302"),
                 n.e("836576"),
-                n.e("884390"),
+                n.e("253453"),
+                n.e("82937"),
+                n.e("531547"),
                 n.e("450926"),
                 n.e("923981"),
                 n.e("750370"),
@@ -23478,7 +23495,7 @@ let OZ = (0, tV.Fe)({
                 n.e("636909"),
                 n.e("466592"),
                 n.e("742752"),
-                n.e("783687"),
+                n.e("282050"),
                 n.e("436101"),
                 n.e("976888"),
                 n.e("387970"),
@@ -23528,7 +23545,7 @@ let OZ = (0, tV.Fe)({
                 n.e("293159"),
                 n.e("755936"),
                 n.e("489088"),
-                n.e("409692"),
+                n.e("730760"),
                 n.e("994723"),
                 n.e("330316"),
                 n.e("362931"),
@@ -23628,7 +23645,9 @@ let OZ = (0, tV.Fe)({
                 n.e("894292"),
                 n.e("153302"),
                 n.e("836576"),
-                n.e("884390"),
+                n.e("253453"),
+                n.e("82937"),
+                n.e("531547"),
                 n.e("450926"),
                 n.e("923981"),
                 n.e("750370"),
@@ -23638,7 +23657,7 @@ let OZ = (0, tV.Fe)({
                 n.e("636909"),
                 n.e("466592"),
                 n.e("742752"),
-                n.e("783687"),
+                n.e("282050"),
                 n.e("436101"),
                 n.e("976888"),
                 n.e("387970"),
@@ -23793,7 +23812,7 @@ let OZ = (0, tV.Fe)({
                 n.e("293159"),
                 n.e("755936"),
                 n.e("489088"),
-                n.e("409692"),
+                n.e("730760"),
                 n.e("994723"),
                 n.e("330316"),
                 n.e("362931"),
@@ -24092,7 +24111,9 @@ let OZ = (0, tV.Fe)({
                 n.e("894292"),
                 n.e("153302"),
                 n.e("836576"),
-                n.e("884390"),
+                n.e("253453"),
+                n.e("82937"),
+                n.e("531547"),
                 n.e("450926"),
                 n.e("923981"),
                 n.e("750370"),
@@ -24102,7 +24123,7 @@ let OZ = (0, tV.Fe)({
                 n.e("636909"),
                 n.e("466592"),
                 n.e("742752"),
-                n.e("783687"),
+                n.e("282050"),
                 n.e("436101"),
                 n.e("976888"),
                 n.e("387970"),
@@ -24259,7 +24280,7 @@ let OZ = (0, tV.Fe)({
                 n.e("293159"),
                 n.e("755936"),
                 n.e("489088"),
-                n.e("409692"),
+                n.e("730760"),
                 n.e("994723"),
                 n.e("330316"),
                 n.e("362931"),
@@ -24535,7 +24556,7 @@ let OZ = (0, tV.Fe)({
         webpackId: 827641,
         name: "GuildOfficialMessagesPage",
     }),
-    O4 = (0, tV.Fe)({
+    O5 = (0, tV.Fe)({
         createPromise: () =>
             Promise.all([
                 n.e("251937"),
@@ -24612,7 +24633,9 @@ let OZ = (0, tV.Fe)({
                 n.e("894292"),
                 n.e("153302"),
                 n.e("836576"),
-                n.e("884390"),
+                n.e("253453"),
+                n.e("82937"),
+                n.e("531547"),
                 n.e("450926"),
                 n.e("923981"),
                 n.e("750370"),
@@ -24622,7 +24645,7 @@ let OZ = (0, tV.Fe)({
                 n.e("636909"),
                 n.e("466592"),
                 n.e("742752"),
-                n.e("783687"),
+                n.e("282050"),
                 n.e("436101"),
                 n.e("976888"),
                 n.e("387970"),
@@ -24761,7 +24784,7 @@ let OZ = (0, tV.Fe)({
                 n.e("293159"),
                 n.e("755936"),
                 n.e("489088"),
-                n.e("409692"),
+                n.e("730760"),
                 n.e("994723"),
                 n.e("330316"),
                 n.e("362931"),
@@ -24951,7 +24974,7 @@ let OZ = (0, tV.Fe)({
         name: "MemberSafetyPage",
         renderLoader: nQ.NU,
     }),
-    O5 = (0, tV.Fe)({
+    O4 = (0, tV.Fe)({
         createPromise: () =>
             Promise.all([
                 n.e("694315"),
@@ -25017,7 +25040,9 @@ let OZ = (0, tV.Fe)({
                 n.e("894292"),
                 n.e("153302"),
                 n.e("836576"),
-                n.e("884390"),
+                n.e("253453"),
+                n.e("82937"),
+                n.e("531547"),
                 n.e("450926"),
                 n.e("923981"),
                 n.e("750370"),
@@ -25027,7 +25052,7 @@ let OZ = (0, tV.Fe)({
                 n.e("636909"),
                 n.e("466592"),
                 n.e("742752"),
-                n.e("783687"),
+                n.e("282050"),
                 n.e("436101"),
                 n.e("976888"),
                 n.e("387970"),
@@ -25192,7 +25217,7 @@ let OZ = (0, tV.Fe)({
                 n.e("293159"),
                 n.e("755936"),
                 n.e("489088"),
-                n.e("409692"),
+                n.e("730760"),
                 n.e("994723"),
                 n.e("330316"),
                 n.e("362931"),
@@ -25722,7 +25747,9 @@ let OZ = (0, tV.Fe)({
                 n.e("894292"),
                 n.e("153302"),
                 n.e("836576"),
-                n.e("884390"),
+                n.e("253453"),
+                n.e("82937"),
+                n.e("531547"),
                 n.e("450926"),
                 n.e("923981"),
                 n.e("750370"),
@@ -25732,7 +25759,7 @@ let OZ = (0, tV.Fe)({
                 n.e("636909"),
                 n.e("466592"),
                 n.e("742752"),
-                n.e("783687"),
+                n.e("282050"),
                 n.e("436101"),
                 n.e("976888"),
                 n.e("387970"),
@@ -25815,7 +25842,7 @@ let OZ = (0, tV.Fe)({
                 n.e("293159"),
                 n.e("755936"),
                 n.e("489088"),
-                n.e("409692"),
+                n.e("730760"),
                 n.e("994723"),
                 n.e("330316"),
                 n.e("362931"),
@@ -26072,7 +26099,9 @@ let OZ = (0, tV.Fe)({
                 n.e("894292"),
                 n.e("153302"),
                 n.e("836576"),
-                n.e("884390"),
+                n.e("253453"),
+                n.e("82937"),
+                n.e("531547"),
                 n.e("450926"),
                 n.e("923981"),
                 n.e("750370"),
@@ -26082,7 +26111,7 @@ let OZ = (0, tV.Fe)({
                 n.e("636909"),
                 n.e("466592"),
                 n.e("742752"),
-                n.e("783687"),
+                n.e("282050"),
                 n.e("436101"),
                 n.e("976888"),
                 n.e("387970"),
@@ -26217,7 +26246,7 @@ let OZ = (0, tV.Fe)({
                 n.e("293159"),
                 n.e("755936"),
                 n.e("489088"),
-                n.e("409692"),
+                n.e("730760"),
                 n.e("994723"),
                 n.e("330316"),
                 n.e("362931"),
@@ -26442,7 +26471,9 @@ let OZ = (0, tV.Fe)({
                 n.e("894292"),
                 n.e("153302"),
                 n.e("836576"),
-                n.e("884390"),
+                n.e("253453"),
+                n.e("82937"),
+                n.e("531547"),
                 n.e("450926"),
                 n.e("923981"),
                 n.e("750370"),
@@ -26452,7 +26483,7 @@ let OZ = (0, tV.Fe)({
                 n.e("636909"),
                 n.e("466592"),
                 n.e("742752"),
-                n.e("783687"),
+                n.e("282050"),
                 n.e("436101"),
                 n.e("976888"),
                 n.e("387970"),
@@ -26607,7 +26638,7 @@ let OZ = (0, tV.Fe)({
                 n.e("293159"),
                 n.e("755936"),
                 n.e("489088"),
-                n.e("409692"),
+                n.e("730760"),
                 n.e("994723"),
                 n.e("330316"),
                 n.e("362931"),
@@ -26901,7 +26932,9 @@ let OZ = (0, tV.Fe)({
                 n.e("894292"),
                 n.e("153302"),
                 n.e("836576"),
-                n.e("884390"),
+                n.e("253453"),
+                n.e("82937"),
+                n.e("531547"),
                 n.e("450926"),
                 n.e("923981"),
                 n.e("750370"),
@@ -26911,7 +26944,7 @@ let OZ = (0, tV.Fe)({
                 n.e("636909"),
                 n.e("466592"),
                 n.e("742752"),
-                n.e("783687"),
+                n.e("282050"),
                 n.e("436101"),
                 n.e("976888"),
                 n.e("387970"),
@@ -27094,7 +27127,7 @@ let OZ = (0, tV.Fe)({
                 n.e("293159"),
                 n.e("755936"),
                 n.e("489088"),
-                n.e("409692"),
+                n.e("730760"),
                 n.e("994723"),
                 n.e("330316"),
                 n.e("362931"),
@@ -27440,7 +27473,9 @@ let OZ = (0, tV.Fe)({
                 n.e("894292"),
                 n.e("153302"),
                 n.e("836576"),
-                n.e("884390"),
+                n.e("253453"),
+                n.e("82937"),
+                n.e("531547"),
                 n.e("450926"),
                 n.e("923981"),
                 n.e("750370"),
@@ -27450,7 +27485,7 @@ let OZ = (0, tV.Fe)({
                 n.e("636909"),
                 n.e("466592"),
                 n.e("742752"),
-                n.e("783687"),
+                n.e("282050"),
                 n.e("436101"),
                 n.e("976888"),
                 n.e("387970"),
@@ -27605,7 +27640,7 @@ let OZ = (0, tV.Fe)({
                 n.e("293159"),
                 n.e("755936"),
                 n.e("489088"),
-                n.e("409692"),
+                n.e("730760"),
                 n.e("994723"),
                 n.e("330316"),
                 n.e("362931"),
@@ -27934,7 +27969,9 @@ let OZ = (0, tV.Fe)({
                 n.e("894292"),
                 n.e("153302"),
                 n.e("836576"),
-                n.e("884390"),
+                n.e("253453"),
+                n.e("82937"),
+                n.e("531547"),
                 n.e("450926"),
                 n.e("923981"),
                 n.e("750370"),
@@ -27944,7 +27981,7 @@ let OZ = (0, tV.Fe)({
                 n.e("636909"),
                 n.e("466592"),
                 n.e("742752"),
-                n.e("783687"),
+                n.e("282050"),
                 n.e("436101"),
                 n.e("976888"),
                 n.e("387970"),
@@ -28081,7 +28118,7 @@ let OZ = (0, tV.Fe)({
                 n.e("293159"),
                 n.e("755936"),
                 n.e("489088"),
-                n.e("409692"),
+                n.e("730760"),
                 n.e("994723"),
                 n.e("330316"),
                 n.e("362931"),
@@ -28318,13 +28355,13 @@ let OZ = (0, tV.Fe)({
                 case a_.VV.GUILD_HOME:
                     return (0, O.jsx)(O1, { guildId: r });
                 case a_.VV.CHANNEL_BROWSER:
-                    return (0, O.jsx)(O5, { guildId: r, selectedSection: OY.qC.BROWSE });
+                    return (0, O.jsx)(O4, { guildId: r, selectedSection: OY.qC.BROWSE });
                 case a_.VV.GUILD_ONBOARDING:
                     return (0, O.jsx)(O6, { guildId: r });
                 case a_.VV.CUSTOMIZE_COMMUNITY:
-                    return (0, O.jsx)(O5, { guildId: r, selectedSection: OY.qC.CUSTOMIZE });
+                    return (0, O.jsx)(O4, { guildId: r, selectedSection: OY.qC.CUSTOMIZE });
                 case a_.VV.MEMBER_SAFETY:
-                    return (0, O.jsx)(O4, { guildId: r });
+                    return (0, O.jsx)(O5, { guildId: r });
                 case a_.VV.VIBEGRATIONS:
                     return _
                         ? (0, O.jsx)(OJ, { guildId: r, projectId: s })
@@ -28417,7 +28454,7 @@ function RR(e) {
     return (0, O.jsx)(Rd, { ...e });
 }
 function RL() {
-    return (0, O.jsx)(d4, {});
+    return (0, O.jsx)(d5, {});
 }
 function Ry() {
     return (0, O.jsx)(Rr, {});
@@ -28437,25 +28474,25 @@ function Rb(e) {
             let { match: t } = e;
             switch (t.params.feature) {
                 case "friends":
-                    return (0, O.jsx)(d4, { initialSection: G.m3P.ONLINE });
+                    return (0, O.jsx)(d5, { initialSection: G.m3P.ONLINE });
                 case "addFriends":
-                    return (0, O.jsx)(d4, { initialSection: G.m3P.ADD_FRIEND });
+                    return (0, O.jsx)(d5, { initialSection: G.m3P.ADD_FRIEND });
                 case "pendingFriends":
-                    return (0, O.jsx)(d4, { initialSection: G.m3P.PENDING });
+                    return (0, O.jsx)(d5, { initialSection: G.m3P.PENDING });
                 case "sessionManagement":
-                    return (0, O.jsx)(tP.rd, { to: (0, S5.settingsPathToRoute)(O$.od.SESSIONS) });
+                    return (0, O.jsx)(tP.rd, { to: (0, S4.settingsPathToRoute)(O$.od.SESSIONS) });
                 case "messageRequests":
                     return (0, O.jsx)(tP.rd, { to: G.BVt.MESSAGE_REQUESTS });
                 case "connections":
                     return (0, O.jsx)(tP.rd, {
-                        to: { pathname: (0, S5.settingsPathToRoute)(O$.od.CONNECTIONS), search: e.location.search },
+                        to: { pathname: (0, S4.settingsPathToRoute)(O$.od.CONNECTIONS), search: e.location.search },
                     });
                 case "family-center":
                     return (0, O.jsx)(tP.rd, { to: G.BVt.FAMILY_CENTER });
                 case "account-standing":
-                    return (0, O.jsx)(tP.rd, { to: (0, S5.settingsPathToRoute)(O$.od.ACCOUNT_ACCOUNT_STANDING) });
+                    return (0, O.jsx)(tP.rd, { to: (0, S4.settingsPathToRoute)(O$.od.ACCOUNT_ACCOUNT_STANDING) });
                 case "authorized-apps":
-                    return (0, O.jsx)(tP.rd, { to: (0, S5.settingsPathToRoute)(O$.od.AUTHORIZED_APPS) });
+                    return (0, O.jsx)(tP.rd, { to: (0, S4.settingsPathToRoute)(O$.od.AUTHORIZED_APPS) });
                 case "open-shop":
                     let { tab: n } = (0, tF.parse)(e.location.search);
                     if (Object.values(mh.G2).includes(n))
@@ -28463,20 +28500,20 @@ function Rb(e) {
                     return (0, O.jsx)(tP.rd, { to: G.BVt.COLLECTIBLES_SHOP });
                 case "editProfile":
                     return (0, O.jsx)(tP.rd, {
-                        to: { pathname: (0, S5.settingsPathToRoute)(O$.od.PROFILE_CUSTOMIZATION) },
+                        to: { pathname: (0, S4.settingsPathToRoute)(O$.od.PROFILE_CUSTOMIZATION) },
                     });
                 case "gift":
                 case "store":
                     return (0, O.jsx)(tP.rd, { to: { pathname: G.BVt.NITRO_HOME } });
                 case "connected-games":
                     return (0, O.jsx)(tP.rd, {
-                        to: (0, S5.settingsPathToRoute)(O$.od.CONTENT_AND_SOCIAL_CONNECTED_GAMES),
+                        to: (0, S4.settingsPathToRoute)(O$.od.CONTENT_AND_SOCIAL_CONNECTED_GAMES),
                     });
                 case "boost":
                     let i = t.params.guildId;
                     return (0, O.jsx)(tP.rd, { to: G.BVt.POWERUP_STORE(i) });
                 case "boost-settings":
-                    return (0, O.jsx)(tP.rd, { to: (0, S5.settingsPathToRoute)(O$.od.GUILD_BOOSTING) });
+                    return (0, O.jsx)(tP.rd, { to: (0, S4.settingsPathToRoute)(O$.od.GUILD_BOOSTING) });
                 default:
                     return (0, O.jsx)(tP.rd, { to: G.BVt.ME });
             }
@@ -28627,7 +28664,7 @@ function RU() {
         })(),
         r =
             ((e = (0, tP.zy)()),
-            (0, S4.B)(e.pathname, G.BVt.GUILD_BOOSTING_MARKETING(S3.pv.guildId()))?.isExact === !0),
+            (0, S5.B)(e.pathname, G.BVt.GUILD_BOOSTING_MARKETING(S3.pv.guildId()))?.isExact === !0),
         a = (0, el.bG)([aQ], () => aQ.getIsOpen()),
         { notificationCenterVariant: s } = (0, rN.X8)({ location: "Sidebar" }),
         l = (0, aK.U)("AppView"),
@@ -28642,7 +28679,7 @@ function RU() {
         E = (0, el.bG)([rA.A], () => (0, rT.x1)(rA.A.getMainFrame()));
     return (
         eu.useEffect(() => {
-            (0, n4.t)(() => {
+            (0, n5.t)(() => {
                 Rs.preload(), Re.preload();
             });
         }, []),
@@ -29261,8 +29298,8 @@ var RJ = n(665260),
     R1 = n(311964),
     R2 = n(885437),
     R3 = n(973854),
-    R4 = n(933024),
-    R5 = n(815706),
+    R5 = n(933024),
+    R4 = n(815706),
     R6 = n(474090),
     R7 = n(181079),
     R8 = n(635233),
@@ -29505,7 +29542,7 @@ class Lm extends eu.PureComponent {
             let e = "none",
                 n = [s ? "screen" : null, a ? "camera" : null].filter(lc.Vq),
                 i = null;
-            s ? ((e = "screen"), (i = (0, R5.p)())) : a && (e = "camera"),
+            s ? ((e = "screen"), (i = (0, R4.p)())) : a && (e = "camera"),
                 x.default.track(G.HAw.VIDEO_INPUT_TOGGLED, {
                     video_input_type: e,
                     video_toggle_source: __OVERLAY__ ? "overlay" : "app",
@@ -29638,7 +29675,7 @@ function Lg() {
                         r === G.BVt.FRIENDS &&
                         (function (e) {
                             let { tab_opened: t, source: n } = e,
-                                i = (0, R4.A)();
+                                i = (0, R5.A)();
                             x.default.track(G.HAw.FRIENDS_LIST_VIEWED, { tab_opened: t, source: n, ...i }),
                                 (0, R1.k)(G.HAw.FRIENDS_LIST_VIEWED_CLICKSTREAM, {
                                     tab_opened: t ?? "tabless",
@@ -29878,7 +29915,9 @@ let LL = (0, nX.Fe)({
                 n.e("894292"),
                 n.e("153302"),
                 n.e("836576"),
-                n.e("884390"),
+                n.e("253453"),
+                n.e("82937"),
+                n.e("531547"),
                 n.e("450926"),
                 n.e("923981"),
                 n.e("750370"),
@@ -29888,7 +29927,7 @@ let LL = (0, nX.Fe)({
                 n.e("636909"),
                 n.e("466592"),
                 n.e("742752"),
-                n.e("783687"),
+                n.e("282050"),
                 n.e("436101"),
                 n.e("976888"),
                 n.e("387970"),
@@ -29955,7 +29994,7 @@ let LL = (0, nX.Fe)({
                 n.e("293159"),
                 n.e("755936"),
                 n.e("489088"),
-                n.e("409692"),
+                n.e("730760"),
                 n.e("994723"),
                 n.e("330316"),
                 n.e("362931"),
@@ -30106,7 +30145,9 @@ let LL = (0, nX.Fe)({
                 n.e("894292"),
                 n.e("153302"),
                 n.e("836576"),
-                n.e("884390"),
+                n.e("253453"),
+                n.e("82937"),
+                n.e("531547"),
                 n.e("450926"),
                 n.e("750370"),
                 n.e("972281"),
@@ -30115,7 +30156,7 @@ let LL = (0, nX.Fe)({
                 n.e("636909"),
                 n.e("466592"),
                 n.e("742752"),
-                n.e("783687"),
+                n.e("282050"),
                 n.e("436101"),
                 n.e("976888"),
                 n.e("387970"),
@@ -30311,7 +30352,7 @@ let LL = (0, nX.Fe)({
                 n.e("293159"),
                 n.e("755936"),
                 n.e("489088"),
-                n.e("409692"),
+                n.e("730760"),
                 n.e("994723"),
                 n.e("330316"),
                 n.e("362931"),
@@ -30763,7 +30804,7 @@ let LV = eu.memo(function () {
             let { duration: t, intensity: n } = e;
             if (ec.Ay.useReducedMotion || !tR.A.isFocused()) return;
             let { current: r } = i;
-            e5()(null != r, "Shakeable is shaken when not mounted"), r.shake(t, n);
+            e4()(null != r, "Shakeable is shaken when not mounted"), r.shake(t, n);
         }, []);
     return (
         eu.useEffect(() => (nG.A.setLayout(nw.Ay), nG.A.enable(), () => nG.A.disable()), []),
@@ -30935,7 +30976,7 @@ class L0 extends t8.A {
 let L1 = new L0();
 var L2 = n(480900),
     L3 = n(293260);
-class L4 extends t8.A {
+class L5 extends t8.A {
     _initialize() {
         b.h.subscribe("GUILD_ROLE_CONNECTIONS_MODAL_SHOW", this.handleShow);
     }
@@ -30948,7 +30989,7 @@ class L4 extends t8.A {
             (null != t && t.tags?.guild_connections === null ? (0, L2.b)(t, n) : (0, L3.c0)(n));
     }
 }
-let L5 = new L4();
+let L4 = new L5();
 var L6 = n(475358),
     L7 = n(785796),
     L8 = n(552122),
@@ -31456,13 +31497,13 @@ var yZ = n(53677),
     y1 = n(997630),
     y2 = n(325278),
     y3 = n(140175);
-let y4 = (0, w.mj)({
+let y5 = (0, w.mj)({
     name: "2026-05-global-soundboard-wheel-popout",
     kind: "user",
     defaultConfig: { enabled: !1 },
     variations: { 1: { enabled: !0 } },
 });
-var y5 = n(528772),
+var y4 = n(528772),
     y6 = n(944775),
     y7 = n(351906),
     y8 = n(532624),
@@ -31554,7 +31595,7 @@ let Di = {
                                     G.BRT.APP,
                                     !0,
                                 )
-                              : (0, C4.A)(),
+                              : (0, C5.A)(),
                         !1
                     );
                 }
@@ -31633,7 +31674,7 @@ let Di = {
         onTrigger: () => {
             let e = (0, De.A)();
             if (null != e)
-                if (y5.A.enabled) (0, y6.Lk)(e);
+                if (y4.A.enabled) (0, y6.Lk)(e);
                 else {
                     if (!(0, Ck.lI)()) return;
                     (0, y6.hK)(!0, e);
@@ -31653,7 +31694,7 @@ let Di = {
             }
             if (e && ((0, B.isWindows)() || tR.A.isFocused())) {
                 if (!(0, Ck.lI)()) return;
-                let { enabled: e } = y4.getConfig({ location: "SOUNDBOARD_HOLD" });
+                let { enabled: e } = y5.getConfig({ location: "SOUNDBOARD_HOLD" });
                 if (!e) return;
                 (0, y6.Ax)(!1);
                 return;
@@ -32041,7 +32082,9 @@ let DH = (0, nX.Fe)({
                 n.e("894292"),
                 n.e("153302"),
                 n.e("836576"),
-                n.e("884390"),
+                n.e("253453"),
+                n.e("82937"),
+                n.e("531547"),
                 n.e("450926"),
                 n.e("923981"),
                 n.e("750370"),
@@ -32051,7 +32094,7 @@ let DH = (0, nX.Fe)({
                 n.e("636909"),
                 n.e("466592"),
                 n.e("742752"),
-                n.e("783687"),
+                n.e("282050"),
                 n.e("436101"),
                 n.e("976888"),
                 n.e("387970"),
@@ -32244,7 +32287,7 @@ let DH = (0, nX.Fe)({
                 n.e("293159"),
                 n.e("755936"),
                 n.e("489088"),
-                n.e("409692"),
+                n.e("730760"),
                 n.e("994723"),
                 n.e("330316"),
                 n.e("362931"),
@@ -32573,7 +32616,9 @@ let DH = (0, nX.Fe)({
                 n.e("894292"),
                 n.e("153302"),
                 n.e("836576"),
-                n.e("884390"),
+                n.e("253453"),
+                n.e("82937"),
+                n.e("531547"),
                 n.e("450926"),
                 n.e("923981"),
                 n.e("750370"),
@@ -32583,7 +32628,7 @@ let DH = (0, nX.Fe)({
                 n.e("636909"),
                 n.e("466592"),
                 n.e("742752"),
-                n.e("783687"),
+                n.e("282050"),
                 n.e("436101"),
                 n.e("976888"),
                 n.e("387970"),
@@ -32638,7 +32683,7 @@ let DH = (0, nX.Fe)({
                 n.e("293159"),
                 n.e("755936"),
                 n.e("489088"),
-                n.e("409692"),
+                n.e("730760"),
                 n.e("994723"),
                 n.e("330316"),
                 n.e("362931"),
@@ -32740,7 +32785,9 @@ let DH = (0, nX.Fe)({
                 n.e("894292"),
                 n.e("153302"),
                 n.e("836576"),
-                n.e("884390"),
+                n.e("253453"),
+                n.e("82937"),
+                n.e("531547"),
                 n.e("450926"),
                 n.e("923981"),
                 n.e("750370"),
@@ -32750,7 +32797,7 @@ let DH = (0, nX.Fe)({
                 n.e("636909"),
                 n.e("466592"),
                 n.e("742752"),
-                n.e("783687"),
+                n.e("282050"),
                 n.e("436101"),
                 n.e("976888"),
                 n.e("387970"),
@@ -32931,7 +32978,7 @@ let DH = (0, nX.Fe)({
                 n.e("293159"),
                 n.e("755936"),
                 n.e("489088"),
-                n.e("409692"),
+                n.e("730760"),
                 n.e("994723"),
                 n.e("330316"),
                 n.e("362931"),
@@ -33253,7 +33300,9 @@ let DH = (0, nX.Fe)({
                 n.e("894292"),
                 n.e("153302"),
                 n.e("836576"),
-                n.e("884390"),
+                n.e("253453"),
+                n.e("82937"),
+                n.e("531547"),
                 n.e("450926"),
                 n.e("923981"),
                 n.e("750370"),
@@ -33263,7 +33312,7 @@ let DH = (0, nX.Fe)({
                 n.e("636909"),
                 n.e("466592"),
                 n.e("742752"),
-                n.e("783687"),
+                n.e("282050"),
                 n.e("436101"),
                 n.e("976888"),
                 n.e("387970"),
@@ -33456,7 +33505,7 @@ let DH = (0, nX.Fe)({
                 n.e("293159"),
                 n.e("755936"),
                 n.e("489088"),
-                n.e("409692"),
+                n.e("730760"),
                 n.e("994723"),
                 n.e("330316"),
                 n.e("362931"),
@@ -33854,8 +33903,8 @@ var DQ = n(835095),
     D1 = n(412260),
     D2 = n(852218),
     D3 = n(891786),
-    D4 = n(231265),
-    D5 = n(103407);
+    D5 = n(231265),
+    D4 = n(103407);
 let D6 = "PremiumServerDriveAnnouncementModal";
 class D7 extends t8.A {
     _initialize() {
@@ -33914,10 +33963,10 @@ class D7 extends t8.A {
     maybeOpenServerDriveAnnouncementModal = async (e, t, i) => {
         if ((0, tB.hasModalOpen)(D6)) return !1;
         let { id: r, promotionId: a } = e,
-            s = (0, D5.H)({ promotionId: a, properties: e.properties, isPreview: t });
+            s = (0, D4.H)({ promotionId: a, properties: e.properties, isPreview: t });
         if (null != s)
             return (
-                (!1 !== t || s?.contentIdentifier !== "summer_bogo_content" || !!(await (0, D4.C)())) &&
+                (!1 !== t || s?.contentIdentifier !== "summer_bogo_content" || !!(await (0, D5.C)())) &&
                 ((0, tB.openModalLazy)(
                     async () => {
                         let { default: e } = await Promise.resolve().then(n.bind(n, 103407));
@@ -33942,7 +33991,7 @@ class D7 extends t8.A {
         this.maybeOpenServerDriveAnnouncementModal(D0.A.createFromServer(t), !0, n);
     };
     mayShowAnnouncementModal = async () => {
-        if ((await (0, m5.hb)(), Lj.P.isDisallowPopupsSet())) return;
+        if ((await (0, m4.hb)(), Lj.P.isDisallowPopupsSet())) return;
         let e = eP.default.getCurrentUser();
         if (null != e && !e.verified) return;
     };
@@ -35296,8 +35345,8 @@ let v1 = {
             }),
         },
     };
-var v4 = n(515718);
-let v5 = {
+var v5 = n(515718);
+let v4 = {
     [G.e$_.GET_IMAGE]: {
         scope: OK.hj,
         validation: (e) =>
@@ -35325,7 +35374,7 @@ let v5 = {
             if (null == t) throw new vI.A({ errorCode: G.Lw6.INVALID_COMMAND }, "No valid type.");
             return fetch(t)
                 .then((e) => e.blob())
-                .then((e) => (0, v4.We)(e))
+                .then((e) => (0, v5.We)(e))
                 .then((e) => ({ data_url: e }));
         },
     },
@@ -36420,7 +36469,7 @@ let bj = {
         ...v1,
         ...v2,
         ...v3,
-        ...v5,
+        ...v4,
         ...bt,
         ...bu,
         ...bE,
@@ -36469,14 +36518,14 @@ let b2 = { [OK.sm.ALL]: [OK.W_, OK.VH] };
 function b3(e) {
     return vX(e).required().keys({ session_id: e.string().required() });
 }
-function b4(e) {
+function b5(e) {
     let {
         args: { session_id: t },
         socket: n,
     } = e;
     vR.validateEventSubscription(n, t);
 }
-let b5 = {
+let b4 = {
     [G.ZE4.GUILD_STATUS]: {
         scope: vP.F.RPC,
         validation: (e) => vX(e).required().keys({ guild_id: e.string().required() }),
@@ -36620,8 +36669,8 @@ let b5 = {
             );
         },
     },
-    [G.ZE4.VOICE_SESSION_SPEAKING_START]: { scope: b2, validation: b3, handler: b4 },
-    [G.ZE4.VOICE_SESSION_SPEAKING_STOP]: { scope: b2, validation: b3, handler: b4 },
+    [G.ZE4.VOICE_SESSION_SPEAKING_START]: { scope: b2, validation: b3, handler: b5 },
+    [G.ZE4.VOICE_SESSION_SPEAKING_STOP]: { scope: b2, validation: b3, handler: b5 },
     [G.ZE4.GUILD_CREATE]: { scope: vP.F.RPC, handler() {} },
     [G.ZE4.CHANNEL_CREATE]: { scope: vP.F.RPC, handler() {} },
     [G.ZE4.GAME_JOIN]: { scope: { [OK.sm.ANY]: [vP.F.RPC, OK.hj] }, handler() {} },
@@ -38305,8 +38354,8 @@ let M3 = {
         },
     }),
 };
-var M4 = n(803306),
-    M5 = n(809685);
+var M5 = n(803306),
+    M4 = n(809685);
 let M6 = {
     [G.e$_.OPEN_CONTEXT_MENU]: vK(G.e$_.OPEN_CONTEXT_MENU, {
         scope: { [OK.sm.ANY]: [OK.W_, OK.VH] },
@@ -38333,8 +38382,8 @@ let M6 = {
                 (r = Math.min(Math.max(u, 0), t.height)),
                 (a = MX(A)),
                 { pageX: t.left + a.scrollX + i, pageY: t.top + a.scrollY + r });
-            (0, M5.n_)(_);
-            let p = { context: MQ(A), onClose: () => (0, M5.yH)(_) },
+            (0, M4.n_)(_);
+            let p = { context: MQ(A), onClose: () => (0, M4.yH)(_) },
                 T = {
                     pageX: I,
                     pageY: f,
@@ -38348,7 +38397,7 @@ let M6 = {
                 return new Promise((t) => {
                     let i = null;
                     function r() {
-                        (0, M5.yH)(_), t({ opened: !0, selected_id: i });
+                        (0, M4.yH)(_), t({ opened: !0, selected_id: i });
                     }
                     (0, o_.L3)(
                         T,
@@ -38400,7 +38449,7 @@ let M6 = {
                 );
             }
             let m = eP.default.getUser(o);
-            if ((null == m && (await M4.fetchProfile(o), (m = eP.default.getUser(o))), null == m))
+            if ((null == m && (await M5.fetchProfile(o), (m = eP.default.getUser(o))), null == m))
                 throw new vI.A({ errorCode: G.Lw6.INVALID_USER }, `Unknown user id: ${o}`);
             let g = null == E ? void 0 : rf.A.getChannel(E);
             if (null == g)
@@ -38947,8 +38996,8 @@ let Pf = {
                         null != i &&
                             (0, yP.B)(() => {
                                 let e = G.BVt.SETTINGS(i.section, i.subsection),
-                                    n = (0, S5.parseSettingsUrl)({ path: e, search: i.search });
-                                (0, S5.trackParseSettingsUrl)(n, "deeplink"),
+                                    n = (0, S4.parseSettingsUrl)({ path: e, search: i.search });
+                                (0, S4.trackParseSettingsUrl)(n, "deeplink"),
                                     (0, so.openUserSettings)(n.target, { path: n.path, searchParams: n.params }),
                                     PI(i, (0, OK.OE)(t));
                             });
@@ -39127,7 +39176,7 @@ let Pf = {
                 let {
                     args: { state: t, path: n, query: i },
                 } = e;
-                return (0, g4.re)({ paymentSourceType: G.hes.PAYPAL, state: t, path: n, query: i });
+                return (0, g5.re)({ paymentSourceType: G.hes.PAYPAL, state: t, path: n, query: i });
             },
         },
         [G.e$_.BILLING_POPUP_BRIDGE_CALLBACK]: {
@@ -39136,7 +39185,7 @@ let Pf = {
                 let {
                     args: { state: t, path: n, query: i, payment_source_type: r },
                 } = e;
-                return (0, g4.re)({ paymentSourceType: r, state: t, path: n, query: i });
+                return (0, g5.re)({ paymentSourceType: r, state: t, path: n, query: i });
             },
         },
     },
@@ -39503,7 +39552,9 @@ let PP = {
                             n.e("894292"),
                             n.e("153302"),
                             n.e("836576"),
-                            n.e("884390"),
+                            n.e("253453"),
+                            n.e("82937"),
+                            n.e("531547"),
                             n.e("450926"),
                             n.e("923981"),
                             n.e("750370"),
@@ -39513,7 +39564,7 @@ let PP = {
                             n.e("636909"),
                             n.e("466592"),
                             n.e("742752"),
-                            n.e("783687"),
+                            n.e("282050"),
                             n.e("436101"),
                             n.e("976888"),
                             n.e("387970"),
@@ -39559,7 +39610,7 @@ let PP = {
                             n.e("293159"),
                             n.e("755936"),
                             n.e("489088"),
-                            n.e("409692"),
+                            n.e("730760"),
                             n.e("994723"),
                             n.e("330316"),
                             n.e("362931"),
@@ -40124,7 +40175,7 @@ class P2 extends J.EventEmitter {
     };
 }
 var P3 = n(313731);
-class P4 extends P3.A {
+class P5 extends P3.A {
     postMessageToRPCClient;
     logger;
     postClose;
@@ -40156,14 +40207,14 @@ class P4 extends P3.A {
             (this.closed = !0);
     }
 }
-let P5 = new eB.A("RPCServer:PostMessage"),
+let P4 = new eB.A("RPCServer:PostMessage"),
     P6 =
         ((d = new P2(
             Mt.j7,
-            P5,
+            P4,
             (e) => {
                 let { source: t, postMessageToRPCClient: n, version: i, encoding: r, logger: a, postClose: s } = e;
-                return new P4({
+                return new P5({
                     source: t,
                     postMessageToRPCClient: n,
                     version: i,
@@ -40183,7 +40234,7 @@ let P5 = new eB.A("RPCServer:PostMessage"),
         )),
         window.addEventListener("message", function (e) {
             if (window === e.source) return;
-            if (null == e.source || null == e.source.postMessage) return void P5.error("Unknown event source");
+            if (null == e.source || null == e.source.postMessage) return void P4.error("Unknown event source");
             let t = e.source,
                 n = e.data,
                 i = e.origin,
@@ -40226,7 +40277,7 @@ let P5 = new eB.A("RPCServer:PostMessage"),
         ...MZ,
         ...PH,
     },
-    P8 = { ...b5, ...b7, ...b9, ...Me, ...Mn },
+    P8 = { ...b4, ...b7, ...b9, ...Me, ...Mn },
     P9 = {
         server: b8.A,
         commands: P7,
@@ -40770,7 +40821,7 @@ class UI extends Ua {
                                       eM.Ay.getMediaEngine().eachConnection((n) => {
                                           n.context === Uo.x.DEFAULT &&
                                               (r(),
-                                              e5()(null != s, "audioBuffer cannot be null here"),
+                                              e4()(null != s, "audioBuffer cannot be null here"),
                                               n.startSamplesLocalPlayback(t, s, i, (t, n) => {
                                                   0 !== t ? a(Error(`${n}`)) : e();
                                               }));
@@ -41107,8 +41158,8 @@ let U3 = {
         t.verified && (0, tB.closeModal)(U2.H1);
     },
 };
-var U4 = n(803805),
-    U5 = n(761821);
+var U5 = n(803805),
+    U4 = n(761821);
 let U6 = "selectedChannelGuildFrecency";
 function U7(e) {
     let { state: t } = el.Ay.PersistedStore.migrateAndReadStoreState("GIFFavoritesStore", [
@@ -41123,16 +41174,16 @@ function U7(e) {
     return null == t || 0 === t.favorites.length
         ? []
         : t.favorites.map((n, i) => {
-              let r = U4.tC.create();
+              let r = U5.tC.create();
               return (
                   (r.format = (() => {
                       switch (n.format) {
                           case "IMAGE":
-                              return U4.TL.IMAGE;
+                              return U5.TL.IMAGE;
                           case "VIDEO":
-                              return U4.TL.VIDEO;
+                              return U5.TL.VIDEO;
                           default:
-                              return n.format, U4.TL.NONE;
+                              return n.format, U5.TL.NONE;
                       }
                   })()),
                   (r.src = n.src),
@@ -41149,7 +41200,7 @@ let U8 = [
         run(e) {
             let t = U7(1);
             if (0 === t.length) return !1;
-            for (let { url: n, favorite: i } of (null == e.favoriteGifs && (e.favoriteGifs = U4.uz.create()),
+            for (let { url: n, favorite: i } of (null == e.favoriteGifs && (e.favoriteGifs = U5.uz.create()),
             (e.favoriteGifs.gifs = {}),
             t))
                 e.favoriteGifs.gifs[n] = i;
@@ -41172,12 +41223,12 @@ let U8 = [
             let i = !1;
             return (
                 n.favorites.length > 0 &&
-                    ((e.favoriteStickers = U4.tQ.create()),
+                    ((e.favoriteStickers = U5.tQ.create()),
                     (e.favoriteStickers.stickerIds = nM().uniq(n.favorites).slice(0, 250)),
                     (i = !0)),
                 nM().size(n.usageHistory) > 0 &&
-                    ((e.stickerFrecency = U4.Do.create()),
-                    (e.stickerFrecency.stickers = (0, U5.Mr)(n.usageHistory, 100)),
+                    ((e.stickerFrecency = U5.Do.create()),
+                    (e.stickerFrecency.stickers = (0, U4.Mr)(n.usageHistory, 100)),
                     (i = !0)),
                 i
             );
@@ -41197,12 +41248,12 @@ let U8 = [
             return (
                 null != t.favorites &&
                     t.favorites.length > 0 &&
-                    ((e.favoriteEmojis = U4.gW.create()),
+                    ((e.favoriteEmojis = U5.gW.create()),
                     (e.favoriteEmojis.emojis = nM().uniq(t.favorites).slice(0, 250)),
                     (n = !0)),
                 nM().size(t.usageHistory) > 0 &&
-                    ((e.emojiFrecency = U4.Q8.create()),
-                    (e.emojiFrecency.emojis = (0, U5.Mr)(t.usageHistory, 100)),
+                    ((e.emojiFrecency = U5.Q8.create()),
+                    (e.emojiFrecency.emojis = (0, U4.Mr)(t.usageHistory, 100)),
                     (n = !0)),
                 n
             );
@@ -41214,7 +41265,7 @@ let U8 = [
     {
         version: 6,
         run(e) {
-            null == e.favoriteGifs && (e.favoriteGifs = U4.uz.create()),
+            null == e.favoriteGifs && (e.favoriteGifs = U5.uz.create()),
                 null == e.favoriteGifs.gifs && (e.favoriteGifs.gifs = {});
             let t = U7(1);
             if (0 === t.length) return !1;
@@ -41222,20 +41273,20 @@ let U8 = [
                 .values()
                 .sortBy("order")
                 .forEach((e, n) => (e.order = t.length + 1 + n));
-            let n = U4.uz.toBinary(e.favoriteGifs).length,
+            let n = U5.uz.toBinary(e.favoriteGifs).length,
                 i = 0;
             for (let { url: r, favorite: a } of t) {
                 if (((a.order = t.length - i), i++, r in e.favoriteGifs.gifs)) {
                     e.favoriteGifs.gifs[r].order = a.order;
                     continue;
                 }
-                let s = U4.tC.toBinary(a).length + r.length + 7;
+                let s = U5.tC.toBinary(a).length + r.length + 7;
                 n + s > 762880 || ((n += s), (e.favoriteGifs.gifs[r] = a));
             }
-            for (n = U4.uz.toBinary(e.favoriteGifs).length; n > 762880; ) {
+            for (n = U5.uz.toBinary(e.favoriteGifs).length; n > 762880; ) {
                 let t = 0;
                 for (let n in e.favoriteGifs.gifs) if ((delete e.favoriteGifs.gifs[n], ++t >= 10)) break;
-                n = U4.uz.toBinary(e.favoriteGifs).length;
+                n = U5.uz.toBinary(e.favoriteGifs).length;
             }
             return !0;
         },
@@ -41249,8 +41300,8 @@ let U8 = [
             let n = !1;
             return (
                 nM().size(t.usageHistory) > 0 &&
-                    ((e.applicationCommandFrecency = U4.Zc.create()),
-                    (e.applicationCommandFrecency.applicationCommands = (0, U5.Mr)(t.usageHistory, 500)),
+                    ((e.applicationCommandFrecency = U5.Zc.create()),
+                    (e.applicationCommandFrecency.applicationCommands = (0, U4.Mr)(t.usageHistory, 500)),
                     (n = !0)),
                 n
             );
@@ -41267,7 +41318,7 @@ let U8 = [
             let n = !1;
             return (
                 nM().size(t.favoriteSounds) > 0 &&
-                    ((e.favoriteSoundboardSounds = U4.Qn.create()),
+                    ((e.favoriteSoundboardSounds = U5.Qn.create()),
                     Ne.default.keys(t.favoriteSounds).forEach((n) => {
                         new Set(t.favoriteSounds[n]).forEach((t) => {
                             e.favoriteSoundboardSounds?.soundIds.push(t);
@@ -41288,8 +41339,8 @@ let U8 = [
             if (null == t) return !1;
             for (let e in t) G.Ut1.test(e) || delete t[e];
             return (
-                (e.guildAndChannelFrecency = U4.F1.create()),
-                (e.guildAndChannelFrecency.guildAndChannels = (0, U5.Mr)(t, 100)),
+                (e.guildAndChannelFrecency = U5.F1.create()),
+                (e.guildAndChannelFrecency.guildAndChannels = (0, U4.Mr)(t, 100)),
                 !0
             );
         },
@@ -41304,9 +41355,9 @@ let U8 = [
             let t = e.emojiFrecency.emojis ?? {},
                 n = !1;
             if (nM().size(t) > 0) {
-                let t = U4.Q8.create();
-                U4.Q8.mergePartial(t, e.emojiFrecency),
-                    null != e.emojiReactionFrecency && U4.Q8.mergePartial(t, e.emojiReactionFrecency),
+                let t = U5.Q8.create();
+                U5.Q8.mergePartial(t, e.emojiFrecency),
+                    null != e.emojiReactionFrecency && U5.Q8.mergePartial(t, e.emojiReactionFrecency),
                     (e.emojiReactionFrecency = t),
                     (n = !0);
             }
@@ -41324,7 +41375,7 @@ let U8 = [
                 let r = e.favoriteGifs.gifs[i];
                 null != r &&
                     (r.src.startsWith("//") && ((r.src = `https:${r.src}`), (n = !0)),
-                    r.format !== U4.TL.IMAGE && t.test(r.src) && ((r.format = U4.TL.IMAGE), (n = !0)));
+                    r.format !== U5.TL.IMAGE && t.test(r.src) && ((r.format = U5.TL.IMAGE), (n = !0)));
             }
             return n;
         },
@@ -41364,7 +41415,7 @@ let wa = [
                 let i = rf.A.getChannel(n);
                 null != i &&
                     ((t = !0),
-                    (0, U5.gc)(e, i.guild_id ?? "0", i.id, (e) => {
+                    (0, U4.gc)(e, i.guild_id ?? "0", i.id, (e) => {
                         e.collapsedInInbox = !0;
                     }));
             }
@@ -42258,8 +42309,8 @@ let wJ = new eB.A("ReadStates"),
         }
     })();
 var w3 = n(45773);
-let w4 = new eB.A("UserSettingsProto");
-class w5 {
+let w5 = new eB.A("UserSettingsProto");
+class w4 {
     actions = {
         CONNECTION_OPEN: () => this.throttledOnChange(),
         USER_SETTINGS_PROTO_UPDATE: () => this.throttledOnChange(),
@@ -42270,7 +42321,7 @@ class w5 {
         let t = performance.now(),
             n = await wB.A.userSettings(e).getMany(),
             i = performance.now();
-        w4.verbose(`loaded in ${i - t}ms (settings: ${n.length})`);
+        w5.verbose(`loaded in ${i - t}ms (settings: ${n.length})`);
         let r = {};
         for (let e of n) r[e.id] = e.value;
         return r;
@@ -42289,7 +42340,7 @@ class w5 {
     throttledOnChange = nM().debounce(this.handleUserSettingsProtoChange, 0);
     resetInMemoryState() {}
 }
-let w6 = new w5();
+let w6 = new w4();
 var w7 = n(531743),
     w8 = n(917878),
     w9 = n(464578),
@@ -42467,7 +42518,7 @@ async function Gc(e, t, n, i) {
                   let n = setTimeout(() => {
                       t();
                   }, e);
-                  (0, n4.t)(() => {
+                  (0, n5.t)(() => {
                       clearTimeout(n), t();
                   });
               });
@@ -43189,14 +43240,14 @@ B.isPlatformEmbedded &&
             analyticsParams: { location: { page: G.liQ.DIRECT, object: G.ZSU.WEB_URL } },
         });
     }));
-let G4 = t2((e) => {
+let G5 = t2((e) => {
         let { location: t } = e;
         return (
             (0, yP.B)(() => {
                 let e = tZ.A.getHighestState();
                 if (!(0, B.isDesktop)() && (e === G.fAW.OPEN || e === G.fAW.OPENING)) return;
-                let n = (0, S5.parseSettingsUrl)({ path: t.pathname, search: t.search });
-                (0, S5.trackParseSettingsUrl)(n, "deeplink"),
+                let n = (0, S4.parseSettingsUrl)({ path: t.pathname, search: t.search });
+                (0, S4.trackParseSettingsUrl)(n, "deeplink"),
                     (0, so.openUserSettings)(n.target, { path: n.path, searchParams: n.params });
             }),
             (0, O.jsx)(tX, {
@@ -43212,7 +43263,7 @@ let G4 = t2((e) => {
             })
         );
     }),
-    G5 = t2((e) => {
+    G4 = t2((e) => {
         let { location: t } = e,
             i = (0, DL.parsePlaygroundUrl)(t.pathname, t.search);
         return (
@@ -43412,8 +43463,8 @@ let xt = [
             );
         },
     },
-    { path: [G.BVt.SETTINGS(":section", ":subsection?")], render: G4 },
-    { path: [G.BVt.PLAYGROUND(":collection?", ":story?")], render: G5 },
+    { path: [G.BVt.SETTINGS(":section", ":subsection?")], render: G5 },
+    { path: [G.BVt.PLAYGROUND(":collection?", ":story?")], render: G4 },
     {
         path: [G.BVt.USER_GUILD_NOTIFICATION_SETTINGS(S3.pv.guildId())],
         render: function (e) {
@@ -43600,7 +43651,9 @@ let xt = [
                             n.e("894292"),
                             n.e("153302"),
                             n.e("836576"),
-                            n.e("884390"),
+                            n.e("253453"),
+                            n.e("82937"),
+                            n.e("531547"),
                             n.e("450926"),
                             n.e("923981"),
                             n.e("750370"),
@@ -43610,7 +43663,7 @@ let xt = [
                             n.e("636909"),
                             n.e("466592"),
                             n.e("742752"),
-                            n.e("783687"),
+                            n.e("282050"),
                             n.e("436101"),
                             n.e("976888"),
                             n.e("387970"),
@@ -43662,7 +43715,7 @@ let xt = [
                             n.e("293159"),
                             n.e("755936"),
                             n.e("489088"),
-                            n.e("409692"),
+                            n.e("730760"),
                             n.e("994723"),
                             n.e("330316"),
                             n.e("362931"),
@@ -43714,7 +43767,7 @@ let xt = [
                             n.e("238672"),
                             n.e("949067"),
                         ]).then(n.bind(n, 995142));
-                        return (t) => (0, O.jsx)(e, { gameId: i, source: s5.GameProfileSources.Deeplink, ...t });
+                        return (t) => (0, O.jsx)(e, { gameId: i, source: s4.GameProfileSources.Deeplink, ...t });
                     });
                 }),
                 (0, O.jsx)(tP.rd, { to: S7.A.defaultRoute })
@@ -43725,7 +43778,7 @@ let xt = [
 function xn(e) {
     for (let { path: t, isChatRoute: n } of xt) {
         if (!n) continue;
-        let i = (0, S4.B)(e, { path: t });
+        let i = (0, S5.B)(e, { path: t });
         if (null != i) return i;
     }
     return null;
@@ -43762,11 +43815,11 @@ class xr extends eu.PureComponent {
             ac.initialize(),
             MC.initialize(),
             DZ.initialize(),
-            t5.A.initialize(),
+            t4.A.initialize(),
             yF.init(),
             LQ.init(),
             wL.init(),
-            t4.A.initialize(),
+            t5.A.initialize(),
             Uz.init(),
             wC.A.init(),
             U3.init(),
@@ -43779,7 +43832,7 @@ class xr extends eu.PureComponent {
             Dw.initialize(),
             DF.initialize(),
             L1.initialize(),
-            L5.initialize(),
+            L4.initialize(),
             ym.initialize(),
             yj.initialize(),
             Dl.A.initialize(),
@@ -43799,10 +43852,10 @@ class xr extends eu.PureComponent {
             t6.Ay.terminate(),
             ac.terminate(),
             MC.terminate(),
-            t5.A.terminate(),
+            t4.A.terminate(),
             vl.terminate(),
             DZ.terminate(),
-            t4.A.terminate(),
+            t5.A.terminate(),
             Dl.A.terminate(),
             t3.A.terminate(),
             vo.A.terminate(),
@@ -43811,7 +43864,7 @@ class xr extends eu.PureComponent {
             Dw.terminate(),
             DF.terminate(),
             L1.terminate(),
-            L5.terminate(),
+            L4.terminate(),
             D8.terminate(),
             yp.A.terminate(),
             Lz.terminate(),
@@ -43878,7 +43931,7 @@ class xr extends eu.PureComponent {
                             n = e === G.BVt.GUILD_DISCOVERY;
                         t || n ? aZ.closeSidebar() : aZ.openSidebar();
                     } else ((l && _) || (!u && !l)) && aZ.closeSidebar();
-                } else G9.some((t) => (0, S4.B)(e, t)?.isExact === !0) || (0, oF.bG)(S7.A.fallbackRoute);
+                } else G9.some((t) => (0, S5.B)(e, t)?.isExact === !0) || (0, oF.bG)(S7.A.fallbackRoute);
             })(t, n),
             (0, iS.MS)();
     }
@@ -43940,7 +43993,7 @@ var xa = n(621466),
 function xm() {
     let { debugTrackedData: e, impressions: t } = (0, xp.SD)(
             (e) => ({ debugTrackedData: e.debugTrackedData, impressions: e.impressions }),
-            d5.x,
+            d4.x,
         ),
         n = (0, el.bG)([ej.Ay], () => ej.Ay.get("analytics_debugger")),
         i = (0, el.bG)([ry.A], () => ry.A.isDeveloper),
@@ -43968,7 +44021,7 @@ function xm() {
                                   children: [
                                       o
                                           ? (0, O.jsx)(uJ.y, { size: "md", color: "currentColor", className: xT.sG })
-                                          : (0, O.jsx)(u5.a, { size: "md", color: "currentColor", className: xT.jZ }),
+                                          : (0, O.jsx)(u4.a, { size: "md", color: "currentColor", className: xT.jZ }),
                                       s ?? "(untracked)",
                                   ],
                               }),
@@ -44064,7 +44117,7 @@ let xC = (0, nX.qT)({
             );
         return (
             eu.useEffect(() => {
-                (0, n4.t)(() => {
+                (0, n5.t)(() => {
                     xC.preload();
                 });
             }, []),
@@ -44358,7 +44411,9 @@ let xU = (0, tV.Fe)({
             n.e("894292"),
             n.e("153302"),
             n.e("836576"),
-            n.e("884390"),
+            n.e("253453"),
+            n.e("82937"),
+            n.e("531547"),
             n.e("450926"),
             n.e("923981"),
             n.e("750370"),
@@ -44368,7 +44423,7 @@ let xU = (0, tV.Fe)({
             n.e("636909"),
             n.e("466592"),
             n.e("742752"),
-            n.e("783687"),
+            n.e("282050"),
             n.e("436101"),
             n.e("976888"),
             n.e("387970"),
@@ -44727,7 +44782,7 @@ let xU = (0, tV.Fe)({
             n.e("293159"),
             n.e("755936"),
             n.e("489088"),
-            n.e("409692"),
+            n.e("730760"),
             n.e("994723"),
             n.e("330316"),
             n.e("362931"),
@@ -45736,7 +45791,7 @@ function x1() {
 }
 var x2 = n(639735),
     x3 = n(258599);
-let x4 = function () {
+let x5 = function () {
     let e = (0, el.bG)([eM.Ay], () => eM.Ay.isInteractionRequired(), []),
         t = eu.useRef(null);
     function n() {
@@ -45771,7 +45826,7 @@ let x4 = function () {
         null
     );
 };
-var x5 = n(386406);
+var x4 = n(386406);
 let x6 = !0,
     x7 = !0;
 function x8() {
@@ -45838,14 +45893,14 @@ function kt(e) {
             {
                 text: tT.intl.string(tT.t.UYW0dz),
                 onClick: () => {
-                    e.onClose(), x5.A.clearVADWarning();
+                    e.onClose(), x4.A.clearVADWarning();
                 },
                 variant: "secondary",
             },
             {
                 text: tT.intl.string(tT.t.E3Y7NH),
                 onClick: () => {
-                    ng.A.setMode(G.TBI.PUSH_TO_TALK), e.onClose(), x5.A.clearVADWarning();
+                    ng.A.setMode(G.TBI.PUSH_TO_TALK), e.onClose(), x4.A.clearVADWarning();
                 },
                 variant: "primary",
             },
@@ -45879,7 +45934,7 @@ function ka(e) {
         [i, r] = eu.useState(!1);
     return (
         (0, lV.l0)(() => {
-            i && x5.A.clearPTTAdminWarning();
+            i && x4.A.clearPTTAdminWarning();
         }),
         (0, O.jsx)(Mq.Modal, {
             size: "md",
@@ -45943,7 +45998,7 @@ function ko(e) {
                 {
                     text: tT.intl.string(tT.t.BddRzS),
                     onClick: () => {
-                        r.onClose(), x5.A.clearSuppressWarning(a);
+                        r.onClose(), x4.A.clearSuppressWarning(a);
                     },
                     variant: "primary",
                 },
@@ -45990,7 +46045,7 @@ let kd = function () {
     },
     kc = function () {
         return (0, O.jsxs)(O.Fragment, {
-            children: [(0, O.jsx)(ks, {}), (0, O.jsx)(x4, {}), (0, O.jsx)(kd, {}), (0, O.jsx)(kn, {})],
+            children: [(0, O.jsx)(ks, {}), (0, O.jsx)(x5, {}), (0, O.jsx)(kd, {}), (0, O.jsx)(kn, {})],
         });
     };
 var ku = n(663413),
@@ -46031,7 +46086,7 @@ function kg(e) {
             (0, O.jsx)(ts.D, {
                 className: kT.VV,
                 onClick: () => void (t?.(n8.i.DISMISS), (0, iu.Jp)(), kh()),
-                children: (0, O.jsx)(u5.a, { size: "md", color: "currentColor", className: kT.P0 }),
+                children: (0, O.jsx)(u4.a, { size: "md", color: "currentColor", className: kT.P0 }),
             }),
             (0, O.jsxs)("div", {
                 className: kT.DD,
@@ -46564,12 +46619,12 @@ let kX = (0, nX.Fe)({
         webpackId: 97649,
         name: "LinkConnectedAccount",
     }),
-    k4 = (0, nX.Fe)({
+    k5 = (0, nX.Fe)({
         createPromise: () => Promise.all([n.e("698965"), n.e("336335"), n.e("765893")]).then(n.bind(n, 209086)),
         webpackId: 209086,
         name: "LinkAuthorize",
     }),
-    k5 = (0, nX.Fe)({
+    k4 = (0, nX.Fe)({
         createPromise: () =>
             Promise.all([
                 n.e("890901"),
@@ -47023,7 +47078,9 @@ let kX = (0, nX.Fe)({
                 n.e("894292"),
                 n.e("153302"),
                 n.e("836576"),
-                n.e("884390"),
+                n.e("253453"),
+                n.e("82937"),
+                n.e("531547"),
                 n.e("450926"),
                 n.e("923981"),
                 n.e("750370"),
@@ -47033,7 +47090,7 @@ let kX = (0, nX.Fe)({
                 n.e("636909"),
                 n.e("466592"),
                 n.e("742752"),
-                n.e("783687"),
+                n.e("282050"),
                 n.e("436101"),
                 n.e("976888"),
                 n.e("387970"),
@@ -47213,7 +47270,7 @@ let kX = (0, nX.Fe)({
                 n.e("293159"),
                 n.e("755936"),
                 n.e("489088"),
-                n.e("409692"),
+                n.e("730760"),
                 n.e("994723"),
                 n.e("330316"),
                 n.e("362931"),
@@ -47701,9 +47758,9 @@ class Fc extends eu.Component {
                                     (0, O.jsx)(n3.A, { path: G.BVt.HANDOFF, component: k8 }),
                                     (0, O.jsx)(n3.A, { path: G.BVt.MOBILE_WEB_HANDOFF, component: k9 }),
                                     (0, O.jsx)(n3.A, { path: G.BVt.CONNECTION_LINK(":type"), component: k3 }),
-                                    (0, O.jsx)(n3.A, { path: G.BVt.CONNECTION_LINK_AUTHORIZE(":type"), component: k4 }),
-                                    (0, O.jsx)(n3.A, { path: G.BVt.ACTIVATE, component: k5 }),
-                                    (0, O.jsx)(n3.A, { path: G.BVt.ACTIVATE_HANDOFF, component: k5 }),
+                                    (0, O.jsx)(n3.A, { path: G.BVt.CONNECTION_LINK_AUTHORIZE(":type"), component: k5 }),
+                                    (0, O.jsx)(n3.A, { path: G.BVt.ACTIVATE, component: k4 }),
+                                    (0, O.jsx)(n3.A, { path: G.BVt.ACTIVATE_HANDOFF, component: k4 }),
                                     (0, O.jsx)(n3.A, {
                                         path: G.BVt.CONNECTIONS_AUTHORIZE_CONTINUE(":type"),
                                         component: Fr,
@@ -47808,7 +47865,7 @@ class Fc extends eu.Component {
 function Fu() {
     let e = (function () {
             let { pathname: e } = (0, tP.zy)();
-            return null != (0, S4.B)(e, { path: G.BVt.APPLICATION_DIRECTORY });
+            return null != (0, S5.B)(e, { path: G.BVt.APPLICATION_DIRECTORY });
         })(),
         t = (0, el.bG)([X.default], () => X.default.isAuthenticated()),
         n = (0, el.bG)([kj], () => kj.getMigrationStatus());
@@ -48377,7 +48434,7 @@ async function FG(e, t) {
                     B.isPlatformEmbedded)
                 ) {
                     let e = X.default.getToken();
-                    e5()(null != e, "Auth token was null while sending screenshot."),
+                    e4()(null != e, "Auth token was null while sending screenshot."),
                         await eU.Ay.makeChunkedRequest(
                             G.Rsh.STREAM_PREVIEW(t),
                             { thumbnail: E },
@@ -48564,25 +48621,25 @@ var FJ = n(300923),
 let F1 = !1,
     F2 = null,
     F3 = null,
-    F4 = (0, w.mj)({
+    F5 = (0, w.mj)({
         name: "2026-06-web-translate-dom-guard",
         kind: "installation",
         defaultConfig: { enabled: !0 },
         variations: { 1: { enabled: !1 } },
     });
-function F5() {
-    F4.getConfig({ location: "web_app_entrypoint" }).enabled ||
+function F4() {
+    F5.getConfig({ location: "web_app_entrypoint" }).enabled ||
         (F1 &&
             ((F1 = !1),
             null != F2 && (Node.prototype.removeChild = F2),
             null != F3 && (Node.prototype.insertBefore = F3)),
-        Gp.A.removeChangeListener(F5));
+        Gp.A.removeChangeListener(F4));
 }
 var F6 = n(394072);
 PZ.default.cssDebuggingEnabled && n.e("836050").then(n.t.bind(n, 581929, 19)), (0, F0.pF)(), (0, F6.tO)();
 let F7 = 5 * n_.A.Millis.MINUTE,
     F8 = document.getElementById("app-mount");
-e5()(null != F8, "Could not find app-mount"),
+e4()(null != F8, "Could not find app-mount"),
     (F8.className = __OVERLAY__ ? "" : FJ.l),
     !F1 &&
         (0, B.isWeb)() &&
@@ -48597,7 +48654,7 @@ e5()(null != F8, "Could not find app-mount"),
         (Node.prototype.insertBefore = function (e, t) {
             return null != t && t.parentNode !== this ? e : F3.call(this, e, t);
         })),
-    (0, B.isWeb)() && (Gp.A.addChangeListener(F5), F5());
+    (0, B.isWeb)() && (Gp.A.addChangeListener(F4), F4());
 let F9 = (0, e3.createRoot)(F8),
     Ve = {
         "/oauth2/authorize": function (e) {

@@ -1,0 +1,25 @@
+.container__3e00d {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: var(--space-16)
+}
+
+.image__3e00d {
+    flex-shrink: 0
+}
+
+.content__3e00d {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: var(--space-4);
+    justify-content: center;
+    min-width: 0
+}
+
+.badgeSlot__3e00d {
+    align-self: flex-start
+}
+
+/*# sourceMappingURL=82937.59bd87b8cbaf0e7a.css.map*/
