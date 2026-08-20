@@ -5139,6 +5139,22 @@
     }
   },
   {
+    "kind": "user",
+    "name": "2026-07-manual-age-assurance-fallback",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
     "name": "2026-07-message-bookmarks-v2",
     "kind": "user",
     "defaultConfig": null,

@@ -103,7 +103,7 @@ var M = n(794782),
     el = n(975807),
     ei = n(31720),
     er = n(847599),
-    es = n(36149),
+    es = n(931374),
     ea = n(975571),
     ed = n(418208),
     eu = n(652215),
@@ -817,9 +817,9 @@ var e0 = n(789645),
     e9 = n(279208),
     e8 = n(747007),
     e4 = n(710358),
-    e5 = n(958590),
-    e2 = n(174459),
-    e3 = n(957565),
+    e3 = n(958590),
+    e5 = n(174459),
+    e2 = n(957565),
     e6 = n(673707);
 let { INVITE_OPTIONS_7_DAYS: te, INVITE_OPTIONS_UNLIMITED: tt } = I.Ay;
 function tn(e) {
@@ -828,9 +828,9 @@ function tn(e) {
         r = (0, a.bG)([C.Ay], () => (null != l ? C.Ay.getDefaultChannel(l)?.id : null), [l]),
         s = (0, a.bG)([b.A], () => b.A.getGuild(l), [l]),
         { channel_id: d, id: u } = n ?? {},
-        c = (0, a.bG)([e5.A], () => {
+        c = (0, a.bG)([e3.A], () => {
             let e = d ?? r;
-            return null == e ? null : e5.A.getInvite(e);
+            return null == e ? null : e3.A.getInvite(e);
         }, [d, r]);
     if (null == n) return t(), null;
     let o = s?.vanityURLCode ?? c?.code,
@@ -880,9 +880,9 @@ function tn(e) {
                         autoFocus: !1,
                         onCopy: function (e) {
                             if (null == n || h) return;
-                            (0, e3.C)(e);
+                            (0, e2.C)(e);
                             let t = (0, P.dy)(n.entity_type);
-                            e2.default.track(eu.HAw.COPY_INSTANT_INVITE, {
+                            e5.default.track(eu.HAw.COPY_INSTANT_INVITE, {
                                 server: n.guild_id,
                                 channel: d,
                                 channel_type: t,

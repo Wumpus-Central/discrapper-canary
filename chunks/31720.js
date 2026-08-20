@@ -27,7 +27,7 @@ let E = (0, c.mj)({
 function A(e) {
     return E.getConfig({ location: e }).enabled;
 }
-var h = n(36149);
+var h = n(931374);
 let I = (0, c.mj)({
     kind: "user",
     name: "2026-07-expressive-modal-v2",
@@ -208,6 +208,12 @@ let m = {
                       },
                       { modalKey: f.NC, backdropStyle: p(r), Layer: l.Ay, onCloseCallback: t },
                   );
+    },
+    showManualReviewPendingModal: function () {
+        (0, a.openModalLazy)(async () => {
+            let { default: e } = await Promise.all([n.e("632364"), n.e("492758")]).then(n.bind(n, 174453));
+            return (t) => (0, i.jsx)(e, { ...t });
+        });
     },
     openUrl: function (e) {
         window.open(e, "_blank");

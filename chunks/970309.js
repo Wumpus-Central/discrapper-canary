@@ -31,7 +31,7 @@ var s = n(477900),
     k = n(380335),
     y = n(157550),
     P = n(923457),
-    U = n(36149),
+    U = n(931374),
     Q = n(207560);
 let w = (0, n(945810).mj)({
     name: "2026-06-non-friend-messages-requests-in-uk",

@@ -60,6 +60,8 @@
 }
 
 .ctaButtonContainer_b7e1cb {
+    display: flex;
+    gap: var(--space-8);
     margin-bottom: 6px;
     margin-top: 6px
 }
@@ -131,4 +133,4 @@
     flex-wrap: nowrap
 }
 
-/*# sourceMappingURL=653383.bf676da6f7bd6cc7.css.map*/
+/*# sourceMappingURL=653383.9d407f1fef76e564.css.map*/
