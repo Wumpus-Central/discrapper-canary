@@ -26,7 +26,7 @@ function c(e) {
                               messageId: c.messageId,
                               channelId: c.channelId,
                           }),
-                          null
+                          !0
                       )
                     : void 0;
             if (c.previewLinkTarget && !u(t)) {
