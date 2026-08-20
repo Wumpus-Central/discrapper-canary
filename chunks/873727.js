@@ -1,10 +1,22 @@
 "use strict";
-n.d(t, { Lq: () => o, _n: () => c, mB: () => d, x4: () => l });
+n.d(t, { Lq: () => c, U0: () => _, _n: () => A, mB: () => E, x4: () => d });
 var i = n(775602),
     r = n(363195),
-    a = n(885386);
-let s = ["custom-theme-background", "custom-client-theme"];
-function l(e) {
+    a = n(885386),
+    s = n(157146);
+let l = Object.freeze({
+        baseTheme: "dark",
+        customTheme: null,
+        uiDensity: "default",
+        messageDisplayCompact: !1,
+        fontScale: 100,
+        reducedMotion: !1,
+        highContrast: !1,
+        forcedColors: !1,
+        underlineLinks: !1,
+    }),
+    o = ["custom-theme-background", "custom-client-theme"];
+function d(e) {
     switch (e) {
         case "light":
         case "midnight":
@@ -14,10 +26,10 @@ function l(e) {
             return "dark";
     }
 }
-function o() {
+function c() {
     if ("u" < typeof document || "u" < typeof window) return null;
     let e = document.documentElement,
-        t = s.filter((t) => e.classList.contains(t));
+        t = o.filter((t) => e.classList.contains(t));
     if (0 === t.length) return null;
     let n = window.getComputedStyle(e),
         i = {};
@@ -27,13 +39,41 @@ function o() {
     }
     return { classNames: t, variables: i };
 }
-function d(e) {
-    return { baseTheme: l(r.A.theme), customTheme: o(), messageDisplayCompact: a.hH.getSetting(), reducedMotion: e };
+function u() {
+    let e =
+        "u" > typeof window && "function" == typeof window.matchMedia
+            ? window.matchMedia(s.Un).matches
+                ? "cozy"
+                : "compact"
+            : s.fS;
+    return (0, s.dV)(a.Xi.getSetting(), e);
 }
-function c() {
+function _() {
+    let e = i.Ay.fontScale;
+    return Number.isFinite(e) ? Math.round(100 * e) / 100 : l.fontScale;
+}
+function E(e) {
     return {
-        theme: l(r.A.theme),
+        baseTheme: d(r.A.theme),
+        customTheme: c(),
+        uiDensity: u(),
+        messageDisplayCompact: a.hH.getSetting(),
+        fontScale: _(),
+        reducedMotion: e,
+        highContrast: i.Ay.isHighContrastModeEnabled,
+        forcedColors: i.Ay.useForcedColors,
+        underlineLinks: i.Ay.alwaysShowLinkDecorations,
+    };
+}
+function A() {
+    return {
+        theme: d(r.A.theme),
+        ui_density: u(),
         message_display_compact: String(a.hH.getSetting()),
+        font_scale: String(_()),
         reduced_motion: String(i.Ay.useReducedMotion),
+        high_contrast: String(i.Ay.isHighContrastModeEnabled),
+        forced_colors: String(i.Ay.useForcedColors),
+        underline_links: String(i.Ay.alwaysShowLinkDecorations),
     };
 }

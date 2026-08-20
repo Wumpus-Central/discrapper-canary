@@ -1,15 +1,15 @@
 "use strict";
 n.d(t, { C: () => s });
 var i = n(582128),
-    r = n(873298),
-    a = n(885386);
+    r = n(885386),
+    a = n(157146);
 function s() {
-    let e = a.Xi.useSetting(),
+    let e = r.Xi.useSetting(),
         t = (function () {
-            let [e, t] = i.useState("cozy");
+            let [e, t] = i.useState(() => (window.matchMedia(a.Un).matches ? "cozy" : "compact"));
             return (
                 i.useEffect(() => {
-                    let e = window.matchMedia("(min-width: 1024px) and (min-height: 820px)");
+                    let e = window.matchMedia(a.Un);
                     function n(e) {
                         t(e.matches ? "cozy" : "compact");
                     }
@@ -23,16 +23,5 @@ function s() {
                 e
             );
         })();
-    switch (e) {
-        case r.NS.RESPONSIVE:
-            return t;
-        case r.NS.COZY:
-            return "cozy";
-        case r.NS.DEFAULT:
-            return "default";
-        case r.NS.COMPACT:
-            return "compact";
-        default:
-            return "default";
-    }
+    return (0, a.dV)(e, t);
 }

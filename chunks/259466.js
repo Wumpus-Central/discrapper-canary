@@ -1451,7 +1451,7 @@ if (
     n.e("859864").then(n.t.bind(n, 122123, 19));
 let e2 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 new eB.A().log(
-    `[BUILD INFO] Release Channel: ${e2}, Build Number: 597424, Version Hash: da738cb715d6d2ba1e5babd37d3b287bd63b453f`,
+    `[BUILD INFO] Release Channel: ${e2}, Build Number: 597442, Version Hash: c6a3e16550b99c586a15081f05172ea43cdbcfc9`,
 ),
     D.A.setTags({ appContext: G.QCW }),
     eI.A.initBasic(),
@@ -20733,7 +20733,7 @@ let Na = "isHideDevBanner",
                     className: ta()(Nr.Wz, Nr.mr),
                     children: [
                         (0, O.jsx)(Ni, { className: Nr.Kk }),
-                        tT.intl.format(tT.t.uyrfYF, { buildNumber: "597424" }),
+                        tT.intl.format(tT.t.uyrfYF, { buildNumber: "597442" }),
                         (0, O.jsx)(r, {}),
                     ],
                 })
@@ -36737,32 +36737,41 @@ let b5 = {
     [G.ZE4.AUTHORIZE_REQUEST]: { scope: void 0, handler() {} },
 };
 var b6 = n(873727);
-let b7 = {
-    [G.ZE4.DISCORD_ENV_UPDATE]: {
-        scope: { [OK.sm.ANY]: [OK.W_, OK.VH] },
-        handler() {
-            let e = !1,
-                t = null;
-            return (n) => {
-                let { prevState: i, dispatch: r } = n,
-                    a = (0, b6.mB)(ec.Ay.useReducedMotion);
-                return (
-                    nM().isEqual(a, i) ? (t = i ?? null) : ((t = a), r(a)),
-                    e ||
-                        ((e = !0),
-                        requestAnimationFrame(() => {
+let b7 = (function () {
+    let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+    function t() {
+        let t = (0, b6.mB)(ec.Ay.useReducedMotion);
+        if (!e) return t;
+        let { uiDensity: n, ...i } = t;
+        return i;
+    }
+    return {
+        [G.ZE4.DISCORD_ENV_UPDATE]: {
+            scope: { [OK.sm.ANY]: [OK.W_, OK.VH] },
+            handler() {
+                let e = !1,
+                    n = null;
+                return (i) => {
+                    let { prevState: r, dispatch: a } = i,
+                        s = t();
+                    return (
+                        nM().isEqual(s, r) ? (n = r ?? null) : ((n = s), a(s)),
+                        e ||
+                            ((e = !0),
                             requestAnimationFrame(() => {
-                                e = !1;
-                                let n = (0, b6.mB)(ec.Ay.useReducedMotion);
-                                nM().isEqual(n, t) || ((t = n), r(n));
-                            });
-                        })),
-                    a
-                );
-            };
+                                requestAnimationFrame(() => {
+                                    e = !1;
+                                    let i = t();
+                                    nM().isEqual(i, n) || ((n = i), a(i));
+                                });
+                            })),
+                        s
+                    );
+                };
+            },
         },
-    },
-};
+    };
+})();
 var b8 = n(289919);
 let b9 = {
         [G.ZE4.OVERLAY_UPDATE]: {
