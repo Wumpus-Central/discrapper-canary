@@ -181,7 +181,7 @@ var B = n(248643),
     eu = n(255438),
     ec = n(375708),
     ed = n(810917),
-    eh = n(521931);
+    eh = n(969490);
 function em(e) {
     let { text: t, language: l, wordWrap: s } = e;
     function r() {
@@ -814,9 +814,9 @@ let e2 = s.forwardRef(function (e, t) {
 var e3 = n(20504),
     e5 = n(625494),
     e8 = n(927813),
-    e6 = n(824744);
+    e7 = n(824744);
 n(508300);
-var e7 = n(661531),
+var e6 = n(661531),
     e4 = n(602853),
     e9 = n(765671);
 function te(e, t) {
@@ -986,11 +986,11 @@ function tm(e) {
             lastInactiveFillColor: j,
             inactiveFillColor: b,
         } = (function (e, t) {
-            let n = (0, e4.r)(e7.A.colors.BACKGROUND_MOD_MUTED).hex(),
-                l = (0, e4.r)(e7.A.colors.INTERACTIVE_TEXT_DEFAULT).hex(),
-                i = (0, e4.r)(e7.A.colors.INTERACTIVE_TEXT_ACTIVE).hex(),
-                s = (0, e4.r)(e7.A.unsafe_rawColors.BRAND_430).hex(),
-                r = (0, e4.r)(e7.A.unsafe_rawColors.WHITE).hex(),
+            let n = (0, e4.r)(e6.A.colors.BACKGROUND_MOD_MUTED).hex(),
+                l = (0, e4.r)(e6.A.colors.INTERACTIVE_TEXT_DEFAULT).hex(),
+                i = (0, e4.r)(e6.A.colors.INTERACTIVE_TEXT_ACTIVE).hex(),
+                s = (0, e4.r)(e6.A.unsafe_rawColors.BRAND_430).hex(),
+                r = (0, e4.r)(e6.A.unsafe_rawColors.WHITE).hex(),
                 a = t ? s : n,
                 [o, u] = td(a, t, e),
                 [c, d] = td(t ? r : e ? i : l, t, e),
@@ -1198,7 +1198,7 @@ let tx = s.memo(function (e) {
         }, [A]),
         J = s.useCallback(
             (e) => {
-                let t = (0, e6.w)(e, 1);
+                let t = (0, e7.w)(e, 1);
                 R(0 === t), V(t), r?.(t);
             },
             [r],
@@ -1365,7 +1365,7 @@ let tx = s.memo(function (e) {
                 iconColor: "currentColor",
                 sliderWrapperClassName: tf.MQ,
                 muted: b,
-                value: (0, e6.M)(G, 1),
+                value: (0, e7.M)(G, 1),
                 minValue: 0,
                 maxValue: 1,
                 currentWindow: window,

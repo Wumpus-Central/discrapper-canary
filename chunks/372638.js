@@ -1,7 +1,7 @@
 i.d(t, { f: () => o });
 var n = i(477900),
     l = i(582128),
-    s = i(260598),
+    s = i(103557),
     r = i(231088),
     a = i(375708);
 function o(e) {
@@ -26,8 +26,8 @@ function o(e) {
             disabled: S = !1,
             error: C,
             className: b,
-            growWidth: N,
-            removeVerticalPadding: T,
+            growWidth: T,
+            removeVerticalPadding: N,
         } = e,
         w = null != A && (t ? o : i).length > A ? a.intl.formatToPlainString(a.t.ICT5S6, { maxLength: A }) : void 0,
         y = t && o !== i,
@@ -46,8 +46,8 @@ function o(e) {
         variant: "multiline",
         disabled: S,
         className: b,
-        growWidth: N,
-        removeVerticalPadding: T,
+        growWidth: T,
+        removeVerticalPadding: N,
         wrapperRef: g,
         onBlur: m,
         onKeyDown: x,

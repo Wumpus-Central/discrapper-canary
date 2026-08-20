@@ -109,7 +109,7 @@ function P(e) {
 }
 var U = n(470739),
     B = n(839534),
-    G = n(459192);
+    G = n(683063);
 function k(e) {
     let { targetElementRef: t, delay: n, forceOpen: r, badgeDescription: l, children: s } = e;
     return (0, a.jsx)(G.u, {

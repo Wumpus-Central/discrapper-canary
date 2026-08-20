@@ -1,4 +1,4 @@
-_.exports = {
+a.exports = {
     kL: "container__72cd3",
     KE: "panelContainer__72cd3",
     L8: "rewardImage__72cd3",

@@ -84,11 +84,11 @@ function S(e) {
 }
 var C = i(570002),
     b = i(202541),
-    N = i(375708);
-function T() {
+    T = i(375708);
+function N() {
     let e = (0, g.YW)(),
         { goBack: t } = (0, g.pA)(),
-        i = (0, C.A)(N.intl.string(N.t.pj0XBN));
+        i = (0, C.A)(T.intl.string(T.t.pj0XBN));
     return (0, n.jsx)(x.A, {
         subscriptionTier: b.pe.TIER_2,
         onSubscribeModalClose: (e) => {
@@ -99,10 +99,10 @@ function T() {
             return (0, n.jsx)(S, {
                 isVisible: e,
                 labelId: "premium-try-it-out-footer-bar-label",
-                noticeText: N.intl.string(N.t.X0ir7L),
-                a11yAnnounceOnShow: N.intl.string(N.t.X0ir7L),
-                a11yAnnounceOnHide: N.intl.string(N.t.ZcyFYa),
-                secondaryAction: { text: N.intl.string(N.t.V3S9WW), onClick: t },
+                noticeText: T.intl.string(T.t.X0ir7L),
+                a11yAnnounceOnShow: T.intl.string(T.t.X0ir7L),
+                a11yAnnounceOnHide: T.intl.string(T.t.ZcyFYa),
+                secondaryAction: { text: T.intl.string(T.t.V3S9WW), onClick: t },
                 primaryAction: { text: i, onClick: s, icon: m.t, variant: "expressive" },
             });
         },
@@ -252,11 +252,11 @@ function V(e) {
         (0, n.jsx)(S, {
             isVisible: v,
             labelId: "user-profile-save-reset-toolbar-label",
-            noticeText: N.intl.string(N.t["/lQiX/"]),
+            noticeText: T.intl.string(T.t["/lQiX/"]),
             isEmphasized: s,
-            a11yAnnounceOnShow: N.intl.string(N.t["0Y/qkL"]),
-            secondaryAction: { text: N.intl.string(N.t.yBZMsQ), onClick: E, disabled: !v || o },
-            primaryAction: { text: N.intl.string(N.t["R3BPH+"]), onClick: C, loading: o, disabled: !A || !v },
+            a11yAnnounceOnShow: T.intl.string(T.t["0Y/qkL"]),
+            secondaryAction: { text: T.intl.string(T.t.yBZMsQ), onClick: E, disabled: !v || o },
+            primaryAction: { text: T.intl.string(T.t["R3BPH+"]), onClick: C, loading: o, disabled: !A || !v },
         })
     );
 }
@@ -286,7 +286,7 @@ function Y(e) {
                   "dnd" === g
                       ? (0, n.jsx)(d.S, { className: z.W })
                       : "premium-try-it-out" === g
-                        ? (0, n.jsx)(T, {})
+                        ? (0, n.jsx)(N, {})
                         : "save" === g
                           ? (0, n.jsx)(V, { guildId: i })
                           : null,

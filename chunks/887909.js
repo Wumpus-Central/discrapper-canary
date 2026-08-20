@@ -600,7 +600,7 @@ let e1 = (0, F.Fe)({
             n.e("560570"),
             n.e("591114"),
             n.e("691398"),
-            n.e("370615"),
+            n.e("490978"),
             n.e("266201"),
             n.e("752704"),
             n.e("56606"),
@@ -644,7 +644,7 @@ let e1 = (0, F.Fe)({
             n.e("195719"),
             n.e("291847"),
             n.e("678906"),
-            n.e("770431"),
+            n.e("186856"),
             n.e("529787"),
             n.e("358931"),
             n.e("880150"),
@@ -714,7 +714,7 @@ let e1 = (0, F.Fe)({
             n.e("721690"),
             n.e("593600"),
             n.e("276640"),
-            n.e("418401"),
+            n.e("827708"),
             n.e("28154"),
             n.e("948804"),
             n.e("431011"),
@@ -981,7 +981,7 @@ function e3(e) {
         children: (0, i.jsx)(W.A, { className: e0.dx, obscured: !0 === A, children: h }),
     });
 }
-function e4(e) {
+function e5(e) {
     let { clientId: t, platformType: n, platformName: a } = e,
         s = (0, I.bG)([U.A], () => U.A.getApplication(t), [t]),
         l = (0, I.bG)([$.default, Z.default], () => (null != $.default.getId() ? Z.default.getCurrentUser() : null)),
@@ -1048,7 +1048,7 @@ function e4(e) {
         })
     );
 }
-function e5(e) {
+function e4(e) {
     let { platformType: t, platformName: n, connectedAccount: r, applicationName: a } = e,
         s = (0, D.Ay)(),
         l = v.A.get(t),
@@ -1364,7 +1364,7 @@ function e7(e) {
         case null:
             return { label: en.intl.string(en.t.ZTNur7), body: (0, i.jsx)(e6, {}) };
         case "CONNECT_ACCOUNT":
-            (t = (0, i.jsx)(e4, { clientId: A, platformType: e_, platformName: tc })),
+            (t = (0, i.jsx)(e5, { clientId: A, platformType: e_, platformName: tc })),
                 (tE = !1),
                 (tA = !1),
                 (th = !1),
@@ -1396,7 +1396,7 @@ function e7(e) {
                 children: [
                     null != eG &&
                         ex &&
-                        (0, i.jsx)(e5, {
+                        (0, i.jsx)(e4, {
                             platformType: eG.type,
                             platformName: tc,
                             connectedAccount: eG,

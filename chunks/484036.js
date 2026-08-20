@@ -644,7 +644,7 @@ var e2 = n(805945),
     e3 = n(890856),
     e5 = n(307301),
     e8 = n(468689);
-function e6(e) {
+function e7(e) {
     e8.A.open(e, eR.BEX.SOUNDBOARD),
         (0, eF.openModalLazy)(async () => {
             let { default: t } = await Promise.all([
@@ -668,7 +668,7 @@ function e6(e) {
             return (n) => (0, l.jsx)(t, { ...n, guildId: e });
         });
 }
-var e7 = n(948611),
+var e6 = n(948611),
     e4 = n(308078);
 function e9(e) {
     let { guild: t, focused: n, onSelectItem: i, ...s } = e,
@@ -677,12 +677,12 @@ function e9(e) {
         text: eM.intl.string(eM.t["fHo+z1"]),
         shouldShow: !a,
         children: (0, l.jsx)("li", {
-            className: e7.H,
+            className: e6.H,
             children: (0, l.jsxs)(e3.s, {
                 ...s,
                 "aria-label": eM.intl.formatToPlainString(eM.t.c1qVYh, { guildName: t.name }),
                 className: r()(e4.n4, { [e4.in]: n, [e4.r9]: !a }),
-                onClick: () => (null != i ? i() : e6(t.id)),
+                onClick: () => (null != i ? i() : e7(t.id)),
                 children: [
                     (0, l.jsx)(e5.j, { size: "sm", color: "currentColor" }),
                     (0, l.jsx)(eW.E, {
@@ -1062,7 +1062,7 @@ function to(e) {
                             l = e?.item.index;
                         return eK(e.item.sound, null == n ? w : [...w, n], t?.shiftKey !== !0, l);
                     case eo.uq.ADD_SOUND:
-                        return o(), e6(e.item.guild.id);
+                        return o(), e7(e.item.guild.id);
                 }
             },
             [w, eK, o],
@@ -1207,7 +1207,7 @@ function to(e) {
                       }),
             [T, e5],
         ),
-        e7 = i.useCallback(
+        e6 = i.useCallback(
             (e) =>
                 (0, l.jsx)(eU, {
                     soundboardListRef: e,
@@ -1305,7 +1305,7 @@ function to(e) {
                     renderSectionHeader: e0,
                     renderSectionFooter: e2,
                     renderSection: eQ,
-                    renderCategoryList: e7,
+                    renderCategoryList: e6,
                     renderHeaderAccessories: e8,
                     rowHeight: 48,
                     sectionHeaderHeight: e$,

@@ -22,8 +22,8 @@ var n = i(477900),
     S = i(212387),
     C = i(590180),
     b = i(139146),
-    N = i(113265),
-    T = i(152472),
+    T = i(113265),
+    N = i(152472),
     w = i(274681),
     y = i(471505),
     k = i(280450),
@@ -67,7 +67,7 @@ function D(e) {
             isBusy: c,
             isFirstTimeWishlister: u,
             handleToggle: g,
-        } = (0, T.c)({ userId: a, skuId: i.id, location: l, onError: s }),
+        } = (0, N.c)({ userId: a, skuId: i.id, location: l, onError: s }),
         m = F();
     return (0, n.jsx)("div", {
         className: L.U,
@@ -93,7 +93,7 @@ function G(e) {
             isBusy: c,
             isFirstTimeWishlister: u,
             handleToggle: g,
-        } = (0, T.c)({ userId: a, skuId: i.id, location: l, onError: s, onAddSuccess: w.w }),
+        } = (0, N.c)({ userId: a, skuId: i.id, location: l, onError: s, onAddSuccess: w.w }),
         m = F();
     return (0, n.jsx)("div", {
         className: L.U,
@@ -121,7 +121,7 @@ function M(e) {
             handleToggle: g,
             specificProductOrVariant: m,
             isPurchased: x,
-        } = (0, N.z)({ userId: a, product: i, location: l, onError: s }),
+        } = (0, T.z)({ userId: a, product: i, location: l, onError: s }),
         f = (0, A.q)(m),
         h = x && !o,
         p = !f || h,
@@ -203,13 +203,13 @@ function Z(e) {
             isItemOwned: C,
             cardBackdrop: b,
         } = e,
-        N = l.useRef(null),
-        T = l.useRef(h);
+        T = l.useRef(null),
+        N = l.useRef(h);
     l.useEffect(() => {
-        T.current = h;
+        N.current = h;
     }, [h]),
         l.useEffect(() => {
-            let e = N.current;
+            let e = T.current;
             if (null != e)
                 return (
                     e.addEventListener("focusin", t),
@@ -218,7 +218,7 @@ function Z(e) {
                     }
                 );
             function t() {
-                T.current(!1);
+                N.current(!1);
             }
         }, []);
     let { trackUserProfileWishlistAction: w } = (0, p.NJ)(),
@@ -245,7 +245,7 @@ function Z(e) {
         R = l.useCallback(() => {
             (0, j.XA)(Y.jM.SOMETHING_WENT_WRONG), o.O.announce(O.intl.string(O.t.F8FvUy));
         }, []),
-        L = null != u ? (0, n.jsx)("div", { ref: N, className: q.BU, children: u }) : null,
+        L = null != u ? (0, n.jsx)("div", { ref: T, className: q.BU, children: u }) : null,
         {
             onBodyClick: _,
             onOverlayClick: P,

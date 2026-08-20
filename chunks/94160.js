@@ -22,8 +22,8 @@ var n = i(477900),
     S = i(489379),
     C = i(402857),
     b = i(353394),
-    N = i(64622),
-    T = i(986712),
+    T = i(64622),
+    N = i(986712),
     w = i(435558),
     y = i(297264),
     k = i(834730),
@@ -194,7 +194,7 @@ function et(e) {
                                     children: [
                                         null != c &&
                                             (0, n.jsx)("li", {
-                                                children: (0, n.jsx)(N.A, {
+                                                children: (0, n.jsx)(T.A, {
                                                     user: t,
                                                     currentUser: i,
                                                     stream: c,
@@ -217,7 +217,7 @@ function et(e) {
                                         ),
                                         R &&
                                             (0, n.jsx)("li", {
-                                                children: (0, n.jsx)(T.A, {
+                                                children: (0, n.jsx)(N.A, {
                                                     user: t,
                                                     currentUser: i,
                                                     voiceChannel: u,
@@ -396,8 +396,8 @@ var ex = i(875422),
     eS = i(444927),
     eC = i(793574),
     eb = i(429913),
-    eN = i(839534),
-    eT = i(895360),
+    eT = i(839534),
+    eN = i(895360),
     ew = i(152472),
     ey = i(267102),
     ek = i(274681),
@@ -434,13 +434,13 @@ let e1 = (0, e0.mj)({
 });
 var e2 = i(724834),
     e8 = i(158045),
-    e5 = i(451395),
-    e7 = i(823016),
+    e7 = i(451395),
+    e5 = i(823016),
     e3 = i(100741);
 function e6(e) {
     let { item: t, index: i, wishlistId: l, onReorder: s, children: r } = e,
-        { manageFocusOnReorder: a } = (0, e7.r)();
-    return (0, n.jsx)(e5.mG, {
+        { manageFocusOnReorder: a } = (0, e5.r)();
+    return (0, n.jsx)(e7.mG, {
         index: i,
         itemId: String(t.skuId),
         listType: String(l),
@@ -467,11 +467,11 @@ let e4 = l.memo(function (e) {
             isDragging: d,
             onReorder: c,
         } = e,
-        { registerDragHandleRef: u } = (0, e7.r)(),
+        { registerDragHandleRef: u } = (0, e5.r)(),
         g = l.useMemo(
             () =>
                 a
-                    ? (0, n.jsx)(e5.jV, {
+                    ? (0, n.jsx)(e7.jV, {
                           buttonRef: u(String(t.skuId)),
                           className: e3.BU,
                           onFocus: (e) => e.stopPropagation(),
@@ -552,7 +552,7 @@ function e9(e) {
             ),
         ),
     });
-    return a ? (0, n.jsx)(e7.B, { emptyListFallbackRef: null, children: I }) : I;
+    return a ? (0, n.jsx)(e5.B, { emptyListFallbackRef: null, children: I }) : I;
 }
 function te(e) {
     let t = (0, e$.a)("UserProfileModalV2WishlistGrid");
@@ -793,8 +793,8 @@ function tC(e) {
     });
 }
 var tb = i(509434),
-    tN = i(365199);
-let tT = A.A.getArticleURL(f.MVz.CUSTOM_PROFILES_WISHLIST);
+    tT = i(365199);
+let tN = A.A.getArticleURL(f.MVz.CUSTOM_PROFILES_WISHLIST);
 function tw(e) {
     let { isOwner: t, isWishlistPublic: i, onToggleVisibility: s } = e,
         r = l.useRef(null),
@@ -817,7 +817,7 @@ function tw(e) {
                                   label: W.intl.string(W.t.hvVgAZ),
                                   icon: tb.I,
                                   trailingIndicator: { type: "icon", icon: tb.I },
-                                  action: () => window.open(tT),
+                                  action: () => window.open(tN),
                               }),
                           ],
                       })
@@ -844,7 +844,7 @@ function tw(e) {
                   children: (e) =>
                       (0, n.jsx)(U.q3, {
                           buttonRef: r,
-                          icon: tN.MoreHorizontalIcon,
+                          icon: tT.MoreHorizontalIcon,
                           tooltipText: W.intl.string(W.t["UKOtz+"]),
                           action: "PRESS_OPTIONS",
                           ...e,
@@ -1115,7 +1115,7 @@ function tD(e) {
         I = (0, eM.Gh)("user-profile-modal-v2-wishlist"),
         j = (0, eS.A)(() => (0, ef.A)()),
         v = l.useCallback(() => {
-            (0, eN.Cz)({ analyticsLocations: d, analyticsSource: eC.A.USER_PROFILE_WISHLIST });
+            (0, eT.Cz)({ analyticsLocations: d, analyticsSource: eC.A.USER_PROFILE_WISHLIST });
         }, [d]),
         A = l.useCallback((e) => {
             (0, eD.G)({ applicationId: e });
@@ -1127,7 +1127,7 @@ function tD(e) {
             userId: o?.id,
             skuId: ty.pe.TIER_2,
             nuxGraphic: I ? eR.g : void 0,
-            onNuxShow: eT.D,
+            onNuxShow: eN.D,
             location: eC.A.USER_PROFILE_WISHLIST,
             onAddSuccess: ek.w,
         });

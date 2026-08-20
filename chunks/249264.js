@@ -12,7 +12,7 @@ var d = i(297264),
     g = i(834730),
     m = i(216964),
     x = i(661531),
-    f = i(260598),
+    f = i(103557),
     h = i(22231),
     p = i(915089),
     I = i(409626),
@@ -23,8 +23,8 @@ var d = i(297264),
     S = i(735321),
     C = i(451395),
     b = i(823016),
-    N = i(788593),
-    T = i(492280),
+    T = i(788593),
+    N = i(492280),
     w = i(866665),
     y = i(789645),
     k = i(147925);
@@ -451,8 +451,8 @@ function ed(e) {
         [j, v] = r.useState("idle"),
         [A, C] = r.useState(t ?? ""),
         b = r.useRef(null),
-        N = r.useRef(null),
-        T = U.intl.string(U.t.xKSfBT),
+        T = r.useRef(null),
+        N = U.intl.string(U.t.xKSfBT),
         w = null != t && "" !== t.trim(),
         y = r.useCallback(() => {
             I({ action: "PRESS_ADD_COMMENTARY", widgetEdited: a }), v("editing");
@@ -482,7 +482,7 @@ function ed(e) {
                       (0, s.jsx)(f.f, {
                           id: g,
                           value: A,
-                          placeholder: T,
+                          placeholder: N,
                           onChange: R,
                           onBlur: k,
                           rows: 3,
@@ -495,7 +495,7 @@ function ed(e) {
                   ],
               })
             : (0, s.jsxs)("div", {
-                  ref: N,
+                  ref: T,
                   role: "group",
                   "aria-labelledby": m,
                   onClick: y,
@@ -503,14 +503,14 @@ function ed(e) {
                   children: [
                       (0, s.jsx)(h.PencilIcon, { size: "xxs", color: x.A.colors.ICON_MUTED, className: en.Ls }),
                       (0, s.jsx)(er, { user: i, guildId: n, channelId: l, id: m }),
-                      (0, s.jsx)(ea, { text: t ?? T, className: o()(en.qC, !w && en.qf) }),
+                      (0, s.jsx)(ea, { text: t ?? N, className: o()(en.qC, !w && en.qf) }),
                       (0, s.jsx)(c.D, {
                           innerRef: b,
                           "aria-label": U.intl.string(U.t.ppb9MJ),
                           onClick: (e) => {
                               e.stopPropagation(), y();
                           },
-                          focusProps: { ringTarget: N },
+                          focusProps: { ringTarget: T },
                       }),
                   ],
               })
@@ -539,9 +539,9 @@ function ec(e) {
         O = k && (0, S.y9)(a),
         L = k && !R,
         { registerDragHandleRef: _ } = (0, b.r)();
-    if (w) return (0, s.jsx)(T.E, {});
+    if (w) return (0, s.jsx)(N.E, {});
     function P() {
-        return (0, s.jsx)(N.A, {
+        return (0, s.jsx)(T.A, {
             coverRef: x,
             className: null == A || u ? void 0 : ei.iL,
             imageSrc: A,

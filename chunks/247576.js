@@ -502,8 +502,8 @@ function e2(e) {
     return (0, r.jsx)(k.E, { className: l()({ [e1.Q]: null == n }, t), color: n, ...i });
 }
 var e3 = n(95701),
-    e4 = n(616356),
-    e5 = n(280450),
+    e5 = n(616356),
+    e4 = n(280450),
     e6 = n(734057),
     e7 = n(184989),
     e8 = n(71393),
@@ -553,7 +553,7 @@ let tv = function () {
         t = (0, eN.Et)(),
         n = (0, eN.XT)(),
         i = (0, tN.bG)([eS.Ay], () => eS.Ay.getIsAtMaxSaveClipOperations()),
-        a = (0, tN.bG)([e4.A], () => e4.A.getCurrentUserActiveStream()),
+        a = (0, tN.bG)([e5.A], () => e5.A.getCurrentUserActiveStream()),
         s = t && (a?.state === x.XYD.ACTIVE || n),
         { enableGamePanelEntrypoint: l } = tL.A.useConfig({ location: "ClipsPanelButton" }),
         { tooltip: o, clipsSourceAttached: d } = (0, ty.A)();
@@ -784,7 +784,7 @@ let t0 = a.memo(function (e) {
             a.useEffect(() => {
                 O && (en(!1), null != ee.current && (clearTimeout(ee.current), (ee.current = null)));
             }, [O]);
-        let ei = null == v || null == p ? null : (0, r.jsx)(t4, { applicationId: v.id }),
+        let ei = null == v || null == p ? null : (0, r.jsx)(t5, { applicationId: v.id }),
             er = V
                 ? (0, r.jsx)(t3, { gameName: q, runningGameId: u?.id, onClick: J })
                 : H
@@ -995,7 +995,7 @@ function t3(e) {
         },
     });
 }
-function t4(e) {
+function t5(e) {
     let { applicationId: t } = e,
         n = a.useRef(null);
     a.useEffect(() => {
@@ -1012,7 +1012,7 @@ function t4(e) {
         }, [t, s]);
     return (0, r.jsx)(tR.A, { tooltipText: Z.intl.string(Z.t.vyaWs7), onClick: l, onMouseDown: i, icon: tp.U, ref: n });
 }
-var t5 = n(428689),
+var t4 = n(428689),
     t6 = n(409626),
     t7 = n(692969);
 let t8 = (0, ew.mj)({
@@ -1087,7 +1087,7 @@ function no(e) {
         className: ns.f9,
         children: [
             (0, r.jsx)(ej.A, { className: ns.Gt, game: t, pid: n?.pid, ref: a }),
-            i ? (0, r.jsx)(t5.VideoIcon, { size: "md", color: "currentColor", className: ns.it }) : null,
+            i ? (0, r.jsx)(t4.VideoIcon, { size: "md", color: "currentColor", className: ns.it }) : null,
         ],
     });
 }
@@ -1553,7 +1553,7 @@ let ny = (0, N.A)(function (e) {
         s = a.useRef(null),
         o = a.useRef(null),
         d = a.useRef(null),
-        c = (0, _.bG)([e5.default], () => e5.default.getId()),
+        c = (0, _.bG)([e4.default], () => e4.default.getId()),
         A = (0, _.bG)([ex.Ay, ta.A], () => (0, eZ.A)(ex.Ay, ta.A)),
         { enabled: h } = eG.useConfig({ location: "ActivityPanelGameCard" }),
         { previouslyRunningGame: I, isWithinThreshold: f } = (function () {
@@ -1580,7 +1580,7 @@ let ny = (0, N.A)(function (e) {
         T = (0, _.bG)([y.Ay], () => y.Ay.getConnectedActivityChannelId()),
         m = (0, _.bG)([e6.A], () => e6.A.getChannel(T)),
         g = (0, _.bG)([e8.A], () => e8.A.getGuild(m?.guild_id)),
-        [S, N] = (0, _.yK)([e4.A], () => [e4.A.getCurrentUserActiveStream(), e4.A.getStreamerActiveStreamMetadata()]),
+        [S, N] = (0, _.yK)([e5.A], () => [e5.A.getCurrentUserActiveStream(), e5.A.getStreamerActiveStreamMetadata()]),
         O = (0, _.bG)([y.Ay], () => y.Ay.getCurrentEmbeddedActivity()),
         R = (0, _.bG)([eM.A], () => (0, n_.ny)(eM.A.getMainFrame())),
         L = (0, _.bG)([e8.A, te.A], () => null == p || eY.vz(p, e8.A, te.A, !1)),

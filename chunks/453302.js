@@ -55,9 +55,9 @@ function f(e) {
         (s === d.P0.BAD
             ? (0, a.openModalLazy)(async () => {
                   let { default: e } = await Promise.all([
-                      n.e("744878"),
+                      n.e("142753"),
                       n.e("312513"),
-                      n.e("408891"),
+                      n.e("268582"),
                       n.e("104143"),
                       n.e("155925"),
                       n.e("218413"),

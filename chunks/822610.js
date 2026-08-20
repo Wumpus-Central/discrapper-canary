@@ -139,7 +139,7 @@ function b(e) {
 }
 var R = n(652215),
     O = n(714731),
-    M = n(521931);
+    M = n(969490);
 let L = [];
 function w(e) {
     let { channelId: t, type: n, ignoreFile: s, smallAttachments: C = !1 } = e,

@@ -12,7 +12,7 @@ var r = t(477900),
     g = t(29814),
     p = t(881140),
     f = t(816969),
-    k = t(521931);
+    k = t(969490);
 let m = RegExp(`https?://${window.GLOBAL_ENV.CDN_HOST ?? ""}`);
 function j(e) {
     return "string" == typeof e.content ? e.content : R(e.content);

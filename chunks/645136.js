@@ -2238,14 +2238,14 @@ let ld = {
 };
 var lu = a(935063),
     lc = a(307301),
-    lb = a(404778),
-    lp = a(661531),
-    lm = a(584454),
-    lx = a(892547),
-    ly = a(260598);
+    lb = a(103557),
+    lp = a(404778),
+    lm = a(661531),
+    lx = a(584454),
+    ly = a(892547);
 let lh = [
         { id: "strength", label: "Strength", icon: lu.X },
-        { id: "wisdom", label: "Wisdom", icon: { type: "role", color: lp.A.unsafe_rawColors.BRAND_500.css } },
+        { id: "wisdom", label: "Wisdom", icon: { type: "role", color: lm.A.unsafe_rawColors.BRAND_500.css } },
         { id: "charisma", label: "Charisma" },
         { id: "intelligence", label: "Intelligence" },
         { id: "dexterity", label: "Dexterity" },
@@ -2349,7 +2349,7 @@ let lh = [
                 name: "SearchBar",
                 component: function (e) {
                     let [l, a] = o.useState("");
-                    return (0, t.jsx)(lx.I, {
+                    return (0, t.jsx)(ly.I, {
                         ...e,
                         query: l,
                         onChange: a,
@@ -2377,7 +2377,7 @@ let lh = [
                 id: "text-area",
                 component: function (e) {
                     let [l, a] = o.useState("");
-                    return (0, t.jsx)(ly.f, { ...e, value: l, onChange: a });
+                    return (0, t.jsx)(lb.f, { ...e, value: l, onChange: a });
                 },
                 controls: {
                     label: { label: "Label", type: "text", defaultValue: "Example Label" },
@@ -2399,7 +2399,7 @@ let lh = [
                 id: "number-input",
                 component: function (e) {
                     let [l, a] = o.useState(0);
-                    return (0, t.jsx)(lm.Q, { ...e, value: l, onChange: a });
+                    return (0, t.jsx)(lx.Q, { ...e, value: l, onChange: a });
                 },
                 controls: {
                     label: { label: "Label", type: "text", defaultValue: "Example Label" },
@@ -2483,12 +2483,12 @@ let lh = [
                                     }),
                                 ],
                             }),
-                            (0, t.jsx)(lb.c, {}),
+                            (0, t.jsx)(lp.c, {}),
                             (0, t.jsxs)(e7.n, {
                                 label: "Search Bar",
                                 children: [
-                                    (0, t.jsx)(lx.I, { query: u, onChange: r.tE, disabled: s, placeholder: d }),
-                                    (0, t.jsx)(lx.I, {
+                                    (0, t.jsx)(ly.I, { query: u, onChange: r.tE, disabled: s, placeholder: d }),
+                                    (0, t.jsx)(ly.I, {
                                         query: u,
                                         onChange: r.tE,
                                         size: "sm",
@@ -2497,8 +2497,8 @@ let lh = [
                                     }),
                                 ],
                             }),
-                            (0, t.jsx)(lb.c, {}),
-                            (0, t.jsx)(e7.n, { label: "Text Area", children: (0, t.jsx)(ly.f, { ...x }) }),
+                            (0, t.jsx)(lp.c, {}),
+                            (0, t.jsx)(e7.n, { label: "Text Area", children: (0, t.jsx)(lb.f, { ...x }) }),
                         ],
                     });
                 },
@@ -2682,7 +2682,7 @@ let lP = {
                                             title: i.title,
                                             subtitle: n,
                                             input: a
-                                                ? (0, t.jsx)(lx.I, {
+                                                ? (0, t.jsx)(ly.I, {
                                                       placeholder: "Search...",
                                                       onChange: () => {},
                                                       query: "",
@@ -4445,7 +4445,7 @@ let ab = {
     },
 };
 var ap = a(866665),
-    am = a(459192),
+    am = a(683063),
     ax = a(557464);
 let ay = {
     title: "Tooltip",

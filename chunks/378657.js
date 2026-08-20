@@ -832,18 +832,18 @@ function e1(e) {
 }
 var e6 = l(97808),
     e9 = l(778712),
-    e5 = l(463930),
-    e8 = l(730134),
+    e8 = l(463930),
+    e5 = l(730134),
     e4 = l(906199),
-    e2 = l(319756),
-    e3 = l(854627),
+    e3 = l(319756),
+    e2 = l(854627),
     e7 = l(696451),
     te = l(317525),
     tt = l(287809),
     tl = l(562153),
     tn = l(19575),
     ti = l(985827);
-let ts = tn.Ay.getEnableHardwareAcceleration() ? e6.Js : e8.A;
+let ts = tn.Ay.getEnableHardwareAcceleration() ? e6.Js : e5.A;
 function tr(e) {
     let { guildId: t } = e,
         l = (0, r.bG)([c.A], () => c.A.getGuild(t)),
@@ -857,7 +857,7 @@ function tr(e) {
             avatarDecorationSrc: p,
             avatarSrc: m,
             eventHandlers: f,
-        } = (0, e3.A)({ userId: s?.id, guildId: t, size: e9._3.SIZE_40, animateOnHover: !d });
+        } = (0, e2.A)({ userId: s?.id, guildId: t, size: e9._3.SIZE_40, animateOnHover: !d });
     return null == l || null == a || null == s
         ? null
         : (0, n.jsxs)("div", {
@@ -888,7 +888,7 @@ function tr(e) {
                   }),
                   null != i &&
                       !u &&
-                      (0, n.jsx)(e2.V, {
+                      (0, n.jsx)(e3.V, {
                           avatar: (0, n.jsx)(ts, {
                               ...f,
                               user: s,
@@ -898,7 +898,7 @@ function tr(e) {
                               "aria-hidden": !0,
                               animate: !0,
                           }),
-                          username: (0, n.jsx)(e5.g, {
+                          username: (0, n.jsx)(e8.g, {
                               variant: "text-md/semibold",
                               name: tl.Ay.getName(t, null, s),
                               colorString: i.colorString,
@@ -988,7 +988,7 @@ function tx(e) {
                             shouldShow: !0,
                             asContainer: !0,
                             delay: 1e3,
-                            children: (0, n.jsx)(e5.g, {
+                            children: (0, n.jsx)(e8.g, {
                                 variant: "text-md/semibold",
                                 name: o,
                                 colorString: a ?? null,

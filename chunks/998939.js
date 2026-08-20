@@ -101,8 +101,8 @@ function k(e, t) {
 let j = new Map(),
     y = new Map(),
     _ = new Map(),
-    E = new Set(),
-    N = new Map();
+    N = new Set(),
+    E = new Map();
 function A(e, t) {
     s.h.dispatch({ type: "VIBEGRATIONS_CHAT_CONN_STATE", projectId: e, connState: t });
 }
@@ -417,7 +417,7 @@ async function H(e, t) {
                                     turnId: l.turn_id,
                                     summary: l.summary,
                                 }),
-                                E.delete(t) &&
+                                N.delete(t) &&
                                     "cancelled" === l.result &&
                                     s.h.dispatch({ type: "VIBEGRATIONS_CHAT_INTERRUPTED", projectId: t });
                         else {
@@ -557,7 +557,7 @@ function W(e) {
     let t = j.get(e);
     try {
         if (null == t) throw Error("Not connected");
-        t.ws.sendInterrupt(), f.Ay.isThinking(e) && E.add(e);
+        t.ws.sendInterrupt(), f.Ay.isThinking(e) && N.add(e);
     } catch (e) {
         console.error("[vibegrations] interrupt send failed", e);
     }
@@ -695,14 +695,14 @@ class eo extends a.Ay.Store {
         return _.get(e) ?? !1;
     }
     getModelSettings(e) {
-        return N.get(e) ?? null;
+        return E.get(e) ?? null;
     }
 }
 let ec = new eo(s.h, {
     VIBEGRATIONS_CHAT_CONN_STATE: function (e) {
         let { projectId: t, connState: n } = e;
         if (y.get(t) === n) return !1;
-        y.set(t, n), ("closed" === n || "failed" === n) && E.delete(t);
+        y.set(t, n), ("closed" === n || "failed" === n) && N.delete(t);
     },
     VIBEGRATIONS_CHAT_STOPPED_SET: function (e) {
         let { projectId: t, stopped: n } = e;
@@ -711,7 +711,7 @@ let ec = new eo(s.h, {
     },
     VIBEGRATIONS_MODEL_SETTINGS_SET: function (e) {
         let { projectId: t, settings: n, choices: l } = e;
-        N.set(t, { settings: n, choices: l });
+        E.set(t, { settings: n, choices: l });
     },
     VIBEGRATIONS_PROJECT_DELETE_SUCCESS: function (e) {
         let { projectId: t } = e;

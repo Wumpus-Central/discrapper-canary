@@ -39,8 +39,8 @@ var U = n(665260),
     w = n(134861),
     H = n(528767),
     V = n(182892),
-    B = n(652215),
-    F = n(55730),
+    F = n(652215),
+    B = n(55730),
     z = n(287613),
     J = n(659051),
     Y = n(702631),
@@ -55,15 +55,15 @@ var U = n(665260),
         (i.XBOX = "xbox"),
         (i.VR = "vr"),
         i);
-B.yTV.DESKTOP,
-    B.yTV.ANDROID,
-    B.yTV.IOS,
-    B.yTV.XBOX,
-    B.yTV.PS4,
-    B.yTV.PS5,
-    B.yTV.SAMSUNG,
-    B.yTV.EMBEDDED,
-    B.yTV.META_QUEST;
+F.yTV.DESKTOP,
+    F.yTV.ANDROID,
+    F.yTV.IOS,
+    F.yTV.XBOX,
+    F.yTV.PS4,
+    F.yTV.PS5,
+    F.yTV.SAMSUNG,
+    F.yTV.EMBEDDED,
+    F.yTV.META_QUEST;
 let Z = [];
 function q(e) {
     let { width: t, height: n, color: i } = e;
@@ -100,20 +100,20 @@ function et(e) {
                             s = [];
                         return null == t || 0 === t.length || (null != n && l.has(n) && i)
                             ? Z
-                            : (l.has(B.yTV.ANDROID) && l.has(B.yTV.IOS)
+                            : (l.has(F.yTV.ANDROID) && l.has(F.yTV.IOS)
                                   ? s.push("mobile")
-                                  : l.has(B.yTV.ANDROID)
+                                  : l.has(F.yTV.ANDROID)
                                     ? s.push("android")
-                                    : l.has(B.yTV.IOS) && s.push("ios"),
-                              (l.has(B.yTV.PS4) || l.has(B.yTV.PS5)) && s.push("playstation"),
-                              l.has(B.yTV.XBOX) && s.push("xbox"),
-                              l.has(B.yTV.DESKTOP) && s.push("desktop"),
-                              l.has(B.yTV.META_QUEST) && s.push("vr"),
+                                    : l.has(F.yTV.IOS) && s.push("ios"),
+                              (l.has(F.yTV.PS4) || l.has(F.yTV.PS5)) && s.push("playstation"),
+                              l.has(F.yTV.XBOX) && s.push("xbox"),
+                              l.has(F.yTV.DESKTOP) && s.push("desktop"),
+                              l.has(F.yTV.META_QUEST) && s.push("vr"),
                               s);
                     })({ platforms: t, currentPlatform: n, isGameLaunchable: i }),
                 [n, t, i],
             );
-        })({ platforms: t?.supported_platforms, currentPlatform: B.yTV.DESKTOP, isGameLaunchable: i }),
+        })({ platforms: t?.supported_platforms, currentPlatform: F.yTV.DESKTOP, isGameLaunchable: i }),
         r = s.useMemo(
             () =>
                 a
@@ -145,16 +145,16 @@ function et(e) {
         null != n
             ? (function (e) {
                   switch (e) {
-                      case B.yTV.DESKTOP:
+                      case F.yTV.DESKTOP:
                           return K.intl.string(K.t.aqN8U9);
-                      case B.yTV.IOS:
+                      case F.yTV.IOS:
                           return K.intl.string(K.t.CyQ5ia);
-                      case B.yTV.ANDROID:
+                      case F.yTV.ANDROID:
                           return K.intl.string(K.t.fMs6uW);
-                      case B.yTV.XBOX:
+                      case F.yTV.XBOX:
                           return K.intl.string(K.t.o0hjdt);
-                      case B.yTV.PS4:
-                      case B.yTV.PS5:
+                      case F.yTV.PS4:
+                      case F.yTV.PS5:
                           return K.intl.string(K.t["R/1GpG"]);
                       default:
                           return;
@@ -269,11 +269,11 @@ function ei(e) {
             if (!(0, z.A)(c) || (0, Y.U)(c) || (0, P.w)(n, t) || (0, O.v)(l))
                 return { canJoin: !1, remoteJoinPlatform: null };
             if (a && r) return { canJoin: !0, remoteJoinPlatform: null };
-            if (l.activity?.type === B.xL.JOIN && null != t) {
+            if (l.activity?.type === F.xL.JOIN && null != t) {
                 let e = (function (e) {
                     if (null == e) return null;
                     let t = e.application_id;
-                    if (null == t || !(0, U.Lt)(e.flags ?? 0, B.jUm.SUPPORTS_REMOTE_ACTIVITY_ACTION_JOIN)) return null;
+                    if (null == t || !(0, U.Lt)(e.flags ?? 0, F.jUm.SUPPORTS_REMOTE_ACTIVITY_ACTION_JOIN)) return null;
                     let n = H.A.getRemoteApplicationActivity(t);
                     return null == n ||
                         (0, V.e)(n) ||
@@ -281,15 +281,15 @@ function ei(e) {
                             (w.A.isConnected(n.application_id) ||
                                 (function (e) {
                                     let { platform: t } = e;
-                                    return (0, G.m0)() ? t === B.yTV.ANDROID : !!(0, G.un)() && t === B.yTV.IOS;
+                                    return (0, G.m0)() ? t === F.yTV.ANDROID : !!(0, G.un)() && t === F.yTV.IOS;
                                 })(n)))
                         ? null
-                        : (0, U.Lt)(n.flags ?? 0, B.jUm.SUPPORTS_REMOTE_ACTIVITY_ACTION_JOIN)
+                        : (0, U.Lt)(n.flags ?? 0, F.jUm.SUPPORTS_REMOTE_ACTIVITY_ACTION_JOIN)
                           ? (n.platform ?? null)
                           : null;
                 })(t);
                 if (null != e) return { canJoin: !0, remoteJoinPlatform: e };
-                if ((0, F.A)(t, B.jUm.SUPPORTS_JOIN_URL)) return { canJoin: !0, remoteJoinPlatform: null };
+                if ((0, B.A)(t, F.jUm.SUPPORTS_JOIN_URL)) return { canJoin: !0, remoteJoinPlatform: null };
             }
             return (0, k.platformSupportsActivityJoin)() && o
                 ? { canJoin: !0, remoteJoinPlatform: null }
@@ -307,7 +307,7 @@ function ei(e) {
         eE = !(
             null == T ||
             !(0, J.A)(T, t, n.id) ||
-            !(0, F.A)(T, B.jUm.SYNC) ||
+            !(0, B.A)(T, F.jUm.SYNC) ||
             !k.isPlatformEmbedded ||
             (0, P.w)(L, T)
         ),
@@ -315,18 +315,18 @@ function ei(e) {
             if (
                 t.author.id === i ||
                 !(0, J.A)(e, t, n.id) ||
-                t.activity?.type !== B.xL.JOIN_REQUEST ||
-                !(0, F.A)(e, B.jUm.JOIN)
+                t.activity?.type !== F.xL.JOIN_REQUEST ||
+                !(0, B.A)(e, F.jUm.JOIN)
             )
                 return !1;
             let l = (0, D._)(e);
             return !(!(0, z.A)(l) || (0, Y.U)(l));
         })(T, t, n, c),
         eC = (0, P.w)(L, T),
-        e_ = null != T && (0, F.A)(T, B.jUm.SUPPORTS_REMOTE_ACTIVITY_ACTION_JOIN),
+        e_ = null != T && (0, B.A)(T, F.jUm.SUPPORTS_REMOTE_ACTIVITY_ACTION_JOIN),
         ev = (0, u.bG)(
             [R.A],
-            () => null != T && null != T.application_id && R.A.getState(T.application_id, B.xL.JOIN) === B.eAD.LOADING,
+            () => null != T && null != T.application_id && R.A.getState(T.application_id, F.xL.JOIN) === F.eAD.LOADING,
         ),
         { actions: eN, hasAccountLinkButton: ej } = s.useMemo(() => {
             let e = null,
@@ -344,14 +344,14 @@ function ei(e) {
                               applicationId: T.application_id,
                               channelId: a.id,
                               messageId: t.id,
-                              source: B.ThZ.MESSAGE_EMBED,
+                              source: F.ThZ.MESSAGE_EMBED,
                               analyticsLocations: ei,
-                              embedded: (0, F.A)(T, B.jUm.EMBEDDED),
+                              embedded: (0, B.A)(T, F.jUm.EMBEDDED),
                               remotePartyId: null != ef ? T.party?.id : void 0,
                           }),
                               (0, W.A)({
-                                  type: B.UqL.JOIN,
-                                  source: B.ThZ.MESSAGE_EMBED,
+                                  type: F.UqL.JOIN,
+                                  source: F.ThZ.MESSAGE_EMBED,
                                   userId: t.author.id,
                                   guildId: a.guild_id,
                                   channelId: a.id,
@@ -388,10 +388,10 @@ function ei(e) {
                             onClick: () => {
                                 null != T &&
                                     C.A.sendActivityInvite({
-                                        type: B.xL.JOIN,
+                                        type: F.xL.JOIN,
                                         channelId: a.id,
                                         activity: T,
-                                        location: B.ThZ.MESSAGE_EMBED,
+                                        location: F.ThZ.MESSAGE_EMBED,
                                     });
                             },
                             disabled: t.author.id === c,

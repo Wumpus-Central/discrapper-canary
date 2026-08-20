@@ -1128,10 +1128,10 @@ function e$(e) {
 var e0 = n(417098),
     e1 = n(55619),
     e2 = n(734066),
-    e5 = n(200542),
-    e3 = n(351906),
-    e4 = n(377802),
-    e8 = n(348858),
+    e3 = n(200542),
+    e5 = n(351906),
+    e8 = n(377802),
+    e4 = n(348858),
     e6 = n(523875),
     e7 = n(416696),
     e9 = n(621956),
@@ -1398,7 +1398,7 @@ function tK(e) {
             Component: o,
             play: d,
             events: { onMouseEnter: u, onMouseLeave: h },
-        } = (0, e8.I)(a ? "undeafen" : "deafen"),
+        } = (0, e4.I)(a ? "undeafen" : "deafen"),
         m = l ? tn.T : o;
     function g() {
         (0, tc.A)(l, em.JJy.OVERLAY),
@@ -1704,7 +1704,7 @@ function t0(e) {
     let {
             Component: h,
             events: { onMouseEnter: m, onMouseLeave: g },
-        } = (0, e4.O)(),
+        } = (0, e8.O)(),
         p = tW(n),
         f = (0, tP.qZ)(),
         x = s ? h : ti._;
@@ -1793,13 +1793,13 @@ function t2(e) {
         ],
     });
 }
-function t5(e) {
+function t3(e) {
     let { voiceChannel: t } = e,
         n = t?.id,
         i = (0, y.cf)([a.A], () => ({ quality: a.A.getQuality(), state: a.A.getState(), lastPing: a.A.getLastPing() })),
         s = (0, y.bG)([tU.A], () => null != n && tU.A.hasVideo(n), [n]),
         l = (0, d.Mn)("VoiceConnectionStatus"),
-        o = (0, y.bG)([e3.A], () => e3.A.hidePersonalInformation);
+        o = (0, y.bG)([e5.A], () => e5.A.hidePersonalInformation);
     return (
         null != n &&
         null != t &&
@@ -1818,7 +1818,7 @@ function t5(e) {
         })
     );
 }
-function t3(e) {
+function t5(e) {
     let t,
         n = c.useRef(null),
         i = (0, tp.Et)(),
@@ -1863,14 +1863,14 @@ function t3(e) {
         })
     );
 }
-var t4 = n(944138);
-let t8 = c.memo(function () {
-    let e = (0, y.bG)([e3.A], () => e3.A.enabled),
+var t8 = n(944138);
+let t4 = c.memo(function () {
+    let e = (0, y.bG)([e5.A], () => e5.A.enabled),
         t = (0, d.Mn)("StreamerModeNotice");
     return e && t
         ? (0, r.jsxs)(e0.$T, {
               color: e0.Hv.STREAMER_MODE,
-              className: t4.$X,
+              className: t8.$X,
               children: [
                   (0, r.jsx)(E.E, {
                       tag: "span",
@@ -1879,7 +1879,7 @@ let t8 = c.memo(function () {
                       children: eg.intl.string(eg.t.q9K7jp),
                   }),
                   (0, r.jsx)(e0.Z_, {
-                      className: t4.lI,
+                      className: t8.lI,
                       onClick: () => e1.A.setEnabled(!1),
                       noticeType: em.kqX.STREAMER_MODE,
                       children: eg.intl.string(eg.t.R9GHya),
@@ -1891,19 +1891,19 @@ let t8 = c.memo(function () {
 function t6(e) {
     let { locked: t } = e,
         n = (0, y.bG)([P.Ay], () => P.Ay.getVoiceChannelId()),
-        { enableOverlayEntrypoint: i } = e5.A.useConfig({ location: "QuickActionsWidget" }),
+        { enableOverlayEntrypoint: i } = e3.A.useConfig({ location: "QuickActionsWidget" }),
         s = (0, e2.sw)(),
         l = (0, y.bG)([D.A], () => D.A.getChannel(n)),
         a = null != l;
     return (0, r.jsxs)("div", {
-        className: m()({ [t4.KE]: !0, [t4.xt]: t }),
+        className: m()({ [t8.KE]: !0, [t8.xt]: t }),
         children: [
-            (0, r.jsx)(t8, {}),
+            (0, r.jsx)(t4, {}),
             (0, r.jsxs)("div", {
-                className: t4.Pm,
+                className: t8.Pm,
                 children: [
                     (0, r.jsxs)("div", {
-                        className: t4.qi,
+                        className: t8.qi,
                         children: [
                             (0, r.jsx)(tq, { voiceChannel: l, locked: t }),
                             (0, r.jsx)(tK, { voiceChannel: l, locked: t }),
@@ -1911,20 +1911,20 @@ function t6(e) {
                         ],
                     }),
                     (0, r.jsxs)("div", {
-                        className: t4.qi,
+                        className: t8.qi,
                         children: [
                             (0, r.jsx)(tJ, { voiceChannel: l, locked: t }),
                             (0, r.jsx)(t$, { voiceChannel: l, locked: t }),
-                            i && s && (0, r.jsx)(t3, { voiceChannel: l, locked: t }),
+                            i && s && (0, r.jsx)(t5, { voiceChannel: l, locked: t }),
                         ],
                     }),
                     (0, r.jsx)("div", {
-                        className: m()(t4.qi, a && t4.SV),
+                        className: m()(t8.qi, a && t8.SV),
                         children: (0, r.jsx)(t0, { voiceChannel: l, locked: t }),
                     }),
                 ],
             }),
-            a && (0, r.jsx)("div", { className: t4.Pm, children: (0, r.jsx)(t5, { voiceChannel: l, locked: t }) }),
+            a && (0, r.jsx)("div", { className: t8.Pm, children: (0, r.jsx)(t3, { voiceChannel: l, locked: t }) }),
         ],
     });
 }
@@ -1938,15 +1938,15 @@ function nn(e, t) {
 function ni(e, t) {
     return null == e ? null : null != e.getGuildId() ? (t.getGuild(e.getGuildId()) ?? null) : null;
 }
-var ns = n(459192),
-    nr = n(408278),
-    nl = n(366605),
-    na = n(780338),
-    no = n(782603),
-    nd = n(241541),
-    nu = n(320448),
-    nc = n(661531),
-    nh = n(446576),
+var ns = n(408278),
+    nr = n(366605),
+    nl = n(780338),
+    na = n(782603),
+    no = n(241541),
+    nd = n(320448),
+    nu = n(661531),
+    nc = n(446576),
+    nh = n(683063),
     nm = n(789645),
     ng = n(387755),
     np = n(945830),
@@ -2004,7 +2004,7 @@ let nN = c.memo(function (e) {
             isMentionLowImportance: d,
         });
     if (null == i)
-        return (0, r.jsx)(t7.ChatIcon, { size: nw(l, "default"), color: nc.A.colors.INTERACTIVE_ICON_DEFAULT });
+        return (0, r.jsx)(t7.ChatIcon, { size: nw(l, "default"), color: nu.A.colors.INTERACTIVE_ICON_DEFAULT });
     {
         if (null == t) return (0, r.jsx)(tw.Ay, { guild: i, size: nw(l, "guild"), active: !0, showTooltip: !1 });
         let e = 40 === l ? ny.Q.MEDIUM_40 : ny.Q.TINY_24;
@@ -2059,9 +2059,9 @@ function nP(e) {
                       children: (0, r.jsx)(Y.m, {
                           text: eg.intl.string(eg.t["mp1N/2"]),
                           "aria-label": eg.intl.string(eg.t["mp1N/2"]),
-                          children: (0, r.jsx)(nr.K, {
+                          children: (0, r.jsx)(ns.K, {
                               ...n,
-                              icon: nl.t,
+                              icon: nr.t,
                               "aria-label": eg.intl.string(eg.t["mp1N/2"]),
                               size: "sm",
                               variant: "icon-only",
@@ -2095,7 +2095,7 @@ function nL(e) {
                 });
         }, []),
         h = eg.intl.string(eg.t.h850Ss),
-        m = l || a !== em.orn.ALL_MESSAGES ? na.BellSlashIcon : no.BellIcon;
+        m = l || a !== em.orn.ALL_MESSAGES ? nl.BellSlashIcon : na.BellIcon;
     return s && null != t
         ? (0, r.jsx)(tt.Y, {
               targetElementRef: n,
@@ -2120,7 +2120,7 @@ function nL(e) {
                       children: (0, r.jsx)(Y.m, {
                           text: h,
                           "aria-label": h,
-                          children: (0, r.jsx)(nr.K, {
+                          children: (0, r.jsx)(ns.K, {
                               ...i,
                               icon: m,
                               "aria-label": h,
@@ -2142,7 +2142,7 @@ function nV(e) {
                   (0, r.jsx)(Y.m, {
                       text: eg.intl.string(eg.t.JJogjm),
                       "aria-label": eg.intl.string(eg.t.JJogjm),
-                      children: (0, r.jsx)(nr.K, {
+                      children: (0, r.jsx)(ns.K, {
                           icon: ti._,
                           "aria-label": eg.intl.string(eg.t.JJogjm),
                           size: "sm",
@@ -2155,8 +2155,8 @@ function nV(e) {
                       ? (0, r.jsx)(Y.m, {
                             text: eg.intl.string(eg.t["LR+Ptf"]),
                             "aria-label": eg.intl.string(eg.t["LR+Ptf"]),
-                            children: (0, r.jsx)(nr.K, {
-                                icon: nd.D,
+                            children: (0, r.jsx)(ns.K, {
+                                icon: no.D,
                                 "aria-label": eg.intl.string(eg.t["LR+Ptf"]),
                                 size: "sm",
                                 variant: "icon-only",
@@ -2317,10 +2317,10 @@ function nU(e) {
                                                   children: T,
                                               }),
                                           }),
-                                          (0, r.jsx)(nu._, {
+                                          (0, r.jsx)(nd._, {
                                               className: nD.ln,
                                               size: "xs",
-                                              color: nc.A.colors.TEXT_MUTED,
+                                              color: nu.A.colors.TEXT_MUTED,
                                           }),
                                       ],
                                   })
@@ -2380,8 +2380,8 @@ function nU(e) {
                             ? (0, r.jsx)(Y.m, {
                                   text: v,
                                   "aria-label": v,
-                                  children: (0, r.jsx)(nr.K, {
-                                      icon: nh.g,
+                                  children: (0, r.jsx)(ns.K, {
+                                      icon: nc.g,
                                       "aria-label": v,
                                       size: "sm",
                                       variant: "icon-only",
@@ -2395,10 +2395,10 @@ function nU(e) {
                                       },
                                   }),
                               })
-                            : (0, r.jsx)(ns.u, {
+                            : (0, r.jsx)(nh.u, {
                                   title: eg.intl.string(nk.default.ERApc4),
                                   body: eg.intl.string(nk.default.PBVXVW),
-                                  children: (0, r.jsx)(nr.K, {
+                                  children: (0, r.jsx)(ns.K, {
                                       icon: nm.P,
                                       "aria-label": eg.intl.string(nk.default.ERApc4),
                                       size: "sm",
@@ -2451,7 +2451,7 @@ let n$ = c.memo(function (e) {
         a = null != i && t === i,
         d = (0, y.bG)([o.A], () => o.A.getSelectedChannelId() === t, [t]),
         u = (0, y.bG)([o.A], () => o.A.getVoiceChatMinimized()),
-        h = (0, nF.r)(nc.A.colors.ICON_STATUS_ONLINE),
+        h = (0, nF.r)(nu.A.colors.ICON_STATUS_ONLINE),
         g = (0, y.bG)([nY.A], () => !!a && !!(nY.A.isAnyoneElseSpeaking() || nY.A.isCurrentUserSpeaking()), [a]),
         [p, f] = c.useState(!1),
         { mentionCount: x, isMentionLowImportance: E } = (0, y.cf)(
@@ -2509,7 +2509,7 @@ let n$ = c.memo(function (e) {
                             children: (0, r.jsx)(e, {
                                 className: nQ.Yc,
                                 size: "sm",
-                                color: d ? nc.A.colors.WHITE : nc.A.colors.ICON_STATUS_ONLINE,
+                                color: d ? nu.A.colors.WHITE : nu.A.colors.ICON_STATUS_ONLINE,
                             }),
                         })
                     );
@@ -2650,11 +2650,11 @@ let n$ = c.memo(function (e) {
         M = (() => {
             if (null == j || N) return null;
             let e = (0, tg.gU)(j, v);
-            return (e ??= t7.ChatIcon), (0, r.jsx)(e, { size: "sm", color: nc.A.colors.INTERACTIVE_ICON_DEFAULT });
+            return (e ??= t7.ChatIcon), (0, r.jsx)(e, { size: "sm", color: nu.A.colors.INTERACTIVE_ICON_DEFAULT });
         })();
     return null == j
         ? (0, r.jsx)("div", { className: nQ.R })
-        : (0, r.jsx)(ns.u, {
+        : (0, r.jsx)(nh.u, {
               title: R,
               body: O,
               asset: M,
@@ -2686,10 +2686,10 @@ let n$ = c.memo(function (e) {
 var n0 = n(148494),
     n1 = n(373204),
     n2 = n(355622),
-    n5 = n(232835),
-    n3 = n(576705),
-    n4 = n(625494),
-    n8 = n(973196),
+    n3 = n(232835),
+    n5 = n(576705),
+    n8 = n(625494),
+    n4 = n(973196),
     n6 = n(727961);
 function n7(e) {
     let t,
@@ -2711,11 +2711,11 @@ function n7(e) {
                 })(d, tG.A),
             [d],
         ),
-        m = (0, n8.A)();
+        m = (0, n4.A)();
     return ((t = d?.id ?? null),
     (n = c.useRef(new Set())),
-    (i = (0, y.bG)([n5.A], () => (null != t ? n5.A.getMessages(t) : null), [t])),
-    (s = (0, y.bG)([n3.A], () => n3.A.can(em.xBc.READ_MESSAGE_HISTORY, d), [d])),
+    (i = (0, y.bG)([n3.A], () => (null != t ? n3.A.getMessages(t) : null), [t])),
+    (s = (0, y.bG)([n5.A], () => n5.A.can(em.xBc.READ_MESSAGE_HISTORY, d), [d])),
     (l = i?.first() ?? null),
     (a = null != d && null == l && null != i && !i.loadingMore && !i.ready && !i.hasFetched && s),
     c.useEffect(() => {
@@ -2724,7 +2724,7 @@ function n7(e) {
     c.useEffect(() => {
         if (null == o || m) return;
         let e = u.requestAnimationFrame(() => {
-            n4._.dispatchToLastSubscribed(em.jej.TEXTAREA_FOCUS, { channelId: o });
+            n8._.dispatchToLastSubscribed(em.jej.TEXTAREA_FOCUS, { channelId: o });
         });
         return () => u.cancelAnimationFrame(e);
     }, [o, u, m]),
@@ -3147,7 +3147,7 @@ let ib = c.memo(function (e) {
             : i
               ? t
                   ? null
-                  : (0, r.jsx)(V.g, { emptyText: eg.intl.string(eg.t.O1Nbjq), icon: no.BellIcon, absolute: !0 })
+                  : (0, r.jsx)(V.g, { emptyText: eg.intl.string(eg.t.O1Nbjq), icon: na.BellIcon, absolute: !0 })
               : null;
     }),
     iw = {

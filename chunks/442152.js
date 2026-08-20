@@ -513,14 +513,14 @@ let e0 = (0, z.xI)(L.A.EXPRESSION_PICKER_CONSTANTS_EXPRESSION_PICKER_INSPECTOR_B
 var e3 = n(140735),
     e5 = n(442433),
     e8 = n(304072),
-    e6 = n(194261),
-    e7 = n(513902);
+    e7 = n(194261),
+    e6 = n(513902);
 let e4 = function (e) {
     let { size: t } = e;
     return (0, l.jsx)("div", {
-        className: e7.G,
+        className: e6.G,
         style: { width: t, height: t },
-        children: (0, l.jsx)(e6.LockIcon, { size: "xxs", color: "currentColor", className: e7.I }),
+        children: (0, l.jsx)(e7.LockIcon, { size: "xxs", color: "currentColor", className: e6.I }),
     });
 };
 var e9 = n(777371);
@@ -593,10 +593,10 @@ let te = i.memo(function (e) {
                                         (0, m.openModalLazy)(async () => {
                                             let { default: t } = await Promise.all([
                                                 n.e("860350"),
-                                                n.e("744878"),
+                                                n.e("142753"),
                                                 n.e("207998"),
                                                 n.e("341659"),
-                                                n.e("408891"),
+                                                n.e("268582"),
                                                 n.e("883952"),
                                                 n.e("66580"),
                                                 n.e("480436"),
@@ -1399,10 +1399,10 @@ let tk = (0, z.xI)(L.A.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                                     (0, m.openModalLazy)(async () => {
                                         let { default: t } = await Promise.all([
                                             n.e("860350"),
-                                            n.e("744878"),
+                                            n.e("142753"),
                                             n.e("207998"),
                                             n.e("341659"),
-                                            n.e("408891"),
+                                            n.e("268582"),
                                             n.e("883952"),
                                             n.e("66580"),
                                             n.e("480436"),

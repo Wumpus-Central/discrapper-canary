@@ -9608,7 +9608,7 @@ let mT = (0, a.zD)(o.X.HIGHLIGHT_MANA_COMPONENTS, {
     });
 var mj = n(396478),
     mO = n(173936),
-    mL = n(260598),
+    mL = n(103557),
     mD = n(414079),
     mR = n(148810),
     mP = n(380610),

@@ -711,8 +711,8 @@ function e8(e) {
               children: eg.intl.format(eg.t.KAjfKl, { claimLink: r }),
           });
 }
-var e4 = n(998445),
-    e2 = n(274997),
+var e2 = n(998445),
+    e4 = n(274997),
     e6 = n(80500),
     e5 = n(319745),
     e3 = n(488225),
@@ -733,13 +733,13 @@ function ti(e) {
             switch (e.category) {
                 case U.V.OFFICIAL:
                     return {
-                        icon: (0, i.jsx)(e4.GlobeEarthIcon, { ...t }),
+                        icon: (0, i.jsx)(e2.GlobeEarthIcon, { ...t }),
                         action: O.GameProfileTrackActionActions.WebsiteLink,
                         title: eg.intl.string(eg.t.fOUKvg),
                     };
                 case U.V.TWITTER:
                     return {
-                        icon: (0, i.jsx)(e2.p, { ...t }),
+                        icon: (0, i.jsx)(e4.p, { ...t }),
                         action: O.GameProfileTrackActionActions.XLink,
                         title: eg.intl.string(eg.t.INic4y),
                     };
@@ -1170,10 +1170,10 @@ function t1(e) {
                     (c?.(O.GameProfileTrackActionActions.Feedback),
                     (0, f.openModalLazy)(async () => {
                         let { default: e } = await Promise.all([
-                            n.e("744878"),
+                            n.e("142753"),
                             n.e("250440"),
                             n.e("568035"),
-                            n.e("408891"),
+                            n.e("268582"),
                             n.e("733771"),
                             n.e("946039"),
                             n.e("55266"),
@@ -1454,7 +1454,7 @@ function t1(e) {
     });
 }
 var t8 = n(732369);
-function t4(e) {
+function t2(e) {
     let { game: t, show: n, trackAction: l } = e,
         a = t.name,
         r = t.getIconURL(80);
@@ -1479,7 +1479,7 @@ function t4(e) {
         ],
     });
 }
-function t2(e) {
+function t4(e) {
     let { show: t } = e;
     return (0, i.jsx)("div", { className: s()(t8.nI, t8.Jn, t && t8.hD) });
 }
@@ -2446,8 +2446,8 @@ function n8(e) {
     });
 }
 n(667532);
-var n4 = n(853022);
-let n2 = new Set(["1402418703554842694", "356877880938070016"]),
+var n2 = n(853022);
+let n4 = new Set(["1402418703554842694", "356877880938070016"]),
     n6 = [U.V.EPICGAMES, U.V.STEAM, U.V.ROBLOX, U.V.BATTLENET, U.V.RIOT, U.V.MINECRAFT];
 var n5 = n(349361),
     n3 = n(924895),
@@ -2530,7 +2530,7 @@ function li(e) {
             (n = (function (e) {
                 if (null == e) return null;
                 let t = e.thirdPartySkus.find((e) => e.distributor === ek.d3x.XBOX_GAME_PASS && !(0, e$.uJ)(e.id));
-                return t?.id == null ? null : (0, n4.jA)(t.id);
+                return t?.id == null ? null : (0, n2.jA)(t.id);
             })(e)),
             (l = e?.id),
             (i = e?.websites),
@@ -2540,7 +2540,7 @@ function li(e) {
                 let e =
                     i?.filter(
                         (e) =>
-                            (e.category !== U.V.EPICGAMES || !!n2.has(l)) &&
+                            (e.category !== U.V.EPICGAMES || !!n4.has(l)) &&
                             (e.category !== U.V.STEAM || r !== u.Y.RETIRED_ABANDONED) &&
                             n6.includes(e.category),
                     ) ?? [];
@@ -2906,8 +2906,8 @@ let lh = function (e) {
                               onClose: em,
                               children: [
                                   (0, i.jsx)(t6, { game: F, ref: ev }),
-                                  (0, i.jsx)(t4, { game: F, show: ef, trackAction: ec }),
-                                  (0, i.jsx)(t2, { show: ef }),
+                                  (0, i.jsx)(t2, { game: F, show: ef, trackAction: ec }),
+                                  (0, i.jsx)(t4, { show: ef }),
                                   (0, i.jsxs)(A.Ch, {
                                       ref: ex,
                                       onScroll: eE,

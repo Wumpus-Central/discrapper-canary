@@ -55,8 +55,8 @@ function v(e) {
             let e = H.current;
             null == e || ("hidden" === getComputedStyle(e).visibility ? e.pause() : e.play());
         }, []),
-        B = s.useMemo(() => !!U && new URL(C).pathname.endsWith(".gif"), [U, C]),
-        F = s.useMemo(() => {
+        F = s.useMemo(() => !!U && new URL(C).pathname.endsWith(".gif"), [U, C]),
+        B = s.useMemo(() => {
             if (null != b)
                 return (e) => {
                     b(e),
@@ -97,7 +97,7 @@ function v(e) {
                     className: r()(I.cy, w, { [I.wk]: U }),
                     children: [
                         U &&
-                            (B
+                            (F
                                 ? (0, l.jsx)("div", { className: I.O9, style: { backgroundImage: `url(${C})` } })
                                 : (0, l.jsx)(o.A, {
                                       ref: H,
@@ -128,8 +128,8 @@ function v(e) {
                                     children: n,
                                 }),
                             (0, l.jsxs)(_, {
-                                onClick: F,
-                                className: r()(I.FG, { [I.ry]: null != F }),
+                                onClick: B,
+                                className: r()(I.FG, { [I.ry]: null != B }),
                                 children: [
                                     null != j &&
                                         (0, l.jsx)("div", { className: I._8, style: { backgroundImage: `url(${j})` } }),
