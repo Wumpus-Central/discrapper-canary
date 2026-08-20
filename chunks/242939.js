@@ -3,7 +3,7 @@ var s = n(477900),
     r = n(582128),
     l = n(503698),
     i = n.n(l),
-    a = n(53466),
+    a = n(221877),
     o = n(323889),
     u = n(17928),
     c = n(475743),
@@ -895,8 +895,8 @@ var eq = n(889137),
     e6 = n(139384),
     e7 = n(114046),
     e9 = n(695366),
-    e5 = n(274670),
-    e8 = n(144779),
+    e8 = n(274670),
+    e5 = n(144779),
     e4 = n(30370),
     te = n(178540),
     tt = n(104886),
@@ -913,8 +913,8 @@ function ta(e) {
         className: ti.Z0,
         onClick: () => {
             (0, tt.E5)(tt.kI.STEP_2_CLICKED_INTERNAL, "console_connection_step")
-                ? (0, e5.r)({
-                      type: e8.F.CLICK_INTERNAL,
+                ? (0, e8.r)({
+                      type: e5.F.CLICK_INTERNAL,
                       adCreativeType: o.p.QUEST,
                       adCreativeId: n.id,
                       questContentCTA: U.Cy.VIEW_CONSOLE_CONNECTIONS_LINK,
@@ -959,8 +959,8 @@ function tx(e) {
             questId: t.id,
             beforeRequest: () => {
                 (0, tt.E5)(tt.kI.STEP_2_CLICKED_INTERNAL, "quest_bar_console_task_checklist")
-                    ? (0, e5.r)({
-                          type: e8.F.CLICK_INTERNAL,
+                    ? (0, e8.r)({
+                          type: e5.F.CLICK_INTERNAL,
                           adCreativeType: o.p.QUEST,
                           adCreativeId: t.id,
                           questContentCTA: U.Cy.DEFIBRILLATOR,

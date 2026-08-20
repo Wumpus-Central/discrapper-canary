@@ -971,9 +971,9 @@ function e2(e) {
         : null;
 }
 var e9 = t(856768),
-    e3 = t(53466),
-    e6 = t(702841),
-    e1 = t(717421),
+    e3 = t(221877),
+    e1 = t(702841),
+    e6 = t(717421),
     le = t(144073),
     ll = t(151781),
     lt = t(189552),
@@ -983,7 +983,7 @@ var e9 = t(856768),
 function lr(e) {
     let { guild: l } = e,
         t = (0, le.Ms)(l.id),
-        s = (0, e1.z)({ height: 3 * !!t, config: e3.config.stiff });
+        s = (0, e6.z)({ height: 3 * !!t, config: e3.config.stiff });
     return (0, n.jsx)("div", {
         className: eG.NQ,
         children: (0, n.jsx)(e3.animated.div, { className: eG.b0, style: s }),
@@ -992,7 +992,7 @@ function lr(e) {
 function la(e) {
     let { guild: l, className: t, onPageChange: s, onMemberSelect: r } = e,
         d = l.id,
-        c = (0, e6.bG)([ll.A], () => ll.A.getEstimatedMemberSearchCountByGuildId(d), [d]),
+        c = (0, e1.bG)([ll.A], () => ll.A.getEstimatedMemberSearchCountByGuildId(d), [d]),
         u = (0, le.Ms)(d),
         x = (0, le.Wl)(d),
         m = i.useCallback(

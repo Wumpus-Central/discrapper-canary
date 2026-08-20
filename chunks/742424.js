@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Jd: () => n7, Ay: () => n4, h9: () => n2, bG: () => n1 });
+n.d(t, { Jd: () => n6, Ay: () => n4, h9: () => n2, bG: () => n1 });
 var l = n(477900),
     i = n(582128),
     s = n(435558),
@@ -410,13 +410,13 @@ var eq = n(47167),
     e3 = n(692969),
     e5 = n(279250),
     e8 = n(607407),
-    e6 = n(548118),
-    e7 = n(499211),
+    e7 = n(548118),
+    e6 = n(499211),
     e4 = n(378570),
     e9 = n(832163),
     te = n(565688),
     tt = n(533562),
-    tn = n(53466),
+    tn = n(221877),
     tl = n(805901),
     ti = n(565645);
 n(915089);
@@ -863,7 +863,7 @@ function tq(e) {
             let { channel: t, entry: n, onVoiceChannelPreview: s } = e,
                 { streamPreviewUrl: r, channel: a } = (0, tN.A)(n),
                 o = (0, eq.Ay)(a),
-                { needSubscriptionToAccess: c } = (0, e7.A)(t?.id),
+                { needSubscriptionToAccess: c } = (0, e6.A)(t?.id),
                 h = (0, u.bG)([th.A], () => (null != a ? th.A.getGuild(a.guild_id) : void 0)),
                 m = (0, u.yK)([tx.Ay], () => (null != a ? tx.Ay.getVoiceStatesForChannel(a) : []), [a]),
                 f = (0, u.bG)([tg.A], () => tg.A.isInChannel(a?.id)),
@@ -920,9 +920,9 @@ function tq(e) {
                                         },
                                         className: tB.I3,
                                         children: [
-                                            (0, l.jsx)(e6.Ay, {
+                                            (0, l.jsx)(e7.Ay, {
                                                 guild: h,
-                                                size: e6.Ay.Sizes.SMOL,
+                                                size: e7.Ay.Sizes.SMOL,
                                                 className: tB.O9,
                                                 active: !0,
                                             }),
@@ -1007,9 +1007,9 @@ function tq(e) {
                                       onClick: () => (0, e4.iN)(s.id),
                                       className: tB.I3,
                                       children: [
-                                          (0, l.jsx)(e6.Ay, {
+                                          (0, l.jsx)(e7.Ay, {
                                               guild: n,
-                                              size: e6.Ay.Sizes.SMOL,
+                                              size: e7.Ay.Sizes.SMOL,
                                               className: tB.O9,
                                               active: !0,
                                           }),
@@ -1675,8 +1675,8 @@ let t2 = function (e) {
 var t3 = n(322789),
     t5 = n(808380),
     t8 = n(687966),
-    t6 = n(39623),
-    t7 = n(960076),
+    t7 = n(39623),
+    t6 = n(960076),
     t4 = n(544441),
     t9 = n(562708),
     ne = n(688810),
@@ -1947,8 +1947,8 @@ let nm = [...t3.n, ed.Yq],
                           "join",
                       )
                     : null,
-                (0, t7.A)(p)
-                    ? (0, l.jsx)(ni.A, { activity: p, size: "md", variant: "primary", icon: t6.EyeIcon }, "watch")
+                (0, t6.A)(p)
+                    ? (0, l.jsx)(ni.A, { activity: p, size: "md", variant: "primary", icon: t7.EyeIcon }, "watch")
                     : null,
                 J,
             ].filter(O.Vq);
@@ -2620,7 +2620,7 @@ function n5(e) {
 }
 function n8(e) {
     let { closePopout: t, ...n } = e;
-    return (0, l.jsx)(n6, {
+    return (0, l.jsx)(n7, {
         onReaction: (e, l) => {
             n.trackRankingItemInteraction(e, { destinationChannelId: l.id, destinationGuildId: l.guild_id }), t();
         },
@@ -2634,7 +2634,7 @@ function n8(e) {
         ...n,
     });
 }
-function n6(e) {
+function n7(e) {
     let { entry: t, ...n } = e;
     switch (t.content_type) {
         case o.ContentInventoryEntryType.PLAYED_GAME:
@@ -2653,7 +2653,7 @@ function n6(e) {
             return null;
     }
 }
-let n7 = i.createContext(void 0),
+let n6 = i.createContext(void 0),
     n4 = i.memo(function (e) {
         let { index: t, ref: s, ...o } = e,
             p = i.useRef(null),
@@ -2738,7 +2738,7 @@ let n7 = i.createContext(void 0),
                         targetElementRef: p,
                         renderPopout: (e) => {
                             let { closePopout: t } = e;
-                            return (0, l.jsx)(n7.Provider, {
+                            return (0, l.jsx)(n6.Provider, {
                                 value: D,
                                 children: (0, l.jsx)(n8, {
                                     closePopout: t,

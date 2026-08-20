@@ -23,7 +23,7 @@ var C = n(442433),
     I = n(220839),
     j = n(397244),
     N = n(394871),
-    S = n(53466),
+    S = n(221877),
     y = n(866323),
     b = n(120842);
 function M(e) {
@@ -373,8 +373,8 @@ var e$ = n(734066),
     e5 = n(404778),
     e7 = n(689175),
     e8 = n(821609),
-    e6 = n(532624),
-    e4 = n(927813),
+    e4 = n(532624),
+    e6 = n(927813),
     e9 = n(879631),
     te = n(350535),
     tt = n(974293),
@@ -461,7 +461,7 @@ function tE(e) {
         d = (0, c.bG)([eX.Ay], () => eX.Ay.getNewClipIds()),
         u = (0, tt.aJ)("ClipsPopout"),
         h = (0, c.bG)([eX.Ay], () => eX.Ay.getEnableAutoclipping()),
-        m = (0, c.bG)([e6.Ay], () => e6.Ay.getKeybindForAction(tA.hCu.SAVE_CLIP)),
+        m = (0, c.bG)([e4.Ay], () => e4.Ay.getKeybindForAction(tA.hCu.SAVE_CLIP)),
         p = l.useCallback(
             (e) => {
                 s?.(e);
@@ -477,7 +477,7 @@ function tE(e) {
         x = f.length > 16,
         v = null != m ? te.dI(m.shortcut, !0) : null,
         C = [
-            (0, e9.$)(o.clipsLength / e4.A.Millis.SECOND),
+            (0, e9.$)(o.clipsLength / e6.A.Millis.SECOND),
             (0, tx.zr)(o.clipsQuality.resolution),
             V.intl.formatToPlainString(V.t.Qb44XH, { fps: o.clipsQuality.frameRate }),
         ];
@@ -802,8 +802,8 @@ var tK = n(206835),
     t5 = n(563608),
     t7 = n(946356),
     t8 = n(465829),
-    t6 = n(624479),
-    t4 = n(206845),
+    t4 = n(624479),
+    t6 = n(206845),
     t9 = n(957565),
     ne = n(427262),
     nt = n(62119);
@@ -811,7 +811,7 @@ function nn(e) {
     let { user: t, isVisible: n } = e,
         { trackUserProfileAction: l } = (0, tq.NJ)();
     return t9.p5
-        ? (0, i.jsx)(t4.A, {
+        ? (0, i.jsx)(t6.A, {
               text: V.intl.string(V.t.y5MwJy),
               delay: 0,
               "aria-label": !1,
@@ -822,7 +822,7 @@ function nn(e) {
                       ...e,
                       className: s()(nt.c, { [nt.R]: n }),
                       "aria-label": V.intl.string(V.t.y5MwJy),
-                      children: (0, i.jsx)(t6.CopyIcon, { size: "xs", color: "currentColor" }),
+                      children: (0, i.jsx)(t4.CopyIcon, { size: "xs", color: "currentColor" }),
                   }),
           })
         : null;
@@ -1378,11 +1378,11 @@ function n1(e) {
 var n2 = n(146901),
     n3 = n(827827);
 let n5 = [
-        { duration: 15 * e4.A.Millis.MINUTE, label: () => V.intl.string(V.t["8ot6gv"]) },
-        { duration: e4.A.Millis.HOUR, label: () => V.intl.string(V.t.UMWBZr) },
-        { duration: 8 * e4.A.Millis.HOUR, label: () => V.intl.string(V.t.EpAXPC) },
-        { duration: e4.A.Millis.DAY, label: () => V.intl.string(V.t["755t4q"]) },
-        { duration: 3 * e4.A.Millis.DAY, label: () => V.intl.string(V.t["f3/1ch"]) },
+        { duration: 15 * e6.A.Millis.MINUTE, label: () => V.intl.string(V.t["8ot6gv"]) },
+        { duration: e6.A.Millis.HOUR, label: () => V.intl.string(V.t.UMWBZr) },
+        { duration: 8 * e6.A.Millis.HOUR, label: () => V.intl.string(V.t.EpAXPC) },
+        { duration: e6.A.Millis.DAY, label: () => V.intl.string(V.t["755t4q"]) },
+        { duration: 3 * e6.A.Millis.DAY, label: () => V.intl.string(V.t["f3/1ch"]) },
         { duration: void 0, label: () => V.intl.string(V.t["46dqJY"]) },
     ],
     n7 = "forever";
@@ -1419,14 +1419,14 @@ function n8(e) {
         children: a ? s : void 0,
     });
 }
-function n6(e) {
+function n4(e) {
     if (null == e || "0" === e) return;
     let { kind: t, dateString: n, timeString: i } = (0, n2._)(e);
     return "today" === t
         ? V.intl.formatToPlainString(V.t.ZxxHIO, { timeString: i })
         : V.intl.formatToPlainString(V.t["9OFjSe"], { dateString: n, timeString: i });
 }
-var n4 = n(996988),
+var n6 = n(996988),
     n9 = n(985253),
     ie = n(47453);
 function it(e) {
@@ -1445,7 +1445,7 @@ function it(e) {
             [],
         );
     let I = (0, c.bG)([ns.A], () => ns.A.getStatus(t.id)),
-        j = n6(na.CY.useSetting()),
+        j = n4(na.CY.useSetting()),
         N = (0, c.bG)([nr.A], () => nr.A.hidePersonalInformation),
         S = (0, tR.kB)(),
         y = na.Q_.useSetting(),
@@ -1454,7 +1454,7 @@ function it(e) {
                 n = (0, tR.kB)(),
                 l = na.Jr.useSetting();
             function a(i) {
-                let l = n6(t);
+                let l = n4(t);
                 if (e === i && null != l) return l;
                 switch (i) {
                     case tA.clD.DND:
@@ -1697,22 +1697,22 @@ function it(e) {
                                 className: ez.BK,
                                 user: t,
                                 displayProfile: g,
-                                themeType: n4.d.POPOUT,
+                                themeType: n6.d.POPOUT,
                                 children: [
                                     (0, i.jsxs)("div", {
                                         className: ie.wx,
                                         children: [
-                                            (0, i.jsx)(t0.A, { user: t, displayProfile: g, themeType: n4.d.POPOUT }),
+                                            (0, i.jsx)(t0.A, { user: t, displayProfile: g, themeType: n6.d.POPOUT }),
                                             (0, i.jsx)(tJ.A, {
                                                 user: t,
                                                 displayProfile: g,
-                                                avatarSize: n9.T[n4.d.POPOUT].avatarSize,
+                                                avatarSize: n9.T[n6.d.POPOUT].avatarSize,
                                                 onOpenProfile: h ? void 0 : W,
                                             }),
                                             (0, i.jsx)(ni.A, {
                                                 ref: k,
                                                 user: t,
-                                                themeType: n4.d.POPOUT,
+                                                themeType: n6.d.POPOUT,
                                                 onCloseProfile: n,
                                                 prompt: F,
                                             }),
@@ -1732,7 +1732,7 @@ function it(e) {
                                                 pronouns: g?.pronouns,
                                                 trailing: (0, i.jsx)(tQ.A, {
                                                     displayProfile: g,
-                                                    themeType: n4.d.POPOUT,
+                                                    themeType: n6.d.POPOUT,
                                                     onClose: n,
                                                     shouldOpenBadgeTooltip: null != r ? (e) => e === r : void 0,
                                                     shouldGlowTenureBadge: G.current,
@@ -1930,12 +1930,12 @@ var ii = n(201805),
     ih = n(763827),
     im = n(499156),
     ip = n(731854);
-let ig = 2.5 * e4.A.Millis.SECOND,
-    iA = +e4.A.Millis.HOUR;
+let ig = 2.5 * e6.A.Millis.SECOND,
+    iA = +e6.A.Millis.HOUR;
 var ix = n(459838),
     iv = n(485296);
-let iC = 3 * e4.A.Millis.SECOND,
-    iE = +e4.A.Millis.DAY;
+let iC = 3 * e6.A.Millis.SECOND,
+    iE = +e6.A.Millis.DAY;
 var iT = n(616356),
     i_ = n(734057),
     iI = n(629016),
@@ -2199,7 +2199,7 @@ function i8(e) {
         actions: m,
     });
 }
-function i6(e) {
+function i4(e) {
     let { isQuestBarEmpty: t, hasLoadedQuestBar: n } = (0, ii.c9)(),
         l = null != e.targetElementRef.current && t && n,
         [a, s] = (function (e) {
@@ -2291,7 +2291,7 @@ function i6(e) {
                 })
         : e.children;
 }
-var i4 = n(615675),
+var i6 = n(615675),
     i9 = n(900797),
     le = n(847374),
     lt = n(348858),
@@ -2317,7 +2317,7 @@ function lr(e) {
             play: p,
             events: { onMouseEnter: f, onMouseLeave: A },
         } = (0, lt.I)(h ? "undeafen" : "deafen"),
-        x = n ? i4.T : m,
+        x = n ? i6.T : m,
         { name: v } = (0, eb.x5)(ip.oh.AUDIO_OUTPUT),
         C = (0, ln.A)(t, n, a),
         { analyticsLocations: E } = (0, w.Ay)(O.A.AUDIO_OUTPUT_BUTTON),
@@ -2712,10 +2712,10 @@ function lM(e) {
 }
 var lR = n(358285);
 let lO = iM.Ay.getEnableHardwareAcceleration() ? m.Js : m.eu,
-    lw = 2.5 * e4.A.Millis.SECOND,
-    lP = 2 * e4.A.Millis.MINUTE,
-    lk = 2 * e4.A.Millis.MINUTE,
-    lL = 5 * e4.A.Millis.SECOND;
+    lw = 2.5 * e6.A.Millis.SECOND,
+    lP = 2 * e6.A.Millis.MINUTE,
+    lk = 2 * e6.A.Millis.MINUTE,
+    lL = 5 * e6.A.Millis.SECOND;
 function lD(e) {
     let {
             ref: t,
@@ -3789,7 +3789,7 @@ class lU extends l.PureComponent {
         let { badgeDirectoryNuxPopoverVariant: t, currentUser: n, dismissibleContents: l } = this.props;
         return null == n
             ? null
-            : (0, i.jsx)(i6, {
+            : (0, i.jsx)(i4, {
                   guildId: this.props.selectedGuildId ?? null,
                   currentUser: n,
                   targetElementRef: this.avatarWithPopoutRef,

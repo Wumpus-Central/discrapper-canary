@@ -3,7 +3,7 @@ var r = n(477900),
     l = n(582128),
     a = n(503698),
     i = n.n(a),
-    u = n(53466),
+    u = n(221877),
     s = n(337836),
     o = n(17928),
     c = n(876230),
@@ -109,8 +109,8 @@ let _ = { tension: 250, friction: 5, clamp: !0 },
             { visible: eJ, visibleChanged: eq, targetRef: e0 } = (0, M.O7)(),
             [e1, e2] = l.useState(a ? c.Q6.PLAYING : c.Q6.PAUSED),
             [e6, e4] = l.useState(!1),
-            [e8, e3] = l.useState(!1),
-            [e9, e7] = l.useState(0),
+            [e8, e9] = l.useState(!1),
+            [e3, e7] = l.useState(0),
             [e5, te] = l.useState(null),
             tt = l.useCallback((e) => {
                 te(null), e7(e);
@@ -167,8 +167,8 @@ let _ = { tension: 250, friction: 5, clamp: !0 },
             [t0, t1] = l.useState(0),
             [t2, t6] = l.useState(!1),
             t4 = X ?? t_.current?.duration ?? 0,
-            [t8, t3] = l.useState(c.oA.MD),
-            t9 = { [c.oA.MD]: 56, [c.oA.LG]: 64 };
+            [t8, t9] = l.useState(c.oA.MD),
+            t3 = { [c.oA.MD]: 56, [c.oA.LG]: 64 };
         (0, g.u5)(() => {
             tO.current && (tO.current = !1);
         });
@@ -260,7 +260,7 @@ let _ = { tension: 250, friction: 5, clamp: !0 },
         ni.current = et;
         let nu = l.useCallback(() => {
             let e = (0, S.qf)(t_.current?.parentNode, t_.current);
-            null == e || (0, S._U)(e) || (e.removeEventListener(S.Wb, nu), tB(!1), ni.current?.(!1), t3(c.oA.MD));
+            null == e || (0, S._U)(e) || (e.removeEventListener(S.Wb, nu), tB(!1), ni.current?.(!1), t9(c.oA.MD));
         }, []);
         function ns() {
             null == t_.current ||
@@ -598,7 +598,7 @@ let _ = { tension: 250, friction: 5, clamp: !0 },
                                             className: i()(F.xr, eg, { [F.MZ]: "portrait" === K }),
                                             "data-testid": "discord-web-video-player-transcript",
                                             style: {
-                                                marginBottom: (0, u.to)([nv, nE], (e, t) => `${e * t9[t8] + t}px`),
+                                                marginBottom: (0, u.to)([nv, nE], (e, t) => `${e * t3[t8] + t}px`),
                                             },
                                             children: (0, r.jsx)(P.X, {
                                                 text: J,
@@ -640,7 +640,7 @@ let _ = { tension: 250, friction: 5, clamp: !0 },
                                     "data-testid": "discord-web-video-player-captions",
                                     style: {
                                         translateY: (0, u.to)(
-                                            [nv.to({ range: [0, 1], output: [-20, -t9[t8]] })],
+                                            [nv.to({ range: [0, 1], output: [-20, -t3[t8]] })],
                                             (e) => `${e}px`,
                                         ),
                                     },
@@ -656,7 +656,7 @@ let _ = { tension: 250, friction: 5, clamp: !0 },
                                     className: F.r8,
                                     style: {
                                         height: (0, u.to)(
-                                            [nv.to({ range: [0, 1], output: [0, t9[t8]] })],
+                                            [nv.to({ range: [0, 1], output: [0, t3[t8]] })],
                                             (e) => `${e}px`,
                                         ),
                                     },
@@ -671,7 +671,7 @@ let _ = { tension: 250, friction: 5, clamp: !0 },
                                             children: (0, r.jsx)("div", {
                                                 style: na || tm || ej ? void 0 : U,
                                                 children: (0, r.jsx)(T.Ay, {
-                                                    percent: null != e5 ? e5 : e9,
+                                                    percent: null != e5 ? e5 : e3,
                                                     animate:
                                                         !0 !== tO.current &&
                                                         !tr &&
@@ -742,10 +742,10 @@ let _ = { tension: 250, friction: 5, clamp: !0 },
                                                 ),
                                             },
                                             onFocus: function () {
-                                                return e3(!0);
+                                                return e9(!0);
                                             },
                                             onBlur: function () {
-                                                return e3(!1);
+                                                return e9(!1);
                                             },
                                             children: (0, r.jsx)(A.A, {
                                                 playerState: e1,
@@ -783,13 +783,13 @@ let _ = { tension: 250, friction: 5, clamp: !0 },
                                                         ? ((0, S.tl)(t),
                                                           t.addEventListener(S.Wb, nu),
                                                           et?.(!0),
-                                                          t3(c.oA.LG))
+                                                          t9(c.oA.LG))
                                                         : e ||
                                                           null == t ||
                                                           (t.removeEventListener(S.Wb, nu),
                                                           et?.(!1),
                                                           (0, S.sP)(t),
-                                                          t3(c.oA.MD)),
+                                                          t9(c.oA.MD)),
                                                         tB(e);
                                                 },
                                                 handleSeekBackBtnClick: ns,
