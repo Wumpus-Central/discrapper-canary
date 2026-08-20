@@ -60,16 +60,16 @@ function p(e) {
         b = l.useCallback(() => {
             (p.current = !0), A();
         }, [A]),
-        N = l.useCallback(() => {
+        T = l.useCallback(() => {
             (p.current = !0), E();
         }, [E]),
-        T = l.useCallback(
+        N = l.useCallback(
             (e) => {
                 "Enter" !== e.key || e.shiftKey
-                    ? "Escape" === e.key && (e.preventDefault(), e.stopPropagation(), N())
+                    ? "Escape" === e.key && (e.preventDefault(), e.stopPropagation(), T())
                     : (e.preventDefault(), b());
             },
-            [b, N],
+            [b, T],
         );
     return {
         isEditing: u,
@@ -83,8 +83,8 @@ function p(e) {
         handleCommit: A,
         handleCancel: E,
         handleInputCommit: b,
-        handleInputCancel: N,
-        onInputKeyDown: T,
+        handleInputCancel: T,
+        onInputKeyDown: N,
         onBlur: S,
         onContainerKeyDown: C,
     };
@@ -114,80 +114,89 @@ function v(e) {
             isEditing: t,
             preview: i,
             placeholder: s,
-            input: a,
-            editButtonRef: o,
-            editButtonAriaLabel: d,
-            onStartEditing: c,
-            variant: u = "default",
-            trailing: g,
-            previewErrorMessage: f,
-            previewWarningMessage: p,
-            className: v,
-            wrapperRef: A,
-            onBlur: E,
-            onKeyDown: S,
-            disabled: C = !1,
-            growWidth: b = !1,
+            input: o,
+            editButtonRef: d,
+            editButtonAriaLabel: c,
+            onStartEditing: u,
+            variant: g = "default",
+            trailing: f,
+            previewErrorMessage: p,
+            previewWarningMessage: v,
+            className: A,
+            wrapperRef: E,
+            onBlur: S,
+            onKeyDown: C,
+            disabled: b = !1,
+            growWidth: T = !1,
             removeVerticalPadding: N = !1,
         } = e,
-        T = l.useRef(null),
-        w = l.useId(),
+        w = l.useRef(null),
         y = l.useId(),
-        k = null == i,
-        R = null != f,
-        O = null != p && !R,
-        L = R ? "error" : O ? "warning" : null,
-        _ = R ? f : p,
-        P = null != L && null != _,
-        [D] = l.useState(t),
-        [G, M] = l.useState(!1);
-    G || t === D || M(!0);
-    let U = [];
-    k && U.push(w), P && "compact" !== u && U.push(y);
-    let W = U.length > 0 ? U.join(" ") : void 0,
-        F = (0, n.jsxs)("div", {
-            ref: T,
-            className: r()(h.LL, { [h.JD]: R, [h.xe]: O, [h.r9]: C }),
-            onClick: C ? void 0 : c,
-            children: [
-                k
-                    ? (0, n.jsx)(m.E, {
-                          id: w,
-                          variant: "text-sm/normal",
-                          color: "text-muted",
-                          className: h.qf,
-                          children: s,
-                      })
-                    : i,
-                !C &&
-                    (0, n.jsx)(x.D, {
-                        innerRef: o,
-                        "aria-label": d,
-                        "aria-describedby": W,
-                        "aria-expanded": !1,
-                        onClick: (e) => {
-                            e.stopPropagation(), c();
-                        },
-                        focusProps: { ringTarget: T },
-                    }),
-                null != g && (0, n.jsx)("div", { className: h.lD, children: (0, n.jsx)(I, { ...g }) }),
-            ],
-        });
+        k = l.useId(),
+        R = null == i,
+        O = null != p,
+        L = null != v && !O,
+        _ = O ? "error" : L ? "warning" : null,
+        P = O ? p : v,
+        D = null != _ && null != P,
+        [G] = l.useState(t),
+        [M, U] = l.useState(!1);
+    M || t === G || U(!0);
+    let W = [];
+    R && W.push(y), D && "compact" !== g && W.push(k);
+    let F = W.length > 0 ? W.join(" ") : void 0;
+    function H() {
+        let { activeElement: e } = w.current?.ownerDocument ?? document;
+        (0, a.vq)(e, HTMLElement) && e.blur(), u();
+    }
+    let V = (0, n.jsxs)("div", {
+        ref: w,
+        className: r()(h.LL, { [h.JD]: O, [h.xe]: L, [h.r9]: b }),
+        onMouseDown: b
+            ? void 0
+            : function (e) {
+                  e.preventDefault();
+              },
+        onClick: b ? void 0 : H,
+        children: [
+            R
+                ? (0, n.jsx)(m.E, {
+                      id: y,
+                      variant: "text-sm/normal",
+                      color: "text-muted",
+                      className: h.qf,
+                      children: s,
+                  })
+                : i,
+            !b &&
+                (0, n.jsx)(x.D, {
+                    innerRef: d,
+                    "aria-label": c,
+                    "aria-describedby": F,
+                    "aria-expanded": !1,
+                    onClick: (e) => {
+                        e.stopPropagation(), H();
+                    },
+                    focusProps: { ringTarget: w },
+                }),
+            null != f && (0, n.jsx)("div", { className: h.lD, children: (0, n.jsx)(I, { ...f }) }),
+        ],
+    });
     return (0, n.jsx)("div", {
-        ref: A,
-        className: r()(h.kL, { [h.oE]: "compact" === u, [h.c1]: "multiline" === u, [h.CP]: b, [h.WK]: N }, v),
-        onBlur: E,
-        onKeyDown: S,
+        ref: E,
+        className: r()(h.kL, { [h.oE]: "compact" === g, [h.c1]: "multiline" === g, [h.CP]: T, [h.WK]: N }, A),
+        onBlur: S,
+        onKeyDown: C,
         children: (0, n.jsx)(
             "div",
             {
-                className: G ? h.qG : void 0,
+                className: M ? h.qG : void 0,
                 children: t
-                    ? a
+                    ? o
                     : (0, n.jsxs)(n.Fragment, {
                           children: [
-                              (0, n.jsx)("div", { className: h.VH, children: F }),
-                              P && "compact" !== u && (0, n.jsx)(j, { id: y, message: _, type: L }),
+                              (0, n.jsx)("div", { className: h.VH, children: V }),
+                              D && "compact" !== g && (0, n.jsx)(j, { id: k, message: P, type: _ }),
                           ],
                       }),
             },
