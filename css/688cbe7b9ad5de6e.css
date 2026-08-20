@@ -138,6 +138,18 @@
     margin-block: calc((var(--custom-preview-block-padding) + 1px)*-1)
 }
 
+.container__9c314.removeVerticalPadding__9c314.editing__9c314 {
+    margin-block: 0
+}
+
+.container__9c314+.container__9c314.removeVerticalPadding__9c314.editing__9c314 {
+    margin-block-start: calc(var(--custom-preview-block-padding) + 1px)
+}
+
+.container__9c314.removeVerticalPadding__9c314.editing__9c314:has(+.container__9c314) {
+    margin-block-end: calc(var(--custom-preview-block-padding) + 1px)
+}
+
 .container__9c314.growWidth__9c314 {
     flex-grow: 1;
     min-width: 0
@@ -291,4 +303,4 @@
     margin-inline-end: calc((var(--custom-preview-inline-padding) + 1px)*-1)
 }
 
-/*# sourceMappingURL=7ff2b03f620544cf.css.map*/
+/*# sourceMappingURL=688cbe7b9ad5de6e.css.map*/
