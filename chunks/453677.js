@@ -1449,7 +1449,7 @@ if (
     n.e("859864").then(n.t.bind(n, 122123, 19));
 let e2 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 new eB.A().log(
-    `[BUILD INFO] Release Channel: ${e2}, Build Number: 597177, Version Hash: b7842f62c46e0b019c1e40f9df6a0eb046fa8d5b`,
+    `[BUILD INFO] Release Channel: ${e2}, Build Number: 597218, Version Hash: 5c0f28cb6b14aa73a23027ea01d8a054335fa3c1`,
 ),
     D.A.setTags({ appContext: G.QCW }),
     eI.A.initBasic(),
@@ -4457,32 +4457,34 @@ function ah(e) {
         c = (0, el.bG)([r1.A], () => r1.A.getBuilderPreviewApplicationId()),
         u = r === a_.VV.VIBEGRATIONS && null == l && t.applicationId === c,
         _ = d || u,
-        E = (0, el.bG)([rJ.Ay], () => rJ.Ay.callChatSidebarWidth),
-        A = (0, el.bG)([r2.A], () => r2.A.getSidebarWidth()),
-        h = (0, rH.r)(iv.A.modules.chat.RESIZE_HANDLE_WIDTH),
-        I = eu.useRef(null),
-        f = eu.useRef(null),
-        [p, T] = eu.useState({ width: 0, height: 0 }),
-        m = eu.useCallback(() => {
+        E = (0, el.bG)([r1.A], () => r1.A.isBuilderPreviewMobile()),
+        A = u && E,
+        h = (0, el.bG)([rJ.Ay], () => rJ.Ay.callChatSidebarWidth),
+        I = (0, el.bG)([r2.A], () => r2.A.getSidebarWidth()),
+        f = (0, rH.r)(iv.A.modules.chat.RESIZE_HANDLE_WIDTH),
+        p = eu.useRef(null),
+        T = eu.useRef(null),
+        [m, g] = eu.useState({ width: 0, height: 0 }),
+        S = eu.useCallback(() => {
             r6.A.updateFrameLayoutMode({ frameId: t.id, layoutMode: rT.y0.PIP });
         }, [t.id]),
-        g = eu.useCallback(() => {
+        N = eu.useCallback(() => {
             (0, r7.A)().leaveFrame(t.id);
         }, [t.id]);
     eu.useLayoutEffect(() => {
-        if (null == f.current) return;
+        if (null == T.current) return;
         let e = new ResizeObserver(() => {
-            T({ width: f.current?.clientWidth ?? 0, height: f.current?.clientHeight ?? 0 });
+            g({ width: T.current?.clientWidth ?? 0, height: T.current?.clientHeight ?? 0 });
         });
-        return e.observe(f.current), () => e.disconnect();
+        return e.observe(T.current), () => e.disconnect();
     }, []),
         eu.useEffect(() => {
             function e(e) {
                 if (_) return;
                 let n = e.target;
-                null == I.current ||
+                null == p.current ||
                     null == n ||
-                    (0, rj.H)(I.current, n) ||
+                    (0, rj.H)(p.current, n) ||
                     null != n.closest("[data-window-chrome]") ||
                     i ||
                     r6.A.updateFrameLayoutMode({ frameId: t.id, layoutMode: rT.y0.PIP });
@@ -4494,43 +4496,43 @@ function ah(e) {
                 }
             );
         }, [t.id, i, _]);
-    let S = p.width / Math.max(p.height, 1) < au.B5,
-        N = 0,
-        C = 0,
-        R = (0, r$.A)(n?.id);
-    if (!R) {
-        let e = p.width,
-            t = p.height;
-        S
-            ? ((t = p.width / au.B5) > p.height && (e = (t = p.height) * au.B5), (C = (p.height - t) / 2))
-            : ((e = Math.min(p.height * au.B5, p.width)) > p.width && (t = (e = p.width) / au.B5),
-              (N = (p.width - e) / 2));
+    let C = m.width / Math.max(m.height, 1) < au.B5,
+        R = 0,
+        L = 0,
+        y = (0, r$.A)(n?.id);
+    if (!y && !A) {
+        let e = m.width,
+            t = m.height;
+        C
+            ? ((t = m.width / au.B5) > m.height && (e = (t = m.height) * au.B5), (L = (m.height - t) / 2))
+            : ((e = Math.min(m.height * au.B5, m.width)) > m.width && (t = (e = m.width) / au.B5),
+              (R = (m.width - e) / 2));
     }
-    let L = au.E8.NO_CHAT,
-        y = (0, rZ.G)();
+    let D = au.E8.NO_CHAT,
+        v = (0, rZ.G)();
     if (null == n) return null;
-    let D = (E ?? G.da6) + h,
-        v = u ? A : s && !Number.isNaN(D) ? D : 0,
-        b = as(t);
+    let b = (h ?? G.da6) + f,
+        M = u ? I : s && !Number.isNaN(b) ? b : 0,
+        P = as(t);
     return (0, O.jsx)(tl.N, {
         theme: G.NJ8.DARK,
         children: (e) =>
             (0, O.jsxs)("div", {
-                className: ta()(aE.iE, aA[L], e, { [aE.$h]: _ }),
-                ref: I,
-                style: { right: v },
+                className: ta()(aE.iE, aA[D], e, { [aE.$h]: _, [aE._7]: A }),
+                ref: p,
+                style: { right: M },
                 children: [
                     (0, O.jsx)(rQ.A, { type: "frame", applicationId: t.applicationId, frameId: t.id }),
                     (0, O.jsx)("div", {
                         className: aE.lq,
                         children: (0, O.jsx)("div", {
-                            className: ta()(aE.ht, { [aE.kK]: R }),
-                            style: { paddingLeft: N, paddingRight: N, paddingTop: C, paddingBottom: C },
-                            ref: f,
-                            children: (0, O.jsx)(at, { className: aE.pU, embedId: b }),
+                            className: ta()(aE.ht, { [aE.kK]: y, [aE.bU]: A }),
+                            style: { paddingLeft: R, paddingRight: R, paddingTop: L, paddingBottom: L },
+                            ref: T,
+                            children: (0, O.jsx)(at, { className: ta()(aE.pU, { [aE.F4]: A }), embedId: P }),
                         }),
                     }),
-                    !_ && (0, O.jsx)(aI, { application: n, frameId: t.id, canPopout: y, onMinimize: m, onClose: g }),
+                    !_ && (0, O.jsx)(aI, { application: n, frameId: t.id, canPopout: v, onMinimize: S, onClose: N }),
                 ],
             }),
     });
@@ -20724,7 +20726,7 @@ let Na = "isHideDevBanner",
                     className: ta()(Nr.Wz, Nr.mr),
                     children: [
                         (0, O.jsx)(Ni, { className: Nr.Kk }),
-                        tT.intl.format(tT.t.uyrfYF, { buildNumber: "597177" }),
+                        tT.intl.format(tT.t.uyrfYF, { buildNumber: "597218" }),
                         (0, O.jsx)(r, {}),
                     ],
                 })
@@ -24001,7 +24003,7 @@ let OZ = (0, tV.Fe)({
                 n.e("701485"),
                 n.e("79888"),
                 n.e("585311"),
-                n.e("172928"),
+                n.e("278585"),
                 n.e("530615"),
             ]).then(n.bind(n, 853846)),
         webpackId: 853846,
@@ -27808,7 +27810,7 @@ let OZ = (0, tV.Fe)({
                 n.e("701485"),
                 n.e("380469"),
                 n.e("79888"),
-                n.e("172928"),
+                n.e("278585"),
                 n.e("173092"),
             ]).then(n.bind(n, 791428)),
         webpackId: 791428,
@@ -46098,8 +46100,8 @@ let kD = (0, nX.Fe)({
                 n.e("236999"),
                 n.e("352566"),
                 n.e("736793"),
-                n.e("631189"),
                 n.e("79888"),
+                n.e("631189"),
                 n.e("384042"),
                 n.e("770961"),
                 n.e("811531"),

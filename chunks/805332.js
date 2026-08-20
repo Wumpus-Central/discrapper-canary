@@ -1,20 +1,29 @@
-i.d(t, { A: () => r });
-var n = i(17928),
-    s = i(228366);
-let a = null;
-class l extends n.Ay.Store {
+n.d(t, { A: () => o });
+var i = n(17928),
+    a = n(228366);
+let s = null,
+    l = !1;
+class r extends i.Ay.Store {
     getBuilderPreviewApplicationId() {
-        return a;
+        return s;
+    }
+    isBuilderPreviewMobile() {
+        return l;
     }
 }
-let r = new l(s.h, {
+let o = new r(a.h, {
     LOGOUT: function () {
-        if (null == a) return !1;
-        a = null;
+        if (null == s && !l) return !1;
+        (s = null), (l = !1);
     },
     VIBEGRATIONS_BUILDER_PREVIEW_APPLICATION_SET: function (e) {
         let { applicationId: t } = e;
-        if (a === t) return !1;
-        a = t;
+        if (s === t) return !1;
+        s = t;
+    },
+    VIBEGRATIONS_BUILDER_PREVIEW_MOBILE_SET: function (e) {
+        let { enabled: t } = e;
+        if (l === t) return !1;
+        l = t;
     },
 });

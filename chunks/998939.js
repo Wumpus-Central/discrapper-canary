@@ -1,18 +1,18 @@
 n.d(t, {
     r2: () => W,
-    $S: () => Y,
-    n6: () => et,
+    $S: () => J,
+    n6: () => en,
     fu: () => V,
-    Ay: () => el,
-    aF: () => Q,
-    uM: () => K,
+    Ay: () => ea,
+    aF: () => ee,
+    uM: () => Z,
     vX: () => X,
     dv: () => U,
-    Vm: () => J,
+    Vm: () => Q,
     TV: () => F,
     Hc: () => B,
-    PK: () => ee,
-    Lc: () => Z,
+    PK: () => et,
+    Lc: () => Y,
     XZ: () => q,
 }),
     n(321073),
@@ -566,24 +566,27 @@ async function $(e) {
 function z(e, t) {
     return null == t ? `${e}/agent/attachments` : `${e}/agent/attachments/${encodeURIComponent(t)}`;
 }
-async function X(e, t) {
-    let { ticket: n, baseUrl: l } = await $(e),
-        a = new URLSearchParams({ ticket: n, name: t.name }),
-        i = await fetch(`${z(l)}?${a}`, {
+function X(e, t) {
+    return K(e, t, t.name, t.type);
+}
+async function K(e, t, n, l) {
+    let { ticket: a, baseUrl: i } = await $(e),
+        s = new URLSearchParams({ ticket: a, name: n }),
+        r = await fetch(`${z(i)}?${s}`, {
             method: "POST",
-            headers: { "content-type": "" !== t.type ? t.type : "application/octet-stream" },
+            headers: { "content-type": "" !== l ? l : "application/octet-stream" },
             body: t,
         });
-    if (!i.ok) throw Error(`attachment upload failed (${i.status})`);
-    return await i.json();
+    if (!r.ok) throw Error(`attachment upload failed (${r.status})`);
+    return await r.json();
 }
-class K extends Error {
+class Z extends Error {
     status;
     constructor(e) {
         super(`fork failed (${e})`), (this.status = e);
     }
 }
-async function Z(e, t) {
+async function Y(e, t) {
     let [n, l] = await Promise.all([$(e), $(t)]),
         a = new URLSearchParams({ ticket: n.ticket }),
         i = await fetch(`${n.baseUrl}/agent/fork?${a}`, {
@@ -591,9 +594,9 @@ async function Z(e, t) {
             headers: { "content-type": "application/json" },
             body: JSON.stringify({ dest_ticket: l.ticket }),
         });
-    if (!i.ok) throw new K(i.status);
+    if (!i.ok) throw new Z(i.status);
 }
-async function Y(e, t) {
+async function J(e, t) {
     let { ticket: n, baseUrl: l } = await $(e),
         a = new URLSearchParams({ ticket: n }),
         i = await fetch(`${l}/agent/secrets?${a}`, {
@@ -603,31 +606,31 @@ async function Y(e, t) {
         });
     if (!i.ok) throw Error(`secret submission failed (${i.status})`);
 }
-async function J(e, t) {
+async function Q(e, t) {
     let { ticket: n, baseUrl: l } = await $(e),
         a = new URLSearchParams({ ticket: n }),
         i = await fetch(`${z(l, t)}?${a}`, { method: "DELETE", keepalive: !0 });
     if (!i.ok) throw Error(`attachment cleanup failed (${i.status})`);
 }
-async function Q(e, t) {
+async function ee(e, t) {
     let { ticket: n, baseUrl: l } = await $(e),
         a = new URLSearchParams({ ticket: n });
     return `${l}/agent/screenshots/${encodeURIComponent(t)}?${a}`;
 }
-async function ee(e, t) {
+async function et(e, t) {
     let { download: n = !1 } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
         { ticket: l, baseUrl: a } = await $(e),
         i = new URLSearchParams({ ticket: l });
     return n && i.set("download", "1"), `${z(a, t)}?${i}`;
 }
-async function et(e, t) {
-    let n = await ee(e, t),
+async function en(e, t) {
+    let n = await et(e, t),
         l = await fetch(n, { method: "HEAD" });
     if (404 === l.status) return !1;
     if (!l.ok) throw Error(`attachment availability check failed (${l.status})`);
     return !0;
 }
-class en extends a.Ay.Store {
+class el extends a.Ay.Store {
     initialize() {
         this.waitFor(o.default, f.A, g.A);
     }
@@ -638,7 +641,7 @@ class en extends a.Ay.Store {
         return N.get(e) ?? null;
     }
 }
-let el = new en(s.h, {
+let ea = new el(s.h, {
     VIBEGRATIONS_CHAT_CONN_STATE: function (e) {
         let { projectId: t, connState: n } = e;
         if (y.get(t) === n) return !1;
