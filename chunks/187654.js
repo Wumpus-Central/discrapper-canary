@@ -26,7 +26,7 @@ var g = n(312138),
     A = n(738768),
     N = n(775602),
     _ = n(47167),
-    v = n(174355),
+    v = n(713654),
     I = n(863439),
     S = n(521981),
     D = n(81437),
@@ -49,7 +49,7 @@ var g = n(312138),
     W = n(636922),
     B = n(486020),
     K = n(375708),
-    z = n(189279);
+    z = n(823954);
 function J(e) {
     let { message: t } = e,
         n = B.Ay.getUserAvatarURL({ avatar: t.author.avatar, id: t.author.id, discriminator: t.author.discriminator }),
@@ -177,7 +177,7 @@ class H extends a.PureComponent {
     }
 }
 var q = n(652215),
-    Q = n(769691);
+    Q = n(979882);
 function Y(e) {
     let { parentChannel: t, onSelectChannel: n } = e,
         r = (0, _.Ay)(t);

@@ -35,7 +35,7 @@ var r = n(503698),
     T = n(975571),
     m = n(652215),
     g = n(375708),
-    S = n(889505);
+    S = n(498206);
 let N = s.eu;
 function C(e) {
     let { className: t, id: n, children: r, variant: s = "heading-xl/semibold" } = e;

@@ -25,7 +25,7 @@ let T = "--custom-display-name-styles-main-color";
 n(321073);
 var S = n(308050),
     g = n(912051),
-    M = n(558959);
+    M = n(229996);
 let R = (0, S.A)();
 function C(e) {
     let { name: t, emojiClassName: n, letterClassName: a, wordClassName: r, colors: o } = e,
@@ -68,7 +68,7 @@ function C(e) {
     });
 }
 var D = n(73392),
-    _ = n(459142);
+    _ = n(658385);
 let v = [u.x.CHERRY_BOMB, u.x.CHICLE],
     P = s.memo(function (e) {
         let {

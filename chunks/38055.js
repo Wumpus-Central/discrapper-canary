@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => E, MemberListContentSettingsMenu: () => A });
+n.d(t, { A: () => C, MemberListContentSettingsMenu: () => A });
 var l = n(477900),
     i = n(582128),
     s = n(17928),
@@ -34,7 +34,7 @@ function A(e) {
                     action: () => {
                         (0, u.openModalLazy)(async () => {
                             let { default: e } = await Promise.all([
-                                n.e("949370"),
+                                n.e("742445"),
                                 n.e("451778"),
                                 n.e("186262"),
                                 n.e("190309"),
@@ -57,7 +57,7 @@ function A(e) {
         }),
     });
 }
-let E = function () {
+let C = function () {
     let e = i.useRef(null);
     return (0, l.jsx)(d.Y, {
         targetElementRef: e,

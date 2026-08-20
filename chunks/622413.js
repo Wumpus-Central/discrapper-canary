@@ -4,7 +4,7 @@ n(582128);
 var l = n(503698),
     s = n.n(l),
     a = n(707554),
-    r = n(485846);
+    r = n(274279);
 let o = function (e) {
     let { renderTitle: t, renderTagline: n, renderActions: l, renderMedia: o, className: c, isHorizontal: d = !1 } = e;
     return (0, i.jsxs)("div", {

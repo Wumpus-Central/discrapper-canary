@@ -25,7 +25,7 @@ var n = l(477900),
     x = l(768570),
     C = l(652215),
     b = l(375708),
-    v = l(574006);
+    v = l(754911);
 function W(e) {
     let { index: t, query: l, handleQuerySelect: r, handleDateSelect: i, options: o, handleRemoveDateFilter: u } = e,
         g = a()(),

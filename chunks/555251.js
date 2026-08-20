@@ -6,7 +6,7 @@ var e = s(477900),
     r = s(834730),
     c = s(656925),
     o = s(375708),
-    d = s(384516);
+    d = s(164086);
 function u(t) {
     let { avatarId: i, storageHash: s, avatarDescription: u, onConfirmDelete: x, onClose: h, ...m } = t,
         [p, v] = a.useState(!1),

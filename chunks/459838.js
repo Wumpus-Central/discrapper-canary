@@ -53,7 +53,7 @@ function E(e) {
         case d.Ku.NATIVE:
             return n(206959).A;
         case d.Ku.WEBRTC:
-            return n(615061).A;
+            return n(113634).A;
         case d.Ku.DUMMY:
         default:
             return n(432351).A;

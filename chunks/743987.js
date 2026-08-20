@@ -12,7 +12,7 @@ var i = e(702841),
     o = e(71393),
     p = e(935208),
     x = e(375708),
-    h = e(731042);
+    h = e(972529);
 function A(l) {
     let { userId: a, guildId: e, textClassName: A, tooltipDelay: j } = l,
         f = (0, i.bG)([m.default], () => m.default.locale),

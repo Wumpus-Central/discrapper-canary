@@ -9,7 +9,7 @@ var a = e(317097),
     l = e(140735),
     h = e(194261),
     u = e(375708),
-    d = e(937483);
+    d = e(840794);
 function y(t) {
     let { locked: n, role: e, textVariant: y = "text-xs/medium" } = t,
         _ = (0, i.r)(c.A.colors.INTERACTIVE_TEXT_DEFAULT).hex();

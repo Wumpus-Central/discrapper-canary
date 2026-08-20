@@ -6,7 +6,7 @@ var r = n(503698),
     a = n.n(r),
     s = n(200749),
     l = n(375708),
-    o = n(625688);
+    o = n(226471);
 let d = n(913516);
 function c(e) {
     let { width: t, noArt: n = !1, selected: r = !1 } = e;

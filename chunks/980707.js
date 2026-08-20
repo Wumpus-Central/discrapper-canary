@@ -113,7 +113,7 @@ function R(e) {
 }
 var L = n(477782),
     y = n(900283),
-    D = n(979383);
+    D = n(798819);
 function v() {
     let e = R("MenuSeparator");
     return (0, r.jsx)("div", {
@@ -221,7 +221,7 @@ function Z(e) {
         children: (0, r.jsx)(i, { "aria-hidden": !0, color: a, ...o, className: l()(D.icon, s) }),
     });
 }
-var q = n(537624);
+var q = n(869431);
 function X(e) {
     let {
             color: t = "default",

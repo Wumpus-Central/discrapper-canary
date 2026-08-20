@@ -5,7 +5,7 @@ var n = a(477900),
     o = a.n(s),
     r = a(615300),
     l = a(844222),
-    p = a(913685);
+    p = a(841838);
 let c = { friction: 7, tension: 60 };
 class h extends i.Component {
     static contextType = l.C;

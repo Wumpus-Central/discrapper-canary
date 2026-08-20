@@ -19,7 +19,7 @@ var s = n(477900),
     P = n(975571),
     b = n(652215),
     M = n(375708),
-    S = n(874485);
+    S = n(478516);
 function T(t) {
     let { label: e, text: n, children: i, ...r } = t;
     return (0, s.jsxs)("div", {

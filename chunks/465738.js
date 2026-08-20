@@ -16,7 +16,7 @@ var t = o(477900),
     m = o(317525),
     k = o(652215),
     S = o(375708),
-    x = o(642225);
+    x = o(748118);
 let C = function (l) {
     let { className: e, guild: o, roleStyle: i, roleFilter: r, onSelect: c, onClose: C } = l,
         v = (0, p.bG)([m.A], () => m.A.getSortedRoles(o.id)),

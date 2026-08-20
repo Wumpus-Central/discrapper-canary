@@ -13,7 +13,7 @@ var r = n(503698),
     v = n(634654),
     h = n(652215),
     p = n(375708),
-    u = n(301053);
+    u = n(942216);
 function x(s) {
     let { pills: t } = s;
     return (0, i.jsx)("div", {

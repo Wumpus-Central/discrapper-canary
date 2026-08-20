@@ -1,34 +1,34 @@
-n.d(t, { InboxIcon: () => r });
-var i = n(477900);
-n(582128);
-var s = n(661531);
-if (221552 == n.j) var a = n(996682);
-if (221552 == n.j) var l = n(27989);
-function r(e) {
+i.d(t, { InboxIcon: () => l });
+var E = i(477900);
+i(582128);
+var s = i(661531);
+if (221552 == i.j) var n = i(996682);
+if (221552 == i.j) var r = i(27989);
+function l(e) {
     let {
             size: t = "md",
-            width: n,
-            height: r,
-            color: E = s.A.colors.INTERACTIVE_ICON_DEFAULT,
-            colorClass: o = "",
-            ...c
+            width: i,
+            height: l,
+            color: a = s.A.colors.INTERACTIVE_ICON_DEFAULT,
+            colorClass: _ = "",
+            ...S
         } = e,
-        d = (0, l.J)(t),
-        _ = d?.width ?? n,
-        S = d?.height ?? r;
-    return (0, i.jsx)("svg", {
-        ...(0, a.A)(c),
+        A = (0, r.J)(t),
+        c = A?.width ?? i,
+        o = A?.height ?? l;
+    return (0, E.jsx)("svg", {
+        ...(0, n.A)(S),
         xmlns: "http://www.w3.org/2000/svg",
-        width: _,
-        height: S,
+        width: c,
+        height: o,
         fill: "none",
         viewBox: "0 0 24 24",
-        children: (0, i.jsx)("path", {
-            fill: "string" == typeof E ? E : E.css,
+        children: (0, E.jsx)("path", {
+            fill: "string" == typeof a ? a : a.css,
             fillRule: "evenodd",
             d: "M5 2a3 3 0 0 0-3 3v14a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3V5a3 3 0 0 0-3-3H5ZM4 5.5C4 4.67 4.67 4 5.5 4h13c.83 0 1.5.67 1.5 1.5v6c0 .83-.67 1.5-1.5 1.5h-2.65c-.5 0-.85.5-.85 1a3 3 0 1 1-6 0c0-.5-.35-1-.85-1H5.5A1.5 1.5 0 0 1 4 11.5v-6Z",
             clipRule: "evenodd",
-            className: o,
+            className: _,
         }),
     });
 }

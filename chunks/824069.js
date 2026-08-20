@@ -8,7 +8,7 @@ var n = t(877624),
     o = t(807098),
     c = t(637706),
     d = t(788883),
-    u = t(954824);
+    u = t(592455);
 function m() {
     let e = (0, s.c)(n.C.PLAN_SELECT_CARD_BANNER),
         r =

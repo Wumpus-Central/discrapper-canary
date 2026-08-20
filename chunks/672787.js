@@ -31,8 +31,8 @@ var N = s(975571),
     b = s(264779),
     C = s(852218),
     E = s(652215),
-    T = s(806343),
-    R = s(962995),
+    T = s(221799),
+    R = s(555091),
     v = s(375708);
 let I = {
     [C.XY]: {
@@ -76,7 +76,7 @@ let I = {
         },
     },
 };
-var _ = s(640886);
+var _ = s(341973);
 function P(e, t, s) {
     let i = I[e.partnerId ?? ""],
         n = i?.outboundConfigs[e.outboundTitle];

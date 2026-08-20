@@ -14,9 +14,9 @@ var n = r(477900),
     g = r(151271),
     f = r(821102),
     I = r(996566),
-    E = r(336807),
-    R = r(435558),
-    _ = r.n(R),
+    R = r(336807),
+    E = r(435558),
+    _ = r.n(E),
     y = r(803805),
     S = r(661531),
     v = r(27232),
@@ -26,7 +26,7 @@ var n = r(477900),
     x = r(583613),
     F = r(327143),
     T = r(615300),
-    N = r(676949);
+    N = r(664668);
 let G = [S.A.unsafe_rawColors.PREMIUM_TIER_1_PURPLE.css, S.A.unsafe_rawColors.PREMIUM_TIER_1_BLUE.css, "#929AFA"];
 class D extends s.PureComponent {
     state = { backgroundColor: _().sample(G) };
@@ -104,7 +104,7 @@ class k extends s.PureComponent {
 var L = r(285961),
     b = r(652215),
     M = r(375708),
-    U = r(787004);
+    U = r(682863);
 function O(e, t) {
     return (0, n.jsx)(P, { columns: e }, t);
 }
@@ -226,15 +226,15 @@ class V extends s.PureComponent {
         });
     }
 }
-function H(e) {
+function W(e) {
     let t = (0, a.bG)([f.A], () => f.A.getTrendingCategories()),
         r = (0, I.rM)(),
         s = (0, L.d5)();
     return (0, n.jsx)(V, { ...e, ...s, trendingCategories: t, favorites: r });
 }
-var W = r(732139),
+var H = r(732139),
     Q = r(650583),
-    K = r(658150);
+    K = r(986531);
 function q(e) {
     return e.stopPropagation();
 }
@@ -331,7 +331,7 @@ class B extends s.PureComponent {
                     children: M.intl.string(M.t.H6zNFz),
                 });
             default: {
-                let t = (0, E.wT)();
+                let t = (0, R.wT)();
                 return (0, n.jsx)(u.I, {
                     query: e,
                     onChange: this.handleChangeQuery,
@@ -373,7 +373,7 @@ class B extends s.PureComponent {
             } = this.props,
             { resultType: d } = this.state;
         return null == d
-            ? (0, n.jsx)(H, { className: e, hideFavoritesTile: c, onSelectItem: this.handleSelectItem })
+            ? (0, n.jsx)(W, { className: e, hideFavoritesTile: c, onSelectItem: this.handleSelectItem })
             : (0, n.jsx)(L.Ay, {
                   className: e,
                   data:
@@ -402,9 +402,9 @@ class B extends s.PureComponent {
     render() {
         let { className: e, forwardedRef: t } = this.props;
         return (0, n.jsxs)("div", {
-            id: W.ni,
+            id: H.ni,
             role: "tabpanel",
-            "aria-labelledby": W.g9,
+            "aria-labelledby": H.g9,
             className: i()(K.kL, e),
             onClick: q,
             ref: t,

@@ -1,4 +1,4 @@
-t.d(r, { ZK: () => h, pF: () => v, wu: () => d }), t(323874), t(14289), t(35956), t(321073);
+t.d(r, { ZK: () => g, pF: () => v, wu: () => d }), t(323874), t(14289), t(35956), t(321073);
 var n = t(582128);
 if (588245 != t.j) var a = t(462180);
 var l = t(882035),
@@ -50,7 +50,7 @@ function v() {
         return Object.values(r);
     }, a.x);
 }
-let h = (e) => {
+let g = (e) => {
     let r = d((r) => (null != e ? r.profileEffects[e] : null)),
         t = n.useRef([]);
     return (

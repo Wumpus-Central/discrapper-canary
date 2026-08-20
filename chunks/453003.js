@@ -87,7 +87,7 @@ function q(e) {
 }
 var Q = n(878831),
     $ = n(768349),
-    ee = n(435650);
+    ee = n(657167);
 function et(e) {
     let { presenceActivity: t, remoteJoinPlatform: n, isGameLaunchable: i } = e,
         a = (function (e) {

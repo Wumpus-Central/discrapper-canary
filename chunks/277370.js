@@ -158,7 +158,7 @@ var el = n(279208),
     eh = n(958590),
     eg = n(584777),
     ef = n(763827),
-    eA = n(568548),
+    eA = n(573163),
     eE = n(994500),
     eI = n(351906),
     ep = n(174459),
@@ -179,7 +179,7 @@ var el = n(279208),
     ew = n(548118),
     eL = n(640708),
     eP = n(290863),
-    eG = n(314465);
+    eG = n(294910);
 function eb(e) {
     let {
             user: t,
@@ -297,7 +297,7 @@ function eV(e) {
     });
 }
 var ek = n(650583),
-    eH = n(549169);
+    eH = n(872330);
 let eB = (0, J.Ld)(),
     eW = { ADD_FRIENDS_TO_DM: "Add Friends to DM", NEW_GROUP_DM: "New Group DM", MEMBER_LIST: "Member List" };
 function eY(e) {
@@ -1130,7 +1130,7 @@ class eX extends l.PureComponent {
         let { channel: e, selectedUsers: t, onClose: n } = this.props,
             l = Array.from(t);
         if (null != e) {
-            let t = e7(Array.from(new Set([...e.recipients, ...l])));
+            let t = e3(Array.from(new Set([...e.recipients, ...l])));
             t.size > 0
                 ? (0, O.openModal)(
                       (n) => (0, i.jsx)(eK, { ...n, onConfirm: () => this.pushToExistingDM(e, l), channelIds: t }),
@@ -1139,7 +1139,7 @@ class eX extends l.PureComponent {
                   )
                 : this.pushToExistingDM(e, l);
         } else {
-            let e = e7(l);
+            let e = e3(l);
             l.length > 1 && e.size > 0
                 ? (0, O.openModal)(
                       (t) => (0, i.jsx)(eK, { ...t, onConfirm: () => this.createNewDM(l), channelIds: e }),
@@ -1338,17 +1338,17 @@ function e5(e) {
         ],
     });
 }
-function e7(e) {
-    let t = e3(e);
+function e3(e) {
+    let t = e7(e);
     return new Set(
         (0, s.chain)(ed.A.getMutablePrivateChannels())
             .values()
             .filter((e) => (0, eu.MK)(e.type))
-            .filter((e) => e3(e.recipients) === t)
+            .filter((e) => e7(e.recipients) === t)
             .map((e) => e.id)
             .value(),
     );
 }
-function e3(e) {
+function e7(e) {
     return JSON.stringify(e.sort());
 }

@@ -4,7 +4,7 @@ var r = n(477900),
     a = n(503698),
     s = n.n(a),
     i = n(932793),
-    u = n(422586);
+    u = n(763075);
 function c(e) {
     let { onPageChange: t, offset: n, totalCount: a, pageSize: c, renderPageWrapper: o, className: d } = e,
         f = Math.floor(n / c) + 1,

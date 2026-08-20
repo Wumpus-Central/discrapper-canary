@@ -1,8 +1,8 @@
-r.d(e, { B: () => i });
-var n = r(403581),
-    s = r(245383);
-function i(t) {
-    let { iconOverride: e, variantOverride: r, ...i } = t,
-        { buttonText: c, disabled: u } = (0, s.A)(i);
-    return { subscribeButtonProps: { text: c, disabled: u, icon: e ?? n.t, variant: r ?? "expressive" } };
+e.d(s, { B: () => p });
+var i = e(403581),
+    r = e(245383);
+function p(t) {
+    let { iconOverride: s, variantOverride: e, ...p } = t,
+        { buttonText: c, disabled: n } = (0, r.A)(p);
+    return { subscribeButtonProps: { text: c, disabled: n, icon: s ?? i.t, variant: e ?? "expressive" } };
 }

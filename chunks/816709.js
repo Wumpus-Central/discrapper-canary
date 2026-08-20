@@ -3,7 +3,7 @@ var s = n(477900);
 n(582128);
 var r = n(9578),
     a = n(375708),
-    t = n(968996);
+    t = n(195719);
 function u(l) {
     let { termsOfServiceUrl: e, privacyPolicyUrl: n } = l;
     return null == e && null == n

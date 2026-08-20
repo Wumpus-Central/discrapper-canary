@@ -15,7 +15,7 @@ var a = n(477900),
 n(980504);
 var m = n(652215),
     g = n(375708),
-    p = n(764232);
+    p = n(767251);
 function C(t) {
     let { transitionState: e, onClose: n } = t,
         C = (0, i.bG)([A.Ay], () => A.Ay.getKeybindForAction(m.hCu.SOUNDBOARD_HOLD)),

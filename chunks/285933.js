@@ -1,15 +1,15 @@
-n.d(e, { A: () => u });
-var i = n(174459),
-    r = n(981616),
-    l = n(272984),
-    o = n(652215);
-let a = [l.Qp.USER_ACTIVITY_SYNC, l.Qp.EMBED_SYNC];
-function u(t, e, n, l) {
-    i.default.track(o.HAw.SPOTIFY_BUTTON_CLICKED, {
+i.d(n, { A: () => u });
+var e = i(174459),
+    l = i(981616),
+    r = i(272984),
+    a = i(652215);
+let o = [r.Qp.USER_ACTIVITY_SYNC, r.Qp.EMBED_SYNC];
+function u(t, n, i, r) {
+    e.default.track(a.HAw.SPOTIFY_BUTTON_CLICKED, {
         type: t,
-        source: l,
-        is_premium: (0, r.mD)(),
-        party_id: a.includes(t) && n?.party != null ? n.party.id : null,
-        other_user_id: e.id,
+        source: r,
+        is_premium: (0, l.mD)(),
+        party_id: o.includes(t) && i?.party != null ? i.party.id : null,
+        other_user_id: n.id,
     });
 }

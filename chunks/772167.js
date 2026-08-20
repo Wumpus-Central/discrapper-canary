@@ -194,9 +194,9 @@ function L() {
     });
 }
 var U = i(652215),
-    S = i(962995),
+    S = i(555091),
     k = i(375708),
-    B = i(640886);
+    B = i(341973);
 function D() {
     let e = (0, C.i)("getRecurringPromotionPartnerAttributes");
     return {

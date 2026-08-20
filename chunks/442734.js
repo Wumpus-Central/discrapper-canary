@@ -11,7 +11,7 @@ var s = n(477900),
     d = n(617986),
     E = n(652215),
     x = n(375708),
-    A = n(727377);
+    A = n(502838);
 function I(t) {
     let { onClick: e, questId: n, orbMultiplierEligibility: I } = t,
         T = (0, c.ZP)(n),

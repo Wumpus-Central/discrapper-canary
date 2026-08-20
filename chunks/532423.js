@@ -6,9 +6,9 @@ var n = e(477900),
     o = e(342952),
     a = e(866665),
     u = e(240248),
-    l = e(561794),
+    l = e(594832),
     p = e(375708),
-    d = e(265687);
+    d = e(422596);
 function x(s) {
     let { spec: t, icon: e, tooltipText: i } = s,
         c = !(0, u.uJ)(i),

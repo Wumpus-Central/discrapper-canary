@@ -1,1 +1,1 @@
-p.exports = { I: "channel__15716" };
+e.exports = { I: "channel__15716" };

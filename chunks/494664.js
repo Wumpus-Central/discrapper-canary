@@ -9,8 +9,8 @@ var n = e(477900),
     r = e(625494),
     u = e(652215),
     h = e(375708),
-    p = e(446809),
-    x = e(742715);
+    p = e(478832),
+    x = e(165648);
 function C(t) {
     let { channel: i, isFromComposer: e, transitionState: a, onClose: C } = t;
     return (

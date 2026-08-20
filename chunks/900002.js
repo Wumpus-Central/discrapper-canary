@@ -15,7 +15,7 @@ var i,
 let h = { tension: 2400, friction: 52 };
 var I = n(775602),
     f = n(750506),
-    p = n(622399),
+    p = n(233680),
     T =
         (((i = {}).PRIMARY = "primary"),
         (i.GREY = "grey"),

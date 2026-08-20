@@ -9,7 +9,7 @@ var i,
     u = n(625494),
     c = n(5463),
     h = n(652215),
-    m = n(928966),
+    m = n(692659),
     g =
         (((i = {}).MOVE = "MOVE"),
         (i.RESIZE_NORTH = "RESIZE_NORTH"),

@@ -1,10 +1,10 @@
-r.d(t, { L: () => s, l: () => d });
-var l = r(477900),
-    n = r(582128),
-    i = r(945810);
+l.d(t, { L: () => s, l: () => d });
+var r = l(477900),
+    n = l(582128),
+    i = l(945810);
 let a = n.lazy(() =>
-        Promise.all([r.e("205528"), r.e("964367"), r.e("955184"), r.e("91081")])
-            .then(r.bind(r, 441136))
+        Promise.all([l.e("684031"), l.e("964367"), l.e("955184"), l.e("91081")])
+            .then(l.bind(l, 441136))
             .then((e) => ({ default: e.SyntaxHighlight })),
     ),
     s = (0, i.mj)({
@@ -14,7 +14,7 @@ let a = n.lazy(() =>
         variations: { 1: { enabled: !0, preferNative: !1 }, 2: { enabled: !0, preferNative: !0 } },
     });
 function d(e) {
-    let { children: t, location: r, ...i } = e,
-        { enabled: d, preferNative: o } = s.useConfig({ location: r });
-    return d ? (0, l.jsx)(n.Suspense, { fallback: t, children: (0, l.jsx)(a, { ...i, preferNative: o }) }) : t;
+    let { children: t, location: l, ...i } = e,
+        { enabled: d, preferNative: o } = s.useConfig({ location: l });
+    return d ? (0, r.jsx)(n.Suspense, { fallback: t, children: (0, r.jsx)(a, { ...i, preferNative: o }) }) : t;
 }

@@ -5,7 +5,7 @@ var s = i(477900),
     r = i(834730),
     l = i(49999),
     c = i(375708),
-    d = i(587026);
+    d = i(796635);
 function o(a) {
     let { modalConfig: t, markAsDismissed: i, onClose: o, ...h } = a,
         p = e.useCallback(

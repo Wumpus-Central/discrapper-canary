@@ -13,7 +13,7 @@ var n = i(477900),
     g = i(562153),
     p = i(652215),
     _ = i(375708),
-    S = i(792854);
+    S = i(241123);
 function v(e) {
     let { guildId: t, role: i, theme: r, content: v = _.intl.string(_.t["6OSasb"]), className: A } = e,
         y = (0, s.bG)([f.default], () => f.default.getCurrentUser()),

@@ -1,10 +1,10 @@
-i.d(e, { A: () => l });
+i.d(e, { A: () => c });
 var r = i(582128),
     _ = i(17928),
     n = i(948230),
     E = i(683180),
     a = i(972786);
-function l(t) {
+function c(t) {
     let e = (0, E.B9)(t?.topic),
         i = null != e;
     return (

@@ -2,7 +2,7 @@ n.d(e, { W: () => o });
 var t = n(477900),
     s = n(582128),
     c = n(834730),
-    i = n(507352);
+    i = n(175795);
 class o extends s.PureComponent {
     state = { error: null, info: null };
     componentDidCatch(r, e) {

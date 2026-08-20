@@ -78,29 +78,29 @@ class f extends i.PureComponent {
                 minValue: g,
                 maxValue: x,
                 value: A,
-                onVolumeShow: E,
-                onVolumeHide: C,
+                onVolumeShow: C,
+                onVolumeHide: E,
             } = this.props,
-            { hovered: I, focused: y, dragging: S } = this.state,
-            v = a.H;
+            { hovered: I, focused: y, dragging: v } = this.state,
+            S = a.H;
         return (
-            p || A === g ? (v = o._) : A < x / 2 && (v = u.S),
+            p || A === g ? (S = o._) : A < x / 2 && (S = u.S),
             (0, l.jsxs)("div", {
                 className: r()(n, m.kL),
                 onMouseEnter: () => {
-                    clearTimeout(this._hoverTimeout), this.setState({ hovered: !0 }), E?.();
+                    clearTimeout(this._hoverTimeout), this.setState({ hovered: !0 }), C?.();
                 },
                 onMouseLeave: () => {
                     clearTimeout(this._hoverTimeout),
                         (this._hoverTimeout = setTimeout(() => {
-                            this.setState({ hovered: !1 }), C?.();
+                            this.setState({ hovered: !1 }), E?.();
                         }, 150));
                 },
                 onBlur: () => this.setState({ focused: !1 }),
                 onKeyDown: this.handleKeyDown,
                 children: [
                     (0, l.jsx)("div", {
-                        className: r()(m.QS, i, { [m.OZ]: I || y || S }),
+                        className: r()(m.QS, i, { [m.OZ]: I || y || v }),
                         onMouseEnter: () => {
                             clearTimeout(this._hoverTimeout), this.setState({ hovered: !0 });
                         },
@@ -124,7 +124,7 @@ class f extends i.PureComponent {
                         className: m.bk,
                         "aria-label": h.intl.string(h.t["19lt24"]),
                         onClick: this.handleToggleMute,
-                        children: (0, l.jsx)(v, { color: t, className: e }),
+                        children: (0, l.jsx)(S, { color: t, className: e }),
                     }),
                 ],
             })

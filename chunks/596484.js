@@ -6,7 +6,7 @@ var i = t(503698),
     a = t(866665),
     u = t(939249),
     r = t(834730),
-    o = t(689949);
+    o = t(917004);
 function d(e) {
     let { pills: l, pillClassName: t } = e;
     return (0, n.jsx)("div", {

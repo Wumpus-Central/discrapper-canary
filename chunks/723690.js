@@ -15,7 +15,7 @@ var i = s(477900),
     N = s(994500);
 s(427262);
 var I = s(19575),
-    E = s(533545);
+    E = s(803790);
 let g = I.Ay.getEnableHardwareAcceleration(),
     y = function (e) {
         let {

@@ -11,7 +11,7 @@ var n = a(477900),
     x = a(427262),
     h = a(652215),
     m = a(375708),
-    g = a(318775);
+    g = a(566612);
 function k(t) {
     let { transitionState: e, guild: a, user: k, ban: p, onClose: A } = t,
         [b, j] = i.useState(!1),

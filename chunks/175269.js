@@ -131,7 +131,7 @@ let V = (0, u.A)(
                                                 action: () =>
                                                     (0, v.openModalLazy)(async () => {
                                                         let { default: e } = await Promise.all([
-                                                            i.e("710788"),
+                                                            i.e("253335"),
                                                             i.e("140243"),
                                                         ]).then(i.bind(i, 547166));
                                                         return (n) => (0, r.jsx)(e, { ...n, guildId: u.id, user: Y });
@@ -152,7 +152,7 @@ let V = (0, u.A)(
                                                 action: () =>
                                                     (0, v.openModalLazy)(async () => {
                                                         let { default: e } = await Promise.all([
-                                                            i.e("687407"),
+                                                            i.e("420282"),
                                                             i.e("802504"),
                                                         ]).then(i.bind(i, 333179));
                                                         return (n) => (0, r.jsx)(e, { ...n, guildId: u.id, user: Y });

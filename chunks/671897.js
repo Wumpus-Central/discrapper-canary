@@ -19,14 +19,14 @@ var r = n(477900),
     b = n(32880),
     S = n(922016),
     C = n(980707),
-    w = n(477782),
-    y = n(365199),
+    y = n(477782),
+    w = n(365199),
     A = n(268791),
     N = n(315710),
     R = n(297264),
     T = n(775602),
-    L = n(174459),
-    P = n(683574),
+    P = n(174459),
+    L = n(683574),
     M = n(61491),
     j = n(113494),
     D = n(782134),
@@ -35,7 +35,7 @@ var r = n(477900),
     B = n(834730),
     F = n(866665),
     _ = n(375708),
-    U = n(668534);
+    U = n(862649);
 let K = "-:--",
     O = {
         [d.Q6.PLAYING]: { icon: j.PauseIcon, label: _.intl.string(_.t.ZcgDJX) },
@@ -43,13 +43,13 @@ let K = "-:--",
         [d.Q6.ENDED]: { icon: k.RetryIcon, label: _.intl.string(_.t.hsvh0i) },
     },
     $ = { [d.oA.MD]: d.n4.MD, [d.oA.LG]: d.n4.LG },
-    V = { [d.n4.MD]: "md", [d.n4.LG]: "lg" };
-function Q(e) {
+    Q = { [d.n4.MD]: "md", [d.n4.LG]: "lg" };
+function V(e) {
     let { compact: t = !1 } = e,
         [n, a] = l.useState(null),
         [u, s] = l.useState(null),
         [o, c] = l.useState(!1),
-        { videoRef: d } = (0, P.X$)();
+        { videoRef: d } = (0, L.X$)();
     l.useEffect(() => {
         let e = d.current;
         function t() {
@@ -129,7 +129,7 @@ let G = l.forwardRef(function (e, t) {
                     height: { [d.n4.LG]: "32px", [d.n4.MD]: "24px" }[x],
                 },
                 children: (0, r.jsx)(n, {
-                    size: V[x],
+                    size: Q[x],
                     color: !0 !== m ? c.A.colors.WHITE : c.A.colors.TEXT_MUTED,
                     className: i()(U.jk, { [U.x2]: o, [U.Wr]: !m }),
                 }),
@@ -137,11 +137,11 @@ let G = l.forwardRef(function (e, t) {
         }),
     });
 });
-var H = n(91034),
-    Y = n(710434),
+var Y = n(91034),
+    H = n(710434),
     Z = n(634156),
     z = n(652215),
-    X = n(445563);
+    X = n(652699);
 let W = [0.5, 0.75, 1, 1.25, 1.5, 1.75, 2],
     J = W[0],
     q = W[W.length - 1];
@@ -152,8 +152,8 @@ function ee(e) {
             visible: a,
             seekForwardEnabled: S,
             hideCaptionBtn: C = !1,
-            hideTranscriptBtn: w = !1,
-            hideSkipButtons: y = !1,
+            hideTranscriptBtn: y = !1,
+            hideSkipButtons: w = !1,
             hideFullScreenBtn: A = !1,
             hidePlaybackSpeedBtn: N = !1,
             size: R,
@@ -165,7 +165,7 @@ function ee(e) {
             volume: B,
             muted: F,
             transcriptEnabled: K,
-            captionEnabled: V,
+            captionEnabled: Q,
             handlePlaybackBtnClick: W,
             handleTranscriptBtnClick: J,
             handleCaptionBtnClick: q,
@@ -181,7 +181,7 @@ function ee(e) {
         } = e,
         ed = (0, o.bG)([T.Ay], () => T.Ay.useReducedMotion),
         em = (0, o.bG)([T.Ay], () => T.Ay.keyboardModeEnabled),
-        { isFullscreen: ef, videoRef: eh } = (0, P.X$)(),
+        { isFullscreen: ef, videoRef: eh } = (0, L.X$)(),
         [ep, ev] = l.useState(F ? 0 : B),
         [ex, eg] = l.useState(!1),
         [eE, eb] = l.useState(!1),
@@ -189,12 +189,12 @@ function ee(e) {
             from: { volumeAnimSpring: 0 },
             config: { tension: 100, friction: 3, clamp: !0 },
         })),
-        ew = l.useRef(null),
-        [ey, eA] = l.useState(1),
+        ey = l.useRef(null),
+        [ew, eA] = l.useState(1),
         [eN, eR] = l.useState(B),
-        [eT, eL] = l.useState(F);
-    (B !== eN || F !== eT) && (eR(B), eL(F), ev(F ? 0 : B));
-    let eP = l.useCallback(
+        [eT, eP] = l.useState(F);
+    (B !== eN || F !== eT) && (eR(B), eP(F), ev(F ? 0 : B));
+    let eL = l.useCallback(
             (e) => {
                 eA(e), null != eh.current && (eh.current.playbackRate = e);
             },
@@ -203,7 +203,7 @@ function ee(e) {
         eM = l.useCallback(() => {
             if (null == M) return;
             let e = j?.split("/");
-            L.default.track(z.HAw.MEDIA_DOWNLOAD_BUTTON_TAPPED, {
+            P.default.track(z.HAw.MEDIA_DOWNLOAD_BUTTON_TAPPED, {
                 attachment_type: e?.[0],
                 attachment_subtype: e?.[1],
             }),
@@ -259,7 +259,7 @@ function ee(e) {
         [q, ee, W, en, el, eD, C, A, em],
     );
     l.useEffect(() => {
-        k && null != ew.current && ew.current.focus();
+        k && null != ey.current && ey.current.focus();
     }, [k]),
         l.useEffect(
             () => (
@@ -295,15 +295,15 @@ function ee(e) {
                         tooltipLabel: eK,
                         shortcut: d.TJ.PLAYBACK,
                         onClick: W,
-                        ref: ew,
+                        ref: ey,
                         buttonSize: $[R],
                         "data-testid": "discord-web-video-player-play-pause-btn",
                     }),
-                    !y &&
+                    !w &&
                         (0, r.jsxs)(r.Fragment, {
                             children: [
                                 (0, r.jsx)(G, {
-                                    iconComponent: Y.q,
+                                    iconComponent: H.q,
                                     animationTime: n,
                                     visible: a,
                                     onClick: en,
@@ -391,7 +391,7 @@ function ee(e) {
                             }),
                         ],
                     }),
-                    (0, r.jsx)(Q, { compact: ei }),
+                    (0, r.jsx)(V, { compact: ei }),
                 ],
             }),
             (0, r.jsxs)("div", {
@@ -427,7 +427,7 @@ function ee(e) {
                                 n ||
                                     m.push({
                                         id: "caption",
-                                        iconComponent: H.I,
+                                        iconComponent: Y.I,
                                         label: _.intl.string(X.default["0DbPcL"]),
                                         onClick: u,
                                         active: l,
@@ -446,10 +446,10 @@ function ee(e) {
                                 m
                             );
                         })({
-                            hideTranscriptBtn: w,
+                            hideTranscriptBtn: y,
                             hideCaptionBtn: C,
                             transcriptEnabled: K,
-                            captionEnabled: V,
+                            captionEnabled: Q,
                             playerState: t,
                             handleTranscriptBtnClick: J,
                             handleCaptionBtnClick: q,
@@ -463,8 +463,8 @@ function ee(e) {
                     }),
                     !N &&
                         (0, r.jsx)(er, {
-                            playbackRate: ey,
-                            onPlaybackRateChange: eP,
+                            playbackRate: ew,
+                            onPlaybackRateChange: eL,
                             animSpring: n,
                             visible: a,
                             size: R,
@@ -520,7 +520,7 @@ function en(e) {
     let { buttons: t, animSpring: n, visible: a, size: i } = e,
         u = l.useRef(null),
         s = _.intl.string(_.t.PdRCRg),
-        { activeLayer: o } = (0, P.X$)();
+        { activeLayer: o } = (0, L.X$)();
     return (0, r.jsx)(S.Y, {
         targetElementRef: u,
         position: "top",
@@ -537,7 +537,7 @@ function en(e) {
                     let t = { type: "icon", icon: e.iconComponent };
                     return null != e.active
                         ? (0, r.jsx)(
-                              w.sL,
+                              y.sL,
                               {
                                   id: e.id,
                                   label: e.label,
@@ -549,7 +549,7 @@ function en(e) {
                               e.id,
                           )
                         : (0, r.jsx)(
-                              w.Dr,
+                              y.Dr,
                               {
                                   id: e.id,
                                   label: e.label,
@@ -566,7 +566,7 @@ function en(e) {
         children: (e) =>
             (0, r.jsx)(G, {
                 ref: u,
-                iconComponent: y.MoreHorizontalIcon,
+                iconComponent: w.MoreHorizontalIcon,
                 animationTime: n,
                 visible: a,
                 ariaLabel: s,
@@ -588,7 +588,7 @@ function er(e) {
         } = e,
         o = l.useRef(null),
         c = _.intl.string(X.default.ZwPhbB),
-        { activeLayer: d } = (0, P.X$)();
+        { activeLayer: d } = (0, L.X$)();
     return (0, r.jsx)(S.Y, {
         targetElementRef: o,
         layerContext: d,

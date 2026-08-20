@@ -7,7 +7,7 @@ var s,
     o = l(53466),
     c = l(661531),
     d = l(939249),
-    u = l(887850);
+    u = l(381645);
 function h(e) {
     let { scrollPosition: t } = e;
     return (0, i.jsx)(o.animated.div, { className: u.tB, style: { opacity: t?.to([0, 100], [0, 1]) } });

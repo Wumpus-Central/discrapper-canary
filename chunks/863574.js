@@ -4,7 +4,7 @@ n(582128);
 var l = n(503698),
     s = n.n(l),
     a = n(622413),
-    r = n(254937);
+    r = n(255314);
 let o = 660;
 function c(e) {
     return (0, i.jsx)(a.A, { ...e, className: s()(e.className, { [r.sN]: !e.isHorizontal, [r.wO]: e.isHorizontal }) });

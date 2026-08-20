@@ -27,7 +27,7 @@ var l = a(477900),
     x = a(652215),
     m = a(818348),
     j = a(375708),
-    O = a(796362);
+    O = a(821737);
 async function v(t) {
     let e,
         { thread: a, attachments: l, setIsUploading: n, guild: i, onClose: r } = t,

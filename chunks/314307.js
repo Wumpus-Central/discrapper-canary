@@ -11,7 +11,7 @@ var i = n(503698),
     u = n(834730),
     h = n(375901),
     m = n(652215),
-    g = n(840748);
+    g = n(560529);
 function p(e) {
     let { locked: t = !1, channelType: n } = e,
         i = n === m.rbe.GUILD_VOICE || n === m.rbe.GUILD_STAGE_VOICE ? a.ChatIcon : t ? r.I : o.N;

@@ -10,7 +10,7 @@ var a = n(477900),
     d = n(181079),
     h = n(16236),
     p = n(375708),
-    m = n(384286);
+    m = n(275585);
 function x(t) {
     let { channelId: e, onClose: n, transitionState: x, heading: k, formTitle: v } = t,
         C = (0, s.bG)([u.A], () => u.A.getChannel(e)),

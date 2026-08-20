@@ -5,7 +5,7 @@ var s = r(477900),
     u = r.n(n),
     t = r(289873),
     c = r(834730),
-    i = r(510316);
+    i = r(873353);
 function d(e) {
     let { chunks: l, columns: r, className: n } = e,
         d = a.useMemo(() => ({ "--secure-frames-columns": r }), [r]);

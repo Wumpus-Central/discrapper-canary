@@ -20,22 +20,22 @@ function p(e) {
     let g,
         x,
         A,
-        E,
         C,
+        E,
         I,
         y,
-        { id: S, unrankedEntries: v = !1 } = e,
-        { feed: _, filters: N } = (0, i.cf)([s.A], () => ({ feed: s.A.getFeed(S), filters: s.A.getFilters() })),
+        { id: v, unrankedEntries: S = !1 } = e,
+        { feed: N, filters: _ } = (0, i.cf)([s.A], () => ({ feed: s.A.getFeed(v), filters: s.A.getFilters() })),
         T = l.useMemo(() => {
-            let e = v ? _?.unranked_game_entries.map((e) => e.content) : _?.entries.map((e) => e.content);
-            return null != N ? e?.filter((e) => f(N, e)) : e;
-        }, [_, N, v]);
+            let e = S ? N?.unranked_game_entries.map((e) => e.content) : N?.entries.map((e) => e.content);
+            return null != _ ? e?.filter((e) => f(_, e)) : e;
+        }, [N, _, S]);
     return (
         (t = T),
         (g = (0, i.bG)([r.A], () => r.A.getPrivateChannelsVersion())),
         (x = (0, i.bG)([r.A], () => r.A.getMutableDMsByUserIds(), [g])),
         (A = (0, i.bG)([a.Ay], () => a.Ay.getMutedChannels(null))),
-        (E = l.useMemo(() => {
+        (C = l.useMemo(() => {
             let e = new Set();
             for (let t in x) {
                 let n = x[t];
@@ -47,16 +47,16 @@ function p(e) {
             l.useMemo(
                 () =>
                     t?.filter((e) => {
-                        for (let t of e.participants) if (E.has(t)) return !1;
+                        for (let t of e.participants) if (C.has(t)) return !1;
                         return !0;
                     }),
-                [t, E],
+                [t, C],
             )),
         (p = T = (0, i.yK)([o.A], () => (null == n ? u : n.filter(o.A.canRenderContent)), [n])),
-        (C = l.useRef(new Set())),
+        (E = l.useRef(new Set())),
         (I = l.useMemo(() => {
             let e = new Set(p?.map((e) => e.author_id));
-            return (0, c.v)([...C.current], [...e]) || (C.current = e), C.current;
+            return (0, c.v)([...E.current], [...e]) || (E.current = e), E.current;
         }, [p])),
         (y = (0, i.yK)([d.A], () =>
             Array.from(I).filter((e) => {

@@ -31,7 +31,7 @@ var l = t(477900),
     M = t(855446),
     L = t(652215),
     D = t(375708),
-    P = t(716660);
+    P = t(472489);
 let G = r.K.APP_LAUNCHER_IN_VOICE_BANNER,
     k = `vc-activities-${(0, s.A)()}`;
 function V(e) {

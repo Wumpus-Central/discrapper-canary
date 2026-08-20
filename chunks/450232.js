@@ -8,7 +8,7 @@ var r = n(503698),
     l = n(939249),
     o = n(403581),
     d = n(375708),
-    c = n(151105);
+    c = n(192416);
 function u(e) {
     let { text: t = d.intl.string(d.t["5AFxuK"]), className: n, color: r = "currentColor", size: u = "md" } = e;
     return (0, i.jsx)(s.m, {

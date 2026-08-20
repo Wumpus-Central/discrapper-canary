@@ -1,45 +1,45 @@
 "use strict";
-n.d(t, { mg: () => Q, vd: () => H });
-var r = n(582128),
-    i = n(655972),
-    a = n.n(i),
-    o = n(412700),
-    s = n.n(o),
-    u = n(284009),
-    c = n.n(u),
-    l = n(859141),
-    d = n.n(l);
+r.d(t, { mg: () => J, vd: () => q });
+var n = r(582128),
+    i = r(655972),
+    o = r.n(i),
+    a = r(412700),
+    s = r.n(a),
+    u = r(284009),
+    c = r.n(u),
+    l = r(859141),
+    d = r.n(l);
 function f() {
     return (f =
         Object.assign ||
         function (e) {
             for (var t = 1; t < arguments.length; t++) {
-                var n = arguments[t];
-                for (var r in n) Object.prototype.hasOwnProperty.call(n, r) && (e[r] = n[r]);
+                var r = arguments[t];
+                for (var n in r) Object.prototype.hasOwnProperty.call(r, n) && (e[n] = r[n]);
             }
             return e;
         }).apply(this, arguments);
 }
-function h(e, t) {
-    (e.prototype = Object.create(t.prototype)), (e.prototype.constructor = e), p(e, t);
-}
 function p(e, t) {
-    return (p =
+    (e.prototype = Object.create(t.prototype)), (e.prototype.constructor = e), h(e, t);
+}
+function h(e, t) {
+    return (h =
         Object.setPrototypeOf ||
         function (e, t) {
             return (e.__proto__ = t), e;
         })(e, t);
 }
-function m(e, t) {
+function g(e, t) {
     if (null == e) return {};
-    var n,
-        r,
+    var r,
+        n,
         i = {},
-        a = Object.keys(e);
-    for (r = 0; r < a.length; r++) t.indexOf((n = a[r])) >= 0 || (i[n] = e[n]);
+        o = Object.keys(e);
+    for (n = 0; n < o.length; n++) t.indexOf((r = o[n])) >= 0 || (i[r] = e[r]);
     return i;
 }
-var g = {
+var v = {
         BASE: "base",
         BODY: "body",
         HEAD: "head",
@@ -52,9 +52,9 @@ var g = {
         TITLE: "title",
         FRAGMENT: "Symbol(react.fragment)",
     },
-    _ = { rel: ["amphtml", "canonical", "alternate"] },
-    y = { type: ["application/ld+json"] },
-    v = {
+    y = { rel: ["amphtml", "canonical", "alternate"] },
+    m = { type: ["application/ld+json"] },
+    b = {
         charset: "",
         name: ["robots", "description"],
         property: [
@@ -73,10 +73,10 @@ var g = {
             "twitter:site",
         ],
     },
-    b = Object.keys(g).map(function (e) {
-        return g[e];
+    E = Object.keys(v).map(function (e) {
+        return v[e];
     }),
-    w = {
+    O = {
         accesskey: "accessKey",
         charset: "charSet",
         class: "className",
@@ -86,27 +86,27 @@ var g = {
         itemprop: "itemProp",
         tabindex: "tabIndex",
     },
-    T = Object.keys(w).reduce(function (e, t) {
-        return (e[w[t]] = t), e;
+    T = Object.keys(O).reduce(function (e, t) {
+        return (e[O[t]] = t), e;
     }, {}),
-    E = function (e, t) {
-        for (var n = e.length - 1; n >= 0; n -= 1) {
-            var r = e[n];
-            if (Object.prototype.hasOwnProperty.call(r, t)) return r[t];
+    S = function (e, t) {
+        for (var r = e.length - 1; r >= 0; r -= 1) {
+            var n = e[r];
+            if (Object.prototype.hasOwnProperty.call(n, t)) return n[t];
         }
         return null;
     },
-    x = function (e) {
-        var t = E(e, g.TITLE),
-            n = E(e, "titleTemplate");
-        if ((Array.isArray(t) && (t = t.join("")), n && t))
-            return n.replace(/%s/g, function () {
+    w = function (e) {
+        var t = S(e, v.TITLE),
+            r = S(e, "titleTemplate");
+        if ((Array.isArray(t) && (t = t.join("")), r && t))
+            return r.replace(/%s/g, function () {
                 return t;
             });
-        var r = E(e, "defaultTitle");
-        return t || r || void 0;
+        var n = S(e, "defaultTitle");
+        return t || n || void 0;
     },
-    V = function (e, t) {
+    x = function (e, t) {
         return t
             .filter(function (t) {
                 return void 0 !== t[e];
@@ -118,9 +118,9 @@ var g = {
                 return f({}, e, t);
             }, {});
     },
-    k = function (e, t, n) {
-        var r = {};
-        return n
+    C = function (e, t, r) {
+        var n = {};
+        return r
             .filter(function (t) {
                 return (
                     !!Array.isArray(t[e]) ||
@@ -137,58 +137,58 @@ var g = {
                 return t[e];
             })
             .reverse()
-            .reduce(function (e, n) {
+            .reduce(function (e, r) {
                 var i = {};
-                n.filter(function (e) {
-                    for (var n, a = Object.keys(e), o = 0; o < a.length; o += 1) {
-                        var s = a[o],
+                r.filter(function (e) {
+                    for (var r, o = Object.keys(e), a = 0; a < o.length; a += 1) {
+                        var s = o[a],
                             u = s.toLowerCase();
                         -1 === t.indexOf(u) ||
-                            ("rel" === n && "canonical" === e[n].toLowerCase()) ||
+                            ("rel" === r && "canonical" === e[r].toLowerCase()) ||
                             ("rel" === u && "stylesheet" === e[u].toLowerCase()) ||
-                            (n = u),
+                            (r = u),
                             -1 === t.indexOf(s) ||
                                 ("innerHTML" !== s && "cssText" !== s && "itemprop" !== s) ||
-                                (n = s);
+                                (r = s);
                     }
-                    if (!n || !e[n]) return !1;
-                    var c = e[n].toLowerCase();
-                    return r[n] || (r[n] = {}), i[n] || (i[n] = {}), !r[n][c] && ((i[n][c] = !0), !0);
+                    if (!r || !e[r]) return !1;
+                    var c = e[r].toLowerCase();
+                    return n[r] || (n[r] = {}), i[r] || (i[r] = {}), !n[r][c] && ((i[r][c] = !0), !0);
                 })
                     .reverse()
                     .forEach(function (t) {
                         return e.push(t);
                     });
-                for (var a = Object.keys(i), o = 0; o < a.length; o += 1) {
-                    var s = a[o],
-                        u = f({}, r[s], i[s]);
-                    r[s] = u;
+                for (var o = Object.keys(i), a = 0; a < o.length; a += 1) {
+                    var s = o[a],
+                        u = f({}, n[s], i[s]);
+                    n[s] = u;
                 }
                 return e;
             }, [])
             .reverse();
     },
-    A = function (e, t) {
+    D = function (e, t) {
         if (Array.isArray(e) && e.length) {
-            for (var n = 0; n < e.length; n += 1) if (e[n][t]) return !0;
+            for (var r = 0; r < e.length; r += 1) if (e[r][t]) return !0;
         }
         return !1;
     },
-    S = function (e) {
+    k = function (e) {
         return Array.isArray(e) ? e.join("") : e;
     },
-    O = function (e, t) {
+    A = function (e, t) {
         return Array.isArray(e)
             ? e.reduce(
-                  function (e, n) {
+                  function (e, r) {
                       return (
                           !(function (e, t) {
-                              for (var n = Object.keys(e), r = 0; r < n.length; r += 1)
-                                  if (t[n[r]] && t[n[r]].includes(e[n[r]])) return !0;
+                              for (var r = Object.keys(e), n = 0; n < r.length; n += 1)
+                                  if (t[r[n]] && t[r[n]].includes(e[r[n]])) return !0;
                               return !1;
-                          })(n, t)
-                              ? e.default.push(n)
-                              : e.priority.push(n),
+                          })(r, t)
+                              ? e.default.push(r)
+                              : e.priority.push(r),
                           e
                       );
                   },
@@ -196,12 +196,12 @@ var g = {
               )
             : { default: e };
     },
-    R = function (e, t) {
-        var n;
-        return f({}, e, (((n = {})[t] = void 0), n));
+    I = function (e, t) {
+        var r;
+        return f({}, e, (((r = {})[t] = void 0), r));
     },
-    P = [g.NOSCRIPT, g.SCRIPT, g.STYLE],
-    C = function (e, t) {
+    P = [v.NOSCRIPT, v.SCRIPT, v.STYLE],
+    j = function (e, t) {
         return (
             void 0 === t && (t = !0),
             !1 === t
@@ -214,58 +214,58 @@ var g = {
                       .replace(/'/g, "&#x27;")
         );
     },
-    L = function (e) {
-        return Object.keys(e).reduce(function (t, n) {
-            var r = void 0 !== e[n] ? n + '="' + e[n] + '"' : "" + n;
-            return t ? t + " " + r : r;
+    N = function (e) {
+        return Object.keys(e).reduce(function (t, r) {
+            var n = void 0 !== e[r] ? r + '="' + e[r] + '"' : "" + r;
+            return t ? t + " " + n : n;
         }, "");
     },
-    I = function (e, t) {
+    R = function (e, t) {
         return (
             void 0 === t && (t = {}),
-            Object.keys(e).reduce(function (t, n) {
-                return (t[w[n] || n] = e[n]), t;
+            Object.keys(e).reduce(function (t, r) {
+                return (t[O[r] || r] = e[r]), t;
             }, t)
         );
     },
-    D = function (e, t) {
-        return t.map(function (t, n) {
+    L = function (e, t) {
+        return t.map(function (t, r) {
             var i,
-                a = (((i = { key: n })["data-rh"] = !0), i);
+                o = (((i = { key: r })["data-rh"] = !0), i);
             return (
                 Object.keys(t).forEach(function (e) {
-                    var n = w[e] || e;
-                    "innerHTML" === n || "cssText" === n
-                        ? (a.dangerouslySetInnerHTML = { __html: t.innerHTML || t.cssText })
-                        : (a[n] = t[e]);
+                    var r = O[e] || e;
+                    "innerHTML" === r || "cssText" === r
+                        ? (o.dangerouslySetInnerHTML = { __html: t.innerHTML || t.cssText })
+                        : (o[r] = t[e]);
                 }),
-                r.createElement(e, a)
+                n.createElement(e, o)
             );
         });
     },
-    M = function (e, t, n) {
+    _ = function (e, t, r) {
         switch (e) {
-            case g.TITLE:
+            case v.TITLE:
                 return {
                     toComponent: function () {
-                        var e, n, i, a;
+                        var e, r, i, o;
                         return (
-                            (n = t.titleAttributes),
+                            (r = t.titleAttributes),
                             ((i = { key: (e = t.title) })["data-rh"] = !0),
-                            (a = I(n, i)),
-                            [r.createElement(g.TITLE, a, e)]
+                            (o = R(r, i)),
+                            [n.createElement(v.TITLE, o, e)]
                         );
                     },
                     toString: function () {
-                        var r, i, a, o;
+                        var n, i, o, a;
                         return (
-                            (r = t.title),
+                            (n = t.title),
                             (i = t.titleAttributes),
-                            (a = L(i)),
-                            (o = S(r)),
-                            a
-                                ? "<" + e + ' data-rh="true" ' + a + ">" + C(o, n) + "</" + e + ">"
-                                : "<" + e + ' data-rh="true">' + C(o, n) + "</" + e + ">"
+                            (o = N(i)),
+                            (a = k(n)),
+                            o
+                                ? "<" + e + ' data-rh="true" ' + o + ">" + j(a, r) + "</" + e + ">"
+                                : "<" + e + ' data-rh="true">' + j(a, r) + "</" + e + ">"
                         );
                     },
                 };
@@ -273,42 +273,42 @@ var g = {
             case "htmlAttributes":
                 return {
                     toComponent: function () {
-                        return I(t);
+                        return R(t);
                     },
                     toString: function () {
-                        return L(t);
+                        return N(t);
                     },
                 };
             default:
                 return {
                     toComponent: function () {
-                        return D(e, t);
+                        return L(e, t);
                     },
                     toString: function () {
-                        return t.reduce(function (t, r) {
-                            var i = Object.keys(r)
+                        return t.reduce(function (t, n) {
+                            var i = Object.keys(n)
                                     .filter(function (e) {
                                         return "innerHTML" !== e && "cssText" !== e;
                                     })
                                     .reduce(function (e, t) {
-                                        var i = void 0 === r[t] ? t : t + '="' + C(r[t], n) + '"';
+                                        var i = void 0 === n[t] ? t : t + '="' + j(n[t], r) + '"';
                                         return e ? e + " " + i : i;
                                     }, ""),
-                                a = r.innerHTML || r.cssText || "",
-                                o = -1 === P.indexOf(e);
-                            return t + "<" + e + ' data-rh="true" ' + i + (o ? "/>" : ">" + a + "</" + e + ">");
+                                o = n.innerHTML || n.cssText || "",
+                                a = -1 === P.indexOf(e);
+                            return t + "<" + e + ' data-rh="true" ' + i + (a ? "/>" : ">" + o + "</" + e + ">");
                         }, "");
                     },
                 };
         }
     },
-    U = function (e) {
+    M = function (e) {
         var t = e.baseTag,
-            n = e.bodyAttributes,
-            r = e.encode,
+            r = e.bodyAttributes,
+            n = e.encode,
             i = e.htmlAttributes,
-            a = e.noscriptTags,
-            o = e.styleTags,
+            o = e.noscriptTags,
+            a = e.styleTags,
             s = e.title,
             u = e.titleAttributes,
             c = e.linkTags,
@@ -321,79 +321,79 @@ var g = {
                 },
             };
         if (e.prioritizeSeoTags) {
-            var h,
-                p,
-                m,
-                b,
-                w,
+            var p,
+                h,
+                g,
+                E,
+                O,
                 T,
-                E =
-                    ((h = e.linkTags),
-                    (p = e.scriptTags),
-                    (m = e.encode),
-                    (b = O(e.metaTags, v)),
-                    (w = O(h, _)),
-                    (T = O(p, y)),
+                S =
+                    ((p = e.linkTags),
+                    (h = e.scriptTags),
+                    (g = e.encode),
+                    (E = A(e.metaTags, b)),
+                    (O = A(p, y)),
+                    (T = A(h, m)),
                     {
                         priorityMethods: {
                             toComponent: function () {
-                                return [].concat(D(g.META, b.priority), D(g.LINK, w.priority), D(g.SCRIPT, T.priority));
+                                return [].concat(L(v.META, E.priority), L(v.LINK, O.priority), L(v.SCRIPT, T.priority));
                             },
                             toString: function () {
                                 return (
-                                    M(g.META, b.priority, m) +
+                                    _(v.META, E.priority, g) +
                                     " " +
-                                    M(g.LINK, w.priority, m) +
+                                    _(v.LINK, O.priority, g) +
                                     " " +
-                                    M(g.SCRIPT, T.priority, m)
+                                    _(v.SCRIPT, T.priority, g)
                                 );
                             },
                         },
-                        metaTags: b.default,
-                        linkTags: w.default,
+                        metaTags: E.default,
+                        linkTags: O.default,
                         scriptTags: T.default,
                     });
-            (f = E.priorityMethods), (c = E.linkTags), (l = E.metaTags), (d = E.scriptTags);
+            (f = S.priorityMethods), (c = S.linkTags), (l = S.metaTags), (d = S.scriptTags);
         }
         return {
             priority: f,
-            base: M(g.BASE, t, r),
-            bodyAttributes: M("bodyAttributes", n, r),
-            htmlAttributes: M("htmlAttributes", i, r),
-            link: M(g.LINK, c, r),
-            meta: M(g.META, l, r),
-            noscript: M(g.NOSCRIPT, a, r),
-            script: M(g.SCRIPT, d, r),
-            style: M(g.STYLE, o, r),
-            title: M(g.TITLE, { title: void 0 === s ? "" : s, titleAttributes: u }, r),
+            base: _(v.BASE, t, n),
+            bodyAttributes: _("bodyAttributes", r, n),
+            htmlAttributes: _("htmlAttributes", i, n),
+            link: _(v.LINK, c, n),
+            meta: _(v.META, l, n),
+            noscript: _(v.NOSCRIPT, o, n),
+            script: _(v.SCRIPT, d, n),
+            style: _(v.STYLE, a, n),
+            title: _(v.TITLE, { title: void 0 === s ? "" : s, titleAttributes: u }, n),
         };
     },
-    j = [],
-    F = function (e, t) {
-        var n = this;
+    U = [],
+    V = function (e, t) {
+        var r = this;
         void 0 === t && (t = "u" > typeof document),
             (this.instances = []),
             (this.value = {
                 setHelmet: function (e) {
-                    n.context.helmet = e;
+                    r.context.helmet = e;
                 },
                 helmetInstances: {
                     get: function () {
-                        return n.canUseDOM ? j : n.instances;
+                        return r.canUseDOM ? U : r.instances;
                     },
                     add: function (e) {
-                        (n.canUseDOM ? j : n.instances).push(e);
+                        (r.canUseDOM ? U : r.instances).push(e);
                     },
                     remove: function (e) {
-                        var t = (n.canUseDOM ? j : n.instances).indexOf(e);
-                        (n.canUseDOM ? j : n.instances).splice(t, 1);
+                        var t = (r.canUseDOM ? U : r.instances).indexOf(e);
+                        (r.canUseDOM ? U : r.instances).splice(t, 1);
                     },
                 },
             }),
             (this.context = e),
             (this.canUseDOM = t),
             t ||
-                (e.helmet = U({
+                (e.helmet = M({
                     baseTag: [],
                     bodyAttributes: {},
                     encodeSpecialCharacters: !0,
@@ -407,225 +407,225 @@ var g = {
                     titleAttributes: {},
                 }));
     },
-    N = r.createContext({}),
-    B = a().shape({
-        setHelmet: a().func,
-        helmetInstances: a().shape({ get: a().func, add: a().func, remove: a().func }),
+    F = n.createContext({}),
+    H = o().shape({
+        setHelmet: o().func,
+        helmetInstances: o().shape({ get: o().func, add: o().func, remove: o().func }),
     }),
-    G = "u" > typeof document,
-    H = (function (e) {
-        function t(n) {
-            var r;
-            return ((r = e.call(this, n) || this).helmetData = new F(r.props.context, t.canUseDOM)), r;
+    B = "u" > typeof document,
+    q = (function (e) {
+        function t(r) {
+            var n;
+            return ((n = e.call(this, r) || this).helmetData = new V(n.props.context, t.canUseDOM)), n;
         }
         return (
-            h(t, e),
+            p(t, e),
             (t.prototype.render = function () {
-                return r.createElement(N.Provider, { value: this.helmetData.value }, this.props.children);
+                return n.createElement(F.Provider, { value: this.helmetData.value }, this.props.children);
             }),
             t
         );
-    })(r.Component);
-(H.canUseDOM = G),
-    (H.propTypes = { context: a().shape({ helmet: a().shape() }), children: a().node.isRequired }),
-    (H.defaultProps = { context: {} }),
-    (H.displayName = "HelmetProvider");
+    })(n.Component);
+(q.canUseDOM = B),
+    (q.propTypes = { context: o().shape({ helmet: o().shape() }), children: o().node.isRequired }),
+    (q.defaultProps = { context: {} }),
+    (q.displayName = "HelmetProvider");
 var W = function (e, t) {
-        var n,
-            r = document.head || document.querySelector(g.HEAD),
-            i = r.querySelectorAll(e + "[data-rh]"),
-            a = [].slice.call(i),
-            o = [];
+        var r,
+            n = document.head || document.querySelector(v.HEAD),
+            i = n.querySelectorAll(e + "[data-rh]"),
+            o = [].slice.call(i),
+            a = [];
         return (
             t &&
                 t.length &&
                 t.forEach(function (t) {
-                    var r = document.createElement(e);
+                    var n = document.createElement(e);
                     for (var i in t)
                         Object.prototype.hasOwnProperty.call(t, i) &&
                             ("innerHTML" === i
-                                ? (r.innerHTML = t.innerHTML)
+                                ? (n.innerHTML = t.innerHTML)
                                 : "cssText" === i
-                                  ? r.styleSheet
-                                      ? (r.styleSheet.cssText = t.cssText)
-                                      : r.appendChild(document.createTextNode(t.cssText))
-                                  : r.setAttribute(i, void 0 === t[i] ? "" : t[i]));
-                    r.setAttribute("data-rh", "true"),
-                        a.some(function (e, t) {
-                            return (n = t), r.isEqualNode(e);
+                                  ? n.styleSheet
+                                      ? (n.styleSheet.cssText = t.cssText)
+                                      : n.appendChild(document.createTextNode(t.cssText))
+                                  : n.setAttribute(i, void 0 === t[i] ? "" : t[i]));
+                    n.setAttribute("data-rh", "true"),
+                        o.some(function (e, t) {
+                            return (r = t), n.isEqualNode(e);
                         })
-                            ? a.splice(n, 1)
-                            : o.push(r);
+                            ? o.splice(r, 1)
+                            : a.push(n);
                 }),
-            a.forEach(function (e) {
+            o.forEach(function (e) {
                 return e.parentNode.removeChild(e);
             }),
-            o.forEach(function (e) {
-                return r.appendChild(e);
+            a.forEach(function (e) {
+                return n.appendChild(e);
             }),
-            { oldTags: a, newTags: o }
+            { oldTags: o, newTags: a }
         );
     },
-    z = function (e, t) {
-        var n = document.getElementsByTagName(e)[0];
-        if (n) {
+    $ = function (e, t) {
+        var r = document.getElementsByTagName(e)[0];
+        if (r) {
             for (
-                var r = n.getAttribute("data-rh"),
-                    i = r ? r.split(",") : [],
-                    a = [].concat(i),
-                    o = Object.keys(t),
+                var n = r.getAttribute("data-rh"),
+                    i = n ? n.split(",") : [],
+                    o = [].concat(i),
+                    a = Object.keys(t),
                     s = 0;
-                s < o.length;
+                s < a.length;
                 s += 1
             ) {
-                var u = o[s],
+                var u = a[s],
                     c = t[u] || "";
-                n.getAttribute(u) !== c && n.setAttribute(u, c), -1 === i.indexOf(u) && i.push(u);
-                var l = a.indexOf(u);
-                -1 !== l && a.splice(l, 1);
+                r.getAttribute(u) !== c && r.setAttribute(u, c), -1 === i.indexOf(u) && i.push(u);
+                var l = o.indexOf(u);
+                -1 !== l && o.splice(l, 1);
             }
-            for (var d = a.length - 1; d >= 0; d -= 1) n.removeAttribute(a[d]);
-            i.length === a.length
-                ? n.removeAttribute("data-rh")
-                : n.getAttribute("data-rh") !== o.join(",") && n.setAttribute("data-rh", o.join(","));
+            for (var d = o.length - 1; d >= 0; d -= 1) r.removeAttribute(o[d]);
+            i.length === o.length
+                ? r.removeAttribute("data-rh")
+                : r.getAttribute("data-rh") !== a.join(",") && r.setAttribute("data-rh", a.join(","));
         }
     },
-    q = function (e, t) {
-        var n = e.baseTag,
-            r = e.htmlAttributes,
+    Y = function (e, t) {
+        var r = e.baseTag,
+            n = e.htmlAttributes,
             i = e.linkTags,
-            a = e.metaTags,
-            o = e.noscriptTags,
+            o = e.metaTags,
+            a = e.noscriptTags,
             s = e.onChangeClientState,
             u = e.scriptTags,
             c = e.styleTags,
             l = e.title,
             d = e.titleAttributes;
-        z(g.BODY, e.bodyAttributes),
-            z(g.HTML, r),
-            void 0 !== l && document.title !== l && (document.title = S(l)),
-            z(g.TITLE, d);
+        $(v.BODY, e.bodyAttributes),
+            $(v.HTML, n),
+            void 0 !== l && document.title !== l && (document.title = k(l)),
+            $(v.TITLE, d);
         var f = {
-                baseTag: W(g.BASE, n),
-                linkTags: W(g.LINK, i),
-                metaTags: W(g.META, a),
-                noscriptTags: W(g.NOSCRIPT, o),
-                scriptTags: W(g.SCRIPT, u),
-                styleTags: W(g.STYLE, c),
+                baseTag: W(v.BASE, r),
+                linkTags: W(v.LINK, i),
+                metaTags: W(v.META, o),
+                noscriptTags: W(v.NOSCRIPT, a),
+                scriptTags: W(v.SCRIPT, u),
+                styleTags: W(v.STYLE, c),
             },
-            h = {},
-            p = {};
+            p = {},
+            h = {};
         Object.keys(f).forEach(function (e) {
             var t = f[e],
-                n = t.newTags,
-                r = t.oldTags;
-            n.length && (h[e] = n), r.length && (p[e] = f[e].oldTags);
+                r = t.newTags,
+                n = t.oldTags;
+            r.length && (p[e] = r), n.length && (h[e] = f[e].oldTags);
         }),
             t && t(),
-            s(e, h, p);
+            s(e, p, h);
     },
-    K = null,
-    X = (function (e) {
+    z = null,
+    G = (function (e) {
         function t() {
-            for (var t, n = arguments.length, r = Array(n), i = 0; i < n; i++) r[i] = arguments[i];
-            return ((t = e.call.apply(e, [this].concat(r)) || this).rendered = !1), t;
+            for (var t, r = arguments.length, n = Array(r), i = 0; i < r; i++) n[i] = arguments[i];
+            return ((t = e.call.apply(e, [this].concat(n)) || this).rendered = !1), t;
         }
-        h(t, e);
-        var n = t.prototype;
+        p(t, e);
+        var r = t.prototype;
         return (
-            (n.shouldComponentUpdate = function (e) {
+            (r.shouldComponentUpdate = function (e) {
                 return !d()(e, this.props);
             }),
-            (n.componentDidUpdate = function () {
+            (r.componentDidUpdate = function () {
                 this.emitChange();
             }),
-            (n.componentWillUnmount = function () {
+            (r.componentWillUnmount = function () {
                 this.props.context.helmetInstances.remove(this), this.emitChange();
             }),
-            (n.emitChange = function () {
+            (r.emitChange = function () {
                 var e,
                     t,
-                    n = this.props.context,
-                    r = n.setHelmet,
+                    r = this.props.context,
+                    n = r.setHelmet,
                     i = null,
-                    a = {
+                    o = {
                         baseTag:
                             ((e = ["href"]),
-                            (t = n.helmetInstances.get().map(function (e) {
+                            (t = r.helmetInstances.get().map(function (e) {
                                 var t = f({}, e.props);
                                 return delete t.context, t;
                             }))
                                 .filter(function (e) {
-                                    return void 0 !== e[g.BASE];
+                                    return void 0 !== e[v.BASE];
                                 })
                                 .map(function (e) {
-                                    return e[g.BASE];
+                                    return e[v.BASE];
                                 })
                                 .reverse()
-                                .reduce(function (t, n) {
+                                .reduce(function (t, r) {
                                     if (!t.length)
-                                        for (var r = Object.keys(n), i = 0; i < r.length; i += 1) {
-                                            var a = r[i].toLowerCase();
-                                            if (-1 !== e.indexOf(a) && n[a]) return t.concat(n);
+                                        for (var n = Object.keys(r), i = 0; i < n.length; i += 1) {
+                                            var o = n[i].toLowerCase();
+                                            if (-1 !== e.indexOf(o) && r[o]) return t.concat(r);
                                         }
                                     return t;
                                 }, [])),
-                        bodyAttributes: V("bodyAttributes", t),
-                        defer: E(t, "defer"),
-                        encode: E(t, "encodeSpecialCharacters"),
-                        htmlAttributes: V("htmlAttributes", t),
-                        linkTags: k(g.LINK, ["rel", "href"], t),
-                        metaTags: k(g.META, ["name", "charset", "http-equiv", "property", "itemprop"], t),
-                        noscriptTags: k(g.NOSCRIPT, ["innerHTML"], t),
-                        onChangeClientState: E(t, "onChangeClientState") || function () {},
-                        scriptTags: k(g.SCRIPT, ["src", "innerHTML"], t),
-                        styleTags: k(g.STYLE, ["cssText"], t),
-                        title: x(t),
-                        titleAttributes: V("titleAttributes", t),
-                        prioritizeSeoTags: A(t, "prioritizeSeoTags"),
+                        bodyAttributes: x("bodyAttributes", t),
+                        defer: S(t, "defer"),
+                        encode: S(t, "encodeSpecialCharacters"),
+                        htmlAttributes: x("htmlAttributes", t),
+                        linkTags: C(v.LINK, ["rel", "href"], t),
+                        metaTags: C(v.META, ["name", "charset", "http-equiv", "property", "itemprop"], t),
+                        noscriptTags: C(v.NOSCRIPT, ["innerHTML"], t),
+                        onChangeClientState: S(t, "onChangeClientState") || function () {},
+                        scriptTags: C(v.SCRIPT, ["src", "innerHTML"], t),
+                        styleTags: C(v.STYLE, ["cssText"], t),
+                        title: w(t),
+                        titleAttributes: x("titleAttributes", t),
+                        prioritizeSeoTags: D(t, "prioritizeSeoTags"),
                     };
-                H.canUseDOM
-                    ? (K && cancelAnimationFrame(K),
-                      a.defer
-                          ? (K = requestAnimationFrame(function () {
-                                q(a, function () {
-                                    K = null;
+                q.canUseDOM
+                    ? (z && cancelAnimationFrame(z),
+                      o.defer
+                          ? (z = requestAnimationFrame(function () {
+                                Y(o, function () {
+                                    z = null;
                                 });
                             }))
-                          : (q(a), (K = null)))
-                    : U && (i = U(a)),
-                    r(i);
+                          : (Y(o), (z = null)))
+                    : M && (i = M(o)),
+                    n(i);
             }),
-            (n.init = function () {
+            (r.init = function () {
                 this.rendered ||
                     ((this.rendered = !0), this.props.context.helmetInstances.add(this), this.emitChange());
             }),
-            (n.render = function () {
+            (r.render = function () {
                 return this.init(), null;
             }),
             t
         );
-    })(r.Component);
-(X.propTypes = { context: B.isRequired }), (X.displayName = "HelmetDispatcher");
-var Y = ["children"],
-    Z = ["children"],
-    Q = (function (e) {
+    })(n.Component);
+(G.propTypes = { context: H.isRequired }), (G.displayName = "HelmetDispatcher");
+var X = ["children"],
+    K = ["children"],
+    J = (function (e) {
         function t() {
             return e.apply(this, arguments) || this;
         }
-        h(t, e);
-        var n = t.prototype;
+        p(t, e);
+        var r = t.prototype;
         return (
-            (n.shouldComponentUpdate = function (e) {
-                return !s()(R(this.props, "helmetData"), R(e, "helmetData"));
+            (r.shouldComponentUpdate = function (e) {
+                return !s()(I(this.props, "helmetData"), I(e, "helmetData"));
             }),
-            (n.mapNestedChildrenToProps = function (e, t) {
+            (r.mapNestedChildrenToProps = function (e, t) {
                 if (!t) return null;
                 switch (e.type) {
-                    case g.SCRIPT:
-                    case g.NOSCRIPT:
+                    case v.SCRIPT:
+                    case v.NOSCRIPT:
                         return { innerHTML: t };
-                    case g.STYLE:
+                    case v.STYLE:
                         return { cssText: t };
                     default:
                         throw Error(
@@ -635,57 +635,57 @@ var Y = ["children"],
                         );
                 }
             }),
-            (n.flattenArrayTypeChildren = function (e) {
+            (r.flattenArrayTypeChildren = function (e) {
                 var t,
-                    n = e.child,
-                    r = e.arrayTypeChildren;
+                    r = e.child,
+                    n = e.arrayTypeChildren;
                 return f(
                     {},
-                    r,
-                    (((t = {})[n.type] = [].concat(r[n.type] || [], [
-                        f({}, e.newChildProps, this.mapNestedChildrenToProps(n, e.nestedChildren)),
+                    n,
+                    (((t = {})[r.type] = [].concat(n[r.type] || [], [
+                        f({}, e.newChildProps, this.mapNestedChildrenToProps(r, e.nestedChildren)),
                     ])),
                     t),
                 );
             }),
-            (n.mapObjectTypeChildren = function (e) {
+            (r.mapObjectTypeChildren = function (e) {
                 var t,
-                    n,
-                    r = e.child,
+                    r,
+                    n = e.child,
                     i = e.newProps,
-                    a = e.newChildProps,
-                    o = e.nestedChildren;
-                switch (r.type) {
-                    case g.TITLE:
-                        return f({}, i, (((t = {})[r.type] = o), (t.titleAttributes = f({}, a)), t));
-                    case g.BODY:
-                        return f({}, i, { bodyAttributes: f({}, a) });
-                    case g.HTML:
-                        return f({}, i, { htmlAttributes: f({}, a) });
+                    o = e.newChildProps,
+                    a = e.nestedChildren;
+                switch (n.type) {
+                    case v.TITLE:
+                        return f({}, i, (((t = {})[n.type] = a), (t.titleAttributes = f({}, o)), t));
+                    case v.BODY:
+                        return f({}, i, { bodyAttributes: f({}, o) });
+                    case v.HTML:
+                        return f({}, i, { htmlAttributes: f({}, o) });
                     default:
-                        return f({}, i, (((n = {})[r.type] = f({}, a)), n));
+                        return f({}, i, (((r = {})[n.type] = f({}, o)), r));
                 }
             }),
-            (n.mapArrayTypeChildrenToProps = function (e, t) {
-                var n = f({}, t);
+            (r.mapArrayTypeChildrenToProps = function (e, t) {
+                var r = f({}, t);
                 return (
                     Object.keys(e).forEach(function (t) {
-                        var r;
-                        n = f({}, n, (((r = {})[t] = e[t]), r));
+                        var n;
+                        r = f({}, r, (((n = {})[t] = e[t]), n));
                     }),
-                    n
+                    r
                 );
             }),
-            (n.warnOnInvalidChildren = function (e, t) {
+            (r.warnOnInvalidChildren = function (e, t) {
                 return (
                     c()(
-                        b.some(function (t) {
+                        E.some(function (t) {
                             return e.type === t;
                         }),
                         "function" == typeof e.type
                             ? "You may be attempting to nest <Helmet> components within each other, which is not allowed. Refer to our API for more information."
                             : "Only elements types " +
-                                  b.join(", ") +
+                                  E.join(", ") +
                                   " are allowed. Helmet does not support rendering <" +
                                   e.type +
                                   "> elements. Refer to our API for more information.",
@@ -708,41 +708,41 @@ var Y = ["children"],
                     !0
                 );
             }),
-            (n.mapChildrenToProps = function (e, t) {
-                var n = this,
+            (r.mapChildrenToProps = function (e, t) {
+                var r = this,
                     i = {};
                 return (
-                    r.Children.forEach(e, function (e) {
+                    n.Children.forEach(e, function (e) {
                         if (e && e.props) {
-                            var r = e.props,
-                                a = r.children,
-                                o = m(r, Y),
-                                s = Object.keys(o).reduce(function (e, t) {
-                                    return (e[T[t] || t] = o[t]), e;
+                            var n = e.props,
+                                o = n.children,
+                                a = g(n, X),
+                                s = Object.keys(a).reduce(function (e, t) {
+                                    return (e[T[t] || t] = a[t]), e;
                                 }, {}),
                                 u = e.type;
-                            switch (("symbol" == typeof u ? (u = u.toString()) : n.warnOnInvalidChildren(e, a), u)) {
-                                case g.FRAGMENT:
-                                    t = n.mapChildrenToProps(a, t);
+                            switch (("symbol" == typeof u ? (u = u.toString()) : r.warnOnInvalidChildren(e, o), u)) {
+                                case v.FRAGMENT:
+                                    t = r.mapChildrenToProps(o, t);
                                     break;
-                                case g.LINK:
-                                case g.META:
-                                case g.NOSCRIPT:
-                                case g.SCRIPT:
-                                case g.STYLE:
-                                    i = n.flattenArrayTypeChildren({
+                                case v.LINK:
+                                case v.META:
+                                case v.NOSCRIPT:
+                                case v.SCRIPT:
+                                case v.STYLE:
+                                    i = r.flattenArrayTypeChildren({
                                         child: e,
                                         arrayTypeChildren: i,
                                         newChildProps: s,
-                                        nestedChildren: a,
+                                        nestedChildren: o,
                                     });
                                     break;
                                 default:
-                                    t = n.mapObjectTypeChildren({
+                                    t = r.mapObjectTypeChildren({
                                         child: e,
                                         newProps: t,
                                         newChildProps: s,
-                                        nestedChildren: a,
+                                        nestedChildren: o,
                                     });
                             }
                         }
@@ -750,44 +750,44 @@ var Y = ["children"],
                     this.mapArrayTypeChildrenToProps(i, t)
                 );
             }),
-            (n.render = function () {
+            (r.render = function () {
                 var e = this.props,
                     t = e.children,
-                    n = m(e, Z),
-                    i = f({}, n),
-                    a = n.helmetData;
+                    r = g(e, K),
+                    i = f({}, r),
+                    o = r.helmetData;
                 return (
                     t && (i = this.mapChildrenToProps(t, i)),
-                    !a || a instanceof F || (a = new F(a.context, a.instances)),
-                    a
-                        ? r.createElement(X, f({}, i, { context: a.value, helmetData: void 0 }))
-                        : r.createElement(N.Consumer, null, function (e) {
-                              return r.createElement(X, f({}, i, { context: e }));
+                    !o || o instanceof V || (o = new V(o.context, o.instances)),
+                    o
+                        ? n.createElement(G, f({}, i, { context: o.value, helmetData: void 0 }))
+                        : n.createElement(F.Consumer, null, function (e) {
+                              return n.createElement(G, f({}, i, { context: e }));
                           })
                 );
             }),
             t
         );
-    })(r.Component);
-(Q.propTypes = {
-    base: a().object,
-    bodyAttributes: a().object,
-    children: a().oneOfType([a().arrayOf(a().node), a().node]),
-    defaultTitle: a().string,
-    defer: a().bool,
-    encodeSpecialCharacters: a().bool,
-    htmlAttributes: a().object,
-    link: a().arrayOf(a().object),
-    meta: a().arrayOf(a().object),
-    noscript: a().arrayOf(a().object),
-    onChangeClientState: a().func,
-    script: a().arrayOf(a().object),
-    style: a().arrayOf(a().object),
-    title: a().string,
-    titleAttributes: a().object,
-    titleTemplate: a().string,
-    prioritizeSeoTags: a().bool,
-    helmetData: a().object,
+    })(n.Component);
+(J.propTypes = {
+    base: o().object,
+    bodyAttributes: o().object,
+    children: o().oneOfType([o().arrayOf(o().node), o().node]),
+    defaultTitle: o().string,
+    defer: o().bool,
+    encodeSpecialCharacters: o().bool,
+    htmlAttributes: o().object,
+    link: o().arrayOf(o().object),
+    meta: o().arrayOf(o().object),
+    noscript: o().arrayOf(o().object),
+    onChangeClientState: o().func,
+    script: o().arrayOf(o().object),
+    style: o().arrayOf(o().object),
+    title: o().string,
+    titleAttributes: o().object,
+    titleTemplate: o().string,
+    prioritizeSeoTags: o().bool,
+    helmetData: o().object,
 }),
-    (Q.defaultProps = { defer: !0, encodeSpecialCharacters: !0, prioritizeSeoTags: !1 }),
-    (Q.displayName = "Helmet");
+    (J.defaultProps = { defer: !0, encodeSpecialCharacters: !0, prioritizeSeoTags: !1 }),
+    (J.displayName = "Helmet");

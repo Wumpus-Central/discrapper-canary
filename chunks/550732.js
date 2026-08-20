@@ -22,8 +22,8 @@ var i = l(991660),
     T = l(816709),
     I = l(652215),
     N = l(375708),
-    R = l(596051),
-    C = l(617736);
+    R = l(354084),
+    C = l(592551);
 function p(s) {
     let { appId: t, skuId: l, transitionState: p, onClose: f, children: O, footer: P } = s,
         U = (0, c.bG)([v.A, E.A], () => v.A.getApplication(t) ?? E.A.getApplicationRecord(t), [t]),

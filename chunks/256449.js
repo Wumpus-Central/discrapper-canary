@@ -2,14 +2,14 @@
 n.d(t, {
     Gc: () => b,
     Sr: () => y,
-    Th: () => S,
+    Th: () => v,
     UT: () => R,
-    XQ: () => N,
-    ZO: () => _,
-    Zq: () => L,
-    _c: () => v,
+    XQ: () => _,
+    ZO: () => N,
+    Zq: () => O,
+    _c: () => S,
     ln: () => j,
-    pD: () => O,
+    pD: () => M,
 }),
     n(321073),
     n(667532);
@@ -29,21 +29,21 @@ var l = n(582128),
     g = n(931959),
     x = n(750385),
     A = n(194004),
-    E = n(68935),
-    C = n(652215),
+    C = n(68935),
+    E = n(652215),
     I = n(375708);
 function y(e) {
-    N();
+    _();
     let t = (0, i.bG)([x.A], () => x.A.hasLoadedStickerPacks);
     l.useEffect(() => {
         t && null == x.A.getStickerPack(e) && (0, p.zk)(e);
     }, [e, t]);
 }
-function S(e) {
-    let t = a.S0.useSetting();
-    return (0, E.Qn)(t, e);
-}
 function v(e) {
+    let t = a.S0.useSetting();
+    return (0, C.Qn)(t, e);
+}
+function S(e) {
     let {
         collapsedStickersCategories: t,
         filteredStickers: n,
@@ -61,20 +61,20 @@ function v(e) {
             p = [],
             g = 0,
             x = 0,
-            C = 0;
+            E = 0;
         if (0 !== r) {
             function y(t, n) {
                 let l = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-                    i = (0, E.Xw)(t[0]) ? o.A.getGuild(t[0].guild_id) : void 0,
+                    i = (0, C.Xw)(t[0]) ? o.A.getGuild(t[0].guild_id) : void 0,
                     { canCreateExpressions: r } = (0, s.ie)(i),
                     a = u.A.getGuildId(),
                     c = d.findIndex((e) => e.type === A.Z2.FAVORITE),
                     y = d.findIndex((e) => e.type === A.Z2.RECENT),
-                    S = t.length;
-                null != i && a === i.id && r && t.length < (0, h.aG)(i.premiumTier) && S++;
-                let v = Math.ceil(S / e);
-                f[x] = l ? 0 : v;
-                for (let s = 0; s < v; s++) {
+                    v = t.length;
+                null != i && a === i.id && r && t.length < (0, h.aG)(i.premiumTier) && v++;
+                let S = Math.ceil(v / e);
+                f[x] = l ? 0 : S;
+                for (let s = 0; s < S; s++) {
                     let r = s * e,
                         a = r + e,
                         o = t
@@ -82,17 +82,17 @@ function v(e) {
                             .map((e, t) => ({
                                 type: A.op.STICKER,
                                 sticker: e,
-                                packId: (0, E.FD)(e) ? e.pack_id : "TODO - fix",
+                                packId: (0, C.FD)(e) ? e.pack_id : "TODO - fix",
                                 gridSectionIndex: x,
                                 rowIndex: g,
                                 columnIndex: t,
-                                visibleRowIndex: C,
+                                visibleRowIndex: E,
                                 category: n,
                             }));
                     x > y &&
                         x > c &&
                         null != i &&
-                        S > t.length &&
+                        v > t.length &&
                         o.push({
                             type: A.op.CREATE_STICKER,
                             guild_id: i.id,
@@ -100,9 +100,9 @@ function v(e) {
                             gridSectionIndex: x,
                             rowIndex: g,
                             columnIndex: o.length,
-                            visibleRowIndex: C,
+                            visibleRowIndex: E,
                         }),
-                        l || (C++, p.push(o), m.push(o.length)),
+                        l || (E++, p.push(o), m.push(o.length)),
                         g++;
                 }
                 x++;
@@ -119,10 +119,10 @@ function v(e) {
         return { rowCount: g, rowCountBySection: f, stickersGrid: p, gutterWidth: l, columnCounts: m };
     }, [t, n, i, r, a, c, d]);
 }
-function _(e) {
+function N(e) {
     return !0;
 }
-function N() {
+function _() {
     l.useEffect(() => {
         (0, p.YB)();
     }, []);
@@ -136,7 +136,7 @@ function b() {
     let e = j();
     return (0, i.yK)(
         [x.A],
-        () => e.map((e) => x.A.getStickerById(e)).filter((e) => null != e && (!(0, E.Xw)(e) || (0, E.Y4)(e))),
+        () => e.map((e) => x.A.getStickerById(e)).filter((e) => null != e && (!(0, C.Xw)(e) || (0, C.Y4)(e))),
         [e],
     );
 }
@@ -150,12 +150,12 @@ function R() {
             t);
     return (0, i.yK)([x.A], () => n.map((e) => x.A.getStickerById(e)).filter((e) => void 0 !== e), [n]);
 }
-function L(e) {
+function O(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         n = (0, i.bG)([x.A], () => x.A.getStickerById(e.id)),
         [s, r] = l.useState(!0),
         [a, o] = l.useState(!1),
-        u = (0, E.Xw)(e) || (0, E.FD)(e),
+        u = (0, C.Xw)(e) || (0, C.FD)(e),
         c = { hasFetched: a, isReturnable: u, renderableSticker: e, shouldFetch: s, stickersStoreDefinition: n },
         d = l.useRef(c);
     return (l.useEffect(() => {
@@ -183,7 +183,7 @@ function L(e) {
         ? [e, a]
         : [n ?? null, a];
 }
-function O(e) {
+function M(e) {
     let t = (function (e) {
         let t,
             n,
@@ -229,13 +229,13 @@ function O(e) {
                               n &&
                               l.unshift({ type: A.Z2.EMPTY_GUILD_UPSELL, id: t.id, name: t.name, stickers: [] }),
                             null == r ||
-                                m.$3({ permission: C.xBc.USE_EXTERNAL_EMOJIS, user: r, context: e }) ||
+                                m.$3({ permission: E.xBc.USE_EXTERNAL_EMOJIS, user: r, context: e }) ||
                                 (l = l.filter((t) => t.id === e.getGuildId()));
                     }
                     return l;
                 }, [t, n, r, e]));
         return l.useMemo(() => {
-            let t = u.map(E.T5);
+            let t = u.map(C.T5);
             return [
                 { type: A.Z2.FAVORITE, id: A.Z2.FAVORITE, name: I.intl.string(I.t.y3LQCG), stickers: a },
                 {
@@ -244,10 +244,10 @@ function O(e) {
                     name: I.intl.string(I.t["6hjpXW"]),
                     stickers:
                         h?.filter((t) =>
-                            (0, E.Xw)(t)
+                            (0, C.Xw)(t)
                                 ? (x.A.getStickersByGuildId(t.guild_id)?.some((e) => e.id === t.id) ?? !1) &&
                                   (0, f.W$)(t, p, e) !== f.Ux.NONSENDABLE
-                                : (0, E.FD)(t)
+                                : (0, C.FD)(t)
                                   ? u.some((e) => e.id === t.pack_id)
                                   : void 0,
                         ) ?? [],

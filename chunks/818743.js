@@ -26,7 +26,7 @@ var s,
     E = t(130147),
     _ = t(344346),
     w = t(375708),
-    P = t(795419);
+    P = t(255852);
 let S = function (e) {
     let { user: i, guildId: t, nameplate: s } = e,
         n = (0, a.cf)([b.A], () => b.A.getPendingChanges(t)),
@@ -106,7 +106,7 @@ let W = { skuId: "None" },
             });
         }, [i, e, t]);
     };
-var Q = t(652465);
+var Q = t(710590);
 function Y(e) {
     let { currentUser: i, nameplate: t, section: s, canUsePremiumCollectibles: a, isSelected: r, onClick: c } = e,
         d = (0, n.useRef)(null),
@@ -200,7 +200,7 @@ let Z = function (e) {
 };
 var q = t(652215),
     ee = t(202541),
-    ei = t(389247);
+    ei = t(379842);
 function et(e) {
     let {
             currentUser: i,

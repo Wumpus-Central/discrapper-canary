@@ -6,7 +6,7 @@ var i = a(503698),
 if (588245 != a.j) var l = a(834730);
 var n = a(309326),
     o = a(337322),
-    d = a(120932);
+    d = a(870247);
 function u(t) {
     let { powerup: e } = t,
         a = (0, o.A)(e);

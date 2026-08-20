@@ -1,48 +1,48 @@
-n.d(t, { A: () => R }), n(321073);
-var i = n(90644),
-    s = n(382483),
-    a = n(385113),
-    l = n(627363),
-    r = n(587895),
-    E = n(201718),
-    o = n(885386),
-    c = n(889227),
-    d = n(280450),
-    _ = n(633075),
-    S = n(321191),
-    u = n(758873),
-    A = n(903209);
-async function I() {
-    let e = o.Q_.getSetting(),
+i.d(t, { A: () => u }), i(321073);
+var E = i(90644),
+    s = i(382483),
+    n = i(385113),
+    r = i(627363),
+    l = i(587895),
+    a = i(201718),
+    _ = i(885386),
+    S = i(889227),
+    A = i(280450),
+    c = i(633075),
+    o = i(321191),
+    I = i(758873),
+    T = i(903209);
+async function d() {
+    let e = _.Q_.getSetting(),
         t = [(0, s.Wq)()];
     e && t.push((0, s.i$)()), await Promise.allSettled(t);
 }
-async function h(e) {
+async function R(e) {
     let t = new Set(
-        (S.A.getWidgets(e) ?? [])
-            .filter((e) => e instanceof _.R)
+        (o.A.getWidgets(e) ?? [])
+            .filter((e) => e instanceof c.R)
             .map((e) => e.applicationId)
-            .filter((e) => a.A.getFetchState(e) === a.e.NOT_FETCHED),
+            .filter((e) => n.A.getFetchState(e) === n.e.NOT_FETCHED),
     );
     0 !== t.size && (await Promise.allSettled([...t].map((e) => (0, s.un)(e))));
 }
-async function T(e, t) {
-    let [n] = (0, u.G)({ userId: e, currentUserId: d.default.getId(), guildId: t }).cards;
-    if (n?.type !== "live" || null == n.activity.application_id || (0, i.A)(n.activity)) return;
-    let s = n.activity.application_id;
-    r.A.isHydrated(s) || r.A.didFetchingApplicationFail(s) || (await l.Ay.fetchApplication(s, !1));
+async function N(e, t) {
+    let [i] = (0, I.G)({ userId: e, currentUserId: A.default.getId(), guildId: t }).cards;
+    if (i?.type !== "live" || null == i.activity.application_id || (0, E.A)(i.activity)) return;
+    let s = i.activity.application_id;
+    l.A.isHydrated(s) || l.A.didFetchingApplicationFail(s) || (await r.Ay.fetchApplication(s, !1));
 }
-async function R() {
-    for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
-    let [i, s, a] = t[0] instanceof c.A ? [t[0].id, t[0].getAvatarURL(void 0, 80), t[1]] : t,
-        l = (0, A.A)(i, s, { withMutualFriends: !0, withMutualGuilds: !0, waitForRefetch: !1, ...a });
-    if (a?.type !== "popout" && a?.type !== "account_popout") return l;
-    let r = E.P.fetchMany([i]),
-        o = I(),
-        d = T(i, a?.guildId),
-        _ = Promise.allSettled([l, o]).then((e) => {
+async function u() {
+    for (var e = arguments.length, t = Array(e), i = 0; i < e; i++) t[i] = arguments[i];
+    let [E, s, n] = t[0] instanceof S.A ? [t[0].id, t[0].getAvatarURL(void 0, 80), t[1]] : t,
+        r = (0, T.A)(E, s, { withMutualFriends: !0, withMutualGuilds: !0, waitForRefetch: !1, ...n });
+    if (n?.type !== "popout" && n?.type !== "account_popout") return r;
+    let l = a.P.fetchMany([E]),
+        _ = d(),
+        A = N(E, n?.guildId),
+        c = Promise.allSettled([r, _]).then((e) => {
             let [t] = e;
-            if ("rejected" !== t.status) return h(i);
+            if ("rejected" !== t.status) return R(E);
         });
-    await Promise.all([l, Promise.allSettled([r, o, d, _])]);
+    await Promise.all([r, Promise.allSettled([l, _, A, c])]);
 }

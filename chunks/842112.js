@@ -42,7 +42,7 @@ function h(e) {
                         label: f.intl.string(f.t.Dx7im5),
                         action: () =>
                             (0, a.openModalLazy)(async () => {
-                                let { default: e } = await Promise.all([t.e("763779"), t.e("699116")]).then(
+                                let { default: e } = await Promise.all([t.e("507278"), t.e("699116")]).then(
                                     t.bind(t, 672551),
                                 );
                                 return (t) => (0, r.jsx)(e, { ...t, folderId: l, folderName: h, folderColor: x });

@@ -5,9 +5,9 @@ var i = n(97808),
     r = n(778712),
     s = n(854627),
     a = n(19575),
-    d = n(602339),
+    d = n(670595),
     c = n(375708),
-    u = n(662119);
+    u = n(756308);
 let o = a.Ay.getEnableHardwareAcceleration() ? i.Js : i.eu;
 function x(e) {
     let { user: t, avatarSize: n = r._3.SIZE_48 } = e,

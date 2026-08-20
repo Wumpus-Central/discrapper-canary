@@ -1,4 +1,4 @@
-r.d(t, { A: () => E });
+r.d(t, { A: () => R });
 var n = r(477900),
     s = r(582128),
     l = r(503698),
@@ -14,10 +14,10 @@ var n = r(477900),
     g = r(650583),
     f = r(375708),
     I = r(47299);
-let E = s.memo(function (e) {
-    let { width: t, height: r, src: l, gifSrc: E, url: R, format: _, className: y } = e,
+let R = s.memo(function (e) {
+    let { width: t, height: r, src: l, gifSrc: R, url: E, format: _, className: y } = e,
         [S, v] = s.useState(!1),
-        C = (0, h.km)((0, d.xo)(R)),
+        C = (0, h.km)((0, d.xo)(E)),
         A = C ? f.intl.string(f.t["5/NS74"]) : f.intl.string(f.t.nIH0v8),
         w = C ? a.StarIcon : o.y;
     function x(e) {
@@ -25,8 +25,8 @@ let E = s.memo(function (e) {
             e.stopPropagation(),
             v(!0),
             C
-                ? (0, d.Tr)(R)
-                : ((0, d.wg)({ url: R, src: l, gifSrc: E, width: t, height: r, format: _ }),
+                ? (0, d.Tr)(E)
+                : ((0, d.wg)({ url: E, src: l, gifSrc: R, width: t, height: r, format: _ }),
                   m._.dispatch(p.jej.FAVORITE_GIF));
     }
     return (

@@ -17,7 +17,7 @@ var r = s(17928),
     g = s(312006),
     v = s(366098),
     k = s(375708),
-    p = s(935047);
+    p = s(494392);
 function E(t) {
     let { channelId: n } = t;
     return (0, e.jsx)(N, { channelId: n });

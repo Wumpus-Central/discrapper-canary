@@ -18,7 +18,7 @@ var e = n(477900),
     N = n(652215),
     f = n(124759),
     E = n(375708),
-    b = n(672745);
+    b = n(448320);
 function C(s) {
     let { guild: i } = s,
         n = p.Ay.getGuildIconURL({ id: i.id, icon: i.icon, size: 120 });

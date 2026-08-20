@@ -27,7 +27,7 @@ var l = n(477900),
     C = n(53505),
     S = n(652215),
     D = n(375708),
-    E = n(333053);
+    E = n(799622);
 let W = [
         { getOs: () => D.intl.string(D.t.NK5ySJ), icon: E.Bt, url: () => (0, C.oW)("osx", !1), platformKey: 0 },
         { getOs: () => D.intl.string(D.t.OvKGE6), icon: E.KF, url: () => (0, C.oW)("win", !1), platformKey: 1 },

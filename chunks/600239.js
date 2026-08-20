@@ -5,7 +5,7 @@ var l = a(189213),
     s = a(834730),
     i = a(297264),
     r = a(25176),
-    o = a(731538);
+    o = a(505965);
 let d = "shop-assets-preview-instructions-modal",
     c = "shop-pfx-preview-instructions-modal";
 function u(e) {

@@ -11,7 +11,7 @@ var r = n(503698),
     c = n(834730),
     u = n(191096),
     _ = n(375708),
-    E = n(386729);
+    E = n(123502);
 function A(e) {
     let { obscured: t, children: n, className: r, contentClassName: A, heading: h, description: I, onClose: f } = e;
     return t

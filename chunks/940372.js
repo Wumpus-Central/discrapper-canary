@@ -4,7 +4,7 @@ var i = e(477900),
     a = e(189213),
     r = e(73621),
     l = e(375708),
-    c = e(906159);
+    c = e(945060);
 let o = function (t) {
     let { transitionState: s, errors: e, onClose: o } = t,
         d = n.useMemo(() => [{ variant: "secondary", text: l.intl.string(l.t["NX+WJN"]), onClick: o }], [o]);

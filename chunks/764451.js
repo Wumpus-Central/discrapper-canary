@@ -101,7 +101,7 @@ var M = n(503698),
     x = n(150934),
     k = n(95477),
     F = n(106236),
-    V = n(892813);
+    V = n(450278);
 function B(e) {
     let { controls: t, props: n, onPropsChange: r } = e;
     function a(e, t) {

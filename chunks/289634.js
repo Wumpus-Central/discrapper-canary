@@ -19,7 +19,7 @@ var i = t(477900),
     A = t(249286),
     I = t(867060),
     b = t(375708),
-    k = t(645378);
+    k = t(434031);
 function f(e) {
     let { canUseBoosts: s, guildId: t, powerup: a, isNewPerk: r, forceStaticImages: o } = e,
         [f, w] = l.useState(!1),
@@ -106,7 +106,7 @@ function f(e) {
               children: T,
           });
 }
-var w = t(150387);
+var w = t(620968);
 function S(e) {
     let {
             guildId: s,

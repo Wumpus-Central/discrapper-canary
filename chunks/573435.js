@@ -23,7 +23,7 @@ var i,
 n(883392);
 var d = n(190460),
     c = n(778712),
-    u = n(368814),
+    u = n(867873),
     _ =
         (((i = {}).SQUIRCLE = "svg-mask-squircle"),
         (i.NOTCHED_SQUIRCLE_16 = "svg-mask-notched-squircle-16"),

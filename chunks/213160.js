@@ -1,4 +1,4 @@
-i.exports = {
+f.exports = {
     kL: "container_f0df50",
     Zg: "emoji_f0df50",
     u8: "emoji1_f0df50",

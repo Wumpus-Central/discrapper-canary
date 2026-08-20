@@ -48,8 +48,8 @@ var b = s(866665),
     Q = s(713517),
     L = s(240248),
     R = s(375708),
-    w = s(833860),
-    G = s(668534);
+    w = s(248627),
+    G = s(862649);
 function F() {
     let { quest: e, sourceQuestContent: t, isPortrait: s, onClose: l } = a.useContext(M.a),
         o = (0, f.LS)(e),
@@ -127,7 +127,7 @@ var H = s(604121),
     B = s(453384),
     X = s(646764),
     $ = s(630037),
-    J = s(634726);
+    J = s(150387);
 async function Z() {
     return await s.e("40119").then(s.t.bind(s, 718698, 19));
 }

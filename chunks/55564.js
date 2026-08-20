@@ -15,7 +15,7 @@ var e = i(477900),
     x = i(892035),
     u = i(49999),
     f = i(375708),
-    j = i(726209);
+    j = i(616004);
 function C(t) {
     let { onClose: s, ...i } = t,
         C = (0, x.z$)("CollectiblesAnnouncementModal"),

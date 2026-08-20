@@ -51,7 +51,7 @@ function x(e) {
     });
 }
 var A = n(33683);
-function E(e) {
+function C(e) {
     let {
             component: t,
             variant: n,
@@ -66,26 +66,26 @@ function E(e) {
         g = (0, m.Hx)(t, c, f, s, u);
     if ("hidden" === g.status) return null;
     if ("skeleton" === g.status) return (0, i.jsx)(x, { variant: n, className: r });
-    let E = null != g.icon ? (0, i.jsx)(p, { media: g.icon, variant: n }) : null;
+    let C = null != g.icon ? (0, i.jsx)(p, { media: g.icon, variant: n }) : null;
     return (0, i.jsxs)("div", {
         className: d()(A.k, r),
         children: [
-            null != E && "left" === o ? E : null,
+            null != C && "left" === o ? C : null,
             (0, i.jsx)(h.E, { variant: n, color: l, lineClamp: a, children: g.text }),
-            null != E && "right" === o ? E : null,
+            null != C && "right" === o ? C : null,
         ],
     });
 }
-var C = n(640056);
+var E = n(640056);
 function I(e) {
     let { variant: t = "default", textColor: n } = e,
         { surfaceConfig: l } = en(),
         s = "badge" === t;
     return (0, i.jsx)("div", {
-        className: C.z,
-        children: (0, i.jsx)(E, {
+        className: E.z,
+        children: (0, i.jsx)(C, {
             component: l.components.stat,
-            className: C.Q,
+            className: E.Q,
             variant: s ? "text-xs/normal" : "text-xs/semibold",
             color: n,
             hideLabel: s,
@@ -96,31 +96,31 @@ function I(e) {
     });
 }
 var y = n(835887);
-function S(e) {
+function v(e) {
     let { className: t } = e;
     return (0, i.jsx)("div", { className: d()(y.z, t) });
 }
-var v = n(620632),
-    _ = n(836032);
-function N(e) {
+var S = n(620632),
+    N = n(836032);
+function _(e) {
     let { small: t = !1, image: n } = e;
     return (0, i.jsxs)("div", {
-        className: d()(_.kL, { [_.PG]: t }),
+        className: d()(N.kL, { [N.PG]: t }),
         children: [
             (0, i.jsxs)("div", {
-                className: _.Qs,
+                className: N.Qs,
                 children: [
-                    (0, i.jsx)("div", { className: _.wx }),
-                    (0, i.jsx)("div", { className: _.yF }),
+                    (0, i.jsx)("div", { className: N.wx }),
+                    (0, i.jsx)("div", { className: N.yF }),
                     (0, i.jsxs)("div", {
-                        className: _.M1,
+                        className: N.M1,
                         children: [
-                            (0, i.jsx)("div", { className: _.dJ }),
-                            (0, i.jsx)("div", { className: _.dJ }),
-                            (0, i.jsx)("div", { className: _.dJ }),
-                            (0, i.jsx)("div", { className: _.dJ }),
-                            (0, i.jsx)("div", { className: _.dJ }),
-                            (0, i.jsx)("div", { className: _.dJ }),
+                            (0, i.jsx)("div", { className: N.dJ }),
+                            (0, i.jsx)("div", { className: N.dJ }),
+                            (0, i.jsx)("div", { className: N.dJ }),
+                            (0, i.jsx)("div", { className: N.dJ }),
+                            (0, i.jsx)("div", { className: N.dJ }),
+                            (0, i.jsx)("div", { className: N.dJ }),
                         ],
                     }),
                 ],
@@ -133,15 +133,15 @@ var T = n(170118);
 function j(e) {
     let { small: t = !1 } = e,
         { surfaceConfig: n, resolveFieldValue: l } = en(),
-        s = l(n.components.contained_image?.fields.image, [v.o.MEDIA]);
-    return (0, i.jsx)(N, {
+        s = l(n.components.contained_image?.fields.image, [S.o.MEDIA]);
+    return (0, i.jsx)(_, {
         small: t,
         image: (0, i.jsx)("div", {
             className: T.ZS,
             children:
                 null != s
                     ? (0, i.jsx)("img", { alt: "", src: s.media.url, className: T.Sl })
-                    : (0, i.jsx)(S, { className: T.h2 }),
+                    : (0, i.jsx)(v, { className: T.h2 }),
         }),
     });
 }
@@ -155,22 +155,22 @@ function b(e) {
     });
 }
 var R = n(506619),
-    L = n(15555);
-function O(e) {
+    O = n(15555);
+function M(e) {
     let { surfaceConfig: t, resolveFieldValue: n } = en(),
-        l = n(t.components.hero_image?.fields.image, [v.o.MEDIA]);
-    return (0, i.jsx)(N, {
+        l = n(t.components.hero_image?.fields.image, [S.o.MEDIA]);
+    return (0, i.jsx)(_, {
         ...e,
         image: (0, i.jsx)("div", {
-            className: L.ZS,
+            className: O.ZS,
             children:
                 null != l
-                    ? (0, i.jsx)(b, { alt: "", media: l.media, className: d()(L.c8, R.g) })
-                    : (0, i.jsx)(S, { className: L.pm }),
+                    ? (0, i.jsx)(b, { alt: "", media: l.media, className: d()(O.c8, R.g) })
+                    : (0, i.jsx)(v, { className: O.pm }),
         }),
     });
 }
-var M = n(123292),
+var L = n(123292),
     w = n(402233);
 function k(e) {
     let { image: t } = e,
@@ -185,13 +185,13 @@ function k(e) {
                     (0, i.jsxs)("div", {
                         className: w.Qs,
                         children: [
-                            (0, i.jsx)(E, {
+                            (0, i.jsx)(C, {
                                 component: l.components.stat,
                                 variant: "heading-sm/semibold",
                                 lineClamp: 1,
                                 required: !0,
                             }),
-                            (0, i.jsx)(M.Q, {
+                            (0, i.jsx)(L.Q, {
                                 textVariant: "text-xs/normal",
                                 variant: "secondary",
                                 text: "View All Stats",
@@ -208,21 +208,21 @@ function k(e) {
 var P = n(425367);
 function D() {
     let { surfaceConfig: e, resolveFieldValue: t } = en(),
-        n = t(e.components.contained_image?.fields.image, [v.o.MEDIA]);
+        n = t(e.components.contained_image?.fields.image, [S.o.MEDIA]);
     return (0, i.jsx)(k, {
         image: (0, i.jsx)("div", {
             className: P.ZS,
             children:
                 null != n
                     ? (0, i.jsx)("img", { alt: "", src: n.media.url, className: P.Sl })
-                    : (0, i.jsx)(S, { className: P.h2 }),
+                    : (0, i.jsx)(v, { className: P.h2 }),
         }),
     });
 }
 var U = n(853512);
 function G() {
     let { surfaceConfig: e, resolveFieldValue: t } = en(),
-        n = t(e.components.hero_image?.fields.image, [v.o.MEDIA]);
+        n = t(e.components.hero_image?.fields.image, [S.o.MEDIA]);
     return (0, i.jsx)(k, {
         image:
             null != n
@@ -230,21 +230,21 @@ function G() {
                       className: U.Xr,
                       children: (0, i.jsx)(b, { media: n.media, className: d()(U.c8, R.g) }),
                   })
-                : (0, i.jsx)(S, { className: U.pm }),
+                : (0, i.jsx)(v, { className: U.pm }),
     });
 }
 var V = n(193396);
 function F(e) {
     let { resolveFieldValue: t } = en(),
-        n = t(e.componentConfig?.fields.image, [v.o.MEDIA]),
-        l = t(e.componentConfig?.fields.name, [v.o.STRING]),
-        s = t(e.componentConfig?.fields.description, [v.o.STRING]);
+        n = t(e.componentConfig?.fields.image, [S.o.MEDIA]),
+        l = t(e.componentConfig?.fields.name, [S.o.STRING]),
+        s = t(e.componentConfig?.fields.description, [S.o.STRING]);
     return (0, i.jsxs)("div", {
         className: V.E4,
         children: [
             null != n
                 ? (0, i.jsx)("img", { src: n.media.url, className: V.bA, alt: "" })
-                : (0, i.jsx)(S, { className: V.ET }),
+                : (0, i.jsx)(v, { className: V.ET }),
             (0, i.jsxs)("div", {
                 className: V.Vx,
                 children: [
@@ -280,18 +280,18 @@ var B = n(141255);
 function W() {
     let { surfaceConfig: e, resolveFieldValue: t } = en(),
         n = s.useId(),
-        l = t(e.components.objective?.fields.image, [v.o.MEDIA]),
-        r = t(e.components.objective?.fields.name, [v.o.STRING]),
-        a = t(e.components.objective?.fields.description, [v.o.STRING]),
-        o = t(e.components.progress?.fields.current, [v.o.NUMBER]),
-        u = t(e.components.progress?.fields.max, [v.o.NUMBER]),
+        l = t(e.components.objective?.fields.image, [S.o.MEDIA]),
+        r = t(e.components.objective?.fields.name, [S.o.STRING]),
+        a = t(e.components.objective?.fields.description, [S.o.STRING]),
+        o = t(e.components.progress?.fields.current, [S.o.NUMBER]),
+        u = t(e.components.progress?.fields.max, [S.o.NUMBER]),
         c = (0, m.eq)(o, u);
     return (0, i.jsxs)("div", {
         className: B.zr,
         children: [
             null != l
                 ? (0, i.jsx)("img", { src: l.media.url, className: B.Sl, alt: "" })
-                : (0, i.jsx)(S, { className: B.Sl }),
+                : (0, i.jsx)(v, { className: B.Sl }),
             (0, i.jsxs)("div", {
                 className: B.Qs,
                 children: [
@@ -410,31 +410,31 @@ function Y() {
     });
 }
 var q = n(892203);
-function $() {
+function J() {
     let { surfaceConfig: e } = en();
     return (0, i.jsxs)("div", {
         className: q.Q,
         children: [
-            (0, i.jsx)(E, {
+            (0, i.jsx)(C, {
                 component: e.components.title,
                 variant: "text-lg/medium",
                 lineClamp: 2,
                 required: !0,
                 className: q.D,
             }),
-            (0, i.jsx)(E, {
+            (0, i.jsx)(C, {
                 component: e.components.subtitle_1,
                 variant: "text-sm/normal",
                 color: "text-subtle",
                 lineClamp: 2,
             }),
-            (0, i.jsx)(E, {
+            (0, i.jsx)(C, {
                 component: e.components.subtitle_2,
                 variant: "text-sm/normal",
                 color: "text-subtle",
                 lineClamp: 2,
             }),
-            (0, i.jsx)(E, {
+            (0, i.jsx)(C, {
                 component: e.components.subtitle_3,
                 variant: "text-sm/normal",
                 color: "text-subtle",
@@ -443,30 +443,30 @@ function $() {
         ],
     });
 }
-var J = n(828575);
+var $ = n(828575);
 function X() {
     let { surfaceConfig: e, resolveFieldValue: t, header: n } = en(),
-        l = t(e.components.contained_image?.fields.image, [v.o.MEDIA]);
+        l = t(e.components.contained_image?.fields.image, [S.o.MEDIA]);
     return (0, i.jsxs)("div", {
-        className: J.zr,
+        className: $.zr,
         children: [
-            null != n && (0, i.jsx)("div", { className: J.wx, children: n }),
-            (0, i.jsx)($, {}),
+            null != n && (0, i.jsx)("div", { className: $.wx, children: n }),
+            (0, i.jsx)(J, {}),
             null != l
-                ? (0, i.jsx)("img", { alt: "", src: l.media.url, className: J.Sl })
-                : (0, i.jsx)(S, { className: J.h2 }),
+                ? (0, i.jsx)("img", { alt: "", src: l.media.url, className: $.Sl })
+                : (0, i.jsx)(v, { className: $.h2 }),
         ],
     });
 }
 var Q = n(775176);
 function ee() {
     let { surfaceConfig: e, resolveFieldValue: t, header: n } = en(),
-        l = t(e.components.hero_image?.fields.image, [v.o.MEDIA]);
+        l = t(e.components.hero_image?.fields.image, [S.o.MEDIA]);
     return (0, i.jsxs)("div", {
         className: Q.zr,
         children: [
             null != n && (0, i.jsx)("div", { className: Q.wx, children: n }),
-            (0, i.jsx)("div", { className: Q.hQ, children: (0, i.jsx)($, {}) }),
+            (0, i.jsx)("div", { className: Q.hQ, children: (0, i.jsx)(J, {}) }),
             null != l
                 ? (0, i.jsx)("div", {
                       className: Q._j,
@@ -475,7 +475,7 @@ function ee() {
                           children: (0, i.jsx)("img", { alt: "", src: l.media.url, className: d()(Q.Sl, R.g) }),
                       }),
                   })
-                : (0, i.jsx)(S, { className: Q.h2 }),
+                : (0, i.jsx)(v, { className: Q.h2 }),
         ],
     });
 }
@@ -501,7 +501,7 @@ let el = {
     },
     [a.m.ACTIVITY_ACCESSORY]: { [o.ACTIVITY_ACCESSORY_STAT]: (e) => (0, i.jsx)(I, { ...e }) },
     [a.m.ADD_WIDGET_PREVIEW]: {
-        [o.ADD_WIDGET_PREVIEW_HERO]: (e) => (0, i.jsx)(O, { ...e }),
+        [o.ADD_WIDGET_PREVIEW_HERO]: (e) => (0, i.jsx)(M, { ...e }),
         [o.ADD_WIDGET_PREVIEW_CONTAINED]: (e) => (0, i.jsx)(j, { ...e }),
     },
 };
@@ -522,7 +522,7 @@ function ei(e) {
                   header: o,
                   onClick: c,
                   resolutionContext: l,
-                  resolveFieldValue: (0, v.J)(l),
+                  resolveFieldValue: (0, S.J)(l),
               },
               children: f(d),
           });

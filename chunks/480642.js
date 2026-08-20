@@ -19,7 +19,7 @@ var l = t(477900),
     f = t(725836),
     j = t(87725),
     A = t(834730),
-    b = t(834334);
+    b = t(126223);
 function y(e) {
     let { countryCode: a, relocationCountryCode: t } = e;
     return (0, l.jsxs)("div", {

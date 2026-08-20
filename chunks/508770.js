@@ -5,7 +5,7 @@ var i = n(477900),
     a = n.n(r),
     s = n(460890),
     l = n(834730),
-    o = n(690533);
+    o = n(963434);
 function d(e) {
     return "string" == typeof e || e.hasOwnProperty("text") ? { type: e, variant: "brand" } : e;
 }

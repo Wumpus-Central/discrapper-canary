@@ -26,7 +26,7 @@ var s = n(39623),
         i),
     r = n(375708),
     o = n(652215),
-    c = n(872252);
+    c = n(453763);
 function d(e) {
     let t,
         { message: n, onDeleteMessage: i, children: d } = e,

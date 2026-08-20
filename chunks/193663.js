@@ -9,7 +9,7 @@ var l = n(477900),
     u = n(939249),
     c = n(88686),
     d = n(174755),
-    h = n(450016);
+    h = n(996205);
 let m = function (e) {
     let {
         ref: t,
@@ -21,32 +21,32 @@ let m = function (e) {
         decorators: g,
         onClick: x,
         hovered: A,
-        selected: E,
-        muted: C,
+        selected: C,
+        muted: E,
         to: I,
         avatarClassName: y,
-        selectedClassName: S,
-        innerClassName: v,
-        wrapContent: _,
-        highlighted: N,
+        selectedClassName: v,
+        innerClassName: S,
+        wrapContent: N,
+        highlighted: _,
         focusProps: T,
         ...j
     } = e;
     (j.className = r()(j.className, h.kL, {
-        [h.wH]: E,
-        [h.mr]: N,
-        [S ?? ""]: E,
-        [h.vk]: !E && (null != I || null != x),
+        [h.wH]: C,
+        [h.mr]: _,
+        [v ?? ""]: C,
+        [h.vk]: !C && (null != I || null != x),
     })),
-        (j["aria-selected"] = j["aria-selected"] ?? E);
+        (j["aria-selected"] = j["aria-selected"] ?? C);
     let b = i.useRef(null),
         R = (0, l.jsxs)("div", {
             className: r()(h.sn, { [h.EY]: null != m }),
             children: [
-                (0, l.jsx)(d.A, { nameplate: m, hovered: A, selected: E, content: b, placement: c.u.MEMBER_LIST }),
+                (0, l.jsx)(d.A, { nameplate: m, hovered: A, selected: C, content: b, placement: c.u.MEMBER_LIST }),
                 (0, l.jsxs)("div", {
                     ref: b,
-                    className: r()(v, h.Zp, { [h.SU]: !E && C, [h.Ib]: _ }),
+                    className: r()(S, h.Zp, { [h.SU]: !C && E, [h.Ib]: N }),
                     children: [
                         (0, l.jsx)("div", { className: r()(h.my, y), children: n }),
                         (0, l.jsxs)("div", {
@@ -55,7 +55,7 @@ let m = function (e) {
                                 (0, l.jsxs)("div", {
                                     className: h.BG,
                                     children: [
-                                        (0, l.jsx)("div", { className: r()(h.UU, { [h.to]: _ }), children: s }),
+                                        (0, l.jsx)("div", { className: r()(h.UU, { [h.to]: N }), children: s }),
                                         g,
                                     ],
                                 }),

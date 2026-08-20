@@ -5,7 +5,7 @@ var n = i(477900),
     r = i(363957),
     s = i(754674),
     c = i(317574),
-    d = i(934746);
+    d = i(721995);
 function u(e) {
     let { guildId: t, widget: i } = e,
         l = (0, a.bG)([r.A], () => (i.requires_hydration ? r.A.getHydration(t, i.id) : void 0), [

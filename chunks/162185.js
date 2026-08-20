@@ -8,7 +8,7 @@ var n = t(935462),
     c = t(235986),
     o = t(936525),
     d = t(375708),
-    m = t(952052);
+    m = t(844768);
 function x(a) {
     let { onClose: e, img: t, title: x, body: u, content: N } = a;
     return (0, r.jsxs)(o.A, {

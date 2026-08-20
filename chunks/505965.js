@@ -1,4 +1,4 @@
-e.exports = {
+_.exports = {
     SS: "instructionsList__5d321",
     CT: "assetSection__5d321",
     jE: "modalContent__5d321",

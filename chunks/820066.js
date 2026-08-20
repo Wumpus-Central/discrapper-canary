@@ -3,8 +3,8 @@ n.d(t, {
     AS: () => Y,
     Ot: () => ee,
     cv: () => q,
-    PW: () => J,
-    l5: () => $,
+    PW: () => $,
+    l5: () => J,
     e0: () => ei,
     ZF: () => Q,
     VW: () => Z,
@@ -29,7 +29,7 @@ var a = n(635377),
     g = n(927813);
 let x = /^[a-z0-9_+\-.#]+$/i,
     A = new d.A("MarkdownToSlate"),
-    E = {
+    C = {
         link: { type: "skip" },
         highlight: { type: "skip" },
         blockQuote: { type: "skip" },
@@ -73,27 +73,27 @@ let x = /^[a-z0-9_+\-.#]+$/i,
         inlineCode: { type: "inlineStyle", before: "`", after: "`" },
         subtext: { type: "inlineStyle", before: "-# ", after: "" },
     },
-    C = new Set(["start", "end"]),
+    E = new Set(["start", "end"]),
     I = new Map([
-        ["inlineCode", C],
-        ["spoiler", C],
-        ["s", C],
+        ["inlineCode", E],
+        ["spoiler", E],
+        ["s", E],
         ["subtext", new Set(["start"])],
-        ["u", C],
+        ["u", E],
     ]),
     y = new Set(["*", "_", "~", "|", "\\"]),
-    S = {},
-    v = {};
+    v = {},
+    S = {};
 for (let e in m.Ay.RULES) {
-    if (!(e in E))
+    if (!(e in C))
         throw Error(
             `Slate: Unknown markdown rule: ${e}.  If you have just added a new markdown rule then you probably need to add it to this file so that the rich chat box understands it.`,
         );
-    let t = E[e];
-    "skip" !== t.type && (S[e] = _(m.Ay.RULES[e])),
-        "skip" !== t.type && "inlineObject" !== t.type && (v[e] = _("text" === e ? f.Ay : m.Ay.RULES[e]));
+    let t = C[e];
+    "skip" !== t.type && (v[e] = N(m.Ay.RULES[e])),
+        "skip" !== t.type && "inlineObject" !== t.type && (S[e] = N("text" === e ? f.Ay : m.Ay.RULES[e]));
 }
-function _(e) {
+function N(e) {
     i()(null != e.parse, "Slate: rule must have a parse function");
     let t = e.parse;
     return {
@@ -104,7 +104,7 @@ function _(e) {
         },
     };
 }
-function N(e) {
+function _(e) {
     return { type: "autolink", content: e[1], originalMatch: e };
 }
 let T = {
@@ -115,10 +115,10 @@ let T = {
                     : { type: "link", content: e[1], originalMatch: e },
         },
         autolink: {
-            parse: (e) => (null == (0, h.W1)(e[1]) ? { type: "text", content: e[0], originalMatch: e } : N(e)),
+            parse: (e) => (null == (0, h.W1)(e[1]) ? { type: "text", content: e[0], originalMatch: e } : _(e)),
         },
-        mailto: { parse: N },
-        tel: { parse: N },
+        mailto: { parse: _ },
+        tel: { parse: _ },
         codeBlockSyntax: {
             order: u.defaultRules.inlineCode.order - 0.1,
             match: (e) => /^(```)([a-z0-9_+\-.#]+$)?/.exec(e),
@@ -132,13 +132,13 @@ let T = {
         },
     },
     j = /(-# +)/,
-    b = (0, p.A)([S, T]),
-    R = (0, p.A)([v, T]),
-    L = c.X(b),
-    O = c.X(R),
-    M = { max: 1 / 0, maxAge: +g.A.Millis.MINUTE, updateAgeOnGet: !0 },
-    w = new (o())(M),
-    k = new (o())(M);
+    b = (0, p.A)([v, T]),
+    R = (0, p.A)([S, T]),
+    O = c.X(b),
+    M = c.X(R),
+    L = { max: 1 / 0, maxAge: +g.A.Millis.MINUTE, updateAgeOnGet: !0 },
+    w = new (o())(L),
+    k = new (o())(L);
 function P(e, t, n, l, s) {
     let { content: r, type: a, originalMatch: o } = n;
     switch ((i()(null != o, "Slate: originalMatch must be set " + JSON.stringify(n, void 0, 2)), a)) {
@@ -225,7 +225,7 @@ function P(e, t, n, l, s) {
                     if ("inlineCode" === t) return { before: l[1], after: l[1] };
                     if ("em" === t && "_" === e.substring(n, n + 1)) return { before: "_", after: "_" };
                     if ("subtext" === t) return { before: j.exec(l.input)[1], after: "" };
-                    let i = E["link" === t ? "url" : t];
+                    let i = C["link" === t ? "url" : t];
                     if ("inlineStyle" === i.type) return i;
                     throw Error("Slate: rule must be an inlineStyle");
                 })(t, a, l, o),
@@ -368,18 +368,18 @@ if ((n(654821), !s.KE._addedDiscordOverrides)) {
             for (let r of (function* n(r) {
                 let [h, f] = r,
                     p = f.length,
-                    g = J.isAncestor(f, c.path),
-                    x = J.isAncestor(f, d.path),
-                    E = g ? c.path[p] : 0,
-                    C = x ? d.path[p] : h.children.length - 1,
-                    I = o ? C : E,
-                    y = o ? E : C;
+                    g = $.isAncestor(f, c.path),
+                    x = $.isAncestor(f, d.path),
+                    C = g ? c.path[p] : 0,
+                    E = x ? d.path[p] : h.children.length - 1,
+                    I = o ? E : C,
+                    y = o ? C : E;
                 for (let r = I; !A && (!o ? r <= y : r >= y); r += m) {
                     let m = h.children[r],
-                        p = J.child(f, r);
+                        p = $.child(f, r);
                     if (q.isElement(m)) {
                         let e = o ? d.path : c.path;
-                        if (!(J.equals(p, e) || J.isAncestor(p, e))) {
+                        if (!($.equals(p, e) || $.isAncestor(p, e))) {
                             let e = t.isVoid(m);
                             if ("line" === a && q.isElement(m) && !e) {
                                 null != l && (yield l, (l = void 0)), (A = !0);
@@ -388,13 +388,13 @@ if ((n(654821), !s.KE._addedDiscordOverrides)) {
                             if (!u && e) continue;
                         }
                         for (let e of n([m, p])) yield e;
-                    } else if ($.isText(m))
+                    } else if (J.isText(m))
                         if ("line" === a) l = { path: p, offset: o ? 0 : m.text.length };
                         else if (0 === m.text.length) yield { path: p, offset: 0 };
                         else {
                             let n = s.KE.range(t, p);
-                            for (let l of (J.equals(p, c.path) && (n.anchor = c),
-                            J.equals(p, d.path) && (n.focus = d),
+                            for (let l of ($.equals(p, c.path) && (n.anchor = c),
+                            $.equals(p, d.path) && (n.focus = d),
                             e(t, { ...i, at: n })))
                                 yield l;
                         }
@@ -421,7 +421,7 @@ let Z = {
         },
         getFirstText(e) {
             let t = Z.node(e, z.fP);
-            return $.isText(t[0]) ? t[0] : null;
+            return J.isText(t[0]) ? t[0] : null;
         },
         getCurrentBlock(e) {
             return null == e.selection ? null : this.getParentBlock(e, e.selection);
@@ -478,11 +478,11 @@ let Z = {
         },
         getTextFromRange(e, t) {
             let [n, l] = Q.edges(t),
-                i = Z.nodes(e, { at: t, mode: "lowest", match: (e) => $.isText(e) }),
+                i = Z.nodes(e, { at: t, mode: "lowest", match: (e) => J.isText(e) }),
                 s = "";
             for (let [e, t] of i) {
-                let i = J.equals(t, n.path) ? n.offset : 0,
-                    r = J.equals(t, l.path) ? l.offset : 0;
+                let i = $.equals(t, n.path) ? n.offset : 0,
+                    r = $.equals(t, l.path) ? l.offset : 0;
                 s += e.text.substring(i, r);
             }
             return s;
@@ -502,7 +502,7 @@ let Z = {
             let t = Z.richValue(e),
                 n = t[0],
                 l = n?.type === "line" ? n.children[0] : null;
-            if (null == l || !$.isText(l)) return !1;
+            if (null == l || !J.isText(l)) return !1;
             let i = e.chatInputType,
                 s = l.text;
             return (
@@ -516,7 +516,7 @@ let Z = {
         },
         getSelectionOverlap(e, t) {
             if (null == e.selection) return { anchor: null, focus: null };
-            if (J.isPath(t)) {
+            if ($.isPath(t)) {
                 let n = Z.range(e, t),
                     [l] = Z.node(e, t);
                 if (q.isElement(l)) {
@@ -562,7 +562,7 @@ let Z = {
         },
         markdown(e, t, n) {
             let l = "line" === e.type && e.codeBlockState?.wasInCodeBlock === !0,
-                i = e.children.map((e) => ($.isText(e) ? e.text : "?"));
+                i = e.children.map((e) => (J.isText(e) ? e.text : "?"));
             return {
                 entries: (function (e, t) {
                     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
@@ -605,7 +605,7 @@ let Z = {
                                         a = {
                                             originalMatch: { index: 0, 0: "" },
                                             type: "paragraph",
-                                            content: (n ? O : L)(r, !0, {
+                                            content: (n ? M : O)(r, !0, {
                                                 returnMentionIds: !0,
                                                 disableAutoBlockNewlines: !0,
                                                 guildId: t,
@@ -647,27 +647,27 @@ let Z = {
             if (e.children.length > 1) return !1;
             if (0 === e.children.length) return !0;
             let t = e.children[0];
-            return $.isText(t) && 0 === t.text.length;
+            return J.isText(t) && 0 === t.text.length;
         },
     },
-    $ = { ...s.EY },
-    J = {
+    J = { ...s.EY },
+    $ = {
         ...s.wA,
-        isFirstEditorBlock: (e) => J.equals(e, z.Xg),
-        isFirstEditorText: (e) => J.equals(e, z.fP),
-        isFirstChild: (e, t) => J.equals(t, J.child(e, 0)),
+        isFirstEditorBlock: (e) => $.equals(e, z.Xg),
+        isFirstEditorText: (e) => $.equals(e, z.fP),
+        isFirstChild: (e, t) => $.equals(t, $.child(e, 0)),
         child: (e, t) => [...e, t],
     },
     X = {
         ...s.bR,
         start(e) {
             let [, t] = e;
-            return { path: J.child(t, 0), offset: 0 };
+            return { path: $.child(t, 0), offset: 0 };
         },
         end(e) {
             let [t, n] = e,
                 l = t.children[t.children.length - 1];
-            return { path: J.child(n, t.children.length - 1), offset: $.isText(l) ? l.text.length : 0 };
+            return { path: $.child(n, t.children.length - 1), offset: J.isText(l) ? l.text.length : 0 };
         },
         isAtStart(e, t) {
             return X.equals(e, this.start(t));
@@ -687,8 +687,8 @@ let Z = {
             let [t, n] = e,
                 l = t.children[t.children.length - 1];
             return {
-                anchor: { path: J.child(n, 0), offset: 0 },
-                focus: { path: J.child(n, t.children.length - 1), offset: $.isText(l) ? l.text.length : 0 },
+                anchor: { path: $.child(n, 0), offset: 0 },
+                focus: { path: $.child(n, t.children.length - 1), offset: J.isText(l) ? l.text.length : 0 },
             };
         },
         clamp(e, t) {
@@ -707,7 +707,7 @@ let Z = {
             if (!Z.hasPath(e, n.path) || !Z.hasPath(e, l.path)) return !1;
             let [i] = Z.node(e, n.path),
                 [s] = Z.node(e, l.path);
-            return $.isText(i) && $.isText(s) && n.offset <= i.text.length && l.offset <= s.text.length;
+            return J.isText(i) && J.isText(s) && n.offset <= i.text.length && l.offset <= s.text.length;
         },
     };
 function et(e, t) {

@@ -588,7 +588,7 @@ var ey = t(202776),
     eZ = t(903209),
     eK = t(696451),
     eX = t(317525),
-    ez = t(568548),
+    ez = t(573163),
     eY = t(287809),
     eJ = t(403362),
     eQ = t(427262),
@@ -600,15 +600,15 @@ var ey = t(202776),
     e6 = t(435558),
     e9 = t.n(e6),
     e2 = t(665260),
-    e8 = t(355097);
-function e7(e) {
+    e7 = t(355097);
+function e8(e) {
     X.h.dispatch({ type: "CLEAR_PENDING_CHANNEL_AND_ROLE_UPDATES", guildId: e });
 }
 let e3 = {};
 function ne(e) {
     let n = (0, r.bG)([e4.A], () => e4.A.getPendingResponseOptions(e) ?? e3, [e]);
     return (
-        i.useEffect(() => (e7(e), () => e7(e)), [e]),
+        i.useEffect(() => (e8(e), () => e8(e)), [e]),
         i.useEffect(() => {
             null != n && 0 !== Object.keys(n).length && e0.A.updateOnboardingResponses(e);
         }, [e, n]),
@@ -668,11 +668,11 @@ function ne(e) {
                         })({ guildId: e, prompt: n, option: t, selected: l, responses: i }),
                         c = r.reduce((n, t) => {
                             let l = J.Ay.getChannelIdFlags(e, t);
-                            return (n[t] = { flags: (0, e2.lA)(l, e8.vv.OPT_IN_ENABLED, !0) }), n;
+                            return (n[t] = { flags: (0, e2.lA)(l, e7.vv.OPT_IN_ENABLED, !0) }), n;
                         }, {}),
                         o = d.reduce((n, t) => {
                             let l = J.Ay.getChannelIdFlags(e, t);
-                            return (n[t] = { flags: (0, e2.lA)(l, e8.vv.OPT_IN_ENABLED, !1) }), n;
+                            return (n[t] = { flags: (0, e2.lA)(l, e7.vv.OPT_IN_ENABLED, !1) }), n;
                         }, {}),
                         u = { ...c, ...o };
                     e0.A.selectOption(e, n.id, t.id, l),

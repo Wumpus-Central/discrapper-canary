@@ -14,7 +14,7 @@ var r = n(477900),
     v = n(647474),
     j = n(202541),
     f = n(375708),
-    k = n(848618);
+    k = n(279673);
 function N(t) {
     let { applicationId: e, analyticsLocations: n } = t,
         N = (0, x.F)("storefront_banner", { applicationId: e }),

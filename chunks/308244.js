@@ -36,7 +36,7 @@ function p() {
 var _ = n(311016),
     b = n(692051),
     h = n(713804),
-    A = n(742715);
+    A = n(165648);
 function R(e) {
     let {
             userBio: t,

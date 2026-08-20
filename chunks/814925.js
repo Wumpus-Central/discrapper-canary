@@ -21,7 +21,7 @@ let o = function (e) {
         }),
     });
 };
-var d = n(166694);
+var d = n(719639);
 function c(e) {
     let { children: t, size: n = 16, className: a, flowerStarClassName: l, ...c } = e,
         u = r.Children.only(t),

@@ -6,7 +6,7 @@ var t = e(17928),
     d = e(834730),
     l = e(565645),
     o = e(236285),
-    r = e(196605);
+    r = e(441664);
 function n(s) {
     let { reactionEmoji: i } = s,
         e = (0, t.bG)([o.Ay], () => (i?.emojiId != null ? o.Ay.getUsableCustomEmojiById(i.emojiId) : null));

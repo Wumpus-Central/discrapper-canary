@@ -1,19 +1,19 @@
-n.d(l, { A: () => i });
+n.d(t, { A: () => l });
 var s = n(582128),
-    t = n(473193),
+    u = n(473193),
     r = n(625494),
-    a = n(652215);
-function i(e) {
-    let { shouldSubscribe: l, subscribeToGroupId: n, authorId: i } = e,
-        u = s.useContext(t.C);
+    i = n(652215);
+function l(e) {
+    let { shouldSubscribe: t, subscribeToGroupId: n, authorId: l } = e,
+        A = s.useContext(u.C);
     s.useEffect(() => {
-        if (!l || null == u || null == n || null == i) return;
-        let { setAnimate: e } = u;
+        if (!t || null == A || null == n || null == l) return;
+        let { setAnimate: e } = A;
         return (
-            r._.subscribeKeyed(a.zOV.ANIMATE_CHAT_AVATAR, `${n}:${i}`, e),
+            r._.subscribeKeyed(i.zOV.ANIMATE_CHAT_AVATAR, `${n}:${l}`, e),
             () => {
-                r._.unsubscribeKeyed(a.zOV.ANIMATE_CHAT_AVATAR, `${n}:${i}`, e);
+                r._.unsubscribeKeyed(i.zOV.ANIMATE_CHAT_AVATAR, `${n}:${l}`, e);
             }
         );
-    }, [l, i, n, u]);
+    }, [t, l, n, A]);
 }

@@ -32,7 +32,7 @@ var x = n(827762),
     G = n(930840),
     U = n(652215),
     _ = n(375708),
-    w = n(588741);
+    w = n(686418);
 function O(e) {
     let { badgeText: t, badgeColor: n } = e,
         s = l.useRef(t),

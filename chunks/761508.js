@@ -11,7 +11,7 @@ var i = n(477900),
     u = n(460890),
     _ = n(834730),
     E = n(650583),
-    A = n(720235);
+    A = n(516580);
 let h = { side: A.Cf, top: A.Mn, "top-pill": A.vO },
     I = r.forwardRef(function (e, t) {
         let n,

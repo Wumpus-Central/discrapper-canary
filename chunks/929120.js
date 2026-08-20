@@ -13,7 +13,7 @@ var l = t(477900),
     h = t(365258),
     A = t(926418),
     f = t(375708),
-    j = t(975783);
+    j = t(286312);
 function N(e) {
     let { guildIds: s, direction: t, onClick: n } = e,
         N = (0, i.useMemo)(() => (0, h.AB)(s), [s]),

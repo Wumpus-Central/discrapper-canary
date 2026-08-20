@@ -11,7 +11,7 @@ var l = n(477900),
     p = n(676279),
     m = n(659746),
     h = n(375708),
-    C = n(649412);
+    C = n(836949);
 let f = function (e) {
     let { type: t, text: n, buttonText: i, buttonLoading: f, hideClose: E, onClose: S } = e,
         y = (0, a.bG)([d.default], () => {

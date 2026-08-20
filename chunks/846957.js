@@ -3,7 +3,7 @@ var s = r(477900),
     d = r(503698),
     l = r.n(d),
     u = r(132198),
-    a = r(690524);
+    a = r(121615);
 function c(n) {
     let { product: e, animationState: r, className: d } = n,
         c = u.m[e.skuId];

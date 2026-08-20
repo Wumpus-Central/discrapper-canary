@@ -16,9 +16,9 @@ var l = i(477900),
     f = i(503698),
     p = i.n(f),
     v = i(914410),
-    T = i(360615),
+    T = i(216583),
     N = i(375708),
-    _ = i(273617);
+    _ = i(304958);
 function M(e) {
     let { progress: t, currentTier: i, newTier: s, className: r } = e,
         n = (0, x.rL)(i ?? void 0),
@@ -58,7 +58,7 @@ function M(e) {
         ],
     });
 }
-var b = i(783246);
+var b = i(803691);
 function w(e) {
     let { progress: t, currentTier: i, nextTier: s, iconSize: r = 24, title: c } = e,
         o = (0, x.rL)(s),
@@ -95,7 +95,7 @@ function w(e) {
 }
 var y = i(315693),
     k = i(652215),
-    A = i(687372);
+    A = i(254013);
 function E(e) {
     let { progress: t, title: i, progressBarTitle: s, description: r, currentTier: c, nextTier: o } = e;
     return (0, l.jsxs)("div", {

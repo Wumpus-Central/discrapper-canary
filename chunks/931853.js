@@ -5,9 +5,9 @@ var r = n(477900),
     i = n(17928),
     u = n(876230),
     s = n(363195),
-    o = n(445563),
+    o = n(652699),
     c = n(375708),
-    d = n(668534);
+    d = n(862649);
 function m(e) {
     let { hasVideoAsset: t, playerState: n, pauseReason: r } = e;
     return t

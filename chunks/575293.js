@@ -15,23 +15,23 @@ var l = n(477900),
     p = n(628284),
     g = n(775602),
     x = n(47167),
-    A = n(174355),
-    E = n(418842),
-    C = n(734057),
+    A = n(713654),
+    C = n(418842),
+    E = n(734057),
     I = n(696451),
     y = n(71393),
-    S = n(225142),
-    v = n(374084),
-    _ = n(101611),
-    N = n(473529),
+    v = n(225142),
+    S = n(374084),
+    N = n(101611),
+    _ = n(473529),
     T = n(111487),
     j = n(652215),
     b = n(375708),
     R = n(160639);
-let L = { compact: 58, cozy: 74, default: 64 };
-function O(e) {
+let O = { compact: 58, cozy: 74, default: 64 };
+function M(e) {
     let { action: t } = e,
-        n = (0, o.bG)([C.A], () => C.A.getChannel(t.channelId)),
+        n = (0, o.bG)([E.A], () => E.A.getChannel(t.channelId)),
         i = (0, x.Ay)(n, !0);
     return null == n
         ? (0, l.jsx)(u.E, {
@@ -45,9 +45,9 @@ function O(e) {
               children: b.intl.format(b.t.MkzlDL, { channelName: i }),
           });
 }
-function M(e) {
+function L(e) {
     let { channelId: t, emojiId: n, emojiName: i } = e,
-        s = (0, o.bG)([C.A], () => C.A.getChannel(t));
+        s = (0, o.bG)([E.A], () => E.A.getChannel(t));
     if (null == s) return null;
     let r = (0, A.gU)(s) ?? c.N;
     return (0, l.jsx)(T.A, {
@@ -59,27 +59,27 @@ function M(e) {
 }
 function w(e) {
     let { guildId: t, channel: n, className: s } = e,
-        { channelAction: c, completed: x } = (0, _.j4)(t, n),
-        A = (0, _.Lr)(t, c?.channelId),
-        C = (0, o.bG)([g.Ay], () => g.Ay.useReducedMotion),
-        I = c?.actionType === v.NewMemberActionTypes.VIEW,
+        { channelAction: c, completed: x } = (0, N.j4)(t, n),
+        A = (0, N.Lr)(t, c?.channelId),
+        E = (0, o.bG)([g.Ay], () => g.Ay.useReducedMotion),
+        I = c?.actionType === S.NewMemberActionTypes.VIEW,
         y = (0, d.r)(h.A.colors.WHITE),
-        N = L[(0, E.C)()],
+        _ = O[(0, C.C)()],
         [T, j] = i.useState(!1),
         [w] = i.useState(new a.A.Value(0)),
         [k] = i.useState(new a.A.Value(0));
     i.useEffect(() => {
         x
-            ? a.A.timing(w, { toValue: 0, duration: C ? 1 : 350, easing: a.A.Easing.quad, delay: 500 * !I }).start(() =>
+            ? a.A.timing(w, { toValue: 0, duration: E ? 1 : 350, easing: a.A.Easing.quad, delay: 500 * !I }).start(() =>
                   j(!0),
               )
-            : a.A.timing(w, { toValue: 1, duration: C ? 1 : 350, easing: a.A.Easing.quad, delay: 400 }).start();
-    }, [x, w, I, C]),
+            : a.A.timing(w, { toValue: 1, duration: E ? 1 : 350, easing: a.A.Easing.quad, delay: 400 }).start();
+    }, [x, w, I, E]),
         i.useEffect(() => {
-            x && T && a.A.timing(k, { toValue: 1, duration: 350 * !C, easing: a.A.Easing.quad, delay: 400 }).start();
-        }, [x, k, T, C]);
+            x && T && a.A.timing(k, { toValue: 1, duration: 350 * !E, easing: a.A.Easing.quad, delay: 400 }).start();
+        }, [x, k, T, E]);
     let P = i.useCallback(() => {
-        null != A && (0, S.qo)(t, A.channelId);
+        null != A && (0, v.qo)(t, A.channelId);
     }, [t, A]);
     return null == c || (I && !T)
         ? null
@@ -88,12 +88,12 @@ function w(e) {
               children:
                   T && null != A
                       ? (0, l.jsx)(a.A.div, {
-                            style: { marginBottom: k.interpolate({ inputRange: [0, 1], outputRange: [-N, 0] }) },
+                            style: { marginBottom: k.interpolate({ inputRange: [0, 1], outputRange: [-_, 0] }) },
                             children: (0, l.jsxs)(m.D, {
                                 className: r()(R.vK, R.vk, { [R.pJ]: n.isForumChannel() }),
                                 onClick: P,
                                 children: [
-                                    (0, l.jsx)(M, {
+                                    (0, l.jsx)(L, {
                                         channelId: A.channelId,
                                         emojiId: A.emoji?.id,
                                         emojiName: A?.emoji?.name,
@@ -106,7 +106,7 @@ function w(e) {
                                                 color: "text-strong",
                                                 children: b.intl.format(b.t["/beONw"], { step: A.title }),
                                             }),
-                                            (0, l.jsx)(O, { action: A }),
+                                            (0, l.jsx)(M, { action: A }),
                                         ],
                                     }),
                                     (0, l.jsx)("div", {
@@ -118,9 +118,9 @@ function w(e) {
                         })
                       : (0, l.jsxs)(a.A.div, {
                             className: r()(R.vK, { [R.pJ]: n.isForumChannel() }),
-                            style: { marginBottom: w.interpolate({ inputRange: [0, 1], outputRange: [-N, 0] }) },
+                            style: { marginBottom: w.interpolate({ inputRange: [0, 1], outputRange: [-_, 0] }) },
                             children: [
-                                (0, l.jsx)(M, {
+                                (0, l.jsx)(L, {
                                     channelId: c.channelId,
                                     emojiId: c.emoji?.id,
                                     emojiName: c?.emoji?.name,
@@ -156,9 +156,9 @@ function w(e) {
 }
 function k(e) {
     let { guildId: t, channel: n, className: i } = e,
-        s = (0, N.d)(t),
+        s = (0, _.d)(t),
         r = (0, o.bG)([I.Ay], () => I.Ay.getSelfMember(t)?.isPending === !0),
-        a = (0, _.jY)(t),
+        a = (0, N.jY)(t),
         u = (0, o.bG)([y.A], () => y.A.getGuild(t)?.features.has(j.GuildFeatures.GUILD_SERVER_GUIDE));
     return a || r || !s || !u ? null : (0, l.jsx)(w, { guildId: t, channel: n, className: i });
 }

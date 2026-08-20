@@ -5,7 +5,7 @@ var n = s(821609),
     l = s(297264),
     a = s(834730),
     r = s(691885),
-    c = s(926296);
+    c = s(506425);
 function o(e) {
     let { heading: t, subtitle: s, methodSelect: o, ctaButton: d, children: u } = e;
     return (0, i.jsxs)("div", {

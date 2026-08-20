@@ -16,7 +16,7 @@ var e = i(477900),
     h = i(49999),
     N = i(488995),
     f = i(375708),
-    j = i(976811);
+    j = i(935794);
 function D(t) {
     let { guildId: s, transitionState: D, onClose: E, analyticsType: I = a.M.APP_DIRECTORY_UPSELL_MODAL } = t;
     return (

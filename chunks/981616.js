@@ -1,71 +1,71 @@
-n.d(e, { G8: () => _, LI: () => m, d3: () => A, dM: () => y, mD: () => f }), n(142703);
+n.d(t, { G8: () => p, LI: () => A, d3: () => m, dM: () => g, mD: () => f }), n(142703);
 var i = n(729937),
-    r = n(573648),
-    l = n(952818),
-    o = n(927813),
+    l = n(573648),
+    s = n(952818),
+    r = n(927813),
     a = n(107750),
-    u = n(210528),
+    o = n(210528),
     c = n(655116),
-    s = n(272984),
+    u = n(272984),
     d = n(652215);
-let p = 30 * o.A.Millis.SECOND;
-function A(t) {
-    return null != t.getActiveSocketAndDevice() || u.A.isProtocolRegistered();
+let h = 30 * r.A.Millis.SECOND;
+function m(e) {
+    return null != e.getActiveSocketAndDevice() || o.A.isProtocolRegistered();
 }
-function y() {
-    let t = c.A.getActiveSocketAndDevice();
-    if (null != t) return Promise.resolve(t);
-    if (!u.A.isProtocolRegistered()) return Promise.reject(Error("protocol is not registered"));
-    let e = c.A.getPlayableComputerDevices();
-    if (l.Ay.isObservedAppRunning(r.A.get(d.fg2.SPOTIFY).name) && e.length > 0) {
-        let { socket: t, device: n } = e[0];
-        return (0, a.VR)(t.accountId, n.id), Promise.resolve({ socket: t, device: n });
+function g() {
+    let e = c.A.getActiveSocketAndDevice();
+    if (null != e) return Promise.resolve(e);
+    if (!o.A.isProtocolRegistered()) return Promise.reject(Error("protocol is not registered"));
+    let t = c.A.getPlayableComputerDevices();
+    if (s.Ay.isObservedAppRunning(l.A.get(d.fg2.SPOTIFY).name) && t.length > 0) {
+        let { socket: e, device: n } = t[0];
+        return (0, a.VR)(e.accountId, n.id), Promise.resolve({ socket: e, device: n });
     }
-    return new Promise((t, n) => {
+    return new Promise((e, n) => {
         let i = setTimeout(() => {
-            c.A.removeChangeListener(r), n(Error("timeout launching spotify"));
-        }, p);
-        function r() {
-            for (let { socket: n, device: l } of c.A.getPlayableComputerDevices())
-                null == e.find((t) => t.device.id === l.id) &&
+            c.A.removeChangeListener(l), n(Error("timeout launching spotify"));
+        }, h);
+        function l() {
+            for (let { socket: n, device: s } of c.A.getPlayableComputerDevices())
+                null == t.find((e) => e.device.id === s.id) &&
                     (clearTimeout(i),
-                    c.A.removeChangeListener(r),
+                    c.A.removeChangeListener(l),
                     setImmediate(() => {
-                        (0, a.VR)(n.accountId, l.id), t({ socket: n, device: l });
+                        (0, a.VR)(n.accountId, s.id), e({ socket: n, device: s });
                     }));
         }
-        c.A.addChangeListener(r), window.open(`${s.gY}:`);
+        c.A.addChangeListener(l), window.open(`${u.gY}:`);
     });
 }
 function f() {
-    let t = c.A.getActiveSocketAndDevice();
-    if (null == t) return null;
-    let { socket: e } = t;
-    return e.isPremium;
+    let e = c.A.getActiveSocketAndDevice();
+    if (null == e) return null;
+    let { socket: t } = e;
+    return t.isPremium;
 }
-function _() {
-    let t = c.A.getActiveSocketAndDevice();
-    if (null == t) return Promise.reject(Error("no active profile"));
-    let { socket: e } = t;
-    return e.isPremium
+function p() {
+    let e = c.A.getActiveSocketAndDevice();
+    if (null == e) return Promise.reject(Error("no active profile"));
+    let { socket: t } = e;
+    return t.isPremium
         ? Promise.resolve()
-        : (0, a.E$)(e.accountId, e.accessToken).then(() => {
-              if (!e.isPremium) return Promise.reject(Error("spotify account is not premium"));
+        : (0, a.E$)(t.accountId, t.accessToken).then(() => {
+              if (!t.isPremium) return Promise.reject(Error("spotify account is not premium"));
           });
 }
-function h(t) {
-    if ("string" == typeof t) return t;
+function x(e) {
+    if ("string" == typeof e) return e;
     throw Error("value is not a string");
 }
-async function m(t, e) {
-    let n = await (0, i.yb)(t, e),
-        r = (0, s.NJ)(h(n.type ?? s.M0.TRACK));
-    if (null === r) throw Error(`invalid type ${n.type}`);
+async function A(e, t) {
+    let n = await (0, i.yb)(e, t),
+        l = (0, u.NJ)(x(n.type ?? u.M0.TRACK));
+    if (null === l) throw Error(`invalid type ${n.type}`);
     return {
         context_uri: "string" == typeof n.context_uri ? n.context_uri : void 0,
-        album_id: h(n.album_id),
-        artist_ids: Array.isArray(n.artist_ids) ? n.artist_ids.map(h) : [],
-        type: r,
-        button_urls: Array.isArray(n.button_urls) ? n.button_urls.map(h) : [],
+        album_id: x(n.album_id),
+        artist_ids: Array.isArray(n.artist_ids) ? n.artist_ids.map(x) : [],
+        type: l,
+        button_urls: Array.isArray(n.button_urls) ? n.button_urls.map(x) : [],
     };
 }

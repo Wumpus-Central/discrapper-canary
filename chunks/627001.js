@@ -4,10 +4,10 @@ var i = t(477900),
     a = t.n(n),
     r = t(866665),
     l = t(240248),
-    c = t(561794),
+    c = t(594832),
     u = t(360469),
     d = t(375708),
-    o = t(652142);
+    o = t(764035);
 function h(e) {
     let { spec: s, icon: t, tooltipText: n } = e,
         u = !(0, l.uJ)(n),

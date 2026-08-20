@@ -13,7 +13,7 @@ var s = l(477900),
     p = l(770178),
     g = l(124589),
     x = l(375708),
-    v = l(653967);
+    v = l(129066);
 function j(e) {
     let { onTabSelect: t, tabs: l, selectedTab: a } = e,
         r = i.useMemo(

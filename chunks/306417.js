@@ -21,7 +21,7 @@ var s = n(477900),
     y = n(290794),
     v = n(789646),
     C = n(375708),
-    b = n(192778);
+    b = n(146899);
 function N(e) {
     let { className: t, children: n } = e;
     return (0, s.jsx)("ul", { "aria-label": C.intl.string(C.t.sJpqBS), className: t, children: n });

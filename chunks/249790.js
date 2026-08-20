@@ -7,7 +7,7 @@ var e = s(17928),
     c = s(428678),
     l = s(952270),
     u = s(994500),
-    o = s(597761);
+    o = s(533970);
 function d(t) {
     let { user: i, guildId: s, iconColor: d } = t,
         m = (0, e.bG)([u.A], () => u.A.isBlocked(i.id));

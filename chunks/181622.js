@@ -17,7 +17,7 @@ var i = t(477900),
     p = t(427262),
     b = t(294454),
     g = t(375708),
-    _ = t(973743);
+    _ = t(285738);
 function y(e) {
     let { icon: n, label: t } = e;
     return (0, i.jsxs)("div", {

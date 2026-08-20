@@ -21,7 +21,7 @@ var i = n(477900),
     h = n(590202),
     S = n(652215),
     x = n(375708),
-    v = n(662727);
+    v = n(299592);
 let T = "/assets/1929535a8397f7f0.png";
 function w(e) {
     let { questId: t, survey: n, transitionState: a, onClose: s, onSubmit: p } = e,

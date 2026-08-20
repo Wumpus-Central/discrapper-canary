@@ -8,7 +8,7 @@ var i = n(477900),
     o = n(717421),
     d = n(866323),
     c = n(597619),
-    u = n(360589);
+    u = n(704038);
 let _ = {
         config: { friction: 50, tension: 900, mass: 1 },
         unique: !0,

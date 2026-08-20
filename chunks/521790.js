@@ -21,9 +21,9 @@ var c = n(736653),
     C = n(488926),
     D = n(652215),
     m = n(49999),
-    P = n(230451),
+    P = n(254656),
     p = n(375708),
-    f = n(789167);
+    f = n(971656);
 function M(e) {
     let { markAsDismissed: t, recurringDismiss: n, platformType: l, noticeType: s } = e,
         u = O.A.getGuildId(),

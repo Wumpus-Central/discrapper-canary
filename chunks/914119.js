@@ -89,7 +89,7 @@ let j = { onSuccess: () => {}, permissionOverwrites: [] };
 var O = t(691012),
     U = t(779519),
     D = t(375708),
-    V = t(654195);
+    V = t(247150);
 function M(e) {
     let { transitionState: n, event: t, onSuccess: f, onClose: p } = e,
         { guild_id: _, privacy_level: C } = t,

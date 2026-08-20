@@ -11,7 +11,7 @@ var i = s(477900),
     h = s(7864),
     m = s(652215),
     p = s(375708),
-    g = s(858739);
+    g = s(203120);
 function j(l) {
     let { guild: e, roles: s, className: t } = l,
         j = r.useMemo(() => `invite-roles-${(0, a.A)()}`, []),

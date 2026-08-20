@@ -26,7 +26,7 @@ function k(e) {
             ...(0, o.H$)(i),
         });
 }
-var E = i(272993);
+var E = i(544548);
 function C(e) {
     let { guildId: t, transitionState: i, onClose: n, onConfirm: o } = e,
         { rules: r, rulesAccepted: u } = (function () {

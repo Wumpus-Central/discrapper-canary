@@ -15,7 +15,7 @@ var a = i(477900),
     h = i(189998),
     b = i(1195),
     x = i(375708),
-    C = i(996621);
+    C = i(692772);
 function y(t) {
     let { channelId: e, transitionState: i, onClose: s } = t,
         y = (0, u.bG)([p.A], () => p.A.getRoom(e)?.background ?? r.I.DEFAULT),

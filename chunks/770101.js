@@ -16,7 +16,7 @@ var i = n(477900),
     p = n(473145),
     y = n(652215),
     v = n(375708),
-    C = n(792660);
+    C = n(150319);
 function f(t) {
     let { setQuery: e, query: n } = t;
     return (0, i.jsx)(d.I, {

@@ -79,7 +79,7 @@ class k extends l.PureComponent {
     }
 }
 var x = t(375708),
-    N = t(609489);
+    N = t(875634);
 function C(e) {
     let { page: a, totalPageCount: t, disabled: s, onPageChange: i } = e,
         [h, c] = l.useState(!1),

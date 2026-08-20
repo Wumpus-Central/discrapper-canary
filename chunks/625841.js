@@ -21,7 +21,7 @@ var n = i(477900),
     A = i(106713),
     O = i(731854),
     S = i(375708),
-    f = i(615592);
+    f = i(534283);
 function N(e) {
     let {
             deviceType: t,

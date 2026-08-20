@@ -10,7 +10,7 @@ var e = i(477900),
     u = i(900179),
     p = i(652215),
     A = i(375708),
-    I = i(426051);
+    I = i(915008);
 function f(n) {
     let { applicationId: t, commandIds: i, guildId: f, channel: g, onClick: m } = n,
         { trackUserProfileAction: P } = (0, a.NJ)(),

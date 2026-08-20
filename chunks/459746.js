@@ -6,7 +6,7 @@ var l,
     i = a.n(r),
     o = a(834730),
     c = a(375708),
-    m = a(487353),
+    m = a(899830),
     u = (((l = {})[(l.SMALL = 0)] = "SMALL"), (l[(l.LARGE = 1)] = "LARGE"), l);
 function d(e) {
     let { game: t, size: a, className: l, imageSize: r } = e,

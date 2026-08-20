@@ -14,7 +14,7 @@ var t = n(477900),
     p = n(764451),
     g = n(836156),
     x = n(652215),
-    S = n(701864);
+    S = n(302569);
 let C = {
     mana: { name: "Mana", icon: u.H, defaultSubtitle: "Explore the Mana Design System" },
     revenue: { name: "Revenue", icon: o.d, defaultSubtitle: "Explore Revenue Components" },

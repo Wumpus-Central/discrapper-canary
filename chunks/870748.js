@@ -9,22 +9,22 @@ var l = n(485845),
     u = n(392054),
     c = n(168186),
     d = n(203779),
-    h = n(649671),
+    h = n(664929),
     m = n(853145),
     f = n(734057),
     p = n(317525),
     g = n(287809),
     x = n(317681),
     A = n(186306),
-    E = n(323350),
-    C = n(35277),
+    C = n(323350),
+    E = n(35277),
     I = n(820066),
     y = n(551483),
-    S = n(652215);
+    v = n(652215);
 n(827669);
-let v = new Set(["applicationCommandOption"]),
-    _ = new Set([i.n4.ATTACHMENT]),
-    N = new Set(["line", "applicationCommand"]);
+let S = new Set(["applicationCommandOption"]),
+    N = new Set([i.n4.ATTACHMENT]),
+    _ = new Set(["line", "applicationCommand"]);
 function T(e, t) {
     let {
         insertData: n,
@@ -32,7 +32,7 @@ function T(e, t) {
         isVoid: f,
         onChange: p,
         deleteBackward: g,
-        deleteForward: S,
+        deleteForward: v,
         deleteFragment: T,
     } = e;
     (e.insertData = (l) => {
@@ -65,16 +65,16 @@ function T(e, t) {
         }
         return n(l);
     }),
-        (e.isInline = (e) => !!v.has(e.type) || d(e)),
-        (e.isVoid = (e) => !!("applicationCommandOption" === e.type && _.has(e.optionType)) || f(e)),
+        (e.isInline = (e) => !!S.has(e.type) || d(e)),
+        (e.isVoid = (e) => !!("applicationCommandOption" === e.type && N.has(e.optionType)) || f(e)),
         (e.deleteBackward = (t) => {
-            O(e, () => g(t));
+            M(e, () => g(t));
         }),
         (e.deleteForward = (t) => {
-            O(e, () => S(t));
+            M(e, () => v(t));
         }),
         (e.deleteFragment = (t) => {
-            O(e, () => T(t));
+            M(e, () => T(t));
         });
     let w = null,
         k = null,
@@ -102,7 +102,7 @@ function T(e, t) {
                                     commandChanged: o,
                                     previousOptionValues: c,
                                 } = e,
-                                { command: d, commandText: f } = L(t),
+                                { command: d, commandText: f } = O(t),
                                 p = n.activeCommand,
                                 g = t.chatInputType.commands?.enabled === !0,
                                 A = null != m.A.getPendingReply(r.id);
@@ -127,7 +127,7 @@ function T(e, t) {
                                                 { initialValues: i, activeCommand: s } = n;
                                             if (null == s) return null;
                                             let r = (s.options?.length ?? 0) > 0 ? x.pY(e, s) : null,
-                                                a = (0, E.WO)(I.VW.richValue(e), {
+                                                a = (0, C.WO)(I.VW.richValue(e), {
                                                     mode: "raw",
                                                     range: {
                                                         anchor: I.VW.start(e, []),
@@ -149,7 +149,7 @@ function T(e, t) {
                                                 if (null != r)
                                                     for (let l of r) {
                                                         e.add(l.name);
-                                                        let i = M(n, t, l.name) ?? l.text,
+                                                        let i = L(n, t, l.name) ?? l.text,
                                                             s = {
                                                                 type: "applicationCommandOption",
                                                                 optionName: l.name,
@@ -162,9 +162,9 @@ function T(e, t) {
                                                 for (let l of s.options)
                                                     if (!e.has(l.name) && (l.required || null != i[l.name])) {
                                                         let e, i;
-                                                        o.length > 0 && !_.has(l.type)
+                                                        o.length > 0 && !N.has(l.type)
                                                             ? ((e = o), (o = ""))
-                                                            : (e = (i = M(n, t, l.name)) ?? "");
+                                                            : (e = (i = L(n, t, l.name)) ?? "");
                                                         let s = {
                                                             type: "applicationCommandOption",
                                                             optionName: l.name,
@@ -194,18 +194,18 @@ function T(e, t) {
                                                 },
                                             };
                                             I.VW.withoutNormalizing(e, () => {
-                                                for (let [, t] of (C.b.insertNodes(e, [p], { at: y.Xg }),
+                                                for (let [, t] of (E.b.insertNodes(e, [p], { at: y.Xg }),
                                                 I.VW.blocks(e).reverse()))
-                                                    I.PW.isAfter(t, y.Xg) && C.b.removeNodes(e, { at: t, voids: !0 });
+                                                    I.PW.isAfter(t, y.Xg) && E.b.removeNodes(e, { at: t, voids: !0 });
                                             });
                                             let g = null;
                                             return (
                                                 null != m
-                                                    ? (C.b.selectCommandOption(e, m.optionName), (g = m.optionName))
+                                                    ? (E.b.selectCommandOption(e, m.optionName), (g = m.optionName))
                                                     : null != f
-                                                      ? (C.b.selectCommandOption(e, f.optionName, !1),
+                                                      ? (E.b.selectCommandOption(e, f.optionName, !1),
                                                         (g = f.optionName))
-                                                      : C.b.resetSelectionToEditorEnd(e),
+                                                      : E.b.resetSelectionToEditorEnd(e),
                                                 null == f && b(e, s),
                                                 g
                                             );
@@ -229,7 +229,7 @@ function T(e, t) {
                                     return s.Gf({ channelId: r.id, command: null, section: null }), null;
                                 let e = I.VW.richValue(t)[0],
                                     l = e.children[0];
-                                if (N.has(e.type) && I.l5.isText(l)) {
+                                if (_.has(e.type) && I.l5.isText(l)) {
                                     let e = (function (e, t) {
                                         if (!e.startsWith("/")) return null;
                                         let n = (0, h.Yn)(t, e.substring(1));
@@ -267,7 +267,7 @@ function T(e, t) {
                                         (I.VW.withoutNormalizing(e, () => {
                                             for (let t = n.length - 1; t >= 0; t--) {
                                                 let l = n[t];
-                                                C.b.textToInline(
+                                                E.b.textToInline(
                                                     e,
                                                     {
                                                         type: "applicationCommandOption",
@@ -283,7 +283,7 @@ function T(e, t) {
                                             if (null == t) return !1;
                                             let l = t.text.trim();
                                             t.text !== l &&
-                                                C.b.textToText(e, l, {
+                                                E.b.textToText(e, l, {
                                                     anchor: { path: y.fP, offset: 0 },
                                                     focus: { path: y.fP, offset: t.text.length },
                                                 });
@@ -334,12 +334,12 @@ function T(e, t) {
 }
 function j(e, t, n, l) {
     let [i] = I.VW.blocks(e)[0],
-        r = (l ? (0, E.IQ)(i, { mode: "plain" }).trimEnd() : "")
+        r = (l ? (0, C.IQ)(i, { mode: "plain" }).trimEnd() : "")
             .split("\n")
             .map((e) => ({ type: "line", children: [{ text: e }] })),
         a = [r.length - 1];
-    for (let [, t] of (C.b.insertNodes(e, r, { at: y.Xg }), I.VW.blocks(e).reverse()))
-        I.PW.isAfter(t, a) && C.b.removeNodes(e, { at: t, voids: !0 });
+    for (let [, t] of (E.b.insertNodes(e, r, { at: y.Xg }), I.VW.blocks(e).reverse()))
+        I.PW.isAfter(t, a) && E.b.removeNodes(e, { at: t, voids: !0 });
     null != n && s.Gf({ channelId: t, command: null, section: null });
 }
 function b(e, t) {
@@ -347,7 +347,7 @@ function b(e, t) {
         null == t.options ||
         1 !== t.options.length ||
         !0 === t.options[0].required ||
-        _.has(t.options[0].type) ||
+        N.has(t.options[0].type) ||
         x.O7(e).length > 0 ||
         null == x.n$(e)
     )
@@ -359,7 +359,7 @@ function b(e, t) {
         s = { path: y.fP, offset: n.text.length };
     return (
         !(!n.text.startsWith(`/${t.displayName} `.toLocaleLowerCase()) || I.Kh.equals(i, s)) &&
-        (C.b.textToInline(
+        (E.b.textToInline(
             e,
             {
                 type: "applicationCommandOption",
@@ -416,24 +416,24 @@ function R(e) {
     }
     p && s.H2(n, m);
 }
-function L(e) {
+function O(e) {
     let t = x.n$(e);
     if (null == t) return { command: null, commandText: null };
     let [n] = t,
         l = n.children[0];
     return I.l5.isText(l) ? { command: n.command, commandText: l.text } : { command: n.command, commandText: null };
 }
-function O(e, t) {
+function M(e, t) {
     let n = x.O7(e)[0];
     t();
     let l = I.ZF.toPoint(e.selection);
     if (null == l || n === x.O7(e)[0]) return;
-    let { command: i, commandText: s } = L(e);
+    let { command: i, commandText: s } = O(e);
     !(null == i || null == s || s.endsWith(" ")) &&
         I.Kh.equals(l, { path: y.fP, offset: i.displayName.length + 1 }) &&
-        C.b.insertText(e, " ");
+        E.b.insertText(e, " ");
 }
-function M(e, t, n) {
+function L(e, t, n) {
     let l = e.activeCommand?.options?.find((e) => e.name === n),
         s = e.initialValues[n];
     if (null == l || null == s) return null;
@@ -443,7 +443,7 @@ function M(e, t, n) {
         ? `<#${r}>	`
         : l.type === i.n4.USER || (l.type === i.n4.MENTIONABLE && null != g.default.getUser(r))
           ? `<@${r}>`
-          : l.type === i.n4.ROLE || (l.type === i.n4.MENTIONABLE && null != p.A.getRole(t.guild_id, r ?? S.dJq))
+          : l.type === i.n4.ROLE || (l.type === i.n4.MENTIONABLE && null != p.A.getRole(t.guild_id, r ?? v.dJq))
             ? `<@&${r}>`
             : r;
 }

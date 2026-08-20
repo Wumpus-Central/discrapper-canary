@@ -35,7 +35,7 @@ let O = {
         [d.C.GAME_SERVER_SUBSCRIPTION_CHECKOUT]: { allowGiftCustomization: !1, predicateStepType: "subscription" },
     },
     y = (0, i.lazy)(() =>
-        Promise.all([o.e("200797"), o.e("793438"), o.e("154791"), o.e("725246"), o.e("414648"), o.e("208430")])
+        Promise.all([o.e("339384"), o.e("793438"), o.e("154791"), o.e("725246"), o.e("414648"), o.e("208430")])
             .then(o.bind(o, 427325))
             .then((e) => {
                 let { UnifiedCheckoutInstance: t } = e;
@@ -241,7 +241,7 @@ class F {
             return (0, r.openModalLazy)(
                 async () => {
                     let { UnifiedCheckoutInstance: e } = await Promise.all([
-                        o.e("200797"),
+                        o.e("339384"),
                         o.e("793438"),
                         o.e("154791"),
                         o.e("725246"),

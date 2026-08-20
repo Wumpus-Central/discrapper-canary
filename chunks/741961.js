@@ -1,6 +1,6 @@
 "use strict";
 let l;
-n.d(t, { A: () => v });
+n.d(t, { A: () => S });
 var i = n(17928),
     s = n(636537),
     r = n(228366),
@@ -16,10 +16,10 @@ let m = 10 * o.A.Millis.SECOND,
     g = {},
     x = Object.freeze({}),
     A = Object.freeze({});
-function E(e) {
+function C(e) {
     return c.A.getChannel(e)?.getGuildId() ?? void 0;
 }
-function C(e) {
+function E(e) {
     var t, n, l, i;
     let s,
         a,
@@ -65,7 +65,7 @@ function I(e) {
 function y() {
     (p = {}), (g = {});
 }
-class S extends i.Ay.Store {
+class v extends i.Ay.Store {
     initialize() {
         this.waitFor(u.default, c.A);
     }
@@ -80,8 +80,8 @@ class S extends i.Ay.Store {
         return null != (p[e] ?? x)[t];
     }
 }
-let v = new S(r.h, {
-    TYPING_START: C,
+let S = new v(r.h, {
+    TYPING_START: E,
     TYPING_STOP: I,
     TYPING_START_LOCAL: function (e) {
         let { channelId: t } = e,
@@ -123,7 +123,7 @@ let v = new S(r.h, {
             },
             null == l || l.prevSend > i - 2 * o ? f : 0,
         );
-        return (l = { channelId: t, timeout: c, prevSend: i }), C({ channelId: t, userId: n, guildId: E(t) });
+        return (l = { channelId: t, timeout: c, prevSend: i }), E({ channelId: t, userId: n, guildId: C(t) });
     },
     TYPING_STOP_LOCAL: function (e) {
         let { channelId: t } = e,
@@ -133,7 +133,7 @@ let v = new S(r.h, {
             null != l &&
             l.channelId === t &&
             null != l.timeout &&
-            (clearTimeout(l.timeout), (l = null), I({ channelId: t, userId: n, guildId: E(t) }))
+            (clearTimeout(l.timeout), (l = null), I({ channelId: t, userId: n, guildId: C(t) }))
         );
     },
     CONNECTION_OPEN: y,
@@ -149,7 +149,7 @@ let v = new S(r.h, {
         return (
             r &&
                 ((t = n), null == l || l.channelId !== t || (null != l.timeout && clearTimeout(l.timeout), (l = null))),
-            null != s && I({ channelId: n, userId: s.id, guildId: i ?? E(n) })
+            null != s && I({ channelId: n, userId: s.id, guildId: i ?? C(n) })
         );
     },
 });

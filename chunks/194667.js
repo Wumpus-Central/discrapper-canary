@@ -2,7 +2,7 @@ l.d(a, { X: () => i });
 var e = l(477900);
 l(582128);
 var r = l(834730),
-    c = l(967363);
+    c = l(122203);
 function i(s) {
     let { title: a, subtitle: l, icon: i } = s;
     return (0, e.jsxs)("div", {

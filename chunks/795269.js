@@ -4,7 +4,7 @@ t(582128);
 var c = t(503698),
     d = t.n(c),
     r = t(834730),
-    i = t(204308);
+    i = t(932351);
 function n(s) {
     let { text: e, className: t, disableGradient: c = !1 } = s;
     return (0, a.jsx)("div", {

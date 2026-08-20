@@ -5,8 +5,8 @@ var s = l(503698),
     t = l.n(s),
     n = l(569926),
     r = l(788593),
-    c = l(350956),
-    d = l(478725);
+    c = l(365611),
+    d = l(747760);
 function o(a) {
     let { gameId: e } = a,
         { data: l } = (0, n.I)(e),

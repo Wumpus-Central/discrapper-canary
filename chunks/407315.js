@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Ay: () => v, Q9: () => k, W: () => w }), n(321073);
+n.d(t, { Ay: () => S, Q9: () => k, W: () => w }), n(321073);
 var l = n(635377),
     i = n.n(l),
     s = n(181370),
@@ -15,13 +15,13 @@ var l = n(635377),
     p = n(35277),
     g = n(820066),
     x = n(551483),
-    A = n(947271);
-let E = new a.Vy("withCodeBlocks"),
-    C = new Set(["line"]),
+    A = n(389437);
+let C = new a.Vy("withCodeBlocks"),
+    E = new Set(["line"]),
     I = /^[a-z0-9_+\-.#]+$/i,
     y = null,
-    S = null;
-function v(e) {
+    v = null;
+function S(e) {
     let { onChange: t } = e,
         l = null,
         i = !1,
@@ -37,11 +37,11 @@ function v(e) {
                             s = !1;
                             try {
                                 m.o.withoutSaving(e, () => {
-                                    g.VW.withoutNormalizing(e, () => _(e, r));
+                                    g.VW.withoutNormalizing(e, () => N(e, r));
                                 }),
                                     (l = g.VW.richValue(e));
                             } catch (e) {
-                                E.warn("error applying arborium highlighting to editor", e);
+                                C.warn("error applying arborium highlighting to editor", e);
                             }
                         })));
             })
@@ -52,24 +52,24 @@ function v(e) {
             g.VW.richValue(e) !== l &&
                 (m.o.withoutSaving(e, () => {
                     g.VW.withoutNormalizing(e, () => {
-                        _(e, r) &&
+                        N(e, r) &&
                             null == y &&
                             !i &&
                             ((i = !0),
-                            (null == S &&
-                                (S = Promise.all([n.e("818449"), n.e("175134")])
+                            (null == v &&
+                                (v = Promise.all([n.e("818449"), n.e("175134")])
                                     .then(n.bind(n, 981776))
                                     .then((e) => {
                                         y = e.default;
                                     })
                                     .catch((e) => {
-                                        throw ((S = null), e);
+                                        throw ((v = null), e);
                                     })),
-                            S)
+                            v)
                                 .then(() => {
                                     (l = null),
                                         m.o.withoutSaving(e, () => {
-                                            g.VW.withoutNormalizing(e, () => _(e));
+                                            g.VW.withoutNormalizing(e, () => N(e));
                                         }),
                                         (l = g.VW.richValue(e));
                                 })
@@ -85,7 +85,7 @@ function v(e) {
         e
     );
 }
-function _(e, t) {
+function N(e, t) {
     let n = (function (e, t) {
         let n = [],
             l = null;
@@ -94,7 +94,7 @@ function _(e, t) {
                 let s = (function (e) {
                         let t,
                             [n, l] = e;
-                        if (!C.has(n.type)) return [];
+                        if (!E.has(n.type)) return [];
                         let i = [],
                             s = /\\|```/g;
                         for (let e = 0; e < n.children.length; e++) {
@@ -164,9 +164,9 @@ function _(e, t) {
                                     let o = (0, u.F)(a, l);
                                     if (null == o) return i?.(a), null;
                                     let d = r()(`${a}\0${e}\0${o.backend}`),
-                                        m = L.get(d);
+                                        m = O.get(d);
                                     if (null != m && m.length === n) return m;
-                                    if (O.has(d)) return null;
+                                    if (M.has(d)) return null;
                                     for (let t of e.split("\n")) if (t.length > 1e3) return null;
                                     let f = e.endsWith("\n")
                                         ? e
@@ -177,7 +177,7 @@ function _(e, t) {
                                         if (((s = e.html), null != i)) for (let t of e.missingInjections) i(t);
                                     } catch (e) {
                                         return (
-                                            O.set(d, !0),
+                                            M.set(d, !0),
                                             h.A.captureException(e instanceof Error ? e : Error(String(e)), {
                                                 tags: { app_context: "syntax_highlighting" },
                                                 extra: { lang: a, surface: "editor" },
@@ -198,7 +198,7 @@ function _(e, t) {
                                                     s = 0;
                                                 for (T.lastIndex = 0; null != (t = T.exec(e)); ) {
                                                     let r = t.index + t[0].length,
-                                                        a = M(e.substring(s, t.index)).length,
+                                                        a = L(e.substring(s, t.index)).length,
                                                         o = l.filter((e) => null != e);
                                                     if (
                                                         (a > 0 &&
@@ -212,7 +212,7 @@ function _(e, t) {
                                                     } else l.pop();
                                                     s = r;
                                                 }
-                                                let r = M(e.substring(s)).length,
+                                                let r = L(e.substring(s)).length,
                                                     a = l.filter((e) => null != e);
                                                 return (
                                                     r > 0 && a.length > 0 && n.push({ types: a, start: i, end: i + r }),
@@ -220,7 +220,7 @@ function _(e, t) {
                                                 );
                                             })(p[e]),
                                         );
-                                    return L.set(d, g), g;
+                                    return O.set(d, g), g;
                                 })(e, t, n.length, l, i);
                                 if (null != s) for (let e = 0; e < n.length; e++) n[e].hljsTypes = s[e];
                                 else for (let e = 0; e < n.length; e++) n[e].hljsTypes = [];
@@ -250,7 +250,7 @@ function _(e, t) {
                                             r = [],
                                             a = 0,
                                             o = 0;
-                                        for (; null != (l = N.exec(s)); ) {
+                                        for (; null != (l = _.exec(s)); ) {
                                             let t = l.index + l[0].length,
                                                 n = l.index - o;
                                             l.index > o &&
@@ -297,15 +297,15 @@ function _(e, t) {
         n.some((e) => null != e.lang)
     );
 }
-let N = /(?:<span class="([^"]*)">)|(?:<\/span>)/g,
+let _ = /(?:<span class="([^"]*)">)|(?:<\/span>)/g,
     T = /(?:<(a-[a-z]{1,2})>)|(?:<\/a-[a-z]{1,2}>)/g,
     j = new Map();
 for (let [e, t] of Object.entries(A)) e.startsWith("a-") && null != t && j.set(e, t);
 let b = { max: 1 / 0, maxAge: +d.A.Millis.MINUTE, updateAgeOnGet: !0 },
     R = new (i())(b),
-    L = new (i())(b),
-    O = new (i())(b);
-function M(e) {
+    O = new (i())(b),
+    M = new (i())(b);
+function L(e) {
     return e
         .replace(/&amp;/g, "&")
         .replace(/&lt;/g, "<")
@@ -333,5 +333,5 @@ function k(e) {
     return w(e, t);
 }
 (0, u.Q4)(() => {
-    L.reset();
+    O.reset();
 });

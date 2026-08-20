@@ -1,4 +1,4 @@
-i.exports = {
+t.exports = {
     E3: "base_b88801",
     Qq: "text_b88801",
     gO: "ellipsis_b88801",

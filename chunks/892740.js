@@ -4,7 +4,7 @@ c(582128);
 var i = c(503698),
     d = c.n(i),
     l = c(349085),
-    j = c(225983);
+    j = c(954684);
 function r(s) {
     let { gameId: a } = s,
         c = (0, l.A)(a, "cover");

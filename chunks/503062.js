@@ -24,7 +24,7 @@ var n = i(477900),
     I = i(939496),
     N = i(652215),
     _ = i(996988),
-    k = i(959831);
+    k = i(135650);
 let S = u._3.SIZE_40,
     F = j.Ay.getEnableHardwareAcceleration();
 function y(e) {
@@ -58,16 +58,16 @@ function y(e) {
         onContextMenu: function (e) {
             (0, f.L3)(e, async () => {
                 let { default: e } = await Promise.all([
-                    i.e("197422"),
-                    i.e("397705"),
+                    i.e("924697"),
+                    i.e("866038"),
                     i.e("926132"),
                     i.e("146652"),
-                    i.e("893190"),
                     i.e("834552"),
+                    i.e("893190"),
                     i.e("708757"),
+                    i.e("468403"),
                     i.e("585968"),
                     i.e("189673"),
-                    i.e("468403"),
                     i.e("229787"),
                     i.e("882073"),
                     i.e("797558"),

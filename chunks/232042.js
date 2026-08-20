@@ -17,17 +17,17 @@ var i = n(503698),
     g = n(922288),
     x = n(986226),
     A = n(56059),
-    E = n(781481),
-    C = n(760911),
+    C = n(781481),
+    E = n(760911),
     I = n(534890),
     y = n(855473),
-    S = n(740426),
-    v = n(191023),
-    _ = n(87221),
-    N = n(173936),
+    v = n(740426),
+    S = n(191023),
+    N = n(87221),
+    _ = n(173936),
     T = n(936755),
     j = n(375708),
-    b = n(353137);
+    b = n(147190);
 let R = function (e) {
     let { iconType: t, children: n } = e,
         i = null;
@@ -145,7 +145,7 @@ let R = function (e) {
             });
             break;
         case "forum-nsfw":
-            i = (0, l.jsx)(E.f, {
+            i = (0, l.jsx)(C.f, {
                 size: "md",
                 color: "currentColor",
                 className: b.Kk,
@@ -153,7 +153,7 @@ let R = function (e) {
             });
             break;
         case "forum-spoiler":
-            i = (0, l.jsx)(C.H, {
+            i = (0, l.jsx)(E.H, {
                 size: "md",
                 color: "currentColor",
                 className: b.Kk,
@@ -179,7 +179,7 @@ let R = function (e) {
             break;
         case "browse":
         case "customize":
-            i = (0, l.jsx)(S.k, {
+            i = (0, l.jsx)(v.k, {
                 size: "md",
                 color: "currentColor",
                 className: b.Kk,
@@ -203,7 +203,7 @@ let R = function (e) {
             });
             break;
         case "media":
-            i = (0, l.jsx)(v.ImageIcon, {
+            i = (0, l.jsx)(S.ImageIcon, {
                 size: "md",
                 color: "currentColor",
                 className: b.Kk,
@@ -211,7 +211,7 @@ let R = function (e) {
             });
             break;
         case "media-nsfw":
-            i = (0, l.jsx)(_.D, {
+            i = (0, l.jsx)(N.D, {
                 size: "md",
                 color: "currentColor",
                 className: b.Kk,
@@ -219,7 +219,7 @@ let R = function (e) {
             });
             break;
         case "linked-roles":
-            i = (0, l.jsx)(N.LinkIcon, {
+            i = (0, l.jsx)(_.LinkIcon, {
                 size: "md",
                 color: "currentColor",
                 className: b.Kk,

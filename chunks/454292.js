@@ -1,8 +1,8 @@
-n.d(e, { A: () => i });
-function i(t, e, n) {
-    return null == n
+i.d(n, { A: () => e });
+function e(t, n, i) {
+    return null == i
         ? null
-        : (t.getApplicationActivity(n) ??
-              e.getApplicationActivity(n, !0) ??
-              e.getHiddenActivities().find((t) => t.application_id === n));
+        : (t.getApplicationActivity(i) ??
+              n.getApplicationActivity(i, !0) ??
+              n.getHiddenActivities().find((t) => t.application_id === i));
 }

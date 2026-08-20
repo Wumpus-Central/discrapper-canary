@@ -18,7 +18,7 @@ var i = s(477900),
     A = s(652215),
     j = s(202541),
     b = s(375708),
-    C = s(792812);
+    C = s(906367);
 let E = a.Ay.connectStores([h.default], () => ({ user: h.default.getCurrentUser() }))(function (e) {
     let { user: t } = e,
         s = (0, a.bG)([p.default], () => p.default.isAuthenticated()),

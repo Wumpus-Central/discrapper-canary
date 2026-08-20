@@ -18,7 +18,7 @@ var i = n(477900),
     p = n(190460),
     T = n(778712),
     m = n(375708),
-    g = n(653403);
+    g = n(185864);
 let S = { tension: 1200, friction: 70 };
 function N() {
     return document.hasFocus();

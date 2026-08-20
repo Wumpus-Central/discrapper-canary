@@ -17,7 +17,7 @@ var l = n(477900),
     S = n(240248),
     y = n(891640),
     A = n(818348),
-    P = n(426125);
+    P = n(400400);
 let I = [f.pn.PAYMENT_ELEMENT],
     g = [
         f.pn.PAYPAL_INFORMATION,

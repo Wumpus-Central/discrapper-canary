@@ -25,9 +25,9 @@ var i = s(477900),
     v = s(308528),
     P = s(854627),
     k = s(830543),
-    j = s(466919),
+    j = s(109447),
     y = s(375708),
-    A = s(805893);
+    A = s(329476);
 function R(e) {
     let { recipient: t, isSuccess: s, onClose: a } = e,
         { avatarSrc: n, eventHandlers: l } = (0, P.A)({ userId: t?.id, size: x._3.SIZE_56 }),
@@ -71,7 +71,7 @@ function R(e) {
 }
 var U = s(88001),
     w = s(652215),
-    D = s(120191);
+    D = s(593730);
 function T(e) {
     let { onInvite: t, onClose: s, subscriptionId: l, ...o } = e,
         [f, m] = a.useState([]),

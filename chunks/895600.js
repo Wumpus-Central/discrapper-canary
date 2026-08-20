@@ -5,7 +5,7 @@ var n = s(854378),
     i = s(651539),
     l = s(799365),
     a = s(401755),
-    d = s(584771);
+    d = s(894192);
 let u = {
     [a.IZ.CLASSROOM]: s(749576),
     [a.IZ.LOCAL_COMMUNITIES]: s(409682),

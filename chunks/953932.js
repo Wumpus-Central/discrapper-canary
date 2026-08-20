@@ -6,7 +6,7 @@ var l = n(477900),
     s = n(539572),
     u = n(652215),
     c = n(375708),
-    o = n(176835);
+    o = n(353796);
 function d() {
     let e = r.useCallback(() => {
             window.open(i.A.getArticleURL(u.MVz.CLIPS), "_blank", "noopener,noreferrer");

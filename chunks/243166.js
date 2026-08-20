@@ -11,7 +11,7 @@ var n = t(503698),
     o = t(612630),
     x = t(518477),
     h = t(375708),
-    m = t(817997);
+    m = t(935922);
 function N(e) {
     let { userId: l, isVisible: t, onOpenProfile: n } = e,
         { note: N } = (0, o.A)(l),

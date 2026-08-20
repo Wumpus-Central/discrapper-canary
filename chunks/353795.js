@@ -10,7 +10,7 @@ var i = n(477900),
     c = n(460890),
     u = n(978495),
     _ = n(818348),
-    E = n(718933);
+    E = n(234978);
 function A(e) {
     let { src: t } = e;
     return (0, i.jsx)("img", { className: E.image, src: t, alt: "", draggable: !1 });

@@ -28,8 +28,8 @@ var i = n(477900),
     R = n(652215),
     O = n(731854),
     x = n(375708),
-    U = n(724544),
-    w = n(907142);
+    U = n(300303),
+    w = n(479137);
 let L = function (e) {
     let [t, n] = (0, l.useState)("idle");
     (0, l.useEffect)(() => {
@@ -182,7 +182,7 @@ var P = n(297264),
     V = n(998759),
     k = n(75811),
     H = n(603266),
-    B = n(67610);
+    B = n(68375);
 function W(e) {
     let { channelId: t } = e,
         n = (0, s.bG)([o.A], () => o.A.getSecureFramesState()?.epochAuthenticator),
@@ -252,7 +252,7 @@ function W(e) {
         ],
     });
 }
-var Y = n(874918);
+var Y = n(203077);
 function z(e) {
     let { lobbyId: t, connectionTypeText: n, closePopout: l } = e,
         r = (0, s.cf)([u.A], () => ({

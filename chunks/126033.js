@@ -8,7 +8,7 @@ var a = i(477900),
     o = i(486020),
     c = i(320137),
     m = i(375708),
-    h = i(887016);
+    h = i(628363);
 function u(t) {
     let { emoji: e, onChange: i, value: n } = t,
         s = o.Ay.getEmojiURL({ id: e.id, animated: e.animated, size: 24 });

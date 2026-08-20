@@ -6,8 +6,8 @@ var l = n(477900),
     s = n(435328),
     c = n(17928),
     u = n(808728),
-    o = n(354671),
-    d = n(742715);
+    o = n(813754),
+    d = n(165648);
 function m(t) {
     let { description: e, className: n, guildId: i, truncate: m = !0 } = t,
         x = (0, c.bG)([u.Ay], () => (null != i ? u.Ay.getDefaultChannel(i)?.id : void 0), [i]),

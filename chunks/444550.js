@@ -31,7 +31,7 @@ var t = n(477900),
     A = n(765671),
     F = n(972117),
     q = n(375708),
-    R = n(888819);
+    R = n(980148);
 let T = { keys: ["label"] };
 function L(e) {
     return e.label;
@@ -288,7 +288,7 @@ let M = r.forwardRef(function (e, l) {
         }, [eF, eS, ek, ez]);
     let e0 = j ? z : H,
         e1 = r.useRef(null),
-        { focusPreviousItem: e8, focusNextItem: e3 } = _(e1, ew, eR);
+        { focusPreviousItem: e8, focusNextItem: e4 } = _(e1, ew, eR);
     return (0, t.jsxs)(c.hD, {
         navigator: ez,
         children: [
@@ -458,7 +458,7 @@ let M = r.forwardRef(function (e, l) {
                             let l = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
                             eY(e, l);
                         },
-                        focusNextItem: e3,
+                        focusNextItem: e4,
                         focusPreviousItem: e8,
                         renderCustomPill: eu,
                         customPillContainerClassName: ec,

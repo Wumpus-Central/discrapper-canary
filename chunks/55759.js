@@ -44,7 +44,7 @@ var r = n(477900),
     H = n(458817),
     G = n(854356),
     $ = n(979204),
-    q = n(628110);
+    q = n(451713);
 function W(e) {
     let {
             targetSec: t,
@@ -91,7 +91,7 @@ function W(e) {
 var z = n(297264),
     X = n(259678),
     Z = n(364522),
-    J = n(668534);
+    J = n(862649);
 function ee(e) {
     let { quest: t, onClose: n } = e,
         i = (0, y.Kr)((e) => e.transcript);
@@ -203,8 +203,8 @@ function eu(e) {
         e1 = (0, y.Kr)((e) => e.setVideoProgress),
         e6 = (0, y.Kr)((e) => e.muted),
         e7 = (0, y.Kr)((e) => e.setMuted),
-        e8 = (0, y.Kr)((e) => e.volume),
-        e2 = (0, y.Kr)((e) => e.setVolume),
+        e2 = (0, y.Kr)((e) => e.volume),
+        e8 = (0, y.Kr)((e) => e.setVolume),
         e4 = (0, c.bG)([I.Ay], () => I.Ay.useReducedMotion),
         e5 = (0, l.useRef)(null),
         e9 = (0, l.useRef)(null),
@@ -373,7 +373,7 @@ function eu(e) {
         if (null == e5.current) return;
         let e = Math.max(e5.current.currentTime - 10, 0);
         tE.info(`[QV] | handleSeekBackIncrement | newTime: ${e}`),
-            t8(e),
+            t2(e),
             eh === Y.Q6.ENDED && tK(Y.Q6.PAUSED),
             tL(b.uF.VIDEO_MODAL, U.Cy.SEEK_BACKWARD);
     }
@@ -381,7 +381,7 @@ function eu(e) {
         if (null == e5.current || !no) return;
         let e = Math.min(e5.current.currentTime + 10, td);
         tE.info(`[QV] | handleSeekForwardIncrement | newTime: ${e}`),
-            t8(e),
+            t2(e),
             eh !== Y.Q6.ENDED && e >= e5.current.duration && tK(Y.Q6.ENDED),
             tL(b.uF.VIDEO_MODAL, U.Cy.SEEK_FORWARD);
     }
@@ -400,9 +400,9 @@ function eu(e) {
         }, []);
     let t6 = l.useCallback(
             (e) => {
-                e2(e), tV(e);
+                e8(e), tV(e);
             },
-            [e2, tV],
+            [e8, tV],
         ),
         t7 = l.useCallback(
             (e) => {
@@ -410,7 +410,7 @@ function eu(e) {
             },
             [e7],
         ),
-        t8 = l.useCallback(
+        t2 = l.useCallback(
             (e) => {
                 null != e5.current &&
                     (tE.info(`[QV] | seekTimeline | timeSec: ${e}`),
@@ -454,12 +454,12 @@ function eu(e) {
                 tK(Y.Q6.PAUSED), ti(b.Yg.LOST_FOCUS);
             },
         });
-    let t2 = l.useRef(!1);
+    let t8 = l.useRef(!1);
     function t4() {
         if (null != e5.current)
             switch ((tE.info(`[QV] | handlePlaybackBtnClick | playerState: ${eh}`), tQ(), eh)) {
                 case Y.Q6.ENDED:
-                    t8(0), tK(Y.Q6.PLAYING);
+                    t2(0), tK(Y.Q6.PLAYING);
                     break;
                 case Y.Q6.PLAYING:
                     tK(Y.Q6.PAUSED), ti(b.Yg.PAUSE_BUTTON);
@@ -649,12 +649,12 @@ function eu(e) {
                                     null != e5.current &&
                                         (tE.info(`[QV] | handleLoadedMetadata | videoAssetId: ${tC}`),
                                         tB(null),
-                                        tC !== V.fY.VIDEO_PLAYER_VIDEO_HLS && t8(tf),
-                                        e6 ? (e5.current.volume = 0) : (e5.current.volume = e8));
+                                        tC !== V.fY.VIDEO_PLAYER_VIDEO_HLS && t2(tf),
+                                        e6 ? (e5.current.volume = 0) : (e5.current.volume = e2));
                                 },
                                 onLoadStart: function () {
                                     (eZ.current = performance.now()),
-                                        (t2.current = !1),
+                                        (t8.current = !1),
                                         tg(ew),
                                         tE.info(`[QV] | handleLoadStart | loadingStartTime: ${eZ.current}`);
                                 },
@@ -689,7 +689,7 @@ function eu(e) {
                                 onCanPlay: ne,
                                 onCanPlayThrough: ne,
                                 onSeeked: function () {
-                                    tE.info("[QV] | handleSeeked"), t2.current || ((t2.current = !0), tF(0));
+                                    tE.info("[QV] | handleSeeked"), t8.current || ((t8.current = !0), tF(0));
                                 },
                                 onAbort: function () {
                                     return t9(Y.SB.ABORT);
@@ -871,7 +871,7 @@ function eu(e) {
                                             isFullyVisible: tZ && e$,
                                             maxSeekableTime: tZ && e$ ? td : void 0,
                                             onClick: function (e) {
-                                                nd && (t8(e), eh === Y.Q6.ENDED && tK(Y.Q6.PLAYING));
+                                                nd && (t2(e), eh === Y.Q6.ENDED && tK(Y.Q6.PLAYING));
                                             },
                                             onScrubBack: t0,
                                             onScrubForward: t1,
@@ -914,7 +914,7 @@ function eu(e) {
                                             size: t_,
                                             autoFocus: $,
                                             keyDownHandlerRef: e3,
-                                            volume: e8,
+                                            volume: e2,
                                             muted: e6,
                                             transcriptEnabled: eE,
                                             captionEnabled: e_,

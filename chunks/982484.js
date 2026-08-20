@@ -52,7 +52,7 @@ var g = s(323889),
     G = s(453384),
     k = s(646764),
     D = s(617986),
-    z = s(400838);
+    z = s(621485);
 function L(e) {
     let { quest: t, questDescription: s, completedRatio: a, minimizeFrame: o, onClose: u } = e,
         c = (0, F.GV)(),
@@ -135,7 +135,7 @@ var M = s(262254),
     w = s(190107),
     O = s(49999),
     H = s(165610),
-    $ = s(614758);
+    $ = s(391803);
 function K(e) {
     let { quest: t, ...s } = e,
         o = (0, h.fc)(t),

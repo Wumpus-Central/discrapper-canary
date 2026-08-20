@@ -3,16 +3,16 @@ var s = i(477900);
 i(582128);
 var n = i(503698),
     r = i.n(n),
-    l = i(933832),
-    a = i(789645),
+    a = i(933832),
+    l = i(789645),
     o = i(834730),
     c = i(297264),
     d = i(116891),
     u = i(652215),
     m = i(202541),
     g = i(375708),
-    h = i(456996);
-let p = [
+    T = i(608251);
+let h = [
     {
         getPerkLabel: () => g.intl.string(g.t.tIiwuj),
         getTier0Value: () => m.TG[u.TVA.NONE].limits.emoji,
@@ -121,19 +121,19 @@ let p = [
         getTier3Value: () => !0,
     },
 ];
-function T(e) {
+function E(e) {
     let { value: t, isBoosted: i = !1 } = e;
     return "boolean" == typeof t
         ? t
-            ? (0, s.jsx)(l.CheckmarkLargeIcon, { size: "md", color: "currentColor", className: h.oE })
-            : (0, s.jsx)(a.P, { size: "md", color: "currentColor", className: h.i3 })
+            ? (0, s.jsx)(a.CheckmarkLargeIcon, { size: "md", color: "currentColor", className: T.oE })
+            : (0, s.jsx)(l.P, { size: "md", color: "currentColor", className: T.i3 })
         : (0, s.jsx)(o.E, {
               color: i ? "text-strong" : "text-muted",
               variant: i ? "text-md/bold" : "text-md/medium",
               children: t,
           });
 }
-function E(e) {
+function p(e) {
     let { currentTier: t } = e,
         i = (function (e) {
             switch (e) {
@@ -150,9 +150,9 @@ function E(e) {
     return null == i
         ? null
         : (0, s.jsx)("div", {
-              className: r()(h.ER, { [h.GH]: i === u.TVA.TIER_2, [h.z5]: i === u.TVA.TIER_3 }),
+              className: r()(T.ER, { [T.GH]: i === u.TVA.TIER_2, [T.z5]: i === u.TVA.TIER_3 }),
               children: (0, s.jsx)(o.E, {
-                  className: h.uQ,
+                  className: T.uQ,
                   color: "text-overlay-light",
                   variant: "text-xs/bold",
                   children: t === u.TVA.TIER_3 ? g.intl.string(g.t.d849Up) : g.intl.string(g.t.dZeX1z),
@@ -160,37 +160,37 @@ function E(e) {
           });
 }
 function _(e) {
-    let { className: t, guild: i, hideHeading: n = !1, hideTier0: l = !1 } = e;
+    let { className: t, guild: i, hideHeading: n = !1, hideTier0: a = !1 } = e;
     return (0, s.jsxs)("div", {
-        className: r()(h.iE, t),
+        className: r()(T.iE, t),
         children: [
             !n &&
                 (0, s.jsx)(c.D, {
-                    className: h.R_,
+                    className: T.R_,
                     variant: "heading-xxl/semibold",
                     children: g.intl.string(g.t["9GGb9k"]),
                 }),
             (0, s.jsxs)("div", {
-                className: h.wY,
+                className: T.wY,
                 children: [
-                    null != i && (0, s.jsx)(E, { currentTier: i.premiumTier }),
+                    null != i && (0, s.jsx)(p, { currentTier: i.premiumTier }),
                     (0, s.jsxs)("div", {
-                        className: h.tp,
+                        className: T.tp,
                         children: [
                             (0, s.jsxs)("div", {
-                                className: r()(h.nM, h.U1),
+                                className: r()(T.nM, T.U1),
                                 children: [
                                     (0, s.jsx)("div", {
-                                        className: r()(h.Hn, h.DV),
+                                        className: r()(T.Hn, T.DV),
                                         children: (0, s.jsx)(c.D, {
                                             color: "text-default",
                                             variant: "heading-lg/semibold",
                                             children: g.intl.string(g.t.F5MY0k),
                                         }),
                                     }),
-                                    !l &&
+                                    !a &&
                                         (0, s.jsxs)("div", {
-                                            className: r()(h.Hn, h.pU),
+                                            className: r()(T.Hn, T.pU),
                                             children: [
                                                 (0, s.jsx)(c.D, {
                                                     color: "text-default",
@@ -207,7 +207,7 @@ function _(e) {
                                             ],
                                         }),
                                     (0, s.jsxs)("div", {
-                                        className: r()(h.Hn, h.pU),
+                                        className: r()(T.Hn, T.pU),
                                         children: [
                                             (0, s.jsx)(c.D, {
                                                 color: "text-default",
@@ -224,7 +224,7 @@ function _(e) {
                                         ],
                                     }),
                                     (0, s.jsxs)("div", {
-                                        className: r()(h.Hn, h.pU),
+                                        className: r()(T.Hn, T.pU),
                                         children: [
                                             (0, s.jsx)(c.D, {
                                                 color: "text-default",
@@ -241,7 +241,7 @@ function _(e) {
                                         ],
                                     }),
                                     (0, s.jsxs)("div", {
-                                        className: r()(h.Hn, h.pU),
+                                        className: r()(T.Hn, T.pU),
                                         children: [
                                             (0, s.jsx)(c.D, {
                                                 color: "text-default",
@@ -259,36 +259,36 @@ function _(e) {
                                     }),
                                 ],
                             }),
-                            p.map((e, t) =>
+                            h.map((e, t) =>
                                 (0, s.jsxs)(
                                     "div",
                                     {
-                                        className: r()(h.nM, { [h.fW]: t === p.length - 1 }),
+                                        className: r()(T.nM, { [T.fW]: t === h.length - 1 }),
                                         children: [
                                             (0, s.jsx)("div", {
-                                                className: r()(h.Hn, h.DV),
+                                                className: r()(T.Hn, T.DV),
                                                 children: (0, s.jsx)(o.E, {
                                                     color: "text-muted",
                                                     variant: "text-md/medium",
                                                     children: e.getPerkLabel(),
                                                 }),
                                             }),
-                                            !l &&
+                                            !a &&
                                                 (0, s.jsx)("div", {
-                                                    className: r()(h.Hn, h.pU),
-                                                    children: (0, s.jsx)(T, { value: e.getTier0Value() }),
+                                                    className: r()(T.Hn, T.pU),
+                                                    children: (0, s.jsx)(E, { value: e.getTier0Value() }),
                                                 }),
                                             (0, s.jsx)("div", {
-                                                className: r()(h.Hn, h.pU),
-                                                children: (0, s.jsx)(T, { value: e.getTier1Value(), isBoosted: !0 }),
+                                                className: r()(T.Hn, T.pU),
+                                                children: (0, s.jsx)(E, { value: e.getTier1Value(), isBoosted: !0 }),
                                             }),
                                             (0, s.jsx)("div", {
-                                                className: r()(h.Hn, h.pU),
-                                                children: (0, s.jsx)(T, { value: e.getTier2Value(), isBoosted: !0 }),
+                                                className: r()(T.Hn, T.pU),
+                                                children: (0, s.jsx)(E, { value: e.getTier2Value(), isBoosted: !0 }),
                                             }),
                                             (0, s.jsx)("div", {
-                                                className: r()(h.Hn, h.pU),
-                                                children: (0, s.jsx)(T, { value: e.getTier3Value(), isBoosted: !0 }),
+                                                className: r()(T.Hn, T.pU),
+                                                children: (0, s.jsx)(E, { value: e.getTier3Value(), isBoosted: !0 }),
                                             }),
                                         ],
                                     },

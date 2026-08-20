@@ -14,7 +14,7 @@ var m = n(366523);
 n(773669), n(252424), n(580630);
 var p = n(652215);
 n(375708);
-var f = n(844689);
+var f = n(799591);
 function x(e) {
     let { sku: t, slayerProductPreviewClassName: n } = e,
         r = (0, c.bG)([o.A], () => o.A.getProduct(t.id));

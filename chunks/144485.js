@@ -10,7 +10,7 @@ let c = {
     openSecureFramesStreamVerification: function (e, t) {
         (0, a.openModalLazy)(async () => {
             let i = (
-                await Promise.all([n.e("664941"), n.e("343494"), n.e("563510"), n.e("930049"), n.e("146115")]).then(
+                await Promise.all([n.e("907230"), n.e("545610"), n.e("563510"), n.e("930049"), n.e("146115")]).then(
                     n.bind(n, 773262),
                 )
             ).default;
@@ -23,8 +23,8 @@ let c = {
                 async () => {
                     let i = (
                         await Promise.all([
-                            n.e("664941"),
-                            n.e("343494"),
+                            n.e("907230"),
+                            n.e("545610"),
                             n.e("563510"),
                             n.e("44264"),
                             n.e("425592"),

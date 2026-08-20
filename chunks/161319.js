@@ -23,7 +23,7 @@ var s = i(477900),
     R = i(202541),
     P = i(652215),
     A = i(375708),
-    y = i(640886);
+    y = i(341973);
 let N = "recurring-3p-progress-label",
     I = (e) => {
         let { promotionRecurrences: t } = e,
@@ -177,7 +177,7 @@ function w(e) {
     p.default.track(P.HAw.THIRD_PARTY_PROMOTION_MODAL_OPENED, { location_stack: t, partner_ids: n }),
         x.Ay.fetchActivePromotions(),
         (0, c.openModalLazy)(async () => {
-            let { Premium3PRewardsModalEntry: e } = await Promise.all([i.e("793004"), i.e("385347")]).then(
+            let { Premium3PRewardsModalEntry: e } = await Promise.all([i.e("660748"), i.e("385347")]).then(
                 i.bind(i, 355150),
             );
             return (t) => (0, s.jsx)(e, { ...t, partnerIds: n, isLocked: r });

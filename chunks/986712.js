@@ -25,7 +25,7 @@ var e = l(477900),
     E = l(778712),
     L = l(562153),
     y = l(996988),
-    S = l(413697);
+    S = l(378502);
 let D = [
         [{ top: 15, left: 15, width: 28, height: 28 }],
         [
@@ -116,7 +116,7 @@ var T = l(939249),
     z = l(531648),
     H = l(652215),
     B = l(375708),
-    Q = l(526466);
+    Q = l(105065);
 function Y(i) {
     let { voiceChannel: t, onAction: l, onClose: s } = i,
         { themeType: d } = (0, C.E)(),
@@ -166,7 +166,7 @@ function Y(i) {
 }
 var $ = l(70963),
     q = l(269587),
-    J = l(250318);
+    J = l(260155);
 function X(i) {
     let { user: t, currentUser: l, voiceChannel: s, className: f, onClose: O } = i,
         { themeType: I } = (0, C.E)(),

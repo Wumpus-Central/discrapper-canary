@@ -4,7 +4,7 @@ var r = n(477900),
     a = n(503698),
     s = n.n(a),
     i = n(713517),
-    c = n(522988);
+    c = n(715591);
 function o(e) {
     let { position: t, children: n } = e;
     return (0, r.jsx)("div", { className: s()(c.child, c[t]), children: n });

@@ -1,4 +1,4 @@
-e.exports = {
+d.exports = {
     AH: "boostedGuildIconGem__97677",
     md: "iconBackgroundTierNone__97677",
     Yl: "iconBackgroundTierOne__97677",

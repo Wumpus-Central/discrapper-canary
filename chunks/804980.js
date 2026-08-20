@@ -32,7 +32,7 @@ var i = n(477900),
     w = n(403362),
     L = n(562153),
     P = n(375708),
-    G = n(469345);
+    G = n(782660);
 let b = ["embedded_background"];
 function F(e) {
     let { avatarSize: t, guildId: n, channelId: l, users: s } = e,

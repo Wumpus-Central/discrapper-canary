@@ -9,9 +9,9 @@ var n = i(477900),
     u = i(976860),
     c = i(734057),
     h = i(652215),
-    m = i(774418),
+    m = i(383282),
     p = i(375708),
-    A = i(458495);
+    A = i(720722);
 let g = "legacyGameInviteChannelChatBannerDismissed",
     I = new Set([
         "1433122113031639161",

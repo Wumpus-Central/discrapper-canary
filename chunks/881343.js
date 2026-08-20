@@ -2,7 +2,7 @@ i.d(t, { A: () => s });
 var l = i(477900),
     n = i(582128),
     a = i(891694),
-    r = i(972784);
+    r = i(916517);
 function s(e) {
     let { imageBackground: t, applicationName: i, imageClassName: s, imageNotFoundClassName: o } = e,
         [d, p] = n.useState(!1);

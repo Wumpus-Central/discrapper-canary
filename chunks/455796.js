@@ -6,7 +6,7 @@ var i = s(477900),
     r = s(5373),
     u = s(21161),
     d = s(375708),
-    c = s(897981);
+    c = s(599164);
 function l(e) {
     let { onClose: t, initialPercent: s, numActions: l } = e,
         [p, h] = n.useState(s),

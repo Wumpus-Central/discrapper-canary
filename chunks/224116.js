@@ -12,7 +12,7 @@ var t = r(477900),
     p = r(877062),
     w = r(652215),
     x = r(375708),
-    u = r(789871);
+    u = r(746820);
 let b = [
         { id: "discord", getName: () => x.intl.string(x.t.uON9Ui), url: (0, h.SU)() },
         {

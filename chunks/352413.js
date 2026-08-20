@@ -1,17 +1,17 @@
 n.d(t, { A: () => A });
 var r = n(582128),
     a = n(702841),
-    i = n(727170),
-    l = n(919395),
+    l = n(727170),
+    i = n(919395),
     u = n(207803),
     o = n(84540),
     s = n(836602);
 function A(e) {
     let { isTryItOut: t, analyticsLocations: n, guildId: A } = e,
-        c = (0, i.A)(n),
+        d = (0, l.A)(n),
         {
-            pendingAvatar: d,
-            pendingAvatarDecoration: g,
+            pendingAvatar: c,
+            pendingAvatarDecoration: v,
             pendingErrors: E,
         } = (0, a.cf)([s.A], () => {
             if (t) {
@@ -29,23 +29,23 @@ function A(e) {
                 pendingErrors: s.A.getErrors(A).avatarDecoration,
             };
         }),
-        v = (0, r.useCallback)(
+        f = (0, r.useCallback)(
             (e) => {
-                (0, o.p)({ guildId: A, avatar: e }), (0, l.WU)(null == e ? "remove" : "set");
+                (0, o.p)({ guildId: A, avatar: e }), (0, i.WU)(null == e ? "remove" : "set");
             },
             [A],
         ),
-        f = (0, r.useCallback)(
+        g = (0, r.useCallback)(
             (e) => {
-                (0, o.p)({ guildId: A, avatarDecoration: e }), null != e && c(e);
+                (0, o.p)({ guildId: A, avatarDecoration: e }), null != e && d(e);
             },
-            [c, A],
+            [d, A],
         );
     return {
-        pendingAvatar: d,
-        pendingAvatarDecoration: g,
+        pendingAvatar: c,
+        pendingAvatarDecoration: v,
         pendingErrors: E,
-        setPendingAvatar: t ? u.e$ : v,
-        setPendingAvatarDecoration: t ? u.Go : f,
+        setPendingAvatar: t ? u.e$ : f,
+        setPendingAvatarDecoration: t ? u.Go : g,
     };
 }

@@ -11,7 +11,7 @@ if (221552 == n.j) var u = n(789645);
 var A = n(558001),
     h = n(835002),
     E = n(375708),
-    g = n(937666);
+    g = n(323747);
 function C(e) {
     let { label: t, labelHook: n, count: r, dismissNotice: C, className: _, noticeType: I } = e,
         T = null != C;

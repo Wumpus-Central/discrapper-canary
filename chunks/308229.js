@@ -21,7 +21,7 @@ var a = i(477900),
     _ = i(745317),
     m = i(652215),
     S = i(375708),
-    x = i(542306);
+    x = i(907487);
 function y(e) {
     let { transitionState: t, videoEnabled: i, onEnable: y, onClose: M } = e,
         j = E.Ay.getCameraComponent(),

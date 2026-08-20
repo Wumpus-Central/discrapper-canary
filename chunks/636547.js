@@ -6,7 +6,7 @@ var l = n(503698),
     a = n(993077),
     r = n(834730),
     o = n(404778),
-    c = n(487458);
+    c = n(989401);
 function d(e) {
     let { bar: t, children: n, className: l, inModal: d, title: u } = e;
     return (0, i.jsxs)(a.Z, {

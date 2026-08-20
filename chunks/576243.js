@@ -15,7 +15,7 @@ function r(e) {
     });
 }
 var s = l(403581),
-    o = l(790009);
+    o = l(512376);
 function c(e) {
     let { size: t, iconSize: l, color: n, className: c } = e;
     return (0, i.jsxs)("div", {

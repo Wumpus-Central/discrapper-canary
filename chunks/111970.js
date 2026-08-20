@@ -1,4 +1,4 @@
-a.exports = {
+e.exports = {
     kL: "container_f8a8fa",
     x4: "uploadArea_f8a8fa",
     zd: "addFileButtonLook_f8a8fa",

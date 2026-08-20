@@ -8,7 +8,7 @@ var i = n(503698),
     o = n(834730),
     u = n(565645),
     c = n(3432),
-    d = n(612506);
+    d = n(575625);
 function p(e) {
     let t,
         { applicationId: n, storeListingBenefits: i, skuBenefits: r, className: a } = e;
@@ -84,7 +84,7 @@ function h(e) {
         ],
     });
 }
-var C = n(799449);
+var C = n(877852);
 function f(e) {
     let { application: t, asset: n, className: i, ...r } = e;
     return (0, l.jsx)(s.A, { application: t, size: s.V.MEDIUM, asset: n, className: i, ...r });

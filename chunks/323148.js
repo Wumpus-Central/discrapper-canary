@@ -31,9 +31,9 @@ var a = t(477900),
     X = t(346017),
     D = t(652215),
     M = t(202541),
-    I = t(594387),
+    I = t(378803),
     P = t(375708),
-    T = t(136948);
+    T = t(106711);
 function z(e) {
     let { icon: s, title: t, description: c, footer: l, thumbnailSrc: r, thumbnailImageClassName: n } = e;
     return (0, a.jsxs)("div", {

@@ -8,7 +8,7 @@ var l = n(834730),
     o = n(974930),
     c = n(103355),
     d = n(375708),
-    u = n(760635);
+    u = n(856598);
 function h(e) {
     let { guildEvent: t, recurrenceId: n } = e,
         h = (0, r.Ay)(t, n),

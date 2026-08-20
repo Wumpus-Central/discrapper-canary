@@ -6,7 +6,7 @@ var i = n(477900),
     s = n.n(a),
     l = n(900283),
     o = n(106236),
-    d = n(946470);
+    d = n(889553);
 function c(e) {
     return `${e.toFixed(0)}%`;
 }

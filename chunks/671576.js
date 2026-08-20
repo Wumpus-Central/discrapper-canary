@@ -18,7 +18,7 @@ var n = i(477900),
     _ = i(218113),
     p = i(652215),
     E = i(375708),
-    f = i(623111);
+    f = i(679152);
 function C(t) {
     let { guildId: e, transitionState: i, onClose: C, analyticsData: N } = t,
         A = (0, d.bG)([h.A], () => h.A.getGuild(e), [e]),

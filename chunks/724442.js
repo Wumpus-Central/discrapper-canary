@@ -1,4 +1,4 @@
-n.d(t, { A: () => i });
-function i(e) {
+n.d(t, { A: () => r });
+function r(e) {
     return e.current;
 }

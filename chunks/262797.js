@@ -37,7 +37,7 @@ var h = n(381689),
     O = n(143547),
     p = n(235627),
     v = n(652215),
-    S = n(678705);
+    S = n(490930);
 function k(t) {
     let { user: i, onBlock: n, onIgnore: s, location: r, disallowIgnore: m, guildId: I, channelId: E } = t,
         N = (0, l.bG)([_.A], () => _.A.isIgnored(i.id));

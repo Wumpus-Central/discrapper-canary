@@ -10,7 +10,7 @@ var i = a(477900),
     d = a(652215),
     x = a(746080),
     h = a(375708),
-    k = a(944007);
+    k = a(695416);
 let m = function (t) {
     let { guildId: n, submittedGuildJoinRequestsCount: a, onClose: m, transitionState: C, onConfirm: E } = t,
         {

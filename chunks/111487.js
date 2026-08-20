@@ -4,7 +4,7 @@ var l = n(477900);
 n(582128);
 var i = n(565645),
     s = n(202027),
-    r = n(630828);
+    r = n(771653);
 let a = { SMALL: r.EX, MEDIUM: r.Y, LARGE: r.as };
 function o(e) {
     let { emojiId: t, emojiName: n, defaultComponent: r, size: o = a.MEDIUM } = e,

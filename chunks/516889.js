@@ -24,7 +24,7 @@ var s = i(477900),
     I = i(411342),
     L = i(652215),
     f = i(375708),
-    k = i(848023);
+    k = i(673608);
 let G = "expanded-area";
 function z(t) {
     let { attachments: e, role: i, roleLocked: l } = t,
@@ -91,7 +91,7 @@ function C(t) {
           : (0, s.jsx)(z, { attachments: i, role: n, roleLocked: l });
 }
 var y = i(703543),
-    F = i(941381);
+    F = i(979822);
 function P(t) {
     let { transitionState: e, guildProductListingId: i, analyticsLocation: n, guildId: l, onClose: N } = t,
         D = (0, c.bG)([p.A], () => p.A.getGuildProduct(i));

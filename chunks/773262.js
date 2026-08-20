@@ -14,7 +14,7 @@ var l = e(477900),
     p = e(930840);
 e(603266);
 var g = e(375708),
-    k = e(588741);
+    k = e(686418);
 let j = function (t) {
     let { transitionState: s, streamKey: e, channelId: j, onClose: v } = t,
         A = (0, a.bG)([d.A], () => d.A.getSecureFramesState(e)?.epochAuthenticator),

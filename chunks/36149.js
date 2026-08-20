@@ -49,7 +49,7 @@ var i,
     O = n(652215),
     R = n(204925),
     L = n(835002),
-    y = n(516761),
+    y = n(800121),
     D = n(375708);
 let v = new Set([m.q1.STAGE_CHANNEL_AGE_VERIFICATION_PROMPT, m.q1.START_STAGE_PROMPT, m.q1.STAGE_CHANNEL_RAISE_HAND]),
     b = new Set([

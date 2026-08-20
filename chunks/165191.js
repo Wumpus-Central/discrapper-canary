@@ -32,7 +32,7 @@ function c(e, t) {
         case s.o2.CUP:
             a = () =>
                 n
-                    .e("556071")
+                    .e("778452")
                     .then(n.t.bind(n, 765375, 19))
                     .then((e) => {
                         let { default: t } = e;

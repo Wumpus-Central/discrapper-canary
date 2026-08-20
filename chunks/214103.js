@@ -42,7 +42,7 @@ var a = t(477900),
     O = t(375708),
     X = t(767243),
     $ = t(56400),
-    K = t(566964);
+    K = t(438221);
 function z(e) {
     return P.A.getGuild(e)?.features.has(J.GuildFeatures.GUILD_THEME) === !0;
 }

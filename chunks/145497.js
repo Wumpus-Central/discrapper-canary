@@ -9,7 +9,7 @@ var a = e(477900),
     m = e(486020),
     h = e(240248),
     u = e(375708),
-    o = e(176428);
+    o = e(705843);
 function N(i) {
     let { guildName: s, iconSize: e, className: l } = i,
         n = (0, h.oN)(s);

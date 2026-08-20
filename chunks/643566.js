@@ -1,4 +1,4 @@
-a.exports = {
+_.exports = {
     Kk: "icon__2a871",
     v_: "iconOuter__2a871",
     uU: "iconCheck__2a871",

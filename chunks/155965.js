@@ -14,7 +14,7 @@ var l = n(477900),
     g = n(628284),
     x = n(821609),
     f = n(375708),
-    A = n(942151);
+    A = n(469792);
 function C(e) {
     let { displayName: t, description: n, icon: i, isLoading: a, isConnected: r, canConnect: o, onConnect: s } = e;
     return (0, l.jsxs)("div", {

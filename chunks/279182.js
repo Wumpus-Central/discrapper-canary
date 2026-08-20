@@ -108,8 +108,8 @@ function w(e) {
     });
 }
 var H = n(519222),
-    V = n(435153),
-    B = n(129821);
+    V = n(356974),
+    B = n(988626);
 function F(e) {
     let { message: t, channel: n, useChatFontScaling: s, className: r } = e,
         c = (0, _.jv)("message_reactions"),

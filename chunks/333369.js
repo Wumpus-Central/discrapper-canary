@@ -193,8 +193,8 @@ var ew = n(746080),
     ek = n(719366),
     eH = n(307731),
     eB = n(818348),
-    eV = n(774418),
-    eF = n(414455);
+    eV = n(383282),
+    eF = n(236048);
 let eY = "GAME_INVITES_CHANNEL_OPTION";
 function eX(e) {
     return e === eY ? ej.rbe.GUILD_FORUM : e;
@@ -561,7 +561,7 @@ class eK extends l.PureComponent {
                             {
                                 onClick: () =>
                                     (0, D.openModalLazy)(async () => {
-                                        let { default: e } = await Promise.all([n.e("885355"), n.e("390052")]).then(
+                                        let { default: e } = await Promise.all([n.e("571331"), n.e("390052")]).then(
                                             n.bind(n, 653682),
                                         );
                                         return (t) => (0, i.jsx)(e, { ...t, guildId: l });

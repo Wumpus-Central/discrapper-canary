@@ -24,7 +24,7 @@ let N = (0, t(945810).mj)({
     variations: { 1: { showServerTag: !0 } },
 });
 var A = t(375708),
-    k = t(238525);
+    k = t(604280);
 function y(e) {
     let { profile: l, disableGuildNameClick: t, guildNameId: s } = e,
         n = l.id,

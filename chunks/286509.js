@@ -7,7 +7,7 @@ var l = n(477900),
     a = n(939249),
     o = n(847374),
     u = n(650583),
-    c = n(709160);
+    c = n(146583);
 let d = i.memo(function (e) {
     let { children: t, trailing: n, className: i, icon: s, isCollapsed: d, onClick: h, "aria-label": m } = e;
     return (0, l.jsxs)("div", {

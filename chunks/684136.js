@@ -10,7 +10,7 @@ var r = l(503698),
     d = l(789645),
     u = l(834730),
     h = l(375708),
-    T = l(288305),
+    T = l(563744),
     E = (((n = E || {}).DEFAULT = ""), (n.BOLD = "Bold"), (n.SOLID = "Solid"), n);
 function N(e) {
     let { closeAction: t, variant: l = "", keybind: n, className: r } = e;

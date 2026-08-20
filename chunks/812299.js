@@ -1,35 +1,35 @@
-n.d(l, { k: () => u, y: () => o });
+n.d(t, { k: () => A, y: () => o });
 var s = n(477900);
 n(582128);
-var t = n(709066),
+var u = n(709066),
     r = n(455207),
-    a = n(943667),
-    i = n(281867);
-function u(e) {
-    let l,
-        { message: n, channel: s, user: i, isRepliedMessage: u } = e;
+    i = n(943667),
+    l = n(318626);
+function A(e) {
+    let t,
+        { message: n, channel: s, user: l, isRepliedMessage: A } = e;
     return (
         n?.isSystemDM()
-            ? (l = t.A.Types.SYSTEM_DM)
-            : null != n && (0, a.A)(n)
-              ? (l = (0, r.MZ)(n) ? t.A.Types.OFFICIAL : t.A.Types.SERVER)
-              : i?.bot
-                ? (l = t.A.Types.BOT)
-                : null != s && s.isForumPost() && s.ownerId === i?.id && !u && (l = t.A.Types.ORIGINAL_POSTER),
-        l
+            ? (t = u.A.Types.SYSTEM_DM)
+            : null != n && (0, i.A)(n)
+              ? (t = (0, r.MZ)(n) ? u.A.Types.OFFICIAL : u.A.Types.SERVER)
+              : l?.bot
+                ? (t = u.A.Types.BOT)
+                : null != s && s.isForumPost() && s.ownerId === l?.id && !A && (t = u.A.Types.ORIGINAL_POSTER),
+        t
     );
 }
 function o(e) {
-    let { message: l, channel: n, user: r, compact: a, isRepliedMessage: o, hideIcon: d = !1, children: c } = e,
-        A = u({ message: l, channel: n, user: r, compact: a, isRepliedMessage: o, hideIcon: d, children: c });
-    return null == A
+    let { message: t, channel: n, user: r, compact: i, isRepliedMessage: o, hideIcon: c = !1, children: d } = e,
+        p = A({ message: t, channel: n, user: r, compact: i, isRepliedMessage: o, hideIcon: c, children: d });
+    return null == p
         ? null
-        : (0, s.jsx)(t.A, {
-              className: a ? i.jW : i.RQ,
-              type: A,
+        : (0, s.jsx)(u.A, {
+              className: i ? l.jW : l.RQ,
+              type: p,
               verified: r?.isVerifiedBot(),
-              hideIcon: d,
+              hideIcon: c,
               useRemSizes: !0,
-              children: c,
+              children: d,
           });
 }

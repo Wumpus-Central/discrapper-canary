@@ -1,31 +1,31 @@
-let n, i, r, a, s, o, c, d, u, h;
-l.d(t, { A: () => eg }), l(321073), l(938796);
-var E = l(435558),
-    I = l.n(E),
-    _ = l(989349),
-    T = l.n(_),
-    f = l(17928),
-    A = l(636537),
-    p = l(506774),
-    g = l(228366),
-    S = l(867051),
-    v = l(837011),
-    N = l(95701),
-    L = l(260509),
-    D = l(671759),
-    m = l(889227),
-    G = l(71393),
-    R = l(287809),
-    C = l(149790),
-    U = l(935208),
-    w = l(794967),
-    y = l(557193),
-    M = l(310527),
-    x = l(595818),
-    O = l(652215),
-    b = l(324580),
-    j = l(124759);
-let V = [
+let n, i, l, o, a, E, s, d, u, _;
+t.d(r, { A: () => eA }), t(321073), t(938796);
+var I = t(435558),
+    c = t.n(I),
+    S = t(989349),
+    T = t.n(S),
+    G = t(17928),
+    h = t(636537),
+    D = t(506774),
+    A = t(228366),
+    L = t(867051),
+    p = t(837011),
+    U = t(95701),
+    f = t(260509),
+    N = t(671759),
+    R = t(889227),
+    y = t(71393),
+    g = t(287809),
+    O = t(149790),
+    C = t(935208),
+    m = t(794967),
+    b = t(557193),
+    M = t(310527),
+    P = t(595818),
+    B = t(652215),
+    F = t(324580),
+    v = t(124759);
+let w = [
         "name",
         "description",
         "icon",
@@ -50,7 +50,7 @@ let V = [
         "officialMessageColor",
         "verificationRoleId",
     ],
-    B = [
+    V = [
         "brandColorPrimary",
         "description",
         "icon",
@@ -64,29 +64,29 @@ let V = [
         "badgeColorPrimary",
         "badgeColorSecondary",
     ],
-    P = new Set(["icon", "splash", "banner", "discoverySplash", "homeHeader"]),
-    Z = {
+    Y = new Set(["icon", "splash", "banner", "discoverySplash", "homeHeader"]),
+    k = {
         icon: "iconOriginalMd5",
         banner: "bannerOriginalMd5",
         splash: "splashOriginalMd5",
         discoverySplash: "discoverySplashOriginalMd5",
     },
-    F = !1,
-    H = O.XlH.CLOSED,
-    k = {},
-    W = null,
-    Y = !1,
-    X = !1,
+    W = !1,
+    H = B.XlH.CLOSED,
+    X = {},
+    x = null,
+    j = !1,
     J = !1,
-    K = null,
-    Q = null,
-    $ = {},
+    K = !1,
     q = null,
-    z = 0,
-    ee = O.EkJ.NONE,
-    et = null,
-    el = {
-        primaryCategoryId: b.ig,
+    Z = null,
+    Q = {},
+    z = null,
+    $ = 0,
+    ee = B.EkJ.NONE,
+    er = null,
+    et = {
+        primaryCategoryId: F.ig,
         secondaryCategoryIds: [],
         keywords: [],
         emojiDiscoverabilityEnabled: !0,
@@ -98,85 +98,85 @@ let V = [
         about: "",
     },
     en = !1,
-    ei = el,
-    er = el,
-    ea = null,
-    es = 0,
+    ei = et,
+    el = et,
     eo = null,
-    ec = null,
+    ea = 0,
+    eE = null,
+    es = null,
     ed = null;
 function eu(e) {
-    if (null == s || null == a || a.id !== e) return !1;
-    let t = G.A.getGuild(e);
-    return null != t && (a === s ? (s = a = t) : (a = t), !0);
+    if (null == a || null == o || o.id !== e) return !1;
+    let r = y.A.getGuild(e);
+    return null != r && (o === a ? (a = o = r) : (o = r), !0);
 }
-function eh(e) {
-    let { guildId: t, section: l, subsection: i, location: r } = e,
-        u = G.A.getGuild(t);
-    if (null == u) return eE();
-    let E = v.A.getProfile(t);
-    (a = s = u),
-        (o = c = E),
-        (J = X),
-        (Q = K),
-        (H = O.XlH.OPEN),
-        (k = {}),
-        (W = null),
-        (d = U.default.castGuildIdAsEveryoneGuildRoleId(t)),
-        (ee = s.mfaLevel),
-        (er = ei),
-        (h = null),
-        ($ = {}),
-        (et = r),
-        eI({ section: l ?? n ?? (0, x.x)(), subsection: i ?? null });
+function e_(e) {
+    let { guildId: r, section: t, subsection: i, location: l } = e,
+        u = y.A.getGuild(r);
+    if (null == u) return eI();
+    let I = p.A.getProfile(r);
+    (o = a = u),
+        (E = s = I),
+        (K = J),
+        (Z = q),
+        (H = B.XlH.OPEN),
+        (X = {}),
+        (x = null),
+        (d = C.default.castGuildIdAsEveryoneGuildRoleId(r)),
+        (ee = a.mfaLevel),
+        (el = ei),
+        (_ = null),
+        (Q = {}),
+        (er = l),
+        ec({ section: t ?? n ?? (0, P.x)(), subsection: i ?? null });
 }
-function eE() {
-    (F = !1),
-        (H = O.XlH.CLOSED),
-        (a = s = null),
-        (Y = !1),
-        (J = !1),
-        (Q = null),
-        (q = null),
-        (z = 0),
-        (ea = null),
-        (ec = null),
+function eI() {
+    (W = !1),
+        (H = B.XlH.CLOSED),
+        (o = a = null),
+        (j = !1),
+        (K = !1),
+        (Z = null),
+        (z = null),
+        ($ = 0),
+        (eo = null),
+        (es = null),
         (ed = null),
         (n = null),
         (i = null),
-        (r = null),
-        (ee = O.EkJ.NONE),
-        ($ = {}),
+        (l = null),
+        (ee = B.EkJ.NONE),
+        (Q = {}),
         (u = void 0);
 }
-function eI(e) {
-    if (null == s) return !1;
-    let t = n;
-    if (((n = e.section), (i = e.subsection), n === O.BEX.INSTANT_INVITES || n === O.BEX.INVITES))
-        A.Bo.get({ url: O.Rsh.GUILD_INSTANT_INVITES(s.id), oldFormErrors: !0, rejectWithError: !0 }).then((e) => {
-            g.h.dispatch({ type: "GUILD_SETTINGS_LOADED_INVITES", invites: e.body });
+function ec(e) {
+    if (null == a) return !1;
+    let r = n;
+    if (((n = e.section), (i = e.subsection), n === B.BEX.INSTANT_INVITES || n === B.BEX.INVITES))
+        h.Bo.get({ url: B.Rsh.GUILD_INSTANT_INVITES(a.id), oldFormErrors: !0, rejectWithError: !0 }).then((e) => {
+            A.h.dispatch({ type: "GUILD_SETTINGS_LOADED_INVITES", invites: e.body });
         });
-    else if (n === O.BEX.INTEGRATIONS || n === O.BEX.ROLES) {
-        if (((d = null), t !== e.section)) return eT(e);
+    else if (n === B.BEX.INTEGRATIONS || n === B.BEX.ROLES) {
+        if (((d = null), r !== e.section)) return eT(e);
     } else
-        n === O.BEX.MEMBERS
-            ? (d = (0, L.af)(s))
-            : n === O.BEX.VANITY_URL
-              ? (0, M.Je)(s.id)
-              : n === O.BEX.SAFETY &&
-                g.h.dispatch({
+        n === B.BEX.MEMBERS
+            ? (d = (0, f.af)(a))
+            : n === B.BEX.VANITY_URL
+              ? (0, M.Je)(a.id)
+              : n === B.BEX.SAFETY &&
+                A.h.dispatch({
                     type: "GUILD_SETTINGS_SAFETY_SET_SUBSECTION",
-                    subsection: null == i ? O.nd0.SAFETY_OVERVIEW : i,
+                    subsection: null == i ? B.nd0.SAFETY_OVERVIEW : i,
                 });
 }
-function e_(e) {
-    return new D.A({
+function eS(e) {
+    return new N.A({
         code: e.code,
         temporary: e.temporary,
         revoked: e.revoked,
-        inviter: null != e.inviter ? new m.A(e.inviter) : null,
-        channel: (0, N.OY)(e.channel),
-        guild: null != e.guild ? (0, C.DY)(e.guild) : null,
+        inviter: null != e.inviter ? new R.A(e.inviter) : null,
+        channel: (0, U.OY)(e.channel),
+        guild: null != e.guild ? (0, O.DY)(e.guild) : null,
         uses: e.uses,
         maxUses: e.max_uses,
         maxAge: e.max_age,
@@ -186,35 +186,35 @@ function e_(e) {
     });
 }
 function eT(e) {
-    if (null == s || H !== O.XlH.OPEN || ("GUILD_INTEGRATIONS_UPDATE" === e.type && e.guildId !== s.id)) return !1;
-    (0, w.c)(s.id);
+    if (null == a || H !== B.XlH.OPEN || ("GUILD_INTEGRATIONS_UPDATE" === e.type && e.guildId !== a.id)) return !1;
+    (0, m.c)(a.id);
 }
-function ef(e) {
-    let { guildId: t } = e;
-    if (null == s || s.id !== t) return !1;
-    W = null;
+function eG(e) {
+    let { guildId: r } = e;
+    if (null == a || a.id !== r) return !1;
+    x = null;
 }
-function eA(e) {
-    let { guildId: t, error: l } = e;
-    if (null == s || s.id !== t) return !1;
-    W = l;
+function eh(e) {
+    let { guildId: r, error: t } = e;
+    if (null == a || a.id !== r) return !1;
+    x = t;
 }
-class ep extends f.Ay.Store {
+class eD extends G.Ay.Store {
     static displayName = "GuildSettingsStore";
     initialize() {
-        this.waitFor(G.A, v.A, R.default);
+        this.waitFor(y.A, p.A, g.default);
     }
     getMetadata() {
-        return er;
+        return el;
     }
     widgetHasChanges() {
-        return !1 !== Y && (J !== X || Q !== K);
+        return !1 !== j && (K !== J || Z !== q);
     }
     hasChanges() {
-        return !I().isEqual(s, a) || !I().isEqual(er, ei) || !I().isEqual(c, o) || this.widgetHasChanges();
+        return !c().isEqual(a, o) || !c().isEqual(el, ei) || !c().isEqual(s, E) || this.widgetHasChanges();
     }
     isOpen() {
-        return F;
+        return W;
     }
     getSavedRouteState() {
         return u;
@@ -226,46 +226,46 @@ class ep extends f.Ay.Store {
         return this.hasChanges();
     }
     getGuildId() {
-        return null != s ? s.id : null;
+        return null != a ? a.id : null;
     }
     showPublicSuccessModal() {
-        return !p.w.get(j.wX);
+        return !D.w.get(v.wX);
     }
     getGuild() {
-        return s;
+        return a;
     }
     getPendingOriginalMd5s() {
-        return $;
+        return Q;
     }
     getGuildProfile() {
-        return c;
+        return s;
     }
     getWidget() {
-        return { enabled: J, channelId: Q };
+        return { enabled: K, channelId: Z };
     }
     isSubmitting() {
-        return H === O.XlH.SUBMITTING;
+        return H === B.XlH.SUBMITTING;
     }
     isGuildMetadataLoaded() {
         return en;
     }
     getErrors() {
-        return k;
+        return X;
     }
     getError(e) {
-        return k[e] ?? null;
+        return X[e] ?? null;
     }
     getProfileError() {
-        return W;
+        return x;
     }
     getSelectedRoleId() {
         return d;
     }
     getSlug() {
-        return h;
+        return _;
     }
     getBans() {
-        return [ea, es];
+        return [eo, ea];
     }
     getProps() {
         return {
@@ -273,307 +273,307 @@ class ep extends f.Ay.Store {
             integrations: ed,
             section: n,
             subsection: i,
-            errors: k,
-            guild: s,
-            bans: ea,
-            bansVersion: es,
-            invites: ec,
+            errors: X,
+            guild: a,
+            bans: eo,
+            bansVersion: ea,
+            invites: es,
             selectedRoleId: d,
-            fetchedEmbed: Y,
-            embedEnabled: J,
-            embedChannelId: Q,
+            fetchedEmbed: j,
+            embedEnabled: K,
+            embedChannelId: Z,
             mfaLevel: ee,
-            searchQuery: r,
-            vanityURLCode: q,
-            vanityURLUses: z,
-            originalGuild: a,
+            searchQuery: l,
+            vanityURLCode: z,
+            vanityURLUses: $,
+            originalGuild: o,
             hasChanges: this.hasChanges(),
-            guildMetadata: er,
-            analyticsLocation: et,
+            guildMetadata: el,
+            analyticsLocation: er,
             isGuildMetadataLoaded: en,
-            originalProfile: o,
-            profile: c,
+            originalProfile: E,
+            profile: s,
         };
     }
 }
-let eg = new ep(
-    g.h,
+let eA = new eD(
+    A.h,
     __OVERLAY__
         ? {}
         : {
-              GUILD_SETTINGS_INIT: eh,
+              GUILD_SETTINGS_INIT: e_,
               GUILD_SETTINGS_OPEN: function (e) {
-                  (F = !0), eh(e);
+                  (W = !0), e_(e);
               },
-              GUILD_SETTINGS_CLOSE: eE,
+              GUILD_SETTINGS_CLOSE: eI,
               GUILD_SETTINGS_UPDATE: function (e) {
-                  let t;
-                  if (null == s) return !1;
-                  for (let t of (V.forEach((t) => {
-                      null != s && e.hasOwnProperty(t) && (s = (0, S.hZ)(s, t, e[t] ?? null));
+                  let r;
+                  if (null == a) return !1;
+                  for (let r of (w.forEach((r) => {
+                      null != a && e.hasOwnProperty(r) && (a = (0, L.hZ)(a, r, e[r] ?? null));
                   }),
-                  Object.keys(Z))) {
-                      if (!e.hasOwnProperty(t)) continue;
-                      let l = e[Z[t]];
-                      null != l ? ($[t] = l) : delete $[t];
+                  Object.keys(k))) {
+                      if (!e.hasOwnProperty(r)) continue;
+                      let t = e[k[r]];
+                      null != t ? (Q[r] = t) : delete Q[r];
                   }
-                  null == (t = s) || V.some((e) => t[e] !== a[e]) || (s = a);
+                  null == (r = a) || w.some((e) => r[e] !== o[e]) || (a = o);
               },
               GUILD_SETTINGS_PROFILE_UPDATE: function (e) {
-                  let { guildId: t } = e;
-                  if (null == c || null == s || s.id !== t) return !1;
-                  B.forEach((t) => {
-                      if (null != c && e.hasOwnProperty(t)) {
-                          let l = e[t];
-                          void 0 !== l && (c = { ...c, [t]: l });
+                  let { guildId: r } = e;
+                  if (null == s || null == a || a.id !== r) return !1;
+                  V.forEach((r) => {
+                      if (null != s && e.hasOwnProperty(r)) {
+                          let t = e[r];
+                          void 0 !== t && (s = { ...s, [r]: t });
                       }
                   });
               },
               GUILD_SETTINGS_CANCEL_CHANGES: function (e) {
-                  let { guildId: t } = e;
-                  (k = {}), ($ = {});
-                  let l = G.A.getGuild(t);
-                  null != l && (a = s = l);
+                  let { guildId: r } = e;
+                  (X = {}), (Q = {});
+                  let t = y.A.getGuild(r);
+                  null != t && (o = a = t);
               },
               GUILD_SETTINGS_SAVE_ROUTE_STACK: function (e) {
-                  let { state: t } = e;
-                  return (u = t), !1;
+                  let { state: r } = e;
+                  return (u = r), !1;
               },
               GUILD_SETTINGS_SUBMIT: function () {
-                  (H = O.XlH.SUBMITTING), (k = {});
+                  (H = B.XlH.SUBMITTING), (X = {});
               },
               GUILD_SETTINGS_SUBMIT_SUCCESS: function (e) {
-                  (H = O.XlH.OPEN),
-                      ($ = {}),
-                      null != e.guild && null != s && s.id === e.guild.id && (a = s = (0, C.Y1)(e.guild, a));
+                  (H = B.XlH.OPEN),
+                      (Q = {}),
+                      null != e.guild && null != a && a.id === e.guild.id && (o = a = (0, O.Y1)(e.guild, o));
               },
               GUILD_SETTINGS_SUBMIT_FAILURE: function (e) {
-                  (H = O.XlH.OPEN), (n = n ?? (0, x.x)()), (i = null), (k = e.errors ?? {});
+                  (H = B.XlH.OPEN), (n = n ?? (0, P.x)()), (i = null), (X = e.errors ?? {});
               },
-              GUILD_SETTINGS_SET_SECTION: eI,
+              GUILD_SETTINGS_SET_SECTION: ec,
               GUILD_SETTINGS_SET_SEARCH_QUERY: function (e) {
-                  r = e.searchQuery;
+                  l = e.searchQuery;
               },
               GUILD_SETTINGS_LOADED_BANS: function (e) {
-                  (ea = e.bans.reduce(
-                      (e, t) => (null != t.user && null != t.user.id && e.set(t.user.id, t), e),
+                  (eo = e.bans.reduce(
+                      (e, r) => (null != r.user && null != r.user.id && e.set(r.user.id, r), e),
                       new Map(),
                   )),
-                      es++;
+                      ea++;
               },
               GUILD_SETTINGS_LOADED_BANS_BATCH: function (e) {
-                  let { bans: t, guildId: l } = e;
-                  (eo !== l || null == ea) && ((eo = l), (ea = new Map())),
-                      (ea = t.reduce((e, t) => (null != t.user && null != t.user.id && e.set(t.user.id, t), e), ea)),
-                      es++;
+                  let { bans: r, guildId: t } = e;
+                  (eE !== t || null == eo) && ((eE = t), (eo = new Map())),
+                      (eo = r.reduce((e, r) => (null != r.user && null != r.user.id && e.set(r.user.id, r), e), eo)),
+                      ea++;
               },
               GUILD_SETTINGS_LOADED_INVITES: function (e) {
-                  ec = e.invites.reduce((e, t) => ((e[t.code] = e_(t)), e), {});
+                  es = e.invites.reduce((e, r) => ((e[r.code] = eS(r)), e), {});
               },
               GUILD_SETTINGS_SET_WIDGET: function (e) {
-                  (Y = !0), (X = J = e.enabled), (K = Q = e.channelId);
+                  (j = !0), (J = K = e.enabled), (q = Z = e.channelId);
               },
               GUILD_SETTINGS_SET_VANITY_URL: function (e) {
-                  (q = e.code ?? null), (z = e.uses);
+                  (z = e.code ?? null), ($ = e.uses);
               },
               GUILD_SETTINGS_SET_MFA_SUCCESS: function (e) {
-                  let { level: t } = e;
-                  ee = t;
+                  let { level: r } = e;
+                  ee = r;
               },
               GUILD_SETTINGS_ROLE_SELECT: function (e) {
-                  let { roleId: t } = e;
-                  d = t ?? null;
+                  let { roleId: r } = e;
+                  d = r ?? null;
               },
               GUILD_SETTINGS_LOADED_INTEGRATIONS: function (e) {
                   ed = e.integrations;
               },
               GUILD_SETTINGS_PIN_PERMISSION_MIGRATED: function (e) {
-                  let { guildId: t } = e;
-                  if (null == s || t !== s.id) return !1;
-                  s = (0, S.hZ)(
-                      s,
+                  let { guildId: r } = e;
+                  if (null == a || r !== a.id) return !1;
+                  a = (0, L.hZ)(
+                      a,
                       "features",
-                      new Set([...s.features, O.GuildFeatures.PIN_PERMISSION_MIGRATION_COMPLETE]),
+                      new Set([...a.features, B.GuildFeatures.PIN_PERMISSION_MIGRATION_COMPLETE]),
                   );
               },
               GUILD_SETTINGS_SLOWMODE_PERMISSION_MIGRATED: function (e) {
-                  let { guildId: t } = e;
-                  if (null == s || t !== s.id) return !1;
-                  s = (0, S.hZ)(
-                      s,
+                  let { guildId: r } = e;
+                  if (null == a || r !== a.id) return !1;
+                  a = (0, L.hZ)(
+                      a,
                       "features",
-                      new Set([...s.features, O.GuildFeatures.BYPASS_SLOWMODE_PERMISSION_MIGRATION_COMPLETE]),
+                      new Set([...a.features, B.GuildFeatures.BYPASS_SLOWMODE_PERMISSION_MIGRATION_COMPLETE]),
                   );
               },
               GUILD_BAN_ADD: function (e) {
-                  let { user: t, guildId: l } = e;
-                  if (null == ea || null == s || s.id !== l) return !1;
-                  ea.set(t.id, { user: t, reason: null }), es++;
+                  let { user: r, guildId: t } = e;
+                  if (null == eo || null == a || a.id !== t) return !1;
+                  eo.set(r.id, { user: r, reason: null }), ea++;
               },
               GUILD_BAN_REMOVE: function (e) {
-                  let { user: t, guildId: l } = e;
-                  if (null == ea || null == s || s.id !== l) return !1;
-                  ea.delete(t.id), es++;
+                  let { user: r, guildId: t } = e;
+                  if (null == eo || null == a || a.id !== t) return !1;
+                  eo.delete(r.id), ea++;
               },
               GUILD_ROLE_CREATE: function (e) {
-                  let { guildId: t } = e;
-                  if (!eu(t)) return !1;
+                  let { guildId: r } = e;
+                  if (!eu(r)) return !1;
               },
               GUILD_ROLE_UPDATE: function (e) {
-                  let { guildId: t } = e;
-                  if (!eu(t)) return !1;
+                  let { guildId: r } = e;
+                  if (!eu(r)) return !1;
               },
               GUILD_ROLE_DELETE: function (e) {
-                  let { guildId: t, roleId: l } = e;
-                  if (!eu(t)) return !1;
-                  d === l && (d = null);
+                  let { guildId: r, roleId: t } = e;
+                  if (!eu(r)) return !1;
+                  d === t && (d = null);
               },
               GUILD_UPDATE: function (e) {
-                  if (null == s || s.id !== e.guild.id) return !1;
+                  if (null == a || a.id !== e.guild.id) return !1;
                   {
-                      let e = G.A.getGuild(s.id);
+                      let e = y.A.getGuild(a.id);
                       if (null == e) return !1;
                       if (
-                          ((o = v.A.getProfile(s.id)),
-                          n === O.BEX.PROFILE || n === O.BEX.TAG || (0, y.HU)(c, o) || (c = o),
-                          n === O.BEX.PROFILE)
+                          ((E = p.A.getProfile(a.id)),
+                          n === B.BEX.PROFILE || n === B.BEX.TAG || (0, b.HU)(s, E) || (s = E),
+                          n === B.BEX.PROFILE)
                       ) {
-                          (a = e), (s = e);
+                          (o = e), (a = e);
                           return;
                       }
-                      let t = (a = e),
-                          l = { ...s };
-                      V.forEach((n) => {
+                      let r = (o = e),
+                          t = { ...a };
+                      w.forEach((n) => {
                           if (
-                              !P.has(n) &&
-                              (("rulesChannelId" !== n && "publicUpdatesChannelId" !== n) || l[n] !== j.SP) &&
+                              !Y.has(n) &&
+                              (("rulesChannelId" !== n && "publicUpdatesChannelId" !== n) || t[n] !== v.SP) &&
                               "features" !== n
                           ) {
                               if ("ownerConfiguredContentLevel" === n) {
-                                  t = (0, S.hZ)(t, n, e[n]);
+                                  r = (0, L.hZ)(r, n, e[n]);
                                   return;
                               }
-                              t = (0, S.hZ)(t, n, l[n]);
+                              r = (0, L.hZ)(r, n, t[n]);
                           }
                       }),
-                          (s = t);
+                          (a = r);
                   }
               },
               GUILD_DELETE: function (e) {
-                  if (null == s || s.id !== e.guild.id) return !1;
-                  eE();
+                  if (null == a || a.id !== e.guild.id) return !1;
+                  eI();
               },
               GUILD_PROFILE_FETCH_SUCCESS: function (e) {
-                  let { profile: t } = e;
-                  if (t.id !== s?.id || (0, y.HU)(c, o)) return !1;
-                  o = c = t;
+                  let { profile: r } = e;
+                  if (r.id !== a?.id || (0, b.HU)(s, E)) return !1;
+                  E = s = r;
               },
-              GUILD_PROFILE_UPDATE: ef,
+              GUILD_PROFILE_UPDATE: eG,
               GUILD_PROFILE_UPDATE_SUCCESS: function (e) {
-                  let { profile: t } = e;
-                  if (c?.id == null || !eu(c.id)) return !1;
-                  t.id === s?.id && ((o = c = t), (W = null));
+                  let { profile: r } = e;
+                  if (s?.id == null || !eu(s.id)) return !1;
+                  r.id === a?.id && ((E = s = r), (x = null));
               },
-              GUILD_PROFILE_UPDATE_FAILURE: eA,
-              GUILD_PROFILE_UPDATE_VISIBILITY: ef,
+              GUILD_PROFILE_UPDATE_FAILURE: eh,
+              GUILD_PROFILE_UPDATE_VISIBILITY: eG,
               GUILD_PROFILE_UPDATE_VISIBILITY_SUCCESS: function (e) {
-                  let { guildId: t } = e;
-                  if (c?.id == null || !eu(c.id)) return !1;
-                  t === s?.id && ((o = c = v.A.getProfile(t)), (W = null));
+                  let { guildId: r } = e;
+                  if (s?.id == null || !eu(s.id)) return !1;
+                  r === a?.id && ((E = s = p.A.getProfile(r)), (x = null));
               },
-              GUILD_PROFILE_UPDATE_VISIBILITY_FAILURE: eA,
+              GUILD_PROFILE_UPDATE_VISIBILITY_FAILURE: eh,
               USER_CONNECTIONS_UPDATE: eT,
               GUILD_INTEGRATIONS_UPDATE: eT,
               INSTANT_INVITE_REVOKE_SUCCESS: function (e) {
-                  (ec = { ...ec }), delete ec[e.code];
+                  (es = { ...es }), delete es[e.code];
               },
               INSTANT_INVITE_CREATE_SUCCESS: function (e) {
-                  ec = { ...ec, [e.invite.code]: e_(e.invite) };
+                  es = { ...es, [e.invite.code]: eS(e.invite) };
               },
               GUILD_UPDATE_DISCOVERY_METADATA_FROM_SERVER: function (e) {
-                  let { guildId: t, metadata: l } = e;
-                  null != s &&
-                      t === s.id &&
+                  let { guildId: r, metadata: t } = e;
+                  null != a &&
+                      r === a.id &&
                       (!1 === en && (en = !0),
-                      (er = ei =
+                      (el = ei =
                           {
-                              primaryCategoryId: l.primaryCategoryId ?? b.ig,
-                              secondaryCategoryIds: l.secondaryCategoryIds ?? [],
-                              keywords: l.keywords ?? [],
-                              emojiDiscoverabilityEnabled: l.emojiDiscoverabilityEnabled ?? !0,
-                              partnerActionedTimestamp: l.partnerActionedTimestamp ?? null,
-                              partnerApplicationTimestamp: l.partnerApplicationTimestamp ?? null,
-                              isPublished: l.isPublished ?? !1,
-                              reasonsToJoin: l.reasonsToJoin ?? [],
-                              socialLinks: l.socialLinks ?? [],
-                              about: l.about ?? "",
+                              primaryCategoryId: t.primaryCategoryId ?? F.ig,
+                              secondaryCategoryIds: t.secondaryCategoryIds ?? [],
+                              keywords: t.keywords ?? [],
+                              emojiDiscoverabilityEnabled: t.emojiDiscoverabilityEnabled ?? !0,
+                              partnerActionedTimestamp: t.partnerActionedTimestamp ?? null,
+                              partnerApplicationTimestamp: t.partnerApplicationTimestamp ?? null,
+                              isPublished: t.isPublished ?? !1,
+                              reasonsToJoin: t.reasonsToJoin ?? [],
+                              socialLinks: t.socialLinks ?? [],
+                              about: t.about ?? "",
                           }),
-                      (k = {}));
+                      (X = {}));
               },
               GUILD_DISCOVERY_METADATA_FETCH_FAIL: function () {
-                  ei = er = el;
+                  ei = el = et;
               },
               GUILD_DISCOVERY_CATEGORY_ADD: function (e) {
-                  let { guildId: t, categoryId: l } = e;
-                  null != s &&
-                      t === s.id &&
-                      ((er = { ...er, secondaryCategoryIds: [...er.secondaryCategoryIds, l] }),
-                      (ei = { ...ei, secondaryCategoryIds: [...ei.secondaryCategoryIds, l] }));
+                  let { guildId: r, categoryId: t } = e;
+                  null != a &&
+                      r === a.id &&
+                      ((el = { ...el, secondaryCategoryIds: [...el.secondaryCategoryIds, t] }),
+                      (ei = { ...ei, secondaryCategoryIds: [...ei.secondaryCategoryIds, t] }));
               },
               GUILD_DISCOVERY_CATEGORY_DELETE: function (e) {
-                  let t,
-                      { guildId: l, categoryId: n } = e;
-                  if (null == s || l !== s.id) return;
-                  let i = er.secondaryCategoryIds.indexOf(n);
+                  let r,
+                      { guildId: t, categoryId: n } = e;
+                  if (null == a || t !== a.id) return;
+                  let i = el.secondaryCategoryIds.indexOf(n);
                   -1 !== i &&
-                      ((t = [...er.secondaryCategoryIds]).splice(i, 1), (er = { ...er, secondaryCategoryIds: t })),
+                      ((r = [...el.secondaryCategoryIds]).splice(i, 1), (el = { ...el, secondaryCategoryIds: r })),
                       -1 !== (i = ei.secondaryCategoryIds.indexOf(n)) &&
-                          ((t = [...ei.secondaryCategoryIds]).splice(i, 1), (ei = { ...ei, secondaryCategoryIds: t }));
+                          ((r = [...ei.secondaryCategoryIds]).splice(i, 1), (ei = { ...ei, secondaryCategoryIds: r }));
               },
               GUILD_DISCOVERY_CATEGORY_UPDATE_FAIL: function (e) {
-                  let { guildId: t, errors: l } = e;
-                  null != s && t === s.id && (k = l ?? {});
+                  let { guildId: r, errors: t } = e;
+                  null != a && r === a.id && (X = t ?? {});
               },
               GUILD_UPDATE_DISCOVERY_METADATA: function (e) {
                   let {
-                      guildId: t,
-                      primaryCategoryId: l,
+                      guildId: r,
+                      primaryCategoryId: t,
                       keywords: n,
                       emojiDiscoverabilityEnabled: i,
-                      isPublished: r,
-                      reasonsToJoin: a,
-                      socialLinks: o,
-                      about: c,
+                      isPublished: l,
+                      reasonsToJoin: o,
+                      socialLinks: E,
+                      about: s,
                   } = e;
-                  null != s &&
-                      t === s.id &&
-                      (er = {
-                          ...er,
-                          primaryCategoryId: null != l ? l : er.primaryCategoryId,
-                          keywords: null != n ? n : er.keywords,
-                          emojiDiscoverabilityEnabled: i ?? er.emojiDiscoverabilityEnabled,
-                          isPublished: r ?? er.isPublished,
-                          reasonsToJoin: null != a ? a : er.reasonsToJoin,
-                          socialLinks: null != o ? o : er.socialLinks,
-                          about: null != c ? c : er.about,
+                  null != a &&
+                      r === a.id &&
+                      (el = {
+                          ...el,
+                          primaryCategoryId: null != t ? t : el.primaryCategoryId,
+                          keywords: null != n ? n : el.keywords,
+                          emojiDiscoverabilityEnabled: i ?? el.emojiDiscoverabilityEnabled,
+                          isPublished: l ?? el.isPublished,
+                          reasonsToJoin: null != o ? o : el.reasonsToJoin,
+                          socialLinks: null != E ? E : el.socialLinks,
+                          about: null != s ? s : el.about,
                       });
               },
               GUILD_UPDATE_DISCOVERY_METADATA_FAIL: function (e) {
-                  let { guildId: t, errors: l } = e;
-                  null != s && t === s.id && (k = l ?? {});
+                  let { guildId: r, errors: t } = e;
+                  null != a && r === a.id && (X = t ?? {});
               },
               GUILD_DISCOVERY_SLUG_FETCH_SUCCESS: function (e) {
-                  let { slug: t } = e;
-                  h = t;
+                  let { slug: r } = e;
+                  _ = r;
               },
               GUILD_DISCOVERY_SLUG_FETCH_FAIL: function (e) {
                   let {} = e;
-                  h = null;
+                  _ = null;
               },
               GUILD_SETTINGS_WIDGET_UPDATE: function (e) {
-                  let { guildId: t, enabled: l, channelId: n } = e;
-                  if (null == s || s.id !== t) return !1;
-                  (J = l), (Q = n);
+                  let { guildId: r, enabled: t, channelId: n } = e;
+                  if (null == a || a.id !== r) return !1;
+                  (K = t), (Z = n);
               },
           },
 );

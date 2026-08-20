@@ -7,7 +7,7 @@ var r = s(772707),
     a = s(960027),
     l = s(297152),
     o = s(375708),
-    d = s(822390),
+    d = s(756537),
     x = s(973324);
 function u(t) {
     let { text: i, icon: s, foreground: r } = t;

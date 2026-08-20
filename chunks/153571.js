@@ -25,7 +25,7 @@ function j(e) {
 }
 t(445368);
 var E = t(652215),
-    U = t(350845);
+    U = t(445382);
 function B(e) {
     let { onClick: n, selectedOverride: t = !1, popoutProps: p, ref: A } = e,
         I = (0, s.Vd)("notifications-inbox"),

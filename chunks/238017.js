@@ -13,7 +13,7 @@ var l = n(477900),
     h = n(652215),
     C = n(307731),
     f = n(375708),
-    E = n(616470);
+    E = n(921787);
 let S = { section: h.JJy.VOICE_CHANNEL_EFFECTS_EMOJI_PICKER, openPopoutType: "gift_effect_emoji_picker" },
     y = C.EmojiIntention.GIFT;
 function A(e) {

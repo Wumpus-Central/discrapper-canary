@@ -1,10 +1,10 @@
-i.d(e, { Xv: () => R, Z0: () => d, qs: () => u, xA: () => l });
+i.d(e, { Xv: () => R, Z0: () => d, qs: () => I, xA: () => c });
 var r = i(587895),
     _ = i(174459),
     n = i(972786),
     E = i(683180),
     a = i(652215);
-let l = {
+let c = {
     BUILD_FAILED: "BUILD_FAILED",
     HEALTHCHECK_FAILED: "HEALTHCHECK_FAILED",
     AGENT_ERROR: "AGENT_ERROR",
@@ -17,7 +17,7 @@ let l = {
 function o(t) {
     return null == t || "" === t ? null : t.slice(0, 256);
 }
-function c(t) {
+function l(t) {
     let e = n.A.getProject(t);
     return {
         project_id: t,
@@ -34,30 +34,30 @@ function p(t, e) {
 }
 function R(t, e) {
     _.default.track(a.HAw.VIBEGRATION_TURN_RESULTED, {
-        ...c(t),
+        ...l(t),
         turn_result: e.result ?? null,
         turn_summary: o(e.detail ?? e.summary),
         turn_cost: e.cost_usd ?? null,
     });
 }
-function u(t, e) {
+function I(t, e) {
     let { isPreview: i } = e,
-        n = c(t),
+        n = l(t),
         E = i ? n.preview_application_id : n.application_id,
-        l = null != E ? r.A.getApplication(E) : null;
+        c = null != E ? r.A.getApplication(E) : null;
     _.default.track(a.HAw.VIBEGRATION_DEPLOYED, {
         ...n,
-        project_summary: o(l?.description),
+        project_summary: o(c?.description),
         is_preview: i,
         ...p(t, i),
     });
 }
 function d(t, e) {
-    let { location: i, code: r, message: n, details: E, isPreview: l = !0 } = e;
+    let { location: i, code: r, message: n, details: E, isPreview: c = !0 } = e;
     _.default.track(a.HAw.VIBEGRATION_ERRORED, {
-        ...c(t),
-        is_preview: l,
-        ...p(t, l),
+        ...l(t),
+        is_preview: c,
+        ...p(t, c),
         error_location: i,
         error_code: r,
         error_message: o(n),

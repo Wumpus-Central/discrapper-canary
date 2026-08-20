@@ -99,8 +99,8 @@ let P = function (t) {
 };
 var T = i(652215),
     C = i(239093),
-    M = i(516761),
-    W = i(861608),
+    M = i(800121),
+    W = i(897345),
     G = i(700129);
 function b(t) {
     let { modalSessionId: e, entryPoint: i } = t;

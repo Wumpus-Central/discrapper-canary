@@ -23,10 +23,10 @@ function c(e, t) {
             E.current = m;
         }, [m]);
     let [S, C] = r.useState(!1),
-        w = !S && a.u.isHlsUrl(n) && (0, i.Ap)();
+        y = !S && a.u.isHlsUrl(n) && (0, i.Ap)();
     return (
         r.useEffect(() => {
-            if (!w || null == n || null == e.current) return;
+            if (!y || null == n || null == e.current) return;
             let t = e.current,
                 r = !1,
                 a = null,
@@ -120,7 +120,7 @@ function c(e, t) {
                             t.load());
                 }
             );
-        }, [w, n, e]),
-        { isHlsActive: w, hlsRef: h, hls: p }
+        }, [y, n, e]),
+        { isHlsActive: y, hlsRef: h, hls: p }
     );
 }

@@ -21,7 +21,7 @@ var l = n(477900),
     I = n(186223),
     g = n(202541),
     v = n(375708),
-    _ = n(877385);
+    _ = n(781248);
 function T(e, t) {
     let n = e.interval === g.WT.YEAR ? v.t.ECT4A5 : v.t.v9QeON;
     return v.intl.format(n, { price: (0, A.$g)(t.amount, t.currency) });

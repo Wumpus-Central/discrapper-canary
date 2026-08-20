@@ -65,7 +65,7 @@ var $ = n(307731),
     H = n(381941),
     D = n(711918),
     G = n(375708),
-    V = n(731686);
+    V = n(455871);
 function z(e, t) {
     let n = t?.current?.currentTime;
     return null == n ? { attachment_id: e, timestamp: 0 } : { attachment_id: e, timestamp: Math.floor(1e3 * n) };
@@ -245,7 +245,7 @@ var Z = n(555115),
     J = n(7584);
 let q = /^<(a)?:(\w+):(\d+)>$/;
 var W = n(521981),
-    ee = n(537452);
+    ee = n(466491);
 function et(e) {
     return { opacity: e ? 1 : 0.4, width: `${e ? 20 : 12}px`, height: `${e ? 20 : 12}px` };
 }
@@ -386,7 +386,7 @@ function el(e) {
               children: b,
           });
 }
-var ei = n(783384),
+var ei = n(478531),
     ea = n(972117),
     es = n(376595),
     er = n(773503);
@@ -462,7 +462,7 @@ function ep(e) {
         ],
     });
 }
-var ef = n(218474);
+var ef = n(879241);
 function ex(e) {
     let { attachment: t, channelId: n, messageId: a, isControlBarExpanded: r, isPlayerActive: o } = e,
         { enableDistributedClips: u } = ec.A.useConfig({ location: "DistributedClipShareCTA" }),
@@ -492,7 +492,7 @@ function ex(e) {
               ],
           });
 }
-var eC = n(668534);
+var eC = n(862649);
 function eI(e) {
     let {
             playerState: t,

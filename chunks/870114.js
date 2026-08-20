@@ -1,4 +1,4 @@
-e.exports = {
+i.exports = {
     ue: "verificationRoleCard__866a0",
     ZZ: "verificationRoleHeader__866a0",
     N1: "verificationRoleContent__866a0",

@@ -18,7 +18,7 @@ var r = n(477900),
     m = n(929283),
     E = n(245068),
     h = n(761365),
-    v = n(955117);
+    v = n(844266);
 function x(e) {
     let { responsive: t } = e;
     return !0 !== t;

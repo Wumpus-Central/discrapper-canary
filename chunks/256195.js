@@ -13,7 +13,7 @@ var r = n(503698),
     h = n(280450),
     m = n(200749),
     g = n(375708),
-    p = n(545192);
+    p = n(604889);
 let f = n(913516);
 function E(e) {
     let { participant: t, width: n, noArt: r = !1, selected: E = !1 } = e,

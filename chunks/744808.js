@@ -11,7 +11,7 @@ var t = l(477900),
     h = l(855915),
     m = l(940622),
     f = l(875741),
-    g = l(294425);
+    g = l(459872);
 function p(e) {
     let { skuId: a, layer: l, data: r, fadeIn: s, containerWidth: i, containerHeight: u } = e,
         d = r?.src ?? (0, o.getCollectiblesItemAssetUrl)({ skuId: a, assetFormat: "static", assetId: l.id });

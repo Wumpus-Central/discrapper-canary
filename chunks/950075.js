@@ -10,7 +10,7 @@ var i = n(477900),
     u = n(446243),
     h = n(781137),
     p = n(495095),
-    m = n(904043);
+    m = n(505252);
 function f(e, t) {
     return null != e.activeView && e.activeViewType === o.oU.GUILD_ROOM && e.activeChannelId === t;
 }

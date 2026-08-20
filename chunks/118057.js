@@ -24,18 +24,18 @@ function c(e) {
             enabled: g = !0,
             onDispatch: x,
             autoFocusElement: A = !0,
-            useVirtualFocus: E = !1,
+            useVirtualFocus: C = !1,
         } = e,
-        C = l.useCallback(
+        E = l.useCallback(
             (e, t) => {
                 let n = (0, i.A)(e, t);
                 return null != x && x(e, n, t), n;
             },
             [x],
         ),
-        [I, y] = l.useReducer(C, { focusedX: c, focusedY: d, columnCounts: n }),
-        { columnCounts: S, focusedX: v, focusedY: _ } = I,
-        [N] = l.useState(() => (0, r.nF)(y, 16));
+        [I, y] = l.useReducer(E, { focusedX: c, focusedY: d, columnCounts: n }),
+        { columnCounts: v, focusedX: S, focusedY: N } = I,
+        [_] = l.useState(() => (0, r.nF)(y, 16));
     return (
         l.useEffect(() => {
             y({ type: i.n.UPDATE_COLUMN_COUNTS, columnCounts: n });
@@ -53,26 +53,26 @@ function c(e) {
                     maintainFocusPosition: g,
                     enabled: x,
                     autoFocusElement: A,
-                    useVirtualFocus: E,
+                    useVirtualFocus: C,
                 } = e,
-                C = l.useRef(x),
+                E = l.useRef(x),
                 I = u(o(t, c, d)),
-                [y, S] = l.useState(!1),
-                [v, _] = l.useState(!1),
-                [N, T] = l.useState(!1),
+                [y, v] = l.useState(!1),
+                [S, N] = l.useState(!1),
+                [_, T] = l.useState(!1),
                 [j] = l.useState(
                     () =>
                         new r.Lp((e) => {
                             let [t, n] = e.split(",").map(Number);
                             return () => {
-                                S(!0), p({ type: i.n.SET_FOCUSED_POSITION, x: t, y: n });
+                                v(!0), p({ type: i.n.SET_FOCUSED_POSITION, x: t, y: n });
                             };
                         }),
                 );
             l.useEffect(() => () => j.clean(), [j]);
             let b = l.useCallback(
                     (e) => {
-                        if (!C.current || !A) return !1;
+                        if (!E.current || !A) return !1;
                         e.focus();
                     },
                     [A],
@@ -82,12 +82,12 @@ function c(e) {
                         let l = o(t, e, n);
                         (null != m ? m(e, n, l) : Promise.resolve()).then(() => {
                             let e = u(l);
-                            null != e ? (b(e), _(!1)) : requestAnimationFrame(() => _(!0));
+                            null != e ? (b(e), N(!1)) : requestAnimationFrame(() => N(!0));
                         });
                     },
                     [t, m, b],
                 ),
-                L = l.useCallback(
+                O = l.useCallback(
                     function () {
                         let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
                             [n, l] = null != f ? f(c, d) : [c, d];
@@ -98,35 +98,35 @@ function c(e) {
                     },
                     [p, c, d, f, t, b],
                 ),
-                [O, M] = l.useState(!1);
+                [M, L] = l.useState(!1);
             l.useEffect(() => {
-                if (!O || !y) return;
-                M(!1);
+                if (!M || !y) return;
+                L(!1);
                 let e = u(o(t, c, d));
                 if (null != e) return void b(e);
-                S(!1);
+                v(!1);
                 let n = u(o(t));
                 null != n && b(n);
-            }, [t, O, y, b, c, d]);
+            }, [t, M, y, b, c, d]);
             let w = l.useCallback((e) => {
-                C.current && null == e && M(!0);
+                E.current && null == e && L(!0);
             }, []);
             l.useEffect(() => {
-                y && v && null != I && (b(I), _(!1));
-            }, [v, I]),
+                y && S && null != I && (b(I), N(!1));
+            }, [S, I]),
                 l.useEffect(() => {
-                    y && (N || R(c, d), T(!1));
+                    y && (_ || R(c, d), T(!1));
                 }, [c, d]);
             let k = l.useCallback(
                     (e) => {
-                        if (!C.current) return;
+                        if (!E.current) return;
                         if (
-                            !E &&
+                            !C &&
                             a.includes(e.key) &&
                             !(e.shiftKey || e.altKey || e.metaKey || e.ctrlKey) &&
                             e.currentTarget === e.target
                         ) {
-                            e.preventDefault(), e.stopPropagation(), L();
+                            e.preventDefault(), e.stopPropagation(), O();
                             return;
                         }
                         let t = (function (e) {
@@ -171,21 +171,21 @@ function c(e) {
                                     null != h ? h(c, d, e) : null != I && I.click();
                         }
                     },
-                    [L, p, A, I, h, c, d],
+                    [O, p, A, I, h, c, d],
                 ),
                 P = l.useCallback(
                     (e) =>
                         e.currentTarget !== e.target
-                            ? (y || (S(!0), T(!0)), !1)
+                            ? (y || (v(!0), T(!0)), !1)
                             : y
-                              ? (L(!1), !1)
-                              : void (g && null != I ? R(c, d) : L(!0)),
-                    [y, g, I, L, R, c, d],
+                              ? (O(!1), !1)
+                              : void (g && null != I ? R(c, d) : O(!0)),
+                    [y, g, I, O, R, c, d],
                 ),
                 D = l.useCallback((e) => {
                     if (e.target !== e.currentTarget) {
                         if (e.currentTarget.contains(e.relatedTarget)) return !1;
-                        S(!1);
+                        v(!1);
                     }
                 }, []),
                 U = l.useMemo(() => Math.max(...n), [n]),
@@ -223,17 +223,17 @@ function c(e) {
             );
         })({
             navId: t,
-            columnCounts: S,
-            focusedX: v,
-            focusedY: _,
-            dispatch: N,
+            columnCounts: v,
+            focusedX: S,
+            focusedY: N,
+            dispatch: _,
             onSelect: h,
             prepareFocus: m,
             getNewFocusPosition: f,
             maintainFocusPosition: p,
             enabled: g,
             autoFocusElement: A,
-            useVirtualFocus: E,
+            useVirtualFocus: C,
         })
     );
 }

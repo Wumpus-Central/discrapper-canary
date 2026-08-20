@@ -11,7 +11,7 @@ var n = l(477900),
     m = l(362081),
     h = l(696016);
 l(600253);
-var f = l(226180);
+var f = l(880275);
 function x(e) {
     let { variant: t, className: l, containerClassName: i } = e,
         { clip: x, clipName: v, setClipName: p } = (0, m.T)(),

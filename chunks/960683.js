@@ -1,4 +1,4 @@
-_.exports = {
+t.exports = {
     yk: "text-xs/semibold_a66361",
     zr: "root_a66361",
     aV: "infoText_a66361",

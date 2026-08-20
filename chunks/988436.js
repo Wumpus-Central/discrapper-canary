@@ -34,7 +34,7 @@ var s = n(477900),
     U = n(201805),
     q = n(818348),
     M = n(375708),
-    b = n(831709);
+    b = n(175276);
 function w(t) {
     let { quest: e, transitionState: n, onClose: o, sourceQuestContent: I, refreshOnOpen: T = !1 } = t,
         f = (0, g.O)((t) => t.getErrorHints(e.id)),

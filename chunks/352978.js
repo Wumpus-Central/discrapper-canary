@@ -1,4 +1,4 @@
-t.exports = {
+e.exports = {
     nj: "screen_f8194a",
     a0: "landingScreen_f8194a",
     rf: "body_f8194a",

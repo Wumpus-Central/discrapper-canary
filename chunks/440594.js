@@ -1,5 +1,5 @@
-l.d(t, { A: () => i });
-var n = l(375708);
-function i(e) {
-    return null != e && "" !== e ? e : n.intl.string(n.t["2YCamo"]);
+t.d(e, { A: () => a });
+var s = t(375708);
+function a(l) {
+    return null != l && "" !== l ? l : s.intl.string(s.t["2YCamo"]);
 }

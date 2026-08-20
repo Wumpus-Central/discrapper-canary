@@ -22,7 +22,7 @@ var n = s(477900),
     v = s(427262),
     N = s(652215),
     C = s(375708),
-    S = s(698795);
+    S = s(915822);
 function y(e) {
     let { channel: t, guildName: s } = e,
         r = (0, i.bG)([b.A], () => b.A.getGuild(t.guild_id)),

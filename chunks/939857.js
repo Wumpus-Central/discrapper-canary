@@ -4,7 +4,7 @@ var i = n(477900),
     a = n(503698),
     s = n.n(a),
     l = n(935462),
-    o = n(282110);
+    o = n(978843);
 let d = { SMALL: o.PG, MEDIUM: o.$g, LARGE: o.Pu };
 class c extends r.PureComponent {
     static Header = l.rQ;

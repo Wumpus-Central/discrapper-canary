@@ -5,7 +5,7 @@ var r = n(772707),
     i = n(364522),
     s = n(834730),
     l = n(60888),
-    o = n(286174);
+    o = n(969623);
 function c(t) {
     let { url: e } = t,
         { protocol: n, hostname: r, theRestOfTheUrl: c } = (0, l.L)(e);

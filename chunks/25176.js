@@ -3,7 +3,7 @@ t.d(r, {
     KE: () => N,
     Ni: () => L,
     aL: () => b,
-    RN: () => E,
+    RN: () => w,
     ds: () => W,
     Kx: () => y,
     eg: () => x,
@@ -37,15 +37,15 @@ var p = t(626584),
             : null,
     d = t(102607),
     v = t(374380);
-function h(e, r) {
+function g(e, r) {
     return e.length > 0 ? Math.max(...e) : r;
 }
-function g(e, r, t) {
+function h(e, r, t) {
     return Math.max(0, e - (r - t));
 }
-var w = t(940622);
-let O = new p.A("ShopAssetsPreviewUtils");
-var E =
+var O = t(940622);
+let E = new p.A("ShopAssetsPreviewUtils");
+var w =
     (((a = {}).CATALOG_BANNER_STATIC = "catalog_banner"),
     (a.CATALOG_BANNER_ANIMATED = "catalog_banner_animated"),
     (a.CATALOG_BANNER_RIVE = "catalog_banner_rive"),
@@ -93,7 +93,7 @@ let b = {
         mobile_bg: ["jpg"],
         mobile_hero: ["jpg"],
     },
-    A = new Map(Object.values(E).flatMap((e) => b[e].map((r) => [`${e}.${r}`, e]))),
+    A = new Map(Object.values(w).flatMap((e) => b[e].map((r) => [`${e}.${r}`, e]))),
     F = new Set(A.keys());
 var R =
     (((l = {}).PROFILE_EFFECT = "profile_effect"),
@@ -129,10 +129,10 @@ function N(e, r, t) {
     if (0 === e.length) return void t?.("No files found!");
     for (let t of e) P(t, r);
 }
-function S(e, r) {
+function I(e, r) {
     return `${e}/${r}`;
 }
-function I(e) {
+function S(e) {
     return (0, f.tT)(e.type) || (0, f.XB)(e.type) || (0, f.XA)(e.name);
 }
 function U(e) {
@@ -154,15 +154,15 @@ async function B(e) {
     }
     return r;
 }
-function C(e, r, t, n) {
+function j(e, r, t, n) {
     if (r.name === T) return;
-    let a = S(e, r.name);
+    let a = I(e, r.name);
     if ("profile_effects" === t)
-        I(r) || r.name.endsWith(".txt")
+        S(r) || r.name.endsWith(".txt")
             ? (e in n.profileEffectFilesMap || (n.profileEffectFilesMap[e] = []), n.profileEffectFilesMap[e].push(r))
-            : n.ignoredFilenames.push(S(e, r.name));
+            : n.ignoredFilenames.push(I(e, r.name));
     else
-        I(r)
+        S(r)
             ? "collection" === t || null === t
                 ? null != U(r)
                     ? n.collectionFiles.push(r)
@@ -172,15 +172,15 @@ function C(e, r, t, n) {
                   : n.ignoredFilenames.push(a)
             : n.ignoredFilenames.push(a);
 }
-async function j(e, r, t) {
+async function C(e, r, t) {
     for (let n of await M(e))
         if (n.isFile) {
             let a = n,
                 l = await new Promise((e) => a.file(e));
-            C(e.name, l, r, t);
+            j(e.name, l, r, t);
         } else {
             let e = await B(n);
-            t.ignoredFilenames.push(...e.map((e) => S(n.name, e.name)));
+            t.ignoredFilenames.push(...e.map((e) => I(n.name, e.name)));
         }
 }
 async function k(e, r) {
@@ -223,20 +223,20 @@ async function H(e, r) {
 async function K(e, r) {
     for (let t of await M(e))
         t.isDirectory
-            ? await j(t, "profile_effects", r)
-            : t.isFile && t.name !== T && r.ignoredFilenames.push(S(e.name, t.name));
+            ? await C(t, "profile_effects", r)
+            : t.isFile && t.name !== T && r.ignoredFilenames.push(I(e.name, t.name));
 }
 async function $(e, r) {
     for (let t of await M(e))
         if (t.isDirectory) {
             let e = t;
-            if ("collection" === e.name) await j(e, "collection", r);
-            else if ("avatar_decorations" === e.name) await j(e, "avatar_decorations", r);
+            if ("collection" === e.name) await C(e, "collection", r);
+            else if ("avatar_decorations" === e.name) await C(e, "avatar_decorations", r);
             else if ("profile_effects" === e.name) await K(e, r);
             else if ("frames" === e.name) await H(e, r);
             else {
                 let t = await B(e);
-                r.ignoredFilenames.push(...t.map((r) => S(e.name, r.name)));
+                r.ignoredFilenames.push(...t.map((r) => I(e.name, r.name)));
             }
         }
 }
@@ -252,7 +252,7 @@ async function x(e) {
         if (t.isDirectory) {
             let e = t.name;
             "collection" === e || "avatar_decorations" === e
-                ? await j(t, e, r)
+                ? await C(t, e, r)
                 : "profile_effects" === e
                   ? await K(t, r)
                   : "frames" === e
@@ -260,7 +260,7 @@ async function x(e) {
                     : await $(t, r);
         } else if (t.isFile) {
             let e = t;
-            C("", await new Promise((r) => e.file(r)), null, r);
+            j("", await new Promise((r) => e.file(r)), null, r);
         }
     return (
         r.collectionFiles.sort((e, r) => e.name.localeCompare(r.name)),
@@ -316,13 +316,13 @@ async function V(e, r, t) {
                     try {
                         return { layer: r, dims: await G(s[r.id]) };
                     } catch (e) {
-                        return O.error(`Failed to measure preview layer ${r.id}:`, e), null;
+                        return E.error(`Failed to measure preview layer ${r.id}:`, e), null;
                     }
                 }),
             )
         ).filter((e) => null != e)),
         (a = _.INNER_WIDTH),
-        (l = h(
+        (l = g(
             n.map((e) => {
                 let { dims: r } = e;
                 return Math.round(Math.max(0, (r.width - a) / 2));
@@ -331,7 +331,7 @@ async function V(e, r, t) {
         )),
         {
             innerWidth: a,
-            overflowTop: h(
+            overflowTop: g(
                 n
                     .filter((e) => {
                         let { layer: r } = e;
@@ -339,11 +339,11 @@ async function V(e, r, t) {
                     })
                     .map((e) => {
                         let { dims: r } = e;
-                        return g(r.height, 716, _.OVERFLOW_TOP);
+                        return h(r.height, 716, _.OVERFLOW_TOP);
                     }),
                 0,
             ),
-            overflowBottom: h(
+            overflowBottom: g(
                 n
                     .filter((e) => {
                         let { layer: r } = e;
@@ -351,7 +351,7 @@ async function V(e, r, t) {
                     })
                     .map((e) => {
                         let { dims: r } = e;
-                        return g(r.height, 424, _.OVERFLOW_BOTTOM);
+                        return h(r.height, 424, _.OVERFLOW_BOTTOM);
                     }),
                 0,
             ),
@@ -367,7 +367,7 @@ function W() {
             profileFrameDirsMap: {},
             ignoredFilenames: [],
         })),
-        { upsertCollectionAsset: t, upsertAvatarDecorationAsset: n, upsertProfileFrame: a } = (0, w.JE)(),
+        { upsertCollectionAsset: t, upsertAvatarDecorationAsset: n, upsertProfileFrame: a } = (0, O.JE)(),
         l = o.useCallback(
             async (e) => {
                 let l = await x(e);

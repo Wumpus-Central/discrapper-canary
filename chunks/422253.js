@@ -12,7 +12,7 @@ var i = t(477900),
     A = t(775602),
     m = t(713517),
     C = t(690521),
-    f = t(803765);
+    f = t(229576);
 function x(e) {
     let { emoji: l, shouldAnimate: t } = e;
     if (null == l) return null;
@@ -69,7 +69,7 @@ function g(e) {
         ? null
         : (0, i.jsx)(d.ZV, { className: f.kL, items: l, renderItem: u, renderOverflow: o, maxLines: 2, itemGapPx: 4 });
 }
-var N = t(342949);
+var N = t(377476);
 function v(e) {
     let { profile: l, className: t } = e,
         { gamesToDisplay: s, lastGameToDisplay: o, remainingGames: d } = (0, u.A)(l),

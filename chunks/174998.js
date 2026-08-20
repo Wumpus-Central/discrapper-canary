@@ -17,13 +17,13 @@ var i = n(477900),
     g = n(53466),
     h = n(97808),
     T = n(778712),
-    A = n(518009),
+    A = n(232554),
     D = n(408278),
     f = n(477155),
     O = n(935286),
     G = n(717421),
     p = n(375708),
-    x = n(809609);
+    x = n(757412);
 function L(t) {
     let { testimonial: e, className: n } = t,
         { message: l, profilePic: s, adminTitle: r, emphasisColor: a = "interactive-text-default" } = e;
@@ -129,7 +129,7 @@ var R = n(283012),
     M = n(527678),
     w = n(400812),
     B = n(652215),
-    k = n(767106);
+    k = n(511741);
 function F(t) {
     let { isTooltip: e = !1 } = t,
         n = [

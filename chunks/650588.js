@@ -12,7 +12,7 @@ var l = n(477900),
     m = n(807348),
     h = n(484036),
     C = n(375708),
-    f = n(552055);
+    f = n(649028);
 let E = [54, 8, 8, 8];
 function S(e) {
     let { onSelect: t, sound: n } = e,

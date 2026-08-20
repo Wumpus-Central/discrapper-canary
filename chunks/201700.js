@@ -8,7 +8,7 @@ var n = i(477900),
     c = i(208882),
     d = i(946116),
     u = i(375708),
-    g = i(916219);
+    g = i(753240);
 function p(t) {
     let { transitionState: e, onClose: i, entry: p } = t,
         [h, m] = a.useState(p.description ?? ""),

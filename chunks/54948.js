@@ -20,7 +20,7 @@ var i = t(477900),
     P = t(241326),
     y = t(828208),
     w = t(375708),
-    b = t(865615);
+    b = t(136516);
 function R(e) {
     let { type: n } = e,
         t = l.useMemo(() => {
@@ -282,7 +282,7 @@ function M(e) {
                 0 === u
                     ? z(l, p, o)
                     : (0, s.openModalLazy)(async () => {
-                          let { default: e } = await Promise.all([t.e("906444"), t.e("81226")]).then(t.bind(t, 928529));
+                          let { default: e } = await Promise.all([t.e("868193"), t.e("81226")]).then(t.bind(t, 928529));
                           return (n) =>
                               (0, i.jsx)(e, {
                                   ...n,
@@ -315,9 +315,9 @@ function _(e, n, l) {
         case a.rX.TERMS:
             return (0, s.openModalLazy)(async () => {
                 let { default: e } = await Promise.all([
-                    t.e("849817"),
-                    t.e("645850"),
-                    t.e("982653"),
+                    t.e("289789"),
+                    t.e("977412"),
+                    t.e("955424"),
                     t.e("890152"),
                     t.e("78618"),
                     t.e("132435"),
@@ -327,7 +327,7 @@ function _(e, n, l) {
         case a.rX.PARAGRAPH:
             return (0, s.openModalLazy)(async () => {
                 let { ParagraphFormFieldModal: e } = await Promise.all([
-                    t.e("982653"),
+                    t.e("955424"),
                     t.e("78618"),
                     t.e("926510"),
                 ]).then(t.bind(t, 542717));
@@ -336,7 +336,7 @@ function _(e, n, l) {
         case a.rX.TEXT_INPUT:
             return (0, s.openModalLazy)(async () => {
                 let { TextInputFormFieldModal: e } = await Promise.all([
-                    t.e("982653"),
+                    t.e("955424"),
                     t.e("78618"),
                     t.e("926510"),
                 ]).then(t.bind(t, 542717));
@@ -344,7 +344,7 @@ function _(e, n, l) {
             });
         case a.rX.MULTIPLE_CHOICE:
             return (0, s.openModalLazy)(async () => {
-                let { default: e } = await Promise.all([t.e("982653"), t.e("78618"), t.e("452981")]).then(
+                let { default: e } = await Promise.all([t.e("955424"), t.e("78618"), t.e("452981")]).then(
                     t.bind(t, 520660),
                 );
                 return (t) => (0, i.jsx)(e, { ...t, field: void 0, onSave: n });
@@ -356,9 +356,9 @@ function z(e, n, l) {
         case a.rX.TERMS:
             return (0, s.openModalLazy)(async () => {
                 let { default: r } = await Promise.all([
-                    t.e("849817"),
-                    t.e("645850"),
-                    t.e("982653"),
+                    t.e("289789"),
+                    t.e("977412"),
+                    t.e("955424"),
                     t.e("890152"),
                     t.e("78618"),
                     t.e("132435"),
@@ -368,7 +368,7 @@ function z(e, n, l) {
         case a.rX.PARAGRAPH:
             return (0, s.openModalLazy)(async () => {
                 let { ParagraphFormFieldModal: l } = await Promise.all([
-                    t.e("982653"),
+                    t.e("955424"),
                     t.e("78618"),
                     t.e("926510"),
                 ]).then(t.bind(t, 542717));
@@ -377,7 +377,7 @@ function z(e, n, l) {
         case a.rX.TEXT_INPUT:
             return (0, s.openModalLazy)(async () => {
                 let { TextInputFormFieldModal: l } = await Promise.all([
-                    t.e("982653"),
+                    t.e("955424"),
                     t.e("78618"),
                     t.e("926510"),
                 ]).then(t.bind(t, 542717));
@@ -385,7 +385,7 @@ function z(e, n, l) {
             });
         case a.rX.MULTIPLE_CHOICE:
             return (0, s.openModalLazy)(async () => {
-                let { default: l } = await Promise.all([t.e("982653"), t.e("78618"), t.e("452981")]).then(
+                let { default: l } = await Promise.all([t.e("955424"), t.e("78618"), t.e("452981")]).then(
                     t.bind(t, 520660),
                 );
                 return (t) => (0, i.jsx)(l, { ...t, field: e, onSave: n });

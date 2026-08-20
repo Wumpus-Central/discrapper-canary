@@ -1,24 +1,24 @@
-i.d(t, { Ri: () => l, aQ: () => o, fS: () => r });
-var n = i(795816),
-    s = i(933958);
-let a = "activity:";
-function l(e) {
-    let { applicationId: t, location: i } = e;
-    return `activity:${t}:${i.id}`;
+l.d(t, { Ri: () => a, aQ: () => o, fS: () => r });
+var i = l(795816),
+    s = l(933958);
+let n = "activity:";
+function a(e) {
+    let { applicationId: t, location: l } = e;
+    return `activity:${t}:${l.id}`;
 }
 function r(e) {
-    return e.startsWith(a);
+    return e.startsWith(n);
 }
 function o(e) {
     let t = (function (e) {
-        let t = e.indexOf(":", a.length);
+        let t = e.indexOf(":", n.length);
         if (-1 === t) return null;
-        let i = e.slice(a.length, t),
-            n = e.slice(t + 1);
-        return "" === i || "" === n ? null : { applicationId: i, locationId: n };
+        let l = e.slice(n.length, t),
+            i = e.slice(t + 1);
+        return "" === l || "" === i ? null : { applicationId: l, locationId: i };
     })(e);
     if (null == t) return;
-    let { applicationId: i, locationId: l } = t,
-        r = s.Ay.getSelfEmbeddedActivities().get(i);
-    null != r && r.location.id === l && (0, n._H)({ location: r.location, applicationId: i, showFeedback: !1 });
+    let { applicationId: l, locationId: a } = t,
+        r = s.Ay.getSelfEmbeddedActivities().get(l);
+    null != r && r.location.id === a && (0, i._H)({ location: r.location, applicationId: l, showFeedback: !1 });
 }

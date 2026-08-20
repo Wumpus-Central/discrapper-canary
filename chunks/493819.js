@@ -7,7 +7,7 @@ var l = n(477900),
     o = n(885386),
     d = n(522435);
 n(131955);
-var c = n(847744);
+var c = n(577961);
 function u(e) {
     let { src: t, className: n, autoPlayOnMount: s } = e,
         r = i.useRef(null),

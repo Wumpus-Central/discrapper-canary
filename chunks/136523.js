@@ -18,7 +18,7 @@ var a = n(477900),
     S = n(174459),
     p = n(652215),
     y = n(375708),
-    N = n(679126),
+    N = n(809401),
     v = n(379649);
 let x = "VoiceChannelStatusModal";
 function T(t) {

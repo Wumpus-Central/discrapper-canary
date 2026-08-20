@@ -21,22 +21,22 @@ let d = function (e) {
             onClick: x,
             ...A
         } = e,
-        E = i.useMemo(() => s.V.getDefaultLinkInterceptor(t), [t]),
-        C = i.useCallback(
+        C = i.useMemo(() => s.V.getDefaultLinkInterceptor(t), [t]),
+        E = i.useCallback(
             (e) => {
                 o.default.track(u.HAw.MEDIA_DOWNLOAD_BUTTON_TAPPED, {
                     attachment_type: f?.[0],
                     attachment_subtype: f?.[1],
                 }),
                     x?.(),
-                    E?.(e);
+                    C?.(e);
             },
-            [E, f, x],
+            [C, f, x],
         );
     return null != p
         ? (0, l.jsx)(r.Anchor, {
               href: t,
-              onClick: C,
+              onClick: E,
               target: m,
               rel: h,
               className: n,
@@ -46,7 +46,7 @@ let d = function (e) {
           })
         : (0, l.jsx)(r.Anchor, {
               href: t,
-              onClick: C,
+              onClick: E,
               target: m,
               rel: h,
               className: n,

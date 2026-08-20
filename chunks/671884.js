@@ -299,7 +299,7 @@ function e1(e) {
                         let { default: e } = await Promise.all([
                             l.e("238417"),
                             l.e("657266"),
-                            l.e("272396"),
+                            l.e("591114"),
                             l.e("595429"),
                             l.e("311930"),
                             l.e("320891"),
@@ -410,8 +410,8 @@ function e1(e) {
                             isPlaying: w,
                             onProgressChange: L,
                             children: [
-                                (0, n.jsx)(e3, { isNew: a }),
-                                T && !t ? (0, n.jsx)(e5, { onMenu: K, onBeforeDelete: H }) : (0, n.jsx)(e7, {}),
+                                (0, n.jsx)(e5, { isNew: a }),
+                                T && !t ? (0, n.jsx)(e3, { onMenu: K, onBeforeDelete: H }) : (0, n.jsx)(e7, {}),
                                 (0, n.jsx)("div", { className: eJ.dH, "aria-hidden": "true" }),
                             ],
                         }),
@@ -432,7 +432,7 @@ let e2 = i.forwardRef((e, t) => {
         children: (0, n.jsx)(eO.h, { isVisible: !0, children: a }),
     });
 });
-function e3(e) {
+function e5(e) {
     let { isNew: t } = e,
         l = (0, eR.Y_)(),
         i = !0 === l.pending;
@@ -453,7 +453,7 @@ function e3(e) {
         ],
     });
 }
-function e5(e) {
+function e3(e) {
     let { onMenu: t, onBeforeDelete: l } = e;
     return (0, n.jsxs)("div", {
         className: eJ.Mw,
@@ -1885,8 +1885,8 @@ function t0(e) {
 }
 var t1 = l(770178),
     t2 = l(765548),
-    t3 = l(202163),
-    t5 = l(68408);
+    t5 = l(202163),
+    t3 = l(68408);
 function t7(e) {
     let {
             session: t,
@@ -1898,7 +1898,7 @@ function t7(e) {
             entranceRowOffset: d,
             onEdgeNavigate: m,
         } = e,
-        { gameRecord: h } = (0, t3.A)(t.applicationId),
+        { gameRecord: h } = (0, t5.A)(t.applicationId),
         x = (0, te.P)((e) => e.setGameFacet),
         p = (0, te.P)((e) => e.setActiveMainLink),
         j = t.applicationId,
@@ -1954,64 +1954,64 @@ function t7(e) {
             [G, m],
         );
     return (0, n.jsxs)("section", {
-        className: t5.dZ,
+        className: t3.dZ,
         children: [
             (0, n.jsx)("div", {
-                className: s()(t5.tB, null == C && t5.rD),
+                className: s()(t3.tB, null == C && t3.rD),
                 style: null != C ? { backgroundImage: `url(${C})` } : void 0,
                 "aria-hidden": "true",
             }),
             (0, n.jsxs)("div", {
-                className: t5.wx,
+                className: t3.wx,
                 children: [
                     y
                         ? (0, n.jsx)(ey.s, {
                               "aria-label": t.applicationName,
                               onClick: v,
-                              className: t5.Zn,
+                              className: t3.Zn,
                               children: (0, n.jsx)(P.A, {
-                                  className: t5.Gt,
+                                  className: t3.Gt,
                                   game: h,
                                   size: P.M.MEDIUM,
                                   "aria-hidden": !0,
                               }),
                           })
-                        : (0, n.jsx)(P.A, { className: t5.Gt, game: h, size: P.M.MEDIUM, "aria-hidden": !0 }),
+                        : (0, n.jsx)(P.A, { className: t3.Gt, game: h, size: P.M.MEDIUM, "aria-hidden": !0 }),
                     (0, n.jsxs)("div", {
-                        className: t5.TK,
+                        className: t3.TK,
                         children: [
                             y
                                 ? (0, n.jsx)(ey.s, {
                                       "aria-label": t.applicationName,
                                       onClick: v,
-                                      className: t5.wb,
+                                      className: t3.wb,
                                       children: (0, n.jsx)(f.D, {
                                           variant: "text-md/semibold",
                                           color: "text-default",
-                                          className: t5.mO,
+                                          className: t3.mO,
                                           children: t.applicationName,
                                       }),
                                   })
                                 : (0, n.jsx)(f.D, {
                                       variant: "text-md/semibold",
                                       color: "text-default",
-                                      className: t5.mO,
+                                      className: t3.mO,
                                       children: t.applicationName,
                                   }),
                             (0, n.jsxs)("div", {
-                                className: t5.mI,
+                                className: t3.mI,
                                 children: [
                                     (0, n.jsx)($.E, {
                                         variant: "text-xs/normal",
                                         color: "text-muted",
                                         children: eu.intl.format(ec.default["+YIqQM"], { count: t.clips.length }),
                                     }),
-                                    (0, n.jsx)("span", { className: t5.TG, "aria-hidden": "true" }),
+                                    (0, n.jsx)("span", { className: t3.TG, "aria-hidden": "true" }),
                                     (0, n.jsx)($.E, { variant: "text-xs/normal", color: "text-muted", children: k }),
                                     A.length > 0 &&
                                         (0, n.jsxs)(n.Fragment, {
                                             children: [
-                                                (0, n.jsx)("span", { className: t5.TG, "aria-hidden": "true" }),
+                                                (0, n.jsx)("span", { className: t3.TG, "aria-hidden": "true" }),
                                                 (0, n.jsx)(ej.A, { users: A, maxUsers: 5, size: g._3.SIZE_16 }),
                                             ],
                                         }),
@@ -2023,7 +2023,7 @@ function t7(e) {
             }),
             (0, n.jsx)("div", {
                 ref: L,
-                className: t5.Vg,
+                className: t3.Vg,
                 ...O,
                 tabIndex: -1,
                 onKeyDown: U,
@@ -2031,7 +2031,7 @@ function t7(e) {
                     (0, n.jsx)(
                         "div",
                         {
-                            className: t5.UX,
+                            className: t3.UX,
                             ...H(t),
                             children: e.map((e, i) => {
                                 let s = { width: I };
@@ -2062,7 +2062,7 @@ function t7(e) {
             }),
             D &&
                 (0, n.jsx)("div", {
-                    className: t5.Vc,
+                    className: t3.Vc,
                     children: (0, n.jsx)(eC.$, {
                         variant: "secondary",
                         size: "sm",

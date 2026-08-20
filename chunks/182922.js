@@ -26,7 +26,7 @@ function u(e) {
 var c = n(771104),
     d = n(732139),
     h = n(375708),
-    m = n(665891);
+    m = n(248736);
 function f(e) {
     let { emojiSubCategory: t } = e;
     return (0, l.jsxs)("div", {

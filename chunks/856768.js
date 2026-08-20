@@ -21,7 +21,7 @@ var n = l(477900),
     V = l(134413),
     A = l(652215),
     M = l(375708),
-    L = l(835291);
+    L = l(723264);
 function b(e) {
     let { guildId: t } = e,
         b = (0, V.vA)(t),
@@ -78,7 +78,7 @@ function b(e) {
                                   location: "MemberSafetyPageActionNotice",
                               }),
                                   (0, d.openModalLazy)(async () => {
-                                      let { default: e } = await Promise.all([l.e("687407"), l.e("802504")]).then(
+                                      let { default: e } = await Promise.all([l.e("420282"), l.e("802504")]).then(
                                           l.bind(l, 333179),
                                       );
                                       return (l) =>

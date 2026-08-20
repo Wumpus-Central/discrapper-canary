@@ -11,7 +11,7 @@ var l = n(503698),
     A = n(789645),
     T = n(818348),
     E = n(375708),
-    I = n(845730);
+    I = n(698833);
 function u(e) {
     let { children: t } = e;
     return (0, i.jsx)(s.D, { variant: "heading-sm/medium", color: "text-strong", className: I.ut, children: t });

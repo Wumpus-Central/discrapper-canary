@@ -3,7 +3,7 @@ var i = l(477900),
     n = l(582128),
     a = l(130147),
     r = l(344346),
-    s = l(507646);
+    s = l(309239);
 let o = n.memo(function (e) {
     let { user: t, guildId: l, nameplate: n, isHighlighted: o, size: c = "default" } = e,
         d = "small" === c ? 62 : 94,

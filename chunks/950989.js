@@ -19,7 +19,7 @@ var i = t(477900),
     k = t(307731),
     x = t(650583),
     N = t(375708),
-    b = t(226416);
+    b = t(174511);
 function y(e) {
     let { transitionState: n, onClose: t, channelId: y, guildId: A, tag: I } = e,
         E = l.useRef(null),

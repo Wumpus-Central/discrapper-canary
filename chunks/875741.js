@@ -1,6 +1,6 @@
-t.d(r, { A: () => l, i: () => a }), t(582128);
-var n = t(940622);
-function a(e) {
+n.d(t, { A: () => s, i: () => l }), n(582128);
+var i = n(940622);
+function l(e) {
     return {
         profileFrameStyle: {
             "--custom-profile-frame-container-width": e.innerWidth,
@@ -11,7 +11,7 @@ function a(e) {
         profileFrameClassName: "custom-profile-frame",
     };
 }
-function l(e) {
-    let r = (0, n.lM)();
-    return null == e ? { profileFrameStyle: void 0, profileFrameClassName: void 0 } : (r ?? a(e));
+function s(e) {
+    let t = (0, i.lM)();
+    return null == e ? { profileFrameStyle: void 0, profileFrameClassName: void 0 } : (t ?? l(e));
 }

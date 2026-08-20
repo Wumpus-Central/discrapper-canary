@@ -5,7 +5,7 @@ n(582128);
 var r = n(323384),
     a = n(834730),
     s = n(375708),
-    o = n(596878),
+    o = n(562889),
     u =
         (((l = {}).SELECT_PAYMENT_METHOD = "SELECT_PAYMENT_METHOD"),
         (l.ADD_NEW_PAYMENT_METHOD = "ADD_NEW_PAYMENT_METHOD"),

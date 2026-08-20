@@ -16,7 +16,7 @@ var i,
     x = n(354287),
     f = n(878369),
     E = n(838541),
-    I = n(772008),
+    I = n(201281),
     C = (((i = {})[(i.BOT = 0)] = "BOT"), (i[(i.ACTIVITY = 1)] = "ACTIVITY"), i);
 function _(e) {
     let { onClick: t, children: n, className: i } = e;

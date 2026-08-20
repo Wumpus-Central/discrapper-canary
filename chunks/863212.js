@@ -1,11 +1,11 @@
-i.r(t), i.d(t, { playgroundConfig: () => L, guildSpaceCollection: () => x });
-var n = i(477900),
-    s = i(582128),
-    a = i(503698),
-    l = i.n(a),
-    r = i(834730),
-    o = i(872188),
-    d = i(737837);
+l.r(t), l.d(t, { playgroundConfig: () => P, guildSpaceCollection: () => C });
+var i = l(477900),
+    s = l(582128),
+    n = l(503698),
+    a = l.n(n),
+    r = l(834730),
+    o = l(872188),
+    d = l(450284);
 let c = {
     title: "Server Hub Publishing",
     stories: [
@@ -14,12 +14,12 @@ let c = {
             id: "guild-space-draft-notice",
             docs: "The admin-only bar shown while a hub is unpublished; members can't reach a draft hub at all. Publishing is what reveals the tab to the rest of the server, and it unmounts the notice \u2014 the success case swaps in a placeholder because the real page stops rendering it. Success also fires a screen-reader announcement, since a bar disappearing is otherwise silent. No control triggers a real request.",
             component: function (e) {
-                let { width: t, outcome: i } = e,
-                    [a, c] = s.useState(!1),
-                    [u, h] = s.useState(i);
-                u !== i && (h(i), c(!1));
+                let { width: t, outcome: l } = e,
+                    [n, c] = s.useState(!1),
+                    [u, h] = s.useState(l);
+                u !== l && (h(l), c(!1));
                 let p = s.useCallback(() => {
-                    switch (i) {
+                    switch (l) {
                         case "success":
                             return c(!0), Promise.resolve();
                         case "failure":
@@ -27,17 +27,17 @@ let c = {
                         case "pending":
                             return new Promise(() => {});
                     }
-                }, [i]);
-                return (0, n.jsx)("div", {
-                    className: l()(d.frame, d[t]),
-                    children: a
-                        ? (0, n.jsx)(r.E, {
+                }, [l]);
+                return (0, i.jsx)("div", {
+                    className: a()(d.frame, d[t]),
+                    children: n
+                        ? (0, i.jsx)(r.E, {
                               variant: "text-sm/normal",
                               color: "text-muted",
                               children:
                                   "Published \u2014 the real notice unmounts here, and the tab appears for members.",
                           })
-                        : (0, n.jsx)(o.A, { onPublish: p }),
+                        : (0, i.jsx)(o.A, { onPublish: p }),
                 });
             },
             controls: {
@@ -64,34 +64,34 @@ let c = {
         },
     ],
 };
-var u = i(228366),
-    h = i(593673),
-    p = i(529609);
+var u = l(228366),
+    h = l(593673),
+    p = l(529609);
 let g = 0;
-function f(e, t, i, n) {
+function m(e, t, l, i) {
     let s = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {};
     return {
         id: e,
         type: t,
         default_title: null,
-        position: { column: i, order: n },
+        position: { column: l, order: i },
         config: { type: t, ...s },
         requires_hydration: t === h.a.LEADERBOARD,
     };
 }
-var m = i(86294);
-let v = [
-        f("left-2", h.a.LEADERBOARD, 0, 1, { heading: "Top chatters this week" }),
-        f("right-1", h.a.LEADERBOARD, 1, 0, { heading: "Top boosters" }),
-        f("left-1", h.a.IMAGE_TEXT, 0, 0, {
+var y = l(81253);
+let b = [
+        m("left-2", h.a.LEADERBOARD, 0, 1, { heading: "Top chatters this week" }),
+        m("right-1", h.a.LEADERBOARD, 1, 0, { heading: "Top boosters" }),
+        m("left-1", h.a.IMAGE_TEXT, 0, 0, {
             title: "Welcome to the server",
             body: "Drop in, say hi, and check the pinned posts for the rules and event schedule.",
             imageUrl: "https://placehold.co/640x180",
             imageAlt: "Server banner placeholder",
         }),
-        f("right-2", h.a.IMAGE_TEXT, 1, 1, { title: "Events", body: "Game night every Friday." }),
+        m("right-2", h.a.IMAGE_TEXT, 1, 1, { title: "Events", body: "Game night every Friday." }),
     ],
-    y = v
+    f = b
         .filter((e) => {
             let { requires_hydration: t } = e;
             return t;
@@ -100,14 +100,14 @@ let v = [
             let { id: t } = e;
             return t;
         }),
-    b = {
+    v = {
         entries: [
             { id: "1", name: "wumpus", score: 4821 },
             { id: "2", name: "clyde", score: 3960 },
             { id: "3", name: "nelly", score: 2715 },
         ],
     },
-    A = {
+    w = {
         title: "Server Hub Page",
         stories: [
             {
@@ -116,9 +116,9 @@ let v = [
                 docs: "Read-only hub layout. Widgets are placed by position.column then position.order (the mock set is deliberately out of array order). Wide renders 2fr/1fr; narrow collapses to one column with the left column first. The hydration control drives the real GuildSpaceHydrationStore: ImageText never hydrates, the leaderboards do.",
                 component: function (e) {
                     let t,
-                        { width: i, hydration: a } = e,
+                        { width: l, hydration: n } = e,
                         r =
-                            ((t = `guild-space-story-${a}`),
+                            ((t = `guild-space-story-${n}`),
                             s.useEffect(() => {
                                 let e = g++;
                                 if (
@@ -126,11 +126,11 @@ let v = [
                                         type: "GUILD_SPACE_HYDRATE_START",
                                         guildId: t,
                                         requestId: e,
-                                        widgetIds: y,
+                                        widgetIds: f,
                                     }),
-                                    "loading" !== a)
+                                    "loading" !== n)
                                 ) {
-                                    if ("error" === a)
+                                    if ("error" === n)
                                         return void u.h.dispatch({
                                             type: "GUILD_SPACE_HYDRATE_FAILURE",
                                             guildId: t,
@@ -141,17 +141,17 @@ let v = [
                                         type: "GUILD_SPACE_HYDRATE_SUCCESS",
                                         guildId: t,
                                         requestId: e,
-                                        widgets: y.map((e) => ({
+                                        widgets: f.map((e) => ({
                                             id: e,
-                                            data: "success" === a ? { type: h.a.LEADERBOARD, ...b } : null,
+                                            data: "success" === n ? { type: h.a.LEADERBOARD, ...v } : null,
                                         })),
                                     });
                                 }
-                            }, [t, a]),
+                            }, [t, n]),
                             t);
-                    return (0, n.jsx)("div", {
-                        className: l()(m.frame, m[i]),
-                        children: (0, n.jsx)(p.A, { guildId: r, widgets: v }),
+                    return (0, i.jsx)("div", {
+                        className: a()(y.frame, y[l]),
+                        children: (0, i.jsx)(p.A, { guildId: r, widgets: b }),
                     });
                 },
                 controls: {
@@ -182,20 +182,20 @@ let v = [
             },
         ],
     };
-var I = i(317574),
-    w = i(992915);
-function C(e) {
-    let { label: t, className: i, children: s } = e;
-    return (0, n.jsxs)("div", {
-        className: `${w.Gt} ${i}`,
-        children: [(0, n.jsx)(r.E, { variant: "text-xs/medium", color: "text-muted", children: t }), s],
+var E = l(317574),
+    A = l(546184);
+function x(e) {
+    let { label: t, className: l, children: s } = e;
+    return (0, i.jsxs)("div", {
+        className: `${A.Gt} ${l}`,
+        children: [(0, i.jsx)(r.E, { variant: "text-xs/medium", color: "text-muted", children: t }), s],
     });
 }
-function E(e) {
-    let { mode: t, hydration: i, type: a, initialConfig: l, successData: r } = e,
-        [o, d] = s.useState(l),
-        c = (0, n.jsx)(I.P, {
-            widget: { id: "1", type: a, config: o },
+function S(e) {
+    let { mode: t, hydration: l, type: n, initialConfig: a, successData: r } = e,
+        [o, d] = s.useState(a),
+        c = (0, i.jsx)(E.P, {
+            widget: { id: "1", type: n, config: o },
             guildSpaceMode: t,
             hydration: (function (e, t) {
                 switch (e) {
@@ -206,24 +206,24 @@ function E(e) {
                     default:
                         return { status: e };
                 }
-            })(i, r),
+            })(l, r),
             onRemove: () => {},
             onCommitConfig: d,
         });
-    return (0, n.jsxs)("div", {
-        className: w.Zp,
+    return (0, i.jsxs)("div", {
+        className: A.Zp,
         children: [
-            (0, n.jsx)(C, { label: "Narrow column (380px)", className: w.sc, children: c }),
-            (0, n.jsx)(C, { label: "Wide column (685px)", className: w.U, children: c }),
+            (0, i.jsx)(x, { label: "Narrow column (380px)", className: A.sc, children: c }),
+            (0, i.jsx)(x, { label: "Wide column (685px)", className: A.U, children: c }),
         ],
     });
 }
-let S = {
+let k = {
         text: "Drop in, say hi, and check the pinned posts for the rules and event schedule.",
         image_hash: "some_hash",
     },
-    _ = { heading: "Top chatters this week" },
-    P = {
+    T = { heading: "Top chatters this week" },
+    _ = {
         entries: [
             { id: "1", name: "wumpus", score: 4821 },
             { id: "2", name: "clyde", score: 3960 },
@@ -231,11 +231,11 @@ let S = {
             { id: "4", name: "a_very_long_username_that_truncates", score: 1204 },
         ],
     },
-    x = {
+    C = {
         id: "guild-space",
         name: "Server Hub",
         groups: [
-            A,
+            w,
             c,
             {
                 title: "Server Hub Widget Framework",
@@ -245,11 +245,11 @@ let S = {
                         id: "guild-space-widget-slot-image-text",
                         docs: "ImageText reference widget (no hydration) across view/edit and each mock hydration state. In edit mode the pencil opens the framework-owned Edit modal; Save commits config through onCommitConfig, Cancel/close discards.",
                         component: function (e) {
-                            return (0, n.jsx)(E, {
+                            return (0, i.jsx)(S, {
                                 ...e,
                                 type: h.a.IMAGE_TEXT,
                                 title: "Image + Text",
-                                initialConfig: S,
+                                initialConfig: k,
                                 successData: void 0,
                             });
                         },
@@ -282,12 +282,12 @@ let S = {
                         id: "guild-space-widget-slot-leaderboard",
                         docs: "Leaderboard reference widget (hydrated) rendering content from the mock data prop on success, and the widget-owned loading/error states otherwise. The pencil opens the framework-owned Edit modal for its config.",
                         component: function (e) {
-                            return (0, n.jsx)(E, {
+                            return (0, i.jsx)(S, {
                                 ...e,
                                 type: h.a.LEADERBOARD,
                                 title: "Leaderboard",
-                                initialConfig: _,
-                                successData: P,
+                                initialConfig: T,
+                                successData: _,
                             });
                         },
                         controls: {
@@ -319,4 +319,4 @@ let S = {
         ],
         tags: ["Server Hub", "Widgets", "GuildSpace", "Publish"],
     },
-    L = { playgroundBaseUrl: "guild-space", collections: [x] };
+    P = { playgroundBaseUrl: "guild-space", collections: [C] };

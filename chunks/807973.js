@@ -8,7 +8,7 @@ var l = n(503698),
     s = n(17928),
     a = n(236285),
     c = n(35275),
-    d = n(983209);
+    d = n(655756);
 function E(e) {
     let { guildId: t, emojiId: n, emojiName: l, className: E } = e,
         C = (0, s.bG)([a.Ay], () => {

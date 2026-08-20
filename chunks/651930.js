@@ -22,7 +22,7 @@ var n = a(477900),
     j = a(21241),
     k = a(652215),
     I = a(375708),
-    w = a(520467);
+    w = a(614958);
 let M = l.memo(function (e) {
         let { game: t } = e,
             a = (0, r.bG)([c.A], () => c.A.getApplicationByName(t.name) ?? c.A.getApplication(t.id), [t.id, t.name]),

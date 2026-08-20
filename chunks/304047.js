@@ -18,7 +18,7 @@ var l = n(477900),
     E = n(360469),
     v = n(818348),
     C = n(375708),
-    I = n(837284);
+    I = n(584841);
 function S(e) {
     let { applicationId: t, hideApplicationName: n } = e,
         { gameId: i, gameRecord: s } = (0, f.A)({ applicationId: t }),

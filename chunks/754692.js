@@ -12,7 +12,7 @@ var i = n(477900),
     h = n(834730),
     E = n(64585),
     g = n(906688),
-    C = n(366708);
+    C = n(857015);
 function _(e) {
     let { color: t } = e;
     return (0, i.jsxs)("svg", {

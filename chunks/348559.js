@@ -14,7 +14,7 @@ var i = s(477900),
     h = s(792620),
     T = s(652215),
     f = s(375708),
-    E = s(485870);
+    E = s(738541);
 function S(t) {
     let { transitionState: e, onClose: s, questContent: c, quest: a, returnRef: o } = t,
         u = d.H1.useSetting(),

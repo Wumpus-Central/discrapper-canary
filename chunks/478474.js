@@ -9,7 +9,7 @@ var n = t(935462),
     o = t(235986),
     d = t(936525),
     m = t(375708),
-    x = t(952052),
+    x = t(844768),
     u = t(332633);
 function N(a) {
     let { onContinue: e, onClose: t, title: N, body: h } = a;

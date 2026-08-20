@@ -49,7 +49,7 @@ var U = n(363487),
     z = n(314307),
     W = n(936649),
     $ = n(375708),
-    J = n(613431);
+    J = n(936820);
 function q(e) {
     let { className: t, iconUrl: n, icon: s, header: r, completed: c, onClick: d } = e,
         [g, p] = i.useState(!1),
@@ -172,8 +172,8 @@ function Z(e) {
                 null != ei &&
                     (0, g.openModalLazy)(async () => {
                         let { default: e } = await Promise.all([
-                            n.e("827574"),
-                            n.e("121149"),
+                            n.e("683621"),
+                            n.e("711162"),
                             n.e("159957"),
                             n.e("728136"),
                             n.e("216084"),
@@ -209,7 +209,7 @@ function Z(e) {
                 action: W.AG.DOWNLOAD,
             }),
                 (0, g.openModalLazy)(async () => {
-                    let { default: e } = await Promise.all([n.e("773708"), n.e("944602"), n.e("825280")]).then(
+                    let { default: e } = await Promise.all([n.e("915082"), n.e("944602"), n.e("825280")]).then(
                         n.bind(n, 987482),
                     );
                     return (t) => (0, l.jsx)(e, { source: L.JJy.CHANNEL_WELCOME_CTA, ...t });
@@ -227,7 +227,7 @@ function Z(e) {
                         action: W.AG.ADD_APP,
                     }),
                     (0, g.openModalLazy)(async () => {
-                        let { default: e } = await Promise.all([n.e("436728"), n.e("566003")]).then(n.bind(n, 258942));
+                        let { default: e } = await Promise.all([n.e("851503"), n.e("566003")]).then(n.bind(n, 258942));
                         return (t) =>
                             (0, l.jsx)(e, {
                                 guildId: ei.id ?? "",

@@ -5,7 +5,7 @@ var i = n(477900),
     a = n.n(s),
     r = n(364522),
     o = n(235986),
-    c = n(500296);
+    c = n(622695);
 class d extends l.PureComponent {
     static defaultProps = { basis: 232, grow: 0, shrink: 0 };
     render() {

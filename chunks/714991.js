@@ -14,7 +14,7 @@ var i = n(477900),
     A = n(403362),
     h = n(652215),
     I = n(375708),
-    f = n(687652);
+    f = n(559141);
 class p extends r.PureComponent {
     renderBadge(e, t, n) {
         let {

@@ -17,7 +17,7 @@ var l = s(477900),
     R = s(174459),
     k = s(652215),
     b = s(559868),
-    y = s(343932);
+    y = s(736541);
 let C = u().defaultRules.link,
     x = { section: k.JJy.SETTINGS_CHANGELOG };
 function A(e) {

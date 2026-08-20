@@ -1,4 +1,4 @@
-n.d(t, { f7: () => e3, Re: () => e2, Ay: () => tc, pe: () => e0, rV: () => e1 });
+n.d(t, { f7: () => e5, Re: () => e2, Ay: () => tc, pe: () => e0, rV: () => e1 });
 var i = n(989349),
     l = n.n(i),
     r = n(877624),
@@ -209,8 +209,8 @@ let e0 = {
         [eN.kqX.BATTLENET_MIGRATION]: E.M.BATTLENET_CONNECTION_DEPRECATION,
         [eN.kqX.BATTLENET_LINKED_ROLE_DEPRECATION]: E.M.BATTLENET_CONNECTION_DEPRECATION_LINKED_ROLES,
     },
-    e3 = { [eN.kqX.OUTBOUND_PROMOTION]: E.M.THIRD_PARTY_OUTBOUND_PROMO_NAGBAR },
-    e5 = {
+    e5 = { [eN.kqX.OUTBOUND_PROMOTION]: E.M.THIRD_PARTY_OUTBOUND_PROMO_NAGBAR },
+    e3 = {
         [eN.kqX.DETECTED_OFF_PLATFORM_PREMIUM_PERK_UPSELL]: "hideDetectedOffPlatformPremiumPerkUpsell",
         [eN.kqX.PREMIUM_UNCANCEL]: "hideUncancelReminder",
         [eN.kqX.PREMIUM_MISSING_PAYMENT]: "hideMissingPaymentReminder",
@@ -241,15 +241,15 @@ let e0 = {
         eN.kqX.WINDOWS_MEDIA_PACK_REQUIRED,
     ]),
     e9 = {},
-    e4 = {},
-    e8 = Object.freeze({ id: null, message: null, buttonText: null, callback: void 0, metadata: null }),
-    e6 = null;
+    e8 = {},
+    e6 = Object.freeze({ id: null, message: null, buttonText: null, callback: void 0, metadata: null }),
+    e4 = null;
 function te(e) {
-    return e5[e] + "-untilAtLeast";
+    return e3[e] + "-untilAtLeast";
 }
 function tt(e, t, n) {
     if (null == e) return;
-    let i = e5[e];
+    let i = e3[e];
     (null == i || t || o.w.set(i, !0), e7.has(e) && (e9[e] = !0), null != n && null != i)
         ? o.w.set(te(e), n.format("YYYY-MM-DDTHH:mm:ss.SSSZ"))
         : o.w.remove(te(e));
@@ -277,7 +277,7 @@ function tl(e) {
     }
     let n = e0[e];
     if (null != n) return (0, I.k8)(n);
-    let i = e5[e];
+    let i = e3[e];
     if (null != i) {
         let t,
             n = null != (t = o.w.get(te(e))) ? l()(t) : null;
@@ -880,7 +880,7 @@ let ts = {
 };
 function ta() {
     if (!m.A.isConnected()) return !1;
-    e6 = null;
+    e4 = null;
     let e = j.default.getCurrentUser();
     if (null == e) return !1;
     let t = eB.A.getPremiumSubscription(),
@@ -899,15 +899,15 @@ function ta() {
             })
         ) {
             let i = ts[r].metadata?.({ currentUser: e, premiumSubscription: t, selectedGuildId: n });
-            e6 = { ...e8, type: r, metadata: i };
+            e4 = { ...e6, type: r, metadata: i };
             break;
         }
-    if (null != e6) {
-        e6.metadata?.sampleRate != null &&
-            null == e4[e6.type] &&
-            (e4[e6.type] = Math.random() <= e6.metadata.sampleRate);
-        let e = !1 === e4[e6.type];
-        (tl(e6.type) || e) && (e6 = null);
+    if (null != e4) {
+        e4.metadata?.sampleRate != null &&
+            null == e8[e4.type] &&
+            (e8[e4.type] = Math.random() <= e4.metadata.sampleRate);
+        let e = !1 === e8[e4.type];
+        (tl(e4.type) || e) && (e4 = null);
     }
 }
 function tE() {
@@ -976,10 +976,10 @@ class to extends s.Ay.Store {
             );
     }
     hasNotice() {
-        return null != e6 && null != e6.type;
+        return null != e4 && null != e4.type;
     }
     getNotice() {
-        return null == eq.A.getAction() ? e6 : null;
+        return null == eq.A.getAction() ? e4 : null;
     }
     isNoticeDismissed(e) {
         return tl(e);
@@ -1032,7 +1032,7 @@ let tc = new to(c.h, {
     VOICE_STATE_UPDATES: function (e) {
         let { voiceStates: t } = e;
         return (
-            (e6?.type === eN.kqX.INVITED_TO_SPEAK ||
+            (e4?.type === eN.kqX.INVITED_TO_SPEAK ||
                 t.some((e) => {
                     let { userId: t } = e;
                     return t !== es.default.getId();
@@ -1055,17 +1055,17 @@ let tc = new to(c.h, {
         return ta();
     },
     NOTICE_SHOW: function (e) {
-        e6 = e.notice;
+        e4 = e.notice;
     },
     NOTICE_DISMISS: function (e) {
-        return null != e6 && (null == e.id || e.id === e6.id) && (tt(e6.type, e.isTemporary, e.untilAtLeast), ta());
+        return null != e4 && (null == e.id || e.id === e4.id) && (tt(e4.type, e.isTemporary, e.untilAtLeast), ta());
     },
     NOTICE_DISABLE: function (e) {
         let { noticeType: t } = e;
         return tt(t), ta();
     },
     LOGOUT: function () {
-        (e9 = {}), (e4 = {}), (e6 = null);
+        (e9 = {}), (e8 = {}), (e4 = null);
     },
     SUBSCRIPTION_PLANS_FETCH_SUCCESS: ta,
     AUTO_MODERATION_MENTION_RAID_DETECTION: ta,

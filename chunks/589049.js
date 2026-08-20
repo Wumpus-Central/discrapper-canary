@@ -18,7 +18,7 @@ var n = l(477900),
     j = l(696016),
     b = l(711918),
     C = l(375708),
-    y = l(427445);
+    y = l(931540);
 function N(e) {
     let { icon: t, title: l, body: a, position: i, compact: r } = e;
     return (0, n.jsx)(m.u, {
@@ -171,7 +171,7 @@ let A = a.memo(function (e) {
         }),
     ];
 });
-var L = l(200853);
+var L = l(590936);
 let R = a.memo(function (e) {
     let { videoLength: t, clip: l, onMouseDown: i, noBottomMargin: o = !1, compact: c = !1 } = e,
         { timeNotches: u, subNotches: d } = a.useMemo(() => {

@@ -1,50 +1,50 @@
-a.d(e, { A: () => f }), a(321073);
-var s = a(582128),
-    i = a(512750),
-    r = a(17928),
-    l = a(386784),
-    n = a(498642),
-    o = a(317525),
-    d = a(71393),
-    u = a(853513),
-    c = a(375708);
-function f(t, e) {
-    let a = (0, r.bG)([n.A], () => n.A.getMemberCount(t)),
-        f = (0, l.A)(t),
-        m = (0, r.bG)([d.A], () => d.A.getGuild(t)?.vanityURLCode != null),
-        k = (0, r.bG)(
-            [o.A],
+r.d(e, { A: () => k }), r(321073);
+var l = r(582128),
+    a = r(512750),
+    i = r(17928),
+    n = r(386784),
+    u = r(498642),
+    s = r(317525),
+    d = r(71393),
+    c = r(641641),
+    o = r(375708);
+function k(t, e) {
+    let r = (0, i.bG)([u.A], () => u.A.getMemberCount(t)),
+        k = (0, n.A)(t),
+        b = (0, i.bG)([d.A], () => d.A.getGuild(t)?.vanityURLCode != null),
+        f = (0, i.bG)(
+            [s.A],
             () =>
-                e.skuId !== i.aN || null == f
+                e.skuId !== a.aN || null == k
                     ? 0
-                    : o.A.getSortedRoles(t).reduce(
-                          (t, e) => (e.colorStrings?.secondaryColor == null ? t : t + (f[e.id] ?? 0)),
+                    : s.A.getSortedRoles(t).reduce(
+                          (t, e) => (e.colorStrings?.secondaryColor == null ? t : t + (k[e.id] ?? 0)),
                           0,
                       ),
-            [t, e.skuId, f],
+            [t, e.skuId, k],
         );
-    return s.useMemo(() => {
+    return l.useMemo(() => {
         let t;
         switch (e.skuId) {
-            case i.aN:
+            case a.aN:
                 t =
-                    k > 0
-                        ? c.intl.formatToPlainString(u.default["4jSvr1"], { perk: e.title, memberCount: k })
-                        : c.intl.formatToPlainString(u.default.cavtEo, { perk: e.title });
+                    f > 0
+                        ? o.intl.formatToPlainString(c.default["4jSvr1"], { perk: e.title, memberCount: f })
+                        : o.intl.formatToPlainString(c.default.cavtEo, { perk: e.title });
                 break;
-            case i.FB:
-                t = m ? c.intl.string(u.default.hN75yb) : c.intl.string(u.default.Du91Rb);
+            case a.FB:
+                t = b ? o.intl.string(c.default.hN75yb) : o.intl.string(c.default.Du91Rb);
                 break;
-            case i.OJ:
-            case i.jF:
-            case i.Ht:
-            case i.tv:
-                t = c.intl.string(u.default.Vf2ZcR);
+            case a.OJ:
+            case a.jF:
+            case a.Ht:
+            case a.tv:
+                t = o.intl.string(c.default.Vf2ZcR);
                 break;
             default:
-                t = c.intl.formatToPlainString(u.default["4jSvr1"], { perk: e.title, memberCount: a ?? 0 });
+                t = o.intl.formatToPlainString(c.default["4jSvr1"], { perk: e.title, memberCount: r ?? 0 });
         }
-        let s = [{ text: t, critical: e.skuId === i.FB }];
-        return m && e.skuId === i.YG && s.push({ text: c.intl.string(u.default.M4XL5n), critical: !0 }), s;
-    }, [e, k, a, m]);
+        let l = [{ text: t, critical: e.skuId === a.FB }];
+        return b && e.skuId === a.YG && l.push({ text: o.intl.string(c.default.M4XL5n), critical: !0 }), l;
+    }, [e, f, r, b]);
 }

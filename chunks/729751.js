@@ -19,7 +19,7 @@ var l = a(477900),
     f = a(705285),
     w = a(381941),
     N = a(375708),
-    _ = a(426346);
+    _ = a(511445);
 function j(e) {
     let { server: n } = e,
         a = (0, g.A)(n.gameId, "cover") ?? n.coverUrl;

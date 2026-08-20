@@ -12,7 +12,7 @@ var r = a(821609),
     c = a(689906),
     m = a(743569),
     f = a(568065),
-    g = a(853513),
+    g = a(641641),
     k = a(375708);
 function I(e) {
     let { guildId: t, powerup: a, onClose: r, ...n } = e,
@@ -59,7 +59,7 @@ function I(e) {
             }),
     });
 }
-var h = a(729485);
+var h = a(823980);
 function v(e) {
     let { guildId: t, powerup: a, ...u } = e;
     if ("control" === (0, n.D)("GuildPowerupActivateModalExperimentWrapper")) {

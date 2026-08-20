@@ -54,8 +54,8 @@ var n = s(477900),
     et = s(815807),
     es = s(652215),
     en = s(375708),
-    el = s(320318),
-    ei = s(522826);
+    el = s(936920),
+    ei = s(221851);
 function ea(e) {
     return null == e.id ? _.Ay.convertSurrogateToName(e.name) : `:${e.name}:`;
 }

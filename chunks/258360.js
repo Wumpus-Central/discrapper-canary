@@ -28,7 +28,7 @@ var a = n(477900),
     M = n(323350),
     N = n(652215),
     P = n(375708),
-    I = n(975853);
+    I = n(946190);
 function O(t) {
     let { text: e, editor: O, target: R, onHeightUpdate: X, onSelect: U, clipboardHasMixedContent: L } = t,
         v = r.useCallback(
@@ -221,7 +221,7 @@ function O(t) {
                                       action: () => {
                                           (0, j.openModalLazy)(async () => {
                                               let { default: t } = await Promise.all([
-                                                  n.e("194232"),
+                                                  n.e("378267"),
                                                   n.e("54191"),
                                               ]).then(n.bind(n, 665906));
                                               return (e) => (0, a.jsx)(t, { ...e });

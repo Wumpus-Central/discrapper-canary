@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => O, n: () => L });
+n.d(t, { A: () => M, n: () => O });
 var l = n(477900),
     i = n(582128),
     s = n(696292),
@@ -16,35 +16,35 @@ var l = n(477900),
     g = n(692969),
     x = n(932413),
     A = n(975732),
-    E = n(964195),
-    C = n(939341),
+    C = n(964195),
+    E = n(939341),
     I = n(99066),
     y = n(291594),
-    S = n(263577),
-    v = n(506326),
-    _ = n(868065),
-    N = n(424994),
+    v = n(263577),
+    S = n(506326),
+    N = n(868065),
+    _ = n(424994),
     T = n(518477),
     j = n(375708),
-    b = n(161878),
-    R = n(685504);
-let L = [v.iq, v.Zc, v.Xy, v.$X, v.tR, v.K7, v.fg, v.sp, v.MK],
-    O = i.memo(function (e) {
+    b = n(273783),
+    R = n(804779);
+let O = [S.iq, S.Zc, S.Xy, S.$X, S.tR, S.K7, S.fg, S.sp, S.MK],
+    M = i.memo(function (e) {
         let {
                 entry: t,
                 channel: n,
                 selected: i,
-                hovered: O,
-                isFirstApplicationOccurrence: M,
+                hovered: M,
+                isFirstApplicationOccurrence: L,
                 trackRankingItemInteraction: w,
             } = e,
-            { largeImage: k } = (0, C.nO)({
+            { largeImage: k } = (0, E.nO)({
                 entry: t,
                 showCoverImage: !1,
                 trackingSource: "memberlist_gaming_content_row",
             }),
             { data: P } = (0, m.YY)(t.extra.application_id),
-            D = (0, h.JC)(P) && M,
+            D = (0, h.JC)(P) && L,
             U = D ? [r.M.CLOUD_PLAY_NEW_BADGE] : [],
             [G] = (0, f.kn)(U),
             V = (0, I.dN)("MemberListGamingContent"),
@@ -56,19 +56,19 @@ let L = [v.iq, v.Zc, v.Xy, v.$X, v.tR, v.K7, v.fg, v.sp, v.MK],
                     trackEntryPointImpression: V,
                     sourceUserId: t.author_id,
                 },
-                { onOpened: () => w(N.PA.OPENED_GAME_PROFILE) },
+                { onOpened: () => w(_.PA.OPENED_GAME_PROFILE) },
             ),
             H = V ? F : void 0,
             B = j.intl.formatToPlainString(j.t["9sZWVp"], { gameName: t.extra.game_name }),
-            W = (0, l.jsx)(S.V, {
+            W = (0, l.jsx)(v.V, {
                 alt: k?.text ?? k?.alt,
                 src: k?.src,
                 size: 48,
                 className: R.xn,
                 showTooltip: k?.text != null,
             }),
-            K = (0, l.jsx)(_.ZB, { children: t.extra.game_name });
-        return (0, l.jsxs)(_.Zp, {
+            K = (0, l.jsx)(N.ZB, { children: t.extra.game_name });
+        return (0, l.jsxs)(N.Zp, {
             selected: i,
             usesCardRows: !0,
             children: [
@@ -76,16 +76,16 @@ let L = [v.iq, v.Zc, v.Xy, v.$X, v.tR, v.K7, v.fg, v.sp, v.MK],
                     applicationId: t.extra.application_id,
                     questContent: s.u.MEMBERS_LIST_CARD,
                     children: (e) =>
-                        (0, l.jsxs)(_.dM, {
+                        (0, l.jsxs)(N.dM, {
                             ref: e,
                             children: [
-                                (0, l.jsxs)(_.UA, {
+                                (0, l.jsxs)(N.UA, {
                                     children: [
-                                        (0, l.jsx)(_.Hp, { entry: t, channelId: n.id, guildId: n.guild_id }),
+                                        (0, l.jsx)(N.Hp, { entry: t, channelId: n.id, guildId: n.guild_id }),
                                         null != H ? (0, l.jsx)(y.A, { className: b.N4, onClick: H, children: K }) : K,
-                                        (0, l.jsx)(v.mG, {
-                                            location: v.N5.CARD,
-                                            children: L.map((e, n) => (0, l.jsx)(e, { entry: t, hovered: O }, n)),
+                                        (0, l.jsx)(S.mG, {
+                                            location: S.N5.CARD,
+                                            children: O.map((e, n) => (0, l.jsx)(e, { entry: t, hovered: M }, n)),
                                         }),
                                     ],
                                 }),
@@ -98,8 +98,8 @@ let L = [v.iq, v.Zc, v.Xy, v.$X, v.tR, v.K7, v.fg, v.sp, v.MK],
                 D &&
                     (0, l.jsxs)(l.Fragment, {
                         children: [
-                            (0, l.jsx)(_.ik, {}),
-                            (0, l.jsxs)(_.dM, {
+                            (0, l.jsx)(N.ik, {}),
+                            (0, l.jsxs)(N.dM, {
                                 className: b.DK,
                                 children: [
                                     (0, l.jsxs)("div", {
@@ -124,14 +124,14 @@ let L = [v.iq, v.Zc, v.Xy, v.$X, v.tR, v.K7, v.fg, v.sp, v.MK],
                     }),
                 "applicationWidgetPreview" in t &&
                     null != t.applicationWidgetPreview &&
-                    (0, l.jsx)(E.F, {
+                    (0, l.jsx)(C.F, {
                         userId: t.author_id,
                         widgetApplicationId: t.applicationWidgetPreview.widgetApplicationId,
                         hasWidget: t.applicationWidgetPreview.hasWidget,
                         className: b.AB,
                         compactViewMore: !0,
                         onClickViewMore: () => {
-                            w(N.PA.APPLICATION_WIDGET_PREVIEW_VIEW_MORE),
+                            w(_.PA.APPLICATION_WIDGET_PREVIEW_VIEW_MORE),
                                 (0, A.openUserProfileModal)({ userId: t.author_id, tabSection: T.RP.WIDGETS });
                         },
                     }),

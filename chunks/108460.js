@@ -7,7 +7,7 @@ var l = t(477900),
     o = t(863610),
     c = t(534890),
     u = t(315502),
-    d = t(271547);
+    d = t(344204);
 function A(e) {
     let { width: n = 24, height: t = 24, isBadged: s = !1, isTyping: a = !1 } = e,
         [u] = i.useState(() => (0, r.A)());

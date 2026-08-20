@@ -19,7 +19,7 @@ var n = e(477900),
     p = e(754495),
     y = e(939075),
     I = e(375708),
-    k = e(224202);
+    k = e(535355);
 function R(t) {
     let { user: i, entry: e, transitionState: R, onAction: S, onClose: b, onOpenGameSettings: g } = t,
         [L, O] = (0, l.yK)([C.A], () => [C.A.isDeletingEntryHistory, C.A.deleteOutboxEntryError]),

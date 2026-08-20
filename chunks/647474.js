@@ -13,7 +13,7 @@ var r = n(477900),
     h = n(421108),
     v = n(818348),
     j = n(375708),
-    f = n(280309);
+    f = n(395822);
 function k(t) {
     let { className: e, color: n = "default", sticky: l = !1, children: s } = t,
         a = l ? f.qf : void 0;

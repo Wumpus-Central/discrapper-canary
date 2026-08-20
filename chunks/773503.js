@@ -12,7 +12,7 @@ var i = n(477900),
     m = n(565645),
     p = n(287809),
     g = n(562153),
-    f = n(231236);
+    f = n(401381);
 function A(e) {
     let { avatarURL: t, avatarLabel: n, text: l, leading: a } = e;
     return (0, i.jsxs)("div", {

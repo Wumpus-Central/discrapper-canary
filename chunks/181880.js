@@ -22,7 +22,7 @@ async function _(e, t) {
 var N = n(244696),
     m = n(49999),
     C = n(375708),
-    S = n(764553);
+    S = n(975366);
 let T = "GUILD_THEME_NUX_MODAL",
     p = new A.A("GuildThemeNuxModal");
 function M(e) {

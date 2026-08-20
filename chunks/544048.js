@@ -6,7 +6,7 @@ var i = n(477900),
     l = n(941861),
     r = n(844222),
     h = n(460890),
-    p = n(308581);
+    p = n(471544);
 class u extends s.PureComponent {
     static defaultProps = { pauseWhileUnfocused: !0, pause: !1 };
     animationRef = null;

@@ -14,7 +14,7 @@ var l = n(477900),
     C = n(648335),
     f = n(652215),
     E = n(818348),
-    S = n(426125);
+    S = n(400400);
 let y = i.memo(function (e) {
     let {
             paymentMethodOrder: t,

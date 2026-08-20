@@ -1,4 +1,4 @@
-t.d(r, { C: () => v, JE: () => m, NE: () => _, VU: () => h, bA: () => O, eo: () => w, lM: () => g, mb: () => d }),
+t.d(r, { C: () => v, JE: () => m, NE: () => _, VU: () => g, bA: () => E, eo: () => O, lM: () => h, mb: () => d }),
     t(323874),
     t(14289),
     t(35956);
@@ -186,14 +186,14 @@ function v(e) {
         );
     }, [l, e]);
 }
-function h() {
+function g() {
     return m((e) =>
         e.previewEnabled && null != e.previewAvatarDecorationKey
             ? (e.avatarDecorationAssets[e.previewAvatarDecorationKey]?.src ?? null)
             : null,
     );
 }
-function g() {
+function h() {
     let e = m((e) =>
         e.previewEnabled && null != e.previewProfileFrameKey
             ? (e.profileFrameAssets[e.previewProfileFrameKey] ?? null)
@@ -201,7 +201,7 @@ function g() {
     );
     return n.useMemo(() => (null == e ? null : (0, u.i)(e)), [e]);
 }
-function w() {
+function O() {
     let e = m((e) =>
         e.previewEnabled && null != e.previewProfileFrameKey
             ? (e.profileFrameAssets[e.previewProfileFrameKey] ?? null)
@@ -219,7 +219,7 @@ function w() {
         return { layers: e.layers, layerData: r, css: (0, u.i)(e) };
     }, [e]);
 }
-function O() {
+function E() {
     let e = m((e) => e.profileFrameAssets);
     return n.useMemo(() => Object.values(e).sort((e, r) => e.key.localeCompare(r.key)), [e]);
 }

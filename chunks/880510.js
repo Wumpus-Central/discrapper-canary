@@ -17,7 +17,7 @@ var l = n(477900),
     T = n(652215),
     C = n(731854),
     j = n(375708),
-    m = n(522826);
+    m = n(221851);
 class b extends i.PureComponent {
     handleAutoThresholdChange = (e) => {
         let { onThresholdChange: t, threshold: n } = this.props;

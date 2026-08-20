@@ -10,7 +10,7 @@ var r = n(17928),
     c = n(736653),
     d = n(287809),
     p = n(375708),
-    m = n(520835),
+    m = n(634090),
     h = n(626768),
     C = n(464896),
     f = (((l = {})[(l.SHOP_PAGE = 0)] = "SHOP_PAGE"), (l[(l.GIFT_MODAL = 1)] = "GIFT_MODAL"), l);

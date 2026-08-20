@@ -3,7 +3,7 @@ var i = r(477900);
 r(582128);
 var n = r(403581),
     l = r(834730),
-    o = r(841196);
+    o = r(336089);
 function u(t) {
     let { discountedPrice: e, normalPrice: r } = t;
     return (0, i.jsxs)("div", {

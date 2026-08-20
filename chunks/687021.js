@@ -12,7 +12,7 @@ var i = n(477900),
     f = n(711014),
     g = n(403362),
     h = n(375708),
-    x = n(451968);
+    x = n(897023);
 function m(e) {
     let { guildId: l, className: n, globalOption: a, hideDivider: t = !1, onChange: s, renderOptionSuffix: u } = e;
     return (0, i.jsx)(c.A, {

@@ -24,7 +24,7 @@ var a = n(477900),
     E = n(586035),
     D = n(190107),
     _ = n(375708),
-    I = n(877732);
+    I = n(928213);
 function S(e) {
     let { quest: t, avatarDeco: n, onUseNow: r, user: s, mode: i } = e,
         c = (0, k.tW)(t, k.fY.REWARD).url,

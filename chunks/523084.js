@@ -9,7 +9,7 @@ var a = n(477900),
     o = n(775602),
     u = n(524246),
     m = n(14368),
-    p = n(729485);
+    p = n(823980);
 function h(e) {
     let { title: s, description: n, image: h, button: x, ...g } = e,
         j = (0, t.bG)([o.Ay], () => o.Ay.useReducedMotion),

@@ -15,7 +15,7 @@ var i = n(477900),
     h = n(331322),
     I = n(834730),
     f = n(22856),
-    p = n(617736);
+    p = n(592551);
 function T(e) {
     let { shouldColorMix: t = !1 } = e,
         { dismissable: n, onClose: r } = (0, f.k)();

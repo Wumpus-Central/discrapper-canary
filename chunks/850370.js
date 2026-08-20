@@ -32,7 +32,7 @@ function m(e) {
     );
 }
 var f = l(375708),
-    x = l(242112);
+    x = l(455007);
 function p(e) {
     let { onClose: t, trackUserProfileEditAction: l, highlightedApplicationIds: a, ...r } = e,
         h = (0, d.bG)([u.default], () => u.default.getCurrentUser()),
@@ -91,7 +91,7 @@ var j = l(224640),
     k = l(661439),
     w = l(429913),
     S = l(90165),
-    G = l(943440);
+    G = l(976527);
 function R(e) {
     let {
             applicationWidgets: t,
@@ -203,7 +203,7 @@ function R(e) {
         ],
     });
 }
-var q = l(433833);
+var q = l(488634);
 function W(e) {
     let { children: t } = e;
     return (0, n.jsx)("div", {

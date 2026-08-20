@@ -20,7 +20,7 @@ var n = l(477900),
     u = l(602674),
     d = l(696016),
     m = l(335416),
-    h = l(199091);
+    h = l(556250);
 let f = new Map(),
     x = a.memo(function (e) {
         let { clipId: t, voiceAudioTracks: i, onMouseDown: x, className: v, alwaysRenderContainer: p = !1 } = e,

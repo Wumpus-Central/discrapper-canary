@@ -9,7 +9,7 @@ var l = n(477900),
     c = n(104142),
     d = n(407781),
     m = n(652215),
-    p = n(205123);
+    p = n(983156);
 function g(e) {
     let { channelId: t, guildId: n, userId: g, containerDimensions: h } = e,
         f = (0, r.bG)([o.Ay], () => o.Ay.useReducedMotion),

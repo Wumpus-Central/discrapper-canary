@@ -3,7 +3,7 @@ var i = n(477900),
     l = n(582128),
     s = n(503698),
     r = n.n(s),
-    a = n(518581);
+    a = n(433664);
 class o extends l.PureComponent {
     static defaultProps = { tag: "div", forceHover: !1 };
     render() {

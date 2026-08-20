@@ -5,7 +5,7 @@ var l,
     o = r(503698),
     i = r.n(o),
     d = r(843740),
-    n = r(788480),
+    n = r(596835),
     c = (((l = {}).SIZE_40 = "SIZE_40"), (l.SIZE_60 = "SIZE_60"), l);
 let f = Object.freeze({ SIZE_40: "size-40", SIZE_60: "size-60" }),
     p = r(906118);

@@ -17,7 +17,7 @@ var n,
     g = s(885386),
     M = s(957565),
     y = s(375708),
-    A = s(867433),
+    A = s(715434),
     f = (((n = f || {})[(n.SMALL = 0)] = "SMALL"), (n[(n.MEDIUM = 1)] = "MEDIUM"), n);
 function C(e) {
     let { tag: l, size: n = 1, disabled: a, className: x, onClick: f, onRemove: C, selected: L, ariaLabel: N } = e,

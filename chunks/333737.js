@@ -12,7 +12,7 @@ var i = s(477900),
     m = s(287809),
     x = s(464477),
     u = s(375708),
-    p = s(147224);
+    p = s(902123);
 function j(t) {
     let { image: e, label: s, text: a, children: n } = t;
     return (0, i.jsxs)("div", {

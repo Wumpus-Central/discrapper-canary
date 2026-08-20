@@ -16,7 +16,7 @@ var n = i(477900),
     f = i(652215);
 i(46121);
 var g = i(375708),
-    v = i(881066);
+    v = i(689659);
 let j = Object.freeze({ shouldPreventNavigation: !1, onPreventNavigation: null, sidebarOpen: !0 });
 function _(e) {
     let { section: t, setPreventNavigation: i, scrollerRef: s } = e;

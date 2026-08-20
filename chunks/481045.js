@@ -12,9 +12,9 @@ var d = e(885386),
     C = e(115063),
     h = e(365258),
     j = e(926418),
-    x = e(395277),
+    x = e(527533),
     p = e(375708),
-    v = e(236390);
+    v = e(599583);
 function g() {
     (0, u.openUserSettings)(o.X.ACTIVITY_PRIVACY_PANEL);
 }

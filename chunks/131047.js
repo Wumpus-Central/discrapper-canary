@@ -19,7 +19,7 @@ var t = l(477900),
     f = l(429913),
     p = l(709066),
     C = l(47167),
-    T = l(174355),
+    T = l(713654),
     b = l(131607),
     I = l(5180),
     v = l(409626),
@@ -43,7 +43,7 @@ var t = l(477900),
     w = l(652215),
     X = l(49999),
     Q = l(375708),
-    Z = l(354919);
+    Z = l(999900);
 function q(e) {
     let { channel: n, children: l } = e,
         s = (0, f.h)(n.linkedLobby?.application_id),

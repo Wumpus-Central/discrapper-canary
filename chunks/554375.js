@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Cp: () => N, Gf: () => v, Sw: () => R, V4: () => b, ak: () => _, dK: () => y, dZ: () => S }), n(321073);
+n.d(t, { Cp: () => _, Gf: () => S, Sw: () => R, V4: () => b, ak: () => N, dK: () => y, dZ: () => v }), n(321073);
 var l = n(435558),
     i = n.n(l),
     s = n(636537),
@@ -16,8 +16,8 @@ var l = n(435558),
     g = n(919638),
     x = n(403362),
     A = n(157559),
-    E = n(652215),
-    C = n(355097),
+    C = n(652215),
+    E = n(355097),
     I = n(375708);
 function y(e) {
     p.wc.updateAsync(
@@ -25,22 +25,22 @@ function y(e) {
         (t) => {
             (t.diversitySurrogate = r.hU.create()), (t.diversitySurrogate.value = e);
         },
-        C.Sb.FREQUENT_USER_ACTION,
+        E.Sb.FREQUENT_USER_ACTION,
     );
 }
-function S(e) {
+function v(e) {
     o.h.dispatch({ type: "EMOJI_FETCH", guildId: e }),
-        s.Bo.get({ url: E.Rsh.GUILD_EMOJIS(e), oldFormErrors: !0, rejectWithError: !0 }).then(
+        s.Bo.get({ url: C.Rsh.GUILD_EMOJIS(e), oldFormErrors: !0, rejectWithError: !0 }).then(
             (t) => o.h.dispatch({ type: "EMOJI_FETCH_SUCCESS", guildId: e, emojis: t.body }),
             () => o.h.dispatch({ type: "EMOJI_FETCH_FAILURE", guildId: e }),
         );
 }
-function v(e) {
+function S(e) {
     let { guildId: t, image: n, name: l, roles: i, analyticsLocation: r, originalMd5: a } = e;
     return (
         o.h.dispatch({ type: "EMOJI_UPLOAD_START", guildId: t }),
         s.Bo.post({
-            url: E.Rsh.GUILD_EMOJIS(t),
+            url: C.Rsh.GUILD_EMOJIS(t),
             body: { image: n, name: l, roles: i },
             headers: c.A.buildHeadersForMd5(a),
             context: { client_event_source: r?.page },
@@ -52,11 +52,11 @@ function v(e) {
         )
     );
 }
-function _(e, t, n) {
+function N(e, t, n) {
     return (
         o.h.dispatch({ type: "EMOJI_DELETE", guildId: e, emojiId: t }),
         s.Bo.del({
-            url: E.Rsh.GUILD_EMOJI(e, t),
+            url: C.Rsh.GUILD_EMOJI(e, t),
             body: null != n ? { replaced_by: n } : void 0,
             oldFormErrors: !0,
             rejectWithError: (0, s.fT)(),
@@ -65,11 +65,11 @@ function _(e, t, n) {
         })
     );
 }
-async function N(e) {
+async function _(e) {
     let { guildId: t, emojiId: n, name: l, roles: i } = e;
     try {
         return await s.Bo.patch({
-            url: E.Rsh.GUILD_EMOJI(t, n),
+            url: C.Rsh.GUILD_EMOJI(t, n),
             body: { name: l, roles: i },
             oldFormErrors: !0,
             rejectWithError: !0,
@@ -99,7 +99,7 @@ function b(e) {
                       }),
                       !1)
                     : !e.emojis.includes(t) && void e.emojis.push(t),
-            C.Sb.INFREQUENT_USER_ACTION,
+            E.Sb.INFREQUENT_USER_ACTION,
         );
 }
 function R(e) {
@@ -111,6 +111,6 @@ function R(e) {
                 if (((e.emojis = T(e.emojis)), !e.emojis.includes(t))) return !1;
                 e.emojis = e.emojis.filter((e) => t !== e);
             },
-            C.Sb.INFREQUENT_USER_ACTION,
+            E.Sb.INFREQUENT_USER_ACTION,
         );
 }

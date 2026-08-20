@@ -5,7 +5,7 @@ var c = s(900797),
     o = s(847374),
     i = s(921853),
     a = s(320448),
-    l = s(197060);
+    l = s(103335);
 let h = { UP: l.hv, RIGHT: l.kL, DOWN: l.Gb, LEFT: l.PI };
 function n(t) {
     let {

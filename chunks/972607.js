@@ -36,7 +36,7 @@ var l = n(477900),
     U = n(652215),
     D = n(202541),
     G = n(375708),
-    F = n(729796);
+    F = n(392309);
 function B(e) {
     let {
             giftCode: t,

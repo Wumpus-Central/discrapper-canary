@@ -14,7 +14,7 @@ var l = n(477900),
     C = n(427262),
     f = n(652215),
     E = n(375708),
-    S = n(665972);
+    S = n(991321);
 let y = new u.A("PaymentRequest"),
     A = Object.values({ applePay: "applePay", googlePay: "googlePay", link: "link", browserCard: "browserCard" });
 class P extends i.Component {

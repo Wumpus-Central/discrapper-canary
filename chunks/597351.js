@@ -5,7 +5,7 @@ var r = n(503698),
     l = n.n(r),
     a = n(866665),
     s = n(939249),
-    o = n(653134);
+    o = n(250109);
 function u(e) {
     let { onClick: t, icon: n, tooltip: r, className: u } = e,
         d = n({ color: "currentColor", size: "custom", width: 20, height: 20 });

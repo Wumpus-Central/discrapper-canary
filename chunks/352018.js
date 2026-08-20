@@ -20,7 +20,7 @@ var i = n(477900),
     m = n(806931),
     g = n(202541),
     S = n(375708),
-    N = n(173171);
+    N = n(138302);
 function C(e) {
     let { className: t } = e;
     return (0, i.jsx)(s.SettingsIcon, { size: "md", color: "currentColor", className: t });

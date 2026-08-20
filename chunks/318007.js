@@ -10,7 +10,7 @@ var i = n(503698),
     c = n(242874),
     d = n(165191),
     p = n(238017),
-    m = n(860262);
+    m = n(254125);
 function h(e) {
     let { isShopGift: t } = e,
         {

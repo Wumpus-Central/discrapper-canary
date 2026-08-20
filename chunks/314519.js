@@ -1,6 +1,6 @@
 n.d(t, { s: () => s });
 var i = n(148494),
-    l = n(568548),
+    l = n(573163),
     r = n(309010);
 let s = {
     binds: ["shift+pageup"],

@@ -15,7 +15,7 @@ var c = s(986268),
     d = s(625633),
     m = s(652215),
     g = s(375708),
-    p = s(923737);
+    p = s(801506);
 function h(t) {
     let { guild: e, banner: s } = t;
     return (0, i.jsx)("div", {

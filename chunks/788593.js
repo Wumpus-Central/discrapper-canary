@@ -13,7 +13,7 @@ var i = l(477900),
     p = l(591179),
     A = l(485745),
     N = l(375708),
-    j = l(350956);
+    j = l(365611);
 function E(a) {
     let { imageSrc: e, gameName: l } = a,
         [t, n] = s.useState(!1),

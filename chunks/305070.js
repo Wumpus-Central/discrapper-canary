@@ -16,35 +16,35 @@ var l = n(477900),
     g = n(915089),
     x = n(750506),
     A = n(513609),
-    E = n(71393),
-    C = n(597184),
+    C = n(71393),
+    E = n(597184),
     I = n(105330),
     y = n(265431),
-    S = n(459016),
-    v = n(861382),
-    _ = n(355622),
-    N = n(820066),
+    v = n(459016),
+    S = n(861382),
+    N = n(355622),
+    _ = n(820066),
     T = n(696451),
     j = n(576705),
     b = n(351906),
     R = n(287809),
-    L = n(31498),
-    O = n(887129),
-    M = n(741918),
+    O = n(31498),
+    M = n(887129),
+    L = n(741918),
     w = n(267102),
     k = n(652215),
     P = n(307731);
 let D = new Map([["thread", new Set(["name"])]]);
 var U = n(5867),
-    G = n(175916);
+    G = n(940169);
 let V = i.forwardRef(function (e, t) {
     let { channel: n, type: s, editorHeight: V, onVisibilityChange: F, editorScrollerRef: H, barsHeight: B } = e,
         W = (0, g.GV)(),
-        K = (0, o.bG)([E.A], () => E.A.getGuild(n.guild_id) ?? null, [n.guild_id]),
+        K = (0, o.bG)([C.A], () => C.A.getGuild(n.guild_id) ?? null, [n.guild_id]),
         z = i.useRef(null),
         [Z, Y, q] = (function (e, t, n) {
             let { channel: l, type: s } = e,
-                [r, a] = i.useState(() => (0, L.Ur)()),
+                [r, a] = i.useState(() => (0, O.Ur)()),
                 u = (0, y.A)(),
                 c = (0, o.bG)([T.Ay, R.default], () => {
                     let e = R.default.getCurrentUser();
@@ -54,14 +54,14 @@ let V = i.forwardRef(function (e, t) {
                     [j.A, b.A],
                     () => ({
                         canMentionEveryone:
-                            l.isPrivate() || c || s === _.oU.RULES_INPUT || j.A.can(k.xBc.MENTION_EVERYONE, l),
+                            l.isPrivate() || c || s === N.oU.RULES_INPUT || j.A.can(k.xBc.MENTION_EVERYONE, l),
                         hidePersonalInformation: b.A.hidePersonalInformation,
                     }),
                     [l, s, c],
                 ),
-                { activeCommand: m, activeCommandOption: f } = (0, o.cf)([v.A], () => ({
-                    activeCommand: v.A.getActiveCommand(l.id),
-                    activeCommandOption: v.A.getActiveOption(l.id),
+                { activeCommand: m, activeCommandOption: f } = (0, o.cf)([S.A], () => ({
+                    activeCommand: S.A.getActiveCommand(l.id),
+                    activeCommandOption: S.A.getActiveOption(l.id),
                 })),
                 p = i.useMemo(
                     () =>
@@ -77,8 +77,8 @@ let V = i.forwardRef(function (e, t) {
                         if ((n.current?.scrollToTop(), e && null != l.query)) {
                             let e = l.query.typeInfo.focusMode,
                                 n =
-                                    e !== C.e.MANUAL &&
-                                    (e !== C.e.AUTO_WHEN_FILTERED || 0 !== l.query.queryText.length);
+                                    e !== E.e.MANUAL &&
+                                    (e !== E.e.AUTO_WHEN_FILTERED || 0 !== l.query.queryText.length);
                             l.isVisible && (!0 !== t || !1 !== n) && !0 !== i
                                 ? (u.setFocus("0"), s?.(0))
                                 : (u.setFocus(null), s?.(null));
@@ -90,10 +90,10 @@ let V = i.forwardRef(function (e, t) {
                             u.setFocus(e.toString()), s?.(e);
                         }
                     }
-                    let u = (0, O.Ay)({
+                    let u = (0, M.Ay)({
                             id: t,
                             isEnabled: l.isVisible,
-                            orientation: M.Gl.VERTICAL,
+                            orientation: L.Gl.VERTICAL,
                             useVirtualFocus: !0,
                             setFocus: function (e, t) {
                                 let l = r.document.querySelector(e);
@@ -117,20 +117,20 @@ let V = i.forwardRef(function (e, t) {
                 })({ navId: "channel-autocomplete", scrollerRef: n, state: r, onFocus: (e) => U.setSelectedIndex(e) }),
                 x = e.editorRef.current?.getCurrentWord(),
                 A = e.editorRef.current?.getSlateEditor(),
-                E = null;
-            null != A && (E = N.VW.getSelectedParentOfType(A, L.mk)?.[0] ?? null);
+                C = null;
+            null != A && (C = _.VW.getSelectedParentOfType(A, O.mk)?.[0] ?? null);
             let I = {
                     ...e,
                     navigator: g,
                     activeCommand: m,
                     activeCommandOption: f,
-                    activeInlineAutocompleteInput: E,
+                    activeInlineAutocompleteInput: C,
                     canMentionUsers: s.users?.allowMentioning ?? !1,
                     canMentionEveryone: d,
                     hidePersonalInformation: h,
-                    hideMentionDescription: s === _.oU.RULES_INPUT,
+                    hideMentionDescription: s === N.oU.RULES_INPUT,
                     emojiIntention:
-                        s === _.oU.RULES_INPUT
+                        s === N.oU.RULES_INPUT
                             ? P.EmojiIntention.COMMUNITY_CONTENT
                             : p
                               ? P.EmojiIntention.NO_CUSTOM_EMOJI
@@ -139,13 +139,13 @@ let V = i.forwardRef(function (e, t) {
                     currentWordIsAtStart: x?.isAtStart === !0,
                     optionText:
                         null != f
-                            ? (0, S.getString)(
+                            ? (0, v.getString)(
                                   { [f.name]: e.editorRef.current?.getCurrentCommandOptionValue() ?? [] },
                                   f.name,
                               )
                             : "",
                 },
-                [U] = i.useState(() => new L.Ay(I));
+                [U] = i.useState(() => new O.Ay(I));
             return (
                 i.useEffect(() => {
                     U.updateProps(I);
@@ -178,9 +178,9 @@ let V = i.forwardRef(function (e, t) {
                 [r, U, g]
             );
         })({ ...e, guild: K }, t, z),
-        $ = s.autocomplete?.forceChatLayer ? A.Ay : x.Ay,
-        J = (0, f.aI)(Z.selectedIndex);
-    (0, p.gf)(W, Z.isVisible, J);
+        J = s.autocomplete?.forceChatLayer ? A.Ay : x.Ay,
+        $ = (0, f.aI)(Z.selectedIndex);
+    (0, p.gf)(W, Z.isVisible, $);
     let X = (0, I.l)({ editorHeight: V, type: s, state: Z }),
         Q = (0, o.bG)([h.Ay], () => {
             let e = h.Ay.getSelfEmbeddedActivityForChannel(n.id),
@@ -213,7 +213,7 @@ let V = i.forwardRef(function (e, t) {
     if (null == et) return null;
     let en = { [G.pK]: null == X, [G.YB]: null != X, [G.sQ]: null == X && "bottom" === e.position, [G.mO]: Q },
         el = 490;
-    null != X && (el = s.autocomplete?.small ? 200 : Z.query?.type === C.DB.EMOJIS_AND_STICKERS ? 490 : 245);
+    null != X && (el = s.autocomplete?.small ? 200 : Z.query?.type === E.DB.EMOJIS_AND_STICKERS ? 490 : 245);
     let ei = Math.max(V, H?.current?.clientHeight ?? 0),
         es = Math.min(0.5 * window.innerHeight, ei);
     el = Math.min(window.innerHeight - 120 - es - (B ?? 0), el);
@@ -246,7 +246,7 @@ let V = i.forwardRef(function (e, t) {
         }),
     });
     return null != X
-        ? (0, l.jsx)($, {
+        ? (0, l.jsx)(J, {
               children: (0, l.jsx)(c.Q, {
                   targetRef: e.targetRef,
                   overrideTargetRect: X,

@@ -13,7 +13,7 @@ var c = n(305003),
     x = n(626584),
     h = n(572009),
     j = n(115093),
-    v = n(825038);
+    v = n(398293);
 let g = new x.A("BalanceCounter"),
     C = (0, h._$)(void 0) === j.B.PRODUCTION;
 function b(e) {
@@ -94,7 +94,7 @@ let k = { earn: { name: "earn", start: 0, duration: 180 }, spend: { name: "spend
     E = { earn: { name: "earn", start: 0, duration: 180 }, spend: { name: "spend", start: 240, duration: 180 } };
 var p = n(462887),
     y = n(736653),
-    S = n(595055);
+    S = n(802814);
 let O = { width: 60, height: 60 };
 function D(e) {
     let { currentAnimationType: t, animationTypeRef: n, onSetAnimationDurationMS: a, play: r, getDuration: s } = e,

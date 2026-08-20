@@ -1,4 +1,4 @@
-i.d(t, { A: () => Y, k: () => X });
+i.d(t, { A: () => Y, k: () => K });
 var n = i(477900),
     l = i(582128),
     s = i(503698),
@@ -16,9 +16,9 @@ var n = i(477900),
     p = i(866323),
     I = i(765178),
     j = i(834730),
-    A = i(821609),
-    v = i(775602),
-    E = i(471771);
+    v = i(821609),
+    A = i(775602),
+    E = i(485038);
 function S(e) {
     let {
             isVisible: t,
@@ -30,7 +30,7 @@ function S(e) {
             a11yAnnounceOnShow: u,
             a11yAnnounceOnHide: g,
         } = e,
-        m = (0, a.bG)([v.Ay], () => v.Ay.useReducedMotion),
+        m = (0, a.bG)([A.Ay], () => A.Ay.useReducedMotion),
         x = l.useRef(null);
     return (
         l.useEffect(
@@ -71,8 +71,8 @@ function S(e) {
                               (0, n.jsxs)("div", {
                                   className: E.o1,
                                   children: [
-                                      (0, n.jsx)(A.$, { variant: "secondary", size: "sm", ...d }),
-                                      (0, n.jsx)(A.$, { variant: "primary", size: "sm", ...o }),
+                                      (0, n.jsx)(v.$, { variant: "secondary", size: "sm", ...d }),
+                                      (0, n.jsx)(v.$, { variant: "primary", size: "sm", ...o }),
                                   ],
                               }),
                           ],
@@ -84,11 +84,11 @@ function S(e) {
 }
 var C = i(570002),
     b = i(202541),
-    T = i(375708);
-function N() {
+    N = i(375708);
+function T() {
     let e = (0, g.YW)(),
         { goBack: t } = (0, g.pA)(),
-        i = (0, C.A)(T.intl.string(T.t.pj0XBN));
+        i = (0, C.A)(N.intl.string(N.t.pj0XBN));
     return (0, n.jsx)(x.A, {
         subscriptionTier: b.pe.TIER_2,
         onSubscribeModalClose: (e) => {
@@ -99,10 +99,10 @@ function N() {
             return (0, n.jsx)(S, {
                 isVisible: e,
                 labelId: "premium-try-it-out-footer-bar-label",
-                noticeText: T.intl.string(T.t.X0ir7L),
-                a11yAnnounceOnShow: T.intl.string(T.t.X0ir7L),
-                a11yAnnounceOnHide: T.intl.string(T.t.ZcyFYa),
-                secondaryAction: { text: T.intl.string(T.t.V3S9WW), onClick: t },
+                noticeText: N.intl.string(N.t.X0ir7L),
+                a11yAnnounceOnShow: N.intl.string(N.t.X0ir7L),
+                a11yAnnounceOnHide: N.intl.string(N.t.ZcyFYa),
+                secondaryAction: { text: N.intl.string(N.t.V3S9WW), onClick: t },
                 primaryAction: { text: i, onClick: s, icon: m.t, variant: "expressive" },
             });
         },
@@ -113,8 +113,8 @@ var w = i(631670),
     k = i(933725),
     R = i(625494),
     O = i(56348),
-    _ = i(207803),
-    L = i(183555),
+    L = i(207803),
+    _ = i(183555),
     P = i(289173),
     D = i(836602),
     G = i(958805),
@@ -125,7 +125,7 @@ var w = i(631670),
     H = i(652215);
 function V(e) {
     let { guildId: t } = e,
-        { trackUserProfileEditSaved: i } = (0, L.NJ)(),
+        { trackUserProfileEditSaved: i } = (0, _.NJ)(),
         [s, r] = l.useState(!1),
         [o, d] = l.useState(!1),
         {
@@ -150,10 +150,10 @@ function V(e) {
             canSubmitProfileChanges: D.A.canSubmit(),
         })),
         j = h && p,
-        A = x || j,
-        v = !(x && !f) && (!h || I),
+        v = x || j,
+        A = !(x && !f) && (!h || I),
         E = l.useCallback(() => {
-            G.A.clearPendingWidgets(), h && (0, _.XQ)();
+            G.A.clearPendingWidgets(), h && (0, L.XQ)();
         }, [h]),
         C = l.useCallback(async () => {
             if (h && !D.A.canSubmit()) return;
@@ -179,8 +179,8 @@ function V(e) {
                         }
                         if (Object.keys(n).length > 0) {
                             let { bannerOriginalMd5: t, ...i } = n,
-                                l = await (0, _.gi)(i, void 0, t);
-                            (e = e && (l?.ok ?? !1)), l?.ok && (0, _.RE)();
+                                l = await (0, L.gi)(i, void 0, t);
+                            (e = e && (l?.ok ?? !1)), l?.ok && (0, L.RE)();
                         }
                     } else {
                         let i = D.A.getPendingChanges(t),
@@ -201,8 +201,8 @@ function V(e) {
                         }
                         if (Object.keys(l).length > 0) {
                             let { bannerOriginalMd5: i, ...n } = l,
-                                s = await (0, _.gi)(n, t, i);
-                            (e = e && (s?.ok ?? !1)), s?.ok && (0, _.RE)();
+                                s = await (0, L.gi)(n, t, i);
+                            (e = e && (s?.ok ?? !1)), s?.ok && (0, L.RE)();
                         }
                     }
                     let i = (0, O.yg)(D.A.getPendingChanges());
@@ -250,34 +250,34 @@ function V(e) {
             );
         }, []),
         (0, n.jsx)(S, {
-            isVisible: A,
+            isVisible: v,
             labelId: "user-profile-save-reset-toolbar-label",
-            noticeText: T.intl.string(T.t["/lQiX/"]),
+            noticeText: N.intl.string(N.t["/lQiX/"]),
             isEmphasized: s,
-            a11yAnnounceOnShow: T.intl.string(T.t["0Y/qkL"]),
-            secondaryAction: { text: T.intl.string(T.t.yBZMsQ), onClick: E, disabled: !A || o },
-            primaryAction: { text: T.intl.string(T.t["R3BPH+"]), onClick: C, loading: o, disabled: !v || !A },
+            a11yAnnounceOnShow: N.intl.string(N.t["0Y/qkL"]),
+            secondaryAction: { text: N.intl.string(N.t.yBZMsQ), onClick: E, disabled: !v || o },
+            primaryAction: { text: N.intl.string(N.t["R3BPH+"]), onClick: C, loading: o, disabled: !A || !v },
         })
     );
 }
 var B = i(485745),
-    z = i(983486);
-function K() {
+    z = i(893757);
+function X() {
     let e = !(0, u.X)("useEditingFooterState"),
         t = (0, o.VU)(),
         i = (0, B.A)(e),
         n = (0, g.YW)();
     return t ? "dnd" : n ? "premium-try-it-out" : i ? "save" : null;
 }
-function X(e) {
+function K(e) {
     let t = (0, a.bG)([c.default], () => c.default.getId() === e),
-        i = K();
+        i = X();
     return t && null != i;
 }
 function Y(e) {
     let { userId: t, guildId: i, className: s } = e,
         o = (0, a.bG)([c.default], () => c.default.getId() === t),
-        u = K(),
+        u = X(),
         [g, m] = l.useState(u);
     return (null != u && g !== u && m(u), o)
         ? (0, n.jsx)("div", {
@@ -286,7 +286,7 @@ function Y(e) {
                   "dnd" === g
                       ? (0, n.jsx)(d.S, { className: z.W })
                       : "premium-try-it-out" === g
-                        ? (0, n.jsx)(N, {})
+                        ? (0, n.jsx)(T, {})
                         : "save" === g
                           ? (0, n.jsx)(V, { guildId: i })
                           : null,

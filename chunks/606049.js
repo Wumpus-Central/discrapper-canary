@@ -11,7 +11,7 @@ var n = i(477900),
     u = i(687966),
     h = i(769015),
     p = i(375708),
-    x = i(509493);
+    x = i(263454);
 function A(e) {
     let { application: t, children: i } = e;
     return (0, n.jsx)(c.u, {
@@ -34,7 +34,7 @@ function j(e) {
     });
 }
 var N = i(943815),
-    M = i(281867);
+    M = i(318626);
 let I = a.memo(function (e) {
         let {
                 children: t,

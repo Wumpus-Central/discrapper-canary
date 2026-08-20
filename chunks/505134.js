@@ -9,7 +9,7 @@ var r = t(477900),
     d = t(235986),
     m = t(30370),
     x = t(936525),
-    u = t(952052);
+    u = t(844768);
 let N = function (a) {
     let { label: e, subLabel: t, icon: n } = a;
     return (0, r.jsxs)("div", {

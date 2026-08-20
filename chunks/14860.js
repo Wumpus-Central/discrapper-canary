@@ -15,7 +15,7 @@ var l = i(477900),
     v = i(469802),
     m = i(643501),
     p = i(375708),
-    j = i(946396);
+    j = i(510920);
 let x = (0, o.k)(function (e) {
     let { width: t = 24, height: i = 24, color: n = "currentColor", foreground: s, ...d } = e;
     return (0, l.jsxs)("svg", {

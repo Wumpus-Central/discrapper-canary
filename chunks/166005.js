@@ -36,7 +36,7 @@ var t = n(477900),
     z = n(465738),
     D = n(652215),
     H = n(375708),
-    O = n(489768);
+    O = n(434367);
 let J = c.A.unsafe_rawColors.PRIMARY_300;
 function W(e) {
     let { role: l, guildId: n, trailing: i, itemRef: r, labelId: o, className: a, style: d } = e,

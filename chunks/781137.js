@@ -1,7 +1,7 @@
 n.d(t, { A: () => r });
 var i = n(477900),
     l = n(996752),
-    a = n(904043),
+    a = n(505252),
     s = n(739549);
 function r(e) {
     let { roomWidth: t } = e,

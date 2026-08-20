@@ -8,7 +8,7 @@ var t = l(477900),
     r = l(145497),
     u = l(534400),
     o = l(743981),
-    h = l(991670);
+    h = l(638855);
 function m(e) {
     let { className: s, guildTag: l, guildBadge: d, guildId: m, guildName: x, guildIcon: g, guildIconSize: f } = e,
         p = a.useRef(null),

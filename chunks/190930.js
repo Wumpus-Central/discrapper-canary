@@ -37,7 +37,7 @@ var a = n(477900),
     F = n(652215),
     H = n(381941),
     O = n(375708),
-    G = n(212781);
+    G = n(868494);
 let V = (e, t) =>
     e.type === E.rD.USER
         ? t || null != v.A.getDMChannelFromUserId(e.record.id)

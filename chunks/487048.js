@@ -12,7 +12,7 @@ var i = n(477900),
     p = n(170865),
     m = n(948822),
     f = n(321486),
-    A = n(660443);
+    A = n(989952);
 let x = 16 / 9;
 function g(e) {
     let { channelId: t, corners: n, roomWidth: a } = e,

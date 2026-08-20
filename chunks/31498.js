@@ -127,7 +127,7 @@ class h extends l.EventEmitter {
                 findCommandOptionAutocompleteType: o,
                 findMatchingAutocompleteType: d,
                 getOptions: h,
-            } = await Promise.all([n.e("130101"), n.e("650839"), n.e("984806")]).then(n.bind(n, 961349));
+            } = await Promise.all([n.e("435751"), n.e("650839"), n.e("984806")]).then(n.bind(n, 961349));
         if (null == this.props.editorRef.current) return;
         let m = h(this.props),
             f = this.props.editorRef.current.getSlateEditor();
@@ -150,23 +150,23 @@ class h extends l.EventEmitter {
             g = m.commands !== u.Ze.DISABLED ? o(this.props.activeCommandOption, this.props.currentWord) : null;
         if (null == p && null != g) p = g;
         else if (null == p || (null != g && p.type !== g.type)) return void this.clearQuery();
-        let { type: x, typeInfo: A, query: E } = p,
-            C = i || (l && (this.state.query?.queryText !== E || this.state.query?.typeInfo !== A)),
+        let { type: x, typeInfo: A, query: C } = p,
+            E = i || (l && (this.state.query?.queryText !== C || this.state.query?.typeInfo !== A)),
             I = a.ML.getSetting();
         m.allowStickers = m.allowStickers ? I : m.allowStickers;
         let y = a.eK.getSetting();
         m.allowSoundmoji = m.allowSoundmoji ? y : m.allowSoundmoji;
-        let { results: S, metadata: v } = A.queryResults(this.props.channel, this.props.guild, E, m, C),
-            _ = 0;
-        for (let e of Object.values(S)) Array.isArray(e) && (_ += e.length);
-        l && E.length > 0 && E !== this.state.query?.queryText && (0, s.AR)(x, m);
-        let N = !0 === S.isLoading,
-            T = this.shouldShow(_, N, A),
+        let { results: v, metadata: S } = A.queryResults(this.props.channel, this.props.guild, C, m, E),
+            N = 0;
+        for (let e of Object.values(v)) Array.isArray(e) && (N += e.length);
+        l && C.length > 0 && C !== this.state.query?.queryText && (0, s.AR)(x, m);
+        let _ = !0 === v.isLoading,
+            T = this.shouldShow(N, _, A),
             j = this.state.selectedIndex;
-        !T || N ? (j = null) : null != j && j >= _ && (j = _ - 1),
-            T && !this.state.isVisible && (0, s.uA)(x, this.props.channel, v),
+        !T || _ ? (j = null) : null != j && j >= N && (j = N - 1),
+            T && !this.state.isVisible && (0, s.uA)(x, this.props.channel, S),
             this.setState({
-                query: { type: x, typeInfo: A, queryText: E, results: S, resultCount: _, options: m, isLoading: N },
+                query: { type: x, typeInfo: A, queryText: C, results: v, resultCount: N, options: m, isLoading: _ },
                 isVisible: T,
                 selectedIndex: j,
                 hadInitialResults: !0,

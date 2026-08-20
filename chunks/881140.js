@@ -1,22 +1,22 @@
-r.d(t, { A: () => c });
-var l = r(477900),
-    n = r(582128),
-    i = r(807081),
-    a = r(9578),
-    s = r(380610),
-    d = r(435954),
-    o = r(123917);
+l.d(t, { A: () => c });
+var r = l(477900),
+    n = l(582128),
+    i = l(807081),
+    a = l(9578),
+    s = l(380610),
+    d = l(435954),
+    o = l(123917);
 function u(e) {
     return null != e.target && (0, o.m)(e.target, null != e.title && "" !== e.title ? e.title : (0, i.$)(e.content));
 }
 function c(e) {
     return {
-        react(t, r, c) {
+        react(t, l, c) {
             if (e.enableBuildOverrides && (0, s.vS)(t.target))
-                return (0, l.jsx)(n.Fragment, { children: (0, l.jsx)(d.A, { url: t.target }, t.target) }, c.key);
-            let v = r(t.content, c),
-                h = "string" == typeof t.title && 0 !== t.title.length ? t.title : (0, i.$)(t.content),
-                C = e?.mustConfirmExternalLink
+                return (0, r.jsx)(n.Fragment, { children: (0, r.jsx)(d.A, { url: t.target }, t.target) }, c.key);
+            let v = l(t.content, c),
+                C = "string" == typeof t.title && 0 !== t.title.length ? t.title : (0, i.$)(t.content),
+                h = e?.mustConfirmExternalLink
                     ? (e) => (
                           e?.stopPropagation(),
                           e?.preventDefault(),
@@ -33,20 +33,20 @@ function c(e) {
                 let e = `
 
 (${t.target})`;
-                h.length + e.length > 1024 && ((e = "..." + e), (h = (h = h.substr(0, 1024 - e.length)).trimEnd())),
-                    (h += e);
+                C.length + e.length > 1024 && ((e = "..." + e), (C = (C = C.substr(0, 1024 - e.length)).trimEnd())),
+                    (C += e);
             }
             return c.noStyleAndInteraction
-                ? (0, l.jsx)("span", { title: h, children: v }, c.key)
-                : (0, l.jsx)(
+                ? (0, r.jsx)("span", { title: C, children: v }, c.key)
+                : (0, r.jsx)(
                       a.A,
                       {
-                          title: h,
+                          title: C,
                           href: t.target,
                           trusted: function () {
                               return u(t);
                           },
-                          onClick: C,
+                          onClick: h,
                           messageId: c.messageId,
                           channelId: c.channelId,
                           children: v,

@@ -1,4 +1,4 @@
-e.exports = {
+_.exports = {
     iE: "wrapper__9ed0b",
     iJ: "innerWrapper__9ed0b",
     OA: "guildInfo__9ed0b",

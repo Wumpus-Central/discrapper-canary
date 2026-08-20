@@ -29,14 +29,14 @@ let A = s.forwardRef(function (e, t) {
             className: r,
             children: g,
             actions: A,
-            handleEditModal: E,
-            keyboardModeEnabled: C,
+            handleEditModal: C,
+            keyboardModeEnabled: E,
             onKeyDown: I,
             draftType: y,
-            size: S = 1,
+            size: v = 1,
         } = e,
-        v = s.useRef(null),
-        { onFocus: _, ...N } = (0, o.rm)(n),
+        S = s.useRef(null),
+        { onFocus: N, ..._ } = (0, o.rm)(n),
         { handleFocus: T, handleBlur: j } = (function (e) {
             let [t, n] = (0, s.useState)(!1);
             return {
@@ -55,28 +55,28 @@ let A = s.forwardRef(function (e, t) {
                 ),
                 isFocused: t,
             };
-        })(_),
-        b = 0 === S,
+        })(N),
+        b = 0 === v,
         R = null != A;
     return (0, i.jsx)(u.vN, {
         children: (0, i.jsx)("li", {
-            ...N,
+            ..._,
             onFocus: T,
             onBlur: j,
             onClick: function (e) {
-                if (0 === e.detail && null != v.current) {
-                    let e = v.current.querySelector('[role="button"], button');
+                if (0 === e.detail && null != S.current) {
+                    let e = S.current.querySelector('[role="button"], button');
                     e?.click();
                 }
             },
             onKeyDown: function (e) {
-                if (C) {
+                if (E) {
                     switch (e.which) {
                         case m.Ks6.D:
                             e.preventDefault(), c.A.remove(l, n, y);
                             return;
                         case m.Ks6.E:
-                            null != E && (e.preventDefault(), E(e));
+                            null != C && (e.preventDefault(), C(e));
                             return;
                         case m.Ks6.BACKSPACE:
                             e.ctrlKey
@@ -94,7 +94,7 @@ let A = s.forwardRef(function (e, t) {
             ref: t,
             children: (0, i.jsxs)("div", {
                 className: p.PO,
-                ref: v,
+                ref: S,
                 children: [
                     g,
                     R

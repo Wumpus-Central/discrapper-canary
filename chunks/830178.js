@@ -1,8 +1,8 @@
-n.d(t, { W: () => l, t: () => o });
+n.d(t, { W: () => a, t: () => o });
 var i = n(477900),
-    r = n(582128),
+    l = n(582128),
     s = n(121894);
-class a {
+class r {
     registeredNodes = new Map();
     visibleComponents = new Set();
     animatingComponents = new Set();
@@ -85,22 +85,22 @@ class a {
         this.observer?.disconnect(), this.registeredNodes.clear(), this.visibleComponents.clear();
     }
 }
-let l = r.createContext({
-    manager: new a(!0),
+let a = l.createContext({
+    manager: new r(!0),
     useThoughtfullyAnimated: () => ({ animate: !0, registerRef: () => {} }),
 });
 function o(e) {
     let { children: t } = e,
-        [n] = r.useState(() => {
-            let e = new a();
+        [n] = l.useState(() => {
+            let e = new r();
             return {
                 manager: e,
                 useThoughtfullyAnimated() {
-                    let t = r.useRef(null),
-                        [n, i] = r.useState(!1);
+                    let t = l.useRef(null),
+                        [n, i] = l.useState(!1);
                     return {
                         animate: n,
-                        registerRef: r.useCallback((n) => {
+                        registerRef: l.useCallback((n) => {
                             null != t.current && e.unregisterNode(t.current),
                                 (t.current = n),
                                 null != t.current && e.registerNode(t.current, i);
@@ -109,5 +109,5 @@ function o(e) {
                 },
             };
         });
-    return r.useEffect(() => () => n.manager.cleanUp(), [n.manager]), (0, i.jsx)(l.Provider, { value: n, children: t });
+    return l.useEffect(() => () => n.manager.cleanUp(), [n.manager]), (0, i.jsx)(a.Provider, { value: n, children: t });
 }

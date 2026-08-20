@@ -17,7 +17,7 @@ var i = n(477900),
     f = n(392054),
     b = n(168186),
     j = n(47167),
-    N = n(174355),
+    N = n(713654),
     E = n(201275),
     C = n(657048),
     v = n(734057),
@@ -29,7 +29,7 @@ var i = n(477900),
     O = n(427262),
     L = n(652215),
     w = n(375708),
-    R = n(487763);
+    R = n(924466);
 function M(e) {
     let { guild: t, id: s, type: a, isLocked: r, lockTooltipText: c } = e,
         d = !r || null != c;

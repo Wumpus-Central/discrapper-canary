@@ -1,38 +1,38 @@
-l.d(t, { t: () => s });
-var n = l(477900);
-l(582128);
-var i = l(661531),
-    r = l(996682),
-    a = l(27989);
-function s(e) {
+t.d(e, { t: () => r });
+var s = t(477900);
+t(582128);
+var a = t(661531),
+    i = t(996682),
+    n = t(27989);
+function r(l) {
     let {
-            size: t = "md",
-            width: l,
-            height: s,
-            color: o = i.A.colors.INTERACTIVE_ICON_DEFAULT,
-            colorClass: c = "",
-            ...d
-        } = e,
-        u = (0, a.J)(t),
-        h = u?.width ?? l,
-        E = u?.height ?? s;
-    return (0, n.jsxs)("svg", {
-        ...(0, r.A)(d),
+            size: e = "md",
+            width: t,
+            height: r,
+            color: c = a.A.colors.INTERACTIVE_ICON_DEFAULT,
+            colorClass: h = "",
+            ...o
+        } = l,
+        d = (0, n.J)(e),
+        v = d?.width ?? t,
+        f = d?.height ?? r;
+    return (0, s.jsxs)("svg", {
+        ...(0, i.A)(o),
         xmlns: "http://www.w3.org/2000/svg",
-        width: h,
-        height: E,
+        width: v,
+        height: f,
         fill: "none",
         viewBox: "0 0 24 24",
         children: [
-            (0, n.jsx)("path", {
-                fill: "string" == typeof o ? o : o.css,
+            (0, s.jsx)("path", {
+                fill: "string" == typeof c ? c : c.css,
                 d: "M3.18 3.12c.49.24.73.79.66 1.32-.27 2 .1 4.32.88 6.18.66 1.56 2.34 2.25 4.03 2.25h.5a6.5 6.5 0 0 1 6.5 6.5c0 .9-.72 1.63-1.62 1.63a.11.11 0 0 1-.1-.09 5.61 5.61 0 0 0-1.05-2.03c-.15-.18-.42-.06-.39.18l.21 1.66c.02.15-.1.28-.25.28h-6.8a2 2 0 0 1-2-2v-.46c0-1.56-.68-3.02-1.4-4.4C1.07 11.7.64 8.34 1.33 4.57c.01-.08.03-.16.06-.23l.2-.56c.22-.66.97-.97 1.6-.66ZM17.76 10.97c1.82.13 3.88 1.75 4.73 3.9.34.89.47 1.71.5 2.38.06.93-.76 1.58-1.69 1.57l-2.62-.03a1.1 1.1 0 0 1-1.04-.94 8.39 8.39 0 0 0-2.98-5.09c-.42-.34-.47-1 .02-1.26a5.6 5.6 0 0 1 3.08-.53Z",
-                className: c,
+                className: h,
             }),
-            (0, n.jsx)("path", {
-                fill: "string" == typeof o ? o : o.css,
+            (0, s.jsx)("path", {
+                fill: "string" == typeof c ? c : c.css,
                 d: "M8.7 4.87a3.2 3.2 0 1 1 0 6.4 3.2 3.2 0 0 1 0-6.4ZM17.7 3.66a2.93 2.93 0 1 1 0 5.85 2.93 2.93 0 0 1 0-5.85Z",
-                className: c,
+                className: h,
             }),
         ],
     });

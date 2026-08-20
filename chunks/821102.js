@@ -34,8 +34,8 @@ let u = "webm",
     g = [],
     f = [],
     I = [],
-    E = [];
-function R(e) {
+    R = [];
+function E(e) {
     return e.replace(/^https?:/, "");
 }
 function _(e) {
@@ -69,7 +69,7 @@ class y extends n.Ay.Store {
         return I;
     }
     getTrendingSearchTerms() {
-        return E;
+        return R;
     }
 }
 let S = new y(l.h, {
@@ -84,7 +84,7 @@ let S = new y(l.h, {
         null != e.query && (p = e.query),
             (g = e.items.map((e) => {
                 let { width: t, height: r, src: n, gif_src: s, url: l, id: i } = e;
-                return { width: t, height: r, src: R(n), gifSrc: R(s), url: l, id: i, format: d };
+                return { width: t, height: r, src: E(n), gifSrc: E(s), url: l, id: i, format: d };
             }));
     },
     GIF_PICKER_QUERY_FAILURE: function (e) {
@@ -100,12 +100,12 @@ let S = new y(l.h, {
                       {
                           type: a.dD.TRENDING_GIFS,
                           name: o.intl.string(o.t.H6zNFz),
-                          src: R(e.trendingGIFPreview.src),
+                          src: E(e.trendingGIFPreview.src),
                           format: _(e.trendingGIFPreview.src),
                       },
                   ]
                 : []),
-            ...t.map((e) => ({ ...e, src: R(e.src), type: a.dD.TRENDING_CATEGORY, format: _(e.src) })),
+            ...t.map((e) => ({ ...e, src: E(e.src), type: a.dD.TRENDING_CATEGORY, format: _(e.src) })),
         ];
     },
     GIF_PICKER_SUGGESTIONS_SUCCESS: function (e) {
@@ -114,6 +114,6 @@ let S = new y(l.h, {
     },
     GIF_PICKER_TRENDING_SEARCH_TERMS_SUCCESS: function (e) {
         let { items: t } = e;
-        E = t;
+        R = t;
     },
 });

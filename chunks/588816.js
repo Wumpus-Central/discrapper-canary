@@ -10,7 +10,7 @@ var i,
     o = d(70175),
     u = d(241614),
     h = d(331082),
-    W = d(217870),
+    W = d(995489),
     G = d(987683),
     p = d(75970),
     N = d(844887),
@@ -346,7 +346,7 @@ function w(l) {
                                                                       d.e("228368"),
                                                                       d.e("168146"),
                                                                   ])
-                                                                      .then(d.bind(d, 201110))
+                                                                      .then(d.bind(d, 978729))
                                                                       .then((l) => l.qeSignatureMachine)
                                                             : "CROSS_DOCUMENT_DATA_MATCH" === l
                                                               ? () =>
@@ -473,7 +473,7 @@ var R = {
             .then(d.bind(d, 44586))
             .then((l) => l.IdOcr),
     CPF_OCR: () =>
-        Promise.all([d.e("934377"), d.e("902314"), d.e("983357")])
+        Promise.all([d.e("934377"), d.e("902314"), d.e("205738")])
             .then(d.bind(d, 227057))
             .then((l) => l.CpfOcr),
     ANTIFRAUD: () =>

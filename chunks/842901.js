@@ -1,7 +1,7 @@
 n.d(t, { E: () => s, T: () => a }), n(801541);
 var i = n(889137),
     l = n(744593),
-    r = n(867282);
+    r = n(191567);
 function s(e, t) {
     let n = (0, i.YW)(t)
         .with(l.Z.IMAGE_ONLY_ANSWERS, () => r.EK)

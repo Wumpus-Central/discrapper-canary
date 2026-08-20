@@ -19,7 +19,7 @@ var i = n(477900),
     y = n(781137),
     j = n(1195),
     I = n(375708),
-    v = n(904043);
+    v = n(505252);
 function N(e) {
     let { channelId: t, note: n, roomWidth: N } = e,
         [E, b] = (0, l.useState)(!1),

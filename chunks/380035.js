@@ -11,7 +11,7 @@ var e = n(477900),
     x = n(384377),
     E = n(518477),
     h = n(375708),
-    p = n(732208);
+    p = n(511177);
 function g(t) {
     let { widget: i, user: n } = t;
     return (0, e.jsx)(u.u, { widget: i, user: n, allowEditing: !1, disableInteraction: !0 });

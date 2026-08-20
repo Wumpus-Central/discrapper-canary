@@ -25,7 +25,7 @@ var i = n(477900),
     g = n(976019),
     S = n(190107),
     G = n(375708),
-    U = n(787032);
+    U = n(189955);
 function m(t) {
     let { quest: e, sourceQuestContent: n } = t,
         { hasAlreadyLinked: C, canStartAuthorization: l, startAuthorization: m, fetched: k } = (0, O.U)(e),

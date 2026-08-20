@@ -34,7 +34,7 @@ var i = n(477900),
     w = n(806931),
     D = n(375708),
     U = n(1195),
-    V = n(622073);
+    V = n(547368);
 function k(e) {
     let { channelId: t, guildId: n } = e,
         l = (0, r.yK)([L.A, O.A], () => {
@@ -107,7 +107,7 @@ function G(e) {
                         label: D.intl.string(D.t["ZrN+DT"]),
                         onClick: () => {
                             (0, d.openModalLazy)(async () => {
-                                let { default: e } = await Promise.all([n.e("635454"), n.e("244605")]).then(
+                                let { default: e } = await Promise.all([n.e("768581"), n.e("244605")]).then(
                                     n.bind(n, 77580),
                                 );
                                 return (n) => (0, i.jsx)(e, { ...n, channelId: t.id });

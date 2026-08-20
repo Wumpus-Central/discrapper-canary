@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Ay: () => O, LF: () => R });
+n.d(t, { Ay: () => M, LF: () => R });
 var l = n(477900),
     i = n(582128),
     s = n(503698),
@@ -16,18 +16,18 @@ var l = n(477900),
     g = n(102597),
     x = n(904054),
     A = n(584014),
-    E = n(885386),
-    C = n(174459),
+    C = n(885386),
+    E = n(174459),
     I = n(652215);
 function y(e, t) {
     let { isPlaying: n, playSound: l } = (0, A.A)(null != e ? (0, g.A)(e.soundId) : null);
     return {
         isPlaying: n,
         playSound: i.useCallback(async () => {
-            let n = (0, x.A)(e?.volume ?? 1, E.HO.getSetting());
+            let n = (0, x.A)(e?.volume ?? 1, C.HO.getSetting());
             return (
                 !!(await l({ volume: n })) &&
-                (C.default.track(I.HAw.SOUNDMOJI_PLAY, {
+                (E.default.track(I.HAw.SOUNDMOJI_PLAY, {
                     guild_id: t?.guild_id,
                     channel_id: t?.id,
                     sound_guild_id: e?.guildId,
@@ -38,12 +38,12 @@ function y(e, t) {
         }, [t?.guild_id, t?.id, l, e?.guildId, e?.soundId, e?.volume]),
     };
 }
-var S = n(209932),
-    v = n(807348),
-    _ = n(805945),
-    N = n(734057),
+var v = n(209932),
+    S = n(807348),
+    N = n(805945),
+    _ = n(734057),
     T = n(375708),
-    j = n(514169);
+    j = n(701144);
 function b(e) {
     let { playSound: t } = e;
     return (0, l.jsxs)(o.D, {
@@ -59,16 +59,16 @@ function b(e) {
 }
 function R(e) {
     let { soundId: t } = e,
-        n = (0, a.bG)([S.A], () => S.A.getSoundById(t)),
+        n = (0, a.bG)([v.A], () => v.A.getSoundById(t)),
         i = (0, m.tj)({ location: "SoundboardMentionInline" }),
         { isPlaying: s, playSound: r } = y(n);
     return i
         ? null == n
             ? (0, l.jsx)(b, {})
-            : (0, l.jsx)(L, { className: j.wg, isPlaying: s, playSound: r, sound: n })
+            : (0, l.jsx)(O, { className: j.wg, isPlaying: s, playSound: r, sound: n })
         : null;
 }
-function L(e) {
+function O(e) {
     let { className: t, sound: n, playSound: i, isPlaying: s } = e,
         a = n?.emojiId != null || n?.emojiName != null,
         u = T.intl.formatToPlainString(T.t.tuMUJ2, { emojiName: n?.emojiName, soundName: n?.name });
@@ -85,15 +85,15 @@ function L(e) {
           })
         : null;
 }
-let O = function (e) {
+let M = function (e) {
     let { channelId: t, messageId: n, soundId: s, messageSounds: r, jumbo: o = !1 } = e,
-        u = E.hH.useSetting(),
-        d = (0, a.bG)([S.A], () => S.A.getSoundById(s), [s]),
+        u = C.hH.useSetting(),
+        d = (0, a.bG)([v.A], () => v.A.getSoundById(s), [s]),
         m = i.useMemo(() => (0, f.A)(t, n, s, r) ?? d, [t, n, s, r, d]),
-        g = (0, a.bG)([N.A], () => N.A.getChannel(t)),
+        g = (0, a.bG)([_.A], () => _.A.getChannel(t)),
         x = (0, h.X)({ location: "SoundboardMention" }),
         A = i.useRef(null),
-        { isPlaying: C, playSound: I } = y(m, g),
+        { isPlaying: E, playSound: I } = y(m, g),
         T = i.useCallback(async () => {
             (await I()) && A.current?.addAnimation();
         }, [I]);
@@ -102,16 +102,16 @@ let O = function (e) {
             ? (0, l.jsx)(b, { playSound: T })
             : o && !u
               ? (0, l.jsx)(
-                    _.Ay,
+                    N.Ay,
                     {
                         containerClassName: j.Ti,
                         className: j.UX,
                         sound: m,
                         channel: g,
                         onSelectItem: T,
-                        isPlayingSoundOverride: C,
+                        isPlayingSoundOverride: E,
                         isSoundmoji: !0,
-                        buttonOverlay: v.If.SOUNDMOJI,
+                        buttonOverlay: S.If.SOUNDMOJI,
                         tooltipClassName: j.YL,
                         tooltipContentClassName: j.R3,
                         tooltipOverride: (0, l.jsx)(p.WE, { sound: m }),
@@ -125,7 +125,7 @@ let O = function (e) {
                     __unsupportedReactNodeAsText: (0, l.jsx)(p.WE, { sound: m }),
                     position: "top",
                     delay: 500,
-                    children: (0, l.jsx)("span", { children: (0, l.jsx)(L, { sound: m, playSound: T, isPlaying: C }) }),
+                    children: (0, l.jsx)("span", { children: (0, l.jsx)(O, { sound: m, playSound: T, isPlaying: E }) }),
                 })
         : null;
 };

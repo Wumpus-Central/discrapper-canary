@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => L });
+n.d(t, { A: () => O });
 var l = n(477900),
     i = n(582128),
     s = n(503698),
@@ -16,14 +16,14 @@ var l = n(477900),
     g = n(287809),
     x = n(158045),
     A = n(192308),
-    E = n(939249),
-    C = n(404374),
+    C = n(939249),
+    E = n(404374),
     I = n(734057),
     y = n(309010),
-    S = n(174459),
-    v = n(652215),
-    _ = n(375708),
-    N = n(820051);
+    v = n(174459),
+    S = n(652215),
+    N = n(375708),
+    _ = n(845210);
 function T() {
     (0, A.openModalLazy)(async () => {
         let { default: e } = await Promise.all([n.e("235257"), n.e("66920")]).then(n.bind(n, 220763));
@@ -34,64 +34,64 @@ function j(e) {
     let { className: t, iconOnly: n } = e,
         s = (0, o.bG)([y.Ay, I.A], () => {
             let e = I.A.getChannel(y.Ay.getChannelId());
-            return e?.isPrivate() ? v.liQ.DM_CHANNEL : v.liQ.GUILD_CHANNEL;
+            return e?.isPrivate() ? S.liQ.DM_CHANNEL : S.liQ.GUILD_CHANNEL;
         }),
         { analyticsLocations: a } = (0, f.Ay)(m.A.PREMIUM_UPSELL);
     return (
         i.useEffect(() => {
-            S.default.track(v.HAw.PREMIUM_UPSELL_VIEWED, {
+            v.default.track(S.HAw.PREMIUM_UPSELL_VIEWED, {
                 type: "longer messages inline",
-                location: { location_page: s, location_section: v.JJy.CHANNEL_TEXT_AREA },
+                location: { location_page: s, location_section: S.JJy.CHANNEL_TEXT_AREA },
                 location_stack: a,
             });
         }, [s, a]),
         n
-            ? (0, l.jsx)(E.D, {
-                  className: N.e7,
+            ? (0, l.jsx)(C.D, {
+                  className: _.e7,
                   onClick: () => T(),
                   children: (0, l.jsx)(u.m, {
-                      text: _.intl.string(_.t["+eFIjX"]),
+                      text: N.intl.string(N.t["+eFIjX"]),
                       position: "top",
-                      children: (0, l.jsx)(c.t, { size: "md", color: "currentColor", className: N.M2 }),
+                      children: (0, l.jsx)(c.t, { size: "md", color: "currentColor", className: _.M2 }),
                   }),
               })
             : (0, l.jsxs)("div", {
-                  className: r()(N.zr, t),
+                  className: r()(_.zr, t),
                   children: [
-                      (0, l.jsx)(c.t, { size: "md", className: N.M2, color: C.k0.PREMIUM_TIER_2 }),
+                      (0, l.jsx)(c.t, { size: "md", className: _.M2, color: E.k0.PREMIUM_TIER_2 }),
                       (0, l.jsx)(d.E, {
-                          className: N.Qq,
+                          className: _.Qq,
                           variant: "text-sm/normal",
-                          children: _.intl.format(_.t.BNAIBU, { onLearnMore: T }),
+                          children: N.intl.format(N.t.BNAIBU, { onLearnMore: T }),
                       }),
                   ],
               })
     );
 }
 var b = n(263582),
-    R = n(835547);
-function L(e) {
+    R = n(412028);
+function O(e) {
     let { type: t, textValue: n, maxCharacterCount: i, showRemainingCharsAfterCount: s, className: A } = e,
-        E = (0, o.bG)([g.default], () => x.Ay.canUseIncreasedMessageLength(g.default.getCurrentUser())),
-        C = (0, p.A)(),
-        I = i ?? C,
-        y = s ?? i ?? C / 10,
-        S = n.length,
-        N = null != t.upsellLongMessages && (S ?? 0) > v.uvi && E,
-        T = null != t.upsellLongMessages && !E,
-        L = I - S,
-        O = L > y;
-    (0, a.$)({ currentLength: S, maxLength: I, message: _.intl.string(_.t.c2Jqed) });
-    let M =
-            0 === L
-                ? _.intl.string(_.t.tU6YQ7)
-                : L > 0
-                  ? _.intl.formatToPlainString(_.t.qH8uFW, { count: L })
-                  : _.intl.string(_.t.YSRIqa),
+        C = (0, o.bG)([g.default], () => x.Ay.canUseIncreasedMessageLength(g.default.getCurrentUser())),
+        E = (0, p.A)(),
+        I = i ?? E,
+        y = s ?? i ?? E / 10,
+        v = n.length,
+        _ = null != t.upsellLongMessages && (v ?? 0) > S.uvi && C,
+        T = null != t.upsellLongMessages && !C,
+        O = I - v,
+        M = O > y;
+    (0, a.$)({ currentLength: v, maxLength: I, message: N.intl.string(N.t.c2Jqed) });
+    let L =
+            0 === O
+                ? N.intl.string(N.t.tU6YQ7)
+                : O > 0
+                  ? N.intl.formatToPlainString(N.t.qH8uFW, { count: O })
+                  : N.intl.string(N.t.YSRIqa),
         { analyticsLocations: w } = (0, f.Ay)(m.A.CHARACTER_COUNT),
         { isVisible: k } = (0, b.A)({ type: t, textValue: n, maxCharacterCount: i, showRemainingCharsAfterCount: s });
     if (!k) return null;
-    let P = L >= 0;
+    let P = O >= 0;
     return (0, l.jsx)(f.f5, {
         value: w,
         children: (0, l.jsxs)("div", {
@@ -100,31 +100,31 @@ function L(e) {
                 (0, l.jsxs)("div", {
                     className: R.SW,
                     children: [
-                        N && P
+                        _ && P
                             ? (0, l.jsx)(u.m, {
-                                  text: _.intl.formatToPlainString(_.t.vcvHa0, { maxLength: I }),
+                                  text: N.intl.formatToPlainString(N.t.vcvHa0, { maxLength: I }),
                                   position: "top",
                                   children: (0, l.jsx)(c.t, { size: "md", color: "currentColor", className: R.y }),
                               })
                             : null,
-                        O
+                        M
                             ? null
                             : (0, l.jsx)(u.m, {
-                                  text: M,
+                                  text: L,
                                   position: "top",
                                   children: (0, l.jsx)(d.E, {
                                       variant: "text-sm/semibold",
                                       tabularNumbers: !0,
                                       "aria-hidden": !0,
                                       color: P ? "text-default" : "text-feedback-critical",
-                                      children: L,
+                                      children: O,
                                   }),
                               }),
                     ],
                 }),
-                (0, l.jsx)(h.A, { "aria-live": "polite", children: _.intl.format(_.t.qH8uFW, { count: L }) }),
-                T && !O
-                    ? (0, l.jsx)(j, { className: R.UX, iconOnly: t.upsellLongMessages?.iconOnly || !1, remaining: L })
+                (0, l.jsx)(h.A, { "aria-live": "polite", children: N.intl.format(N.t.qH8uFW, { count: O }) }),
+                T && !M
+                    ? (0, l.jsx)(j, { className: R.UX, iconOnly: t.upsellLongMessages?.iconOnly || !1, remaining: O })
                     : null,
             ],
         }),

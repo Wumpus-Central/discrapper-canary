@@ -1,4 +1,4 @@
-t.d(n, { A: () => i });
-function i(e) {
-    return null == e.serverIP || null == e.port ? null : `${e.serverIP}:${e.port}`;
+s.d(p, { A: () => u });
+function u(r) {
+    return null == r.serverIP || null == r.port ? null : `${r.serverIP}:${r.port}`;
 }

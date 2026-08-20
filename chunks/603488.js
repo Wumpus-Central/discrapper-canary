@@ -8,7 +8,7 @@ var o = i(503698),
     a = i(834730),
     c = i(826673),
     u = i(375708),
-    d = i(665095);
+    d = i(328368);
 function p() {
     return (0, c.k8)(l.M.BOGO_2025_NITRO_TAB_BADGE)
         ? (0, r.jsxs)("div", {

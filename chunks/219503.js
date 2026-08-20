@@ -40,7 +40,7 @@ function T() {
     if (null == e) throw Error("useSafetyFlowTask must be used within a SafetyFlowTaskContext Provider");
     return e;
 }
-var _ = n(837451),
+var _ = n(525227),
     I = n(375708),
     j =
         (((i = {})[(i.REFRESH_APP = -1)] = "REFRESH_APP"),
@@ -75,7 +75,7 @@ var M = (((l = {}).Empty = "empty"), (l.VerificationCode = "verification_code"),
     D = n(503698),
     U = n.n(D),
     G = n(825484),
-    F = n(166765);
+    F = n(745848);
 function V(e) {
     let { actions: t, footerInput: n, actionsFullWidth: i = !1, showDivider: l = !1 } = e;
     return 0 === t.length && null == n
@@ -94,7 +94,7 @@ function V(e) {
           });
 }
 let H = { bottom: 40, left: 32, right: 32, top: 32 };
-var B = n(553107);
+var B = n(588900);
 function W(e) {
     let { children: t, actions: n, footerInput: i, title: l, variant: s = "default" } = e,
         r = "app_store_lockdown" === s;
@@ -125,7 +125,7 @@ var Z = n(509434),
     en = n(453322),
     ei = n(834981),
     el = n(22071),
-    ea = n(717606);
+    ea = n(196359);
 function es() {
     return (0, a.jsx)(c.E, {
         variant: "text-md/normal",
@@ -154,8 +154,8 @@ let eg = () => ({
     days: _.default.tVHevX,
     date: _.default.q6jzya,
 });
-var ef = n(602339),
-    eA = n(846112);
+var ef = n(670595),
+    eA = n(838131);
 function ex(e) {
     var t;
     let {
@@ -362,9 +362,9 @@ function ev(e) {
 }
 var eC = n(231723),
     eE = n(818348),
-    eT = n(850772);
+    eT = n(703687);
 let e_ = "https://support.discord.com/hc/articles/14155060633623";
-var eI = n(117315);
+var eI = n(846330);
 let ej = {
         refresh_app: (e) => {
             let { onSubmit: t, disabled: n } = e,
@@ -631,7 +631,7 @@ let ej = {
               });
     };
 var eS = n(754302),
-    ey = n(260732);
+    ey = n(700265);
 let eb = {
         [j.EMAIL_VERIFICATION]: I.intl.string(_.default.HC4IiR),
         [j.REFRESH_APP]: I.intl.string(_.default.SzfxQ3),
@@ -690,7 +690,7 @@ let eb = {
             ],
         });
     };
-var eR = n(932084);
+var eR = n(450165);
 let eO = n(843020);
 function ew(e) {
     let { task: t, handleSubmit: n, disabled: i, transitionState: l } = e,

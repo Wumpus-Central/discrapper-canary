@@ -5,7 +5,7 @@ var l = n(477900),
     s = n(503698),
     r = n.n(s),
     a = n(900002),
-    o = n(380181);
+    o = n(113278);
 function u(e) {
     let { children: t, "aria-label": n, className: s, position: u, delay: c, lineClamp: d = 1, ...h } = e,
         m = i.useRef(null),

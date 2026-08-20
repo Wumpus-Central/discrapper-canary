@@ -38,7 +38,7 @@ var d = n(17928),
     Z = n(966327),
     y = n(287809),
     z = n(375708),
-    B = n(788786);
+    B = n(575721);
 function L(e) {
     let { color: i, className: n } = e;
     return (0, s.jsx)("svg", {

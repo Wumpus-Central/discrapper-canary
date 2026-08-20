@@ -1,4 +1,4 @@
-e.exports = {
+_.exports = {
     nd: "panel__6131a",
     XG: "scroller__6131a",
     iS: "bottomMarker__6131a",

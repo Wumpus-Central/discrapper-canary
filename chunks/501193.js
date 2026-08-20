@@ -2,7 +2,7 @@ n.d(t, { A: () => a });
 var i = n(477900),
     l = n(834730),
     r = n(375708),
-    s = n(792010);
+    s = n(827587);
 function a(e) {
     let { username: t } = e;
     return (0, i.jsx)("div", {

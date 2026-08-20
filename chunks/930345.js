@@ -19,7 +19,7 @@ var l = n(477900),
     k = n(569944),
     j = n(721228),
     I = n(375708),
-    p = n(689466);
+    p = n(559357);
 function L(e) {
     let { transitionState: t, onClose: n, guildId: i, welcomeMessage: L, onSave: S } = e,
         [E, H] = s.useState({ ...L }),

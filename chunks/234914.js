@@ -4,7 +4,7 @@ var r = n(477900),
     i = n(503698),
     o = n.n(i),
     u = n(289873),
-    s = n(844675);
+    s = n(922278);
 function a(e) {
     let { alt: t, ...n } = e,
         [i, o] = l.useState(!0);

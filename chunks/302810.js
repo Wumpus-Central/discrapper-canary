@@ -9,7 +9,7 @@ var s = i(477900),
     o = i(71532),
     u = i(652215),
     p = i(375708),
-    d = i(930281);
+    d = i(142374);
 class g extends n.Component {
     state = { step: 0, isAwaitingAuthentication: !1 };
     componentDidMount() {

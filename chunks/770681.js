@@ -1,6 +1,6 @@
 n.d(t, { A: () => r });
 var i = n(477900),
-    l = n(351302);
+    l = n(676091);
 function r(e) {
     let { children: t, actions: n } = e;
     return (0, i.jsx)("div", {

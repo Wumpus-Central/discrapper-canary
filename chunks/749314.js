@@ -20,7 +20,7 @@ function c(s) {
     });
 }
 var d = n(375708),
-    u = n(917849);
+    u = n(682172);
 let h = l.forwardRef(function (s, e) {
     let { className: n, contentClassName: l, isUnread: a, children: i, ...h } = s;
     return (0, r.jsxs)("div", {

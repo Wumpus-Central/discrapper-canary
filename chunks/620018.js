@@ -27,7 +27,7 @@ var l = n(477900),
     S = n(103355),
     j = n(988794),
     N = n(375708),
-    G = n(176243);
+    G = n(214040);
 function T(t) {
     let { recurrenceId: e, originalScheduledStartTime: i, guildEventId: r, onClick: a, isActive: u } = t,
         c = (0, g.bG)([f.Ay], () => f.Ay.getGuildScheduledEvent(r)),
@@ -104,7 +104,7 @@ function T(t) {
         ],
     });
 }
-var w = n(540538);
+var w = n(889303);
 function L(t) {
     let {
             guildId: e,

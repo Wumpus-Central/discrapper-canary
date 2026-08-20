@@ -25,7 +25,7 @@ var i = n(477900),
     b = n(189998),
     _ = n(1195),
     T = n(375708),
-    R = n(886943);
+    R = n(923932);
 function S(e) {
     let { channelId: t, popoutType: n, idle: a } = e,
         S = (0, u.bG)([A.A], () => A.A.getRoom(t)?.background ?? d.I.DEFAULT),

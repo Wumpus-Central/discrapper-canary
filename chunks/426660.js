@@ -3,7 +3,7 @@ var r = s(477900);
 s(582128);
 var t = s(440166),
     l = s(19575),
-    n = s(235963);
+    n = s(105100);
 let a = l.Ay.getEnableHardwareAcceleration();
 function o() {
     return (0, r.jsxs)("svg", {

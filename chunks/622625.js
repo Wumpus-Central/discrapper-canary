@@ -1,4 +1,4 @@
-d.exports = {
+e.exports = {
     n2: "guildBadge_d69818",
     Z2: "appIcon_d69818",
     q6: "appIconSize_d69818",

@@ -12,7 +12,7 @@ var l = n(477900),
     h = n(450149),
     m = n(652215),
     f = n(375708),
-    p = n(450202);
+    p = n(142893);
 function g(e) {
     let { isLoading: t, noText: n, noImage: i, previewText: s, className: a } = e;
     return (0, l.jsx)("div", {
@@ -39,12 +39,12 @@ function x(e) {
         o = (0, a.bG)([c.A], () => c.A.getBasicChannel(t.channelId)),
         u = (0, a.bG)([d.A], () => null != o && d.A.canBasicChannel(m.hVb.CONNECT, o)),
         { previewUrl: x, isLoading: A } = (0, h.A)(t.guildId, t.channelId, t.ownerId),
-        E = i.useRef(A ? null : x);
+        C = i.useRef(A ? null : x);
     i.useEffect(() => {
-        A || (E.current = x);
+        A || (C.current = x);
     }, [x, A]);
-    let C = null == x || A ? E.current : x;
-    return null == C
+    let E = null == x || A ? C.current : x;
+    return null == E
         ? (0, l.jsx)(g, {
               className: n,
               isLoading: A,
@@ -54,6 +54,6 @@ function x(e) {
           })
         : (0, l.jsx)("div", {
               className: n,
-              children: (0, l.jsx)("img", { src: C, alt: "", className: p.Sl, draggable: !1 }),
+              children: (0, l.jsx)("img", { src: E, alt: "", className: p.Sl, draggable: !1 }),
           });
 }
