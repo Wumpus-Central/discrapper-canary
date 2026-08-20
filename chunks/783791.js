@@ -15,7 +15,7 @@ var i = n(17928),
     h = n(972786),
     I = n(652215),
     f = n(746080),
-    p = n(818085),
+    p = n(295813),
     T = n(375708);
 let m = "bit_message1",
     g = new Set(["reply", "plan_proposed", "terminal_error"]);
@@ -108,7 +108,7 @@ function x(e) {
 function k(e) {
     let t = N.get(e);
     if (null == t) return null;
-    for (let e = t.length - 1; e >= 0; e--) if ("assistant" === t[e].role) return t[e];
+    for (let e = t.length - 1; e >= 0; e--) if ("assistant" === t[e].role && "side_reply" !== t[e].kind) return t[e];
     return null;
 }
 function F(e) {
@@ -270,6 +270,17 @@ let H = new B(r.h, {
         if (-1 === o || o > s) return l !== a && void N.set(t, l);
         N.set(t, [...l.slice(0, o), { ...l[o], continued: !0 }, ...l.slice(o + 1), P("assistant", "", { turnId: i })]),
             F(t);
+    },
+    VIBEGRATIONS_CHAT_SIDE_REPLY: function (e) {
+        let { projectId: t, id: n, inReplyTo: i, content: r, timestamp: a } = e,
+            s = N.get(t);
+        if (null == s || s.some((e) => e.id === n)) return !1;
+        let l = P("assistant", r, { ts: a, id: n });
+        l.kind = "side_reply";
+        let o = s.findIndex((e) => e.id === i);
+        if (-1 === o) return void N.set(t, [...s, l]);
+        let { disposition: d, ...c } = s[o];
+        N.set(t, [...s.slice(0, o), c, l, ...s.slice(o + 1)]);
     },
     VIBEGRATIONS_CHAT_STEP_APPEND: function (e) {
         let { projectId: t, step: n, turnId: i } = e;

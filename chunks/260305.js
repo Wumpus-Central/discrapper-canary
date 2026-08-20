@@ -53,8 +53,8 @@ function T(e) {
 }
 var R = n(295813),
     P = n(375708),
-    M = n(963691);
-function O(e) {
+    O = n(963691);
+function M(e) {
     let { applicationId: t, surface: n } = e,
         { frame: l, state: s } = (function (e) {
             let { applicationId: t, surface: n } = e,
@@ -136,10 +136,10 @@ function O(e) {
         s)
     ) {
         case w.Launched:
-            return (0, a.jsx)(v.A, { frameId: l.id, level: x.A.WithinAppContent, className: M.Z7 });
+            return (0, a.jsx)(v.A, { frameId: l.id, level: x.A.WithinAppContent, className: O.Z7 });
         case w.RenderingElsewhere:
             return (0, a.jsx)("div", {
-                className: M.qs,
+                className: O.qs,
                 children: (0, a.jsx)(T, {
                     title: P.intl.string(R.default["4f6Vkr"]),
                     body: P.intl.string(R.default.LJ2q1H),
@@ -147,7 +147,7 @@ function O(e) {
             });
         case w.NoApplication:
             return (0, a.jsxs)("div", {
-                className: M.qs,
+                className: O.qs,
                 children: [
                     (0, a.jsx)(u.k, { size: "custom", width: 32, height: 32, color: "var(--icon-muted)" }),
                     (0, a.jsx)(h.E, {
@@ -159,7 +159,7 @@ function O(e) {
             });
         case w.DoesNotSupportSurface:
             return (0, a.jsx)("div", {
-                className: M.qs,
+                className: O.qs,
                 children: (0, a.jsx)(T, {
                     title: P.intl.string(R.default.FHOJiH),
                     body: P.intl.string(R.default["1yLQoV"]),
@@ -167,7 +167,7 @@ function O(e) {
             });
         case w.Error:
             return (0, a.jsxs)("div", {
-                className: M.qs,
+                className: O.qs,
                 children: [
                     (0, a.jsx)(p.D, {
                         variant: "heading-md/semibold",
@@ -177,14 +177,14 @@ function O(e) {
                     (0, a.jsx)(h.E, {
                         variant: "text-sm/normal",
                         color: "text-feedback-critical",
-                        className: M.tj,
+                        className: O.tj,
                         children: P.intl.string(R.default["1RCbQT"]),
                     }),
                 ],
             });
         case w.AwaitingLaunch:
         case w.Loading:
-            return (0, a.jsx)("div", { className: M.qs, children: (0, a.jsx)(c.y, {}) });
+            return (0, a.jsx)("div", { className: O.qs, children: (0, a.jsx)(c.y, {}) });
     }
 }
 var L = n(976102);
@@ -214,7 +214,7 @@ function G(e) {
             })
           : l
             ? null != t
-                ? (0, a.jsx)(O, { applicationId: t, surface: n })
+                ? (0, a.jsx)(M, { applicationId: t, surface: n })
                 : null
             : (0, a.jsxs)("div", {
                   className: L.q,
@@ -436,9 +436,9 @@ function eh(e) {
             },
             [A, w],
         ),
-        M = p.every((e) => "ready" === e.status),
-        O = "" !== h.trim() || p.length > 0,
-        L = t && O && M,
+        O = p.every((e) => "ready" === e.status),
+        M = "" !== h.trim() || p.length > 0,
+        L = t && M && O,
         G = i.useCallback(() => {
             if (!L) return;
             let e = _.current.filter((e) => null != e.ref).map((e) => e.ref);
@@ -1011,7 +1011,7 @@ function eR(e) {
           });
 }
 var eP = n(824757);
-function eM(e) {
+function eO(e) {
     let { label: t, names: n } = e;
     return 0 === n.length
         ? null
@@ -1043,7 +1043,7 @@ function eM(e) {
               ],
           });
 }
-function eO(e) {
+function eM(e) {
     let { proposal: t, onApprove: n } = e;
     return (0, a.jsxs)("article", {
         className: eP.cz,
@@ -1154,8 +1154,8 @@ function eO(e) {
                       ],
                   })
                 : null,
-            (0, a.jsx)(eM, { label: P.intl.string(R.default.ieqTtP), names: t.bot_permissions ?? [] }),
-            (0, a.jsx)(eM, { label: P.intl.string(R.default.Cn9qix), names: t.privileged_intents ?? [] }),
+            (0, a.jsx)(eO, { label: P.intl.string(R.default.ieqTtP), names: t.bot_permissions ?? [] }),
+            (0, a.jsx)(eO, { label: P.intl.string(R.default.Cn9qix), names: t.privileged_intents ?? [] }),
             null != n
                 ? (0, a.jsxs)("div", {
                       className: eP.nc,
@@ -1741,8 +1741,9 @@ function e6(e) {
             offerIdeas: k,
             onAskForIdeas: j,
             inheritedActivity: y,
+            sideReply: _ = !1,
         } = e,
-        { items: _ } = i.useMemo(
+        { items: N } = i.useMemo(
             () =>
                 (function (e) {
                     let t,
@@ -1902,13 +1903,13 @@ function e6(e) {
                 })(n, { turnActive: d, inheritedSummary: y }),
             [n, d, y],
         ),
-        N = _.some((e) => "note" === e.type),
-        E = _.some((e) => "todos" === e.type),
-        w = _.at(-1),
-        A = w?.type === "message" && w.content.trim() === s.trim(),
-        S = null != f && f.questions.length > 0,
-        C = null == r && "" !== s && !A && !S,
-        T = (function (e) {
+        E = N.some((e) => "note" === e.type),
+        w = N.some((e) => "todos" === e.type),
+        A = N.at(-1),
+        S = A?.type === "message" && A.content.trim() === s.trim(),
+        C = null != f && f.questions.length > 0,
+        T = null == r && "" !== s && !S && !C,
+        O = (function (e) {
             let { hasAttachments: t, showsClosingMessage: n, lastItemType: l } = e;
             return t
                 ? n
@@ -1919,13 +1920,13 @@ function e6(e) {
                         ? "activity"
                         : "standalone"
                 : "none";
-        })({ hasAttachments: null != x && x.length > 0, showsClosingMessage: C, lastItemType: w?.type }),
+        })({ hasAttachments: null != x && x.length > 0, showsClosingMessage: T, lastItemType: A?.type }),
         M = null == x ? null : (0, a.jsx)(eS, { projectId: t, attachments: x }),
-        O = null == M ? null : (0, a.jsx)("div", { className: eH.MT, children: M });
+        L = null == M ? null : (0, a.jsx)("div", { className: eH.MT, children: M });
     return (0, a.jsxs)("div", {
         className: eH.ue,
         children: [
-            null == l || "" === l || N
+            null == l || "" === l || E
                 ? null
                 : (0, a.jsx)(h.E, {
                       tag: "div",
@@ -1935,16 +1936,16 @@ function e6(e) {
                       className: I()(eH.ky, eH.Xt, e2.XR),
                       children: l,
                   }),
-            null != u && u.length > 0 && !E
+            null != u && u.length > 0 && !w
                 ? (0, a.jsx)("div", {
                       className: I()(eH.ky, e2.XR),
                       children: (0, a.jsx)(eX, { todos: u, provisional: c }),
                   })
                 : null,
-            _.length > 0
+            N.length > 0
                 ? (0, a.jsx)("ol", {
                       className: eH.dO,
-                      children: _.map((e) =>
+                      children: N.map((e) =>
                           "message" === e.type
                               ? (0, a.jsxs)(
                                     "li",
@@ -1959,7 +1960,7 @@ function e6(e) {
                                                     allowLinks: !0,
                                                 }),
                                             }),
-                                            "streamed" === T && e.key === w?.key ? O : null,
+                                            "streamed" === O && e.key === A?.key ? L : null,
                                         ],
                                     },
                                     e.key,
@@ -1991,7 +1992,7 @@ function e6(e) {
                                         {
                                             projectId: t,
                                             item: e,
-                                            attachments: "activity" === T && e.key === w?.key ? M : null,
+                                            attachments: "activity" === O && e.key === A?.key ? M : null,
                                         },
                                         e.key,
                                     ),
@@ -2001,9 +2002,9 @@ function e6(e) {
             null != r
                 ? (0, a.jsx)("div", {
                       className: I()(eH.ky, e2.XR),
-                      children: (0, a.jsx)(eO, { proposal: r, onApprove: m }),
+                      children: (0, a.jsx)(eM, { proposal: r, onApprove: m }),
                   })
-                : C
+                : T
                   ? (0, a.jsxs)("div", {
                         className: I()(eH.ky, e2.XR),
                         children: [
@@ -2011,7 +2012,14 @@ function e6(e) {
                                 className: I()(e7.PT, eH.cW),
                                 children: ex.A.parse(s, !0, { allowList: !0, allowHeading: !0, allowLinks: !0 }),
                             }),
-                            "closing" === T ? O : null,
+                            "closing" === O ? L : null,
+                            _
+                                ? (0, a.jsx)(h.E, {
+                                      variant: "text-xs/normal",
+                                      color: "text-muted",
+                                      children: P.intl.string(R.default.OAjkIT),
+                                  })
+                                : null,
                             !0 === k
                                 ? (0, a.jsx)("div", { className: eH.IN, children: (0, a.jsx)(eE, { onAsk: j }) })
                                 : null,
@@ -2024,8 +2032,8 @@ function e6(e) {
                       children: (0, a.jsx)(eD, { projectId: t, request: v }),
                   })
                 : null,
-            "standalone" === T ? (0, a.jsx)("div", { className: I()(eH.ky, e2.XR), children: O }) : null,
-            S
+            "standalone" === O ? (0, a.jsx)("div", { className: I()(eH.ky, e2.XR), children: L }) : null,
+            C
                 ? (0, a.jsx)("div", {
                       className: I()(eH.ky, e2.XR),
                       children: (0, a.jsx)(ek, { clarification: f, onSubmit: g }),
@@ -2034,7 +2042,7 @@ function e6(e) {
             null != p && p.length > 0
                 ? (0, a.jsx)("div", { className: I()(eH.ky, e2.XR), children: (0, a.jsx)(eN, { ideas: p, onPick: b }) })
                 : null,
-            !0 !== k || C
+            !0 !== k || T
                 ? null
                 : (0, a.jsx)("div", { className: I()(eH.ky, e2.XR), children: (0, a.jsx)(eE, { onAsk: j }) }),
             o
@@ -2068,7 +2076,12 @@ function e9(e) {
               ],
           });
 }
-let te = { steered: R.default.I9TkzD, queued: R.default.gbjY6o, restarting: R.default["1Q4Cs2"] };
+let te = {
+    steered: R.default.I9TkzD,
+    queued: R.default.gbjY6o,
+    restarting: R.default["1Q4Cs2"],
+    answered: R.default["J6WZ+x"],
+};
 function tt(e) {
     let { projectId: t, messages: n, onApprove: l, onPickIdea: i, onAskForIdeas: s, onAnswerClarification: r } = e,
         o = n[n.length - 1],
@@ -2155,7 +2168,7 @@ function tt(e) {
                                   if (null != n)
                                       for (let l = t - 1; l >= 0; l--) {
                                           let t = e[l];
-                                          if (null != t && "assistant" === t.role)
+                                          if (null != t && "assistant" === t.role && "side_reply" !== t.kind)
                                               return !0 === t.continued && t.turn_id === n
                                                   ? (function (e) {
                                                         for (let t = e.length - 1; t >= 0; t--) {
@@ -2171,6 +2184,7 @@ function tt(e) {
                                                   : void 0;
                                       }
                               })(n, d),
+                              sideReply: "side_reply" === e.kind,
                           }),
                       },
                       e.render_id,
@@ -2525,7 +2539,9 @@ function tS(e) {
         i.useEffect(
             () => () =>
                 (function (e) {
-                    let t = X.A.getMessages(e).filter((e) => "assistant" === e.role && (0, X.B)(e)).length;
+                    let t = X.A.getMessages(e).filter(
+                        (e) => "assistant" === e.role && "side_reply" !== e.kind && (0, X.B)(e),
+                    ).length;
                     !(t < 3) &&
                         ((t_.w.get(tw) ?? []).includes(e) ||
                             tN.A.possiblyShowFeedbackModal(tE.MW.VIBEGRATIONS, () => {
@@ -2564,10 +2580,16 @@ function tS(e) {
         A = "open" === r,
         S = s[s.length - 1],
         I = null != S && "assistant" === S.role && null != S.proposal,
-        C = null != S && "assistant" === S.role && !(0, X.B)(S),
-        T = I && A ? w : void 0,
-        M = C && S?.role === "assistant" ? S.todos : void 0,
-        O = C && S?.role === "assistant" ? S.provisionalTodo : void 0;
+        C = i.useMemo(() => {
+            for (let e = s.length - 1; e >= 0; e--) {
+                let t = s[e];
+                if ("assistant" === t.role && !(0, X.B)(t)) return t;
+            }
+        }, [s]),
+        T = null != C,
+        O = I && A ? w : void 0,
+        M = C?.todos,
+        L = C?.provisionalTodo;
     return (0, a.jsxs)("section", {
         ref: m,
         "data-vibegrations-chat": !0,
@@ -2581,18 +2603,18 @@ function tS(e) {
                 children: (0, a.jsx)(tt, {
                     projectId: t,
                     messages: s,
-                    onApprove: T,
+                    onApprove: O,
                     onPickIdea: A ? k : void 0,
                     onAskForIdeas: A ? y : void 0,
                     onAnswerClarification: A ? j : void 0,
                 }),
             }),
             (0, a.jsx)(ty, {
-                thinking: C,
+                thinking: T,
                 thinkingActivity: d,
                 compacting: u,
                 todos: M,
-                provisionalTodo: O,
+                provisionalTodo: L,
                 projectUsage: c,
                 connState: r,
                 modelSettings: h,
@@ -2600,12 +2622,12 @@ function tS(e) {
             }),
             (0, a.jsx)(eh, {
                 canSend: A,
-                running: C,
+                running: T,
                 onSend: x,
                 onInterrupt: A ? v : void 0,
                 onUploadFile: N,
                 onDeleteFile: E,
-                onApprove: T,
+                onApprove: O,
                 onRegionCapture: l,
             }),
         ],
@@ -2616,8 +2638,8 @@ var tI = n(435558),
     tT = n(602853),
     tR = n(517461),
     tP = n(761929),
-    tM = n(927506);
-function tO(e) {
+    tO = n(927506);
+function tM(e) {
     let { open: t, maxWidth: n, onWidthChange: l, children: s } = e,
         r = (0, tT.r)(tC.A.modules.chat.RESIZE_HANDLE_WIDTH),
         o = i.useRef(null),
@@ -2644,11 +2666,11 @@ function tO(e) {
             [p],
         );
     return (0, a.jsxs)("div", {
-        className: tM.pz,
+        className: tO.pz,
         hidden: !t,
         children: [
-            (0, a.jsx)("div", { className: tM.Di, onPointerDown: f }),
-            (0, a.jsx)("div", { ref: o, className: tM.kL, style: { width: m }, children: s }),
+            (0, a.jsx)("div", { className: tO.Di, onPointerDown: f }),
+            (0, a.jsx)("div", { ref: o, className: tO.kL, style: { width: m }, children: s }),
         ],
     });
 }
@@ -2900,7 +2922,7 @@ function tZ(e) {
             content: (0, a.jsx)(G, { applicationId: n, surface: l, previewReady: c, previewGate: d }),
             sidebar: (e) =>
                 null != u
-                    ? (0, a.jsx)(tO, {
+                    ? (0, a.jsx)(tM, {
                           open: u.open,
                           maxWidth: f,
                           onWidthChange: r.Zq,
@@ -2909,7 +2931,7 @@ function tZ(e) {
                               : null,
                       })
                     : null != t && g
-                      ? (0, a.jsx)(tO, {
+                      ? (0, a.jsx)(tM, {
                             open: s,
                             maxWidth: f,
                             onWidthChange: r.Zq,
