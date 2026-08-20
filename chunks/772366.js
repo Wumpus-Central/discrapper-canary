@@ -7,7 +7,7 @@ function s(e) {
     let { onCloseCallback: t, analyticsLocations: s, ...a } = e;
     (0, l.openModalLazy)(
         async () => {
-            let { default: e } = await Promise.all([n.e("841509"), n.e("766901"), n.e("256430")]).then(
+            let { default: e } = await Promise.all([n.e("935205"), n.e("677668"), n.e("766901"), n.e("256430")]).then(
                 n.bind(n, 39613),
             );
             return (t) =>

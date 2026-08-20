@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => ea });
+n.d(t, { A: () => ei });
 var i,
     r,
     a,
@@ -1754,28 +1754,10 @@ n(667532);
 var K = n(477900),
     $ = n(582128),
     z = n(503698),
-    Z = n.n(z);
-let q = new d.Vy("DirectVideo");
-q.enableNativeLogger(!0);
-class X {
-    refcount;
-    stream;
-    constructor(e) {
-        (this.refcount = 1), (this.stream = window.createDiscordStream(e));
-    }
-    addref() {
-        this.refcount++;
-    }
-    release() {
-        return this.refcount--, 0 === this.refcount;
-    }
-}
-let Q = new Map();
-function J(e) {
-    let t = Q.get(e);
-    null != t && t.release() && ((0, D.lE)().removeDirectVideoOutputSink(e), Q.delete(e));
-}
-function ee(e) {
+    Z = n.n(z),
+    q = n(229209);
+let X = new d.Vy("DirectVideo");
+function Q(e) {
     return (function (e, t) {
         let {
                 streamId: n,
@@ -1822,14 +1804,14 @@ function ee(e) {
                             }
                         }),
                         n.addEventListener("canplaythrough", function () {
-                            q.info(
+                            X.info(
                                 `handleReady for ${_.current.streamId}, have onReady callback = ${null != _.current.onReady}`,
                             ),
                                 _.current.onReady?.();
                         }),
-                        q.info(`create video element for ${_.current.streamId}, readyState=${n.readyState}`),
+                        X.info(`create video element for ${_.current.streamId}, readyState=${n.readyState}`),
                         n.readyState > 3 &&
-                            q.error(`video element for ${_.current.streamId} was ready before attached`),
+                            X.error(`video element for ${_.current.streamId} was ready before attached`),
                         e.appendChild(n),
                         t.disconnect(),
                         t.observe(n),
@@ -1842,42 +1824,41 @@ function ee(e) {
             $.useEffect(() => {
                 let e = c.current;
                 if (null != e)
-                    if (i) null != e.srcObject && ((e.srcObject = null), J(n));
+                    if (i) null != e.srcObject && (e.srcObject = null);
                     else {
-                        let t;
+                        X.info(`attaching srcObject for ${n}`);
+                        let t = (0, q.nz)(n);
                         return (
-                            q.info(`attaching srcObject for ${n}`),
-                            null == (t = Q.get(n))
-                                ? ((t = new X(n)), (0, D.lE)().addDirectVideoOutputSink(n), Q.set(n, t))
-                                : t.addref(),
                             (e.srcObject = t.stream),
                             () => {
-                                J(n), (e.srcObject = null);
+                                t.release(), (e.srcObject = null);
                             }
                         );
                     }
             }, [i, n]),
             (0, K.jsx)("div", { className: Z()("media-engine-video", l), ref: d, ...o })
         );
-    })(e, ee.onContainerResized);
+    })(e, Q.onContainerResized);
 }
-function et(e) {
+function J(e) {
     let { disabled: t, deviceId: n, width: i, height: r } = e;
     return t
         ? (0, K.jsx)("div", { className: "media-engine-video", style: { width: i, height: r } })
-        : (0, K.jsx)(ee, { streamId: n, style: { width: i, height: r } });
+        : (0, K.jsx)(Q, { streamId: n, style: { width: i, height: r } });
 }
-(ee.onContainerResized = (e, t, n) => {}), (et.defaultProps = { disabled: !1, width: 320, height: 180 });
-var en = n(264572).Buffer;
-function ei(e) {
+X.enableNativeLogger(!0),
+    (Q.onContainerResized = (e, t, n) => {}),
+    (J.defaultProps = { disabled: !1, width: 320, height: 180 });
+var ee = n(264572).Buffer;
+function et(e) {
     return (e ?? N.Hz) / N.Hz;
 }
-function er(e) {
+function en(e) {
     if (null != e) return Math.round((6e3 * Math.min(100, Math.max(10, e))) / 100);
 }
-class ea extends o.A {
-    Video = ee;
-    Camera = et;
+class ei extends o.A {
+    Video = Q;
+    Camera = J;
     audioInputDeviceId = N.qe;
     audioOutputDeviceId = N.qe;
     videoInputDeviceId = N.qe;
@@ -2098,10 +2079,10 @@ class ea extends o.A {
         (0, D.lE)().setTransportOptions({ bypassSystemProcessing: e });
     }
     setInputVolume(e) {
-        (0, D.lE)().setInputVolume(ei(e));
+        (0, D.lE)().setInputVolume(et(e));
     }
     setOutputVolume(e) {
-        (0, D.lE)().setOutputVolume(ei(e));
+        (0, D.lE)().setOutputVolume(et(e));
     }
     getAudioInputDevices() {
         return W();
@@ -2211,7 +2192,7 @@ class ea extends o.A {
                 frameRate: n,
                 width: i <= 480 ? (i / 3) * 4 : (i / 9) * 16,
                 height: i,
-                bitrateKbps: er(e.bitratePercent),
+                bitrateKbps: en(e.bitratePercent),
                 videoEncoderExperiments: e.videoEncoderExperiments,
                 minCaptureWidth: A,
                 minCaptureHeight: h,
@@ -2223,7 +2204,7 @@ class ea extends o.A {
         let r = (0, D.lE)();
         if (null == r.applyClipsQualitySettings) return !1;
         r.applyClipsQualitySettings(e, t, n);
-        let a = er(i);
+        let a = en(i);
         return null != a && null != r.applyClipsSettings && r.applyClipsSettings({ bitrateKbps: a }), !0;
     }
     setSoundshareSource(e, t, n) {
@@ -2387,7 +2368,7 @@ class ea extends o.A {
                       n,
                       r ?? 0,
                       (e) => {
-                          s(en.from(e));
+                          s(ee.from(e));
                       },
                       l,
                   );
@@ -2552,7 +2533,7 @@ class ea extends o.A {
               n);
     }
     setOnVideoContainerResized(e) {
-        ee.onContainerResized = e;
+        Q.onContainerResized = e;
     }
     setMaxSyncDelayOverride(e) {
         let { setMaxSyncDelayOverride: t } = (0, D.lE)();

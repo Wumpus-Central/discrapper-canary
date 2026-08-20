@@ -1,4 +1,4 @@
-i.d(t, { Ay: () => h, JF: () => p, gA: () => o });
+i.d(t, { Ay: () => d, JF: () => p, gA: () => o });
 var a = i(477900),
     n = i(582128),
     s = i(780777),
@@ -27,7 +27,7 @@ function p(e, t, i) {
             a.readAsDataURL(e);
     }
 }
-class d extends n.PureComponent {
+class h extends n.PureComponent {
     _ref = n.createRef();
     _isMounted = !1;
     static defaultProps = { multiple: !0, tabIndex: -1, maxFileSizeBytes: 1 / 0 };
@@ -54,7 +54,9 @@ class d extends n.PureComponent {
         this._isMounted && i(e, t);
     };
     handleFileError = async () => {
-        let { openUploadError: e } = await Promise.all([i.e("599666"), i.e("300699")]).then(i.bind(i, 494921));
+        let { openUploadError: e } = await Promise.all([i.e("454048"), i.e("599666"), i.e("300699")]).then(
+            i.bind(i, 494921),
+        );
         e({ title: r.intl.string(r.t["0egKg3"]), help: r.intl.string(r.t["7PnXqu"]) });
     };
     render() {
@@ -66,7 +68,7 @@ class d extends n.PureComponent {
             "aria-label": l,
             "aria-hidden": r,
             filters: p,
-            title: d,
+            title: h,
         } = this.props;
         return (0, a.jsx)(s.A, {
             ref: this._ref,
@@ -79,8 +81,8 @@ class d extends n.PureComponent {
             tabIndex: n,
             "aria-label": l,
             "aria-hidden": r,
-            title: d,
+            title: h,
         });
     }
 }
-let h = d;
+let d = h;

@@ -25,7 +25,7 @@ function E(e) {
         (0, a.hasAnyModalOpen)() ||
         (0, a.openModalLazy)(
             async () => {
-                let { default: e } = await n.e("144947").then(n.bind(n, 145662));
+                let { default: e } = await Promise.all([n.e("454048"), n.e("144947")]).then(n.bind(n, 145662));
                 return (n) => (0, r.jsx)(e, { ...n, daysRemaining: t });
             },
             { modalKey: "ParentalConsentWarningModal" },

@@ -1,10 +1,9 @@
-"use strict";
-n.d(t, { b: () => m });
-var l = n(582128),
-    i = n(17928),
-    s = n(228366);
+i.d(t, { b: () => d });
+var n = i(582128),
+    a = i(17928),
+    s = i(228366);
 let r = { fetched: !1, fetching: !1, affinities: [] };
-class a extends i.Ay.Store {
+class c extends a.Ay.Store {
     get hasFetched() {
         return r.fetched;
     }
@@ -15,7 +14,7 @@ class a extends i.Ay.Store {
         return r.affinities;
     }
 }
-let o = new a(s.h, {
+let l = new c(s.h, {
     BILLING_PREMIUM_AFFINITY_FETCH_START: function (e) {
         let {} = e;
         r.fetching = !0;
@@ -32,28 +31,28 @@ let o = new a(s.h, {
         (r.fetched = !1), (r.fetching = !1), (r.affinities = []);
     },
 });
-var u = n(636537),
-    c = n(889227),
-    d = n(652215);
-async function h() {
+var h = i(636537),
+    f = i(889227),
+    I = i(652215);
+async function u() {
     s.h.dispatch({ type: "BILLING_PREMIUM_AFFINITY_FETCH_START" });
     try {
-        let e = await u.Bo.get({ url: d.Rsh.BILLING_NITRO_AFFINITY, rejectWithError: !0 });
-        s.h.dispatch({ type: "BILLING_PREMIUM_AFFINITY_FETCH_SUCCEEDED", res: e.body.map((e) => new c.A(e)) });
+        let e = await h.Bo.get({ url: I.Rsh.BILLING_NITRO_AFFINITY, rejectWithError: !0 });
+        s.h.dispatch({ type: "BILLING_PREMIUM_AFFINITY_FETCH_SUCCEEDED", res: e.body.map((e) => new f.A(e)) });
     } finally {
         s.h.dispatch({ type: "BILLING_PREMIUM_AFFINITY_FETCHED" });
     }
 }
-function m() {
+function d() {
     let {
         affinities: e,
         hasFetched: t,
-        isFetching: n,
-    } = (0, i.cf)([o], () => ({ affinities: o.affinities, hasFetched: o.hasFetched, isFetching: o.isFetching }));
+        isFetching: i,
+    } = (0, a.cf)([l], () => ({ affinities: l.affinities, hasFetched: l.hasFetched, isFetching: l.isFetching }));
     return (
-        l.useEffect(() => {
-            t || n || h();
-        }, [t, n]),
+        n.useEffect(() => {
+            t || i || u();
+        }, [t, i]),
         e
     );
 }

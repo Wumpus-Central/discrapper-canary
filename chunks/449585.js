@@ -10,7 +10,7 @@ function d(e) {
         [o.AH.BLOCK_MESSAGE]: (e, t) =>
             new Promise((e) => {
                 (0, i.openModalLazy)(async () => {
-                    let { default: r } = await Promise.all([n.e("782906"), n.e("408891"), n.e("135023")]).then(
+                    let { default: r } = await Promise.all([n.e("744878"), n.e("408891"), n.e("135023")]).then(
                         n.bind(n, 148210),
                     );
                     return (n) =>
@@ -83,9 +83,9 @@ function s(e, t, r, o) {
 function _(e, t) {
     (0, i.openModalLazy)(async () => {
         let { default: r } = await Promise.all([
-            n.e("748180"),
-            n.e("782906"),
-            n.e("594766"),
+            n.e("3942"),
+            n.e("744878"),
+            n.e("513221"),
             n.e("940258"),
             n.e("408891"),
             n.e("273669"),

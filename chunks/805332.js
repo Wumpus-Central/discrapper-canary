@@ -1,29 +1,30 @@
+"use strict";
 n.d(t, { A: () => o });
 var i = n(17928),
-    a = n(228366);
-let s = null,
-    l = !1;
-class r extends i.Ay.Store {
+    r = n(228366);
+let a = null,
+    s = !1;
+class l extends i.Ay.Store {
     getBuilderPreviewApplicationId() {
-        return s;
+        return a;
     }
     isBuilderPreviewMobile() {
-        return l;
+        return s;
     }
 }
-let o = new r(a.h, {
+let o = new l(r.h, {
     LOGOUT: function () {
-        if (null == s && !l) return !1;
-        (s = null), (l = !1);
+        if (null == a && !s) return !1;
+        (a = null), (s = !1);
     },
     VIBEGRATIONS_BUILDER_PREVIEW_APPLICATION_SET: function (e) {
         let { applicationId: t } = e;
-        if (s === t) return !1;
-        s = t;
+        if (a === t) return !1;
+        a = t;
     },
     VIBEGRATIONS_BUILDER_PREVIEW_MOBILE_SET: function (e) {
         let { enabled: t } = e;
-        if (l === t) return !1;
-        l = t;
+        if (s === t) return !1;
+        s = t;
     },
 });

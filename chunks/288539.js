@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => C });
+n.d(t, { A: () => E });
 var l = n(477900),
     i = n(582128),
     s = n(607399),
@@ -16,7 +16,7 @@ var l = n(477900),
     g = n(287809),
     x = n(562153),
     A = n(427262);
-function E(e) {
+function C(e) {
     let { userId: t, className: s, children: r } = e,
         o = i.useCallback(() => {
             (0, c.showInaccessibleLinkModal)({ kind: "user" });
@@ -35,33 +35,33 @@ function E(e) {
         );
     return (0, l.jsx)(d.A, { className: s, onClick: o, onContextMenu: u, children: r });
 }
-function C(e) {
+function E(e) {
     let {
             className: t,
             userId: c,
-            channelId: C,
+            channelId: E,
             parsedUserId: I,
             content: y,
-            inlinePreview: S = !1,
-            viewingChannelId: v,
+            inlinePreview: v = !1,
+            viewingChannelId: S,
         } = e,
-        _ = i.useRef(null),
-        { analyticsLocations: N } = (0, u.Ay)(o.A.USER_MENTION),
+        N = i.useRef(null),
+        { analyticsLocations: _ } = (0, u.Ay)(o.A.USER_MENTION),
         T = (0, r.bG)([g.default], () => g.default.getUser(c)),
-        j = (0, r.bG)([m.A], () => m.A.getChannel(C)),
+        j = (0, r.bG)([m.A], () => m.A.getChannel(E)),
         b = null != j ? j.getGuildId() : null,
         R =
-            S || null == T || null == C || null == j
+            v || null == T || null == E || null == j
                 ? void 0
                 : (e) => {
                       null != b
                           ? (0, a.L3)(e, async () => {
                                 let { default: e } = await Promise.all([
-                                    n.e("41295"),
-                                    n.e("440351"),
-                                    n.e("676279"),
-                                    n.e("545309"),
-                                    n.e("397705"),
+                                    n.e("59766"),
+                                    n.e("207322"),
+                                    n.e("622936"),
+                                    n.e("216947"),
+                                    n.e("866038"),
                                     n.e("326692"),
                                     n.e("926132"),
                                     n.e("146652"),
@@ -71,42 +71,42 @@ function C(e) {
                                     n.e("21921"),
                                     n.e("708757"),
                                     n.e("571210"),
-                                    n.e("676418"),
                                     n.e("468403"),
-                                    n.e("166495"),
-                                    n.e("88342"),
+                                    n.e("676418"),
                                     n.e("585968"),
                                     n.e("189673"),
-                                    n.e("311802"),
+                                    n.e("166495"),
+                                    n.e("88342"),
                                     n.e("229787"),
+                                    n.e("311802"),
                                     n.e("698965"),
-                                    n.e("435027"),
                                     n.e("882073"),
                                     n.e("797558"),
+                                    n.e("934771"),
                                     n.e("454625"),
-                                    n.e("371133"),
                                     n.e("691994"),
-                                    n.e("235313"),
+                                    n.e("371133"),
                                     n.e("576665"),
+                                    n.e("235313"),
                                     n.e("538887"),
                                     n.e("939171"),
                                     n.e("436564"),
                                     n.e("624198"),
                                     n.e("252229"),
-                                    n.e("245996"),
                                     n.e("856753"),
+                                    n.e("245996"),
                                     n.e("700792"),
                                     n.e("592822"),
                                     n.e("823427"),
                                     n.e("449145"),
-                                    n.e("529422"),
                                     n.e("214461"),
+                                    n.e("529422"),
                                     n.e("309291"),
                                     n.e("365826"),
                                     n.e("649520"),
                                     n.e("493014"),
-                                    n.e("307059"),
                                     n.e("825486"),
+                                    n.e("307059"),
                                     n.e("242204"),
                                     n.e("349644"),
                                     n.e("678195"),
@@ -127,17 +127,17 @@ function C(e) {
                                     n.e("184841"),
                                 ]).then(n.bind(n, 107632));
                                 return (t) =>
-                                    (0, l.jsx)(e, { ...t, viewingChannelId: v, user: T, channel: j, guildId: b });
+                                    (0, l.jsx)(e, { ...t, viewingChannelId: S, user: T, channel: j, guildId: b });
                             })
                           : j.isDM() &&
                             (0, a.L3)(e, async () => {
                                 let { default: e } = await Promise.all([
-                                    n.e("197422"),
-                                    n.e("41295"),
-                                    n.e("440351"),
-                                    n.e("676279"),
-                                    n.e("545309"),
-                                    n.e("397705"),
+                                    n.e("924697"),
+                                    n.e("59766"),
+                                    n.e("207322"),
+                                    n.e("622936"),
+                                    n.e("216947"),
+                                    n.e("866038"),
                                     n.e("326692"),
                                     n.e("926132"),
                                     n.e("146652"),
@@ -148,38 +148,38 @@ function C(e) {
                                     n.e("708757"),
                                     n.e("571210"),
                                     n.e("468403"),
-                                    n.e("88342"),
                                     n.e("585968"),
-                                    n.e("238730"),
                                     n.e("189673"),
-                                    n.e("311802"),
+                                    n.e("88342"),
+                                    n.e("238730"),
                                     n.e("229787"),
+                                    n.e("311802"),
                                     n.e("698965"),
                                     n.e("882073"),
                                     n.e("797558"),
                                     n.e("454625"),
-                                    n.e("371133"),
                                     n.e("691994"),
-                                    n.e("235313"),
+                                    n.e("371133"),
                                     n.e("576665"),
+                                    n.e("235313"),
                                     n.e("538887"),
                                     n.e("776273"),
                                     n.e("436564"),
                                     n.e("979630"),
                                     n.e("947502"),
                                     n.e("252229"),
-                                    n.e("245996"),
                                     n.e("856753"),
+                                    n.e("245996"),
                                     n.e("700792"),
                                     n.e("592822"),
                                     n.e("838056"),
                                     n.e("965789"),
                                     n.e("823427"),
+                                    n.e("214461"),
                                     n.e("529422"),
                                     n.e("508829"),
-                                    n.e("214461"),
-                                    n.e("309291"),
                                     n.e("172883"),
+                                    n.e("309291"),
                                     n.e("493014"),
                                     n.e("307059"),
                                     n.e("242204"),
@@ -188,10 +188,10 @@ function C(e) {
                                     n.e("21106"),
                                     n.e("522261"),
                                     n.e("187048"),
-                                    n.e("690434"),
+                                    n.e("341154"),
+                                    n.e("442191"),
                                     n.e("713708"),
                                     n.e("699011"),
-                                    n.e("442191"),
                                     n.e("836150"),
                                     n.e("774021"),
                                     n.e("710014"),
@@ -208,24 +208,24 @@ function C(e) {
                                 return (t) => (0, l.jsx)(e, { ...t, user: T, channel: j, targetIsUser: !0 });
                             });
                   },
-        L = A.Ay.useName(T),
-        O = (0, r.bG)([m.A, f.Ay, p.A], () => x.Ay.getNickname(b, C, T));
-    if (null == T) return (0, l.jsx)(E, { userId: I, className: t, children: y });
-    function M(e) {
-        return (0, l.jsx)(d.A, { ref: _, className: t, onContextMenu: R, ...e, children: `@${O ?? L}` });
+        O = A.Ay.useName(T),
+        M = (0, r.bG)([m.A, f.Ay, p.A], () => x.Ay.getNickname(b, E, T));
+    if (null == T) return (0, l.jsx)(C, { userId: I, className: t, children: y });
+    function L(e) {
+        return (0, l.jsx)(d.A, { ref: N, className: t, onContextMenu: R, ...e, children: `@${M ?? O}` });
     }
-    return S
-        ? (0, l.jsx)(u.f5, { value: N, children: M() })
+    return v
+        ? (0, l.jsx)(u.f5, { value: _, children: L() })
         : (0, l.jsx)(u.f5, {
-              value: N,
+              value: _,
               children: (0, l.jsx)(h.A, {
-                  targetElementRef: _,
+                  targetElementRef: N,
                   user: T,
                   guildId: b ?? void 0,
-                  channelId: C,
+                  channelId: E,
                   position: s.Fr ? "top" : "right",
                   clickTrap: !0,
-                  children: (e) => M(e),
+                  children: (e) => L(e),
               }),
           });
 }

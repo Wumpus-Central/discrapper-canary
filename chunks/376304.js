@@ -1,38 +1,37 @@
-"use strict";
-n.d(t, { XD: () => m, fm: () => f, sE: () => d, ux: () => h });
-var l = n(7584),
-    i = n(776231),
-    s = n(486020),
-    r = n(723702),
-    a = n(652215);
-let o = `${location.protocol}//${window.GLOBAL_ENV.CDN_HOST}/role-icons`,
-    u = `${location.protocol}${window.GLOBAL_ENV.API_ENDPOINT}`,
-    c = (0, r.isAndroid)();
-function d(e, t) {
-    if (null == e) return null;
-    let n = null != e.unicodeEmoji ? l.Ay.getByName(l.Ay.convertSurrogateToName(e.unicodeEmoji, !1)) : void 0;
+n.d(t, { XD: () => p, fm: () => _, sE: () => d, ux: () => $ });
+var o = n(7584),
+    r = n(776231),
+    e = n(486020),
+    u = n(723702),
+    s = n(652215);
+let l = `${location.protocol}//${window.GLOBAL_ENV.CDN_HOST}/role-icons`,
+    c = `${location.protocol}${window.GLOBAL_ENV.API_ENDPOINT}`,
+    a = (0, u.isAndroid)();
+function d(i, t) {
+    if (null == i) return null;
+    let n = null != i.unicodeEmoji ? o.Ay.getByName(o.Ay.convertSurrogateToName(i.unicodeEmoji, !1)) : void 0;
     return {
-        customIconSrc: (function (e, t) {
-            let { id: n, icon: l } = e;
-            if (null == l) return;
-            if (l.startsWith("data:")) return l;
-            let r = s.QB ? "webp" : "png",
+        customIconSrc: (function (i, t) {
+            let { id: n, icon: o } = i;
+            if (null == o) return;
+            if (o.startsWith("data:")) return o;
+            let u = e.QB ? "webp" : "png",
                 d = "",
-                h = "quality=lossless";
-            return (null != t && ((d = "size=" + (0, i.kr)(t * (0, i.mZ)())), (h = c ? "" : "&" + h)),
+                $ = "quality=lossless";
+            return (null != t && ((d = "size=" + (0, r.kr)(t * (0, r.mZ)())), ($ = a ? "" : "&" + $)),
             null != window.GLOBAL_ENV.CDN_HOST)
-                ? `${o}/${n}/${l}.${r}?${d}${h}`
-                : `${u}${a.Rsh.ROLE_ICON(n, l)}?${d}`;
-        })(e, t),
+                ? `${l}/${n}/${o}.${u}?${d}${$}`
+                : `${c}${s.Rsh.ROLE_ICON(n, o)}?${d}`;
+        })(i, t),
         unicodeEmoji: n ?? void 0,
     };
 }
-function h(e, t) {
-    return e.replace(/size=[0-9]+/g, `size=${(0, i.kr)(t * (0, i.mZ)())}`);
+function $(i, t) {
+    return i.replace(/size=[0-9]+/g, `size=${(0, r.kr)(t * (0, r.mZ)())}`);
 }
-function m(e) {
-    return e.startsWith(o) || (e.startsWith(`${u}/roles`) && e.includes("/icons/"));
+function p(i) {
+    return i.startsWith(l) || (i.startsWith(`${c}/roles`) && i.includes("/icons/"));
 }
-function f(e, t) {
-    return t?.tags?.subscription_listing_id != null || e.features.has(a.GuildFeatures.ROLE_ICONS);
+function _(i, t) {
+    return t?.tags?.subscription_listing_id != null || i.features.has(s.GuildFeatures.ROLE_ICONS);
 }

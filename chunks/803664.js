@@ -1,7 +1,7 @@
-n.d(e, { A: () => f });
+n.d(t, { A: () => f });
 var i = n(477900),
-    d = n(582128),
-    l = n(17928),
+    l = n(582128),
+    d = n(17928),
     r = n(192308),
     a = n(477782),
     u = n(717398),
@@ -9,22 +9,22 @@ var i = n(477900),
     s = n(994500),
     c = n(287809),
     A = n(375708);
-function f(t) {
+function f(e) {
     let {
-            user: e,
+            user: t,
             location: f = "ContextMenu",
             onFriendRequestSent: x,
             onFriendRemove: C,
             appContext: v,
             setLoading: g,
             addFriendLabel: h,
-        } = t,
-        { id: b, username: I, bot: m } = e,
-        T = (0, l.bG)([c.default], () => c.default.getCurrentUser()?.id === b, [b]),
+        } = e,
+        { id: b, username: m, bot: I } = t,
+        T = (0, d.bG)([c.default], () => c.default.getCurrentUser()?.id === b, [b]),
         p = (0, o.D)(b, h),
-        [y, E] = (0, l.yK)([s.A], () => [s.A.isFriend(b), s.A.isBlocked(b)], [b]),
-        [_, D] = d.useState(!1);
-    return m || T
+        [y, E] = (0, d.yK)([s.A], () => [s.A.isFriend(b), s.A.isBlocked(b)], [b]),
+        [_, D] = l.useState(!1);
+    return I || T
         ? null
         : y
           ? (0, i.jsx)(a.Dr, {
@@ -33,17 +33,19 @@ function f(t) {
                 action: function () {
                     (0, r.openModalLazy)(
                         async () => {
-                            let { ConfirmModal: t } = await n.e("304823").then(n.bind(n, 158954));
-                            return (e) =>
-                                (0, i.jsx)(t, {
-                                    title: A.intl.formatToPlainString(A.t.fPLvZd, { name: I }),
-                                    subtitle: A.intl.format(A.t.l5FFq6, { name: I }),
+                            let { ConfirmModal: e } = await Promise.all([n.e("454048"), n.e("304823")]).then(
+                                n.bind(n, 158954),
+                            );
+                            return (t) =>
+                                (0, i.jsx)(e, {
+                                    title: A.intl.formatToPlainString(A.t.fPLvZd, { name: m }),
+                                    subtitle: A.intl.format(A.t.l5FFq6, { name: m }),
                                     confirmText: A.intl.string(A.t.cvSt1J),
                                     cancelText: A.intl.string(A.t["ETE/oC"]),
                                     onConfirm: () => {
                                         u.A.removeFriend(b, { location: f }), D(!1), C?.();
                                     },
-                                    ...e,
+                                    ...t,
                                 });
                         },
                         { contextKey: null != v ? (0, r.modalContextFromAppContext)(v) : void 0 },
