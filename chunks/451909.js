@@ -259,6 +259,14 @@ let x = u.Ay.RULES,
                 return { content: `<sound:${n}:${i}>` };
             },
         },
+        unicodeEmoji: {
+            match: s().anyScopeRegex(c.Ay.EMOJI_NAME_RE),
+            parse(e) {
+                let [t, n] = e,
+                    i = c.Ay.convertNameToSurrogate(n);
+                return { content: "" !== i ? i : t };
+            },
+        },
         spoiler: {
             match: s().anyScopeRegex(b.VFs),
             parse: () => ({ content: `<${P.intl.string(P.t["F+x38C"]).toLowerCase()}>` }),
@@ -405,7 +413,7 @@ function Q(e, t, n) {
     let i = f.A.getChannel(t),
         a = null != i ? i.getGuildId() : null,
         l = null != a ? g.A.getGuild(a) : null,
-        o = n ? K : r().omit(K, ["spoiler", "timestamp"]),
+        o = n ? K : r().omit(K, ["spoiler", "timestamp", "unicodeEmoji"]),
         d = n ? X : c.Ay.translateSurrogatesToInlineEmoji,
         u = s().parserFor(o),
         _ = { inline: !0, guild: l, channelId: t, isNotification: n };
