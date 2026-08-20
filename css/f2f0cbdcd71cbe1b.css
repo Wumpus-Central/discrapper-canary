@@ -1,7 +1,3 @@
-.multilineText_bed011 {
-    white-space: pre-wrap
-}
-
 .container__70feb {
     display: flex;
     flex-direction: column;
@@ -103,7 +99,6 @@
 .container_fca8d7 {
     display: grid;
     gap: var(--space-16);
-    grid-auto-rows: 1fr;
     grid-template-columns: repeat(2, 1fr)
 }
 
@@ -150,10 +145,10 @@
 }
 
 .entryContent_fca8d7 {
+    align-self: flex-start;
     display: flex;
     flex-direction: column;
     gap: var(--space-4);
-    margin-block: auto;
     min-width: 0
 }
 
@@ -265,4 +260,4 @@
     margin-inline-end: auto
 }
 
-/*# sourceMappingURL=fa3eb2af123fe18d.css.map*/
+/*# sourceMappingURL=f2f0cbdcd71cbe1b.css.map*/
