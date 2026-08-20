@@ -1,3 +1,16 @@
+.trigger__8d3b5 {
+    align-items: center;
+    display: inline-flex
+}
+
+.unreadDot__863f9 {
+    fill: currentColor
+}
+
+.mentionDot__863f9 {
+    fill: var(--background-feedback-notification)
+}
+
 .previewStatusCard__2c622 {
     align-items: center;
     background: var(--background-mod-subtle);
@@ -942,4 +955,4 @@
     transition: all 0s
 }
 
-/*# sourceMappingURL=448710.b4eecca42def809b.css.map*/
+/*# sourceMappingURL=636545.36fe203a4acf0b8e.css.map*/
