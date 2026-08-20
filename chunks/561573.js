@@ -36,6 +36,9 @@ class A extends i.Ay.Store {
     getFetchStateForApplicationId(e) {
         if (null != e) return l[u({ type: "application", applicationId: e })];
     }
+    getPromotionIdsForSkuId(e) {
+        if (null != e) return c[e]?.storefrontPromotionIds;
+    }
     getRewardsForSkuId(e) {
         if (null == e) return;
         let t = c[e];

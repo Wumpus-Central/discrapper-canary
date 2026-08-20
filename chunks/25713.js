@@ -17,11 +17,12 @@ var a = l(34188),
     h = l(280450),
     S = l(652215),
     E = l(818348);
-let v = "000000000000000100",
-    I = "000000000000000200",
+let I = "000000000000000100",
+    v = "000000000000000200",
     x = "000000000000000300",
-    C = "000000000000000400";
-function A(e, t, l) {
+    C = "000000000000000400",
+    A = "playground-nitro-promotion";
+function _(e, t, l) {
     let {
             name: a,
             price: o,
@@ -38,7 +39,7 @@ function A(e, t, l) {
         h = {
             id: e,
             type: S.Puh.DURABLE_PRIMARY,
-            application_id: I,
+            application_id: v,
             product_line: S.EZt.SOCIAL_LAYER_GAME_ITEM,
             name: a,
             summary: "",
@@ -67,7 +68,7 @@ function A(e, t, l) {
         };
     if ((g.h.dispatch({ type: "SKU_FETCH_SUCCESS", sku: h }), null != n && null != r)) {
         let t = {
-            skuPriceMap: { [e]: { pricingResultId: c, rewardResultIds: [b] } },
+            skuPriceMap: { [e]: { pricingResultId: c, storefrontPromotionIds: [A], rewardResultIds: [b] } },
             pricingResultIdMap: {
                 [c]: {
                     [f.QK.SELF_PURCHASE]: {
@@ -109,7 +110,7 @@ function A(e, t, l) {
             type: "SKUS_PRICING_FETCH_SUCCESS",
             priceId: { type: "skus", skuIds: [e] },
             data: {
-                skuPriceMap: { [e]: { pricingResultId: c, rewardResultIds: [] } },
+                skuPriceMap: { [e]: { pricingResultId: c, storefrontPromotionIds: [], rewardResultIds: [] } },
                 pricingResultIdMap: {
                     [c]: {
                         [f.QK.SELF_PURCHASE]: {
@@ -144,13 +145,13 @@ function A(e, t, l) {
     g.h.dispatch({
         type: "SOCIAL_LAYER_SKU_PURCHASE_ELIGIBILITY_RESPONSE",
         interactionId: "playground-interaction",
-        applicationId: I,
+        applicationId: v,
         skuId: e,
         recipientId: l,
         eligible: u,
     });
 }
-function _(e) {
+function R(e) {
     let t = (0, b.bG)([h.default], () => h.default.getId()),
         {
             name: l,
@@ -163,10 +164,10 @@ function _(e) {
             isEligible: u,
         } = e;
     n.useEffect(() => {
-        A(v, e, t);
+        _(I, e, t);
     }, [l, a, o, r, i, s, d, u, t]);
 }
-let R = [
+let T = [
         {
             id: "000000000000000101",
             params: {
@@ -220,16 +221,16 @@ let R = [
             },
         },
     ],
-    T = (0, y.createChannelRecord)({
+    P = (0, y.createChannelRecord)({
         id: "000000000000000500",
         type: S.rbe.GUILD_TEXT,
         guild_id: x,
         name: "playground-channel",
     });
-function P() {
+function O() {
     n.useEffect(() => {
         let e = {
-            id: I,
+            id: v,
             name: "Playground Game",
             description: "A playground preview application for testing storefront component states.",
             is_monetized: !0,
@@ -240,7 +241,7 @@ function P() {
         g.h.dispatch({ type: "APPLICATION_FETCH_SUCCESS", application: e });
     }, []);
 }
-function O() {
+function D() {
     n.useEffect(() => {
         g.h.dispatch({
             type: "SOCIAL_LAYER_STOREFRONT_CONFIG_FETCH_SUCCESS",
@@ -250,7 +251,7 @@ function O() {
                 storefronts: [
                     {
                         guildId: x,
-                        applicationId: I,
+                        applicationId: v,
                         gameId: C,
                         collectiblesShopNavigationEnabled: !1,
                         excludedPlatforms: [],
@@ -266,23 +267,23 @@ function O() {
                 type: "SOCIAL_LAYER_STOREFRONT_LOAD_SUCCESS",
                 guildOrApplicationId: { type: "guild", guildId: x },
                 storefront: {
-                    id: I,
+                    id: v,
                     publishedAt: null,
-                    applicationId: I,
+                    applicationId: v,
                     title: "Playground Game",
                     logoAssetId: null,
                     lightThemeLogoAssetId: null,
-                    pages: [{ title: "Shop", skuIds: [v], sections: [], leaderboard: null }],
+                    pages: [{ title: "Shop", skuIds: [I], sections: [], leaderboard: null }],
                     assets: {},
                     promotions: {},
                 },
             });
     }, []);
 }
-let D = "/assets/863cb535889630a2.svg";
-var w = l(50777),
-    V = l(467884);
-let L = {
+let w = "/assets/863cb535889630a2.svg";
+var V = l(50777),
+    L = l(467884);
+let N = {
     name: "Shop Card",
     id: "storefront-card",
     docs: 'Preview the SocialLayerStorefrontCard in various states. The card uses a fallback icon since no real asset images are loaded. The "Embedded" variant renders the full in-chat product details embed.',
@@ -302,7 +303,7 @@ let L = {
             } = e,
             b = r ? String(i) : null,
             g = r ? Math.round(a * (1 - i / 100)) : null;
-        _({
+        R({
             name: l,
             price: a,
             salePrice: g,
@@ -312,29 +313,29 @@ let L = {
             daysUntilExpiry: c ? p : null,
             isEligible: m,
         }),
-            P();
+            O();
         let f = n.useCallback((e) => {
             e.preventDefault();
         }, []);
-        return t === V.s.EMBEDDED
+        return t === L.s.EMBEDDED
             ? (0, o.jsx)("div", {
                   style: { padding: 16 },
-                  children: (0, o.jsx)(w.A, { applicationId: I, guildId: x, skuId: v, channel: T }),
+                  children: (0, o.jsx)(V.A, { applicationId: v, guildId: x, skuId: I, channel: P }),
               })
             : (0, o.jsx)("div", {
-                  style: { maxWidth: t === V.s.SMALL ? 220 : 300, padding: 16 },
-                  children: (0, o.jsx)(V.A, { skuId: v, variant: t, onClick: f }),
+                  style: { maxWidth: t === L.s.SMALL ? 220 : 300, padding: 16 },
+                  children: (0, o.jsx)(L.A, { skuId: I, variant: t, onClick: f }),
               });
     },
     controls: {
         variant: {
             label: "Card Variant",
             type: "select",
-            defaultValue: V.s.SMALL,
+            defaultValue: L.s.SMALL,
             options: [
-                { label: "Small", value: V.s.SMALL },
-                { label: "Medium", value: V.s.MEDIUM },
-                { label: "Embedded", value: V.s.EMBEDDED },
+                { label: "Small", value: L.s.SMALL },
+                { label: "Medium", value: L.s.MEDIUM },
+                { label: "Embedded", value: L.s.EMBEDDED },
             ],
         },
         name: { label: "Product Name", type: "text", defaultValue: "Legendary Dragon Armor" },
@@ -349,25 +350,24 @@ let L = {
         isEligible: { label: "Purchase Eligible", type: "boolean", defaultValue: !0 },
     },
 };
-var N = l(439325);
+var U = l(439325);
 l(323874), l(14289), l(35956);
-var U = l(366523);
-let k = new URL("https://cdn.discordapp.com/embed/avatars/0.png"),
-    M = new URL("https://cdn.discordapp.com/embed/avatars/1.png");
-var B = l(263911),
-    F = l(403581),
-    G = l(873297),
-    j = l(758836),
-    Y = l(375708);
-function H() {}
-let q = {
+var k = l(366523);
+let M = new URL("https://cdn.discordapp.com/embed/avatars/0.png"),
+    B = new URL("https://cdn.discordapp.com/embed/avatars/1.png");
+var F = l(263911),
+    G = l(403581),
+    j = l(873297),
+    Y = l(758836),
+    H = l(375708);
+function q() {}
+let K = {
     storefront: "linear-gradient(90deg, rgba(88, 101, 242, 0.4) 0%, rgba(157, 60, 178, 0.4) 100%)",
     nitro: "linear-gradient(90deg, rgba(179, 38, 156, 0.4) 0%, rgba(20, 20, 203, 0.4) 100%)",
     none: void 0,
 };
-var K = l(971146);
-let Q = "playground-nitro-promotion";
-var X = l(849134);
+var Q = l(971146),
+    X = l(849134);
 function z() {}
 let W = {
     name: "Storefront Promo Popover",
@@ -430,7 +430,7 @@ let eo = {
         id: "slayer-storefront",
         name: "Slayer Storefront",
         groups: [
-            { title: "Shop Card", stories: [L] },
+            { title: "Shop Card", stories: [N] },
             {
                 title: "Modals",
                 stories: [
@@ -455,7 +455,7 @@ let eo = {
                                 h = a ? Math.round(l * (1 - u / 100)) : null,
                                 [S, E] = n.useState(!1),
                                 x = n.useRef(null);
-                            return (_({
+                            return (R({
                                 name: t,
                                 price: l,
                                 salePrice: h,
@@ -465,13 +465,13 @@ let eo = {
                                 daysUntilExpiry: b ? g : null,
                                 isEligible: f,
                             }),
-                            O(),
+                            D(),
                             S)
-                                ? (0, o.jsx)(N.default, {
+                                ? (0, o.jsx)(U.default, {
                                       transitionState: d.ip.ENTERED,
                                       returnRef: x,
-                                      skuId: v,
-                                      applicationId: I,
+                                      skuId: I,
+                                      applicationId: v,
                                       isStorefront: !0,
                                       onClose: () => Promise.resolve(E(!1)),
                                   })
@@ -540,7 +540,7 @@ let eo = {
                                 feature2Subtitle: b,
                                 buttonText: g,
                             } = e;
-                            O();
+                            D();
                             let [f, y] = n.useState(!1),
                                 h = n.useRef(null),
                                 S = [t, l].filter((e) => "" !== e);
@@ -549,15 +549,15 @@ let eo = {
                                       version: 0,
                                       transitionState: d.ip.ENTERED,
                                       returnRef: h,
-                                      applicationId: I,
+                                      applicationId: v,
                                       logo: "https://cdn.discordapp.com/app-assets/1346069614634864772/store/1461676971728572478.webp?size=128",
                                       backgroundImage:
                                           "https://cdn.discordapp.com/assets/content/1d7af7dacdba453b6fa4a773c5c3ff829f2eff26bde9f036ef61cb3c2f984ba9.png",
                                       titles: S,
                                       subtitle: a,
                                       features: [
-                                          { assetUrl: D, title: c, subtitle: p },
-                                          { assetUrl: D, title: m, subtitle: b },
+                                          { assetUrl: w, title: c, subtitle: p },
+                                          { assetUrl: w, title: m, subtitle: b },
                                       ],
                                       buttonText: g,
                                       onClose: () => Promise.resolve(y(!1)),
@@ -623,7 +623,7 @@ let eo = {
                                         children:
                                             "The exclusive badge shown on storefront cards and the PDP modal for exclusive items.",
                                     }),
-                                    (0, o.jsx)(B.I, {}),
+                                    (0, o.jsx)(F.I, {}),
                                 ],
                             });
                         },
@@ -642,7 +642,7 @@ let eo = {
                                         children:
                                             "The in-game item indicator tag shown on storefront cards and the PDP modal.",
                                     }),
-                                    (0, o.jsx)(K.V, { textColor: t }),
+                                    (0, o.jsx)(Q.V, { textColor: t }),
                                 ],
                             });
                         },
@@ -666,9 +666,9 @@ let eo = {
                             let { shape: t, useBackgroundImage: l } = e;
                             return (0, o.jsx)("div", {
                                 style: { width: 220, height: 220 },
-                                children: (0, o.jsx)(U.A, {
-                                    cardImage: k,
-                                    cardBackgroundImage: l ? M : null,
+                                children: (0, o.jsx)(k.A, {
+                                    cardImage: M,
+                                    cardBackgroundImage: l ? B : null,
                                     altText: "Playground preview",
                                     shape: t,
                                 }),
@@ -708,14 +708,14 @@ let eo = {
                                     ((t = (0, b.bG)([h.default], () => h.default.getId())),
                                     (l = n.useMemo(
                                         () =>
-                                            R.slice(0, p).map((e) => {
+                                            T.slice(0, p).map((e) => {
                                                 let { id: t } = e;
                                                 return t;
                                             }),
                                         [p],
                                     )),
                                     n.useEffect(() => {
-                                        for (let { id: e, params: l } of R.slice(0, p)) A(e, l, t);
+                                        for (let { id: e, params: l } of T.slice(0, p)) _(e, l, t);
                                         g.h.dispatch({
                                             type: "SOCIAL_LAYER_STOREFRONT_CONFIG_FETCH_SUCCESS",
                                             config: {
@@ -724,7 +724,7 @@ let eo = {
                                                 storefronts: [
                                                     {
                                                         guildId: x,
-                                                        applicationId: I,
+                                                        applicationId: v,
                                                         gameId: C,
                                                         collectiblesShopNavigationEnabled: !1,
                                                         excludedPlatforms: [],
@@ -740,9 +740,9 @@ let eo = {
                                                 type: "SOCIAL_LAYER_STOREFRONT_LOAD_SUCCESS",
                                                 guildOrApplicationId: { type: "guild", guildId: x },
                                                 storefront: {
-                                                    id: I,
+                                                    id: v,
                                                     publishedAt: null,
-                                                    applicationId: I,
+                                                    applicationId: v,
                                                     title: "Playground Game",
                                                     logoAssetId: null,
                                                     lightThemeLogoAssetId: null,
@@ -763,19 +763,19 @@ let eo = {
                                                   node: (0, o.jsx)(s.$, {
                                                       variant: "expressive",
                                                       size: "sm",
-                                                      icon: F.t,
-                                                      text: Y.intl.string(Y.t.pj0XBN),
-                                                      onClick: H,
+                                                      icon: G.t,
+                                                      text: H.intl.string(H.t.pj0XBN),
+                                                      onClick: q,
                                                   }),
                                               }
-                                            : { kind: "button", text: "Shop All", onClick: H },
+                                            : { kind: "button", text: "Shop All", onClick: q },
                                     [r],
                                 );
-                            return (0, o.jsx)(G.A, {
-                                onDismiss: H,
+                            return (0, o.jsx)(j.A, {
+                                onDismiss: q,
                                 skuIds: f,
-                                tab: j.G2.GAME_SHOPS,
-                                applicationId: I,
+                                tab: Y.G2.GAME_SHOPS,
+                                applicationId: v,
                                 headerText: a,
                                 logoUrl: i
                                     ? "https://cdn.discordapp.com/app-assets/1346069614634864772/store/1461676971728572478.webp?size=128"
@@ -785,7 +785,7 @@ let eo = {
                                 analyticsSection: "playground",
                                 analyticsTileType: "PLAYGROUND_BANNER",
                                 analyticsImpressionType: "playground_banner",
-                                backgroundGradient: q[m],
+                                backgroundGradient: K[m],
                             });
                         },
                         controls: {
@@ -838,7 +838,7 @@ let eo = {
                                 daysUntilEnd: r,
                                 requiresAnnualPlan: i,
                             } = e;
-                            P();
+                            O();
                             let s = (0, Z.i)((e) => e.setOverrideNitroEligibilityForSocialLayerStorefront),
                                 d = (0, Z.i)((e) => e.setIsNitroEligibleForSocialLayerStorefront);
                             return (
@@ -852,7 +852,7 @@ let eo = {
                                             storefronts: [
                                                 {
                                                     guildId: x,
-                                                    applicationId: I,
+                                                    applicationId: v,
                                                     gameId: C,
                                                     collectiblesShopNavigationEnabled: !1,
                                                     excludedPlatforms: [],
@@ -868,9 +868,9 @@ let eo = {
                                             type: "SOCIAL_LAYER_STOREFRONT_LOAD_SUCCESS",
                                             guildOrApplicationId: { type: "guild", guildId: x },
                                             storefront: {
-                                                id: I,
+                                                id: v,
                                                 publishedAt: null,
-                                                applicationId: I,
+                                                applicationId: v,
                                                 title: "Playground Game",
                                                 logoAssetId: null,
                                                 lightThemeLogoAssetId: null,
@@ -899,7 +899,7 @@ let eo = {
                                             },
                                         });
                                 }, [t, l, r, i]),
-                                (0, o.jsx)(J.M, { applicationId: I, analyticsLocations: [] })
+                                (0, o.jsx)(J.M, { applicationId: v, analyticsLocations: [] })
                             );
                         },
                         controls: {
@@ -953,7 +953,7 @@ let eo = {
                                 style: { maxWidth: 400, padding: 16 },
                                 children: (0, o.jsx)(el.e, {
                                     promotion: u,
-                                    applicationId: I,
+                                    applicationId: v,
                                     analyticsLocations: [],
                                     onUpsellClick: ea,
                                 }),
@@ -991,7 +991,7 @@ let eo = {
                         docs: "The shop card under a Nitro-flavored promotion: the price row shows the Nitro wheel, the discounted (Nitro) price in the positive color, and the struck-through original price. This is the same price treatment used on the PDP for subscribed users.",
                         component: function (e) {
                             let { name: t, price: l, nitroDiscountPercent: a } = e;
-                            _({
+                            R({
                                 name: t,
                                 price: l,
                                 salePrice: Math.round(l * (1 - a / 100)),
@@ -1001,7 +1001,7 @@ let eo = {
                                 daysUntilExpiry: null,
                                 isEligible: !0,
                             }),
-                                P(),
+                                O(),
                                 n.useEffect(() => {
                                     g.h.dispatch({
                                         type: "SOCIAL_LAYER_STOREFRONT_CONFIG_FETCH_SUCCESS",
@@ -1011,7 +1011,7 @@ let eo = {
                                             storefronts: [
                                                 {
                                                     guildId: x,
-                                                    applicationId: I,
+                                                    applicationId: v,
                                                     gameId: C,
                                                     collectiblesShopNavigationEnabled: !1,
                                                     excludedPlatforms: [],
@@ -1027,19 +1027,19 @@ let eo = {
                                             type: "SOCIAL_LAYER_STOREFRONT_LOAD_SUCCESS",
                                             guildOrApplicationId: { type: "guild", guildId: x },
                                             storefront: {
-                                                id: I,
+                                                id: v,
                                                 publishedAt: null,
-                                                applicationId: I,
+                                                applicationId: v,
                                                 title: "Playground Game",
                                                 logoAssetId: null,
                                                 lightThemeLogoAssetId: null,
                                                 pages: [
-                                                    { title: "Shop", skuIds: [v], sections: [], leaderboard: null },
+                                                    { title: "Shop", skuIds: [I], sections: [], leaderboard: null },
                                                 ],
                                                 assets: {},
                                                 promotions: {
-                                                    [Q]: {
-                                                        id: Q,
+                                                    [A]: {
+                                                        id: A,
                                                         endsAt: null,
                                                         flavor: "nitro",
                                                         pdp: { label: "Free with Nitro", tooltip: null, icon: null },
@@ -1057,7 +1057,7 @@ let eo = {
                             }, []);
                             return (0, o.jsx)("div", {
                                 style: { maxWidth: 300, padding: 16 },
-                                children: (0, o.jsx)(V.A, { skuId: v, variant: V.s.MEDIUM, onClick: r }),
+                                children: (0, o.jsx)(L.A, { skuId: I, variant: L.s.MEDIUM, onClick: r }),
                             });
                         },
                         controls: {

@@ -23,6 +23,7 @@ function p(e) {
     return {
         skuPriceMap: a().mapValues(e.sku_price_map, (e) => ({
             pricingResultId: e.pricing_result_id,
+            storefrontPromotionIds: e.storefront_promotion_ids,
             rewardResultIds: e.reward_result_ids,
         })),
         pricingResultIdMap:
