@@ -129,6 +129,10 @@
     visibility: visible
 }
 
+.has-webkit-scrollbar .fade__99f8c:hover {
+    will-change: scroll-position
+}
+
 .no-webkit-scrollbar .thin__99f8c {
     scrollbar-color: var(--scrollbar-thin-thumb) var(--scrollbar-thin-track);
     scrollbar-width: thin
@@ -236,4 +240,4 @@
     height: 110px
 }
 
-/*# sourceMappingURL=582012.d5732d57732ef1ae.css.map*/
+/*# sourceMappingURL=582012.6e57662361d01c39.css.map*/
