@@ -151,7 +151,7 @@ function _(e, t, l) {
         eligible: u,
     });
 }
-function R(e) {
+function P(e) {
     let t = (0, b.bG)([h.default], () => h.default.getId()),
         {
             name: l,
@@ -167,7 +167,7 @@ function R(e) {
         _(I, e, t);
     }, [l, a, o, r, i, s, d, u, t]);
 }
-let T = [
+let R = [
         {
             id: "000000000000000101",
             params: {
@@ -221,7 +221,7 @@ let T = [
             },
         },
     ],
-    P = (0, y.createChannelRecord)({
+    T = (0, y.createChannelRecord)({
         id: "000000000000000500",
         type: S.rbe.GUILD_TEXT,
         guild_id: x,
@@ -280,10 +280,10 @@ function D() {
             });
     }, []);
 }
-let w = "/assets/863cb535889630a2.svg";
-var V = l(50777),
-    L = l(467884);
-let N = {
+let V = "/assets/863cb535889630a2.svg";
+var w = l(50777),
+    N = l(467884);
+let L = {
     name: "Shop Card",
     id: "storefront-card",
     docs: 'Preview the SocialLayerStorefrontCard in various states. The card uses a fallback icon since no real asset images are loaded. The "Embedded" variant renders the full in-chat product details embed.',
@@ -303,7 +303,7 @@ let N = {
             } = e,
             b = r ? String(i) : null,
             g = r ? Math.round(a * (1 - i / 100)) : null;
-        R({
+        P({
             name: l,
             price: a,
             salePrice: g,
@@ -317,25 +317,25 @@ let N = {
         let f = n.useCallback((e) => {
             e.preventDefault();
         }, []);
-        return t === L.s.EMBEDDED
+        return t === N.s.EMBEDDED
             ? (0, o.jsx)("div", {
                   style: { padding: 16 },
-                  children: (0, o.jsx)(V.A, { applicationId: v, guildId: x, skuId: I, channel: P }),
+                  children: (0, o.jsx)(w.A, { applicationId: v, guildId: x, skuId: I, channel: T }),
               })
             : (0, o.jsx)("div", {
-                  style: { maxWidth: t === L.s.SMALL ? 220 : 300, padding: 16 },
-                  children: (0, o.jsx)(L.A, { skuId: I, variant: t, onClick: f }),
+                  style: { maxWidth: t === N.s.SMALL ? 220 : 300, padding: 16 },
+                  children: (0, o.jsx)(N.A, { skuId: I, variant: t, onClick: f }),
               });
     },
     controls: {
         variant: {
             label: "Card Variant",
             type: "select",
-            defaultValue: L.s.SMALL,
+            defaultValue: N.s.SMALL,
             options: [
-                { label: "Small", value: L.s.SMALL },
-                { label: "Medium", value: L.s.MEDIUM },
-                { label: "Embedded", value: L.s.EMBEDDED },
+                { label: "Small", value: N.s.SMALL },
+                { label: "Medium", value: N.s.MEDIUM },
+                { label: "Embedded", value: N.s.EMBEDDED },
             ],
         },
         name: { label: "Product Name", type: "text", defaultValue: "Legendary Dragon Armor" },
@@ -430,7 +430,7 @@ let eo = {
         id: "slayer-storefront",
         name: "Slayer Storefront",
         groups: [
-            { title: "Shop Card", stories: [N] },
+            { title: "Shop Card", stories: [L] },
             {
                 title: "Modals",
                 stories: [
@@ -455,7 +455,7 @@ let eo = {
                                 h = a ? Math.round(l * (1 - u / 100)) : null,
                                 [S, E] = n.useState(!1),
                                 x = n.useRef(null);
-                            return (R({
+                            return (P({
                                 name: t,
                                 price: l,
                                 salePrice: h,
@@ -556,8 +556,8 @@ let eo = {
                                       titles: S,
                                       subtitle: a,
                                       features: [
-                                          { assetUrl: w, title: c, subtitle: p },
-                                          { assetUrl: w, title: m, subtitle: b },
+                                          { assetUrl: V, title: c, subtitle: p },
+                                          { assetUrl: V, title: m, subtitle: b },
                                       ],
                                       buttonText: g,
                                       onClose: () => Promise.resolve(y(!1)),
@@ -708,14 +708,14 @@ let eo = {
                                     ((t = (0, b.bG)([h.default], () => h.default.getId())),
                                     (l = n.useMemo(
                                         () =>
-                                            T.slice(0, p).map((e) => {
+                                            R.slice(0, p).map((e) => {
                                                 let { id: t } = e;
                                                 return t;
                                             }),
                                         [p],
                                     )),
                                     n.useEffect(() => {
-                                        for (let { id: e, params: l } of T.slice(0, p)) _(e, l, t);
+                                        for (let { id: e, params: l } of R.slice(0, p)) _(e, l, t);
                                         g.h.dispatch({
                                             type: "SOCIAL_LAYER_STOREFRONT_CONFIG_FETCH_SUCCESS",
                                             config: {
@@ -829,7 +829,7 @@ let eo = {
                     {
                         name: "Storefront Promotion Banner",
                         id: "slayer-storefront-promotion-banner",
-                        docs: 'The promotion banner pinned to the top of the storefront page. Switch the flavor to Nitro to preview the Nitro gradient, Nitro icon, and "Get Nitro" CTA. The CTA only shows to non-Nitro viewers; toggle "Nitro Eligible" to preview the subscribed state (branded banner with countdown, no CTA).',
+                        docs: 'The promotion banner pinned to the top of the storefront page. Switch the flavor to Nitro to preview the Nitro gradient, Nitro icon, and "Get Nitro" CTA. Non-Nitro viewers see the CTA; toggle "Nitro Eligible" for the subscribed state (branded banner with countdown, no CTA), then "Requires Annual Plan" to give a subscriber on the wrong plan the CTA back.',
                         component: function (e) {
                             let {
                                 flavor: t,
@@ -837,12 +837,23 @@ let eo = {
                                 isNitroEligible: a,
                                 daysUntilEnd: r,
                                 requiresAnnualPlan: i,
+                                isOnQualifyingPlan: s,
                             } = e;
                             O();
-                            let s = (0, Z.i)((e) => e.setOverrideNitroEligibilityForSocialLayerStorefront),
-                                d = (0, Z.i)((e) => e.setIsNitroEligibleForSocialLayerStorefront);
+                            let d = (0, Z.i)((e) => e.setOverrideNitroEligibilityForSocialLayerStorefront),
+                                u = (0, Z.i)((e) => e.setIsNitroEligibleForSocialLayerStorefront),
+                                c = (0, Z.i)((e) => e.setOverrideCurrentPremiumPlanId),
+                                m = (0, Z.i)((e) => e.setCurrentPremiumPlanId);
                             return (
-                                n.useEffect(() => (s(!0), d(a), () => s(!1)), [s, d, a]),
+                                n.useEffect(() => (d(!0), u(a), () => d(!1)), [d, u, a]),
+                                n.useEffect(
+                                    () => (
+                                        c(!0),
+                                        m(s ? ee.gD.PREMIUM_YEAR_TIER_2 : ee.gD.PREMIUM_MONTH_TIER_2),
+                                        () => c(!1)
+                                    ),
+                                    [c, m, s],
+                                ),
                                 n.useEffect(() => {
                                     g.h.dispatch({
                                         type: "SOCIAL_LAYER_STOREFRONT_CONFIG_FETCH_SUCCESS",
@@ -927,18 +938,36 @@ let eo = {
                                 maxValue: 60,
                             },
                             requiresAnnualPlan: { label: "Requires Annual Plan", type: "boolean", defaultValue: !1 },
+                            isOnQualifyingPlan: { label: "On Qualifying Plan", type: "boolean", defaultValue: !1 },
                         },
                     },
                     {
                         name: "PDP Promotion Banner",
                         id: "slayer-storefront-pdp-promotion-banner",
-                        docs: 'The promotion notice shown on the storefront PDP. Set flavor to Nitro to preview the nitro-pink branding. For the Nitro flavor, toggle "Nitro Eligible": subscribers see the countdown, everyone else sees the tappable upsell chevron.',
+                        docs: 'The promotion notice shown on the storefront PDP. Set flavor to Nitro to preview the nitro-pink branding. For the Nitro flavor, toggle "Nitro Eligible": subscribers see the countdown, everyone else sees the tappable upsell chevron. "Requires Annual Plan" gives a subscriber on the wrong plan the chevron back.',
                         component: function (e) {
-                            let { flavor: t, text: l, isNitroEligible: a, daysUntilEnd: r, requiresAnnualPlan: i } = e,
-                                s = (0, Z.i)((e) => e.setOverrideNitroEligibilityForSocialLayerStorefront),
-                                d = (0, Z.i)((e) => e.setIsNitroEligibleForSocialLayerStorefront);
-                            n.useEffect(() => (s(!0), d(a), () => s(!1)), [s, d, a]);
-                            let u = {
+                            let {
+                                    flavor: t,
+                                    text: l,
+                                    isNitroEligible: a,
+                                    daysUntilEnd: r,
+                                    requiresAnnualPlan: i,
+                                    isOnQualifyingPlan: s,
+                                } = e,
+                                d = (0, Z.i)((e) => e.setOverrideNitroEligibilityForSocialLayerStorefront),
+                                u = (0, Z.i)((e) => e.setIsNitroEligibleForSocialLayerStorefront),
+                                c = (0, Z.i)((e) => e.setOverrideCurrentPremiumPlanId),
+                                m = (0, Z.i)((e) => e.setCurrentPremiumPlanId);
+                            n.useEffect(() => (d(!0), u(a), () => d(!1)), [d, u, a]),
+                                n.useEffect(
+                                    () => (
+                                        c(!0),
+                                        m(s ? ee.gD.PREMIUM_YEAR_TIER_2 : ee.gD.PREMIUM_MONTH_TIER_2),
+                                        () => c(!1)
+                                    ),
+                                    [c, m, s],
+                                );
+                            let b = {
                                 Icon: void 0,
                                 text: l,
                                 tooltip: null,
@@ -952,7 +981,7 @@ let eo = {
                             return (0, o.jsx)("div", {
                                 style: { maxWidth: 400, padding: 16 },
                                 children: (0, o.jsx)(el.e, {
-                                    promotion: u,
+                                    promotion: b,
                                     applicationId: v,
                                     analyticsLocations: [],
                                     onUpsellClick: ea,
@@ -983,6 +1012,7 @@ let eo = {
                                 maxValue: 60,
                             },
                             requiresAnnualPlan: { label: "Requires Annual Plan", type: "boolean", defaultValue: !1 },
+                            isOnQualifyingPlan: { label: "On Qualifying Plan", type: "boolean", defaultValue: !1 },
                         },
                     },
                     {
@@ -991,7 +1021,7 @@ let eo = {
                         docs: "The shop card under a Nitro-flavored promotion: the price row shows the Nitro wheel, the discounted (Nitro) price in the positive color, and the struck-through original price. This is the same price treatment used on the PDP for subscribed users.",
                         component: function (e) {
                             let { name: t, price: l, nitroDiscountPercent: a } = e;
-                            R({
+                            P({
                                 name: t,
                                 price: l,
                                 salePrice: Math.round(l * (1 - a / 100)),
@@ -1057,7 +1087,7 @@ let eo = {
                             }, []);
                             return (0, o.jsx)("div", {
                                 style: { maxWidth: 300, padding: 16 },
-                                children: (0, o.jsx)(L.A, { skuId: I, variant: L.s.MEDIUM, onClick: r }),
+                                children: (0, o.jsx)(N.A, { skuId: I, variant: N.s.MEDIUM, onClick: r }),
                             });
                         },
                         controls: {

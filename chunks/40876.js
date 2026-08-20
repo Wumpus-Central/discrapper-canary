@@ -937,6 +937,7 @@ let r = {
             "VIRTUAL_CURRENCY_REDEEM_SUCCESS",
             "PREMIUM_PAYMENT_SUBSCRIBE_SUCCESS",
             "BILLING_SUBSCRIPTION_UPDATE_SUCCESS",
+            "USER_PAYMENT_BROWSER_CHECKOUT_DONE",
         ],
         inlineRequire: () => n(650408).A,
     },

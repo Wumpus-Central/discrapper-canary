@@ -6,14 +6,14 @@ var s = t(477900),
     a = t(320448),
     o = t(532794),
     c = t(871123),
-    d = t(69236),
+    d = t(906383),
     u = t(421108),
     m = t(910200),
     x = t(202541),
     h = t(873417);
 function p(e) {
     let { promotion: l, applicationId: t, analyticsLocations: p, onUpsellClick: b } = e,
-        j = (0, d.W8)(),
+        j = (0, d.Pc)(l),
         _ = null != l.reward ? null : i.t,
         N = n.useCallback(() => {
             b(),
@@ -28,15 +28,8 @@ function p(e) {
         ? null
         : "nitro" !== l.flavor
           ? (0, s.jsx)(m.O0, { Icon: l.Icon, text: l.text, endDatetime: l.endsAt, tooltip: l.tooltip })
-          : j
-            ? (0, s.jsx)(m.O0, {
-                  gradientColor: "nitro-pink",
-                  Icon: _,
-                  text: l.text,
-                  endDatetime: l.endsAt,
-                  tooltip: l.tooltip,
-              })
-            : (0, s.jsx)(r.D, {
+          : (0, d.ad)(j)
+            ? (0, s.jsx)(r.D, {
                   className: h.U,
                   onClick: N,
                   children: (0, s.jsx)(m.Ay, {
@@ -46,5 +39,12 @@ function p(e) {
                       tooltip: l.tooltip,
                       trailing: (0, s.jsx)(a._, { size: "xs", color: "currentColor" }),
                   }),
+              })
+            : (0, s.jsx)(m.O0, {
+                  gradientColor: "nitro-pink",
+                  Icon: _,
+                  text: l.text,
+                  endDatetime: l.endsAt,
+                  tooltip: l.tooltip,
               });
 }

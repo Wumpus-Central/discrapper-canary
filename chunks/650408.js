@@ -15,6 +15,7 @@ class d extends i.A {
         VIRTUAL_CURRENCY_REDEEM_SUCCESS: this.onPurchase.bind(this),
         PREMIUM_PAYMENT_SUBSCRIBE_SUCCESS: this.onSubscriptionChange.bind(this),
         BILLING_SUBSCRIPTION_UPDATE_SUCCESS: this.onSubscriptionChange.bind(this),
+        USER_PAYMENT_BROWSER_CHECKOUT_DONE: this.onSubscriptionChange.bind(this),
     };
     onPurchase(e) {
         let t,

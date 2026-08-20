@@ -11,4 +11,8 @@ let i = (0, r(196765).v)()((t) => ({
         t({ overrideNitroEligibilityForSocialLayerStorefront: e }),
     isNitroEligibleForSocialLayerStorefront: !1,
     setIsNitroEligibleForSocialLayerStorefront: (e) => t({ isNitroEligibleForSocialLayerStorefront: e }),
+    overrideCurrentPremiumPlanId: !1,
+    setOverrideCurrentPremiumPlanId: (e) => t({ overrideCurrentPremiumPlanId: e }),
+    currentPremiumPlanId: null,
+    setCurrentPremiumPlanId: (e) => t({ currentPremiumPlanId: e }),
 }));
