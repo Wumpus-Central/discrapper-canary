@@ -7,7 +7,7 @@ var i = t(849516),
     r = t(558076),
     o = t(204651),
     c = t(375708),
-    u = t(1195);
+    u = t(665802);
 function d(e) {
     let { channel: n, themeable: t } = e,
         d = (0, s.bG)([r.A], () => null != r.A.getPendingNote(n.id)),

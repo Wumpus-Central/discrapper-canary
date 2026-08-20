@@ -1,3 +1,0 @@
-e.exports = JSON.parse(
-    '{"2X8Wod":["Nicht wechseln"],"RJttRt":["Eingabe + Ausgabe wechseln"],"VLKyL8":["Eingabe wechseln"],"Jat8cd":["Ausgabe wechseln"],"I9iaw+":["Ger\xe4tevorschlag verwerfen"],"xYe9fZ":["Discord empfiehlt, Audioeingabe und -ausgabe zu ",[8,"$b",[[1,"vendorName"]," ",[1,"modelName"]]]," zu wechseln."],"1l/LhA":["Discord empfiehlt, die Audioeingabe zu ",[8,"$b",[[1,"vendorName"]," ",[1,"modelName"]]]," zu wechseln."],"SupmjL":["Discord empfiehlt, die Audioausgabe zu ",[8,"$b",[[1,"vendorName"]," ",[1,"modelName"]]]," zu wechseln."],"EUsbHW":["Audio zu ",[8,"$b",[[1,"deviceName"]]]," wechseln?"],"PAYExK":["Audioeingabe zu ",[8,"$b",[[1,"deviceName"]]]," wechseln?"],"aljl4r":["Audioausgabe zu ",[8,"$b",[[1,"deviceName"]]]," wechseln?"]}',
-);

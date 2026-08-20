@@ -1,59 +1,47 @@
-t.a(e, async function (e, l) {
-    try {
-        t.d(n, { z: () => m });
-        var r = t(477900);
-        t(582128);
-        var a = t(924557),
-            i = t(17928),
-            s = t(236285),
-            c = t(7584),
-            d = t(930101),
-            u = t(78377),
-            o = t(690521),
-            h = e([a]);
-        function m(e) {
-            let { value: n, type: t } = e,
-                l = (0, a.ER)(),
-                i =
-                    1 === l.length &&
-                    "paragraph" === l[0].type &&
-                    1 === l[0].value.length &&
-                    "emoji" === l[0].value[0].type;
-            switch (t) {
-                case "unicode":
-                    return (0, r.jsx)(x, { value: n, jumboable: i });
-                case "custom":
-                    return (0, r.jsx)(j, { value: n, jumboable: i });
-            }
-        }
-        function x(e) {
-            let { value: n, jumboable: t } = e,
-                l = o.Ay.getURL(n),
-                a = c.Ay.convertSurrogateToName(n),
-                i = (0, u.p)();
-            return (0, r.jsx)(d.H, {
-                node: { name: a, src: l, jumboable: t },
-                channelId: i?.channelId,
-                messageId: i?.messageId,
-            });
-        }
-        function j(e) {
-            let { value: n, jumboable: t } = e,
-                l = (0, u.p)(),
-                a = l?.guildId,
-                c = (0, i.bG)([s.Ay], () => s.Ay.getDisambiguatedEmojiContext(a).getById(String(n.id)), [a, n.id]),
-                o = c?.name ?? n.name;
-            return (
-                null != c && c.require_colons && (o = `:${c.name}:`),
-                (0, r.jsx)(d.X, {
-                    node: { name: o, animated: n.animated, emojiId: String(n.id), jumboable: t },
-                    channelId: l?.channelId,
-                    messageId: l?.messageId,
-                })
-            );
-        }
-        (a = (h.then ? (await h)() : h)[0]), l();
-    } catch (e) {
-        l(e);
+t.d(n, { z: () => o });
+var l = t(477900);
+t(582128);
+var r = t(17928),
+    a = t(236285),
+    s = t(7584),
+    i = t(930101),
+    c = t(78377),
+    d = t(690521),
+    u = t(596008);
+function o(e) {
+    let { value: n, type: t } = e,
+        r = (0, u.E)(),
+        a = 1 === r.length && "paragraph" === r[0].type && 1 === r[0].value.length && "emoji" === r[0].value[0].type;
+    switch (t) {
+        case "unicode":
+            return (0, l.jsx)(h, { value: n, jumboable: a });
+        case "custom":
+            return (0, l.jsx)(m, { value: n, jumboable: a });
     }
-});
+}
+function h(e) {
+    let { value: n, jumboable: t } = e,
+        r = d.Ay.getURL(n),
+        a = s.Ay.convertSurrogateToName(n),
+        u = (0, c.p)();
+    return (0, l.jsx)(i.H, {
+        node: { name: a, src: r, jumboable: t },
+        channelId: u?.channelId,
+        messageId: u?.messageId,
+    });
+}
+function m(e) {
+    let { value: n, jumboable: t } = e,
+        s = (0, c.p)(),
+        d = s?.guildId,
+        u = (0, r.bG)([a.Ay], () => a.Ay.getDisambiguatedEmojiContext(d).getById(String(n.id)), [d, n.id]),
+        o = u?.name ?? n.name;
+    return (
+        null != u && u.require_colons && (o = `:${u.name}:`),
+        (0, l.jsx)(i.X, {
+            node: { name: o, animated: n.animated, emojiId: String(n.id), jumboable: t },
+            channelId: s?.channelId,
+            messageId: s?.messageId,
+        })
+    );
+}
