@@ -1,32 +1,41 @@
-a.d(e, { t: () => n });
+a.d(t, { t: () => h });
 var s = a(477900);
 a(582128);
 var l = a(661531),
     i = a(996682),
-    h = a(27989);
-function n(t) {
+    c = a(27989);
+function h(e) {
     let {
-            size: e = "md",
+            size: t = "md",
             width: a,
-            height: n,
-            color: c = l.A.colors.INTERACTIVE_ICON_DEFAULT,
+            height: h,
+            color: n = l.A.colors.INTERACTIVE_ICON_DEFAULT,
             colorClass: r = "",
             ...o
-        } = t,
-        d = (0, h.J)(e),
+        } = e,
+        d = (0, c.J)(t),
         g = d?.width ?? a,
-        p = d?.height ?? n;
-    return (0, s.jsx)("svg", {
+        p = d?.height ?? h;
+    return (0, s.jsxs)("svg", {
         ...(0, i.A)(o),
         xmlns: "http://www.w3.org/2000/svg",
         width: g,
         height: p,
         fill: "none",
         viewBox: "0 0 24 24",
-        children: (0, s.jsx)("path", {
-            fill: "string" == typeof c ? c : c.css,
-            d: "M10.67 1.33a9.33 9.33 0 0 1 7.77 14.5H15a2.5 2.5 0 0 0-2.49 2.25l-.01.25.01.26c.05.42.2.8.41 1.13a9.35 9.35 0 0 1-11.59-9.05 9.33 9.33 0 0 1 9.34-9.34Zm12.33 16a1 1 0 0 1 0 2h-8a1 1 0 0 1-.86-.49l-.01-.02a.99.99 0 0 1-.1-.22v-.03a1 1 0 0 1-.02-.08v-.03l-.01-.13a1 1 0 0 1 .44-.83l.08-.05a1 1 0 0 1 .48-.12h8Zm-8.69-4.82a.85.85 0 0 0-1.17.23 2.97 2.97 0 0 1-4.94 0 .85.85 0 1 0-1.41.94 4.66 4.66 0 0 0 7.76 0 .85.85 0 0 0-.24-1.17ZM6 8.97a1.27 1.27 0 1 0 0 2.54 1.27 1.27 0 0 0 0-2.54Zm9.33 0a1.27 1.27 0 1 0 0 2.55 1.27 1.27 0 0 0 0-2.55Z",
-            className: r,
-        }),
+        children: [
+            (0, s.jsx)("path", {
+                fill: "string" == typeof n ? n : n.css,
+                fillRule: "evenodd",
+                d: "M10.67 1.33a9.33 9.33 0 0 1 8.05 14.05.94.94 0 0 1-.82.45H15a2.5 2.5 0 0 0-2.49 2.25l-.01.25.01.26c.02.17.05.33.1.5.11.32-.04.72-.38.78a9.33 9.33 0 1 1-1.56-18.54Zm3.64 11.18a.85.85 0 0 0-1.17.23 2.97 2.97 0 0 1-4.94 0 .85.85 0 1 0-1.41.94 4.66 4.66 0 0 0 7.76 0 .85.85 0 0 0-.24-1.17ZM6 8.97a1.27 1.27 0 1 0 0 2.54 1.27 1.27 0 0 0 0-2.54Zm9.33 0a1.27 1.27 0 1 0 0 2.55 1.27 1.27 0 0 0 0-2.55Z",
+                clipRule: "evenodd",
+                className: r,
+            }),
+            (0, s.jsx)("path", {
+                fill: "string" == typeof n ? n : n.css,
+                d: "M23 17.33a1 1 0 0 1 0 2h-8a1 1 0 0 1-.86-.49l-.01-.02a.99.99 0 0 1-.1-.22v-.03a1 1 0 0 1-.02-.08v-.03l-.01-.13a1 1 0 0 1 1-1h8Z",
+                className: r,
+            }),
+        ],
     });
 }
