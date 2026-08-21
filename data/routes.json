@@ -783,7 +783,6 @@
   "POLL_ANSWERS": "/channels/:param/polls/:param/answers/@me",
   "POLL_EXPIRE": "/channels/:param/polls/:param/expire",
   "POLL_ANSWER_VOTERS": "/channels/:param/polls/:param/answers/:param",
-  "MARKETING_CAMPAIGN_ELIGIBILITY": "/premium-marketing/@me/campaigns/:param/eligibility",
   "QUESTS_CURRENT_QUESTS": "/quests/@me",
   "QUESTS_CLAIMED_QUESTS": "/quests/@me/claimed",
   "QUEST": "/quests/:param",
