@@ -1,0 +1,11 @@
+.button_b23aa7 {
+    color: var(--text-subtle);
+    cursor: pointer
+}
+
+.button_b23aa7:hover {
+    color: var(--text-strong);
+    text-decoration: underline
+}
+
+/*# sourceMappingURL=b7e4b482c25c5dcb.css.map*/

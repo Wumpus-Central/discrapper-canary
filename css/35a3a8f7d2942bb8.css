@@ -211,7 +211,7 @@
     align-items: center;
     display: flex;
     gap: var(--space-4);
-    height: var(--space-24)
+    min-height: var(--space-24)
 }
 
 .headerIcon__17b8c {
@@ -262,4 +262,4 @@
     margin-inline-end: auto
 }
 
-/*# sourceMappingURL=46f7c5ff810d1633.css.map*/
+/*# sourceMappingURL=35a3a8f7d2942bb8.css.map*/
