@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => h, P: () => s }), n(321073);
+n.d(t, { A: () => I, P: () => s }), n(321073);
 var i = n(17928),
     r = n(228366),
     a = n(287809);
@@ -10,9 +10,10 @@ let l = new Map(),
     o = new Map(),
     d = new Map(),
     c = null,
-    u = [],
-    _ = new Map();
-class E extends i.Ay.Store {
+    u = new Set(),
+    _ = [],
+    E = new Map();
+class A extends i.Ay.Store {
     initialize() {
         this.waitFor(a.default);
     }
@@ -38,23 +39,26 @@ class E extends i.Ay.Store {
         return d.get(e) ?? null;
     }
     getLogs(e) {
-        return _.get(e) ?? u;
+        return E.get(e) ?? _;
     }
     getProjectsFetchState() {
         return c;
+    }
+    hasFetchedGuildProjects(e) {
+        return u.has(e);
     }
     isVibegrationsProjectApplication(e) {
         return null != e && null != this.findProjectByApplicationId(e);
     }
 }
-function A(e) {
+function h(e) {
     let { project: t } = e;
     l.set(t.id, t);
 }
-let h = new E(r.h, {
+let I = new A(r.h, {
     LOGOUT: function () {
-        if (0 === l.size && 0 === o.size && 0 === d.size && 0 === _.size && null == c) return !1;
-        l.clear(), o.clear(), d.clear(), _.clear(), (c = null);
+        if (0 === l.size && 0 === o.size && 0 === d.size && 0 === E.size && 0 === u.size && null == c) return !1;
+        l.clear(), o.clear(), d.clear(), E.clear(), u.clear(), (c = null);
     },
     VIBEGRATIONS_PROJECTS_FETCH_START: function (e) {
         c = { type: "loading" };
@@ -64,22 +68,22 @@ let h = new E(r.h, {
             i = new Set(t.map((e) => e.id));
         for (let [e, t] of l) !i.has(e) && (s(t) || (null != n && t.guild_id === n)) && l.delete(e);
         for (let e of t) l.set(e.id, e);
-        for (let e of o.keys()) l.has(e) || o.delete(e);
+        for (let e of (null != n && u.add(n), o.keys())) l.has(e) || o.delete(e);
         for (let [e, t] of d) l.has(t) || d.delete(e);
         c = { type: "success", fetchedAt: Date.now() };
     },
     VIBEGRATIONS_PROJECTS_FETCH_FAIL: function (e) {
         c = { type: "error", fetchedAt: Date.now() };
     },
-    VIBEGRATIONS_PROJECT_CREATE_SUCCESS: A,
-    VIBEGRATIONS_PROJECT_UPDATE_SUCCESS: A,
+    VIBEGRATIONS_PROJECT_CREATE_SUCCESS: h,
+    VIBEGRATIONS_PROJECT_UPDATE_SUCCESS: h,
     VIBEGRATIONS_PROJECT_INTEGRATION_STATUS_UPDATE: function (e) {
         let { projectId: t, integrationStatus: n } = e;
         o.set(t, n);
     },
     VIBEGRATIONS_PROJECT_DELETE_SUCCESS: function (e) {
         let { projectId: t } = e;
-        for (let [e, n] of (l.delete(t), o.delete(t), _.delete(t), d)) n === t && d.delete(e);
+        for (let [e, n] of (l.delete(t), o.delete(t), E.delete(t), d)) n === t && d.delete(e);
     },
     VIBEGRATIONS_PROJECT_SELECT: function (e) {
         let { guildId: t, projectId: n } = e;
@@ -88,8 +92,8 @@ let h = new E(r.h, {
     },
     VIBEGRATIONS_LOG_APPEND: function (e) {
         let { projectId: t, log: n } = e,
-            i = _.get(t),
+            i = E.get(t),
             r = null == i ? [n] : i.concat(n);
-        _.set(t, r.length > 500 ? r.slice(-500) : r);
+        E.set(t, r.length > 500 ? r.slice(-500) : r);
     },
 });
