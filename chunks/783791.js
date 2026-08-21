@@ -13,7 +13,7 @@ var i = n(17928),
     E = n(972786),
     A = n(652215),
     h = n(746080),
-    I = n(295813),
+    I = n(459864),
     f = n(375708);
 let p = "bit_message1",
     T = new Set(["reply", "plan_proposed", "terminal_error"]);
@@ -343,6 +343,7 @@ let W = new F(r.h, {
             U(t, i, (e) => ({
                 ...e,
                 finished: !0,
+                finished_at: Date.now(),
                 provisionalTodo: void 0,
                 content: "" !== e.content ? e.content : (n ?? ""),
             })),
@@ -354,7 +355,7 @@ let W = new F(r.h, {
             n = g.get(t);
         if (null == n) return !1;
         let i = b("assistant", "");
-        (i.finished = !0), (i.interrupted = !0), g.set(t, [...n, i]);
+        (i.finished = !0), (i.finished_at = Date.now()), (i.interrupted = !0), g.set(t, [...n, i]);
     },
     VIBEGRATIONS_CHAT_PROVISIONAL_TODO: function (e) {
         let { projectId: t, turnId: n, text: i } = e;

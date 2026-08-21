@@ -371,7 +371,7 @@ function ev(e) {
         }, [t]);
     return (0, l.jsx)(eA.$, { variant: "primary", text: W.intl.string(W.t.n8a49k), onClick: n });
 }
-var eN = n(929895);
+var eN = n(752622);
 function ej(e) {
     let { channelId: t } = e,
         n = (0, ep.i2)(),
@@ -847,7 +847,7 @@ var th = n(175671),
     tN = n(467135),
     tj = n(644235),
     tT = n(153469),
-    tS = n(767243),
+    tS = n(231972),
     ty = n(988986);
 function tb(e) {
     return e.map((e) => `#${e}`);
@@ -1790,7 +1790,7 @@ var iP = n(281445),
     iZ = n(342942),
     iq = n(174861),
     iQ = n(49999),
-    i$ = n(632847),
+    i$ = n(667378),
     i0 = n(116947);
 function i1(e) {
     let { code: t } = e,
@@ -2532,7 +2532,7 @@ var lY = n(492230),
     l9 = n(606049),
     l7 = n(943815),
     l8 = n(447215),
-    se = n(544482),
+    se = n(183313),
     st = n(832038),
     sn = n(318626),
     si = n(513653);
@@ -3487,7 +3487,7 @@ function aA(e) {
                             n.e("63340"),
                             n.e("896804"),
                             n.e("21106"),
-                            n.e("341154"),
+                            n.e("171375"),
                             n.e("421060"),
                             n.e("699011"),
                             n.e("65200"),
@@ -6289,7 +6289,7 @@ function ct(e) {
         ],
     });
 }
-var cn = n(221877),
+var cn = n(296704),
     ci = n(717421),
     cl = n(562153),
     cs = n(297413),
@@ -7284,7 +7284,7 @@ class cH extends s.Component {
     handleEditAttachment = (e) => {
         let t = e.originalItem;
         (0, h.openModalLazy)(async () => {
-            let { ModifyMosaicAttachmentModal: i } = await Promise.all([n.e("89885"), n.e("570698")]).then(
+            let { ModifyMosaicAttachmentModal: i } = await Promise.all([n.e("168135"), n.e("570698")]).then(
                 n.bind(n, 427281),
             );
             return (n) =>
