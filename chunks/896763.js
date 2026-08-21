@@ -7,6 +7,7 @@ a.exports = {
     Ig: "resizable_a62174",
     Oo: "noChat_a62174",
     $h: "vibegrationsChannel_a62174",
+    XX: "vibegrationsBuilder_a62174",
     lq: "activityPanelContainer_a62174",
     qr: "footer_a62174",
     ht: "activityContainer_a62174",
