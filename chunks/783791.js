@@ -77,9 +77,8 @@ function M(e) {
                       ? { type: "step", kind: "announcement", message: e.message }
                       : { type: "step", kind: "todos", items: e.items },
               )),
-        null != e.secret_request &&
-            (e.secret_request.fields.length > 0 || null != e.secret_request.connection) &&
-            (t.secretRequest = e.secret_request),
+        null != e.secret_request && e.secret_request.fields.length > 0 && (t.secretRequest = e.secret_request),
+        null != e.settings_request && (t.settingsRequest = e.settings_request),
         t
     );
 }
@@ -200,6 +199,11 @@ class F extends i.Ay.Store {
     }
     getMessages(e) {
         return g.get(e) ?? D;
+    }
+    hasPendingSettingsRequest(e) {
+        let t = this.getMessages(e),
+            n = t[t.length - 1];
+        return null != n && "assistant" === n.role && null != n.settingsRequest;
     }
     isThinking(e) {
         return w(e);

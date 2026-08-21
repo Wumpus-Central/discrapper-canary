@@ -2470,6 +2470,40 @@
     margin-top: var(--space-4)
 }
 
+.settingsCard__750bc {
+    box-sizing: border-box;
+    flex-direction: column;
+    gap: var(--space-8);
+    overflow-wrap: anywhere;
+    width: 100%;
+    word-break: break-word
+}
+
+.settingsCard__750bc,
+.settingsCardChips__750bc {
+    display: flex;
+    max-width: 100%;
+    min-width: 0
+}
+
+.settingsCardChips__750bc {
+    flex-wrap: wrap;
+    gap: var(--space-4)
+}
+
+.settingsCardChip__750bc {
+    background: var(--background-mod-strong);
+    border-radius: var(--radius-xs);
+    padding: var(--space-4) var(--space-8)
+}
+
+.settingsCardActions__750bc {
+    align-items: center;
+    display: flex;
+    gap: var(--space-8);
+    margin-top: var(--space-4)
+}
+
 .conjurMessage__72ffd {
     position: relative
 }
@@ -2541,6 +2575,21 @@
 }
 
 .trigger__3e134:hover {
+    color: var(--icon-default)
+}
+
+.trigger__3dec4 {
+    align-items: center;
+    color: var(--icon-muted);
+    cursor: pointer;
+    display: inline-flex;
+    flex: 0 0 var(--space-16);
+    height: var(--space-16);
+    justify-content: center;
+    width: var(--space-16)
+}
+
+.trigger__3dec4:hover {
     color: var(--icon-default)
 }
 
@@ -3607,4 +3656,4 @@
     text-align: center
 }
 
-/*# sourceMappingURL=168135.795728b67bb170ba.css.map*/
+/*# sourceMappingURL=649208.b32514597a876e08.css.map*/

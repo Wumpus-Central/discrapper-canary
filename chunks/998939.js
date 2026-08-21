@@ -1,20 +1,22 @@
 n.d(t, {
-    r2: () => $,
-    $S: () => en,
-    n6: () => er,
-    fu: () => W,
-    Ay: () => ec,
-    aF: () => ei,
-    uM: () => ee,
-    vX: () => J,
-    dv: () => F,
-    Vm: () => ea,
-    TV: () => q,
-    Hc: () => V,
-    PK: () => es,
-    Lc: () => et,
-    y_: () => el,
-    XZ: () => z,
+    r2: () => W,
+    $S: () => el,
+    n6: () => ed,
+    ss: () => ei,
+    fu: () => q,
+    Ay: () => eh,
+    aF: () => eo,
+    uM: () => et,
+    vX: () => Q,
+    dv: () => V,
+    Vm: () => er,
+    TV: () => z,
+    Hc: () => U,
+    PK: () => ec,
+    Lc: () => en,
+    y_: () => es,
+    XZ: () => K,
+    nU: () => ea,
 }),
     n(321073),
     n(323874),
@@ -88,28 +90,29 @@ class m {
         this.socket?.close(), (this.socket = null);
     }
 }
-var p = n(208137),
-    f = n(783791),
+var f = n(208137),
+    p = n(783791),
     g = n(972786),
     x = n(652215),
-    v = n(295813),
+    v = n(459864),
     b = n(375708);
-function k(e, t) {
+function j(e, t) {
     let n = e.pendingPublish;
     null != n && ((e.pendingPublish = null), clearTimeout(n.timeout), n.reject(Error(t)));
 }
-let j = new Map(),
-    y = new Map(),
-    _ = new Map(),
+let y = new Map(),
+    k = new Map(),
+    w = new Map(),
     N = new Set(),
+    _ = new Map(),
     E = new Map();
 function A(e, t) {
     s.h.dispatch({ type: "VIBEGRATIONS_CHAT_CONN_STATE", projectId: e, connState: t });
 }
-let w = { location: "connection", code: u.xA.SEND_FAILED },
-    S = { location: "agent", code: u.xA.AGENT_ERROR };
-function I(e, t) {
-    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : w;
+let S = { location: "connection", code: u.xA.SEND_FAILED },
+    I = { location: "agent", code: u.xA.AGENT_ERROR };
+function T(e, t) {
+    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : S;
     s.h.dispatch({
         type: "VIBEGRATIONS_CHAT_STEP_APPEND",
         projectId: e,
@@ -120,7 +123,7 @@ function I(e, t) {
 function C(e) {
     return `optimistic:${e}`;
 }
-function T(e, t) {
+function R(e, t) {
     let { content: n, nonce: l, attachments: a } = t;
     s.h.dispatch({
         type: "VIBEGRATIONS_CHAT_MESSAGE_APPEND",
@@ -132,16 +135,16 @@ function T(e, t) {
         attachments: a,
     });
 }
-let R = { steered: !0, queued: !0, restarting: !0, answered: !0 };
-function P(e, t, n) {
+let P = { steered: !0, queued: !0, restarting: !0, answered: !0 };
+function M(e, t, n) {
     let l = t.pendingSends;
-    for (let a of ((t.pendingSends = []), l)) T(e, a), I(e, n);
+    for (let a of ((t.pendingSends = []), l)) R(e, a), T(e, n);
 }
 function O(e, t) {
-    if (!0 === _.get(e)) return;
+    if (!0 === w.get(e)) return;
     let n = t.pendingSends;
     for (let l of ((t.pendingSends = []), n)) {
-        T(e, l);
+        R(e, l);
         try {
             t.ws.sendUserMessage(
                 l.content,
@@ -149,21 +152,21 @@ function O(e, t) {
                 l.attachments?.map((e) => e.id),
             );
         } catch (t) {
-            console.error("[vibegrations] queued send failed", t), I(e, t instanceof Error ? t.message : "send failed");
+            console.error("[vibegrations] queued send failed", t), T(e, t instanceof Error ? t.message : "send failed");
         }
     }
 }
-let M = {
+let L = {
         build_error: { location: "build", code: u.xA.BUILD_FAILED },
         healthcheck_failed: { location: "healthcheck", code: u.xA.HEALTHCHECK_FAILED },
         error: { location: "agent", code: u.xA.AGENT_ERROR },
     },
-    L = {
+    D = {
         web: { location: "runtime_frame", code: u.xA.RUNTIME_FRAME_ERROR },
         preview: { location: "runtime_worker", code: u.xA.RUNTIME_WORKER_ERROR },
     },
-    D = new Map();
-async function G(e, t, n) {
+    G = new Map();
+async function F(e, t, n) {
     let l,
         a = Date.now();
     console.debug("[vibegrations] capture request received", { id: n.id, build: n.build, probe: n.probe });
@@ -178,7 +181,7 @@ async function G(e, t, n) {
 async function H(e, t) {
     t.ws.close();
     try {
-        let { ticket: n, baseUrl: l } = await Y(e);
+        let { ticket: n, baseUrl: l } = await Z(e);
         if (t.disposed) return;
         t.ws.open({
             url: l,
@@ -191,7 +194,7 @@ async function H(e, t) {
                         "hello" !== l.type &&
                             "history" !== l.type &&
                             "capture_preview" !== l.type &&
-                            "open" !== y.get(t))
+                            "open" !== k.get(t))
                     )
                         return void n.pendingEvents.push(l);
                     if ("history_page" === l.type) {
@@ -203,7 +206,7 @@ async function H(e, t) {
                             entries: (l.messages ?? []).slice(),
                             cursor: !0 === l.has_more ? (l.cursor ?? null) : null,
                         }),
-                            K(t);
+                            Y(t);
                         return;
                     }
                     if ("hello" === l.type) (n.helloSeen = !0), n.backoff.succeed();
@@ -217,7 +220,7 @@ async function H(e, t) {
                         }),
                             X.delete(t),
                             (i = t),
-                            K(i);
+                            Y(i);
                         let r = n.pendingEvents;
                         for (let l of ((n.pendingEvents = []), A(t, "open"), r)) e(t, n, l);
                         let o = n.pendingModelSettings;
@@ -230,7 +233,7 @@ async function H(e, t) {
                         O(t, n);
                     } else if ("chat_state" === l.type)
                         s.h.dispatch({ type: "VIBEGRATIONS_CHAT_STOPPED_SET", projectId: t, stopped: l.stopped }),
-                            l.stopped || "open" !== y.get(t) || O(t, n);
+                            l.stopped || "open" !== k.get(t) || O(t, n);
                     else if ("user_message" === l.type)
                         s.h.dispatch({
                             type: "VIBEGRATIONS_CHAT_MESSAGE_APPEND",
@@ -244,7 +247,7 @@ async function H(e, t) {
                         });
                     else if ("message_disposition" === l.type)
                         (a = l.disposition),
-                            Object.prototype.hasOwnProperty.call(R, a) &&
+                            Object.prototype.hasOwnProperty.call(P, a) &&
                                 s.h.dispatch({
                                     type: "VIBEGRATIONS_CHAT_MESSAGE_DISPOSITION",
                                     projectId: t,
@@ -278,7 +281,7 @@ async function H(e, t) {
                                       turnId: l.turn_id,
                                       patch: { content: e, kind: "message" },
                                   })
-                                : I(t, b.intl.string(v.default.Z8Eo8I), S);
+                                : T(t, b.intl.string(v.default.Z8Eo8I), I);
                         } else if ("announcement" === l.kind) {
                             let e = l.message ?? "";
                             "" !== e &&
@@ -341,7 +344,7 @@ async function H(e, t) {
                                       turnId: l.turn_id,
                                       patch: { proposal: l.proposal, kind: "proposal" },
                                   })
-                                : I(t, b.intl.string(v.default.IHCafX), S);
+                                : T(t, b.intl.string(v.default.IHCafX), I);
                         else if ("ideas" === l.kind)
                             null != l.ideas &&
                                 l.ideas.length > 0 &&
@@ -371,14 +374,21 @@ async function H(e, t) {
                                 });
                         else if ("collect_secrets" === l.kind) {
                             let e = l.fields ?? [];
-                            (e.length > 0 || null != l.connection) &&
+                            e.length > 0 &&
                                 s.h.dispatch({
                                     type: "VIBEGRATIONS_CHAT_TURN_PATCH",
                                     projectId: t,
                                     turnId: l.turn_id,
-                                    patch: { secretRequest: { fields: e, connection: l.connection, note: l.note } },
+                                    patch: { secretRequest: { fields: e, note: l.note, copy_values: l.copy_values } },
                                 });
-                        } else if ("usage" === l.kind)
+                        } else if ("collect_settings" === l.kind)
+                            s.h.dispatch({
+                                type: "VIBEGRATIONS_CHAT_TURN_PATCH",
+                                projectId: t,
+                                turnId: l.turn_id,
+                                patch: { settingsRequest: { keys: l.keys, note: l.note } },
+                            });
+                        else if ("usage" === l.kind)
                             null != l.turn &&
                                 null != l.project &&
                                 s.h.dispatch({
@@ -427,7 +437,7 @@ async function H(e, t) {
                                 turnId: l.turn_id,
                                 step: l,
                             });
-                            let e = M[l.kind];
+                            let e = L[l.kind];
                             null != e && (0, u.Z0)(t, { ...e, message: l.message, details: l.stderr_tail }),
                                 "preview_ready" === l.kind &&
                                     (0, d.tZ)(t, { isPreview: !0 }).catch((e) => {
@@ -436,7 +446,7 @@ async function H(e, t) {
                         }
                     else
                         "capture_preview" === l.type
-                            ? G(t, n, l).catch(() => {})
+                            ? F(t, n, l).catch(() => {})
                             : "model_settings" === l.type
                               ? s.h.dispatch({
                                     type: "VIBEGRATIONS_MODEL_SETTINGS_SET",
@@ -444,32 +454,38 @@ async function H(e, t) {
                                     settings: l.settings,
                                     choices: l.choices,
                                 })
-                              : (s.h.dispatch({ type: "VIBEGRATIONS_LOG_APPEND", projectId: t, log: l }),
-                                (function (e, t) {
-                                    if ("error" !== t.level) return;
-                                    let n = null != t.source ? L[t.source] : void 0;
-                                    if (null == n) return;
-                                    let l = D.get(e);
-                                    null == l && ((l = new Set()), D.set(e, l));
-                                    let a = `${t.source}:${t.message.replace(/\d+/g, "#").slice(0, 200)}`;
-                                    l.has(a) ||
-                                        l.size >= 10 ||
-                                        (l.add(a),
-                                        (0, u.Z0)(e, {
-                                            location: n.location,
-                                            code: n.code,
-                                            message: t.message,
-                                            details: t.source,
-                                        }));
-                                })(t, l));
+                              : "settings" === l.type
+                                ? s.h.dispatch({
+                                      type: "VIBEGRATIONS_SETTINGS_SET",
+                                      projectId: t,
+                                      settings: { schema: l.schema, values: l.values, secrets: l.secrets },
+                                  })
+                                : (s.h.dispatch({ type: "VIBEGRATIONS_LOG_APPEND", projectId: t, log: l }),
+                                  (function (e, t) {
+                                      if ("error" !== t.level) return;
+                                      let n = null != t.source ? D[t.source] : void 0;
+                                      if (null == n) return;
+                                      let l = G.get(e);
+                                      null == l && ((l = new Set()), G.set(e, l));
+                                      let a = `${t.source}:${t.message.replace(/\d+/g, "#").slice(0, 200)}`;
+                                      l.has(a) ||
+                                          l.size >= 10 ||
+                                          (l.add(a),
+                                          (0, u.Z0)(e, {
+                                              location: n.location,
+                                              code: n.code,
+                                              message: t.message,
+                                              details: t.source,
+                                          }));
+                                  })(t, l));
                 })(e, t, n),
             onClose: () => {
-                (k(t, "Connection closed before the publish result arrived"), t.disposed)
+                (j(t, "Connection closed before the publish result arrived"), t.disposed)
                     ? A(e, "closed")
                     : t.helloSeen
-                      ? ((t.reconnectPending = !0), A(e, "connecting"), t.backoff.fail(() => B(e)))
+                      ? ((t.reconnectPending = !0), A(e, "connecting"), t.backoff.fail(() => $(e)))
                       : (A(e, "closed"),
-                        P(e, t, "Connection closed before the message was sent"),
+                        M(e, t, "Connection closed before the message was sent"),
                         (t.pendingModelSettings = null));
             },
             onError: (e) => {
@@ -479,9 +495,9 @@ async function H(e, t) {
     } catch (n) {
         if ((console.error("[vibegrations] ws open failed", n), t.disposed)) return;
         A(e, "failed"),
-            P(e, t, n instanceof Error ? n.message : "ws open failed"),
+            M(e, t, n instanceof Error ? n.message : "ws open failed"),
             (t.pendingModelSettings = null),
-            k(t, "Connection failed before the publish result arrived"),
+            j(t, "Connection failed before the publish result arrived"),
             (0, u.Z0)(e, {
                 location: "connection",
                 code: u.xA.WS_OPEN_FAILED,
@@ -489,8 +505,8 @@ async function H(e, t) {
             });
     }
 }
-function B(e) {
-    let t = j.get(e);
+function $(e) {
+    let t = y.get(e);
     null == t &&
         ((t = {
             ws: new m(),
@@ -503,7 +519,7 @@ function B(e) {
             pendingModelSettings: null,
             pendingPublish: null,
         }),
-        j.set(e, t));
+        y.set(e, t));
     let n = t;
     (n.pendingEvents = []),
         (n.helloSeen = !1),
@@ -512,36 +528,36 @@ function B(e) {
         A(e, "connecting"),
         H(e, n);
 }
-function U(e) {
+function B(e) {
     var t;
-    let n = j.get(e);
+    let n = y.get(e);
     return (
         null != n &&
         ((n.disposed = !0),
         n.backoff.cancel(),
-        k(n, "Connection closed before the publish result arrived"),
+        j(n, "Connection closed before the publish result arrived"),
         n.ws.close(),
-        j.delete(e),
+        y.delete(e),
         (t = e),
         X.delete(t),
         A(e, "closed"),
         !0)
     );
 }
-function V(e) {
-    let t = j.get(e);
-    if (null == t) return void B(e);
-    let n = y.get(e);
-    ("closed" !== n && "failed" !== n) || t.reconnectPending || B(e);
+function U(e) {
+    let t = y.get(e);
+    if (null == t) return void $(e);
+    let n = k.get(e);
+    ("closed" !== n && "failed" !== n) || t.reconnectPending || $(e);
 }
-function F(e, t, n) {
+function V(e, t, n) {
     let l = t.trim(),
         a = null != n && n.length > 0 ? n : void 0;
     if ("" === l && null == a) return;
     let i = { content: l, nonce: (0, r.m)(), attachments: a },
-        s = j.get(e);
-    if (null != s && ("connecting" === y.get(e) || s.reconnectPending)) return void s.pendingSends.push(i);
-    T(e, i);
+        s = y.get(e);
+    if (null != s && ("connecting" === k.get(e) || s.reconnectPending)) return void s.pendingSends.push(i);
+    R(e, i);
     try {
         if (null == s) throw Error("Not connected");
         s.ws.sendUserMessage(
@@ -550,25 +566,25 @@ function F(e, t, n) {
             i.attachments?.map((e) => e.id),
         );
     } catch (t) {
-        console.error("[vibegrations] send failed", t), I(e, t instanceof Error ? t.message : "send failed");
+        console.error("[vibegrations] send failed", t), T(e, t instanceof Error ? t.message : "send failed");
     }
 }
-function W(e) {
-    let t = j.get(e);
+function q(e) {
+    let t = y.get(e);
     try {
         if (null == t) throw Error("Not connected");
-        t.ws.sendInterrupt(), f.Ay.isThinking(e) && N.add(e);
+        t.ws.sendInterrupt(), p.Ay.isThinking(e) && N.add(e);
     } catch (e) {
         console.error("[vibegrations] interrupt send failed", e);
     }
 }
-function q(e) {
+function z(e) {
     return new Promise((t, n) => {
-        let l = j.get(e);
+        let l = y.get(e);
         if (null == l) return void n(Error("Not connected"));
         if (null != l.pendingPublish) return void n(Error("Publish already in flight"));
         let a = setTimeout(() => {
-            k(l, "Publish timed out");
+            j(l, "Publish timed out");
         }, 12e4);
         l.pendingPublish = { resolve: t, reject: n, timeout: a };
         try {
@@ -580,14 +596,14 @@ function q(e) {
         throw ((0, d.Is)(e, t instanceof Error ? t.message : "publish failed", !1), t);
     });
 }
-function $(e, t) {
-    let n = j.get(e);
+function W(e, t) {
+    let n = y.get(e);
     null == n
         ? console.error("[vibegrations] stageModelSettings with no connection \u2014 call ensureConnection first")
         : (n.pendingModelSettings = t);
 }
-function z(e, t) {
-    let n = j.get(e);
+function K(e, t) {
+    let n = y.get(e);
     try {
         if (null == n) throw Error("Not connected");
         n.ws.sendModelSettings(t);
@@ -596,27 +612,27 @@ function z(e, t) {
     }
 }
 let X = new Map();
-function K(e) {
-    let t = (0, f.bi)(e);
+function Y(e) {
+    let t = (0, p.bi)(e);
     if (null == t) return !1;
     if (X.get(e) === t) return !0;
-    let n = j.get(e);
+    let n = y.get(e);
     return null != n && (X.set(e, t), n.ws.sendLoadHistory(t), !0);
 }
-async function Y(e) {
+async function Z(e) {
     let { body: t } = await i.Bo.post({ url: x.Rsh.VIBEGRATIONS_PROJECT_WS_TICKET(e), rejectWithError: !0 });
-    return { ticket: t.ticket, baseUrl: (0, p.V)() ?? t.url };
-}
-function Z(e, t) {
-    return null == t ? `${e}/agent/attachments` : `${e}/agent/attachments/${encodeURIComponent(t)}`;
+    return { ticket: t.ticket, baseUrl: (0, f.V)() ?? t.url };
 }
 function J(e, t) {
-    return Q(e, t, t.name, t.type);
+    return null == t ? `${e}/agent/attachments` : `${e}/agent/attachments/${encodeURIComponent(t)}`;
 }
-async function Q(e, t, n, l) {
-    let { ticket: a, baseUrl: i } = await Y(e),
+function Q(e, t) {
+    return ee(e, t, t.name, t.type);
+}
+async function ee(e, t, n, l) {
+    let { ticket: a, baseUrl: i } = await Z(e),
         s = new URLSearchParams({ ticket: a, name: n }),
-        r = await fetch(`${Z(i)}?${s}`, {
+        r = await fetch(`${J(i)}?${s}`, {
             method: "POST",
             headers: { "content-type": "" !== l ? l : "application/octet-stream" },
             body: t,
@@ -624,24 +640,24 @@ async function Q(e, t, n, l) {
     if (!r.ok) throw Error(`attachment upload failed (${r.status})`);
     return await r.json();
 }
-class ee extends Error {
+class et extends Error {
     status;
     constructor(e) {
         super(`fork failed (${e})`), (this.status = e);
     }
 }
-async function et(e, t) {
-    let [n, l] = await Promise.all([Y(e), Y(t)]),
+async function en(e, t) {
+    let [n, l] = await Promise.all([Z(e), Z(t)]),
         a = new URLSearchParams({ ticket: n.ticket }),
         i = await fetch(`${n.baseUrl}/agent/fork?${a}`, {
             method: "POST",
             headers: { "content-type": "application/json" },
             body: JSON.stringify({ dest_ticket: l.ticket }),
         });
-    if (!i.ok) throw new ee(i.status);
+    if (!i.ok) throw new et(i.status);
 }
-async function en(e, t) {
-    let { ticket: n, baseUrl: l } = await Y(e),
+async function el(e, t) {
+    let { ticket: n, baseUrl: l } = await Z(e),
         a = new URLSearchParams({ ticket: n }),
         i = await fetch(`${l}/agent/secrets?${a}`, {
             method: "PUT",
@@ -650,9 +666,31 @@ async function en(e, t) {
         });
     if (!i.ok) throw Error(`secret submission failed (${i.status})`);
 }
-async function el(e) {
+async function ea(e, t) {
+    let { ticket: n, baseUrl: l } = await Z(e),
+        a = new URLSearchParams({ ticket: n }),
+        i = await fetch(`${l}/agent/settings?${a}`, {
+            method: "PUT",
+            headers: { "content-type": "application/json" },
+            body: JSON.stringify(t),
+        });
+    if (!i.ok) throw Error(`settings submission failed (${i.status})`);
+    let s = await i.json().catch(() => null);
+    return { rebuildRequired: s?.rebuild_required === !0 };
+}
+function ei(e) {
+    (async function () {
+        let { ticket: t, baseUrl: n } = await Z(e),
+            l = new URLSearchParams({ ticket: t }),
+            a = await fetch(`${n}/agent/rebuild?${l}`, { method: "POST" });
+        a.ok || console.warn("[vibegrations] settings rebuild request failed", e, a.status);
+    })().catch((t) => {
+        console.warn("[vibegrations] settings rebuild request failed", e, t);
+    });
+}
+async function es(e) {
     let { regenerate: t = !1 } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-        { ticket: n, baseUrl: l } = await Y(e),
+        { ticket: n, baseUrl: l } = await Z(e),
         a = new URLSearchParams({ ticket: n });
     t && a.set("regenerate", "1");
     let i = await fetch(`${l}/agent/mcp-token?${a}`, { method: "POST" });
@@ -660,73 +698,80 @@ async function el(e) {
     let s = await i.json();
     return { url: s.url, token: s.token, expiresAt: s.expires_at };
 }
-async function ea(e, t) {
-    let { ticket: n, baseUrl: l } = await Y(e),
+async function er(e, t) {
+    let { ticket: n, baseUrl: l } = await Z(e),
         a = new URLSearchParams({ ticket: n }),
-        i = await fetch(`${Z(l, t)}?${a}`, { method: "DELETE", keepalive: !0 });
+        i = await fetch(`${J(l, t)}?${a}`, { method: "DELETE", keepalive: !0 });
     if (!i.ok) throw Error(`attachment cleanup failed (${i.status})`);
 }
-async function ei(e, t) {
-    let { ticket: n, baseUrl: l } = await Y(e),
+async function eo(e, t) {
+    let { ticket: n, baseUrl: l } = await Z(e),
         a = new URLSearchParams({ ticket: n });
     return `${l}/agent/screenshots/${encodeURIComponent(t)}?${a}`;
 }
-async function es(e, t) {
+async function ec(e, t) {
     let { download: n = !1 } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-        { ticket: l, baseUrl: a } = await Y(e),
+        { ticket: l, baseUrl: a } = await Z(e),
         i = new URLSearchParams({ ticket: l });
-    return n && i.set("download", "1"), `${Z(a, t)}?${i}`;
+    return n && i.set("download", "1"), `${J(a, t)}?${i}`;
 }
-async function er(e, t) {
-    let n = await es(e, t),
+async function ed(e, t) {
+    let n = await ec(e, t),
         l = await fetch(n, { method: "HEAD" });
     if (404 === l.status) return !1;
     if (!l.ok) throw Error(`attachment availability check failed (${l.status})`);
     return !0;
 }
-class eo extends a.Ay.Store {
+class eu extends a.Ay.Store {
     initialize() {
-        this.waitFor(o.default, f.Ay, g.A);
+        this.waitFor(o.default, p.Ay, g.A);
     }
     getConnState(e) {
-        return y.get(e) ?? "connecting";
+        return k.get(e) ?? "connecting";
     }
     isChatStopped(e) {
-        return _.get(e) ?? !1;
+        return w.get(e) ?? !1;
     }
     getModelSettings(e) {
+        return _.get(e) ?? null;
+    }
+    getSettings(e) {
         return E.get(e) ?? null;
     }
 }
-let ec = new eo(s.h, {
+let eh = new eu(s.h, {
     VIBEGRATIONS_CHAT_CONN_STATE: function (e) {
         let { projectId: t, connState: n } = e;
-        if (y.get(t) === n) return !1;
-        y.set(t, n), ("closed" === n || "failed" === n) && N.delete(t);
+        if (k.get(t) === n) return !1;
+        k.set(t, n), ("closed" === n || "failed" === n) && N.delete(t);
     },
     VIBEGRATIONS_CHAT_STOPPED_SET: function (e) {
         let { projectId: t, stopped: n } = e;
-        if ((_.get(t) ?? !1) === n) return !1;
-        _.set(t, n);
+        if ((w.get(t) ?? !1) === n) return !1;
+        w.set(t, n);
     },
     VIBEGRATIONS_MODEL_SETTINGS_SET: function (e) {
         let { projectId: t, settings: n, choices: l } = e;
-        E.set(t, { settings: n, choices: l });
+        _.set(t, { settings: n, choices: l });
+    },
+    VIBEGRATIONS_SETTINGS_SET: function (e) {
+        let { projectId: t, settings: n } = e;
+        E.set(t, n);
     },
     VIBEGRATIONS_PROJECT_DELETE_SUCCESS: function (e) {
         let { projectId: t } = e;
-        if (!U(t)) return !1;
+        if (!B(t)) return !1;
     },
     VIBEGRATIONS_PROJECTS_FETCH_SUCCESS: function (e) {
         let { projects: t } = e,
             n = new Set(t.map((e) => e.id)),
             l = !1;
-        for (let e of Array.from(j.keys())) !n.has(e) && U(e) && (l = !0);
+        for (let e of Array.from(y.keys())) !n.has(e) && B(e) && (l = !0);
         if (!l) return !1;
     },
     LOGOUT: function () {
-        if (0 === j.size) return !1;
-        for (let e of Array.from(j.keys())) U(e);
-        _.clear();
+        if (0 === y.size) return !1;
+        for (let e of Array.from(y.keys())) B(e);
+        w.clear();
     },
 });

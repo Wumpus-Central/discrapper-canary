@@ -1,249 +1,154 @@
-e.d(l, { default: () => h });
-var a = e(477900),
-    n = e(582128),
-    i = e(189213),
-    s = e(834730),
-    r = e(95477),
-    o = e(297264),
-    c = e(821609),
-    d = e(957565),
-    u = e(998939),
-    m = e(459864),
-    x = e(375708),
-    f = e(652140);
-function h(t) {
-    let { projectId: l, request: e, transitionState: h, onClose: p } = t,
-        j = e.connection,
-        b = null == j ? "" : j.label,
-        [g, v] = n.useState({}),
-        [k, C] = n.useState(""),
-        [S, _] = n.useState(""),
-        [y, E] = n.useState(!1),
-        [N, T] = n.useState(!1),
-        [w, z] = n.useState(null),
-        P = n.useCallback((t) => {
-            (0, d.C)(t, () => z(t));
+l.d(t, { default: () => h });
+var a = l(477900),
+    n = l(582128),
+    s = l(189213),
+    i = l(834730),
+    r = l(821609),
+    d = l(95477),
+    c = l(957565),
+    o = l(998939),
+    u = l(459864),
+    m = l(375708),
+    x = l(652140);
+function h(e) {
+    let { projectId: t, request: l, transitionState: h, onClose: p } = e,
+        [f, v] = n.useState({}),
+        [b, g] = n.useState(!1),
+        [j, C] = n.useState(!1),
+        [y, k] = n.useState(null),
+        E = n.useCallback((e) => {
+            (0, c.C)(e, () => k(e));
         }, []),
-        V = n.useCallback((t, l) => {
-            null != l && (T(!1), v((e) => ({ ...e, [l]: t })));
+        S = n.useCallback((e, t) => {
+            null != t && (C(!1), v((l) => ({ ...l, [t]: e })));
         }, []),
-        W = e.fields.map((t) => t.name).filter((t) => "" !== (g[t] ?? "").trim()),
-        Z = null != j && "" !== k.trim() && "" !== S.trim(),
-        A = null != j && !Z && ("" !== k.trim() || "" !== S.trim()),
-        F = !A && (W.length > 0 || Z),
-        J = W.length < e.fields.length || (null != j && !Z),
-        q = n.useCallback(
-            async (t) => {
-                if ((t.preventDefault(), !F || y)) return;
-                let e = {};
-                W.length > 0 && (e.secrets = Object.fromEntries(W.map((t) => [t, g[t].trim()]))),
-                    Z &&
-                        null != j &&
-                        (e.connection = {
-                            connection_type: j.connection_type,
-                            client_id: k.trim(),
-                            client_secret: S.trim(),
-                            authorize_url: j.authorize_url,
-                            token_url: j.token_url,
-                        }),
-                    E(!0),
-                    T(!1);
-                try {
-                    await (0, u.$S)(l, e),
-                        (0, u.dv)(l, x.intl.string(J ? m.default.pu8e3p : m.default.lM98yZ)),
-                        await p();
-                } catch {
-                    T(!0);
-                } finally {
-                    E(!1);
+        w = l.fields.map((e) => e.name).filter((e) => "" !== (f[e] ?? "").trim()),
+        N = w.length > 0,
+        _ = w.length < l.fields.length,
+        A = n.useCallback(
+            async (e) => {
+                if ((e.preventDefault(), N && !b)) {
+                    g(!0), C(!1);
+                    try {
+                        await (0, o.$S)(t, { secrets: Object.fromEntries(w.map((e) => [e, f[e].trim()])) }),
+                            (0, o.dv)(t, m.intl.string(_ ? u.default.pu8e3p : u.default.lM98yZ)),
+                            await p();
+                    } catch {
+                        C(!0);
+                    } finally {
+                        g(!1);
+                    }
                 }
             },
-            [F, k, S, j, Z, W, J, p, l, y, g],
+            [N, w, _, p, t, b, f],
         );
     return (0, a.jsx)("form", {
-        onSubmit: q,
-        children: (0, a.jsx)(i.Modal, {
+        onSubmit: A,
+        children: (0, a.jsx)(s.Modal, {
             transitionState: h,
             onClose: p,
-            title: x.intl.string(m.default.ACvhVC),
+            title: m.intl.string(u.default.ACvhVC),
             size: "md",
             actions: [
-                { text: x.intl.string(x.t["ETE/oC"]), variant: "secondary", onClick: p, disabled: y },
+                { text: m.intl.string(m.t["ETE/oC"]), variant: "secondary", onClick: p, disabled: b },
                 {
-                    text: x.intl.string(m.default["8SWZaW"]),
+                    text: m.intl.string(u.default["8SWZaW"]),
                     variant: "primary",
                     type: "submit",
-                    loading: y,
-                    disabled: !F,
+                    loading: b,
+                    disabled: !N,
                 },
             ],
             children: (0, a.jsxs)("div", {
-                className: f._I,
+                className: x._I,
                 children: [
-                    null != e.note && "" !== e.note
-                        ? (0, a.jsx)(s.E, {
+                    null != l.note && "" !== l.note
+                        ? (0, a.jsx)(i.E, {
                               variant: "text-sm/normal",
                               color: "text-default",
                               selectable: !0,
-                              children: e.note,
+                              children: l.note,
                           })
                         : null,
-                    (0, a.jsx)(s.E, {
+                    (0, a.jsx)(i.E, {
                         variant: "text-xs/normal",
                         color: "text-muted",
                         selectable: !0,
-                        children: x.intl.string(m.default.p0Ay4J),
+                        children: m.intl.string(u.default.p0Ay4J),
                     }),
-                    e.fields.length + +(null != j) > 1
-                        ? (0, a.jsx)(s.E, {
+                    l.fields.length > 1
+                        ? (0, a.jsx)(i.E, {
                               variant: "text-xs/normal",
                               color: "text-muted",
                               selectable: !0,
-                              children: x.intl.string(m.default.LpnmXm),
+                              children: m.intl.string(u.default.LpnmXm),
                           })
                         : null,
-                    e.fields.map((t) =>
+                    (l.copy_values ?? []).length > 0
+                        ? (0, a.jsx)("ul", {
+                              className: x.vU,
+                              children: (l.copy_values ?? []).map((e) =>
+                                  (0, a.jsxs)(
+                                      "li",
+                                      {
+                                          className: x.Jq,
+                                          children: [
+                                              (0, a.jsxs)("div", {
+                                                  className: x.ll,
+                                                  children: [
+                                                      (0, a.jsx)(i.E, {
+                                                          variant: "text-xs/semibold",
+                                                          color: "text-muted",
+                                                          tag: "span",
+                                                          children: e.label,
+                                                      }),
+                                                      (0, a.jsx)("span", {
+                                                          className: x.Ml,
+                                                          children: (0, a.jsx)(i.E, {
+                                                              variant: "text-xs/normal",
+                                                              color: "text-default",
+                                                              selectable: !0,
+                                                              children: e.value,
+                                                          }),
+                                                      }),
+                                                  ],
+                                              }),
+                                              (0, a.jsx)(r.$, {
+                                                  variant: "secondary",
+                                                  size: "sm",
+                                                  text: m.intl.string(y === e.value ? m.t.t5VZ88 : m.t.OpuAlK),
+                                                  onClick: () => E(e.value),
+                                              }),
+                                          ],
+                                      },
+                                      e.label,
+                                  ),
+                              ),
+                          })
+                        : null,
+                    l.fields.map((e) =>
                         (0, a.jsx)(
-                            r.k,
+                            d.k,
                             {
-                                label: t.label,
-                                helperText: null != t.hint && "" !== t.hint ? t.hint : void 0,
-                                name: t.name,
+                                label: e.label,
+                                helperText: null != e.hint && "" !== e.hint ? e.hint : void 0,
+                                name: e.name,
                                 type: "password",
                                 autoComplete: "off",
-                                value: g[t.name] ?? "",
-                                onChange: V,
-                                disabled: y,
+                                value: f[e.name] ?? "",
+                                onChange: S,
+                                disabled: b,
                                 fullWidth: !0,
                             },
-                            t.name,
+                            e.name,
                         ),
                     ),
-                    null != j
-                        ? (0, a.jsxs)("div", {
-                              className: f.uJ,
-                              children: [
-                                  (0, a.jsx)(o.D, {
-                                      variant: "heading-sm/semibold",
-                                      color: "text-default",
-                                      children: x.intl.formatToPlainString(m.default.zqgV1t, { platform: b }),
-                                  }),
-                                  (0, a.jsxs)("ol", {
-                                      className: f.tk,
-                                      children: [
-                                          (0, a.jsx)("li", {
-                                              className: f.Ci,
-                                              children: (0, a.jsx)(s.E, {
-                                                  variant: "text-sm/normal",
-                                                  color: "text-default",
-                                                  children: x.intl.formatToPlainString(m.default.A4GtqV, {
-                                                      platform: b,
-                                                  }),
-                                              }),
-                                          }),
-                                          (0, a.jsxs)("li", {
-                                              className: f.Ci,
-                                              children: [
-                                                  (0, a.jsx)(s.E, {
-                                                      variant: "text-sm/normal",
-                                                      color: "text-default",
-                                                      children: x.intl.string(m.default.j2JF7B),
-                                                  }),
-                                                  (0, a.jsx)("ul", {
-                                                      className: f.Dl,
-                                                      children: [j.callback_urls.stable, j.callback_urls.preview].map(
-                                                          (t) =>
-                                                              (0, a.jsxs)(
-                                                                  "li",
-                                                                  {
-                                                                      className: f.NT,
-                                                                      children: [
-                                                                          (0, a.jsx)("span", {
-                                                                              className: f.kg,
-                                                                              children: (0, a.jsx)(s.E, {
-                                                                                  variant: "text-xs/normal",
-                                                                                  color: "text-default",
-                                                                                  selectable: !0,
-                                                                                  children: t,
-                                                                              }),
-                                                                          }),
-                                                                          (0, a.jsx)(c.$, {
-                                                                              variant: "secondary",
-                                                                              size: "sm",
-                                                                              text: x.intl.string(
-                                                                                  w === t ? x.t.t5VZ88 : x.t.OpuAlK,
-                                                                              ),
-                                                                              onClick: () => P(t),
-                                                                          }),
-                                                                      ],
-                                                                  },
-                                                                  t,
-                                                              ),
-                                                      ),
-                                                  }),
-                                              ],
-                                          }),
-                                          (0, a.jsxs)("li", {
-                                              className: f.Ci,
-                                              children: [
-                                                  (0, a.jsx)(s.E, {
-                                                      variant: "text-sm/normal",
-                                                      color: "text-default",
-                                                      children: x.intl.string(m.default.JiwZjF),
-                                                  }),
-                                                  (0, a.jsxs)("div", {
-                                                      className: f.Z4,
-                                                      children: [
-                                                          (0, a.jsx)(r.k, {
-                                                              label: x.intl.formatToPlainString(m.default.NT5IFS, {
-                                                                  platform: b,
-                                                              }),
-                                                              name: "client_id",
-                                                              autoComplete: "off",
-                                                              value: k,
-                                                              onChange: (t) => {
-                                                                  T(!1), C(t);
-                                                              },
-                                                              disabled: y,
-                                                              fullWidth: !0,
-                                                          }),
-                                                          (0, a.jsx)(r.k, {
-                                                              label: x.intl.formatToPlainString(m.default["koywk/"], {
-                                                                  platform: b,
-                                                              }),
-                                                              name: "client_secret",
-                                                              type: "password",
-                                                              autoComplete: "off",
-                                                              value: S,
-                                                              onChange: (t) => {
-                                                                  T(!1), _(t);
-                                                              },
-                                                              disabled: y,
-                                                              fullWidth: !0,
-                                                          }),
-                                                      ],
-                                                  }),
-                                              ],
-                                          }),
-                                      ],
-                                  }),
-                                  A
-                                      ? (0, a.jsx)(s.E, {
-                                            variant: "text-xs/normal",
-                                            color: "text-feedback-critical",
-                                            role: "alert",
-                                            children: x.intl.formatToPlainString(m.default.VqmTFn, { platform: b }),
-                                        })
-                                      : null,
-                              ],
-                          })
-                        : null,
-                    N
-                        ? (0, a.jsx)(s.E, {
+                    j
+                        ? (0, a.jsx)(i.E, {
                               variant: "text-xs/normal",
                               color: "text-feedback-critical",
                               role: "alert",
-                              children: x.intl.string(m.default["4nT7Lo"]),
+                              children: m.intl.string(u.default["4nT7Lo"]),
                           })
                         : null,
                 ],
