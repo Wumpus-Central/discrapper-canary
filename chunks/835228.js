@@ -222,21 +222,22 @@ function y(e) {
     );
 }
 function C(e) {
-    let { onLoad: t } = e,
-        [n, i] = l.useState(!1),
-        a = l.useCallback(
+    let { transparentWhileLoading: t = !1, ...n } = e,
+        { onLoad: i } = n,
+        [a, u] = l.useState(!1),
+        o = l.useCallback(
             (e) => {
-                i(!0), t?.(e);
+                u(!0), i?.(e);
             },
-            [t],
+            [i],
         );
     return (0, r.jsxs)("div", {
         className: S.Qf,
         children: [
-            !n && (0, r.jsx)("div", { className: s()(S.Qf, S.SL) }),
+            !a && (0, r.jsx)("div", { className: s()(S.Qf, !0 !== t ? S.SL : void 0) }),
             (0, r.jsx)("div", {
-                className: s()(S.Qf, n ? void 0 : S.Ar),
-                children: (0, r.jsx)(y, { ...e, onLoad: a }),
+                className: s()(S.Qf, a ? void 0 : S.Ar),
+                children: (0, r.jsx)(y, { ...n, onLoad: o }),
             }),
         ],
     });
