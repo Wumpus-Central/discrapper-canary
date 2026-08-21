@@ -1,105 +1,129 @@
-i.d(e, {
-    Eo: () => d,
-    GG: () => P,
-    HV: () => B,
-    Is: () => R,
-    M7: () => S,
-    U1: () => s,
-    Zq: () => y,
-    dm: () => O,
-    gA: () => A,
-    hF: () => I,
-    oB: () => T,
-    tZ: () => C,
-    xx: () => h,
-});
-var r = i(636537),
-    n = i(228366),
-    _ = i(627363),
-    E = i(625180),
-    a = i(91242),
-    l = i(927899),
-    o = i(972786),
-    c = i(652215),
-    p = i(165610);
-function R(t, e, i) {
-    (0, l.Z0)(t, {
+i.d(t, {
+    Eo: () => h,
+    GG: () => y,
+    HV: () => m,
+    Is: () => s,
+    M7: () => O,
+    Ok: () => k,
+    U1: () => T,
+    Zq: () => b,
+    dm: () => C,
+    gA: () => f,
+    hF: () => R,
+    oB: () => g,
+    tZ: () => P,
+    xx: () => B,
+}),
+    i(938796);
+var n = i(636537),
+    r = i(228366),
+    a = i(627363),
+    o = i(625180),
+    l = i(91242),
+    u = i(673724),
+    _ = i(927899),
+    c = i(972786),
+    p = i(652215),
+    d = i(165610);
+function s(e, t, i) {
+    (0, _.Z0)(e, {
         location: "publish",
-        code: l.xA.PUBLISH_FAILED,
+        code: _.xA.PUBLISH_FAILED,
         message: `publish${i ? "-preview" : ""} failed`,
-        details: e,
+        details: t,
         isPreview: i,
     });
 }
-function u(t) {
-    if (null != t)
-        for (let e of a.A.getAllFrames())
-            (0, p.x1)(e) && e.applicationId === t && !e.data.proxyTicketRefreshing && E.A.refreshProxyTicket(e.id);
+function E(e) {
+    if (null != e)
+        for (let t of l.A.getAllFrames())
+            (0, d.x1)(t) && t.applicationId === e && !t.data.proxyTicketRefreshing && o.A.refreshProxyTicket(t.id);
 }
-function d(t) {
-    let e = o.A.getProject(t);
-    null != e && (u(e.application_id), u(e.preview_application_id ?? null));
+function h(e) {
+    let t = c.A.getProject(e);
+    null != t && (E(t.application_id), E(t.preview_application_id ?? null));
 }
-async function I() {
-    if (o.A.getProjectsFetchState()?.type !== "loading") {
-        n.h.dispatch({ type: "VIBEGRATIONS_PROJECTS_FETCH_START" });
-        try {
-            let { body: t } = await r.Bo.get({ url: c.Rsh.VIBEGRATIONS_PROJECTS, rejectWithError: !0 });
-            n.h.dispatch({ type: "VIBEGRATIONS_PROJECTS_FETCH_SUCCESS", projects: t });
-        } catch {
-            n.h.dispatch({ type: "VIBEGRATIONS_PROJECTS_FETCH_FAIL" });
-        }
+let A = null,
+    I = null;
+async function R(e) {
+    let t = e ?? null;
+    if (c.A.getProjectsFetchState()?.type === "loading") {
+        null != t && t !== A && (I = t);
+        return;
     }
+    (A = t), r.h.dispatch({ type: "VIBEGRATIONS_PROJECTS_FETCH_START" });
+    try {
+        let { body: i } = await n.Bo.get({
+            url: p.Rsh.VIBEGRATIONS_PROJECTS,
+            query: null != e ? { guild_id: e } : void 0,
+            rejectWithError: !0,
+        });
+        r.h.dispatch({ type: "VIBEGRATIONS_PROJECTS_FETCH_SUCCESS", projects: i, guildId: t });
+    } catch {
+        r.h.dispatch({ type: "VIBEGRATIONS_PROJECTS_FETCH_FAIL" });
+    }
+    let i = I;
+    (I = null), null != i && i !== t && R(i);
 }
-async function s(t, e) {
-    let i = await r.Bo.get({ url: c.Rsh.VIBEGRATIONS_PROJECT(t), rejectWithError: !1, signal: e });
-    if (e?.aborted !== !0) {
-        var _;
-        n.h.dispatch({ type: "VIBEGRATIONS_PROJECT_UPDATE_SUCCESS", project: i.body.project }),
-            (_ = {
+async function T(e, t) {
+    let i = await n.Bo.get({ url: p.Rsh.VIBEGRATIONS_PROJECT(e), rejectWithError: !1, signal: t });
+    if (t?.aborted !== !0 && i.ok) {
+        var a;
+        r.h.dispatch({ type: "VIBEGRATIONS_PROJECT_UPDATE_SUCCESS", project: i.body.project }),
+            (a = {
                 bot_permissions_changed: i.body.bot_permissions_changed,
                 integration_installed: i.body.integration_installed,
                 preview_ready: i.body.preview_ready,
             }),
-            n.h.dispatch({
+            r.h.dispatch({
                 type: "VIBEGRATIONS_PROJECT_INTEGRATION_STATUS_UPDATE",
-                projectId: t,
-                integrationStatus: _,
+                projectId: e,
+                integrationStatus: a,
             });
     }
     return i;
 }
-async function A(t) {
-    let { body: e } = await r.Bo.post({ url: c.Rsh.VIBEGRATIONS_PROJECTS, body: t, rejectWithError: !1 });
-    return n.h.dispatch({ type: "VIBEGRATIONS_PROJECT_CREATE_SUCCESS", project: e }), e.id;
+async function f(e) {
+    let { body: t } = await n.Bo.post({
+        url: p.Rsh.VIBEGRATIONS_PROJECTS,
+        body: { flags: u.A2.PUBLIC, ...e },
+        rejectWithError: !1,
+    });
+    return r.h.dispatch({ type: "VIBEGRATIONS_PROJECT_CREATE_SUCCESS", project: t }), t.id;
 }
-async function T(t, e) {
-    let i = await r.Bo.patch({ url: c.Rsh.VIBEGRATIONS_PROJECT(t), body: { name: e }, rejectWithError: !1 });
-    return n.h.dispatch({ type: "VIBEGRATIONS_PROJECT_UPDATE_SUCCESS", project: i.body }), i;
+async function S(e, t) {
+    let i = await n.Bo.patch({ url: p.Rsh.VIBEGRATIONS_PROJECT(e), body: t, rejectWithError: !1 });
+    return i.ok && r.h.dispatch({ type: "VIBEGRATIONS_PROJECT_UPDATE_SUCCESS", project: i.body }), i;
 }
-async function S(t, e) {
-    let i = await r.Bo.patch({ url: c.Rsh.VIBEGRATIONS_PROJECT(t), body: e, rejectWithError: !1 });
-    return n.h.dispatch({ type: "VIBEGRATIONS_PROJECT_UPDATE_SUCCESS", project: i.body }), i;
+function g(e, t) {
+    return S(e, { name: t });
 }
-async function h(t) {
-    let e = await r.Bo.del({ url: c.Rsh.VIBEGRATIONS_PROJECT(t), rejectWithError: !1 });
-    return n.h.dispatch({ type: "VIBEGRATIONS_PROJECT_DELETE_SUCCESS", projectId: t }), e;
+function k(e, t) {
+    let i = c.A.getProject(e)?.flags ?? 0;
+    return S(e, { flags: t ? i | u.A2.PUBLIC : i & ~u.A2.PUBLIC });
 }
-function O(t, e) {
-    n.h.dispatch({ type: "VIBEGRATIONS_PROJECT_SELECT", guildId: t, projectId: e });
+function O(e, t) {
+    return S(e, t);
 }
-async function C(t, e) {
-    let { isPreview: i } = e,
-        { bot_permissions_changed: r, integration_installed: n, project: E } = (await s(t)).body,
-        a = i ? E.preview_application_id : E.application_id;
-    null != a && (await (0, _.TA)(a), (i && (!n || r)) || u(a)), (0, l.qs)(t, { isPreview: i });
+async function B(e) {
+    let t = await n.Bo.del({ url: p.Rsh.VIBEGRATIONS_PROJECT(e), rejectWithError: !1 });
+    return r.h.dispatch({ type: "VIBEGRATIONS_PROJECT_DELETE_SUCCESS", projectId: e }), t;
 }
-function y(t) {
-    n.h.dispatch({ type: "VIBEGRATIONS_CHAT_SIDEBAR_WIDTH_SET", width: t });
+function C(e, t) {
+    r.h.dispatch({ type: "VIBEGRATIONS_PROJECT_SELECT", guildId: e, projectId: t });
 }
-function B(t) {
-    n.h.dispatch({ type: "VIBEGRATIONS_BUILDER_PREVIEW_APPLICATION_SET", applicationId: t });
+async function P(e, t) {
+    let { isPreview: i } = t,
+        { bot_permissions_changed: n, integration_installed: r, project: o } = (await T(e)).body,
+        l = i ? o.preview_application_id : o.application_id;
+    null != l && (await (0, a.TA)(l), (i && (!r || n)) || E(l)), (0, _.qs)(e, { isPreview: i });
 }
-function P(t) {
-    n.h.dispatch({ type: "VIBEGRATIONS_BUILDER_PREVIEW_MOBILE_SET", enabled: t });
+function b(e) {
+    r.h.dispatch({ type: "VIBEGRATIONS_CHAT_SIDEBAR_WIDTH_SET", width: e });
+}
+function m(e) {
+    r.h.dispatch({ type: "VIBEGRATIONS_BUILDER_PREVIEW_APPLICATION_SET", applicationId: e });
+}
+function y(e) {
+    r.h.dispatch({ type: "VIBEGRATIONS_BUILDER_PREVIEW_MOBILE_SET", enabled: e });
 }

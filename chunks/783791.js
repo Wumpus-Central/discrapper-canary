@@ -450,11 +450,9 @@ let W = new F(r.h, {
         if (!k(t)) return !1;
     },
     VIBEGRATIONS_PROJECTS_FETCH_SUCCESS: function (e) {
-        let { projects: t } = e,
-            n = new Set(t.map((e) => e.id)),
-            i = new Set([...g.keys(), ...S.keys(), ...N.keys(), ...O.keys()]),
-            r = !1;
-        for (let e of i) !n.has(e) && k(e) && (r = !0);
-        if (!r) return !1;
+        let t = new Set([...g.keys(), ...S.keys(), ...N.keys(), ...O.keys()]),
+            n = !1;
+        for (let e of t) null == E.A.getProject(e) && k(e) && (n = !0);
+        if (!n) return !1;
     },
 });

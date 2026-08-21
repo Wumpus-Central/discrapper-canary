@@ -1451,7 +1451,7 @@ if (
     n.e("859864").then(n.t.bind(n, 122123, 19));
 let e2 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 new eB.A().log(
-    `[BUILD INFO] Release Channel: ${e2}, Build Number: 598532, Version Hash: db9eed306d28171c7cd9da6e41fc592eb6eb7f90`,
+    `[BUILD INFO] Release Channel: ${e2}, Build Number: 598550, Version Hash: 6c7d43da4f93a0ffaedd1f50e84197c9e4ad74c6`,
 ),
     D.A.setTags({ appContext: G.QCW }),
     eI.A.initBasic(),
@@ -20744,7 +20744,7 @@ let Na = "isHideDevBanner",
                     className: ta()(Nr.Wz, Nr.mr),
                     children: [
                         (0, O.jsx)(Ni, { className: Nr.Kk }),
-                        tT.intl.format(tT.t.uyrfYF, { buildNumber: "598532" }),
+                        tT.intl.format(tT.t.uyrfYF, { buildNumber: "598550" }),
                         (0, O.jsx)(r, {}),
                     ],
                 })
@@ -29202,7 +29202,7 @@ function Rq() {
                     o = (0, lc.Vq)(n) ? lj.Ay.getSelfEmbeddedActivityForLocation(n) : null,
                     d = rA.A.getMainFrame(),
                     c = (0, rT.h)(d?.surface),
-                    u = null == c && Rk.A.isOwnedVibegrationsProjectApplication(d?.applicationId),
+                    u = null == c && Rk.A.isVibegrationsProjectApplication(d?.applicationId),
                     _ = (null != c && (0, r0.kg)(rf.A.getChannel(c), "ActivitySounds")) || u;
                 return {
                     connectedActivityLocation: n,

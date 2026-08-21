@@ -24,6 +24,8 @@ e.exports = {
     RM: "creationsHeading_f8194a",
     MM: "projectInfo_f8194a",
     Dq: "projectsList_f8194a",
+    qx: "sharedProjects_f8194a",
+    uc: "sharedProjectsHeading_f8194a",
     OY: "projectCard_f8194a",
     W6: "projectCardSelect_f8194a",
     M2: "projectCardAction_f8194a",
