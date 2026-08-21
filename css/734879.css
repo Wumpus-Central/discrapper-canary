@@ -2997,6 +2997,115 @@
     transition: transform .15s cubic-bezier(.22, 1, .36, 1), opacity .15s cubic-bezier(.22, 1, .36, 1)
 }
 
+.questBanner__26e33 {
+    --custom-quest-banner-enter-duration: 250ms;
+    --custom-quest-banner-exit-duration: 150ms;
+    --custom-quest-banner-ease: cubic-bezier(0.22, 1, 0.36, 1);
+    background: var(--background-surface-high);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-high);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-12);
+    position: absolute;
+    top: var(--space-8);
+    inset-inline: var(--space-8);
+    margin: 0;
+    min-width: 0;
+    padding: var(--space-8);
+    transform-origin: top center;
+    will-change: transform, opacity;
+    z-index: 2
+}
+
+.questBanner__26e33[data-state=closing] {
+    pointer-events: none
+}
+
+@keyframes questBannerIn__26e33 {
+    0% {
+        opacity: 0;
+        transform: scale(.97)
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1)
+    }
+}
+
+@keyframes questBannerOut__26e33 {
+    0% {
+        opacity: 1;
+        transform: scale(1)
+    }
+
+    to {
+        opacity: 0;
+        transform: scale(.99)
+    }
+}
+
+.full-motion .questBanner__26e33[data-state=open] {
+    animation: questBannerIn__26e33 var(--custom-quest-banner-enter-duration) var(--custom-quest-banner-ease) both
+}
+
+.full-motion .questBanner__26e33[data-state=closing] {
+    animation: questBannerOut__26e33 var(--custom-quest-banner-exit-duration) var(--custom-quest-banner-ease) both
+}
+
+.questBannerGlow__26e33 {
+    filter: blur(25px);
+    height: 52px;
+    position: absolute;
+    top: -12px;
+    inset-inline: 0;
+    pointer-events: none;
+    z-index: 0
+}
+
+.questBannerGlowImage__26e33 {
+    height: 100%;
+    inset: 0;
+    -o-object-fit: cover;
+    object-fit: cover;
+    opacity: .3;
+    position: absolute;
+    width: 100%
+}
+
+.questBannerGlowFade__26e33 {
+    background: radial-gradient(60% 120% at 50% 0, transparent 30%, var(--background-surface-high) 90%);
+    inset: 0;
+    position: absolute
+}
+
+.questBannerHeader__26e33 {
+    align-items: center;
+    display: flex;
+    gap: var(--space-12);
+    min-width: 0;
+    position: relative;
+    z-index: 1
+}
+
+.questBannerArt__26e33 {
+    border-radius: var(--radius-md);
+    flex: 0 0 auto;
+    height: 36px;
+    -o-object-fit: cover;
+    object-fit: cover;
+    width: 36px
+}
+
+.questBannerCopy__26e33 {
+    display: flex;
+    flex-direction: column;
+    min-width: 0
+}
+
 .chat_f35ad6 {
     box-sizing: border-box;
     display: flex;
@@ -3007,13 +3116,14 @@
     min-height: 0;
     min-width: 0;
     overflow: hidden;
+    position: relative;
     -webkit-user-select: text;
     -moz-user-select: text;
     user-select: text;
     width: 100%
 }
 
-.chat_f35ad6>:not(.chatLog_f35ad6) {
+.chat_f35ad6>:not(.chatLog_f35ad6):not([data-vibegrations-quest-prompt]) {
     margin-inline: var(--space-8);
     position: relative;
     width: auto;
@@ -3929,4 +4039,4 @@
     text-align: center
 }
 
-/*# sourceMappingURL=248038.0e625b9fb7bf36a8.css.map*/
+/*# sourceMappingURL=734879.4be63a5e5b55bb6d.css.map*/
