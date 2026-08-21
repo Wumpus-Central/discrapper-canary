@@ -40,14 +40,10 @@
     max-height: 100%
 }
 
+.wrapper_a62174.vibegrationsBuilder_a62174,
 .wrapper_a62174.vibegrationsChannel_a62174 {
     height: calc(100% - var(--custom-channel-header-height) - 1px);
     top: calc(var(--custom-channel-header-height) + 1px)
-}
-
-.wrapper_a62174.vibegrationsBuilder_a62174 {
-    height: calc(100% - var(--custom-channel-header-height)*2);
-    top: calc(var(--custom-channel-header-height)*2)
 }
 
 .activityPanelContainer_a62174 {
@@ -173,4 +169,4 @@
     border-bottom-color: var(--app-frame-border)
 }
 
-/*# sourceMappingURL=586206.7aceb35c11d1be1d.css.map*/
+/*# sourceMappingURL=586206.872d4dcbd1d82e5b.css.map*/
