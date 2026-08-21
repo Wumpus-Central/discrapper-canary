@@ -929,7 +929,7 @@ var eM = n(280450),
     eO = n(397251),
     eB = n(980707),
     eK = n(477782),
-    eG = n(349288),
+    eG = n(28863),
     eF = n(922016),
     eU = n(975807),
     eW = n(212031),
@@ -945,8 +945,8 @@ var eM = n(280450),
 function eJ() {
     let e = (0, eZ.GV)(),
         t = window.GLOBAL_ENV.RELEASE_CHANNEL,
-        n = "598918",
-        s = "0e3256c0a943930a4ce3cdadb589f27022e3efc0".substring(0, 7),
+        n = "598967",
+        s = "a15a659795441a15a6c517e40ca47d6304589281".substring(0, 7),
         r = eX.A?.app.getVersion(),
         l = eX.A?.app.getBuildNumber(),
         c = eX.A?.app.getAppArch(),
@@ -1115,11 +1115,11 @@ function e2() {
     });
 }
 var e5 = n(402651),
-    e9 = n(669067),
-    e7 = n(830543),
+    e7 = n(669067),
+    e9 = n(830543),
     e8 = n(953056);
-let e3 = new Set([eD.X.PROFILE_PANEL, eD.X.SUBSCRIPTIONS_PANEL, eD.X.FAMILY_CENTER_PANEL, eD.X.POGGERMODE_PANEL]),
-    e4 = new Map([[eD.X.SESSIONS_PANEL, r.ImpressionNames.USER_SETTINGS_SESSIONS]]);
+let e4 = new Set([eD.X.PROFILE_PANEL, eD.X.SUBSCRIPTIONS_PANEL, eD.X.FAMILY_CENTER_PANEL, eD.X.POGGERMODE_PANEL]),
+    e3 = new Map([[eD.X.SESSIONS_PANEL, r.ImpressionNames.USER_SETTINGS_SESSIONS]]);
 function e6(e) {
     let { target: t, ...n } = e,
         l = e_.A.useField("query"),
@@ -1129,7 +1129,7 @@ function e6(e) {
         [h, g] = s.useState(!1);
     return (s.useLayoutEffect(() => {
         function e() {
-            null == eL.default.getCurrentUser() && (g(!0), (0, e7.default)());
+            null == eL.default.getCurrentUser() && (g(!0), (0, e9.default)());
         }
         return (
             eM.default.addChangeListener(e),
@@ -1146,8 +1146,8 @@ function e6(e) {
               emptyState: tt,
               sidebarFooter: e2,
               onViewChange: function (e) {
-                  e3.has(e) || (0, e9._)(e);
-                  let t = e4.get(e);
+                  e4.has(e) || (0, e7._)(e);
+                  let t = e3.get(e);
                   null != t &&
                       (0, o.x)({
                           type: r.ImpressionTypes.PANE,

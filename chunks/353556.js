@@ -302,13 +302,14 @@ function eg(e) {
     function j() {
         (0, W.AD)((e) => new I.Tu({ ...e, sections: e.sections.filter((e, t) => t !== s) }));
     }
-    let v = null != i.image || u,
-        A = v || a;
+    let v = a || "" !== i.title.trim() || "" !== i.subtitle.trim(),
+        A = null != i.image || u,
+        E = A || a;
     return (0, n.jsx)(Y.N, {
-        theme: v ? eo.NJ8.DARK : void 0,
+        theme: A ? eo.NJ8.DARK : void 0,
         children: (e) =>
             (0, n.jsxs)("div", {
-                className: r()(ec.kL, { [ec.Vp]: A }, e),
+                className: r()(ec.kL, { [ec.Vp]: E }, e),
                 children: [
                     a || null != i.image
                         ? (0, n.jsx)("div", {
@@ -329,21 +330,21 @@ function eg(e) {
                         ? (0, n.jsx)("div", {
                               className: ec.DT,
                               children: (0, n.jsx)(X.m, {
-                                  text: v ? V.intl.string(V.t.RyK5Ww) : V.intl.string(V.t.g2jVww),
+                                  text: A ? V.intl.string(V.t.RyK5Ww) : V.intl.string(V.t.g2jVww),
                                   children: (0, n.jsx)(q.K, {
                                       icon: J.TrashIcon,
                                       size: "sm",
                                       variant: "overlay-secondary",
-                                      "aria-label": v ? V.intl.string(V.t.RyK5Ww) : V.intl.string(V.t.g2jVww),
-                                      onClick: v ? f : j,
+                                      "aria-label": A ? V.intl.string(V.t.RyK5Ww) : V.intl.string(V.t.g2jVww),
+                                      onClick: A ? f : j,
                                   }),
                               }),
                           })
                         : null,
                     (0, n.jsxs)("div", {
-                        className: r()(ec.hQ, e, { [ec.Vp]: A }),
+                        className: r()(ec.hQ, e, { [ec.Vp]: E }),
                         children: [
-                            v ? (0, n.jsx)("div", { className: ec.cw }) : null,
+                            A && v ? (0, n.jsx)("div", { className: ec.cw }) : null,
                             (0, n.jsx)(er, {
                                 canEdit: a,
                                 growWidth: !0,

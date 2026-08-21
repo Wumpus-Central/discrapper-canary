@@ -1997,7 +1997,7 @@ let nM = (0, ec.xI)(f.A.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_TOP),
         { leading: !1, trailing: !0 },
     );
 var nF = n(506774),
-    nH = n(349288),
+    nH = n(28863),
     nB = n(277984),
     nW = n(404374),
     nK = n(780964),

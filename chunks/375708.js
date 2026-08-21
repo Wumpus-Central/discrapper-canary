@@ -83,7 +83,7 @@ let g = m("en-US"),
             $code: (e, t) => (0, i.jsx)("code", { children: e }, t),
             $link: (e, t, i) => {
                 let [a] = i,
-                    { Anchor: s } = n(349288),
+                    { Anchor: s } = n(28863),
                     o = {};
                 switch (typeof a) {
                     case "string":

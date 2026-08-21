@@ -11,7 +11,7 @@ if (221552 == n.j) var _ = n(462887);
 if (221552 == n.j) var u = n(834730);
 if (221552 == n.j) var A = n(939249);
 if (221552 == n.j) var T = n(417098);
-if (221552 == n.j) var d = n(349288);
+if (221552 == n.j) var d = n(28863);
 if (221552 == n.j) var I = n(403581);
 if (221552 == n.j) var N = n(192308);
 if (221552 == n.j) var R = n(289873);
@@ -527,8 +527,8 @@ var e5 = n(503698),
 if (221552 == n.j) var e7 = n(806163);
 if (221552 == n.j) var e9 = n(314116);
 if (221552 == n.j) var e8 = n(821609);
-var e4 = n(334465),
-    e6 = n(624458),
+var e6 = n(334465),
+    e4 = n(624458),
     te = n(513461),
     tt = n(709977),
     tn = n(212455),
@@ -541,7 +541,7 @@ let tr =
                   t = (0, c.bG)([ev.A], () => ev.A.getGuild(e), [e]),
                   l = (0, c.bG)([tn.A], () => (null != e ? tn.A.getRequest(e) : null), [e]),
                   r = (0, e7.zy)(),
-                  s = (0, e4.B)(r.pathname, ei.BVt.CHANNEL(t?.id, ew.VV.GUILD_ONBOARDING))?.isExact === !0;
+                  s = (0, e6.B)(r.pathname, ei.BVt.CHANNEL(t?.id, ew.VV.GUILD_ONBOARDING))?.isExact === !0;
               if (null == t || !(0, tt.Qd)(t) || s) return null;
               let a = l?.applicationStatus ?? te.B5.STARTED,
                   E = null,
@@ -559,7 +559,7 @@ let tr =
                                       subtitle: es.intl.string(es.t["13tjTU"]),
                                       variant: "primary",
                                       confirmText: es.intl.string(es.t["cY+Oob"]),
-                                      onConfirm: () => e6.A.removeGuildJoinRequest(t.id),
+                                      onConfirm: () => e4.A.removeGuildJoinRequest(t.id),
                                   });
                           });
                       break;
@@ -952,8 +952,8 @@ function t9(e) {
     });
 }
 var t8 = n(453028),
-    t4 = n(763827),
-    t6 = n(67480),
+    t6 = n(763827),
+    t4 = n(67480),
     ne = n(147964),
     nt = n(177141),
     nn = n(975571),
@@ -1255,7 +1255,7 @@ let nT =
                               es.intl.string(es.t.bOQ3jV),
                               (0, i.jsx)(T.Z_, {
                                   onClick: () => {
-                                      let e = t4.A.getRemoteDisconnectVoiceChannelId();
+                                      let e = t6.A.getRemoteDisconnectVoiceChannelId();
                                       null != e && null != tH.A.getChannel(e) && f.default.selectVoiceChannel(e);
                                   },
                                   noticeType: r.type,
@@ -1276,7 +1276,7 @@ let nT =
                               es.intl.string(es.t.jY2lUA),
                               (0, i.jsx)(T.Z_, {
                                   onClick: () => {
-                                      let e = t4.A.getLastSessionVoiceChannelId();
+                                      let e = t6.A.getLastSessionVoiceChannelId();
                                       null != e && null != tH.A.getChannel(e) && f.default.selectVoiceChannel(e);
                                   },
                                   noticeType: r.type,
@@ -1417,7 +1417,7 @@ let nT =
                   case ei.kqX.DETECTED_OFF_PLATFORM_PREMIUM_PERK:
                       if (null == r.metadata) return null;
                       let { skuId: Q, applicationId: J } = r.metadata,
-                          ee = t6.A.get(Q),
+                          ee = t4.A.get(Q),
                           et = v.A.getApplication(J);
                       if (null == ee || null == et) return null;
                       let el = { page: ei.liQ.IN_APP };
@@ -1598,7 +1598,7 @@ let nT =
                   case ei.kqX.DETECTED_OFF_PLATFORM_PREMIUM_PERK_UPSELL: {
                       if (null == r.metadata) return null;
                       let { skuId: e, applicationId: t } = r.metadata,
-                          n = t6.A.get(e),
+                          n = t4.A.get(e),
                           l = v.A.getApplication(t);
                       if (null == n || null == l) return null;
                       return (0, i.jsxs)(T.$T, {

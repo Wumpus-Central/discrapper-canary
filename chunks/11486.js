@@ -1083,7 +1083,7 @@ var es = n(121894),
     eu = n(582128),
     e_ = n(478676),
     eE = n.n(e_),
-    eA = n(349288),
+    eA = n(28863),
     eh = n(77729),
     eI = n(502229),
     ef = n(873298),
@@ -1455,7 +1455,7 @@ if (
     n.e("859864").then(n.t.bind(n, 122123, 19));
 let e2 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 new eB.A().log(
-    `[BUILD INFO] Release Channel: ${e2}, Build Number: 598918, Version Hash: 0e3256c0a943930a4ce3cdadb589f27022e3efc0`,
+    `[BUILD INFO] Release Channel: ${e2}, Build Number: 598967, Version Hash: a15a659795441a15a6c517e40ca47d6304589281`,
 ),
     D.A.setTags({ appContext: G.QCW }),
     eI.A.initBasic(),
@@ -20928,7 +20928,7 @@ let Nd = "isHideDevBanner",
                     className: ta()(No.Wz, No.mr),
                     children: [
                         (0, O.jsx)(Nl, { className: No.Kk }),
-                        tT.intl.format(tT.t.uyrfYF, { buildNumber: "598918" }),
+                        tT.intl.format(tT.t.uyrfYF, { buildNumber: "598967" }),
                         (0, O.jsx)(r, {}),
                     ],
                 })
@@ -44373,7 +44373,7 @@ class xu extends eu.PureComponent {
 var x_ = n(621466),
     xE = n(337836),
     xA = n(557361),
-    xh = n(752239),
+    xh = n(59652),
     xI = n(638495),
     xf = n(988393),
     xp = n(197808),

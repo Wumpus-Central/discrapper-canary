@@ -4,8 +4,8 @@ var a = n(477900),
     l = n.n(r),
     i = n(508770),
     s = n(297264),
-    o = n(834730),
-    c = n(349288),
+    o = n(28863),
+    c = n(834730),
     d = n(489387);
 function u(e) {
     let { title: t, body: n, badge: r, className: i, textLink: u } = e,
@@ -21,12 +21,12 @@ function u(e) {
             }),
             (0, a.jsx)(h, { body: n }),
             null != u &&
-                (0, a.jsx)(c.Anchor, {
+                (0, a.jsx)(o.Anchor, {
                     onClick: u.onClick,
                     href: u.link,
                     target: p && null != u.link ? "_blank" : void 0,
                     rel: p && null != u.link ? "noopener noreferrer" : void 0,
-                    children: (0, a.jsx)(o.E, { variant: "text-sm/normal", className: d.footerLink, children: u.text }),
+                    children: (0, a.jsx)(c.E, { variant: "text-sm/normal", className: d.footerLink, children: u.text }),
                 }),
         ],
     });
@@ -45,6 +45,6 @@ function h(e) {
         ? null
         : (0, a.jsx)("div", {
               className: d.headerBody,
-              children: n.map((e, t) => (0, a.jsx)(o.E, { variant: "text-sm/normal", color: "none", children: e }, t)),
+              children: n.map((e, t) => (0, a.jsx)(c.E, { variant: "text-sm/normal", color: "none", children: e }, t)),
           });
 }

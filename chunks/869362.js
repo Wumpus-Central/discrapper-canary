@@ -763,7 +763,7 @@ class e3 extends i.PureComponent {
         });
     }
 }
-class e4 extends i.PureComponent {
+class e6 extends i.PureComponent {
     handlePrevClick = (e) => {
         e.stopPropagation(), e.preventDefault();
         let { onClick: t } = this.props;
@@ -778,7 +778,7 @@ class e4 extends i.PureComponent {
         });
     }
 }
-class e6 extends i.PureComponent {
+class e4 extends i.PureComponent {
     handleNextClick = (e) => {
         e.stopPropagation(), e.preventDefault();
         let { onClick: t } = this.props;
@@ -990,8 +990,8 @@ class tu extends i.PureComponent {
                   className: tt.HY,
                   children: [
                       r,
-                      (0, s.jsx)(e4, { onClick: this.manualPrevious, className: n()(tt.UE, { [tt.h_]: i }) }),
-                      (0, s.jsx)(e6, { onClick: this.manualNext, className: n()(tt.UE, { [tt.h_]: a }) }),
+                      (0, s.jsx)(e6, { onClick: this.manualPrevious, className: n()(tt.UE, { [tt.h_]: i }) }),
+                      (0, s.jsx)(e4, { onClick: this.manualNext, className: n()(tt.UE, { [tt.h_]: a }) }),
                   ],
               });
     }
@@ -1602,8 +1602,8 @@ var t8 = l(449054),
     t2 = l(900002),
     t9 = l(950305),
     t3 = l(573435),
-    t4 = l(714991),
-    t6 = l(776231),
+    t6 = l(714991),
+    t4 = l(776231),
     t5 = l(149790),
     le = l(882553),
     lt = l(937495),
@@ -1612,7 +1612,7 @@ function ls(e) {
     let { guild: t, className: l, onClick: i } = e,
         a = (0, tQ.Ay)(),
         r = (0, t5.dangerouslyConstructGuildRecordFromUntypedObject)({ name: t.name, icon: t.icon }),
-        o = er.Ay.getGuildDiscoverySplashURL({ id: t.id, splash: t.discovery_splash, size: 192 * (0, t6.mZ)() }),
+        o = er.Ay.getGuildDiscoverySplashURL({ id: t.id, splash: t.discovery_splash, size: 192 * (0, t4.mZ)() }),
         c =
             null != o
                 ? o
@@ -1659,7 +1659,7 @@ function ls(e) {
                     (0, s.jsxs)("div", {
                         className: le.Y_,
                         children: [
-                            (0, s.jsx)(t4.A, { className: le.n2, guild: t, tooltipColor: t2.ST.Colors.PRIMARY }),
+                            (0, s.jsx)(t6.A, { className: le.n2, guild: t, tooltipColor: t2.ST.Colors.PRIMARY }),
                             (0, s.jsx)(h.D, { variant: "heading-md/semibold", className: le.J5, children: t.name }),
                         ],
                     }),
@@ -1826,7 +1826,7 @@ var lu = l(478676),
     lm = l(900797),
     lp = l(847374),
     lg = l(558179),
-    lx = l(349288),
+    lx = l(28863),
     lv = l(376728),
     lj = l(167189),
     lA = l(833291),
@@ -2048,8 +2048,8 @@ var lM = l(607399),
     l2 = l(692848),
     l9 = l(108861);
 let l3 = "start_application_install",
-    l4 = "launch_activity";
-function l6(e) {
+    l6 = "launch_activity";
+function l4(e) {
     let { renderDropdown: t, size: l } = e,
         a = i.useRef(null);
     return (0, s.jsx)(lY.Y, {
@@ -2237,9 +2237,9 @@ let st = i.forwardRef(function (e, t) {
                 });
             i.useEffect(() => {
                 let e = new URL(location.href),
-                    t = "true" === e.searchParams.get(l4);
+                    t = "true" === e.searchParams.get(l6);
                 if (u && r && t && null != s && null != h) {
-                    e.searchParams.delete(l4);
+                    e.searchParams.delete(l6);
                     let t = e.pathname + e.search;
                     (0, _.bG)(t), m();
                 }
@@ -2247,7 +2247,7 @@ let st = i.forwardRef(function (e, t) {
             let p = i.useCallback(async () => {
                 if (null != s) {
                     if ((O(D.HAw.APP_DIRECTORY_LAUNCH_CLICKED, { application_id: l }), !u))
-                        return void G({ [l4]: "true" });
+                        return void G({ [l6]: "true" });
                     await m();
                 }
             }, [l, s, u, m]);
@@ -2272,7 +2272,7 @@ let st = i.forwardRef(function (e, t) {
                               "aria-label": U.intl.string(U.t.z4sP5J),
                           })
                         : null,
-                    (0, s.jsx)(l6, { renderDropdown: (e) => h(!1, e), size: a }),
+                    (0, s.jsx)(l4, { renderDropdown: (e) => h(!1, e), size: a }),
                 ],
             }),
             (0, s.jsxs)("div", {
@@ -2280,7 +2280,7 @@ let st = i.forwardRef(function (e, t) {
                 children: [
                     g && (0, s.jsx)(se, { size: a, contentWidth: "small", onClick: m, isSubmitting: p }),
                     (0, s.jsx)(l5, { application: l, size: a, contentWidth: "small", variant: x }),
-                    (0, s.jsx)(l6, { renderDropdown: (e) => h(l8.p5, e), size: a }),
+                    (0, s.jsx)(l4, { renderDropdown: (e) => h(l8.p5, e), size: a }),
                 ],
             }),
             (0, s.jsxs)("div", {
@@ -2288,7 +2288,7 @@ let st = i.forwardRef(function (e, t) {
                 children: [
                     g && (0, s.jsx)(se, { size: a, contentWidth: "icon", onClick: m, isSubmitting: p }),
                     (0, s.jsx)(l5, { application: l, size: a, contentWidth: "icon", variant: x }),
-                    (0, s.jsx)(l6, { renderDropdown: (e) => h(l8.p5, e), size: a }),
+                    (0, s.jsx)(l4, { renderDropdown: (e) => h(l8.p5, e), size: a }),
                 ],
             }),
         ],

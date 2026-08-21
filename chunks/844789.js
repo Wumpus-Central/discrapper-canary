@@ -1762,7 +1762,7 @@ function nk(e) {
         })({ entry: t, ...l });
     return (0, i.jsx)(nS.Provider, { value: { parsedEntry: r, ...l }, children: n });
 }
-var nM = n(349288),
+var nM = n(28863),
     nU = n(531142),
     nD = n(939249),
     nw = n(43990),
