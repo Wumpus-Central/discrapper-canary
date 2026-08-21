@@ -5,8 +5,8 @@ var l = n(477900),
     s = n(503698),
     r = n.n(s),
     a = n(834730),
-    o = n(28863),
-    u = n(17928),
+    o = n(17928),
+    u = n(349288),
     c = n(473193),
     d = n(775602),
     h = n(36075),
@@ -98,7 +98,7 @@ function g(e) {
             ref: m,
             ...f
         } = e,
-        g = (0, u.bG)([d.Ay], () => d.Ay.roleStyle),
+        g = (0, o.bG)([d.Ay], () => d.Ay.roleStyle),
         x = "username" === g,
         A = (0, l.jsx)(p, {
             roleStyle: g,
@@ -112,9 +112,9 @@ function g(e) {
             displayInline: h,
         }),
         C = x && null != n ? { color: n } : void 0;
-    return (0, l.jsx)(o.Anchor, { ...f, children: A, style: C, ref: m });
+    return (0, l.jsx)(u.Anchor, { ...f, children: A, style: C, ref: m });
 }
 function x(e) {
-    let t = (0, u.bG)([d.Ay], () => d.Ay.roleStyle);
+    let t = (0, o.bG)([d.Ay], () => d.Ay.roleStyle);
     return (0, l.jsx)(p, { ...e, roleStyle: t });
 }

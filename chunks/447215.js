@@ -1,8 +1,8 @@
 n.d(l, { P: () => x });
 var r = n(477900),
     t = n(582128),
-    a = n(473193),
-    i = n(28863),
+    a = n(349288),
+    i = n(473193),
     u = n(614820),
     s = n(463930),
     o = n(793574),
@@ -39,11 +39,11 @@ function x(e) {
             },
             [l, n],
         ),
-        v = t.useContext(a.C);
+        v = t.useContext(i.C);
     return (
         (0, b.A)({ subscribeToGroupId: C, authorId: l?.id, shouldSubscribe: M && null != D && null == x }),
         t.useCallback(
-            (e) => (t, a) => {
+            (e) => (t, i) => {
                 let o = e?.colorStrings,
                     c = L && null != o && null != o.primaryColor && null != o.secondaryColor;
                 function p(l, n) {
@@ -62,7 +62,7 @@ function x(e) {
                         });
                     {
                         let e = v?.animate || n?.isShown ? h.G.ANIMATED : h.G.PLAIN;
-                        return (0, r.jsx)(i.Anchor, {
+                        return (0, r.jsx)(a.Anchor, {
                             ...(null != l ? l : {}),
                             ref: P,
                             onContextMenu: S,
@@ -106,7 +106,7 @@ function x(e) {
                                   })
                                 : p(void 0, void 0),
                     },
-                    a,
+                    i,
                 );
             },
             [k, l, n, x, C, S, w, A, L, N, v?.animate, D, M, j],

@@ -2,7 +2,7 @@
 n.d(t, { A: () => a });
 var l = n(477900),
     i = n(582128),
-    s = n(28863);
+    s = n(349288);
 class r extends i.PureComponent {
     render() {
         let { text: e, lastItem: t, className: n } = this.props;

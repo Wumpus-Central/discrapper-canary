@@ -1,27 +1,27 @@
-.anchor__14d82 {
+.anchor_edefb8 {
     color: var(--text-link);
     -webkit-text-decoration: var(--link-decoration);
     text-decoration: var(--link-decoration)
 }
 
-.anchorUnderlineOnHover__14d82:hover {
+.anchorUnderlineOnHover_edefb8:hover {
     text-decoration: underline
 }
 
-.enable-forced-colors .anchor__14d82,
-.enable-forced-colors .anchorUnderlineOnHover__14d82 {
+.enable-forced-colors .anchor_edefb8,
+.enable-forced-colors .anchorUnderlineOnHover_edefb8 {
     background-color: Canvas;
     color: LinkText !important;
     text-decoration: underline
 }
 
-.enable-forced-colors .anchor__14d82 svg,
-.enable-forced-colors .anchorUnderlineOnHover__14d82 svg {
+.enable-forced-colors .anchor_edefb8 svg,
+.enable-forced-colors .anchorUnderlineOnHover_edefb8 svg {
     color: currentColor
 }
 
-.enable-forced-colors .anchor__14d82:not([href]),
-.enable-forced-colors .anchorUnderlineOnHover__14d82:not([href]) {
+.enable-forced-colors .anchor_edefb8:not([href]),
+.enable-forced-colors .anchorUnderlineOnHover_edefb8:not([href]) {
     background-color: ButtonFace;
     color: ButtonText !important
 }
@@ -5332,4 +5332,4 @@ screen and (max-width:485px) {
     margin-inline-end: var(--space-12)
 }
 
-/*# sourceMappingURL=139987.88d6c49a0383f742.css.map*/
+/*# sourceMappingURL=643132.7095a30c6e55f182.css.map*/

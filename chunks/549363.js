@@ -254,7 +254,7 @@ var X = n(97352),
     ee = n(707554),
     et = n(789645),
     en = n(933832),
-    ei = n(28863),
+    ei = n(349288),
     el = n(34188),
     es = n(597770),
     er = n(512950),
@@ -455,7 +455,7 @@ function e5(e) {
         ],
     });
 }
-function e6(e) {
+function e4(e) {
     let { guildId: t, guildProductListingId: n } = e,
         l = (0, ef.Qi)(t, n, { requireCurrentGuild: !1 }),
         s = (0, d.bG)([eI.A], () => eI.A.getGuildProductFetchState(n) === eI.e.FETCHING),
@@ -499,7 +499,7 @@ function e6(e) {
             })
           : null;
 }
-function e4(e) {
+function e6(e) {
     let { withGradient: t, compactMode: n } = e,
         l = n ? 28 : 16;
     return t
@@ -927,7 +927,7 @@ class e8 extends l.PureComponent {
                     null != t)
                 ) {
                     let l = H.Ay.getPremiumType(t);
-                    e = (0, i.jsx)(e4, { withGradient: l === U.PremiumTypes.TIER_2, compactMode: n });
+                    e = (0, i.jsx)(e6, { withGradient: l === U.PremiumTypes.TIER_2, compactMode: n });
                 }
             } else if (g.type === M.rzx.GUILD) {
                 if (null != u) {
@@ -972,7 +972,7 @@ class e8 extends l.PureComponent {
                 });
             } else
                 e = s.isFractionalPremium
-                    ? (0, i.jsx)(e4, { withGradient: !0, compactMode: n })
+                    ? (0, i.jsx)(e6, { withGradient: !0, compactMode: n })
                     : s.isCollectible
                       ? (0, i.jsx)(el.U, {
                             size: "custom",
@@ -989,7 +989,7 @@ class e8 extends l.PureComponent {
                             size: eT.M.XSMALL,
                             skuId: c.id,
                         });
-        } else (e = (0, i.jsx)(e4, { withGradient: !1, compactMode: n })), (t = s.description);
+        } else (e = (0, i.jsx)(e6, { withGradient: !1, compactMode: n })), (t = s.description);
         let h = (0, i.jsx)(A.E, {
                 variant: "text-sm/normal",
                 className: eS.p6,
@@ -1029,7 +1029,7 @@ class e8 extends l.PureComponent {
                             })
                           : null != l &&
                             null != e.sku &&
-                            (0, i.jsx)(e6, { guildId: l, guildProductListingId: e.sku.id }),
+                            (0, i.jsx)(e4, { guildId: l, guildProductListingId: e.sku.id }),
                   ],
               })
             : null;
