@@ -323,7 +323,12 @@ let W = new F(r.h, {
         let l = a[s].disposition === r ? a : [...a.slice(0, s), { ...a[s], disposition: r }, ...a.slice(s + 1)],
             o = "steered" === r ? P(l, i) : -1;
         if (-1 === o || o > s) return l !== a && void g.set(t, l);
-        g.set(t, [...l.slice(0, o), { ...l[o], continued: !0 }, ...l.slice(o + 1), b("assistant", "", { turnId: i })]),
+        g.set(t, [
+            ...l.slice(0, o),
+            { ...l[o], continued: !0, finished_at: l[o].finished_at ?? Date.now() },
+            ...l.slice(o + 1),
+            b("assistant", "", { turnId: i }),
+        ]),
             x(t);
     },
     VIBEGRATIONS_CHAT_SIDE_REPLY: function (e) {
@@ -331,7 +336,7 @@ let W = new F(r.h, {
             s = g.get(t);
         if (null == s || s.some((e) => e.id === n)) return !1;
         let l = b("assistant", r, { ts: a, id: n });
-        l.kind = "side_reply";
+        (l.kind = "side_reply"), (l.in_reply_to = i);
         let o = s.findIndex((e) => e.id === i);
         if (-1 === o) return void g.set(t, [...s, l]);
         let { disposition: d, ...c } = s[o];
