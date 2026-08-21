@@ -83,6 +83,7 @@ let a = {
     DEADCHAT_PROMPTS: new Set([40, 42]),
     NON_COLLAPSIBLE: new Set([24]),
     NON_PARSED: new Set([4, 12, 18, 27, 28, 31]),
+    NON_REPORTABLE: new Set([67]),
     AUTOMOD_INCIDENT_ACTIONS: new Set([36, 37, 38, 39]),
     SELF_MENTIONABLE_SYSTEM: new Set([46]),
     SCHEDULABLE: new Set([0, 19]),

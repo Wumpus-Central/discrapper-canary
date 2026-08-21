@@ -12,7 +12,7 @@ function o(e) {
     return null != n && n.id !== t && !0 !== e.system;
 }
 function d(e) {
-    return null != e && o(e.author);
+    return null != e && !l.MRS.NON_REPORTABLE.has(e.type) && o(e.author);
 }
 function c(e) {
     return (
