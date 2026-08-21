@@ -12,12 +12,12 @@ var n = i(477900),
     m = i(403581),
     x = i(783420),
     f = i(206697),
-    h = i(296704),
+    h = i(221877),
     p = i(866323),
     I = i(765178),
     j = i(834730),
-    A = i(821609),
-    v = i(775602),
+    v = i(821609),
+    A = i(775602),
     E = i(485038);
 function S(e) {
     let {
@@ -30,7 +30,7 @@ function S(e) {
             a11yAnnounceOnShow: u,
             a11yAnnounceOnHide: g,
         } = e,
-        m = (0, a.bG)([v.Ay], () => v.Ay.useReducedMotion),
+        m = (0, a.bG)([A.Ay], () => A.Ay.useReducedMotion),
         x = l.useRef(null);
     return (
         l.useEffect(
@@ -71,8 +71,8 @@ function S(e) {
                               (0, n.jsxs)("div", {
                                   className: E.o1,
                                   children: [
-                                      (0, n.jsx)(A.$, { variant: "secondary", size: "sm", ...d }),
-                                      (0, n.jsx)(A.$, { variant: "primary", size: "sm", ...o }),
+                                      (0, n.jsx)(v.$, { variant: "secondary", size: "sm", ...d }),
+                                      (0, n.jsx)(v.$, { variant: "primary", size: "sm", ...o }),
                                   ],
                               }),
                           ],
@@ -83,14 +83,14 @@ function S(e) {
     );
 }
 var C = i(570002),
-    T = i(202541),
-    b = i(375708);
+    b = i(202541),
+    T = i(375708);
 function N() {
     let e = (0, g.YW)(),
         { goBack: t } = (0, g.pA)(),
-        i = (0, C.A)(b.intl.string(b.t.pj0XBN));
+        i = (0, C.A)(T.intl.string(T.t.pj0XBN));
     return (0, n.jsx)(x.A, {
-        subscriptionTier: T.pe.TIER_2,
+        subscriptionTier: b.pe.TIER_2,
         onSubscribeModalClose: (e) => {
             e && (0, f.T)();
         },
@@ -99,10 +99,10 @@ function N() {
             return (0, n.jsx)(S, {
                 isVisible: e,
                 labelId: "premium-try-it-out-footer-bar-label",
-                noticeText: b.intl.string(b.t.X0ir7L),
-                a11yAnnounceOnShow: b.intl.string(b.t.X0ir7L),
-                a11yAnnounceOnHide: b.intl.string(b.t.ZcyFYa),
-                secondaryAction: { text: b.intl.string(b.t.V3S9WW), onClick: t },
+                noticeText: T.intl.string(T.t.X0ir7L),
+                a11yAnnounceOnShow: T.intl.string(T.t.X0ir7L),
+                a11yAnnounceOnHide: T.intl.string(T.t.ZcyFYa),
+                secondaryAction: { text: T.intl.string(T.t.V3S9WW), onClick: t },
                 primaryAction: { text: i, onClick: s, icon: m.t, variant: "expressive" },
             });
         },
@@ -150,8 +150,8 @@ function V(e) {
             canSubmitProfileChanges: D.A.canSubmit(),
         })),
         j = h && p,
-        A = x || j,
-        v = !(x && !f) && (!h || I),
+        v = x || j,
+        A = !(x && !f) && (!h || I),
         E = l.useCallback(() => {
             G.A.clearPendingWidgets(), h && (0, L.XQ)();
         }, [h]),
@@ -250,13 +250,13 @@ function V(e) {
             );
         }, []),
         (0, n.jsx)(S, {
-            isVisible: A,
+            isVisible: v,
             labelId: "user-profile-save-reset-toolbar-label",
-            noticeText: b.intl.string(b.t["/lQiX/"]),
+            noticeText: T.intl.string(T.t["/lQiX/"]),
             isEmphasized: s,
-            a11yAnnounceOnShow: b.intl.string(b.t["0Y/qkL"]),
-            secondaryAction: { text: b.intl.string(b.t.yBZMsQ), onClick: E, disabled: !A || o },
-            primaryAction: { text: b.intl.string(b.t["R3BPH+"]), onClick: C, loading: o, disabled: !v || !A },
+            a11yAnnounceOnShow: T.intl.string(T.t["0Y/qkL"]),
+            secondaryAction: { text: T.intl.string(T.t.yBZMsQ), onClick: E, disabled: !v || o },
+            primaryAction: { text: T.intl.string(T.t["R3BPH+"]), onClick: C, loading: o, disabled: !A || !v },
         })
     );
 }

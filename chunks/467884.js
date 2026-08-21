@@ -625,8 +625,8 @@ function e_(e) {
         );
     if (null == ei) return null;
     let e6 = (0, G.fq)(ei),
-        e5 = e2 ? (0, n.jsx)("div", { className: et.mN, "aria-hidden": !0 }) : null,
-        e4 = (0, n.jsx)(b.L, {
+        e4 = e2 ? (0, n.jsx)("div", { className: et.mN, "aria-hidden": !0 }) : null,
+        e5 = (0, n.jsx)(b.L, {
             innerRef: P,
             onChange: ew,
             threshold: 0,
@@ -767,5 +767,5 @@ function e_(e) {
                 ],
             }),
         });
-    return e2 ? (0, n.jsxs)("div", { className: et.ur, children: [e5, e4] }) : e4;
+    return e2 ? (0, n.jsxs)("div", { className: et.ur, children: [e4, e5] }) : e5;
 }

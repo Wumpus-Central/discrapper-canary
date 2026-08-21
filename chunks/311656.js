@@ -1,4 +1,4 @@
-n.d(t, { A: () => g });
+n.d(t, { A: () => p });
 var l = n(477900),
     a = n(582128),
     i = n(834730),
@@ -14,12 +14,12 @@ let d = { low: "Low", medium: "Medium", high: "High", xhigh: "Extra high", max: 
         xai: "xAI (dev)",
         moonshotai: "Moonshot AI (dev)",
     };
-var h = n(459864),
+var h = n(295813),
     m = n(375708),
     f = n(752065);
-function p(e) {
-    let { title: t, modelChoices: n, thinkingChoices: r, value: o, disabled: c, onChange: p } = e,
-        g = a.useMemo(() => n.map((e) => ({ id: e.id, label: e.label, value: e.id, description: u[e.provider] })), [n]),
+function g(e) {
+    let { title: t, modelChoices: n, thinkingChoices: r, value: o, disabled: c, onChange: g } = e,
+        p = a.useMemo(() => n.map((e) => ({ id: e.id, label: e.label, value: e.id, description: u[e.provider] })), [n]),
         x = a.useMemo(() => r.map((e) => ({ id: e, label: d[e] ?? e, value: e })), [r]);
     return (0, l.jsxs)("div", {
         className: f.uW,
@@ -27,9 +27,9 @@ function p(e) {
             (0, l.jsx)(i.E, { variant: "text-sm/semibold", color: "text-default", children: t }),
             (0, l.jsx)(s.l, {
                 label: m.intl.string(h.default["9FRudW"]),
-                options: g,
+                options: p,
                 value: o.model,
-                onSelectionChange: (e) => p({ ...o, model: e }),
+                onSelectionChange: (e) => g({ ...o, model: e }),
                 selectionMode: "single",
                 disabled: c,
                 fullWidth: !0,
@@ -38,7 +38,7 @@ function p(e) {
                 label: m.intl.string(h.default["4AsQHS"]),
                 options: x,
                 value: o.thinking,
-                onSelectionChange: (e) => p({ ...o, thinking: e }),
+                onSelectionChange: (e) => g({ ...o, thinking: e }),
                 selectionMode: "single",
                 disabled: c,
                 fullWidth: !0,
@@ -46,14 +46,14 @@ function p(e) {
         ],
     });
 }
-function g(e) {
-    let { settings: t, choices: n, disabled: s, onChange: d, className: u, icon: g } = e,
+function p(e) {
+    let { settings: t, choices: n, disabled: s, onChange: d, className: u, icon: p } = e,
         x = a.useRef(null),
         [v, b] = a.useState(null),
         [j, y] = a.useState(t);
     t !== j && (y(t), b(null));
     let k = v ?? t,
-        w = a.useCallback(
+        N = a.useCallback(
             (e) => {
                 b(e), d(e);
             },
@@ -69,21 +69,21 @@ function g(e) {
                 role: "dialog",
                 "aria-label": m.intl.string(h.default["2NWMqY"]),
                 children: [
-                    (0, l.jsx)(p, {
+                    (0, l.jsx)(g, {
                         title: m.intl.string(h.default.ISmynF),
                         modelChoices: n.main,
                         thinkingChoices: n.thinking,
                         value: k.main,
                         disabled: s,
-                        onChange: (e) => w({ ...k, main: e }),
+                        onChange: (e) => N({ ...k, main: e }),
                     }),
-                    (0, l.jsx)(p, {
+                    (0, l.jsx)(g, {
                         title: m.intl.string(h.default.hdt1ph),
                         modelChoices: n.subagent,
                         thinkingChoices: n.thinking,
                         value: k.subagent,
                         disabled: s,
-                        onChange: (e) => w({ ...k, subagent: e }),
+                        onChange: (e) => N({ ...k, subagent: e }),
                     }),
                     (0, l.jsx)(i.E, {
                         variant: "text-xs/normal",
@@ -98,7 +98,7 @@ function g(e) {
                 className: u ?? f.hZ,
                 "aria-label": m.intl.string(h.default.COVYeS),
                 ...e,
-                children: g ?? (0, l.jsx)(c.R, { size: "xxs", color: "currentColor", "aria-hidden": !0 }),
+                children: p ?? (0, l.jsx)(c.R, { size: "xxs", color: "currentColor", "aria-hidden": !0 }),
             }),
     });
 }

@@ -8,7 +8,7 @@ var n = i(477900),
     d = i(287809),
     c = i(788593),
     u = i(249264),
-    g = i(638596),
+    g = i(353556),
     m = i(998556);
 function x(e) {
     let { scrollerRef: t } = e,
@@ -90,7 +90,7 @@ function x(e) {
             [x, h],
         ),
         j = l.useRef(null),
-        A = l.useCallback(() => {
+        v = l.useCallback(() => {
             if (null == t.current) return;
             let e = t.current.getBoundingClientRect();
             j.current = { x: e.left, y: e.top };
@@ -101,14 +101,14 @@ function x(e) {
                 j.current = null;
                 return;
             }
-            null == j.current && A();
-        }, [i, A]),
+            null == j.current && v();
+        }, [i, v]),
         !0 !== i || null == f || null == I)
     )
         return null;
-    null == j.current && A();
-    let { x: v, y: E } = j.current ?? { x: 0, y: 0 },
-        S = f.x - v - 60 * !!p,
+    null == j.current && v();
+    let { x: A, y: E } = j.current ?? { x: 0, y: 0 },
+        S = f.x - A - 60 * !!p,
         C = f.y - E;
     return (0, n.jsx)("div", { className: m.kL, style: { transform: `translate3d(${S}px, ${C}px, 0)` }, children: I });
 }

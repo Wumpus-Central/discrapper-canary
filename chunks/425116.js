@@ -9,7 +9,7 @@ var i = n(228366),
     d = n(695515),
     c = n(936926),
     u = n(580296),
-    _ = n(153648),
+    _ = n(670595),
     E = n(375708);
 function A() {
     return d.A.isCurrentUserInRestrictedHours();

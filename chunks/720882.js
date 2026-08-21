@@ -162,14 +162,14 @@ var eK = n(110384),
     eQ = n(865116),
     e0 = n(131607),
     e8 = n(928658),
-    e1 = n(400528),
+    e2 = n(400528),
     e6 = n(892340),
     e7 = n(715757),
-    e2 = n(967198),
-    e3 = n(287809),
+    e1 = n(967198),
+    e5 = n(287809),
     e9 = n(628691),
-    e5 = n(49999),
-    e4 = n(183313),
+    e3 = n(49999),
+    e4 = n(544482),
     te = n(663417),
     tt = n(965407),
     tn = n(249700),
@@ -299,13 +299,13 @@ function tP(e) {
             mediaItem: tQ,
             textSelection: t0,
             favoriteableType: t8,
-            favoriteableId: t1,
+            favoriteableId: t2,
             favoriteableName: t6,
             itemHref: t7,
-            itemSrc: t2,
-            itemSafeSrc: t3,
+            itemSrc: t1,
+            itemSafeSrc: t5,
             itemTextContent: t9,
-            canReport: t5,
+            canReport: t3,
             onHeightUpdate: t4,
             onSelect: ne,
             onClose: nt,
@@ -725,11 +725,11 @@ function tP(e) {
                 n = e.interactionMetadata?.authorizing_integration_owners[tE.b.USER_INSTALL],
                 i = e.interactionMetadata?.authorizing_integration_owners[tE.b.GUILD_INSTALL],
                 r = e.interactionMetadata?.user.id,
-                o = (0, x.bG)([e3.default], () => e3.default.getUser(n)),
+                o = (0, x.bG)([e5.default], () => e5.default.getUser(n)),
                 c = (0, x.bG)([tG.A], () => tG.A.getGuild(i)),
                 d = tC.A.getChannel(e.channel_id),
                 u = d?.getGuildId(),
-                A = (0, x.bG)([e3.default], () => e3.default.getUser(r));
+                A = (0, x.bG)([e5.default], () => e5.default.getUser(r));
             if (
                 (a.useEffect(() => {
                     null == o && null != n && (0, tx.getUser)(n);
@@ -872,7 +872,7 @@ function tP(e) {
                   })),
         nO = (0, ef.A)(t$, tY),
         nN =
-            ((tX = (0, x.bG)([e2.A], () => e2.A.getGuildId())),
+            ((tX = (0, x.bG)([e1.A], () => e1.A.getGuildId())),
             (tq = (0, e7.Qo)(tX)),
             (0, e9.ul)(t$)
                 ? (0, l.jsx)(s.Dr, {
@@ -886,7 +886,7 @@ function tP(e) {
                 : null),
         nR =
             ((tz = (0, x.bG)([eQ.Ay], () => eQ.Ay.get("iar_testing"))),
-            (tH = (0, x.bG)([e3.default], () => e3.default.getCurrentUser())),
+            (tH = (0, x.bG)([e5.default], () => e5.default.getCurrentUser())),
             (0, e9.ul)(t$) && null != tH && tH.isStaff() && tz
                 ? (0, l.jsx)(s.Dr, {
                       id: "staff-test-message-report",
@@ -898,19 +898,19 @@ function tP(e) {
                   })
                 : null),
         nU = (function (e) {
-            let t = (0, x.bG)([e1.A], () => e1.A.hasReportedMessage(e.channel_id, e.id)),
+            let t = (0, x.bG)([e2.A], () => e2.A.hasReportedMessage(e.channel_id, e.id)),
                 n = (0, e6.KB)(e),
                 i = n ? [eJ.M.REPORT_TO_MOD_NEW_TAG] : [],
                 [a, r] = (0, e0.kn)(i);
             return ((0, eY.l0)(() => {
-                n && r(e5.i.AUTO_DISMISS);
+                n && r(e3.i.AUTO_DISMISS);
             }),
             n)
                 ? (0, l.jsx)(s.Dr, {
                       id: "report-to-mod",
                       label: t ? j.intl.string(e4.default["8wsdng"]) : j.intl.string(e4.default["1D+vqy"]),
                       action: () => {
-                          r(e5.i.USER_DISMISS), (0, e8.dy)(e);
+                          r(e3.i.USER_DISMISS), (0, e8.dy)(e);
                       },
                       icon: e$.FlagIcon,
                       disabled: t,
@@ -920,7 +920,7 @@ function tP(e) {
                   })
                 : null;
         })(t$),
-        nk = (0, eM.A)({ type: t8, id: t1, name: t6 }),
+        nk = (0, eM.A)({ type: t8, id: t2, name: t6 }),
         nw = (function (e, t) {
             let { perGuildMaxCount: n } = U.i$[H],
                 { isLoading: i, saveRule: r, errorMessage: o } = (0, w.S)(),
@@ -1029,7 +1029,7 @@ function tP(e) {
                 })
             );
         })(t0, tY.getGuildId()),
-        nP = (0, p.A)(t3, t$, {
+        nP = (0, p.A)(t5, t$, {
             shouldHideMediaOptions: nl,
             contentType: tQ?.contentType,
             originalContentType: tQ?.originalContentType,
@@ -1090,7 +1090,7 @@ function tP(e) {
                       action: tZ,
                   })
                 : null),
-        nq = (0, f.A)(t7 ?? t2, t9, t$, { shouldHideMediaOptions: nl }),
+        nq = (0, f.A)(t7 ?? t1, t9, t$, { shouldHideMediaOptions: nl }),
         nz = (0, A.A)({ id: t$.id, label: j.intl.string(j.t.zBoHlf), shiftId: `${t$.channel_id}-${t$.id}` }),
         nH = (function (e) {
             let { messageId: t, itemId: n, type: i, imageSrc: r } = e,
@@ -1153,7 +1153,7 @@ function tP(e) {
                         }),
                 ],
             });
-        })({ messageId: t$.id, itemId: t1, type: t8, imageSrc: t2 }),
+        })({ messageId: t$.id, itemId: t2, type: t8, imageSrc: t1 }),
         nK = (0, l.jsx)(s.rX, { children: nH ?? nz }),
         nV = (0, l.jsxs)(s.rX, { children: [nk, nw, nP, nB, nF, nX] });
     return (0, l.jsxs)(o.W, {
@@ -1168,7 +1168,7 @@ function tP(e) {
             (0, l.jsxs)(s.rX, { children: ["" === t0 ? no : null, nu, nC] }),
             (0, l.jsxs)(s.rX, { children: [ng, nA, nm, ny] }),
             (0, l.jsxs)(s.rX, { children: [np, nf, nh, nE, nb, nx, n_, nI, nS, nj, nD, nM, nG, nT] }),
-            (0, l.jsxs)(s.rX, { children: [nv, nL, nO, t5 && nN, t5 && nR, nU] }),
+            (0, l.jsxs)(s.rX, { children: [nv, nL, nO, t3 && nN, t3 && nR, nU] }),
             ns
                 ? (0, l.jsxs)(l.Fragment, { children: [nK, nV, null == nH && (0, l.jsx)(s.rX, { children: nq })] })
                 : (0, l.jsxs)(l.Fragment, { children: [nV, (0, l.jsx)(s.rX, { children: nq }), nK] }),

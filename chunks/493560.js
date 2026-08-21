@@ -2002,10 +2002,10 @@ async function e3(e) {
     }
     j.update(t, !0), (e0 = !1), (e2 = null);
 }
-function e4() {
+function e5() {
     j.update();
 }
-function e5() {
+function e4() {
     return j.update(), !1;
 }
 function e6() {
@@ -2018,7 +2018,7 @@ class e8 extends a.Ay.Store {
     static displayName = "GatewayConnectionStore";
     initialize() {
         this.waitFor(E.default, A.A, h.A, I.Ay, f.A, p.A, T.Ay, m.A, g.A, _.A),
-            this.syncWith([I.Ay], e5),
+            this.syncWith([I.Ay], e4),
             this.syncWith([m.A], e6);
     }
     getSocket() {
@@ -2158,7 +2158,7 @@ let e9 = new e8(l.h, {
             !1
         );
     },
-    STREAM_CREATE: e4,
+    STREAM_CREATE: e5,
     STREAM_START: function (e) {
         let { streamType: t, guildId: n, channelId: i } = e;
         if (B.isSessionEstablished()) {
@@ -2184,7 +2184,7 @@ let e9 = new e8(l.h, {
     },
     STREAM_STOP: function (e) {
         let { streamKey: t } = e;
-        return e7(t), e4(), !1;
+        return e7(t), e5(), !1;
     },
     STREAM_SET_PAUSED: function (e) {
         let { streamKey: t, paused: n } = e;
@@ -2208,11 +2208,11 @@ let e9 = new e8(l.h, {
     RESET_SOCKET: function (e) {
         B.connectionState !== N.A.WILL_RECONNECT && B.resetSocketAndClearCacheOnError(e.args);
     },
-    CLIPS_SETTINGS_UPDATE: e4,
-    RUNNING_GAMES_CHANGE: e4,
+    CLIPS_SETTINGS_UPDATE: e5,
+    RUNNING_GAMES_CHANGE: e5,
     USER_SETTINGS_PROTO_UPDATE: function (e) {
         e.settings.type === eZ.oD.PRELOADED_USER_SETTINGS &&
             e.settings.proto.clips?.allowVoiceRecording != null &&
-            e4();
+            e5();
     },
 });

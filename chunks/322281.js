@@ -75,7 +75,7 @@ var z = s(554146),
     ee = s(131168),
     et = s(482589),
     es = s(511484),
-    ei = s(296704),
+    ei = s(221877),
     en = s(661531),
     ea = s(717421),
     el = s(331322),
@@ -1072,8 +1072,8 @@ function tV(e, t, i) {
             s.e("907167"),
             s.e("861060"),
             s.e("752457"),
-            s.e("882082"),
-            s.e("413789"),
+            s.e("882722"),
+            s.e("950106"),
             s.e("797595"),
             s.e("413736"),
             s.e("544571"),
@@ -1558,7 +1558,7 @@ var t8 = s(325499),
     sa = s(375776),
     sl = s(727811),
     sr = s(222652),
-    sc = s(765612),
+    sc = s(477767),
     so = s(934353);
 function sd(e) {
     let { openRewardModal: t } = e,
@@ -1629,7 +1629,7 @@ function su(e) {
     let { analyticsLocations: i } = (0, j.Ay)(A.A.CROISSANT_PREMIUM_HERO_CARD),
         n = o.useCallback(() => {
             (0, ev.openModalLazy)(async () => {
-                let { default: e } = await Promise.all([s.e("878140"), s.e("590707")]).then(s.bind(s, 347171));
+                let { default: e } = await Promise.all([s.e("878140"), s.e("813088")]).then(s.bind(s, 347171));
                 return (t) => (0, c.jsx)(e, { ...t, sourceAnalyticsLocations: i });
             });
         }, [i]);
@@ -1754,8 +1754,8 @@ var sN = s(789861),
     sT = s(852218),
     sR = s(161319),
     sv = s(672787),
-    sI = s(751286),
-    s_ = s(125238);
+    sI = s(221799),
+    s_ = s(555091);
 let sP =
         "https://cdn.discordapp.com/assets/content/74dd725dde373bfdbced9606d5201ed2c555fc895f4da644a8de314de6906be3.webp",
     sy =
@@ -1969,8 +1969,8 @@ let sU = function (e) {
                                 s.e("907167"),
                                 s.e("861060"),
                                 s.e("752457"),
-                                s.e("882082"),
-                                s.e("413789"),
+                                s.e("882722"),
+                                s.e("950106"),
                                 s.e("797595"),
                                 s.e("413736"),
                                 s.e("544571"),
@@ -2170,7 +2170,7 @@ var s1 = s(462887),
     is = s(892227),
     ii = s(81466),
     ia = s(318254),
-    il = s(347936),
+    il = s(131277),
     ir = s(749012);
 let ic = function () {
     let { passesGeneralUIInvariant: e, programReward: t } = (0, q.F)({ location: "NitroOrbsWhatsNewCardFooter" });
@@ -2275,7 +2275,7 @@ var ig = s(975807),
     ix = s(95035),
     ip = s(862990),
     ih = s(88001),
-    iN = s(948202),
+    iN = s(109447),
     iA = s(817577);
 function ij() {
     (0, ig.A)(ih.TE);
@@ -4096,7 +4096,7 @@ var n8 = s(820081),
     n4 = s(580630),
     ae = s(795269),
     at = s(84483),
-    as = s(618235),
+    as = s(955298),
     ai = s(55647),
     an = s(202600);
 function aa(e) {

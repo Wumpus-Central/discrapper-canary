@@ -21,29 +21,29 @@ function m(e) {
         j = l.useCallback(() => {
             m(c);
         }, []),
-        A = l.useCallback(() => p.current, []),
-        v = (0, s.bG)([a.default], () => o.Ay.canUsePremiumProfileCustomization(a.default.getCurrentUser())),
-        E = v ? c : i,
-        S = !v && x?.id === "premiumTryItOut",
+        v = l.useCallback(() => p.current, []),
+        A = (0, s.bG)([a.default], () => o.Ay.canUsePremiumProfileCustomization(a.default.getCurrentUser())),
+        E = A ? c : i,
+        S = !A && x?.id === "premiumTryItOut",
         C = l.useCallback(() => {
             f(E);
         }, [E]),
-        T = l.useCallback((e) => {
+        b = l.useCallback((e) => {
             p.current = e;
         }, []),
-        b = l.useMemo(
+        T = l.useMemo(
             () => ({
                 selectedPanel: E,
                 readyPanel: x,
                 handlePanelTransitionComplete: C,
                 navigate: I,
                 goBack: j,
-                getCurrentPreset: A,
-                cachePreset: T,
+                getCurrentPreset: v,
+                cachePreset: b,
             }),
-            [E, x, C, I, j, A, T],
+            [E, x, C, I, j, v, b],
         );
-    return (0, n.jsx)(g.Provider, { value: S, children: (0, n.jsx)(u.Provider, { value: b, children: t }) });
+    return (0, n.jsx)(g.Provider, { value: S, children: (0, n.jsx)(u.Provider, { value: T, children: t }) });
 }
 function x() {
     let e = l.useContext(u);

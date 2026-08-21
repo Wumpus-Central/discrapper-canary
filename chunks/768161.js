@@ -17,7 +17,7 @@ var n = t(477900),
     E = t(652215),
     R = t(818348),
     y = t(375708),
-    b = t(925332),
+    b = t(832505),
     S = t(183064);
 let j = r.A.filter((l) => u.M.EURO_CURRENCY_COUNTRIES.has(l.alpha2)).map((l) => ({
     id: l.alpha2,

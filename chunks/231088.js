@@ -1,4 +1,4 @@
-i.d(t, { Ww: () => p, ZL: () => A }), i(321073);
+i.d(t, { Ww: () => p, ZL: () => v }), i(321073);
 var n = i(477900),
     l = i(582128),
     s = i(503698),
@@ -27,12 +27,12 @@ function p(e) {
         j = l.useCallback(() => {
             (I.current = !1), c(t), r("editing");
         }, [t]),
-        A = l.useRef(o);
+        v = l.useRef(o);
     l.useLayoutEffect(() => {
-        A.current = o;
+        v.current = o;
     });
-    let v = l.useCallback(() => {
-            I.current || ((I.current = !0), i(A.current), r("done"));
+    let A = l.useCallback(() => {
+            I.current || ((I.current = !0), i(v.current), r("done"));
         }, [i]),
         E = l.useCallback(() => {
             I.current || ((I.current = !0), r("done"));
@@ -47,9 +47,9 @@ function p(e) {
         }, [u, g]);
     let S = l.useCallback(
             (e) => {
-                !u || (null != x.current && (0, a.vq)(e.relatedTarget) && x.current.contains(e.relatedTarget)) || v();
+                !u || (null != x.current && (0, a.vq)(e.relatedTarget) && x.current.contains(e.relatedTarget)) || A();
             },
-            [u, v],
+            [u, A],
         ),
         C = l.useCallback(
             (e) => {
@@ -57,19 +57,19 @@ function p(e) {
             },
             [u, E],
         ),
-        T = l.useCallback(() => {
-            (p.current = !0), v();
-        }, [v]),
         b = l.useCallback(() => {
+            (p.current = !0), A();
+        }, [A]),
+        T = l.useCallback(() => {
             (p.current = !0), E();
         }, [E]),
         N = l.useCallback(
             (e) => {
                 "Enter" !== e.key || e.shiftKey
-                    ? "Escape" === e.key && (e.preventDefault(), e.stopPropagation(), b())
-                    : (e.preventDefault(), T());
+                    ? "Escape" === e.key && (e.preventDefault(), e.stopPropagation(), T())
+                    : (e.preventDefault(), b());
             },
-            [T, b],
+            [b, T],
         );
     return {
         isEditing: u,
@@ -80,10 +80,10 @@ function p(e) {
         wrapperRef: x,
         inputRef: h,
         handleStartEditing: j,
-        handleCommit: v,
+        handleCommit: A,
         handleCancel: E,
-        handleInputCommit: T,
-        handleInputCancel: b,
+        handleInputCommit: b,
+        handleInputCancel: T,
         onInputKeyDown: N,
         onBlur: S,
         onContainerKeyDown: C,
@@ -109,7 +109,7 @@ function j(e) {
         children: [(0, n.jsx)(r, { size: "xs", color: "currentColor", className: s ? h.ik : h.QW }), i],
     });
 }
-function A(e) {
+function v(e) {
     let {
             isEditing: t,
             preview: i,
@@ -121,13 +121,13 @@ function A(e) {
             variant: g = "default",
             trailing: f,
             previewErrorMessage: p,
-            previewWarningMessage: A,
-            className: v,
+            previewWarningMessage: v,
+            className: A,
             wrapperRef: E,
             onBlur: S,
             onKeyDown: C,
-            disabled: T = !1,
-            growWidth: b = !1,
+            disabled: b = !1,
+            growWidth: T = !1,
             removeVerticalPadding: N = !1,
         } = e,
         w = l.useRef(null),
@@ -135,9 +135,9 @@ function A(e) {
         k = l.useId(),
         R = null == i,
         O = null != p,
-        L = null != A && !O,
+        L = null != v && !O,
         _ = O ? "error" : L ? "warning" : null,
-        P = O ? p : A,
+        P = O ? p : v,
         D = null != _ && null != P,
         [G] = l.useState(t),
         [M, U] = l.useState(!1);
@@ -151,13 +151,13 @@ function A(e) {
     }
     let V = (0, n.jsxs)("div", {
         ref: w,
-        className: r()(h.LL, { [h.JD]: O, [h.xe]: L, [h.r9]: T }),
-        onMouseDown: T
+        className: r()(h.LL, { [h.JD]: O, [h.xe]: L, [h.r9]: b }),
+        onMouseDown: b
             ? void 0
             : function (e) {
                   e.preventDefault();
               },
-        onClick: T ? void 0 : H,
+        onClick: b ? void 0 : H,
         children: [
             R
                 ? (0, n.jsx)(m.E, {
@@ -168,7 +168,7 @@ function A(e) {
                       children: s,
                   })
                 : i,
-            !T &&
+            !b &&
                 (0, n.jsx)(x.D, {
                     innerRef: d,
                     "aria-label": c,
@@ -186,8 +186,8 @@ function A(e) {
         ref: E,
         className: r()(
             h.kL,
-            { [h.oE]: "compact" === g, [h.c1]: "multiline" === g, [h.CP]: b, [h.WK]: N, [h.Dy]: t },
-            v,
+            { [h.oE]: "compact" === g, [h.c1]: "multiline" === g, [h.CP]: T, [h.WK]: N, [h.Dy]: t },
+            A,
         ),
         onBlur: S,
         onKeyDown: C,

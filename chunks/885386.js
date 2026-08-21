@@ -3,7 +3,7 @@ n.d(t, {
     Sf: () => eK,
     n6: () => eo,
     X6: () => ew,
-    Iv: () => e5,
+    Iv: () => e4,
     NF: () => e8,
     j0: () => tr,
     Pf: () => ee,
@@ -13,7 +13,7 @@ n.d(t, {
     D_: () => R,
     pK: () => ti,
     JI: () => eF,
-    HZ: () => e4,
+    HZ: () => e5,
     vf: () => ep,
     Vv: () => e6,
     BQ: () => v,
@@ -889,13 +889,13 @@ let eJ = m({
         (e) => e ?? s.fL.SLAYER_SDK_RECEIVE_IN_GAME_DMS_UNSET,
         (e) => e,
     ),
-    e4 = f(
+    e5 = f(
         "ads",
         "alwaysDeliver",
         (e) => e ?? !1,
         (e) => e,
     );
-function e5(e) {
+function e4(e) {
     let { explicitContentGuilds: t, explicitContentFriendDm: n, explicitContentNonFriendDm: i } = e ?? {};
     return {
         explicitContentGuilds: t ?? s.TO.UNSET_EXPLICIT_CONTENT_REDACTION,
@@ -911,7 +911,7 @@ function e6(e) {
         explicitContentNonFriendDm: i ?? void 0,
     };
 }
-let e7 = f("textAndImages", "explicitContentSettings", e5, e6);
+let e7 = f("textAndImages", "explicitContentSettings", e4, e6);
 function e8(e) {
     let { goreContentGuilds: t, goreContentFriendDm: n, goreContentNonFriendDm: i } = e ?? {};
     return {

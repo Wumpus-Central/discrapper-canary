@@ -33,8 +33,8 @@ var s = t(138134),
     U = t(445567),
     y = t(183623),
     O = t(844972),
-    H = t(146151),
-    b = t(428689),
+    b = t(146151),
+    H = t(428689),
     F = t(983851),
     G = t(101277),
     B = t(678708),
@@ -180,10 +180,10 @@ function ll(l, e) {
             if (ll) return y.F;
             if (ls)
                 if ((0, K.A)(l)) return L.LockIcon;
-                else return $ ? O.k : H.t;
+                else return $ ? O.k : b.t;
             if (z) return L.LockIcon;
-            if ((0, K.A)(l)) return $ ? O.k : H.t;
-            else return $ ? b.VideoIcon : F.H;
+            if ((0, K.A)(l)) return $ ? O.k : b.t;
+            else return $ ? H.VideoIcon : F.H;
         case q.rbe.GUILD_DIRECTORY:
             return G.P;
         case q.rbe.GUILD_CATEGORY:

@@ -67,7 +67,7 @@ class f extends i.A {
                     isEnabled: () =>
                         d.Ay.getEnableAutoclipping() &&
                         u.A.getConfig({ location: "Clip signal handler registration" }).enableCs2Gsi,
-                    importHandler: () => Promise.all([n.e("909686"), n.e("860838")]).then(n.bind(n, 525509)),
+                    importHandler: () => Promise.all([n.e("864931"), n.e("860838")]).then(n.bind(n, 525509)),
                 },
             ]))
                 switch (e.type) {

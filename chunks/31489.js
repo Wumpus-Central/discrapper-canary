@@ -36,7 +36,7 @@ var l,
         l),
     C = n(742023),
     _ = n(697744),
-    R = n(459864),
+    R = n(295813),
     P = n(375708),
     M = n(296167);
 function L(e) {
@@ -1077,7 +1077,7 @@ function e3(e) {
           });
 }
 var e7 = n(229775);
-function e4(e) {
+function e5(e) {
     let { projectId: t, node: n, presentation: l = "row", active: s = !1 } = e,
         [o, c] = i.useState(!1),
         d = i.useId(),
@@ -1157,7 +1157,7 @@ function e4(e) {
         ],
     });
 }
-function e5() {}
+function e4() {}
 function e8(e) {
     let { projectId: t, screenshotId: n } = e,
         [l, s] = i.useState(null),
@@ -1187,7 +1187,7 @@ function e8(e) {
                     shouldHideMediaOptions: !0,
                     location: "VibegrationsChat",
                 });
-            }, e5);
+            }, e4);
         }, [t, n, c]);
     return r ? null : (0, a.jsx)(eC, { name: c, thumbSrc: l, ariaLabel: c, onClick: d, onThumbError: () => o(!0) });
 }
@@ -1222,7 +1222,7 @@ function e9(e) {
             ? (0, a.jsx)("ol", {
                   className: ez.dO,
                   children: n.map((e) =>
-                      (0, a.jsx)(e4, { projectId: t, node: e, presentation: "detail", active: i && e === o }, e.id),
+                      (0, a.jsx)(e5, { projectId: t, node: e, presentation: "detail", active: i && e === o }, e.id),
                   ),
               })
             : void 0,
@@ -1904,7 +1904,7 @@ function tM(e) {
                               ? (0, a.jsx)("ol", {
                                     className: ez.dO,
                                     children: t.steps.map((e) =>
-                                        (0, a.jsx)(e4, { node: e, presentation: "detail", active: o && e === c }, e.id),
+                                        (0, a.jsx)(e5, { node: e, presentation: "detail", active: o && e === c }, e.id),
                                     ),
                                 })
                               : null,
@@ -2410,13 +2410,13 @@ function t7(e) {
         ],
     });
 }
-let t4 = {
+let t5 = {
     steered: R.default.I9TkzD,
     queued: R.default.gbjY6o,
     restarting: R.default["1Q4Cs2"],
     answered: R.default["J6WZ+x"],
 };
-function t5(e) {
+function t4(e) {
     let { projectId: t, messages: n, ref: l, onApprove: s, onPickIdea: r } = e,
         o = (0, w.bG)([eG.default], () => eG.default.getCurrentUser()),
         c = n[n.length - 1];
@@ -2452,7 +2452,7 @@ function t5(e) {
                                                         ? (0, a.jsx)(b.E, {
                                                               variant: "text-xs/normal",
                                                               color: "text-muted",
-                                                              children: P.intl.string(t4[e.disposition]),
+                                                              children: P.intl.string(t5[e.disposition]),
                                                           })
                                                         : null,
                                                 ],
@@ -3220,7 +3220,7 @@ function nR(e) {
                                     (0, tm.openModalLazy)(async () => {
                                         let { default: l } = await Promise.all([
                                             n.e("312513"),
-                                            n.e("743596"),
+                                            n.e("104143"),
                                             n.e("155925"),
                                             n.e("218413"),
                                             n.e("137381"),
@@ -3282,7 +3282,7 @@ function nR(e) {
                 onScroll: y,
                 "data-vibegrations-chat-log": !0,
                 className: b ? nC.N$ : `${nC.N$} ${nC.hB}`,
-                children: (0, a.jsx)(t5, {
+                children: (0, a.jsx)(t4, {
                     ref: x,
                     projectId: t,
                     messages: r,
@@ -3831,8 +3831,8 @@ var n0 = n(120426),
     n6 = n(418842),
     n3 = n(363195),
     n7 = n(885386),
-    n4 = n(940107),
-    n5 = n(171936);
+    n5 = n(940107),
+    n4 = n(171936);
 function n8(e) {
     let {
             projectId: t,
@@ -3882,7 +3882,7 @@ function n8(e) {
                     forcedColors: o,
                     underlineLinks: c,
                 };
-                (0, n4.W)(l, "set-env", i, {
+                (0, n5.W)(l, "set-env", i, {
                     timeoutMs: 6e3,
                     retryMs: 250,
                     sourceMatch: "origin",
@@ -3925,7 +3925,7 @@ function n8(e) {
     })(m, p);
     let [x, v] = i.useState(null);
     i.useEffect(() => {
-        if (null != t) return (0, n5.mn)(t, () => (0, n0.F1)(m, p));
+        if (null != t) return (0, n4.mn)(t, () => (0, n0.F1)(m, p));
     }, [t, m, p]);
     let b = i.useCallback(() => {
             let e = (0, n0.F1)(m, p),
