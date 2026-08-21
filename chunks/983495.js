@@ -1,4 +1,4 @@
-n.d(t, { A: () => eg });
+n.d(t, { A: () => eA });
 var l = n(477900),
     r = n(582128),
     a = n(503698),
@@ -39,8 +39,8 @@ var l = n(477900),
     D = n(307731),
     F = n(818348),
     G = n(650583),
-    H = n(375708),
-    Y = n(954024);
+    Y = n(375708),
+    H = n(954024);
 function B(e) {
     let {
             user: t,
@@ -69,7 +69,7 @@ function B(e) {
                 a = `:${t.name}:`;
             switch (l) {
                 case k.dS.ACTIVITY:
-                    let i = H.intl.formatToPlainString(H.t.EUFEJt, { username: n }),
+                    let i = Y.intl.formatToPlainString(Y.t.EUFEJt, { username: n }),
                         s = `
 > ${r}`;
                     return null != r
@@ -78,11 +78,11 @@ ${a}`
                         : `${U.c5}${i}*
 ${a}`;
                 case k.dS.AVATAR:
-                    let o = H.intl.formatToPlainString(H.t.E6H15q, { username: n });
+                    let o = Y.intl.formatToPlainString(Y.t.E6H15q, { username: n });
                     return `${U.c5}${o}*
 ${a}`;
                 case k.dS.STATUS:
-                    let u = H.intl.formatToPlainString(H.t.XPQgL2, { username: n }),
+                    let u = Y.intl.formatToPlainString(Y.t.XPQgL2, { username: n }),
                         c = `
 > ${r}`;
                     return null != r
@@ -123,7 +123,7 @@ ${a}`;
             );
         }, [d, f]),
         (0, l.jsx)(I.A, {
-            headerClassName: x ? Y.X : void 0,
+            headerClassName: x ? H.X : void 0,
             guildId: n ?? void 0,
             closePopout: F.tE,
             onSelectEmoji: async (e) => {
@@ -178,7 +178,7 @@ function ee(e) {
             let { input: t, username: n, sourceType: l, sourceDetails: r } = e;
             switch (l) {
                 case k.dS.ACTIVITY:
-                    let a = H.intl.formatToPlainString(H.t.WmvMCo, { username: n }),
+                    let a = Y.intl.formatToPlainString(Y.t.WmvMCo, { username: n }),
                         i = `
 > ${r}`;
                     return null != r
@@ -187,11 +187,11 @@ ${t}`
                         : `${U.c5}${a}*
 ${t}`;
                 case k.dS.AVATAR:
-                    let s = H.intl.formatToPlainString(H.t.lpaBsB, { username: n });
+                    let s = Y.intl.formatToPlainString(Y.t.lpaBsB, { username: n });
                     return `${U.c5}${s}*
 ${t}`;
                 case k.dS.STATUS:
-                    let o = H.intl.formatToPlainString(H.t.lFXgFV, { username: n }),
+                    let o = Y.intl.formatToPlainString(Y.t.lFXgFV, { username: n }),
                         u = `
 > ${r}`;
                     return null != r
@@ -232,15 +232,15 @@ ${t}`;
                 innerClassName: J.rn,
                 editorClassName: J.EN,
                 type: z.oU.USER_PROFILE_REPLY,
-                placeholder: H.intl.formatToPlainString(
+                placeholder: Y.intl.formatToPlainString(
                     (function (e) {
                         switch (e) {
                             case k.dS.ACTIVITY:
-                                return H.t.Qn081O;
+                                return Y.t.Qn081O;
                             case k.dS.AVATAR:
-                                return H.t.xGNPFK;
+                                return Y.t.xGNPFK;
                             case k.dS.STATUS:
-                                return H.t.g9BTCM;
+                                return Y.t.g9BTCM;
                             default:
                                 (0, w.xb)(e);
                         }
@@ -318,55 +318,21 @@ function en(e) {
 var el = n(22231),
     er = n(241326),
     ea = n(885386),
-    ei = n(866665),
-    es = n(101555),
-    eo = n(969603);
-function eu(e) {
-    let {
-            className: t,
-            ref: n,
-            tooltipText: r,
-            onClick: a,
-            shouldDelayTooltip: s,
-            "aria-label": u,
-            "aria-haspopup": c,
-            icon: d,
-            variant: f,
-        } = e,
-        h = (0, o.bG)([T.Ay], () => (!s || T.Ay.useReducedMotion || T.Ay.keyboardModeEnabled ? 0 : 300));
-    return (0, l.jsx)(ei.m, {
-        asContainer: !0,
-        text: r,
-        delay: h,
-        ariaHidden: !0,
-        children: (0, l.jsx)(es.$n, {
-            ref: n,
-            className: i()(eo.button, eo[f], t),
-            "aria-label": u ?? r,
-            "aria-haspopup": c,
-            onClick: a,
-            children: (0, l.jsx)(d, { size: "xs", colorClass: eo.icon }),
-        }),
-    });
-}
-function ec(e) {
-    let { className: t, children: n } = e;
-    return (0, l.jsx)(es.Ay, { className: i()(eo.bar, t), children: n });
-}
-var ed = n(777357);
-function ef(e) {
+    ei = n(33969),
+    es = n(777357);
+function eo(e) {
     let { isVisible: t, isExpandable: a, onCloseProfile: s, editButtonRef: o } = e,
         { analyticsLocations: u } = (0, p.Ay)(),
         { trackUserProfileAction: d } = (0, N.NJ)(),
         f = r.useRef(null),
         { themeType: h } = (0, V.E)();
-    return (0, l.jsxs)(ec, {
-        className: i()(ed.oO, { [ed.RK]: t, [ed.lu]: a }),
+    return (0, l.jsxs)(ei.A, {
+        className: i()(es.oO, { [es.RK]: t, [es.lu]: a }),
         children: [
-            (0, l.jsx)(eu, {
+            (0, l.jsx)(ei.Y, {
                 variant: "custom-status",
                 ref: o,
-                tooltipText: H.intl.string(H.t.bt75uw),
+                tooltipText: Y.intl.string(Y.t.bt75uw),
                 shouldDelayTooltip: a,
                 onClick: function () {
                     d({ action: "PRESS_EDIT_CUSTOM_STATUS" }),
@@ -400,65 +366,65 @@ function ef(e) {
                         }),
                         s?.();
                 },
-                "aria-label": H.intl.string(H.t.QdHxos),
+                "aria-label": Y.intl.string(Y.t.QdHxos),
                 "aria-haspopup": "dialog",
                 icon: el.PencilIcon,
             }),
-            (0, l.jsx)(eu, {
+            (0, l.jsx)(ei.Y, {
                 variant: "custom-status",
                 ref: f,
-                tooltipText: H.intl.string(H.t.VkKicb),
+                tooltipText: Y.intl.string(Y.t.VkKicb),
                 shouldDelayTooltip: a,
                 onClick: function () {
                     d({ action: "PRESS_CLEAR_CUSTOM_STATUS" }),
                         ea.G2.updateSetting(void 0),
                         requestAnimationFrame(() => o.current?.focus());
                 },
-                "aria-label": H.intl.string(H.t.wfYTHe),
+                "aria-label": Y.intl.string(Y.t.wfYTHe),
                 icon: er.TrashIcon,
             }),
         ],
     });
 }
-var eh = n(502622);
-function em(e) {
+var eu = n(502622);
+function ec(e) {
     let { children: t, className: n } = e;
     return (0, l.jsx)("div", {
-        className: i()(eh.nL, n),
+        className: i()(eu.nL, n),
         children: (0, l.jsx)("div", {
-            className: eh.A7,
-            children: (0, l.jsx)("span", { className: eh.vW, children: t }),
+            className: eu.A7,
+            children: (0, l.jsx)("span", { className: eu.vW, children: t }),
         }),
     });
 }
-let eA = r.forwardRef(function (e, t) {
+let ed = r.forwardRef(function (e, t) {
         let { onCloseProfile: r, prompt: a, addButtonRef: s } = e,
             o = (0, E.GV)(),
             { analyticsLocations: u } = (0, p.Ay)(),
             { trackUserProfileAction: A } = (0, N.NJ)(),
             { themeType: x } = (0, V.E)(),
-            T = null != a ? a.label() : H.intl.string(H.t.evw0oz),
+            T = null != a ? a.label() : Y.intl.string(Y.t.evw0oz),
             S = (0, l.jsxs)("div", {
-                className: eh.Qs,
+                className: eu.Qs,
                 children: [
-                    (0, l.jsx)(d.U, { size: "xs", className: eh.Tw, colorClass: eh.qv }),
+                    (0, l.jsx)(d.U, { size: "xs", className: eu.Tw, colorClass: eu.qv }),
                     (0, l.jsx)(f.E, {
                         variant: "text-sm/normal",
-                        className: i()(eh.ch, null != a && eh.R9),
+                        className: i()(eu.ch, null != a && eu.R9),
                         children: T,
                     }),
                 ],
             });
         return (0, l.jsxs)(l.Fragment, {
             children: [
-                (0, l.jsx)(em, { children: S }),
+                (0, l.jsx)(ec, { children: S }),
                 (0, l.jsx)("div", {
-                    className: i()(eh.kL, eh.LL),
+                    className: i()(eu.kL, eu.LL),
                     ref: t,
                     children: (0, l.jsx)(h.D, {
                         innerRef: s,
-                        className: eh.A7,
-                        "aria-label": H.intl.string(H.t["zrpF/b"]),
+                        className: eu.A7,
+                        "aria-label": Y.intl.string(Y.t["zrpF/b"]),
                         "aria-describedby": o,
                         onClick: function () {
                             A({ action: "PRESS_ADD_CUSTOM_STATUS" }),
@@ -491,15 +457,15 @@ let eA = r.forwardRef(function (e, t) {
                                     x === et.d.MODAL_V2 ? { stackingBehavior: "stack" } : void 0,
                                 );
                         },
-                        focusProps: { ringClassName: eh.hN },
+                        focusProps: { ringClassName: eu.hN },
                         children: (0, l.jsxs)("span", {
-                            className: i()(eh.vW, eh.vk),
+                            className: i()(eu.vW, eu.vk),
                             children: [
-                                (0, l.jsx)(d.U, { size: "xs", className: eh.Tw, colorClass: eh.qv }),
-                                (0, l.jsxs)(m.A, { id: o, children: [H.intl.string(H.t.EVV6uZ), ": ", T] }),
+                                (0, l.jsx)(d.U, { size: "xs", className: eu.Tw, colorClass: eu.qv }),
+                                (0, l.jsxs)(m.A, { id: o, children: [Y.intl.string(Y.t.EVV6uZ), ": ", T] }),
                                 (0, l.jsx)(f.E, {
                                     variant: "text-sm/normal",
-                                    className: i()(eh.ch, null != a && eh.R9),
+                                    className: i()(eu.ch, null != a && eu.R9),
                                     "aria-hidden": "true",
                                     children: T,
                                 }),
@@ -510,7 +476,7 @@ let eA = r.forwardRef(function (e, t) {
             ],
         });
     }),
-    ex = r.forwardRef(function (e, t) {
+    ef = r.forwardRef(function (e, t) {
         let {
                 emoji: n,
                 text: a,
@@ -536,7 +502,7 @@ let eA = r.forwardRef(function (e, t) {
             V = r.useRef(M),
             D = null != n && null == a,
             [F, G] = r.useState(!1),
-            [Y, B] = r.useState(!0),
+            [H, B] = r.useState(!0),
             [Q, q] = r.useState(!D && j),
             [z, W] = r.useState(!1),
             K = j && F,
@@ -562,69 +528,69 @@ let eA = r.forwardRef(function (e, t) {
             let e = w.current.getBoundingClientRect().height,
                 t = O.current.getBoundingClientRect().height,
                 n = J(t);
-            q(n > e), (U.current = e), (V.current = t), el({ maxHeight: `${Y ? Math.min(U.current, M) : n}px` });
-        }, [K, a, n, el, Y, M, J]);
+            q(n > e), (U.current = e), (V.current = t), el({ maxHeight: `${H ? Math.min(U.current, M) : n}px` });
+        }, [K, a, n, el, H, M, J]);
         let ea =
                 null != n
-                    ? (0, l.jsx)(S.A, { emoji: n, animate: g, hideTooltip: !1, tooltipDelay: k.In, className: eh.H0 })
+                    ? (0, l.jsx)(S.A, { emoji: n, animate: g, hideTooltip: !1, tooltipDelay: k.In, className: eu.H0 })
                     : null,
-            ei = null != a ? (0, l.jsx)(f.E, { variant: "text-sm/normal", className: eh.qS, children: a }) : null,
+            ei = null != a ? (0, l.jsx)(f.E, { variant: "text-sm/normal", className: eu.qS, children: a }) : null,
             es =
                 void 0 !== y && null == n
                     ? (0, l.jsx)(f.E, {
                           variant: "text-sm/normal",
                           color: "text-muted",
-                          "aria-label": `${H.intl.string(H.t.EVV6uZ)}: ${y}`,
-                          className: i()(eh.qS, eh.R9),
+                          "aria-label": `${Y.intl.string(Y.t.EVV6uZ)}: ${y}`,
+                          className: i()(eu.qS, eu.R9),
                           children: y ?? "",
                       })
                     : null,
             eo = null == ei || "" === a ? es : ei,
-            eu = (0, l.jsxs)("div", { className: eh.Qs, children: [ea, eo] }),
-            ec = (0, l.jsxs)("div", { ref: w, className: i()(eh.Qs, eh.mj), children: [ea, eo] }),
-            ed = (0, l.jsxs)("div", { ref: O, className: i()(eh.Qs, eh.m2, eh.mj), children: [ea, eo] }),
-            ef = H.intl.string(z ? H.t.fFaN1b : H.t.xPkLPy),
+            ed = (0, l.jsxs)("div", { className: eu.Qs, children: [ea, eo] }),
+            ef = (0, l.jsxs)("div", { ref: w, className: i()(eu.Qs, eu.mj), children: [ea, eo] }),
+            eh = (0, l.jsxs)("div", { ref: O, className: i()(eu.Qs, eu.m2, eu.mj), children: [ea, eo] }),
+            em = Y.intl.string(z ? Y.t.fFaN1b : Y.t.xPkLPy),
             eA = Q
                 ? (0, l.jsx)(m.A, {
                       showOnFocus: !0,
                       children: (0, l.jsx)(h.D, {
-                          className: eh.uJ,
-                          "aria-label": ef,
+                          className: eu.uJ,
+                          "aria-label": em,
                           "aria-controls": $,
                           "aria-expanded": z,
                           onClick: () => er(!z),
-                          focusProps: { ringClassName: eh.o5 },
+                          focusProps: { ringClassName: eu.o5 },
                           children: (0, l.jsx)(x.a, {
                               size: "xs",
                               color: "currentColor",
-                              className: z ? eh.DE : void 0,
+                              className: z ? eu.DE : void 0,
                           }),
                       }),
                   })
                 : null,
             ex = (0, l.jsx)("div", {
                 ref: t,
-                className: eh.A7,
+                className: eu.A7,
                 role: "group",
                 "aria-label": c,
                 children: (0, l.jsx)("span", {
-                    className: eh.vW,
+                    className: eu.vW,
                     children: (0, l.jsxs)(s.animated.div, {
                         id: $,
                         style: en,
-                        className: i()(eh.Qs, { [eh.m2]: !Y && X, [eh.p$]: !Y && !X }),
+                        className: i()(eu.Qs, { [eu.m2]: !H && X, [eu.p$]: !H && !X }),
                         children: [ea, eo],
                     }),
                 }),
             }),
-            eT = (0, l.jsxs)(em, { children: [eu, ec, ed] });
+            eT = (0, l.jsxs)(ec, { children: [ed, ef, eh] });
         return null == R
             ? (0, l.jsxs)(l.Fragment, {
                   children: [
                       eT,
                       (0, l.jsxs)("div", {
                           ref: _,
-                          className: i()(eh.kL, p),
+                          className: i()(eu.kL, p),
                           onMouseEnter: () => {
                               L({ action: "HOVER_CUSTOM_STATUS" }), er(!0);
                           },
@@ -640,7 +606,7 @@ let eA = r.forwardRef(function (e, t) {
                       eT,
                       (0, l.jsxs)("div", {
                           ref: _,
-                          className: i()(eh.kL, p),
+                          className: i()(eu.kL, p),
                           onFocus: () => {
                               R(!0);
                           },
@@ -658,21 +624,21 @@ let eA = r.forwardRef(function (e, t) {
                   ],
               });
     }),
-    eT = r.forwardRef(function (e, t) {
+    eh = r.forwardRef(function (e, t) {
         let { emoji: n, text: a, onCloseProfile: i, editButtonRef: s, ...o } = e,
             [u, c] = r.useState(!1);
-        return (0, l.jsx)(ex, {
+        return (0, l.jsx)(ef, {
             ...o,
             ref: t,
             emoji: n,
             text: a,
-            className: eh.LL,
+            className: eu.LL,
             onShowToolbar: c,
             renderToolbar: (e) =>
-                (0, l.jsx)(ef, { isVisible: u, isExpandable: e, onCloseProfile: i, editButtonRef: s }),
+                (0, l.jsx)(eo, { isVisible: u, isExpandable: e, onCloseProfile: i, editButtonRef: s }),
         });
     });
-function eS(e) {
+function em(e) {
     let t,
         { emoji: n, text: a, user: i, guildId: s, channelId: o, themeType: u, ...c } = e,
         { trackUserProfileAction: d } = (0, N.NJ)(),
@@ -705,13 +671,13 @@ function eS(e) {
         onAction: d,
         onClose: () => v(!1),
         children: () =>
-            (0, l.jsx)(ex, {
+            (0, l.jsx)(ef, {
                 ...c,
                 ref: S,
                 emoji: n,
                 text: a,
                 themeType: u,
-                className: T ? eh.zf : void 0,
+                className: T ? eu.zf : void 0,
                 onShowToolbar: y,
                 renderToolbar: (e) =>
                     (0, l.jsx)(U.Ay, {
@@ -725,7 +691,7 @@ function eS(e) {
             }),
     });
 }
-let eg = r.forwardRef(function (e, t) {
+let eA = r.forwardRef(function (e, t) {
     let {
             user: n,
             guildId: a,
@@ -746,13 +712,13 @@ let eg = r.forwardRef(function (e, t) {
         R = (0, o.bG)([j.default], () => j.default.getId() === n.id),
         N = R && !h,
         P = C.Ay.useName(a, i, n),
-        L = R ? H.intl.string(H.t.SlKMnR) : H.intl.formatToPlainString(H.t["91lTRe"], { name: P }),
+        L = R ? Y.intl.string(Y.t.SlKMnR) : Y.intl.formatToPlainString(Y.t["91lTRe"], { name: P }),
         b = !R && !n.bot && !h;
     if (S) {
         let e = null != E && "" !== E ? E : null;
         return (0, l.jsx)(p.f5, {
             value: x,
-            children: (0, l.jsx)(ex, { emoji: c ?? null, text: e, statusLabel: L, placeholderText: d, ref: t, ...m }),
+            children: (0, l.jsx)(ef, { emoji: c ?? null, text: e, statusLabel: L, placeholderText: d, ref: t, ...m }),
         });
     }
     let M = A?.emoji ?? null,
@@ -761,12 +727,12 @@ let eg = r.forwardRef(function (e, t) {
         ? null == M && null == I
             ? (0, l.jsx)(p.f5, {
                   value: x,
-                  children: (0, l.jsx)(eA, { onCloseProfile: s, prompt: f, ref: t, addButtonRef: T }),
+                  children: (0, l.jsx)(ed, { onCloseProfile: s, prompt: f, ref: t, addButtonRef: T }),
               })
             : b
               ? (0, l.jsx)(p.f5, {
                     value: x,
-                    children: (0, l.jsx)(eS, {
+                    children: (0, l.jsx)(em, {
                         user: n,
                         guildId: a,
                         channelId: i,
@@ -779,7 +745,7 @@ let eg = r.forwardRef(function (e, t) {
               : N
                 ? (0, l.jsx)(p.f5, {
                       value: x,
-                      children: (0, l.jsx)(eT, {
+                      children: (0, l.jsx)(eh, {
                           emoji: M,
                           text: I,
                           statusLabel: L,
@@ -791,7 +757,7 @@ let eg = r.forwardRef(function (e, t) {
                   })
                 : (0, l.jsx)(p.f5, {
                       value: x,
-                      children: (0, l.jsx)(ex, { emoji: M, text: I, statusLabel: L, ref: t, ...m }),
+                      children: (0, l.jsx)(ef, { emoji: M, text: I, statusLabel: L, ref: t, ...m }),
                   })
         : null;
 });

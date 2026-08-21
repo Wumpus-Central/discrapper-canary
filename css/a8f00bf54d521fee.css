@@ -18,7 +18,9 @@
     z-index: -2
 }
 
-.removeButton__70feb {
+.removeButton__70feb.removeButton__70feb {
+    background-color: var(--control-overlay-secondary-background-default);
+    border-color: var(--control-overlay-secondary-border-default);
     inset-inline-end: var(--space-8);
     opacity: 0;
     position: absolute;
@@ -141,7 +143,9 @@
     width: var(--space-48)
 }
 
-.removeImageButton_fca8d7 {
+.removeImageButton_fca8d7.removeImageButton_fca8d7 {
+    background-color: var(--control-overlay-secondary-background-default);
+    border-color: var(--control-overlay-secondary-border-default);
     inset-inline-end: calc(var(--space-8)*-1);
     opacity: 0;
     position: absolute;
@@ -158,9 +162,9 @@
     min-width: 0
 }
 
-.entryButtonContainer_fca8d7 {
-    display: flex;
-    gap: var(--space-4);
+.entryButtonContainer_fca8d7.entryButtonContainer_fca8d7 {
+    background-color: var(--control-overlay-secondary-background-default);
+    border-color: var(--control-overlay-secondary-border-default);
     inset-inline-end: calc(var(--space-8)*-1);
     opacity: 0;
     position: absolute;
@@ -268,4 +272,4 @@
     margin-inline-end: auto
 }
 
-/*# sourceMappingURL=d402d92037dac81d.css.map*/
+/*# sourceMappingURL=a8f00bf54d521fee.css.map*/

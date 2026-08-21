@@ -594,7 +594,9 @@ function eJ(e) {
                                                         n.e("291103"),
                                                         n.e("253781"),
                                                         n.e("132964"),
-                                                        n.e("417206"),
+                                                        n.e("254215"),
+                                                        n.e("314304"),
+                                                        n.e("853855"),
                                                         n.e("157064"),
                                                         n.e("831835"),
                                                         n.e("156957"),
@@ -729,7 +731,7 @@ function eJ(e) {
                                                         n.e("523276"),
                                                         n.e("278412"),
                                                         n.e("235996"),
-                                                        n.e("80000"),
+                                                        n.e("476087"),
                                                         n.e("791824"),
                                                         n.e("25279"),
                                                         n.e("628752"),
@@ -944,8 +946,8 @@ function e2(e) {
 var e7 = n(34188),
     e8 = n(700623),
     e4 = n(177953),
-    e3 = n(825484),
-    e5 = n(512950),
+    e5 = n(825484),
+    e3 = n(512950),
     e9 = n(900797),
     e6 = n(847374),
     te = n(10716),
@@ -1319,7 +1321,7 @@ function tO(e) {
     }, [n, a, d, u]),
     (0, I.$B)(n) && (0, I.Ag)(n))
         ? null != a && null != d
-            ? (0, r.jsxs)(e3.e, {
+            ? (0, r.jsxs)(e5.e, {
                   fullWidth: !0,
                   children: [
                       (0, r.jsx)(tI, { context: t, application: n, sectionName: l, primaryEntryPointCommand: a }),
@@ -1329,9 +1331,9 @@ function tO(e) {
                   ],
               })
             : s && !i && (0, I.Ag)(n)
-              ? (0, r.jsx)(e5.p, {
+              ? (0, r.jsx)(e3.p, {
                     className: tv.ai,
-                    messageType: e5.Y.WARNING,
+                    messageType: e3.Y.WARNING,
                     children: et.intl.format(et.t["s/3hjE"], {}),
                 })
               : null
@@ -1506,10 +1508,10 @@ var tQ = n(111042),
     t7 = n(594061),
     t8 = n(935208),
     t4 = n(630248),
-    t3 = n(355097);
-function t5(e, t) {
+    t5 = n(355097);
+function t3(e, t) {
     o.useEffect(() => {
-        t7.bW.loadIfUncached(t3.oD.FRECENCY_AND_FAVORITES_SETTINGS);
+        t7.bW.loadIfUncached(t5.oD.FRECENCY_AND_FAVORITES_SETTINGS);
     }, []);
     let n = (0, A.bG)([t4.A], () => t4.A.getApplicationFrecencyWithoutLoadingLatest()),
         l = o.useMemo(
@@ -2219,11 +2221,11 @@ function n4(e, t) {
         i,
     ).slice(0, i);
 }
-function n3(e, t) {
+function n5(e, t) {
     let n = t4.A.getScoreWithoutLoadingLatest(e.id);
     return t4.A.getScoreWithoutLoadingLatest(t.id) - n;
 }
-function n5(e, t) {
+function n3(e, t) {
     let n = (0, I.lq)(e),
         l = (0, I.lq)(t);
     return (0, g.RF)(n, l);
@@ -2651,7 +2653,7 @@ function lm(e) {
                                 return t?.includes(c.toLocaleLowerCase()) ?? !1;
                             }),
                         ],
-                        sortComparers: [n3, n5],
+                        sortComparers: [n5, n3],
                     });
                 }, [a, r, i, t, n, m, p]),
                 x = A.length > 0,
@@ -3155,7 +3157,7 @@ function lv(e) {
                             let e = [];
                             return c && e.push(ns.gq), e;
                         }, [c]),
-                        u = t5(r, a),
+                        u = t3(r, a),
                         m = (0, A.bG)([eF.default], () => eF.default.getCurrentUser()?.nsfwAllowed);
                     return o.useMemo(() => {
                         function e(e) {
@@ -3334,7 +3336,7 @@ function lS(e) {
                         }, new Set()),
                     [s],
                 ),
-                c = t5(
+                c = t3(
                     o.useMemo(
                         () =>
                             Object.values(l.result?.sections ?? {})
