@@ -2266,23 +2266,11 @@
     transition: none
 }
 
-.chatMessageAuthor__2b71e {
-    align-items: center;
-    display: flex;
-    gap: var(--space-8);
-    margin-bottom: var(--space-4);
-    padding: 0 var(--space-4)
-}
-
-.chatMessageAuthor__2b71e,
 .chatMessageUser__2b71e {
     align-self: flex-end;
-    max-width: 80%;
-    min-width: 0
-}
-
-.chatMessageUser__2b71e {
     box-sizing: border-box;
+    max-width: 80%;
+    min-width: 0;
     overflow-wrap: anywhere;
     padding: var(--space-12);
     width: -moz-fit-content;
@@ -3927,4 +3915,4 @@
     text-align: center
 }
 
-/*# sourceMappingURL=248038.d487830a588c9266.css.map*/
+/*# sourceMappingURL=248038.9ec772dcbb886916.css.map*/
