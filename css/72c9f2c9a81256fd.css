@@ -126,12 +126,12 @@
 }
 
 .container__9c314.compact__9c314 {
-    --custom-preview-inline-padding: var(--space-4);
-    --custom-preview-block-padding: var(--space-4)
+    --custom-preview-inline-padding: var(--space-4)
 }
 
+.container__9c314.compact__9c314,
 .container__9c314.multiline__9c314 {
-    --custom-preview-block-padding: var(--space-8)
+    --custom-preview-block-padding: var(--space-4)
 }
 
 .container__9c314.removeVerticalPadding__9c314 {
@@ -303,4 +303,4 @@
     margin-inline-end: calc((var(--custom-preview-inline-padding) + 1px)*-1)
 }
 
-/*# sourceMappingURL=688cbe7b9ad5de6e.css.map*/
+/*# sourceMappingURL=72c9f2c9a81256fd.css.map*/

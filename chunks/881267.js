@@ -5,9 +5,9 @@ var t = n(477900),
     o = n(700623),
     i = n(331322),
     a = n(17928),
-    s = n(349288),
-    d = n(834730),
-    c = n(821609),
+    s = n(834730),
+    d = n(821609),
+    c = n(28863),
     f = n(398590),
     m = n(287809),
     h = n(944771),
@@ -54,7 +54,7 @@ function b(e) {
         P = y?.name ?? (null != j ? `${j.name} Playground` : "Playground"),
         w =
             null != y && null != y.docs
-                ? (0, t.jsx)(s.Anchor, { href: y.docs, children: "Documentation" })
+                ? (0, t.jsx)(c.Anchor, { href: y.docs, children: "Documentation" })
                 : null != v
                   ? v.defaultSubtitle
                   : "Explore Components",
@@ -102,14 +102,14 @@ function b(e) {
                                 direction: "vertical",
                                 gap: 0,
                                 children: [
-                                    (0, t.jsx)(d.E, { variant: "text-md/semibold", children: P }),
-                                    (0, t.jsx)(d.E, { variant: "text-sm/normal", children: w }),
+                                    (0, t.jsx)(s.E, { variant: "text-md/semibold", children: P }),
+                                    (0, t.jsx)(s.E, { variant: "text-sm/normal", children: w }),
                                 ],
                             }),
                         ],
                     }),
                 }),
-                (0, t.jsx)(c.$, { size: "sm", onClick: E, text: "Open Playground", fullWidth: null == y }),
+                (0, t.jsx)(d.$, { size: "sm", onClick: E, text: "Open Playground", fullWidth: null == y }),
             ],
         }),
     });
