@@ -1,63 +1,64 @@
-n.d(i, { A: () => G });
-var e = n(477900),
-    r = n(582128),
-    s = n(17928),
-    a = n(323073),
-    l = n(861382),
-    u = n(47167),
-    d = n(31717),
-    o = n(834942),
-    c = n(186111),
-    A = n(576705),
-    g = n(994500),
-    h = n(287809),
-    p = n(625494),
-    f = n(518960),
-    C = n(65593),
-    _ = n(698638),
-    b = n(652215),
-    m = n(375708);
-let G = function (t) {
-    let { className: i, style: n, channel: G, draftType: L } = t,
-        [T, k] = r.useState(!0),
-        v = (0, s.bG)([c.A], () => c.A.hasLayers()),
-        y = (0, s.bG)([A.A], () => null != G && A.A.can(b.xBc.ATTACH_FILES, G), [G]),
-        D = null != (0, s.bG)([l.A], () => l.A.getActiveCommand(G.id)),
-        I = G.getGuildId(),
-        S = L === d.C.FirstThreadMessage,
-        E = (0, a.ni)(G),
-        F = r.useMemo(
-            () => !v && ((G.isPrivate() && !G.isManaged()) || (null != I && !E && y && o.A.canChatInGuild(I))),
-            [y, E, G, I, v],
+i.d(n, { A: () => L });
+var r = i(477900),
+    e = i(582128),
+    s = i(17928),
+    a = i(323073),
+    l = i(861382),
+    u = i(47167),
+    d = i(31717),
+    o = i(834942),
+    c = i(186111),
+    A = i(576705),
+    g = i(994500),
+    h = i(287809),
+    p = i(676279),
+    f = i(625494),
+    C = i(518960),
+    _ = i(65593),
+    b = i(698638),
+    m = i(652215),
+    G = i(375708);
+let L = function (t) {
+    let { className: n, style: i, channel: L, draftType: T } = t,
+        [k, v] = e.useState(!0),
+        y = (0, s.bG)([c.A], () => c.A.hasLayers()),
+        D = (0, s.bG)([A.A], () => null != L && A.A.can(m.xBc.ATTACH_FILES, L), [L]),
+        I = null != (0, s.bG)([l.A], () => l.A.getActiveCommand(L.id)),
+        S = L.getGuildId(),
+        E = T === d.C.FirstThreadMessage,
+        F = (0, a.ni)(L),
+        R = e.useMemo(
+            () => !y && ((L.isPrivate() && !L.isManaged()) || (null != S && !F && D && o.A.canChatInGuild(S))),
+            [D, F, L, S, y],
         ),
-        R = S
-            ? b.kvI.GUILD_THREADS_ONLY.has(G.type)
-                ? m.intl.string(m.t.RBBLhL)
-                : m.intl.string(m.t.gUx4eu)
-            : T
-              ? m.intl.format(m.t.dYP2Fc, { destination: (0, u.m1)(G, h.default, g.A, !0) })
-              : m.intl.string(m.t.h76ulG);
-    return D || !F
+        j = E
+            ? m.kvI.GUILD_THREADS_ONLY.has(L.type)
+                ? G.intl.string(G.t.RBBLhL)
+                : G.intl.string(G.t.gUx4eu)
+            : k || (0, p.nr)()
+              ? G.intl.format(G.t.dYP2Fc, { destination: (0, u.m1)(L, h.default, g.A, !0) })
+              : G.intl.string(G.t.h76ulG);
+    return I || !R
         ? null
-        : (0, e.jsx)(C.A, {
-              className: i,
-              style: n,
-              title: R,
-              description: S ? m.intl.string(m.t.lpgkzq) : m.intl.string(m.t.usQh4J),
-              icons: _.ir,
+        : (0, r.jsx)(_.A, {
+              className: n,
+              style: i,
+              title: j,
+              description: E || (0, p.nr)() ? G.intl.string(G.t.lpgkzq) : G.intl.string(G.t.usQh4J),
+              icons: b.ir,
               onDrop: function (t) {
-                  if (D) return !1;
-                  F &&
-                      null != G &&
-                      ((0, f.R)(t, G, L, { requireConfirm: T, origin: "drag_drop" }),
-                      p._.dispatchToLastSubscribed(b.jej.TEXTAREA_FOCUS));
+                  if (I) return !1;
+                  R &&
+                      null != L &&
+                      ((0, C.R)(t, L, T, { requireConfirm: !!(0, p.nr)() || k, origin: "drag_drop" }),
+                      f._.dispatchToLastSubscribed(m.jej.TEXTAREA_FOCUS));
               },
               onDragClear: function () {
-                  return k(!0);
+                  return v(!0);
               },
               onDragOver: function (t) {
-                  if (D) return !1;
-                  S || t.shiftKey !== T || k(!t.shiftKey);
+                  if (I) return !1;
+                  E || t.shiftKey !== k || v(!t.shiftKey);
               },
           });
 };
