@@ -23,7 +23,7 @@ var C = n(442433),
     I = n(220839),
     j = n(397244),
     N = n(394871),
-    S = n(296704),
+    S = n(221877),
     y = n(866323),
     b = n(120842);
 function M(e) {
@@ -372,8 +372,8 @@ var e$ = n(734066),
     e3 = n(625903),
     e5 = n(404778),
     e7 = n(689175),
-    e8 = n(821609),
-    e4 = n(532624),
+    e4 = n(821609),
+    e8 = n(532624),
     e6 = n(927813),
     e9 = n(879631),
     te = n(350535),
@@ -394,7 +394,7 @@ function td(e) {
             },
             [a, t],
         );
-    return (0, i.jsx)(e8.$, {
+    return (0, i.jsx)(e4.$, {
         onClick: s,
         icon: ek.PencilIcon,
         variant: n,
@@ -451,7 +451,7 @@ let tg = l.memo(function (e) {
 var tf = n(696016),
     tA = n(652215),
     tx = n(753070),
-    tv = n(37589),
+    tv = n(711918),
     tC = n(48127);
 function tE(e) {
     let { onOpenGallery: t, onOpenSettings: n, onClose: a, setPopoutRef: s } = e;
@@ -461,7 +461,7 @@ function tE(e) {
         d = (0, c.bG)([eX.Ay], () => eX.Ay.getNewClipIds()),
         u = (0, tt.aJ)("ClipsPopout"),
         h = (0, c.bG)([eX.Ay], () => eX.Ay.getEnableAutoclipping()),
-        m = (0, c.bG)([e4.Ay], () => e4.Ay.getKeybindForAction(tA.hCu.SAVE_CLIP)),
+        m = (0, c.bG)([e8.Ay], () => e8.Ay.getKeybindForAction(tA.hCu.SAVE_CLIP)),
         p = l.useCallback(
             (e) => {
                 s?.(e);
@@ -572,7 +572,7 @@ function tE(e) {
                               x &&
                                   (0, i.jsx)("div", {
                                       className: tC.qr,
-                                      children: (0, i.jsx)(e8.$, {
+                                      children: (0, i.jsx)(e4.$, {
                                           onClick: () => t(),
                                           text: V.intl.string(tv.default["55C2MH"]),
                                           variant: "secondary",
@@ -801,8 +801,8 @@ var tK = n(206835),
     t3 = n(646986),
     t5 = n(563608),
     t7 = n(946356),
-    t8 = n(465829),
-    t4 = n(624479),
+    t4 = n(465829),
+    t8 = n(624479),
     t6 = n(206845),
     t9 = n(957565),
     ne = n(427262),
@@ -822,7 +822,7 @@ function nn(e) {
                       ...e,
                       className: s()(nt.c, { [nt.R]: n }),
                       "aria-label": V.intl.string(V.t.y5MwJy),
-                      children: (0, i.jsx)(t4.CopyIcon, { size: "xs", color: "currentColor" }),
+                      children: (0, i.jsx)(t8.CopyIcon, { size: "xs", color: "currentColor" }),
                   }),
           })
         : null;
@@ -1038,8 +1038,8 @@ function nP(e) {
                 n.e("960235"),
                 n.e("77333"),
                 n.e("718573"),
-                n.e("882082"),
-                n.e("413789"),
+                n.e("882722"),
+                n.e("950106"),
                 n.e("797595"),
                 n.e("147662"),
                 n.e("344057"),
@@ -1054,7 +1054,7 @@ function nP(e) {
                 n.e("733115"),
                 n.e("397270"),
                 n.e("373122"),
-                n.e("102057"),
+                n.e("396656"),
                 n.e("293159"),
                 n.e("755936"),
                 n.e("489088"),
@@ -1064,7 +1064,7 @@ function nP(e) {
                 n.e("362931"),
                 n.e("745959"),
                 n.e("858529"),
-                n.e("188159"),
+                n.e("207264"),
                 n.e("481987"),
                 n.e("958038"),
                 n.e("171202"),
@@ -1333,7 +1333,7 @@ function n0(e) {
                   }),
                   (0, i.jsx)("div", {
                       className: nX.UD,
-                      children: (0, i.jsx)(e8.$, {
+                      children: (0, i.jsx)(e4.$, {
                           variant: "primary",
                           fullWidth: !0,
                           text: V.intl.string(V.t.rg9FQp),
@@ -1389,7 +1389,7 @@ let n5 = [
         { duration: void 0, label: () => V.intl.string(V.t["46dqJY"]) },
     ],
     n7 = "forever";
-function n8(e) {
+function n4(e) {
     let { status: t, currentStatus: n, description: l } = e,
         a = t !== tA.clD.ONLINE,
         s = (0, i.jsx)(i.Fragment, {
@@ -1422,7 +1422,7 @@ function n8(e) {
         children: a ? s : void 0,
     });
 }
-function n4(e) {
+function n8(e) {
     if (null == e || "0" === e) return;
     let { kind: t, dateString: n, timeString: i } = (0, n2._)(e);
     return "today" === t
@@ -1448,7 +1448,7 @@ function it(e) {
             [],
         );
     let I = (0, c.bG)([ns.A], () => ns.A.getStatus(t.id)),
-        j = n4(na.CY.useSetting()),
+        j = n8(na.CY.useSetting()),
         N = (0, c.bG)([nr.A], () => nr.A.hidePersonalInformation),
         S = (0, tR.kB)(),
         y = na.Q_.useSetting(),
@@ -1457,7 +1457,7 @@ function it(e) {
                 n = (0, tR.kB)(),
                 l = na.Jr.useSetting();
             function a(i) {
-                let l = n4(t);
+                let l = n8(t);
                 if (e === i && null != l) return l;
                 switch (i) {
                     case tA.clD.DND:
@@ -1485,10 +1485,10 @@ function it(e) {
                         );
                     }),
                 }),
-                r = n8({ status: tA.clD.ONLINE, currentStatus: e }),
-                o = n8({ status: tA.clD.IDLE, currentStatus: e, description: a(tA.clD.IDLE) }),
-                d = n8({ status: tA.clD.DND, currentStatus: e, description: a(tA.clD.DND) }),
-                c = n8({ status: tA.clD.INVISIBLE, currentStatus: e, description: a(tA.clD.INVISIBLE) });
+                r = n4({ status: tA.clD.ONLINE, currentStatus: e }),
+                o = n4({ status: tA.clD.IDLE, currentStatus: e, description: a(tA.clD.IDLE) }),
+                d = n4({ status: tA.clD.DND, currentStatus: e, description: a(tA.clD.DND) }),
+                c = n4({ status: tA.clD.INVISIBLE, currentStatus: e, description: a(tA.clD.INVISIBLE) });
             return (0, i.jsxs)(i.Fragment, {
                 children: [
                     r,
@@ -1726,7 +1726,7 @@ function it(e) {
                                         style: { pointerEvents: H ? "none" : void 0 },
                                         children: [
                                             (0, i.jsx)(t2.A, { userId: t.id }),
-                                            (0, i.jsx)(t8.Ay, {
+                                            (0, i.jsx)(t4.Ay, {
                                                 className: ez.eF,
                                                 user: t,
                                                 displayName: nd.Ay.getName(void 0, null, t),
@@ -1987,7 +1987,7 @@ var ik = n(626584),
     iD = n(591179),
     iU = n(531685),
     iG = n(259065),
-    iF = n(618235);
+    iF = n(955298);
 let iV = new ik.A("DisplayNameStylesFlywheelCoachmark");
 function iH(e) {
     let { markAsDismissed: t, targetElementRef: n, children: a } = e,
@@ -2164,7 +2164,7 @@ function i7(e) {
               groupName: t,
               children: (e) => {
                   let { visibleContent: t, markAsDismissed: a } = e;
-                  return (0, i.jsx)(i8, {
+                  return (0, i.jsx)(i4, {
                       recentlyLeveledTenureBadge: l,
                       markAsDismissed: a,
                       targetElementRef: n,
@@ -2173,7 +2173,7 @@ function i7(e) {
               },
           });
 }
-function i8(e) {
+function i4(e) {
     let { recentlyLeveledTenureBadge: t, markAsDismissed: n, targetElementRef: a, shouldShow: s } = e,
         r = tG.sp.indexOf(t),
         o = (0, i5.I)(tG.sp[r > 0 ? r - 1 : r]).ambient,
@@ -2202,7 +2202,7 @@ function i8(e) {
         actions: m,
     });
 }
-function i4(e) {
+function i8(e) {
     let { isQuestBarEmpty: t, hasLoadedQuestBar: n } = (0, ii.c9)(),
         l = null != e.targetElementRef.current && t && n,
         [a, s] = (function (e) {
@@ -2439,7 +2439,7 @@ let lm = new lh(iK.h, {
 });
 var lp = n(362823),
     lg = n(980923),
-    lf = n(833394),
+    lf = n(404009),
     lA = n(222176),
     lx = n(973324);
 function lv(e) {
@@ -2597,7 +2597,7 @@ var lC = n(935399),
     lE = n(505312),
     lT = n(848847),
     l_ = n(88001),
-    lI = n(948202),
+    lI = n(109447),
     lj = n(438705);
 function lN(e) {
     let { targetElementRef: t, shouldShow: n, onDismiss: a } = e,
@@ -3078,7 +3078,7 @@ class lU extends l.PureComponent {
                     n.e("556315"),
                     n.e("198877"),
                     n.e("531521"),
-                    n.e("103648"),
+                    n.e("371874"),
                     n.e("873943"),
                     n.e("152263"),
                     n.e("982186"),
@@ -3213,8 +3213,8 @@ class lU extends l.PureComponent {
                     n.e("960235"),
                     n.e("77333"),
                     n.e("718573"),
-                    n.e("882082"),
-                    n.e("413789"),
+                    n.e("882722"),
+                    n.e("950106"),
                     n.e("797595"),
                     n.e("147662"),
                     n.e("344057"),
@@ -3229,7 +3229,7 @@ class lU extends l.PureComponent {
                     n.e("733115"),
                     n.e("397270"),
                     n.e("373122"),
-                    n.e("102057"),
+                    n.e("396656"),
                     n.e("293159"),
                     n.e("755936"),
                     n.e("489088"),
@@ -3239,7 +3239,7 @@ class lU extends l.PureComponent {
                     n.e("362931"),
                     n.e("745959"),
                     n.e("858529"),
-                    n.e("188159"),
+                    n.e("207264"),
                     n.e("481987"),
                     n.e("958038"),
                     n.e("171202"),
@@ -3276,7 +3276,7 @@ class lU extends l.PureComponent {
                     n.e("343437"),
                     n.e("875842"),
                     n.e("166495"),
-                    n.e("660580"),
+                    n.e("385653"),
                     n.e("401518"),
                     n.e("198329"),
                     n.e("9205"),
@@ -3305,7 +3305,7 @@ class lU extends l.PureComponent {
                     n.e("989088"),
                     n.e("952548"),
                     n.e("817989"),
-                    n.e("439462"),
+                    n.e("934771"),
                     n.e("37977"),
                     n.e("691671"),
                     n.e("49653"),
@@ -3359,7 +3359,7 @@ class lU extends l.PureComponent {
                     n.e("204744"),
                     n.e("36227"),
                     n.e("737021"),
-                    n.e("247907"),
+                    n.e("632364"),
                     n.e("818465"),
                     n.e("790417"),
                     n.e("971430"),
@@ -3405,7 +3405,7 @@ class lU extends l.PureComponent {
                     n.e("652111"),
                     n.e("120379"),
                     n.e("36877"),
-                    n.e("669990"),
+                    n.e("993199"),
                     n.e("203930"),
                     n.e("708536"),
                     n.e("903663"),
@@ -3424,7 +3424,7 @@ class lU extends l.PureComponent {
                     n.e("489523"),
                     n.e("726294"),
                     n.e("574678"),
-                    n.e("902758"),
+                    n.e("469155"),
                     n.e("81189"),
                     n.e("858164"),
                     n.e("98972"),
@@ -3437,7 +3437,7 @@ class lU extends l.PureComponent {
                     n.e("127659"),
                     n.e("946430"),
                     n.e("734546"),
-                    n.e("532040"),
+                    n.e("30939"),
                     n.e("341701"),
                     n.e("837490"),
                     n.e("781949"),
@@ -3448,7 +3448,7 @@ class lU extends l.PureComponent {
                     n.e("963584"),
                     n.e("548730"),
                     n.e("871467"),
-                    n.e("157114"),
+                    n.e("107671"),
                     n.e("829260"),
                     n.e("132737"),
                     n.e("51892"),
@@ -3477,8 +3477,8 @@ class lU extends l.PureComponent {
                     n.e("238260"),
                     n.e("946039"),
                     n.e("995602"),
-                    n.e("743510"),
-                    n.e("566301"),
+                    n.e("811817"),
+                    n.e("660748"),
                     n.e("512162"),
                     n.e("866008"),
                     n.e("544901"),
@@ -3514,7 +3514,7 @@ class lU extends l.PureComponent {
                     n.e("991531"),
                     n.e("175284"),
                     n.e("462318"),
-                    n.e("747131"),
+                    n.e("595344"),
                     n.e("313052"),
                     n.e("864926"),
                     n.e("450541"),
@@ -3556,7 +3556,7 @@ class lU extends l.PureComponent {
                     n.e("44264"),
                     n.e("874913"),
                     n.e("435476"),
-                    n.e("743698"),
+                    n.e("759579"),
                     n.e("214451"),
                     n.e("407755"),
                     n.e("993720"),
@@ -3794,7 +3794,7 @@ class lU extends l.PureComponent {
         let { badgeDirectoryNuxPopoverVariant: t, currentUser: n, dismissibleContents: l } = this.props;
         return null == n
             ? null
-            : (0, i.jsx)(i4, {
+            : (0, i.jsx)(i8, {
                   guildId: this.props.selectedGuildId ?? null,
                   currentUser: n,
                   targetElementRef: this.avatarWithPopoutRef,

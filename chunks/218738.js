@@ -12,7 +12,7 @@ var t = i(477900),
     _ = i(652215),
     p = i(670455),
     f = i(375708),
-    b = i(4967);
+    b = i(249938);
 function g(e) {
     let { isStreamer: n, stream: g, streamApplication: E, onClose: A, transitionState: S, analyticsData: T } = e,
         { surveyEmojiKind: M } = u.A.useConfig({ location: "StreamFeedback" });

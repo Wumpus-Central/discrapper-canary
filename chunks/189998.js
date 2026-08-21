@@ -51,7 +51,7 @@ let i = {
     ],
 };
 var r = n(821578),
-    a = n(665802),
+    a = n(1195),
     s = n(375708);
 let l =
         "https://cdn.discordapp.com/assets/content/320ae17d126cb2f82102cd73f82afb31e27736a64a866ea95c590adde3b73a70.webp",

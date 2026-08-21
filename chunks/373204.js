@@ -37,7 +37,7 @@ var l = n(477900),
     U = n(355622),
     w = n(408018);
 n(321073), n(323874), n(14289), n(35956);
-var F = n(296704),
+var F = n(221877),
     H = n(132500),
     B = n(661531),
     V = n(717421),
@@ -250,8 +250,8 @@ let eO = i.memo(
                 ),
             }),
             {
-                expressionPickerView: e9,
-                shouldHideExpressionPicker: e6,
+                expressionPickerView: e6,
+                shouldHideExpressionPicker: e9,
                 handleOuterClick: te,
             } = (0, eN.MD)(C, ed, f.id),
             { handleAutocompleteVisibilityChange: tt } = (0, eN.uW)(C, f.id),
@@ -490,7 +490,7 @@ let eO = i.memo(
                                 canSendStickers: !0,
                                 textValue: r,
                                 focused: x,
-                                expressionPickerView: e9,
+                                expressionPickerView: e6,
                                 type: C,
                                 editorRef: ed,
                                 onSendMessage: eZ,
@@ -502,7 +502,7 @@ let eO = i.memo(
                             }),
                         ],
                     }),
-                    e6
+                    e9
                         ? null
                         : (0, l.jsx)(eu.A, {
                               positionTargetRef: et,
@@ -749,7 +749,7 @@ function e5(e) {
         }),
     });
 }
-function e9(e) {
+function e6(e) {
     let { guild: t } = e,
         { analyticsLocations: n } = (0, es.Ay)(ei.A.AUTOMOD_PROFILE_QUARANTINE_ALERT),
         [i, s] = (0, eZ.j8)({ guildId: t?.id ?? eM.dJq, analyticsLocations: n }),
@@ -773,7 +773,7 @@ function e9(e) {
         }),
     });
 }
-function e6(e) {
+function e9(e) {
     let { guild: t } = e,
         n = (0, h.bG)([e1.default, e2.Ay], () => {
             if (null == t) return new Set();
@@ -781,10 +781,10 @@ function e6(e) {
             return (0, e3.wj)(e2.Ay.getMember(t.id, e));
         }, [t]);
     return n.has(e4.D.AUTOMOD_QUARANTINED_USERNAME_OR_GUILD_NICKNAME) || n.has(e4.D.AUTOMOD_QUARANTINED_BIO)
-        ? (0, l.jsx)(e9, { guild: t })
+        ? (0, l.jsx)(e6, { guild: t })
         : n.has(e4.D.AUTOMOD_QUARANTINED_SERVER_TAG)
           ? (0, l.jsx)(e5, { guild: t })
-          : (0, l.jsx)(e9, { guild: t });
+          : (0, l.jsx)(e6, { guild: t });
 }
 var te = n(554146),
     tt = n(131607),
@@ -897,7 +897,7 @@ var tN = n(429933),
     tv = n(650336),
     tT = n(513609),
     tM = n(176781),
-    tR = n(37589),
+    tR = n(711918),
     tD = n(273692);
 function tL() {
     return (0, l.jsx)(eQ, {
@@ -917,7 +917,7 @@ var tk = n(823099),
     tH = n(10822),
     tB = n(537174),
     tV = n(973196),
-    tK = n(796101),
+    tK = n(530478),
     tz = n(308718);
 function tW() {
     return (0, l.jsx)(eQ, {
@@ -1074,9 +1074,9 @@ let t2 = i.memo(function (e) {
 var t7 = n(208343),
     t8 = n(31408),
     t5 = n(810685),
-    t9 = n(806621);
-let t6 = function (e, t) {
-    let n = (0, t9.r)(t),
+    t6 = n(806621);
+let t9 = function (e, t) {
+    let n = (0, t6.r)(t),
         l = (0, h.bG)([ta.A], () => ta.A.getMessages(t.id).length > 0, [t]);
     return null != e && e.hasFlag(eM.nhx.QUARANTINED) && n && !l;
 };
@@ -1091,7 +1091,7 @@ let nt = function () {
 var nn = n(118517),
     nl = n(853145),
     ni = n(226698),
-    ns = n(183313),
+    ns = n(544482),
     na = n(985632);
 let nr = function (e) {
     let { channelId: t } = e,
@@ -1703,7 +1703,7 @@ class nQ extends i.PureComponent {
                   : null != s && (0, tg.n)(s) && null != i && !tr.A.can(eM.xBc.ADMINISTRATOR, i)
                     ? (0, l.jsx)(tb, { guild: i, disabledUntil: s })
                     : a
-                      ? (0, l.jsx)(e6, { guild: i })
+                      ? (0, l.jsx)(e9, { guild: i })
                       : this.props.isOverlayTextEntryDisabled
                         ? (0, l.jsx)(tW, {})
                         : null;
@@ -1877,7 +1877,7 @@ let n1 = i.memo(function (e) {
         { channel: r, guild: o, chatInputType: c, filterAfterTimestamp: d } = e,
         { placeholder: u, accessibilityLabel: m } = (0, nD.A)({ channel: r }),
         g = (0, tV.A)(),
-        p = t6(nx.default.getCurrentUser(), r),
+        p = t9(nx.default.getCurrentUser(), r),
         [A] = (0, tp.c)(o?.id),
         C = (0, eZ.uZ)(o?.id),
         E = (0, h.bG)([nx.default], () => nx.default.getCurrentUser()),
