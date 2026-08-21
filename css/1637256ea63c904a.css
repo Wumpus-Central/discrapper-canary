@@ -66,8 +66,8 @@
 }
 
 .emptyStateContainer__4fbcc {
-    gap: var(--space-24);
-    padding-top: 155px
+    flex: 1;
+    gap: var(--space-24)
 }
 
 .emptyStateContainer__4fbcc,
@@ -173,4 +173,4 @@
     }
 }
 
-/*# sourceMappingURL=4b65a53b263a05cb.css.map*/
+/*# sourceMappingURL=1637256ea63c904a.css.map*/

@@ -1,10 +1,8 @@
 .empty_e766f2 {
     align-items: center;
-    box-sizing: border-box;
+    flex: 1;
     gap: 24px;
-    height: 100%;
-    justify-content: flex-start;
-    padding: 175px 0 0;
+    justify-content: safe center;
     width: 100%
 }
 
@@ -50,4 +48,4 @@
     z-index: var(--custom-user-profile-top-layer-z-index)
 }
 
-/*# sourceMappingURL=c133305255f8f7ba.css.map*/
+/*# sourceMappingURL=b0dd8f203da84462.css.map*/

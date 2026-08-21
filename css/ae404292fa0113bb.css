@@ -220,9 +220,9 @@
 
 .empty__7ff05 {
     align-items: center;
+    flex: 1;
     gap: 24px;
-    height: 100%;
-    padding-top: 155px
+    justify-content: center
 }
 
 .empty__7ff05,
@@ -285,4 +285,4 @@
     width: 100%
 }
 
-/*# sourceMappingURL=5da7ee897342c6c2.css.map*/
+/*# sourceMappingURL=ae404292fa0113bb.css.map*/
