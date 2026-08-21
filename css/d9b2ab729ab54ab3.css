@@ -12,6 +12,15 @@
     padding-bottom: var(--space-8)
 }
 
+[data-mana-component=modal]:has([data-expressive-v2-graphic]) {
+    max-height: 720px;
+    max-width: 496px
+}
+
+[data-mana-component=modal]:has([data-expressive-v2-graphic]) header [data-text-variant="text-md/normal"] {
+    max-width: 384px
+}
+
 .methodRow_bbc786 {
     align-items: flex-start;
     border: 1px solid var(--border-subtle);
@@ -21,7 +30,7 @@
     display: flex;
     padding: var(--space-12);
     text-align: start;
-    width: 100%
+    width: 432px
 }
 
 .methodRow_bbc786:hover {
@@ -35,10 +44,10 @@
     color: var(--text-strong);
     display: flex;
     flex-shrink: 0;
-    height: calc(var(--space-24)*2);
+    height: var(--space-40);
     justify-content: center;
     margin-inline-end: var(--space-12);
-    width: calc(var(--space-24)*2)
+    width: var(--space-40)
 }
 
 .methodRow_bbc786:not(.methodRowDisabled_bbc786):hover .iconContainer_bbc786 {
@@ -47,10 +56,9 @@
 
 .text_bbc786 {
     display: flex;
-    flex: 1;
+    flex: 0 0 332px;
     flex-direction: column;
-    gap: 2px;
-    min-width: 0
+    gap: 2px
 }
 
 .vendor_bbc786 {
@@ -61,7 +69,7 @@
     align-self: center;
     color: var(--icon-subtle);
     flex-shrink: 0;
-    margin-inline-start: var(--space-16)
+    margin-inline-start: -2px
 }
 
 .footer_bbc786 {
@@ -81,8 +89,8 @@
     align-self: center;
     flex-shrink: 0;
     height: var(--space-24);
-    margin-inline-start: var(--space-16);
+    margin-inline-start: -2px;
     width: var(--space-24)
 }
 
-/*# sourceMappingURL=91407886cd72a94f.css.map*/
+/*# sourceMappingURL=d9b2ab729ab54ab3.css.map*/

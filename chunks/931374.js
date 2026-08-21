@@ -257,17 +257,21 @@ function et(e) {
     return null != e && O.zn.has(e);
 }
 function en(e) {
-    return b.has(e) ? v.intl.string(v.t.lSWVTM) : v.intl.string(v.t.xYXsr6);
+    let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+    return b.has(e) ? v.intl.string(v.t.lSWVTM) : t ? v.intl.string(D.default["/kgWIg"]) : v.intl.string(v.t.xYXsr6);
 }
 function ei(e, t) {
-    let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+    let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+        i = arguments.length > 3 ? arguments[3] : void 0;
     return b.has(e)
         ? v.intl.string(v.t["S/xS/w"])
         : n
           ? v.intl.string(D.default.h7qzoa)
-          : null != t
-            ? v.intl.format(D.default.RpMIT0, { handleOnHelpUrlHook: t })
-            : v.intl.string(v.t.HxS3oQ);
+          : null != t && null != i
+            ? v.intl.format(D.default["+Ft5ch"], { handleOnHelpUrlHook: t, handleOnTrustedProvidersHook: i })
+            : null != t
+              ? v.intl.format(D.default.RpMIT0, { handleOnHelpUrlHook: t })
+              : v.intl.string(v.t.HxS3oQ);
 }
 function er(e) {
     let t,

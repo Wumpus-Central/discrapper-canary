@@ -5,27 +5,27 @@ var s = a(477900),
     i = a.n(r),
     n = a(132500),
     o = a(772707),
-    c = a(441574),
-    d = a(991049),
+    d = a(441574),
+    c = a(991049),
     h = a(280645),
     u = a(952146),
     m = a(331322),
     v = a(289873),
-    p = a(512950),
-    x = a(821609),
-    E = a(109112),
+    E = a(512950),
+    p = a(821609),
+    x = a(109112),
     f = a(939249),
     g = a(834730),
     A = a(320448),
     _ = a(975571),
     w = a(31720),
-    j = a(847599),
-    R = a(931374),
-    I = a(228366),
-    C = a(636537),
-    M = a(652215);
-async function y() {
-    let e = (await C.Bo.get({ url: M.Rsh.AGE_VERIFICATION_METHODS_V2, rejectWithError: !0 })).body;
+    R = a(847599),
+    j = a(931374),
+    S = a(228366),
+    I = a(636537),
+    C = a(652215);
+async function M() {
+    let e = (await I.Bo.get({ url: C.Rsh.AGE_VERIFICATION_METHODS_V2, rejectWithError: !0 })).body;
     return {
         methods: e.methods.map((e) => {
             var t;
@@ -50,8 +50,8 @@ async function y() {
         footerMessage: e.footer_message ?? null,
     };
 }
-var N = a(787301);
-let S = function (e) {
+var V = a(787301);
+let y = function (e) {
     let { icon: t, size: a = 24 } = e;
     return (0, s.jsx)("svg", {
         width: a,
@@ -62,54 +62,55 @@ let S = function (e) {
         children: t.paths.map((e) => (0, s.jsx)("path", { d: e.d, fillRule: e.fillRule, clipRule: e.fillRule }, e.d)),
     });
 };
-var T = a(878400),
-    V = a(375708),
-    b = a(126106);
+var N = a(40449),
+    T = a(878400),
+    b = a(375708),
+    O = a(126106);
 let L = function (e) {
-    let { transitionState: t, entryPoint: a, onClose: r, dismissable: C } = e,
+    let { transitionState: t, entryPoint: a, onClose: r, dismissable: I } = e,
         {
             loading: L,
-            error: O,
-            methods: Z,
-            footerMessage: k,
+            error: Z,
+            methods: k,
+            footerMessage: U,
             refetch: B,
         } = (function () {
-            let [e, t] = l.useState(() => N.A.methodsV2 ?? []),
-                [a, s] = l.useState(() => N.A.methodsV2FooterMessage),
-                [r, i] = l.useState(() => null == N.A.methodsV2),
+            let [e, t] = l.useState(() => V.A.methodsV2 ?? []),
+                [a, s] = l.useState(() => V.A.methodsV2FooterMessage),
+                [r, i] = l.useState(() => null == V.A.methodsV2),
                 [n, o] = l.useState(!1),
-                c = l.useRef(!0),
-                d = l.useCallback(async (e) => {
-                    let a = N.A.methodsV2;
+                d = l.useRef(!0),
+                c = l.useCallback(async (e) => {
+                    let a = V.A.methodsV2;
                     if (!e && null != a) {
-                        t(a), s(N.A.methodsV2FooterMessage), i(!1), o(!1);
+                        t(a), s(V.A.methodsV2FooterMessage), i(!1), o(!1);
                         return;
                     }
                     i(!0), o(!1);
                     try {
-                        let e = await y();
-                        I.h.dispatch({
+                        let e = await M();
+                        S.h.dispatch({
                             type: "AGE_VERIFICATION_METHODS_V2_LOAD_SUCCESS",
                             methods: e.methods,
                             footerMessage: e.footerMessage,
                         }),
-                            c.current && (t(e.methods), s(e.footerMessage));
+                            d.current && (t(e.methods), s(e.footerMessage));
                     } catch {
-                        c.current && o(!0);
+                        d.current && o(!0);
                     } finally {
-                        c.current && i(!1);
+                        d.current && i(!1);
                     }
                 }, []);
             return (
                 l.useEffect(
                     () => (
-                        (c.current = !0),
-                        d(!1),
+                        (d.current = !0),
+                        c(!1),
                         () => {
-                            c.current = !1;
+                            d.current = !1;
                         }
                     ),
-                    [d],
+                    [c],
                 ),
                 {
                     loading: r,
@@ -117,76 +118,83 @@ let L = function (e) {
                     methods: e,
                     footerMessage: a,
                     refetch: l.useCallback(() => {
-                        d(!0);
-                    }, [d]),
+                        c(!0);
+                    }, [c]),
                 }
             );
         })(),
-        G = Z.length > 0,
-        { initiateAgeVerificationV2: H } = (0, R.Ny)({ onComplete: r, entryPoint: a, onMethodUnavailable: B }),
-        D = l.useRef(!1),
-        [U, F] = l.useState(null),
-        P = null != U,
-        W = l.useMemo(() => (0, n.A)(), []);
+        D = k.length > 0,
+        { initiateAgeVerificationV2: G } = (0, j.Ny)({ onComplete: r, entryPoint: a, onMethodUnavailable: B }),
+        H = l.useRef(!1),
+        [F, P] = l.useState(null),
+        W = null != F,
+        z = l.useMemo(() => (0, n.A)(), []);
     l.useEffect(() => {
-        (0, j.Bs)(W, j.WU.EXPRESSIVE_V2, a);
-    }, [W, a]);
-    let z = l.useCallback(
+        (0, R.Bs)(z, R.WU.EXPRESSIVE_V2, a);
+    }, [z, a]);
+    let X = l.useCallback(
         async (e, t) => {
-            if (!D.current) {
-                (0, j.St)(W, j.WU.EXPRESSIVE_V2, j._7.METHOD_SELECT, e.method), (D.current = !0), F(t);
+            if (!H.current) {
+                (0, R.St)(z, R.WU.EXPRESSIVE_V2, R._7.METHOD_SELECT, e.method), (H.current = !0), P(t);
                 try {
-                    await H(e);
+                    await G(e);
                 } finally {
-                    (D.current = !1), F(null);
+                    (H.current = !1), P(null);
                 }
             }
         },
-        [H, W],
+        [G, z],
     );
     return (0, s.jsxs)(o.k, {
         transitionState: t,
         onClose: r,
         gradientColor: "blue",
-        dismissable: C,
+        dismissable: I,
         graphic: {
             type: "image",
             src: "https://cdn.discordapp.com/assets/content/78be134dd5dcecb7d0b26e1aead0c61f79a95c93893a4acc82c9828c87d2165a.svg",
             aspectRatio: "21/9",
         },
-        title: (0, R.ST)(a),
-        subtitle: (0, R.mK)(a, () => {
-            w.A.openUrl(_.A.getArticleURL(M.MVz.TIGGER_PAWTECT_LEARN_MORE)),
-                (0, j.St)(W, j.WU.EXPRESSIVE_V2, j._7.LEARN_MORE);
-        }),
+        title: (0, j.ST)(a, !0),
+        subtitle: (0, j.mK)(
+            a,
+            () => {
+                w.A.openUrl(_.A.getArticleURL(C.MVz.TIGGER_PAWTECT_LEARN_MORE)),
+                    (0, R.St)(z, R.WU.EXPRESSIVE_V2, R._7.LEARN_MORE);
+            },
+            void 0,
+            () => {
+                w.A.openUrl(N.zS), (0, R.St)(z, R.WU.EXPRESSIVE_V2, R._7.TRUSTED_PROVIDERS);
+            },
+        ),
         children: [
             (0, s.jsx)("div", { "data-expressive-v2-graphic": !0, hidden: !0 }),
             L && (0, s.jsx)(m.B, { direction: "vertical", align: "center", children: (0, s.jsx)(v.y, {}) }),
             !L &&
-                !G &&
-                (0, s.jsx)(p.p, {
-                    messageType: p.Y.ERROR,
-                    action: (0, s.jsx)(x.$, {
+                !D &&
+                (0, s.jsx)(E.p, {
+                    messageType: E.Y.ERROR,
+                    action: (0, s.jsx)(p.$, {
                         variant: "overlay-secondary",
                         size: "sm",
-                        text: V.intl.string(T.default.hDvmYP),
+                        text: b.intl.string(T.default.hDvmYP),
                         onClick: B,
                     }),
-                    children: V.intl.string(O ? T.default.Bkmk4Y : T.default.cR6336),
+                    children: b.intl.string(Z ? T.default.Bkmk4Y : T.default.cR6336),
                 }),
-            G &&
+            D &&
                 (0, s.jsx)(m.B, {
                     direction: "vertical",
                     gap: 8,
-                    children: Z.map((e) => {
+                    children: k.map((e) => {
                         let t,
                             a = (function (e) {
                                 switch (e) {
-                                    case c.mG.FACIAL_AGE_ESTIMATION:
-                                        return d.t;
-                                    case c.mG.ID_SELFIE_MATCH:
+                                    case d.mG.FACIAL_AGE_ESTIMATION:
+                                        return c.t;
+                                    case d.mG.ID_SELFIE_MATCH:
                                         return h.H;
-                                    case c.mG.GOOGLE_WALLET:
+                                    case d.mG.GOOGLE_WALLET:
                                         return u.A;
                                     default:
                                         return;
@@ -196,21 +204,21 @@ let L = function (e) {
                             null != a
                                 ? (0, s.jsx)(a, { size: "md", color: "var(--text-strong)" })
                                 : null != e.icon
-                                  ? (0, s.jsx)(S, { icon: e.icon })
-                                  : (0, s.jsx)(E._, { size: "md", color: "var(--text-strong)" });
+                                  ? (0, s.jsx)(y, { icon: e.icon })
+                                  : (0, s.jsx)(x._, { size: "md", color: "var(--text-strong)" });
                         let l = `${e.method}-${e.vendor}`,
-                            r = U === l;
+                            r = F === l;
                         return (0, s.jsxs)(
                             f.D,
                             {
-                                className: i()(b.kZ, { [b.w1]: P }),
+                                className: i()(O.kZ, { [O.w1]: W }),
                                 "aria-busy": r,
-                                "aria-disabled": P,
-                                onClick: P ? void 0 : () => z(e, l),
+                                "aria-disabled": W,
+                                onClick: W ? void 0 : () => X(e, l),
                                 children: [
-                                    (0, s.jsx)("div", { className: b.zc, children: t }),
+                                    (0, s.jsx)("div", { className: O.zc, children: t }),
                                     (0, s.jsxs)("div", {
-                                        className: b.Qq,
+                                        className: O.Qq,
                                         children: [
                                             (0, s.jsx)(g.E, {
                                                 variant: "text-md/normal",
@@ -224,7 +232,7 @@ let L = function (e) {
                                             }),
                                             null != e.providedBy &&
                                                 (0, s.jsx)("div", {
-                                                    className: b.Vp,
+                                                    className: O.Vp,
                                                     children: (0, s.jsx)(g.E, {
                                                         variant: "text-sm/normal",
                                                         color: "text-muted",
@@ -234,8 +242,8 @@ let L = function (e) {
                                         ],
                                     }),
                                     r
-                                        ? (0, s.jsx)(v.y, { type: v.t.SPINNING_CIRCLE_SIMPLE, className: b.wt })
-                                        : (0, s.jsx)(A._, { className: b.ai }),
+                                        ? (0, s.jsx)(v.y, { type: v.t.SPINNING_CIRCLE_SIMPLE, className: O.wt })
+                                        : (0, s.jsx)(A._, { className: O.ai }),
                                 ],
                             },
                             l,
@@ -243,11 +251,11 @@ let L = function (e) {
                     }),
                 }),
             !L &&
-                G &&
-                null != k &&
+                D &&
+                null != U &&
                 (0, s.jsx)("div", {
-                    className: b.qr,
-                    children: (0, s.jsx)(g.E, { variant: "text-sm/normal", color: "text-muted", children: k }),
+                    className: O.qr,
+                    children: (0, s.jsx)(g.E, { variant: "text-sm/normal", color: "text-muted", children: U }),
                 }),
         ],
     });
