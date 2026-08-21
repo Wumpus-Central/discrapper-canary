@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { U: () => a });
+n.d(t, { B: () => a, U: () => s });
 var i = n(998218);
 let r = {
     "image/avif": "avif",
@@ -12,7 +12,16 @@ let r = {
     "video/quicktime": "mov",
     "video/webm": "webm",
 };
-function a(e, t) {
+function a(e) {
+    if (null == e) return;
+    let t = e.toLowerCase();
+    if (!/^(image|video)\//.test(t)) return;
+    let n = r[t];
+    if (null != n) return n;
+    let i = t.split("/")[1];
+    return "jpeg" === i ? "jpg" : null != i ? i : void 0;
+}
+function s(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
     return (
         (n
@@ -21,15 +30,7 @@ function a(e, t) {
                   if (null != t && "" !== t) return "jpeg" === t ? "jpg" : t;
               })(e)
             : void 0) ??
-        (function (e) {
-            if (null == e) return;
-            let t = e.toLowerCase();
-            if (!/^(image|video)\//.test(t)) return;
-            let n = r[t];
-            if (null != n) return n;
-            let i = t.split("/")[1];
-            return "jpeg" === i ? "jpg" : null != i ? i : void 0;
-        })(t) ??
+        a(t) ??
         (function (e) {
             let t = i.A.toURLSafe(e);
             if (null == t) return;

@@ -1,54 +1,54 @@
-a.d(t, { default: () => S }), a(323874), a(14289), a(35956);
+a.d(t, { default: () => T }), a(323874), a(14289), a(35956);
 var n = a(477900),
     i = a(582128),
-    l = a(503698),
-    o = a.n(l),
+    o = a(503698),
+    l = a.n(o),
     s = a(224640),
     r = a(20742),
-    p = a(638495),
-    c = a(192308),
+    c = a(638495),
+    p = a(192308),
     h = a(707554),
     u = a(289873),
     m = a(793574),
     d = a(688810),
     A = a(813703),
-    f = a(702211),
-    w = a(699576),
-    _ = a(174459),
+    f = a(229531),
+    w = a(702211),
+    _ = a(699576),
+    $ = a(174459),
     g = a(925895),
-    $ = a(652215);
-let y = /^\/([a-zA-Z0-9-_]+\/[a-z0-9-%]+\.gif)$/,
-    R = /^\/(media\/(?:v1\.[a-zA-Z0-9=&_-]+\/)?[a-zA-Z0-9]+\/[a-zA-Z0-9_-]+\.(gif|webp|mp4))$/,
-    j = /^\/([a-zA-Z0-9/_-]+\.(gif|webp|webm|mp4|png))$/,
-    x = new Set(["media.tenor.com", "media.tenor.co", "c.tenor.com"]),
-    E = new Set(["static.klipy.com"]);
-var b = a(339984),
-    I = a(375708),
-    N = a(721757);
-function S(e) {
+    y = a(652215);
+let R = /^\/([a-zA-Z0-9-_]+\/[a-z0-9-%]+\.gif)$/,
+    x = /^\/(media\/(?:v1\.[a-zA-Z0-9=&_-]+\/)?[a-zA-Z0-9]+\/[a-zA-Z0-9_-]+\.(gif|webp|mp4))$/,
+    E = /^\/([a-zA-Z0-9/_-]+\.(gif|webp|webm|mp4|png))$/,
+    b = new Set(["media.tenor.com", "media.tenor.co", "c.tenor.com"]),
+    j = new Set(["static.klipy.com"]);
+var I = a(339984),
+    N = a(375708),
+    S = a(721757);
+function T(e) {
     let {
             transitionState: t,
-            onClose: l,
-            onComplete: S,
-            uploadType: T,
-            showUpsellHeader: L,
-            analyticsPage: C,
-            returnRef: F,
+            onClose: o,
+            onComplete: T,
+            uploadType: L,
+            showUpsellHeader: C,
+            analyticsPage: F,
+            returnRef: G,
         } = e,
-        [G, P] = i.useState(!1),
-        k = (0, p.k)(),
-        { analyticsLocations: H } = (0, d.Ay)(m.A.GIF_PICKER);
-    async function O(e) {
-        let t,
-            { gifSrc: i } = e;
-        if (null == i || G) return;
-        P(!0);
-        let o = (function (e) {
+        [P, k] = i.useState(!1),
+        H = (0, c.k)(),
+        { analyticsLocations: O } = (0, d.Ay)(m.A.GIF_PICKER);
+    async function U(e) {
+        let { gifSrc: t } = e;
+        if (null == t || P) return;
+        k(!0);
+        let i = (function (e) {
                 let t = new URL(`${window.location.protocol}${e}`),
                     { ASSET_ENDPOINT: a } = window.GLOBAL_ENV;
-                if (x.has(t.hostname)) {
-                    if (null == t.pathname.match(y)) throw Error("Unexpected Tenor GIF path.");
-                    let e = `${$.Rsh.TENOR_ASSET_PATH}${t.pathname}`;
+                if (b.has(t.hostname)) {
+                    if (null == t.pathname.match(R)) throw Error("Unexpected Tenor GIF path.");
+                    let e = `${y.Rsh.TENOR_ASSET_PATH}${t.pathname}`;
                     return `${location.protocol}${a}${e}`;
                 }
                 if (
@@ -57,22 +57,22 @@ function S(e) {
                         return "giphy.com" === t || t.endsWith(".giphy.com");
                     })(t)
                 ) {
-                    if (null == t.pathname.match(R)) throw Error("Unexpected Giphy GIF path.");
-                    let e = `${$.Rsh.GIPHY_ASSET_PATH}${t.pathname}`;
+                    if (null == t.pathname.match(x)) throw Error("Unexpected Giphy GIF path.");
+                    let e = `${y.Rsh.GIPHY_ASSET_PATH}${t.pathname}`;
                     return `${location.protocol}${a}${e}`;
                 }
-                if (E.has(t.hostname)) {
-                    if (null == t.pathname.match(j)) throw Error("Unexpected Klipy GIF path.");
-                    let e = `${$.Rsh.KLIPY_ASSET_PATH}${t.pathname}`;
+                if (j.has(t.hostname)) {
+                    if (null == t.pathname.match(E)) throw Error("Unexpected Klipy GIF path.");
+                    let e = `${y.Rsh.KLIPY_ASSET_PATH}${t.pathname}`;
                     return `${location.protocol}${a}${e}`;
                 }
                 return `https://${t.hostname}${t.pathname}${t.search}`;
-            })(i),
-            s = await fetch(o),
-            r = await s.blob(),
-            p =
-                "" !== r.type
-                    ? r.type
+            })(t),
+            l = await fetch(i),
+            s = await l.blob(),
+            r =
+                "" !== s.type
+                    ? s.type
                     : (function (e) {
                           let t = new URL(e).pathname;
                           switch (t.split(".").pop()?.toLowerCase()) {
@@ -87,11 +87,10 @@ function S(e) {
                               case "jpeg":
                                   return "image/jpeg";
                           }
-                      })(o),
-            h = "jpeg" === (t = p.split("/")[1]) ? ".jpg" : null != t && "" !== t ? `.${t}` : ".gif",
-            u = `selected${h}`;
-        l(),
-            (0, c.openModalLazy)(
+                      })(i),
+            c = `selected.${((0, f.B))(r) ?? "gif"}`;
+        o(),
+            (0, p.openModalLazy)(
                 async () => {
                     let { default: e } = await Promise.all([
                         a.e("1214"),
@@ -104,60 +103,60 @@ function S(e) {
                     ]).then(a.bind(a, 142630));
                     return (t) =>
                         (0, n.jsx)(e, {
-                            imageUri: o,
-                            file: new File([r], u, { type: p }),
-                            onCrop: S,
-                            uploadType: T,
-                            showUpsellHeader: L,
-                            returnRef: F,
+                            imageUri: i,
+                            file: new File([s], c, { type: r }),
+                            onCrop: T,
+                            uploadType: L,
+                            showUpsellHeader: C,
+                            returnRef: G,
                             ...t,
                         });
                 },
-                { contextKey: k },
+                { contextKey: H },
             );
     }
     i.useEffect(() => {
-        _.default.track($.HAw.OPEN_MODAL, {
-            type: $.JJy.GIF_PICKER_AVATAR_OR_BANNER_MODAL,
-            location_stack: H,
-            location: { page: C },
+        $.default.track(y.HAw.OPEN_MODAL, {
+            type: y.JJy.GIF_PICKER_AVATAR_OR_BANNER_MODAL,
+            location_stack: O,
+            location: { page: F },
         });
-    }, [H, C]);
-    let U = T === b.HL.AVATAR || T === b.HL.BANNER,
-        v = (0, f.b)(!U),
-        z = I.intl.string(I.t["xsC+/y"]);
+    }, [O, F]);
+    let v = L === I.HL.AVATAR || L === I.HL.BANNER,
+        z = (0, w.b)(!v),
+        K = N.intl.string(N.t["xsC+/y"]);
     return (0, n.jsx)(d.f5, {
-        value: H,
+        value: O,
         children: (0, n.jsxs)(s.d, {
-            onClose: l,
+            onClose: o,
             transitionState: t,
-            "aria-label": z,
+            "aria-label": K,
             children: [
-                (0, n.jsx)(r.rQ, { title: z }),
+                (0, n.jsx)(r.rQ, { title: K }),
                 (0, n.jsxs)(h.F, {
                     children: [
-                        L &&
-                            !v &&
+                        C &&
+                            !z &&
                             (0, n.jsx)("div", {
-                                className: N.It,
+                                className: S.It,
                                 children: (0, n.jsx)(g.A, {
-                                    type: T,
-                                    analyticsPage: C,
-                                    analyticsSection: $.JJy.GIF_PICKER_AVATAR_OR_BANNER_MODAL,
+                                    type: L,
+                                    analyticsPage: F,
+                                    analyticsSection: y.JJy.GIF_PICKER_AVATAR_OR_BANNER_MODAL,
                                     isGIF: !0,
                                 }),
                             }),
                         (0, n.jsxs)("div", {
-                            className: N.SD,
+                            className: S.SD,
                             children: [
                                 (0, n.jsx)(A.A, {
-                                    className: o()(N.XC, { [N.bX]: G }),
-                                    onSelectGIF: O,
+                                    className: l()(S.XC, { [S.bX]: P }),
+                                    onSelectGIF: U,
                                     headingColor: "text-subtle",
                                     hideFavorites: !0,
                                 }),
-                                G && (0, n.jsx)(u.y, { className: N.u1 }),
-                                L && v && (0, n.jsx)(w.A, { uploadType: T, showUpsell: !0, className: N.Kt }),
+                                P && (0, n.jsx)(u.y, { className: S.u1 }),
+                                C && z && (0, n.jsx)(_.A, { uploadType: L, showUpsell: !0, className: S.Kt }),
                             ],
                         }),
                     ],
