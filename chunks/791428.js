@@ -44,7 +44,7 @@ var T = i(574172),
     H = i(663417),
     D = i(624479),
     V = i(365199),
-    W = i(295813),
+    W = i(459864),
     B = i(375708),
     G = i(452394);
 function L(e) {
@@ -269,7 +269,7 @@ function Q(e) {
         ],
     });
 }
-var ee = i(429880),
+var ee = i(833472),
     en = i(957907),
     ei = i(955999),
     el = i(999900);
@@ -299,51 +299,47 @@ function et(e) {
     }, [n.id]);
     let v = t.useMemo(() => ({ channel: n, guild: p ?? void 0, open: C, onClose: y }), [n, p, C, y]),
         k = t.useMemo(() => ({ type: J.U4.APP_CHANNEL, channelId: n.id, guildId: n.guild_id ?? void 0 }), [n]);
-    return null == i
-        ? null
-        : (0, l.jsxs)("div", {
-              "data-has-border": !0,
-              className: el.TE,
-              children: [
-                  (0, l.jsx)(c.HI, { location: p?.name, subsection: m ?? void 0 }),
-                  (0, l.jsx)("div", {
-                      className: el.SC,
-                      children: (0, l.jsx)(
-                          d.A,
-                          {
-                              guildId: n.guild_id,
-                              channelId: n.id,
-                              channelType: n.type,
-                              hideSearch: !0,
-                              toolbar: (0, l.jsx)(Q, {
-                                  applicationId: i,
-                                  surface: k,
-                                  guildId: n.guild_id,
-                                  channelId: n.id,
-                                  project: x ?? null,
-                                  chatOpen: C,
-                                  onToggleChat: b,
-                              }),
-                              className: el.DD,
-                              "aria-label": B.intl.string(B.t.BIYAqa),
-                              children: (0, o.zF)({ channel: n, channelName: m, guild: p }),
-                          },
-                          `header-${n.id}`,
-                      ),
-                  }),
-                  (0, l.jsx)("div", {
-                      className: ei.I,
-                      "data-vibegrations-channel": !0,
-                      children: (0, l.jsx)(ee.A, {
-                          projectId: x?.id ?? null,
-                          previewApplicationId: x?.preview_application_id ?? null,
-                          applicationId: i,
-                          surface: k,
-                          chatOpen: !1,
-                          previewReady: !0,
-                          channelMessages: v,
-                      }),
-                  }),
-              ],
-          });
+    if (null == i) return null;
+    let E = (0, l.jsx)("div", {
+        className: el.SC,
+        children: (0, l.jsx)(
+            d.A,
+            {
+                guildId: n.guild_id,
+                channelId: n.id,
+                channelType: n.type,
+                hideSearch: !0,
+                toolbar: (0, l.jsx)(Q, {
+                    applicationId: i,
+                    surface: k,
+                    guildId: n.guild_id,
+                    channelId: n.id,
+                    project: x ?? null,
+                    chatOpen: C,
+                    onToggleChat: b,
+                }),
+                className: el.DD,
+                "aria-label": B.intl.string(B.t.BIYAqa),
+                children: (0, o.zF)({ channel: n, channelName: m, guild: p }),
+            },
+            `header-${n.id}`,
+        ),
+    });
+    return (0, l.jsxs)("div", {
+        className: ei.I,
+        "data-vibegrations-channel": !0,
+        children: [
+            (0, l.jsx)(c.HI, { location: p?.name, subsection: m ?? void 0 }),
+            (0, l.jsx)(ee.A, {
+                projectId: x?.id ?? null,
+                previewApplicationId: x?.preview_application_id ?? null,
+                applicationId: i,
+                surface: k,
+                header: E,
+                chatOpen: !1,
+                previewReady: !0,
+                channelMessages: v,
+            }),
+        ],
+    });
 }
