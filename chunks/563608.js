@@ -70,8 +70,8 @@ function k(e) {
           });
 }
 var w = i(403581),
-    W = i(661531),
-    D = i(297264),
+    D = i(661531),
+    W = i(297264),
     O = i(939249),
     L = i(448766),
     V = i(326009),
@@ -83,7 +83,7 @@ function B(e) {
     return (0, t.jsxs)("div", {
         className: y.wx,
         children: [
-            (0, t.jsx)(w.t, { className: y.nr, size: "xxs", color: W.A.colors.ICON_DEFAULT }),
+            (0, t.jsx)(w.t, { className: y.nr, size: "xxs", color: D.A.colors.ICON_DEFAULT }),
             (0, t.jsx)(v.E, { className: y.TK, variant: "text-xs/medium", lineClamp: 1, children: a }),
         ],
     });
@@ -100,8 +100,8 @@ function F(e) {
                     (0, t.jsxs)("div", {
                         className: y.rD,
                         children: [
-                            (0, t.jsx)(D.D, {
-                                className: A()(y.CH, T.Y),
+                            (0, t.jsx)(W.D, {
+                                className: A()(y.CH, T.YD),
                                 variant: "heading-sm/semibold",
                                 color: "text-default",
                                 lineClamp: 2,
@@ -314,8 +314,8 @@ function ee(e) {
         b = n.useMemo(() => new Map(M.map((e) => [e.application_id, e])), [M]),
         { data: S } = (0, p.P)(a.id),
         w = n.useMemo(() => new Map(S?.map((e) => [e.application_id, e])), [S]),
-        W = (0, r.bG)([f.default], () => f.default.locale),
-        D = (0, r.cf)([o.A], () => Object.fromEntries(R.map((e) => [e.applicationId, o.A.getAssets(e.applicationId)]))),
+        D = (0, r.bG)([f.default], () => f.default.locale),
+        W = (0, r.cf)([o.A], () => Object.fromEntries(R.map((e) => [e.applicationId, o.A.getAssets(e.applicationId)]))),
         O = n.useMemo(
             () =>
                 0 === P.size || 0 === b.size || 0 === w.size
@@ -329,11 +329,11 @@ function ee(e) {
                               let n = i.surfaces;
                               if (null == n || null == n[l.m.MINI_PROFILE]) return null;
                               let r = (0, s.VG)(t.profile),
-                                  c = Object.values(D[e.applicationId] ?? {}).filter(x.Vq);
+                                  c = Object.values(W[e.applicationId] ?? {}).filter(x.Vq);
                               return [e, { surfaceConfigs: i.surfaces, data: r, application: a, assets: c }];
                           }).filter(x.Vq),
                       ),
-            [R, P, b, w, D],
+            [R, P, b, w, W],
         ),
         L = n.useCallback(
             (e) => {
@@ -349,7 +349,7 @@ function ee(e) {
                                 {
                                     application: a.application,
                                     rendererProps: {
-                                        locale: W,
+                                        locale: D,
                                         surfaceConfigs: a.surfaceConfigs,
                                         isLoading: !1,
                                         hasIdentity: !0,
@@ -381,7 +381,7 @@ function ee(e) {
                               );
                 return n;
             },
-            [i, A, O, W, a.id],
+            [i, A, O, D, a.id],
         );
     return 0 === i.length ? null : (0, t.jsx)(E.A, { renderCards: L, heading: G.intl.string(G.t.Y55Tua), onExpand: C });
 }

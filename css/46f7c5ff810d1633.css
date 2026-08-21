@@ -208,19 +208,21 @@
 }
 
 .header__17b8c {
+    align-items: center;
+    display: flex;
     gap: var(--space-4);
     height: var(--space-24)
 }
 
-.header__17b8c,
-.nitroUpsellContainer__17b8c {
-    align-items: center;
-    display: flex
+.headerIcon__17b8c {
+    flex-shrink: 0
 }
 
 .nitroUpsellContainer__17b8c {
+    align-items: center;
     border: 1px solid var(--border-muted);
     border-radius: var(--radius-md);
+    display: flex;
     flex-direction: row;
     gap: var(--space-16);
     isolation: isolate;
@@ -260,4 +262,4 @@
     margin-inline-end: auto
 }
 
-/*# sourceMappingURL=f2f0cbdcd71cbe1b.css.map*/
+/*# sourceMappingURL=46f7c5ff810d1633.css.map*/

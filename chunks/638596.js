@@ -145,7 +145,7 @@ function Z(e) {
     let { className: t, variant: i, color: l, value: s, maxLines: a, interactive: o = !0, disableMarkdown: c = !1 } = e,
         u = o ? Y.d : Y.j;
     return (0, n.jsx)(d.E, {
-        className: r()(Q.Y, { [Q.L]: a > 1 }, t),
+        className: r()(Q.YD, { [Q.Lq]: a > 1 }, t),
         variant: i,
         color: l,
         lineClamp: a,
@@ -154,42 +154,34 @@ function Z(e) {
 }
 function $(e) {
     let {
-            className: t,
-            value: i,
-            placeholder: s,
-            variant: r,
-            color: a,
-            onCommit: o,
-            maxLength: d,
-            maxLines: c,
-            growWidth: u,
-            disableMarkdown: g,
+            value: t,
+            placeholder: i,
+            variant: s,
+            color: r,
+            onCommit: a,
+            maxLength: o,
+            maxLines: d,
+            growWidth: c,
+            disableMarkdown: u,
         } = e,
-        m = l.useCallback((e) => o(e.trim()), [o]),
-        x = (0, J.TX)({ value: i, onCommit: m }),
-        f =
-            "" === i.trim()
+        g = l.useCallback((e) => a(e.trim()), [a]),
+        m = (0, J.TX)({ value: t, onCommit: g }),
+        x =
+            "" === t.trim()
                 ? null
-                : (0, n.jsx)(Z, {
-                      interactive: !1,
-                      className: t,
-                      variant: r,
-                      color: a,
-                      value: i,
-                      maxLines: c,
-                      disableMarkdown: g,
-                  }),
-        h = {
-            ...x,
+                : (0, n.jsx)(Z, { interactive: !1, variant: s, color: r, value: t, maxLines: d, disableMarkdown: u }),
+        f = {
+            ...m,
             removeVerticalPadding: !0,
-            growWidth: u || x.isEditing,
-            preview: f,
-            placeholder: s,
-            editButtonAriaLabel: s,
-            label: s,
-            maxLength: d,
+            growWidth: c || m.isEditing,
+            preview: x,
+            placeholder: i,
+            editButtonAriaLabel: i,
+            label: i,
+            maxLength: o,
+            className: Q.ZZ,
         };
-    return 1 === c ? (0, n.jsx)(J.yV, { ...h, size: "compact" }) : (0, n.jsx)(q.f, { ...h, rows: 1, maxRows: c });
+    return 1 === d ? (0, n.jsx)(J.yV, { ...f, size: "compact" }) : (0, n.jsx)(q.f, { ...f, rows: 1, maxRows: d });
 }
 function ee(e) {
     return e.canEdit
@@ -197,7 +189,6 @@ function ee(e) {
         : "" === e.value.trim()
           ? null
           : (0, n.jsx)(Z, {
-                className: e.className,
                 variant: e.variant,
                 color: e.color,
                 value: e.value,
@@ -514,7 +505,7 @@ function ep(e) {
     return (0, n.jsxs)("div", {
         className: ef.wx,
         children: [
-            (0, n.jsx)(P.t, { size: "xs" }),
+            (0, n.jsx)(P.t, { size: "xs", className: ef.nr }),
             (0, n.jsx)(ee, {
                 canEdit: i,
                 variant: "text-sm/medium",
