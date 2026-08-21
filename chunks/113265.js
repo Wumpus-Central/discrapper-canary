@@ -1,17 +1,17 @@
-r.d(e, { z: () => u });
+r.d(e, { z: () => a });
 var i = r(582128),
     n = r(575593),
     s = r(466459),
     l = r(116833),
-    a = r(152472);
-function u(t) {
-    let { userId: e, product: r, selectedVariantIndex: u, location: o, onError: c } = t,
-        d = i.useMemo(
-            () => (r.type === n.R.VARIANTS_GROUP && null != u && r.variants?.[u] != null ? r.variants[u] : r),
-            [r, u],
+    u = r(152472);
+function a(t) {
+    let { userId: e, product: r, selectedVariantIndex: a, location: o, onError: d } = t,
+        c = i.useMemo(
+            () => (r.type === n.R.VARIANTS_GROUP && null != a && r.variants?.[a] != null ? r.variants[a] : r),
+            [r, a],
         ),
-        S = d.skuId,
-        I = (0, a.c)({
+        S = c.skuId,
+        I = (0, u.c)({
             userId: e,
             skuId: S,
             nuxGraphic: (function (t) {
@@ -33,10 +33,10 @@ function u(t) {
                     aspectRatio: r,
                     props: { product: e, forCollectedModal: !0 },
                 };
-            })({ product: d }),
+            })({ product: c }),
             location: o,
-            onError: c,
+            onError: d,
         }),
-        { isPurchased: p } = (0, s.h)(d);
-    return { ...I, specificProductOrVariant: d, isPurchased: p };
+        { isPurchased: p } = (0, s.h)(c);
+    return { ...I, specificProductOrVariant: c, isPurchased: p };
 }

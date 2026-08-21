@@ -211,7 +211,7 @@ let m = {
     },
     showManualReviewPendingModal: function () {
         (0, a.openModalLazy)(async () => {
-            let { default: e } = await Promise.all([n.e("632364"), n.e("492758")]).then(n.bind(n, 174453));
+            let { default: e } = await Promise.all([n.e("247907"), n.e("492758")]).then(n.bind(n, 174453));
             return (t) => (0, i.jsx)(e, { ...t });
         });
     },

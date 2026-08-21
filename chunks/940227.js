@@ -1316,8 +1316,8 @@ function e3(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
     return null != e ? Math.round(e) : t;
 }
-var e5 = (((l = {}).FpsUpdate = "fps-update"), l);
-class e4 extends p.A {
+var e4 = (((l = {}).FpsUpdate = "fps-update"), l);
+class e5 extends p.A {
     connection;
     timestampProducer;
     networkQuality = new e1();
@@ -3815,7 +3815,7 @@ class tu extends p.A {
     }
     getOrCreateVideoQuality() {
         if (null != this._connection && null == this._videoQuality) {
-            (this._videoQuality = new e4(this._connection)),
+            (this._videoQuality = new e5(this._connection)),
                 this._videoQuality.updateCallUserIdsCount(this._userIds.size),
                 this._videoQuality.start();
             let {
@@ -3833,7 +3833,7 @@ class tu extends p.A {
                     this._localMediaSinkWantsManager?.shouldReceiveFromUser(e) &&
                         this._videoHealthManager?.updateFps(e, t, n);
                 };
-                this._videoQuality.on(e5.FpsUpdate, e);
+                this._videoQuality.on(e4.FpsUpdate, e);
             }
         }
         return this._videoQuality;

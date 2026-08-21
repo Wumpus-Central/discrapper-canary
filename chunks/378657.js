@@ -41,11 +41,11 @@ function P(e) {
     }, [t?.entitlements]);
 }
 var T = l(375708),
-    G = l(641641),
+    G = l(794176),
     k = l(144977),
     D = l(628049),
     O = l(568065),
-    V = l(632847),
+    V = l(667378),
     U = l(929729),
     M = l(517826);
 function W(e) {
@@ -830,34 +830,34 @@ function e1(e) {
             ],
         });
 }
-var e6 = l(97808),
-    e9 = l(778712),
+var e9 = l(97808),
+    e6 = l(778712),
     e8 = l(463930),
     e5 = l(730134),
-    e4 = l(906199),
-    e3 = l(319756),
+    e3 = l(906199),
+    e7 = l(319756),
     e2 = l(854627),
-    e7 = l(696451),
+    e4 = l(696451),
     te = l(317525),
     tt = l(287809),
     tl = l(562153),
     tn = l(19575),
     ti = l(985827);
-let ts = tn.Ay.getEnableHardwareAcceleration() ? e6.Js : e5.A;
+let ts = tn.Ay.getEnableHardwareAcceleration() ? e9.Js : e5.A;
 function tr(e) {
     let { guildId: t } = e,
         l = (0, r.bG)([c.A], () => c.A.getGuild(t)),
         i = (0, r.bG)([te.A], () => te.A.getSortedRoles(t).find((e) => e.tags?.premium_subscriber === null)),
         s = (0, r.bG)([tt.default], () => tt.default.getCurrentUser()),
         o = s?.id,
-        a = (0, r.bG)([e7.Ay], () => (null != o ? e7.Ay.getMember(t, o) : void 0), [o, t]),
+        a = (0, r.bG)([e4.Ay], () => (null != o ? e4.Ay.getMember(t, o) : void 0), [o, t]),
         u = a?.premiumSince != null,
         d = (0, r.bG)([e_.Ay], () => e_.Ay.useReducedMotion),
         {
             avatarDecorationSrc: p,
             avatarSrc: m,
             eventHandlers: f,
-        } = (0, e2.A)({ userId: s?.id, guildId: t, size: e9._3.SIZE_40, animateOnHover: !d });
+        } = (0, e2.A)({ userId: s?.id, guildId: t, size: e6._3.SIZE_40, animateOnHover: !d });
     return null == l || null == a || null == s
         ? null
         : (0, n.jsxs)("div", {
@@ -874,7 +874,7 @@ function tr(e) {
                               variant: "text-sm/medium",
                               children: T.intl.format(u ? G.default["7fWTg4"] : G.default["7PXeeQ"], {
                                   onClick: () => {
-                                      (0, e4.K4)({
+                                      (0, e3.K4)({
                                           guildId: t,
                                           location: {
                                               section: ex.JJy.GUILD_POWERUPS_OVERVIEW_SIDEBAR,
@@ -888,13 +888,13 @@ function tr(e) {
                   }),
                   null != i &&
                       !u &&
-                      (0, n.jsx)(e3.V, {
+                      (0, n.jsx)(e7.V, {
                           avatar: (0, n.jsx)(ts, {
                               ...f,
                               user: s,
                               src: m,
                               avatarDecoration: p,
-                              size: e9._3.SIZE_40,
+                              size: e6._3.SIZE_40,
                               "aria-hidden": !0,
                               animate: !0,
                           }),
@@ -948,11 +948,11 @@ function tx(e) {
                     username: l,
                     roleColor: n,
                     roleColorStrings: i,
-                } = (0, r.cf)([e7.Ay], () => {
-                    let t = e7.Ay.getMember(e.guildId, e.userId);
+                } = (0, r.cf)([e4.Ay], () => {
+                    let t = e4.Ay.getMember(e.guildId, e.userId);
                     return {
                         username:
-                            e7.Ay.getNick(e.guildId, e.userId) ?? e.user?.username ?? T.intl.string(T.t["30mdIx"]),
+                            e4.Ay.getNick(e.guildId, e.userId) ?? e.user?.username ?? T.intl.string(T.t["30mdIx"]),
                         roleColor: t?.colorString ?? null,
                         roleColorStrings: t?.colorStrings ?? null,
                     };
@@ -1061,12 +1061,12 @@ function th(e) {
                             .slice(0, void 0),
                     [t, void 0, l],
                 ),
-                s = (0, r.yK)([e7.Ay], () => {
+                s = (0, r.yK)([e4.Ay], () => {
                     let t = new Set();
                     return (
                         n.forEach((l) => {
                             let { boost: n } = l;
-                            null == e7.Ay.getMember(e, n.userId) && t.add(n.userId);
+                            null == e4.Ay.getMember(e, n.userId) && t.add(n.userId);
                         }),
                         Array.from(t)
                     );

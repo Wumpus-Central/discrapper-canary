@@ -720,11 +720,11 @@ var e$ = l(619517),
     e1 = l(133296),
     e7 = l(689175),
     e8 = l(532197),
-    e2 = l(837344);
-let e9 = { CENTER: e2.Hu, LEFT: e2.Vl };
+    e9 = l(837344);
+let e2 = { CENTER: e9.Hu, LEFT: e9.Vl };
 class e3 extends i.PureComponent {
-    static Align = e9;
-    static defaultProps = { scrollToPadding: { top: 0, left: 0, bottom: 0, right: 0 }, align: e9.CENTER };
+    static Align = e2;
+    static defaultProps = { scrollToPadding: { top: 0, left: 0, bottom: 0, right: 0 }, align: e2.CENTER };
     _scrollerRef = null;
     _paginationItemRefs = [];
     componentDidUpdate(e) {
@@ -746,7 +746,7 @@ class e3 extends i.PureComponent {
     };
     render() {
         let { renderItem: e, items: t, vertical: l, paginationContainerClass: a, align: r } = this.props,
-            o = l ? e2.XA : e2.BU;
+            o = l ? e9.XA : e9.BU;
         return (0, s.jsx)(e7.Gt, {
             orientation: l ? "vertical" : "horizontal",
             className: n()(o, a, r),
@@ -772,9 +772,9 @@ class e4 extends i.PureComponent {
     render() {
         let { className: e } = this.props;
         return (0, s.jsx)(eO.D, {
-            className: n()(e2.t1, e),
+            className: n()(e9.t1, e),
             onClick: this.handlePrevClick,
-            children: (0, s.jsx)(e8.A, { className: e2.UE, direction: e8.A.Directions.LEFT }),
+            children: (0, s.jsx)(e8.A, { className: e9.UE, direction: e8.A.Directions.LEFT }),
         });
     }
 }
@@ -787,9 +787,9 @@ class e6 extends i.PureComponent {
     render() {
         let { className: e } = this.props;
         return (0, s.jsx)(eO.D, {
-            className: n()(e2.XS, e),
+            className: n()(e9.XS, e),
             onClick: this.handleNextClick,
-            children: (0, s.jsx)(e8.A, { className: e2.UE, direction: e8.A.Directions.RIGHT }),
+            children: (0, s.jsx)(e8.A, { className: e9.UE, direction: e8.A.Directions.RIGHT }),
         });
     }
 }
@@ -1599,8 +1599,8 @@ function t7(e) {
     });
 }
 var t8 = l(449054),
-    t2 = l(900002),
-    t9 = l(950305),
+    t9 = l(900002),
+    t2 = l(950305),
     t3 = l(573435),
     t4 = l(714991),
     t6 = l(776231),
@@ -1659,7 +1659,7 @@ function ls(e) {
                     (0, s.jsxs)("div", {
                         className: le.Y_,
                         children: [
-                            (0, s.jsx)(t4.A, { className: le.n2, guild: t, tooltipColor: t2.ST.Colors.PRIMARY }),
+                            (0, s.jsx)(t4.A, { className: le.n2, guild: t, tooltipColor: t9.ST.Colors.PRIMARY }),
                             (0, s.jsx)(h.D, { variant: "heading-md/semibold", className: le.J5, children: t.name }),
                         ],
                     }),
@@ -1675,7 +1675,7 @@ function ls(e) {
                         children: (0, s.jsxs)("div", {
                             className: le.FG,
                             children: [
-                                (0, s.jsx)(t9.UserIcon, { color: "currentColor", className: le.NP, size: "xs" }),
+                                (0, s.jsx)(t2.UserIcon, { color: "currentColor", className: le.NP, size: "xs" }),
                                 (0, s.jsx)(g.E, {
                                     variant: "text-xs/normal",
                                     color: "text-default",
@@ -2045,8 +2045,8 @@ var lM = l(607399),
     l1 = l(928658),
     l7 = l(395671),
     l8 = l(957565),
-    l2 = l(692848),
-    l9 = l(108861);
+    l9 = l(692848),
+    l2 = l(108861);
 let l3 = "start_application_install",
     l4 = "launch_activity";
 function l6(e) {
@@ -2082,7 +2082,7 @@ function l5(e) {
             (l = k()),
             (a = i.useCallback(() => {
                 let e = L.h.getField("guildId") ?? void 0;
-                (0, l2.o)({
+                (0, l9.o)({
                     applicationId: t.id,
                     customInstallUrl: t.custom_install_url,
                     installParams: t.install_params,
@@ -2105,7 +2105,7 @@ function l5(e) {
                         (O(D.HAw.APP_DIRECTORY_INSTALL_CLICKED, { application_id: t.id }),
                         (lM.Fr || lM.v1) && null == t.custom_install_url)
                     ) {
-                        let e = (0, l2.Z)({
+                        let e = (0, l9.Z)({
                             applicationId: t.id,
                             customInstallUrl: t.custom_install_url,
                             installParams: t.install_params,
@@ -2259,7 +2259,7 @@ let st = i.forwardRef(function (e, t) {
         ref: t,
         children: [
             (0, s.jsxs)("div", {
-                className: n()(l9.Ik, l9.U),
+                className: n()(l2.Ik, l2.U),
                 children: [
                     g && (0, s.jsx)(se, { size: a, contentWidth: "normal", onClick: m, isSubmitting: p }),
                     (0, s.jsx)(l5, { application: l, size: a, contentWidth: "normal", variant: x }),
@@ -2276,7 +2276,7 @@ let st = i.forwardRef(function (e, t) {
                 ],
             }),
             (0, s.jsxs)("div", {
-                className: n()(l9.Ik, l9.EX),
+                className: n()(l2.Ik, l2.EX),
                 children: [
                     g && (0, s.jsx)(se, { size: a, contentWidth: "small", onClick: m, isSubmitting: p }),
                     (0, s.jsx)(l5, { application: l, size: a, contentWidth: "small", variant: x }),
@@ -2284,7 +2284,7 @@ let st = i.forwardRef(function (e, t) {
                 ],
             }),
             (0, s.jsxs)("div", {
-                className: n()(l9.Ik, l9.nU),
+                className: n()(l2.Ik, l2.nU),
                 children: [
                     g && (0, s.jsx)(se, { size: a, contentWidth: "icon", onClick: m, isSubmitting: p }),
                     (0, s.jsx)(l5, { application: l, size: a, contentWidth: "icon", variant: x }),

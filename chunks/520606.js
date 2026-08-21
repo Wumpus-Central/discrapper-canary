@@ -18,15 +18,15 @@ class s extends i.A {
             (this.sku = t.sku);
     }
     static fromServer(t) {
-        let { sku_id: e, sku_product_line: r, sku_name: i, is_owned: l, gifter_user_id: a, sku: u, ...o } = t;
+        let { sku_id: e, sku_product_line: r, sku_name: i, is_owned: l, gifter_user_id: u, sku: a, ...o } = t;
         return new s({
             ...o,
             sku_id: e,
             sku_product_line: r,
             sku_name: i,
             is_owned: l,
-            gifter_user_id: a,
-            sku: null != u ? n.A.createFromServer(u) : void 0,
+            gifter_user_id: u,
+            sku: null != a ? n.A.createFromServer(a) : void 0,
         });
     }
 }

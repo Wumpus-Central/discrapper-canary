@@ -1,9 +1,9 @@
-t.d(n, { A: () => M, P: () => _ });
+t.d(n, { A: () => _, P: () => M });
 var l = t(477900),
     r = t(582128),
     a = t(17928),
-    i = t(192308),
-    s = t(442433),
+    s = t(192308),
+    i = t(442433),
     c = t(47167),
     d = t(499211),
     u = t(376943),
@@ -23,14 +23,14 @@ var l = t(477900),
     C = t(994500),
     b = t(287809),
     N = t(871237),
-    w = t(403362),
-    S = t(73510),
+    S = t(403362),
+    w = t(73510),
     $ = t(375708);
-function _(e) {
+function M(e) {
     let { type: n, value: t } = e;
     switch (n) {
         case "channel":
-            return (0, l.jsx)(M, { channelId: String(t) });
+            return (0, l.jsx)(_, { channelId: String(t) });
         case "user":
             return (0, l.jsx)(P, { id: String(t) });
         case "role":
@@ -44,9 +44,9 @@ function _(e) {
         case "command":
             return (0, l.jsx)(G, { id: String(t.id), name: t.name });
     }
-    (0, w.xb)(n);
+    (0, S.xb)(n);
 }
-function M(e) {
+function _(e) {
     let { channelId: n, guildId: r, messageId: h } = e,
         x = (0, d.A)(n),
         {
@@ -65,37 +65,37 @@ function M(e) {
         }, [n]),
         y = (0, v.p)();
     if (null == p) return;
-    let w = r === y?.guildId || null == r,
-        S =
+    let S = r === y?.guildId || null == r,
+        w =
             k || x.isSubscriptionGated
-                ? w || null == j
+                ? S || null == j
                     ? (0, l.jsx)(m.A, {
                           iconType: p,
                           children: j ?? (0, l.jsx)("em", { children: $.intl.string($.t.J90oLW) }),
                       })
                     : (0, l.jsx)(E, { guildId: r, children: j })
                 : (0, l.jsx)(m.A, { iconType: "locked", children: $.intl.string($.t["/YzI63"]) }),
-        _ = null;
+        M = null;
     return (
         null != h &&
-            (_ = (0, l.jsxs)(l.Fragment, {
+            (M = (0, l.jsxs)(l.Fragment, {
                 children: [(0, l.jsx)(f.A, {}), (0, l.jsx)(m.A, { iconType: I ? "post" : "message" })],
             })),
         (0, l.jsxs)(g.A, {
             role: "link",
             onClick: function (e) {
-                e?.stopPropagation(), (0, o.o)(r, n, h), (0, i.closeAllModals)();
+                e?.stopPropagation(), (0, o.o)(r, n, h), (0, s.closeAllModals)();
             },
             onContextMenu: function (e) {
                 let r = A.A.getChannel(n);
-                (0, s.L3)(e, async () => {
+                (0, i.L3)(e, async () => {
                     let { default: e } = await Promise.all([t.e("343266"), t.e("404391")]).then(t.bind(t, 254106));
                     return (t) =>
                         (0, l.jsx)(e, { ...t, channel: r, channelId: r?.id ?? n, originalLink: null, messageId: h });
                 });
             },
             className: "channelMention",
-            children: [S, _],
+            children: [w, M],
         })
     );
 }
@@ -120,8 +120,8 @@ function z(e) {
     let { id: n } = e,
         t = (0, v.p)(),
         r = t?.guildId,
-        i = (0, a.bG)([k.A], () => (null != r ? k.A.getRole(r, n)?.name : null) ?? $.intl.string($.t.sKdZ6U), [r, n]);
-    return (0, l.jsx)(p.A, { roleId: n, channelId: t?.channelId, guildId: t?.guildId, children: `@${i}` });
+        s = (0, a.bG)([k.A], () => (null != r ? k.A.getRole(r, n)?.name : null) ?? $.intl.string($.t.sKdZ6U), [r, n]);
+    return (0, l.jsx)(p.A, { roleId: n, channelId: t?.channelId, guildId: t?.guildId, children: `@${s}` });
 }
 function L(e) {
     let { id: n } = e,
@@ -136,13 +136,13 @@ function T(e) {
 function G(e) {
     let { id: n, name: t } = e,
         a = (0, v.p)(),
-        i = r.useMemo(() => {
+        s = r.useMemo(() => {
             let [, ...e] = t.split(" ");
-            return `${n}${[...e].map((e) => `${S.v4}${e}`).join("")}`;
+            return `${n}${[...e].map((e) => `${w.v4}${e}`).join("")}`;
         }, [n, t]),
-        s = r.useMemo(
-            () => ({ type: "commandMention", channelId: a?.channelId, commandId: n, commandName: t, commandKey: i }),
-            [a?.channelId, i, n, t],
+        i = r.useMemo(
+            () => ({ type: "commandMention", channelId: a?.channelId, commandId: n, commandName: t, commandKey: s }),
+            [a?.channelId, s, n, t],
         );
-    return (0, l.jsx)(h.gn, { node: s, children: t });
+    return (0, l.jsx)(h.gn, { node: i, children: t });
 }

@@ -54,7 +54,7 @@ function G(e, t, i) {
         c = { size: (0, T.kr)(500 * (0, T.mZ)()) };
     return "jpg" === n && (c.quality = "lossless"), (s += `?${R.stringify(c)}`);
 }
-var U = i(125075),
+var U = i(494210),
     L = i(868602),
     F = i(445187),
     P = i(344351),

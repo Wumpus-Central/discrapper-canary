@@ -1,19 +1,19 @@
-i.d(e, { A: () => c });
+i.d(e, { A: () => l });
 var r = i(582128),
-    _ = i(17928),
-    n = i(948230),
+    n = i(17928),
+    _ = i(948230),
     E = i(683180),
     a = i(972786);
-function c(t) {
+function l(t) {
     let e = (0, E.B9)(t?.topic),
         i = null != e;
     return (
         r.useEffect(() => {
             if (!i) return;
             let t = a.A.getProjectsFetchState();
-            (null == t || "error" === t.type) && (0, n.hF)();
+            (null == t || "error" === t.type) && (0, _.hF)();
         }, [i]),
-        (0, _.bG)(
+        (0, n.bG)(
             [a.A],
             () =>
                 null == e

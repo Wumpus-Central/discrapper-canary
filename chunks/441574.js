@@ -3102,8 +3102,8 @@ class e3 extends O.G {
         return !1 !== i && (!0 == i ? S.f$.onWrite : i)(this.typeName, e, t), t;
     }
 }
-let e5 = new e3();
-class e4 extends O.G {
+let e4 = new e3();
+class e5 extends O.G {
     constructor() {
         super("discord_protos.users.v1.PerkConfigIncreasedFileUploadSize", [
             { no: 1, name: "max_size", kind: "scalar", T: 4 },
@@ -3139,7 +3139,7 @@ class e4 extends O.G {
         return !1 !== i && (!0 == i ? S.f$.onWrite : i)(this.typeName, e, t), t;
     }
 }
-let e6 = new e4();
+let e6 = new e5();
 class e7 extends O.G {
     constructor() {
         super("discord_protos.users.v1.PerkConfigIncreasedGuildLimit", [
@@ -3181,7 +3181,7 @@ class e9 extends O.G {
     constructor() {
         super("discord_protos.users.v1.Perks", [
             { no: 1, name: "active_perks_bitmask", kind: "scalar", repeat: 1, T: 4 },
-            { no: 2, name: "config_by_perk", kind: "map", K: 13, V: { kind: "message", T: () => e5 } },
+            { no: 2, name: "config_by_perk", kind: "map", K: 13, V: { kind: "message", T: () => e4 } },
             { no: 3, name: "rules_version", kind: "scalar", T: 13 },
             { no: 4, name: "updated_at", kind: "message", T: () => L.D },
         ]);
@@ -3236,7 +3236,7 @@ class e9 extends O.G {
                     a = t.uint32();
                     break;
                 case 2:
-                    s = e5.internalBinaryRead(t, t.uint32(), n);
+                    s = e4.internalBinaryRead(t, t.uint32(), n);
                     break;
                 default:
                     throw new globalThis.Error(
@@ -3244,7 +3244,7 @@ class e9 extends O.G {
                     );
             }
         }
-        e[a ?? 0] = s ?? e5.create();
+        e[a ?? 0] = s ?? e4.create();
     }
     internalBinaryWrite(e, t, n) {
         if (e.activePerksBitmask.length) {
@@ -3255,7 +3255,7 @@ class e9 extends O.G {
         for (let i of Object.keys(e.configByPerk))
             t.tag(2, S.O0.LengthDelimited).fork().tag(1, S.O0.Varint).uint32(parseInt(i)),
                 t.tag(2, S.O0.LengthDelimited).fork(),
-                e5.internalBinaryWrite(e.configByPerk[i], t, n),
+                e4.internalBinaryWrite(e.configByPerk[i], t, n),
                 t.join().join();
         0 !== e.rulesVersion && t.tag(3, S.O0.Varint).uint32(e.rulesVersion),
             e.updatedAt && L.D.internalBinaryWrite(e.updatedAt, t.tag(4, S.O0.LengthDelimited).fork(), n).join();

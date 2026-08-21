@@ -513,14 +513,14 @@ let e0 = (0, z.xI)(L.A.EXPRESSION_PICKER_CONSTANTS_EXPRESSION_PICKER_INSPECTOR_B
 var e3 = n(140735),
     e5 = n(442433),
     e8 = n(304072),
-    e7 = n(194261),
-    e6 = n(513902);
+    e6 = n(194261),
+    e7 = n(513902);
 let e4 = function (e) {
     let { size: t } = e;
     return (0, l.jsx)("div", {
-        className: e6.G,
+        className: e7.G,
         style: { width: t, height: t },
-        children: (0, l.jsx)(e7.LockIcon, { size: "xxs", color: "currentColor", className: e6.I }),
+        children: (0, l.jsx)(e6.LockIcon, { size: "xxs", color: "currentColor", className: e7.I }),
     });
 };
 var e9 = n(777371);

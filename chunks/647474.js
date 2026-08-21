@@ -11,8 +11,8 @@ var r = n(477900),
     m = n(417098),
     x = n(396583),
     h = n(421108),
-    v = n(818348),
-    j = n(375708),
+    j = n(818348),
+    v = n(375708),
     f = n(395822);
 function k(t) {
     let { className: e, color: n = "default", sticky: l = !1, children: s } = t,
@@ -35,7 +35,7 @@ function k(t) {
             },
         });
     if ((0, o.qt)(n)) {
-        let t = (0, o.OK)((0, o.LX)(n)) > 0.5 ? v.NJ.DARK : v.NJ.LIGHT;
+        let t = (0, o.OK)((0, o.LX)(n)) > 0.5 ? j.NJ.DARK : j.NJ.LIGHT;
         return (0, r.jsx)(i.N, {
             theme: t,
             children: (t) =>
@@ -50,7 +50,7 @@ function k(t) {
         });
     }
     return (0, r.jsx)(i.N, {
-        theme: v.NJ.DARK,
+        theme: j.NJ.DARK,
         children: (t) => u({ className: c()(t, f.cI, a, e), noticeColor: m.Hv.BRAND }),
     });
 }
@@ -84,7 +84,7 @@ function p(t) {
             (0, r.jsx)(u.E, {
                 variant: "text-sm/medium",
                 color: "currentColor",
-                children: j.intl.formatToPlainString(j.t.BXpdIg, { days: e }),
+                children: v.intl.formatToPlainString(v.t.BXpdIg, { days: e }),
             }),
         ],
     });

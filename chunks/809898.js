@@ -6,7 +6,7 @@ var e = i(477900),
     r = i(95477),
     u = i(948230),
     d = i(972786),
-    o = i(295813),
+    o = i(459864),
     c = i(375708);
 function f(t) {
     let { projectId: a, transitionState: i, onClose: f } = t,

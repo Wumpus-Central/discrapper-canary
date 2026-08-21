@@ -1,18 +1,18 @@
-r.d(e, { A: () => d });
+r.d(e, { A: () => c });
 var i = r(17928),
     n = r(228366),
     s = r(38405),
     l = r(855052);
-let a = {};
-function u() {
+let u = {};
+function a() {
     return { data: null, status: "not_loaded" };
 }
 function o(t) {
-    return (a[t] ??= u());
+    return (u[t] ??= a());
 }
-class c extends i.Ay.Store {
+class d extends i.Ay.Store {
     get(t) {
-        return a[t] ?? u();
+        return u[t] ?? a();
     }
     getWishlist(t) {
         return this.get(t).data;
@@ -44,7 +44,7 @@ class c extends i.Ay.Store {
         return this.get(t).lastFetchedAt;
     }
 }
-let d = new c(n.h, {
+let c = new d(n.h, {
     WISHLIST_FETCH_START: function (t) {
         let { wishlistId: e } = t,
             r = o(e);
@@ -114,6 +114,6 @@ let d = new c(n.h, {
     WISHLIST_ITEM_PURCHASED: function (t) {
         let { recipientId: e, skuId: i } = t,
             n = r(321191).A.getFirstWishlistId(e);
-        null != n && null != a[n] && null != a[n].data && (0, l.C3)(a[n].data, i) && (a[n].updatedAt = void 0);
+        null != n && null != u[n] && null != u[n].data && (0, l.C3)(u[n].data, i) && (u[n].updatedAt = void 0);
     },
 });

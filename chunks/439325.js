@@ -1,4 +1,4 @@
-t.d(l, { default: () => eP });
+t.d(l, { default: () => eU });
 var s = t(477900),
     n = t(582128),
     i = t(503698),
@@ -31,8 +31,8 @@ var s = t(477900),
     R = t(280450),
     D = t(328968),
     L = t(174459),
-    U = t(371794),
-    P = t(871123),
+    P = t(371794),
+    U = t(871123),
     H = t(733391),
     Y = t(832163),
     w = t(429635),
@@ -44,32 +44,32 @@ var F = t(345938),
     q = t(510022),
     z = t(317560),
     J = t(99161),
-    W = t(375708),
-    $ = t(698132);
+    $ = t(375708),
+    W = t(698132);
 function V(e) {
     let { mediaItems: l, labels: t, selectedIndex: n, onSelectIndex: i } = e;
     return l.length <= 1
         ? null
         : (0, s.jsxs)("div", {
-              className: $.kL,
+              className: W.kL,
               children: [
                   (0, s.jsx)(d.E, {
                       variant: "text-xs/semibold",
                       color: "text-subtle",
-                      children: W.intl.string(W.t.U7DAV9),
+                      children: $.intl.string($.t.U7DAV9),
                   }),
                   (0, s.jsx)("div", {
-                      className: $.Vg,
+                      className: W.Vg,
                       children: l.map((e, l) =>
                           (0, s.jsx)(
                               x.D,
                               {
-                                  className: r()($.xn, { [$.Y4]: l === n }),
+                                  className: r()(W.xn, { [W.Y4]: l === n }),
                                   onClick: () => i(l),
                                   "aria-label": t?.[l],
                                   "aria-pressed": l === n,
                                   children: (0, s.jsx)("img", {
-                                      className: $.q_,
+                                      className: W.q_,
                                       src:
                                           null != e.thumbnailSrc
                                               ? e.thumbnailSrc
@@ -100,14 +100,14 @@ function el(e) {
     return "HIDDEN" === l || null == t
         ? null
         : "NOT_ENOUGH_ORBS" === l
-          ? (0, s.jsx)(m.$, { onClick: o, variant: a, icon: u.C, text: W.intl.string(W.t.H57f41), fullWidth: !0 })
+          ? (0, s.jsx)(m.$, { onClick: o, variant: a, icon: u.C, text: $.intl.string($.t.H57f41), fullWidth: !0 })
           : (0, s.jsx)(m.$, {
                 onClick: i,
                 disabled: "NEEDS_NITRO" === l,
                 variant: a,
                 text: (0, s.jsx)("span", {
                     className: ee.Y,
-                    children: W.intl.format(W.t.lOtBOI, {
+                    children: $.intl.format($.t.lOtBOI, {
                         orbPrice: t.amount,
                         orbIconHook: () => (0, s.jsx)(u.C, { size: "xs", color: "currentColor" }, "orbs-icon"),
                     }),
@@ -204,7 +204,7 @@ var ex = t(821707),
     eb = t(532794),
     ej = t(910200),
     e_ = t(202541),
-    eN = t(680649),
+    eN = t(592278),
     eg = t(456902);
 function eC(e) {
     let { orbsGate: l, onTrackClickNitroUpsell: t, applicationId: i, analyticsLocations: r } = e,
@@ -221,14 +221,14 @@ function eC(e) {
                 children: (0, s.jsx)(ej.Ay, {
                     Icon: ep.t,
                     gradientColor: "nitro-pink",
-                    tooltip: W.intl.string(eN.default.XwadDC),
-                    text: W.intl.string(eN.default.cg95CA),
+                    tooltip: $.intl.string(eN.default.XwadDC),
+                    text: $.intl.string(eN.default.cg95CA),
                     trailing: (0, s.jsx)(eh._, { size: "xs" }),
                 }),
             })
           : (0, s.jsx)(ej.O0, {
                 Icon: ep.t,
-                text: W.intl.string(eN.default.cg95CA),
+                text: $.intl.string(eN.default.cg95CA),
                 endDatetime: o?.promotionEndDatetime,
                 gradientColor: "nitro-pink",
             });
@@ -383,13 +383,13 @@ function eR(e) {
                 (0, s.jsx)(m.$, {
                     variant: N ? "secondary" : "primary",
                     onClick: C,
-                    text: null != g ? W.intl.format(W.t.YkXGyY, { priceString: g }) : W.intl.string(W.t.boqtTA),
+                    text: null != g ? $.intl.format($.t.YkXGyY, { priceString: g }) : $.intl.string($.t.boqtTA),
                     fullWidth: !0,
                 }),
                 (0, s.jsx)(x.D, {
                     className: ev.xP,
                     onClick: f,
-                    "aria-label": W.intl.string(W.t.QAZA5f),
+                    "aria-label": $.intl.string($.t.QAZA5f),
                     role: "button",
                     children: (0, s.jsx)(h.GiftIcon, { size: "refresh_sm", color: "currentColor" }),
                 }),
@@ -399,7 +399,7 @@ function eR(e) {
             icon: h.GiftIcon,
             variant: "secondary",
             onClick: f,
-            text: W.intl.string(W.t.QAZA5f),
+            text: $.intl.string($.t.QAZA5f),
             fullWidth: !0,
         });
     return (0, s.jsxs)("div", {
@@ -409,7 +409,7 @@ function eR(e) {
                 (0, s.jsx)(d.E, {
                     variant: "text-xxs/normal",
                     color: "text-subtle",
-                    children: W.intl.string(W.t.IqlPbQ),
+                    children: $.intl.string($.t.IqlPbQ),
                 }),
             N && O,
             _ ? y : R,
@@ -420,7 +420,7 @@ function eR(e) {
 function eD(e) {
     let { selectedCarouselItem: l, applicationId: t } = e;
     if (null == l) return null;
-    let n = null != l.labelIconAssetId ? (0, U.YE)(t, l.labelIconAssetId) : null;
+    let n = null != l.labelIconAssetId ? (0, P.YE)(t, l.labelIconAssetId) : null;
     return (0, s.jsxs)("div", {
         className: ev.HI,
         children: [
@@ -433,7 +433,7 @@ function eL(e) {
     let { onClick: l, onMouseDown: t, children: n, ariaLabel: i, className: r = ev.jU } = e;
     return (0, s.jsx)(x.D, { onClick: l, onMouseDown: t, className: r, "aria-label": i, role: "button", children: n });
 }
-function eU(e) {
+function eP(e) {
     let { selectedCarouselItem: l, title: t, description: n, applicationId: i, className: r } = e;
     return (0, s.jsxs)("div", {
         className: r,
@@ -444,7 +444,7 @@ function eU(e) {
         ],
     });
 }
-function eP(e) {
+function eU(e) {
     let {
             customNavigateToSocialLayerStorefront: l,
             transitionState: t,
@@ -459,12 +459,12 @@ function eP(e) {
             onClose: S,
         } = e,
         { analyticsLocations: q } = (0, E.Ay)(A ?? []),
-        { guildId: z } = (0, P.nG)(u),
+        { guildId: z } = (0, U.nG)(u),
         J = (0, a.bG)([R.default], () => R.default.getId());
     n.useEffect(() => {
         null != c && (0, H.iR)(u, c);
     }, [u, c]);
-    let $ = (0, w.A)({ applicationId: u }),
+    let W = (0, w.A)({ applicationId: u }),
         K = (0, a.bG)([Y.A], () => Y.A.getSkuAssets()),
         Q = (0, a.bG)([D.A], () => D.A.isFetchingForSKU(c)),
         Z = (0, p.M)((0, I.Ay)()),
@@ -492,27 +492,27 @@ function eP(e) {
                             e.mime_type.startsWith("video/")
                                 ? r.push({
                                       type: "video",
-                                      src: (0, U.YE)(l, e, n, "mp4"),
-                                      videoThumbnailSrc: (0, U.YE)(l, e, n, "webp"),
+                                      src: (0, P.YE)(l, e, n, "mp4"),
+                                      videoThumbnailSrc: (0, P.YE)(l, e, n, "webp"),
                                       thumbnailSrc:
                                           null != s.thumbnailAssetId
-                                              ? (0, U.YE)(l, s.thumbnailAssetId, 112, "webp")
+                                              ? (0, P.YE)(l, s.thumbnailAssetId, 112, "webp")
                                               : void 0,
                                       backgroundSrc:
                                           null != s.backgroundAssetId
-                                              ? (0, U.YE)(l, s.backgroundAssetId, n, P.pV)
+                                              ? (0, P.YE)(l, s.backgroundAssetId, n, U.pV)
                                               : void 0,
                                   })
                                 : r.push({
                                       type: "image",
-                                      src: (0, U.YE)(l, e, n, "webp"),
+                                      src: (0, P.YE)(l, e, n, "webp"),
                                       thumbnailSrc:
                                           null != s.thumbnailAssetId
-                                              ? (0, U.YE)(l, s.thumbnailAssetId, 112, "webp")
+                                              ? (0, P.YE)(l, s.thumbnailAssetId, 112, "webp")
                                               : void 0,
                                       backgroundSrc:
                                           null != s.backgroundAssetId
-                                              ? (0, U.YE)(l, s.backgroundAssetId, n, P.pV)
+                                              ? (0, P.YE)(l, s.backgroundAssetId, n, U.pV)
                                               : void 0,
                                   }));
                     }
@@ -579,7 +579,7 @@ function eP(e) {
     n.useEffect(() => {
         null == c || D.A.isFetchingForSKU(c) || (0, H.Pp)(u, c);
     }, [u, c]);
-    let eP = n.useCallback(() => {
+    let eU = n.useCallback(() => {
             null != et &&
                 (eg(eA.Jq.FORWARD_BUTTON),
                 (0, F.d)({
@@ -605,9 +605,9 @@ function eP(e) {
         eB = (0, B.F)("pdp", { applicationId: u, skuId: c }),
         eM = et?.tenantMetadata?.socialLayer;
     if (null == et || null == eM) return Q ? (0, s.jsx)(j.y, {}) : null;
-    let eF = $?.storefront,
-        eq = eF?.logoAssetId != null ? (0, U.YE)(eF.applicationId, eF.logoAssetId, 256) : null,
-        ez = eF?.lightThemeLogoAssetId != null ? (0, U.YE)(eF.applicationId, eF.lightThemeLogoAssetId, 256) : null,
+    let eF = W?.storefront,
+        eq = eF?.logoAssetId != null ? (0, P.YE)(eF.applicationId, eF.logoAssetId, 256) : null,
+        ez = eF?.lightThemeLogoAssetId != null ? (0, P.YE)(eF.applicationId, eF.lightThemeLogoAssetId, 256) : null,
         eJ = null;
     return (
         (eJ = Z ? (eq ?? ez) : (ez ?? eq)),
@@ -652,7 +652,7 @@ function eP(e) {
                                                               onSelectIndex: eD,
                                                           }),
                                                       }),
-                                                      (0, s.jsx)(eU, {
+                                                      (0, s.jsx)(eP, {
                                                           selectedCarouselItem: ej,
                                                           title: ej?.title,
                                                           description: ej?.description,
@@ -661,7 +661,7 @@ function eP(e) {
                                                       }),
                                                   ],
                                               })
-                                            : (0, s.jsx)(eU, {
+                                            : (0, s.jsx)(eP, {
                                                   selectedCarouselItem: ej,
                                                   title: et.name,
                                                   description: et.description,
@@ -716,14 +716,14 @@ function eP(e) {
                                     (0, s.jsxs)(eL, {
                                         onClick: ew,
                                         onMouseDown: eY,
-                                        ariaLabel: W.intl.string(W.t["+v/1Dk"]),
+                                        ariaLabel: $.intl.string($.t["+v/1Dk"]),
                                         className: ev.gW,
                                         children: [
                                             (0, s.jsx)(_.U, { size: "refresh_sm", color: "currentColor" }),
                                             (0, s.jsx)(d.E, {
                                                 variant: "text-md/medium",
                                                 color: "currentColor",
-                                                children: W.intl.string(W.t["+v/1Dk"]),
+                                                children: $.intl.string($.t["+v/1Dk"]),
                                             }),
                                         ],
                                     }),
@@ -740,21 +740,21 @@ function eP(e) {
                                                 location: "social_layer_storefront_product_details_modal",
                                             }),
                                         (0, s.jsx)(eL, {
-                                            onClick: eP,
-                                            ariaLabel: W.intl.string(W.t.Ej3B3Y),
+                                            onClick: eU,
+                                            ariaLabel: $.intl.string($.t.Ej3B3Y),
                                             children: (0, s.jsx)(v.A, { size: "refresh_sm", color: "currentColor" }),
                                         }),
                                         eN &&
                                             (0, s.jsx)(eL, {
                                                 onClick: eG,
-                                                ariaLabel: ee ? W.intl.string(W.t.YqAjXy) : W.intl.string(W.t.w4m945),
+                                                ariaLabel: ee ? $.intl.string($.t.YqAjXy) : $.intl.string($.t.w4m945),
                                                 children: ee
                                                     ? (0, s.jsx)(N._, { size: "refresh_sm", color: "currentColor" })
                                                     : (0, s.jsx)(g.H, { size: "refresh_sm", color: "currentColor" }),
                                             }),
                                         (0, s.jsx)(eL, {
                                             onClick: S,
-                                            ariaLabel: W.intl.string(W.t.cpT0Cq),
+                                            ariaLabel: $.intl.string($.t.cpT0Cq),
                                             children: (0, s.jsx)(C.XLargeIcon, {
                                                 size: "refresh_sm",
                                                 color: "currentColor",

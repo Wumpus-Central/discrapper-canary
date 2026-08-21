@@ -1,4 +1,4 @@
-r.d(e, { T: () => l, q: () => a });
+r.d(e, { T: () => l, q: () => u });
 var i = r(575593),
     n = r(993408),
     s = r(375708);
@@ -15,6 +15,6 @@ function l(t) {
             return e;
     }
 }
-function a(t) {
+function u(t) {
     return !(0, n.G0)(t) && t.type !== i.R.EXTERNAL_SKU;
 }

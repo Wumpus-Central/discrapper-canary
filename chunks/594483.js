@@ -1,4 +1,4 @@
-n.d(t, { A: () => p });
+n.d(t, { A: () => f });
 var l = n(691540),
     a = n(857250),
     i = n(97483),
@@ -7,14 +7,14 @@ var l = n(691540),
     o = n(998939),
     c = n(652215),
     d = n(746080),
-    u = n(295813),
+    u = n(459864),
     h = n(375708);
 let m = " (Fork)";
-async function p(e, t) {
+async function f(e, t) {
     let n = null;
     try {
-        var p;
-        (n = await (0, r.gA)({ name: ((p = e.name), `${p.slice(0, 128 - m.length)}${m}`), guild_id: t })),
+        var f;
+        (n = await (0, r.gA)({ name: ((f = e.name), `${f.slice(0, 128 - m.length)}${m}`), guild_id: t })),
             await (0, o.Lc)(e.id, n);
     } catch (t) {
         null != n && (await (0, r.xx)(n).catch(() => void 0));

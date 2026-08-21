@@ -62,7 +62,7 @@ let S = function (e) {
         children: t.paths.map((e) => (0, s.jsx)("path", { d: e.d, fillRule: e.fillRule, clipRule: e.fillRule }, e.d)),
     });
 };
-var T = a(800121),
+var T = a(878400),
     V = a(375708),
     b = a(126106);
 let L = function (e) {

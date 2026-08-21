@@ -1,4 +1,4 @@
-l.d(t, { A: () => d });
+l.d(t, { A: () => u });
 var i = l(17928),
     n = l(228366),
     a = l(95701),
@@ -20,7 +20,7 @@ class c extends i.Ay.Store {
         return o[e];
     }
 }
-let d = new c(n.h, {
+let u = new c(n.h, {
     GUILD_ROLE_SUBSCRIPTIONS_STASH_TEMPLATE_CHANNELS: function (e) {
         let { selectedTemplate: t, guildId: l } = e,
             i = Object.values(r.A.getMutableGuildChannelsForGuild(l));

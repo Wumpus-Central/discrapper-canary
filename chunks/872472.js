@@ -3,30 +3,30 @@ var i = r(575593),
     n = r(898461),
     s = r(474012),
     l = r(837015),
-    a = r(203632),
-    u = r(892118),
+    u = r(203632),
+    a = r(892118),
     o = r(32731),
-    c = r(520606),
-    d = r(652215);
+    d = r(520606),
+    c = r(652215);
 function S(t) {
     switch (t.type) {
         case i.R.AVATAR_DECORATION:
             return n.A.fromServer(t);
         case i.R.PROFILE_EFFECT:
-            return a.Ay.fromServer(t);
+            return u.Ay.fromServer(t);
         case i.R.NAMEPLATE:
             return l.A.fromServer(t);
         case i.R.PROFILE_FRAME:
-            return u.A.fromServer(t);
+            return a.A.fromServer(t);
         default:
             return null;
     }
 }
-class I extends c.A {
+class I extends d.A {
     collectiblesItem;
     bundleItems;
     constructor(t) {
-        if ((super(t), (this.skuProductLine = d.EZt.COLLECTIBLES), null != t.bundle_items)) {
+        if ((super(t), (this.skuProductLine = c.EZt.COLLECTIBLES), null != t.bundle_items)) {
             const e = [];
             for (const r of t.bundle_items) {
                 const t = S(r);
@@ -49,7 +49,7 @@ class I extends c.A {
         if (null == e) return null;
         let r = new I({
             sku_id: t.id,
-            sku_product_line: d.EZt.COLLECTIBLES,
+            sku_product_line: c.EZt.COLLECTIBLES,
             sku_name: t.name,
             sku: t,
             skipValidation: !0,

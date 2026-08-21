@@ -3,11 +3,11 @@ var i = r(477900),
     n = r(582128),
     s = r(17928),
     l = r(554146),
-    a = r(139146),
-    u = r(895360),
+    u = r(139146),
+    a = r(895360),
     o = r(152472),
-    c = r(558845),
-    d = r(909536),
+    d = r(558845),
+    c = r(909536),
     S = r(594832),
     I = r(280450),
     p = r(274681),
@@ -18,7 +18,7 @@ let A = { type: "image", src: r(201682).A },
         let { className: r, disabled: n, size: f, variant: E, location: m, forceDarkTheme: y } = t,
             T = h.pe.TIER_2,
             R = _.intl.string(_.t.lG6a5x),
-            L = (0, d.Gh)("premium-wishlist-button-nux"),
+            L = (0, c.Gh)("premium-wishlist-button-nux"),
             k = (0, s.bG)([I.default], () => I.default.getId());
         (0, S.pE)();
         let {
@@ -31,14 +31,14 @@ let A = { type: "image", src: r(201682).A },
                 location: m,
                 skuId: T,
                 nuxGraphic: L ? A : void 0,
-                onNuxShow: L ? u.D : void 0,
+                onNuxShow: L ? a.D : void 0,
                 onAddSuccess: p.w,
             }),
-            U = (0, c.mB)(l.M.PREMIUM_WISHLIST_COACHMARK);
+            U = (0, d.mB)(l.M.PREMIUM_WISHLIST_COACHMARK);
         return (0, i.jsx)("div", {
             ref: e,
             className: y ? "theme-dark" : void 0,
-            children: (0, i.jsx)(a._, {
+            children: (0, i.jsx)(u._, {
                 skuId: T,
                 productName: R,
                 className: r,

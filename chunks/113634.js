@@ -2790,7 +2790,7 @@ class e3 extends R.EventEmitter {
         );
     }
 }
-class e5 {
+class e4 {
     pool = {};
     async acquire(e, t) {
         let n = await e3.get(e, t, this);
@@ -2805,7 +2805,7 @@ class e5 {
         this.pool[e.id] = e;
     }
 }
-var e4 = n(935399),
+var e5 = n(935399),
     e6 = n(503698),
     e7 = n.n(e6);
 function e8(e) {
@@ -2879,7 +2879,7 @@ function e9(e) {
             ),
             [o, a],
         ),
-        (0, e4.l0)(() => {
+        (0, e5.l0)(() => {
             o.destroy();
         }),
         h.useEffect(() => {
@@ -2910,7 +2910,7 @@ class tt extends p.A {
     interacted = !1;
     loopback = null;
     voiceActivityInput = null;
-    desktopInputPool = new e5();
+    desktopInputPool = new e4();
     enablePromise = null;
     dave = null;
     transientKeys = null;

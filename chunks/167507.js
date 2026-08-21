@@ -2,8 +2,8 @@ t.d(n, { N: () => j });
 var l = t(477900),
     r = t(582128),
     a = t(588975),
-    i = t(442433),
-    s = t(9578),
+    s = t(442433),
+    i = t(9578),
     c = t(975807),
     d = t(235393),
     u = t(332173),
@@ -15,17 +15,17 @@ function j(e) {
     let { type: n, value: t, children: r } = e;
     switch (n) {
         case "normal":
-            return (0, l.jsx)(s.A, { title: t.title, href: t.url, children: (0, l.jsx)("span", { children: r }) });
+            return (0, l.jsx)(i.A, { title: t.title, href: t.url, children: (0, l.jsx)("span", { children: r }) });
         case "mention":
             switch (t.type) {
                 case "channel":
                 case "message":
                     let {
-                            value: { guild_id: a, channel_id: i },
+                            value: { guild_id: a, channel_id: s },
                         } = t,
                         c = "message_id" in t.value ? t.value.message_id : void 0;
                     return (0, l.jsx)(m.A, {
-                        channelId: String(i),
+                        channelId: String(s),
                         guildId: String(a),
                         messageId: null != c ? String(c) : void 0,
                     });
@@ -49,15 +49,15 @@ function j(e) {
     }
 }
 function g(e) {
-    let { domain: n, ephemeral: s, channelId: h, attachmentId: m, name: j } = e,
-        g = `https://${n}/${s ? "ephemeral-attachments" : "attachments"}/${h}/${m}/${j}`,
+    let { domain: n, ephemeral: i, channelId: h, attachmentId: m, name: j } = e,
+        g = `https://${n}/${i ? "ephemeral-attachments" : "attachments"}/${h}/${m}/${j}`,
         f = r.useCallback(async () => {
             let e = await o.AN(g);
             d.A.trackLinkClicked(e), (0, c.A)(e);
         }, [g]),
         p = r.useCallback(
             (e) => {
-                (0, i.L3)(e, async () => {
+                (0, s.L3)(e, async () => {
                     let { default: e } = await t.e("762529").then(t.bind(t, 740024));
                     return (n) => (0, l.jsx)(e, { ...n, attachmentUrl: g, attachmentName: j });
                 });

@@ -1130,7 +1130,7 @@ class eX extends l.PureComponent {
         let { channel: e, selectedUsers: t, onClose: n } = this.props,
             l = Array.from(t);
         if (null != e) {
-            let t = e3(Array.from(new Set([...e.recipients, ...l])));
+            let t = e7(Array.from(new Set([...e.recipients, ...l])));
             t.size > 0
                 ? (0, O.openModal)(
                       (n) => (0, i.jsx)(eK, { ...n, onConfirm: () => this.pushToExistingDM(e, l), channelIds: t }),
@@ -1139,7 +1139,7 @@ class eX extends l.PureComponent {
                   )
                 : this.pushToExistingDM(e, l);
         } else {
-            let e = e3(l);
+            let e = e7(l);
             l.length > 1 && e.size > 0
                 ? (0, O.openModal)(
                       (t) => (0, i.jsx)(eK, { ...t, onConfirm: () => this.createNewDM(l), channelIds: e }),
@@ -1338,17 +1338,17 @@ function e5(e) {
         ],
     });
 }
-function e3(e) {
-    let t = e7(e);
+function e7(e) {
+    let t = e3(e);
     return new Set(
         (0, s.chain)(ed.A.getMutablePrivateChannels())
             .values()
             .filter((e) => (0, eu.MK)(e.type))
-            .filter((e) => e7(e.recipients) === t)
+            .filter((e) => e3(e.recipients) === t)
             .map((e) => e.id)
             .value(),
     );
 }
-function e7(e) {
+function e3(e) {
     return JSON.stringify(e.sort());
 }

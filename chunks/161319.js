@@ -177,7 +177,7 @@ function w(e) {
     p.default.track(P.HAw.THIRD_PARTY_PROMOTION_MODAL_OPENED, { location_stack: t, partner_ids: n }),
         x.Ay.fetchActivePromotions(),
         (0, c.openModalLazy)(async () => {
-            let { Premium3PRewardsModalEntry: e } = await Promise.all([i.e("660748"), i.e("385347")]).then(
+            let { Premium3PRewardsModalEntry: e } = await Promise.all([i.e("566301"), i.e("385347")]).then(
                 i.bind(i, 355150),
             );
             return (t) => (0, s.jsx)(e, { ...t, partnerIds: n, isLocked: r });

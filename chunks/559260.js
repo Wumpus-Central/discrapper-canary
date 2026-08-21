@@ -101,8 +101,8 @@ function Y(e) {
         };
     }, [t, e, n]);
 }
-var W = n(632847),
-    V = n(477729);
+var W = n(667378),
+    V = n(893292);
 function K(e) {
     let { fallback: t, invoicePreview: n } = e,
         { gameName: i } = d(),
@@ -3368,7 +3368,7 @@ var ii = n(428644),
     id = n(807098),
     ip = n(753261),
     im = n(298305),
-    ih = n(270115),
+    ih = n(715138),
     iC = n(799636);
 function iE() {
     let e = (0, k.bG)([lR.A], () => {

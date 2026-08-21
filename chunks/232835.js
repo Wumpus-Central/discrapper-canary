@@ -349,7 +349,7 @@ let Z = new z(l.h, {
         MESSAGE_CREATE: function (e) {
             let { channelId: t, message: i, optimistic: r, isPushNotification: a } = e,
                 s = d.A.getOrCreate(t),
-                l = n(617710).A.isConnected();
+                l = n(493560).A.isConnected();
             return a
                 ? (0, m.K)()
                     ? (B(t, i, l), !1)

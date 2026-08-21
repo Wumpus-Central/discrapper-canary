@@ -193,7 +193,7 @@ var ew = n(746080),
     ek = n(719366),
     eH = n(307731),
     eB = n(818348),
-    eV = n(383282),
+    eV = n(995269),
     eF = n(236048);
 let eY = "GAME_INVITES_CHANNEL_OPTION";
 function eX(e) {

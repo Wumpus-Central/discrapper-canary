@@ -2364,8 +2364,8 @@ class e2 extends m.G {
     }
 }
 let e3 = new e2();
-var e5 = n(335871),
-    e4 =
+var e4 = n(335871),
+    e5 =
         (((a = {})[(a.EXCLUSIVE = 0)] = "EXCLUSIVE"),
         (a[(a.SYNCED = 1)] = "SYNCED"),
         (a[(a.PRE_ALLOCATED = 2)] = "PRE_ALLOCATED"),
@@ -2440,10 +2440,10 @@ class tl extends m.G {
         super("discord_protos.discord_experimentation.v1.Experiment", [
             { no: 1, name: "id", kind: "scalar", T: 6 },
             { no: 2, name: "name", kind: "scalar", T: 9 },
-            { no: 3, name: "created_at", kind: "message", T: () => e5.D },
+            { no: 3, name: "created_at", kind: "message", T: () => e4.D },
             { no: 4, name: "creator_id", kind: "scalar", T: 6 },
             { no: 5, name: "version", kind: "scalar", T: 5 },
-            { no: 6, name: "edited_at", kind: "message", T: () => e5.D },
+            { no: 6, name: "edited_at", kind: "message", T: () => e4.D },
             { no: 7, name: "editor_id", kind: "scalar", T: 6 },
             { no: 8, name: "title", kind: "scalar", T: 9 },
             { no: 9, name: "description", kind: "scalar", T: 9 },
@@ -2495,10 +2495,10 @@ class tl extends m.G {
             { no: 28, name: "field_numbers_to_copy", kind: "scalar", repeat: 1, T: 5 },
             { no: 29, name: "engine_feature_flags", kind: "scalar", repeat: 2, T: 9 },
             { no: 30, name: "debug_config", kind: "message", T: () => th },
-            { no: 31, name: "expected_end_date", kind: "message", T: () => e5.D },
+            { no: 31, name: "expected_end_date", kind: "message", T: () => e4.D },
             { no: 32, name: "is_automated_change", kind: "scalar", T: 8 },
             { no: 44, name: "suppress_editor_mention", kind: "scalar", T: 8 },
-            { no: 33, name: "archive_at", kind: "message", T: () => e5.D },
+            { no: 33, name: "archive_at", kind: "message", T: () => e4.D },
             { no: 35, name: "guild_experiment_version", kind: "message", T: () => g.as },
             {
                 no: 36,
@@ -2584,7 +2584,7 @@ class tl extends m.G {
                     r.name = e.string();
                     break;
                 case 3:
-                    r.createdAt = e5.D.internalBinaryRead(e, e.uint32(), n, r.createdAt);
+                    r.createdAt = e4.D.internalBinaryRead(e, e.uint32(), n, r.createdAt);
                     break;
                 case 4:
                     r.creatorId = e.fixed64().toString();
@@ -2593,7 +2593,7 @@ class tl extends m.G {
                     r.version = e.int32();
                     break;
                 case 6:
-                    r.editedAt = e5.D.internalBinaryRead(e, e.uint32(), n, r.editedAt);
+                    r.editedAt = e4.D.internalBinaryRead(e, e.uint32(), n, r.editedAt);
                     break;
                 case 7:
                     r.editorId = e.fixed64().toString();
@@ -2680,7 +2680,7 @@ class tl extends m.G {
                     r.debugConfig = th.internalBinaryRead(e, e.uint32(), n, r.debugConfig);
                     break;
                 case 31:
-                    r.expectedEndDate = e5.D.internalBinaryRead(e, e.uint32(), n, r.expectedEndDate);
+                    r.expectedEndDate = e4.D.internalBinaryRead(e, e.uint32(), n, r.expectedEndDate);
                     break;
                 case 32:
                     r.isAutomatedChange = e.bool();
@@ -2689,7 +2689,7 @@ class tl extends m.G {
                     r.suppressEditorMention = e.bool();
                     break;
                 case 33:
-                    r.archiveAt = e5.D.internalBinaryRead(e, e.uint32(), n, r.archiveAt);
+                    r.archiveAt = e4.D.internalBinaryRead(e, e.uint32(), n, r.archiveAt);
                     break;
                 case 35:
                     r.guildExperimentVersion = g.as.internalBinaryRead(e, e.uint32(), n, r.guildExperimentVersion);
@@ -2730,10 +2730,10 @@ class tl extends m.G {
     internalBinaryWrite(e, t, n) {
         "0" !== e.id && t.tag(1, f.O0.Bit64).fixed64(e.id),
             "" !== e.name && t.tag(2, f.O0.LengthDelimited).string(e.name),
-            e.createdAt && e5.D.internalBinaryWrite(e.createdAt, t.tag(3, f.O0.LengthDelimited).fork(), n).join(),
+            e.createdAt && e4.D.internalBinaryWrite(e.createdAt, t.tag(3, f.O0.LengthDelimited).fork(), n).join(),
             "0" !== e.creatorId && t.tag(4, f.O0.Bit64).fixed64(e.creatorId),
             0 !== e.version && t.tag(5, f.O0.Varint).int32(e.version),
-            e.editedAt && e5.D.internalBinaryWrite(e.editedAt, t.tag(6, f.O0.LengthDelimited).fork(), n).join(),
+            e.editedAt && e4.D.internalBinaryWrite(e.editedAt, t.tag(6, f.O0.LengthDelimited).fork(), n).join(),
             "0" !== e.editorId && t.tag(7, f.O0.Bit64).fixed64(e.editorId),
             "" !== e.title && t.tag(8, f.O0.LengthDelimited).string(e.title),
             "" !== e.description && t.tag(9, f.O0.LengthDelimited).string(e.description),
@@ -2777,10 +2777,10 @@ class tl extends m.G {
         if (
             (e.debugConfig && th.internalBinaryWrite(e.debugConfig, t.tag(30, f.O0.LengthDelimited).fork(), n).join(),
             e.expectedEndDate &&
-                e5.D.internalBinaryWrite(e.expectedEndDate, t.tag(31, f.O0.LengthDelimited).fork(), n).join(),
+                e4.D.internalBinaryWrite(e.expectedEndDate, t.tag(31, f.O0.LengthDelimited).fork(), n).join(),
             !1 !== e.isAutomatedChange && t.tag(32, f.O0.Varint).bool(e.isAutomatedChange),
             !1 !== e.suppressEditorMention && t.tag(44, f.O0.Varint).bool(e.suppressEditorMention),
-            e.archiveAt && e5.D.internalBinaryWrite(e.archiveAt, t.tag(33, f.O0.LengthDelimited).fork(), n).join(),
+            e.archiveAt && e4.D.internalBinaryWrite(e.archiveAt, t.tag(33, f.O0.LengthDelimited).fork(), n).join(),
             e.guildExperimentVersion &&
                 g.as.internalBinaryWrite(e.guildExperimentVersion, t.tag(35, f.O0.LengthDelimited).fork(), n).join(),
             0 !== e.customUnitPrefix && t.tag(36, f.O0.Varint).int32(e.customUnitPrefix),
@@ -2808,7 +2808,7 @@ class to extends m.G {
                 no: 1,
                 name: "mode",
                 kind: "enum",
-                T: () => ["discord_protos.discord_experimentation.v1.Experiment.NumberLineSettings.Mode", e4],
+                T: () => ["discord_protos.discord_experimentation.v1.Experiment.NumberLineSettings.Mode", e5],
             },
             { no: 2, name: "linked_id", kind: "scalar", T: 6 },
             { no: 3, name: "shared_control", kind: "scalar", T: 8 },

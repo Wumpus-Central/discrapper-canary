@@ -1,12 +1,12 @@
 n.d(t, {
     CA: () => r,
     Hz: () => l,
-    S8: () => p,
+    S8: () => f,
     Wb: () => c,
     ZJ: () => h,
     a7: () => a,
     aM: () => i,
-    hk: () => f,
+    hk: () => p,
     sj: () => s,
     wF: () => x,
     wV: () => o,
@@ -54,8 +54,8 @@ let m = [
         { id: "gpt-5.6-terra", label: "GPT-5.6 Terra", provider: "openai" },
         { id: "gpt-5.6-luna", label: "GPT-5.6 Luna", provider: "openai" },
     ],
-    p = { main: m, subagent: m, thinking: ["low", "medium", "high", "xhigh", "max"] },
-    f = {
+    f = { main: m, subagent: m, thinking: ["low", "medium", "high", "xhigh", "max"] },
+    p = {
         main: { model: "claude-opus-5", thinking: "high" },
         subagent: { model: "claude-sonnet-5", thinking: "medium" },
     },
@@ -67,4 +67,4 @@ let m = [
         { id: "xai/grok-4.6", label: "Grok 4.6", provider: "xai" },
         { id: "workers-ai/@cf/zai-org/glm-4.7-flash", label: "GLM 4.7 Flash", provider: "workers-ai" },
     ],
-    x = { main: g, subagent: g, thinking: p.thinking };
+    x = { main: g, subagent: g, thinking: f.thinking };
