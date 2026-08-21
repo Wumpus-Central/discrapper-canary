@@ -14,22 +14,22 @@ let d = { low: "Low", medium: "Medium", high: "High", xhigh: "Extra high", max: 
         xai: "xAI (dev)",
         moonshotai: "Moonshot AI (dev)",
     };
-var h = n(295813),
+var h = n(459864),
     m = n(375708),
-    p = n(752065);
-function f(e) {
-    let { title: t, modelChoices: n, thinkingChoices: r, value: o, disabled: c, onChange: f } = e,
+    f = n(752065);
+function p(e) {
+    let { title: t, modelChoices: n, thinkingChoices: r, value: o, disabled: c, onChange: p } = e,
         g = a.useMemo(() => n.map((e) => ({ id: e.id, label: e.label, value: e.id, description: u[e.provider] })), [n]),
         x = a.useMemo(() => r.map((e) => ({ id: e, label: d[e] ?? e, value: e })), [r]);
     return (0, l.jsxs)("div", {
-        className: p.uW,
+        className: f.uW,
         children: [
             (0, l.jsx)(i.E, { variant: "text-sm/semibold", color: "text-default", children: t }),
             (0, l.jsx)(s.l, {
                 label: m.intl.string(h.default["9FRudW"]),
                 options: g,
                 value: o.model,
-                onSelectionChange: (e) => f({ ...o, model: e }),
+                onSelectionChange: (e) => p({ ...o, model: e }),
                 selectionMode: "single",
                 disabled: c,
                 fullWidth: !0,
@@ -38,7 +38,7 @@ function f(e) {
                 label: m.intl.string(h.default["4AsQHS"]),
                 options: x,
                 value: o.thinking,
-                onSelectionChange: (e) => f({ ...o, thinking: e }),
+                onSelectionChange: (e) => p({ ...o, thinking: e }),
                 selectionMode: "single",
                 disabled: c,
                 fullWidth: !0,
@@ -47,43 +47,43 @@ function f(e) {
     });
 }
 function g(e) {
-    let { settings: t, choices: n, disabled: s, onChange: d } = e,
-        u = a.useRef(null),
-        [g, x] = a.useState(null),
-        [v, b] = a.useState(t);
-    t !== v && (b(t), x(null));
-    let k = g ?? t,
-        j = a.useCallback(
+    let { settings: t, choices: n, disabled: s, onChange: d, className: u, icon: g } = e,
+        x = a.useRef(null),
+        [v, b] = a.useState(null),
+        [j, y] = a.useState(t);
+    t !== j && (y(t), b(null));
+    let k = v ?? t,
+        w = a.useCallback(
             (e) => {
-                x(e), d(e);
+                b(e), d(e);
             },
             [d],
         );
     return (0, l.jsx)(r.Y, {
-        targetElementRef: u,
+        targetElementRef: x,
         position: "top",
         align: "right",
         renderPopout: () =>
             (0, l.jsxs)("div", {
-                className: p.nd,
+                className: f.nd,
                 role: "dialog",
                 "aria-label": m.intl.string(h.default["2NWMqY"]),
                 children: [
-                    (0, l.jsx)(f, {
+                    (0, l.jsx)(p, {
                         title: m.intl.string(h.default.ISmynF),
                         modelChoices: n.main,
                         thinkingChoices: n.thinking,
                         value: k.main,
                         disabled: s,
-                        onChange: (e) => j({ ...k, main: e }),
+                        onChange: (e) => w({ ...k, main: e }),
                     }),
-                    (0, l.jsx)(f, {
+                    (0, l.jsx)(p, {
                         title: m.intl.string(h.default.hdt1ph),
                         modelChoices: n.subagent,
                         thinkingChoices: n.thinking,
                         value: k.subagent,
                         disabled: s,
-                        onChange: (e) => j({ ...k, subagent: e }),
+                        onChange: (e) => w({ ...k, subagent: e }),
                     }),
                     (0, l.jsx)(i.E, {
                         variant: "text-xs/normal",
@@ -94,11 +94,11 @@ function g(e) {
             }),
         children: (e) =>
             (0, l.jsx)(o.D, {
-                innerRef: u,
-                className: p.hZ,
+                innerRef: x,
+                className: u ?? f.hZ,
                 "aria-label": m.intl.string(h.default.COVYeS),
                 ...e,
-                children: (0, l.jsx)(c.R, { size: "xxs", color: "currentColor", "aria-hidden": !0 }),
+                children: g ?? (0, l.jsx)(c.R, { size: "xxs", color: "currentColor", "aria-hidden": !0 }),
             }),
     });
 }

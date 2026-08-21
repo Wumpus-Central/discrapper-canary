@@ -33,7 +33,6 @@ e.exports = {
     Hi: "stepCountEmpty__30c5c",
     iq: "stepItem__30c5c",
     Ue: "stepChevron__30c5c",
-    IN: "turnIdeasOffer__30c5c",
     y8: "stepScreenshots__30c5c",
     MT: "turnAttachments__30c5c",
 };

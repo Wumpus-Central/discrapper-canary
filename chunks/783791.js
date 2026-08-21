@@ -129,7 +129,19 @@ function x(e) {
             t.steps.some((e) => T.has(e.kind) && "terminal_error" !== e.kind))
             ? S.set(e, Date.now())
             : S.delete(e),
-            !(function (e) {
+            (function (e) {
+                let t = g.get(e);
+                if (null != t)
+                    for (let n = t.length - 1; n >= 0; n--) {
+                        let i = t[n];
+                        if ("assistant" === i.role) {
+                            if (null != i.finished_at || !m(i)) return;
+                            g.set(e, [...t.slice(0, n), { ...i, finished_at: Date.now() }, ...t.slice(n + 1)]);
+                            return;
+                        }
+                    }
+            })(e),
+            (function (e) {
                 let t = E.A.getProject(e);
                 if (
                     null == t ||
@@ -207,6 +219,9 @@ class F extends i.Ay.Store {
     }
     isThinking(e) {
         return w(e);
+    }
+    hasLoadedHistory(e) {
+        return V.has(e);
     }
     getFinishedAt(e) {
         return w(e) ? null : (S.get(e) ?? null);
