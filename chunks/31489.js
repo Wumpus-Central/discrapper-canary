@@ -55,6 +55,10 @@ function L(e) {
                 }
             );
         }, [l, s]),
+        i.useEffect(() => {
+            let e = setInterval(l.onMouseEnter, 3e4);
+            return () => clearInterval(e);
+        }, [l]),
         (0, a.jsxs)("div", {
             className: t,
             onMouseEnter: l.onMouseEnter,
