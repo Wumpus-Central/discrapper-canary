@@ -956,6 +956,7 @@
     --interactive-accent-background-hover: var(--blurple-50);
     --interactive-accent-background-selected: var(--blurple-50);
     --interactive-background-active: hsl(var(--opacity-16-hsl)/0.1607843137254902);
+    --interactive-background-default: hsl(var(--opacity-8-hsl)/0.0784313725490196);
     --interactive-background-hover: hsl(var(--opacity-12-hsl)/0.12156862745098039);
     --interactive-background-selected: hsl(var(--opacity-20-hsl)/0.2);
     --interactive-icon-active: var(--neutral-1);
@@ -1323,6 +1324,7 @@
         --interactive-accent-background-hover: color-mix(in oklab, var(--blurple-50) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
         --interactive-accent-background-selected: color-mix(in oklab, var(--blurple-50) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
         --interactive-background-active: color-mix(in oklab, hsl(var(--opacity-16-hsl)/0.1607843137254902) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.1607843137254902) var(--custom-theme-base-color-amount, 0%));
+        --interactive-background-default: color-mix(in oklab, hsl(var(--opacity-8-hsl)/0.0784313725490196) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.0784313725490196) var(--custom-theme-base-color-amount, 0%));
         --interactive-background-hover: color-mix(in oklab, hsl(var(--opacity-12-hsl)/0.12156862745098039) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.12156862745098039) var(--custom-theme-base-color-amount, 0%));
         --interactive-background-selected: color-mix(in oklab, hsl(var(--opacity-20-hsl)/0.2) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.2) var(--custom-theme-base-color-amount, 0%));
         --interactive-icon-active: color-mix(in oklab, var(--neutral-1) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
@@ -1831,6 +1833,7 @@
     --interactive-accent-background-hover: var(--blurple-50);
     --interactive-accent-background-selected: var(--blurple-50);
     --interactive-background-active: hsl(var(--opacity-16-hsl)/0.1607843137254902);
+    --interactive-background-default: hsl(var(--opacity-8-hsl)/0.0784313725490196);
     --interactive-background-hover: hsl(var(--opacity-12-hsl)/0.12156862745098039);
     --interactive-background-selected: hsl(var(--opacity-24-hsl)/0.23921568627450981);
     --interactive-icon-active: var(--neutral-76);
@@ -2198,6 +2201,7 @@
         --interactive-accent-background-hover: color-mix(in oklab, var(--blurple-50) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
         --interactive-accent-background-selected: color-mix(in oklab, var(--blurple-50) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
         --interactive-background-active: color-mix(in oklab, hsl(var(--opacity-16-hsl)/0.1607843137254902) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.1607843137254902) var(--custom-theme-base-color-amount, 0%));
+        --interactive-background-default: color-mix(in oklab, hsl(var(--opacity-8-hsl)/0.0784313725490196) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.0784313725490196) var(--custom-theme-base-color-amount, 0%));
         --interactive-background-hover: color-mix(in oklab, hsl(var(--opacity-12-hsl)/0.12156862745098039) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.12156862745098039) var(--custom-theme-base-color-amount, 0%));
         --interactive-background-selected: color-mix(in oklab, hsl(var(--opacity-24-hsl)/0.23921568627450981) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.23921568627450981) var(--custom-theme-base-color-amount, 0%));
         --interactive-icon-active: color-mix(in oklab, var(--neutral-76) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
@@ -2706,6 +2710,7 @@
     --interactive-accent-background-hover: var(--blurple-50);
     --interactive-accent-background-selected: var(--blurple-50);
     --interactive-background-active: hsl(var(--opacity-20-hsl)/0.2);
+    --interactive-background-default: hsl(var(--opacity-8-hsl)/0.0784313725490196);
     --interactive-background-hover: hsl(var(--opacity-12-hsl)/0.12156862745098039);
     --interactive-background-selected: hsl(var(--opacity-24-hsl)/0.23921568627450981);
     --interactive-icon-active: var(--neutral-8);
@@ -3073,6 +3078,7 @@
         --interactive-accent-background-hover: color-mix(in oklab, var(--blurple-50) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
         --interactive-accent-background-selected: color-mix(in oklab, var(--blurple-50) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
         --interactive-background-active: color-mix(in oklab, hsl(var(--opacity-20-hsl)/0.2) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.2) var(--custom-theme-base-color-amount, 0%));
+        --interactive-background-default: color-mix(in oklab, hsl(var(--opacity-8-hsl)/0.0784313725490196) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.0784313725490196) var(--custom-theme-base-color-amount, 0%));
         --interactive-background-hover: color-mix(in oklab, hsl(var(--opacity-12-hsl)/0.12156862745098039) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.12156862745098039) var(--custom-theme-base-color-amount, 0%));
         --interactive-background-selected: color-mix(in oklab, hsl(var(--opacity-24-hsl)/0.23921568627450981) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.23921568627450981) var(--custom-theme-base-color-amount, 0%));
         --interactive-icon-active: color-mix(in oklab, var(--neutral-8) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
@@ -3581,6 +3587,7 @@
     --interactive-accent-background-hover: var(--blurple-50);
     --interactive-accent-background-selected: var(--blurple-50);
     --interactive-background-active: hsl(var(--opacity-16-hsl)/0.1607843137254902);
+    --interactive-background-default: hsl(var(--opacity-8-hsl)/0.0784313725490196);
     --interactive-background-hover: hsl(var(--opacity-12-hsl)/0.12156862745098039);
     --interactive-background-selected: hsl(var(--opacity-20-hsl)/0.2);
     --interactive-icon-active: var(--neutral-2);
@@ -3948,6 +3955,7 @@
         --interactive-accent-background-hover: color-mix(in oklab, var(--blurple-50) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
         --interactive-accent-background-selected: color-mix(in oklab, var(--blurple-50) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
         --interactive-background-active: color-mix(in oklab, hsl(var(--opacity-16-hsl)/0.1607843137254902) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.1607843137254902) var(--custom-theme-base-color-amount, 0%));
+        --interactive-background-default: color-mix(in oklab, hsl(var(--opacity-8-hsl)/0.0784313725490196) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.0784313725490196) var(--custom-theme-base-color-amount, 0%));
         --interactive-background-hover: color-mix(in oklab, hsl(var(--opacity-12-hsl)/0.12156862745098039) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.12156862745098039) var(--custom-theme-base-color-amount, 0%));
         --interactive-background-selected: color-mix(in oklab, hsl(var(--opacity-20-hsl)/0.2) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.2) var(--custom-theme-base-color-amount, 0%));
         --interactive-icon-active: color-mix(in oklab, var(--neutral-2) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
@@ -4212,6 +4220,7 @@
     --input-text-error-default: var(--neutral-1);
     --interactive-accent-background-default: hsl(var(--opacity-12-hsl)/0.12156862745098039);
     --interactive-background-active: hsl(var(--opacity-20-hsl)/0.2);
+    --interactive-background-default: hsl(var(--opacity-8-hsl)/0.0784313725490196);
     --interactive-background-hover: hsl(var(--opacity-12-hsl)/0.12156862745098039);
     --interactive-background-selected: hsl(var(--opacity-24-hsl)/0.23921568627450981);
     --interactive-icon-active: var(--neutral-1);
@@ -4350,6 +4359,7 @@
         --input-text-error-default: color-mix(in oklab, var(--neutral-1) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --interactive-accent-background-default: color-mix(in oklab, hsl(var(--opacity-12-hsl)/0.12156862745098039) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.12156862745098039) var(--custom-theme-base-color-amount, 0%));
         --interactive-background-active: color-mix(in oklab, hsl(var(--opacity-20-hsl)/0.2) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.2) var(--custom-theme-base-color-amount, 0%));
+        --interactive-background-default: color-mix(in oklab, hsl(var(--opacity-8-hsl)/0.0784313725490196) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.0784313725490196) var(--custom-theme-base-color-amount, 0%));
         --interactive-background-hover: color-mix(in oklab, hsl(var(--opacity-12-hsl)/0.12156862745098039) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.12156862745098039) var(--custom-theme-base-color-amount, 0%));
         --interactive-background-selected: color-mix(in oklab, hsl(var(--opacity-24-hsl)/0.23921568627450981) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.23921568627450981) var(--custom-theme-base-color-amount, 0%));
         --interactive-icon-active: color-mix(in oklab, var(--neutral-1) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
@@ -4529,6 +4539,7 @@
     --input-text-error-default: var(--neutral-80);
     --interactive-accent-background-default: hsl(var(--opacity-16-hsl)/0.1607843137254902);
     --interactive-background-active: hsl(var(--opacity-20-hsl)/0.2);
+    --interactive-background-default: hsl(var(--opacity-12-hsl)/0.12156862745098039);
     --interactive-background-hover: hsl(var(--opacity-16-hsl)/0.1607843137254902);
     --interactive-background-selected: hsl(var(--opacity-28-hsl)/0.2784313725490196);
     --interactive-icon-active: var(--neutral-100);
@@ -4667,6 +4678,7 @@
         --input-text-error-default: color-mix(in oklab, var(--neutral-80) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --interactive-accent-background-default: color-mix(in oklab, hsl(var(--opacity-16-hsl)/0.1607843137254902) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.1607843137254902) var(--custom-theme-base-color-amount, 0%));
         --interactive-background-active: color-mix(in oklab, hsl(var(--opacity-20-hsl)/0.2) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.2) var(--custom-theme-base-color-amount, 0%));
+        --interactive-background-default: color-mix(in oklab, hsl(var(--opacity-12-hsl)/0.12156862745098039) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.12156862745098039) var(--custom-theme-base-color-amount, 0%));
         --interactive-background-hover: color-mix(in oklab, hsl(var(--opacity-16-hsl)/0.1607843137254902) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.1607843137254902) var(--custom-theme-base-color-amount, 0%));
         --interactive-background-selected: color-mix(in oklab, hsl(var(--opacity-28-hsl)/0.2784313725490196) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.2784313725490196) var(--custom-theme-base-color-amount, 0%));
         --interactive-icon-active: color-mix(in oklab, var(--neutral-100) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
@@ -4846,6 +4858,7 @@
     --input-text-error-default: var(--neutral-6);
     --interactive-accent-background-default: hsl(var(--opacity-16-hsl)/0.1607843137254902);
     --interactive-background-active: hsl(var(--opacity-24-hsl)/0.23921568627450981);
+    --interactive-background-default: hsl(var(--opacity-12-hsl)/0.12156862745098039);
     --interactive-background-hover: hsl(var(--opacity-16-hsl)/0.1607843137254902);
     --interactive-background-selected: hsl(var(--opacity-28-hsl)/0.2784313725490196);
     --interactive-icon-active: var(--neutral-1);
@@ -4984,6 +4997,7 @@
         --input-text-error-default: color-mix(in oklab, var(--neutral-6) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --interactive-accent-background-default: color-mix(in oklab, hsl(var(--opacity-16-hsl)/0.1607843137254902) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.1607843137254902) var(--custom-theme-base-color-amount, 0%));
         --interactive-background-active: color-mix(in oklab, hsl(var(--opacity-24-hsl)/0.23921568627450981) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.23921568627450981) var(--custom-theme-base-color-amount, 0%));
+        --interactive-background-default: color-mix(in oklab, hsl(var(--opacity-12-hsl)/0.12156862745098039) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.12156862745098039) var(--custom-theme-base-color-amount, 0%));
         --interactive-background-hover: color-mix(in oklab, hsl(var(--opacity-16-hsl)/0.1607843137254902) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.1607843137254902) var(--custom-theme-base-color-amount, 0%));
         --interactive-background-selected: color-mix(in oklab, hsl(var(--opacity-28-hsl)/0.2784313725490196) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.2784313725490196) var(--custom-theme-base-color-amount, 0%));
         --interactive-icon-active: color-mix(in oklab, var(--neutral-1) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
@@ -5163,6 +5177,7 @@
     --input-text-error-default: var(--neutral-1);
     --interactive-accent-background-default: hsl(var(--opacity-12-hsl)/0.12156862745098039);
     --interactive-background-active: hsl(var(--opacity-20-hsl)/0.2);
+    --interactive-background-default: hsl(var(--opacity-8-hsl)/0.0784313725490196);
     --interactive-background-hover: hsl(var(--opacity-12-hsl)/0.12156862745098039);
     --interactive-background-selected: hsl(var(--opacity-24-hsl)/0.23921568627450981);
     --interactive-icon-active: var(--neutral-1);
@@ -5301,6 +5316,7 @@
         --input-text-error-default: color-mix(in oklab, var(--neutral-1) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --interactive-accent-background-default: color-mix(in oklab, hsl(var(--opacity-12-hsl)/0.12156862745098039) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.12156862745098039) var(--custom-theme-base-color-amount, 0%));
         --interactive-background-active: color-mix(in oklab, hsl(var(--opacity-20-hsl)/0.2) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.2) var(--custom-theme-base-color-amount, 0%));
+        --interactive-background-default: color-mix(in oklab, hsl(var(--opacity-8-hsl)/0.0784313725490196) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.0784313725490196) var(--custom-theme-base-color-amount, 0%));
         --interactive-background-hover: color-mix(in oklab, hsl(var(--opacity-12-hsl)/0.12156862745098039) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.12156862745098039) var(--custom-theme-base-color-amount, 0%));
         --interactive-background-selected: color-mix(in oklab, hsl(var(--opacity-24-hsl)/0.23921568627450981) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.23921568627450981) var(--custom-theme-base-color-amount, 0%));
         --interactive-icon-active: color-mix(in oklab, var(--neutral-1) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
@@ -9805,4 +9821,4 @@
     --channels-spine-offset-left: 28px
 }
 
-/*# sourceMappingURL=952007.39c71f34f1557c02.css.map*/
+/*# sourceMappingURL=952007.08012b09a68d6656.css.map*/

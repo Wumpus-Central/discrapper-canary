@@ -3809,6 +3809,7 @@
     --interactive-accent-background-hover: #5966f2;
     --interactive-accent-background-selected: #5966f2;
     --interactive-background-active: hsla(240, 4%, 61%, .16);
+    --interactive-background-default: hsla(240, 4%, 61%, .08);
     --interactive-background-hover: hsla(240, 4%, 61%, .12);
     --interactive-background-selected: hsla(240, 4%, 61%, .2);
     --interactive-icon-active: #fff;
@@ -4475,6 +4476,7 @@
     --interactive-accent-background-hover: #5966f2;
     --interactive-accent-background-selected: #5966f2;
     --interactive-background-active: hsla(240, 4%, 61%, .16);
+    --interactive-background-default: hsla(240, 4%, 61%, .08);
     --interactive-background-hover: hsla(240, 4%, 61%, .12);
     --interactive-background-selected: hsla(240, 4%, 61%, .24);
     --interactive-icon-active: #29292e;
@@ -5141,6 +5143,7 @@
     --interactive-accent-background-hover: #5966f2;
     --interactive-accent-background-selected: #5966f2;
     --interactive-background-active: hsla(240, 4%, 61%, .2);
+    --interactive-background-default: hsla(240, 4%, 61%, .08);
     --interactive-background-hover: hsla(240, 4%, 61%, .12);
     --interactive-background-selected: hsla(240, 4%, 61%, .24);
     --interactive-icon-active: #e3e3e6;
@@ -5807,6 +5810,7 @@
     --interactive-accent-background-hover: #5966f2;
     --interactive-accent-background-selected: #5966f2;
     --interactive-background-active: hsla(240, 4%, 61%, .16);
+    --interactive-background-default: hsla(240, 4%, 61%, .08);
     --interactive-background-hover: hsla(240, 4%, 61%, .12);
     --interactive-background-selected: hsla(240, 4%, 61%, .2);
     --interactive-icon-active: #fafafa;
@@ -6071,4 +6075,4 @@
     --white: #fff
 }
 
-/*# sourceMappingURL=62ea695c8017efdb.css.map*/
+/*# sourceMappingURL=5ec037461174dc7c.css.map*/
