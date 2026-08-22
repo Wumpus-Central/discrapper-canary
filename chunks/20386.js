@@ -1,57 +1,57 @@
-n.d(t, { Ty: () => g, iT: () => p });
-var l = n(477900),
-    i = n(582128),
-    r = n(503698),
-    u = n.n(r),
-    a = n(17928),
-    s = n(683180),
-    d = n(783791),
-    c = n(972786);
-n(957907);
-var o = n(295813),
-    A = n(375708),
-    f = n(944046);
+l.d(t, { ID: () => h, iT: () => p });
+var n = l(477900),
+    i = l(582128),
+    r = l(503698),
+    u = l.n(r),
+    a = l(17928),
+    s = l(683180),
+    d = l(783791),
+    c = l(972786);
+l(957907);
+var o = l(295813),
+    A = l(375708),
+    f = l(944046);
 function g(e) {
     let { className: t } = e;
-    return (0, l.jsx)("span", {
+    return (0, n.jsx)("span", {
         role: "img",
         "aria-label": A.intl.string(o.default.ui2IQ2),
         className: u()(f.lU, f.jP, t),
     });
 }
 function h(e) {
-    let { projectId: t } = e,
-        n = (0, a.bG)([d.Ay], () => null != t && d.Ay.isThinking(t), [t]),
-        r = (0, a.bG)([d.Ay], () => (null != t ? d.Ay.getFinishedAt(t) : null), [t]),
-        [s, c] = i.useState(() => (null != r && Date.now() - r >= 6e4 ? r : null));
+    let { projectId: t, className: l } = e,
+        r = (0, a.bG)([d.Ay], () => null != t && d.Ay.isThinking(t), [t]),
+        s = (0, a.bG)([d.Ay], () => (null != t ? d.Ay.getFinishedAt(t) : null), [t]),
+        [c, h] = i.useState(() => (null != s && Date.now() - s >= 6e4 ? s : null));
     i.useEffect(() => {
-        if (n || null == r) return;
-        let e = setTimeout(() => c(r), Math.max(0, 6e4 - (Date.now() - r)));
+        if (r || null == s) return;
+        let e = setTimeout(() => h(s), Math.max(0, 6e4 - (Date.now() - s)));
         return () => clearTimeout(e);
-    }, [n, r]);
-    let h = n ? "building" : null != r && s !== r ? "done" : "idle";
-    return "idle" === h
+    }, [r, s]);
+    let p = r ? "building" : null != s && c !== s ? "done" : "idle";
+    return "idle" === p
         ? null
-        : "building" === h
-          ? (0, l.jsx)(g, {})
-          : (0, l.jsx)("span", {
+        : "building" === p
+          ? (0, n.jsx)(g, { className: l })
+          : (0, n.jsx)("span", {
                 role: "img",
                 "aria-label": A.intl.string(o.default["7Fdrf8"]),
-                className: u()(f.lU, f.vv),
+                className: u()(f.lU, f.vv, l),
             });
 }
 function p(e) {
     let { guildId: t } = e,
-        n = (0, a.bG)(
+        l = (0, a.bG)(
             [d.Ay, c.A],
             () =>
                 d.Ay.getActivityOrderedProjectIds().find((e) => {
                     if (!(0, s.X0)(c.A.getProject(e), t)) return !1;
                     if (d.Ay.isThinking(e)) return !0;
-                    let n = d.Ay.getFinishedAt(e);
-                    return null != n && Date.now() - n < 6e4;
+                    let l = d.Ay.getFinishedAt(e);
+                    return null != l && Date.now() - l < 6e4;
                 }) ?? null,
             [t],
         );
-    return (0, l.jsx)(h, { projectId: n });
+    return (0, n.jsx)(h, { projectId: l });
 }
