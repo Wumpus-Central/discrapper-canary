@@ -2166,27 +2166,34 @@ function tK(e) {
                     let t = [],
                         n = null,
                         l = null;
-                    for (let [a, i] of e.entries()) {
-                        if ("thinking" === i.kind) {
+                    for (let [i, s] of e.entries()) {
+                        var a;
+                        if (
+                            "thinking" === s.kind ||
+                            ((null == (a = s).task_id || "" === a.task_id) &&
+                                ("error" === a.kind ||
+                                    "terminal_error" === a.kind ||
+                                    ("node" === a.kind && null != a.node && !eB(a))))
+                        ) {
                             n = null;
                             continue;
                         }
-                        if ("todos" === i.kind) {
-                            if (null != i.task_id && "" !== i.task_id) continue;
-                            let e = i.items ?? [];
+                        if ("todos" === s.kind) {
+                            if (null != s.task_id && "" !== s.task_id) continue;
+                            let e = s.items ?? [];
                             if (0 === e.length) continue;
                             null != l
                                 ? (l.todos = e)
-                                : ((l = { type: "todos", key: `todos-${a}`, todos: e }), t.push(l));
+                                : ((l = { type: "todos", key: `todos-${i}`, todos: e }), t.push(l));
                             continue;
                         }
-                        if ("assistant_delta" !== i.kind) continue;
-                        let e = i.message ?? "";
+                        if ("assistant_delta" !== s.kind || (null != s.task_id && "" !== s.task_id)) continue;
+                        let e = s.message ?? "";
                         "" !== e &&
                             (null == n
-                                ? ((n = { type: "message", key: `message-${a}`, content: e }), t.push(n))
+                                ? ((n = { type: "message", key: `message-${i}`, content: e }), t.push(n))
                                 : (n.content = e)),
-                            !0 === i.message_finished && (n = null);
+                            !0 === s.message_finished && (n = null);
                     }
                     return t;
                 })(n),
@@ -2227,29 +2234,33 @@ function tK(e) {
                       className: ez.dO,
                       children: [
                           x.map((e) =>
-                              (0, a.jsx)(
-                                  "li",
-                                  {
-                                      className: r()(ez.ky, e7.XR),
-                                      children:
-                                          "todos" === e.type
-                                              ? (0, a.jsx)(tV, { todos: e.todos, provisional: c })
-                                              : (0, a.jsxs)(a.Fragment, {
-                                                    children: [
-                                                        (0, a.jsx)("div", {
-                                                            className: r()(tz.PT, ez.cW),
-                                                            children: eV.A.parse(e.content, !0, {
-                                                                allowList: !0,
-                                                                allowHeading: !0,
-                                                                allowLinks: !0,
-                                                            }),
-                                                        }),
-                                                        "streamed" === w && e === v ? E : null,
-                                                    ],
+                              "todos" === e.type
+                                  ? (0, a.jsx)(
+                                        "li",
+                                        {
+                                            className: r()(ez.ky, e7.XR),
+                                            children: (0, a.jsx)(tV, { todos: e.todos, provisional: c }),
+                                        },
+                                        e.key,
+                                    )
+                                  : (0, a.jsxs)(
+                                        "li",
+                                        {
+                                            className: ez.DV,
+                                            children: [
+                                                (0, a.jsx)("div", {
+                                                    className: tz.PT,
+                                                    children: eV.A.parse(e.content, !0, {
+                                                        allowList: !0,
+                                                        allowHeading: !0,
+                                                        allowLinks: !0,
+                                                    }),
                                                 }),
-                                  },
-                                  e.key,
-                              ),
+                                                "streamed" === w && e === v ? E : null,
+                                            ],
+                                        },
+                                        e.key,
+                                    ),
                           ),
                           null != j
                               ? (0, a.jsx)("li", {

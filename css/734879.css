@@ -1489,14 +1489,25 @@
     word-break: break-word
 }
 
+.turnResponse__30c5c {
+    box-sizing: border-box;
+    overflow-wrap: anywhere;
+    width: 100%;
+    word-break: break-word
+}
+
+.turnResponse__30c5c,
+.turnSteps__30c5c {
+    max-width: 100%;
+    min-width: 0
+}
+
 .turnSteps__30c5c {
     display: flex;
     flex-direction: column;
     gap: var(--space-4);
     list-style: none;
     margin: 0;
-    max-width: 100%;
-    min-width: 0;
     padding: 0
 }
 
@@ -4039,4 +4050,4 @@
     text-align: center
 }
 
-/*# sourceMappingURL=734879.4be63a5e5b55bb6d.css.map*/
+/*# sourceMappingURL=734879.75258e64bbe4b85a.css.map*/

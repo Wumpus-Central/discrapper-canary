@@ -2,6 +2,7 @@ e.exports = {
     ue: "assistantTurn__30c5c",
     ky: "chatMessageAssistant__30c5c",
     cW: "chatMarkdown__30c5c",
+    DV: "turnResponse__30c5c",
     dO: "turnSteps__30c5c",
     K1: "activityStatus__30c5c",
     pj: "turnActivity__30c5c",
