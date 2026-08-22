@@ -2,7 +2,6 @@ e.exports = {
     hP: "editorAnimate__2a891",
     Fk: "slidein__2a891",
     DD: "title__2a891",
-    PC: "premiumIcon__2a891",
     EN: "editor__2a891",
     nV: "editorHeader__2a891",
     sV: "editorBody__2a891",

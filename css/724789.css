@@ -555,7 +555,7 @@
     width: fit-content
 }
 
-.nitroWheel_c5f0dc {
+.inline_c5f0dc {
     margin-inline: 2px 4px;
     vertical-align: sub
 }
@@ -2638,7 +2638,8 @@
 .title__67a11 {
     align-items: center;
     display: flex;
-    flex: 1
+    flex: 1;
+    gap: 2px
 }
 
 .betaTag__67a11 {
@@ -3847,4 +3848,4 @@
     z-index: 2
 }
 
-/*# sourceMappingURL=724789.894bf5bcbd857c58.css.map*/
+/*# sourceMappingURL=724789.c05d34c9594809f1.css.map*/

@@ -120,7 +120,8 @@
 .title_a00e6e {
     align-items: center;
     display: flex;
-    flex: 1
+    flex: 1;
+    gap: 2px
 }
 
 .titleText_a00e6e {
@@ -151,11 +152,8 @@
 .title__2a891 {
     align-items: center;
     display: flex;
-    flex: 1
-}
-
-.title__2a891 .premiumIcon__2a891 {
-    margin-inline-start: 8px
+    flex: 1;
+    gap: 8px
 }
 
 .editor__2a891 {
@@ -2204,10 +2202,6 @@
     padding: var(--space-16) var(--space-20)
 }
 
-.nitroIcon__5a2df {
-    fill: var(--icon-strong)
-}
-
 .controlLabelContainer__5a2df {
     display: flex;
     justify-content: space-between;
@@ -2685,4 +2679,4 @@
     }
 }
 
-/*# sourceMappingURL=226867.8388774bec6d6293.css.map*/
+/*# sourceMappingURL=226867.b49c9d75211c5ed8.css.map*/

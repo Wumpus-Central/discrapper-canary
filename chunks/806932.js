@@ -1,30 +1,29 @@
-n.d(t, { m: () => w, A: () => k });
+n.d(t, { m: () => R, A: () => w });
 var i = n(477900),
     s = n(582128),
     r = n(17928);
 if (588245 != n.j) var l = n(785007);
 if (588245 != n.j) var a = n(297264);
-if (588245 != n.j) var c = n(661531);
-if (588245 != n.j) var o = n(331322);
-var u = n(228366),
-    d = n(915089),
-    m = n(450232),
-    h = n(526162),
-    g = n(503698),
-    x = n.n(g),
-    f = n(435558),
-    p = n.n(f),
-    A = n(866665),
-    y = n(939249),
-    b = n(194261),
-    v = n(653523),
-    S = n(350972),
-    j = n(677056),
-    I = n(174197),
-    N = n(652215),
-    E = n(375708),
-    C = n(997328);
-function T(e) {
+if (588245 != n.j) var c = n(331322);
+var o = n(228366),
+    u = n(915089),
+    d = n(450232),
+    m = n(526162),
+    h = n(503698),
+    g = n.n(h),
+    x = n(435558),
+    f = n.n(x),
+    p = n(866665),
+    A = n(939249),
+    y = n(194261),
+    b = n(653523),
+    v = n(350972),
+    S = n(677056),
+    j = n(174197),
+    I = n(652215),
+    N = n(375708),
+    E = n(997328);
+function C(e) {
     let {
             id: t,
             className: n,
@@ -36,78 +35,78 @@ function T(e) {
             locked: u = !1,
             disabled: d = !1,
         } = e,
-        [m, h] = s.useState((0, I.gG)(t).name),
-        g = t === S.Ic.PIRATE;
-    return (0, i.jsx)(A.m, {
+        [m, h] = s.useState((0, j.gG)(t).name),
+        x = t === v.Ic.PIRATE;
+    return (0, i.jsx)(p.m, {
         text: m,
         onTooltipShow: () =>
-            g &&
+            x &&
             h(
-                p().sample([
-                    E.intl.string(E.t["EgWTY+"]),
-                    E.intl.string(E.t.umBn5f),
-                    E.intl.string(E.t.dG1wD1),
-                    E.intl.string(E.t.SesI4S),
-                    E.intl.string(E.t.RnMLvl),
-                ]) ?? E.intl.string(E.t["EgWTY+"]),
+                f().sample([
+                    N.intl.string(N.t["EgWTY+"]),
+                    N.intl.string(N.t.umBn5f),
+                    N.intl.string(N.t.dG1wD1),
+                    N.intl.string(N.t.SesI4S),
+                    N.intl.string(N.t.RnMLvl),
+                ]) ?? N.intl.string(N.t["EgWTY+"]),
             ),
         children: (0, i.jsxs)("div", {
-            className: C.Co,
+            className: E.Co,
             style: r,
             children: [
-                (0, i.jsx)(y.D, {
+                (0, i.jsx)(A.D, {
                     role: "radio",
                     "aria-label": m,
                     "aria-checked": a,
                     "aria-disabled": d,
                     tabIndex: c ?? (a ? 0 : -1),
-                    className: x()(C.Ni, { [C.wH]: a }, n),
-                    onClick: a ? N.tEg : () => l?.(t),
+                    className: g()(E.Ni, { [E.wH]: a }, n),
+                    onClick: a ? I.tEg : () => l?.(t),
                     children: o,
                 }),
-                a && (0, i.jsx)(v.H$, {}),
+                a && (0, i.jsx)(b.H$, {}),
                 u &&
                     (0, i.jsx)("div", {
-                        className: C.RK,
-                        children: (0, i.jsx)(b.LockIcon, { className: C.AA, color: "currentColor" }),
+                        className: E.RK,
+                        children: (0, i.jsx)(y.LockIcon, { className: E.AA, color: "currentColor" }),
                     }),
             ],
         }),
     });
 }
-function P(e) {
-    let { size: t = I.N8.SIZE_60, icon: n, isSelected: r, disabled: l, tabIndex: a, onSelect: c, locked: o } = e,
+function T(e) {
+    let { size: t = j.N8.SIZE_60, icon: n, isSelected: r, disabled: l, tabIndex: a, onSelect: c, locked: o } = e,
         u = s.useMemo(() => ({ "--custom-in-app-icon-selection-size": `${t}px` }), [t]);
-    return (0, i.jsx)(T, {
+    return (0, i.jsx)(C, {
         style: u,
         onSelect: l ? void 0 : c,
         isSelected: r,
         id: n.id,
-        className: l ? C.r9 : void 0,
+        className: l ? E.r9 : void 0,
         tabIndex: a,
         locked: o,
         disabled: l,
-        children: (0, i.jsx)(j.A, { id: n.id, size: t }),
+        children: (0, i.jsx)(S.A, { id: n.id, size: t }),
     });
 }
-var R = n(40025);
-function w(e) {
+var P = n(40025);
+function R(e) {
     let { disabled: t, size: n } = e,
-        [s] = (0, r.yK)([h.A], () => [h.A.getCurrentDesktopIcon()]);
+        [s] = (0, r.yK)([m.A], () => [m.A.getCurrentDesktopIcon()]);
     return (0, i.jsx)(i.Fragment, {
-        children: (0, I.v8)()
+        children: (0, j.v8)()
             .filter((e) => {
                 let { isHidden: t } = e;
                 return !t;
             })
             .map((e, r) =>
                 (0, i.jsx)(
-                    P,
+                    T,
                     {
                         icon: e,
                         isSelected: s === e.id,
                         onSelect: (e) => {
-                            u.h.dispatch({ type: "APP_ICON_UPDATED", id: e });
+                            o.h.dispatch({ type: "APP_ICON_UPDATED", id: e });
                         },
                         disabled: t,
                         tabIndex: 0 !== r || t ? void 0 : 0,
@@ -119,51 +118,51 @@ function w(e) {
             ),
     });
 }
-function k(e) {
-    let { className: t, disabled: n, isEditor: s, renderCTAButtons: r, iconSize: u } = e,
-        h = (0, d.GV)(),
-        { ref: g, ...x } = (0, l._u)({ orientation: "horizontal", labelledBy: h });
+function w(e) {
+    let { className: t, disabled: n, isEditor: s, renderCTAButtons: r, iconSize: o } = e,
+        m = (0, u.GV)(),
+        { ref: h, ...g } = (0, l._u)({ orientation: "horizontal", labelledBy: m });
     return (0, i.jsx)("div", {
-        ...x,
-        ref: g,
+        ...g,
+        ref: h,
         children: (0, i.jsxs)("div", {
             className: t,
             children: [
                 (0, i.jsxs)("div", {
-                    className: R.wx,
+                    className: P.wx,
                     children: [
                         (0, i.jsxs)("div", {
-                            className: R.so,
+                            className: P.so,
                             children: [
                                 !s &&
                                     (0, i.jsxs)("div", {
-                                        className: R.DD,
+                                        className: P.DD,
                                         children: [
                                             (0, i.jsx)(a.D, {
-                                                className: R.Qw,
+                                                className: P.Qw,
                                                 variant: "heading-xl/normal",
                                                 color: "text-strong",
-                                                children: E.intl.string(E.t.NThqTw),
+                                                children: N.intl.string(N.t.NThqTw),
                                             }),
-                                            (0, i.jsx)(m.A, { color: c.A.colors.ICON_STRONG, size: "sm" }),
+                                            (0, i.jsx)(d.A, { color: "strong", size: "sm" }),
                                         ],
                                     }),
                                 (0, i.jsx)(a.D, {
                                     variant: "text-sm/normal",
-                                    className: R.W$,
-                                    children: E.intl.string(E.t.IgENJo),
+                                    className: P.W$,
+                                    children: N.intl.string(N.t.IgENJo),
                                 }),
                             ],
                         }),
                         r?.(),
                     ],
                 }),
-                (0, i.jsx)(o.B, {
+                (0, i.jsx)(c.B, {
                     direction: "horizontal",
                     wrap: !0,
                     gap: 8,
                     style: { marginTop: 16 },
-                    children: (0, i.jsx)(w, { disabled: n, size: u }),
+                    children: (0, i.jsx)(R, { disabled: n, size: o }),
                 }),
             ],
         }),

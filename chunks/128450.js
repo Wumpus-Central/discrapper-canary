@@ -54,7 +54,7 @@ let h = a.forwardRef(function (e, l) {
                     className: f.DD,
                     id: s,
                     "data-migration-pending": !0,
-                    children: [n, y && (0, i.jsx)(c.A, { size: "xs" }), a, t],
+                    children: [n, y && (0, i.jsx)(c.A, { size: "xs", inline: !0 }), a, t],
                 }),
                 null != o
                     ? (0, i.jsx)(d.a, {

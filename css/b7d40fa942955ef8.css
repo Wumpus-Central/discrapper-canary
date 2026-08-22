@@ -120,13 +120,13 @@
     border-radius: 8px;
     box-sizing: border-box;
     display: flex;
+    gap: 10px;
     padding: 10px
 }
 
 .bannerUpsell_cf6da1 .premiumIcon_cf6da1 {
     color: var(--white);
-    flex-shrink: 0;
-    margin-inline-end: 10px
+    flex-shrink: 0
 }
 
-/*# sourceMappingURL=ec41dbb5049bf4c4.css.map*/
+/*# sourceMappingURL=b7d40fa942955ef8.css.map*/

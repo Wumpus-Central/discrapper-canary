@@ -1,1 +1,1 @@
-e.exports = { a: "nitroWheel_c5f0dc" };
+e.exports = { m: "inline_c5f0dc" };

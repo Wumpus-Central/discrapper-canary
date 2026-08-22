@@ -1,22 +1,27 @@
 "use strict";
-n.d(t, { A: () => u });
+n.d(t, { A: () => _ });
 var i = n(477900);
 n(582128);
 var r = n(503698),
     a = n.n(r),
-    s = n(866665),
-    l = n(939249),
+    s = n(661531),
+    l = n(866665),
     o = n(403581),
     d = n(375708),
     c = n(192416);
-function u(e) {
-    let { text: t = d.intl.string(d.t["5AFxuK"]), className: n, color: r = "currentColor", size: u = "md" } = e;
-    return (0, i.jsx)(s.m, {
-        text: t,
-        asContainer: !0,
-        children: (0, i.jsx)(l.D, {
-            "aria-label": t,
-            children: (0, i.jsx)(o.t, { size: u, color: r, className: a()(c.a, n) }),
+let u = { inherit: "currentColor", strong: s.A.colors.ICON_STRONG };
+function _(e) {
+    let { size: t, color: n = "inherit", className: r, inline: _ = !1, disabled: E = !1 } = e,
+        A = d.intl.string(d.t["5AFxuK"]);
+    return (0, i.jsx)(l.m, {
+        text: A,
+        shouldShow: !E,
+        ariaHidden: !0,
+        children: (0, i.jsx)(o.t, {
+            size: t,
+            color: E ? s.A.colors.ICON_MUTED : u[n],
+            className: a()({ [c.m]: _ }, r),
+            "aria-label": A,
         }),
     });
 }
