@@ -2177,14 +2177,15 @@ function tJ(e) {
         Y = s.useCallback(() => {
             null == o || I || (T(!0), o());
         }, [o, I]),
-        K = s.useCallback(
+        K = null == p || "" !== b || !t || n || i ? null : p,
+        X = s.useCallback(
             (e) => {
                 if ("Escape" === e.key && l && null != o && !I) {
                     e.preventDefault(), e.stopPropagation(), Y();
                     return;
                 }
-                if ("Tab" === e.key && !e.shiftKey && null != p && "" === b) {
-                    e.preventDefault(), e.nativeEvent.stopImmediatePropagation(), j(p);
+                if ("Tab" === e.key && !e.shiftKey && null != K) {
+                    e.preventDefault(), e.nativeEvent.stopImmediatePropagation(), j(K);
                     return;
                 }
                 if ("Enter" === e.key && (e.metaKey || e.ctrlKey)) {
@@ -2193,9 +2194,9 @@ function tJ(e) {
                 }
                 "Enter" !== e.key || e.shiftKey || (e.preventDefault(), z());
             },
-            [z, d, l, o, I, Y, p, b],
+            [z, d, l, o, I, Y, K],
         ),
-        X = s.useCallback(
+        Z = s.useCallback(
             (e) => {
                 if (!t) return;
                 let n = Array.from(e.clipboardData.files);
@@ -2203,43 +2204,43 @@ function tJ(e) {
             },
             [t, q],
         ),
-        Z = s.useCallback(
+        Q = s.useCallback(
             (e) => {
                 e.preventDefault(), N(!1), t && q(Array.from(e.dataTransfer.files));
             },
             [t, q],
         ),
-        Q = s.useCallback((e) => {
+        J = s.useCallback((e) => {
             e.dataTransfer.types.includes("Files") && (e.preventDefault(), N(!0));
         }, []),
-        J = s.useCallback(
+        ee = s.useCallback(
             (e) => {
                 q(Array.from(e.currentTarget.files ?? [])), (e.currentTarget.value = "");
             },
             [q],
         ),
-        ee = s.useRef(null),
         et = s.useRef(null),
-        [en, el] = s.useState(0),
-        [ea, es] = s.useState(!1);
+        en = s.useRef(null),
+        [el, ea] = s.useState(0),
+        [es, ei] = s.useState(!1);
     s.useEffect(() => {
-        if (0 === b.length) return void es(!1);
-        let e = ee.current?.querySelector("textarea");
+        if (0 === b.length) return void ei(!1);
+        let e = et.current?.querySelector("textarea");
         if (null != e) {
             let t = t2(e);
-            null != t && el(t);
+            null != t && ea(t);
         }
-        es(!0);
-        let t = setTimeout(() => es(!1), t0);
+        ei(!0);
+        let t = setTimeout(() => ei(!1), t0);
         return () => clearTimeout(t);
     }, [b]);
-    let ei = s.useMemo(() => ({ "--custom-glow-x": `${en}px` }), [en]),
-        er = ea ? ` ${tK.EB}` : "",
-        eo = t && !i && null != p && "" === b;
+    let er = s.useMemo(() => ({ "--custom-glow-x": `${el}px` }), [el]),
+        eo = es ? ` ${tK.EB}` : "",
+        eu = null != K;
     return (0, a.jsxs)("form", {
         onSubmit: W,
-        onDrop: Z,
-        onDragOver: Q,
+        onDrop: Q,
+        onDragOver: J,
         onDragLeave: () => N(!1),
         className: S ? `${tK.DA} ${tK.pV}` : tK.DA,
         children: [
@@ -2249,23 +2250,23 @@ function tJ(e) {
                       children: k.map((e) => (0, a.jsx)(t6, { draft: e, onRemove: G }, e.localId)),
                   })
                 : null,
-            (0, a.jsx)("span", { className: `${tK.wg} ${tK.LP}${er}`, style: ei, "aria-hidden": !0 }),
-            (0, a.jsx)("span", { className: `${tK.wg} ${tK.L3}${er}`, style: ei, "aria-hidden": !0 }),
+            (0, a.jsx)("span", { className: `${tK.wg} ${tK.LP}${eo}`, style: er, "aria-hidden": !0 }),
+            (0, a.jsx)("span", { className: `${tK.wg} ${tK.L3}${eo}`, style: er, "aria-hidden": !0 }),
             (0, a.jsxs)("div", {
                 className: tK.VA,
-                ref: ee,
+                ref: et,
                 children: [
                     (0, a.jsx)("input", {
                         ref: _,
                         type: "file",
                         multiple: !0,
-                        onChange: J,
+                        onChange: ee,
                         className: tK.nY,
                         tabIndex: -1,
                         "aria-hidden": !0,
                     }),
                     (0, a.jsx)(tL.Y, {
-                        targetElementRef: et,
+                        targetElementRef: en,
                         position: "top",
                         align: "left",
                         animation: tL.Y.Animation.NONE,
@@ -2303,7 +2304,7 @@ function tJ(e) {
                             let { isShown: l } = n;
                             return (0, a.jsx)("button", {
                                 ...e,
-                                ref: et,
+                                ref: en,
                                 type: "button",
                                 className: `${tK.Y0} ${tK.nu}`,
                                 disabled: !t,
@@ -2318,24 +2319,24 @@ function tJ(e) {
                             });
                         },
                     }),
-                    eo
-                        ? (0, a.jsx)("div", {
+                    null == K
+                        ? null
+                        : (0, a.jsx)("div", {
                               className: tK.ar,
                               "aria-hidden": "true",
-                              children: (0, a.jsx)(tZ, { text: p }),
-                          })
-                        : null,
+                              children: (0, a.jsx)(tZ, { text: K }),
+                          }),
                     (0, a.jsx)(tU.y, {
                         value: b,
                         onChange: (e) => j(e.currentTarget.value),
-                        onKeyDown: K,
-                        onPaste: X,
+                        onKeyDown: X,
+                        onPaste: Z,
                         placeholder: i
                             ? P.intl.string(R.default.pGFXZ0)
                             : n
                               ? P.intl.string(R.default.JeM47J)
                               : t
-                                ? eo
+                                ? eu
                                     ? ""
                                     : g
                                       ? P.intl.string(R.default.M3ovXY)
