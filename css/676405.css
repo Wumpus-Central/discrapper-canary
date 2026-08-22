@@ -1902,7 +1902,6 @@
 
 .chatLogList__2b71e {
     box-sizing: border-box;
-    gap: var(--space-12);
     justify-content: flex-end;
     list-style: none;
     margin: 0;
@@ -1917,6 +1916,10 @@
     max-width: 100%;
     min-width: 0;
     width: 100%
+}
+
+.chatLogList__2b71e>li+li:not(.chatRowContinuation__2b71e) {
+    margin-top: var(--space-12)
 }
 
 @keyframes chat-row-enter__2b71e {
@@ -4302,4 +4305,4 @@
     text-align: center
 }
 
-/*# sourceMappingURL=676405.12cfa048b5480d27.css.map*/
+/*# sourceMappingURL=676405.94af10ada5037ee7.css.map*/

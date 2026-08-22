@@ -290,7 +290,10 @@ let W = new F(r.h, {
     },
     VIBEGRATIONS_CHAT_HISTORY_SET: function (e) {
         let { projectId: t, entries: n, cursor: i } = e;
-        V.set(t, i ?? null), R.delete(t), L.delete(t), g.set(t, n.map(M)), x(t);
+        V.set(t, i ?? null), R.delete(t), L.delete(t);
+        let r = new Set(),
+            a = n.filter((e) => null == e.id || (!r.has(e.id) && (r.add(e.id), !0)));
+        g.set(t, a.map(M)), x(t);
     },
     VIBEGRATIONS_CHAT_HISTORY_PREPEND: function (e) {
         let { projectId: t, entries: n, cursor: i } = e;
