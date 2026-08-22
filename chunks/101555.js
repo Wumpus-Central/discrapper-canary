@@ -25,6 +25,7 @@ let c = i.forwardRef(function (e, t) {
             innerRef: t,
             onClick: d ? void 0 : n,
             onContextMenu: d ? void 0 : i,
+            "aria-disabled": !!d || void 0,
             className: r()(s, { [o.x6]: !0, [o.wH]: u, [o.r9]: d, [o.lv]: h }),
             ...m,
             children: c,

@@ -1,213 +1,129 @@
-l.d(a, { A: () => S, N: () => I });
-var t = l(477900),
-    s = l(582128),
-    i = l(503698),
-    n = l.n(i),
-    r = l(750943),
-    c = l(691540),
-    u = l(857250),
-    d = l(97483),
-    o = l(192308),
-    m = l(259678),
-    p = l(289873),
-    h = l(693875),
-    g = l(946274),
-    x = l(229531),
-    f = l(885386),
-    N = l(515718),
-    j = l(741394),
-    k = l(38405),
-    v = l(958805),
-    A = l(486020),
-    w = l(652215);
-function C(e, a) {
-    let { animated: l = !1 } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-        t = window.GLOBAL_ENV.CDN_HOST ?? w.f34,
-        s = `https://${t}/widget-assets/${e}/${a}`,
-        i = A.QB ? "webp" : l ? "gif" : "png";
-    return `${s}?format=${i}&animated=${l}`;
+s.d(a, { A: () => k, N: () => g });
+var i = s(477900),
+    l = s(582128),
+    n = s(503698),
+    t = s.n(n),
+    c = s(750943),
+    r = s(259678),
+    d = s(289873),
+    u = s(693875),
+    o = s(946274),
+    m = s(885386),
+    h = s(486020),
+    p = s(652215);
+function x(e, a) {
+    let { animated: s = !1 } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
+        i = window.GLOBAL_ENV.CDN_HOST ?? p.f34,
+        l = `https://${i}/widget-assets/${e}/${a}`,
+        n = h.QB ? "webp" : s ? "gif" : "png";
+    return `${l}?format=${n}&animated=${s}`;
 }
-var U = l(375708),
-    b = l(842730);
-function y(e, a, l) {
-    let t = f.kt.useSetting(),
-        [i, n] = s.useState(!1),
-        r = s.useCallback(() => n(!0), []),
-        c = s.useCallback(() => n(!1), []),
-        u = l && null != a && !("localDataUri" in a) && a.isAnimated && !t;
-    return (s.useEffect(() => {
-        !u || null == a || "localDataUri" in a || (new Image().src = C(e, a.fileId, { animated: !0 }));
-    }, [u, e, a]),
+var N = s(375708),
+    j = s(842730);
+function f(e, a, s) {
+    let i = m.kt.useSetting(),
+        [n, t] = l.useState(!1),
+        c = l.useCallback(() => t(!0), []),
+        r = l.useCallback(() => t(!1), []),
+        d = s && null != a && !("localDataUri" in a) && a.isAnimated && !i;
+    return (l.useEffect(() => {
+        !d || null == a || "localDataUri" in a || (new Image().src = x(e, a.fileId, { animated: !0 }));
+    }, [d, e, a]),
     null == a)
-        ? { src: void 0, showGifTag: !1, onMouseMove: r, onMouseLeave: c }
+        ? { src: void 0, showGifTag: !1, onMouseMove: c, onMouseLeave: r }
         : "localDataUri" in a
-          ? { src: a.localDataUri, showGifTag: !1, onMouseMove: r, onMouseLeave: c }
+          ? { src: a.localDataUri, showGifTag: !1, onMouseMove: c, onMouseLeave: r }
           : {
-                src: C(e, a.fileId, { animated: l && a.isAnimated && (t || i) }),
-                showGifTag: u,
-                onMouseMove: r,
-                onMouseLeave: c,
+                src: x(e, a.fileId, { animated: s && a.isAnimated && (i || n) }),
+                showGifTag: d,
+                onMouseMove: c,
+                onMouseLeave: r,
             };
 }
-function I(e) {
-    let { className: a, userId: l, image: s, canAnimate: i = !0 } = e,
-        { src: r, showGifTag: c, onMouseMove: u, onMouseLeave: d } = y(l, s, i);
-    return "localDataUri" in s
-        ? (0, t.jsx)("div", { className: a, children: (0, t.jsx)("img", { className: b.Sl, alt: "", src: r }) })
-        : (0, t.jsxs)("div", {
-              className: n()(b.ZS, a),
-              onMouseMove: u,
-              onMouseLeave: d,
+function g(e) {
+    let { className: a, userId: s, image: l, canAnimate: n = !0 } = e,
+        { src: c, showGifTag: r, onMouseMove: d, onMouseLeave: o } = f(s, l, n);
+    return "localDataUri" in l
+        ? (0, i.jsx)("div", { className: a, children: (0, i.jsx)("img", { className: j.Sl, alt: "", src: c }) })
+        : (0, i.jsxs)("div", {
+              className: t()(j.ZS, a),
+              onMouseMove: d,
+              onMouseLeave: o,
               children: [
-                  (0, t.jsx)("img", { className: b.Sl, alt: "", src: r, width: s.width, height: s.height }),
-                  c ? (0, t.jsx)(h.A, { className: b.pH }) : null,
+                  (0, i.jsx)("img", { className: j.Sl, alt: "", src: c, width: l.width, height: l.height }),
+                  r ? (0, i.jsx)(u.A, { className: j.pH }) : null,
               ],
           });
 }
-function E(e) {
+function v(e) {
     let { canEdit: a } = e;
-    return (0, t.jsx)("div", {
-        className: b.qf,
-        children: a ? (0, t.jsx)(r.X, { className: b.Dm, size: "md" }) : null,
+    return (0, i.jsx)("div", {
+        className: j.qf,
+        children: a ? (0, i.jsx)(c.X, { className: j.Dm, size: "md" }) : null,
     });
 }
-function L(e) {
+function A(e) {
     let {
             className: a,
-            userId: i,
-            image: r,
-            previewUri: f,
-            uploadType: A,
-            canAnimate: w,
-            onImageUploadStarted: C,
-            onImageUploadCompleted: I,
+            userId: s,
+            image: l,
+            imageInputRef: n,
+            previewUri: c,
+            canAnimate: m = !0,
+            cropAndUpload: h,
         } = e,
-        L = s.useRef(0),
-        S = s.useCallback(
-            async (e, a) => {
-                L.current = L.current + 1;
-                let l = L.current;
-                C?.(e);
-                try {
-                    let t = await v.A.uploadWidgetAsset(a);
-                    if (L.current !== l) return;
-                    I({ filename: t, localDataUri: e });
-                } catch (e) {
-                    if (L.current !== l) return;
-                    (0, c.P0)((0, u.o)(U.intl.string(U.t.F4Neqh), d.Ck.FAILURE)), k.A.captureException(e), I(null);
-                }
-            },
-            [C, I],
-        ),
-        M = s.useCallback(
-            (e) => {
-                var a, l;
-                let t,
-                    s,
-                    { imageUri: i, file: n } = e,
-                    r = (0, N.aU)(i);
-                r.size > 0xa00000
-                    ? (0, c.P0)((0, u.o)(U.intl.string(U.t.YbdEFK), d.Ck.FAILURE))
-                    : S(
-                          i,
-                          new File(
-                              [r],
-                              ((a = n.name),
-                              (l = r.type),
-                              (t = (0, x.B)(l) ?? "png"),
-                              (s = (0, j.kh)(a)),
-                              `${"" !== s ? s : "image"}.${t}`),
-                              { type: r.type },
-                          ),
-                      );
-            },
-            [S],
-        ),
-        D = s.useCallback(
-            (e, a) => {
-                (0, o.openModalLazy)(
-                    async () => {
-                        let { default: s } = await Promise.all([
-                            l.e("940226"),
-                            l.e("655327"),
-                            l.e("67702"),
-                            l.e("1214"),
-                            l.e("863232"),
-                            l.e("343437"),
-                            l.e("858164"),
-                            l.e("571470"),
-                            l.e("837490"),
-                            l.e("50342"),
-                            l.e("463726"),
-                            l.e("93513"),
-                            l.e("779149"),
-                            l.e("507406"),
-                            l.e("455524"),
-                            l.e("90017"),
-                            l.e("489908"),
-                            l.e("574571"),
-                            l.e("750348"),
-                        ]).then(l.bind(l, 142630));
-                        return (l) => (0, t.jsx)(s, { ...l, file: a, imageUri: e, uploadType: A, onCrop: M });
-                    },
-                    { stackingBehavior: "stack" },
-                );
-            },
-            [M, A],
-        ),
-        { src: $, showGifTag: B, onMouseMove: R, onMouseLeave: T } = y(i, r, w),
-        _ = f ?? $;
-    return (0, t.jsx)(m.vN, {
+        { src: p, showGifTag: x, onMouseMove: g, onMouseLeave: A } = f(s, l, m),
+        k = c ?? p;
+    return (0, i.jsx)(r.vN, {
         within: !0,
-        children: (0, t.jsxs)("div", {
-            className: n()(b.kL, a),
-            onMouseMove: R,
-            onMouseLeave: T,
+        children: (0, i.jsxs)("div", {
+            className: t()(j.kL, a),
+            onMouseMove: g,
+            onMouseLeave: A,
             children: [
-                null != _ ? (0, t.jsx)("img", { alt: "", src: _, className: b.Sl }) : (0, t.jsx)(E, { canEdit: !0 }),
-                null != f
-                    ? (0, t.jsx)("div", {
-                          className: b.ob,
-                          children: (0, t.jsx)(p.y, { type: p.t.SPINNING_CIRCLE_SIMPLE }),
+                null != k ? (0, i.jsx)("img", { alt: "", src: k, className: j.Sl }) : (0, i.jsx)(v, { canEdit: !0 }),
+                null != c
+                    ? (0, i.jsx)("div", {
+                          className: j.ob,
+                          children: (0, i.jsx)(d.y, { type: d.t.SPINNING_CIRCLE_SIMPLE }),
                       })
-                    : B
-                      ? (0, t.jsx)(h.A, { className: b.pH })
+                    : x
+                      ? (0, i.jsx)(u.A, { className: j.pH })
                       : null,
-                (0, t.jsx)(g.Ay, {
+                (0, i.jsx)(o.Ay, {
+                    ref: n,
                     tabIndex: 0,
-                    onChange: D,
+                    onChange: h,
                     multiple: !1,
-                    "aria-label": U.intl.string(U.t["MsUY/S"]),
+                    "aria-label": N.intl.string(N.t["MsUY/S"]),
                     title: "",
                 }),
             ],
         }),
     });
 }
-function S(e) {
+function k(e) {
     let {
         className: a,
-        canEdit: l,
-        userId: s,
-        image: i,
-        previewUri: n,
-        uploadType: r,
-        canAnimate: c = !0,
-        onImageUploadStarted: u,
-        onImageUploadCompleted: d,
+        canEdit: s,
+        userId: l,
+        image: n,
+        imageInputRef: t,
+        previewUri: c,
+        canAnimate: r = !0,
+        cropAndUpload: d,
     } = e;
-    return l
-        ? (0, t.jsx)(L, {
+    return s
+        ? (0, i.jsx)(A, {
               className: a,
-              userId: s,
-              image: i,
-              previewUri: n,
-              uploadType: r,
-              canAnimate: c,
-              onImageUploadStarted: u,
-              onImageUploadCompleted: d,
+              userId: l,
+              image: n,
+              imageInputRef: t,
+              previewUri: c,
+              canAnimate: r,
+              cropAndUpload: d,
           })
-        : null == i
-          ? (0, t.jsx)("div", { className: a, children: (0, t.jsx)(E, { canEdit: !1 }) })
-          : (0, t.jsx)(I, { className: a, userId: s, image: i, canAnimate: c });
+        : null == n
+          ? (0, i.jsx)("div", { className: a, children: (0, i.jsx)(v, { canEdit: !1 }) })
+          : (0, i.jsx)(g, { className: a, userId: l, image: n, canAnimate: r });
 }

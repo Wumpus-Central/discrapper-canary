@@ -15,6 +15,10 @@
     padding: 4px
 }
 
+.button_b730cc[aria-disabled=true] {
+    pointer-events: none
+}
+
 .bar_b730cc>:first-child .button_b730cc {
     border-radius: 100px 6px 6px 100px;
     padding-inline-start: 6px
@@ -69,4 +73,4 @@
     fill: var(--control-overlay-secondary-text-active)
 }
 
-/*# sourceMappingURL=314304.0d71815574abe9ec.css.map*/
+/*# sourceMappingURL=314304.e919d44802cee035.css.map*/

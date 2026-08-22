@@ -372,8 +372,8 @@ var e$ = n(734066),
     e3 = n(625903),
     e5 = n(404778),
     e7 = n(689175),
-    e4 = n(821609),
-    e8 = n(532624),
+    e8 = n(821609),
+    e4 = n(532624),
     e6 = n(927813),
     e9 = n(879631),
     te = n(350535),
@@ -394,7 +394,7 @@ function td(e) {
             },
             [a, t],
         );
-    return (0, i.jsx)(e4.$, {
+    return (0, i.jsx)(e8.$, {
         onClick: s,
         icon: ek.PencilIcon,
         variant: n,
@@ -461,7 +461,7 @@ function tE(e) {
         d = (0, c.bG)([eX.Ay], () => eX.Ay.getNewClipIds()),
         u = (0, tt.aJ)("ClipsPopout"),
         h = (0, c.bG)([eX.Ay], () => eX.Ay.getEnableAutoclipping()),
-        m = (0, c.bG)([e8.Ay], () => e8.Ay.getKeybindForAction(tA.hCu.SAVE_CLIP)),
+        m = (0, c.bG)([e4.Ay], () => e4.Ay.getKeybindForAction(tA.hCu.SAVE_CLIP)),
         p = l.useCallback(
             (e) => {
                 s?.(e);
@@ -572,7 +572,7 @@ function tE(e) {
                               x &&
                                   (0, i.jsx)("div", {
                                       className: tC.qr,
-                                      children: (0, i.jsx)(e4.$, {
+                                      children: (0, i.jsx)(e8.$, {
                                           onClick: () => t(),
                                           text: V.intl.string(tv.default["55C2MH"]),
                                           variant: "secondary",
@@ -801,8 +801,8 @@ var tK = n(206835),
     t3 = n(646986),
     t5 = n(563608),
     t7 = n(946356),
-    t4 = n(465829),
-    t8 = n(624479),
+    t8 = n(465829),
+    t4 = n(624479),
     t6 = n(206845),
     t9 = n(957565),
     ne = n(427262),
@@ -822,7 +822,7 @@ function nn(e) {
                       ...e,
                       className: s()(nt.c, { [nt.R]: n }),
                       "aria-label": V.intl.string(V.t.y5MwJy),
-                      children: (0, i.jsx)(t8.CopyIcon, { size: "xs", color: "currentColor" }),
+                      children: (0, i.jsx)(t4.CopyIcon, { size: "xs", color: "currentColor" }),
                   }),
           })
         : null;
@@ -1135,7 +1135,7 @@ function nP(e) {
                 n.e("819119"),
                 n.e("373566"),
                 n.e("884601"),
-                n.e("441940"),
+                n.e("397050"),
                 n.e("286470"),
                 n.e("653308"),
                 n.e("754876"),
@@ -1333,7 +1333,7 @@ function n0(e) {
                   }),
                   (0, i.jsx)("div", {
                       className: nX.UD,
-                      children: (0, i.jsx)(e4.$, {
+                      children: (0, i.jsx)(e8.$, {
                           variant: "primary",
                           fullWidth: !0,
                           text: V.intl.string(V.t.rg9FQp),
@@ -1389,7 +1389,7 @@ let n5 = [
         { duration: void 0, label: () => V.intl.string(V.t["46dqJY"]) },
     ],
     n7 = "forever";
-function n4(e) {
+function n8(e) {
     let { status: t, currentStatus: n, description: l } = e,
         a = t !== tA.clD.ONLINE,
         s = (0, i.jsx)(i.Fragment, {
@@ -1422,7 +1422,7 @@ function n4(e) {
         children: a ? s : void 0,
     });
 }
-function n8(e) {
+function n4(e) {
     if (null == e || "0" === e) return;
     let { kind: t, dateString: n, timeString: i } = (0, n2._)(e);
     return "today" === t
@@ -1448,7 +1448,7 @@ function it(e) {
             [],
         );
     let I = (0, c.bG)([ns.A], () => ns.A.getStatus(t.id)),
-        j = n8(na.CY.useSetting()),
+        j = n4(na.CY.useSetting()),
         N = (0, c.bG)([nr.A], () => nr.A.hidePersonalInformation),
         S = (0, tR.kB)(),
         y = na.Q_.useSetting(),
@@ -1457,7 +1457,7 @@ function it(e) {
                 n = (0, tR.kB)(),
                 l = na.Jr.useSetting();
             function a(i) {
-                let l = n8(t);
+                let l = n4(t);
                 if (e === i && null != l) return l;
                 switch (i) {
                     case tA.clD.DND:
@@ -1485,10 +1485,10 @@ function it(e) {
                         );
                     }),
                 }),
-                r = n4({ status: tA.clD.ONLINE, currentStatus: e }),
-                o = n4({ status: tA.clD.IDLE, currentStatus: e, description: a(tA.clD.IDLE) }),
-                d = n4({ status: tA.clD.DND, currentStatus: e, description: a(tA.clD.DND) }),
-                c = n4({ status: tA.clD.INVISIBLE, currentStatus: e, description: a(tA.clD.INVISIBLE) });
+                r = n8({ status: tA.clD.ONLINE, currentStatus: e }),
+                o = n8({ status: tA.clD.IDLE, currentStatus: e, description: a(tA.clD.IDLE) }),
+                d = n8({ status: tA.clD.DND, currentStatus: e, description: a(tA.clD.DND) }),
+                c = n8({ status: tA.clD.INVISIBLE, currentStatus: e, description: a(tA.clD.INVISIBLE) });
             return (0, i.jsxs)(i.Fragment, {
                 children: [
                     r,
@@ -1726,7 +1726,7 @@ function it(e) {
                                         style: { pointerEvents: H ? "none" : void 0 },
                                         children: [
                                             (0, i.jsx)(t2.A, { userId: t.id }),
-                                            (0, i.jsx)(t4.Ay, {
+                                            (0, i.jsx)(t8.Ay, {
                                                 className: ez.eF,
                                                 user: t,
                                                 displayName: nd.Ay.getName(void 0, null, t),
@@ -2164,7 +2164,7 @@ function i7(e) {
               groupName: t,
               children: (e) => {
                   let { visibleContent: t, markAsDismissed: a } = e;
-                  return (0, i.jsx)(i4, {
+                  return (0, i.jsx)(i8, {
                       recentlyLeveledTenureBadge: l,
                       markAsDismissed: a,
                       targetElementRef: n,
@@ -2173,7 +2173,7 @@ function i7(e) {
               },
           });
 }
-function i4(e) {
+function i8(e) {
     let { recentlyLeveledTenureBadge: t, markAsDismissed: n, targetElementRef: a, shouldShow: s } = e,
         r = tG.sp.indexOf(t),
         o = (0, i5.I)(tG.sp[r > 0 ? r - 1 : r]).ambient,
@@ -2202,7 +2202,7 @@ function i4(e) {
         actions: m,
     });
 }
-function i8(e) {
+function i4(e) {
     let { isQuestBarEmpty: t, hasLoadedQuestBar: n } = (0, ii.c9)(),
         l = null != e.targetElementRef.current && t && n,
         [a, s] = (function (e) {
@@ -3269,11 +3269,11 @@ class lU extends l.PureComponent {
                     n.e("521930"),
                     n.e("559460"),
                     n.e("331549"),
+                    n.e("343437"),
                     n.e("139970"),
                     n.e("676418"),
                     n.e("940258"),
                     n.e("292583"),
-                    n.e("343437"),
                     n.e("875842"),
                     n.e("166495"),
                     n.e("385653"),
@@ -3421,12 +3421,13 @@ class lU extends l.PureComponent {
                     n.e("295998"),
                     n.e("215920"),
                     n.e("342234"),
+                    n.e("858164"),
                     n.e("489523"),
                     n.e("726294"),
                     n.e("574678"),
                     n.e("469155"),
+                    n.e("837490"),
                     n.e("81189"),
-                    n.e("858164"),
                     n.e("98972"),
                     n.e("496268"),
                     n.e("200203"),
@@ -3439,7 +3440,6 @@ class lU extends l.PureComponent {
                     n.e("734546"),
                     n.e("30939"),
                     n.e("341701"),
-                    n.e("837490"),
                     n.e("781949"),
                     n.e("66580"),
                     n.e("321455"),
@@ -3794,7 +3794,7 @@ class lU extends l.PureComponent {
         let { badgeDirectoryNuxPopoverVariant: t, currentUser: n, dismissibleContents: l } = this.props;
         return null == n
             ? null
-            : (0, i.jsx)(i8, {
+            : (0, i.jsx)(i4, {
                   guildId: this.props.selectedGuildId ?? null,
                   currentUser: n,
                   targetElementRef: this.avatarWithPopoutRef,

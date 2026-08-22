@@ -6,9 +6,9 @@ var n = i(477900),
     a = i(425763),
     o = i(724834),
     d = i(287809),
-    u = i(788593),
-    c = i(249264),
-    g = i(353556),
+    c = i(788593),
+    u = i(249264),
+    g = i(62706),
     m = i(998556);
 function x(e) {
     let { scrollerRef: t } = e,
@@ -48,7 +48,7 @@ function x(e) {
                                   a = r?.() ?? 90;
                               return (0, n.jsx)("div", {
                                   style: { width: a },
-                                  children: (0, n.jsx)(u.A, {
+                                  children: (0, n.jsx)(c.A, {
                                       className: m.XJ,
                                       imageSrc: e,
                                       gameName: l,
@@ -64,7 +64,7 @@ function x(e) {
                               return (0, n.jsx)("div", {
                                   className: m.xB,
                                   style: { width: r },
-                                  children: (0, n.jsx)(c.A, {
+                                  children: (0, n.jsx)(u.A, {
                                       user: t,
                                       widgetType: i,
                                       game: e,

@@ -1,34 +1,36 @@
-i.d(t, { Ay: () => d, JF: () => p, gA: () => o });
-var a = i(477900),
-    n = i(582128),
+i.d(t, { AM: () => p, Ay: () => u, JF: () => h, gA: () => o });
+var n = i(477900),
+    a = i(582128),
     s = i(780777),
     l = i(693591),
     r = i(375708);
 function o() {
     return [{ name: r.intl.string(r.t["Sp2NF+"]), extensions: ["jpg", "jpeg", "jfif", "png", "gif", "webp", "avif"] }];
 }
-function p(e, t, i) {
+function p(e, t) {
     if (null != e) {
-        let a = new FileReader();
-        (a.onload = (a) => {
-            "string" == typeof a.target?.result &&
-                ((a) => {
-                    if (e.type === l.a.MP4) return t(a, e);
-                    let n = new Image();
-                    (n.src = a),
-                        (n.onload = () => {
-                            t(a, e);
-                        }),
-                        (n.onerror = () => {
-                            i();
-                        });
-                })(a.target.result);
+        let i = new FileReader();
+        (i.onload = (i) => {
+            "string" == typeof i.target?.result && t(i.target.result, e);
         }),
-            a.readAsDataURL(e);
+            i.readAsDataURL(e);
     }
 }
-class h extends n.PureComponent {
-    _ref = n.createRef();
+function h(e, t, i) {
+    p(e, (n) => {
+        if (e.type === l.a.MP4) return t(n, e);
+        let a = new Image();
+        (a.src = n),
+            (a.onload = () => {
+                t(n, e);
+            }),
+            (a.onerror = () => {
+                i();
+            });
+    });
+}
+class d extends a.PureComponent {
+    _ref = a.createRef();
     _isMounted = !1;
     static defaultProps = { multiple: !0, tabIndex: -1, maxFileSizeBytes: 1 / 0 };
     componentDidMount() {
@@ -37,13 +39,13 @@ class h extends n.PureComponent {
     handleFileChange = (e) => {
         let { onFileSizeError: t, maxFileSizeBytes: i } = this.props;
         if ((e.stopPropagation(), e.preventDefault(), null != e.currentTarget.files))
-            for (let a = 0; a < e.currentTarget.files.length; a++) {
-                let n = e.currentTarget.files[a];
-                if (n.size > i) {
-                    t?.(i, n.size);
+            for (let n = 0; n < e.currentTarget.files.length; n++) {
+                let a = e.currentTarget.files[n];
+                if (a.size > i) {
+                    t?.(i, a.size);
                     continue;
                 }
-                p(n, this.handleFileRead, this.handleFileError);
+                h(a, this.handleFileRead, this.handleFileError);
             }
     };
     activateUploadDialogue() {
@@ -64,13 +66,13 @@ class h extends n.PureComponent {
             multiple: e,
             disabled: t,
             className: i,
-            tabIndex: n,
+            tabIndex: a,
             "aria-label": l,
             "aria-hidden": r,
             filters: p,
             title: h,
         } = this.props;
-        return (0, a.jsx)(s.A, {
+        return (0, n.jsx)(s.A, {
             ref: this._ref,
             onClick: this.props.onClick,
             onChange: this.handleFileChange,
@@ -78,11 +80,11 @@ class h extends n.PureComponent {
             multiple: e,
             disabled: t,
             className: i,
-            tabIndex: n,
+            tabIndex: a,
             "aria-label": l,
             "aria-hidden": r,
             title: h,
         });
     }
 }
-let d = h;
+let u = d;

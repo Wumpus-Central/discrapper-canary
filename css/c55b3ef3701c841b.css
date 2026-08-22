@@ -18,7 +18,7 @@
     z-index: -2
 }
 
-.removeButton__70feb.removeButton__70feb {
+.actions__70feb.actions__70feb {
     background-color: var(--control-overlay-secondary-background-default);
     border-color: var(--control-overlay-secondary-border-default);
     inset-inline-end: var(--space-8);
@@ -28,12 +28,16 @@
     transition: opacity .1s ease
 }
 
-.container__70feb:focus-within :is(.removeButton__70feb),
-.container__70feb:hover :is(.removeButton__70feb) {
+.actions__70feb:has([aria-expanded=true]) {
     opacity: 1
 }
 
-.container__70feb:has(:is(input, textarea):focus) :is(.removeButton__70feb) {
+.container__70feb:focus-within :is(.actions__70feb),
+.container__70feb:hover :is(.actions__70feb) {
+    opacity: 1
+}
+
+.container__70feb:has(:is(input:not([type=file]), textarea):focus) :is(.actions__70feb) {
     opacity: 0;
     pointer-events: none
 }
@@ -273,4 +277,4 @@
     margin-inline-end: auto
 }
 
-/*# sourceMappingURL=6f1031da396f55ef.css.map*/
+/*# sourceMappingURL=c55b3ef3701c841b.css.map*/
