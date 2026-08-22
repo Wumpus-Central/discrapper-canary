@@ -2019,7 +2019,7 @@
 
 .listItem_af6837:before {
     color: var(--text-muted);
-    content: "•";
+    content: "\2022";
     inset-inline-start: var(--space-4);
     position: absolute
 }
@@ -4305,4 +4305,4 @@
     text-align: center
 }
 
-/*# sourceMappingURL=676405.94af10ada5037ee7.css.map*/
+/*# sourceMappingURL=676405.fefa9bea39e8741f.css.map*/
