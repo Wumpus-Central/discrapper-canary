@@ -3812,17 +3812,31 @@
 }
 
 .list_c5030f {
-    flex: 1 1 auto;
+    flex: 1;
     min-height: 0;
-    overflow-y: auto;
     padding: var(--space-8) var(--space-4) var(--space-16)
 }
 
-.entry_c5030f,
-.list_c5030f {
+.entries_c5030f {
     display: flex;
     flex-direction: column;
     gap: var(--space-4)
+}
+
+.listState_c5030f {
+    align-items: center;
+    flex: 1;
+    gap: var(--space-12);
+    justify-content: center;
+    min-height: 0;
+    padding: var(--space-16);
+    text-align: center
+}
+
+.entry_c5030f,
+.listState_c5030f {
+    display: flex;
+    flex-direction: column
 }
 
 .entry_c5030f {
@@ -3830,6 +3844,7 @@
     border: 0;
     border-radius: var(--radius-sm);
     cursor: pointer;
+    gap: var(--space-4);
     padding: var(--space-12);
     text-align: start
 }
@@ -4287,4 +4302,4 @@
     text-align: center
 }
 
-/*# sourceMappingURL=676405.072cb7a9d37061ed.css.map*/
+/*# sourceMappingURL=676405.12cfa048b5480d27.css.map*/
