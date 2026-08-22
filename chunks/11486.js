@@ -1455,7 +1455,7 @@ if (
     n.e("859864").then(n.t.bind(n, 122123, 19));
 let e2 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 new eB.A().log(
-    `[BUILD INFO] Release Channel: ${e2}, Build Number: 599230, Version Hash: e98d9d6192d91c05de994887b77b2c7890641fee`,
+    `[BUILD INFO] Release Channel: ${e2}, Build Number: 599251, Version Hash: 0bb4170187fb76326c96cb93d3c1d612fc2ed650`,
 ),
     D.A.setTags({ appContext: G.QCW }),
     eI.A.initBasic(),
@@ -20928,7 +20928,7 @@ let Nd = "isHideDevBanner",
                     className: ta()(No.Wz, No.mr),
                     children: [
                         (0, O.jsx)(Nl, { className: No.Kk }),
-                        tT.intl.format(tT.t.uyrfYF, { buildNumber: "599230" }),
+                        tT.intl.format(tT.t.uyrfYF, { buildNumber: "599251" }),
                         (0, O.jsx)(r, {}),
                     ],
                 })
@@ -36160,7 +36160,7 @@ var bL = n(599026),
 let bv = ["1402418171662569542"],
     bb = {
         [G.e$_.SET_ACTIVITY]: {
-            scope: { [Oq.sm.ANY]: [vx.F.RPC, vx.F.RPC_ACTIVITIES_WRITE, Oq.hj] },
+            scope: { [Oq.sm.ANY]: [vx.F.RPC, vx.F.RPC_ACTIVITIES_WRITE, Oq.hj, Oq.W_] },
             validation: (e) =>
                 v2(e)
                     .required()
@@ -36220,7 +36220,13 @@ let bv = ["1402418171662569542"],
                         args: { pid: i, activity: r },
                         isSocketConnected: a,
                     } = e;
-                if (![Oq.z4.IPC, Oq.z4.WEBSOCKET, Oq.z4.POST_MESSAGE].includes(n.transport))
+                if (
+                    (n.authorization.scopes.includes(vx.F.RPC) ||
+                        n.authorization.scopes.includes(vx.F.RPC_ACTIVITIES_WRITE) ||
+                        n.authorization.scopes.includes(Oq.hj) ||
+                        vN(n),
+                    ![Oq.z4.IPC, Oq.z4.WEBSOCKET, Oq.z4.POST_MESSAGE].includes(n.transport))
+                )
                     throw new vm.A(
                         { errorCode: G.Lw6.INVALID_COMMAND },
                         `command not available from "${n.transport}" transport`,
