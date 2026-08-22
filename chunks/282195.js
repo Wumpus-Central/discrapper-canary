@@ -4381,13 +4381,16 @@ function lD(e) {
             })),
             u = lL.hH.useSetting(),
             d = (0, lM.C)(),
-            h = i.useRef(null),
-            m = i.useRef(0),
-            f = i.useCallback(() => {
+            h = i.useRef(!1),
+            m = i.useRef(!1),
+            f = i.useRef(0),
+            p = i.useRef(null),
+            g = i.useCallback(() => {
                 let l = (0, l_.F1)(e, t);
                 if (null == l) return;
+                p.current = l;
                 let i = {
-                    revision: ++m.current,
+                    revision: ++f.current,
                     baseTheme: n,
                     customTheme: (0, lR.Lq)(),
                     uiDensity: d,
@@ -4405,39 +4408,50 @@ function lD(e) {
                     label: "viewer environment",
                 }).catch(() => {});
             }, [n, o, s, t, r, u, e, a, d, c]),
-            p = i.useCallback(() => {
-                null == h.current &&
-                    (h.current = window.requestAnimationFrame(() => {
-                        (h.current = null), f();
-                    }));
-            }, [f]);
-        i.useEffect(() => {
-            p();
-        }, [l, p]),
-            i.useLayoutEffect(
-                () => (
-                    f(),
-                    p(),
-                    () => {
-                        null != h.current && (window.cancelAnimationFrame(h.current), (h.current = null));
-                    }
-                ),
-                [p, f],
+            x = i.useRef(g);
+        i.useLayoutEffect(() => {
+            x.current = g;
+        });
+        let v = i.useCallback(() => {
+            h.current ||
+                ((h.current = !0),
+                queueMicrotask(() => {
+                    (h.current = !1), m.current || x.current();
+                }));
+        }, []);
+        i.useEffect(
+            () => (
+                (m.current = !1),
+                () => {
+                    m.current = !0;
+                }
             ),
+            [],
+        ),
+            i.useEffect(() => {
+                v();
+            }, [l, v]),
+            i.useLayoutEffect(() => {
+                g(), v();
+            }, [v, g]),
+            i.useLayoutEffect(() => {
+                let n = (0, l_.F1)(e, t);
+                null != n && n !== p.current && v();
+            }),
             i.useEffect(() => {
                 function n(n) {
-                    n.target === (0, l_.F1)(e, t) && f();
+                    n.target === (0, l_.F1)(e, t) && ((p.current = null), v());
                 }
                 return document.addEventListener("load", n, !0), () => document.removeEventListener("load", n, !0);
-            }, [t, e, f]),
+            }, [t, e, v]),
             i.useEffect(() => {
-                let e = new MutationObserver(p);
+                let e = new MutationObserver(v);
                 return (
                     e.observe(document.documentElement, { attributes: !0, attributeFilter: ["class", "style"] }),
                     e.observe(document.head, { childList: !0, subtree: !0, characterData: !0 }),
                     () => e.disconnect()
                 );
-            }, [p]);
+            }, [v]);
     })(m, g);
     let [x, v] = i.useState(null);
     i.useEffect(() => {
