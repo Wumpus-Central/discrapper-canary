@@ -5,6 +5,7 @@ e.exports = {
     DV: "turnResponse__30c5c",
     dO: "turnSteps__30c5c",
     K1: "activityStatus__30c5c",
+    YO: "turnChecklist__30c5c",
     pj: "turnActivity__30c5c",
     ep: "activityStatusRow__30c5c",
     EK: "activityStatusRowToggle__30c5c",

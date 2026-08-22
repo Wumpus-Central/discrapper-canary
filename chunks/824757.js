@@ -1,5 +1,4 @@
 e.exports = {
-    wx: "header_af6837",
     rf: "body_af6837",
     uW: "section_af6837",
     L6: "typeTag_af6837",
