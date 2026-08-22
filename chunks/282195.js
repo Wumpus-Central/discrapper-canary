@@ -926,14 +926,28 @@ var eY = n(673724),
     eK = n(375068);
 function eX(e) {
     let { projectId: t, attachments: n } = e,
-        l = n.filter(eZ);
+        l = n.filter(eZ),
+        [s, r] = i.useState(() => new Set()),
+        o = i.useCallback((e) => {
+            r((t) => (t.has(e) ? t : new Set(t).add(e)));
+        }, []);
     return (0, a.jsx)("div", {
         className: eK.KT,
         children: n.map((e, n) =>
             null == e.id
                 ? (0, a.jsx)(eQ, { name: e.name }, n)
                 : eZ(e)
-                  ? (0, a.jsx)(e0, { projectId: t, viewableImages: l, viewerIndex: l.indexOf(e) }, n)
+                  ? (0, a.jsx)(
+                        e0,
+                        {
+                            projectId: t,
+                            viewableImages: l,
+                            viewerIndex: l.indexOf(e),
+                            unavailableIds: s,
+                            markUnavailable: o,
+                        },
+                        n,
+                    )
                   : (0, a.jsx)(eJ, { projectId: t, id: e.id, name: e.name }, n),
         ),
     });
@@ -948,32 +962,19 @@ function eQ(e) {
 }
 function eJ(e) {
     let { projectId: t, id: n, name: l } = e,
-        [s, r] = i.useState(!1);
-    i.useEffect(() => {
-        let e = !1;
-        return (
-            (0, h.n6)(t, n).then(
-                (t) => {
-                    e || t || r(!0);
-                },
-                () => {},
-            ),
-            () => {
-                e = !0;
-            }
-        );
-    }, [t, n]);
-    let o = i.useCallback(() => {
-        Promise.all([(0, h.n6)(t, n), (0, h.PK)(t, n, { download: !0 })]).then(
-            (e) => {
-                let [t, n] = e;
-                if (!t) return void r(!0);
-                let l = document.createElement("a");
-                (l.href = n), (l.target = "_blank"), (l.rel = "noopener noreferrer"), l.click();
-            },
-            () => {},
-        );
-    }, [t, n]);
+        [s, r] = i.useState(!1),
+        o = i.useCallback(() => {
+            (0, h.n6)(t, n)
+                .then(async (e) => {
+                    if (!e) return void r(!0);
+                    let l = document.createElement("a");
+                    (l.href = await (0, h.PK)(t, n, { download: !0 })),
+                        (l.target = "_blank"),
+                        (l.rel = "noopener noreferrer"),
+                        l.click();
+                })
+                .catch(() => {});
+        }, [t, n]);
     return s
         ? (0, a.jsx)(eQ, { name: l, unavailable: !0 })
         : (0, a.jsx)(eC, {
@@ -984,17 +985,17 @@ function eJ(e) {
           });
 }
 function e0(e) {
-    let { projectId: t, viewableImages: n, viewerIndex: l } = e,
-        { id: s, name: r } = n[l],
-        [o, c] = i.useState(null),
-        [u, d] = i.useState(!1);
+    let { projectId: t, viewableImages: n, viewerIndex: l, unavailableIds: s, markUnavailable: r } = e,
+        { id: o, name: c } = n[l],
+        [u, d] = i.useState(null),
+        m = s.has(o),
+        [f, p] = i.useState(0);
     i.useEffect(() => {
         let e = !1;
         return (
-            Promise.all([(0, h.n6)(t, s), (0, h.PK)(t, s)]).then(
+            (0, h.PK)(t, o).then(
                 (t) => {
-                    let [n, l] = t;
-                    e || (n ? c(l) : d(!0));
+                    e || d(t);
                 },
                 () => {},
             ),
@@ -1002,43 +1003,35 @@ function e0(e) {
                 e = !0;
             }
         );
-    }, [t, s]);
-    let m = i.useCallback(() => {
+    }, [t, o, f]);
+    let g = i.useCallback(() => {
         Promise.all(
-            n.map((e) =>
-                Promise.all([(0, h.n6)(t, e.id), (0, h.PK)(t, e.id)]).then(
-                    (t) => {
-                        let [n, l] = t;
-                        return n ? { type: "IMAGE", url: l, alt: e.name } : "unavailable";
-                    },
-                    () => "error",
-                ),
-            ),
-        ).then((e) => {
-            let t = e[l];
-            "unavailable" === t
-                ? d(!0)
-                : "error" !== t &&
-                  (0, ek.R)({
-                      items: e.filter((e) => "string" != typeof e),
-                      startingIndex: e.slice(0, l).filter((e) => "string" != typeof e).length,
-                      shouldHideMediaOptions: !0,
-                      location: "VibegrationsChat",
-                  });
-        });
-    }, [t, n, l]);
-    return u
-        ? (0, a.jsx)(eQ, { name: r, unavailable: !0 })
+            n.map(async (e) => (s.has(e.id) ? null : { type: "IMAGE", url: await (0, h.PK)(t, e.id), alt: e.name })),
+        ).then(
+            (e) => {
+                null != e[l] &&
+                    (0, ek.R)({
+                        items: e.filter((e) => null != e),
+                        startingIndex: e.slice(0, l).filter((e) => null != e).length,
+                        shouldHideMediaOptions: !0,
+                        location: "VibegrationsChat",
+                    });
+            },
+            () => {},
+        );
+    }, [t, n, l, s]);
+    return m
+        ? (0, a.jsx)(eQ, { name: c, unavailable: !0 })
         : (0, a.jsx)(eC, {
-              name: r,
-              thumbSrc: o,
-              ariaLabel: P.intl.formatToPlainString(R.default.QUFLUq, { name: r }),
-              onClick: m,
+              name: c,
+              thumbSrc: u,
+              ariaLabel: P.intl.formatToPlainString(R.default.QUFLUq, { name: c }),
+              onClick: g,
               onThumbError: () => {
-                  c(null),
-                      (0, h.n6)(t, s).then(
+                  d(null),
+                      (0, h.n6)(t, o).then(
                           (e) => {
-                              e || d(!0);
+                              e ? 0 === f && p(1) : r(o);
                           },
                           () => {},
                       );
