@@ -6,12 +6,12 @@ var n = i(477900),
     a = i(287809),
     o = i(158045),
     d = i(23722);
-let c = { id: "default" },
-    u = l.createContext(null),
+let u = { id: "default" },
+    c = l.createContext(null),
     g = l.createContext(null);
 function m(e) {
     let { children: t } = e,
-        [i, m] = l.useState(c),
+        [i, m] = l.useState(u),
         [x, f] = l.useState(null),
         [h] = l.useState(r.B$),
         p = l.useRef(h),
@@ -19,34 +19,34 @@ function m(e) {
             m(e);
         }),
         j = l.useCallback(() => {
-            m(c);
+            m(u);
         }, []),
-        v = l.useCallback(() => p.current, []),
-        A = (0, s.bG)([a.default], () => o.Ay.canUsePremiumProfileCustomization(a.default.getCurrentUser())),
-        E = A ? c : i,
-        S = !A && x?.id === "premiumTryItOut",
+        A = l.useCallback(() => p.current, []),
+        v = (0, s.bG)([a.default], () => o.Ay.canUsePremiumProfileCustomization(a.default.getCurrentUser())),
+        E = v ? u : i,
+        S = !v && x?.id === "premiumTryItOut",
         C = l.useCallback(() => {
             f(E);
         }, [E]),
-        b = l.useCallback((e) => {
+        T = l.useCallback((e) => {
             p.current = e;
         }, []),
-        T = l.useMemo(
+        b = l.useMemo(
             () => ({
                 selectedPanel: E,
                 readyPanel: x,
                 handlePanelTransitionComplete: C,
                 navigate: I,
                 goBack: j,
-                getCurrentPreset: v,
-                cachePreset: b,
+                getCurrentPreset: A,
+                cachePreset: T,
             }),
-            [E, x, C, I, j, v, b],
+            [E, x, C, I, j, A, T],
         );
-    return (0, n.jsx)(g.Provider, { value: S, children: (0, n.jsx)(u.Provider, { value: T, children: t }) });
+    return (0, n.jsx)(g.Provider, { value: S, children: (0, n.jsx)(c.Provider, { value: b, children: t }) });
 }
 function x() {
-    let e = l.useContext(u);
+    let e = l.useContext(c);
     if (null == e)
         throw Error("useNavigationContext must be used within UserProfileModalV2EditingPanelNavigationProvider");
     return e;

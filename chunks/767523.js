@@ -1,4 +1,4 @@
-a.exports = {
+t.exports = {
     rn: "inputInner_b1f01d",
     hF: "input_b1f01d",
     EN: "editor_b1f01d",

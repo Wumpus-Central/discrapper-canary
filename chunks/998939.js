@@ -9,9 +9,9 @@ n.d(t, {
     uM: () => el,
     vX: () => et,
     Vm: () => ec,
-    dv: () => q,
+    dv: () => B,
     TV: () => z,
-    Hc: () => U,
+    Hc: () => H,
     ST: () => Q,
     PK: () => eu,
     Lc: () => ea,
@@ -104,17 +104,17 @@ function j(e, t) {
 }
 let y = new Map(),
     k = new Map(),
-    N = new Map(),
+    A = new Map(),
     w = new Set(),
-    E = new Map(),
-    A = new Map();
+    N = new Map(),
+    E = new Map();
 function S(e, t) {
     s.h.dispatch({ type: "VIBEGRATIONS_CHAT_CONN_STATE", projectId: e, connState: t });
 }
-let I = { location: "connection", code: u.xA.SEND_FAILED },
-    T = { location: "agent", code: u.xA.AGENT_ERROR };
-function C(e, t) {
-    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : I;
+let C = { location: "connection", code: u.xA.SEND_FAILED },
+    I = { location: "agent", code: u.xA.AGENT_ERROR };
+function T(e, t) {
+    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : C;
     s.h.dispatch({
         type: "VIBEGRATIONS_CHAT_STEP_APPEND",
         projectId: e,
@@ -140,10 +140,10 @@ function R(e, t) {
 let P = { steered: !0, queued: !0, restarting: !0, answered: !0 };
 function M(e, t, n) {
     let l = t.pendingSends;
-    for (let a of ((t.pendingSends = []), l)) R(e, a), C(e, n);
+    for (let a of ((t.pendingSends = []), l)) R(e, a), T(e, n);
 }
 function L(e, t) {
-    if (!0 === N.get(e)) return;
+    if (!0 === A.get(e)) return;
     let n = t.pendingSends;
     for (let l of ((t.pendingSends = []), n)) {
         R(e, l);
@@ -154,7 +154,7 @@ function L(e, t) {
                 l.attachments?.map((e) => e.id),
             );
         } catch (t) {
-            console.error("[vibegrations] queued send failed", t), C(e, t instanceof Error ? t.message : "send failed");
+            console.error("[vibegrations] queued send failed", t), T(e, t instanceof Error ? t.message : "send failed");
         }
     }
 }
@@ -167,8 +167,8 @@ let O = {
         web: { location: "runtime_frame", code: u.xA.RUNTIME_FRAME_ERROR },
         preview: { location: "runtime_worker", code: u.xA.RUNTIME_WORKER_ERROR },
     },
-    $ = new Map();
-async function F(e, t, n) {
+    F = new Map();
+async function $(e, t, n) {
     let l,
         a = Date.now();
     console.debug("[vibegrations] capture request received", { id: n.id, build: n.build, probe: n.probe });
@@ -283,7 +283,7 @@ async function G(e, t) {
                                       turnId: l.turn_id,
                                       patch: { content: e, kind: "message" },
                                   })
-                                : C(t, b.intl.string(v.default.Z8Eo8I), T);
+                                : T(t, b.intl.string(v.default.Z8Eo8I), I);
                         } else if ("announcement" === l.kind) {
                             let e = l.message ?? "";
                             "" !== e &&
@@ -346,7 +346,7 @@ async function G(e, t) {
                                       turnId: l.turn_id,
                                       patch: { proposal: l.proposal, kind: "proposal" },
                                   })
-                                : C(t, b.intl.string(v.default.IHCafX), T);
+                                : T(t, b.intl.string(v.default.IHCafX), I);
                         else if ("ideas" === l.kind)
                             null != l.ideas &&
                                 l.ideas.length > 0 &&
@@ -448,7 +448,7 @@ async function G(e, t) {
                         }
                     else
                         "capture_preview" === l.type
-                            ? F(t, n, l).catch(() => {})
+                            ? $(t, n, l).catch(() => {})
                             : "model_settings" === l.type
                               ? s.h.dispatch({
                                     type: "VIBEGRATIONS_MODEL_SETTINGS_SET",
@@ -467,8 +467,8 @@ async function G(e, t) {
                                       if ("error" !== t.level) return;
                                       let n = null != t.source ? D[t.source] : void 0;
                                       if (null == n) return;
-                                      let l = $.get(e);
-                                      null == l && ((l = new Set()), $.set(e, l));
+                                      let l = F.get(e);
+                                      null == l && ((l = new Set()), F.set(e, l));
                                       let a = `${t.source}:${t.message.replace(/\d+/g, "#").slice(0, 200)}`;
                                       l.has(a) ||
                                           l.size >= 10 ||
@@ -485,7 +485,7 @@ async function G(e, t) {
                 (j(t, "Connection closed before the publish result arrived"), t.disposed)
                     ? S(e, "closed")
                     : t.helloSeen
-                      ? ((t.reconnectPending = !0), S(e, "connecting"), t.backoff.fail(() => H(e)))
+                      ? ((t.reconnectPending = !0), S(e, "connecting"), t.backoff.fail(() => U(e)))
                       : (S(e, "closed"),
                         M(e, t, "Connection closed before the message was sent"),
                         (t.pendingModelSettings = null));
@@ -507,7 +507,7 @@ async function G(e, t) {
             });
     }
 }
-function H(e) {
+function U(e) {
     let t = y.get(e);
     null == t &&
         ((t = {
@@ -530,7 +530,7 @@ function H(e) {
         S(e, "connecting"),
         G(e, n);
 }
-function B(e) {
+function q(e) {
     var t;
     let n = y.get(e);
     return (
@@ -546,13 +546,13 @@ function B(e) {
         !0)
     );
 }
-function U(e) {
+function H(e) {
     let t = y.get(e);
-    if (null == t) return void H(e);
+    if (null == t) return void U(e);
     let n = k.get(e);
-    ("closed" !== n && "failed" !== n) || t.reconnectPending || H(e);
+    ("closed" !== n && "failed" !== n) || t.reconnectPending || U(e);
 }
-function q(e, t, n) {
+function B(e, t, n) {
     let l = t.trim(),
         a = null != n && n.length > 0 ? n : void 0;
     if ("" === l && null == a) return;
@@ -568,7 +568,7 @@ function q(e, t, n) {
             i.attachments?.map((e) => e.id),
         );
     } catch (t) {
-        console.error("[vibegrations] send failed", t), C(e, t instanceof Error ? t.message : "send failed");
+        console.error("[vibegrations] send failed", t), T(e, t instanceof Error ? t.message : "send failed");
     }
 }
 function V(e) {
@@ -623,7 +623,7 @@ function X(e) {
 }
 async function Z(e) {
     let { body: t } = await i.Bo.post({ url: x.Rsh.VIBEGRATIONS_PROJECT_WS_TICKET(e), rejectWithError: !0 });
-    return { ticket: t.ticket, baseUrl: (0, f.V)() ?? t.url };
+    return { ticket: t.ticket, baseUrl: (0, f.C)() ?? t.url };
 }
 async function Q(e) {
     let { ticket: t, baseUrl: n } = await Z(e),
@@ -757,13 +757,13 @@ class em extends a.Ay.Store {
         return k.get(e) ?? "connecting";
     }
     isChatStopped(e) {
-        return N.get(e) ?? !1;
+        return A.get(e) ?? !1;
     }
     getModelSettings(e) {
-        return E.get(e) ?? null;
+        return N.get(e) ?? null;
     }
     getSettings(e) {
-        return A.get(e) ?? null;
+        return E.get(e) ?? null;
     }
 }
 let ef = new em(s.h, {
@@ -774,29 +774,29 @@ let ef = new em(s.h, {
     },
     VIBEGRATIONS_CHAT_STOPPED_SET: function (e) {
         let { projectId: t, stopped: n } = e;
-        if ((N.get(t) ?? !1) === n) return !1;
-        N.set(t, n);
+        if ((A.get(t) ?? !1) === n) return !1;
+        A.set(t, n);
     },
     VIBEGRATIONS_MODEL_SETTINGS_SET: function (e) {
         let { projectId: t, settings: n, choices: l } = e;
-        E.set(t, { settings: n, choices: l });
+        N.set(t, { settings: n, choices: l });
     },
     VIBEGRATIONS_SETTINGS_SET: function (e) {
         let { projectId: t, settings: n } = e;
-        A.set(t, n);
+        E.set(t, n);
     },
     VIBEGRATIONS_PROJECT_DELETE_SUCCESS: function (e) {
         let { projectId: t } = e;
-        if (!B(t)) return !1;
+        if (!q(t)) return !1;
     },
     VIBEGRATIONS_PROJECTS_FETCH_SUCCESS: function (e) {
         let t = !1;
-        for (let e of Array.from(y.keys())) null == p.A.getProject(e) && B(e) && (t = !0);
+        for (let e of Array.from(y.keys())) null == p.A.getProject(e) && q(e) && (t = !0);
         if (!t) return !1;
     },
     LOGOUT: function () {
         if (0 === y.size) return !1;
-        for (let e of Array.from(y.keys())) B(e);
-        N.clear();
+        for (let e of Array.from(y.keys())) q(e);
+        A.clear();
     },
 });

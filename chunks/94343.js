@@ -1,9 +1,9 @@
-n.d(t, { A: () => a });
+n.d(t, { A: () => i });
 var l = n(582128),
     r = n(17928),
-    i = n(775602);
-function a(e, t) {
-    let n = (0, r.bG)([i.Ay], () => i.Ay.useReducedMotion);
+    a = n(775602);
+function i(e, t) {
+    let n = (0, r.bG)([a.Ay], () => a.Ay.useReducedMotion);
     l.useEffect(() => {
         if (!t) return;
         let l = e.current;

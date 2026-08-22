@@ -17,18 +17,18 @@ let u = { low: "Low", medium: "Medium", high: "High", xhigh: "Extra high", max: 
     };
 var m = n(295813),
     f = n(375708),
-    p = n(752065);
-function g(e) {
+    g = n(752065);
+function p(e) {
     let { title: t, modelChoices: n, thinkingChoices: r, value: o, disabled: c, onChange: d } = e,
-        g = a.useMemo(() => n.map((e) => ({ id: e.id, label: e.label, value: e.id, description: h[e.provider] })), [n]),
+        p = a.useMemo(() => n.map((e) => ({ id: e.id, label: e.label, value: e.id, description: h[e.provider] })), [n]),
         x = a.useMemo(() => r.map((e) => ({ id: e, label: u[e] ?? e, value: e })), [r]);
     return (0, l.jsxs)("div", {
-        className: p.uW,
+        className: g.uW,
         children: [
             (0, l.jsx)(i.E, { variant: "text-sm/semibold", color: "text-default", children: t }),
             (0, l.jsx)(s.l, {
                 label: f.intl.string(m.default["9FRudW"]),
-                options: g,
+                options: p,
                 value: o.model,
                 onSelectionChange: (e) => d({ ...o, model: e }),
                 selectionMode: "single",
@@ -53,8 +53,8 @@ function x(e) {
         [b, j] = a.useState(null),
         [y, k] = a.useState(t);
     t !== y && (k(t), j(null));
-    let w = b ?? t,
-        N = a.useCallback(
+    let A = b ?? t,
+        w = a.useCallback(
             (e) => {
                 j(e), u(e);
             },
@@ -66,25 +66,25 @@ function x(e) {
         align: "right",
         renderPopout: () =>
             (0, l.jsxs)("div", {
-                className: p.nd,
+                className: g.nd,
                 role: "dialog",
                 "aria-label": f.intl.string(m.default["2NWMqY"]),
                 children: [
-                    (0, l.jsx)(g, {
+                    (0, l.jsx)(p, {
                         title: f.intl.string(m.default.ISmynF),
                         modelChoices: n.main,
                         thinkingChoices: n.thinking,
-                        value: w.main,
+                        value: A.main,
                         disabled: s,
-                        onChange: (e) => N({ ...w, main: e }),
+                        onChange: (e) => w({ ...A, main: e }),
                     }),
-                    (0, l.jsx)(g, {
+                    (0, l.jsx)(p, {
                         title: f.intl.string(m.default.hdt1ph),
                         modelChoices: n.subagent,
                         thinkingChoices: n.thinking,
-                        value: w.subagent,
+                        value: A.subagent,
                         disabled: s,
-                        onChange: (e) => N({ ...w, subagent: e }),
+                        onChange: (e) => w({ ...A, subagent: e }),
                     }),
                     (0, l.jsx)(i.E, {
                         variant: "text-xs/normal",
@@ -99,7 +99,7 @@ function x(e) {
                 ariaHidden: !0,
                 children: (0, l.jsx)(c.D, {
                     innerRef: v,
-                    className: h ?? p.hZ,
+                    className: h ?? g.hZ,
                     "aria-label": f.intl.string(m.default.COVYeS),
                     ...e,
                     children: x ?? (0, l.jsx)(d.R, { size: "xxs", color: "currentColor", "aria-hidden": !0 }),

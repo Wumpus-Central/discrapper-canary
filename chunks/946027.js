@@ -1,4 +1,4 @@
-t.r(
+_.r(
     (e.exports = {
         uploadIconAnimateInLeft: "uploadIconAnimateInLeft_b78547",
         uploadIconAnimateInMiddle: "uploadIconAnimateInMiddle_b78547",

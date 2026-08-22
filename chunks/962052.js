@@ -38,7 +38,7 @@ let T = {
                     )
                   : Promise.reject(Error("not desktop client"))
             ).then((e) => {
-                let i = { environment: window.GLOBAL_ENV.RELEASE_CHANNEL, build_number: "598918" },
+                let i = { environment: window.GLOBAL_ENV.RELEASE_CHANNEL, build_number: "599251" },
                     u = o.default.getCurrentUser();
                 null != u && ((i.user_id = u.id), (i.user_name = u.tag), null != u.email && (i.email = u.email));
                 let _ = {

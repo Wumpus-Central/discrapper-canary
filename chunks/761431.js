@@ -1,4 +1,4 @@
-i.d(t, { TX: () => o, yV: () => c });
+i.d(t, { TX: () => o, yV: () => u });
 var n = i(477900),
     l = i(582128),
     s = i(95477),
@@ -22,8 +22,8 @@ function d(e) {
         onKeyDown: a,
         maxLength: o,
         placeholder: d,
-        trailing: c,
-        error: u,
+        trailing: u,
+        error: c,
         helperText: g,
     } = e;
     return (0, n.jsx)(s.k, {
@@ -35,20 +35,20 @@ function d(e) {
         onKeyDown: a,
         maxLength: o,
         placeholder: d,
-        trailing: c,
-        error: u,
+        trailing: u,
+        error: c,
         helperText: g,
     });
 }
-function c(e) {
+function u(e) {
     let {
             isEditing: t,
             committedValue: i,
             editedValue: l,
             setEditedValue: s,
             editButtonRef: o,
-            handleStartEditing: c,
-            wrapperRef: u,
+            handleStartEditing: u,
+            wrapperRef: c,
             onBlur: g,
             onContainerKeyDown: m,
             inputRef: x,
@@ -57,20 +57,20 @@ function c(e) {
             placeholder: p,
             editButtonAriaLabel: I,
             label: j,
-            size: v = "default",
-            maxLength: A,
+            size: A = "default",
+            maxLength: v,
             error: E,
             warning: S,
             trailing: C,
-            className: b,
-            disabled: T = !1,
+            className: T,
+            disabled: b = !1,
             growWidth: N,
             removeVerticalPadding: w,
         } = e,
         y =
-            (null != A && (t ? l : i).length > A ? a.intl.formatToPlainString(a.t.ICT5S6, { maxLength: A }) : void 0) ??
+            (null != v && (t ? l : i).length > v ? a.intl.formatToPlainString(a.t.ICT5S6, { maxLength: v }) : void 0) ??
             E,
-        k = "compact" === v ? { variant: "compact" } : { variant: "default", trailing: C };
+        k = "compact" === A ? { variant: "compact" } : { variant: "default", trailing: C };
     return (0, n.jsx)(r.ZL, {
         ...k,
         isEditing: t,
@@ -78,21 +78,21 @@ function c(e) {
         placeholder: p,
         editButtonRef: o,
         editButtonAriaLabel: I,
-        onStartEditing: c,
-        className: b,
+        onStartEditing: u,
+        className: T,
         growWidth: N,
         removeVerticalPadding: w,
-        wrapperRef: u,
+        wrapperRef: c,
         onBlur: g,
         onKeyDown: m,
-        disabled: T,
+        disabled: b,
         input: (0, n.jsx)(d, {
             inputRef: x,
             label: j,
             value: l,
             onChange: s,
             onKeyDown: f,
-            maxLength: A,
+            maxLength: v,
             placeholder: p,
             trailing: C,
             error: y,

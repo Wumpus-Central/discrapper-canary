@@ -1,8 +1,8 @@
 n.d(t, { A: () => A });
 var l = n(477900),
     r = n(582128),
-    i = n(503698),
-    a = n.n(i),
+    a = n(503698),
+    i = n.n(a),
     s = n(123292),
     o = n(688810),
     u = n(183555),
@@ -15,23 +15,23 @@ let A = r.memo(function (e) {
     let {
             userId: t,
             userBio: n,
-            heading: i,
+            heading: a,
             onClose: A,
             animateOnHoverOrFocusOnly: x = !1,
-            isHoveringOrFocusing: S = !1,
-            hidePersonalInformation: T = !1,
+            isHoveringOrFocusing: T = !1,
+            hidePersonalInformation: S = !1,
             hideRestrictedProfile: g = !1,
-            viewFullBioDisabled: E = !1,
+            viewFullBioDisabled: p = !1,
         } = e,
-        { context: p } = (0, u.NJ)(),
+        { context: E } = (0, u.NJ)(),
         { analyticsLocations: v } = (0, o.Ay)(),
         [R, y] = r.useState(!1),
         [j, C] = r.useState(!1),
         N = r.useRef(null);
-    return T || null == n || "" === n
+    return S || null == n || "" === n
         ? null
         : (0, l.jsxs)(f.A, {
-              heading: i,
+              heading: a,
               children: [
                   (0, l.jsx)("div", {
                       ref: (e) => {
@@ -40,7 +40,7 @@ let A = r.memo(function (e) {
                                   (y(!j && e.scrollHeight - e.clientHeight > 1),
                                   e.getBoundingClientRect().height > 57.75 && C(!0));
                       },
-                      className: a()(m.mA, j && m.Em),
+                      className: i()(m.mA, j && m.Em),
                       onBlur: function (e) {
                           null == N.current ||
                               N.current.contains(e.relatedTarget) ||
@@ -53,7 +53,7 @@ let A = r.memo(function (e) {
                           setLineClamp: !1,
                           textColor: "text-strong",
                           animateOnHoverOrFocusOnly: x,
-                          isHoveringOrFocusing: S,
+                          isHoveringOrFocusing: T,
                       }),
                   }),
                   (R || j) &&
@@ -67,13 +67,13 @@ let A = r.memo(function (e) {
                               onClick: function () {
                                   A?.(),
                                       (0, c.openUserProfileModal)({
-                                          ...p,
+                                          ...E,
                                           userId: t,
                                           hideRestrictedProfile: g,
                                           sourceAnalyticsLocations: v,
                                       });
                               },
-                              disabled: E,
+                              disabled: p,
                           }),
                       }),
               ],

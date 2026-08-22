@@ -1,8 +1,8 @@
 n.d(t, { i: () => v }), n(582128);
 var l = n(228366),
     r = n(157559),
-    i = n(779185),
-    a = n(101392),
+    a = n(779185),
+    i = n(101392),
     s = n(287809),
     o = n(174459),
     u = n(284009),
@@ -21,11 +21,11 @@ function x(e, t) {
           }),
           n);
 }
-let S = function (e, t) {
+let T = function (e, t) {
         let n = t.getGuildId();
         return c()(null != n, "isGuildChannel with null guildId"), x(e, t) > 30 && h.A.can(m.xBc.MENTION_EVERYONE, t);
     },
-    T = function (e, t) {
+    S = function (e, t) {
         for (let n of d.Ay.parsePreprocessor(t, e)) {
             let e = (function e(t) {
                 if ("string" == typeof t.content) {
@@ -47,19 +47,19 @@ let S = function (e, t) {
         return null;
     };
 var g = n(375708);
-let E = [
+let p = [
     {
         check(e, t, n) {
             if (!n || null == t.getGuildId()) return !1;
-            let l = T(e, t);
-            if (null == l || !S(l, t)) return !1;
+            let l = S(e, t);
+            if (null == l || !T(l, t)) return !1;
             let r = x(l, t),
-                i = Math.pow(10, Math.floor(Math.log10(r))),
-                a = g.t["47E5Rz"];
+                a = Math.pow(10, Math.floor(Math.log10(r))),
+                i = g.t["47E5Rz"];
             return (
-                t.isForumPost() ? (a = g.t.sYW2cy) : t.isThread() && (a = g.t["2YaiQ1"]),
+                t.isForumPost() ? (i = g.t.sYW2cy) : t.isThread() && (i = g.t["2YaiQ1"]),
                 {
-                    body: g.intl.formatToPlainString(a, { role: l, count: (Math.trunc(r / i) * i).toLocaleString() }),
+                    body: g.intl.formatToPlainString(i, { role: l, count: (Math.trunc(r / a) * a).toLocaleString() }),
                     footer: g.intl.string(g.t.mVyrtu),
                 }
             );
@@ -72,7 +72,7 @@ let E = [
     },
     { check: (e) => !!m.AKn.test(e) && { body: g.intl.string(g.t.sTwS1a) }, analyticsType: "API Token Warning" },
 ];
-var p = n(158045);
+var E = n(158045);
 function v(e) {
     let {
             openWarningPopout: t,
@@ -85,7 +85,7 @@ function v(e) {
             hasAttachments: A = !1,
             hasComponents: x = !1,
         } = e,
-        S = p.Ay.canUseIncreasedMessageLength(s.default.getCurrentUser());
+        T = E.Ay.canUseIncreasedMessageLength(s.default.getCurrentUser());
     return new Promise((e) =>
         (function (e) {
             let {
@@ -99,55 +99,55 @@ function v(e) {
                 hasStickers: h,
                 hasAttachments: A,
                 hasComponents: x,
-                resolve: S,
+                resolve: T,
             } = e;
             if (0 === s.length && !n.submit?.allowEmptyMessage && !h && !A && !x)
-                return void S({ valid: !1, failureReason: m.X8x.EMPTY_MESSAGE });
-            let T = f ? m.CS1 : m.uvi;
-            if (s.length > T) {
+                return void T({ valid: !1, failureReason: m.X8x.EMPTY_MESSAGE });
+            let S = f ? m.CS1 : m.uvi;
+            if (s.length > S) {
                 if (f || null == u) {
-                    var p;
-                    (p = s.length),
+                    var E;
+                    (E = s.length),
                         r.A.show({
                             title: g.intl.string(g.t.l8rYLt),
-                            body: g.intl.formatToPlainString(g.t.FfjF15, { currentLength: p, maxLength: T }),
+                            body: g.intl.formatToPlainString(g.t.FfjF15, { currentLength: E, maxLength: S }),
                             confirmText: g.intl.string(g.t.BddRzS),
                         }),
                         o.default.track(m.HAw.OPEN_MODAL, {
                             type: "Message Too Long Alert",
-                            message_content_length: p,
+                            message_content_length: E,
                         });
                 } else l.h.dispatch({ type: "MESSAGE_LENGTH_UPSELL", channel: u, content: s });
-                S({ valid: !1, failureReason: m.X8x.MESSAGE_TOO_LONG });
+                T({ valid: !1, failureReason: m.X8x.MESSAGE_TOO_LONG });
                 return;
             }
             if (null != u) {
-                if (null != u.getGuildId() && d && a.A.getSlowmodeCooldownGuess(u.id) > 0)
-                    return void S({ valid: !1, failureReason: m.X8x.SLOWMODE_COOLDOWN });
+                if (null != u.getGuildId() && d && i.A.getSlowmodeCooldownGuess(u.id) > 0)
+                    return void T({ valid: !1, failureReason: m.X8x.SLOWMODE_COOLDOWN });
                 if (null != t)
-                    for (let { check: e, analyticsType: n, animation: l } of E) {
+                    for (let { check: e, analyticsType: n, animation: l } of p) {
                         let r = e(s, u, c);
                         if (!1 !== r)
                             return void t({
                                 analyticsType: n,
                                 channel: u,
-                                onCancel: () => S({ valid: !1, failureReason: m.X8x.SHOUTING_CANCELLED }),
-                                onConfirm: () => S({ valid: !0 }),
+                                onCancel: () => T({ valid: !1, failureReason: m.X8x.SHOUTING_CANCELLED }),
+                                onConfirm: () => T({ valid: !0 }),
                                 popoutText: r,
                                 animation: l,
                             });
                     }
             }
-            if (i.Ay.isFull()) {
+            if (a.Ay.isFull()) {
                 r.A.show({
                     title: g.intl.string(g.t["7Q4eo2"]),
                     body: g.intl.string(g.t.gi6XHp),
                     confirmText: g.intl.string(g.t["Z4U1g/"]),
                 }),
-                    S({ valid: !1, failureReason: m.X8x.RATE_LIMITED });
+                    T({ valid: !1, failureReason: m.X8x.RATE_LIMITED });
                 return;
             }
-            S({ valid: !0 });
+            T({ valid: !0 });
         })({
             openWarningPopout: t,
             type: n,
@@ -155,7 +155,7 @@ function v(e) {
             channel: c,
             restrictMentions: d,
             respectCooldown: f,
-            userCanUsePremiumMessageLength: S,
+            userCanUsePremiumMessageLength: T,
             hasStickers: h,
             hasAttachments: A,
             hasComponents: x,

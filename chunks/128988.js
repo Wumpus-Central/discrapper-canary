@@ -6,8 +6,8 @@ var n = i(477900),
     a = i(425763),
     o = i(724834),
     d = i(287809),
-    c = i(788593),
-    u = i(249264),
+    u = i(788593),
+    c = i(249264),
     g = i(353556),
     m = i(998556);
 function x(e) {
@@ -48,7 +48,7 @@ function x(e) {
                                   a = r?.() ?? 90;
                               return (0, n.jsx)("div", {
                                   style: { width: a },
-                                  children: (0, n.jsx)(c.A, {
+                                  children: (0, n.jsx)(u.A, {
                                       className: m.XJ,
                                       imageSrc: e,
                                       gameName: l,
@@ -64,7 +64,7 @@ function x(e) {
                               return (0, n.jsx)("div", {
                                   className: m.xB,
                                   style: { width: r },
-                                  children: (0, n.jsx)(u.A, {
+                                  children: (0, n.jsx)(c.A, {
                                       user: t,
                                       widgetType: i,
                                       game: e,
@@ -90,7 +90,7 @@ function x(e) {
             [x, h],
         ),
         j = l.useRef(null),
-        v = l.useCallback(() => {
+        A = l.useCallback(() => {
             if (null == t.current) return;
             let e = t.current.getBoundingClientRect();
             j.current = { x: e.left, y: e.top };
@@ -101,14 +101,14 @@ function x(e) {
                 j.current = null;
                 return;
             }
-            null == j.current && v();
-        }, [i, v]),
+            null == j.current && A();
+        }, [i, A]),
         !0 !== i || null == f || null == I)
     )
         return null;
-    null == j.current && v();
-    let { x: A, y: E } = j.current ?? { x: 0, y: 0 },
-        S = f.x - A - 60 * !!p,
+    null == j.current && A();
+    let { x: v, y: E } = j.current ?? { x: 0, y: 0 },
+        S = f.x - v - 60 * !!p,
         C = f.y - E;
     return (0, n.jsx)("div", { className: m.kL, style: { transform: `translate3d(${S}px, ${C}px, 0)` }, children: I });
 }

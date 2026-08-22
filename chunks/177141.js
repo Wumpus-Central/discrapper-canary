@@ -242,8 +242,8 @@ let e0 = {
     ]),
     e9 = {},
     e8 = {},
-    e4 = Object.freeze({ id: null, message: null, buttonText: null, callback: void 0, metadata: null }),
-    e6 = null;
+    e6 = Object.freeze({ id: null, message: null, buttonText: null, callback: void 0, metadata: null }),
+    e4 = null;
 function te(e) {
     return e3[e] + "-untilAtLeast";
 }
@@ -880,7 +880,7 @@ let ts = {
 };
 function ta() {
     if (!m.A.isConnected()) return !1;
-    e6 = null;
+    e4 = null;
     let e = j.default.getCurrentUser();
     if (null == e) return !1;
     let t = eB.A.getPremiumSubscription(),
@@ -899,15 +899,15 @@ function ta() {
             })
         ) {
             let i = ts[r].metadata?.({ currentUser: e, premiumSubscription: t, selectedGuildId: n });
-            e6 = { ...e4, type: r, metadata: i };
+            e4 = { ...e6, type: r, metadata: i };
             break;
         }
-    if (null != e6) {
-        e6.metadata?.sampleRate != null &&
-            null == e8[e6.type] &&
-            (e8[e6.type] = Math.random() <= e6.metadata.sampleRate);
-        let e = !1 === e8[e6.type];
-        (tl(e6.type) || e) && (e6 = null);
+    if (null != e4) {
+        e4.metadata?.sampleRate != null &&
+            null == e8[e4.type] &&
+            (e8[e4.type] = Math.random() <= e4.metadata.sampleRate);
+        let e = !1 === e8[e4.type];
+        (tl(e4.type) || e) && (e4 = null);
     }
 }
 function tE() {
@@ -976,10 +976,10 @@ class to extends s.Ay.Store {
             );
     }
     hasNotice() {
-        return null != e6 && null != e6.type;
+        return null != e4 && null != e4.type;
     }
     getNotice() {
-        return null == eq.A.getAction() ? e6 : null;
+        return null == eq.A.getAction() ? e4 : null;
     }
     isNoticeDismissed(e) {
         return tl(e);
@@ -1032,7 +1032,7 @@ let tc = new to(c.h, {
     VOICE_STATE_UPDATES: function (e) {
         let { voiceStates: t } = e;
         return (
-            (e6?.type === eN.kqX.INVITED_TO_SPEAK ||
+            (e4?.type === eN.kqX.INVITED_TO_SPEAK ||
                 t.some((e) => {
                     let { userId: t } = e;
                     return t !== es.default.getId();
@@ -1055,17 +1055,17 @@ let tc = new to(c.h, {
         return ta();
     },
     NOTICE_SHOW: function (e) {
-        e6 = e.notice;
+        e4 = e.notice;
     },
     NOTICE_DISMISS: function (e) {
-        return null != e6 && (null == e.id || e.id === e6.id) && (tt(e6.type, e.isTemporary, e.untilAtLeast), ta());
+        return null != e4 && (null == e.id || e.id === e4.id) && (tt(e4.type, e.isTemporary, e.untilAtLeast), ta());
     },
     NOTICE_DISABLE: function (e) {
         let { noticeType: t } = e;
         return tt(t), ta();
     },
     LOGOUT: function () {
-        (e9 = {}), (e8 = {}), (e6 = null);
+        (e9 = {}), (e8 = {}), (e4 = null);
     },
     SUBSCRIPTION_PLANS_FETCH_SUCCESS: ta,
     AUTO_MODERATION_MENTION_RAID_DETECTION: ta,

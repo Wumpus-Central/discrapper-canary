@@ -1,5 +1,5 @@
 t.r(
-    (a.exports = {
+    (c.exports = {
         bar: "bar_b730cc",
         button: "button_b730cc",
         "custom-status": "custom-status_b730cc",
