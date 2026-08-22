@@ -1455,7 +1455,7 @@ if (
     n.e("859864").then(n.t.bind(n, 122123, 19));
 let e2 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 new eB.A().log(
-    `[BUILD INFO] Release Channel: ${e2}, Build Number: 599226, Version Hash: 76e8f9a95ac216a0e744d44762d90a9d2fe3f0f5`,
+    `[BUILD INFO] Release Channel: ${e2}, Build Number: 599230, Version Hash: e98d9d6192d91c05de994887b77b2c7890641fee`,
 ),
     D.A.setTags({ appContext: G.QCW }),
     eI.A.initBasic(),
@@ -20928,7 +20928,7 @@ let Nd = "isHideDevBanner",
                     className: ta()(No.Wz, No.mr),
                     children: [
                         (0, O.jsx)(Nl, { className: No.Kk }),
-                        tT.intl.format(tT.t.uyrfYF, { buildNumber: "599226" }),
+                        tT.intl.format(tT.t.uyrfYF, { buildNumber: "599230" }),
                         (0, O.jsx)(r, {}),
                     ],
                 })
@@ -22787,23 +22787,24 @@ function OB(e) {
     let { channel: t, canGoLive: n } = e,
         { reachedLimit: i } = (0, C4.A)(t),
         r = (0, CJ.qT)(t.id),
-        a = (0, el.bG)([Oi.A], () => Oi.A.getCurrentUserActiveStream()),
-        s = (0, Cf.A)(t.guild_id ?? G.dJq, t.id),
-        l = (0, Cm.A)(t.id),
-        o = (0, el.bG)([l0.A, X.default], () => l0.A.getVoiceState(t.guild_id, X.default.getId()));
-    if (t.isGuildStageVoice() && (null == o || o.suppress || !n || !(0, CJ.Bw)(t.guild_id))) return null;
-    let d = (t.isGuildVoice() || l) && s;
+        a = (0, CJ.Kl)(t.id),
+        s = (0, el.bG)([Oi.A], () => Oi.A.getCurrentUserActiveStream()),
+        l = (0, Cf.A)(t.guild_id ?? G.dJq, t.id),
+        o = (0, Cm.A)(t.id),
+        d = (0, el.bG)([l0.A, X.default], () => l0.A.getVoiceState(t.guild_id, X.default.getId()));
+    if (t.isGuildStageVoice() && (null == d || d.suppress || !n || !(0, CJ.Bw)(t.guild_id))) return null;
+    let c = (t.isGuildVoice() || o) && l;
     return (0, O.jsxs)("div", {
         className: CZ.uu,
         children: [
-            (0, O.jsx)(OM, { channel: t, enableActivities: d, disabled: !r && i }),
+            (0, O.jsx)(OM, { channel: t, enableActivities: c, disabled: !r && i }),
             (0, O.jsx)(OU, {
                 channel: t,
                 canGoLive: n,
-                enableActivities: d,
-                disabled: t.isGuildStageVoice() && ((r && null == a) || (!r && i)),
+                enableActivities: c,
+                disabled: t.isGuildStageVoice() && ((a && null == s) || (!r && i)),
             }),
-            d && (0, O.jsx)(OP, { channel: t, enableActivities: s }),
+            c && (0, O.jsx)(OP, { channel: t, enableActivities: l }),
             (0, CH.Ay)(t) ? (0, O.jsx)(Cq, { channel: t, focusProps: Oy }) : null,
         ],
     });
