@@ -1,43 +1,43 @@
-r.d(t, { default: () => K });
-var i = r(477900),
-    n = r(582128),
-    a = r(503698),
-    o = r.n(a),
-    s = r(435558),
-    l = r(830917),
-    u = r(189213),
-    c = r(259678),
-    d = r(140735),
-    g = r(17928),
-    m = r(765178),
-    h = r(123292),
-    E = r(695366),
-    A = r(661531),
-    f = r(834730),
-    p = r(475358),
-    x = r(191023),
-    R = r(106236),
-    C = r(866665),
-    T = r(939249),
-    D = r(831453),
-    I = r(775602),
-    y = r(793574),
-    w = r(688810),
-    _ = r(925895),
-    G = r(702211),
-    b = r(699576),
-    N = r(469054),
-    L = r(174459),
-    S = r(403362),
-    O = r(424632),
-    H = r(902916),
-    v = r(339984),
-    M = r(652215),
-    j = r(577718),
-    k = r(375708),
-    B = r(43850);
-let P = { x: 0, y: 0 };
-function z(e) {
+i.d(t, { default: () => K });
+var r = i(477900),
+    a = i(582128),
+    n = i(503698),
+    o = i.n(n),
+    s = i(435558),
+    l = i(830917),
+    u = i(189213),
+    c = i(259678),
+    d = i(140735),
+    m = i(17928),
+    g = i(765178),
+    h = i(123292),
+    f = i(695366),
+    E = i(661531),
+    R = i(834730),
+    A = i(475358),
+    p = i(191023),
+    T = i(106236),
+    x = i(866665),
+    C = i(939249),
+    D = i(831453),
+    y = i(775602),
+    I = i(793574),
+    w = i(688810),
+    _ = i(925895),
+    G = i(702211),
+    N = i(699576),
+    S = i(469054),
+    b = i(174459),
+    L = i(403362),
+    O = i(424632),
+    H = i(902916),
+    v = i(339984),
+    M = i(652215),
+    j = i(577718),
+    B = i(375708),
+    k = i(43850);
+let z = { x: 0, y: 0 };
+function P(e) {
     switch (e) {
         case v.HL.BANNER:
             return { height: v.yZ, width: v.nI };
@@ -57,18 +57,18 @@ function z(e) {
         case v.HL.PERSONAL_WIDGET_COVER:
             return { height: v.lF, width: v.aG };
         default:
-            return (0, S.xb)(e);
+            return (0, L.xb)(e);
     }
 }
 function V(e) {
-    let { zoomRatio: t, imageRotation: r, imageTransformCoordinates: i } = e;
-    return 1 !== t || 0 !== r || 0 !== i.x || 0 !== i.y;
+    let { zoomRatio: t, imageRotation: i, imageTransformCoordinates: r } = e;
+    return 1 !== t || 0 !== i || 0 !== r.x || 0 !== r.y;
 }
 let F = {
     imageDimensions: null,
     cropDimensions: { width: 0, height: 0 },
     dragBoundaries: { top: 0, bottom: 0, left: 0, right: 0 },
-    imageTransformCoordinates: P,
+    imageTransformCoordinates: z,
     imageRotation: 0,
     zoomRatio: 1,
     startingCoordinates: { x: 0, y: 0 },
@@ -123,10 +123,25 @@ function U(e, t) {
                     imageTransformCoordinates: t.imageTransformCoordinates,
                 }),
             };
+        case "RESTORE_TRANSFORM":
+            return {
+                ...e,
+                imageDimensions: t.imageDimensions,
+                cropDimensions: t.cropDimensions,
+                dragBoundaries: t.dragBoundaries,
+                imageTransformCoordinates: t.imageTransformCoordinates,
+                imageRotation: t.imageRotation,
+                zoomRatio: t.zoomRatio,
+                hasImageEdits: V({
+                    zoomRatio: t.zoomRatio,
+                    imageRotation: t.imageRotation,
+                    imageTransformCoordinates: t.imageTransformCoordinates,
+                }),
+            };
         case "RESET":
             return {
                 ...e,
-                imageTransformCoordinates: P,
+                imageTransformCoordinates: z,
                 zoomRatio: 1,
                 imageRotation: 0,
                 imageDimensions: t.imageDimensions ?? e.imageDimensions,
@@ -135,446 +150,478 @@ function U(e, t) {
                 hasImageEdits: !1,
             };
         default:
-            return (0, S.xb)(t);
+            return (0, L.xb)(t);
     }
 }
 function K(e) {
     let {
             file: t,
-            imageUri: r,
-            originalAsset: a,
-            transitionState: S,
+            imageUri: i,
+            originalAsset: n,
+            transitionState: L,
             onCrop: j,
             onClose: V,
             uploadType: K = v.HL.AVATAR,
             showUpsellHeader: $ = !1,
             analyticsPage: Q,
             returnRef: W,
+            initialTransform: X,
         } = e,
-        X = n.useRef(P),
-        Y = n.useRef(null),
-        Z = n.useRef(null),
-        J = n.useRef(null),
-        q = n.useRef(null),
-        ee = n.useId(),
-        et = n.useRef(null),
-        [er, ei] = n.useReducer(U, F),
+        Y = a.useRef(z),
+        Z = a.useRef(null),
+        J = a.useRef(null),
+        q = a.useRef(null),
+        ee = a.useRef(null),
+        et = a.useId(),
+        ei = a.useRef(null),
+        er = a.useRef(!1),
+        [ea, en] = a.useReducer(U, F),
         {
-            cropDimensions: en,
-            dragBoundaries: ea,
-            imageDimensions: eo,
-            imageRotation: es,
-            imageTransformCoordinates: el,
-            zoomRatio: eu,
-            startingCoordinates: ec,
-            isDragging: ed,
-            hasImageEdits: eg,
-        } = er,
-        [em, eh] = n.useState(!1),
-        [eE, eA] = n.useState(!1),
-        [ef, ep] = n.useState(0),
-        [ex, eR] = n.useState(!1),
-        [eC, eT] = n.useState("x"),
-        eD = (0, g.bG)([I.Ay], () => I.Ay.keyboardModeEnabled),
-        { analyticsLocations: eI } = (0, w.Ay)(y.A.IMAGE_CROPPING_MODAL),
-        { isGIF: ey, isCheckingAnimation: ew, isEditableAnimatedImage: e_ } = (0, H._)(t),
-        eG = eE || em || ew,
-        eb = null != eo && ea.right > 0,
-        eN = null != eo && ea.top > 0,
-        eL = eb || eN;
-    n.useEffect(() => {
-        "x" === eC && !eb && eN ? eT("y") : "y" === eC && !eN && eb && eT("x");
-    }, [eC, eb, eN]);
-    let eS = ea.right > 0 ? Math.round(50 + (el.x / ea.right) * 50) : 50,
-        eO = ea.top > 0 ? Math.round(50 - (el.y / ea.top) * 50) : 50,
-        eH = 2 * ea.right + en.width,
-        ev = 2 * ea.top + en.height,
-        eM = eH > 0 ? Math.round(((ea.right - el.x) / eH) * 100) : 0,
-        ej = eH > 0 ? Math.round(((ea.right + el.x) / eH) * 100) : 0,
-        ek = ev > 0 ? Math.round(((ea.top - el.y) / ev) * 100) : 0,
-        eB = ev > 0 ? Math.round(((ea.top + el.y) / ev) * 100) : 0;
-    n.useEffect(() => {
-        ey &&
+            cropDimensions: eo,
+            dragBoundaries: es,
+            imageDimensions: el,
+            imageRotation: eu,
+            imageTransformCoordinates: ec,
+            zoomRatio: ed,
+            startingCoordinates: em,
+            isDragging: eg,
+            hasImageEdits: eh,
+        } = ea,
+        [ef, eE] = a.useState(!1),
+        [eR, eA] = a.useState(!1),
+        [ep, eT] = a.useState(0),
+        [ex, eC] = a.useState(X?.zoomRatio ?? 1),
+        [eD, ey] = a.useState(!1),
+        [eI, ew] = a.useState("x"),
+        e_ = (0, m.bG)([y.Ay], () => y.Ay.keyboardModeEnabled),
+        { analyticsLocations: eG } = (0, w.Ay)(I.A.IMAGE_CROPPING_MODAL),
+        { isGIF: eN, isCheckingAnimation: eS, isEditableAnimatedImage: eb } = (0, H._)(t),
+        eL = eR || ef || eS,
+        eO = null != el && es.right > 0,
+        eH = null != el && es.top > 0,
+        ev = eO || eH;
+    a.useEffect(() => {
+        "x" === eI && !eO && eH ? ew("y") : "y" === eI && !eH && eO && ew("x");
+    }, [eI, eO, eH]);
+    let eM = es.right > 0 ? Math.round(50 + (ec.x / es.right) * 50) : 50,
+        ej = es.top > 0 ? Math.round(50 - (ec.y / es.top) * 50) : 50,
+        eB = 2 * es.right + eo.width,
+        ek = 2 * es.top + eo.height,
+        ez = eB > 0 ? Math.round(((es.right - ec.x) / eB) * 100) : 0,
+        eP = eB > 0 ? Math.round(((es.right + ec.x) / eB) * 100) : 0,
+        eV = ek > 0 ? Math.round(((es.top - ec.y) / ek) * 100) : 0,
+        eF = ek > 0 ? Math.round(((es.top + ec.y) / ek) * 100) : 0;
+    a.useEffect(() => {
+        eN &&
             $ &&
-            L.default.track(M.HAw.OPEN_MODAL, {
+            b.default.track(M.HAw.OPEN_MODAL, {
                 type: M.JJy.CROP_GIF_MODAL,
                 location: { page: Q },
-                location_stack: eI,
+                location_stack: eG,
                 upload_type: K,
             });
-    }, [$, Q, ey, eI, K]);
-    let eP = n.useCallback(
-            (e, t, r, i) => {
-                (X.current = (0, O.F3)(e, t, r)),
-                    null != Y.current &&
-                        (Y.current.style.transform = `translate3d(${X.current.x}px, ${X.current.y}px, 0) rotate(${i}deg)`);
+    }, [$, Q, eN, eG, K]);
+    let eU = a.useCallback(
+            (e, t, i, r) => {
+                (Y.current = (0, O.F3)(e, t, i)),
+                    null != Z.current &&
+                        (Z.current.style.transform = `translate3d(${Y.current.x}px, ${Y.current.y}px, 0) rotate(${r}deg)`);
             },
-            [Y],
+            [Z],
         ),
-        ez = n.useCallback(() => {
-            if (null == Y.current || eu > 1) return;
-            let { width: e, height: t } = Y.current.getBoundingClientRect(),
-                { width: r, height: i } = (0, O.Qx)(K, e, t),
-                n = (0, O.Qp)(K, r, i, t),
-                a = (0, O.l$)(r, i, n);
-            ei({
+        eK = a.useCallback(() => {
+            if (null == Z.current || ed > 1) return;
+            let { width: e, height: t } = Z.current.getBoundingClientRect(),
+                { width: i, height: r } = (0, O.Qx)(K, e, t),
+                a = (0, O.Qp)(K, i, r, t),
+                n = (0, O.l$)(i, r, a);
+            if (null != X && !er.current) {
+                er.current = !0;
+                let e = (function (e, t, i, r) {
+                    let a = t,
+                        n = i;
+                    for (let t = 0; t < r.imageRotation; t += 90) {
+                        if (a.width === a.height) continue;
+                        let { width: t, height: i } = a;
+                        (a = (0, O.Qx)(e, i, t)), (n = (0, O.Qp)(e, a.width, a.height, t));
+                    }
+                    let o = (0, O.l$)(a.width * r.zoomRatio, a.height * r.zoomRatio, n);
+                    return {
+                        imageDimensions: a,
+                        cropDimensions: n,
+                        dragBoundaries: o,
+                        imageTransformCoordinates: (0, O.F3)(r.offsetRatio.x * o.right, r.offsetRatio.y * o.top, o),
+                    };
+                })(K, { width: i, height: r }, a, X);
+                eU(e.imageTransformCoordinates.x, e.imageTransformCoordinates.y, e.dragBoundaries, X.imageRotation),
+                    en({ type: "RESTORE_TRANSFORM", ...e, imageRotation: X.imageRotation, zoomRatio: X.zoomRatio });
+                return;
+            }
+            en({
                 type: "SET_DIMENSIONS",
-                imageDimensions: { width: r, height: i },
-                cropDimensions: n,
-                dragBoundaries: a,
+                imageDimensions: { width: i, height: r },
+                cropDimensions: a,
+                dragBoundaries: n,
             });
-        }, [K, eu]),
-        eV = n.useCallback((e) => {
-            ei({
+        }, [K, ed, X, eU]),
+        e$ = a.useCallback((e) => {
+            en({
                 type: "START_DRAGGING_IMAGE",
-                startingCoordinates: { x: e.clientX - X.current.x, y: e.clientY - X.current.y },
+                startingCoordinates: { x: e.clientX - Y.current.x, y: e.clientY - Y.current.y },
             });
         }, []),
-        eF = n.useCallback(
+        eQ = a.useCallback(
             (e) => {
-                let { x: t, y: r } = X.current;
-                ed && (e.clientX !== t || e.clientY !== r) && eP(e.clientX - ec.x, e.clientY - ec.y, ea, es);
+                let { x: t, y: i } = Y.current;
+                eg && (e.clientX !== t || e.clientY !== i) && eU(e.clientX - em.x, e.clientY - em.y, es, eu);
             },
-            [ea, es, ed, ec.x, ec.y, eP],
+            [es, eu, eg, em.x, em.y, eU],
         ),
-        eU = n.useCallback(() => {
-            ei({ type: "STOP_DRAGGING_IMAGE", imageTransformCoordinates: X.current });
+        eW = a.useCallback(() => {
+            en({ type: "STOP_DRAGGING_IMAGE", imageTransformCoordinates: Y.current });
         }, []),
-        eK = n.useCallback(
+        eX = a.useCallback(
             (e) => {
-                if (null == eo) return;
-                let { width: t, height: r } = eo,
-                    i = (0, O.l$)(t * e, r * e, en),
-                    { x: n, y: a } = X.current;
-                ((0, s.inRange)(n, i.right, i.left) && (0, s.inRange)(a, i.top, i.bottom)) || eP(n, a, i, es),
-                    ei({
+                if (null == el) return;
+                let { width: t, height: i } = el,
+                    r = (0, O.l$)(t * e, i * e, eo),
+                    { x: a, y: n } = Y.current;
+                ((0, s.inRange)(a, r.right, r.left) && (0, s.inRange)(n, r.top, r.bottom)) || eU(a, n, r, eu),
+                    en({
                         type: "SET_IMAGE_ZOOM_RATIO",
                         zoomRatio: e,
-                        dragBoundaries: i,
-                        imageTransformCoordinates: X.current,
+                        dragBoundaries: r,
+                        imageTransformCoordinates: Y.current,
                     });
             },
-            [en, eo, es, eP],
+            [eo, el, eu, eU],
         ),
-        e$ = n.useCallback(
+        eY = a.useCallback(
             (e, t) => {
-                let { width: r, height: i } = e,
-                    { width: n, height: a } = (0, O.Qx)(K, i, r),
-                    o = (0, O.Qp)(K, n, a, r),
-                    s = (0, O.l$)(n * t, a * t, o);
-                return { newImageDimensions: { width: n, height: a }, newCropDimensions: o, newDragBoundaries: s };
+                let { width: i, height: r } = e,
+                    { width: a, height: n } = (0, O.Qx)(K, r, i),
+                    o = (0, O.Qp)(K, a, n, i),
+                    s = (0, O.l$)(a * t, n * t, o);
+                return { newImageDimensions: { width: a, height: n }, newCropDimensions: o, newDragBoundaries: s };
             },
             [K],
         ),
-        eQ = n.useCallback(() => {
+        eZ = a.useCallback(() => {
             var e;
-            if (null == Y.current || null == eo) return;
-            let t = (es + 90) % 360;
-            m.O.announce(k.intl.formatToPlainString(k.t.uYhsHT, { degrees: t }));
-            let { x: r, y: i } = ((e = X.current.x), { x: -X.current.y, y: e });
-            if (eo.width !== eo.height) {
-                let { newImageDimensions: e, newCropDimensions: n, newDragBoundaries: a } = e$(eo, eu);
-                eP(r, i, a, t),
-                    ei({
+            if (null == Z.current || null == el) return;
+            let t = (eu + 90) % 360;
+            g.O.announce(B.intl.formatToPlainString(B.t.uYhsHT, { degrees: t }));
+            let { x: i, y: r } = ((e = Y.current.x), { x: -Y.current.y, y: e });
+            if (el.width !== el.height) {
+                let { newImageDimensions: e, newCropDimensions: a, newDragBoundaries: n } = eY(el, ed);
+                eU(i, r, n, t),
+                    en({
                         type: "ROTATE_IMAGE",
-                        imageTransformCoordinates: X.current,
+                        imageTransformCoordinates: Y.current,
                         imageRotation: t,
                         imageDimensions: e,
-                        cropDimensions: n,
-                        dragBoundaries: a,
+                        cropDimensions: a,
+                        dragBoundaries: n,
                     });
             } else
-                eP(r, i, ea, t), ei({ type: "ROTATE_IMAGE", imageTransformCoordinates: X.current, imageRotation: t });
-        }, [ea, e$, eo, es, eP, eu]),
-        eW = n.useCallback(() => {
-            if (null != Y.current && null != eo) {
-                if (eo.width !== eo.height && (es - 0) % 180 != 0) {
-                    let { newImageDimensions: e, newCropDimensions: t, newDragBoundaries: r } = e$(eo, 1);
-                    ei({ type: "RESET", imageDimensions: e, cropDimensions: t, dragBoundaries: r }), eP(0, 0, r, 0);
+                eU(i, r, es, t), en({ type: "ROTATE_IMAGE", imageTransformCoordinates: Y.current, imageRotation: t });
+        }, [es, eY, el, eu, eU, ed]),
+        eJ = a.useCallback(() => {
+            if (null != Z.current && null != el) {
+                if (el.width !== el.height && (eu - 0) % 180 != 0) {
+                    let { newImageDimensions: e, newCropDimensions: t, newDragBoundaries: i } = eY(el, 1);
+                    en({ type: "RESET", imageDimensions: e, cropDimensions: t, dragBoundaries: i }), eU(0, 0, i, 0);
                 } else {
-                    let e = (0, O.l$)(+eo.width, +eo.height, en);
-                    ei({ type: "RESET", dragBoundaries: e }), eP(0, 0, e, 0);
+                    let e = (0, O.l$)(+el.width, +el.height, eo);
+                    en({ type: "RESET", dragBoundaries: e }), eU(0, 0, e, 0);
                 }
-                ep((e) => e + 1);
+                eC(1), eT((e) => e + 1);
             }
-        }, [en, e$, eo, es, eP]),
-        eX = n.useCallback(() => {
-            let e = z(K);
+        }, [eo, eY, el, eu, eU]),
+        eq = a.useCallback(() => {
+            let e = P(K);
             return e.width !== e.height;
         }, [K]),
-        eY = n.useCallback(() => {
-            if (null == eo) return {};
-            let e = eo.width / eo.height,
-                t = eX() && e > v.wL ? en.height / eo.height : 1,
-                { width: r, height: i } = (function (e, t) {
-                    let { width: r, height: i } = e;
-                    return t % 180 != 0 ? { width: i, height: r } : { width: r, height: i };
-                })(eo, es);
-            return { width: r * eu * t, minWidth: r * eu * t, height: i * eu * t, minHeight: i * eu * t };
-        }, [en.height, eo, es, eX, eu]),
-        eZ = n.useCallback(
+        e0 = a.useCallback(() => {
+            if (null == el) return {};
+            let e = el.width / el.height,
+                t = eq() && e > v.wL ? eo.height / el.height : 1,
+                { width: i, height: r } = (function (e, t) {
+                    let { width: i, height: r } = e;
+                    return t % 180 != 0 ? { width: r, height: i } : { width: i, height: r };
+                })(el, eu);
+            return { width: i * ed * t, minWidth: i * ed * t, height: r * ed * t, minHeight: r * ed * t };
+        }, [eo.height, el, eu, eq, ed]),
+        e1 = a.useCallback(
             (e) => {
-                if (eG) return;
-                let { key: t, shiftKey: r } = e;
+                if (eL) return;
+                let { key: t, shiftKey: i } = e;
                 if (["Home", "End", "PageUp", "PageDown"].includes(t)) return void e.stopPropagation();
                 if (!["ArrowLeft", "ArrowRight", "ArrowUp", "ArrowDown"].includes(t)) return;
                 e.stopPropagation(), e.preventDefault();
-                let i = r ? 40 : 4,
-                    n = "ArrowLeft" === t ? -i : "ArrowRight" === t ? i : 0,
-                    a = "ArrowUp" === t ? -i : "ArrowDown" === t ? i : 0,
-                    o = 0 !== n,
-                    s = o ? J : q;
-                if (o ? eb : eN) {
-                    let { x: e, y: t } = X.current;
-                    eP(e + n, t + a, ea, es),
-                        ei({ type: "STOP_DRAGGING_IMAGE", imageTransformCoordinates: X.current }),
-                        eT(o ? "x" : "y"),
+                let r = i ? 40 : 4,
+                    a = "ArrowLeft" === t ? -r : "ArrowRight" === t ? r : 0,
+                    n = "ArrowUp" === t ? -r : "ArrowDown" === t ? r : 0,
+                    o = 0 !== a,
+                    s = o ? q : ee;
+                if (o ? eO : eH) {
+                    let { x: e, y: t } = Y.current;
+                    eU(e + a, t + n, es, eu),
+                        en({ type: "STOP_DRAGGING_IMAGE", imageTransformCoordinates: Y.current }),
+                        ew(o ? "x" : "y"),
                         s.current?.focus({ preventScroll: !0 });
                 }
             },
-            [eb, eN, eG, ea, es, eP],
+            [eO, eH, eL, es, eu, eU],
         ),
-        eJ = n.useCallback(
+        e5 = a.useCallback(
             (e) => {
-                eG ||
-                    !eb ||
-                    (eP(ea.right > 0 ? ((Number(e.target.value) - 50) * ea.right) / 50 : 0, X.current.y, ea, es),
-                    ei({ type: "STOP_DRAGGING_IMAGE", imageTransformCoordinates: X.current }));
+                eL ||
+                    !eO ||
+                    (eU(es.right > 0 ? ((Number(e.target.value) - 50) * es.right) / 50 : 0, Y.current.y, es, eu),
+                    en({ type: "STOP_DRAGGING_IMAGE", imageTransformCoordinates: Y.current }));
             },
-            [eb, eG, ea, es, eP],
+            [eO, eL, es, eu, eU],
         ),
-        eq = n.useCallback(
+        e3 = a.useCallback(
             (e) => {
-                if (eG || !eN) return;
-                let t = ea.top > 0 ? ((50 - Number(e.target.value)) * ea.top) / 50 : 0;
-                eP(X.current.x, t, ea, es), ei({ type: "STOP_DRAGGING_IMAGE", imageTransformCoordinates: X.current });
+                if (eL || !eH) return;
+                let t = es.top > 0 ? ((50 - Number(e.target.value)) * es.top) / 50 : 0;
+                eU(Y.current.x, t, es, eu), en({ type: "STOP_DRAGGING_IMAGE", imageTransformCoordinates: Y.current });
             },
-            [eN, eG, ea, es, eP],
+            [eH, eL, es, eu, eU],
         ),
-        e0 = n.useCallback(async () => {
-            let e, r;
-            if (null == Y.current) return;
+        e9 = a.useCallback(async () => {
+            var e;
+            let i, r;
+            if (null == Z.current) return;
             eA(!0);
-            let i = Y.current,
-                n = z(K);
-            if (e_)
+            let a = Z.current,
+                o = P(K);
+            if (eb)
                 try {
-                    let { result: a, cancelFn: o } = await (0, O.ny)({
+                    let { result: e, cancelFn: n } = await (0, O.ny)({
                         file: t,
-                        image: i,
-                        cropDimensions: en,
-                        cropOriginCoordinates: X.current,
-                        maxDimensions: n,
-                        imageRotation: es,
+                        image: a,
+                        cropDimensions: eo,
+                        cropOriginCoordinates: Y.current,
+                        maxDimensions: o,
+                        imageRotation: eu,
                     });
-                    (et.current = o), (e = await a), (et.current = null), (r = await (0, O.MS)(e).catch(() => void 0));
+                    (ei.current = n), (i = await e), (ei.current = null), (r = await (0, O.MS)(i).catch(() => void 0));
                 } catch (e) {
                     throw (
-                        (et.current?.(),
-                        (et.current = null),
+                        (ei.current?.(),
+                        (ei.current = null),
                         Error(`Error cropping animated image: ${e instanceof Error ? e.toString() : String(e)}`))
                     );
                 }
             else
-                r = e = (0, l.iL)({
-                    image: i,
-                    cropDimensions: en,
-                    cropOriginCoordinates: X.current,
-                    maxDimensions: n,
-                    imageRotation: es,
+                r = i = (0, l.iL)({
+                    image: a,
+                    cropDimensions: eo,
+                    cropOriginCoordinates: Y.current,
+                    maxDimensions: o,
+                    imageRotation: eu,
                 });
             await j({
                 assetOrigin: (function (e) {
-                    let { hasImageEdits: t, hasOriginalAsset: r } = e;
-                    return r ? (t ? N.E.EDITED_ARCHIVED_ASSET : N.E.ARCHIVED_ASSET) : N.E.NEW_ASSET;
-                })({ hasImageEdits: eg, hasOriginalAsset: null != a }),
-                imageUri: e,
+                    let { hasImageEdits: t, hasOriginalAsset: i } = e;
+                    return i ? (t ? S.E.EDITED_ARCHIVED_ASSET : S.E.ARCHIVED_ASSET) : S.E.NEW_ASSET;
+                })({ hasImageEdits: eh, hasOriginalAsset: null != n }),
+                imageUri: i,
                 staticImageUri: r,
                 file: t,
-                originalAsset: a,
+                originalAsset: n,
+                transform: {
+                    zoomRatio: ed,
+                    imageRotation: eu,
+                    offsetRatio:
+                        ((e = Y.current), { x: es.right > 0 ? e.x / es.right : 0, y: es.top > 0 ? e.y / es.top : 0 }),
+                },
             }),
                 eA(!1),
                 await V();
-        }, [en, t, eg, es, e_, V, j, a, K]),
-        e1 = n.useCallback(async () => {
-            if (null != et.current) {
-                et.current(), (et.current = null), eA(!1);
+        }, [eo, es, t, eh, eu, eb, V, j, n, K, ed]),
+        e6 = a.useCallback(async () => {
+            if (null != ei.current) {
+                ei.current(), (ei.current = null), eA(!1);
                 return;
             }
             await V();
         }, [V]);
-    n.useEffect(
+    a.useEffect(
         () => (
-            window.addEventListener("mouseup", eU),
-            window.addEventListener("resize", ez),
+            window.addEventListener("mouseup", eW),
+            window.addEventListener("resize", eK),
             () => {
-                window.removeEventListener("mouseup", eU), window.removeEventListener("resize", ez);
+                window.removeEventListener("mouseup", eW), window.removeEventListener("resize", eK);
             }
         ),
-        [ez, eU],
+        [eK, eW],
     ),
-        n.useEffect(() => {
-            if (ed) return window.addEventListener("mousemove", eF), () => window.removeEventListener("mousemove", eF);
-        }, [eF, ed]),
-        n.useEffect(() => {
-            if (null != et.current) return () => et.current?.();
+        a.useEffect(() => {
+            if (eg) return window.addEventListener("mousemove", eQ), () => window.removeEventListener("mousemove", eQ);
+        }, [eQ, eg]),
+        a.useEffect(() => {
+            if (null != ei.current) return () => ei.current?.();
         }, []);
-    let e5 = K === v.HL.AVATAR || K === v.HL.BANNER,
-        e3 = (0, G.b)(!e5);
-    return (0, i.jsx)(w.f5, {
-        value: eI,
-        children: (0, i.jsxs)(u.Modal, {
-            title: k.intl.string(k.t.DxAYCF),
+    let e2 = K === v.HL.AVATAR || K === v.HL.BANNER,
+        e4 = (0, G.b)(!e2);
+    return (0, r.jsx)(w.f5, {
+        value: eG,
+        children: (0, r.jsxs)(u.Modal, {
+            title: B.intl.string(B.t.DxAYCF),
             size: "md",
-            actionBarInput: (0, i.jsx)(h.Q, {
-                text: k.intl.string(k.t.yBZMsQ),
+            actionBarInput: (0, r.jsx)(h.Q, {
+                text: B.intl.string(B.t.yBZMsQ),
                 textVariant: "text-md/medium",
-                onClick: eW,
-                disabled: !eg,
+                onClick: eJ,
+                disabled: !eh,
             }),
             actions: [
-                { text: k.intl.string(k.t["9TG40l"]), onClick: e1, variant: "secondary" },
+                { text: B.intl.string(B.t["9TG40l"]), onClick: e6, variant: "secondary" },
                 {
-                    text: k.intl.string(k.t.ZSHmKD),
-                    onClick: e0,
+                    text: B.intl.string(B.t.ZSHmKD),
+                    onClick: e9,
                     variant: "primary",
                     autoFocus: !1,
-                    loading: eE,
-                    disabled: eG,
+                    loading: eR,
+                    disabled: eL,
                 },
             ],
-            transitionState: S,
+            transitionState: L,
             returnRef: W,
             onClose: V,
             children: [
                 $ &&
-                    !e3 &&
-                    (0, i.jsx)(_.A, {
+                    !e4 &&
+                    (0, r.jsx)(_.A, {
                         type: K,
                         analyticsPage: Q,
                         analyticsSection: M.JJy.CROP_GIF_MODAL,
-                        isGIF: ey,
-                        banner: r,
+                        isGIF: eN,
+                        banner: i,
                     }),
-                (0, i.jsxs)("div", {
-                    className: B.jE,
+                (0, r.jsxs)("div", {
+                    className: k.jE,
                     children: [
-                        (0, i.jsxs)("div", {
+                        (0, r.jsxs)("div", {
                             role: "group",
-                            "aria-label": k.intl.formatToPlainString(k.t["40CNiu"], { filename: t.name }),
+                            "aria-label": B.intl.formatToPlainString(B.t["40CNiu"], { filename: t.name }),
                             children: [
-                                (0, i.jsx)(c.vN, {
+                                (0, r.jsx)(c.vN, {
                                     within: !0,
-                                    ringTarget: Z,
-                                    children: (0, i.jsxs)("div", {
-                                        className: B.oW,
-                                        ref: Z,
-                                        onFocus: () => eR(!0),
+                                    ringTarget: J,
+                                    children: (0, r.jsxs)("div", {
+                                        className: k.oW,
+                                        ref: J,
+                                        onFocus: () => ey(!0),
                                         onBlur: (e) => {
-                                            e.currentTarget.contains(e.relatedTarget) || eR(!1);
+                                            e.currentTarget.contains(e.relatedTarget) || ey(!1);
                                         },
                                         children: [
-                                            !em &&
-                                                (0, i.jsxs)(d.A, {
-                                                    onKeyDown: eZ,
+                                            !ef &&
+                                                (0, r.jsxs)(d.A, {
+                                                    onKeyDown: e1,
                                                     children: [
-                                                        (0, i.jsx)("input", {
-                                                            ref: J,
-                                                            type: "range",
-                                                            tabIndex: "x" !== eC ? -1 : 0,
-                                                            "aria-label": k.intl.string(k.t.IBQxkI),
-                                                            "aria-describedby": eL ? void 0 : ee,
-                                                            "aria-orientation": "horizontal",
-                                                            value: eS,
-                                                            min: 0,
-                                                            max: 100,
-                                                            step: 1,
-                                                            "aria-valuetext": k.intl.formatToPlainString(
-                                                                k.t["8drK3z"],
-                                                                { leftValue: eM, rightValue: ej },
-                                                            ),
-                                                            disabled: eG,
-                                                            onFocus: () => eT("x"),
-                                                            onChange: eJ,
-                                                        }),
-                                                        (0, i.jsx)("input", {
+                                                        (0, r.jsx)("input", {
                                                             ref: q,
                                                             type: "range",
-                                                            tabIndex: "y" !== eC ? -1 : 0,
-                                                            "aria-label": k.intl.string(k.t.SXIgR9),
-                                                            "aria-describedby": eL ? void 0 : ee,
-                                                            "aria-orientation": "vertical",
-                                                            value: eO,
+                                                            tabIndex: "x" !== eI ? -1 : 0,
+                                                            "aria-label": B.intl.string(B.t.IBQxkI),
+                                                            "aria-describedby": ev ? void 0 : et,
+                                                            "aria-orientation": "horizontal",
+                                                            value: eM,
                                                             min: 0,
                                                             max: 100,
                                                             step: 1,
-                                                            "aria-valuetext": k.intl.formatToPlainString(k.t.Mrgs5G, {
-                                                                topValue: ek,
-                                                                bottomValue: eB,
+                                                            "aria-valuetext": B.intl.formatToPlainString(
+                                                                B.t["8drK3z"],
+                                                                { leftValue: ez, rightValue: eP },
+                                                            ),
+                                                            disabled: eL,
+                                                            onFocus: () => ew("x"),
+                                                            onChange: e5,
+                                                        }),
+                                                        (0, r.jsx)("input", {
+                                                            ref: ee,
+                                                            type: "range",
+                                                            tabIndex: "y" !== eI ? -1 : 0,
+                                                            "aria-label": B.intl.string(B.t.SXIgR9),
+                                                            "aria-describedby": ev ? void 0 : et,
+                                                            "aria-orientation": "vertical",
+                                                            value: ej,
+                                                            min: 0,
+                                                            max: 100,
+                                                            step: 1,
+                                                            "aria-valuetext": B.intl.formatToPlainString(B.t.Mrgs5G, {
+                                                                topValue: eV,
+                                                                bottomValue: eF,
                                                             }),
-                                                            disabled: eG,
-                                                            onFocus: () => eT("y"),
-                                                            onChange: eq,
+                                                            disabled: eL,
+                                                            onFocus: () => ew("y"),
+                                                            onChange: e3,
                                                         }),
                                                     ],
                                                 }),
-                                            em
-                                                ? (0, i.jsxs)("div", {
-                                                      className: B.Un,
+                                            ef
+                                                ? (0, r.jsxs)("div", {
+                                                      className: k.Un,
                                                       children: [
-                                                          (0, i.jsx)(E.E, {
+                                                          (0, r.jsx)(f.E, {
                                                               size: "sm",
-                                                              color: A.A.colors.TEXT_FEEDBACK_CRITICAL,
+                                                              color: E.A.colors.TEXT_FEEDBACK_CRITICAL,
                                                           }),
-                                                          (0, i.jsx)(f.E, {
+                                                          (0, r.jsx)(R.E, {
                                                               variant: "text-md/normal",
                                                               color: "text-feedback-critical",
-                                                              children: k.intl.string(k.t["+ITMYX"]),
+                                                              children: B.intl.string(B.t["+ITMYX"]),
                                                           }),
                                                       ],
                                                   })
-                                                : (0, i.jsxs)(i.Fragment, {
+                                                : (0, r.jsxs)(r.Fragment, {
                                                       children: [
-                                                          (0, i.jsx)("img", {
-                                                              onLoad: ez,
-                                                              onError: () => eh(!0),
+                                                          (0, r.jsx)("img", {
+                                                              onLoad: eK,
+                                                              onError: () => eE(!0),
                                                               style: {
-                                                                  opacity: +(null != eo),
-                                                                  transform: `translate3d(${X.current.x}px, ${X.current.y}px, 0) rotate(${es}deg)`,
-                                                                  ...eY(),
+                                                                  opacity: +(null != el),
+                                                                  transform: `translate3d(${Y.current.x}px, ${Y.current.y}px, 0) rotate(${eu}deg)`,
+                                                                  ...e0(),
                                                               },
-                                                              className: o()(eE ? B.As : B.nu, B.hh),
-                                                              src: r,
+                                                              className: o()(eR ? k.As : k.nu, k.hh),
+                                                              src: i,
                                                               crossOrigin: "anonymous",
                                                               alt: "",
                                                               "aria-hidden": !0,
-                                                              ref: Y,
-                                                              onMouseDown: eV,
+                                                              ref: Z,
+                                                              onMouseDown: e$,
                                                               draggable: !1,
                                                           }),
-                                                          (0, i.jsx)("div", {
+                                                          (0, r.jsx)("div", {
                                                               className: (function (e) {
                                                                   switch (e) {
                                                                       case v.HL.GUILD_ICON:
-                                                                          return B.$A;
+                                                                          return k.$A;
                                                                       case v.HL.BANNER:
                                                                       case v.HL.GUILD_BANNER:
                                                                       case v.HL.VIDEO_BACKGROUND:
                                                                       case v.HL.SCHEDULED_EVENT_IMAGE:
                                                                       case v.HL.HOME_HEADER:
                                                                       case v.HL.PERSONAL_WIDGET_COVER:
-                                                                          return B.rn;
+                                                                          return k.rn;
                                                                       case v.HL.AVATAR:
                                                                       case v.HL.AVATAR_DECORATION:
-                                                                          return B._h;
+                                                                          return k._h;
                                                                       case v.HL.PERSONAL_WIDGET_FIELD:
-                                                                          return B.j9;
+                                                                          return k.j9;
                                                                   }
                                                               })(K),
                                                               style: {
-                                                                  opacity: +(null != eo),
-                                                                  width: en.width,
-                                                                  height: en.height,
+                                                                  opacity: +(null != el),
+                                                                  width: eo.width,
+                                                                  height: eo.height,
                                                               },
                                                           }),
                                                       ],
@@ -582,71 +629,71 @@ function K(e) {
                                         ],
                                     }),
                                 }),
-                                (0, i.jsx)(d.A, { id: ee, children: eL || em ? null : k.intl.string(k.t.jUze6F) }),
-                                eD &&
-                                    !em &&
-                                    (0, i.jsx)(f.E, {
+                                (0, r.jsx)(d.A, { id: et, children: ev || ef ? null : B.intl.string(B.t.jUze6F) }),
+                                e_ &&
+                                    !ef &&
+                                    (0, r.jsx)(R.E, {
                                         variant: "text-xs/normal",
                                         color: "text-muted",
-                                        className: o()(B.xi, { [B.p0]: !ex && eL }),
+                                        className: o()(k.xi, { [k.p0]: !eD && ev }),
                                         "aria-hidden": !0,
-                                        children: eL
-                                            ? k.intl.format(k.t.YIfE3a, {
+                                        children: ev
+                                            ? B.intl.format(B.t.YIfE3a, {
                                                   arrowKeys: "Arrow keys",
                                                   arrowKeysHook: (e, t) =>
-                                                      (0, i.jsx)(p.e, { shortcut: "up+down+left+right" }, t),
+                                                      (0, r.jsx)(A.e, { shortcut: "up+down+left+right" }, t),
                                                   shiftKey: "Shift",
-                                                  shiftKeyHook: (e, t) => (0, i.jsx)(p.e, { shortcut: "shift" }, t),
+                                                  shiftKeyHook: (e, t) => (0, r.jsx)(A.e, { shortcut: "shift" }, t),
                                               })
-                                            : k.intl.string(k.t.jUze6F),
+                                            : B.intl.string(B.t.jUze6F),
                                     }),
-                                (0, i.jsxs)("div", {
-                                    className: B.bK,
+                                (0, r.jsxs)("div", {
+                                    className: k.bK,
                                     children: [
-                                        (0, i.jsxs)("div", {
-                                            className: B.mu,
+                                        (0, r.jsxs)("div", {
+                                            className: k.mu,
                                             children: [
-                                                (0, i.jsx)(x.ImageIcon, {
+                                                (0, r.jsx)(p.ImageIcon, {
                                                     size: "xxs",
                                                     color: "currentColor",
-                                                    className: B.HQ,
+                                                    className: k.HQ,
                                                 }),
-                                                (0, i.jsx)(
-                                                    R.A,
+                                                (0, r.jsx)(
+                                                    T.A,
                                                     {
-                                                        className: B.aw,
-                                                        initialValue: 1,
+                                                        className: k.aw,
+                                                        initialValue: ex,
                                                         minValue: 1,
                                                         maxValue: 2,
                                                         keyboardStep: 0.025,
-                                                        asValueChanges: eK,
-                                                        disabled: eG,
+                                                        asValueChanges: eX,
+                                                        disabled: eL,
                                                         equidistant: !0,
                                                         hideBubble: !0,
-                                                        "aria-label": k.intl.string(k.t.EqiCcq),
+                                                        "aria-label": B.intl.string(B.t.EqiCcq),
                                                         getAriaValueText: (e) =>
-                                                            k.intl.formatToPlainString(k.t.GHwBy5, {
+                                                            B.intl.formatToPlainString(B.t.GHwBy5, {
                                                                 percent: Math.round(100 * e),
                                                             }),
                                                     },
-                                                    ef,
+                                                    ep,
                                                 ),
-                                                (0, i.jsx)(x.ImageIcon, {
+                                                (0, r.jsx)(p.ImageIcon, {
                                                     size: "md",
                                                     color: "currentColor",
-                                                    className: B.HQ,
+                                                    className: k.HQ,
                                                 }),
                                             ],
                                         }),
-                                        (0, i.jsx)(C.m, {
-                                            text: k.intl.string(k.t.E36Wd4),
+                                        (0, r.jsx)(x.m, {
+                                            text: B.intl.string(B.t.E36Wd4),
                                             ariaHidden: !0,
-                                            children: (0, i.jsx)(T.D, {
-                                                className: o()(B.On, { [B.r9]: eG }),
-                                                onClick: eG ? void 0 : eQ,
-                                                "aria-label": k.intl.string(k.t.LzFiKG),
-                                                "aria-disabled": eG,
-                                                children: (0, i.jsx)(D.H, { size: "md", color: "currentColor" }),
+                                            children: (0, r.jsx)(C.D, {
+                                                className: o()(k.On, { [k.r9]: eL }),
+                                                onClick: eL ? void 0 : eZ,
+                                                "aria-label": B.intl.string(B.t.LzFiKG),
+                                                "aria-disabled": eL,
+                                                children: (0, r.jsx)(D.H, { size: "md", color: "currentColor" }),
                                             }),
                                         }),
                                     ],
@@ -654,8 +701,8 @@ function K(e) {
                             ],
                         }),
                         $ &&
-                            e3 &&
-                            (0, i.jsx)(b.A, { uploadType: K, showUpsell: !0, position: "inline", className: B.Lu }),
+                            e4 &&
+                            (0, r.jsx)(N.A, { uploadType: K, showUpsell: !0, position: "inline", className: k.Lu }),
                     ],
                 }),
             ],
