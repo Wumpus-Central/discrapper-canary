@@ -292,14 +292,7 @@ function J(e) {
 var Q = n(250872),
     X = n(976102);
 function ee(e) {
-    let {
-            applicationId: t,
-            previewApplicationId: n,
-            surface: l,
-            previewReady: s,
-            previewGate: r,
-            previewMode: o = Q.VW.ACTIVITY,
-        } = e,
+    let { applicationId: t, previewApplicationId: n, surface: l, previewReady: s, previewGate: r, previewMode: o } = e,
         u = (0, c.A)(t, l),
         { data: d, isLoading: h } = (0, p.YY)(t ?? void 0),
         { data: v } = (0, p.YY)(n ?? void 0),
@@ -331,7 +324,7 @@ function ee(e) {
                 ? null
                 : h
                   ? (0, a.jsx)("div", { className: X.q, children: (0, a.jsx)(m.y, {}) })
-                  : b && j && null != n
+                  : null != o && b && j && null != n
                     ? (0, a.jsx)("div", {
                           className: X.m,
                           role: "tabpanel",
