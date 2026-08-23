@@ -4087,35 +4087,65 @@
 }
 
 .creation_f8194a {
-    display: flex;
-    flex-direction: column;
     gap: var(--space-32)
 }
 
-.promptCards_f8194a {
-    gap: 6px;
+.createSection_f8194a,
+.creation_f8194a {
+    display: flex;
+    flex-direction: column
+}
+
+.createSection_f8194a {
+    gap: var(--space-12);
     width: 100%
 }
 
-.promptCard_f8194a,
+.createSectionHeading_f8194a {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+    text-align: start
+}
+
 .promptCards_f8194a {
-    align-items: center;
-    display: flex
+    align-items: stretch;
+    display: flex;
+    gap: 6px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%
+}
+
+.promptCardItem_f8194a {
+    display: flex;
+    flex: 1;
+    min-width: 0
+}
+
+@media (max-width:520px) {
+    .promptCards_f8194a {
+        flex-direction: column
+    }
 }
 
 .promptCard_f8194a {
+    align-items: center;
     background-clip: padding-box;
     background-image: radial-gradient(circle at 70% -100% in oklab, color-mix(in oklab, var(--brand-500) 45%, var(--background-mod-subtle)) 0, var(--background-mod-subtle) 85%);
     border: 1px solid var(--border-subtle);
     border-radius: var(--radius-sm);
     cursor: pointer;
+    display: flex;
     flex: 1;
     height: 90px;
     min-width: 0;
     overflow: hidden;
     padding: var(--space-16);
     position: relative;
-    text-align: start
+    text-align: start;
+    width: 100%
 }
 
 .promptCard_f8194a:focus-visible,
@@ -4126,6 +4156,21 @@
 .promptCardText_f8194a {
     max-width: 100%;
     width: 146px
+}
+
+.promptCard_f8194a.templateCard_f8194a {
+    align-items: stretch;
+    flex-direction: column;
+    gap: var(--space-4);
+    height: auto;
+    justify-content: center;
+    min-height: 90px
+}
+
+.templateCardDescription_f8194a,
+.templateCardTitle_f8194a {
+    text-align: start;
+    width: 100%
 }
 
 .composer_f8194a {
@@ -4330,4 +4375,4 @@
     text-align: center
 }
 
-/*# sourceMappingURL=597083.a2fbd40c0c4e5d42.css.map*/
+/*# sourceMappingURL=597083.02c98cdb8321385b.css.map*/

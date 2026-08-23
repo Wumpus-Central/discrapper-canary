@@ -36,8 +36,8 @@ var c = n(115718),
     S = n(822382),
     N = n(5990),
     C = n(257120);
-let O = /(?:\s*#?((?:"(\\\\|\\"|[^\\"])*")|(?:[^\s]+)))/i,
-    R = /(?:\s*([^\s]+))/;
+let R = /(?:\s*#?((?:"(\\\\|\\"|[^\\"])*")|(?:[^\s]+)))/i,
+    O = /(?:\s*([^\s]+))/;
 function L(e) {
     let t = [...e].sort((e, t) => t.length - e.length);
     return RegExp(`(?:\\s*(-?(?:${t.map((e) => C.A.escape(e)).join("|")})))`, "i");
@@ -268,6 +268,7 @@ function et(e) {
                     t = new Set();
                 function l(n) {
                     null == n ||
+                        n.isNonUserBot() ||
                         t.has(n.id) ||
                         A.A.isBlockedOrIgnored(n.id) ||
                         (e.push({ user: n, text: T.Ay.getUserTag(n) }), t.add(n.id));
@@ -494,7 +495,7 @@ function ea(e) {
             componentType: "FILTER",
         },
         [D.LWr.ANSWER_LINK_FROM]: {
-            regex: R,
+            regex: O,
             follows: [D.LWr.FILTER_LINK_FROM],
             mutable: !0,
             componentType: "ANSWER",
@@ -507,7 +508,7 @@ function ea(e) {
             componentType: "FILTER",
         },
         [D.LWr.ANSWER_FILE_TYPE]: {
-            regex: R,
+            regex: O,
             follows: [D.LWr.FILTER_FILE_TYPE],
             mutable: !0,
             componentType: "ANSWER",
@@ -520,7 +521,7 @@ function ea(e) {
             componentType: "FILTER",
         },
         [D.LWr.ANSWER_FILE_NAME]: {
-            regex: R,
+            regex: O,
             follows: [D.LWr.FILTER_FILE_NAME],
             mutable: !0,
             componentType: "ANSWER",
@@ -589,7 +590,7 @@ function ea(e) {
             getAutocompletions: en,
         },
         [D.LWr.ANSWER_IN]: {
-            regex: O,
+            regex: R,
             mutable: !0,
             follows: [D.LWr.FILTER_IN],
             componentType: "ANSWER",
