@@ -122,11 +122,11 @@ let g = 1e3,
             C = (0, r.useCallback)(() => {
                 "exit" !== I && (f("exit"), null != S.current && S.current?.play());
             }, [I]),
-            [O, R] = (0, r.useState)(!1);
+            [R, O] = (0, r.useState)(!1);
         (0, r.useEffect)(() => {
-            A && R(!0);
+            A && O(!0);
         }, [A]);
-        let { mediaUrls: L, isSuccess: y } = T(!h && a && O),
+        let { mediaUrls: L, isSuccess: y } = T(!h && a && R),
             D = (0, r.useRef)(null),
             [v, b] = (0, r.useState)(!1),
             [M, P] = (0, r.useState)(!1),

@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => R }), n(321073);
+n.d(t, { A: () => O }), n(321073);
 var i = n(17928),
     r = n(228366),
     a = n(999903),
@@ -66,7 +66,7 @@ function N(e, t) {
 function C() {
     p(u.YYv);
 }
-class O extends i.Ay.Store {
+class R extends i.Ay.Store {
     static displayName = "GuildCategoryStore";
     initialize() {
         this.waitFor(d.Ay, c.A, l.default, o.A, s.A), this.syncWith([s.A], C);
@@ -75,7 +75,7 @@ class O extends i.Ay.Store {
         return null != e ? (E[e] ?? p(e)) : I;
     }
 }
-let R = new O(r.h, {
+let O = new R(r.h, {
     CHANNEL_SELECT: function (e) {
         let { guildId: t } = e;
         if (((_ = t ?? null), null == t || null != E[t])) return !1;

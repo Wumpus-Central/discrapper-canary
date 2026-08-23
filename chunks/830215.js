@@ -1,6 +1,6 @@
 "use strict";
 let i;
-n.d(t, { A: () => D, W: () => R }), n(142703);
+n.d(t, { A: () => D, W: () => O }), n(142703);
 var r,
     a = n(562708),
     s = n(247775),
@@ -22,8 +22,8 @@ var r,
     S = n(652215),
     N = n(516780);
 let C = new _.A("AuthenticationActionCreators"),
-    O = null;
-var R = (((r = {}).MFA = "MFA"), (r.SUCCESS = "SUCCESS"), r);
+    R = null;
+var O = (((r = {}).MFA = "MFA"), (r.SUCCESS = "SUCCESS"), r);
 function L(e) {
     T.A.clearNavigationHistory();
     let t = { type: "LOGOUT", ...e };
@@ -371,13 +371,13 @@ let D = {
         d.h.dispatch({ type: "EXPERIMENTS_FETCH", withGuildExperiments: e });
     },
     getLocationMetadata: () =>
-        null != O
-            ? O
+        null != R
+            ? R
             : (clearTimeout(i),
               (i = setTimeout(() => {
                   d.h.dispatch({ type: "SET_CONSENT_REQUIRED", consentRequired: !0 });
               }, 5e3)),
-              (O = l.Bo.get({
+              (R = l.Bo.get({
                   url: S.Rsh.AUTH_LOCATION_METADATA,
                   retries: 2,
                   oldFormErrors: !0,
@@ -393,7 +393,7 @@ let D = {
                               type: "SET_LOCATION_METADATA",
                               countryCode: e?.body?.country_code ?? void 0,
                           }),
-                          (O = null),
+                          (R = null),
                           e?.body?.promotional_email_opt_in != null)
                       ) {
                           let t = e.body.promotional_email_opt_in;
@@ -401,7 +401,7 @@ let D = {
                       }
                   },
                   () => {
-                      clearTimeout(i), d.h.dispatch({ type: "SET_CONSENT_REQUIRED", consentRequired: !0 }), (O = null);
+                      clearTimeout(i), d.h.dispatch({ type: "SET_CONSENT_REQUIRED", consentRequired: !0 }), (R = null);
                   },
               ))),
     closeSuspendedUser() {

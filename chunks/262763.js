@@ -27,8 +27,8 @@ let T = {
             routeDirectlyToChannel: S = !1,
             bypassChangeModal: N,
             bypassBlockedWarningModal: C,
-            bypassGuildIdCheck: O = !1,
-            transitionExtras: R,
+            bypassGuildIdCheck: R = !1,
+            transitionExtras: O,
         } = e;
         t.isThread() &&
             (await u.A.unarchiveThreadIfNecessary(t.id),
@@ -71,7 +71,7 @@ let T = {
                           if (null == i && !t)
                               throw Error("VoiceChannel, transitionTo: Channel does not have a guildId");
                           (0, l.pX)(f.BVt.CHANNEL(i, e.id), n);
-                      })(t, O, R),
+                      })(t, R, O),
                   !0)
             : new Promise((e) => {
                   (0, r.openModalLazy)(

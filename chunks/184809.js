@@ -84,8 +84,8 @@ new g(a.h, {
 var S = n(652215);
 let N = new d.Vy("LegacyOverlayLogger"),
     C = null,
-    O = !1,
-    R = null,
+    R = !1,
+    O = null,
     L = {
         log: console.log.bind(console),
         info: console.info.bind(console),
@@ -204,8 +204,8 @@ function X(e) {
 __OVERLAY__ &&
     (function (e) {
         if (__OVERLAY__) {
-            if (O) return L.warn("Overlay logger already set up, skipping duplicate setup");
-            (O = !0),
+            if (R) return L.warn("Overlay logger already set up, skipping duplicate setup");
+            (R = !0),
                 (C = {
                     log: (t, n) => D({ level: "log", message: t, context: n }, e),
                     info: (t, n) => D({ level: "info", message: t, context: n }, e),
@@ -319,9 +319,9 @@ __OVERLAY__ &&
                         }
                 }),
                 window.addEventListener("beforeunload", () => {
-                    null != C && C.info("Overlay unloading"), null != R && clearInterval(R);
+                    null != C && C.info("Overlay unloading"), null != O && clearInterval(O);
                 }),
-                (R = window.setInterval(() => {
+                (O = window.setInterval(() => {
                     if (null != C)
                         try {
                             C.log(I, {

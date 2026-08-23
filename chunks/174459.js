@@ -3,7 +3,7 @@ n.r(t),
     n.d(t, {
         clearAnalyticsEventsRecording: () => F,
         trackNetworkAction: () => H,
-        addExtraAnalyticsDecorator: () => O,
+        addExtraAnalyticsDecorator: () => R,
         stopRecordingAnalyticsEvents: () => x,
         isGameApplicationType: () => B,
         AnalyticsContext: () => m,
@@ -14,7 +14,7 @@ n.r(t),
         setUTMContext: () => b,
         getAnalyticsEventsRecording: () => k,
         expandLocation: () => L,
-        AnalyticEventConfigs: () => R,
+        AnalyticEventConfigs: () => O,
         AnalyticsSchema: () => i,
         debugLogEvent: () => P,
         expandEventProperties: () => M,
@@ -57,10 +57,10 @@ let m = r.createContext({ location: {} }),
     N = (0, o.xd)() ? (0, o.xy)((0, l.V)()) : null;
 s.extendSuperProperties({ launch_signature: N });
 let C = [];
-function O(e) {
+function R(e) {
     C.push(e);
 }
-let R = {
+let O = {
     [I.HAw.APP_OPENED]: { throttlePeriod: 3e5, throttleKeys: () => [] },
     [I.HAw.APP_BACKGROUND]: { throttlePeriod: 12e4, throttleKeys: () => [] },
     [I.HAw.ACK_MESSAGES]: (e) =>
@@ -182,7 +182,7 @@ let y = () => f.O.NONE;
 function D(e) {
     _.includes(e) || h.A.addBreadcrumb({ category: "analytics", message: e });
 }
-let v = (0, s.trackMaker)({ addBreadcrumb: D, analyticEventConfigs: R, dispatcher: d.h, TRACK_ACTION_NAME: "TRACK" });
+let v = (0, s.trackMaker)({ addBreadcrumb: D, analyticEventConfigs: O, dispatcher: d.h, TRACK_ACTION_NAME: "TRACK" });
 function b(e) {
     return (g = e);
 }
@@ -247,7 +247,7 @@ function F() {
         delete w[e];
     });
 }
-let V = (0, s.trackMaker)({ addBreadcrumb: D, analyticEventConfigs: R, dispatcher: d.h, TRACK_ACTION_NAME: "TRACK" });
+let V = (0, s.trackMaker)({ addBreadcrumb: D, analyticEventConfigs: O, dispatcher: d.h, TRACK_ACTION_NAME: "TRACK" });
 function B(e) {
     return e === p.S7.GAME || e === p.S7.DEPRECATED_GAME;
 }

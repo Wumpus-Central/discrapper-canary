@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Fc: () => C, Jm: () => y, m9: () => S, Uc: () => L, ZG: () => g, VP: () => b, VR: () => O, JS: () => N }),
+n.d(t, { Fc: () => C, Jm: () => y, m9: () => S, Uc: () => L, ZG: () => g, VP: () => b, VR: () => R, JS: () => N }),
     n(321073);
 var i,
     r,
@@ -56,7 +56,7 @@ function N(e, t) {
 function C(e) {
     o.h.dispatch({ type: "REMOTE_COMMAND", sessionId: e, payload: { type: "DISCONNECT" } }), m("DISCONNECT", e), g();
 }
-function O(e, t, n, i) {
+function R(e, t, n, i) {
     let r = (0, c.o)(n);
     null != r &&
         (o.h.dispatch({
@@ -66,7 +66,7 @@ function O(e, t, n, i) {
         }),
         m("AUDIO_SETTINGS_UPDATE", e));
 }
-async function R() {
+async function O() {
     let e;
     try {
         let t = null != u.A.getRTCConnectionId() ? s.TRANSFER_EXISTING_CALL : s.CREATE_NEW_CALL;
@@ -141,6 +141,6 @@ async function v(e, t, n) {
 }
 async function b(e, t, n) {
     await h.A.maybeShowPTTAlert(e), await g();
-    let i = await R();
+    let i = await O();
     await D(e, t, n, i), (0, f.A)(n.id, e);
 }

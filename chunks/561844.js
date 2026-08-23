@@ -8,8 +8,8 @@ n.d(t, {
     XH: () => U,
     Y5: () => v,
     YE: () => L,
-    av: () => O,
-    eA: () => R,
+    av: () => R,
+    eA: () => O,
     gr: () => w,
     kO: () => M,
     vK: () => b,
@@ -60,7 +60,7 @@ function C(e, t) {
     if (n) return o.Ay.trackWithMetadata(e, t, r);
     _.default.track(e, t, { flush: r });
 }
-function O(e) {
+function R(e) {
     let {
             questId: t,
             event: n,
@@ -87,7 +87,7 @@ function O(e) {
             o.preview,
         );
 }
-function R(e, t, n, i, r) {
+function O(e, t, n, i, r) {
     let a = {
             content_name: (0, p.jO)(t.content),
             cta_name: t.ctaContent,
@@ -99,7 +99,7 @@ function R(e, t, n, i, r) {
         s =
             (i === m.HAw.QUEST_APP_STORE_OVERLAY_CLOSED || i === m.HAw.QUEST_APP_STORE_OVERLAY_RETURNED) &&
             void 0 !== r;
-    O({
+    R({
         questId: e.id,
         event: i,
         properties: s ? { ...a, time_spent_ms: r } : a,
@@ -192,7 +192,7 @@ async function v(e) {
             sourceQuestContent: d,
         } = e,
         c = (0, h.Gp)(d, t);
-    O({
+    R({
         questId: t,
         event: m.HAw.QUEST_CONTENT_CLICKED,
         properties: {
@@ -302,7 +302,7 @@ function w(e) {
 function G(e) {
     let { questContent: t, sourceQuestContent: n, questId: i, mode: r, prevMode: a } = e,
         s = (0, p.fF)(t);
-    O({
+    R({
         questId: i,
         event: m.HAw.QUEST_BAR_MODE_CHANGED,
         properties: { content_id: s.content_id, content_name: s.content_name, mode: r, previous_mode: a },

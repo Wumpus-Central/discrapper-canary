@@ -22,10 +22,10 @@ let d = null,
     S = !1,
     N = null,
     C = null;
-function O() {
+function R() {
     return !0;
 }
-function R(e) {
+function O(e) {
     let { messages: t } = e;
     t.forEach((e) => L(e));
 }
@@ -37,7 +37,7 @@ function L(e) {
 class y extends r.Ay.Store {
     static displayName = "ReferralTrialStore";
     initialize() {
-        this.waitFor(s.default), this.syncWith([s.default], O);
+        this.waitFor(s.default), this.syncWith([s.default], R);
     }
     checkAndFetchReferralsRemaining() {
         null == d && !_ && I < 6 && (null == f || f < Date.now()) && (0, l.xM)();
@@ -138,12 +138,12 @@ let D = new y(a.h, {
     REFERRALS_FETCH_ELIGIBLE_USER_FAIL: function () {
         T = !1;
     },
-    LOAD_MESSAGES_SUCCESS: R,
+    LOAD_MESSAGES_SUCCESS: O,
     MESSAGE_CREATE: function (e) {
         let { message: t } = e;
         L(t);
     },
-    LOAD_MESSAGES_AROUND_SUCCESS: R,
+    LOAD_MESSAGES_AROUND_SUCCESS: O,
     LOGOUT: function () {
         (d = null),
             (c = new Set()),

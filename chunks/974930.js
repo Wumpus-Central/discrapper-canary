@@ -8,12 +8,12 @@ n.d(t, {
     N5: () => P,
     Ri: () => M,
     X7: () => G,
-    Xx: () => O,
+    Xx: () => R,
     Xy: () => h,
     Ze: () => I,
     er: () => x,
     j: () => Y,
-    jd: () => R,
+    jd: () => O,
     nG: () => H,
     p$: () => F,
     sv: () => w,
@@ -51,7 +51,7 @@ let A = 365,
         s.p3.SA.weekday,
     ],
     C = new Set([0, 6]);
-function O(e) {
+function R(e) {
     let t = e.toDate(),
         n = Math.ceil(t.getDate() / 7),
         i = e.format("dddd"),
@@ -81,7 +81,7 @@ function O(e) {
         r
     );
 }
-function R() {
+function O() {
     let e = a()().add(1, "hour"),
         t = e.hour();
     return e.minutes() >= 30 && (t += 1), e.hour(t).minutes(0).seconds(0);

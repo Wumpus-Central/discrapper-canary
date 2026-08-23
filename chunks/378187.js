@@ -22,8 +22,8 @@ var i = n(412703),
     S = n(590202),
     N = n(851936),
     C = n(710969),
-    O = n(639214),
-    R = n(792620),
+    R = n(639214),
+    O = n(792620),
     L = n(814793),
     y = n(190107),
     D = n(165610);
@@ -36,7 +36,7 @@ function P(e) {
 function U(e) {
     let t = g.A.getState().autoEnroll,
         n = T.A.quests;
-    for (let i of (0, O.jm)(n, e))
+    for (let i of (0, R.jm)(n, e))
         if (t && 1)
             return (0, p.Oy)(i.id, {
                 questContent: m.uF.RUNNING_ACTIVITY,
@@ -56,7 +56,7 @@ class G extends a.A {
     calculateHeartbeatDurationMs = (e) => {
         let t = T.A.quests.get(e);
         if (null == t || null == t.config || null == t.userStatus) return v;
-        let { progressSeconds: n, targetSeconds: r } = (0, R.Yh)(t, i.o.DESKTOP),
+        let { progressSeconds: n, targetSeconds: r } = (0, O.Yh)(t, i.o.DESKTOP),
             a = Math.max(0, (r - n) * I.A.Millis.SECOND);
         return a <= v ? a + b : v;
     };
@@ -178,7 +178,7 @@ class G extends a.A {
             let n = r[t],
                 a = (0, o.Ic)(n.exePath);
             for (let r of i.values()) {
-                let i = (0, R.pU)(r);
+                let i = (0, O.pU)(r);
                 if (!P(r) || null == i) continue;
                 let s = i.find((e) => e === t);
                 if (null != s)
@@ -216,7 +216,7 @@ class G extends a.A {
         let i = n.id;
         if (null == i) return e;
         for (let t of T.A.quests.values()) {
-            let n = (0, R.a2)(t);
+            let n = (0, O.a2)(t);
             P(t) && null != n && n === i && e.set(t.id, { applicationId: i });
         }
         return (
@@ -241,7 +241,7 @@ class G extends a.A {
         let r = T.A.quests;
         for (let t of i)
             for (let n of r.values()) {
-                let i = (0, R.vS)(n);
+                let i = (0, O.vS)(n);
                 P(n) && null != i && i === t && e.set(n.id, { applicationId: t });
             }
         for (let t of r.values()) P(t) && (0, L._e)(t) && e.set(t.id, { applicationId: y.ej });

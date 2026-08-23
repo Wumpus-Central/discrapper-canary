@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => R });
+n.d(t, { A: () => O });
 var i = n(17928),
     r = n(228366),
     a = n(684013),
@@ -28,7 +28,7 @@ function p(e, t) {
     e ? E.delete(t) : E.add(t), (E = new Set(E));
 }
 function T(e, t) {
-    return !!f(e) && (p(e, t), h?.setInteractionEnabled(!e), O.emitChange(), !0);
+    return !!f(e) && (p(e, t), h?.setInteractionEnabled(!e), R.emitChange(), !0);
 }
 function m(e, t) {
     return (
@@ -61,7 +61,7 @@ class C extends i.Ay.Store {
         return null == e || e === s.UNSET_PID || !1 === E.has(e);
     }
 }
-let O = new C(
+let R = new C(
         r.h,
         __OVERLAY__ || !l.O
             ? { OVERLAY_SET_INPUT_LOCKED: N }
@@ -94,4 +94,4 @@ let O = new C(
                   },
               },
     ),
-    R = O;
+    O = R;

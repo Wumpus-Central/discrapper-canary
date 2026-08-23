@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { M6: () => y, QK: () => N, l2: () => L, lP: () => R, pE: () => O });
+n.d(t, { M6: () => y, QK: () => N, l2: () => L, lP: () => O, pE: () => R });
 var i = n(582128),
     r = n(478437),
     a = n(17928),
@@ -28,7 +28,7 @@ function N(e) {
 function C(e) {
     return e.components.length > 0 && e.components[0].type === s.I5.CHECKPOINT_CARD;
 }
-function O(e, t, n, i) {
+function R(e, t, n, i) {
     let r = n instanceof E.YB;
     if (null != i) {
         let e = i(n);
@@ -81,7 +81,7 @@ function O(e, t, n, i) {
         }
     }
 }
-function R(e, t) {
+function O(e, t) {
     return !!(null != e.rateLimitPerUser && e.rateLimitPerUser > 0) && !(0, d.js)(e, t);
 }
 function L(e) {
@@ -112,7 +112,7 @@ function y(e) {
                     return "channel" === t ? A.A.getChannel(n) : null;
                 })
                 .filter(T.Vq)
-                .filter((e) => R(e, h.A)),
+                .filter((e) => O(e, h.A)),
         [e],
     );
     return (0, a.yK)([f.default, I.A], () => t.map((e) => (0, o.m1)(e, f.default, I.A, !0)), [t]);

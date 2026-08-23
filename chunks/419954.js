@@ -15,7 +15,7 @@ n.d(t, {
     sN: () => I,
     t0: () => A,
     t_: () => u,
-    v_: () => p,
+    v_: () => x,
     zC: () => d,
     zD: () => f,
     zY: () => E,
@@ -72,31 +72,31 @@ function E(e, t) {
 function S(e, t) {
     return s(e, i.Z6.FIELD_SET, t);
 }
-function x(e, t, n) {
+function p(e, t, n) {
     return { ...n, key: e, type: t };
 }
-function p(e, t) {
-    return x(e, i.Z6.STATIC, t);
+function x(e, t) {
+    return p(e, i.Z6.STATIC, t);
 }
 function T(e, t) {
-    return x(e, i.Z6.BUTTON, t);
+    return p(e, i.Z6.BUTTON, t);
 }
 function f(e, t) {
-    return x(e, i.Z6.TOGGLE, t);
+    return p(e, i.Z6.TOGGLE, t);
 }
 function I(e, t) {
-    return x(e, i.Z6.SLIDER, t);
+    return p(e, i.Z6.SLIDER, t);
 }
 function _(e, t) {
     let n = t.selectionMode ?? "single";
     return { ...t, selectionMode: n, key: e, type: i.Z6.SELECT };
 }
 function N(e, t) {
-    return x(e, i.Z6.RADIO, t);
+    return p(e, i.Z6.RADIO, t);
 }
 function C(e, t) {
-    return x(e, i.Z6.NAVIGATOR, t);
+    return p(e, i.Z6.NAVIGATOR, t);
 }
 function b(e, t) {
-    return x(e, i.Z6.CUSTOM, t);
+    return p(e, i.Z6.CUSTOM, t);
 }

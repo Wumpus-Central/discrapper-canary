@@ -261,9 +261,9 @@ function K(e) {
 }
 l(321073);
 var F = l(702841),
-    Z = l(408278),
-    W = l(461150),
-    X = l(782134),
+    W = l(408278),
+    X = l(461150),
+    Z = l(782134),
     Y = l(113494),
     J = l(898196),
     Q = l(259678),
@@ -630,21 +630,21 @@ function ed(e) {
                     (0, n.jsxs)("div", {
                         className: eo.s2,
                         children: [
-                            (0, n.jsx)(Z.K, {
+                            (0, n.jsx)(W.K, {
                                 size: "sm",
                                 variant: "icon-only",
-                                icon: W.q,
+                                icon: X.q,
                                 onClick: eb,
                                 "aria-label": es.intl.string(er.default["dRVF+Z"]),
                             }),
-                            (0, n.jsx)(Z.K, {
+                            (0, n.jsx)(W.K, {
                                 size: "sm",
-                                icon: r ? Y.PauseIcon : X.PlayIcon,
+                                icon: r ? Y.PauseIcon : Z.PlayIcon,
                                 onClick: ey,
                                 "aria-label": es.intl.string(r ? es.t.ZcgDJX : es.t.RscU7I),
                                 variant: "icon-only",
                             }),
-                            (0, n.jsx)(Z.K, {
+                            (0, n.jsx)(W.K, {
                                 size: "sm",
                                 variant: "icon-only",
                                 icon: J.i,

@@ -14,8 +14,8 @@ var i = n(477900),
     h = n(683071),
     E = n(821609),
     S = n(820739),
-    x = n(793574),
-    p = n(688810),
+    p = n(793574),
+    x = n(688810),
     T = n(277984),
     f = n(531260),
     I = n(725836),
@@ -142,14 +142,14 @@ function K(e) {
                     null != e ? R.A.getForSkuAndInterval((0, M.mH)(F.pe.GUILD), e.interval, e.intervalCount) : null,
             };
         }),
-        { analyticsLocations: K } = (0, p.Ay)(),
+        { analyticsLocations: K } = (0, x.Ay)(),
         [W] = (0, C.YV)({
             subscriptionId: t.id,
             renewal: !0,
             currency: t.currency,
             paymentSourceId: t.paymentSourceId,
             analyticsLocations: K,
-            analyticsLocation: x.A.GUILD_BOOST_SLOT_CANCELLATION_MODAL_CURRENT_INVOICE_PREVIEW,
+            analyticsLocation: p.A.GUILD_BOOST_SLOT_CANCELLATION_MODAL_CURRENT_INVOICE_PREVIEW,
         }),
         Z = null != Y ? (0, M.Om)(t, G[0]?.quantity ?? 0, Y.id) : null,
         [q] = (0, C.YV)({
@@ -157,7 +157,7 @@ function K(e) {
             items: Z,
             renewal: !0,
             analyticsLocations: K,
-            analyticsLocation: x.A.GUILD_BOOST_SLOT_CANCELLATION_MODAL_RENEWAL_INVOICE_PREVIEW,
+            analyticsLocation: p.A.GUILD_BOOST_SLOT_CANCELLATION_MODAL_RENEWAL_INVOICE_PREVIEW,
         }),
         Q = null == q || null == B || null == Y || null == W;
     if (a && Q)
@@ -343,7 +343,7 @@ function q(e) {
         S = (0, y.n)("GuildBoostSlotCancellationModal"),
         N = "control" !== E || S,
         C = !N,
-        { analyticsLocations: b } = (0, p.Ay)(x.A.GUILD_BOOST_CANCELLATION_MODAL);
+        { analyticsLocations: b } = (0, x.Ay)(p.A.GUILD_BOOST_CANCELLATION_MODAL);
     if (null == a)
         t = N
             ? (0, i.jsxs)(u.d, {
@@ -411,7 +411,7 @@ function q(e) {
             default:
                 t = (0, i.jsx)(Z, { step: g });
         }
-    return (0, i.jsx)(p.f5, {
+    return (0, i.jsx)(x.f5, {
         value: b,
         children: (0, i.jsx)(k.d, { errorHandlingBehavior: "close-and-alert", guildBoostSlot: n, children: t }),
     });

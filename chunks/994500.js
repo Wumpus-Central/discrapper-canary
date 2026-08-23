@@ -28,10 +28,10 @@ function N(e) {
 function C() {
     S.add("ignored"), S.add("blockedOrIgnored");
 }
-function O() {
+function R() {
     S.add("friends"), S.add("blocked"), S.add("ignored"), S.add("blockedOrIgnored");
 }
-function R() {
+function O() {
     for (let e of S) g[e] = void 0;
     S.clear();
 }
@@ -171,7 +171,7 @@ let U = new P(r.h, {
             E.clear(),
             _.clear(),
             A.clear(),
-            O(),
+            R(),
             (h = {}),
             (f = {}),
             e.relationships.forEach((e) => {
@@ -183,12 +183,12 @@ let U = new P(r.h, {
                     null != e.origin_application_id && (h[e.id] = e.origin_application_id),
                     e.user_ignored && (L(e.id), e.type === l.eA$.PENDING_INCOMING && A.add(e.id));
             }),
-            R(),
+            O(),
             M();
     },
     OVERLAY_INITIALIZE: function (e) {
-        for (let [t, n] of (o.clear(), D.clear(), O(), e.relationships)) v(t, n);
-        R(), M();
+        for (let [t, n] of (o.clear(), D.clear(), R(), e.relationships)) v(t, n);
+        O(), M();
     },
     RELATIONSHIP_ADD: function (e) {
         let t = o.get(e.relationship.id);
@@ -205,7 +205,7 @@ let U = new P(r.h, {
                       ? A.add(e.relationship.id)
                       : e.relationship.type === l.eA$.FRIEND && A.delete(e.relationship.id))
                 : (y(e.relationship.id), A.delete(e.relationship.id)),
-            R(),
+            O(),
             M(),
             e.relationship.type === l.eA$.FRIEND &&
                 t === l.eA$.PENDING_OUTGOING &&
@@ -220,7 +220,7 @@ let U = new P(r.h, {
             e.relationship.userIgnored || y(e.relationship.id),
             A.delete(e.relationship.id),
             _.delete(e.relationship.id),
-            R(),
+            O(),
             M();
     },
     RELATIONSHIP_UPDATE: function (e) {
@@ -233,12 +233,12 @@ let U = new P(r.h, {
             null != f[t.id] && delete f[t.id],
             null == t.originApplicationId ? delete h[t.id] : (h[t.id] = t.originApplicationId),
             t.userIgnored ? (L(t.id), t.type === l.eA$.PENDING_INCOMING && A.add(t.id)) : (y(t.id), A.delete(t.id)),
-            R(),
+            O(),
             M();
     },
     RELATIONSHIP_PENDING_INCOMING_REMOVED: function (e) {
         for (let e of o.keys()) o.get(e) === l.eA$.PENDING_INCOMING && (b(e), _.delete(e), A.delete(e), delete f[e]);
-        R(), M();
+        O(), M();
     },
     UPDATE_STRANGER_STATUS: function (e) {
         f[e.userId] = { expiry: Date.now() + 3e5, isStranger: e.isStranger };

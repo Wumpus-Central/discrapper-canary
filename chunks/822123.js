@@ -46,16 +46,16 @@ var i = n(582128),
     S = n(316884),
     N = n(732139),
     C = n(652215),
-    O = n(307731),
-    R = n(698279),
+    R = n(307731),
+    O = n(698279),
     L = n(202541),
     y = n(375708);
 let D = /-/g;
 function v(e) {
     switch (e) {
-        case O.EmojiIntention.REACTION:
+        case R.EmojiIntention.REACTION:
             return C.I4_.EMOJI_REACTION;
-        case O.EmojiIntention.AUTO_SUGGESTION:
+        case R.EmojiIntention.AUTO_SUGGESTION:
             return C.I4_.EMOJI_AUTO_SUGGESTION;
         default:
             return C.I4_.EMOJI;
@@ -73,14 +73,14 @@ function P(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : t?.getGuildId(),
         r = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
     (0, c.V)(n);
-    let a = (0, O.isExternalEmojiAllowedForIntention)(e),
+    let a = (0, R.isExternalEmojiAllowedForIntention)(e),
         l = K(n),
         d = $(n),
         u = z(n),
         { topEmojis: E, newlyAddedEmojis: f } = (0, S.A)(n, e),
         { allEmojis: p } = (0, g.A)({ topEmojis: E, newlyAddedEmojis: f }),
         C = (0, s.bG)([o.Ay], () => o.Ay.getDisambiguatedEmojiContext(n), [n]),
-        R = (0, s.bG)([A.A], () => A.A.getGuild(n)?.name),
+        O = (0, s.bG)([A.A], () => A.A.getGuild(n)?.name),
         L = (0, s.bG)([I.default], () => I.default.getCurrentUser()),
         D = (0, m.ki)(L),
         v = (0, _.Ym)({ location: "useEmojiCategories" });
@@ -128,14 +128,14 @@ function P(e, t) {
                         t.push({
                             type: N.s.TOP_GUILD_EMOJI,
                             id: i,
-                            name: y.intl.formatToPlainString(y.t.W6Wi1X, { guildName: R }),
+                            name: y.intl.formatToPlainString(y.t.W6Wi1X, { guildName: O }),
                             isNitroLocked: !1,
                             emojis: n,
                             emojisDisabled: e,
                         });
                     } else if (i === N.R2.RECENT) {
                         let { emojisDisabled: n, emojisUnfiltered: r } = E(
-                            [O.EmojiIntention.REACTION, O.EmojiIntention.DEFAULT_REACT_EMOJI].includes(e) ? d : l,
+                            [R.EmojiIntention.REACTION, R.EmojiIntention.DEFAULT_REACT_EMOJI].includes(e) ? d : l,
                         );
                         if (null == r || 0 === r.length) return t;
                         t.push({
@@ -167,7 +167,7 @@ function P(e, t) {
                 v && r ? [_] : [],
             )
         );
-    }, [C, t, n, e, D, p, R, d, l, u, a, v, r]);
+    }, [C, t, n, e, D, p, O, d, l, u, a, v, r]);
 }
 function U() {
     return d.Ay.getCategories().map((e) => ({ type: N.s.UNICODE, id: e, name: e, isNitroLocked: !1 }));
@@ -259,10 +259,10 @@ function B(e) {
             visibleRowIndex: E,
         } = e;
     switch (r) {
-        case O.EmojiIntention.REACTION:
+        case R.EmojiIntention.REACTION:
             t = c ? L.e.EMOJI_PICKER_SUPER_REACTION_EMOJI_CLICKED : L.e.EMOJI_PICKER_REACTION_EMOJI_CLICKED;
             break;
-        case O.EmojiIntention.STATUS:
+        case R.EmojiIntention.STATUS:
             t = L.e.EMOJI_PICKER_STATUS_EMOJI_CLICKED;
             break;
         default:
@@ -285,7 +285,7 @@ function B(e) {
             newly_added_highlight: d,
             is_burst: c,
             message_id: u,
-            ...(null != _ && { locked_reason: O.EmojiDisabledReasons[_], visible_row_index: E }),
+            ...(null != _ && { locked_reason: R.EmojiDisabledReasons[_], visible_row_index: E }),
         },
     );
 }
@@ -294,7 +294,7 @@ function H(e) {
         i = t.uniqueName ?? t.name;
     l.Ay.trackWithMetadata(C.HAw.EXPRESSION_FAVORITED, {
         location: n,
-        expression_type: R.kx.EMOJI,
+        expression_type: O.kx.EMOJI,
         expression_id: t.id,
         expression_name: i,
         expression_guild_id: t.guildId,
@@ -341,7 +341,7 @@ function Y(e, t, n, r) {
     i.useEffect(() => {
         E.bW.loadIfNecessary();
     }, []);
-    let a = (0, O.isExternalEmojiAllowedForIntention)(n);
+    let a = (0, R.isExternalEmojiAllowedForIntention)(n);
     return (0, s.bG)(
         [o.Ay],
         () => {
@@ -413,7 +413,7 @@ function X(e, t, n) {
     return i.includes(n) ? N.tm.TOP_GUILD_EMOJI : r.includes(n) ? N.tm.NEWLY_ADDED_EMOJI : N.tm.NONE;
 }
 function Q(e, t) {
-    return e === O.EmojiIntention.REACTION
+    return e === R.EmojiIntention.REACTION
         ? t
             ? y.intl.string(y.t["h7ES+n"])
             : y.intl.string(y.t["6any2A"])

@@ -1,9 +1,9 @@
 n.d(t, {
     fq: () => _,
-    lT: () => p,
+    lT: () => x,
     xn: () => S,
     Xy: () => E,
-    t9: () => x,
+    t9: () => p,
     $d: () => C,
     Ln: () => b,
     p3: () => I,
@@ -27,8 +27,8 @@ var i,
     h = (((i = {})[(i.STACKED_ICONS = 0)] = "STACKED_ICONS"), i),
     E = (((l = {})[(l.ICON = 0)] = "ICON"), l),
     S = (((s = {})[(s.TEXT = 0)] = "TEXT"), s),
-    x = (((r = {})[(r.STRONGLY_DISCOURAGED_CUSTOM = 0)] = "STRONGLY_DISCOURAGED_CUSTOM"), r),
-    p =
+    p = (((r = {})[(r.STRONGLY_DISCOURAGED_CUSTOM = 0)] = "STRONGLY_DISCOURAGED_CUSTOM"), r),
+    x =
         (((a = {})[(a.INLINE_NOTICE = 0)] = "INLINE_NOTICE"),
         (a[(a.STRONGLY_DISCOURAGED_CUSTOM = 1)] = "STRONGLY_DISCOURAGED_CUSTOM"),
         a),

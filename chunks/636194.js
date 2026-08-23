@@ -43,10 +43,10 @@ let A = new l.J(
 function C(e) {
     return A.values(u(e));
 }
-function O(e) {
-    for (let t of (A.set(e.id, e), S.set(e.guild_id, e.application_id), e.subscription_listings ?? [])) R(t);
-}
 function R(e) {
+    for (let t of (A.set(e.id, e), S.set(e.guild_id, e.application_id), e.subscription_listings ?? [])) O(t);
+}
+function O(e) {
     h.set(e.id, e);
 }
 function L(e) {
@@ -115,7 +115,7 @@ let v = new D(o.h, {
     },
     GUILD_ROLE_SUBSCRIPTIONS_FETCH_LISTINGS_SUCCESS: function (e) {
         let { guildId: t, groupListings: n, benefitChannels: i, settings: r, subscriptionTrials: a } = e;
-        for (let e of ((I[t] = 2), n)) O(e);
+        for (let e of ((I[t] = 2), n)) R(e);
         for (let e of ((p[t] = r), a)) T[e.id] = e;
         L(i);
     },
@@ -125,7 +125,7 @@ let v = new D(o.h, {
     },
     GUILD_ROLE_SUBSCRIPTIONS_UPDATE_GROUP_LISTING: function (e) {
         let { listing: t } = e;
-        O(t), null != t.benefit_channels && L(t.benefit_channels);
+        R(t), null != t.benefit_channels && L(t.benefit_channels);
     },
     GUILD_ROLE_SUBSCRIPTIONS_DELETE_GROUP_LISTING: function (e) {
         let { groupListingId: t } = e;
@@ -137,15 +137,15 @@ let v = new D(o.h, {
     },
     GUILD_ROLE_SUBSCRIPTIONS_FETCH_LISTING_FOR_PLAN_SUCCESS: function (e) {
         let { groupListing: t } = e;
-        O(t);
+        R(t);
     },
     GUILD_ROLE_SUBSCRIPTIONS_CREATE_LISTING: function (e) {
         let { listing: t, groupListing: n } = e;
-        R(t), O(n);
+        O(t), R(n);
     },
     GUILD_ROLE_SUBSCRIPTIONS_UPDATE_LISTING: function (e) {
         let { listing: t } = e;
-        R(t);
+        O(t);
     },
     GUILD_ROLE_SUBSCRIPTIONS_DELETE_LISTING: function (e) {
         let { listingId: t } = e;

@@ -1,6 +1,6 @@
 "use strict";
 let i;
-n.d(t, { Ay: () => R, bK: () => g, cK: () => S });
+n.d(t, { Ay: () => O, bK: () => g, cK: () => S });
 var r = n(228366),
     a = n(31728),
     s = n(272355),
@@ -48,7 +48,7 @@ function N() {
 function C() {
     return (0, T.A)({ LayerStore: d.A, PopoutWindowStore: l.A }) ? g() : S();
 }
-class O extends s.A {
+class R extends s.A {
     _initialize() {
         _.Ay.addChangeListener(N),
             E.A.addChangeListener(N),
@@ -68,4 +68,4 @@ class O extends s.A {
             d.A.removeChangeListener(C);
     }
 }
-let R = new O();
+let O = new R();

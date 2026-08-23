@@ -19,14 +19,14 @@ n.d(t, {
     fP: () => w,
     B3: () => K,
     gB: () => B,
-    A6: () => R,
+    A6: () => O,
     fO: () => L,
     Pc: () => X,
     mg: () => x,
     ls: () => v,
     uz: () => W,
     Tz: () => g,
-    aA: () => O,
+    aA: () => R,
     i$: () => D,
     WQ: () => J,
     aJ: () => V,
@@ -123,8 +123,8 @@ let g = new Set([A.L.NITRO_2_POINT_0_CTA, A.L.ORBS_MULTIPLIER_QUEST, A.L.XBOX_GA
     S = f.A.Millis.MINUTE * h.ConsecutiveHeartbeatPeriodMinutes,
     N = { tension: 900, friction: 45, clamp: !0 },
     C = { tension: 360, friction: 30, clamp: !0 },
-    O = 6,
-    R = 2;
+    R = 6,
+    O = 2;
 var L = (((a = {}).CONSOLE = "CONSOLE"), (a.DESKTOP = "DESKTOP"), a),
     y = (((s = {}).IN_GAME = "in_game"), (s.WEB = "web"), s);
 let D = 454,

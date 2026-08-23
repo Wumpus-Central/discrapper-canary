@@ -30,8 +30,8 @@ async function m(e) {
             sectionName: S,
             source: N,
             inviterUserId: C,
-            customId: O,
-            referrerId: R,
+            customId: R,
+            referrerId: O,
         } = e,
         L = (0, A.A)(),
         y = r.A.getChannel(o),
@@ -81,8 +81,8 @@ async function m(e) {
             sectionName: S,
             source: N,
             inviterUserId: C,
-            customId: O,
-            referrerId: R,
+            customId: R,
+            referrerId: O,
         })
     );
 }

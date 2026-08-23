@@ -3,7 +3,7 @@ n.d(t, {
     Zf: () => N,
     i2: () => p,
     tW: () => g,
-    vm: () => O,
+    vm: () => R,
     fY: () => I,
     WV: () => D,
     Yt: () => L,
@@ -160,7 +160,7 @@ function g(e, t, n, i, r) {
             let i = c.CI;
             return t.includes("/") ? ((i = c.GD), `${i}${t}`) : `${i}${e}${n?.theme != null ? `/${n.theme}` : ""}/${t}`;
         })(e.id, (l = I), { theme: p ? n : void 0 })),
-        (A = null != (u = O(l)) && h.includes(u)),
+        (A = null != (u = R(l)) && h.includes(u)),
         { url: o, mimetype: u, isAnimated: A });
     return g && null == S.mimetype ? null : S;
 }
@@ -173,7 +173,7 @@ function N(e) {
 function C(e) {
     return S(e);
 }
-function O(e) {
+function R(e) {
     if (e.startsWith("blob:")) {
         let t = l.A.toURLSafe(e)?.searchParams.get("mimetype") ?? void 0;
         return null != t ? decodeURIComponent(t) : null;
@@ -207,7 +207,7 @@ function O(e) {
             return null;
     }
 }
-function R(e) {
+function O(e) {
     return Math.min(Math.ceil(e), u.uJv);
 }
 function L(e, t) {
@@ -221,8 +221,8 @@ function y(e) {
     return null == n
         ? e
         : (null != t.format && n.searchParams.set("format", t.format),
-          null != t.width && n.searchParams.set("width", `${R(t.width)}`),
-          null != t.height && n.searchParams.set("height", `${R(t.height)}`),
+          null != t.width && n.searchParams.set("width", `${O(t.width)}`),
+          null != t.height && n.searchParams.set("height", `${O(t.height)}`),
           n.toString());
 }
 function D(e, t) {
@@ -231,6 +231,6 @@ function D(e, t) {
     return null == n
         ? null
         : (n.searchParams.set("format", "webp"),
-          null != t && (n.searchParams.set("width", `${R(t.width)}`), n.searchParams.set("height", `${R(t.height)}`)),
+          null != t && (n.searchParams.set("width", `${O(t.width)}`), n.searchParams.set("height", `${O(t.height)}`)),
           n.toString());
 }

@@ -27,7 +27,7 @@ let C = [
     { name: "H264", encode: !0, decode: !0 },
     { name: "VP8", encode: !0, decode: !0 },
 ];
-function O(e, t) {
+function R(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
         i = t.concat(C),
         r = [];
@@ -45,7 +45,7 @@ function O(e, t) {
     }
     return r;
 }
-function R(e) {
+function O(e) {
     let t = [],
         n = e.has(N.fd.SIGNAL_AV1_ENCODE),
         i = e.has(N.fd.SIGNAL_AV1_DECODE);
@@ -557,13 +557,13 @@ class H extends g.A {
                 n.on(c.yq.Stats, n.handleStats),
                     n.conn.setOnVideoCallback(n.handleVideo),
                     i.getCodecCapabilities((t) => {
-                        let i = R(n.experimentFlags);
+                        let i = O(n.experimentFlags);
                         (n.codecs = [
                             { type: "audio", name: N.UK.OPUS, priority: 1, payloadType: 120 },
                             ...(n.videoSupported
                                 ? (function (e, t) {
                                       let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-                                      return O(L(e), t, n);
+                                      return R(L(e), t, n);
                                   })(t, i).map((e, t) => {
                                       let n = 101 + 2 * t;
                                       return {
@@ -624,14 +624,14 @@ class H extends g.A {
                     n.getCodecCapabilities((i) => {
                         (this.onVideoCodecsCallbackAt = performance.now()),
                             this.logger.info(`Available engine codecs: ${JSON.stringify(i)}`);
-                        let r = R(this.experimentFlags);
+                        let r = O(this.experimentFlags);
                         this.logger.info(`Experimental codecs: ${JSON.stringify(r)}`);
                         let o = L(i),
                             d = this.lastOverrideCodecDenylist.length > 0;
                         this.codecs = [
                             { type: "audio", name: N.UK.OPUS, priority: 1, payloadType: 120 },
                             ...(this.videoSupported
-                                ? O(o, r, d).map((e, t) => {
+                                ? R(o, r, d).map((e, t) => {
                                       let n = 101 + 2 * t;
                                       return {
                                           type: "video",

@@ -45,15 +45,15 @@ function C(e, t) {
         (t.created_at ?? 0) - (e.created_at ?? 0)
     );
 }
-function O(e) {
+function R(e) {
     if (0 === e.length) return e;
     let t = [],
         n = [];
     for (let i of e) i.type === E.$pd.PLAYING ? n.push(i) : t.push(i);
     return n.length <= 1 ? e : [...t, [...n].sort(C)[0]].sort(C);
 }
-function R(e, t) {
-    (f[e] = t), (p[e] = O(t));
+function O(e, t) {
+    (f[e] = t), (p[e] = R(t));
 }
 function L(e) {
     if ((delete I[e], delete f[e], delete p[e], delete T[e], delete m[e], null == h[e])) return;
@@ -67,7 +67,7 @@ function L(e) {
         }, t[0]);
     n.status !== E.clD.OFFLINE || (null != n.hiddenActivities && n.hiddenActivities.length > 0)
         ? ((I[e] = n.status),
-          R(e, n.activities),
+          O(e, n.activities),
           (T[e] = y(Object.values(t).flatMap((e) => e.hiddenActivities ?? []))),
           null != n.clientStatus && (m[e] = n.clientStatus))
         : s().every(
@@ -89,7 +89,7 @@ function D(e) {
     let n = s().maxBy(Object.values(t), (e) => e.processedAtTimestamp);
     (n.status !== E.clD.OFFLINE || (null != n.hiddenActivities && n.hiddenActivities.length > 0)) &&
         ((I[e] = n.status),
-        R(e, n.activities),
+        O(e, n.activities),
         (T[e] = n.hiddenActivities ?? []),
         null != n.clientStatus && (m[e] = n.clientStatus));
 }
@@ -159,7 +159,7 @@ class U extends l.Ay.Store {
         this.waitFor(u.default, _.default);
     }
     setCurrentUserOnConnectionOpen(e, t) {
-        (I[u.default.getId()] = e), R(u.default.getId(), [...t].sort(C));
+        (I[u.default.getId()] = e), O(u.default.getId(), [...t].sort(C));
     }
     getStatus(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
@@ -173,7 +173,7 @@ class U extends l.Ay.Store {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
         if (null == t) return p[e] ?? A;
         let n = S(e, t);
-        return null == n || null == n.activities ? A : O(n.activities);
+        return null == n || null == n.activities ? A : R(n.activities);
     }
     getUnfilteredActivities(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
@@ -425,6 +425,6 @@ let w = new U(o.h, {
     SELF_PRESENCE_STORE_UPDATE: function (e) {
         let t = u.default.getId();
         if (I[t] === e.status && f[t] === e.activities && T[t] === e.hiddenActivities) return !1;
-        (I[t] = e.status), R(t, [...e.activities].sort(C)), (T[t] = [...e.hiddenActivities].sort(C)), delete g[t];
+        (I[t] = e.status), O(t, [...e.activities].sort(C)), (T[t] = [...e.hiddenActivities].sort(C)), delete g[t];
     },
 });

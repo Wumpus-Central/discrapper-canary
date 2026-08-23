@@ -119,11 +119,11 @@ function C(e) {
     let n = new N(e);
     return d.set(e, n), n;
 }
-function O(e) {
+function R(e) {
     let t = g(e);
     return null != t ? C(t) : null;
 }
-let R = new Map();
+let O = new Map();
 function L(e) {
     return E.test(e);
 }
@@ -183,12 +183,12 @@ let w = {
     getCategories: function () {
         return Object.keys(I);
     },
-    getByName: O,
+    getByName: R,
     getByCategory: function (e) {
-        let t = R.get(e);
+        let t = O.get(e);
         if (null == t) {
             let n = I[e];
-            (t = s.Ay.filterUnsupportedEmojis(h.slice(n[0], n[1])).map(C)), R.set(e, t);
+            (t = s.Ay.filterUnsupportedEmojis(h.slice(n[0], n[1])).map(C)), O.set(e, t);
         }
         return t;
     },
@@ -218,7 +218,7 @@ let w = {
         return Object.prototype.hasOwnProperty.call(_, e) && (i = _[e]), t ? `:${i}:` : i;
     },
     convertSurrogateToBase: function (e) {
-        return O(
+        return R(
             U(
                 c.reduce((e, t) => e.replace(t, ""), e),
                 !1,

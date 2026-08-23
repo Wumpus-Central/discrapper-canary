@@ -27,14 +27,14 @@ var r,
 let S = !1,
     N = 0,
     C = 0,
-    O = !1,
-    R = {};
+    R = !1,
+    O = {};
 function L() {
     return _.Ay.getUseSystemScreensharePicker();
 }
 function y() {
     let e = L() && (C > 0 || (S && 0 === N));
-    e !== O && ((O = e), _.Ay.getMediaEngine()?.setNativeDesktopVideoSourcePickerActive?.(O));
+    e !== R && ((R = e), _.Ay.getMediaEngine()?.setNativeDesktopVideoSourcePickerActive?.(R));
 }
 function D() {
     return (0, a.useEffect)(
@@ -71,7 +71,7 @@ function P() {
     let { soundshareEnabled: e } = d.A.getState();
     return {
         sourceId: "prepicked:0",
-        nativePickerStyleUsed: R.lastPresentedPickerStyle,
+        nativePickerStyleUsed: O.lastPresentedPickerStyle,
         sourceName: M() ?? m.intl.string(m.t.KKcy95),
         sound: e,
     };
@@ -91,7 +91,7 @@ class U extends s.Ay.Store {
         (0, p.E)();
     }
     getPickerState() {
-        return R;
+        return O;
     }
     getLastPickedContent() {
         return i;
@@ -117,23 +117,23 @@ class U extends s.Ay.Store {
 let w = new U(l.h, {
     NATIVE_SCREEN_SHARE_PICKER_UPDATE: function (e) {
         let { existing: t, content: n } = e;
-        if (((R = { lastPickerAction: 1 }), (i = n), 0 === N && !t)) {
+        if (((O = { lastPickerAction: 1 }), (i = n), 0 === N && !t)) {
             let e = c.A.getChannel(A.Ay.getVoiceChannelId());
             null != e && (0, I.A)(_.Ay) && (0, h.vz)(e, u.A, E.A, !1) && (0, o.XI)(e.getGuildId(), e.id, P());
         }
     },
     NATIVE_SCREEN_SHARE_PICKER_CANCEL: function () {
-        R = { lastPickerAction: 2 };
+        O = { lastPickerAction: 2 };
     },
     NATIVE_SCREEN_SHARE_PICKER_ERROR: function (e) {
         let { error: t } = e;
-        R = { lastPickerAction: 3, lastPickerError: t };
+        O = { lastPickerAction: 3, lastPickerError: t };
     },
     NATIVE_SCREEN_SHARE_PICKER_PRESENT: function (e) {
         let { style: t } = e;
-        R = { lastPickerAction: 0, lastPresentedPickerStyle: t };
+        O = { lastPickerAction: 0, lastPresentedPickerStyle: t };
     },
     NATIVE_SCREEN_SHARE_PICKER_RELEASE: function () {
-        R = {};
+        O = {};
     },
 });

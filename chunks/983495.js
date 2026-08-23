@@ -25,12 +25,12 @@ var l = n(477900),
     C = n(562153),
     N = n(183555),
     P = n(679492),
-    L = n(922016),
-    b = n(403777),
+    b = n(922016),
+    L = n(403777),
     M = n(462887),
-    I = n(267889),
-    _ = n(363195),
-    w = n(403362),
+    w = n(267889),
+    I = n(363195),
+    _ = n(403362),
     O = n(427262),
     $ = n(448613),
     U = n(8925),
@@ -54,7 +54,7 @@ function B(e) {
         } = e,
         { resetInteraction: f, setInteractionToast: h } = (0, P.Pq)(),
         { theme: m } = (0, V.E)(),
-        A = (0, o.bG)([_.A], () => _.A.theme),
+        A = (0, o.bG)([I.A], () => I.A.theme),
         x = (0, M.M)(A) ? !(0, M.M)(m) : (0, M.M)(m),
         T = r.useRef(null);
     async function S(e) {
@@ -91,7 +91,7 @@ ${a}`
                         : `${U.c5}${u}*
 ${a}`;
                 default:
-                    (0, w.xb)(l);
+                    (0, _.xb)(l);
             }
         })({ emoji: e, username: O.Ay.getName(t), sourceType: i, sourceDetails: s });
         h(null);
@@ -122,7 +122,7 @@ ${a}`;
                 }
             );
         }, [d, f]),
-        (0, l.jsx)(I.A, {
+        (0, l.jsx)(w.A, {
             headerClassName: x ? H.X : void 0,
             guildId: n ?? void 0,
             closePopout: F.tE,
@@ -137,8 +137,8 @@ ${a}`;
 var Q = n(478437),
     q = n(305866),
     z = n(355622),
-    W = n(408018),
-    K = n(273754),
+    K = n(408018),
+    W = n(273754),
     X = n(95701),
     J = n(767523);
 let Z = (0, X.createChannelRecord)({ id: "1", type: Q.r.DM });
@@ -158,7 +158,7 @@ function ee(e) {
         { resetInteraction: m, setInteractionToast: A } = (0, P.Pq)(),
         { primaryColor: x } = (0, V.E)(),
         [T, S] = r.useState(""),
-        [g, p] = r.useState((0, W.x7)(T)),
+        [g, p] = r.useState((0, K.x7)(T)),
         E = r.useRef(!1),
         v = r.useRef(null),
         R = r.useCallback(
@@ -200,7 +200,7 @@ ${t}`
                         : `${U.c5}${o}*
 ${t}`;
                 default:
-                    (0, w.xb)(l);
+                    (0, _.xb)(l);
             }
         })({ input: e, username: O.Ay.getName(t), sourceType: s, sourceDetails: o });
         A(null);
@@ -225,7 +225,7 @@ ${t}`;
         onKeyDown: R,
         children: (0, l.jsx)("div", {
             className: i()(J.kL, j, { [J.GE]: null != x }),
-            children: (0, l.jsx)(K.Ay, {
+            children: (0, l.jsx)(W.Ay, {
                 parentModalKey: c,
                 emojiPickerCloseOnModalOuterClick: !0,
                 className: J.hF,
@@ -242,7 +242,7 @@ ${t}`;
                             case k.dS.STATUS:
                                 return Y.t.g9BTCM;
                             default:
-                                (0, w.xb)(e);
+                                (0, _.xb)(e);
                         }
                     })(s),
                     { username: C.Ay.getName(n, a, t) },
@@ -281,11 +281,11 @@ function en(e) {
             interactionSourceId: f,
             interactionPopoutTargetRef: h,
         } = (0, P.Pq)(),
-        m = [et.d.MODAL, et.d.MODAL_V2].includes(a) ? (0, b.n)(t.id, n) : void 0,
+        m = [et.d.MODAL, et.d.MODAL_V2].includes(a) ? (0, L.n)(t.id, n) : void 0,
         A = c === o.sourceType && u === k.AQ.REACT,
         x = c === o.sourceType && u === k.AQ.REPLY,
         T = (A || x) && f === o.sourceId;
-    return (0, l.jsx)(L.Y, {
+    return (0, l.jsx)(b.Y, {
         targetElementRef: h ?? void 0,
         renderPopout: (e) => {
             let { setPopoutRef: s } = e;
@@ -342,7 +342,7 @@ function eo(e) {
                                 async () => {
                                     let { default: e } = await Promise.all([
                                         n.e("376991"),
-                                        n.e("734879"),
+                                        n.e("267506"),
                                         n.e("25300"),
                                         n.e("291103"),
                                         n.e("875762"),
@@ -433,7 +433,7 @@ let ed = r.forwardRef(function (e, t) {
                                     async () => {
                                         let { default: e } = await Promise.all([
                                             n.e("376991"),
-                                            n.e("734879"),
+                                            n.e("267506"),
                                             n.e("25300"),
                                             n.e("291103"),
                                             n.e("875762"),
@@ -490,12 +490,12 @@ let ed = r.forwardRef(function (e, t) {
                 hasEntered: j = !0,
             } = e,
             C = (0, P.NR)(),
-            { trackUserProfileAction: L } = (0, N.NJ)(),
-            b = 1.25 * (null != n),
-            M = 36 + b,
-            I = 144 + b,
+            { trackUserProfileAction: b } = (0, N.NJ)(),
+            L = 1.25 * (null != n),
+            M = 36 + L,
+            w = 144 + L,
+            I = r.useRef(null),
             _ = r.useRef(null),
-            w = r.useRef(null),
             O = r.useRef(null),
             $ = (0, E.GV)(),
             U = r.useRef(M),
@@ -504,32 +504,32 @@ let ed = r.forwardRef(function (e, t) {
             [F, G] = r.useState(!1),
             [H, B] = r.useState(!0),
             [Q, q] = r.useState(!D && j),
-            [z, W] = r.useState(!1),
-            K = j && F,
+            [z, K] = r.useState(!1),
+            W = j && F,
             X = d === et.d.MODAL || d === et.d.MODAL_V2,
-            J = r.useCallback((e) => (X ? e : Math.min(e, I)), [I, X]),
+            J = r.useCallback((e) => (X ? e : Math.min(e, w)), [w, X]),
             Z = (0, o.bG)([T.Ay], () => T.Ay.useReducedMotion),
             [ee] = r.useState(() => new u.Ep());
         r.useEffect(() => () => ee.stop(), [ee]),
             r.useEffect(() => {
-                C?.onInteractionPopoutTargetRefChange(_);
+                C?.onInteractionPopoutTargetRefChange(I);
             }, [C]);
         let [en, el] = (0, A.z)(() => ({ maxHeight: `${U.current}px`, config: { clamp: !0, duration: 150 } }));
         function er(e) {
             Q &&
-                (W(e),
+                (K(e),
                 e
                     ? el({ maxHeight: `${J(V.current)}px`, delay: 300 * !Z, config: { clamp: !0, duration: 150 * !Z } })
                     : el({ maxHeight: `${Math.min(U.current, M)}px`, delay: 0 }),
                 Z ? B(!e) : ee.start(e ? 300 : 150, () => B(!e)));
         }
         r.useLayoutEffect(() => {
-            if ((G(!0), null == w.current || null == O.current || !K)) return;
-            let e = w.current.getBoundingClientRect().height,
+            if ((G(!0), null == _.current || null == O.current || !W)) return;
+            let e = _.current.getBoundingClientRect().height,
                 t = O.current.getBoundingClientRect().height,
                 n = J(t);
             q(n > e), (U.current = e), (V.current = t), el({ maxHeight: `${H ? Math.min(U.current, M) : n}px` });
-        }, [K, a, n, el, H, M, J]);
+        }, [W, a, n, el, H, M, J]);
         let ea =
                 null != n
                     ? (0, l.jsx)(S.A, { emoji: n, animate: g, hideTooltip: !1, tooltipDelay: k.In, className: eu.H0 })
@@ -547,7 +547,7 @@ let ed = r.forwardRef(function (e, t) {
                     : null,
             eo = null == ei || "" === a ? es : ei,
             ed = (0, l.jsxs)("div", { className: eu.Qs, children: [ea, eo] }),
-            ef = (0, l.jsxs)("div", { ref: w, className: i()(eu.Qs, eu.mj), children: [ea, eo] }),
+            ef = (0, l.jsxs)("div", { ref: _, className: i()(eu.Qs, eu.mj), children: [ea, eo] }),
             eh = (0, l.jsxs)("div", { ref: O, className: i()(eu.Qs, eu.m2, eu.mj), children: [ea, eo] }),
             em = Y.intl.string(z ? Y.t.fFaN1b : Y.t.xPkLPy),
             eA = Q
@@ -589,10 +589,10 @@ let ed = r.forwardRef(function (e, t) {
                   children: [
                       eT,
                       (0, l.jsxs)("div", {
-                          ref: _,
+                          ref: I,
                           className: i()(eu.kL, p),
                           onMouseEnter: () => {
-                              L({ action: "HOVER_CUSTOM_STATUS" }), er(!0);
+                              b({ action: "HOVER_CUSTOM_STATUS" }), er(!0);
                           },
                           onMouseLeave: () => {
                               er(!1);
@@ -605,16 +605,16 @@ let ed = r.forwardRef(function (e, t) {
                   children: [
                       eT,
                       (0, l.jsxs)("div", {
-                          ref: _,
+                          ref: I,
                           className: i()(eu.kL, p),
                           onFocus: () => {
                               R(!0);
                           },
                           onBlur: (e) => {
-                              _.current?.contains(e.relatedTarget) || R(!1);
+                              I.current?.contains(e.relatedTarget) || R(!1);
                           },
                           onMouseEnter: () => {
-                              L({ action: "HOVER_CUSTOM_STATUS" }), R(!0), er(!0);
+                              b({ action: "HOVER_CUSTOM_STATUS" }), R(!0), er(!0);
                           },
                           onMouseLeave: () => {
                               R(!1), er(!1);
@@ -712,24 +712,24 @@ let eA = r.forwardRef(function (e, t) {
         R = (0, o.bG)([j.default], () => j.default.getId() === n.id),
         N = R && !h,
         P = C.Ay.useName(a, i, n),
-        L = R ? Y.intl.string(Y.t.SlKMnR) : Y.intl.formatToPlainString(Y.t["91lTRe"], { name: P }),
-        b = !R && !n.bot && !h;
+        b = R ? Y.intl.string(Y.t.SlKMnR) : Y.intl.formatToPlainString(Y.t["91lTRe"], { name: P }),
+        L = !R && !n.bot && !h;
     if (S) {
         let e = null != E && "" !== E ? E : null;
         return (0, l.jsx)(p.f5, {
             value: x,
-            children: (0, l.jsx)(ef, { emoji: c ?? null, text: e, statusLabel: L, placeholderText: d, ref: t, ...m }),
+            children: (0, l.jsx)(ef, { emoji: c ?? null, text: e, statusLabel: b, placeholderText: d, ref: t, ...m }),
         });
     }
     let M = A?.emoji ?? null,
-        I = null != E && "" !== E ? E : null;
-    return null != M || null != I || N
-        ? null == M && null == I
+        w = null != E && "" !== E ? E : null;
+    return null != M || null != w || N
+        ? null == M && null == w
             ? (0, l.jsx)(p.f5, {
                   value: x,
                   children: (0, l.jsx)(ed, { onCloseProfile: s, prompt: f, ref: t, addButtonRef: T }),
               })
-            : b
+            : L
               ? (0, l.jsx)(p.f5, {
                     value: x,
                     children: (0, l.jsx)(em, {
@@ -737,8 +737,8 @@ let eA = r.forwardRef(function (e, t) {
                         guildId: a,
                         channelId: i,
                         emoji: M,
-                        text: I,
-                        statusLabel: L,
+                        text: w,
+                        statusLabel: b,
                         ...m,
                     }),
                 })
@@ -747,8 +747,8 @@ let eA = r.forwardRef(function (e, t) {
                       value: x,
                       children: (0, l.jsx)(eh, {
                           emoji: M,
-                          text: I,
-                          statusLabel: L,
+                          text: w,
+                          statusLabel: b,
                           onCloseProfile: s,
                           editButtonRef: T,
                           ref: t,
@@ -757,7 +757,7 @@ let eA = r.forwardRef(function (e, t) {
                   })
                 : (0, l.jsx)(p.f5, {
                       value: x,
-                      children: (0, l.jsx)(ef, { emoji: M, text: I, statusLabel: L, ref: t, ...m }),
+                      children: (0, l.jsx)(ef, { emoji: M, text: w, statusLabel: b, ref: t, ...m }),
                   })
         : null;
 });

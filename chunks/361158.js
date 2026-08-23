@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { B8: () => L, dF: () => y, up: () => R, xr: () => S });
+n.d(t, { B8: () => L, dF: () => y, up: () => O, xr: () => S });
 var i = n(477900),
     r = n(582128),
     a = n(277057),
@@ -69,10 +69,10 @@ function N(e) {
     );
 }
 let C = { enter: T.Ve, enterActive: T.T8, enterDone: T.lG, exit: T.NS, exitActive: T.N5, exitDone: T.Dr },
-    O = { enter: T.Zf, enterActive: T.BA, enterDone: T.zo, exit: T.ph, exitActive: T.zX, exitDone: T.hf };
-function R() {
+    R = { enter: T.Zf, enterActive: T.BA, enterDone: T.zo, exit: T.ph, exitActive: T.zX, exitDone: T.hf };
+function O() {
     let { reducedMotion: e } = r.useContext(E.C),
-        t = e.enabled ? O : C,
+        t = e.enabled ? R : C,
         n = S((e) => e.fullScreenLayers),
         a = n.map((e) => ({ item: e, nodeRef: r.createRef() }));
     return (0, i.jsx)(l.A, {

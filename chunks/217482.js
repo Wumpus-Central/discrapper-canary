@@ -43,9 +43,9 @@ var n = l(477900),
     V = l(31300),
     K = l(646270),
     F = l(748562),
-    Z = l(477155),
-    W = l(939249),
-    X = l(417270),
+    W = l(477155),
+    X = l(939249),
+    Z = l(417270),
     Y = l(696016),
     J = l(711918),
     Q = l(375708),
@@ -66,7 +66,7 @@ function el() {
                 children: (0, n.jsx)(b.$, {
                     size: "sm",
                     variant: "secondary",
-                    icon: Z.r,
+                    icon: W.r,
                     iconPosition: "start",
                     text: Q.intl.string(J.default["7yBrfD"]),
                     onClick: () => l($.Y.NONE),
@@ -94,7 +94,7 @@ function el() {
                                     let { preset: a, icon: i, label: r } = l,
                                         o = e === a;
                                     return (0, n.jsxs)(
-                                        W.D,
+                                        X.D,
                                         {
                                             "aria-pressed": o,
                                             className: H()(ee.is, o && ee.j5),
@@ -120,7 +120,7 @@ function el() {
                 children: (0, n.jsx)(b.$, {
                     fullWidth: !0,
                     variant: "secondary",
-                    icon: X.RetryIcon,
+                    icon: Z.RetryIcon,
                     iconPosition: "start",
                     text: Q.intl.string(J.default.XdZS9I),
                     onClick: () => t(Y.yz.ORIGINAL),
@@ -158,7 +158,7 @@ function em(e) {
                 children: (0, n.jsx)(b.$, {
                     size: "sm",
                     variant: "secondary",
-                    icon: Z.r,
+                    icon: W.r,
                     iconPosition: "start",
                     text: Q.intl.string(J.default["7yBrfD"]),
                     onClick: () => a(null),
@@ -203,7 +203,7 @@ function em(e) {
                                     let { value: a, label: i } = e,
                                         r = t.data.style.fontSize === a;
                                     return (0, n.jsx)(
-                                        W.D,
+                                        X.D,
                                         {
                                             "aria-pressed": r,
                                             className: H()(ee.is, r && ee.j5),
@@ -254,7 +254,7 @@ function em(e) {
                                     let { value: a, label: i } = e,
                                         r = t.data.style.strokeWidth === a;
                                     return (0, n.jsx)(
-                                        W.D,
+                                        X.D,
                                         {
                                             "aria-pressed": r,
                                             className: H()(ee.is, r && ee.j5),
@@ -362,9 +362,9 @@ function ev(e) {
             applicationAudioEnabled: V,
             setApplicationAudioEnabled: K,
             soundboardAudioEnabled: F,
-            setSoundboardAudioEnabled: Z,
-            pause: W,
-            clip: X,
+            setSoundboardAudioEnabled: W,
+            pause: X,
+            clip: Z,
             editOnly: et,
             setActiveTool: el,
             audioTracks: ea,
@@ -372,15 +372,15 @@ function ev(e) {
         { analyticsLocations: ei } = (0, I.Ay)(R.A.CLIPS_EDITOR),
         { addTextTrack: es, setSelectedTrackId: eo } = (0, er.fn)(),
         { isCropEnabled: ec, isTextTrackEnabled: eu } = (0, er.As)(),
-        ed = X.type === Y.nQ.SCREENSHOT,
-        em = X.type === Y.nQ.VOICE_CLIP,
-        ex = (0, T.h)(X.applicationId),
-        ev = (0, i.bG)([D.Ay], () => D.Ay.isClipExporting(X.id)),
+        ed = Z.type === Y.nQ.SCREENSHOT,
+        em = Z.type === Y.nQ.VOICE_CLIP,
+        ex = (0, T.h)(Z.applicationId),
+        ev = (0, i.bG)([D.Ay], () => D.Ay.isClipExporting(Z.id)),
         { onShareClick: ep } = (0, U.A)(t),
         eg = (0, i.bG)([S.A], () => S.A.isDeveloper),
         ej = a.useMemo(() => ea.filter((e) => e.trackName.includes(Y.gC.VOICE)).length, [ea]),
         eb = a.useMemo(() => ea.filter((e) => e.trackName.includes(Y.gC.SOUNDBOARD)).length, [ea]),
-        eC = ex?.name ?? X.applicationName ?? Q.intl.string(Q.t.GnQui9);
+        eC = ex?.name ?? Z.applicationName ?? Q.intl.string(Q.t.GnQui9);
     async function ey() {
         await (0, _.n)(P(), { channelId: t, analyticsLocations: ei });
     }
@@ -398,20 +398,20 @@ function ev(e) {
                     fullWidth: !0,
                     children: [
                         (0, n.jsx)(m.m, {
-                            text: X.isFavorite ? Q.intl.string(J.default.IZsalP) : Q.intl.string(J.default.ihBfyA),
+                            text: Z.isFavorite ? Q.intl.string(J.default.IZsalP) : Q.intl.string(J.default.ihBfyA),
                             children: (0, n.jsx)(r.K, {
-                                onClick: () => (0, O.XK)(X),
+                                onClick: () => (0, O.XK)(Z),
                                 variant: "icon-only",
-                                "aria-label": X.isFavorite
+                                "aria-label": Z.isFavorite
                                     ? Q.intl.string(J.default.IZsalP)
                                     : Q.intl.string(J.default.ihBfyA),
-                                icon: X.isFavorite ? h.StarIcon : f.y,
+                                icon: Z.isFavorite ? h.StarIcon : f.y,
                             }),
                         }),
                         (0, n.jsx)(m.m, {
                             text: Q.intl.string(Q.t.oyYWHE),
                             children: (0, n.jsx)(r.K, {
-                                onClick: (e) => (0, z.A)(e, { clips: [X], onAfterDelete: c }),
+                                onClick: (e) => (0, z.A)(e, { clips: [Z], onAfterDelete: c }),
                                 variant: "icon-only",
                                 "aria-label": Q.intl.string(Q.t.oyYWHE),
                                 icon: x.TrashIcon,
@@ -421,10 +421,10 @@ function ev(e) {
                             text: Q.intl.string(Q.t.PdRCRg),
                             children: (0, n.jsx)(r.K, {
                                 onClick: function (e) {
-                                    W(),
+                                    X(),
                                         (0, L.L3)(e, async () => {
                                             let { default: e } = await Promise.all([
-                                                l.e("238417"),
+                                                l.e("703409"),
                                                 l.e("657266"),
                                                 l.e("591114"),
                                                 l.e("595429"),
@@ -464,7 +464,7 @@ function ev(e) {
                                         (0, u.openModalLazy)(
                                             async () => {
                                                 let { default: e } = await l.e("310000").then(l.bind(l, 224883));
-                                                return (t) => (0, n.jsx)(e, { ...t, clip: X });
+                                                return (t) => (0, n.jsx)(e, { ...t, clip: Z });
                                             },
                                             { stackingBehavior: "stack" },
                                         );
@@ -497,10 +497,10 @@ function ev(e) {
                             (0, n.jsxs)("div", {
                                 className: ee.L0,
                                 children: [
-                                    "" !== X.thumbnail &&
+                                    "" !== Z.thumbnail &&
                                         (0, n.jsx)("img", {
                                             className: ee.Nf,
-                                            src: X.thumbnail,
+                                            src: Z.thumbnail,
                                             alt: "",
                                             "aria-hidden": !0,
                                         }),
@@ -580,7 +580,7 @@ function ev(e) {
                                             label: Q.intl.string(J.default["/VVQKJ"]),
                                             enabled: F,
                                             disabled: 0 === eb,
-                                            onToggle: Z,
+                                            onToggle: W,
                                         }),
                                     ],
                                 }),

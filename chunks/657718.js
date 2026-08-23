@@ -29,8 +29,8 @@ function g(e) {
             iconOpticalOffsetMargin: T = 0,
             fullWidth: m = !1,
             focusProps: g,
-            loading: O,
-            loadingStartedLabel: R,
+            loading: R,
+            loadingStartedLabel: O,
             loadingFinishedLabel: L,
             rounded: y = !1,
             type: D = "button",
@@ -62,18 +62,18 @@ function g(e) {
         et = (0, l.q)(J),
         en = r.useRef(!1);
     r.useEffect(() => {
-        !0 === O && ((en.current = !0), o.O.announce(R ?? ee.BUTTON_LOADING_STARTED_LABEL)),
-            !1 === O && !0 === en.current && (o.O.announce(L ?? ee.BUTTON_LOADING_FINISHED_LABEL), (en.current = !1));
-    }, [O, R, L, ee.BUTTON_LOADING_STARTED_LABEL, ee.BUTTON_LOADING_FINISHED_LABEL]);
+        !0 === R && ((en.current = !0), o.O.announce(O ?? ee.BUTTON_LOADING_STARTED_LABEL)),
+            !1 === R && !0 === en.current && (o.O.announce(L ?? ee.BUTTON_LOADING_FINISHED_LABEL), (en.current = !1));
+    }, [R, O, L, ee.BUTTON_LOADING_STARTED_LABEL, ee.BUTTON_LOADING_FINISHED_LABEL]);
     let ei = (0, i.jsxs)("div", {
-            className: s()(f.buttonChildren, { [f.loading]: O }),
+            className: s()(f.buttonChildren, { [f.loading]: R }),
             children: [
                 null != q && "start" === h && q,
                 $ && (0, i.jsx)(I.E, { tag: "span", variant: p[Y], color: "none", lineClamp: 1, children: _ }),
                 null != q && "end" === h && q,
             ],
         }),
-        er = k || O,
+        er = k || R,
         ea = F;
     null != ea && "number" == typeof ea && (ea = `${ea}px`);
     let es = (0, i.jsx)(u.vN, {
@@ -81,7 +81,7 @@ function g(e) {
         children: (0, i.jsxs)("button", {
             "data-mana-component": "button",
             role: t,
-            "aria-busy": O,
+            "aria-busy": R,
             className: s()(f.button, f[Y], f[n], { [f.hasText]: $, [f.fullWidth]: K, [f.rounded]: y }),
             ref: Z,
             rel: v,
@@ -104,9 +104,9 @@ function g(e) {
                         isLightMode: et,
                         disabled: k,
                     }),
-                null == O
+                null == R
                     ? (0, i.jsx)("div", { className: f.buttonChildrenWrapper, children: ei })
-                    : (0, i.jsx)(S, { loading: O, size: Y, children: ei }),
+                    : (0, i.jsx)(S, { loading: R, size: Y, children: ei }),
             ],
         }),
     });

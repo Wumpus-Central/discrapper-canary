@@ -76,10 +76,10 @@ function C(e) {
     let [t, n] = e.split(":");
     return { context: t, section: n };
 }
-function O(e) {
+function R(e) {
     return Array.isArray(e) ? e.at(-1)?.value : e;
 }
-function R() {
+function O() {
     Object.values(c.x).forEach((e) => {
         E[e] = {};
     });
@@ -87,7 +87,7 @@ function R() {
 function L() {
     null != g && (g.destroy(), (g = null));
 }
-R();
+O();
 class y extends i.Ay.Store {
     initialize() {
         this.waitFor(l.Ay, o.default);
@@ -100,7 +100,7 @@ class y extends i.Ay.Store {
         let n = this.getAllStats(t),
             i = n[0]?.rtp?.inbound[e],
             r = i?.find((e) => "video" === e.type);
-        return { codec: r?.codec.name, resolution: r?.resolution, bitrateEstimate: void 0, fps: O(r?.frameRateRender) };
+        return { codec: r?.codec.name, resolution: r?.resolution, bitrateEstimate: void 0, fps: R(r?.frameRateRender) };
     }
     getOutboundStats(e) {
         let t = this.getAllStats(e),
@@ -110,8 +110,8 @@ class y extends i.Ay.Store {
         return {
             codec: r?.codec.name,
             resolution: r?.resolution,
-            bitrateEstimate: O(n?.availableOutgoingBitrate),
-            fps: O(r?.frameRateEncode),
+            bitrateEstimate: R(n?.availableOutgoingBitrate),
+            fps: R(r?.frameRateEncode),
         };
     }
     getAllStats() {
@@ -172,7 +172,7 @@ let D = new y(a.h, {
         A.set(f(t, n), i);
     },
     VOICE_CHANNEL_SELECT: function (e) {
-        null != e.channelId && (R(), A.clear(), S.clear());
+        null != e.channelId && (O(), A.clear(), S.clear());
     },
     RTC_CONNECTION_VIDEO: function (e) {
         if (null === e.streamId) {

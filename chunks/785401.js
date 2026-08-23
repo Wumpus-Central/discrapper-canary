@@ -97,8 +97,8 @@ class C extends m.G {
         return !1 !== i && (!0 == i ? f.f$.onWrite : i)(this.typeName, e, t), t;
     }
 }
-let O = new C();
-class R extends m.G {
+let R = new C();
+class O extends m.G {
     constructor() {
         super("discord_protos.discord_experimentation.v1.Override", [
             { no: 1, name: "variation_id", kind: "scalar", T: 5 },
@@ -134,7 +134,7 @@ class R extends m.G {
         return !1 !== i && (!0 == i ? f.f$.onWrite : i)(this.typeName, e, t), t;
     }
 }
-let L = new R();
+let L = new O();
 class y extends m.G {
     constructor() {
         super("discord_protos.discord_experimentation.v1.Filter", [
@@ -1322,7 +1322,7 @@ class eA extends m.G {
                 { no: 3, name: "web_version", kind: "message", T: () => ef },
                 { no: 4, name: "native_version", kind: "message", T: () => ef },
                 { no: 6, name: "allow_non_native_web", kind: "scalar", T: 8 },
-                { no: 5, name: "client_required_changes", kind: "message", T: () => eO },
+                { no: 5, name: "client_required_changes", kind: "message", T: () => eR },
             ],
             { "discord_protos.discord_experimentation.v1.filter_category": "FILTER_CATEGORY_CLIENT" },
         );
@@ -1357,7 +1357,7 @@ class eA extends m.G {
                     r.allowNonNativeWeb = e.bool();
                     break;
                 case 5:
-                    r.clientRequiredChanges = eO.internalBinaryRead(e, e.uint32(), n, r.clientRequiredChanges);
+                    r.clientRequiredChanges = eR.internalBinaryRead(e, e.uint32(), n, r.clientRequiredChanges);
                     break;
                 default:
                     let a = n.readUnknownField;
@@ -1377,7 +1377,7 @@ class eA extends m.G {
             e.nativeVersion && ef.internalBinaryWrite(e.nativeVersion, t.tag(4, f.O0.LengthDelimited).fork(), n).join(),
             !1 !== e.allowNonNativeWeb && t.tag(6, f.O0.Varint).bool(e.allowNonNativeWeb),
             e.clientRequiredChanges &&
-                eO.internalBinaryWrite(e.clientRequiredChanges, t.tag(5, f.O0.LengthDelimited).fork(), n).join();
+                eR.internalBinaryWrite(e.clientRequiredChanges, t.tag(5, f.O0.LengthDelimited).fork(), n).join();
         let i = n.writeUnknownFields;
         return !1 !== i && (!0 == i ? f.f$.onWrite : i)(this.typeName, e, t), t;
     }
@@ -1619,8 +1619,8 @@ class eC extends m.G {
         return !1 !== i && (!0 == i ? f.f$.onWrite : i)(this.typeName, e, t), t;
     }
 }
-let eO = new eC();
-class eR extends m.G {
+let eR = new eC();
+class eO extends m.G {
     constructor() {
         super(
             "discord_protos.discord_experimentation.v1.UserIsBot",
@@ -1658,7 +1658,7 @@ class eR extends m.G {
         return !1 !== i && (!0 == i ? f.f$.onWrite : i)(this.typeName, e, t), t;
     }
 }
-let eL = new eR();
+let eL = new eO();
 class ey extends m.G {
     constructor() {
         super(
@@ -2458,7 +2458,7 @@ class tl extends m.G {
                 T: () => ["discord_protos.discord_experimentation.v1.Experiment.UnitType", e6],
             },
             { no: 15, name: "variations", kind: "message", repeat: 1, T: () => tu },
-            { no: 16, name: "rules", kind: "message", repeat: 1, T: () => O },
+            { no: 16, name: "rules", kind: "message", repeat: 1, T: () => R },
             { no: 18, name: "phase", kind: "enum", T: () => ["discord_protos.discord_experimentation.v1.Phase", ts] },
             {
                 no: 19,
@@ -2623,7 +2623,7 @@ class tl extends m.G {
                     r.variations.push(tu.internalBinaryRead(e, e.uint32(), n));
                     break;
                 case 16:
-                    r.rules.push(O.internalBinaryRead(e, e.uint32(), n));
+                    r.rules.push(R.internalBinaryRead(e, e.uint32(), n));
                     break;
                 case 18:
                     r.phase = e.int32();
@@ -2746,7 +2746,7 @@ class tl extends m.G {
         for (let i = 0; i < e.variations.length; i++)
             tu.internalBinaryWrite(e.variations[i], t.tag(15, f.O0.LengthDelimited).fork(), n).join();
         for (let i = 0; i < e.rules.length; i++)
-            O.internalBinaryWrite(e.rules[i], t.tag(16, f.O0.LengthDelimited).fork(), n).join();
+            R.internalBinaryWrite(e.rules[i], t.tag(16, f.O0.LengthDelimited).fork(), n).join();
         if ((0 !== e.phase && t.tag(18, f.O0.Varint).int32(e.phase), e.surfaces.length)) {
             t.tag(19, f.O0.LengthDelimited).fork();
             for (let n = 0; n < e.surfaces.length; n++) t.int32(e.surfaces[n]);

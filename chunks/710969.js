@@ -4,7 +4,7 @@ n.d(t, {
     Gp: () => y,
     HN: () => S,
     Ic: () => I,
-    Kc: () => R,
+    Kc: () => O,
     L4: () => L,
     Oh: () => u,
     RF: () => v,
@@ -99,7 +99,7 @@ function C(e) {
         trafficMetadataSealed: e.trafficMetadataSealed,
     };
 }
-function O(e, t) {
+function R(e, t) {
     let n = (function (e, t) {
         if ((e !== d.p9.QUEST_HOME_MOBILE_CAROUSEL && e !== d.p9.VIDEO_MODAL_MOBILE) || null == t) return null;
         let n = l.A.getAdDecisionByPlacementAndAdCreativeId(e, t);
@@ -109,20 +109,20 @@ function O(e, t) {
     let i = o.A.questAdDecisionByPlacement.get(e);
     return e === d.p9.QUEST_HOME_BANNER_DESKTOP && null != i ? C(i) : null == i ? null : C(i);
 }
-function R(e, t) {
+function O(e, t) {
     let n = g[t];
     if (null == n) return c.K3;
-    let { adDecisionData: i, questId: r, adCreativeId: a } = O(n, e) ?? {};
+    let { adDecisionData: i, questId: r, adCreativeId: a } = R(n, e) ?? {};
     return null == i ? c.K3 : r === e || a === e || i.ad_id === e ? i : c.K3;
 }
 function L(e, t) {
     let n = g[e];
-    if (null != n) return O(n, t)?.metadataSealed;
+    if (null != n) return R(n, t)?.metadataSealed;
 }
 function y(e, t, n) {
     let i = g[e];
     if (null != i) {
-        let { trafficMetadataSealed: e, questId: r } = O(i, n) ?? {};
+        let { trafficMetadataSealed: e, questId: r } = R(i, n) ?? {};
         if (null != e && (null != n || r === t)) return e;
     }
     if (null != t) {
@@ -132,7 +132,7 @@ function y(e, t, n) {
 }
 function D(e, t) {
     let n = g[e];
-    if (null != n) return O(n, t)?.adContext;
+    if (null != n) return R(n, t)?.adContext;
 }
 function v(e, t) {
     s.A.captureException(e, { ...t, tags: { ...t?.tags, app_context: "quests" } });

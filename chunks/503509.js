@@ -25,7 +25,7 @@ function C(e) {
     if (null == e || null == g.get(e)) return !1;
     g.delete(e), (S = new Set(S)).delete(e);
 }
-function O(e) {
+function R(e) {
     let { channelId: t, ongoingRings: n } = e,
         r = "GUILD_RING_START" === e.type;
     if (r && !c.A.getCurrentConfig({ guildId: e.guildId, location: "IncomingCallCreate" }).enabled) return !1;
@@ -58,7 +58,7 @@ function O(e) {
     }
     return !!S.has(t) && !s && C(t);
 }
-function R(e) {
+function O(e) {
     let { channelId: t } = e;
     return (
         ("GUILD_RING_STOP" !== e.type ||
@@ -98,11 +98,11 @@ class D extends r.Ay.Store {
     }
 }
 let v = new D(s.h, {
-    CALL_CREATE: O,
-    CALL_UPDATE: O,
-    CALL_DELETE: R,
-    GUILD_RING_START: O,
-    GUILD_RING_STOP: R,
+    CALL_CREATE: R,
+    CALL_UPDATE: R,
+    CALL_DELETE: O,
+    GUILD_RING_START: R,
+    GUILD_RING_STOP: O,
     VOICE_CHANNEL_SELECT: function (e) {
         let { channelId: t } = e;
         return C(t);

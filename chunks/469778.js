@@ -30,10 +30,10 @@ function C(e) {
         f[e.application_id].add(e.id),
         I[e.sku_id].add(e.id);
 }
-function O(e) {
+function R(e) {
     h[e.id] = o.A.createFromServer(e);
 }
-function R(e) {
+function O(e) {
     let { entitlements: t } = e;
     for (let e of t) C(e);
 }
@@ -148,10 +148,10 @@ let D = new y(l.h, {
     ENTITLEMENT_FETCH_APPLICATION_FAIL: function () {},
     ENTITLEMENTS_GIFTABLE_FETCH_SUCCESS: function (e) {
         let { entitlements: t } = e;
-        (h = {}), t.forEach(O);
+        (h = {}), t.forEach(R);
     },
-    SKU_PURCHASE_SUCCESS: R,
-    VIRTUAL_CURRENCY_REDEEM_SUCCESS: R,
+    SKU_PURCHASE_SUCCESS: O,
+    VIRTUAL_CURRENCY_REDEEM_SUCCESS: O,
     LIBRARY_FETCH_SUCCESS: function (e) {
         let { libraryApplications: t } = e;
         for (let e of t) if (null != e.entitlements) for (let t of e.entitlements) C(t);

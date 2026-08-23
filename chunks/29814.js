@@ -40,8 +40,8 @@ var m = n(717125),
     S = n(499211),
     N = n(376943),
     C = n(576705),
-    O = n(994500),
-    R = n(486020),
+    R = n(994500),
+    O = n(486020),
     L = n(871237),
     y = n(240248),
     D = n(465365),
@@ -57,7 +57,7 @@ function U(e) {
         type: "guild",
         guildId: e.id,
         content: (0, y.EJ)(e.name, 32),
-        icon: R.Ay.getGuildIconURL({ id: e.id, icon: e.icon, size: 40 }),
+        icon: O.Ay.getGuildIconURL({ id: e.id, icon: e.icon, size: 40 }),
     };
 }
 function w(e, t) {
@@ -98,7 +98,7 @@ function x(e, t) {
               type: n.type,
               id: n.id,
               guildId: n.guild_id,
-              name: (0, g.m1)(n, A.default, O.A),
+              name: (0, g.m1)(n, A.default, R.A),
               isDm: n.isPrivate(),
               isForumPost: n.isForumPost(),
               isMentionable: (0, D.Y)(n.type),
@@ -163,7 +163,7 @@ function B(e, t, n, i) {
                         return {
                             inContent: [
                                 w({
-                                    name: (0, g.m1)(e, A.default, O.A),
+                                    name: (0, g.m1)(e, A.default, R.A),
                                     type: e.type,
                                     iconType: (0, L.QG)(e) ?? "forum",
                                 }),

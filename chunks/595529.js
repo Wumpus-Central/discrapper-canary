@@ -7,7 +7,7 @@ n.d(t, {
     PP: () => U,
     eE: () => y,
     Vu: () => v,
-    DP: () => O,
+    DP: () => R,
     Tr: () => M,
 });
 var i = n(582128),
@@ -41,16 +41,16 @@ function C(e, t, l, E, h) {
         }),
         g = s.O ? n(773371).default : null,
         C = (0, r.bG)(null != g ? [g] : [], () => g?.getFocusedPID()),
-        O = (0, r.bG)([f.A], () => null != e && f.A.hasUserHitDCCap(e, t)),
-        R = i.useRef(t);
+        R = (0, r.bG)([f.A], () => null != e && f.A.hasUserHitDCCap(e, t)),
+        O = i.useRef(t);
     return (
-        (R.current = t),
+        (O.current = t),
         i.useEffect(() => {
             if (null != e) {
                 var t;
                 return (
                     _.A.hasLoaded(N.oD.PRELOADED_USER_SETTINGS) ||
-                        ((t = R.current),
+                        ((t = O.current),
                         A.default.track(S.HAw.DISMISSIBLE_CONTENT_SHOWN_BEFORE_CONNECTION_OPEN, {
                             content_type: a.M[e],
                             group_name: l ?? null,
@@ -58,7 +58,7 @@ function C(e, t, l, E, h) {
                             guild_id: t ?? null,
                             snowflake_id: h ?? null,
                         })),
-                    (0, m.Vh)(e, { groupName: l, guildId: R.current, version: E, snowflakeId: h }, T, C),
+                    (0, m.Vh)(e, { groupName: l, guildId: O.current, version: E, snowflakeId: h }, T, C),
                     () => {
                         if (null == e) return;
                         let t = !f.A.hasUserHitDCCap();
@@ -66,11 +66,11 @@ function C(e, t, l, E, h) {
                     }
                 );
             }
-        }, [e, l, O, T, E, C, h]),
+        }, [e, l, R, T, E, C, h]),
         I && null != e ? e : null
     );
 }
-function O(e, t) {
+function R(e, t) {
     let n = (0, r.bG)([_.A], () => _.A.settings.userContent?.dismissedContents),
         a = (0, r.bG)([E.A], () => E.A.getGuildId()),
         s = (0, g.Sg)(e),
@@ -90,11 +90,11 @@ function O(e, t) {
         ]
     );
 }
-let R = {};
+let O = {};
 function L(e) {
     return (0, r.bG)(
         [_.A],
-        () => (null !== e ? _.A.settings.userContent?.recurringDismissibleContentStates?.[e] : null) ?? R,
+        () => (null !== e ? _.A.settings.userContent?.recurringDismissibleContentStates?.[e] : null) ?? O,
     );
 }
 function y(e, t, n) {

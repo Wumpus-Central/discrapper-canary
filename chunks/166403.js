@@ -44,7 +44,7 @@ function N() {
 function C(e) {
     return e.status !== d.Dmq.UNPAID;
 }
-function O(e, t) {
+function R(e, t) {
     let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
     if (e === d.rzx.PREMIUM && null === a.A.getPremiumTypeOverride()) return null;
     let i = n ? u : c;
@@ -56,7 +56,7 @@ function O(e, t) {
     }
     return null;
 }
-class R extends i.Ay.Store {
+class O extends i.Ay.Store {
     initialize() {
         this.waitFor(o.default, a.A);
     }
@@ -72,11 +72,11 @@ class R extends i.Ay.Store {
     }
     getPremiumSubscription() {
         let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
-        return O(d.rzx.PREMIUM, (e) => !(0, s.m1)(e.planId), e);
+        return R(d.rzx.PREMIUM, (e) => !(0, s.m1)(e.planId), e);
     }
     getPremiumTypeSubscription() {
         let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
-        return O(d.rzx.PREMIUM, void 0, e);
+        return R(d.rzx.PREMIUM, void 0, e);
     }
     getSubscriptions() {
         let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
@@ -116,10 +116,10 @@ class R extends i.Ay.Store {
         return g;
     }
     getPremiumGroupSubscription() {
-        return O(d.rzx.PREMIUM, (e) => e.hasAnyPremiumGroup && e.statusAllowsPerks, !0);
+        return R(d.rzx.PREMIUM, (e) => e.hasAnyPremiumGroup && e.statusAllowsPerks, !0);
     }
 }
-let L = new R(r.h, {
+let L = new O(r.h, {
     BILLING_SUBSCRIPTION_FETCH_SUCCESS: function (e) {
         let { subscriptions: t, lastLazyPerkSync: n } = e,
             i = {},

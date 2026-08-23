@@ -25,8 +25,8 @@ function c(e) {
             children: S,
             targetElementRef: N,
             asContainer: C = !1,
-            containerTag: O = "span",
-            ariaHidden: R = !1,
+            containerTag: R = "span",
+            ariaHidden: O = !1,
             ...L
         } = e,
         y =
@@ -93,13 +93,13 @@ function c(e) {
                 C = i.useCallback(() => {
                     _ && N();
                 }, [N, _]),
-                O = i.useCallback(
+                R = i.useCallback(
                     (e) => {
                         null == h.current && (h.current = e.currentTarget), (T.current = !1), S();
                     },
                     [S, h],
                 ),
-                R = i.useCallback(
+                O = i.useCallback(
                     (e) => {
                         E && (null == h.current && (h.current = e.currentTarget), (T.current = !1), S());
                     },
@@ -109,8 +109,8 @@ function c(e) {
                     p.current?.stop(), N();
                 }, [N]),
                 y = i.useMemo(
-                    () => ({ onMouseEnter: O, onMouseLeave: L, onFocus: R, onBlur: N, onContextMenu: N, onClick: C }),
-                    [O, L, R, N, C],
+                    () => ({ onMouseEnter: R, onMouseLeave: L, onFocus: O, onBlur: N, onContextMenu: N, onClick: C }),
+                    [R, L, O, N, C],
                 );
             return (
                 i.useEffect(() => {
@@ -142,7 +142,7 @@ function c(e) {
                 { isVisible: g, triggerProps: y }
             );
         })({ targetElementRef: y.targetElementRef, ...L }),
-        M = R ? void 0 : D,
+        M = O ? void 0 : D,
         P =
             ((t = i.isValidElement(S) ? S : d),
             (n = y.triggerRef),
@@ -222,6 +222,6 @@ function c(e) {
                       }),
                   };
             return (0, a.EE)({ tag: l, children: t, triggerHandlers: o, triggerRef: i });
-        })(C, S, b, y.triggerRef, D, R, O);
+        })(C, S, b, y.triggerRef, D, O, R);
     return { tooltipId: D, isVisible: v, targetElementRef: y.targetElementRef, trigger: U ?? P, describedById: M };
 }

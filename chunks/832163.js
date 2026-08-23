@@ -22,8 +22,8 @@ let o = {},
     S = {},
     N = {},
     C = {},
-    O = {},
-    R = new Set(),
+    R = {},
+    O = new Set(),
     L = null;
 function y(e) {
     return {
@@ -81,7 +81,7 @@ class b extends r.Ay.Store {
         return "success" === m.state ? m.config : null;
     }
     getConfigForApplicationId(e) {
-        return O[e];
+        return R[e];
     }
     getApplicationIdFromDetectableId(e) {
         return C[e];
@@ -102,7 +102,7 @@ class b extends r.Ay.Store {
         return g;
     }
     getStorefrontGuildIds() {
-        return R;
+        return O;
     }
     getSKUEligibility(e) {
         return f[e]?.state;
@@ -134,8 +134,8 @@ let M = new b(a.h, {
             (S = {}),
             (N = {}),
             (C = {}),
-            (O = {}),
-            (R = new Set()),
+            (R = {}),
+            (O = new Set()),
             (L = null);
     },
     STOREFRONT_PROMOTION_ID_OVERRIDE_SET: function () {
@@ -227,7 +227,7 @@ let M = new b(a.h, {
         let { config: t } = e;
         (m = { state: "success", config: t, fetchedAt: Date.now() }),
             (g = new Set(t.storefronts.map((e) => e.applicationId))),
-            (R = new Set(t.storefronts.filter((e) => null != e.guildId).map((e) => e.guildId))),
+            (O = new Set(t.storefronts.filter((e) => null != e.guildId).map((e) => e.guildId))),
             (S = t.storefronts.reduce((e, t) => (null != t.guildId && (e[t.guildId] = t.applicationId), e), {})),
             (N = t.storefronts.reduce(
                 (e, t) => (null != t.guildId && ((e[t.applicationId] = t.guildId), (e[t.gameId] = t.guildId)), e),
@@ -237,7 +237,7 @@ let M = new b(a.h, {
                 (e, t) => ((e[t.gameId] = t.applicationId), (e[t.applicationId] = t.applicationId), e),
                 {},
             )),
-            (O = t.storefronts.reduce((e, t) => ((e[t.applicationId] = t), e), {}));
+            (R = t.storefronts.reduce((e, t) => ((e[t.applicationId] = t), e), {}));
     },
     SOCIAL_LAYER_STOREFRONT_CONFIG_FETCH_FAILURE: function () {
         m = { state: "error", fetchedAt: Date.now() };

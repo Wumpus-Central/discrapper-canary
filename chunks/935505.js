@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { $L: () => D, cr: () => S, kL: () => N, fO: () => y, au: () => O, d1: () => C, io: () => R });
+n.d(t, { $L: () => D, cr: () => S, kL: () => N, fO: () => y, au: () => R, d1: () => C, io: () => O });
 var i = n(602137),
     r = n(970278),
     a = n(152007),
@@ -46,7 +46,7 @@ function N(e) {
 function C(e) {
     return u.A.getUploads(e, d.C.FirstThreadMessage).length;
 }
-function O(e) {
+function R(e) {
     let t = o.A.getChannel(e);
     if (null == t) return [];
     let n = o.A.getChannel(t.parent_id),
@@ -56,7 +56,7 @@ function O(e) {
         a = new Set(i.map((e) => e.id));
     return Array.from(r).filter((e) => a.has(e));
 }
-function R(e, t) {
+function O(e, t) {
     return Object.keys(r.A.getThreadsForParent(e, t)).length;
 }
 function L(e) {

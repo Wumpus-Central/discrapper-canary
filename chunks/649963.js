@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { BB: () => R, Go: () => y, Jf: () => D, ao: () => O, et: () => v, on: () => L, qN: () => g });
+n.d(t, { BB: () => O, Go: () => y, Jf: () => D, ao: () => R, et: () => v, on: () => L, qN: () => g });
 var i,
     r = n(636537),
     a = n(765178),
@@ -73,7 +73,7 @@ function C(e) {
           ? T.Rsh.REACTION_WITH_TYPE(t, n, l, r, s)
           : T.Rsh.REACTION(t, n, l, r);
 }
-async function O(e) {
+async function R(e) {
     let t,
         { channelId: n, messageId: i, emoji: a, limit: l, after: o, type: c } = e,
         u =
@@ -99,29 +99,29 @@ async function O(e) {
         E
     );
 }
-async function R(e, t, n) {
+async function O(e, t, n) {
     var i, s, u, h;
     let I,
         f = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "Message",
         g = arguments.length > 4 ? arguments[4] : void 0,
-        O = null != g && !!g.burst,
+        R = null != g && !!g.burst,
         L = null != g && !!g.isRetry;
     if (
         !L &&
-        ((i = e), (s = t), (u = n), (h = O), null != (I = E.A.getMessage(i, s)) && I.userHasReactedWithEmoji(u, h))
+        ((i = e), (s = t), (u = n), (h = R), null != (I = E.A.getMessage(i, s)) && I.userHasReactedWithEmoji(u, h))
     )
         return void l.A.show({
             title: m.intl.string(m.t["uaUU/g"]),
             body: m.intl.string(m.t.psMorl),
             confirmText: m.intl.string(m.t["NX+WJN"]),
         });
-    let y = await b(n, O);
+    let y = await b(n, R);
     return (
-        N("MESSAGE_REACTION_ADD", e, t, n, { burst: O, colors: y }),
+        N("MESSAGE_REACTION_ADD", e, t, n, { burst: R, colors: y }),
         await c.A.unarchiveThreadIfNecessary(e),
         r.Bo.put({
             url: C({ channelId: e, messageId: t, emoji: n, userId: "@me" }),
-            query: { location: f, type: O ? d.v.BURST : d.v.NORMAL },
+            query: { location: f, type: R ? d.v.BURST : d.v.NORMAL },
             oldFormErrors: !0,
             rejectWithError: (0, r.fT)(),
         })
@@ -138,15 +138,15 @@ async function R(e, t, n) {
                         ...(0, o.dI)(i),
                     });
                 }
-                O
+                R
                     ? (a.O.announce(m.intl.formatToPlainString(m.t["RJlG+R"], { name: n.name })),
                       p.A.triggerFullscreenAnimation({ channelId: e, messageId: t, emoji: { ...n, animated: !1 } }))
                     : a.O.announce(m.intl.formatToPlainString(m.t.ol4acF, { name: n.name }));
             })
             .catch((i) => {
-                S(i, () => R(e, t, n, f, { burst: O, isRetry: !0 }), { isRetry: L }) &&
-                    (N("MESSAGE_REACTION_REMOVE", e, t, n, { burst: O }),
-                    O
+                S(i, () => O(e, t, n, f, { burst: R, isRetry: !0 }), { isRetry: L }) &&
+                    (N("MESSAGE_REACTION_REMOVE", e, t, n, { burst: R }),
+                    R
                         ? a.O.announce(m.intl.formatToPlainString(m.t.fJeu87, { name: n.name }))
                         : a.O.announce(m.intl.formatToPlainString(m.t["UUn5V+"], { name: n.name })));
             })

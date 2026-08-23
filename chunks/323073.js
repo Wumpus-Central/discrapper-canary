@@ -8,13 +8,13 @@ n.d(t, {
     Jm: () => w,
     Tv: () => M,
     UK: () => v,
-    a9: () => R,
+    a9: () => O,
     k$: () => L,
     kK: () => P,
     ni: () => F,
     p5: () => V,
     qR: () => x,
-    r9: () => O,
+    r9: () => R,
     sP: () => B,
     vL: () => k,
     xq: () => N,
@@ -47,11 +47,11 @@ function N() {
 function C(e) {
     return g.includes(e.nsfwLevel);
 }
-function O() {
+function R() {
     let e = (0, s.p9)();
     return (0, l.d6)(i.t.AGE_GATED_SPACES) && e;
 }
-function R() {
+function O() {
     let e = (0, l.aX)(i.t.AGE_GATED_SPACES),
         t = (0, s.i2)();
     return e && t;
@@ -60,7 +60,7 @@ function L(e) {
     let t = (0, s.b8)(),
         n = (0, d.wh)(e),
         i = (0, r.bG)([E.default], () => E.default.getCurrentUser()?.nsfwAllowed === !1),
-        l = R(),
+        l = O(),
         o = T.intl.string(n ? T.t.xi46lg : T.t.ZmwvDc);
     return l
         ? t
@@ -94,7 +94,7 @@ function L(e) {
 }
 function y(e) {
     let t = (0, s.b8)(),
-        n = R(),
+        n = O(),
         i = e === f.w_.NSFW_SERVER || e === f.w_.NSFW_SERVER_INVITE || e === f.w_.NSFW_SERVER_INVITE_EMBED,
         a = (0, r.bG)([E.default], () => E.default.getCurrentUser()?.nsfwAllowed === !1);
     if (e === f.w_.JOIN_LARGE_GUILD_UNDERAGE || e === f.w_.ACCESS_LARGE_GUILD_UNDERAGE) {
@@ -136,14 +136,14 @@ function y(e) {
 function D() {
     let e = E.default.getCurrentUser();
     if (null == e) return !1;
-    let t = O();
+    let t = R();
     return !0 !== e.nsfwAllowed || t;
 }
 function v(e) {
     return !!D() && null != e && x(c.A.getChannel(e));
 }
 function b(e) {
-    return O() && v(e);
+    return R() && v(e);
 }
 function M(e) {
     return !!b(e) && ((0, I.yO)(f.w_.NSFW_VOICE_CHANNEL), !0);

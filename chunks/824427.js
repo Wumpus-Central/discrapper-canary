@@ -24,8 +24,8 @@ var i = n(132500),
 function C() {
     return !__OVERLAY__ && (0, N.Q)(window.location.pathname);
 }
-var O = n(604594),
-    R = n(4043),
+var R = n(604594),
+    O = n(4043),
     L = n(287809),
     y = n(652215);
 let D = 15 * h.A.Millis.MINUTE,
@@ -157,8 +157,8 @@ function $() {
 function z(e) {
     return null == e
         ? null
-        : e.version !== O.Ir
-          ? (P.warn(`Throwing away client session with invalid version: ${e.version}, expected ${O.Ir}`), null)
+        : e.version !== R.Ir
+          ? (P.warn(`Throwing away client session with invalid version: ${e.version}, expected ${R.Ir}`), null)
           : e;
 }
 async function Z() {
@@ -202,7 +202,7 @@ function en() {
             (w = {
                 id: setInterval(() => {
                     let e;
-                    !(null != H && null != (e = L.default.getCurrentUser()) && (e.isStaff() || (0, R.r)(e.id, 0.02))) ||
+                    !(null != H && null != (e = L.default.getCurrentUser()) && (e.isStaff() || (0, O.r)(e.id, 0.02))) ||
                         performance.now() - x <= D ||
                         A.default.track(y.HAw.CLIENT_HEARTBEAT_SKIPPED, { client_heartbeat_version: 30 });
                 }, D),
@@ -221,8 +221,8 @@ async function ei() {
     }
     let a = Date.now();
     if (K()) {
-        (null == t || (0, O.aE)(t)) &&
-            ((t = { uuid: (0, i.A)(), createdAtTimestamp: a, lastUsedTimestamp: a, version: O.Ir }), (G = 0)),
+        (null == t || (0, R.aE)(t)) &&
+            ((t = { uuid: (0, i.A)(), createdAtTimestamp: a, lastUsedTimestamp: a, version: R.Ir }), (G = 0)),
             (t.lastUsedTimestamp = a);
         var l = t;
         let e = performance.now();
@@ -232,7 +232,7 @@ async function ei() {
             } catch (e) {
                 I.A.captureException(e);
             }
-    } else null != t && (0, O.aE)(t) && (t = null);
+    } else null != t && (0, R.aE)(t) && (t = null);
     return (
         (k = { state: "loaded", session: t }),
         null != t &&
@@ -244,5 +244,5 @@ async function ei() {
 }
 function er() {
     let e = "uninitialized" === k.state ? z(s.w.get(b)) : k.session;
-    return null == e || (0, O.aE)(e) ? null : e;
+    return null == e || (0, R.aE)(e) ? null : e;
 }

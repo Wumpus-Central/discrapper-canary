@@ -22,16 +22,16 @@ var i = n(989349),
     S = n(35587),
     N = n(412260),
     C = n(202541),
-    O = n(652215);
-function R(e) {
+    R = n(652215);
+function O(e) {
     let { experimentEnabled: t, premiumSubscription: n, mostRecentSubscription: i, previousPremiumSubscription: s } = e;
     if (!t) return !1;
-    if (null != i && i.status === O.Dmq.ENDED) {
+    if (null != i && i.status === R.Dmq.ENDED) {
         let e = i.endedAt,
             t = i.hasPremiumAtLeast(C.PremiumTypes.TIER_2);
         if (null != e && t && r()().subtract(10, "days").isBefore(e)) return !1;
     }
-    if (null != s && s.status === O.Dmq.ENDED) {
+    if (null != s && s.status === R.Dmq.ENDED) {
         let e = s.endedAt,
             t = s.hasPremiumAtLeast(C.PremiumTypes.TIER_2);
         if (null != e && t && r()().subtract(10, "days").isBefore(e)) return !1;
@@ -40,7 +40,7 @@ function R(e) {
         let e = n.hasPremiumAtLeast(C.PremiumTypes.TIER_2),
             t = d.default.getCurrentUser(),
             i = !!n?.hasActiveTrial && A.Ay.isPremiumExactly(t, C.PremiumTypes.TIER_0),
-            r = (0, E.isAndroid)() && n.paymentGateway !== O.kM_.GOOGLE;
+            r = (0, E.isAndroid)() && n.paymentGateway !== R.kM_.GOOGLE;
         if (e || i || r) return !1;
     }
     return !(a.Fr && _.A.isFractionalPremiumActive());
@@ -76,13 +76,13 @@ function L() {
         }, [t, n, i]);
     })({ delay: N ? -1 : A - g });
     let C = !a.Fr || (0, E.isAndroid)(),
-        O = R({
+        R = O({
             experimentEnabled: i,
             premiumSubscription: l,
             mostRecentSubscription: r,
             previousPremiumSubscription: d,
         }),
-        L = C && O && null == u && null != n && !t && null == _,
+        L = C && R && null == u && null != n && !t && null == _,
         y = (0, h.GU)("bogo marketing eligibility hook");
     return !N && (e ? y : L);
 }
@@ -108,7 +108,7 @@ async function y() {
         (await (0, l.I8)()),
         c.A.hasFetchedSubscriptions() || (await (0, l.hP)());
     let A = c.A.getMostRecentPremiumTypeSubscription();
-    return R({
+    return O({
         experimentEnabled: r,
         premiumSubscription: c.A.getPremiumTypeSubscription(),
         mostRecentSubscription: A,

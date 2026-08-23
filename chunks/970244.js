@@ -6,8 +6,8 @@ n.d(t, {
     c_: () => m,
     e0: () => L,
     kb: () => S,
-    s: () => R,
-    tu: () => O,
+    s: () => O,
+    tu: () => R,
     xP: () => N,
 }),
     n(938796),
@@ -50,7 +50,7 @@ async function C(e) {
         N(e.message);
     }
 }
-async function O(e) {
+async function R(e) {
     try {
         await (0, h.mk)(e), (0, E.Dc)({ message: T.intl.string(T.t["JF/LWn"]), icon: s.Ck.CLOCK });
     } catch (e) {
@@ -58,7 +58,7 @@ async function O(e) {
         (t = e.message), (0, l.P0)((0, o.o)(T.intl.formatToPlainString(T.t.sUvyW3, { error: t }), s.Ck.FAILURE));
     }
 }
-function R(e) {
+function O(e) {
     let { channel: t } = e,
         n = a()().add(1, "day").startOf("day").set("hours", 9),
         r = a()().add(1, "day").startOf("day").set("hours", 13),

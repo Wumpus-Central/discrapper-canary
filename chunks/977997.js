@@ -25,13 +25,13 @@ function S(e, t) {
 function N(e) {
     let t = h[u.ME] ?? {};
     s().each(t, (t, n) => {
-        t.channelId === e && O(u.ME, n, () => null);
+        t.channelId === e && R(u.ME, n, () => null);
     });
 }
 function C(e) {
     return f.get(e) ?? new Set();
 }
-function O(e, t, n) {
+function R(e, t, n) {
     var i, r;
     let a = S(h, e ?? u.ME),
         s = a[t],
@@ -54,8 +54,8 @@ function O(e, t, n) {
     }
     return [!0, l, s];
 }
-function R(e, t) {
-    return O(e, t.userId, (e) => {
+function O(e, t) {
+    return R(e, t.userId, (e) => {
         if (null == t.channelId) return null;
         {
             let n = {
@@ -80,7 +80,7 @@ function R(e, t) {
 function L(e) {
     let { guild: t } = e;
     s().forEach(h[t.id], (e) => {
-        O(t.id, e.userId, () => null);
+        R(t.id, e.userId, () => null);
     }),
         delete h[t.id];
 }
@@ -163,18 +163,18 @@ let D = new y(o.h, {
     OVERLAY_INITIALIZE: function (e) {
         let { voiceStates: t, user: n, sessionId: a } = e;
         for (let [e, n] of ((h = {}), (p = {}), (m = {}), (T = {}), Object.entries(t)))
-            for (let [t, i] of Object.entries(n)) O(e, t, () => new c.A(i));
+            for (let [t, i] of Object.entries(n)) R(e, t, () => new c.A(i));
         (i = n.id), (r = a);
     },
     VOICE_CHANNEL_SELECT: function (e) {
         let { guildId: t, channelId: n } = e,
-            [r] = O(t, i, (e) => e?.set("channelId", n));
+            [r] = R(t, i, (e) => e?.set("channelId", n));
         return r;
     },
     VOICE_STATE_UPDATES: function (e) {
         let { voiceStates: t } = e;
         return t.reduce((e, t) => {
-            let [n, i, a] = R(t.guildId, t);
+            let [n, i, a] = O(t.guildId, t);
             return n
                 ? (t.sessionId === r && null != i && null != a && a.channelId !== i.channelId && (E += 1), A++, !0)
                 : e;
@@ -193,10 +193,10 @@ let D = new y(o.h, {
     PASSIVE_UPDATE_V2: function (e) {
         let t = !1;
         for (let n of e.voiceStates) {
-            let [i] = R(e.guildId, n);
+            let [i] = O(e.guildId, n);
             t = t || i;
         }
-        for (let n of e.removedVoiceStateUsers) O(e.guildId, n, () => null), (t = !0);
+        for (let n of e.removedVoiceStateUsers) R(e.guildId, n, () => null), (t = !0);
         return t && A++, t;
     },
     RTC_CONNECTION_PLATFORM: function (e) {

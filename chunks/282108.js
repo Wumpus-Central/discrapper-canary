@@ -6,7 +6,7 @@ n.d(t, {
     LE: () => D,
     M: () => C,
     O8: () => T,
-    b: () => O,
+    b: () => R,
     c2: () => b,
     f: () => P,
     gh: () => y,
@@ -33,7 +33,7 @@ n.d(t, {
             return !1;
         },
     nx: () => U,
-    qo: () => R,
+    qo: () => O,
     s9: () => N,
     y5: () => g,
 }),
@@ -80,8 +80,8 @@ function m(e) {
 function g(e, t) {
     if (t === I.LO.NONE || null == e) return !1;
     if (
-        e.attachments?.some((e) => O({ type: A.D.Attachment, media: e }, t).length > 0) ||
-        e.embeds?.some((e) => O({ type: A.D.Embed, media: e }, t).length > 0)
+        e.attachments?.some((e) => R({ type: A.D.Attachment, media: e }, t).length > 0) ||
+        e.embeds?.some((e) => R({ type: A.D.Embed, media: e }, t).length > 0)
     )
         return !0;
     let n = null;
@@ -126,12 +126,12 @@ function C(e) {
         embedIds: i?.map((e, t) => `embed_${t}`).filter(Boolean) ?? [],
     };
 }
-function O(e, t) {
+function R(e, t) {
     if (t === I.LO.NONE) return [];
     let n = v(t);
     return 0 === n.length ? [] : n.filter((t) => y(t, e)).map((e) => I.Jn[e].obscureReason);
 }
-function R(e, t) {
+function O(e, t) {
     if (t === I.LO.NONE) return !1;
     let n = v(t);
     return 0 !== n.length && n.filter((t) => y(t, e)).length > 0;

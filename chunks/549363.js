@@ -14,8 +14,8 @@ var i = n(477900),
     h = n(228366),
     E = n(661439),
     S = n(73825),
-    x = n(928039),
-    p = n(277984),
+    p = n(928039),
+    x = n(277984),
     T = n(235986),
     f = n(408278),
     I = n(921853),
@@ -274,7 +274,7 @@ let eh = function (e, t) {
 };
 var eE = n(818348),
     eS = n(460103);
-async function ex(e) {
+async function ep(e) {
     try {
         return (
             await eg.Bo.get({
@@ -288,13 +288,13 @@ async function ex(e) {
         throw e;
     }
 }
-function ep(e) {
+function ex(e) {
     let { payment: t } = e,
         [n, s] = l.useState(null),
         [r, a] = l.useState(null);
     async function o(e) {
         try {
-            let n = await ex(t.id);
+            let n = await ep(t.id);
             s(n);
             let i = e ? n.refundInvoiceLinks[0] : n.invoiceLink;
             window.open(i, "_blank"), a(null);
@@ -432,7 +432,7 @@ function e3(e) {
         }),
     });
 }
-function e5(e) {
+function e6(e) {
     let { guildId: t, guildProductListingId: n } = e,
         s = (0, ef.Qi)(t, n, { requireCurrentGuild: !1 }),
         r = (0, e_.z)(s),
@@ -455,7 +455,7 @@ function e5(e) {
         ],
     });
 }
-function e6(e) {
+function e5(e) {
     let { guildId: t, guildProductListingId: n } = e,
         l = (0, ef.Qi)(t, n, { requireCurrentGuild: !1 }),
         s = (0, d.bG)([eI.A], () => eI.A.getGuildProductFetchState(n) === eI.e.FETCHING),
@@ -710,7 +710,7 @@ class e8 extends l.PureComponent {
                         e.isGuildProductPurchase &&
                             null != d &&
                             null != e.sku &&
-                            (0, i.jsx)(e5, { guildId: d, guildProductListingId: e.sku.id }),
+                            (0, i.jsx)(e6, { guildId: d, guildProductListingId: e.sku.id }),
                         u > 0 &&
                             (0, i.jsxs)(i.Fragment, {
                                 children: [
@@ -731,7 +731,7 @@ class e8 extends l.PureComponent {
     }
     renderInvoiceDownload() {
         let { payment: e } = this.props;
-        return (0, i.jsx)(ep, { payment: e });
+        return (0, i.jsx)(ex, { payment: e });
     }
     renderAdditionalGameItemDetails() {
         let {
@@ -1029,7 +1029,7 @@ class e8 extends l.PureComponent {
                             })
                           : null != l &&
                             null != e.sku &&
-                            (0, i.jsx)(e6, { guildId: l, guildProductListingId: e.sku.id }),
+                            (0, i.jsx)(e5, { guildId: l, guildProductListingId: e.sku.id }),
                   ],
               })
             : null;
@@ -1106,9 +1106,9 @@ function e7(e) {
         c && null != u && (0, ej.TA)(u);
     }, [u, c]);
     let S = (0, d.bG)([ek.A], () => ek.A.getGuild(m?.guildId)),
-        x = a ? m : void 0,
-        p = t.subscription,
-        T = (0, d.bG)([X.A], () => (null != p && p.type !== M.rzx.PREMIUM ? X.A.get(p.items[0].planId) : null)),
+        p = a ? m : void 0,
+        x = t.subscription,
+        T = (0, d.bG)([X.A], () => (null != x && x.type !== M.rzx.PREMIUM ? X.A.get(x.items[0].planId) : null)),
         f = (0, d.bG)([ew.default], () => {
             let e = t.isGift ? t.entitlements?.find((e) => e.user?.id != null && null != e.gifterId) : null;
             return null == e ? null : (ew.default.getUser(e.user?.id ?? null) ?? e?.user);
@@ -1116,7 +1116,7 @@ function e7(e) {
         { analyticsLocations: I } = (0, eu.Ay)(eo.A.BILLING_SETTINGS_BILLING);
     return (0, i.jsx)(e8, {
         applicationStatistics: g,
-        application: c ? E : x,
+        application: c ? E : p,
         analyticsLocations: I,
         guild: S,
         stickerPack: null,
@@ -1144,11 +1144,11 @@ function te(e) {
             (e) => {
                 g(e);
                 let n = t[t.length - 1].id;
-                e >= a - 2 && m !== n && ((0, p.CK)(10, n), A(n));
+                e >= a - 2 && m !== n && ((0, x.CK)(10, n), A(n));
             },
             [t, a, m],
         ),
-        S = (0, x.A)("billing-history", o);
+        S = (0, p.A)("billing-history", o);
     return (0, i.jsx)(u.hD, {
         navigator: S,
         children: (0, i.jsx)(u.PR, {
@@ -1183,7 +1183,7 @@ class tt extends l.PureComponent {
     }
     componentDidMount() {
         h.h.wait(() => {
-            (0, E.X)(), (0, p.CK)(30);
+            (0, E.X)(), (0, x.CK)(30);
         });
     }
     renderPremiumExternalSubscription(e) {

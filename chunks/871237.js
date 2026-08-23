@@ -7,12 +7,12 @@ n.d(t, {
     fK: () => b,
     Pd: () => D,
     QG: () => P,
-    n3: () => R,
+    n3: () => O,
     IP: () => y,
     vJ: () => U,
     af: () => G,
     Jg: () => M,
-    CG: () => O,
+    CG: () => R,
     an: () => a,
 }),
     n(321073);
@@ -52,7 +52,7 @@ function C(e, t, n) {
         { id: e, type: n, deny: h.x3, allow: r }
     );
 }
-function O(e, t, n) {
+function R(e, t, n) {
     var a;
     let s,
         l = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
@@ -72,7 +72,7 @@ function O(e, t, n) {
         o
     );
 }
-function R(e, t) {
+function O(e, t) {
     return C(e, t, r.r2.MEMBER);
 }
 function L(e, t) {

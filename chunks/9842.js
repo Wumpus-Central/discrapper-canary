@@ -114,11 +114,11 @@ function N(e) {
 function C(e) {
     return T.deleteChannelCache(e.channel.id);
 }
-function O(e, t) {
+function R(e, t) {
     if (!T.has(e, t)) return !1;
     T.set(e, t, { state: 2 });
 }
-function R() {
+function O() {
     T.clear();
 }
 function L(e) {
@@ -194,11 +194,11 @@ let D = new y(l.h, {
     },
     MESSAGE_DELETE: function (e) {
         let { id: t, channelId: n } = e;
-        return O(n, t);
+        return R(n, t);
     },
     MESSAGE_DELETE_BULK: function (e) {
         let { ids: t, channelId: n } = e;
-        return g(t, (e) => O(n, e));
+        return g(t, (e) => R(n, e));
     },
     CREATE_PENDING_REPLY: function (e) {
         let { message: t } = e;
@@ -209,6 +209,6 @@ let D = new y(l.h, {
     GUILD_DELETE: function () {
         if (0 === T.retainWhere((e) => null != u.A.getChannel(e))) return !1;
     },
-    CONNECTION_OPEN: R,
-    LOGOUT: R,
+    CONNECTION_OPEN: O,
+    LOGOUT: O,
 });

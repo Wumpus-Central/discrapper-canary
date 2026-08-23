@@ -5,8 +5,8 @@ n.d(t, {
     EE: () => A,
     FQ: () => N,
     F_: () => I,
-    IE: () => R,
-    LQ: () => O,
+    IE: () => O,
+    LQ: () => R,
     Pw: () => C,
     Qh: () => u,
     SJ: () => d,
@@ -102,9 +102,9 @@ class l extends r.A {
             case s.hes.CASH_APP:
                 return new N({ ...n, username: e.username });
             case s.hes.TDS_WALLET:
-                return new O({ ...n });
+                return new R({ ...n });
             case s.hes.PIX:
-                return new R({ ...n, email: e.email });
+                return new O({ ...n, email: e.email });
             default:
                 (0, a.xb)(e);
         }
@@ -146,9 +146,9 @@ class l extends r.A {
             case s.hes.CASH_APP:
                 return new N(e);
             case s.hes.TDS_WALLET:
-                return new O(e);
-            case s.hes.PIX:
                 return new R(e);
+            case s.hes.PIX:
+                return new O(e);
             default:
                 (0, a.xb)(t);
         }
@@ -316,13 +316,13 @@ class C extends l {
             throw Error(`Cannot instantiate AppleSourceRecord with type: ${e.type}, must be ${s.hes.APPLE}`);
     }
 }
-class O extends l {
+class R extends l {
     constructor(e) {
         if ((super(e), e.type !== s.hes.TDS_WALLET))
             throw Error(`Cannot instantiate TDSWalletSourceRecord with type: ${e.type}, must be ${s.hes.TDS_WALLET}`);
     }
 }
-class R extends l {
+class O extends l {
     constructor(e) {
         if ((super(e), e.type !== s.hes.PIX))
             throw Error(`Cannot instantiate PixSourceRecord with type: ${e.type}, must be ${s.hes.PIX}`);

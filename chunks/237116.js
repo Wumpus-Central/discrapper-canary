@@ -49,8 +49,8 @@ var p = n(202776),
     S = n(209932),
     N = n(147472),
     C = n(361670),
-    O = n(931959),
-    R = n(750385),
+    R = n(931959),
+    O = n(750385),
     L = n(194004),
     y = n(863005),
     D = n(152007),
@@ -277,7 +277,7 @@ function eC(e) {
         E
     );
 }
-function eO(e, t, n) {
+function eR(e, t, n) {
     let i = 0,
         r = null;
     for (let a of t) {
@@ -286,7 +286,7 @@ function eO(e, t, n) {
     }
     return null != r && (r.isFullMatch ? (t.length = 0) : t.splice(t.indexOf(r), 1)), i;
 }
-function eR(e, t) {
+function eO(e, t) {
     let n = _.A.getChannel(e);
     return null == e || null == n
         ? []
@@ -371,7 +371,7 @@ let eL = (0, z.L_)((e, t, n) => {
                 null != e && t.push({ userId: e.id, nick: null });
             } else {
                 if (0 === i.length && s) {
-                    let e = eR(o.id, r);
+                    let e = eO(o.id, r);
                     if (e.length > 0) return e;
                 }
                 (t = x.Ay.getMembers(d.guild_id).filter(eS)), a && X.A.requestMembers(d.guild_id, i, r);
@@ -396,7 +396,7 @@ let eL = (0, z.L_)((e, t, n) => {
             } = e;
             if (null == F.A.getGuild(t)) return [];
             if (0 === n.length && a) {
-                let e = eR(W.Ay.getChannelId(t), i);
+                let e = eO(W.Ay.getChannelId(t), i);
                 if (e.length > 0) return e;
             }
             let o = x.Ay.getMembers(t).filter(eS);
@@ -477,7 +477,7 @@ let eL = (0, z.L_)((e, t, n) => {
                           .value();
             let N = {},
                 C = [],
-                O = w.A.getMaxScore();
+                R = w.A.getMaxScore();
             for (let e of r) {
                 if (
                     ((t = e.type),
@@ -494,7 +494,7 @@ let eL = (0, z.L_)((e, t, n) => {
                 let r = [...g],
                     l = (0, u.m1)(e, K.default, j.A).toLocaleLowerCase(),
                     o = T && a === e.id,
-                    c = o ? 10 : eO(l, r, d);
+                    c = o ? 10 : eR(l, r, d);
                 if (0 !== c) {
                     if (r.length > 0) {
                         for (let t of [
@@ -518,7 +518,7 @@ let eL = (0, z.L_)((e, t, n) => {
                             })(e, N),
                         ]) {
                             if (null == t || "" === t) continue;
-                            let e = eO(t, r, !1);
+                            let e = eR(t, r, !1);
                             0 !== e && (c += 0.5 * e);
                         }
                         c = Math.min(6, c);
@@ -530,7 +530,7 @@ let eL = (0, z.L_)((e, t, n) => {
                         h === G.I6 && (0, M.ay)(i) && (c = Math.max(c - 1, 0.5)),
                         e.isThread() && (e.isActiveThread() || (c -= 3), D.A.hasJoined(e.id) || (c -= 5)),
                         (c = Math.min(
-                            c + 3 * Math.min(w.A.getScoreWithoutFetchingLatest(e.id) ?? 0 / O, 1),
+                            c + 3 * Math.min(w.A.getScoreWithoutFetchingLatest(e.id) ?? 0 / R, 1),
                             c >= 7 ? 10 : 7,
                         )),
                         C.push({
@@ -708,7 +708,7 @@ let eL = (0, z.L_)((e, t, n) => {
                 }
             return d.sort(c.A), d.length > n && (d.length = n), d;
         },
-        getRecentlyTalked: eR,
+        getRecentlyTalked: eO,
         queryMentionResults(e) {
             let {
                     query: t,
@@ -949,11 +949,11 @@ let eL = (0, z.L_)((e, t, n) => {
                     o = (0, et.sS)(e),
                     d = RegExp(`^${J.A.escape(o)}`, "i"),
                     c = RegExp(`${J.A.escape(o)}`, "i");
-                R.A.getStickerMetadataArrays().forEach((l) => {
+                O.A.getStickerMetadataArrays().forEach((l) => {
                     l.forEach((l, o) => {
                         let u = 0,
                             _ = null,
-                            E = R.A.getStickerById(o);
+                            E = O.A.getStickerById(o);
                         if (null == E || !i(E, (0, C.W$)(E, r, n))) return;
                         for (let n of l) {
                             let { type: i, value: r } = n,
@@ -984,7 +984,7 @@ let eL = (0, z.L_)((e, t, n) => {
                                 : r === e && ((s = 10 * a), (_ = r)),
                                 s > u && ((u = s), (_ = r));
                         }
-                        let A = O.A.stickerFrecencyWithoutFetchingLatest.getScore(o);
+                        let A = R.A.stickerFrecencyWithoutFetchingLatest.getScore(o);
                         null != A && (u *= A / 100),
                             u > 0 &&
                                 null != _ &&

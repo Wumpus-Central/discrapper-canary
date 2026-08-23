@@ -4,7 +4,7 @@ n.r(t),
         ASSISTANT_WUMPUS_VOICE_USER: () => N,
         default: () => ek,
         mergeUser: () => y,
-        transformUser: () => R,
+        transformUser: () => O,
         users: () => g,
     }),
     n(938796),
@@ -39,7 +39,7 @@ function C(e, t, n) {
     let a = i !== r;
     return a && S++, a;
 }
-function O(e, t) {
+function R(e, t) {
     let n = g[e];
     return (
         !(null == n || (0, c.D)(n.primaryGuild, t.primary_guild)) &&
@@ -47,7 +47,7 @@ function O(e, t) {
         ((n.primaryGuild = (0, c.j)(t.primary_guild)), (g[n.id] = n), S++, !0)
     );
 }
-function R(e) {
+function O(e) {
     let t = e.mfa_enabled;
     null != t && ((e.mfaEnabled = t), delete e.mfa_enabled);
     let n = (0, A.nq)(e.premium_type);
@@ -89,12 +89,12 @@ function y(e) {
         i = g[e.id],
         r = void 0 !== e.id && e.id === f.default.getId();
     if (null == i)
-        void 0 !== (t = (i = new h.A(R(e))).premiumType) && r && (i.premiumType = D((0, A.I9)(i), i.premiumType));
+        void 0 !== (t = (i = new h.A(O(e))).premiumType) && r && (i.premiumType = D((0, A.I9)(i), i.premiumType));
     else if (n) {
         var a;
         let n,
             s,
-            l = R(e);
+            l = O(e);
         void 0 !== (t = l.premium_type ?? l.premiumType) &&
             r &&
             (0, A._D)(l) &&
@@ -167,7 +167,7 @@ function M(e) {
         }),
         i.forEach((e) => {
             e.members.forEach((t) => {
-                C(t.user.id, e.id, t.avatar), O(t.user.id, t.user);
+                C(t.user.id, e.id, t.avatar), R(t.user.id, t.user);
             });
         }),
         null != g[f.default.getId()] &&
@@ -183,7 +183,7 @@ function P(e) {
     let { guilds: t, lazyPrivateChannels: n } = e;
     t.forEach((e) => {
         e.members.forEach((t) => {
-            C(t.user.id, e.id, t.avatar), O(t.user.id, t.user);
+            C(t.user.id, e.id, t.avatar), R(t.user.id, t.user);
         });
     }),
         n?.forEach((e) => {
@@ -372,7 +372,7 @@ function ed(e) {
         if ("INSERT" === e.op || "UPDATE" === e.op) {
             let t = e.item.member?.user;
             if (null == t) continue;
-            O(t.id, t);
+            R(t.id, t);
         }
     return !1;
 }
@@ -467,12 +467,12 @@ function eC(e) {
         r = !1;
     return null != n && (r = y(n)), null != i && (r = r || y(i)), r;
 }
-function eO(e) {
+function eR(e) {
     let { users: t, familyCenterTeenActivity: n } = e,
         { users: i } = n;
     return [...t, ...i].reduce((e, t) => y(t) || e, !1);
 }
-function eR(e) {
+function eO(e) {
     let { users: t } = e;
     return t.reduce((e, t) => y(t) || e, !1);
 }
@@ -590,8 +590,8 @@ class ex extends p.A {
             LOAD_MESSAGE_REQUESTS_SUPPLEMENTAL_DATA_SUCCESS: Z,
             PASSIVE_UPDATE_V2: eu,
             LOCAL_MESSAGES_LOADED: e_,
-            FAMILY_CENTER_INITIAL_LOAD: eO,
-            FAMILY_CENTER_LINKED_USERS_FETCH_SUCCESS: eR,
+            FAMILY_CENTER_INITIAL_LOAD: eR,
+            FAMILY_CENTER_LINKED_USERS_FETCH_SUCCESS: eO,
             FAMILY_CENTER_TEEN_ACTIVITY_FETCH_SUCCESS: ey,
             FAMILY_CENTER_TEEN_ACTIVITY_MORE_FETCH_SUCCESS: eD,
             FAMILY_CENTER_REQUEST_LINK_SUCCESS: eL,

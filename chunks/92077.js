@@ -1,13 +1,13 @@
 "use strict";
 n.d(t, {
     BK: () => D,
-    BO: () => O,
+    BO: () => R,
     K3: () => g,
     NQ: () => S,
     Ts: () => f,
     U: () => N,
     Vt: () => L,
-    ZT: () => R,
+    ZT: () => O,
     jU: () => y,
     oc: () => T,
     qv: () => m,
@@ -112,10 +112,10 @@ function N() {
 function C() {
     E.A.pause();
 }
-function O(e, t) {
+function R(e, t) {
     r.h.dispatch({ type: "DISPATCH_APPLICATION_MOVE_UP", applicationId: e, branchId: t });
 }
-function R(e, t) {
+function O(e, t) {
     E.A.cancel(e, t), r.h.dispatch({ type: "DISPATCH_APPLICATION_CANCEL", applicationId: e, branchId: t });
 }
 function L(e, t) {

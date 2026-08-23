@@ -6,8 +6,8 @@ var l = n(477900),
     r = n(922016),
     o = n(866665),
     c = n(939249),
-    d = n(783977);
-let u = { low: "Low", medium: "Medium", high: "High", xhigh: "Extra high", max: "Max" },
+    u = n(783977);
+let d = { low: "Low", medium: "Medium", high: "High", xhigh: "Extra high", max: "Max" },
     h = {
         anthropic: "Anthropic",
         openai: "OpenAI",
@@ -17,20 +17,20 @@ let u = { low: "Low", medium: "Medium", high: "High", xhigh: "Extra high", max: 
     };
 var m = n(295813),
     f = n(375708),
-    g = n(752065);
-function p(e) {
-    let { title: t, modelChoices: n, thinkingChoices: r, value: o, disabled: c, onChange: d } = e,
-        p = a.useMemo(() => n.map((e) => ({ id: e.id, label: e.label, value: e.id, description: h[e.provider] })), [n]),
-        x = a.useMemo(() => r.map((e) => ({ id: e, label: u[e] ?? e, value: e })), [r]);
+    p = n(752065);
+function g(e) {
+    let { title: t, modelChoices: n, thinkingChoices: r, value: o, disabled: c, onChange: u } = e,
+        g = a.useMemo(() => n.map((e) => ({ id: e.id, label: e.label, value: e.id, description: h[e.provider] })), [n]),
+        x = a.useMemo(() => r.map((e) => ({ id: e, label: d[e] ?? e, value: e })), [r]);
     return (0, l.jsxs)("div", {
-        className: g.uW,
+        className: p.uW,
         children: [
             (0, l.jsx)(i.E, { variant: "text-sm/semibold", color: "text-default", children: t }),
             (0, l.jsx)(s.l, {
                 label: f.intl.string(m.default["9FRudW"]),
-                options: p,
+                options: g,
                 value: o.model,
-                onSelectionChange: (e) => d({ ...o, model: e }),
+                onSelectionChange: (e) => u({ ...o, model: e }),
                 selectionMode: "single",
                 disabled: c,
                 fullWidth: !0,
@@ -39,7 +39,7 @@ function p(e) {
                 label: f.intl.string(m.default["4AsQHS"]),
                 options: x,
                 value: o.thinking,
-                onSelectionChange: (e) => d({ ...o, thinking: e }),
+                onSelectionChange: (e) => u({ ...o, thinking: e }),
                 selectionMode: "single",
                 disabled: c,
                 fullWidth: !0,
@@ -48,17 +48,17 @@ function p(e) {
     });
 }
 function x(e) {
-    let { settings: t, choices: n, disabled: s, onChange: u, className: h, icon: x } = e,
+    let { settings: t, choices: n, disabled: s, onChange: d, className: h, icon: x } = e,
         v = a.useRef(null),
         [b, j] = a.useState(null),
         [y, k] = a.useState(t);
     t !== y && (k(t), j(null));
-    let A = b ?? t,
-        w = a.useCallback(
+    let w = b ?? t,
+        A = a.useCallback(
             (e) => {
-                j(e), u(e);
+                j(e), d(e);
             },
-            [u],
+            [d],
         );
     return (0, l.jsx)(r.Y, {
         targetElementRef: v,
@@ -66,25 +66,25 @@ function x(e) {
         align: "right",
         renderPopout: () =>
             (0, l.jsxs)("div", {
-                className: g.nd,
+                className: p.nd,
                 role: "dialog",
                 "aria-label": f.intl.string(m.default["2NWMqY"]),
                 children: [
-                    (0, l.jsx)(p, {
+                    (0, l.jsx)(g, {
                         title: f.intl.string(m.default.ISmynF),
                         modelChoices: n.main,
                         thinkingChoices: n.thinking,
-                        value: A.main,
+                        value: w.main,
                         disabled: s,
-                        onChange: (e) => w({ ...A, main: e }),
+                        onChange: (e) => A({ ...w, main: e }),
                     }),
-                    (0, l.jsx)(p, {
+                    (0, l.jsx)(g, {
                         title: f.intl.string(m.default.hdt1ph),
                         modelChoices: n.subagent,
                         thinkingChoices: n.thinking,
-                        value: A.subagent,
+                        value: w.subagent,
                         disabled: s,
-                        onChange: (e) => w({ ...A, subagent: e }),
+                        onChange: (e) => A({ ...w, subagent: e }),
                     }),
                     (0, l.jsx)(i.E, {
                         variant: "text-xs/normal",
@@ -99,10 +99,10 @@ function x(e) {
                 ariaHidden: !0,
                 children: (0, l.jsx)(c.D, {
                     innerRef: v,
-                    className: h ?? g.hZ,
+                    className: h ?? p.hZ,
                     "aria-label": f.intl.string(m.default.COVYeS),
                     ...e,
-                    children: x ?? (0, l.jsx)(d.R, { size: "xxs", color: "currentColor", "aria-hidden": !0 }),
+                    children: x ?? (0, l.jsx)(u.R, { size: "xxs", color: "currentColor", "aria-hidden": !0 }),
                 }),
             }),
     });

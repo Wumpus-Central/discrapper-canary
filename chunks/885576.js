@@ -62,11 +62,11 @@ if (!__OVERLAY__) {
           }))
         : setInterval(N, 30 * u.A.Millis.SECOND);
     let e = a()(() => {
-        O({});
+        R({});
     }, 500);
     window.addEventListener("mouseup", e), window.addEventListener("wheel", e), window.addEventListener("keypress", e);
 }
-function O(e) {
+function R(e) {
     let { timestamp: t, type: n, bypassIdleUpdate: r } = e,
         a = "OVERLAY_SET_NOT_IDLE" === n && null != t;
     return (
@@ -78,7 +78,7 @@ function O(e) {
         !1)
     );
 }
-class R extends s.Ay.Store {
+class O extends s.Ay.Store {
     initialize() {
         this.waitFor(E.default);
     }
@@ -99,7 +99,7 @@ class R extends s.Ay.Store {
         return m;
     }
 }
-let L = new R(l.h, {
+let L = new O(l.h, {
     IDLE: function (e) {
         f = e.idle;
     },
@@ -108,16 +108,16 @@ let L = new R(l.h, {
     },
     SPEAKING: function (e) {
         let { userId: t, speakingFlags: n } = e;
-        return n !== h.ME.NONE && t === E.default.getId() && O({}), !1;
+        return n !== h.ME.NONE && t === E.default.getId() && R({}), !1;
     },
     APP_STATE_UPDATE: function (e) {
         let { state: t } = e;
         return (g = t === A.g6G.BACKGROUND), (i = null), (I = Date.now()), N(), !1;
     },
-    OVERLAY_SET_NOT_IDLE: O,
-    CHANNEL_SELECT: O,
-    VOICE_CHANNEL_SELECT: O,
-    WINDOW_FOCUS: O,
-    OVERLAY_INITIALIZE: O,
-    OVERLAY_SET_INPUT_LOCKED: O,
+    OVERLAY_SET_NOT_IDLE: R,
+    CHANNEL_SELECT: R,
+    VOICE_CHANNEL_SELECT: R,
+    WINDOW_FOCUS: R,
+    OVERLAY_INITIALIZE: R,
+    OVERLAY_SET_INPUT_LOCKED: R,
 });

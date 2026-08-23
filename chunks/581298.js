@@ -89,15 +89,15 @@ function E() {
 }
 function S(e, t) {
     let n = i.useMemo(() => (0, s.hl)(e), [e]),
-        l = x(n, t ?? ""),
-        r = x(n, "");
+        l = p(n, t ?? ""),
+        r = p(n, "");
     return i.useMemo(() => {
         let e = new u(),
             t = new u();
         return d(n, r, t), { node: d(n, l, e) ?? { ...n, layout: [] }, visibleDirectory: e, accessibleDirectory: t };
     }, [l, r, n]);
 }
-function x(e, t) {
+function p(e, t) {
     let n = (function (e, t) {
             let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
                 i = new Set(),

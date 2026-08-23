@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Ay: () => k, QP: () => O, S9: () => L, sN: () => R }), n(321073);
+n.d(t, { Ay: () => k, QP: () => R, S9: () => L, sN: () => O }), n(321073);
 var i,
     r = n(435558),
     a = n.n(r),
@@ -22,8 +22,8 @@ var i,
     S = n(287809),
     N = n(652215),
     C = n(375708);
-let O = "everyone",
-    R = 0;
+let R = "everyone",
+    O = 0;
 var L =
     (((i = {}).GROUP = "GROUP"),
     (i.MEMBER = "MEMBER"),
@@ -86,11 +86,11 @@ function v(e) {
     var t;
     let n = h.A.getChannel(e);
     return null == n
-        ? O
+        ? R
         : null == n.memberListId
           ? ((t = n),
             _.Ib(N.xBc.VIEW_CHANNEL, t)
-                ? O
+                ? R
                 : l()
                       .v3(
                           a()(t.permissionOverwrites)

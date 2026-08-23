@@ -1,7 +1,7 @@
 i.d(t, { A: () => r });
-var a = i(477900),
-    n = i(582128);
-class s extends n.Component {
+var n = i(477900),
+    a = i(582128);
+class s extends a.Component {
     _input = null;
     static defaultProps = { multiple: !1, disabled: !1, tabIndex: 0 };
     activateUploadDialogue = () => {
@@ -17,12 +17,12 @@ class s extends n.Component {
         e.currentTarget.value = null;
     };
     render() {
-        let { disabled: e, tabIndex: t, className: i, name: n, "aria-label": s, "aria-hidden": l, id: r } = this.props,
+        let { disabled: e, tabIndex: t, className: i, name: a, "aria-label": s, "aria-hidden": l, id: r } = this.props,
             o = "";
         return (
             this.props.filters &&
                 (o = this.props.filters.map((e) => e.extensions.map((e) => `.${e}`).join(",")).join(",")),
-            (0, a.jsx)("input", {
+            (0, n.jsx)("input", {
                 id: r,
                 style: {
                     position: "absolute",
@@ -43,7 +43,7 @@ class s extends n.Component {
                 onClick: this.props.onClick,
                 multiple: this.props.multiple,
                 accept: o,
-                name: n,
+                name: a,
                 "aria-label": s,
                 "aria-hidden": l || void 0,
                 ref: (e) => {
@@ -54,8 +54,8 @@ class s extends n.Component {
         );
     }
 }
-class l extends n.Component {
-    _ref = n.createRef();
+class l extends a.Component {
+    _ref = a.createRef();
     constructor(e) {
         super(e), (this.setRef = this.setRef.bind(this));
     }
@@ -66,7 +66,7 @@ class l extends n.Component {
         this._ref = e;
     }
     render() {
-        return (0, a.jsx)(s, { ref: this.setRef, ...this.props });
+        return (0, n.jsx)(s, { ref: this.setRef, ...this.props });
     }
 }
 let r = l;

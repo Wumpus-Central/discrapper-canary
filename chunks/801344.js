@@ -14,7 +14,7 @@ n.d(t, {
     aP: () => S,
     d4: () => f,
     fH: () => h,
-    j3: () => O,
+    j3: () => R,
     j7: () => N,
     kt: () => y,
     nS: () => D,
@@ -24,7 +24,7 @@ n.d(t, {
     pw: () => L,
     rS: () => r,
     ve: () => o,
-    ym: () => R,
+    ym: () => O,
     zy: () => p,
 });
 var i = n(696016);
@@ -49,7 +49,7 @@ let r = "lol_game_start",
     S = "lol_victory",
     N = "lol_defeat",
     C = { 2: c, 3: u, 4: _, 5: E },
-    O = {
+    R = {
         [l]: { scoreBoost: 0.15, eventType: i.rb.KILL, triggerClipCandidate: !0 },
         [o]: { scoreBoost: 0.06, eventType: i.rb.ASSIST, triggerClipCandidate: !0 },
         [d]: { scoreBoost: 0, eventType: i.rb.DEATH, triggerClipCandidate: !1 },
@@ -68,7 +68,7 @@ let r = "lol_game_start",
         [S]: { scoreBoost: 0.2, eventType: i.rb.VICTORY, triggerClipCandidate: !0 },
         [N]: { scoreBoost: 0, eventType: i.rb.DEFEAT, triggerClipCandidate: !1 },
     },
-    R = 1 / 4,
+    O = 1 / 4,
     L = 1 / 3,
     y = "health";
 function D(e) {

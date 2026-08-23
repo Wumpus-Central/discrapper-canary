@@ -1,8 +1,8 @@
 n.d(t, {
-    r2: () => Z,
+    r2: () => J,
     $S: () => ef,
     _v: () => eu,
-    n6: () => ej,
+    n6: () => ey,
     ss: () => eg,
     fu: () => K,
     cS: () => ed,
@@ -12,13 +12,13 @@ n.d(t, {
     vX: () => eo,
     Vm: () => ev,
     dv: () => Y,
-    TV: () => X,
+    TV: () => Z,
     Hc: () => W,
     ST: () => ei,
-    PK: () => ey,
+    PK: () => ej,
     Lc: () => em,
     y_: () => ex,
-    XZ: () => J,
+    XZ: () => Q,
     nU: () => ep,
     oB: () => es,
 }),
@@ -120,8 +120,8 @@ function x(e) {
 }
 var v = n(783791),
     b = n(972786),
-    y = n(652215),
-    j = n(295813),
+    j = n(652215),
+    y = n(295813),
     k = n(375708);
 function w(e, t) {
     let n = e.pendingPublish;
@@ -137,8 +137,8 @@ function T(e, t) {
     s.h.dispatch({ type: "VIBEGRATIONS_CHAT_CONN_STATE", projectId: e, connState: t });
 }
 let _ = { location: "connection", code: d.xA.SEND_FAILED },
-    P = { location: "agent", code: d.xA.AGENT_ERROR };
-function R(e, t) {
+    R = { location: "agent", code: d.xA.AGENT_ERROR };
+function P(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : _;
     s.h.dispatch({
         type: "VIBEGRATIONS_CHAT_STEP_APPEND",
@@ -150,7 +150,7 @@ function R(e, t) {
 function M(e) {
     return `optimistic:${e}`;
 }
-function L(e, t) {
+function O(e, t) {
     let { content: n, nonce: l, attachments: a } = t;
     s.h.dispatch({
         type: "VIBEGRATIONS_CHAT_MESSAGE_APPEND",
@@ -162,16 +162,16 @@ function L(e, t) {
         attachments: a,
     });
 }
-let O = { steered: !0, queued: !0, restarting: !0, answered: !0 };
+let L = { steered: !0, queued: !0, restarting: !0, answered: !0 };
 function D(e, t, n) {
     let l = t.pendingSends;
-    for (let a of ((t.pendingSends = []), l)) L(e, a), R(e, n);
+    for (let a of ((t.pendingSends = []), l)) O(e, a), P(e, n);
 }
 function F(e, t) {
     if (!0 === N.get(e)) return;
     let n = t.pendingSends;
     for (let l of ((t.pendingSends = []), n)) {
-        L(e, l);
+        O(e, l);
         try {
             t.ws.sendUserMessage(
                 l.content,
@@ -179,7 +179,7 @@ function F(e, t) {
                 l.attachments?.map((e) => e.id),
             );
         } catch (t) {
-            console.error("[vibegrations] queued send failed", t), R(e, t instanceof Error ? t.message : "send failed");
+            console.error("[vibegrations] queued send failed", t), P(e, t instanceof Error ? t.message : "send failed");
         }
     }
 }
@@ -263,8 +263,8 @@ async function B(e, t) {
                     )
                         return void n.pendingEvents.push(l);
                     if ("history_page" === l.type) {
-                        let e = Q.get(t);
-                        if ((null != e && l.requested !== e) || (Q.delete(t), !0 === l.failed)) return;
+                        let e = X.get(t);
+                        if ((null != e && l.requested !== e) || (X.delete(t), !0 === l.failed)) return;
                         s.h.dispatch({
                             type: "VIBEGRATIONS_CHAT_HISTORY_PREPEND",
                             projectId: t,
@@ -283,7 +283,7 @@ async function B(e, t) {
                             entries: a,
                             cursor: !0 === l.has_more ? (l.cursor ?? null) : null,
                         }),
-                            Q.delete(t),
+                            X.delete(t),
                             (o = t),
                             ee(o);
                         let i = n.pendingEvents;
@@ -312,7 +312,7 @@ async function B(e, t) {
                         });
                     else if ("message_disposition" === l.type)
                         (a = l.disposition),
-                            Object.prototype.hasOwnProperty.call(O, a) &&
+                            Object.prototype.hasOwnProperty.call(L, a) &&
                                 s.h.dispatch({
                                     type: "VIBEGRATIONS_CHAT_MESSAGE_DISPOSITION",
                                     projectId: t,
@@ -346,7 +346,7 @@ async function B(e, t) {
                                       turnId: l.turn_id,
                                       patch: { content: e, kind: "message" },
                                   })
-                                : R(t, k.intl.string(j.default.Z8Eo8I), P);
+                                : P(t, k.intl.string(y.default.Z8Eo8I), R);
                         } else if ("announcement" === l.kind) {
                             let e = l.message ?? "";
                             "" !== e &&
@@ -409,7 +409,7 @@ async function B(e, t) {
                                       turnId: l.turn_id,
                                       patch: { proposal: l.proposal, kind: "proposal" },
                                   })
-                                : R(t, k.intl.string(j.default.IHCafX), P);
+                                : P(t, k.intl.string(y.default.IHCafX), R);
                         else if ("ideas" === l.kind)
                             null != l.ideas &&
                                 l.ideas.length > 0 &&
@@ -614,7 +614,7 @@ function z(e) {
         n.ws.close(),
         A.delete(e),
         (t = e),
-        Q.delete(t),
+        X.delete(t),
         h.A.releasePreviewControl(e),
         x(e),
         T(e, "closed"),
@@ -634,7 +634,7 @@ function Y(e, t, n) {
     let i = { content: l, nonce: (0, r.m)(), attachments: a },
         s = A.get(e);
     if (null != s && ("connecting" === S.get(e) || s.reconnectPending)) return void s.pendingSends.push(i);
-    L(e, i);
+    O(e, i);
     try {
         if (null == s) throw Error("Not connected");
         s.ws.sendUserMessage(
@@ -643,7 +643,7 @@ function Y(e, t, n) {
             i.attachments?.map((e) => e.id),
         );
     } catch (t) {
-        console.error("[vibegrations] send failed", t), R(e, t instanceof Error ? t.message : "send failed");
+        console.error("[vibegrations] send failed", t), P(e, t instanceof Error ? t.message : "send failed");
     }
 }
 function K(e) {
@@ -655,7 +655,7 @@ function K(e) {
         console.error("[vibegrations] interrupt send failed", e);
     }
 }
-function X(e) {
+function Z(e) {
     return new Promise((t, n) => {
         let l = A.get(e);
         if (null == l) return void n(Error("Not connected"));
@@ -673,13 +673,13 @@ function X(e) {
         throw ((0, u.Is)(e, t instanceof Error ? t.message : "publish failed", !1), t);
     });
 }
-function Z(e, t) {
+function J(e, t) {
     let n = A.get(e);
     null == n
         ? console.error("[vibegrations] stageModelSettings with no connection \u2014 call ensureConnection first")
         : (n.pendingModelSettings = t);
 }
-function J(e, t) {
+function Q(e, t) {
     let n = A.get(e);
     try {
         if (null == n) throw Error("Not connected");
@@ -688,16 +688,16 @@ function J(e, t) {
         console.error("[vibegrations] model settings send failed", e);
     }
 }
-let Q = new Map();
+let X = new Map();
 function ee(e) {
     let t = (0, v.bi)(e);
     if (null == t) return !1;
-    if (Q.get(e) === t) return !0;
+    if (X.get(e) === t) return !0;
     let n = A.get(e);
-    return null != n && (Q.set(e, t), n.ws.sendLoadHistory(t), !0);
+    return null != n && (X.set(e, t), n.ws.sendLoadHistory(t), !0);
 }
 async function et(e) {
-    let { body: t } = await i.Bo.post({ url: y.Rsh.VIBEGRATIONS_PROJECT_WS_TICKET(e), rejectWithError: !0 });
+    let { body: t } = await i.Bo.post({ url: j.Rsh.VIBEGRATIONS_PROJECT_WS_TICKET(e), rejectWithError: !0 });
     return { ticket: t.ticket, baseUrl: (0, f.C)() ?? t.url };
 }
 let en = new Map(),
@@ -849,15 +849,15 @@ async function eb(e, t) {
         a = new URLSearchParams({ ticket: n });
     return `${l}/agent/screenshots/${encodeURIComponent(t)}?${a}`;
 }
-async function ey(e, t) {
+async function ej(e, t) {
     let { download: n = !1 } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
         { ticket: l, baseUrl: a } = await ea(e),
         i = new URLSearchParams({ ticket: l });
     return n && i.set("download", "1"), `${er(a, t)}?${i}`;
 }
-async function ej(e, t) {
+async function ey(e, t) {
     async function n() {
-        return fetch(await ey(e, t), { method: "HEAD" });
+        return fetch(await ej(e, t), { method: "HEAD" });
     }
     let l = await n();
     if ((401 === l.status && (en.delete(e), (l = await n())), 404 === l.status)) return !1;

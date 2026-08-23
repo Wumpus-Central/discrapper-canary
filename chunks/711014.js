@@ -68,11 +68,11 @@ function N(e, t) {
 function C() {
     return N(u.A.getGuildFolders() ?? [], u.A.settings.guildFolders?.guildPositions ?? []);
 }
-function O() {
+function R() {
     let e = u.A.getGuildFolders();
     return !(null != i && a()(i, e)) && N((i = e) ?? [], u.A.settings.guildFolders?.guildPositions ?? []);
 }
-function R(e) {
+function O(e) {
     let { sourceId: t, targetId: n, moveToBelow: i, combine: r } = e,
         a = g.getNode(t),
         s = g.getNode(n);
@@ -207,8 +207,8 @@ class F extends p.A {
             GUILD_CREATE: C,
             GUILD_DELETE: C,
             GUILD_MEMBER_ADD: v,
-            USER_SETTINGS_PROTO_UPDATE: O,
-            GUILD_MOVE_BY_ID: R,
+            USER_SETTINGS_PROTO_UPDATE: R,
+            GUILD_MOVE_BY_ID: O,
             GUILD_FOLDER_CREATE_LOCAL: L,
             GUILD_FOLDER_EDIT_LOCAL: y,
             GUILD_FOLDER_DELETE_LOCAL: D,

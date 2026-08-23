@@ -265,11 +265,11 @@ let T = (0, c.Fe)({
             n.e("521930"),
             n.e("559460"),
             n.e("331549"),
+            n.e("343437"),
             n.e("139970"),
             n.e("676418"),
             n.e("940258"),
             n.e("292583"),
-            n.e("343437"),
             n.e("875842"),
             n.e("166495"),
             n.e("385653"),
@@ -426,9 +426,9 @@ function m(e) {
             popoutAlign: S,
             targetElementRef: N,
             spacing: C,
-            dialogClassName: O,
+            dialogClassName: R,
         } = e,
-        { analyticsLocations: R } = (0, d.Ay)(o.A.NOTIFICATION_CENTER),
+        { analyticsLocations: O } = (0, d.Ay)(o.A.NOTIFICATION_CENTER),
         [L, y] = r.useState(!1),
         [D, v] = [
             (0, a.bG)([I.A], () => I.A.settings.inbox?.currentTab ?? s.Y2.UNREADS),
@@ -487,7 +487,7 @@ function m(e) {
         ),
         k = (0, A.Sc)();
     return (0, i.jsx)(d.f5, {
-        value: R,
+        value: O,
         children: (0, i.jsx)(l.Y, {
             targetElementRef: N,
             animation: l.Y.Animation.NONE,
@@ -498,7 +498,7 @@ function m(e) {
             onRequestClose: P,
             renderPopout: function () {
                 return (0, i.jsx)(T, {
-                    dialogClassName: O,
+                    dialogClassName: R,
                     isScheduledMessagesEnabled: k,
                     tab: D,
                     setTab: v,

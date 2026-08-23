@@ -84,11 +84,11 @@ function f(e) {
             positionKey: N,
         } = e,
         { isRichTooltip: C } = (0, _.w6)(),
-        [O, R] = r.useState(u?.ownerDocument);
+        [R, O] = r.useState(u?.ownerDocument);
     if (
         (r.useLayoutEffect(() => {
             var e, t;
-            R(((e = E?.current), (t = a.current), e?.ownerDocument ?? u?.ownerDocument ?? t?.ownerDocument));
+            O(((e = E?.current), (t = a.current), e?.ownerDocument ?? u?.ownerDocument ?? t?.ownerDocument));
         }, [E, u, a]),
         !n)
     )
@@ -101,7 +101,7 @@ function f(e) {
         spacing: m,
         placement: L,
         reference: y,
-        ownerDocument: O,
+        ownerDocument: R,
         autoUpdate: null != N,
         renderLayer: (e) => {
             let { placement: t, shift: n } = e,

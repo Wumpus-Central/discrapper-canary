@@ -22,8 +22,8 @@ var r = n(646865),
 function g(e) {
     let { frame: t, idle: n, onMouseDown: g, onMouseMove: S, onMouseLeave: N } = e,
         C = (0, o.h)(t.applicationId),
-        O = (0, u.Us)() === p.BRT.POPOUT,
-        { parentAnalyticsLocation: R } = (0, l.Ay)();
+        R = (0, u.Us)() === p.BRT.POPOUT,
+        { parentAnalyticsLocation: O } = (0, l.Ay)();
     return (0, i.jsxs)("div", {
         className: m._v,
         onMouseMove: S,
@@ -49,13 +49,13 @@ function g(e) {
                     justify: c.A.Justify.END,
                     align: c.A.Align.CENTER,
                     children: [
-                        O || (0, r.f)()
+                        R || (0, r.f)()
                             ? null
                             : (0, i.jsx)(A.A, {
                                   className: T.BD,
                                   popoutOpen: !1,
                                   onOpenPopout: function () {
-                                      (0, d.X)(R, d.O.POPOUT, !0),
+                                      (0, d.X)(O, d.O.POPOUT, !0),
                                           (0, s.A)({
                                               onConfirm: async () => {
                                                   await h.A.refreshProxyTicket(t.id), (0, a.jp)();

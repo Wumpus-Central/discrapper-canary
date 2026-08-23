@@ -35,8 +35,8 @@ function E(e, t, n) {
             }),
             [t, N, h],
         ),
-        O = (0, i.useMemo)(() => !(0, l.gn)(T, C), [T, C]),
-        R = ((e, t, n) => {
+        R = (0, i.useMemo)(() => !(0, l.gn)(T, C), [T, C]),
+        O = ((e, t, n) => {
             let [r, a] = (0, i.useState)(!1);
             return (
                 (0, i.useEffect)(() => {
@@ -66,13 +66,13 @@ function E(e, t, n) {
                 r
             );
         })(I, g ?? !1, E),
-        L = (0, i.useMemo)(() => !R && Date.now() - f < _.i0, [f, R]);
+        L = (0, i.useMemo)(() => !O && Date.now() - f < _.i0, [f, O]);
     return (
         (0, i.useEffect)(() => {
             if (!A || g) return;
             let t = Date.now() - p < _.Zq;
-            (null != m && t) || ((O || !L || S) && (0, l.h$)(e, C, n));
-        }, [A, g, m, p, L, S, O, C, e, n]),
+            (null != m && t) || ((R || !L || S) && (0, l.h$)(e, C, n));
+        }, [A, g, m, p, L, S, R, C, e, n]),
         {
             isFetchingShopHome: g,
             fetchShopHomeError: m,

@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { V6: () => R, rQ: () => N, s_: () => T });
+n.d(t, { V6: () => O, rQ: () => N, s_: () => T });
 var i = n(477900),
     r = n(582128),
     a = n(503698),
@@ -101,7 +101,7 @@ function N(e) {
             alignCenter: I = !1,
             leading: T,
             trailing: N,
-            progressBarProps: R,
+            progressBarProps: O,
         } = e,
         { headingId: L } = (0, f.k)(),
         y = null != t,
@@ -144,10 +144,10 @@ function N(e) {
                             children: (0, i.jsxs)("div", {
                                 className: p.headerMain,
                                 children: [
-                                    null != R &&
+                                    null != O &&
                                         (0, i.jsx)("div", {
                                             className: p.headerStepIndicator,
-                                            children: (0, i.jsx)(A.z, { ...R }),
+                                            children: (0, i.jsx)(A.z, { ...O }),
                                         }),
                                     M,
                                 ],
@@ -156,7 +156,7 @@ function N(e) {
                     }),
                     "top" === a && (0, i.jsx)(C, { badge: r, position: a }),
                     null != n && null != l && b,
-                    null != d && (0, i.jsx)(O, { subtitle: d }),
+                    null != d && (0, i.jsx)(R, { subtitle: d }),
                 ],
             }),
         });
@@ -172,7 +172,7 @@ function C(e) {
         children: (0, i.jsx)(o.E, { variant: "brand", ...r }),
     });
 }
-function O(e) {
+function R(e) {
     let { subtitle: t } = e;
     if (null == t) return null;
     let n = (0, i.jsx)(I.E, {
@@ -190,7 +190,7 @@ function O(e) {
         ],
     });
 }
-function R(e) {
+function O(e) {
     let { gradientColor: t, graphic: n, badge: r, title: a, subtitle: s, ...l } = e;
     return (0, i.jsx)(N, {
         ...l,

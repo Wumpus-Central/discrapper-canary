@@ -221,8 +221,8 @@ class g {
 var S = n(736056),
     N = n(857071),
     C = n(655116),
-    O = n(280450),
-    R = n(963307),
+    R = n(280450),
+    O = n(963307),
     L = n(761640),
     y = n(734057),
     D = n(919638),
@@ -252,7 +252,7 @@ function k(e, t) {
     return G.subscribeToGuild(n), null != t && L.Ay.getSection(t) === T.YvQ.MEMBERS && F(e, t, c.LD);
 }
 function F(e, t, n) {
-    if (t === R.sN) return G.subscribeChannel(e, t, n);
+    if (t === O.sN) return G.subscribeChannel(e, t, n);
     let i = y.A.getChannel(t);
     if (null == i) return !1;
     let r = i.getGuildId();
@@ -298,7 +298,7 @@ function j() {
 class W extends s.Ay.Store {
     static displayName = "GuildSubscriptionsStore";
     initialize() {
-        this.waitFor(O.default, L.Ay, y.A, S.A, D.A, v.Ay, b.A, N.A, M.A, P.A, U.Ay, w.A, C.A),
+        this.waitFor(R.default, L.Ay, y.A, S.A, D.A, v.Ay, b.A, N.A, M.A, P.A, U.Ay, w.A, C.A),
             this.syncWith([C.A], j),
             this.syncWith([L.Ay], H);
     }
@@ -347,7 +347,7 @@ let Y = new W(l.h, {
         let { guildId: t, userIds: n } = e;
         return (
             n.forEach((e) => {
-                e !== O.default.getId() && G.subscribeUser(t, e);
+                e !== R.default.getId() && G.subscribeUser(t, e);
             }),
             !1
         );

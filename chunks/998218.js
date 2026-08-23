@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => R }), n(323874), n(14289), n(35956);
+n.d(t, { A: () => O }), n(323874), n(14289), n(35956);
 var i = n(477450),
     r = n.n(i),
     a = n(435558),
@@ -72,10 +72,10 @@ function C(e) {
     }
     return !1;
 }
-function O(e) {
+function R(e) {
     return null != e && m(l.parse(e).protocol);
 }
-let R = {
+let O = {
     URL_REGEX: I,
     makeUrl: function (e, t) {
         let n = (t ?? (0, o.m6)()) ? window.GLOBAL_ENV.INVITE_HOST : location.host;
@@ -88,7 +88,7 @@ let R = {
     },
     isDiscordProtocol: m,
     isDiscordUrl: C,
-    isDiscordUri: O,
+    isDiscordUri: R,
     isDiscordCdnUrl: function (e) {
         return null != e && l.parse(e).hostname === window.GLOBAL_ENV.CDN_HOST;
     },
@@ -98,7 +98,7 @@ let R = {
     isDiscordAssetUrl: function (e, t, n) {
         return !!(g(e) || S(e, t, n) || N(e));
     },
-    isDiscordUrlOrUri: (e) => C(e) || O(e),
+    isDiscordUrlOrUri: (e) => C(e) || R(e),
     isAppRoute: (e) => {
         let t = e.toLowerCase();
         return (

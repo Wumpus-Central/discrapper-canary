@@ -1,31 +1,31 @@
-i.d(t, { A: () => p });
-var n = i(582128),
-    r = i(17928),
-    a = i(71393),
-    o = i(576705),
-    l = i(948230),
-    u = i(683180),
-    _ = i(972786),
-    c = i(652215);
-function p(e) {
-    let t = (0, u.B9)(e?.topic),
-        i = null != t,
-        p = e?.guild_id ?? null,
-        d = (0, r.bG)([a.A, o.A], () => {
-            let e = null != p ? a.A.getGuild(p) : null;
-            return null != e && o.A.can(c.xBc.MANAGE_GUILD, e);
-        }, [p]);
+n.d(t, { A: () => o });
+var u = n(582128),
+    e = n(17928),
+    i = n(71393),
+    r = n(576705),
+    c = n(948230),
+    d = n(683180),
+    p = n(972786),
+    A = n(652215);
+function o(l) {
+    let t = (0, d.B9)(l?.topic),
+        n = null != t,
+        o = l?.guild_id ?? null,
+        a = (0, e.bG)([i.A, r.A], () => {
+            let l = null != o ? i.A.getGuild(o) : null;
+            return null != l && r.A.can(A.xBc.MANAGE_GUILD, l);
+        }, [o]);
     return (
-        n.useEffect(() => {
-            if (!i || null == t) return;
-            let e = _.A.getProjectsFetchState();
-            (null == e || "error" === e.type || (d && null == _.A.findProjectByApplicationId(t))) &&
-                (0, l.hF)(p ?? void 0);
-        }, [i, t, p, d]),
-        (0, r.bG)([_.A], () => {
+        u.useEffect(() => {
+            if (!n || null == t) return;
+            let l = p.A.getProjectsFetchState();
+            (null == l || "error" === l.type || (a && null == p.A.findProjectByApplicationId(t))) &&
+                (0, c.hF)(o ?? void 0);
+        }, [n, t, o, a]),
+        (0, e.bG)([p.A], () => {
             if (null == t) return null;
-            let e = _.A.findProjectByApplicationId(t);
-            return null == e || (0, _.P)(e) || (d && e.guild_id === p) ? e : null;
-        }, [t, d, p])
+            let l = p.A.findProjectByApplicationId(t);
+            return null == l || (0, p.P)(l) || (a && l.guild_id === o) ? l : null;
+        }, [t, a, o])
     );
 }

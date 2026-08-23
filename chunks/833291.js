@@ -35,8 +35,8 @@ let I = /^\/([a-zA-Z0-9-]+)$/,
     S = /^\/activities\/([0-9-]+)\/?$/,
     N = /^\/channels\/([0-9]+)\/shop\/([0-9]+)$/,
     C = /^(?:\/game-shop\/([0-9]+)|\/channels\/([0-9]+)\/game-shop\/(?:[0-9]+))\/([0-9]+)(?:\/([^\/]+))?$/,
-    O = /^\/channels\/([0-9]+)\/shop$/,
-    R = /^\/quests\/([0-9-]+)\/?$/,
+    R = /^\/channels\/([0-9]+)\/shop$/,
+    O = /^\/quests\/([0-9-]+)\/?$/,
     L = /^\/game-servers\/share\/([A-Za-z0-9_-]+)$/,
     y = /^\/games\/([0-9]+)(?:\/[A-Za-z0-9-]*)?\/?$/,
     D = /^\/users\/([0-9]+)\/?$/,
@@ -130,7 +130,7 @@ function J(e) {
                 primaryHostRemainingPath: A,
             } = X(r);
             if (null == e || null == e.pathname) continue;
-            let R = null != e.query && e.query.length <= 1e3 ? e.query : null;
+            let O = null != e.query && e.query.length <= 1e3 ? e.query : null;
             function i(e, i) {
                 t.has(i) || (t.add(i), n.push({ type: e, code: i, url: r }));
             }
@@ -165,9 +165,9 @@ function J(e) {
                         E.I.EVENT,
                         `${P.guildId}-${P.guildEventId}` + (null != P.recurrenceId ? `-${P.recurrenceId}` : ""),
                     ),
-                null != A?.match(v) && null != R)
+                null != A?.match(v) && null != O)
             ) {
-                let e = (0, c._)(R),
+                let e = (0, c._)(O),
                     t = e.clientId;
                 null == t ||
                     "" === t ||
@@ -195,7 +195,7 @@ function J(e) {
             }
             let x = A?.match(N);
             null != x && i(E.I.GUILD_PRODUCT, `${x[1]}-${x[2]}`);
-            let k = A?.match(O);
+            let k = A?.match(R);
             null != k && i(E.I.SERVER_SHOP, k[1]);
             let F = A?.match(C);
             null != F && i(E.I.SOCIAL_LAYER_STOREFRONT, `${F[3]}-${F[1] ?? F[2]}`);
@@ -207,7 +207,7 @@ function J(e) {
             null != H && i(E.I.GAME_SERVER_SHARE, H[1]);
             let j = A?.match(D);
             if ((null != j && i(E.I.USER_PROFILE, j[1]), "/shop" === A)) {
-                let t = null != R ? (0, a.parse)(R) : null,
+                let t = null != O ? (0, a.parse)(O) : null,
                     n = t?.tab;
                 if (n === h.G2.GAME_SHOPS && t?.applicationId != null && t?.skuId != null) {
                     let e = t.applicationId,
@@ -224,7 +224,7 @@ function J(e) {
 }
 function ee(e) {
     let t = X(e),
-        n = t?.primaryHostRemainingPath?.match(R);
+        n = t?.primaryHostRemainingPath?.match(O);
     return n?.[1] ?? null;
 }
 function et(e) {

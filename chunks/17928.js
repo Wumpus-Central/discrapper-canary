@@ -6,7 +6,7 @@ n.d(t, {
     UT: () => Y,
     V5: () => k,
     Ay: () => K,
-    il: () => O,
+    il: () => R,
     yK: () => x.yK,
     bG: () => x.bG,
     cf: () => x.cf,
@@ -289,7 +289,7 @@ let S = [],
             e(), (i = null);
         };
     });
-class O {
+class R {
     _changeCallbacks = new g();
     _reactChangeCallbacks = new g();
     _syncWiths = [];
@@ -403,9 +403,9 @@ class O {
         this._mustEmitChanges = e;
     }
 }
-let R = { _state: void 0, _version: void 0 },
+let O = { _state: void 0, _version: void 0 },
     L = null;
-class y extends O {
+class y extends R {
     static allPersistKeys = new Set();
     static userAgnosticPersistKeys = new Set();
     static _writePromises = new Map();
@@ -431,7 +431,7 @@ class y extends O {
                                 y.allPersistKeys.forEach((t) => {
                                     y.shouldClear(e, t) && m.w.remove(t);
                                 }),
-                                O.getAll().forEach((t) => {
+                                R.getAll().forEach((t) => {
                                     t instanceof y &&
                                         y.shouldClear(e, t.getClass().persistKey) &&
                                         ((t._isInitialized = !1), t.initializeIfNeeded());
@@ -470,14 +470,14 @@ class y extends O {
             let e = {};
             return (
                 y.allPersistKeys.forEach((t) => {
-                    e[t] = (m.w.get(t) ?? R)._state;
+                    e[t] = (m.w.get(t) ?? O)._state;
                 }),
                 e
             );
         });
     }
     static initializeAll(e) {
-        O.getAll().forEach((t) => {
+        R.getAll().forEach((t) => {
             if (t instanceof y) {
                 let n = t.getClass().persistKey;
                 e.hasOwnProperty(n) && t.initializeFromState(e[n]);
@@ -492,7 +492,7 @@ class y extends O {
     }
     static destroy() {
         (L = null),
-            O.destroy(),
+            R.destroy(),
             y.clearPersistQueue({ type: "all" }),
             y.allPersistKeys.clear(),
             y.userAgnosticPersistKeys.clear();
@@ -527,7 +527,7 @@ class y extends O {
     }
     static migrateAndReadStoreState(e, t) {
         if (null != L && y.shouldClear(L, e)) return m.w.remove(e), { state: void 0, requiresPersist: !1 };
-        let { _state: n, _version: i, ...r } = (null != y._clearAllPromise ? null : m.w.get(e)) ?? R,
+        let { _state: n, _version: i, ...r } = (null != y._clearAllPromise ? null : m.w.get(e)) ?? O,
             a = null == t ? 0 : t.length;
         if (0 !== a && i !== a && null != t) {
             let e = i ?? 0,
@@ -794,7 +794,7 @@ function Y(e, t) {
 }
 let K = {
     Emitter: c.A,
-    Store: O,
+    Store: R,
     PersistedStore: y,
     DeviceSettingsStore: class extends D {},
     OfflineCacheStore: class extends D {},
@@ -858,9 +858,9 @@ let K = {
               })(e, t);
     },
     initialize: function () {
-        O.initialize();
+        R.initialize();
     },
     get initialized() {
-        return O.initialized;
+        return R.initialized;
     },
 };

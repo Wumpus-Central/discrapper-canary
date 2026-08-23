@@ -33,7 +33,7 @@ function C(e, t) {
         n
     );
 }
-function O(e) {
+function R(e) {
     let { accessory: t, inputSize: n, disabled: r } = e;
     if ("string" == typeof t)
         return (0, i.jsx)(T.E, {
@@ -64,7 +64,7 @@ function O(e) {
         children: (0, i.jsx)(t, { size: "md" === n ? "xs" : "xxs", color: o.A.colors.ICON_STRONG }),
     });
 }
-function R(e) {
+function O(e) {
     let { inputSize: t, onClick: n } = e,
         { i18n: r } = (0, f.G9)();
     return (0, i.jsx)(c.D, {
@@ -119,7 +119,7 @@ function L(e) {
     null == W && !1 === n && (W = !0);
     let Y = null;
     ("boolean" == typeof P ? P && null != h && "" !== h && !W : P.show)
-        ? (Y = (0, i.jsx)(R, {
+        ? (Y = (0, i.jsx)(O, {
               inputSize: b,
               onClick: function (e) {
                   null != w.onClear ? w.onClear(e) : w.onChange?.("", d),
@@ -128,9 +128,9 @@ function L(e) {
                       });
               },
           }))
-        : null != D && (Y = (0, i.jsx)(O, { accessory: D, inputSize: b }));
+        : null != D && (Y = (0, i.jsx)(R, { accessory: D, inputSize: b }));
     let K = null;
-    null != L && (K = (0, i.jsx)(O, { accessory: L, inputSize: b }));
+    null != L && (K = (0, i.jsx)(R, { accessory: L, inputSize: b }));
     let $ = U ? (0, i.jsx)(g.n, { value: h, maxLength: A }) : null;
     return (0, i.jsx)(_.D, {
         ...G,

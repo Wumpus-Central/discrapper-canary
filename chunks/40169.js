@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => O });
+n.d(t, { A: () => R });
 var i = n(181370),
     r = n.n(i),
     a = n(17928),
@@ -118,4 +118,4 @@ function N(e) {
 function C(e) {
     return r().v3(e.sort().join(",")).toString();
 }
-let O = new T();
+let R = new T();

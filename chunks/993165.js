@@ -6,12 +6,12 @@ var n = i(477900),
     a = i(287809),
     o = i(158045),
     d = i(23722);
-let u = { id: "default" },
-    c = l.createContext(null),
+let c = { id: "default" },
+    u = l.createContext(null),
     g = l.createContext(null);
 function m(e) {
     let { children: t } = e,
-        [i, m] = l.useState(u),
+        [i, m] = l.useState(c),
         [x, f] = l.useState(null),
         [h] = l.useState(r.B$),
         p = l.useRef(h),
@@ -19,19 +19,19 @@ function m(e) {
             m(e);
         }),
         j = l.useCallback(() => {
-            m(u);
+            m(c);
         }, []),
         A = l.useCallback(() => p.current, []),
         v = (0, s.bG)([a.default], () => o.Ay.canUsePremiumProfileCustomization(a.default.getCurrentUser())),
-        E = v ? u : i,
+        E = v ? c : i,
         S = !v && x?.id === "premiumTryItOut",
         C = l.useCallback(() => {
             f(E);
         }, [E]),
-        T = l.useCallback((e) => {
+        b = l.useCallback((e) => {
             p.current = e;
         }, []),
-        b = l.useMemo(
+        T = l.useMemo(
             () => ({
                 selectedPanel: E,
                 readyPanel: x,
@@ -39,14 +39,14 @@ function m(e) {
                 navigate: I,
                 goBack: j,
                 getCurrentPreset: A,
-                cachePreset: T,
+                cachePreset: b,
             }),
-            [E, x, C, I, j, A, T],
+            [E, x, C, I, j, A, b],
         );
-    return (0, n.jsx)(g.Provider, { value: S, children: (0, n.jsx)(c.Provider, { value: b, children: t }) });
+    return (0, n.jsx)(g.Provider, { value: S, children: (0, n.jsx)(u.Provider, { value: T, children: t }) });
 }
 function x() {
-    let e = l.useContext(c);
+    let e = l.useContext(u);
     if (null == e)
         throw Error("useNavigationContext must be used within UserProfileModalV2EditingPanelNavigationProvider");
     return e;

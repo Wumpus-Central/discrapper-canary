@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => eO }), n(321073);
+n.d(t, { A: () => eR }), n(321073);
 var i = n(681154),
     r = n(17928),
     a = n(228366),
@@ -22,29 +22,29 @@ var i = n(681154),
     S = n(449054),
     N = n(105971),
     C = n(596720);
-let O = {};
-class R extends r.Ay.DeviceSettingsStore {
+let R = {};
+class O extends r.Ay.DeviceSettingsStore {
     static displayName = "ICYMIFiltersStore";
     static persistKey = "ICYMIFiltersStore";
     initialize(e) {
-        O = e ?? {};
+        R = e ?? {};
     }
     filterStaffContent() {
-        return !0 === O.filterStaffContent;
+        return !0 === R.filterStaffContent;
     }
     getDoubleTapBehavior() {
-        return O.doubleTapBehavior ?? C.Ai.DEFAULT;
+        return R.doubleTapBehavior ?? C.Ai.DEFAULT;
     }
     getState() {
-        return O;
+        return R;
     }
     getUserAgnosticState() {
-        return O;
+        return R;
     }
 }
-let L = new R(a.h, {
+let L = new O(a.h, {
     SET_ICYMI_FILTERS: function (e) {
-        O = e.filters;
+        R = e.filters;
     },
 });
 var y = n(449e3),
@@ -427,7 +427,7 @@ class eC extends r.Ay.PersistedStore {
         };
     }
 }
-let eO = new eC(a.h, {
+let eR = new eC(a.h, {
     LOGOUT: function () {
         (U = []),
             (x = []),

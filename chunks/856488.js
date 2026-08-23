@@ -102,11 +102,11 @@ function f() {
         S = (0, r.bG)([o.Ay], () => o.Ay.displayNameStylesEnabled),
         N = (0, r.bG)([u.Ay], () => u.Ay.hdrDynamicRange),
         C = (0, d.i)("useAccessibilityItems"),
-        O = [
+        R = [
             { name: A.intl.string(A.t.D5Fma9), value: "no-limit" },
             { name: A.intl.string(A.t.ldcGIH), value: "standard" },
         ],
-        R = [
+        O = [
             { name: A.intl.string(A.t.YEOEi6), value: "username" },
             { name: A.intl.string(A.t.mQaro3), value: "dot" },
             { name: A.intl.string(A.t.Ji2EVJ), value: "hidden" },
@@ -165,7 +165,7 @@ function f() {
                         children: (0, i.jsx)(a.Dr, {
                             id: "hdr-dynamic-range",
                             label: A.intl.string(A.t.nemtgW),
-                            children: O.map((e) => {
+                            children: R.map((e) => {
                                 let { name: t, value: n } = e;
                                 return (0, i.jsx)(
                                     a.iD,
@@ -191,7 +191,7 @@ function f() {
                     children: (0, i.jsx)(a.Dr, {
                         id: "role-colors",
                         label: A.intl.string(A.t.uSOPWm),
-                        children: R.map((e) => {
+                        children: O.map((e) => {
                             let { name: t, value: n } = e;
                             return (0, i.jsx)(
                                 a.iD,

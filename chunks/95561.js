@@ -34,8 +34,8 @@ var s = n(665260),
     S = n(576705),
     N = n(290863),
     C = n(763827),
-    O = n(573163),
-    R = n(994500),
+    R = n(573163),
+    O = n(994500),
     L = n(309010),
     y = n(967198),
     D = n(543465),
@@ -157,7 +157,7 @@ function H(e) {
                 : null),
         };
     }
-    let I = O.Ay.getSnapshot(e, 10 * P.A.Millis.SECOND);
+    let I = R.Ay.getSnapshot(e, 10 * P.A.Millis.SECOND);
     return {
         channel_id: e,
         channel_was_unread: I.unread,
@@ -192,7 +192,7 @@ function H(e) {
 }
 function j(e) {
     let t = 0;
-    for (let n of e) R.A.isFriend(n) && t++;
+    for (let n of e) O.A.isFriend(n) && t++;
     return { friendCount: t, nonFriendCount: e.length - t };
 }
 function W(e, t, n) {

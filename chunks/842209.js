@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { D3: () => C, EW: () => f, ZV: () => R, cu: () => S, eW: () => N, j8: () => g, s$: () => T, v7: () => m }),
+n.d(t, { D3: () => C, EW: () => f, ZV: () => O, cu: () => S, eW: () => N, j8: () => g, s$: () => T, v7: () => m }),
     n(321073);
 var i = n(582128),
     r = n(17928),
@@ -112,8 +112,8 @@ function C(e, t) {
         return { command: void 0, application: void 0 };
     }, [r.result, n.result, t]);
 }
-let O = [a.kc.CHAT];
-function R(e, t, n) {
+let R = [a.kc.CHAT];
+function O(e, t, n) {
     var r;
     let a,
         s,
@@ -149,7 +149,7 @@ function R(e, t, n) {
                 isUserInstalled: e,
             };
         }, [a?.result, s?.result, t, n])),
-        f = (0, E.MW)(e, O);
+        f = (0, E.MW)(e, R);
     return {
         application: c,
         commands: i.useMemo(() => {

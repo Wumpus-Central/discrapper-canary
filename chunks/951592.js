@@ -65,13 +65,13 @@ function D(e) {
         [H, V] = a.useState(null),
         K = a.useRef(null),
         F = a.useRef(null),
-        [Z, W] = a.useState(!1),
-        [X, Y] = a.useState(null);
+        [W, X] = a.useState(!1),
+        [Z, Y] = a.useState(null);
     a.useEffect(
         () =>
             _({
                 onPlay: () => {
-                    V(null), W(!1);
+                    V(null), X(!1);
                 },
             }),
         [_],
@@ -86,14 +86,14 @@ function D(e) {
     let et = a.useCallback(
             (e, t) => {
                 if (null == s) return;
-                if (null == X) return null;
-                let l = (((0, f.clamp)(e, X.left, X.right) - X.left) / X.width) * s,
+                if (null == Z) return null;
+                let l = (((0, f.clamp)(e, Z.left, Z.right) - Z.left) / Z.width) * s,
                     n = (0, f.clamp)(l, 0, s),
                     a = H;
-                null == a && t && ((a = n <= o ? "start" : n >= c ? "end" : "playhead"), r && (P(), W(!0)), V(a)),
+                null == a && t && ((a = n <= o ? "start" : n >= c ? "end" : "playhead"), r && (P(), X(!0)), V(a)),
                     "start" === a ? m(n) : "end" === a ? D(n) : "playhead" === a && z((0, f.clamp)(n, o, c));
             },
-            [s, X, H, o, c, r, P, m, D, z],
+            [s, Z, H, o, c, r, P, m, D, z],
         ),
         el = a.useCallback(
             (e) => {
@@ -140,8 +140,8 @@ function D(e) {
             [et],
         ),
         es = a.useCallback(() => {
-            Z && O(), W(!1), V(null);
-        }, [Z, O]);
+            W && O(), X(!1), V(null);
+        }, [W, O]);
     a.useEffect(
         () => (
             document.addEventListener("mousemove", ei),

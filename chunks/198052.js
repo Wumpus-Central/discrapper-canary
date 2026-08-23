@@ -22,13 +22,13 @@ var i = n(284009),
     S = n(803301),
     N = n(977997),
     C = n(568598);
-let O = (0, n(240921).Ay)({
+let R = (0, n(240921).Ay)({
     kind: "user",
     name: "2026-08-dont-close-chat",
     defaultConfig: { closeChatOnLeave: !0 },
     variations: { 1: { closeChatOnLeave: !1 } },
 });
-var R = n(806931),
+var O = n(806931),
     L = n(652215);
 let y = new c.A("ChannelRTCStore");
 y.enableNativeLogger(!0);
@@ -63,24 +63,24 @@ function H(e) {
                       let t = h.default.getId(),
                           n = B(e);
                       if (0 === n.size() || T.Ay.getVoiceChannelId() !== e) return $(e, null);
-                      let i = R.jd.NONE,
+                      let i = O.jd.NONE,
                           a = n
                               .toArray(C.r4.STREAM)
-                              .find((e) => e.type === R.lp.STREAM && null != A.A.getActiveStreamForStreamKey(e.id));
-                      if (null != a) r()(a.type === R.lp.STREAM, "Impossible condition"), (i = a.id);
+                              .find((e) => e.type === O.lp.STREAM && null != A.A.getActiveStreamForStreamKey(e.id));
+                      if (null != a) r()(a.type === O.lp.STREAM, "Impossible condition"), (i = a.id);
                       else if (1 === n.size()) i = t;
                       else if (1 === n.size(C.r4.VIDEO)) {
                           let [e] = n.toArray(C.r4.VIDEO);
                           i = e.id;
                       } else {
-                          let e = n.toArray().find((e) => e.type === R.lp.USER && e.id !== t && !e.ringing);
+                          let e = n.toArray().find((e) => e.type === O.lp.USER && e.id !== t && !e.ringing);
                           i = e?.id ?? t;
                       }
                       let [s] = W(e);
-                      if (s !== R.jd.AUTO && s !== R.jd.NONE) {
+                      if (s !== O.jd.AUTO && s !== O.jd.NONE) {
                           let e = n.getParticipant(s);
-                          (null == e || (e.type === R.lp.STREAM && null == A.A.getActiveStreamForStreamKey(e.id))) &&
-                              (s = R.jd.NONE);
+                          (null == e || (e.type === O.lp.STREAM && null == A.A.getActiveStreamForStreamKey(e.id))) &&
+                              (s = O.jd.NONE);
                       }
                       $(e, [s, i]);
                   })(n),
@@ -95,13 +95,13 @@ function j(e) {
 }
 function W(e) {
     let t = f.A.getChannel(e),
-        n = t?.isDM() && 1 ? R.jd.AUTO : R.jd.NONE;
-    return P[e] ?? [n, R.jd.NONE];
+        n = t?.isDM() && 1 ? O.jd.AUTO : O.jd.NONE;
+    return P[e] ?? [n, O.jd.NONE];
 }
 function Y(e) {
     if (null == P[e]) return !1;
     let [t] = P[e];
-    return t !== R.jd.NONE;
+    return t !== O.jd.NONE;
 }
 function K(e) {
     null == U[e] && (U[e] = { gridDurationMs: 0, focusDurationMs: 0, toggleCount: 0, lastUpdate: 0 });
@@ -222,7 +222,7 @@ class ea extends l.Ay.PersistedStore {
     }
     getSelectedParticipantId(e) {
         let [t, n] = W(e);
-        return t === R.jd.NONE ? null : t !== R.jd.AUTO ? t : n === R.jd.NONE || n === R.jd.AUTO ? null : n;
+        return t === O.jd.NONE ? null : t !== O.jd.AUTO ? t : n === O.jd.NONE || n === O.jd.AUTO ? null : n;
     }
     getSelectedParticipant(e) {
         let t = this.getSelectedParticipantId(e);
@@ -286,7 +286,7 @@ let es = new ea(o.h, {
         if (null != t) delete U[t];
         else
             null != n &&
-                ((!b.has(n) || O.getConfig({ location: "handleVoiceChannelSelect" }).closeChatOnLeave) && b.delete(n),
+                ((!b.has(n) || R.getConfig({ location: "handleVoiceChannelSelect" }).closeChatOnLeave) && b.delete(n),
                 delete F[n],
                 K(n));
         if (t !== n && null != n) {
@@ -339,10 +339,10 @@ let es = new ea(o.h, {
             i = B(t);
         null == n &&
             i.toArray(C.r4.STREAM).forEach((e) => {
-                (0, R.Ay)(e) && i.updateParticipant(e.user.id);
+                (0, O.Ay)(e) && i.updateParticipant(e.user.id);
             });
         let [, r] = W(t);
-        if (($(t, [n ?? R.jd.NONE, r]), (0, _.wL)(n))) {
+        if (($(t, [n ?? O.jd.NONE, r]), (0, _.wL)(n))) {
             try {
                 let { ownerId: e } = (0, _.Iy)(n);
                 e === h.default.getId() && j(e, [t]);
@@ -358,14 +358,14 @@ let es = new ea(o.h, {
         i === n && $(t, null);
         let r = B(t),
             a = r.getParticipant(n);
-        null == a || (a.type !== R.lp.ACTIVITY && (r.updateParticipantPoppedOut(n, !0), j(a.user.id, [t])));
+        null == a || (a.type !== O.lp.ACTIVITY && (r.updateParticipantPoppedOut(n, !0), j(a.user.id, [t])));
     },
     CHANNEL_RTC_RETURN_PARTICIPANT: function (e) {
         let { channelId: t, participantId: n } = e,
             i = B(t);
         i.updateParticipantPoppedOut(n, !1);
         let r = i.getParticipant(n);
-        null == r || (r.type !== R.lp.ACTIVITY && j(r.user.id, [t]));
+        null == r || (r.type !== O.lp.ACTIVITY && j(r.user.id, [t]));
     },
     CHANNEL_RTC_UPDATE_LAYOUT: function (e) {
         let { channelId: t, layout: n, appContext: i } = e;

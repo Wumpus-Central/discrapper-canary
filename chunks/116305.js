@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { y8: () => R, dY: () => O, CJ: () => C });
+n.d(t, { y8: () => O, dY: () => R, CJ: () => C });
 var i = n(774603),
     r = n(176522),
     a = n(64460),
@@ -58,8 +58,8 @@ let C = {
         [g.IWg.CALL_START]: i.OX,
         [g.IWg.QUICKSWITCHER_SHOW]: c,
     },
-    O = { [g.IWg.QUICKSWITCHER_SHOW]: c };
-function R() {
+    R = { [g.IWg.QUICKSWITCHER_SHOW]: c };
+function O() {
     return [
         { description: S.intl.string(S.t.bx4Uyz), binds: N(g.IWg.SERVER_PREV, g.IWg.SERVER_NEXT) },
         { description: S.intl.string(S.t["+Wem6h"]), binds: N(g.IWg.CHANNEL_PREV, g.IWg.CHANNEL_NEXT) },

@@ -73,8 +73,8 @@ function j(e) {
             cropPreset: K,
         } = O,
         F = a.useRef(null),
-        Z = a.useRef(S),
-        [W, X] = a.useState(I),
+        W = a.useRef(S),
+        [X, Z] = a.useState(I),
         [Y, J] = a.useState(!1),
         [Q, q] = a.useState(!1),
         ee = a.useRef(new Set()),
@@ -270,8 +270,8 @@ function j(e) {
             eg,
         ),
         a.useEffect(() => {
-            W > 0 && B <= 0 && I <= 0 && P((e) => ({ ...e, cropEnd: W }));
-        }, [W, B, I]);
+            X > 0 && B <= 0 && I <= 0 && P((e) => ({ ...e, cropEnd: X }));
+        }, [X, B, I]);
     let eA = a.useMemo(() => B - $, [$, B]),
         eL = a.useCallback(
             (e) => (
@@ -297,10 +297,10 @@ function j(e) {
             setCropStart: N,
             setCropEnd: a.useCallback(
                 (e) => {
-                    let t = (0, i.clamp)(e, $ + 1, W);
+                    let t = (0, i.clamp)(e, $ + 1, X);
                     P((e) => ({ ...e, cropEnd: t })), F?.current?.seek(t);
                 },
-                [$, W, P, F],
+                [$, X, P, F],
             ),
             setCrop: a.useCallback(
                 (e, t) => {
@@ -332,7 +332,7 @@ function j(e) {
         let e = F.current?.videoElement;
         if (null == e || !et.current) return;
         let t = e.currentTime;
-        Z.current !== t && ((Z.current = t), ee.current.forEach((e) => e.onTimeUpdate?.(t))),
+        W.current !== t && ((W.current = t), ee.current.forEach((e) => e.onTimeUpdate?.(t))),
             A.current?.style.setProperty("--custom-video-progress", `${(t / e.duration) * 100}%`);
     }),
         a.useEffect(() => {
@@ -343,7 +343,7 @@ function j(e) {
                     el.addEventListener("durationchange", l),
                     el.addEventListener("loadedmetadata", n),
                     el.addEventListener("seeked", a),
-                    el.duration > 0 && X(el.duration),
+                    el.duration > 0 && Z(el.duration),
                     el.readyState >= 1 && (q(!0), F?.current?.seek(S)),
                     J(!el.paused),
                     () => {
@@ -361,15 +361,15 @@ function j(e) {
                 J(!1), ee.current.forEach((e) => e.onPause?.());
             }
             function l() {
-                null != el && X(el.duration);
+                null != el && Z(el.duration);
             }
             function n() {
-                null != el && (q(!0), X(el.duration), F?.current?.seek(S));
+                null != el && (q(!0), Z(el.duration), F?.current?.seek(S));
             }
             function a() {
                 et.current = !0;
             }
-        }, [el, S, F, ee, J, q, X, et]);
+        }, [el, S, F, ee, J, q, Z, et]);
     let eO = a.useCallback((e) => {
             P((t) => ({ ...t, clipName: e }));
         }, []),
@@ -388,7 +388,7 @@ function j(e) {
         e$ = a.useMemo(
             () =>
                 function () {
-                    let [e, t] = a.useState(Z.current);
+                    let [e, t] = a.useState(W.current);
                     return (
                         a.useEffect(() => {
                             let e = {
@@ -406,12 +406,12 @@ function j(e) {
                         e
                     );
                 },
-            [Z, ee],
+            [W, ee],
         ),
         eB = a.useMemo(
             () => ({
                 useCurrentTime: e$,
-                duration: W,
+                duration: X,
                 isPlaying: Y,
                 isLoaded: Q,
                 cropStart: $,
@@ -456,7 +456,7 @@ function j(e) {
             [
                 L,
                 e$,
-                W,
+                X,
                 Y,
                 Q,
                 $,
