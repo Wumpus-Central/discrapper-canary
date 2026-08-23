@@ -4,4 +4,6 @@ e.exports = {
     x1: "messageAccessoriesUnderProse__72ffd",
     Yq: "messageAccessories__72ffd",
     st: "conjurBotAvatar__72ffd",
+    OS: "messageBody__72ffd",
+    Gx: "vibegrations-reveal-frontier__72ffd",
 };
