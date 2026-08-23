@@ -1,23 +1,30 @@
 "use strict";
-n.d(t, { EA: () => s, J8: () => a, ZW: () => l, mn: () => r });
+n.d(t, { EA: () => s, J8: () => a, ZW: () => l, mn: () => r }), n(321073);
 let i = new Map();
 function r(e, t) {
+    let n = i.get(e) ?? [];
     return (
-        i.set(e, t),
+        n.push(t),
+        i.set(e, n),
         () => {
-            i.get(e) === t && i.delete(e);
+            let n = i.get(e);
+            if (null == n) return;
+            let r = n.indexOf(t);
+            -1 !== r && n.splice(r, 1), 0 === n.length && i.delete(e);
         }
     );
 }
 function a(e) {
     let t = i.get(e);
     if (null == t) return null;
-    try {
-        let e = t();
-        return null != e && null != e.contentWindow ? e : null;
-    } catch (t) {
-        return console.debug("[vibegrations] preview frame lookup threw", { projectId: e, err: t }), null;
-    }
+    for (let n = t.length - 1; n >= 0; n--)
+        try {
+            let e = t[n]();
+            if (null != e && null != e.contentWindow) return e;
+        } catch (t) {
+            console.debug("[vibegrations] preview frame lookup threw", { projectId: e, err: t });
+        }
+    return null;
 }
 function s(e) {
     return i.has(e);

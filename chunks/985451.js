@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { BP: () => d, Rh: () => c, o4: () => E, t_: () => l, xm: () => u });
+n.d(t, { BP: () => d, FQ: () => A, RW: () => _, Rh: () => c, k: () => E, o4: () => h, t_: () => l, xm: () => u });
 var i = n(582128);
 let r = new Map(),
     a = new Set();
@@ -52,6 +52,12 @@ function u(e) {
     }
 }
 function _(e) {
+    return (r.get(e)?.holders ?? 0) > 0;
+}
+function E() {
+    return [...r.keys()];
+}
+function A(e) {
     return (
         a.add(e),
         () => {
@@ -59,7 +65,7 @@ function _(e) {
         }
     );
 }
-function E(e) {
-    let t = i.useCallback(() => null != e && (r.get(e)?.holders ?? 0) > 0, [e]);
-    return i.useSyncExternalStore(_, t, t);
+function h(e) {
+    let t = i.useCallback(() => null != e && _(e), [e]);
+    return i.useSyncExternalStore(A, t, t);
 }

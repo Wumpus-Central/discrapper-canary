@@ -35,14 +35,14 @@ var i,
     T = l(375708),
     G = l(673724),
     H = l(948230),
-    L = l(295591),
+    L = l(105810),
     F = l(683180),
     U = l(208137),
     B = l(805332),
     X = l(18739),
     O = l(972786),
     K = l(20386),
-    M = l(501943),
+    M = l(567126),
     Y = l(311656),
     q = l(250872),
     Z = l(922016),
@@ -648,7 +648,11 @@ function tP(t) {
                     },
                 });
         }, [tP, tN, U, e]),
-        t_ = W ? { type: "permissions", onReviewPermissions: tR, loading: K || Y } : Y ? { type: "checking" } : void 0,
+        t_ = W
+            ? { type: "permissions", onReviewPermissions: tR, loading: K || Y }
+            : Y && null == F
+              ? { type: "checking" }
+              : void 0,
         {
             mode: tz,
             setMode: tV,

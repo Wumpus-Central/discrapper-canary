@@ -1,9 +1,9 @@
-l.d(t, { A: () => d });
+l.d(t, { A: () => c });
 var i = l(256693),
     s = l(281969),
     n = l(580954),
     a = l(812901);
-let r = { [a.A.WithinAppContent]: 0, [a.A.AboveAppContent]: 1 };
+let r = { [a.A.Backstage]: -1, [a.A.WithinAppContent]: 0, [a.A.AboveAppContent]: 1 };
 class o {
     strategy = (0, a.G)();
     entries = new Map();
@@ -60,7 +60,7 @@ class o {
         }
         this.cancelBackground(e),
             this.strategy.place(t.container, l.target, l.level),
-            (0, i.fS)(e) || s.A.setFrameVisible(e, !0);
+            (0, i.fS)(e) || s.A.setFrameVisible(e, l.level !== a.A.Backstage);
     }
     pickWinner(e) {
         let t = this.targets.get(e);
@@ -92,4 +92,4 @@ class o {
         (this.cancelBackground(e), (0, i.fS)(e)) ? (0, i.aQ)(e) : (0, n.A)().leaveFrame(e);
     }
 }
-let d = new o();
+let c = new o();

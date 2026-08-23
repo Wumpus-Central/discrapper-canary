@@ -1,7 +1,11 @@
-l.d(t, { A: () => s, G: () => d });
+l.d(t, { A: () => s, G: () => c });
 var i,
-    s = (((i = {}).WithinAppContent = "within-app-content"), (i.AboveAppContent = "above-app-content"), i);
-let n = { "within-app-content": 1, "above-app-content": 1002 };
+    s =
+        (((i = {}).Backstage = "backstage"),
+        (i.WithinAppContent = "within-app-content"),
+        (i.AboveAppContent = "above-app-content"),
+        i);
+let n = { backstage: 0, "within-app-content": 1, "above-app-content": 1002 };
 class a {
     _pool = null;
     setPool(e) {
@@ -60,6 +64,6 @@ class o extends a {
         e.parentElement !== this.pool && this.pool.moveBefore(e, null), (e.style.display = "none");
     }
 }
-function d() {
+function c() {
     return "function" == typeof Element.prototype.moveBefore ? new o() : new r();
 }
