@@ -1,18 +1,11 @@
 "use strict";
-n.d(t, { F1: () => r, su: () => a, xl: () => s });
+n.d(t, { F: () => r, x: () => a });
 var i = n(940107);
 function r(e, t) {
     let n = e?.querySelector("iframe");
     return null != n ? n : null == t ? null : document.querySelector(`[data-frame-id="${CSS.escape(t)}"] iframe`);
 }
-function a(e, t) {
-    return (0, i.W)(e, "capture-region", { rect: t }, { timeoutMs: 15e3, label: "region capture" }).then((e) => {
-        if (e.blob instanceof Blob)
-            return new File([e.blob], `preview-capture-${Date.now()}.png`, { type: "image/png" });
-        throw Error("string" == typeof e.error ? e.error : "capture produced no image");
-    });
-}
-function s(e, t, n, r) {
+function a(e, t, n, r) {
     return (0, i.W)(
         e,
         "capture-now",

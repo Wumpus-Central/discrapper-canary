@@ -112,7 +112,7 @@ let m = [r.F.BOT, r.F.APPLICATIONS_COMMANDS],
             let s = await (0, A.ZW)(e, 6e3);
             if (null == s) return { status: "unavailable" };
             let l = null == a ? { uploadToken: void 0 } : await a();
-            return null == l ? { status: "unavailable" } : await (0, u.xl)(s, t, r, l.uploadToken);
+            return null == l ? { status: "unavailable" } : await (0, u.x)(s, t, r, l.uploadToken);
         },
         relayPreviewControl: async function e(e, t, n, i) {
             if (!(0, A.EA)(e)) return { status: "unavailable" };
