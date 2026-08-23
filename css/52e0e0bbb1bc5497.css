@@ -12,10 +12,18 @@
 }
 
 .coverImageContainer__70feb {
-    background-color: var(--background-mod-normal);
+    background-color: var(--background-mod-muted);
     inset: 0;
     position: absolute;
     z-index: -2
+}
+
+.custom-user-profile-theme .coverImageContainer__70feb {
+    background-color: var(--background-mod-normal)
+}
+
+.custom-user-profile-theme.theme-light .coverImageContainer__70feb {
+    background-color: var(--opacity-white-24)
 }
 
 .actions__70feb.actions__70feb {
@@ -102,7 +110,7 @@
 }
 
 .contentBackground__70feb {
-    background: linear-gradient(180deg, rgba(7, 7, 9, 0), rgba(7, 7, 9, .8));
+    background: linear-gradient(180deg, transparent 0, var(--background-scrim) 100%);
     inset: 0;
     position: absolute;
     z-index: -1
@@ -277,4 +285,4 @@
     margin-inline-end: auto
 }
 
-/*# sourceMappingURL=c55b3ef3701c841b.css.map*/
+/*# sourceMappingURL=52e0e0bbb1bc5497.css.map*/

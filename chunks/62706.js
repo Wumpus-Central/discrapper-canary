@@ -542,7 +542,7 @@ function eR(e) {
                                 canEdit: a,
                                 growWidth: !0,
                                 variant: "heading-xl/semibold",
-                                color: "text-default",
+                                color: "text-strong",
                                 value: i.title,
                                 placeholder: V.intl.string(V.t.KqCDvK),
                                 onCommit: u,

@@ -9,6 +9,10 @@
     background: var(--interactive-background-hover)
 }
 
+.custom-user-profile-theme.theme-light .container_f6d5bd:hover {
+    background: var(--opacity-white-36)
+}
+
 .container_f6d5bd:hover .gifTag_f6d5bd {
     opacity: 0
 }
@@ -51,9 +55,17 @@
 }
 
 .placeholder_f6d5bd {
-    background: var(--background-mod-normal);
+    background: var(--background-mod-muted);
     container-type: inline-size;
     display: flex
+}
+
+.custom-user-profile-theme .placeholder_f6d5bd {
+    background: var(--background-mod-normal)
+}
+
+.custom-user-profile-theme.theme-light .placeholder_f6d5bd {
+    background: var(--opacity-white-24)
 }
 
 .uploading_f6d5bd {
@@ -76,4 +88,4 @@
     }
 }
 
-/*# sourceMappingURL=598263.cbf4e79c37d5798d.css.map*/
+/*# sourceMappingURL=598263.4681b2e6c6660d58.css.map*/
