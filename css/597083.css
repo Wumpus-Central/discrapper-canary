@@ -3743,6 +3743,31 @@
     }
 }
 
+.block_cee34d {
+    background: transparent;
+    cursor: not-allowed;
+    pointer-events: auto;
+    touch-action: none;
+    z-index: 1003
+}
+
+.announcer_cee34d,
+.block_cee34d {
+    overflow: hidden;
+    position: fixed
+}
+
+.announcer_cee34d {
+    border: 0;
+    clip-path: inset(50%);
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    pointer-events: none;
+    white-space: nowrap;
+    width: 1px
+}
+
 .backdrop__5debc {
     background: var(--opacity-black-28);
     inset: 0
@@ -4305,4 +4330,4 @@
     text-align: center
 }
 
-/*# sourceMappingURL=676405.fefa9bea39e8741f.css.map*/
+/*# sourceMappingURL=597083.a2fbd40c0c4e5d42.css.map*/

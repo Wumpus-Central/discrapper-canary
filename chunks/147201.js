@@ -10,8 +10,8 @@ var i,
     u = l(314116),
     m = l(534890),
     p = l(646270),
-    x = l(31300),
-    g = l(794083),
+    g = l(31300),
+    x = l(794083),
     f = l(939249),
     h = l(834730),
     j = l(691540),
@@ -33,15 +33,15 @@ var i,
     z = l(576705),
     D = l(673724),
     H = l(948230),
-    T = l(148555),
+    T = l(295591),
     G = l(683180),
     F = l(208137),
     L = l(805332),
-    U = l(998939),
+    U = l(18739),
     O = l(972786),
     B = l(20386),
-    M = l(458156),
-    X = l(311656),
+    X = l(337834),
+    M = l(311656),
     K = l(250872),
     Y = l(922016),
     q = l(980707),
@@ -65,13 +65,13 @@ function tn(t) {
             onExport: c,
             onImport: m,
             onFork: p,
-            onConnectTool: x,
-            onVersionHistory: g,
+            onConnectTool: g,
+            onVersionHistory: x,
         } = t,
         f = a.useRef(null),
         h = s && null != p,
         C = s && null != m,
-        E = h || null != c || C || null != x || null != g,
+        E = h || null != c || C || null != g || null != x,
         y = J.p5 && null != r;
     return E || y || s
         ? (0, n.jsx)(Y.Y, {
@@ -112,18 +112,18 @@ function tn(t) {
                                                   action: m,
                                               })
                                             : null,
-                                        null != x
+                                        null != g
                                             ? (0, n.jsx)(Z.Dr, {
                                                   id: "connect-tool",
                                                   label: te.intl.string(tt.default["3qelzD"]),
-                                                  action: x,
+                                                  action: g,
                                               })
                                             : null,
-                                        null != g
+                                        null != x
                                             ? (0, n.jsx)(Z.Dr, {
                                                   id: "version-history",
                                                   label: te.intl.string(tt.default.jAWwzi),
-                                                  action: g,
+                                                  action: x,
                                               })
                                             : null,
                                     ],
@@ -253,8 +253,8 @@ function tm(t) {
     (0, tl.openModal)((e) => (0, n.jsx)(tu, { ...e, reason: t }));
 }
 var tp = l(224640),
-    tx = l(815021),
-    tg = l(652215),
+    tg = l(815021),
+    tx = l(652215),
     tf = l(931587),
     th = l(264997);
 function tj(t) {
@@ -263,7 +263,7 @@ function tj(t) {
         d = te.intl.formatToPlainString(tt.default.CC69wK, { projectName: i }),
         c = a.useCallback(() => {
             let t = (0, G.SH)(l, e);
-            (0, R.pX)(null == t ? tg.BVt.CHANNEL(l) : tg.BVt.CHANNEL(l, t)), s();
+            (0, R.pX)(null == t ? tx.BVt.CHANNEL(l) : tx.BVt.CHANNEL(l, t)), s();
         }, [e, l, s]);
     return (0, n.jsx)(tp.d, {
         transitionState: r,
@@ -274,7 +274,7 @@ function tj(t) {
         children: (0, n.jsxs)("div", {
             className: tf.zr,
             children: [
-                (0, n.jsx)("div", { className: tf.b, children: (0, n.jsx)(tx.J, { onClick: s }) }),
+                (0, n.jsx)("div", { className: tf.b, children: (0, n.jsx)(tg.J, { onClick: s }) }),
                 (0, n.jsxs)("div", {
                     className: tf.wx,
                     children: [
@@ -381,10 +381,10 @@ function tA(t) {
     return (0, n.jsx)(p.u, { ...t, size: "custom", width: 20, height: 20 });
 }
 function tI(t) {
-    return (0, n.jsx)(x.k, { ...t, size: "custom", width: 20, height: 20 });
+    return (0, n.jsx)(g.k, { ...t, size: "custom", width: 20, height: 20 });
 }
 function tw(t) {
-    return (0, n.jsx)(g.b, { ...t, size: "custom", width: 20, height: 20 });
+    return (0, n.jsx)(x.b, { ...t, size: "custom", width: 20, height: 20 });
 }
 function tS(t) {
     let e,
@@ -393,7 +393,7 @@ function tS(t) {
         r,
         s,
         { project: o, guildId: c, onSelect: m, onFork: p } = t,
-        x =
+        g =
             ((e = o.id),
             (l = o.name),
             (i = a.useRef(!1)),
@@ -434,7 +434,7 @@ function tS(t) {
                                       confirmText: te.intl.string(tt.default.pgFuyr),
                                       variant: "critical",
                                       onConfirm: async () => {
-                                          (0, R.pX)(tg.BVt.CHANNEL(c, ti.VV.VIBEGRATIONS, e));
+                                          (0, R.pX)(tx.BVt.CHANNEL(c, ti.VV.VIBEGRATIONS, e));
                                           try {
                                               await tv(e, t, te.intl.string(tt.default.C7GU2r));
                                           } catch {
@@ -448,7 +448,7 @@ function tS(t) {
                 )).open,
                 importInput: s.input,
             }),
-        g =
+        x =
             null == o.updated_at
                 ? null
                 : te.intl.formatToPlainString(tt.default.oMDaqr, { time: d()(o.updated_at).fromNow() });
@@ -467,14 +467,14 @@ function tS(t) {
                             className: ty.j1,
                             children: o.name,
                         }),
-                        null == g
+                        null == x
                             ? null
                             : (0, n.jsx)("div", {
                                   className: ty.h3,
                                   children: (0, n.jsx)(h.E, {
                                       variant: "text-sm/normal",
                                       color: "text-subtle",
-                                      children: g,
+                                      children: x,
                                   }),
                               }),
                     ],
@@ -495,10 +495,10 @@ function tS(t) {
                                 isPublic: (0, D.XE)(o),
                                 supportsVisibility: (0, D.IU)(o),
                                 onFork: p,
-                                onExport: x.onExport,
-                                onImport: x.onImport,
+                                onExport: g.onExport,
+                                onImport: g.onImport,
                             }),
-                            x.importInput,
+                            g.importInput,
                         ],
                     }),
                 ],
@@ -510,7 +510,7 @@ function tP(t) {
     let { project: e, projectsLoaded: i, onBack: r, guildId: s } = t,
         [o, d] = a.useState(!1),
         [m, p] = a.useState(!0),
-        [x, g] = a.useState(!1),
+        [g, x] = a.useState(!1),
         [f, k] = a.useState(null),
         [A, I] = a.useState(null),
         w = e?.id ?? null,
@@ -530,10 +530,10 @@ function tP(t) {
         );
     let G = (0, c.bG)([O.A], () => (null == w ? null : O.A.getIntegrationStatus(w)), [w]),
         { data: F, isLoading: B } = (0, _.YY)(e?.preview_application_id ?? void 0),
-        X = null != w && A !== w,
+        M = null != w && A !== w,
         Y = G?.preview_ready === !0,
         q = Y && null != G && (!G.integration_installed || G.bot_permissions_changed),
-        Z = o || X || B,
+        Z = o || M || B,
         W = te.intl.string(tt.default["5gU57O"]),
         $ = te.intl.string(m ? tt.default.YdgE0j : tt.default.aWVf4j),
         Q = a.useCallback(() => p((t) => !t), []),
@@ -546,7 +546,7 @@ function tP(t) {
                     return P.current && S.current === l;
                 }
                 (V.current = !0),
-                    g(!1),
+                    x(!1),
                     p(!0),
                     k({ entry: t, status: "restoring" }),
                     (0, U.oB)(l, t.sha)
@@ -573,7 +573,7 @@ function tP(t) {
         tp = a.useCallback(() => {
             null != e && (p(!0), (0, U.dv)(e.id, te.intl.string(tt.default["2ejwtJ"])));
         }, [e]),
-        tx = tN(
+        tg = tN(
             a.useCallback(
                 (t) => {
                     if (null == e) return;
@@ -648,7 +648,7 @@ function tP(t) {
                     },
                 });
         }, [tP, tC, F, e]),
-        tR = q ? { type: "permissions", onReviewPermissions: t_, loading: B || X } : X ? { type: "checking" } : void 0,
+        tR = q ? { type: "permissions", onReviewPermissions: t_, loading: B || M } : M ? { type: "checking" } : void 0,
         {
             mode: tV,
             setMode: tz,
@@ -656,7 +656,7 @@ function tP(t) {
         } = (0, K.fY)(e?.preview_application_id ?? null, e?.preview_application_id ?? null),
         tH = tD && Y && null == tR;
     a.useEffect(() => {
-        null == e && i && (0, R.pX)(tg.BVt.CHANNEL(s, ti.VV.VIBEGRATIONS));
+        null == e && i && (0, R.pX)(tx.BVt.CHANNEL(s, ti.VV.VIBEGRATIONS));
     }, [s, e, i]);
     let tT = a.useCallback(async () => {
             if (null != e) {
@@ -699,7 +699,7 @@ function tP(t) {
                                   isPublic: (0, D.XE)(e),
                                   supportsVisibility: (0, D.IU)(e),
                                   onExport: tp,
-                                  onImport: tx.open,
+                                  onImport: tg.open,
                                   onFork: tf,
                                   onConnectTool: () => {
                                       var t;
@@ -718,7 +718,7 @@ function tP(t) {
                                       f?.status === "restoring"
                                           ? void 0
                                           : () => {
-                                                p(!0), g(!0);
+                                                p(!0), x(!0);
                                             },
                               }),
                               (0, n.jsx)(C.m, {
@@ -766,7 +766,7 @@ function tP(t) {
     return (0, n.jsxs)("div", {
         className: ty.nj,
         children: [
-            tx.input,
+            tg.input,
             (0, n.jsx)("main", {
                 className: ty.JX,
                 children:
@@ -798,7 +798,7 @@ function tP(t) {
                               ],
                           })
                         : (0, n.jsx)(
-                              M.A,
+                              X.A,
                               {
                                   projectId: e.id,
                                   applicationId: e.preview_application_id,
@@ -807,8 +807,8 @@ function tP(t) {
                                   header: tG,
                                   chatOpen: m,
                                   onCloseChat: J,
-                                  versionHistoryOpen: x,
-                                  onCloseVersionHistory: () => g(!1),
+                                  versionHistoryOpen: g,
+                                  onCloseVersionHistory: () => x(!1),
                                   onRestoreVersion: ta,
                                   restoreState: f,
                                   previewReady: Y,
@@ -833,8 +833,8 @@ function t_(t) {
             createDisabled: u,
             modelSettings: m,
             onModelSettingsChange: p,
-            onSelectProject: x,
-            onIdeaChange: g,
+            onSelectProject: g,
+            onIdeaChange: x,
             onCreate: j,
             onImportNewProject: v,
             importing: b,
@@ -863,7 +863,7 @@ function t_(t) {
         T = [
             te.intl.string(tt.default["E+Q26x"]),
             te.intl.string(tt.default["06/jqP"]),
-            te.intl.string(tt.default["7MCiK9"]),
+            te.intl.string(tt.default["3gSfUa"]),
         ],
         L = a.useCallback(
             (t) => {
@@ -929,13 +929,13 @@ function t_(t) {
                                             value: r,
                                             placeholder: z,
                                             error: c,
-                                            onChange: g,
+                                            onChange: x,
                                             onKeyDown: L,
                                         }),
                                         (0, n.jsxs)("div", {
                                             className: ty.VP,
                                             children: [
-                                                (0, n.jsx)(X.A, {
+                                                (0, n.jsx)(M.A, {
                                                     settings: m ?? D.hk,
                                                     choices: (0, F.e)()
                                                         ? {
@@ -1050,7 +1050,7 @@ function t_(t) {
                                                           {
                                                               project: t,
                                                               guildId: o,
-                                                              onSelect: () => x(t.id),
+                                                              onSelect: () => g(t.id),
                                                               onFork: () => (0, to.A)(t, o),
                                                           },
                                                           t.id,
@@ -1084,7 +1084,7 @@ function t_(t) {
                                                               {
                                                                   project: t,
                                                                   guildId: o,
-                                                                  onSelect: () => x(t.id),
+                                                                  onSelect: () => g(t.id),
                                                                   onFork: () => (0, to.A)(t, o),
                                                               },
                                                               t.id,
@@ -1109,13 +1109,13 @@ function tR(t) {
         r = (0, c.bG)([O.A], () => O.A.getProjectsFetchState()),
         s = (0, c.bG)([V.A, z.A], () => {
             let t = V.A.getGuild(e);
-            return null != t && z.A.can(tg.xBc.MANAGE_GUILD, t);
+            return null != t && z.A.can(tx.xBc.MANAGE_GUILD, t);
         }, [e]),
         o = (0, c.yK)([O.A], () => (s ? O.A.getSharedProjects(e) : []), [e, s]),
         [d, u] = a.useState(""),
         m = l ?? null,
-        [p, x] = a.useState(!1),
-        [g, f] = a.useState(null),
+        [p, g] = a.useState(!1),
+        [x, f] = a.useState(null),
         [h, C] = a.useState(null),
         N = d.trim();
     a.useEffect(() => {
@@ -1128,19 +1128,19 @@ function tR(t) {
             async (t) => {
                 let l = (t ?? d).trim();
                 if ("" !== l) {
-                    null != t && u(t), x(!0), f(null);
+                    null != t && u(t), g(!0), f(null);
                     try {
                         let t = await (0, H.gA)({ guild_id: e });
                         (0, U.Hc)(t),
                             null != h && (0, U.r2)(t, h),
                             (0, U.dv)(t, l),
-                            (0, R.pX)(tg.BVt.CHANNEL(e, ti.VV.VIBEGRATIONS, t)),
+                            (0, R.pX)(tx.BVt.CHANNEL(e, ti.VV.VIBEGRATIONS, t)),
                             u(""),
                             C(null);
                     } catch (t) {
                         f(t instanceof Error ? t.message : te.intl.string(tt.default.KKkp5Y));
                     } finally {
-                        x(!1);
+                        g(!1);
                     }
                 }
             },
@@ -1156,7 +1156,7 @@ function tR(t) {
                 try {
                     (i = await (0, H.gA)({ guild_id: e })),
                         await tv(i, t, te.intl.string(tt.default.KjEtrZ)),
-                        (0, R.pX)(tg.BVt.CHANNEL(e, ti.VV.VIBEGRATIONS, i));
+                        (0, R.pX)(tx.BVt.CHANNEL(e, ti.VV.VIBEGRATIONS, i));
                 } catch {
                     null != i && (await (0, H.xx)(i).catch(() => void 0)),
                         (0, j.P0)((0, v.o)(te.intl.string(tt.default["02GpNr"]), b.Ck.FAILURE));
@@ -1168,12 +1168,12 @@ function tR(t) {
         ),
         I = a.useCallback(
             (t) => {
-                (0, R.pX)(tg.BVt.CHANNEL(e, ti.VV.VIBEGRATIONS, t));
+                (0, R.pX)(tx.BVt.CHANNEL(e, ti.VV.VIBEGRATIONS, t));
             },
             [e],
         ),
         w = a.useCallback(() => {
-            (0, R.pX)(tg.BVt.CHANNEL(e, ti.VV.VIBEGRATIONS));
+            (0, R.pX)(tx.BVt.CHANNEL(e, ti.VV.VIBEGRATIONS));
         }, [e]),
         S = a.useCallback((t) => {
             u(t), f(null);
@@ -1195,7 +1195,7 @@ function tR(t) {
               idea: d,
               guildId: e,
               submitting: p,
-              createError: g,
+              createError: x,
               createDisabled: "" === N || p,
               onSelectProject: I,
               onIdeaChange: S,

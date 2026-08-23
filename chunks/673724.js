@@ -1,45 +1,46 @@
-i.d(t, {
+"use strict";
+n.d(t, {
     A2: () => r,
     CA: () => c,
-    Hz: () => n,
-    IU: () => o,
-    Is: () => s,
-    S8: () => R,
-    Wb: () => d,
+    Hz: () => i,
+    IU: () => s,
+    Is: () => E,
+    S8: () => p,
+    Wb: () => _,
     XE: () => a,
-    ZJ: () => A,
+    ZJ: () => I,
     a7: () => l,
-    aM: () => u,
+    aM: () => o,
     hk: () => T,
-    sj: () => _,
-    wF: () => S,
-    wV: () => p,
+    sj: () => d,
+    wF: () => g,
+    wV: () => u,
     x5: () => h,
-    yr: () => E,
+    yr: () => A,
 }),
-    i(938796);
-let n = "Untitled App",
+    n(938796);
+let i = "Untitled App",
     r = Object.freeze({ PUBLIC: 1, SHAREABLE: 2 });
 function a(e) {
     return ((e.flags ?? 0) & r.PUBLIC) != 0;
 }
-function o(e) {
+function s(e) {
     return null != e.flags;
 }
 function l(e) {
     return Math.floor(100 * e);
 }
-function u(e) {
+function o(e) {
     return e.input_tokens + e.output_tokens + e.cache_creation_input_tokens + e.cache_read_input_tokens;
 }
-function _(e) {
+function d(e) {
     return e.input_tokens + e.cache_creation_input_tokens + e.cache_read_input_tokens;
 }
 function c(e) {
-    let t = _(e);
+    let t = d(e);
     return 0 === t ? 0 : e.cache_read_input_tokens / t;
 }
-function p(e, t) {
+function u(e, t) {
     return {
         input_tokens: e.input_tokens + t.input_tokens,
         output_tokens: e.output_tokens + t.output_tokens,
@@ -47,18 +48,18 @@ function p(e, t) {
         cache_read_input_tokens: e.cache_read_input_tokens + t.cache_read_input_tokens,
     };
 }
-let d = new Set(["image/png", "image/jpeg", "image/gif", "image/webp"]),
-    s = 10;
-function E(e) {
-    return d.has(e) ? 5242880 : 0x3200000;
+let _ = new Set(["image/png", "image/jpeg", "image/gif", "image/webp"]),
+    E = 10;
+function A(e) {
+    return _.has(e) ? 5242880 : 0x3200000;
 }
 function h(e, t) {
-    return e <= E(t);
+    return e <= A(t);
 }
-function A(e) {
+function I(e) {
     return `${Math.round(e / 1048576)} MB`;
 }
-let I = [
+let f = [
         { id: "claude-fable-5", label: "Claude Fable 5", provider: "anthropic" },
         { id: "claude-opus-5", label: "Claude Opus 5", provider: "anthropic" },
         { id: "claude-sonnet-5", label: "Claude Sonnet 5", provider: "anthropic" },
@@ -67,12 +68,12 @@ let I = [
         { id: "gpt-5.6-terra", label: "GPT-5.6 Terra", provider: "openai" },
         { id: "gpt-5.6-luna", label: "GPT-5.6 Luna", provider: "openai" },
     ],
-    R = { main: I, subagent: I, thinking: ["low", "medium", "high", "xhigh", "max"] },
+    p = { main: f, subagent: f, thinking: ["low", "medium", "high", "xhigh", "max"] },
     T = {
         main: { model: "claude-opus-5", thinking: "high" },
         subagent: { model: "claude-sonnet-5", thinking: "medium" },
     },
-    f = [
+    m = [
         { id: "workers-ai/@cf/moonshotai/kimi-k2.6", label: "Kimi K2.6", provider: "workers-ai" },
         { id: "workers-ai/@cf/zai-org/glm-5.2", label: "GLM 5.2", provider: "workers-ai" },
         { id: "workers-ai/@cf/nvidia/nemotron-3-120b-a12b", label: "Nemotron 3 Super 120B", provider: "workers-ai" },
@@ -80,4 +81,4 @@ let I = [
         { id: "xai/grok-4.6", label: "Grok 4.6", provider: "xai" },
         { id: "workers-ai/@cf/zai-org/glm-4.7-flash", label: "GLM 4.7 Flash", provider: "workers-ai" },
     ],
-    S = { main: f, subagent: f, thinking: R.thinking };
+    g = { main: m, subagent: m, thinking: p.thinking };
