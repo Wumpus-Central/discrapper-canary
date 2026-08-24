@@ -1,39 +1,41 @@
-e.d(n, { default: () => c });
-var s = e(477900),
-    i = e(582128),
-    r = e(189213),
-    l = e(167417),
+e.d(n, { default: () => M });
+var i = e(477900),
+    s = e(582128),
+    l = e(189213),
+    r = e(167417),
     a = e(462116),
-    S = e(375708);
-let u = ["MESSAGE_SPAM", "DM_SPAM", "MENTION_SPAM", "SUSPICIOUS_USERS", "SETTINGS_SPAM"];
-function c(t) {
-    let { guildId: n, transitionState: e, onClose: c } = t,
-        [o, M] = i.useState([]),
-        C = i.useCallback(() => {
-            (0, a.G1)(n, o), (0, a.B)(n), c();
-        }, [n, c, o]),
-        E = i.useCallback((t) => {
-            M(t);
+    S = e(975571),
+    u = e(652215),
+    c = e(375708);
+let o = ["MESSAGE_SPAM", "DM_SPAM", "MENTION_SPAM", "SUSPICIOUS_USERS", "SETTINGS_SPAM"];
+function M(t) {
+    let { guildId: n, transitionState: e, onClose: M } = t,
+        [C, E] = s.useState([]),
+        g = s.useCallback(() => {
+            (0, a.G1)(n, C), (0, a.B)(n), M();
+        }, [n, M, C]),
+        A = s.useCallback((t) => {
+            E(t);
         }, []),
-        d = i.useCallback(() => {
-            open("https://discord.com/community/securing-your-server");
+        _ = s.useCallback(() => {
+            window.open(S.A.getArticleURL(u.MVz.GUILD_RAID));
         }, []),
-        g = i.useMemo(
+        d = s.useMemo(
             () =>
-                u.map((t) => ({
+                o.map((t) => ({
                     label: String(
                         (function (t) {
                             switch (t) {
                                 case "DM_SPAM":
-                                    return S.intl.string(S.t["9CYNmS"]);
+                                    return c.intl.string(c.t["9CYNmS"]);
                                 case "MENTION_SPAM":
-                                    return S.intl.string(S.t["hR/IdO"]);
+                                    return c.intl.string(c.t["hR/IdO"]);
                                 case "MESSAGE_SPAM":
-                                    return S.intl.string(S.t.fwloj2);
+                                    return c.intl.string(c.t.fwloj2);
                                 case "SETTINGS_SPAM":
-                                    return S.intl.string(S.t.ETFVFw);
+                                    return c.intl.string(c.t.ETFVFw);
                                 case "SUSPICIOUS_USERS":
-                                    return S.intl.string(S.t["lKXu+n"]);
+                                    return c.intl.string(c.t["lKXu+n"]);
                             }
                             return null;
                         })(t),
@@ -42,15 +44,15 @@ function c(t) {
                 })),
             [],
         );
-    return (0, s.jsx)(r.Modal, {
+    return (0, i.jsx)(l.Modal, {
         transitionState: e,
-        title: S.intl.string(S.t.uYPGsS),
-        subtitle: S.intl.format(S.t.Hg8Ee7, { onClick: d }),
+        title: c.intl.string(c.t.uYPGsS),
+        subtitle: c.intl.format(c.t.Hg8Ee7, { onClick: _ }),
         actions: [
-            { text: S.intl.string(S.t["ETE/oC"]), onClick: c, variant: "secondary" },
-            { text: S.intl.string(S.t.geKm7t), onClick: C },
+            { text: c.intl.string(c.t["ETE/oC"]), onClick: M, variant: "secondary" },
+            { text: c.intl.string(c.t.geKm7t), onClick: g },
         ],
-        onClose: c,
-        children: (0, s.jsx)(l.$, { selectedValues: o, onChange: E, options: g }),
+        onClose: M,
+        children: (0, i.jsx)(r.$, { selectedValues: C, onChange: A, options: d }),
     });
 }
