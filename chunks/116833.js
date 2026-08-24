@@ -94,7 +94,7 @@ let o = {
                 n.bind(n, 275256),
             ),
         7: () => Promise.all([n.e("522052"), n.e("58407")]).then(n.bind(n, 939034)),
-        8: () => Promise.all([n.e("84194"), n.e("654282")]).then(n.bind(n, 140049)),
+        8: () => Promise.all([n.e("6722"), n.e("654282")]).then(n.bind(n, 140049)),
         9: () =>
             Promise.all([
                 n.e("51872"),

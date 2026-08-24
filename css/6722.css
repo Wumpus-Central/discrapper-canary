@@ -1,3 +1,34 @@
+.popout_f18413 {
+    background: var(--background-surface-higher);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    box-shadow: var(--elevation-low);
+    gap: var(--space-16);
+    outline: none;
+    padding: var(--space-16);
+    width: 320px
+}
+
+.header_f18413,
+.popout_f18413 {
+    display: flex;
+    flex-direction: column
+}
+
+.header_f18413,
+.titleRow_f18413 {
+    gap: var(--space-4)
+}
+
+.titleRow_f18413 {
+    align-items: center;
+    display: flex
+}
+
+.nitroIcon_f18413 {
+    color: var(--icon-default)
+}
+
 .tag_ed9123 {
     align-items: center;
     border-radius: var(--radius-sm);
@@ -135,4 +166,4 @@
     width: 100%
 }
 
-/*# sourceMappingURL=84194.c40f2d640ceeb8a1.css.map*/
+/*# sourceMappingURL=6722.b44ec9b27998f4e2.css.map*/

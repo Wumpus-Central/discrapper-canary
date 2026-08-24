@@ -5647,6 +5647,28 @@
     }
   },
   {
+    "name": "2026-08-badge-management",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false,
+      "tenureBadgeHideable": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true,
+        "tenureBadgeHideable": true
+      },
+      "2": {
+        "enabled": true,
+        "tenureBadgeHideable": false
+      }
+    }
+  },
+  {
     "name": "2026-08-bounties-mobile-quest-bar",
     "kind": "user",
     "defaultConfig": {
