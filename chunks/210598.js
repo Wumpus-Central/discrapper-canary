@@ -99,7 +99,7 @@ class C {
     header;
     sections;
     constructor({ id: e, header: t, sections: n }) {
-        (this.id = e), (this.type = s.x.PERSONAL), (this.header = t ?? ""), (this.sections = n ?? []);
+        (this.id = e), (this.type = s.x.PERSONAL), (this.header = t), (this.sections = n ?? []);
     }
     toSubmission() {
         return {
@@ -118,7 +118,7 @@ class C {
         return this.sections.every(p);
     }
     isValid() {
-        return this.sections.some((e) => !p(e));
+        return "" !== this.header.trim() && this.sections.some((e) => !p(e));
     }
     isUpdatable() {
         return (0, d.ki)(l.default.getCurrentUser(), c.PremiumTypes.TIER_2);

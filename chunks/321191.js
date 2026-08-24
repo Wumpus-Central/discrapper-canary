@@ -65,7 +65,7 @@ function x(e) {
         case s.x.APPLICATION:
             return new T.R({ id: e.id, applicationId: e.data.application_id });
         case s.x.PERSONAL:
-            return new S.Tu({ id: e.id, header: e.data.header ?? void 0, sections: (0, S.wv)(e.data.sections) });
+            return new S.Tu({ id: e.id, header: e.data.header ?? "", sections: (0, S.wv)(e.data.sections) });
         case s.x.CLIPS_GALLERY:
             return new m.k({
                 id: e.id,
