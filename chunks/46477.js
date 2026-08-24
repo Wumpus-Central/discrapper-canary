@@ -35,10 +35,10 @@ function T(e, t, n) {
             roleIds: S,
             isImpersonating: N,
             hasBaseAccessPermissions: C,
-            hasSendMessagesPermission: R,
+            hasSendMessagesPermission: O,
         } = t,
         {
-            applicationAllowedForUser: O,
+            applicationAllowedForUser: R,
             applicationAllowedForChannel: L,
             isGuildInstalled: y,
             isUserInstalled: D,
@@ -58,7 +58,7 @@ function T(e, t, n) {
     if (e.applicationId === I.Ik.BUILT_IN) return 0;
     let M = null != i ? (0, h.wz)(i) : void 0;
     if (null == M || l.zy(p, f.xBc.ADMINISTRATOR) || (D && e.integration_types?.includes(s.b.USER_INSTALL))) return 0;
-    if ((!C || !R) && y && (null == e.integration_types || e.integration_types.includes(s.b.GUILD_INSTALL))) return 5;
+    if ((!C || !O) && y && (null == e.integration_types || e.integration_types.includes(s.b.GUILD_INSTALL))) return 5;
     if (i instanceof u.YB) {
         a()(void 0 !== L, "missing applicationAllowedForChannel");
         let t = m(e.permissions, i, M);
@@ -67,7 +67,7 @@ function T(e, t, n) {
     let P = g(e.permissions, M, T, S, N);
     if (!0 === P) return 0;
     if (!1 === P) return 7;
-    if (!1 === O) return 7;
+    if (!1 === R) return 7;
     if (
         null != e.defaultMemberPermissions &&
         !(!l.aI(e.defaultMemberPermissions, A.Cq) && l.zy(p, e.defaultMemberPermissions))

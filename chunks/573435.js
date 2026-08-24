@@ -467,7 +467,7 @@ function C(e, t) {
         ],
     });
 }
-function R(e, t) {
+function O(e, t) {
     return (0, r.jsxs)("mask", {
         id: e,
         maskContentUnits: "objectBoundingBox",
@@ -486,7 +486,7 @@ function R(e, t) {
         ],
     });
 }
-function O(e, t) {
+function R(e, t) {
     return (0, r.jsxs)("mask", {
         id: e,
         maskContentUnits: "objectBoundingBox",
@@ -915,8 +915,8 @@ let Z = a.memo(function () {
             i.has("svg-mask-notched-squircle-16") && G("svg-mask-notched-squircle-16", 16),
             i.has("svg-mask-notched-squircle-20") && G("svg-mask-notched-squircle-20", 20),
             i.has("svg-mask-notched-squircle-24") && G("svg-mask-notched-squircle-24", 24),
-            i.has("svg-mask-header-bar-badge-top") && O("svg-mask-header-bar-badge-top", 0.25),
-            i.has("svg-mask-header-bar-badge-bottom") && O("svg-mask-header-bar-badge-bottom", 0.75),
+            i.has("svg-mask-header-bar-badge-top") && R("svg-mask-header-bar-badge-top", 0.25),
+            i.has("svg-mask-header-bar-badge-bottom") && R("svg-mask-header-bar-badge-bottom", 0.75),
             i.has("svg-mask-voice-user-summary-item") &&
                 (0, r.jsxs)("mask", {
                     id: "svg-mask-voice-user-summary-item",
@@ -976,11 +976,11 @@ let Z = a.memo(function () {
                     ],
                 }),
             i.has("svg-mask-channel-call-control-button-badge-16") &&
-                R("svg-mask-channel-call-control-button-badge-16", 16),
+                O("svg-mask-channel-call-control-button-badge-16", 16),
             i.has("svg-mask-channel-call-control-button-badge-22") &&
-                R("svg-mask-channel-call-control-button-badge-22", 22),
+                O("svg-mask-channel-call-control-button-badge-22", 22),
             i.has("svg-mask-channel-call-control-button-badge-29") &&
-                R("svg-mask-channel-call-control-button-badge-29", 29),
+                O("svg-mask-channel-call-control-button-badge-29", 29),
             i.has("svg-mask-avatar-default") && x("svg-mask-avatar-default"),
             i.has("svg-mask-avatar-status-round-16") && k("svg-mask-avatar-status-round-16", c._3.SIZE_16),
             i.has("svg-mask-avatar-decoration-status-round-16") &&

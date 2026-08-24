@@ -22,8 +22,8 @@ var i = n(478437),
     S = n(994500),
     N = n(309010),
     C = n(543465),
-    R = n(977997),
-    O = n(935208),
+    O = n(977997),
+    R = n(935208),
     L = n(581895),
     y = n(652215);
 let D = Object.freeze({
@@ -71,7 +71,7 @@ function F(e) {
 class V extends r.Ay.Store {
     static displayName = "GuildMediaStateStore";
     initialize() {
-        this.waitFor(_.A, f.A, p.default, T.A, o.Ay, E.Ay, m.A, g.A, S.A, N.Ay, h.A, C.Ay, R.A),
+        this.waitFor(_.A, f.A, p.default, T.A, o.Ay, E.Ay, m.A, g.A, S.A, N.Ay, h.A, C.Ay, O.A),
             this.syncWith([_.A, f.A, T.A, o.Ay, E.Ay, m.A, g.A, S.A, N.Ay, h.A, C.Ay], w);
     }
     getGuildMediaState(e) {
@@ -95,7 +95,7 @@ class V extends r.Ay.Store {
                                 currentUserId: p.default.getId(),
                                 selectedVoiceChannelId: e,
                                 selectedVoiceGuildId: t?.guild_id,
-                                selectedVoiceChannelHasVideo: null != e && R.A.hasVideo(e),
+                                selectedVoiceChannelHasVideo: null != e && O.A.hasVideo(e),
                                 isSelectedVoiceChannelStage: t?.isGuildStageVoice() ?? !1,
                                 blockedOrIgnoredUserIds: n,
                                 streamChannelIdsByGuild: i,
@@ -125,7 +125,7 @@ class V extends r.Ay.Store {
                             ? r
                             : r.filter((e) => !(0, c.PH)([...e.userIds], t.blockedOrIgnoredUserIds)),
                     s = m.A.getGuild(e)?.afkChannelId,
-                    _ = R.A.getVoiceStates(e),
+                    _ = O.A.getVoiceStates(e),
                     E = !1,
                     y = !1;
                 for (let n in _)
@@ -133,14 +133,14 @@ class V extends r.Ay.Store {
                         E = !0;
                         break;
                     }
-                for (let n of R.A.getUsersWithVideo(e))
+                for (let n of O.A.getUsersWithVideo(e))
                     if (!t.blockedOrIgnoredUserIds.has(n) && k(e, _[n]?.channelId, s, t.skipMutedVcs)) {
                         y = !0;
                         break;
                     }
                 let v = t.streamChannelIdsByGuild.get(e),
                     b = null != v && v.some((n) => !t.skipMutedVcs || !C.Ay.isGuildOrCategoryOrChannelMuted(e, n)),
-                    w = O.default.keys(h.A.getStageInstancesByGuild(e)).some((e) => {
+                    w = R.default.keys(h.A.getStageInstancesByGuild(e)).some((e) => {
                         let t = T.A.getBasicChannel(e);
                         return null != t && (0, u.A)(t, g.A);
                     }),

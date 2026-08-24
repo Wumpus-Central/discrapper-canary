@@ -22,12 +22,12 @@ let p = [f.Hi.AUTHENTICATION_FAILED, f.Hi.NOT_ENTITLED],
     S = !1,
     N = null,
     C = null,
-    R = !1,
-    O = new Map(),
+    O = !1,
+    R = new Map(),
     L = !1,
     y = null;
 function D() {
-    let e = { queue: m, paused: S, userActions: Array.from(O) };
+    let e = { queue: m, paused: S, userActions: Array.from(R) };
     s.w.set(T, e);
 }
 function v() {
@@ -94,7 +94,7 @@ class k extends a.Ay.Store {
         let e = s.w.get(T) ?? { queue: null, paused: null, userActions: null };
         null != e.queue && (m = e.queue.map((e) => ("string" == typeof e ? { comboId: e, action: "Patch" } : e))),
             null != e.paused && (S = e.paused),
-            null != e.userActions && (O = new Map(Array.from(e.userActions))),
+            null != e.userActions && (R = new Map(Array.from(e.userActions))),
             this.waitFor(h.A, d.Ay),
             this.syncWith([d.Ay], x),
             this.waitFor(u.A, c.default, h.A);
@@ -121,7 +121,7 @@ class k extends a.Ay.Store {
 let F = new k(l.h, {
     DISPATCH_APPLICATION_INSTALL: function (e) {
         let { applicationId: t, branchId: n } = e;
-        O.set((0, _.gW)(t, n), "Install"), M(t, n, !1, "Patch");
+        R.set((0, _.gW)(t, n), "Install"), M(t, n, !1, "Patch");
     },
     DISPATCH_APPLICATION_UPDATE: function (e) {
         let { applicationId: t, branchId: n, automatic: i } = e;
@@ -133,7 +133,7 @@ let F = new k(l.h, {
     DISPATCH_APPLICATION_CANCEL: U,
     DISPATCH_APPLICATION_REPAIR: function (e) {
         let { applicationId: t, branchId: n } = e;
-        O.set((0, _.gW)(t, n), "Repair"), M(t, n, !1, "Repair");
+        R.set((0, _.gW)(t, n), "Repair"), M(t, n, !1, "Repair");
     },
     DISPATCH_APPLICATION_MOVE_UP: function (e) {
         let { applicationId: t, branchId: n } = e,
@@ -144,7 +144,7 @@ let F = new k(l.h, {
     DISPATCH_APPLICATION_REMOVE_FINISHED: w,
     DISPATCH_APPLICATION_STATE_UPDATE: function (e) {
         let { state: t } = e;
-        !R && ((R = !0), v(), S || E.A.resume());
+        !O && ((O = !0), v(), S || E.A.resume());
         let n = S;
         (S = t.paused), (N = t.currentTask), (C = t.nextTask);
         let i = !1;
@@ -162,15 +162,15 @@ let F = new k(l.h, {
                 r().isEqual(s.manifestIds, s.targetManifestIds) &&
                 r().isEqual(s.manifestIds, d)
             ) {
-                if ((g.push(t), O.has(t))) {
-                    switch (O.get(t)) {
+                if ((g.push(t), R.has(t))) {
+                    switch (R.get(t)) {
                         case "Install":
                             o.BK(n, s);
                             break;
                         case "Repair":
                             o.jU(n, s);
                     }
-                    O.delete(t);
+                    R.delete(t);
                 }
                 return (i = !0), !1;
             }

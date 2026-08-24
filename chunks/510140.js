@@ -384,7 +384,7 @@ function _(e, t) {
         });
     return (n.displayName = t.name), n;
 }
-function S(e, t, r = E) {
+function S(e, t, r = x) {
     let n = ({ node: e }) => t(e.props, e.props.ref, e),
         o = (0, f.forwardRef)((t, o) => {
             var i;
@@ -395,19 +395,19 @@ function S(e, t, r = E) {
         });
     return (o.displayName = t.name), o;
 }
-function E(e) {
+function x(e) {
     return (0, s.p)({ ...e, addIdAndValue: !0 });
 }
-let x = (0, f.createContext)(null);
+let E = (0, f.createContext)(null);
 function k(e) {
-    let t = (0, f.useContext)(x),
+    let t = (0, f.useContext)(E),
         r = ((null == t ? void 0 : t.dependencies) || []).concat(e.dependencies),
         n = e.idScope || (null == t ? void 0 : t.idScope),
-        o = E({ ...e, idScope: n, dependencies: r });
+        o = x({ ...e, idScope: n, dependencies: r });
     return (
         (0, f.useContext)(m) && (o = f.createElement(C, null, o)),
         (t = (0, f.useMemo)(() => ({ dependencies: r, idScope: n }), [n, ...r])),
-        f.createElement(x.Provider, { value: t }, o)
+        f.createElement(E.Provider, { value: t }, o)
     );
 }
 function C({ children: e }) {

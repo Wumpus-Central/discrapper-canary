@@ -22,10 +22,10 @@ let p = {},
     S = {},
     N = {},
     C = null,
-    R = {};
-function O() {
-    for (let e in ((p = {}), (S = {}), (T = {}), (m = {}), (g = {}), (C = _.Ay.getChannelId()), R)) clearTimeout(R[e]);
-    (R = {}),
+    O = {};
+function R() {
+    for (let e in ((p = {}), (S = {}), (T = {}), (m = {}), (g = {}), (C = _.Ay.getChannelId()), O)) clearTimeout(O[e]);
+    (O = {}),
         A.A.forEachGuild((e) => {
             y(e);
         }),
@@ -173,7 +173,7 @@ function F(e, t) {
     var n;
     V(e.id),
         t &&
-            (R[(n = e).id] = setTimeout(
+            (O[(n = e).id] = setTimeout(
                 () => {
                     let e = d.A.getChannel(n.id);
                     null != e && s.h.dispatch({ type: "THREAD_UPDATE", channel: e });
@@ -182,7 +182,7 @@ function F(e, t) {
             ));
 }
 function V(e) {
-    e in R && (clearTimeout(R[e]), delete R[e]);
+    e in O && (clearTimeout(O[e]), delete O[e]);
 }
 function B(e, t, n, i) {
     let { guild_id: a, parent_id: s, id: l } = t;
@@ -270,22 +270,22 @@ class q extends a.Ay.Store {
     }
 }
 let X = new q(s.h, {
-    CONNECTION_OPEN: O,
-    OVERLAY_INITIALIZE: O,
+    CONNECTION_OPEN: R,
+    OVERLAY_INITIALIZE: R,
     THREAD_LIST_SYNC: function (e) {
         let { guildId: t } = e;
         return L(t);
     },
-    LOAD_THREADS_SUCCESS: O,
-    LOAD_ARCHIVED_THREADS_SUCCESS: O,
-    SEARCH_MESSAGES_SUCCESS: O,
-    MOD_VIEW_SEARCH_MESSAGES_SUCCESS: O,
+    LOAD_THREADS_SUCCESS: R,
+    LOAD_ARCHIVED_THREADS_SUCCESS: R,
+    SEARCH_MESSAGES_SUCCESS: R,
+    MOD_VIEW_SEARCH_MESSAGES_SUCCESS: R,
     GUILD_CREATE: function (e) {
         let { guild: t } = e;
         return L(t.id);
     },
-    GUILD_DELETE: O,
-    CURRENT_USER_UPDATE: O,
+    GUILD_DELETE: R,
+    CURRENT_USER_UPDATE: R,
     VOICE_CHANNEL_SELECT: function (e) {
         let { channelId: t } = e,
             n = d.A.getChannel(t);
@@ -315,7 +315,7 @@ let X = new q(s.h, {
                     return !1;
                 })(e.guild_id, e.parent_id)
             )
-                return void O();
+                return void R();
         return !1;
     },
     CHANNEL_DELETE: function (e) {

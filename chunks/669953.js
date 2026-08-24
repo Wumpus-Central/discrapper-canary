@@ -22,8 +22,8 @@ var i = n(435558),
     S = n(961973),
     N = n(487626),
     C = n(652215),
-    R = n(340837),
-    O = n(790782);
+    O = n(340837),
+    R = n(790782);
 function L(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
     if (_.A.isFullServerPreview(e)) return;
@@ -141,7 +141,7 @@ let y = {
                 application_connections_connected: P.connected,
                 application_connections_not_connected: P.notConnected,
             }),
-            (0, o.hK)(e, O.P.GUILD_ONBOARDING_QUESTION, m.default.fromTimestamp(Date.now())),
+            (0, o.hK)(e, R.P.GUILD_ONBOARDING_QUESTION, m.default.fromTimestamp(Date.now())),
             L(e, !0),
             _.A.isFullServerPreview(e))
         ) {
@@ -149,7 +149,7 @@ let y = {
             let t = I.default.getCurrentUser();
             if (null != t) {
                 let n = h.Ay.getMember(e, t.id)?.flags ?? 0;
-                (0, u.Z$)(e, { memberOptions: { flags: (0, a.lA)(n, R.D.COMPLETED_ONBOARDING, !0) } });
+                (0, u.Z$)(e, { memberOptions: { flags: (0, a.lA)(n, O.D.COMPLETED_ONBOARDING, !0) } });
             }
         }
     },
@@ -168,7 +168,7 @@ let y = {
         let t = I.default.getCurrentUser();
         if (null != t) {
             let n = h.Ay.getMember(e, t.id)?.flags ?? 0;
-            await (0, c.T)(e, { flags: (0, a.lA)(n, R.D.COMPLETED_ONBOARDING, !1) });
+            await (0, c.T)(e, { flags: (0, a.lA)(n, O.D.COMPLETED_ONBOARDING, !1) });
         }
     },
 };

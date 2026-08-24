@@ -6,7 +6,7 @@ n.d(t, {
     CE: () => eu,
     D0: () => S,
     Dm: () => H,
-    G0: () => O,
+    G0: () => R,
     HF: () => en,
     MG: () => Q,
     P_: () => F,
@@ -36,7 +36,7 @@ n.d(t, {
     tt: () => x,
     wo: () => q,
     x9: () => W,
-    xM: () => R,
+    xM: () => O,
     yt: () => M,
     zd: () => $,
 }),
@@ -65,7 +65,7 @@ let N = { nitro: "nitro", thirdparty: "xbox" };
 function C(e) {
     return null != e ? N[e] : null;
 }
-function R(e) {
+function O(e) {
     if (!c.Ay.canUseShopDiscounts(e)) return null;
     if (c.Ay.canUseCollectibles(e)) return "nitro";
     let t = (0, o.kQ)(e?.perks, s.bb.SHOP_DISCOUNTS);
@@ -75,7 +75,7 @@ function R(e) {
           ? "thirdparty"
           : null;
 }
-function O(e) {
+function R(e) {
     return e?.premiumType != null;
 }
 function L(e) {

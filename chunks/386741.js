@@ -94,13 +94,13 @@ function C() {
         h.Sb.INFREQUENT_USER_ACTION,
     );
 }
-function R(e) {
+function O(e) {
     let { context: t, userId: n, volume: i } = e;
     if (n === _.default.getId()) return;
     let r = c.default.getRemoteSessionId();
     null != r && N(r, n, t, { muted: E.Ay.isLocalMute(n, t), volume: i }), (0, I.gq)(t, n, { volume: i }), S();
 }
-function O(e) {
+function R(e) {
     let { context: t, userId: n } = e;
     if (n !== _.default.getId()) {
         var i;
@@ -127,8 +127,8 @@ function y(e) {
 class D extends o.A {
     actions = {
         POST_CONNECTION_OPEN: g,
-        AUDIO_SET_LOCAL_VOLUME: R,
-        AUDIO_TOGGLE_LOCAL_MUTE: O,
+        AUDIO_SET_LOCAL_VOLUME: O,
+        AUDIO_TOGGLE_LOCAL_MUTE: R,
         AUDIO_TOGGLE_LOCAL_SOUNDBOARD_MUTE: L,
         MEDIA_ENGINE_RESET_SETTINGS: y,
     };

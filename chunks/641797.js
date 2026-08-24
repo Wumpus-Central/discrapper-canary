@@ -46,8 +46,8 @@ var n = r(788409),
         strictNullHandling: !1,
     },
     h = {},
-    m = function e(t, r, i, a, s, u, f, p, m, v, y, g, b, w, _, S, E, x) {
-        for (var k, C, T = t, M = x, P = 0, A = !1; void 0 !== (M = M.get(h)) && !A; ) {
+    m = function e(t, r, i, a, s, u, f, p, m, v, y, g, b, w, _, S, x, E) {
+        for (var k, C, T = t, M = E, P = 0, A = !1; void 0 !== (M = M.get(h)) && !A; ) {
             var O = M.get(t);
             if (((P += 1), void 0 !== O))
                 if (O === P) throw RangeError("Cyclic object value");
@@ -66,7 +66,7 @@ var n = r(788409),
                     })),
             null === T)
         ) {
-            if (u) return m && !S ? m(r, d.encoder, E, "key", w) : r;
+            if (u) return m && !S ? m(r, d.encoder, x, "key", w) : r;
             T = "";
         }
         if (
@@ -78,7 +78,7 @@ var n = r(788409),
             o.isBuffer(T)
         )
             return m
-                ? [_(S ? r : m(r, d.encoder, E, "key", w)) + "=" + _(m(T, d.encoder, E, "value", w))]
+                ? [_(S ? r : m(r, d.encoder, x, "key", w)) + "=" + _(m(T, d.encoder, x, "value", w))]
                 : [_(r) + "=" + _(String(T))];
         var I = [];
         if (void 0 === T) return I;
@@ -98,10 +98,10 @@ var n = r(788409),
             if (!f || null !== j) {
                 var B = g && p ? String(N).replace(/\./g, "%2E") : String(N),
                     $ = l(T) ? ("function" == typeof i ? i(R, B) : R) : R + (g ? "." + B : "[" + B + "]");
-                x.set(t, P);
+                E.set(t, P);
                 var K = n();
-                K.set(h, x),
-                    c(I, e(j, $, i, a, s, u, f, p, "comma" === i && S && l(T) ? null : m, v, y, g, b, w, _, S, E, K));
+                K.set(h, E),
+                    c(I, e(j, $, i, a, s, u, f, p, "comma" === i && S && l(T) ? null : m, v, y, g, b, w, _, S, x, K));
             }
         }
         return I;

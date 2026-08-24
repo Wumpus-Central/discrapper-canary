@@ -22,16 +22,16 @@ var r = n(435558),
     S = n(206885),
     N = n(41984),
     C = n(439372),
-    R = n(19575);
-class O extends C.A {
+    O = n(19575);
+class R extends C.A {
     ownedLocks = new Set();
     acquireLock = (e) => {
         if (this.ownedLocks.has(e)) return !0;
         let t = `discord-overlay-global-owner-lock-${e}`;
-        return !1 !== R.Ay.AcquireGlobalLock(t) && (this.ownedLocks.add(e), !0);
+        return !1 !== O.Ay.AcquireGlobalLock(t) && (this.ownedLocks.add(e), !0);
     };
 }
-let L = new O();
+let L = new R();
 var y = n(871633),
     D = n(760751),
     v = n(189081),
@@ -135,10 +135,10 @@ function eN(e, t, n) {
 function eC(e) {
     return e;
 }
-function eR(e, t) {
+function eO(e, t) {
     null != t.lastLaunched ? (e.lastLaunched = t.lastLaunched) : null != t.start && (e.lastLaunched = t.start);
 }
-function eO(e) {
+function eR(e) {
     let t = eS.get(e.name?.toLowerCase() ?? "");
     if (null != t) return t;
     let n = null != e.exeName && "" !== e.exeName ? e.exeName : (e.exePath.split("/").pop()?.split("\\").pop() ?? ""),
@@ -155,7 +155,7 @@ function eO(e) {
     return null;
 }
 function eL(e) {
-    let t = eO(e);
+    let t = eR(e);
     return t?.streamerTool === !0;
 }
 function ey() {
@@ -341,7 +341,7 @@ function eB() {
 function eH() {
     if (!__OVERLAY__ && x.isPlatformEmbedded) {
         let e = [...X, ...a().values(eo.gameOverrides)];
-        R.Ay.setGameCandidateOverrides(e);
+        O.Ay.setGameCandidateOverrides(e);
     }
 }
 function ej(e) {
@@ -375,7 +375,7 @@ function ej(e) {
                                     ((eo.enableDetection[i] = l), delete eo.enableDetection[n]),
                                 (t.exePath = e.exePath);
                         }
-                        return eR(t, e), !0;
+                        return eO(t, e), !0;
                     }
                     return !1;
                 })
@@ -392,7 +392,7 @@ function ej(e) {
                     e.block && (t.block = !0),
                     null != e.distributor && (t.distributor = e.distributor),
                     null != e.gameName && (t.gameName = e.gameName),
-                    eR(t, e),
+                    eO(t, e),
                     t),
                 );
             }
@@ -451,7 +451,7 @@ if (W) {
                     (null != e.executables && e.executables.length > 0) ||
                     (null != e.thirdPartySkus && e.thirdPartySkus.length > 0),
             )),
-            R.Ay.setObservedGamesCallback(
+            O.Ay.setObservedGamesCallback(
                 e,
                 !0,
                 (e) => {
@@ -470,7 +470,7 @@ if (W) {
                             i.isLauncher && null != i.id && (r[i.id] = i),
                             (i.windowHandle = (function (e, t) {
                                 if (void 0 === t) {
-                                    let t = R.Ay.getDiscordUtils();
+                                    let t = O.Ay.getDiscordUtils();
                                     if (null != t && null != t.getWindowHandleFromPid) {
                                         let n = t.getWindowHandleFromPid(e);
                                         return null != n && "0" !== n ? n : null;
@@ -479,7 +479,7 @@ if (W) {
                                 }
                                 return "0" === t ? null : t;
                             })(i.pid, i.windowHandle));
-                        let e = eO(i);
+                        let e = eR(i);
                         if (null != e) {
                             n.push(i),
                                 s.push({
@@ -530,7 +530,7 @@ if (W) {
                 b.default.getCurrentUser()?.id,
             ),
             eH(),
-            R.Ay.setGameDetectionCallback((e, t) => {
+            O.Ay.setGameDetectionCallback((e, t) => {
                 if (e.length === t.length)
                     for (let [n, i] of e.entries()) {
                         let e = t[n],
@@ -565,7 +565,7 @@ if (W) {
                         });
                     }
             }),
-            R.Ay.setGameDetectionErrorCallback((e, t, n, i, r) => {});
+            O.Ay.setGameDetectionErrorCallback((e, t, n, i, r) => {});
     };
     ed = function () {
         return (
@@ -856,7 +856,7 @@ let e$ = new eK(u.h, {
         NON_GAMES_DATABASE_FETCH_FAIL: ed,
         GAME_LAUNCH_SUCCESS: function (e) {
             if (__OVERLAY__ || !x.isPlatformEmbedded) return;
-            let t = R.Ay.getDiscordUtils().notifyGameLaunched;
+            let t = O.Ay.getDiscordUtils().notifyGameLaunched;
             if (null == t) return;
             let n = D.A.getDetectableGame(e.applicationId);
             null != n && t(n.id, n.name, e.pids ?? []);

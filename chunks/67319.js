@@ -467,7 +467,7 @@ function e3(e) {
         ],
     });
 }
-function e7(e) {
+function e4(e) {
     let {
             toggleRequestToSpeakSidebar: t,
             showRequestToSpeakSidebar: n,
@@ -487,12 +487,12 @@ function e7(e) {
         ...o,
     });
 }
-var e4 = n(96566);
+var e7 = n(96566);
 function e8(e) {
     let t = (0, o.bG)([m.A], () => m.A.getStageVideoLimitBoostUpsellDismissed(e.id), [e.id]),
         n = (0, V.uy)(e.id),
         i = (0, V.zy)(e.id, z.ip.AUDIENCE),
-        l = (0, e4.qT)(e.id),
+        l = (0, e7.qT)(e.id),
         s = (0, o.bG)([U.A], () => U.A.getGuild(e.guild_id), [e.guild_id]),
         a = (0, o.bG)([w.A], () => w.A.can(e0.QY, e), [e]),
         r = s?.maxStageVideoChannelUsers ?? 0,
@@ -514,7 +514,7 @@ function tn(e) {
             !l && d
                 ? (0, i.jsx)("div", {
                       className: a()(tt.x6, { [tt.vc]: c }),
-                      children: (0, i.jsx)(e7, {
+                      children: (0, i.jsx)(e4, {
                           toggleRequestToSpeakSidebar: function () {
                               c && eY.A.updateChatOpen(t.id, !1), (0, j.X)(r, j.O.OPEN_REQUEST_TO_SPEAK_SIDEBAR), n();
                           },
@@ -1077,8 +1077,8 @@ let tQ = l.memo(function (e) {
                                     n.e("245996"),
                                     n.e("529422"),
                                     n.e("58315"),
-                                    n.e("766692"),
-                                ]).then(n.bind(n, 796175));
+                                    n.e("870553"),
+                                ]).then(n.bind(n, 744960));
                                 return (n) =>
                                     (0, i.jsx)(t, {
                                         ...n,
@@ -1296,8 +1296,8 @@ function t3(e) {
         renderMoreUsers: (e, t, n) => (0, i.jsx)("div", { className: a()(t5.$U, t), children: e }, n),
     });
 }
-var t7 = n(784269);
-let t4 = l.memo(function (e) {
+var t4 = n(784269);
+let t7 = l.memo(function (e) {
     let {
         label: t,
         participantCount: n,
@@ -1310,21 +1310,21 @@ let t4 = l.memo(function (e) {
     } = e;
     return (0, i.jsxs)(W.D, {
         onClick: l,
-        className: a()(t7.kL, s),
+        className: a()(t4.kL, s),
         children: [
             null == o
-                ? (0, i.jsx)(eF.n, { size: "custom", color: "currentColor", width: 20, height: 20, className: t7.Vo })
+                ? (0, i.jsx)(eF.n, { size: "custom", color: "currentColor", width: 20, height: 20, className: t4.Vo })
                 : (0, i.jsx)(eH.MicrophoneIcon, {
                       size: "custom",
                       color: "currentColor",
                       width: 20,
                       height: 20,
-                      className: t7.Vo,
+                      className: t4.Vo,
                   }),
             (0, i.jsxs)(Z.E, {
                 color: "text-strong",
                 variant: "text-md/semibold",
-                className: t7.Qq,
+                className: t4.Qq,
                 children: [t, " \u2014 ", n],
             }),
             r &&
@@ -1339,7 +1339,7 @@ let t4 = l.memo(function (e) {
                 color: "currentColor",
                 width: 20,
                 height: 20,
-                className: a()(t7.mw, { [t7.VU]: r }),
+                className: a()(t4.mw, { [t4.VU]: r }),
             }),
         ],
     });
@@ -1439,7 +1439,7 @@ let nt = (0, ts.A)(function (e) {
                 ? 0 === p
                     ? null
                     : (0, i.jsx)(
-                          t4,
+                          t7,
                           {
                               participantCount: p,
                               label: ep.intl.string(ep.t.CduOkx),
@@ -1456,7 +1456,7 @@ let nt = (0, ts.A)(function (e) {
                   ? 0 === x
                       ? null
                       : (0, i.jsx)(
-                            t4,
+                            t7,
                             {
                                 participantCount: x,
                                 label: ep.intl.string(ep.t["3foUu5"]),
@@ -1825,7 +1825,7 @@ let nJ = l.memo(function (e) {
         E = (0, o.bG)([tG.Ay], () => (0, nf.A)(tG.Ay)),
         C = (0, o.bG)([M.Ay], () => M.Ay.getVoiceChannelId() === t.id, [t.id]),
         j = (0, o.bG)([m.A], () => m.A.getStreamParticipants(t.id)[0], [t.id]),
-        N = (0, e4.qT)(t.id),
+        N = (0, e7.qT)(t.id),
         S = p > 0,
         T = (x && !N) || (null != j && j.user.id !== f?.id),
         _ = (0, tp.s)("AudioDeviceMenu", n, { entrypoint: tg.GK.CARET }),
@@ -2026,7 +2026,7 @@ function n2(e) {
 var n5 = n(104171),
     n6 = n(81466),
     n3 = n(823508);
-function n7(e) {
+function n4(e) {
     let { className: t, guildId: l } = e,
         s = (0, n3.A)();
     return (0, i.jsx)(nS.A, {
@@ -2071,13 +2071,13 @@ function n7(e) {
         },
     });
 }
-var n4 = n(269341);
+var n7 = n(269341);
 function n8(e) {
     let { onClick: t, className: n } = e,
         l = eH.MicrophoneIcon;
     return (0, i.jsx)(nS.A, {
-        iconContainerClassName: a()({ [n4.q8]: !1 }),
-        icon: (0, i.jsx)(l, { size: "custom", color: "currentColor", className: n4.Pz, height: 20, width: 20 }),
+        iconContainerClassName: a()({ [n7.q8]: !1 }),
+        icon: (0, i.jsx)(l, { size: "custom", color: "currentColor", className: n7.Pz, height: 20, width: 20 }),
         color: eK.A.unsafe_rawColors.PRIMARY_700.css,
         title: ep.intl.string(ep.t["jMLfp/"]),
         description: ep.intl.string(ep.t["Vd/rEX"]),
@@ -2106,9 +2106,9 @@ function ie(e) {
             return n;
         })(t.id);
     return (0, i.jsxs)("div", {
-        className: n4.P1,
+        className: n7.P1,
         children: [
-            (0, i.jsx)(n5.Ay, { className: n4.Ip, guildId: t.guild_id, users: l, size: n5.DN.SIZE_16 }),
+            (0, i.jsx)(n5.Ay, { className: n7.Ip, guildId: t.guild_id, users: l, size: n5.DN.SIZE_16 }),
             (0, i.jsx)(Z.E, {
                 variant: "text-sm/normal",
                 color: "text-default",
@@ -2139,33 +2139,33 @@ function it(e) {
         d = (0, nq.A)(t.id),
         u = l.useRef(null);
     return (0, i.jsxs)("div", {
-        className: n4.kL,
+        className: n7.kL,
         ref: u,
         children: [
             (0, i.jsx)(eD.A, { eventTargetRef: u }),
             (0, i.jsxs)("div", {
-                className: n4.Qs,
+                className: n7.Qs,
                 children: [
                     (0, i.jsxs)("div", {
-                        className: n4.N1,
+                        className: n7.N1,
                         children: [
                             (0, i.jsx)(eR.D, {
-                                className: n4.__invalid_title,
+                                className: n7.__invalid_title,
                                 variant: "heading-xxl/normal",
                                 children: ep.intl.string(ep.t.QGnDLs),
                             }),
                             (0, i.jsx)(Z.E, {
                                 tag: "div",
-                                className: n4.VA,
+                                className: n7.VA,
                                 variant: "heading-lg/normal",
                                 children: ep.intl.string(ep.t.djfK36),
                             }),
                         ],
                     }),
                     d ? null : (0, i.jsx)(nC.A, { channelId: t.id, showDismiss: !1 }),
-                    s ? (0, i.jsx)(nT, { className: n4.fN, channel: t }) : null,
-                    c ? (0, i.jsx)(n7, { className: n4.fN, guildId: r }) : null,
-                    s ? (0, i.jsx)(n8, { className: a()({ [n4.fN]: !0 }), onClick: n }) : null,
+                    s ? (0, i.jsx)(nT, { className: n7.fN, channel: t }) : null,
+                    c ? (0, i.jsx)(n4, { className: n7.fN, guildId: r }) : null,
+                    s ? (0, i.jsx)(n8, { className: a()({ [n7.fN]: !0 }), onClick: n }) : null,
                     (0, i.jsx)(ie, { channel: t }),
                 ],
             }),

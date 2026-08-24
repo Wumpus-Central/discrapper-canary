@@ -5,8 +5,8 @@ var i = l(477900),
     a = l.n(n),
     r = l(834730),
     o = l(872188),
-    d = l(450284);
-let c = {
+    c = l(450284);
+let d = {
     title: "Server Hub Publishing",
     stories: [
         {
@@ -15,13 +15,13 @@ let c = {
             docs: "The admin-only bar shown while a hub is unpublished; members can't reach a draft hub at all. Publishing is what reveals the tab to the rest of the server, and it unmounts the notice \u2014 the success case swaps in a placeholder because the real page stops rendering it. Success also fires a screen-reader announcement, since a bar disappearing is otherwise silent. No control triggers a real request.",
             component: function (e) {
                 let { width: t, outcome: l } = e,
-                    [n, c] = s.useState(!1),
+                    [n, d] = s.useState(!1),
                     [u, h] = s.useState(l);
-                u !== l && (h(l), c(!1));
+                u !== l && (h(l), d(!1));
                 let p = s.useCallback(() => {
                     switch (l) {
                         case "success":
-                            return c(!0), Promise.resolve();
+                            return d(!0), Promise.resolve();
                         case "failure":
                             return Promise.reject(Error("story"));
                         case "pending":
@@ -29,7 +29,7 @@ let c = {
                     }
                 }, [l]);
                 return (0, i.jsx)("div", {
-                    className: a()(d.frame, d[t]),
+                    className: a()(c.frame, c[t]),
                     children: n
                         ? (0, i.jsx)(r.E, {
                               variant: "text-sm/normal",
@@ -79,8 +79,8 @@ function m(e, t, l, i) {
         requires_hydration: t === h.a.LEADERBOARD,
     };
 }
-var y = l(81253);
-let b = [
+var b = l(81253);
+let y = [
         m("left-2", h.a.LEADERBOARD, 0, 1, { heading: "Top chatters this week" }),
         m("right-1", h.a.LEADERBOARD, 1, 0, { heading: "Top boosters" }),
         m("left-1", h.a.IMAGE_TEXT, 0, 0, {
@@ -91,7 +91,7 @@ let b = [
         }),
         m("right-2", h.a.IMAGE_TEXT, 1, 1, { title: "Events", body: "Game night every Friday." }),
     ],
-    f = b
+    f = y
         .filter((e) => {
             let { requires_hydration: t } = e;
             return t;
@@ -150,8 +150,8 @@ let b = [
                             }, [t, n]),
                             t);
                     return (0, i.jsx)("div", {
-                        className: a()(y.frame, y[l]),
-                        children: (0, i.jsx)(p.A, { guildId: r, widgets: b }),
+                        className: a()(b.frame, b[l]),
+                        children: (0, i.jsx)(p.A, { guildId: r, widgets: y }),
                     });
                 },
                 controls: {
@@ -184,17 +184,17 @@ let b = [
     };
 var E = l(317574),
     A = l(546184);
-function x(e) {
+function k(e) {
     let { label: t, className: l, children: s } = e;
     return (0, i.jsxs)("div", {
         className: `${A.Gt} ${l}`,
         children: [(0, i.jsx)(r.E, { variant: "text-xs/medium", color: "text-muted", children: t }), s],
     });
 }
-function S(e) {
+function x(e) {
     let { mode: t, hydration: l, type: n, initialConfig: a, successData: r } = e,
-        [o, d] = s.useState(a),
-        c = (0, i.jsx)(E.P, {
+        [o, c] = s.useState(a),
+        d = (0, i.jsx)(E.P, {
             widget: { id: "1", type: n, config: o },
             guildSpaceMode: t,
             hydration: (function (e, t) {
@@ -208,17 +208,17 @@ function S(e) {
                 }
             })(l, r),
             onRemove: () => {},
-            onCommitConfig: d,
+            onCommitConfig: c,
         });
     return (0, i.jsxs)("div", {
         className: A.Zp,
         children: [
-            (0, i.jsx)(x, { label: "Narrow column (380px)", className: A.sc, children: c }),
-            (0, i.jsx)(x, { label: "Wide column (685px)", className: A.U, children: c }),
+            (0, i.jsx)(k, { label: "Narrow column (380px)", className: A.sc, children: d }),
+            (0, i.jsx)(k, { label: "Wide column (685px)", className: A.U, children: d }),
         ],
     });
 }
-let k = {
+let S = {
         text: "Drop in, say hi, and check the pinned posts for the rules and event schedule.",
         image_hash: "some_hash",
     },
@@ -236,7 +236,7 @@ let k = {
         name: "Server Hub",
         groups: [
             w,
-            c,
+            d,
             {
                 title: "Server Hub Widget Framework",
                 stories: [
@@ -245,11 +245,11 @@ let k = {
                         id: "guild-space-widget-slot-image-text",
                         docs: "ImageText reference widget (no hydration) across view/edit and each mock hydration state. In edit mode the pencil opens the framework-owned Edit modal; Save commits config through onCommitConfig, Cancel/close discards.",
                         component: function (e) {
-                            return (0, i.jsx)(S, {
+                            return (0, i.jsx)(x, {
                                 ...e,
                                 type: h.a.IMAGE_TEXT,
                                 title: "Image + Text",
-                                initialConfig: k,
+                                initialConfig: S,
                                 successData: void 0,
                             });
                         },
@@ -282,7 +282,7 @@ let k = {
                         id: "guild-space-widget-slot-leaderboard",
                         docs: "Leaderboard reference widget (hydrated) rendering content from the mock data prop on success, and the widget-owned loading/error states otherwise. The pencil opens the framework-owned Edit modal for its config.",
                         component: function (e) {
-                            return (0, i.jsx)(S, {
+                            return (0, i.jsx)(x, {
                                 ...e,
                                 type: h.a.LEADERBOARD,
                                 title: "Leaderboard",

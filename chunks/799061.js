@@ -77,7 +77,7 @@ async function C(e) {
         !0
     );
 }
-async function R(e) {
+async function O(e) {
     let { application: t, applicationId: i, channel: r, user: a, onConfirmActivityLaunchChecksAlertOpen: s } = e;
     if (null == a.nsfwAllowed) {
         let e = t ?? (await N({ applicationId: i, channelId: r?.id, guildId: r?.getGuildId() ?? void 0 }));
@@ -111,7 +111,7 @@ async function R(e) {
     }
     return !0;
 }
-async function O(e) {
+async function R(e) {
     let { application: t, applicationId: i, channel: r, onConfirmActivityLaunchChecksAlertOpen: a } = e,
         l = t ?? (await N({ applicationId: i, channelId: r?.id, guildId: r?.getGuildId() ?? void 0 }));
     return (
@@ -137,7 +137,7 @@ async function L(e) {
             shouldClosePopoutOnLeaveCurrentEmbeddedApplication: e.shouldClosePopoutOnLeaveCurrentEmbeddedApplication,
             onConfirmActivityLaunchChecksAlertOpen: e.onConfirmActivityLaunchChecksAlertOpen,
         })) &&
-        !!(await R(e)) &&
-        !!(await O(e))
+        !!(await O(e)) &&
+        !!(await R(e))
     );
 }

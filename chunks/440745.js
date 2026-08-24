@@ -25,8 +25,8 @@
             w,
             _,
             S,
-            E,
             x,
+            E,
             k,
             C,
             T,
@@ -97,19 +97,19 @@
                             (h = N(n.v)),
                             (_ = n.h),
                             (S = d),
-                            (E = h),
+                            (x = h),
                             (_ = 6 * D(_, 360)),
                             (S = D(S, 100)),
-                            (E = D(E, 100)),
-                            (x = t.floor(_)),
-                            (k = _ - x),
-                            (C = E * (1 - S)),
-                            (T = E * (1 - k * S)),
-                            (M = E * (1 - (1 - k) * S)),
+                            (x = D(x, 100)),
+                            (E = t.floor(_)),
+                            (k = _ - E),
+                            (C = x * (1 - S)),
+                            (T = x * (1 - k * S)),
+                            (M = x * (1 - (1 - k) * S)),
                             (o = {
-                                r: 255 * [E, T, C, C, M, E][(P = x % 6)],
-                                g: 255 * [M, E, E, T, C, C][P],
-                                b: 255 * [C, C, M, E, E, T][P],
+                                r: 255 * [x, T, C, C, M, x][(P = E % 6)],
+                                g: 255 * [M, x, x, T, C, C][P],
+                                b: 255 * [C, C, M, x, x, T][P],
                             }),
                             (v = !0),
                             (y = "hsv"))
@@ -254,12 +254,12 @@
         var r = p(e).toHsl();
         return (r.l -= t / 100), (r.l = L(r.l)), p(r);
     }
-    function E(e, t) {
+    function x(e, t) {
         var r = p(e).toHsl(),
             n = (r.h + t) % 360;
         return (r.h = n < 0 ? 360 + n : n), p(r);
     }
-    function x(e) {
+    function E(e) {
         var t = p(e).toHsl();
         return (t.h = (t.h + 180) % 360), p(t);
     }
@@ -488,7 +488,7 @@
             return this._applyModification(b, arguments);
         },
         spin: function () {
-            return this._applyModification(E, arguments);
+            return this._applyModification(x, arguments);
         },
         _applyCombination: function (e, t) {
             return e.apply(null, [this].concat([].slice.call(t)));
@@ -497,7 +497,7 @@
             return this._applyCombination(M, arguments);
         },
         complement: function () {
-            return this._applyCombination(x, arguments);
+            return this._applyCombination(E, arguments);
         },
         monochromatic: function () {
             return this._applyCombination(P, arguments);

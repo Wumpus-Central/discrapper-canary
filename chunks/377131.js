@@ -41,8 +41,8 @@ function _(e) {
             keyboardDelegate: p,
             ref: _,
             autoFocus: S = !1,
-            shouldFocusWrap: E = !1,
-            disallowEmptySelection: x = !1,
+            shouldFocusWrap: x = !1,
+            disallowEmptySelection: E = !1,
             disallowSelectAll: k = !1,
             escapeKeyBehavior: C = "clearSelection",
             selectOnFocus: T = "replace" === r.selectionBehavior,
@@ -203,7 +203,7 @@ function _(e) {
                                     : null == (i = p.getFirstKey)
                                       ? void 0
                                       : i.call(p);
-                            null == t && E && (t = null == (l = p.getFirstKey) ? void 0 : l.call(p, r.focusedKey)),
+                            null == t && x && (t = null == (l = p.getFirstKey) ? void 0 : l.call(p, r.focusedKey)),
                                 null != t && (e.preventDefault(), S(t));
                         }
                         break;
@@ -217,7 +217,7 @@ function _(e) {
                                     : null == (c = p.getLastKey)
                                       ? void 0
                                       : c.call(p);
-                            null == t && E && (t = null == (f = p.getLastKey) ? void 0 : f.call(p, r.focusedKey)),
+                            null == t && x && (t = null == (f = p.getLastKey) ? void 0 : f.call(p, r.focusedKey)),
                                 null != t && (e.preventDefault(), S(t));
                         }
                         break;
@@ -230,7 +230,7 @@ function _(e) {
                                         : d.call(p, r.focusedKey)
                                     : null;
                             null == t &&
-                                E &&
+                                x &&
                                 (t =
                                     "rtl" === L
                                         ? null == (h = p.getFirstKey)
@@ -251,7 +251,7 @@ function _(e) {
                                         : g.call(p, r.focusedKey)
                                     : null;
                             null == t &&
-                                E &&
+                                x &&
                                 (t =
                                     "rtl" === L
                                         ? null == (b = p.getLastKey)
@@ -307,7 +307,7 @@ function _(e) {
                         break;
                     case "Escape":
                         "clearSelection" !== C ||
-                            x ||
+                            E ||
                             0 === r.selectedKeys.size ||
                             (e.stopPropagation(), e.preventDefault(), r.clearSelection());
                         break;

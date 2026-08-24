@@ -167,7 +167,7 @@ var n =
             }
         return !1;
     },
-    E = function (e, t) {
+    x = function (e, t) {
         return !(
             t.disabled ||
             s(t) ||
@@ -180,8 +180,8 @@ var n =
             S(t)
         );
     },
-    x = function (e, t) {
-        return !(g(t) || 0 > p(t)) && !!E(e, t);
+    E = function (e, t) {
+        return !(g(t) || 0 > p(t)) && !!x(e, t);
     },
     k = function (e) {
         var t = parseInt(e.getAttribute("tabindex"), 10);
@@ -214,20 +214,20 @@ var n =
         return C(
             (t = t || {}).getShadowRoot
                 ? c([e], t.includeContainer, {
-                      filter: x.bind(null, t),
+                      filter: E.bind(null, t),
                       flatten: !1,
                       getShadowRoot: t.getShadowRoot,
                       shadowRootFilter: k,
                   })
-                : u(e, t.includeContainer, x.bind(null, t)),
+                : u(e, t.includeContainer, E.bind(null, t)),
         );
     },
     M = function (e, t) {
         return (t = t || {}).getShadowRoot
-            ? c([e], t.includeContainer, { filter: E.bind(null, t), flatten: !0, getShadowRoot: t.getShadowRoot })
-            : u(e, t.includeContainer, E.bind(null, t));
+            ? c([e], t.includeContainer, { filter: x.bind(null, t), flatten: !0, getShadowRoot: t.getShadowRoot })
+            : u(e, t.includeContainer, x.bind(null, t));
     },
     P = function (e, t) {
         if (((t = t || {}), !e)) throw Error("No node provided");
-        return !1 !== i.call(e, n) && x(t, e);
+        return !1 !== i.call(e, n) && E(t, e);
     };

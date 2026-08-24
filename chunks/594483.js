@@ -5,8 +5,8 @@ var l = n(691540),
     s = n(976860),
     r = n(948230),
     o = n(18739),
-    c = n(652215),
-    u = n(746080),
+    u = n(652215),
+    c = n(746080),
     d = n(295813),
     h = n(375708);
 let m = " (Fork)";
@@ -22,5 +22,5 @@ async function f(e, t) {
         (0, l.P0)((0, a.o)(h.intl.string(e), i.Ck.FAILURE));
         return;
     }
-    (0, o.Hc)(n), (0, o.dv)(n, h.intl.string(d.default.gsSrw3)), (0, s.pX)(c.BVt.CHANNEL(t, u.VV.VIBEGRATIONS, n));
+    (0, o.Hc)(n), (0, o.dv)(n, h.intl.string(d.default.gsSrw3)), (0, s.pX)(u.BVt.CHANNEL(t, c.VV.VIBEGRATIONS, n));
 }

@@ -64,8 +64,8 @@ function A(e) {
             icon: S = null,
             interactiveLabel: N = !1,
             auxiliaryContentPosition: C = "under-control",
-            trailingAuxiliaryContent: R,
-            ref: O,
+            trailingAuxiliaryContent: O,
+            ref: R,
         } = e,
         L = (function (e) {
             let { id: t, label: n, errorMessage: i, helperText: a, successMessage: s, description: l } = e,
@@ -98,7 +98,7 @@ function A(e) {
                 }),
                 [f, u, t, _, g, i, h, T, E, p, A, o, I, d, c],
             );
-        })(e, { hasTrailingAuxiliaryContent: null != R }),
+        })(e, { hasTrailingAuxiliaryContent: null != O }),
         { labelId: y, controlId: D, errorMessageId: v, describedById: b, helperTextId: M, descriptionId: P } = L,
         U = m?.horizontalControlColumnWidth,
         w = "group" === p || "radiogroup" === p,
@@ -140,7 +140,7 @@ function A(e) {
             successMessage: f,
             errorMessage: I,
             helperText: E,
-            trailing: R,
+            trailing: O,
             helperTextId: M,
             errorMessageId: v,
         });
@@ -148,7 +148,7 @@ function A(e) {
         value: L,
         children: (0, i.jsxs)(G, {
             role: p,
-            ref: O,
+            ref: R,
             className: _.kL,
             "data-layout": T,
             "data-has-description": F || void 0,

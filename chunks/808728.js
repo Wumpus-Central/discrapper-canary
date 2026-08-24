@@ -22,8 +22,8 @@ var i = n(435558),
     S = n(652215);
 let N = "SELECTABLE",
     C = "VOCAL",
-    R = null,
-    O = {},
+    O = null,
+    R = {},
     L = {},
     y = {},
     D = null,
@@ -44,7 +44,7 @@ function G(e, t) {
     return n - i;
 }
 function x() {
-    (O = {}), (v = {}), (L = {}), (y = {}), null != R && k(R);
+    (R = {}), (v = {}), (L = {}), (y = {}), null != O && k(O);
 }
 function k(e) {
     var t, n;
@@ -52,7 +52,7 @@ function k(e) {
         a,
         s = w(e);
     return (
-        (O[e] = s),
+        (R[e] = s),
         (v[e] = []),
         !(function (e) {
             let { id: t } = e,
@@ -106,7 +106,7 @@ function k(e) {
         !(function (e, t) {
             let n = p.A.getGuild(t);
             if (null != n && H(e, n)) return !0;
-            let i = O[t];
+            let i = R[t];
             null == i && (i = k(t));
             let { [N]: r, [C]: a } = i;
             for (let { channel: t } of r) if (H(e, t)) return !0;
@@ -123,18 +123,18 @@ function F(e) {
         guild: { id: t },
     } = e;
     if (null == t) return !1;
-    (O[t] = void 0), R === t && k(t);
+    (R[t] = void 0), O === t && k(t);
 }
 function V(e) {
     let {
         channel: { guild_id: t },
     } = e;
     if (null == t) return !1;
-    (O[t] = void 0), t === R && k(t);
+    (R[t] = void 0), t === O && k(t);
 }
 function B(e) {
     let { guildId: t } = e;
-    (O[t] = void 0), t === R && k(t);
+    (R[t] = void 0), t === O && k(t);
 }
 function H(e, t) {
     return a.X8(A.cc({ user: e, context: t, checkElevated: !1 }), S.Lti);
@@ -142,7 +142,7 @@ function H(e, t) {
 function j(e, t) {
     D = t;
     let n = e?.getGuildId() ?? null;
-    return null != n && ((O[n] = void 0), n === R && k(n), !0);
+    return null != n && ((R[n] = void 0), n === O && k(n), !0);
 }
 function W() {
     k(S.YYv);
@@ -153,11 +153,11 @@ class Y extends s.Ay.Store {
         this.waitFor(h.default, I.A, c.A, o.A, f.Ay, p.A, T.A, g.default), this.syncWith([c.A], W);
     }
     getAllGuilds() {
-        return O;
+        return R;
     }
     getChannels(e) {
         let t;
-        return null != e ? (null == (t = O[e]) && (t = k(e)), t) : M;
+        return null != e ? (null == (t = R[e]) && (t = k(e)), t) : M;
     }
     getFirstChannelOfType(e, t, n) {
         let i = this.getChannels(e)[n].find(t);
@@ -220,7 +220,7 @@ let K = new Y(l.h, {
     BACKGROUND_SYNC: x,
     CHANNEL_SELECT: function (e) {
         let { guildId: t } = e;
-        if (((R = t ?? null), null == t || null != O[t])) return !1;
+        if (((O = t ?? null), null == t || null != R[t])) return !1;
         k(t);
     },
     CONNECTION_OPEN: x,
@@ -232,12 +232,12 @@ let K = new Y(l.h, {
         let {
             guild: { id: t },
         } = e;
-        return delete O[t], delete L[t], delete y[t], delete v[t], !0;
+        return delete R[t], delete L[t], delete y[t], delete v[t], !0;
     },
     GUILD_MEMBER_UPDATE: function (e) {
         let { guildId: t, user: n } = e;
         if (h.default.getId() !== n.id) return !1;
-        (O[t] = void 0), t === R && k(t);
+        (R[t] = void 0), t === O && k(t);
     },
     CHANNEL_CREATE: V,
     CHANNEL_DELETE: V,
@@ -246,7 +246,7 @@ let K = new Y(l.h, {
             n = !1;
         for (let e of t) {
             let { guild_id: t } = e;
-            null != t && ((O[t] = void 0), (n = !0), R === t && k(t));
+            null != t && ((R[t] = void 0), (n = !0), O === t && k(t));
         }
         return n;
     },

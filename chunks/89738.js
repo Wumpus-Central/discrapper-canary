@@ -103,7 +103,7 @@
             }
             return b(p);
         }
-        function E(e) {
+        function x(e) {
             var t,
                 r,
                 n,
@@ -142,10 +142,10 @@
                 version: "1.4.1",
                 ucs2: { decode: g, encode: b },
                 decode: S,
-                encode: E,
+                encode: x,
                 toASCII: function (e) {
                     return y(e, function (e) {
-                        return c.test(e) ? "xn--" + E(e) : e;
+                        return c.test(e) ? "xn--" + x(e) : e;
                     });
                 },
                 toUnicode: function (e) {

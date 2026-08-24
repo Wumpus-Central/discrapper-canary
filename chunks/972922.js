@@ -56,12 +56,12 @@ function s(e, t) {
             preventFocusOnPress: h,
             ref: t,
         }),
-        { focusableProps: E } = (0, a.Wc)(e, t);
-    m && (E.tabIndex = l ? -1 : E.tabIndex);
-    let x = (0, n.v)(E, _, (0, o.$)(e, { labelable: !0 }));
+        { focusableProps: x } = (0, a.Wc)(e, t);
+    m && (x.tabIndex = l ? -1 : x.tabIndex);
+    let E = (0, n.v)(x, _, (0, o.$)(e, { labelable: !0 }));
     return {
         isPressed: S,
-        buttonProps: (0, n.v)(r, x, {
+        buttonProps: (0, n.v)(r, E, {
             "aria-haspopup": e["aria-haspopup"],
             "aria-expanded": e["aria-expanded"],
             "aria-controls": e["aria-controls"],

@@ -13,7 +13,7 @@ var u = n(477900),
     v = n(661531),
     S = n(695366),
     y = n(834730),
-    f = n(892547),
+    f = n(683438),
     E = n(396478),
     _ = n(452027),
     C = n(150934),
@@ -388,8 +388,8 @@ function e1(e) {
 }
 var e2 = n(486020),
     e4 = n(240248),
-    e7 = n(427262),
-    e3 = n(806931),
+    e3 = n(427262),
+    e7 = n(806931),
     e8 = n(87617);
 function e6(e, t) {
     if (null != e) return { suggestionData: Y.getSelectedInviteMetadata(e), source: t };
@@ -447,7 +447,7 @@ let e5 = d.memo(
             { voiceChannel: j } = (0, eq.Ay)({ userId: n?.id }),
             R = (0, et.Ay)(j),
             w = (0, x.bG)([ez.A], () => (null != c && null != n ? ez.A.getParticipant(c.id, n.id) : null)),
-            G = o && null != w && w.type === e3.lp.USER && w.ringing,
+            G = o && null != w && w.type === e7.lp.USER && w.ringing,
             U = (0, eP.S3)(F.clD.ONLINE),
             V = d.useCallback(() => {
                 null != l &&
@@ -480,7 +480,7 @@ let e5 = d.memo(
                               },
                           )));
             }, [l, i, n, a, s, r]),
-            O = e7.Ay.getName(n),
+            O = e3.Ay.getName(n),
             D = null != n ? P.A.getNickname(n.id) : null,
             L = null != i ? (0, et.m1)(i, eA.default, P.A) : null,
             k = null != n ? n.getAvatarURL(i?.guild_id, 32) : null,
@@ -495,7 +495,7 @@ let e5 = d.memo(
             W = null != _ && null == _.icon ? (0, e4.oN)(_.name) : null,
             z = null != q && null != Q;
         null != n && (t = D ?? O);
-        let Y = e7.Ay.getUserTag(n, { decoration: "never" }),
+        let Y = e3.Ay.getUserTag(n, { decoration: "never" }),
             $ = null != t || null != i,
             J = (0, u.jsx)(eB.$, {
                 id: S,

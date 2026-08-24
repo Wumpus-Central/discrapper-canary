@@ -25,8 +25,8 @@ function d(e) {
             setIsOpen: S,
             refs: N,
             floatingStyles: C,
-            getFloatingProps: R,
-            getReferenceProps: O,
+            getFloatingProps: O,
+            getReferenceProps: R,
             transitionStyles: L,
         } = (0, r.G)();
     return (0, i.jsxs)(l.iS, {
@@ -45,7 +45,7 @@ function d(e) {
                 ref: N.setReference,
                 placeholder: p,
                 ...u,
-                ...O(),
+                ...R(),
                 onKeyDown: h,
                 onBlur: f,
                 onQueryChange: A,
@@ -56,7 +56,7 @@ function d(e) {
                     ref: N.setFloating,
                     className: o.S_,
                     style: { ...C, ...L },
-                    ...R(),
+                    ...O(),
                     children: (0, i.jsx)(l.X2, {
                         renderListItem: (e) => (0, i.jsx)(a.c, { ...e }),
                         maxVisibleItems: d,

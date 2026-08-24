@@ -119,12 +119,12 @@ var u = (function () {
             d = r ? 0 : b(t.paddingLeft),
             h = r ? 0 : b(t.borderTopWidth),
             S = r ? 0 : b(t.borderRightWidth),
-            E = r ? 0 : b(t.borderBottomWidth),
-            x = r ? 0 : b(t.borderLeftWidth),
+            x = r ? 0 : b(t.borderBottomWidth),
+            E = r ? 0 : b(t.borderLeftWidth),
             k = d + l,
             C = s + p,
-            T = x + S,
-            M = h + E,
+            T = E + S,
+            M = h + x,
             P = a ? e.offsetHeight - M - e.clientHeight : 0,
             A = i ? e.offsetWidth - T - e.clientWidth : 0,
             O = r ? r.width : b(t.width) - (n ? k + T : 0) - A,
@@ -139,7 +139,7 @@ var u = (function () {
             });
         return m.set(e, R), R;
     },
-    E = function (e, t) {
+    x = function (e, t) {
         var r = S(e),
             n = r.borderBoxSize,
             i = r.contentBoxSize,
@@ -153,7 +153,7 @@ var u = (function () {
                 return i;
         }
     },
-    x = function (e) {
+    E = function (e) {
         var t = S(e);
         (this.target = e),
             (this.contentRect = t.contentRect),
@@ -173,9 +173,9 @@ var u = (function () {
             if (0 !== r.activeTargets.length) {
                 var n = [];
                 r.activeTargets.forEach(function (t) {
-                    var r = new x(t.target),
+                    var r = new E(t.target),
                         o = k(t.target);
-                    n.push(r), (t.lastReportedSize = E(t.target, t.observedBox)), o < e && (e = o);
+                    n.push(r), (t.lastReportedSize = x(t.target, t.observedBox)), o < e && (e = o);
                 }),
                     t.push(function () {
                         r.callback.call(r.observer, n, r.observer);
@@ -319,7 +319,7 @@ var u = (function () {
         return (
             (e.prototype.isActive = function () {
                 var e,
-                    t = E(this.target, this.observedBox);
+                    t = x(this.target, this.observedBox);
                 return (
                     c((e = this.target)) ||
                         d(e) ||

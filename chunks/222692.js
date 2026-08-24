@@ -1,4 +1,4 @@
-n.d(t, { A: () => c });
+n.d(t, { A: () => u });
 var i = n(477900);
 n(582128);
 var r = n(192308),
@@ -6,7 +6,7 @@ var r = n(192308),
     s = n(453028),
     a = n(731854),
     o = n(375708);
-function c(e) {
+function u(e) {
     l.k.getConfig({ location: "handleCameraUnavailable" }).videoEnabled &&
         (s.Ay.supports(a.O5.VIDEO)
             ? (0, r.openModalLazy)(async () => {

@@ -18,8 +18,8 @@ var s = n(477900),
     y = n.n(g),
     A = n(96337),
     x = n(404778),
-    I = n(305866),
-    w = n(892547),
+    I = n(683438),
+    w = n(305866),
     C = n(317097),
     v = n(259678),
     S = n(933832),
@@ -93,7 +93,7 @@ function R(e) {
 class D extends r.PureComponent {
     static defaultProps = { autoFocus: !0 };
     render() {
-        return (0, s.jsx)(w.I, { ...this.props, size: "sm" });
+        return (0, s.jsx)(I.I, { ...this.props, size: "sm" });
     }
 }
 class F extends r.PureComponent {
@@ -103,7 +103,7 @@ class F extends r.PureComponent {
     static Empty = R;
     render() {
         let { className: e, children: t } = this.props;
-        return (0, s.jsx)(I.l, { className: i()(O.qE, e), "aria-label": this.props["aria-label"], children: t });
+        return (0, s.jsx)(w.l, { className: i()(O.qE, e), "aria-label": this.props["aria-label"], children: t });
     }
 }
 var M = n(364522),

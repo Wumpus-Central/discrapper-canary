@@ -7,12 +7,12 @@ n.d(t, {
     KE: () => x,
     ME: () => M,
     R1: () => w,
-    _V: () => O,
+    _V: () => R,
     eB: () => b,
     eu: () => L,
     hE: () => C,
     pd: () => v,
-    tK: () => R,
+    tK: () => O,
     xt: () => G,
 });
 var i = n(477900);
@@ -41,11 +41,11 @@ function C(e) {
     let { className: t, id: n, children: r, variant: s = "heading-xl/semibold" } = e;
     return (0, i.jsx)(l.D, { variant: s, color: "text-strong", className: a()(S.DD, t), id: n, children: r });
 }
-function R(e) {
+function O(e) {
     let { className: t, children: n } = e;
     return (0, i.jsx)(o.E, { variant: "text-md/normal", color: "text-default", className: t, children: n });
 }
-function O(e) {
+function R(e) {
     let { className: t, src: n } = e;
     return (0, i.jsx)("img", { alt: "", src: n, className: a()(S.Sl, t) });
 }

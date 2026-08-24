@@ -27,8 +27,8 @@ let T = "default",
     S = {},
     N = {},
     C = [],
-    R = 0,
-    O = null,
+    O = 0,
+    R = null,
     L = null,
     y = null,
     D = {},
@@ -220,7 +220,7 @@ class F extends s.Ay.DeviceSettingsStore {
         (L = e), this.emitChange();
     }
     getClipsWarningShown(e) {
-        return O === e;
+        return R === e;
     }
     getHardwareClassification() {
         return G.hardwareClassification;
@@ -232,7 +232,7 @@ class F extends s.Ay.DeviceSettingsStore {
         return G.hardwareClassificationVersion;
     }
     getIsAtMaxSaveClipOperations() {
-        return R >= I.VP;
+        return O >= I.VP;
     }
     getLastClipsError() {
         return b;
@@ -279,7 +279,7 @@ let V = new F(l.h, {
         },
         CLIPS_SAVE_CLIP: function (e) {
             let { clip: t } = e;
-            (R = Math.max(R - 1, 0)),
+            (O = Math.max(O - 1, 0)),
                 t.isCandidate && ((C = [t, ...C]), (S[t.id] = t)),
                 null != y &&
                     (y = {
@@ -318,14 +318,14 @@ let V = new F(l.h, {
         },
         CLIPS_SAVE_CLIP_START: function (e) {
             let { clipType: t } = e;
-            (R += 1), (G.hasTakenDecoupledClip = G.hasTakenDecoupledClip || t === I.Fv.DECOUPLED);
+            (O += 1), (G.hasTakenDecoupledClip = G.hasTakenDecoupledClip || t === I.Fv.DECOUPLED);
         },
         CLIPS_SAVE_CLIP_ERROR: function () {
-            R = Math.max(R - 1, 0);
+            O = Math.max(O - 1, 0);
         },
         CLIPS_SAVE_CLIP_NO_OP: function (e) {
             let { reason: t } = e;
-            (t === I.RC.BUFFER_WARMING_UP || t === I.RC.BRIDGE_SHUTDOWN) && (R = Math.max(R - 1, 0));
+            (t === I.RC.BUFFER_WARMING_UP || t === I.RC.BRIDGE_SHUTDOWN) && (O = Math.max(O - 1, 0));
         },
         STREAM_START: function (e) {
             let { sourceName: t, pid: n } = e;
@@ -394,11 +394,11 @@ let V = new F(l.h, {
         },
         CLIPS_SHOW_CALL_WARNING: function (e) {
             let { channelId: t } = e;
-            O = t;
+            R = t;
         },
         VOICE_CHANNEL_SELECT: function (e) {
             let { channelId: t } = e;
-            t !== O && (O = null);
+            t !== R && (R = null);
         },
         CLIPS_CLASSIFY_HARDWARE: function (e) {
             let { classification: t } = e,
@@ -458,7 +458,7 @@ let V = new F(l.h, {
             return t;
         },
         LOGOUT: function () {
-            U.clear(), (L = null), (O = null), (v = {});
+            U.clear(), (L = null), (R = null), (v = {});
         },
     }),
     B = V;

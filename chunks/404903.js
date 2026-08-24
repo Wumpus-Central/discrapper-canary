@@ -54,8 +54,8 @@ var v = r(192734),
     w = r(712247),
     _ = r(389979),
     S = r(356560),
-    E = r(139835),
-    x = r(20853);
+    x = r(139835),
+    E = r(20853);
 r(333007);
 var k = new WeakMap();
 class C {
@@ -238,7 +238,7 @@ function A(e) {
                                 (k && t.preventDefault(),
                                 !e.ignoreEmulatedMouseEvents &&
                                     !e.isPressed &&
-                                    ("virtual" === e.pointerType || (0, E.Y)(t.nativeEvent)))
+                                    ("virtual" === e.pointerType || (0, x.Y)(t.nativeEvent)))
                             ) {
                                 let e = W(t, "virtual"),
                                     n = G(t, "virtual"),
@@ -279,7 +279,7 @@ function A(e) {
             if ("u" > typeof PointerEvent) {
                 (t.onPointerDown = (t) => {
                     if (0 !== t.button || !(0, w.sD)(t.currentTarget, (0, w.wt)(t.nativeEvent))) return;
-                    if ((0, E.P)(t.nativeEvent)) {
+                    if ((0, x.P)(t.nativeEvent)) {
                         e.pointerType = "virtual";
                         return;
                     }
@@ -347,7 +347,7 @@ function A(e) {
                                     n = setTimeout(() => {
                                         e.isPressed &&
                                             e.target instanceof HTMLElement &&
-                                            (r ? q(t) : ((0, x.e)(e.target), e.target.click()));
+                                            (r ? q(t) : ((0, E.e)(e.target), e.target.click()));
                                     }, 80);
                                 U(t.currentTarget, "click", () => (r = !0), !0),
                                     e.disposables.push(() => clearTimeout(n));

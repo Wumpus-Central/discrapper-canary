@@ -60,11 +60,11 @@ function S(e) {
     var t = parseFloat(e);
     return t < 0 ? 0 : t > 1 ? 255 : Math.round(255 * t);
 }
-function E(e) {
+function x(e) {
     var t = parseFloat(e);
     return t < 0 ? 0 : t > 100 ? 1 : t / 100;
 }
-function x(e) {
+function E(e) {
     var t,
         r =
             "number" == typeof e
@@ -86,9 +86,9 @@ function x(e) {
                             : (t = m.exec(e))
                               ? parseInt(t[1] + t[1] + t[2] + t[2] + t[3] + t[3] + t[4] + t[4], 16) >>> 0
                               : (t = p.exec(e))
-                                ? (255 | b(_(t[1]), E(t[2]), E(t[3]))) >>> 0
+                                ? (255 | b(_(t[1]), x(t[2]), x(t[3]))) >>> 0
                                 : (t = d.exec(e))
-                                  ? (b(_(t[1]), E(t[2]), E(t[3])) | S(t[4])) >>> 0
+                                  ? (b(_(t[1]), x(t[2]), x(t[3])) | S(t[4])) >>> 0
                                   : null;
     return null === r
         ? e
@@ -111,7 +111,7 @@ var k = /[+\-]?(?:0|[1-9]\d*)(?:\.\d*)?(?:[eE][+\-]?\d+)?/g,
     P = function (e) {
         n || (n = g.colorNames ? RegExp("(" + Object.keys(g.colorNames).join("|") + ")", "g") : /^\b$/);
         var t = e.output.map(function (e) {
-                return (0, i.oq)(e).replace(C, x).replace(n, x);
+                return (0, i.oq)(e).replace(C, E).replace(n, E);
             }),
             r = t.map(function (e) {
                 return e.match(k).map(Number);

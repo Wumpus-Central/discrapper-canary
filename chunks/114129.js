@@ -5,8 +5,8 @@ n.d(t, {
     D5: () => f,
     JC: () => p,
     RL: () => y,
-    TC: () => O,
-    ZD: () => R,
+    TC: () => R,
+    ZD: () => O,
     _U: () => T,
     a2: () => S,
     f5: () => D,
@@ -98,17 +98,17 @@ function N() {
 function C(e) {
     r.h.dispatch({ type: "CHANNEL_TABS_SET_ENABLED", enabled: e });
 }
-function R(e) {
+function O(e) {
     let t = u.A.getTabs().find((t) => t.id === e);
     null != t && u.A.getActiveTabId() !== e && (r.h.dispatch({ type: "CHANNEL_TABS_SET_ACTIVE", tabId: e }), h(t));
 }
-function O(e) {
+function R(e) {
     let t = u.A.getTabs();
     if (t.length <= 1) return;
     let n = t.findIndex((e) => e.id === u.A.getActiveTabId());
     if (-1 === n) return;
     let i = (n + e + t.length) % t.length;
-    R(t[i].id);
+    O(t[i].id);
 }
 function L(e, t) {
     r.h.dispatch({ type: "CHANNEL_TABS_MOVE", tabId: e, toIndex: t });

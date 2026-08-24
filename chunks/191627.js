@@ -1,6 +1,6 @@
 "use strict";
 n.d(t, {
-    EC: () => O,
+    EC: () => R,
     Ef: () => D,
     Gg: () => S,
     H1: () => F,
@@ -20,7 +20,7 @@ n.d(t, {
     kp: () => m,
     lu: () => V,
     ly: () => G,
-    nz: () => R,
+    nz: () => O,
     qb: () => w,
     tN: () => p,
     u9: () => b,
@@ -49,8 +49,8 @@ let I = "RESTRICTED_HOURS_LAYER",
     S = 64,
     N = (e, t) => `https://discord.com/feature/family-center/my-family/${e}/${t}`,
     C = 4,
-    R = 5 * E.A.Millis.MINUTE,
-    O = "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+    O = 5 * E.A.Millis.MINUTE,
+    R = "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
     L = (0, _.dN)(
         Object.freeze({
             FAMILY_CENTER_SETTINGS: "/family-center/settings",

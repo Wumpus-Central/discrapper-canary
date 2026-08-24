@@ -22,8 +22,8 @@ var i = n(17928),
 let S = new Set([m.AR.INITIALIZING, m.AR.WAITING_FOR_SCREEN_TYPE_RESOLUTION]);
 var N = n(515183),
     C = n(592598),
-    R = n(682763),
-    O = n(614455),
+    O = n(682763),
+    R = n(614455),
     L = n(394072),
     y = n(392164);
 let D = new d.A("OverlayRenderStore"),
@@ -42,10 +42,10 @@ let D = new d.A("OverlayRenderStore"),
     H = new o.A(1e4);
 function j(e, t, n) {
     let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : g.QJ.Info;
-    (0, R.aS)({ pid: e, name: t, type: g.ON.Renderer, data: n, logType: i });
+    (0, O.aS)({ pid: e, name: t, type: g.ON.Renderer, data: n, logType: i });
 }
 function W() {
-    return O.A.isOverlayEnabled;
+    return R.A.isOverlayEnabled;
 }
 function Y(e) {
     return w[e] ?? null;
@@ -487,7 +487,7 @@ function eE() {
 class eA extends i.Ay.Store {
     static displayName = "OverlayRenderStore";
     initialize() {
-        this.waitFor(A.default, h.A, c.A, _.A, C.A, O.A, E.A, u.Ay), this.syncWith([c.A], eE), this.syncWith([_.A], es);
+        this.waitFor(A.default, h.A, c.A, _.A, C.A, R.A, E.A, u.Ay), this.syncWith([c.A], eE), this.syncWith([_.A], es);
     }
     getDevToolsFocusedPidsWithTimestamp() {
         return H;

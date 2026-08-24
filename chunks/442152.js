@@ -1112,7 +1112,7 @@ let tE = i.forwardRef(function (e, t) {
         variations: { 1: { padding: 1 } },
     });
 var ty = n(602034),
-    tv = n(892547),
+    tv = n(683438),
     tS = n(909802);
 let tN = i.forwardRef(function (e, t) {
     let { onKeyDown: n, stickersListRef: s, channel: r } = e,

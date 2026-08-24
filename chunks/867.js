@@ -22,8 +22,8 @@ function i(e, t) {
         w = l + parseInt(u, 10),
         _ = b + e.clientWidth,
         S = w + e.clientHeight,
-        E = parseInt(f, 10) || 0,
-        x = parseInt(d, 10) || 0,
+        x = parseInt(f, 10) || 0,
+        E = parseInt(d, 10) || 0,
         k = parseInt(p, 10) || 0,
         C = parseInt(h, 10) || 0,
         T = parseInt(m, 10) || 0,
@@ -34,9 +34,9 @@ function i(e, t) {
         I = n - T,
         D = n + i + M,
         L = s + parseInt(c, 10) + C,
-        R = l + parseInt(u, 10) + E;
+        R = l + parseInt(u, 10) + x;
     (A > L || O < _ - k) && (A <= s + C ? (s = A - parseInt(c, 10) - C) : O > _ - k && (s += O - _ + k)),
-        (I > R || D < S - x) && (I <= w + E ? (l = I - parseInt(u, 10) - E) : D > S - x && (l += D - S + x)),
+        (I > R || D < S - E) && (I <= w + x ? (l = I - parseInt(u, 10) - x) : D > S - E && (l += D - S + E)),
         e.scrollTo({ left: s, top: l });
 }
 function a(e, t, r) {

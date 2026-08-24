@@ -1,10 +1,10 @@
 "use strict";
 n.d(t, {
     Bd: () => v,
-    Cd: () => O,
+    Cd: () => R,
     El: () => P,
     Lj: () => S,
-    Ml: () => R,
+    Ml: () => O,
     OG: () => x,
     Q_: () => U,
     Sc: () => h,
@@ -154,7 +154,7 @@ function C(e) {
         sort_order: d,
     });
 }
-function R(e) {
+function O(e) {
     let { guildId: t, channelId: n, postId: r, location: a } = e;
     i.Ay.trackWithMetadata(E.HAw.FORUM_CHANNEL_POST_CLICKED, {
         ...(0, _.$L)({ channelId: r }),
@@ -164,7 +164,7 @@ function R(e) {
         location: a,
     });
 }
-function O(e) {
+function R(e) {
     let { guildId: t, channelId: n, sortOrder: r } = e;
     i.Ay.trackWithMetadata(E.HAw.FORUM_CHANNEL_POSTS_SORTED, {
         ...(0, _.fO)({ channelId: n }),

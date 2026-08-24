@@ -23,22 +23,22 @@ var n,
     },
     _ = r(267768),
     S = r(969001),
-    E = function () {
+    x = function () {
         throw new c();
     },
-    x = _
+    E = _
         ? (function () {
               try {
-                  return arguments.callee, E;
+                  return arguments.callee, x;
               } catch (e) {
                   try {
                       return _(arguments, "callee").get;
                   } catch (e) {
-                      return E;
+                      return x;
                   }
               }
           })()
-        : E,
+        : x,
     k = r(912877)(),
     C = r(428495),
     T = r(755311),
@@ -106,7 +106,7 @@ var n,
         "%StringIteratorPrototype%": k && C ? C(""[Symbol.iterator]()) : n,
         "%Symbol%": k ? Symbol : n,
         "%SyntaxError%": u,
-        "%ThrowTypeError%": x,
+        "%ThrowTypeError%": E,
         "%TypedArray%": I,
         "%TypeError%": c,
         "%Uint8Array%": "u" < typeof Uint8Array ? n : Uint8Array,

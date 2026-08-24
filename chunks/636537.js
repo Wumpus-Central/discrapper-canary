@@ -282,12 +282,12 @@ function g(e, t, n) {
 let S = g.bind(null, "get"),
     N = g.bind(null, "post"),
     C = g.bind(null, "put"),
-    R = g.bind(null, "patch"),
-    O = g.bind(null, "del"),
-    L = { get: S, post: N, put: C, patch: R, del: O };
+    O = g.bind(null, "patch"),
+    R = g.bind(null, "del"),
+    L = { get: S, post: N, put: C, patch: O, del: R };
 if (n.g.isServerRendering) {
     let e = (e, t) => Promise.resolve({ ok: !0, status: 200, headers: {}, body: null, text: "" });
-    (S = e), (N = e), (C = e), (R = e), (O = e);
+    (S = e), (N = e), (C = e), (O = e), (R = e);
 }
 function y() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];

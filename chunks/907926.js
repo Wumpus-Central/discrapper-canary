@@ -37,7 +37,7 @@ class g extends s.A {
         let g = E.default.getCurrentUser(),
             S = c.A.getGuild(e.guildId),
             [N, C] = (0, f.Ay)(p.jQ.PRESET_DOCUMENTS, g, S?.premiumTier) ?? [p.on.RESOLUTION_SOURCE, p.kn.FPS_5],
-            [R, O] = (0, f.Ay)(p.jQ.PRESET_VIDEO, g, S?.premiumTier) ?? [p.on.RESOLUTION_720, p.kn.FPS_30],
+            [O, R] = (0, f.Ay)(p.jQ.PRESET_VIDEO, g, S?.premiumTier) ?? [p.on.RESOLUTION_720, p.kn.FPS_30],
             L = null;
         if (
             (s.entropy < 10 && (i.resolution !== N || i.fps !== C)
@@ -47,10 +47,10 @@ class g extends s.A {
                       context: r.x.STREAM,
                   }))
                 : s.entropy > 20 &&
-                  (i.resolution !== R || i.fps !== O) &&
+                  (i.resolution !== O || i.fps !== R) &&
                   (T.info("High entropy average, switching to video preset."),
                   (L = {
-                      qualityOptions: { preset: p.jQ.PRESET_AUTO, resolution: R, frameRate: O },
+                      qualityOptions: { preset: p.jQ.PRESET_AUTO, resolution: O, frameRate: R },
                       context: r.x.STREAM,
                   })),
             null != L)

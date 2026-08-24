@@ -18,7 +18,7 @@ var c = n(503698),
     f = n(866665),
     p = n(285796),
     S = n(834730),
-    N = n(892547),
+    N = n(683438),
     x = n(312138),
     T = n(475825),
     _ = n(803306),
@@ -367,8 +367,8 @@ function e6(e) {
           })({ gameProfileEntry: n, gameApplication: o, gameIconSize: l, platformIconSizePx: s });
 }
 let e4 = G._3.SIZE_32,
-    e9 = [et.iq, et.tR, et.K7, et.sp, et.MK];
-function e8(e) {
+    e8 = [et.iq, et.tR, et.K7, et.sp, et.MK];
+function e9(e) {
     let t,
         { channel: n, textVariant: l, activities: u, applicationStream: o } = e,
         d = (0, s.bG)([a.default], () => a.default.getCurrentUser()),
@@ -508,7 +508,7 @@ function e7(e) {
                 return (0, i.jsx)(et.mG, {
                     location: et.N5.FRIENDS_POPOUT,
                     className: eT.cV,
-                    children: e9.map((e, n) => (0, i.jsx)(e, { entry: t }, n)),
+                    children: e8.map((e, n) => (0, i.jsx)(e, { entry: t }, n)),
                 });
             }
             if ((0, B.A)({ activities: n, status: S, applicationStream: N, voiceChannel: p })) {
@@ -523,7 +523,7 @@ function e7(e) {
                     let { type: t } = e;
                     return t === ez.$pd.PLAYING;
                 }) == null && null != p
-                    ? (0, i.jsx)(e8, {
+                    ? (0, i.jsx)(e9, {
                           channel: p,
                           textVariant: "text-xs/medium",
                           activities: n ?? [],
@@ -2019,8 +2019,8 @@ function t4(e) {
     });
 }
 t2.displayName = "OverlayVoiceCallElapsedTime";
-var t9 = n(141157),
-    t8 = n(645959),
+var t8 = n(141157),
+    t9 = n(645959),
     t7 = n(812993),
     ne = n(602853),
     nt = n(713654),
@@ -2908,10 +2908,10 @@ function n1() {
         [l, a] = r.useState(""),
         d = l.trim().toLowerCase(),
         c =
-            ((e = (0, t9.Dz)()),
-            (0, s.yK)([t8.A, eI.A], () => {
+            ((e = (0, t8.Dz)()),
+            (0, s.yK)([t9.A, eI.A], () => {
                 let t = [];
-                for (let e of t8.A.getPrivateChannelIds()) {
+                for (let e of t9.A.getPrivateChannelIds()) {
                     let n = eI.A.getChannel(e);
                     null != n && t.push({ channel: n, voiceStates: [] });
                 }
@@ -3198,8 +3198,8 @@ var n3 = n(776096),
     n5 = n(377802),
     n6 = n(342952),
     n4 = n(676923),
-    n9 = n(342296),
-    n8 = n(481947),
+    n8 = n(342296),
+    n9 = n(481947),
     n7 = n(956123);
 let le = r.memo(function (e) {
     let { channelId: t, guildId: n, userId: l, onDoubleClick: u, onContextMenu: o } = e,
@@ -3227,7 +3227,7 @@ let le = r.memo(function (e) {
             [t, o, g, m],
         );
     return (0, tC.Vq)(g) && null != m
-        ? (0, i.jsx)(n9.A, {
+        ? (0, i.jsx)(n8.A, {
               targetElementRef: d,
               user: g,
               guildId: n ?? void 0,
@@ -3271,7 +3271,7 @@ let le = r.memo(function (e) {
                               (0, i.jsx)("div", {
                                   className: n7.ZA,
                                   onDoubleClick: u,
-                                  children: (0, i.jsx)(n8.Kc, {
+                                  children: (0, i.jsx)(n9.Kc, {
                                       guildId: n ?? void 0,
                                       user: g,
                                       video: m.selfVideo,
@@ -3561,7 +3561,7 @@ function lo() {
         a = n.trim().toLowerCase(),
         [d, c] = r.useState(() => new Set()),
         h = (0, s.bG)([tf], () => tf.getCollapsedSectionOverridesForTab(o.x.VOICE), []),
-        g = (0, t9.qZ)(),
+        g = (0, t8.qZ)(),
         m = r.useMemo(() => {
             let e = new Map();
             for (let t of g) e.set(t.channel.id, t.voiceStates);
@@ -3578,12 +3578,12 @@ function lo() {
         }, []),
         p = r.useMemo(() => new Set(g.map((e) => e.channel.id)), [g]),
         [S, _] = r.useState([]);
-    (0, ty.RT)(n, g, _, t9.MV);
+    (0, ty.RT)(n, g, _, t8.MV);
     let C = r.useRef(null),
         v = (0, y.A)("friends-widget-voice", C),
         [R, b] = (0, s.bG)([tS.A], () => tS.A.getFavoriteTargetIdsForTab(o.x.VOICE), [], j.D),
         M = r.useMemo(() => R.filter((e) => p.has(e)), [R, p]),
-        { friendVoiceChannelIds: O, recentVoiceChannelIds: w } = (0, t9.S4)(),
+        { friendVoiceChannelIds: O, recentVoiceChannelIds: w } = (0, t8.S4)(),
         F = r.useMemo(() => O.filter((e) => p.has(e)), [O, p]),
         G = r.useMemo(() => w.filter((e) => p.has(e)), [w, p]),
         L = (0, s.bG)([ef.Ay], () => ef.Ay.getVoiceChannelId(), []),

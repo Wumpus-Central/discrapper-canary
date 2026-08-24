@@ -24,8 +24,8 @@ var m = n(252919),
     S = n(612181),
     N = n(38405),
     C = n(115036),
-    R = n(536802),
-    O = n(204925);
+    O = n(536802),
+    R = n(204925);
 let L = new A.A("AuthenticationStore"),
     y = "fingerprint",
     D = "installation_id_v3",
@@ -162,7 +162,7 @@ function ed(e) {
             type: e?.isSwitchingAccount ? "user-data-only" : "all",
         }),
         l.Ay.Store.removeAllConditionalListeners(),
-        R.A.clearAll(),
+        O.A.clearAll(),
         E.IU(),
         N.A.clearUser(),
         o.w.remove(v),
@@ -290,7 +290,7 @@ let eu = new ec(
             Q(`handleConnectionClosed called with code ${t}.`);
             let i = n(192308).hasModalOpen;
             if (4004 === t) {
-                if (V || i(O.jc) || i(O.Uy)) return void eo();
+                if (V || i(R.jc) || i(R.Uy)) return void eo();
                 g.default.track(f.HAw.APP_USER_DEAUTHENTICATED, { user_id: o.w.get(v) }),
                     ed(),
                     setImmediate(() => (0, p.pX)(f.BVt.DEFAULT_LOGGED_OUT));

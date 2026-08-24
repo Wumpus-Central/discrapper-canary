@@ -63,11 +63,11 @@ function C(e) {
     }
     return !1;
 }
-function R(e) {
+function O(e) {
     let { channel: t } = e;
     N(t);
 }
-function O(e) {
+function R(e) {
     let { threads: t } = e;
     t.forEach(C);
 }
@@ -143,8 +143,8 @@ let v = new D(s.h, {
                 return n && delete p[e.parentId], n;
             }));
     },
-    THREAD_CREATE: R,
-    THREAD_UPDATE: R,
+    THREAD_CREATE: O,
+    THREAD_UPDATE: O,
     THREAD_LIST_SYNC: function (e) {
         let { threads: t, mostRecentMessages: n } = e;
         t.forEach(N),
@@ -157,8 +157,8 @@ let v = new D(s.h, {
                     });
             });
     },
-    LOAD_THREADS_SUCCESS: O,
-    LOAD_ARCHIVED_THREADS_SUCCESS: O,
+    LOAD_THREADS_SUCCESS: R,
+    LOAD_ARCHIVED_THREADS_SUCCESS: R,
     RELATIONSHIP_ADD: y,
     RELATIONSHIP_UPDATE: y,
     RELATIONSHIP_REMOVE: y,

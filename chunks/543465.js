@@ -22,8 +22,8 @@ let m = {},
     S = !1,
     N = !1,
     C = { flags: 0 },
-    R = new o.Ay(),
     O = new o.Ay(),
+    R = new o.Ay(),
     L = {
         suppress_everyone: !1,
         suppress_roles: !1,
@@ -53,9 +53,9 @@ function w(e, t) {
         i = n?.channel_overrides ?? {},
         s = j(t.channel_overrides),
         l = { ...H(e), ...n, ...t, channel_overrides: s };
-    R.clearTimer(e),
+    O.clearTimer(e),
         r().forEach(i, (e) => {
-            O.clearTimer(e.channel_id);
+            R.clearTimer(e.channel_id);
         }),
         G(e, l),
         (m[e] = l),
@@ -76,13 +76,13 @@ function w(e, t) {
 }
 function G(e, t) {
     !0 === t.muted &&
-        R.setTimer(e, t.mute_config, () => {
+        O.setTimer(e, t.mute_config, () => {
             x(e, { muted: !1 }), l.h.dispatch({ type: "GUILD_MUTE_EXPIRED", guildId: e });
         }) &&
         (t.muted = !1),
         r().forEach(t.channel_overrides, (t) => {
             !0 === t.muted &&
-                O.setTimer(t.channel_id, t.mute_config, () => {
+                R.setTimer(t.channel_id, t.mute_config, () => {
                     k(e, t.channel_id, { muted: !1 }),
                         l.h.dispatch({ type: "CHANNEL_MUTE_EXPIRED", guildId: e, channelId: t.channel_id });
                 }) &&
@@ -394,7 +394,7 @@ let Z = new z(l.h, {
         return !(null == t || d.A.isFullServerPreview(t)) && (F(t, n), !0);
     },
     CONNECTION_OPEN: function (e) {
-        Y(e.notificationSettings), R.reset(), O.reset(), e.userGuildSettings.partial || ((m = {}), (D = {}), (v = {}));
+        Y(e.notificationSettings), O.reset(), R.reset(), e.userGuildSettings.partial || ((m = {}), (D = {}), (v = {}));
         let t = new Set();
         for (let n in (e.userGuildSettings.entries.forEach((e) => {
             "channel_overrides" in e || (e.channel_overrides = {}),

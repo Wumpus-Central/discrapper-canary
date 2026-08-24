@@ -273,8 +273,8 @@ var o = r(675106),
             );
         });
     },
-    E = Symbol.for("AnimatedComponent"),
-    x = function (e) {
+    x = Symbol.for("AnimatedComponent"),
+    E = function (e) {
         return o.is.str(e) ? e : e && o.is.str(e.displayName) ? e.displayName : (o.is.fun(e) && e.name) || null;
     };
 (t.Animated = m),
@@ -310,12 +310,12 @@ var o = r(675106),
                         : s,
             },
             u = function (e) {
-                var t = x(e) || "Anonymous";
-                return ((e = o.is.str(e) ? S(e, l) : e[E] || (e[E] = S(e, l))).displayName = "Animated(" + t + ")"), e;
+                var t = E(e) || "Anonymous";
+                return ((e = o.is.str(e) ? S(e, l) : e[x] || (e[x] = S(e, l))).displayName = "Animated(" + t + ")"), e;
             };
         return (
             o.each(e, function (e, t) {
-                o.is.str(t) || (t = x(e)), (u[t] = u(e));
+                o.is.str(t) || (t = E(e)), (u[t] = u(e));
             }),
             { animated: u }
         );

@@ -350,8 +350,8 @@ class C extends a.Ay.PersistedStore {
         return h[e] ?? A[e] ?? I[e];
     }
 }
-var R = n(228366),
-    O = n(380610),
+var O = n(228366),
+    R = n(380610),
     L = n(280450),
     y = n(174459),
     D = n(652215);
@@ -359,7 +359,7 @@ let v = new (class extends C {
     lastEmittedDebugVariantId;
     constructor() {
         super(
-            R.h,
+            O.h,
             {
                 CONNECTION_OPEN: (e) => this.handleConnectionOpen(e),
                 CONNECTION_OPEN_STATE_UPDATE: (e) => this.setExperimentAssignments(e.apexExperiments),
@@ -377,7 +377,7 @@ let v = new (class extends C {
                 APEX_EXPERIMENTS_FETCH_FAILURE: (e) => this.handleFetchFailure(e.unitId),
                 LOGOUT: (e) => this.handleLogout(e.isSwitchingAccount),
             },
-            R.A.Early,
+            O.A.Early,
         ),
             (this.track = function () {
                 for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
@@ -387,7 +387,7 @@ let v = new (class extends C {
             this.addChangeListener(() => this.maybeEmitDebugExperimentEvent());
     }
     initialize(e) {
-        this.waitFor(L.default), this.loadStoredState(e, (0, O.DI)());
+        this.waitFor(L.default), this.loadStoredState(e, (0, R.DI)());
     }
     maybeEmitDebugExperimentEvent() {
         let e = L.default.getId(),

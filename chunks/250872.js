@@ -5,8 +5,8 @@ var l,
     s = n(503698),
     r = n.n(s),
     o = n(629584),
-    c = n(627363),
-    u = n(207371),
+    u = n(627363),
+    c = n(207371),
     d = n(295813),
     h = n(375708),
     m = n(491920),
@@ -23,10 +23,10 @@ function g(e) {
     }
 }
 function x(e, t) {
-    let { data: n } = (0, c.YY)(e ?? void 0),
-        { data: l } = (0, c.YY)(t ?? void 0),
+    let { data: n } = (0, u.YY)(e ?? void 0),
+        { data: l } = (0, u.YY)(t ?? void 0),
         [a, s] = i.useState("activity"),
-        r = null != n && (0, u.x)(n),
+        r = null != n && (0, c.x)(n),
         o = null != t && l?.bot?.id != null;
     return { mode: a, setMode: s, hasBothModes: r && o };
 }
@@ -39,7 +39,7 @@ function v(e) {
             ],
             [],
         ),
-        c = i.useCallback(
+        u = i.useCallback(
             (e) => {
                 n(e.value);
             },
@@ -52,6 +52,6 @@ function v(e) {
         optionClassName: m.u,
         options: s,
         value: t,
-        onChange: c,
+        onChange: u,
     });
 }

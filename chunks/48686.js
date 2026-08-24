@@ -1,4 +1,4 @@
-n.d(t, { Q: () => c, t: () => o });
+n.d(t, { Q: () => u, t: () => o });
 var i = n(17928),
     r = n(734057),
     l = n(71393),
@@ -12,7 +12,7 @@ function o() {
     let n = l.A.getGuild(t.getGuildId());
     return null != n && n.features.has(a.GuildFeatures.HUB);
 }
-function c(e) {
+function u(e) {
     return (0, i.bG)([s.Ay, r.A, l.A], () => {
         let t = s.Ay.getVoiceChannelId();
         if (null == t) return !1;

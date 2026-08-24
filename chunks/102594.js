@@ -22,8 +22,8 @@ function y(e) {
             ref: w,
             shouldSelectOnPressUp: _,
             shouldUseVirtualFocus: S,
-            focus: E,
-            isDisabled: x,
+            focus: x,
+            isDisabled: E,
             onAction: k,
             allowsDifferentPressOrigin: C,
             linkBehavior: T = "action",
@@ -58,14 +58,14 @@ function y(e) {
             r.isFocused &&
             (S
                 ? (0, v.vX)(w.current)
-                : E
-                  ? E()
+                : x
+                  ? x()
                   : document.activeElement !== w.current && w.current && (0, u.l)(w.current));
     }, [w, y, r.focusedKey, r.childFocusStrategy, r.isFocused, S]),
-        (x = x || r.isDisabled(y));
+        (E = E || r.isDisabled(y));
     let A = {};
-    S || x
-        ? x &&
+    S || E
+        ? E &&
           (A.onMouseDown = (e) => {
               e.preventDefault();
           })
@@ -78,8 +78,8 @@ function y(e) {
     let O = r.isLink(y) && "override" === T,
         I = k && "action" === e.UNSTABLE_itemBehavior,
         D = r.isLink(y) && "selection" !== T && "none" !== T,
-        L = !x && r.canSelectItem(y) && !O && !I,
-        R = (k || D) && !x,
+        L = !E && r.canSelectItem(y) && !O && !I,
+        R = (k || D) && !E,
         F = R && ("replace" === r.selectionBehavior ? !L : !L || r.isEmpty),
         N = R && L && "replace" === r.selectionBehavior,
         j = F || N,
@@ -221,7 +221,7 @@ function y(e) {
     return {
         itemProps: (0, s.v)(
             A,
-            L || F || (S && !x) ? H : {},
+            L || F || (S && !E) ? H : {},
             $ ? Y : {},
             {
                 onDoubleClick: q,
@@ -236,7 +236,7 @@ function y(e) {
         isPressed: G,
         isSelected: r.isSelected(y),
         isFocused: r.isFocused && r.focusedKey === y,
-        isDisabled: x,
+        isDisabled: E,
         allowsSelection: L,
         hasAction: j,
     };

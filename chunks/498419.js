@@ -13,8 +13,8 @@
             c,
             u,
             h,
-            f,
             p,
+            f,
             d,
             m,
             g,
@@ -30,14 +30,14 @@
                 dataUrl: !1,
                 win: window,
             };
-        ((p = {}).ff = "u" > typeof InstallTrigger),
-            (p.chrome = !!window.chrome),
-            (p.opera = !!window.opera || navigator.userAgent.indexOf("Opera") >= 0),
-            (p.ie = !1),
-            (p.safari = Object.prototype.toString.call(window.HTMLElement).indexOf("Constructor") > 0),
-            (p.supported = p.chrome || p.ff || p.opera);
+        ((f = {}).ff = "u" > typeof InstallTrigger),
+            (f.chrome = !!window.chrome),
+            (f.opera = !!window.opera || navigator.userAgent.indexOf("Opera") >= 0),
+            (f.ie = !1),
+            (f.safari = Object.prototype.toString.call(window.HTMLElement).indexOf("Constructor") > 0),
+            (f.supported = f.chrome || f.ff || f.opera);
         var y = [];
-        (h = function () {}), (l = f = !1);
+        (h = function () {}), (l = p = !1);
         var v = {};
         (v.ready = function () {
             (l = !0), v.reset(), h();
@@ -49,7 +49,7 @@
                     (u = !1),
                     i.clearRect(0, 0, a, n),
                     i.drawImage(s, 0, 0, a, n),
-                    M.setIcon(o),
+                    x.setIcon(o),
                     window.clearTimeout(d),
                     window.clearTimeout(m));
             }),
@@ -87,7 +87,7 @@
                 }
             });
         var w = {},
-            x = function (e) {
+            _ = function (e) {
                 return (
                     (e.n = "number" == typeof e.n ? Math.abs(0 | e.n) : e.n),
                     (e.x = a * e.x),
@@ -98,18 +98,18 @@
                     e
                 );
             };
-        function _(e) {
-            if (e.paused || e.ended || f) return !1;
+        function M(e) {
+            if (e.paused || e.ended || p) return !1;
             try {
                 i.clearRect(0, 0, a, n), i.drawImage(e, 0, 0, a, n);
             } catch (e) {}
             (m = setTimeout(function () {
-                _(e);
+                M(e);
             }, S.duration)),
-                M.setIcon(o);
+                x.setIcon(o);
         }
         (w.circle = function (e) {
-            e = x(e);
+            e = _(e);
             var r = !1;
             2 === e.len
                 ? ((e.x = e.x - 0.4 * e.w), (e.w = 1.4 * e.w), (r = !0))
@@ -146,7 +146,7 @@
                 i.closePath();
         }),
             (w.rectangle = function (e) {
-                e = x(e);
+                e = _(e);
                 2 === e.len
                     ? ((e.x = e.x - 0.4 * e.w), (e.w = 1.4 * e.w))
                     : e.len >= 3 && ((e.x = e.x - 0.65 * e.w), (e.w = 1.65 * e.w)),
@@ -168,7 +168,7 @@
                         : i.fillText(e.n, Math.floor(e.x + e.w / 2), Math.floor(e.y + e.h - 0.15 * e.h)),
                     i.closePath();
             });
-        var M = {};
+        var x = {};
         function C(e) {
             e = e.replace(/^#?([a-f\d])([a-f\d])([a-f\d])$/i, function (e, t, r, n) {
                 return t + t + r + r + n + n;
@@ -176,14 +176,14 @@
             var t = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(e);
             return !!t && { r: parseInt(t[1], 16), g: parseInt(t[2], 16), b: parseInt(t[3], 16) };
         }
-        function A(e, t) {
+        function R(e, t) {
             var r,
                 n = {};
             for (r in e) n[r] = e[r];
             for (r in t) n[r] = t[r];
             return n;
         }
-        (M.getIcon = function () {
+        (x.getIcon = function () {
             var e = !1;
             return (
                 t.element
@@ -208,17 +208,17 @@
                 e
             );
         }),
-            (M.setIcon = function (e) {
+            (x.setIcon = function (e) {
                 var n = e.toDataURL("image/png");
                 if ((t.dataUrl && t.dataUrl(n), t.element))
                     t.element.setAttribute("href", n), t.element.setAttribute("src", n);
                 else if (t.elementId) {
                     var a = g.getElementById(t.elementId);
                     a.setAttribute("href", n), a.setAttribute("src", n);
-                } else if (p.ff || p.opera) {
+                } else if (f.ff || f.opera) {
                     var o = r;
                     (r = g.createElement("link")),
-                        p.opera && r.setAttribute("rel", "icon"),
+                        f.opera && r.setAttribute("rel", "icon"),
                         r.setAttribute("rel", "icon"),
                         r.setAttribute("type", "image/png"),
                         g.getElementsByTagName("head")[0].appendChild(r),
@@ -276,30 +276,30 @@
                 ((a = !0 === n ? (void 0 !== a ? a : i.length - 1) : void 0 !== a ? a : 0),
                 (r = r || function () {}),
                 a < i.length && a >= 0)
-                    ? (w[t.type](A(e, i[a])),
+                    ? (w[t.type](R(e, i[a])),
                       (d = setTimeout(function () {
                           n ? (a -= 1) : (a += 1), S.run(e, r, n, a);
                       }, S.duration)),
-                      M.setIcon(o))
+                      x.setIcon(o))
                     : r();
             }),
-            ((t = A(b, e)).bgColor = C(t.bgColor)),
+            ((t = R(b, e)).bgColor = C(t.bgColor)),
             (t.textColor = C(t.textColor)),
             (t.position = t.position.toLowerCase()),
             (t.animation = S.types["" + t.animation] ? t.animation : b.animation),
             (g = t.win.document);
-        var R = t.position.indexOf("up") > -1,
-            E = t.position.indexOf("left") > -1;
-        if (R || E)
-            for (var B = 0; B < S.types["" + t.animation].length; B++) {
-                var T = S.types["" + t.animation][B];
-                R && (T.y < 0.6 ? (T.y = T.y - 0.4) : (T.y = T.y - 2 * T.y + (1 - T.w))),
-                    E && (T.x < 0.6 ? (T.x = T.x - 0.4) : (T.x = T.x - 2 * T.x + (1 - T.h))),
-                    (S.types["" + t.animation][B] = T);
+        var E = t.position.indexOf("up") > -1,
+            A = t.position.indexOf("left") > -1;
+        if (E || A)
+            for (var T = 0; T < S.types["" + t.animation].length; T++) {
+                var P = S.types["" + t.animation][T];
+                E && (P.y < 0.6 ? (P.y = P.y - 0.4) : (P.y = P.y - 2 * P.y + (1 - P.w))),
+                    A && (P.x < 0.6 ? (P.x = P.x - 0.4) : (P.x = P.x - 2 * P.x + (1 - P.h))),
+                    (S.types["" + t.animation][T] = P);
             }
         return (
             (t.type = w["" + t.type] ? t.type : b.type),
-            (r = M.getIcon()),
+            (r = x.getIcon()),
             (o = document.createElement("canvas")),
             (s = document.createElement("img")),
             r.hasAttribute("href")
@@ -358,13 +358,13 @@
                     (h = function () {
                         try {
                             if ("stop" === e) {
-                                (f = !0), v.reset(), (f = !1);
+                                (p = !0), v.reset(), (p = !1);
                                 return;
                             }
                             e.addEventListener(
                                 "play",
                                 function () {
-                                    _(this);
+                                    M(this);
                                 },
                                 !1,
                             );
@@ -383,7 +383,7 @@
                                 l = t / a < r / n ? t / a : r / n;
                             s.setAttribute("crossOrigin", "anonymous"),
                                 (s.onload = function () {
-                                    i.clearRect(0, 0, a, n), i.drawImage(s, 0, 0, a, n), M.setIcon(o);
+                                    i.clearRect(0, 0, a, n), i.drawImage(s, 0, 0, a, n), x.setIcon(o);
                                 }),
                                 s.setAttribute("src", e.getAttribute("src")),
                                 (s.height = r / l),
@@ -401,7 +401,7 @@
                             (window.URL.createObjectURL = function (e) {
                                 return e;
                             })),
-                        p.supported)
+                        f.supported)
                     ) {
                         var t = !1;
                         (navigator.getUserMedia =
@@ -413,7 +413,7 @@
                             (h = function () {
                                 try {
                                     if ("stop" === e) {
-                                        (f = !0), v.reset(), (f = !1);
+                                        (p = !0), v.reset(), (p = !1);
                                         return;
                                     }
                                     ((t = document.createElement("video")).width = a),
@@ -421,7 +421,7 @@
                                         navigator.getUserMedia(
                                             { video: !0, audio: !1 },
                                             function (e) {
-                                                (t.src = URL.createObjectURL(e)), t.play(), _(t);
+                                                (t.src = URL.createObjectURL(e)), t.play(), M(t);
                                             },
                                             function () {},
                                         );
@@ -433,7 +433,7 @@
                     }
                 },
                 reset: v.reset,
-                browser: { supported: p.supported },
+                browser: { supported: f.supported },
             }
         );
     };

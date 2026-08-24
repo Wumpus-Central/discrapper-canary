@@ -1,4 +1,4 @@
-n.d(t, { A: () => t7 }), n(321073);
+n.d(t, { A: () => t8 }), n(321073);
 var i,
     l = n(477900),
     s = n(582128),
@@ -52,7 +52,7 @@ function G(e) {
 var W = n(542580),
     D = n(803378),
     U = n(825453),
-    B = n(892547),
+    B = n(683438),
     H = n(485845),
     z = n(155718),
     V = n(633334);
@@ -999,8 +999,8 @@ function e2(e) {
 var e3 = n(573648);
 n(323874), n(14289), n(35956);
 var e1 = n(989349),
-    e7 = n.n(e1),
-    e8 = n(788373),
+    e8 = n.n(e1),
+    e7 = n(788373),
     e5 =
         (((i = {})[(i.ONE_DAY = 1)] = "ONE_DAY"),
         (i[(i.THREE_DAYS = 3)] = "THREE_DAYS"),
@@ -1037,9 +1037,9 @@ function tr(e) {
         }, [i, h]),
         N = s.useCallback(() => {
             if (!i.syncing)
-                if (b || i.expire_behavior !== e8.F.KICK) {
+                if (b || i.expire_behavior !== e7.F.KICK) {
                     let e =
-                        i.expire_behavior === e8.F.REMOVE_ROLE
+                        i.expire_behavior === e7.F.REMOVE_ROLE
                             ? Z.intl.string(Z.t["6kpw4i"])
                             : Z.intl.string(Z.t.fQUQIJ);
                     (0, ew.A)({
@@ -1103,7 +1103,7 @@ function tr(e) {
                 syncDescriptionText:
                     i.revoked && null != t
                         ? Z.intl.formatToPlainString(Z.t.G16Wji, { user: i.user, platformName: t.name })
-                        : Z.intl.formatToPlainString(Z.t.unl3AP, { datetime: e7()(i.synced_at).calendar() }),
+                        : Z.intl.formatToPlainString(Z.t.unl3AP, { datetime: e8()(i.synced_at).calendar() }),
             };
         }, [P, v, i.revoked, i.synced_at, i.type, i.user]),
         D = (0, o.bG)([eI.A], () => eI.A.getSortedRoles(n.id)),
@@ -1283,12 +1283,12 @@ function tr(e) {
                                         options: [
                                             {
                                                 id: "remove-role",
-                                                value: e8.F.REMOVE_ROLE.toString(),
+                                                value: e7.F.REMOVE_ROLE.toString(),
                                                 label: Z.intl.string(Z.t["6kpw4i"]),
                                             },
                                             {
                                                 id: "kick",
-                                                value: e8.F.KICK.toString(),
+                                                value: e7.F.KICK.toString(),
                                                 label: Z.intl.string(Z.t.fQUQIJ),
                                             },
                                         ],
@@ -1328,7 +1328,7 @@ function tr(e) {
                         },
                     }),
                     !b &&
-                        a.expire_behavior === e8.F.KICK &&
+                        a.expire_behavior === e7.F.KICK &&
                         (0, l.jsx)(T.E, {
                             className: ts.Ce,
                             color: "text-feedback-critical",
@@ -2268,7 +2268,7 @@ function t1(e, t) {
             return "";
     }
 }
-let t7 = s.memo(function (e) {
+let t8 = s.memo(function (e) {
     let {
             section: t,
             sectionId: n,

@@ -24,21 +24,21 @@ function N() {
         (I = null != r && null != i && E.A.can(h.xBc.MANAGE_WEBHOOKS, r) ? A.A.getWebhooksForChannel(i.id, r.id) : []),
         null != f)
     ) {
-        let e = R(f.id);
+        let e = O(f.id);
         null != e && (f = e);
     }
     (T = h.XlH.OPEN), (m = {}), (g = !1);
 }
 let C = l().debounce(() => {
-    g && ((null == f || l().isEqual(f, R(f.id))) && (g = !1), g || L.emitChange());
+    g && ((null == f || l().isEqual(f, O(f.id))) && (g = !1), g || L.emitChange());
 }, 500);
-function R(e) {
+function O(e) {
     return I.find((t) => {
         let { id: n } = t;
         return n === e;
     });
 }
-class O extends o.Ay.Store {
+class R extends o.Ay.Store {
     static displayName = "ChannelSettingsIntegrationsStore";
     initialize() {
         this.waitFor(u.A, _.A, A.A, E.A);
@@ -56,7 +56,7 @@ class O extends o.Ay.Store {
         return T;
     }
     getWebhook(e) {
-        return R(e);
+        return O(e);
     }
     showNotice() {
         return this.hasChanges();
@@ -74,7 +74,7 @@ class O extends o.Ay.Store {
         };
     }
 }
-let L = new O(
+let L = new R(
         d.h,
         __OVERLAY__
             ? {}
@@ -96,7 +96,7 @@ let L = new O(
                   },
                   INTEGRATION_SETTINGS_START_EDITING_WEBHOOK: function (e) {
                       let { webhookId: t } = e,
-                          n = R(t);
+                          n = O(t);
                       if (null == n) return !1;
                       (f = n), (m = {}), (g = !1);
                   },

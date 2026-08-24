@@ -219,7 +219,7 @@ e.exports = (function () {
                     S = new r(function (e, r) {
                         return t.naturalOrder(e.count(), r.count());
                     });
-                function E(r, n) {
+                function x(r, n) {
                     for (var o, i = 1, a = 0; a < 1e3; ) {
                         if (!(o = r.pop()).count()) {
                             r.push(o), a++;
@@ -294,16 +294,16 @@ e.exports = (function () {
                         if (!l || (r.push(l), u && (r.push(u), i++), i >= n || a++ > 1e3)) return;
                     }
                 }
-                S.push(_), E(S, 0.75 * a);
+                S.push(_), x(S, 0.75 * a);
                 for (
-                    var x = new r(function (e, r) {
+                    var E = new r(function (e, r) {
                         return t.naturalOrder(e.count() * e.volume(), r.count() * r.volume());
                     });
                     S.size();
                 )
-                    x.push(S.pop());
-                E(x, a - x.size());
-                for (var k = new o(); x.size(); ) k.push(x.pop());
+                    E.push(S.pop());
+                x(E, a - E.size());
+                for (var k = new o(); E.size(); ) k.push(E.pop());
                 return k;
             },
         }

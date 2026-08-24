@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { l: () => R });
+n.d(t, { l: () => O });
 var i = n(477900),
     r = n(582128),
     a = n(503698),
@@ -22,14 +22,14 @@ var i = n(477900),
     S = n(641668),
     N = n(715022),
     C = n(470791);
-function R(e) {
+function O(e) {
     let { i18n: t } = (0, h.G9)(),
         {
             selectionMode: n,
             readOnly: a,
             autoFocus: I,
             clearable: f,
-            fullWidth: R,
+            fullWidth: O,
             closeOnSelect: L = !0,
             shouldFocusWrap: y,
             placeholder: D = t.SELECT_PLACEHOLDER,
@@ -148,12 +148,12 @@ function R(e) {
             },
             [eA, n, x, e_, eT, z],
         ),
-        { activeIndex: eR, handleKeyDown: eO } = (0, A.l)(!0, en),
+        { activeIndex: eO, handleKeyDown: eR } = (0, A.l)(!0, en),
         eL = r.useRef(null);
     r.useEffect(() => {
-        let e = eR !== eL.current;
-        (eL.current = eR), null != eR && e && (eo(eR), z || ((ec.current = !0), Z(!0)));
-    }, [eR, z, Z]);
+        let e = eO !== eL.current;
+        (eL.current = eO), null != eO && e && (eo(eO), z || ((ec.current = !0), Z(!0)));
+    }, [eO, z, Z]);
     let ey = r.useCallback(
             (e) => {
                 if (eA) return;
@@ -237,14 +237,14 @@ function R(e) {
                             : eE && f && (e.preventDefault(), e.stopPropagation(), em());
                         break;
                     default:
-                        eO(e);
+                        eR(e);
                 }
             },
-            [eA, z, en, y, n, eN, el, x, eC, eT, em, eO, eE, f, Z],
+            [eA, z, en, y, n, eN, el, x, eC, eT, em, eR, eE, f, Z],
         ),
         eD = r.useMemo(() => {
-            if (!R || U) return `${Math.max(eh ?? 200, 200) * ("multiple" === n ? 1.5 : 1) + 24 * !!f + 36 + 12}px`;
-        }, [R, U, eh, n, f]),
+            if (!O || U) return `${Math.max(eh ?? 200, 200) * ("multiple" === n ? 1.5 : 1) + 24 * !!f + 36 + 12}px`;
+        }, [O, U, eh, n, f]),
         ev = "multiple" === n && eN.length > 0,
         eb = r.useRef(null);
     r.useEffect(() => {
@@ -290,7 +290,7 @@ function R(e) {
         children: (e) =>
             (0, i.jsx)("div", {
                 ref: eg,
-                style: { width: R ? "100%" : `minmax(${eD}px, 100%)` },
+                style: { width: O ? "100%" : `minmax(${eD}px, 100%)` },
                 children: (0, i.jsxs)(i.Fragment, {
                     children: [
                         (0, i.jsx)(m.p, {
@@ -299,7 +299,7 @@ function R(e) {
                             readOnly: a,
                             loading: er,
                             clearable: f,
-                            fullWidth: R,
+                            fullWidth: O,
                             isOpen: z,
                             isInert: eA,
                             hasValue: eE,
@@ -333,7 +333,7 @@ function R(e) {
                                 "aria-describedby": e?.describedById,
                                 children: [
                                     (0, i.jsxs)(E.A, { children: [K, ", "] }),
-                                    (0, i.jsx)(O, {
+                                    (0, i.jsx)(R, {
                                         tagGroupRef: H,
                                         placeholder: D,
                                         selectionMode: n,
@@ -353,7 +353,7 @@ function R(e) {
                             onSelectionChange: eC,
                             listItems: en,
                         }),
-                        (!R || U) && eI,
+                        (!O || U) && eI,
                         !eA &&
                             z &&
                             (0, i.jsx)("div", {
@@ -382,7 +382,7 @@ function R(e) {
             }),
     });
 }
-function O(e) {
+function R(e) {
     let { placeholder: t, selectionMode: n, selectedItems: r, onRemove: a, tagGroupRef: s } = e,
         { i18n: l } = (0, h.G9)();
     return null == r || 0 === r.length

@@ -5,8 +5,8 @@ var l = n(477900),
     s = n(691885),
     r = n(922016),
     o = n(866665),
-    c = n(939249),
-    u = n(783977);
+    u = n(939249),
+    c = n(783977);
 let d = { low: "Low", medium: "Medium", high: "High", xhigh: "Extra high", max: "Max" },
     h = {
         anthropic: "Anthropic",
@@ -19,7 +19,7 @@ var m = n(295813),
     f = n(375708),
     p = n(752065);
 function g(e) {
-    let { title: t, modelChoices: n, thinkingChoices: r, value: o, disabled: c, onChange: u } = e,
+    let { title: t, modelChoices: n, thinkingChoices: r, value: o, disabled: u, onChange: c } = e,
         g = a.useMemo(() => n.map((e) => ({ id: e.id, label: e.label, value: e.id, description: h[e.provider] })), [n]),
         x = a.useMemo(() => r.map((e) => ({ id: e, label: d[e] ?? e, value: e })), [r]);
     return (0, l.jsxs)("div", {
@@ -30,18 +30,18 @@ function g(e) {
                 label: f.intl.string(m.default["9FRudW"]),
                 options: g,
                 value: o.model,
-                onSelectionChange: (e) => u({ ...o, model: e }),
+                onSelectionChange: (e) => c({ ...o, model: e }),
                 selectionMode: "single",
-                disabled: c,
+                disabled: u,
                 fullWidth: !0,
             }),
             (0, l.jsx)(s.l, {
                 label: f.intl.string(m.default["4AsQHS"]),
                 options: x,
                 value: o.thinking,
-                onSelectionChange: (e) => u({ ...o, thinking: e }),
+                onSelectionChange: (e) => c({ ...o, thinking: e }),
                 selectionMode: "single",
-                disabled: c,
+                disabled: u,
                 fullWidth: !0,
             }),
         ],
@@ -97,12 +97,12 @@ function x(e) {
             (0, l.jsx)(o.m, {
                 text: f.intl.string(m.default.COVYeS),
                 ariaHidden: !0,
-                children: (0, l.jsx)(c.D, {
+                children: (0, l.jsx)(u.D, {
                     innerRef: v,
                     className: h ?? p.hZ,
                     "aria-label": f.intl.string(m.default.COVYeS),
                     ...e,
-                    children: x ?? (0, l.jsx)(u.R, { size: "xxs", color: "currentColor", "aria-hidden": !0 }),
+                    children: x ?? (0, l.jsx)(c.R, { size: "xxs", color: "currentColor", "aria-hidden": !0 }),
                 }),
             }),
     });

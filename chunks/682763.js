@@ -1,6 +1,6 @@
 "use strict";
 n.d(t, {
-    C7: () => R,
+    C7: () => O,
     Fd: () => o,
     Lt: () => E,
     Mi: () => u,
@@ -15,7 +15,7 @@ n.d(t, {
     i0: () => L,
     lo: () => f,
     mD: () => m,
-    oW: () => O,
+    oW: () => R,
     ot: () => T,
     pi: () => I,
     wK: () => c,
@@ -97,10 +97,10 @@ function N(e, t, n, i) {
 function C(e, t, n) {
     return i.h.dispatch({ type: "OVERLAY_V3_NATIVE_FOCUS_GAINED", pid: e, windowHandle: t, windowClass: n });
 }
-function R(e) {
+function O(e) {
     return i.h.dispatch({ type: "OVERLAY_V3_NATIVE_FOCUS_LOST", pid: e });
 }
-function O(e) {
+function R(e) {
     return i.h.dispatch({ type: "OVERLAY_V3_NATIVE_SUCCESSFULLY_SHOWN", pid: e });
 }
 function L(e) {

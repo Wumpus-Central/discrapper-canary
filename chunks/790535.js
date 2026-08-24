@@ -37,8 +37,8 @@ class g extends f.A {
 let S = new g();
 var N = n(233993),
     C = n(967198),
-    R = n(403362);
-class O extends f.A {
+    O = n(403362);
+class R extends f.A {
     _initialize() {
         I.h.subscribe("VOICE_CHANNEL_SELECT", this.handleVoiceChannelSelect),
             I.h.subscribe("LOGOUT", this.handleLogout);
@@ -57,13 +57,13 @@ class O extends f.A {
     };
     handleDisconnectFromStageChannel = (e) => {
         let t = C.A.getGuildId();
-        (0, o.A)([t, e].filter(R.Vq));
+        (0, o.A)([t, e].filter(O.Vq));
     };
     handleLogout = () => {
         this.terminate(), this.handleDisconnectFromStageChannel(null);
     };
 }
-let L = new O();
+let L = new R();
 function y(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
     return new Promise(async (r) => {

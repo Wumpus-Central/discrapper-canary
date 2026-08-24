@@ -68,8 +68,8 @@ function u(e) {
             [b, w] = (0, n.useState)(y),
             [_, S] = (0, n.useState)(!1);
         y !== b && (w(y), S(!1));
-        let E = (0, n.useMemo)(() => f(_ ? [] : g), [_, g]),
-            x = (0, n.useRef)(a),
+        let x = (0, n.useMemo)(() => f(_ ? [] : g), [_, g]),
+            E = (0, n.useRef)(a),
             [k, C] = (0, n.useState)(a),
             T = (0, n.useRef)(a),
             [M, P] = (0, n.useState)(!1);
@@ -77,14 +77,14 @@ function u(e) {
             (0, n.useEffect)(() => {
                 if (!M) return;
                 P(!1);
-                let e = v || u || x.current;
+                let e = v || u || E.current;
                 p(e, T.current) || ((T.current = e), C(e));
             }),
             {
-                realtimeValidation: m || E || v || u || a,
-                displayValidation: "native" === h ? m || E || k : m || E || v || u || k,
+                realtimeValidation: m || x || v || u || a,
+                displayValidation: "native" === h ? m || x || k : m || x || v || u || k,
                 updateValidation(e) {
-                    "aria" !== h || p(k, e) ? (x.current = e) : C(e);
+                    "aria" !== h || p(k, e) ? (E.current = e) : C(e);
                 },
                 resetValidation() {
                     p(a, T.current) || ((T.current = a), C(a)), "native" === h && P(!1), S(!0);

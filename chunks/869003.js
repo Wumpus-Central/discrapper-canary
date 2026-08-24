@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => O });
+n.d(t, { A: () => R });
 var i = n(477900);
 n(582128);
 var r = n(189213),
@@ -23,7 +23,7 @@ var r = n(189213),
     S = n(375708);
 let N = !1,
     C = !1;
-class R extends h.Ay {
+class O extends h.Ay {
     _initialize() {
         super._initialize(),
             c.A.addChangeListener(this.handlePopoutWindowUpdate),
@@ -99,4 +99,4 @@ class R extends h.Ay {
         N = t;
     };
 }
-let O = new R();
+let R = new O();

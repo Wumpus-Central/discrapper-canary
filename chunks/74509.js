@@ -112,7 +112,7 @@ let i = new (r(678884))(),
     },
     w = (e, t) => (
         l("comp", e, t),
-        l("caret", (e = x(e, t))),
+        l("caret", (e = E(e, t))),
         l("tildes", (e = S(e, t))),
         l("xrange", (e = C(e, t))),
         l("stars", (e = M(e, t))),
@@ -123,9 +123,9 @@ let i = new (r(678884))(),
         e
             .trim()
             .split(/\s+/)
-            .map((e) => E(e, t))
+            .map((e) => x(e, t))
             .join(" "),
-    E = (e, t) => {
+    x = (e, t) => {
         let r = t.loose ? c[f.TILDELOOSE] : c[f.TILDE];
         return e.replace(r, (t, r, n, o, i) => {
             let a;
@@ -145,7 +145,7 @@ let i = new (r(678884))(),
             );
         });
     },
-    x = (e, t) =>
+    E = (e, t) =>
         e
             .trim()
             .split(/\s+/)

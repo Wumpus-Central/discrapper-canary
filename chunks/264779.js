@@ -3,11 +3,11 @@ n.d(t, {
     Cp: () => S,
     HB: () => y,
     Ng: () => T,
-    OP: () => R,
+    OP: () => O,
     So: () => N,
     WD: () => p,
     Wl: () => L,
-    eN: () => O,
+    eN: () => R,
     g_: () => C,
     kc: () => g,
     kd: () => m,
@@ -85,10 +85,10 @@ function N() {
 function C(e) {
     return null != e.partnerId && A.km.has(e.partnerId);
 }
-function R(e) {
+function O(e) {
     return !(0, u.isIOS)() || !e.hasFlag(h.$3.IS_BLOCKED_IOS);
 }
-function O(e) {
+function R(e) {
     let t = {};
     for (let { code: n, promotion: i } of e) t[i.id] = n;
     return t;
@@ -102,7 +102,7 @@ function L(e, t) {
     );
     return e.filter((e) => {
         let { promotion: t } = e;
-        return !n.has(t.id) && !y(t) && !C(t) && R(t);
+        return !n.has(t.id) && !y(t) && !C(t) && O(t);
     });
 }
 function y(e) {

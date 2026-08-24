@@ -23,8 +23,8 @@ var o = n(503698),
     S = n(689175),
     N = n(939249),
     C = n(367385),
-    R = n(116305),
-    O = n(775121),
+    O = n(116305),
+    R = n(775121),
     L = n(775602),
     y = n(400492),
     D = n(625494),
@@ -137,7 +137,7 @@ class U extends r.PureComponent {
             this.setTimeout(this.createExplosion, 1800);
     }
     componentWillUnmount() {
-        for (let e of (O.A.enable(), (this.children.length = 0), this._timeouts)) clearTimeout(e);
+        for (let e of (R.A.enable(), (this.children.length = 0), this._timeouts)) clearTimeout(e);
     }
     setTimeout = (e, t) => {
         let n = setTimeout(e, t);
@@ -412,7 +412,7 @@ function Y(e) {
     let { transitionState: t, onClose: n } = e,
         [a, s] = r.useState(!1),
         [l, o] = r.useState(!1),
-        c = r.useMemo(() => (__OVERLAY__ ? (0, R.y8)() : (0, C.Bx)()), []),
+        c = r.useMemo(() => (__OVERLAY__ ? (0, O.y8)() : (0, C.Bx)()), []),
         { keyboardModeEnabled: u, useReducedMotion: _ } = (0, h.cf)([L.Ay], () => ({
             keyboardModeEnabled: L.Ay.keyboardModeEnabled,
             useReducedMotion: L.Ay.useReducedMotion,
@@ -444,7 +444,7 @@ function Y(e) {
                                   content: c,
                                   keyboardModeEnabled: u,
                                   activateRagingDemon: function () {
-                                      _ || (O.A.disable(), s(!0), o(!0));
+                                      _ || (R.A.disable(), s(!0), o(!0));
                                   },
                               },
                               "modal",

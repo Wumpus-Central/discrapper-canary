@@ -67,8 +67,8 @@ var r,
     S = n(734057),
     N = n(576705),
     C = n(994500),
-    R = n(287809),
-    O = n(845625),
+    O = n(287809),
+    R = n(845625),
     L = n(615550),
     y = n(652215),
     D = n(375708);
@@ -93,7 +93,7 @@ function P(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : y.FXj,
         i = arguments.length > 3 ? arguments[3] : void 0,
         r = arguments.length > 4 ? arguments[4] : void 0,
-        a = null != t ? (0, g.m1)(t, R.default, C.A) : D.intl.string(D.t.J90oLW),
+        a = null != t ? (0, g.m1)(t, O.default, C.A) : D.intl.string(D.t.J90oLW),
         s = (function (e) {
             let t = M(e, h.BLOCK_PROFILE_UPDATE_TYPE);
             if (null != t) return t;
@@ -222,7 +222,7 @@ function w(e) {
 function G(e) {
     let t = M(e, h.CHANNEL_ID),
         n = M(e, h.ALERT_ACTIONS_EXECUTION),
-        i = (0, O.v)(n);
+        i = (0, R.v)(n);
     return {
         content: (function (e) {
             let [t] = e.embeds ?? [];

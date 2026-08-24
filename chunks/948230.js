@@ -8,12 +8,12 @@ n.d(t, {
     Ok: () => N,
     U1: () => T,
     Zq: () => y,
-    dm: () => O,
+    dm: () => R,
     gA: () => m,
     hF: () => p,
     oB: () => S,
     tZ: () => L,
-    xx: () => R,
+    xx: () => O,
 }),
     n(938796);
 var i = n(636537),
@@ -106,11 +106,11 @@ function N(e, t) {
 function C(e, t) {
     return g(e, t);
 }
-async function R(e) {
+async function O(e) {
     let t = await i.Bo.del({ url: u.Rsh.VIBEGRATIONS_PROJECT(e), rejectWithError: !1 });
     return r.h.dispatch({ type: "VIBEGRATIONS_PROJECT_DELETE_SUCCESS", projectId: e }), t;
 }
-function O(e, t) {
+function R(e, t) {
     r.h.dispatch({ type: "VIBEGRATIONS_PROJECT_SELECT", guildId: e, projectId: t });
 }
 async function L(e, t) {

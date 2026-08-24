@@ -49,10 +49,10 @@ let g = new m();
 var S = n(952818),
     N = n(687658),
     C = n(321034);
-let R = new l.A("RunningGameSystemMetricsMonitor"),
-    O = [50, 95, 99];
+let O = new l.A("RunningGameSystemMetricsMonitor"),
+    R = [50, 95, 99];
 function L(e) {
-    let t = e.getReport(O);
+    let t = e.getReport(R);
     return {
         p50: t.percentiles[50] ?? 0,
         p95: t.percentiles[95] ?? 0,
@@ -135,7 +135,7 @@ class y {
             }
             this.lastCpuSnapshot = e;
         } catch (e) {
-            R.warn("Failed to sample CPU/memory metrics", e?.message);
+            O.warn("Failed to sample CPU/memory metrics", e?.message);
         }
     }
     sampleDiscordMemory() {
@@ -151,7 +151,7 @@ class y {
             let n = (e / this.lastCpuSnapshot.memoryTotal) * 100;
             this.discordMemoryHistogram.addSample(n);
         } catch (e) {
-            R.warn("Failed to sample Discord memory metrics", e?.message);
+            O.warn("Failed to sample Discord memory metrics", e?.message);
         }
     }
 }

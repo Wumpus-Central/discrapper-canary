@@ -27,7 +27,7 @@ function C() {
     let e = E.Ay.getInputDevices()[E.Ay.getInputDeviceId()];
     return null != e ? e.name : "";
 }
-function R(e, t, n, i) {
+function O(e, t, n, i) {
     let { location: r, analyticsLocations: a } = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {};
     if (t === n) return;
     let s = h.Ay.getVoiceChannelId(),
@@ -49,7 +49,7 @@ function R(e, t, n, i) {
     });
 }
 S.enableNativeLogger(!0);
-let O = r()((e, t, n) => {
+let R = r()((e, t, n) => {
         f.default.track(T.HAw.USER_VOLUME_SETTING_UPDATED, {
             target_user_id: e,
             context: t,
@@ -132,7 +132,7 @@ let O = r()((e, t, n) => {
         setLocalVolume(e, t) {
             let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : g.x.DEFAULT,
                 i = (0, o.z)(t, n);
-            a.h.dispatch({ type: "AUDIO_SET_LOCAL_VOLUME", context: n, userId: e, volume: i }), O(e, n, i);
+            a.h.dispatch({ type: "AUDIO_SET_LOCAL_VOLUME", context: n, userId: e, volume: i }), R(e, n, i);
         },
         setAudioMixerSettings(e) {
             let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : g.x.DEFAULT;
@@ -225,7 +225,7 @@ let O = r()((e, t, n) => {
             if (D()) return;
             let i = E.Ay.getInputDeviceId();
             (null != t || null != n) &&
-                R(E.Ay.getInputDevices(), i, e, "Audio Input", { location: t, analyticsLocations: n }),
+                O(E.Ay.getInputDevices(), i, e, "Audio Input", { location: t, analyticsLocations: n }),
                 a.h.dispatch({ type: "AUDIO_SET_INPUT_DEVICE", id: e, oldId: i }),
                 N();
         },
@@ -235,7 +235,7 @@ let O = r()((e, t, n) => {
             if (D()) return;
             let i = E.Ay.getOutputDeviceId();
             (null != t || null != n) &&
-                R(E.Ay.getOutputDevices(), i, e, "Audio Output", { location: t, analyticsLocations: n }),
+                O(E.Ay.getOutputDevices(), i, e, "Audio Output", { location: t, analyticsLocations: n }),
                 a.h.dispatch({ type: "AUDIO_SET_OUTPUT_DEVICE", id: e, oldId: i }),
                 N();
         },
@@ -245,7 +245,7 @@ let O = r()((e, t, n) => {
             if (D()) return;
             let i = E.Ay.getVideoDeviceId();
             (null != t || null != n) &&
-                R(E.Ay.getVideoDevices(), i, e, "Video", { location: t, analyticsLocations: n }),
+                O(E.Ay.getVideoDevices(), i, e, "Video", { location: t, analyticsLocations: n }),
                 a.h.dispatch({ type: "MEDIA_ENGINE_SET_VIDEO_DEVICE", id: e, oldId: i });
         },
         setActiveInputProfile(e) {

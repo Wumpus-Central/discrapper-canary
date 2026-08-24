@@ -106,7 +106,7 @@ function C(e) {
                     !S(e, _.Uo.INCOMING_GAME_FRIEND_REQUESTS_ACCEPTED, n),
             ));
 }
-function R(e) {
+function O(e) {
     (0, s.AZ)(e) &&
         (h.notifCenterItems = h.notifCenterItems.map((t) =>
             t.type === _.hW.GUILD_SCHEDULED_EVENT_STARTED && t.guild_scheduled_event_id === e.id
@@ -114,7 +114,7 @@ function R(e) {
                 : t,
         ));
 }
-class O extends i.Ay.PersistedStore {
+class R extends i.Ay.PersistedStore {
     static displayName = "NotificationCenterItemsStore";
     static persistKey = "NotificationCenterItemsStore_v2";
     initialize(e) {
@@ -164,7 +164,7 @@ class O extends i.Ay.PersistedStore {
         return h.notifCenterTabFocused;
     }
 }
-let L = new O(r.h, {
+let L = new R(r.h, {
     CONNECTION_OPEN: function (e) {
         f();
         let t = [],
@@ -184,7 +184,7 @@ let L = new O(r.h, {
             }),
             e.guilds.forEach((e) => {
                 e.guild_scheduled_events.forEach((e) => {
-                    R(e);
+                    O(e);
                 });
             }),
             (h.notifCenterLocalItems = t);
@@ -200,7 +200,7 @@ let L = new O(r.h, {
     },
     GUILD_SCHEDULED_EVENT_UPDATE: function (e) {
         let { guildScheduledEvent: t } = e;
-        R(t);
+        O(t);
     },
     NOTIFICATION_CENTER_ITEM_CREATE: m,
     NOTIFICATION_CENTER_ITEM_DELETE: function (e) {

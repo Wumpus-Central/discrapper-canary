@@ -854,7 +854,7 @@ let tH = function (e) {
 };
 var tB = n(462180),
     tW = n(602034),
-    tK = n(892547);
+    tK = n(683438);
 let tz = r.forwardRef(function (e, t) {
         let {
                 emojiListRef: n,

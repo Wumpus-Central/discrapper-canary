@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => O });
+n.d(t, { A: () => R });
 var i = n(284009),
     r = n.n(i),
     a = n(435558),
@@ -66,7 +66,7 @@ function C(e) {
             null != o && ((t.editInfo.protoToSave = o), (t.editInfo.offlineEditDataVersion = i.offlineEditDataVersion));
         });
 }
-class R extends l.Ay.PersistedStore {
+class O extends l.Ay.PersistedStore {
     static displayName = "UserSettingsProtoStore";
     static persistKey = "UserSettingsProtoStore-Cache";
     initialize(e) {
@@ -143,7 +143,7 @@ class R extends l.Ay.PersistedStore {
         return (0, _.p)(this.getGuildThemeSourcePreferenceOverride(e), this.getDefaultGuildThemePreference());
     }
 }
-let O = new R(u.h, {
+let R = new O(u.h, {
     CACHE_LOADED: function (e) {
         let { userSettings: t } = e;
         C(t);

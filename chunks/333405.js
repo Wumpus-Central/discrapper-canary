@@ -368,8 +368,8 @@ function S(e, t) {
             t.send(void 0 === r ? null : r);
     }),
     (v.agent = () => new h());
-for (var E = 0, x = ["GET", "POST", "OPTIONS", "PATCH", "PUT", "DELETE"]; E < x.length; E++) {
-    let e = x[E];
+for (var x = 0, E = ["GET", "POST", "OPTIONS", "PATCH", "PUT", "DELETE"]; x < E.length; x++) {
+    let e = E[x];
     h.prototype[e.toLowerCase()] = function (t, r) {
         let n = new v.Request(e, t);
         return this._setDefaults(n), r && n.end(r), n;

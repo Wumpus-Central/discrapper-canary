@@ -1,5 +1,5 @@
 "use strict";
-r.r(t), r.d(t, { Manager: () => a, usePopper: () => y, Reference: () => x, Popper: () => _ });
+r.r(t), r.d(t, { Manager: () => a, usePopper: () => y, Reference: () => E, Popper: () => _ });
 var n = r(582128),
     o = n.createContext(),
     i = n.createContext();
@@ -149,9 +149,9 @@ function _(e) {
         v = n.useState(null),
         _ = v[0],
         S = v[1],
-        E = n.useState(null),
-        x = E[0],
-        k = E[1];
+        x = n.useState(null),
+        E = x[0],
+        k = x[1];
     n.useEffect(
         function () {
             u(d, _);
@@ -167,10 +167,10 @@ function _(e) {
                         placement: r,
                         strategy: a,
                         onFirstUpdate: p,
-                        modifiers: [].concat(c, [{ name: "arrow", enabled: null != x, options: { element: x } }]),
+                        modifiers: [].concat(c, [{ name: "arrow", enabled: null != E, options: { element: E } }]),
                     };
                 },
-                [r, a, p, c, x],
+                [r, a, p, c, E],
             ),
         ),
         T = C.state,
@@ -195,8 +195,8 @@ function _(e) {
     return s(h)(O);
 }
 var S = r(916822),
-    E = r.n(S);
-function x(e) {
+    x = r.n(S);
+function E(e) {
     var t = e.children,
         r = e.innerRef,
         o = n.useContext(i),
@@ -214,7 +214,7 @@ function x(e) {
         }, []),
         n.useEffect(
             function () {
-                E()(!!o, "`Reference` should not be used outside of a `Manager` component.");
+                x()(!!o, "`Reference` should not be used outside of a `Manager` component.");
             },
             [o],
         ),

@@ -7,10 +7,10 @@ function r(e) {
     return a.A.subscribeEntries(e);
 }
 function o(e) {
-    let { frameId: t, level: l, className: o, overlay: d } = e,
-        c = s.useRef(null);
+    let { frameId: t, level: l, className: o, overlay: c } = e,
+        d = s.useRef(null);
     s.useLayoutEffect(() => {
-        let e = c.current;
+        let e = d.current;
         if (null != e)
             return (
                 a.A.registerFrameTarget(t, e, l),
@@ -22,8 +22,8 @@ function o(e) {
     let u = s.useSyncExternalStore(r, () => a.A.getPoolEntry(t)?.overlay ?? null);
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)("div", { ref: c, className: o, style: { pointerEvents: "none" } }),
-            null != d && null != u ? (0, n.createPortal)(d, u) : null,
+            (0, i.jsx)("div", { ref: d, className: o, style: { pointerEvents: "none" } }),
+            null != c && null != u ? (0, n.createPortal)(c, u) : null,
         ],
     });
 }

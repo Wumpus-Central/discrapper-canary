@@ -27,8 +27,8 @@ var h = n(838111),
     S = n(734057),
     N = n(576705),
     C = n(287809),
-    R = n(927813),
-    O = n(427262),
+    O = n(927813),
+    R = n(427262),
     L = n(392054),
     y = n(73510),
     D = n(652215),
@@ -400,7 +400,7 @@ let G = {
                           await c.A.kickUser(n.id, r, w(e, "reason") ?? ""),
                               u.A.sendBotMessage(
                                   i.id,
-                                  P.intl.formatToPlainString(P.t["9wzHDV"], { user: O.Ay.getUserTag(t) }),
+                                  P.intl.formatToPlainString(P.t["9wzHDV"], { user: R.Ay.getUserTag(t) }),
                               );
                       })().catch(() => {
                           u.A.sendBotMessage(i.id, P.intl.string(P.t.l0gNlp));
@@ -451,32 +451,32 @@ let G = {
                             {
                                 name: P.intl.string(P.t.RKpitY),
                                 displayName: P.intl.string(P.t.RKpitY),
-                                value: R.A.Seconds.HOUR,
+                                value: O.A.Seconds.HOUR,
                             },
                             {
                                 name: P.intl.string(P.t["8WfJZ8"]),
                                 displayName: P.intl.string(P.t["8WfJZ8"]),
-                                value: 6 * R.A.Seconds.HOUR,
+                                value: 6 * O.A.Seconds.HOUR,
                             },
                             {
                                 name: P.intl.string(P.t.p1up7u),
                                 displayName: P.intl.string(P.t.p1up7u),
-                                value: 12 * R.A.Seconds.HOUR,
+                                value: 12 * O.A.Seconds.HOUR,
                             },
                             {
                                 name: P.intl.string(P.t.XuVkkD),
                                 displayName: P.intl.string(P.t.XuVkkD),
-                                value: R.A.Seconds.DAY,
+                                value: O.A.Seconds.DAY,
                             },
                             {
                                 name: P.intl.string(P.t["gMcDS+"]),
                                 displayName: P.intl.string(P.t["gMcDS+"]),
-                                value: 3 * R.A.Seconds.DAY,
+                                value: 3 * O.A.Seconds.DAY,
                             },
                             {
                                 name: P.intl.string(P.t.FA7IUk),
                                 displayName: P.intl.string(P.t.FA7IUk),
-                                value: 7 * R.A.Seconds.DAY,
+                                value: 7 * O.A.Seconds.DAY,
                             },
                         ];
                     },
@@ -512,7 +512,7 @@ let G = {
                           await c.A.banUser(n.id, r, t, a),
                               u.A.sendBotMessage(
                                   i.id,
-                                  P.intl.formatToPlainString(P.t.YflWdM, { user: null != s ? O.Ay.getUserTag(s) : r }),
+                                  P.intl.formatToPlainString(P.t.YflWdM, { user: null != s ? R.Ay.getUserTag(s) : r }),
                               );
                       })().catch(() => {
                           u.A.sendBotMessage(i.id, P.intl.string(P.t.w2J6Qs));
@@ -598,7 +598,7 @@ let G = {
                           }),
                               u.A.sendBotMessage(
                                   i.id,
-                                  P.intl.formatToPlainString(P.t.BbRV6o, { user: O.Ay.getUserTag(l), duration: t }),
+                                  P.intl.formatToPlainString(P.t.BbRV6o, { user: R.Ay.getUserTag(l), duration: t }),
                               );
                       })().catch(() => {
                           u.A.sendBotMessage(i.id, P.intl.string(P.t["+mWyVq"]));

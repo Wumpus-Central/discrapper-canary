@@ -133,7 +133,7 @@ function p(e, r, n) {
             l);
     if (
         (e.showHidden && (S = Object.getOwnPropertyNames(r)),
-        x(r) && (S.indexOf("message") >= 0 || S.indexOf("description") >= 0))
+        E(r) && (S.indexOf("message") >= 0 || S.indexOf("description") >= 0))
     )
         return d(r);
     if (0 === S.length) {
@@ -142,8 +142,8 @@ function p(e, r, n) {
             return e.stylize("[Function" + T + "]", "special");
         }
         if (_(r)) return e.stylize(RegExp.prototype.toString.call(r), "regexp");
-        if (E(r)) return e.stylize(Date.prototype.toString.call(r), "date");
-        if (x(r)) return d(r);
+        if (x(r)) return e.stylize(Date.prototype.toString.call(r), "date");
+        if (E(r)) return d(r);
     }
     var M = "",
         A = !1,
@@ -152,8 +152,8 @@ function p(e, r, n) {
         (m(r) && ((A = !0), (O = ["[", "]"])),
         k(r) && (M = " [Function" + (r.name ? ": " + r.name : "") + "]"),
         _(r) && (M = " " + RegExp.prototype.toString.call(r)),
-        E(r) && (M = " " + Date.prototype.toUTCString.call(r)),
-        x(r) && (M = " " + d(r)),
+        x(r) && (M = " " + Date.prototype.toUTCString.call(r)),
+        E(r) && (M = " " + d(r)),
         0 === S.length && (!A || 0 == r.length))
     )
         return O[0] + M + O[1];
@@ -254,10 +254,10 @@ function _(e) {
 function S(e) {
     return "object" == typeof e && null !== e;
 }
-function E(e) {
+function x(e) {
     return S(e) && "[object Date]" === C(e);
 }
-function x(e) {
+function E(e) {
     return S(e) && ("[object Error]" === C(e) || e instanceof Error);
 }
 function k(e) {
@@ -322,10 +322,10 @@ function T(e) {
     (t.isRegExp = _),
     (t.types.isRegExp = _),
     (t.isObject = S),
-    (t.isDate = E),
-    (t.types.isDate = E),
-    (t.isError = x),
-    (t.types.isNativeError = x),
+    (t.isDate = x),
+    (t.types.isDate = x),
+    (t.isError = E),
+    (t.types.isNativeError = E),
     (t.isFunction = k),
     (t.isPrimitive = function (e) {
         return (

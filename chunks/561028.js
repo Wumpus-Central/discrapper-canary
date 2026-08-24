@@ -98,8 +98,8 @@ void 0 === g && (g = y),
             w = e.location,
             _ = e.sensitive,
             S = e.strict,
-            E = e.style,
-            x = e.to,
+            x = e.style,
+            E = e.to,
             k = e.innerRef,
             C = (0, l.A)(e, [
                 "aria-current",
@@ -118,13 +118,13 @@ void 0 === g && (g = y),
         return i.createElement(n.XZ.Consumer, null, function (e) {
             e || (0, u.A)(!1);
             var r = w || e.location,
-                a = p(f(x, r), r),
+                a = p(f(E, r), r),
                 l = a.pathname,
                 T = l && l.replace(/([.+*?=^!:${}()[\]|/\\])/g, "\\$1"),
                 M = T ? (0, n.B6)(r.pathname, { path: T, exact: m, sensitive: _, strict: S }) : null,
                 P = !!(b ? b(M, r) : M),
                 A = "function" == typeof h ? h(P) : h,
-                O = "function" == typeof E ? E(P) : E;
+                O = "function" == typeof x ? x(P) : x;
             P &&
                 ((A = (function () {
                     for (var e = arguments.length, t = Array(e), r = 0; r < e; r++) t[r] = arguments[r];

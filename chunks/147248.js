@@ -23,19 +23,19 @@ var p = n(95701),
     S = n(427262),
     N = n(644235),
     C = n(385803);
-let R = !0,
-    O = !1,
+let O = !0,
+    R = !1,
     L = !1;
 function y() {
     return (0, d.$Y)("ClientThemesBackgroundStore");
 }
 function D() {
-    R && (i = void 0), (L = !1), (O = !1);
+    O && (i = void 0), (L = !1), (R = !1);
 }
 function v() {
     let e = !g.Ay.canUseClientThemes(m.default.getCurrentUser());
-    if (e === R) return !1;
-    (R = e), (L = !1);
+    if (e === O) return !1;
+    (O = e), (L = !1);
 }
 function b() {
     let e = A.eh.getSetting().backgroundGradientPresetId;
@@ -72,17 +72,17 @@ class w extends a.Ay.PersistedStore {
         (L = !1),
             null != e &&
                 ((i = null != e.gradientPresetId ? C.ag[e.gradientPresetId] : void 0),
-                (R = !0 !== e.canUseClientThemes)),
+                (O = !0 !== e.canUseClientThemes)),
             this.waitFor(T.A, c.A, _.A, E.Ay, h.A, m.default),
             this.syncWith([m.default], v),
             this.syncWith([c.A], b);
     }
     getState() {
-        return R ? {} : { gradientPresetId: i?.id, canUseClientThemes: !0 };
+        return O ? {} : { gradientPresetId: i?.id, canUseClientThemes: !0 };
     }
     get gradientPreset() {
         if (f(y)) {
-            if (R) return L ? i : void 0;
+            if (O) return L ? i : void 0;
             let e = _.A.getSyncedClientTheme(_.A.systemTheme)?.backgroundGradientPresetId;
             return null != e ? C.ag[e] : void 0;
         }
@@ -92,10 +92,10 @@ class w extends a.Ay.PersistedStore {
         return null == this.gradientPreset ? null : (0, N.FK)(this.gradientPreset);
     }
     get isPreview() {
-        return R;
+        return O;
     }
     get isCoachmark() {
-        return O;
+        return R;
     }
     get mobilePendingThemeIndex() {
         return r;
@@ -104,7 +104,7 @@ class w extends a.Ay.PersistedStore {
 let G = new w(l.h, {
     UPDATE_BACKGROUND_GRADIENT_PRESET: function (e) {
         let { presetId: t } = e;
-        if (((L = R), null == t)) {
+        if (((L = O), null == t)) {
             i = void 0;
             return;
         }
@@ -127,7 +127,7 @@ let G = new w(l.h, {
             i = m.default.getCurrentUser();
         if (null == t || null == n || (0, o.k8)(s.M.CLIENT_THEMES_COACHMARK) || !(0, S.G2)(i)) return;
         let r = T.A.getChannel(t);
-        null != r && (0, p.ke)(r.type) && (O = !0);
+        null != r && (0, p.ke)(r.type) && (R = !0);
     },
     LOGOUT: D,
     CACHE_LOADED: U,

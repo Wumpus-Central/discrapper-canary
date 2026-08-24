@@ -3,11 +3,11 @@ n.d(t, {
     Aw: () => C,
     GD: () => T,
     Hb: () => m,
-    Iu: () => O,
+    Iu: () => R,
     SH: () => N,
     TX: () => p,
     VE: () => I,
-    bB: () => R,
+    bB: () => O,
     o2: () => S,
     ww: () => h,
 });
@@ -94,14 +94,14 @@ function C(e) {
             let t = 0;
             for (let n of e) t += n.size;
             return t;
-        })(e) > R()
+        })(e) > O()
     );
 }
-function R() {
+function O() {
     let e = d.default.getCurrentUser();
     return null != e && e.isStaff(), 524288e3;
 }
-function O(e) {
+function R(e) {
     let { guildId: t, onClick: n, maxSize: i, hideLearnMore: r } = e,
         a = (0, c.Xq)((i ?? S(t)) / 1024, { useKibibytes: !0 }),
         s = (0, c.Xq)(E.f3 / 1024, { useKibibytes: !0 });

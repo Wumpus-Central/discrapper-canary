@@ -49,8 +49,8 @@ function f(e) {
             style: S,
             wrapperClassName: N,
             className: C,
-            innerClassName: R,
-            onClick: O,
+            innerClassName: O,
+            onClick: R,
             onDoubleClick: L,
             onMouseDown: y,
             onMouseUp: D,
@@ -95,7 +95,7 @@ function f(e) {
             "aria-label": x,
             "aria-busy": !!m || void 0,
             ref: w,
-            onClick: B ? (e) => e.preventDefault() : O,
+            onClick: B ? (e) => e.preventDefault() : R,
             onDoubleClick: B ? (e) => e.preventDefault() : L,
             onMouseUp: T ? void 0 : D,
             onMouseDown: T ? void 0 : y,
@@ -115,7 +115,7 @@ function f(e) {
                 m && !T
                     ? (0, i.jsx)(c.y, { type: c.y.Type.PULSING_ELLIPSIS, className: _.u1, itemClassName: _.$N })
                     : null,
-                (0, i.jsx)("div", { className: s()(_.PG, R), children: P }),
+                (0, i.jsx)("div", { className: s()(_.PG, O), children: P }),
             ],
         }),
     });

@@ -108,14 +108,14 @@
         _ = w && w(w(M([])));
     _ && _ !== n && o.call(_, a) && (b = _);
     var S = (g.prototype = v.prototype = Object.create(b));
-    function E(e) {
+    function x(e) {
         ["next", "throw", "return"].forEach(function (t) {
             e[t] = function (e) {
                 return this._invoke(t, e);
             };
         });
     }
-    function x(e) {
+    function E(e) {
         var t;
         this._invoke = function (r, n) {
             function i() {
@@ -199,20 +199,20 @@
         (u.awrap = function (e) {
             return { __await: e };
         }),
-        E(x.prototype),
-        (x.prototype[s] = function () {
+        x(E.prototype),
+        (E.prototype[s] = function () {
             return this;
         }),
-        (u.AsyncIterator = x),
+        (u.AsyncIterator = E),
         (u.async = function (e, t, r, n) {
-            var o = new x(c(e, t, r, n));
+            var o = new E(c(e, t, r, n));
             return u.isGeneratorFunction(t)
                 ? o
                 : o.next().then(function (e) {
                       return e.done ? e.value : o.next();
                   });
         }),
-        E(S),
+        x(S),
         (S[l] = "Generator"),
         (S[a] = function () {
             return this;

@@ -22,15 +22,15 @@ function l(e, t, r) {
             onPressChange: w,
             onPress: _,
             onPressUp: S,
-            onClick: E,
+            onClick: x,
         } = e,
-        { pressProps: x, isPressed: k } = (0, a.d)({
+        { pressProps: E, isPressed: k } = (0, a.d)({
             onPressStart: g,
             onPressEnd: b,
             onPressChange: w,
             onPress: _,
             onPressUp: S,
-            onClick: E,
+            onClick: x,
             isDisabled: l,
         }),
         { pressProps: C, isPressed: T } = (0, a.d)({
@@ -38,7 +38,7 @@ function l(e, t, r) {
             onPressEnd: b,
             onPressChange: w,
             onPressUp: S,
-            onClick: E,
+            onClick: x,
             onPress(e) {
                 var n;
                 null == _ || _(e), t.toggle(), null == (n = r.current) || n.focus();
@@ -46,7 +46,7 @@ function l(e, t, r) {
             isDisabled: l || u,
         }),
         { focusableProps: M } = (0, s.Wc)(e, r),
-        P = (0, n.v)(x, M),
+        P = (0, n.v)(E, M),
         A = (0, o.$)(e, { labelable: !0 });
     return (
         (0, i.F)(r, t.defaultSelected, t.setSelected),

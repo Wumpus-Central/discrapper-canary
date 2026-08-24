@@ -23,11 +23,11 @@ let p = new Map(),
     S = 0,
     N = new Set(),
     C = new Map(),
-    R = Date.UTC(2026, 5, 29),
-    O = new d.A({
+    O = Date.UTC(2026, 5, 29),
+    R = new d.A({
         computeBonus: () => 100,
         computeWeight: (e) => {
-            if (e > s()().diff(R, "days")) return 0;
+            if (e > s()().diff(O, "days")) return 0;
             let t = 1;
             return (
                 e <= 3 ? (t = 100) : e <= 15 ? (t = 70) : e <= 30 ? (t = 50) : e <= 45 ? (t = 30) : e <= 80 && (t = 10),
@@ -115,13 +115,13 @@ class U extends l.Ay.Store {
         return N;
     }
     getFrequentlyUsedSoundIds() {
-        return O.frequently;
+        return R.frequently;
     }
     hasPendingUsage() {
         return L.length > 0;
     }
     get playedSoundFrecencyWithoutFetchingLatest() {
-        return O;
+        return R;
     }
     isLocalSoundboardMuted(e) {
         return m.has(e);
@@ -141,7 +141,7 @@ class U extends l.Ay.Store {
 }
 let w = new U(o.h, {
     LOGOUT: function () {
-        p.clear(), T.clear(), C.clear(), (y = !1), (S = 0), (g = 0), (D = !1), (L = []), O.overwriteHistory({});
+        p.clear(), T.clear(), C.clear(), (y = !1), (S = 0), (g = 0), (D = !1), (L = []), R.overwriteHistory({});
     },
     GUILD_SOUNDBOARD_FETCH: function () {
         S = 1;
@@ -177,7 +177,7 @@ let w = new U(o.h, {
     },
     SOUNDBOARD_TRACK_USAGE: function (e) {
         let { soundId: t } = e;
-        O.track(t), L.push({ key: t, timestamp: Date.now() }), O.compute();
+        R.track(t), L.push({ key: t, timestamp: Date.now() }), R.compute();
     },
     VOICE_CHANNEL_SELECT: function () {
         T.clear(), C.clear();
@@ -190,7 +190,7 @@ let w = new U(o.h, {
                 (N = new Set(a?.favoriteSoundboardSounds?.soundIds ?? [])),
                     n && (L = []),
                     a?.playedSoundFrecency != null &&
-                        O.overwriteHistory(
+                        R.overwriteHistory(
                             r().mapValues(a.playedSoundFrecency.playedSounds ?? {}, (e) => ({
                                 ...e,
                                 recentUses: e.recentUses.map(Number).filter((e) => e > 0),

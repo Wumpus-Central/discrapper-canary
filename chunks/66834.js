@@ -22,8 +22,8 @@ var i = n(562708),
     S = n(808728),
     N = n(71393),
     C = n(309010),
-    R = n(967198),
-    O = n(287809),
+    O = n(967198),
+    R = n(287809),
     L = n(174459),
     y = n(488926),
     D = n(499785),
@@ -50,11 +50,11 @@ let x = {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
             { source: i, loadId: r, lurkLocation: l, autoNavigate: d = !0 } = t,
             c = t.lurker ?? !1,
-            u = O.default.getCurrentUser();
+            u = R.default.getCurrentUser();
         if (u?.hasFlag(b.nhx.QUARANTINED)) return (0, I.default)(), new Promise((e, t) => t(Error()));
         s.h.wait(() => s.h.dispatch({ type: "GUILD_JOIN", guildId: e, lurker: c, source: i, loadId: r }));
         try {
-            let t = R.A.getGuildId(),
+            let t = O.A.getGuildId(),
                 o = e === t && null != N.A.getGuild(e) ? C.Ay.getChannelId(e) : null,
                 u = await a.Bo.put({
                     url: b.Rsh.GUILD_JOIN(e),
@@ -100,7 +100,7 @@ let x = {
                 (t.body?.code === b.t02.USER_GUILD_JOIN_LARGE_GUILD_UNDERAGE_DISALLOWED &&
                     (0, o.yO)(M.w_.JOIN_LARGE_GUILD_UNDERAGE),
                 t.body?.code === b.t02.TOO_MANY_USER_GUILDS &&
-                    ((0, h.Om)(O.default.getCurrentUser()) ? U(b.cZu) : U(b.qlD)),
+                    ((0, h.Om)(R.default.getCurrentUser()) ? U(b.cZu) : U(b.qlD)),
                 t.body?.code === b.t02.GUILD_AT_CAPACITY &&
                     v.A.show({ title: P.intl.string(P.t.ZZlox4), body: P.intl.string(P.t.ZUEGFn) }),
                 c && t.body?.code === b.t02.UNKNOWN_GUILD && w(e),

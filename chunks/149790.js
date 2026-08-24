@@ -11,7 +11,7 @@ n.d(t, {
     xi: () => T,
     DY: () => f,
     Me: () => A,
-    tJ: () => R,
+    tJ: () => O,
     fh: () => u,
     yF: () => g,
     $O: () => C,
@@ -156,7 +156,7 @@ function I(e, t) {
     );
 }
 function f(e) {
-    return R({
+    return O({
         id: e.id,
         name: e.name,
         description: e.description,
@@ -173,7 +173,7 @@ function f(e) {
     });
 }
 function p(e) {
-    return R({
+    return O({
         id: e.id,
         name: e.name,
         description: e.description,
@@ -184,7 +184,7 @@ function p(e) {
     });
 }
 function T(e) {
-    return R({
+    return O({
         id: e.guildId,
         name: e.name ?? "",
         icon: e.icon ?? null,
@@ -194,7 +194,7 @@ function T(e) {
     });
 }
 function m(e) {
-    return R({
+    return O({
         id: e.id,
         name: e.name,
         icon: e.icon ?? null,
@@ -205,7 +205,7 @@ function m(e) {
     });
 }
 function g(e) {
-    return R({
+    return O({
         id: e.id,
         name: e.name,
         icon: e.icon ?? null,
@@ -216,7 +216,7 @@ function g(e) {
     });
 }
 function S(e) {
-    return O({
+    return R({
         id: e.id,
         name: e.name || "",
         description: e.description || null,
@@ -352,11 +352,11 @@ function C(e) {
                 ? new Date(e.premiumProgressBarEnabledUserUpdatedAt)
                 : null,
     };
-    return delete t.roles, delete t.member, O(t);
-}
-function R(e) {
-    return O({ ...d.do, ...e });
+    return delete t.roles, delete t.member, R(t);
 }
 function O(e) {
+    return R({ ...d.do, ...e });
+}
+function R(e) {
     return (0, s.yE)(d.vI, e);
 }

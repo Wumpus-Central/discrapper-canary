@@ -34,7 +34,7 @@ var g = n(498642),
     S = n(71393),
     N = n(927813),
     C = n(935208);
-function R(e, t, n) {
+function O(e, t, n) {
     let i, r, a;
     try {
         (i = h()(e)), (r = null != t ? h()(t) : null), (a = null != n ? h()(n) : null);
@@ -43,7 +43,7 @@ function R(e, t, n) {
     }
     return !((null != r && i.lesser(r)) || (null != a && i.greater(a)));
 }
-function O(e) {
+function R(e) {
     let t, n;
     for (let [i, r] of e)
         switch (i) {
@@ -62,18 +62,18 @@ let L = {
         return (e) => t.includes(e);
     },
     [s().v3("guild_id_range")]: (e) => {
-        let { min: t, max: n } = O(e);
-        return (e) => R(e, t, n);
+        let { min: t, max: n } = R(e);
+        return (e) => O(e, t, n);
     },
     [s().v3("guild_age_range_days")]: (e) => {
-        let { min: t, max: n } = O(e);
-        return (e) => R(Math.floor(C.default.age(e) / N.A.Millis.DAY), t, n);
+        let { min: t, max: n } = R(e);
+        return (e) => O(Math.floor(C.default.age(e) / N.A.Millis.DAY), t, n);
     },
     [s().v3("guild_member_count_range")]: (e) => {
-        let { min: t, max: n } = O(e);
+        let { min: t, max: n } = R(e);
         return (e) => {
             let i = g.A.getMemberCount(e);
-            return null != i && R(i, t, n);
+            return null != i && O(i, t, n);
         };
     },
     [s().v3("guild_has_feature")]: (e) => {

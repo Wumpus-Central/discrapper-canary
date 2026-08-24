@@ -73,12 +73,12 @@ function y(e, t, r) {
         S && !(w && h[w]) && ((g = g.substr(2)), (this.slashes = !0));
     }
     if (!h[w] && (S || (w && !m[w]))) {
-        for (var E, x, k = -1, C = 0; C < c.length; C++) {
+        for (var x, E, k = -1, C = 0; C < c.length; C++) {
             var T = g.indexOf(c[C]);
             -1 !== T && (-1 === k || T < k) && (k = T);
         }
-        -1 !== (x = -1 === k ? g.lastIndexOf("@") : g.lastIndexOf("@", k)) &&
-            ((E = g.slice(0, x)), (g = g.slice(x + 1)), (this.auth = decodeURIComponent(E))),
+        -1 !== (E = -1 === k ? g.lastIndexOf("@") : g.lastIndexOf("@", k)) &&
+            ((x = g.slice(0, E)), (g = g.slice(E + 1)), (this.auth = decodeURIComponent(x))),
             (k = -1);
         for (var C = 0; C < u.length; C++) {
             var T = g.indexOf(u[C]);
@@ -238,9 +238,9 @@ function y(e, t, r) {
             _ = w,
             S = (r.pathname && r.pathname.split("/")) || [],
             d = (e.pathname && e.pathname.split("/")) || [],
-            E = r.protocol && !m[r.protocol];
+            x = r.protocol && !m[r.protocol];
         if (
-            (E &&
+            (x &&
                 ((r.hostname = ""),
                 (r.port = null),
                 r.host && ("" === S[0] ? (S[0] = r.host) : S.unshift(r.host)),
@@ -260,10 +260,10 @@ function y(e, t, r) {
                 (S = d);
         else if (d.length) S || (S = []), S.pop(), (S = S.concat(d)), (r.search = e.search), (r.query = e.query);
         else if (null != e.search) {
-            if (E) {
+            if (x) {
                 (r.host = S.shift()), (r.hostname = r.host);
-                var x = !!(r.host && r.host.indexOf("@") > 0) && r.host.split("@");
-                x && ((r.auth = x.shift()), (r.hostname = x.shift()), (r.host = r.hostname));
+                var E = !!(r.host && r.host.indexOf("@") > 0) && r.host.split("@");
+                E && ((r.auth = E.shift()), (r.hostname = E.shift()), (r.host = r.hostname));
             }
             return (
                 (r.search = e.search),
@@ -291,10 +291,10 @@ function y(e, t, r) {
         w && "" !== S[0] && (!S[0] || "/" !== S[0].charAt(0)) && S.unshift(""),
             C && "/" !== S.join("/").substr(-1) && S.push("");
         var P = "" === S[0] || (S[0] && "/" === S[0].charAt(0));
-        if (E) {
+        if (x) {
             (r.hostname = P ? "" : S.length ? S.shift() : ""), (r.host = r.hostname);
-            var x = !!(r.host && r.host.indexOf("@") > 0) && r.host.split("@");
-            x && ((r.auth = x.shift()), (r.hostname = x.shift()), (r.host = r.hostname));
+            var E = !!(r.host && r.host.indexOf("@") > 0) && r.host.split("@");
+            E && ((r.auth = E.shift()), (r.hostname = E.shift()), (r.host = r.hostname));
         }
         return (
             (w = w || (r.host && S.length)) && !P && S.unshift(""),

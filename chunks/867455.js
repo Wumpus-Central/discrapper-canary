@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => R }), n(938796);
+n.d(t, { A: () => O }), n(938796);
 var i = n(392421),
     r = n(636537),
     a = n(228366),
@@ -38,7 +38,7 @@ function C(e, t) {
         isJoining: t,
     });
 }
-let R = {
+let O = {
     archiveThread(e, t) {
         let n = { archived: !0 };
         return t && (n.locked = !0), N(e, n);

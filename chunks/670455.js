@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
     AO: () => N,
-    CW: () => R,
+    CW: () => O,
     Eq: () => m,
     MW: () => E.iL,
     P0: () => A,
@@ -12,7 +12,7 @@ n.d(t, {
     fs: () => T,
     h0: () => I,
     j6: () => C,
-    qK: () => O,
+    qK: () => R,
     u0: () => h,
     uf: () => f,
 });
@@ -105,8 +105,8 @@ var m =
         (d.DESYNC = "DESYNC"),
         (d.NO_GAME_AUDIO = "NO_GAME_AUDIO"),
         d),
-    R = (((c = {}).FREEFORM = "FREEFORM"), (c.TOXIC_OR_INAPPROPRIATE = "TOXIC_OR_INAPPROPRIATE"), c),
-    O =
+    O = (((c = {}).FREEFORM = "FREEFORM"), (c.TOXIC_OR_INAPPROPRIATE = "TOXIC_OR_INAPPROPRIATE"), c),
+    R =
         (((u = {}).FREEFORM = "FREEFORM"),
         (u.NOT_WHAT_I_WANTED = "NOT_WHAT_I_WANTED"),
         (u.TOO_SLOW = "TOO_SLOW"),

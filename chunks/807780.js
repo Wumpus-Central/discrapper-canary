@@ -14,7 +14,7 @@ var l = t(477900),
     C = t(742589),
     A = t(419534),
     g = t(192308),
-    N = t(892547),
+    N = t(683438),
     f = t(821609),
     p = t(307301),
     j = t(812771),
@@ -596,19 +596,19 @@ var ey = t(202776),
     e0 = t(669953),
     e1 = t(817818),
     e4 = t(591552),
-    e5 = t(961973),
-    e6 = t(435558),
-    e9 = t.n(e6),
+    e6 = t(961973),
+    e5 = t(435558),
+    e9 = t.n(e5),
     e2 = t(665260),
-    e7 = t(355097);
-function e8(e) {
+    e8 = t(355097);
+function e7(e) {
     X.h.dispatch({ type: "CLEAR_PENDING_CHANNEL_AND_ROLE_UPDATES", guildId: e });
 }
 let e3 = {};
 function ne(e) {
     let n = (0, r.bG)([e4.A], () => e4.A.getPendingResponseOptions(e) ?? e3, [e]);
     return (
-        i.useEffect(() => (e8(e), () => e8(e)), [e]),
+        i.useEffect(() => (e7(e), () => e7(e)), [e]),
         i.useEffect(() => {
             null != n && 0 !== Object.keys(n).length && e0.A.updateOnboardingResponses(e);
         }, [e, n]),
@@ -668,11 +668,11 @@ function ne(e) {
                         })({ guildId: e, prompt: n, option: t, selected: l, responses: i }),
                         c = r.reduce((n, t) => {
                             let l = J.Ay.getChannelIdFlags(e, t);
-                            return (n[t] = { flags: (0, e2.lA)(l, e7.vv.OPT_IN_ENABLED, !0) }), n;
+                            return (n[t] = { flags: (0, e2.lA)(l, e8.vv.OPT_IN_ENABLED, !0) }), n;
                         }, {}),
                         o = d.reduce((n, t) => {
                             let l = J.Ay.getChannelIdFlags(e, t);
-                            return (n[t] = { flags: (0, e2.lA)(l, e7.vv.OPT_IN_ENABLED, !1) }), n;
+                            return (n[t] = { flags: (0, e2.lA)(l, e8.vv.OPT_IN_ENABLED, !1) }), n;
                         }, {}),
                         u = { ...c, ...o };
                     e0.A.selectOption(e, n.id, t.id, l),
@@ -830,8 +830,8 @@ function nC(e) {
         [s, d] = i.useState(null),
         [o, u] = i.useState(new Set()),
         x = n?.options?.filter((e) => o.has(e.id)),
-        m = (0, e5.a)(x),
-        C = (0, e5.vV)(x),
+        m = (0, e6.a)(x),
+        C = (0, e6.vV)(x),
         A = (0, r.yK)([e4.A], () => e4.A.getOnboardingResponsesForPrompt(t.id, n.id)),
         { helpText: g, helpTextAdditional: N } = (0, nn.W)({
             guild: t,
@@ -924,8 +924,8 @@ function ng(e) {
         [s, d] = i.useState(null),
         [o, u] = i.useState(new Set()),
         x = n?.options?.filter((e) => o.has(e.id)),
-        m = (0, e5.a)(x),
-        C = (0, e5.vV)(x),
+        m = (0, e6.a)(x),
+        C = (0, e6.vV)(x),
         A = (0, r.yK)([e4.A], () => e4.A.getOnboardingResponsesForPrompt(t.id, n.id)),
         { helpText: g, helpTextAdditional: N } = (0, nn.W)({
             guild: t,

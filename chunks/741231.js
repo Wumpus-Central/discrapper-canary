@@ -22,8 +22,8 @@ var i = n(121197),
     S = n(287809),
     N = n(470452),
     C = n(521427),
-    R = n(56595),
-    O = n(871123),
+    O = n(56595),
+    R = n(871123),
     L = n(353202),
     y = n(683180),
     D = n(317525),
@@ -57,7 +57,7 @@ async function U(e) {
                     }))
                 );
             case P.VV.GAME_SHOP:
-                return (0, O.jz)(i ?? { id: t, type: "id-only" });
+                return (0, R.jz)(i ?? { id: t, type: "id-only" });
             case P.VV.GUILD_SHOP:
                 return (0, _.K)(i, r);
             case P.VV.MEMBER_APPLICATIONS:
@@ -75,7 +75,7 @@ async function U(e) {
             case P.VV.GUILD_BOOSTS:
                 return !0;
             case P.VV.REPORT_TO_MOD:
-                return null != i && (0, R.A)(i);
+                return null != i && (0, O.A)(i);
             case P.VV.GAME_SERVERS:
                 return (
                     (0, E.TS)(t, "isAccessibleChannelOrThreadPath") &&

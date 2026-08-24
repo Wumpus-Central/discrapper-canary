@@ -1,22 +1,22 @@
-n.d(t, { A: () => C, T: () => b });
+n.d(t, { A: () => C, T: () => p });
 var i = n(477900),
     r = n(582128),
     l = n(17928),
     s = n(980707),
     a = n(477782),
     o = n(959988),
-    c = n(820284),
-    u = n(198052),
+    u = n(820284),
+    c = n(198052),
     d = n(74329),
     A = n(405916),
     h = n(338771),
     m = n(616356),
     g = n(287809),
-    p = n(562153),
-    f = n(652215),
-    E = n(375708);
-function b(e, t, n) {
-    let i = (0, l.bG)([u.A], () => (null != e ? u.A.getSelectedParticipantId(e.id) : null)),
+    f = n(562153),
+    E = n(652215),
+    b = n(375708);
+function p(e, t, n) {
+    let i = (0, l.bG)([c.A], () => (null != e ? c.A.getSelectedParticipantId(e.id) : null)),
         s = (0, l.bG)([m.A], () => (null != i ? m.A.getActiveStreamForStreamKey(i) : null), [i]),
         a = (0, l.cf)([g.default], () => n.reduce((e, t) => ((e[t.ownerId] = g.default.getUser(t.ownerId)), e), {}), [
             n,
@@ -26,7 +26,7 @@ function b(e, t, n) {
         let i = n.filter((e) => e.ownerId !== t?.id);
         return 1 === i.length && i[0].ownerId === s?.ownerId
             ? []
-            : i.map((t) => ({ stream: t, username: p.Ay.getName(e.getGuildId(), e.id, a[t.ownerId]) }));
+            : i.map((t) => ({ stream: t, username: f.Ay.getName(e.getGuildId(), e.id, a[t.ownerId]) }));
     }, [a, n, e, s, t?.id]);
 }
 function C(e) {
@@ -35,43 +35,43 @@ function C(e) {
             currentUser: n,
             activeStreams: r,
             hideSelfOptions: l = !1,
-            showReportOption: u = !1,
+            showReportOption: c = !1,
             handleGoLive: m,
             onClose: g,
-            onSelect: p,
-            appContext: C = f.BRT.APP,
-            disableChangeWindows: v = !1,
-            onInteraction: S,
+            onSelect: f,
+            appContext: C = E.BRT.APP,
+            disableChangeWindows: S = !1,
+            onInteraction: v,
         } = e,
-        y = r.find((e) => e.ownerId === n?.id) ?? null,
-        O = b(t, n, r),
-        _ = (0, d.A)(y, C),
-        T = (0, A.E)({
-            disableChangeWindows: v,
-            stream: y,
-            showReportOption: u,
+        _ = r.find((e) => e.ownerId === n?.id) ?? null,
+        T = p(t, n, r),
+        O = (0, d.A)(_, C),
+        x = (0, A.E)({
+            disableChangeWindows: S,
+            stream: _,
+            showReportOption: c,
             handleGoLive: m,
             minimal: !0,
             appContext: C,
         });
-    return (0, i.jsx)(c.A, {
-        section: f.JJy.CONTEXT_MENU,
+    return (0, i.jsx)(u.A, {
+        section: E.JJy.CONTEXT_MENU,
         children: (0, i.jsxs)(s.W, {
             "data-menu-migrated": !0,
-            onSelect: p,
+            onSelect: f,
             navId: "manage-streams",
             onClose: g,
-            onInteraction: S,
-            "aria-label": null != y ? E.intl.string(E.t.S5anIc) : E.intl.string(E.t.fjBNo1),
+            onInteraction: v,
+            "aria-label": null != _ ? b.intl.string(b.t.S5anIc) : b.intl.string(b.t.fjBNo1),
             children: [
                 (0, i.jsx)(a.rX, {
-                    children: O.map((e) => {
+                    children: T.map((e) => {
                         let { stream: t, username: n } = e;
                         return (0, i.jsx)(
                             a.Dr,
                             {
                                 id: t.ownerId,
-                                label: E.intl.formatToPlainString(E.t["7rkg+/"], { username: n }),
+                                label: b.intl.formatToPlainString(b.t["7rkg+/"], { username: n }),
                                 icon: o.G,
                                 leadingAccessory: { type: "icon", icon: o.G },
                                 action: () => (0, h.A)(t),
@@ -80,8 +80,8 @@ function C(e) {
                         );
                     }),
                 }),
-                l ? null : T,
-                l ? null : (0, i.jsx)(a.rX, { children: _ }),
+                l ? null : x,
+                l ? null : (0, i.jsx)(a.rX, { children: O }),
             ],
         }),
     });

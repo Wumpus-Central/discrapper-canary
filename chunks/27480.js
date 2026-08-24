@@ -212,7 +212,7 @@ i.Globals.assign({
     createStringInterpolator: s.createStringInterpolator,
     batchedUpdates: a.unstable_batchedUpdates,
 });
-var E = u.createHost(
+var x = u.createHost(
     [
         "a",
         "abbr",
@@ -404,5 +404,5 @@ Object.keys(i).forEach(function (e) {
             },
         });
 }),
-    (t.a = E),
-    (t.animated = E);
+    (t.a = x),
+    (t.animated = x);

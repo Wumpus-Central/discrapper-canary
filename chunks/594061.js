@@ -14,7 +14,7 @@ n.d(t, {
     ji: () => P,
     nT: () => F,
     o_: () => U,
-    wc: () => O,
+    wc: () => R,
     xB: () => x,
     xs: () => G,
 }),
@@ -57,7 +57,7 @@ Date.now(),
     }),
     "u" > typeof document &&
         (document.addEventListener("mousedown", () => {}), document.addEventListener("keydown", () => {}));
-class R {
+class O {
     ProtoClass;
     type;
     logger;
@@ -249,14 +249,14 @@ class R {
         this.dispatchChanges({ timeout: n, timeoutDelay: t });
     }
 }
-let O = new R(o.nT, g.oD.PRELOADED_USER_SETTINGS),
-    L = new R(l.aw, g.oD.FRECENCY_AND_FAVORITES_SETTINGS),
-    y = { [g.oD.PRELOADED_USER_SETTINGS]: O, [g.oD.FRECENCY_AND_FAVORITES_SETTINGS]: L };
+let R = new O(o.nT, g.oD.PRELOADED_USER_SETTINGS),
+    L = new O(l.aw, g.oD.FRECENCY_AND_FAVORITES_SETTINGS),
+    y = { [g.oD.PRELOADED_USER_SETTINGS]: R, [g.oD.FRECENCY_AND_FAVORITES_SETTINGS]: L };
 function D(e, t, n) {
-    return O.updateAsync("guilds", (n) => (0, m.$o)(n, e, t), n);
+    return R.updateAsync("guilds", (n) => (0, m.$o)(n, e, t), n);
 }
 function v(e) {
-    return O.updateAsync(
+    return R.updateAsync(
         "appearance",
         (t) => {
             if ((t.defaultGuildThemePreference ?? o.tI.UNSPECIFIED) === e) return !1;
@@ -289,7 +289,7 @@ function U(e) {
             ((n = t),
             (null != (i = p.A.settings.userContent?.dismissedContents) && (0, I.c0)(i, n)) ||
                 A.default.track(S.HAw.DISMISSIBLE_CONTENT_DISMISSED_BEFORE_CONNECTION_OPEN, { content_type: s.M[t] })),
-        O.updateAsync(
+        R.updateAsync(
             "userContent",
             (t) => {
                 if ((0, I.c0)(t.dismissedContents, e)) return !1;
@@ -300,7 +300,7 @@ function U(e) {
     );
 }
 async function w(e, t) {
-    return await O.updateAsync(
+    return await R.updateAsync(
         "userContent",
         (n) => {
             n.recurringDismissibleContentStates[e] = { ...n.recurringDismissibleContentStates[e], ...t };
@@ -318,7 +318,7 @@ async function G(e, t, n) {
     );
 }
 function x(e) {
-    return O.updateAsync(
+    return R.updateAsync(
         "userContent",
         (t) => {
             if (!(0, I.c0)(t.dismissedContents, e)) return !1;
@@ -331,7 +331,7 @@ function k(e) {
     return w(e, { lastDismissedVersion: 0, lastDismissedAtMs: "0", lastDismissedObjectId: "0", numTimesDismissed: 0 });
 }
 function F() {
-    return O.updateAsync(
+    return R.updateAsync(
         "userContent",
         (e) => {
             (e.dismissedContents = new Uint8Array()), (e.recurringDismissibleContentStates = {});
@@ -340,7 +340,7 @@ function F() {
     );
 }
 function V() {
-    return O.updateAsync(
+    return R.updateAsync(
         "userContent",
         (e) => {
             let t = new Uint8Array();

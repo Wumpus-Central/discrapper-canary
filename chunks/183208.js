@@ -30,8 +30,8 @@ var m = n(952818),
     S = n(134861),
     N = n(760751),
     C = n(189081),
-    R = n(340829),
-    O = n(174459),
+    O = n(340829),
+    R = n(174459),
     L = n(738533),
     y = n(723702),
     D = n(499785),
@@ -166,8 +166,8 @@ async function j(e) {
         let e = C.A.getActiveLibraryApplication(t);
         n = null != e ? e.branchId : t;
     }
-    if (R.A.isLaunchable(t, n)) {
-        let e = R.A.getState(t, n),
+    if (O.A.isLaunchable(t, n)) {
+        let e = O.A.getState(t, n),
             r = C.A.getActiveLaunchOptionId(t, n);
         if (null == e) throw Error("Missing dispatch game when launching");
         let s = C.A.getLibraryApplication(t, n);
@@ -217,7 +217,7 @@ function W(e) {
 let Y = {
     addGame(e, t) {
         d.h.dispatch({ type: "RUNNING_GAME_ADD_OVERRIDE", pid: e }),
-            O.default.track(P.HAw.RUNNING_GAME_OVERRIDE_ADDED, { game_name: t });
+            R.default.track(P.HAw.RUNNING_GAME_OVERRIDE_ADDED, { game_name: t });
     },
     toggleOverlay(e, t, n) {
         let i = (0, m.Zh)(e),

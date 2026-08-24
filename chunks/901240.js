@@ -59,8 +59,8 @@ function b(e, t, r) {
 var w = r(60339),
     _ = r(1730),
     S = r(400274),
-    E = r(64659),
-    x = r(992533),
+    x = r(64659),
+    E = r(992533),
     k = r(334887),
     C = r(909630);
 let T = (0, h.createContext)(null),
@@ -72,7 +72,7 @@ let T = (0, h.createContext)(null),
             y = null != (n = null != (r = e.validationBehavior) ? r : v) ? n : "native",
             g = (function (e = {}) {
                 var t, r;
-                let [n, o] = (0, x.P)(e.value, e.defaultValue || [], e.onChange),
+                let [n, o] = (0, E.P)(e.value, e.defaultValue || [], e.onChange),
                     [i] = (0, h.useState)(n),
                     a = !!e.isRequired && 0 === n.length,
                     s = (0, h.useRef)(new Map()),
@@ -112,7 +112,7 @@ let T = (0, h.createContext)(null),
             {
                 groupProps: _,
                 labelProps: S,
-                descriptionProps: E,
+                descriptionProps: x,
                 errorMessageProps: k,
                 ...C
             } = (function (e, t) {
@@ -170,7 +170,7 @@ let T = (0, h.createContext)(null),
                     values: [
                         [M, g],
                         [s.I, { ...S, ref: b, elementType: "span" }],
-                        [l.h, { slots: { description: E, errorMessage: k } }],
+                        [l.h, { slots: { description: x, errorMessage: k } }],
                         [i.C, C],
                     ],
                 },
@@ -188,7 +188,7 @@ let T = (0, h.createContext)(null),
             y = (0, k.U)((0, h.useMemo)(() => (0, C.P)(s, void 0 !== e.inputRef ? e.inputRef : null), [s, e.inputRef])),
             {
                 labelProps: g,
-                inputProps: x,
+                inputProps: E,
                 isSelected: T,
                 isDisabled: P,
                 isReadOnly: A,
@@ -301,7 +301,7 @@ let T = (0, h.createContext)(null),
                     "data-invalid": I || void 0,
                     "data-required": e.isRequired || void 0,
                 },
-                h.createElement(E.s, { elementType: "span" }, h.createElement("input", { ...(0, f.v)(x, R), ref: y })),
+                h.createElement(x.s, { elementType: "span" }, h.createElement("input", { ...(0, f.v)(E, R), ref: y })),
                 B.children,
             )
         );

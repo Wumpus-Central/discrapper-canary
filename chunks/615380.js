@@ -4,93 +4,93 @@ e.exports = (function () {
     function t(e, t) {
         var r = e[0],
             n = e[1],
-            a = e[2],
-            o = e[3];
-        (r += (((n & a) | (~n & o)) + t[0] - 0x28955b88) | 0),
-            (o += ((((r = (((r << 7) | (r >>> 25)) + n) | 0) & n) | (~r & a)) + t[1] - 0x173848aa) | 0),
-            (a += ((((o = (((o << 12) | (o >>> 20)) + r) | 0) & r) | (~o & n)) + t[2] + 0x242070db) | 0),
-            (n += ((((a = (((a << 17) | (a >>> 15)) + o) | 0) & o) | (~a & r)) + t[3] - 0x3e423112) | 0),
-            (r += ((((n = (((n << 22) | (n >>> 10)) + a) | 0) & a) | (~n & o)) + t[4] - 0xa83f051) | 0),
-            (o += ((((r = (((r << 7) | (r >>> 25)) + n) | 0) & n) | (~r & a)) + t[5] + 0x4787c62a) | 0),
-            (a += ((((o = (((o << 12) | (o >>> 20)) + r) | 0) & r) | (~o & n)) + t[6] - 0x57cfb9ed) | 0),
-            (n += ((((a = (((a << 17) | (a >>> 15)) + o) | 0) & o) | (~a & r)) + t[7] - 0x2b96aff) | 0),
-            (r += ((((n = (((n << 22) | (n >>> 10)) + a) | 0) & a) | (~n & o)) + t[8] + 0x698098d8) | 0),
-            (o += ((((r = (((r << 7) | (r >>> 25)) + n) | 0) & n) | (~r & a)) + t[9] - 0x74bb0851) | 0),
-            (a += ((((o = (((o << 12) | (o >>> 20)) + r) | 0) & r) | (~o & n)) + t[10] - 42063) | 0),
-            (n += ((((a = (((a << 17) | (a >>> 15)) + o) | 0) & o) | (~a & r)) + t[11] - 0x76a32842) | 0),
-            (r += ((((n = (((n << 22) | (n >>> 10)) + a) | 0) & a) | (~n & o)) + t[12] + 0x6b901122) | 0),
-            (o += ((((r = (((r << 7) | (r >>> 25)) + n) | 0) & n) | (~r & a)) + t[13] - 0x2678e6d) | 0),
-            (a += ((((o = (((o << 12) | (o >>> 20)) + r) | 0) & r) | (~o & n)) + t[14] - 0x5986bc72) | 0),
-            (n += ((((a = (((a << 17) | (a >>> 15)) + o) | 0) & o) | (~a & r)) + t[15] + 0x49b40821) | 0),
-            (r += ((((n = (((n << 22) | (n >>> 10)) + a) | 0) & o) | (a & ~o)) + t[1] - 0x9e1da9e) | 0),
-            (o += ((((r = (((r << 5) | (r >>> 27)) + n) | 0) & a) | (n & ~a)) + t[6] - 0x3fbf4cc0) | 0),
-            (a += ((((o = (((o << 9) | (o >>> 23)) + r) | 0) & n) | (r & ~n)) + t[11] + 0x265e5a51) | 0),
-            (n += ((((a = (((a << 14) | (a >>> 18)) + o) | 0) & r) | (o & ~r)) + t[0] - 0x16493856) | 0),
-            (r += ((((n = (((n << 20) | (n >>> 12)) + a) | 0) & o) | (a & ~o)) + t[5] - 0x29d0efa3) | 0),
-            (o += ((((r = (((r << 5) | (r >>> 27)) + n) | 0) & a) | (n & ~a)) + t[10] + 0x2441453) | 0),
-            (a += ((((o = (((o << 9) | (o >>> 23)) + r) | 0) & n) | (r & ~n)) + t[15] - 0x275e197f) | 0),
-            (n += ((((a = (((a << 14) | (a >>> 18)) + o) | 0) & r) | (o & ~r)) + t[4] - 0x182c0438) | 0),
-            (r += ((((n = (((n << 20) | (n >>> 12)) + a) | 0) & o) | (a & ~o)) + t[9] + 0x21e1cde6) | 0),
-            (o += ((((r = (((r << 5) | (r >>> 27)) + n) | 0) & a) | (n & ~a)) + t[14] - 0x3cc8f82a) | 0),
-            (a += ((((o = (((o << 9) | (o >>> 23)) + r) | 0) & n) | (r & ~n)) + t[3] - 0xb2af279) | 0),
-            (n += ((((a = (((a << 14) | (a >>> 18)) + o) | 0) & r) | (o & ~r)) + t[8] + 0x455a14ed) | 0),
-            (r += ((((n = (((n << 20) | (n >>> 12)) + a) | 0) & o) | (a & ~o)) + t[13] - 0x561c16fb) | 0),
-            (o += ((((r = (((r << 5) | (r >>> 27)) + n) | 0) & a) | (n & ~a)) + t[2] - 0x3105c08) | 0),
-            (a += ((((o = (((o << 9) | (o >>> 23)) + r) | 0) & n) | (r & ~n)) + t[7] + 0x676f02d9) | 0),
-            (n += ((((a = (((a << 14) | (a >>> 18)) + o) | 0) & r) | (o & ~r)) + t[12] - 0x72d5b376) | 0),
-            (r += (((n = (((n << 20) | (n >>> 12)) + a) | 0) ^ a ^ o) + t[5] - 378558) | 0),
-            (o += (((r = (((r << 4) | (r >>> 28)) + n) | 0) ^ n ^ a) + t[8] - 0x788e097f) | 0),
-            (a += (((o = (((o << 11) | (o >>> 21)) + r) | 0) ^ r ^ n) + t[11] + 0x6d9d6122) | 0),
-            (n += (((a = (((a << 16) | (a >>> 16)) + o) | 0) ^ o ^ r) + t[14] - 0x21ac7f4) | 0),
-            (r += (((n = (((n << 23) | (n >>> 9)) + a) | 0) ^ a ^ o) + t[1] - 0x5b4115bc) | 0),
-            (o += (((r = (((r << 4) | (r >>> 28)) + n) | 0) ^ n ^ a) + t[4] + 0x4bdecfa9) | 0),
-            (a += (((o = (((o << 11) | (o >>> 21)) + r) | 0) ^ r ^ n) + t[7] - 0x944b4a0) | 0),
-            (n += (((a = (((a << 16) | (a >>> 16)) + o) | 0) ^ o ^ r) + t[10] - 0x41404390) | 0),
-            (r += (((n = (((n << 23) | (n >>> 9)) + a) | 0) ^ a ^ o) + t[13] + 0x289b7ec6) | 0),
-            (o += (((r = (((r << 4) | (r >>> 28)) + n) | 0) ^ n ^ a) + t[0] - 0x155ed806) | 0),
-            (a += (((o = (((o << 11) | (o >>> 21)) + r) | 0) ^ r ^ n) + t[3] - 0x2b10cf7b) | 0),
-            (n += (((a = (((a << 16) | (a >>> 16)) + o) | 0) ^ o ^ r) + t[6] + 0x4881d05) | 0),
-            (r += (((n = (((n << 23) | (n >>> 9)) + a) | 0) ^ a ^ o) + t[9] - 0x262b2fc7) | 0),
-            (o += (((r = (((r << 4) | (r >>> 28)) + n) | 0) ^ n ^ a) + t[12] - 0x1924661b) | 0),
-            (a += (((o = (((o << 11) | (o >>> 21)) + r) | 0) ^ r ^ n) + t[15] + 0x1fa27cf8) | 0),
-            (n += (((a = (((a << 16) | (a >>> 16)) + o) | 0) ^ o ^ r) + t[2] - 0x3b53a99b) | 0),
-            (n = (((n << 23) | (n >>> 9)) + a) | 0),
-            (r += ((a ^ (n | ~o)) + t[0] - 0xbd6ddbc) | 0),
+            o = e[2],
+            i = e[3];
+        (r += (((n & o) | (~n & i)) + t[0] - 0x28955b88) | 0),
+            (i += ((((r = (((r << 7) | (r >>> 25)) + n) | 0) & n) | (~r & o)) + t[1] - 0x173848aa) | 0),
+            (o += ((((i = (((i << 12) | (i >>> 20)) + r) | 0) & r) | (~i & n)) + t[2] + 0x242070db) | 0),
+            (n += ((((o = (((o << 17) | (o >>> 15)) + i) | 0) & i) | (~o & r)) + t[3] - 0x3e423112) | 0),
+            (r += ((((n = (((n << 22) | (n >>> 10)) + o) | 0) & o) | (~n & i)) + t[4] - 0xa83f051) | 0),
+            (i += ((((r = (((r << 7) | (r >>> 25)) + n) | 0) & n) | (~r & o)) + t[5] + 0x4787c62a) | 0),
+            (o += ((((i = (((i << 12) | (i >>> 20)) + r) | 0) & r) | (~i & n)) + t[6] - 0x57cfb9ed) | 0),
+            (n += ((((o = (((o << 17) | (o >>> 15)) + i) | 0) & i) | (~o & r)) + t[7] - 0x2b96aff) | 0),
+            (r += ((((n = (((n << 22) | (n >>> 10)) + o) | 0) & o) | (~n & i)) + t[8] + 0x698098d8) | 0),
+            (i += ((((r = (((r << 7) | (r >>> 25)) + n) | 0) & n) | (~r & o)) + t[9] - 0x74bb0851) | 0),
+            (o += ((((i = (((i << 12) | (i >>> 20)) + r) | 0) & r) | (~i & n)) + t[10] - 42063) | 0),
+            (n += ((((o = (((o << 17) | (o >>> 15)) + i) | 0) & i) | (~o & r)) + t[11] - 0x76a32842) | 0),
+            (r += ((((n = (((n << 22) | (n >>> 10)) + o) | 0) & o) | (~n & i)) + t[12] + 0x6b901122) | 0),
+            (i += ((((r = (((r << 7) | (r >>> 25)) + n) | 0) & n) | (~r & o)) + t[13] - 0x2678e6d) | 0),
+            (o += ((((i = (((i << 12) | (i >>> 20)) + r) | 0) & r) | (~i & n)) + t[14] - 0x5986bc72) | 0),
+            (n += ((((o = (((o << 17) | (o >>> 15)) + i) | 0) & i) | (~o & r)) + t[15] + 0x49b40821) | 0),
+            (r += ((((n = (((n << 22) | (n >>> 10)) + o) | 0) & i) | (o & ~i)) + t[1] - 0x9e1da9e) | 0),
+            (i += ((((r = (((r << 5) | (r >>> 27)) + n) | 0) & o) | (n & ~o)) + t[6] - 0x3fbf4cc0) | 0),
+            (o += ((((i = (((i << 9) | (i >>> 23)) + r) | 0) & n) | (r & ~n)) + t[11] + 0x265e5a51) | 0),
+            (n += ((((o = (((o << 14) | (o >>> 18)) + i) | 0) & r) | (i & ~r)) + t[0] - 0x16493856) | 0),
+            (r += ((((n = (((n << 20) | (n >>> 12)) + o) | 0) & i) | (o & ~i)) + t[5] - 0x29d0efa3) | 0),
+            (i += ((((r = (((r << 5) | (r >>> 27)) + n) | 0) & o) | (n & ~o)) + t[10] + 0x2441453) | 0),
+            (o += ((((i = (((i << 9) | (i >>> 23)) + r) | 0) & n) | (r & ~n)) + t[15] - 0x275e197f) | 0),
+            (n += ((((o = (((o << 14) | (o >>> 18)) + i) | 0) & r) | (i & ~r)) + t[4] - 0x182c0438) | 0),
+            (r += ((((n = (((n << 20) | (n >>> 12)) + o) | 0) & i) | (o & ~i)) + t[9] + 0x21e1cde6) | 0),
+            (i += ((((r = (((r << 5) | (r >>> 27)) + n) | 0) & o) | (n & ~o)) + t[14] - 0x3cc8f82a) | 0),
+            (o += ((((i = (((i << 9) | (i >>> 23)) + r) | 0) & n) | (r & ~n)) + t[3] - 0xb2af279) | 0),
+            (n += ((((o = (((o << 14) | (o >>> 18)) + i) | 0) & r) | (i & ~r)) + t[8] + 0x455a14ed) | 0),
+            (r += ((((n = (((n << 20) | (n >>> 12)) + o) | 0) & i) | (o & ~i)) + t[13] - 0x561c16fb) | 0),
+            (i += ((((r = (((r << 5) | (r >>> 27)) + n) | 0) & o) | (n & ~o)) + t[2] - 0x3105c08) | 0),
+            (o += ((((i = (((i << 9) | (i >>> 23)) + r) | 0) & n) | (r & ~n)) + t[7] + 0x676f02d9) | 0),
+            (n += ((((o = (((o << 14) | (o >>> 18)) + i) | 0) & r) | (i & ~r)) + t[12] - 0x72d5b376) | 0),
+            (r += (((n = (((n << 20) | (n >>> 12)) + o) | 0) ^ o ^ i) + t[5] - 378558) | 0),
+            (i += (((r = (((r << 4) | (r >>> 28)) + n) | 0) ^ n ^ o) + t[8] - 0x788e097f) | 0),
+            (o += (((i = (((i << 11) | (i >>> 21)) + r) | 0) ^ r ^ n) + t[11] + 0x6d9d6122) | 0),
+            (n += (((o = (((o << 16) | (o >>> 16)) + i) | 0) ^ i ^ r) + t[14] - 0x21ac7f4) | 0),
+            (r += (((n = (((n << 23) | (n >>> 9)) + o) | 0) ^ o ^ i) + t[1] - 0x5b4115bc) | 0),
+            (i += (((r = (((r << 4) | (r >>> 28)) + n) | 0) ^ n ^ o) + t[4] + 0x4bdecfa9) | 0),
+            (o += (((i = (((i << 11) | (i >>> 21)) + r) | 0) ^ r ^ n) + t[7] - 0x944b4a0) | 0),
+            (n += (((o = (((o << 16) | (o >>> 16)) + i) | 0) ^ i ^ r) + t[10] - 0x41404390) | 0),
+            (r += (((n = (((n << 23) | (n >>> 9)) + o) | 0) ^ o ^ i) + t[13] + 0x289b7ec6) | 0),
+            (i += (((r = (((r << 4) | (r >>> 28)) + n) | 0) ^ n ^ o) + t[0] - 0x155ed806) | 0),
+            (o += (((i = (((i << 11) | (i >>> 21)) + r) | 0) ^ r ^ n) + t[3] - 0x2b10cf7b) | 0),
+            (n += (((o = (((o << 16) | (o >>> 16)) + i) | 0) ^ i ^ r) + t[6] + 0x4881d05) | 0),
+            (r += (((n = (((n << 23) | (n >>> 9)) + o) | 0) ^ o ^ i) + t[9] - 0x262b2fc7) | 0),
+            (i += (((r = (((r << 4) | (r >>> 28)) + n) | 0) ^ n ^ o) + t[12] - 0x1924661b) | 0),
+            (o += (((i = (((i << 11) | (i >>> 21)) + r) | 0) ^ r ^ n) + t[15] + 0x1fa27cf8) | 0),
+            (n += (((o = (((o << 16) | (o >>> 16)) + i) | 0) ^ i ^ r) + t[2] - 0x3b53a99b) | 0),
+            (n = (((n << 23) | (n >>> 9)) + o) | 0),
+            (r += ((o ^ (n | ~i)) + t[0] - 0xbd6ddbc) | 0),
             (r = (((r << 6) | (r >>> 26)) + n) | 0),
-            (o += ((n ^ (r | ~a)) + t[7] + 0x432aff97) | 0),
-            (o = (((o << 10) | (o >>> 22)) + r) | 0),
-            (a += ((r ^ (o | ~n)) + t[14] - 0x546bdc59) | 0),
-            (a = (((a << 15) | (a >>> 17)) + o) | 0),
-            (n += ((o ^ (a | ~r)) + t[5] - 0x36c5fc7) | 0),
-            (n = (((n << 21) | (n >>> 11)) + a) | 0),
-            (r += ((a ^ (n | ~o)) + t[12] + 0x655b59c3) | 0),
+            (i += ((n ^ (r | ~o)) + t[7] + 0x432aff97) | 0),
+            (i = (((i << 10) | (i >>> 22)) + r) | 0),
+            (o += ((r ^ (i | ~n)) + t[14] - 0x546bdc59) | 0),
+            (o = (((o << 15) | (o >>> 17)) + i) | 0),
+            (n += ((i ^ (o | ~r)) + t[5] - 0x36c5fc7) | 0),
+            (n = (((n << 21) | (n >>> 11)) + o) | 0),
+            (r += ((o ^ (n | ~i)) + t[12] + 0x655b59c3) | 0),
             (r = (((r << 6) | (r >>> 26)) + n) | 0),
-            (o += ((n ^ (r | ~a)) + t[3] - 0x70f3336e) | 0),
-            (o = (((o << 10) | (o >>> 22)) + r) | 0),
-            (a += ((r ^ (o | ~n)) + t[10] - 1051523) | 0),
-            (a = (((a << 15) | (a >>> 17)) + o) | 0),
-            (n += ((o ^ (a | ~r)) + t[1] - 0x7a7ba22f) | 0),
-            (n = (((n << 21) | (n >>> 11)) + a) | 0),
-            (r += ((a ^ (n | ~o)) + t[8] + 0x6fa87e4f) | 0),
+            (i += ((n ^ (r | ~o)) + t[3] - 0x70f3336e) | 0),
+            (i = (((i << 10) | (i >>> 22)) + r) | 0),
+            (o += ((r ^ (i | ~n)) + t[10] - 1051523) | 0),
+            (o = (((o << 15) | (o >>> 17)) + i) | 0),
+            (n += ((i ^ (o | ~r)) + t[1] - 0x7a7ba22f) | 0),
+            (n = (((n << 21) | (n >>> 11)) + o) | 0),
+            (r += ((o ^ (n | ~i)) + t[8] + 0x6fa87e4f) | 0),
             (r = (((r << 6) | (r >>> 26)) + n) | 0),
-            (o += ((n ^ (r | ~a)) + t[15] - 0x1d31920) | 0),
-            (o = (((o << 10) | (o >>> 22)) + r) | 0),
-            (a += ((r ^ (o | ~n)) + t[6] - 0x5cfebcec) | 0),
-            (a = (((a << 15) | (a >>> 17)) + o) | 0),
-            (n += ((o ^ (a | ~r)) + t[13] + 0x4e0811a1) | 0),
-            (n = (((n << 21) | (n >>> 11)) + a) | 0),
-            (r += ((a ^ (n | ~o)) + t[4] - 0x8ac817e) | 0),
+            (i += ((n ^ (r | ~o)) + t[15] - 0x1d31920) | 0),
+            (i = (((i << 10) | (i >>> 22)) + r) | 0),
+            (o += ((r ^ (i | ~n)) + t[6] - 0x5cfebcec) | 0),
+            (o = (((o << 15) | (o >>> 17)) + i) | 0),
+            (n += ((i ^ (o | ~r)) + t[13] + 0x4e0811a1) | 0),
+            (n = (((n << 21) | (n >>> 11)) + o) | 0),
+            (r += ((o ^ (n | ~i)) + t[4] - 0x8ac817e) | 0),
             (r = (((r << 6) | (r >>> 26)) + n) | 0),
-            (o += ((n ^ (r | ~a)) + t[11] - 0x42c50dcb) | 0),
-            (o = (((o << 10) | (o >>> 22)) + r) | 0),
-            (a += ((r ^ (o | ~n)) + t[2] + 0x2ad7d2bb) | 0),
-            (a = (((a << 15) | (a >>> 17)) + o) | 0),
-            (n += ((o ^ (a | ~r)) + t[9] - 0x14792c6f) | 0),
-            (n = (((n << 21) | (n >>> 11)) + a) | 0),
+            (i += ((n ^ (r | ~o)) + t[11] - 0x42c50dcb) | 0),
+            (i = (((i << 10) | (i >>> 22)) + r) | 0),
+            (o += ((r ^ (i | ~n)) + t[2] + 0x2ad7d2bb) | 0),
+            (o = (((o << 15) | (o >>> 17)) + i) | 0),
+            (n += ((i ^ (o | ~r)) + t[9] - 0x14792c6f) | 0),
+            (n = (((n << 21) | (n >>> 11)) + o) | 0),
             (e[0] = (r + e[0]) | 0),
             (e[1] = (n + e[1]) | 0),
-            (e[2] = (a + e[2]) | 0),
-            (e[3] = (o + e[3]) | 0);
+            (e[2] = (o + e[2]) | 0),
+            (e[3] = (i + e[3]) | 0);
     }
     function r(e) {
         var t,
@@ -109,33 +109,33 @@ e.exports = (function () {
         for (t = 0; t < 64; t += 4) r[t >> 2] = e[t] + (e[t + 1] << 8) + (e[t + 2] << 16) + (e[t + 3] << 24);
         return r;
     }
-    function a(e) {
+    function o(e) {
         var n,
-            a,
             o,
             i,
+            a,
             s,
             l,
-            c = e.length,
-            u = [0x67452301, -0x10325477, -0x67452302, 0x10325476];
-        for (n = 64; n <= c; n += 64) t(u, r(e.substring(n - 64, n)));
+            u = e.length,
+            c = [0x67452301, -0x10325477, -0x67452302, 0x10325476];
+        for (n = 64; n <= u; n += 64) t(c, r(e.substring(n - 64, n)));
         for (
-            a = (e = e.substring(n - 64)).length, o = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], n = 0;
-            n < a;
+            o = (e = e.substring(n - 64)).length, i = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], n = 0;
+            n < o;
             n += 1
         )
-            o[n >> 2] |= e.charCodeAt(n) << ((n % 4) << 3);
-        if (((o[n >> 2] |= 128 << ((n % 4) << 3)), n > 55)) for (t(u, o), n = 0; n < 16; n += 1) o[n] = 0;
+            i[n >> 2] |= e.charCodeAt(n) << ((n % 4) << 3);
+        if (((i[n >> 2] |= 128 << ((n % 4) << 3)), n > 55)) for (t(c, i), n = 0; n < 16; n += 1) i[n] = 0;
         return (
-            (s = parseInt((i = (i = 8 * c).toString(16).match(/(.*?)(.{0,8})$/))[2], 16)),
-            (l = parseInt(i[1], 16) || 0),
-            (o[14] = s),
-            (o[15] = l),
-            t(u, o),
-            u
+            (s = parseInt((a = (a = 8 * u).toString(16).match(/(.*?)(.{0,8})$/))[2], 16)),
+            (l = parseInt(a[1], 16) || 0),
+            (i[14] = s),
+            (i[15] = l),
+            t(c, i),
+            c
         );
     }
-    function o(t) {
+    function i(t) {
         var r;
         for (r = 0; r < t.length; r += 1)
             t[r] = (function (t) {
@@ -146,7 +146,7 @@ e.exports = (function () {
             })(t[r]);
         return t.join("");
     }
-    function i(e) {
+    function a(e) {
         return /[\u0080-\uFFFF]/.test(e) && (e = unescape(encodeURIComponent(e))), e;
     }
     function s(e) {
@@ -160,7 +160,7 @@ e.exports = (function () {
         this.reset();
     }
     return (
-        o(a("hello")),
+        i(o("hello")),
         "u" > typeof ArrayBuffer &&
             !ArrayBuffer.prototype.slice &&
             (function () {
@@ -169,38 +169,38 @@ e.exports = (function () {
                 }
                 ArrayBuffer.prototype.slice = function (t, r) {
                     var n,
-                        a,
                         o,
                         i,
+                        a,
                         s = this.byteLength,
                         l = e(t, s),
-                        c = s;
-                    return (void 0 !== r && (c = e(r, s)), l > c)
+                        u = s;
+                    return (void 0 !== r && (u = e(r, s)), l > u)
                         ? new ArrayBuffer(0)
-                        : ((o = new Uint8Array((a = new ArrayBuffer((n = c - l))))),
-                          (i = new Uint8Array(this, l, n)),
-                          o.set(i),
-                          a);
+                        : ((i = new Uint8Array((o = new ArrayBuffer((n = u - l))))),
+                          (a = new Uint8Array(this, l, n)),
+                          i.set(a),
+                          o);
                 };
             })(),
         (l.prototype.append = function (e) {
-            return this.appendBinary(i(e)), this;
+            return this.appendBinary(a(e)), this;
         }),
         (l.prototype.appendBinary = function (e) {
             (this._buff += e), (this._length += e.length);
             var n,
-                a = this._buff.length;
-            for (n = 64; n <= a; n += 64) t(this._hash, r(this._buff.substring(n - 64, n)));
+                o = this._buff.length;
+            for (n = 64; n <= o; n += 64) t(this._hash, r(this._buff.substring(n - 64, n)));
             return (this._buff = this._buff.substring(n - 64)), this;
         }),
         (l.prototype.end = function (e) {
             var t,
                 r,
                 n = this._buff,
-                a = n.length,
-                i = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
-            for (t = 0; t < a; t += 1) i[t >> 2] |= n.charCodeAt(t) << ((t % 4) << 3);
-            return this._finish(i, a), (r = o(this._hash)), e && (r = s(r)), this.reset(), r;
+                o = n.length,
+                a = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+            for (t = 0; t < o; t += 1) a[t >> 2] |= n.charCodeAt(t) << ((t % 4) << 3);
+            return this._finish(a, o), (r = i(this._hash)), e && (r = s(r)), this.reset(), r;
         }),
         (l.prototype.reset = function () {
             return (
@@ -221,21 +221,21 @@ e.exports = (function () {
         }),
         (l.prototype._finish = function (e, r) {
             var n,
-                a,
                 o,
-                i = r;
-            if (((e[i >> 2] |= 128 << ((i % 4) << 3)), i > 55)) for (t(this._hash, e), i = 0; i < 16; i += 1) e[i] = 0;
-            (a = parseInt((n = (n = 8 * this._length).toString(16).match(/(.*?)(.{0,8})$/))[2], 16)),
-                (o = parseInt(n[1], 16) || 0),
-                (e[14] = a),
-                (e[15] = o),
+                i,
+                a = r;
+            if (((e[a >> 2] |= 128 << ((a % 4) << 3)), a > 55)) for (t(this._hash, e), a = 0; a < 16; a += 1) e[a] = 0;
+            (o = parseInt((n = (n = 8 * this._length).toString(16).match(/(.*?)(.{0,8})$/))[2], 16)),
+                (i = parseInt(n[1], 16) || 0),
+                (e[14] = o),
+                (e[15] = i),
                 t(this._hash, e);
         }),
         (l.hash = function (e, t) {
-            return l.hashBinary(i(e), t);
+            return l.hashBinary(a(e), t);
         }),
         (l.hashBinary = function (e, t) {
-            var r = o(a(e));
+            var r = i(o(e));
             return t ? s(r) : r;
         }),
         (l.ArrayBuffer = function () {
@@ -243,25 +243,25 @@ e.exports = (function () {
         }),
         (l.ArrayBuffer.prototype.append = function (e) {
             var r,
-                a,
                 o,
-                i =
+                i,
+                a =
                     ((r = this._buff.buffer),
-                    (a = new Uint8Array(r.byteLength + e.byteLength)).set(new Uint8Array(r)),
-                    a.set(new Uint8Array(e), r.byteLength),
-                    a),
-                s = i.length;
-            for (this._length += e.byteLength, o = 64; o <= s; o += 64) t(this._hash, n(i.subarray(o - 64, o)));
-            return (this._buff = new Uint8Array(o - 64 < s ? i.buffer.slice(o - 64) : 0)), this;
+                    (o = new Uint8Array(r.byteLength + e.byteLength)).set(new Uint8Array(r)),
+                    o.set(new Uint8Array(e), r.byteLength),
+                    o),
+                s = a.length;
+            for (this._length += e.byteLength, i = 64; i <= s; i += 64) t(this._hash, n(a.subarray(i - 64, i)));
+            return (this._buff = new Uint8Array(i - 64 < s ? a.buffer.slice(i - 64) : 0)), this;
         }),
         (l.ArrayBuffer.prototype.end = function (e) {
             var t,
                 r,
                 n = this._buff,
-                a = n.length,
-                i = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
-            for (t = 0; t < a; t += 1) i[t >> 2] |= n[t] << ((t % 4) << 3);
-            return this._finish(i, a), (r = o(this._hash)), e && (r = s(r)), this.reset(), r;
+                o = n.length,
+                a = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+            for (t = 0; t < o; t += 1) a[t >> 2] |= n[t] << ((t % 4) << 3);
+            return this._finish(a, o), (r = i(this._hash)), e && (r = s(r)), this.reset(), r;
         }),
         (l.ArrayBuffer.prototype.reset = function () {
             return (
@@ -281,10 +281,10 @@ e.exports = (function () {
                 (e.buff = (function (e, t) {
                     var r,
                         n = e.length,
-                        a = new ArrayBuffer(n),
-                        o = new Uint8Array(a);
-                    for (r = 0; r < n; r += 1) o[r] = e.charCodeAt(r);
-                    return t ? o : a;
+                        o = new ArrayBuffer(n),
+                        i = new Uint8Array(o);
+                    for (r = 0; r < n; r += 1) i[r] = e.charCodeAt(r);
+                    return t ? i : o;
                 })(e.buff, !0)),
                 l.prototype.setState.call(this, e)
             );
@@ -292,37 +292,37 @@ e.exports = (function () {
         (l.ArrayBuffer.prototype.destroy = l.prototype.destroy),
         (l.ArrayBuffer.prototype._finish = l.prototype._finish),
         (l.ArrayBuffer.hash = function (e, r) {
-            var a = o(
+            var o = i(
                 (function (e) {
                     var r,
-                        a,
                         o,
                         i,
+                        a,
                         s,
                         l,
-                        c = e.length,
-                        u = [0x67452301, -0x10325477, -0x67452302, 0x10325476];
-                    for (r = 64; r <= c; r += 64) t(u, n(e.subarray(r - 64, r)));
+                        u = e.length,
+                        c = [0x67452301, -0x10325477, -0x67452302, 0x10325476];
+                    for (r = 64; r <= u; r += 64) t(c, n(e.subarray(r - 64, r)));
                     for (
-                        a = (e = r - 64 < c ? e.subarray(r - 64) : new Uint8Array(0)).length,
-                            o = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                        o = (e = r - 64 < u ? e.subarray(r - 64) : new Uint8Array(0)).length,
+                            i = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
                             r = 0;
-                        r < a;
+                        r < o;
                         r += 1
                     )
-                        o[r >> 2] |= e[r] << ((r % 4) << 3);
-                    if (((o[r >> 2] |= 128 << ((r % 4) << 3)), r > 55)) for (t(u, o), r = 0; r < 16; r += 1) o[r] = 0;
+                        i[r >> 2] |= e[r] << ((r % 4) << 3);
+                    if (((i[r >> 2] |= 128 << ((r % 4) << 3)), r > 55)) for (t(c, i), r = 0; r < 16; r += 1) i[r] = 0;
                     return (
-                        (s = parseInt((i = (i = 8 * c).toString(16).match(/(.*?)(.{0,8})$/))[2], 16)),
-                        (l = parseInt(i[1], 16) || 0),
-                        (o[14] = s),
-                        (o[15] = l),
-                        t(u, o),
-                        u
+                        (s = parseInt((a = (a = 8 * u).toString(16).match(/(.*?)(.{0,8})$/))[2], 16)),
+                        (l = parseInt(a[1], 16) || 0),
+                        (i[14] = s),
+                        (i[15] = l),
+                        t(c, i),
+                        c
                     );
                 })(new Uint8Array(e)),
             );
-            return r ? s(a) : a;
+            return r ? s(o) : o;
         }),
         l
     );

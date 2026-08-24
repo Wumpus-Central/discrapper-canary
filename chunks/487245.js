@@ -22,8 +22,8 @@ var i,
     S = n(87719),
     N = n(732280),
     C = n(811611),
-    R = n(450232),
-    O = n(973654),
+    O = n(450232),
+    R = n(973654),
     L = n(363195),
     y = n(742023),
     D = n(885386),
@@ -191,7 +191,7 @@ function eo(e) {
         className: ei.DD,
         children: [
             (0, r.jsx)(_.D, { "aria-label": c, className: l()(ei.Qw, a), variant: d, children: c }),
-            (0, r.jsx)(R.A, { className: l()(ei.PC, s), size: "xs" }),
+            (0, r.jsx)(O.A, { className: l()(ei.PC, s), size: "xs" }),
         ],
     });
 }
@@ -252,7 +252,7 @@ function eu(e) {
         [u, _] = (0, d.yK)([P.A], () => [P.A.isPreview, P.A.gradientPreset?.id]),
         [h, S] = a.useState(!1),
         [N, C] = a.useState(-1),
-        R = (0, d.bG)([f.Ay], () => f.Ay.useReducedMotion),
+        O = (0, d.bG)([f.Ay], () => f.Ay.useReducedMotion),
         L = "SETTINGS" === s,
         y = (0, g.GV)(),
         D = L && u ? y : void 0,
@@ -263,9 +263,9 @@ function eu(e) {
             ((0, M.bc)(e.id),
             el({ isPersisted: !u, analyticsLocations: o, themeName: c.ju[e.id] }),
             u && "SETTINGS" === s
-                ? ((n = e), (0, O.GQ)(n.theme), (0, m.nf)(m.HP.CLIENT_THEMES), (0, v.default)())
+                ? ((n = e), (0, R.GQ)(n.theme), (0, m.nf)(m.HP.CLIENT_THEMES), (0, v.default)())
                 : u
-                  ? (0, O.GQ)(e.theme)
+                  ? (0, R.GQ)(e.theme)
                   : (0, I.u_)({ backgroundGradientPresetId: e.id, theme: e.theme }, l),
             null != t)
         ) {
@@ -326,7 +326,7 @@ function eu(e) {
                                 onSelect: () => U(e),
                                 ariaDescribedBy: D,
                             }),
-                            (0, r.jsx)(E.a, { importData: t, shouldAnimate: !R, className: ei._7 }),
+                            (0, r.jsx)(E.a, { importData: t, shouldAnimate: !O, className: ei._7 }),
                         ],
                     });
                 })(),

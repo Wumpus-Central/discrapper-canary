@@ -226,12 +226,12 @@ function C(e, t) {
           ? t.checkoutContext
           : null;
 }
-function R(e) {
+function O(e) {
     return null == e
         ? { isPremiumPurchase: !0, isPremiumGroupPurchase: !1 }
         : { isPremiumPurchase: (0, S.ys)(e), isPremiumGroupPurchase: e === N.gD.PREMIUM_GROUP_MONTH };
 }
-function O(e, t) {
+function R(e, t) {
     if (null == e) return null;
     if ("subscription_checkout_invoice_get_request" === e.type) return e;
     let n = t().contextMetadata.loadId;
@@ -262,9 +262,9 @@ function G(e) {
             d =
                 ((r = { checkoutContext: null, checkoutPaymentSources: [] }),
                 {
-                    isPremiumPurchase: () => R(i().selectedPlanId).isPremiumPurchase,
-                    isPremiumGroupPurchase: () => R(i().selectedPlanId).isPremiumGroupPurchase,
-                    selectedPlanAttributes: () => R(i().selectedPlanId),
+                    isPremiumPurchase: () => O(i().selectedPlanId).isPremiumPurchase,
+                    isPremiumGroupPurchase: () => O(i().selectedPlanId).isPremiumGroupPurchase,
+                    selectedPlanAttributes: () => O(i().selectedPlanId),
                     premiumDiscountOffer: () => i().premiumDiscountInfo.discountOffer ?? null,
                     premiumDiscountPercent: () => {
                         let e = i().premiumDiscountInfo.discountOffer;
@@ -420,7 +420,7 @@ function G(e) {
             quantity: M,
             setQuantity: (t) => e({ quantity: t }),
             fetchCheckoutInvoicePreviewRequest: null,
-            setFetchCheckoutInvoicePreviewRequest: (t) => e({ fetchCheckoutInvoicePreviewRequest: O(t, i) }),
+            setFetchCheckoutInvoicePreviewRequest: (t) => e({ fetchCheckoutInvoicePreviewRequest: R(t, i) }),
             checkoutInvoicePreview: null,
             checkoutInvoiceError: null,
             setCheckoutInvoicePreview: (t, n) =>
@@ -430,7 +430,7 @@ function G(e) {
                     pendingPaymentSourceId: null != t && null == e.order ? null : e.pendingPaymentSourceId,
                 })),
             fetchRenewalInvoicePreviewRequest: null,
-            setFetchRenewalInvoicePreviewRequest: (t) => e({ fetchRenewalInvoicePreviewRequest: O(t, i) }),
+            setFetchRenewalInvoicePreviewRequest: (t) => e({ fetchRenewalInvoicePreviewRequest: R(t, i) }),
             renewalInvoicePreview: null,
             renewalInvoiceError: null,
             setRenewalInvoicePreview: (t, n) => e({ renewalInvoicePreview: t ?? null, renewalInvoiceError: n ?? null }),

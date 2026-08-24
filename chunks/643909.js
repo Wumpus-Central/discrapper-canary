@@ -252,7 +252,7 @@
         },
         S =
             "Invalid prop `stripe` supplied to `Elements`. We recommend using the `loadStripe` utility from `@stripe/stripe-js`. See https://stripe.com/docs/stripe-js/react#elements-props-stripe for details.",
-        E = function (e) {
+        x = function (e) {
             var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : S;
             if (
                 null === e ||
@@ -265,16 +265,16 @@
                 return e;
             throw Error(t);
         },
-        x = function (e) {
+        E = function (e) {
             var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : S;
             if (g(e) && "function" == typeof e.then)
                 return {
                     tag: "async",
                     stripePromise: Promise.resolve(e).then(function (e) {
-                        return E(e, t);
+                        return x(e, t);
                     }),
                 };
-            var r = E(e, t);
+            var r = x(e, t);
             return null === r ? { tag: "empty" } : { tag: "sync", stripe: r };
         },
         k = function (e) {
@@ -306,7 +306,7 @@
                 o = e.children,
                 i = t.useMemo(
                     function () {
-                        return x(r);
+                        return E(r);
                     },
                     [r],
                 ),
@@ -408,7 +408,7 @@
                 o = e.children,
                 i = t.useMemo(
                     function () {
-                        return x(
+                        return E(
                             r,
                             "Invalid prop `stripe` supplied to `CheckoutProvider`. We recommend using the `loadStripe` utility from `@stripe/stripe-js`. See https://stripe.com/docs/stripe-js/react#elements-props-stripe for details.",
                         );
@@ -544,8 +544,8 @@
                               b = r.onLoadError,
                               w = r.onLoaderStart,
                               S = r.onNetworksChange,
-                              E = r.onConfirm,
-                              x = r.onCancel,
+                              x = r.onConfirm,
+                              E = r.onCancel,
                               k = r.onShippingAddressChange,
                               C = r.onShippingRateChange,
                               T = N("mounts <".concat(n, ">")),
@@ -563,8 +563,8 @@
                               v(O, "loaderror", b),
                               v(O, "loaderstart", w),
                               v(O, "networkschange", S),
-                              v(O, "confirm", E),
-                              v(O, "cancel", x),
+                              v(O, "confirm", x),
+                              v(O, "cancel", E),
                               v(O, "shippingaddresschange", k),
                               v(O, "shippingratechange", C),
                               v(O, "change", h),
@@ -744,7 +744,7 @@
                 o = e.children,
                 i = t.useMemo(
                     function () {
-                        return x(
+                        return E(
                             r,
                             "Invalid prop `stripe` supplied to `EmbeddedCheckoutProvider`. We recommend using the `loadStripe` utility from `@stripe/stripe-js`. See https://stripe.com/docs/stripe-js/react#elements-props-stripe for details.",
                         );

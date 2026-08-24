@@ -186,19 +186,19 @@ let g = window.DiscordNative,
     S = new Set(["jpg", "jpeg", "jfif", "png"]),
     N = new Set(["webp", "avif"]),
     C = new Set(["jpg", "jpeg", "jfif", "png", "webp", "gif", "tiff", "bmp", "avif"]),
-    R = null,
     O = null,
+    R = null,
     L = null,
     y = {},
     D = !1,
     v = {};
 null != g &&
-    ((R = g.app
+    ((O = g.app
         .getVersion()
         .split(".")
         .map((e) => parseInt(e))),
     (L = g.app.getModuleVersions()),
-    (O = g.app.getBuildNumber()));
+    (R = g.app.getBuildNumber()));
 let b = new Set([
         "discord_erlpack",
         "discord_game_utils",
@@ -476,10 +476,10 @@ let $ = {
             return g.app.getReleaseChannel();
         },
         get version() {
-            return R;
+            return O;
         },
         get buildNumber() {
-            return O;
+            return R;
         },
         get moduleVersions() {
             return L;
@@ -1033,7 +1033,7 @@ let $ = {
             if (null != t) return t(e);
         },
         isModuleVersionAtLeast(e, t) {
-            let n = [...(R ?? [0, 0, 0])];
+            let n = [...(O ?? [0, 0, 0])];
             n.push(this.moduleVersions?.[e] ?? 0);
             let i = t[this.releaseChannel] ?? t.stable;
             for (let [e, t] of n.entries())

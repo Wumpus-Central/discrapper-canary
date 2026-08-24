@@ -26,8 +26,8 @@ function S(e) {
             onClose: S,
             onComplete: N,
             onSubscriptionConfirmation: C,
-            analyticsLocations: R,
-            analyticsObject: O,
+            analyticsLocations: O,
+            analyticsObject: R,
             analyticsLocation: L,
             analyticsSourceLocation: y,
             confirmationFooter: D,
@@ -97,7 +97,7 @@ function S(e) {
         n.e("51872"),
         n.e("560570"),
         n.e("797845"),
-        n.e("570385"),
+        n.e("531198"),
         n.e("491899"),
         n.e("867721"),
         n.e("567999"),
@@ -528,7 +528,7 @@ function S(e) {
             return n[c.C.PREMIUM_CHECKOUT].get().openCheckoutModal({
                 checkoutConfiguration: { applicationId: k, skuId: z ?? null, initialPaymentSourceId: Y },
                 forwardedPaymentModalProps: {
-                    analyticsObject: O,
+                    analyticsObject: R,
                     initialPlanId: t,
                     startingStepOverride: K,
                     analyticsLocation: L,
@@ -562,7 +562,7 @@ function S(e) {
                                     null != e &&
                                         (0, E.A)({
                                             product: e,
-                                            analyticsLocations: R ?? [],
+                                            analyticsLocations: O ?? [],
                                             purchaseType: m.gs.PROMOTIONAL,
                                             overrideGradientColor: "nitro-pink",
                                         });
@@ -570,7 +570,7 @@ function S(e) {
                             }
                         })(e, ee),
                 },
-                unifiedCheckoutProviderProps: { analyticsSourceLocation: y, analyticsLocations: R },
+                unifiedCheckoutProviderProps: { analyticsSourceLocation: y, analyticsLocations: O },
                 checkoutHandlers: { onClose: S, onComplete: N },
                 giftContextProps: { isGift: v, giftMessage: b, giftStyle: M, giftingOrigin: P, giftRecipient: V },
                 tenantParams: {

@@ -34,8 +34,8 @@ var i = n(582128),
     S = n(917012),
     N = n(56494),
     C = n(26909),
-    R = n(577700),
-    O = n(210978),
+    O = n(577700),
+    R = n(210978),
     L = n(392054),
     y = n(168186),
     D = n(240591),
@@ -109,7 +109,7 @@ async function z(e) {
     let t = new AbortController(),
         n = new s.K();
     W(e, { fetchState: { fetching: !0, abort: t, promise: n.promise } }, !0),
-        await (0, R.E)(e, t).then(n.resolve).catch(n.reject);
+        await (0, O.E)(e, t).then(n.resolve).catch(n.reject);
 }
 function Z(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
@@ -254,13 +254,13 @@ class X extends l.Ay.Store {
                 ed(r) &&
                     null != i &&
                     (null != i.guild_id
-                        ? (0, R.$)({ type: "guild", guildId: i.guild_id })
-                        : (0, R.$)({ type: "channel", channelId: i.id }),
+                        ? (0, O.$)({ type: "guild", guildId: i.guild_id })
+                        : (0, O.$)({ type: "channel", channelId: i.id }),
                     (u = !0))),
-            ed(a) && ((0, R.$)({ type: "user" }), (u = !0)),
+            ed(a) && ((0, O.$)({ type: "user" }), (u = !0)),
             ed(s) &&
                 null != n.applicationId &&
-                ((0, R.$)({ type: "application", applicationId: n.applicationId }), (u = !0)));
+                ((0, O.$)({ type: "application", applicationId: n.applicationId }), (u = !0)));
         let _ = es({
             permissionContext: o,
             text: t.text,
@@ -283,7 +283,7 @@ class X extends l.Ay.Store {
             this.query(
                 null != n ? { channel: n, type: "channel" } : { type: "contextless" },
                 { commandTypes: [c.kc.CHAT] },
-                { placeholderCount: 5, scoreMethod: O.M.COMMAND_ONLY, applicationId: e, allowFetch: !0 },
+                { placeholderCount: 5, scoreMethod: R.M.COMMAND_ONLY, applicationId: e, allowFetch: !0 },
             );
     }
 }
@@ -370,7 +370,7 @@ function ee(e, t, n) {
         i.useEffect(() => {
             if (r) {
                 if ("contextless" === e.type) {
-                    n && ed(s) && (0, R.$)({ type: "user" });
+                    n && ed(s) && (0, O.$)({ type: "user" });
                     return;
                 }
                 n &&
@@ -382,8 +382,8 @@ function ee(e, t, n) {
                     }),
                     ed(s) &&
                         (null != e.channel.guild_id
-                            ? (0, R.$)({ type: "guild", guildId: e.channel.guild_id })
-                            : (0, R.$)({ type: "channel", channelId: e.channel.id }))),
+                            ? (0, O.$)({ type: "guild", guildId: e.channel.guild_id })
+                            : (0, O.$)({ type: "channel", channelId: e.channel.id }))),
                     a(!1);
             }
         }, [s, n, e, t, r]),
@@ -402,7 +402,7 @@ function et(e, t) {
                         miss: null == a.result,
                         size: Object.keys(Q.indices).length,
                     }),
-                    ed(a) && (0, R.$)({ type: "guild", guildId: e })),
+                    ed(a) && (0, O.$)({ type: "guild", guildId: e })),
                 r(!1));
         }, [a, t, e, n]),
         a
@@ -413,7 +413,7 @@ function en(e, t) {
         a = (0, l.cf)([Q], () => Q.getUserState());
     return (
         i.useEffect(() => {
-            n && (t && ed(a) && e && (0, R.$)({ type: "user" }), r(!1));
+            n && (t && ed(a) && e && (0, O.$)({ type: "user" }), r(!1));
         }, [a, t, e, n]),
         a
     );
@@ -459,7 +459,7 @@ function ea(e, t, n) {
             let [n, r] = i.useState(!0),
                 a = (0, l.bG)([Q], () => Q.getApplicationState(e));
             i.useEffect(() => {
-                n && (t && ed(a) && null != e && (0, R.$)({ type: "application", applicationId: e }), r(!1));
+                n && (t && ed(a) && null != e && (0, O.$)({ type: "application", applicationId: e }), r(!1));
             }, [t, e, a, n]);
         })(n.applicationId, n.allowFetch),
         i.useMemo(
@@ -506,21 +506,21 @@ function es(e) {
             userState: i,
             applicationStates: r,
             text: s,
-            builtIns: l = O.n.ALLOW,
+            builtIns: l = R.n.ALLOW,
             allowApplicationCommands: o = !0,
             singleApplicationId: d,
             allowEmptySections: c = !1,
-            scoreMethod: _ = O.M.NONE,
+            scoreMethod: _ = R.M.NONE,
             sortOptions: E = er,
             installOnDemand: A = !1,
         } = e,
         { commandTypes: I } = t,
         f = s?.toLowerCase(),
         p = f?.split(" "),
-        m = l === O.n.ONLY_TEXT,
-        g = l !== O.n.DENY ? (0, S.Ez)(I, !0, m) : [],
+        m = l === R.n.ONLY_TEXT,
+        g = l !== R.n.DENY ? (0, S.Ez)(I, !0, m) : [],
         N = [],
-        R = {
+        O = {
             permissionContext: t,
             query: f,
             splitQuery: p,
@@ -574,13 +574,13 @@ function es(e) {
                   : null != s && ((t = s.descriptor), (n = Object.values(s.commands)));
         a()(null != t, "Failed to select application descriptor"),
             a()(null != n, "Failed to select list of application commands");
-        let d = el(t, n, l, o, R);
+        let d = el(t, n, l, o, O);
         null != d && N.push(d);
     }
     if (
         (E.applications.useFrecency && h.bW.loadIfNecessary(),
         N.sort((e, t) => {
-            if (E.applications.useScore && _ === O.M.APPLICATION_ONLY) {
+            if (E.applications.useScore && _ === R.M.APPLICATION_ONLY) {
                 let n = e.data[0]?.score ?? Number.MAX_VALUE,
                     i = t.data[0]?.score ?? Number.MAX_VALUE;
                 if (n !== i) return n - i;
@@ -594,11 +594,11 @@ function es(e) {
         }),
         g.length > 0 || !0 === c)
     ) {
-        let e = el(S.gZ[b.Ik.BUILT_IN], g, !0, !0, R);
+        let e = el(S.gZ[b.Ik.BUILT_IN], g, !0, !0, O);
         null != e && N.push(e);
     }
     let M = N.flatMap((e) => e.data.map((t) => ({ ...t, section: e.section })));
-    if (_ === O.M.COMMAND_ONLY || _ === O.M.COMMAND_OR_APPLICATION) {
+    if (_ === R.M.COMMAND_ONLY || _ === R.M.COMMAND_OR_APPLICATION) {
         let e = t.context,
             n = T.A.getGuild(t?.context?.guild_id);
         E.commands.useFrecency && h.bW.loadIfNecessary();
@@ -651,11 +651,11 @@ function el(e, t, n, i, r) {
         }) === v.CA.ALLOWED && p.push(r);
     return 0 !==
         (a =
-            d !== O.M.NONE && null != s && null != l
+            d !== R.M.NONE && null != s && null != l
                 ? (function (e, t, n, i, r) {
                       let a,
                           s = [];
-                      if (r === O.M.APPLICATION_ONLY || r === O.M.COMMAND_OR_APPLICATION) {
+                      if (r === R.M.APPLICATION_ONLY || r === R.M.COMMAND_OR_APPLICATION) {
                           let t = i.name.toLocaleLowerCase();
                           if (t.startsWith(e)) a = 5;
                           else if (t.includes(e)) a = 6;
@@ -668,7 +668,7 @@ function el(e, t, n, i, r) {
                           o = t.slice(1).join(" ");
                       for (let t of n) {
                           let n;
-                          (r === O.M.COMMAND_ONLY || r === O.M.COMMAND_OR_APPLICATION) &&
+                          (r === R.M.COMMAND_ONLY || r === R.M.COMMAND_OR_APPLICATION) &&
                               (n = (function (e, t, n, i) {
                                   let r = e.untranslatedName.toLocaleLowerCase(),
                                       a = e.displayName.toLocaleLowerCase();
@@ -704,7 +704,7 @@ function el(e, t, n, i, r) {
                       return s;
                   })(s, l, p, e, d)
                 : p).length || o
-        ? ((d === O.M.NONE || d === O.M.APPLICATION_ONLY) && a.sort((e, t) => eE(e.displayName, t.displayName)),
+        ? ((d === R.M.NONE || d === R.M.APPLICATION_ONLY) && a.sort((e, t) => eE(e.displayName, t.displayName)),
           { section: e, data: a })
         : null;
 }

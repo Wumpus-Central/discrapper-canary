@@ -1,6 +1,6 @@
 "use strict";
 let n;
-r.d(t, { Cl: () => C, K7: () => P, ME: () => k, lb: () => T, pP: () => x });
+r.d(t, { Cl: () => C, K7: () => P, ME: () => k, lb: () => T, pP: () => E });
 var o = r(959722),
     i = r(361037),
     a = r(139835),
@@ -62,13 +62,13 @@ function S(e) {
         t.addEventListener(
             "beforeunload",
             () => {
-                E(e);
+                x(e);
             },
             { once: !0 },
         ),
         p.set(t, { focus: n });
 }
-let E = (e, t) => {
+let x = (e, t) => {
     let r = (0, s.mD)(e),
         n = (0, s.TW)(e);
     t && n.removeEventListener("DOMContentLoaded", t),
@@ -85,7 +85,7 @@ let E = (e, t) => {
                 n.removeEventListener("pointerup", g, !0)),
             p.delete(r));
 };
-function x() {
+function E() {
     return "pointer" !== c;
 }
 function k() {
@@ -145,7 +145,7 @@ function P(e, t, r) {
                         "keyboard" === t &&
                         n instanceof c &&
                         !m[n.key]) ||
-                        e(x());
+                        e(E());
             };
             return (
                 f.add(t),

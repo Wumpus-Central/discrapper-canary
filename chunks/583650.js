@@ -2,8 +2,8 @@
 n.d(t, { V: () => o });
 var i = n(477900),
     r = n(582128),
-    a = n(900283),
-    s = n(892547),
+    a = n(683438),
+    s = n(900283),
     l = n(375708);
 let o = r.forwardRef(function (e, t) {
     let {
@@ -21,14 +21,14 @@ let o = r.forwardRef(function (e, t) {
             () => ({ focus: () => E.current?.focus(), blur: () => E.current?.blur(), activate: () => !1 }),
             [],
         ),
-        (0, i.jsx)(s.I, {
+        (0, i.jsx)(a.I, {
             size: "sm",
             disabled: d,
             onChange: function (e) {
-                o(e), _?.(a.Q.SEARCH);
+                o(e), _?.(s.Q.SEARCH);
             },
             onClear: function () {
-                o(""), _?.(a.Q.SEARCH);
+                o(""), _?.(s.Q.SEARCH);
             },
             query: n,
             placeholder: c,

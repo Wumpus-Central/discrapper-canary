@@ -58,8 +58,8 @@ var n,
     w = Math.random(),
     _ = p(null, { narrow: {}, short: {}, long: {} }),
     S = !1,
-    E = !1,
-    x = /^[A-Z]{3}$/,
+    x = !1,
+    E = /^[A-Z]{3}$/,
     k = /-u(?:-[0-9a-z]{2,8})+/gi,
     C = {
         "art-lojban": "jbo",
@@ -486,14 +486,14 @@ function L(e, t, r, n, o) {
             var S = f.call(p, g);
             if (-1 !== S)
                 if (S + 1 < d && p[S + 1].length > 2) {
-                    var E = p[S + 1],
-                        x = f.call(b, E);
-                    if (-1 !== x)
-                        var w = E,
+                    var x = p[S + 1],
+                        E = f.call(b, x);
+                    if (-1 !== E)
+                        var w = x,
                             _ = "-" + g + "-" + w;
                 } else {
-                    var x = f(b, "true");
-                    if (-1 !== x) var w = "true";
+                    var E = f(b, "true");
+                    if (-1 !== E) var w = "true";
                 }
         }
         if (u.call(r, "[[" + g + "]]")) {
@@ -564,7 +564,7 @@ function B(e, t, r) {
         h = F(r, "style", "string", new ee("decimal", "percent", "currency"), "decimal");
     o["[[style]]"] = h;
     var m = F(r, "currency", "string");
-    if (void 0 !== m && ((n = er(String(m))), !1 === x.test(n) || 0))
+    if (void 0 !== m && ((n = er(String(m))), !1 === E.test(n) || 0))
         throw RangeError("'" + m + "' is not a valid currency code");
     if ("currency" === h && void 0 === m) throw TypeError("Currency code is required when style is currency");
     if ("currency" === h) {
@@ -578,8 +578,8 @@ function B(e, t, r) {
     o["[[minimumIntegerDigits]]"] = _;
     var S = N(r, "minimumFractionDigits", 0, 20, "currency" === h ? y : 0);
     o["[[minimumFractionDigits]]"] = S;
-    var E = "currency" === h ? Math.max(S, y) : "percent" === h ? Math.max(S, 0) : Math.max(S, 3),
-        k = N(r, "maximumFractionDigits", S, 20, E);
+    var x = "currency" === h ? Math.max(S, y) : "percent" === h ? Math.max(S, 0) : Math.max(S, 3),
+        k = N(r, "maximumFractionDigits", S, 20, x);
     o["[[maximumFractionDigits]]"] = k;
     var C = r.minimumSignificantDigits,
         T = r.maximumSignificantDigits;
@@ -700,14 +700,14 @@ function K(e, t) {
             r = v.call(p, l.decimal);
         }
     }
-    var E = o[!0 === c ? "[[negativePattern]]" : "[[positivePattern]]"];
-    if (((E = E.replace("{number}", r)), "currency" === o["[[style]]"])) {
-        var x,
+    var x = o[!0 === c ? "[[negativePattern]]" : "[[positivePattern]]"];
+    if (((x = x.replace("{number}", r)), "currency" === o["[[style]]"])) {
+        var E,
             k = o["[[currency]]"],
             C = s.currencies[k];
-        (x = ("symbol" === o["[[currencyDisplay]]"] && C) || k), (E = E.replace("{currency}", x));
+        (E = ("symbol" === o["[[currencyDisplay]]"] && C) || k), (x = x.replace("{currency}", E));
     }
-    return n.exp.test(n.input), E;
+    return n.exp.test(n.input), x;
 }
 c(a, "NumberFormat", { configurable: !0, writable: !0, value: j }),
     c(a.NumberFormat, "prototype", { writable: !1 }),
@@ -757,7 +757,7 @@ function z(e, t, r) {
     var a = O(t),
         r = H(r, "any", "date"),
         s = new Q();
-    (x = F(r, "localeMatcher", "string", new ee("lookup", "best fit"), "best fit")), (s["[[localeMatcher]]"] = x);
+    (E = F(r, "localeMatcher", "string", new ee("lookup", "best fit"), "best fit")), (s["[[localeMatcher]]"] = E);
     var f = b.DateTimeFormat,
         p = f["[[localeData]]"],
         d = L(f["[[availableLocales]]"], a, s, f["[[relevantExtensionKeys]]"], p);
@@ -776,9 +776,9 @@ function z(e, t, r) {
     var g,
         _,
         S = p[h],
-        E = ((g = S.formats), "[object Array]" === Object.prototype.toString.call(g) ? g : i.createDateTimeFormats(g)),
-        x = F(r, "formatMatcher", "string", new ee("basic", "best fit"), "best fit");
-    for (var v in ((S.formats = E), (_ = "basic" === x ? G(s, E) : G(s, E, !0)), W))
+        x = ((g = S.formats), "[object Array]" === Object.prototype.toString.call(g) ? g : i.createDateTimeFormats(g)),
+        E = F(r, "formatMatcher", "string", new ee("basic", "best fit"), "best fit");
+    for (var v in ((S.formats = x), (_ = "basic" === E ? G(s, x) : G(s, x, !0)), W))
         if (u.call(W, v) && u.call(_, v)) {
             var k = _[v];
             n["[[" + v + "]]"] = k;
@@ -931,8 +931,8 @@ function Y(e, t) {
                 y,
                 g,
                 S,
-                E,
                 x,
+                E,
                 k = r["[[" + h + "]]"],
                 C = l["[[" + h + "]]"];
             if (
@@ -942,33 +942,33 @@ function Y(e, t) {
                       ? C++
                       : "hour" === h &&
                         !0 === r["[[hour12]]"] &&
-                        ((C %= 12), (E = C !== l["[[" + h + "]]"]), 0 === C && !0 === r["[[hourNo0]]"] && (C = 12)),
+                        ((C %= 12), (x = C !== l["[[" + h + "]]"]), 0 === C && !0 === r["[[hourNo0]]"] && (C = 12)),
                 "numeric" === k)
             )
-                x = K(i, C);
-            else if ("2-digit" === k) (x = K(s, C)).length > 2 && (x = x.slice(-2));
+                E = K(i, C);
+            else if ("2-digit" === k) (E = K(s, C)).length > 2 && (E = E.slice(-2));
             else if (k in _)
                 switch (h) {
                     case "month":
-                        x = Z(p, d, "months", k, l["[[" + h + "]]"]);
+                        E = Z(p, d, "months", k, l["[[" + h + "]]"]);
                         break;
                     case "weekday":
                         try {
-                            x = Z(p, d, "days", k, l["[[" + h + "]]"]);
+                            E = Z(p, d, "days", k, l["[[" + h + "]]"]);
                         } catch (e) {
                             throw Error("Could not find weekday data for locale " + o);
                         }
                         break;
                     case "timeZoneName":
-                        x = "";
+                        E = "";
                         break;
                     default:
-                        x = l["[[" + h + "]]"];
+                        E = l["[[" + h + "]]"];
                 }
-            c = c.replace("{" + h + "}", x);
+            c = c.replace("{" + h + "}", E);
         }
     return (
-        !0 === r["[[hour12]]"] && ((x = Z(p, d, "dayPeriods", E ? "pm" : "am")), (c = c.replace("{ampm}", x))),
+        !0 === r["[[hour12]]"] && ((E = Z(p, d, "dayPeriods", x ? "pm" : "am")), (c = c.replace("{ampm}", E))),
         n.exp.test(n.input),
         c
     );
@@ -1143,7 +1143,7 @@ function eo(e) {
                             (b.DateTimeFormat["[[localeData]]"][r] = e.date));
                 void 0 === n && (n = t),
                     S || (B(a.NumberFormat.prototype), (S = !0)),
-                    e.date && !E && (z(a.DateTimeFormat.prototype), (E = !0));
+                    e.date && !x && (z(a.DateTimeFormat.prototype), (x = !0));
             })(e, e.locale);
         },
     }),

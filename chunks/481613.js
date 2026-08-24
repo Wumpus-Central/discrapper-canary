@@ -55,10 +55,10 @@
             var w = u ? !!c.likeChrome : /\bChrome\b/.test(e) && !/internal|\n/i.test(f.toString()),
                 _ = "Object",
                 S = u && s.java ? "JavaPackage" : m(s.java),
-                E = /\bJava/.test(S) && s.java,
-                x = E && m(s.environment) == (u ? _ : "Environment"),
-                k = E ? "a" : "\u03B1",
-                C = E ? "b" : "\u03B2",
+                x = /\bJava/.test(S) && s.java,
+                E = x && m(s.environment) == (u ? _ : "Environment"),
+                k = x ? "a" : "\u03B1",
+                C = x ? "b" : "\u03B2",
                 T = s.document || {},
                 M = s.operamini || s.opera,
                 P = l.test((P = u && M ? M["[[Class]]"] : m(M))) ? P : (M = null),
@@ -398,10 +398,10 @@
                               (R = ["Trident"]),
                               (B = "Windows"));
                 else if (
-                    (E &&
-                        ((A = (i = E.lang.System).getProperty("os.arch")),
+                    (x &&
+                        ((A = (i = x.lang.System).getProperty("os.arch")),
                         (B = B || i.getProperty("os.name") + " " + i.getProperty("os.version"))),
-                    x)
+                    E)
                 ) {
                     try {
                         (L = s.require("ringo/engine").version.join(".")), (F = "RingoJS");

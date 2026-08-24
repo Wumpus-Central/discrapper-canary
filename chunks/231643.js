@@ -1,9 +1,9 @@
 a.d(t, { Ay: () => C, BW: () => y, fu: () => b });
 var n,
     l = a(477900),
-    s = a(582128),
-    i = a(503698),
-    r = a.n(i),
+    i = a(582128),
+    s = a(503698),
+    r = a.n(s),
     o = a(862482),
     d = a(939249),
     c = a(980707),
@@ -51,33 +51,33 @@ let y = [
         "Audio / Video",
         "Development",
     ],
-    E = s.forwardRef(function (e, t) {
-        let { id: a, selected: n, onClick: s, children: i } = e;
+    E = i.forwardRef(function (e, t) {
+        let { id: a, selected: n, onClick: i, children: s } = e;
         return (0, l.jsx)(d.D, {
             className: r()(f.V3, { [f.wH]: n }),
             "data-tab-id": a,
             innerRef: t,
-            onClick: s,
-            children: i,
+            onClick: i,
+            children: s,
         });
     });
 function _(e) {
     let { tabs: t, selectedTabId: a, onSelectTab: n } = e,
-        i = s.useRef(new Map()),
-        [r, d] = s.useState(() => new Set()),
+        s = i.useRef(new Map()),
+        [r, d] = i.useState(() => new Set()),
         { ref: b, width: y } = (0, h.Ay)(),
-        _ = s.useRef(null),
+        _ = i.useRef(null),
         C = (0, j.N)(t, n),
         S = (0, x.A)();
-    s.useEffect(() => {
+    i.useEffect(() => {
         if (null == y) return;
         let e = new Set(),
             n = y ?? 0;
-        for (let l of ((n -= i.current.get(a)?.getBoundingClientRect().width ?? 0), t))
-            l.id !== a && (n -= i.current.get(l.id)?.getBoundingClientRect().width ?? 0) < 0 && e.add(l.id);
+        for (let l of ((n -= s.current.get(a)?.getBoundingClientRect().width ?? 0), t))
+            l.id !== a && (n -= s.current.get(l.id)?.getBoundingClientRect().width ?? 0) < 0 && e.add(l.id);
         d(e);
     }, [t, y, b, a]);
-    let N = s.useCallback(
+    let N = i.useCallback(
         (e) => {
             let { closePopout: t } = e;
             return (0, l.jsxs)(c.W, {
@@ -101,11 +101,11 @@ function _(e) {
                 children: [
                     t
                         .map((e) => {
-                            let { id: t, name: s } = e;
+                            let { id: t, name: i } = e;
                             if (!r.has(t))
                                 return (0, l.jsx)(
                                     E,
-                                    { id: t, selected: a === t, onClick: a !== t ? () => n(t) : void 0, children: s },
+                                    { id: t, selected: a === t, onClick: a !== t ? () => n(t) : void 0, children: i },
                                     t,
                                 );
                         })
@@ -113,17 +113,17 @@ function _(e) {
                     (0, l.jsx)("div", {
                         className: f.g,
                         children: t.map((e) => {
-                            let { id: t, name: s } = e;
+                            let { id: t, name: i } = e;
                             return (0, l.jsx)(
                                 E,
                                 {
                                     id: t,
                                     selected: a === t,
                                     ref: (e) => {
-                                        i.current.set(t, e);
+                                        s.current.set(t, e);
                                     },
                                     onClick: a !== t ? () => n(t) : void 0,
-                                    children: s,
+                                    children: i,
                                 },
                                 t,
                             );
@@ -162,19 +162,19 @@ function _(e) {
     });
 }
 function C(e, t) {
-    let { tabs: a, initialSelectedTabId: n, onChangeTab: i } = e,
-        [r, o] = s.useState(n ?? a[0]?.id);
+    let { tabs: a, initialSelectedTabId: n, onChangeTab: s } = e,
+        [r, o] = i.useState(n ?? a[0]?.id);
     return {
-        TabBar: s.useCallback(
+        TabBar: i.useCallback(
             () =>
                 (0, l.jsx)(_, {
                     tabs: a,
                     selectedTabId: r,
                     onSelectTab: (e) => {
-                        o(e), i?.(e);
+                        o(e), s?.(e);
                     },
                 }),
-            [r, o, i, ...t],
+            [r, o, s, ...t],
         ),
         renderSelectedTab: a.find((e) => e.id === r)?.render ?? (() => null),
         selectedTabId: r,

@@ -62,8 +62,8 @@ function w(e, t) {
 }
 var _ = r(709157),
     S = r(743109),
-    E = r(596698),
-    x = r(51621),
+    x = r(596698),
+    E = r(51621),
     k = r(377131),
     C = r(208630),
     T = r(428208),
@@ -443,7 +443,7 @@ function eo({ props: e, forwardedRef: t, collection: r }) {
                         shouldSelectOnPressUp: h,
                     });
                     let y = (0, S.m)({ selectionManager: t.selectionManager, hasItemActions: !!a }),
-                        g = (0, x.$)(r, { isDisabled: 0 !== t.collection.size }),
+                        g = (0, E.$)(r, { isDisabled: 0 !== t.collection.size }),
                         w = (0, p.$)(e, { labelable: !0 }),
                         M = (0, s.v)(
                             w,
@@ -458,7 +458,7 @@ function eo({ props: e, forwardedRef: t, collection: r }) {
                         );
                     return (
                         n && ((M["aria-rowcount"] = t.collection.size), (M["aria-colcount"] = 1)),
-                        (0, E.H)({}, t),
+                        (0, x.H)({}, t),
                         { gridProps: M }
                     );
                 })(
@@ -583,18 +583,18 @@ let es = (0, l.KU)(u._B, (e, t, r) => {
                         } = b.get(t),
                         g = (0, _.X1)(),
                         S = (0, d.useRef)(null),
-                        E = {},
-                        x = e.hasChildItems,
+                        x = {},
+                        E = e.hasChildItems,
                         k = t.selectionManager.isLink(c.key);
                     if (null != c && "expandedKeys" in t) {
                         let e = null == (i = (a = t.collection).getChildren) ? void 0 : i.call(a, c.key);
-                        (x = x || [...(null != e ? e : [])].length > 1),
+                        (E = E || [...(null != e ? e : [])].length > 1),
                             null == h &&
                                 !k &&
                                 "none" === t.selectionManager.selectionMode &&
-                                x &&
+                                E &&
                                 (h = () => t.toggleKey(c.key));
-                        let r = x ? t.expandedKeys.has(c.key) : void 0,
+                        let r = E ? t.expandedKeys.has(c.key) : void 0,
                             n = 1;
                         if (c.level > 0 && (null == c ? void 0 : c.parentKey) != null) {
                             let e = t.collection.getItem(c.parentKey);
@@ -603,7 +603,7 @@ let es = (0, l.KU)(u._B, (e, t, r) => {
                                     ...(null == (l = (u = t.collection).getChildren) ? void 0 : l.call(u, e.key)),
                                 ].filter((e) => "item" === e.type).length);
                         } else n = [...t.collection].filter((e) => 0 === e.level && "item" === e.type).length;
-                        E = {
+                        x = {
                             "aria-expanded": r,
                             "aria-level": c.level + 1,
                             "aria-posinset": (null == c ? void 0 : c.index) + 1,
@@ -644,7 +644,7 @@ let es = (0, l.KU)(u._B, (e, t, r) => {
                                     if (
                                         e.key === z[p] &&
                                         t.selectionManager.focusedKey === c.key &&
-                                        x &&
+                                        E &&
                                         !t.expandedKeys.has(c.key)
                                     ) {
                                         t.toggleKey(c.key), e.stopPropagation();
@@ -652,7 +652,7 @@ let es = (0, l.KU)(u._B, (e, t, r) => {
                                     } else if (
                                         e.key === W[p] &&
                                         t.selectionManager.focusedKey === c.key &&
-                                        x &&
+                                        E &&
                                         t.expandedKeys.has(c.key)
                                     ) {
                                         t.toggleKey(c.key), e.stopPropagation();
@@ -753,7 +753,7 @@ let es = (0, l.KU)(u._B, (e, t, r) => {
                             : c.index + 1;
                     }
                     return {
-                        rowProps: { ...(0, s.v)(O, E) },
+                        rowProps: { ...(0, s.v)(O, x) },
                         gridCellProps: { role: "gridcell", "aria-colindex": 1 },
                         descriptionProps: { id: g },
                         ...T,
@@ -765,10 +765,10 @@ let es = (0, l.KU)(u._B, (e, t, r) => {
             "virtual" === y && "u" > typeof window && "ontouchstart" in window && (y = "pointer");
             let g = l && ("keyboard" === y || "virtual" === y) ? i.format("removeDescription") : "",
                 S = (0, L.I)(g),
-                E = o.key === t.selectionManager.focusedKey,
-                x = null != t.selectionManager.focusedKey,
+                x = o.key === t.selectionManager.focusedKey,
+                E = null != t.selectionManager.focusedKey,
                 k = -1;
-            v || (!E && x) || (k = 0);
+            v || (!x && E) || (k = 0);
             let C = (0, p.$)(o.props),
                 T = (0, R.HI)(o.props),
                 { focusableProps: M } = (0, N.Wc)({ isDisabled: v }, r);
@@ -802,13 +802,13 @@ let es = (0, l.KU)(u._B, (e, t, r) => {
                 allowsRemoving: !!l,
             };
         })({ item: r }, a, l),
-        { hoverProps: S, isHovered: E } = (0, q.M)({
+        { hoverProps: S, isHovered: x } = (0, q.M)({
             isDisabled: !g.allowsSelection,
             onHoverStart: r.props.onHoverStart,
             onHoverChange: r.props.onHoverChange,
             onHoverEnd: r.props.onHoverEnd,
         }),
-        x = (0, i.Sl)({
+        E = (0, i.Sl)({
             ...e,
             id: void 0,
             children: r.rendered,
@@ -816,7 +816,7 @@ let es = (0, l.KU)(u._B, (e, t, r) => {
             values: {
                 ...g,
                 isFocusVisible: c,
-                isHovered: E,
+                isHovered: x,
                 selectionMode: a.selectionManager.selectionMode,
                 selectionBehavior: a.selectionManager.selectionBehavior,
             },
@@ -832,10 +832,10 @@ let es = (0, l.KU)(u._B, (e, t, r) => {
             "div",
             {
                 ref: l,
-                ...(0, s.v)(k, x, f, u, S),
+                ...(0, s.v)(k, E, f, u, S),
                 "data-selected": g.isSelected || void 0,
                 "data-disabled": g.isDisabled || void 0,
-                "data-hovered": E || void 0,
+                "data-hovered": x || void 0,
                 "data-focused": g.isFocused || void 0,
                 "data-focus-visible": c || void 0,
                 "data-pressed": g.isPressed || void 0,
@@ -855,7 +855,7 @@ let es = (0, l.KU)(u._B, (e, t, r) => {
                             [v.r, { isSelected: g.isSelected }],
                         ],
                     },
-                    x.children,
+                    E.children,
                 ),
             ),
         )

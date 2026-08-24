@@ -410,8 +410,8 @@ function e1(e) {
                             isPlaying: w,
                             onProgressChange: L,
                             children: [
-                                (0, n.jsx)(e5, { isNew: a }),
-                                T && !t ? (0, n.jsx)(e3, { onMenu: K, onBeforeDelete: H }) : (0, n.jsx)(e7, {}),
+                                (0, n.jsx)(e3, { isNew: a }),
+                                T && !t ? (0, n.jsx)(e5, { onMenu: K, onBeforeDelete: H }) : (0, n.jsx)(e9, {}),
                                 (0, n.jsx)("div", { className: eJ.dH, "aria-hidden": "true" }),
                             ],
                         }),
@@ -432,7 +432,7 @@ let e2 = i.forwardRef((e, t) => {
         children: (0, n.jsx)(eO.h, { isVisible: !0, children: a }),
     });
 });
-function e5(e) {
+function e3(e) {
     let { isNew: t } = e,
         l = (0, eR.Y_)(),
         i = !0 === l.pending;
@@ -453,7 +453,7 @@ function e5(e) {
         ],
     });
 }
-function e3(e) {
+function e5(e) {
     let { onMenu: t, onBeforeDelete: l } = e;
     return (0, n.jsxs)("div", {
         className: eJ.Mw,
@@ -473,12 +473,12 @@ function e3(e) {
         ],
     });
 }
-function e7() {
+function e9() {
     let e = (0, eR.Y_)();
     return (0, n.jsxs)("div", {
         className: eJ.E4,
         children: [
-            (0, n.jsx)(e9, {}),
+            (0, n.jsx)(e7, {}),
             e.isFavorite &&
                 (0, n.jsx)("div", {
                     className: s()(eJ.cH, eJ.y8),
@@ -488,7 +488,7 @@ function e7() {
         ],
     });
 }
-function e9() {
+function e7() {
     let e = (0, eR.Y_)(),
         t = 0 === e.length,
         l = !0 === e.pending,
@@ -915,7 +915,7 @@ var tr = l(922016),
     tc = l(980707),
     tu = l(477782),
     td = l(112173),
-    tm = l(892547),
+    tm = l(683438),
     th = l(548118),
     tx = l(341923),
     tg = l(441349),
@@ -1226,7 +1226,7 @@ function tL(e) {
 }
 var tS = l(91871),
     tI = l.n(tS),
-    tM = l(103552),
+    tM = l(190199),
     tD = l(914427),
     tT = l(724141);
 function t_(e) {
@@ -1885,9 +1885,9 @@ function t0(e) {
 }
 var t1 = l(770178),
     t2 = l(765548),
-    t5 = l(202163),
-    t3 = l(68408);
-function t7(e) {
+    t3 = l(202163),
+    t5 = l(68408);
+function t9(e) {
     let {
             session: t,
             recentClipIds: l,
@@ -1898,7 +1898,7 @@ function t7(e) {
             entranceRowOffset: d,
             onEdgeNavigate: m,
         } = e,
-        { gameRecord: h } = (0, t5.A)(t.applicationId),
+        { gameRecord: h } = (0, t3.A)(t.applicationId),
         x = (0, te.P)((e) => e.setGameFacet),
         p = (0, te.P)((e) => e.setActiveMainLink),
         j = t.applicationId,
@@ -1954,64 +1954,64 @@ function t7(e) {
             [G, m],
         );
     return (0, n.jsxs)("section", {
-        className: t3.dZ,
+        className: t5.dZ,
         children: [
             (0, n.jsx)("div", {
-                className: s()(t3.tB, null == C && t3.rD),
+                className: s()(t5.tB, null == C && t5.rD),
                 style: null != C ? { backgroundImage: `url(${C})` } : void 0,
                 "aria-hidden": "true",
             }),
             (0, n.jsxs)("div", {
-                className: t3.wx,
+                className: t5.wx,
                 children: [
                     y
                         ? (0, n.jsx)(ey.s, {
                               "aria-label": t.applicationName,
                               onClick: v,
-                              className: t3.Zn,
+                              className: t5.Zn,
                               children: (0, n.jsx)(P.A, {
-                                  className: t3.Gt,
+                                  className: t5.Gt,
                                   game: h,
                                   size: P.M.MEDIUM,
                                   "aria-hidden": !0,
                               }),
                           })
-                        : (0, n.jsx)(P.A, { className: t3.Gt, game: h, size: P.M.MEDIUM, "aria-hidden": !0 }),
+                        : (0, n.jsx)(P.A, { className: t5.Gt, game: h, size: P.M.MEDIUM, "aria-hidden": !0 }),
                     (0, n.jsxs)("div", {
-                        className: t3.TK,
+                        className: t5.TK,
                         children: [
                             y
                                 ? (0, n.jsx)(ey.s, {
                                       "aria-label": t.applicationName,
                                       onClick: v,
-                                      className: t3.wb,
+                                      className: t5.wb,
                                       children: (0, n.jsx)(f.D, {
                                           variant: "text-md/semibold",
                                           color: "text-default",
-                                          className: t3.mO,
+                                          className: t5.mO,
                                           children: t.applicationName,
                                       }),
                                   })
                                 : (0, n.jsx)(f.D, {
                                       variant: "text-md/semibold",
                                       color: "text-default",
-                                      className: t3.mO,
+                                      className: t5.mO,
                                       children: t.applicationName,
                                   }),
                             (0, n.jsxs)("div", {
-                                className: t3.mI,
+                                className: t5.mI,
                                 children: [
                                     (0, n.jsx)($.E, {
                                         variant: "text-xs/normal",
                                         color: "text-muted",
                                         children: eu.intl.format(ec.default["+YIqQM"], { count: t.clips.length }),
                                     }),
-                                    (0, n.jsx)("span", { className: t3.TG, "aria-hidden": "true" }),
+                                    (0, n.jsx)("span", { className: t5.TG, "aria-hidden": "true" }),
                                     (0, n.jsx)($.E, { variant: "text-xs/normal", color: "text-muted", children: k }),
                                     A.length > 0 &&
                                         (0, n.jsxs)(n.Fragment, {
                                             children: [
-                                                (0, n.jsx)("span", { className: t3.TG, "aria-hidden": "true" }),
+                                                (0, n.jsx)("span", { className: t5.TG, "aria-hidden": "true" }),
                                                 (0, n.jsx)(ej.A, { users: A, maxUsers: 5, size: g._3.SIZE_16 }),
                                             ],
                                         }),
@@ -2023,7 +2023,7 @@ function t7(e) {
             }),
             (0, n.jsx)("div", {
                 ref: L,
-                className: t3.Vg,
+                className: t5.Vg,
                 ...O,
                 tabIndex: -1,
                 onKeyDown: U,
@@ -2031,7 +2031,7 @@ function t7(e) {
                     (0, n.jsx)(
                         "div",
                         {
-                            className: t3.UX,
+                            className: t5.UX,
                             ...H(t),
                             children: e.map((e, i) => {
                                 let s = { width: I };
@@ -2062,7 +2062,7 @@ function t7(e) {
             }),
             D &&
                 (0, n.jsx)("div", {
-                    className: t3.Vc,
+                    className: t5.Vc,
                     children: (0, n.jsx)(eC.$, {
                         variant: "secondary",
                         size: "sm",
@@ -2073,7 +2073,7 @@ function t7(e) {
         ],
     });
 }
-var t9 = l(799888);
+var t7 = l(799888);
 function t8(e) {
     let { filteredClips: t, totalClipCount: l, onEdit: a, onClipClick: s, isLoading: r } = e,
         { enableAutoClipsReview: o } = tq.useConfig({ location: "ClipsGalleryHome" }),
@@ -2131,15 +2131,15 @@ function t8(e) {
         }, []);
     return p.length > 0 || d
         ? (0, n.jsx)(t$.Ip, {
-              className: t9.iR,
+              className: t7.iR,
               fade: !0,
               children: (0, n.jsxs)("div", {
-                  className: t9.Qs,
+                  className: t7.Qs,
                   ref: v,
                   children: [
                       d &&
                           (0, n.jsx)("div", {
-                              className: t9.Dk,
+                              className: t7.Dk,
                               children: (0, n.jsx)(t0, { clips: t, onEdit: a, onEdgeNavigate: b }),
                           }),
                       p.length > 0 &&
@@ -2152,7 +2152,7 @@ function t8(e) {
                                   }),
                                   p.map((e, t) =>
                                       (0, n.jsx)(
-                                          t7,
+                                          t9,
                                           {
                                               session: e,
                                               recentClipIds: m,
@@ -2167,7 +2167,7 @@ function t8(e) {
                                       ),
                                   ),
                                   (0, n.jsx)("div", {
-                                      className: t9.dp,
+                                      className: t7.dp,
                                       children: (0, n.jsx)(eC.$, {
                                           variant: "primary",
                                           text: eu.intl.string(ec.default.RQtkop),
@@ -2180,7 +2180,7 @@ function t8(e) {
               }),
           })
         : r
-          ? (0, n.jsx)("div", { className: t9.dc, children: (0, n.jsx)(q.y, {}) })
+          ? (0, n.jsx)("div", { className: t7.dc, children: (0, n.jsx)(q.y, {}) })
           : (0, n.jsx)(ex, { isEmptyBecauseQuery: l > 0 });
 }
 var t4 = l(7689),

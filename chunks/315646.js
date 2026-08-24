@@ -18,8 +18,8 @@ var n = "function" == typeof Map && Map.prototype,
     w = String.prototype.toUpperCase,
     _ = String.prototype.toLowerCase,
     S = RegExp.prototype.test,
-    E = Array.prototype.concat,
-    x = Array.prototype.join,
+    x = Array.prototype.concat,
+    E = Array.prototype.join,
     k = Array.prototype.slice,
     C = Math.floor,
     T = "function" == typeof BigInt ? BigInt.prototype.valueOf : null,
@@ -134,9 +134,9 @@ e.exports = function e(t, n, o, s) {
         if ("	" === e.indent) r = "	";
         else {
             if ("number" != typeof e.indent || !(e.indent > 0)) return null;
-            r = x.call(Array(e.indent + 1), " ");
+            r = E.call(Array(e.indent + 1), " ");
         }
-        return { base: r, prev: x.call(Array(t + 1), r) };
+        return { base: r, prev: E.call(Array(t + 1), r) };
     })(M, o);
     if (void 0 === s) s = [];
     else if (q(s, t) >= 0) return "[Circular]";
@@ -158,7 +158,7 @@ e.exports = function e(t, n, o, s) {
             "[Function" +
             (ea ? ": " + ea : " (anonymous)") +
             "]" +
-            (es.length > 0 ? " { " + x.call(es, ", ") + " }" : "")
+            (es.length > 0 ? " { " + E.call(es, ", ") + " }" : "")
         );
     }
     if (z(t)) {
@@ -189,15 +189,15 @@ e.exports = function e(t, n, o, s) {
                 return !0;
             })(eh)
             ? "[" + Q(eh, eo) + "]"
-            : "[ " + x.call(eh, ", ") + " ]";
+            : "[ " + E.call(eh, ", ") + " ]";
     }
     if ("[object Error]" === G((l = t)) && K(l)) {
         var em = ee(t, ei);
         return "cause" in Error.prototype || !("cause" in t) || I.call(t, "cause")
             ? 0 === em.length
                 ? "[" + String(t) + "]"
-                : "{ [" + String(t) + "] " + x.call(em, ", ") + " }"
-            : "{ [" + String(t) + "] " + x.call(E.call("[cause]: " + ei(t.cause), em), ", ") + " }";
+                : "{ [" + String(t) + "] " + E.call(em, ", ") + " }"
+            : "{ [" + String(t) + "] " + E.call(x.call("[cause]: " + ei(t.cause), em), ", ") + " }";
     }
     if ("object" == typeof t && F) {
         if (N && "function" == typeof t[N] && R) return R(t, { depth: en - o });
@@ -316,8 +316,8 @@ e.exports = function e(t, n, o, s) {
             e_ = !eb && O && Object(t) === t && O in t ? g.call(G(t), 8, -1) : ew ? "Object" : "",
             eS =
                 (eb || "function" != typeof t.constructor ? "" : t.constructor.name ? t.constructor.name + " " : "") +
-                (e_ || ew ? "[" + x.call(E.call([], e_ || [], ew || []), ": ") + "] " : "");
-        return 0 === eg.length ? eS + "{}" : eo ? eS + "{" + Q(eg, eo) + "}" : eS + "{ " + x.call(eg, ", ") + " }";
+                (e_ || ew ? "[" + E.call(x.call([], e_ || [], ew || []), ": ") + "] " : "");
+        return 0 === eg.length ? eS + "{}" : eo ? eS + "{" + Q(eg, eo) + "}" : eS + "{ " + E.call(eg, ", ") + " }";
     }
     return String(t);
 };
@@ -349,12 +349,12 @@ function X(e) {
     return e + " { ? }";
 }
 function Z(e, t, r, n) {
-    return e + " (" + t + ") {" + (n ? Q(r, n) : x.call(r, ", ")) + "}";
+    return e + " (" + t + ") {" + (n ? Q(r, n) : E.call(r, ", ")) + "}";
 }
 function Q(e, t) {
     if (0 === e.length) return "";
     var r = "\n" + t.prev + t.base;
-    return r + x.call(e, "," + r) + "\n" + t.prev;
+    return r + E.call(e, "," + r) + "\n" + t.prev;
 }
 function ee(e, t) {
     var r,

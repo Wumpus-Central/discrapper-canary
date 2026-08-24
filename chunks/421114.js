@@ -232,7 +232,7 @@ function v(e) {
                         : g(l) && !w((0, o.wt)(e), l)
                           ? D.current
                               ? D.current.focus()
-                              : m && m.current && x(m.current)
+                              : m && m.current && E(m.current)
                           : g(l) && (D.current = (0, o.wt)(e));
                 },
                 s = (e) => {
@@ -247,7 +247,7 @@ function v(e) {
                                 if (t && t.isConnected) {
                                     var s;
                                     (D.current = t), null == (s = D.current) || s.focus();
-                                } else m.current && x(m.current);
+                                } else m.current && E(m.current);
                             }
                         }));
                 };
@@ -345,7 +345,7 @@ function v(e) {
                                     }
                                     for (t = e.getTreeNode(f); t; ) {
                                         if (t.scopeRef && t.scopeRef.current && I.getTreeNode(t.scopeRef))
-                                            return void C(E(t.scopeRef.current, !0));
+                                            return void C(x(t.scopeRef.current, !0));
                                         t = t.parent;
                                     }
                                 }
@@ -361,7 +361,7 @@ function v(e) {
             if (F.current) {
                 m = P;
                 let e = (0, i.TW)(P.current ? P.current[0] : void 0);
-                !b((0, o.bq)(e), m.current) && P.current && x(P.current);
+                !b((0, o.bq)(e), m.current) && P.current && E(P.current);
             }
             F.current = !1;
         }, [P]),
@@ -478,7 +478,7 @@ function S(e, t = !1) {
             (0, f.l)(e);
         } catch {}
 }
-function E(e, t = !0) {
+function x(e, t = !0) {
     let r = e[0].previousElementSibling,
         n = y(e),
         o = T(n, { tabbable: t }, e);
@@ -486,8 +486,8 @@ function E(e, t = !0) {
     let i = o.nextNode();
     return t && !i && (((o = T((n = y(e)), { tabbable: !1 }, e)).currentNode = r), (i = o.nextNode())), i;
 }
-function x(e, t = !0) {
-    S(E(e, t));
+function E(e, t = !0) {
+    S(x(e, t));
 }
 function k(e) {
     let t = I.getTreeNode(m);

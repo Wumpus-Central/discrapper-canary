@@ -22,8 +22,8 @@ var i = n(284009),
     S = n(71393),
     N = n(522602),
     C = n(287809),
-    R = n(453771),
-    O = n(403362),
+    O = n(453771),
+    R = n(403362),
     L = n(292348),
     y = n(721768),
     D = n(360161),
@@ -55,7 +55,7 @@ async function k(e) {
         await m.A.unarchiveThreadIfNecessary(i.channel.id);
     let S = [],
         C = [],
-        R = (0, U.Qr)(T);
+        O = (0, U.Qr)(T);
     if (null != t.options)
         for (let e of t.options) {
             let t;
@@ -78,7 +78,7 @@ async function k(e) {
             }
             if (e.type === d.n4.ATTACHMENT) {
                 if (null != i.autocomplete) continue;
-                let t = N.A.getUpload(i.channel.id, e.name, R);
+                let t = N.A.getUpload(i.channel.id, e.name, O);
                 if (null == t) continue;
                 let n = C.length;
                 C.push(t), S.push({ type: e.type, name: e.name, value: n, focused: a });
@@ -207,7 +207,7 @@ async function k(e) {
     null != s && (L.target_id = s),
         null != i.autocomplete
             ? (0, y.WL)(t, i, L)
-            : (l.A.clearAll(i.channel.id, R),
+            : (l.A.clearAll(i.channel.id, O),
               V({
                   applicationId: t.applicationId,
                   data: L,
@@ -229,7 +229,7 @@ async function k(e) {
                                         ? A.Ay.getCustomEmojiById(e.emojiId)
                                         : null,
                               )
-                              .filter(O.Vq),
+                              .filter(R.Vq),
                       )).length > 0 && a.h.dispatch({ type: "EMOJI_TRACK_USAGE", emojiUsed: e });
                   },
                   analytics_location: j(T),
@@ -379,9 +379,9 @@ async function W(e, t) {
     return { totalSize: n, largestUploadedFileSize: i };
 }
 async function Y(e, t, n, i) {
-    let r = (0, R.o2)(n);
+    let r = (0, O.o2)(n);
     function a(e) {
-        i?.(r, e), I.C1(t, w.t02.ENTITY_TOO_LARGE, x.intl.formatToPlainString(x.t.fxEKdS, { maxSize: (0, R.Hb)(r) }));
+        i?.(r, e), I.C1(t, w.t02.ENTITY_TOO_LARGE, x.intl.formatToPlainString(x.t.fxEKdS, { maxSize: (0, O.Hb)(r) }));
     }
     let { totalSize: s, largestUploadedFileSize: l } = await W(e, !1);
     if (l > Math.max(r, G.VP) || s > L.eM) return a(l), !1;

@@ -853,8 +853,8 @@ var b = r(428420),
     w = r(144367);
 let _ = { emitDefaultValues: !1, enumAsInteger: !1, useProtoFieldName: !1, prettySpaces: 0 },
     S = { ignoreUnknownFields: !1 },
-    E = Object.values;
-function x(e, t, r) {
+    x = Object.values;
+function E(e, t, r) {
     if (t === r) return !0;
     if (e !== n.LN.BYTES || t.length !== r.length) return !1;
     for (let e = 0; e < t.length; e++) if (t[e] != r[e]) return !1;
@@ -862,7 +862,7 @@ function x(e, t, r) {
 }
 function k(e, t, r) {
     if (t.length !== r.length) return !1;
-    for (let n = 0; n < t.length; n++) if (!x(e, t[n], r[n])) return !1;
+    for (let n = 0; n < t.length; n++) if (!E(e, t[n], r[n])) return !1;
     return !0;
 }
 function C(e, t, r) {
@@ -1022,13 +1022,13 @@ class O {
                     case "enum":
                     case "scalar":
                         let s = "enum" == o.kind ? n.LN.INT32 : o.T;
-                        if (!(o.repeat ? k(s, i, a) : x(s, i, a))) return !1;
+                        if (!(o.repeat ? k(s, i, a) : E(s, i, a))) return !1;
                         break;
                     case "map":
                         if (
                             !("message" == o.V.kind
-                                ? C(o.V.T(), E(i), E(a))
-                                : k("enum" == o.V.kind ? n.LN.INT32 : o.V.T, E(i), E(a)))
+                                ? C(o.V.T(), x(i), x(a))
+                                : k("enum" == o.V.kind ? n.LN.INT32 : o.V.T, x(i), x(a)))
                         )
                             return !1;
                         break;

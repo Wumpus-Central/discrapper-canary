@@ -40,11 +40,11 @@ function _(e) {
 function S(e) {
     return !("u" < typeof ArrayBuffer) && (_.working ? _(e) : e instanceof ArrayBuffer);
 }
-function E(e) {
+function x(e) {
     return "[object DataView]" === c(e);
 }
-function x(e) {
-    return !("u" < typeof DataView) && (E.working ? E(e) : e instanceof DataView);
+function E(e) {
+    return !("u" < typeof DataView) && (x.working ? x(e) : e instanceof DataView);
 }
 (t.isArgumentsObject = n),
     (t.isGeneratorFunction = o),
@@ -56,7 +56,7 @@ function x(e) {
         );
     }),
     (t.isArrayBufferView = function (e) {
-        return "u" > typeof ArrayBuffer && ArrayBuffer.isView ? ArrayBuffer.isView(e) : a(e) || x(e);
+        return "u" > typeof ArrayBuffer && ArrayBuffer.isView ? ArrayBuffer.isView(e) : a(e) || E(e);
     }),
     (t.isUint8Array = function (e) {
         return "Uint8Array" === i(e);
@@ -109,8 +109,8 @@ function x(e) {
     }),
     (_.working = "u" > typeof ArrayBuffer && _(new ArrayBuffer())),
     (t.isArrayBuffer = S),
-    (E.working = "u" > typeof ArrayBuffer && "u" > typeof DataView && E(new DataView(new ArrayBuffer(1), 0, 1))),
-    (t.isDataView = x);
+    (x.working = "u" > typeof ArrayBuffer && "u" > typeof DataView && x(new DataView(new ArrayBuffer(1), 0, 1))),
+    (t.isDataView = E);
 var k = "u" > typeof SharedArrayBuffer ? SharedArrayBuffer : void 0;
 function C(e) {
     return "[object SharedArrayBuffer]" === c(e);

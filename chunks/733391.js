@@ -108,11 +108,11 @@ function N(e, t, n) {
     a.h.dispatch({ type: "SET_SOCIAL_LAYER_STOREFRONT_STATE", applicationId: e, pageIndex: t, skuId: n });
 }
 let C = 5 * o.A.Millis.MINUTE,
-    R = 30 * o.A.Millis.SECOND,
-    O = 5 * o.A.Millis.MINUTE;
+    O = 30 * o.A.Millis.SECOND,
+    R = 5 * o.A.Millis.MINUTE;
 function L(e, t) {
     let n = e.get(t);
-    return null == n && ((n = new i.A(R, O)), e.set(t, n)), n;
+    return null == n && ((n = new i.A(O, R)), e.set(t, n)), n;
 }
 let y = new Map(),
     D = new Map();

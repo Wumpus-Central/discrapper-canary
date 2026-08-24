@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { RG: () => y, Di: () => C, uD: () => R, Y: () => O }), n(323874), n(14289), n(35956);
+n.d(t, { RG: () => y, Di: () => C, uD: () => O, Y: () => R }), n(323874), n(14289), n(35956);
 var i = n(284009),
     r = n.n(i),
     a = n(636537),
@@ -120,7 +120,7 @@ function C(e, t) {
     let n = g[e].serialize(t);
     return n ? `${e}:${n.toString()}` : null;
 }
-function R(e, t, n) {
+function O(e, t, n) {
     let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "png";
     if (null != t && t.includes(":")) {
         let [e, i] = t.split(":");
@@ -139,7 +139,7 @@ function R(e, t, n) {
         ? `${location.protocol}//${window.GLOBAL_ENV.CDN_HOST}/app-assets/${e}/${t}.${i}${s}`
         : `${(0, a.TP)()}/applications/${e}/app-assets/${t}.${i}${s}`;
 }
-async function O(e) {
+async function R(e) {
     var t;
     let n,
         i = await (null == (n = A.getApplicationAssets(e)) || ((t = n.lastUpdated), Date.now() - t > 36e5)
@@ -178,7 +178,7 @@ async function y(e, t) {
         })(t, i))
     )
         return s.h.dispatch({ type: "APPLICATION_ASSETS_FETCH_SUCCESS", applicationId: e }), i;
-    let a = await O(e);
+    let a = await R(e);
     return (s.h.dispatch({ type: "APPLICATION_ASSETS_UPDATE", applicationId: e, assets: a }),
     (function (e, t, n, i) {
         let r = !1;

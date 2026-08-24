@@ -23,8 +23,8 @@ e.exports = (() => {
         w,
         _,
         S,
-        E,
         x,
+        E,
         k,
         C,
         T,
@@ -493,11 +493,11 @@ e.exports = (() => {
                                 );
                             }
                             function n() {
-                                for (let e of (0 < x.length &&
-                                    (v.Mb(E.drawWidth(), E.drawHeight(), x, k, C),
-                                    (x = []),
+                                for (let e of (0 < E.length &&
+                                    (v.Mb(x.drawWidth(), x.drawHeight(), E, k, C),
+                                    (E = []),
                                     (C = k = 0),
-                                    E.reset(512, 512)),
+                                    x.reset(512, 512)),
                                 S)) {
                                     for (let t of e.H) t();
                                     e.H = [];
@@ -661,8 +661,8 @@ e.exports = (() => {
                                     },
                                 });
                             let S = new Set(),
-                                E = null,
-                                x = [],
+                                x = null,
+                                E = [],
                                 k = 0,
                                 C = 0;
                             var T = (e.CanvasRenderer = s.extend("Renderer", {
@@ -741,12 +741,12 @@ e.exports = (() => {
                                         (h = v.ac()),
                                             w > h && ((d *= h / w), (w = h)),
                                             _ > h && ((o *= h / _), (_ = h)),
-                                            E || (E = new e.DynamicRectanizer(h)).reset(512, 512),
-                                            0 > (h = E.addRect(w, _)) &&
-                                                (n(), S.add(this), console.assert(0 <= (h = E.addRect(w, _))));
+                                            x || (x = new e.DynamicRectanizer(h)).reset(512, 512),
+                                            0 > (h = x.addRect(w, _)) &&
+                                                (n(), S.add(this), console.assert(0 <= (h = x.addRect(w, _))));
                                         var T = 65535 & h,
                                             M = h >> 16;
-                                        x.push({
+                                        E.push({
                                             ga: this.S.slice(this.S.length - 6),
                                             image: r,
                                             Ya: T,
@@ -879,7 +879,7 @@ e.exports = (() => {
                                 (o.nb = n),
                                 (e.resolveAnimationFrame = n),
                                 (e.cleanup = function () {
-                                    E && E.delete();
+                                    x && x.delete();
                                 });
                         };
                         var g,
@@ -922,8 +922,8 @@ e.exports = (() => {
                                         )
                                         .then(t, r);
                             }));
-                        var E = e.print || console.log.bind(console),
-                            x = e.printErr || console.error.bind(console);
+                        var x = e.print || console.log.bind(console),
+                            E = e.printErr || console.error.bind(console);
                         Object.assign(e, w),
                             (w = null),
                             e.thisProgram && (_ = e.thisProgram),
@@ -959,7 +959,7 @@ e.exports = (() => {
                         function U(t) {
                             throw (
                                 (e.onAbort?.(t),
-                                x((t = "Aborted(" + t + ")")),
+                                E((t = "Aborted(" + t + ")")),
                                 (R = !0),
                                 (t = new WebAssembly.RuntimeError(t + ". Build with -sASSERTIONS for more info.")),
                                 l(t),
@@ -993,7 +993,7 @@ e.exports = (() => {
                             )
                                 .then((e) => WebAssembly.instantiate(e, t))
                                 .then(r, (e) => {
-                                    x(`failed to asynchronously prepare wasm: ${e}`), U(e);
+                                    E(`failed to asynchronously prepare wasm: ${e}`), U(e);
                                 });
                         }
                         var q,
@@ -1441,7 +1441,7 @@ e.exports = (() => {
                                             }
                                     },
                                     ja() {
-                                        throw eE[44];
+                                        throw ex[44];
                                     },
                                     ta: (e, t, r, n) => em.createNode(e, t, r, n),
                                     sb(e, t, r) {
@@ -1544,8 +1544,8 @@ e.exports = (() => {
                                     (this.name = "ErrnoError"), (this.$ = e);
                                 }
                             },
-                            eE = {},
-                            ex = class {
+                            ex = {},
+                            eE = class {
                                 constructor() {
                                     (this.h = {}), (this.node = null);
                                 }
@@ -1663,7 +1663,7 @@ e.exports = (() => {
                             return e;
                         }
                         function eR(e, t = -1) {
-                            if (((e = Object.assign(new ex(), e)), -1 == t))
+                            if (((e = Object.assign(new eE(), e)), -1 == t))
                                 e: {
                                     for (t = 0; 4096 >= t; t++) if (!eg[t]) break e;
                                     throw new eS(33);
@@ -2011,7 +2011,7 @@ e.exports = (() => {
                                 (this.Lb = s),
                                 (this.pb = []);
                         }
-                        var tE = (e, t, r) => {
+                        var tx = (e, t, r) => {
                             for (; t !== r; ) {
                                 if (!t.ma)
                                     throw new eq(
@@ -2021,14 +2021,14 @@ e.exports = (() => {
                             }
                             return e;
                         };
-                        function tx(e, t) {
+                        function tE(e, t) {
                             if (null === t) {
                                 if (this.La) throw new eq(`null is not a valid ${this.name}`);
                                 return 0;
                             }
                             if (!t.g) throw new eq(`Cannot pass "${tV(t)}" as a ${this.name}`);
                             if (!t.g.o) throw new eq(`Cannot pass deleted object as a pointer of type ${this.name}`);
-                            return tE(t.g.o, t.g.u.i, this.i);
+                            return tx(t.g.o, t.g.u.i, this.i);
                         }
                         function tk(e, t) {
                             if (null === t) {
@@ -2045,7 +2045,7 @@ e.exports = (() => {
                                 throw new eq(
                                     `Cannot convert argument of type ${t.g.J ? t.g.J.name : t.g.u.name} to parameter type ${this.name}`,
                                 );
-                            if (((r = tE(t.g.o, t.g.u.i, this.i)), this.sa)) {
+                            if (((r = tx(t.g.o, t.g.u.i, this.i)), this.sa)) {
                                 if (void 0 === t.g.F) throw new eq("Passing raw pointer to smart pointer is illegal");
                                 switch (this.mc) {
                                     case 0:
@@ -2086,7 +2086,7 @@ e.exports = (() => {
                                 throw new eq(
                                     `Cannot convert argument of type ${t.g.u.name} to parameter type ${this.name}`,
                                 );
-                            return tE(t.g.o, t.g.u.i, this.i);
+                            return tx(t.g.o, t.g.u.i, this.i);
                         }
                         function tT(e, t, r, n, o, i, a, s, l, u, c) {
                             (this.name = e),
@@ -2102,7 +2102,7 @@ e.exports = (() => {
                                 (this.O = c),
                                 o || void 0 !== t.C
                                     ? (this.toWireType = tk)
-                                    : ((this.toWireType = n ? tx : tC), (this.L = null));
+                                    : ((this.toWireType = n ? tE : tC), (this.L = null));
                         }
                         var tM,
                             tP,
@@ -2188,7 +2188,7 @@ e.exports = (() => {
                                     throw new eq(`${r} incompatible with "this" of type ${e.constructor.name}`);
                                 if (!e.g.o)
                                     throw new eq(`cannot call emscripten binding method ${r} on deleted object`);
-                                return tE(e.g.o, e.g.u.i, t.i);
+                                return tx(e.g.o, e.g.u.i, t.i);
                             },
                             t$ = (e) => {
                                 9 < e && 0 == --e3[e + 1] && ((e3[e] = void 0), e2.push(e));
@@ -2307,7 +2307,7 @@ e.exports = (() => {
                             t5 = [31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31],
                             t6 = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
                         [44].forEach((e) => {
-                            (eE[e] = new eS(e)), (eE[e].stack = "<generic error, no stack>");
+                            (ex[e] = new eS(e)), (ex[e].stack = "<generic error, no stack>");
                         }),
                             (ew = Array(4096)),
                             eN(em, "/"),
@@ -2339,10 +2339,10 @@ e.exports = (() => {
                                     return e;
                                 },
                                 Ma(e, t) {
-                                    null === t || 10 === t ? (E(ea(e.G, 0)), (e.G = [])) : 0 != t && e.G.push(t);
+                                    null === t || 10 === t ? (x(ea(e.G, 0)), (e.G = [])) : 0 != t && e.G.push(t);
                                 },
                                 oa(e) {
-                                    e.G && 0 < e.G.length && (E(ea(e.G, 0)), (e.G = []));
+                                    e.G && 0 < e.G.length && (x(ea(e.G, 0)), (e.G = []));
                                 },
                                 Xb: () => ({
                                     zc: 25856,
@@ -2359,10 +2359,10 @@ e.exports = (() => {
                             }),
                             ep(1536, {
                                 Ma(e, t) {
-                                    null === t || 10 === t ? (x(ea(e.G, 0)), (e.G = [])) : 0 != t && e.G.push(t);
+                                    null === t || 10 === t ? (E(ea(e.G, 0)), (e.G = [])) : 0 != t && e.G.push(t);
                                 },
                                 oa(e) {
-                                    e.G && 0 < e.G.length && (x(ea(e.G, 0)), (e.G = []));
+                                    e.G && 0 < e.G.length && (E(ea(e.G, 0)), (e.G = []));
                                 },
                             }),
                             e$("/dev/tty", 1280),
@@ -3653,7 +3653,7 @@ e.exports = (() => {
                                     try {
                                         return e.instantiateWasm(o, t);
                                     } catch (e) {
-                                        x(`Module.instantiateWasm callback failed with error: ${e}`), l(e);
+                                        E(`Module.instantiateWasm callback failed with error: ${e}`), l(e);
                                     }
                                 return (
                                     (z ||= "canvas_advanced.wasm".startsWith("data:application/octet-stream;base64,")
@@ -3674,8 +3674,8 @@ e.exports = (() => {
                                         : fetch(z, { credentials: "same-origin" }).then((e) =>
                                               WebAssembly.instantiateStreaming(e, r).then(n, function (e) {
                                                   return (
-                                                      x(`wasm streaming compile failed: ${e}`),
-                                                      x("falling back to ArrayBuffer instantiation"),
+                                                      E(`wasm streaming compile failed: ${e}`),
+                                                      E("falling back to ArrayBuffer instantiation"),
                                                       G(z, r, n)
                                                   );
                                               }),
@@ -3912,7 +3912,7 @@ e.exports = (() => {
                         if (!t || !a.length || !s || !l || !r || "u" < typeof window) return null;
                         var _ = null,
                             S = !1,
-                            E = function (e) {
+                            x = function (e) {
                                 if (S && e instanceof MouseEvent) {
                                     "mouseup" == e.type && (S = !1);
                                     return;
@@ -3999,18 +3999,18 @@ e.exports = (() => {
                                                         e.pointerMove(t.transformedX, t.transformedY, t.identifier);
                                                     });
                                                 },
-                                                E = 0;
-                                            E < a.length;
-                                            E++
+                                                x = 0;
+                                            x < a.length;
+                                            x++
                                         ) {
-                                            var b = a[E];
+                                            var b = a[x];
                                             w(b);
                                         }
                                         break;
                                     case "touchstart":
                                     case "mousedown":
                                         for (
-                                            var x = function (e) {
+                                            var E = function (e) {
                                                     d.forEach(function (t) {
                                                         e.pointerDown(t.transformedX, t.transformedY, t.identifier);
                                                     });
@@ -4020,7 +4020,7 @@ e.exports = (() => {
                                             k++
                                         ) {
                                             var b = a[k];
-                                            x(b);
+                                            E(b);
                                         }
                                         break;
                                     case "touchend":
@@ -4055,29 +4055,29 @@ e.exports = (() => {
                                         }
                                 }
                             }.bind(n),
-                            x = b ? t.ownerDocument.body : t;
+                            E = b ? t.ownerDocument.body : t;
                         return (
-                            x.addEventListener("mouseover", E, w),
-                            x.addEventListener("mouseenter", E, w),
-                            x.addEventListener("mouseout", E, w),
-                            x.addEventListener("mouseleave", E, w),
-                            x.addEventListener("mousemove", E, w),
-                            x.addEventListener("mousedown", E, w),
-                            x.addEventListener("mouseup", E, w),
-                            t.addEventListener("touchmove", E, { passive: p }),
-                            t.addEventListener("touchstart", E, { passive: p }),
-                            t.addEventListener("touchend", E),
+                            E.addEventListener("mouseover", x, w),
+                            E.addEventListener("mouseenter", x, w),
+                            E.addEventListener("mouseout", x, w),
+                            E.addEventListener("mouseleave", x, w),
+                            E.addEventListener("mousemove", x, w),
+                            E.addEventListener("mousedown", x, w),
+                            E.addEventListener("mouseup", x, w),
+                            t.addEventListener("touchmove", x, { passive: p }),
+                            t.addEventListener("touchstart", x, { passive: p }),
+                            t.addEventListener("touchend", x),
                             function () {
-                                x.removeEventListener("mouseover", E, w),
-                                    x.removeEventListener("mouseenter", E, w),
-                                    x.removeEventListener("mouseout", E, w),
-                                    x.removeEventListener("mouseleave", E, w),
-                                    x.removeEventListener("mousemove", E, w),
-                                    x.removeEventListener("mousedown", E, w),
-                                    x.removeEventListener("mouseup", E, w),
-                                    t.removeEventListener("touchmove", E),
-                                    t.removeEventListener("touchstart", E),
-                                    t.removeEventListener("touchend", E);
+                                E.removeEventListener("mouseover", x, w),
+                                    E.removeEventListener("mouseenter", x, w),
+                                    E.removeEventListener("mouseout", x, w),
+                                    E.removeEventListener("mouseleave", x, w),
+                                    E.removeEventListener("mousemove", x, w),
+                                    E.removeEventListener("mousedown", x, w),
+                                    E.removeEventListener("mouseup", x, w),
+                                    t.removeEventListener("touchmove", x),
+                                    t.removeEventListener("touchstart", x),
+                                    t.removeEventListener("touchend", x);
                             }
                         );
                     };
@@ -4409,7 +4409,7 @@ e.exports = (() => {
             RiveEventType: () => n,
             RiveFile: () => $,
             RuntimeLoader: () => S,
-            StateMachineInput: () => x,
+            StateMachineInput: () => E,
             StateMachineInputType: () => r,
             Testing: () => eo,
             ViewModel: () => V,
@@ -4773,10 +4773,10 @@ e.exports = (() => {
                 e
             );
         })()),
-        ((E = r || (r = {}))[(E.Number = 56)] = "Number"),
-        (E[(E.Trigger = 58)] = "Trigger"),
-        (E[(E.Boolean = 59)] = "Boolean"),
-        (x = (function () {
+        ((x = r || (r = {}))[(x.Number = 56)] = "Number"),
+        (x[(x.Trigger = 58)] = "Trigger"),
+        (x[(x.Boolean = 59)] = "Boolean"),
+        (E = (function () {
             function e(e, t) {
                 (this.type = e), (this.runtimeInput = t);
             }
@@ -4879,11 +4879,11 @@ e.exports = (() => {
                 }),
                 (e.prototype.mapRuntimeInput = function (e, t) {
                     return e.type === t.SMIInput.bool
-                        ? new x(r.Boolean, e.asBool())
+                        ? new E(r.Boolean, e.asBool())
                         : e.type === t.SMIInput.number
-                          ? new x(r.Number, e.asNumber())
+                          ? new E(r.Number, e.asNumber())
                           : e.type === t.SMIInput.trigger
-                            ? new x(r.Trigger, e.asTrigger())
+                            ? new E(r.Trigger, e.asTrigger())
                             : void 0;
                 }),
                 (e.prototype.cleanup = function () {
@@ -6761,97 +6761,97 @@ e.exports = (() => {
                             S = this.internalViewModelInstance(e[t]);
                         return null !== S ? S.propertyFromPathSegments(e, t + 1, r) : null;
                     }
-                    var E = null;
+                    var x = null;
                     switch (r) {
                         case s.Number:
                             if (
                                 null !==
-                                (E =
+                                (x =
                                     null != (o = null == (n = this._runtimeInstance) ? void 0 : n.number(e[t]))
                                         ? o
                                         : null)
                             )
-                                return new q(E, this);
+                                return new q(x, this);
                             break;
                         case s.String:
                             if (
                                 null !==
-                                (E =
+                                (x =
                                     null != (a = null == (i = this._runtimeInstance) ? void 0 : i.string(e[t]))
                                         ? a
                                         : null)
                             )
-                                return new G(E, this);
+                                return new G(x, this);
                             break;
                         case s.Boolean:
                             if (
                                 null !==
-                                (E =
+                                (x =
                                     null != (u = null == (l = this._runtimeInstance) ? void 0 : l.boolean(e[t]))
                                         ? u
                                         : null)
                             )
-                                return new Y(E, this);
+                                return new Y(x, this);
                             break;
                         case s.Color:
                             if (
                                 null !==
-                                (E =
+                                (x =
                                     null != (f = null == (c = this._runtimeInstance) ? void 0 : c.color(e[t]))
                                         ? f
                                         : null)
                             )
-                                return new Q(E, this);
+                                return new Q(x, this);
                             break;
                         case s.Trigger:
                             if (
                                 null !==
-                                (E =
+                                (x =
                                     null != (d = null == (p = this._runtimeInstance) ? void 0 : p.trigger(e[t]))
                                         ? d
                                         : null)
                             )
-                                return new J(E, this);
+                                return new J(x, this);
                             break;
                         case s.Enum:
                             if (
                                 null !==
-                                (E =
+                                (x =
                                     null != (m = null == (h = this._runtimeInstance) ? void 0 : h.enum(e[t]))
                                         ? m
                                         : null)
                             )
-                                return new X(E, this);
+                                return new X(x, this);
                             break;
                         case s.List:
                             if (
                                 null !==
-                                (E =
+                                (x =
                                     null != (y = null == (v = this._runtimeInstance) ? void 0 : v.list(e[t]))
                                         ? y
                                         : null)
                             )
-                                return new Z(E, this);
+                                return new Z(x, this);
                             break;
                         case s.Image:
                             if (
                                 null !==
-                                (E =
+                                (x =
                                     null != (b = null == (g = this._runtimeInstance) ? void 0 : g.image(e[t]))
                                         ? b
                                         : null)
                             )
-                                return new ee(E, this);
+                                return new ee(x, this);
                             break;
                         case s.Artboard:
                             if (
                                 null !==
-                                (E =
+                                (x =
                                     null != (_ = null == (w = this._runtimeInstance) ? void 0 : w.artboard(e[t]))
                                         ? _
                                         : null)
                             )
-                                return new et(E, this);
+                                return new et(x, this);
                     }
                     return null;
                 }),

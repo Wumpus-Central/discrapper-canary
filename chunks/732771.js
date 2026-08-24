@@ -22,10 +22,10 @@ var i = n(477900),
     S = n(661531),
     N = n(602853),
     C = n(652215);
-function R() {
-    return r.useContext(O);
+function O() {
+    return r.useContext(R);
 }
-let O = r.createContext({
+let R = r.createContext({
     value: void 0,
     options: [],
     selectedOptions: [],
@@ -73,7 +73,7 @@ function M(e) {
         } = c,
         S = r.useId(),
         N = r.useRef(null),
-        [C, R] = r.useState(null),
+        [C, O] = r.useState(null),
         [L, y] = r.useState(!1),
         [D, v] = r.useState(""),
         [M, P] = r.useState(""),
@@ -117,9 +117,9 @@ function M(e) {
         r.useEffect(() => {
             if (s && null != H.current) {
                 let e = V.findIndex((e) => e.value === H.current?.value);
-                R(-1 !== e ? e : null);
+                O(-1 !== e ? e : null);
             }
-        }, [s, R, V]);
+        }, [s, O, V]);
     let W = _ || A,
         Y = r.useCallback(
             (e) => {
@@ -132,10 +132,10 @@ function M(e) {
             [W, u, f, h, s, o, g],
         ),
         K = j.length > 0;
-    return (0, i.jsx)(O.Provider, {
+    return (0, i.jsx)(R.Provider, {
         value: {
             activeDescendantIndex: C,
-            setActiveDescendantIndex: R,
+            setActiveDescendantIndex: O,
             listBoxId: S,
             inputFieldRef: N,
             isInert: W,
@@ -186,7 +186,7 @@ function U(e) {
             onBlur: S,
             onKeyDown: N,
             wrapTags: C,
-            ref: O,
+            ref: R,
         } = e,
         b = r.useRef(null),
         M = r.useRef(null),
@@ -218,7 +218,7 @@ function U(e) {
             setQuery: ei,
             isEditing: er,
             setIsEditing: ea,
-        } = R(),
+        } = O(),
         es = "multiple" === x && z,
         el = null != w ? (0, A.ZN)(j, w) : void 0,
         eo = r.useCallback(() => {
@@ -363,7 +363,7 @@ function U(e) {
                 onRemove: eh,
             });
         }, [x, k, eA, eh, er, ee, l]),
-        eT = (0, o.A)(W, O);
+        eT = (0, o.A)(W, R);
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(I.p, {
@@ -448,7 +448,7 @@ function w(e) {
             handleSelectionChange: f,
             query: p,
             loading: T,
-        } = R(),
+        } = O(),
         { i18n: m } = r.useContext(g.VO);
     return (0, i.jsx)(u.q, {
         id: A,

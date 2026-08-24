@@ -3,7 +3,7 @@ n.d(t, {
     CW: () => f,
     Fi: () => d,
     Fn: () => C,
-    Ic: () => O,
+    Ic: () => R,
     K5: () => D,
     Mu: () => I,
     NewMemberActionTypes: () => p,
@@ -15,7 +15,7 @@ n.d(t, {
     Yt: () => L,
     _7: () => E,
     dl: () => c,
-    jJ: () => R,
+    jJ: () => O,
     kh: () => _,
     kk: () => T,
     oW: () => h,
@@ -117,7 +117,7 @@ function C(e) {
         ((null == e.message || !(e.message.length > 0)) && (null == e.authorIds || !(e.authorIds.length > 0)))
     );
 }
-function R(e) {
+function O(e) {
     return (
         null == e ||
         (!!C(e.welcomeMessage) &&
@@ -125,9 +125,9 @@ function R(e) {
             (null == e.resourceChannels || !(e.resourceChannels.length > 0)))
     );
 }
-function O(e) {
+function R(e) {
     if (null == e) return !1;
-    if (R(e)) return !0;
+    if (O(e)) return !0;
     if (
         e.welcomeMessage?.message == null ||
         e.welcomeMessage.message.length < d ||

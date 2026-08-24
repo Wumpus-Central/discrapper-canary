@@ -49,8 +49,8 @@ t.default = (function () {
                     w = { type: "literal", value: "date", description: '"date"' },
                     _ = "time",
                     S = { type: "literal", value: "time", description: '"time"' },
-                    E = "plural",
-                    x = { type: "literal", value: "plural", description: '"plural"' },
+                    x = "plural",
+                    E = { type: "literal", value: "plural", description: '"plural"' },
                     k = "selectordinal",
                     C = { type: "literal", value: "selectordinal", description: '"selectordinal"' },
                     T = "select",
@@ -198,9 +198,9 @@ t.default = (function () {
                                                             var e, r, n, o;
                                                             return (
                                                                 ((e = J),
-                                                                t.substr(J, 6) === E
-                                                                    ? ((r = E), (J += 6))
-                                                                    : ((r = l), 0 === et && er(x)),
+                                                                t.substr(J, 6) === x
+                                                                    ? ((r = x), (J += 6))
+                                                                    : ((r = l), 0 === et && er(E)),
                                                                 r !== l &&
                                                                     eu() !== l &&
                                                                     (44 === t.charCodeAt(J)

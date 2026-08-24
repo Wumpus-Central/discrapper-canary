@@ -136,7 +136,7 @@ var n = (function () {
     function S(e, t, r) {
         return e < 1e7 ? new i(w(t, e), r) : new i(b(t, u(e)), r);
     }
-    function E(e) {
+    function x(e) {
         var t,
             r,
             n,
@@ -151,7 +151,7 @@ var n = (function () {
         }
         return f(a), a;
     }
-    function x(e, t) {
+    function E(e, t) {
         var r,
             n,
             o,
@@ -175,7 +175,7 @@ var n = (function () {
             if (-1 == v) return [e.negate(), o[0]];
             var g = Math.abs(v);
             if (g < 1e7) {
-                n = c((l = x(m, g))[0]);
+                n = c((l = E(m, g))[0]);
                 var b = l[1];
                 return (e.sign && (b = -b), "number" == typeof n)
                     ? (e.sign !== h.sign && (n = -n), [new a(n), new a(b)])
@@ -228,7 +228,7 @@ var n = (function () {
                           }
                           d[n] = r;
                       }
-                      return (v = x(v, m)[0]), [c(d), c(v)];
+                      return (v = E(v, m)[0]), [c(d), c(v)];
                   })(m, v)
                 : (function (e, t) {
                       for (var r, n, o, i, a, s = e.length, l = t.length, u = [], p = []; s; ) {
@@ -250,12 +250,12 @@ var n = (function () {
                       return u.reverse(), [c(u), c(p)];
                   })(m, v))[0];
         var S = e.sign !== h.sign,
-            E = l[1],
+            x = l[1],
             k = e.sign;
         return (
             "number" == typeof n ? (S && (n = -n), (n = new a(n))) : (n = new i(n, S)),
-            "number" == typeof E ? (k && (E = -E), (E = new a(E))) : (E = new i(E, k)),
-            [n, E]
+            "number" == typeof x ? (k && (x = -x), (x = new a(x))) : (x = new i(x, k)),
+            [n, x]
         );
     }
     function C(e, t) {
@@ -413,11 +413,11 @@ var n = (function () {
         }),
         (s.prototype.times = s.prototype.multiply),
         (i.prototype.square = function () {
-            return new i(E(this.value), !1);
+            return new i(x(this.value), !1);
         }),
         (a.prototype.square = function () {
             var e = this.value * this.value;
-            return l(e) ? new a(e) : new i(E(u(Math.abs(this.value))), !1);
+            return l(e) ? new a(e) : new i(x(u(Math.abs(this.value))), !1);
         }),
         (s.prototype.square = function (e) {
             return new s(this.value * this.value);

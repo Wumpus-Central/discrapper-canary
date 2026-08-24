@@ -35,13 +35,13 @@ var h = n(808728),
     S = n(450827),
     N = n(989133),
     C = n(926140);
-let R = Object.freeze({});
-function O(e, t) {
+let O = Object.freeze({});
+function R(e, t) {
     return t.frecencyBoosters ? (0, p.X3)(e) : {};
 }
 class L {
     query = "";
-    options = R;
+    options = O;
     results = [];
     _userResults = [];
     _groupDMResults = [];
@@ -60,7 +60,7 @@ class L {
     _limit;
     _refetchForSingleCategoryLimit;
     _refetched = !1;
-    constructor(e, t, n = 100, i = R, r = 0) {
+    constructor(e, t, n = 100, i = O, r = 0) {
         (this.onResultsChange = e),
             this.setOptions(i, !0),
             (this._limit = n),
@@ -211,7 +211,7 @@ class L {
     }
     queryTextChannels(e, t) {
         if (!this._include(C.rD.TEXT_CHANNEL)) return [];
-        let n = O(C.rD.TEXT_CHANNEL, this.options),
+        let n = R(C.rD.TEXT_CHANNEL, this.options),
             { allowSnowflake: i, blacklist: r } = this.options,
             a = null != r ? (e) => !r.has(`channel:${e.id}`) : void 0;
         return p.Ay.queryChannels({
@@ -227,7 +227,7 @@ class L {
     queryVoiceChannels(e, t) {
         if (!this._include(C.rD.VOICE_CHANNEL)) return [];
         let { allowSnowflake: n, voiceChannelGuildFilter: i } = this.options,
-            r = O(C.rD.VOICE_CHANNEL, this.options);
+            r = R(C.rD.VOICE_CHANNEL, this.options);
         return p.Ay.queryChannels({
             query: e,
             guildId: i,
@@ -240,7 +240,7 @@ class L {
     }
     queryGuilds(e, t) {
         if (!this._include(C.rD.GUILD)) return [];
-        let n = O(C.rD.GUILD, this.options),
+        let n = R(C.rD.GUILD, this.options),
             { allowSnowflake: i, blacklist: r } = this.options,
             a = null != r ? (e) => !r.has(`guild:${e.id}`) : void 0;
         return p.Ay.queryGuilds({ query: e, limit: t, fuzzy: !0, filter: a, boosters: n, allowSnowflake: i });
@@ -249,7 +249,7 @@ class L {
         let { userSearchContext: i } = this;
         if (null == i || !this._include(C.rD.USER)) return;
         let { allowSnowflake: r, userFilters: a } = this.options,
-            s = O(C.rD.USER, this.options);
+            s = R(C.rD.USER, this.options);
         if (a?.thread != null) {
             let t = c.A.getMemberListSections(a.thread),
                 i = [];
@@ -269,7 +269,7 @@ class L {
     queryGroupDMs(e, t) {
         if (!this._include(C.rD.GROUP_DM)) return [];
         let { blacklist: n } = this.options,
-            i = O(C.rD.GROUP_DM, this.options),
+            i = R(C.rD.GROUP_DM, this.options),
             r = null != n ? (e) => !n.has(`channel:${e.id}`) : void 0;
         return p.Ay.queryGroupDMs({ query: e, limit: t, fuzzy: !0, filter: r, boosters: i });
     }

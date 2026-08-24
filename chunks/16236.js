@@ -35,8 +35,8 @@ var i = n(435558),
     S = n(635233),
     N = n(771959),
     C = n(928424),
-    R = n(691540),
-    O = n(857250),
+    O = n(691540),
+    R = n(857250),
     L = n(97483),
     y = n(375708),
     D = n(349828),
@@ -149,7 +149,7 @@ async function B(e, t, n) {
             l && r && ((e.guildVisible = s._t.create({ value: !0 })), (0, S.uS)("auto", !0));
         },
     }),
-        i.some((e) => p.A.isFavorite(e)) && (0, R.P0)((0, O.o)(y.intl.string(y.t["4tSWQg"]), L.Ck.FAVORITE));
+        i.some((e) => p.A.isFavorite(e)) && (0, O.P0)((0, R.o)(y.intl.string(y.t["4tSWQg"]), L.Ck.FAVORITE));
 }
 async function H(e) {
     let { channelIds: t, parentId: n, source: i } = e;

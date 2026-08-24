@@ -41,14 +41,14 @@ var n;
             function () {
                 (n = Date.now()), t || (t = setTimeout(o, 99));
             });
-    function E() {
+    function x() {
         125 != y && ((m = 7), (y = 125), (v = 35), h && (h && (l && f(l), s && clearTimeout(s), (h = !1)), C())), S();
     }
-    function x() {
+    function E() {
         (l = null), (s = setTimeout(T, 0));
     }
     function k() {
-        (s = null), c(x);
+        (s = null), c(E);
     }
     function C() {
         h ||
@@ -102,15 +102,15 @@ var n;
             (u.cancelIdleCallback = P),
             u.document &&
                 document.addEventListener &&
-                (u.addEventListener("scroll", E, !0),
-                u.addEventListener("resize", E),
-                document.addEventListener("focus", E, !0),
-                document.addEventListener("mouseover", E, !0),
+                (u.addEventListener("scroll", x, !0),
+                u.addEventListener("resize", x),
+                document.addEventListener("focus", x, !0),
+                document.addEventListener("mouseover", x, !0),
                 ["click", "keypress", "touchstart", "mousedown"].forEach(function (e) {
-                    document.addEventListener(e, E, { capture: !0, passive: !0 });
+                    document.addEventListener(e, x, { capture: !0, passive: !0 });
                 }),
                 u.MutationObserver &&
-                    new MutationObserver(E).observe(document.documentElement, {
+                    new MutationObserver(x).observe(document.documentElement, {
                         childList: !0,
                         subtree: !0,
                         attributes: !0,

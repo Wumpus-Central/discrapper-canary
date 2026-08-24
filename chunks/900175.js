@@ -93,9 +93,9 @@ function v(e) {
         w = e.artboardBounds,
         _ = m(void 0 === g ? {} : g),
         S = n.useState({ height: 0, width: 0 }),
-        E = S[0],
-        x = E.height,
-        k = E.width,
+        x = S[0],
+        E = x.height,
+        k = x.width,
         C = S[1],
         T = n.useState({ height: 0, width: 0 }),
         M = T[0],
@@ -183,7 +183,7 @@ function v(e) {
                     r = e.height,
                     n = !1;
                 if (v) {
-                    var o = t !== k || r !== x;
+                    var o = t !== k || r !== E;
                     if (
                         (_.fitCanvasToArtboardHeight && o && ((y.current.style.height = r + "px"), (n = !0)),
                         _.useDevicePixelRatio)
@@ -204,7 +204,7 @@ function v(e) {
                 b && (D || n) && b && b(), D && L(!1);
             }
         },
-        [v, y, B, $, z, D, L, P, A, x, k, b, F, R, N, h],
+        [v, y, B, $, z, D, L, P, A, E, k, b, F, R, N, h],
     ),
         n.useEffect(
             function () {
@@ -264,7 +264,7 @@ function S(e) {
         i.default.createElement("canvas", a({ ref: r, style: { verticalAlign: "top", width: 0, height: 0 } }, c), u),
     );
 }
-function E(e, t) {
+function x(e, t) {
     void 0 === t && (t = {});
     var r = n.useState(null),
         u = r[0],
@@ -277,7 +277,7 @@ function E(e, t) {
         g = !!e,
         b = m(t),
         w = l(),
-        E = n.useCallback(
+        x = n.useCallback(
             function () {
                 if (h) {
                     if (h.layout && h.layout.fit === o.Fit.Layout && u) {
@@ -296,10 +296,10 @@ function E(e, t) {
         canvasElem: u,
         containerRef: f,
         options: b,
-        onCanvasHasResized: E,
+        onCanvasHasResized: x,
         artboardBounds: null == h ? void 0 : h.bounds,
     });
-    var x = n.useCallback(function (e) {
+    var E = n.useCallback(function (e) {
         null === e && u && ((u.height = 0), (u.width = 0)), c(e);
     }, []);
     n.useEffect(
@@ -396,13 +396,13 @@ function E(e, t) {
     );
     var A = n.useCallback(
         function (e) {
-            return i.default.createElement(S, a({ setContainerRef: k, setCanvasRef: x }, e));
+            return i.default.createElement(S, a({ setContainerRef: k, setCanvasRef: E }, e));
         },
-        [x, k],
+        [E, k],
     );
-    return { canvas: u, container: f.current, setCanvasRef: x, setContainerRef: k, rive: h, RiveComponent: A };
+    return { canvas: u, container: f.current, setCanvasRef: E, setContainerRef: k, rive: h, RiveComponent: A };
 }
-function x(e, t, r) {
+function E(e, t, r) {
     var o = n.useState(null),
         i = o[0],
         s = o[1],
@@ -495,7 +495,7 @@ function x(e, t, r) {
             "automaticallyHandleEvents",
             "children",
         ]),
-        m = E(
+        m = x(
             {
                 src: t,
                 artboard: r,
@@ -511,7 +511,7 @@ function x(e, t, r) {
     return i.default.createElement(m, a({}, h), d);
 }),
     (t.useResizeCanvas = v),
-    (t.useRive = E),
+    (t.useRive = x),
     (t.useRiveFile = function (e) {
         var t = this,
             r = n.useState(null),
@@ -771,7 +771,7 @@ function x(e, t, r) {
     }),
     (t.useViewModelInstanceArtboard = function (e, t) {
         return {
-            setValue: x(e, t, {
+            setValue: E(e, t, {
                 getProperty: n.useCallback(function (e, t) {
                     return e.artboard(t);
                 }, []),
@@ -790,7 +790,7 @@ function x(e, t, r) {
         };
     }),
     (t.useViewModelInstanceBoolean = function (e, t) {
-        var r = x(e, t, {
+        var r = E(e, t, {
             getProperty: n.useCallback(function (e, t) {
                 return e.boolean(t);
             }, []),
@@ -811,7 +811,7 @@ function x(e, t, r) {
         return { value: r.value, setValue: r.setValue };
     }),
     (t.useViewModelInstanceColor = function (e, t) {
-        var r = x(e, t, {
+        var r = E(e, t, {
             getProperty: n.useCallback(function (e, t) {
                 return e.color(t);
             }, []),
@@ -859,7 +859,7 @@ function x(e, t, r) {
         };
     }),
     (t.useViewModelInstanceEnum = function (e, t) {
-        var r = x(e, t, {
+        var r = E(e, t, {
             getProperty: n.useCallback(function (e, t) {
                 return e.enum(t);
             }, []),
@@ -884,7 +884,7 @@ function x(e, t, r) {
     }),
     (t.useViewModelInstanceImage = function (e, t) {
         return {
-            setValue: x(e, t, {
+            setValue: E(e, t, {
                 getProperty: n.useCallback(function (e, t) {
                     return e.image(t);
                 }, []),
@@ -905,7 +905,7 @@ function x(e, t, r) {
     (t.useViewModelInstanceList = function (e, t) {
         var r,
             o = n.useState(0)[1],
-            i = x(e, t, {
+            i = E(e, t, {
                 getProperty: n.useCallback(function (e, t) {
                     return e.list(t);
                 }, []),
@@ -972,7 +972,7 @@ function x(e, t, r) {
         };
     }),
     (t.useViewModelInstanceNumber = function (e, t) {
-        var r = x(e, t, {
+        var r = E(e, t, {
             getProperty: n.useCallback(function (e, t) {
                 return e.number(t);
             }, []),
@@ -993,7 +993,7 @@ function x(e, t, r) {
         return { value: r.value, setValue: r.setValue };
     }),
     (t.useViewModelInstanceString = function (e, t) {
-        var r = x(e, t, {
+        var r = E(e, t, {
             getProperty: n.useCallback(function (e, t) {
                 return e.string(t);
             }, []),
@@ -1016,7 +1016,7 @@ function x(e, t, r) {
     (t.useViewModelInstanceTrigger = function (e, t, r) {
         var o = (null != r ? r : {}).onTrigger;
         return {
-            trigger: x(e, t, {
+            trigger: E(e, t, {
                 getProperty: n.useCallback(function (e, t) {
                     return e.trigger(t);
                 }, []),

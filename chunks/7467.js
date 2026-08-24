@@ -21,8 +21,8 @@
     w,
     _,
     S,
-    E,
     x,
+    E,
     k,
     C,
     T,
@@ -79,14 +79,14 @@
         ew = ec(p),
         e_ = ec(d),
         eS = ec(v),
-        eE = ec(y),
-        ex = ec(g),
+        ex = ec(y),
+        eE = ec(g),
         ek = ec(b),
         eC = ec(w),
         eT = ec(_),
         eM = ec(S),
-        eP = ec(E),
-        eA = ec(x),
+        eP = ec(x),
+        eA = ec(E),
         eO = ec(k),
         eI = ec(C),
         eD = ec(T),
@@ -307,12 +307,12 @@
             em.default(e, t, { locale: n || null, awareOfUnicodeTokens: !0 })
         );
     }
-    function tE(e, t) {
+    function tx(e, t) {
         var r = t.dateFormat,
             n = t.locale;
         return (e && tS(e, Array.isArray(r) ? r[0] : r, n)) || "";
     }
-    function tx(e, t) {
+    function tE(e, t) {
         var r = t.hour,
             n = t.minute,
             o = t.second;
@@ -440,7 +440,7 @@
         var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
             r = t.minDate,
             n = t.includeDates,
-            o = ex.default(e, 1);
+            o = eE.default(e, 1);
         return (
             (r && eW.default(r, o) > 0) ||
             (n &&
@@ -1681,7 +1681,7 @@
                                     e.handleMonthNavigation(11 === r ? 0 : r + 1, ew.default(e.props.preSelection, 1));
                                     break;
                                 case "ArrowLeft":
-                                    e.handleMonthNavigation(0 === r ? 11 : r - 1, ex.default(e.props.preSelection, 1));
+                                    e.handleMonthNavigation(0 === r ? 11 : r - 1, eE.default(e.props.preSelection, 1));
                             }
                     }),
                     tl(td(e), "onQuarterClick", function (t, r) {
@@ -2358,7 +2358,7 @@
                         n.setState(
                             function (e) {
                                 var t = e.date;
-                                return { date: ex.default(t, 1) };
+                                return { date: eE.default(t, 1) };
                             },
                             function () {
                                 return n.handleMonthChange(n.state.date);
@@ -2788,7 +2788,7 @@
                             for (
                                 var e = [],
                                     t = n.props.showPreviousMonths ? n.props.monthsShown - 1 : 0,
-                                    r = ex.default(n.state.date, t),
+                                    r = eE.default(n.state.date, t),
                                     o = 0;
                                 o < n.props.monthsShown;
                                 ++o
@@ -3392,7 +3392,7 @@
                                                 (n.props.showTimeSelect ||
                                                     n.props.showTimeSelectOnly ||
                                                     n.props.showTimeInput)) ||
-                                            (i = tx(i, {
+                                            (i = tE(i, {
                                                 hour: eM.default(n.props.selected),
                                                 minute: eT.default(n.props.selected),
                                                 second: eC.default(n.props.selected),
@@ -3427,7 +3427,7 @@
                         o && n.setState({ preSelection: e });
                     }),
                     tl(td(n), "handleTimeChange", function (e) {
-                        var t = tx(n.props.selected ? n.props.selected : n.getPreSelection(), {
+                        var t = tE(n.props.selected ? n.props.selected : n.getPreSelection(), {
                             hour: eM.default(e),
                             minute: eT.default(e),
                         });
@@ -3485,13 +3485,13 @@
                                     t = eg.default(o, 1);
                                     break;
                                 case "ArrowUp":
-                                    t = eE.default(o, 1);
+                                    t = ex.default(o, 1);
                                     break;
                                 case "ArrowDown":
                                     t = eb.default(o, 1);
                                     break;
                                 case "PageUp":
-                                    t = ex.default(o, 1);
+                                    t = eE.default(o, 1);
                                     break;
                                 case "PageDown":
                                     t = ew.default(o, 1);
@@ -3670,11 +3670,11 @@
                                       : n.props.selectsRange
                                         ? (function (e, t, r) {
                                               if (!e) return "";
-                                              var n = tE(e, r),
-                                                  o = t ? tE(t, r) : "";
+                                              var n = tx(e, r),
+                                                  o = t ? tx(t, r) : "";
                                               return "".concat(n, " - ").concat(o);
                                           })(n.props.startDate, n.props.endDate, n.props)
-                                        : tE(n.props.selected, n.props);
+                                        : tx(n.props.selected, n.props);
                         return ef.default.cloneElement(
                             r,
                             (tl((e = {}), o, function (e) {

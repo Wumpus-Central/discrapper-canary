@@ -34,26 +34,26 @@ let h = (0, d.createContext)({}),
                 isDisabled: e.isDisabled || !1,
                 isPending: null != f && f,
             },
-            E = (0, n.Sl)({ ...e, values: S, defaultClassName: "react-aria-Button" }),
-            x = (0, u.Bi)(m.id),
+            x = (0, n.Sl)({ ...e, values: S, defaultClassName: "react-aria-Button" }),
+            E = (0, u.Bi)(m.id),
             k = (0, u.Bi)(),
             C = m["aria-labelledby"];
-        f && (C ? (C = `${C} ${k}`) : m["aria-label"] && (C = `${x} ${k}`));
+        f && (C ? (C = `${C} ${k}`) : m["aria-label"] && (C = `${E} ${k}`));
         let T = (0, d.useRef)(f);
         (0, d.useEffect)(() => {
-            let e = { "aria-labelledby": C || x };
+            let e = { "aria-labelledby": C || E };
             !T.current && g && f ? (0, i.iP)(e, "assertive") : T.current && g && !f && (0, i.iP)(e, "assertive"),
                 (T.current = f);
-        }, [f, g, C, x]);
+        }, [f, g, C, E]);
         let M = (0, p.$)(e, { global: !0 });
         return (
             delete M.onClick,
             d.createElement(
                 "button",
                 {
-                    ...(0, c.v)(M, E, m, y, w),
+                    ...(0, c.v)(M, x, m, y, w),
                     type: "submit" === m.type && f ? "button" : m.type,
-                    id: x,
+                    id: E,
                     ref: t,
                     "aria-labelledby": C,
                     slot: e.slot || void 0,
@@ -65,7 +65,7 @@ let h = (0, d.createContext)({}),
                     "data-pending": f || void 0,
                     "data-focus-visible": b || void 0,
                 },
-                d.createElement(o.K.Provider, { value: { id: k } }, E.children),
+                d.createElement(o.K.Provider, { value: { id: k } }, x.children),
             )
         );
     });

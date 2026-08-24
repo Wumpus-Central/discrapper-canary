@@ -6,9 +6,9 @@ n.d(t, {
     I7: () => C,
     Il: () => D,
     Kj: () => S,
-    ND: () => O,
+    ND: () => R,
     VD: () => L,
-    Wn: () => R,
+    Wn: () => O,
     YP: () => g,
     aw: () => v,
 });
@@ -50,10 +50,10 @@ function C(e) {
             (!!e.isPrivate() || (A.A.can(T.xBc.SEND_MESSAGES, e) && A.A.can(T.xBc.SEND_POLLS, e))),
     );
 }
-function R(e, t) {
-    return 0 === e.length && null == t.find((e) => O(e));
+function O(e, t) {
+    return 0 === e.length && null == t.find((e) => R(e));
 }
-function O(e) {
+function R(e) {
     let t = e.text?.trim();
     return null != t && t.length > 0;
 }

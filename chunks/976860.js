@@ -3,9 +3,9 @@ let i, r, a;
 n.d(t, {
     EL: () => T,
     JK: () => g,
-    MX: () => O,
+    MX: () => R,
     PR: () => S,
-    SB: () => R,
+    SB: () => O,
     TX: () => h,
     UC: () => N,
     aX: () => L,
@@ -86,7 +86,7 @@ function N() {
 function C(e) {
     return null == e && (e = i.location.pathname ?? ""), !e.startsWith(c.BVt.HANDOFF);
 }
-function R(e) {
+function O(e) {
     if ((null == e && (e = i.location.pathname ?? ""), e.startsWith(c.BVt.LOGIN))) return c.S3d.LOGIN;
     if (e.startsWith(c.BVt.REGISTER)) return c.S3d.REGISTER;
     if (e.startsWith(c.BVt.INVITE(""))) return c.S3d.INVITE;
@@ -104,7 +104,7 @@ function R(e) {
     else if (e.startsWith(c.BVt.ACCOUNT_REVERT(""))) return c.S3d.ACCOUNT_REVERT;
     return e;
 }
-function O() {
+function R() {
     return E;
 }
 function L() {

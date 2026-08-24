@@ -2,7 +2,7 @@
 n.d(t, {
     BV: () => h,
     C1: () => L,
-    GW: () => R,
+    GW: () => O,
     IJ: () => E,
     Oz: () => D,
     Ps: () => T,
@@ -10,7 +10,7 @@ n.d(t, {
     Tn: () => S,
     XG: () => f,
     aj: () => y,
-    al: () => O,
+    al: () => R,
     b8: () => m,
     dD: () => g,
     lV: () => p,
@@ -55,8 +55,8 @@ var T =
 let S = new Set([1, 4]),
     N = { 1: u.rbe.GUILD_STAGE_VOICE, 2: u.rbe.GUILD_VOICE },
     C = new Set([3]),
-    R = new Set([1, 2]);
-var O = (((l = {})[(l.EVENT_INFO = 0)] = "EVENT_INFO"), (l[(l.RSVP_LIST = 1)] = "RSVP_LIST"), l);
+    O = new Set([1, 2]);
+var R = (((l = {})[(l.EVENT_INFO = 0)] = "EVENT_INFO"), (l[(l.RSVP_LIST = 1)] = "RSVP_LIST"), l);
 let L = 100,
     y = 2 * c.A.Millis.DAY,
     D = 12 * c.A.Millis.HOUR,

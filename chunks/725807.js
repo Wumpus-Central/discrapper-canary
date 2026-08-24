@@ -27,8 +27,8 @@ let f = function (e) {
             premiumModalAnalyticsLocation: S,
             showIcon: N = !0,
             disableShine: C,
-            applicationId: R,
-            shinyButtonClassName: O,
+            applicationId: O,
+            shinyButtonClassName: R,
             showGradient: L = !1,
             confirmationFooter: y,
             color: D,
@@ -48,7 +48,7 @@ let f = function (e) {
             innerClassName: I.UO,
             color: U,
             size: a,
-            className: O,
+            className: R,
             wrapperClassName: s()({ [I.PJ]: L && t === h.pe.TIER_2, [I.Up]: L && t === h.pe.TIER_1 }, f),
             buttonShineClassName:
                 "buttonShineClassName" in b ? b.buttonShineClassName : U === o.XD.BRAND_INVERTED ? I.nz : void 0,
@@ -65,7 +65,7 @@ let f = function (e) {
         postSuccessGuild: m,
         onSubscribeModalClose: g,
         premiumModalAnalyticsLocation: S,
-        applicationId: R,
+        applicationId: O,
         confirmationFooter: y,
         children: (e) => {
             let { onClick: t } = e,
