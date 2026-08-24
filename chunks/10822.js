@@ -6317,7 +6317,7 @@ function oo(e) {
                 return A.isInitialized() || o.ready;
             }
             let T = (0, rX.r)(s),
-                M = o.length > 0 && o.first()?.isFirstMessageInForumPost(s),
+                M = m.some((e) => e.type === eu.TZK.FORUM_POST_ACTION_BAR),
                 R = (0, y.cI)(s),
                 D = (0, h.bG)([lQ.A], () => lQ.A.shouldShowTopicsBar() && !E),
                 L = (0, rG.l)(s.id),
@@ -6932,6 +6932,11 @@ let oc = r.memo(function (e) {
                                 p = null != a ? en.default.extractTimestamp(a) : null,
                                 A = null;
                             return (
+                                !u &&
+                                    i.isForumPost() &&
+                                    !s.hasMoreBefore &&
+                                    !s.first()?.isFirstMessageInForumPost(i) &&
+                                    m.push({ type: eu.TZK.FORUM_POST_ACTION_BAR }),
                                 s.forEach((e) => {
                                     var f, C;
                                     let x, E, S;
