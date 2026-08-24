@@ -91,11 +91,11 @@ class f extends i.A {
         return t?.channelId != null;
     }
     async updateActiveHandlers() {
-        if ((this.ensureInitialized(), !(0, l.TD)())) return void this.stopAllHandlers();
+        if ((this.ensureInitialized(), !(0, l.T)())) return void this.stopAllHandlers();
         let e = this.terminatedCount;
         for (let [t, n] of this.registrations) {
             let i = () => {
-                    if (!(0, l.TD)() || (null != n.isEnabled && !n.isEnabled())) return !1;
+                    if (!(0, l.T)() || (null != n.isEnabled && !n.isEnabled())) return !1;
                     switch (n.type) {
                         case "application": {
                             let e = new Set(r.Ay.getRunningGames().map((e) => e.id));

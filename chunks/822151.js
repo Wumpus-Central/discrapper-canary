@@ -112,13 +112,13 @@ class L extends l.A {
         }
     }
     handleSpeaking(e) {
-        if (!(0, T.TD)() || e.context !== a.x.DEFAULT) return;
+        if (!(0, T.T)() || e.context !== a.x.DEFAULT) return;
         let t = I.Ay.isVoiceRecordingAllowedForUser(e.userId);
         (e.userId === E.default.getId() || t) &&
             this.process({ type: O.Gy.SPEAKING, speakingFlags: e.speakingFlags, userId: e.userId });
     }
     handleSoundboardPlayStart(e) {
-        if (!(0, T.TD)()) return;
+        if (!(0, T.T)()) return;
         let t = _.A.getSoundById(e.soundId);
         if (null == t) return;
         let n = d.A.getGuildEmojis(t.guildId)?.[t.emojiId ?? ""];
@@ -134,7 +134,7 @@ class L extends l.A {
         });
     }
     handleSoundboardPlayEnd(e) {
-        if (!(0, T.TD)()) return;
+        if (!(0, T.T)()) return;
         let t = _.A.getSoundById(e.soundId);
         if (null == t) return;
         let n = d.A.getGuildEmojis(t.guildId)?.[t.emojiId ?? ""];

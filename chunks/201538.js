@@ -20,7 +20,7 @@ class h {
     downloadRunning = !1;
     downloadPromise = null;
     async start() {
-        if ((A.info("Clips asset manager started"), !(0, u.TD)() || !(0, c.isWindows)() || __OVERLAY__))
+        if ((A.info("Clips asset manager started"), !(0, u.T)() || !(0, c.isWindows)() || __OVERLAY__))
             return { allAssetsDownloaded: !1 };
         if (null != this.downloadPromise && (this.downloadRunning || this.areAllAssetsDownloaded()))
             await this.downloadPromise;
@@ -135,7 +135,7 @@ let p = { stable: 0.05, ptb: 1, canary: 1, development: 1 },
     C = null;
 function O() {
     let { forceV3Capability: e = !1 } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
-        t = (0, u.TD)(),
+        t = (0, u.T)(),
         n = r.Ay.getMediaEngine(),
         i = n.hasSetClipsRecordingEnabled(),
         a = (t || e || (i && !0 === g)) && (0, l.qi)("pushClipsV3RuntimeFlagsToNative"),

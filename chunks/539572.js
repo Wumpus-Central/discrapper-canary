@@ -519,14 +519,13 @@ async function el(e) {
 }
 async function eo(e) {
     let { clipsEnabled: t, guildId: n, trackAnalytics: i = !1, analyticsLocation: a } = e;
-    await r.h.dispatch({ type: "CLIPS_SETTINGS_UPDATE", settings: { clipsEnabled: t, decoupledClipsEnabled: t } }),
+    await r.h.dispatch({ type: "CLIPS_SETTINGS_UPDATE", settings: { clipsEnabled: t } }),
         i &&
             m.default.track(d.HAw.CLIPS_SETTINGS_UPDATED, {
                 location: a,
                 ...N.lc("updateClipsEnabled"),
                 clips_enabled: t,
                 guild_id: n,
-                decoupled_clips_enabled: t,
             });
 }
 function ed(e) {
@@ -765,25 +764,19 @@ async function eT(e) {
             r.h.dispatch({ type: "CLIPS_SAVE_CLIP_NO_OP", clipMethod: t, reason: R.RC.MODULE_NOT_LOADED });
         return;
     }
-    let d = (0, U.TD)(),
+    let d = (0, U.T)(),
         u = A.A.getCurrentUserActiveStream(),
         _ = null != u,
-        h = (0, U.Ao)(),
-        I = c.Ay.getVisibleGame()?.windowHandle != null,
-        f = p.Ay.hasClipsSource(),
-        T = h && I && f;
-    if (!(d && _) && !T)
+        h = c.Ay.getVisibleGame()?.windowHandle != null,
+        I = p.Ay.hasClipsSource(),
+        f = d && _,
+        T = d && h && I;
+    if (!f && !T)
         return void r.h.dispatch({
             type: "CLIPS_SAVE_CLIP_NO_OP",
             clipMethod: t,
             reason: R.RC.NO_ELIGIBLE_SOURCE,
-            sourceChecks: {
-                clipsEnabled: d,
-                hasActiveStream: _,
-                decoupledClipsEnabled: h,
-                hasVisibleGameWindow: I,
-                hasClipsSource: f,
-            },
+            sourceChecks: { clipsEnabled: d, hasActiveStream: _, hasVisibleGameWindow: h, hasClipsSource: I },
         });
     if ((0, b.qi)("saveClip") && p.Ay.isClipsRecordingReadySignalSupported() && !p.Ay.isClipsRecordingReady()) {
         R.nx.warn("Save clip ignored: clips recorder not ready (still starting up or idle shut down)"),

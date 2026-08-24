@@ -169,18 +169,18 @@ class P extends p.A {
         if (!(0, y.A)(h.Ay)) return;
         let t = g.A.getRTCConnection();
         if (null == t) return;
-        if (e === A.default.getId()) return void t.setClipRecordUser(e, "audio", (0, D.TD)());
+        if (e === A.default.getId()) return void t.setClipRecordUser(e, "audio", (0, D.T)());
         let n = R.Ay.isVoiceRecordingAllowedForUser(e);
         t.setClipRecordUser(e, "audio", n);
     }
     applyUserSoundboardRecording(e) {
         if (!(0, y.A)(h.Ay)) return;
         let t = g.A.getRTCConnection();
-        null != t && t.setClipRecordUser(e, "soundboard", (0, D.TD)());
+        null != t && t.setClipRecordUser(e, "soundboard", (0, D.T)());
     }
     applyStreamRecording(e, t) {
         if ((0, y.A)(h.Ay) && A.default.getId() === e) {
-            let n = (0, D.TD)();
+            let n = (0, D.T)();
             t.setClipRecordUser(e, "audio", n), t.setClipRecordUser(e, "video", n);
             return;
         }
@@ -259,12 +259,11 @@ class B extends P {
             n = h.Ay.getMediaEngine(),
             i = () => {
                 let i = R.Ay.getSettings(),
-                    r = (0, D.TD)();
+                    r = (0, D.T)();
                 if (
                     (n.setClipsRecordingEnabled(r),
                     n.setClipBufferLength(r ? i.clipsLength / 1e3 : 0),
-                    (e?.settings.decoupledClipsEnabled === !0 || e?.settings.clipsEnabled === !0) &&
-                        this.fireClipsInitEvent(),
+                    e?.settings.clipsEnabled === !0 && this.fireClipsInitEvent(),
                     null == e || e?.settings.clipsQuality != null)
                 ) {
                     let { frameRate: t, resolution: r, bitratePercent: a } = i.clipsQuality;
@@ -276,7 +275,7 @@ class B extends P {
                     (v.nx.info("clips v3 effective state flipped; dispatching CLIPS_RESTART"),
                     a.h.dispatch({ type: "CLIPS_RESTART" }));
             };
-        (0, D.TD)() && (0, L.qi)("applyNativeClipsSettings") && !(0, G.t_)() ? (0, G.so)().then(i) : i();
+        (0, D.T)() && (0, L.qi)("applyNativeClipsSettings") && !(0, G.t_)() ? (0, G.so)().then(i) : i();
     }
     handleClipsInitOnToggleDetection(e) {
         let t = d.Ay.getVisibleGame();
@@ -296,13 +295,13 @@ class B extends P {
         c.I.fetchMany([e]), l.YY.fetchMany([e]);
     }
     handleStreamEnded(e) {
-        if (!(0, D.TD)()) return;
+        if (!(0, D.T)()) return;
         let { ownerId: t } = (0, u.Iy)(e.streamKey);
         t !== A.default.getId() || ((0, L.qi)("handleStreamEnded") && this.fireClipsInitEvent());
     }
     fireClipsInitEvent() {
         let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        if (!(0, D.TD)() || (!e && null != E.A.getCurrentUserActiveStream())) return;
+        if (!(0, D.T)() || (!e && null != E.A.getCurrentUserActiveStream())) return;
         let t = d.Ay.getVisibleGame();
         if (t?.pid == null || t?.windowHandle == null || null == t.name || "" === t.name) return;
         if ((0, L.qi)("fireClipsInitEvent") && !(0, G.t_)())

@@ -175,6 +175,10 @@ class F extends s.Ay.DeviceSettingsStore {
                 },
             },
         }),
+        (e) => {
+            let t = e.clipsSettings.clipsEnabled && e.clipsSettings.decoupledClipsEnabled;
+            return { ...e, clipsSettings: { ...e.clipsSettings, clipsEnabled: t, decoupledClipsEnabled: t } };
+        },
     ];
     initialize(e) {
         null != e && (G = e), x(), this.waitFor(d.Ay);
@@ -329,7 +333,7 @@ let V = new F(l.h, {
         },
         STREAM_START: function (e) {
             let { sourceName: t, pid: n } = e;
-            if (!(0, h.TD)()) return !1;
+            if (!(0, h.T)()) return !1;
             let i = t;
             if (null != n) {
                 let e = d.Ay.getGameForPID(n);
@@ -407,17 +411,12 @@ let V = new F(l.h, {
                 (G.hardwareClassification = t),
                 G.hardwareClassification === I.k9.MEETS_AUTO_ENABLE &&
                     n !== I.k9.MEETS_AUTO_ENABLE &&
-                    (G.clipsSettings.clipsEnabled = !0);
-            let i = G.hardwareClassificationForDecoupled;
-            (G.hardwareClassificationForDecoupled = t),
-                G.hardwareClassificationForDecoupled === I.k9.MEETS_AUTO_ENABLE &&
-                    i !== I.k9.MEETS_AUTO_ENABLE &&
-                    G.clipsSettings.clipsEnabled &&
-                    (G.clipsSettings.decoupledClipsEnabled = !0);
+                    (G.clipsSettings.clipsEnabled = !0),
+                (G.hardwareClassificationForDecoupled = t);
         },
         CLIPS_INIT: function (e) {
             let { applicationName: t } = e;
-            if (((b = null), !(0, h.TD)())) return !1;
+            if (((b = null), !(0, h.T)())) return !1;
             L = { applicationName: t, newClipIds: [], ended: !1 };
         },
         CLIPS_INIT_FAILURE: function (e) {

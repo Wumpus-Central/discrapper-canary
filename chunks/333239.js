@@ -1455,7 +1455,7 @@ if (
     n.e("859864").then(n.t.bind(n, 122123, 19));
 let e2 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 new eB.A().log(
-    `[BUILD INFO] Release Channel: ${e2}, Build Number: 600231, Version Hash: c8e6ed29a8539a6443eb50f997a37b1bcc2c5d5a`,
+    `[BUILD INFO] Release Channel: ${e2}, Build Number: 600325, Version Hash: c72ee63c7fef400f503e3bdf49164e54654edd4c`,
 ),
     D.A.setTags({ appContext: G.QCW }),
     eI.A.initBasic(),
@@ -19319,7 +19319,7 @@ let gR = function (e) {
 };
 var gL = n(428331),
     gy = n(920050),
-    gD = n(989349),
+    gD = n(536637),
     gv = n.n(gD),
     gb = n(646917),
     gM = n(576761);
@@ -20285,7 +20285,7 @@ function SS(e) {
         onRequestClose: o,
     });
 }
-var SN = n(221877),
+var SN = n(296704),
     SC = n(717421),
     SO = n(770178),
     SR = n(87549),
@@ -20897,7 +20897,7 @@ let Nd = "isHideDevBanner",
                     className: ta()(No.Wz, No.mr),
                     children: [
                         (0, O.jsx)(Nl, { className: No.Kk }),
-                        tT.intl.format(tT.t.uyrfYF, { buildNumber: "600231" }),
+                        tT.intl.format(tT.t.uyrfYF, { buildNumber: "600325" }),
                         (0, O.jsx)(r, {}),
                     ],
                 })
@@ -31844,7 +31844,7 @@ let Do = {
     },
     [G.hCu.SAVE_CLIP]: {
         onTrigger: () => {
-            if (!(0, y2.TD)()) return;
+            if (!(0, y2.T)()) return;
             let e = nS.Ay.getVisibleGame();
             x.default.track(G.HAw.CLIP_SAVE_KEYBIND_PRESSED, {
                 ...y0.lc("clip_save_keybind_pressed"),
@@ -31857,7 +31857,7 @@ let Do = {
     },
     [G.hCu.SAVE_SCREENSHOT]: {
         onTrigger: () => {
-            !(0, y2.TD)() ||
+            !(0, y2.T)() ||
                 ((0, y1.cx)() &&
                     (x.default.track(G.HAw.CLIP_SAVE_KEYBIND_PRESSED, { ...y0.lc("screenshot_keybind_pressed") }),
                     (0, y3.yT)()));
@@ -45098,7 +45098,7 @@ let xH = (0, tV.Fe)({
             n.e("968201"),
             n.e("595429"),
             n.e("326692"),
-            n.e("154657"),
+            n.e("582830"),
             n.e("62052"),
             n.e("926275"),
             n.e("503376"),
@@ -47144,7 +47144,7 @@ let k4 = (0, nX.Fe)({
                 n.e("964367"),
                 n.e("819273"),
                 n.e("595429"),
-                n.e("154657"),
+                n.e("582830"),
                 n.e("731336"),
                 n.e("454048"),
                 n.e("910471"),

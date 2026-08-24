@@ -2541,7 +2541,7 @@ let n0 = (i = new nQ(b.h, {
     },
     CLIPS_INIT: function (e) {
         let { sourceId: t, applicationName: n, quality: r } = e;
-        if (!(0, k.Ao)() || null == M.A || (s?.desktopSource.id === t && s.quality === r)) return !1;
+        if (!(0, k.T)() || null == M.A || (s?.desktopSource.id === t && s.quality === r)) return !1;
         null != s &&
             (td.setClipsSource(null),
             (0, f.isWindows)() &&
@@ -2585,7 +2585,7 @@ let n0 = (i = new nQ(b.h, {
     },
     CLIPS_SETTINGS_UPDATE: function (e) {
         let { settings: t } = e;
-        !1 === t.decoupledClipsEnabled && ((s = null), td.setClipsSource(null)), !1 === t.clipsEnabled && (s = null);
+        !1 === t.clipsEnabled && ((s = null), td.setClipsSource(null));
     },
     MEDIA_ENGINE_SET_ENABLE_HARDWARE_MUTE_NOTICE: function (e) {
         t7 = e.enabled;

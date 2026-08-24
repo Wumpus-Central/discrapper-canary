@@ -1125,7 +1125,6 @@ let eS = new eN(s.h, {
                                       ", ",
                                   )),
                                   (n = [
-                                      tn("feature enabled", i.decoupledClipsEnabled),
                                       tn("visible game window", i.hasVisibleGameWindow),
                                       tn("clips source", i.hasClipsSource),
                                   ].join(",\n")),
@@ -1195,7 +1194,7 @@ let eS = new eN(s.h, {
                     notif_type: H.KS.ClipsReminderNotification,
                 }),
                 i = Z.Ay.getKeybindForAction($.hCu.SAVE_CLIP),
-                n = (0, ta.TD)();
+                n = (0, ta.T)();
             if (null == i || !n) return null;
             let l = tt.dI(i.shortcut, !0);
             return {

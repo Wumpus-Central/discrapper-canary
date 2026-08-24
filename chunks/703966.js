@@ -377,7 +377,7 @@ let eE = s.memo(function (e) {
         F = s.useRef(null),
         H = s.useRef(null),
         B = (0, o.bG)([v.A], () => v.A.getActivities()),
-        V = (0, f.Et)(),
+        V = (0, f.E)(),
         K = (0, o.yK)([A.Ay], () => A.Ay.getNewClipIds()),
         z = (0, o.yK)(
             [b.A],

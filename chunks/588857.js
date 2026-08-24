@@ -12,7 +12,7 @@ var i,
     m = n.n(h),
     g = n(812729),
     p = n.n(g),
-    f = n(221877),
+    f = n(296704),
     x = n(866323),
     A = n(939249),
     E = n(834730),
@@ -1161,7 +1161,7 @@ var e0 = n(417098),
     tj = n(711918);
 function tT(e) {
     let { onClose: t } = e,
-        n = (0, tp.Et)(),
+        n = (0, tp.E)(),
         i = (0, y.bG)([tS.Ay], () => tS.Ay.getSettings().clipsQuality),
         s = (0, y.bG)([tS.Ay], () => tS.Ay.getSettings().clipsLength),
         l = (0, tI.Qu)(),
@@ -1821,7 +1821,7 @@ function t2(e) {
 function t3(e) {
     let t,
         n = c.useRef(null),
-        i = (0, tp.Et)(),
+        i = (0, tp.E)(),
         { tooltip: s, clipsInitError: l, clipsSourceAttached: a } = (0, tC.A)();
     function o(e) {
         return (t) => {

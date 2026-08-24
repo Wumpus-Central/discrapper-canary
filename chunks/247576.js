@@ -366,7 +366,7 @@ var el = n(688810),
 let ey = 2 * eg.A.Millis.WEEK;
 function eD(e) {
     let { targetElementRef: t, markAsDismissed: n } = e,
-        i = (0, eN.Et)(),
+        i = (0, eN.E)(),
         a = (0, _.bG)([eS.Ay], () => eS.Ay.getEnableAutoclipping()),
         s = (0, _.bG)([em.A], () => em.A.getChannelId());
     return (0, r.jsx)(
@@ -550,17 +550,14 @@ function tD(e) {
 }
 let tv = function () {
     let { parentAnalyticsLocation: e } = (0, el.Ay)(),
-        t = (0, eN.Et)(),
-        n = (0, eN.XT)(),
-        i = (0, tN.bG)([eS.Ay], () => eS.Ay.getIsAtMaxSaveClipOperations()),
-        a = (0, tN.bG)([e5.A], () => e5.A.getCurrentUserActiveStream()),
-        s = t && (a?.state === x.XYD.ACTIVE || n),
-        { enableGamePanelEntrypoint: l } = tL.A.useConfig({ location: "ClipsPanelButton" }),
-        { tooltip: o, clipsSourceAttached: d } = (0, ty.A)();
-    return l && s
+        t = (0, eN.E)(),
+        n = (0, tN.bG)([eS.Ay], () => eS.Ay.getIsAtMaxSaveClipOperations()),
+        { enableGamePanelEntrypoint: i } = tL.A.useConfig({ location: "ClipsPanelButton" }),
+        { tooltip: a, clipsSourceAttached: s } = (0, ty.A)();
+    return i && t
         ? (0, r.jsx)(tR.A, {
-              disabled: i || !d,
-              tooltipText: o,
+              disabled: n || !s,
+              tooltipText: a,
               onClick: () => {
                   (0, eC.l0)(), (0, eA.X)(e, eA.O.CLIP);
               },
@@ -1040,27 +1037,26 @@ var nn = n(532624),
     ni = n(350535),
     nr = n(369409);
 function na(e) {
-    let { isStreaming: t, isCurrentlyRunningGame: n, onClickNotSharing: i } = e,
-        a = (0, _.bG)([nn.Ay], () => nn.Ay.getKeybindForAction(x.hCu.SAVE_CLIP)),
-        s = null != a && a.shortcut.length > 0 ? ni.dI(a.shortcut, !0) : null,
-        l = (0, eN.Et)(),
-        o = (0, eN.XT)(),
-        d = M.tz.useSetting(),
-        c = (0, _.bG)([U.A], () => U.A.getStatus()),
-        u = !__OVERLAY__ && (!d || c === x.clD.INVISIBLE),
-        E = l && (t || o) && n && null != s;
-    return n
-        ? u
-            ? (0, r.jsx)(nt, { onClick: i })
-            : E
+    let { isCurrentlyRunningGame: t, onClickNotSharing: n } = e,
+        i = (0, _.bG)([nn.Ay], () => nn.Ay.getKeybindForAction(x.hCu.SAVE_CLIP)),
+        a = null != i && i.shortcut.length > 0 ? ni.dI(i.shortcut, !0) : null,
+        s = (0, eN.E)(),
+        l = M.tz.useSetting(),
+        o = (0, _.bG)([U.A], () => U.A.getStatus()),
+        d = !__OVERLAY__ && (!l || o === x.clD.INVISIBLE),
+        c = s && t && null != a;
+    return t
+        ? d
+            ? (0, r.jsx)(nt, { onClick: n })
+            : c
               ? (0, r.jsx)(k.E, {
                     variant: "text-xs/medium",
                     color: "text-subtle",
                     className: nr.En,
                     tag: "div",
                     children: Z.intl.format(eR.default.ESZwQX, {
-                        keybind: s,
-                        keybindHook: () => (0, r.jsx)(t9.e, { shortcut: s, className: nr.oH, keyClassName: nr.Bj }),
+                        keybind: a,
+                        keybindHook: () => (0, r.jsx)(t9.e, { shortcut: a, className: nr.oH, keyClassName: nr.Bj }),
                     }),
                 })
               : null
@@ -1148,7 +1144,7 @@ function nc(e) {
                     className: ns.pq,
                     children: [
                         null != h ? (0, r.jsx)(nl, { name: h, applicationId: s?.id }) : null,
-                        (0, r.jsx)(na, { isStreaming: i, isCurrentlyRunningGame: A, onClickNotSharing: o }),
+                        (0, r.jsx)(na, { isCurrentlyRunningGame: A, onClickNotSharing: o }),
                     ],
                 }),
             }),

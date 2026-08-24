@@ -29,7 +29,7 @@ function T() {
             t(!0);
         }, [t]),
         i = (0, j.A)("useIsClipsVideoCallTileVisible"),
-        [a] = l.useState(() => !(0, C.TD)() || !g.Ay.getEnableAutoclipping());
+        [a] = l.useState(() => !(0, C.T)() || !g.Ay.getEnableAutoclipping());
     return [i && !e && a, n];
 }
 function _(e) {
@@ -66,7 +66,7 @@ function R(e) {
 }
 function S(e) {
     let { width: t, handleClose: n } = e,
-        s = (0, C.Et)(),
+        s = (0, C.E)(),
         o = (0, a.bG)([g.Ay], () => g.Ay.getEnableAutoclipping()),
         [h, m] = l.useState(() => !s);
     s || h || m(!0);

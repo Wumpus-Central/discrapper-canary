@@ -657,7 +657,7 @@ class H extends A.A {
         (r = s.getNetworkStats()),
             (a = this.isOwner ? s.getCodecUsageStats("streamer", this.userId) : s.getCodecUsageStats("receiver", i));
         let l = f.Ay.getSettings(),
-            o = this.isOwner ? { clips_enabled: (0, p.TD)(), clips_buffer_length: l.clipsLength } : {},
+            o = this.isOwner ? { clips_enabled: (0, p.T)(), clips_buffer_length: l.clipsLength } : {},
             d = this.isOwner ? { bandwidth_estimation_experiment: this.getBandwidthEstimationExperiment() } : {};
         s.getOutboundStats().forEach((t) => {
             (t.num_frames ?? 0) > 0 &&

@@ -21,9 +21,10 @@ class c extends i.A {
         !l.A.getConfig({ location: "maybeSendRemoteClipTrigger" }).enableDistributedClips ||
             t === s.default.getId() ||
             (d.nx.info("Received remote clip trigger", { userId: t, applicationId: n, partyId: i }),
-            null == r.Ay.getVisibleRunningGames().find((e) => e.id === n) ||
-                (null != a.A.getCurrentUserActiveStream() && a.A.getStreamerActiveStreamMetadata()?.id !== n) ||
-                ((null != a.A.getCurrentUserActiveStream() || (0, o.Ao)()) && this.callback?.(t, c)));
+            null != r.Ay.getVisibleRunningGames().find((e) => e.id === n) &&
+                (0, o.T)() &&
+                (null == a.A.getCurrentUserActiveStream() || a.A.getStreamerActiveStreamMetadata()?.id === n) &&
+                this.callback?.(t, c));
     }
 }
 let u = new c();

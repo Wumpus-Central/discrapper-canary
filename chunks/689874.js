@@ -5,23 +5,23 @@ var r = t(477900),
     a = t(866665),
     i = t(812993),
     c = t(176781),
-    o = t(198052),
-    u = t(952818),
-    A = t(616356),
-    p = t(915725),
+    u = t(198052),
+    o = t(952818),
+    p = t(616356),
+    A = t(915725),
     d = t(572164),
     h = t(806931),
     m = t(375708),
     x = t(874566);
 let R = function (s) {
     let { channelId: e } = s;
-    return (0, l.bG)([A.A, o.A, p.Ay, u.Ay], () => {
+    return (0, l.bG)([p.A, u.A, A.Ay, o.Ay], () => {
         if (null == e) return !1;
-        let s = A.A.getCurrentUserActiveStream(),
-            t = u.Ay.getVisibleGame()?.windowHandle;
+        let s = p.A.getCurrentUserActiveStream(),
+            t = o.Ay.getVisibleGame()?.windowHandle;
         return (
-            !!((null != s && (0, d.TD)()) || (null != t && (0, d.Ao)())) ||
-            o.A.getParticipants(e).some((s) => s.type === h.lp.USER && p.Ay.isClipsEnabledForUser(s.user.id))
+            (!!(0, d.T)() && (null != s || null != t)) ||
+            u.A.getParticipants(e).some((s) => s.type === h.lp.USER && A.Ay.isClipsEnabledForUser(s.user.id))
         );
     })
         ? (0, r.jsx)(a.m, {

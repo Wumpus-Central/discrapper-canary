@@ -1325,7 +1325,7 @@ var nH = n(3137),
     n7 = n(874486),
     n9 = n(503698),
     ie = n.n(n9),
-    it = n(989349),
+    it = n(536637),
     ii = n.n(it),
     il = n(58703),
     is = n(906688),
@@ -17286,7 +17286,7 @@ let IA = (0, a.zD)(o.X.CLIPS_ENABLE_AUTOCLIPPING, {
         useSubtitle: () => j.intl.format(Im.default.UCzGcQ, { learnMoreLink: eS.A.getArticleURL(A.MVz.CLIPS) }),
         useValue: () => (0, m.bG)([Ig.Ay], () => Ig.Ay.getEnableAutoclipping()),
         setValue: Ic.uL,
-        useDisabled: () => !(0, Id.Et)(),
+        useDisabled: () => !(0, Id.E)(),
     }),
     Ih = (0, a.zY)(o.X.CLIPS_AUTOCLIPPING_CARD, { buildLayout: () => [IA], headerSettingKey: IA.key }),
     IE = (0, a.zZ)(o.X.CLIPS_AUTOCLIPPING_CATEGORY, {
@@ -17295,7 +17295,7 @@ let IA = (0, a.zD)(o.X.CLIPS_ENABLE_AUTOCLIPPING, {
         usePredicate: Iu.H,
         usePersistentBadge: () => ({ badgeType: d.Xi.BETA }),
         useInlineNotice: () =>
-            (0, Id.Et)()
+            (0, Id.E)()
                 ? null
                 : {
                       type: d.lT.INLINE_NOTICE,
@@ -17329,7 +17329,7 @@ let Ix = [Ip.zq, 25, 50, Ip.Y2, Ip.rv],
         },
         markers: Ix,
         onMarkerRender: (e) => `${Math.round(e)}%`,
-        useDisabled: () => !(0, Id.Et)(),
+        useDisabled: () => !(0, Id.E)(),
     });
 var If = n(226640);
 let II = (0, a.Hn)(o.X.CLIPS_FRAME_RATE, {
@@ -17341,7 +17341,7 @@ let II = (0, a.Hn)(o.X.CLIPS_FRAME_RATE, {
             Ic.GS({ ...t, frameRate: e });
         },
         useOptions: If.Fz,
-        useDisabled: () => !(0, Id.Et)(),
+        useDisabled: () => !(0, Id.E)(),
     }),
     I_ = (0, a.E2)(o.X.CLIPS_HARDWARE_CLASSIFICATION_WARNING, {
         useSearchTerms: () => [j.intl.string(j.t.SIxrIF)],
@@ -17354,7 +17354,7 @@ let II = (0, a.Hn)(o.X.CLIPS_FRAME_RATE, {
         useValue: () => (0, m.bG)([Ig.Ay], () => Ig.Ay.getSettings().clipsLength),
         setValue: (e) => Ic.h$(e),
         useOptions: If.Qu,
-        useDisabled: () => !(0, Id.Et)(),
+        useDisabled: () => !(0, Id.E)(),
     }),
     IC = (0, a.E2)(o.X.CLIPS_QUALITY_INFOBOX, {
         useSearchTerms: () => [j.intl.string(j.t["Z+MfqT"])],
@@ -17369,14 +17369,14 @@ let II = (0, a.Hn)(o.X.CLIPS_FRAME_RATE, {
             Ic.GS({ ...t, resolution: e });
         },
         useOptions: If.gF,
-        useDisabled: () => !(0, Id.Et)(),
+        useDisabled: () => !(0, Id.E)(),
     }),
     Iy = (0, a.zD)(o.X.CLIPS_ENABLE_REMINDERS, {
         useTitle: () => j.intl.string(j.t["3zwNf6"]),
         useSubtitle: () => j.intl.string(j.t.m4Cjj9),
         useValue: () => (0, m.bG)([Ig.Ay], () => Ig.Ay.getSettings().remindersEnabled),
         setValue: (e) => Ic.Mt(e),
-        useDisabled: () => !(0, Id.Et)(),
+        useDisabled: () => !(0, Id.E)(),
     }),
     Iv = (0, a.zZ)(o.X.CLIPS_CAPTURE_SETTINGS_CATEGORY, {
         useTitle: () => j.intl.string(Im.default.TGwzMe),
@@ -17412,7 +17412,7 @@ let IP = (0, a.E2)(o.X.CLIPS_KEYBIND, {
         Component: () => {
             let e = (0, m.bG)([lL.Ay], () => lL.Ay.getKeybindForAction(A.hCu.SAVE_CLIP, !0));
             tl()(null != e, "Save clip keybind unset");
-            let t = !(0, Id.Et)(),
+            let t = !(0, Id.E)(),
                 n = g.useRef(null),
                 i = g.useCallback(
                     (t) => {
@@ -17500,7 +17500,7 @@ let IP = (0, a.E2)(o.X.CLIPS_KEYBIND, {
     IM = (0, a.zD)(o.X.CLIPS_ENABLE, {
         useTitle: () => j.intl.string(j.t.h8rgrK),
         useSubtitle: () => j.intl.string(j.t["4Qw3NO"]),
-        useValue: () => (0, Id.Et)(),
+        useValue: () => (0, Id.E)(),
         setValue: (e) => Ic.yO({ clipsEnabled: e, trackAnalytics: !0 }),
     }),
     IU = (0, a.zY)(o.X.CLIPS_GENERAL_CARD, { buildLayout: () => [IM, IP, IG], headerSettingKey: IM.key }),
@@ -17513,7 +17513,7 @@ let IP = (0, a.E2)(o.X.CLIPS_KEYBIND, {
         useSearchTerms: () => [j.intl.string(j.t.s4773E), j.intl.string(j.t.svjwGh)],
         Component: () => {
             let e = (0, m.bG)([Ig.Ay], () => Ig.Ay.getSettings().storageLocation),
-                t = !(0, Id.Et)(),
+                t = !(0, Id.E)(),
                 n = g.useRef(!1);
             async function i() {
                 if (!t && !n.current) {
