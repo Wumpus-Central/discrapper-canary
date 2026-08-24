@@ -867,7 +867,7 @@ eV(
                         : {
                               emojis: (t.emojis ?? []).map((e) =>
                                   null != e.custom_emoji_id
-                                      ? { id: e.custom_emoji_id, name: "" }
+                                      ? { id: e.custom_emoji_id, name: "", animated: e.animated ?? !1 }
                                       : { name: e.unicode_emoji ?? "" },
                               ),
                               typingSuggestion: t.typing_suggestion ?? Z.gm.UNSPECIFIED,
