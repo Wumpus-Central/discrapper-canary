@@ -1833,10 +1833,11 @@ class ef extends O.G {
         super("discord_protos.users.v1.TypingIndicatorEmoji", [
             { no: 1, name: "custom_emoji_id", kind: "scalar", oneof: "emoji", T: 6 },
             { no: 2, name: "unicode_emoji", kind: "scalar", oneof: "emoji", T: 9 },
+            { no: 3, name: "animated", kind: "scalar", T: 8 },
         ]);
     }
     create(e) {
-        let t = { emoji: { oneofKind: void 0 } };
+        let t = { emoji: { oneofKind: void 0 }, animated: !1 };
         return (
             globalThis.Object.defineProperty(t, C.$, { enumerable: !1, value: this }),
             void 0 !== e && (0, N.x)(this, t, e),
@@ -1855,6 +1856,9 @@ class ef extends O.G {
                 case 2:
                     r.emoji = { oneofKind: "unicodeEmoji", unicodeEmoji: e.string() };
                     break;
+                case 3:
+                    r.animated = e.bool();
+                    break;
                 default:
                     let a = n.readUnknownField;
                     if ("throw" === a)
@@ -1867,7 +1871,8 @@ class ef extends O.G {
     }
     internalBinaryWrite(e, t, n) {
         "customEmojiId" === e.emoji.oneofKind && t.tag(1, S.O0.Bit64).fixed64(e.emoji.customEmojiId),
-            "unicodeEmoji" === e.emoji.oneofKind && t.tag(2, S.O0.LengthDelimited).string(e.emoji.unicodeEmoji);
+            "unicodeEmoji" === e.emoji.oneofKind && t.tag(2, S.O0.LengthDelimited).string(e.emoji.unicodeEmoji),
+            !1 !== e.animated && t.tag(3, S.O0.Varint).bool(e.animated);
         let i = n.writeUnknownFields;
         return !1 !== i && (!0 == i ? S.f$.onWrite : i)(this.typeName, e, t), t;
     }
