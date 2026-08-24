@@ -119,28 +119,28 @@
     padding: var(--space-4) var(--space-12) var(--space-8)
 }
 
-.combobox__97e86 {
+.combobox_f975d3 {
     height: 100%;
     overflow: hidden;
     padding: var(--space-8)
 }
 
-.header__97e86 {
+.header_f975d3 {
     padding-bottom: var(--space-8)
 }
 
-.list__97e86 {
+.list_f975d3 {
     height: 100%;
     list-style: none;
     margin-top: 8px
 }
 
-.list__97e86.scroller__97e86 {
+.list_f975d3.scroller_f975d3 {
     margin-block: 0 8px;
     margin-inline: 8px 0
 }
 
-.item__97e86 {
+.item_f975d3 {
     align-items: center;
     border-radius: 4px;
     color: var(--interactive-text-default);
@@ -152,78 +152,78 @@
     padding: 10px 8px
 }
 
-.focused__97e86,
-.item__97e86:hover:not(.disabled__97e86) {
+.focused_f975d3,
+.item_f975d3:hover:not(.disabled_f975d3) {
     background-color: var(--interactive-background-hover);
     color: var(--interactive-text-hover)
 }
 
-.itemLabel__97e86 {
+.itemLabel_f975d3 {
     width: 100%
 }
 
-.itemCheckbox__97e86~.itemLabel__97e86 {
+.itemCheckbox_f975d3~.itemLabel_f975d3 {
     margin-inline-start: 8px
 }
 
-.empty__97e86 {
+.empty_f975d3 {
     display: grid;
     padding: 20px;
     text-align: center;
     grid-gap: 12px
 }
 
-.disabled__97e86 {
+.disabled_f975d3 {
     cursor: not-allowed;
     opacity: .3
 }
 
-.selected__97e86 {
+.selected_f975d3 {
     background-color: var(--interactive-background-selected)
 }
 
-.selectedBrand__97e86 {
+.selectedBrand_f975d3 {
     background: var(--brand-500);
     color: var(--white)
 }
 
-.selectedBrand__97e86.focused__97e86,
-.selectedBrand__97e86:hover {
+.selectedBrand_f975d3.focused_f975d3,
+.selectedBrand_f975d3:hover {
     background: var(--brand-600);
     color: var(--white)
 }
 
-.searchWithScrollbar__97e86 {
+.searchWithScrollbar_f975d3 {
     margin: 8px
 }
 
-.enable-forced-colors .item__97e86 {
+.enable-forced-colors .item_f975d3 {
     border: 1px solid Canvas
 }
 
-.enable-forced-colors .disabled__97e86 {
+.enable-forced-colors .disabled_f975d3 {
     color: GrayText;
     opacity: 1
 }
 
-.enable-forced-colors .disabled__97e86.focused__97e86 {
+.enable-forced-colors .disabled_f975d3.focused_f975d3 {
     border-color: GrayText
 }
 
-.enable-forced-colors .focused__97e86:not(.disabled__97e86),
-.enable-forced-colors .item__97e86:hover:not(.disabled__97e86) {
+.enable-forced-colors .focused_f975d3:not(.disabled_f975d3),
+.enable-forced-colors .item_f975d3:hover:not(.disabled_f975d3) {
     background-color: ButtonFace;
     border-color: ButtonText;
     color: ButtonText
 }
 
-.enable-forced-colors .selected__97e86:not(.disabled__97e86) {
+.enable-forced-colors .selected_f975d3:not(.disabled_f975d3) {
     background-color: HighlightText;
     color: Highlight
 }
 
-.enable-forced-colors .selected__97e86:not(.disabled__97e86).focused__97e86,
-.enable-forced-colors .selected__97e86:not(.disabled__97e86):hover {
+.enable-forced-colors .selected_f975d3:not(.disabled_f975d3).focused_f975d3,
+.enable-forced-colors .selected_f975d3:not(.disabled_f975d3):hover {
     border-color: Highlight
 }
 
@@ -359,4 +359,4 @@
     justify-content: center
 }
 
-/*# sourceMappingURL=65d547aecf406725.css.map*/
+/*# sourceMappingURL=6def9c57929cd7a4.css.map*/
