@@ -38,8 +38,8 @@ var i = e(477900),
     Y = e(544441),
     k = e(146779),
     W = e(540185),
-    H = e(569926),
-    B = e(289173),
+    B = e(569926),
+    H = e(289173),
     z = e(735321),
     w = e(999291),
     $ = e(993401),
@@ -51,7 +51,7 @@ function q(t) {
         r = (0, U.bG)([F.default], () => F.default.getId()),
         s = (0, w.Ay)(r, null),
         o = n.getCanonicalGameId(),
-        { data: c } = (0, H.I)(o),
+        { data: c } = (0, B.I)(o),
         u = l.useMemo(
             () =>
                 !(
@@ -59,7 +59,7 @@ function q(t) {
                     null == o ||
                     s?.widgets?.some(
                         (t) =>
-                            t instanceof B.Yy && t.type === W.x.CURRENT_GAMES && t.games?.some((t) => t.gameId === o),
+                            t instanceof H.Yy && t.type === W.x.CURRENT_GAMES && t.games?.some((t) => t.gameId === o),
                     )
                 ) && (0, z.XX)(c),
             [o, s?.widgets, c],
@@ -158,7 +158,7 @@ function tm(t) {
         { themeType: r } = (0, R.E)(),
         s = (0, t_.A)({ applicationId: e?.application_id, onClose: a }),
         o = (0, tf.l)({ activity: e ?? void 0, embeddedActivity: void 0, user: n, onClose: a }),
-        c = (0, tp.d)(e?.application_id);
+        c = (0, tp.dB)(e?.application_id);
     if (null == o && null != e && (0, A.A)(e))
         return (0, i.jsx)($.FD, {
             icon: tc.k,
@@ -369,8 +369,8 @@ var tV = e(282197),
     tY = e(624951),
     tk = e(584904),
     tW = e(351638),
-    tH = e(531648),
-    tB = e(910607),
+    tB = e(531648),
+    tH = e(910607),
     tz = e(753713),
     tw = e(269587),
     t$ = e(409626),
@@ -393,9 +393,9 @@ function tq(t) {
         Y = (0, C.GV)(),
         { analyticsLocations: k } = (0, _.Ay)(f.A.USER_PROFILE_LIVE_ACTIVITY_CARD),
         { themeType: W } = (0, R.E)(),
-        H = (0, g.A)({ activity: l, user: n }),
-        B = (0, O.A)({ display: "live", user: n, activity: l, entry: H, analyticsLocations: k }),
-        z = (0, S.A)({ userId: n.id, onAction: B }),
+        B = (0, g.A)({ activity: l, user: n }),
+        H = (0, O.A)({ display: "live", user: n, activity: l, entry: B, analyticsLocations: k }),
+        z = (0, S.A)({ userId: n.id, onAction: H }),
         w = (0, m.Ay)(b),
         $ = (0, h.A)(l),
         F = null != $.text && "" !== $.text,
@@ -423,7 +423,7 @@ function tq(t) {
             currentUser: e,
             activity: l,
             application: a,
-            entry: H,
+            entry: B,
             onClose: D,
         });
     function Z() {
@@ -432,39 +432,39 @@ function tq(t) {
                   className: tr.FH,
                   children: [
                       (0, i.jsx)(o.H, { size: "xxs", color: c.A.colors.TEXT_DEFAULT, className: tr.Ow }),
-                      (0, i.jsx)(tH.Q, { variant: "heading-sm/semibold", text: w, id: V }),
+                      (0, i.jsx)(tB.Q, { variant: "heading-sm/semibold", text: w, id: V }),
                   ],
               })
             : (0, x.A)(l) || (0, y.Cy)(l)
-              ? (0, i.jsx)(tH.Q, { variant: "heading-sm/semibold", text: l.name, id: V })
+              ? (0, i.jsx)(tB.Q, { variant: "heading-sm/semibold", text: l.name, id: V })
               : null != l.details
                 ? (0, i.jsx)(E.O, {
                       href: l.details_url,
-                      children: (0, i.jsx)(tH.Q, { variant: "heading-sm/semibold", text: l.details, id: V }),
+                      children: (0, i.jsx)(tB.Q, { variant: "heading-sm/semibold", text: l.details, id: V }),
                   })
-                : (0, i.jsx)(tH.Q, { variant: "heading-sm/semibold", text: l.name, id: V });
+                : (0, i.jsx)(tB.Q, { variant: "heading-sm/semibold", text: l.name, id: V });
     }
     function tt() {
         return l.type === tg.$pd.HANG_STATUS
             ? null
             : (0, p.A)(l) && null != U
-              ? (0, i.jsx)(tH.A, {
+              ? (0, i.jsx)(tB.A, {
                     variant: "text-xs/normal",
                     text: Q.intl.formatToPlainString(Q.t["hq/Qze"], { guildName: U.name }),
                     onClick: () => {
-                        (0, j.u)(U.id), B({ action: "OPEN_VOICE_GUILD" }), D?.();
+                        (0, j.u)(U.id), H({ action: "OPEN_VOICE_GUILD" }), D?.();
                     },
                 })
               : (0, x.A)(l)
                 ? (0, i.jsx)(E.O, {
                       href: l.details_url,
-                      children: (0, i.jsx)(tH.A, { variant: "text-xs/normal", text: l.details }),
+                      children: (0, i.jsx)(tB.A, { variant: "text-xs/normal", text: l.details }),
                   })
                 : (0, y.Cy)(l)
-                  ? (0, i.jsx)(tH.A, { variant: "text-xs/normal", text: l?.assets?.small_text })
+                  ? (0, i.jsx)(tB.A, { variant: "text-xs/normal", text: l?.assets?.small_text })
                   : (0, i.jsx)(E.O, {
                         href: l.state_url,
-                        children: (0, i.jsx)(tH.A, { variant: "text-xs/normal", text: l.state }),
+                        children: (0, i.jsx)(tB.A, { variant: "text-xs/normal", text: l.state }),
                     });
     }
     function tn() {
@@ -476,9 +476,9 @@ function tq(t) {
                       children: [
                           (0, i.jsx)(E.O, {
                               href: l.state_url,
-                              children: (0, i.jsx)(tH.A, { variant: "text-xs/normal", text: l.state }),
+                              children: (0, i.jsx)(tB.A, { variant: "text-xs/normal", text: l.state }),
                           }),
-                          (0, i.jsx)(tH.A, {
+                          (0, i.jsx)(tB.A, {
                               variant: "text-xs/normal",
                               text: Q.intl.formatToPlainString(Q.t["u//9By"], {
                                   count: "0",
@@ -493,9 +493,9 @@ function tq(t) {
                         children: [
                             (0, i.jsx)(E.O, {
                                 href: l.state_url,
-                                children: (0, i.jsx)(tH.A, { variant: "text-xs/normal", text: l.state }),
+                                children: (0, i.jsx)(tB.A, { variant: "text-xs/normal", text: l.state }),
                             }),
-                            (0, i.jsx)(tH.A, {
+                            (0, i.jsx)(tB.A, {
                                 variant: "text-xs/normal",
                                 text:
                                     0 === l.party.size[1]
@@ -510,7 +510,7 @@ function tq(t) {
                   : null == l.party
                     ? (0, i.jsx)(E.O, {
                           href: l.state_url,
-                          children: (0, i.jsx)(tH.A, { variant: "text-xs/normal", text: l.state }),
+                          children: (0, i.jsx)(tB.A, { variant: "text-xs/normal", text: l.state }),
                       })
                     : null;
         if ((0, y.Cy)(l) && l.party?.size != null && l.party?.size.length >= 2) {
@@ -518,12 +518,12 @@ function tq(t) {
                 numSpeakers: l.party?.size[0],
                 numListeners: l.party?.size[1] - l.party?.size[0],
             });
-            return (0, i.jsx)(tH.A, { variant: "text-xs/normal", text: t });
+            return (0, i.jsx)(tB.A, { variant: "text-xs/normal", text: t });
         }
         return l.assets?.large_text != null
             ? (0, i.jsx)(E.O, {
                   href: l.assets?.large_url,
-                  children: (0, i.jsx)(tH.A, { text: l.assets?.large_text, variant: "text-xs/normal" }),
+                  children: (0, i.jsx)(tB.A, { text: l.assets?.large_text, variant: "text-xs/normal" }),
               })
             : null;
     }
@@ -532,7 +532,7 @@ function tq(t) {
             containerClassName: tr.o1,
             activity: l,
             user: n,
-            onAction: B,
+            onAction: H,
             onClose: D,
             application: a,
         });
@@ -542,7 +542,7 @@ function tq(t) {
         children: (0, i.jsxs)(tk.A, {
             ref: z,
             className: r()(tr.Nr, M),
-            onAction: B,
+            onAction: H,
             onClose: D,
             "aria-labelledby": F ? `${Y} ${V}` : V,
             children: [
@@ -553,7 +553,7 @@ function tq(t) {
                         display: "live",
                         user: n,
                         activity: l,
-                        entry: H,
+                        entry: B,
                         onClose: D,
                         appContext: G,
                     }),
@@ -588,7 +588,7 @@ function tq(t) {
                                                       className: tr.mM,
                                                       aspectRatio: e,
                                                       onClick: (t) => {
-                                                          B({ action: "PRESS_IMAGE" }), K(t);
+                                                          H({ action: "PRESS_IMAGE" }), K(t);
                                                       },
                                                   })),
                                         (0, i.jsxs)("div", {
@@ -599,7 +599,7 @@ function tq(t) {
                                                     : (0, i.jsxs)(u.D, {
                                                           className: tr.sd,
                                                           onClick: (t) => {
-                                                              B({ action: "PRESS_TEXT" }), K(t);
+                                                              H({ action: "PRESS_TEXT" }), K(t);
                                                           },
                                                           children: [Z(), tt(), tn()],
                                                       }),
@@ -617,7 +617,7 @@ function tq(t) {
                                 }),
                                 null == U || null == b
                                     ? null
-                                    : (0, i.jsx)(tB.A, { user: n, guild: U, channel: b, onAction: B, onClose: D }),
+                                    : (0, i.jsx)(tH.A, { user: n, guild: U, channel: b, onAction: H, onClose: D }),
                             ],
                         });
                     },
@@ -633,14 +633,14 @@ function tq(t) {
                                 activityApplication: a,
                                 onClickViewMore: (t) => {
                                     t.stopPropagation(),
-                                        B({ action: "PRESS_APPLICATION_WIDGET_PREVIEW_VIEW_MORE" }),
+                                        H({ action: "PRESS_APPLICATION_WIDGET_PREVIEW_VIEW_MORE" }),
                                         D?.(),
                                         (0, v.openUserProfileModal)({ userId: n.id, tabSection: X.RP.WIDGETS });
                                 },
                             }),
                         ],
                     }),
-                (0, i.jsx)(tY.A, { applicationId: a?.id, onAction: B, onClose: D, activity: l }),
+                (0, i.jsx)(tY.A, { applicationId: a?.id, onAction: H, onClose: D, activity: l }),
             ],
         }),
     });

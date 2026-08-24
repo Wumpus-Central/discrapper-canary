@@ -197,7 +197,11 @@ async function j(e) {
             .then((t) => L.A.launchDispatchApplication(e, t, g.default.locale, s.getBranchName(), r));
     } else {
         let e = _.A.getApplication(t);
-        A = null != e ? L.A.launch(e) : L.A.launchGame(t);
+        if (null != e) {
+            A = L.A.launch(e);
+            let n = N.A.getOfficialGame(e);
+            null != n && n.id !== t && (A = A.catch(() => L.A.launch(n)));
+        } else A = L.A.launchGame(t);
     }
     let f = Error("game not found");
     return null != A

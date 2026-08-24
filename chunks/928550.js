@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { L: () => d, d: () => h });
+n.d(t, { L_: () => d, au: () => f, dB: () => m });
 var l = n(17928),
     i = n(627363),
     s = n(651743),
@@ -25,10 +25,22 @@ function d(e) {
         [e],
     );
 }
-function h(e) {
-    let { data: t } = (0, i.YY)(e),
-        n = (0, l.bG)([a.A], () => (null != t ? (a.A.getOfficialGame(t) ?? a.A.getGameByApplication(t)) : null), [t]),
-        [s] = d(e),
-        [r] = d(n?.id);
-    return null != e && s ? e : null != n && r ? n.id : null;
+function h(e, t) {
+    let [n] = d(e),
+        [l] = d(t?.id);
+    return null != e && n ? e : null != t && l ? t.id : null;
+}
+function m(e) {
+    let { data: t } = (0, i.YY)(e);
+    return h(
+        e,
+        (0, l.bG)([a.A], () => (null != t ? (a.A.getOfficialGame(t) ?? a.A.getGameByApplication(t)) : null), [t]),
+    );
+}
+function f(e) {
+    let { data: t } = (0, i.YY)(e);
+    return h(
+        e,
+        (0, l.bG)([a.A], () => (null != t ? a.A.getOfficialGame(t) : null), [t]),
+    );
 }

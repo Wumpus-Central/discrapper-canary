@@ -122,8 +122,8 @@ var S = n(666176),
     w = n(43105),
     H = n(414499),
     V = n(116833),
-    F = n(735991);
-let B = (0, n(945810).mj)({
+    B = n(735991);
+let F = (0, n(945810).mj)({
     name: "2025-12-game-invite-account-linking-entry-point",
     kind: "user",
     defaultConfig: { enabled: !1 },
@@ -343,7 +343,7 @@ function ef(e) {
             partyStatusElement: f,
             presenceActivity: I,
         } = e,
-        C = (0, F.Ag)(o),
+        C = (0, B.Ag)(o),
         { iconSrc: _, name: v } = (function (e, t) {
             let { bot: n } = t;
             return {
@@ -393,7 +393,7 @@ function ef(e) {
         { openGameProfileModal: T, launchableAppId: S } =
             ((t = o.id),
             (n = A.author.id),
-            (a = (0, Z.d)(t)),
+            (a = (0, Z.dB)(t)),
             {
                 openGameProfileModal: (0, X.A)({
                     location: "Rich Presence Activity Invite Embed",
@@ -411,7 +411,7 @@ function ef(e) {
         }, [y]),
         R = (0, Y.F)(o),
         L = l.useMemo(() => (null != T ? T : null != R && C ? R : void 0), [C, T, R]),
-        M = B.useConfig({ location: "RichPresenceGameActivityInviteEmbed" }),
+        M = F.useConfig({ location: "RichPresenceGameActivityInviteEmbed" }),
         { canStartAuthorization: k, hasAlreadyLinked: O, startAuthorization: P } = (0, J.RD)(o),
         D = (0, z.z)(P, O),
         U = !(0, $.A)(I, A, o.id),
@@ -481,7 +481,6 @@ function ef(e) {
               channel: d,
               header: el,
               currentUserId: u,
-              launchableAppId: S,
               isEmbeddedApplication: C,
               tryWithGdnAction: b,
               staticBannerSrc: N,

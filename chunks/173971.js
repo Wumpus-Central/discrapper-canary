@@ -59,7 +59,7 @@ function K(t) {
         { startAuthorization: O, shouldShowGoToGameHint: M } = (0, U.W)(T, { onSetIgnoreCloseRequest: _ }),
         G = { startAuthorization: O, shouldShowGoToGameHint: M, ...N },
         { analyticsLocations: v } = (0, g.Ay)(d ?? [], x.A.SOCIAL_LAYER_GIFT_CODE_CLAIM_MODAL),
-        [w, B] = (0, L.L)(R?.id),
+        [w, B] = (0, L.L_)(R?.id),
         K = (0, b.J)(R),
         Y = n.useCallback(() => {
             R?.id != null &&

@@ -6,8 +6,8 @@ var n = a(477900),
     l = a(141628),
     s = a(811893),
     o = a(696208),
-    d = a(289873),
-    _ = a(834730),
+    _ = a(289873),
+    d = a(834730),
     u = a(964486),
     p = a(793574),
     A = a(688810),
@@ -36,7 +36,7 @@ function g(t) {
             analyticsLocations: w,
             entitlement: v,
         } = t,
-        [H, M] = (0, C.L)(D?.id),
+        [H, M] = (0, C.L_)(D?.id),
         { fetched: b, hasAlreadyLinked: G, canStartAuthorization: z, startAuthorization: P } = (0, k.RD)(D),
         { startAuthorization: F, shouldShowGoToGameHint: K } = (0, m.W)(P, { onSetIgnoreCloseRequest: g }),
         U = (0, E.J)(D),
@@ -112,7 +112,7 @@ function g(t) {
         return (0, n.jsx)(r.d, {
             transitionState: i,
             onClose: a,
-            children: (0, n.jsx)(c.c, { children: (0, n.jsx)(d.y, {}) }),
+            children: (0, n.jsx)(c.c, { children: (0, n.jsx)(_.y, {}) }),
         });
     let Z = H && !U;
     if (G) {
@@ -126,7 +126,7 @@ function g(t) {
                 (0, n.jsx)(T.z, { sku: j, title: N.intl.string(N.t["5glWta"]), reward: X }),
                 (0, n.jsxs)(c.c, {
                     children: [
-                        (0, n.jsx)(_.E, {
+                        (0, n.jsx)(d.E, {
                             variant: "text-md/normal",
                             className: y.j,
                             children: N.intl.formatToPlainString(N.t.W2znvX, {

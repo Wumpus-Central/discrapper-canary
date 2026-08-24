@@ -22,9 +22,9 @@ var c = n(889227),
 let E = { [u.I4]: 7, [u.qA]: 12 };
 function A(e) {
     let t = { os: e.os, name: e.name };
-    return (
-        null != e.arguments && (t.arguments = e.arguments), null != e.is_launcher && (t.isLauncher = e.is_launcher), t
-    );
+    null != e.arguments && (t.arguments = e.arguments);
+    let n = e.is_launcher ?? e.isLauncher;
+    return null != n && (t.isLauncher = n), t;
 }
 class h extends s.A {
     id;

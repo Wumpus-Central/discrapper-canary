@@ -2702,8 +2702,8 @@ function lx(e) {
 function lg(e) {
     let { game: t, trackAction: n, analyticsLocations: l } = e,
         a = (0, v.A)(t.linkedApplications)?.id,
-        [r] = (0, R.L)(t.getOfficialApplicationId()),
-        [c] = (0, R.L)(t.id),
+        [r] = (0, R.L_)(t.getOfficialApplicationId()),
+        [c] = (0, R.L_)(t.id),
         { showsStoreLinks: o } = la(t),
         d = t.steamReleaseStatus !== u.Y.RETIRED_ABANDONED;
     return (0, i.jsxs)("div", {
