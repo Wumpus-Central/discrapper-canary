@@ -5436,22 +5436,6 @@
     }
   },
   {
-    "name": "2026-07-smag-wishlist-nitro-first-slot",
-    "kind": "user",
-    "defaultConfig": {
-      "isEnabled": false
-    },
-    "variations": {
-      "0": {
-        "enabled": false,
-        "variant": 0
-      },
-      "1": {
-        "isEnabled": true
-      }
-    }
-  },
-  {
     "name": "2026-07-smag-wishlist-recommendations-dismiss-threshold",
     "kind": "user",
     "defaultConfig": {
