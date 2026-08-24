@@ -518,12 +518,15 @@ let r = {
     },
     FavoriteManager: {
         actions: [
+            "THREAD_CREATE",
             "CHANNEL_DELETE",
             "CATEGORY_COLLAPSE",
             "CATEGORY_EXPAND",
             "CATEGORY_COLLAPSE_ALL",
             "CATEGORY_EXPAND_ALL",
             "LOGOUT",
+            "THREAD_MEMBERS_UPDATE",
+            "THREAD_MEMBER_UPDATE",
         ],
         inlineRequire: () => n(789105).A,
     },

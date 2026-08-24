@@ -1,17 +1,19 @@
 "use strict";
 n.d(t, {
-    fv: () => $,
-    S_: () => H,
-    w6: () => W,
-    od: () => Y,
-    JD: () => q,
-    zN: () => Z,
-    tV: () => Q,
-    _2: () => z,
-    kG: () => J,
-    uM: () => X,
-    nR: () => K,
-    i_: () => j,
+    fv: () => z,
+    S_: () => j,
+    w6: () => Y,
+    od: () => K,
+    Ub: () => q,
+    JD: () => J,
+    zN: () => Q,
+    tV: () => et,
+    _2: () => X,
+    kG: () => en,
+    Ye: () => Z,
+    uM: () => ee,
+    nR: () => $,
+    i_: () => W,
 });
 var i = n(435558),
     r = n.n(i),
@@ -107,55 +109,56 @@ function V(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : f.default.fromTimestamp(Date.now());
     return (e[n] = a.wL.create({ nickname: t, type: a.Ip.CATEGORY, position: M(e), parentId: D.O8 })), n;
 }
-async function B(e, t, n) {
-    let i = e.filter((e) => !p.A.isFavorite(e));
-    if (0 === i.length) return;
-    let r = !p.A.favoriteGuildEnabled;
+function B(e, t) {
+    let n = t.trim().toLowerCase();
+    for (let t in e) {
+        let i = e[t];
+        if (i.type === a.Ip.CATEGORY && i.nickname.trim().toLowerCase() === n) return t;
+    }
+}
+async function H(e, t, n) {
+    let { silent: i = !1 } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {},
+        r = e.filter((e) => !p.A.isFavorite(e));
+    if (0 === r.length) return;
+    let l = !p.A.favoriteGuildEnabled;
     await F({
         update: (e) => {
-            let l = !1,
-                o = ("parentId" in t ? t.parentId : null) ?? D.O8;
-            for (let r of i) {
-                let i = G(e.favoriteChannels, a.Ip.REFERENCE_ORIGINAL);
-                if (null != i) {
-                    if ((x(i), !l)) return !1;
+            let o = !1,
+                d = ("parentId" in t ? t.parentId : null) ?? D.O8;
+            for (let l of r) {
+                let r = G(e.favoriteChannels, a.Ip.REFERENCE_ORIGINAL);
+                if (null != r) {
+                    if ((i || x(r), !o)) return !1;
                     break;
                 }
-                if ("categoryName" in t && !l) {
-                    o =
-                        (function (e, t) {
-                            let n = t.trim().toLowerCase();
-                            for (let t in e) {
-                                let i = e[t];
-                                if (i.type === a.Ip.CATEGORY && i.nickname.trim().toLowerCase() === n) return t;
-                            }
-                        })(e.favoriteChannels, t.categoryName) ?? V(e.favoriteChannels, t.categoryName);
+                if ("categoryName" in t && !o) {
+                    d = B(e.favoriteChannels, t.categoryName) ?? V(e.favoriteChannels, t.categoryName);
                     let n = G(e.favoriteChannels, a.Ip.REFERENCE_ORIGINAL);
-                    if (null != n) return x(n), !1;
+                    if (null != n) return i || x(n), !1;
                 }
-                let d = E.A.getChannel(r);
-                (e.favoriteChannels[r] = a.wL.create({
+                let c = E.A.getChannel(l);
+                (e.favoriteChannels[l] = a.wL.create({
                     nickname: "",
                     type: a.Ip.REFERENCE_ORIGINAL,
-                    channelType: null != d ? s.ZQ.create({ value: d.type }) : void 0,
+                    channelType: null != c ? s.ZQ.create({ value: c.type }) : void 0,
                     position: M(e.favoriteChannels),
-                    parentId: o,
+                    parentId: d,
                 })),
                     P(e.favoriteChannels),
-                    U(e.favoriteChannels, r),
-                    (l = !0),
-                    (0, S.LO)(n, d?.type ?? null, w(e.favoriteChannels));
+                    U(e.favoriteChannels, l),
+                    (o = !0),
+                    (0, S.LO)(n, c?.type ?? null, w(e.favoriteChannels));
             }
-            l && r && ((e.guildVisible = s._t.create({ value: !0 })), (0, S.uS)("auto", !0));
+            o && l && !i && ((e.guildVisible = s._t.create({ value: !0 })), (0, S.uS)("auto", !0));
         },
     }),
-        i.some((e) => p.A.isFavorite(e)) && (0, O.P0)((0, R.o)(y.intl.string(y.t["4tSWQg"]), L.Ck.FAVORITE));
+        !i && r.some((e) => p.A.isFavorite(e)) && (0, O.P0)((0, R.o)(y.intl.string(y.t["4tSWQg"]), L.Ck.FAVORITE));
 }
-async function H(e) {
+async function j(e) {
     let { channelIds: t, parentId: n, source: i } = e;
-    await B(t, { parentId: n ?? null }, i);
+    await H(t, { parentId: n ?? null }, i);
 }
-function j(e) {
+function W(e) {
     var t;
     let n,
         { trackAnalytics: i = !0 } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
@@ -178,7 +181,7 @@ function j(e) {
         (n = I.A.getGuildId()),
         (0, g.ai)(n) && h.Ay.getChannelId() === t && (0, c.pX)(v.BVt.CHANNEL(n)));
 }
-function W(e, t) {
+function Y(e, t) {
     p.A.isFavorite(e) &&
         F({
             update: (n) => {
@@ -186,7 +189,7 @@ function W(e, t) {
             },
         });
 }
-async function Y(e) {
+async function K(e) {
     if (!(0, g.QN)(e)) return null;
     let t = e.trim(),
         n = f.default.fromTimestamp(Date.now());
@@ -201,14 +204,42 @@ async function Y(e) {
         null != p.A.getFavorite(n) ? n : null
     );
 }
-async function K(e) {
+async function $(e) {
     let { channelIds: t, categoryName: n, source: i } = e;
-    await B(t, { categoryName: n }, i);
+    await H(t, { categoryName: n }, i);
 }
-function $(e) {
-    j(e);
+function z(e) {
+    W(e);
 }
-function z(e, t) {
+async function Z(e) {
+    if (!p.A.autoAddJoinedThreads || p.A.isFavorite(e)) return;
+    let t = E.A.getChannel(e);
+    null != t &&
+        t.isThread() &&
+        (t.isPrivate() || A.A.can(b.xB.VIEW_CHANNEL, t)) &&
+        (0, m.ad)().hasAccess &&
+        (await H([e], { categoryName: D.A }, "auto_thread_join", { silent: !0 }));
+}
+function q(e) {
+    F({
+        update: (t) => {
+            if (
+                t.autoAddJoinedThreads === e ||
+                (e &&
+                    null ==
+                        (function (e) {
+                            let t = B(e, D.A);
+                            if (null != t) return t;
+                            let n = G(e, a.Ip.CATEGORY);
+                            return null != n ? void x(n) : V(e, D.A);
+                        })(t.favoriteChannels))
+            )
+                return !1;
+            t.autoAddJoinedThreads = e;
+        },
+    });
+}
+function X(e, t) {
     F({
         update: (n) => {
             let i = null != t ? [t] : Object.keys(n.favoriteChannels),
@@ -222,7 +253,7 @@ function z(e, t) {
         batched: !0,
     });
 }
-function Z(e) {
+function Q(e) {
     0 !== e.length &&
         F({
             update: (t) => {
@@ -236,17 +267,17 @@ function Z(e) {
             },
         });
 }
-function q(e, t) {
+function J(e, t) {
     F({
         update: (n) => {
             (n.favoriteChannels[e].parentId = t ?? D.O8), U(n.favoriteChannels, e), (0, S.P)();
         },
     });
 }
-function X() {
+function ee() {
     for (let e of (F({
         update: (e) => {
-            (e.favoriteChannels = {}), (e.guildVisible = void 0), (e.muted = !1);
+            (e.favoriteChannels = {}), (e.guildVisible = void 0), (e.muted = !1), (e.autoAddJoinedThreads = !1);
         },
     }),
     (0, o.Ab)(),
@@ -255,7 +286,7 @@ function X() {
     T.dt))
         (0, u.xB)(e);
 }
-function Q(e) {
+function et(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "settings_page";
     F({
         update: (n) => {
@@ -264,6 +295,6 @@ function Q(e) {
         },
     });
 }
-function J(e) {
-    Q(e, "settings_page"), !e && (0, g.ai)(I.A.getGuildId()) && (0, c.pX)(v.BVt.ME);
+function en(e) {
+    et(e, "settings_page"), !e && (0, g.ai)(I.A.getGuildId()) && (0, c.pX)(v.BVt.ME);
 }

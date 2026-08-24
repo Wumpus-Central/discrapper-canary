@@ -388,6 +388,11 @@
     pointer-events: none
 }
 
+.fullNotice__29444 {
+    display: inline-flex;
+    flex-shrink: 0
+}
+
 .addButton__29444 {
     display: none;
     height: 16px;
@@ -681,4 +686,4 @@
     background-color: var(--app-frame-border)
 }
 
-/*# sourceMappingURL=a7792e5a35e50213.css.map*/
+/*# sourceMappingURL=edfd326052d5938c.css.map*/

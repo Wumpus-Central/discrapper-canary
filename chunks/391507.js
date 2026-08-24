@@ -2,6 +2,7 @@ _.exports = {
     fx: "containerDefault__29444",
     mU: "containerDragAfter__29444",
     TR: "containerDragBefore__29444",
+    qS: "fullNotice__29444",
     c9: "addButton__29444",
     ih: "forceVisible__29444",
     Ki: "iconVisibility__29444",
