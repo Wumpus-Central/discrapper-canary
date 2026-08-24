@@ -5746,6 +5746,30 @@
     }
   },
   {
+    "name": "2026-08-heic-upload-conversion",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false,
+      "quality": 60
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true,
+        "quality": 60,
+        "maxFileSizeBytes": 20971520
+      },
+      "2": {
+        "enabled": true,
+        "quality": 80,
+        "maxFileSizeBytes": 20971520
+      }
+    }
+  },
+  {
     "name": "2026-08-hide-gift-shop-upsell",
     "kind": "user",
     "defaultConfig": {

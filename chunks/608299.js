@@ -1,23 +1,30 @@
 "use strict";
-n.d(t, { A: () => r });
-var i = n(228366);
-let r = {
+n.d(t, { A: () => a });
+var i = n(228366),
+    r = n(658612);
+let a = {
     popFirstFile(e) {
         i.h.dispatch({ type: "UPLOAD_ATTACHMENT_POP_FILE", channelId: e });
     },
     addFiles(e) {
-        let { files: t, channelId: n, draftType: r } = e;
-        i.h.dispatch({ type: "UPLOAD_ATTACHMENT_ADD_FILES", channelId: n, files: t, draftType: r });
+        let { files: t, channelId: n, draftType: a } = e;
+        function s(e) {
+            i.h.dispatch({ type: "UPLOAD_ATTACHMENT_ADD_FILES", channelId: n, files: e, draftType: a });
+        }
+        t.some(r.d) ? Promise.all(t.map(r.z)).then(s) : s(t);
     },
     addFile(e) {
-        let { file: t, channelId: n, draftType: r, allowOptimization: a } = e;
-        i.h.dispatch({
-            type: "UPLOAD_ATTACHMENT_ADD_FILES",
-            channelId: n,
-            files: [t],
-            draftType: r,
-            allowOptimization: a,
-        });
+        let { file: t, channelId: n, draftType: a, allowOptimization: s } = e;
+        function l(e) {
+            i.h.dispatch({
+                type: "UPLOAD_ATTACHMENT_ADD_FILES",
+                channelId: n,
+                files: [e],
+                draftType: a,
+                allowOptimization: s,
+            });
+        }
+        (0, r.d)(t) ? (0, r.z)(t).then(l) : l(t);
     },
     remove(e, t, n) {
         i.h.dispatch({ type: "UPLOAD_ATTACHMENT_REMOVE_FILE", channelId: e, id: t, draftType: n });
