@@ -878,20 +878,39 @@ function eK(e) {
     return (0, p.bG)([D.A], () => D.A.quests).get(e) ?? null;
 }
 function eW(e) {
-    let { mode: t, questContent: n, sourceQuestContent: i, questId: r } = e,
-        s = o.useRef(null);
+    let t,
+        n,
+        i,
+        { mode: r, questContent: s, sourceQuestContent: a } = e;
+    "questId" in e ? (t = e.questId) : ((n = e.adContentId), (i = e.adCreativeType));
+    let l = o.useCallback(
+            (e, r) => {
+                null != t
+                    ? (0, K.Zu)({ mode: e, prevMode: r, questContent: s, questId: t, sourceQuestContent: a })
+                    : null != n &&
+                      null != i &&
+                      (0, K.Wc)({
+                          adContentId: n,
+                          adCreativeType: i,
+                          mode: e,
+                          prevMode: r,
+                          questContent: s,
+                          sourceQuestContent: a,
+                      });
+            },
+            [s, a, t, n, i],
+        ),
+        u = t ?? n,
+        d = o.useRef(null);
     o.useEffect(() => {
-        null != r &&
-            s.current !== t &&
-            ((0, K.Mm)({ mode: t, prevMode: s.current, questContent: n, questId: r, sourceQuestContent: i }),
-            (s.current = t));
-    }, [r, n, t, i]),
+        null != u && d.current !== r && (l(r, d.current), (d.current = r));
+    }, [r, u, l]),
         o.useEffect(() => {
-            if (null != r)
+            if (null != u)
                 return () => {
-                    (0, K.Mm)({ mode: null, prevMode: s.current, questContent: n, questId: r, sourceQuestContent: i });
+                    l(null, d.current);
                 };
-        }, [r, n, i]);
+        }, [u, l]);
 }
 function eX(e, t) {
     let n = (0, p.bG)([D.A], () => D.A.getQuest(e), [e]),

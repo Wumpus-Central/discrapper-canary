@@ -1,13 +1,14 @@
 "use strict";
 n.d(t, {
-    DZ: () => x,
+    DZ: () => k,
     LW: () => D,
-    Mm: () => G,
     OQ: () => P,
     Qg: () => y,
+    Wc: () => x,
     XH: () => U,
     Y5: () => v,
     YE: () => L,
+    Zu: () => G,
     av: () => O,
     eA: () => R,
     gr: () => w,
@@ -309,6 +310,17 @@ function G(e) {
         sourceQuestContent: n,
     });
 }
-function x(e, t) {
+function x(e) {
+    let { adContentId: t, adCreativeType: n, questContent: i, sourceQuestContent: r, mode: a, prevMode: s } = e,
+        l = (0, p.fF)(i);
+    y({
+        adContentId: t,
+        adCreativeType: n,
+        event: m.HAw.QUEST_BAR_MODE_CHANGED,
+        properties: { content_id: l.content_id, content_name: l.content_name, mode: a, previous_mode: s },
+        sourceQuestContent: r,
+    });
+}
+function k(e, t) {
     o.Ay.trackWithMetadata(m.HAw.QUEST_EMBED_FALLBACK_VIEWED, { quest_id: e, reason: t });
 }
