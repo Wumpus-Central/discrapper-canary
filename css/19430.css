@@ -2376,10 +2376,17 @@
     padding: 4px
 }
 
+.clipPreview_ab64fd,
 .gamePreview_ab64fd,
 .wishlistItemPreview_ab64fd {
     box-shadow: var(--shadow-high);
     opacity: .85
+}
+
+.clipPreview_ab64fd {
+    aspect-ratio: 16/9;
+    border-radius: var(--radius-sm);
+    overflow: hidden
 }
 
 .gameSearchCombobox__36be8 {
@@ -2615,4 +2622,4 @@
     margin-top: 4px
 }
 
-/*# sourceMappingURL=19430.ad03ff6dacbcfc92.css.map*/
+/*# sourceMappingURL=19430.5ff467856324c4a7.css.map*/

@@ -596,6 +596,13 @@
     position: relative
 }
 
+.dragTarget_afbdeb {
+    cursor: grab;
+    height: 100%;
+    position: relative;
+    width: 100%
+}
+
 .addTile_afbdeb,
 .tile_afbdeb {
     border-radius: var(--radius-sm);
@@ -632,6 +639,55 @@
 .keyboard-mode .slot_afbdeb:focus-within .removeClipButton_afbdeb {
     opacity: 1;
     transition: opacity .15s ease-out
+}
+
+.isDragging_afbdeb .removeClipButton_afbdeb,
+.keyboard-mode .slot_afbdeb:focus-within .isDragging_afbdeb .removeClipButton_afbdeb {
+    opacity: 0
+}
+
+.dragHandle_afbdeb {
+    align-items: center;
+    border-radius: var(--radius-sm);
+    color: var(--white);
+    display: flex;
+    inset: 0;
+    justify-content: flex-start;
+    opacity: 0;
+    padding-inline-start: var(--space-4);
+    pointer-events: none;
+    position: absolute;
+    z-index: 1
+}
+
+.dragHandle_afbdeb:focus-visible {
+    background: var(--opacity-black-72);
+    opacity: 1;
+    pointer-events: auto
+}
+
+.dropIndicatorAfter_afbdeb:after,
+.dropIndicatorBefore_afbdeb:before {
+    background-color: var(--icon-strong);
+    border-radius: var(--radius-xs);
+    bottom: 0;
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    width: 2px
+}
+
+.dropIndicatorBefore_afbdeb:before {
+    inset-inline-start: -7px
+}
+
+.dropIndicatorAfter_afbdeb:after {
+    inset-inline-end: -7px
+}
+
+.isDragging_afbdeb {
+    opacity: .15
 }
 
 .addTile_afbdeb {
@@ -711,4 +767,4 @@
     aspect-ratio: 16/9
 }
 
-/*# sourceMappingURL=656123.7c3cdd4aed9b0d70.css.map*/
+/*# sourceMappingURL=656123.cb72deaffebd8942.css.map*/
