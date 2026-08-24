@@ -1,4 +1,4 @@
-n.d(t, { default: () => e6 });
+n.d(t, { default: () => te });
 var i = n(477900),
     s = n(582128),
     r = n(562708),
@@ -157,8 +157,8 @@ n(321073);
 var X = n(837381),
     Y = n(741918),
     Z = n(689175),
-    q = n(928039),
-    $ = n(131607),
+    $ = n(928039),
+    q = n(131607),
     Q = n(199966),
     J = n(397274);
 function ee(e, t, n) {
@@ -615,7 +615,7 @@ function ej(e) {
                 }
             );
         }, [d, m]),
-        [g] = (0, $.kn)(h.allDismissibleContents);
+        [g] = (0, q.kn)(h.allDismissibleContents);
     !(function (e) {
         let { visibleContent: t, dismissibleBadges: n, accessibleDirectory: i } = e,
             { dismissibleContentToNodeKeys: r, nodeKeyToDismissibleContents: l } = n,
@@ -660,7 +660,7 @@ function ej(e) {
             );
         }, [n.layout]),
         p = (0, k.NC)(),
-        A = (0, q.A)("settings-sidebar", u, { orientation: Y.Gl.VERTICAL, defaultFocused: t }),
+        A = (0, $.A)("settings-sidebar", u, { orientation: Y.Gl.VERTICAL, defaultFocused: t }),
         [S, j] = s.useState(!1),
         C = s.useCallback(() => {
             let e = u.current?.getScrollerNode();
@@ -939,38 +939,41 @@ var eM = n(280450),
     eX = n(77729),
     eY = n(521502),
     eZ = n(915089),
-    eq = n(206845),
-    e$ = n(19575),
-    eQ = n(592739);
-function eJ() {
+    e$ = n(206845),
+    eq = n(19575),
+    eQ = n(415443),
+    eJ = n(592739);
+function e0() {
     let e = (0, eZ.GV)(),
         t = window.GLOBAL_ENV.RELEASE_CHANNEL,
-        n = "600374",
-        s = "935f60abc70e4f621100e5bedce445ce668b3b78".substring(0, 7),
+        n = "600403",
+        s = "bfda35380008a977f5202f4bc7995b88fe71944f".substring(0, 7),
         r = eX.A?.app.getVersion(),
         l = eX.A?.app.getBuildNumber(),
         c = eX.A?.app.getAppArch(),
         o = eY.A.getCurrentBuildOverride().overrides?.discord_web,
-        u = (function () {
+        u = null != o ? (0, eQ.A)("1787613365340", !1) : null,
+        d = null != u ? ` (built ${u})` : "",
+        m = (function () {
             let e = eV()?.os?.toString();
             if (null == e || null == eX.A) return null;
             let t = eX.A.os.release,
-                [n, i, s] = e$.Ay.parsedOSRelease;
+                [n, i, s] = eq.Ay.parsedOSRelease;
             return (
                 e.includes("Windows 10") && void 0 !== s && s >= 22e3 && (e = e.replace("Windows 10", "Windows 11")),
                 e.includes("OS X 10.15.7") && void 0 !== n && n >= 20 && (e = `macOS ${n >= 25 ? n + 1 : n - 9}`),
                 `${e} (${t})`
             );
         })(),
-        d = [t, n, `(${s})`];
+        h = [t, n, `(${s})`];
     return (
-        null != r && (d.push(`Host ${r}`), null != c && d.push(c.toLowerCase()), null != l && d.push(`(${l})`)),
-        d.push(`Build Override: ${null != o ? o.id : "N/A"}`),
-        null != u && d.push(u),
+        null != r && (h.push(`Host ${r}`), null != c && h.push(c.toLowerCase()), null != l && h.push(`(${l})`)),
+        h.push(`Build Override: ${null != o ? o.id : "N/A"}${d}`),
+        null != m && h.push(m),
         (0, i.jsxs)(i.Fragment, {
             children: [
-                (0, i.jsx)(eq.A, {
-                    copyValue: d.join(" "),
+                (0, i.jsx)(e$.A, {
+                    copyValue: h.join(" "),
                     text: K.intl.string(K.t["9Al4Qd"]),
                     "aria-label": !1,
                     dataMeticulousIgnore: "true",
@@ -978,10 +981,10 @@ function eJ() {
                         (0, i.jsxs)(O.D, {
                             ...u,
                             "aria-describedby": e,
-                            className: I()(eQ.vk, eQ.oE),
+                            className: I()(eJ.vk, eJ.oE),
                             children: [
                                 (0, i.jsxs)("div", {
-                                    className: eQ.Cr,
+                                    className: eJ.Cr,
                                     "data-mtctest-ignore": "true",
                                     children: [
                                         (0, i.jsxs)(a.E, {
@@ -993,7 +996,7 @@ function eJ() {
                                                 " ",
                                                 n,
                                                 " ",
-                                                (0, i.jsxs)("span", { className: eQ.Pc, children: ["(", s, ")"] }),
+                                                (0, i.jsxs)("span", { className: eJ.Pc, children: ["(", s, ")"] }),
                                             ],
                                         }),
                                         null != r &&
@@ -1005,7 +1008,7 @@ function eJ() {
                                                     r,
                                                     null != c &&
                                                         (0, i.jsxs)("span", {
-                                                            className: eQ.GI,
+                                                            className: eJ.GI,
                                                             children: [" ", c.toLowerCase()],
                                                         }),
                                                     null != l && (0, i.jsxs)("span", { children: [" (", l, ")"] }),
@@ -1019,8 +1022,8 @@ function eJ() {
                                         variant: "text-xxs/normal",
                                         color: "text-muted",
                                         children: (0, i.jsxs)("span", {
-                                            className: eQ.Pc,
-                                            children: ["Build Override: ", o.id],
+                                            className: eJ.Pc,
+                                            children: ["Build Override: ", o.id, d],
                                         }),
                                     }),
                             ],
@@ -1031,8 +1034,8 @@ function eJ() {
         })
     );
 }
-var e0 = n(370658);
-function e1(e) {
+var e1 = n(370658);
+function e2(e) {
     let { onClose: t } = e;
     return (0, i.jsx)(eB.W, {
         "data-menu-migrated-auto": !0,
@@ -1057,13 +1060,13 @@ function e1(e) {
         }),
     });
 }
-function e2() {
+function e5() {
     let e = s.useRef(null);
     return (0, i.jsxs)("div", {
         children: [
-            (0, i.jsx)(eJ, {}),
+            (0, i.jsx)(e0, {}),
             (0, i.jsxs)("div", {
-                className: e0.yJ,
+                className: e1.yJ,
                 children: [
                     (0, i.jsx)(eG.Anchor, {
                         href: ew.X7G.PRIVACY,
@@ -1074,7 +1077,7 @@ function e2() {
                             children: K.intl.string(K.t["Knf/f/"]),
                         }),
                     }),
-                    (0, i.jsx)("span", { className: e0.xE, "aria-hidden": "true", children: "\u2022" }),
+                    (0, i.jsx)("span", { className: e1.xE, "aria-hidden": "true", children: "\u2022" }),
                     (0, i.jsx)(eG.Anchor, {
                         href: ew.X7G.TERMS,
                         children: (0, i.jsx)(a.E, {
@@ -1084,7 +1087,7 @@ function e2() {
                             children: K.intl.string(K.t.uFSTGq),
                         }),
                     }),
-                    (0, i.jsx)("span", { className: e0.xE, "aria-hidden": "true", children: "\u2022" }),
+                    (0, i.jsx)("span", { className: e1.xE, "aria-hidden": "true", children: "\u2022" }),
                     (0, i.jsx)(eF.Y, {
                         targetElementRef: e,
                         position: "top",
@@ -1093,14 +1096,14 @@ function e2() {
                         animation: eF.Y.Animation.NONE,
                         renderPopout: (e) => {
                             let { closePopout: t } = e;
-                            return (0, i.jsx)(e1, { onClose: t });
+                            return (0, i.jsx)(e2, { onClose: t });
                         },
                         children: (t, n) =>
                             (0, i.jsx)(eG.Anchor, {
                                 ...t,
                                 ref: e,
                                 useDefaultUnderlineStyles: !1,
-                                className: I()(e0.Mj, { [e0.vu]: n.isShown }),
+                                className: I()(e1.Mj, { [e1.vu]: n.isShown }),
                                 children: (0, i.jsx)(a.E, {
                                     tag: "span",
                                     variant: "text-xxs/normal",
@@ -1114,13 +1117,13 @@ function e2() {
         ],
     });
 }
-var e5 = n(402651),
-    e7 = n(669067),
-    e9 = n(830543),
-    e3 = n(953056);
-let e4 = new Set([eD.X.PROFILE_PANEL, eD.X.SUBSCRIPTIONS_PANEL, eD.X.FAMILY_CENTER_PANEL, eD.X.POGGERMODE_PANEL]),
-    e8 = new Map([[eD.X.SESSIONS_PANEL, r.ImpressionNames.USER_SETTINGS_SESSIONS]]);
-function e6(e) {
+var e7 = n(402651),
+    e9 = n(669067),
+    e3 = n(830543),
+    e4 = n(953056);
+let e8 = new Set([eD.X.PROFILE_PANEL, eD.X.SUBSCRIPTIONS_PANEL, eD.X.FAMILY_CENTER_PANEL, eD.X.POGGERMODE_PANEL]),
+    e6 = new Map([[eD.X.SESSIONS_PANEL, r.ImpressionNames.USER_SETTINGS_SESSIONS]]);
+function te(e) {
     let { target: t, ...n } = e,
         l = e_.A.useField("query"),
         a = s.useCallback(() => {
@@ -1129,12 +1132,12 @@ function e6(e) {
         [h, g] = s.useState(!1);
     return (s.useLayoutEffect(() => {
         function e() {
-            null == eL.default.getCurrentUser() && (g(!0), (0, e9.default)());
+            null == eL.default.getCurrentUser() && (g(!0), (0, e3.default)());
         }
         return (
             eM.default.addChangeListener(e),
             () => {
-                eM.default.removeChangeListener(e), e5.A.resetState(), d.A.resetState(), c.A.close(), (0, u.ZQ)();
+                eM.default.removeChangeListener(e), e7.A.resetState(), d.A.resetState(), c.A.close(), (0, u.ZQ)();
             }
         );
     }, []),
@@ -1142,19 +1145,19 @@ function e6(e) {
         ? null
         : (0, i.jsx)(ek, {
               partialRoot: eO.D,
-              searchBar: te,
-              emptyState: tt,
-              sidebarFooter: e2,
+              searchBar: tt,
+              emptyState: tn,
+              sidebarFooter: e5,
               onViewChange: function (e) {
-                  e4.has(e) || (0, e7._)(e);
-                  let t = e8.get(e);
+                  e8.has(e) || (0, e9._)(e);
+                  let t = e6.get(e);
                   null != t &&
                       (0, o.x)({
                           type: r.ImpressionTypes.PANE,
                           name: t,
-                          properties: { source: e5.A.getField("source") },
+                          properties: { source: e7.A.getField("source") },
                       }),
-                      e5.A.setState({ source: void 0 });
+                      e7.A.setState({ source: void 0 });
               },
               target: t,
               defaultTarget: eD.X.ACCOUNT_PANEL,
@@ -1163,7 +1166,7 @@ function e6(e) {
               ...n,
           });
 }
-function te() {
+function tt() {
     let e = e_.A.useField("query"),
         t = s.useCallback((e) => {
             e_.A.setState({ query: e }), m.A.maybeTrackQueryEntered();
@@ -1185,14 +1188,14 @@ function te() {
             [],
         ),
         (0, i.jsx)("div", {
-            className: e3.P,
+            className: e4.P,
             children: (0, i.jsx)(l.I, { size: "md", query: e, onFocus: n, onBlur: r, onChange: t, onClear: a }),
         })
     );
 }
-function tt() {
+function tn() {
     return (0, i.jsxs)("div", {
-        className: e3.t,
+        className: e4.t,
         children: [
             (0, i.jsx)(a.E, { variant: "text-sm/semibold", color: "text-strong", children: K.intl.string(K.t.zihbmv) }),
             (0, i.jsx)(a.E, { variant: "text-sm/normal", color: "text-subtle", children: K.intl.string(K.t.XclvsB) }),

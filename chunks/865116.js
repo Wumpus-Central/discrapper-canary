@@ -35,6 +35,10 @@ let l = {
         },
         upload_fail_50: { label: "Uploads: Fail 50% of uploads with 500 status after a 1 second delay", category: 0 },
         send_fail_100: { label: "Send: Fail with 500 status", category: 0 },
+        preview_own_typing_indicator: {
+            label: "Typing Indicator: always show the chat typing indicator as if you were typing",
+            category: 0,
+        },
         premium_roadblocks: { label: "Enable all new premium roadblocks", category: 2 },
         force_mock_iap: { label: "[iOS] Force mock IAP products", category: 2 },
         iar_testing: { label: "Enable staff only test iar menu options", category: 3 },

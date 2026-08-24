@@ -1,5 +1,5 @@
 let i, l;
-n.d(t, { g: () => lF, A: () => lB }), n(321073);
+n.d(t, { g: () => lV, A: () => lW }), n(321073);
 var a = n(477900),
     s = n(582128),
     r = n(503698),
@@ -2652,7 +2652,8 @@ function lR(e) {
         actions: [{ text: B.intl.string(B.t.eOoTMX), variant: "primary", onClick: o }],
     });
 }
-function lO(e) {
+var lO = n(415443);
+function lk(e) {
     let t,
         n,
         {
@@ -2679,7 +2680,13 @@ function lO(e) {
     let f = s.useCallback(() => {
         g(!1), r();
     }, [r]);
-    t = null != i ? B.intl.formatToPlainString(B.t.Gzh6ZP, { webBuildOverride: i.id }) : B.intl.string(B.t.cduTBL);
+    if (null != i) {
+        let e = (0, lO.A)("1787613365340", !0);
+        t =
+            null != e
+                ? B.intl.formatToPlainString(B.t.wve4kg, { webBuildOverride: i.id, builtAt: e })
+                : B.intl.formatToPlainString(B.t.Gzh6ZP, { webBuildOverride: i.id });
+    } else t = B.intl.string(B.t.cduTBL);
     let A = e7.SettingsIcon,
         x = (0, l_.w)();
     return (
@@ -2717,13 +2724,13 @@ function lO(e) {
         })
     );
 }
-var lk = n(358285);
-let lw = iO.Ay.getEnableHardwareAcceleration() ? g.Js : g.eu,
-    lP = 2.5 * te.A.Millis.SECOND,
-    lL = 2 * te.A.Millis.MINUTE,
+var lw = n(358285);
+let lP = iO.Ay.getEnableHardwareAcceleration() ? g.Js : g.eu,
+    lL = 2.5 * te.A.Millis.SECOND,
     lD = 2 * te.A.Millis.MINUTE,
-    lU = 5 * te.A.Millis.SECOND;
-function lG(e) {
+    lU = 2 * te.A.Millis.MINUTE,
+    lG = 5 * te.A.Millis.SECOND;
+function lF(e) {
     let {
             ref: t,
             speaking: n,
@@ -2796,7 +2803,7 @@ function lG(e) {
                           openedAt: t,
                           onClose: n,
                           setPopoutRef: i,
-                          className: lk.dI,
+                          className: lw.dI,
                       });
                   },
                   position: "top",
@@ -2819,7 +2826,7 @@ function lG(e) {
                           onClick: (t) => {
                               e.onClick?.(t), c?.(t);
                           },
-                          className: o()(lk.Q9, { [lk.ZQ]: null != m }),
+                          className: o()(lw.Q9, { [lw.ZQ]: null != m }),
                           children: [
                               (0, a.jsx)(x.D, {
                                   ...u,
@@ -2828,30 +2835,30 @@ function lG(e) {
                                   },
                                   "aria-label": B.intl.string(B.t["5fWB8U"]),
                                   focusProps: { ringTarget: C },
-                                  className: lk.$n,
+                                  className: lw.$n,
                                   "data-jump-section": g,
                               }),
-                              (0, a.jsx)(lw, {
+                              (0, a.jsx)(lP, {
                                   size: f._3.SIZE_32,
                                   src: r.getAvatarURL(void 0, 28, !1),
                                   avatarDecoration: E,
                                   status: l ? tv.clD.STREAMING : d,
                                   isSpeaking: n,
                                   voiceDb: i,
-                                  className: lk.my,
+                                  className: lw.my,
                                   "aria-hidden": !0,
                               }),
-                              (0, a.jsx)("div", { className: lk.oM, children: h(T) }),
+                              (0, a.jsx)("div", { className: lw.oM, children: h(T) }),
                           ],
                       });
                   },
               }),
           });
 }
-class lF extends s.PureComponent {
+class lV extends s.PureComponent {
     speakingWhileMutedTooltipTimeout = new p.Ep();
     speakingWhilePTTTooltipTimeout = new p.Ep();
-    speakingWhilePTTInactiveBackoff = new u.A(lD, null, !1);
+    speakingWhilePTTInactiveBackoff = new u.A(lU, null, !1);
     lastSpeakingWhileMutedNotificationTime = void 0;
     lastSpeakingWhilePTTNotificationTime = void 0;
     state = {
@@ -3667,7 +3674,7 @@ class lF extends s.PureComponent {
             { hoveringOnMute: r } = this.state,
             o =
                 void 0 === this.lastSpeakingWhileMutedNotificationTime ||
-                performance.now() - this.lastSpeakingWhileMutedNotificationTime > lL;
+                performance.now() - this.lastSpeakingWhileMutedNotificationTime > lD;
         i
             ? r ||
               !e ||
@@ -3679,7 +3686,7 @@ class lF extends s.PureComponent {
               a ||
               this.setState({ shouldShowSpeakingWhileMutedTooltip: !0 }, () => {
                   (this.lastSpeakingWhileMutedNotificationTime = performance.now()),
-                      this.speakingWhileMutedTooltipTimeout.start(lP, () =>
+                      this.speakingWhileMutedTooltipTimeout.start(lL, () =>
                           this.setState({ shouldShowSpeakingWhileMutedTooltip: !1 }),
                       );
               })
@@ -3713,7 +3720,7 @@ class lF extends s.PureComponent {
               this.setState({ shouldShowSpeakingWhilePTTTooltip: !0 }, () => {
                   (this.lastSpeakingWhilePTTNotificationTime = performance.now()),
                       this.speakingWhilePTTInactiveBackoff.fail(),
-                      this.speakingWhilePTTTooltipTimeout.start(lP, () =>
+                      this.speakingWhilePTTTooltipTimeout.start(lL, () =>
                           this.setState({ shouldShowSpeakingWhilePTTTooltip: !1 }),
                       );
               })
@@ -3741,7 +3748,7 @@ class lF extends s.PureComponent {
                         activities: t,
                         applicationStream: n,
                         voiceChannel: r,
-                        textClassName: lk.XD,
+                        textClassName: lw.XD,
                         hideTooltip: !0,
                     }),
                 ],
@@ -3756,7 +3763,7 @@ class lF extends s.PureComponent {
                   forceHover: e,
                   children: [
                       (0, a.jsx)(v.A, { children: nn.Ay.humanizeStatus(l) }),
-                      (0, a.jsx)(eo.A, { activity: o, emojiClassName: lk.Zg, className: lk.WO }),
+                      (0, a.jsx)(eo.A, { activity: o, emojiClassName: lw.Zg, className: lw.WO }),
                   ],
               })
             : null != l && l !== tv.clD.UNKNOWN && i.hasUniqueUsername()
@@ -3774,9 +3781,9 @@ class lF extends s.PureComponent {
             : (0, a.jsxs)(a.Fragment, {
                   children: [
                       (0, a.jsx)("div", {
-                          className: lk.eW,
+                          className: lw.eW,
                           children: (0, a.jsx)(iw.A, {
-                              className: o()({ [lk.e8]: null != e }),
+                              className: o()({ [lw.e8]: null != e }),
                               children: (0, a.jsx)(eh.A, {
                                   userName: n,
                                   displayNameStyles: e,
@@ -3787,7 +3794,7 @@ class lF extends s.PureComponent {
                           }),
                       }),
                       (0, a.jsx)("div", {
-                          className: lk.XP,
+                          className: lw.XP,
                           children: (0, a.jsx)(ik.A, { children: this.renderStatus() }),
                       }),
                   ],
@@ -3803,7 +3810,7 @@ class lF extends s.PureComponent {
                   targetElementRef: this.avatarWithPopoutRef,
                   badgeDirectoryNuxPopoverVariant: t,
                   additionalDCs: i.avatar,
-                  children: (0, a.jsx)(lG, {
+                  children: (0, a.jsx)(lF, {
                       ...this.props,
                       ref: this.avatarWithPopoutRef,
                       handleMouseLeave: this.handleMouseLeave,
@@ -3823,13 +3830,13 @@ class lF extends s.PureComponent {
                           children: (e) =>
                               (0, a.jsxs)("div", {
                                   ref: this.containerRef,
-                                  className: o()(lk.kL, { [lk.UG]: null != n, [lk.bc]: !i, [lk.G5]: l }),
+                                  className: o()(lw.kL, { [lw.UG]: null != n, [lw.bc]: !i, [lw.G5]: l }),
                                   onMouseEnter: this.handleMouseEnter,
                                   onMouseLeave: this.handleMouseLeave,
                                   children: [
                                       (0, a.jsx)(er.A, { nameplate: t, hovered: s, placement: es.u.ACCOUNT }),
                                       this.renderNameZone(e),
-                                      (0, a.jsx)(lV, {
+                                      (0, a.jsx)(lH, {
                                           ...this.props,
                                           ...this.state,
                                           accountContainerRef: this.containerRef,
@@ -3851,7 +3858,7 @@ class lF extends s.PureComponent {
               });
     }
 }
-function lV(e) {
+function lH(e) {
     let {
             selfDeaf: t,
             selfMute: n,
@@ -3882,17 +3889,17 @@ function lV(e) {
         y = (0, ea.K)(_);
     function M() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [];
-        return (0, a.jsx)(lO, {
+        return (0, a.jsx)(lk, {
             webBuildOverride: h,
             onClick: v,
             onContextMenu: C,
             dismissibleContents: [...E.settings, ...e],
-            iconForeground: null != _ ? lk.t4 : void 0,
+            iconForeground: null != _ ? lw.t4 : void 0,
             nameplate: _,
         });
     }
     return (0, a.jsxs)("div", {
-        className: lk.Uo,
+        className: lw.Uo,
         style: y,
         children: [
             (0, a.jsx)(lE, {
@@ -3905,7 +3912,7 @@ function lV(e) {
                 onMouseLeave: p,
                 onClick: f,
                 onContextMenu: A,
-                iconForeground: null != _ ? lk.t4 : void 0,
+                iconForeground: null != _ ? lw.t4 : void 0,
                 nameplate: _,
                 shouldShowSpeakingWhileMutedTooltip: c,
                 shouldShowInputDeviceChangedTooltip: !c && "input" === j,
@@ -3920,7 +3927,7 @@ function lV(e) {
                 onClick: g,
                 onContextMenu: x,
                 awaitingRemote: l,
-                iconForeground: null != _ ? lk.t4 : void 0,
+                iconForeground: null != _ ? lw.t4 : void 0,
                 nameplate: _,
                 shouldShowOutputDeviceChangedTooltip: "output" === j,
                 dismissTooltips: S,
@@ -3931,7 +3938,7 @@ function lV(e) {
         ],
     });
 }
-function lH(e) {
+function lB(e) {
     let t = (0, h.bG)([ip.A], () => null != ip.A.getChannelId()),
         n = (0, eR.Py)(e),
         i = s.useRef(new p.Ep()),
@@ -3940,7 +3947,7 @@ function lH(e) {
         t &&
             n &&
             (a(!0),
-            i.current.start(lU, () => {
+            i.current.start(lG, () => {
                 a(!1);
             }));
     }, [t, n]);
@@ -3954,7 +3961,7 @@ function lH(e) {
         { shouldShowTooltip: l, dismissTooltip: r }
     );
 }
-function lB() {
+function lW() {
     let e = (0, h.bG)([nx.default], () => nx.default.getCurrentUser()),
         t = (0, h.bG)([nk.default], () => nk.default.getId()),
         {
@@ -4061,8 +4068,8 @@ function lB() {
         (K && W.avatar.push(m.M.DISPLAY_NAME_STYLES_FLYWHEEL_COACHMARK),
         null != J && W.avatar.push(m.M.BADGE_DIRECTORY_NUX_POPOVER),
         Z && W.settings.push(m.M.PRIVATE_PROFILE_COACHMARK));
-    let { shouldShowTooltip: Q, dismissTooltip: ee } = lH(iA.oh.AUDIO_INPUT),
-        { shouldShowTooltip: et, dismissTooltip: ei } = lH(iA.oh.AUDIO_OUTPUT),
+    let { shouldShowTooltip: Q, dismissTooltip: ee } = lB(iA.oh.AUDIO_INPUT),
+        { shouldShowTooltip: et, dismissTooltip: ei } = lB(iA.oh.AUDIO_OUTPUT),
         { shouldShowTooltip: ea, dismissTooltip: es } = (function () {
             let [e, t] = s.useState(!1),
                 n = (0, h.bG)([im.Ay], () => im.Ay.getMode() === iA.TB.PUSH_TO_TALK),
@@ -4151,7 +4158,7 @@ function lB() {
         );
     return (0, a.jsx)(P.f5, {
         value: G,
-        children: (0, a.jsx)(lF, {
+        children: (0, a.jsx)(lV, {
             currentUser: e,
             username: k,
             activities: n,
