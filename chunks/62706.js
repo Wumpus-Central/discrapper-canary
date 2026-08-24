@@ -546,7 +546,7 @@ function eR(e) {
                                 value: i.title,
                                 placeholder: V.intl.string(V.t.KqCDvK),
                                 onCommit: u,
-                                maxLength: 100,
+                                maxLength: 50,
                                 maxLines: 2,
                             }),
                             (0, n.jsx)(er, {
@@ -638,7 +638,7 @@ function eD(e) {
                         onCommit: function (e) {
                             r(l.key, (t) => ({ ...t, title: e }));
                         },
-                        maxLength: 50,
+                        maxLength: 40,
                         maxLines: 2,
                     }),
                     (0, n.jsx)(er, {
@@ -650,7 +650,7 @@ function eD(e) {
                         onCommit: function (e) {
                             r(l.key, (t) => ({ ...t, description: e }));
                         },
-                        maxLength: 100,
+                        maxLength: 90,
                         maxLines: 4,
                     }),
                 ],
@@ -743,7 +743,7 @@ function eF(e) {
                 onCommit: function (e) {
                     (0, F.AD)((t) => new I.Tu({ ...t, header: e }));
                 },
-                maxLength: 100,
+                maxLength: 50,
                 maxLines: 1,
                 disableMarkdown: !0,
             }),
