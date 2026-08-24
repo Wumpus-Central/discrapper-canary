@@ -71,26 +71,33 @@ function M(e) {
 }
 function P(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : t?.getGuildId(),
-        r = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+        r = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
+        a = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
     (0, c.V)(n);
-    let a = (0, O.isExternalEmojiAllowedForIntention)(e),
-        l = K(n),
-        d = $(n),
-        u = z(n),
-        { topEmojis: E, newlyAddedEmojis: f } = (0, S.A)(n, e),
-        { allEmojis: p } = (0, g.A)({ topEmojis: E, newlyAddedEmojis: f }),
-        C = (0, s.bG)([o.Ay], () => o.Ay.getDisambiguatedEmojiContext(n), [n]),
-        R = (0, s.bG)([A.A], () => A.A.getGuild(n)?.name),
-        L = (0, s.bG)([I.default], () => I.default.getCurrentUser()),
-        D = (0, m.ki)(L),
-        v = (0, _.Ym)({ location: "useEmojiCategories" });
+    let l = (0, O.isExternalEmojiAllowedForIntention)(e),
+        d = K(n),
+        u = $(n),
+        E = z(n),
+        { topEmojis: f, newlyAddedEmojis: p } = (0, S.A)(n, e),
+        { allEmojis: C } = (0, g.A)({ topEmojis: f, newlyAddedEmojis: p }),
+        R = (0, s.bG)([o.Ay], () => o.Ay.getDisambiguatedEmojiContext(n), [n]),
+        L = (0, s.bG)([A.A], () => A.A.getGuild(n)?.name),
+        D = (0, s.bG)([I.default], () => I.default.getCurrentUser()),
+        v = (0, m.ki)(D),
+        b = (0, _.Ym)({ location: "useEmojiCategories" });
     return i.useMemo(() => {
-        let i = C.getGroupedCustomEmoji(),
+        let i = R.getGroupedCustomEmoji(),
             s = h.Ay.getFlattenedGuildIds(),
             c = [],
             _ = { type: N.s.SOUNDMOJI, name: y.intl.string(y.t.f0Ezmv), id: N.R2.SOUNDMOJI, isNitroLocked: !1 };
-        function E(i) {
-            return T.Ay.getEmojiUnavailableReasons({ categoryEmojis: i, channel: t, guildId: n, intention: e });
+        function I(i) {
+            return T.Ay.getEmojiUnavailableReasons({
+                categoryEmojis: i,
+                channel: t,
+                guildId: n,
+                intention: e,
+                bypassPremiumEmojiEntitlement: a,
+            });
         }
         return (
             !(function (e, t) {
@@ -104,38 +111,38 @@ function P(e, t) {
                         emojisUnfiltered: l,
                         emojisPremiumLockedCount: d,
                         emojiNitroLocked: u,
-                    } = E(a);
+                    } = I(a);
                     if (0 === l.length) continue;
                     let _ = o.Ay.getHiddenEmojiIds(e.id),
-                        h = null;
+                        E = null;
                     t === N.s.GUILD &&
-                        (h = {
+                        (E = {
                             type: N.s.GUILD,
                             guild: e,
-                            isNitroLocked: !D && u && d === a.length,
+                            isNitroLocked: !v && u && d === a.length,
                             emojis: a,
                             emojisDisabled: s,
                             emojisHidden: _,
                         }),
-                        null != h && (e.id === n ? c.unshift(h) : c.push(h));
+                        null != E && (e.id === n ? c.unshift(E) : c.push(E));
                 }
             })(s, N.s.GUILD),
             o.Ay.categories.reduce(
                 (t, i) => {
                     if (i === N.R2.TOP_GUILD_EMOJI) {
-                        let { emojisDisabled: e, emojisUnfiltered: n } = E(p);
+                        let { emojisDisabled: e, emojisUnfiltered: n } = I(C);
                         if (null == n || 0 === n.length) return t;
                         t.push({
                             type: N.s.TOP_GUILD_EMOJI,
                             id: i,
-                            name: y.intl.formatToPlainString(y.t.W6Wi1X, { guildName: R }),
+                            name: y.intl.formatToPlainString(y.t.W6Wi1X, { guildName: L }),
                             isNitroLocked: !1,
                             emojis: n,
                             emojisDisabled: e,
                         });
                     } else if (i === N.R2.RECENT) {
-                        let { emojisDisabled: n, emojisUnfiltered: r } = E(
-                            [O.EmojiIntention.REACTION, O.EmojiIntention.DEFAULT_REACT_EMOJI].includes(e) ? d : l,
+                        let { emojisDisabled: n, emojisUnfiltered: r } = I(
+                            [O.EmojiIntention.REACTION, O.EmojiIntention.DEFAULT_REACT_EMOJI].includes(e) ? u : d,
                         );
                         if (null == r || 0 === r.length) return t;
                         t.push({
@@ -147,7 +154,7 @@ function P(e, t) {
                             emojisDisabled: n,
                         });
                     } else if (i === N.R2.FAVORITES) {
-                        let { emojisDisabled: e, emojisUnfiltered: n } = E(u);
+                        let { emojisDisabled: e, emojisUnfiltered: n } = I(E);
                         if (null == n || 0 === n.length) return t;
                         t.push({
                             type: N.s.FAVORITES,
@@ -159,15 +166,15 @@ function P(e, t) {
                         });
                     } else if (i === N.R2.CUSTOM) {
                         let e = c;
-                        a || (e = c.filter((e) => (e.type === N.s.GUILD ? e.guild.id === n : (e.type, !1)))),
+                        l || (e = c.filter((e) => (e.type === N.s.GUILD ? e.guild.id === n : (e.type, !1)))),
                             t.push(...e);
                     } else t.push({ type: N.s.UNICODE, id: i, name: i, isNitroLocked: !1 });
                     return t;
                 },
-                v && r ? [_] : [],
+                b && r ? [_] : [],
             )
         );
-    }, [C, t, n, e, D, p, R, d, l, u, a, v, r]);
+    }, [R, t, n, e, v, C, L, u, d, E, l, b, r, a]);
 }
 function U() {
     return d.Ay.getCategories().map((e) => ({ type: N.s.UNICODE, id: e, name: e, isNitroLocked: !1 }));

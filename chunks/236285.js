@@ -657,17 +657,18 @@ class eg extends _.Ay.PersistedStore {
                 includeExternalGuilds: s = !0,
                 matchComparator: l,
                 showOnlyUnicode: o,
+                bypassPremiumEmojiEntitlement: d,
             } = e;
         ed();
-        let d = i.toLowerCase().replaceAll(/[ _]/g, ""),
-            c = F.A.escape(d);
+        let c = i.toLowerCase().replaceAll(/[ _]/g, ""),
+            u = F.A.escape(c);
         if (null == l) {
-            let e = RegExp(`${c}`, "i");
+            let e = RegExp(`${u}`, "i");
             t = (t) => e.test(t.replaceAll("_", ""));
         } else t = l;
-        let u = null != n ? n.getGuildId() : null,
-            _ = eu
-                .get(u)
+        let _ = null != n ? n.getGuildId() : null,
+            E = eu
+                .get(_)
                 .nameMatchesChain(t)
                 .reduce(
                     (e, t) => {
@@ -676,6 +677,7 @@ class eg extends _.Ay.PersistedStore {
                             channel: n,
                             intention: a,
                             forceIncludeExternalGuilds: s,
+                            bypassPremiumEmojiEntitlement: d,
                         });
                         return (
                             i !== K.EmojiDisabledReasons.PREMIUM_LOCKED || o
@@ -687,8 +689,8 @@ class eg extends _.Ay.PersistedStore {
                     { unlocked: [], locked: [] },
                 );
         return {
-            unlocked: this.getSearchResultsOrder(_.unlocked, i, r, a),
-            locked: this.getSearchResultsOrder(_.locked, i, 0, a),
+            unlocked: this.getSearchResultsOrder(E.unlocked, i, r, a),
+            locked: this.getSearchResultsOrder(E.locked, i, 0, a),
         };
     }
     getUsableCustomEmojiById(e) {
