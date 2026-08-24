@@ -76,7 +76,7 @@ function w(e) {
                 null != n &&
                     (0, u.L3)(e, async () => {
                         let { default: e } = await Promise.all([
-                            t.e("877371"),
+                            t.e("246152"),
                             t.e("993103"),
                             t.e("95340"),
                             t.e("252229"),
@@ -84,7 +84,7 @@ function w(e) {
                             t.e("256373"),
                             t.e("543267"),
                             t.e("599990"),
-                            t.e("924067"),
+                            t.e("80168"),
                         ]).then(t.bind(t, 399893));
                         return (t) => (0, i.jsx)(e, { guildEventId: T, recurrenceId: V, channel: w, guild: n, ...t });
                     });
