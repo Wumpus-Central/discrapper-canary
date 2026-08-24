@@ -496,7 +496,7 @@ function ev(e) {
             customGiftMessage: v,
             setCustomGiftMessage: x,
             claimableRewards: _,
-            setSelectedGiftingPromotionReward: T,
+            setSelectedGiftingPromotionRewards: T,
         } = (0, R.Pv)(),
         N = (0, C.A)(),
         b = (0, H.kz)(N, A && (0, k.Ik)(g), _),
@@ -524,7 +524,7 @@ function ev(e) {
         }
     }, [z, A, l, M, d, q, I]),
         i.useEffect(() => {
-            b && null != _ && _.length > 0 && T(_[0]);
+            b && null != _ && _.length > 0 && T(_);
         }, [_, T, b]);
     let { ref: Q, ...$ } = (0, o._u)(),
         J = B?.id != null ? (0, U.y8)(B.id, !1, A, W) : void 0,
@@ -809,10 +809,10 @@ function eO(e) {
         } = ev({ selectedPlanId: n, priceOptions: r, planOptions: a, subscriptionPeriodEnd: s, showTotal: o }),
         { discountAmountOff: V, applicablePlan: Z, discountOffer: q } = (0, h.t4)((e) => e.premiumDiscountInfo),
         z = (0, G.ds)(),
-        Q = B.A.useConfig({ location: "PremiumSwitchPlanSelectBody" }),
+        Q = B.Ay.useConfig({ location: "PremiumSwitchPlanSelectBody" }),
         $ = (0, W.M)({ isGift: y, giftRecipient: g, selectedPlanId: C?.id }),
-        J = $ && Q === B.o.STEPPER,
-        ee = $ && Q === B.o.PRESETS;
+        J = $ && Q === B.o3.STEPPER,
+        ee = $ && Q === B.o3.PRESETS;
     function et() {
         return (0, l.jsx)(eN, {
             disabled: t,

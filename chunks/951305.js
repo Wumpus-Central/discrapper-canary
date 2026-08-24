@@ -13,19 +13,19 @@ var r = n(477900),
     x = n(566980),
     T = n(315693),
     I = n(287809),
-    h = n(174459),
-    f = n(786300),
+    f = n(174459),
+    h = n(786300),
     p = n(45938),
     E = n(652215),
     P = n(202541),
     j = n(375708);
 let v = P.o2.STANDARD_BOX,
     A,
-    [R, _, M] = (0, f.A)();
+    [R, _, M] = (0, h.A)();
 function N(e) {
     let {
             isGift: t = !1,
-            giftRecipient: f,
+            giftRecipient: h,
             giftMessage: P,
             giftStyle: _,
             giftingOrigin: M,
@@ -33,16 +33,16 @@ function N(e) {
             additionalUserIds: S,
         } = e,
         y = (0, s.t4)((e) => e.selectedSkuId),
-        [C, L] = l.useState(f),
+        [C, L] = l.useState(h),
         [U, b] = l.useState(),
         [G, k] = l.useState(!1),
         O = (0, p.Ik)(C),
         w = A;
     O && (w = null != _ ? _ : v);
     let [D, F] = l.useState(w),
-        H = (0, u.JW)(),
-        Z = null != H && H.length > 0,
-        [B, V] = l.useState(),
+        [H, Z] = l.useState([]),
+        B = (0, u.JW)(),
+        V = null != B && B.length > 0,
         [W, J] = l.useState(
             t && (0, p.lo)(C) === p.tB.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD && null == P ? j.intl.string(j.t.ZkOo1U) : P,
         ),
@@ -102,14 +102,18 @@ function N(e) {
                 );
             },
             [C, ee, el, en, ea],
-        );
+        ),
+        eo = l.useRef(new Set());
     return (
         l.useEffect(() => {
-            if (Z) {
-                let e = I.default.getCurrentUser();
-                h.default.track(E.HAw.GIFT_PROMOTION_REWARD_SELECTED, { user_id: e?.id, reward_sku_id: B });
-            }
-        }, [B, Z]),
+            if (!V) return;
+            let e = H.filter((e) => !eo.current.has(e));
+            if (0 === e.length) return;
+            let t = I.default.getCurrentUser();
+            for (let n of e)
+                f.default.track(E.HAw.GIFT_PROMOTION_REWARD_SELECTED, { user_id: t?.id, reward_sku_id: n }),
+                    eo.current.add(n);
+        }, [H, V]),
         (0, r.jsx)(R.Provider, {
             value: {
                 isGift: t,
@@ -134,9 +138,9 @@ function N(e) {
                 isSendingMessage: er,
                 giftMessageError: ei,
                 giftingOrigin: M,
-                claimableRewards: H,
-                selectedGiftingPromotionReward: B,
-                setSelectedGiftingPromotionReward: V,
+                claimableRewards: B,
+                selectedGiftingPromotionRewards: H,
+                setSelectedGiftingPromotionRewards: Z,
                 additionalUserIds: S,
                 openGiftingBadgePostPurchaseModal: X,
                 canShowGiftingBadgePostPurchase: $,
@@ -158,7 +162,8 @@ let S = {
     isSendingMessage: !1,
     giftMessageError: void 0,
     claimableRewards: void 0,
-    setSelectedGiftingPromotionReward: E.tEg,
+    selectedGiftingPromotionRewards: [],
+    setSelectedGiftingPromotionRewards: E.tEg,
     openGiftingBadgePostPurchaseModal: E.tEg,
     canShowGiftingBadgePostPurchase: !1,
 };

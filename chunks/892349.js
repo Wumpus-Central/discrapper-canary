@@ -9,8 +9,8 @@ function u(e) {
     let t = (0, i.A)(),
         n = (0, l.s2)(),
         { isGift: u, giftRecipient: c } = (0, r.Pv)(),
-        d = s.A.useConfig({ location: e });
+        d = s.Ay.useConfig({ location: e });
     return (
-        n === a.pn.PLAN_SELECT && d === s.o.PRESETS && (0, o.M)({ isGift: u, giftRecipient: c, selectedPlanId: t?.id })
+        n === a.pn.PLAN_SELECT && d === s.o3.PRESETS && (0, o.M)({ isGift: u, giftRecipient: c, selectedPlanId: t?.id })
     );
 }

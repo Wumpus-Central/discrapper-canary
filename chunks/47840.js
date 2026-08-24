@@ -4,7 +4,7 @@ b.exports = {
     Vp: "shopCardAnimation_bab2bc",
     md: "shopCardSelected_bab2bc",
     i1: "previewContainer_bab2bc",
-    Sf: "claimed_bab2bc",
+    r9: "disabled_bab2bc",
     j0: "claimedIcon_bab2bc",
     VH: "preview_bab2bc",
     tZ: "productName_bab2bc",

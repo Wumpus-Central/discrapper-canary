@@ -18,11 +18,11 @@ var l = n(477900),
     y = n(398590),
     I = n(717398),
     A = n(966327),
-    P = n(769015),
-    g = n(242874),
+    g = n(769015),
+    P = n(242874),
     v = n(580194),
-    _ = n(219271),
-    x = n(427358),
+    x = n(219271),
+    _ = n(427358),
     T = n(7133),
     N = n(994500),
     b = n(351906),
@@ -46,39 +46,39 @@ function B(e) {
             selectedGiftStyle: o,
             onClose: S,
             hasSentMessage: I,
-            giftRecipient: g,
-            giftMessageError: _,
-            isSendingMessage: x,
+            giftRecipient: P,
+            giftMessageError: x,
+            isSendingMessage: _,
         } = e,
         [N, j] = i.useState(p.e.Modes.DEFAULT),
         B = (0, u.bG)([b.A], () => b.A.enabled),
-        W = I || (null != o && null != g),
+        W = I || (null != o && null != P),
         Y = r?.productLine === U.EZt.COLLECTIBLES,
         {
-            selectedGiftingPromotionReward: V,
+            selectedGiftingPromotionRewards: V,
             openGiftingBadgePostPurchaseModal: K,
             canShowGiftingBadgePostPurchase: Z,
         } = (0, k.Pv)(),
-        q = (0, v.Mq)(s),
-        z = Z && null == V;
-    function $() {
+        q = (0, v.Mq)(s) && V.length > 0,
+        z = Z && 0 === V.length;
+    function Q() {
         return null != s ? s.skuId : null != r ? r.id : null;
     }
-    function Q() {
+    function $() {
         let e;
-        return null != _
+        return null != x
             ? G.intl.string(G.t.qB8aya)
             : null == s
               ? null
               : ((e = s.interval === D.WT.MONTH ? (W ? G.t["4ZJ+7Z"] : G.t["P+z55d"]) : W ? G.t.p0pZXP : G.t.bXqk3o),
                 G.intl.format(e, { skuName: (0, O.RH)(s.id), intervalCount: s.intervalCount }));
     }
-    return x
+    return _
         ? (0, l.jsxs)("div", {
               className: F.EL,
               children: [
                   null != n
-                      ? (0, l.jsx)(P.A, { game: n, className: F.__invalid_icon, size: P.M.LARGE, skuId: $() })
+                      ? (0, l.jsx)(g.A, { game: n, className: F.__invalid_icon, size: g.M.LARGE, skuId: Q() })
                       : null,
                   (0, l.jsx)(E.y, { type: E.t.PULSING_ELLIPSIS }),
               ],
@@ -86,50 +86,50 @@ function B(e) {
         : (0, l.jsxs)(l.Fragment, {
               children: [
                   (0, l.jsxs)("div", {
-                      className: a()(F.EL, { [F.L1]: q && null != V }),
+                      className: a()(F.EL, { [F.L1]: q }),
                       children: [
                           null != n
-                              ? (0, l.jsx)(P.A, { game: n, className: F.__invalid_icon, size: P.M.LARGE, skuId: $() })
+                              ? (0, l.jsx)(g.A, { game: n, className: F.__invalid_icon, size: g.M.LARGE, skuId: Q() })
                               : null,
                           (0, l.jsx)(f.D, {
                               variant: "heading-lg/semibold",
                               className: a()({ [F.wx]: null == o && !Y, [F.$A]: null != o && !Y }),
                               children:
-                                  null != g || (I && null == _)
+                                  null != P || (I && null == x)
                                       ? G.intl.string(G.t.zOmK9N)
-                                      : null != _
+                                      : null != x
                                         ? G.intl.string(G.t.d1lrmU)
                                         : G.intl.string(G.t["/s1xR7"]),
                           }),
-                          (I && null != g && null == _) || W
+                          (I && null != P && null == x) || W
                               ? (0, l.jsxs)(l.Fragment, {
                                     children: [
                                         (0, l.jsxs)("div", {
                                             className: F.jx,
                                             children: [
-                                                (0, l.jsx)(A.A, { user: g, size: h._3.SIZE_40 }),
+                                                (0, l.jsx)(A.A, { user: P, size: h._3.SIZE_40 }),
                                                 (0, l.jsxs)("div", {
                                                     className: F.gn,
                                                     children: [
                                                         (0, l.jsx)(f.D, {
                                                             variant: "heading-md/semibold",
-                                                            children: L.Ay.getName(g),
+                                                            children: L.Ay.getName(P),
                                                         }),
                                                         (0, l.jsxs)("div", {
                                                             className: F.Ik,
-                                                            children: [" ", L.Ay.getUserTag(g)],
+                                                            children: [" ", L.Ay.getUserTag(P)],
                                                         }),
                                                     ],
                                                 }),
                                             ],
                                         }),
-                                        (0, l.jsx)("div", { className: F._c, children: Q() }),
+                                        (0, l.jsx)("div", { className: F._c, children: $() }),
                                     ],
                                 })
                               : (0, l.jsxs)(l.Fragment, {
                                     children: [
-                                        (0, l.jsx)("div", { className: F.I0, children: Q() }),
-                                        null == _ &&
+                                        (0, l.jsx)("div", { className: F.I0, children: $() }),
+                                        null == x &&
                                             (0, l.jsx)(H, {
                                                 giftCode: t,
                                                 onClose: () => {
@@ -212,19 +212,19 @@ function B(e) {
 function H(e) {
     let { giftCode: t, onClose: n } = e;
     i.useEffect(() => {
-        I.A.fetchRelationships(), (0, _.u)();
+        I.A.fetchRelationships(), (0, x.u)();
     }, []);
     let [r, a] = i.useState(),
         [s, c] = i.useState(!1),
         [m, p] = i.useState(!1),
-        { userAffinities: C, isLoading: f } = (0, u.cf)([x.A], () => ({
-            userAffinities: x.A.getUserAffinitiesMap(),
-            isLoading: x.A.isFetching(),
+        { userAffinities: C, isLoading: f } = (0, u.cf)([_.A], () => ({
+            userAffinities: _.A.getUserAffinitiesMap(),
+            isLoading: _.A.isFetching(),
         })),
-        E = Array.from(C.keys()).sort((e, t) => x.A.compare(e, t)),
+        E = Array.from(C.keys()).sort((e, t) => _.A.compare(e, t)),
         y = (0, u.bG)([N.A], () => N.A.getFriendIDs()),
-        P = o().difference(y, E),
-        v = [...E, ...P],
+        g = o().difference(y, E),
+        v = [...E, ...g],
         T = (0, u.bG)([j.default], () => j.default.filter((e) => v.includes(e.id) && !e.bot), [v]);
     if (null == T || 0 === T.length) return null;
     let b = o().sortBy(T, (e) => v.indexOf(e.id));
@@ -257,7 +257,7 @@ function H(e) {
                             loading: m,
                             onClick: () => {
                                 p(!0),
-                                    (0, g.UN)(r, t)
+                                    (0, P.UN)(r, t)
                                         .then(() => {
                                             n();
                                         })

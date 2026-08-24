@@ -1,4 +1,4 @@
-n.d(t, { A: () => a, o: () => r });
+n.d(t, { Ay: () => o, Wh: () => s, o3: () => r });
 var l,
     i = n(945810),
     r =
@@ -12,3 +12,7 @@ let a = (0, i.mj)({
     defaultConfig: 0,
     variations: { 0: 0, 1: 1, 2: 2 },
 });
+function s(e) {
+    return 0 !== a.useConfig(e);
+}
+let o = a;

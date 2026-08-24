@@ -50,7 +50,7 @@
     width: 100%
 }
 
-.previewContainer_bab2bc.claimed_bab2bc {
+.previewContainer_bab2bc.disabled_bab2bc {
     opacity: .5
 }
 
@@ -121,6 +121,10 @@
 
 .nameplatePreview_bab2bc {
     padding: 0 12px
+}
+
+.rewardsSelectedText_d64c23 {
+    align-self: flex-start
 }
 
 .giftRewardShopCardsGrid_d64c23 {
@@ -200,4 +204,4 @@
     top: var(--space-24)
 }
 
-/*# sourceMappingURL=636909.96dc650e0ab62fd3.css.map*/
+/*# sourceMappingURL=636909.1421f4ea038bc202.css.map*/
