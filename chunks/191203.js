@@ -1,9 +1,9 @@
 "use strict";
 var n = r(72290);
-let o = r(159093),
-    i = r(17101),
-    a = i.isObject,
-    s = i.hasOwn;
+let i = r(159093),
+    o = r(17101),
+    a = o.isObject,
+    s = o.hasOwn;
 function l() {}
 (e.exports = l),
     (l.prototype.clearTimeout = function () {
@@ -170,7 +170,7 @@ let u = new Set([
     (l.prototype.abort = function () {
         if (this._aborted) return this;
         if (((this._aborted = !0), this.xhr && this.xhr.abort(), this.req)) {
-            if (o.gte(n.version, "v13.0.0") && o.lt(n.version, "v14.0.0"))
+            if (i.gte(n.version, "v13.0.0") && i.lt(n.version, "v14.0.0"))
                 throw Error("Superagent does not work in v13 properly with abort() due to Node.js core changes");
             this.req.abort();
         }

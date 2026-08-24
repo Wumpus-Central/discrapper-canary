@@ -1,9 +1,9 @@
 "use strict";
 var n = r(906046),
-    o = n("Date.prototype.getDay"),
-    i = function (e) {
+    i = n("Date.prototype.getDay"),
+    o = function (e) {
         try {
-            return o(e), !0;
+            return i(e), !0;
         } catch (e) {
             return !1;
         }
@@ -11,5 +11,5 @@ var n = r(906046),
     a = n("Object.prototype.toString"),
     s = r(581070)();
 e.exports = function (e) {
-    return "object" == typeof e && null !== e && (s ? i(e) : "[object Date]" === a(e));
+    return "object" == typeof e && null !== e && (s ? o(e) : "[object Date]" === a(e));
 };

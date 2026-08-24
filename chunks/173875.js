@@ -4,20 +4,20 @@ var n =
         (Object.create
             ? function (e, t, r, n) {
                   void 0 === n && (n = r);
-                  var o = Object.getOwnPropertyDescriptor(t, r);
-                  (!o || ("get" in o ? !t.__esModule : o.writable || o.configurable)) &&
-                      (o = {
+                  var i = Object.getOwnPropertyDescriptor(t, r);
+                  (!i || ("get" in i ? !t.__esModule : i.writable || i.configurable)) &&
+                      (i = {
                           enumerable: !0,
                           get: function () {
                               return t[r];
                           },
                       }),
-                      Object.defineProperty(e, n, o);
+                      Object.defineProperty(e, n, i);
               }
             : function (e, t, r, n) {
                   void 0 === n && (n = r), (e[n] = t[r]);
               }),
-    o =
+    i =
         (this && this.__exportStar) ||
         function (e, t) {
             for (var r in e) "default" === r || Object.prototype.hasOwnProperty.call(t, r) || n(t, e, r);
@@ -38,11 +38,11 @@ Object.defineProperty(t, "__esModule", { value: !0 }),
         t.dataFormatterCache =
         t.makeDataFormatters =
             void 0);
-var i = r(645880);
+var o = r(645880);
 Object.defineProperty(t, "makeDataFormatters", {
     enumerable: !0,
     get: function () {
-        return i.makeDataFormatters;
+        return o.makeDataFormatters;
     },
 });
 var a = r(175182);
@@ -65,7 +65,7 @@ Object.defineProperty(t, "FormatBuilder", {
             return s.bindFormatValues;
         },
     }),
-    o(r(355459), t);
+    i(r(355459), t);
 var l = r(225903);
 Object.defineProperty(t, "runtimeHashMessageKey", {
     enumerable: !0,
@@ -118,16 +118,16 @@ Object.defineProperty(t, "createLoader", {
             return f.MessageLoader;
         },
     });
-var p = r(877899);
+var d = r(877899);
 Object.defineProperty(t, "chainMessagesObjects", {
     enumerable: !0,
     get: function () {
-        return p.chainMessagesObjects;
+        return d.chainMessagesObjects;
     },
 }),
     Object.defineProperty(t, "makeMessagesProxy", {
         enumerable: !0,
         get: function () {
-            return p.makeMessagesProxy;
+            return d.makeMessagesProxy;
         },
     });

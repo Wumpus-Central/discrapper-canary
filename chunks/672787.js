@@ -1,4 +1,4 @@
-s.d(t, { P: () => S, ThirdPartyPromotionsModal: () => y });
+s.d(t, { P: () => y, ThirdPartyPromotionsModal: () => S });
 var i = s(477900);
 s(582128);
 var n = s(289873),
@@ -95,7 +95,7 @@ function P(e, t, s) {
         redeemCtaText: n?.getRedeemCtaText?.(),
     };
 }
-function y(e) {
+function S(e) {
     let { partnerId: t, transitionState: s, onClose: o } = e,
         m = I[t],
         g = (0, c.bG)([u.A], () => u.A.theme),
@@ -109,8 +109,8 @@ function y(e) {
     let C = m?.getModalSubtitle?.(),
         E = m?.getModalTitle() ?? t,
         T = m?.showSectionHeaders !== !1,
-        y = T ? { recurring: v.intl.string(R.default["9Y2p6p"]), oneTime: v.intl.string(R.default.Wm58LR) } : void 0,
-        S = m?.getModalTeaser?.(),
+        S = T ? { recurring: v.intl.string(R.default["9Y2p6p"]), oneTime: v.intl.string(R.default.Wm58LR) } : void 0,
+        y = m?.getModalTeaser?.(),
         D = (0, i.jsx)("div", {
             className: _.kR,
             children: A.map((e) => {
@@ -139,11 +139,11 @@ function y(e) {
                 N.length > 0 &&
                     (0, i.jsxs)(i.Fragment, {
                         children: [
-                            null != y &&
+                            null != S &&
                                 (0, i.jsx)(l.E, {
                                     variant: "text-md/medium",
                                     color: "text-subtle",
-                                    children: y.recurring,
+                                    children: S.recurring,
                                 }),
                             (0, i.jsx)("div", {
                                 className: _.kR,
@@ -171,17 +171,17 @@ function y(e) {
                         ? (0, i.jsxs)("div", {
                               className: _.E7,
                               children: [
-                                  null != y &&
+                                  null != S &&
                                       (0, i.jsx)(l.E, {
                                           variant: "text-md/medium",
                                           color: "text-subtle",
-                                          children: y.oneTime,
+                                          children: S.oneTime,
                                       }),
                                   D,
                               ],
                           })
                         : D),
-                null != S &&
+                null != y &&
                     (0, i.jsxs)("div", {
                         className: _.ar,
                         children: [
@@ -192,18 +192,18 @@ function y(e) {
                                     (0, i.jsx)(l.E, {
                                         variant: "text-sm/semibold",
                                         color: "text-default",
-                                        children: S.title,
+                                        children: y.title,
                                     }),
                                 ],
                             }),
-                            (0, i.jsx)(l.E, { variant: "text-sm/medium", color: "text-muted", children: S.body }),
+                            (0, i.jsx)(l.E, { variant: "text-sm/medium", color: "text-muted", children: y.body }),
                         ],
                     }),
             ],
         }),
     });
 }
-function S(e) {
+function y(e) {
     let { partnerId: t, analyticsLocations: n } = e;
     m.default.track(E.HAw.THIRD_PARTY_PROMOTION_MODAL_OPENED, { partner_ids: [t], partner_id: t, location_stack: n }),
         g.Ay.fetchActivePromotions(),

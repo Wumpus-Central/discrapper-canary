@@ -1,4 +1,4 @@
-n.d(t, { R: () => p, i: () => d });
+n.d(t, { R: () => m, i: () => d });
 var l = n(582128),
     i = n(724651),
     r = n(732280),
@@ -26,30 +26,30 @@ function d() {
         }),
         u = (0, r.V)(a ?? void 0),
         d = !n && !s && null != e,
-        p = !!(d && null != u && c.TP[u.trialId].skus.includes(e) && !n),
-        m = (0, i.O)(),
-        h =
+        m = !!(d && null != u && c.TP[u.trialId].skus.includes(e) && !n),
+        p = (0, i.O)(),
+        C =
             null != e &&
-            null != m &&
-            null != m.discount &&
-            null != m.discount.planIds &&
-            m.discount.planIds.some((t) => c.hd[t].skuId === e),
-        C = !!(d && null != m && h),
+            null != p &&
+            null != p.discount &&
+            null != p.discount.planIds &&
+            p.discount.planIds.some((t) => c.hd[t].skuId === e),
+        h = !!(d && null != p && C),
         f = (0, i.p)();
     return l.useMemo(
         () => ({
             isPremium: t,
             isPremiumGroupPurchase: n,
-            isEligibleForTrial: p,
-            isEligibleForDiscount: C,
+            isEligibleForTrial: m,
+            isEligibleForDiscount: h,
             userTrialOffer: u,
-            discountOffer: m,
+            discountOffer: p,
             premiumGroupDiscountOffer: n ? f : null,
         }),
-        [t, n, p, C, u, m, f],
+        [t, n, m, h, u, p, f],
     );
 }
-function p(e) {
+function m(e) {
     let { hasOpenInvoice: t } = e,
         {
             activeSubscription: n,
@@ -62,11 +62,11 @@ function p(e) {
         })),
         c = i === a.C.PREMIUM_CHECKOUT && null != n && n.status === u.Dmq.PAST_DUE && t,
         d = (0, s.X)(c),
-        p = c && d;
+        m = c && d;
     return (
         l.useEffect(() => {
-            p && r(!0);
-        }, [p, r]),
-        p
+            m && r(!0);
+        }, [m, r]),
+        m
     );
 }

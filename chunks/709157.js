@@ -1,34 +1,34 @@
 "use strict";
 let n;
-r.d(t, { X1: () => p, Tw: () => f, Bi: () => c });
-var o = r(576024),
-    i = r(654978),
+r.d(t, { X1: () => d, Tw: () => f, Bi: () => c });
+var i = r(576024),
+    o = r(654978),
     a = r(582128),
     s = r(446649);
 let l = !!("u" > typeof window && window.document && window.document.createElement),
     u = new Map();
 function c(e) {
     let [t, r] = (0, a.useState)(e),
-        i = (0, a.useRef)(null),
+        o = (0, a.useRef)(null),
         c = (0, s.Cc)(t),
         f = (0, a.useRef)(null);
     if ((n && n.register(f, c), l)) {
         let e = u.get(c);
-        e && !e.includes(i) ? e.push(i) : u.set(c, [i]);
+        e && !e.includes(o) ? e.push(o) : u.set(c, [o]);
     }
     return (
-        (0, o.N)(
+        (0, i.N)(
             () => () => {
                 n && n.unregister(f), u.delete(c);
             },
             [c],
         ),
         (0, a.useEffect)(() => {
-            let e = i.current;
+            let e = o.current;
             return (
                 e && r(e),
                 () => {
-                    e && (i.current = null);
+                    e && (o.current = null);
                 }
             );
         }),
@@ -42,12 +42,12 @@ function f(e, t) {
     let n = u.get(t);
     return n ? (n.forEach((t) => (t.current = e)), e) : t;
 }
-function p(e = []) {
+function d(e = []) {
     let t = c(),
         [r, n] = (function (e) {
             let [t, r] = (0, a.useState)(e),
                 n = (0, a.useRef)(null),
-                s = (0, i.J)(() => {
+                s = (0, o.J)(() => {
                     if (!n.current) return;
                     let e = n.current.next();
                     if (e.done) {
@@ -56,10 +56,10 @@ function p(e = []) {
                     }
                     t === e.value ? s() : r(e.value);
                 });
-            (0, o.N)(() => {
+            (0, i.N)(() => {
                 n.current && s();
             });
-            let l = (0, i.J)((e) => {
+            let l = (0, o.J)((e) => {
                 (n.current = e(t)), s();
             });
             return [t, l];
@@ -69,7 +69,7 @@ function p(e = []) {
                 yield t, yield document.getElementById(t) ? t : void 0;
             });
         }, [t, n]);
-    return (0, o.N)(s, [t, s, ...e]), r;
+    return (0, i.N)(s, [t, s, ...e]), r;
 }
 "u" > typeof FinalizationRegistry &&
     (n = new FinalizationRegistry((e) => {

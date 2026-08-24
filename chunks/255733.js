@@ -1,8 +1,8 @@
 "use strict";
 var n = r(381265),
-    o = r(189891);
+    i = r(189891);
 e.exports = function () {
-    var e = o();
+    var e = i();
     return (
         n(
             Array.prototype,

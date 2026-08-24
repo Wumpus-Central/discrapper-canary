@@ -1,9 +1,9 @@
 "use strict";
 Object.defineProperty(t, "__esModule", { value: !0 }),
     (t.stringFormatter = t.StringBuilder = void 0),
-    (t.formatToPlainString = i);
+    (t.formatToPlainString = o);
 let n = r(765688);
-class o extends n.FormatBuilder {
+class i extends n.FormatBuilder {
     constructor() {
         super(...arguments), (this.result = "");
     }
@@ -20,7 +20,7 @@ class o extends n.FormatBuilder {
         return [this.result];
     }
 }
-function i(e, t) {
-    return "string" == typeof e ? e : this.bindFormatValues(o, e, t)[0];
+function o(e, t) {
+    return "string" == typeof e ? e : this.bindFormatValues(i, e, t)[0];
 }
-(t.StringBuilder = o), (t.stringFormatter = { format: i, builder: o });
+(t.StringBuilder = i), (t.stringFormatter = { format: o, builder: i });

@@ -2,9 +2,9 @@
     "use strict";
     var t = {}.hasOwnProperty;
     function r() {
-        for (var e = "", o = 0; o < arguments.length; o++) {
-            var i = arguments[o];
-            i &&
+        for (var e = "", i = 0; i < arguments.length; i++) {
+            var o = arguments[i];
+            o &&
                 (e = n(
                     e,
                     (function (e) {
@@ -16,10 +16,10 @@
                             !e.toString.toString().includes("[native code]")
                         )
                             return e.toString();
-                        var o = "";
-                        for (var i in e) t.call(e, i) && e[i] && (o = n(o, i));
-                        return o;
-                    })(i),
+                        var i = "";
+                        for (var o in e) t.call(e, o) && e[o] && (i = n(i, o));
+                        return i;
+                    })(o),
                 ));
         }
         return e;

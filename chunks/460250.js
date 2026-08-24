@@ -14,8 +14,8 @@ var n = (function () {
     };
 })();
 r(562210);
-var o = r(498121),
-    i = r(652925),
+var i = r(498121),
+    o = r(652925),
     a = r(284009),
     s = r(140526);
 e.exports = (function (e) {
@@ -30,9 +30,9 @@ e.exports = (function (e) {
             n = e || { x: 0, y: 0 };
         return (
             "number" == typeof n.x && "number" == typeof n.y
-                ? ((r.x = new o(n.x)), (r.y = new o(n.y)))
+                ? ((r.x = new i(n.x)), (r.y = new i(n.y)))
                 : (a(
-                      n.x instanceof o && n.y instanceof o,
+                      n.x instanceof i && n.y instanceof i,
                       "AnimatedValueXY must be initalized with an object of numbers or AnimatedValues.",
                   ),
                   (r.x = n.x),
@@ -111,4 +111,4 @@ e.exports = (function (e) {
         ]),
         t
     );
-})(i);
+})(o);

@@ -11,21 +11,21 @@ var i = n(503698),
 function d(e) {
     let { className: t, isEligibleForTrial: n = !1 } = e,
         { step: i, breadcrumbsData: d } = (0, s.Ay)(),
-        p = (0, o.t4)((e) => e.startedPaymentFlowWithPaymentSources);
+        m = (0, o.t4)((e) => e.startedPaymentFlowWithPaymentSources);
     if ((0, o.t4)((e) => e.get("isPremiumPurchase")) || null == d || 0 === d.length) return null;
-    let m = d.flatMap((e) => {
+    let p = d.flatMap((e) => {
         let t = e.useBreadcrumbLabel(n);
         return null != t ? { id: e.id, label: t } : [];
     });
-    return 0 === m.length
+    return 0 === p.length
         ? null
-        : ((m = m.filter((e) => {
+        : ((p = p.filter((e) => {
               let t = e.id !== u.pn.ADD_PAYMENT_STEPS,
-                  l = e.id === u.pn.ADD_PAYMENT_STEPS && !p;
+                  l = e.id === u.pn.ADD_PAYMENT_STEPS && !m;
               return !n || t || l;
           })),
           (0, l.jsx)("div", {
               className: r()("breadcrumb", c.i, t),
-              children: (0, l.jsx)(a.A, { activeId: i, breadcrumbs: m }),
+              children: (0, l.jsx)(a.A, { activeId: i, breadcrumbs: p }),
           }));
 }

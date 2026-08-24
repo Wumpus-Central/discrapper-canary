@@ -33,9 +33,9 @@ function u(e) {
     });
 }
 function c(e) {
-    let { text: t, gradientColor: n, Icon: i = a.TagIcon, iconSize: c, customGraphic: d, className: p } = e;
+    let { text: t, gradientColor: n, Icon: i = a.TagIcon, iconSize: c, customGraphic: d, className: m } = e;
     return (0, l.jsx)(u, {
-        className: r()(o.Cu, p),
+        className: r()(o.Cu, m),
         gradientColor: n,
         ...(null != d ? { customGraphic: d } : { Icon: i, iconSize: c }),
         children: (0, l.jsx)(s.E, { variant: "text-sm/medium", color: "currentColor", className: o.Ct, children: t }),

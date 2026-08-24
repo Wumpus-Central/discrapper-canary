@@ -1,4 +1,4 @@
-n.d(t, { Fe: () => x, kc: () => b });
+n.d(t, { Fe: () => T, kc: () => b });
 var l = n(477900),
     i = n(582128),
     r = n(17928),
@@ -8,39 +8,39 @@ var l = n(477900),
     u = n(883645),
     c = n(427675),
     d = n(580133),
-    p = n(87725),
-    m = n(242874),
-    h = n(573359),
-    C = n(35587),
+    m = n(87725),
+    p = n(242874),
+    C = n(573359),
+    h = n(35587),
     f = n(165191),
     E = n(237412),
     S = n(45938),
     y = n(951305),
-    A = n(166532),
-    P = n(906234),
-    I = n(652215),
+    I = n(166532),
+    A = n(906234),
+    P = n(652215),
     g = n(202541),
     v = n(375708),
     _ = n(894575);
-function T(e) {
+function x(e) {
     let { onClose: t } = e,
-        { selectedSkuId: n, purchaseState: d } = (0, p.t4)((e) => ({
+        { selectedSkuId: n, purchaseState: d } = (0, m.t4)((e) => ({
             selectedSkuId: e.selectedSkuId,
             purchaseState: e.purchaseState,
         })),
-        C = (0, r.bG)([h.A], () => h.A.isDisplayingWowMomentConfirmation),
-        { isPremium: P, isPremiumGroupPurchase: T, isEligibleForTrial: x, isEligibleForDiscount: N } = (0, o.i)(),
+        h = (0, r.bG)([C.A], () => C.A.isDisplayingWowMomentConfirmation),
+        { isPremium: A, isPremiumGroupPurchase: x, isEligibleForTrial: T, isEligibleForDiscount: N } = (0, o.i)(),
         b = (0, c.S3)(),
-        R = (0, u.s2)(),
-        { isGift: j, selectedGiftStyle: M, giftRecipient: O } = (0, y.Pv)(),
-        L = b?.productLine === I.EZt.COLLECTIBLES,
-        k = b?.productLine === I.EZt.SOCIAL_LAYER_GAME_ITEM,
-        w = j && (0, S.Ik)(O) && R === A.pn.CONFIRM && null != M && !L && !k,
-        U = [A.pn.SKU_SELECT, A.pn.SELECT_FREE_SKU],
-        D = null != R && !U.includes(R) && null != n,
+        j = (0, u.s2)(),
+        { isGift: R, selectedGiftStyle: M, giftRecipient: O } = (0, y.Pv)(),
+        L = b?.productLine === P.EZt.COLLECTIBLES,
+        k = b?.productLine === P.EZt.SOCIAL_LAYER_GAME_ITEM,
+        w = R && (0, S.Ik)(O) && j === I.pn.CONFIRM && null != M && !L && !k,
+        U = [I.pn.SKU_SELECT, I.pn.SELECT_FREE_SKU],
+        D = null != j && !U.includes(j) && null != n,
         G = i.useCallback(() => t(!1), [t]);
     return i.useMemo(() => {
-        if (null == R) return;
+        if (null == j) return;
         let e = null;
         return (
             w
@@ -51,7 +51,7 @@ function T(e) {
                               "aria-hidden": !0,
                               style: { display: "contents" },
                               children: (0, l.jsx)(f.A, {
-                                  defaultAnimationState: m.oA.LOOP,
+                                  defaultAnimationState: p.oA.LOOP,
                                   giftStyle: M,
                                   className: _.qq,
                               }),
@@ -63,37 +63,37 @@ function T(e) {
                   (e =
                       n in g.WN
                           ? (0, l.jsx)(E.A, {
-                                currentStep: R ?? void 0,
+                                currentStep: j ?? void 0,
                                 purchaseState: d,
                                 premiumType: g.WN[n],
                                 onClose: G,
-                                showTrialBadge: x,
+                                showTrialBadge: T,
                                 showDiscountBadge: N,
-                                isGift: j,
+                                isGift: R,
                                 giftRecipient: O,
-                                isEligibleForTrial: x,
-                                enablePremiumBrandRefresh: P,
-                                isDisplayingWowMomentConfirmation: C,
-                                isPremiumGroupPurchase: T,
+                                isEligibleForTrial: T,
+                                enablePremiumBrandRefresh: A,
+                                isDisplayingWowMomentConfirmation: h,
+                                isPremiumGroupPurchase: x,
                             })
                           : (0, l.jsx)(a.rQ, { title: v.intl.string(v.t.q9EGps) })),
             e
         );
-    }, [M, G, d, n, R, x, N, w, D, j, O, P, C, T]);
+    }, [M, G, d, n, j, T, N, w, D, R, O, A, h, x]);
 }
-function x(e) {
+function T(e) {
     let {
             premiumDiscountPercent: t,
             selectedPlanId: n,
             isPremiumDiscountAppliedToCheckoutInvoice: l,
-        } = (0, p.t4)((e) => ({
+        } = (0, m.t4)((e) => ({
             premiumDiscountPercent: e.get("premiumDiscountPercent"),
             isPremiumDiscountAppliedToCheckoutInvoice: e.get("isPremiumDiscountAppliedToCheckoutInvoice"),
             selectedPlanId: e.selectedPlanId,
         })),
         { isPremiumGroupPurchase: r, isEligibleForTrial: a, isEligibleForDiscount: s } = (0, o.i)(),
-        u = (0, P.G)(n ?? "") && !a,
-        c = (0, C.Sq)();
+        u = (0, A.G)(n ?? "") && !a,
+        c = (0, h.Sq)();
     return i.useMemo(() => {
         let n, i;
         return (r
@@ -110,10 +110,10 @@ function x(e) {
     }, [e, r, a, s, u, c, t, l]);
 }
 function N() {
-    let e = x();
+    let e = T();
     return (0, l.jsx)(d.f, { headerBadgeConfig: e });
 }
 function b(e) {
     let { isGift: t } = (0, y.Pv)();
-    return e.step !== A.pn.PLAN_SELECT || t ? (0, l.jsx)(T, { ...e }) : (0, l.jsx)(N, {});
+    return e.step !== I.pn.PLAN_SELECT || t ? (0, l.jsx)(x, { ...e }) : (0, l.jsx)(N, {});
 }

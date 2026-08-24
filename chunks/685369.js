@@ -1,13 +1,13 @@
 "use strict";
 r.d(t, { K: () => s });
 let n = new Map(),
-    o = !1;
+    i = !1;
 try {
-    o = "exceptZero" === new Intl.NumberFormat("de-DE", { signDisplay: "exceptZero" }).resolvedOptions().signDisplay;
+    i = "exceptZero" === new Intl.NumberFormat("de-DE", { signDisplay: "exceptZero" }).resolvedOptions().signDisplay;
 } catch {}
-let i = !1;
+let o = !1;
 try {
-    i = "unit" === new Intl.NumberFormat("de-DE", { style: "unit", unit: "degree" }).resolvedOptions().style;
+    o = "unit" === new Intl.NumberFormat("de-DE", { style: "unit", unit: "degree" }).resolvedOptions().style;
 } catch {}
 let a = { degree: { narrow: { default: "\xb0", "ja-JP": " \u5EA6", "zh-TW": "\u5EA6", "sl-SI": " \xb0" } } };
 class s {
@@ -15,7 +15,7 @@ class s {
         let t = "";
         if (
             ((t =
-                o || null == this.options.signDisplay
+                i || null == this.options.signDisplay
                     ? this.numberFormatter.format(e)
                     : (function (e, t, r) {
                           if ("auto" === t) return e.format(r);
@@ -33,24 +33,24 @@ class s {
                               {
                                   let t = e.format(-r),
                                       n = e.format(r),
-                                      o = t.replace(n, "").replace(/\u200e|\u061C/, "");
+                                      i = t.replace(n, "").replace(/\u200e|\u061C/, "");
                                   return (
-                                      1 != [...o].length &&
+                                      1 != [...i].length &&
                                           console.warn(
                                               "@react-aria/i18n polyfill for NumberFormat signDisplay: Unsupported case",
                                           ),
-                                      t.replace(n, "!!!").replace(o, "+").replace("!!!", n)
+                                      t.replace(n, "!!!").replace(i, "+").replace("!!!", n)
                                   );
                               }
                           }
                       })(this.numberFormatter, this.options.signDisplay, e)),
-            "unit" === this.options.style && !i)
+            "unit" === this.options.style && !o)
         ) {
             var r;
-            let { unit: e, unitDisplay: n = "short", locale: o } = this.resolvedOptions();
+            let { unit: e, unitDisplay: n = "short", locale: i } = this.resolvedOptions();
             if (!e) return t;
-            let i = null == (r = a[e]) ? void 0 : r[n];
-            t += i[o] || i.default;
+            let o = null == (r = a[e]) ? void 0 : r[n];
+            t += o[i] || o.default;
         }
         return t;
     }
@@ -77,8 +77,8 @@ class s {
     resolvedOptions() {
         let e = this.numberFormatter.resolvedOptions();
         return (
-            o || null == this.options.signDisplay || (e = { ...e, signDisplay: this.options.signDisplay }),
-            i ||
+            i || null == this.options.signDisplay || (e = { ...e, signDisplay: this.options.signDisplay }),
+            o ||
                 "unit" !== this.options.style ||
                 (e = { ...e, style: "unit", unit: this.options.unit, unitDisplay: this.options.unitDisplay }),
             e
@@ -89,12 +89,12 @@ class s {
             let { numberingSystem: r } = t;
             if (
                 (r && e.includes("-nu-") && (e.includes("-u-") || (e += "-u-"), (e += `-nu-${r}`)),
-                "unit" === t.style && !i)
+                "unit" === t.style && !o)
             ) {
-                var o;
+                var i;
                 let { unit: e, unitDisplay: r = "short" } = t;
                 if (!e) throw Error('unit option must be provided with style: "unit"');
-                if (!(null == (o = a[e]) ? void 0 : o[r])) throw Error(`Unsupported unit ${e} with unitDisplay = ${r}`);
+                if (!(null == (i = a[e]) ? void 0 : i[r])) throw Error(`Unsupported unit ${e} with unitDisplay = ${r}`);
                 t = { ...t, style: "decimal" };
             }
             let s =

@@ -10,36 +10,36 @@ t.InternalIntlMessage = class {
         let e = { value: "" };
         return (
             (function e(t, r) {
-                for (let o of t) {
-                    if ("string" == typeof o) {
-                        r.value += o;
+                for (let i of t) {
+                    if ("string" == typeof i) {
+                        r.value += i;
                         continue;
                     }
-                    switch (o[0]) {
+                    switch (i[0]) {
                         case n.FormatJsNodeType.Argument:
-                            r.value += "{" + o[1] + "}";
+                            r.value += "{" + i[1] + "}";
                             break;
                         case n.FormatJsNodeType.Date:
-                            (r.value += "{" + o[1] + ", date"),
-                                null != o[2] && (r.value += ", " + o[2]),
+                            (r.value += "{" + i[1] + ", date"),
+                                null != i[2] && (r.value += ", " + i[2]),
                                 (r.value += "}");
                             break;
                         case n.FormatJsNodeType.Time:
-                            (r.value += "{" + o[1] + ", time"),
-                                null != o[2] && (r.value += ", " + o[2]),
+                            (r.value += "{" + i[1] + ", time"),
+                                null != i[2] && (r.value += ", " + i[2]),
                                 (r.value += "}");
                             break;
                         case n.FormatJsNodeType.Number:
-                            (r.value += "{" + o[1] + ", number"),
-                                null != o[2] && (r.value += ", " + o[2]),
+                            (r.value += "{" + i[1] + ", number"),
+                                null != i[2] && (r.value += ", " + i[2]),
                                 (r.value += "}");
                             break;
                         case n.FormatJsNodeType.Plural: {
-                            let t = "ordinal" == o[4] ? "selectordinal" : "plural";
-                            for (let [n, i] of ((r.value += "{" + o[1] + ", " + t + ","),
-                            o[3] && (r.value += " offset:" + o[3]),
-                            Object.entries(o[2])))
-                                (r.value += " " + n + " {"), e(i, r), (r.value += "}");
+                            let t = "ordinal" == i[4] ? "selectordinal" : "plural";
+                            for (let [n, o] of ((r.value += "{" + i[1] + ", " + t + ","),
+                            i[3] && (r.value += " offset:" + i[3]),
+                            Object.entries(i[2])))
+                                (r.value += " " + n + " {"), e(o, r), (r.value += "}");
                             r.value += "}";
                             break;
                         }
@@ -47,7 +47,7 @@ t.InternalIntlMessage = class {
                             r.value += "#";
                             break;
                         case n.FormatJsNodeType.Select:
-                            for (let [t, n] of ((r.value += "{" + o[1] + ", select,"), Object.entries(o[2])))
+                            for (let [t, n] of ((r.value += "{" + i[1] + ", select,"), Object.entries(i[2])))
                                 (r.value += " " + t + " {"), e(n, r), (r.value += "}");
                             r.value += "}";
                             break;
@@ -68,17 +68,17 @@ t.InternalIntlMessage = class {
                                         break;
                                     case "$link":
                                         let n = t[2],
-                                            o = t[3];
+                                            i = t[3];
                                         (r.value += "["),
                                             e(n, r),
                                             (r.value += "]("),
-                                            null != o && e(o, r),
+                                            null != i && e(i, r),
                                             (r.value += ")");
                                         break;
                                     default:
                                         (r.value += "$["), e(t[2], r), (r.value += "](" + t[1] + ")");
                                 }
-                            })(o, r);
+                            })(i, r);
                     }
                 }
             })(this.ast, e),

@@ -1,11 +1,11 @@
 "use strict";
 let n = r(17101);
-function o() {}
-(e.exports = o),
-    (o.prototype.get = function (e) {
+function i() {}
+(e.exports = i),
+    (i.prototype.get = function (e) {
         return this.header[e.toLowerCase()];
     }),
-    (o.prototype._setHeaderProperties = function (e) {
+    (i.prototype._setHeaderProperties = function (e) {
         let t = e["content-type"] || "";
         this.type = n.type(t);
         let r = n.params(t);
@@ -15,7 +15,7 @@ function o() {}
             e.link && (this.links = n.parseLinks(e.link));
         } catch (e) {}
     }),
-    (o.prototype._setStatusProperties = function (e) {
+    (i.prototype._setStatusProperties = function (e) {
         let t = Math.trunc(e / 100);
         (this.statusCode = e),
             (this.status = this.statusCode),

@@ -1,4 +1,4 @@
-n.d(t, { X: () => m, s: () => d });
+n.d(t, { X: () => p, s: () => d });
 var l = n(582128),
     i = n(17928),
     r = n(157559),
@@ -32,12 +32,12 @@ function d(e, t, n) {
                 t());
         }, [e, i]);
 }
-let p = [];
-function m(e, t) {
+let m = [];
+function p(e, t) {
     let n = (0, i.bG)([a.A], () => (null != e ? a.A.get(e) : null)),
         r = (0, i.yK)([s.A], () => {
             let e = null != n ? s.A.getForSku(n.skuId) : null;
-            return null != e ? Array.from(e) : p;
+            return null != e ? Array.from(e) : m;
         }),
         u = l.useMemo(
             () =>

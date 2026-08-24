@@ -1,9 +1,9 @@
 let n = /\s+/g;
-class o {
+class i {
     constructor(e, t) {
-        if (((t = a(t)), e instanceof o))
+        if (((t = a(t)), e instanceof i))
             if (!!t.loose === e.loose && !!t.includePrerelease === e.includePrerelease) return e;
-            else return new o(e.raw, t);
+            else return new i(e.raw, t);
         if (e instanceof s) return (this.raw = e.value), (this.set = [[e]]), (this.formatted = void 0), this;
         if (
             ((this.options = t),
@@ -50,13 +50,13 @@ class o {
     }
     parseRange(e) {
         let t = ((this.options.includePrerelease && m) | (this.options.loose && v)) + ":" + e,
-            r = i.get(t);
+            r = o.get(t);
         if (r) return r;
         let n = this.options.loose,
-            o = n ? c[f.HYPHENRANGELOOSE] : c[f.HYPHENRANGE];
-        l("hyphen replace", (e = e.replace(o, A(this.options.includePrerelease)))),
-            l("comparator trim", (e = e.replace(c[f.COMPARATORTRIM], p))),
-            l("tilde trim", (e = e.replace(c[f.TILDETRIM], d))),
+            i = n ? c[f.HYPHENRANGELOOSE] : c[f.HYPHENRANGE];
+        l("hyphen replace", (e = e.replace(i, A(this.options.includePrerelease)))),
+            l("comparator trim", (e = e.replace(c[f.COMPARATORTRIM], d))),
+            l("tilde trim", (e = e.replace(c[f.TILDETRIM], p))),
             l("caret trim", (e = e.replace(c[f.CARETTRIM], h)));
         let a = e
             .split(" ")
@@ -73,10 +73,10 @@ class o {
         }
         u.size > 1 && u.has("") && u.delete("");
         let g = [...u.values()];
-        return i.set(t, g), g;
+        return o.set(t, g), g;
     }
     intersects(e, t) {
-        if (!(e instanceof o)) throw TypeError("a Range is required");
+        if (!(e instanceof i)) throw TypeError("a Range is required");
         return this.set.some(
             (r) => b(r, t) && e.set.some((e) => b(e, t) && r.every((r) => e.every((e) => r.intersects(e, t)))),
         );
@@ -89,25 +89,25 @@ class o {
             } catch (e) {
                 return !1;
             }
-        for (let t = 0; t < this.set.length; t++) if (O(this.set[t], e, this.options)) return !0;
+        for (let t = 0; t < this.set.length; t++) if (I(this.set[t], e, this.options)) return !0;
         return !1;
     }
 }
-e.exports = o;
-let i = new (r(678884))(),
+e.exports = i;
+let o = new (r(678884))(),
     a = r(131077),
     s = r(46666),
     l = r(692714),
     u = r(864886),
-    { safeRe: c, t: f, comparatorTrimReplace: p, tildeTrimReplace: d, caretTrimReplace: h } = r(64672),
+    { safeRe: c, t: f, comparatorTrimReplace: d, tildeTrimReplace: p, caretTrimReplace: h } = r(64672),
     { FLAG_INCLUDE_PRERELEASE: m, FLAG_LOOSE: v } = r(376780),
     y = (e) => "<0.0.0-0" === e.value,
     g = (e) => "" === e.value,
     b = (e, t) => {
         let r = !0,
             n = e.slice(),
-            o = n.pop();
-        for (; r && n.length; ) (r = n.every((e) => o.intersects(e, t))), (o = n.pop());
+            i = n.pop();
+        for (; r && n.length; ) (r = n.every((e) => i.intersects(e, t))), (i = n.pop());
         return r;
     },
     w = (e, t) => (
@@ -127,19 +127,19 @@ let i = new (r(678884))(),
             .join(" "),
     x = (e, t) => {
         let r = t.loose ? c[f.TILDELOOSE] : c[f.TILDE];
-        return e.replace(r, (t, r, n, o, i) => {
+        return e.replace(r, (t, r, n, i, o) => {
             let a;
             return (
-                l("tilde", e, t, r, n, o, i),
+                l("tilde", e, t, r, n, i, o),
                 _(r)
                     ? (a = "")
                     : _(n)
                       ? (a = `>=${r}.0.0 <${+r + 1}.0.0-0`)
-                      : _(o)
+                      : _(i)
                         ? (a = `>=${r}.${n}.0 <${r}.${+n + 1}.0-0`)
-                        : i
-                          ? (l("replaceTilde pr", i), (a = `>=${r}.${n}.${o}-${i} <${r}.${+n + 1}.0-0`))
-                          : (a = `>=${r}.${n}.${o} <${r}.${+n + 1}.0-0`),
+                        : o
+                          ? (l("replaceTilde pr", o), (a = `>=${r}.${n}.${i}-${o} <${r}.${+n + 1}.0-0`))
+                          : (a = `>=${r}.${n}.${i} <${r}.${+n + 1}.0-0`),
                 l("tilde return", a),
                 a
             );
@@ -155,34 +155,34 @@ let i = new (r(678884))(),
         l("caret", e, t);
         let r = t.loose ? c[f.CARETLOOSE] : c[f.CARET],
             n = t.includePrerelease ? "-0" : "";
-        return e.replace(r, (t, r, o, i, a) => {
+        return e.replace(r, (t, r, i, o, a) => {
             let s;
             return (
-                l("caret", e, t, r, o, i, a),
+                l("caret", e, t, r, i, o, a),
                 _(r)
                     ? (s = "")
-                    : _(o)
+                    : _(i)
                       ? (s = `>=${r}.0.0${n} <${+r + 1}.0.0-0`)
-                      : _(i)
+                      : _(o)
                         ? (s =
                               "0" === r
-                                  ? `>=${r}.${o}.0${n} <${r}.${+o + 1}.0-0`
-                                  : `>=${r}.${o}.0${n} <${+r + 1}.0.0-0`)
+                                  ? `>=${r}.${i}.0${n} <${r}.${+i + 1}.0-0`
+                                  : `>=${r}.${i}.0${n} <${+r + 1}.0.0-0`)
                         : a
                           ? (l("replaceCaret pr", a),
                             (s =
                                 "0" === r
-                                    ? "0" === o
-                                        ? `>=${r}.${o}.${i}-${a} <${r}.${o}.${+i + 1}-0`
-                                        : `>=${r}.${o}.${i}-${a} <${r}.${+o + 1}.0-0`
-                                    : `>=${r}.${o}.${i}-${a} <${+r + 1}.0.0-0`))
+                                    ? "0" === i
+                                        ? `>=${r}.${i}.${o}-${a} <${r}.${i}.${+o + 1}-0`
+                                        : `>=${r}.${i}.${o}-${a} <${r}.${+i + 1}.0-0`
+                                    : `>=${r}.${i}.${o}-${a} <${+r + 1}.0.0-0`))
                           : (l("no pr"),
                             (s =
                                 "0" === r
-                                    ? "0" === o
-                                        ? `>=${r}.${o}.${i}${n} <${r}.${o}.${+i + 1}-0`
-                                        : `>=${r}.${o}.${i}${n} <${r}.${+o + 1}.0-0`
-                                    : `>=${r}.${o}.${i} <${+r + 1}.0.0-0`)),
+                                    ? "0" === i
+                                        ? `>=${r}.${i}.${o}${n} <${r}.${i}.${+o + 1}-0`
+                                        : `>=${r}.${i}.${o}${n} <${r}.${+i + 1}.0-0`
+                                    : `>=${r}.${i}.${o} <${+r + 1}.0.0-0`)),
                 l("caret return", s),
                 s
             );
@@ -198,10 +198,10 @@ let i = new (r(678884))(),
     T = (e, t) => {
         e = e.trim();
         let r = t.loose ? c[f.XRANGELOOSE] : c[f.XRANGE];
-        return e.replace(r, (r, n, o, i, a, s) => {
-            l("xRange", e, r, n, o, i, a, s);
-            let u = _(o),
-                c = u || _(i),
+        return e.replace(r, (r, n, i, o, a, s) => {
+            l("xRange", e, r, n, i, o, a, s);
+            let u = _(i),
+                c = u || _(o),
                 f = c || _(a);
             return (
                 "=" === n && f && (n = ""),
@@ -209,16 +209,16 @@ let i = new (r(678884))(),
                 u
                     ? (r = ">" === n || "<" === n ? "<0.0.0-0" : "*")
                     : n && f
-                      ? (c && (i = 0),
+                      ? (c && (o = 0),
                         (a = 0),
                         ">" === n
-                            ? ((n = ">="), c ? ((o = +o + 1), (i = 0)) : (i = +i + 1), (a = 0))
-                            : "<=" === n && ((n = "<"), c ? (o = +o + 1) : (i = +i + 1)),
+                            ? ((n = ">="), c ? ((i = +i + 1), (o = 0)) : (o = +o + 1), (a = 0))
+                            : "<=" === n && ((n = "<"), c ? (i = +i + 1) : (o = +o + 1)),
                         "<" === n && (s = "-0"),
-                        (r = `${n + o}.${i}.${a}${s}`))
+                        (r = `${n + i}.${o}.${a}${s}`))
                       : c
-                        ? (r = `>=${o}.0.0${s} <${+o + 1}.0.0-0`)
-                        : f && (r = `>=${o}.${i}.0${s} <${o}.${+i + 1}.0-0`),
+                        ? (r = `>=${i}.0.0${s} <${+i + 1}.0.0-0`)
+                        : f && (r = `>=${i}.${o}.0${s} <${i}.${+o + 1}.0-0`),
                 l("xRange return", r),
                 r
             );
@@ -226,13 +226,13 @@ let i = new (r(678884))(),
     },
     M = (e, t) => (l("replaceStars", e, t), e.trim().replace(c[f.STAR], "")),
     P = (e, t) => (l("replaceGTE0", e, t), e.trim().replace(c[t.includePrerelease ? f.GTE0PRE : f.GTE0], "")),
-    A = (e) => (t, r, n, o, i, a, s, l, u, c, f, p) => (
+    A = (e) => (t, r, n, i, o, a, s, l, u, c, f, d) => (
         (r = _(n)
             ? ""
-            : _(o)
+            : _(i)
               ? `>=${n}.0.0${e ? "-0" : ""}`
-              : _(i)
-                ? `>=${n}.${o}.0${e ? "-0" : ""}`
+              : _(o)
+                ? `>=${n}.${i}.0${e ? "-0" : ""}`
                 : a
                   ? `>=${r}`
                   : `>=${r}${e ? "-0" : ""}`),
@@ -242,14 +242,14 @@ let i = new (r(678884))(),
               ? `<${+u + 1}.0.0-0`
               : _(f)
                 ? `<${u}.${+c + 1}.0-0`
-                : p
-                  ? `<=${u}.${c}.${f}-${p}`
+                : d
+                  ? `<=${u}.${c}.${f}-${d}`
                   : e
                     ? `<${u}.${c}.${+f + 1}-0`
                     : `<=${l}`),
         `${r} ${l}`.trim()
     ),
-    O = (e, t, r) => {
+    I = (e, t, r) => {
         for (let r = 0; r < e.length; r++) if (!e[r].test(t)) return !1;
         if (t.prerelease.length && !r.includePrerelease) {
             for (let r = 0; r < e.length; r++)

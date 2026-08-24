@@ -85,10 +85,10 @@ let c = [
         { label: "Wyoming", value: "WY" },
     ],
     d = Object.freeze(c.reduce((e, t) => ({ ...e, [t.label.toLowerCase()]: t.value }), {}));
-var p = n(95477),
-    m = n(783878),
-    h = n(915089),
-    C = n(403362),
+var m = n(95477),
+    p = n(783878),
+    C = n(915089),
+    h = n(403362),
     f = n(832208),
     E = n(375708),
     S = n(782328);
@@ -163,17 +163,17 @@ let y = [
         "ZA",
         "ZW",
     ],
-    A = u.A.map((e) => ({ id: e.alpha2, value: e.alpha2, label: e.name })).filter(
+    I = u.A.map((e) => ({ id: e.alpha2, value: e.alpha2, label: e.name })).filter(
         (e) => "KP" !== e.value && "SY" !== e.value,
     ),
-    P = Object.freeze(A.reduce((e, t) => ({ ...e, [t.label.toLowerCase()]: t.value }), {})),
-    I = (0, h.Ld)(),
-    g = (0, h.Ld)(),
-    v = (0, h.Ld)(),
-    _ = (0, h.Ld)(),
-    T = (0, h.Ld)(),
-    x = (0, h.Ld)(),
-    N = (0, h.Ld)();
+    A = Object.freeze(I.reduce((e, t) => ({ ...e, [t.label.toLowerCase()]: t.value }), {})),
+    P = (0, C.Ld)(),
+    g = (0, C.Ld)(),
+    v = (0, C.Ld)(),
+    _ = (0, C.Ld)(),
+    x = (0, C.Ld)(),
+    T = (0, C.Ld)(),
+    N = (0, C.Ld)();
 var b =
         (((l = b || {}).MODAL_US = "modalUS"),
         (l.MODAL_INTL = "modalInternational"),
@@ -186,12 +186,12 @@ var b =
         (l.SETTINGS_INTL_MOBILE = "settingsInternationalMobile"),
         (l.SETTINGS_INTL_NO_NAME_MOBILE = "settingsInternationalWithoutNameMobile"),
         l),
-    R = (((i = R || {}).EDIT = "edit"), (i.CREATE = "create"), i);
-let j = { US: c, CA: s },
+    j = (((i = j || {}).EDIT = "edit"), (i.CREATE = "create"), i);
+let R = { US: c, CA: s },
     M = { US: d, CA: o },
     O = (e, t) => ({
         name: "name",
-        id: I,
+        id: P,
         title: () => E.intl.string(E.t.vyuULb),
         autoComplete: "name",
         getClassNameForLayout: (e) =>
@@ -206,11 +206,11 @@ let j = { US: c, CA: s },
             ].includes(e)
                 ? S.c6
                 : S.bt,
-        renderInput: (e) => (0, r.jsx)(p.k, { ...e }),
+        renderInput: (e) => (0, r.jsx)(m.k, { ...e }),
     }),
     L = (e, t) => {
         let n = t?.allowedBillingAddressCountries,
-            l = null != n && n.length > 0 ? A.filter((e) => n.includes(e.value)) : A,
+            l = null != n && n.length > 0 ? I.filter((e) => n.includes(e.value)) : I,
             i = t?.countryHelperText;
         return {
             name: "country",
@@ -231,7 +231,7 @@ let j = { US: c, CA: s },
             },
             renderInput(e, t) {
                 let { onChange: n, ...i } = e;
-                return (0, r.jsx)(m.Z, {
+                return (0, r.jsx)(p.Z, {
                     ...i,
                     selectionMode: "single",
                     autoFocus: !0,
@@ -242,7 +242,7 @@ let j = { US: c, CA: s },
                         let l = t.target.value;
                         if (null == n) return;
                         let i = l.toLowerCase();
-                        i in P && n(P[i], e.name);
+                        i in A && n(A[i], e.name);
                     },
                     onSelectionChange: (t) => {
                         null != n && n(t, e.name);
@@ -269,7 +269,7 @@ let j = { US: c, CA: s },
             ].includes(e)
                 ? S.c6
                 : S.bt,
-        renderInput: (e) => (0, r.jsx)(p.k, { ...e }),
+        renderInput: (e) => (0, r.jsx)(m.k, { ...e }),
     }),
     w = (e, t) => ({
         name: "line2",
@@ -289,11 +289,11 @@ let j = { US: c, CA: s },
             ].includes(e)
                 ? S.c6
                 : S.JH,
-        renderInput: (e) => (0, r.jsx)(p.k, { ...e }),
+        renderInput: (e) => (0, r.jsx)(m.k, { ...e }),
     }),
     U = (e, t) => ({
         name: "city",
-        id: T,
+        id: x,
         title: () => E.intl.string(E.t.bUSWlw),
         autoComplete: "address-level2",
         placeholder: () => E.intl.string(E.t["5rRx31"]),
@@ -313,7 +313,7 @@ let j = { US: c, CA: s },
                     return S.ep;
             }
         },
-        renderInput: (e) => (0, r.jsx)(p.k, { ...e }),
+        renderInput: (e) => (0, r.jsx)(m.k, { ...e }),
     }),
     D = (e, t) => {
         let n, l;
@@ -329,7 +329,7 @@ let j = { US: c, CA: s },
         }
         return {
             name: "postalCode",
-            id: x,
+            id: T,
             title: () => n,
             autoComplete: "postal-code",
             placeholder: () => l,
@@ -350,7 +350,7 @@ let j = { US: c, CA: s },
                         return S.IW;
                 }
             },
-            renderInput: (e) => (0, r.jsx)(p.k, { ...e }),
+            renderInput: (e) => (0, r.jsx)(m.k, { ...e }),
         };
     },
     G = (e, t) => {
@@ -388,7 +388,7 @@ let j = { US: c, CA: s },
                 }
             },
             renderInput(t, n) {
-                let l = j[e],
+                let l = R[e],
                     i =
                         null == t.value ||
                         "" === t.value ||
@@ -401,7 +401,7 @@ let j = { US: c, CA: s },
                     { onChange: a, ...s } = t,
                     o = M[e];
                 return ["US", "CA"].includes(e) && i
-                    ? (0, r.jsx)(m.Z, {
+                    ? (0, r.jsx)(p.Z, {
                           ...s,
                           selectionMode: "single",
                           options: l,
@@ -417,7 +417,7 @@ let j = { US: c, CA: s },
                               null != a && a(e, t.name);
                           },
                       })
-                    : (0, r.jsx)(p.k, { ...t });
+                    : (0, r.jsx)(m.k, { ...t });
             },
         };
     },
@@ -435,7 +435,7 @@ let j = { US: c, CA: s },
     };
 class B extends a.PureComponent {
     static Layouts = b;
-    static Modes = R;
+    static Modes = j;
     static defaultProps = {
         name: "",
         country: "",
@@ -530,15 +530,15 @@ class B extends a.PureComponent {
         if (null == u) throw Error("Provide a proper layout property.");
         let c = t.country,
             d = { allowedBillingAddressCountries: s, countryHelperText: o },
-            p = u
+            m = u
                 .map((e) => {
-                    let t = e.map((e) => e(c ?? "", d)).filter(C.Vq);
+                    let t = e.map((e) => e(c ?? "", d)).filter(h.Vq);
                     return t.length > 0 ? { fields: t } : null;
                 })
-                .filter(C.Vq);
+                .filter(h.Vq);
         return (0, r.jsx)(f.A, {
             className: i,
-            form: p,
+            form: m,
             layout: n,
             values: t,
             errors: e,

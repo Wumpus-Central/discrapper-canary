@@ -1,12 +1,12 @@
 "use strict";
 var n = r(249759),
-    o = r(45804),
-    i = r(381265);
+    i = r(45804),
+    o = r(381265);
 e.exports = function () {
     n();
-    var e = o();
+    var e = i();
     return (
-        i(
+        o(
             Promise,
             { allSettled: e },
             {

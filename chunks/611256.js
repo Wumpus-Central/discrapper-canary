@@ -1,7 +1,7 @@
 "use strict";
 var n = r(439619),
-    o = r(207001),
-    i = r(473560)(),
+    i = r(207001),
+    o = r(473560)(),
     a = r(267768),
     s = r(741623),
     l = n("%Math.floor%");
@@ -16,5 +16,5 @@ e.exports = function (e, t) {
         var c = a(e, "length");
         c && !c.configurable && (n = !1), c && !c.writable && (u = !1);
     }
-    return (n || u || !r) && (i ? o(e, "length", t, !0, !0) : o(e, "length", t)), e;
+    return (n || u || !r) && (o ? i(e, "length", t, !0, !0) : i(e, "length", t)), e;
 };

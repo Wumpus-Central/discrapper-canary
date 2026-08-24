@@ -6,8 +6,8 @@ function t(e) {
             : null
         : (t = s.hex6.exec(e))
           ? parseInt(t[1] + "ff", 16) >>> 0
-          : p.hasOwnProperty(e)
-            ? p[e]
+          : d.hasOwnProperty(e)
+            ? d[e]
             : (t = s.rgb.exec(e))
               ? ((l(t[1]) << 24) | (l(t[2]) << 16) | (l(t[3]) << 8) | 255) >>> 0
               : (t = s.rgba.exec(e))
@@ -34,25 +34,25 @@ function r(e, t, r) {
             : e;
 }
 function n(e, t, n) {
-    var o = n < 0.5 ? n * (1 + t) : n + t - n * t,
-        i = 2 * n - o;
+    var i = n < 0.5 ? n * (1 + t) : n + t - n * t,
+        o = 2 * n - i;
     return (
-        (Math.round(255 * r(i, o, e + 1 / 3)) << 24) |
-        (Math.round(255 * r(i, o, e)) << 16) |
-        (Math.round(255 * r(i, o, e - 1 / 3)) << 8)
+        (Math.round(255 * r(o, i, e + 1 / 3)) << 24) |
+        (Math.round(255 * r(o, i, e)) << 16) |
+        (Math.round(255 * r(o, i, e - 1 / 3)) << 8)
     );
 }
-var o = "[-+]?\\d*\\.?\\d+",
-    i = o + "%";
+var i = "[-+]?\\d*\\.?\\d+",
+    o = i + "%";
 function a() {
     var e;
     return "\\(\\s*(" + ((e = arguments), Array.prototype.slice.call(e, 0)).join(")\\s*,\\s*(") + ")\\s*\\)";
 }
 var s = {
-    rgb: RegExp("rgb" + a(o, o, o)),
-    rgba: RegExp("rgba" + a(o, o, o, o)),
-    hsl: RegExp("hsl" + a(o, i, i)),
-    hsla: RegExp("hsla" + a(o, i, i, o)),
+    rgb: RegExp("rgb" + a(i, i, i)),
+    rgba: RegExp("rgba" + a(i, i, i, i)),
+    hsl: RegExp("hsl" + a(i, o, o)),
+    hsla: RegExp("hsla" + a(i, o, o, i)),
     hex3: /^#([0-9a-fA-F]{1})([0-9a-fA-F]{1})([0-9a-fA-F]{1})$/,
     hex4: /^#([0-9a-fA-F]{1})([0-9a-fA-F]{1})([0-9a-fA-F]{1})([0-9a-fA-F]{1})$/,
     hex6: /^#([0-9a-fA-F]{6})$/,
@@ -73,7 +73,7 @@ function f(e) {
     var t = parseFloat(e, 10);
     return t < 0 ? 0 : t > 100 ? 1 : t / 100;
 }
-var p = {
+var d = {
     transparent: 0,
     aliceblue: 0xf0f8ffff,
     antiquewhite: 0xfaebd7ff,

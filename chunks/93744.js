@@ -1,12 +1,12 @@
 "use strict";
 var n = r(582128),
-    o =
+    i =
         "function" == typeof Object.is
             ? Object.is
             : function (e, t) {
                   return (e === t && (0 !== e || 1 / e == 1 / t)) || (e != e && t != t);
               },
-    i = n.useState,
+    o = n.useState,
     a = n.useEffect,
     s = n.useLayoutEffect,
     l = n.useDebugValue;
@@ -15,7 +15,7 @@ function u(e) {
     e = e.value;
     try {
         var r = t();
-        return !o(e, r);
+        return !i(e, r);
     } catch (e) {
         return !0;
     }
@@ -27,22 +27,22 @@ var c =
           }
         : function (e, t) {
               var r = t(),
-                  n = i({ inst: { value: r, getSnapshot: t } }),
-                  o = n[0].inst,
+                  n = o({ inst: { value: r, getSnapshot: t } }),
+                  i = n[0].inst,
                   c = n[1];
               return (
                   s(
                       function () {
-                          (o.value = r), (o.getSnapshot = t), u(o) && c({ inst: o });
+                          (i.value = r), (i.getSnapshot = t), u(i) && c({ inst: i });
                       },
                       [e, r, t],
                   ),
                   a(
                       function () {
                           return (
-                              u(o) && c({ inst: o }),
+                              u(i) && c({ inst: i }),
                               e(function () {
-                                  u(o) && c({ inst: o });
+                                  u(i) && c({ inst: i });
                               })
                           );
                       },

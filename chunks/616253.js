@@ -8,7 +8,7 @@ var n =
             }
             return e;
         },
-    o = (function () {
+    i = (function () {
         function e(e, t) {
             for (var r = 0; r < t.length; r++) {
                 var n = t[r];
@@ -22,7 +22,7 @@ var n =
             return r && e(t.prototype, r), n && e(t, n), t;
         };
     })(),
-    i = r(562210),
+    o = r(562210),
     a = r(652925),
     s = r(885452),
     l = r(764138);
@@ -37,7 +37,7 @@ e.exports = (function (e) {
         })(this, (t.__proto__ || Object.getPrototypeOf(t)).call(this));
         return (
             !(e = l.current(e) || {}).transform ||
-                e.transform instanceof i ||
+                e.transform instanceof o ||
                 (e = n({}, e, { transform: new s(e.transform) })),
             (r._style = e),
             r
@@ -48,14 +48,14 @@ e.exports = (function (e) {
             constructor: { value: t, enumerable: !1, writable: !0, configurable: !0 },
         })),
         e && (Object.setPrototypeOf ? Object.setPrototypeOf(t, e) : (t.__proto__ = e)),
-        o(t, [
+        i(t, [
             {
                 key: "__getValue",
                 value: function () {
                     var e = {};
                     for (var t in this._style) {
                         var r = this._style[t];
-                        r instanceof i ? (e[t] = r.__getValue()) : (e[t] = r);
+                        r instanceof o ? (e[t] = r.__getValue()) : (e[t] = r);
                     }
                     return e;
                 },
@@ -66,7 +66,7 @@ e.exports = (function (e) {
                     var e = {};
                     for (var t in this._style) {
                         var r = this._style[t];
-                        r instanceof i && (e[t] = r.__getAnimatedValue());
+                        r instanceof o && (e[t] = r.__getAnimatedValue());
                     }
                     return e;
                 },
@@ -76,7 +76,7 @@ e.exports = (function (e) {
                 value: function () {
                     for (var e in this._style) {
                         var t = this._style[e];
-                        t instanceof i && t.__addChild(this);
+                        t instanceof o && t.__addChild(this);
                     }
                 },
             },
@@ -85,7 +85,7 @@ e.exports = (function (e) {
                 value: function () {
                     for (var e in this._style) {
                         var t = this._style[e];
-                        t instanceof i && t.__removeChild(this);
+                        t instanceof o && t.__removeChild(this);
                     }
                 },
             },

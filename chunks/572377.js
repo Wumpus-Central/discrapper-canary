@@ -1,22 +1,22 @@
 "use strict";
 r.d(t, { c: () => a });
 var n = r(672722),
-    o =
+    i =
         (r(72290),
         function (e) {
             return (0, n.requestAnimationFrame)(e);
         }),
-    i = function (e) {
-        void 0 === e && (e = o);
+    o = function (e) {
+        void 0 === e && (e = i);
         var t = !0,
             r = !1,
-            i = 0,
+            o = 0,
             a = [],
             l = 0,
             u = new Set(),
             c = new Set(),
             f = new Set(),
-            p = function (e) {
+            d = function (e) {
                 var t = a.indexOf(e);
                 t < 0 &&
                     ((t = a.findIndex(function (t) {
@@ -24,36 +24,36 @@ var n = r(672722),
                     })),
                     a.splice(~t ? t : a.length, 0, e));
             },
-            d = function () {
+            p = function () {
                 if (!t)
                     try {
-                        v(), e(d);
+                        v(), e(p);
                     } catch (e) {
                         console.error(e);
                     }
             },
             h = function () {
-                t && ((t = !1), 0 == i && ((i = n.now()), e(d)));
+                t && ((t = !1), 0 == o && ((o = n.now()), e(p)));
             },
             m = [];
         this.setTimeout = function (e, t) {
             var r = n.now() + t,
-                o = function () {
+                i = function () {
                     var e = m.findIndex(function (e) {
-                        return e.cancel == o;
+                        return e.cancel == i;
                     });
                     e >= 0 && m.splice(e, 1);
                 },
-                i = s(m, function (e) {
+                o = s(m, function (e) {
                     return e.time > r;
                 }),
-                a = { time: r, handler: e, cancel: o };
-            return m.splice(i, 0, a), h(), a;
+                a = { time: r, handler: e, cancel: i };
+            return m.splice(o, 0, a), h(), a;
         };
         var v = (this.advance = function () {
             var e = n.now();
             if (
-                (u.size && (u.forEach(p), u.clear()),
+                (u.size && (u.forEach(d), u.clear()),
                 m.length &&
                     n.batchedUpdates(function () {
                         var t = s(m, function (t) {
@@ -63,10 +63,10 @@ var n = r(672722),
                             return e.handler();
                         });
                     }),
-                e > i)
+                e > o)
             ) {
-                var t = Math.min(64, e - i);
-                (i = e),
+                var t = Math.min(64, e - o);
+                (o = e),
                     n.batchedUpdates(function () {
                         a.length &&
                             (n.willAdvance(a),
@@ -90,19 +90,19 @@ var n = r(672722),
             }
         });
         (this.start = function (e) {
-            l > e.priority ? u.add(e) : (p(e), h());
+            l > e.priority ? u.add(e) : (d(e), h());
         }),
             (this.onFrame = function (e) {
                 c.add(e), h();
             }),
             (this.onWrite = function (e) {
-                r ? e(i) : f.add(e);
+                r ? e(o) : f.add(e);
             });
     };
-class a extends i {
+class a extends o {
     constructor() {
         super(...arguments),
-            (this._requestAnimationFrame = (e) => o(e)),
+            (this._requestAnimationFrame = (e) => i(e)),
             (this._cancelAnimationFrame = (e) => cancelAnimationFrame(e)),
             (this.writing = !1),
             (this.id = 0),
@@ -173,13 +173,13 @@ class a extends i {
             }),
             (this.setTimeout = (e, t) => {
                 let r = n.now() + t,
-                    o = () => {
-                        let e = this.timeoutQueue.findIndex((e) => e.cancel === o);
+                    i = () => {
+                        let e = this.timeoutQueue.findIndex((e) => e.cancel === i);
                         e >= 0 && this.timeoutQueue.splice(e, 1);
                     },
-                    i = s(this.timeoutQueue, (e) => e.time > r),
-                    a = { time: r, handler: e, cancel: o };
-                return this.timeoutQueue.splice(i, 0, a), this.startLoop(), a;
+                    o = s(this.timeoutQueue, (e) => e.time > r),
+                    a = { time: r, handler: e, cancel: i };
+                return this.timeoutQueue.splice(o, 0, a), this.startLoop(), a;
             }),
             (this.onFrame = (e) => {
                 this.frameQueue.add(e), this.startLoop();

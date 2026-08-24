@@ -1,10 +1,10 @@
 let n = Symbol("SemVer ANY");
-class o {
+class i {
     static get ANY() {
         return n;
     }
     constructor(e, t) {
-        if (((t = i(t)), e instanceof o))
+        if (((t = o(t)), e instanceof i))
             if (!!t.loose === e.loose) return e;
             else e = e.value;
         u("comparator", (e = e.trim().split(/\s+/).join(" ")), t),
@@ -36,13 +36,13 @@ class o {
         return l(e, this.operator, this.semver, this.options);
     }
     intersects(e, t) {
-        if (!(e instanceof o)) throw TypeError("a Comparator is required");
+        if (!(e instanceof i)) throw TypeError("a Comparator is required");
         return "" === this.operator
             ? "" === this.value || new f(e.value, t).test(this.value)
             : "" === e.operator
               ? "" === e.value || new f(this.value, t).test(e.semver)
               : !(
-                    ((t = i(t)).includePrerelease && ("<0.0.0-0" === this.value || "<0.0.0-0" === e.value)) ||
+                    ((t = o(t)).includePrerelease && ("<0.0.0-0" === this.value || "<0.0.0-0" === e.value)) ||
                     (!t.includePrerelease && (this.value.startsWith("<0.0.0") || e.value.startsWith("<0.0.0")))
                 ) &&
                 !!(
@@ -56,8 +56,8 @@ class o {
                 );
     }
 }
-e.exports = o;
-let i = r(131077),
+e.exports = i;
+let o = r(131077),
     { safeRe: a, t: s } = r(64672),
     l = r(88701),
     u = r(692714),

@@ -1,8 +1,8 @@
 "use strict";
 r.d(t, { $: () => u });
 let n = new Set(["id"]),
-    o = new Set(["aria-label", "aria-labelledby", "aria-describedby", "aria-details"]),
-    i = new Set(["href", "hrefLang", "target", "rel", "download", "ping", "referrerPolicy"]),
+    i = new Set(["aria-label", "aria-labelledby", "aria-describedby", "aria-details"]),
+    o = new Set(["href", "hrefLang", "target", "rel", "download", "ping", "referrerPolicy"]),
     a = new Set(["dir", "lang", "hidden", "inert", "translate"]),
     s = new Set([
         "onClick",
@@ -42,17 +42,17 @@ let n = new Set(["id"]),
     ]),
     l = /^(data-.*)$/;
 function u(e, t = {}) {
-    let { labelable: r, isLink: c, global: f, events: p = f, propNames: d } = t,
+    let { labelable: r, isLink: c, global: f, events: d = f, propNames: p } = t,
         h = {};
     for (let t in e)
         Object.prototype.hasOwnProperty.call(e, t) &&
             (n.has(t) ||
-                (r && o.has(t)) ||
-                (c && i.has(t)) ||
+                (r && i.has(t)) ||
+                (c && o.has(t)) ||
                 (f && a.has(t)) ||
-                (p && s.has(t)) ||
+                (d && s.has(t)) ||
                 (t.endsWith("Capture") && s.has(t.slice(0, -7))) ||
-                (null == d ? void 0 : d.has(t)) ||
+                (null == p ? void 0 : p.has(t)) ||
                 l.test(t)) &&
             (h[t] = e[t]);
     return h;

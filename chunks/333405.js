@@ -1,6 +1,6 @@
 "use strict";
 let n;
-function o(e, t) {
+function i(e, t) {
     (null == t || t > e.length) && (t = e.length);
     for (var r = 0, n = Array(t); r < t; r++) n[r] = e[r];
     return n;
@@ -10,15 +10,15 @@ function o(e, t) {
     : "u" < typeof self
       ? (console.warn("Using browser-only version of superagent in non-browser environment"), (n = void 0))
       : (n = self);
-let i = r(882630),
+let o = r(882630),
     a = r(232859),
     s = r(591560),
     l = r(191203),
     u = r(17101),
     c = u.isObject,
     f = u.mixin,
-    p = u.hasOwn,
-    d = r(531679),
+    d = u.hasOwn,
+    p = r(531679),
     h = r(427879);
 function m() {}
 e.exports = function (e, r) {
@@ -39,12 +39,12 @@ function g(e) {
     if (!c(e)) return e;
     let t = [];
     for (let r in e)
-        p(e, r) &&
+        d(e, r) &&
             (function e(t, r, n) {
                 if (void 0 !== n) {
                     if (null === n) return void t.push(encodeURI(r));
                     if (Array.isArray(n)) {
-                        var i,
+                        var o,
                             a = (function (e) {
                                 var t = ("u" > typeof Symbol && e[Symbol.iterator]) || e["@@iterator"];
                                 if (!t) {
@@ -52,7 +52,7 @@ function g(e) {
                                         Array.isArray(e) ||
                                         (t = (function (e) {
                                             if (e) {
-                                                if ("string" == typeof e) return o(e, void 0);
+                                                if ("string" == typeof e) return i(e, void 0);
                                                 var t = Object.prototype.toString.call(e).slice(8, -1);
                                                 if (
                                                     ("Object" === t && e.constructor && (t = e.constructor.name),
@@ -63,7 +63,7 @@ function g(e) {
                                                     "Arguments" === t ||
                                                     /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t)
                                                 )
-                                                    return o(e, void 0);
+                                                    return i(e, void 0);
                                             }
                                         })(e))
                                     ) {
@@ -85,7 +85,7 @@ function g(e) {
                                         "Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.",
                                     );
                                 }
-                                var i,
+                                var o,
                                     a = !0,
                                     s = !1;
                                 return {
@@ -97,20 +97,20 @@ function g(e) {
                                         return (a = e.done), e;
                                     },
                                     e: function (e) {
-                                        (s = !0), (i = e);
+                                        (s = !0), (o = e);
                                     },
                                     f: function () {
                                         try {
                                             a || null == t.return || t.return();
                                         } finally {
-                                            if (s) throw i;
+                                            if (s) throw o;
                                         }
                                     },
                                 };
                             })(n);
                         try {
-                            for (a.s(); !(i = a.n()).done; ) {
-                                let n = i.value;
+                            for (a.s(); !(o = a.n()).done; ) {
+                                let n = o.value;
                                 e(t, r, n);
                             }
                         } catch (e) {
@@ -118,7 +118,7 @@ function g(e) {
                         } finally {
                             a.f();
                         }
-                    } else if (c(n)) for (let o in n) p(n, o) && e(t, `${r}[${o}]`, n[o]);
+                    } else if (c(n)) for (let i in n) d(n, i) && e(t, `${r}[${i}]`, n[i]);
                     else t.push(encodeURI(r) + "=" + encodeURIComponent(n));
                 }
             })(t, r, e[r]);
@@ -128,9 +128,9 @@ function b(e) {
     let t,
         r,
         n = {},
-        o = e.split("&");
-    for (let e = 0, i = o.length; e < i; ++e)
-        -1 === (r = (t = o[e]).indexOf("="))
+        i = e.split("&");
+    for (let e = 0, o = i.length; e < o; ++e)
+        -1 === (r = (t = i[e]).indexOf("="))
             ? (n[decodeURIComponent(t)] = "")
             : (n[decodeURIComponent(t.slice(0, r))] = decodeURIComponent(t.slice(r + 1)));
     return n;
@@ -154,12 +154,12 @@ function _(e) {
             let t,
                 r,
                 n,
-                o,
-                i = e.split(/\r?\n/),
+                i,
+                o = e.split(/\r?\n/),
                 a = {};
-            for (let e = 0, s = i.length; e < s; ++e)
-                -1 !== (t = (r = i[e]).indexOf(":")) &&
-                    ((n = r.slice(0, t).toLowerCase()), (o = y(r.slice(t + 1))), (a[n] = o));
+            for (let e = 0, s = o.length; e < s; ++e)
+                -1 !== (t = (r = o[e]).indexOf(":")) &&
+                    ((n = r.slice(0, t).toLowerCase()), (i = y(r.slice(t + 1))), (a[n] = i));
             return a;
         })(this.xhr.getAllResponseHeaders())),
         (this.header = this.headers),
@@ -218,7 +218,7 @@ function S(e, t) {
     }),
     (v.serialize = { "application/x-www-form-urlencoded": s.stringify, "application/json": a }),
     (v.parse = { "application/x-www-form-urlencoded": b, "application/json": JSON.parse }),
-    f(_.prototype, d.prototype),
+    f(_.prototype, p.prototype),
     (_.prototype._parseBody = function (e) {
         let t = v.parse[this.type];
         return this.req._parser
@@ -234,7 +234,7 @@ function S(e, t) {
         return (n.status = this.status), (n.method = t), (n.url = r), n;
     }),
     (v.Response = _),
-    i(S.prototype),
+    o(S.prototype),
     f(S.prototype, l.prototype),
     (S.prototype.type = function (e) {
         return this.set("Content-Type", v.types[e] || e), this;
@@ -362,7 +362,7 @@ function S(e, t) {
             !t && w(e) && (t = v.serialize["application/json"]), t && (r = t(r));
         }
         for (let e in this.header)
-            null !== this.header[e] && p(this.header, e) && t.setRequestHeader(e, this.header[e]);
+            null !== this.header[e] && d(this.header, e) && t.setRequestHeader(e, this.header[e]);
         this._responseType && (t.responseType = this._responseType),
             this.emit("request", this),
             t.send(void 0 === r ? null : r);

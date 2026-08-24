@@ -945,8 +945,8 @@ var eM = n(280450),
 function eJ() {
     let e = (0, eZ.GV)(),
         t = window.GLOBAL_ENV.RELEASE_CHANNEL,
-        n = "599870",
-        s = "8e03ad974c60c036011a4a8447775e5ba1dd4692".substring(0, 7),
+        n = "600016",
+        s = "7fad524a64a01e9a161d2011d399a3cb3fbc39da".substring(0, 7),
         r = eX.A?.app.getVersion(),
         l = eX.A?.app.getBuildNumber(),
         c = eX.A?.app.getAppArch(),
@@ -1117,8 +1117,8 @@ function e2() {
 var e5 = n(402651),
     e7 = n(669067),
     e9 = n(830543),
-    e8 = n(953056);
-let e3 = new Set([eD.X.PROFILE_PANEL, eD.X.SUBSCRIPTIONS_PANEL, eD.X.FAMILY_CENTER_PANEL, eD.X.POGGERMODE_PANEL]),
+    e3 = n(953056);
+let e8 = new Set([eD.X.PROFILE_PANEL, eD.X.SUBSCRIPTIONS_PANEL, eD.X.FAMILY_CENTER_PANEL, eD.X.POGGERMODE_PANEL]),
     e4 = new Map([[eD.X.SESSIONS_PANEL, r.ImpressionNames.USER_SETTINGS_SESSIONS]]);
 function e6(e) {
     let { target: t, ...n } = e,
@@ -1146,7 +1146,7 @@ function e6(e) {
               emptyState: tt,
               sidebarFooter: e2,
               onViewChange: function (e) {
-                  e3.has(e) || (0, e7._)(e);
+                  e8.has(e) || (0, e7._)(e);
                   let t = e4.get(e);
                   null != t &&
                       (0, o.x)({
@@ -1185,14 +1185,14 @@ function te() {
             [],
         ),
         (0, i.jsx)("div", {
-            className: e8.P,
+            className: e3.P,
             children: (0, i.jsx)(l.I, { size: "md", query: e, onFocus: n, onBlur: r, onChange: t, onClear: a }),
         })
     );
 }
 function tt() {
     return (0, i.jsxs)("div", {
-        className: e8.t,
+        className: e3.t,
         children: [
             (0, i.jsx)(a.E, { variant: "text-sm/semibold", color: "text-strong", children: K.intl.string(K.t.zihbmv) }),
             (0, i.jsx)(a.E, { variant: "text-sm/normal", color: "text-subtle", children: K.intl.string(K.t.XclvsB) }),

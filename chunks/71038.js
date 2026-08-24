@@ -13,9 +13,9 @@ var n = (function () {
             return r && e(t.prototype, r), n && e(t, n), t;
         };
     })(),
-    o = r(652925);
+    i = r(652925);
 r(562210);
-var i = r(498121),
+var o = r(498121),
     a = r(540017),
     s = r(439834);
 e.exports = (function (e) {
@@ -28,8 +28,8 @@ e.exports = (function (e) {
             return t && ("object" == typeof t || "function" == typeof t) ? t : e;
         })(this, (t.__proto__ || Object.getPrototypeOf(t)).call(this));
         return (
-            (n._a = "number" == typeof e ? new i(e) : e),
-            (n._b = "number" == typeof r ? new i(r) : r),
+            (n._a = "number" == typeof e ? new o(e) : e),
+            (n._b = "number" == typeof r ? new o(r) : r),
             (n._listeners = {}),
             n
         );
@@ -91,4 +91,4 @@ e.exports = (function (e) {
         ]),
         t
     );
-})(o);
+})(i);

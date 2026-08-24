@@ -1,9 +1,9 @@
 "use strict";
 r.d(t, { Fe: () => l, HI: () => u, rd: () => s });
 var n = r(20853),
-    o = r(361037),
-    i = r(582128);
-let a = (0, i.createContext)({
+    i = r(361037),
+    o = r(582128);
+let a = (0, o.createContext)({
     isNative: !0,
     open: function (e, t) {
         if (e instanceof HTMLAnchorElement) l(e, t);
@@ -23,20 +23,20 @@ let a = (0, i.createContext)({
     useHref: (e) => e,
 });
 function s() {
-    return (0, i.useContext)(a);
+    return (0, o.useContext)(a);
 }
 function l(e, t, r = !0) {
-    var i, a;
+    var o, a;
     let { metaKey: s, ctrlKey: u, altKey: c, shiftKey: f } = t;
-    (0, o.gm)() &&
-        (null == (a = window.event) || null == (i = a.type) ? void 0 : i.startsWith("key")) &&
+    (0, i.gm)() &&
+        (null == (a = window.event) || null == (o = a.type) ? void 0 : o.startsWith("key")) &&
         "_blank" === e.target &&
-        ((0, o.cX)() ? (s = !0) : (u = !0));
-    let p =
-        (0, o.Tc)() && (0, o.cX)() && !(0, o.bh)() && 1
+        ((0, i.cX)() ? (s = !0) : (u = !0));
+    let d =
+        (0, i.Tc)() && (0, i.cX)() && !(0, i.bh)() && 1
             ? new KeyboardEvent("keydown", { keyIdentifier: "Enter", metaKey: s, ctrlKey: u, altKey: c, shiftKey: f })
             : new MouseEvent("click", { metaKey: s, ctrlKey: u, altKey: c, shiftKey: f, bubbles: !0, cancelable: !0 });
-    (l.isOpening = r), (0, n.e)(e), e.dispatchEvent(p), (l.isOpening = !1);
+    (l.isOpening = r), (0, n.e)(e), e.dispatchEvent(d), (l.isOpening = !1);
 }
 function u(e) {
     var t;

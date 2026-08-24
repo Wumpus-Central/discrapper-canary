@@ -1,8 +1,8 @@
 "use strict";
 r.r(t), r.d(t, { Manager: () => a, usePopper: () => y, Reference: () => E, Popper: () => _ });
 var n = r(582128),
-    o = n.createContext(),
-    i = n.createContext();
+    i = n.createContext(),
+    o = n.createContext();
 function a(e) {
     var t = e.children,
         r = n.useState(null),
@@ -17,7 +17,7 @@ function a(e) {
     var u = n.useCallback(function (e) {
         l.current || s(e);
     }, []);
-    return n.createElement(o.Provider, { value: a }, n.createElement(i.Provider, { value: u }, t));
+    return n.createElement(i.Provider, { value: a }, n.createElement(o.Provider, { value: u }, t));
 }
 var s = function (e) {
         return Array.isArray(e) ? e[0] : e;
@@ -40,22 +40,22 @@ var s = function (e) {
         }, {});
     },
     f = "u" > typeof window && window.document && window.document.createElement ? n.useLayoutEffect : n.useEffect,
-    p = r(333007),
-    d = r(888767),
+    d = r(333007),
+    p = r(888767),
     h = r(412700),
     m = r.n(h),
     v = [],
     y = function (e, t, r) {
         void 0 === r && (r = {});
-        var o = n.useRef(null),
-            i = {
+        var i = n.useRef(null),
+            o = {
                 onFirstUpdate: r.onFirstUpdate,
                 placement: r.placement || "bottom",
                 strategy: r.strategy || "absolute",
                 modifiers: r.modifiers || v,
             },
             a = n.useState({
-                styles: { popper: { position: i.strategy, left: "0", top: "0" }, arrow: { position: "absolute" } },
+                styles: { popper: { position: o.strategy, left: "0", top: "0" }, arrow: { position: "absolute" } },
                 attributes: {},
             }),
             s = a[0],
@@ -68,7 +68,7 @@ var s = function (e) {
                     fn: function (e) {
                         var t = e.state,
                             r = Object.keys(t.elements);
-                        p.flushSync(function () {
+                        d.flushSync(function () {
                             l({
                                 styles: c(
                                     r.map(function (e) {
@@ -89,14 +89,14 @@ var s = function (e) {
             h = n.useMemo(
                 function () {
                     var e = {
-                        onFirstUpdate: i.onFirstUpdate,
-                        placement: i.placement,
-                        strategy: i.strategy,
-                        modifiers: [].concat(i.modifiers, [u, { name: "applyStyles", enabled: !1 }]),
+                        onFirstUpdate: o.onFirstUpdate,
+                        placement: o.placement,
+                        strategy: o.strategy,
+                        modifiers: [].concat(o.modifiers, [u, { name: "applyStyles", enabled: !1 }]),
                     };
-                    return m()(o.current, e) ? o.current || e : ((o.current = e), e);
+                    return m()(i.current, e) ? i.current || e : ((i.current = e), e);
                 },
-                [i.onFirstUpdate, i.placement, i.strategy, i.modifiers, u],
+                [o.onFirstUpdate, o.placement, o.strategy, o.modifiers, u],
             ),
             y = n.useRef();
         return (
@@ -109,7 +109,7 @@ var s = function (e) {
             f(
                 function () {
                     if (null != e && null != t) {
-                        var n = (r.createPopper || d.n)(e, t, h);
+                        var n = (r.createPopper || p.n)(e, t, h);
                         return (
                             (y.current = n),
                             function () {
@@ -137,15 +137,15 @@ var s = function (e) {
 function _(e) {
     var t = e.placement,
         r = void 0 === t ? "bottom" : t,
-        i = e.strategy,
-        a = void 0 === i ? "absolute" : i,
+        o = e.strategy,
+        a = void 0 === o ? "absolute" : o,
         l = e.modifiers,
         c = void 0 === l ? w : l,
         f = e.referenceElement,
-        p = e.onFirstUpdate,
-        d = e.innerRef,
+        d = e.onFirstUpdate,
+        p = e.innerRef,
         h = e.children,
-        m = n.useContext(o),
+        m = n.useContext(i),
         v = n.useState(null),
         _ = v[0],
         S = v[1],
@@ -154,9 +154,9 @@ function _(e) {
         k = x[1];
     n.useEffect(
         function () {
-            u(d, _);
+            u(p, _);
         },
-        [d, _],
+        [p, _],
     );
     var C = y(
             f || m,
@@ -166,18 +166,18 @@ function _(e) {
                     return {
                         placement: r,
                         strategy: a,
-                        onFirstUpdate: p,
+                        onFirstUpdate: d,
                         modifiers: [].concat(c, [{ name: "arrow", enabled: null != E, options: { element: E } }]),
                     };
                 },
-                [r, a, p, c, E],
+                [r, a, d, c, E],
             ),
         ),
         T = C.state,
         M = C.styles,
         P = C.forceUpdate,
         A = C.update,
-        O = n.useMemo(
+        I = n.useMemo(
             function () {
                 return {
                     ref: S,
@@ -192,19 +192,19 @@ function _(e) {
             },
             [S, k, r, T, M, A, P],
         );
-    return s(h)(O);
+    return s(h)(I);
 }
 var S = r(916822),
     x = r.n(S);
 function E(e) {
     var t = e.children,
         r = e.innerRef,
-        o = n.useContext(i),
+        i = n.useContext(o),
         a = n.useCallback(
             function (e) {
-                u(r, e), l(o, e);
+                u(r, e), l(i, e);
             },
-            [r, o],
+            [r, i],
         );
     return (
         n.useEffect(function () {
@@ -214,9 +214,9 @@ function E(e) {
         }, []),
         n.useEffect(
             function () {
-                x()(!!o, "`Reference` should not be used outside of a `Manager` component.");
+                x()(!!i, "`Reference` should not be used outside of a `Manager` component.");
             },
-            [o],
+            [i],
         ),
         s(t)({ ref: a })
     );

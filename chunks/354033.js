@@ -1,4 +1,4 @@
-n.d(t, { X: () => x, Y: () => T });
+n.d(t, { X: () => T, Y: () => x });
 var l = n(477900);
 n(582128);
 var i = n(503698),
@@ -9,31 +9,31 @@ var i = n(503698),
     u = n(789645),
     c = n(834730),
     d = n(297264),
-    p = n(565645),
-    m = n(241524),
-    h = n(166532),
-    C = n(71393),
+    m = n(565645),
+    p = n(241524),
+    C = n(166532),
+    h = n(71393),
     f = n(371794),
     E = n(500345),
     S = n(599941),
     y = n(320137),
-    A = n(417360),
-    P = n(759625),
-    I = n(2242),
+    I = n(417360),
+    A = n(759625),
+    P = n(2242),
     g = n(375708),
     v = n(631907),
     _ = n(200791);
-function T(e) {
+function x(e) {
     let { onClose: t, listing: n, step: i, guildId: a } = e,
         s = (0, S.Tq)(a),
-        c = (0, m.A)(I.TQ),
+        c = (0, p.A)(P.TQ),
         d = (function () {
             if (c) return null;
             let e =
                 s?.cover_image_asset?.application_id != null
                     ? (0, f.YE)(s.cover_image_asset.application_id, s.cover_image_asset, 440)
                     : void 0;
-            return null == e && i !== h.pn.CONFIRM
+            return null == e && i !== C.pn.CONFIRM
                 ? null
                 : null == e
                   ? (0, l.jsx)("div", { className: v.gI })
@@ -44,7 +44,7 @@ function T(e) {
         children: [
             d,
             (function () {
-                if (i !== h.pn.CONFIRM) return null;
+                if (i !== C.pn.CONFIRM) return null;
                 let e = null == n.image_asset ? void 0 : (0, f.YE)(n.application_id, n.image_asset, 80);
                 return (0, l.jsx)("div", {
                     className: v.z9,
@@ -60,12 +60,12 @@ function T(e) {
         ],
     });
 }
-function x(e) {
+function T(e) {
     let { onClose: t, listing: n, guildId: i } = e,
-        r = (0, a.bG)([C.A], () => C.A.getGuild(i), [i]),
+        r = (0, a.bG)([h.A], () => h.A.getGuild(i), [i]),
         o = (0, y.A)(i).filter((e) => e.roles.includes(n.role_id)),
         u = n.role_benefits.benefits.filter(E.B1).slice(0, null === o.length ? 4 : 3),
-        m = (0, A.A)(u).slice(0, null === o.length ? 4 : 3);
+        p = (0, I.A)(u).slice(0, null === o.length ? 4 : 3);
     return (0, l.jsxs)("div", {
         className: v.RP,
         children: [
@@ -81,7 +81,7 @@ function x(e) {
                 color: "text-default",
                 children: g.intl.format(g.t.oi3gip, { tier: n.name }),
             }),
-            m.length > 0 &&
+            p.length > 0 &&
                 (0, l.jsxs)(l.Fragment, {
                     children: [
                         (0, l.jsx)(c.E, {
@@ -92,8 +92,8 @@ function x(e) {
                         }),
                         (0, l.jsx)("div", {
                             className: v.M3,
-                            children: m.map((e) =>
-                                (0, l.jsx)(P.A, { benefit: e, guildId: i, onClick: () => t(!0) }, (0, E.nh)(e)),
+                            children: p.map((e) =>
+                                (0, l.jsx)(A.A, { benefit: e, guildId: i, onClick: () => t(!0) }, (0, E.nh)(e)),
                             ),
                         }),
                     ],
@@ -112,7 +112,7 @@ function x(e) {
                         (0, l.jsxs)("div", {
                             className: v.DI,
                             children: [
-                                (0, l.jsx)(p.A, {
+                                (0, l.jsx)(m.A, {
                                     emojiId: e.id,
                                     emojiName: e.name,
                                     animated: e.animated ?? !1,

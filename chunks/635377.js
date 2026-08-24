@@ -1,12 +1,12 @@
 e.exports = c;
 var n,
-    o = r(416228),
-    i = r(41835),
+    i = r(416228),
+    o = r(41835),
     a = r(971882),
     s = {};
 function l(e, t, r) {
-    var o;
-    return (s[t] ? (o = s[t]) : ((o = n(t)), (s[t] = o)), 2 == arguments.length) ? e[o] : ((e[o] = r), r);
+    var i;
+    return (s[t] ? (i = s[t]) : ((i = n(t)), (s[t] = i)), 2 == arguments.length) ? e[i] : ((e[i] = r), r);
 }
 function u() {
     return 1;
@@ -25,19 +25,19 @@ function c(e) {
         this.reset();
 }
 function f(e, t, r, n) {
-    var o = r.value;
-    d(e, o) && (m(e, r), l(e, "allowStale") || (o = void 0)), o && t.call(n, o.value, o.key, e);
+    var i = r.value;
+    p(e, i) && (m(e, r), l(e, "allowStale") || (i = void 0)), i && t.call(n, i.value, i.key, e);
 }
-function p(e, t, r) {
+function d(e, t, r) {
     var n = l(e, "cache").get(t);
     if (n) {
-        var o = n.value;
-        d(e, o) ? (m(e, n), l(e, "allowStale") || (o = void 0)) : r && l(e, "lruList").unshiftNode(n),
-            o && (o = o.value);
+        var i = n.value;
+        p(e, i) ? (m(e, n), l(e, "allowStale") || (i = void 0)) : r && l(e, "lruList").unshiftNode(n),
+            i && (i = i.value);
     }
-    return o;
+    return i;
 }
-function d(e, t) {
+function p(e, t) {
     if (!t || (!t.maxAge && !l(e, "maxAge"))) return !1;
     var r = Date.now() - t.now;
     return t.maxAge ? r > t.maxAge : l(e, "maxAge") && r > l(e, "maxAge");
@@ -58,8 +58,8 @@ function m(e, t) {
             l(e, "lruList").removeNode(t);
     }
 }
-function v(e, t, r, n, o) {
-    (this.key = e), (this.value = t), (this.length = r), (this.now = n), (this.maxAge = o || 0);
+function v(e, t, r, n, i) {
+    (this.key = e), (this.value = t), (this.length = r), (this.now = n), (this.maxAge = i || 0);
 }
 (n =
     "function" == typeof Symbol
@@ -160,14 +160,14 @@ function v(e, t, r, n, o) {
             l(this, "lruList").forEach(function (e) {
                 l(this, "dispose").call(this, e.key, e.value);
             }, this),
-            l(this, "cache", new o()),
+            l(this, "cache", new i()),
             l(this, "lruList", new a()),
             l(this, "length", 0);
     }),
     (c.prototype.dump = function () {
         return l(this, "lruList")
             .map(function (e) {
-                if (!d(this, e)) return { k: e.key, v: e.value, e: e.now + (e.maxAge || 0) };
+                if (!p(this, e)) return { k: e.key, v: e.value, e: e.now + (e.maxAge || 0) };
             }, this)
             .toArray()
             .filter(function (e) {
@@ -181,23 +181,23 @@ function v(e, t, r, n, o) {
         var r = "LRUCache {",
             n = !1;
         l(this, "allowStale") && ((r += "\n  allowStale: true"), (n = !0));
-        var o = l(this, "max");
-        o && o !== 1 / 0 && (n && (r += ","), (r += "\n  max: " + i.inspect(o, t)), (n = !0));
+        var i = l(this, "max");
+        i && i !== 1 / 0 && (n && (r += ","), (r += "\n  max: " + o.inspect(i, t)), (n = !0));
         var a = l(this, "maxAge");
-        a && (n && (r += ","), (r += "\n  maxAge: " + i.inspect(a, t)), (n = !0));
+        a && (n && (r += ","), (r += "\n  maxAge: " + o.inspect(a, t)), (n = !0));
         var s = l(this, "lengthCalculator");
-        s && s !== u && (n && (r += ","), (r += "\n  length: " + i.inspect(l(this, "length"), t)), (n = !0));
+        s && s !== u && (n && (r += ","), (r += "\n  length: " + o.inspect(l(this, "length"), t)), (n = !0));
         var c = !1;
         return (
             l(this, "lruList").forEach(function (e) {
                 c ? (r += ",\n  ") : (n && (r += ",\n"), (c = !0), (r += "\n  "));
-                var o = i.inspect(e.key).split("\n").join("\n  "),
+                var i = o.inspect(e.key).split("\n").join("\n  "),
                     l = { value: e.value };
                 e.maxAge !== a && (l.maxAge = e.maxAge),
                     s !== u && (l.length = e.length),
-                    d(this, e) && (l.stale = !0),
-                    (l = i.inspect(l, t).split("\n").join("\n  ")),
-                    (r += o + " => " + l);
+                    p(this, e) && (l.stale = !0),
+                    (l = o.inspect(l, t).split("\n").join("\n  ")),
+                    (r += i + " => " + l);
             }),
             (c || n) && (r += "\n"),
             (r += "}")
@@ -205,23 +205,23 @@ function v(e, t, r, n, o) {
     }),
     (c.prototype.set = function (e, t, r) {
         var n = (r = r || l(this, "maxAge")) ? Date.now() : 0,
-            o = l(this, "lengthCalculator").call(this, t, e);
+            i = l(this, "lengthCalculator").call(this, t, e);
         if (l(this, "cache").has(e)) {
-            if (o > l(this, "max")) return m(this, l(this, "cache").get(e)), !1;
-            var i = l(this, "cache").get(e).value;
+            if (i > l(this, "max")) return m(this, l(this, "cache").get(e)), !1;
+            var o = l(this, "cache").get(e).value;
             return (
-                l(this, "dispose") && l(this, "dispose").call(this, e, i.value),
-                (i.now = n),
-                (i.maxAge = r),
-                (i.value = t),
-                l(this, "length", l(this, "length") + (o - i.length)),
-                (i.length = o),
+                l(this, "dispose") && l(this, "dispose").call(this, e, o.value),
+                (o.now = n),
+                (o.maxAge = r),
+                (o.value = t),
+                l(this, "length", l(this, "length") + (i - o.length)),
+                (o.length = i),
                 this.get(e),
                 h(this),
                 !0
             );
         }
-        var a = new v(e, t, o, n, r);
+        var a = new v(e, t, i, n, r);
         return a.length > l(this, "max")
             ? (l(this, "dispose") && l(this, "dispose").call(this, e, t), !1)
             : (l(this, "length", l(this, "length") + a.length),
@@ -231,13 +231,13 @@ function v(e, t, r, n, o) {
               !0);
     }),
     (c.prototype.has = function (e) {
-        return !(!l(this, "cache").has(e) || d(this, l(this, "cache").get(e).value));
+        return !(!l(this, "cache").has(e) || p(this, l(this, "cache").get(e).value));
     }),
     (c.prototype.get = function (e) {
-        return p(this, e, !0);
+        return d(this, e, !0);
     }),
     (c.prototype.peek = function (e) {
-        return p(this, e, !1);
+        return d(this, e, !1);
     }),
     (c.prototype.pop = function () {
         var e = l(this, "lruList").tail;
@@ -250,17 +250,17 @@ function v(e, t, r, n, o) {
         this.reset();
         for (var t = Date.now(), r = e.length - 1; r >= 0; r--) {
             var n = e[r],
-                o = n.e || 0;
-            if (0 === o) this.set(n.k, n.v);
+                i = n.e || 0;
+            if (0 === i) this.set(n.k, n.v);
             else {
-                var i = o - t;
-                i > 0 && this.set(n.k, n.v, i);
+                var o = i - t;
+                o > 0 && this.set(n.k, n.v, o);
             }
         }
     }),
     (c.prototype.prune = function () {
         var e = this;
         l(this, "cache").forEach(function (t, r) {
-            p(e, r, !1);
+            d(e, r, !1);
         });
     });

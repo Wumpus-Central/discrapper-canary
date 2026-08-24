@@ -1,14 +1,14 @@
 "use strict";
-r.d(t, { CH: () => i, H5: () => o, NQ: () => a });
+r.d(t, { CH: () => o, H5: () => i, NQ: () => a });
 var n = r(582128),
-    o = function (e) {
+    i = function (e) {
         return (0, n.useEffect)(e, []);
     },
-    i = function () {
+    o = function () {
         var e = (0, n.useState)(0)[1],
             t = (0, n.useRef)(!1);
         return (
-            o(function () {
+            i(function () {
                 return function () {
                     t.current = !0;
                 };

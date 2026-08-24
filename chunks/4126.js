@@ -1,4 +1,4 @@
-n.d(t, { Mx: () => y, kj: () => E, iH: () => A, KF: () => f, ri: () => S, $K: () => P });
+n.d(t, { Mx: () => y, kj: () => E, iH: () => I, KF: () => f, ri: () => S, $K: () => A });
 var l = n(477900);
 n(582128);
 var i = n(503698),
@@ -9,17 +9,17 @@ var i = n(503698),
     u = n(565645),
     c = n(3432),
     d = n(575625);
-function p(e) {
+function m(e) {
     let t,
         { applicationId: n, storeListingBenefits: i, skuBenefits: r, className: a } = e;
     return (
         null != i
-            ? (t = i.map((e) => (0, l.jsx)(h, { applicationId: n, benefit: e, className: a }, e.id)))
-            : null != r && (t = r.map((e, t) => (0, l.jsx)(m, { benefit: e, className: a }, t))),
+            ? (t = i.map((e) => (0, l.jsx)(C, { applicationId: n, benefit: e, className: a }, e.id)))
+            : null != r && (t = r.map((e, t) => (0, l.jsx)(p, { benefit: e, className: a }, t))),
         t
     );
 }
-function m(e) {
+function p(e) {
     let {
         benefit: t,
         className: n,
@@ -55,7 +55,7 @@ function m(e) {
         ],
     });
 }
-function h(e) {
+function C(e) {
     let {
         applicationId: t,
         benefit: n,
@@ -63,7 +63,7 @@ function h(e) {
         emojiContainerClassName: a,
         showsDescription: s = !0,
         nameTextVariant: u = "text-md/medium",
-        nameTextColor: p = "text-strong",
+        nameTextColor: m = "text-strong",
     } = e;
     return (0, l.jsxs)("div", {
         className: r()(d.kL, i),
@@ -72,7 +72,7 @@ function h(e) {
             (0, l.jsxs)("div", {
                 className: d.op,
                 children: [
-                    (0, l.jsx)(o.E, { variant: u, color: p, className: d.UU, children: n.name }),
+                    (0, l.jsx)(o.E, { variant: u, color: m, className: d.UU, children: n.name }),
                     s &&
                         (0, l.jsx)(o.E, {
                             color: "interactive-text-default",
@@ -84,17 +84,17 @@ function h(e) {
         ],
     });
 }
-var C = n(877852);
+var h = n(877852);
 function f(e) {
     let { application: t, asset: n, className: i, ...r } = e;
     return (0, l.jsx)(s.A, { application: t, size: s.V.MEDIUM, asset: n, className: i, ...r });
 }
 function E(e) {
     let { children: t, className: n, id: i, ...s } = e;
-    return (0, l.jsx)(a.D, { className: r()(C.wx, n), variant: "heading-xl/extrabold", id: i, ...s, children: t });
+    return (0, l.jsx)(a.D, { className: r()(h.wx, n), variant: "heading-xl/extrabold", id: i, ...s, children: t });
 }
 function S() {
-    return (0, l.jsx)("hr", { className: C.yF });
+    return (0, l.jsx)("hr", { className: h.yF });
 }
 function y(e) {
     let { className: t, title: n, description: i, ...r } = e;
@@ -107,15 +107,15 @@ function y(e) {
         ],
     });
 }
-function A(e) {
+function I(e) {
     let { applicationId: t, storeListingBenefits: n, skuBenefits: i, className: a, ...s } = e;
     return (0, l.jsx)("div", {
-        className: r()(C.iq, a),
+        className: r()(h.iq, a),
         ...s,
-        children: (0, l.jsx)(p, { applicationId: t, storeListingBenefits: n, skuBenefits: i, className: C.gX }),
+        children: (0, l.jsx)(m, { applicationId: t, storeListingBenefits: n, skuBenefits: i, className: h.gX }),
     });
 }
-function P(e) {
+function A(e) {
     let { children: t, className: n, ...i } = e;
-    return (0, l.jsx)("div", { className: r()(C.kL, n), ...i, children: t });
+    return (0, l.jsx)("div", { className: r()(h.kL, n), ...i, children: t });
 }

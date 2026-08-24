@@ -17,11 +17,11 @@ e.exports = function () {
         ("function" == typeof Object.getOwnPropertyNames && 0 !== Object.getOwnPropertyNames(e).length)
     )
         return !1;
-    var o = Object.getOwnPropertySymbols(e);
-    if (1 !== o.length || o[0] !== t || !Object.prototype.propertyIsEnumerable.call(e, t)) return !1;
+    var i = Object.getOwnPropertySymbols(e);
+    if (1 !== i.length || i[0] !== t || !Object.prototype.propertyIsEnumerable.call(e, t)) return !1;
     if ("function" == typeof Object.getOwnPropertyDescriptor) {
-        var i = Object.getOwnPropertyDescriptor(e, t);
-        if (42 !== i.value || !0 !== i.enumerable) return !1;
+        var o = Object.getOwnPropertyDescriptor(e, t);
+        if (42 !== o.value || !0 !== o.enumerable) return !1;
     }
     return !0;
 };

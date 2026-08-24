@@ -1,14 +1,14 @@
 "use strict";
 Object.defineProperty(t, "__esModule", { value: !0 }), (t.IntlManager = t.DEFAULT_LOCALE = void 0);
 let n = r(731244),
-    o = r(765688),
-    i = r(645880);
+    i = r(765688),
+    o = r(645880);
 (t.DEFAULT_LOCALE = "en-US"),
     (t.IntlManager = class {
         constructor({
             initialLocale: e = t.DEFAULT_LOCALE,
             defaultLocale: r = t.DEFAULT_LOCALE,
-            formatConfig: o = n.DEFAULT_FORMAT_CONFIG,
+            formatConfig: i = n.DEFAULT_FORMAT_CONFIG,
             forceLookupMatcher: a = !1,
         }) {
             (this.onLocaleChange = (e) => (
@@ -16,9 +16,9 @@ let n = r(731244),
             )),
                 (this.currentLocale = e),
                 (this.defaultLocale = r),
-                (this.formatConfig = o),
+                (this.formatConfig = i),
                 (this._forceLookupMatcher = a),
-                (this.data = (0, i.makeDataFormatters)(
+                (this.data = (0, o.makeDataFormatters)(
                     [this.currentLocale, this.defaultLocale],
                     this.formatConfig,
                     this._forceLookupMatcher,
@@ -35,7 +35,7 @@ let n = r(731244),
         }
         setLocale(e) {
             (this.currentLocale = e),
-                (this.data = (0, i.makeDataFormatters)(
+                (this.data = (0, o.makeDataFormatters)(
                     [this.currentLocale, this.defaultLocale],
                     this.formatConfig,
                     this._forceLookupMatcher,
@@ -54,7 +54,7 @@ let n = r(731244),
             return "string" == typeof t ? t : t.reserialize();
         }
         bindFormatValues(e, t, r) {
-            return (0, o.bindFormatValues)({
+            return (0, i.bindFormatValues)({
                 Builder: e,
                 nodes: t.ast,
                 locales: [this.currentLocale, this.defaultLocale],

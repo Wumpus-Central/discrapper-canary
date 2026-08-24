@@ -1,13 +1,13 @@
 "use strict";
 function t(e) {
-    if (((this._capacity = o(e)), (this._length = 0), (this._front = 0), this._makeCapacity(), r(e))) {
+    if (((this._capacity = i(e)), (this._length = 0), (this._front = 0), this._makeCapacity(), r(e))) {
         for (var t = e.length, n = 0; n < t; ++n) this[n] = e[n];
         this._length = t;
     }
 }
 (t.prototype.toArray = function () {
-    for (var e = this._length, t = Array(e), r = this._front, n = this._capacity, o = 0; o < e; ++o)
-        t[o] = this[(r + o) & (n - 1)];
+    for (var e = this._length, t = Array(e), r = this._front, n = this._capacity, i = 0; i < e; ++i)
+        t[i] = this[(r + i) & (n - 1)];
     return t;
 }),
     (t.prototype.push = function (e) {
@@ -16,20 +16,20 @@ function t(e) {
         if (t > 1) {
             var n = this._capacity;
             if (r + t > n) {
-                for (var o = 0; o < t; ++o) {
+                for (var i = 0; i < t; ++i) {
                     this._checkCapacity(r + 1);
-                    var i = (this._front + r) & (this._capacity - 1);
-                    (this[i] = arguments[o]), r++, (this._length = r);
+                    var o = (this._front + r) & (this._capacity - 1);
+                    (this[o] = arguments[i]), r++, (this._length = r);
                 }
                 return r;
             }
-            for (var i = this._front, o = 0; o < t; ++o) (this[(i + r) & (n - 1)] = arguments[o]), i++;
+            for (var o = this._front, i = 0; i < t; ++i) (this[(o + r) & (n - 1)] = arguments[i]), o++;
             return (this._length = r + t), r + t;
         }
         if (0 === t) return r;
         this._checkCapacity(r + 1);
-        var o = (this._front + r) & (this._capacity - 1);
-        return (this[o] = e), (this._length = r + 1), r + 1;
+        var i = (this._front + r) & (this._capacity - 1);
+        return (this[i] = e), (this._length = r + 1), r + 1;
     }),
     (t.prototype.pop = function () {
         var e = this._length;
@@ -53,25 +53,25 @@ function t(e) {
         if (r > 1) {
             var n = this._capacity;
             if (t + r > n) {
-                for (var o = r - 1; o >= 0; o--) {
+                for (var i = r - 1; i >= 0; i--) {
                     this._checkCapacity(t + 1);
                     var n = this._capacity,
-                        i = (((this._front - 1) & (n - 1)) ^ n) - n;
-                    (this[i] = arguments[o]), t++, (this._length = t), (this._front = i);
+                        o = (((this._front - 1) & (n - 1)) ^ n) - n;
+                    (this[o] = arguments[i]), t++, (this._length = t), (this._front = o);
                 }
                 return t;
             }
-            for (var a = this._front, o = r - 1; o >= 0; o--) {
-                var i = (((a - 1) & (n - 1)) ^ n) - n;
-                (this[i] = arguments[o]), (a = i);
+            for (var a = this._front, i = r - 1; i >= 0; i--) {
+                var o = (((a - 1) & (n - 1)) ^ n) - n;
+                (this[o] = arguments[i]), (a = o);
             }
             return (this._front = a), (this._length = t + r), t + r;
         }
         if (0 === r) return t;
         this._checkCapacity(t + 1);
         var n = this._capacity,
-            o = (((this._front - 1) & (n - 1)) ^ n) - n;
-        return (this[o] = e), (this._length = t + 1), (this._front = o), t + 1;
+            i = (((this._front - 1) & (n - 1)) ^ n) - n;
+        return (this[i] = e), (this._length = t + 1), (this._front = i), t + 1;
     }),
     (t.prototype.peekBack = function () {
         var e = this._length;
@@ -116,25 +116,25 @@ function t(e) {
         for (var e = this._capacity, t = 0; t < e; ++t) this[t] = void 0;
     }),
     (t.prototype._checkCapacity = function (e) {
-        this._capacity < e && this._resizeTo(o(1.5 * this._capacity + 16));
+        this._capacity < e && this._resizeTo(i(1.5 * this._capacity + 16));
     }),
     (t.prototype._resizeTo = function (e) {
         var t = this._front,
             r = this._capacity,
-            o = Array(r),
-            i = this._length;
-        if ((n(this, 0, o, 0, r), (this._capacity = e), this._makeCapacity(), (this._front = 0), t + i <= r))
-            n(o, t, this, 0, i);
+            i = Array(r),
+            o = this._length;
+        if ((n(this, 0, i, 0, r), (this._capacity = e), this._makeCapacity(), (this._front = 0), t + o <= r))
+            n(i, t, this, 0, o);
         else {
-            var a = i - ((t + i) & (r - 1));
-            n(o, t, this, 0, a), n(o, 0, this, a, i - a);
+            var a = o - ((t + o) & (r - 1));
+            n(i, t, this, 0, a), n(i, 0, this, a, o - a);
         }
     });
 var r = Array.isArray;
-function n(e, t, r, n, o) {
-    for (var i = 0; i < o; ++i) r[i + n] = e[i + t];
+function n(e, t, r, n, i) {
+    for (var o = 0; o < i; ++o) r[o + n] = e[o + t];
 }
-function o(e) {
+function i(e) {
     var t;
     if ("number" != typeof e)
         if (!r(e)) return 16;

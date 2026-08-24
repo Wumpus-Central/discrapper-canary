@@ -1,12 +1,12 @@
 "use strict";
 let n = r(20816),
-    o = r(978884),
-    i = r(597084),
+    i = r(978884),
+    o = r(597084),
     a = () => {},
-    s = new o.TimeoutError();
+    s = new i.TimeoutError();
 t.default = class extends n {
     constructor(e) {
-        var t, r, n, o;
+        var t, r, n, i;
         if (
             (super(),
             (this._intervalCount = 0),
@@ -23,7 +23,7 @@ t.default = class extends n {
                             interval: 0,
                             concurrency: 1 / 0,
                             autoStart: !0,
-                            queueClass: i.default,
+                            queueClass: o.default,
                         },
                         e,
                     )).intervalCap && e.intervalCap >= 1
@@ -34,7 +34,7 @@ t.default = class extends n {
             );
         if (void 0 === e.interval || !(Number.isFinite(e.interval) && e.interval >= 0))
             throw TypeError(
-                `Expected \`interval\` to be a finite number >= 0, got \`${null != ((o = null == (n = e.interval) ? void 0 : n.toString())) ? o : ""}\` (${typeof e.interval})`,
+                `Expected \`interval\` to be a finite number >= 0, got \`${null != ((i = null == (n = e.interval) ? void 0 : n.toString())) ? i : ""}\` (${typeof e.interval})`,
             );
         (this._carryoverConcurrencyCount = e.carryoverConcurrencyCount),
             (this._isIntervalIgnored = e.intervalCap === 1 / 0 || 0 === e.interval),
@@ -126,22 +126,22 @@ t.default = class extends n {
     }
     async add(e, t = {}) {
         return new Promise((r, n) => {
-            let i = async () => {
+            let o = async () => {
                 this._pendingCount++, this._intervalCount++;
                 try {
-                    let i =
+                    let o =
                         void 0 === this._timeout && void 0 === t.timeout
                             ? e()
-                            : o.default(Promise.resolve(e()), void 0 === t.timeout ? this._timeout : t.timeout, () => {
+                            : i.default(Promise.resolve(e()), void 0 === t.timeout ? this._timeout : t.timeout, () => {
                                   (void 0 === t.throwOnTimeout ? this._throwOnTimeout : t.throwOnTimeout) && n(s);
                               });
-                    r(await i);
+                    r(await o);
                 } catch (e) {
                     n(e);
                 }
                 this._next();
             };
-            this._queue.enqueue(i, t), this._tryToStartAnother(), this.emit("add");
+            this._queue.enqueue(o, t), this._tryToStartAnother(), this.emit("add");
         });
     }
     async addAll(e, t) {

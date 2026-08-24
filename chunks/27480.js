@@ -3,16 +3,16 @@ function n(e) {
     return e && "object" == typeof e && "default" in e ? e.default : e;
 }
 Object.defineProperty(t, "__esModule", { value: !0 });
-var o = n(r(901012)),
-    i = r(666764),
+var i = n(r(901012)),
+    o = r(666764),
     a = r(333007),
     s = r(54482),
     l = n(r(271104)),
     u = r(472090),
     c = r(675106),
     f = n(r(269274)),
-    p = /^--/,
-    d = {},
+    d = /^--/,
+    p = {},
     h = {
         animationIterationCount: !0,
         borderImageOutset: !0,
@@ -84,13 +84,13 @@ var v = /^(matrix|translate|scale|rotate|skew)/,
         function t(t) {
             var r = t.x,
                 n = t.y,
-                i = t.z,
-                a = o(t, ["x", "y", "z"]),
+                o = t.z,
+                a = i(t, ["x", "y", "z"]),
                 s = [],
                 l = [];
             return (
-                (r || n || i) &&
-                    (s.push([r || 0, n || 0, i || 0]),
+                (r || n || o) &&
+                    (s.push([r || 0, n || 0, o || 0]),
                     l.push(function (e) {
                         return [
                             "translate3d(" +
@@ -118,9 +118,9 @@ var v = /^(matrix|translate|scale|rotate|skew)/,
                                     ? function (e) {
                                           var t = e[0],
                                               n = e[1],
-                                              o = e[2],
-                                              i = e[3];
-                                          return ["rotate3d(" + t + "," + n + "," + o + "," + b(i, r) + ")", w(i, 0)];
+                                              i = e[2],
+                                              o = e[3];
+                                          return ["rotate3d(" + t + "," + n + "," + i + "," + b(o, r) + ")", w(o, 0)];
                                       }
                                     : function (e) {
                                           return [
@@ -166,9 +166,9 @@ var v = /^(matrix|translate|scale|rotate|skew)/,
                     t = "",
                     r = !0;
                 return (
-                    c.each(this.inputs, function (n, o) {
-                        var i = c.getFluidValue(n[0]),
-                            a = e.transforms[o](c.is.arr(i) ? i : n.map(c.getFluidValue)),
+                    c.each(this.inputs, function (n, i) {
+                        var o = c.getFluidValue(n[0]),
+                            a = e.transforms[i](c.is.arr(o) ? o : n.map(c.getFluidValue)),
                             s = a[0],
                             l = a[1];
                         (t += " " + s), (r = r && l);
@@ -207,7 +207,7 @@ var v = /^(matrix|translate|scale|rotate|skew)/,
             t
         );
     })(c.FluidValue);
-i.Globals.assign({
+o.Globals.assign({
     colorNames: l,
     createStringInterpolator: s.createStringInterpolator,
     batchedUpdates: a.unstable_batchedUpdates,
@@ -353,32 +353,32 @@ var x = u.createHost(
             if (!e.nodeType || !e.setAttribute) return !1;
             var r = "filter" === e.nodeName || (e.parentNode && "filter" === e.parentNode.nodeName),
                 n = t.style,
-                i = t.children,
+                o = t.children,
                 a = t.scrollTop,
                 s = t.scrollLeft,
-                l = o(t, ["style", "children", "scrollTop", "scrollLeft"]),
+                l = i(t, ["style", "children", "scrollTop", "scrollLeft"]),
                 u = Object.values(l),
                 f = Object.keys(l).map(function (t) {
                     return r || e.hasAttribute(t)
                         ? t
-                        : d[t] ||
-                              (d[t] = t.replace(/([A-Z])/g, function (e) {
+                        : p[t] ||
+                              (p[t] = t.replace(/([A-Z])/g, function (e) {
                                   return "-" + e.toLowerCase();
                               }));
                 });
             c.Globals.frameLoop.onWrite(function () {
-                for (var t in (void 0 !== i && (e.textContent = i), n))
+                for (var t in (void 0 !== o && (e.textContent = o), n))
                     if (n.hasOwnProperty(t)) {
                         var r,
-                            o,
+                            i,
                             l =
                                 ((r = t),
-                                null == (o = n[t]) || "boolean" == typeof o || "" === o
+                                null == (i = n[t]) || "boolean" == typeof i || "" === i
                                     ? ""
-                                    : "number" != typeof o || 0 === o || p.test(r) || (h.hasOwnProperty(r) && h[r])
-                                      ? ("" + o).trim()
-                                      : o + "px");
-                        "float" === t ? (t = "cssFloat") : p.test(t) ? e.style.setProperty(t, l) : (e.style[t] = l);
+                                    : "number" != typeof i || 0 === i || d.test(r) || (h.hasOwnProperty(r) && h[r])
+                                      ? ("" + i).trim()
+                                      : i + "px");
+                        "float" === t ? (t = "cssFloat") : d.test(t) ? e.style.setProperty(t, l) : (e.style[t] = l);
                     }
                 f.forEach(function (t, r) {
                     e.setAttribute(t, u[r]);
@@ -391,16 +391,16 @@ var x = u.createHost(
             return new _(e);
         },
         getComponentProps: function (e) {
-            return e.scrollTop, e.scrollLeft, o(e, ["scrollTop", "scrollLeft"]);
+            return e.scrollTop, e.scrollLeft, i(e, ["scrollTop", "scrollLeft"]);
         },
     },
 ).animated;
-Object.keys(i).forEach(function (e) {
+Object.keys(o).forEach(function (e) {
     "default" !== e &&
         Object.defineProperty(t, e, {
             enumerable: !0,
             get: function () {
-                return i[e];
+                return o[e];
             },
         });
 }),

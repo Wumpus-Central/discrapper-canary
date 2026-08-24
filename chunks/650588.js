@@ -8,29 +8,29 @@ var l = n(477900),
     u = n(922016),
     c = n(305866),
     d = n(939249),
-    p = n(7807),
-    m = n(807348),
-    h = n(484036),
-    C = n(375708),
+    m = n(7807),
+    p = n(807348),
+    C = n(484036),
+    h = n(375708),
     f = n(649028);
 let E = [54, 8, 8, 8];
 function S(e) {
     let { onSelect: t, sound: n } = e,
         [r, S] = i.useState(!1),
         y = i.useRef(null),
-        A = a()(f.Qq, f.Ow);
-    function P(e) {
+        I = a()(f.Qq, f.Ow);
+    function A(e) {
         S(!1), t?.(e);
     }
-    function I(e) {
+    function P(e) {
         return (0, l.jsxs)("div", {
             className: f.Ry,
             children: [
                 (0, l.jsxs)("div", {
                     className: f.__invalid_customGiftHeaderText,
                     children: [
-                        (0, l.jsx)(o.E, { variant: "text-md/bold", children: C.intl.string(C.t.aThJz8) }),
-                        (0, l.jsx)(o.E, { variant: "text-sm/normal", children: C.intl.string(C.t.stGFA3) }),
+                        (0, l.jsx)(o.E, { variant: "text-md/bold", children: h.intl.string(h.t.aThJz8) }),
+                        (0, l.jsx)(o.E, { variant: "text-sm/normal", children: h.intl.string(h.t.stGFA3) }),
                     ],
                 }),
                 (0, l.jsx)("div", { className: f.$H, children: e }),
@@ -46,17 +46,17 @@ function S(e) {
         renderPopout: (e) => {
             let { closePopout: t } = e;
             return (0, l.jsx)(c.l, {
-                children: (0, l.jsx)(h.A, {
+                children: (0, l.jsx)(C.A, {
                     suppressPlaySound: !0,
                     shouldShowLockedSounds: !1,
                     guildId: null,
                     channel: null,
                     onClose: t,
-                    onSelect: P,
+                    onSelect: A,
                     analyticsSource: "gift soundboard",
-                    soundButtonOverlay: m.If.ADD,
+                    soundButtonOverlay: p.If.ADD,
                     listPadding: E,
-                    renderHeader: I,
+                    renderHeader: P,
                     defaultSoundsOnly: !0,
                 }),
             });
@@ -71,7 +71,7 @@ function S(e) {
                         ? (0, l.jsxs)("div", {
                               className: f.hQ,
                               children: [
-                                  (0, l.jsx)(p.J, {
+                                  (0, l.jsx)(m.J, {
                                       size: "custom",
                                       color: s.A.colors.ICON_STRONG,
                                       className: f.tc,
@@ -79,10 +79,10 @@ function S(e) {
                                       height: 14,
                                   }),
                                   (0, l.jsx)(o.E, {
-                                      className: A,
+                                      className: I,
                                       variant: "text-sm/semibold",
                                       lineClamp: 1,
-                                      children: C.intl.string(C.t.aThJz8),
+                                      children: h.intl.string(h.t.aThJz8),
                                   }),
                               ],
                           })
@@ -90,13 +90,13 @@ function S(e) {
                               className: f.hQ,
                               children: [
                                   (0, l.jsx)(o.E, {
-                                      className: A,
+                                      className: I,
                                       variant: "text-sm/semibold",
                                       lineClamp: 1,
                                       children: n.emojiName,
                                   }),
                                   (0, l.jsx)(o.E, {
-                                      className: A,
+                                      className: I,
                                       variant: "text-sm/semibold",
                                       lineClamp: 1,
                                       children: n.name,

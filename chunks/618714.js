@@ -4,16 +4,16 @@ var n;
     var e,
         t,
         n,
-        o,
         i,
+        o,
         a,
         s,
         l,
         u = "u" > typeof window ? window : (r.g, r.g),
         c = (u.cancelRequestAnimationFrame && u.requestAnimationFrame) || setTimeout,
         f = u.cancelRequestAnimationFrame || clearTimeout,
-        p = [],
-        d = 0,
+        d = [],
+        p = 0,
         h = !1,
         m = 7,
         v = 35,
@@ -34,12 +34,12 @@ var n;
             ((e = function () {
                 (m = 22), (y = 66), (v = 0);
             }),
-            (o = function () {
+            (i = function () {
                 var r = Date.now() - n;
-                r < 99 ? (t = setTimeout(o, 99 - r)) : ((t = null), e());
+                r < 99 ? (t = setTimeout(i, 99 - r)) : ((t = null), e());
             }),
             function () {
-                (n = Date.now()), t || (t = setTimeout(o, 99));
+                (n = Date.now()), t || (t = setTimeout(i, 99));
             });
     function x() {
         125 != y && ((m = 7), (y = 125), (v = 35), h && (h && (l && f(l), s && clearTimeout(s), (h = !1)), C())), S();
@@ -53,7 +53,7 @@ var n;
     function C() {
         h ||
             ((a = y - (Date.now() - b)),
-            (i = Date.now()),
+            (o = Date.now()),
             (h = !0),
             v && a < v && (a = v),
             a > 9 ? (s = setTimeout(k, a)) : ((a = 0), k()));
@@ -63,16 +63,16 @@ var n;
             t,
             r,
             n = m > 9 ? 9 : 1;
-        if (((b = Date.now()), (h = !1), (s = null), d > 2 || b - a - 50 < i))
-            for (t = 0, r = p.length; t < r && _.timeRemaining() > n; t++) (e = p.shift()), w++, e && e(_);
-        p.length ? C() : (d = 0);
+        if (((b = Date.now()), (h = !1), (s = null), p > 2 || b - a - 50 < o))
+            for (t = 0, r = d.length; t < r && _.timeRemaining() > n; t++) (e = d.shift()), w++, e && e(_);
+        d.length ? C() : (p = 0);
     }
     function M(e) {
-        return g++, p.push(e), C(), g;
+        return g++, d.push(e), C(), g;
     }
     function P(e) {
         var t = e - 1 - w;
-        p[t] && (p[t] = null);
+        d[t] && (d[t] = null);
     }
     if (u.requestIdleCallback && u.cancelIdleCallback)
         try {

@@ -14,51 +14,51 @@ function n() {
     }
     throw Error("invalid varint");
 }
-function o(e, t, r) {
+function i(e, t, r) {
     for (let n = 0; n < 28; n += 7) {
-        let o = e >>> n,
-            i = o >>> 7 != 0 || 0 != t,
-            a = (i ? 128 | o : o) & 255;
-        if ((r.push(a), !i)) return;
+        let i = e >>> n,
+            o = i >>> 7 != 0 || 0 != t,
+            a = (o ? 128 | i : i) & 255;
+        if ((r.push(a), !o)) return;
     }
     let n = ((e >>> 28) & 15) | ((7 & t) << 4),
-        o = t >> 3 != 0;
-    if ((r.push((o ? 128 | n : n) & 255), o)) {
+        i = t >> 3 != 0;
+    if ((r.push((i ? 128 | n : n) & 255), i)) {
         for (let e = 3; e < 31; e += 7) {
             let n = t >>> e,
-                o = n >>> 7 != 0,
-                i = (o ? 128 | n : n) & 255;
-            if ((r.push(i), !o)) return;
+                i = n >>> 7 != 0,
+                o = (i ? 128 | n : n) & 255;
+            if ((r.push(o), !i)) return;
         }
         r.push((t >>> 31) & 1);
     }
 }
-function i(e) {
+function o(e) {
     let t = "-" == e[0];
     t && (e = e.slice(1));
     let r = 0,
         n = 0;
-    function o(t, o) {
-        let i = Number(e.slice(t, o));
-        (n *= 1e6), (r = 1e6 * r + i) >= 0x100000000 && ((n += (r / 0x100000000) | 0), (r %= 0x100000000));
+    function i(t, i) {
+        let o = Number(e.slice(t, i));
+        (n *= 1e6), (r = 1e6 * r + o) >= 0x100000000 && ((n += (r / 0x100000000) | 0), (r %= 0x100000000));
     }
-    return o(-24, -18), o(-18, -12), o(-12, -6), o(-6), [t, r, n];
+    return i(-24, -18), i(-18, -12), i(-12, -6), i(-6), [t, r, n];
 }
 function a(e, t) {
     if (t <= 2097151) return "" + (0x100000000 * t + (e >>> 0));
     let r = (((e >>> 24) | (t << 8)) >>> 0) & 0xffffff,
         n = (t >> 16) & 65535,
-        o = (0xffffff & e) + 6777216 * r + 6710656 * n,
-        i = r + 8147497 * n,
+        i = (0xffffff & e) + 6777216 * r + 6710656 * n,
+        o = r + 8147497 * n,
         a = 2 * n;
     function s(e, t) {
         let r = e ? String(e) : "";
         return t ? "0000000".slice(r.length) + r : r;
     }
     return (
-        o >= 1e7 && ((i += Math.floor(o / 1e7)), (o %= 1e7)),
-        i >= 1e7 && ((a += Math.floor(i / 1e7)), (i %= 1e7)),
-        s(a, 0) + s(i, a) + s(o, 1)
+        i >= 1e7 && ((o += Math.floor(i / 1e7)), (i %= 1e7)),
+        o >= 1e7 && ((a += Math.floor(o / 1e7)), (o %= 1e7)),
+        s(a, 0) + s(o, a) + s(i, 1)
     );
 }
 function s(e, t) {
@@ -85,4 +85,4 @@ function l() {
     if ((128 & e) != 0) throw Error("invalid varint");
     return this.assertBounds(), t >>> 0;
 }
-r.d(t, { Gn: () => l, Jg: () => i, cV: () => o, f7: () => s, ls: () => n, oJ: () => a });
+r.d(t, { Gn: () => l, Jg: () => o, cV: () => i, f7: () => s, ls: () => n, oJ: () => a });

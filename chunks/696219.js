@@ -2,8 +2,8 @@
 var t,
     r,
     n = Function.prototype.toString,
-    o = "object" == typeof Reflect && null !== Reflect && Reflect.apply;
-if ("function" == typeof o && "function" == typeof Object.defineProperty)
+    i = "object" == typeof Reflect && null !== Reflect && Reflect.apply;
+if ("function" == typeof i && "function" == typeof Object.defineProperty)
     try {
         (t = Object.defineProperty({}, "length", {
             get: function () {
@@ -11,7 +11,7 @@ if ("function" == typeof o && "function" == typeof Object.defineProperty)
             },
         })),
             (r = {}),
-            o(
+            i(
                 function () {
                     throw 42;
                 },
@@ -19,14 +19,14 @@ if ("function" == typeof o && "function" == typeof Object.defineProperty)
                 t,
             );
     } catch (e) {
-        e !== r && (o = null);
+        e !== r && (i = null);
     }
-else o = null;
-var i = /^\s*class\b/,
+else i = null;
+var o = /^\s*class\b/,
     a = function (e) {
         try {
             var t = n.call(e);
-            return i.test(t);
+            return o.test(t);
         } catch (e) {
             return !1;
         }
@@ -46,8 +46,8 @@ var i = /^\s*class\b/,
         return !1;
     };
 if ("object" == typeof document) {
-    var p = document.all;
-    l.call(p) === l.call(document.all) &&
+    var d = document.all;
+    l.call(d) === l.call(document.all) &&
         (f = function (e) {
             if ((c || !e) && (void 0 === e || "object" == typeof e))
                 try {
@@ -63,12 +63,12 @@ if ("object" == typeof document) {
             return !1;
         });
 }
-e.exports = o
+e.exports = i
     ? function (e) {
           if (f(e)) return !0;
           if (!e || ("function" != typeof e && "object" != typeof e)) return !1;
           try {
-              o(e, null, t);
+              i(e, null, t);
           } catch (e) {
               if (e !== r) return !1;
           }

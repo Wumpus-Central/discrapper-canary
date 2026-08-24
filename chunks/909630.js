@@ -5,18 +5,18 @@ function n(...e) {
         : (t) => {
               let r = !1,
                   n = e.map((e) => {
-                      let n = o(e, t);
+                      let n = i(e, t);
                       return r || (r = "function" == typeof n), n;
                   });
               if (r)
                   return () => {
                       n.forEach((t, r) => {
-                          "function" == typeof t ? t() : o(e[r], null);
+                          "function" == typeof t ? t() : i(e[r], null);
                       });
                   };
           };
 }
-function o(e, t) {
+function i(e, t) {
     if ("function" == typeof e) return e(t);
     null != e && (e.current = t);
 }

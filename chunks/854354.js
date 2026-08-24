@@ -1,4 +1,4 @@
-n.d(t, { Nc: () => c, YR: () => u, kw: () => p, lp: () => d }), n(321073);
+n.d(t, { Nc: () => c, YR: () => u, kw: () => m, lp: () => d }), n(321073);
 var l = n(252424),
     i = n(158045),
     r = n(580630),
@@ -50,7 +50,7 @@ function d(e) {
         r
     );
 }
-function p(e) {
+function m(e) {
     let { subscriptionInvoiceRecord: t } = e;
     return (0, r.$g)(t.total, t.currency);
 }

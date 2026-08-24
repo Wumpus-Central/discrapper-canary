@@ -1,8 +1,8 @@
 "use strict";
-r.d(t, { n: () => i });
+r.d(t, { n: () => o });
 var n = r(340231),
-    o = r(985847);
-class i {
+    i = r(985847);
+class o {
     isDisabled(e) {
         var t;
         return (
@@ -31,13 +31,13 @@ class i {
     }
     findKey(e, t, r) {
         let n = e,
-            o = this.layoutDelegate.getItemRect(n);
-        if (!o || null == n) return null;
-        let i = o;
+            i = this.layoutDelegate.getItemRect(n);
+        if (!i || null == n) return null;
+        let o = i;
         do {
             if (null == (n = t(n))) break;
-            o = this.layoutDelegate.getItemRect(n);
-        } while (o && r(i, o) && null != n);
+            i = this.layoutDelegate.getItemRect(n);
+        } while (i && r(o, i) && null != n);
         return n;
     }
     isSameRow(e, t) {
@@ -89,7 +89,7 @@ class i {
         let t = this.ref.current,
             r = this.layoutDelegate.getItemRect(e);
         if (!r) return null;
-        if (t && !(0, o.o)(t)) return this.getFirstKey();
+        if (t && !(0, i.o)(t)) return this.getFirstKey();
         let n = e;
         if ("horizontal" === this.orientation) {
             let e = Math.max(0, r.x + r.width - this.layoutDelegate.getVisibleRect().width);
@@ -106,7 +106,7 @@ class i {
         let t = this.ref.current,
             r = this.layoutDelegate.getItemRect(e);
         if (!r) return null;
-        if (t && !(0, o.o)(t)) return this.getLastKey();
+        if (t && !(0, i.o)(t)) return this.getLastKey();
         let n = e;
         if ("horizontal" === this.orientation) {
             let e = Math.min(
@@ -132,8 +132,8 @@ class i {
         for (; null != n; ) {
             let t = r.getItem(n);
             if (!t) break;
-            let o = t.textValue.slice(0, e.length);
-            if (t.textValue && 0 === this.collator.compare(o, e)) return n;
+            let i = t.textValue.slice(0, e.length);
+            if (t.textValue && 0 === this.collator.compare(i, e)) return n;
             n = this.getNextKey(n);
         }
         return null;

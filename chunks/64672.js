@@ -1,31 +1,31 @@
-let { MAX_SAFE_COMPONENT_LENGTH: n, MAX_SAFE_BUILD_LENGTH: o, MAX_LENGTH: i } = r(376780),
+let { MAX_SAFE_COMPONENT_LENGTH: n, MAX_SAFE_BUILD_LENGTH: i, MAX_LENGTH: o } = r(376780),
     a = r(692714),
     s = ((t = e.exports = {}).re = []),
     l = (t.safeRe = []),
     u = (t.src = []),
     c = (t.t = {}),
     f = 0,
-    p = "[a-zA-Z0-9-]",
-    d = [
+    d = "[a-zA-Z0-9-]",
+    p = [
         ["\\s", 1],
-        ["\\d", i],
-        [p, o],
+        ["\\d", o],
+        [d, i],
     ],
     h = (e, t, r) => {
         let n = ((e) => {
-                for (let [t, r] of d) e = e.split(`${t}*`).join(`${t}{0,${r}}`).split(`${t}+`).join(`${t}{1,${r}}`);
+                for (let [t, r] of p) e = e.split(`${t}*`).join(`${t}{0,${r}}`).split(`${t}+`).join(`${t}{1,${r}}`);
                 return e;
             })(t),
-            o = f++;
-        a(e, o, t),
-            (c[e] = o),
-            (u[o] = t),
-            (s[o] = new RegExp(t, r ? "g" : void 0)),
-            (l[o] = new RegExp(n, r ? "g" : void 0));
+            i = f++;
+        a(e, i, t),
+            (c[e] = i),
+            (u[i] = t),
+            (s[i] = new RegExp(t, r ? "g" : void 0)),
+            (l[i] = new RegExp(n, r ? "g" : void 0));
     };
 h("NUMERICIDENTIFIER", "0|[1-9]\\d*"),
     h("NUMERICIDENTIFIERLOOSE", "\\d+"),
-    h("NONNUMERICIDENTIFIER", `\\d*[a-zA-Z-]${p}*`),
+    h("NONNUMERICIDENTIFIER", `\\d*[a-zA-Z-]${d}*`),
     h("MAINVERSION", `(${u[c.NUMERICIDENTIFIER]})\\.(${u[c.NUMERICIDENTIFIER]})\\.(${u[c.NUMERICIDENTIFIER]})`),
     h(
         "MAINVERSIONLOOSE",
@@ -35,7 +35,7 @@ h("NUMERICIDENTIFIER", "0|[1-9]\\d*"),
     h("PRERELEASEIDENTIFIERLOOSE", `(?:${u[c.NUMERICIDENTIFIERLOOSE]}|${u[c.NONNUMERICIDENTIFIER]})`),
     h("PRERELEASE", `(?:-(${u[c.PRERELEASEIDENTIFIER]}(?:\\.${u[c.PRERELEASEIDENTIFIER]})*))`),
     h("PRERELEASELOOSE", `(?:-?(${u[c.PRERELEASEIDENTIFIERLOOSE]}(?:\\.${u[c.PRERELEASEIDENTIFIERLOOSE]})*))`),
-    h("BUILDIDENTIFIER", `${p}+`),
+    h("BUILDIDENTIFIER", `${d}+`),
     h("BUILD", `(?:\\+(${u[c.BUILDIDENTIFIER]}(?:\\.${u[c.BUILDIDENTIFIER]})*))`),
     h("FULLPLAIN", `v?${u[c.MAINVERSION]}${u[c.PRERELEASE]}?${u[c.BUILD]}?`),
     h("FULL", `^${u[c.FULLPLAIN]}$`),

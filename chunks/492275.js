@@ -1,4 +1,4 @@
-n.d(t, { A: () => m });
+n.d(t, { A: () => p });
 var l = n(477900);
 n(582128);
 var i = n(503698),
@@ -9,26 +9,26 @@ var i = n(503698),
     u = n(139286),
     c = n(216583),
     d = n(375708),
-    p = n(70393);
-function m(e) {
-    let { giftsToNextTier: t, nextTierName: n, nextTierIcon: i, analyticsLocations: m, className: h } = e,
-        { analyticsLocations: C } = (0, o.Ay)();
+    m = n(70393);
+function p(e) {
+    let { giftsToNextTier: t, nextTierName: n, nextTierIcon: i, analyticsLocations: p, className: C } = e,
+        { analyticsLocations: h } = (0, o.Ay)();
     return (
         (0, u.A)(
             {
                 name: a.ImpressionNames.GIFTING_BADGE_PROGRESS_BANNER,
                 type: a.ImpressionTypes.VIEW,
-                properties: { gifts_to_next_tier: t, next_tier: n, location_stack: m ?? C },
+                properties: { gifts_to_next_tier: t, next_tier: n, location_stack: p ?? h },
             },
             { trackOnInitialLoad: !0 },
         ),
         (0, l.jsxs)("div", {
-            className: r()(p.kL, h),
+            className: r()(m.kL, C),
             children: [
                 (0, l.jsx)("div", {
-                    className: p.zc,
+                    className: m.zc,
                     children:
-                        null != i && (0, l.jsx)("img", { src: i, alt: "", width: 32, height: 32, className: p.Kk }),
+                        null != i && (0, l.jsx)("img", { src: i, alt: "", width: 32, height: 32, className: m.Kk }),
                 }),
                 (0, l.jsx)(s.E, {
                     variant: "text-md/medium",

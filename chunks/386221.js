@@ -4,13 +4,13 @@
         var t,
             r,
             n,
-            o,
             i,
+            o,
             a = e.availableFormats,
             c = e.timeFormats,
             f = e.dateFormats,
-            p = e.medium,
-            d = [],
+            d = e.medium,
+            p = [],
             h = [],
             m = [];
         function v(e, t) {
@@ -25,7 +25,7 @@
         for (t in a)
             a.hasOwnProperty(t) &&
                 (n = u((r = v(t, a[t])))) &&
-                (d.push(n),
+                (p.push(n),
                 (function (e) {
                     for (var t = 0; t < l.length; t += 1) if (e.hasOwnProperty(l[t])) return !1;
                     return !0;
@@ -35,23 +35,23 @@
                           for (var t = 0; t < s.length; t += 1) if (e.hasOwnProperty(s[t])) return !1;
                           return !0;
                       })(n) && h.push(r));
-        for (o = 0; o < h.length; o += 1)
-            for (i = 0; i < m.length; i += 1)
+        for (i = 0; i < h.length; i += 1)
+            for (o = 0; o < m.length; o += 1)
                 (n = u(
-                    (r = p
-                        .replace("{0}", h[o])
-                        .replace("{1}", m[i])
+                    (r = d
+                        .replace("{0}", h[i])
+                        .replace("{1}", m[o])
                         .replace(/^[,\s]+|[,\s]+$/gi, "")),
-                )) && d.push(n);
-        for (t in c) c.hasOwnProperty(t) && (n = u((r = v(t, c[t])))) && d.push(n);
-        for (t in f) f.hasOwnProperty(t) && (n = u((r = v(t, f[t])))) && d.push(n);
-        return d;
+                )) && p.push(n);
+        for (t in c) c.hasOwnProperty(t) && (n = u((r = v(t, c[t])))) && p.push(n);
+        for (t in f) f.hasOwnProperty(t) && (n = u((r = v(t, f[t])))) && p.push(n);
+        return p;
     });
 var r =
         /(?:[Eec]{1,6}|G{1,5}|(?:[yYu]+|U{1,5})|[ML]{1,5}|d{1,2}|a|[hkHK]{1,2}|m{1,2}|s{1,2}|z{1,4})(?=([^']*'[^']*')*[^']*$)/g,
     n = /[QxXVOvZASjgFDwWIQqH]/,
-    o = ["numeric", "2-digit", "short", "long", "narrow"],
-    i = ["short", "short", "short", "long", "narrow"],
+    i = ["numeric", "2-digit", "short", "long", "narrow"],
+    o = ["short", "short", "short", "long", "narrow"],
     a = ["short", "short", "short", "long", "narrow"],
     s = ["weekday", "era", "year", "month", "day"],
     l = ["hour", "minute", "second", "timeZoneName"];
@@ -64,7 +64,7 @@ function u(e) {
                     case "E":
                     case "e":
                     case "c":
-                        return (t.weekday = i[e.length - 1]), "{weekday}";
+                        return (t.weekday = o[e.length - 1]), "{weekday}";
                     case "G":
                         return (t.era = a[e.length - 1]), "{era}";
                     case "y":
@@ -74,7 +74,7 @@ function u(e) {
                         return (t.year = 2 === e.length ? "2-digit" : "numeric"), "{year}";
                     case "M":
                     case "L":
-                        return (t.month = o[e.length - 1]), "{month}";
+                        return (t.month = i[e.length - 1]), "{month}";
                     case "d":
                         return (t.day = 2 === e.length ? "2-digit" : "numeric"), "{day}";
                     case "a":

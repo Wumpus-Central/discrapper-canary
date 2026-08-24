@@ -1,16 +1,16 @@
 "use strict";
-var n, o;
+var n, i;
 Object.defineProperty(t, "__esModule", { value: !0 }),
     (t.astFormatter = t.RichTextNodeType = void 0),
     (t.formatToAst = l);
-let i = r(765688);
-((o = n || (t.RichTextNodeType = n = {})).Text = "text"),
-    (o.Strong = "strong"),
-    (o.Emphasis = "em"),
-    (o.Strikethrough = "s"),
-    (o.Code = "inlineCode"),
-    (o.Link = "link"),
-    (o.Paragraph = "paragraph");
+let o = r(765688);
+((i = n || (t.RichTextNodeType = n = {})).Text = "text"),
+    (i.Strong = "strong"),
+    (i.Emphasis = "em"),
+    (i.Strikethrough = "s"),
+    (i.Code = "inlineCode"),
+    (i.Link = "link"),
+    (i.Paragraph = "paragraph");
 let a = {
     $b: (e) => ({ type: n.Strong, content: e }),
     $i: (e) => ({ type: n.Emphasis, content: e }),
@@ -19,7 +19,7 @@ let a = {
     $link: (e, t, [r]) => ({ type: n.Link, target: r, content: e }),
     $p: (e) => ({ type: n.Paragraph, content: e }),
 };
-class s extends i.FormatBuilder {
+class s extends o.FormatBuilder {
     constructor() {
         super(...arguments), (this.result = []);
     }

@@ -13,7 +13,7 @@ var n = (function () {
             return r && e(t.prototype, r), n && e(t, n), t;
         };
     })(),
-    o = r(562210);
+    i = r(562210);
 e.exports = (function (e) {
     if ("function" != typeof e && null !== e)
         throw TypeError("Super expression must either be null or a function, not " + typeof e);
@@ -38,7 +38,7 @@ e.exports = (function (e) {
                         var t = {};
                         for (var r in e) {
                             var n = e[r];
-                            n instanceof o ? (t[r] = n.__getValue()) : (t[r] = n);
+                            n instanceof i ? (t[r] = n.__getValue()) : (t[r] = n);
                         }
                         return t;
                     });
@@ -51,7 +51,7 @@ e.exports = (function (e) {
                         var t = {};
                         for (var r in e) {
                             var n = e[r];
-                            n instanceof o ? (t[r] = n.__getAnimatedValue()) : (t[r] = n);
+                            n instanceof i ? (t[r] = n.__getAnimatedValue()) : (t[r] = n);
                         }
                         return t;
                     });
@@ -64,7 +64,7 @@ e.exports = (function (e) {
                     this._transforms.forEach(function (t) {
                         for (var r in t) {
                             var n = t[r];
-                            n instanceof o && n.__addChild(e);
+                            n instanceof i && n.__addChild(e);
                         }
                     });
                 },
@@ -76,7 +76,7 @@ e.exports = (function (e) {
                     this._transforms.forEach(function (t) {
                         for (var r in t) {
                             var n = t[r];
-                            n instanceof o && n.__removeChild(e);
+                            n instanceof i && n.__removeChild(e);
                         }
                     });
                 },

@@ -1,4 +1,4 @@
-n.d(t, { A: () => A });
+n.d(t, { A: () => I });
 var l = n(477900),
     i = n(582128),
     r = n(503698),
@@ -8,31 +8,31 @@ var l = n(477900),
     u = n(355622),
     c = n(408018),
     d = n(273754),
-    p = n(915089),
-    m = n(95701),
-    h = n(202541),
-    C = n(652215),
+    m = n(915089),
+    p = n(95701),
+    C = n(202541),
+    h = n(652215),
     f = n(375708),
     E = n(474055);
-let S = (0, m.createChannelRecord)({ id: "1", type: C.rbe.DM }),
-    y = (0, p.Ld)();
-function A(e) {
+let S = (0, p.createChannelRecord)({ id: "1", type: h.rbe.DM }),
+    y = (0, m.Ld)();
+function I(e) {
     let {
             label: t = f.intl.string(f.t.B3miE8),
             onTextChange: n,
             pendingText: r,
-            currentText: p,
-            className: m,
-            innerClassName: C,
-            disableThemedBackground: A = !1,
+            currentText: m,
+            className: p,
+            innerClassName: h,
+            disableThemedBackground: I = !1,
         } = e,
-        [P, I] = i.useState(r ?? p),
-        [g, v] = i.useState((0, c.x7)(P)),
+        [A, P] = i.useState(r ?? m),
+        [g, v] = i.useState((0, c.x7)(A)),
         _ = i.useRef(!1);
-    function T(e, t, l) {
-        t !== P && (I(t), v(l), n(t));
+    function x(e, t, l) {
+        t !== A && (P(t), v(l), n(t));
     }
-    function x() {
+    function T() {
         return new Promise((e) => {
             e({ shouldClear: !1, shouldRefocus: !0 });
         });
@@ -43,12 +43,12 @@ function A(e) {
         }, []),
         i.useEffect(() => {
             if (void 0 === r) {
-                let e = (0, c.x7)(p);
-                I(p), v(e);
+                let e = (0, c.x7)(m);
+                P(m), v(e);
             }
-        }, [r, p]),
+        }, [r, m]),
         (0, l.jsx)("div", {
-            className: a()(E.rf, m),
+            className: a()(E.rf, p),
             children: (0, l.jsx)(s.D, {
                 label: t,
                 children: (e) =>
@@ -57,12 +57,12 @@ function A(e) {
                             (0, l.jsx)(d.Ay, {
                                 "aria-describedby": `${e.describedById} ${y}`,
                                 "aria-labelledby": e.labelId,
-                                innerClassName: a()(E.Tg, C),
+                                innerClassName: a()(E.Tg, h),
                                 editorClassName: E.OT,
-                                maxCharacterCount: h.Jo,
-                                onChange: T,
+                                maxCharacterCount: C.Jo,
+                                onChange: x,
                                 channel: S,
-                                textValue: P,
+                                textValue: A,
                                 richValue: g,
                                 type: u.oU.CUSTOM_GIFT,
                                 onBlur: () => {
@@ -72,10 +72,10 @@ function A(e) {
                                     _.current = !0;
                                 },
                                 focused: _.current,
-                                onSubmit: x,
-                                disableThemedBackground: A,
+                                onSubmit: T,
+                                disableThemedBackground: I,
                             }),
-                            (0, l.jsx)(o.A, { id: y, children: f.intl.format(f.t["+DFxLc"], { maxLength: h.Jo }) }),
+                            (0, l.jsx)(o.A, { id: y, children: f.intl.format(f.t["+DFxLc"], { maxLength: C.Jo }) }),
                         ],
                     }),
             }),

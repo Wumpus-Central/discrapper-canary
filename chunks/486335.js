@@ -1,11 +1,11 @@
 "use strict";
 var n,
-    o = r(906046),
-    i = r(581070)(),
+    i = r(906046),
+    o = r(581070)(),
     a = r(353841),
     s = r(267768);
-if (i) {
-    var l = o("RegExp.prototype.exec"),
+if (o) {
+    var l = i("RegExp.prototype.exec"),
         u = {},
         c = function () {
             throw u;
@@ -23,9 +23,9 @@ if (i) {
             }
         });
 } else {
-    var p = o("Object.prototype.toString");
+    var d = i("Object.prototype.toString");
     n = function (e) {
-        return !!e && ("object" == typeof e || "function" == typeof e) && "[object RegExp]" === p(e);
+        return !!e && ("object" == typeof e || "function" == typeof e) && "[object RegExp]" === d(e);
     };
 }
 e.exports = n;

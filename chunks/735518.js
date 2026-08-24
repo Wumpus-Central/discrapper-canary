@@ -1,11 +1,11 @@
 "use strict";
-r.d(t, { K: () => o });
+r.d(t, { K: () => i });
 var n = r(568864);
-function o(e, t, r) {
-    let { labelProps: o, inputProps: i, isSelected: a, isPressed: s, isDisabled: l, isReadOnly: u } = (0, n.e)(e, t, r);
+function i(e, t, r) {
+    let { labelProps: i, inputProps: o, isSelected: a, isPressed: s, isDisabled: l, isReadOnly: u } = (0, n.e)(e, t, r);
     return {
-        labelProps: o,
-        inputProps: { ...i, role: "switch", checked: a },
+        labelProps: i,
+        inputProps: { ...o, role: "switch", checked: a },
         isSelected: a,
         isPressed: s,
         isDisabled: l,

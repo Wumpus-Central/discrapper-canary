@@ -1,7 +1,7 @@
 var n = r(949499).default,
-    o = r(156746);
+    i = r(156746);
 (e.exports = function (e) {
-    var t = o(e, "string");
+    var t = i(e, "string");
     return "symbol" == n(t) ? t : t + "";
 }),
     (e.exports.__esModule = !0),

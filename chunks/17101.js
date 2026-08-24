@@ -16,17 +16,17 @@ function r(e, t) {
             (t && e && "number" == typeof e.length)
         ) {
             r && (e = r);
-            var o = 0,
-                i = function () {};
+            var i = 0,
+                o = function () {};
             return {
-                s: i,
+                s: o,
                 n: function () {
-                    return o >= e.length ? { done: !0 } : { done: !1, value: e[o++] };
+                    return i >= e.length ? { done: !0 } : { done: !1, value: e[i++] };
                 },
                 e: function (e) {
                     throw e;
                 },
-                f: i,
+                f: o,
             };
         }
         throw TypeError(
@@ -65,35 +65,35 @@ function n(e, t) {
     (t.params = (e) => {
         let t = {};
         var n,
-            o = r(e.split(/ *; */));
+            i = r(e.split(/ *; */));
         try {
-            for (o.s(); !(n = o.n()).done; ) {
+            for (i.s(); !(n = i.n()).done; ) {
                 let e = n.value.split(/ *= */),
                     r = e.shift(),
-                    o = e.shift();
-                r && o && (t[r] = o);
+                    i = e.shift();
+                r && i && (t[r] = i);
             }
         } catch (e) {
-            o.e(e);
+            i.e(e);
         } finally {
-            o.f();
+            i.f();
         }
         return t;
     }),
     (t.parseLinks = (e) => {
         let t = {};
         var n,
-            o = r(e.split(/ *, */));
+            i = r(e.split(/ *, */));
         try {
-            for (o.s(); !(n = o.n()).done; ) {
+            for (i.s(); !(n = i.n()).done; ) {
                 let e = n.value.split(/ *; */),
                     r = e[0].slice(1, -1);
                 t[e[1].split(/ *= */)[1].slice(1, -1)] = r;
             }
         } catch (e) {
-            o.e(e);
+            i.e(e);
         } finally {
-            o.f();
+            i.f();
         }
         return t;
     }),

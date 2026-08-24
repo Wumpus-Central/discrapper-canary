@@ -2,12 +2,12 @@
 var t;
 (e.exports.timeout = function (e, r) {
     var n,
-        o = new t();
+        i = new t();
     return Promise.race([
         e,
         new Promise(function (e, t) {
             n = setTimeout(function () {
-                t(o);
+                t(i);
             }, r);
         }),
     ]).then(

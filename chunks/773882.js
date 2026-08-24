@@ -1,4 +1,4 @@
-n.d(t, { p: () => m });
+n.d(t, { p: () => p });
 var l = n(477900),
     i = n(582128),
     r = n(166532),
@@ -11,7 +11,7 @@ let d = (e) => {
     let { handlePaymentSourceAdd: t } = e;
     return (0, l.jsx)(a.RL, { handlePaymentSourceAdd: t });
 };
-class p {
+class m {
     isGift;
     isFree;
     constructor({ isGift: e, isFree: t }) {
@@ -41,21 +41,21 @@ class p {
         };
     };
 }
-function m(e) {
+function p(e) {
     let { isGift: t } = (0, u.t4)((e) => ({ isGift: e.isGift })),
         n = (0, o.sw)(),
         a = n?.total === 0,
         c = e.handleStepChange,
-        m = i.useCallback(() => {
+        p = i.useCallback(() => {
             if (t) return void c(r.pn.GIFT_CUSTOMIZATION);
         }, [c, t]),
-        h = i.useMemo(() => new p({ isGift: t, isFree: a }), [t, a]);
+        C = i.useMemo(() => new m({ isGift: t, isFree: a }), [t, a]);
     return (0, l.jsx)(s.Y, {
         ...e,
         isBackButtonEligible: t,
-        onFooterBackClick: m,
+        onFooterBackClick: p,
         renderStepBody: d,
-        resolveInternalState: h.resolveInternalState,
-        resolveTenantReviewButtonProps: h.resolveTenantReviewButtonProps,
+        resolveInternalState: C.resolveInternalState,
+        resolveTenantReviewButtonProps: C.resolveTenantReviewButtonProps,
     });
 }

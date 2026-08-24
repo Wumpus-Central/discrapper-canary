@@ -2,17 +2,17 @@
 function n(e) {
     if (
         (function () {
-            if (null == o) {
-                o = !1;
+            if (null == i) {
+                i = !1;
                 try {
                     document.createElement("div").focus({
                         get preventScroll() {
-                            return (o = !0), !0;
+                            return (i = !0), !0;
                         },
                     });
                 } catch {}
             }
-            return o;
+            return i;
         })()
     )
         e.focus({ preventScroll: !0 });
@@ -36,4 +36,4 @@ function n(e) {
     }
 }
 r.d(t, { e: () => n });
-let o = null;
+let i = null;

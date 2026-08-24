@@ -13,7 +13,7 @@ var n = (function () {
             return r && e(t.prototype, r), n && e(t, n), t;
         };
     })(),
-    o = r(562210);
+    i = r(562210);
 e.exports = (function (e) {
     if ("function" != typeof e && null !== e)
         throw TypeError("Super expression must either be null or a function, not " + typeof e);
@@ -34,7 +34,7 @@ e.exports = (function (e) {
             {
                 key: "__transformValue",
                 value: function (e) {
-                    return e instanceof o ? e.__getValue() : e;
+                    return e instanceof i ? e.__getValue() : e;
                 },
             },
             {
@@ -49,14 +49,14 @@ e.exports = (function (e) {
                 key: "__attach",
                 value: function () {
                     for (var e = 0; e < this._values.length; ++e)
-                        this._values[e] instanceof o && this._values[e].__addChild(this);
+                        this._values[e] instanceof i && this._values[e].__addChild(this);
                 },
             },
             {
                 key: "__detach",
                 value: function () {
                     for (var e = 0; e < this._values.length; ++e)
-                        this._values[e] instanceof o && this._values[e].__removeChild(this);
+                        this._values[e] instanceof i && this._values[e].__removeChild(this);
                 },
             },
         ]),

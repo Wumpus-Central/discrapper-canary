@@ -11,8 +11,8 @@ let r = "social-layer-storefront-product-details-modal",
             giftRecipient: u,
             giftingOrigin: c,
             analyticsLocations: d,
-            analyticsContext: p,
-            onClose: m,
+            analyticsContext: m,
+            onClose: p,
         } = e;
         (0, i.openModalLazy)(
             async () => {
@@ -71,7 +71,7 @@ let r = "social-layer-storefront-product-details-modal",
                         applicationId: s,
                         isStorefront: o,
                         analyticsLocations: d,
-                        analyticsContext: p,
+                        analyticsContext: m,
                         giftRecipient: u,
                         giftingOrigin: c,
                         customNavigateToSocialLayerStorefront: t,
@@ -81,7 +81,7 @@ let r = "social-layer-storefront-product-details-modal",
                 modalKey: r,
                 allowsNavigation: o,
                 onCloseCallback: () => {
-                    m?.();
+                    p?.();
                 },
             },
         );

@@ -1,33 +1,33 @@
 "use strict";
-var n, o, i, a, s, l;
+var n, i, o, a, s, l;
 function u(e) {
     let t = !1,
         r = [];
     for (let n = 0; n < e.length; n++) {
-        let o = e.charAt(n);
-        "_" == o
+        let i = e.charAt(n);
+        "_" == i
             ? (t = !0)
-            : /\d/.test(o)
-              ? (r.push(o), (t = !0))
+            : /\d/.test(i)
+              ? (r.push(i), (t = !0))
               : t
-                ? (r.push(o.toUpperCase()), (t = !1))
+                ? (r.push(i.toUpperCase()), (t = !1))
                 : 0 == n
-                  ? r.push(o.toLowerCase())
-                  : r.push(o);
+                  ? r.push(i.toLowerCase())
+                  : r.push(i);
     }
     return r.join("");
 }
 function c(e) {
-    var t, r, n, o;
+    var t, r, n, i;
     return (
         (e.localName = null != (t = e.localName) ? t : u(e.name)),
         (e.jsonName = null != (r = e.jsonName) ? r : u(e.name)),
-        (e.repeat = null != (n = e.repeat) ? n : i.NO),
-        (e.opt = null != (o = e.opt) ? o : !e.repeat && !e.oneof && "message" == e.kind),
+        (e.repeat = null != (n = e.repeat) ? n : o.NO),
+        (e.opt = null != (i = e.opt) ? i : !e.repeat && !e.oneof && "message" == e.kind),
         e
     );
 }
-r.d(t, { sA: () => i, LN: () => n, rO: () => o, mS: () => c }),
+r.d(t, { sA: () => o, LN: () => n, rO: () => i, mS: () => c }),
     ((a = n || (n = {}))[(a.DOUBLE = 1)] = "DOUBLE"),
     (a[(a.FLOAT = 2)] = "FLOAT"),
     (a[(a.INT64 = 3)] = "INT64"),
@@ -43,9 +43,9 @@ r.d(t, { sA: () => i, LN: () => n, rO: () => o, mS: () => c }),
     (a[(a.SFIXED64 = 16)] = "SFIXED64"),
     (a[(a.SINT32 = 17)] = "SINT32"),
     (a[(a.SINT64 = 18)] = "SINT64"),
-    ((s = o || (o = {}))[(s.BIGINT = 0)] = "BIGINT"),
+    ((s = i || (i = {}))[(s.BIGINT = 0)] = "BIGINT"),
     (s[(s.STRING = 1)] = "STRING"),
     (s[(s.NUMBER = 2)] = "NUMBER"),
-    ((l = i || (i = {}))[(l.NO = 0)] = "NO"),
+    ((l = o || (o = {}))[(l.NO = 0)] = "NO"),
     (l[(l.PACKED = 1)] = "PACKED"),
     (l[(l.UNPACKED = 2)] = "UNPACKED");

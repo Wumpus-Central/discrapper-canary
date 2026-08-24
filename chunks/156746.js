@@ -3,8 +3,8 @@ var n = r(949499).default;
     if ("object" != n(e) || !e) return e;
     var r = e[Symbol.toPrimitive];
     if (void 0 !== r) {
-        var o = r.call(e, t || "default");
-        if ("object" != n(o)) return o;
+        var i = r.call(e, t || "default");
+        if ("object" != n(i)) return i;
         throw TypeError("@@toPrimitive must return a primitive value.");
     }
     return ("string" === t ? String : Number)(e);

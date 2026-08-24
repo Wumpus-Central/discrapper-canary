@@ -8,7 +8,7 @@ var n =
             }
             return e;
         },
-    o = (function () {
+    i = (function () {
         function e(e, t) {
             for (var r = 0; r < t.length; r++) {
                 var n = t[r];
@@ -22,7 +22,7 @@ var n =
             return r && e(t.prototype, r), n && e(t, n), t;
         };
     })(),
-    i = r(582128),
+    o = r(582128),
     a = r(518118),
     s = r(848822);
 e.exports = function (e) {
@@ -40,7 +40,7 @@ e.exports = function (e) {
                 constructor: { value: r, enumerable: !1, writable: !0, configurable: !0 },
             })),
             t && (Object.setPrototypeOf ? Object.setPrototypeOf(r, t) : (r.__proto__ = t)),
-            o(r, [
+            i(r, [
                 {
                     key: "componentWillUnmount",
                     value: function () {
@@ -82,17 +82,17 @@ e.exports = function (e) {
                     value: function () {
                         var t = this,
                             r = this._propsAnimated.__getValue(),
-                            o = r.style,
+                            i = r.style,
                             a = (function (e, t) {
                                 var r = {};
                                 for (var n in e)
                                     !(t.indexOf(n) >= 0) && Object.prototype.hasOwnProperty.call(e, n) && (r[n] = e[n]);
                                 return r;
                             })(r, ["style"]);
-                        return i.createElement(
+                        return o.createElement(
                             e,
                             n({}, a, {
-                                style: s.transformStyles(o),
+                                style: s.transformStyles(i),
                                 ref: function (e) {
                                     t.componentRef = e;
                                 },
@@ -110,7 +110,7 @@ e.exports = function (e) {
             ]),
             r
         );
-    })(i.Component);
+    })(o.Component);
     return (
         (t.propTypes = {
             style: function (t, r, n) {

@@ -1,8 +1,8 @@
 "use strict";
-r.d(t, { p: () => o });
+r.d(t, { p: () => i });
 var n = r(582128);
-function o(e) {
-    let { children: t, items: r, idScope: o, addIdAndValue: i, dependencies: a = [] } = e,
+function i(e) {
+    let { children: t, items: r, idScope: i, addIdAndValue: o, dependencies: a = [] } = e,
         s = (0, n.useMemo)(() => new WeakMap(), a);
     return (0, n.useMemo)(() => {
         if (r && "function" == typeof t) {
@@ -13,8 +13,8 @@ function o(e) {
                     var e, a;
                     let l = null != (a = null != (e = (r = t(u)).props.id) ? e : u.key) ? a : u.id;
                     if (null == l) throw Error("Could not determine key for item");
-                    o && (l = o + ":" + l),
-                        (r = (0, n.cloneElement)(r, i ? { key: l, id: l, value: u } : { key: l })),
+                    i && (l = i + ":" + l),
+                        (r = (0, n.cloneElement)(r, o ? { key: l, id: l, value: u } : { key: l })),
                         s.set(u, r);
                 }
                 l.push(r);
@@ -22,5 +22,5 @@ function o(e) {
             return l;
         }
         if ("function" != typeof t) return t;
-    }, [t, r, s, o, i]);
+    }, [t, r, s, i, o]);
 }

@@ -13,9 +13,9 @@ var n = (function () {
             return r && e(t.prototype, r), n && e(t, n), t;
         };
     })(),
-    o = r(150433);
+    i = r(150433);
 r(498121);
-var i = r(151979),
+var o = r(151979),
     a = r(934580),
     s = r(284009),
     l = r(735556);
@@ -60,7 +60,7 @@ e.exports = (function (e) {
         n(t, [
             {
                 key: "start",
-                value: function (e, r, n, o) {
+                value: function (e, r, n, i) {
                     if (
                         ((this.__active = !0),
                         (this._startPosition = e),
@@ -68,12 +68,12 @@ e.exports = (function (e) {
                         (this._onUpdate = r),
                         (this.__onEnd = n),
                         (this._lastTime = Date.now()),
-                        o instanceof t)
+                        i instanceof t)
                     ) {
-                        var i = o.getInternalState();
-                        (this._lastPosition = i.lastPosition),
-                            (this._lastVelocity = i.lastVelocity),
-                            (this._lastTime = i.lastTime);
+                        var o = i.getInternalState();
+                        (this._lastPosition = o.lastPosition),
+                            (this._lastVelocity = o.lastVelocity),
+                            (this._lastTime = o.lastTime);
                     }
                     void 0 !== this._initialVelocity &&
                         null !== this._initialVelocity &&
@@ -98,9 +98,9 @@ e.exports = (function (e) {
                         t = this._lastVelocity,
                         r = this._lastPosition,
                         n = this._lastVelocity,
-                        o = Date.now();
-                    o > this._lastTime + 64 && (o = this._lastTime + 64);
-                    for (var a = Math.floor((o - this._lastTime) / 1), s = 0; s < a; ++s) {
+                        i = Date.now();
+                    i > this._lastTime + 64 && (i = this._lastTime + 64);
+                    for (var a = Math.floor((i - this._lastTime) / 1), s = 0; s < a; ++s) {
                         var l = t,
                             u = this._tension * (this._toValue - r) - this._friction * n,
                             r = e + (0.001 * l) / 2,
@@ -108,17 +108,17 @@ e.exports = (function (e) {
                             c = n,
                             f = this._tension * (this._toValue - r) - this._friction * n;
                         r = e + (0.001 * c) / 2;
-                        var p = (n = t + (0.001 * f) / 2),
-                            d = this._tension * (this._toValue - r) - this._friction * n;
-                        r = e + (0.001 * p) / 2;
-                        var h = (n = t + (0.001 * d) / 2),
+                        var d = (n = t + (0.001 * f) / 2),
+                            p = this._tension * (this._toValue - r) - this._friction * n;
+                        r = e + (0.001 * d) / 2;
+                        var h = (n = t + (0.001 * p) / 2),
                             m = this._tension * (this._toValue - r) - this._friction * n;
-                        (r = e + (0.001 * p) / 2), (n = t + (0.001 * d) / 2);
-                        var v = (u + 2 * (f + d) + m) / 6;
-                        (e += ((l + 2 * (c + p) + h) / 6) * 0.001), (t += 0.001 * v);
+                        (r = e + (0.001 * d) / 2), (n = t + (0.001 * p) / 2);
+                        var v = (u + 2 * (f + p) + m) / 6;
+                        (e += ((l + 2 * (c + d) + h) / 6) * 0.001), (t += 0.001 * v);
                     }
                     if (
-                        ((this._lastTime = o),
+                        ((this._lastTime = i),
                         (this._lastPosition = e),
                         (this._lastVelocity = t),
                         this._onUpdate(e),
@@ -139,7 +139,7 @@ e.exports = (function (e) {
                                 this.__debouncedOnEnd({ finished: !0 });
                             return;
                         }
-                        this._animationFrame = i.current(this.onUpdate.bind(this));
+                        this._animationFrame = o.current(this.onUpdate.bind(this));
                     }
                 },
             },
@@ -152,4 +152,4 @@ e.exports = (function (e) {
         ]),
         t
     );
-})(o);
+})(i);

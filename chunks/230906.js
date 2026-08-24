@@ -1,7 +1,7 @@
 "use strict";
-r.d(t, { iP: () => o, pA: () => i, vS: () => a });
+r.d(t, { iP: () => i, pA: () => o, vS: () => a });
 let n = null;
-function o(e, t = "assertive", r = 7e3) {
+function i(e, t = "assertive", r = 7e3) {
     n
         ? n.announce(e, t, r)
         : ((n = new s()),
@@ -11,7 +11,7 @@ function o(e, t = "assertive", r = 7e3) {
                     (null == n ? void 0 : n.isAttached()) && (null == n || n.announce(e, t, r));
                 }, 100));
 }
-function i(e) {
+function o(e) {
     n && n.clear(e);
 }
 function a(e = null) {
@@ -42,18 +42,18 @@ class s {
         this.node && ((this.parentNode = null != e ? e : document.body), this.parentNode.prepend(this.node));
     }
     announce(e, t = "assertive", r = 7e3) {
-        var n, o;
+        var n, i;
         if (!this.node) return;
-        let i = document.createElement("div");
+        let o = document.createElement("div");
         "object" == typeof e
-            ? (i.setAttribute("role", "img"), i.setAttribute("aria-labelledby", e["aria-labelledby"]))
-            : (i.textContent = e),
+            ? (o.setAttribute("role", "img"), o.setAttribute("aria-labelledby", e["aria-labelledby"]))
+            : (o.textContent = e),
             "assertive" === t
-                ? null == (n = this.assertiveLog) || n.appendChild(i)
-                : null == (o = this.politeLog) || o.appendChild(i),
+                ? null == (n = this.assertiveLog) || n.appendChild(o)
+                : null == (i = this.politeLog) || i.appendChild(o),
             "" !== e &&
                 setTimeout(() => {
-                    i.remove();
+                    o.remove();
                 }, r);
     }
     clear(e) {

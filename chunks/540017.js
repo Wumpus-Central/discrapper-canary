@@ -8,7 +8,7 @@ var n =
             }
             return e;
         },
-    o = (function () {
+    i = (function () {
         function e(e, t) {
             for (var r = 0; r < t.length; r++) {
                 var n = t[r];
@@ -22,7 +22,7 @@ var n =
             return r && e(t.prototype, r), n && e(t, n), t;
         };
     })(),
-    i = r(297920),
+    o = r(297920),
     a = r(284009),
     s = function (e) {
         return e;
@@ -32,41 +32,41 @@ var n =
             if (!(this instanceof e)) throw TypeError("Cannot call a class as a function");
         }
         return (
-            o(e, null, [
+            i(e, null, [
                 {
                     key: "create",
                     value: function (e) {
                         if (e.outputRange && "string" == typeof e.outputRange[0]) {
-                            var t, r, o, i, p;
+                            var t, r, i, o, d;
                             return (
                                 a((r = (t = e).outputRange).length >= 2, "Bad output range"),
                                 (function (e) {
                                     for (var t = e[0].replace(c, ""), r = 1; r < e.length; ++r)
                                         a(t === e[r].replace(c, ""), "invalid pattern " + e[0] + " and " + e[r]);
                                 })((r = r.map(u))),
-                                (o = r[0].match(c).map(function () {
+                                (i = r[0].match(c).map(function () {
                                     return [];
                                 })),
                                 r.forEach(function (e) {
                                     e.match(c).forEach(function (e, t) {
-                                        o[t].push(+e);
+                                        i[t].push(+e);
                                     });
                                 }),
-                                (i = r[0].match(c).map(function (e, r) {
-                                    return l.create(n({}, t, { outputRange: o[r] }));
+                                (o = r[0].match(c).map(function (e, r) {
+                                    return l.create(n({}, t, { outputRange: i[r] }));
                                 })),
-                                (p = /^rgb/.test(r[0])),
+                                (d = /^rgb/.test(r[0])),
                                 function (e) {
                                     var t = 0;
                                     return r[0].replace(c, function () {
-                                        var r = i[t++](e);
-                                        return String(p && t < 4 ? Math.round(r) : r);
+                                        var r = o[t++](e);
+                                        return String(d && t < 4 ? Math.round(r) : r);
                                     });
                                 }
                             );
                         }
-                        var d = e.outputRange;
-                        f("outputRange", d);
+                        var p = e.outputRange;
+                        f("outputRange", p);
                         var h = e.inputRange;
                         f("inputRange", h),
                             (function (e) {
@@ -75,11 +75,11 @@ var n =
                                     a(e[t] >= e[t - 1], "inputRange must be monotonically increasing " + e);
                             })(h),
                             a(
-                                h.length === d.length,
+                                h.length === p.length,
                                 "inputRange (" +
                                     h.length +
                                     ") and outputRange (" +
-                                    d.length +
+                                    p.length +
                                     ") must have the same length",
                             );
                         var m = e.easing || s,
@@ -98,7 +98,7 @@ var n =
                                     for (var r = 1; r < t.length - 1 && !(t[r] >= e); ++r);
                                     return r - 1;
                                 })(e, h);
-                                return (function (e, t, r, n, o, i, a, s) {
+                                return (function (e, t, r, n, i, o, a, s) {
                                     var l = e;
                                     if (l < t)
                                         if ("identity" === a) return l;
@@ -106,17 +106,17 @@ var n =
                                     if (l > r)
                                         if ("identity" === s) return l;
                                         else "clamp" === s && (l = r);
-                                    return n === o
+                                    return n === i
                                         ? n
                                         : t === r
                                           ? e <= t
                                               ? n
-                                              : o
+                                              : i
                                           : (t === -1 / 0 ? (l = -l) : r === 1 / 0 ? (l -= t) : (l = (l - t) / (r - t)),
-                                            (l = i(l)),
-                                            n === -1 / 0 ? (l = -l) : o === 1 / 0 ? (l += n) : (l = l * (o - n) + n),
+                                            (l = o(l)),
+                                            n === -1 / 0 ? (l = -l) : i === 1 / 0 ? (l += n) : (l = l * (i - n) + n),
                                             l);
-                                })(e, h[t], h[t + 1], d[t], d[t + 1], m, v, y);
+                                })(e, h[t], h[t + 1], p[t], p[t + 1], m, v, y);
                             }
                         );
                     },
@@ -126,7 +126,7 @@ var n =
         );
     })();
 function u(e) {
-    var t = i(e);
+    var t = o(e);
     return null === t
         ? e
         : "rgba(" +

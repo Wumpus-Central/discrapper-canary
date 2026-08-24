@@ -1,9 +1,9 @@
 "use strict";
 var n = r(969001),
-    o = function () {
+    i = function () {
         return !!n;
     };
-(o.hasArrayLengthDefineBug = function () {
+(i.hasArrayLengthDefineBug = function () {
     if (!n) return null;
     try {
         return 1 !== n([], "length", { value: 1 }).length;
@@ -11,4 +11,4 @@ var n = r(969001),
         return !0;
     }
 }),
-    (e.exports = o);
+    (e.exports = i);

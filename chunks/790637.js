@@ -2,7 +2,7 @@
 function n() {
     return !1;
 }
-function o() {
+function i() {
     return !1;
 }
-r.d(t, { D5: () => n, Nf: () => o });
+r.d(t, { D5: () => n, Nf: () => i });

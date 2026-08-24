@@ -8,7 +8,7 @@ var n =
             }
             return e;
         },
-    o = (function () {
+    i = (function () {
         function e(e, t) {
             for (var r = 0; r < t.length; r++) {
                 var n = t[r];
@@ -22,32 +22,32 @@ var n =
             return r && e(t.prototype, r), n && e(t, n), t;
         };
     })(),
-    i = r(562210),
+    o = r(562210),
     a = r(616253);
 e.exports = (function (e) {
     if ("function" != typeof e && null !== e)
         throw TypeError("Super expression must either be null or a function, not " + typeof e);
     function t(e, r) {
         if (!(this instanceof t)) throw TypeError("Cannot call a class as a function");
-        var o = (function (e, t) {
+        var i = (function (e, t) {
             if (!e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
             return t && ("object" == typeof t || "function" == typeof t) ? t : e;
         })(this, (t.__proto__ || Object.getPrototypeOf(t)).call(this));
-        return e.style && (e = n({}, e, { style: new a(e.style) })), (o._props = e), (o._callback = r), o.__attach(), o;
+        return e.style && (e = n({}, e, { style: new a(e.style) })), (i._props = e), (i._callback = r), i.__attach(), i;
     }
     return (
         (t.prototype = Object.create(e && e.prototype, {
             constructor: { value: t, enumerable: !1, writable: !0, configurable: !0 },
         })),
         e && (Object.setPrototypeOf ? Object.setPrototypeOf(t, e) : (t.__proto__ = e)),
-        o(t, [
+        i(t, [
             {
                 key: "__getValue",
                 value: function () {
                     var e = {};
                     for (var t in this._props) {
                         var r = this._props[t];
-                        r instanceof i ? (e[t] = r.__getValue()) : (e[t] = r);
+                        r instanceof o ? (e[t] = r.__getValue()) : (e[t] = r);
                     }
                     return e;
                 },
@@ -58,7 +58,7 @@ e.exports = (function (e) {
                     var e = {};
                     for (var t in this._props) {
                         var r = this._props[t];
-                        r instanceof i && (e[t] = r.__getAnimatedValue());
+                        r instanceof o && (e[t] = r.__getAnimatedValue());
                     }
                     return e;
                 },
@@ -68,7 +68,7 @@ e.exports = (function (e) {
                 value: function () {
                     for (var e in this._props) {
                         var t = this._props[e];
-                        t instanceof i && t.__addChild(this);
+                        t instanceof o && t.__addChild(this);
                     }
                 },
             },
@@ -77,7 +77,7 @@ e.exports = (function (e) {
                 value: function () {
                     for (var e in this._props) {
                         var t = this._props[e];
-                        t instanceof i && t.__removeChild(this);
+                        t instanceof o && t.__removeChild(this);
                     }
                 },
             },
@@ -90,4 +90,4 @@ e.exports = (function (e) {
         ]),
         t
     );
-})(i);
+})(o);

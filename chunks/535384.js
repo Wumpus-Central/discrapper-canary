@@ -1,7 +1,7 @@
 "use strict";
-r.d(t, { G: () => O });
+r.d(t, { G: () => I });
 var n = r(96326);
-class o {
+class i {
     constructor(e) {
         var t;
         this.fields = null != (t = e.fields) ? t : [];
@@ -32,12 +32,12 @@ class o {
         if (null == e || "object" != typeof e) return !1;
         this.prepare();
         let n = Object.keys(e),
-            o = this.data;
-        if (n.length < o.req.length || o.req.some((e) => !n.includes(e)) || (!r && n.some((e) => !o.known.includes(e))))
+            i = this.data;
+        if (n.length < i.req.length || i.req.some((e) => !n.includes(e)) || (!r && n.some((e) => !i.known.includes(e))))
             return !1;
         if (t < 1) return !0;
-        for (let n of o.oneofs) {
-            let o = e[n];
+        for (let n of i.oneofs) {
+            let i = e[n];
             if (
                 !(function (e) {
                     if ("object" != typeof e || null === e || !e.hasOwnProperty("oneofKind")) return !1;
@@ -50,42 +50,42 @@ class o {
                         default:
                             return !1;
                     }
-                })(o)
+                })(i)
             )
                 return !1;
-            if (void 0 === o.oneofKind) continue;
-            let i = this.fields.find((e) => e.localName === o.oneofKind);
-            if (!i || !this.field(o[o.oneofKind], i, r, t)) return !1;
+            if (void 0 === i.oneofKind) continue;
+            let o = this.fields.find((e) => e.localName === i.oneofKind);
+            if (!o || !this.field(i[i.oneofKind], o, r, t)) return !1;
         }
         for (let n of this.fields) if (void 0 === n.oneof && !this.field(e[n.localName], n, r, t)) return !1;
         return !0;
     }
-    field(e, t, r, o) {
-        let i = t.repeat;
+    field(e, t, r, i) {
+        let o = t.repeat;
         switch (t.kind) {
             case "scalar":
                 if (void 0 === e) return t.opt;
-                if (i) return this.scalars(e, t.T, o, t.L);
+                if (o) return this.scalars(e, t.T, i, t.L);
                 return this.scalar(e, t.T, t.L);
             case "enum":
                 if (void 0 === e) return t.opt;
-                if (i) return this.scalars(e, n.LN.INT32, o);
+                if (o) return this.scalars(e, n.LN.INT32, i);
                 return this.scalar(e, n.LN.INT32);
             case "message":
                 if (void 0 === e) break;
-                if (i) return this.messages(e, t.T(), r, o);
-                return this.message(e, t.T(), r, o);
+                if (o) return this.messages(e, t.T(), r, i);
+                return this.message(e, t.T(), r, i);
             case "map":
                 if ("object" != typeof e || null === e) return !1;
-                if (o < 2) break;
-                if (!this.mapKeys(e, t.K, o)) return !1;
+                if (i < 2) break;
+                if (!this.mapKeys(e, t.K, i)) return !1;
                 switch (t.V.kind) {
                     case "scalar":
-                        return this.scalars(Object.values(e), t.V.T, o, t.V.L);
+                        return this.scalars(Object.values(e), t.V.T, i, t.V.L);
                     case "enum":
-                        return this.scalars(Object.values(e), n.LN.INT32, o);
+                        return this.scalars(Object.values(e), n.LN.INT32, i);
                     case "message":
-                        return this.messages(Object.values(e), t.V.T(), r, o);
+                        return this.messages(Object.values(e), t.V.T(), r, i);
                 }
         }
         return !0;
@@ -102,7 +102,7 @@ class o {
         return !0;
     }
     scalar(e, t, r) {
-        let o = typeof e;
+        let i = typeof e;
         switch (t) {
             case n.LN.UINT64:
             case n.LN.FIXED64:
@@ -111,35 +111,35 @@ class o {
             case n.LN.SINT64:
                 switch (r) {
                     case n.rO.BIGINT:
-                        return "bigint" == o;
+                        return "bigint" == i;
                     case n.rO.NUMBER:
-                        return "number" == o && !isNaN(e);
+                        return "number" == i && !isNaN(e);
                     default:
-                        return "string" == o;
+                        return "string" == i;
                 }
             case n.LN.BOOL:
-                return "boolean" == o;
+                return "boolean" == i;
             case n.LN.STRING:
-                return "string" == o;
+                return "string" == i;
             case n.LN.BYTES:
                 return e instanceof Uint8Array;
             case n.LN.DOUBLE:
             case n.LN.FLOAT:
-                return "number" == o && !isNaN(e);
+                return "number" == i && !isNaN(e);
             default:
-                return "number" == o && Number.isInteger(e);
+                return "number" == i && Number.isInteger(e);
         }
     }
     scalars(e, t, r, n) {
         if (!Array.isArray(e)) return !1;
         if (r < 2) return !0;
         if (Array.isArray(e)) {
-            for (let o = 0; o < e.length && o < r; o++) if (!this.scalar(e[o], t, n)) return !1;
+            for (let i = 0; i < e.length && i < r; i++) if (!this.scalar(e[i], t, n)) return !1;
         }
         return !0;
     }
     mapKeys(e, t, r) {
-        let o = Object.keys(e);
+        let i = Object.keys(e);
         switch (t) {
             case n.LN.INT32:
             case n.LN.FIXED32:
@@ -147,22 +147,22 @@ class o {
             case n.LN.SINT32:
             case n.LN.UINT32:
                 return this.scalars(
-                    o.slice(0, r).map((e) => parseInt(e)),
+                    i.slice(0, r).map((e) => parseInt(e)),
                     t,
                     r,
                 );
             case n.LN.BOOL:
                 return this.scalars(
-                    o.slice(0, r).map((e) => "true" == e || ("false" != e && e)),
+                    i.slice(0, r).map((e) => "true" == e || ("false" != e && e)),
                     t,
                     r,
                 );
             default:
-                return this.scalars(o, t, r, n.rO.STRING);
+                return this.scalars(i, t, r, n.rO.STRING);
         }
     }
 }
-var i = r(467276),
+var o = r(467276),
     a = r(65412),
     s = r(82180);
 function l(e, t) {
@@ -181,7 +181,7 @@ function f(e) {
     if (Number.isFinite(e) && (e > 34028234663852886e22 || e < -34028234663852886e22))
         throw Error("invalid float 32: " + e);
 }
-function p(e, t) {
+function d(e, t) {
     switch (t) {
         case n.rO.BIGINT:
             return e.toBigInt();
@@ -191,7 +191,7 @@ function p(e, t) {
             return e.toString();
     }
 }
-class d {
+class p {
     constructor(e) {
         this.info = e;
     }
@@ -203,7 +203,7 @@ class d {
     }
     assert(e, t, r) {
         if (!e) {
-            let e = (0, i.V)(r);
+            let e = (0, o.V)(r);
             throw (
                 (("number" == e || "boolean" == e) && (e = r.toString()),
                 Error(`Cannot parse JSON ${e} for ${this.info.typeName}#${t}`))
@@ -212,7 +212,7 @@ class d {
     }
     read(e, t, r) {
         this.prepare();
-        let o = [];
+        let i = [];
         for (let [a, s] of Object.entries(e)) {
             let e,
                 l = this.fMap[a];
@@ -225,32 +225,32 @@ class d {
             }
             let u = l.localName;
             if (l.oneof) {
-                if (o.includes(l.oneof))
+                if (i.includes(l.oneof))
                     throw Error(
                         `Multiple members of the oneof group "${l.oneof}" of ${this.info.typeName} are present in JSON.`,
                     );
-                o.push(l.oneof), (e = t[l.oneof] = { oneofKind: u });
+                i.push(l.oneof), (e = t[l.oneof] = { oneofKind: u });
             } else e = t;
             if ("map" == l.kind) {
                 if (null === s) continue;
-                this.assert((0, i.O)(s), l.name, s);
+                this.assert((0, o.O)(s), l.name, s);
                 let t = e[u];
-                for (let [e, o] of Object.entries(s)) {
-                    let i;
-                    switch ((this.assert(null !== o, l.name + " map value", null), l.V.kind)) {
+                for (let [e, i] of Object.entries(s)) {
+                    let o;
+                    switch ((this.assert(null !== i, l.name + " map value", null), l.V.kind)) {
                         case "message":
-                            i = l.V.T().internalJsonRead(o, r);
+                            o = l.V.T().internalJsonRead(i, r);
                             break;
                         case "enum":
-                            if (!1 === (i = this.enum(l.V.T(), o, l.name, r.ignoreUnknownFields))) continue;
+                            if (!1 === (o = this.enum(l.V.T(), i, l.name, r.ignoreUnknownFields))) continue;
                             break;
                         case "scalar":
-                            i = this.scalar(o, l.V.T, l.V.L, l.name);
+                            o = this.scalar(i, l.V.T, l.V.L, l.name);
                     }
-                    this.assert(void 0 !== i, l.name + " map value", o);
+                    this.assert(void 0 !== o, l.name + " map value", i);
                     let a = e;
                     l.K == n.LN.BOOL && (a = "true" == a || ("false" != a && a)),
-                        (t[(a = this.scalar(a, l.K, n.rO.STRING, l.name).toString())] = i);
+                        (t[(a = this.scalar(a, l.K, n.rO.STRING, l.name).toString())] = o);
                 }
             } else if (l.repeat) {
                 if (null === s) continue;
@@ -306,22 +306,22 @@ class d {
                     t
                 );
             case "string":
-                let o = t;
-                e[2] && t.substring(0, e[2].length) === e[2] && (o = t.substring(e[2].length));
-                let i = e[1][o];
-                if (void 0 === i && n) return !1;
+                let i = t;
+                e[2] && t.substring(0, e[2].length) === e[2] && (i = t.substring(e[2].length));
+                let o = e[1][i];
+                if (void 0 === o && n) return !1;
                 return (
                     l(
-                        "number" == typeof i,
+                        "number" == typeof o,
                         `Unable to parse field ${this.info.typeName}#${r}, enum ${e[0]} has no value for "${t}".`,
                     ),
-                    i
+                    o
                 );
         }
         l(!1, `Unable to parse field ${this.info.typeName}#${r}, cannot parse enum value from ${typeof t}".`);
     }
-    scalar(e, t, r, o) {
-        let i;
+    scalar(e, t, r, i) {
+        let o;
         try {
             switch (t) {
                 case n.LN.DOUBLE:
@@ -331,24 +331,24 @@ class d {
                     if ("Infinity" === e) return 1 / 0;
                     if ("-Infinity" === e) return -1 / 0;
                     if ("" === e) {
-                        i = "empty string";
+                        o = "empty string";
                         break;
                     }
                     if ("string" == typeof e && e.trim().length !== e.length) {
-                        i = "extra whitespace";
+                        o = "extra whitespace";
                         break;
                     }
                     if ("string" != typeof e && "number" != typeof e) break;
-                    let o = Number(e);
-                    if (Number.isNaN(o)) {
-                        i = "not a number";
+                    let i = Number(e);
+                    if (Number.isNaN(i)) {
+                        o = "not a number";
                         break;
                     }
-                    if (!Number.isFinite(o)) {
-                        i = "too large or small";
+                    if (!Number.isFinite(i)) {
+                        o = "too large or small";
                         break;
                     }
-                    return t == n.LN.FLOAT && f(o), o;
+                    return t == n.LN.FLOAT && f(i), i;
                 case n.LN.INT32:
                 case n.LN.FIXED32:
                 case n.LN.SFIXED32:
@@ -360,9 +360,9 @@ class d {
                         ("number" == typeof e
                             ? (l = e)
                             : "" === e
-                              ? (i = "empty string")
+                              ? (o = "empty string")
                               : "string" == typeof e &&
-                                (e.trim().length !== e.length ? (i = "extra whitespace") : (l = Number(e))),
+                                (e.trim().length !== e.length ? (o = "extra whitespace") : (l = Number(e))),
                         void 0 === l)
                     )
                         break;
@@ -370,14 +370,14 @@ class d {
                 case n.LN.INT64:
                 case n.LN.SFIXED64:
                 case n.LN.SINT64:
-                    if (null === e) return p(s.h.ZERO, r);
+                    if (null === e) return d(s.h.ZERO, r);
                     if ("number" != typeof e && "string" != typeof e) break;
-                    return p(s.h.from(e), r);
+                    return d(s.h.from(e), r);
                 case n.LN.FIXED64:
                 case n.LN.UINT64:
-                    if (null === e) return p(s.e.ZERO, r);
+                    if (null === e) return d(s.e.ZERO, r);
                     if ("number" != typeof e && "string" != typeof e) break;
-                    return p(s.e.from(e), r);
+                    return d(s.e.from(e), r);
                 case n.LN.BOOL:
                     if (null === e) return !1;
                     if ("boolean" != typeof e) break;
@@ -385,7 +385,7 @@ class d {
                 case n.LN.STRING:
                     if (null === e) return "";
                     if ("string" != typeof e) {
-                        i = "extra whitespace";
+                        o = "extra whitespace";
                         break;
                     }
                     try {
@@ -400,9 +400,9 @@ class d {
                     return (0, a.A)(e);
             }
         } catch (e) {
-            i = e.message;
+            o = e.message;
         }
-        this.assert(!1, o + (i ? " - " + i : ""), e);
+        this.assert(!1, i + (o ? " - " + o : ""), e);
     }
 }
 class h {
@@ -414,17 +414,17 @@ class h {
         let r = {};
         for (let n of this.fields) {
             if (!n.oneof) {
-                let o = this.field(n, e[n.localName], t);
-                void 0 !== o && (r[t.useProtoFieldName ? n.name : n.jsonName] = o);
+                let i = this.field(n, e[n.localName], t);
+                void 0 !== i && (r[t.useProtoFieldName ? n.name : n.jsonName] = i);
                 continue;
             }
-            let o = e[n.oneof];
-            if (o.oneofKind !== n.localName) continue;
-            let i =
+            let i = e[n.oneof];
+            if (i.oneofKind !== n.localName) continue;
+            let o =
                     "scalar" == n.kind || "enum" == n.kind
                         ? Object.assign(Object.assign({}, t), { emitDefaultValues: !0 })
                         : t,
-                a = this.field(n, o[n.localName], i);
+                a = this.field(n, i[n.localName], o);
             l(void 0 !== a), (r[t.useProtoFieldName ? n.name : n.jsonName] = a);
         }
         return r;
@@ -433,56 +433,56 @@ class h {
         let n;
         if ("map" == e.kind) {
             l("object" == typeof t && null !== t);
-            let o = {};
+            let i = {};
             switch (e.V.kind) {
                 case "scalar":
                     for (let [r, n] of Object.entries(t)) {
                         let t = this.scalar(e.V.T, n, e.name, !1, !0);
-                        l(void 0 !== t), (o[r.toString()] = t);
+                        l(void 0 !== t), (i[r.toString()] = t);
                     }
                     break;
                 case "message":
-                    let i = e.V.T();
+                    let o = e.V.T();
                     for (let [n, a] of Object.entries(t)) {
-                        let t = this.message(i, a, e.name, r);
-                        l(void 0 !== t), (o[n.toString()] = t);
+                        let t = this.message(o, a, e.name, r);
+                        l(void 0 !== t), (i[n.toString()] = t);
                     }
                     break;
                 case "enum":
                     let a = e.V.T();
-                    for (let [n, i] of Object.entries(t)) {
-                        l(void 0 === i || "number" == typeof i);
-                        let t = this.enum(a, i, e.name, !1, !0, r.enumAsInteger);
-                        l(void 0 !== t), (o[n.toString()] = t);
+                    for (let [n, o] of Object.entries(t)) {
+                        l(void 0 === o || "number" == typeof o);
+                        let t = this.enum(a, o, e.name, !1, !0, r.enumAsInteger);
+                        l(void 0 !== t), (i[n.toString()] = t);
                     }
             }
-            (r.emitDefaultValues || Object.keys(o).length > 0) && (n = o);
+            (r.emitDefaultValues || Object.keys(i).length > 0) && (n = i);
         } else if (e.repeat) {
             l(Array.isArray(t));
-            let o = [];
+            let i = [];
             switch (e.kind) {
                 case "scalar":
                     for (let r = 0; r < t.length; r++) {
                         let n = this.scalar(e.T, t[r], e.name, e.opt, !0);
-                        l(void 0 !== n), o.push(n);
+                        l(void 0 !== n), i.push(n);
                     }
                     break;
                 case "enum":
-                    let i = e.T();
+                    let o = e.T();
                     for (let n = 0; n < t.length; n++) {
                         l(void 0 === t[n] || "number" == typeof t[n]);
-                        let a = this.enum(i, t[n], e.name, e.opt, !0, r.enumAsInteger);
-                        l(void 0 !== a), o.push(a);
+                        let a = this.enum(o, t[n], e.name, e.opt, !0, r.enumAsInteger);
+                        l(void 0 !== a), i.push(a);
                     }
                     break;
                 case "message":
                     let a = e.T();
                     for (let n = 0; n < t.length; n++) {
-                        let i = this.message(a, t[n], e.name, r);
-                        l(void 0 !== i), o.push(i);
+                        let o = this.message(a, t[n], e.name, r);
+                        l(void 0 !== o), i.push(o);
                     }
             }
-            (r.emitDefaultValues || o.length > 0 || r.emitDefaultValues) && (n = o);
+            (r.emitDefaultValues || i.length > 0 || r.emitDefaultValues) && (n = i);
         } else
             switch (e.kind) {
                 case "scalar":
@@ -496,13 +496,13 @@ class h {
             }
         return n;
     }
-    enum(e, t, r, n, o, i) {
+    enum(e, t, r, n, i, o) {
         return "google.protobuf.NullValue" == e[0]
             ? null
             : void 0 === t
               ? void l(n)
-              : 0 !== t || o || n
-                ? (l("number" == typeof t), l(Number.isInteger(t)), i || !e[1].hasOwnProperty(t))
+              : 0 !== t || i || n
+                ? (l("number" == typeof t), l(Number.isInteger(t)), o || !e[1].hasOwnProperty(t))
                     ? t
                     : e[2]
                       ? e[2] + e[1][t]
@@ -512,48 +512,48 @@ class h {
     message(e, t, r, n) {
         return void 0 === t ? (n.emitDefaultValues ? null : void 0) : e.internalJsonWrite(t, n);
     }
-    scalar(e, t, r, o, i) {
-        if (void 0 === t) return void l(o);
-        let p = i || o;
+    scalar(e, t, r, i, o) {
+        if (void 0 === t) return void l(i);
+        let d = o || i;
         switch (e) {
             case n.LN.INT32:
             case n.LN.SFIXED32:
             case n.LN.SINT32:
-                if (0 === t) return p ? 0 : void 0;
+                if (0 === t) return d ? 0 : void 0;
                 return u(t), t;
             case n.LN.FIXED32:
             case n.LN.UINT32:
-                if (0 === t) return p ? 0 : void 0;
+                if (0 === t) return d ? 0 : void 0;
                 return c(t), t;
             case n.LN.FLOAT:
                 f(t);
             case n.LN.DOUBLE:
-                if (0 === t) return p ? 0 : void 0;
+                if (0 === t) return d ? 0 : void 0;
                 if ((l("number" == typeof t), Number.isNaN(t))) return "NaN";
                 if (t === 1 / 0) return "Infinity";
                 if (t === -1 / 0) return "-Infinity";
                 return t;
             case n.LN.STRING:
-                if ("" === t) return p ? "" : void 0;
+                if ("" === t) return d ? "" : void 0;
                 return l("string" == typeof t), t;
             case n.LN.BOOL:
-                if (!1 === t) return !p && void 0;
+                if (!1 === t) return !d && void 0;
                 return l("boolean" == typeof t), t;
             case n.LN.UINT64:
             case n.LN.FIXED64:
                 l("number" == typeof t || "string" == typeof t || "bigint" == typeof t);
-                let d = s.e.from(t);
-                if (d.isZero() && !p) return;
-                return d.toString();
+                let p = s.e.from(t);
+                if (p.isZero() && !d) return;
+                return p.toString();
             case n.LN.INT64:
             case n.LN.SFIXED64:
             case n.LN.SINT64:
                 l("number" == typeof t || "string" == typeof t || "bigint" == typeof t);
                 let h = s.h.from(t);
-                if (h.isZero() && !p) return;
+                if (h.isZero() && !d) return;
                 return h.toString();
             case n.LN.BYTES:
-                if ((l(t instanceof Uint8Array), !t.byteLength)) return p ? "" : void 0;
+                if ((l(t instanceof Uint8Array), !t.byteLength)) return d ? "" : void 0;
                 return (0, a.C)(t);
         }
     }
@@ -565,11 +565,11 @@ function v(e, t = n.rO.STRING) {
             return !1;
         case n.LN.UINT64:
         case n.LN.FIXED64:
-            return p(s.e.ZERO, t);
+            return d(s.e.ZERO, t);
         case n.LN.INT64:
         case n.LN.SFIXED64:
         case n.LN.SINT64:
-            return p(s.h.ZERO, t);
+            return d(s.h.ZERO, t);
         case n.LN.DOUBLE:
         case n.LN.FLOAT:
             return 0;
@@ -592,17 +592,17 @@ class y {
             this.fieldNoToField = new Map(t.map((e) => [e.no, e]));
         }
     }
-    read(e, t, r, o) {
+    read(e, t, r, i) {
         this.prepare();
-        let i = void 0 === o ? e.len : e.pos + o;
-        for (; e.pos < i; ) {
-            let [o, i] = e.tag(),
-                a = this.fieldNoToField.get(o);
+        let o = void 0 === i ? e.len : e.pos + i;
+        for (; e.pos < o; ) {
+            let [i, o] = e.tag(),
+                a = this.fieldNoToField.get(i);
             if (!a) {
                 let n = r.readUnknownField;
-                if ("throw" == n) throw Error(`Unknown field ${o} (wire type ${i}) for ${this.info.typeName}`);
-                let a = e.skip(i);
-                !1 !== n && (!0 === n ? m.f$.onRead : n)(this.info.typeName, t, o, i, a);
+                if ("throw" == n) throw Error(`Unknown field ${i} (wire type ${o}) for ${this.info.typeName}`);
+                let a = e.skip(o);
+                !1 !== n && (!0 === n ? m.f$.onRead : n)(this.info.typeName, t, i, o, a);
                 continue;
             }
             let s = t,
@@ -615,7 +615,7 @@ class y {
                         f = "scalar" == a.kind ? a.L : void 0;
                     if (l) {
                         let t = s[u];
-                        if (i == m.O0.LengthDelimited && c != n.LN.STRING && c != n.LN.BYTES) {
+                        if (o == m.O0.LengthDelimited && c != n.LN.STRING && c != n.LN.BYTES) {
                             let r = e.uint32() + e.pos;
                             for (; e.pos < r; ) t.push(this.scalar(e, c, f));
                         } else t.push(this.scalar(e, c, f));
@@ -629,54 +629,54 @@ class y {
                     } else s[u] = a.T().internalBinaryRead(e, e.uint32(), r, s[u]);
                     break;
                 case "map":
-                    let [p, d] = this.mapEntry(a, e, r);
-                    s[u][p] = d;
+                    let [d, p] = this.mapEntry(a, e, r);
+                    s[u][d] = p;
             }
         }
     }
     mapEntry(e, t, r) {
-        let o,
-            i,
+        let i,
+            o,
             a = t.uint32(),
             s = t.pos + a;
         for (; t.pos < s; ) {
             let [a, s] = t.tag();
             switch (a) {
                 case 1:
-                    o = e.K == n.LN.BOOL ? t.bool().toString() : this.scalar(t, e.K, n.rO.STRING);
+                    i = e.K == n.LN.BOOL ? t.bool().toString() : this.scalar(t, e.K, n.rO.STRING);
                     break;
                 case 2:
                     switch (e.V.kind) {
                         case "scalar":
-                            i = this.scalar(t, e.V.T, e.V.L);
+                            o = this.scalar(t, e.V.T, e.V.L);
                             break;
                         case "enum":
-                            i = t.int32();
+                            o = t.int32();
                             break;
                         case "message":
-                            i = e.V.T().internalBinaryRead(t, t.uint32(), r);
+                            o = e.V.T().internalBinaryRead(t, t.uint32(), r);
                     }
                     break;
                 default:
                     throw Error(`Unknown field ${a} (wire type ${s}) in map entry for ${this.info.typeName}#${e.name}`);
             }
         }
-        if (void 0 === o) {
+        if (void 0 === i) {
             let t = v(e.K);
-            o = e.K == n.LN.BOOL ? t.toString() : t;
+            i = e.K == n.LN.BOOL ? t.toString() : t;
         }
-        if (void 0 === i)
+        if (void 0 === o)
             switch (e.V.kind) {
                 case "scalar":
-                    i = v(e.V.T, e.V.L);
+                    o = v(e.V.T, e.V.L);
                     break;
                 case "enum":
-                    i = 0;
+                    o = 0;
                     break;
                 case "message":
-                    i = e.V.T().create();
+                    o = e.V.T().create();
             }
-        return [o, i];
+        return [i, o];
     }
     scalar(e, t, r) {
         switch (t) {
@@ -691,11 +691,11 @@ class y {
             case n.LN.FLOAT:
                 return e.float();
             case n.LN.INT64:
-                return p(e.int64(), r);
+                return d(e.int64(), r);
             case n.LN.UINT64:
-                return p(e.uint64(), r);
+                return d(e.uint64(), r);
             case n.LN.FIXED64:
-                return p(e.fixed64(), r);
+                return d(e.fixed64(), r);
             case n.LN.FIXED32:
                 return e.fixed32();
             case n.LN.BYTES:
@@ -705,11 +705,11 @@ class y {
             case n.LN.SFIXED32:
                 return e.sfixed32();
             case n.LN.SFIXED64:
-                return p(e.sfixed64(), r);
+                return d(e.sfixed64(), r);
             case n.LN.SINT32:
                 return e.sint32();
             case n.LN.SINT64:
-                return p(e.sint64(), r);
+                return d(e.sint64(), r);
         }
     }
 }
@@ -724,88 +724,88 @@ class g {
         }
     }
     write(e, t, r) {
-        for (let o of (this.prepare(), this.fields)) {
-            let i,
+        for (let i of (this.prepare(), this.fields)) {
+            let o,
                 a,
-                s = o.repeat,
-                u = o.localName;
-            if (o.oneof) {
-                let t = e[o.oneof];
+                s = i.repeat,
+                u = i.localName;
+            if (i.oneof) {
+                let t = e[i.oneof];
                 if (t.oneofKind !== u) continue;
-                (i = t[u]), (a = !0);
-            } else (i = e[u]), (a = !1);
-            switch (o.kind) {
+                (o = t[u]), (a = !0);
+            } else (o = e[u]), (a = !1);
+            switch (i.kind) {
                 case "scalar":
                 case "enum":
-                    let c = "enum" == o.kind ? n.LN.INT32 : o.T;
+                    let c = "enum" == i.kind ? n.LN.INT32 : i.T;
                     if (s)
-                        if ((l(Array.isArray(i)), s == n.sA.PACKED)) this.packed(t, c, o.no, i);
-                        else for (let e of i) this.scalar(t, c, o.no, e, !0);
-                    else void 0 === i ? l(o.opt) : this.scalar(t, c, o.no, i, a || o.opt);
+                        if ((l(Array.isArray(o)), s == n.sA.PACKED)) this.packed(t, c, i.no, o);
+                        else for (let e of o) this.scalar(t, c, i.no, e, !0);
+                    else void 0 === o ? l(i.opt) : this.scalar(t, c, i.no, o, a || i.opt);
                     break;
                 case "message":
-                    if (s) for (let e of (l(Array.isArray(i)), i)) this.message(t, r, o.T(), o.no, e);
-                    else this.message(t, r, o.T(), o.no, i);
+                    if (s) for (let e of (l(Array.isArray(o)), o)) this.message(t, r, i.T(), i.no, e);
+                    else this.message(t, r, i.T(), i.no, o);
                     break;
                 case "map":
-                    for (let [e, n] of (l("object" == typeof i && null !== i), Object.entries(i)))
-                        this.mapEntry(t, r, o, e, n);
+                    for (let [e, n] of (l("object" == typeof o && null !== o), Object.entries(o)))
+                        this.mapEntry(t, r, i, e, n);
             }
         }
-        let o = r.writeUnknownFields;
-        !1 !== o && (!0 === o ? m.f$.onWrite : o)(this.info.typeName, e, t);
+        let i = r.writeUnknownFields;
+        !1 !== i && (!0 === i ? m.f$.onWrite : i)(this.info.typeName, e, t);
     }
-    mapEntry(e, t, r, o, i) {
+    mapEntry(e, t, r, i, o) {
         e.tag(r.no, m.O0.LengthDelimited), e.fork();
-        let a = o;
+        let a = i;
         switch (r.K) {
             case n.LN.INT32:
             case n.LN.FIXED32:
             case n.LN.UINT32:
             case n.LN.SFIXED32:
             case n.LN.SINT32:
-                a = Number.parseInt(o);
+                a = Number.parseInt(i);
                 break;
             case n.LN.BOOL:
-                l("true" == o || "false" == o), (a = "true" == o);
+                l("true" == i || "false" == i), (a = "true" == i);
         }
         switch ((this.scalar(e, r.K, 1, a, !0), r.V.kind)) {
             case "scalar":
-                this.scalar(e, r.V.T, 2, i, !0);
+                this.scalar(e, r.V.T, 2, o, !0);
                 break;
             case "enum":
-                this.scalar(e, n.LN.INT32, 2, i, !0);
+                this.scalar(e, n.LN.INT32, 2, o, !0);
                 break;
             case "message":
-                this.message(e, t, r.V.T(), 2, i);
+                this.message(e, t, r.V.T(), 2, o);
         }
         e.join();
     }
-    message(e, t, r, n, o) {
-        void 0 !== o && (r.internalBinaryWrite(o, e.tag(n, m.O0.LengthDelimited).fork(), t), e.join());
+    message(e, t, r, n, i) {
+        void 0 !== i && (r.internalBinaryWrite(i, e.tag(n, m.O0.LengthDelimited).fork(), t), e.join());
     }
-    scalar(e, t, r, n, o) {
-        let [i, a, s] = this.scalarInfo(t, n);
-        (!s || o) && (e.tag(r, i), e[a](n));
+    scalar(e, t, r, n, i) {
+        let [o, a, s] = this.scalarInfo(t, n);
+        (!s || i) && (e.tag(r, o), e[a](n));
     }
-    packed(e, t, r, o) {
-        if (!o.length) return;
+    packed(e, t, r, i) {
+        if (!i.length) return;
         l(t !== n.LN.BYTES && t !== n.LN.STRING), e.tag(r, m.O0.LengthDelimited), e.fork();
-        let [, i] = this.scalarInfo(t);
-        for (let t = 0; t < o.length; t++) e[i](o[t]);
+        let [, o] = this.scalarInfo(t);
+        for (let t = 0; t < i.length; t++) e[o](i[t]);
         e.join();
     }
     scalarInfo(e, t) {
         let r,
-            o = m.O0.Varint,
-            i = void 0 === t,
+            i = m.O0.Varint,
+            o = void 0 === t,
             a = 0 === t;
         switch (e) {
             case n.LN.INT32:
                 r = "int32";
                 break;
             case n.LN.STRING:
-                (a = i || !t.length), (o = m.O0.LengthDelimited), (r = "string");
+                (a = o || !t.length), (i = m.O0.LengthDelimited), (r = "string");
                 break;
             case n.LN.BOOL:
                 (a = !1 === t), (r = "bool");
@@ -814,39 +814,39 @@ class g {
                 r = "uint32";
                 break;
             case n.LN.DOUBLE:
-                (o = m.O0.Bit64), (r = "double");
+                (i = m.O0.Bit64), (r = "double");
                 break;
             case n.LN.FLOAT:
-                (o = m.O0.Bit32), (r = "float");
+                (i = m.O0.Bit32), (r = "float");
                 break;
             case n.LN.INT64:
-                (a = i || s.h.from(t).isZero()), (r = "int64");
+                (a = o || s.h.from(t).isZero()), (r = "int64");
                 break;
             case n.LN.UINT64:
-                (a = i || s.e.from(t).isZero()), (r = "uint64");
+                (a = o || s.e.from(t).isZero()), (r = "uint64");
                 break;
             case n.LN.FIXED64:
-                (a = i || s.e.from(t).isZero()), (o = m.O0.Bit64), (r = "fixed64");
+                (a = o || s.e.from(t).isZero()), (i = m.O0.Bit64), (r = "fixed64");
                 break;
             case n.LN.BYTES:
-                (a = i || !t.byteLength), (o = m.O0.LengthDelimited), (r = "bytes");
+                (a = o || !t.byteLength), (i = m.O0.LengthDelimited), (r = "bytes");
                 break;
             case n.LN.FIXED32:
-                (o = m.O0.Bit32), (r = "fixed32");
+                (i = m.O0.Bit32), (r = "fixed32");
                 break;
             case n.LN.SFIXED32:
-                (o = m.O0.Bit32), (r = "sfixed32");
+                (i = m.O0.Bit32), (r = "sfixed32");
                 break;
             case n.LN.SFIXED64:
-                (a = i || s.h.from(t).isZero()), (o = m.O0.Bit64), (r = "sfixed64");
+                (a = o || s.h.from(t).isZero()), (i = m.O0.Bit64), (r = "sfixed64");
                 break;
             case n.LN.SINT32:
                 r = "sint32";
                 break;
             case n.LN.SINT64:
-                (a = i || s.h.from(t).isZero()), (r = "sint64");
+                (a = o || s.h.from(t).isZero()), (r = "sint64");
         }
-        return [o, r, i || a];
+        return [i, r, o || a];
     }
 }
 var b = r(428420),
@@ -961,8 +961,8 @@ class P {
         let t = s.h.from(e),
             r = t.hi >> 31,
             n = (t.lo << 1) ^ r,
-            o = ((t.hi << 1) | (t.lo >>> 31)) ^ r;
-        return (0, T.cV)(n, o, this.buf), this;
+            i = ((t.hi << 1) | (t.lo >>> 31)) ^ r;
+        return (0, T.cV)(n, i, this.buf), this;
     }
     uint64(e) {
         let t = s.e.from(e);
@@ -970,14 +970,14 @@ class P {
     }
 }
 var A = r(638504);
-class O {
+class I {
     constructor(e, t, r) {
         (this.defaultCheckDepth = 16),
             (this.typeName = e),
             (this.fields = t.map(n.mS)),
             (this.options = null != r ? r : {}),
-            (this.refTypeCheck = new o(this)),
-            (this.refJsonReader = new d(this)),
+            (this.refTypeCheck = new i(this)),
+            (this.refJsonReader = new p(this)),
             (this.refJsonWriter = new h(this)),
             (this.refBinReader = new y(this)),
             (this.refBinWriter = new g(this));
@@ -1014,27 +1014,27 @@ class O {
         return (function (e, t, r) {
             if (t === r) return !0;
             if (!t || !r) return !1;
-            for (let o of e.fields) {
-                let e = o.localName,
-                    i = o.oneof ? t[o.oneof][e] : t[e],
-                    a = o.oneof ? r[o.oneof][e] : r[e];
-                switch (o.kind) {
+            for (let i of e.fields) {
+                let e = i.localName,
+                    o = i.oneof ? t[i.oneof][e] : t[e],
+                    a = i.oneof ? r[i.oneof][e] : r[e];
+                switch (i.kind) {
                     case "enum":
                     case "scalar":
-                        let s = "enum" == o.kind ? n.LN.INT32 : o.T;
-                        if (!(o.repeat ? k(s, i, a) : E(s, i, a))) return !1;
+                        let s = "enum" == i.kind ? n.LN.INT32 : i.T;
+                        if (!(i.repeat ? k(s, o, a) : E(s, o, a))) return !1;
                         break;
                     case "map":
                         if (
-                            !("message" == o.V.kind
-                                ? C(o.V.T(), x(i), x(a))
-                                : k("enum" == o.V.kind ? n.LN.INT32 : o.V.T, x(i), x(a)))
+                            !("message" == i.V.kind
+                                ? C(i.V.T(), x(o), x(a))
+                                : k("enum" == i.V.kind ? n.LN.INT32 : i.V.T, x(o), x(a)))
                         )
                             return !1;
                         break;
                     case "message":
-                        let l = o.T();
-                        if (!(o.repeat ? C(l, i, a) : l.equals(i, a))) return !1;
+                        let l = i.T();
+                        if (!(i.repeat ? C(l, o, a) : l.equals(o, a))) return !1;
                 }
             }
             return !0;
@@ -1076,7 +1076,7 @@ class O {
             let n = null != r ? r : this.create();
             return this.refJsonReader.read(e, n, t), n;
         }
-        throw Error(`Unable to parse message ${this.typeName} from JSON ${(0, i.V)(e)}.`);
+        throw Error(`Unable to parse message ${this.typeName} from JSON ${(0, o.V)(e)}.`);
     }
     internalJsonWrite(e, t) {
         return this.refJsonWriter.write(e, t);
@@ -1085,7 +1085,7 @@ class O {
         return this.refBinWriter.write(e, t, r), t;
     }
     internalBinaryRead(e, t, r, n) {
-        let o = null != n ? n : this.create();
-        return this.refBinReader.read(e, o, r, t), o;
+        let i = null != n ? n : this.create();
+        return this.refBinReader.read(e, i, r, t), i;
     }
 }

@@ -1,8 +1,8 @@
 "use strict";
 let n;
 r.d(t, { B: () => a });
-let o = Symbol.for("react-aria.i18n.locale"),
-    i = Symbol.for("react-aria.i18n.strings");
+let i = Symbol.for("react-aria.i18n.locale"),
+    o = Symbol.for("react-aria.i18n.strings");
 class a {
     getStringForLocale(e, t) {
         let r = this.getStringsForLocale(t)[e];
@@ -16,9 +16,9 @@ class a {
                 ((t = (function (e, t, r = "en-US") {
                     var n;
                     if (t[e]) return t[e];
-                    let o = ((n = e), Intl.Locale ? new Intl.Locale(n).language : n.split("-")[0]);
-                    if (t[o]) return t[o];
-                    for (let e in t) if (e.startsWith(o + "-")) return t[e];
+                    let i = ((n = e), Intl.Locale ? new Intl.Locale(n).language : n.split("-")[0]);
+                    if (t[i]) return t[i];
+                    for (let e in t) if (e.startsWith(i + "-")) return t[e];
                     return t[r];
                 })(e, this.strings, this.defaultLocale)),
                 (this.strings[e] = t)),
@@ -27,9 +27,9 @@ class a {
     }
     static getGlobalDictionaryForPackage(e) {
         if ("u" < typeof window) return null;
-        let t = window[o];
+        let t = window[i];
         if (void 0 === n) {
-            let e = window[i];
+            let e = window[o];
             if (!e) return null;
             for (let r in ((n = {}), e)) n[r] = new a({ [t]: e[r] }, t);
         }

@@ -4,13 +4,13 @@ Object.defineProperty(t, "__esModule", { value: !0 }),
     (t.bindFormatValuesWithBuilder = a),
     (t.bindFormatValues = s);
 let n = r(315507),
-    o = r(118300);
+    i = r(118300);
 t.FormatBuilder = class {
     constructor(e) {
         this.context = e;
     }
 };
-class i extends Error {
+class o extends Error {
     constructor(e, t, r) {
         super(`No value for variable '${e}' was provided for the localized message '${t}'`),
             (this.variableName = e),
@@ -26,8 +26,8 @@ function a(e) {
         nodes: u,
         locales: c,
         values: f,
-        dataFormatters: p,
-        formatConfig: d,
+        dataFormatters: d,
+        formatConfig: p,
         currentPluralValue: h,
         keyPrefix: m,
     } = e;
@@ -39,81 +39,81 @@ function a(e) {
             continue;
         }
         let y = v[0];
-        if (y === o.FormatJsNodeType.Pound) {
+        if (y === i.FormatJsNodeType.Pound) {
             if ("number" == typeof h) {
-                let e = p.formatNumber(h);
+                let e = d.formatNumber(h);
                 r.pushLiteralText(e);
             }
             continue;
         }
         let g = v[1];
-        if (!(g in f) && "$" !== g[0]) throw new i(g, l, y);
+        if (!(g in f) && "$" !== g[0]) throw new o(g, l, y);
         let b = f[g];
         switch (y) {
-            case o.FormatJsNodeType.Argument:
+            case i.FormatJsNodeType.Argument:
                 "object" == typeof b || "function" == typeof b ? r.pushObject(b) : r.pushLiteralText(String(b));
                 break;
-            case o.FormatJsNodeType.Date: {
+            case i.FormatJsNodeType.Date: {
                 let e = v[2],
-                    t = e in d.date ? d.date[e] : null != e ? (0, n.parseDateTimeSkeleton)(e) : void 0;
-                r.pushLiteralText(p.formatDate(b, t));
+                    t = e in p.date ? p.date[e] : null != e ? (0, n.parseDateTimeSkeleton)(e) : void 0;
+                r.pushLiteralText(d.formatDate(b, t));
                 break;
             }
-            case o.FormatJsNodeType.Time: {
+            case i.FormatJsNodeType.Time: {
                 let e = v[2],
-                    t = e in d.time ? d.time[e] : null != e ? (0, n.parseDateTimeSkeleton)(e) : void 0;
-                r.pushLiteralText(p.formatTime(b, t));
+                    t = e in p.time ? p.time[e] : null != e ? (0, n.parseDateTimeSkeleton)(e) : void 0;
+                r.pushLiteralText(d.formatTime(b, t));
                 break;
             }
-            case o.FormatJsNodeType.Number: {
+            case i.FormatJsNodeType.Number: {
                 let e = v[2],
-                    o =
-                        e in d.number
-                            ? d.number[e]
+                    i =
+                        e in p.number
+                            ? p.number[e]
                             : null != e
                               ? (0, n.parseNumberSkeleton)((0, n.parseNumberSkeletonFromString)(e))
                               : void 0,
-                    i = "number" != typeof b ? b : b * (null != (t = null == o ? void 0 : o.scale) ? t : 1);
-                r.pushLiteralText(p.formatNumber(i, o));
+                    o = "number" != typeof b ? b : b * (null != (t = null == i ? void 0 : i.scale) ? t : 1);
+                r.pushLiteralText(d.formatNumber(o, i));
                 break;
             }
-            case o.FormatJsNodeType.Tag: {
+            case i.FormatJsNodeType.Tag: {
                 let t = v[2],
                     n = v[3],
-                    o = s({
+                    i = s({
                         Builder: r.constructor,
                         nodes: t,
                         locales: c,
-                        dataFormatters: p,
-                        formatConfig: d,
+                        dataFormatters: d,
+                        formatConfig: p,
                         values: f,
                         currentPluralValue: h,
                         keyPrefix: `${m}.${e}`,
                     }),
-                    i =
+                    o =
                         null != n
                             ? s({
                                   Builder: r.constructor,
                                   nodes: n,
                                   locales: c,
-                                  dataFormatters: p,
-                                  formatConfig: d,
+                                  dataFormatters: d,
+                                  formatConfig: p,
                                   values: f,
                                   currentPluralValue: h,
                                   keyPrefix: `${m}.${e}-control`,
                               })
                             : [];
-                if ("$" === g[0]) r.pushRichTextTag(g, o, i);
+                if ("$" === g[0]) r.pushRichTextTag(g, i, o);
                 else {
                     if ("function" != typeof b)
                         throw `expected a function type for a Tag formatting value, ${g}. got ${typeof b}: ${b}`;
-                    let t = b(o, `${m}.${e}`);
+                    let t = b(i, `${m}.${e}`);
                     for (let e of (t = Array.isArray(t) ? t : [t]))
                         "string" == typeof e ? r.pushLiteralText(e) : r.pushObject(e);
                 }
                 break;
             }
-            case o.FormatJsNodeType.Select: {
+            case i.FormatJsNodeType.Select: {
                 let t = v[2],
                     n = b in t ? t[b] : t.other;
                 if (null == n)
@@ -122,34 +122,34 @@ function a(e) {
                     builder: r,
                     nodes: n,
                     locales: c,
-                    dataFormatters: p,
-                    formatConfig: d,
+                    dataFormatters: d,
+                    formatConfig: p,
                     values: f,
                     keyPrefix: `${m}.${e}`,
                 });
                 break;
             }
-            case o.FormatJsNodeType.Plural: {
+            case i.FormatJsNodeType.Plural: {
                 let t = v[2],
                     n = v[3],
-                    o = v[4],
-                    i = (() => {
+                    i = v[4],
+                    o = (() => {
                         var e;
                         let r = `=${b}`;
                         return r in t
                             ? t[r]
-                            : null != (e = t[p.getPluralRules({ type: o }).select(b - (null != n ? n : 0))])
+                            : null != (e = t[d.getPluralRules({ type: i }).select(b - (null != n ? n : 0))])
                               ? e
                               : t.other;
                     })();
-                if (null == i)
+                if (null == o)
                     throw `${b} is not a known option for plural value ${g}. Valid options are ${Object.keys(t).join(", ")}`;
                 a({
                     builder: r,
-                    nodes: i,
+                    nodes: o,
                     locales: c,
-                    dataFormatters: p,
-                    formatConfig: d,
+                    dataFormatters: d,
+                    formatConfig: p,
                     values: f,
                     currentPluralValue: b - (null != n ? n : 0),
                     keyPrefix: `${m}.${e}`,
@@ -163,8 +163,8 @@ function s(e) {
             Builder: t,
             originalMessage: r,
             nodes: n,
-            locales: o,
-            dataFormatters: i,
+            locales: i,
+            dataFormatters: o,
             formatConfig: s,
             values: l,
             currentPluralValue: u,
@@ -178,8 +178,8 @@ function s(e) {
                   builder: f,
                   originalMessage: r,
                   nodes: n,
-                  locales: o,
-                  dataFormatters: i,
+                  locales: i,
+                  dataFormatters: o,
                   formatConfig: s,
                   values: l,
                   currentPluralValue: u,

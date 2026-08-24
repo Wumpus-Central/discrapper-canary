@@ -9,7 +9,7 @@ function r() {
 }
 for (
     var n = 0,
-        o = [
+        i = [
             "use",
             "on",
             "once",
@@ -33,10 +33,10 @@ for (
             "cert",
             "disableTLSCerts",
         ];
-    n < o.length;
+    n < i.length;
     n++
 ) {
-    let e = o[n];
+    let e = i[n];
     r.prototype[e] = function () {
         for (var t = arguments.length, r = Array(t), n = 0; n < t; n++) r[n] = arguments[n];
         return this._defaults.push({ fn: e, args: r }), this;
@@ -65,23 +65,23 @@ for (
                 ) {
                     r && (e = r);
                     var n = 0,
-                        o = function () {};
+                        i = function () {};
                     return {
-                        s: o,
+                        s: i,
                         n: function () {
                             return n >= e.length ? { done: !0 } : { done: !1, value: e[n++] };
                         },
                         e: function (e) {
                             throw e;
                         },
-                        f: o,
+                        f: i,
                     };
                 }
                 throw TypeError(
                     "Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.",
                 );
             }
-            var i,
+            var o,
                 a = !0,
                 s = !1;
             return {
@@ -93,13 +93,13 @@ for (
                     return (a = e.done), e;
                 },
                 e: function (e) {
-                    (s = !0), (i = e);
+                    (s = !0), (o = e);
                 },
                 f: function () {
                     try {
                         a || null == r.return || r.return();
                     } finally {
-                        if (s) throw i;
+                        if (s) throw o;
                     }
                 },
             };

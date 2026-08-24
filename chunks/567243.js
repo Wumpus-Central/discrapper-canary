@@ -1,6 +1,6 @@
 "use strict";
 var n = r(89738);
-function o() {
+function i() {
     (this.protocol = null),
         (this.slashes = null),
         (this.auth = null),
@@ -14,15 +14,15 @@ function o() {
         (this.path = null),
         (this.href = null);
 }
-var i = /^([a-z0-9.+-]+:)/i,
+var o = /^([a-z0-9.+-]+:)/i,
     a = /:[0-9]*$/,
     s = /^(\/\/?(?!\/)[^?\s]*)(\?[^\s]*)?$/,
     l = ["'"].concat(["{", "}", "|", "\\", "^", "`"].concat(["<", ">", '"', "`", " ", "\r", "\n", "	"])),
     u = ["%", "/", "?", ";", "#"].concat(l),
     c = ["/", "?", "#"],
     f = /^[+a-z0-9A-Z_-]{0,63}$/,
-    p = /^([+a-z0-9A-Z_-]{0,63})(.*)$/,
-    d = { javascript: !0, "javascript:": !0 },
+    d = /^([+a-z0-9A-Z_-]{0,63})(.*)$/,
+    p = { javascript: !0, "javascript:": !0 },
     h = { javascript: !0, "javascript:": !0 },
     m = {
         http: !0,
@@ -38,14 +38,14 @@ var i = /^([a-z0-9.+-]+:)/i,
     },
     v = r(591560);
 function y(e, t, r) {
-    if (e && "object" == typeof e && e instanceof o) return e;
-    var n = new o();
+    if (e && "object" == typeof e && e instanceof i) return e;
+    var n = new i();
     return n.parse(e, t, r), n;
 }
-(o.prototype.parse = function (e, t, r) {
+(i.prototype.parse = function (e, t, r) {
     if ("string" != typeof e) throw TypeError("Parameter 'url' must be a string, not " + typeof e);
-    var o = e.indexOf("?"),
-        a = -1 !== o && o < e.indexOf("#") ? "?" : "#",
+    var i = e.indexOf("?"),
+        a = -1 !== i && i < e.indexOf("#") ? "?" : "#",
         y = e.split(a);
     y[0] = y[0].replace(/\\/g, "/");
     var g = (e = y.join(a));
@@ -63,7 +63,7 @@ function y(e, t, r) {
                 this
             );
     }
-    var w = i.exec(g);
+    var w = o.exec(g);
     if (w) {
         var _ = (w = w[0]).toLowerCase();
         (this.protocol = _), (g = g.substr(w.length));
@@ -92,16 +92,16 @@ function y(e, t, r) {
         var M = "[" === this.hostname[0] && "]" === this.hostname[this.hostname.length - 1];
         if (!M)
             for (var P = this.hostname.split(/\./), C = 0, A = P.length; C < A; C++) {
-                var O = P[C];
-                if (O && !O.match(f)) {
-                    for (var I = "", D = 0, L = O.length; D < L; D++) O.charCodeAt(D) > 127 ? (I += "x") : (I += O[D]);
-                    if (!I.match(f)) {
-                        var R = P.slice(0, C),
+                var I = P[C];
+                if (I && !I.match(f)) {
+                    for (var O = "", D = 0, R = I.length; D < R; D++) I.charCodeAt(D) > 127 ? (O += "x") : (O += I[D]);
+                    if (!O.match(f)) {
+                        var L = P.slice(0, C),
                             F = P.slice(C + 1),
-                            N = O.match(p);
-                        N && (R.push(N[1]), F.unshift(N[2])),
+                            N = I.match(d);
+                        N && (L.push(N[1]), F.unshift(N[2])),
                             F.length && (g = "/" + F.join(".") + g),
-                            (this.hostname = R.join("."));
+                            (this.hostname = L.join("."));
                         break;
                     }
                 }
@@ -114,12 +114,12 @@ function y(e, t, r) {
             (this.href += this.host),
             M && ((this.hostname = this.hostname.substr(1, this.hostname.length - 2)), "/" !== g[0] && (g = "/" + g));
     }
-    if (!d[_])
+    if (!p[_])
         for (var C = 0, A = l.length; C < A; C++) {
-            var $ = l[C];
-            if (-1 !== g.indexOf($)) {
-                var K = encodeURIComponent($);
-                K === $ && (K = escape($)), (g = g.split($).join(K));
+            var K = l[C];
+            if (-1 !== g.indexOf(K)) {
+                var $ = encodeURIComponent(K);
+                $ === K && ($ = escape(K)), (g = g.split(K).join($));
             }
         }
     var V = g.indexOf("#");
@@ -142,33 +142,33 @@ function y(e, t, r) {
     }
     return (this.href = this.format()), this;
 }),
-    (o.prototype.format = function () {
+    (i.prototype.format = function () {
         var e = this.auth || "";
         e && (e = (e = encodeURIComponent(e)).replace(/%3A/i, ":") + "@");
         var t = this.protocol || "",
             r = this.pathname || "",
             n = this.hash || "",
-            o = !1,
-            i = "";
+            i = !1,
+            o = "";
         this.host
-            ? (o = e + this.host)
+            ? (i = e + this.host)
             : this.hostname &&
-              ((o = e + (-1 === this.hostname.indexOf(":") ? this.hostname : "[" + this.hostname + "]")),
-              this.port && (o += ":" + this.port)),
+              ((i = e + (-1 === this.hostname.indexOf(":") ? this.hostname : "[" + this.hostname + "]")),
+              this.port && (i += ":" + this.port)),
             this.query &&
                 "object" == typeof this.query &&
                 Object.keys(this.query).length &&
-                (i = v.stringify(this.query, { arrayFormat: "repeat", addQueryPrefix: !1 }));
-        var a = this.search || (i && "?" + i) || "";
+                (o = v.stringify(this.query, { arrayFormat: "repeat", addQueryPrefix: !1 }));
+        var a = this.search || (o && "?" + o) || "";
         return (
             t && ":" !== t.substr(-1) && (t += ":"),
-            this.slashes || ((!t || m[t]) && !1 !== o)
-                ? ((o = "//" + (o || "")), r && "/" !== r.charAt(0) && (r = "/" + r))
-                : o || (o = ""),
+            this.slashes || ((!t || m[t]) && !1 !== i)
+                ? ((i = "//" + (i || "")), r && "/" !== r.charAt(0) && (r = "/" + r))
+                : i || (i = ""),
             n && "#" !== n.charAt(0) && (n = "#" + n),
             a && "?" !== a.charAt(0) && (a = "?" + a),
             t +
-                o +
+                i +
                 (r = r.replace(/[?#]/g, function (e) {
                     return encodeURIComponent(e);
                 })) +
@@ -176,16 +176,16 @@ function y(e, t, r) {
                 n
         );
     }),
-    (o.prototype.resolve = function (e) {
+    (i.prototype.resolve = function (e) {
         return this.resolveObject(y(e, !1, !0)).format();
     }),
-    (o.prototype.resolveObject = function (e) {
+    (i.prototype.resolveObject = function (e) {
         if ("string" == typeof e) {
-            var t = new o();
+            var t = new i();
             t.parse(e, !1, !0), (e = t);
         }
-        for (var r = new o(), n = Object.keys(this), i = 0; i < n.length; i++) {
-            var a = n[i];
+        for (var r = new i(), n = Object.keys(this), o = 0; o < n.length; o++) {
+            var a = n[o];
             r[a] = this[a];
         }
         if (((r.hash = e.hash), "" === e.href)) return (r.href = r.format()), r;
@@ -203,19 +203,19 @@ function y(e, t, r) {
         if (e.protocol && e.protocol !== r.protocol) {
             if (!m[e.protocol]) {
                 for (var c = Object.keys(e), f = 0; f < c.length; f++) {
-                    var p = c[f];
-                    r[p] = e[p];
+                    var d = c[f];
+                    r[d] = e[d];
                 }
                 return (r.href = r.format()), r;
             }
             if (((r.protocol = e.protocol), e.host || h[e.protocol])) r.pathname = e.pathname;
             else {
-                for (var d = (e.pathname || "").split("/"); d.length && !(e.host = d.shift()); );
+                for (var p = (e.pathname || "").split("/"); p.length && !(e.host = p.shift()); );
                 e.host || (e.host = ""),
                     e.hostname || (e.hostname = ""),
-                    "" !== d[0] && d.unshift(""),
-                    d.length < 2 && d.unshift(""),
-                    (r.pathname = d.join("/"));
+                    "" !== p[0] && p.unshift(""),
+                    p.length < 2 && p.unshift(""),
+                    (r.pathname = p.join("/"));
             }
             if (
                 ((r.search = e.search),
@@ -237,7 +237,7 @@ function y(e, t, r) {
             w = b || g || (r.host && e.pathname),
             _ = w,
             S = (r.pathname && r.pathname.split("/")) || [],
-            d = (e.pathname && e.pathname.split("/")) || [],
+            p = (e.pathname && e.pathname.split("/")) || [],
             x = r.protocol && !m[r.protocol];
         if (
             (x &&
@@ -248,17 +248,17 @@ function y(e, t, r) {
                 e.protocol &&
                     ((e.hostname = null),
                     (e.port = null),
-                    e.host && ("" === d[0] ? (d[0] = e.host) : d.unshift(e.host)),
+                    e.host && ("" === p[0] ? (p[0] = e.host) : p.unshift(e.host)),
                     (e.host = null)),
-                (w = w && ("" === d[0] || "" === S[0]))),
+                (w = w && ("" === p[0] || "" === S[0]))),
             b)
         )
             (r.host = e.host || "" === e.host ? e.host : r.host),
                 (r.hostname = e.hostname || "" === e.hostname ? e.hostname : r.hostname),
                 (r.search = e.search),
                 (r.query = e.query),
-                (S = d);
-        else if (d.length) S || (S = []), S.pop(), (S = S.concat(d)), (r.search = e.search), (r.query = e.query);
+                (S = p);
+        else if (p.length) S || (S = []), S.pop(), (S = S.concat(p)), (r.search = e.search), (r.query = e.query);
         else if (null != e.search) {
             if (x) {
                 (r.host = S.shift()), (r.hostname = r.host);
@@ -307,7 +307,7 @@ function y(e, t, r) {
             r
         );
     }),
-    (o.prototype.parseHost = function () {
+    (i.prototype.parseHost = function () {
         var e = this.host,
             t = a.exec(e);
         t && (":" !== (t = t[0]) && (this.port = t.substr(1)), (e = e.substr(0, e.length - t.length))),
@@ -321,6 +321,6 @@ function y(e, t, r) {
         return e ? y(e, !1, !0).resolveObject(t) : t;
     }),
     (t.format = function (e) {
-        return ("string" == typeof e && (e = y(e)), e instanceof o) ? e.format() : o.prototype.format.call(e);
+        return ("string" == typeof e && (e = y(e)), e instanceof i) ? e.format() : i.prototype.format.call(e);
     }),
-    (t.Url = o);
+    (t.Url = i);

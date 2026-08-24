@@ -1,8 +1,8 @@
 "use strict";
-r.d(t, { Y: () => i });
+r.d(t, { Y: () => o });
 var n = r(353428),
-    o = r(337210);
-class i {
+    i = r(337210);
+class o {
     get selectionMode() {
         return this.state.selectionMode;
     }
@@ -59,7 +59,7 @@ class i {
         let t = null;
         for (let e of this.state.selectedKeys) {
             let r = this.collection.getItem(e);
-            (!t || (r && 0 > (0, o.o3)(this.collection, r, t))) && (t = r);
+            (!t || (r && 0 > (0, i.o3)(this.collection, r, t))) && (t = r);
         }
         return null != (e = null == t ? void 0 : t.key) ? e : null;
     }
@@ -68,7 +68,7 @@ class i {
         let t = null;
         for (let e of this.state.selectedKeys) {
             let r = this.collection.getItem(e);
-            (!t || (r && (0, o.o3)(this.collection, r, t) > 0)) && (t = r);
+            (!t || (r && (0, i.o3)(this.collection, r, t) > 0)) && (t = r);
         }
         return null != (e = null == t ? void 0 : t.key) ? e : null;
     }
@@ -86,11 +86,11 @@ class i {
         if (null != r) {
             if ("all" === this.state.selectedKeys) t = new (0, n.L)([r], r, r);
             else {
-                var o, i;
+                var i, o;
                 let e = this.state.selectedKeys,
-                    a = null != (o = e.anchorKey) ? o : r;
-                for (let o of ((t = new (0, n.L)(e, a, r)), this.getKeyRange(a, null != (i = e.currentKey) ? i : r)))
-                    t.delete(o);
+                    a = null != (i = e.anchorKey) ? i : r;
+                for (let i of ((t = new (0, n.L)(e, a, r)), this.getKeyRange(a, null != (o = e.currentKey) ? o : r)))
+                    t.delete(i);
                 for (let e of this.getKeyRange(r, a)) this.canSelectItem(e) && t.add(e);
             }
             this.state.setSelectedKeys(t);
@@ -100,7 +100,7 @@ class i {
         let r = this.collection.getItem(e),
             n = this.collection.getItem(t);
         return r && n
-            ? 0 >= (0, o.o3)(this.collection, r, n)
+            ? 0 >= (0, i.o3)(this.collection, r, n)
                 ? this.getKeyRangeInternal(e, t)
                 : this.getKeyRangeInternal(t, e)
             : [];
@@ -109,12 +109,12 @@ class i {
         var r;
         if (null == (r = this.layoutDelegate) ? void 0 : r.getKeyRange) return this.layoutDelegate.getKeyRange(e, t);
         let n = [],
-            o = e;
-        for (; null != o; ) {
-            let e = this.collection.getItem(o);
-            if ((e && ("item" === e.type || ("cell" === e.type && this.allowsCellSelection)) && n.push(o), o === t))
+            i = e;
+        for (; null != i; ) {
+            let e = this.collection.getItem(i);
+            if ((e && ("item" === e.type || ("cell" === e.type && this.allowsCellSelection)) && n.push(i), i === t))
                 return n;
-            o = this.collection.getKeyAfter(o);
+            i = this.collection.getKeyAfter(i);
         }
         return [];
     }
@@ -154,15 +154,15 @@ class i {
             t = (r) => {
                 for (; null != r; ) {
                     if (this.canSelectItem(r)) {
-                        var n, i;
+                        var n, o;
                         let a = this.collection.getItem(r);
                         (null == a ? void 0 : a.type) === "item" && e.push(r),
                             (null == a ? void 0 : a.hasChildNodes) &&
                                 (this.allowsCellSelection || "item" !== a.type) &&
                                 t(
                                     null !=
-                                        (i = null == (n = (0, o.ue)((0, o.iQ)(a, this.collection))) ? void 0 : n.key)
-                                        ? i
+                                        (o = null == (n = (0, i.ue)((0, i.iQ)(a, this.collection))) ? void 0 : n.key)
+                                        ? o
                                         : null,
                                 );
                     }
@@ -228,7 +228,7 @@ class i {
         return null == (t = this.collection.getItem(e)) ? void 0 : t.props;
     }
     withCollection(e) {
-        return new i(e, this.state, {
+        return new o(e, this.state, {
             allowsCellSelection: this.allowsCellSelection,
             layoutDelegate: this.layoutDelegate || void 0,
         });

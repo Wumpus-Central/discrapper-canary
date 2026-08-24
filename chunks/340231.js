@@ -1,19 +1,19 @@
 "use strict";
-r.d(t, { K: () => o });
+r.d(t, { K: () => i });
 var n = r(201887);
-class o {
+class i {
     getItemRect(e) {
         let t = this.ref.current;
         if (!t) return null;
         let r = null != e ? (0, n.au)(this.ref, e) : null;
         if (!r) return null;
-        let o = t.getBoundingClientRect(),
-            i = r.getBoundingClientRect();
+        let i = t.getBoundingClientRect(),
+            o = r.getBoundingClientRect();
         return {
-            x: i.left - o.left - t.clientLeft + t.scrollLeft,
-            y: i.top - o.top - t.clientTop + t.scrollTop,
-            width: i.width,
-            height: i.height,
+            x: o.left - i.left - t.clientLeft + t.scrollLeft,
+            y: o.top - i.top - t.clientTop + t.scrollTop,
+            width: o.width,
+            height: o.height,
         };
     }
     getContentSize() {
@@ -26,12 +26,12 @@ class o {
     }
     getVisibleRect() {
         var e, t, r, n;
-        let o = this.ref.current;
+        let i = this.ref.current;
         return {
-            x: null != (e = null == o ? void 0 : o.scrollLeft) ? e : 0,
-            y: null != (t = null == o ? void 0 : o.scrollTop) ? t : 0,
-            width: null != (r = null == o ? void 0 : o.clientWidth) ? r : 0,
-            height: null != (n = null == o ? void 0 : o.clientHeight) ? n : 0,
+            x: null != (e = null == i ? void 0 : i.scrollLeft) ? e : 0,
+            y: null != (t = null == i ? void 0 : i.scrollTop) ? t : 0,
+            width: null != (r = null == i ? void 0 : i.clientWidth) ? r : 0,
+            height: null != (n = null == i ? void 0 : i.clientHeight) ? n : 0,
         };
     }
     constructor(e) {

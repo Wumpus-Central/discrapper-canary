@@ -1,6 +1,6 @@
 let n = r(177335),
-    o = r(601861),
-    i = r(800670),
+    i = r(601861),
+    o = r(800670),
     a = r(569671),
     s = r(596641),
     l = r(738018);
@@ -15,9 +15,9 @@ e.exports = (e, t, r, u) => {
         case "==":
             return n(e, r, u);
         case "!=":
-            return o(e, r, u);
-        case ">":
             return i(e, r, u);
+        case ">":
+            return o(e, r, u);
         case ">=":
             return a(e, r, u);
         case "<":

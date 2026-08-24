@@ -14,8 +14,8 @@ var n = (function () {
     };
 })();
 r(562210);
-var o = r(652925),
-    i = r(284009),
+var i = r(652925),
+    o = r(284009),
     a = r(540017),
     s = r(140526);
 e.exports = (function (e) {
@@ -40,7 +40,7 @@ e.exports = (function (e) {
                 value: function () {
                     var e = this._parent.__getValue();
                     return (
-                        i("number" == typeof e, "Cannot interpolate an input which is not a number."),
+                        o("number" == typeof e, "Cannot interpolate an input which is not a number."),
                         this._interpolation(e)
                     );
                 },
@@ -85,4 +85,4 @@ e.exports = (function (e) {
         ]),
         t
     );
-})(o);
+})(i);

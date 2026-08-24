@@ -10,12 +10,12 @@ function t(e) {
         e.forEach(function (e) {
             r.push(e);
         });
-    else if (arguments.length > 0) for (var n = 0, o = arguments.length; n < o; n++) r.push(arguments[n]);
+    else if (arguments.length > 0) for (var n = 0, i = arguments.length; n < i; n++) r.push(arguments[n]);
     return r;
 }
-function r(e, t, n, o) {
-    if (!(this instanceof r)) return new r(e, t, n, o);
-    (this.list = o),
+function r(e, t, n, i) {
+    if (!(this instanceof r)) return new r(e, t, n, i);
+    (this.list = i),
         (this.value = e),
         t ? ((t.next = this), (this.prev = t)) : (this.prev = null),
         n ? ((n.prev = this), (this.next = n)) : (this.next = null);
@@ -61,7 +61,7 @@ function r(e, t, n, o) {
         }
     }),
     (t.prototype.push = function () {
-        for (var e, t, n = 0, o = arguments.length; n < o; n++) {
+        for (var e, t, n = 0, i = arguments.length; n < i; n++) {
             (e = this),
                 (t = arguments[n]),
                 (e.tail = new r(t, e.tail, null, e)),
@@ -71,7 +71,7 @@ function r(e, t, n, o) {
         return this.length;
     }),
     (t.prototype.unshift = function () {
-        for (var e, t, n = 0, o = arguments.length; n < o; n++) {
+        for (var e, t, n = 0, i = arguments.length; n < i; n++) {
             (e = this),
                 (t = arguments[n]),
                 (e.head = new r(t, null, e.head, e)),
@@ -114,12 +114,12 @@ function r(e, t, n, o) {
     }),
     (t.prototype.map = function (e, r) {
         r = r || this;
-        for (var n = new t(), o = this.head; null !== o; ) n.push(e.call(r, o.value, this)), (o = o.next);
+        for (var n = new t(), i = this.head; null !== i; ) n.push(e.call(r, i.value, this)), (i = i.next);
         return n;
     }),
     (t.prototype.mapReverse = function (e, r) {
         r = r || this;
-        for (var n = new t(), o = this.tail; null !== o; ) n.push(e.call(r, o.value, this)), (o = o.prev);
+        for (var n = new t(), i = this.tail; null !== i; ) n.push(e.call(r, i.value, this)), (i = i.prev);
         return n;
     }),
     (t.prototype.reduce = function (e, t) {
@@ -128,7 +128,7 @@ function r(e, t, n, o) {
         if (arguments.length > 1) r = t;
         else if (this.head) (n = this.head.next), (r = this.head.value);
         else throw TypeError("Reduce of empty list with no initial value");
-        for (var o = 0; null !== n; o++) (r = e(r, n.value, o)), (n = n.next);
+        for (var i = 0; null !== n; i++) (r = e(r, n.value, i)), (n = n.next);
         return r;
     }),
     (t.prototype.reduceReverse = function (e, t) {
@@ -137,7 +137,7 @@ function r(e, t, n, o) {
         if (arguments.length > 1) r = t;
         else if (this.tail) (n = this.tail.prev), (r = this.tail.value);
         else throw TypeError("Reduce of empty list with no initial value");
-        for (var o = this.length - 1; null !== n; o--) (r = e(r, n.value, o)), (n = n.prev);
+        for (var i = this.length - 1; null !== n; i--) (r = e(r, n.value, i)), (n = n.prev);
         return r;
     }),
     (t.prototype.toArray = function () {
@@ -153,8 +153,8 @@ function r(e, t, n, o) {
         var n = new t();
         if (r < e || r < 0) return n;
         e < 0 && (e = 0), r > this.length && (r = this.length);
-        for (var o = 0, i = this.head; null !== i && o < e; o++) i = i.next;
-        for (; null !== i && o < r; o++, i = i.next) n.push(i.value);
+        for (var i = 0, o = this.head; null !== o && i < e; i++) o = o.next;
+        for (; null !== o && i < r; i++, o = o.next) n.push(o.value);
         return n;
     }),
     (t.prototype.sliceReverse = function (e, r) {
@@ -162,8 +162,8 @@ function r(e, t, n, o) {
         var n = new t();
         if (r < e || r < 0) return n;
         e < 0 && (e = 0), r > this.length && (r = this.length);
-        for (var o = this.length, i = this.tail; null !== i && o > r; o--) i = i.prev;
-        for (; null !== i && o > e; o--, i = i.prev) n.push(i.value);
+        for (var i = this.length, o = this.tail; null !== o && i > r; i--) o = o.prev;
+        for (; null !== o && i > e; i--, o = o.prev) n.push(o.value);
         return n;
     }),
     (t.prototype.reverse = function () {

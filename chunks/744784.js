@@ -23,12 +23,12 @@ function r(e) {
     }),
     (t.prototype.lowerBound = function (e) {
         for (var t = this._root, r = this.iterator(), n = this._comparator; null !== t; ) {
-            var o = n(e, t.data);
-            if (0 === o) return (r._cursor = t), r;
-            r._ancestors.push(t), (t = t.get_child(o > 0));
+            var i = n(e, t.data);
+            if (0 === i) return (r._cursor = t), r;
+            r._ancestors.push(t), (t = t.get_child(i > 0));
         }
-        for (var i = r._ancestors.length - 1; i >= 0; --i)
-            if (0 > n(e, (t = r._ancestors[i]).data)) return (r._cursor = t), (r._ancestors.length = i), r;
+        for (var o = r._ancestors.length - 1; o >= 0; --o)
+            if (0 > n(e, (t = r._ancestors[o]).data)) return (r._cursor = t), (r._ancestors.length = o), r;
         return (r._ancestors.length = 0), r;
     }),
     (t.prototype.upperBound = function (e) {

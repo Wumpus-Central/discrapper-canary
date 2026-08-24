@@ -13,8 +13,8 @@ var n = (function () {
             return r && e(t.prototype, r), n && e(t, n), t;
         };
     })(),
-    o = r(150433),
-    i = r(151979),
+    i = r(150433),
+    o = r(151979),
     a = r(934580);
 e.exports = (function (e) {
     if ("function" != typeof e && null !== e)
@@ -47,7 +47,7 @@ e.exports = (function (e) {
                         (this._onUpdate = t),
                         (this.__onEnd = r),
                         (this._startTime = Date.now()),
-                        (this._animationFrame = i.current(this.onUpdate.bind(this)));
+                        (this._animationFrame = o.current(this.onUpdate.bind(this)));
                 },
             },
             {
@@ -61,7 +61,7 @@ e.exports = (function (e) {
                     (this._onUpdate(t), 0.1 > Math.abs(this._lastValue - t))
                         ? this.__debouncedOnEnd({ finished: !0 })
                         : ((this._lastValue = t),
-                          this.__active && (this._animationFrame = i.current(this.onUpdate.bind(this))));
+                          this.__active && (this._animationFrame = o.current(this.onUpdate.bind(this))));
                 },
             },
             {
@@ -73,4 +73,4 @@ e.exports = (function (e) {
         ]),
         t
     );
-})(o);
+})(i);

@@ -1,18 +1,18 @@
 "use strict";
 var n = r(521033),
-    o = r(755311),
-    i = r(783773);
+    i = r(755311),
+    o = r(783773);
 e.exports = n
     ? function (e) {
           return n(e);
       }
-    : o
+    : i
       ? function (e) {
             if (!e || ("object" != typeof e && "function" != typeof e)) throw TypeError("getProto: not an object");
-            return o(e);
+            return i(e);
         }
-      : i
+      : o
         ? function (e) {
-              return i(e);
+              return o(e);
           }
         : null;

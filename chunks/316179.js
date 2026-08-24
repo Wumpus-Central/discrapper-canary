@@ -1,7 +1,7 @@
 var n = r(745340),
-    o = r(904124);
+    i = r(904124);
 (t.grammar = r(150594)),
-    (t.write = o),
+    (t.write = i),
     (t.parse = n.parse),
     (t.parseParams = n.parseParams),
     (t.parseFmtpConfig = n.parseFmtpConfig),

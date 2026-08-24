@@ -1,16 +1,16 @@
 "use strict";
 r.d(t, { n: () => s });
 var n = r(163675),
-    o = r(654978),
-    i = r(576024),
+    i = r(654978),
+    o = r(576024),
     a = r(582128);
 function s(e, t) {
     let { collection: r, onLoadMore: s, scrollOffset: l = 1 } = e,
         u = (0, a.useRef)(null),
-        c = (0, o.J)((e) => {
+        c = (0, i.J)((e) => {
             for (let t of e) t.isIntersecting && s && s();
         });
-    (0, i.N)(
+    (0, o.N)(
         () => (
             t.current &&
                 ((u.current = new IntersectionObserver(c, {

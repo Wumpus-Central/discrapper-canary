@@ -13,8 +13,8 @@ var n = (function () {
             return r && e(t.prototype, r), n && e(t, n), t;
         };
     })(),
-    o = r(652925),
-    i = r(667794),
+    i = r(652925),
+    o = r(667794),
     a = r(439834),
     s = r(540017);
 r(150433);
@@ -106,8 +106,8 @@ e.exports = (function (e) {
                 value: function (e, t) {
                     var r = this,
                         n = null;
-                    e.__isInteraction && (n = i.current.createInteractionHandle());
-                    var o = this._animation;
+                    e.__isInteraction && (n = o.current.createInteractionHandle());
+                    var i = this._animation;
                     this._animation && this._animation.stop(),
                         (this._animation = e),
                         e.start(
@@ -116,9 +116,9 @@ e.exports = (function (e) {
                                 r._updateValue(e);
                             },
                             function (e) {
-                                (r._animation = null), null !== n && i.current.clearInteractionHandle(n), t && t(e);
+                                (r._animation = null), null !== n && o.current.clearInteractionHandle(n), t && t(e);
                             },
-                            o,
+                            i,
                         );
                 },
             },
@@ -154,4 +154,4 @@ e.exports = (function (e) {
         ]),
         t
     );
-})(o);
+})(i);

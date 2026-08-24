@@ -1,8 +1,8 @@
 "use strict";
 r.d(t, { e: () => l });
 var n = r(192734),
-    o = r(201092),
-    i = r(103564),
+    i = r(201092),
+    o = r(103564),
     a = r(404903),
     s = r(126024);
 function l(e, t, r) {
@@ -11,8 +11,8 @@ function l(e, t, r) {
             isReadOnly: u = !1,
             value: c,
             name: f,
-            form: p,
-            children: d,
+            form: d,
+            children: p,
             "aria-label": h,
             "aria-labelledby": m,
             validationState: v = "valid",
@@ -47,9 +47,9 @@ function l(e, t, r) {
         }),
         { focusableProps: M } = (0, s.Wc)(e, r),
         P = (0, n.v)(E, M),
-        A = (0, o.$)(e, { labelable: !0 });
+        A = (0, i.$)(e, { labelable: !0 });
     return (
-        (0, i.F)(r, t.defaultSelected, t.setSelected),
+        (0, o.F)(r, t.defaultSelected, t.setSelected),
         {
             labelProps: (0, n.v)(C, { onClick: (e) => e.preventDefault() }),
             inputProps: (0, n.v)(A, {
@@ -63,7 +63,7 @@ function l(e, t, r) {
                 disabled: l,
                 ...(null == c ? {} : { value: c }),
                 name: f,
-                form: p,
+                form: d,
                 type: "checkbox",
                 ...P,
             }),

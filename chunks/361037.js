@@ -5,7 +5,7 @@ function n(e) {
     let r = null == (t = window.navigator.userAgentData) ? void 0 : t.brands;
     return (Array.isArray(r) && r.some((t) => e.test(t.brand))) || e.test(window.navigator.userAgent);
 }
-function o(e) {
+function i(e) {
     var t;
     return (
         "u" > typeof window &&
@@ -13,35 +13,35 @@ function o(e) {
         e.test((null == (t = window.navigator.userAgentData) ? void 0 : t.platform) || window.navigator.platform)
     );
 }
-function i(e) {
+function o(e) {
     let t = null;
     return () => (null == t && (t = e()), t);
 }
-r.d(t, { H8: () => p, Tc: () => f, bh: () => l, cX: () => a, gm: () => h, lg: () => c, m0: () => d, un: () => u });
-let a = i(function () {
-        return o(/^Mac/i);
+r.d(t, { H8: () => d, Tc: () => f, bh: () => l, cX: () => a, gm: () => h, lg: () => c, m0: () => p, un: () => u });
+let a = o(function () {
+        return i(/^Mac/i);
     }),
-    s = i(function () {
-        return o(/^iPhone/i);
+    s = o(function () {
+        return i(/^iPhone/i);
     }),
-    l = i(function () {
-        return o(/^iPad/i) || (a() && navigator.maxTouchPoints > 1);
+    l = o(function () {
+        return i(/^iPad/i) || (a() && navigator.maxTouchPoints > 1);
     }),
-    u = i(function () {
+    u = o(function () {
         return s() || l();
     }),
-    c = i(function () {
+    c = o(function () {
         return a() || u();
     }),
-    f = i(function () {
-        return n(/AppleWebKit/i) && !p();
+    f = o(function () {
+        return n(/AppleWebKit/i) && !d();
     }),
-    p = i(function () {
+    d = o(function () {
         return n(/Chrome/i);
     }),
-    d = i(function () {
+    p = o(function () {
         return n(/Android/i);
     }),
-    h = i(function () {
+    h = o(function () {
         return n(/Firefox/i);
     });

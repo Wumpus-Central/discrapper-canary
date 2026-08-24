@@ -15,11 +15,11 @@ function r(e) {
 function n(e, t) {
     return e === t || (e != e && t != t);
 }
-function o(e, t, r) {
+function i(e, t, r) {
     (this.key = e), (this.value = t), (this._index = r);
 }
-function i(e, r) {
-    for (var o = 0, i = "_" + r, a = i; t.call(e, a); a = i + o++) if (n(e[a].key, r)) return e[a];
+function o(e, r) {
+    for (var i = 0, o = "_" + r, a = o; t.call(e, a); a = o + i++) if (n(e[a].key, r)) return e[a];
 }
 (e.exports = r),
     (r.prototype.forEach = function (e, t) {
@@ -29,24 +29,24 @@ function i(e, r) {
             }, this);
     }),
     (r.prototype.has = function (e) {
-        return !!i(this._data, e);
+        return !!o(this._data, e);
     }),
     (r.prototype.get = function (e) {
-        var t = i(this._data, e);
+        var t = o(this._data, e);
         return t && t.value;
     }),
     (r.prototype.set = function (e, r) {
-        !(function (e, r, i) {
+        !(function (e, r, o) {
             for (var a = 0, s = "_" + r, l = s; t.call(e, l); l = s + a++)
                 if (n(e[l].key, r)) {
-                    e[l].value = i;
+                    e[l].value = o;
                     return;
                 }
-            e.size++, (e[l] = new o(r, i, l));
+            e.size++, (e[l] = new i(r, o, l));
         })(this._data, e, r);
     }),
     (r.prototype.delete = function (e) {
-        var t = i(this._data, e);
+        var t = o(this._data, e);
         t && (delete this._data[t._index], this._data.size--);
     }),
     (r.prototype.clear = function () {

@@ -1,14 +1,14 @@
 "use strict";
 var n = r(381265),
-    o = r(854970),
-    i = r(142896),
+    i = r(854970),
+    o = r(142896),
     a = r(906046),
     s = r(691162),
     l = r(189891),
-    u = i.apply(l()),
+    u = o.apply(l()),
     c = r(255733),
     f = a("Array.prototype.slice"),
-    p = function (e, t) {
-        return o(e), u(e, f(arguments, 1));
+    d = function (e, t) {
+        return i(e), u(e, f(arguments, 1));
     };
-n(p, { getPolyfill: l, implementation: s, shim: c }), (e.exports = p);
+n(d, { getPolyfill: l, implementation: s, shim: c }), (e.exports = d);

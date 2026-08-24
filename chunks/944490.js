@@ -1,25 +1,25 @@
 "use strict";
-r.d(t, { J: () => i });
+r.d(t, { J: () => o });
 let n = new Map(),
-    o = new Map();
-class i {
+    i = new Map();
+class o {
     format(e, t) {
         let r = this.strings.getStringForLocale(e, this.locale);
         return "function" == typeof r ? r(t, this) : r;
     }
     plural(e, t, r = "cardinal") {
-        let o = t["=" + e];
-        if (o) return "function" == typeof o ? o() : o;
-        let i = this.locale + ":" + r,
-            a = n.get(i);
+        let i = t["=" + e];
+        if (i) return "function" == typeof i ? i() : i;
+        let o = this.locale + ":" + r,
+            a = n.get(o);
         return (
-            a || ((a = new Intl.PluralRules(this.locale, { type: r })), n.set(i, a)),
-            "function" == typeof (o = t[a.select(e)] || t.other) ? o() : o
+            a || ((a = new Intl.PluralRules(this.locale, { type: r })), n.set(o, a)),
+            "function" == typeof (i = t[a.select(e)] || t.other) ? i() : i
         );
     }
     number(e) {
-        let t = o.get(this.locale);
-        return t || ((t = new Intl.NumberFormat(this.locale)), o.set(this.locale, t)), t.format(e);
+        let t = i.get(this.locale);
+        return t || ((t = new Intl.NumberFormat(this.locale)), i.set(this.locale, t)), t.format(e);
     }
     select(e, t) {
         let r = e[t] || e.other;

@@ -13,8 +13,8 @@ var n = (function () {
             return r && e(t.prototype, r), n && e(t, n), t;
         };
     })(),
-    o = r(371404),
-    i = (function () {
+    i = r(371404),
+    o = (function () {
         function e() {
             if (!(this instanceof e)) throw TypeError("Cannot call a class as a function");
         }
@@ -118,7 +118,7 @@ var n = (function () {
                 {
                     key: "bezier",
                     value: function (e, t, r, n) {
-                        return o(e, t, r, n);
+                        return i(e, t, r, n);
                     },
                 },
                 {
@@ -147,5 +147,5 @@ var n = (function () {
             e
         );
     })(),
-    a = i.bezier(0.42, 0, 1, 1);
-e.exports = i;
+    a = o.bezier(0.42, 0, 1, 1);
+e.exports = o;

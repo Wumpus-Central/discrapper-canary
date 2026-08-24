@@ -11,14 +11,14 @@ var t = {
     },
     r = { name: !0, length: !0, prototype: !0, caller: !0, arguments: !0, arity: !0 },
     n = "function" == typeof Object.getOwnPropertySymbols;
-e.exports = function (e, o, i) {
-    if ("string" != typeof o) {
-        var a = Object.getOwnPropertyNames(o);
-        n && (a = a.concat(Object.getOwnPropertySymbols(o)));
+e.exports = function (e, i, o) {
+    if ("string" != typeof i) {
+        var a = Object.getOwnPropertyNames(i);
+        n && (a = a.concat(Object.getOwnPropertySymbols(i)));
         for (var s = 0; s < a.length; ++s)
-            if (!t[a[s]] && !r[a[s]] && (!i || !i[a[s]]))
+            if (!t[a[s]] && !r[a[s]] && (!o || !o[a[s]]))
                 try {
-                    e[a[s]] = o[a[s]];
+                    e[a[s]] = i[a[s]];
                 } catch (e) {}
     }
     return e;

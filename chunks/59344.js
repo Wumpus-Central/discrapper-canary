@@ -1,7 +1,7 @@
 "use strict";
 r.d(t, { C: () => y, Y: () => g });
 let n = new Set(["Arab", "Syrc", "Samr", "Mand", "Thaa", "Mend", "Nkoo", "Adlm", "Rohg", "Hebr"]),
-    o = new Set([
+    i = new Set([
         "ae",
         "ar",
         "arc",
@@ -22,7 +22,7 @@ let n = new Set(["Arab", "Syrc", "Samr", "Mand", "Thaa", "Mend", "Nkoo", "Adlm",
         "ur",
         "yi",
     ]);
-function i(e) {
+function o(e) {
     if (Intl.Locale) {
         let t = new Intl.Locale(e).maximize(),
             r = "function" == typeof t.getTextInfo ? t.getTextInfo() : t.textInfo;
@@ -30,7 +30,7 @@ function i(e) {
         if (t.script) return n.has(t.script);
     }
     let t = e.split("-")[0];
-    return o.has(t);
+    return i.has(t);
 }
 var a = r(582128),
     s = r(446649);
@@ -45,22 +45,22 @@ function u() {
     } catch {
         e = "en-US";
     }
-    return { locale: e, direction: i(e) ? "rtl" : "ltr" };
+    return { locale: e, direction: o(e) ? "rtl" : "ltr" };
 }
 let c = u(),
     f = new Set();
-function p() {
+function d() {
     for (let e of ((c = u()), f)) e(c);
 }
-function d() {
+function p() {
     let e = (0, s.wR)(),
         [t, r] = (0, a.useState)(c);
     return ((0, a.useEffect)(
         () => (
-            0 === f.size && window.addEventListener("languagechange", p),
+            0 === f.size && window.addEventListener("languagechange", d),
             f.add(r),
             () => {
-                f.delete(r), 0 === f.size && window.removeEventListener("languagechange", p);
+                f.delete(r), 0 === f.size && window.removeEventListener("languagechange", d);
             }
         ),
         [],
@@ -72,12 +72,12 @@ function d() {
 let h = a.createContext(null);
 function m(e) {
     let { locale: t, children: r } = e,
-        n = a.useMemo(() => ({ locale: t, direction: i(t) ? "rtl" : "ltr" }), [t]);
+        n = a.useMemo(() => ({ locale: t, direction: o(t) ? "rtl" : "ltr" }), [t]);
     return a.createElement(h.Provider, { value: n }, r);
 }
 function v(e) {
     let { children: t } = e,
-        r = d();
+        r = p();
     return a.createElement(h.Provider, { value: r }, t);
 }
 function y(e) {
@@ -85,6 +85,6 @@ function y(e) {
     return t ? a.createElement(m, { locale: t, children: r }) : a.createElement(v, { children: r });
 }
 function g() {
-    let e = d();
+    let e = p();
     return (0, a.useContext)(h) || e;
 }

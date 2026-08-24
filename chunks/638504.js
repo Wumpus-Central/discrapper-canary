@@ -1,16 +1,16 @@
 "use strict";
 r.d(t, { V: () => l, e: () => s });
 var n = r(852015),
-    o = r(82180),
-    i = r(679314);
+    i = r(82180),
+    o = r(679314);
 let a = { readUnknownField: !0, readerFactory: (e) => new l(e) };
 function s(e) {
     return e ? Object.assign(Object.assign({}, a), e) : a;
 }
 class l {
     constructor(e, t) {
-        (this.varint64 = i.ls),
-            (this.uint32 = i.Gn),
+        (this.varint64 = o.ls),
+            (this.uint32 = o.Gn),
             (this.buf = e),
             (this.len = e.length),
             (this.pos = 0),
@@ -40,8 +40,8 @@ class l {
                 this.pos += r;
                 break;
             case n.O0.StartGroup:
-                let o;
-                for (; (o = this.tag()[1]) !== n.O0.EndGroup; ) this.skip(o);
+                let i;
+                for (; (i = this.tag()[1]) !== n.O0.EndGroup; ) this.skip(i);
                 break;
             default:
                 throw Error("cant skip wire type " + e);
@@ -59,15 +59,15 @@ class l {
         return (e >>> 1) ^ -(1 & e);
     }
     int64() {
-        return new o.h(...this.varint64());
+        return new i.h(...this.varint64());
     }
     uint64() {
-        return new o.e(...this.varint64());
+        return new i.e(...this.varint64());
     }
     sint64() {
         let [e, t] = this.varint64(),
             r = -(1 & e);
-        return (e = ((e >>> 1) | ((1 & t) << 31)) ^ r), (t = (t >>> 1) ^ r), new o.h(e, t);
+        return (e = ((e >>> 1) | ((1 & t) << 31)) ^ r), (t = (t >>> 1) ^ r), new i.h(e, t);
     }
     bool() {
         let [e, t] = this.varint64();
@@ -80,10 +80,10 @@ class l {
         return this.view.getInt32((this.pos += 4) - 4, !0);
     }
     fixed64() {
-        return new o.e(this.sfixed32(), this.sfixed32());
+        return new i.e(this.sfixed32(), this.sfixed32());
     }
     sfixed64() {
-        return new o.h(this.sfixed32(), this.sfixed32());
+        return new i.h(this.sfixed32(), this.sfixed32());
     }
     float() {
         return this.view.getFloat32((this.pos += 4) - 4, !0);

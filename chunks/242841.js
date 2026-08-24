@@ -1,8 +1,8 @@
 "use strict";
 r(249759)();
 var n = r(120858),
-    o = r(325473),
-    i = r(136411),
+    i = r(325473),
+    o = r(136411),
     a = r(225314),
     s = r(439619),
     l = r(142896),
@@ -10,10 +10,10 @@ var n = r(120858),
     c = l(s("%Promise.reject%"));
 e.exports = function (e) {
     var t = this;
-    if ("Object" !== o(t)) throw TypeError("`this` value must be an object");
+    if ("Object" !== i(t)) throw TypeError("`this` value must be an object");
     return u(
         t,
-        a(i(e), function (e) {
+        a(o(e), function (e) {
             var r = n(t, e);
             try {
                 return r.then(

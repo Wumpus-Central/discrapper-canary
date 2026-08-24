@@ -1,8 +1,8 @@
 "use strict";
 r.r(t), r.d(t, { IGNORE_CLASS_NAME: () => h, default: () => v });
 var n,
-    o,
-    i = r(582128),
+    i,
+    o = r(582128),
     a = r(333007);
 function s(e, t) {
     return (s =
@@ -37,17 +37,17 @@ var u = function () {
             return ++n;
         }),
     f = {},
-    p = {},
-    d = ["touchstart", "touchmove"],
+    d = {},
+    p = ["touchstart", "touchmove"],
     h = "ignore-react-onclickoutside";
 function m(e, t) {
     var r = {};
-    return -1 !== d.indexOf(t) && o && (r.passive = !e.props.preventDefault), r;
+    return -1 !== p.indexOf(t) && i && (r.passive = !e.props.preventDefault), r;
 }
 let v = function (e, t) {
     var r,
         n,
-        d = e.displayName || e.name || "Component";
+        p = e.displayName || e.name || "Component";
     return (
         (n = r =
             (function (r) {
@@ -63,7 +63,7 @@ let v = function (e, t) {
                             if ("function" == typeof t.handleClickOutside) return void t.handleClickOutside(e);
                             throw Error(
                                 "WrappedComponent: " +
-                                    d +
+                                    p +
                                     " lacks a handleClickOutside(event) function for processing outside click events.",
                             );
                         }),
@@ -76,8 +76,8 @@ let v = function (e, t) {
                                   : (0, a.findDOMNode)(e);
                         }),
                         (n.enableOnClickOutside = function () {
-                            if ("u" > typeof document && !p[n._uid]) {
-                                void 0 === o && (o = u()), (p[n._uid] = !0);
+                            if ("u" > typeof document && !d[n._uid]) {
+                                void 0 === i && (i = u()), (d[n._uid] = !0);
                                 var e = n.props.eventTypes;
                                 e.forEach || (e = [e]),
                                     (f[n._uid] = function (e) {
@@ -117,7 +117,7 @@ let v = function (e, t) {
                             }
                         }),
                         (n.disableOnClickOutside = function () {
-                            delete p[n._uid];
+                            delete d[n._uid];
                             var e = f[n._uid];
                             if (e && "u" > typeof document) {
                                 var t = n.props.eventTypes;
@@ -155,7 +155,7 @@ let v = function (e, t) {
                             )
                                 throw Error(
                                     "WrappedComponent: " +
-                                        d +
+                                        p +
                                         " lacks a function for processing outside click events specified by the handleClickOutside config option.",
                                 );
                             (this.componentNode = this.__getComponentNode()),
@@ -175,10 +175,10 @@ let v = function (e, t) {
                             if (null == e) return {};
                             var r,
                                 n,
-                                o = {},
-                                i = Object.keys(e);
-                            for (n = 0; n < i.length; n++) t.indexOf((r = i[n])) >= 0 || (o[r] = e[r]);
-                            return o;
+                                i = {},
+                                o = Object.keys(e);
+                            for (n = 0; n < o.length; n++) t.indexOf((r = o[n])) >= 0 || (i[r] = e[r]);
+                            return i;
                         })(t, ["excludeScrollbar"]);
                         return (
                             e.prototype && e.prototype.isReactComponent
@@ -186,13 +186,13 @@ let v = function (e, t) {
                                 : (r.wrappedRef = this.getRef),
                             (r.disableOnClickOutside = this.disableOnClickOutside),
                             (r.enableOnClickOutside = this.enableOnClickOutside),
-                            (0, i.createElement)(e, r)
+                            (0, o.createElement)(e, r)
                         );
                     }),
                     n
                 );
-            })(i.Component)),
-        (r.displayName = "OnClickOutside(" + d + ")"),
+            })(o.Component)),
+        (r.displayName = "OnClickOutside(" + p + ")"),
         (r.defaultProps = {
             eventTypes: ["mousedown", "touchstart"],
             excludeScrollbar: (t && t.excludeScrollbar) || !1,

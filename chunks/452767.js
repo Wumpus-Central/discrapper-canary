@@ -13,12 +13,12 @@ var n = (function () {
             return r && e(t.prototype, r), n && e(t, n), t;
         };
     })(),
-    o = r(150433);
+    i = r(150433);
 r(498121);
-var i = r(703806),
+var o = r(703806),
     a = r(151979),
     s = r(934580),
-    l = i.inOut(i.ease);
+    l = o.inOut(o.ease);
 e.exports = (function (e) {
     if ("function" != typeof e && null !== e)
         throw TypeError("Super expression must either be null or a function, not " + typeof e);
@@ -48,12 +48,12 @@ e.exports = (function (e) {
                 value: function (e, t, r) {
                     var n = this;
                     (this.__active = !0), (this._fromValue = e), (this._onUpdate = t), (this.__onEnd = r);
-                    var o = function () {
+                    var i = function () {
                         0 === n._duration
                             ? (n._onUpdate(n._toValue), n.__debouncedOnEnd({ finished: !0 }))
                             : ((n._startTime = Date.now()), (n._animationFrame = a.current(n.onUpdate.bind(n))));
                     };
-                    this._delay ? (this._timeout = setTimeout(o, this._delay)) : o();
+                    this._delay ? (this._timeout = setTimeout(i, this._delay)) : i();
                 },
             },
             {
@@ -86,4 +86,4 @@ e.exports = (function (e) {
         ]),
         t
     );
-})(o);
+})(i);

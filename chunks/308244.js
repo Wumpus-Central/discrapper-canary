@@ -1,8 +1,8 @@
 n.d(t, { E: () => x, A: () => R });
 var a = n(477900),
-    r = n(582128),
-    l = n(503698),
-    s = n.n(l),
+    l = n(582128),
+    r = n(503698),
+    s = n.n(r),
     i = n(834730),
     d = n(140735),
     o = n(707554),
@@ -33,23 +33,23 @@ function p() {
         ],
     });
 }
-var _ = n(311016),
-    b = n(692051),
+var b = n(311016),
+    _ = n(692051),
     h = n(713804),
     A = n(165648);
 function R(e) {
     let {
             userBio: t,
             className: n,
-            animateOnHoverOrFocusOnly: l = !1,
+            animateOnHoverOrFocusOnly: r = !1,
             isHoveringOrFocusing: d = !1,
             lineClamp: o = 6,
             setLineClamp: c = !0,
             textColor: u,
             userId: f,
         } = e,
-        E = r.useMemo(
-            () => ((0, _.A)(f) ? (0, a.jsx)(p, {}) : null == t || "" === t ? null : (0, h.parseBioReact)(t)),
+        E = l.useMemo(
+            () => ((0, b.A)(f) ? (0, a.jsx)(p, {}) : null == t || "" === t ? null : (0, h.parseBioReact)(t)),
             [f, t],
         );
     return null == E
@@ -60,17 +60,17 @@ function R(e) {
                   variant: "text-sm/normal",
                   lineClamp: c ? o : void 0,
                   color: void 0 !== u ? u : void 0,
-                  children: (0, a.jsx)(b.Y.Provider, {
-                      value: { disableAnimations: l && !d, disableInteractions: !1 },
+                  children: (0, a.jsx)(_.Y.Provider, {
+                      value: { disableAnimations: r && !d, disableInteractions: !1 },
                       children: E,
                   }),
               }),
           });
 }
 function x(e) {
-    let t = r.useId(),
-        { userBio: n, userId: l } = e;
-    return (0, _.A)(l) || (null != n && "" !== n)
+    let t = l.useId(),
+        { userBio: n, userId: r } = e;
+    return (0, b.A)(r) || (null != n && "" !== n)
         ? (0, a.jsxs)("section", {
               "aria-labelledby": t,
               children: [

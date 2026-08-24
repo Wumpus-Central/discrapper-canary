@@ -21,30 +21,30 @@ Object.defineProperty(t, "astFormatter", {
             return n.RichTextNodeType;
         },
     });
-var o = r(831298);
+var i = r(831298);
 Object.defineProperty(t, "markdownFormatter", {
     enumerable: !0,
     get: function () {
-        return o.markdownFormatter;
+        return i.markdownFormatter;
     },
 });
-var i = r(166820);
+var o = r(166820);
 Object.defineProperty(t, "reactFormatter", {
     enumerable: !0,
     get: function () {
-        return i.reactFormatter;
+        return o.reactFormatter;
     },
 }),
     Object.defineProperty(t, "makeReactFormatter", {
         enumerable: !0,
         get: function () {
-            return i.makeReactFormatter;
+            return o.makeReactFormatter;
         },
     }),
     Object.defineProperty(t, "DEFAULT_REACT_RICH_TEXT_ELEMENTS", {
         enumerable: !0,
         get: function () {
-            return i.DEFAULT_REACT_RICH_TEXT_ELEMENTS;
+            return o.DEFAULT_REACT_RICH_TEXT_ELEMENTS;
         },
     });
 var a = r(662810);

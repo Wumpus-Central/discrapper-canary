@@ -9,14 +9,14 @@ Object.defineProperty(t, "__esModule", { value: !0 }),
             e.length < r || t.length < r)
         )
             return 0;
-        for (var o = new Map(), i = 0; i < e.length - (r - 1); i++) {
-            var a = e.substr(i, r);
-            o.set(a, o.has(a) ? o.get(a) + 1 : 1);
+        for (var i = new Map(), o = 0; o < e.length - (r - 1); o++) {
+            var a = e.substr(o, r);
+            i.set(a, i.has(a) ? i.get(a) + 1 : 1);
         }
         for (var s = 0, l = 0; l < t.length - (r - 1); l++) {
             var u = t.substr(l, r),
-                c = o.has(u) ? o.get(u) : 0;
-            c > 0 && (o.set(u, c - 1), s++);
+                c = i.has(u) ? i.get(u) : 0;
+            c > 0 && (i.set(u, c - 1), s++);
         }
         return (2 * s) / (e.length + t.length - (r - 1) * 2);
     }),

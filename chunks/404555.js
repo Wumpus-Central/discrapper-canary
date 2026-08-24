@@ -401,14 +401,14 @@ var t = {
     },
     r = Object.keys(t).join("|"),
     n = RegExp(r, "g"),
-    o = RegExp(r, ""),
-    i = function (e) {
+    i = RegExp(r, ""),
+    o = function (e) {
         return e.replace(n, function (e) {
             return t[e];
         });
     };
-(e.exports = i),
+(e.exports = o),
     (e.exports.has = function (e) {
-        return !!e.match(o);
+        return !!e.match(i);
     }),
-    (e.exports.remove = i);
+    (e.exports.remove = o);

@@ -1,9 +1,9 @@
 "use strict";
 r.r(t),
-    r.d(t, { parseNumberSkeleton: () => m, parseNumberSkeletonFromString: () => s, parseDateTimeSkeleton: () => o });
+    r.d(t, { parseNumberSkeleton: () => m, parseNumberSkeletonFromString: () => s, parseDateTimeSkeleton: () => i });
 var n =
     /(?:[Eec]{1,6}|G{1,5}|[Qq]{1,5}|(?:[yYur]+|U{1,5})|[ML]{1,5}|d{1,2}|D{1,3}|F{1}|[abB]{1,5}|[hkHK]{1,2}|w{1,2}|W{1}|m{1,2}|s{1,2}|[zZOvVxX]{1,4})(?=([^']*'[^']*')*[^']*$)/g;
-function o(e) {
+function i(e) {
     var t = {};
     return (
         e.replace(n, function (e) {
@@ -95,7 +95,7 @@ function o(e) {
         t
     );
 }
-var i = r(56636),
+var o = r(56636),
     a = /[\t-\r \x85\u200E\u200F\u2028\u2029]/i;
 function s(e) {
     if (0 === e.length) throw Error("Number skeleton cannot be empty");
@@ -108,11 +108,11 @@ function s(e) {
         n < t.length;
         n++
     ) {
-        var o = t[n].split("/");
-        if (0 === o.length) throw Error("Invalid number skeleton");
-        for (var i = o[0], s = o.slice(1), l = 0; l < s.length; l++)
+        var i = t[n].split("/");
+        if (0 === i.length) throw Error("Invalid number skeleton");
+        for (var o = i[0], s = i.slice(1), l = 0; l < s.length; l++)
             if (0 === s[l].length) throw Error("Invalid number skeleton");
-        r.push({ stem: i, options: s });
+        r.push({ stem: o, options: s });
     }
     return r;
 }
@@ -120,7 +120,7 @@ var l = /^\.(?:(0+)(\*)?|(#+)|(0+)(#+))$/g,
     u = /^(@+)?(\+|#+)?[rs]?$/g,
     c = /(\*)(0+)|(#+)(0+)|(0+)/g,
     f = /^(0+)$/;
-function p(e) {
+function d(e) {
     var t = {};
     return (
         "r" === e[e.length - 1]
@@ -142,7 +142,7 @@ function p(e) {
         t
     );
 }
-function d(e) {
+function p(e) {
     switch (e) {
         case "sign-auto":
             return { signDisplay: "auto" };
@@ -167,7 +167,7 @@ function d(e) {
     }
 }
 function h(e) {
-    var t = d(e);
+    var t = p(e);
     return t || {};
 }
 function m(e) {
@@ -205,18 +205,18 @@ function m(e) {
                 (t.notation = "compact"), (t.compactDisplay = "long");
                 continue;
             case "scientific":
-                t = (0, i.Cl)(
-                    (0, i.Cl)((0, i.Cl)({}, t), { notation: "scientific" }),
+                t = (0, o.Cl)(
+                    (0, o.Cl)((0, o.Cl)({}, t), { notation: "scientific" }),
                     n.options.reduce(function (e, t) {
-                        return (0, i.Cl)((0, i.Cl)({}, e), h(t));
+                        return (0, o.Cl)((0, o.Cl)({}, e), h(t));
                     }, {}),
                 );
                 continue;
             case "engineering":
-                t = (0, i.Cl)(
-                    (0, i.Cl)((0, i.Cl)({}, t), { notation: "engineering" }),
+                t = (0, o.Cl)(
+                    (0, o.Cl)((0, o.Cl)({}, t), { notation: "engineering" }),
                     n.options.reduce(function (e, t) {
-                        return (0, i.Cl)((0, i.Cl)({}, e), h(t));
+                        return (0, o.Cl)((0, o.Cl)({}, e), h(t));
                     }, {}),
                 );
                 continue;
@@ -261,9 +261,9 @@ function m(e) {
                 continue;
             case "integer-width":
                 if (n.options.length > 1) throw RangeError("integer-width stems only accept a single optional option");
-                n.options[0].replace(c, function (e, r, n, o, i, a) {
+                n.options[0].replace(c, function (e, r, n, i, o, a) {
                     if (r) t.minimumIntegerDigits = n.length;
-                    else if (o && i) throw Error("We currently do not support maximum integer digits");
+                    else if (i && o) throw Error("We currently do not support maximum integer digits");
                     else if (a) throw Error("We currently do not support exact integer digits");
                     return "";
                 });
@@ -275,30 +275,30 @@ function m(e) {
         }
         if (l.test(n.stem)) {
             if (n.options.length > 1) throw RangeError("Fraction-precision stems only accept a single optional option");
-            n.stem.replace(l, function (e, r, n, o, i, a) {
+            n.stem.replace(l, function (e, r, n, i, o, a) {
                 return (
                     "*" === n
                         ? (t.minimumFractionDigits = r.length)
-                        : o && "#" === o[0]
-                          ? (t.maximumFractionDigits = o.length)
-                          : i && a
-                            ? ((t.minimumFractionDigits = i.length), (t.maximumFractionDigits = i.length + a.length))
+                        : i && "#" === i[0]
+                          ? (t.maximumFractionDigits = i.length)
+                          : o && a
+                            ? ((t.minimumFractionDigits = o.length), (t.maximumFractionDigits = o.length + a.length))
                             : ((t.minimumFractionDigits = r.length), (t.maximumFractionDigits = r.length)),
                     ""
                 );
             });
-            var o = n.options[0];
-            "w" === o
-                ? (t = (0, i.Cl)((0, i.Cl)({}, t), { trailingZeroDisplay: "stripIfInteger" }))
-                : o && (t = (0, i.Cl)((0, i.Cl)({}, t), p(o)));
+            var i = n.options[0];
+            "w" === i
+                ? (t = (0, o.Cl)((0, o.Cl)({}, t), { trailingZeroDisplay: "stripIfInteger" }))
+                : i && (t = (0, o.Cl)((0, o.Cl)({}, t), d(i)));
             continue;
         }
         if (u.test(n.stem)) {
-            t = (0, i.Cl)((0, i.Cl)({}, t), p(n.stem));
+            t = (0, o.Cl)((0, o.Cl)({}, t), d(n.stem));
             continue;
         }
-        var a = d(n.stem);
-        a && (t = (0, i.Cl)((0, i.Cl)({}, t), a));
+        var a = p(n.stem);
+        a && (t = (0, o.Cl)((0, o.Cl)({}, t), a));
         var s = (function (e) {
             var t;
             if (
@@ -319,7 +319,7 @@ function m(e) {
             }
             return t;
         })(n.stem);
-        s && (t = (0, i.Cl)((0, i.Cl)({}, t), s));
+        s && (t = (0, o.Cl)((0, o.Cl)({}, t), s));
     }
     return t;
 }

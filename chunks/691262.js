@@ -2,10 +2,10 @@
 t.extend = function (e) {
     var t,
         n,
-        o,
         i,
+        o,
         a = Array.prototype.slice.call(arguments, 1);
-    for (t = 0, n = a.length; t < n; t += 1) if ((o = a[t])) for (i in o) r.call(o, i) && (e[i] = o[i]);
+    for (t = 0, n = a.length; t < n; t += 1) if ((i = a[t])) for (o in i) r.call(i, o) && (e[o] = i[o]);
     return e;
 };
 var r = Object.prototype.hasOwnProperty;

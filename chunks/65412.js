@@ -1,21 +1,21 @@
 "use strict";
-r.d(t, { A: () => i, C: () => a });
+r.d(t, { A: () => o, C: () => a });
 let n = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/".split(""),
-    o = [];
-for (let e = 0; e < n.length; e++) o[n[e].charCodeAt(0)] = e;
-function i(e) {
+    i = [];
+for (let e = 0; e < n.length; e++) i[n[e].charCodeAt(0)] = e;
+function o(e) {
     let t = (3 * e.length) / 4;
     "=" == e[e.length - 2] ? (t -= 2) : "=" == e[e.length - 1] && (t -= 1);
     let r = new Uint8Array(t),
         n = 0,
-        i = 0,
+        o = 0,
         a,
         s = 0;
     for (let t = 0; t < e.length; t++) {
-        if (void 0 === (a = o[e.charCodeAt(t)]))
+        if (void 0 === (a = i[e.charCodeAt(t)]))
             switch (e[t]) {
                 case "=":
-                    i = 0;
+                    o = 0;
                 case "\n":
                 case "\r":
                 case "	":
@@ -24,39 +24,39 @@ function i(e) {
                 default:
                     throw Error("invalid base64 string.");
             }
-        switch (i) {
+        switch (o) {
             case 0:
-                (s = a), (i = 1);
+                (s = a), (o = 1);
                 break;
             case 1:
-                (r[n++] = (s << 2) | ((48 & a) >> 4)), (s = a), (i = 2);
+                (r[n++] = (s << 2) | ((48 & a) >> 4)), (s = a), (o = 2);
                 break;
             case 2:
-                (r[n++] = ((15 & s) << 4) | ((60 & a) >> 2)), (s = a), (i = 3);
+                (r[n++] = ((15 & s) << 4) | ((60 & a) >> 2)), (s = a), (o = 3);
                 break;
             case 3:
-                (r[n++] = ((3 & s) << 6) | a), (i = 0);
+                (r[n++] = ((3 & s) << 6) | a), (o = 0);
         }
     }
-    if (1 == i) throw Error("invalid base64 string.");
+    if (1 == o) throw Error("invalid base64 string.");
     return r.subarray(0, n);
 }
 function a(e) {
     let t = "",
         r = 0,
-        o,
-        i = 0;
+        i,
+        o = 0;
     for (let a = 0; a < e.length; a++)
-        switch (((o = e[a]), r)) {
+        switch (((i = e[a]), r)) {
             case 0:
-                (t += n[o >> 2]), (i = (3 & o) << 4), (r = 1);
+                (t += n[i >> 2]), (o = (3 & i) << 4), (r = 1);
                 break;
             case 1:
-                (t += n[i | (o >> 4)]), (i = (15 & o) << 2), (r = 2);
+                (t += n[o | (i >> 4)]), (o = (15 & i) << 2), (r = 2);
                 break;
             case 2:
-                (t += n[i | (o >> 6)]), (t += n[63 & o]), (r = 0);
+                (t += n[o | (i >> 6)]), (t += n[63 & i]), (r = 0);
         }
-    return r && ((t += n[i]), (t += "="), 1 == r && (t += "=")), t;
+    return r && ((t += n[o]), (t += "="), 1 == r && (t += "=")), t;
 }
-(o[45] = n.indexOf("+")), (o[95] = n.indexOf("/"));
+(i[45] = n.indexOf("+")), (i[95] = n.indexOf("/"));

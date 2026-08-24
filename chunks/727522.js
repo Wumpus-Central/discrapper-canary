@@ -1,37 +1,37 @@
 "use strict";
-r.r(t), r.d(t, { useCallback: () => s, useCallbackOne: () => i, useMemo: () => a, useMemoOne: () => o });
+r.r(t), r.d(t, { useCallback: () => s, useCallbackOne: () => o, useMemo: () => a, useMemoOne: () => i });
 var n = r(582128);
-function o(e, t) {
+function i(e, t) {
     var r = (0, n.useState)(function () {
             return { inputs: t, result: e() };
         })[0],
-        o = (0, n.useRef)(!0),
-        i = (0, n.useRef)(r),
+        i = (0, n.useRef)(!0),
+        o = (0, n.useRef)(r),
         a =
-            o.current ||
+            i.current ||
             (t &&
-                i.current.inputs &&
+                o.current.inputs &&
                 (function (e, t) {
                     if (e.length !== t.length) return !1;
                     for (var r = 0; r < e.length; r++) if (e[r] !== t[r]) return !1;
                     return !0;
-                })(t, i.current.inputs))
-                ? i.current
+                })(t, o.current.inputs))
+                ? o.current
                 : { inputs: t, result: e() };
     return (
         (0, n.useEffect)(
             function () {
-                (o.current = !1), (i.current = a);
+                (i.current = !1), (o.current = a);
             },
             [a],
         ),
         a.result
     );
 }
-function i(e, t) {
-    return o(function () {
+function o(e, t) {
+    return i(function () {
         return e;
     }, t);
 }
-var a = o,
-    s = i;
+var a = i,
+    s = o;

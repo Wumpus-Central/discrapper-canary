@@ -9,10 +9,10 @@ var i = n(503698),
     u = n(140735),
     c = n(834730),
     d = n(318254),
-    p = n(580630),
-    m = n(993408),
-    h = n(818348),
-    C = n(375708),
+    m = n(580630),
+    p = n(993408),
+    C = n(818348),
+    h = n(375708),
     f = n(378803),
     E = n(967957);
 function S(e) {
@@ -21,12 +21,12 @@ function S(e) {
         priceCurrency: n,
         discountIconConfig: i,
         className: r,
-        discount: a = m.rr,
+        discount: a = p.rr,
         variant: s = "text-md/semibold",
     } = e;
-    return n === h.Yr.DISCORD_ORB
-        ? (0, l.jsx)(P, { orbAmount: t, className: r, discount: a, variant: s })
-        : (0, l.jsx)(A, {
+    return n === C.Yr.DISCORD_ORB
+        ? (0, l.jsx)(A, { orbAmount: t, className: r, discount: a, variant: s })
+        : (0, l.jsx)(I, {
               priceAmount: t,
               priceCurrency: n,
               discountIconConfig: i,
@@ -39,42 +39,42 @@ function y(e) {
     let { config: t } = e,
         n = t.size ?? "md";
     switch (t.source) {
-        case m.D0.NITRO: {
+        case p.D0.NITRO: {
             let e = (0, l.jsx)(a.t, { size: n, color: "currentColor", className: E.Kk });
             if ("tooltip" === t.displayMode)
                 return (0, l.jsx)(s.m, {
-                    text: C.intl.string(C.t.MPFyJ5),
-                    "aria-label": C.intl.string(C.t.X3Ekj8),
+                    text: h.intl.string(h.t.MPFyJ5),
+                    "aria-label": h.intl.string(h.t.X3Ekj8),
                     children: e,
                 });
             return e;
         }
-        case m.D0.THIRDPARTY: {
+        case p.D0.THIRDPARTY: {
             let e = (0, l.jsx)(o.TagIcon, { size: n, color: "currentColor", className: E.Kk });
             if ("tooltip" === t.displayMode)
-                return (0, l.jsx)(s.m, { text: C.intl.string(f.default.DePOcS), children: e });
+                return (0, l.jsx)(s.m, { text: h.intl.string(f.default.DePOcS), children: e });
             return e;
         }
         default:
             return t.source, null;
     }
 }
-function A(e) {
+function I(e) {
     let {
             priceAmount: t,
             priceCurrency: n,
             discountIconConfig: i,
             className: a,
-            discount: s = m.rr,
+            discount: s = p.rr,
             variant: o = "heading-md/semibold",
         } = e,
-        d = (0, p.RS)(t, n),
-        h =
-            s !== m.rr && s.discountPercentage >= m.es
+        d = (0, m.RS)(t, n),
+        C =
+            s !== p.rr && s.discountPercentage >= p.es
                 ? (0, l.jsxs)(l.Fragment, {
                       children: [
                           (0, l.jsx)(u.A, {
-                              children: C.intl.format(C.t.niC6DK, {
+                              children: h.intl.format(h.t.niC6DK, {
                                   price: d,
                                   discountPercentage: s.discountPercentage,
                               }),
@@ -89,7 +89,7 @@ function A(e) {
                   })
                 : (0, l.jsxs)(l.Fragment, {
                       children: [
-                          (0, l.jsx)(u.A, { children: C.intl.format(C.t["6C36MF"], { price: d }) }),
+                          (0, l.jsx)(u.A, { children: h.intl.format(h.t["6C36MF"], { price: d }) }),
                           (0, l.jsx)("span", { "aria-hidden": !0, className: a, children: d }),
                       ],
                   });
@@ -97,18 +97,18 @@ function A(e) {
         className: r()(E.kL, a),
         children: [
             null != i ? (0, l.jsx)(y, { config: i }) : null,
-            (0, l.jsx)(c.E, { variant: o, color: "currentColor", lineClamp: 1, children: h }),
+            (0, l.jsx)(c.E, { variant: o, color: "currentColor", lineClamp: 1, children: C }),
         ],
     });
 }
-function P(e) {
-    let { orbAmount: t, className: n, discount: i = m.rr, variant: a = "text-md/semibold" } = e,
+function A(e) {
+    let { orbAmount: t, className: n, discount: i = p.rr, variant: a = "text-md/semibold" } = e,
         s =
-            i !== m.rr && i.discountPercentage >= m.es
+            i !== p.rr && i.discountPercentage >= p.es
                 ? (0, l.jsxs)(l.Fragment, {
                       children: [
                           (0, l.jsx)(u.A, {
-                              children: C.intl.format(C.t.ckguyq, {
+                              children: h.intl.format(h.t.ckguyq, {
                                   orbAmount: t,
                                   discountPercentage: i.discountPercentage,
                               }),
@@ -123,7 +123,7 @@ function P(e) {
                   })
                 : (0, l.jsxs)(l.Fragment, {
                       children: [
-                          (0, l.jsx)(u.A, { children: C.intl.format(C.t["a/Y8PK"], { orbAmount: t }) }),
+                          (0, l.jsx)(u.A, { children: h.intl.format(h.t["a/Y8PK"], { orbAmount: t }) }),
                           (0, l.jsx)("span", { "aria-hidden": !0, children: t }),
                       ],
                   });

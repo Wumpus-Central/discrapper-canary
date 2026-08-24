@@ -1,4 +1,4 @@
-n.d(t, { P: () => m, l: () => p });
+n.d(t, { P: () => p, l: () => m });
 var l = n(477900);
 n(582128);
 var i = n(683071),
@@ -9,7 +9,7 @@ var i = n(683071),
     u = n(87725),
     c = n(881489),
     d = n(531506);
-function p(e) {
+function m(e) {
     let { fractionalPremiumInfo: t, isEligibleForTrial: n, trialPeriodCopy: r, subscriptionPeriodEnd: a } = e,
         { fractionalPremiumBannerMessage: s } = (function (e) {
             let { fractionalPremiumInfo: t, isEligibleForTrial: n, trialPeriodCopy: l, subscriptionPeriodEnd: i } = e,
@@ -24,10 +24,10 @@ function p(e) {
         })({ fractionalPremiumInfo: t, isEligibleForTrial: n, trialPeriodCopy: r, subscriptionPeriodEnd: a });
     return null != s && "" !== s ? (0, l.jsx)(i.w, { type: "info", children: s }) : null;
 }
-function m(e) {
+function p(e) {
     let { isGift: t, isTrial: n, isInvoiceBilledImmediately: i = !0, subscriptionTrial: c, ...d } = e,
-        { unifiedCheckoutFlow: p } = (0, u.t4)((e) => ({ unifiedCheckoutFlow: e.unifiedCheckoutFlow })),
-        m = (function (e) {
+        { unifiedCheckoutFlow: m } = (0, u.t4)((e) => ({ unifiedCheckoutFlow: e.unifiedCheckoutFlow })),
+        p = (function (e) {
             let { isGift: t, isTrial: n, unifiedCheckoutFlow: l } = e;
             return l === r.C.PREMIUM_APPS_SUBSCRIPTION_CHECKOUT
                 ? o.I0.SubscriptionApplication
@@ -36,13 +36,13 @@ function m(e) {
                   : n
                     ? o.I0.SubscriptionTrial
                     : o.I0.Subscription;
-        })({ isGift: t, isTrial: n, unifiedCheckoutFlow: p }),
-        { discountOffer: h, premiumGroupDiscountOffer: C } = (0, s.i)();
+        })({ isGift: t, isTrial: n, unifiedCheckoutFlow: m }),
+        { discountOffer: C, premiumGroupDiscountOffer: h } = (0, s.i)();
     return (0, l.jsx)(a.$, {
         ...d,
         isInvoiceBilledImmediately: i,
         subscriptionTrial: c,
-        discountOffer: C ?? h,
-        unifiedLegalType: m,
+        discountOffer: h ?? C,
+        unifiedLegalType: p,
     });
 }

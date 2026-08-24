@@ -1,25 +1,25 @@
 "use strict";
 r.d(t, { I: () => s });
 var n = r(576024),
-    o = r(582128);
-let i = 0,
+    i = r(582128);
+let o = 0,
     a = new Map();
 function s(e) {
-    let [t, r] = (0, o.useState)();
+    let [t, r] = (0, i.useState)();
     return (
         (0, n.N)(() => {
             if (!e) return;
             let t = a.get(e);
             if (t) r(t.element.id);
             else {
-                let n = `react-aria-description-${i++}`;
+                let n = `react-aria-description-${o++}`;
                 r(n);
-                let o = document.createElement("div");
-                (o.id = n),
-                    (o.style.display = "none"),
-                    (o.textContent = e),
-                    document.body.appendChild(o),
-                    (t = { refCount: 0, element: o }),
+                let i = document.createElement("div");
+                (i.id = n),
+                    (i.style.display = "none"),
+                    (i.textContent = e),
+                    document.body.appendChild(i),
+                    (t = { refCount: 0, element: i }),
                     a.set(e, t);
             }
             return (

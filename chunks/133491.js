@@ -1,11 +1,11 @@
 "use strict";
 var n,
-    o = r(906046),
-    i = r(429013)(/^\s*(?:function)?\*/),
+    i = r(906046),
+    o = r(429013)(/^\s*(?:function)?\*/),
     a = r(581070)(),
     s = r(428495),
-    l = o("Object.prototype.toString"),
-    u = o("Function.prototype.toString"),
+    l = i("Object.prototype.toString"),
+    u = i("Function.prototype.toString"),
     c = function () {
         if (!a) return !1;
         try {
@@ -14,7 +14,7 @@ var n,
     };
 e.exports = function (e) {
     if ("function" != typeof e) return !1;
-    if (i(u(e))) return !0;
+    if (o(u(e))) return !0;
     if (!a) return "[object GeneratorFunction]" === l(e);
     if (!s) return !1;
     if (void 0 === n) {

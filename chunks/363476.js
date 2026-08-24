@@ -14,20 +14,20 @@ function c(e) {
             intervalType: i,
             className: c,
             intervalCount: d = 1,
-            isPrepaidPaymentSource: p = !1,
+            isPrepaidPaymentSource: m = !1,
         } = e,
-        m = (0, a.$g)(t, n),
-        h = null;
+        p = (0, a.$g)(t, n),
+        C = null;
     return (
         i === s.WT.YEAR
-            ? (h = o.intl.format(o.t["3U719t"], { price: m }))
+            ? (C = o.intl.format(o.t["3U719t"], { price: p }))
             : i === s.WT.MONTH && 1 === d
-              ? (h = o.intl.format(o.t.NkR7BU, { price: m }))
-              : i === s.WT.MONTH && d > 1 && (h = o.intl.format(o.t.CNAGg4, { price: m, intervalCount: d })),
+              ? (C = o.intl.format(o.t.NkR7BU, { price: p }))
+              : i === s.WT.MONTH && d > 1 && (C = o.intl.format(o.t.CNAGg4, { price: p, intervalCount: d })),
         (0, l.jsx)("div", {
             className: r()(u.zz, c),
             "data-testid": `PricePerInterval-${n}`,
-            children: null == i || p ? (0, l.jsx)("strong", { children: m }) : h,
+            children: null == i || m ? (0, l.jsx)("strong", { children: p }) : C,
         })
     );
 }

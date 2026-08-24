@@ -14,8 +14,8 @@ var n = (function () {
     };
 })();
 r(562210);
-var o = r(652925),
-    i = r(439834),
+var i = r(652925),
+    o = r(439834),
     a = r(540017);
 e.exports = (function (e) {
     if ("function" != typeof e && null !== e)
@@ -61,7 +61,7 @@ e.exports = (function (e) {
             {
                 key: "interpolate",
                 value: function (e) {
-                    return new i(this, a.create(e));
+                    return new o(this, a.create(e));
                 },
             },
             {
@@ -79,4 +79,4 @@ e.exports = (function (e) {
         ]),
         t
     );
-})(o);
+})(i);

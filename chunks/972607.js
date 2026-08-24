@@ -8,26 +8,26 @@ var l = n(477900),
     u = n(17928),
     c = n(364840),
     d = n(821609),
-    p = n(862482),
-    m = n(109802),
-    h = n(452027),
-    C = n(778712),
+    m = n(862482),
+    p = n(109802),
+    C = n(452027),
+    h = n(778712),
     f = n(297264),
     E = n(289873),
     S = n(783878),
     y = n(398590),
-    A = n(717398),
-    P = n(966327),
-    I = n(769015),
+    I = n(717398),
+    A = n(966327),
+    P = n(769015),
     g = n(242874),
     v = n(580194),
     _ = n(219271),
-    T = n(427358),
-    x = n(7133),
+    x = n(427358),
+    T = n(7133),
     N = n(994500),
     b = n(351906),
-    R = n(287809),
-    j = n(957565),
+    j = n(287809),
+    R = n(957565),
     M = n(45938),
     O = n(158045),
     L = n(427262),
@@ -45,40 +45,40 @@ function B(e) {
             subscriptionPlan: s,
             selectedGiftStyle: o,
             onClose: S,
-            hasSentMessage: A,
+            hasSentMessage: I,
             giftRecipient: g,
             giftMessageError: _,
-            isSendingMessage: T,
+            isSendingMessage: x,
         } = e,
-        [N, R] = i.useState(m.e.Modes.DEFAULT),
+        [N, j] = i.useState(p.e.Modes.DEFAULT),
         B = (0, u.bG)([b.A], () => b.A.enabled),
-        Y = A || (null != o && null != g),
-        W = r?.productLine === U.EZt.COLLECTIBLES,
+        W = I || (null != o && null != g),
+        Y = r?.productLine === U.EZt.COLLECTIBLES,
         {
             selectedGiftingPromotionReward: V,
             openGiftingBadgePostPurchaseModal: K,
-            canShowGiftingBadgePostPurchase: q,
+            canShowGiftingBadgePostPurchase: Z,
         } = (0, k.Pv)(),
-        Z = (0, v.Mq)(s),
-        z = q && null == V;
-    function Q() {
+        q = (0, v.Mq)(s),
+        z = Z && null == V;
+    function $() {
         return null != s ? s.skuId : null != r ? r.id : null;
     }
-    function $() {
+    function Q() {
         let e;
         return null != _
             ? G.intl.string(G.t.qB8aya)
             : null == s
               ? null
-              : ((e = s.interval === D.WT.MONTH ? (Y ? G.t["4ZJ+7Z"] : G.t["P+z55d"]) : Y ? G.t.p0pZXP : G.t.bXqk3o),
+              : ((e = s.interval === D.WT.MONTH ? (W ? G.t["4ZJ+7Z"] : G.t["P+z55d"]) : W ? G.t.p0pZXP : G.t.bXqk3o),
                 G.intl.format(e, { skuName: (0, O.RH)(s.id), intervalCount: s.intervalCount }));
     }
-    return T
+    return x
         ? (0, l.jsxs)("div", {
               className: F.EL,
               children: [
                   null != n
-                      ? (0, l.jsx)(I.A, { game: n, className: F.__invalid_icon, size: I.M.LARGE, skuId: Q() })
+                      ? (0, l.jsx)(P.A, { game: n, className: F.__invalid_icon, size: P.M.LARGE, skuId: $() })
                       : null,
                   (0, l.jsx)(E.y, { type: E.t.PULSING_ELLIPSIS }),
               ],
@@ -86,28 +86,28 @@ function B(e) {
         : (0, l.jsxs)(l.Fragment, {
               children: [
                   (0, l.jsxs)("div", {
-                      className: a()(F.EL, { [F.L1]: Z && null != V }),
+                      className: a()(F.EL, { [F.L1]: q && null != V }),
                       children: [
                           null != n
-                              ? (0, l.jsx)(I.A, { game: n, className: F.__invalid_icon, size: I.M.LARGE, skuId: Q() })
+                              ? (0, l.jsx)(P.A, { game: n, className: F.__invalid_icon, size: P.M.LARGE, skuId: $() })
                               : null,
                           (0, l.jsx)(f.D, {
                               variant: "heading-lg/semibold",
-                              className: a()({ [F.wx]: null == o && !W, [F.$A]: null != o && !W }),
+                              className: a()({ [F.wx]: null == o && !Y, [F.$A]: null != o && !Y }),
                               children:
-                                  null != g || (A && null == _)
+                                  null != g || (I && null == _)
                                       ? G.intl.string(G.t.zOmK9N)
                                       : null != _
                                         ? G.intl.string(G.t.d1lrmU)
                                         : G.intl.string(G.t["/s1xR7"]),
                           }),
-                          (A && null != g && null == _) || Y
+                          (I && null != g && null == _) || W
                               ? (0, l.jsxs)(l.Fragment, {
                                     children: [
                                         (0, l.jsxs)("div", {
                                             className: F.jx,
                                             children: [
-                                                (0, l.jsx)(P.A, { user: g, size: C._3.SIZE_40 }),
+                                                (0, l.jsx)(A.A, { user: g, size: h._3.SIZE_40 }),
                                                 (0, l.jsxs)("div", {
                                                     className: F.gn,
                                                     children: [
@@ -123,12 +123,12 @@ function B(e) {
                                                 }),
                                             ],
                                         }),
-                                        (0, l.jsx)("div", { className: F._c, children: $() }),
+                                        (0, l.jsx)("div", { className: F._c, children: Q() }),
                                     ],
                                 })
                               : (0, l.jsxs)(l.Fragment, {
                                     children: [
-                                        (0, l.jsx)("div", { className: F.I0, children: $() }),
+                                        (0, l.jsx)("div", { className: F.I0, children: Q() }),
                                         null == _ &&
                                             (0, l.jsx)(H, {
                                                 giftCode: t,
@@ -141,10 +141,10 @@ function B(e) {
                                             let e;
                                             if (null == t) return null;
                                             switch (N) {
-                                                case m.e.Modes.SUCCESS:
+                                                case p.e.Modes.SUCCESS:
                                                     e = G.intl.string(G.t.XVvPjU);
                                                     break;
-                                                case m.e.Modes.ERROR:
+                                                case p.e.Modes.ERROR:
                                                     e = G.intl.string(G.t.i4GM3L);
                                                     break;
                                                 default:
@@ -154,29 +154,29 @@ function B(e) {
                                                 className: F.PN,
                                                 children: [
                                                     null != t &&
-                                                        (0, l.jsx)(h.D, {
+                                                        (0, l.jsx)(C.D, {
                                                             label: G.intl.string(G.t["/dG4NA"]),
-                                                            children: (0, l.jsx)(m.e, {
+                                                            children: (0, l.jsx)(p.e, {
                                                                 hideMessage: B ? G.intl.string(G.t["0RLn47"]) : null,
                                                                 value: (0, M.Zq)(t),
                                                                 mode: N,
                                                                 text: e,
                                                                 onCopy: (e) => {
                                                                     null != r &&
-                                                                        (0, M.AK)(new x.A({ code: t, maxUses: 1 }), r),
-                                                                        (0, j.C)(
+                                                                        (0, M.AK)(new T.A({ code: t, maxUses: 1 }), r),
+                                                                        (0, R.C)(
                                                                             e,
-                                                                            () => R(m.e.Modes.SUCCESS),
-                                                                            () => R(m.e.Modes.ERROR),
+                                                                            () => j(p.e.Modes.SUCCESS),
+                                                                            () => j(p.e.Modes.ERROR),
                                                                         ),
                                                                         setTimeout(() => {
-                                                                            R(m.e.Modes.DEFAULT);
+                                                                            j(p.e.Modes.DEFAULT);
                                                                         }, 1500);
                                                                 },
-                                                                supportsCopy: j.p5,
+                                                                supportsCopy: R.p5,
                                                                 className: F.__invalid_copyInput,
-                                                                buttonColor: p.XD.LINK,
-                                                                buttonLook: p.pR.LINK,
+                                                                buttonColor: m.XD.LINK,
+                                                                buttonLook: m.pR.LINK,
                                                             }),
                                                         }),
                                                     (0, l.jsx)("div", {
@@ -212,22 +212,22 @@ function B(e) {
 function H(e) {
     let { giftCode: t, onClose: n } = e;
     i.useEffect(() => {
-        A.A.fetchRelationships(), (0, _.u)();
+        I.A.fetchRelationships(), (0, _.u)();
     }, []);
     let [r, a] = i.useState(),
         [s, c] = i.useState(!1),
-        [p, m] = i.useState(!1),
-        { userAffinities: h, isLoading: f } = (0, u.cf)([T.A], () => ({
-            userAffinities: T.A.getUserAffinitiesMap(),
-            isLoading: T.A.isFetching(),
+        [m, p] = i.useState(!1),
+        { userAffinities: C, isLoading: f } = (0, u.cf)([x.A], () => ({
+            userAffinities: x.A.getUserAffinitiesMap(),
+            isLoading: x.A.isFetching(),
         })),
-        E = Array.from(h.keys()).sort((e, t) => T.A.compare(e, t)),
+        E = Array.from(C.keys()).sort((e, t) => x.A.compare(e, t)),
         y = (0, u.bG)([N.A], () => N.A.getFriendIDs()),
-        I = o().difference(y, E),
-        v = [...E, ...I],
-        x = (0, u.bG)([R.default], () => R.default.filter((e) => v.includes(e.id) && !e.bot), [v]);
-    if (null == x || 0 === x.length) return null;
-    let b = o().sortBy(x, (e) => v.indexOf(e.id));
+        P = o().difference(y, E),
+        v = [...E, ...P],
+        T = (0, u.bG)([j.default], () => j.default.filter((e) => v.includes(e.id) && !e.bot), [v]);
+    if (null == T || 0 === T.length) return null;
+    let b = o().sortBy(T, (e) => v.indexOf(e.id));
     return (0, l.jsxs)("div", {
         className: F.vt,
         children: [
@@ -247,22 +247,22 @@ function H(e) {
                             id: e.id,
                             value: e,
                             label: `${L.Ay.getUserTag(e)}`,
-                            leading: (0, l.jsx)(P.A, { user: e, size: C._3.SIZE_20 }),
+                            leading: (0, l.jsx)(A.A, { user: e, size: h._3.SIZE_20 }),
                         })),
                     }),
                     (0, l.jsx)("div", {
                         className: F.Qg,
                         children: (0, l.jsx)(d.$, {
                             disabled: null == r,
-                            loading: p,
+                            loading: m,
                             onClick: () => {
-                                m(!0),
+                                p(!0),
                                     (0, g.UN)(r, t)
                                         .then(() => {
                                             n();
                                         })
                                         .catch(() => {
-                                            c(!0), m(!1);
+                                            c(!0), p(!1);
                                         });
                             },
                             text: G.intl.string(G.t["+EgwQn"]),

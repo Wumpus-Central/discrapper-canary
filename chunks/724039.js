@@ -12,12 +12,12 @@ e.exports = !(function () {
             return t[e];
         });
         if ("0123456789" !== n.join("")) return !1;
-        var o = {};
+        var i = {};
         if (
             ("abcdefghijklmnopqrst".split("").forEach(function (e) {
-                o[e] = e;
+                i[e] = e;
             }),
-            "abcdefghijklmnopqrst" !== Object.keys(Object.assign({}, o)).join(""))
+            "abcdefghijklmnopqrst" !== Object.keys(Object.assign({}, i)).join(""))
         )
             return !1;
         return !0;
@@ -25,9 +25,9 @@ e.exports = !(function () {
         return !1;
     }
 })()
-    ? function (e, o) {
+    ? function (e, i) {
           for (
-              var i,
+              var o,
                   a,
                   s = (function (e) {
                       if (null == e) throw TypeError("Object.assign cannot be called with null or undefined");
@@ -37,10 +37,10 @@ e.exports = !(function () {
               l < arguments.length;
               l++
           ) {
-              for (var u in (i = Object(arguments[l]))) r.call(i, u) && (s[u] = i[u]);
+              for (var u in (o = Object(arguments[l]))) r.call(o, u) && (s[u] = o[u]);
               if (t) {
-                  a = t(i);
-                  for (var c = 0; c < a.length; c++) n.call(i, a[c]) && (s[a[c]] = i[a[c]]);
+                  a = t(o);
+                  for (var c = 0; c < a.length; c++) n.call(o, a[c]) && (s[a[c]] = o[a[c]]);
               }
           }
           return s;

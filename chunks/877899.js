@@ -5,17 +5,17 @@ function r(e) {
 Object.defineProperty(t, "__esModule", { value: !0 }),
     (t.chainMessagesObjects = function (e, t) {
         let n = r(e),
-            o = r(t),
-            i = e;
+            i = r(t),
+            o = e;
         return (
-            n && o
-                ? (e.$$loader.fallbackWith(t.$$loader), (i = e))
-                : n || o
-                  ? n && !o
-                      ? (i = Object.assign(e.$$baseObject, t))
-                      : o && !n && (i = Object.assign(t.$$baseObject, e))
-                  : (i = Object.assign(Object.assign({}, t), e)),
-            i
+            n && i
+                ? (e.$$loader.fallbackWith(t.$$loader), (o = e))
+                : n || i
+                  ? n && !i
+                      ? (o = Object.assign(e.$$baseObject, t))
+                      : i && !n && (o = Object.assign(t.$$baseObject, e))
+                  : (o = Object.assign(Object.assign({}, t), e)),
+            o
         );
     }),
     (t.makeMessagesProxy = function (e) {

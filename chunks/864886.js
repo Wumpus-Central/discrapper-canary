@@ -1,5 +1,5 @@
 let n = r(692714),
-    { MAX_LENGTH: o, MAX_SAFE_INTEGER: i } = r(376780),
+    { MAX_LENGTH: i, MAX_SAFE_INTEGER: o } = r(376780),
     { safeRe: a, t: s } = r(64672),
     l = r(131077),
     { compareIdentifiers: u } = r(931717);
@@ -9,7 +9,7 @@ class c {
             if (!!t.loose === e.loose && !!t.includePrerelease === e.includePrerelease) return e;
             else e = e.version;
         else if ("string" != typeof e) throw TypeError(`Invalid version. Must be a string. Got type "${typeof e}".`);
-        if (e.length > o) throw TypeError(`version is longer than ${o} characters`);
+        if (e.length > i) throw TypeError(`version is longer than ${i} characters`);
         n("SemVer", e, t),
             (this.options = t),
             (this.loose = !!t.loose),
@@ -21,16 +21,16 @@ class c {
             (this.major = +r[1]),
             (this.minor = +r[2]),
             (this.patch = +r[3]),
-            this.major > i || this.major < 0)
+            this.major > o || this.major < 0)
         )
             throw TypeError("Invalid major version");
-        if (this.minor > i || this.minor < 0) throw TypeError("Invalid minor version");
-        if (this.patch > i || this.patch < 0) throw TypeError("Invalid patch version");
+        if (this.minor > o || this.minor < 0) throw TypeError("Invalid minor version");
+        if (this.patch > o || this.patch < 0) throw TypeError("Invalid patch version");
         r[4]
             ? (this.prerelease = r[4].split(".").map((e) => {
                   if (/^[0-9]+$/.test(e)) {
                       let t = +e;
-                      if (t >= 0 && t < i) return t;
+                      if (t >= 0 && t < o) return t;
                   }
                   return e;
               }))
@@ -68,12 +68,12 @@ class c {
         let t = 0;
         do {
             let r = this.prerelease[t],
-                o = e.prerelease[t];
-            if ((n("prerelease compare", t, r, o), void 0 === r && void 0 === o)) return 0;
-            if (void 0 === o) return 1;
+                i = e.prerelease[t];
+            if ((n("prerelease compare", t, r, i), void 0 === r && void 0 === i)) return 0;
+            if (void 0 === i) return 1;
             if (void 0 === r) return -1;
-            else if (r === o) continue;
-            else return u(r, o);
+            else if (r === i) continue;
+            else return u(r, i);
         } while (++t);
     }
     compareBuild(e) {
@@ -81,12 +81,12 @@ class c {
         let t = 0;
         do {
             let r = this.build[t],
-                o = e.build[t];
-            if ((n("build compare", t, r, o), void 0 === r && void 0 === o)) return 0;
-            if (void 0 === o) return 1;
+                i = e.build[t];
+            if ((n("build compare", t, r, i), void 0 === r && void 0 === i)) return 0;
+            if (void 0 === i) return 1;
             if (void 0 === r) return -1;
-            else if (r === o) continue;
-            else return u(r, o);
+            else if (r === i) continue;
+            else return u(r, i);
         } while (++t);
     }
     inc(e, t, r) {

@@ -4,15 +4,15 @@ t.default = {
     pluralRuleFunction: function (e, t) {
         var r = String(e).split("."),
             n = !r[1],
-            o = Number(r[0]) == e,
-            i = o && r[0].slice(-1),
-            a = o && r[0].slice(-2);
+            i = Number(r[0]) == e,
+            o = i && r[0].slice(-1),
+            a = i && r[0].slice(-2);
         return t
-            ? 1 == i && 11 != a
+            ? 1 == o && 11 != a
                 ? "one"
-                : 2 == i && 12 != a
+                : 2 == o && 12 != a
                   ? "two"
-                  : 3 == i && 13 != a
+                  : 3 == o && 13 != a
                     ? "few"
                     : "other"
             : 1 == e && n

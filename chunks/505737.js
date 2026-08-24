@@ -66,13 +66,13 @@ var n = {
         font: { fontStyle: !0, fontVariant: !0, fontWeight: !0, fontSize: !0, lineHeight: !0, fontFamily: !0 },
         outline: { outlineWidth: !0, outlineStyle: !0, outlineColor: !0 },
     },
-    o = !!("u" > typeof window && window.document && window.document.createElement),
-    i = {
-        canUseDOM: o,
+    i = !!("u" > typeof window && window.document && window.document.createElement),
+    o = {
+        canUseDOM: i,
         canUseWorkers: "u" > typeof Worker,
-        canUseEventListeners: o && !!(window.addEventListener || window.attachEvent),
-        canUseViewport: o && !!window.screen,
-        isInWorker: !o,
+        canUseEventListeners: i && !!(window.addEventListener || window.attachEvent),
+        canUseViewport: i && !!window.screen,
+        isInWorker: !i,
     };
 function a(e) {
     return function () {
@@ -91,7 +91,7 @@ var s = function () {};
         return e;
     });
 var l = !1;
-if (i.canUseDOM) {
+if (o.canUseDOM) {
     var u = document.createElement("div").style;
     try {
         u.font = "";
@@ -101,8 +101,8 @@ if (i.canUseDOM) {
 }
 e.exports = {
     createDangerousStringForStyles: function (e) {},
-    setValueForStyles: function (e, r, o) {
-        var i = e.style;
+    setValueForStyles: function (e, r, i) {
+        var o = e.style;
         for (var a in r)
             if (r.hasOwnProperty(a)) {
                 var s,
@@ -116,12 +116,12 @@ e.exports = {
                             : c || "number" != typeof u || 0 === u || (t.hasOwnProperty(s) && t[s])
                               ? ("" + u).trim()
                               : u + "px");
-                if (("float" === a && (a = "cssFloat"), c)) i.setProperty(a, f);
-                else if (f) i[a] = f;
+                if (("float" === a && (a = "cssFloat"), c)) o.setProperty(a, f);
+                else if (f) o[a] = f;
                 else {
-                    var p = l && n[a];
-                    if (p) for (var d in p) i[d] = "";
-                    else i[a] = "";
+                    var d = l && n[a];
+                    if (d) for (var p in d) o[p] = "";
+                    else o[a] = "";
                 }
             }
     },

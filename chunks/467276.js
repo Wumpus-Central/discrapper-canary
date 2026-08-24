@@ -7,7 +7,7 @@ function n(e) {
     }
     return t;
 }
-function o(e) {
+function i(e) {
     return null !== e && "object" == typeof e && !Array.isArray(e);
 }
-r.d(t, { O: () => o, V: () => n });
+r.d(t, { O: () => i, V: () => n });

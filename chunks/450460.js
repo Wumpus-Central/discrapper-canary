@@ -1,17 +1,17 @@
 "use strict";
 var n = r(839036)("%Reflect.construct%", !0),
-    o = r(173081);
+    i = r(173081);
 try {
-    o({}, "", { "[[Get]]": function () {} });
+    i({}, "", { "[[Get]]": function () {} });
 } catch (e) {
-    o = null;
+    i = null;
 }
-if (o && n) {
-    var i = {},
+if (i && n) {
+    var o = {},
         a = {};
-    o(a, "length", {
+    i(a, "length", {
         "[[Get]]": function () {
-            throw i;
+            throw o;
         },
         "[[Enumerable]]": !0,
     }),
@@ -19,7 +19,7 @@ if (o && n) {
             try {
                 n(e, a);
             } catch (e) {
-                return e === i;
+                return e === o;
             }
         });
 } else

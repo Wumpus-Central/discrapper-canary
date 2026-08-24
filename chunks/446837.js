@@ -1,8 +1,8 @@
 "use strict";
 r.d(t, { t: () => U });
 var n,
-    o,
     i,
+    o,
     a = [],
     s = "ResizeObserver loop completed with undelivered notifications.",
     l = function () {
@@ -12,7 +12,7 @@ var n,
             : ((e = document.createEvent("Event")).initEvent("error", !1, !1), (e.message = s)),
             window.dispatchEvent(e);
     };
-((n = o || (o = {})).BORDER_BOX = "border-box"),
+((n = i || (i = {})).BORDER_BOX = "border-box"),
     (n.CONTENT_BOX = "content-box"),
     (n.DEVICE_PIXEL_CONTENT_BOX = "device-pixel-content-box");
 var u = (function () {
@@ -58,16 +58,16 @@ var u = (function () {
                 n = t.height;
             return !r && !n;
         }
-        var o = e.offsetWidth,
-            i = e.offsetHeight;
-        return !(o || i || e.getClientRects().length);
+        var i = e.offsetWidth,
+            o = e.offsetHeight;
+        return !(i || o || e.getClientRects().length);
     },
-    p = function (e) {
+    d = function (e) {
         var t,
             r = null == (t = null == e ? void 0 : e.ownerDocument) ? void 0 : t.defaultView;
         return !!(r && e instanceof r.Element);
     },
-    d = function (e) {
+    p = function (e) {
         switch (e.tagName) {
             case "INPUT":
                 if ("image" !== e.type) break;
@@ -110,47 +110,47 @@ var u = (function () {
         var t = getComputedStyle(e),
             r = c(e) && e.ownerSVGElement && e.getBBox(),
             n = !g && "border-box" === t.boxSizing,
-            o = y.test(t.writingMode || ""),
-            i = !r && v.test(t.overflowY || ""),
+            i = y.test(t.writingMode || ""),
+            o = !r && v.test(t.overflowY || ""),
             a = !r && v.test(t.overflowX || ""),
             s = r ? 0 : b(t.paddingTop),
             l = r ? 0 : b(t.paddingRight),
-            p = r ? 0 : b(t.paddingBottom),
-            d = r ? 0 : b(t.paddingLeft),
+            d = r ? 0 : b(t.paddingBottom),
+            p = r ? 0 : b(t.paddingLeft),
             h = r ? 0 : b(t.borderTopWidth),
             S = r ? 0 : b(t.borderRightWidth),
             x = r ? 0 : b(t.borderBottomWidth),
             E = r ? 0 : b(t.borderLeftWidth),
-            k = d + l,
-            C = s + p,
+            k = p + l,
+            C = s + d,
             T = E + S,
             M = h + x,
             P = a ? e.offsetHeight - M - e.clientHeight : 0,
-            A = i ? e.offsetWidth - T - e.clientWidth : 0,
-            O = r ? r.width : b(t.width) - (n ? k + T : 0) - A,
-            I = r ? r.height : b(t.height) - (n ? C + M : 0) - P,
-            D = O + k + A + T,
-            L = I + C + P + M,
-            R = Object.freeze({
-                devicePixelContentBoxSize: w(Math.round(O * devicePixelRatio), Math.round(I * devicePixelRatio), o),
-                borderBoxSize: w(D, L, o),
-                contentBoxSize: w(O, I, o),
-                contentRect: new u(d, s, O, I),
+            A = o ? e.offsetWidth - T - e.clientWidth : 0,
+            I = r ? r.width : b(t.width) - (n ? k + T : 0) - A,
+            O = r ? r.height : b(t.height) - (n ? C + M : 0) - P,
+            D = I + k + A + T,
+            R = O + C + P + M,
+            L = Object.freeze({
+                devicePixelContentBoxSize: w(Math.round(I * devicePixelRatio), Math.round(O * devicePixelRatio), i),
+                borderBoxSize: w(D, R, i),
+                contentBoxSize: w(I, O, i),
+                contentRect: new u(p, s, I, O),
             });
-        return m.set(e, R), R;
+        return m.set(e, L), L;
     },
     x = function (e, t) {
         var r = S(e),
             n = r.borderBoxSize,
-            i = r.contentBoxSize,
+            o = r.contentBoxSize,
             a = r.devicePixelContentBoxSize;
         switch (t) {
-            case o.DEVICE_PIXEL_CONTENT_BOX:
+            case i.DEVICE_PIXEL_CONTENT_BOX:
                 return a;
-            case o.BORDER_BOX:
+            case i.BORDER_BOX:
                 return n;
             default:
-                return i;
+                return o;
         }
     },
     E = function (e) {
@@ -174,8 +174,8 @@ var u = (function () {
                 var n = [];
                 r.activeTargets.forEach(function (t) {
                     var r = new E(t.target),
-                        o = k(t.target);
-                    n.push(r), (t.lastReportedSize = x(t.target, t.observedBox)), o < e && (e = o);
+                        i = k(t.target);
+                    n.push(r), (t.lastReportedSize = x(t.target, t.observedBox)), i < e && (e = i);
                 }),
                     t.push(function () {
                         r.callback.call(r.observer, n, r.observer);
@@ -214,7 +214,7 @@ var u = (function () {
     },
     P = [],
     A = function (e) {
-        if (!i) {
+        if (!o) {
             var t = 0,
                 r = document.createTextNode("");
             new MutationObserver(function () {
@@ -222,20 +222,20 @@ var u = (function () {
                     return e();
                 });
             }).observe(r, { characterData: !0 }),
-                (i = function () {
+                (o = function () {
                     r.textContent = "" + (t ? t-- : t++);
                 });
         }
-        P.push(e), i();
+        P.push(e), o();
     },
-    O = function (e) {
+    I = function (e) {
         A(function () {
             requestAnimationFrame(e);
         });
     },
-    I = 0,
+    O = 0,
     D = { attributes: !0, characterData: !0, childList: !0, subtree: !0 },
-    L = [
+    R = [
         "resize",
         "load",
         "transitionend",
@@ -251,7 +251,7 @@ var u = (function () {
         "blur",
         "focus",
     ],
-    R = !1,
+    L = !1,
     F = new ((function () {
         function e() {
             var e = this;
@@ -263,14 +263,14 @@ var u = (function () {
         return (
             (e.prototype.run = function (e) {
                 var t = this;
-                R ||
-                    ((R = !0),
-                    O(function () {
+                L ||
+                    ((L = !0),
+                    I(function () {
                         var r = !1;
                         try {
                             r = M();
                         } finally {
-                            if (((R = !1), !I)) return;
+                            if (((L = !1), !O)) return;
                             r ? t.run(60) : e ? t.run(e - 1) : t.start();
                         }
                     }));
@@ -291,7 +291,7 @@ var u = (function () {
                     ((this.stopped = !1),
                     (this.observer = new MutationObserver(this.listener)),
                     this.observe(),
-                    L.forEach(function (t) {
+                    R.forEach(function (t) {
                         return h.addEventListener(t, e.listener, !0);
                     }));
             }),
@@ -299,7 +299,7 @@ var u = (function () {
                 var e = this;
                 this.stopped ||
                     (this.observer && this.observer.disconnect(),
-                    L.forEach(function (t) {
+                    R.forEach(function (t) {
                         return h.removeEventListener(t, e.listener, !0);
                     }),
                     (this.stopped = !0));
@@ -308,12 +308,12 @@ var u = (function () {
         );
     })())(),
     N = function (e) {
-        !I && e > 0 && F.start(), (I += e) || F.stop();
+        !O && e > 0 && F.start(), (O += e) || F.stop();
     },
     j = (function () {
         function e(e, t) {
             (this.target = e),
-                (this.observedBox = t || o.CONTENT_BOX),
+                (this.observedBox = t || i.CONTENT_BOX),
                 (this.lastReportedSize = { inlineSize: 0, blockSize: 0 });
         }
         return (
@@ -322,7 +322,7 @@ var u = (function () {
                     t = x(this.target, this.observedBox);
                 return (
                     c((e = this.target)) ||
-                        d(e) ||
+                        p(e) ||
                         "inline" !== getComputedStyle(e).display ||
                         (this.lastReportedSize = t),
                     this.lastReportedSize.inlineSize !== t.inlineSize || this.lastReportedSize.blockSize !== t.blockSize
@@ -338,8 +338,8 @@ var u = (function () {
             (this.observer = e),
             (this.callback = t);
     },
-    $ = new Map(),
-    K = function (e, t) {
+    K = new Map(),
+    $ = function (e, t) {
         for (var r = 0; r < e.length; r += 1) if (e[r].target === t) return r;
         return -1;
     },
@@ -348,26 +348,26 @@ var u = (function () {
         return (
             (e.connect = function (e, t) {
                 var r = new B(e, t);
-                a.push(r), $.set(e, r);
+                a.push(r), K.set(e, r);
             }),
             (e.observe = function (e, t, r) {
-                if ($.has(e)) {
-                    var n = $.get(e);
-                    0 > K(n.observationTargets, t) &&
+                if (K.has(e)) {
+                    var n = K.get(e);
+                    0 > $(n.observationTargets, t) &&
                         (n.observationTargets.push(new j(t, r && r.box)), N(1), F.schedule());
                 }
             }),
             (e.unobserve = function (e, t) {
-                if ($.has(e)) {
-                    var r = $.get(e),
-                        n = K(r.observationTargets, t);
+                if (K.has(e)) {
+                    var r = K.get(e),
+                        n = $(r.observationTargets, t);
                     n >= 0 && (r.observationTargets.splice(n, 1), N(-1));
                 }
             }),
             (e.disconnect = function (e) {
-                if ($.has(e)) {
-                    var t = $.get(e);
-                    a.splice(a.indexOf(t), 1), $.delete(e), N(-t.observationTargets.length);
+                if (K.has(e)) {
+                    var t = K.get(e);
+                    a.splice(a.indexOf(t), 1), K.delete(e), N(-t.observationTargets.length);
                 }
             }),
             e
@@ -389,7 +389,7 @@ var u = (function () {
                     throw TypeError(
                         "Failed to execute 'observe' on 'ResizeObserver': 1 argument required, but only 0 present.",
                     );
-                if (!p(e))
+                if (!d(e))
                     throw TypeError(
                         "Failed to execute 'observe' on 'ResizeObserver': parameter 1 is not of type 'Element",
                     );
@@ -400,7 +400,7 @@ var u = (function () {
                     throw TypeError(
                         "Failed to execute 'unobserve' on 'ResizeObserver': 1 argument required, but only 0 present.",
                     );
-                if (!p(e))
+                if (!d(e))
                     throw TypeError(
                         "Failed to execute 'unobserve' on 'ResizeObserver': parameter 1 is not of type 'Element",
                     );

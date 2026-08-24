@@ -1,8 +1,8 @@
-n.d(t, { Ay: () => T, Ce: () => N, c$: () => R, n2: () => I });
+n.d(t, { Ay: () => T, Ce: () => I, c$: () => R, n2: () => N });
 var a = n(477900);
 n(582128);
-var r = n(503698),
-    l = n.n(r),
+var l = n(503698),
+    r = n.n(l),
     s = n(834730),
     i = n(939249),
     d = n(140735),
@@ -14,15 +14,15 @@ var r = n(503698),
     m = n(922301),
     g = n(660184),
     p = n(534400),
-    _ = n(518477),
-    b = n(375708),
+    b = n(518477),
+    _ = n(375708),
     h = n(956495);
 let A = { sm: "heading-lg/bold", lg: "heading-xl/semibold" };
 function R(e) {
     let {
             user: t,
             guildId: n,
-            displayName: r,
+            displayName: l,
             size: i = "sm",
             pendingDisplayNameStyles: d,
             shouldUnderlineOnHover: o = !1,
@@ -36,7 +36,7 @@ function R(e) {
               variant: p,
               className: u,
               children: (0, a.jsx)(g.A, {
-                  userName: r,
+                  userName: l,
                   displayNameStyles: f,
                   effectDisplayType: m.G.ANIMATED,
                   textClassName: h.QC,
@@ -47,13 +47,13 @@ function R(e) {
                   appendedInlineContent: null != c ? (0, a.jsxs)(a.Fragment, { children: [" ", c] }) : null,
               }),
           })
-        : (0, a.jsxs)(s.E, { className: l()(h.QC, h.O2, u), variant: p, children: [r, " ", c] });
+        : (0, a.jsxs)(s.E, { className: r()(h.QC, h.O2, u), variant: p, children: [l, " ", c] });
 }
 function x(e) {
     let {
             user: t,
             guildId: n,
-            displayName: r,
+            displayName: l,
             trailing: s,
             size: d = "sm",
             pendingDisplayNameStyles: o,
@@ -64,40 +64,40 @@ function x(e) {
         g = (0, a.jsx)(R, {
             user: t,
             guildId: n,
-            displayName: r,
+            displayName: l,
             size: d,
             pendingDisplayNameStyles: o,
             shouldUnderlineOnHover: null != c,
             displayNameTrailing: m,
         });
     return (0, a.jsxs)("div", {
-        className: l()(h.K$, "lg" === d && h.lg),
+        className: r()(h.K$, "lg" === d && h.lg),
         children: [
             null != c ? (0, a.jsx)(i.D, { onClick: c, className: h.vk, children: g }) : g,
             null != s && !1 !== s && (0, a.jsx)("div", { className: h.MU, children: s }),
         ],
     });
 }
-function I(e) {
+function N(e) {
     let { pronouns: t, className: n } = e;
     return (0, a.jsxs)(s.E, {
-        className: l()(h.hI, n),
+        className: r()(h.hI, n),
         variant: "text-sm/medium",
         color: "text-strong",
         children: [
-            (0, a.jsx)(d.A, { tag: "span", children: b.intl.formatToPlainString(b.t["DRI+T7"], { pronouns: t }) }),
+            (0, a.jsx)(d.A, { tag: "span", children: _.intl.formatToPlainString(_.t["DRI+T7"], { pronouns: t }) }),
             (0, a.jsx)("span", { "aria-hidden": "true", children: t }),
         ],
     });
 }
-function N() {
+function I() {
     return (0, a.jsx)("div", { "aria-hidden": "true", className: h.SC });
 }
 function v(e) {
     let {
             user: t,
             usernameIcon: n,
-            onClickUsername: r,
+            onClickUsername: l,
             pronouns: s,
             primaryGuild: d,
             contextGuildId: f,
@@ -118,18 +118,18 @@ function v(e) {
                   hideBotTag: !0,
               });
     return (0, a.jsxs)("div", {
-        className: l()(h.AK, { [h.j6]: g, [h.w2]: null != A }),
+        className: r()(h.AK, { [h.j6]: g, [h.w2]: null != A }),
         children: [
-            null != R && null != r ? (0, a.jsx)(i.D, { onClick: r, className: h.vk, children: R }) : R,
+            null != R && null != l ? (0, a.jsx)(i.D, { onClick: l, className: h.vk, children: R }) : R,
             g &&
                 (0, a.jsxs)(a.Fragment, {
                     children: [
-                        (0, a.jsx)(N, {}),
+                        (0, a.jsx)(I, {}),
                         (0, a.jsx)(o.m, {
-                            text: b.intl.string(b.t.GI2A8C),
-                            delay: _.In,
+                            text: _.intl.string(_.t.GI2A8C),
+                            delay: b.In,
                             ariaHidden: !0,
-                            children: (0, a.jsx)("span", { className: h.Ez, children: (0, a.jsx)(I, { pronouns: s }) }),
+                            children: (0, a.jsx)("span", { className: h.Ez, children: (0, a.jsx)(N, { pronouns: s }) }),
                         }),
                     ],
                 }),
@@ -142,8 +142,8 @@ function T(e) {
     let {
         user: t,
         guildId: n,
-        className: r,
-        onClickName: l,
+        className: l,
+        onClickName: r,
         displayName: s,
         displayNameSize: i,
         pendingDisplayNameStyles: d,
@@ -156,7 +156,7 @@ function T(e) {
         onClose: g,
     } = e;
     return (0, a.jsxs)("div", {
-        className: r,
+        className: l,
         children: [
             (0, a.jsx)(x, {
                 user: t,
@@ -164,7 +164,7 @@ function T(e) {
                 displayName: s,
                 size: i,
                 pendingDisplayNameStyles: d,
-                onClickDisplayName: l,
+                onClickDisplayName: r,
                 trailing: o,
             }),
             (0, a.jsx)(v, {
@@ -173,7 +173,7 @@ function T(e) {
                 pronouns: u,
                 primaryGuild: f,
                 contextGuildId: E,
-                onClickUsername: l,
+                onClickUsername: r,
                 onClose: g,
                 trailing: m,
             }),

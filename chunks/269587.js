@@ -47,7 +47,7 @@ function Y(t) {
             appContext: k,
             targetElementRef: W,
         } = t,
-        [H, B] = l.useState(!1),
+        [B, H] = l.useState(!1),
         { analyticsLocations: z } = (0, x.Ay)(A.A.USER_PROFILE_ACTIVITY_CONTEXT_MENU),
         w = (0, f.A)({ display: s, user: e, activity: a, entry: r, analyticsLocations: z }),
         $ = (0, _.NR)(),
@@ -139,7 +139,7 @@ function Y(t) {
                 })(t),
                 (0, P.s)(t),
             ].filter((t) => null != t);
-        })({ entry: r, activity: a, user: e, display: s, onClose: Y, onAction: w, isMenuOpen: H, appContext: k });
+        })({ entry: r, activity: a, user: e, display: s, onClose: Y, onAction: w, isMenuOpen: B, appContext: k });
     return 0 === Q.length || e.bot
         ? null
         : (0, i.jsx)(c.Y, {
@@ -148,7 +148,7 @@ function Y(t) {
               position: "right",
               disablePointerEvents: !1,
               onRequestOpen: () => {
-                  w({ action: "OPEN_MENU" }), B(!0);
+                  w({ action: "OPEN_MENU" }), H(!0);
               },
               renderPopout: (t) => {
                   let { closePopout: n } = t;
@@ -158,7 +158,7 @@ function Y(t) {
                           "data-menu-migrated-auto": !0,
                           navId: p.n,
                           onClose: () => {
-                              n(), B(!1);
+                              n(), H(!1);
                           },
                           "aria-label": h.intl.string(h.t.PlAQz1),
                           onSelect: o,

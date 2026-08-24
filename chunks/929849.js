@@ -1,11 +1,11 @@
 "use strict";
-r.d(t, { k: () => i });
+r.d(t, { k: () => o });
 var n = r(672722),
-    o = r(132803),
-    i = function (e, t, r) {
-        if (o.is.fun(e)) return e;
-        if (o.is.arr(e)) return i({ range: e, output: t, extrapolate: r });
-        if (o.is.str(e.output[0])) return n.createStringInterpolator(e);
+    i = r(132803),
+    o = function (e, t, r) {
+        if (i.is.fun(e)) return e;
+        if (i.is.arr(e)) return o({ range: e, output: t, extrapolate: r });
+        if (i.is.str(e.output[0])) return n.createStringInterpolator(e);
         var a = e.output,
             s = e.range || [0, 1],
             l = e.extrapolateLeft || e.extrapolate || "extend",
@@ -20,7 +20,7 @@ var n = r(672722),
                 for (var r = 1; r < t.length - 1 && !(t[r] >= e); ++r);
                 return r - 1;
             })(t, s);
-            return (function (e, t, r, n, o, i, a, s, l) {
+            return (function (e, t, r, n, i, o, a, s, l) {
                 var u = l ? l(e) : e;
                 if (u < t)
                     if ("identity" === a) return u;
@@ -28,15 +28,15 @@ var n = r(672722),
                 if (u > r)
                     if ("identity" === s) return u;
                     else "clamp" === s && (u = r);
-                return n === o
+                return n === i
                     ? n
                     : t === r
                       ? e <= t
                           ? n
-                          : o
+                          : i
                       : (t === -1 / 0 ? (u = -u) : r === 1 / 0 ? (u -= t) : (u = (u - t) / (r - t)),
-                        (u = i(u)),
-                        n === -1 / 0 ? (u = -u) : o === 1 / 0 ? (u += n) : (u = u * (o - n) + n),
+                        (u = o(u)),
+                        n === -1 / 0 ? (u = -u) : i === 1 / 0 ? (u += n) : (u = u * (i - n) + n),
                         u);
             })(t, s[r], s[r + 1], a[r], a[r + 1], c, l, u, e.map);
         };

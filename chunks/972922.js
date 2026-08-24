@@ -1,8 +1,8 @@
 "use strict";
 r.d(t, { s: () => s });
 var n = r(192734),
-    o = r(201092),
-    i = r(404903),
+    i = r(201092),
+    o = r(404903),
     a = r(126024);
 function s(e, t) {
     let r,
@@ -12,8 +12,8 @@ function s(e, t) {
             onPress: u,
             onPressStart: c,
             onPressEnd: f,
-            onPressUp: p,
-            onPressChange: d,
+            onPressUp: d,
+            onPressChange: p,
             preventFocusOnPress: h,
             allowFocusWhenDisabled: m,
             onClick: v,
@@ -45,12 +45,12 @@ function s(e, t) {
                   "aria-disabled": l && "input" !== s ? l : void 0,
                   rel: "a" === s ? b : void 0,
               };
-    let { pressProps: _, isPressed: S } = (0, i.d)({
+    let { pressProps: _, isPressed: S } = (0, o.d)({
             onPressStart: c,
             onPressEnd: f,
-            onPressChange: d,
+            onPressChange: p,
             onPress: u,
-            onPressUp: p,
+            onPressUp: d,
             onClick: v,
             isDisabled: l,
             preventFocusOnPress: h,
@@ -58,7 +58,7 @@ function s(e, t) {
         }),
         { focusableProps: x } = (0, a.Wc)(e, t);
     m && (x.tabIndex = l ? -1 : x.tabIndex);
-    let E = (0, n.v)(x, _, (0, o.$)(e, { labelable: !0 }));
+    let E = (0, n.v)(x, _, (0, i.$)(e, { labelable: !0 }));
     return {
         isPressed: S,
         buttonProps: (0, n.v)(r, E, {

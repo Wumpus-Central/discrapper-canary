@@ -1,24 +1,24 @@
 n.d(t, { x: () => h });
 var a = n(582128),
-    i = n(655857),
-    A = n(87725);
+    A = n(655857),
+    i = n(87725);
 function h() {
-    let { displayCurrency: e } = (0, i.Jn)(),
+    let { displayCurrency: e } = (0, A.Jn)(),
         {
             selectedSkuId: t,
             skuIds: n,
             isGift: h,
             getOrCreateSetupIntent: o,
-        } = (0, A.t4)((e) => ({
+        } = (0, i.t4)((e) => ({
             selectedSkuId: e.selectedSkuId,
             skuIds: e.skuIds,
             isGift: e.isGift,
             getOrCreateSetupIntent: e.getOrCreateSetupIntent,
         })),
-        s = t ?? (1 === n.length ? n[0] : void 0),
-        r = a.useMemo(() => ({ currency: e, sku_id: s, is_gift: h }), [e, s, h]);
+        r = t ?? (1 === n.length ? n[0] : void 0),
+        p = a.useMemo(() => ({ currency: e, sku_id: r, is_gift: h }), [e, r, h]);
     return {
-        createSetupIntent: a.useCallback(() => o(r, { forceRecreate: !0 }), [o, r]),
-        createSetupIntentDeduped: a.useCallback(() => o(r), [o, r]),
+        createSetupIntent: a.useCallback(() => o(p, { forceRecreate: !0 }), [o, p]),
+        createSetupIntentDeduped: a.useCallback(() => o(p), [o, p]),
     };
 }
