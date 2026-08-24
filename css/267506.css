@@ -2377,9 +2377,9 @@
     box-sizing: border-box;
     display: flex;
     gap: var(--space-4);
-    padding-inline: calc(var(--space-16) - 1px) calc(var(--space-16) - 2px);
+    padding-inline: calc(var(--space-md) - 1px) calc(var(--space-md) - 2px);
     position: relative;
-    --custom-composer-text-start: calc(var(--space-16) + 11px + var(--space-32) + var(--space-4))
+    --custom-composer-text-start: calc(var(--space-md) - 5px + var(--space-32) + var(--space-md) + var(--space-4))
 }
 
 .composerGlow_ffba0c {
@@ -2414,7 +2414,7 @@
 .composerHintOverlay_ffba0c {
     align-items: center;
     display: flex;
-    gap: var(--space-8);
+    gap: var(--space-xs);
     inset-block: 0;
     inset-inline-end: 96px;
     inset-inline-start: var(--custom-composer-text-start);
@@ -2471,15 +2471,15 @@
     align-items: center;
     display: flex;
     flex: 0 0 auto;
-    gap: var(--space-8)
+    gap: var(--space-xs)
 }
 
 .composerAttachments_ffba0c {
     display: flex;
     flex-wrap: wrap;
-    gap: var(--space-8);
-    padding-block: var(--space-8) 0;
-    padding-inline: calc(var(--space-16) - 1px)
+    gap: var(--space-xs);
+    padding-block: var(--space-xs) 0;
+    padding-inline: calc(var(--space-md) - 1px)
 }
 
 .attachmentSpinner_ffba0c {
@@ -2509,7 +2509,7 @@
     display: none
 }
 
-.composerModelTrigger_ffba0c {
+.composerTrailingSlotButton_ffba0c {
     box-sizing: border-box;
     flex: 0 0 auto;
     height: var(--space-32);
@@ -2518,7 +2518,7 @@
 }
 
 .composerPlusButton_ffba0c {
-    margin-inline-end: 16px;
+    margin-inline-end: var(--space-md);
     margin-inline-start: -4px
 }
 
@@ -2602,8 +2602,8 @@
     align-items: center;
     display: flex;
     flex: 0 0 auto;
-    gap: var(--space-8);
-    padding-inline-start: var(--space-8)
+    gap: var(--space-xs);
+    padding-inline-start: var(--space-xs)
 }
 
 .composerSendSeparator_ffba0c {
@@ -2637,33 +2637,7 @@
     opacity: .5
 }
 
-.composerInterruptButton_ffba0c {
-    align-items: center;
-    background: transparent;
-    border: none;
-    border-radius: 8px;
-    color: var(--interactive-text-default);
-    cursor: pointer;
-    display: inline-flex;
-    justify-content: center;
-    min-height: var(--space-32);
-    min-width: var(--space-32);
-    padding: var(--space-4);
-    transition: color .2s ease, background-color .2s ease
-}
-
-.composerInterruptButton_ffba0c:hover:not(:disabled) {
-    background: var(--interactive-background-selected);
-    color: var(--interactive-text-hover)
-}
-
-.composerInterruptButton_ffba0c:disabled {
-    cursor: not-allowed;
-    opacity: .5
-}
-
 .reduce-motion .composerAttachButton_ffba0c,
-.reduce-motion .composerInterruptButton_ffba0c,
 .reduce-motion .composerSendButton_ffba0c {
     transition: none
 }
@@ -2838,7 +2812,7 @@
 .thinkingTrigger_b4a971 {
     border-radius: var(--radius-sm);
     padding-block: var(--space-4);
-    padding-inline: calc(var(--space-16) - 5px) var(--space-8);
+    padding-inline: calc(var(--space-md) - 5px) var(--space-xs);
     text-align: start
 }
 
@@ -2850,7 +2824,7 @@
 
 .thinkingDots_b4a971 {
     justify-content: center;
-    margin-inline-end: calc(16px + var(--space-4));
+    margin-inline-end: calc(var(--space-md) + var(--space-4));
     width: var(--space-32)
 }
 
@@ -2907,7 +2881,7 @@
 }
 
 .statusRow__15a10 {
-    gap: var(--space-8);
+    gap: var(--space-xs);
     min-height: 24px
 }
 
@@ -2932,7 +2906,7 @@
     align-items: center;
     border-radius: var(--radius-sm);
     display: inline-flex;
-    padding: var(--space-4) var(--space-8)
+    padding: var(--space-4) var(--space-xs)
 }
 
 .runeCounter__15a10 {
@@ -3437,7 +3411,7 @@
 }
 
 .chat_f35ad6>:not(.chatLog_f35ad6):not([data-vibegrations-quest-prompt]):not([data-vibegrations-floating-activity]) {
-    margin-inline: var(--space-8);
+    margin-inline: var(--space-xs);
     position: relative;
     width: auto;
     z-index: 1
@@ -3465,7 +3439,7 @@
 .clarificationSlot_f35ad6 {
     inset-block-end: 100%;
     inset-inline: 0;
-    margin-block-end: var(--space-8);
+    margin-block-end: var(--space-xs);
     pointer-events: none;
     position: absolute
 }
@@ -3491,7 +3465,7 @@
     flex-direction: column;
     gap: var(--space-4);
     min-width: 0;
-    padding-block: 0 var(--space-8);
+    padding-block: 0 var(--space-xs);
     padding-inline: 0;
     position: relative;
     z-index: 1
@@ -4389,4 +4363,4 @@
     text-align: center
 }
 
-/*# sourceMappingURL=267506.2e586a1eb94ae9dd.css.map*/
+/*# sourceMappingURL=267506.b33bb5cf4a019314.css.map*/

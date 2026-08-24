@@ -18,7 +18,7 @@ e.exports = {
     Rk: "attachmentSpinner_ffba0c",
     o1: "attachmentRemoveButton_ffba0c",
     nY: "composerFileInput_ffba0c",
-    Il: "composerModelTrigger_ffba0c",
+    $E: "composerTrailingSlotButton_ffba0c",
     nu: "composerPlusButton_ffba0c",
     Qu: "composerPlusIcon_ffba0c",
     Y0: "composerAttachButton_ffba0c",
@@ -26,5 +26,4 @@ e.exports = {
     fF: "composerSend_ffba0c",
     MT: "composerSendSeparator_ffba0c",
     rt: "composerSendButton_ffba0c",
-    AW: "composerInterruptButton_ffba0c",
 };
