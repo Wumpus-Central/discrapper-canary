@@ -208,6 +208,13 @@ async function H(e) {
                           originalStartMs: e.number(),
                           originalEndMs: e.number(),
                           sizeBytes: e.number(),
+                          syncTimestamp: e
+                              .number()
+                              .when("version", {
+                                  is: e.number().greater(5).required(),
+                                  then: e.optional(),
+                                  otherwise: e.forbidden(),
+                              }),
                           audioEvents: e
                               .array()
                               .items(
@@ -412,10 +419,10 @@ function ea() {
         i = arguments.length > 3 ? arguments[3] : void 0,
         r = arguments.length > 4 ? arguments[4] : void 0,
         {
-            sourceName: a,
-            sourceApplicationId: s,
-            activity: _,
-            isVoiceOnly: E,
+            sourceName: s,
+            sourceApplicationId: _,
+            activity: E,
+            isVoiceOnly: I,
         } = (function () {
             let e,
                 t = A.A.getStreamerActiveStreamMetadata(),
@@ -468,32 +475,36 @@ function ea() {
                 isVoiceOnly: E,
             };
         })(),
-        I = T.A.getChannelId(),
-        p = T.A.getGuildId(),
-        m = new Set([h.default.getId()]);
+        p = T.A.getChannelId(),
+        m = T.A.getGuildId(),
+        g = new Set([h.default.getId()]);
     n.forEach((e) => {
         let { signal: t } = e;
-        "userId" in t && null != t.userId && m.add(t.userId);
+        "userId" in t && null != t.userId && g.add(t.userId);
     });
-    let g = E && t === R.nQ.CLIP ? R.nQ.VOICE_CLIP : t;
+    let S = I && t === R.nQ.CLIP ? R.nQ.VOICE_CLIP : t,
+        N = Date.now(),
+        C = a.A.ntpClock?.getSyncInfo(),
+        O = C?.synced === !0 ? N + C.offsetMs : void 0;
     return {
         id: (0, x.A)(),
-        createdAt: Date.now(),
+        createdAt: N,
+        syncTimestamp: O,
         version: R.kd,
-        applicationName: a ?? er.intl.string(er.t.qtSJxb),
-        applicationId: s,
-        activity: _,
-        users: Array.from(m),
+        applicationName: s ?? er.intl.string(er.t.qtSJxb),
+        applicationId: _,
+        activity: E,
+        users: Array.from(g),
         clipMethod: e,
-        guildId: p ?? void 0,
-        channelId: I ?? void 0,
+        guildId: m ?? void 0,
+        channelId: p ?? void 0,
         timeline: n,
         decision: i,
         gameSessionId: r,
         remoteClipId: i?.signal?.type === R.Gy.DISTRIBUTED ? i.signal.remoteTriggerClipId : void 0,
         length: 0,
         thumbnail: "",
-        type: g,
+        type: S,
     };
 }
 var es = n(201538);

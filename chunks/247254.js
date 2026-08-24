@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => H });
+n.d(t, { A: () => j });
 var i = n(691540),
     r = n(97483),
     a = n(228366),
@@ -105,6 +105,7 @@ class P extends p.A {
             (this.applyNativeClipsSettings(),
             (0, O.Pm)() &&
                 (this.loadClipsFromStorage(),
+                this.maybeStartNtpClock(),
                 (null == R.Ay.getHardwareClassification() ||
                     null == R.Ay.getHardwareClassificationForDecoupled() ||
                     R.Ay.getHardwareClassificationVersion() !== v.V0) &&
@@ -185,14 +186,20 @@ class P extends p.A {
         }
     }
 }
-var U = n(539572);
+let U = (0, n(945810).mj)({
+    kind: "user",
+    name: "2026-07-clips-ntp-clock",
+    defaultConfig: { useNtpClock: !1 },
+    variations: { 1: { useNtpClock: !0 } },
+});
+var w = n(539572);
 n(822151);
-var w = n(201538),
-    G = n(409067),
-    x = n(227628),
-    k = n(468550),
-    F = n(375708);
-class V extends P {
+var G = n(201538),
+    x = n(409067),
+    k = n(227628),
+    F = n(468550),
+    V = n(375708);
+class B extends P {
     constructor() {
         super(),
             Object.assign(this.actions, {
@@ -207,7 +214,7 @@ class V extends P {
                 },
                 CLIPS_SESSION_START: (e) => {
                     let { previousGameId: t } = e;
-                    null != t ? this.handleClipsReminder(t) : (0, k.kF)();
+                    null != t ? this.handleClipsReminder(t) : (0, F.kF)();
                 },
                 RPC_SERVER_READY: () => {
                     (0, _.se)(R.Ay.getEnableAutoclipping());
@@ -225,7 +232,7 @@ class V extends P {
             (R.Ay.getLastClipsSession()
                 ?.newClipIds.map(R.Ay.getClipById)
                 .some((t) => t?.applicationId === e.id) &&
-                (x.MZ.getState().isOpen || (0, x.w9)()));
+                (k.MZ.getState().isOpen || (0, k.w9)()));
     }
     handleClipsReminder(e) {
         if (null == e || !R.Ay.canShowReminders()) return;
@@ -234,13 +241,13 @@ class V extends P {
         let n = !R.Ay.getSettings().showPovClipsInGallery;
         t.newClipIds.some((t) => {
             let i = R.Ay.getClipById(t);
-            return null != i && i.applicationId === e && (!n || !(0, G.kD)(i));
-        }) && (0, k.M8)(e);
+            return null != i && i.applicationId === e && (!n || !(0, x.kD)(i));
+        }) && (0, F.M8)(e);
     }
     showClipsToast() {
         (0, i.P0)({
             id: "CLIPS_IN_CALL_WARNING",
-            message: F.intl.string(F.t["d+41qJ"]),
+            message: V.intl.string(V.t["d+41qJ"]),
             type: r.Ck.CLIP,
             options: { duration: v.Vi },
         });
@@ -248,7 +255,7 @@ class V extends P {
     applyNativeClipsSettings(e) {
         if ((e?.settings.enableAutoclipping != null && (0, _.se)(e.settings.enableAutoclipping), !(0, y.A)(h.Ay)))
             return;
-        let { midSessionV3Flip: t } = (0, w.UW)(),
+        let { midSessionV3Flip: t } = (0, G.UW)(),
             n = h.Ay.getMediaEngine(),
             i = () => {
                 let i = R.Ay.getSettings(),
@@ -269,7 +276,7 @@ class V extends P {
                     (v.nx.info("clips v3 effective state flipped; dispatching CLIPS_RESTART"),
                     a.h.dispatch({ type: "CLIPS_RESTART" }));
             };
-        (0, D.TD)() && (0, L.qi)("applyNativeClipsSettings") && !(0, w.t_)() ? (0, w.so)().then(i) : i();
+        (0, D.TD)() && (0, L.qi)("applyNativeClipsSettings") && !(0, G.t_)() ? (0, G.so)().then(i) : i();
     }
     handleClipsInitOnToggleDetection(e) {
         let t = d.Ay.getVisibleGame();
@@ -277,7 +284,7 @@ class V extends P {
     }
     handleClipsInitOnGamesChange(e) {
         let t = d.Ay.getVisibleGame();
-        (0, x.yj)(),
+        (0, k.yj)(),
             null == t ||
                 (this.prefetchRichPresenceData(t.id),
                 e.added.find((e) => e.pid === t.pid)
@@ -298,9 +305,9 @@ class V extends P {
         if (!(0, D.TD)() || (!e && null != E.A.getCurrentUserActiveStream())) return;
         let t = d.Ay.getVisibleGame();
         if (t?.pid == null || t?.windowHandle == null || null == t.name || "" === t.name) return;
-        if ((0, L.qi)("fireClipsInitEvent") && !(0, w.t_)())
-            return void (0, w.so)().then(() => {
-                (0, w.t_)() && this.fireClipsInitEvent(e);
+        if ((0, L.qi)("fireClipsInitEvent") && !(0, G.t_)())
+            return void (0, G.so)().then(() => {
+                (0, G.t_)() && this.fireClipsInitEvent(e);
             });
         let n = R.Ay.getSettings();
         a.h.dispatch({
@@ -314,22 +321,27 @@ class V extends P {
         let { storageLocation: e } = R.Ay.getSettings();
         "" !== e &&
             e !== R.he &&
-            U.Fb(e)
-                .then(() => B())
+            w
+                .Fb(e)
+                .then(() => H())
                 .catch((e) => {
                     v.nx.error("Failed to load clips directory on connection open", e);
                 });
     }
+    maybeStartNtpClock() {
+        let { useNtpClock: e } = U.getConfig({ location: "ClipsManager#handlePostConnectionOpen" });
+        e && s.A.ntpClock?.start().catch(() => {});
+    }
 }
-async function B() {
+async function H() {
     if (R.Ay.hasClips() || null == s.A || null == s.A.app) return;
     let e = await s.A.app.getPath("documents");
     if (R.Ay.getSettings().storageLocation === e)
         try {
             let e = await s.A.app.getPath("videos");
-            U.HU((0, I.CN)(e, R._c));
+            w.HU((0, I.CN)(e, R._c));
         } catch (e) {
             v.nx.error("Failed to resolve videos path for old default storage migration", e);
         }
 }
-let H = new V();
+let j = new B();
