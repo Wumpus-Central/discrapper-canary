@@ -7,14 +7,14 @@ var r = n(671325),
     s = n(799226);
 let l = {
     Base: { EntryTrigger: "trigger", ExitTrigger: "trigger", PosX: "number", PosY: "number" },
-    "Nitro Illustration \u2014 Spaceship": {},
-    "Nitro Illustration \u2014 Lightning": {},
-    "Nitro Illustration \u2014 Power Jar": {},
-    Wumpus: {},
-    "Nitro Illustration \u2014 Box": {},
-    "Nitro Illustration \u2014 Battery": {},
-    "Nitro Illustration \u2014 Key": {},
     "Nitro Illustration \u2014 Star": {},
+    "Nitro Illustration \u2014 Key": {},
+    "Nitro Illustration \u2014 Battery": {},
+    "Nitro Illustration \u2014 Box": {},
+    Wumpus: {},
+    "Nitro Illustration \u2014 Power Jar": {},
+    "Nitro Illustration \u2014 Lightning": {},
+    "Nitro Illustration \u2014 Spaceship": {},
 };
 function o(e) {
     let { artboard: t = "Base", stateMachine: n, ...o } = e,
