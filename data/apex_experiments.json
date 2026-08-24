@@ -4403,44 +4403,6 @@
   },
   {
     "kind": "user",
-    "name": "2026-06-similar-games-desktop",
-    "defaultConfig": null,
-    "variations": {
-      "0": {
-        "enabled": false,
-        "variant": 0
-      },
-      "1": {
-        "enabled": true,
-        "dense": true
-      },
-      "2": {
-        "enabled": true,
-        "dense": false
-      }
-    }
-  },
-  {
-    "kind": "user",
-    "name": "2026-06-similar-games-mobile",
-    "defaultConfig": null,
-    "variations": {
-      "0": {
-        "enabled": false,
-        "variant": 0
-      },
-      "1": {
-        "enabled": true,
-        "dense": true
-      },
-      "2": {
-        "enabled": true,
-        "dense": false
-      }
-    }
-  },
-  {
-    "kind": "user",
     "name": "2026-06-soundboard-frequently-used",
     "defaultConfig": {
       "enabled": false
