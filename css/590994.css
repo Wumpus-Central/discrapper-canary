@@ -286,6 +286,166 @@
     text-decoration: underline
 }
 
+.durationOptions__5f539,
+.quantityOptions__5f539 {
+    display: grid;
+    gap: var(--space-12);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    width: 100%
+}
+
+.durationOption__5f539,
+.quantityOption__5f539 {
+    color: inherit;
+    cursor: pointer
+}
+
+.durationOption__5f539 {
+    align-items: center;
+    background: transparent;
+    border: 1px solid var(--border-normal);
+    border-radius: var(--radius-md);
+    box-sizing: border-box;
+    display: flex;
+    gap: var(--space-8);
+    height: 44px;
+    justify-content: space-between;
+    min-width: 0;
+    padding: var(--space-12);
+    position: relative;
+    text-align: start
+}
+
+.durationInput__5f539 {
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+    clip-path: inset(50%)
+}
+
+.durationFocusRing__5f539 {
+    border-radius: calc(var(--radius-md) + var(--space-4));
+    inset: calc(var(--space-4)*-1);
+    pointer-events: none;
+    position: absolute
+}
+
+.durationInput__5f539:focus-visible+.durationFocusRing__5f539 {
+    outline: 2px solid var(--border-focus)
+}
+
+.durationSave__5f539 {
+    flex-shrink: 0;
+    white-space: nowrap
+}
+
+.customOption__5f539,
+.quantityOption__5f539 {
+    align-items: center;
+    background: transparent;
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    box-sizing: border-box;
+    display: flex;
+    height: 60px;
+    min-width: 0;
+    padding: var(--space-8)
+}
+
+.quantityOption__5f539 {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    gap: var(--space-12);
+    text-align: start
+}
+
+.customOption__5f539 {
+    cursor: pointer;
+    gap: var(--space-12);
+    grid-column: 1/-1
+}
+
+.customOption__5f539:hover,
+.durationOption__5f539:hover,
+.quantityOption__5f539:hover {
+    background-color: var(--background-mod-subtle)
+}
+
+.customOption__5f539[data-selected=true],
+.durationOption__5f539[data-selected=true],
+.quantityOption__5f539[aria-pressed=true] {
+    background-color: var(--background-mod-muted);
+    border-color: var(--background-brand)
+}
+
+.customInput__5f539:focus-visible,
+.quantityOption__5f539:focus-visible {
+    outline: 2px solid var(--border-focus);
+    outline-offset: 2px
+}
+
+.artTile__5f539 {
+    align-items: center;
+    background: radial-gradient(125.19% 135% at 50% -11.67%, rgba(255, 77, 249, .3) 0, rgba(166, 39, 195, .15) 50%, rgba(77, 0, 141, 0) 100%), var(--background-mod-muted);
+    background-clip: padding-box;
+    border: 1px solid var(--border-muted);
+    border-radius: var(--radius-sm);
+    display: flex;
+    flex: 0 0 44px;
+    height: 44px;
+    justify-content: center;
+    overflow: hidden;
+    width: 44px
+}
+
+.optionCopy__5f539 {
+    flex: 1;
+    min-width: 0
+}
+
+.priceLine__5f539 {
+    align-items: baseline;
+    display: flex;
+    gap: var(--space-4);
+    min-width: 0;
+    white-space: nowrap
+}
+
+.customInput__5f539 {
+    background-color: var(--input-background-default);
+    border: 1px solid var(--input-border-default);
+    border-radius: var(--radius-sm);
+    box-sizing: border-box;
+    color: var(--text-default);
+    cursor: text;
+    flex: 0 0 44px;
+    height: 44px;
+    padding: 0 var(--space-4);
+    text-align: center;
+    width: 44px
+}
+
+@media (max-width:400px) {
+
+    .durationOptions__5f539,
+    .quantityOptions__5f539 {
+        grid-template-columns: minmax(0, 1fr)
+    }
+}
+
+.enable-forced-colors .customOption__5f539[data-selected=true],
+.enable-forced-colors .durationOption__5f539[data-selected=true],
+.enable-forced-colors .quantityOption__5f539[aria-pressed=true] {
+    border-color: Highlight
+}
+
 .pricing__36f5b {
     display: flex;
     flex-direction: column;
@@ -607,4 +767,4 @@
     justify-content: center
 }
 
-/*# sourceMappingURL=423549.2723856c67975b03.css.map*/
+/*# sourceMappingURL=590994.9cbea8979f387b65.css.map*/
