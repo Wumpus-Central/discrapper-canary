@@ -47,6 +47,7 @@ function c(e) {
 function u(e) {
     return ((e % 360) + 360) % 360;
 }
+a.z.NEON, a.z.TOON, a.z.POP, a.z.GUMMY;
 let _ = [
     { hueShift: -18, saturation: 0.54, lightness: 0.72 },
     { hueShift: -5, saturation: 0.66, lightness: 0.6 },
