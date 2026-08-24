@@ -115,8 +115,8 @@ var y = i(631670),
     O = i(56348),
     L = i(207803),
     _ = i(183555),
-    P = i(289173),
-    D = i(836602),
+    D = i(289173),
+    P = i(836602),
     G = i(958805),
     M = i(61881),
     U = i(624826),
@@ -145,9 +145,9 @@ function V(e) {
             return { widgetsToSave: e, changedWidgets: t, removedWidgets: i, hasUnsavedWidgets: n, canSaveWidgets: l };
         })(),
         h = (0, u.X)("UserProfileModalV2SaveBar"),
-        { hasUnsavedProfileChanges: p, canSubmitProfileChanges: I } = (0, a.cf)([D.A], () => ({
-            hasUnsavedProfileChanges: D.A.hasUnsavedChanges(),
-            canSubmitProfileChanges: D.A.canSubmit(),
+        { hasUnsavedProfileChanges: p, canSubmitProfileChanges: I } = (0, a.cf)([P.A], () => ({
+            hasUnsavedProfileChanges: P.A.hasUnsavedChanges(),
+            canSubmitProfileChanges: P.A.canSubmit(),
         })),
         j = h && p,
         A = x || j,
@@ -156,13 +156,13 @@ function V(e) {
             G.A.clearPendingWidgets(), h && (0, L.XQ)();
         }, [h]),
         C = l.useCallback(async () => {
-            if (h && !D.A.canSubmit()) return;
+            if (h && !P.A.canSubmit()) return;
             d(!0);
             let e = !0;
             if (j)
                 try {
                     if (null == t) {
-                        let t = D.A.getPendingChanges(),
+                        let t = P.A.getPendingChanges(),
                             i = (0, O.Sk)(t),
                             n = (0, O.yX)(t);
                         if (Object.keys(i).length > 0) {
@@ -183,7 +183,7 @@ function V(e) {
                             (e = e && (l?.ok ?? !1)), l?.ok && (0, L.RE)();
                         }
                     } else {
-                        let i = D.A.getPendingChanges(t),
+                        let i = P.A.getPendingChanges(t),
                             n = (0, O.C5)(i),
                             l = (0, O.yX)(i, t);
                         if (Object.keys(n).length > 0) {
@@ -205,7 +205,7 @@ function V(e) {
                             (e = e && (s?.ok ?? !1)), s?.ok && (0, L.RE)();
                         }
                     }
-                    let i = (0, O.yg)(D.A.getPendingChanges());
+                    let i = (0, O.yg)(P.A.getPendingChanges());
                     if (Object.keys(i).length > 0) {
                         let { primaryGuildId: t } = i;
                         if (void 0 !== t) {
@@ -220,7 +220,7 @@ function V(e) {
                 try {
                     for (let e of (await G.A.savePendingWidgets(c), g)) {
                         let t = { widgetEdited: e.type, isWidgetRemoved: !1 };
-                        (0, P.fu)(e) &&
+                        (0, D.fu)(e) &&
                             ((t.gameIds = e.games.map((e) => e.gameId)),
                             (t.tags = e.games.flatMap((e) => e.tags ?? []).map((e) => e.toString())),
                             (t.numCharactersCommentary = e.games.reduce((e, t) => e + (t.comment?.length ?? 0), 0))),

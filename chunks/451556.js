@@ -2,8 +2,8 @@ t.d(n, { A: () => u });
 var l = t(477900);
 t(582128);
 var i = t(17928),
-    s = t(477782),
-    a = t(138134),
+    a = t(477782),
+    s = t(138134),
     r = t(928658),
     o = t(734057),
     c = t(375708);
@@ -12,8 +12,8 @@ function u(e, n) {
         u = t?.getGuildId();
     return null == e
         ? null
-        : (0, l.jsx)(s.rX, {
-              children: (0, l.jsx)(s.Dr, {
+        : (0, l.jsx)(a.rX, {
+              children: (0, l.jsx)(a.Dr, {
                   id: "report-app",
                   color: "danger",
                   label: c.intl.string(c.t.NgA5vp),
@@ -24,8 +24,8 @@ function u(e, n) {
                           contextualGuildId: u ?? void 0,
                           contextualChannelId: t?.id,
                       }),
-                  icon: a.FlagIcon,
-                  leadingAccessory: { type: "icon", icon: a.FlagIcon },
+                  icon: s.FlagIcon,
+                  leadingAccessory: { type: "icon", icon: s.FlagIcon },
               }),
           });
 }

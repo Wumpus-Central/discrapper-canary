@@ -1,8 +1,8 @@
 t.d(n, { f: () => U }), t(938796);
 var l = t(477900),
     i = t(582128),
-    s = t(132500),
-    a = t(724002),
+    a = t(132500),
+    s = t(724002),
     r = t(287174),
     o = t(487899),
     c = t(17928),
@@ -13,16 +13,16 @@ var l = t(477900),
     h = t(323384),
     C = t(834730),
     E = t(320448),
-    p = t(793574),
-    g = t(688810),
-    f = t(735991),
+    f = t(793574),
+    p = t(688810),
+    g = t(735991),
     x = t(786115),
     I = t(975412),
-    T = t(392054),
-    v = t(993748),
+    v = t(392054),
+    T = t(993748),
     _ = t(111042),
-    j = t(939635),
-    N = t(267102),
+    N = t(939635),
+    j = t(267102),
     b = t(246356),
     S = t(111162),
     O = t(174459),
@@ -33,15 +33,15 @@ var l = t(477900),
     D = t(375708),
     P = t(472489);
 let G = r.K.APP_LAUNCHER_IN_VOICE_BANNER,
-    k = `vc-activities-${(0, s.A)()}`;
+    k = `vc-activities-${(0, a.A)()}`;
 function V(e) {
     let n,
         t,
-        { channel: s, openInPopout: r, onClick: d } = e,
+        { channel: a, openInPopout: r, onClick: d } = e,
         { fetchState: A, voiceBannerCollection: m } =
-            ((n = (0, c.bG)([S.default], () => S.default.onlyShowPreviewAppCollections) ? a.W.PREVIEW : a.W.ACTIVE),
+            ((n = (0, c.bG)([S.default], () => S.default.onlyShowPreviewAppCollections) ? s.W.PREVIEW : s.W.ACTIVE),
             i.useEffect(() => {
-                (0, v.An)({ surface: G, activeState: n });
+                (0, T.An)({ surface: G, activeState: n });
             }, [n]),
             {
                 fetchState: (0, c.bG)([_.A], () => _.A.getFetchState({ surface: G, activeState: n })),
@@ -58,22 +58,22 @@ function V(e) {
             sectionName: "app_launcher_in_voice_banner",
             sectionPosition: C?.position,
             sectionOverallPosition: 0,
-            promotionalLabel: null != C ? (0, f.Ii)(C.application) : void 0,
+            promotionalLabel: null != C ? (0, g.Ii)(C.application) : void 0,
         });
     return null == C || null == m || h
         ? null
         : (null != C.id &&
               null != C.image_hash &&
-              (t = (0, j.DH)({ itemId: C.id, hash: C.image_hash, containerWidth: 584 })),
+              (t = (0, N.DH)({ itemId: C.id, hash: C.image_hash, containerWidth: 584 })),
           (0, l.jsxs)(u.D, {
               className: P.V8,
               innerRef: E,
               onClick: () => {
                   d(),
                       (0, I.A)({
-                          context: { type: "channel", channel: s },
+                          context: { type: "channel", channel: a },
                           openInPopout: r,
-                          analyticsLocation: p.A.APP_LAUNCHER_IN_VOICE_BANNER,
+                          analyticsLocation: f.A.APP_LAUNCHER_IN_VOICE_BANNER,
                           initialState: { applicationId: C.application.id },
                       });
               },
@@ -85,42 +85,42 @@ function V(e) {
 }
 let U = i.forwardRef(function (e, n) {
     var t;
-    let { channel: s, isHovered: a, closePopout: r, onMouseEnter: o, onMouseLeave: c, onClick: f, className: x } = e,
-        { id: v, guild_id: _ } = s;
+    let { channel: a, isHovered: s, closePopout: r, onMouseEnter: o, onMouseLeave: c, onClick: g, className: x } = e,
+        { id: T, guild_id: _ } = a;
     i.useEffect(() => {
-        O.default.track(L.HAw.ACTIVITIES_CENTER_CONTROL_TRAY_BUTTON_HOVERED, { channel_id: v, guild_id: _ });
-    }, [v, _]),
+        O.default.track(L.HAw.ACTIVITIES_CENTER_CONTROL_TRAY_BUTTON_HOVERED, { channel_id: T, guild_id: _ });
+    }, [T, _]),
         i.useEffect(() => {
-            a || r();
-        }, [r, a]);
-    let j = (0, N.Us)(),
-        { analyticsLocations: S, newestAnalyticsLocation: G } = (0, g.Ay)(p.A.ACTIVITIES_MINI_SHELF),
-        U = j === L.BRT.POPOUT,
-        B = ((t = s.getGuildId()), (0, R.A)({ guildId: t }).slice(0, 5));
+            s || r();
+        }, [r, s]);
+    let N = (0, j.Us)(),
+        { analyticsLocations: S, newestAnalyticsLocation: G } = (0, p.Ay)(f.A.ACTIVITIES_MINI_SHELF),
+        U = N === L.BRT.POPOUT,
+        B = ((t = a.getGuildId()), (0, R.A)({ guildId: t }).slice(0, 5));
     i.useEffect(() => {
         let e = setTimeout(() => y.LK(), 1e3);
         return () => clearTimeout(e);
     }, []);
     let H = i.useCallback(() => {
             (0, I.A)({
-                context: null != s ? { type: "channel", channel: s } : { type: "contextless" },
+                context: null != a ? { type: "channel", channel: a } : { type: "contextless" },
                 openInPopout: U,
                 analyticsLocation: G,
             }),
                 c(),
-                f();
-        }, [s, G, f, c, U]),
+                g();
+        }, [a, G, g, c, U]),
         w = i.useCallback(
             (e) => {
                 o(),
                     O.default.track(L.HAw.ACTIVITIES_MINI_SHELF_HOVERED, {
-                        channel_id: s.id,
-                        guild_id: s.getGuildId(),
+                        channel_id: a.id,
+                        guild_id: a.getGuildId(),
                     });
             },
-            [o, s],
+            [o, a],
         );
-    return (0, l.jsx)(g.f5, {
+    return (0, l.jsx)(p.f5, {
         value: S,
         children: (0, l.jsx)(b.A, {
             children: (0, l.jsxs)(d.l, {
@@ -177,9 +177,9 @@ let U = i.forwardRef(function (e, n) {
                             }),
                             (0, l.jsx)(V, {
                                 openInPopout: U,
-                                channel: s,
+                                channel: a,
                                 onClick: () => {
-                                    f(), r();
+                                    g(), r();
                                 },
                             }),
                             (0, l.jsx)("div", {
@@ -188,14 +188,14 @@ let U = i.forwardRef(function (e, n) {
                                     (0, l.jsx)(
                                         M.C,
                                         {
-                                            context: { channel: s, type: "channel" },
+                                            context: { channel: a, type: "channel" },
                                             activityItem: e,
                                             onClick: () => {
-                                                r(), f();
+                                                r(), g();
                                             },
                                             aspectRatio: M.C.AspectRatio.THIRTEEN_BY_ELEVEN,
                                             animatedDivClass: P.KU,
-                                            commandOrigin: T.iw.MINI_SHELF,
+                                            commandOrigin: v.iw.MINI_SHELF,
                                         },
                                         e.application.id,
                                     ),

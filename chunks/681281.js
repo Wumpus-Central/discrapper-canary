@@ -19,12 +19,12 @@ var i = n(477900),
     y = n(429913),
     j = n(47167),
     I = n(882840),
-    v = n(713654),
-    N = n(611371),
+    N = n(713654),
+    v = n(611371),
     E = n(769015),
     b = n(208971),
-    _ = n(446243),
-    T = n(920639),
+    T = n(446243),
+    _ = n(920639),
     R = n(558076),
     S = n(360729),
     L = n(508654),
@@ -32,15 +32,15 @@ var i = n(477900),
     P = n(961314),
     M = n(58736),
     w = n(742589),
-    D = n(376352),
-    U = n(131047),
+    U = n(376352),
+    D = n(131047),
     V = n(46054),
     k = n(322338),
     G = n(665691),
     B = n(241756),
     F = n(198052),
-    z = n(532622),
-    H = n(416528),
+    H = n(532622),
+    z = n(416528),
     W = n(136523),
     $ = n(806931),
     Y = n(375708),
@@ -86,7 +86,7 @@ function Q(e) {
             children: [
                 (0, i.jsx)(M.Ay.Divider, { className: q.yF }),
                 (0, i.jsx)(Z, { user: e, channel: a, stream: n, color: "text-strong" }),
-                (0, i.jsx)(D.F, { user: e, stream: n, channel: a }),
+                (0, i.jsx)(U.F, { user: e, stream: n, channel: a }),
             ],
         });
     } else o && (t = (0, i.jsx)(P.A, { guildEvent: s, recurrenceId: r }));
@@ -96,17 +96,17 @@ function J(e) {
     let { channel: t, guild: a, appContext: o, inCall: x, isChatOpen: g, exitFullScreen: E, guildRoomVisible: L } = e,
         O = (0, r.bG)([F.A], () => F.A.getSelectedParticipant(t.id), [t.id]),
         { enabled: P } = S.A.useExperiment({ guildId: a?.id, location: "ChannelCallHeader" }),
-        D = (0, r.bG)([R.A], () => R.A.getVideoOverlayVisibility()),
+        U = (0, r.bG)([R.A], () => R.A.getVideoOverlayVisibility()),
         B = P && !L,
         Z = (0, j.Ay)(t),
         J = B ? Y.intl.string(K.default.f7g0DK) : L ? `${Z} \xb7 ${Y.intl.string(K.default.wRLmM0)}` : Z,
-        ee = B ? d.Z : (0, v.gU)(t),
+        ee = B ? d.Z : (0, N.gU)(t),
         [et] = (0, y.A)(O?.type === $.lp.ACTIVITY ? [O.applicationId] : []),
         en = Y.intl.string(Y.t.BVZqJl);
     t.isDM() ? (en = Y.intl.string(Y.t.jN2DfZ)) : t.isGroupDM() && (en = Y.intl.string(Y.t["e5y+gm"]));
     let ei = (0, b.G)((0, I.l)(t)),
         el = t.isGuildVoice() && x && null != ei && ei.length > 0,
-        ea = (0, z.Ay)(t),
+        ea = (0, H.Ay)(t),
         es = el
             ? (0, i.jsx)("div", {
                   className: q.Ke,
@@ -151,16 +151,16 @@ function J(e) {
         er = (0, G.bG)({ channelId: t.id }),
         eo = l.useCallback(() => {
             B &&
-                (D
-                    ? (0, _.UV)(!1, t.id)
-                    : ((0, _.zD)(t.id),
-                      (0, T.yt)({
+                (U
+                    ? (0, T.UV)(!1, t.id)
+                    : ((0, T.zD)(t.id),
+                      (0, _.yt)({
                           channelId: t.id,
                           guildId: t.guild_id,
                           location: C.A.CHANNEL_CALL,
                           guildRoomOpen: !0,
                       })));
-        }, [B, t.id, t.guild_id, D]);
+        }, [B, t.id, t.guild_id, U]);
     return (0, i.jsxs)("div", {
         className: q.SC,
         children: [
@@ -171,7 +171,7 @@ function J(e) {
                 innerClassName: q.gi,
                 toolbarClassName: q.KE,
                 childrenBottom: es,
-                toolbar: (0, i.jsx)(H.A, {
+                toolbar: (0, i.jsx)(z.A, {
                     channel: t,
                     appContext: o,
                     inCall: x,
@@ -180,7 +180,7 @@ function J(e) {
                     focusedApplication: et,
                     shouldShowHeaderParticipants: !0,
                     guildRoomVisible: L,
-                    guildRoomVideoOverlayVisible: D,
+                    guildRoomVideoOverlayVisible: U,
                 }),
                 children: [
                     (0, i.jsx)(M.Ay.Title, {
@@ -196,7 +196,7 @@ function J(e) {
                                       })
                                     : null,
                                 J,
-                                P && (0, i.jsx)(N.A, { className: q.vW }),
+                                P && (0, i.jsx)(v.A, { className: q.vW }),
                                 er &&
                                     (0, i.jsx)(u.m, {
                                         text: Y.intl.string(Y.t.QyZ4Td),
@@ -210,7 +210,7 @@ function J(e) {
                             ],
                         }),
                     }),
-                    (0, i.jsx)(U.i$, { channel: t, guild: a }),
+                    (0, i.jsx)(D.i$, { channel: t, guild: a }),
                     (0, i.jsx)(Q, { focusedApplication: et, focusedParticipant: O, channel: t }),
                 ],
             }),

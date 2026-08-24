@@ -1,4 +1,4 @@
-n.d(t, { A: () => N }), n(321073);
+n.d(t, { A: () => v }), n(321073);
 var i = n(477900),
     l = n(582128),
     a = n(503698),
@@ -26,7 +26,7 @@ let I = {
     EASING_IN: r.A.Easing.inOut(r.A.Easing.back()),
     EASING_OUT: r.A.Easing.quad,
 };
-class v extends l.PureComponent {
+class N extends l.PureComponent {
     scaleAnimation = new r.A.Value(0);
     spriteAnimation = new r.A.Value(0);
     spriteOpacity = new r.A.Value(0);
@@ -95,12 +95,12 @@ class v extends l.PureComponent {
         });
     }
 }
-function N(e) {
+function v(e) {
     var t;
     let { participants: n, onContextMenu: l, className: a, onClick: r, width: d, guildId: y } = e,
         j = (0, p.Ay)(),
         I = ((t = n.length), ((0, u.FT)(u._3.SIZE_80) + 16) * t > d ? u._3.SIZE_40 : u._3.SIZE_80),
-        N = (0, o.bG)([f.A], () => f.A.isFocused()),
+        v = (0, o.bG)([f.A], () => f.A.isFocused()),
         E = (0, o.bG)([m.Ay], () => new Map(n.filter(x.Xw).map((e) => [e.user.id, m.Ay.isLocalMute(e.user.id)])), [n]),
         b = n.map((e) => {
             if (e.type !== x.lp.USER) return null;
@@ -114,7 +114,7 @@ function N(e) {
             let c =
                 null != o ? g.intl.formatToPlainString(g.t["1+MVBP"], { userName: t.username, status: o }) : t.username;
             return (0, i.jsx)(
-                v,
+                N,
                 {
                     className: C.Wp,
                     width: (0, u.FT)(I),
@@ -127,7 +127,7 @@ function N(e) {
                             A.Ay,
                             {
                                 userId: t.id,
-                                src: t.getAvatarURL(y, (0, u.FT)(I), a && N),
+                                src: t.getAvatarURL(y, (0, u.FT)(I), a && v),
                                 size: I,
                                 muted: n?.isVoiceMuted() ?? !1,
                                 deafen: n?.isVoiceDeafened() ?? !1,

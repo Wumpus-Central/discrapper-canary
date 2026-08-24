@@ -12,16 +12,16 @@ var i = n(477900),
     h = n(929921),
     m = n(453028),
     g = n(723702),
-    f = n(74329),
-    E = n(192308),
+    E = n(74329),
+    f = n(192308),
     b = n(231723),
     p = n(212245),
     C = n(327649),
     S = n(734057),
     v = n(71393),
     _ = n(309010),
-    T = n(287809),
-    O = n(652215),
+    O = n(287809),
+    T = n(652215),
     x = n(753070),
     y = n(731854),
     j = n(375708),
@@ -30,10 +30,10 @@ function I(e) {
     let {
             stream: t,
             handleGoLive: I,
-            showReportOption: M = !1,
-            disableChangeWindows: N = !1,
+            showReportOption: N = !1,
+            disableChangeWindows: M = !1,
             minimal: L = !1,
-            appContext: D = O.BRT.APP,
+            appContext: D = T.BRT.APP,
         } = e,
         { desktopSourceId: k, lastPickedContent: P } = (0, l.cf)([d.Ay, m.Ay], () => {
             let { desktopSource: e } = m.Ay.getGoLiveSource() ?? {},
@@ -47,11 +47,11 @@ function I(e) {
         V = (function (e, t) {
             let { preset: a, resolution: o, fps: c, soundshareEnabled: d } = (0, l.cf)([h.A], () => h.A.getState()),
                 A = (0, l.bG)([m.Ay], () => m.Ay.getGoLiveSource()),
-                g = (0, l.bG)([T.default], () => T.default.getCurrentUser()),
-                f = (0, l.bG)([v.A], () => v.A.getGuild(e?.guildId)?.premiumTier),
+                g = (0, l.bG)([O.default], () => O.default.getCurrentUser()),
+                E = (0, l.bG)([v.A], () => v.A.getGuild(e?.guildId)?.premiumTier),
                 { location: R } = (0, p.p)(),
                 I = (0, l.bG)([_.Ay, S.A], () => S.A.getChannel(_.Ay.getVoiceChannelId())),
-                M = r.useCallback(
+                N = r.useCallback(
                     (e, r, l, s) => {
                         if (e) {
                             if (null != A) {
@@ -71,8 +71,8 @@ function I(e) {
                             }
                         } else {
                             var a;
-                            (a = { ...R, object: O.ZSU.RADIO_ITEM, objectType: s }),
-                                (0, E.openModalLazy)(
+                            (a = { ...R, object: T.ZSU.RADIO_ITEM, objectType: s }),
+                                (0, f.openModalLazy)(
                                     async () => {
                                         let { default: e } = await Promise.all([
                                             n.e("629972"),
@@ -94,17 +94,17 @@ function I(e) {
                                         ]).then(n.bind(n, 826789));
                                         return (t) => (0, i.jsx)(e, { ...t, analyticsSource: a });
                                     },
-                                    { contextKey: t === O.BRT.POPOUT ? b.KX : b.SY },
+                                    { contextKey: t === T.BRT.POPOUT ? b.KX : b.SY },
                                 );
                         }
                     },
                     [t, R, d, A],
                 );
             if (null == e) return null;
-            let N = a === x.jQ.PRESET_DOCUMENTS ? x.kn.FPS_30 : c,
+            let M = a === x.jQ.PRESET_DOCUMENTS ? x.kn.FPS_30 : c,
                 L = x.ce.map((e) => {
                     let { value: t, label: n, subtext: r } = e,
-                        l = (0, C.A)(x.jQ.PRESET_CUSTOM, o, t, g, f, I);
+                        l = (0, C.A)(x.jQ.PRESET_CUSTOM, o, t, g, E, I);
                     return (0, i.jsx)(
                         s.iD,
                         {
@@ -113,14 +113,14 @@ function I(e) {
                             label: n,
                             subtext: r,
                             checked: t === c,
-                            action: () => M(l, o, t, O.AnalyticsObjectTypes.RESOLUTION),
+                            action: () => N(l, o, t, T.AnalyticsObjectTypes.RESOLUTION),
                         },
                         `stream-settings-fps-${t}`,
                     );
                 }),
                 D = x.Jk.map((e) => {
                     let { value: t, label: n, subtext: r } = e,
-                        l = (0, C.A)(x.jQ.PRESET_CUSTOM, t, N, g, f, I);
+                        l = (0, C.A)(x.jQ.PRESET_CUSTOM, t, M, g, E, I);
                     return (0, i.jsx)(
                         s.iD,
                         {
@@ -129,7 +129,7 @@ function I(e) {
                             label: n,
                             subtext: r,
                             checked: t === o,
-                            action: () => M(l, t, N, O.AnalyticsObjectTypes.RESOLUTION),
+                            action: () => N(l, t, M, T.AnalyticsObjectTypes.RESOLUTION),
                         },
                         `stream-settings-resolution-${t}`,
                     );
@@ -141,7 +141,7 @@ function I(e) {
                 ],
             });
         })(t, D),
-        F = (0, f.A)(t, D, R.FX),
+        F = (0, E.A)(t, D, R.FX),
         K = null != k && z && (!k.startsWith("screen") || G),
         B = (0, l.bG)([m.Ay], () => m.Ay.getUseSystemScreensharePicker() && (0, g.isLinux)()),
         H = r.useCallback(() => {
@@ -188,7 +188,7 @@ function I(e) {
               })
             : null,
         $ =
-            !w || N || B
+            !w || M || B
                 ? null
                 : (0, i.jsx)(s.Dr, {
                       id: "change-windows",
@@ -207,5 +207,5 @@ function I(e) {
         });
     return L
         ? (0, i.jsxs)(i.Fragment, { children: [ee, $, Q, Z] })
-        : (0, i.jsxs)(i.Fragment, { children: [Q, M ? F : null, Z, $, ee] });
+        : (0, i.jsxs)(i.Fragment, { children: [Q, N ? F : null, Z, $, ee] });
 }

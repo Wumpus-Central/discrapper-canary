@@ -19,12 +19,12 @@ var i = n(477900),
     y = n(920639),
     j = n(360729),
     I = n(51082),
-    v = n(275731),
-    N = n(289552),
+    N = n(275731),
+    v = n(289552),
     E = n(246356),
     b = n(977851),
-    _ = n(204651),
-    T = n(772475),
+    T = n(204651),
+    _ = n(772475),
     R = n(481947),
     S = n(309010),
     L = n(485296),
@@ -32,8 +32,8 @@ var i = n(477900),
     P = n(546871),
     M = n(195007),
     w = n(806931),
-    D = n(375708),
-    U = n(1195),
+    U = n(375708),
+    D = n(1195),
     V = n(547368);
 function k(e) {
     let { channelId: t, guildId: n } = e,
@@ -55,7 +55,7 @@ function k(e) {
                       o.m,
                       {
                           position: "bottom",
-                          text: D.intl.formatToPlainString(D.t.JjdizN, { username: e.user.username }),
+                          text: U.intl.formatToPlainString(U.t.JjdizN, { username: e.user.username }),
                           children: (0, i.jsx)(R.Ay, { user: e.user, speaking: !0, collapsed: !0, guildId: n }),
                       },
                       e.id,
@@ -77,8 +77,8 @@ function G(e) {
         B = t.id,
         {
             voiceParticipantsHidden: F,
-            selectedParticipant: z,
-            userParticipantCount: H,
+            selectedParticipant: H,
+            userParticipantCount: z,
         } = (0, r.cf)(
             [O.A],
             () => ({
@@ -101,10 +101,10 @@ function G(e) {
             Y &&
             q.push(
                 (0, i.jsx)(
-                    _.A,
+                    T.A,
                     {
                         iconComponent: c.PaintPaletteIcon,
-                        label: D.intl.string(D.t["ZrN+DT"]),
+                        label: U.intl.string(U.t["ZrN+DT"]),
                         onClick: () => {
                             (0, d.openModalLazy)(async () => {
                                 let { default: e } = await Promise.all([n.e("768581"), n.e("244605")]).then(
@@ -119,23 +119,23 @@ function G(e) {
                 ),
             ),
         o &&
-            (z?.type === w.lp.STREAM
-                ? q.push((0, i.jsx)(P.A, { channel: t, focusedParticipant: z }, "stream-participants"))
-                : z?.type === w.lp.ACTIVITY &&
+            (H?.type === w.lp.STREAM
+                ? q.push((0, i.jsx)(P.A, { channel: t, focusedParticipant: H }, "stream-participants"))
+                : H?.type === w.lp.ACTIVITY &&
                   null != s &&
-                  q.push((0, i.jsx)(P.A, { channel: t, focusedParticipant: z }, "activity-participants"))),
+                  q.push((0, i.jsx)(P.A, { channel: t, focusedParticipant: H }, "activity-participants"))),
         F && q.push((0, i.jsx)(k, { channelId: B, guildId: t.guild_id }, "current-speaker")),
         q.push((0, i.jsx)(x.A, { className: V.x6, channelId: B }, "clips-enabled-indicator")),
-        z?.type === w.lp.STREAM &&
-            (q.push((0, i.jsx)(v.A, { className: V.x6, participant: z }, "warning")),
+        H?.type === w.lp.STREAM &&
+            (q.push((0, i.jsx)(N.A, { className: V.x6, participant: H }, "warning")),
             q.push(
                 (0, i.jsx)(
                     g.A,
-                    { size: A.Ay.Sizes.LARGE, className: V.x6, participant: z, showQuality: !0, premiumIndicator: !1 },
+                    { size: A.Ay.Sizes.LARGE, className: V.x6, participant: H, showQuality: !0, premiumIndicator: !1 },
                     "live-indicator",
                 ),
             )),
-        z?.type === w.lp.USER && q.push((0, i.jsx)(N.A, { className: V.x6, userId: z.id }, "video-warning")),
+        H?.type === w.lp.USER && q.push((0, i.jsx)(v.A, { className: V.x6, userId: H.id }, "video-warning")),
         F &&
             q.push(
                 (0, i.jsx)(
@@ -146,11 +146,11 @@ function G(e) {
                         renderPopout: () => (0, i.jsx)(E.A, { children: (0, i.jsx)(M.A, { channel: t }) }),
                         children: (e, t) => {
                             let { isShown: n } = t;
-                            return (0, l.createElement)(T.A, {
+                            return (0, l.createElement)(_.A, {
                                 ...e,
                                 buttonRef: L,
                                 isActive: n,
-                                count: H,
+                                count: z,
                                 key: "call-members",
                                 className: V.x6,
                             });
@@ -161,13 +161,13 @@ function G(e) {
             ),
         W && Y)
     ) {
-        let e = I && !R ? D.t["3jrUBj"] : U.default.f7g0DK;
+        let e = I && !R ? U.t["3jrUBj"] : D.default.f7g0DK;
         q.push(
             (0, i.jsx)(
-                _.A,
+                T.A,
                 {
                     iconComponent: I && !R ? h.d : p.u,
-                    label: D.intl.string(e),
+                    label: U.intl.string(e),
                     onClick: () => {
                         if (!I) {
                             (0, C.zD)(t.id),

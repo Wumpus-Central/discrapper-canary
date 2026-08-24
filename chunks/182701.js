@@ -8413,7 +8413,7 @@ let rT = {
         ChannelListThreadContextMenu: async () => {
             let { default: e } = await Promise.all([
                     a.e("926132"),
-                    a.e("238730"),
+                    a.e("955557"),
                     a.e("947502"),
                     a.e("343266"),
                     a.e("965789"),
@@ -8987,8 +8987,8 @@ let r5 = {
     },
     AppealIngestionModal: async () => {
         let { default: e } = await Promise.all([
-            a.e("825337"),
-            a.e("863025"),
+            a.e("493057"),
+            a.e("690700"),
             a.e("223411"),
             a.e("292030"),
             a.e("51471"),

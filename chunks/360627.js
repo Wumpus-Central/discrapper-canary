@@ -1,4 +1,4 @@
-n.d(t, { A: () => v });
+n.d(t, { A: () => N });
 var i = n(477900),
     l = n(582128),
     a = n(503698),
@@ -54,22 +54,22 @@ function I(e) {
         ],
     });
 }
-function v(e) {
-    let { title: t, image: n, shouldShow: a = !0, forceOpen: o = !1, spacing: d, className: u, children: v } = e,
-        N = l.useId(),
+function N(e) {
+    let { title: t, image: n, shouldShow: a = !0, forceOpen: o = !1, spacing: d, className: u, children: N } = e,
+        v = l.useId(),
         E = l.useRef(null),
         b = (0, r.bG)([x.A], () => x.A.theme),
-        { isHovered: _, setIsHovered: T, onMouseEnter: R, onMouseLeave: S } = (0, A.A)(100, 100);
+        { isHovered: T, setIsHovered: _, onMouseEnter: R, onMouseLeave: S } = (0, A.A)(100, 100);
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(h.Y, {
                 targetElementRef: E,
-                shouldShow: a && (_ || o),
+                shouldShow: a && (T || o),
                 position: "top",
                 align: "center",
                 spacing: d,
                 animation: h.Y.Animation.FADE,
-                onRequestClose: () => T(!1),
+                onRequestClose: () => _(!1),
                 renderPopout: (l) => {
                     let { closePopout: a, setPopoutRef: r } = l;
                     return (0, i.jsx)(p.N, {
@@ -108,11 +108,11 @@ function v(e) {
                         onFocus: R,
                         onBlur: S,
                         ...e,
-                        children: l.cloneElement(v, { "aria-describedby": N }),
+                        children: l.cloneElement(N, { "aria-describedby": v }),
                     }),
             }),
             (0, i.jsxs)(f.A, {
-                id: N,
+                id: v,
                 children: [
                     (0, i.jsx)(c.E, { variant: "text-sm/medium", children: t }),
                     (0, i.jsx)(c.E, { variant: "text-sm/normal", children: y.intl.string(C.default["2Ll0vk"]) }),

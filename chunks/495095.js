@@ -18,9 +18,9 @@ function x(e) {
         g = (0, a.bG)([r.Ay], () => r.Ay.keyboardModeEnabled),
         [C, y] = (0, l.useState)(""),
         [j, I] = (0, l.useState)(""),
-        [v, N] = (0, l.useState)((0, c.x7)("")),
+        [N, v] = (0, l.useState)((0, c.x7)("")),
         [E, b] = (0, l.useState)(g),
-        _ = (0, l.useRef)(!1);
+        T = (0, l.useRef)(!1);
     return (0, i.jsx)(s.l, {
         className: A.kL,
         children: (0, i.jsx)(d.Ay, {
@@ -29,12 +29,12 @@ function x(e) {
             maxCharacterCount: 512,
             showRemainingCharsAfterCount: 10,
             onChange: function (e, t, n) {
-                I(t), N(n), y(u.Ay.translateInlineEmojiToSurrogates(t));
+                I(t), v(n), y(u.Ay.translateInlineEmojiToSurrogates(t));
             },
             placeholder: f.intl.string(m.default.IAcEEn),
             channel: t,
             textValue: j,
-            richValue: v,
+            richValue: N,
             type: o.oU.GUILD_ROOM,
             onFocus: () => {
                 b(!0);
@@ -47,9 +47,9 @@ function x(e) {
                 let e = t.guild_id;
                 return 0 === C.trim().length || null == e
                     ? Promise.resolve({ shouldClear: !1, shouldRefocus: !0 })
-                    : _.current
+                    : T.current
                       ? Promise.resolve({ shouldClear: !1, shouldRefocus: !1 })
-                      : ((_.current = !0),
+                      : ((T.current = !0),
                         (0, h.zK)(e, t.id, C, n).catch((e) => (0, p.b)()),
                         Promise.resolve({ shouldClear: !0, shouldRefocus: !1 }));
             },

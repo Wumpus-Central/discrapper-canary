@@ -2,8 +2,8 @@ t.d(n, { A: () => A });
 var l = t(477900);
 t(582128);
 var i = t(477782),
-    s = t(241541),
-    a = t(283973),
+    a = t(241541),
+    s = t(283973),
     r = t(267102),
     o = t(520006),
     c = t(576705),
@@ -21,16 +21,16 @@ function A(e, n, t, A) {
               id: "invite-to-stream",
               label: d.intl.string(d.t["OzOM/q"]),
               action: h,
-              icon: s.D,
-              leadingAccessory: { type: "icon", icon: s.D },
+              icon: a.D,
+              leadingAccessory: { type: "icon", icon: a.D },
           })
         : null != n && null != e && c.A.can(u.xBc.CREATE_INSTANT_INVITE, e)
           ? (0, l.jsx)(i.Dr, {
                 id: "invite-friends",
                 label: d.intl.string(d.t["EE+P0H"]),
                 action: h,
-                icon: a.R,
-                leadingAccessory: { type: "icon", icon: a.R },
+                icon: s.R,
+                leadingAccessory: { type: "icon", icon: s.R },
             })
           : null;
 }

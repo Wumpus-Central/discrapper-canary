@@ -1,4 +1,4 @@
-n.d(t, { y: () => D });
+n.d(t, { y: () => U });
 var i = n(477900),
     l = n(582128),
     a = n(503698),
@@ -19,12 +19,12 @@ var i = n(477900),
     y = n(789645),
     j = n(964486),
     I = n(648027),
-    v = n(855446),
-    N = n(793574),
+    N = n(855446),
+    v = n(793574),
     E = n(688810),
     b = n(975412),
-    _ = n(392054),
-    T = n(826673),
+    T = n(392054),
+    _ = n(826673),
     R = n(757293),
     S = n(174459),
     L = n(272812),
@@ -32,7 +32,7 @@ var i = n(477900),
     P = n(375708),
     M = n(253802),
     w = n(867010);
-function D(e) {
+function U(e) {
     let {
         channel: t,
         guild: n,
@@ -43,14 +43,14 @@ function D(e) {
         activitiesEnabled: o = !0,
     } = e;
     return l < 250
-        ? (0, i.jsx)(U, { channel: t, guild: n, width: l, inPopout: a, handleClose: s, userParticipantCount: r })
+        ? (0, i.jsx)(D, { channel: t, guild: n, width: l, inPopout: a, handleClose: s, userParticipantCount: r })
         : r > 1
           ? (0, i.jsx)(k, { channel: t, guild: n, width: l, inPopout: a, handleClose: s, userParticipantCount: r })
           : (0, i.jsx)(V, { channel: t, guild: n, width: l, inPopout: a, activitiesEnabled: o });
 }
-function U(e) {
+function D(e) {
     let { channel: t, inPopout: n, handleClose: l } = e,
-        { analyticsLocations: a, newestAnalyticsLocation: r } = (0, E.Ay)(N.A.VC_TILE_ACTIVITY_SHELF_BUTTON);
+        { analyticsLocations: a, newestAnalyticsLocation: r } = (0, E.Ay)(v.A.VC_TILE_ACTIVITY_SHELF_BUTTON);
     return (0, i.jsx)(E.f5, {
         value: a,
         children: (0, i.jsxs)(L.A, {
@@ -100,7 +100,7 @@ function V(e) {
             n_participants: 1,
         });
     }, []);
-    let { analyticsLocations: c, newestAnalyticsLocation: d } = (0, E.Ay)(N.A.VC_TILE_ACTIVITY_INVITE);
+    let { analyticsLocations: c, newestAnalyticsLocation: d } = (0, E.Ay)(v.A.VC_TILE_ACTIVITY_INVITE);
     function p() {
         (0, m.openModalLazy)(
             async () => {
@@ -167,7 +167,7 @@ function k(e) {
         });
     });
     let u = (0, I.A)({ guildId: n.id }).slice(0, 3),
-        { analyticsLocations: h } = (0, E.Ay)(N.A.VC_TILE_ACTIVITY_SUGGESTION),
+        { analyticsLocations: h } = (0, E.Ay)(v.A.VC_TILE_ACTIVITY_SUGGESTION),
         p = l.useMemo(() => ({ channel: t, type: "channel" }), [t]);
     return (0, i.jsx)(E.f5, {
         value: h,
@@ -185,13 +185,13 @@ function k(e) {
                     className: s()(M.Di, { [M.qy]: o <= 300 }),
                     children: u.map((e) =>
                         (0, i.jsx)(
-                            v.C,
+                            N.C,
                             {
                                 context: p,
                                 activityItem: e,
-                                aspectRatio: v.C.AspectRatio.SIXTEEN_BY_NINE,
+                                aspectRatio: N.C.AspectRatio.SIXTEEN_BY_NINE,
                                 animatedDivClass: M.KU,
-                                commandOrigin: _.iw.VOICE_TILE_ACTIVITY_SUGGESTIONS,
+                                commandOrigin: T.iw.VOICE_TILE_ACTIVITY_SUGGESTIONS,
                             },
                             e.application.id,
                         ),
@@ -205,7 +205,7 @@ function k(e) {
                             close_type: "permanent",
                             n_participants: c,
                         }),
-                            (0, T.Dr)(r.M.VC_TILE_ACTIVITIES_ENTRY_POINT);
+                            (0, _.Dr)(r.M.VC_TILE_ACTIVITIES_ENTRY_POINT);
                     },
                     children: [
                         (0, i.jsx)(R.A, {}),

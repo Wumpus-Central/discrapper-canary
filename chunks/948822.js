@@ -1,4 +1,4 @@
-n.d(t, { A: () => _ });
+n.d(t, { A: () => T });
 var i = n(477900),
     l = n(582128),
     a = n(503698),
@@ -19,32 +19,32 @@ var i = n(477900),
     y = n(309010),
     j = n(920639),
     I = n(82715),
-    v = n(731854),
-    N = n(375708),
+    N = n(731854),
+    v = n(375708),
     E = n(989952),
     b = n(550234);
-function _(e) {
+function T(e) {
     let { channelId: t, center: n, iconSize: a } = e,
-        _ = (0, r.bG)([A.A], () => A.A.getChannel(t)),
-        T = _?.guild_id,
+        T = (0, r.bG)([A.A], () => A.A.getChannel(t)),
+        _ = T?.guild_id,
         R = (0, r.bG)([y.Ay], () => y.Ay.getVoiceChannelId() === t),
         S = (0, r.bG)([g.Ay], () => (0, p.A)(g.Ay)),
-        L = (0, r.bG)([x.A, C.A], () => null != _ && (0, h.vz)(_, x.A, C.A, !0)),
+        L = (0, r.bG)([x.A, C.A], () => null != T && (0, h.vz)(T, x.A, C.A, !0)),
         { analyticsLocations: O } = (0, u.Ay)(d.A.GUILD_ROOM),
         { Component: P } = (0, o.c)("enable"),
-        M = (0, r.bG)([g.Ay], () => g.Ay.supports(v.O5.VIDEO)),
+        M = (0, r.bG)([g.Ay], () => g.Ay.supports(N.O5.VIDEO)),
         w = l.useRef(null),
-        D = l.useCallback(() => {
-            if (null != T) {
+        U = l.useCallback(() => {
+            if (null != _) {
                 if (!S) return void (0, m.A)();
-                (0, f.A)(T, t, O), (0, j.n0)({ channelId: t, interactionType: "tv_stream_clicked" });
+                (0, f.A)(_, t, O), (0, j.n0)({ channelId: t, interactionType: "tv_stream_clicked" });
             }
-        }, [T, S, t, O]);
-    return null != _ && null != T && L && R && M
+        }, [_, S, t, O]);
+    return null != T && null != _ && L && R && M
         ? (0, i.jsxs)(c.D, {
-              "aria-label": N.intl.string(N.t.fjBNo1),
+              "aria-label": v.intl.string(v.t.fjBNo1),
               className: b.XI,
-              onClick: D,
+              onClick: U,
               focusProps: { ringTarget: w },
               children: [
                   (0, i.jsx)(I.A, { className: s()(b.ys, E.zq) }),

@@ -32,24 +32,24 @@ function y(e) {
         h,
         x,
         y,
-        { children: j, onExited: I, ariaLabel: v, dismissable: N = !1 } = e,
-        { isOpen: E, setOpen: b, triggerRef: _, menuId: T, spacing: R, centerSingleItem: S } = g(),
+        { children: j, onExited: I, ariaLabel: N, dismissable: v = !1 } = e,
+        { isOpen: E, setOpen: b, triggerRef: T, menuId: _, spacing: R, centerSingleItem: S } = g(),
         L = l.useCallback(() => {
-            N && b(!1);
-        }, [N, b]),
-        O = (0, p.A)(null, L, _),
+            v && b(!1);
+        }, [v, b]),
+        O = (0, p.A)(null, L, T),
         P = l.useCallback(
             (e) => {
-                N && "Escape" === e.key && b(!1);
+                v && "Escape" === e.key && b(!1);
             },
-            [N, b],
+            [v, b],
         ),
         M = l.Children.toArray(j).filter(l.isValidElement),
         w = M.length,
-        D = S && 1 === w,
-        U = l.useRef(I);
+        U = S && 1 === w,
+        D = l.useRef(I);
     l.useEffect(() => {
-        U.current = I;
+        D.current = I;
     }, [I]);
     let V = l.useRef([]),
         [k, G] = l.useState([]);
@@ -70,7 +70,7 @@ function y(e) {
     }, [w]);
     let [B, F] = l.useState(0);
     l.useLayoutEffect(() => {
-        let e = _.current;
+        let e = T.current;
         if (null == e) return;
         function t() {
             if (null == e) return;
@@ -80,8 +80,8 @@ function y(e) {
         t();
         let n = new ResizeObserver(t);
         return n.observe(e), () => n.disconnect();
-    }, [_]);
-    let z =
+    }, [T]);
+    let H =
             ((t = B + R),
             (a = Math.floor((n = k.length) / 2) + 1),
             (o = n % 2 == 0),
@@ -112,13 +112,13 @@ function y(e) {
                     }),
                 [t, k, o, a, y, d, h],
             )),
-        [H] = (0, c.z)(
+        [z] = (0, c.z)(
             () => ({
                 from: { progress: 0 },
                 to: { progress: +!!E },
                 config: E ? f : A,
                 onRest: (e) => {
-                    !0 !== e.finished || E || U.current();
+                    !0 !== e.finished || E || D.current();
                 },
             }),
             "respect-motion-settings",
@@ -130,18 +130,18 @@ function y(e) {
         }, [O]),
         (0, i.jsx)(r.animated.div, {
             ref: O,
-            id: T,
+            id: _,
             role: "menu",
-            "aria-label": v,
+            "aria-label": N,
             tabIndex: -1,
             className: s()(m.EQ, { [m.U4]: !E }),
             style: {
-                "--custom-radial-opacity": H.progress,
-                transform: H.progress.to([0, 1], [0.5, 1]).to((e) => `scale(${e})`),
+                "--custom-radial-opacity": z.progress,
+                transform: z.progress.to([0, 1], [0.5, 1]).to((e) => `scale(${e})`),
             },
             onKeyDown: P,
             children: M.map((e, t) => {
-                let n = D ? { x: 0, y: 0 } : (z[t] ?? { x: 0, y: 0 });
+                let n = U ? { x: 0, y: 0 } : (H[t] ?? { x: 0, y: 0 });
                 return (0, i.jsx)(
                     "div",
                     {

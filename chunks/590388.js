@@ -5,24 +5,24 @@ if (221552 == n.j) var r = n(922016);
 if (221552 == n.j) var s = n(980707);
 if (221552 == n.j) var a = n(477782);
 if (221552 == n.j) var o = n(534890);
-if (221552 == n.j) var d = n(625903);
-if (221552 == n.j) var u = n(939249);
-if (221552 == n.j) var c = n(365199);
+if (221552 == n.j) var c = n(625903);
+if (221552 == n.j) var d = n(939249);
+if (221552 == n.j) var u = n(365199);
 var E = n(442433),
     g = n(793574),
     h = n(363487),
-    A = n(123917),
-    _ = n(981381),
+    _ = n(123917),
+    A = n(981381),
     S = n(144977),
     f = n(628049),
     I = n(632847),
     C = n(375708),
-    m = n(784420);
-let p = { steps: { [f.HS.SERVER_SETTINGS]: { onBack: { type: "close" }, onNext: { type: "save" } } } };
+    p = n(784420);
+let m = { steps: { [f.HS.SERVER_SETTINGS]: { onBack: { type: "close" }, onNext: { type: "save" } } } };
 function v(e) {
     let { guildId: t, instance: n } = e,
         f = l.useRef(null),
-        v = (0, _.A)(n.providerType, n.gameServerPanelUrl);
+        v = (0, A.A)(n.providerType, n.gameServerPanelUrl);
     return (0, h.A)(t)
         ? (0, i.jsx)(r.Y, {
               targetElementRef: f,
@@ -49,18 +49,18 @@ function v(e) {
                                       leadingAccessory: { type: "icon", icon: o.ChatIcon },
                                       label: C.intl.string(I.default.bBkeMs),
                                       action: () => {
-                                          (0, A.h)({ href: v });
+                                          (0, _.h)({ href: v });
                                       },
                                   }),
                               (0, i.jsx)(a.Dr, {
                                   id: "settings",
-                                  icon: d.SettingsIcon,
-                                  leadingAccessory: { type: "icon", icon: d.SettingsIcon },
+                                  icon: c.SettingsIcon,
+                                  leadingAccessory: { type: "icon", icon: c.SettingsIcon },
                                   label: C.intl.string(I.default["feUiM/"]),
                                   action: () => {
                                       (0, S.A)({
                                           guildId: t,
-                                          stepConfig: p,
+                                          stepConfig: m,
                                           initialGameServerInstance: n,
                                           analyticsLocation: g.A.GAME_SERVER_PAGE,
                                       });
@@ -71,12 +71,12 @@ function v(e) {
                   });
               },
               children: (e) =>
-                  (0, i.jsx)(u.D, {
+                  (0, i.jsx)(d.D, {
                       "aria-label": C.intl.string(C.t["UKOtz+"]),
-                      className: m.v,
+                      className: p.v,
                       ...e,
                       innerRef: f,
-                      children: (0, i.jsx)(c.MoreHorizontalIcon, { color: "currentColor", size: "sm" }),
+                      children: (0, i.jsx)(u.MoreHorizontalIcon, { color: "currentColor", size: "sm" }),
                   }),
           })
         : null;

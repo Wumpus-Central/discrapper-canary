@@ -1,45 +1,45 @@
-n.d(t, { Mg: () => a, RZ: () => d });
-var i = n(477900),
-    l = n(582128),
-    r = n(403362);
-let s = l.createContext(void 0);
-function a() {
-    let e = l.useContext(s);
+n.d(t, { Mg: () => o, RZ: () => u });
+var l = n(477900),
+    i = n(582128),
+    s = n(403362);
+let r = i.createContext(void 0);
+function o() {
+    let e = i.useContext(r);
     if (null == e) throw Error("No PollFocusContextProvider found");
     return e;
 }
-function o(e) {
-    let { children: t, actionButtonRef: n, pollAnswerRef: r, manageFocusOnAction: a } = e,
-        o = l.useMemo(() => ({ actionButtonRef: n, pollAnswerRef: r, manageFocusOnAction: a }), [n, r, a]);
-    return (0, i.jsx)(s.Provider, { value: o, children: t });
+function a(e) {
+    let { children: t, actionButtonRef: n, pollAnswerRef: s, manageFocusOnAction: o } = e,
+        a = i.useMemo(() => ({ actionButtonRef: n, pollAnswerRef: s, manageFocusOnAction: o }), [n, s, o]);
+    return (0, l.jsx)(r.Provider, { value: a, children: t });
 }
-function d(e) {
+function u(e) {
     let { children: t } = e,
-        [n, s] = l.useState(),
-        a = l.useRef(null),
-        d = l.useRef(null);
+        [n, r] = i.useState(),
+        o = i.useRef(null),
+        u = i.useRef(null);
     return (
-        l.useEffect(() => {
-            "POLL_ANSWERS" === n && null != d.current && d.current?.ref?.focus(),
-                "ACTION_BUTTON" === n && null != a.current && a.current?.focus();
+        i.useEffect(() => {
+            "POLL_ANSWERS" === n && null != u.current && u.current?.ref?.focus(),
+                "ACTION_BUTTON" === n && null != o.current && o.current?.focus();
         }, [n]),
-        (0, i.jsx)(o, {
-            pollAnswerRef: d,
-            actionButtonRef: a,
+        (0, l.jsx)(a, {
+            pollAnswerRef: u,
+            actionButtonRef: o,
             manageFocusOnAction: function (e) {
                 switch (e) {
                     case "submit":
                     case "cancel":
-                        s("ACTION_BUTTON");
+                        r("ACTION_BUTTON");
                         break;
                     case "remove":
                     case "showVotes":
-                        s("POLL_ANSWERS");
+                        r("POLL_ANSWERS");
                         break;
                     case "showVoterDetails":
                         break;
                     default:
-                        (0, r.xb)(e);
+                        (0, s.xb)(e);
                 }
             },
             children: t,

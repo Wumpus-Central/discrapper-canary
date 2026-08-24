@@ -28,8 +28,8 @@ function h(e) {
         {
             tileStyle: j,
             tileWidth: I,
-            rows: v,
-            columns: N,
+            rows: N,
+            columns: v,
         } = l.useMemo(
             () =>
                 (function (e, t, n) {
@@ -62,21 +62,21 @@ function h(e) {
                 })(g, C, y),
             [g, C, y],
         ),
-        E = N + 1,
+        E = v + 1,
         b = E * I + (E - 1) * 8 <= A,
-        _ = Math.floor(I / c) + 8,
-        T = Math.max(0, y - _ * v) / 2;
+        T = Math.floor(I / c) + 8,
+        _ = Math.max(0, y - T * N) / 2;
     return (0, i.jsx)(r.A, {
         fade: !0,
         className: t,
-        listPadding: [h + T, 0, p + T - 8, 8],
+        listPadding: [h + _, 0, p + _ - 8, 8],
         renderRow: function (e) {
-            let t = e * N;
+            let t = e * v;
             return (0, i.jsx)(
                 "div",
                 {
                     className: o.nM,
-                    children: n?.slice(t, t + N)?.map((e, n) => {
+                    children: n?.slice(t, t + v)?.map((e, n) => {
                         let l = t + n;
                         return (0, i.jsx)(
                             "div",
@@ -84,8 +84,8 @@ function h(e) {
                                 style: j,
                                 className: s()(o.Vs, {
                                     [o.E3]: b,
-                                    [o.k4]: l >= (v - 1) * N,
-                                    [o.Kk]: (l + 1) % N == 0 || l === g - 1,
+                                    [o.k4]: l >= (N - 1) * v,
+                                    [o.Kk]: (l + 1) % v == 0 || l === g - 1,
                                 }),
                                 children: (0, i.jsx)("div", { className: o.eP, children: e(I) }),
                             },
@@ -96,9 +96,9 @@ function h(e) {
                 e,
             );
         },
-        rowCount: v,
-        rowCountBySection: [v],
-        rowHeight: _,
+        rowCount: N,
+        rowCountBySection: [N],
+        rowHeight: T,
         onResize: f,
     });
 }

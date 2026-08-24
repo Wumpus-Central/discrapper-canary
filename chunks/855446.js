@@ -1,9 +1,9 @@
-t.d(n, { C: () => j });
+t.d(n, { C: () => N });
 var l,
     i = t(477900),
-    s = t(582128),
-    a = t(503698),
-    r = t.n(a),
+    a = t(582128),
+    s = t(503698),
+    r = t.n(s),
     o = t(221877),
     c = t(696292),
     u = t(834730),
@@ -13,21 +13,21 @@ var l,
     h = t(932413),
     C = t(849269),
     E = t(881343),
-    p = t(697675),
-    g = t(869003),
-    f = t(652215),
+    f = t(697675),
+    p = t(869003),
+    g = t(652215),
     x = t(375708),
     I = t(441386);
-let T = ["embedded_cover"],
-    v = { tension: 800, friction: 24 };
+let v = ["embedded_cover"],
+    T = { tension: 800, friction: 24 };
 var _ =
     (((l = _ || {})[(l.THIRTEEN_BY_ELEVEN = 0)] = "THIRTEEN_BY_ELEVEN"),
     (l[(l.SIXTEEN_BY_NINE = 1)] = "SIXTEEN_BY_NINE"),
     l);
-function j(e) {
-    let { context: n, activityItem: t, onClick: l, aspectRatio: a = 0, animatedDivClass: _, commandOrigin: j } = e,
+function N(e) {
+    let { context: n, activityItem: t, onClick: l, aspectRatio: s = 0, animatedDivClass: _, commandOrigin: N } = e,
         {
-            onActivityItemSelected: N,
+            onActivityItemSelected: j,
             imageBackground: b,
             activityAction: S,
             labelType: O,
@@ -37,26 +37,26 @@ function j(e) {
             guildId: n.channel.getGuildId() ?? void 0,
             locationObject: {},
             onActivityItemSelected: l,
-            embeddedActivitiesManager: g.A,
-            assetNames: T,
-            commandOrigin: j,
+            embeddedActivitiesManager: p.A,
+            assetNames: v,
+            commandOrigin: N,
         }),
-        [y, R] = s.useState(!1),
-        M = s.useCallback(() => {
+        [y, R] = a.useState(!1),
+        M = a.useCallback(() => {
             R(!0);
         }, [R]),
-        L = s.useCallback(() => {
+        L = a.useCallback(() => {
             R(!1);
         }, [R]),
-        D = s.useMemo(
+        D = a.useMemo(
             () =>
                 (0, i.jsx)("div", {
                     className: I.Gz,
-                    children: (0, i.jsx)("div", { className: I.fC, children: (0, i.jsx)(p.A, { labelType: O }) }),
+                    children: (0, i.jsx)("div", { className: I.fC, children: (0, i.jsx)(f.A, { labelType: O }) }),
                 }),
             [O],
         ),
-        P = s.useMemo(() => {
+        P = a.useMemo(() => {
             switch (S) {
                 case C.o6.JOIN:
                     return (0, i.jsx)("div", {
@@ -88,20 +88,20 @@ function j(e) {
             }
         }, [S]);
     return (0, i.jsx)(d.D, {
-        onClick: N,
+        onClick: j,
         onFocus: M,
         onBlur: L,
         onMouseEnter: M,
         onMouseLeave: L,
         className: I.XA,
         children: (0, i.jsx)(A.c, {
-            config: v,
+            config: T,
             from: { value: 0 },
             to: { value: +!!y },
             children: (e) => {
                 let { value: n } = e;
                 return (0, i.jsx)(m.N, {
-                    theme: f.NJ8.DARK,
+                    theme: g.NJ8.DARK,
                     children: (e) =>
                         (0, i.jsx)(h.A, {
                             applicationId: t.application.id,
@@ -109,7 +109,7 @@ function j(e) {
                             children: (l) =>
                                 (0, i.jsxs)(o.animated.div, {
                                     ref: l,
-                                    className: r()(e, I.LM, _, { [I.$g]: 0 === a, [I.J3]: 1 === a }),
+                                    className: r()(e, I.LM, _, { [I.$g]: 0 === s, [I.J3]: 1 === s }),
                                     style: { transform: n.to([0, 1], [1, 1.05]).to((e) => `scale(${e})`) },
                                     children: [
                                         (0, i.jsx)(E.A, {
@@ -128,4 +128,4 @@ function j(e) {
         }),
     });
 }
-j.AspectRatio = _;
+N.AspectRatio = _;

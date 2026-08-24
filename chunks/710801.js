@@ -2,15 +2,15 @@ t.d(n, { A: () => o });
 var l = t(477900);
 t(582128);
 var i = t(789645),
-    s = t(387755),
-    a = t(204651),
+    a = t(387755),
+    s = t(204651),
     r = t(375708);
 function o(e) {
     let { channel: n, ...t } = e;
-    return (0, l.jsx)(a.l, {
+    return (0, l.jsx)(s.l, {
         ...t,
         iconComponent: i.P,
         label: r.intl.string(r.t.WAI6xu),
-        onClick: () => s.A.stopRinging(n.id),
+        onClick: () => a.A.stopRinging(n.id),
     });
 }

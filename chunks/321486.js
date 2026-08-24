@@ -19,19 +19,19 @@ var i = n(477900),
     y = n(218394),
     j = n(360627),
     I = n(809369),
-    v = n(1195),
-    N = n(375708),
+    N = n(1195),
+    v = n(375708),
     E = n(814402);
 let b = 10 * g.A.Millis.SECOND,
-    _ = { tension: 220, friction: 30, clamp: !0 },
-    T = { x: "100%" },
+    T = { tension: 220, friction: 30, clamp: !0 },
+    _ = { x: "100%" },
     R = { x: "0%" },
     S = { x: "-100%" };
 function L(e) {
     let { streams: t, fit: n, tooltipSpacing: g, containerWidthPx: L } = e,
         [O, P] = l.useState({ streamKey: null, sequence: 0 }),
         [M, w] = l.useState(!1),
-        [D, U] = l.useState(!1),
+        [U, D] = l.useState(!1),
         V = Math.max(
             0,
             t.findIndex((e) => (0, f._z)(e) === O.streamKey),
@@ -39,13 +39,13 @@ function L(e) {
         k = t[V],
         G = t[(V + 1) % t.length],
         B = t.length > 1,
-        F = D ? G : k,
-        z = (0, s.bG)([x.default], () => x.default.getUser(F.ownerId), [F]),
-        H = C.Ay.useName(F.guildId, F.channelId, z),
+        F = U ? G : k,
+        H = (0, s.bG)([x.default], () => x.default.getUser(F.ownerId), [F]),
+        z = C.Ay.useName(F.guildId, F.channelId, H),
         W = (0, y.j)(),
         $ = L / 225,
-        Y = N.intl.string(N.t["7Xq/nV"]),
-        K = N.intl.string(v.default["t+GPi4"]),
+        Y = v.intl.string(v.t["7Xq/nV"]),
+        K = v.intl.string(N.default["t+GPi4"]),
         q = l.useCallback(() => {
             let e = (0, f._z)(G);
             P((t) => ({ streamKey: e, sequence: t.sequence + 1 }));
@@ -60,16 +60,16 @@ function L(e) {
         Q = (0, r.p)(k, {
             keys: () => `${O.sequence}:${(0, f._z)(k)}`,
             initial: R,
-            from: T,
+            from: _,
             enter: R,
             leave: S,
-            config: _,
+            config: T,
         });
     function J() {
         w(!0);
     }
     function ee() {
-        w(!1), U(!1);
+        w(!1), D(!1);
     }
     return (0, i.jsxs)("div", {
         className: E.VH,
@@ -80,9 +80,9 @@ function L(e) {
         onBlur: ee,
         children: [
             (0, i.jsx)(j.A, {
-                title: H,
-                image: (0, i.jsx)(o.eu, { src: z?.getAvatarURL(F.guildId, 96), size: c._3.SIZE_48, "aria-hidden": !0 }),
-                forceOpen: D,
+                title: z,
+                image: (0, i.jsx)(o.eu, { src: H?.getAvatarURL(F.guildId, 96), size: c._3.SIZE_48, "aria-hidden": !0 }),
+                forceOpen: U,
                 spacing: g,
                 children: (0, i.jsxs)(d.D, {
                     tag: "div",
@@ -130,10 +130,10 @@ function L(e) {
                                   className: E.ch,
                                   children: (0, i.jsx)("div", {
                                       className: E.iI,
-                                      onMouseEnter: () => U(!0),
-                                      onMouseLeave: () => U(!1),
-                                      onFocus: () => U(!0),
-                                      onBlur: () => U(!1),
+                                      onMouseEnter: () => D(!0),
+                                      onMouseLeave: () => D(!1),
+                                      onFocus: () => D(!0),
+                                      onBlur: () => D(!1),
                                       children: (0, i.jsx)(h.K, {
                                           icon: p.u,
                                           variant: "overlay-secondary",

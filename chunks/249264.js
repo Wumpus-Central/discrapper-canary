@@ -33,8 +33,8 @@ var R = i(477782),
     O = i(980707),
     L = i(922016),
     _ = i(761915),
-    P = i(877784),
-    D = i(53788),
+    D = i(877784),
+    P = i(53788),
     G = i(148795),
     M = i(214947),
     U = i(375708),
@@ -67,7 +67,7 @@ let W = {
             null != n && (t[i] = { getText: n.getText, icon: e[n.iconRole] });
         }
         return t;
-    })({ [F.RIBBON]: P.q, [F.THUMBS_UP]: D.G, [F.THUMBS_DOWN]: G.d, [F.FRIENDS]: M.$ });
+    })({ [F.RIBBON]: D.q, [F.THUMBS_UP]: P.G, [F.THUMBS_DOWN]: G.d, [F.FRIENDS]: M.$ });
 function V(e) {
     let t = H[e];
     return null != t ? t : null;
@@ -540,7 +540,7 @@ function ec(e) {
         L = w && !R,
         { registerDragHandleRef: _ } = (0, b.r)();
     if (y) return (0, s.jsx)(N.E, {});
-    function P() {
+    function D() {
         return (0, s.jsx)(T.A, {
             coverRef: x,
             className: null == v || u ? void 0 : ei.iL,
@@ -552,7 +552,7 @@ function ec(e) {
             hideTooltip: !0,
         });
     }
-    function D() {
+    function P() {
         return (0, s.jsxs)("div", {
             ref: h,
             className: o()(en.Nr, f),
@@ -560,9 +560,9 @@ function ec(e) {
                 L
                     ? (0, s.jsxs)("div", {
                           className: en.An,
-                          children: [P(), (0, s.jsx)(C.jV, { buttonRef: _(l.gameId), className: en.BU })],
+                          children: [D(), (0, s.jsx)(C.jV, { buttonRef: _(l.gameId), className: en.BU })],
                       })
-                    : P(),
+                    : D(),
                 (0, s.jsxs)("div", {
                     className: en.zH,
                     children: [
@@ -592,7 +592,7 @@ function ec(e) {
               widgetType: a,
               game: l,
               getWidth: () => h.current?.offsetWidth,
-              children: D(),
+              children: P(),
           })
-        : D();
+        : P();
 }

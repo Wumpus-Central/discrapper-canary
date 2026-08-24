@@ -1,8 +1,8 @@
 t.d(n, { x: () => d });
 var l = t(477900),
     i = t(582128),
-    s = t(17928),
-    a = t(623646),
+    a = t(17928),
+    s = t(623646),
     r = t(43189),
     o = t(742023),
     c = t(461782),
@@ -17,23 +17,23 @@ function d(e) {
             skipForceHide: h = !1,
         } = e,
         C = i.useContext(c.vG),
-        [E, p] = i.useState(""),
-        [g, f] = i.useState(!1),
-        x = (0, s.bG)([o.Ay], () => o.Ay.callHeaderHeight),
+        [E, f] = i.useState(""),
+        [p, g] = i.useState(!1),
+        x = (0, a.bG)([o.Ay], () => o.Ay.callHeaderHeight),
         I = i.useRef(null),
-        T = i.useRef(0);
+        v = i.useRef(0);
     i.useEffect(() => {
         let e = n.current;
         if (null != e) return e.addEventListener("click", d), () => e.removeEventListener("click", d);
     }),
         i.useEffect(() => {
-            h || (p(String(T.current)), f(void 0 !== x && x < (I.current?.clientHeight ?? 300) + 24), (T.current += 1));
+            h || (f(String(v.current)), g(void 0 !== x && x < (I.current?.clientHeight ?? 300) + 24), (v.current += 1));
         }, [x, I, h]);
-    let { preventIdle: v, allowIdle: _ } = (0, u.o)("popup");
+    let { preventIdle: T, allowIdle: _ } = (0, u.o)("popup");
     return n?.current == null
         ? null
         : (0, l.jsx)(r.Ay, {
-              children: (0, l.jsx)(a.Q, {
+              children: (0, l.jsx)(s.Q, {
                   targetRef: n,
                   position: "top",
                   align: "center",
@@ -43,11 +43,11 @@ function d(e) {
                   children: () =>
                       (0, l.jsx)("div", {
                           ref: I,
-                          onMouseOver: v,
-                          onFocus: v,
+                          onMouseOver: T,
+                          onFocus: T,
                           onBlur: _,
                           onMouseLeave: _,
-                          children: A({ hidden: g || C || t, onDismiss: d }),
+                          children: A({ hidden: p || C || t, onDismiss: d }),
                       }),
               }),
           });

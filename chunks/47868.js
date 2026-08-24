@@ -1,8 +1,8 @@
 t.d(n, { A: () => h });
 var l = t(477900),
     i = t(582128),
-    s = t(503698),
-    a = t.n(s),
+    a = t(503698),
+    s = t.n(a),
     r = t(815021),
     o = t(939249),
     c = t(297264),
@@ -14,25 +14,25 @@ function h(e) {
     let {
             className: n,
             iconContainerClassName: t,
-            icon: s,
+            icon: a,
             title: h,
             description: C,
             userCount: E,
-            onClick: p,
-            highlight: g,
-            onDismiss: f,
+            onClick: f,
+            highlight: p,
+            onDismiss: g,
         } = e,
         x = i.useCallback(
             (e) => {
-                e.stopPropagation(), f?.();
+                e.stopPropagation(), g?.();
             },
-            [f],
+            [g],
         );
     return (0, l.jsxs)(o.D, {
-        className: a()(m.kL, n, null != g && { [m.U6]: g }),
-        onClick: p,
+        className: s()(m.kL, n, null != p && { [m.U6]: p }),
+        onClick: f,
         children: [
-            (0, l.jsx)("div", { className: a()(m.Kk, t), children: s }),
+            (0, l.jsx)("div", { className: s()(m.Kk, t), children: a }),
             (0, l.jsxs)("div", {
                 className: m.FS,
                 children: [
@@ -58,7 +58,7 @@ function h(e) {
                         : null,
                 ],
             }),
-            null != f
+            null != g
                 ? (0, l.jsx)("div", { className: m.r, children: (0, l.jsx)(r.J, { size: "xs", onClick: x }) })
                 : (0, l.jsx)(d._, { size: "xs", color: "currentColor", className: m.OW }),
         ],

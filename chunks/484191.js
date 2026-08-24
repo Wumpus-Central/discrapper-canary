@@ -20,10 +20,10 @@ let y = function (e) {
     let { participants: t, channel: n, hasConnectPermission: y } = e,
         j = t.filter(x.Xw),
         I = (0, h.H)(n.guild_id),
-        v = l.useCallback(() => {
+        N = l.useCallback(() => {
             I ? (0, u.Ze)(n.guild_id, () => o.default.selectVoiceChannel(n.id)) : o.default.selectVoiceChannel(n.id);
         }, [n.id, n.guild_id, I]),
-        N = 4 === j.length ? 2 : 3,
+        v = 4 === j.length ? 2 : 3,
         E = (0, d.Ay)(n),
         b = (0, p.R)("ChannelCallEmpty");
     return (0, i.jsxs)("div", {
@@ -32,7 +32,7 @@ let y = function (e) {
             (0, i.jsx)(A.A, { disableAnimation: b }),
             (0, i.jsx)("div", {
                 className: C.os,
-                style: { maxWidth: 168 * N },
+                style: { maxWidth: 168 * v },
                 children: j
                     .slice(0, 5)
                     .map((e) =>
@@ -81,7 +81,7 @@ let y = function (e) {
                 children: (0, i.jsx)(r.$, {
                     variant: "overlay-primary",
                     text: y ? g.intl.string(g.t["96ANUN"]) : g.intl.string(g.t.TVBCKZ),
-                    onClick: v,
+                    onClick: N,
                     disabled: !y,
                 }),
             }),

@@ -14,14 +14,14 @@ function h(e, t, h) {
     let m = (0, u.AO)(e),
         g = (0, r.bG)([c.default], () => c.default.getId());
     if (null == e) return null;
-    let f = (0, o._z)(e),
-        E = d.A.getVideoStats(f) ?? {},
+    let E = (0, o._z)(e),
+        f = d.A.getVideoStats(E) ?? {},
         b = {
-            media_session_id: d.A.getMediaSessionId(f),
-            rtc_connection_id: d.A.getRtcConnectionId(f),
-            stream_region: d.A.getRegion(f),
-            max_viewers: d.A.getMaxViewers(f),
-            ...E,
+            media_session_id: d.A.getMediaSessionId(E),
+            rtc_connection_id: d.A.getRtcConnectionId(E),
+            stream_region: d.A.getRegion(E),
+            max_viewers: d.A.getMaxViewers(E),
+            ...f,
         };
     return (0, i.jsx)(s.Dr, {
         id: "report-stream-problem",

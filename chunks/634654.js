@@ -1,4 +1,4 @@
-n.d(t, { Db: () => a, bJ: () => o, hN: () => r, lJ: () => s, rv: () => d });
+n.d(t, { Db: () => a, bJ: () => o, hN: () => r, lJ: () => s, rv: () => c });
 var i,
     l,
     r =
@@ -15,4 +15,4 @@ var i,
             : null;
 let a = "hasClickedGuildShopProductPreviewTab",
     o = "hasClickedGuildShopChannelRow",
-    d = "https://discord.com/servershop";
+    c = "https://discord.com/servershop";

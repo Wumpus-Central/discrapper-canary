@@ -1,9 +1,9 @@
-t.d(n, { RQ: () => f, dA: () => x });
+t.d(n, { RQ: () => g, dA: () => x });
 var l = t(477900);
 t(582128);
 var i = t(284009),
-    s = t.n(i),
-    a = t(17928),
+    a = t.n(i),
+    s = t(17928),
     r = t(477782);
 t(198052), t(666328), t(422229), t(74329), t(956747);
 var o = t(288104),
@@ -15,27 +15,27 @@ var o = t(288104),
     h = t(993838),
     C = t(233993),
     E = t(446600),
-    p = t(418208);
+    f = t(418208);
 t(806931);
-var g = t(375708);
-function f(e) {
-    let n = (0, a.bG)([A.A], () => A.A.getChannel(e), [e]),
-        t = (0, a.bG)([m.A], () => m.A.can(C.QY, n)),
-        i = (0, p.zU)(),
-        s = (0, a.bG)([E.A], () => E.A.getStageInstanceByChannel(e), [e]),
+var p = t(375708);
+function g(e) {
+    let n = (0, s.bG)([A.A], () => A.A.getChannel(e), [e]),
+        t = (0, s.bG)([m.A], () => m.A.can(C.QY, n)),
+        i = (0, f.zU)(),
+        a = (0, s.bG)([E.A], () => E.A.getStageInstanceByChannel(e), [e]),
         o = (0, u.Us)();
     return n?.isGuildStageVoice() && t && !i
-        ? null != s
+        ? null != a
             ? (0, l.jsx)(r.Dr, {
                   id: "edit-stage",
-                  label: g.intl.string(g.t["I+9bLx"]),
+                  label: p.intl.string(p.t["I+9bLx"]),
                   action: function () {
                       null != n && (0, h.tQ)(n, o);
                   },
               })
             : (0, l.jsx)(r.Dr, {
                   id: "start-stage",
-                  label: g.intl.string(g.t.OYbHfv),
+                  label: p.intl.string(p.t.OYbHfv),
                   action: function () {
                       null != n && (0, h.tQ)(n, o);
                   },
@@ -43,8 +43,8 @@ function f(e) {
         : null;
 }
 function x(e) {
-    let n = (0, a.bG)([A.A], () => A.A.getChannel(e), [e]);
-    s()(null != n, "useNotificationSettingsItem: channel cannot be undefined");
+    let n = (0, s.bG)([A.A], () => A.A.getChannel(e), [e]);
+    a()(null != n, "useNotificationSettingsItem: channel cannot be undefined");
     let t = (0, d.os)("StageChannelCallOverflowMenu"),
         l = (0, c.Ay)(n),
         i = (0, o.A)(n);

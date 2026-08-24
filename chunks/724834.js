@@ -33,7 +33,7 @@ var n = i(477900),
 function _(e) {
     return { top: e.iconInset, insetInlineEnd: e.iconInset };
 }
-function P(e) {
+function D(e) {
     let { spec: t, sku: i, location: l, onError: s, ...r } = e,
         a = (0, d.bG)([w.default], () => w.default.getId()),
         {
@@ -59,7 +59,7 @@ function P(e) {
         }),
     });
 }
-function D(e) {
+function P(e) {
     let { spec: t, sku: i, location: l, onError: s, ...r } = e,
         a = (0, d.bG)([w.default], () => w.default.getId()),
         {
@@ -148,9 +148,9 @@ function U(e) {
         s = (0, d.bG)([C.A], () => C.A.getProduct(t.id));
     switch (t.productLine) {
         case R.EZt.SOCIAL_LAYER_GAME_ITEM:
-            return (0, n.jsx)(P, { sku: t, isVisuallyHidden: !i, ...l });
+            return (0, n.jsx)(D, { sku: t, isVisuallyHidden: !i, ...l });
         case R.EZt.COLLECTIBLES:
-            if (null == s) return (0, n.jsx)(D, { sku: t, isVisuallyHidden: !i, ...l });
+            if (null == s) return (0, n.jsx)(P, { sku: t, isVisuallyHidden: !i, ...l });
             return (0, n.jsx)(M, { product: s, isVisuallyHidden: !i, ...l });
         case R.EZt.PREMIUM:
             return (0, n.jsx)(G, { sku: t, isVisuallyHidden: !i, ...l });
@@ -248,13 +248,13 @@ function Z(e) {
         L = null != u ? (0, n.jsx)("div", { ref: T, className: q.BU, children: u }) : null,
         {
             onBodyClick: _,
-            onOverlayClick: P,
-            showOverlayButton: D,
+            onOverlayClick: D,
+            showOverlayButton: P,
             routesToGift: G,
             label: M,
             icon: U,
         } = (0, z.P)({ wishlistOwner: i, isOwned: C, onDetailsClick: k, onPurchaseClick: w }),
-        W = f && D;
+        W = f && P;
     return (0, n.jsxs)("div", {
         className: q.kL,
         children: [
@@ -274,7 +274,7 @@ function Z(e) {
                     : O.intl.formatToPlainString(O.t.ZBB4Ty, { productName: (0, v.T)(t.sku) }),
                 children: [
                     b,
-                    D && (0, n.jsx)(V.A, { spec: Q, onClick: P, isHoveringOrFocusing: f, label: M, icon: U }),
+                    P && (0, n.jsx)(V.A, { spec: Q, onClick: D, isHoveringOrFocusing: f, label: M, icon: U }),
                     C && (0, n.jsx)(H.gS, { isHoveringOrFocusing: f }),
                     i.id === a.id &&
                         null != E &&

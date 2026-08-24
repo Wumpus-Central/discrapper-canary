@@ -24,12 +24,12 @@ let y = (0, s.A)((e) => {
         participantsVersion: y,
         layout: j,
         onSelectParticipant: I,
-        onContextMenuParticipant: v,
-        onFullscreenParticipant: N,
+        onContextMenuParticipant: N,
+        onFullscreenParticipant: v,
         channel: E,
         hasConnectPermission: b,
-        className: _,
-        inCall: T,
+        className: T,
+        inCall: _,
         showParticipants: R = !0,
         width: S,
         height: L,
@@ -37,21 +37,21 @@ let y = (0, s.A)((e) => {
         mode: P,
         popoutType: M,
         awaitingRemoteSessionInfo: w,
-        callContainerDimensions: D,
+        callContainerDimensions: U,
     } = e;
     l.useEffect(() => {
         u._.dispatch(x.jej.REMEASURE_TARGET);
-    }, [S, L, D.width, D.height]);
-    let U = l.useMemo(
+    }, [S, L, U.width, U.height]);
+    let D = l.useMemo(
             () => n.filter((e) => e.type !== g.lp.ACTIVITY || !e.participants.some((e) => (0, r.S)(e))),
             [n, y],
         ),
         V = (0, a.bG)([o.A], () => o.A.getVoiceParticipantsHidden(E.id), [E.id]);
     if (w?.channelId === E.id) return (0, i.jsx)(p.A, { height: L });
-    if (E?.isGuildVocalOrThread() && !T)
+    if (E?.isGuildVocalOrThread() && !_)
         return (0, i.jsx)(h.A, { channel: E, participants: t, hasConnectPermission: b });
-    if (((n = T ? n : t), P === x._Of.VOICE))
-        return (0, i.jsx)(c.A, { guildId: E.guild_id, width: S, className: C.Er, participants: t, onContextMenu: v });
+    if (((n = _ ? n : t), P === x._Of.VOICE))
+        return (0, i.jsx)(c.A, { guildId: E.guild_id, width: S, className: C.Er, participants: t, onContextMenu: N });
     if (null == s) {
         if (0 === n.length) {
             let e = t.length > 0 && !V;
@@ -64,30 +64,30 @@ let y = (0, s.A)((e) => {
             children: (0, i.jsx)(m.A, {
                 channel: E,
                 className: C.g9,
-                participants: U,
+                participants: D,
                 totalNumberOfParticipants: t.length,
                 onClick: I,
-                onDoubleClick: N,
-                onContextMenu: v,
-                inCall: T,
+                onDoubleClick: v,
+                onContextMenu: N,
+                inCall: _,
                 popoutType: M,
             }),
         });
     }
     return (0, i.jsx)(f.A, {
-        onFullscreenParticipant: N,
-        onContextMenuParticipant: v,
+        onFullscreenParticipant: v,
+        onContextMenuParticipant: N,
         onSelectParticipant: I,
         selectedParticipant: s,
-        filteredParticipants: U,
+        filteredParticipants: D,
         participants: t,
         popoutType: M,
-        className: _,
+        className: T,
         idle: O,
         height: L,
         width: S,
         layout: j,
-        inCall: T,
+        inCall: _,
         channel: E,
         showParticipants: R,
     });

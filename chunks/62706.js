@@ -124,8 +124,8 @@ var w = i(600761),
     O = i(389667),
     L = i(605694),
     _ = i(869484),
-    P = i(315629),
-    D = i(465794),
+    D = i(315629),
+    P = i(465794),
     G = i(450232),
     M = i(287809),
     U = i(158045),
@@ -579,7 +579,7 @@ function e_(e) {
         ],
     });
 }
-function eP(e) {
+function eD(e) {
     let { index: t, userId: i, field: l, canEdit: s, onFieldChange: r, onFieldRemove: a } = e,
         {
             cropAndUpload: o,
@@ -683,7 +683,7 @@ function eP(e) {
         ],
     });
 }
-function eD(e) {
+function eP(e) {
     let { userId: t, section: i, sectionIndex: l, canEdit: s } = e;
     function r(e) {
         (0, F.AD)((t) => {
@@ -706,7 +706,7 @@ function eD(e) {
         r((t) => t.filter((t) => t.key !== e));
     }
     let d = i.fields.map((e, i) =>
-        (0, n.jsx)(eP, { index: i, userId: t, field: e, canEdit: s, onFieldChange: a, onFieldRemove: o }, e.key),
+        (0, n.jsx)(eD, { index: i, userId: t, field: e, canEdit: s, onFieldChange: a, onFieldRemove: o }, e.key),
     );
     return (s &&
         i.fields.length < 4 &&
@@ -756,7 +756,7 @@ function eW(e) {
         case _.K.COVER:
             return (0, n.jsx)(eR, { userId: t, section: i, sectionIndex: l, canEdit: s });
         case _.K.FIELDS:
-            return (0, n.jsx)(eD, { userId: t, section: i, sectionIndex: l, canEdit: s });
+            return (0, n.jsx)(eP, { userId: t, section: i, sectionIndex: l, canEdit: s });
     }
 }
 function eH() {
@@ -765,7 +765,7 @@ function eH() {
         : (0, n.jsxs)("div", {
               className: eM.hc,
               children: [
-                  (0, n.jsx)(P.h, { color: "nitro-pink", className: eM.Sp, offsetBottom: -4 }),
+                  (0, n.jsx)(D.h, { color: "nitro-pink", className: eM.Sp, offsetBottom: -4 }),
                   (0, n.jsxs)("div", {
                       className: eM.LK,
                       children: [
@@ -781,7 +781,7 @@ function eH() {
                           }),
                       ],
                   }),
-                  (0, n.jsx)(D.A, {
+                  (0, n.jsx)(P.A, {
                       size: "sm",
                       subscriptionTier: eG.pe.TIER_2,
                       defaultTextOverride: V.intl.string(V.t["4k2gSf"]),
@@ -1352,8 +1352,8 @@ function tO(e) {
 }
 var tL = i(704824),
     t_ = i(382483),
-    tP = i(385113),
-    tD = i(334074),
+    tD = i(385113),
+    tP = i(334074),
     tG = i(657718),
     tM = i(789645),
     tU = i(478016);
@@ -1416,7 +1416,7 @@ function tW() {
         eligibleApplications: i,
         markAsDismissed: s,
     } = (function () {
-        let e = (0, a.yK)([tP.A], () => tP.A.getFeaturedApplicationIds());
+        let e = (0, a.yK)([tD.A], () => tD.A.getFeaturedApplicationIds());
         l.useEffect(() => {
             (0, t_.Wq)();
         }, []);
@@ -1436,10 +1436,10 @@ function tW() {
                           ),
                 [o, i, n, r],
             ),
-            { eligibleToShow: u, markAsDismissed: g } = (0, tD.hj)({
+            { eligibleToShow: u, markAsDismissed: g } = (0, tP.hj)({
                 applications: d,
                 dismissibleContent: e$.M.APP_WIDGET_V2_PROFILE_UPSELL_SUGGESTED,
-                cooldownConfig: tD.SH,
+                cooldownConfig: tP.SH,
             }),
             m = l.useMemo(() => d.filter((e) => u.includes(e.id)), [d, u]);
         return o
@@ -2057,8 +2057,8 @@ function iR(e) {
 var iO = i(271383),
     iL = i(94160),
     i_ = i(96173),
-    iP = i(788259),
-    iD = i(269507);
+    iD = i(788259),
+    iP = i(269507);
 function iG(e) {
     let { userId: t } = e,
         { trackUserProfileAction: i, trackUserProfileEditAction: s } = (0, eJ.NJ)(),
@@ -2072,10 +2072,10 @@ function iG(e) {
             r.current || c || (i({ action: "VIEW_WIDGETS_EMPTY_STATE" }), (r.current = !0));
         }, [c, i]),
         (0, n.jsxs)("div", {
-            className: iD.Ie,
+            className: iP.Ie,
             children: [
                 (0, n.jsxs)("div", {
-                    className: iD.FS,
+                    className: iP.FS,
                     children: [
                         (0, n.jsx)(iE.D, {
                             variant: "heading-md/medium",
@@ -2091,14 +2091,14 @@ function iG(e) {
                 }),
                 !c &&
                     (0, n.jsx)("ul", {
-                        className: iD.ZW,
+                        className: iP.ZW,
                         "aria-label": V.intl.string(V.t["+EIBSA"]),
                         children: m.map((e) =>
                             (0, n.jsx)(
                                 "li",
                                 {
                                     ref: e.type === b.x.PERSONAL ? o : void 0,
-                                    children: (0, n.jsx)(iP.A, {
+                                    children: (0, n.jsx)(iD.A, {
                                         widget: e,
                                         size: "small",
                                         trackUserProfileEditAction: s,

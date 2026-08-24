@@ -12,8 +12,8 @@ var i = n(477900),
     h = n(338771),
     m = n(616356),
     g = n(287809),
-    f = n(562153),
-    E = n(652215),
+    E = n(562153),
+    f = n(652215),
     b = n(375708);
 function p(e, t, n) {
     let i = (0, l.bG)([c.A], () => (null != e ? c.A.getSelectedParticipantId(e.id) : null)),
@@ -26,7 +26,7 @@ function p(e, t, n) {
         let i = n.filter((e) => e.ownerId !== t?.id);
         return 1 === i.length && i[0].ownerId === s?.ownerId
             ? []
-            : i.map((t) => ({ stream: t, username: f.Ay.getName(e.getGuildId(), e.id, a[t.ownerId]) }));
+            : i.map((t) => ({ stream: t, username: E.Ay.getName(e.getGuildId(), e.id, a[t.ownerId]) }));
     }, [a, n, e, s, t?.id]);
 }
 function C(e) {
@@ -38,14 +38,14 @@ function C(e) {
             showReportOption: c = !1,
             handleGoLive: m,
             onClose: g,
-            onSelect: f,
-            appContext: C = E.BRT.APP,
+            onSelect: E,
+            appContext: C = f.BRT.APP,
             disableChangeWindows: S = !1,
             onInteraction: v,
         } = e,
         _ = r.find((e) => e.ownerId === n?.id) ?? null,
-        T = p(t, n, r),
-        O = (0, d.A)(_, C),
+        O = p(t, n, r),
+        T = (0, d.A)(_, C),
         x = (0, A.E)({
             disableChangeWindows: S,
             stream: _,
@@ -55,17 +55,17 @@ function C(e) {
             appContext: C,
         });
     return (0, i.jsx)(u.A, {
-        section: E.JJy.CONTEXT_MENU,
+        section: f.JJy.CONTEXT_MENU,
         children: (0, i.jsxs)(s.W, {
             "data-menu-migrated": !0,
-            onSelect: f,
+            onSelect: E,
             navId: "manage-streams",
             onClose: g,
             onInteraction: v,
             "aria-label": null != _ ? b.intl.string(b.t.S5anIc) : b.intl.string(b.t.fjBNo1),
             children: [
                 (0, i.jsx)(a.rX, {
-                    children: T.map((e) => {
+                    children: O.map((e) => {
                         let { stream: t, username: n } = e;
                         return (0, i.jsx)(
                             a.Dr,
@@ -81,7 +81,7 @@ function C(e) {
                     }),
                 }),
                 l ? null : x,
-                l ? null : (0, i.jsx)(a.rX, { children: O }),
+                l ? null : (0, i.jsx)(a.rX, { children: T }),
             ],
         }),
     });

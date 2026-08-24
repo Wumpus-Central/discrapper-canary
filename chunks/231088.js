@@ -137,13 +137,13 @@ function A(e) {
         O = null != p,
         L = null != A && !O,
         _ = O ? "error" : L ? "warning" : null,
-        P = O ? p : A,
-        D = null != _ && null != P,
+        D = O ? p : A,
+        P = null != _ && null != D,
         [G] = l.useState(t),
         [M, U] = l.useState(!1);
     M || t === G || U(!0);
     let F = [];
-    R && F.push(k), D && "compact" !== g && F.push(w);
+    R && F.push(k), P && "compact" !== g && F.push(w);
     let W = F.length > 0 ? F.join(" ") : void 0;
     function H() {
         let { activeElement: e } = y.current?.ownerDocument ?? document;
@@ -200,7 +200,7 @@ function A(e) {
                     : (0, n.jsxs)(n.Fragment, {
                           children: [
                               (0, n.jsx)("div", { className: h.VH, children: V }),
-                              D && "compact" !== g && (0, n.jsx)(j, { id: w, message: P, type: _ }),
+                              P && "compact" !== g && (0, n.jsx)(j, { id: w, message: D, type: _ }),
                           ],
                       }),
             },

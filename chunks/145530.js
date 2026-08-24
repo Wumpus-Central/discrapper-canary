@@ -5,20 +5,20 @@ var i = n(477900),
     s = n.n(r),
     a = n(665260),
     o = n(189213),
-    d = n(314116),
-    u = n(243721),
-    c = n(150934),
+    c = n(314116),
+    d = n(243721),
+    u = n(150934),
     E = n(192308),
     g = n(687709),
     h = n(148494),
-    A = n(47167),
-    _ = n(12351),
+    _ = n(47167),
+    A = n(12351),
     S = n(386467),
     f = n(928658),
     I = n(226698),
     C = n(994500),
-    m = n(287809),
-    p = n(628691),
+    p = n(287809),
+    m = n(628691),
     v = n(636922),
     T = n(652215),
     R = n(375708),
@@ -53,19 +53,19 @@ class O extends l.PureComponent {
         let e,
             t,
             { report: n, resolveFlag: l } = this.state,
-            { channel: r, message: s, showContextMenuHint: d, moderatorReportData: E, ...g } = this.props,
+            { channel: r, message: s, showContextMenuHint: c, moderatorReportData: E, ...g } = this.props,
             h = r.type === T.rbe.GUILD_ANNOUNCEMENT && (0, a.Lt)(s.flags, T.pr7.CROSSPOSTED);
-        d && (e = (0, i.jsx)(_.A, { className: P.Vc, children: R.intl.format(R.t.IxY7E6, {}) })),
-            (0, p.AR)(s) &&
+        c && (e = (0, i.jsx)(A.A, { className: P.Vc, children: R.intl.format(R.t.IxY7E6, {}) })),
+            (0, m.AR)(s) &&
                 (t = (0, i.jsx)("div", {
                     className: P.Vc,
-                    children: (0, i.jsx)(u.d, {
+                    children: (0, i.jsx)(d.d, {
                         label: R.intl.string(R.t.x0jzo9),
                         checked: n,
                         onChange: this.handleToggleReport,
                     }),
                 }));
-        let A = h ? R.intl.string(R.t["2kHABX"]) : R.intl.string(R.t.AMvpS4),
+        let _ = h ? R.intl.string(R.t["2kHABX"]) : R.intl.string(R.t.AMvpS4),
             f = (0, i.jsxs)(i.Fragment, {
                 children: [
                     (0, i.jsx)("div", {
@@ -82,13 +82,13 @@ class O extends l.PureComponent {
                 value: r.guild_id,
                 children: (0, i.jsx)(o.Modal, {
                     title: R.intl.string(R.t.MWMcg7),
-                    subtitle: A,
+                    subtitle: _,
                     actions: [
                         { variant: "critical-primary", text: R.intl.string(R.t.oyYWHE), onClick: this.handleDelete },
                     ],
                     actionBarInput: e
                         ? void 0
-                        : (0, i.jsx)(c.S, {
+                        : (0, i.jsx)(u.S, {
                               checked: l,
                               label: R.intl.string(L.default["8yIKem"]),
                               onChange: (e) => this.handleToggleResolveFlag(e),
@@ -102,7 +102,7 @@ class O extends l.PureComponent {
             value: r.guild_id,
             children: (0, i.jsx)(o.Modal, {
                 title: h ? R.intl.string(R.t.aIz1oV) : R.intl.string(R.t.MWMcg7),
-                subtitle: A,
+                subtitle: _,
                 actions: [
                     { text: R.intl.string(R.t["ETE/oC"]), onClick: g.onClose, variant: "secondary" },
                     { text: R.intl.string(R.t.oyYWHE), onClick: this.handleDeleteMana, variant: "critical-primary" },
@@ -117,9 +117,9 @@ class O extends l.PureComponent {
 let N = {
     confirmPin: function (e, t) {
         let n,
-            l = (0, A.m1)(e, m.default, C.A);
+            l = (0, _.m1)(e, p.default, C.A);
         (n = e.isPrivate() ? R.intl.string(R.t.hMRngA) : R.intl.formatToPlainString(R.t["3IRluI"], { channelName: l })),
-            (0, d.A)({
+            (0, c.A)({
                 title: R.intl.string(R.t.bKMaZX),
                 subtitle: n,
                 confirmText: R.intl.string(R.t.rOQ5BX),
@@ -135,7 +135,7 @@ let N = {
             });
     },
     confirmUnpin: function (e, t) {
-        (0, d.A)({
+        (0, c.A)({
             title: R.intl.string(R.t.CFF2vL),
             subtitle: R.intl.string(R.t.NjEPp7),
             confirmText: R.intl.string(R.t.lAU5jB),
@@ -150,7 +150,7 @@ let N = {
                         className: s()(P.iU, P.YK),
                         children: (0, i.jsx)(v.A, { channel: e, message: t, disableInteraction: !0 }),
                     }),
-                    (0, i.jsx)(_.A, { children: R.intl.format(R.t.oCVB3Y, {}) }),
+                    (0, i.jsx)(A.A, { children: R.intl.format(R.t.oCVB3Y, {}) }),
                 ],
             }),
         });
@@ -163,7 +163,7 @@ let N = {
         );
     },
     confirmEdit: function (e, t, n) {
-        (0, d.A)({
+        (0, c.A)({
             title: R.intl.string(R.t.aIz1oV),
             subtitle: R.intl.string(R.t.grBcM8),
             confirmText: R.intl.string(R.t["cY+Oob"]),

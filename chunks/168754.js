@@ -1,12 +1,12 @@
-t.d(n, { A: () => a });
+t.d(n, { A: () => s });
 var l = t(477900);
 t(582128);
 var i = t(697744),
-    s = t(204651);
-function a(e) {
-    let { isActivityActive: n, onMouseEnter: t, onMouseLeave: a, onClick: r, ...o } = e,
+    a = t(204651);
+function s(e) {
+    let { isActivityActive: n, onMouseEnter: t, onMouseLeave: s, onClick: r, ...o } = e,
         { Component: c, events: u, play: d } = (0, i.c)();
-    return (0, l.jsx)(s.l, {
+    return (0, l.jsx)(a.l, {
         isTrayButton: !0,
         isActive: n,
         color: n ? "green" : void 0,
@@ -15,7 +15,7 @@ function a(e) {
             t?.(e), u.onMouseEnter();
         },
         onMouseLeave: (e) => {
-            a?.(e), u.onMouseLeave();
+            s?.(e), u.onMouseLeave();
         },
         onClick: (e) => {
             r?.(e), d();

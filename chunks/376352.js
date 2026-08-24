@@ -19,12 +19,12 @@ var i = n(477900),
     y = n(853735),
     j = n(131607),
     I = n(834757),
-    v = n(548118),
-    N = n(832163),
+    N = n(548118),
+    v = n(832163),
     E = n(830647),
     b = n(280450),
-    _ = n(49999),
-    T = n(818348),
+    T = n(49999),
+    _ = n(818348),
     R = n(375708),
     S = n(472344);
 function L(e) {
@@ -36,37 +36,37 @@ function O(e) {
         { user: n, stream: a, channel: y } = e,
         [j, O] = l.useState(!1),
         P = (0, I.AO)(a),
-        M = (0, r.bG)([N.A], () => N.A.getDetectableIdsToApplicationIds()),
+        M = (0, r.bG)([v.A], () => v.A.getDetectableIdsToApplicationIds()),
         w = P?.id,
-        D = null != w ? M[w] : null,
-        U = (0, C.h)(D),
+        U = null != w ? M[w] : null,
+        D = (0, C.h)(U),
         {
             isLoading: V,
             applicationWidgetConfig: k,
             profileApplicationWidget: G,
             userApplicationIdentity: B,
-        } = (0, g.A)(n.id, D),
+        } = (0, g.A)(n.id, U),
         F = (0, r.bG)([b.default], () => b.default.getId()),
-        z = l.useRef(null),
-        [H, W] = L(o.M.SLAYER_STOREFRONT_VC_GIFTING_STREAM_HEADER_NEW_BADGE),
+        H = l.useRef(null),
+        [z, W] = L(o.M.SLAYER_STOREFRONT_VC_GIFTING_STREAM_HEADER_NEW_BADGE),
         [$, Y] = L(o.M.SLAYER_STOREFRONT_VC_GIFTING_PANEL_APP_WIDGET_CTA),
-        { hasAlreadyLinked: K, canStartAuthorization: q, fetched: X } = (0, x.RD)(F === n.id ? U : null),
+        { hasAlreadyLinked: K, canStartAuthorization: q, fetched: X } = (0, x.RD)(F === n.id ? D : null),
         Z = F === n.id && q && !X,
         Q = l.useCallback(() => {
             O(!1);
         }, []),
         J = l.useCallback(() => {
-            Y(_.i.USER_DISMISS);
+            Y(T.i.USER_DISMISS);
         }, [Y]),
         ee = null != G,
         et = $ && null != k && (K || q),
         { rankIconUrl: en, rankText: ei } =
             ((t = B?.profile),
             l.useMemo(() => {
-                if (null == t || "1346069614634864772" !== D) return {};
+                if (null == t || "1346069614634864772" !== U) return {};
                 let e = t.data?.primary?.rank_name;
                 return { rankIconUrl: t.data?.primary?.rank_image?.proxy_url, rankText: e };
-            }, [D, t])),
+            }, [U, t])),
         {
             isAppIcon: el,
             icon: ea,
@@ -74,9 +74,9 @@ function O(e) {
             renderPopout: er,
             positionKey: eo,
         } = l.useMemo(() => {
-            if (null == U || null == D) return { isAppIcon: !1 };
+            if (null == D || null == U) return { isAppIcon: !1 };
             if (ee || et) {
-                let e = en ?? U.getIconURL(v.iu.SMALL),
+                let e = en ?? D.getIconURL(N.iu.SMALL),
                     t = null != e && null == en,
                     l =
                         null != e
@@ -87,13 +87,13 @@ function O(e) {
                     icon: l,
                     text: ei ?? R.intl.string(R.t["9njbm2"]),
                     renderPopout: function (e) {
-                        return null == D
+                        return null == U
                             ? null
                             : (0, i.jsx)(E.V, {
                                   className: e,
                                   userId: n.id,
                                   channel: y,
-                                  applicationId: D,
+                                  applicationId: U,
                                   onClose: Q,
                                   canShowCTA: $,
                                   onDismissCTA: J,
@@ -111,20 +111,20 @@ function O(e) {
                 icon: e,
                 text: t,
                 renderPopout: function (e) {
-                    return null == D
+                    return null == U
                         ? null
-                        : (0, i.jsx)(E.Z, { className: e, userId: n.id, channel: y, applicationId: D, onClose: Q });
+                        : (0, i.jsx)(E.Z, { className: e, userId: n.id, channel: y, applicationId: U, onClose: Q });
                 },
                 positionKey: "feature-card-version",
             };
-        }, [U, D, ee, et, F, n.id, y, Q, $, J, en, ei]);
+        }, [D, U, ee, et, F, n.id, y, Q, $, J, en, ei]);
     return V || Z || null == er
         ? null
         : (0, i.jsx)(h.N, {
-              theme: T.NJ.DARKER,
+              theme: _.NJ.DARKER,
               children: (e) =>
                   (0, i.jsx)(p.Y, {
-                      targetElementRef: z,
+                      targetElementRef: H,
                       shouldShow: j,
                       animation: p.Y.Animation.FADE,
                       position: "bottom",
@@ -136,12 +136,12 @@ function O(e) {
                       children: () =>
                           (0, i.jsxs)("div", {
                               className: s()(e, S.kL),
-                              ref: z,
+                              ref: H,
                               children: [
                                   (0, i.jsxs)(m.D, {
                                       className: S.BQ,
                                       onClick: () => {
-                                          W(_.i.TAKE_ACTION), O((e) => !e);
+                                          W(T.i.TAKE_ACTION), O((e) => !e);
                                       },
                                       "aria-expanded": j,
                                       "aria-haspopup": "dialog",
@@ -156,7 +156,7 @@ function O(e) {
                                           }),
                                       ],
                                   }),
-                                  H && (0, i.jsx)(A.E, { type: "new", variant: "brand" }),
+                                  z && (0, i.jsx)(A.E, { type: "new", variant: "brand" }),
                               ],
                           }),
                   }),
