@@ -1896,14 +1896,6 @@
     width: 364px
 }
 
-.mainCardImage__250d5 {
-    display: block;
-    height: 100%;
-    -o-object-fit: cover;
-    object-fit: cover;
-    width: 100%
-}
-
 .mainCardBody__250d5 {
     display: flex;
     flex: 1;
@@ -1967,15 +1959,6 @@
     flex-shrink: 0;
     overflow: hidden;
     position: relative
-}
-
-.smallCardImage__250d5 {
-    border-radius: var(--radius-sm);
-    display: block;
-    height: 100%;
-    -o-object-fit: cover;
-    object-fit: cover;
-    width: 100%
 }
 
 .smallCardBody__250d5 {
@@ -2426,4 +2409,4 @@
     gap: var(--space-4)
 }
 
-/*# sourceMappingURL=aabe7b99c462e649.css.map*/
+/*# sourceMappingURL=bcf95e0c9893f4ab.css.map*/

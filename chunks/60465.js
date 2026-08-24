@@ -1,20 +1,21 @@
 "use strict";
-n.d(t, { default: () => u, p: () => d });
+n.d(t, { default: () => _, p: () => c });
 var i = n(477900),
     r = n(284009),
     a = n.n(r),
     s = n(192308),
-    l = n(228366);
-let o = "GAME_PROFILE_MODAL";
-function d() {
-    (0, s.closeModalInAllContexts)(o);
+    l = n(228366),
+    o = n(957807);
+let d = "GAME_PROFILE_MODAL";
+function c() {
+    (0, s.closeModalInAllContexts)(d);
 }
-function c(e) {
+function u(e) {
     l.h.dispatch({ type: "GAME_PROFILE_CLEAR_PENDING_RETURN", gameId: e });
 }
-let u = {
+let _ = {
     openGameProfileModal: function (e) {
-        let { gameId: t, gameProfileModalChecks: r, source: l, sourceUserId: d, appContext: c } = e;
+        let { gameId: t, gameProfileModalChecks: r, source: l, sourceUserId: c, appContext: u } = e;
         a()(
             r.shouldOpenGameProfile,
             "Passed a false value for [gameProfileModalChecks]. Are you using the useShouldOpenGameProfile hook correctly?",
@@ -23,6 +24,7 @@ let u = {
                 r.gameId === t,
                 "Passed an unexpected [gameId]. Are you passing a different one than you passed to useShouldOpenGameProfileModal?",
             ),
+            (0, o.U)(t),
             (0, s.openModalLazy)(
                 async () => {
                     let { default: e } = await Promise.all([
@@ -34,7 +36,7 @@ let u = {
                         n.e("85427"),
                         n.e("560570"),
                         n.e("797845"),
-                        n.e("570385"),
+                        n.e("531198"),
                         n.e("491899"),
                         n.e("867721"),
                         n.e("567999"),
@@ -544,18 +546,18 @@ let u = {
                         n.e("631951"),
                         n.e("921041"),
                         n.e("238672"),
-                        n.e("949067"),
+                        n.e("61450"),
                         n.e("86454"),
                         n.e("85330"),
-                    ]).then(n.bind(n, 995142));
-                    return (n) => (0, i.jsx)(e, { gameId: t, source: l, sourceUserId: d, ...n, appContext: c }, t);
+                    ]).then(n.bind(n, 508433));
+                    return (n) => (0, i.jsx)(e, { gameId: t, source: l, sourceUserId: c, ...n, appContext: u }, t);
                 },
-                { modalKey: o, contextKey: null != c ? (0, s.modalContextFromAppContext)(c) : void 0 },
+                { modalKey: d, contextKey: null != u ? (0, s.modalContextFromAppContext)(u) : void 0 },
             );
     },
     returnToGameProfile: function (e) {
         let { gameId: t, source: r, initialScrollOffset: a } = e;
-        c(t),
+        u(t),
             (0, s.openModalLazy)(
                 async () => {
                     let { default: e } = await Promise.all([
@@ -567,7 +569,7 @@ let u = {
                         n.e("85427"),
                         n.e("560570"),
                         n.e("797845"),
-                        n.e("570385"),
+                        n.e("531198"),
                         n.e("491899"),
                         n.e("867721"),
                         n.e("567999"),
@@ -1077,18 +1079,18 @@ let u = {
                         n.e("631951"),
                         n.e("921041"),
                         n.e("238672"),
-                        n.e("949067"),
+                        n.e("61450"),
                         n.e("86454"),
                         n.e("85330"),
-                    ]).then(n.bind(n, 995142));
+                    ]).then(n.bind(n, 508433));
                     return (n) => (0, i.jsx)(e, { gameId: t, source: r, initialScrollOffset: a, ...n }, t);
                 },
-                { modalKey: o },
+                { modalKey: d },
             );
     },
     setGameProfilePendingReturn: function (e) {
         let { gameId: t, channelId: n, initialScrollOffset: i } = e;
         l.h.dispatch({ type: "GAME_PROFILE_SET_PENDING_RETURN", gameId: t, channelId: n, initialScrollOffset: i });
     },
-    clearGameProfilePendingReturn: c,
+    clearGameProfilePendingReturn: u,
 };

@@ -19,7 +19,7 @@ function E(e) {
     return _(e) && t;
 }
 function A(e) {
-    return (0, a.v)(e);
+    return (0, a.v4)(e);
 }
 function h(e) {
     let t = l.A.toURLSafe(e);

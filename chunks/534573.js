@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { C: () => o, v: () => l });
+n.d(t, { Ec: () => d, v4: () => o });
 var i = n(332714),
     r = n(776231),
     a = n(998218);
@@ -10,15 +10,29 @@ let s = new Set(
         .filter(Boolean),
 );
 function l(e) {
+    return String((0, r.kr)(e * (0, r.mZ)()));
+}
+function o(e) {
     return (s.has(e.hostname) || !1) && e.pathname.startsWith("/external/");
 }
-function o(e, t) {
-    let { size: n, keepAspectRatio: i } = t,
-        s = a.A.toURLSafe(e);
-    if (null == s || !l(s)) return e;
-    if (null != n) {
-        let e = String((0, r.kr)(n * (0, r.mZ)()));
-        s.searchParams.set("width", e), s.searchParams.set("height", e);
+function d(e, t) {
+    let n = a.A.toURLSafe(e);
+    if (null == n) return e;
+    if (o(n)) {
+        let n = a.A.toURLSafe(e);
+        if (null == n || !o(n)) return e;
+        if (null != t.size) {
+            let e = l(t.size);
+            n.searchParams.set("width", e), n.searchParams.set("height", e);
+        }
+        return (
+            !(function (e, t) {
+                let { keepAspectRatio: n, format: i } = t;
+                null != n && e.searchParams.set("keep_aspect_ratio", String(n)),
+                    null != i && e.searchParams.set("format", i);
+            })(n, t),
+            n.toString()
+        );
     }
-    return null != i && s.searchParams.set("keep_aspect_ratio", String(i)), s.toString();
+    return a.A.isDiscordCdnUrl(e) ? (null != t.size && n.searchParams.set("size", l(t.size)), n.toString()) : e;
 }

@@ -10,7 +10,7 @@ function s(e, t, n) {
             if ((0, a.uJ)(t.value)) return null;
             return r.Ay.getGameAssetURL({ id: e, hash: t.value, ...n }) ?? null;
         case "url":
-            return (0, i.C)(t.value, { size: n?.size, keepAspectRatio: n?.keepAspectRatio });
+            return (0, i.Ec)(t.value, { size: n?.size, keepAspectRatio: n?.keepAspectRatio, format: n?.format });
         default:
             return null;
     }
