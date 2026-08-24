@@ -139,6 +139,9 @@ class h extends a.Ay.DeviceSettingsStore {
     get hdrDynamicRange() {
         return A.hdrDynamicRange ?? "no-limit";
     }
+    get pauseSelfStreamPreviewWhenUnfocused() {
+        return A.pauseSelfStreamPreviewWhenUnfocused ?? !0;
+    }
 }
 let I = new h(l.h, {
     UNSYNCED_USER_SETTINGS_UPDATE: function (e) {
