@@ -7,7 +7,7 @@ n.d(t, {
     Im: () => I,
     St: () => m,
     UT: () => g,
-    Vh: () => R,
+    Vh: () => O,
     WU: () => A,
     _7: () => h,
     mU: () => N,
@@ -50,6 +50,7 @@ var i,
         (i.AGE_RESTRICTED_SERVERS_ACCESS_SETTINGS = "age_restricted_servers_access_settings"),
         (i.FAMILY_CENTER_CONNECTION = "family_center_connection"),
         (i.PARENTAL_CONSENT_LOCKOUT = "parental_consent_lockout"),
+        (i.TINY_BRONCO_POPOVER = "tiny_bronco_popover"),
         i),
     A =
         (((r = {})[(r.PRIMARY = 1)] = "PRIMARY"),
@@ -113,6 +114,6 @@ var C =
     (d.ID_FAILED = "id_failed"),
     (d.UNDERAGE = "underage"),
     d);
-function R(e) {
+function O(e) {
     u.default.track(_.HAw.AGE_VERIFICATION_TOAST_VIEWED, { toast_type: e });
 }

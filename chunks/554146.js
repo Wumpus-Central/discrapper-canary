@@ -666,6 +666,7 @@ var i,
         (i[(i.GAME_SERVER_HOSTING_IN_SHOP_DETECTION_NEW_BADGE = 810)] =
             "GAME_SERVER_HOSTING_IN_SHOP_DETECTION_NEW_BADGE"),
         (i[(i.COD_3PP_NAGBAR_NOTICE = 811)] = "COD_3PP_NAGBAR_NOTICE"),
+        (i[(i.TINY_BRONCO = 812)] = "TINY_BRONCO"),
         i),
     s =
         (((r = {})[(r.DISABLE_UNSAFE_COMMUNITY_PERMISSIONS_NOTICE = 0)] =
