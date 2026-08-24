@@ -1455,7 +1455,7 @@ if (
     n.e("859864").then(n.t.bind(n, 122123, 19));
 let e2 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 new eB.A().log(
-    `[BUILD INFO] Release Channel: ${e2}, Build Number: 600016, Version Hash: 7fad524a64a01e9a161d2011d399a3cb3fbc39da`,
+    `[BUILD INFO] Release Channel: ${e2}, Build Number: 600047, Version Hash: fdbf7f3cef680d041349aab555a8d543c261e72b`,
 ),
     D.A.setTags({ appContext: G.QCW }),
     eI.A.initBasic(),
@@ -20907,7 +20907,7 @@ let Nd = "isHideDevBanner",
                     className: ta()(No.Wz, No.mr),
                     children: [
                         (0, O.jsx)(Nl, { className: No.Kk }),
-                        tT.intl.format(tT.t.uyrfYF, { buildNumber: "600016" }),
+                        tT.intl.format(tT.t.uyrfYF, { buildNumber: "600047" }),
                         (0, O.jsx)(r, {}),
                     ],
                 })
@@ -32172,7 +32172,8 @@ let D$ = (0, nX.Fe)({
         createPromise: () =>
             Promise.all([
                 n.e("267506"),
-                n.e("123091"),
+                n.e("651299"),
+                n.e("291060"),
                 n.e("401425"),
                 n.e("732130"),
                 n.e("93656"),
@@ -33082,6 +33083,7 @@ let D$ = (0, nX.Fe)({
                 n.e("45646"),
                 n.e("668526"),
                 n.e("125466"),
+                n.e("651299"),
                 n.e("460582"),
                 n.e("477751"),
                 n.e("232658"),
@@ -33384,7 +33386,8 @@ let D$ = (0, nX.Fe)({
         createPromise: () =>
             Promise.all([
                 n.e("267506"),
-                n.e("123091"),
+                n.e("651299"),
+                n.e("291060"),
                 n.e("401425"),
                 n.e("732130"),
                 n.e("93656"),

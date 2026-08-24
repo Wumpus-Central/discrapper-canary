@@ -119,6 +119,7 @@ let E = {
             { name: "RAFTERS_SEAT_3", getLabel: u(a.default.IE3e0y, 3), position: i[r.I.DEFAULT][20] },
         ],
         plants: [{ x: 45.57, y: 50.62 }],
+        ducky: { x: 67.3, y: 45 },
         screen: {
             topLeft: { x: 56.8, y: 16.15 },
             topRight: { x: 75.85, y: 23 },

@@ -1,4 +1,4 @@
-n.d(t, { Df: () => M, LB: () => j });
+n.d(t, { Df: () => N, LB: () => j });
 var i = n(367513),
     r = n(465532),
     l = n(148494),
@@ -12,16 +12,16 @@ var i = n(367513),
     h = n(931664),
     m = n(631576),
     g = n(761640),
-    f = n(734057),
-    E = n(72314),
+    E = n(734057),
+    f = n(72314),
     b = n(31717),
     p = n(580745),
     C = n(232835),
     S = n(573163),
     v = n(309010),
     _ = n(967198),
-    T = n(712687),
-    O = n(531685),
+    O = n(712687),
+    T = n(531685),
     x = n(625494),
     y = n(652215);
 function j(e) {
@@ -29,9 +29,9 @@ function j(e) {
         binds: ["esc", "shift+pagedown"],
         comboKeysBindGlobal: !0,
         action(t) {
-            if (O.A.isElementFullScreen()) return !1;
+            if (T.A.isElementFullScreen()) return !1;
             if (x._.hasSubscribers(y.jej.CALL_DECLINE)) return x._.dispatch(y.jej.CALL_DECLINE), !1;
-            if (T.A.close()) return !1;
+            if (O.A.close()) return !1;
             if (x._.hasSubscribers(y.jej.MEDIA_MODAL_CLOSE)) return x._.dispatch(y.jej.MEDIA_MODAL_CLOSE), !1;
             let n = (0, o.wp)(t);
             if (n?.hasSubscribers(y.jej.POPOUT_CLOSE)) return n.dispatch(y.jej.POPOUT_CLOSE), !1;
@@ -44,10 +44,12 @@ function j(e) {
                 return n.dispatch(y.jej.POPOUT_CLOSE_AFTER_MODALS), !1;
             let r = _.A.getGuildId(),
                 l = e ?? v.Ay.getChannelId(r),
-                s = f.A.getChannel(l),
+                s = E.A.getChannel(l),
                 u = g.Ay.getSection(l, s?.isDM()) === y.YvQ.SIDEBAR_CHAT ? g.Ay.getSidebarState(l) : null,
                 c = u?.type === A.PE.VIEW_THREAD || u?.type === A.PE.VIEW_CHANNEL ? u.channelId : null;
             if (!1 === R(l) || !1 === R(c)) return !1;
+            if (x._.hasSubscribers(y.jej.GUILD_ROOM_NOTE_PLACEMENT_CANCEL))
+                return x._.dispatch(y.jej.GUILD_ROOM_NOTE_PLACEMENT_CANCEL), !1;
             if (x._.hasSubscribers(y.jej.GUILD_ROOM_VIDEO_OVERLAY_CLOSE))
                 return x._.dispatch(y.jej.GUILD_ROOM_VIDEO_OVERLAY_CLOSE), !1;
             if (null != l && u?.type === A.PE.CREATE_THREAD) return d.A.closeChannelSidebar(l), !1;
@@ -55,7 +57,7 @@ function j(e) {
                 m = I(c);
             return (
                 null == l || h || m || null == u
-                    ? null != l && !h && !1 !== E.A.isAtBottom(l) && a.A.getChatOpen(l)
+                    ? null != l && !h && !1 !== f.A.isAtBottom(l) && a.A.getChatOpen(l)
                         ? i.A.updateChatOpen(l, !1)
                         : x._.dispatch(y.jej.SCROLLTO_PRESENT)
                     : d.A.closeChannelSidebar(l),
@@ -87,4 +89,4 @@ function I(e) {
         t
     );
 }
-let M = j();
+let N = j();

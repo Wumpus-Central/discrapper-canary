@@ -1,4 +1,4 @@
-n.d(t, { A: () => g });
+n.d(t, { A: () => C });
 var i = n(477900),
     l = n(582128),
     a = n(503698),
@@ -8,19 +8,20 @@ var i = n(477900),
     c = n(323073),
     d = n(616356),
     u = n(280450),
-    h = n(861094),
-    p = n(170865),
-    m = n(948822),
-    f = n(321486),
-    A = n(989952);
-let x = 16 / 9;
-function g(e) {
+    h = n(544299),
+    p = n(861094),
+    m = n(170865),
+    f = n(948822),
+    A = n(321486),
+    x = n(989952);
+let g = 16 / 9;
+function C(e) {
     let { channelId: t, corners: n, roomWidth: a } = e,
         {
-            screenBounds: g,
-            screenClipPath: C,
-            center: y,
-            boundingBoxCorners: j,
+            screenBounds: C,
+            screenClipPath: y,
+            center: j,
+            boundingBoxCorners: I,
         } = l.useMemo(() => {
             let e = (function (e) {
                     let { topLeft: t, topRight: n, bottomRight: i, bottomLeft: l } = e,
@@ -60,9 +61,9 @@ function g(e) {
                 boundingBoxCorners: t,
             };
         }, [n]),
-        { ref: I, width: v, height: N } = (0, r.Ay)(),
-        E = l.useMemo(() => (null == v || null == N ? null : (0, h.t)(j, v, N, x)), [j, v, N]),
-        b = Math.min(48, Math.max(20, 0.025 * a)),
+        { ref: N, width: v, height: E } = (0, r.Ay)(),
+        b = l.useMemo(() => (null == v || null == E ? null : (0, p.t)(I, v, E, g)), [I, v, E]),
+        T = Math.min(48, Math.max(20, 0.025 * a)),
         _ = (0, o.yK)([d.A, u.default], () => {
             if ((0, c.F2)(t)) return [];
             let e = u.default.getId();
@@ -70,16 +71,18 @@ function g(e) {
                 (t, n) => Number(t.ownerId === e) - Number(n.ownerId === e),
             );
         }),
-        T = l.useMemo(() => (null == N ? 0 : -(((j.topLeft.y + j.topRight.y) / 2 / 100) * N)), [j, N]);
+        R = (0, h.Y1)(t),
+        S = l.useMemo(() => (null == E ? 0 : -(((I.topLeft.y + I.topRight.y) / 2 / 100) * E)), [I, E]);
     return (0, i.jsxs)("div", {
-        ref: I,
-        className: A.nj,
-        style: { left: `${g.left}%`, top: `${g.top}%`, width: `${g.width}%`, height: `${g.height}%`, clipPath: C },
+        ref: N,
+        className: x.nj,
+        inert: R,
+        style: { left: `${C.left}%`, top: `${C.top}%`, width: `${C.width}%`, height: `${C.height}%`, clipPath: y },
         children: [
-            _.length > 0 && null != E && null != v
-                ? (0, i.jsx)(f.A, { streams: _, fit: E, tooltipSpacing: T, containerWidthPx: v })
-                : (0, i.jsx)(m.A, { channelId: t, center: y, iconSize: b }),
-            (0, i.jsx)(p.A, { className: s()(A.MQ, A.zq) }),
+            _.length > 0 && null != b && null != v
+                ? (0, i.jsx)(A.A, { streams: _, fit: b, tooltipSpacing: S, containerWidthPx: v })
+                : (0, i.jsx)(f.A, { channelId: t, center: j, iconSize: T }),
+            (0, i.jsx)(m.A, { className: s()(x.MQ, x.zq) }),
         ],
     });
 }

@@ -1,4 +1,4 @@
-n.d(t, { A: () => g });
+n.d(t, { A: () => y });
 var i = n(477900),
     l = n(582128),
     a = n(939249),
@@ -10,13 +10,15 @@ var i = n(477900),
     u = n(446243),
     h = n(538638),
     p = n(558076),
-    m = n(996752),
-    f = n(375708),
-    A = n(781505);
-function x() {
+    m = n(544299),
+    f = n(996752),
+    A = n(1195),
+    x = n(375708),
+    g = n(781505);
+function C() {
     let e = l.useId();
     return (0, i.jsxs)("svg", {
-        className: A.fA,
+        className: g.fA,
         width: "80",
         height: "80",
         viewBox: "0 0 80 80",
@@ -25,10 +27,10 @@ function x() {
         xmlns: "http://www.w3.org/2000/svg",
         children: [
             (0, i.jsx)("g", {
-                className: A.ys,
+                className: g.ys,
                 opacity: "0.2",
                 filter: `url(#${e})`,
-                children: (0, i.jsx)("circle", { className: A.GS, cx: "40", cy: "40", r: "20", fill: "white" }),
+                children: (0, i.jsx)("circle", { className: g.GS, cx: "40", cy: "40", r: "20", fill: "white" }),
             }),
             (0, i.jsx)("defs", {
                 children: (0, i.jsxs)("filter", {
@@ -51,33 +53,38 @@ function x() {
         ],
     });
 }
-function g(e) {
-    let { channelId: t, x: n, y: g, label: C, roomWidth: y } = e,
-        j = (0, s.bG)([d.Ay], () => d.Ay.getVoiceChannelId() === t),
-        I = (0, s.bG)([p.A], () =>
+function y(e) {
+    let { channelId: t, x: n, y, label: j, roomWidth: I } = e,
+        N = (0, s.bG)([d.Ay], () => d.Ay.getVoiceChannelId() === t),
+        v = (0, s.bG)([p.A], () =>
             p.A.getRoomUsers(t)
                 .values()
-                .some((e) => e.position?.x === n && e.position?.y === g),
+                .some((e) => e.position?.x === n && e.position?.y === y),
         ),
-        v = (0, s.bG)([c.A], () => c.A.getChannel(t)?.guild_id),
-        N = l.useCallback(async () => {
-            null != v &&
-                (j
-                    ? (0, u.AQ)(v, t, { user_position: { x: n, y: g } }).catch((e) => (0, h.b)({ silent: !0 }))
-                    : ((0, u.TJ)({ x: n, y: g }), (await (0, o.A)({ channelId: t })) || (0, u.Ys)()));
-        }, [j, v, t, n, g]);
-    if (I || null == v) return null;
-    let { numericAvatarSize: E } = (0, m.F)(y),
-        b = 1.2 * Math.max(E, 24);
+        E = (0, s.bG)([c.A], () => c.A.getChannel(t)?.guild_id),
+        b = l.useCallback(async () => {
+            null != E &&
+                (N
+                    ? (0, u.AQ)(E, t, { user_position: { x: n, y } }).catch((e) => (0, h.b)({ silent: !0 }))
+                    : ((0, u.TJ)({ x: n, y }), (await (0, o.A)({ channelId: t })) || (0, u.Ys)()));
+        }, [N, E, t, n, y]),
+        T = (0, m.Sb)({
+            position: { x: n, y },
+            targetLabel: x.intl.formatToPlainString(A.default.NYm6Cb, { seatLabel: j }),
+        });
+    if (v || null == E) return null;
+    let { numericAvatarSize: _ } = (0, f.F)(I),
+        R = 1.2 * Math.max(_, 24);
     return (0, i.jsx)(r.m, {
-        text: j ? null : f.intl.string(f.t["96ANUN"]),
+        text: N || null != T ? null : x.intl.string(x.t["96ANUN"]),
         children: (0, i.jsx)(a.D, {
             role: "listitem",
-            "aria-label": C,
-            className: A.am,
-            style: { width: b, height: b, left: `calc(${n}% - ${b / 2}px)`, top: `calc(${g}% - ${b / 2}px)` },
-            onClick: N,
-            children: (0, i.jsx)(x, {}),
+            "aria-label": j,
+            className: g.am,
+            style: { width: R, height: R, left: `calc(${n}% - ${R / 2}px)`, top: `calc(${y}% - ${R / 2}px)` },
+            onClick: b,
+            ...T,
+            children: (0, i.jsx)(C, {}),
         }),
     });
 }

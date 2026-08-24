@@ -14,48 +14,53 @@ var i = n(477900),
     f = n(309010),
     A = n(287809),
     x = n(920639),
-    g = n(360729);
+    g = n(360729),
+    C = n(544299);
 n(980504);
-var C = n(1195),
-    y = n(375708),
-    j = n(130390),
-    I = n(452933);
+var y = n(1195),
+    j = n(375708),
+    I = n(130390),
+    N = n(452933);
 function v(e) {
-    let { channelId: t } = e,
-        n = (0, o.bG)([p.A], () => p.A.getChannel(t)?.guild_id),
-        { interactionsEnabled: a } = g.A.useExperiment(
-            { guildId: n, location: "GuildRoom" },
+    let { channelId: t, position: n } = e,
+        a = (0, o.bG)([p.A], () => p.A.getChannel(t)?.guild_id),
+        { interactionsEnabled: s } = g.A.useExperiment(
+            { guildId: a, location: "GuildRoom" },
             { autoTrackExposure: !1 },
         );
     l.useEffect(() => {
-        a && (0, c.E7)({ disableAnalytics: !0 });
-    }, [a]);
-    let s = (0, o.bG)([d.A], () => d.A.getSound("0", "1")),
-        r = (0, i.jsx)("img", { className: j.wZ, src: I.A, alt: y.intl.string(C.default["93KE7U"]) });
-    return a && null != s
-        ? (0, i.jsx)(N, { channelId: t, sound: s, children: r })
-        : (0, i.jsx)("div", { role: "listitem", className: j.p9, children: r });
+        s && (0, c.E7)({ disableAnalytics: !0 });
+    }, [s]);
+    let r = (0, o.bG)([d.A], () => d.A.getSound("0", "1")),
+        u = (0, i.jsx)("img", { className: I.wZ, src: N.A, alt: j.intl.string(y.default["93KE7U"]) }),
+        h = { insetInlineStart: `${n.x}%`, insetBlockStart: `${n.y}%` };
+    return s && null != r
+        ? (0, i.jsx)(E, { channelId: t, position: n, positionStyle: h, sound: r, children: u })
+        : (0, i.jsx)("div", { role: "listitem", className: I.p9, style: h, children: u });
 }
-function N(e) {
-    let { channelId: t, sound: n, children: a } = e,
-        c = (0, o.bG)([A.default], () => A.default.getCurrentUser()),
-        d = (0, o.bG)([p.A], () => p.A.getChannel(t)),
-        g = (0, o.bG)([m.Ay], () => m.Ay.isDeaf()),
-        C = (0, o.bG)([f.Ay], () => f.Ay.getVoiceChannelId() === t),
-        { playSoundboardSound: y } = (0, h.A)(n, t),
-        I = C && (0, u.Ir)(c, n, d) && (0, u.Au)(d) && !g,
-        v = l.useCallback(() => {
-            if (I) {
-                y();
-                let e = d?.id;
+function E(e) {
+    let { channelId: t, position: n, positionStyle: a, sound: c, children: d } = e,
+        g = (0, o.bG)([A.default], () => A.default.getCurrentUser()),
+        N = (0, o.bG)([p.A], () => p.A.getChannel(t)),
+        v = (0, o.bG)([m.Ay], () => m.Ay.isDeaf()),
+        E = (0, o.bG)([f.Ay], () => f.Ay.getVoiceChannelId() === t),
+        { playSoundboardSound: b } = (0, h.A)(c, t),
+        T = E && (0, u.Ir)(g, c, N) && (0, u.Au)(N) && !v,
+        _ = l.useCallback(() => {
+            if (T) {
+                b();
+                let e = N?.id;
                 null != e && (0, x.n0)({ interactionType: "duck_quacked", channelId: e });
             }
-        }, [I, y, d?.id]);
+        }, [T, b, N?.id]),
+        R = (0, C.Sb)({ position: n, targetLabel: j.intl.string(y.default["93KE7U"]) });
     return (0, i.jsx)(r.D, {
         role: "listitem",
-        className: s()(j.uA, I ? void 0 : j.r9),
-        "aria-disabled": !I,
-        onClick: v,
-        children: a,
+        className: s()(I.uA, T ? void 0 : I.r9),
+        style: a,
+        "aria-disabled": !T && null == R,
+        onClick: _,
+        ...R,
+        children: d,
     });
 }

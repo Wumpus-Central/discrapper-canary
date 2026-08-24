@@ -1,4 +1,4 @@
-n.d(t, { A: () => N });
+n.d(t, { A: () => E });
 var i = n(477900),
     l = n(582128),
     a = n(17928),
@@ -17,35 +17,41 @@ var i = n(477900),
     g = n(920639),
     C = n(538638),
     y = n(781137),
-    j = n(1195),
-    I = n(375708),
+    j = n(544299),
+    I = n(1195),
+    N = n(375708),
     v = n(505252);
-function N(e) {
-    let { channelId: t, note: n, roomWidth: N } = e,
-        [E, b] = (0, l.useState)(!1),
+function E(e) {
+    let { channelId: t, note: n, roomWidth: E } = e,
+        [b, T] = (0, l.useState)(!1),
         _ = (0, l.useRef)(null),
-        T = (0, a.bG)([f.default], () => f.default.getUser(n.createdBy)),
-        R = (0, a.bG)([m.A], () => m.A.getChannel(t)?.guild_id),
-        S = (0, A.tx)(R, t, T);
-    return null == T || null == R
+        R = (0, a.bG)([f.default], () => f.default.getUser(n.createdBy)),
+        S = (0, a.bG)([m.A], () => m.A.getChannel(t)?.guild_id),
+        L = (0, A.tx)(S, t, R),
+        O = (0, j.Sb)({
+            position: n.position,
+            targetLabel: N.intl.formatToPlainString(I.default.w5Latp, { userName: L }),
+        });
+    return null == R || null == S
         ? null
         : (0, i.jsxs)(i.Fragment, {
               children: [
                   (0, i.jsx)(o.D, {
                       innerRef: _,
                       role: "listitem",
-                      "aria-label": I.intl.formatToPlainString(j.default.w5Latp, { userName: S }),
+                      "aria-label": N.intl.formatToPlainString(I.default.w5Latp, { userName: L }),
                       className: v.kL,
                       onClick: () => {
-                          E || (0, g.Ql)({ channelId: t, interactionType: "note_opened" }), b(!E);
+                          b || (0, g.Ql)({ channelId: t, interactionType: "note_opened" }), T(!b);
                       },
                       style: { left: `${n.position.x}%`, top: `${n.position.y}%` },
-                      children: (0, i.jsx)(y.A, { roomWidth: N }),
+                      ...O,
+                      children: (0, i.jsx)(y.A, { roomWidth: E }),
                   }),
                   (0, i.jsxs)(s.x, {
-                      shouldShow: E,
+                      shouldShow: b,
                       onRequestClose: () => {
-                          b(!1);
+                          T(!1);
                       },
                       closeOnClickOutside: !0,
                       targetElementRef: _,
@@ -60,21 +66,21 @@ function N(e) {
                                               className: v.kQ,
                                               children: [
                                                   (0, i.jsx)(c.eu, {
-                                                      "aria-label": S,
-                                                      src: T.getAvatarURL(R, 24),
+                                                      "aria-label": L,
+                                                      src: R.getAvatarURL(S, 24),
                                                       size: d._3.SIZE_24,
                                                       className: v.my,
                                                   }),
                                                   (0, i.jsx)(u.E, {
                                                       variant: "text-md/normal",
                                                       lineClamp: 1,
-                                                      children: S,
+                                                      children: L,
                                                   }),
                                               ],
                                           }),
                                           (0, i.jsx)(o.D, {
                                               onClick: function () {
-                                                  null != R && (0, x.yF)(R, t, n.objectId).catch((e) => (0, C.b)());
+                                                  null != S && (0, x.yF)(S, t, n.objectId).catch((e) => (0, C.b)());
                                               },
                                               className: v.Kk,
                                               children: (0, i.jsx)(h.TrashIcon, { size: "sm", color: "currentColor" }),
