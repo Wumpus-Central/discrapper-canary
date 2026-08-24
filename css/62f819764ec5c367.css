@@ -87,4 +87,53 @@ screen and (max-width:485px) {
     border-end-start-radius: var(--radius-md)
 }
 
-/*# sourceMappingURL=8c7fcea2a281d159.css.map*/
+.childButton__3ed08 {
+    align-items: center;
+    background-color: var(--background-base-lower);
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 8px;
+    padding: 0
+}
+
+.childButton__3ed08:hover {
+    background-color: var(--interactive-background-hover)
+}
+
+.keyboard-mode .childButton__3ed08:focus {
+    background-color: var(--interactive-background-selected)
+}
+
+.childButton__3ed08:active {
+    background-color: var(--interactive-background-active)
+}
+
+.childContent__3ed08 {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    margin-block: 8px;
+    margin-inline: 16px 0;
+    padding: var(--space-12) 0
+}
+
+.childText__3ed08 {
+    margin: 0
+}
+
+.debugText__3ed08 {
+    margin-top: 4px
+}
+
+.childIcon__3ed08 {
+    color: var(--interactive-text-default);
+    flex-shrink: 0;
+    height: 24px;
+    margin-block: 0;
+    margin-inline: 8px 16px;
+    width: 24px
+}
+
+/*# sourceMappingURL=62f819764ec5c367.css.map*/
