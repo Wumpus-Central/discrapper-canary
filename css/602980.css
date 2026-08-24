@@ -166,10 +166,6 @@
     width: 18px
 }
 
-.choosePaymentSourceType__6181b {
-    margin-top: 20px
-}
-
 .buyButtonTooltipWrapper__6181b {
     position: relative
 }
@@ -220,24 +216,68 @@
     color: var(--text-default)
 }
 
-.body_af4c15 {
-    padding-bottom: 16px;
-    padding-top: 16px
+.container_ceece4 {
+    --custom-payment-element-min-height: 430px
 }
 
-.body_d31d57 {
-    padding-bottom: 16px;
-    padding-top: 16px
+.body_ceece4 {
+    margin-top: var(--space-12);
+    min-height: var(--custom-payment-element-min-height);
+    padding: 0 4px
 }
 
-.nonTopInputWrapper_d31d57 {
-    padding-top: 20px
+.addressElementContainer_ceece4,
+.loadingContainer_ceece4 {
+    flex-direction: column
 }
 
-.bankSelectionStub_d31d57 {
+.loadingContainer_ceece4 {
     display: flex;
-    height: 243px;
-    justify-content: center
+    justify-content: center;
+    min-height: var(--custom-payment-element-min-height)
 }
 
-/*# sourceMappingURL=379134.c882b19a6e46d845.css.map*/
+.visible_ceece4 {
+    transform: translateX(0)
+}
+
+.full-motion .visible_ceece4 {
+    transition: transform .2s ease-out
+}
+
+.rightToLeftEntry_ceece4 {
+    transform: translateX(100%)
+}
+
+.leftToRightEntry_ceece4 {
+    transform: translateX(-100%)
+}
+
+.hidden_ceece4 {
+    height: 0;
+    visibility: hidden
+}
+
+.full-motion .hidden_ceece4 {
+    transition: transform .2s ease-out
+}
+
+.cardElementContainer_ceece4.visible_ceece4,
+.defaultPaymentElementContainer_ceece4.visible_ceece4 {
+    min-height: var(--custom-payment-element-min-height)
+}
+
+.customPaymentElementContainer_ceece4.visible_ceece4 {
+    min-height: 160px
+}
+
+.addressElementContainer_ceece4.visible_ceece4 {
+    min-height: 500px
+}
+
+.addressElementContainer_ceece4.hidden_ceece4 {
+    height: 0;
+    min-height: 0
+}
+
+/*# sourceMappingURL=602980.5b4474ba4eb19dc0.css.map*/

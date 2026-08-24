@@ -21,11 +21,11 @@ var i = n(477900),
     P = n(480642),
     k = n(87725),
     y = n(174459),
-    v = n(840251),
-    M = n(688151),
+    M = n(840251),
+    v = n(688151),
     C = n(652215);
-let D = new v.E([], M.$G.PAYMENT_FLOW_STARTED, { location: "payment flow started" });
-var N = n(319437),
+let N = new M.E([], v.$G.PAYMENT_FLOW_STARTED, { location: "payment flow started" });
+var D = n(319437),
     g = n(45787),
     w = n(51501),
     O = n(724651),
@@ -33,11 +33,11 @@ var N = n(319437),
     R = n(511484),
     U = n(251913),
     x = n(166532),
-    Y = n(71319),
-    F = n(344159),
-    G = n(97352),
-    H = n(45938),
-    W = n(158045),
+    F = n(71319),
+    G = n(344159),
+    H = n(97352),
+    W = n(45938),
+    Y = n(158045),
     j = n(951305),
     L = n(566980),
     z = n(216641),
@@ -107,8 +107,8 @@ function et(e) {
             analyticsDataOverride: t,
             analyticsLocations: n,
             analyticsLocation: P,
-            analyticsObject: v,
-            analyticsSourceLocation: M,
+            analyticsObject: M,
+            analyticsSourceLocation: v,
             analyticsSubscriptionType: b = C.rzx.PREMIUM,
             onComplete: q,
             transitionState: V,
@@ -139,11 +139,11 @@ function et(e) {
             tenantManagesPaymentAuth: ek = !1,
             paymentModalVersion: ey = "v1",
         } = e,
-        { paymentSources: ev, hasPaymentSources: eM } = (0, E.j)(),
+        { paymentSources: eM, hasPaymentSources: ev } = (0, E.j)(),
         {
             selectedSkuId: eC,
-            setSelectedSkuId: eD,
-            setSelectedPlanId: eN,
+            setSelectedSkuId: eN,
+            setSelectedPlanId: eD,
             purchaseState: eg,
             setPurchaseState: ew,
             contextMetadata: eO,
@@ -151,11 +151,11 @@ function et(e) {
             setPurchaseError: eR,
             priceOptions: eU,
             activeSubscription: ex,
-            purchaseType: eY,
-            defaultPlanId: eF,
-            customCheckoutFlow: eG,
-            unifiedCheckoutFlow: eH,
-            quantity: eW,
+            purchaseType: eF,
+            defaultPlanId: eG,
+            customCheckoutFlow: eH,
+            unifiedCheckoutFlow: eW,
+            quantity: eY,
         } = (0, k.t4)((e) => ({
             selectedSkuId: e.selectedSkuId,
             setSelectedSkuId: e.setSelectedSkuId,
@@ -176,7 +176,7 @@ function et(e) {
         { displayCurrency: ej } = (0, T.Jn)(),
         { activitySessionId: eL } = (0, S.V)(),
         { paymentAuthenticationState: ez } = (0, A.o)(),
-        eq = (0, a.bG)([Y.A], () => Y.A.purchaseTokenAuthState),
+        eq = (0, a.bG)([F.A], () => F.A.purchaseTokenAuthState),
         eV = (0, m.sw)(),
         eJ = (0, h.A)(),
         eK = (0, I.S3)(),
@@ -195,9 +195,9 @@ function et(e) {
         [e9, e7] = l.useState({
             load_id: eO.loadId,
             discovery_session_id: eO.discoverySessionId,
-            payment_type: C.frM[eY],
-            location: P ?? v,
-            source: M,
+            payment_type: C.frM[eF],
+            location: P ?? M,
+            source: v,
             subscription_type: b,
             subscription_plan_id: eJ?.id ?? J,
             is_gift: eZ,
@@ -210,18 +210,18 @@ function et(e) {
             activity_session_id: eL,
             eligible_for_discount: e3,
             sku_product_line: eK?.productLine,
-            quantity: eW,
+            quantity: eY,
             checkout_design: p.r.UNIFIED,
-            checkout_flow: eH,
+            checkout_flow: eW,
             open_invoice_id: es,
             ...t,
         }),
-        te = (0, z.W)(ev, eb),
+        te = (0, z.W)(eM, eb),
         { giftCardBalance: tt, giftCardCurrency: tn } = (0, _.h)(),
         ti = null != eV ? eV.getDiscountIdIfExists() : void 0;
     l.useEffect(() => {
         e7((e) => {
-            let n = null != eJ ? (0, W.y8)(eJ.id, !1, eZ, { paymentSourceId: eU.paymentSourceId }) : void 0;
+            let n = null != eJ ? (0, Y.y8)(eJ.id, !1, eZ, { paymentSourceId: eU.paymentSourceId }) : void 0;
             return {
                 ...e,
                 subscription_plan_id: eJ?.id,
@@ -230,29 +230,29 @@ function et(e) {
                 currency: ej,
                 sku_id: eC,
                 sku_product_line: eK?.productLine,
-                quantity: eW,
+                quantity: eY,
                 ...t,
             };
         });
-    }, [eJ, eC, eZ, eU, ej, t, eK?.productLine, eW]),
+    }, [eJ, eC, eZ, eU, ej, t, eK?.productLine, eY]),
         (0, c.Ay)(() => {
             !(function (e) {
                 let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-                y.default.track(C.HAw.PAYMENT_FLOW_STARTED, e, t), D.trigger();
+                y.default.track(C.HAw.PAYMENT_FLOW_STARTED, e, t), N.trigger();
             })({
                 ...e9,
                 continue_session_initial_step: eI,
-                custom_checkout_flow: eG,
-                has_saved_payment_source: eM,
+                custom_checkout_flow: eH,
+                has_saved_payment_source: ev,
                 discount_id: null != e6 ? e6.discountId : ti,
             });
         }),
         l.useEffect(() => {
-            null == eJ && (null != eF && null != eI ? eN(eF) : eN(J)),
-                null != eE ? eD(eE) : null != J && eD(G.A.get(J)?.skuId);
-        }, [eN, eJ, eD, J, eE, eF, eI]);
+            null == eJ && (null != eG && null != eI ? eD(eG) : eD(J)),
+                null != eE ? eN(eE) : null != J && eN(H.A.get(J)?.skuId);
+        }, [eD, eJ, eN, J, eE, eG, eI]);
     let tl = l.useCallback(() => {
-            let e = (0, H.lo)(eB) === H.tB.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD,
+            let e = (0, W.lo)(eB) === W.tB.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD,
                 t = Date.now();
             y.default.track(C.HAw.PAYMENT_FLOW_SUCCEEDED, {
                 ...e9,
@@ -285,30 +285,30 @@ function et(e) {
                           ...e9,
                           initial_step: u ?? e,
                           continue_session_initial_step: eI,
-                          has_saved_payment_source: eM,
+                          has_saved_payment_source: ev,
                       })
                     : y.default.track(C.HAw.PAYMENT_FLOW_STEP, {
                           ...e9,
                           ...i,
                           from_step: u,
-                          to_step: e === x.pn.ADD_PAYMENT_STEPS ? x.pn.PAYMENT_TYPE : e,
+                          to_step: e === x.pn.ADD_PAYMENT_STEPS ? x.pn.PAYMENT_ELEMENT : e,
                           step_duration_ms: a - tu,
                           flow_duration_ms: a - eO.startTime,
                           gift_card_balance: tt,
                           gift_card_currency: tn,
                       });
             },
-            [e5, eS, eR, e1, eI, e9, tu, eO.startTime, tl, q, ts, eh, ta, eM, tt, tn],
+            [e5, eS, eR, e1, eI, e9, tu, eO.startTime, tl, q, ts, eh, ta, ev, tt, tn],
         );
     return (
         (0, U.b)(e1, ez, to, ew, !1, void 0, ek),
         l.useEffect(() => {
-            null != e1 && e1 !== x.pn.AWAITING_PURCHASE_TOKEN_AUTH && eq === Y.C.PENDING
+            null != e1 && e1 !== x.pn.AWAITING_PURCHASE_TOKEN_AUTH && eq === F.C.PENDING
                 ? to(x.pn.AWAITING_PURCHASE_TOKEN_AUTH)
-                : e1 === x.pn.AWAITING_PURCHASE_TOKEN_AUTH && eq === Y.C.SUCCESS && to(x.pn.REVIEW);
+                : e1 === x.pn.AWAITING_PURCHASE_TOKEN_AUTH && eq === F.C.SUCCESS && to(x.pn.REVIEW);
         }, [e1, eq, to]),
-        (0, N.A)(ta),
-        (0, F.s)(ex, () => et(!1), eZ, !ec),
+        (0, D.A)(ta),
+        (0, G.s)(ex, () => et(!1), eZ, !ec),
         (0, U.QR)(ez, ek),
         (0, i.jsx)(u.b, {
             className: X.Xn,

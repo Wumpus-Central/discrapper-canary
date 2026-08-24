@@ -1,3 +1,42 @@
+.container__3f4aa {
+    background: linear-gradient(90deg, rgba(253, 153, 233, .54), rgba(171, 127, 238, .54) 50%, rgba(88, 101, 242, .54));
+    border-radius: var(--radius-md);
+    padding: var(--space-8)
+}
+
+.theme-dark .container__3f4aa {
+    background: linear-gradient(90deg, rgba(179, 38, 156, .24), rgba(100, 29, 180, .24) 50%, rgba(20, 20, 203, .24))
+}
+
+.tile__3f4aa>div:last-child {
+    gap: 0
+}
+
+.rewardImage__3f4aa {
+    border-radius: var(--radius-xs);
+    height: 40px;
+    -o-object-fit: cover;
+    object-fit: cover;
+    width: 40px
+}
+
+.previewTotalSectionContainer__9ab7f {
+    margin-top: var(--space-16)
+}
+
+.premiumSwitchPlanSelectText__9ab7f {
+    margin-bottom: var(--space-24)
+}
+
+.framePreviewGraphic__6d898 {
+    border-radius: var(--radius-sm);
+    flex-shrink: 0;
+    height: 48px;
+    overflow: hidden;
+    position: relative;
+    width: 48px
+}
+
 .paymentRestrictionBannerContainer__52623 {
     align-items: center;
     border-radius: 4px;
@@ -55,4 +94,9 @@
     display: none
 }
 
-/*# sourceMappingURL=52978.4a9ce842eedabf97.css.map*/
+.premiumBrandRefreshInputBackground_d313e6 {
+    background-color: var(--background-mod-subtle) !important;
+    border: 0 !important
+}
+
+/*# sourceMappingURL=829096.5df0ebb5ecee5b1c.css.map*/

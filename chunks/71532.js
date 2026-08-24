@@ -1,14 +1,13 @@
 "use strict";
 let i;
-n.d(t, { Cv: () => _, PU: () => p, So: () => u, _Z: () => h, ap: () => I, uK: () => A, ux: () => E });
+n.d(t, { Cv: () => u, PU: () => I, So: () => c, _Z: () => E, ap: () => A, uK: () => _ });
 var r = n(832081),
     a = n(17928),
     s = n(636537),
     l = n(626584),
     o = n(773669),
     d = n(652215);
-let c = new l.A("StripeUtils");
-function u(e) {
+function c(e) {
     let t, n;
     try {
         [t, n] = (function (e) {
@@ -31,20 +30,10 @@ function u(e) {
         r = new Date();
     return i.setMonth(i.getMonth() - 1), i.setMonth(i.getMonth() + 1, 1), i > r;
 }
-function _() {
+function u() {
     return null != i ? Promise.resolve(i) : (0, r.loadStripe)(d.Gg3.STRIPE.KEY).then((e) => ((i = e), e));
 }
-function E() {
-    return null == d.Gg3.STRIPE.KEY
-        ? (c.warn("getStripeClientMode() called before PaymentSettings.STRIPE.KEY initialized: ", d.Gg3.STRIPE.KEY),
-          "unknown")
-        : d.Gg3.STRIPE.KEY.startsWith("pk_live")
-          ? "live"
-          : d.Gg3.STRIPE.KEY.startsWith("pk_test")
-            ? "test"
-            : (c.warn("Unexpected value for Stripe public key: ", d.Gg3.STRIPE.KEY), "unknown");
-}
-function A(e) {
+function _(e) {
     let { billing_details: t } = e,
         n = t.address ?? {},
         i = {
@@ -58,16 +47,16 @@ function A(e) {
         };
     return { token: e.id, billingAddressInfo: i };
 }
-function h(e) {
+function E(e) {
     let { name: t, line1: n, line2: i, city: r, state: a, postalCode: s, country: l } = e;
     return { name: t, address: { line1: n, line2: i, city: r, state: a, postal_code: s, country: l } };
 }
-async function I(e) {
+async function A(e) {
     try {
         let { stripe_payment_intent_client_secret: t } = (
                 await s.Bo.get({ url: d.Rsh.BILLING_STRIPE_PAYMENT_INTENTS(e), oldFormErrors: !0, rejectWithError: !1 })
             ).body,
-            n = await _();
+            n = await u();
         if (null == n) return { error: "unable to load stripe" };
         let { error: i, paymentIntent: r } = await n.retrievePaymentIntent(t);
         if (null != i) return { error: i.message };
@@ -96,10 +85,11 @@ async function I(e) {
         return { error: e.message };
     }
 }
-let f = { "en-US": "en", "zh-CN": "zh", "sv-SE": "sv" };
-function p() {
+new l.A("StripeUtils");
+let h = { "en-US": "en", "zh-CN": "zh", "sv-SE": "sv" };
+function I() {
     return (0, a.bG)([o.default], () => {
         var e;
-        return f[(e = o.default.locale)] ?? e;
+        return h[(e = o.default.locale)] ?? e;
     });
 }

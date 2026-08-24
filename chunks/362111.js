@@ -8,7 +8,7 @@ var l = n(284009),
     o = n(632088),
     u = n(626797),
     d = n(166532),
-    c = n(61299),
+    c = n(469155),
     g = n(375708),
     m = n(998973);
 function A(e) {
@@ -18,7 +18,7 @@ function A(e) {
             onClose: l,
             onAddPaymentSource: u,
             toastContent: A,
-            initialStep: h = d.pn.PAYMENT_TYPE,
+            initialStep: h = d.pn.PAYMENT_ELEMENT,
             overwriteSubscriptionPaymentSource: E = !1,
         } = e,
         S = (0, c._V)(),

@@ -1,3 +1,35 @@
+.container__949a0 {
+    flex-direction: row;
+    justify-content: space-between
+}
+
+.body__949a0,
+.container__949a0 {
+    align-items: center;
+    display: flex
+}
+
+.body__949a0 {
+    flex-direction: column
+}
+
+.description__949a0 {
+    margin-top: 8px;
+    text-align: center
+}
+
+.icon_d2b05e {
+    inset-inline-start: 8px;
+    margin: auto auto 25px;
+    top: 9px;
+    z-index: 1
+}
+
+.connectionInstructions_d2b05e {
+    margin-top: 8px;
+    text-align: center
+}
+
 .row__06c2b {
     padding-top: 20px
 }
@@ -101,4 +133,4 @@
     opacity: 1
 }
 
-/*# sourceMappingURL=261204.20c7232b9c9d6106.css.map*/
+/*# sourceMappingURL=771593.e47dbd18824a03f3.css.map*/

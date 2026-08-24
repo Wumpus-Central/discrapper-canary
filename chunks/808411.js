@@ -7,18 +7,18 @@ var a = l(477900),
     s = l(150934),
     u = l(834730),
     d = l(914410),
-    c = l(52822);
+    c = l(349738);
 let p = function () {
     let [e, t] = n.useState(0),
         [l, p] = n.useState(4),
         [m, b] = n.useState(2),
         [h, x] = n.useState(d.fh.LIGHT),
-        [y, f] = n.useState(d.qP.BLUE),
-        [v, g] = n.useState("darkslategray"),
+        [f, y] = n.useState(d.qP.BLUE),
+        [g, v] = n.useState("darkslategray"),
         [E, S] = n.useState("blanchedalmond"),
-        [C, j] = n.useState("pink"),
-        [T, I] = n.useState(!0),
-        A = n.useMemo(
+        [C, T] = n.useState("pink"),
+        [j, A] = n.useState(!0),
+        I = n.useMemo(
             () =>
                 Object.entries(d.fh).map((e) => {
                     let [t, l] = e;
@@ -41,9 +41,9 @@ let p = function () {
                 minimum: e,
                 maximum: l,
                 weight: h,
-                variant: y,
-                override: { default: { background: v, gradientStart: E, gradientEnd: C } },
-                glowing: T,
+                variant: f,
+                override: { default: { background: g, gradientStart: E, gradientEnd: C } },
+                glowing: j,
             }),
             (0, a.jsx)(c.nB, {}),
             (0, a.jsx)(c.MG, {
@@ -82,9 +82,9 @@ let p = function () {
                     hideLabel: !0,
                     placeholder: "Variant",
                     onSelectionChange: (e) => {
-                        null !== e && f(e);
+                        null !== e && y(e);
                     },
-                    value: y,
+                    value: f,
                     options: P,
                     selectionMode: "single",
                     fullWidth: !0,
@@ -99,15 +99,15 @@ let p = function () {
                         null !== e && x(e);
                     },
                     value: h,
-                    options: A,
+                    options: I,
                 }),
             }),
             (0, a.jsx)(c.MG, {
                 children: (0, a.jsx)(s.S, {
                     label: "Glowing",
-                    checked: T,
+                    checked: j,
                     onChange: (e) => {
-                        I(e);
+                        A(e);
                     },
                 }),
             }),
@@ -124,9 +124,9 @@ let p = function () {
             }),
             (0, a.jsx)(c.MG, {
                 children: (0, a.jsx)(r.k, {
-                    value: v,
+                    value: g,
                     onChange: (e) => {
-                        g(e);
+                        v(e);
                     },
                     label: "Background (optional)",
                 }),
@@ -144,7 +144,7 @@ let p = function () {
                 children: (0, a.jsx)(r.k, {
                     value: C,
                     onChange: (e) => {
-                        j(e);
+                        T(e);
                     },
                     label: "Gradient End",
                 }),

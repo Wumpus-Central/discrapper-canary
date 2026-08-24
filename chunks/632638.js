@@ -1,4 +1,4 @@
-n.d(t, { A: () => x });
+n.d(t, { A: () => T });
 var l = n(477900),
     i = n(582128),
     r = n(643909),
@@ -8,32 +8,32 @@ var l = n(477900),
     u = n(597770),
     c = n(40474),
     d = n(683071),
-    p = n(289873),
-    m = n(685094),
-    h = n(689175),
-    C = n(430993),
+    m = n(289873),
+    p = n(685094),
+    C = n(689175),
+    h = n(430993),
     f = n(102741),
     E = n(913122),
     S = n(136857),
     y = n(783327),
-    A = n(166532);
+    I = n(166532);
 n(69494), n(482132);
-var P = n(739508),
-    I = n(927813),
+var A = n(739508),
+    P = n(927813),
     g = n(652215),
     v = n(375708),
     _ = n(304082);
-let T = new Set([A.pn.SKU_SELECT, A.pn.AWAITING_AUTHENTICATION, A.pn.AWAITING_PURCHASE_TOKEN_AUTH, A.pn.CONFIRM]);
-function x(e) {
+let x = new Set([I.pn.SKU_SELECT, I.pn.AWAITING_AUTHENTICATION, I.pn.AWAITING_PURCHASE_TOKEN_AUTH, I.pn.CONFIRM]);
+function T(e) {
     let {
             steps: t,
             currentStep: n,
             body: a,
-            overrideKey: x,
+            overrideKey: T,
             paymentError: N,
             header: b,
-            footer: R,
-            isGift: j = !1,
+            footer: j,
+            isGift: R = !1,
             giftMessage: M = v.intl.string(v.t["DrgnS+"]),
             hideBreadcrumbs: O = !1,
             isLoading: L = !1,
@@ -46,34 +46,34 @@ function x(e) {
             shouldUseManaModal: B = !1,
         } = e,
         H = null;
-    null != N && null == (0, A.ou)(N) ? (H = N) : null != k ? (H = k) : null != U && (H = U);
-    let Y = null != H ? H.message : "";
+    null != N && null == (0, I.ou)(N) ? (H = N) : null != k ? (H = k) : null != U && (H = U);
+    let W = null != H ? H.message : "";
     null != H &&
         H instanceof E.Ey &&
-        (H.code === S.tG.CARD_DECLINED && F && (Y += ` ${v.intl.string(v.t.iWvwQS)}`),
-        H.code === S.tG.INVALID_GIFT_REDEMPTION_FRAUD_REJECTED && (Y = v.intl.string(v.t.ypuSd8)),
-        H.code === g.t02.BILLING_NON_REFUNDABLE_PAYMENT_SOURCE && (Y = v.intl.string(v.t.mXMmWE)));
-    let W = (0, y.S)();
-    L = L || null == W;
+        (H.code === S.tG.CARD_DECLINED && F && (W += ` ${v.intl.string(v.t.iWvwQS)}`),
+        H.code === S.tG.INVALID_GIFT_REDEMPTION_FRAUD_REJECTED && (W = v.intl.string(v.t.ypuSd8)),
+        H.code === g.t02.BILLING_NON_REFUNDABLE_PAYMENT_SOURCE && (W = v.intl.string(v.t.mXMmWE)));
+    let Y = (0, y.S)();
+    L = L || null == Y;
     let V = i.useRef(new o.Ep());
     i.useEffect(() => {
         let e = V.current;
         return (
-            null != W || e.isStarted()
-                ? null != W && e.stop()
-                : e.start(10 * I.A.Millis.SECOND, () => {
+            null != Y || e.isStarted()
+                ? null != Y && e.stop()
+                : e.start(10 * P.A.Millis.SECOND, () => {
                       let e = Error("Stripe took too long to load");
-                      (0, P.pM)(e);
+                      (0, A.pM)(e);
                   }),
             () => {
                 e.stop();
             }
         );
-    }, [W]);
-    let K = t.includes(A.pn.PAYMENT_TYPE) ? A.pn.PAYMENT_TYPE : A.pn.ADD_PAYMENT_STEPS,
-        q = (0, l.jsxs)(l.Fragment, {
+    }, [Y]);
+    let K = t.includes(I.pn.PAYMENT_ELEMENT) ? I.pn.PAYMENT_ELEMENT : I.pn.ADD_PAYMENT_STEPS,
+        Z = (0, l.jsxs)(l.Fragment, {
             children: [
-                j && n !== A.pn.CONFIRM
+                R && n !== I.pn.CONFIRM
                     ? (0, l.jsx)(f.A, {
                           className: _.zJ,
                           iconSize: f.A.Sizes.SMALL,
@@ -87,10 +87,10 @@ function x(e) {
                     : (0, l.jsx)("div", {
                           className: s()(_.QN, { [_.k3]: B }),
                           children: (0, l.jsx)(c.A, {
-                              activeId: A.ZC.has(n) ? K : n,
+                              activeId: I.ZC.has(n) ? K : n,
                               breadcrumbs: t
-                                  .filter((e) => !A.ZC.has(e) && !T.has(e))
-                                  .map((e) => ({ id: e, label: (0, A.Ir)(e) })),
+                                  .filter((e) => !I.ZC.has(e) && !x.has(e))
+                                  .map((e) => ({ id: e, label: (0, I.Ir)(e) })),
                           }),
                       }),
                 (0, l.jsxs)("div", {
@@ -101,13 +101,13 @@ function x(e) {
                             : (0, l.jsx)("div", {
                                   className: B ? _.Nk : _.YU,
                                   ref: w,
-                                  children: (0, l.jsx)(d.w, { type: "critical", children: Y }),
+                                  children: (0, l.jsx)(d.w, { type: "critical", children: W }),
                               }),
                         L
-                            ? (0, l.jsx)(p.y, { className: _.CI })
-                            : (0, l.jsx)(m.Y, {
+                            ? (0, l.jsx)(m.y, { className: _.CI })
+                            : (0, l.jsx)(p.Y, {
                                   className: _.C9,
-                                  overrideKey: x,
+                                  overrideKey: T,
                                   staticClassName: _.a2,
                                   animatedNodeClassName: _.L2,
                                   fillParent: !0,
@@ -116,7 +116,7 @@ function x(e) {
                                   sideMargin: 20,
                                   children: B
                                       ? a
-                                      : (0, l.jsx)(h.Ch, { onScroll: D, className: s()(_.XG, G), children: a }),
+                                      : (0, l.jsx)(C.Ch, { onScroll: D, className: s()(_.XG, G), children: a }),
                               }),
                     ],
                 }),
@@ -124,13 +124,13 @@ function x(e) {
         });
     return (0, l.jsxs)(r.Elements, {
         options: g.XL8,
-        stripe: W,
+        stripe: Y,
         children: [
             b,
             B
-                ? (0, l.jsx)(C.c, { children: q })
-                : (0, l.jsx)("div", { className: s()("paymentModalContent", _.Qs), children: q }),
-            R,
+                ? (0, l.jsx)(h.c, { children: Z })
+                : (0, l.jsx)("div", { className: s()("paymentModalContent", _.Qs), children: Z }),
+            j,
         ],
     });
 }

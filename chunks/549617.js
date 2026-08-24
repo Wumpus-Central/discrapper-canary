@@ -1455,7 +1455,7 @@ if (
     n.e("859864").then(n.t.bind(n, 122123, 19));
 let e2 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 new eB.A().log(
-    `[BUILD INFO] Release Channel: ${e2}, Build Number: 599903, Version Hash: 25ebbeed984b0be5e18a42a403aa57fd16948ff4`,
+    `[BUILD INFO] Release Channel: ${e2}, Build Number: 599946, Version Hash: 7b0b3b68b8f6caf6983d3fb22201c838fea85f4e`,
 ),
     D.A.setTags({ appContext: G.QCW }),
     eI.A.initBasic(),
@@ -2349,12 +2349,11 @@ let ir = (0, nX.Fe)({
                 n.e("630954"),
                 n.e("28945"),
                 n.e("767311"),
-                n.e("261204"),
-                n.e("379134"),
+                n.e("571084"),
                 n.e("279774"),
-                n.e("175997"),
-                n.e("52978"),
-                n.e("118686"),
+                n.e("771593"),
+                n.e("602980"),
+                n.e("146577"),
                 n.e("410470"),
                 n.e("295570"),
                 n.e("245726"),
@@ -2376,8 +2375,7 @@ let ir = (0, nX.Fe)({
                 n.e("836576"),
                 n.e("253453"),
                 n.e("82937"),
-                n.e("531547"),
-                n.e("450926"),
+                n.e("829096"),
                 n.e("923981"),
                 n.e("750370"),
                 n.e("972281"),
@@ -2530,12 +2528,11 @@ let ir = (0, nX.Fe)({
                 n.e("750955"),
                 n.e("28945"),
                 n.e("767311"),
-                n.e("261204"),
-                n.e("379134"),
+                n.e("571084"),
                 n.e("279774"),
-                n.e("175997"),
-                n.e("52978"),
-                n.e("118686"),
+                n.e("771593"),
+                n.e("602980"),
+                n.e("146577"),
                 n.e("410470"),
                 n.e("295570"),
                 n.e("245726"),
@@ -2557,8 +2554,7 @@ let ir = (0, nX.Fe)({
                 n.e("836576"),
                 n.e("253453"),
                 n.e("82937"),
-                n.e("531547"),
-                n.e("450926"),
+                n.e("829096"),
                 n.e("923981"),
                 n.e("750370"),
                 n.e("972281"),
@@ -2741,12 +2737,11 @@ let ir = (0, nX.Fe)({
                 n.e("750955"),
                 n.e("28945"),
                 n.e("767311"),
-                n.e("261204"),
-                n.e("379134"),
+                n.e("571084"),
                 n.e("279774"),
-                n.e("175997"),
-                n.e("52978"),
-                n.e("118686"),
+                n.e("771593"),
+                n.e("602980"),
+                n.e("146577"),
                 n.e("410470"),
                 n.e("295570"),
                 n.e("245726"),
@@ -2768,8 +2763,7 @@ let ir = (0, nX.Fe)({
                 n.e("836576"),
                 n.e("253453"),
                 n.e("82937"),
-                n.e("531547"),
-                n.e("450926"),
+                n.e("829096"),
                 n.e("923981"),
                 n.e("750370"),
                 n.e("972281"),
@@ -3453,12 +3447,11 @@ let rM = (0, nX.Fe)({
                 n.e("750955"),
                 n.e("28945"),
                 n.e("767311"),
-                n.e("261204"),
-                n.e("379134"),
+                n.e("571084"),
                 n.e("279774"),
-                n.e("175997"),
-                n.e("52978"),
-                n.e("118686"),
+                n.e("771593"),
+                n.e("602980"),
+                n.e("146577"),
                 n.e("410470"),
                 n.e("295570"),
                 n.e("245726"),
@@ -3476,8 +3469,7 @@ let rM = (0, nX.Fe)({
                 n.e("836576"),
                 n.e("253453"),
                 n.e("82937"),
-                n.e("531547"),
-                n.e("450926"),
+                n.e("829096"),
                 n.e("923981"),
                 n.e("750370"),
                 n.e("972281"),
@@ -4182,8 +4174,8 @@ let rM = (0, nX.Fe)({
                 n.e("218307"),
                 n.e("392223"),
                 n.e("840247"),
+                n.e("337271"),
                 n.e("241245"),
-                n.e("673691"),
                 n.e("899513"),
                 n.e("709204"),
                 n.e("355663"),
@@ -4191,7 +4183,7 @@ let rM = (0, nX.Fe)({
                 n.e("956814"),
                 n.e("936001"),
                 n.e("157031"),
-                n.e("882327"),
+                n.e("753221"),
                 n.e("210413"),
                 n.e("624805"),
                 n.e("514124"),
@@ -6620,12 +6612,11 @@ let oh = 15 * n_.A.Millis.MINUTE,
                             n.e("750955"),
                             n.e("28945"),
                             n.e("767311"),
-                            n.e("261204"),
-                            n.e("379134"),
+                            n.e("571084"),
                             n.e("279774"),
-                            n.e("175997"),
-                            n.e("52978"),
-                            n.e("118686"),
+                            n.e("771593"),
+                            n.e("602980"),
+                            n.e("146577"),
                             n.e("410470"),
                             n.e("245726"),
                             n.e("711562"),
@@ -6646,8 +6637,7 @@ let oh = 15 * n_.A.Millis.MINUTE,
                             n.e("836576"),
                             n.e("253453"),
                             n.e("82937"),
-                            n.e("531547"),
-                            n.e("450926"),
+                            n.e("829096"),
                             n.e("750370"),
                             n.e("972281"),
                             n.e("641278"),
@@ -18987,28 +18977,35 @@ function mD(e) {
     });
 }
 function mv(e) {
-    let { displayOptions: t, ...n } = e,
-        {
-            backgroundAsset: i,
-            backgroundStyle: r,
-            shouldApplyFade: a,
-            buttonRef: s,
-            handleMouseEnter: l,
-            handleMouseLeave: o,
-        } = my(t.entryPointBackgroundAssets, t.entrypointBackgroundStyle);
+    let { displayOptions: t, onTabTooltipVisibilityChange: n, ...i } = e,
+        r = eu.useRef(n);
+    eu.useEffect(() => {
+        r.current = n;
+    }, [n]),
+        eu.useEffect(() => () => r.current?.(!1), []);
+    let {
+        backgroundAsset: a,
+        backgroundStyle: s,
+        shouldApplyFade: l,
+        buttonRef: o,
+        handleMouseEnter: d,
+        handleMouseLeave: c,
+    } = my(t.entryPointBackgroundAssets, t.entrypointBackgroundStyle);
     return (0, O.jsx)(mE.A, {
         title: t.title(),
         body: t.body?.() ?? "",
         asset: (0, O.jsx)("img", { src: t.asset, alt: "", "aria-hidden": !0 }),
+        onTooltipShow: () => n?.(!0),
+        onTooltipHide: () => n?.(!1),
         children: (0, O.jsxs)(mL, {
             className: null != t.entryPointClassName ? (0, mA.t)(mC, t.entryPointClassName) : void 0,
-            ...n,
+            ...i,
             icon: t.entryPointIcon,
-            onMouseEnter: l,
-            onMouseLeave: o,
+            onMouseEnter: d,
+            onMouseLeave: c,
             showHoverGradient: !0 === t.showHoverGradient,
             children: [
-                (0, O.jsx)(mD, { backgroundAsset: i, backgroundStyle: r, shouldApplyFade: a, buttonRef: s }),
+                (0, O.jsx)(mD, { backgroundAsset: a, backgroundStyle: s, shouldApplyFade: l, buttonRef: o }),
                 (0, O.jsx)(mO, { badgeIcon: t.badgeIcon, badgeText: t.badgeText }),
             ],
         }),
@@ -19109,32 +19106,32 @@ function mU(e) {
     });
 }
 function mw(e) {
-    let { selected: t, onClick: n, locationState: i, listItemRef: r } = e,
-        { shopButtonDisplayOptions: a, dismissShopButtonDC: s } = (0, mS.A)(),
-        l = !(0, tB.hasAnyModalOpen)(),
-        [o, d] = (0, n6.kn)(l ? [i1.M.WISHLIST_SHOP_BUTTON_POPOVER] : []),
-        c = {
+    let { selected: t, onClick: n, locationState: i, listItemRef: r, onTabTooltipVisibilityChange: a } = e,
+        { shopButtonDisplayOptions: s, dismissShopButtonDC: l } = (0, mS.A)(),
+        o = !(0, tB.hasAnyModalOpen)(),
+        [d, c] = (0, n6.kn)(o ? [i1.M.WISHLIST_SHOP_BUTTON_POPOVER] : []),
+        u = {
             selected: t,
             locationState: i,
             onClick: () => {
-                s(), n?.();
+                l(), n?.();
             },
             listItemRef: r,
         };
-    if (null != a)
-        switch (a.type) {
+    if (null != s)
+        switch (s.type) {
             case mp.FF.TOOLTIP:
-                return (0, O.jsx)(mM, { ...c, displayOptions: a });
+                return (0, O.jsx)(mM, { ...u, displayOptions: s });
             case mp.FF.TAB_TOOLTIP:
-                return (0, O.jsx)(mv, { ...c, displayOptions: a });
+                return (0, O.jsx)(mv, { ...u, displayOptions: s, onTabTooltipVisibilityChange: a });
             case mp.FF.BADGE:
-                return (0, O.jsx)(mb, { ...c, displayOptions: a });
+                return (0, O.jsx)(mb, { ...u, displayOptions: s });
             case mp.FF.COACHMARK:
-                return (0, O.jsx)(mP, { dismissContent: s, ...c, displayOptions: a });
+                return (0, O.jsx)(mP, { dismissContent: l, ...u, displayOptions: s });
         }
-    return o === i1.M.WISHLIST_SHOP_BUTTON_POPOVER
-        ? (0, O.jsx)(mU, { ...c, dismissContent: d })
-        : (0, O.jsx)(mL, { ...c });
+    return d === i1.M.WISHLIST_SHOP_BUTTON_POPOVER
+        ? (0, O.jsx)(mU, { ...u, dismissContent: c })
+        : (0, O.jsx)(mL, { ...u });
 }
 var mG = n(558845),
     mx = n(519059),
@@ -19823,80 +19820,84 @@ function Sf(e) {
     let {
             children: t,
             popoverType: n,
-            targetElementRef: i,
-            discountOffer: r,
-            churnDiscountOffer: a,
-            premiumSubscription: s,
-            lastGrantedRewardAmount: l,
-            dismissCoachMark: o,
-            dismissOrbsDropPopover: d,
-            dismissMarketingPopover: c,
-            dismissOfferTabBadgePopover: u,
-            dismissMonthlyToYearlyUpsellPopover: _,
-            orbMultiplier: E,
-            orbsRewardAmount: A,
-            fpCurrentEntitlementEndsAt: h,
-            trialOffer: I,
+            suppressPopover: i = !1,
+            targetElementRef: r,
+            discountOffer: a,
+            churnDiscountOffer: s,
+            premiumSubscription: l,
+            lastGrantedRewardAmount: o,
+            dismissCoachMark: d,
+            dismissOrbsDropPopover: c,
+            dismissMarketingPopover: u,
+            dismissOfferTabBadgePopover: _,
+            dismissMonthlyToYearlyUpsellPopover: E,
+            orbMultiplier: A,
+            orbsRewardAmount: h,
+            fpCurrentEntitlementEndsAt: I,
+            trialOffer: f,
         } = e,
-        f = (0, tB.useHasAnyModalOpen)(),
-        p = (0, el.bG)([ar.A], () => null != ar.A.pipVideoWindow);
-    if (f || p) return t;
+        p = (0, tB.useHasAnyModalOpen)(),
+        T = (0, el.bG)([ar.A], () => null != ar.A.pipVideoWindow);
+    if (p || T) return t;
     switch (n) {
-        case "churn_discount":
-            if (null != a && null != s)
-                return (0, O.jsx)(Ss, {
-                    targetElementRef: i,
-                    discountOffer: a,
-                    premiumSubscription: s,
-                    dismissCoachmark: o,
-                    children: t,
-                });
-            break;
-        case "premium_group":
-            return (0, O.jsx)(gQ, { targetElementRef: i, dismissPopover: o, children: t });
         case "premium_group_discount":
-            return (0, O.jsx)(gZ, { targetElementRef: i, children: t });
+            return (0, O.jsx)(gZ, { targetElementRef: r, children: t });
         case "premium_group_tooltip":
-            return (0, O.jsx)(g0, { targetElementRef: i, children: t });
-        case "orbs_upsell":
-            return (0, O.jsx)(g7, { targetElementRef: i, dismissPopover: o, children: t });
-        case "orbs_intro":
-            return (0, O.jsx)(g5, { targetElementRef: i, dismissPopover: o, orbsRewardAmount: A, children: t });
-        case "orbs_drop":
-            if (null != l)
-                return (0, O.jsx)(g4, {
-                    targetElementRef: i,
-                    dismissPopover: d,
-                    lastGrantedRewardAmount: l,
-                    children: t,
-                });
-            break;
+            return (0, O.jsx)(g0, { targetElementRef: r, children: t });
         case "reverse_trial": {
-            let e = I?.trialId === dl.Tt,
-                n = h ?? (I?.expiresAt != null ? gv()(I?.expiresAt) : null);
+            let e = f?.trialId === dl.Tt,
+                n = I ?? (f?.expiresAt != null ? gv()(f.expiresAt) : null);
             if (null != n) return (0, O.jsx)(Sh, { endsAt: n, variant: e ? "followup" : "initial", children: t });
             break;
         }
         case "tooltip":
             return (0, O.jsx)(SE.A, { children: t });
         case "annual_discount":
-            if (null != r) return (0, O.jsx)(Si, { targetElementRef: i, discountOffer: r, children: t });
+            if (null != a) return (0, O.jsx)(Si, { targetElementRef: r, discountOffer: a, children: t });
+            break;
+        case "orbs_multiplier":
+            return (0, O.jsx)(gP, { multiplier: A, children: t });
+        case "offer_tab_badge_tooltip":
+            return (0, O.jsx)(Su, { targetElementRef: r, children: t });
+    }
+    if (i) return t;
+    switch (n) {
+        case "churn_discount":
+            if (null != s && null != l)
+                return (0, O.jsx)(Ss, {
+                    targetElementRef: r,
+                    discountOffer: s,
+                    premiumSubscription: l,
+                    dismissCoachmark: d,
+                    children: t,
+                });
+            break;
+        case "premium_group":
+            return (0, O.jsx)(gQ, { targetElementRef: r, dismissPopover: d, children: t });
+        case "orbs_upsell":
+            return (0, O.jsx)(g7, { targetElementRef: r, dismissPopover: d, children: t });
+        case "orbs_intro":
+            return (0, O.jsx)(g5, { targetElementRef: r, dismissPopover: d, orbsRewardAmount: h, children: t });
+        case "orbs_drop":
+            if (null != o)
+                return (0, O.jsx)(g4, {
+                    targetElementRef: r,
+                    dismissPopover: c,
+                    lastGrantedRewardAmount: o,
+                    children: t,
+                });
             break;
         case "marketing_moment_popover":
-            return (0, O.jsx)(S_.A, { targetElementRef: i, dismissPopover: c, children: t });
-        case "orbs_multiplier":
-            return (0, O.jsx)(gP, { multiplier: E, children: t });
+            return (0, O.jsx)(S_.A, { targetElementRef: r, dismissPopover: u, children: t });
         case "offer_tab_badge":
-            return (0, O.jsx)(Sc, { targetElementRef: i, dismissPopover: u, children: t });
-        case "offer_tab_badge_tooltip":
-            return (0, O.jsx)(Su, { targetElementRef: i, children: t });
+            return (0, O.jsx)(Sc, { targetElementRef: r, dismissPopover: _, children: t });
         case "monthly_to_yearly_upsell":
-            if (null == s) break;
-            return (0, O.jsx)(Sn, { targetElementRef: i, premiumSubscription: s, dismissPopover: _, children: t });
+            if (null == l) break;
+            return (0, O.jsx)(Sn, { targetElementRef: r, premiumSubscription: l, dismissPopover: E, children: t });
         case "cod_3pp_nitro":
-            return (0, O.jsx)(gW, { targetElementRef: i, dismissPopover: o, isNitroSubscriber: !0, children: t });
+            return (0, O.jsx)(gW, { targetElementRef: r, dismissPopover: d, isNitroSubscriber: !0, children: t });
         case "cod_3pp_non_nitro":
-            return (0, O.jsx)(gW, { targetElementRef: i, dismissPopover: o, isNitroSubscriber: !1, children: t });
+            return (0, O.jsx)(gW, { targetElementRef: r, dismissPopover: d, isNitroSubscriber: !1, children: t });
     }
     return t;
 }
@@ -19920,26 +19921,34 @@ function Sm(e) {
         n,
         i,
         r,
-        { selected: a, nitroTabButtonRef: s, route: l, locationState: o, showHoverGradient: d, ...c } = e,
-        u = (0, el.bG)([eP.default], () => eP.default.getCurrentUser()),
-        _ = (0, el.bG)([m6.A], () => m6.A.getPremiumTypeSubscription()),
-        E = (0, m7.Of)(u, _),
-        A = (0, m7.YE)(u, dl.PremiumTypes.TIER_2),
-        h = (0, dP.rm)("nitro"),
-        I = (0, gh.V)(),
-        f = (0, gA.O)({ includePremiumGroupDiscount: !0 }),
-        p = (0, gE.p)(),
-        T = (0, gt.ds)(),
-        m = (0, m9.cg)(),
-        g = (0, gn._d)({ location: "NitroTabButton" }),
-        S = (0, gn.rl)({ location: "NitroTabButton" }),
-        N = (0, gC.NF)({ trialOffer: I }),
-        C = (0, gp.bf)(),
-        [R, L] = m2(),
         {
-            shouldShowBonusOrbsUX: y,
-            dismissOrbMultiplierTabTooltip: D,
-            orbMultiplier: v,
+            selected: a,
+            nitroTabButtonRef: s,
+            route: l,
+            locationState: o,
+            showHoverGradient: d,
+            suppressPopover: c = !1,
+            ...u
+        } = e,
+        _ = (0, el.bG)([eP.default], () => eP.default.getCurrentUser()),
+        E = (0, el.bG)([m6.A], () => m6.A.getPremiumTypeSubscription()),
+        A = (0, m7.Of)(_, E),
+        h = (0, m7.YE)(_, dl.PremiumTypes.TIER_2),
+        I = (0, dP.rm)("nitro"),
+        f = (0, gh.V)(),
+        p = (0, gA.O)({ includePremiumGroupDiscount: !0 }),
+        T = (0, gE.p)(),
+        m = (0, gt.ds)(),
+        g = (0, m9.cg)(),
+        S = (0, gn._d)({ location: "NitroTabButton" }),
+        N = (0, gn.rl)({ location: "NitroTabButton" }),
+        C = (0, gC.NF)({ trialOffer: f }),
+        R = (0, gp.bf)(),
+        [L, y] = m2(),
+        {
+            shouldShowBonusOrbsUX: D,
+            dismissOrbMultiplierTabTooltip: v,
+            orbMultiplier: b,
         } = (function () {
             let e = (0, tB.useHasAnyModalOpen)(),
                 t = (0, mG.Ay)((e) => e.postConnectionOpen),
@@ -19954,252 +19963,252 @@ function Sm(e) {
                 orbMultiplier: i,
             };
         })(),
-        b = (0, gC.Tp)(),
-        M = (0, el.bG)([mK.A], () => mK.A.getReminderStateId()),
-        { programReward: P, isEligible: U } = (0, m5.F)({ location: "NitroTabButton" }),
-        w = (0, ga.Y)({ location: "nitro_tab_popover" }),
-        k = (0, el.bG)([gf.A], () => gf.A.getLastDismissedAnnouncementModalAt()),
-        F = null != k && Date.now() - k > 6048e5,
-        V = null != k && Date.now() - k <= 6048e5,
-        B = P?.reward_amount ?? 0,
-        H = !(0, m7.TW)(u),
-        j = g && A,
-        W = S && H,
-        Y = j || W,
-        K = (0, el.bG)([mJ.A], () => mJ.A.getMarketingBySurface(mz.R.DESKTOP_SHOP_BUTTON)),
-        $ = (0, mG.mB)(i1.M.COLLECTIBLES_SHOP_ENTRY_MARKETING),
-        z = K?.type === mZ.G.COACHMARK && $,
-        Z = H && U,
-        q = P?.last_granted_reward,
-        X = P?.last_granted_reward_amount,
-        Q = (0, mG.mB)(i1.M.PREMIUM_ORBS_REWARDS_INTRO_POPOVER),
-        J = A && U && !z && null != q && null != X && !Q,
-        ee = A && U && !J && null != P && B > 0,
-        et = null != p && null != _ && _.status === G.Dmq.CANCELED,
-        en = (0, m4.Gh)("NitroTabButton"),
-        { showEaPremiumMarketing: ei } = (0, m0.z$)("NitroTabButton"),
-        { surface: er, badgeStyle: ea } = (function (e) {
+        M = (0, gC.Tp)(),
+        P = (0, el.bG)([mK.A], () => mK.A.getReminderStateId()),
+        { programReward: U, isEligible: w } = (0, m5.F)({ location: "NitroTabButton" }),
+        k = (0, ga.Y)({ location: "nitro_tab_popover" }),
+        F = (0, el.bG)([gf.A], () => gf.A.getLastDismissedAnnouncementModalAt()),
+        V = null != F && Date.now() - F > 6048e5,
+        B = null != F && Date.now() - F <= 6048e5,
+        H = U?.reward_amount ?? 0,
+        j = !(0, m7.TW)(_),
+        W = S && h,
+        Y = N && j,
+        K = W || Y,
+        $ = (0, el.bG)([mJ.A], () => mJ.A.getMarketingBySurface(mz.R.DESKTOP_SHOP_BUTTON)),
+        z = (0, mG.mB)(i1.M.COLLECTIBLES_SHOP_ENTRY_MARKETING),
+        Z = $?.type === mZ.G.COACHMARK && z,
+        q = j && w,
+        X = U?.last_granted_reward,
+        Q = U?.last_granted_reward_amount,
+        J = (0, mG.mB)(i1.M.PREMIUM_ORBS_REWARDS_INTRO_POPOVER),
+        ee = h && w && !Z && null != X && null != Q && !J,
+        et = h && w && !ee && null != U && H > 0,
+        en = null != T && null != E && E.status === G.Dmq.CANCELED,
+        ei = (0, m4.Gh)("NitroTabButton"),
+        { showEaPremiumMarketing: er } = (0, m0.z$)("NitroTabButton"),
+        { surface: ea, badgeStyle: es } = (function (e) {
             let { location: t } = e;
             return gi.useConfig({ location: t });
         })({ location: "NitroTabButton" }),
-        { fractionalState: es, startsAt: eo, endsAt: ed, currentEntitlementEndsAt: ec } = (0, mQ.A)({ forceFetch: !0 }),
-        [e_, eE] = (0, n6.Wl)(es !== dl.xc.NONE ? i1.M.FRACTIONAL_NITRO_DURATION_LEFT_PILL : null, {
-            showAfterTimestamp: eo.valueOf(),
+        { fractionalState: eo, startsAt: ed, endsAt: ec, currentEntitlementEndsAt: e_ } = (0, mQ.A)({ forceFetch: !0 }),
+        [eE, eA] = (0, n6.Wl)(eo !== dl.xc.NONE ? i1.M.FRACTIONAL_NITRO_DURATION_LEFT_PILL : null, {
+            showAfterTimestamp: ed.valueOf(),
             cooldownDurationMs: 0,
         }),
-        eA = I?.trialId === dl.Dw,
-        eh = (0, gr.TF)({ location: "NitroTabButton" }),
-        eI = (0, gL.q)(_, eh === gr.Iz.NITRO_TAB_POPOVER),
-        ef = i1.M.MONTHLY_TO_YEARLY_UPSELL_NITRO_TAB_POPOVER,
-        ep = [],
-        eT = [];
+        eh = f?.trialId === dl.Dw,
+        eI = (0, gr.TF)({ location: "NitroTabButton" }),
+        ef = (0, gL.q)(E, eI === gr.Iz.NITRO_TAB_POPOVER),
+        ep = i1.M.MONTHLY_TO_YEARLY_UPSELL_NITRO_TAB_POPOVER,
+        eT = [],
+        em = [];
     (0, mG.Tc)() &&
-        (m && ep.push(i1.M.BOGO_2025_NITRO_TAB_BADGE), ei && ep.push(i1.M.PROFILE_FRAMES_NITRO_TAB_NEW_BADGE));
-    let [em, eg] = (0, n6.kn)(ep, void 0, !0);
-    et && eT.push(i1.M.CHURN_DISCOUNT_PREMIUM_TAB_COACHMARK),
-        C && (!w || F ? eT.push(i1.M.PREMIUM_GROUP_POPOVER) : V && eT.push(i1.M.PREMIUM_GROUP_POPOVER_UPSELL_V2)),
-        Z && eT.push(i1.M.PREMIUM_ORBS_UPSELL_POPOVER),
-        ee && eT.push(i1.M.PREMIUM_ORBS_REWARDS_INTRO_POPOVER),
-        en && eT.push(i1.M.PREMIUM_WISHLIST_COACHMARK),
-        Y && eT.push(i1.M.COD_3PP_POPOVER);
-    let [eS, eN] = (0, n6.kn)(z ? [] : eT, void 0, !0),
-        eC = (0, gI.c)(mq.C.PREMIUM_TAB),
-        eO = (0, gI.c)(mq.C.PREMIUM_TAB_TOOLTIP),
-        eR = (0, gI.c)(mq.C.PREMIUM_TAB_POPOVER),
-        [eL, ey] = (0, n6.Cc)(
-            null != eC && "premiumTab" === eC.properties.properties.oneofKind
+        (g && eT.push(i1.M.BOGO_2025_NITRO_TAB_BADGE), er && eT.push(i1.M.PROFILE_FRAMES_NITRO_TAB_NEW_BADGE));
+    let [eg, eS] = (0, n6.kn)(eT, void 0, !0);
+    en && em.push(i1.M.CHURN_DISCOUNT_PREMIUM_TAB_COACHMARK),
+        R && (!k || V ? em.push(i1.M.PREMIUM_GROUP_POPOVER) : B && em.push(i1.M.PREMIUM_GROUP_POPOVER_UPSELL_V2)),
+        q && em.push(i1.M.PREMIUM_ORBS_UPSELL_POPOVER),
+        et && em.push(i1.M.PREMIUM_ORBS_REWARDS_INTRO_POPOVER),
+        ei && em.push(i1.M.PREMIUM_WISHLIST_COACHMARK),
+        K && em.push(i1.M.COD_3PP_POPOVER);
+    let [eN, eC] = (0, n6.kn)(Z ? [] : em, void 0, !0),
+        eO = (0, gI.c)(mq.C.PREMIUM_TAB),
+        eR = (0, gI.c)(mq.C.PREMIUM_TAB_TOOLTIP),
+        eL = (0, gI.c)(mq.C.PREMIUM_TAB_POPOVER),
+        [ey, eD] = (0, n6.Cc)(
+            null != eO && "premiumTab" === eO.properties.properties.oneofKind
                 ? i1.M.PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE
                 : null,
-            eC?.promotionId ?? "",
+            eO?.promotionId ?? "",
             void 0,
             !0,
         ),
-        [eD, ev] = (0, n6.Cc)(
-            null != eR && "premiumTabPopover" === eR.properties.properties.oneofKind
+        [ev, eb] = (0, n6.Cc)(
+            null != eL && "premiumTabPopover" === eL.properties.properties.oneofKind
                 ? i1.M.PREMIUM_MARKETING_MOMENT_REMINDER_UPSELL
                 : null,
-            eR?.promotionId ?? "",
+            eL?.promotionId ?? "",
             void 0,
             !0,
         ),
-        [eb, eM] = (0, n6.Cc)(J ? i1.M.PREMIUM_ORBS_REWARDS_DROP_POPOVER : null, q ?? "", void 0, !0),
-        eU = f?.id ?? I?.id ?? "",
-        ew = (null != f || (null != I && !eA)) && er === ge.F.POPOVER,
-        [eG, ex] = (0, n6.Cc)(ew ? i1.M.PREMIUM_OFFER_TAB_BADGE_POPOVER : null, eU, void 0, !0),
-        ek = eI?.badge != null && _?.id != null,
-        [eF, eV] = (0, n6.Cc)(ek ? ef : null, _?.id ?? "", void 0, !0),
-        eB = !1,
+        [eM, eU] = (0, n6.Cc)(ee ? i1.M.PREMIUM_ORBS_REWARDS_DROP_POPOVER : null, X ?? "", void 0, !0),
+        ew = p?.id ?? f?.id ?? "",
+        eG = (null != p || (null != f && !eh)) && ea === ge.F.POPOVER,
+        [ex, ek] = (0, n6.Cc)(eG ? i1.M.PREMIUM_OFFER_TAB_BADGE_POPOVER : null, ew, void 0, !0),
+        eF = ef?.badge != null && E?.id != null,
+        [eV, eB] = (0, n6.Cc)(eF ? ep : null, E?.id ?? "", void 0, !0),
         eH = !1,
         ej = !1,
-        eW =
-            null != eO &&
-            "premiumTabTooltip" === eO.properties.properties.oneofKind &&
-            eL === i1.M.PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE,
-        eY = null != f && dl.U4.includes(f.discountId) && !f.hasAcknowledged(),
-        eK = Y && eS === i1.M.COD_3PP_POPOVER;
+        eW = !1,
+        eY =
+            null != eR &&
+            "premiumTabTooltip" === eR.properties.properties.oneofKind &&
+            ey === i1.M.PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE,
+        eK = null != p && dl.U4.includes(p.discountId) && !p.hasAcknowledged(),
+        e$ = K && eN === i1.M.COD_3PP_POPOVER;
     if (
         (eu.useEffect(() => {
             !0 === a &&
-                (null != em && eg(n8.i.AUTO_DISMISS),
-                null == eS || Sp.has(eS) || eN(n8.i.AUTO_DISMISS),
-                null != eL && ey(n8.i.AUTO_DISMISS),
-                null != eb && eM(n8.i.AUTO_DISMISS),
-                null != eD && ev(n8.i.AUTO_DISMISS),
-                null != eG && eB && ex(n8.i.AUTO_DISMISS),
-                null != eF && ej && eV(n8.i.AUTO_DISMISS),
-                y && D(n8.i.AUTO_DISMISS),
-                null != R && L(n8.i.AUTO_DISMISS));
-        }, [eg, a, em, eN, eS, eL, ey, eb, eM, eD, ev, eG, ex, eF, eV, y, D, R, L, eB, ej]),
+                (null != eg && eS(n8.i.AUTO_DISMISS),
+                null == eN || Sp.has(eN) || eC(n8.i.AUTO_DISMISS),
+                null != ey && eD(n8.i.AUTO_DISMISS),
+                null != eM && eU(n8.i.AUTO_DISMISS),
+                null != ev && eb(n8.i.AUTO_DISMISS),
+                null != ex && eH && ek(n8.i.AUTO_DISMISS),
+                null != eV && eW && eB(n8.i.AUTO_DISMISS),
+                D && v(n8.i.AUTO_DISMISS),
+                null != L && y(n8.i.AUTO_DISMISS));
+        }, [eS, a, eg, eC, eN, ey, eD, eM, eU, ev, eb, ex, ek, eV, eB, D, v, L, y, eH, eW]),
         !ST({ selected: a }))
     )
         return null;
-    let e$ = () => {
-        e_ === i1.M.FRACTIONAL_NITRO_DURATION_LEFT_PILL && eE(n8.i.TAKE_ACTION),
-            x.default.track(G.HAw.NITRO_TAB_VISITED, { badge_decorator: n, has_premium: E }),
-            null != em && eg(n8.i.USER_DISMISS),
-            null != eL && ey(n8.i.USER_DISMISS),
-            (eS === i1.M.PREMIUM_GROUP_POPOVER ||
-                eS === i1.M.PREMIUM_GROUP_POPOVER_UPSELL_V2 ||
-                eS === i1.M.COD_3PP_POPOVER) &&
-                eN(n8.i.USER_DISMISS),
-            y && D(n8.i.USER_DISMISS),
-            null != R && L(n8.i.USER_DISMISS);
+    let ez = () => {
+        eE === i1.M.FRACTIONAL_NITRO_DURATION_LEFT_PILL && eA(n8.i.TAKE_ACTION),
+            x.default.track(G.HAw.NITRO_TAB_VISITED, { badge_decorator: n, has_premium: A }),
+            null != eg && eS(n8.i.USER_DISMISS),
+            null != ey && eD(n8.i.USER_DISMISS),
+            (eN === i1.M.PREMIUM_GROUP_POPOVER ||
+                eN === i1.M.PREMIUM_GROUP_POPOVER_UPSELL_V2 ||
+                eN === i1.M.COD_3PP_POPOVER) &&
+                eC(n8.i.USER_DISMISS),
+            D && v(n8.i.USER_DISMISS),
+            null != L && y(n8.i.USER_DISMISS);
     };
-    es === dl.xc.NONE ||
-        T ||
+    eo === dl.xc.NONE ||
+        m ||
         ((n = 7),
         (t = (0, O.jsx)(g_, {
             className: "",
-            startsAt: eo,
-            endsAt: ed,
+            startsAt: ed,
+            endsAt: ec,
             messageStyle: mX.yE.SHORT_TIME,
             upperCase: !0,
         })));
-    let ez = eS === i1.M.PREMIUM_GROUP_POPOVER || eS === i1.M.PREMIUM_GROUP_POPOVER_UPSELL_V2,
-        eZ = C && ez,
-        eq = (0, s1.u$)(i1.M.PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE, eC?.promotionId ?? "").isDismissed;
-    if (null != eC && "premiumTab" === eC.properties.properties.oneofKind)
+    let eZ = eN === i1.M.PREMIUM_GROUP_POPOVER || eN === i1.M.PREMIUM_GROUP_POPOVER_UPSELL_V2,
+        eq = R && eZ,
+        eX = (0, s1.u$)(i1.M.PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE, eO?.promotionId ?? "").isDismissed;
+    if (null != eO && "premiumTab" === eO.properties.properties.oneofKind)
         (t = (0, O.jsx)(gN.A, {
-            componentId: eC.id,
-            promotionId: eC.promotionId,
-            badgeCopy: eC.properties.properties.premiumTab.badgeLabel,
-            acknowledgedBadgeCopy: eC.properties.properties.premiumTab.acknowledgedBadgeLabel,
-            isDismissed: eq,
+            componentId: eO.id,
+            promotionId: eO.promotionId,
+            badgeCopy: eO.properties.properties.premiumTab.badgeLabel,
+            acknowledgedBadgeCopy: eO.properties.properties.premiumTab.acknowledgedBadgeLabel,
+            isDismissed: eX,
         })),
             (n = 10),
-            (d = eC.properties.properties.premiumTab.showHoverGradient),
-            (i = eC.properties.properties.premiumTab.deeplinkSection);
-    else if (b)
+            (d = eO.properties.properties.premiumTab.showHoverGradient),
+            (i = eO.properties.properties.premiumTab.deeplinkSection);
+    else if (M)
         (t = (0, O.jsx)(mc.E, { type: { text: tT.intl.string(tT.t.RDE0Sc) }, variant: "expressive" })),
-            (e$ = () => {
-                x.default.track(G.HAw.NITRO_TAB_VISITED, { badge_decorator: n, has_premium: E }), (0, gC.ne)(M);
+            (ez = () => {
+                x.default.track(G.HAw.NITRO_TAB_VISITED, { badge_decorator: n, has_premium: A }), (0, gC.ne)(P);
             }),
             (n = 6);
-    else if (eZ) (t = (0, O.jsx)(mc.E, { type: "new", variant: "expressive" })), (n = 11);
-    else if (m) (t = (0, O.jsx)(gS.A, {})), (n = 0);
-    else if (N) {
+    else if (eq) (t = (0, O.jsx)(mc.E, { type: "new", variant: "expressive" })), (n = 11);
+    else if (g) (t = (0, O.jsx)(gS.A, {})), (n = 0);
+    else if (C) {
         let e = (0, gC.ZR)();
         (t = (0, O.jsx)(gT.MA, {
             isTabSelected: a,
             badgeCopy: tT.intl.string(tT.t.OS9KPu),
-            offerExpiresAt: !0 === e ? (I?.expiresAt?.toISOString() ?? null) : null,
+            offerExpiresAt: !0 === e ? (f?.expiresAt?.toISOString() ?? null) : null,
         })),
             (n = 4);
     } else
-        eK
-            ? (j
+        e$
+            ? (W
                   ? (t = (0, O.jsx)(mc.E, {
                         type: { text: tT.intl.string(gH.default["20lfHk"]) },
                         variant: "expressive",
                     }))
-                  : W && (t = (0, O.jsx)(mc.E, { type: "new", variant: "expressive" })),
+                  : Y && (t = (0, O.jsx)(mc.E, { type: "new", variant: "expressive" })),
               (n = 17))
-            : T
+            : m
               ? ((t = (0, O.jsx)(gT.MA, {
                     isTabSelected: a,
                     badgeCopy: tT.intl.string(tT.t.raP9dM),
                     offerExpiresAt: null,
-                    unackedBadgeStyle: ea,
+                    unackedBadgeStyle: es,
                 })),
                 (n = 4))
-              : eF === ef && eI?.badge != null
-                ? ((t = (0, O.jsx)(mc.E, { type: { text: eI.badge }, variant: "expressive" })), (n = 16), (ej = !0))
-                : null != R
-                  ? ((t = (0, O.jsx)(mc.E, { type: { text: R }, variant: "expressive" })), (n = 1))
-                  : null != f && f.discountId === dl.xH
-                    ? ((t = (0, O.jsx)(gg, { userDiscount: f, isTabSelected: a })), (n = 9))
-                    : null != f
+              : eV === ep && ef?.badge != null
+                ? ((t = (0, O.jsx)(mc.E, { type: { text: ef.badge }, variant: "expressive" })), (n = 16), (eW = !0))
+                : null != L
+                  ? ((t = (0, O.jsx)(mc.E, { type: { text: L }, variant: "expressive" })), (n = 1))
+                  : null != p && p.discountId === dl.xH
+                    ? ((t = (0, O.jsx)(gg, { userDiscount: p, isTabSelected: a })), (n = 9))
+                    : null != p
                       ? ((t = (0, O.jsx)(gT.fY, {
-                            userDiscount: f,
+                            userDiscount: p,
                             isTabSelected: a,
                             includesAmountOff: !1,
-                            badgeStyle: ea,
+                            badgeStyle: es,
                         })),
                         (n = 3),
-                        (eB = er === ge.F.POPOVER && eG === i1.M.PREMIUM_OFFER_TAB_BADGE_POPOVER),
-                        (eH = er === ge.F.TOOLTIP && !f.hasAcknowledged()))
-                      : null == I || eA
-                        ? et
-                            ? ((t = (0, O.jsx)(gR, { isSelected: a, discountOffer: p })), (n = 8))
-                            : (Z && eS === i1.M.PREMIUM_ORBS_UPSELL_POPOVER) ||
-                                (ee && eS === i1.M.PREMIUM_ORBS_REWARDS_INTRO_POPOVER) ||
-                                (J && eb === i1.M.PREMIUM_ORBS_REWARDS_DROP_POPOVER)
+                        (eH = ea === ge.F.POPOVER && ex === i1.M.PREMIUM_OFFER_TAB_BADGE_POPOVER),
+                        (ej = ea === ge.F.TOOLTIP && !p.hasAcknowledged()))
+                      : null == f || eh
+                        ? en
+                            ? ((t = (0, O.jsx)(gR, { isSelected: a, discountOffer: T })), (n = 8))
+                            : (q && eN === i1.M.PREMIUM_ORBS_UPSELL_POPOVER) ||
+                                (et && eN === i1.M.PREMIUM_ORBS_REWARDS_INTRO_POPOVER) ||
+                                (ee && eM === i1.M.PREMIUM_ORBS_REWARDS_DROP_POPOVER)
                               ? ((t = (0, O.jsx)(mc.E, { type: "new", variant: "expressive" })), (n = 2))
-                              : en && eS === i1.M.PREMIUM_WISHLIST_COACHMARK
+                              : ei && eN === i1.M.PREMIUM_WISHLIST_COACHMARK
                                 ? ((t = (0, O.jsx)(mc.E, { type: "new", variant: "expressive" })), (n = 13))
-                                : y
+                                : D
                                   ? ((t = (0, O.jsx)(mc.E, { type: "new", variant: "expressive" })), (n = 14))
-                                  : ei &&
-                                    em === i1.M.PROFILE_FRAMES_NITRO_TAB_NEW_BADGE &&
+                                  : er &&
+                                    eg === i1.M.PROFILE_FRAMES_NITRO_TAB_NEW_BADGE &&
                                     ((t = (0, O.jsx)(mc.E, { type: "new", variant: "expressive" })),
                                     (n = 15),
                                     (r = gy.PROFILE_FRAMES_CARD_ID))
-                        : ((t = (0, O.jsx)(gT.Ag, { trialOffer: I, isTabSelected: a, badgeStyle: ea })),
+                        : ((t = (0, O.jsx)(gT.Ag, { trialOffer: f, isTabSelected: a, badgeStyle: es })),
                           (n = 4),
-                          (eB = er === ge.F.POPOVER && eG === i1.M.PREMIUM_OFFER_TAB_BADGE_POPOVER),
-                          (eH = er === ge.F.TOOLTIP && null == I.expiresAt));
-    let eX = SI.NONE;
-    eD === i1.M.PREMIUM_MARKETING_MOMENT_REMINDER_UPSELL
-        ? (eX = SI.MARKETING_MOMENT_POPOVER)
-        : et && eS === i1.M.CHURN_DISCOUNT_PREMIUM_TAB_COACHMARK && 8 === n
-          ? (eX = SI.CHURN_DISCOUNT)
-          : eZ && eS === i1.M.PREMIUM_GROUP_POPOVER
-            ? (eX = SI.PREMIUM_GROUP)
+                          (eH = ea === ge.F.POPOVER && ex === i1.M.PREMIUM_OFFER_TAB_BADGE_POPOVER),
+                          (ej = ea === ge.F.TOOLTIP && null == f.expiresAt));
+    let eQ = SI.NONE;
+    ev === i1.M.PREMIUM_MARKETING_MOMENT_REMINDER_UPSELL
+        ? (eQ = SI.MARKETING_MOMENT_POPOVER)
+        : en && eN === i1.M.CHURN_DISCOUNT_PREMIUM_TAB_COACHMARK && 8 === n
+          ? (eQ = SI.CHURN_DISCOUNT)
+          : eq && eN === i1.M.PREMIUM_GROUP_POPOVER
+            ? (eQ = SI.PREMIUM_GROUP)
             : 9 === n
-              ? (eX = SI.PREMIUM_GROUP_DISCOUNT)
-              : eZ && eS === i1.M.PREMIUM_GROUP_POPOVER_UPSELL_V2
-                ? ((eX = SI.PREMIUM_GROUP_TOOLTIP), (d = !0))
-                : Z && eS === i1.M.PREMIUM_ORBS_UPSELL_POPOVER
-                  ? (eX = SI.ORBS_UPSELL)
-                  : ee && eS === i1.M.PREMIUM_ORBS_REWARDS_INTRO_POPOVER
-                    ? (eX = SI.ORBS_INTRO)
-                    : J && eb === i1.M.PREMIUM_ORBS_REWARDS_DROP_POPOVER
-                      ? (eX = SI.ORBS_DROP)
-                      : eK && j
-                        ? (eX = SI.COD_3PP_NITRO)
-                        : eK && W
-                          ? (eX = SI.COD_3PP_NON_NITRO)
-                          : eW
-                            ? (eX = SI.TOOLTIP)
-                            : eY && 3 === n
-                              ? (eX = SI.ANNUAL_DISCOUNT)
-                              : T || I?.trialId === dl.Tt
-                                ? (eX = SI.REVERSE_TRIAL)
-                                : y
-                                  ? (eX = SI.ORBS_MULTIPLIER)
-                                  : eB
-                                    ? (eX = SI.OFFER_TAB_BADGE)
-                                    : eH
-                                      ? (eX = SI.OFFER_TAB_BADGE_TOOLTIP)
-                                      : ej && (eX = SI.MONTHLY_TO_YEARLY_UPSELL);
-    let eQ = (0, O.jsx)(ct.z9, {
+              ? (eQ = SI.PREMIUM_GROUP_DISCOUNT)
+              : eq && eN === i1.M.PREMIUM_GROUP_POPOVER_UPSELL_V2
+                ? ((eQ = SI.PREMIUM_GROUP_TOOLTIP), (d = !0))
+                : q && eN === i1.M.PREMIUM_ORBS_UPSELL_POPOVER
+                  ? (eQ = SI.ORBS_UPSELL)
+                  : et && eN === i1.M.PREMIUM_ORBS_REWARDS_INTRO_POPOVER
+                    ? (eQ = SI.ORBS_INTRO)
+                    : ee && eM === i1.M.PREMIUM_ORBS_REWARDS_DROP_POPOVER
+                      ? (eQ = SI.ORBS_DROP)
+                      : e$ && W
+                        ? (eQ = SI.COD_3PP_NITRO)
+                        : e$ && Y
+                          ? (eQ = SI.COD_3PP_NON_NITRO)
+                          : eY
+                            ? (eQ = SI.TOOLTIP)
+                            : eK && 3 === n
+                              ? (eQ = SI.ANNUAL_DISCOUNT)
+                              : m || f?.trialId === dl.Tt
+                                ? (eQ = SI.REVERSE_TRIAL)
+                                : D
+                                  ? (eQ = SI.ORBS_MULTIPLIER)
+                                  : eH
+                                    ? (eQ = SI.OFFER_TAB_BADGE)
+                                    : ej
+                                      ? (eQ = SI.OFFER_TAB_BADGE_TOOLTIP)
+                                      : eW && (eQ = SI.MONTHLY_TO_YEARLY_UPSELL);
+    let eJ = (0, O.jsx)(ct.z9, {
         listItemRef: s,
         selected: a,
         route: l,
         icon: rs.t,
         showHoverGradient: d ?? !1,
         nitroHoverGradient: !0,
-        text: (0, O.jsx)(d7.A, { children: A ? tT.intl.string(tT.t["4gwVVn"]) : tT.intl.string(tT.t.Ipxkog) }),
+        text: (0, O.jsx)(d7.A, { children: h ? tT.intl.string(tT.t["4gwVVn"]) : tT.intl.string(tT.t.Ipxkog) }),
         locationState: o,
         onClick: function () {
             if (null != i && "" !== i) {
@@ -20209,43 +20218,44 @@ function Sm(e) {
                 let e = new URL(l, window.location.origin);
                 e.searchParams.set("perk", r), (0, oF.pX)(`${e.pathname}?${e.searchParams.toString()}`);
             }
-            e$();
+            ez();
         },
-        ...c,
-        ...h,
+        ...u,
+        ...I,
         children: t,
     });
     return (0, O.jsx)(Sf, {
-        orbsRewardAmount: B,
-        popoverType: eX,
+        orbsRewardAmount: H,
+        popoverType: eQ,
+        suppressPopover: c,
         targetElementRef: s,
-        discountOffer: f,
-        churnDiscountOffer: p,
-        premiumSubscription: _,
-        orbMultiplier: v,
-        lastGrantedRewardAmount: X,
-        dismissCoachMark: eN,
-        dismissOrbsDropPopover: eM,
-        dismissMarketingPopover: ev,
-        dismissOfferTabBadgePopover: ex,
-        dismissMonthlyToYearlyUpsellPopover: eV,
-        fpCurrentEntitlementEndsAt: ec,
-        trialOffer: I,
-        children: eQ,
+        discountOffer: p,
+        churnDiscountOffer: T,
+        premiumSubscription: E,
+        orbMultiplier: b,
+        lastGrantedRewardAmount: Q,
+        dismissCoachMark: eC,
+        dismissOrbsDropPopover: eU,
+        dismissMarketingPopover: eb,
+        dismissOfferTabBadgePopover: ek,
+        dismissMonthlyToYearlyUpsellPopover: eB,
+        fpCurrentEntitlementEndsAt: e_,
+        trialOffer: f,
+        children: eJ,
     });
 }
 var Sg = n(954457);
 function SS(e) {
-    let { targetElementRef: t } = e,
-        i = (0, gC.Tp)(),
-        r = (0, el.bG)([mK.A], () => mK.A.getReminderStateId()),
-        a = (0, el.bG)([mK.A], () => mK.A.getReferralsRemaining()),
-        s = (0, el.bG)([eg.A], () => {
+    let { targetElementRef: t, suppressPopover: i = !1 } = e,
+        r = (0, gC.Tp)(),
+        a = (0, el.bG)([mK.A], () => mK.A.getReminderStateId()),
+        s = (0, el.bG)([mK.A], () => mK.A.getReferralsRemaining()),
+        l = (0, el.bG)([eg.A], () => {
             let e = eg.A.settings.userContent?.recurringDismissibleContentStates[i1.M.REFERRAL_PROGRAM_POPOVER_V2];
             return e?.numTimesDismissed ?? 0;
         });
-    function l() {
-        (0, gC.ne)(r);
+    function o() {
+        (0, gC.ne)(a);
     }
     return (0, O.jsx)(i2.A, {
         targetElementRef: t,
@@ -20253,7 +20263,7 @@ function SS(e) {
         body: tT.intl.string(tT.t["JICo+3"]),
         graphic: { type: "image", src: Sg.A },
         size: "md",
-        shouldShow: i,
+        shouldShow: r && !i,
         align: "top",
         position: "right",
         gradientColor: "nitro-pink",
@@ -20264,10 +20274,10 @@ function SS(e) {
                 onClick: function () {
                     x.default.track(G.HAw.REFERRAL_PROGRAM_SHARE_MODAL_CTA_CLICKED, {
                         location_stack: [nT.A.HOME_PAGE_PREMIUM_TAB],
-                        times_dismissed: null != r ? s + 1 : null,
-                        referrals_remaining: a,
+                        times_dismissed: null != a ? l + 1 : null,
+                        referrals_remaining: s,
                     }),
-                        l(),
+                        o(),
                         (0, tB.openModalLazy)(async () => {
                             let { default: e } = await Promise.all([
                                 n.e("76283"),
@@ -20282,7 +20292,7 @@ function SS(e) {
                 },
             },
         ],
-        onRequestClose: l,
+        onRequestClose: o,
     });
 }
 var SN = n(221877),
@@ -20668,10 +20678,11 @@ let S1 = eu.memo(function (e) {
         _ = eu.useRef(null),
         E = eu.useRef(null),
         A = eu.useRef(null),
-        h = (0, mx.c)("PrivateChannels"),
-        I = null;
+        [h, I] = eu.useState(!1),
+        f = (0, mx.c)("PrivateChannels"),
+        p = null;
     return (
-        s && (I = (0, O.jsx)(SS, { targetElementRef: A })),
+        s && (p = (0, O.jsx)(SS, { targetElementRef: A, suppressPopover: h })),
         (0, O.jsxs)("nav", {
             className: SY.AB,
             "aria-label": tT.intl.string(tT.t.ZH9aP4),
@@ -20702,7 +20713,7 @@ let S1 = eu.memo(function (e) {
                     listScrollerRef: E,
                     children: [
                         (0, O.jsx)(S$, { selected: null != c ? c === G.BVt.FRIENDS : i === G.BVt.FRIENDS }, "friends"),
-                        h
+                        f
                             ? (0, O.jsx)(SK, { selected: null != c ? c === G.BVt.ICYMI : i === G.BVt.ICYMI }, "icymi")
                             : null,
                         n && t
@@ -20737,6 +20748,7 @@ let S1 = eu.memo(function (e) {
                                       children: [
                                           (0, O.jsx)(Sm, {
                                               nitroTabButtonRef: A,
+                                              suppressPopover: h,
                                               selected: null == c ? r : c.startsWith(G.BVt.APPLICATION_STORE),
                                               route: G.BVt.APPLICATION_STORE,
                                               locationState: {
@@ -20747,7 +20759,7 @@ let S1 = eu.memo(function (e) {
                                                   },
                                               },
                                           }),
-                                          I,
+                                          p,
                                       ],
                                   },
                                   "nitro-tab-group",
@@ -20758,6 +20770,7 @@ let S1 = eu.memo(function (e) {
                             {
                                 selected: c === G.BVt.COLLECTIBLES_SHOP || i?.startsWith(G.BVt.COLLECTIBLES_SHOP),
                                 listItemRef: _,
+                                onTabTooltipVisibilityChange: I,
                                 locationState: {
                                     analyticsSource: {
                                         page: S0(i),
@@ -20894,7 +20907,7 @@ let Nd = "isHideDevBanner",
                     className: ta()(No.Wz, No.mr),
                     children: [
                         (0, O.jsx)(Nl, { className: No.Kk }),
-                        tT.intl.format(tT.t.uyrfYF, { buildNumber: "599903" }),
+                        tT.intl.format(tT.t.uyrfYF, { buildNumber: "599946" }),
                         (0, O.jsx)(r, {}),
                     ],
                 })
@@ -23076,12 +23089,11 @@ let OJ = (0, tV.Fe)({
                 n.e("750955"),
                 n.e("28945"),
                 n.e("767311"),
-                n.e("261204"),
-                n.e("379134"),
+                n.e("571084"),
                 n.e("279774"),
-                n.e("175997"),
-                n.e("52978"),
-                n.e("118686"),
+                n.e("771593"),
+                n.e("602980"),
+                n.e("146577"),
                 n.e("410470"),
                 n.e("295570"),
                 n.e("245726"),
@@ -23104,8 +23116,7 @@ let OJ = (0, tV.Fe)({
                 n.e("836576"),
                 n.e("253453"),
                 n.e("82937"),
-                n.e("531547"),
-                n.e("450926"),
+                n.e("829096"),
                 n.e("923981"),
                 n.e("750370"),
                 n.e("972281"),
@@ -23457,12 +23468,11 @@ let OJ = (0, tV.Fe)({
                 n.e("750955"),
                 n.e("28945"),
                 n.e("767311"),
-                n.e("261204"),
-                n.e("379134"),
+                n.e("571084"),
                 n.e("279774"),
-                n.e("175997"),
-                n.e("52978"),
-                n.e("118686"),
+                n.e("771593"),
+                n.e("602980"),
+                n.e("146577"),
                 n.e("410470"),
                 n.e("295570"),
                 n.e("245726"),
@@ -23485,8 +23495,7 @@ let OJ = (0, tV.Fe)({
                 n.e("836576"),
                 n.e("253453"),
                 n.e("82937"),
-                n.e("531547"),
-                n.e("450926"),
+                n.e("829096"),
                 n.e("923981"),
                 n.e("750370"),
                 n.e("972281"),
@@ -23612,12 +23621,11 @@ let OJ = (0, tV.Fe)({
                 n.e("750955"),
                 n.e("28945"),
                 n.e("767311"),
-                n.e("261204"),
-                n.e("379134"),
+                n.e("571084"),
                 n.e("279774"),
-                n.e("175997"),
-                n.e("52978"),
-                n.e("118686"),
+                n.e("771593"),
+                n.e("602980"),
+                n.e("146577"),
                 n.e("410470"),
                 n.e("295570"),
                 n.e("245726"),
@@ -23640,8 +23648,7 @@ let OJ = (0, tV.Fe)({
                 n.e("836576"),
                 n.e("253453"),
                 n.e("82937"),
-                n.e("531547"),
-                n.e("450926"),
+                n.e("829096"),
                 n.e("923981"),
                 n.e("750370"),
                 n.e("972281"),
@@ -23775,12 +23782,11 @@ let OJ = (0, tV.Fe)({
                 n.e("750955"),
                 n.e("28945"),
                 n.e("767311"),
-                n.e("261204"),
-                n.e("379134"),
+                n.e("571084"),
                 n.e("279774"),
-                n.e("175997"),
-                n.e("52978"),
-                n.e("118686"),
+                n.e("771593"),
+                n.e("602980"),
+                n.e("146577"),
                 n.e("410470"),
                 n.e("295570"),
                 n.e("245726"),
@@ -23803,8 +23809,7 @@ let OJ = (0, tV.Fe)({
                 n.e("836576"),
                 n.e("253453"),
                 n.e("82937"),
-                n.e("531547"),
-                n.e("450926"),
+                n.e("829096"),
                 n.e("923981"),
                 n.e("750370"),
                 n.e("972281"),
@@ -24242,12 +24247,11 @@ let OJ = (0, tV.Fe)({
                 n.e("750955"),
                 n.e("28945"),
                 n.e("767311"),
-                n.e("261204"),
-                n.e("379134"),
+                n.e("571084"),
                 n.e("279774"),
-                n.e("175997"),
-                n.e("52978"),
-                n.e("118686"),
+                n.e("771593"),
+                n.e("602980"),
+                n.e("146577"),
                 n.e("410470"),
                 n.e("295570"),
                 n.e("245726"),
@@ -24270,8 +24274,7 @@ let OJ = (0, tV.Fe)({
                 n.e("836576"),
                 n.e("253453"),
                 n.e("82937"),
-                n.e("531547"),
-                n.e("450926"),
+                n.e("829096"),
                 n.e("923981"),
                 n.e("750370"),
                 n.e("972281"),
@@ -24764,12 +24767,11 @@ let OJ = (0, tV.Fe)({
                 n.e("750955"),
                 n.e("28945"),
                 n.e("767311"),
-                n.e("261204"),
-                n.e("379134"),
+                n.e("571084"),
                 n.e("279774"),
-                n.e("175997"),
-                n.e("52978"),
-                n.e("118686"),
+                n.e("771593"),
+                n.e("602980"),
+                n.e("146577"),
                 n.e("410470"),
                 n.e("295570"),
                 n.e("245726"),
@@ -24792,8 +24794,7 @@ let OJ = (0, tV.Fe)({
                 n.e("836576"),
                 n.e("253453"),
                 n.e("82937"),
-                n.e("531547"),
-                n.e("450926"),
+                n.e("829096"),
                 n.e("923981"),
                 n.e("750370"),
                 n.e("972281"),
@@ -25171,12 +25172,11 @@ let OJ = (0, tV.Fe)({
                 n.e("750955"),
                 n.e("28945"),
                 n.e("767311"),
-                n.e("261204"),
-                n.e("379134"),
+                n.e("571084"),
                 n.e("279774"),
-                n.e("175997"),
-                n.e("52978"),
-                n.e("118686"),
+                n.e("771593"),
+                n.e("602980"),
+                n.e("146577"),
                 n.e("410470"),
                 n.e("295570"),
                 n.e("245726"),
@@ -25199,8 +25199,7 @@ let OJ = (0, tV.Fe)({
                 n.e("836576"),
                 n.e("253453"),
                 n.e("82937"),
-                n.e("531547"),
-                n.e("450926"),
+                n.e("829096"),
                 n.e("923981"),
                 n.e("750370"),
                 n.e("972281"),
@@ -25878,12 +25877,11 @@ let OJ = (0, tV.Fe)({
                 n.e("750955"),
                 n.e("28945"),
                 n.e("767311"),
-                n.e("261204"),
-                n.e("379134"),
+                n.e("571084"),
                 n.e("279774"),
-                n.e("175997"),
-                n.e("52978"),
-                n.e("118686"),
+                n.e("771593"),
+                n.e("602980"),
+                n.e("146577"),
                 n.e("410470"),
                 n.e("295570"),
                 n.e("245726"),
@@ -25906,8 +25904,7 @@ let OJ = (0, tV.Fe)({
                 n.e("836576"),
                 n.e("253453"),
                 n.e("82937"),
-                n.e("531547"),
-                n.e("450926"),
+                n.e("829096"),
                 n.e("923981"),
                 n.e("750370"),
                 n.e("972281"),
@@ -26230,12 +26227,11 @@ let OJ = (0, tV.Fe)({
                 n.e("750955"),
                 n.e("28945"),
                 n.e("767311"),
-                n.e("261204"),
-                n.e("379134"),
+                n.e("571084"),
                 n.e("279774"),
-                n.e("175997"),
-                n.e("52978"),
-                n.e("118686"),
+                n.e("771593"),
+                n.e("602980"),
+                n.e("146577"),
                 n.e("410470"),
                 n.e("295570"),
                 n.e("245726"),
@@ -26258,8 +26254,7 @@ let OJ = (0, tV.Fe)({
                 n.e("836576"),
                 n.e("253453"),
                 n.e("82937"),
-                n.e("531547"),
-                n.e("450926"),
+                n.e("829096"),
                 n.e("923981"),
                 n.e("750370"),
                 n.e("972281"),
@@ -26602,12 +26597,11 @@ let OJ = (0, tV.Fe)({
                 n.e("750955"),
                 n.e("28945"),
                 n.e("767311"),
-                n.e("261204"),
-                n.e("379134"),
+                n.e("571084"),
                 n.e("279774"),
-                n.e("175997"),
-                n.e("52978"),
-                n.e("118686"),
+                n.e("771593"),
+                n.e("602980"),
+                n.e("146577"),
                 n.e("410470"),
                 n.e("295570"),
                 n.e("245726"),
@@ -26630,8 +26624,7 @@ let OJ = (0, tV.Fe)({
                 n.e("836576"),
                 n.e("253453"),
                 n.e("82937"),
-                n.e("531547"),
-                n.e("450926"),
+                n.e("829096"),
                 n.e("923981"),
                 n.e("750370"),
                 n.e("972281"),
@@ -27063,12 +27056,11 @@ let OJ = (0, tV.Fe)({
                 n.e("750955"),
                 n.e("28945"),
                 n.e("767311"),
-                n.e("261204"),
-                n.e("379134"),
+                n.e("571084"),
                 n.e("279774"),
-                n.e("175997"),
-                n.e("52978"),
-                n.e("118686"),
+                n.e("771593"),
+                n.e("602980"),
+                n.e("146577"),
                 n.e("410470"),
                 n.e("295570"),
                 n.e("245726"),
@@ -27091,8 +27083,7 @@ let OJ = (0, tV.Fe)({
                 n.e("836576"),
                 n.e("253453"),
                 n.e("82937"),
-                n.e("531547"),
-                n.e("450926"),
+                n.e("829096"),
                 n.e("923981"),
                 n.e("750370"),
                 n.e("972281"),
@@ -27604,12 +27595,11 @@ let OJ = (0, tV.Fe)({
                 n.e("750955"),
                 n.e("28945"),
                 n.e("767311"),
-                n.e("261204"),
-                n.e("379134"),
+                n.e("571084"),
                 n.e("279774"),
-                n.e("175997"),
-                n.e("52978"),
-                n.e("118686"),
+                n.e("771593"),
+                n.e("602980"),
+                n.e("146577"),
                 n.e("410470"),
                 n.e("295570"),
                 n.e("245726"),
@@ -27632,8 +27622,7 @@ let OJ = (0, tV.Fe)({
                 n.e("836576"),
                 n.e("253453"),
                 n.e("82937"),
-                n.e("531547"),
-                n.e("450926"),
+                n.e("829096"),
                 n.e("923981"),
                 n.e("750370"),
                 n.e("972281"),
@@ -28101,12 +28090,11 @@ let OJ = (0, tV.Fe)({
                 n.e("750955"),
                 n.e("28945"),
                 n.e("767311"),
-                n.e("261204"),
-                n.e("379134"),
+                n.e("571084"),
                 n.e("279774"),
-                n.e("175997"),
-                n.e("52978"),
-                n.e("118686"),
+                n.e("771593"),
+                n.e("602980"),
+                n.e("146577"),
                 n.e("410470"),
                 n.e("295570"),
                 n.e("245726"),
@@ -28129,8 +28117,7 @@ let OJ = (0, tV.Fe)({
                 n.e("836576"),
                 n.e("253453"),
                 n.e("82937"),
-                n.e("531547"),
-                n.e("450926"),
+                n.e("829096"),
                 n.e("923981"),
                 n.e("750370"),
                 n.e("972281"),
@@ -30048,12 +30035,11 @@ let Lb = (0, nX.Fe)({
                 n.e("750955"),
                 n.e("28945"),
                 n.e("767311"),
-                n.e("261204"),
-                n.e("379134"),
+                n.e("571084"),
                 n.e("279774"),
-                n.e("175997"),
-                n.e("52978"),
-                n.e("118686"),
+                n.e("771593"),
+                n.e("602980"),
+                n.e("146577"),
                 n.e("410470"),
                 n.e("295570"),
                 n.e("245726"),
@@ -30075,8 +30061,7 @@ let Lb = (0, nX.Fe)({
                 n.e("836576"),
                 n.e("253453"),
                 n.e("82937"),
-                n.e("531547"),
-                n.e("450926"),
+                n.e("829096"),
                 n.e("923981"),
                 n.e("750370"),
                 n.e("972281"),
@@ -30279,12 +30264,11 @@ let Lb = (0, nX.Fe)({
                 n.e("750955"),
                 n.e("28945"),
                 n.e("767311"),
-                n.e("261204"),
-                n.e("379134"),
+                n.e("571084"),
                 n.e("279774"),
-                n.e("175997"),
-                n.e("52978"),
-                n.e("118686"),
+                n.e("771593"),
+                n.e("602980"),
+                n.e("146577"),
                 n.e("410470"),
                 n.e("245726"),
                 n.e("711562"),
@@ -30305,8 +30289,7 @@ let Lb = (0, nX.Fe)({
                 n.e("836576"),
                 n.e("253453"),
                 n.e("82937"),
-                n.e("531547"),
-                n.e("450926"),
+                n.e("829096"),
                 n.e("750370"),
                 n.e("972281"),
                 n.e("641278"),
@@ -32222,12 +32205,11 @@ let D$ = (0, nX.Fe)({
                 n.e("750955"),
                 n.e("28945"),
                 n.e("767311"),
-                n.e("261204"),
-                n.e("379134"),
+                n.e("571084"),
                 n.e("279774"),
-                n.e("175997"),
-                n.e("52978"),
-                n.e("118686"),
+                n.e("771593"),
+                n.e("602980"),
+                n.e("146577"),
                 n.e("410470"),
                 n.e("295570"),
                 n.e("245726"),
@@ -32250,8 +32232,7 @@ let D$ = (0, nX.Fe)({
                 n.e("836576"),
                 n.e("253453"),
                 n.e("82937"),
-                n.e("531547"),
-                n.e("450926"),
+                n.e("829096"),
                 n.e("923981"),
                 n.e("750370"),
                 n.e("972281"),
@@ -32756,12 +32737,11 @@ let D$ = (0, nX.Fe)({
                 n.e("750955"),
                 n.e("28945"),
                 n.e("767311"),
-                n.e("261204"),
-                n.e("379134"),
+                n.e("571084"),
                 n.e("279774"),
-                n.e("175997"),
-                n.e("52978"),
-                n.e("118686"),
+                n.e("771593"),
+                n.e("602980"),
+                n.e("146577"),
                 n.e("410470"),
                 n.e("295570"),
                 n.e("245726"),
@@ -32784,8 +32764,7 @@ let D$ = (0, nX.Fe)({
                 n.e("836576"),
                 n.e("253453"),
                 n.e("82937"),
-                n.e("531547"),
-                n.e("450926"),
+                n.e("829096"),
                 n.e("923981"),
                 n.e("750370"),
                 n.e("972281"),
@@ -32925,12 +32904,11 @@ let D$ = (0, nX.Fe)({
                 n.e("750955"),
                 n.e("28945"),
                 n.e("767311"),
-                n.e("261204"),
-                n.e("379134"),
+                n.e("571084"),
                 n.e("279774"),
-                n.e("175997"),
-                n.e("52978"),
-                n.e("118686"),
+                n.e("771593"),
+                n.e("602980"),
+                n.e("146577"),
                 n.e("410470"),
                 n.e("295570"),
                 n.e("245726"),
@@ -32953,8 +32931,7 @@ let D$ = (0, nX.Fe)({
                 n.e("836576"),
                 n.e("253453"),
                 n.e("82937"),
-                n.e("531547"),
-                n.e("450926"),
+                n.e("829096"),
                 n.e("923981"),
                 n.e("750370"),
                 n.e("972281"),
@@ -33440,12 +33417,11 @@ let D$ = (0, nX.Fe)({
                 n.e("750955"),
                 n.e("28945"),
                 n.e("767311"),
-                n.e("261204"),
-                n.e("379134"),
+                n.e("571084"),
                 n.e("279774"),
-                n.e("175997"),
-                n.e("52978"),
-                n.e("118686"),
+                n.e("771593"),
+                n.e("602980"),
+                n.e("146577"),
                 n.e("410470"),
                 n.e("295570"),
                 n.e("245726"),
@@ -33468,8 +33444,7 @@ let D$ = (0, nX.Fe)({
                 n.e("836576"),
                 n.e("253453"),
                 n.e("82937"),
-                n.e("531547"),
-                n.e("450926"),
+                n.e("829096"),
                 n.e("923981"),
                 n.e("750370"),
                 n.e("972281"),
@@ -39855,12 +39830,11 @@ let Px = {
                             n.e("750955"),
                             n.e("28945"),
                             n.e("767311"),
-                            n.e("261204"),
-                            n.e("379134"),
+                            n.e("571084"),
                             n.e("279774"),
-                            n.e("175997"),
-                            n.e("52978"),
-                            n.e("118686"),
+                            n.e("771593"),
+                            n.e("602980"),
+                            n.e("146577"),
                             n.e("410470"),
                             n.e("295570"),
                             n.e("245726"),
@@ -39883,8 +39857,7 @@ let Px = {
                             n.e("836576"),
                             n.e("253453"),
                             n.e("82937"),
-                            n.e("531547"),
-                            n.e("450926"),
+                            n.e("829096"),
                             n.e("923981"),
                             n.e("750370"),
                             n.e("972281"),
@@ -44022,12 +43995,11 @@ let xd = [
                             n.e("750955"),
                             n.e("28945"),
                             n.e("767311"),
-                            n.e("261204"),
-                            n.e("379134"),
+                            n.e("571084"),
                             n.e("279774"),
-                            n.e("175997"),
-                            n.e("52978"),
-                            n.e("118686"),
+                            n.e("771593"),
+                            n.e("602980"),
+                            n.e("146577"),
                             n.e("410470"),
                             n.e("295570"),
                             n.e("245726"),
@@ -44049,8 +44021,7 @@ let xd = [
                             n.e("836576"),
                             n.e("253453"),
                             n.e("82937"),
-                            n.e("531547"),
-                            n.e("450926"),
+                            n.e("829096"),
                             n.e("923981"),
                             n.e("750370"),
                             n.e("972281"),
@@ -44788,12 +44759,11 @@ let xH = (0, tV.Fe)({
             n.e("750955"),
             n.e("28945"),
             n.e("767311"),
-            n.e("261204"),
-            n.e("379134"),
+            n.e("571084"),
             n.e("279774"),
-            n.e("175997"),
-            n.e("52978"),
-            n.e("118686"),
+            n.e("771593"),
+            n.e("602980"),
+            n.e("146577"),
             n.e("410470"),
             n.e("295570"),
             n.e("245726"),
@@ -44812,8 +44782,7 @@ let xH = (0, tV.Fe)({
             n.e("836576"),
             n.e("253453"),
             n.e("82937"),
-            n.e("531547"),
-            n.e("450926"),
+            n.e("829096"),
             n.e("923981"),
             n.e("750370"),
             n.e("972281"),
@@ -45897,11 +45866,11 @@ let xH = (0, tV.Fe)({
             n.e("957931"),
             n.e("392223"),
             n.e("840247"),
+            n.e("337271"),
             n.e("241245"),
             n.e("724553"),
             n.e("821403"),
             n.e("286197"),
-            n.e("673691"),
             n.e("191782"),
             n.e("899513"),
             n.e("676237"),
@@ -45929,7 +45898,7 @@ let xH = (0, tV.Fe)({
             n.e("541008"),
             n.e("484861"),
             n.e("987209"),
-            n.e("882327"),
+            n.e("753221"),
             n.e("210413"),
             n.e("403370"),
             n.e("624805"),
@@ -45950,7 +45919,6 @@ let xH = (0, tV.Fe)({
             n.e("342664"),
             n.e("218126"),
             n.e("924107"),
-            n.e("818860"),
             n.e("543456"),
             n.e("735186"),
             n.e("944602"),
@@ -45958,6 +45926,7 @@ let xH = (0, tV.Fe)({
             n.e("963309"),
             n.e("720516"),
             n.e("422420"),
+            n.e("152253"),
             n.e("415046"),
             n.e("123707"),
             n.e("34486"),
@@ -47453,12 +47422,11 @@ let k4 = (0, nX.Fe)({
                 n.e("750955"),
                 n.e("28945"),
                 n.e("767311"),
-                n.e("261204"),
-                n.e("379134"),
+                n.e("571084"),
                 n.e("279774"),
-                n.e("175997"),
-                n.e("52978"),
-                n.e("118686"),
+                n.e("771593"),
+                n.e("602980"),
+                n.e("146577"),
                 n.e("410470"),
                 n.e("295570"),
                 n.e("245726"),
@@ -47481,8 +47449,7 @@ let k4 = (0, nX.Fe)({
                 n.e("836576"),
                 n.e("253453"),
                 n.e("82937"),
-                n.e("531547"),
-                n.e("450926"),
+                n.e("829096"),
                 n.e("923981"),
                 n.e("750370"),
                 n.e("972281"),
