@@ -235,9 +235,8 @@ var j = n(73825),
     W = n(803306),
     Y = n(821956),
     K = n(628856),
-    $ = n(441574);
-$.gm.UNSPECIFIED, $.pR.UNSPECIFIED;
-var z = n(945096),
+    $ = n(870600),
+    z = n(945096),
     Z = n(996512),
     q = n(814890),
     X = n(505527),
@@ -848,25 +847,13 @@ ek(
         V.forceUpdate(), B.forceUpdate(), eV({ type: "CONNECTION_RESUMED" });
     }),
     ex(["TYPING_START"], (e) => {
-        var t;
         null != e.member && eB(e.guild_id, e.member.user, e.member),
             eV({
                 type: "TYPING_START",
                 guildId: e.guild_id,
                 channelId: e.channel_id,
                 userId: e.user_id,
-                customTypingIndicatorConfig:
-                    null == (t = e.typing_indicator_style)
-                        ? null
-                        : {
-                              emojis: (t.emojis ?? []).map((e) =>
-                                  null != e.custom_emoji_id
-                                      ? { id: e.custom_emoji_id, name: "", animated: e.animated ?? !1 }
-                                      : { name: e.unicode_emoji ?? "" },
-                              ),
-                              typingSuggestion: t.typing_suggestion ?? $.gm.UNSPECIFIED,
-                              animation: t.animation ?? $.pR.UNSPECIFIED,
-                          },
+                customTypingIndicatorConfig: (0, $.cE)(e.typing_indicator_style),
             });
     }),
     ex(["GUILD_RING_START"], (e) => {

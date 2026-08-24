@@ -1,22 +1,23 @@
 "use strict";
-n.d(t, { A: () => T }), n(938796);
+n.d(t, { A: () => m }), n(938796);
 var i = n(136722),
     r = n(665260),
     a = n(441574),
     s = n(315069),
     l = n(821956),
     o = n(780898),
-    d = n(945096),
-    c = n(47537),
-    u = n(244284),
-    _ = n(349871),
-    E = n(392737),
-    A = n(486020),
-    h = n(474090),
-    I = n(935208),
-    f = n(652215),
-    p = n(202541);
-class T extends s.A {
+    d = n(870600),
+    c = n(945096),
+    u = n(47537),
+    _ = n(244284),
+    E = n(349871),
+    A = n(392737),
+    h = n(486020),
+    I = n(474090),
+    f = n(935208),
+    p = n(652215),
+    T = n(202541);
+class m extends s.A {
     id;
     username;
     discriminator;
@@ -45,6 +46,7 @@ class T extends s.A {
     primaryGuild;
     collectibles;
     displayNameStyles;
+    typingIndicatorStyle;
     premiumState;
     perks;
     restrictedSchedule;
@@ -59,7 +61,7 @@ class T extends s.A {
         const t = e.premium_type ?? e.premiumType;
         (this.id = e.id),
             (this.username = e.username ?? ""),
-            (this.discriminator = e.discriminator ?? f.h3J),
+            (this.discriminator = e.discriminator ?? p.h3J),
             (this.avatar = e.avatar ?? null),
             (this.avatarDecoration = e.avatar_decoration_data ?? e.avatarDecorationData),
             (this.email = e.email ?? null),
@@ -69,7 +71,7 @@ class T extends s.A {
             (this.mfaEnabled = e.mfa_enabled ?? e.mfaEnabled ?? !1),
             (this.mobile = e.mobile ?? !1),
             (this.desktop = e.desktop ?? !1),
-            (this.premiumType = t === f.oA2 ? null : t),
+            (this.premiumType = t === p.oA2 ? null : t),
             (this.flags = e.flags ?? 0),
             (this.publicFlags = e.public_flags ?? e.publicFlags ?? 0),
             (this.purchasedFlags = e.purchased_flags ?? e.purchasedFlags ?? 0),
@@ -82,12 +84,13 @@ class T extends s.A {
             (this.personalConnectionId = e.personal_connection_id ?? e.personalConnectionId ?? null),
             (this.globalName = e.global_name ?? e.globalName),
             (this.banner = e.banner),
-            (this.primaryGuild = (0, c.j)(e.primary_guild ?? e.primaryGuild ?? null)),
+            (this.primaryGuild = (0, u.j)(e.primary_guild ?? e.primaryGuild ?? null)),
             (this.collectibles = e.collectibles),
-            (this.displayNameStyles = e.displayNameStyles ?? (0, d.mT)(e.display_name_styles)),
-            (this.premiumState = e.premiumState ?? (0, E.f)(e.premium_state)),
-            (this.perks = e.perks?.activePerksBitmask != null ? e.perks : (0, _.c$)(e.perks)),
-            (this.restrictedSchedule = (0, u.QU)(e.restricted_schedule ?? e.restrictedSchedule)),
+            (this.displayNameStyles = e.displayNameStyles ?? (0, c.mT)(e.display_name_styles)),
+            (this.typingIndicatorStyle = e.typingIndicatorStyle ?? (0, d.cE)(e.typing_indicator_style)),
+            (this.premiumState = e.premiumState ?? (0, A.f)(e.premium_state)),
+            (this.perks = e.perks?.activePerksBitmask != null ? e.perks : (0, E.c$)(e.perks)),
+            (this.restrictedSchedule = (0, _.QU)(e.restricted_schedule ?? e.restrictedSchedule)),
             (this.appTransactionIds = e.appTransactionIds ?? e.app_transaction_ids ?? null),
             (this.storeCountry = (function (e) {
                 return null == e
@@ -111,37 +114,37 @@ class T extends s.A {
                         return i.zy(i.kg(t, n), r);
                     },
                 },
-                isStaff: { writable: !1, configurable: !1, enumerable: !1, value: () => this.hasFlag(f.nhx.STAFF) },
+                isStaff: { writable: !1, configurable: !1, enumerable: !1, value: () => this.hasFlag(p.nhx.STAFF) },
                 isStaffPersonal: {
                     writable: !1,
                     configurable: !1,
                     enumerable: !1,
-                    value: () => !this.hasFlag(f.nhx.STAFF) && null != this.personalConnectionId,
+                    value: () => !this.hasFlag(p.nhx.STAFF) && null != this.personalConnectionId,
                 },
                 hasAnyStaffLevel: {
                     writable: !1,
                     configurable: !1,
                     enumerable: !1,
                     value: () =>
-                        this.hasFlag(f.nhx.STAFF) ||
-                        this.hasFlag(f.nhx.COLLABORATOR) ||
-                        this.hasFlag(f.nhx.RESTRICTED_COLLABORATOR),
+                        this.hasFlag(p.nhx.STAFF) ||
+                        this.hasFlag(p.nhx.COLLABORATOR) ||
+                        this.hasFlag(p.nhx.RESTRICTED_COLLABORATOR),
                 },
             }),
             this.globalName?.length === 0 && (this.globalName = null);
     }
     get createdAt() {
-        return new Date(I.default.extractTimestamp(this.id));
+        return new Date(f.default.extractTimestamp(this.id));
     }
     hasVerifiedEmailOrPhone() {
         return !0 === this.verified || null != this.phone;
     }
     getAvatarURL(e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-            i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : A.QB,
+            i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : h.QB,
             r = null != e ? this.guildMemberAvatars[e] : void 0;
         return null != r && null != e
-            ? A.Ay.getGuildMemberAvatarURLSimple({
+            ? h.Ay.getGuildMemberAvatarURLSimple({
                   guildId: e,
                   avatar: r,
                   userId: this.id,
@@ -149,7 +152,7 @@ class T extends s.A {
                   size: t,
                   canWebP: i,
               })
-            : A.Ay.getUserAvatarURL(this, n, t, null, i);
+            : h.Ay.getUserAvatarURL(this, n, t, null, i);
     }
     addGuildAvatarHash(e, t) {
         if (this.guildMemberAvatars[e] === t) return this;
@@ -167,9 +170,9 @@ class T extends s.A {
         if (null != e) {
             let i = this.guildMemberAvatars[e];
             if (null != i)
-                return A.Ay.getAnimatableSourceWithFallback(t, (t) =>
-                    A.Ay.makeSource(
-                        A.Ay.getGuildMemberAvatarURLSimple({
+                return h.Ay.getAnimatableSourceWithFallback(t, (t) =>
+                    h.Ay.makeSource(
+                        h.Ay.getGuildMemberAvatarURLSimple({
                             guildId: e,
                             avatar: i,
                             userId: this.id,
@@ -179,7 +182,7 @@ class T extends s.A {
                     ),
                 );
         }
-        return A.Ay.getAnimatableSourceWithFallback(t, (e) => A.Ay.getUserAvatarSource(this, e, n));
+        return h.Ay.getAnimatableSourceWithFallback(t, (e) => h.Ay.getUserAvatarSource(this, e, n));
     }
     isClaimed() {
         return null != this.email || null != this.phone;
@@ -200,20 +203,20 @@ class T extends s.A {
         return (0, r.Lt)(this.premiumUsageFlags, e);
     }
     hasHadSKU(e) {
-        let t = p.OO[e];
+        let t = T.OO[e];
         return null != t && this.hasPurchasedFlag(t);
     }
     hasHadPremium() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
-            t = this.hasPurchasedFlag(p.lA.PREMIUM_TIER_0),
-            n = this.hasPurchasedFlag(p.lA.PREMIUM_TIER_1),
-            i = this.hasPurchasedFlag(p.lA.PREMIUM_TIER_2);
+            t = this.hasPurchasedFlag(T.lA.PREMIUM_TIER_0),
+            n = this.hasPurchasedFlag(T.lA.PREMIUM_TIER_1),
+            i = this.hasPurchasedFlag(T.lA.PREMIUM_TIER_2);
         switch (e) {
-            case p.PremiumTypes.TIER_0:
+            case T.PremiumTypes.TIER_0:
                 return t;
-            case p.PremiumTypes.TIER_1:
+            case T.PremiumTypes.TIER_1:
                 return n;
-            case p.PremiumTypes.TIER_2:
+            case T.PremiumTypes.TIER_2:
                 return i;
             default:
                 return t || n || i;
@@ -221,23 +224,23 @@ class T extends s.A {
     }
     hadPremiumSubscription() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
-        return !(0, h.ki)(this) && this.hasHadPremium(e);
+        return !(0, I.ki)(this) && this.hasHadPremium(e);
     }
     hasFreePremium() {
-        return this.isStaff() || this.hasFlag(f.nhx.PARTNER) || this.isStaffPersonal();
+        return this.isStaff() || this.hasFlag(p.nhx.PARTNER) || this.isStaffPersonal();
     }
     isOnReverseTrial() {
-        return (0, h.ki)(this) && this.premiumState?.premiumSource === a.fE.REVERSE_TRIAL;
+        return (0, I.ki)(this) && this.premiumState?.premiumSource === a.fE.REVERSE_TRIAL;
     }
     isPremiumWithPremiumGroup() {
-        return (0, h.ki)(this, p.PremiumTypes.TIER_2) && this.premiumState?.premiumSource === a.fE.SUBSCRIPTION_GROUP;
+        return (0, I.ki)(this, T.PremiumTypes.TIER_2) && this.premiumState?.premiumSource === a.fE.SUBSCRIPTION_GROUP;
     }
     hasPaidTier2Subscription() {
-        return (0, h.ki)(this, p.PremiumTypes.TIER_2) && this.premiumState?.premiumSubscriptionType === a.jK.TIER_2;
+        return (0, I.ki)(this, T.PremiumTypes.TIER_2) && this.premiumState?.premiumSubscriptionType === a.jK.TIER_2;
     }
     isPremiumWithFractionalPremiumOnly() {
         return (
-            (0, h.ki)(this, p.PremiumTypes.TIER_2) &&
+            (0, I.ki)(this, T.PremiumTypes.TIER_2) &&
             (this.premiumState?.premiumSubscriptionType === a.jK.NONE_UNSPECIFIED ||
                 this.premiumState?.premiumSubscriptionType === a.jK.BOOST_ONLY) &&
             this.premiumState?.premiumSource === a.fE.FRACTIONAL_NITRO
@@ -245,25 +248,25 @@ class T extends s.A {
     }
     isFractionalPremiumWithNoStandardSub() {
         return (
-            (0, h.ki)(this, p.PremiumTypes.TIER_2) &&
+            (0, I.ki)(this, T.PremiumTypes.TIER_2) &&
             this.premiumState?.premiumSource === a.fE.FRACTIONAL_NITRO &&
             this.premiumState.premiumSubscriptionType !== a.jK.TIER_2
         );
     }
     isFractionalPremium() {
-        return (0, h.ki)(this, p.PremiumTypes.TIER_2) && this.premiumState?.premiumSource === a.fE.FRACTIONAL_NITRO;
+        return (0, I.ki)(this, T.PremiumTypes.TIER_2) && this.premiumState?.premiumSource === a.fE.FRACTIONAL_NITRO;
     }
     hasUrgentMessages() {
-        return this.hasFlag(f.nhx.HAS_UNREAD_URGENT_MESSAGES);
+        return this.hasFlag(p.nhx.HAS_UNREAD_URGENT_MESSAGES);
     }
     isNonUserBot() {
-        return this.isSystemUser() || (this.bot && this.discriminator === f.h3J);
+        return this.isSystemUser() || (this.bot && this.discriminator === p.h3J);
     }
     isLocalBot() {
-        return this.bot && this.id === f.oIV;
+        return this.bot && this.id === p.oIV;
     }
     isVerifiedBot() {
-        return this.isSystemUser() || this.isLocalBot() || this.hasFlag(f.nhx.VERIFIED_BOT);
+        return this.isSystemUser() || this.isLocalBot() || this.hasFlag(p.nhx.VERIFIED_BOT);
     }
     isSystemUser() {
         return !0 === this.system;
@@ -281,7 +284,7 @@ class T extends s.A {
         return this.isPremiumWithPremiumGroup() && this.premiumGroupRole === a.qT.PRIMARY;
     }
     get isProvisional() {
-        return this.hasFlag(f.nhx.PROVISIONAL_ACCOUNT);
+        return this.hasFlag(p.nhx.PROVISIONAL_ACCOUNT);
     }
     get avatarDecoration() {
         return this.avatarDecorationData;
@@ -296,4 +299,4 @@ class T extends s.A {
         return this.premiumState?.premiumSubscriptionGroupRole ?? a.qT.UNSPECIFIED;
     }
 }
-new T({ id: "0" });
+new m({ id: "0" });

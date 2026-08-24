@@ -649,6 +649,7 @@ var te =
         (_.CLIENT_THEME = "client_theme"),
         (_.PROFILE_EFFECT = "profile_effect"),
         (_.DISPLAY_NAME_STYLES = "display_name_styles"),
+        (_.TYPING_INDICATOR = "typing_indicator"),
         (_.PRESET = "preset"),
         _),
     tt = (((E = {}).FREE = "free"), (E.PREMIUM_STANDARD = "premium-standard"), E);

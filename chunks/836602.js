@@ -128,6 +128,10 @@ let O = new C(a.h, {
         let { displayNameStyles: t } = e;
         I = { ...I, tryItOutDisplayNameStyles: t };
     },
+    USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_CUSTOM_TYPING_INDICATOR_STYLE: function (e) {
+        let { customTypingIndicatorStyle: t } = e;
+        I = { ...I, tryItOutCustomTypingIndicatorStyle: t };
+    },
     USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_PRESET: function (e) {
         let { banner: t, themeColors: n, avatarDecoration: i, displayNameStyles: r } = e;
         I = {
@@ -152,6 +156,7 @@ let O = new C(a.h, {
                         pendingGlobalName: void 0,
                         pendingNickname: void 0,
                         pendingDisplayNameStyles: void 0,
+                        pendingCustomTypingIndicatorStyle: void 0,
                         pendingAvatar: void 0,
                         pendingAvatarDecoration: void 0,
                         pendingNameplate: void 0,
