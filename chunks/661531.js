@@ -7889,14 +7889,7 @@ let { Themes: c } = d.zv,
                         return 4;
                     },
                 },
-                CHAT_INPUT_FLOATING_ACCESSORY_TOP_BORDER_WIDTH: {
-                    resolve(e) {
-                        let { enabledExperiments: t } = e;
-                        if (0 === t.length) return 1;
-                        for (let e of t) if ("mobile-visual-refresh-floating" === e) return 0;
-                        return 1;
-                    },
-                },
+                CHAT_INPUT_FLOATING_ACCESSORY_TOP_BORDER_WIDTH: { resolve: () => 1 },
                 CHAT_INPUT_FLOATING_BORDER_RADIUS: {
                     resolve(e) {
                         let { enabledExperiments: t } = e;
