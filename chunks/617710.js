@@ -483,28 +483,28 @@ function ex(e, t) {
 function ek(e, t, n) {
     for (let i of e) eG[i] = { preload: t, dispatch: n };
 }
-function eF(e) {
-    let t = [];
-    for (let n of e)
-        null != n.member && eB(n.guild_id, n.member.user, n.member),
-            t.push({
-                userId: n.user_id,
-                guildId: n.guild_id,
-                sessionId: n.session_id,
-                channelId: n.channel_id,
-                mute: n.mute,
-                deaf: n.deaf,
-                selfMute: n.self_mute,
-                selfDeaf: n.self_deaf,
-                selfVideo: n.self_video || !1,
-                suppress: n.suppress,
-                selfStream: n.self_stream || !1,
-                requestToSpeakTimestamp: n.request_to_speak_timestamp ?? null,
-                discoverable: n.discoverable ?? !0,
-                oldChannelId: ec.A.getUserVoiceChannelId(n.guild_id, n.user_id),
-                connectedAt: n.connected_at,
+function eF(e, t) {
+    let n = [];
+    for (let t of e)
+        null != t.member && eB(t.guild_id, t.member.user, t.member),
+            n.push({
+                userId: t.user_id,
+                guildId: t.guild_id,
+                sessionId: t.session_id,
+                channelId: t.channel_id,
+                mute: t.mute,
+                deaf: t.deaf,
+                selfMute: t.self_mute,
+                selfDeaf: t.self_deaf,
+                selfVideo: t.self_video || !1,
+                suppress: t.suppress,
+                selfStream: t.self_stream || !1,
+                requestToSpeakTimestamp: t.request_to_speak_timestamp ?? null,
+                discoverable: t.discoverable ?? !0,
+                oldChannelId: ec.A.getUserVoiceChannelId(t.guild_id, t.user_id),
+                connectedAt: t.connected_at,
             });
-    eV({ type: "VOICE_STATE_UPDATES", voiceStates: t });
+    eV({ type: "VOICE_STATE_UPDATES", voiceStates: n, receivedAt: t });
 }
 function eV(e) {
     l.h.dispatch(e).catch((t) => {
@@ -1263,11 +1263,11 @@ ek(
     ex(["SESSIONS_REPLACE"], (e) => {
         eV({ type: "SESSIONS_REPLACE", sessions: ej(e) });
     }),
-    ex(["VOICE_STATE_UPDATE"], (e) => {
-        eF([e]);
+    ex(["VOICE_STATE_UPDATE"], (e, t, n, i) => {
+        eF([e], i);
     }),
-    ex(["VOICE_STATE_UPDATE_BATCH"], (e) => {
-        eF(e.voice_states);
+    ex(["VOICE_STATE_UPDATE_BATCH"], (e, t, n, i) => {
+        eF(e.voice_states, i);
     }),
     ex(["VOICE_SERVER_UPDATE"], (e) => {
         eV({

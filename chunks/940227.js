@@ -291,14 +291,15 @@ var eA = n(507821),
 class eI {
     current = null;
     history = [];
-    constructor(e) {
-        null != e && this.update(e);
+    constructor(e, t) {
+        null != e && this.update(e, t);
     }
     reset(e) {
         (this.current = null), (this.history = []), null != e && this.update(e);
     }
     update(e) {
-        this.current !== e && ((this.current = e), this.history.push({ state: e, startTime: (0, m.tB)() }));
+        let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : (0, m.tB)();
+        this.current !== e && ((this.current = e), this.history.push({ state: e, startTime: t }));
     }
     getVoiceConnectionSuccessStats() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, m.tB)(),
@@ -2768,6 +2769,7 @@ class tu extends p.A {
         streamChannelId: s,
         parentMediaSessionId: l,
         joinVoiceId: o,
+        createdTime: d,
     }) {
         super(),
             (this.context = r),
@@ -2794,8 +2796,9 @@ class tu extends p.A {
             (this.protocol = null),
             (this.voiceVersion = null),
             (this.rtcWorkerVersion = null),
+            (this._createdTime = d ?? (0, m.tB)()),
             (this.state = eh.S7L.AWAITING_ENDPOINT),
-            (this.stateHistory = new eI(this.state)),
+            (this.stateHistory = new eI(this.state, this._createdTime)),
             (this._socket = null),
             (this._backoff = tl()),
             (this._mlsFailureReconnectBackoff = tl()),
@@ -2815,7 +2818,6 @@ class tu extends p.A {
             (this._sentVideo = !1),
             (this._videoDecoderFallbackSuppressed = !1),
             (this._outboundLossRate = null),
-            (this._createdTime = (0, m.tB)()),
             (this._connectStartTime = 0),
             (this._connectCompletedTime = 0),
             (this._rtcConnectionId = (0, h.A)()),
@@ -2840,11 +2842,11 @@ class tu extends p.A {
             (this.reconnecting = !1),
             (this._lastSentSpeakingStatus = 0),
             (this._lastSentSSRC = void 0);
-        const d = Q.Ay.supports(B.O5.FIRST_FRAME_CALLBACK) && Q.Ay.supports(B.O5.REMOTE_USER_MULTI_STREAM);
+        const c = Q.Ay.supports(B.O5.FIRST_FRAME_CALLBACK) && Q.Ay.supports(B.O5.REMOTE_USER_MULTI_STREAM);
         switch (r) {
             case B.x.DEFAULT: {
                 const t = q.A.getChannel(this.channelId)?.type === eh.rbe.GUILD_STAGE_VOICE;
-                (this._localMediaSinkWantsManager = new e$(e, t, d)),
+                (this._localMediaSinkWantsManager = new e$(e, t, c)),
                     this._localMediaSinkWantsManager.on(eY.Update, (e) => {
                         this.state === eh.S7L.RTC_CONNECTED &&
                             null != this._socket &&
