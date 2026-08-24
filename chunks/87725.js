@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { y0: () => M, Ni: () => P, t4: () => w, Q9: () => U, y$: () => G });
+n.d(t, { y0: () => U, Ni: () => w, t4: () => x, Q9: () => G, y$: () => k });
 var i = n(462180),
     r = n(882035),
     a = n(315069),
@@ -240,15 +240,17 @@ function R(e, t) {
 var L = n(652215),
     y = n(504275),
     D = n(219538),
-    v = n(75304),
-    b = n(65258);
-let M = 1,
-    [P, U] = (0, T.A)();
-function w(e) {
+    v = n(811315),
+    b = n.n(v),
+    M = n(75304),
+    P = n(65258);
+let U = 1,
+    [w, G] = (0, T.A)();
+function x(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : i.x;
-    return U()(e, t);
+    return G()(e, t);
 }
-function G(e) {
+function k(e) {
     let {
         checkoutInitParameters: t,
         startingValues: n,
@@ -259,7 +261,9 @@ function G(e) {
     } = e;
     return (0, r.h)((e, i) => {
         let r,
-            d =
+            d,
+            c,
+            u =
                 ((r = { checkoutContext: null, checkoutPaymentSources: [] }),
                 {
                     isPremiumPurchase: () => O(i().selectedPlanId).isPremiumPurchase,
@@ -373,12 +377,14 @@ function G(e) {
                 setExpressCheckoutSubmitting: (t) => e({ expressCheckoutSubmitting: t }),
                 getShouldUseStripeExpressCheckout: () => {
                     let e = i().getSharedTenantParams();
-                    return !!(0, b.l)() && null != e && !!e.shouldUseStripeExpressCheckout;
+                    return !!(0, P.l)() && null != e && !!e.shouldUseStripeExpressCheckout;
                 },
             },
-            ...{
+            ...((d = []),
+            (c = { premiumPlanOptions: null }),
+            {
                 getShouldDisallowPlanSelection: () => {
-                    let e = i().getTenantParams(v.C.PREMIUM_CHECKOUT);
+                    let e = i().getTenantParams(M.C.PREMIUM_CHECKOUT);
                     return null != e && (e.shouldDisallowPlanSelection ?? !1);
                 },
                 getIsInOneStepSubscriptionCheckout: (e) => {
@@ -403,21 +409,50 @@ function G(e) {
                         })({ isTrial: t, isGift: r, selectedSkuId: n ?? a, startedPaymentFlowWithPaymentSources: s })
                     );
                 },
-            },
-            get: (e) => (null != d[e] ? d[e]() : null),
+                getVerifiedTrialId: (e) => {
+                    let { trialId: t } = e,
+                        { referralTrialOfferId: n, selectedSkuId: r, get: a } = i(),
+                        s = a("isPremiumPurchase"),
+                        l = t ?? n ?? null,
+                        o = null != l && l in N.TP ? N.TP[l].skus : [];
+                    return null != l && (!s || o.includes(r)) ? l : null;
+                },
+                getEffectivePlanGroup: (e) => {
+                    let { planGroup: t } = e,
+                        { selectedPlanId: n } = i();
+                    if (null != t && (null == n || t.includes(n))) return t;
+                    if (null != n) {
+                        if ((0, S.xq)(n)) return N.LE;
+                        if ((0, S.z4)(n)) return N.DA;
+                    }
+                    return d;
+                },
+                getPremiumPlanOptionsOrNull: () => {
+                    let { selectedSkuId: e, defaultPlanId: t, get: n } = i(),
+                        r = n("isPremiumPurchase");
+                    try {
+                        let n = (0, S.Tm)({ skuId: e, isPremium: r, defaultPlanId: t });
+                        if (b()(n, c.premiumPlanOptions)) return c.premiumPlanOptions;
+                        return (c.premiumPlanOptions = n), n;
+                    } catch (e) {
+                        return null;
+                    }
+                },
+            }),
+            get: (e) => (null != u[e] ? u[e]() : null),
             contextMetadata: a,
             order: s,
             orderRecord: null != s ? I.createFromServer(s) : null,
             setOrder: (t) => e({ order: t, orderRecord: I.createFromServer(t), pendingPaymentSourceId: null }),
             selectedSkuId: void 0,
             selectedPlanId: void 0,
-            setSelectedSkuId: (t) => e({ selectedSkuId: t ?? void 0, quantity: M }),
+            setSelectedSkuId: (t) => e({ selectedSkuId: t ?? void 0, quantity: U }),
             setSelectedPlanId: function (t) {
                 let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : { shouldUpdateQuantity: !0 },
                     i = t ?? void 0;
-                return n.shouldUpdateQuantity ? e({ selectedPlanId: i, quantity: M }) : e({ selectedPlanId: i });
+                return n.shouldUpdateQuantity ? e({ selectedPlanId: i, quantity: U }) : e({ selectedPlanId: i });
             },
-            quantity: M,
+            quantity: U,
             setQuantity: (t) => e({ quantity: t }),
             fetchCheckoutInvoicePreviewRequest: null,
             setFetchCheckoutInvoicePreviewRequest: (t) => e({ fetchCheckoutInvoicePreviewRequest: R(t, i) }),
