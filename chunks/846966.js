@@ -569,14 +569,14 @@ var eF = n(284009),
     eY = n(877062);
 g.Ay.initialize();
 var e$ = n(842241),
-    eZ = n(221877),
+    eZ = n(296704),
     eJ = n(280513),
     e0 = n(717421),
     e1 = n(661531),
     e2 = n(993077),
     e4 = n(235986),
     e8 = n(408738);
-function e7(e) {
+function e6(e) {
     let { text: t, buttonCta: i, onClick: l } = e;
     return (0, o.jsxs)(o.Fragment, {
         children: [
@@ -613,11 +613,11 @@ function e7(e) {
         ],
     });
 }
-function e3(e) {
+function e7(e) {
     let { text: t, buttonCta: n, theme: i = R.NJ8.DARK, onClick: l } = e;
-    return (0, o.jsx)(w.Ay, { theme: i, children: (0, o.jsx)(e7, { text: t, buttonCta: n, onClick: l }) });
+    return (0, o.jsx)(w.Ay, { theme: i, children: (0, o.jsx)(e6, { text: t, buttonCta: n, onClick: l }) });
 }
-var e6 = n(765671),
+var e3 = n(765671),
     e5 = n(9994),
     e9 = n(71393),
     te = n(299091),
@@ -1176,12 +1176,12 @@ function t4(e) {
 function t8(e) {
     let { invite: t, onAcceptInvite: n } = e;
     return t?.state === R.elq.BANNED
-        ? (0, o.jsx)(e7, { text: Q.intl.string(Q.t["5AkWAd"]), buttonCta: Q.intl.string(Q.t["8osdkn"]), onClick: n })
-        : (0, o.jsx)(e7, { text: Q.intl.string(Q.t["usP+Mb"]), buttonCta: Q.intl.string(Q.t["8osdkn"]), onClick: n });
+        ? (0, o.jsx)(e6, { text: Q.intl.string(Q.t["5AkWAd"]), buttonCta: Q.intl.string(Q.t["8osdkn"]), onClick: n })
+        : (0, o.jsx)(e6, { text: Q.intl.string(Q.t["usP+Mb"]), buttonCta: Q.intl.string(Q.t["8osdkn"]), onClick: n });
 }
-function t7(e) {
+function t6(e) {
     let { children: t, cardChildren: n, startAnimHeightPx: i, sectionClassName: l, inviteCardClassName: s = tY.qF } = e,
-        { ref: r, height: a } = (0, e6.Ay)(),
+        { ref: r, height: a } = (0, e3.Ay)(),
         c = (0, e0.z)({ height: null != a && 0 !== a ? `${a}px` : `${i}px`, config: eZ.config.stiff });
     return (0, o.jsxs)(eZ.animated.div, {
         className: s,
@@ -1196,17 +1196,17 @@ function t7(e) {
         ],
     });
 }
-function t3(e) {
+function t7(e) {
     let { invite: t } = e;
     if (null == t || !tp(t)) return null;
     let n = t4(t);
-    return (0, o.jsx)(t7, {
+    return (0, o.jsx)(t6, {
         startAnimHeightPx: 0,
         sectionClassName: tY.ui,
         children: 1 === n ? (0, o.jsx)(tR, { invite: t }) : null,
     });
 }
-let t6 = { 1: tY._r, 2: tY.Gm, 0: tY.Kt };
+let t3 = { 1: tY._r, 2: tY.Gm, 0: tY.Kt };
 function t5(e) {
     let t,
         { invite: n } = e,
@@ -1249,7 +1249,7 @@ function t5(e) {
                 t = (0, o.jsx)(t2, {});
         }
     let h = 1 === i && u ? tY.c4 : tY.qF;
-    return (0, o.jsx)(t7, { startAnimHeightPx: 200, sectionClassName: t6[i], inviteCardClassName: h, children: t });
+    return (0, o.jsx)(t6, { startAnimHeightPx: 200, sectionClassName: t3[i], inviteCardClassName: h, children: t });
 }
 function t9(e) {
     let { invite: t, onAcceptInvite: n } = e,
@@ -1267,7 +1267,7 @@ function t9(e) {
         className: tY.G3,
         style: l,
         contentClassName: tY.__,
-        children: [(0, o.jsx)(t5, { ...e, onAcceptInvite: n }), (0, o.jsx)(t3, { ...e })],
+        children: [(0, o.jsx)(t5, { ...e, onAcceptInvite: n }), (0, o.jsx)(t7, { ...e })],
     });
 }
 var ne = n(723702);
@@ -2044,9 +2044,9 @@ let n1 = g.Ay.connectStores([eh.A], () => ({ defaultRoute: eh.A.defaultRoute }))
 var n2 = n(110782),
     n4 = n(10088),
     n8 = n(871123),
-    n7 = n(189081),
-    n3 = n(67480),
-    n6 = n(45938),
+    n6 = n(189081),
+    n7 = n(67480),
+    n3 = n(45938),
     n5 = n(587895),
     n9 = n(242874),
     ie = n(165191),
@@ -2055,9 +2055,9 @@ var n2 = n(110782),
     il = n(615396),
     is = n(202541),
     ir = n(716592);
-let ia = g.Ay.connectStores([n3.A, n5.A, ii.A, it.default], (e) => {
+let ia = g.Ay.connectStores([n7.A, n5.A, ii.A, it.default], (e) => {
     let { giftCode: t } = e,
-        n = n3.A.get(t.skuId),
+        n = n7.A.get(t.skuId),
         { subscriptionPlanId: i } = t;
     return {
         sku: n,
@@ -2662,7 +2662,7 @@ function iq(e) {
         x = (0, g.bG)([b.A], () => b.A.isHandoffAvailable()),
         A = (0, g.bG)([eq.default], () => eq.default.getLoginStatus()),
         E = i?.skuId ?? null,
-        v = (0, g.bG)([n3.A], () => (null != E ? n3.A.get(E) : null)),
+        v = (0, g.bG)([n7.A], () => (null != E ? n7.A.get(E) : null)),
         {
             checkingHandoff: j,
             redirecting: N,
@@ -3045,9 +3045,9 @@ let i8 = function () {
         }),
     });
 };
-var i7 = n(866665),
-    i3 = n(913122),
-    i6 = n(201505);
+var i6 = n(866665),
+    i7 = n(913122),
+    i3 = n(201505);
 n(994555), n(827343), n(792251), n(19575), n(945041);
 var i5 = n(493527),
     i9 = n(544395),
@@ -3097,7 +3097,7 @@ function ln(e) {
 }
 var li = n(153488),
     ll = n(934337),
-    ls = n(989349),
+    ls = n(536637),
     lr = n.n(ls),
     la = n(955437),
     lo = n(888548);
@@ -3378,7 +3378,7 @@ function lN(e) {
                 }),
                     u?.();
             } catch (t) {
-                if ((z(!1), !(t instanceof i3.LG))) return;
+                if ((z(!1), !(t instanceof i7.LG))) return;
                 let e = (0, iW.W)(t);
                 $(e), s?.(e), "number" == typeof e.retry_after && q(e.retry_after);
             }
@@ -3475,7 +3475,7 @@ function lN(e) {
                                 globalName: b,
                                 isUsernameFocused: m,
                                 onClickSuggestion: () => {
-                                    j.current?.focus(), null != _ && _.length > 0 && O(_);
+                                    j.current?.focus(), null != _ && _.length > 0 && (O(_), ea(null));
                                 },
                             }),
                         ],
@@ -3495,7 +3495,7 @@ function lN(e) {
                         onFocus: () => x("password"),
                         onBlur: () => A("password"),
                     }),
-                    (0, o.jsx)(i6.A, {
+                    (0, o.jsx)(i3.A, {
                         label: Q.intl.string(Q.t.rhBeKe),
                         wrapperClassName: lx.UJ,
                         name: "date_of_birth",
@@ -3510,7 +3510,7 @@ function lN(e) {
                     }),
                     (0, o.jsx)(lh, {}),
                     (0, o.jsx)(lA, { consent: B, consentRequired: E, onConsentChange: F }),
-                    (0, o.jsx)(i7.m, {
+                    (0, o.jsx)(i6.m, {
                         text: !B && E ? Q.intl.string(Q.t.AY4IVA) : null,
                         children: (0, o.jsx)("div", {
                             className: X.QX,
@@ -3622,7 +3622,7 @@ function lL(e) {
             (0, o.jsxs)(w.eB, {
                 className: lx.y0,
                 children: [
-                    (0, o.jsx)(i7.m, {
+                    (0, o.jsx)(i6.m, {
                         text: Q.intl.string(Q.t["hBB85/"]),
                         position: "right",
                         children: (0, o.jsx)(w.pd, {
@@ -3672,7 +3672,7 @@ function lL(e) {
 function lO(e) {
     let { consentRequired: t, consent: n, registering: i } = e,
         l = c.useMemo(() => null != t && n, [t, n]);
-    return (0, o.jsx)(i7.m, {
+    return (0, o.jsx)(i6.m, {
         text: !n && t ? Q.intl.string(Q.t.AY4IVA) : null,
         children: (0, o.jsx)("div", {
             className: X.Ot,
@@ -3719,7 +3719,7 @@ function lk(e) {
                 })({ consent: A, invite: t.code, globalName: m, birthday: p }),
                     r?.();
             } catch (t) {
-                if ((v(!1), !(t instanceof i3.LG))) return;
+                if ((v(!1), !(t instanceof i7.LG))) return;
                 let e = (0, iW.W)(t);
                 N(e), l?.(e), "number" == typeof e.retry_after && T(e.retry_after);
             }
@@ -3765,7 +3765,7 @@ function lk(e) {
                                               S.default.track(R.HAw.REGISTER_INPUT_BLUR, { field: "global_name" });
                                           },
                                       }),
-                                      (0, o.jsx)(i6.A, {
+                                      (0, o.jsx)(i3.A, {
                                           label: Q.intl.string(Q.t.rhBeKe),
                                           wrapperClassName: lx.DC,
                                           name: "date_of_birth",
@@ -4171,19 +4171,19 @@ class lB extends c.PureComponent {
         return null;
     }
 }
-let lV = g.Ay.connectStores([nk.A, n7.A, eq.default, n3.A, eh.A, n4.A], (e) => {
+let lV = g.Ay.connectStores([nk.A, n6.A, eq.default, n7.A, eh.A, n4.A], (e) => {
     let t = e.match.params.giftCode,
         n = nk.A.get(t),
-        i = null != n ? n3.A.get(n.skuId) : null;
+        i = null != n ? n7.A.get(n.skuId) : null;
     return {
         giftCode: n,
         sku: i,
-        libraryApplication: null != i && n?.entitlementBranches != null ? n6.YI(n.entitlementBranches, i, n7.A) : null,
+        libraryApplication: null != i && n?.entitlementBranches != null ? n3.YI(n.entitlementBranches, i, n6.A) : null,
         authenticated: eq.default.isAuthenticated(),
         defaultRoute: eh.A.defaultRoute,
         isResolved: nk.A.getIsResolved(t),
         isAccepting: nk.A.getIsAccepting(t),
-        libraryApplicationsFetched: n7.A.fetched,
+        libraryApplicationsFetched: n6.A.fetched,
         nativeAppState: n4.A.getState(t),
     };
 })(lB);
@@ -4341,7 +4341,7 @@ function lY(e) {
                     }),
                 ],
             })
-          : (0, o.jsx)(e3, {
+          : (0, o.jsx)(e7, {
                 text: Q.intl.string(Q.t["e/rZ2n"]),
                 buttonCta: Q.intl.string(Q.t.HAvYn0),
                 onClick: (e) => lq(e, t, n),
@@ -4361,9 +4361,9 @@ let l4 = (0, tZ.mj)({
     variations: { 1: { enabled: !0, variant: "chart" }, 2: { enabled: !0, variant: "highlights" } },
 });
 var l8 = n(575181),
-    l7 = n(943255),
-    l3 = n(406810),
-    l6 = n(81466),
+    l6 = n(943255),
+    l7 = n(406810),
+    l3 = n(81466),
     l5 = n(27232),
     l9 = n(825860);
 function se(e) {
@@ -4517,10 +4517,10 @@ function so() {
 let sc = {
     morning: (0, o.jsx)(l8.F, { size: "xs", color: "currentColor" }),
     afternoon: (0, o.jsx)(l8.F, { size: "xs", color: "currentColor" }),
-    evening: (0, o.jsx)(l7.Z, { size: "xs", color: "currentColor" }),
-    night: (0, o.jsx)(l7.Z, { size: "xs", color: "currentColor" }),
-    allDay: (0, o.jsx)(l3.ClockIcon, { size: "xs", color: "currentColor" }),
-    weekday: (0, o.jsx)(l6.CalendarIcon, { size: "xs", color: "currentColor" }),
+    evening: (0, o.jsx)(l6.Z, { size: "xs", color: "currentColor" }),
+    night: (0, o.jsx)(l6.Z, { size: "xs", color: "currentColor" }),
+    allDay: (0, o.jsx)(l7.ClockIcon, { size: "xs", color: "currentColor" }),
+    weekday: (0, o.jsx)(l3.CalendarIcon, { size: "xs", color: "currentColor" }),
     weekend: (0, o.jsx)(l5.StarIcon, { size: "xs", color: "currentColor" }),
     everyDay: (0, o.jsx)(l9.FireIcon, { size: "xs", color: "currentColor" }),
 };
@@ -5211,7 +5211,7 @@ let s4 = nK(iq),
             ? (0, o.jsx)(w.Ay, { children: (0, o.jsx)(ew.y, {}) })
             : (0, o.jsx)(iq, { ...e, transitionTo: n });
     }),
-    s7 = nK(function (e) {
+    s6 = nK(function (e) {
         let { inviteKey: t, location: n, transitionTo: i, login: l } = e,
             s = c.useMemo(() => (0, e$.m0)(t), [t]),
             r = (0, g.bG)([te.A], () => te.A.getInvite(t)),
@@ -5432,7 +5432,7 @@ let s4 = nK(iq),
             ? (0, o.jsx)(sK, { invite: r, inviteKey: t, handleAccept: N, handleDefaultTransition: C })
             : null;
     }),
-    s3 = nK(function (e) {
+    s7 = nK(function (e) {
         let t = {
             guildTemplate: (0, g.bG)([eb.A], () => eb.A.getGuildTemplate(e.code)),
             nativeAppState: (0, g.bG)([n4.A], () => n4.A.getState(e.code)),
@@ -5441,7 +5441,7 @@ let s4 = nK(iq),
         };
         return (0, o.jsx)(lK, { ...e, ...t });
     }),
-    s6 = nK(lV),
+    s3 = nK(lV),
     s5 = nK(function (e) {
         let { inviteKey: t, transitionTo: n } = e,
             i = (0, g.bG)([te.A], () => te.A.getInvite(t));
@@ -6094,9 +6094,9 @@ class rg extends c.PureComponent {
                 }),
                 (0, o.jsx)(ei.A, {
                     path: R.BVt.GIFT_CODE_LOGIN(":giftCode"),
-                    render: (e) => (0, o.jsx)(s6, { login: !0, ...e }),
+                    render: (e) => (0, o.jsx)(s3, { login: !0, ...e }),
                 }),
-                (0, o.jsx)(ei.A, { path: R.BVt.GIFT_CODE(":giftCode"), render: (e) => (0, o.jsx)(s6, { ...e }) }),
+                (0, o.jsx)(ei.A, { path: R.BVt.GIFT_CODE(":giftCode"), render: (e) => (0, o.jsx)(s3, { ...e }) }),
                 (0, o.jsx)(ei.A, {
                     path: [R.BVt.INVITE_LOGIN(":inviteCode"), R.BVt.INVITE(":inviteCode")],
                     render: (e) => {
@@ -6112,7 +6112,7 @@ class rg extends c.PureComponent {
                         return h.Fr || h.v1
                             ? (0, o.jsx)(s5, { inviteKey: s, transitionTo: l }, s)
                             : (0, o.jsx)(
-                                  s7,
+                                  s6,
                                   {
                                       inviteKey: s,
                                       location: i,
@@ -6139,7 +6139,7 @@ class rg extends c.PureComponent {
                         } = e;
                         return h.Fr || h.v1
                             ? (0, o.jsx)(lY, { code: t }, t)
-                            : (0, o.jsx)(s3, {
+                            : (0, o.jsx)(s7, {
                                   code: t,
                                   location: i,
                                   transitionTo: l,
