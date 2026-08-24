@@ -72,6 +72,7 @@ function M(e) {
         profileThemeClassName: s()((0, i.m)(o), null != l ? { [O[l]]: !0 } : void 0, {
             [h.Gc]: null != A,
             "custom-user-profile-theme": null != A,
+            "profile-theme-synced-with-user-theme": null != A && (f || b),
         }),
     };
 }

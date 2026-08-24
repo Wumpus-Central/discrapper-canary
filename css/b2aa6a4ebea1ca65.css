@@ -17,6 +17,10 @@
     border-radius: 0
 }
 
+.custom-user-profile-theme.profile-theme-synced-with-user-theme .banner__43147 {
+    background: var(--background-surface-higher)
+}
+
 .user-profile-popout .banner__43147 {
     margin-bottom: -8px
 }
@@ -56,4 +60,4 @@
     line-height: 2px
 }
 
-/*# sourceMappingURL=bab1699681e241c2.css.map*/
+/*# sourceMappingURL=b2aa6a4ebea1ca65.css.map*/
