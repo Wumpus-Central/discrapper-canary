@@ -814,7 +814,12 @@ function eX(e) {
             let { planId: t } = e;
             return N.pW.has(t);
         }),
-        a = r?.planId === N.gD.PREMIUM_MONTH_GUILD || r?.planId === N.gD.PREMIUM_YEAR_GUILD ? eR.t.Pi5yMJ : null,
+        a =
+            r?.planId === N.gD.PREMIUM_MONTH_GUILD
+                ? eR.t.Pi5yMJ
+                : r?.planId === N.gD.PREMIUM_YEAR_GUILD
+                  ? eR.t.H4KPuV
+                  : null,
         s = null != a ? eR.intl.formatToPlainString(a, { num: r?.quantity }) : void 0;
     if (null != i && null != s)
         return eR.intl.formatToPlainString(eR.t.FN5T9r, { premiumDescription: i, premiumGuildDescription: s });
