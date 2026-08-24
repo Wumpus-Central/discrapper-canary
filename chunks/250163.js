@@ -93,8 +93,8 @@ function V(e) {
         }),
     });
 }
-var B = n(332757);
-let F = c.Ay.getEnableHardwareAcceleration() ? s.Js : s.eu,
+var F = n(332757);
+let B = c.Ay.getEnableHardwareAcceleration() ? s.Js : s.eu,
     z = a._3.SIZE_96,
     J = {
         "--custom-user-profile-banner-height": "120px",
@@ -109,7 +109,7 @@ function Y(e) {
             channelId: s,
             avatarSize: z,
         });
-    return (0, i.jsx)("div", { className: B.H, children: (0, i.jsx)(F, { ...a, ...r }) });
+    return (0, i.jsx)("div", { className: F.H, children: (0, i.jsx)(B, { ...a, ...r }) });
 }
 function K(e) {
     let { userId: t, guildId: n, channelId: s } = e,
@@ -134,10 +134,10 @@ function K(e) {
                       contextGuildId: n ?? void 0,
                       displayName: g,
                       pronouns: c?.pronouns,
-                      className: B.eF,
+                      className: F.eF,
                   }),
                   (0, i.jsx)("div", {
-                      className: B.jp,
+                      className: F.jp,
                       children: (0, i.jsx)(m.A, { displayProfile: c, themeType: O.d.EMBED }),
                   }),
                   (0, i.jsx)(V, { userId: t, guildId: n, channelId: s }),

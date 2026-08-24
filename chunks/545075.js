@@ -14,8 +14,8 @@ var l = n(503698),
     x = n(736653),
     T = n(975571),
     I = n(86379),
-    h = n(652215),
-    f = n(375708),
+    f = n(652215),
+    h = n(375708),
     p = n(764811);
 function E(e) {
     let { className: t } = e,
@@ -24,16 +24,16 @@ function E(e) {
     return (0, r.jsxs)("div", {
         className: i()(p.kL, t),
         children: [
-            (0, r.jsx)(c.D, { className: p.wx, variant: "heading-xl/semibold", children: f.intl.string(f.t.vwMEHS) }),
+            (0, r.jsx)(c.D, { className: p.wx, variant: "heading-xl/semibold", children: h.intl.string(h.t.vwMEHS) }),
             (0, r.jsxs)(u.E, {
                 className: p.h_,
                 variant: "text-md/normal",
                 color: "text-default",
                 children: [
-                    (0, r.jsx)("p", { children: f.intl.string(f.t.fev8MQ) }),
+                    (0, r.jsx)("p", { children: h.intl.string(h.t.fev8MQ) }),
                     (0, r.jsx)("p", {
-                        children: f.intl.format(f.t.IHxEJU, {
-                            helpdeskArticle: T.A.getArticleURL(h.MVz.BLOCKED_PAYMENTS),
+                        children: h.intl.format(h.t.IHxEJU, {
+                            helpdeskArticle: T.A.getArticleURL(f.MVz.BLOCKED_PAYMENTS),
                         }),
                     }),
                 ],
@@ -66,8 +66,8 @@ function v(e) {
                   }),
                   (0, r.jsx)(u.E, {
                       variant: "text-sm/normal",
-                      children: f.intl.format(f.t.NYkcCh, {
-                          helpdeskArticle: T.A.getArticleURL(h.MVz.BLOCKED_PAYMENTS),
+                      children: h.intl.format(h.t.NYkcCh, {
+                          helpdeskArticle: T.A.getArticleURL(f.MVz.BLOCKED_PAYMENTS),
                       }),
                   }),
               ],

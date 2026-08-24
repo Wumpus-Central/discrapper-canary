@@ -53,8 +53,8 @@ function x(e) {
         [b, j] = a.useState(null),
         [y, k] = a.useState(t);
     t !== y && (k(t), j(null));
-    let w = b ?? t,
-        A = a.useCallback(
+    let A = b ?? t,
+        w = a.useCallback(
             (e) => {
                 j(e), d(e);
             },
@@ -74,17 +74,17 @@ function x(e) {
                         title: f.intl.string(m.default.ISmynF),
                         modelChoices: n.main,
                         thinkingChoices: n.thinking,
-                        value: w.main,
+                        value: A.main,
                         disabled: s,
-                        onChange: (e) => A({ ...w, main: e }),
+                        onChange: (e) => w({ ...A, main: e }),
                     }),
                     (0, l.jsx)(g, {
                         title: f.intl.string(m.default.hdt1ph),
                         modelChoices: n.subagent,
                         thinkingChoices: n.thinking,
-                        value: w.subagent,
+                        value: A.subagent,
                         disabled: s,
-                        onChange: (e) => A({ ...w, subagent: e }),
+                        onChange: (e) => w({ ...A, subagent: e }),
                     }),
                     (0, l.jsx)(i.E, {
                         variant: "text-xs/normal",

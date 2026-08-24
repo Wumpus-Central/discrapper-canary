@@ -8,8 +8,8 @@ var i = l(582128),
     s = l(702841),
     o = l(228366),
     c = l(755584),
-    u = l(734057),
-    d = l(567305),
+    d = l(734057),
+    u = l(567305),
     h = l(636194),
     f = l(846922),
     p = l(555325),
@@ -19,7 +19,7 @@ var i = l(582128),
 a().shim();
 let m = {};
 function C(e) {
-    let t = (0, s.bG)([u.A], () => u.A.getChannel(e)),
+    let t = (0, s.bG)([d.A], () => d.A.getChannel(e)),
         l = (0, s.bG)([S.A], () => S.A.getChannel(e)),
         n = (0, s.bG)([h.A], () => h.A.getBenefitChannel(e)),
         a = (0, i.useMemo)(
@@ -46,11 +46,11 @@ function g(e, t, l) {
         });
     let c = new Set(o.concat(r));
     if (!c.has(l)) return null;
-    let u = t.indexOf(l);
-    if (-1 === u) return null;
-    let d = [];
-    for (let e = u + 1; e < t.length && (c.has(t[e]) || d.push(t[e]), 3 !== d.length); e++);
-    return d;
+    let d = t.indexOf(l);
+    if (-1 === d) return null;
+    let u = [];
+    for (let e = d + 1; e < t.length && (c.has(t[e]) || u.push(t[e]), 3 !== u.length); e++);
+    return u;
 }
 function E(e) {
     let t = f.y.getState().editStateIdsForGroup[e],
@@ -145,5 +145,5 @@ function N(e, t) {
     return { templateCategory: n.category, hasChangeFromTemplate: !1 };
 }
 function R(e) {
-    return (0, p.X9)(e) && e.features.has(_.GuildFeatures.ROLE_SUBSCRIPTIONS_ENABLED) && (0, d.TG)(e.id);
+    return (0, p.X9)(e) && e.features.has(_.GuildFeatures.ROLE_SUBSCRIPTIONS_ENABLED) && (0, u.TG)(e.id);
 }

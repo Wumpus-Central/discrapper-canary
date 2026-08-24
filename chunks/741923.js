@@ -1,4 +1,4 @@
-n.d(t, { _5: () => I, rV: () => P });
+n.d(t, { _5: () => I, rV: () => g });
 var l = n(477900),
     i = n(582128),
     r = n(430993),
@@ -29,7 +29,7 @@ function A(e) {
         i = (0, l.jsxs)(l.Fragment, { children: [(0, l.jsx)(s.rQ, {}), (0, l.jsx)(r.c, { children: n })] });
     return null != t ? (0, l.jsx)(E.Jg, { ...t, children: i }) : i;
 }
-function P(e) {
+function g(e) {
     let {
             loadId: t,
             skuIDs: n,
@@ -38,13 +38,13 @@ function P(e) {
             checkoutFlow: C,
             isGift: E,
             onOrderCreated: I,
-            renderModalProps: P,
-            children: g,
+            renderModalProps: g,
+            children: P,
         } = e,
         {
             order: v,
-            isCreateOrderLoading: _,
-            createOrderError: x,
+            isCreateOrderLoading: x,
+            createOrderError: _,
             shouldBlockOnOrderCreation: T,
         } = (function (e) {
             let t,
@@ -63,9 +63,9 @@ function P(e) {
                 I = null != a && f.has(a);
             t = y ? E : !!I && !0 !== s && S;
             let A = y && E,
-                P = null != n ? n[0] : void 0,
-                [g, v] = (0, i.useState)(null),
-                [_, x] = (0, i.useState)(null),
+                g = null != n ? n[0] : void 0,
+                [P, v] = (0, i.useState)(null),
+                [x, _] = (0, i.useState)(null),
                 [T, N] = (0, i.useState)(A),
                 b = (0, i.useRef)(!1),
                 j = (0, i.useCallback)(
@@ -83,7 +83,7 @@ function P(e) {
                                     tags: { source: "create_order" },
                                     extra: { skuId: t, paymentGateway: String(r), loadId: o },
                                 }),
-                                x(e);
+                                _(e);
                         } finally {
                             N(!1);
                         }
@@ -92,9 +92,9 @@ function P(e) {
                 );
             return (
                 (0, i.useEffect)(() => {
-                    t && null != P && (null != g || null != _ || b.current || ((b.current = !0), j({ skuId: P })));
-                }, [P, t, g, j, _]),
-                { order: g, isCreateOrderLoading: T, createOrderError: _, shouldBlockOnOrderCreation: A }
+                    t && null != g && (null != P || null != x || b.current || ((b.current = !0), j({ skuId: g })));
+                }, [g, t, P, j, x]),
+                { order: P, isCreateOrderLoading: T, createOrderError: x, shouldBlockOnOrderCreation: A }
             );
         })({
             skuIDs: n,
@@ -106,12 +106,12 @@ function P(e) {
             onOrderCreated: I,
         });
     if (T) {
-        if (_) return (0, l.jsx)(A, { renderModalProps: P, children: (0, l.jsx)(o.A, {}) });
-        else if (null != x)
+        if (x) return (0, l.jsx)(A, { renderModalProps: g, children: (0, l.jsx)(o.A, {}) });
+        else if (null != _)
             return (0, l.jsx)(A, {
-                renderModalProps: P,
+                renderModalProps: g,
                 children: (0, l.jsx)(a.E, { variant: "text-md/normal", children: S.intl.string(S.t.F8FvUy) }),
             });
     }
-    return (0, l.jsx)(y.Provider, { value: v, children: g });
+    return (0, l.jsx)(y.Provider, { value: v, children: P });
 }

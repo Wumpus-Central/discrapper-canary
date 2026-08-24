@@ -7,12 +7,12 @@ function r(e) {
     let { size: t = "md", width: l, height: r, ...s } = e,
         o = (0, a.J)(t),
         c = o?.width ?? l,
-        u = o?.height ?? r;
+        d = o?.height ?? r;
     return (0, i.jsxs)("svg", {
         ...(0, n.A)(s),
         xmlns: "http://www.w3.org/2000/svg",
         width: c,
-        height: u,
+        height: d,
         fill: "none",
         viewBox: "0 0 24 24",
         children: [

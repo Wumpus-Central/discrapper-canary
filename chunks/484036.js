@@ -643,9 +643,9 @@ function e1(e) {
 var e2 = n(805945),
     e3 = n(890856),
     e5 = n(307301),
-    e8 = n(468689);
-function e6(e) {
-    e8.A.open(e, eR.BEX.SOUNDBOARD),
+    e6 = n(468689);
+function e8(e) {
+    e6.A.open(e, eR.BEX.SOUNDBOARD),
         (0, eF.openModalLazy)(async () => {
             let { default: t } = await Promise.all([
                 n.e("860350"),
@@ -682,7 +682,7 @@ function e9(e) {
                 ...s,
                 "aria-label": eM.intl.formatToPlainString(eM.t.c1qVYh, { guildName: t.name }),
                 className: r()(e4.n4, { [e4.in]: n, [e4.r9]: !a }),
-                onClick: () => (null != i ? i() : e6(t.id)),
+                onClick: () => (null != i ? i() : e8(t.id)),
                 children: [
                     (0, l.jsx)(e5.j, { size: "sm", color: "currentColor" }),
                     (0, l.jsx)(eW.E, {
@@ -1062,7 +1062,7 @@ function to(e) {
                             l = e?.item.index;
                         return eK(e.item.sound, null == n ? w : [...w, n], t?.shiftKey !== !0, l);
                     case eo.uq.ADD_SOUND:
-                        return o(), e6(e.item.guild.id);
+                        return o(), e8(e.item.guild.id);
                 }
             },
             [w, eK, o],
@@ -1188,7 +1188,7 @@ function to(e) {
             },
             [w],
         ),
-        e8 = i.useCallback(
+        e6 = i.useCallback(
             () =>
                 T
                     ? (0, l.jsx)(q.Gq, {
@@ -1306,7 +1306,7 @@ function to(e) {
                     renderSectionFooter: e2,
                     renderSection: eQ,
                     renderCategoryList: e7,
-                    renderHeaderAccessories: e8,
+                    renderHeaderAccessories: e6,
                     rowHeight: 48,
                     sectionHeaderHeight: e$,
                     sectionFooterHeight: eX,

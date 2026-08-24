@@ -512,15 +512,15 @@ let e0 = (0, z.xI)(L.A.EXPRESSION_PICKER_CONSTANTS_EXPRESSION_PICKER_INSPECTOR_B
     });
 var e3 = n(140735),
     e5 = n(442433),
-    e8 = n(304072),
-    e6 = n(194261),
+    e6 = n(304072),
+    e8 = n(194261),
     e7 = n(513902);
 let e4 = function (e) {
     let { size: t } = e;
     return (0, l.jsx)("div", {
         className: e7.G,
         style: { width: t, height: t },
-        children: (0, l.jsx)(e6.LockIcon, { size: "xxs", color: "currentColor", className: e7.I }),
+        children: (0, l.jsx)(e8.LockIcon, { size: "xxs", color: "currentColor", className: e7.I }),
     });
 };
 var e9 = n(777371);
@@ -559,7 +559,7 @@ let te = i.memo(function (e) {
             [t, c, b],
         ),
         O = i.useMemo(() => ({ width: y, height: y, padding: I }), [I, y]),
-        [M, L] = (0, e8.A)(null, 300);
+        [M, L] = (0, e6.A)(null, 300);
     return (0, l.jsx)("div", {
         className: e9.nM,
         style: R,

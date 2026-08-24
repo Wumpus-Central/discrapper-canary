@@ -181,7 +181,7 @@ let es = function (e) {
 };
 var er = n(284009),
     el = n.n(er),
-    ea = n(221877),
+    ea = n(296704),
     ec = n(935399),
     eo = n(319354),
     eu = n(717421),
@@ -945,8 +945,8 @@ var eM = n(280450),
 function eJ() {
     let e = (0, eZ.GV)(),
         t = window.GLOBAL_ENV.RELEASE_CHANNEL,
-        n = "600185",
-        s = "262a11195fa32f4d9361b1f5d2636b4a49b6257a".substring(0, 7),
+        n = "600374",
+        s = "935f60abc70e4f621100e5bedce445ce668b3b78".substring(0, 7),
         r = eX.A?.app.getVersion(),
         l = eX.A?.app.getBuildNumber(),
         c = eX.A?.app.getAppArch(),
@@ -1118,8 +1118,8 @@ var e5 = n(402651),
     e7 = n(669067),
     e9 = n(830543),
     e3 = n(953056);
-let e8 = new Set([eD.X.PROFILE_PANEL, eD.X.SUBSCRIPTIONS_PANEL, eD.X.FAMILY_CENTER_PANEL, eD.X.POGGERMODE_PANEL]),
-    e4 = new Map([[eD.X.SESSIONS_PANEL, r.ImpressionNames.USER_SETTINGS_SESSIONS]]);
+let e4 = new Set([eD.X.PROFILE_PANEL, eD.X.SUBSCRIPTIONS_PANEL, eD.X.FAMILY_CENTER_PANEL, eD.X.POGGERMODE_PANEL]),
+    e8 = new Map([[eD.X.SESSIONS_PANEL, r.ImpressionNames.USER_SETTINGS_SESSIONS]]);
 function e6(e) {
     let { target: t, ...n } = e,
         l = e_.A.useField("query"),
@@ -1146,8 +1146,8 @@ function e6(e) {
               emptyState: tt,
               sidebarFooter: e2,
               onViewChange: function (e) {
-                  e8.has(e) || (0, e7._)(e);
-                  let t = e4.get(e);
+                  e4.has(e) || (0, e7._)(e);
+                  let t = e8.get(e);
                   null != t &&
                       (0, o.x)({
                           type: r.ImpressionTypes.PANE,

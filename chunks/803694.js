@@ -180,30 +180,30 @@ function y(e) {
         {
             pendingPaymentSourceId: I,
             hasInitialPaymentSourceSeed: A,
-            hasAddedPaymentSourceThisSession: P,
+            hasAddedPaymentSourceThisSession: g,
         } = (0, a.t4)((e) => ({
             pendingPaymentSourceId: e.pendingPaymentSourceId,
             hasInitialPaymentSourceSeed: null != e.initialPaymentSourceId,
             hasAddedPaymentSourceThisSession: e.hasAddedPaymentSourceThisSession,
         })),
-        { dropdownPaymentSources: g, giftCardWallet: v } = l.useMemo(() => {
+        { dropdownPaymentSources: P, giftCardWallet: v } = l.useMemo(() => {
             let e = i.filter((e) => e.type !== d.hes.TDS_WALLET);
             return y
                 ? { dropdownPaymentSources: e, giftCardWallet: (0, c.N)(i) }
                 : { dropdownPaymentSources: e, giftCardWallet: null };
         }, [i, y]),
-        [_, x] = l.useState(null),
+        [x, _] = l.useState(null),
         T = null != v && r === v.id,
         N = l.useMemo(
             () =>
-                null != _ ? _ : m({ giftCardWallet: null, dropdownPaymentSources: g, subscriptionPaymentSourceId: S }),
-            [g, S, _],
+                null != x ? x : m({ giftCardWallet: null, dropdownPaymentSources: P, subscriptionPaymentSourceId: S }),
+            [P, S, x],
         ),
         b = l.useMemo(() => (T ? N : (r ?? null)), [N, T, r]),
         j = l.useMemo(
             () => ({
                 checkoutPaymentSources: i,
-                dropdownPaymentSources: g,
+                dropdownPaymentSources: P,
                 subscriptionPaymentSourceId: S,
                 giftCardWallet: v,
                 isReady: E,
@@ -211,9 +211,9 @@ function y(e) {
                 paymentSourceId: r,
                 giftCardsEnabled: y,
                 hasInitialPaymentSourceSeed: A,
-                hasAddedPaymentSourceThisSession: P,
+                hasAddedPaymentSourceThisSession: g,
             }),
-            [i, g, S, v, E, I, r, y, A, P],
+            [i, P, S, v, E, I, r, y, A, g],
         );
     (t = l.useRef(!1)),
         (n = l.useMemo(() => new p(j), [j])),
@@ -238,7 +238,7 @@ function y(e) {
         M = l.useCallback(
             (e) => {
                 if (e && null != v) {
-                    r !== v.id && x(r ?? null), s(v.id);
+                    r !== v.id && _(r ?? null), s(v.id);
                     return;
                 }
                 s(N);
@@ -271,7 +271,7 @@ function y(e) {
     );
     return {
         giftCardsEnabled: y,
-        dropdownPaymentSources: g,
+        dropdownPaymentSources: P,
         dropdownPaymentSourceId: b,
         giftCardWallet: v,
         isGiftCardCreditsChecked: T,

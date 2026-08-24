@@ -19,8 +19,8 @@ let I = function (e) {
             interval: n = x.WT.MONTH,
             className: l,
             isGift: I = !1,
-            variant: h,
-            priceOptions: f,
+            variant: f,
+            priceOptions: h,
             isApplicationHome: p,
             enablePremiumBrandRefresh: E,
         } = e,
@@ -28,7 +28,7 @@ let I = function (e) {
         j = (0, s.q)((0, d.Ay)());
     if (!P) return (0, r.jsx)(o.y, { type: o.y.Type.PULSING_ELLIPSIS, className: T.xB });
     let v = m.A.getForSkuAndInterval((0, g.mH)(t), n),
-        A = null != v ? (0, g.sS)(v, f, !1, I) : null;
+        A = null != v ? (0, g.sS)(v, h, !1, I) : null;
     if (E) {
         let e = n === x.WT.YEAR;
         return (0, r.jsxs)("div", {
@@ -50,7 +50,7 @@ let I = function (e) {
     }
     return (0, r.jsx)(u.D, {
         color: p ? "none" : "text-overlay-light",
-        variant: h ?? "heading-md/medium",
+        variant: f ?? "heading-md/medium",
         className: i()(T.SW, l),
         children: (0, r.jsxs)(r.Fragment, {
             children: [(0, r.jsx)("span", { className: p ? void 0 : T.q9, children: A }), " / ", (0, g.FJ)(n)],

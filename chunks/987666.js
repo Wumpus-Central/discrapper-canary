@@ -27,26 +27,26 @@ function c(e) {
     if (d.type === a.u$.LOADING) return null;
     let { invoicePreview: I } = d,
         A = ("renewalInvoicePreview" in d ? d.renewalInvoicePreview : null) ?? I,
-        P = (0, r.de)({
+        g = (0, r.de)({
             overrideRenewalDate: m,
             currentInvoice: C ? I : void 0,
             renewalInvoice: A,
             isSubscriptionUpdate: null != c,
             fractionalPremiumInfo: p,
         }),
-        { renewalPrice: g, multiPeriodDiscountAttributes: v } = (0, i.QM)(A, t, {
+        { renewalPrice: P, multiPeriodDiscountAttributes: v } = (0, i.QM)(A, t, {
             discountOffer: f,
             subscriptionTrial: E,
         }),
-        _ = {
+        x = {
             purchaseButtonText: y,
             totalDue: C ? I.total : 0,
-            renewalPrice: g,
+            renewalPrice: P,
             multiPeriodDiscountAttributes: v,
             currency: I.currency,
             interval: t.interval,
             intervalCount: t.intervalCount,
-            startDate: P,
+            startDate: g,
         };
-    return (0, l.jsx)(o._P, { variant: { type: h, ..._ }, paymentSourceType: n, immediateDelivery: S });
+    return (0, l.jsx)(o._P, { variant: { type: h, ...x }, paymentSourceType: n, immediateDelivery: S });
 }

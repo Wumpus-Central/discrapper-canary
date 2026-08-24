@@ -574,7 +574,7 @@ function e8(e) {
                       children: (0, i.jsx)(C.e, {
                           size: "sm",
                           className: er.GC,
-                          children: (0, i.jsx)(e7, { savedMessage: t, jumpToMessage: a, throttledNow: s }),
+                          children: (0, i.jsx)(e6, { savedMessage: t, jumpToMessage: a, throttledNow: s }),
                       }),
                   }),
                   (0, i.jsx)(
@@ -630,7 +630,7 @@ function e8(e) {
               ],
           });
 }
-function e7(e) {
+function e6(e) {
     let { savedMessage: t, jumpToMessage: s, throttledNow: l } = e;
     A()(null != t.message, "Saved message must be cached for For Later action buttons");
     let a = ei.intl.string(null != t.saveData.dueAt ? ei.t["a6gcZ/"] : ei.t.SvXS1Z),
@@ -685,7 +685,7 @@ function e7(e) {
         ],
     });
 }
-var e6 = n(702841),
+var e7 = n(702841),
     e4 = n(912592),
     e5 = n(890856),
     e9 = n(761508),
@@ -897,7 +897,7 @@ function tO(e) {
 var tk = n(435558),
     tF = n.n(tk),
     tG = n(749314),
-    tU = n(221877),
+    tU = n(296704),
     tP = n(311283),
     tw = n(717421),
     tH = n(933832),
@@ -1004,8 +1004,8 @@ function t1(e) {
 var t3 = n(350527),
     t2 = n(218152),
     t8 = n(970278),
-    t7 = n(747926),
-    t6 = n(935208),
+    t6 = n(747926),
+    t7 = n(935208),
     t4 = n(37411),
     t5 = n(278489);
 function t9(e) {
@@ -1017,19 +1017,19 @@ function t9(e) {
                     .values()
                     .filter((e) => {
                         let { id: n } = e;
-                        return t6.default.compare(n, t.oldestReadMessageId) > 0;
+                        return t7.default.compare(n, t.oldestReadMessageId) > 0;
                     })
                     .map((e) => {
                         let { id: t } = e;
                         return ee.A.getChannel(t);
                     })
                     .filter(ey.Vq)
-                    .sort((e, t) => t6.default.compare(e.id, t.id))
+                    .sort((e, t) => t7.default.compare(e.id, t.id))
                     .value(),
             [t.oldestReadMessageId, n.guild_id, n.id],
         ),
         a = r.useCallback((e, t) => {
-            (0, t7.JA)(e, t, t4.H9.INBOX);
+            (0, t6.JA)(e, t, t4.H9.INBOX);
         }, []);
     return (
         r.useEffect(() => {
@@ -1063,7 +1063,7 @@ function t9(e) {
         })
     );
 }
-var ne = n(989349),
+var ne = n(536637),
     nt = n.n(ne),
     nn = n(123292),
     ns = n(857069),
@@ -1130,7 +1130,7 @@ let nR = r.memo(function e(t) {
         R = (0, nh.Ay)(l),
         _ = (0, N.bG)(
             [ee.A],
-            () => l.hasFlag(eH.pr7.HAS_THREAD) && ee.A.getChannel(t6.default.castMessageIdAsChannelId(l.id)),
+            () => l.hasFlag(eH.pr7.HAS_THREAD) && ee.A.getChannel(t7.default.castMessageIdAsChannelId(l.id)),
         ),
         M = l.type === eH.lAJ.THREAD_STARTER_MESSAGE && g.state === nd.a.LOADED && null != x,
         b = !M && void 0 === n,
@@ -1464,13 +1464,13 @@ function n$(e, t) {
             .toArray()
             .filter(
                 (t) =>
-                    t6.default.compare(t.id, e.oldestReadMessageId) > 0 &&
-                    0 >= t6.default.compare(t.id, e.newestUnreadMessageId),
+                    t7.default.compare(t.id, e.oldestReadMessageId) > 0 &&
+                    0 >= t7.default.compare(t.id, e.newestUnreadMessageId),
             );
     if (l.length === e.messages.length && l.every((t, n) => e.messages[n] === t) && n) return e;
     let a = null != s.getAfter(e.oldestReadMessageId) || l[0]?.id === e.oldestUnreadMessageId,
         i = l[l.length - 1],
-        r = t6.default.compare(i?.id, e.newestUnreadMessageId) >= 0 || l.length >= 25;
+        r = t7.default.compare(i?.id, e.newestUnreadMessageId) >= 0 || l.length >= 25;
     return {
         ...e,
         messages: l,
@@ -1527,13 +1527,13 @@ function nQ(e, t, n, s) {
     if (null == a) {
         let e = et.A.getGuild(l.guild_id);
         if (null == e || null == e.joinedAt) return;
-        a = t6.default.fromTimestamp(e.joinedAt.getTime());
+        a = t7.default.fromTimestamp(e.joinedAt.getTime());
     }
     let i = es.Ay.getOldestUnreadMessageId(s),
         r = es.Ay.lastMessageId(s),
         d = es.Ay.getMentionCount(s),
         c = d > 0 || l.isPrivate();
-    if (null == r || t6.default.compare(a, r) >= 0) return;
+    if (null == r || t7.default.compare(a, r) >= 0) return;
     let o = {
         guildId: n,
         channelId: s,
@@ -1553,7 +1553,7 @@ function nQ(e, t, n, s) {
             if (s.isPrivate()) return 1;
             if (es.Ay.getMentionCount(t) > 0) return es.Ay.getIsMentionLowImportance(t) ? 3 : 2;
             if (null != n) {
-                let e = t6.default.extractTimestamp(n);
+                let e = t7.default.extractTimestamp(n);
                 if (Date.now() - e > n1) return 8;
                 if (Date.now() - e > n0) return 6;
             }
@@ -1580,7 +1580,7 @@ let n0 = 2 * eN.A.Millis.DAY,
 var n3 = n(743373);
 let n2 = { left: 4, right: -12 },
     n8 = [eH.lAJ.THREAD_CREATED];
-function n7(e) {
+function n6(e) {
     let { channel: t, message: n, compact: s, isGroupStart: l, gotoChannel: a } = e,
         d = (0, j.rm)(n.id ?? ""),
         c = r.useCallback(
@@ -1615,7 +1615,7 @@ function n7(e) {
         }),
     });
 }
-function n6(e) {
+function n7(e) {
     let { channel: t, channelRecord: n, gotoChannel: s } = e,
         l = ef.hH.useSetting(),
         a = 0 === t.messages.length || nt()(t.messages[0].timestamp).isSame(nt()(), "day"),
@@ -1629,12 +1629,12 @@ function n6(e) {
             r.push((0, i.jsx)(tG.A, { className: n3.yF, children: t }, t)), (d = nt()(e.timestamp));
         }
         let t = null == c || (0, ns.A)(n, c, e);
-        (c = e), r.push((0, i.jsx)(n7, { channel: n, message: e, compact: l, isGroupStart: t, gotoChannel: s }, e.id));
+        (c = e), r.push((0, i.jsx)(n6, { channel: n, message: e, compact: l, isGroupStart: t, gotoChannel: s }, e.id));
     });
     let u = o[o.length - 1];
     return (
         null != u &&
-            0 > t6.default.compare(u.id, t.newestUnreadMessageId) &&
+            0 > t7.default.compare(u.id, t.newestUnreadMessageId) &&
             r.push(
                 (0, i.jsx)(
                     "div",
@@ -1761,7 +1761,7 @@ let n4 = r.memo(function (e) {
                     collapsed: t.collapsed,
                     children:
                         "messages" === t.type
-                            ? (0, i.jsx)(n6, { channel: t, channelRecord: a, gotoChannel: d })
+                            ? (0, i.jsx)(n7, { channel: t, channelRecord: a, gotoChannel: d })
                             : "forum" === t.type
                               ? (0, i.jsx)(t9, { channel: t, channelRecord: a, deleteChannel: s })
                               : null,
@@ -2068,7 +2068,7 @@ function sd(e) {
     let { tab: t, setTab: n, closePopout: s } = e,
         l = (0, ep.jv)("RecentsPopout"),
         a = (0, te.Sc)(),
-        r = (0, e6.bG)([ev.A], () => ev.A.getOverdueMessageReminderCount());
+        r = (0, e7.bG)([ev.A], () => ev.A.getOverdueMessageReminderCount());
     return (0, i.jsxs)("div", {
         className: sr.wx,
         children: [

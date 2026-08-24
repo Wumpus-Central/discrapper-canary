@@ -813,8 +813,8 @@ let e2 = s.forwardRef(function (e, t) {
 });
 var e3 = n(20504),
     e5 = n(625494),
-    e8 = n(927813),
-    e6 = n(824744);
+    e6 = n(927813),
+    e8 = n(824744);
 n(508300);
 var e7 = n(661531),
     e4 = n(602853),
@@ -1198,7 +1198,7 @@ let tx = s.memo(function (e) {
         }, [A]),
         J = s.useCallback(
             (e) => {
-                let t = (0, e6.w)(e, 1);
+                let t = (0, e8.w)(e, 1);
                 R(0 === t), V(t), r?.(t);
             },
             [r],
@@ -1238,7 +1238,7 @@ let tx = s.memo(function (e) {
                     !L &&
                     (e = setInterval(() => {
                         K(E.current?.currentTime ?? 0);
-                    }, e8.A.Millis.SECOND)),
+                    }, e6.A.Millis.SECOND)),
                 () => {
                     null != e && clearInterval(e);
                 }
@@ -1247,7 +1247,7 @@ let tx = s.memo(function (e) {
         s.useEffect(() => {
             let { played: e, currentTime: t, onPause: n, onPlay: l } = el.current;
             if (e || O)
-                if (O) (et.current = performance.now()), l?.(!1, t, (E.current?.duration ?? 0) * e8.A.Millis.SECOND);
+                if (O) (et.current = performance.now()), l?.(!1, t, (E.current?.duration ?? 0) * e6.A.Millis.SECOND);
                 else {
                     let e = performance.now(),
                         l = et.current;
@@ -1365,7 +1365,7 @@ let tx = s.memo(function (e) {
                 iconColor: "currentColor",
                 sliderWrapperClassName: tf.MQ,
                 muted: b,
-                value: (0, e6.M)(G, 1),
+                value: (0, e8.M)(G, 1),
                 minValue: 0,
                 maxValue: 1,
                 currentWindow: window,

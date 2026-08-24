@@ -10,7 +10,7 @@ function s(e) {
                 let { default: t } = await Promise.all([
                     n.e("146652"),
                     n.e("57729"),
-                    n.e("968590"),
+                    n.e("610124"),
                     n.e("208113"),
                 ]).then(n.bind(n, 806280));
                 return (n) => (0, i.jsx)(t, { ...n, navId: e });

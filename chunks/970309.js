@@ -247,7 +247,7 @@ var eU = n(692617),
     eO = n(994500),
     eD = n(427262),
     eK = n(19575);
-n(989349);
+n(536637);
 var eB = n(707539),
     eZ = n(573163),
     eX = n(978914),
@@ -258,8 +258,8 @@ var eB = n(707539),
     e7 = n(863439),
     e9 = n(521981),
     e3 = n(308334),
-    e8 = n(302031),
-    e6 = n(885386),
+    e6 = n(302031),
+    e8 = n(885386),
     e1 = n(576705),
     e2 = n(652215),
     e4 = n(838541),
@@ -277,7 +277,7 @@ let tt = l.memo(function (e) {
             [r],
         ),
         u = (0, o.bG)([e1.A], () => e1.A.can(e2.xBc.MANAGE_MESSAGES, t)),
-        h = e6.gs.useSetting(),
+        h = e8.gs.useSetting(),
         { content: m } = l.useMemo(
             () =>
                 r?.content != null && "" !== r.content
@@ -332,7 +332,7 @@ let tt = l.memo(function (e) {
                 children: B.intl.string(B.t["0KfDxM"]),
             });
     else g = null;
-    return (0, s.jsx)(e8.Bs.Provider, {
+    return (0, s.jsx)(e6.Bs.Provider, {
         value: (0, e7.A)(h, u),
         children: (0, s.jsx)(e0.M, { className: e5.JY, children: g }),
     });

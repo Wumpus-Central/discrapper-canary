@@ -36,7 +36,7 @@ function I(e) {
             ],
         });
     }
-    function P(e) {
+    function g(e) {
         let { emoji: n } = e;
         null != t && (t(n), C(!1));
     }
@@ -52,7 +52,7 @@ function I(e) {
                 children: (0, l.jsx)(p.A, {
                     analyticsOverride: S,
                     closePopout: t,
-                    onSelectEmoji: P,
+                    onSelectEmoji: g,
                     wrapper: "div",
                     pickerIntention: y,
                     showAddEmojiButton: !1,

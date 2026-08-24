@@ -1,4 +1,4 @@
-n.d(t, { KS: () => P, Wf: () => y, ZB: () => A });
+n.d(t, { KS: () => g, Wf: () => y, ZB: () => A });
 var l = n(477900),
     i = n(582128),
     r = n(643909),
@@ -54,7 +54,7 @@ let y = i.memo(function (e) {
             },
             [p, d, C, s],
         ),
-        P = i.useMemo(
+        g = i.useMemo(
             () => ({
                 applePay: n.includes("applePay") ? "auto" : "never",
                 googlePay: n.includes("googlePay") ? "auto" : "never",
@@ -62,18 +62,18 @@ let y = i.memo(function (e) {
             }),
             [n],
         ),
-        g = i.useMemo(
+        P = i.useMemo(
             () => ({ billingDetails: { ...(null != y && { email: y }), ...(null != I && { name: I }) } }),
             [y, I],
         ),
         v = i.useMemo(
             () => ({
                 id: "stripe-payment-element",
-                options: { layout: { type: "tabs" }, wallets: P, defaultValues: g, paymentMethodOrder: t, ...m },
+                options: { layout: { type: "tabs" }, wallets: g, defaultValues: P, paymentMethodOrder: t, ...m },
                 onChange: A,
                 ...S,
             }),
-            [P, g, m, S, A, t],
+            [g, P, m, S, A, t],
         );
     return (0, l.jsx)(r.PaymentElement, { ...v });
 });
@@ -91,7 +91,7 @@ function I(e) {
 function A(e) {
     return null != e && null != e && (!(0, d.uJ)(e.line1) || !(0, d.uJ)(e.city));
 }
-let P = i.memo(function (e) {
+let g = i.memo(function (e) {
     let {
             options: t,
             renderAsStandaloneElement: n,

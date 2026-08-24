@@ -1,4 +1,4 @@
-n.d(t, { X: () => T, Y: () => x });
+n.d(t, { X: () => T, Y: () => _ });
 var l = n(477900);
 n(582128);
 var i = n(503698),
@@ -19,14 +19,14 @@ var i = n(503698),
     y = n(320137),
     I = n(417360),
     A = n(759625),
-    P = n(2242),
-    g = n(375708),
+    g = n(2242),
+    P = n(375708),
     v = n(631907),
-    _ = n(200791);
-function x(e) {
+    x = n(200791);
+function _(e) {
     let { onClose: t, listing: n, step: i, guildId: a } = e,
         s = (0, S.Tq)(a),
-        c = (0, p.A)(P.TQ),
+        c = (0, p.A)(g.TQ),
         d = (function () {
             if (c) return null;
             let e =
@@ -40,7 +40,7 @@ function x(e) {
                   : (0, l.jsx)("img", { src: e, alt: "", className: v.F0 });
         })();
     return (0, l.jsxs)("div", {
-        className: r()(v.N1, { [_.G]: null != d, [v.TP]: c || null == d }),
+        className: r()(v.N1, { [x.G]: null != d, [v.TP]: c || null == d }),
         children: [
             d,
             (function () {
@@ -54,7 +54,7 @@ function x(e) {
             (0, l.jsx)(o.D, {
                 className: v.G3,
                 onClick: () => t(!1),
-                "aria-label": g.intl.string(g.t.cpT0Cq),
+                "aria-label": P.intl.string(P.t.cpT0Cq),
                 children: (0, l.jsx)(u.P, { size: "md", color: "currentColor", className: v.ut }),
             }),
         ],
@@ -73,13 +73,13 @@ function T(e) {
                 className: v.RS,
                 variant: "heading-xl/semibold",
                 color: "text-default",
-                children: g.intl.format(g.t["1HIsTk"], { serverName: r?.name }),
+                children: P.intl.format(P.t["1HIsTk"], { serverName: r?.name }),
             }),
             (0, l.jsx)(c.E, {
                 className: v.sT,
                 variant: "text-md/normal",
                 color: "text-default",
-                children: g.intl.format(g.t.oi3gip, { tier: n.name }),
+                children: P.intl.format(P.t.oi3gip, { tier: n.name }),
             }),
             p.length > 0 &&
                 (0, l.jsxs)(l.Fragment, {
@@ -88,7 +88,7 @@ function T(e) {
                             variant: "text-xs/normal",
                             color: "text-default",
                             className: v.n2,
-                            children: g.intl.string(g.t.w0CQ01),
+                            children: P.intl.string(P.t.w0CQ01),
                         }),
                         (0, l.jsx)("div", {
                             className: v.M3,
@@ -107,7 +107,7 @@ function T(e) {
                             variant: "text-xs/medium",
                             color: "text-default",
                             className: v.n2,
-                            children: g.intl.string(g.t["6Y1FLi"]),
+                            children: P.intl.string(P.t["6Y1FLi"]),
                         }),
                         (0, l.jsxs)("div", {
                             className: v.DI,
@@ -124,12 +124,12 @@ function T(e) {
                                             variant: "text-md/medium",
                                             color: "text-strong",
                                             className: v.cC,
-                                            children: g.intl.string(g.t.PrKk4n),
+                                            children: P.intl.string(P.t.PrKk4n),
                                         }),
                                         (0, l.jsx)(c.E, {
                                             color: "interactive-text-default",
                                             variant: "text-sm/normal",
-                                            children: g.intl.format(g.t["2ICUkG"], { count: o.length }),
+                                            children: P.intl.format(P.t["2ICUkG"], { count: o.length }),
                                         }),
                                     ],
                                 }),
@@ -143,7 +143,7 @@ function T(e) {
                 className: v.EJ,
                 children: (0, l.jsx)(s.$, {
                     variant: "primary",
-                    text: g.intl.string(g.t["Ph+ecI"]),
+                    text: P.intl.string(P.t["Ph+ecI"]),
                     onClick: () => t(!0),
                 }),
             }),

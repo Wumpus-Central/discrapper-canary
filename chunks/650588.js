@@ -22,7 +22,7 @@ function S(e) {
     function A(e) {
         S(!1), t?.(e);
     }
-    function P(e) {
+    function g(e) {
         return (0, l.jsxs)("div", {
             className: f.Ry,
             children: [
@@ -56,7 +56,7 @@ function S(e) {
                     analyticsSource: "gift soundboard",
                     soundButtonOverlay: p.If.ADD,
                     listPadding: E,
-                    renderHeader: P,
+                    renderHeader: g,
                     defaultSoundsOnly: !0,
                 }),
             });

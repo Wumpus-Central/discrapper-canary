@@ -33,11 +33,11 @@ function C(e) {
                       }),
             [n, i, r, C, h],
         ),
-        P = s.useMemo(() => ({ ...f, onClick: I, text: m.intl.string(m.t.XiOHRX) }), [f, I]);
+        g = s.useMemo(() => ({ ...f, onClick: I, text: m.intl.string(m.t.XiOHRX) }), [f, I]);
     return (0, a.jsxs)(a.Fragment, {
         children: [
             (0, a.jsx)(u.dZ, { children: A }),
-            (0, a.jsx)(u.UX, { children: (0, a.jsx)(c.cy, { onBackClick: E, primaryCTAButtonProps: P }) }),
+            (0, a.jsx)(u.UX, { children: (0, a.jsx)(c.cy, { onBackClick: E, primaryCTAButtonProps: g }) }),
         ],
     });
 }
@@ -48,8 +48,8 @@ let h = null,
     y = null,
     I = null,
     A = null,
-    P = null,
     g = null,
+    P = null,
     v = {
         [l.C.ORB_CHECKOUT]: {
             get: function () {
@@ -88,12 +88,12 @@ let h = null,
         },
         [l.C.PREMIUM_CHECKOUT]: {
             get: function () {
-                return null == P && (P = new i.od({ checkoutFlow: l.C.PREMIUM_CHECKOUT })), P;
+                return null == g && (g = new i.od({ checkoutFlow: l.C.PREMIUM_CHECKOUT })), g;
             },
         },
         [l.C.GAME_SERVER_SUBSCRIPTION_CHECKOUT]: {
             get: function () {
-                return null == g && (g = new i.od({ checkoutFlow: l.C.GAME_SERVER_SUBSCRIPTION_CHECKOUT })), g;
+                return null == P && (P = new i.od({ checkoutFlow: l.C.GAME_SERVER_SUBSCRIPTION_CHECKOUT })), P;
             },
         },
     };

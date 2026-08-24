@@ -46,8 +46,8 @@ let y = l.memo(function (e) {
         H = (0, d.S)((t.editedTimestamp ?? t.timestamp).valueOf()),
         {
             content: V,
-            hasSpoilerEmbeds: B,
-            hasBailedAst: F,
+            hasSpoilerEmbeds: F,
+            hasBailedAst: B,
         } = (0, f.A)(t, {
             hideSimpleEmbedContent: b,
             allowList: w || H,
@@ -74,7 +74,7 @@ let y = l.memo(function (e) {
         childrenRepliedMessage: (0, j.A)(t, R, z, J, n),
         childrenExecutedCommand: (0, N.A)(t, R, n),
         childrenHeader: (0, _.A)({ ...e, guildId: R.guild_id, author: K, roleIcon: X }),
-        childrenAccessories: e.hideAccessories ? void 0 : (0, I.J)(e, B, F),
+        childrenAccessories: e.hideAccessories ? void 0 : (0, I.J)(e, F, B),
         childrenMessageContent: D ?? (0, C.A)(e, V),
         childrenSystemMessage: (0, v.A)({ ...e, disableInteraction: G }),
         onContextMenu: s,

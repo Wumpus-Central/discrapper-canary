@@ -1,4 +1,4 @@
-n.d(t, { A: () => h });
+n.d(t, { A: () => f });
 var r = n(477900);
 n(582128);
 var l = n(17928),
@@ -17,9 +17,9 @@ function I(e) {
     let { skuId: t, size: n, src: g, className: x } = e,
         T = (0, l.bG)([m.default], () => m.default.getCurrentUser()),
         I = (0, l.bG)([o.Ay], () => o.Ay.useReducedMotion),
-        { product: h, isFetching: f } = (0, u.q)(t);
-    if (f || null == h) return (0, r.jsx)(i.y, { type: i.t.PULSING_ELLIPSIS });
-    let p = h.items[0];
+        { product: f, isFetching: h } = (0, u.q)(t);
+    if (h || null == f) return (0, r.jsx)(i.y, { type: i.t.PULSING_ELLIPSIS });
+    let p = f.items[0];
     if (null == p || !(0, d.T)(p)) return null;
     let E = (0, c.A)({ legacyAssetId: p.asset, skuId: p.skuId, size: n, canAnimate: !I });
     return (0, r.jsx)(a.Js, {
@@ -30,7 +30,7 @@ function I(e) {
         avatarDecoration: E,
     });
 }
-function h(e) {
+function f(e) {
     let { maxRewardImageSrc: t, claimableRewards: n, size: i, imageScaling: a = 1.5 } = e,
         c = (0, l.bG)([m.default], () => m.default.getCurrentUser()),
         u = (0, l.bG)([o.Ay], () => o.Ay.useReducedMotion),

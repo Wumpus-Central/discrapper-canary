@@ -2,7 +2,7 @@ n.d(t, { A: () => en });
 var l = n(477900),
     i = n(582128),
     s = n(38021),
-    r = n(839979),
+    r = n(439256),
     a = n(796637),
     o = n(117600);
 n(321073);
@@ -198,11 +198,11 @@ var H = n(866665),
     Y = n(223863),
     X = n(994500),
     q = n(287809),
-    Z = n(427262),
-    J = n(16236);
+    J = n(427262),
+    Z = n(16236);
 async function $(e) {
     let t = await (0, Y.pk)(e);
-    null != t && (await (0, J.nR)({ channelIds: [t], categoryName: D.intl.string(D.t.OGiMXJ), source: "suggestions" }));
+    null != t && (await (0, Z.nR)({ channelIds: [t], categoryName: D.intl.string(D.t.OGiMXJ), source: "suggestions" }));
 }
 var Q = n(487470);
 function ee(e) {
@@ -251,7 +251,7 @@ function ee(e) {
                                               "aria-label": D.intl.formatToPlainString(U.default.Hevebj, {
                                                   name:
                                                       e.type === c.rD.USER
-                                                          ? Z.Ay.getName(e.record)
+                                                          ? J.Ay.getName(e.record)
                                                           : (0, K.m1)(e.record, q.default, X.A),
                                               }),
                                               onClick: () => $((0, Y.hY)(e)),

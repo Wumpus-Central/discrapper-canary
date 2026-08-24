@@ -612,7 +612,7 @@ function eJ(e) {
                                                         n.e("724086"),
                                                         n.e("877223"),
                                                         n.e("448738"),
-                                                        n.e("423549"),
+                                                        n.e("590994"),
                                                         n.e("258407"),
                                                         n.e("894292"),
                                                         n.e("153302"),
@@ -753,7 +753,7 @@ function eJ(e) {
                                                         n.e("174016"),
                                                         n.e("736926"),
                                                         n.e("221856"),
-                                                        n.e("855726"),
+                                                        n.e("520913"),
                                                         n.e("474907"),
                                                         n.e("126437"),
                                                         n.e("24922"),
@@ -943,8 +943,8 @@ function e2(e) {
 }
 var e8 = n(34188),
     e7 = n(700623),
-    e4 = n(177953),
-    e3 = n(825484),
+    e3 = n(177953),
+    e4 = n(825484),
     e5 = n(512950),
     e9 = n(900797),
     e6 = n(847374),
@@ -1283,7 +1283,7 @@ function tR(e) {
         className: tv.I8,
         "aria-label": n > 0 ? et.intl.formatToPlainString(et.t["p/YmkR"], { count: n }) : et.intl.string(et.t.s1vQIL),
         children: [
-            (0, r.jsx)(e4.n, { size: "xs", color: e_.A.colors.INTERACTIVE_TEXT_DEFAULT }),
+            (0, r.jsx)(e3.n, { size: "xs", color: e_.A.colors.INTERACTIVE_TEXT_DEFAULT }),
             (0, r.jsx)(T.E, {
                 variant: "text-sm/semibold",
                 color: "interactive-text-default",
@@ -1319,7 +1319,7 @@ function tO(e) {
     }, [n, a, d, u]),
     (0, I.$B)(n) && (0, I.Ag)(n))
         ? null != a && null != d
-            ? (0, r.jsxs)(e3.e, {
+            ? (0, r.jsxs)(e4.e, {
                   fullWidth: !0,
                   children: [
                       (0, r.jsx)(tI, { context: t, application: n, sectionName: l, primaryEntryPointCommand: a }),
@@ -1505,13 +1505,13 @@ var tQ = n(111042),
     t2 = n(168186),
     t8 = n(594061),
     t7 = n(935208),
-    t4 = n(630248),
-    t3 = n(355097);
+    t3 = n(630248),
+    t4 = n(355097);
 function t5(e, t) {
     o.useEffect(() => {
-        t8.bW.loadIfUncached(t3.oD.FRECENCY_AND_FAVORITES_SETTINGS);
+        t8.bW.loadIfUncached(t4.oD.FRECENCY_AND_FAVORITES_SETTINGS);
     }, []);
-    let n = (0, A.bG)([t4.A], () => t4.A.getApplicationFrecencyWithoutLoadingLatest()),
+    let n = (0, A.bG)([t3.A], () => t3.A.getApplicationFrecencyWithoutLoadingLatest()),
         l = o.useMemo(
             () =>
                 null == t || 0 === t.length
@@ -2169,7 +2169,7 @@ var nZ = n(984516),
     n2 = n(994369),
     n8 = n(240591),
     n7 = n(46477);
-function n4(e, t) {
+function n3(e, t) {
     var n, l;
     let i = t.limit ?? 1 / 0,
         s = ((n = e), (l = t.filterPredicates ?? []), n.filter((e) => l.every((t) => t(e))));
@@ -2219,9 +2219,9 @@ function n4(e, t) {
         i,
     ).slice(0, i);
 }
-function n3(e, t) {
-    let n = t4.A.getScoreWithoutLoadingLatest(e.id);
-    return t4.A.getScoreWithoutLoadingLatest(t.id) - n;
+function n4(e, t) {
+    let n = t3.A.getScoreWithoutLoadingLatest(e.id);
+    return t3.A.getScoreWithoutLoadingLatest(t.id) - n;
 }
 function n5(e, t) {
     let n = (0, I.lq)(e),
@@ -2467,7 +2467,7 @@ function lm(e) {
                     var e, i, a, r, o, d, u;
                     let m, p, h, A, f;
                     if (!s) return [];
-                    return n4(c, {
+                    return n3(c, {
                         limit: l,
                         filterPredicates: [
                             ((m = (0, n8.Bh)("channel" === t.type ? t.channel : void 0, [M.kc.CHAT])),
@@ -2604,7 +2604,7 @@ function lm(e) {
                                     }),
                             );
                     } else a && (u = m);
-                    return n4(u, {
+                    return n3(u, {
                         limit: i,
                         filterPredicates: [
                             ((d = (0, n8.Bh)("channel" === t.type ? t.channel : void 0, [
@@ -2651,7 +2651,7 @@ function lm(e) {
                                 return t?.includes(c.toLocaleLowerCase()) ?? !1;
                             }),
                         ],
-                        sortComparers: [n3, n5],
+                        sortComparers: [n4, n5],
                     });
                 }, [a, r, i, t, n, m, p]),
                 x = A.length > 0,

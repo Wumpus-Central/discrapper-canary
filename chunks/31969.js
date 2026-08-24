@@ -6,8 +6,8 @@ var i = l(582128),
     s = l(403581),
     o = l(561573),
     c = l(288106),
-    u = l(240248),
-    d = l(429635),
+    d = l(240248),
+    u = l(429635),
     h = l(680649),
     f = l(375708);
 let p = "{value}",
@@ -20,7 +20,7 @@ function v(e, t) {
 }
 function m(e, t) {
     let { applicationId: l, skuId: a } = t,
-        r = (0, d.A)({ applicationId: l }),
+        r = (0, u.A)({ applicationId: l }),
         s = (0, n.bG)([o.A], () => o.A.getPromotionIdsForSkuId(a), [a]),
         p = i.useMemo(() => {
             let e = r?.storefront?.promotions;
@@ -56,7 +56,7 @@ function m(e, t) {
         switch (e) {
             case "storefront_banner": {
                 let e = p.storefront?.headerText;
-                if ((0, u.uJ)(e)) return null;
+                if ((0, d.uJ)(e)) return null;
                 return {
                     Icon: _(p.pdp?.icon ?? null),
                     text: e,
@@ -69,7 +69,7 @@ function m(e, t) {
             }
             case "storefront_badge": {
                 let e = p.storefront?.headerText;
-                if ((0, u.uJ)(e)) return null;
+                if ((0, d.uJ)(e)) return null;
                 return {
                     Icon: _("TAG"),
                     text: f.intl.string(h.default.hriMCc),
@@ -83,7 +83,7 @@ function m(e, t) {
             case "gift_customization": {
                 if (null == m) return null;
                 let e = v(p.checkout?.label ?? null, m.amount);
-                if ((0, u.uJ)(e)) return null;
+                if ((0, d.uJ)(e)) return null;
                 return {
                     Icon: _(p.checkout?.icon ?? null),
                     text: e,
@@ -98,7 +98,7 @@ function m(e, t) {
             case "card": {
                 let e = p.pdp,
                     l = v(e?.label ?? null, m?.amount ?? null);
-                if ((0, u.uJ)(l)) return null;
+                if ((0, d.uJ)(l)) return null;
                 return {
                     Icon: _(e?.icon ?? null),
                     text: l,
@@ -112,7 +112,7 @@ function m(e, t) {
             case "vc_purchase_recommendations":
             case "vc_gift_recommendations": {
                 let e = p.vcStream?.label;
-                if ((0, u.uJ)(e)) return null;
+                if ((0, d.uJ)(e)) return null;
                 return {
                     Icon: _(p.vcStream?.icon ?? null),
                     text: e,
@@ -128,7 +128,7 @@ function m(e, t) {
                 if (null == m) return null;
                 let l = "sku_gift_badge" === e ? p.checkout : p.pdp,
                     i = v(l?.label ?? null, m.amount);
-                if ((0, u.uJ)(i)) return null;
+                if ((0, d.uJ)(i)) return null;
                 return {
                     Icon: _("TAG"),
                     text: f.intl.string(h.default.hriMCc),

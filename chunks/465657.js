@@ -23,13 +23,13 @@ function E(e) {
             resolveInternalState: y,
             resolveTenantReviewButtonProps: I,
             handleStepChange: A,
-            openInvoiceId: P,
-            analyticsData: g,
+            openInvoiceId: g,
+            analyticsData: P,
             analyticsLocation: v,
         } = e,
         {
-            paymentSourceId: _,
-            purchasePreviewError: x,
+            paymentSourceId: x,
+            purchasePreviewError: _,
             customCheckoutFlow: T,
             contextMetadata: N,
             purchaseError: b,
@@ -53,14 +53,14 @@ function E(e) {
     let k = i.useRef(null),
         { paymentSources: w } = (0, m.j)(),
         U = (0, C.sw)(),
-        D = (0, c.W)(w, _),
+        D = (0, c.W)(w, x),
         G = i.useMemo(() => {
-            if (null == _) return !1;
+            if (null == x) return !1;
             if (!O) return !0;
-            let e = M.find((e) => e.id === _);
+            let e = M.find((e) => e.id === x);
             return null != e && !e.enabled;
-        }, [M, O, _]),
-        F = (0, s.iB)({ checkoutPaymentSources: M, paymentSourceId: _, location: "CheckoutBaseReviewStep" }),
+        }, [M, O, x]),
+        F = (0, s.iB)({ checkoutPaymentSources: M, paymentSourceId: x, location: "CheckoutBaseReviewStep" }),
         { disablePurchase: B } = i.useMemo(() => {
             let e = { disablePurchase: F || T === f.uH.DEV_STORYBOOK_CHECKOUT };
             return null != y
@@ -68,14 +68,14 @@ function E(e) {
                       { ...e },
                       {
                           paymentSource: D,
-                          paymentSourceId: _,
+                          paymentSourceId: x,
                           isSelectedPaymentSourceDisabled: G,
                           invoicePreview: U,
-                          purchasePreviewError: x,
+                          purchasePreviewError: _,
                       },
                   )
                 : e;
-        }, [y, D, _, G, U, x, F, T]);
+        }, [y, D, x, G, U, _, F, T]);
     i.useEffect(() => {
         null != b && null != k.current && k.current.scrollIntoView({ behavior: "smooth" });
     }, [b]);
@@ -96,8 +96,8 @@ function E(e) {
             onPaymentSourceAdd: W,
             disablePurchase: B,
             analyticsLocation: v,
-            baseAnalyticsData: g,
-            openInvoiceId: P,
+            baseAnalyticsData: P,
+            openInvoiceId: g,
             handleStepChange: A,
             postPurchaseStep: o.pn.CONFIRM,
             backButtonEligible: r,

@@ -131,7 +131,7 @@ async function A(e) {
     let i = [],
         r = ("no" === e ? "nb" : e).split("-");
     for (; r.length > 0; ) i.push(r.join("-")), r.pop();
-    i.push("en-US"), n(989349).locale(i);
+    i.push("en-US"), n(536637).locale(i);
 }
 function h() {
     return d((e) => e.localeData) ?? a.default;

@@ -26,11 +26,11 @@ function I(e) {
             innerClassName: h,
             disableThemedBackground: I = !1,
         } = e,
-        [A, P] = i.useState(r ?? m),
-        [g, v] = i.useState((0, c.x7)(A)),
-        _ = i.useRef(!1);
-    function x(e, t, l) {
-        t !== A && (P(t), v(l), n(t));
+        [A, g] = i.useState(r ?? m),
+        [P, v] = i.useState((0, c.x7)(A)),
+        x = i.useRef(!1);
+    function _(e, t, l) {
+        t !== A && (g(t), v(l), n(t));
     }
     function T() {
         return new Promise((e) => {
@@ -39,12 +39,12 @@ function I(e) {
     }
     return (
         i.useEffect(() => {
-            _.current = !0;
+            x.current = !0;
         }, []),
         i.useEffect(() => {
             if (void 0 === r) {
                 let e = (0, c.x7)(m);
-                P(m), v(e);
+                g(m), v(e);
             }
         }, [r, m]),
         (0, l.jsx)("div", {
@@ -60,18 +60,18 @@ function I(e) {
                                 innerClassName: a()(E.Tg, h),
                                 editorClassName: E.OT,
                                 maxCharacterCount: C.Jo,
-                                onChange: x,
+                                onChange: _,
                                 channel: S,
                                 textValue: A,
-                                richValue: g,
+                                richValue: P,
                                 type: u.oU.CUSTOM_GIFT,
                                 onBlur: () => {
-                                    _.current = !1;
+                                    x.current = !1;
                                 },
                                 onFocus: () => {
-                                    _.current = !0;
+                                    x.current = !0;
                                 },
-                                focused: _.current,
+                                focused: x.current,
                                 onSubmit: T,
                                 disableThemedBackground: I,
                             }),

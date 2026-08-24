@@ -18,11 +18,11 @@ var l = n(477900),
     y = n(1076),
     I = n(151115),
     A = n(812095),
-    P = n(287809),
-    g = n(486020),
+    g = n(287809),
+    P = n(486020),
     v = n(158045),
-    _ = n(580630),
-    x = n(240248),
+    x = n(580630),
+    _ = n(240248),
     T = n(951305),
     N = n(284009),
     b = n.n(N),
@@ -82,22 +82,22 @@ function z(e) {
         { isSocialLayerGameItem: i } = (0, B.AO)({ sku: n }),
         r = i ? F.intl.string(W.default.qwSlCO) : F.intl.string(W.default.iZe9Wy),
         a = i
-            ? { header: t.name, headerIconSrc: g.Ay.getApplicationIconURL({ id: t.id, icon: t.icon, size: 16 }) }
+            ? { header: t.name, headerIconSrc: P.Ay.getApplicationIconURL({ id: t.id, icon: t.icon, size: 16 }) }
             : {};
     return (0, l.jsx)(q, { ...e, description: r, ...a });
 }
-function $(e) {
+function Q(e) {
     let t = F.intl.string(W.default.hewwdA);
     return (0, l.jsx)(q, { ...e, description: t });
 }
-function Q(e) {
+function $(e) {
     let { sku: t } = e,
         { product: n } = (0, B.AO)({ sku: t }),
         i = Z(n),
         r =
             null != n
                 ? (function (e) {
-                      let t = P.default.getCurrentUser(),
+                      let t = g.default.getCurrentUser(),
                           n = v.Ay.canUseShopDiscounts(t),
                           l = (0, f.xM)(t),
                           i = (0, f.WD)(e, { hasShopDiscount: n, discount: (0, f.fT)(e, n) });
@@ -147,8 +147,8 @@ function X(e) {
         {
             sku: f,
             application: y,
-            eligiblePaymentGateways: P,
-            disabled: g,
+            eligiblePaymentGateways: g,
+            disabled: P,
         } = (function () {
             let { selectedSkuId: e, purchaseState: t } = (0, h.t4)((e) => ({
                     selectedSkuId: e.selectedSkuId,
@@ -217,13 +217,13 @@ function X(e) {
                 }, [d]),
             };
         })({ sku: f, application: y, isGift: s }),
-        K = i.useMemo(() => ({ paymentGatewayRestrictions: P, shouldUseUnifiedCheckoutUI: !0 }), [P]),
+        K = i.useMemo(() => ({ paymentGatewayRestrictions: g, shouldUseUnifiedCheckoutUI: !0 }), [g]),
         Z = (0, l.jsx)(d.N, {
             label: F.intl.string(F.t["u+Cw58"]),
             location: "OneTimePurchaseReviewStepBody",
             onPaymentSourceAdd: t,
             additionalPaymentSourceDropdownProps: K,
-            disabled: g,
+            disabled: P,
         }),
         { product: X } = (0, B.AO)({ sku: f }),
         { unifiedInvoiceSummaryProps: ee, priceText: et } = i.useMemo(
@@ -249,7 +249,7 @@ function X(e) {
                                     currency: n.currency,
                                     defaultExpanded: null != e,
                                 },
-                                priceText: (0, _.$g)(i, n.currency),
+                                priceText: (0, x.$g)(i, n.currency),
                                 discount: e,
                             }
                         );
@@ -267,13 +267,13 @@ function X(e) {
                 e === c.C.SLAYER_STOREFRONT_CHECKOUT
                     ? (0, l.jsx)(z, { ...t })
                     : e === c.C.GUILD_PRODUCT_CHECKOUT
-                      ? (0, l.jsx)($, { ...t })
+                      ? (0, l.jsx)(Q, { ...t })
                       : e === c.C.COLLECTIBLES_CHECKOUT
-                        ? (0, l.jsx)(Q, { ...t })
+                        ? (0, l.jsx)($, { ...t })
                         : (0, l.jsx)(q, { ...t })
             );
         }, [n, f, y, C, et]),
-        ei = i.useMemo(() => (null != r ? (0, _.$g)(r.total, r.currency) : void 0), [r]),
+        ei = i.useMemo(() => (null != r ? (0, x.$g)(r.total, r.currency) : void 0), [r]),
         er = (0, E.A)(),
         ea = i.useMemo(
             () =>
@@ -285,7 +285,7 @@ function X(e) {
                             t = e?.tenantMetadata?.collectibles?.reward?.checkout?.offerNotice,
                             n = e?.tenantMetadata?.collectibles?.reward?.flavor,
                             i = t?.text;
-                        return (0, x.uJ)(i)
+                        return (0, _.uJ)(i)
                             ? null
                             : (0, l.jsx)(u.J, {
                                   Icon: (0, I.sj)(t?.icon),

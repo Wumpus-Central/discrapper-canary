@@ -23,13 +23,13 @@ function I(e) {
             breadcrumbSteps: l,
             handleStepChange: I,
             onReturn: A,
-            continueSessionToInitialStep: P,
+            continueSessionToInitialStep: g,
         } = e,
-        { paymentSources: g } = (0, a.j)(),
+        { paymentSources: P } = (0, a.j)(),
         {
             selectedSkuId: v,
-            setPurchaseState: _,
-            contextMetadata: x,
+            setPurchaseState: x,
+            contextMetadata: _,
             paymentSourceId: T,
             setPaymentSourceId: N,
             purchaseError: b,
@@ -52,7 +52,7 @@ function I(e) {
         { isGift: U } = (0, h.Pv)(),
         D = {
             ...(0, m._V)(),
-            paymentSources: g,
+            paymentSources: P,
             paymentSourceId: T,
             setPaymentSourceId: N,
             purchaseError: b,
@@ -64,7 +64,7 @@ function I(e) {
         G =
             A ??
             function () {
-                I(Object.values(g).length < 1 && null == n ? f.pn.PLAN_SELECT : f.pn.REVIEW, {
+                I(Object.values(P).length < 1 && null == n ? f.pn.PLAN_SELECT : f.pn.REVIEW, {
                     trackedFromStep: f.pn.PAYMENT_ELEMENT,
                 });
             };
@@ -83,7 +83,7 @@ function I(e) {
         onReturn: L ? void 0 : G,
         onComplete: (e) => {
             f.l_.has(e)
-                ? (_(E.h.COMPLETED), I(f.pn.CONFIRM, { trackedFromStep: e }))
+                ? (x(E.h.COMPLETED), I(f.pn.CONFIRM, { trackedFromStep: e }))
                 : I(f.pn.REVIEW, { trackedFromStep: e });
         },
         onStepChange: (e) => {
@@ -94,13 +94,13 @@ function I(e) {
                 from_step: n,
                 to_step: l,
                 step_duration_ms: i - F,
-                flow_duration_ms: i - x.startTime,
+                flow_duration_ms: i - _.startTime,
             });
         },
         isEligibleForTrial: k,
         allowDesktopRedirectPurchase:
             (0, C.isDesktop)() && null != v && [y.pe.TIER_0, y.pe.TIER_2].includes(v) && !U && null == R,
-        continueSessionToInitialStep: P,
+        continueSessionToInitialStep: g,
         shouldUseManaModal: !0,
     });
 }

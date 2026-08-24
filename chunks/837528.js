@@ -1,12 +1,12 @@
 n.d(t, {
     U_: () => J,
-    G8: () => F,
+    G8: () => B,
     I: () => M,
     H9: () => R,
     VL: () => U,
     T0: () => L,
     UY: () => w,
-    yp: () => B,
+    yp: () => F,
     Yq: () => D,
     r4: () => G,
     Ck: () => z,
@@ -214,7 +214,7 @@ function V(e, t) {
         [i, n],
     );
 }
-function B(e) {
+function F(e) {
     let { groupId: t, message: n, defaultValue: i } = e,
         s = n.author.id,
         a = `${t}:${s}`,
@@ -229,7 +229,7 @@ function B(e) {
         }, [a]);
     return { hasHovered: r.current, isHovered: o, handleMouseEnter: d, handleMouseLeave: u };
 }
-function F(e, t) {
+function B(e, t) {
     let [n, i] = l.useState(!1),
         [a, r] = l.useState(!1);
     return {

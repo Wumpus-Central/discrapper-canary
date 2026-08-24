@@ -22,7 +22,7 @@ function S(e) {
         { step: r, stepConfigs: s } = (0, m.Ay)(),
         { setBodyNode: S, setFooterNode: y, setModalOverlayNode: I } = (0, p.Gm)(),
         A = (0, u.bG)([h.A], () => h.A.isDisplayingWowMomentConfirmation),
-        { setReadySlideId: P, unifiedCheckoutFlow: g } = (0, C.t4)((e) => ({
+        { setReadySlideId: g, unifiedCheckoutFlow: P } = (0, C.t4)((e) => ({
             setReadySlideId: e.setReadySlideId,
             unifiedCheckoutFlow: e.unifiedCheckoutFlow,
         })),
@@ -35,10 +35,10 @@ function S(e) {
     )
         throw new d.vd({
             message: "Unknown step for current payment flow (PaymentModalStep)",
-            extraSentryInformation: { stepConfig: v, step: r, unifiedCheckoutFlow: g, stepConfigs: s },
+            extraSentryInformation: { stepConfig: v, step: r, unifiedCheckoutFlow: P, stepConfigs: s },
         });
-    let _ = v?.options?.hideSlider ?? !1,
-        x = v?.options?.hideDefaultModalBody ?? !1,
+    let x = v?.options?.hideSlider ?? !1,
+        _ = v?.options?.hideDefaultModalBody ?? !1,
         T = v?.options?.sliderBodyClassName,
         N = r === f.pn.REVIEW,
         b = i.useCallback(
@@ -51,18 +51,18 @@ function S(e) {
         children: [
             (v?.options?.renderHeader ?? !0) ? t : null,
             v.renderStep(n),
-            null == r || _
+            null == r || x
                 ? null
                 : (0, l.jsxs)(l.Fragment, {
                       children: [
-                          x
+                          _
                               ? null
                               : (0, l.jsx)(o.c, {
                                     children: (0, l.jsx)(c.t, {
                                         shouldUseMediaQueriesForSizing: !0,
                                         activeSlide: r,
                                         centered: !1,
-                                        onSlideReady: (e) => P(e),
+                                        onSlideReady: (e) => g(e),
                                         width: "100%",
                                         disableDefaultTransformStyling: N,
                                         overflow: A ? "visible" : void 0,

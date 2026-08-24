@@ -516,8 +516,8 @@ var eL = n(931664),
     e2 = n(176781),
     e3 = n(463930),
     e5 = n(935063),
-    e8 = n(73392),
-    e6 = n(650019),
+    e6 = n(73392),
+    e8 = n(650019),
     e7 = n(763754),
     e4 = n(967144),
     e9 = n(118517),
@@ -590,8 +590,8 @@ function tu(e) {
             displayNameStyles: E,
         } = (0, e7.Ay)(u),
         I = (0, e4.gn)(f, C, x),
-        y = (0, e8.a)({ displayNameStyles: E }),
-        v = (0, e6.A)(h, u.attachments),
+        y = (0, e6.a)({ displayNameStyles: E }),
+        v = (0, e8.A)(h, u.attachments),
         S =
             ((t = o.id),
             (n = u.id),
@@ -1098,8 +1098,8 @@ function t5(e) {
         }),
     });
 }
-var t8 = n(495088);
-function t6(e) {
+var t6 = n(495088);
+function t8(e) {
     let { bars: t } = e,
         n = t.stacked.map((e, t) => (0, l.jsx)("div", { children: e }, t)),
         s = t.floating.map((e, t) => (0, l.jsx)(i.Fragment, { children: e }, t));
@@ -1107,8 +1107,8 @@ function t6(e) {
         ? null
         : (0, l.jsxs)(i.Fragment, {
               children: [
-                  s.length > 0 && (0, l.jsx)("div", { className: t8.Vq, children: s }),
-                  n.length > 0 && (0, l.jsx)("div", { className: t8.MD, children: n }),
+                  s.length > 0 && (0, l.jsx)("div", { className: t6.Vq, children: s }),
+                  n.length > 0 && (0, l.jsx)("div", { className: t6.MD, children: n }),
               ],
           });
 }
@@ -1601,8 +1601,8 @@ let nL = i.memo(
             e2 = !eD.D_.useSetting() && !(0, eJ.isAndroidWeb)() && null != window.ResizeObserver,
             e3 = !e2 || !b.commands?.enabled || !R || "/" !== a,
             e5 = (0, ev.A)(),
-            { fontSize: e8 } = (0, m.cf)([C.Ay], () => ({ fontSize: C.Ay.fontSize })),
-            e6 = (0, m.bG)([eH.A], () => eH.A.isEnabled());
+            { fontSize: e6 } = (0, m.cf)([C.Ay], () => ({ fontSize: C.Ay.fontSize })),
+            e8 = (0, m.bG)([eH.A], () => eH.A.isEnabled());
         nN(b, eK, j.id);
         let { eventEmitter: e7, handleEditorSelectionChanged: e4 } = n_(eE, a, o),
             e9 = i.useRef(a);
@@ -1703,7 +1703,7 @@ let nL = i.memo(
         let tP = null != D,
             tD = (eK && !((eF || eB) && e0)) || (tt && b.submit?.useDisabledStylesOnSubmit),
             tU = null;
-        null != ek ? (tU = k?.(ek, eP, t8.g$)) : (!eK || eq) && (tU = M?.(tP, t8.g$));
+        null != ek ? (tU = k?.(ek, eP, t6.g$)) : (!eK || eq) && (tU = M?.(tP, t6.g$));
         let { isVisible: tV, showsUpsell: tF } = (0, nC.A)({
                 type: b,
                 textValue: a,
@@ -1764,7 +1764,7 @@ let nL = i.memo(
                     return (
                         null != a.guild_id &&
                             o === eX.oU.NORMAL &&
-                            t.push((0, l.jsx)(t1.A, { guildId: a.guild_id, channel: a, className: t8.UW })),
+                            t.push((0, l.jsx)(t1.A, { guildId: a.guild_id, channel: a, className: t6.UW })),
                         null != u &&
                             e.push(
                                 (0, l.jsx)(tH, {
@@ -1796,7 +1796,7 @@ let nL = i.memo(
             tX = null != D ? [X, ta].filter(Boolean).join(" ") : X,
             tQ = b.layout === eX.wt.INLINE,
             t2 = b.layout === eX.wt.FLUSH,
-            t3 = (0, l.jsx)("div", { ref: em, className: t8.BW }),
+            t3 = (0, l.jsx)("div", { ref: em, className: t6.BW }),
             t4 = tw ? (0, l.jsx)(L, { align: "right", positionTargetRef: em, channel: j }) : null,
             t9 =
                 null != P
@@ -1836,35 +1836,35 @@ let nL = i.memo(
                         (0, l.jsxs)("div", {
                             ref: ec,
                             className: r()(c, {
-                                [t8.gM]: !0,
-                                [t8.Bz]: tV && tB,
-                                [t8.Qv]: tF && tB,
-                                [t8.h9]: tD,
-                                [t8.mr]: K,
-                                [t8.Wn]: d.Fr,
-                                [t8.Ls]: tQ,
-                                [t8.AH]: t2,
-                                [t8.z3]: null != O,
+                                [t6.gM]: !0,
+                                [t6.Bz]: tV && tB,
+                                [t6.Qv]: tF && tB,
+                                [t6.h9]: tD,
+                                [t6.mr]: K,
+                                [t6.Wn]: d.Fr,
+                                [t6.Ls]: tQ,
+                                [t6.AH]: t2,
+                                [t6.z3]: null != O,
                             }),
                             children: [
-                                tQ || t2 ? null : (0, l.jsx)(t6, { bars: tZ }),
+                                tQ || t2 ? null : (0, l.jsx)(t8, { bars: tZ }),
                                 (0, l.jsxs)("div", {
                                     ref: eI,
                                     onScroll: tf,
-                                    className: r()(h, { [t8.xx]: !0, [t8.k6]: !el, [t8.Ri]: tZ.stacked.length > 0 }),
+                                    className: r()(h, { [t6.xx]: !0, [t6.k6]: !el, [t6.Ri]: tZ.stacked.length > 0 }),
                                     children: [
                                         (0, l.jsx)(tm, { channelId: j.id, chatInputType: b }),
                                         b.hideAttachmentArea
                                             ? null
                                             : (0, l.jsx)(nu.A, { channelId: j.id, type: b, canAttachFiles: eZ }),
                                         (0, l.jsxs)("div", {
-                                            className: r()(t8.vW, {
-                                                [t8.BF]: tD,
-                                                [t8.RL]: b !== eX.oU.EDIT && (null != tU || (tD && null == tU) || eF),
-                                                [t8.fk]: b === eX.oU.THREAD_CREATION,
-                                                [t8.TZ]:
+                                            className: r()(t6.vW, {
+                                                [t6.BF]: tD,
+                                                [t6.RL]: b !== eX.oU.EDIT && (null != tU || (tD && null == tU) || eF),
+                                                [t6.fk]: b === eX.oU.THREAD_CREATION,
+                                                [t6.TZ]:
                                                     b === eX.oU.CREATE_FORUM_POST || b === eX.oU.FORWARD_MESSAGE_INPUT,
-                                                [t8.$i]: b === eX.oU.USER_PROFILE_REPLY,
+                                                [t6.$i]: b === eX.oU.USER_PROFILE_REPLY,
                                             }),
                                             onMouseDown: tR,
                                             children: [
@@ -1872,7 +1872,7 @@ let nL = i.memo(
                                                 tU,
                                                 (0, l.jsx)(p.vN, {
                                                     ringTarget: ec,
-                                                    ringClassName: t8.Rg,
+                                                    ringClassName: t6.Rg,
                                                     children: (0, l.jsx)(eQ.A, {
                                                         ref: eE,
                                                         id: x,
@@ -1907,14 +1907,14 @@ let nL = i.memo(
                                                         onMaybeShowAutocomplete: ts,
                                                         onHideAutocomplete: tr,
                                                         promptToUpload: W,
-                                                        fontSize: e8,
-                                                        spellcheckEnabled: e6,
+                                                        fontSize: e6,
+                                                        spellcheckEnabled: e8,
                                                         canOnlyUseTextCommands: tP,
                                                         className: r()(
                                                             {
-                                                                [t8.QI]: b === eX.oU.THREAD_CREATION,
-                                                                [t8.AV]: b === eX.oU.PROFILE_BIO_INPUT,
-                                                                [t8.GR]: b === eX.oU.OVERLAY_INLINE_REPLY,
+                                                                [t6.QI]: b === eX.oU.THREAD_CREATION,
+                                                                [t6.AV]: b === eX.oU.PROFILE_BIO_INPUT,
+                                                                [t6.GR]: b === eX.oU.OVERLAY_INLINE_REPLY,
                                                             },
                                                             f,
                                                         ),
@@ -1974,7 +1974,7 @@ let nL = i.memo(
                                   parentModalKey: es,
                                   position: "top",
                                   align: "right",
-                                  positionLayerClassName: t8.BD,
+                                  positionLayerClassName: t6.BD,
                               }),
                     ],
                 }),
