@@ -2060,7 +2060,7 @@ function sK(e) {
     let { alt: t, ariaLabel: s, ariaHidden: i, role: n, width: a = 288, height: l = 162 } = e;
     return (0, c.jsx)("img", {
         style: { width: a, height: l },
-        src: "https://cdn.discordapp.com/assets/content/521e5bf29d9f8a81ef4af279728799cf1021812200840659bf3067871bb49875.svg",
+        src: "https://cdn.discordapp.com/assets/content/9e73d749eeeee0e8008dcfb5bff16cf020c1949a5be67336a1bffe80c011ebaf.svg",
         alt: t,
         "aria-label": s,
         "aria-hidden": i,
