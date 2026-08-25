@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => m });
+n.d(t, { A: () => g });
 var i = n(477900);
 n(582128);
 var r = n(892491),
@@ -34,14 +34,17 @@ let I = (0, c.mj)({
     defaultConfig: { enabled: !1 },
     variations: { 1: { enabled: !0 }, 2: { enabled: !0 } },
 });
-var f = n(40449);
-function p(e) {
+function f(e) {
+    return I.getConfig({ location: e }).enabled;
+}
+var p = n(40449);
+function T(e) {
     if (null != e) return (0, h.Sr)(e) ? r.F.LIGHTBOX : void 0;
 }
-function T(e) {
+function m(e) {
     var t;
     let { entryPoint: r, onClose: s, onComplete: o, onCancel: d, incodeParameters: c } = e,
-        u = (t = c?.method) === f.VF.FACIAL_AGE_ESTIMATION || t === f.VF.ID_VERIFICATION ? c.method : null,
+        u = (t = c?.method) === p.VF.FACIAL_AGE_ESTIMATION || t === p.VF.ID_VERIFICATION ? c.method : null,
         _ =
             null != c && null != u
                 ? {
@@ -82,10 +85,10 @@ function T(e) {
                       })
                     : (0, i.jsx)(e, { pickerMode: !0, entryPoint: r, onComplete: o, onCancel: d, ...t });
         },
-        { modalKey: f.SW, onCloseCallback: s, backdropStyle: p(r), Layer: l.Ay },
+        { modalKey: p.SW, onCloseCallback: s, backdropStyle: T(r), Layer: l.Ay },
     );
 }
-let m = {
+let g = {
     showAgeVerification: function (e) {
         let {
                 onClose: t,
@@ -96,8 +99,8 @@ let m = {
                 incodeParameters: c,
                 ...u
             } = e,
-            E = { modalKey: f.SW, onCloseCallback: t, backdropStyle: p(r), Layer: l.Ay };
-        if (d === f.XM.INCODE && A(r))
+            E = { modalKey: p.SW, onCloseCallback: t, backdropStyle: T(r), Layer: l.Ay };
+        if (d === p.XM.INCODE && A(r))
             return (
                 !!(
                     null != c &&
@@ -105,30 +108,30 @@ let m = {
                         (e) => "string" == typeof c[e] && c[e].length > 0,
                     )
                 ) &&
-                (T({ entryPoint: r, onClose: t, onComplete: u.onComplete, onCancel: u.onCancel, incodeParameters: c }),
+                (m({ entryPoint: r, onClose: t, onComplete: u.onComplete, onCancel: u.onCancel, incodeParameters: c }),
                 !0)
             );
-        return (
-            null != o &&
-            (s || _(r)
-                ? (0, a.openModalLazy)(async () => {
-                      let { default: e } = await Promise.all([n.e("387132"), n.e("918024"), n.e("324947")]).then(
-                          n.bind(n, 662558),
-                      );
-                      return (t) => (0, i.jsx)(e, { webviewUrl: o, ...u, ...t });
-                  }, E)
-                : (0, a.openModalLazy)(async () => {
-                      let { default: e } = await Promise.all([
-                          n.e("896162"),
-                          n.e("387132"),
-                          n.e("188941"),
-                          n.e("669464"),
-                          n.e("123425"),
-                      ]).then(n.bind(n, 745336));
-                      return (t) => (0, i.jsx)(e, { webviewUrl: o, ...u, ...t });
-                  }, E),
-            !0)
-        );
+        if (null == o) return !1;
+        if (s || _(r)) {
+            let e = f(r);
+            (0, a.openModalLazy)(async () => {
+                let { default: t } = await Promise.all([n.e("387132"), n.e("918024"), n.e("324947")]).then(
+                    n.bind(n, 662558),
+                );
+                return (n) => (0, i.jsx)(t, { webviewUrl: o, isExpressiveModalV2: e, ...u, ...n });
+            }, E);
+        } else
+            (0, a.openModalLazy)(async () => {
+                let { default: e } = await Promise.all([
+                    n.e("896162"),
+                    n.e("387132"),
+                    n.e("188941"),
+                    n.e("669464"),
+                    n.e("123425"),
+                ]).then(n.bind(n, 745336));
+                return (t) => (0, i.jsx)(e, { webviewUrl: o, ...u, ...t });
+            }, E);
+        return !0;
     },
     showAgeVerificationGetStartedModal: function (e) {
         let { onClose: t, entryPoint: r } = e;
@@ -138,7 +141,7 @@ let m = {
                 s.h.dispatch({ type: "CLOSE_AGE_VERIFICATION_MODAL", status: e });
             }
             s.h.dispatch({ type: "INITIATE_AGE_VERIFICATION" }),
-                T({
+                m({
                     entryPoint: r,
                     onClose: () => {
                         c(), t?.();
@@ -148,7 +151,7 @@ let m = {
                 });
             return;
         }
-        I.getConfig({ location: r }).enabled
+        f(r)
             ? (0, a.openModalLazy)(
                   async () => {
                       let { default: e } = await Promise.all([
@@ -159,7 +162,7 @@ let m = {
                       ]).then(n.bind(n, 488026));
                       return (t) => (0, i.jsx)(e, { ...t, entryPoint: r });
                   },
-                  { modalKey: f.NC, backdropStyle: p(r), Layer: l.Ay, onCloseCallback: t },
+                  { modalKey: p.NC, backdropStyle: T(r), Layer: l.Ay, onCloseCallback: t },
               )
             : (0, h.Q9)() && (0, o.u0)()
               ? (0, a.openModalLazy)(
@@ -175,7 +178,7 @@ let m = {
                         ]).then(n.bind(n, 297102));
                         return (t) => (0, i.jsx)(e, { ...t, entryPoint: r });
                     },
-                    { modalKey: f.NC, backdropStyle: p(r), Layer: l.Ay, onCloseCallback: t },
+                    { modalKey: p.NC, backdropStyle: T(r), Layer: l.Ay, onCloseCallback: t },
                 )
               : _(r)
                 ? (0, a.openModalLazy)(
@@ -192,7 +195,7 @@ let m = {
                           ]).then(n.bind(n, 595746));
                           return (t) => (0, i.jsx)(e, { ...t, entryPoint: r });
                       },
-                      { modalKey: f.NC, backdropStyle: p(r), Layer: l.Ay, onCloseCallback: t },
+                      { modalKey: p.NC, backdropStyle: T(r), Layer: l.Ay, onCloseCallback: t },
                   )
                 : (0, a.openModalLazy)(
                       async () => {
@@ -207,7 +210,7 @@ let m = {
                           ]).then(n.bind(n, 654041));
                           return (t) => (0, i.jsx)(e, { ...t, entryPoint: r });
                       },
-                      { modalKey: f.NC, backdropStyle: p(r), Layer: l.Ay, onCloseCallback: t },
+                      { modalKey: p.NC, backdropStyle: T(r), Layer: l.Ay, onCloseCallback: t },
                   );
     },
     showManualReviewPendingModal: function () {
