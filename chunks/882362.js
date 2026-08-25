@@ -26,8 +26,8 @@ var l = n(477900),
     T = n(821609),
     I = n(194261),
     M = n(512950),
-    R = n(297264),
-    L = n(404778),
+    L = n(297264),
+    R = n(404778),
     w = n(663417),
     O = n(565787),
     _ = n(157559),
@@ -215,8 +215,8 @@ function eT(e) {
 }
 var eI = n(736653),
     eM = n(775602),
-    eR = n(861197),
-    eL = n(438271),
+    eL = n(861197),
+    eR = n(438271),
     ew = n(260509),
     eO = n(889227),
     e_ = n(863036),
@@ -323,12 +323,12 @@ function eQ(e) {
             sendMessagesDisabled: m,
             readMessageHistoryDisabled: x,
         });
-    return (0, l.jsxs)(eR.Ay.Content, {
+    return (0, l.jsxs)(eL.Ay.Content, {
         className: eW.uA,
         children: [
             p.map((e, n) =>
                 (0, l.jsx)(
-                    eL.A,
+                    eR.A,
                     { spec: e, allow: t.allow, deny: t.deny, onChange: c, permissionRender: u, className: eW.p2 },
                     n,
                 ),
@@ -586,7 +586,7 @@ function eK() {
                 );
             })
             .value();
-    return (0, l.jsx)(eR.Ay.Sidebar, {
+    return (0, l.jsx)(eL.Ay.Sidebar, {
         className: eW.uA,
         scrollable: !0,
         children: (0, l.jsxs)(em.V, {
@@ -658,14 +658,14 @@ function e0() {
     )
         return null;
     let i = t[n];
-    return (0, l.jsxs)(eR.Ay, { className: eW.kL, children: [(0, l.jsx)(eK, {}), (0, l.jsx)(eQ, { overwrite: i })] });
+    return (0, l.jsxs)(eL.Ay, { className: eW.kL, children: [(0, l.jsx)(eK, {}), (0, l.jsx)(eQ, { overwrite: i })] });
 }
 var e2 = n(310578);
 function e5() {
     let e = (0, s.bG)([W.A], () => W.A.advancedMode);
     return (0, l.jsxs)(l.Fragment, {
         children: [
-            (0, l.jsx)(L.c, { className: e2.BQ }),
+            (0, l.jsx)(R.c, { className: e2.BQ }),
             (0, l.jsx)(et.EN, {
                 isExpanded: e,
                 onExpandedChange: D.E,
@@ -1022,7 +1022,7 @@ function ta(e) {
                                     (0, l.jsxs)("div", {
                                         className: tl.MJ,
                                         children: [
-                                            (0, l.jsx)(R.D, {
+                                            (0, l.jsx)(L.D, {
                                                 variant: "heading-sm/semibold",
                                                 className: tl.DH,
                                                 children: g.formLabel,
@@ -1063,8 +1063,8 @@ function tr(e) {
     let { title: t } = e;
     return (0, l.jsxs)("div", {
         children: [
-            (0, l.jsx)(L.c, { className: tl.yF }),
-            (0, l.jsx)(R.D, { variant: "heading-sm/semibold", className: A()(tl.DH, tl.Gf), children: t }),
+            (0, l.jsx)(R.c, { className: tl.yF }),
+            (0, l.jsx)(L.D, { variant: "heading-sm/semibold", className: A()(tl.DH, tl.Gf), children: t }),
         ],
     });
 }
@@ -1119,7 +1119,7 @@ let to = s.Ay.connectStores([W.A, X.A, Y.Ay, Q.A, J.A], () => {
         s.isCategory() && ((m.title = eH.intl.string(eH.t["/uELTj"])), (m.subtitle = eH.intl.string(eH.t["8iAg3Q"]))),
         (0, l.jsxs)(l.Fragment, {
             children: [
-                (0, l.jsx)(R.D, { variant: "heading-lg/semibold", children: m.title }),
+                (0, l.jsx)(L.D, { variant: "heading-lg/semibold", children: m.title }),
                 (0, l.jsx)(a.E, { variant: "text-sm/normal", children: m.subtitle }),
                 null != i && t
                     ? h
@@ -1234,8 +1234,8 @@ var tS = n(371444),
     tT = n(392421),
     tI = n(602137),
     tM = n(665260),
-    tR = n(452027),
-    tL = n(103557),
+    tL = n(452027),
+    tR = n(103557),
     tw = n(150934),
     tO = n(825484),
     t_ = n(123292),
@@ -1893,7 +1893,7 @@ class nN extends i.PureComponent {
             x = m && e.availableTags?.every((e) => e.moderated),
             p = q.default.getCurrentUser()?.isStaff() === !0,
             f = tg.IY.has(e.type)
-                ? (0, l.jsx)(tR.D, {
+                ? (0, l.jsx)(tL.D, {
                       label: m ? eH.intl.string(eH.t.yR6HwZ) : eH.intl.string(eH.t.X8jMDh),
                       children: (0, l.jsx)(tY.Ay, {
                           className: A()(np.zm, { [np.r9]: !s }),
@@ -1923,7 +1923,7 @@ class nN extends i.PureComponent {
                 : null,
             C =
                 m && p && !e.isGameInvitesChannel()
-                    ? (0, l.jsx)(tL.f, {
+                    ? (0, l.jsx)(tR.f, {
                           label: eH.intl.string(eH.t.qk2jdY),
                           placeholder: eH.intl.string(eH.t.DDjD1H),
                           value: tq.Ay.translateSurrogatesToInlineEmoji(e.template ?? ""),
@@ -1938,8 +1938,8 @@ class nN extends i.PureComponent {
             j = e.isForumLikeChannel()
                 ? (0, l.jsxs)(l.Fragment, {
                       children: [
-                          (0, l.jsx)(L.c, {}),
-                          (0, l.jsx)(tR.D, {
+                          (0, l.jsx)(R.c, {}),
+                          (0, l.jsx)(tL.D, {
                               label: eH.intl.string(eH.t["P/y+sj"]),
                               description: eH.intl.string(eH.t["/oQQ3y"]),
                               errorMessage: this.getError("available_tags"),
@@ -1957,8 +1957,8 @@ class nN extends i.PureComponent {
             b = e.isForumLikeChannel()
                 ? (0, l.jsxs)(l.Fragment, {
                       children: [
-                          (0, l.jsx)(L.c, {}),
-                          (0, l.jsx)(tR.D, {
+                          (0, l.jsx)(R.c, {}),
+                          (0, l.jsx)(tL.D, {
                               label: eH.intl.string(eH.t["8ao1+E"]),
                               description: eH.intl.string(eH.t.SdbF0q),
                               children: (0, l.jsxs)("div", {
@@ -2007,7 +2007,7 @@ class nN extends i.PureComponent {
                 e.isForumChannel() && !e.isGameInvitesChannel()
                     ? (0, l.jsxs)(l.Fragment, {
                           children: [
-                              (0, l.jsx)(L.c, {}),
+                              (0, l.jsx)(R.c, {}),
                               (0, l.jsxs)("div", {
                                   className: np.OZ,
                                   children: [
@@ -2038,7 +2038,7 @@ class nN extends i.PureComponent {
                                           : (0, l.jsx)(nh, { className: np.Kf }),
                                   ],
                               }),
-                              (0, l.jsx)(L.c, {}),
+                              (0, l.jsx)(R.c, {}),
                           ],
                       })
                     : null,
@@ -2074,7 +2074,7 @@ class nN extends i.PureComponent {
                 ? m
                     ? (0, l.jsxs)(l.Fragment, {
                           children: [
-                              (0, l.jsx)(L.c, {}),
+                              (0, l.jsx)(R.c, {}),
                               (0, l.jsxs)(tD.n, {
                                   label: eH.intl.string(eH.t.tTHx98),
                                   children: [
@@ -2116,7 +2116,7 @@ class nN extends i.PureComponent {
                           }),
                       })
                     : null,
-            R =
+            L =
                 e.type === eB.rbe.PRIVATE_THREAD && null != e.threadMetadata
                     ? (0, l.jsx)("div", {
                           children: (0, l.jsx)(e1.d, {
@@ -2265,7 +2265,7 @@ class nN extends i.PureComponent {
                 N,
                 v,
                 E,
-                R,
+                L,
                 D,
                 k,
                 P,
@@ -2286,8 +2286,10 @@ class nN extends i.PureComponent {
             label: eH.intl.string(eH.t.w2d0vU),
             errorMessage: "" !== s ? s : void 0,
             helperText: i > eB.gp3 ? eH.intl.format(eH.t.SbQJk5, { bitrate: eB.gp3 / 1e3 }) : void 0,
+            value: Math.min(e.bitrate, i),
             initialValue: Math.min(e.bitrate, i),
             onValueChange: this.handleChangeBitrate,
+            asValueChanges: this.handleChangeBitrate,
             onValueRender: this.renderBitrate,
             onMarkerRender: this.renderBitrate,
             markers: [...new Set([eB.hcd, eB.gp3, i])],
@@ -2336,8 +2338,10 @@ class nN extends i.PureComponent {
             label: eH.intl.string(eH.t["/AoSGN"]),
             errorMessage: "" !== n ? n : void 0,
             helperText: eH.intl.format(e.isGuildStageVoice() ? eH.t.OqZI8D : eH.t["8yb3JT"], {}),
+            value: Math.min(e.userLimit, i),
             initialValue: Math.min(e.userLimit, i),
             onValueChange: this.handleUserLimitChange,
+            asValueChanges: this.handleUserLimitChange,
             onValueRender: this.onRenderUserLimit,
             onMarkerRender: (e) => (0 === Math.round(e) ? "\u221E" : e),
             markers: [0, i],
@@ -2395,9 +2399,9 @@ class nN extends i.PureComponent {
         return (0, l.jsxs)(tD.n, {
             "aria-labelledby": i,
             children: [
-                (0, l.jsx)(R.D, { id: i, variant: "text-lg/medium", children: eH.intl.string(eH.t["/dp6yY"]) }),
+                (0, l.jsx)(L.D, { id: i, variant: "text-lg/medium", children: eH.intl.string(eH.t["/dp6yY"]) }),
                 this.renderChannelInfo(e, t),
-                this.showVoiceSettings() ? (0, l.jsx)(L.c, { gap: 24 }) : null,
+                this.showVoiceSettings() ? (0, l.jsx)(R.c, { gap: 24 }) : null,
                 this.renderVoiceBitrate(e, n),
                 this.renderVideoQualityMode(e),
                 this.renderUserLimit(e),
@@ -2499,10 +2503,12 @@ class nN extends i.PureComponent {
         (0, d.fy)({ defaultTagSetting: e });
     };
     handleChangeBitrate = (e) => {
-        (0, d.fy)({ bitrate: 1e3 * Math.round(e / 1e3) });
+        let t = 1e3 * Math.round(e / 1e3);
+        t !== this.props.channel?.bitrate && (0, d.fy)({ bitrate: t });
     };
     handleUserLimitChange = (e) => {
-        (0, d.fy)({ userLimit: Math.round(e) });
+        let t = Math.round(e);
+        t !== this.props.channel?.userLimit && (0, d.fy)({ userLimit: t });
     };
     handleChannelRestrictionChange = (e) => {
         let { channel: t } = this.props;
