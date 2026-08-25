@@ -3507,7 +3507,9 @@ function iA(e) {
           ? (0, l.jsx)(ig, {
                 className: t,
                 assetUrl: r,
-                desktopBody: F.intl.format(iy.default["A/KOOc"], { learnMoreUrl: "" }),
+                desktopBody: F.intl.format(iy.default["A/KOOc"], {
+                    learnMoreUrl: ty.A.getArticleURL(eG.MVz.NITRO_GIFTING),
+                }),
                 countdownText: o,
             })
           : (0, l.jsxs)("div", {
