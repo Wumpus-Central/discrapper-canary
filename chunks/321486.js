@@ -1,145 +1,161 @@
-n.d(t, { A: () => L });
+n.d(t, { A: () => w });
 var i = n(477900),
     l = n(582128),
-    a = n(296704),
-    s = n(17928),
-    r = n(866323),
-    o = n(97808),
-    c = n(778712),
-    d = n(939249),
-    u = n(821609),
-    h = n(408278),
-    p = n(881636),
-    m = n(402216),
-    f = n(652896),
-    A = n(607407),
-    x = n(287809),
-    g = n(927813),
-    C = n(562153),
-    y = n(218394),
-    j = n(360627),
-    I = n(809369),
-    N = n(1195),
-    v = n(375708),
-    E = n(814402);
-let b = 10 * g.A.Millis.SECOND,
-    T = { tension: 220, friction: 30, clamp: !0 },
-    _ = { x: "100%" },
-    R = { x: "0%" },
-    S = { x: "-100%" };
-function L(e) {
-    let { streams: t, fit: n, tooltipSpacing: g, containerWidthPx: L } = e,
-        [O, P] = l.useState({ streamKey: null, sequence: 0 }),
-        [M, w] = l.useState(!1),
-        [U, D] = l.useState(!1),
-        V = Math.max(
-            0,
-            t.findIndex((e) => (0, f._z)(e) === O.streamKey),
+    a = n(503698),
+    s = n.n(a),
+    r = n(296704),
+    o = n(17928),
+    c = n(866323),
+    d = n(97808),
+    u = n(778712),
+    h = n(939249),
+    p = n(821609),
+    m = n(408278),
+    A = n(881636),
+    f = n(402216),
+    x = n(652896),
+    g = n(616356),
+    C = n(287809),
+    y = n(927813),
+    j = n(562153),
+    I = n(218394),
+    E = n(393371),
+    N = n(360627),
+    v = n(809369),
+    b = n(652215),
+    T = n(1195),
+    _ = n(375708),
+    R = n(814402);
+let S = 10 * y.A.Millis.SECOND,
+    L = { tension: 220, friction: 30, clamp: !0 },
+    O = { x: "100%" },
+    P = { x: "0%" },
+    M = { x: "-100%" };
+function w(e) {
+    let { streams: t, fit: n, tooltipSpacing: a, containerWidthPx: y } = e,
+        w = (0, o.yK)(
+            [g.A],
+            () =>
+                t
+                    .filter((e) => {
+                        let t = g.A.getActiveStreamForApplicationStream(e);
+                        return null != t && t.state !== b.XYD.ENDED;
+                    })
+                    .map((e) => (0, x._z)(e)),
+            [t],
         ),
-        k = t[V],
-        G = t[(V + 1) % t.length],
-        B = t.length > 1,
-        F = U ? G : k,
-        H = (0, s.bG)([x.default], () => x.default.getUser(F.ownerId), [F]),
-        z = C.Ay.useName(F.guildId, F.channelId, H),
-        W = (0, y.j)(),
-        $ = L / 225,
-        Y = v.intl.string(v.t["7Xq/nV"]),
-        K = v.intl.string(N.default["t+GPi4"]),
-        q = l.useCallback(() => {
-            let e = (0, f._z)(G);
-            P((t) => ({ streamKey: e, sequence: t.sequence + 1 }));
-        }, [G]);
+        [D, U] = l.useState({ streamKey: w[0] ?? null, sequence: 0 }),
+        [V, k] = l.useState(!1),
+        [G, B] = l.useState(!1),
+        F = Math.max(
+            0,
+            t.findIndex((e) => (0, x._z)(e) === D.streamKey),
+        ),
+        H = t[F],
+        z = t[(F + 1) % t.length],
+        W = t.length > 1,
+        $ = w.includes((0, x._z)(H)),
+        Y = G ? z : H,
+        K = (0, o.bG)([C.default], () => C.default.getUser(Y.ownerId), [Y]),
+        q = j.Ay.useName(Y.guildId, Y.channelId, K),
+        X = (0, I.j)(),
+        Z = y / 225,
+        Q = $ ? _.intl.string(T.default.zW6Hyu) : _.intl.string(_.t["7Xq/nV"]),
+        J = _.intl.string(T.default["t+GPi4"]),
+        ee = l.useCallback(() => {
+            let e = (0, x._z)(z);
+            U((t) => ({ streamKey: e, sequence: t.sequence + 1 }));
+        }, [z]);
     l.useEffect(() => {
-        if (!B || !W || M) return;
-        let e = setTimeout(q, b);
+        if (!W || !X || V || $) return;
+        let e = setTimeout(ee, S);
         return () => clearTimeout(e);
-    }, [B, W, M, q]);
-    let X = l.useCallback(() => (0, I.k)(k), [k]),
-        Z = { left: `${n.originX}%`, top: `${n.originY}%`, transform: n.matrix },
-        Q = (0, r.p)(k, {
-            keys: () => `${O.sequence}:${(0, f._z)(k)}`,
-            initial: R,
-            from: _,
-            enter: R,
-            leave: S,
-            config: T,
+    }, [W, X, V, $, ee]);
+    let et = l.useCallback(() => (0, v.k)(H), [H]),
+        en = { left: `${n.originX}%`, top: `${n.originY}%`, transform: n.matrix },
+        ei = (0, c.p)(H, {
+            keys: () => `${D.sequence}:${(0, x._z)(H)}`,
+            initial: P,
+            from: O,
+            enter: P,
+            leave: M,
+            config: L,
         });
-    function J() {
-        w(!0);
+    function el() {
+        k(!0);
     }
-    function ee() {
-        w(!1), D(!1);
+    function ea() {
+        k(!1), B(!1);
     }
     return (0, i.jsxs)("div", {
-        className: E.VH,
-        style: Z,
-        onMouseEnter: J,
-        onMouseLeave: ee,
-        onFocus: J,
-        onBlur: ee,
+        className: s()(R.VH, { [R.ke]: $ }),
+        style: en,
+        onMouseEnter: el,
+        onMouseLeave: ea,
+        onFocus: el,
+        onBlur: ea,
         children: [
-            (0, i.jsx)(j.A, {
-                title: z,
-                image: (0, i.jsx)(o.eu, { src: H?.getAvatarURL(F.guildId, 96), size: c._3.SIZE_48, "aria-hidden": !0 }),
-                forceOpen: U,
-                spacing: g,
-                children: (0, i.jsxs)(d.D, {
+            (0, i.jsx)(N.A, {
+                title: q,
+                image: (0, i.jsx)(d.eu, { src: K?.getAvatarURL(Y.guildId, 96), size: u._3.SIZE_48, "aria-hidden": !0 }),
+                forceOpen: G,
+                spacing: a,
+                children: (0, i.jsxs)(h.D, {
                     tag: "div",
-                    "aria-label": Y,
-                    className: E.KR,
-                    onClick: X,
+                    "aria-label": Q,
+                    className: R.KR,
+                    onClick: et,
                     children: [
                         (0, i.jsx)("div", {
-                            className: E.vd,
-                            children: Q((e, t) =>
-                                (0, i.jsx)(a.animated.div, {
-                                    className: E.G8,
+                            className: R.vd,
+                            children: ei((e, t) =>
+                                (0, i.jsx)(r.animated.div, {
+                                    className: R.G8,
                                     style: e,
-                                    children: (0, i.jsx)(A.A, { stream: t, className: E.oz, noText: !0 }),
+                                    children: (0, i.jsx)(E.A, { stream: t, previewClassName: R.oz }),
                                 }),
                             ),
                         }),
-                        (0, i.jsx)(m.Ay, {
-                            size: m.Ay.Sizes.SMALL,
-                            className: E.Ok,
-                            style: { transform: `scale(${$})` },
+                        (0, i.jsx)(f.Ay, {
+                            size: f.Ay.Sizes.SMALL,
+                            className: R.Ok,
+                            style: { transform: `scale(${Z})` },
                             count: t.length,
                         }),
                     ],
                 }),
             }),
             (0, i.jsx)("div", {
-                className: E.y,
+                className: R.y,
                 children: (0, i.jsxs)("div", {
-                    className: E.ne,
-                    style: { transform: `scale(${$})` },
+                    className: R.ne,
+                    style: { transform: `scale(${Z})` },
                     children: [
                         (0, i.jsx)("div", {
-                            className: E.kx,
-                            children: (0, i.jsx)(u.$, {
-                                text: Y,
+                            className: R.kx,
+                            children: (0, i.jsx)(p.$, {
+                                text: Q,
                                 variant: "overlay-secondary",
                                 size: "sm",
                                 tabIndex: -1,
                                 "aria-hidden": !0,
                             }),
                         }),
-                        B
+                        W
                             ? (0, i.jsx)("div", {
-                                  className: E.ch,
+                                  className: R.ch,
                                   children: (0, i.jsx)("div", {
-                                      className: E.iI,
-                                      onMouseEnter: () => D(!0),
-                                      onMouseLeave: () => D(!1),
-                                      onFocus: () => D(!0),
-                                      onBlur: () => D(!1),
-                                      children: (0, i.jsx)(h.K, {
-                                          icon: p.u,
+                                      className: R.iI,
+                                      onMouseEnter: () => B(!0),
+                                      onMouseLeave: () => B(!1),
+                                      onFocus: () => B(!0),
+                                      onBlur: () => B(!1),
+                                      children: (0, i.jsx)(m.K, {
+                                          icon: A.u,
                                           variant: "overlay-secondary",
                                           size: "sm",
-                                          "aria-label": K,
-                                          onClick: q,
+                                          "aria-label": J,
+                                          onClick: ee,
                                       }),
                                   }),
                               })
