@@ -4466,6 +4466,37 @@ screen and (max-width:485px) {
     color: var(--control-overlay-secondary-text-active)
 }
 
+.togglebutton_a22cb0 {
+    background-color: var(--control-secondary-background-default);
+    border-color: var(--control-secondary-border-default);
+    color: var(--control-secondary-text-default)
+}
+
+.togglebutton_a22cb0:hover {
+    background-color: var(--control-secondary-background-hover);
+    border-color: var(--control-secondary-border-hover);
+    color: var(--control-secondary-text-hover)
+}
+
+.togglebutton_a22cb0[aria-pressed=true] {
+    background-color: var(--togglebutton-background-selected);
+    border-color: var(--togglebutton-border-selected)
+}
+
+.togglebutton_a22cb0[aria-pressed=true]:hover {
+    background-color: var(--togglebutton-background-selected-hover)
+}
+
+.togglebutton_a22cb0:active {
+    background-color: var(--control-secondary-background-active);
+    border-color: var(--togglebutton-border-selected);
+    color: var(--control-secondary-text-active)
+}
+
+.togglebutton_a22cb0[aria-pressed=true]:active {
+    background-color: var(--togglebutton-background-selected-active)
+}
+
 .expressive_a22cb0>* {
     pointer-events: none;
     z-index: 1
@@ -5332,4 +5363,4 @@ screen and (max-width:485px) {
     margin-inline-end: var(--space-12)
 }
 
-/*# sourceMappingURL=139987.88d6c49a0383f742.css.map*/
+/*# sourceMappingURL=139987.9e41844bf3542f74.css.map*/

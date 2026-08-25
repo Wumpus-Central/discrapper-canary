@@ -4054,6 +4054,10 @@
     --textbox-markdown-syntax: #949ca3;
     --theme-locked-blur-fallback: rgba(31, 31, 33, .96);
     --thread-channel-spine: #4f4f59;
+    --togglebutton-background-selected: rgba(89, 102, 242, .08);
+    --togglebutton-background-selected-active: rgba(89, 102, 242, .24);
+    --togglebutton-background-selected-hover: rgba(89, 102, 242, .12);
+    --togglebutton-border-selected: #5966f2;
     --user-profile-about-me-heading-text: #f2f2f5;
     --user-profile-activity-toolbar-background: #404047;
     --user-profile-background-hover: hsla(240, 4%, 61%, .12);
@@ -4721,6 +4725,10 @@
     --textbox-markdown-syntax: #40424a;
     --theme-locked-blur-fallback: rgba(31, 31, 33, .96);
     --thread-channel-spine: #c4c9cf;
+    --togglebutton-background-selected: rgba(89, 102, 242, .04);
+    --togglebutton-background-selected-active: rgba(89, 102, 242, .24);
+    --togglebutton-background-selected-hover: rgba(89, 102, 242, .08);
+    --togglebutton-border-selected: #5966f2;
     --user-profile-about-me-heading-text: #2e2e33;
     --user-profile-activity-toolbar-background: #fff;
     --user-profile-background-hover: hsla(240, 4%, 61%, .12);
@@ -5388,6 +5396,10 @@
     --textbox-markdown-syntax: #9496a3;
     --theme-locked-blur-fallback: rgba(31, 31, 33, .96);
     --thread-channel-spine: #4d4f5c;
+    --togglebutton-background-selected: rgba(89, 102, 242, .08);
+    --togglebutton-background-selected-active: rgba(89, 102, 242, .24);
+    --togglebutton-background-selected-hover: rgba(89, 102, 242, .12);
+    --togglebutton-border-selected: #5966f2;
     --user-profile-about-me-heading-text: #dbdbde;
     --user-profile-activity-toolbar-background: #1f1f21;
     --user-profile-background-hover: hsla(240, 4%, 61%, .12);
@@ -6055,6 +6067,10 @@
     --textbox-markdown-syntax: #9496a3;
     --theme-locked-blur-fallback: rgba(31, 31, 33, .96);
     --thread-channel-spine: #4d4f5c;
+    --togglebutton-background-selected: rgba(89, 102, 242, .08);
+    --togglebutton-background-selected-active: rgba(89, 102, 242, .24);
+    --togglebutton-background-selected-hover: rgba(89, 102, 242, .12);
+    --togglebutton-border-selected: #5966f2;
     --user-profile-about-me-heading-text: #f0f0f2;
     --user-profile-activity-toolbar-background: #2b2e33;
     --user-profile-background-hover: hsla(240, 4%, 61%, .12);
@@ -6075,4 +6091,4 @@
     --white: #fff
 }
 
-/*# sourceMappingURL=5ec037461174dc7c.css.map*/
+/*# sourceMappingURL=9225ad5dcaabaaab.css.map*/

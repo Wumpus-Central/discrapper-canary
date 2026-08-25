@@ -32,6 +32,7 @@ i.r(
         active: "active_a22cb0",
         "overlay-primary": "overlay-primary_a22cb0",
         "overlay-secondary": "overlay-secondary_a22cb0",
+        togglebutton: "togglebutton_a22cb0",
         expressive: "expressive_a22cb0",
         expressiveRive: "expressiveRive_a22cb0",
         expressiveBackground: "expressiveBackground_a22cb0",

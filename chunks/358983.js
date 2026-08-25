@@ -1,4 +1,4 @@
-var c = {
+var i = {
     button: "button__75098",
     buttonChildrenWrapper: "buttonChildrenWrapper__75098",
     buttonChildren: "buttonChildren__75098",
@@ -13,8 +13,8 @@ var c = {
     "spinner-transform-out": "spinner-transform-out__75098",
     xs: "xs__75098",
     hasText: "hasText__75098",
-    sm: "sm__75098 " + i(736541)["text-sm/normal"],
-    md: "md__75098 " + i(736541)["text-md/normal"],
+    sm: "sm__75098 " + o(736541)["text-sm/normal"],
+    md: "md__75098 " + o(736541)["text-md/normal"],
     spinnerItem: "spinnerItem__75098",
     spinner: "spinner__75098",
     "spinner-sm": "spinner-sm__75098",
@@ -31,6 +31,7 @@ var c = {
     active: "active__75098",
     "overlay-primary": "overlay-primary__75098",
     "overlay-secondary": "overlay-secondary__75098",
+    togglebutton: "togglebutton__75098",
     expressive: "expressive__75098",
     expressiveRive: "expressiveRive__75098",
     expressiveBackground: "expressiveBackground__75098",
@@ -49,4 +50,4 @@ var c = {
     hasTrailing: "hasTrailing__75098",
     hasTags: "hasTags__75098",
 };
-i.r((e.exports = c));
+o.r((e.exports = i));
