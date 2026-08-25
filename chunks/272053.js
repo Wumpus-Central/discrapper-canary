@@ -1,10 +1,11 @@
 "use strict";
-n.d(t, { A: () => o }), n(321073);
+n.d(t, { A: () => d }), n(321073);
 var i = n(775602),
     r = n(963935),
     a = n(894858),
-    s = n(397274);
-class l {
+    s = n(466448),
+    l = n(397274);
+class o {
     accessibleDirectory = null;
     navigateWithValidation = null;
     closeWithValidation = null;
@@ -27,9 +28,9 @@ class l {
         let { currentPanelKey: t, nextPanelKey: n } = e,
             i = a.A.getField("scrollPositionSnapshots");
         if (null == t || t === n) return;
-        let l = this.accessibleDirectory?.getPanelOrThrow(t);
-        if (null == l || (0, r.Px)(l)) return;
-        let o = s.A.getPanelScrollerNode();
+        let s = this.accessibleDirectory?.getPanelOrThrow(t);
+        if (null == s || (0, r.Px)(s)) return;
+        let o = l.A.getPanelScrollerNode();
         if (null == o) return;
         let d = a.A.getField("currentCategoryKey"),
             c = new Map(i);
@@ -84,56 +85,57 @@ class l {
         if (null == this.accessibleDirectory) return;
         let n = this.accessibleDirectory.entry(e);
         if (null == n) return;
-        let l = n.parentPanelKey;
-        if (null == l) return;
-        let o = a.A.getField("currentPanelKey"),
-            d = a.A.getField("scrollPositionSnapshots"),
-            c = n.node.type === r.Z6.PANEL ? d.get(l) : void 0,
-            u = c?.categoryKey ?? this.getNextCategoryKey({ targetEntry: n }),
-            _ = null != o ? this.accessibleDirectory.entry(o) : void 0,
-            E = _?.parentSidebarItemKey === n.parentSidebarItemKey,
-            A = n.parentPanelKey === o,
-            h = async () => {
+        let o = n.parentPanelKey;
+        if (null == o) return;
+        let d = a.A.getField("currentPanelKey"),
+            c = a.A.getField("scrollPositionSnapshots"),
+            u = n.node.type === r.Z6.PANEL ? c.get(o) : void 0,
+            _ = u?.categoryKey ?? this.getNextCategoryKey({ targetEntry: n }),
+            E = null != d ? this.accessibleDirectory.entry(d) : void 0,
+            A = E?.parentSidebarItemKey === n.parentSidebarItemKey,
+            h = n.parentPanelKey === d,
+            I = async () => {
                 t.onTransitionStart?.(),
-                    E
-                        ? this.maybeCreatePanelSnapshot({ currentPanelKey: o, nextPanelKey: l })
+                    A
+                        ? this.maybeCreatePanelSnapshot({ currentPanelKey: d, nextPanelKey: o })
                         : this.deleteAllPanelSnapshots(),
-                    n.node.type === r.Z6.PANEL && s.A.enableSidebarCategoryAutoSelect(),
+                    n.node.type === r.Z6.PANEL && l.A.enableSidebarCategoryAutoSelect(),
                     a.A.setState({
-                        currentPanelKey: l,
-                        currentCategoryKey: u,
+                        currentPanelKey: o,
+                        currentCategoryKey: _,
                         requestAccordionOpenKey: n.parentAccordionKey,
                         showNavigationMobile:
                             null != t.showNavigationMobile
                                 ? t.showNavigationMobile
                                 : a.A.getField("showNavigationMobile"),
-                    });
-                let d = null != t.animatePanelScroll ? t.animatePanelScroll : A,
-                    _ = null != t.animateSidebarScroll && t.animateSidebarScroll;
-                null != c
-                    ? (await this.scrollToOffset({ scrollOffset: c.scrollOffset }), this.deletePanelSnapshot(l))
+                    }),
+                    null != n.parentSidebarItemKey && s.A.notifyNavigated(n.parentSidebarItemKey);
+                let c = null != t.animatePanelScroll ? t.animatePanelScroll : h,
+                    E = null != t.animateSidebarScroll && t.animateSidebarScroll;
+                null != u
+                    ? (await this.scrollToOffset({ scrollOffset: u.scrollOffset }), this.deletePanelSnapshot(o))
                     : await this.scrollToTarget({
                           targetKey: e,
-                          targetPanelKey: l,
+                          targetPanelKey: o,
                           targetAccordionKey: n.parentAccordionKey,
                           scrollBlock: t.panelScrollBlock ?? "start",
-                          animatePanelScroll: d,
-                          animateSidebarScroll: _,
+                          animatePanelScroll: c,
+                          animateSidebarScroll: E,
                       });
-                let h = document.querySelector(`[data-nav-anchor-key="${e}"]`);
-                null != h
-                    ? h.focus({ preventScroll: !0 })
+                let I = document.querySelector(`[data-nav-anchor-key="${e}"]`);
+                null != I
+                    ? I.focus({ preventScroll: !0 })
                     : document.querySelector("[data-nav-anchor-key]")?.focus({ preventScroll: !0 }),
-                    A || this.onViewChange?.(l),
-                    (!d || i.Ay.useReducedMotion) &&
+                    h || this.onViewChange?.(o),
+                    (!c || i.Ay.useReducedMotion) &&
                         n.node.type !== r.Z6.CATEGORY &&
                         a.A.setState({ requestFlashKey: e });
             };
-        A ? h() : this.navigateWithValidation?.(e, h);
+        h ? I() : this.navigateWithValidation?.(e, I);
     }
     async scrollToOffset(e) {
         let { scrollOffset: t } = e;
-        await new Promise((e) => requestAnimationFrame(() => e())), await s.A.scrollPanelNodeTo(t);
+        await new Promise((e) => requestAnimationFrame(() => e())), await l.A.scrollPanelNodeTo(t);
     }
     async scrollToTarget(e) {
         let {
@@ -142,15 +144,15 @@ class l {
             targetAccordionKey: i,
             scrollBlock: r,
             animatePanelScroll: a,
-            animateSidebarScroll: l,
+            animateSidebarScroll: s,
         } = e;
         await this.maybeWaitForAccordionExpansion(i);
         let o = document.querySelector(`[data-settings-sidebar-item="${n}"]`),
             d = document.querySelector(`[data-nav-anchor-key="${t}"]`);
         (null != o || null != d) &&
             (await Promise.all([
-                null != d ? s.A.scrollPanelNodeIntoView(d, { animate: a, block: r }) : Promise.resolve(),
-                null != o ? s.A.scrollSidebarNodeIntoView(o, { animate: l, block: "nearest" }) : Promise.resolve(),
+                null != d ? l.A.scrollPanelNodeIntoView(d, { animate: a, block: r }) : Promise.resolve(),
+                null != o ? l.A.scrollSidebarNodeIntoView(o, { animate: s, block: "nearest" }) : Promise.resolve(),
             ]));
     }
     reset() {
@@ -161,4 +163,4 @@ class l {
             (this.closeWithValidation = null);
     }
 }
-let o = new l();
+let d = new o();
