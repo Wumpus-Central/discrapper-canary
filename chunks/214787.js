@@ -1,20 +1,18 @@
 "use strict";
-n.d(t, { A: () => f });
-var i = n(827343),
-    r = n(439372),
-    a = n(736056),
-    s = n(710195),
-    l = n(280450),
-    o = n(734057),
-    d = n(453028),
-    c = n(763827),
-    u = n(821578);
+n.d(t, { A: () => h }), n(827343);
+var i = n(439372),
+    r = n(736056),
+    a = n(710195),
+    s = n(280450),
+    l = n(734057),
+    o = n(453028),
+    d = n(763827),
+    c = n(821578);
 n(17928);
-var _ = n(558076),
-    E = n(360729),
-    A = n(189998);
-let h = { x: 50, y: 50 };
-class I extends r.A {
+var u = n(558076),
+    _ = (n(360729), n(189998));
+let E = { x: 50, y: 50 };
+class A extends i.A {
     actions = {
         AUDIO_SET_AUDIO_MIXER_SETTINGS: () => this.apply(),
         RTC_CONNECTION_STATE: () => this.apply(),
@@ -26,30 +24,22 @@ class I extends r.A {
         GUILD_ROOM_DISCONNECT: () => this.apply(),
     };
     _initialize() {
-        this.stores = new Map().set(a.A, this.reapplyForExperimentUpdate).set(s.A, this.reapplyForExperimentUpdate);
+        this.stores = new Map().set(r.A, this.reapplyForExperimentUpdate).set(a.A, this.reapplyForExperimentUpdate);
     }
     _terminate() {}
-    reapplyForExperimentUpdate = () => {
-        let e = d.Ay.getAudioMixerSettings();
-        i.A.setAudioMixerSettings(e), this.apply();
-    };
+    reapplyForExperimentUpdate = () => {};
     isLivingRoomAvailable() {
-        let e = c.A.getGuildId();
-        return (
-            null != e &&
-            E.A.getCurrentConfig({ guildId: e, location: "GuildRoomSpatialAudioManager" }, { autoTrackExposure: !1 })
-                .interactionsEnabled
-        );
+        return !1;
     }
     apply() {
-        if (!d.Ay.getAudioMixerSettings().enabled) return;
-        let e = c.A.getChannelId();
-        if (null == e || !this.isLivingRoomAvailable() || o.A.getChannel(e)?.isGuildStageVoice()) return;
+        if (!o.Ay.getAudioMixerSettings().enabled) return;
+        let e = d.A.getChannelId();
+        if (null == e || !this.isLivingRoomAvailable() || l.A.getChannel(e)?.isGuildStageVoice()) return;
         let t = (function (e) {
             let { users: t, currentUserId: n, channelId: i } = e,
                 r = t.get(n)?.position ?? null,
-                a = _.A.getRoom(i)?.background ?? u.I.DEFAULT,
-                { aspectRatio: s } = A.iX[a];
+                a = u.A.getRoom(i)?.background ?? c.I.DEFAULT,
+                { aspectRatio: s } = _.iX[a];
             return Object.fromEntries(
                 [...t.values()]
                     .filter((e) => {
@@ -62,7 +52,7 @@ class I extends r.A {
                             t,
                             (function (e, t, n) {
                                 let { aspectRatio: i } = n,
-                                    r = t ?? h;
+                                    r = t ?? E;
                                 return {
                                     worldX: ((e.x - r.x) / 100) * i * 8,
                                     worldY: 0,
@@ -72,8 +62,8 @@ class I extends r.A {
                         ];
                     }),
             );
-        })({ users: _.A.getRoomUsers(e), currentUserId: l.default.getId(), channelId: e });
-        d.Ay.getMediaEngine().eachConnection((e) => {
+        })({ users: u.A.getRoomUsers(e), currentUserId: s.default.getId(), channelId: e });
+        o.Ay.getMediaEngine().eachConnection((e) => {
             for (let [n, i] of Object.entries(t))
                 e.setUserPosition(
                     n,
@@ -85,4 +75,4 @@ class I extends r.A {
         });
     }
 }
-let f = new I();
+let h = new A();
