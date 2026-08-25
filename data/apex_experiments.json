@@ -5437,25 +5437,6 @@
     }
   },
   {
-    "name": "2026-07-smag-wishlist-recommendations-dismiss-threshold",
-    "kind": "user",
-    "defaultConfig": {
-      "minItemsToDismiss": 1
-    },
-    "variations": {
-      "0": {
-        "enabled": false,
-        "variant": 0
-      },
-      "1": {
-        "minItemsToDismiss": 3
-      },
-      "2": {
-        "minItemsToDismiss": 10
-      }
-    }
-  },
-  {
     "name": "2026-07-social-layer-storefront-spend-orbs-banner-copy",
     "kind": "user",
     "defaultConfig": {
