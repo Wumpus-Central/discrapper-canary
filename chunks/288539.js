@@ -42,8 +42,8 @@ function E(e) {
             channelId: E,
             parsedUserId: I,
             content: y,
-            inlinePreview: v = !1,
-            viewingChannelId: S,
+            inlinePreview: S = !1,
+            viewingChannelId: v,
         } = e,
         N = i.useRef(null),
         { analyticsLocations: _ } = (0, u.Ay)(o.A.USER_MENTION),
@@ -51,7 +51,7 @@ function E(e) {
         j = (0, r.bG)([m.A], () => m.A.getChannel(E)),
         b = null != j ? j.getGuildId() : null,
         R =
-            v || null == T || null == E || null == j
+            S || null == T || null == E || null == j
                 ? void 0
                 : (e) => {
                       null != b
@@ -81,10 +81,11 @@ function E(e) {
                                     n.e("698965"),
                                     n.e("882073"),
                                     n.e("797558"),
+                                    n.e("682337"),
                                     n.e("934771"),
-                                    n.e("454625"),
                                     n.e("691994"),
                                     n.e("371133"),
+                                    n.e("454625"),
                                     n.e("576665"),
                                     n.e("235313"),
                                     n.e("538887"),
@@ -126,7 +127,7 @@ function E(e) {
                                     n.e("184841"),
                                 ]).then(n.bind(n, 107632));
                                 return (t) =>
-                                    (0, l.jsx)(e, { ...t, viewingChannelId: S, user: T, channel: j, guildId: b });
+                                    (0, l.jsx)(e, { ...t, viewingChannelId: v, user: T, channel: j, guildId: b });
                             })
                           : j.isDM() &&
                             (0, a.L3)(e, async () => {
@@ -156,9 +157,10 @@ function E(e) {
                                     n.e("698965"),
                                     n.e("882073"),
                                     n.e("797558"),
-                                    n.e("454625"),
+                                    n.e("682337"),
                                     n.e("691994"),
                                     n.e("371133"),
+                                    n.e("454625"),
                                     n.e("576665"),
                                     n.e("235313"),
                                     n.e("538887"),
@@ -207,13 +209,13 @@ function E(e) {
                                 return (t) => (0, l.jsx)(e, { ...t, user: T, channel: j, targetIsUser: !0 });
                             });
                   },
-        M = A.Ay.useName(T),
-        O = (0, r.bG)([m.A, f.Ay, p.A], () => x.Ay.getNickname(b, E, T));
+        O = A.Ay.useName(T),
+        M = (0, r.bG)([m.A, f.Ay, p.A], () => x.Ay.getNickname(b, E, T));
     if (null == T) return (0, l.jsx)(C, { userId: I, className: t, children: y });
     function L(e) {
-        return (0, l.jsx)(d.A, { ref: N, className: t, onContextMenu: R, ...e, children: `@${O ?? M}` });
+        return (0, l.jsx)(d.A, { ref: N, className: t, onContextMenu: R, ...e, children: `@${M ?? O}` });
     }
-    return v
+    return S
         ? (0, l.jsx)(u.f5, { value: _, children: L() })
         : (0, l.jsx)(u.f5, {
               value: _,

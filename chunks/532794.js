@@ -26,8 +26,8 @@ function S(e) {
             onClose: S,
             onComplete: N,
             onSubscriptionConfirmation: C,
-            analyticsLocations: R,
-            analyticsObject: O,
+            analyticsLocations: O,
+            analyticsObject: R,
             analyticsLocation: L,
             analyticsSourceLocation: y,
             confirmationFooter: D,
@@ -436,14 +436,15 @@ function S(e) {
         n.e("831219"),
         n.e("437370"),
         n.e("222380"),
+        n.e("682337"),
         n.e("632744"),
         n.e("26846"),
-        n.e("454625"),
         n.e("165595"),
         n.e("858514"),
         n.e("344265"),
         n.e("588940"),
         n.e("371133"),
+        n.e("454625"),
         n.e("776750"),
         n.e("784041"),
         n.e("428296"),
@@ -483,7 +484,7 @@ function S(e) {
         n.e("654282"),
         n.e("77473"),
         n.e("363618"),
-        n.e("387533"),
+        n.e("663756"),
         n.e("880239"),
         n.e("860177"),
         n.e("875016"),
@@ -526,7 +527,7 @@ function S(e) {
             return n[c.C.PREMIUM_CHECKOUT].get().openCheckoutModal({
                 checkoutConfiguration: { applicationId: k, skuId: z ?? null, initialPaymentSourceId: Y },
                 forwardedPaymentModalProps: {
-                    analyticsObject: O,
+                    analyticsObject: R,
                     initialPlanId: t,
                     startingStepOverride: K,
                     analyticsLocation: L,
@@ -560,7 +561,7 @@ function S(e) {
                                     null != e &&
                                         (0, E.A)({
                                             product: e,
-                                            analyticsLocations: R ?? [],
+                                            analyticsLocations: O ?? [],
                                             purchaseType: m.gs.PROMOTIONAL,
                                             overrideGradientColor: "nitro-pink",
                                         });
@@ -568,7 +569,7 @@ function S(e) {
                             }
                         })(e, ee),
                 },
-                unifiedCheckoutProviderProps: { analyticsSourceLocation: y, analyticsLocations: R },
+                unifiedCheckoutProviderProps: { analyticsSourceLocation: y, analyticsLocations: O },
                 checkoutHandlers: { onClose: S, onComplete: N },
                 giftContextProps: { isGift: v, giftMessage: b, giftStyle: M, giftingOrigin: P, giftRecipient: V },
                 tenantParams: {

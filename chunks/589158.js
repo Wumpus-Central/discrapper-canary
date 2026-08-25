@@ -20,8 +20,8 @@ var l,
     E = n(397244),
     I = n(714114),
     y = n(394871),
-    v = n(296948),
-    S = n(709066),
+    S = n(296948),
+    v = n(709066),
     N = n(235986),
     _ = n(141504),
     T = (((l = T || {}).SINGLE_AVATAR = "1"), (l.MULTIPLE_AVATAR = "2"), l);
@@ -60,8 +60,8 @@ class b extends s.Component {
     }
 }
 var R = n(268218),
-    M = n(193663),
-    O = n(490427),
+    O = n(193663),
+    M = n(490427),
     L = n(609425),
     w = n(922301),
     k = n(660184),
@@ -116,6 +116,7 @@ let et = (0, R.Fe)({
             n.e("292583"),
             n.e("132191"),
             n.e("344502"),
+            n.e("682337"),
             n.e("454625"),
             n.e("538887"),
             n.e("35485"),
@@ -166,8 +167,8 @@ let en = s.memo(function (e) {
     ei = s.memo(function (e) {
         let { user: t } = e;
         if (null == t) return null;
-        let n = (0, v.r)(t);
-        return null == n ? null : (0, i.jsx)(S.A, { className: ee.AO, type: n, verified: t.isVerifiedBot() });
+        let n = (0, S.r)(t);
+        return null == n ? null : (0, i.jsx)(v.A, { className: ee.AO, type: n, verified: t.isVerifiedBot() });
     }),
     es = s.memo(function (e) {
         let {
@@ -293,7 +294,7 @@ let en = s.memo(function (e) {
             ),
             f = s.useMemo(
                 () =>
-                    !(0, O.A)({
+                    !(0, M.A)({
                         activity: l?.find((e) => {
                             let { type: t } = e;
                             return t === $.$pd.CUSTOM_STATUS;
@@ -332,14 +333,14 @@ let en = s.memo(function (e) {
                 activities: C,
                 applicationStream: E,
                 status: y,
-                shouldAnimateStatus: v = !1,
-                isMobile: S,
+                shouldAnimateStatus: S = !1,
+                isMobile: v,
                 isVR: N,
                 premiumSince: _,
                 channel: T,
                 guildId: j,
                 className: R,
-                nameplate: O,
+                nameplate: M,
                 hideClanTag: L = !1,
                 hideSubtext: w = !1,
                 hideTooltip: k = !1,
@@ -370,8 +371,8 @@ let en = s.memo(function (e) {
                 avatarSrc: eE,
                 eventHandlers: eI,
             } = (0, Y.A)({ userId: ei, size: x._3.SIZE_32, animateOnHover: !(t || eh), guildId: j }),
-            { onFocus: ey, ...ev } = en ?? {},
-            eS = (0, W.gn)(j, ei, l ?? null),
+            { onFocus: ey, ...eS } = en ?? {},
+            ev = (0, W.gn)(j, ei, l ?? null),
             [eN, e_] = s.useState(!1);
         s.useEffect(() => {
             t && e_(!1);
@@ -380,8 +381,8 @@ let en = s.memo(function (e) {
             ej = (0, o.bG)([K.A], () => K.A.getQuestPreviewOverride(z.uF.MEMBERS_LIST), []),
             eb = null != ej,
             eR = eb ? ej : eT,
-            eM = (0, Z.Yl)(eT, E, ei),
-            eO = (eb || eM) && t && !eN,
+            eO = (0, Z.Yl)(eT, E, ei),
+            eM = (eb || eO) && t && !eN,
             eL = s.useCallback(() => {
                 em(!0);
             }, []),
@@ -417,16 +418,16 @@ let en = s.memo(function (e) {
                   targetElementRef: ed,
                   renderPopout: eU,
                   position: "bottom",
-                  shouldShow: eO,
+                  shouldShow: eM,
                   nudgeAlignIntoViewport: !1,
                   useRawTargetDimensions: !0,
                   animation: A.Y.Animation.NONE,
                   spacing: -3,
                   children: () =>
-                      (0, i.jsx)(M.A, {
+                      (0, i.jsx)(O.A, {
                           ref: ed,
                           selected: t,
-                          className: a()(ee.Dc, R, { [ee.WK]: y === $.clD.OFFLINE && !t, [ee.PJ]: eO }),
+                          className: a()(ee.Dc, R, { [ee.WK]: y === $.clD.OFFLINE && !t, [ee.PJ]: eM }),
                           innerClassName: ee.Hz,
                           onClick: U,
                           onKeyDown: D,
@@ -444,7 +445,7 @@ let en = s.memo(function (e) {
                                             colorRoleName: r,
                                             colorString: n ?? null,
                                             name: f ?? eu,
-                                            colorStrings: eS,
+                                            colorStrings: ev,
                                             hideClanTag: L,
                                             user: p,
                                             guildId: j,
@@ -459,7 +460,7 @@ let en = s.memo(function (e) {
                                                 colorRoleName: r,
                                                 colorString: n ?? null,
                                                 name: f ?? eu,
-                                                colorStrings: eS,
+                                                colorStrings: ev,
                                                 hideClanTag: L,
                                                 user: p,
                                                 guildId: j,
@@ -469,12 +470,12 @@ let en = s.memo(function (e) {
                                     }),
                           avatar: (0, i.jsx)(ea, {
                               user: p,
-                              shouldAnimateStatus: v,
+                              shouldAnimateStatus: S,
                               activities: C,
                               status: y,
                               eventHandlers: eI,
                               avatarSrc: eE,
-                              isMobile: S,
+                              isMobile: v,
                               isVR: N,
                               isTyping: m,
                               avatarDecorationSrc: eC,
@@ -482,7 +483,7 @@ let en = s.memo(function (e) {
                               typingRef: eg,
                               currentUser: g,
                           }),
-                          nameplate: O,
+                          nameplate: M,
                           subText: (0, i.jsx)(eo, {
                               hideSubtext: w,
                               activities: C,
@@ -511,7 +512,7 @@ let en = s.memo(function (e) {
                           tabIndex: Q,
                           onFocus: ek,
                           focusProps: { offset: { top: 4, bottom: 4, left: 4, right: 4 } },
-                          ...ev,
+                          ...eS,
                       }),
               });
     });

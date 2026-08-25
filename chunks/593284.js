@@ -20,16 +20,16 @@ var l = n(477900),
     E = n(485947),
     I = n(386784),
     y = n(545868),
-    v = n(332173),
-    S = n(176201),
+    S = n(332173),
+    v = n(176201),
     N = n(676608),
     _ = n(342296),
     T = n(260509),
     j = n(734057),
     b = n(696451),
     R = n(317525),
-    M = n(71393),
-    O = n(287809),
+    O = n(71393),
+    M = n(287809),
     L = n(427262),
     w = n(375708),
     k = n(165648),
@@ -37,8 +37,8 @@ var l = n(477900),
 function D(e) {
     let { member: t, guildId: s, channelId: r, role: a } = e,
         u = i.useRef(null),
-        c = (0, o.bG)([M.A], () => M.A.getGuild(s)?.ownerId, [s]),
-        d = (0, o.bG)([O.default], () => O.default.getUser(t.userId), [t.userId]),
+        c = (0, o.bG)([O.A], () => O.A.getGuild(s)?.ownerId, [s]),
+        d = (0, o.bG)([M.default], () => M.default.getUser(t.userId), [t.userId]),
         h = (0, o.bG)([j.A], () => j.A.getChannel(r), [r]);
     return null == d || null == h
         ? null
@@ -94,10 +94,11 @@ function D(e) {
                                           n.e("698965"),
                                           n.e("882073"),
                                           n.e("797558"),
+                                          n.e("682337"),
                                           n.e("934771"),
-                                          n.e("454625"),
                                           n.e("691994"),
                                           n.e("371133"),
+                                          n.e("454625"),
                                           n.e("576665"),
                                           n.e("235313"),
                                           n.e("538887"),
@@ -161,16 +162,16 @@ function U(e) {
             t.setPopoutRef?.(null);
         });
     let h = (0, I.A)(s),
-        m = (0, o.bG)([M.A], () => {
-            let e = M.A.getGuild(s);
+        m = (0, o.bG)([O.A], () => {
+            let e = O.A.getGuild(s);
             return null == e ? null : (0, T.af)(e);
         }, [s]),
-        f = (0, o.yK)([b.Ay, O.default], () => {
+        f = (0, o.yK)([b.Ay, M.default], () => {
             let e = b.Ay.getMembers(s),
                 t = null == n || n === m ? e : e.filter((e) => e.roles.includes(n));
             return r()(t)
-                .filter((e) => null != O.default.getUser(e.userId))
-                .sortBy((e) => e.nick ?? L.Ay.getName(O.default.getUser(e.userId)))
+                .filter((e) => null != M.default.getUser(e.userId))
+                .sortBy((e) => e.nick ?? L.Ay.getName(M.default.getUser(e.userId)))
                 .value();
         }, [s, n, m]),
         g = (0, o.bG)([R.A], () => {
@@ -215,13 +216,13 @@ function G(e) {
         f = (0, o.bG)([g.Ay], () => g.Ay.roleStyle),
         p = (0, o.bG)([R.A], () => (null == r || null == t ? null : R.A.getRole(r, t))),
         C = (0, N.jV)(r, p),
-        E = !c && null != p && !(0, S.Qv)(p),
+        E = !c && null != p && !(0, v.Qv)(p),
         I = E && "dot" === f,
         _ = E && "username" === f,
         T = C && null != p ? p.colorStrings : null,
         j = i.useRef(null);
     function b(e) {
-        return (0, l.jsxs)(v.A, {
+        return (0, l.jsxs)(S.A, {
             ref: j,
             className: k.Dz,
             color: _ ? p.color : null,

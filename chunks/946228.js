@@ -20,16 +20,16 @@ var A = n(442433),
     E = n(414798),
     I = n(589158),
     y = n(775602),
-    v = n(793574),
-    S = n(95561),
+    S = n(793574),
+    v = n(95561),
     N = n(688810),
     _ = n(941726),
     T = n(449582),
     j = n(900797),
     b = n(847374),
     R = n(320448),
-    M = n(939249),
-    O = n(485947),
+    O = n(939249),
+    M = n(485947),
     L = n(180170),
     w = n(435738),
     k = n(38055);
@@ -49,14 +49,14 @@ let F = i.memo(function (e) {
                 });
             }, []),
             d = i.useCallback(() => (u ? (0, L.Il)() : o > 3 ? r() : (0, D.tEg)()), [u, o, r]);
-        return (0, l.jsxs)(O.A, {
+        return (0, l.jsxs)(M.A, {
             className: V.lL,
             children: [
                 (0, l.jsx)(m.A, { children: U.intl.format(U.t.Uaqbke, { title: s, count: o }) }),
                 (0, l.jsxs)("div", {
                     className: G.N1,
                     children: [
-                        (0, l.jsx)(M.D, {
+                        (0, l.jsx)(O.D, {
                             onClick: d,
                             onContextMenu: c,
                             tag: "span",
@@ -65,7 +65,7 @@ let F = i.memo(function (e) {
                             children: (0, l.jsxs)("span", { children: [s, " \u2014 ", o] }),
                         }),
                         (0, l.jsx)(k.A, {}),
-                        (0, l.jsx)(M.D, {
+                        (0, l.jsx)(O.D, {
                             onClick: d,
                             onContextMenu: c,
                             tag: "span",
@@ -81,7 +81,7 @@ let F = i.memo(function (e) {
                                   : a
                                     ? (0, l.jsx)(b.a, { className: G.wT })
                                     : (0, l.jsx)(R._, { className: G.wT })),
-                              (0, l.jsx)(M.D, {
+                              (0, l.jsx)(O.D, {
                                   onClick: d,
                                   tag: "span",
                                   "aria-label": U.intl.string(a && !u ? U.t.iTcuma : U.t.dcl9MQ),
@@ -139,17 +139,17 @@ var ep = n(915089),
     eE = n(342296),
     eI = n(773669),
     ey = n(317525),
-    ev = n(994500),
-    eS = n(309010),
+    eS = n(994500),
+    ev = n(309010),
     eN = n(741961),
     e_ = n(287809),
     eT = n(977997),
     ej = n(625494),
     eb = n(403362),
     eR = n(427262),
-    eM = n(19575),
-    eO = n(47167);
-let eL = eM.Ay.getEnableHardwareAcceleration(),
+    eO = n(19575),
+    eM = n(47167);
+let eL = eO.Ay.getEnableHardwareAcceleration(),
     ew = { origin: { x: 38, y: 11 }, targetWidth: 232, targetHeight: 40, offset: { x: 0, y: 0 } },
     ek = i.memo(function (e) {
         let {
@@ -168,15 +168,15 @@ let eL = eM.Ay.getEnableHardwareAcceleration(),
                 guildId: x,
                 isTyping: C,
                 isMobileOnline: y,
-                isVROnline: v,
-                premiumSince: S,
+                isVROnline: S,
+                premiumSince: v,
                 nameplate: N,
                 ..._
             } = e,
             T = i.useRef(null),
             [j, b] = i.useState(!1),
-            R = null != S ? new Date(S) : null,
-            M = i.useCallback(
+            R = null != v ? new Date(v) : null,
+            O = i.useCallback(
                 (e) => {
                     (0, A.L3)(e, async () => {
                         let { default: e } = await Promise.all([
@@ -204,10 +204,11 @@ let eL = eM.Ay.getEnableHardwareAcceleration(),
                                 n.e("698965"),
                                 n.e("882073"),
                                 n.e("797558"),
+                                n.e("682337"),
                                 n.e("934771"),
-                                n.e("454625"),
                                 n.e("691994"),
                                 n.e("371133"),
+                                n.e("454625"),
                                 n.e("576665"),
                                 n.e("235313"),
                                 n.e("538887"),
@@ -248,13 +249,13 @@ let eL = eM.Ay.getEnableHardwareAcceleration(),
                                 n.e("717334"),
                                 n.e("184841"),
                             ]).then(n.bind(n, 107632)),
-                            t = eT.A.isInChannel(eS.Ay.getVoiceChannelId(), c.id);
+                            t = eT.A.isInChannel(ev.Ay.getVoiceChannelId(), c.id);
                         return (n) => (0, l.jsx)(e, { ...n, user: c, guildId: x, channel: g, showMediaItems: t });
                     });
                 },
                 [c, x, g],
             ),
-            O = i.useCallback(() => {
+            M = i.useCallback(() => {
                 let e = `@${eR.Ay.getUserTag(c, { decoration: "never" })}`,
                     t = `<@${c.id}>`;
                 ej._.dispatch(D.jej.TEXTAREA_FOCUS, { channelId: g.id }),
@@ -280,7 +281,7 @@ let eL = eM.Ay.getEnableHardwareAcceleration(),
             roleId: a,
             position: d.Fr ? "window_center" : "left",
             spacing: 16,
-            onShiftClick: O,
+            onShiftClick: M,
             shouldShow: j,
             onRequestClose: () => {
                 b(!1);
@@ -290,7 +291,7 @@ let eL = eM.Ay.getEnableHardwareAcceleration(),
                 return (0, l.jsx)(I.A, {
                     ref: T,
                     className: V.Dc,
-                    onContextMenu: M,
+                    onContextMenu: O,
                     shouldAnimateStatus: eL,
                     user: c,
                     currentUser: h,
@@ -307,13 +308,13 @@ let eL = eM.Ay.getEnableHardwareAcceleration(),
                     channel: g,
                     guildId: x,
                     isMobile: y,
-                    isVR: v,
+                    isVR: S,
                     onClickPremiumGuildIcon: L,
                     selected: j,
                     itemProps: _,
                     nameplate: N,
                     onClick: (e) => {
-                        e.shiftKey ? O?.() : b((e) => !e);
+                        e.shiftKey ? M?.() : b((e) => !e);
                     },
                     onMouseDown: (e) => {
                         j ? e.stopPropagation() : i?.(e);
@@ -353,7 +354,7 @@ let eL = eM.Ay.getEnableHardwareAcceleration(),
             );
         return t === D.clD.UNKNOWN
             ? (0, l.jsx)("div", { className: o, children: (0, l.jsx)("div", { className: V.k1 }) })
-            : (0, l.jsxs)(O.A, {
+            : (0, l.jsxs)(M.A, {
                   className: o,
                   children: [
                       (0, l.jsx)(m.A, { children: null == r ? s : U.intl.format(U.t.Uaqbke, { title: s, count: r }) }),
@@ -596,7 +597,7 @@ class eG extends i.Component {
             },
         );
         (this.lastReportedAnalyticsChannel = this.props.channel.id),
-            S.Ay.trackWithMetadata(D.HAw.MEMBER_LIST_VIEWED, { ...l });
+            v.Ay.trackWithMetadata(D.HAw.MEMBER_LIST_VIEWED, { ...l });
     };
     render() {
         let { groups: e, listId: t, channel: n, sectionHeight: i } = this.props;
@@ -612,7 +613,7 @@ class eG extends i.Component {
                                     children: (0, l.jsx)(p.H, {
                                         id: a,
                                         children: U.intl.format(U.t.JBQxV6, {
-                                            channel: (0, eO.m1)(n, e_.default, ev.A),
+                                            channel: (0, eM.m1)(n, e_.default, eS.A),
                                         }),
                                     }),
                                 }),
@@ -653,7 +654,7 @@ class eG extends i.Component {
 }
 function eV(e) {
     let { channel: t, className: n } = e,
-        { analyticsLocations: s } = (0, N.Ay)(v.A.MEMBER_LIST),
+        { analyticsLocations: s } = (0, N.Ay)(S.A.MEMBER_LIST),
         a = (0, h.bG)([y.Ay], () => y.Ay.keyboardModeEnabled),
         o = (0, h.cf)([K.Ay], () => K.Ay.getProps(t.guild_id, t.id)),
         {
@@ -773,8 +774,8 @@ function eV(e) {
                     return [[h, ...t], [...n, h, ...e], Math.random(), e];
                 }, [s, c, a, t, r, u, n, l, m, x]),
                 y = i.useRef(0),
-                v = i.useRef(c),
-                S = i.useRef(void 0),
+                S = i.useRef(c),
+                v = i.useRef(void 0),
                 N = i.useRef({ impressionCappedEntryIds: d }),
                 T = i.useCallback(
                     (e) => {
@@ -786,7 +787,7 @@ function eV(e) {
                 );
             return (
                 i.useEffect(() => {
-                    v.current = c;
+                    S.current = c;
                 }, [c]),
                 i.useEffect(() => {
                     N.current = { impressionCappedEntryIds: d };
@@ -794,17 +795,17 @@ function eV(e) {
                 i.useEffect(
                     () => (
                         (y.current = 0),
-                        (S.current = Date.now()),
+                        (v.current = Date.now()),
                         () => {
-                            if (null == u || null == S.current || Date.now() - S.current < ef) return;
-                            let e = v.current?.map((e) => e.id) ?? [],
+                            if (null == u || null == v.current || Date.now() - v.current < ef) return;
+                            let e = S.current?.map((e) => e.id) ?? [],
                                 t = e.slice(0, y.current);
                             !m &&
                                 f &&
                                 x &&
                                 ((0, X.D)(D.HAw.RANKING_ITEMS_SEEN_MUST_BE_SAMPLED, {
                                     request_id: u,
-                                    first_shown_at: S.current,
+                                    first_shown_at: v.current,
                                     item_ids: t,
                                     surface_type: eh.UG.GUILD_MEMBER_LIST,
                                     channel_id: s,
@@ -856,7 +857,7 @@ function eV(e) {
                 }),
             [],
         ),
-        S = i.useCallback(
+        v = i.useCallback(
             () =>
                 new Promise((e) => {
                     let t = g.current;
@@ -869,7 +870,7 @@ function eV(e) {
                 }),
             [],
         ),
-        T = (0, c.Ay)({ id: `members-${t.id}`, setFocus: E, isEnabled: a, scrollToStart: I, scrollToEnd: S });
+        T = (0, c.Ay)({ id: `members-${t.id}`, setFocus: E, isEnabled: a, scrollToStart: I, scrollToEnd: v });
     return (0, l.jsx)(N.f5, {
         value: s,
         children: (0, l.jsx)("div", {

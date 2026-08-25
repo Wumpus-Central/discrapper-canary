@@ -50,6 +50,14 @@
     width: 100%
 }
 
+.launchButtonContainer__36d06 {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    width: 100%
+}
+
 .container__535da {
     background: var(--background-surface-high);
     border: 1px solid var(--border-subtle);
@@ -102,4 +110,4 @@
     min-height: var(--space-32)
 }
 
-/*# sourceMappingURL=de61055a60fc66bb.css.map*/
+/*# sourceMappingURL=ee4b893835963965.css.map*/

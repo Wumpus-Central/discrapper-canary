@@ -181,8 +181,9 @@ function o(e) {
                 n.e("132191"),
                 n.e("27773"),
                 n.e("577084"),
-                n.e("454625"),
+                n.e("682337"),
                 n.e("371133"),
+                n.e("454625"),
                 n.e("729963"),
                 n.e("392075"),
                 n.e("76428"),
@@ -205,7 +206,7 @@ function o(e) {
                 n.e("654282"),
                 n.e("77473"),
                 n.e("363618"),
-                n.e("387533"),
+                n.e("663756"),
                 n.e("880239"),
                 n.e("860177"),
                 n.e("875016"),
@@ -298,9 +299,9 @@ function p(e) {
         { enabled: E } = h.useConfig({ location: A }),
         I = (0, u.F5)(A),
         y = (0, s.tA)({ isGift: !0, giftRecipient: t }),
-        v = C && null != t,
-        S = E && null == t,
-        N = v || S,
+        S = C && null != t,
+        v = E && null == t,
+        N = S || v,
         _ = y && null != t;
     return {
         openGiftModal: l.useCallback(() => {
@@ -331,7 +332,7 @@ function p(e) {
                             analyticsObject: a ?? r,
                             giftMessage: g,
                         })
-                  : v && null != t
+                  : S && null != t
                     ? (0, m.A)({
                           giftRecipient: t,
                           analyticsLocations: n,
@@ -339,7 +340,7 @@ function p(e) {
                           analyticsObject: a ?? r,
                           giftMessage: g,
                       })
-                    : S
+                    : v
                       ? (0, m.A)({
                             analyticsLocations: n,
                             analyticsLocation: p,
@@ -364,7 +365,7 @@ function p(e) {
                               analyticsObject: c ?? r,
                               giftMessage: g,
                           });
-        }, [I, v, S, _, t, n, p, r, a, c, g, x]),
+        }, [I, S, v, _, t, n, p, r, a, c, g, x]),
         shouldShowWishlistModal: _,
         shouldShowGiftSelectionModal: N,
     };

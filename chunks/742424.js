@@ -20,16 +20,16 @@ var l = n(477900),
     E = n(821609),
     I = n(414499),
     y = n(323384),
-    v = n(55730),
-    S = n(765379),
+    S = n(55730),
+    v = n(765379),
     N = n(146779),
     _ = n(284525),
     T = n(793574),
     j = n(482030),
     b = n(627363),
     R = n(773669),
-    M = n(403362),
-    O = n(562153),
+    O = n(403362),
+    M = n(562153),
     L = n(939341),
     w = n(576757),
     k = n(583846);
@@ -255,16 +255,16 @@ var ef = n(554146),
     eE = n(276293),
     eI = n(935063),
     ey = n(789645),
-    ev = n(778712),
-    eS = n(696986),
+    eS = n(778712),
+    ev = n(696986),
     eN = n(297264),
     e_ = n(834730),
     eT = n(320448),
     ej = n(97808),
     eb = n(738188),
     eR = n(983851),
-    eM = n(31300),
-    eO = n(308528),
+    eO = n(31300),
+    eM = n(308528),
     eL = n(367513),
     ew = n(730852),
     ek = n(401843),
@@ -464,7 +464,7 @@ ta.EmojiIntention.CHAT,
         tr.Ay.getByName("watermelon"),
         tr.Ay.getByName("fork_and_knife"),
         tr.Ay.getByName("yum"),
-    ].filter(M.Vq);
+    ].filter(O.Vq);
 var tc = n(636585),
     td = n(734057),
     th = n(71393),
@@ -478,8 +478,8 @@ var tc = n(636585),
     tE = n(20805),
     tI = n(22869),
     ty = n(623671),
-    tv = n(428249),
-    tS = n(327098),
+    tS = n(428249),
+    tv = n(327098),
     tN = n(202195),
     t_ = n(43105),
     tT = n(131607),
@@ -516,8 +516,8 @@ let tR = function (e) {
               ],
           });
 };
-var tM = n(315246),
-    tO = n(866323),
+var tO = n(315246),
+    tM = n(866323),
     tL = n(857250),
     tw = n(97483),
     tk = n(289873),
@@ -539,7 +539,7 @@ function tU() {
 let tG = (e) => {
     let { shown: t, sent: n, className: i } = e,
         s = (0, u.bG)([m.Ay], () => m.Ay.useReducedMotion),
-        r = (0, tO.p)(
+        r = (0, tM.p)(
             t,
             {
                 from: { transform: s ? "translateY(0)" : "translateY(16px)", opacity: 0 },
@@ -738,8 +738,9 @@ let tW = (0, eX.Fe)({
                 n.e("132191"),
                 n.e("27773"),
                 n.e("577084"),
-                n.e("454625"),
+                n.e("682337"),
                 n.e("371133"),
+                n.e("454625"),
                 n.e("729963"),
                 n.e("392075"),
                 n.e("76428"),
@@ -762,7 +763,7 @@ let tW = (0, eX.Fe)({
                 n.e("654282"),
                 n.e("77473"),
                 n.e("363618"),
-                n.e("387533"),
+                n.e("663756"),
                 n.e("880239"),
                 n.e("860177"),
                 n.e("875016"),
@@ -855,11 +856,11 @@ function tq(e) {
         { channel: o, user: c, onReaction: h, entry: m, buttons: f = [], header: p, onVoiceChannelPreview: x } = e,
         [A, C] = i.useState(!1),
         [I, y] = i.useState(null),
-        v = (0, u.bG)(
+        S = (0, u.bG)(
             [tm.A],
             () => null != o && eW.kvI.CONTENT_ENTRY_EMBEDS.has(o.type) && tm.A.can(eW.xBc.SEND_MESSAGES, o),
         ),
-        [S, N] = i.useState(!1),
+        [v, N] = i.useState(!1),
         [_, T] = i.useState(!1),
         { voiceBar: j, joinVoiceButton: b } = (function (e) {
             let { channel: t, entry: n, onVoiceChannelPreview: s } = e,
@@ -949,7 +950,7 @@ function tq(e) {
                                     renderUser: (e, t) =>
                                         (0, l.jsx)(ej.eu, {
                                             src: e.user.getAvatarURL(h.id, 16),
-                                            size: ev._3.SIZE_16,
+                                            size: eS._3.SIZE_16,
                                             "aria-label": "avatar",
                                             className: t,
                                         }),
@@ -965,7 +966,7 @@ function tq(e) {
                                 }),
                             ],
                         }),
-                        (0, l.jsx)(eS.h, { size: 16 }),
+                        (0, l.jsx)(ev.h, { size: 16 }),
                     ],
                 }),
                 joinVoiceButton: f
@@ -984,15 +985,15 @@ function tq(e) {
                               },
                               fullWidth: !0,
                               text: g ? eu.intl.string(eu.t.I6JG46) : eu.intl.string(eu.t.VJlc0S),
-                              icon: g ? eM.k : eR.H,
+                              icon: g ? eO.k : eR.H,
                               variant: "active",
                               size: "md",
                           }),
                       }),
             };
         })({ channel: o, entry: m, onVoiceChannelPreview: x }),
-        { embeddedActivity: R } = (0, tS.A)(m),
-        M =
+        { embeddedActivity: R } = (0, tv.A)(m),
+        O =
             ((t = R),
             (n = (0, u.bG)([th.A], () => th.A.getGuild((0, eP.D)(t?.location)))),
             (s = (0, u.bG)([td.A], () => td.A.getChannel((0, eP.H)(t?.location)))),
@@ -1035,7 +1036,7 @@ function tq(e) {
                                       renderUser: (e, t) =>
                                           (0, l.jsx)(ej.eu, {
                                               src: e.getAvatarURL(n.id, 16),
-                                              size: ev._3.SIZE_16,
+                                              size: eS._3.SIZE_16,
                                               "aria-label": "avatar",
                                               className: t,
                                           }),
@@ -1051,7 +1052,7 @@ function tq(e) {
                                   }),
                               ],
                           }),
-                          (0, l.jsx)(eS.h, { size: 16 }),
+                          (0, l.jsx)(ev.h, { size: 16 }),
                       ],
                   })
                 : null),
@@ -1059,7 +1060,7 @@ function tq(e) {
         w = L.length > 0,
         k = L.length >= 2,
         [P, U] = i.useState(!w),
-        G = O.Ay.getName(o?.guild_id, o?.id, c),
+        G = M.Ay.getName(o?.guild_id, o?.id, c),
         V = (0, eq.Ay)(o, !0),
         F =
             null != o && A
@@ -1083,7 +1084,7 @@ function tq(e) {
             )
                 D()(null != o, "shareToChannelMode should only be true if a valid channel is passed"), (t = o);
             else {
-                let e = await eO.A.getOrEnsurePrivateChannel(c.id);
+                let e = await eM.A.getOrEnsurePrivateChannel(c.id);
                 t = td.A.getChannel(e) ?? null;
             }
             return (
@@ -1108,7 +1109,7 @@ function tq(e) {
         if (((0, eQ.Dr)(ef.M.CONTENT_INVENTORY_ONE_CLICK_REPLY_COACHTIP), A))
             D()(null != o, "shareToChannelMode should only be true if a valid channel is passed"), (t = o);
         else {
-            let e = await eO.A.openPrivateChannel({ recipientIds: c.id }),
+            let e = await eM.A.openPrivateChannel({ recipientIds: c.id }),
                 n = td.A.getChannel(e);
             D()(null != n, "DM channel must be defined"), (t = n);
         }
@@ -1118,7 +1119,7 @@ function tq(e) {
     async function K(e) {
         let { reply: t, sendToChannel: n, onComplete: l, interactionType: i, requiresChannelReadiness: s } = e;
         I?.focus(),
-            await (0, tv.d)({
+            await (0, tS.d)({
                 channel: n,
                 content: t,
                 entry: m,
@@ -1128,7 +1129,7 @@ function tq(e) {
             }),
             l?.(i, n);
     }
-    let z = p ?? j ?? M;
+    let z = p ?? j ?? O;
     function Z() {
         C((e) => !e), P && I?.focus();
     }
@@ -1136,9 +1137,9 @@ function tq(e) {
         U(e), e && I?.focus();
     }
     return (0, l.jsxs)("div", {
-        style: { pointerEvents: S ? "none" : "all" },
+        style: { pointerEvents: v ? "none" : "all" },
         children: [
-            (0, l.jsx)(tG, { sent: _, shown: S, className: tB.Jt }),
+            (0, l.jsx)(tG, { sent: _, shown: v, className: tB.Jt }),
             z ??
                 (0, l.jsx)(tR, {
                     children: (0, l.jsxs)("div", {
@@ -1160,7 +1161,7 @@ function tq(e) {
                         showEmojiButton: null != z,
                         className: tB.N8,
                         autoFocus: !1,
-                        renderAttachButton: v
+                        renderAttachButton: S
                             ? () =>
                                   (0, l.jsx)(eC.m, {
                                       text: H,
@@ -1267,18 +1268,18 @@ function t$(e) {
                         maxUsers: 3,
                         users: o,
                         guildId: a,
-                        size: ev._3.SIZE_24,
+                        size: eS._3.SIZE_24,
                         hideOverflowCount: !0,
                         disableUsernameTooltip: !0,
                         onUserPopoutRequestClose: r,
                     }),
-                    (0, l.jsx)(eS.h, { size: 8, horizontal: !0 }),
+                    (0, l.jsx)(ev.h, { size: 8, horizontal: !0 }),
                     (0, l.jsx)(eN.D, {
                         variant: "heading-sm/normal",
                         className: em()(tB.Xn, tB.zA),
                         children: eu.intl.format(n, {
-                            user0: O.Ay.getName(a, t?.id, p[0]),
-                            user1: O.Ay.getName(a, t?.id, p[1]),
+                            user0: M.Ay.getName(a, t?.id, p[0]),
+                            user1: M.Ay.getName(a, t?.id, p[1]),
                             countOthers: h,
                             countOthersHook: (e, t) =>
                                 (0, l.jsx)(
@@ -1317,7 +1318,7 @@ function t$(e) {
                 ],
             }),
             null != f && (0, l.jsx)(e$.Ay, { size: e$.Ay.Sizes.SMALL }),
-            null != m && (0, l.jsx)(tM.A, { user: m, channel: t, guildId: a, entry: i, disableGameProfileLinks: s }),
+            null != m && (0, l.jsx)(tO.A, { user: m, channel: t, guildId: a, entry: i, disableGameProfileLinks: s }),
         ],
     });
 }
@@ -1356,12 +1357,12 @@ function tQ(e) {
             },
             { onOpened: () => p?.(tV.PA.OPENED_GAME_PROFILE) },
         ),
-        { largeImage: y, smallImage: v } = (0, L.nO)({
+        { largeImage: y, smallImage: S } = (0, L.nO)({
             entry: x,
             showCoverImage: m,
             trackingSource: "memberlist_content_popout",
         }),
-        S = (0, te.w)({ location: "content_inventory" }),
+        v = (0, te.w)({ location: "content_inventory" }),
         N = (0, u.bG)([e9.A], () => e9.A.getDetectableIdsToApplicationIds()),
         _ = A ? I : void 0,
         T = i.useContext(tK);
@@ -1379,7 +1380,7 @@ function tQ(e) {
                                 className: tB.Fb,
                                 children: (0, l.jsx)(ty.d, {
                                     image: y,
-                                    smallImage: v,
+                                    smallImage: S,
                                     aspectRatio: m ? "none" : void 0,
                                     onClick: a ?? _,
                                     size: ty.w.SIZE_72,
@@ -1408,7 +1409,7 @@ function tQ(e) {
                                               }),
                                           })
                                         : null,
-                                    (0, l.jsx)(eS.h, { size: 8 }),
+                                    (0, l.jsx)(ev.h, { size: 8 }),
                                     s,
                                 ],
                             }),
@@ -1418,7 +1419,7 @@ function tQ(e) {
                     r,
                 ],
             }),
-            S && null != C && null != N[C]
+            v && null != C && null != N[C]
                 ? (0, l.jsx)(tW, {
                       className: tB.zu,
                       applicationId: C,
@@ -1465,12 +1466,12 @@ function t0(e) {
             { onOpened: () => m?.(tV.PA.OPENED_GAME_PROFILE) },
         ),
         y = A ? I : void 0,
-        { activity: v, activityApplication: S, fallbackApplication: N } = (0, tS.A)(x),
-        { largeImage: _, smallImage: T } = (0, L.D8)(v, S ?? N),
+        { activity: S, activityApplication: v, fallbackApplication: N } = (0, tv.A)(x),
+        { largeImage: _, smallImage: T } = (0, L.D8)(S, v ?? N),
         { largeImage: j } = (0, L.nO)({ entry: x, trackingSource: "memberlist_streaming_content_popout" }),
         b = (0, te.w)({ location: "content_inventory" }),
         R = (0, u.bG)([e9.A], () => e9.A.getDetectableIdsToApplicationIds()),
-        M = i.useContext(tK);
+        O = i.useContext(tK);
     return (0, l.jsxs)("div", {
         className: tB.au,
         children: [
@@ -1520,7 +1521,7 @@ function t0(e) {
                                     (0, l.jsx)(tX, {
                                         onClick: c ?? y,
                                         children: (0, l.jsx)(eN.D, {
-                                            id: M,
+                                            id: O,
                                             variant: "heading-md/semibold",
                                             className: tB.nk,
                                             lineClamp: 3,
@@ -1537,7 +1538,7 @@ function t0(e) {
                                               }),
                                           })
                                         : null,
-                                    (0, l.jsx)(eS.h, { size: 8 }),
+                                    (0, l.jsx)(ev.h, { size: 8 }),
                                     s,
                                 ],
                             }),
@@ -1588,14 +1589,14 @@ let t2 = function (e) {
                               return eu.intl
                                   .formatToMarkdownString(s, {
                                       gameName: t.extra.activity_name,
-                                      user1: O.Ay.getName(n?.guild_id, n?.id, l[0]),
-                                      user2: O.Ay.getName(n?.guild_id, n?.id, l[1]),
+                                      user1: M.Ay.getName(n?.guild_id, n?.id, l[0]),
+                                      user2: M.Ay.getName(n?.guild_id, n?.id, l[1]),
                                       countOthers: i,
                                   })
                                   .replaceAll("*", "");
                           })({ entry: n, channel: t, users: [A, P], countOthers: D })
                         : ((l = eu.t["bES+y2"]),
-                          (i = O.Ay.getName(t.guild_id, t.id, c)),
+                          (i = M.Ay.getName(t.guild_id, t.id, c)),
                           (s = n.extra.activity_name),
                           eu.intl.formatToMarkdownString(l, { gameName: s, userName: i }).replaceAll("*", ""));
                 return ec({
@@ -1626,7 +1627,7 @@ let t2 = function (e) {
             onClickSubtitle: a ? void 0 : U,
             onClickThumbnail: a ? void 0 : U,
         }),
-        W = (0, v.A)(h, eW.jUm.JOIN) || (0, S.A)(h),
+        W = (0, S.A)(h, eW.jUm.JOIN) || (0, v.A)(h),
         K = W
             ? (0, l.jsx)(_.A, { embeddedActivity: m, activity: h, user: c, variant: "primary", size: "md", icon: C.I })
             : null,
@@ -1652,7 +1653,7 @@ let t2 = function (e) {
                       text: eu.intl.string(eu.t.GDWYR8),
                       icon: y.k,
                   }),
-        Y = [z, W && !a ? K : Z].filter(M.Vq);
+        Y = [z, W && !a ? K : Z].filter(O.Vq);
     return (0, l.jsxs)(tz, {
         children: [
             B,
@@ -1849,8 +1850,8 @@ let nm = [...t3.n, ed.Yq],
                                   return eu.intl
                                       .formatToMarkdownString(s, {
                                           gameName: t.extra.game_name,
-                                          user1: O.Ay.getName(n?.guild_id, n?.id, l[0]),
-                                          user2: O.Ay.getName(n?.guild_id, n?.id, l[1]),
+                                          user1: M.Ay.getName(n?.guild_id, n?.id, l[0]),
+                                          user2: M.Ay.getName(n?.guild_id, n?.id, l[1]),
                                           countOthers: i,
                                       })
                                       .replaceAll("*", "");
@@ -1863,7 +1864,7 @@ let nm = [...t3.n, ed.Yq],
                                   : l
                                     ? eu.t["lLPKY+"]
                                     : eu.t["bES+y2"]),
-                              (s = O.Ay.getName(t?.guild_id, t?.id, h)),
+                              (s = M.Ay.getName(t?.guild_id, t?.id, h)),
                               (r = n.extra.game_name),
                               eu.intl.formatToMarkdownString(i, { gameName: r, userName: s }).replaceAll("*", ""));
                     return no({
@@ -1942,7 +1943,7 @@ let nm = [...t3.n, ed.Yq],
                       )
                     : null,
             X = [
-                null == J && ((0, v.A)(p, eW.jUm.JOIN) || (0, S.A)(p))
+                null == J && ((0, S.A)(p, eW.jUm.JOIN) || (0, v.A)(p))
                     ? (0, l.jsx)(
                           _.A,
                           { activity: p, user: h, variant: "primary", size: "md", icon: t6.GameControllerIcon },
@@ -1953,7 +1954,7 @@ let nm = [...t3.n, ed.Yq],
                     ? (0, l.jsx)(ni.A, { activity: p, size: "md", variant: "primary", icon: t8.EyeIcon }, "watch")
                     : null,
                 J,
-            ].filter(M.Vq);
+            ].filter(O.Vq);
         return (0, l.jsxs)(tz, {
             children: [
                 q,
@@ -2044,15 +2045,15 @@ var nC = n(363670),
     nE = n(205327),
     nI = n(52133),
     ny = n(835723),
-    nv = n(172710),
-    nS = n(655116),
+    nS = n(172710),
+    nv = n(655116),
     nN = n(763758),
     n_ = n(286617),
     nT = n(533207),
     nj = n(280450),
     nb = n(121090),
     nR = n(974690);
-async function nM(e) {
+async function nO(e) {
     let { user: t, channel: n, mediaImageSrc: l, artist: i, description: s, colors: r, badges: a } = e,
         o = (function (e) {
             let { avatarSrc: t, mediaImageSrc: n } = e;
@@ -2088,7 +2089,7 @@ async function nM(e) {
         },
     });
 }
-var nO = n(693879),
+var nM = n(693879),
     nL = n(809854),
     nw = n(272984),
     nk = n(170699);
@@ -2109,7 +2110,7 @@ function nP(e) {
         : (0, l.jsxs)("div", {
               className: nk.lu,
               children: [
-                  (0, l.jsx)(nO.z, { entry: n }),
+                  (0, l.jsx)(nM.z, { entry: n }),
                   (0, l.jsx)("div", { className: nk.Lt, children: (0, l.jsx)("div", { className: nk.Vp, style: a }) }),
                   (0, l.jsx)(e_.E, {
                       className: nk.vE,
@@ -2131,16 +2132,16 @@ function nD(e) {
         { primaryColor: A, secondaryColor: C } = (0, $.A)(h?.src),
         I = nd(eW.fg2.SPOTIFY),
         y = (0, u.bG)(
-            [nS.A, nj.default],
-            () => (m?.type === eW.$pd.LISTENING && null != x ? (0, n_.A)(nS.A, nj.default, x, m) : void 0),
+            [nv.A, nj.default],
+            () => (m?.type === eW.$pd.LISTENING && null != x ? (0, n_.A)(nv.A, nj.default, x, m) : void 0),
             [m, x],
             nI.A,
         ),
-        v = i.useCallback(() => {
+        S = i.useCallback(() => {
             if (null == r || null == x) return;
             let e = m.timestamps?.start,
                 t = (0, k.W6)(null != e ? { start: e } : a, Date.now());
-            return nM({
+            return nO({
                 user: x,
                 channel: r,
                 mediaImageSrc: h?.src,
@@ -2148,7 +2149,7 @@ function nD(e) {
                 description: (function (e, t, n) {
                     let { artist: l, media: i } = e,
                         s = eu.t["6iNxrl"],
-                        r = O.Ay.getName(t.guild_id, t.id, n);
+                        r = M.Ay.getName(t.guild_id, t.id, n);
                     return eu.intl.formatToMarkdownString(s, { artist: l, userName: r, media: i }).replaceAll("*", "");
                 })({ artist: p, media: g }, r, x),
                 colors: [A, C],
@@ -2165,24 +2166,24 @@ function nD(e) {
             });
         }, [m, p, r, a, h?.src, A, C, g, x]);
     if (null == m || null == f) return null;
-    let S = p,
+    let v = p,
         N = [];
     f.media.provider === nE.X.SPOTIFY &&
         ((n = () => {
-            (0, nv.Mp)(m);
+            (0, nS.Mp)(m);
         }),
         (s = () => {
-            (0, nv.QX)(m, x.id);
+            (0, nS.QX)(m, x.id);
         }),
         (t = () => {
-            null != I ? I() : (0, nv.Mp)(m);
+            null != I ? I() : (0, nS.Mp)(m);
         }),
-        (S = (0, l.jsx)(nN.A, {
+        (v = (0, l.jsx)(nN.A, {
             artists: p,
             canOpen: null != m.sync_id,
             linkClassName: tB.zA,
             onOpenSpotifyArtist: function (e) {
-                null != m && null != x && (0, nv.mN)(m, x.id, e);
+                null != m && null != x && (0, nS.mN)(m, x.id, e);
             },
         })),
         y?.syncDisabled === !1 &&
@@ -2213,7 +2214,7 @@ function nD(e) {
         userDescription: (0, k.JM)(a) ? eu.t.Tzx5D2 : eu.t.CcVI1T,
         title: g,
         onClickTitle: n,
-        subtitle: S,
+        subtitle: v,
         badges: null,
         children: m.timestamps?.start != null && (0, l.jsx)(nP, { activity: m }),
     });
@@ -2226,7 +2227,7 @@ function nD(e) {
                     onVoiceChannelPreview: d,
                     user: x,
                     channel: r,
-                    generateReactionImage: v,
+                    generateReactionImage: S,
                     reactionImageAltText: eu.intl.formatToPlainString(eu.t.h2yWWX, {
                         username: x.username,
                         activity: p,
@@ -2248,7 +2249,7 @@ let nH = [ed.Y8],
         let { entry: t, channel: n, selected: i } = e,
             { largeImage: s } = (0, L.nO)({ entry: t, trackingSource: "memberlist_top_artist_content_row" }),
             r = (0, k.TQ)(t);
-        return null != r && (0, M.S1)(r, nB)
+        return null != r && (0, O.S1)(r, nB)
             ? (0, l.jsxs)(nV.Zp, {
                   selected: i,
                   children: [
@@ -2279,7 +2280,7 @@ let nz = function (e) {
         C = i.useCallback(() => {
             var e, t, n;
             let l, i, a, o;
-            if (null == s || null == f || !(0, M.S1)(A, nB)) return;
+            if (null == s || null == f || !(0, O.S1)(A, nB)) return;
             let u =
                 ((e = r),
                 (t = s),
@@ -2287,10 +2288,10 @@ let nz = function (e) {
                 (i = (function (e) {
                     if (e === nU.j.WEEK) return eu.t.SjOZfm;
                 })(A)),
-                (a = O.Ay.getName(t.guild_id, t.id, n)),
+                (a = M.Ay.getName(t.guild_id, t.id, n)),
                 (o = e.extra.artist.name),
                 eu.intl.formatToMarkdownString(i, { artist: o, userName: a }).replaceAll("*", ""));
-            return nM({
+            return nO({
                 user: f,
                 channel: s,
                 mediaImageSrc: h,
@@ -2304,7 +2305,7 @@ let nz = function (e) {
             });
         }, [h, m, s, r, p, A, x, f]),
         E = nd(eW.fg2.SPOTIFY);
-    if (null == f || !(0, M.S1)(A, nB)) return null;
+    if (null == f || !(0, O.S1)(A, nB)) return null;
     function I() {
         let e = nw.M0.ALBUM,
             t = nK.A.isProtocolRegistered()
@@ -2383,7 +2384,7 @@ let nY = function (e) {
                             (i = (function (e) {
                                 if (e === nU.j.WEEK) return eu.t["7TXfc6"];
                             })(x)),
-                            (a = O.Ay.getName(n.guild_id, n.id, l)),
+                            (a = M.Ay.getName(n.guild_id, n.id, l)),
                             (o = t.extra.game_name),
                             eu.intl.formatToMarkdownString(i, { gameName: o, userName: a }).replaceAll("*", "")),
                         timestamp: eu.intl.formatToPlainString(eu.t.YL7UE3, {
@@ -2518,7 +2519,7 @@ let n0 = function (e) {
                                 (n = s),
                                 (l = c),
                                 (i = eu.t.LHF6D9),
-                                (a = O.Ay.getName(n?.guild_id, n?.id, l)),
+                                (a = M.Ay.getName(n?.guild_id, n?.id, l)),
                                 (o = t.extra.media_title),
                                 eu.intl
                                     .formatToMarkdownString(i, {
@@ -2662,8 +2663,8 @@ let n7 = i.createContext(void 0),
             [A, C] = i.useState("default"),
             [E, I] = i.useState(!1),
             y = (0, a.rm)(`${t}`),
-            v = g.default.getCurrentUser()?.isStaff(),
-            { isRich: S, appName: N } = (0, t1.u)(o.entry);
+            S = g.default.getCurrentUser()?.isStaff(),
+            { isRich: v, appName: N } = (0, t1.u)(o.entry);
         (0, f.T2)(o.entry.id);
         let _ = i.useMemo(
                 () => ({
@@ -2671,23 +2672,23 @@ let n7 = i.createContext(void 0),
                     channelId: o.channel.id,
                     guildId: o.channel.guild_id,
                     requestId: o.requestId,
-                    richPresenceName: S ? N : void 0,
+                    richPresenceName: v ? N : void 0,
                 }),
-                [N, o.channel.guild_id, o.channel.id, o.entry, o.requestId, S],
+                [N, o.channel.guild_id, o.channel.id, o.entry, o.requestId, v],
             ),
             T = i.useRef(!1),
             [j, b] = i.useState(!1),
-            [R, M] = i.useState(!1),
-            O = (0, u.bG)([m.Ay], () => m.Ay.keyboardModeEnabled);
+            [R, O] = i.useState(!1),
+            M = (0, u.bG)([m.Ay], () => m.Ay.keyboardModeEnabled);
         i.useEffect(() => {
-            j && O && M(!0);
-        }, [j, O]),
+            j && M && O(!0);
+        }, [j, M]),
             i.useLayoutEffect(() => {
                 null != p.current && I(!0);
             }, []);
         let L = i.useCallback(
                 (e) => {
-                    v &&
+                    S &&
                         (0, h.L3)(e, async () => {
                             let { default: e } = await Promise.all([n.e("886456"), n.e("789346")]).then(
                                 n.bind(n, 949881),
@@ -2695,7 +2696,7 @@ let n7 = i.createContext(void 0),
                             return () => (0, l.jsx)(e, { entry: o.entry, requestId: o.requestId });
                         });
                 },
-                [o, v],
+                [o, S],
             ),
             w = i.useCallback(() => {
                 C(String(Date.now()));
@@ -2721,7 +2722,7 @@ let n7 = i.createContext(void 0),
         function D() {
             (T.current = !1),
                 setTimeout(() => {
-                    T.current || (b(!1), M(O));
+                    T.current || (b(!1), O(M));
                 }, 100);
         }
         return (0, l.jsxs)(l.Fragment, {
