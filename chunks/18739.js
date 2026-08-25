@@ -6,7 +6,7 @@ n.d(t, {
     ss: () => ex,
     fu: () => K,
     cS: () => eh,
-    Ay: () => ew,
+    Ay: () => eS,
     aF: () => ej,
     Xk: () => em,
     vX: () => eu,
@@ -17,6 +17,7 @@ n.d(t, {
     Hc: () => W,
     ST: () => ei,
     PK: () => ey,
+    Bn: () => ew,
     y_: () => ev,
     XZ: () => J,
     nU: () => eg,
@@ -123,11 +124,11 @@ var v = n(783791),
     j = n(652215),
     y = n(295813),
     k = n(375708);
-function A(e, t) {
+function w(e, t) {
     let n = e.pendingPublish;
     null != n && ((e.pendingPublish = null), clearTimeout(n.timeout), n.reject(Error(t)));
 }
-let w = new Map(),
+let A = new Map(),
     S = new Map(),
     N = new Map(),
     E = new Set(),
@@ -555,7 +556,7 @@ async function B(e, t) {
                                   })(t, l));
                 })(e, t, n),
             onClose: () => {
-                (A(t, "Connection closed before the publish result arrived"), x(e), t.disposed)
+                (w(t, "Connection closed before the publish result arrived"), x(e), t.disposed)
                     ? T(e, "closed")
                     : t.helloSeen
                       ? ((t.reconnectPending = !0), T(e, "connecting"), t.backoff.fail(() => V(e)))
@@ -572,7 +573,7 @@ async function B(e, t) {
         T(e, "failed"),
             $(e, t, n instanceof Error ? n.message : "ws open failed"),
             (t.pendingModelSettings = null),
-            A(t, "Connection failed before the publish result arrived"),
+            w(t, "Connection failed before the publish result arrived"),
             (0, d.Z0)(e, {
                 location: "connection",
                 code: d.xA.WS_OPEN_FAILED,
@@ -581,7 +582,7 @@ async function B(e, t) {
     }
 }
 function V(e) {
-    let t = w.get(e);
+    let t = A.get(e);
     null == t &&
         ((t = {
             ws: new m(),
@@ -594,7 +595,7 @@ function V(e) {
             pendingModelSettings: null,
             pendingPublish: null,
         }),
-        w.set(e, t));
+        A.set(e, t));
     let n = t;
     (n.pendingEvents = []),
         (n.helloSeen = !1),
@@ -605,14 +606,14 @@ function V(e) {
 }
 function z(e) {
     var t;
-    let n = w.get(e);
+    let n = A.get(e);
     return (
         null != n &&
         ((n.disposed = !0),
         n.backoff.cancel(),
-        A(n, "Connection closed before the publish result arrived"),
+        w(n, "Connection closed before the publish result arrived"),
         n.ws.close(),
-        w.delete(e),
+        A.delete(e),
         (t = e),
         Q.delete(t),
         h.A.releasePreviewControl(e),
@@ -622,7 +623,7 @@ function z(e) {
     );
 }
 function W(e) {
-    let t = w.get(e);
+    let t = A.get(e);
     if (null == t) return void V(e);
     let n = S.get(e);
     ("closed" !== n && "failed" !== n) || t.reconnectPending || V(e);
@@ -632,7 +633,7 @@ function Y(e, t, n) {
         a = null != n && n.length > 0 ? n : void 0;
     if ("" === l && null == a) return;
     let i = { content: l, nonce: (0, r.m)(), attachments: a },
-        s = w.get(e);
+        s = A.get(e);
     if (null != s && ("connecting" === S.get(e) || s.reconnectPending)) return void s.pendingSends.push(i);
     O(e, i);
     try {
@@ -647,7 +648,7 @@ function Y(e, t, n) {
     }
 }
 function K(e) {
-    let t = w.get(e);
+    let t = A.get(e);
     try {
         if (null == t) throw Error("Not connected");
         t.ws.sendInterrupt(), v.Ay.isThinking(e) && E.add(e);
@@ -657,11 +658,11 @@ function K(e) {
 }
 function X(e) {
     return new Promise((t, n) => {
-        let l = w.get(e);
+        let l = A.get(e);
         if (null == l) return void n(Error("Not connected"));
         if (null != l.pendingPublish) return void n(Error("Publish already in flight"));
         let a = setTimeout(() => {
-            A(l, "Publish timed out");
+            w(l, "Publish timed out");
         }, 12e4);
         l.pendingPublish = { resolve: t, reject: n, timeout: a };
         try {
@@ -674,13 +675,13 @@ function X(e) {
     });
 }
 function Z(e, t) {
-    let n = w.get(e);
+    let n = A.get(e);
     null == n
         ? console.error("[vibegrations] stageModelSettings with no connection \u2014 call ensureConnection first")
         : (n.pendingModelSettings = t);
 }
 function J(e, t) {
-    let n = w.get(e);
+    let n = A.get(e);
     try {
         if (null == n) throw Error("Not connected");
         n.ws.sendModelSettings(t);
@@ -693,7 +694,7 @@ function ee(e) {
     let t = (0, v.bi)(e);
     if (null == t) return !1;
     if (Q.get(e) === t) return !0;
-    let n = w.get(e);
+    let n = A.get(e);
     return null != n && (Q.set(e, t), n.ws.sendLoadHistory(t), !0);
 }
 async function et(e) {
@@ -868,6 +869,9 @@ async function ek(e, t) {
     if (!l.ok) throw Error(`attachment availability check failed (${l.status})`);
     return !0;
 }
+function ew(e) {
+    z(e);
+}
 class eA extends a.Ay.Store {
     initialize() {
         this.waitFor(o.default, v.Ay, b.A);
@@ -885,7 +889,7 @@ class eA extends a.Ay.Store {
         return I.get(e) ?? null;
     }
 }
-let ew = new eA(s.h, {
+let eS = new eA(s.h, {
     VIBEGRATIONS_CHAT_CONN_STATE: function (e) {
         let { projectId: t, connState: n } = e;
         if (S.get(t) === n) return !1;
@@ -910,12 +914,12 @@ let ew = new eA(s.h, {
     },
     VIBEGRATIONS_PROJECTS_FETCH_SUCCESS: function (e) {
         let t = !1;
-        for (let e of Array.from(w.keys())) null == b.A.getProject(e) && z(e) && (t = !0);
+        for (let e of Array.from(A.keys())) null == b.A.getProject(e) && z(e) && (t = !0);
         if (!t) return !1;
     },
     LOGOUT: function () {
-        if (0 === w.size) return !1;
-        for (let e of Array.from(w.keys())) z(e);
+        if (0 === A.size) return !1;
+        for (let e of Array.from(A.keys())) z(e);
         N.clear(), en.clear();
     },
 });
