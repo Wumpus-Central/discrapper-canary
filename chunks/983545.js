@@ -28,7 +28,7 @@ let u = {
             [p, E] = n.useState(m),
             [C, h] = n.useState(i.Pf.VISIBLE);
         n.useEffect(() => {
-            b(p);
+            p !== i.G2.GAME_SERVERS && b(p);
         }, [p, b]),
             n.useEffect(() => {
                 if ((E(m), e === i.G2.CATALOG)) d();
@@ -39,11 +39,11 @@ let u = {
                     null != l ? t(l) : d();
                 }
             }, [m, e, t, l, s, d]);
-        let { clearError: f } = (0, o.S)(),
-            S = (0, a.W6)(),
+        let { clearError: S } = (0, o.S)(),
+            f = (0, a.W6)(),
             A = n.useCallback(
                 async (e, n) => {
-                    if ((f(), e === i.G2.CATALOG)) d();
+                    if ((S(), e === i.G2.CATALOG)) d();
                     else if (e === i.G2.COLLABS) l();
                     else if (e === i.G2.OFFER_ELIGIBLE) s();
                     else if ((0, i.dF)(e) && e !== p) {
@@ -57,11 +57,11 @@ let u = {
                         }
                         E(e === i.G2.HOME || e === i.G2.ORBS || e === i.G2.GAME_SERVERS ? e : i.G2.CATALOG),
                             n && h(i.Pf.IN),
-                            S.push(c.BVt.COLLECTIBLES_SHOP_WITH_TAB(e), { shallow: !0 }),
+                            f.push(c.BVt.COLLECTIBLES_SHOP_WITH_TAB(e), { shallow: !0 }),
                             h(i.Pf.VISIBLE);
                     }
                 },
-                [S, t, l, s, d, p, f],
+                [f, t, l, s, d, p, S],
             );
         return { selectedTab: p, transitionState: C, transitionToTab: A };
     };
