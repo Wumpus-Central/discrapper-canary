@@ -57,8 +57,10 @@
     display: flex;
     flex-direction: column;
     gap: 16px;
-    height: 400px;
-    width: 224px
+    height: 408px;
+    margin: -4px;
+    padding: 4px;
+    width: 232px
 }
 
 .inventoryTitle__042c9 {
@@ -398,4 +400,4 @@
     margin: 8px
 }
 
-/*# sourceMappingURL=162775.6149d3c5d01d33cb.css.map*/
+/*# sourceMappingURL=162775.5fb59ec84509d01e.css.map*/

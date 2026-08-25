@@ -18,7 +18,7 @@ async function E(t) {
     let { displayToast: e = !1, ...E } = t;
     if (null == R.A.getSavedMessage(E.channelId, E.messageId) && !(0, _.we)("addOrUpdateSavedMessage"))
         return void (0, l.openModalLazy)(async () => {
-            let { default: t } = await n.e("422540").then(n.bind(n, 530951));
+            let { default: t } = await Promise.all([n.e("978204"), n.e("422540")]).then(n.bind(n, 530951));
             return (e) => (0, a.jsx)(t, { ...e, analyticsLocations: [c.A.FOR_LATER_ROADBLOCK] });
         });
     if (
@@ -30,7 +30,9 @@ async function E(t) {
                         let e = (0, _.lF)("addOrUpdateSavedMessage", t);
                         return (
                             (0, l.openModalLazy)(async () => {
-                                let { default: i } = await n.e("422540").then(n.bind(n, 530951));
+                                let { default: i } = await Promise.all([n.e("978204"), n.e("422540")]).then(
+                                    n.bind(n, 530951),
+                                );
                                 return (n) =>
                                     (0, a.jsx)(i, {
                                         ...n,

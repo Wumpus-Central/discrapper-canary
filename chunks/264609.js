@@ -4310,7 +4310,9 @@ let aG = ["Revenue Storybook", "Revenue Playground"],
                         component: function () {
                             let e = c.useCallback(() => {
                                 (0, ed.openModalLazy)(async () => {
-                                    let { default: e } = await l.e("422540").then(l.bind(l, 530951));
+                                    let { default: e } = await Promise.all([l.e("978204"), l.e("422540")]).then(
+                                        l.bind(l, 530951),
+                                    );
                                     return (t) => (0, u.jsx)(e, { ...t });
                                 });
                             }, []);

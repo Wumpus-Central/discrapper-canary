@@ -1,4 +1,4 @@
-n.d(i, { default: () => M });
+n.d(i, { default: () => p });
 var a = n(477900);
 n(582128);
 var c = n(83790),
@@ -13,32 +13,33 @@ var c = n(83790),
     u = n(652215);
 n(811233);
 var L = n(375708),
-    P = n(936037);
-function M(t) {
-    let { onClose: i, isReminder: n = !1, limit: M, analyticsLocations: p = [], ...I } = t,
-        O = n ? 50 : 200,
-        { analyticsLocations: R } = (0, e.Ay)(p, l.A.PREMIUM_UPSELL_MODAL);
+    P = n(936037),
+    M = n(407511);
+function p(t) {
+    let { onClose: i, isReminder: n = !1, limit: p, analyticsLocations: I = [], ...O } = t,
+        R = n ? 50 : 200,
+        { analyticsLocations: S } = (0, e.Ay)(I, l.A.PREMIUM_UPSELL_MODAL);
     return (
         (0, o.Ay)(() => {
             s.default.track(u.HAw.PREMIUM_UPSELL_VIEWED, {
                 type: c.w.SAVED_MESSAGES,
                 location_section: u.JJy.PREMIUM_FOR_LATER_UPSELL_MODAL,
-                location_stack: R,
+                location_stack: S,
                 sku_id: (0, r.mH)(A.pe.TIER_2),
             });
         }),
         (0, a.jsx)(e.f5, {
-            value: R,
+            value: S,
             children: (0, a.jsx)(E.A, {
                 title:
-                    null == M
+                    null == p
                         ? L.intl.string(L.t.w4DRbZ)
-                        : L.intl.formatToPlainString(n ? L.t["cpj9o/"] : L.t.Oxm3Sq, { premiumMax: O }),
+                        : L.intl.formatToPlainString(n ? L.t["cpj9o/"] : L.t.Oxm3Sq, { premiumMax: R }),
                 subtitle:
-                    null == M
+                    null == p
                         ? L.intl.string(L.t.F6u3E3)
-                        : L.intl.formatToPlainString(n ? L.t.IwWQgO : L.t.sgXqR1, { max: M, premiumMax: O }),
-                graphic: { src: P, type: "image" },
+                        : L.intl.formatToPlainString(n ? L.t.IwWQgO : L.t.sgXqR1, { max: p, premiumMax: R }),
+                graphic: { src: n ? M : P, type: "image" },
                 badgeType: "beta",
                 secondaryCTA: L.intl.string(L.t.PcTCB7),
                 onSecondaryClick: function () {
@@ -50,7 +51,7 @@ function M(t) {
                         (0, _.pX)(u.BVt.APPLICATION_STORE);
                 },
                 onClose: i,
-                ...I,
+                ...O,
             }),
         })
     );

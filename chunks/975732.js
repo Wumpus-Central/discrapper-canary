@@ -33,52 +33,58 @@ async function I(e) {
             roleId: o,
             sessionId: d,
             joinRequestId: c,
-            tabSection: A,
-            scrollTarget: I,
-            hideRestrictedProfile: f,
-            sourceAnalyticsLocations: p,
-            appContext: T,
-            customStatusPrompt: m = null,
-            onModalOpen: g,
+            tabSection: I,
+            scrollTarget: f,
+            hideRestrictedProfile: p,
+            sourceAnalyticsLocations: T,
+            appContext: m,
+            customStatusPrompt: g = null,
+            onModalOpen: S,
         } = e,
-        S = Date.now(),
-        N = u.default.getUser(t);
-    h(t),
-        null == N
-            ? await (0, a.fetchProfile)(t, {
-                  type: "modal",
-                  guildId: n ?? void 0,
-                  withMutualFriendsCount: !0,
-                  withMutualFriends: !1,
-                  withMutualGuilds: !0,
-                  joinRequestId: c,
-              })
-            : (0, _.A)(N.id, N.getAvatarURL(void 0, E), {
-                  type: "modal",
-                  guildId: n ?? void 0,
-                  withMutualFriendsCount: !N.bot,
-                  withMutualFriends: !1,
-                  withMutualGuilds: !0,
-                  joinRequestId: c,
-              }),
-        r.h.dispatch({
-            type: "USER_PROFILE_MODAL_OPEN",
-            userId: t,
+        N = Date.now(),
+        C = u.default.getUser(t);
+    if ((h(t), null == C))
+        try {
+            await (0, a.fetchProfile)(t, {
+                type: "modal",
+                guildId: n ?? void 0,
+                withMutualFriendsCount: !0,
+                withMutualFriends: !1,
+                withMutualGuilds: !0,
+                joinRequestId: c,
+            });
+        } catch (e) {
+            A.log(`Failed to fetch profile for ${t}:`, e);
+        }
+    else
+        (0, _.A)(C.id, C.getAvatarURL(void 0, E), {
+            type: "modal",
             guildId: n ?? void 0,
-            originGuildId: i ?? void 0,
-            channelId: s ?? void 0,
-            messageId: l ?? void 0,
-            roleId: o ?? void 0,
-            sessionId: d ?? void 0,
-            openedAt: S,
-            customStatusPrompt: m,
-            tabSection: A,
-            scrollTarget: I,
-            hideRestrictedProfile: f,
-            sourceAnalyticsLocations: p,
-            appContext: T,
-            onModalOpen: g,
+            withMutualFriendsCount: !C.bot,
+            withMutualFriends: !1,
+            withMutualGuilds: !0,
+            joinRequestId: c,
+        }).catch((e) => {
+            A.log(`Failed to fetch profile for ${t}:`, e);
         });
+    r.h.dispatch({
+        type: "USER_PROFILE_MODAL_OPEN",
+        userId: t,
+        guildId: n ?? void 0,
+        originGuildId: i ?? void 0,
+        channelId: s ?? void 0,
+        messageId: l ?? void 0,
+        roleId: o ?? void 0,
+        sessionId: d ?? void 0,
+        openedAt: N,
+        customStatusPrompt: g,
+        tabSection: I,
+        scrollTarget: f,
+        hideRestrictedProfile: p,
+        sourceAnalyticsLocations: T,
+        appContext: m,
+        onModalOpen: S,
+    });
 }
 function f() {
     r.h.dispatch({ type: "USER_PROFILE_MODAL_CLOSE" });
