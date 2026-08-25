@@ -1,4 +1,4 @@
-n.d(t, { A: () => A });
+n.d(t, { A: () => x });
 var l = n(477900),
     i = n(582128),
     s = n(296704),
@@ -11,17 +11,17 @@ var l = n(477900),
     m = n(96969);
 let p = 6 * c.A.Millis.SECOND,
     g = 2 * c.A.Millis.SECOND,
-    f = 2 * c.A.Millis.SECOND;
-function h(e) {
+    h = 2 * c.A.Millis.SECOND;
+function f(e) {
     return `scale(${1 - -(e / 120)}) rotate(${e}deg)`;
 }
-function A(e) {
+function x(e) {
     let { userId: t, voiceChannelEffect: n, onComplete: c } = e,
-        { emoji: A, sentAt: x } = n,
+        { emoji: x, sentAt: A } = n,
         v = (0, r.bG)([u.Ay], () => u.Ay.useReducedMotion),
         [E, C] = i.useState(!0),
         I = !v,
-        S = (0, a.p)(E, {
+        j = (0, a.p)(E, {
             from: { rotate: -120 },
             enter: { rotate: 0 },
             leave: { rotate: -120 },
@@ -34,7 +34,7 @@ function A(e) {
     return (i.useEffect(() => {
         let e;
         return (
-            Date.now() - x >= f
+            Date.now() - A >= h
                 ? (0, d.a)(t)
                 : (e = setTimeout(
                       () => {
@@ -46,21 +46,21 @@ function A(e) {
                 null != e && clearTimeout(e);
             }
         );
-    }, [x, t, I]),
+    }, [A, t, I]),
     I)
         ? null
-        : S((e, t) => {
+        : j((e, t) => {
               let { rotate: n } = e;
               return (
                   t &&
                   (0, l.jsx)(s.animated.div, {
                       className: m._,
-                      style: { transform: n.to(h) },
+                      style: { transform: n.to(f) },
                       children: (0, l.jsx)(o.A, {
                           className: m.F,
-                          emojiId: A.id,
-                          emojiName: A.name,
-                          animated: A.animated ?? !1,
+                          emojiId: x.id,
+                          emojiName: x.name,
+                          animated: x.animated ?? !1,
                       }),
                   })
               );

@@ -1,4 +1,4 @@
-n.d(t, { M: () => j, X: () => S });
+n.d(t, { M: () => S, X: () => j });
 var l = n(477900),
     i = n(582128),
     s = n(503698),
@@ -11,25 +11,25 @@ var l = n(477900),
     m = n(408278),
     p = n(597770),
     g = n(409626),
-    f = n(692969),
-    h = n(738250),
-    A = n(830647),
-    x = n(240248),
+    h = n(692969),
+    f = n(738250),
+    x = n(830647),
+    A = n(240248),
     v = n(360469),
     E = n(818348),
     C = n(375708),
     I = n(584841);
-function S(e) {
+function j(e) {
     let { applicationId: t, hideApplicationName: n } = e,
-        { gameId: i, gameRecord: s } = (0, h.A)({ applicationId: t }),
-        a = (0, f.A)({
+        { gameId: i, gameRecord: s } = (0, f.A)({ applicationId: t }),
+        a = (0, h.A)({
             location: "SocialLayerCommerceGameDetailsButton",
             gameId: i ?? void 0,
             source: g.GameProfileSources.CallTile,
             trackEntryPointImpression: !0,
         }),
         d = s?.getIconURL(v.iu.SMALL);
-    if (null == a || null == s || (0, x.uJ)(d)) return null;
+    if (null == a || null == s || (0, A.uJ)(d)) return null;
     let m = C.intl.string(C.t.ajHoOr);
     return (0, l.jsx)(o.m, {
         text: m,
@@ -47,15 +47,15 @@ function S(e) {
         }),
     });
 }
-function j(e) {
+function S(e) {
     let { userId: t, applicationId: n, channel: s, hideWhenInactive: u, idle: c } = e,
-        [g, f] = i.useState(!1),
-        h = i.useRef(null),
-        x = i.useCallback(() => f(!0), []),
-        v = i.useCallback(() => f(!1), []),
-        S = C.intl.string(C.t["wg/30i"]);
+        [g, h] = i.useState(!1),
+        f = i.useRef(null),
+        A = i.useCallback(() => h(!0), []),
+        v = i.useCallback(() => h(!1), []),
+        j = C.intl.string(C.t["wg/30i"]);
     return (0, l.jsx)(a.Y, {
-        targetElementRef: h,
+        targetElementRef: f,
         shouldShow: g,
         animation: a.Y.Animation.FADE,
         position: "left",
@@ -65,13 +65,13 @@ function j(e) {
         renderPopout: () =>
             (0, l.jsx)(d.N, {
                 theme: E.NJ.DARKER,
-                children: (e) => (0, l.jsx)(A.Z, { className: e, userId: t, channel: s, applicationId: n, onClose: v }),
+                children: (e) => (0, l.jsx)(x.Z, { className: e, userId: t, channel: s, applicationId: n, onClose: v }),
             }),
         children: () =>
             (0, l.jsx)("div", {
-                ref: h,
+                ref: f,
                 children: (0, l.jsx)(o.m, {
-                    text: S,
+                    text: j,
                     shouldShow: !g && void 0,
                     children: (0, l.jsx)("div", {
                         className: r()(I.V7, { [I.kl]: u, [I.N7]: c }),
@@ -79,9 +79,9 @@ function j(e) {
                             size: "sm",
                             variant: "overlay-secondary",
                             onClick: (e) => {
-                                e.stopPropagation(), x();
+                                e.stopPropagation(), A();
                             },
-                            "aria-label": S,
+                            "aria-label": j,
                             icon: p.GiftIcon,
                         }),
                     }),

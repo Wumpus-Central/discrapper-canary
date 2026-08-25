@@ -14,8 +14,8 @@ var i = n(731738),
     E = n(883600),
     N = n(963027),
     T = n(47167),
-    g = n(435470),
-    I = n(707592),
+    I = n(435470),
+    g = n(707592),
     h = n(741231),
     C = n(380335),
     S = n(320095),
@@ -34,9 +34,9 @@ var i = n(731738),
     w = n(260509),
     V = n(734057),
     M = n(71393),
-    b = n(232835),
-    F = n(803224),
-    W = n(576705),
+    F = n(232835),
+    W = n(803224),
+    b = n(576705),
     H = n(573163),
     Y = n(994500),
     B = n(309010),
@@ -89,7 +89,7 @@ let ta = "message1",
     })();
 function t_() {
     return !!(
-        F.A.getDesktopType() === tt.nRU.NEVER ||
+        W.A.getDesktopType() === tt.nRU.NEVER ||
         x.A.getStatus() === tt.clD.DND ||
         k.NO.getSetting() ||
         U.A.isCurrentUserInRestrictedHours()
@@ -107,7 +107,7 @@ function tN(t) {
 class tT extends a.Ay.Store {
     static displayName = "NotificationStore";
     initialize() {
-        this.waitFor(E.A, V.A, U.A, M.A, C.A, b.A, F.A, W.A, H.Ay, Y.A, B.Ay, x.A, v.A, K.A, q.A, J.default, j.A);
+        this.waitFor(E.A, V.A, U.A, M.A, C.A, F.A, W.A, b.A, H.Ay, Y.A, B.Ay, x.A, v.A, K.A, q.A, J.default, j.A);
     }
 }
 new tT(
@@ -153,12 +153,12 @@ new tT(
                       c = J.default.getUser(a.author?.id),
                       f = J.default.getCurrentUser();
                   if (null == s || null == c || null == f) return !1;
-                  let _ = b.A.getMessage(l, a.id) ?? (0, S.rh)(a),
+                  let _ = F.A.getMessage(l, a.id) ?? (0, S.rh)(a),
                       T = H.Ay.getMentionCount(l);
                   (0, H.Wm)(_, f) && T > 0 && o.O.announce((0, N.Ay)({ channel: s, mentionCount: T }));
-                  let g = (0, m.lx)(a, l, !ts),
-                      I = F.A.getNotifyMessagesInSelectedChannel() && (0, m.kY)(a, l);
-                  if (!g && !I) return !1;
+                  let I = (0, m.lx)(a, l, !ts),
+                      g = W.A.getNotifyMessagesInSelectedChannel() && (0, m.kY)(a, l);
+                  if (!I && !g) return !1;
                   if (U.A.isCurrentUserInRestrictedHours())
                       return (
                           p.A.increment({
@@ -180,8 +180,8 @@ new tT(
                       (null == a.changelog_id || E.A.latestChangelogId() !== a.changelog_id)
                   )
                       return !1;
-                  let h = !F.A.isSoundDisabled(ta);
-                  if ((I && (tE(h), h && Z.A.playNotificationSound("message3", 0.4), !ts)) || !g) return !1;
+                  let h = !W.A.isSoundDisabled(ta);
+                  if ((g && (tE(h), h && Z.A.playNotificationSound("message3", 0.4), !ts)) || !I) return !1;
                   let C = n(773371).default,
                       P = n(592598).A;
                   if (
@@ -202,7 +202,7 @@ new tT(
                           body: L,
                       }),
                       (0, O.n)(a, s.guild_id),
-                      F.A.getDesktopType() === tt.nRU.NEVER)
+                      W.A.getDesktopType() === tt.nRU.NEVER)
                   )
                       return tE(h), h && Z.A.playNotificationSound(ta, tr), !1;
                   tE(h),
@@ -323,7 +323,7 @@ new tT(
                       null == i ||
                       null == r ||
                       !(0, m.Wv)(n, r, a) ||
-                      !W.A.can(l.kg(tt.xBc.CONNECT, tt.xBc.VIEW_CHANNEL), a) ||
+                      !b.A.can(l.kg(tt.xBc.CONNECT, tt.xBc.VIEW_CHANNEL), a) ||
                       tc.has(e.id)
                   )
                       return !1;
@@ -365,7 +365,7 @@ new tT(
                                     null != a &&
                                     null != i &&
                                     null != r &&
-                                    W.A.can(l.kg(tt.xBc.CONNECT, tt.xBc.VIEW_CHANNEL), a) &&
+                                    b.A.can(l.kg(tt.xBc.CONNECT, tt.xBc.VIEW_CHANNEL), a) &&
                                     Z.A.showNotification(
                                         (0, w.Iv)(i, 128),
                                         tl.intl.formatToPlainString(tl.t.bOu6Wn, { guildName: i.name }),
@@ -401,7 +401,7 @@ new tT(
                                         { notif_type: "GUILD_SCHEDULED_EVENT_UPDATE", guild_id: n.id },
                                         {
                                             onClick() {
-                                                c.A.transitionToGuildSync(t.guild_id), (0, I.uR)({ eventId: t.id });
+                                                c.A.transitionToGuildSync(t.guild_id), (0, g.uR)({ eventId: t.id });
                                             },
                                             isUserAvatar: !1,
                                         },
@@ -414,7 +414,7 @@ new tT(
                   if (t_()) return !1;
                   let i = V.A.getChannel(e.parent_id);
                   if (null == i || !tt.kvI.GUILD_THREADS_ONLY.has(i.type) || !n || !(0, m.q1)(e, i, !ts)) return !1;
-                  let { author: l, user: a } = (0, g.tY)(e);
+                  let { author: l, user: a } = (0, I.tY)(e);
                   if (null == a) return !1;
                   let r = M.A.getGuild(i.guild_id);
                   if (null == r) return !1;
@@ -542,7 +542,7 @@ new tT(
               },
               RESTRICTED_HOURS_WARNING: function (t) {
                   let { title: e, subtitle: i } = t;
-                  if (t_() || !F.A.screenDowntimeReminder) return !1;
+                  if (t_() || !W.A.screenDowntimeReminder) return !1;
                   Z.A.showNotification(
                       n(608598),
                       e,

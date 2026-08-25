@@ -1,29 +1,29 @@
-l.d(t, { A: () => o });
-var i = l(477900),
-    s = l(582128),
-    n = l(333007),
-    a = l(649248);
-function r(e) {
-    return a.A.subscribeEntries(e);
+a.d(t, { A: () => i });
+var l = a(477900),
+    r = a(582128),
+    s = a(333007),
+    o = a(649248);
+function n(e) {
+    return o.A.subscribeEntries(e);
 }
-function o(e) {
-    let { frameId: t, level: l, className: o, overlay: c } = e,
-        d = s.useRef(null);
-    s.useLayoutEffect(() => {
-        let e = d.current;
+function i(e) {
+    let { frameId: t, level: a, className: i, overlay: d } = e,
+        c = r.useRef(null);
+    r.useLayoutEffect(() => {
+        let e = c.current;
         if (null != e)
             return (
-                a.A.registerFrameTarget(t, e, l),
+                o.A.registerFrameTarget(t, e, a),
                 () => {
-                    a.A.removeFrameTarget(t, e);
+                    o.A.removeFrameTarget(t, e);
                 }
             );
-    }, [t, l]);
-    let u = s.useSyncExternalStore(r, () => a.A.getPoolEntry(t)?.overlay ?? null);
-    return (0, i.jsxs)(i.Fragment, {
+    }, [t, a]);
+    let u = r.useSyncExternalStore(n, () => o.A.getPoolEntry(t)?.overlay ?? null);
+    return (0, l.jsxs)(l.Fragment, {
         children: [
-            (0, i.jsx)("div", { ref: d, className: o, style: { pointerEvents: "none" } }),
-            null != c && null != u ? (0, n.createPortal)(c, u) : null,
+            (0, l.jsx)("div", { ref: c, className: i, style: { pointerEvents: "none" } }),
+            null != d && null != u ? (0, s.createPortal)(d, u) : null,
         ],
     });
 }

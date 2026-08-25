@@ -1,12 +1,12 @@
-l.d(t, { A: () => s, G: () => c });
-var i,
+i.d(t, { A: () => s, G: () => c });
+var n,
     s =
-        (((i = {}).Backstage = "backstage"),
-        (i.WithinAppContent = "within-app-content"),
-        (i.AboveAppContent = "above-app-content"),
-        i);
-let n = { backstage: 0, "within-app-content": 1, "above-app-content": 1002 };
-class a {
+        (((n = {}).Backstage = "backstage"),
+        (n.WithinAppContent = "within-app-content"),
+        (n.AboveAppContent = "above-app-content"),
+        n);
+let l = { backstage: 0, "within-app-content": 1, "above-app-content": 1002 };
+class r {
     _pool = null;
     setPool(e) {
         this._pool = e;
@@ -16,7 +16,7 @@ class a {
         return this._pool;
     }
 }
-class r extends a {
+class a extends r {
     placed = new Map();
     rafHandle = null;
     initialize(e) {
@@ -27,8 +27,8 @@ class r extends a {
             (e.style.display = "none"),
             this.pool.appendChild(e);
     }
-    place(e, t, l) {
-        this.placed.set(e, { target: t, level: l }), this.position(e, t, l), this.ensureTicking();
+    place(e, t, i) {
+        this.placed.set(e, { target: t, level: i }), this.position(e, t, i), this.ensureTicking();
     }
     unplace(e) {
         this.placed.delete(e), (e.style.display = "none");
@@ -36,20 +36,20 @@ class r extends a {
     ensureTicking() {
         null == this.rafHandle && (this.rafHandle = requestAnimationFrame(this.tick));
     }
-    position(e, t, l) {
-        let i = t.getBoundingClientRect();
+    position(e, t, i) {
+        let n = t.getBoundingClientRect();
         (e.style.display = "block"),
-            (e.style.zIndex = String(n[l])),
-            (e.style.transform = `translate(${i.left}px, ${i.top}px)`),
-            (e.style.width = `${i.width}px`),
-            (e.style.height = `${i.height}px`);
+            (e.style.zIndex = String(l[i])),
+            (e.style.transform = `translate(${n.left}px, ${n.top}px)`),
+            (e.style.width = `${n.width}px`),
+            (e.style.height = `${n.height}px`);
     }
     tick = () => {
-        for (let [e, { target: t, level: l }] of this.placed) this.position(e, t, l);
+        for (let [e, { target: t, level: i }] of this.placed) this.position(e, t, i);
         this.rafHandle = this.placed.size > 0 ? requestAnimationFrame(this.tick) : null;
     };
 }
-class o extends a {
+class o extends r {
     initialize(e) {
         (e.style.width = "100%"),
             (e.style.height = "100%"),
@@ -57,7 +57,7 @@ class o extends a {
             (e.style.display = "none"),
             this.pool.appendChild(e);
     }
-    place(e, t, l) {
+    place(e, t, i) {
         e.parentElement !== t && t.moveBefore(e, null), (e.style.display = "block");
     }
     unplace(e) {
@@ -65,5 +65,5 @@ class o extends a {
     }
 }
 function c() {
-    return "function" == typeof Element.prototype.moveBefore ? new o() : new r();
+    return "function" == typeof Element.prototype.moveBefore ? new o() : new a();
 }

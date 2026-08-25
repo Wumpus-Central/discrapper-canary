@@ -1,18 +1,18 @@
 n.d(t, { EX: () => u, NO: () => c, SV: () => d, ny: () => o });
 let r = null,
-    l = null,
+    s = null,
     i = new Set();
-function s() {
+function a() {
     for (let e of i) e();
 }
-function a() {
-    null != l && (clearTimeout(l), (l = null));
+function l() {
+    null != s && (clearTimeout(s), (s = null));
 }
 function u(e) {
-    a(), (r = { ...e }), (l = setTimeout(() => o(), 8e3)), s();
+    l(), (r = { ...e }), (s = setTimeout(() => o(), 8e3)), a();
 }
 function o(e) {
-    null != r && (null == e || r.iframeId === e) && (a(), (r = null), s());
+    null != r && (null == e || r.iframeId === e) && (l(), (r = null), a());
 }
 function c() {
     return r;

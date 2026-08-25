@@ -6,13 +6,13 @@ n.d(t, {
     Is: () => I,
     S8: () => g,
     Wb: () => E,
-    XE: () => l,
+    XE: () => o,
     ZJ: () => f,
     a7: () => u,
     aM: () => c,
     hk: () => O,
     sj: () => _,
-    tr: () => o,
+    tr: () => l,
     wF: () => P,
     wU: () => d,
     wV: () => p,
@@ -22,10 +22,10 @@ n.d(t, {
     n(938796);
 let i = "Untitled App",
     r = Object.freeze({ PUBLIC: 1, SHAREABLE: 2 });
-function l(e) {
+function o(e) {
     return ((e.flags ?? 0) & r.PUBLIC) != 0;
 }
-function o(e) {
+function l(e) {
     return ((e.flags ?? 0) & r.SHAREABLE) != 0;
 }
 function a(e) {

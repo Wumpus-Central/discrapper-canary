@@ -122,7 +122,7 @@ function k(e) {
 var w = n(600761),
     R = n(667049),
     L = n(389667),
-    O = n(605694),
+    O = n(520082),
     P = n(869484),
     _ = n(315629),
     D = n(465794),
@@ -904,8 +904,8 @@ function e4(e) {
                 s({ action: "PRESS_ADD_WIDGET" }),
                 (0, eA.openModalLazy)(
                     async () => {
-                        let { default: e } = await Promise.all([n.e("450427"), n.e("422420"), n.e("426623")]).then(
-                            n.bind(n, 850370),
+                        let { default: e } = await Promise.all([n.e("740601"), n.e("422420"), n.e("264707")]).then(
+                            n.bind(n, 480142),
                         );
                         return (t) => (0, i.jsx)(e, { ...t, trackUserProfileEditAction: s });
                     },

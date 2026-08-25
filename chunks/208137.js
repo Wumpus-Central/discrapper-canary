@@ -1,7 +1,7 @@
-function l() {
+function r() {
     return !1;
 }
-function a() {
+function i() {
     return null;
 }
-n.d(t, { C: () => a, e: () => l }), n(323874), n(14289), n(35956);
+n.d(t, { C: () => i, e: () => r }), n(323874), n(14289), n(35956);

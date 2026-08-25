@@ -1,9 +1,9 @@
-n.d(t, { A: () => A, P: () => o }), n(321073);
+n.d(t, { A: () => A, P: () => l }), n(321073);
 var i = n(17928),
     r = n(228366),
-    l = n(287809);
-function o(e) {
-    return e.owner_user_id === l.default.getCurrentUser()?.id;
+    o = n(287809);
+function l(e) {
+    return e.owner_user_id === o.default.getCurrentUser()?.id;
 }
 let a = new Map(),
     u = new Map(),
@@ -14,10 +14,10 @@ let a = new Map(),
     p = new Map();
 class E extends i.Ay.Store {
     initialize() {
-        this.waitFor(l.default);
+        this.waitFor(o.default);
     }
     getOwnedProjects() {
-        return Array.from(a.values()).filter(o);
+        return Array.from(a.values()).filter(l);
     }
     getProject(e) {
         return a.get(e) ?? null;
@@ -28,7 +28,7 @@ class E extends i.Ay.Store {
     }
     getSharedProjects(e) {
         let t = [];
-        for (let n of a.values()) o(n) || n.guild_id !== e || t.push(n);
+        for (let n of a.values()) l(n) || n.guild_id !== e || t.push(n);
         return t;
     }
     getIntegrationStatus(e) {
@@ -65,7 +65,7 @@ let A = new E(r.h, {
     VIBEGRATIONS_PROJECTS_FETCH_SUCCESS: function (e) {
         let { projects: t, guildId: n } = e,
             i = new Set(t.map((e) => e.id));
-        for (let [e, t] of a) !i.has(e) && (o(t) || (null != n && t.guild_id === n)) && a.delete(e);
+        for (let [e, t] of a) !i.has(e) && (l(t) || (null != n && t.guild_id === n)) && a.delete(e);
         for (let e of t) a.set(e.id, e);
         for (let e of (null != n && s.add(n), u.keys())) a.has(e) || u.delete(e);
         for (let [e, t] of c) a.has(t) || c.delete(e);

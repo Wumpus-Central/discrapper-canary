@@ -1,5 +1,5 @@
-l.d(t, { A: () => s });
-class i {
+i.d(t, { A: () => s });
+class n {
     visibility = new Map();
     listeners = new Set();
     isFramePooled(e) {
@@ -26,4 +26,4 @@ class i {
         for (let e of this.listeners) e();
     }
 }
-let s = new i();
+let s = new n();
