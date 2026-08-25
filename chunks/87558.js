@@ -50,26 +50,26 @@ function p(e) {
     return (
         "PASTE THIS INTO THE DROP JSON:\n\n[\n" +
         e
-            .map((e) =>
-                JSON.stringify(
+            .map((e) => {
+                let r = c(e.name),
+                    t = e.randomizedSources?.map((e) => c(e.filename ?? e.src));
+                return JSON.stringify(
                     {
-                        path: c(e.name),
+                        path: r,
                         loop: e.loop,
                         start: e.start,
                         duration: e.duration,
                         loop_delay: e.loopDelay,
                         z_index: e.zIndex,
-                        ...(null != e.randomizedSources
-                            ? { randomized_paths: e.randomizedSources.map((e) => c(e.filename ?? e.src)) }
-                            : {}),
+                        ...(null != t && t.length > 0 ? { randomized_paths: t.includes(r) ? t : [r, ...t] } : {}),
                     },
                     null,
                     4,
                 )
                     .split("\n")
                     .map((e) => " ".repeat(22) + e)
-                    .join("\n"),
-            )
+                    .join("\n");
+            })
             .join(",\n") +
         "\n]"
     );
