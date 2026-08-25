@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => q }), n(938796), n(321073), n(142703);
+n.d(t, { A: () => Q }), n(938796), n(321073), n(142703);
 var i = n(435558),
     r = n.n(i),
     a = n(665260),
@@ -67,7 +67,7 @@ async function B(e, t, n) {
         } catch {}
     x.log("Push notification message not in cache, adding directly", t.id, t.channel_id);
     let a = d.A.getOrCreate(e);
-    d.A.commit(a.receivePushNotification(t, n)), Z.emitChange();
+    d.A.commit(a.receivePushNotification(t, n)), X.emitChange();
 }
 function H(e) {
     if (e.media_mention?.message_id == null) return;
@@ -96,13 +96,28 @@ function j(e) {
     let i = e.mediaMention?.message_id;
     null != i && ((n = n.remove(i)), d.A.commit(n));
 }
-function W() {
+function W(e) {
+    let t = !1;
+    return (
+        d.A.forEach((n) => {
+            if (n.cached) return;
+            let i = O.A.getBasicChannel(n.channelId);
+            i?.guild_id === e &&
+                (v.A.canBasicChannel(w.hVb.VIEW_CHANNEL, i) || (d.A.commit(n.mutate({ cached: !0 })), (t = !0)));
+        }),
+        t
+    );
+}
+function Y(e) {
+    return W(e.guildId);
+}
+function K() {
     d.A.forEach((e) => {
         let { channelId: t } = e;
         null == O.A.getChannel(t) && d.A.clear(t);
     });
 }
-function Y() {
+function $() {
     let e = !1;
     return (
         d.A.forEach((t) => {
@@ -123,7 +138,7 @@ function Y() {
         e
     );
 }
-function K(e) {
+function z(e) {
     let { type: t, channelId: n, messageId: i, userId: r, emoji: a, reactionType: s } = e,
         l = d.A.get(n);
     if (null == l || !(0, g.vp)(e)) return !1;
@@ -136,7 +151,7 @@ function K(e) {
     )),
         d.A.commit(l);
 }
-function $(e) {
+function Z(e) {
     let { type: t, messageData: n } = e,
         { message: i } = n,
         r = (0, c.cR)(n),
@@ -153,7 +168,7 @@ function $(e) {
     )),
         d.A.commit(l);
 }
-class z extends s.Ay.Store {
+class q extends s.Ay.Store {
     static displayName = "MessageStore";
     initialize() {
         this.waitFor(C.default, O.A, R.A, f.A, L.Ay, y.Ay, D.A, I.A, S.default, v.A, b.A, M.Ay, P.A, U.default),
@@ -235,7 +250,7 @@ class z extends s.Ay.Store {
         return k;
     }
 }
-let Z = new z(l.h, {
+let X = new q(l.h, {
         BACKGROUND_SYNC_CHANNEL_MESSAGES: function (e) {
             let { changesByChannelId: t } = e;
             for (let e in t) {
@@ -386,8 +401,8 @@ let Z = new z(l.h, {
                       )),
                 d.A.commit(r);
         },
-        MESSAGE_SEND_FAILED_AUTOMOD: $,
-        MESSAGE_EDIT_FAILED_AUTOMOD: $,
+        MESSAGE_SEND_FAILED_AUTOMOD: Z,
+        MESSAGE_EDIT_FAILED_AUTOMOD: Z,
         MESSAGE_UPDATE: function (e) {
             let t = e.message.id,
                 n = e.message.channel_id,
@@ -453,22 +468,33 @@ let Z = new z(l.h, {
                 n = d.A.getOrCreate(t);
             (n = n.loadComplete({ newMessages: [], hasMoreAfter: !1, hasMoreBefore: !1 })), d.A.commit(n);
         },
-        CHANNEL_DELETE: W,
-        THREAD_DELETE: W,
-        GUILD_DELETE: W,
-        RELATIONSHIP_ADD: Y,
-        RELATIONSHIP_UPDATE: Y,
-        RELATIONSHIP_REMOVE: Y,
+        CHANNEL_UPDATES: function (e) {
+            let t = r().uniq(e.channels.map((e) => e.guild_id)),
+                n = !1;
+            for (let e of t) W(e) && (n = !0);
+            return n;
+        },
+        GUILD_ROLE_UPDATE: Y,
+        GUILD_ROLE_DELETE: Y,
+        GUILD_MEMBER_UPDATE: function (e) {
+            return e.user.id === U.default.getCurrentUser()?.id && W(e.guildId);
+        },
+        CHANNEL_DELETE: K,
+        THREAD_DELETE: K,
+        GUILD_DELETE: K,
+        RELATIONSHIP_ADD: $,
+        RELATIONSHIP_UPDATE: $,
+        RELATIONSHIP_REMOVE: $,
         GUILD_MEMBERS_CHUNK_BATCH: function (e) {},
         THREAD_MEMBER_LIST_UPDATE: function (e) {},
-        MESSAGE_REACTION_ADD: K,
+        MESSAGE_REACTION_ADD: z,
         MESSAGE_REACTION_ADD_MANY: function (e) {
             let { channelId: t, messageId: n, reactions: i } = e,
                 r = d.A.get(t);
             if (null == r) return !1;
             (r = r.update(n, (e) => e.addReactionBatch(i, U.default.getCurrentUser()?.id))), d.A.commit(r);
         },
-        MESSAGE_REACTION_REMOVE: K,
+        MESSAGE_REACTION_REMOVE: z,
         MESSAGE_REACTION_REMOVE_ALL: function (e) {
             let { channelId: t, messageId: n } = e,
                 i = d.A.get(t);
@@ -505,4 +531,4 @@ let Z = new z(l.h, {
             null != t && null != t.author && null != n && t.author.id === n.id && (k = !0);
         },
     }),
-    q = Z;
+    Q = X;
