@@ -281,7 +281,7 @@ function en(e) {
             interactionSourceId: f,
             interactionPopoutTargetRef: h,
         } = (0, P.Pq)(),
-        m = [et.d.MODAL, et.d.MODAL_V2].includes(a) ? (0, L.n)(t.id, n) : void 0,
+        m = [et.d.MODAL, et.d.MODAL_V2].includes(a) ? (0, L.n1)(t.id, n) : void 0,
         A = c === o.sourceType && u === k.AQ.REACT,
         x = c === o.sourceType && u === k.AQ.REPLY,
         T = (A || x) && f === o.sourceId;

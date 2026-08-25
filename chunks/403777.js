@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => p, n: () => E });
+n.d(t, { Ay: () => T, kN: () => I, n1: () => E });
 var i = n(477900);
 n(582128);
 var r = n(192308),
@@ -552,7 +552,7 @@ async function h(e) {
                         n.e("654282"),
                         n.e("77473"),
                         n.e("363618"),
-                        n.e("387533"),
+                        n.e("663756"),
                         n.e("880239"),
                         n.e("860177"),
                         n.e("875016"),
@@ -719,7 +719,12 @@ async function h(e) {
     ),
         T?.();
 }
-function I() {
+function I(e) {
+    let t = E(e, null);
+    for (let e of (0, r.getOpenModalKeys)()) if (e.startsWith(t)) return !0;
+    return !1;
+}
+function f() {
     if (0 === _.size) return;
     let e = l.default.getCurrentUser();
     for (let t of _) {
@@ -737,7 +742,7 @@ function I() {
         (0, r.closeModal)(t), _.delete(t);
     }
 }
-class f extends a.A {
-    actions = { USER_PROFILE_MODAL_OPEN: h, USER_PROFILE_MODAL_CLOSE: I };
+class p extends a.A {
+    actions = { USER_PROFILE_MODAL_OPEN: h, USER_PROFILE_MODAL_CLOSE: f };
 }
-let p = new f();
+let T = new p();

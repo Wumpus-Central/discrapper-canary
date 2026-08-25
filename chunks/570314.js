@@ -34,7 +34,7 @@ function v(e) {
             null != S &&
                 (y
                     ? ((0, A.hg)(S.id),
-                      (0, r.closeModal)((0, k.n)(F, m?.guild_id)),
+                      (0, r.closeModal)((0, k.n1)(F, m?.guild_id)),
                       t?.(),
                       x.default.track(I.HAw.APP_PROFILE_OPEN_APP_BUTTON_CLICKED, { application_id: S.id }))
                     : (0, b.o)({ applicationId: S.id, ...S }));

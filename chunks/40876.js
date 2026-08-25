@@ -575,7 +575,7 @@ let r = {
     },
     UserProfileModalManager: {
         actions: ["USER_PROFILE_MODAL_OPEN", "USER_PROFILE_MODAL_CLOSE"],
-        inlineRequire: () => n(403777).A,
+        inlineRequire: () => n(403777).Ay,
     },
     UserSettingsManager: {
         actions: ["POST_CONNECTION_OPEN", "OVERLAY_INITIALIZE", "USER_SETTINGS_PROTO_UPDATE"],

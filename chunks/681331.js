@@ -36,20 +36,15 @@ var E = n(503698),
     T = n(992526),
     S = n(982240),
     j = n(609782),
-    C = n(945810);
-let D = (0, C.mj)({
-        name: "2026-08-badge-management",
-        kind: "user",
-        defaultConfig: { enabled: !1, tenureBadgeHideable: !1 },
-        variations: { 1: { enabled: !0, tenureBadgeHideable: !0 }, 2: { enabled: !0, tenureBadgeHideable: !1 } },
-    }),
-    y = (0, C.mj)({
-        name: "2026-06-use-new-badge-image-source",
-        kind: "user",
-        defaultConfig: { enabled: !1 },
-        variations: { 0: { enabled: !1 }, 1: { enabled: !0 } },
-    });
-var M = n(315710),
+    C = n(643056);
+let D = (0, n(945810).mj)({
+    name: "2026-06-use-new-badge-image-source",
+    kind: "user",
+    defaultConfig: { enabled: !1 },
+    variations: { 0: { enabled: !1 }, 1: { enabled: !0 } },
+});
+var y = n(248284),
+    M = n(315710),
     O = n(297264),
     P = n(834730),
     U = n(821609),
@@ -392,7 +387,7 @@ function ey(e) {
             shouldGlowTenureBadge: u,
             popoutAnchorRef: E,
         } = e,
-        [C, M] = l.useState(!1),
+        M = (0, y.A)((e) => e.isOpen),
         O = l.useRef(null),
         P = l.useRef(null),
         U = l.useRef(null),
@@ -402,13 +397,10 @@ function ey(e) {
         V = o.default.getCurrentUser(),
         $ = (0, ex.CC)(V?.premiumType, ee.PremiumTypes.TIER_2),
         F = (0, T.J9)({ location: "UserProfileBadgeList" }),
-        W = (function (e) {
-            let { location: t } = e;
-            return D.useConfig({ location: t }).enabled;
-        })({ location: "UserProfileBadgeList" }),
+        W = (0, C.d)({ location: "UserProfileBadgeList" }),
         K = (function (e) {
             let { location: t } = e;
-            return y.useConfig({ location: t }).enabled;
+            return D.useConfig({ location: t }).enabled;
         })({ location: "UserProfileBadgeList" });
     l.useEffect(() => {
         (F || K) && s?.userId != null && !S.Ay.hasCatalogFor(s.userId) && (0, v.RS)(s.userId);
@@ -427,13 +419,17 @@ function ey(e) {
         }, [K, q, t]),
         Z = s?.userId === V?.id,
         J = Z && F && W && null != E,
-        et = f((0, eT.AP)(V?.id ?? null)).some((e) => e.id === em.A.ORB_PROFILE_BADGE),
-        el = (0, a.jsx)("div", {
+        et = J && M;
+    function el(e) {
+        y.A.setState({ isOpen: e });
+    }
+    let er = f((0, eT.AP)(V?.id ?? null)).some((e) => e.id === em.A.ORB_PROFILE_BADGE),
+        es = (0, a.jsx)("div", {
             ref: O,
             className: m()(eD.kL, J && eD.Tx, n),
             "aria-label": c.intl.string(c.t.VWV0y5),
             role: "group",
-            ...(J ? { onClick: () => M((e) => !e) } : null),
+            ...(J ? { onClick: () => el(!et) } : null),
             children: t.map((e, t) => {
                 let n = e.id === em.A.ORB_PROFILE_BADGE,
                     l = (0, eN.e0)(e.id),
@@ -531,14 +527,14 @@ function ey(e) {
                         },
                         href: e.link,
                         "aria-label": e.description,
-                        ...(J ? { "aria-haspopup": "dialog", "aria-expanded": C } : null),
+                        ...(J ? { "aria-haspopup": "dialog", "aria-expanded": et } : null),
                         style: { filter: u && null != l ? `drop-shadow(0 0 5px ${l.glowColor})` : void 0 },
                     };
                 if (F)
                     return (0, a.jsx)(
                         X,
                         {
-                            shouldShow: !C,
+                            shouldShow: !et,
                             legacyBadgeId: e.id,
                             userId: s?.userId,
                             fallbackTitle: e.description,
@@ -576,7 +572,7 @@ function ey(e) {
                         {
                             targetElementRef: U,
                             delay: en.In,
-                            showSubtext: !et && !e.isPreviewMode,
+                            showSubtext: !er && !e.isPreviewMode,
                             forceOpen: I,
                             children: n,
                         },
@@ -618,17 +614,17 @@ function ey(e) {
               align: "left",
               spacing: 4,
               scrollBehavior: "close",
-              shouldShow: C,
+              shouldShow: et,
               onRequestClose: (e) => {
-                  O.current?.contains(e?.target ?? null) !== !0 && M(!1);
+                  O.current?.contains(e?.target ?? null) !== !0 && el(!1);
               },
               renderPopout: (e) => {
                   let { closePopout: t } = e;
                   return (0, a.jsx)(w, { onClose: t });
               },
-              children: () => el,
+              children: () => es,
           })
-        : el;
+        : es;
 }
 var eM = n(996988);
 let eO = {
