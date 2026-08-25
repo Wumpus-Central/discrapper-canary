@@ -1,6 +1,7 @@
 e.exports = {
     rf: "body_af6837",
     uW: "section_af6837",
+    K2: "typeTags_af6837",
     L6: "typeTag_af6837",
     p_: "list_af6837",
     Aw: "listItem_af6837",

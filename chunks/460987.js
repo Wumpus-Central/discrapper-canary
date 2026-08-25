@@ -1,4 +1,4 @@
-i.d(a, { A: () => ee }), i(321073);
+i.d(a, { A: () => Y }), i(321073);
 var t = i(477900),
     n = i(582128),
     s = i(176999),
@@ -17,163 +17,114 @@ var t = i(477900),
     g = i(289173),
     j = i(210598),
     E = i(80330),
-    N = i(503698),
-    A = i.n(N),
-    C = i(794248),
-    R = i(331322),
-    _ = i(834730),
-    v = i(890856),
-    P = i(619517),
-    M = i(946356),
-    b = i(981006);
-function w(e) {
-    let { applicationName: a, applicationIcon: i } = e;
-    return (0, t.jsxs)(R.B, {
-        direction: "horizontal",
-        gap: 4,
-        children: [
-            null != i
-                ? (0, t.jsx)(P.Ay, { width: 16, height: 16, src: i, className: b.In })
-                : (0, t.jsx)("div", { className: b.Fi }),
-            (0, t.jsx)(_.E, { variant: "text-xs/medium", children: a }),
-        ],
-    });
-}
-function S(e) {
-    let { application: a, rendererProps: i, className: s, onClick: r, renderText: c } = e,
-        { trackUserProfileAction: d } = (0, h.NJ)(),
-        o = i.surfaceConfigs[l.m.MINI_PROFILE],
-        u = a.id;
-    return (!(function (e) {
-        let { trackUserProfileAction: a } = (0, h.NJ)(),
-            i = n.useRef(!1);
-        n.useEffect(() => {
-            i.current || (a({ action: "VIEW_APPLICATION_WIDGET_PREVIEW", applicationId: e }), (i.current = !0));
-        }, [a, e]);
-    })(u),
-    null == o)
-        ? null
-        : (0, t.jsx)(v.s, {
-              onClick: (e) => {
-                  e.target?.closest("a") == null &&
-                      (d({ action: "PRESS_APPLICATION_WIDGET_PREVIEW", applicationId: u }), r?.());
-              },
-              "aria-label": a.name,
-              children: (0, t.jsx)(M.A.Overlay, {
-                  className: A()(b.kL, s),
-                  children: (0, t.jsx)(C.kH, {
-                      ...i,
-                      renderText: c,
-                      surface: l.m.MINI_PROFILE,
-                      surfaceConfig: o,
-                      header: (0, t.jsx)(w, { applicationName: a.name, applicationIcon: a.getIconURL(16) }),
-                  }),
-              }),
-          });
-}
-var k = i(403581),
-    O = i(661531),
-    D = i(297264),
-    V = i(939249),
-    W = i(448766),
-    T = i(326009),
-    G = i(375708),
-    L = i(892572),
-    y = i(564118);
-function F(e) {
+    N = i(139730),
+    A = i(503698),
+    C = i.n(A),
+    R = i(403581),
+    _ = i(661531),
+    v = i(834730),
+    P = i(297264),
+    M = i(939249),
+    b = i(448766),
+    w = i(946356),
+    S = i(326009),
+    k = i(375708),
+    O = i(892572),
+    D = i(564118);
+function V(e) {
     let { header: a } = e;
     return (0, t.jsxs)("div", {
-        className: y.wx,
+        className: D.wx,
         children: [
-            (0, t.jsx)(k.t, { className: y.nr, size: "xxs", color: O.A.colors.ICON_DEFAULT }),
-            (0, t.jsx)(_.E, { className: y.TK, variant: "text-xs/medium", lineClamp: 1, children: a }),
+            (0, t.jsx)(R.t, { className: D.nr, size: "xxs", color: _.A.colors.ICON_DEFAULT }),
+            (0, t.jsx)(v.E, { className: D.TK, variant: "text-xs/medium", lineClamp: 1, children: a }),
         ],
     });
 }
-function U(e) {
+function W(e) {
     let { header: a, section: i, userId: n } = e,
         s = "" !== i.title;
     return (0, t.jsxs)("div", {
-        className: y.PY,
+        className: D.PY,
         children: [
             (0, t.jsxs)("div", {
-                className: y.rD,
+                className: D.rD,
                 children: [
-                    (0, t.jsx)(F, { header: a }),
+                    (0, t.jsx)(V, { header: a }),
                     (0, t.jsxs)("div", {
-                        className: y.I_,
+                        className: D.I_,
                         children: [
                             s
-                                ? (0, t.jsx)(D.D, {
-                                      className: A()(y.CH, L.YD),
+                                ? (0, t.jsx)(P.D, {
+                                      className: C()(D.CH, O.YD),
                                       variant: "heading-sm/semibold",
                                       color: "text-default",
                                       lineClamp: 1,
-                                      children: (0, W.j)(i.title),
+                                      children: (0, b.j)(i.title),
                                   })
                                 : null,
-                            (0, t.jsx)(_.E, {
-                                className: y.G6,
+                            (0, t.jsx)(v.E, {
+                                className: D.G6,
                                 variant: "text-xs/normal",
                                 color: "text-subtle",
                                 lineClamp: 1,
-                                children: G.intl.string(G.t.KOUwKV),
+                                children: k.intl.string(k.t.KOUwKV),
                             }),
                         ],
                     }),
                 ],
             }),
             null != i.image
-                ? (0, t.jsx)(T.N, { className: A()(y.N4, { [y.kF]: !s }), userId: n, image: i.image })
+                ? (0, t.jsx)(S.N, { className: C()(D.N4, { [D.kF]: !s }), userId: n, image: i.image })
                 : null,
         ],
     });
 }
-function q(e) {
+function T(e) {
     let { header: a, section: i, userId: n } = e,
         s = i.fields.map((e) => e.image).filter(x.Vq);
     return 0 === s.length
-        ? (0, t.jsx)(z, { header: a })
+        ? (0, t.jsx)(G, { header: a })
         : (0, t.jsxs)("div", {
-              className: y.Zz,
+              className: D.Zz,
               children: [
-                  (0, t.jsx)(F, { header: a }),
+                  (0, t.jsx)(V, { header: a }),
                   (0, t.jsx)("div", {
-                      className: y.SS,
+                      className: D.SS,
                       children: s.map((e, a) =>
-                          (0, t.jsx)(T.N, { className: y.Bi, userId: n, image: e, canAnimate: !1 }, a),
+                          (0, t.jsx)(S.N, { className: D.Bi, userId: n, image: e, canAnimate: !1 }, a),
                       ),
                   }),
               ],
           });
 }
-function z(e) {
+function G(e) {
     let { header: a } = e;
     return (0, t.jsxs)("div", {
-        className: y.$R,
+        className: D.$R,
         children: [
-            (0, t.jsx)(F, { header: a }),
-            (0, t.jsx)(_.E, {
-                className: y.VC,
+            (0, t.jsx)(V, { header: a }),
+            (0, t.jsx)(v.E, {
+                className: D.VC,
                 variant: "text-xs/medium",
                 color: "text-subtle",
-                children: G.intl.string(G.t.KOUwKV),
+                children: k.intl.string(k.t.KOUwKV),
             }),
         ],
     });
 }
-function B(e) {
+function L(e) {
     let { userId: a, widget: i } = e,
         n = i.sections[0];
     return null == n
-        ? (0, t.jsx)(z, { header: i.header })
+        ? (0, t.jsx)(G, { header: i.header })
         : "cover" === n.type && ("" !== n.title || null != n.image)
-          ? (0, t.jsx)(U, { header: i.header, section: n, userId: a })
+          ? (0, t.jsx)(W, { header: i.header, section: n, userId: a })
           : "fields" === n.type
-            ? (0, t.jsx)(q, { header: i.header, section: n, userId: a })
-            : (0, t.jsx)(z, { header: i.header });
+            ? (0, t.jsx)(T, { header: i.header, section: n, userId: a })
+            : (0, t.jsx)(G, { header: i.header });
 }
-function J(e) {
+function y(e) {
     let { className: a, onClick: i, userId: s, widget: l } = e,
         { trackUserProfileAction: r } = (0, h.NJ)(),
         c = n.useRef(!1);
@@ -181,23 +132,23 @@ function J(e) {
         n.useEffect(() => {
             c.current || (r({ action: "VIEW_PERSONAL_WIDGET_PREVIEW" }), (c.current = !0));
         }, [r, l.id]),
-        (0, t.jsx)(V.D, {
+        (0, t.jsx)(M.D, {
             onClick: function () {
                 r({ action: "PRESS_PERSONAL_WIDGET_PREVIEW" }), i?.();
             },
-            "aria-label": G.intl.string(G.t["2sdfeb"]),
-            children: (0, t.jsx)(M.A.Overlay, {
-                className: A()(y.kL, a),
-                children: (0, t.jsx)(B, { userId: s, widget: l }),
+            "aria-label": k.intl.string(k.t["2sdfeb"]),
+            children: (0, t.jsx)(w.A.Overlay, {
+                className: C()(D.kL, a),
+                children: (0, t.jsx)(L, { userId: s, widget: l }),
             }),
         })
     );
 }
-var K = i(321108),
-    Y = i(939496),
-    H = i(996988),
-    Q = i(580065);
-function $(e) {
+var F = i(321108),
+    U = i(939496),
+    q = i(996988),
+    z = i(580065);
+function B(e) {
     var a;
     let i,
         { widgets: s = [], onClick: l, className: r } = e,
@@ -235,10 +186,10 @@ function $(e) {
             ],
             [s, d],
         ),
-        { themeType: u } = (0, Y.E)(),
-        p = u === H.d.SIDEBAR,
+        { themeType: u } = (0, U.E)(),
+        p = u === q.d.SIDEBAR,
         f = (0, n.useRef)(!1),
-        j = (0, K.A)(o),
+        j = (0, F.A)(o),
         E = (0, n.useMemo)(
             () =>
                 j
@@ -251,24 +202,24 @@ function $(e) {
         (0, n.useEffect)(() => {
             0 === E.length || f.current || (c({ action: "VIEW_GAME_WIDGET_BREADCRUMB" }), (f.current = !0));
         }, [c, E.length]),
-        (0, t.jsx)(V.D, {
-            "aria-label": G.intl.string(G.t.JjiwFx),
+        (0, t.jsx)(M.D, {
+            "aria-label": k.intl.string(k.t.JjiwFx),
             onClick: () => {
                 c({ action: "PRESS_GAME_WIDGET_BREADCRUMB" }), l();
             },
-            className: Q.QF,
-            children: (0, t.jsxs)(M.A.Overlay, {
-                className: A()(Q.WH, r),
+            className: z.QF,
+            children: (0, t.jsxs)(w.A.Overlay, {
+                className: C()(z.WH, r),
                 children: [
-                    (0, t.jsx)(_.E, {
+                    (0, t.jsx)(v.E, {
                         variant: p ? "text-sm/medium" : "text-xs/medium",
-                        children: G.intl.string(G.t.JjiwFx),
+                        children: k.intl.string(k.t.JjiwFx),
                     }),
                     (0, t.jsx)("div", {
-                        className: Q.Pt,
+                        className: z.Pt,
                         children: E.map((e, a) =>
                             (0, t.jsx)(
-                                Z,
+                                J,
                                 {
                                     iconUrl: e.image,
                                     name: e.name,
@@ -284,79 +235,79 @@ function $(e) {
         })
     );
 }
-function Z(e) {
+function J(e) {
     let { iconUrl: a, name: i, displayCount: n, gameCount: s } = e;
     return (0, t.jsxs)("div", {
-        className: Q.Kk,
+        className: z.Kk,
         children: [
-            (0, t.jsx)("img", { className: A()({ [Q.um]: n }), src: a, alt: i }),
+            (0, t.jsx)("img", { className: C()({ [z.um]: n }), src: a, alt: i }),
             n &&
                 (0, t.jsx)("div", {
-                    className: Q.pp,
-                    children: (0, t.jsxs)(_.E, { variant: "text-xs/medium", className: Q.gq, children: ["+", s] }),
+                    className: z.pp,
+                    children: (0, t.jsxs)(v.E, { variant: "text-xs/medium", className: z.gq, children: ["+", s] }),
                 }),
         ],
     });
 }
-var X = i(518477);
-function ee(e) {
-    let { user: a, widgets: i = [], ...N } = e,
-        { openModal: A, onExpand: C } = (function (e) {
+var K = i(518477);
+function Y(e) {
+    let { user: a, widgets: i = [], ...A } = e,
+        { openModal: C, onExpand: R } = (function (e) {
             let { onOpenUserProfileModal: a } = e,
                 { analyticsLocations: i } = (0, c.Ay)(),
                 { trackUserProfileAction: t } = (0, h.NJ)(),
                 s = n.useCallback(() => {
-                    a?.({ tabSection: X.RP.WIDGETS });
+                    a?.({ tabSection: K.RP.WIDGETS });
                 }, [a]),
                 l = n.useCallback(() => {
                     t({ action: "PRESS_SHOW_MORE_WIDGETS", analyticsLocations: i }), s();
                 }, [t, i, s]);
             return { openModal: s, onExpand: l };
-        })({ user: a, widgets: i, ...N }),
-        R = n.useMemo(() => i.filter((e) => e instanceof I.R), [i]),
-        _ = n.useMemo(() => R.map((e) => e.applicationId), [R]),
-        v = (0, m.A)(_),
-        P = n.useMemo(() => new Map(v.filter(x.Vq).map((e) => [e.id, e])), [v]),
-        M = (0, u.A)(_),
-        b = n.useMemo(() => new Map(M.map((e) => [e.application_id, e])), [M]),
-        { data: w } = (0, p.P)(a.id),
-        k = n.useMemo(() => new Map(w?.map((e) => [e.application_id, e])), [w]),
-        O = (0, r.bG)([f.default], () => f.default.locale),
-        D = (0, r.cf)([o.A], () => Object.fromEntries(R.map((e) => [e.applicationId, o.A.getAssets(e.applicationId)]))),
-        V = n.useMemo(
+        })({ user: a, widgets: i, ...A }),
+        _ = n.useMemo(() => i.filter((e) => e instanceof I.R), [i]),
+        v = n.useMemo(() => _.map((e) => e.applicationId), [_]),
+        P = (0, m.A)(v),
+        M = n.useMemo(() => new Map(P.filter(x.Vq).map((e) => [e.id, e])), [P]),
+        b = (0, u.A)(v),
+        w = n.useMemo(() => new Map(b.map((e) => [e.application_id, e])), [b]),
+        { data: S } = (0, p.P)(a.id),
+        O = n.useMemo(() => new Map(S?.map((e) => [e.application_id, e])), [S]),
+        D = (0, r.bG)([f.default], () => f.default.locale),
+        V = (0, r.cf)([o.A], () => Object.fromEntries(_.map((e) => [e.applicationId, o.A.getAssets(e.applicationId)]))),
+        W = n.useMemo(
             () =>
-                0 === P.size || 0 === b.size || 0 === k.size
+                0 === M.size || 0 === w.size || 0 === O.size
                     ? null
                     : new Map(
-                          R.map((e) => {
-                              let a = P.get(e.applicationId),
-                                  i = b.get(e.applicationId),
-                                  t = k.get(e.applicationId);
+                          _.map((e) => {
+                              let a = M.get(e.applicationId),
+                                  i = w.get(e.applicationId),
+                                  t = O.get(e.applicationId);
                               if (null == a || null == i || null == t) return null;
                               let n = i.surfaces;
                               if (null == n || null == n[l.m.MINI_PROFILE]) return null;
                               let r = (0, s.VG)(t.profile),
-                                  c = Object.values(D[e.applicationId] ?? {}).filter(x.Vq);
+                                  c = Object.values(V[e.applicationId] ?? {}).filter(x.Vq);
                               return [e, { surfaceConfigs: i.surfaces, data: r, application: a, assets: c }];
                           }).filter(x.Vq),
                       ),
-            [R, P, b, k, D],
+            [_, M, w, O, V],
         ),
-        W = n.useCallback(
+        T = n.useCallback(
             (e) => {
                 let n = [],
                     s = !1;
                 for (let l of i)
                     if (l instanceof I.R) {
-                        let a = V?.get(l);
+                        let a = W?.get(l);
                         if (null == a) continue;
                         n.push(
                             (0, t.jsx)(
-                                S,
+                                N.A,
                                 {
                                     application: a.application,
                                     rendererProps: {
-                                        locale: O,
+                                        locale: D,
                                         surfaceConfigs: a.surfaceConfigs,
                                         isLoading: !1,
                                         hasIdentity: !0,
@@ -368,7 +319,7 @@ function ee(e) {
                                             localizedStrings: [],
                                         },
                                     },
-                                    onClick: A,
+                                    onClick: C,
                                     ...e,
                                 },
                                 `application-widget-${l.applicationId}`,
@@ -376,19 +327,19 @@ function ee(e) {
                         );
                     } else
                         l instanceof g.Yy && !s
-                            ? (n.push((0, t.jsx)($, { widgets: i, onClick: A, ...e }, "collection-breadcrumb")),
+                            ? (n.push((0, t.jsx)(B, { widgets: i, onClick: C, ...e }, "collection-breadcrumb")),
                               (s = !0))
                             : l instanceof j.Tu &&
                               n.push(
                                   (0, t.jsx)(
-                                      J,
-                                      { userId: a.id, widget: l, onClick: A, ...e },
+                                      y,
+                                      { userId: a.id, widget: l, onClick: C, ...e },
                                       l.id ?? "personal-widget",
                                   ),
                               );
                 return n;
             },
-            [i, A, V, O, a.id],
+            [i, C, W, D, a.id],
         );
-    return 0 === i.length ? null : (0, t.jsx)(E.A, { renderCards: W, heading: G.intl.string(G.t.Y55Tua), onExpand: C });
+    return 0 === i.length ? null : (0, t.jsx)(E.A, { renderCards: T, heading: k.intl.string(k.t.Y55Tua), onExpand: R });
 }

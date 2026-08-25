@@ -1,4 +1,4 @@
-e.exports = {
+a.exports = {
     nj: "screen_f8194a",
     a0: "landingScreen_f8194a",
     Yo: "landingLayout_f8194a",
@@ -22,6 +22,7 @@ e.exports = {
     BK: "templateCardDescription_f8194a",
     tG: "templateCardTitle_f8194a",
     DA: "composer_f8194a",
+    gH: "installScope_f8194a",
     VP: "createAction_f8194a",
     pA: "projectsSidebar_f8194a",
     IR: "projectsSidebarHeader_f8194a",

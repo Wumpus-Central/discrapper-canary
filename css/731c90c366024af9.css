@@ -4,6 +4,26 @@
     gap: 12px
 }
 
+.option_e0a1ce {
+    align-items: center;
+    background: var(--background-base-lower);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-8);
+    justify-content: center;
+    min-height: 96px;
+    padding: var(--space-16);
+    text-align: center;
+    width: 100%
+}
+
+.option_e0a1ce:hover {
+    background: var(--background-mod-subtle)
+}
+
 .container__09e56 {
     display: flex;
     flex-direction: column
@@ -101,4 +121,4 @@
     gap: var(--space-12)
 }
 
-/*# sourceMappingURL=df1f65c673345bfc.css.map*/
+/*# sourceMappingURL=731c90c366024af9.css.map*/

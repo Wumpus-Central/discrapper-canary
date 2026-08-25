@@ -1,133 +1,132 @@
-"use strict";
-n.d(t, { A: () => k });
-var i = n(485845),
-    r = n(179771),
-    a = n(136722),
+n.d(t, { A: () => G });
+var l = n(485845),
+    i = n(179771),
+    r = n(136722),
     s = n(264686),
-    l = n(976860),
-    o = n(803224),
-    d = n(531685),
-    c = n(479975),
-    u = n(120426),
-    _ = n(940107),
-    E = n(985451),
-    A = n(171936);
+    o = n(976860),
+    u = n(803224),
+    a = n(531685),
+    d = n(479975),
+    c = n(120426),
+    f = n(940107),
+    p = n(985451),
+    g = n(171936);
 n(321073), n(667532);
 var h = n(809685),
-    I = n(112420),
-    f = n(484697),
-    p = n(652215);
-function T(e) {
+    m = n(112420),
+    w = n(484697),
+    _ = n(652215);
+function A(e) {
     return "string" == typeof e && "" !== e ? e : void 0;
 }
-let m = {
-    [p.e$_.OPEN_CONTEXT_MENU]: (e, t) => {
+let v = {
+    [_.e$_.OPEN_CONTEXT_MENU]: (e, t) => {
         let n = "custom" === e.args.type,
-            i = n
+            l = n
                 ? (function e(t) {
                       let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [];
                       if (!Array.isArray(t)) return n;
-                      for (let i of t) {
+                      for (let l of t) {
                           if (n.length >= 40) break;
-                          if (null == i || "object" != typeof i) continue;
-                          let t = T(i.id);
-                          null != t && n.push(t), e(i.items, n);
+                          if (null == l || "object" != typeof l) continue;
+                          let t = A(l.id);
+                          null != t && n.push(t), e(l.items, n);
                       }
                       return n;
                   })(e.args.items)
                 : [],
-            r = n ? t.contextMenuSelect : void 0;
+            i = n ? t.contextMenuSelect : void 0;
         return n
-            ? null == r
-                ? { result: { opened: !0, selected_id: null }, answered: "dismissed", options: i }
-                : i.includes(r)
-                  ? { result: { opened: !0, selected_id: r }, answered: `selected "${r}"`, options: i }
+            ? null == i
+                ? { result: { opened: !0, selected_id: null }, answered: "dismissed", options: l }
+                : l.includes(i)
+                  ? { result: { opened: !0, selected_id: i }, answered: `selected "${i}"`, options: l }
                   : {
                         result: { opened: !0, selected_id: null },
-                        answered: `dismissed \u{2014} no item with id "${r}"`,
-                        options: i,
+                        answered: `dismissed \u{2014} no item with id "${i}"`,
+                        options: l,
                     }
             : { result: { opened: !0 }, answered: "opened, no selection to make" };
     },
-    [p.e$_.SHOW_CONFIRM_MODAL]: (e, t) => {
+    [_.e$_.SHOW_CONFIRM_MODAL]: (e, t) => {
         let n = !0 === t.confirm,
-            i = T(e.args.title);
+            l = A(e.args.title);
         return {
             result: "confirm" === e.args.type ? { confirmed: n } : { acknowledged: n },
             answered: n ? "confirmed" : "dismissed",
-            subject: i,
+            subject: l,
         };
     },
-    [p.e$_.OPEN_EXTERNAL_LINK]: (e) => ({
+    [_.e$_.OPEN_EXTERNAL_LINK]: (e) => ({
         result: { opened: !1 },
         answered: "cancelled \u2014 an agent may not open external links",
-        subject: T(e.args.url),
+        subject: A(e.args.url),
     }),
-    [p.e$_.SHARE_CONTENT]: (e) => ({
+    [_.e$_.SHARE_CONTENT]: (e) => ({
         result: { success: !1, didCopyLink: !1, didSendMessage: !1 },
         answered: "closed without sharing \u2014 an agent may not send a message for the user",
-        subject: T(e.args.preview_title) ?? T(e.args.content),
+        subject: A(e.args.preview_title) ?? A(e.args.content),
     }),
-    [p.e$_.OPEN_USER_PROFILE]: () => ({ result: { opened: !0 }, answered: "opened" }),
-    [p.e$_.SHOW_TOOLTIP]: () => ({ result: { shown: !0 }, answered: "shown" }),
-    [p.e$_.HIDE_TOOLTIP]: () => ({ result: { hidden: !0 }, answered: "hidden" }),
-    [p.e$_.OPEN_MEDIA_VIEWER]: () => ({ result: { opened: !0 }, answered: "opened" }),
-    [p.e$_.SHOW_TOAST]: () => ({ result: { shown: !0 }, answered: "shown" }),
-    [p.e$_.OPEN_INVITE_DIALOG]: () => ({ result: void 0, answered: "opened" }),
-    [p.e$_.OPEN_SHARE_MOMENT_DIALOG]: () => ({ result: void 0, answered: "opened" }),
+    [_.e$_.OPEN_USER_PROFILE]: () => ({ result: { opened: !0 }, answered: "opened" }),
+    [_.e$_.SHOW_TOOLTIP]: () => ({ result: { shown: !0 }, answered: "shown" }),
+    [_.e$_.HIDE_TOOLTIP]: () => ({ result: { hidden: !0 }, answered: "hidden" }),
+    [_.e$_.OPEN_MEDIA_VIEWER]: () => ({ result: { opened: !0 }, answered: "opened" }),
+    [_.e$_.SHOW_TOAST]: () => ({ result: { shown: !0 }, answered: "shown" }),
+    [_.e$_.OPEN_INVITE_DIALOG]: () => ({ result: void 0, answered: "opened" }),
+    [_.e$_.OPEN_SHARE_MOMENT_DIALOG]: () => ({ result: void 0, answered: "opened" }),
 };
-Object.keys(m);
-let g = { drain: () => [], end: () => {}, iframeId: null };
-function S(e) {
+Object.keys(v);
+let I = { drain: () => [], end: () => {}, iframeId: null };
+function T(e) {
     let t = e.contentWindow;
-    return null == t ? null : ((0, f.lw)(t) ?? null);
+    return null == t ? null : ((0, w.lw)(t) ?? null);
 }
-let N = [];
-function C(e) {
-    let t = N.find((t) => t.iframeId === e.iframeId);
+let E = [];
+function S(e) {
+    let t = E.find((t) => t.iframeId === e.iframeId);
     if (null == t) return null;
-    let n = m[e.cmd];
+    let n = v[e.cmd];
     if (null == n) return null;
-    let { result: i, answered: r, options: a, subject: s } = n(e, t.answers);
+    let { result: l, answered: i, options: r, subject: s } = n(e, t.answers);
     return (
         t.recorded.length < 20 &&
             t.recorded.push({
                 command: e.cmd,
-                answered: r,
-                ...(null != a && a.length > 0 ? { options: a } : {}),
+                answered: i,
+                ...(null != r && r.length > 0 ? { options: r } : {}),
                 ...(null != s ? { subject: s } : {}),
             }),
-        { result: i }
+        { result: l }
     );
 }
-function O(e, t, n) {
-    let i = S(e);
-    if (null == i) return g;
-    let r = { iframeId: i, answers: t ?? {}, recorded: [] };
+function b(e, t, n) {
+    let l = T(e);
+    if (null == l) return I;
+    let i = { iframeId: l, answers: t ?? {}, recorded: [] };
     return (
-        n?.beneathBatches === !0 ? N.push(r) : N.unshift(r),
-        1 === N.length && (0, I.C)(C),
+        n?.beneathBatches === !0 ? E.push(i) : E.unshift(i),
+        1 === E.length && (0, m.C)(S),
         {
-            iframeId: i,
-            drain: () => r.recorded.splice(0, r.recorded.length),
+            iframeId: l,
+            drain: () => i.recorded.splice(0, i.recorded.length),
             end: () => {
-                let e = N.indexOf(r);
-                -1 !== e && (N.splice(e, 1), 0 === N.length && (0, I.C)(null));
+                let e = E.indexOf(i);
+                -1 !== e && (E.splice(e, 1), 0 === E.length && (0, m.C)(null));
             },
         }
     );
 }
-var R = n(948230),
-    L = n(805332),
-    y = n(796036);
-function D(e) {
-    let t = (0, A.J8)(e);
+var y = n(948230),
+    N = n(805332),
+    k = n(796036);
+function O(e) {
+    let t = (0, g.J8)(e);
     if (null == t) return null;
     let n = t.getBoundingClientRect();
     return n.width < 1 || n.height < 1 ? null : { width: Math.round(n.width), height: Math.round(n.height) };
 }
-async function v(e, t) {
-    let n = D(e);
+async function C(e, t) {
+    let n = O(e);
     if (null == n)
         return {
             ok: !1,
@@ -137,7 +136,7 @@ async function v(e, t) {
             code: "unavailable",
             message: "no preview frame is on screen for this project",
         };
-    if (null == L.A.getBuilderPreviewApplicationId() && !(0, y.h)(e))
+    if (null == N.A.getBuilderPreviewApplicationId() && !(0, k.h)(e))
         return {
             ok: !1,
             mode: t,
@@ -146,79 +145,79 @@ async function v(e, t) {
             message:
                 "the phone/desktop lens is the Conjure builder header's, and this preview is not the builder screen's \u2014 open the app preview there to switch it",
         };
-    (0, R.GG)("phone" === t);
-    let i = Date.now() + 2e3;
+    (0, y.GG)("phone" === t);
+    let l = Date.now() + 2e3;
     for (;;) {
-        var r;
-        let a = D(e);
-        if (null != a && ((r = a.width), "phone" === t ? 60 >= Math.abs(r - 390) : r >= 520))
-            return { ok: !0, mode: t, ...a };
-        if (Date.now() >= i)
+        var i;
+        let r = O(e);
+        if (null != r && ((i = r.width), "phone" === t ? 60 >= Math.abs(i - 390) : i >= 520))
+            return { ok: !0, mode: t, ...r };
+        if (Date.now() >= l)
             return {
                 ok: !1,
                 mode: t,
-                ...(a ?? n),
+                ...(r ?? n),
                 code: "timeout",
-                message: `the lens was set to ${t} but the frame is still ${String(a?.width ?? n.width)}px wide \u{2014} it is probably not the surface that applies the constraint`,
+                message: `the lens was set to ${t} but the frame is still ${String(r?.width ?? n.width)}px wide \u{2014} it is probably not the surface that applies the constraint`,
             };
         await new Promise((e) => setTimeout(e, 50));
     }
 }
-let b = [r.F.BOT, r.F.APPLICATIONS_COMMANDS];
-async function M(e) {
-    let { applicationId: t, application: r, guildId: s, onClose: l } = e,
-        o = r?.integrationTypesConfig?.[i.b.GUILD_INSTALL]?.oauth2InstallParams ?? r?.installParams,
-        [{ openOAuth2Modal: d }, { fetchProfile: c }] = await Promise.all([
+let R = [i.F.BOT, i.F.APPLICATIONS_COMMANDS];
+async function P(e) {
+    let { applicationId: t, application: i, guildId: s, onClose: o } = e,
+        u = i?.integrationTypesConfig?.[l.b.GUILD_INSTALL]?.oauth2InstallParams ?? i?.installParams,
+        [{ openOAuth2Modal: a }, { fetchProfile: d }] = await Promise.all([
             Promise.resolve().then(n.bind(n, 887909)),
             Promise.resolve().then(n.bind(n, 803306)),
         ]);
-    d(
+    a(
         {
             clientId: t,
             guildId: s,
             disableGuildSelect: !0,
-            integrationType: i.b.GUILD_INSTALL,
-            scopes: o?.scopes ?? b,
-            permissions: o?.permissions != null ? a.iu(o.permissions) : void 0,
+            integrationType: l.b.GUILD_INSTALL,
+            scopes: u?.scopes ?? R,
+            permissions: u?.permissions != null ? r.iu(u.permissions) : void 0,
             callback: () => !0,
         },
         () => {
-            l?.(), c(t, { withMutualGuilds: !0 });
+            o?.(), d(t, { withMutualGuilds: !0 });
         },
     );
 }
-async function P(e, t, n) {
-    let { probe: i, spec: r, onAccepted: a } = n ?? {};
-    if (!0 === i) return { status: (0, A.EA)(e) ? "accepted" : "unavailable" };
-    let s = await (0, A.ZW)(e, 6e3);
+async function M(e, t, n) {
+    let { probe: l, spec: i, onAccepted: r } = n ?? {};
+    if (!0 === l) return { status: (0, g.EA)(e) ? "accepted" : "unavailable" };
+    let s = await (0, g.ZW)(e, 6e3);
     if (null == s) return { status: "unavailable" };
-    let l = null == a ? { uploadToken: void 0 } : await a();
-    return null == l ? { status: "unavailable" } : await (0, u.x)(s, t, r, l.uploadToken);
+    let o = null == r ? { uploadToken: void 0 } : await r();
+    return null == o ? { status: "unavailable" } : await (0, c.x)(s, t, i, o.uploadToken);
 }
-async function U(e, t, n, i) {
-    if (!(0, A.EA)(e)) return { status: "unavailable" };
-    let r = (0, E.t_)(e);
+async function L(e, t, n, l) {
+    if (!(0, g.EA)(e)) return { status: "unavailable" };
+    let i = (0, p.t_)(e);
     try {
-        let r = await (0, A.ZW)(e, 6e3);
-        if (null == r) return { status: "unavailable" };
-        let o = await i?.();
-        if (!1 === o) return { status: "unavailable" };
+        let i = await (0, g.ZW)(e, 6e3);
+        if (null == i) return { status: "unavailable" };
+        let u = await l?.();
+        if (!1 === u) return { status: "unavailable" };
         if (null != n.viewport) {
-            let t = await v(e, n.viewport);
+            let t = await C(e, n.viewport);
             if (!t.ok) return { status: "failed", message: t.message ?? "the preview lens did not change" };
         }
-        let d = O(r, n.native);
+        let a = b(i, n.native);
         try {
-            var a, s, l;
-            let i,
-                o = await ((a = r),
+            var r, s, o;
+            let l,
+                u = await ((r = i),
                 (s = t),
-                (l = n),
-                (0, _.W)(a, "control", l, {
+                (o = n),
+                (0, f.W)(r, "control", o, {
                     id: s,
                     timeoutMs:
-                        ((i = l.timeoutMs),
-                        ("number" == typeof i && isFinite(i) && i > 0 ? Math.min(Math.floor(i), 2e4) : 5e3) + 4e3),
+                        ((l = o.timeoutMs),
+                        ("number" == typeof l && isFinite(l) && l > 0 ? Math.min(Math.floor(l), 2e4) : 5e3) + 4e3),
                     retryMs: 400,
                     sourceMatch: "origin",
                     label: "control",
@@ -228,94 +227,94 @@ async function U(e, t, n, i) {
                             ? { status: "completed", response: e }
                             : { status: "failed", message: "the preview frame returned a malformed control result" },
                     (e) =>
-                        e instanceof _.f
+                        e instanceof f.f
                             ? { status: "failed", message: "the preview frame did not answer the control batch" }
                             : { status: "unavailable" },
                 ));
-            if ("completed" !== o.status) return o;
-            let c = [...(w.get(e)?.drain() ?? []), ...d.drain()];
-            if (0 === c.length) return o;
-            return { ...o, response: { ...o.response, native: c } };
+            if ("completed" !== u.status) return u;
+            let d = [...(D.get(e)?.drain() ?? []), ...a.drain()];
+            if (0 === d.length) return u;
+            return { ...u, response: { ...u.response, native: d } };
         } finally {
-            d.end();
+            a.end();
         }
     } finally {
-        r();
+        i();
     }
 }
-let w = new Map();
-function G(e, t) {
+let D = new Map();
+function B(e, t) {
     try {
         t();
     } catch (t) {
         console.error(`[vibegrations] preview native surfaces: ${e} failed`, t);
     }
 }
-function x(e) {
-    let t = w.get(e);
-    null != t && (w.delete(e), G("closing the operation session", () => t.end())), (0, E.Rh)(e);
+function V(e) {
+    let t = D.get(e);
+    null != t && (D.delete(e), B("closing the operation session", () => t.end())), (0, p.Rh)(e);
 }
-let k = {
-    openVibegrationsAppInstallModal: M,
+let G = {
+    openVibegrationsAppInstallModal: P,
     isWindowFocused: function () {
-        return d.A.isFocused();
+        return a.A.isFocused();
     },
     areTurnNotificationsDisabled: function () {
-        return o.A.getDesktopType() === p.nRU.NEVER;
+        return u.A.getDesktopType() === _.nRU.NEVER;
     },
     presentTurnNotification: function (e) {
-        let { projectId: t, title: i, body: r, route: a, sound: o, volume: d } = e;
+        let { projectId: t, title: l, body: i, route: r, sound: u, volume: a } = e;
         s.default.showNotification(
             n(608598),
+            l,
             i,
-            r,
             { notif_type: "VIBEGRATIONS_ASSISTANT_FINISHED" },
             {
                 tag: `vibegrations-${t}`,
-                sound: o,
-                volume: d,
-                fallbackDeepLink: null == a ? void 0 : (0, c.I)(a),
-                onClick: null == a ? void 0 : () => (0, l.pX)(a),
+                sound: u,
+                volume: a,
+                fallbackDeepLink: null == r ? void 0 : (0, d.I)(r),
+                onClick: null == r ? void 0 : () => (0, o.pX)(r),
                 isUserAvatar: !1,
             },
         );
     },
-    relayPreviewCapture: P,
-    relayPreviewControl: U,
+    relayPreviewCapture: M,
+    relayPreviewControl: L,
     beginPreviewOperation: function (e) {
-        (0, E.BP)(e);
-        let t = (0, A.J8)(e);
+        (0, p.BP)(e);
+        let t = (0, g.J8)(e);
         if (null == t) return;
-        let n = S(t),
-            i = w.get(e);
-        if (null != i) {
-            if (null != i.iframeId && i.iframeId === n) return;
-            w.delete(e), G("replacing a stale operation session", () => i.end());
+        let n = T(t),
+            l = D.get(e);
+        if (null != l) {
+            if (null != l.iframeId && l.iframeId === n) return;
+            D.delete(e), B("replacing a stale operation session", () => l.end());
         }
-        G("dismissing what was left standing", () =>
+        B("dismissing what was left standing", () =>
             (function (e) {
                 let t = e.contentWindow;
                 if (null == t) return;
-                let n = (0, f.lw)(t);
+                let n = (0, w.lw)(t);
                 null != n && (0, h.ir)(n);
             })(t),
         ),
-            G("opening the operation session", () => {
-                let n = O(t, void 0, { beneathBatches: !0 }),
-                    i = (0, E.FQ)(() => {
-                        (0, E.RW)(e) || x(e);
+            B("opening the operation session", () => {
+                let n = b(t, void 0, { beneathBatches: !0 }),
+                    l = (0, p.FQ)(() => {
+                        (0, p.RW)(e) || V(e);
                     });
-                w.set(e, {
+                D.set(e, {
                     iframeId: n.iframeId,
                     drain: () => n.drain(),
                     end: () => {
-                        i(), n.end();
+                        l(), n.end();
                     },
                 });
             });
     },
-    endPreviewOperation: x,
+    endPreviewOperation: V,
     releasePreviewControl: function (e) {
-        (0, E.xm)(e);
+        (0, p.xm)(e);
     },
 };
