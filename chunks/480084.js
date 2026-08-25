@@ -559,7 +559,11 @@ function eR(e) {
         gameMention: {
             react(e, t, n) {
                 let { gameId: i } = e;
-                return (0, l.jsx)(eE.A, { gameId: i, authorId: n.authorId }, n.key);
+                return (0, l.jsx)(
+                    eE.A,
+                    { gameId: i, authorId: n.authorId, shouldFetchGameMentionData: n.shouldFetchGameMentionData },
+                    n.key,
+                );
             },
         },
     };

@@ -107,8 +107,10 @@ let g = i().once(() =>
             for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
             return j()(...t);
         },
-        parseTopic: (e, t, n, l) => b()(e, t, { allowLinks: !0, ...n }, l),
-        parseTruncatedTopic: (e, t, n, l) => R()(e, t, { allowLinks: !0, ...n }, l),
+        parseTopic: (e, t, n, l) =>
+            b()(e, t, { allowLinks: !0, allowGameMentions: !0, shouldFetchGameMentionData: !0, ...n }, l),
+        parseTruncatedTopic: (e, t, n, l) =>
+            R()(e, t, { allowLinks: !0, allowGameMentions: !0, shouldFetchGameMentionData: !0, ...n }, l),
         parseVoiceChannelStatus: function () {
             for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
             return O()(...t);
