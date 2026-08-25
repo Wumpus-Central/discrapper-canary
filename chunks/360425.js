@@ -1,1 +1,3 @@
-s.exports = { OkmBx0: ["Temos"] };
+i.exports = JSON.parse(
+    '{"B9PPxE":["\u0160is turinys \u0161iuo metu slepiamas."],"Y9ZOp8":["\u0160is turinys \u0161iuo metu rodomas."],"pmIitA":["\u017Daidimas i\u0161 tikr\u0173 pinig\u0173"],"foQaI1":["Remiamo turinio valdymas"],"z/MfaY":["Discord leid\u017Eia valdyti, ar matysi su tam tikromis temomis susijus\u012F remiam\u0105 turin\u012F. Jei pasl\u0117psi kuri\u0105 nors toliau pateikt\u0105 tem\u0105, nematysi jokio su ta tema susijusio remiamo turinio. Nepaisant \u0161i\u0173 pasirinkim\u0173, tam tikr\u0105 tau rodom\u0105 turin\u012F reguliuos Discord reklamos politika. ",[8,"$link",["Su\u017Einoti daugiau"],[[1,"helpdeskArticle"]]]],"yyhs9L":["Remiamo turinio valdymas"],"OkmBx0":["Temos"],"tLA5Ft":["Valdyk, kiek tur\u0117tume suasmeninti remiam\u0105 turin\u012F ir koki\u0173 tem\u0173 reklamas tau rodyti."],"i8WB+Y":["Remiamo turinio nuostatos"],"XUj46U":["Remiamas turinys"]}',
+);

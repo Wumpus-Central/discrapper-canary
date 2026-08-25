@@ -539,6 +539,7 @@
   "CHURN_USER_OFFER": "/users/@me/billing/churn-user-offer",
   "USER_OFFER_REDEEM": "/users/@me/billing/user-offer/redeem",
   "REACTIVATION_OFFER_REDEEM": "/users/@me/billing/subscriptions/:param/reactivation-offers/:param/redeem",
+  "USER_OFFER_TRIGGER": "/users/@me/billing/user-offer/trigger",
   "USER_PERKS_DEMOS": "/users/@me/perks-demos",
   "USER_PERKS_DEMOS_ACTIVATE": "/users/@me/activate-perk-demo/:param",
   "PARTNER_PERK": "/users/@me/partner-perks/:param",

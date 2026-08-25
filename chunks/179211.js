@@ -1,1 +1,3 @@
-p.exports = { OkmBx0: ["Teme"] };
+a.exports = JSON.parse(
+    '{"B9PPxE":["Ovaj se sadr\u017Eaj trenuta\u010Dno skriva."],"Y9ZOp8":["Ovaj se sadr\u017Eaj trenuta\u010Dno prikazuje."],"pmIitA":["Igre za pravi novac"],"foQaI1":["Upravljaj sponzoriranim sadr\u017Eajem"],"z/MfaY":["Discord ti omogu\u0107uje da upravlja\u0161 prikazom sponzoriranog sadr\u017Eaja povezanog s odre\u0111enim temama. Ako sakrije\u0161 temu u nastavku, ne\u0107e\u0161 vidjeti sponzorirani sadr\u017Eaj iz te teme. Discordova pravila o oglasima upravljat \u0107e odre\u0111enim sadr\u017Eajem koji vidi\u0161 bez obzira na te odabire. ",[8,"$link",["Doznaj vi\u0161e"],[[1,"helpdeskArticle"]]]],"yyhs9L":["Upravljaj sponzoriranim sadr\u017Eajem"],"OkmBx0":["Teme"],"tLA5Ft":["Upravljaj prilago\u0111avanjem sponzoriranog sadr\u017Eaja i upravljaj temama oglasa koje vidi\u0161."],"i8WB+Y":["Postavke sponzoriranog sadr\u017Eaja"],"XUj46U":["Sponzorirani sadr\u017Eaj"]}',
+);
