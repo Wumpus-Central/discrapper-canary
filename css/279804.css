@@ -55,8 +55,6 @@
 }
 
 .banner__97f37.hasTrialOffer__97f37 {
-    margin-bottom: 16px;
-    margin-top: 16px;
     max-height: 172px
 }
 
@@ -75,18 +73,22 @@
 }
 
 .closeButton__97f37 {
-    color: var(--interactive-text-default);
-    cursor: pointer;
     inset-inline-end: 16px;
     position: absolute;
-    top: 16px
+    top: 16px;
+    z-index: 1
 }
 
 .contentFill__97f37 {
     background: var(--gradients-nitro-classic-diagonal, linear-gradient(45deg, var(--premium-tier-1-blue) 0, var(--premium-tier-1-purple) 75.25%));
     border-radius: 8px;
-    margin-top: 24px;
+    margin: 24px 64px 0;
     padding: 36px 84px
+}
+
+.contentFill__97f37.contentFillWithOffer__97f37 {
+    margin: 16px 64px 0;
+    padding: 12px 84px
 }
 
 .nitroWheel__97f37 {
@@ -130,12 +132,21 @@
 
 .ctaActionWrapper__97f37 {
     align-items: center;
-    box-sizing: border-box;
     display: flex;
     justify-content: center;
     margin-top: 24px;
-    padding: 0 48px;
+    padding: 0 48px
+}
+
+.ctaActionWrapper__97f37,
+.offerUpsell__97f37 {
+    box-sizing: border-box;
     width: 100%
 }
 
-/*# sourceMappingURL=279804.85f6255557e173f5.css.map*/
+.offerUpsell__97f37 {
+    margin-top: 12px;
+    padding-bottom: 8px
+}
+
+/*# sourceMappingURL=279804.fa781ce1fa608891.css.map*/

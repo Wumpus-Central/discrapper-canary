@@ -345,7 +345,7 @@ function Y(e) {
                 className: G.hQ,
                 children: [
                     (0, i.jsx)(I.D, { variant: "heading-xl/bold", color: "text-strong", children: t }),
-                    (0, i.jsx)(h.E, { variant: "text-md/normal", children: r }),
+                    null != r && (0, i.jsx)(h.E, { variant: "text-md/normal", children: r }),
                     (0, i.jsx)(F, {
                         trialOffer: A,
                         discountOffer: N,
