@@ -38,13 +38,16 @@
 }
 
 .guildTag_f4bc97 {
+    flex-shrink: 0;
+    margin-inline-start: var(--space-4)
+}
+
+.guildTagChip_f4bc97 {
     background: unset;
     border: 1px solid var(--user-profile-border);
     border-radius: var(--radius-sm);
     box-sizing: border-box;
-    flex-shrink: 0;
-    height: 20px;
-    margin-inline-start: var(--space-4)
+    height: 20px
 }
 
-/*# sourceMappingURL=933373.9545760c0ba75c71.css.map*/
+/*# sourceMappingURL=933373.337b1391a717e0ba.css.map*/

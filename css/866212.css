@@ -1945,7 +1945,7 @@
     width: 4px
 }
 
-.guildTag__26b1f {
+.guildTag__26b1f.guildTag__26b1f {
     background: transparent;
     border: 1px solid var(--user-profile-border);
     border-radius: var(--radius-sm);
@@ -1955,9 +1955,33 @@
     transition: background 50ms ease-in
 }
 
-.guildTag__26b1f:hover {
+.guildTag__26b1f.guildTag__26b1f:hover {
     background-color: var(--user-profile-background-hover);
     transition: background .15s ease-out
 }
 
-/*# sourceMappingURL=866212.67821b55b2cf15b1.css.map*/
+.guildTagPill__26b1f.guildTagPill__26b1f {
+    background: var(--background-mod-subtle);
+    border: 1px solid var(--border-muted);
+    border-radius: var(--radius-sm);
+    box-sizing: border-box;
+    height: 24px;
+    margin: 0 auto;
+    padding-inline: var(--space-8);
+    transition: background 50ms ease-in
+}
+
+.custom-user-profile-theme.theme-light .guildTagPill__26b1f.guildTagPill__26b1f {
+    background: var(--opacity-white-24)
+}
+
+.guildTagPill__26b1f.guildTagPill__26b1f:hover {
+    background-color: var(--background-mod-strong);
+    transition: background .15s ease-out
+}
+
+.custom-user-profile-theme.theme-light .guildTagPill__26b1f.guildTagPill__26b1f:hover {
+    background-color: var(--opacity-white-40)
+}
+
+/*# sourceMappingURL=866212.70a95f7d704f65e7.css.map*/

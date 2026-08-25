@@ -1951,6 +1951,10 @@
     padding: 1px 3px
 }
 
+.custom-user-profile-theme.theme-light .managed__8061a {
+    background: var(--opacity-white-24)
+}
+
 .customizable__8061a {
     cursor: pointer;
     transition: background .1s ease-in-out
@@ -1958,6 +1962,10 @@
 
 .customizable__8061a:hover {
     background: var(--background-mod-strong)
+}
+
+.custom-user-profile-theme.theme-light .customizable__8061a:hover {
+    background: var(--opacity-white-40)
 }
 
 .badge__8061a {
@@ -1992,4 +2000,4 @@
     object-fit: contain
 }
 
-/*# sourceMappingURL=471846.1a718683c8c46350.css.map*/
+/*# sourceMappingURL=471846.5db70d60a7f95e8d.css.map*/

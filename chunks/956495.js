@@ -17,4 +17,5 @@ _.exports = {
     sw: "userTagDiscriminator__26b1f",
     SC: "dotSpacer__26b1f",
     Mp: "guildTag__26b1f",
+    Bb: "guildTagPill__26b1f",
 };

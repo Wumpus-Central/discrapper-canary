@@ -65,6 +65,41 @@
     transition: background .15s ease-out
 }
 
+.selectButtonPill_ac381c {
+    align-items: center;
+    background: var(--background-mod-subtle);
+    border: 1px solid var(--border-muted);
+    border-radius: var(--radius-sm);
+    box-sizing: border-box;
+    cursor: pointer;
+    display: inline-flex;
+    height: 24px;
+    padding-inline-end: 6px;
+    padding-inline-start: var(--space-8);
+    transition: background 50ms ease-in
+}
+
+.custom-user-profile-theme.theme-light .selectButtonPill_ac381c {
+    background: var(--opacity-white-24)
+}
+
+.selectButtonPill_ac381c.isPlaceholder_ac381c {
+    padding-inline-start: 6px
+}
+
+.selectButtonPill_ac381c:focus-visible,
+.selectButtonPill_ac381c:hover,
+.selectButtonPill_ac381c[aria-expanded=true] {
+    background: var(--background-mod-strong);
+    transition: background .15s ease-out
+}
+
+.custom-user-profile-theme.theme-light .selectButtonPill_ac381c:focus-visible,
+.custom-user-profile-theme.theme-light .selectButtonPill_ac381c:hover,
+.custom-user-profile-theme.theme-light .selectButtonPill_ac381c[aria-expanded=true] {
+    background: var(--opacity-white-40)
+}
+
 .selectButtonContent_ac381c {
     align-items: center;
     display: flex;
@@ -84,6 +119,7 @@
     margin-inline-start: 2px
 }
 
+.selectButtonPill_ac381c[aria-expanded=true] .selectButtonChevron_ac381c,
 .selectButton_ac381c[aria-expanded=true] .selectButtonChevron_ac381c {
     transform: rotate(180deg)
 }
@@ -101,7 +137,8 @@
     padding: 0
 }
 
-.enable-forced-colors .selectButton_ac381c {
+.enable-forced-colors .selectButton_ac381c,
+.enable-forced-colors .selectButtonPill_ac381c {
     border: 1px solid ButtonText
 }
 
@@ -598,4 +635,4 @@
     margin-top: 4px
 }
 
-/*# sourceMappingURL=180644.68cee36aa61b7280.css.map*/
+/*# sourceMappingURL=180644.43794493c9a6647e.css.map*/

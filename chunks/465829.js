@@ -1,4 +1,4 @@
-n.d(t, { Ay: () => T, Ce: () => I, c$: () => R, n2: () => N });
+n.d(t, { Ay: () => S, Ce: () => v, c$: () => R, n2: () => I });
 var a = n(477900);
 n(582128);
 var l = n(503698),
@@ -14,10 +14,11 @@ var l = n(503698),
     m = n(922301),
     g = n(660184),
     p = n(534400),
-    b = n(518477),
-    _ = n(375708),
-    h = n(956495);
-let A = { sm: "heading-lg/bold", lg: "heading-xl/semibold" };
+    b = n(436921),
+    _ = n(518477),
+    h = n(375708),
+    A = n(956495);
+let x = { sm: "heading-lg/bold", lg: "heading-xl/semibold" };
 function R(e) {
     let {
             user: t,
@@ -30,7 +31,7 @@ function R(e) {
             className: u,
         } = e,
         f = (0, E.A)({ userId: t.id, guildId: n, pendingDisplayNameStyles: d }),
-        p = A[i];
+        p = x[i];
     return null != f
         ? (0, a.jsx)(s.E, {
               variant: p,
@@ -39,7 +40,7 @@ function R(e) {
                   userName: l,
                   displayNameStyles: f,
                   effectDisplayType: m.G.ANIMATED,
-                  textClassName: h.QC,
+                  textClassName: A.QC,
                   shouldWrap: !0,
                   loop: !0,
                   inProfile: !0,
@@ -47,9 +48,9 @@ function R(e) {
                   appendedInlineContent: null != c ? (0, a.jsxs)(a.Fragment, { children: [" ", c] }) : null,
               }),
           })
-        : (0, a.jsxs)(s.E, { className: r()(h.QC, h.O2, u), variant: p, children: [l, " ", c] });
+        : (0, a.jsxs)(s.E, { className: r()(A.QC, A.O2, u), variant: p, children: [l, " ", c] });
 }
-function x(e) {
+function N(e) {
     let {
             user: t,
             guildId: n,
@@ -60,7 +61,7 @@ function x(e) {
             onClickDisplayName: c,
         } = e,
         E = (0, u.r)(t),
-        m = null != E ? (0, a.jsx)(f.A, { type: E, verified: t.isVerifiedBot(), className: h.AO }) : null,
+        m = null != E ? (0, a.jsx)(f.A, { type: E, verified: t.isVerifiedBot(), className: A.AO }) : null,
         g = (0, a.jsx)(R, {
             user: t,
             guildId: n,
@@ -71,29 +72,29 @@ function x(e) {
             displayNameTrailing: m,
         });
     return (0, a.jsxs)("div", {
-        className: r()(h.K$, "lg" === d && h.lg),
+        className: r()(A.K$, "lg" === d && A.lg),
         children: [
-            null != c ? (0, a.jsx)(i.D, { onClick: c, className: h.vk, children: g }) : g,
-            null != s && !1 !== s && (0, a.jsx)("div", { className: h.MU, children: s }),
+            null != c ? (0, a.jsx)(i.D, { onClick: c, className: A.vk, children: g }) : g,
+            null != s && !1 !== s && (0, a.jsx)("div", { className: A.MU, children: s }),
         ],
     });
 }
-function N(e) {
+function I(e) {
     let { pronouns: t, className: n } = e;
     return (0, a.jsxs)(s.E, {
-        className: r()(h.hI, n),
+        className: r()(A.hI, n),
         variant: "text-sm/medium",
         color: "text-strong",
         children: [
-            (0, a.jsx)(d.A, { tag: "span", children: _.intl.formatToPlainString(_.t["DRI+T7"], { pronouns: t }) }),
+            (0, a.jsx)(d.A, { tag: "span", children: h.intl.formatToPlainString(h.t["DRI+T7"], { pronouns: t }) }),
             (0, a.jsx)("span", { "aria-hidden": "true", children: t }),
         ],
     });
 }
-function I() {
-    return (0, a.jsx)("div", { "aria-hidden": "true", className: h.SC });
+function v() {
+    return (0, a.jsx)("div", { "aria-hidden": "true", className: A.SC });
 }
-function v(e) {
+function T(e) {
     let {
             user: t,
             usernameIcon: n,
@@ -104,41 +105,49 @@ function v(e) {
             trailing: E,
             onClose: m,
         } = e,
-        g = null != s && s.length > 0,
-        A = (0, u.r)(t),
-        R = t.isProvisional
+        g = (0, b.j)({ location: "UserProfileUserInfo" }),
+        x = null != s && s.length > 0,
+        R = (0, u.r)(t),
+        N = t.isProvisional
             ? null
             : (0, a.jsx)(c.A, {
                   user: t,
                   usernameIcon: n,
                   forceUsername: !0,
-                  className: h.a1,
-                  usernameClass: h.eb,
-                  discriminatorClass: h.sw,
+                  className: A.a1,
+                  usernameClass: A.eb,
+                  discriminatorClass: A.sw,
                   hideBotTag: !0,
               });
     return (0, a.jsxs)("div", {
-        className: r()(h.AK, { [h.j6]: g, [h.w2]: null != A }),
+        className: r()(A.AK, { [A.j6]: x, [A.w2]: null != R }),
         children: [
-            null != R && null != l ? (0, a.jsx)(i.D, { onClick: l, className: h.vk, children: R }) : R,
-            g &&
+            null != N && null != l ? (0, a.jsx)(i.D, { onClick: l, className: A.vk, children: N }) : N,
+            x &&
                 (0, a.jsxs)(a.Fragment, {
                     children: [
-                        (0, a.jsx)(I, {}),
+                        (0, a.jsx)(v, {}),
                         (0, a.jsx)(o.m, {
-                            text: _.intl.string(_.t.GI2A8C),
-                            delay: b.In,
+                            text: h.intl.string(h.t.GI2A8C),
+                            delay: _.In,
                             ariaHidden: !0,
-                            children: (0, a.jsx)("span", { className: h.Ez, children: (0, a.jsx)(N, { pronouns: s }) }),
+                            children: (0, a.jsx)("span", { className: A.Ez, children: (0, a.jsx)(I, { pronouns: s }) }),
                         }),
                     ],
                 }),
-            (0, a.jsx)(p.Ay, { primaryGuild: d, userId: t.id, contextGuildId: f, onClose: m, className: h.Mp }),
+            (0, a.jsx)(p.Ay, {
+                primaryGuild: d,
+                userId: t.id,
+                contextGuildId: f,
+                onClose: m,
+                textVariant: g ? "text-xs/normal" : "text-xs/semibold",
+                className: g ? A.Bb : A.Mp,
+            }),
             E,
         ],
     });
 }
-function T(e) {
+function S(e) {
     let {
         user: t,
         guildId: n,
@@ -158,7 +167,7 @@ function T(e) {
     return (0, a.jsxs)("div", {
         className: l,
         children: [
-            (0, a.jsx)(x, {
+            (0, a.jsx)(N, {
                 user: t,
                 guildId: n,
                 displayName: s,
@@ -167,7 +176,7 @@ function T(e) {
                 onClickDisplayName: r,
                 trailing: o,
             }),
-            (0, a.jsx)(v, {
+            (0, a.jsx)(T, {
                 user: t,
                 usernameIcon: c,
                 pronouns: u,
