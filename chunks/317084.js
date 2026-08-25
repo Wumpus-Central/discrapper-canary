@@ -1,4 +1,4 @@
-n.d(t, { A: () => k }), n(321073);
+n.d(t, { A: () => S }), n(321073);
 var r = n(477900),
     i = n(582128),
     s = n(562708),
@@ -14,8 +14,8 @@ var r = n(477900),
     p = n(813564),
     m = n(933204),
     A = n(805143),
-    v = n(435558),
-    y = n.n(v),
+    y = n(435558),
+    v = n.n(y),
     x = n(939249);
 function w(e, t, n) {
     return (n.y - e.y) * (t.x - e.x) > (t.y - e.y) * (n.x - e.x);
@@ -107,7 +107,7 @@ let I = i.memo(function (e) {
         [w, I] = i.useState(0),
         [T, j] = i.useState({ x: 0, y: 0 }),
         k = Math.abs(T.x) + Math.abs(T.y) > 0,
-        S = i.useMemo(() => y().chunk(f, _), [f]),
+        S = i.useMemo(() => v().chunk(f, _), [f]),
         P = i.useCallback(
             (e, t) => {
                 null == p.current[w] ? (p.current[w] = []) : (p.current[w][t] = e);
@@ -155,7 +155,7 @@ let I = i.memo(function (e) {
         ),
         G = i.useMemo(
             () =>
-                (0, v.throttle)((e) => {
+                (0, y.throttle)((e) => {
                     var r;
                     let i;
                     if (null == g.current) return;
@@ -315,15 +315,15 @@ let I = i.memo(function (e) {
         }),
     });
 });
-var T = n(805945);
-n(980504);
-var j = n(613967);
-function k(e) {
+var T = n(805945),
+    j = n(980504),
+    k = n(613967);
+function S(e) {
     let {
             guildId: t,
             channel: n,
-            width: v,
-            height: y,
+            width: y,
+            height: v,
             keepOpen: x,
             interactive: w = !0,
             analyticsSource: E,
@@ -346,13 +346,13 @@ function k(e) {
         N = (0, m.T)(),
         O = i.useRef(null),
         [_, D] = i.useState(void 0),
-        k = (0, o.bG)([u.A], () => u.A.getMediaSessionId()),
-        { analyticsLocations: S } = (0, a.Ay)(l.A.SOUNDBOARD_WHEEL),
-        P = i.useCallback(
+        S = (0, o.bG)([u.A], () => u.A.getMediaSessionId()),
+        { analyticsLocations: P } = (0, a.Ay)(l.A.SOUNDBOARD_WHEEL),
+        L = i.useCallback(
             (e) => {
-                (0, p.Ak)(e, n.id, S), C();
+                (0, p.Ak)(e, n.id, P), C();
             },
-            [S, n.id, C],
+            [P, n.id, C],
         );
     i.useEffect(() => {
         f.E7(), d.bW.loadIfNecessary();
@@ -363,43 +363,43 @@ function k(e) {
         i.useEffect(
             () => () => {
                 let e = O.current;
-                x || null == e || P(e);
+                x || null == e || L(e);
             },
-            [x, P],
+            [x, L],
         ),
         (0, c.A)(
             {
                 type: s.ImpressionTypes.POPOUT,
                 name: s.ImpressionNames.SOUNDBOARD_POPOUT,
-                properties: { source: E, guild_id: t, media_session_id: k },
+                properties: { source: E, guild_id: t, media_session_id: S, type: j.c4.WHEEL },
             },
             { disableTrack: !w },
         );
-    let L = i.useCallback((e) => {
+    let R = i.useCallback((e) => {
             (O.current = e), D(e?.soundId);
         }, []),
-        R = i.useCallback(
-            (e) => {
-                if (null == e) return void L(null);
-                let t = b[e];
-                null != t && L(t);
-            },
-            [L, b],
-        ),
         M = i.useCallback(
+            (e) => {
+                if (null == e) return void R(null);
+                let t = b[e];
+                null != t && R(t);
+            },
+            [R, b],
+        ),
+        U = i.useCallback(
             (e) => {
                 if (null == e) return;
                 let t = b[e];
-                null != t && P(t);
+                null != t && L(t);
             },
-            [b, P],
+            [b, L],
         ),
-        U = i.useMemo(
+        K = i.useMemo(
             () =>
                 b.map((e) =>
                     (0, r.jsx)(
                         T.Ay,
-                        { interactive: w, className: j.a, sound: e, focused: _ === e.soundId, channel: n },
+                        { interactive: w, className: k.a, sound: e, focused: _ === e.soundId, channel: n },
                         e.soundId,
                     ),
                 ),
@@ -408,19 +408,19 @@ function k(e) {
     return 0 === b.length
         ? null
         : (0, r.jsx)(a.f5, {
-              value: S,
+              value: P,
               children: (0, r.jsx)(I, {
-                  wheelWidth: v,
-                  wheelHeight: y,
+                  wheelWidth: y,
+                  wheelHeight: v,
                   itemWidth: 96,
                   itemHeight: 52,
                   showDeadZoneIndicator: !x,
                   activeItem: _,
-                  onItemSelect: R,
-                  onItemAction: M,
+                  onItemSelect: M,
+                  onItemAction: U,
                   onClose: C,
                   interactive: w,
-                  children: U,
+                  children: K,
               }),
           });
 }

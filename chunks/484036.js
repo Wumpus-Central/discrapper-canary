@@ -1275,6 +1275,7 @@ function tc(e) {
                 available_custom_sounds_count: eT.unlockedCustomSoundCount,
                 unavailable_custom_sounds_count: eT.lockedCustomSoundCount,
                 favorite_sounds_count: eT.favoriteSoundCount,
+                type: eI.c4.FULL_PICKER,
             },
         }),
         (0, l.jsxs)(l.Fragment, {
