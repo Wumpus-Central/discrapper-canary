@@ -33,9 +33,9 @@ function S(e) {
         b = h ? null : (S ?? null),
         R = (0, x.r)(A.A.unsafe_rawColors.PRIMARY_800).hex(),
         L = null != n ? n.guildId : s,
-        M = t.getAvatarURL(L ?? void 0, (0, a.FT)(o)),
-        k = (0, p.LX)((0, f.Ay)(M, R, !1)),
-        O = (0, E.A)(n?.primaryColor ?? k).hex,
+        k = t.getAvatarURL(L ?? void 0, (0, a.FT)(o)),
+        M = (0, p.LX)((0, f.Ay)(k, R, !1)),
+        O = (0, E.A)(n?.primaryColor ?? M).hex,
         P = { align: "center", insetBottom: 0, radius: (0, T.A)(o) };
     return (0, i.jsx)(j.A, {
         bannerSrc: b,
@@ -51,8 +51,8 @@ var y = n(280450),
     b = n(984545),
     R = n(35241),
     L = n(587168),
-    M = n(193738),
-    k = n(133385),
+    k = n(193738),
+    M = n(133385),
     O = n(996988);
 function P(e) {
     let { user: t, guildId: n } = e;
@@ -60,7 +60,7 @@ function P(e) {
         ? (0, i.jsx)(R.A, { user: t })
         : t.bot
           ? (0, i.jsx)(b.A, { user: t, guildId: n })
-          : (0, i.jsx)(k.yo, { user: t, guildId: n });
+          : (0, i.jsx)(M.yo, { user: t, guildId: n });
 }
 function D(e) {
     let { user: t, guildId: n } = e;
@@ -68,7 +68,7 @@ function D(e) {
         ? null
         : (0, i.jsxs)(L.A, {
               children: [
-                  !t.isNonUserBot() && (0, i.jsx)(M.A, { user: t, themeType: O.d.EMBED }),
+                  !t.isNonUserBot() && (0, i.jsx)(k.A, { user: t, themeType: O.d.EMBED }),
                   (0, i.jsx)(P, { user: t, guildId: n ?? void 0 }),
               ],
           });

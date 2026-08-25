@@ -83,8 +83,8 @@ let b = new y(x.h, {
 });
 var R = n(738125),
     L = n(554146),
-    M = n(43105),
-    k = n(826673),
+    k = n(43105),
+    M = n(826673),
     O = n(367727),
     P = n(49999),
     D = n(375708),
@@ -92,7 +92,7 @@ var R = n(738125),
 let G = L.M.FOR_LATER_REACTION_COACHMARK;
 function w(e) {
     let { targetElementRef: t, onDismiss: n } = e;
-    return (0, i.jsx)(M.A, {
+    return (0, i.jsx)(k.A, {
         targetElementRef: t,
         gradientColor: "purple",
         position: "top",
@@ -119,7 +119,7 @@ function F(e) {
         x = (0, h.bG)([b], () => b.isNudging(n.id, t.id)),
         E = l.useRef(null),
         { isCoachmarkVisible: I, dismissCoachmark: C } = (function (e) {
-            let t = (0, k.HX)(G),
+            let t = (0, M.HX)(G),
                 n = (0, h.bG)([v.A], () => v.A.getSavedMessageCount() > 0),
                 i = e && !t && !n,
                 [s, a] = l.useState(!1);
@@ -127,7 +127,7 @@ function F(e) {
             let [r, o] = l.useState(!1),
                 c = e && !r && (i || s),
                 d = l.useCallback((e) => {
-                    (0, k.Dr)(G, { dismissAction: e });
+                    (0, M.Dr)(G, { dismissAction: e });
                 }, []),
                 u = l.useCallback(
                     (e) => {

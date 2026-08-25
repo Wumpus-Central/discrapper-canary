@@ -17,7 +17,7 @@ var i = n(477900),
 let g = "CameraPreviewPosition";
 function C(e) {
     let { width: t, onContextMenuParticipant: n, height: a, channel: C, participants: y, onSelectParticipant: j } = e,
-        [I, E] = (function () {
+        [I, N] = (function () {
             let [e, t] = l.useState(() => o.w.get(g, m.CUs.BOTTOM_RIGHT));
             return [
                 e,
@@ -26,7 +26,7 @@ function C(e) {
                 }, []),
             ];
         })(),
-        N = l.useRef(null),
+        E = l.useRef(null),
         v = null == C.getGuildId() ? 70 : 50,
         b = (0, r.bG)([h.A], () => h.A.pipWidth(A.R8.CAMERA_PREVIEW)),
         T = y.length,
@@ -39,7 +39,7 @@ function C(e) {
             [T],
         );
     l.useLayoutEffect(() => {
-        N.current?.ensureIsInPosition();
+        E.current?.ensureIsInPosition();
     }, [y.length]);
     let S = l.useCallback(
             (e) => {
@@ -50,9 +50,9 @@ function C(e) {
         ),
         L = l.useCallback(
             (e, t) => {
-                E(t);
+                N(t);
             },
-            [E],
+            [N],
         );
     return (0, i.jsx)("div", {
         className: f.kL,
@@ -60,7 +60,7 @@ function C(e) {
             position: I,
             id: 0,
             width: _,
-            ref: N,
+            ref: E,
             onMove: L,
             onResize: S,
             maxX: t,

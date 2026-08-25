@@ -19,17 +19,17 @@ var i = n(477900),
     y = n(872772),
     j = n(360729),
     I = n(544299),
-    E = n(1195),
-    N = n(375708),
+    N = n(1195),
+    E = n(375708),
     v = n(96674),
     b = n(880872),
     T = n(849351),
     _ = n(572316),
     R = n(192063);
 let S = {
-        0: { src: _.A, alt: E.default.IrukuA, heightPx: 723 },
-        1: { src: T.A, alt: E.default.yITFQ7, heightPx: 593 },
-        2: { src: b.A, alt: E.default.uUhyVw, heightPx: 490 },
+        0: { src: _.A, alt: N.default.IrukuA, heightPx: 723 },
+        1: { src: T.A, alt: N.default.yITFQ7, heightPx: 593 },
+        2: { src: b.A, alt: N.default.uUhyVw, heightPx: 490 },
     },
     L = 30 * m.A.Millis.MINUTE,
     O = m.A.Millis.HOUR;
@@ -49,17 +49,17 @@ function M(e) {
     let { guildId: t, channelId: n, plant: a, plantPosition: c, disabled: h, plantWidth: p } = e,
         [m, A] = l.useState(P(a).stage),
         [C, j] = l.useState(null),
-        E = l.useRef([]),
+        N = l.useRef([]),
         b = l.useCallback(
             (e) => {
-                if (E.current.length > 0 || e === m) return;
+                if (N.current.length > 0 || e === m) return;
                 let [t, ...n] = (function (e, t) {
                     let n = t > e ? 1 : -1,
                         i = [];
                     for (let l = e + n; l !== t + n; l += n) i.push(l);
                     return i;
                 })(m, e);
-                (E.current = n), A(t);
+                (N.current = n), A(t);
             },
             [m],
         ),
@@ -72,7 +72,7 @@ function M(e) {
                 leave: { opacity: 0 },
                 config: { duration: 1e3 },
                 onRest: () => {
-                    let e = E.current.shift();
+                    let e = N.current.shift();
                     null != e && A(e);
                 },
             },
@@ -98,14 +98,14 @@ function M(e) {
                 (0, f.Xh)(t, n, a.objectId, { object_type: y.N.PLANT }).catch((e) => (0, g.b)()),
                 (0, x.Ql)({ guildId: t, channelId: n, interactionType: "plant_watered" }));
         }, [a, t, n, m]),
-        O = (0, I.Sb)({ position: { x: c.x, y: 100 - c.y }, targetLabel: N.intl.string(S[m].alt) });
+        O = (0, I.Sb)({ position: { x: c.x, y: 100 - c.y }, targetLabel: E.intl.string(S[m].alt) });
     return (0, i.jsxs)(o.D, {
         className: s()(v.CV, v.AA, h && v.r9),
         style: { left: `${c.x}%`, bottom: `${c.y}%`, width: `${p}px` },
         onClick: h ? void 0 : L,
         "aria-disabled": h && null == O,
         role: "listitem",
-        "aria-label": N.intl.string(S[m].alt),
+        "aria-label": E.intl.string(S[m].alt),
         ...O,
         children: [
             T((e, t) => {
@@ -136,7 +136,7 @@ function w(e) {
     return (0, i.jsxs)("div", {
         className: v.CV,
         role: "listitem",
-        "aria-label": N.intl.string(E.default.IrukuA),
+        "aria-label": E.intl.string(N.default.IrukuA),
         style: { left: `${t.x}%`, bottom: `${t.y}%`, width: `${n}px` },
         children: [
             (0, i.jsx)("img", { className: v.zs, src: _.A, alt: "", "aria-hidden": !0, draggable: !1 }),

@@ -19,8 +19,8 @@ var i = n(477900),
     y = n(789645),
     j = n(964486),
     I = n(648027),
-    E = n(855446),
-    N = n(793574),
+    N = n(855446),
+    E = n(793574),
     v = n(688810),
     b = n(975412),
     T = n(392054),
@@ -50,7 +50,7 @@ function D(e) {
 }
 function U(e) {
     let { channel: t, inPopout: n, handleClose: l } = e,
-        { analyticsLocations: a, newestAnalyticsLocation: r } = (0, v.Ay)(N.A.VC_TILE_ACTIVITY_SHELF_BUTTON);
+        { analyticsLocations: a, newestAnalyticsLocation: r } = (0, v.Ay)(E.A.VC_TILE_ACTIVITY_SHELF_BUTTON);
     return (0, i.jsx)(v.f5, {
         value: a,
         children: (0, i.jsxs)(L.A, {
@@ -100,7 +100,7 @@ function V(e) {
             n_participants: 1,
         });
     }, []);
-    let { analyticsLocations: c, newestAnalyticsLocation: d } = (0, v.Ay)(N.A.VC_TILE_ACTIVITY_INVITE);
+    let { analyticsLocations: c, newestAnalyticsLocation: d } = (0, v.Ay)(E.A.VC_TILE_ACTIVITY_INVITE);
     function p() {
         (0, m.openModalLazy)(
             async () => {
@@ -167,7 +167,7 @@ function k(e) {
         });
     });
     let u = (0, I.A)({ guildId: n.id }).slice(0, 3),
-        { analyticsLocations: h } = (0, v.Ay)(N.A.VC_TILE_ACTIVITY_SUGGESTION),
+        { analyticsLocations: h } = (0, v.Ay)(E.A.VC_TILE_ACTIVITY_SUGGESTION),
         p = l.useMemo(() => ({ channel: t, type: "channel" }), [t]);
     return (0, i.jsx)(v.f5, {
         value: h,
@@ -185,11 +185,11 @@ function k(e) {
                     className: s()(M.Di, { [M.qy]: o <= 300 }),
                     children: u.map((e) =>
                         (0, i.jsx)(
-                            E.C,
+                            N.C,
                             {
                                 context: p,
                                 activityItem: e,
-                                aspectRatio: E.C.AspectRatio.SIXTEEN_BY_NINE,
+                                aspectRatio: N.C.AspectRatio.SIXTEEN_BY_NINE,
                                 animatedDivClass: M.KU,
                                 commandOrigin: T.iw.VOICE_TILE_ACTIVITY_SUGGESTIONS,
                             },

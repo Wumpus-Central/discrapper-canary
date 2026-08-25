@@ -19,8 +19,8 @@ var i = n(477900),
     y = n(539572),
     j = n(118328),
     I = n(652215),
-    E = n(711918),
-    N = n(375708),
+    N = n(711918),
+    E = n(375708),
     v = n(771124),
     b = n(253146);
 function T() {
@@ -43,7 +43,7 @@ function R(e) {
         children: [
             (0, i.jsx)(s.m, {
                 asContainer: !0,
-                text: N.intl.string(N.t.J1hsY2),
+                text: E.intl.string(E.t.J1hsY2),
                 children: (0, i.jsx)(r.D, {
                     onClick: function () {
                         (0, A.openUserSettings)(m.X.CLIPS_PANEL);
@@ -71,7 +71,7 @@ function S(e) {
         [h, m] = l.useState(() => !s);
     s || h || m(!0);
     let A = h || !s,
-        j = A ? N.intl.string(E.default.oaIXoz) : N.intl.string(E.default.DpZqVj);
+        j = A ? E.intl.string(N.default.oaIXoz) : E.intl.string(N.default.DpZqVj);
     return (0, i.jsxs)(f.A, {
         className: v.zr,
         children: [
@@ -87,7 +87,7 @@ function S(e) {
                 className: v.pG,
                 variant: t >= 300 ? "text-md/medium" : "text-sm/medium",
                 color: "text-default",
-                children: N.intl.format(E.default.GqojUr, { learnMoreLink: x.A.getArticleURL(I.MVz.CLIPS) }),
+                children: E.intl.format(N.default.GqojUr, { learnMoreLink: x.A.getArticleURL(I.MVz.CLIPS) }),
             }),
             (0, i.jsx)("div", {
                 className: v.wq,

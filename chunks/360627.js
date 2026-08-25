@@ -1,4 +1,4 @@
-n.d(t, { A: () => E });
+n.d(t, { A: () => N });
 var i = n(477900),
     l = n(582128),
     a = n(503698),
@@ -54,9 +54,9 @@ function I(e) {
         ],
     });
 }
-function E(e) {
-    let { title: t, image: n, shouldShow: a = !0, forceOpen: o = !1, spacing: d, className: u, children: E } = e,
-        N = l.useId(),
+function N(e) {
+    let { title: t, image: n, shouldShow: a = !0, forceOpen: o = !1, spacing: d, className: u, children: N } = e,
+        E = l.useId(),
         v = l.useRef(null),
         b = (0, r.bG)([x.A], () => x.A.theme),
         { isHovered: T, setIsHovered: _, onMouseEnter: R, onMouseLeave: S } = (0, f.A)(100, 100);
@@ -108,11 +108,11 @@ function E(e) {
                         onFocus: R,
                         onBlur: S,
                         ...e,
-                        children: l.cloneElement(E, { "aria-describedby": N }),
+                        children: l.cloneElement(N, { "aria-describedby": E }),
                     }),
             }),
             (0, i.jsxs)(A.A, {
-                id: N,
+                id: E,
                 children: [
                     (0, i.jsx)(c.E, { variant: "text-sm/medium", children: t }),
                     (0, i.jsx)(c.E, { variant: "text-sm/normal", children: y.intl.string(C.default["2Ll0vk"]) }),

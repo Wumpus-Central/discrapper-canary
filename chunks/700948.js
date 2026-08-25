@@ -19,8 +19,8 @@ var i = n(477900),
     y = n(711478),
     j = n(487048),
     I = n(232571),
-    E = n(519342),
-    N = n(241215),
+    N = n(519342),
+    E = n(241215),
     v = n(207274),
     b = n(956480),
     T = n(189998),
@@ -76,7 +76,7 @@ function L(e) {
             role: "region",
             "aria-label": k(),
             children: W
-                ? (0, i.jsx)(N.A, {
+                ? (0, i.jsx)(E.A, {
                       channelId: t,
                       popoutType: n,
                       width: G,
@@ -111,7 +111,7 @@ function L(e) {
                                                   (0, i.jsxs)("div", {
                                                       ref: K,
                                                       children: [
-                                                          (0, i.jsx)(E.A, { channelId: t, roomWidth: z }),
+                                                          (0, i.jsx)(N.A, { channelId: t, roomWidth: z }),
                                                           (0, i.jsx)("div", {
                                                               role: "list",
                                                               "aria-label": el,

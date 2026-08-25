@@ -32,17 +32,17 @@ function y(e) {
         h,
         x,
         y,
-        { children: j, onExited: I, ariaLabel: E, dismissable: N = !1 } = e,
+        { children: j, onExited: I, ariaLabel: N, dismissable: E = !1 } = e,
         { isOpen: v, setOpen: b, triggerRef: T, menuId: _, spacing: R, centerSingleItem: S } = g(),
         L = l.useCallback(() => {
-            N && b(!1);
-        }, [N, b]),
+            E && b(!1);
+        }, [E, b]),
         O = (0, p.A)(null, L, T),
         P = l.useCallback(
             (e) => {
-                N && "Escape" === e.key && b(!1);
+                E && "Escape" === e.key && b(!1);
             },
-            [N, b],
+            [E, b],
         ),
         M = l.Children.toArray(j).filter(l.isValidElement),
         w = M.length,
@@ -132,7 +132,7 @@ function y(e) {
             ref: O,
             id: _,
             role: "menu",
-            "aria-label": E,
+            "aria-label": N,
             tabIndex: -1,
             className: s()(m.EQ, { [m.U4]: !v }),
             style: {

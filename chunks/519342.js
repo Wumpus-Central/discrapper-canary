@@ -19,8 +19,8 @@ var i = n(477900),
     y = n(85448),
     j = n(614881),
     I = n(480890),
-    E = n(450149),
-    N = n(607407),
+    N = n(450149),
+    E = n(607407),
     v = n(776231),
     b = n(267102),
     T = n(326567),
@@ -54,7 +54,7 @@ let ee = 16 / 9;
 function et(e) {
     let { title: t, stream: n, shouldShow: a, children: s } = e,
         [r, o] = l.useState(ee),
-        { previewUrl: c } = (0, E.A)(n.guildId, n.channelId, n.ownerId);
+        { previewUrl: c } = (0, N.A)(n.guildId, n.channelId, n.ownerId);
     return (
         l.useEffect(() => {
             if (null == c) return;
@@ -79,7 +79,7 @@ function et(e) {
                 className: J.J,
                 style: { aspectRatio: r },
                 children: [
-                    (0, i.jsx)(N.A, { stream: n, className: J.y6, noText: !0 }),
+                    (0, i.jsx)(E.A, { stream: n, className: J.y6, noText: !0 }),
                     (0, i.jsx)("div", {
                         className: J.ae,
                         "aria-hidden": !0,
@@ -97,8 +97,8 @@ function en(e) {
             channelId: n,
             x: a,
             y: d,
-            statusId: E,
-            numericAvatarSize: N,
+            statusId: N,
+            numericAvatarSize: E,
             avatarSize: G,
             posturesEnabled: H,
         } = e,
@@ -136,7 +136,7 @@ function en(e) {
                 ((0, U.EB)({ guildId: es, channelId: n, interactionType: "clicked" }),
                 ej && (ea || !en || !H) && (0, D.UV)(!0, n));
         }, [es, n, ea, ej, en, H]),
-        eE = l.useCallback(
+        eN = l.useCallback(
             (e) => {
                 let t = S.A.getChannel(n);
                 if (null != es && null != ee && null != t)
@@ -146,11 +146,11 @@ function en(e) {
             },
             [es, ee, n, $],
         ),
-        eN = l.useCallback(() => {
+        eE = l.useCallback(() => {
             null != es && (0, U.EB)({ guildId: es, channelId: n, interactionType: "hovered" });
         }, [es, n]),
         ev = (en && H) || ej,
-        eb = H ? z.x.find((e) => e.id === E) : null,
+        eb = H ? z.x.find((e) => e.id === N) : null,
         eT =
             null != em
                 ? Q.intl.formatToPlainString(eb?.userLabel ?? Z.default["4bL+KW"], {
@@ -169,7 +169,7 @@ function en(e) {
     let eL = (0, p.Kj)(G),
         eO = eL.status + 2 * eL.offset,
         eP = eb?.src,
-        eM = (0, v.kr)(Math.ceil(N * X.Xq) * (0, v.mZ)()),
+        eM = (0, v.kr)(Math.ceil(E * X.Xq) * (0, v.mZ)()),
         ew = null != eP ? `${eP}?width=${eM}&height=${eM}` : null,
         eD = ej
             ? (0, i.jsx)(j.A, {
@@ -203,7 +203,7 @@ function en(e) {
               })
             : (0, i.jsx)(y.Ay, {
                   userId: ee.id,
-                  src: ee.getAvatarURL(es, N, ec && ed),
+                  src: ee.getAvatarURL(es, E, ec && ed),
                   size: G,
                   muted: er?.isVoiceMuted() ?? !1,
                   deafen: er?.isVoiceDeafened() ?? !1,
@@ -226,17 +226,17 @@ function en(e) {
                           : void 0,
               }),
         eU = {
-            left: ex.x.to((e) => `calc(${e}% - ${N / 2}px)`),
-            top: ex.y.to((e) => `calc(${e}% - ${N / 2}px)`),
+            left: ex.x.to((e) => `calc(${e}% - ${E / 2}px)`),
+            top: ex.y.to((e) => `calc(${e}% - ${E / 2}px)`),
             zIndex: ea ? 1e6 : 1e3 * Math.round(d) + Math.round(a),
         };
     if (!H) {
         let e = (0, i.jsx)(f.D, {
             "aria-label": e_,
             className: J.KI,
-            onMouseEnter: eN,
+            onMouseEnter: eE,
             onClick: eI,
-            onContextMenu: eE,
+            onContextMenu: eN,
             ...eR,
             children: eD,
         });
@@ -251,9 +251,9 @@ function en(e) {
         ek = (0, i.jsx)(f.D, {
             "aria-label": e_,
             className: J.KI,
-            onMouseEnter: eN,
+            onMouseEnter: eE,
             onClick: eI,
-            onContextMenu: eE,
+            onContextMenu: eN,
             ...eR,
             children: eV,
         }),
@@ -277,11 +277,11 @@ function en(e) {
                                       innerRef: (e) => {
                                           t.current = e;
                                       },
-                                      onMouseEnter: eN,
+                                      onMouseEnter: eE,
                                       onClick: () => {
                                           n(), eI();
                                       },
-                                      onContextMenu: eE,
+                                      onContextMenu: eN,
                                       ...eR,
                                       children: eD,
                                   });
@@ -299,9 +299,9 @@ function en(e) {
                                   {
                                       text: Q.intl.string(e.label),
                                       icon: t,
-                                      selected: E === e.id,
+                                      selected: N === e.id,
                                       onClick: () => {
-                                          let t = E === e.id;
+                                          let t = N === e.id;
                                           (0, D.AQ)(es, n, {
                                               user_status_id: t ? 0 : e.id,
                                               user_status_text: t ? "" : Q.intl.string(e.label),

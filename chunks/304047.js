@@ -11,24 +11,24 @@ var l = n(477900),
     m = n(408278),
     p = n(597770),
     g = n(409626),
-    h = n(692969),
-    f = n(738250),
+    f = n(692969),
+    h = n(738250),
     A = n(830647),
     x = n(240248),
-    E = n(360469),
-    v = n(818348),
+    v = n(360469),
+    E = n(818348),
     C = n(375708),
     I = n(584841);
 function S(e) {
     let { applicationId: t, hideApplicationName: n } = e,
-        { gameId: i, gameRecord: s } = (0, f.A)({ applicationId: t }),
-        a = (0, h.A)({
+        { gameId: i, gameRecord: s } = (0, h.A)({ applicationId: t }),
+        a = (0, f.A)({
             location: "SocialLayerCommerceGameDetailsButton",
             gameId: i ?? void 0,
             source: g.GameProfileSources.CallTile,
             trackEntryPointImpression: !0,
         }),
-        d = s?.getIconURL(E.iu.SMALL);
+        d = s?.getIconURL(v.iu.SMALL);
     if (null == a || null == s || (0, x.uJ)(d)) return null;
     let m = C.intl.string(C.t.ajHoOr);
     return (0, l.jsx)(o.m, {
@@ -49,27 +49,27 @@ function S(e) {
 }
 function j(e) {
     let { userId: t, applicationId: n, channel: s, hideWhenInactive: u, idle: c } = e,
-        [g, h] = i.useState(!1),
-        f = i.useRef(null),
-        x = i.useCallback(() => h(!0), []),
-        E = i.useCallback(() => h(!1), []),
+        [g, f] = i.useState(!1),
+        h = i.useRef(null),
+        x = i.useCallback(() => f(!0), []),
+        v = i.useCallback(() => f(!1), []),
         S = C.intl.string(C.t["wg/30i"]);
     return (0, l.jsx)(a.Y, {
-        targetElementRef: f,
+        targetElementRef: h,
         shouldShow: g,
         animation: a.Y.Animation.FADE,
         position: "left",
         align: "bottom",
         spacing: 8,
-        onRequestClose: E,
+        onRequestClose: v,
         renderPopout: () =>
             (0, l.jsx)(d.N, {
-                theme: v.NJ.DARKER,
-                children: (e) => (0, l.jsx)(A.Z, { className: e, userId: t, channel: s, applicationId: n, onClose: E }),
+                theme: E.NJ.DARKER,
+                children: (e) => (0, l.jsx)(A.Z, { className: e, userId: t, channel: s, applicationId: n, onClose: v }),
             }),
         children: () =>
             (0, l.jsx)("div", {
-                ref: f,
+                ref: h,
                 children: (0, l.jsx)(o.m, {
                     text: S,
                     shouldShow: !g && void 0,

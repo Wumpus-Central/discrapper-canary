@@ -10,10 +10,10 @@ function o(e) {
         [u, c] = i.useState(),
         [d, m] = i.useState(),
         [p, g] = i.useState(),
-        [h, f] = i.useState(),
+        [f, h] = i.useState(),
         A = n.id.split(":").at(-1),
         x = t === A,
-        E = i.useCallback((e, t, n) => {
+        v = i.useCallback((e, t, n) => {
             var l, i;
             let s = n ? r.Ay.getOutboundStats(t) : r.Ay.getInboundStats(e, t),
                 a =
@@ -27,17 +27,17 @@ function o(e) {
                         ? ((i = s.bitrateEstimate), `${(i / 1e3).toFixed(2)} Kbps`)
                         : "unknown",
                 ),
-                f("unknown" === a || s?.fps === void 0 ? "-" : String(s.fps));
+                h("unknown" === a || s?.fps === void 0 ? "-" : String(s.fps));
         }, []);
     return (
         i.useEffect(() => {
             function e() {
-                return E(A, o, x);
+                return v(A, o, x);
             }
             e();
             let t = setInterval(e, 1e3);
             return () => clearInterval(t);
-        }, [x, A, o, E]),
+        }, [x, A, o, v]),
         (0, l.jsxs)("div", {
             className: a.w,
             children: [
@@ -55,7 +55,7 @@ function o(e) {
                 }),
                 (0, l.jsxs)("div", {
                     className: a.l,
-                    children: [(0, l.jsx)("span", { children: "FPS: " }), (0, l.jsx)("strong", { children: h })],
+                    children: [(0, l.jsx)("span", { children: "FPS: " }), (0, l.jsx)("strong", { children: f })],
                 }),
                 x &&
                     (0, l.jsxs)("div", {

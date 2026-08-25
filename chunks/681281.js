@@ -19,8 +19,8 @@ var i = n(477900),
     y = n(429913),
     j = n(47167),
     I = n(882840),
-    E = n(713654),
-    N = n(611371),
+    N = n(713654),
+    E = n(611371),
     v = n(769015),
     b = n(208971),
     T = n(446243),
@@ -100,7 +100,7 @@ function J(e) {
         B = P && !L,
         Z = (0, j.Ay)(t),
         J = B ? Y.intl.string(K.default.f7g0DK) : L ? `${Z} \xb7 ${Y.intl.string(K.default.wRLmM0)}` : Z,
-        ee = B ? d.Z : (0, E.gU)(t),
+        ee = B ? d.Z : (0, N.gU)(t),
         [et] = (0, y.A)(O?.type === $.lp.ACTIVITY ? [O.applicationId] : []),
         en = Y.intl.string(Y.t.BVZqJl);
     t.isDM() ? (en = Y.intl.string(Y.t.jN2DfZ)) : t.isGroupDM() && (en = Y.intl.string(Y.t["e5y+gm"]));
@@ -196,7 +196,7 @@ function J(e) {
                                       })
                                     : null,
                                 J,
-                                P && (0, i.jsx)(N.A, { className: q.vW }),
+                                P && (0, i.jsx)(E.A, { className: q.vW }),
                                 er &&
                                     (0, i.jsx)(u.m, {
                                         text: Y.intl.string(Y.t.QyZ4Td),

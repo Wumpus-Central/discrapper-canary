@@ -19,8 +19,8 @@ var i = n(477900),
     y = n(576705),
     j = n(686502),
     I = n(175203),
-    E = n(263854),
-    N = n(652215),
+    N = n(263854),
+    E = n(652215),
     v = n(886179);
 function b(e) {
     let {
@@ -34,21 +34,21 @@ function b(e) {
             totalNumberOfParticipants: L,
             popoutType: O,
         } = e,
-        P = (0, f.Us)() === N.BRT.POPOUT,
+        P = (0, f.Us)() === E.BRT.POPOUT,
         M = (0, r.bG)([C.A], () => C.A.getGuild(_.guild_id), [_.guild_id]),
-        { dismissedActivityEntryPointTileChannel: w } = (0, E.P)(),
+        { dismissedActivityEntryPointTileChannel: w } = (0, N.P)(),
         D = (0, r.bG)([h.A], () => h.A.getUserParticipantCount(_.id), [_]),
         U = (0, g.vp)(_.id, t),
         V = l.useCallback(() => {
             (0, s.r)(() => {
-                E.P.setState({ dismissedActivityEntryPointTileChannel: _.id });
+                N.P.setState({ dismissedActivityEntryPointTileChannel: _.id });
             });
         }, [_.id]);
     l.useEffect(() => {
         null != w &&
             _.id !== w &&
             (0, s.r)(() => {
-                E.P.setState({ dismissedActivityEntryPointTileChannel: null });
+                N.P.setState({ dismissedActivityEntryPointTileChannel: null });
             });
     }, [_.id, w]);
     let k = (0, r.bG)([y.A], () => _.isPrivate() || (0, A.K)(y.A, M, _), [M, _]),

@@ -19,8 +19,8 @@ var i = n(477900),
     y = n(927813),
     j = n(562153),
     I = n(218394),
-    E = n(393371),
-    N = n(360627),
+    N = n(393371),
+    E = n(360627),
     v = n(809369),
     b = n(652215),
     T = n(1195),
@@ -95,7 +95,7 @@ function w(e) {
         onFocus: el,
         onBlur: ea,
         children: [
-            (0, i.jsx)(N.A, {
+            (0, i.jsx)(E.A, {
                 title: q,
                 image: (0, i.jsx)(d.eu, { src: K?.getAvatarURL(Y.guildId, 96), size: u._3.SIZE_48, "aria-hidden": !0 }),
                 forceOpen: G,
@@ -112,7 +112,7 @@ function w(e) {
                                 (0, i.jsx)(r.animated.div, {
                                     className: R.G8,
                                     style: e,
-                                    children: (0, i.jsx)(E.A, { stream: t, previewClassName: R.oz }),
+                                    children: (0, i.jsx)(N.A, { stream: t, previewClassName: R.oz }),
                                 }),
                             ),
                         }),

@@ -19,8 +19,8 @@ var i = n(477900),
     y = n(309010),
     j = n(920639),
     I = n(82715),
-    E = n(731854),
-    N = n(375708),
+    N = n(731854),
+    E = n(375708),
     v = n(989952),
     b = n(550234);
 function T(e) {
@@ -32,7 +32,7 @@ function T(e) {
         L = (0, r.bG)([x.A, C.A], () => null != T && (0, h.vz)(T, x.A, C.A, !0)),
         { analyticsLocations: O } = (0, u.Ay)(d.A.GUILD_ROOM),
         { Component: P } = (0, o.c)("enable"),
-        M = (0, r.bG)([g.Ay], () => g.Ay.supports(E.O5.VIDEO)),
+        M = (0, r.bG)([g.Ay], () => g.Ay.supports(N.O5.VIDEO)),
         w = l.useRef(null),
         D = l.useCallback(() => {
             if (null != _) {
@@ -42,7 +42,7 @@ function T(e) {
         }, [_, S, t, O]);
     return null != T && null != _ && L && R && M
         ? (0, i.jsxs)(c.D, {
-              "aria-label": N.intl.string(N.t.fjBNo1),
+              "aria-label": E.intl.string(E.t.fjBNo1),
               className: b.XI,
               onClick: D,
               focusProps: { ringTarget: w },

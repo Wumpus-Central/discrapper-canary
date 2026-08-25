@@ -28,8 +28,8 @@ function h(e) {
         {
             tileStyle: j,
             tileWidth: I,
-            rows: E,
-            columns: N,
+            rows: N,
+            columns: E,
         } = l.useMemo(
             () =>
                 (function (e, t, n) {
@@ -62,21 +62,21 @@ function h(e) {
                 })(g, C, y),
             [g, C, y],
         ),
-        v = N + 1,
+        v = E + 1,
         b = v * I + (v - 1) * 8 <= f,
         T = Math.floor(I / c) + 8,
-        _ = Math.max(0, y - T * E) / 2;
+        _ = Math.max(0, y - T * N) / 2;
     return (0, i.jsx)(r.A, {
         fade: !0,
         className: t,
         listPadding: [h + _, 0, p + _ - 8, 8],
         renderRow: function (e) {
-            let t = e * N;
+            let t = e * E;
             return (0, i.jsx)(
                 "div",
                 {
                     className: o.nM,
-                    children: n?.slice(t, t + N)?.map((e, n) => {
+                    children: n?.slice(t, t + E)?.map((e, n) => {
                         let l = t + n;
                         return (0, i.jsx)(
                             "div",
@@ -84,8 +84,8 @@ function h(e) {
                                 style: j,
                                 className: s()(o.Vs, {
                                     [o.E3]: b,
-                                    [o.k4]: l >= (E - 1) * N,
-                                    [o.Kk]: (l + 1) % N == 0 || l === g - 1,
+                                    [o.k4]: l >= (N - 1) * E,
+                                    [o.Kk]: (l + 1) % E == 0 || l === g - 1,
                                 }),
                                 children: (0, i.jsx)("div", { className: o.eP, children: e(I) }),
                             },
@@ -96,8 +96,8 @@ function h(e) {
                 e,
             );
         },
-        rowCount: E,
-        rowCountBySection: [E],
+        rowCount: N,
+        rowCountBySection: [N],
         rowHeight: T,
         onResize: A,
     });

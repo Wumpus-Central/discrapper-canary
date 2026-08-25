@@ -37,8 +37,8 @@ function b(e, t) {
 }
 var R = n(702841),
     L = n(834730),
-    M = n(775602),
-    k = n(763754),
+    k = n(775602),
+    M = n(763754),
     O = n(953727);
 function P(e) {
     let { width: t = 440, height: n = 200, avatar: i, ...l } = e;
@@ -116,7 +116,7 @@ var D = n(652215),
     U = n(21088);
 function G(e) {
     let { guildId: t, user: n, username: i } = e,
-        l = (0, R.bG)([M.Ay], () => !M.Ay.useReducedMotion),
+        l = (0, R.bG)([k.Ay], () => !k.Ay.useReducedMotion),
         a = n.getAvatarURL(t, 56, l),
         r = (0, s.jsx)("img", { src: a, className: U.dj, alt: "" });
     return (0, s.jsxs)("div", {
@@ -151,7 +151,7 @@ function G(e) {
 }
 function w(e) {
     let { channel: t, message: i, compact: l } = e,
-        a = (0, k.Ay)(i),
+        a = (0, M.Ay)(i),
         r = (0, C.P)({ user: i.author, channelId: t.id, guildId: t.guild_id, messageId: i.id })(a),
         o = y.intl.format(y.t.TQs67g, {
             username: a.nick,
@@ -272,7 +272,7 @@ function ei(e) {
 var el = n(772303);
 function es(e) {
     let { guildId: t, user: n, className: i } = e,
-        l = (0, c.bG)([M.Ay], () => !M.Ay.useReducedMotion),
+        l = (0, c.bG)([k.Ay], () => !k.Ay.useReducedMotion),
         a = n.getAvatarURL(t, 56, l),
         r = (0, s.jsx)("foreignObject", {
             x: "30",
@@ -513,8 +513,8 @@ var eT = n(435558),
     eb = n(508770),
     eR = n(863574),
     eL = n(811656),
-    eM = n(166403),
-    ek = n(625494),
+    ek = n(166403),
+    eM = n(625494),
     eO = n(38405),
     eP = n(427262),
     eD = n(573359),
@@ -554,7 +554,7 @@ function eF(e) {
                             onClose: async () => {
                                 c ||
                                     ((c = !0),
-                                    ek._.dispatch(D.jej.WOW_MOMENT_CONFIRMATION_MODAL_CLOSED),
+                                    eM._.dispatch(D.jej.WOW_MOMENT_CONFIRMATION_MODAL_CLOSED),
                                     eD.A.isDisplayingWowMomentConfirmation && eD.A.isAnimated
                                         ? setTimeout(() => {
                                               n.onClose();
@@ -567,7 +567,7 @@ function eF(e) {
                     onCloseRequest: () => {
                         c ||
                             ((c = !0),
-                            ek._.dispatch(D.jej.WOW_MOMENT_CONFIRMATION_MODAL_CLOSED),
+                            eM._.dispatch(D.jej.WOW_MOMENT_CONFIRMATION_MODAL_CLOSED),
                             eD.A.isDisplayingWowMomentConfirmation && eD.A.isAnimated
                                 ? setTimeout(() => {
                                       (0, d.closeModal)(o);
@@ -658,13 +658,13 @@ let eY = function (e) {
             currentUser: d,
             premiumSubscription: u,
         } = (0, c.cf)(
-            [eU.A, T.default, eM.A],
+            [eU.A, T.default, ek.A],
             () => ({
                 inviteState: null != l ? eU.A.getInviteState(l) : ew.xI.NOT_FOUND,
                 isFetching: null != l && eU.A.isFetching(l),
                 invite: null != l ? eU.A.getInvite(l)?.invite : null,
                 currentUser: T.default.getCurrentUser(),
-                premiumSubscription: eM.A.getPremiumSubscription(),
+                premiumSubscription: ek.A.getPremiumSubscription(),
             }),
             [l],
         );
@@ -928,7 +928,7 @@ function tn(e) {
             [T.default],
             () => null != l && (0, e1.TW)(void 0 !== o && l.userId === o.id ? o : T.default.getUser(l.userId)),
         ),
-        u = (0, c.bG)([eM.A], () => (d ? eM.A.getPremiumTypeSubscription()?.trialEndsAt : null)),
+        u = (0, c.bG)([ek.A], () => (d ? ek.A.getPremiumTypeSubscription()?.trialEndsAt : null)),
         { analyticsLocations: m } = (0, V.Ay)(H.A.SHARE_NITRO_EMBED);
     return a
         ? (0, s.jsx)(eR.Wb, { isHorizontal: !eX.Fr })
@@ -1016,12 +1016,12 @@ function tE(e) {
 function tI(e) {
     let { message: t, channel: n, compact: i } = e,
         { author: l, mentions: a, type: r } = t,
-        o = (0, k.Ay)(t),
+        o = (0, M.Ay)(t),
         d = t.getChannelId(),
         u = (0, c.bG)([T.default], () => T.default.getUser(a[0]), [a]),
-        m = (0, k.m2)(l, n),
+        m = (0, M.m2)(l, n),
         h = (0, C.P)({ user: l, channelId: d, guildId: n.guild_id, messageId: t.id })(m),
-        g = (0, k.d8)(u, n),
+        g = (0, M.d8)(u, n),
         p = (0, C.P)({ user: u, channelId: d, guildId: n.guild_id, messageId: t.id })(g),
         A = tx[r] ?? null;
     if (null == A) return null;
@@ -1031,9 +1031,9 @@ function tI(e) {
 function tC(e) {
     let { message: t, channel: n, compact: i } = e,
         { author: l, type: a } = t,
-        r = (0, k.Ay)(t),
+        r = (0, M.Ay)(t),
         o = t.getChannelId(),
-        c = (0, k.m2)(l, n),
+        c = (0, M.m2)(l, n),
         d = (0, C.P)({ user: l, channelId: o, guildId: n.guild_id, messageId: t.id })(c),
         u = tf[a] ?? null;
     if (null == u) return null;
@@ -1130,8 +1130,8 @@ function tL(e) {
         });
     return null != i && l ? (0, s.jsx)(tR, { message: t, channel: n }) : null;
 }
-var tM = n(470710),
-    tk = n(734057),
+var tk = n(470710),
+    tM = n(734057),
     tO = n(290863),
     tP = n(309010),
     tD = n(977997),
@@ -1436,7 +1436,7 @@ function nE(e) {
                               if (null == e || null == t) return;
                               let i = et.A.getGuild(e);
                               if (i?.joinedAt == null) return nf.Z2(e, {}, { channelId: t });
-                              let l = tk.A.getChannel(t);
+                              let l = tM.A.getChannel(t);
                               if (null != l && (0, nA.ay)(l.type)) {
                                   if (n) {
                                       nh.A.updateChatOpen(l.id, !0), (0, v.pX)(D.BVt.CHANNEL(e, t));
@@ -1468,7 +1468,7 @@ function nv(e) {
             withFooter: c = !1,
             ...d
         } = e,
-        u = (0, k.Ay)(t);
+        u = (0, M.Ay)(t);
     return (0, s.jsx)("div", {
         className: eg()({ [n_.Ym]: c }, n_.gD, { [n_.oE]: a }, l),
         children: (0, s.jsx)(nI.A, {
@@ -1503,10 +1503,10 @@ var nN = n(10364),
     nb = n(19575),
     nR = n(6829);
 let nL = nb.Ay.getEnableHardwareAcceleration() ? nS.Js : nS.eu;
-function nM() {
+function nk() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
         [t, n] = a.useState(!1),
-        i = (0, c.bG)([M.Ay], () => M.Ay.useReducedMotion),
+        i = (0, c.bG)([k.Ay], () => k.Ay.useReducedMotion),
         l = a.useMemo(() => {
             let n = t || (!i && !e);
             return (0, ny.q)(n);
@@ -1516,7 +1516,7 @@ function nM() {
         eventHandlers: { onMouseEnter: a.useCallback(() => n(!0), []), onMouseLeave: a.useCallback(() => n(!1), []) },
     };
 }
-function nk(e) {
+function nM(e) {
     let { src: t } = e;
     return (0, s.jsx)("div", {
         className: nR.H,
@@ -1620,13 +1620,13 @@ let nz = a.memo(function (e) {
         { message: n, channel: i, embedChannel: l, compact: a, interactionUserId: r } = e,
         o = nU(n, i),
         c = nG(i, n.author),
-        d = (0, k.Ay)(n),
+        d = (0, M.Ay)(n),
         u = (0, nC.tO)({ message: n, channel: i, author: d, guildId: i?.guild_id, compact: a, ...o }, c),
         m = T.default.getUser(r),
         h = nU(n, i),
         g = nG(i, m, T.default.getCurrentUser());
     if (null != m) {
-        let e = (0, k.FT)(m, i),
+        let e = (0, M.FT)(m, i),
             l = (0, nC.tO)({ message: n, channel: i, author: e, guildId: i?.guild_id, compact: a, ...h }, g);
         t = () => l;
     }
@@ -1656,10 +1656,10 @@ function nJ(e) {
         {
             avatarSrc: r,
             eventHandlers: { onMouseEnter: o, onMouseLeave: d },
-        } = nM(!0),
+        } = nk(!0),
         { onFocus: u, ...m } = (0, ne.rm)(t ?? ""),
         { isFocused: h, handleFocus: g, handleBlur: A } = (0, nj.G8)(u),
-        x = (0, c.bG)([M.Ay], () => M.Ay.keyboardModeEnabled),
+        x = (0, c.bG)([k.Ay], () => k.Ay.keyboardModeEnabled),
         f = (0, c.bG)([K.A], () => K.A.can(D.xBc.MANAGE_MESSAGES, l), [l]),
         {
             ruleName: I,
@@ -1671,7 +1671,7 @@ function nJ(e) {
             flaggedMessageId: S,
             timeoutDuration: b,
             decisionReason: R,
-            alertActionsExecution: k,
+            alertActionsExecution: M,
             quarantineType: O,
             interactionUserId: P,
         } = (0, E.Ay)(i),
@@ -1700,7 +1700,7 @@ function nJ(e) {
         }, [l, i.id]),
         z = (0, nD.getFriendlyDurationString)(Number(b)),
         J = null != R,
-        Y = f && null != S && (null == k || !k.actions.hasOwnProperty(nr.G.DELETE_USER_MESSAGE)),
+        Y = f && null != S && (null == M || !M.actions.hasOwnProperty(nr.G.DELETE_USER_MESSAGE)),
         W = i.embeds.length > 0 ? i.embeds[0].fields.find((e) => "channel_id" === e.rawName)?.rawValue : null,
         X = null != W;
     return (0, s.jsx)("div", {
@@ -1708,7 +1708,7 @@ function nJ(e) {
         onMouseLeave: d,
         children: (0, s.jsx)(_.A, {
             className: eg()(nR.rs, { [nR.oE]: n }),
-            iconNode: n ? null : (0, s.jsx)(nk, { src: r }),
+            iconNode: n ? null : (0, s.jsx)(nM, { src: r }),
             iconContainerClassName: nR.zc,
             compact: n,
             children: (0, s.jsxs)("div", {
@@ -1898,7 +1898,7 @@ function nJ(e) {
                                           ],
                                       })
                                     : null,
-                                null != k ? (0, s.jsx)(nF, { alertActionsExecution: k, guildId: l.guild_id }) : null,
+                                null != M ? (0, s.jsx)(nF, { alertActionsExecution: M, guildId: l.guild_id }) : null,
                             ],
                         }),
                     }),
@@ -1983,7 +1983,7 @@ function n4(e) {
 function n7(e) {
     let { message: t, compact: n } = e,
         i = T.default.getUser((0, E.ZD)(t)),
-        l = tk.A.getBasicChannel(t.channel_id)?.guild_id,
+        l = tM.A.getBasicChannel(t.channel_id)?.guild_id,
         r = null != l && null != i ? j.Ay.getMember(l, i.id) : null,
         { avatarSrc: o, avatarDecorationSrc: c, eventHandlers: d } = (0, n1.A)({ userId: i?.id, guildId: l, size: 12 }),
         u = a.useRef(null);
@@ -2069,7 +2069,7 @@ function n7(e) {
 function n9(e) {
     let { message: t, compact: n } = e,
         { joinAttempts: i, raidDatetime: l, dmsSent: r, raidType: o, resolvedReason: d } = (0, E.Bk)(t),
-        u = (0, c.bG)([tk.A], () => tk.A.getChannel(t.channel_id), [t.channel_id]),
+        u = (0, c.bG)([tM.A], () => tM.A.getChannel(t.channel_id), [t.channel_id]),
         m = u?.guild_id ?? null,
         { shouldShowIncidentActions: h } = (0, nQ.Li)(m),
         g = (0, nj.Am)(t.author.id, t.channel_id),
@@ -2170,7 +2170,7 @@ function n9(e) {
 }
 function n8(e) {
     let { message: t, compact: n } = e,
-        i = tk.A.getBasicChannel(t.channel_id)?.guild_id,
+        i = tM.A.getBasicChannel(t.channel_id)?.guild_id,
         { raidDatetime: l, decisionId: r, suspiciousMentionActivityUntil: o } = (0, E.Bk)(t);
     return (0, s.jsx)(ie, {
         compact: n,
@@ -2258,7 +2258,7 @@ function it(e) {
         {
             avatarSrc: a,
             eventHandlers: { onMouseEnter: r, onMouseLeave: o },
-        } = nM(!0),
+        } = nk(!0),
         { notificationType: c } = (0, E.Bk)(i),
         d = null == c || c === nY.W.RAID;
     return (0, s.jsx)("div", {
@@ -2266,7 +2266,7 @@ function it(e) {
         onMouseLeave: o,
         children: (0, s.jsx)(_.A, {
             className: eg()(n2.rs, { [n2.oE]: n }),
-            iconNode: n ? null : (0, s.jsx)(nk, { src: a }),
+            iconNode: n ? null : (0, s.jsx)(nM, { src: a }),
             iconContainerClassName: n2.zc,
             compact: n,
             children: (0, s.jsxs)("div", {
@@ -2314,7 +2314,7 @@ function ii(e) {
 var il = n(480012);
 function is(e) {
     let { message: t, compact: i, missed: l, joinable: a, usernameHook: r, onClickJoinCall: o } = e,
-        c = (0, k.Ay)(t),
+        c = (0, M.Ay)(t),
         d = c.nick,
         u = r(c),
         m = (0, il.A)(t);
@@ -2361,7 +2361,7 @@ function ir(e) {
 function io(e) {
     let { usernameHook: t, message: i, compact: l } = e,
         { content: a, timestamp: r, messageReference: o } = i,
-        c = (0, k.Ay)(i),
+        c = (0, M.Ay)(i),
         d = t(c),
         u = (a ?? "").split(" ").slice(0, -1).join(" "),
         m = y.intl.format(y.t["47CZc2"], {
@@ -2376,7 +2376,7 @@ var ic = n(22231),
     id = n(73028);
 function iu(e) {
     let { message: t, usernameHook: n, compact: i } = e,
-        l = (0, k.Ay)(t),
+        l = (0, M.Ay)(t),
         a = n(l);
     return (0, s.jsx)(_.A, {
         iconNode: (0, s.jsx)(ic.PencilIcon, { size: "xs", color: "currentColor" }),
@@ -2399,7 +2399,7 @@ var im = n(663417),
     ig = n(564178);
 function ip(e) {
     let { message: t, channel: n, compact: i } = e,
-        l = (0, k.Ay)(t),
+        l = (0, M.Ay)(t),
         a = (0, C.P)({ user: t.author, channelId: n.id, guildId: n.guild_id, messageId: t.id })(l),
         r = (0, ih.h)(t.applicationId);
     if (null == r) return null;
@@ -2425,9 +2425,9 @@ function ip(e) {
 }
 function iA(e) {
     let { message: t, usernameHook: n, compact: i, isForumPost: l } = e,
-        a = (0, k.Ay)(t),
+        a = (0, M.Ay)(t),
         r = n(a),
-        o = (0, c.bG)([tk.A], () => tk.A.getChannel(t.channel_id)?.isGroupDM() ?? !1);
+        o = (0, c.bG)([tM.A], () => tM.A.getChannel(t.channel_id)?.isGroupDM() ?? !1);
     return (0, s.jsx)(_.A, {
         compact: i,
         iconNode: (0, s.jsx)(ic.PencilIcon, { size: "xs", color: "currentColor" }),
@@ -2459,7 +2459,7 @@ function iA(e) {
 var ix = n(366605);
 function iE(e) {
     let { message: t, usernameHook: n, onClickPins: i, compact: l } = e,
-        a = (0, k.Ay)(t),
+        a = (0, M.Ay)(t),
         r = a.nick,
         o = n(a);
     function c() {
@@ -2496,7 +2496,7 @@ function iC(e) {
         o = (0, c.bG)([T.default], () => (null != r ? T.default.getUser(r) : void 0), [r]),
         d = (0, c.bG)([T.default], () => T.default.getCurrentUser(), []),
         u = null != d && n.author.id === d.id,
-        m = (0, k.d8)(o, i),
+        m = (0, M.d8)(o, i),
         h = (0, C.P)({ user: o, channelId: a, guildId: void 0, messageId: n.id })(m);
     if (!i.isDM() || null == o || null == d) return null;
     let g = { username: m.nick, usernameHook: h },
@@ -2518,12 +2518,12 @@ function iC(e) {
 }
 function i_(e) {
     let { message: t, compact: n, usernameHook: i } = e,
-        l = (0, k.Ay)(t),
+        l = (0, M.Ay)(t),
         a = i(l),
         {
             avatarSrc: r,
             eventHandlers: { onMouseEnter: o, onMouseLeave: c },
-        } = nM(!0),
+        } = nk(!0),
         d =
             "" !== t.content
                 ? new Date(t.content).toLocaleString(y.intl.currentLocale, {
@@ -2539,7 +2539,7 @@ function i_(e) {
         onMouseLeave: c,
         children: (0, s.jsx)(_.A, {
             className: eg()(n2.rs, { [n2.oE]: n }),
-            iconNode: n ? null : (0, s.jsx)(nk, { src: r }),
+            iconNode: n ? null : (0, s.jsx)(nM, { src: r }),
             iconContainerClassName: n2.zc,
             compact: n,
             children: (0, s.jsxs)("div", {
@@ -2613,30 +2613,30 @@ var iy = n(363487),
     ib = n(828162),
     iR = n(49999),
     iL = n(641641),
-    iM = n(764828);
-let ik =
+    ik = n(764828);
+let iM =
         "https://cdn.discordapp.com/assets/content/d13cdfe882b0acba4f7752d488ba86dc628364d43eb3be876c8bb6f0bc80a240.png",
     iO =
         "https://cdn.discordapp.com/assets/content/424bcefb880eff14d647b0467cf446e83c27321af508a2e0a5f707d80c42e58b.png";
 function iP(e) {
     let { title: t, body: n, guild: i, analyticsLocations: l } = e,
-        a = (0, c.bG)([M.Ay], () => M.Ay.useReducedMotion);
+        a = (0, c.bG)([k.Ay], () => k.Ay.useReducedMotion);
     return (0, s.jsxs)("div", {
-        className: iM.kL,
+        className: ik.kL,
         children: [
             (0, s.jsx)("div", {
-                className: iM.ZS,
-                children: (0, s.jsx)("img", { className: iM.Sl, src: a ? iO : ik, alt: "Boost gem" }),
+                className: ik.ZS,
+                children: (0, s.jsx)("img", { className: ik.Sl, src: a ? iO : iM, alt: "Boost gem" }),
             }),
             (0, s.jsxs)("div", {
-                className: iM.Qs,
+                className: ik.Qs,
                 children: [
                     (0, s.jsx)(eq.D, {
                         variant: "heading-md/semibold",
                         style: { marginTop: 0, marginBottom: "var(--space-4)" },
                         children: t,
                     }),
-                    (0, s.jsx)(L.E, { color: "text-muted", className: iM.rf, variant: "text-sm/medium", children: n }),
+                    (0, s.jsx)(L.E, { color: "text-muted", className: ik.rf, variant: "text-sm/medium", children: n }),
                 ],
             }),
             (0, s.jsx)("div", {
@@ -2691,9 +2691,9 @@ function iG(e) {
     return null == l
         ? null
         : (0, s.jsx)(_.A, {
-              contentClassName: iM.FG,
-              iconContainerClassName: iM.zc,
-              iconNode: (0, s.jsx)(tw.BellIcon, { colorClass: iM.Kk }),
+              contentClassName: ik.FG,
+              iconContainerClassName: ik.zc,
+              iconNode: (0, s.jsx)(tw.BellIcon, { colorClass: ik.Kk }),
               children: (0, s.jsx)(iU, { boostingPrompt: t, guild: l }),
           });
 }
@@ -2731,18 +2731,18 @@ function iF(e) {
 }
 function iz(e) {
     let { message: t, compact: n, usernameHook: i } = e,
-        l = (0, k.Ay)(t),
+        l = (0, M.Ay)(t),
         a = i(l),
         {
             avatarSrc: r,
             eventHandlers: { onMouseEnter: o, onMouseLeave: c },
-        } = nM(!0);
+        } = nk(!0);
     return (0, s.jsx)("div", {
         onMouseEnter: o,
         onMouseLeave: c,
         children: (0, s.jsx)(_.A, {
             className: eg()(n2.rs, { [n2.oE]: n }),
-            iconNode: n ? null : (0, s.jsx)(nk, { src: r }),
+            iconNode: n ? null : (0, s.jsx)(nM, { src: r }),
             iconContainerClassName: n2.zc,
             compact: n,
             children: (0, s.jsxs)("div", {
@@ -2780,18 +2780,18 @@ function iz(e) {
 function iJ(e) {
     let { message: t, compact: n, usernameHook: i, channel: l } = e,
         a = (0, c.bG)([et.A], () => et.A.getGuild(l.guild_id)),
-        r = (0, k.Ay)(t),
+        r = (0, M.Ay)(t),
         o = i(r),
         {
             avatarSrc: d,
             eventHandlers: { onMouseEnter: u, onMouseLeave: m },
-        } = nM(!0);
+        } = nk(!0);
     return (0, s.jsx)("div", {
         onMouseEnter: u,
         onMouseLeave: m,
         children: (0, s.jsx)(_.A, {
             className: eg()(n2.rs, { [n2.oE]: n }),
-            iconNode: n ? null : (0, s.jsx)(nk, { src: d }),
+            iconNode: n ? null : (0, s.jsx)(nM, { src: d }),
             iconContainerClassName: n2.zc,
             compact: n,
             children: (0, s.jsxs)("div", {
@@ -2834,7 +2834,7 @@ var iY = n(959988),
     iK = n(402216);
 function iW(e) {
     let { message: t, channel: n, playingActivity: i, onJoinStream: l, usernameHook: a, compact: r } = e,
-        o = (0, k.Ay)(t),
+        o = (0, M.Ay)(t),
         c = (0, ng.Ay)(n),
         d = t.call?.duration,
         u = a(o),
@@ -2868,7 +2868,7 @@ var iX = n(687966),
     iq = n(234003);
 function iQ(e) {
     let { message: t, channel: n, author: i, compact: l } = e,
-        { nick: a } = (0, k.d8)(i, n),
+        { nick: a } = (0, M.d8)(i, n),
         r = (0, C.P)({ user: i, channelId: n.id, guildId: void 0, messageId: void 0 })(),
         o = (0, ih.h)(t.applicationId);
     if (null == o) return null;
@@ -2892,7 +2892,7 @@ function iQ(e) {
 }
 function i$(e) {
     let { message: t, otherUsername: i, usernameHook: l, otherUsernameHook: a, compact: r } = e,
-        { nick: o } = (0, k.Ay)(t),
+        { nick: o } = (0, M.Ay)(t),
         c = l(),
         d = a(),
         u = y.intl.format(y.t.MMN2Jq, { username: o, usernameHook: c, otherUsername: i, otherUsernameHook: d });
@@ -2901,10 +2901,10 @@ function i$(e) {
 function i0(e) {
     let t,
         { message: i, usernameHook: l, otherUser: a, otherUsernameHook: r, compact: o, channel: c } = e,
-        d = (0, k.Ay)(i),
+        d = (0, M.Ay)(i),
         u = d.nick,
         m = l(d),
-        h = (0, k.d8)(a, c);
+        h = (0, M.d8)(a, c);
     if (null != h && null != r) {
         let e = r(h);
         t = y.intl.format(y.t.L2FyVq, { username: u, usernameHook: m, otherUsername: h.nick, otherUsernameHook: e });
@@ -2915,7 +2915,7 @@ var i1 = n(451394),
     i2 = n(598490);
 function i3(e) {
     let { message: t, compact: n, usernameHook: i } = e,
-        l = (0, k.Ay)(t),
+        l = (0, M.Ay)(t),
         a = i(l),
         r = y.intl.format(y.t["zla/ux"], { username: l.nick, usernameHook: a, topic: t.content });
     return (0, s.jsx)(_.A, {
@@ -2930,7 +2930,7 @@ function i3(e) {
 var i5 = n(297152);
 function i6(e) {
     let { message: t, compact: n, usernameHook: i } = e,
-        l = (0, k.Ay)(t),
+        l = (0, M.Ay)(t),
         a = i(l),
         r = y.intl.format(y.t.tv2DNy, { username: l.nick, usernameHook: a });
     return (0, s.jsx)(_.A, {
@@ -2944,7 +2944,7 @@ function i6(e) {
 }
 function i4(e) {
     let { message: t, compact: n, usernameHook: i } = e,
-        l = (0, k.Ay)(t),
+        l = (0, M.Ay)(t),
         a = i(l),
         r = y.intl.format(y.t["dKW5C+"], { username: l.nick, usernameHook: a });
     return (0, s.jsx)(_.A, {
@@ -2958,7 +2958,7 @@ function i4(e) {
 }
 function i7(e) {
     let { message: t, compact: n, usernameHook: i } = e,
-        l = (0, k.Ay)(t),
+        l = (0, M.Ay)(t),
         a = i(l),
         r = y.intl.format(y.t["Rv+TSM"], { username: l.nick, usernameHook: a, topic: t.content });
     return (0, s.jsx)(_.A, {
@@ -2972,7 +2972,7 @@ function i7(e) {
 }
 function i9(e) {
     let { message: t, compact: n, usernameHook: i } = e,
-        l = (0, k.Ay)(t),
+        l = (0, M.Ay)(t),
         a = i(l),
         r = y.intl.format(y.t.Yy6vLs, { username: l.nick, usernameHook: a, topic: t.content });
     return (0, s.jsx)(_.A, {
@@ -2995,9 +2995,9 @@ function lt(e) {
             onClickViewThreads: a,
             onContextMenuThread: r,
         } = e,
-        o = (0, k.Ay)(t),
+        o = (0, M.Ay)(t),
         d = i(o),
-        u = (0, c.bG)([tk.A], () => tk.A.getChannel(t.messageReference?.channel_id)),
+        u = (0, c.bG)([tM.A], () => tM.A.getChannel(t.messageReference?.channel_id)),
         m = (0, ng.Ay)(u),
         h = y.intl.format(y.t.cZ9Uf2, {
             actorName: o.nick,
@@ -3015,8 +3015,8 @@ function lt(e) {
 }
 function ln(e) {
     let { message: t, channel: i, targetUser: l, actorUsernameHook: a, targetUsernameHook: r, compact: o } = e,
-        c = (0, k.Ay)(t),
-        d = (0, k.d8)(l, i),
+        c = (0, M.Ay)(t),
+        d = (0, M.d8)(l, i),
         u = a(c),
         m = r(d ?? void 0),
         h = y.intl.format(y.t.tusv2h, { actorName: c.nick, actorHook: u, targetName: d?.nick, targetHook: m });
@@ -3024,8 +3024,8 @@ function ln(e) {
 }
 function li(e) {
     let { message: t, channel: i, targetUser: l, actorUsernameHook: a, targetUsernameHook: r, compact: o } = e,
-        c = (0, k.Ay)(t),
-        d = (0, k.d8)(l, i),
+        c = (0, M.Ay)(t),
+        d = (0, M.d8)(l, i),
         u = a(c),
         m = r(d ?? void 0),
         h = y.intl.format(y.t["32QI5/"], { actorName: c.nick, actorHook: u, targetName: d?.nick, targetHook: m });
@@ -3035,7 +3035,7 @@ var ll = n(961934),
     ls = n(861464);
 function la(e) {
     let { message: t, usernameHook: i, compact: l } = e,
-        a = (0, k.Ay)(t),
+        a = (0, M.Ay)(t),
         r = i(a),
         o = ls.A.getSystemMessageUserJoin(t.id),
         c = y.intl.format(o, { username: a.nick, usernameHook: r });
@@ -3080,7 +3080,7 @@ function lv(e) {
     let { className: t, animate: n } = e;
     return (0, s.jsx)("div", {
         className: t,
-        children: (0, s.jsx)("img", { className: lC.fj, src: n ? ik : iO, alt: "", "aria-hidden": !0 }),
+        children: (0, s.jsx)("img", { className: lC.fj, src: n ? iM : iO, alt: "", "aria-hidden": !0 }),
     });
 }
 function lN(e) {
@@ -3122,8 +3122,8 @@ function lS(e) {
     let t,
         n,
         { message: i, guild: l, usernameHook: a, showCta: o } = e,
-        d = ((t = (0, c.bG)([M.Ay], () => M.Ay.useReducedMotion)), (n = r.useContext(lI.C)?.animate ?? !1), !t && n),
-        u = (0, k.Ay)(i),
+        d = ((t = (0, c.bG)([k.Ay], () => k.Ay.useReducedMotion)), (n = r.useContext(lI.C)?.animate ?? !1), !t && n),
+        u = (0, M.Ay)(i),
         m = a(u),
         h = i.hasFlag(D.pr7.IS_FIRST_BOOSTER),
         g = l_(l?.id),
@@ -3164,8 +3164,8 @@ var lR =
     (l.BOTTOM_RIGHT = "BOTTOM_RIGHT"),
     l);
 let lL = ["TOP_LEFT", "TOP_RIGHT"],
-    lM = (0, ep.xI)(lc.A.USER_PREMIUM_GUILD_SUBSCRIPTION_EASTER_EGG_SIZE),
-    lk = { leafPosition: { x: 85, y: 125 }, leafRotationDirection: 1 },
+    lk = (0, ep.xI)(lc.A.USER_PREMIUM_GUILD_SUBSCRIPTION_EASTER_EGG_SIZE),
+    lM = { leafPosition: { x: 85, y: 125 }, leafRotationDirection: 1 },
     lO = Object.freeze({
         TOP_LEFT: {
             getConfettiPosition: (e) => ({ x: e - 11, y: e - 125 }),
@@ -3180,12 +3180,12 @@ let lL = ["TOP_LEFT", "TOP_RIGHT"],
             leafRotationDirection: -1,
         },
         BOTTOM_LEFT: {
-            ...lk,
+            ...lM,
             getConfettiPosition: (e) => ({ x: e - 11, y: 125 }),
             confettiVelocityDirection: { x: 1, y: -1 },
         },
         BOTTOM_RIGHT: {
-            ...lk,
+            ...lM,
             getConfettiPosition: (e) => ({ x: 11, y: 125 }),
             confettiVelocityDirection: { x: -1, y: -1 },
         },
@@ -3258,7 +3258,7 @@ function lV(e) {
             if ("confetti" === o) {
                 let { confettiVelocityDirection: e } = lO[d],
                     t = (function (e, t) {
-                        let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : lM,
+                        let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : lk,
                             i = e?.getBoundingClientRect();
                         if (null == i) return { x: 0, y: 0 };
                         let l = lO[t].getConfettiPosition(n);
@@ -3346,7 +3346,7 @@ function lB(e) {
         [h, g] = a.useState(!1),
         p = a.useRef(null),
         { reducedMotion: A } = a.useContext(lu.C),
-        x = (0, k.Ay)(n),
+        x = (0, M.Ay)(n),
         f = x.nick,
         E = r(x);
     t =
@@ -3460,15 +3460,15 @@ function l$(e) {
         l = (0, il.A)(t),
         r = (0, lZ.X7)(t),
         o = t.messageReference?.channel_id,
-        d = (0, c.bG)([tk.A], () => tk.A.getChannel(o)),
+        d = (0, c.bG)([tM.A], () => tM.A.getChannel(o)),
         u = (function (e, t, n, i, l, r) {
             let o = (0, C.P)({ user: n, channelId: t.id, guildId: t.guild_id, messageId: e.id }),
                 c = (0, C.P)({ user: i[0], channelId: t.id, guildId: t.guild_id, messageId: e.id }),
                 d = (0, C.P)({ user: i[1], channelId: t.id, guildId: t.guild_id, messageId: e.id }),
-                u = (0, k.Ay)(e),
+                u = (0, M.Ay)(e),
                 [m, h] = i,
-                g = (0, k.d8)(m, t),
-                p = (0, k.d8)(h, t),
+                g = (0, M.d8)(m, t),
+                p = (0, M.d8)(h, t),
                 A = (function (e, t) {
                     let n = a.useRef(null),
                         [i, l] = a.useState(!1),
@@ -3560,7 +3560,7 @@ function l1(e) {
 }
 function l2(e) {
     let t = e.getChannelId(),
-        n = (0, c.bG)([tk.A], () => tk.A.getChannel(t), [t]),
+        n = (0, c.bG)([tM.A], () => tM.A.getChannel(t), [t]),
         i = (null != n ? n.getGuildId() : null) ?? e.messageReference?.guild_id ?? null,
         l = (0, c.bG)([et.A], () => (null != i ? et.A.getGuild(i) : null), [i]),
         s =
@@ -3632,7 +3632,7 @@ let l5 = Object.freeze({
                 { id: l, author: r } = t,
                 o = N.default.getId(),
                 d = t.getChannelId(),
-                u = (0, c.bG)([tM.A], () => tM.A.isCallActive(d, l), [d, l]),
+                u = (0, c.bG)([tk.A], () => tk.A.isCallActive(d, l), [d, l]),
                 m = (0, c.bG)([tD.A], () => tD.A.getVoiceState(D.ME, o)),
                 h = !u && null != t.call && !t.call.participants.includes(o),
                 g = u && (null == m || m.channelId !== d),
@@ -3673,10 +3673,10 @@ let l5 = Object.freeze({
                 r = t.getChannelId(),
                 o = a.useCallback(() => {
                     if (tP.Ay.getChannelId() !== r) {
-                        let e = tk.A.getChannel(r);
+                        let e = tM.A.getChannel(r);
                         null != e && (0, v.uh)(e.guild_id, e.id);
                     }
-                    setTimeout(() => ek._.dispatch(D.jej.TOGGLE_CHANNEL_PINS), 0);
+                    setTimeout(() => eM._.dispatch(D.jej.TOGGLE_CHANNEL_PINS), 0);
                 }, [r]),
                 c = (0, C.P)({ user: l, channelId: r, guildId: i.guild_id, messageId: t.id });
             return (0, s.jsx)(iE, { message: t, compact: n, usernameHook: c, onClickPins: __OVERLAY__ ? null : o });
@@ -3713,7 +3713,7 @@ let l5 = Object.freeze({
                 } = t,
                 d = t.getChannelId(),
                 u = (0, c.bG)([tO.A], () => tO.A.findActivity(r, (e) => e.type === D.$pd.PLAYING), [r]),
-                m = (0, c.bG)([tk.A], () => (null != o ? tk.A.getChannel(o.channel_id) : null), [o]),
+                m = (0, c.bG)([tM.A], () => (null != o ? tM.A.getChannel(o.channel_id) : null), [o]),
                 h = o?.guild_id,
                 g = (0, C.P)({ user: l, channelId: d, guildId: i.guild_id, messageId: t.id }),
                 p = a.useCallback(() => {
@@ -3773,7 +3773,7 @@ let l5 = Object.freeze({
                         let n = t.messageReference?.channel_id;
                         if (null != n) {
                             await tT.A.loadThread(n);
-                            let t = tk.A.getChannel(n);
+                            let t = tM.A.getChannel(n);
                             null != t && (0, tS.JA)(t, e.shiftKey);
                         }
                     },
@@ -3795,7 +3795,7 @@ let l5 = Object.freeze({
                 }, [i]),
                 u = a.useCallback(
                     (e) => {
-                        let i = tk.A.getChannel(t.messageReference?.channel_id);
+                        let i = tM.A.getChannel(t.messageReference?.channel_id);
                         null != i &&
                             (0, h.L3)(e, async () => {
                                 let { default: e } = await Promise.all([
@@ -3861,7 +3861,7 @@ let l5 = Object.freeze({
         },
         [D.lAJ.ROLE_SUBSCRIPTION_PURCHASE]: function (e) {
             let { channel: t, message: i, compact: l } = e,
-                r = (0, k.Ay)(i),
+                r = (0, M.Ay)(i),
                 o = (function (e) {
                     let { author: t, channel: n, message: i } = e,
                         l = n.guild_id,
@@ -3956,7 +3956,7 @@ let l5 = Object.freeze({
         },
         [D.lAJ.GUILD_APPLICATION_PREMIUM_SUBSCRIPTION]: function (e) {
             let { message: t, channel: n, compact: i } = e,
-                l = (0, k.Ay)(t),
+                l = (0, M.Ay)(t),
                 a = t.application,
                 r = (0, C.P)({ user: t.author, channelId: n.id, guildId: n.guild_id, messageId: t.id });
             return (0, s.jsx)(_.A, {
@@ -3973,7 +3973,7 @@ let l5 = Object.freeze({
         },
         [D.lAJ.PRIVATE_CHANNEL_INTEGRATION_ADDED]: function (e) {
             let { message: t, channel: i, compact: l } = e,
-                a = (0, k.Ay)(t),
+                a = (0, M.Ay)(t),
                 r = t.application,
                 o = (0, C.P)({ user: t.author, channelId: i.id, guildId: i.guild_id, messageId: t.id }),
                 c = tc(i, t);
@@ -3991,7 +3991,7 @@ let l5 = Object.freeze({
         },
         [D.lAJ.PRIVATE_CHANNEL_INTEGRATION_REMOVED]: function (e) {
             let { message: t, channel: i, compact: l } = e,
-                a = (0, k.Ay)(t),
+                a = (0, M.Ay)(t),
                 r = t.application,
                 o = (0, C.P)({ user: t.author, channelId: i.id, guildId: i.guild_id, messageId: t.id }),
                 c = tc(i, t);
@@ -4055,7 +4055,7 @@ let l5 = Object.freeze({
                     [r],
                 ),
                 c = (0, ep.EJ)(o?.questionText ?? "", eI.TU),
-                d = (0, k.Ay)(t),
+                d = (0, M.Ay)(t),
                 u = (0, C.P)({
                     user: t.author,
                     channelId: n.id,

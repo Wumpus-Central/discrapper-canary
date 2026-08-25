@@ -19,8 +19,8 @@ var i = n(477900),
     y = n(920639),
     j = n(360729),
     I = n(51082),
-    E = n(275731),
-    N = n(289552),
+    N = n(275731),
+    E = n(289552),
     v = n(246356),
     b = n(977851),
     T = n(204651),
@@ -127,7 +127,7 @@ function G(e) {
         F && q.push((0, i.jsx)(k, { channelId: B, guildId: t.guild_id }, "current-speaker")),
         q.push((0, i.jsx)(x.A, { className: V.x6, channelId: B }, "clips-enabled-indicator")),
         H?.type === w.lp.STREAM &&
-            (q.push((0, i.jsx)(E.A, { className: V.x6, participant: H }, "warning")),
+            (q.push((0, i.jsx)(N.A, { className: V.x6, participant: H }, "warning")),
             q.push(
                 (0, i.jsx)(
                     g.A,
@@ -135,7 +135,7 @@ function G(e) {
                     "live-indicator",
                 ),
             )),
-        H?.type === w.lp.USER && q.push((0, i.jsx)(N.A, { className: V.x6, userId: H.id }, "video-warning")),
+        H?.type === w.lp.USER && q.push((0, i.jsx)(E.A, { className: V.x6, userId: H.id }, "video-warning")),
         F &&
             q.push(
                 (0, i.jsx)(

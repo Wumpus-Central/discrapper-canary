@@ -19,8 +19,8 @@ var i = n(477900),
     y = n(163432),
     j = n(652215),
     I = n(806931),
-    E = n(804273),
-    N = n(517689);
+    N = n(804273),
+    E = n(517689);
 let v = 16 / 9,
     b = 8 + y.Vp;
 function T(e) {
@@ -117,21 +117,21 @@ function T(e) {
         ey = J ? [] : (0, C.Cf)(_, P, B),
         { visibleParticipants: ej, participantTileWidth: eI } = (0, y.i4)(D, R);
     return (0, i.jsxs)("div", {
-        className: s()(N.zr, E.tR, w),
+        className: s()(E.zr, N.tR, w),
         children: [
             (0, i.jsxs)("div", {
-                className: N.QX,
+                className: E.QX,
                 style: { opacity: Z && W ? 0 : 1 },
                 children: [
                     (0, i.jsxs)(r.animated.div, {
-                        className: N.pc,
+                        className: E.pc,
                         style: { top: eA.value.to((e) => (-e * b) / 2) },
                         children: [
                             (0, i.jsx)(r.animated.div, {
                                 style: { width: ef.value },
-                                className: N.tN,
+                                className: E.tN,
                                 children: (0, i.jsx)("div", {
-                                    className: E.xS,
+                                    className: N.xS,
                                     style: { aspectRatio: es },
                                     children: eg((e, t, l) => {
                                         let { key: s } = l;
@@ -139,13 +139,13 @@ function T(e) {
                                             ? (0, i.jsx)(
                                                   r.animated.div,
                                                   {
-                                                      className: E.qX,
+                                                      className: N.qX,
                                                       style: e,
                                                       children: (0, i.jsx)(x.Ay, {
                                                           focused: !0,
                                                           noBorder: eo >= D || er >= U,
                                                           channel: O,
-                                                          className: E.JS,
+                                                          className: N.JS,
                                                           videoComponent: G,
                                                           width: D,
                                                           participant: t,
@@ -166,7 +166,7 @@ function T(e) {
                             }),
                             en
                                 ? (0, i.jsx)(r.animated.div, {
-                                      className: s()(N.$l, { [N.N7]: k }),
+                                      className: s()(E.$l, { [E.N7]: k }),
                                       style: { bottom: ex.value },
                                       children: (0, i.jsx)(h.A, {
                                           channelId: O.id,
@@ -178,7 +178,7 @@ function T(e) {
                         ],
                     }),
                     (0, i.jsx)(r.animated.div, {
-                        className: N.Vx,
+                        className: E.Vx,
                         style: {
                             translateY: em.value.to((e) => (e * b) / 2),
                             opacity: em.value,

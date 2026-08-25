@@ -24,8 +24,8 @@ let y = (0, s.A)((e) => {
         participantsVersion: y,
         layout: j,
         onSelectParticipant: I,
-        onContextMenuParticipant: E,
-        onFullscreenParticipant: N,
+        onContextMenuParticipant: N,
+        onFullscreenParticipant: E,
         channel: v,
         hasConnectPermission: b,
         className: T,
@@ -51,7 +51,7 @@ let y = (0, s.A)((e) => {
     if (v?.isGuildVocalOrThread() && !_)
         return (0, i.jsx)(h.A, { channel: v, participants: t, hasConnectPermission: b });
     if (((n = _ ? n : t), P === x._Of.VOICE))
-        return (0, i.jsx)(c.A, { guildId: v.guild_id, width: S, className: C.Er, participants: t, onContextMenu: E });
+        return (0, i.jsx)(c.A, { guildId: v.guild_id, width: S, className: C.Er, participants: t, onContextMenu: N });
     if (null == s) {
         if (0 === n.length) {
             let e = t.length > 0 && !V;
@@ -67,16 +67,16 @@ let y = (0, s.A)((e) => {
                 participants: U,
                 totalNumberOfParticipants: t.length,
                 onClick: I,
-                onDoubleClick: N,
-                onContextMenu: E,
+                onDoubleClick: E,
+                onContextMenu: N,
                 inCall: _,
                 popoutType: M,
             }),
         });
     }
     return (0, i.jsx)(A.A, {
-        onFullscreenParticipant: N,
-        onContextMenuParticipant: E,
+        onFullscreenParticipant: E,
+        onContextMenuParticipant: N,
         onSelectParticipant: I,
         selectedParticipant: s,
         filteredParticipants: U,

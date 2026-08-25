@@ -11,12 +11,12 @@ var l = n(477900),
     m = n(92259),
     p = n(106236),
     g = n(218429),
-    h = n(964486),
-    f = n(461782),
+    f = n(964486),
+    h = n(461782),
     A = n(453028),
     x = n(40056),
-    E = n(375708),
-    v = n(950183),
+    v = n(375708),
+    E = n(950183),
     C = n(507199);
 function I(e) {
     e.preventDefault(), e.stopPropagation();
@@ -26,7 +26,7 @@ function S(e) {
 }
 let j = i.memo(function (e) {
     let { mirror: t = !1, streamId: n, paused: s } = e,
-        { onActive: j, onPreventIdle: _, onAllowIdle: N } = i.useContext(f.k3),
+        { onActive: j, onPreventIdle: _, onAllowIdle: N } = i.useContext(h.k3),
         {
             enabled: b,
             zoomLevel: y,
@@ -38,40 +38,40 @@ let j = i.memo(function (e) {
             setIsSlidering: O,
             doZoom: L,
             isZooming: M,
-            videoAspectRatio: F,
-            wrapperRef: V,
+            videoAspectRatio: V,
+            wrapperRef: F,
             panOffset: G,
             setPanOffset: P,
             clampPanOffset: H,
         } = i.useContext(x.e9),
-        [U, z] = i.useState(!1),
-        W = i.useRef(null),
+        [U, W] = i.useState(!1),
+        z = i.useRef(null),
         $ = y > D,
         B = i.useCallback(() => {
             _("interact");
         }, [_]),
         Y = i.useCallback(() => {
-            z(!1), N("interact");
+            W(!1), N("interact");
         }, [N]),
         Z = i.useMemo(() => {
-            let e = 120 * Math.min(F, 32 / 9);
+            let e = 120 * Math.min(V, 32 / 9);
             return { "--custom-zoom-minimap-width": `${e}px`, "--custom-zoom-minimap-height": "120px" };
-        }, [F]),
+        }, [V]),
         K = i.useCallback(
             (e) => {
-                if (null == W.current || null == V.current) return;
-                let t = W.current.getBoundingClientRect(),
-                    n = V.current.clientWidth,
-                    l = V.current.clientHeight,
+                if (null == z.current || null == F.current) return;
+                let t = z.current.getBoundingClientRect(),
+                    n = F.current.clientWidth,
+                    l = F.current.clientHeight,
                     i = e.x - t.left,
                     s = e.y - t.top;
                 P(H({ x: (0.5 - i / t.width) * n * y, y: (0.5 - s / t.height) * l * y }));
             },
-            [H, y, V, P],
+            [H, y, F, P],
         ),
         Q = i.useCallback(
             (e) => {
-                S(e) && (e.preventDefault(), e.stopPropagation(), z(!0), K({ x: e.clientX, y: e.clientY }));
+                S(e) && (e.preventDefault(), e.stopPropagation(), W(!0), K({ x: e.clientX, y: e.clientY }));
             },
             [K],
         ),
@@ -83,14 +83,14 @@ let j = i.memo(function (e) {
         ),
         q = i.useCallback(
             (e) => {
-                !U || S(e) || (e.preventDefault(), e.stopPropagation(), z(!1));
+                !U || S(e) || (e.preventDefault(), e.stopPropagation(), W(!1));
             },
             [U],
         ),
         J = A.Ay.getVideoComponent(),
         ee = i.useMemo(() => {
-            let e = null != V.current ? V.current.clientWidth : 1,
-                t = null != V.current ? V.current.clientHeight : 1,
+            let e = null != F.current ? F.current.clientWidth : 1,
+                t = null != F.current ? F.current.clientHeight : 1,
                 n = 1 / y,
                 l = 1 / y,
                 i = 0.5 - G.x / (e * y),
@@ -105,7 +105,7 @@ let j = i.memo(function (e) {
                         ? "none"
                         : "top 0.1s ease-out, left 0.1s ease-out, width 0.1s ease-out, height 0.1s ease-out",
             };
-        }, [R, U, k, w, G, y, V]),
+        }, [R, U, k, w, G, y, F]),
         et = i.useCallback(
             (e) => {
                 e.preventDefault(), e.stopPropagation(), L(y - 0.25, x.qd, "button");
@@ -131,7 +131,7 @@ let j = i.memo(function (e) {
             },
             [L, j, O],
         );
-    return ((0, h.l0)(() => {
+    return ((0, f.l0)(() => {
         el.current?.stop();
     }),
     b && null != n)
@@ -147,7 +147,7 @@ let j = i.memo(function (e) {
                           onMouseEnter: B,
                           onMouseLeave: Y,
                           children: (0, l.jsxs)("div", {
-                              ref: W,
+                              ref: z,
                               className: C.Wc,
                               style: Z,
                               onPointerDown: function (e) {
@@ -158,7 +158,7 @@ let j = i.memo(function (e) {
                               onMouseUp: q,
                               children: [
                                   (0, l.jsx)(J, {
-                                      className: r()(C.BZ, { [v.mirror]: t }),
+                                      className: r()(C.BZ, { [E.mirror]: t }),
                                       streamId: n,
                                       paused: s,
                                       reportContainerResized: !1,
@@ -174,7 +174,7 @@ let j = i.memo(function (e) {
                               (0, l.jsxs)(l.Fragment, {
                                   children: [
                                       (0, l.jsx)(c.m, {
-                                          text: E.intl.string(E.t.M6Cmwy),
+                                          text: v.intl.string(v.t.M6Cmwy),
                                           position: "top",
                                           children: (0, l.jsx)(d.K, {
                                               icon: m.V,
@@ -182,7 +182,7 @@ let j = i.memo(function (e) {
                                               disabled: y <= D,
                                               variant: "overlay-secondary",
                                               size: "sm",
-                                              "aria-label": E.intl.string(E.t.M6Cmwy),
+                                              "aria-label": v.intl.string(v.t.M6Cmwy),
                                           }),
                                       }),
                                       (0, l.jsx)(p.A, {
@@ -192,12 +192,12 @@ let j = i.memo(function (e) {
                                           value: y,
                                           asValueChanges: ei,
                                           onValueRender: (e) => `${Math.round(100 * e)}%`,
-                                          "aria-label": E.intl.string(E.t.grzPmr),
+                                          "aria-label": v.intl.string(v.t.grzPmr),
                                       }),
                                   ],
                               }),
                           (0, l.jsx)(c.m, {
-                              text: E.intl.string(E.t["9hMafy"]),
+                              text: v.intl.string(v.t["9hMafy"]),
                               position: "top",
                               children: (0, l.jsx)(d.K, {
                                   icon: g.r,
@@ -205,7 +205,7 @@ let j = i.memo(function (e) {
                                   disabled: y >= T,
                                   variant: "overlay-secondary",
                                   size: "sm",
-                                  "aria-label": E.intl.string(E.t["9hMafy"]),
+                                  "aria-label": v.intl.string(v.t["9hMafy"]),
                               }),
                           }),
                       ],

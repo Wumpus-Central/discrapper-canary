@@ -1,4 +1,4 @@
-n.d(t, { A: () => N });
+n.d(t, { A: () => E });
 var i = n(477900),
     l = n(582128),
     a = n(503698),
@@ -20,8 +20,8 @@ n(980504);
 var y = n(1195),
     j = n(375708),
     I = n(130390),
-    E = n(452933);
-function N(e) {
+    N = n(452933);
+function E(e) {
     let { channelId: t, position: n } = e,
         a = (0, o.bG)([p.A], () => p.A.getChannel(t)?.guild_id),
         { interactionsEnabled: s } = g.A.useExperiment(
@@ -32,7 +32,7 @@ function N(e) {
         s && (0, c.E7)({ disableAnalytics: !0 });
     }, [s]);
     let r = (0, o.bG)([d.A], () => d.A.getSound("0", "1")),
-        u = (0, i.jsx)("img", { className: I.wZ, src: E.A, alt: j.intl.string(y.default["93KE7U"]) }),
+        u = (0, i.jsx)("img", { className: I.wZ, src: N.A, alt: j.intl.string(y.default["93KE7U"]) }),
         h = { insetInlineStart: `${n.x}%`, insetBlockStart: `${n.y}%` };
     return s && null != r
         ? (0, i.jsx)(v, { channelId: t, position: n, positionStyle: h, sound: r, children: u })
@@ -41,18 +41,18 @@ function N(e) {
 function v(e) {
     let { channelId: t, position: n, positionStyle: a, sound: c, children: d } = e,
         g = (0, o.bG)([f.default], () => f.default.getCurrentUser()),
-        E = (0, o.bG)([p.A], () => p.A.getChannel(t)),
-        N = (0, o.bG)([m.Ay], () => m.Ay.isDeaf()),
+        N = (0, o.bG)([p.A], () => p.A.getChannel(t)),
+        E = (0, o.bG)([m.Ay], () => m.Ay.isDeaf()),
         v = (0, o.bG)([A.Ay], () => A.Ay.getVoiceChannelId() === t),
         { playSoundboardSound: b } = (0, h.A)(c, t),
-        T = v && (0, u.Ir)(g, c, E) && (0, u.Au)(E) && !N,
+        T = v && (0, u.Ir)(g, c, N) && (0, u.Au)(N) && !E,
         _ = l.useCallback(() => {
             if (T) {
                 b();
-                let e = E?.id;
+                let e = N?.id;
                 null != e && (0, x.n0)({ interactionType: "duck_quacked", channelId: e });
             }
-        }, [T, b, E?.id]),
+        }, [T, b, N?.id]),
         R = (0, C.Sb)({ position: n, targetLabel: j.intl.string(y.default["93KE7U"]) });
     return (0, i.jsx)(r.D, {
         role: "listitem",

@@ -11,16 +11,16 @@ var l = n(477900),
     m = n(652215),
     p = n(983156);
 function g(e) {
-    let { channelId: t, guildId: n, userId: g, containerDimensions: h } = e,
-        f = (0, r.bG)([o.Ay], () => o.Ay.useReducedMotion),
+    let { channelId: t, guildId: n, userId: g, containerDimensions: f } = e,
+        h = (0, r.bG)([o.Ay], () => o.Ay.useReducedMotion),
         [A, x] = i.useState([]),
-        E = A.length < 50;
+        v = A.length < 50;
     i.useEffect(() => {
         function e(e) {
             let { channelId: l, userId: i, emoji: r, animationType: a, animationId: o } = e;
             if (null != g && g !== i) return;
             let d = null != r && null != a && null != o;
-            if (l === t && !f && E && d) {
+            if (l === t && !h && v && d) {
                 let e = (0, c.Br)(r),
                     l = null != r.id && !r.animated,
                     d = { id: (0, s.A)(), animationType: a, animationId: o, shouldResize: l, url: e, userId: i };
@@ -34,22 +34,22 @@ function g(e) {
                 a.h.unsubscribe("VOICE_CHANNEL_EFFECT_SEND", e);
             }
         );
-    }, [t, n, g, f, E]);
-    let v = i.useCallback((e) => {
+    }, [t, n, g, h, v]);
+    let E = i.useCallback((e) => {
         x((t) => {
             let n = [...t],
                 l = n.findIndex((t) => t.id === e);
             return n.splice(l, 1), n;
         });
     }, []);
-    return f
+    return h
         ? null
         : (0, l.jsx)("div", {
               className: p.Y,
-              style: { width: h.width },
+              style: { width: f.width },
               children: (0, l.jsx)("div", {
                   className: p.z,
-                  children: A.map((e) => (0, l.jsx)(d.A, { containerDimensions: h, effect: e, onComplete: v }, e.id)),
+                  children: A.map((e) => (0, l.jsx)(d.A, { containerDimensions: f, effect: e, onComplete: E }, e.id)),
               }),
           });
 }

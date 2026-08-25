@@ -1,4 +1,4 @@
-n.d(t, { $: () => x, A: () => E });
+n.d(t, { $: () => x, A: () => v });
 var l,
     i = n(477900),
     s = n(582128),
@@ -11,11 +11,11 @@ var l,
     m = n(276208),
     p = n(927813),
     g = n(37965);
-let h = 20 * p.A.Millis.SECOND;
-var f = n(821589),
+let f = 20 * p.A.Millis.SECOND;
+var h = n(821589),
     A = n(950183),
     x = (((l = {}).CONTAIN = "contain"), (l.COVER = "cover"), (l.COVER_LANDSCAPE = "cover-landscape"), l);
-let E = s.memo(function (e) {
+let v = s.memo(function (e) {
     let {
             streamId: t,
             onResize: n,
@@ -23,8 +23,8 @@ let E = s.memo(function (e) {
             videoComponent: r,
             className: p,
             fit: x = "contain",
-            mirror: E = !1,
-            paused: v = !1,
+            mirror: v = !1,
+            paused: E = !1,
             streamPreviewURL: C,
             videoSpinnerContext: I,
             userId: S,
@@ -46,7 +46,7 @@ let E = s.memo(function (e) {
         s.useEffect(() => {
             a || (r ? o.onSpinnerStarted() : null != i && o.trackSpinnerDuration(n, l, i));
         }, [r, a, i, o, n, l]);
-    })({ location: "VideoStream", videoSpinnerContext: I, userId: S, streamId: t, loading: N, paused: v });
+    })({ location: "VideoStream", videoSpinnerContext: I, userId: S, streamId: t, loading: N, paused: E });
     let { onReady: k } = (function (e) {
             let { streamId: t, userId: n, videoSpinnerContext: l, streamKey: i, loading: r, paused: a = !1 } = e,
                 o = s.useRef(new c.Ep()),
@@ -56,7 +56,7 @@ let E = s.memo(function (e) {
                     if (!r || a || !m.X.isIncomingVideoEnabled()) return;
                     let e = o.current;
                     return (
-                        e.start(h, () => {
+                        e.start(f, () => {
                             (0, g.Z)(t, n, p, i);
                         }),
                         () => {
@@ -70,7 +70,7 @@ let E = s.memo(function (e) {
                     }, [n, p]),
                 }
             );
-        })({ streamId: t, userId: S, loading: N, videoSpinnerContext: I, streamKey: j, paused: v }),
+        })({ streamId: t, userId: S, loading: N, videoSpinnerContext: I, streamKey: j, paused: E }),
         w = s.useCallback(() => {
             b(!1), k();
         }, [k]);
@@ -79,13 +79,13 @@ let E = s.memo(function (e) {
         children: [
             null != t &&
                 (0, i.jsx)(r, {
-                    className: a()(A.video, (0, f.t)(A, "video", R), { [A.mirror]: E }, p),
+                    className: a()(A.video, (0, h.t)(A, "video", R), { [A.mirror]: v }, p),
                     streamId: t,
                     onResize: T,
                     onReady: w,
-                    paused: v,
+                    paused: E,
                 }),
-            v
+            E
                 ? null
                 : (0, i.jsx)("div", {
                       className: a()(A.previewWrapper, { [A.loading]: N }),

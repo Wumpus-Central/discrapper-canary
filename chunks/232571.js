@@ -55,8 +55,8 @@ function C() {
 }
 function y(e) {
     let { channelId: t, x: n, y, label: j, roomWidth: I } = e,
-        E = (0, s.bG)([d.Ay], () => d.Ay.getVoiceChannelId() === t),
-        N = (0, s.bG)([p.A], () =>
+        N = (0, s.bG)([d.Ay], () => d.Ay.getVoiceChannelId() === t),
+        E = (0, s.bG)([p.A], () =>
             p.A.getRoomUsers(t)
                 .values()
                 .some((e) => e.position?.x === n && e.position?.y === y),
@@ -64,19 +64,19 @@ function y(e) {
         v = (0, s.bG)([c.A], () => c.A.getChannel(t)?.guild_id),
         b = l.useCallback(async () => {
             null != v &&
-                (E
+                (N
                     ? (0, u.AQ)(v, t, { user_position: { x: n, y } }).catch((e) => (0, h.b)({ silent: !0 }))
                     : ((0, u.TJ)({ x: n, y }), (await (0, o.A)({ channelId: t })) || (0, u.Ys)()));
-        }, [E, v, t, n, y]),
+        }, [N, v, t, n, y]),
         T = (0, m.Sb)({
             position: { x: n, y },
             targetLabel: x.intl.formatToPlainString(f.default.NYm6Cb, { seatLabel: j }),
         });
-    if (N || null == v) return null;
+    if (E || null == v) return null;
     let { numericAvatarSize: _ } = (0, A.F)(I),
         R = 1.2 * Math.max(_, 24);
     return (0, i.jsx)(r.m, {
-        text: E || null != T ? null : x.intl.string(x.t["96ANUN"]),
+        text: N || null != T ? null : x.intl.string(x.t["96ANUN"]),
         children: (0, i.jsx)(a.D, {
             role: "listitem",
             "aria-label": j,

@@ -19,8 +19,8 @@ var i = n(477900),
     y = n(977997),
     j = n(625494),
     I = n(446243),
-    E = n(889426),
-    N = n(652215),
+    N = n(889426),
+    E = n(652215),
     v = n(806931),
     b = n(527133);
 let T = function (e) {
@@ -38,13 +38,13 @@ let T = function (e) {
             layout: G,
             participantsOpen: B,
         } = (0, a.cf)([c.A], () => {
-            let e = null != P ? c.A.getLayout(P.id, L) : N.DUB.NORMAL;
+            let e = null != P ? c.A.getLayout(P.id, L) : E.DUB.NORMAL;
             return {
                 participants: c.A.getParticipants(t),
                 filteredParticipants: c.A.getFilteredParticipants(t),
                 participantsVersion: c.A.getParticipantsVersion(t),
                 mode: c.A.getMode(t),
-                layout: L === N.BRT.POPOUT && e !== N.DUB.FULL_SCREEN ? N.DUB.NO_CHAT : e,
+                layout: L === E.BRT.POPOUT && e !== E.DUB.FULL_SCREEN ? E.DUB.NO_CHAT : e,
                 participantsOpen: c.A.getParticipantsOpen(t),
             };
         }),
@@ -52,9 +52,9 @@ let T = function (e) {
     return ((0, l.useEffect)(() => {
         if (null != P)
             return (
-                j._.subscribe(N.jej.GUILD_ROOM_VIDEO_OVERLAY_CLOSE, e),
+                j._.subscribe(E.jej.GUILD_ROOM_VIDEO_OVERLAY_CLOSE, e),
                 () => {
-                    j._.unsubscribe(N.jej.GUILD_ROOM_VIDEO_OVERLAY_CLOSE, e);
+                    j._.unsubscribe(E.jej.GUILD_ROOM_VIDEO_OVERLAY_CLOSE, e);
                 }
             );
         function e() {
@@ -79,7 +79,7 @@ let T = function (e) {
                   participants: D,
                   filteredParticipants: U,
                   participantsVersion: V,
-                  selectedParticipant: w && k === N._Of.VIDEO ? O : null,
+                  selectedParticipant: w && k === E._Of.VIDEO ? O : null,
                   layout: G,
                   idle: R,
                   mode: k,
@@ -92,7 +92,7 @@ let T = function (e) {
                                   (0, h.eo)(P, y.A, x.A, g.A, d.default)[0] &&
                                   0 ===
                                       A.A.getAllActiveStreams().filter(
-                                          (t) => (0, u._z)(t) === e.id && t.state !== N.XYD.ENDED,
+                                          (t) => (0, u._z)(t) === e.id && t.state !== E.XYD.ENDED,
                                       ).length)
                           )
                               return void (0, o.A9)((0, u.Iy)(e.id), { forceMultiple: t.shiftKey });
@@ -100,7 +100,7 @@ let T = function (e) {
                       }
                   },
                   onContextMenuParticipant: function (e, n, i, l) {
-                      (0, E.A)({
+                      (0, N.A)({
                           participant: e,
                           event: n,
                           minimalContextMenu: i,

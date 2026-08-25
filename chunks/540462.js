@@ -19,8 +19,8 @@ var i = n(477900),
     y = n(442433),
     j = n(730852),
     I = n(401843),
-    E = n(817281),
-    N = n(820284),
+    N = n(817281),
+    E = n(820284),
     v = n(765671),
     b = n(475743),
     T = n(646865),
@@ -73,8 +73,8 @@ var i = n(477900),
     ey = n(977997),
     ej = n(174459),
     eI = n(871237),
-    eE = n(625494),
-    eN = n(723702),
+    eN = n(625494),
+    eE = n(723702),
     ev = n(19575),
     eb = n(475815),
     eT = n(198052),
@@ -160,7 +160,7 @@ class ez extends l.PureComponent {
     componentWillUnmount() {
         this._videoBackgroundTooltipTimeout.stop(),
             this.currentDocument.removeEventListener(eb.Wb, this.handleFullScreenChange),
-            (this.inPopout && (0, eN.isMac)()) || this.maybeLeaveFullScreen();
+            (this.inPopout && (0, eE.isMac)()) || this.maybeLeaveFullScreen();
     }
     componentDidUpdate(e) {
         let { participantsOpen: t, inCall: n, mode: i, layout: l } = this.props,
@@ -174,10 +174,10 @@ class ez extends l.PureComponent {
             e.inCall && !n && this.inPopout && g.h.wait(() => this.handleClosePopout());
     }
     get nativePopoutSupported() {
-        return eN.isPlatformEmbedded && ev.Ay.supportsFeature(eU.BYE.POPOUT_WINDOWS);
+        return eE.isPlatformEmbedded && ev.Ay.supportsFeature(eU.BYE.POPOUT_WINDOWS);
     }
     get popoutSupported() {
-        return !eN.isPlatformEmbedded || this.nativePopoutSupported;
+        return !eE.isPlatformEmbedded || this.nativePopoutSupported;
     }
     get popoutOpen() {
         let { popoutWindow: e } = this.props;
@@ -249,7 +249,7 @@ class ez extends l.PureComponent {
         let { channel: t, appContext: n, layout: i } = this.props;
         i !== e &&
             (C.A.updateLayout(t.id, e, n),
-            e === eU.DUB.FULL_SCREEN && t.isPrivate() && eE._.dispatch(eU.jej.TEXTAREA_BLUR));
+            e === eU.DUB.FULL_SCREEN && t.isPrivate() && eN._.dispatch(eU.jej.TEXTAREA_BLUR));
     };
     handleDisconnect = () => {
         this.props.layout === eU.DUB.FULL_SCREEN && this.handleFullScreen();
@@ -656,9 +656,9 @@ class ez extends l.PureComponent {
             y = p === eU.DUB.MINIMUM,
             j = y || p === eU.DUB.NORMAL,
             I = l && s === eU._Of.VIDEO,
-            E = (f?.length ?? 0) > 0 && u.isPrivate();
+            N = (f?.length ?? 0) > 0 && u.isPrivate();
         this._lastIdleProps = e;
-        let N = !l || !(this.popoutOpen && !this.inPopout),
+        let E = !l || !(this.popoutOpen && !this.inPopout),
             v = !m && l && !y && e.idle,
             b = g
                 ? (0, i.jsx)(W.A, { channelId: u.id, popoutType: t, idle: e.idle })
@@ -677,7 +677,7 @@ class ez extends l.PureComponent {
                       mode: s,
                       onSelectParticipant: this.handleSelectParticipant,
                       onContextMenuParticipant: this.handleContextMenu,
-                      showParticipants: r && (!j || E),
+                      showParticipants: r && (!j || N),
                       popoutType: t,
                       awaitingRemoteSessionInfo: A,
                       callContainerDimensions: x,
@@ -694,7 +694,7 @@ class ez extends l.PureComponent {
             disableGradients: !l || y,
             hideControls: C,
             idle: v,
-            children: N && b,
+            children: E && b,
         });
     }
     render() {
@@ -812,7 +812,7 @@ let eW = function (e) {
         et = (0, d.bG)([k.default], () => k.default.getAwaitingRemoteSessionInfo()),
         en = (0, d.bG)([Z.Ay], () => Z.Ay.callHeaderHeight),
         ei = l.useCallback((e) => {
-            E.Ay.updatedUnsyncedSettings({ callHeaderHeight: e });
+            N.Ay.updatedUnsyncedSettings({ callHeaderHeight: e });
         }, []),
         el = (0, d.bG)([_.A], () => _.A.getFetchState(), []),
         ea = (0, b.Ay)(el);
@@ -832,7 +832,7 @@ let eW = function (e) {
         { theme: eC } = (0, x.wR)();
     return (0, i.jsx)(M.f5, {
         value: eo,
-        children: (0, i.jsx)(N.A, {
+        children: (0, i.jsx)(E.A, {
             page: eU.liQ.CHANNEL_CALL,
             children: (0, i.jsx)(eR.qh, {
                 children: (0, i.jsxs)(eP.CB, {
