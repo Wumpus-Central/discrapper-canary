@@ -36,4 +36,6 @@ e.exports = {
     Ue: "stepChevron__30c5c",
     y8: "stepScreenshots__30c5c",
     MT: "turnAttachments__30c5c",
+    l6: "stepLine__30c5c",
+    jz: "stepDriver__30c5c",
 };

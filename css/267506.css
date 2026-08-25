@@ -1514,6 +1514,19 @@
     margin-top: var(--space-8)
 }
 
+.stepLine__30c5c {
+    align-items: center;
+    display: flex;
+    gap: var(--space-4);
+    min-width: 0
+}
+
+.stepDriver__30c5c {
+    align-items: center;
+    display: inline-flex;
+    flex-shrink: 0
+}
+
 .attachmentChip__73bbb {
     align-items: center;
     background: var(--background-mod-subtle);
@@ -4363,4 +4376,4 @@
     text-align: center
 }
 
-/*# sourceMappingURL=267506.b33bb5cf4a019314.css.map*/
+/*# sourceMappingURL=267506.ac34eb84d541cc36.css.map*/
