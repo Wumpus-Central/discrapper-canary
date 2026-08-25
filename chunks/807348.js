@@ -40,6 +40,7 @@ var I =
         (l[(l.DEFAULTS = 2)] = "DEFAULTS"),
         (l[(l.SEARCH = 3)] = "SEARCH"),
         (l[(l.FREQUENTLY_USED = 4)] = "FREQUENTLY_USED"),
+        (l[(l.TOP_SOUNDS = 5)] = "TOP_SOUNDS"),
         l),
     f = (((o = {})[(o.SOUND = 0)] = "SOUND"), (o[(o.ADD_SOUND = 1)] = "ADD_SOUND"), o),
     p =

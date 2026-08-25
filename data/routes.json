@@ -690,6 +690,7 @@
   "VIDEO_FILTER_ASSET_STORAGE": "/users/:param/video-filter-assets/:param/:param./:param",
   "GUILD_SOUNDBOARD_SOUNDS": "/guilds/:param/soundboard-sounds",
   "GUILD_SOUNDBOARD_SOUND": "/guilds/:param/soundboard-sounds/:param",
+  "TOP_SOUNDBOARD_SOUNDS_FOR_GUILD": "/guilds/:param/top-soundboard-sounds",
   "SOUNDBOARD_SOUND": "/soundboard-sounds/:param",
   "SOUNDBOARD_SOUND_GUILD_DATA": "/soundboard-sounds/:param/guild/:param",
   "SOUNDBOARD_DEFAULT_SOUNDS": "/soundboard-default-sounds",
