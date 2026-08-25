@@ -62,17 +62,17 @@ function C(e) {
             imagePosition: o = "right",
             hideLabel: u = !1,
         } = e,
-        { resolveFieldValue: c, numberFormat: f } = en(),
-        g = (0, m.Hx)(t, c, f, s, u);
-    if ("hidden" === g.status) return null;
-    if ("skeleton" === g.status) return (0, i.jsx)(x, { variant: n, className: r });
-    let C = null != g.icon ? (0, i.jsx)(p, { media: g.icon, variant: n }) : null;
+        { resolveFieldValue: c, numberFormat: f, renderText: g } = en(),
+        C = (0, m.Hx)(t, c, f, s, u);
+    if ("hidden" === C.status) return null;
+    if ("skeleton" === C.status) return (0, i.jsx)(x, { variant: n, className: r });
+    let E = null != C.icon ? (0, i.jsx)(p, { media: C.icon, variant: n }) : null;
     return (0, i.jsxs)("div", {
         className: d()(A.k, r),
         children: [
-            null != C && "left" === o ? C : null,
-            (0, i.jsx)(h.E, { variant: n, color: l, lineClamp: a, children: g.text }),
-            null != C && "right" === o ? C : null,
+            null != E && "left" === o ? E : null,
+            (0, i.jsx)(h.E, { variant: n, color: l, lineClamp: a, children: g?.(C.text) ?? C.text }),
+            null != E && "right" === o ? E : null,
         ],
     });
 }
@@ -347,8 +347,8 @@ function W() {
 var K = n(620376);
 function z(e) {
     let { component: t, required: n = !1 } = e,
-        { resolveFieldValue: l, numberFormat: s, durationFormat: r } = en(),
-        a = (0, m.CZ)(
+        { resolveFieldValue: l, numberFormat: s, durationFormat: r, renderText: a } = en(),
+        o = (0, m.CZ)(
             t,
             l,
             s,
@@ -366,29 +366,33 @@ function z(e) {
             },
             n,
         );
-    return null == a
+    return null == o
         ? null
         : (0, i.jsxs)("div", {
               className: K.k,
               children: [
-                  "value" === a.value.status
+                  "value" === o.value.status
                       ? (0, i.jsxs)("div", {
                             className: K.U,
                             children: [
-                                (0, i.jsx)(h.E, { variant: "text-sm/medium", lineClamp: 2, children: a.value.text }),
-                                null != a.value.icon &&
-                                    (0, i.jsx)(p, { variant: "text-sm/medium", media: a.value.icon }),
+                                (0, i.jsx)(h.E, {
+                                    variant: "text-sm/medium",
+                                    lineClamp: 2,
+                                    children: a?.(o.value.text) ?? o.value.text,
+                                }),
+                                null != o.value.icon &&
+                                    (0, i.jsx)(p, { variant: "text-sm/medium", media: o.value.icon }),
                             ],
                         })
                       : (0, i.jsx)(x, { variant: "text-sm/medium", width: "8ch" }),
-                  "value" === a.label.status
+                  "value" === o.label.status
                       ? (0, i.jsx)(h.E, {
                             variant: "text-xs/normal",
                             color: "text-subtle",
                             lineClamp: 2,
-                            children: a.label.text,
+                            children: o.label.text,
                         })
-                      : "skeleton" === a.label.status
+                      : "skeleton" === o.label.status
                         ? (0, i.jsx)(x, { variant: "text-xs/normal", width: "6ch" })
                         : null,
               ],
@@ -506,24 +510,34 @@ let el = {
     },
 };
 function ei(e) {
-    let { surface: t, surfaceConfig: n, resolutionContext: l, locale: a, header: o, onClick: c, layoutProps: d } = e,
-        h = s.useMemo(() => (0, u.e)(a), [a]),
-        m = s.useMemo(() => new r.Y(a, { style: "narrow" }), [a]);
+    let {
+            surface: t,
+            surfaceConfig: n,
+            resolutionContext: l,
+            locale: a,
+            header: o,
+            onClick: c,
+            renderText: d,
+            layoutProps: h,
+        } = e,
+        m = s.useMemo(() => (0, u.e)(a), [a]),
+        f = s.useMemo(() => new r.Y(a, { style: "narrow" }), [a]);
     if (null == n) return null;
-    let f = el[t]?.[n.layout];
-    return null == f
+    let p = el[t]?.[n.layout];
+    return null == p
         ? null
         : (0, i.jsx)(et.Provider, {
               value: {
                   surfaceConfig: n,
                   locale: a,
-                  numberFormat: h,
-                  durationFormat: m,
+                  numberFormat: m,
+                  durationFormat: f,
                   header: o,
                   onClick: c,
+                  renderText: d,
                   resolutionContext: l,
                   resolveFieldValue: (0, v.J)(l),
               },
-              children: f(d),
+              children: p(h),
           });
 }

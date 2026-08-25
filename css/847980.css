@@ -253,12 +253,13 @@
 }
 
 .imageOffsetPositioner__01fb0 {
+    border-top-right-radius: var(--custom-application-widget-card-radius, var(--radius-lg));
     bottom: 0;
     left: 0;
     overflow: hidden;
     position: absolute;
     right: calc(var(--space-16)*-1);
-    top: calc((var(--space-12) + var(--space-8))*-1);
+    top: calc(var(--space-12)*-1);
     z-index: -1
 }
 
@@ -266,4 +267,4 @@
     width: 100%
 }
 
-/*# sourceMappingURL=847980.a8d6cf4934559430.css.map*/
+/*# sourceMappingURL=847980.fcd7fec92fc4fd65.css.map*/
