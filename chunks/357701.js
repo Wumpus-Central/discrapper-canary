@@ -5457,7 +5457,7 @@ function rc(e) {
                 A = (0, tM.A)(e.id),
                 g = (0, tR.jY)(e.id),
                 m = (0, tj.fw)(e.id),
-                f = (0, tD.Uq)(e, "useGuildActionRows"),
+                f = (0, tD.Uq)(e.id, "useGuildActionRows"),
                 p = [],
                 C = e.features.has(B.GuildFeatures.HUB),
                 E = e.features.has(B.GuildFeatures.COMMUNITY),
