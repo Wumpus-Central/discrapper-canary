@@ -7,7 +7,7 @@ var l = t(477900),
     o = t(812597);
 function c(e) {
     let { position: n, roomWidth: t } = e,
-        [c, u] = (0, s.z)(() => ({ x: n.x, y: n.y, config: { clamp: !0, tension: 300 } }));
+        [c, u] = (0, s.z)(() => ({ x: n.x, y: n.y, config: { clamp: !0, tension: 1200, friction: 40, mass: 0.4 } }));
     return (
         (0, i.useEffect)(() => {
             u({ x: n.x, y: n.y });

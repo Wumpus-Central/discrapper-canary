@@ -20,7 +20,7 @@
 }
 
 .container__3d96b {
-    cursor: none;
+    cursor: grabbing;
     inset: 0;
     position: absolute
 }
@@ -415,4 +415,4 @@
     border-radius: var(--radius-round)
 }
 
-/*# sourceMappingURL=280574.9e9bde96a4676c6d.css.map*/
+/*# sourceMappingURL=280574.88b71642eeb5d360.css.map*/
