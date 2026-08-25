@@ -1455,7 +1455,7 @@ if (
     n.e("859864").then(n.t.bind(n, 122123, 19));
 let e2 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 new eB.A().log(
-    `[BUILD INFO] Release Channel: ${e2}, Build Number: 601414, Version Hash: 772bcc612eba39d1035c2e2e7d55a42a7a5510c7`,
+    `[BUILD INFO] Release Channel: ${e2}, Build Number: 601419, Version Hash: ae2e0a3ce23de644cc57dc885fcb6d34ec7e4422`,
 ),
     D.A.setTags({ appContext: G.QCW }),
     eI.A.initBasic(),
@@ -20928,7 +20928,7 @@ let Nc = "isHideDevBanner",
                     className: ta()(Nd.Wz, Nd.mr),
                     children: [
                         (0, O.jsx)(No, { className: Nd.Kk }),
-                        tT.intl.format(tT.t.uyrfYF, { buildNumber: "601414" }),
+                        tT.intl.format(tT.t.uyrfYF, { buildNumber: "601419" }),
                         (0, O.jsx)(r, {}),
                     ],
                 })
@@ -34404,10 +34404,12 @@ var vr = n(499454),
     vo = n(818348);
 class vd extends t8.A {
     _initialize() {
-        b.h.subscribe("CHANNEL_SELECT", this._handleTriggerOfferChannelSelect);
+        b.h.subscribe("CHANNEL_SELECT", this._handleTriggerOfferChannelSelect),
+            b.h.subscribe("VOICE_CHANNEL_SELECT", this._handleTriggerOfferVoiceChannelSelect);
     }
     _terminate() {
-        b.h.unsubscribe("CHANNEL_SELECT", this._handleTriggerOfferChannelSelect);
+        b.h.unsubscribe("CHANNEL_SELECT", this._handleTriggerOfferChannelSelect),
+            b.h.unsubscribe("VOICE_CHANNEL_SELECT", this._handleTriggerOfferVoiceChannelSelect);
     }
     _handleTriggerOfferChannelSelect = (e) => {
         let { channelId: t } = e,
@@ -34436,6 +34438,30 @@ class vd extends t8.A {
                         channel_mention_count: d,
                         guild_is_vip: a,
                         guild_size_total: s,
+                    };
+                })(t);
+            });
+    };
+    _handleTriggerOfferVoiceChannelSelect = (e) => {
+        let { channelId: t, currentVoiceChannelId: n } = e;
+        null != t &&
+            t !== n &&
+            (0, vl.sq)(vo.U7.JOIN_VOICE_CHANNEL, null, function () {
+                return (function (e) {
+                    if (null == e) return;
+                    let t = rf.A.getChannel(e);
+                    if (null == t) return;
+                    let n = t.guild_id,
+                        i = eM.Ay.isVideoEnabled(),
+                        { voice_state_count: r, video_stream_count: a, video_enabled: s } = (0, rq.JK)(n, e, i),
+                        { custom_status_count: l } = (0, rq.dL)(n, e);
+                    return {
+                        voice_state_count: r,
+                        channel_type: t.type,
+                        channel_bitrate: t.bitrate,
+                        video_stream_count: a,
+                        video_enabled: s,
+                        custom_status_count: l,
                     };
                 })(t);
             });
