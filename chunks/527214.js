@@ -163,61 +163,61 @@ let O = {
             L = h.fullySanitized,
             y = O.trim();
         if (0 === f.trim().length || 0 === y.length) return o();
-        let D = R(d().unescapeUrl(s)),
-            v = (0, c.Ay)(r).length > 0 || (0, c.Ay)(l).length > 0;
-        if (null == D || v) return o();
-        let b = { ...n, allowEscape: !1, parseInlineCodeChildContent: !0 },
-            M = n.allowEmojiLinks ? T : p,
-            P = [...M, ...m],
-            U = [...g, ...S],
-            w = N(t(O, b), P, [E.EMOJI]),
-            G = N(t(L, b), U);
+        let D = R(d().unescapeUrl(s));
+        if (null == D || (0, c.Ay)(l).length > 0) return o();
+        let v = { ...n, allowEscape: !1, parseInlineCodeChildContent: !0 },
+            b = n.allowEmojiLinks ? T : p,
+            M = [...b, ...m],
+            P = [...g, ...S],
+            U = N(t(O, v), M, [E.EMOJI]),
+            w = N(t(L, v), P);
+        if (null == U || null == w) return o();
+        let G = (function e(t) {
+            let n = "";
+            for (let i of t)
+                switch (i.type) {
+                    case E.TEXT:
+                    case E.INLINE_CODE:
+                        n += i.content;
+                        break;
+                    case E.CUSTOM_EMOJI:
+                        n += i.name;
+                        break;
+                    case E.EMOJI:
+                        n += i.surrogate;
+                        break;
+                    case E.LINE_BREAK:
+                        n += "\n";
+                        break;
+                    case E.STRONG:
+                    case E.ITALICS:
+                    case E.UNDERLINE:
+                    case E.STRIKETHROUGH:
+                    case E.SPOILER:
+                        n += e(i.content);
+                        break;
+                    case E.TIMESTAMP:
+                        n += "<timestamp>";
+                        break;
+                    case E.BLOCK_QUOTE:
+                    case E.LIST:
+                    case E.HEADING:
+                    case E.SUBTEXT:
+                        n += `<${i.type}Content>`;
+                        break;
+                    default:
+                        (0, u.xb)(i.type);
+                }
+            return n;
+        })(U);
         if (
-            null == w ||
-            null == G ||
-            0 ===
-                (function e(t) {
-                    let n = "";
-                    for (let i of t)
-                        switch (i.type) {
-                            case E.TEXT:
-                            case E.INLINE_CODE:
-                                n += i.content;
-                                break;
-                            case E.CUSTOM_EMOJI:
-                                n += i.name;
-                                break;
-                            case E.EMOJI:
-                                n += i.surrogate;
-                                break;
-                            case E.LINE_BREAK:
-                                n += "\n";
-                                break;
-                            case E.STRONG:
-                            case E.ITALICS:
-                            case E.UNDERLINE:
-                            case E.STRIKETHROUGH:
-                            case E.SPOILER:
-                                n += e(i.content);
-                                break;
-                            case E.TIMESTAMP:
-                                n += "<timestamp>";
-                                break;
-                            case E.BLOCK_QUOTE:
-                            case E.LIST:
-                            case E.HEADING:
-                            case E.SUBTEXT:
-                                n += `<${i.type}Content>`;
-                                break;
-                            default:
-                                (0, u.xb)(i.type);
-                        }
-                    return n;
-                })(w).trim().length
+            0 === G.trim().length ||
+            (0, c.Ay)(G).length > 0 ||
+            (G !== O && ((0, c.Ay)(O).length > 0 || null == N(t(G, v), [...M, E.EMOJI])))
         )
             return o();
-        let x = a().pick(t.rules, M),
-            k = d().parserFor(x)(A.whitespaceSanitized, b),
+        let x = a().pick(t.rules, b),
+            k = d().parserFor(x)(A.whitespaceSanitized, v),
             F = h.whitespaceSanitized,
             { target: V } = D;
         return { content: k, target: V, title: F };
