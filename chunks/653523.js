@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { H$: () => C, MX: () => L, S4: () => O, zy: () => R }), n(801541);
+n.d(t, { H$: () => C, MX: () => L, S4: () => R, zy: () => O }), n(801541);
 var i = n(477900),
     r = n(582128),
     a = n(503698),
@@ -33,7 +33,7 @@ function C() {
         }),
     });
 }
-function O(e) {
+function R(e) {
     let {
             size: t = m.ni.SIZE_60,
             name: n,
@@ -49,19 +49,19 @@ function O(e) {
             disabled: T = !1,
             ariaDescribedBy: S,
         } = e,
-        O = (0, u.Gx)({ label: n, isSelected: d }),
-        R = r.useMemo(() => ({ "--custom-theme-selection-size": `${t}px` }), [t]);
+        R = (0, u.Gx)({ label: n, isSelected: d }),
+        O = r.useMemo(() => ({ "--custom-theme-selection-size": `${t}px` }), [t]);
     return (0, i.jsx)(E.m, {
         __unsupportedReactNodeAsText: n,
         children: (0, i.jsxs)("div", {
             className: N.RH,
-            style: R,
+            style: O,
             children: [
                 (0, i.jsx)(A.D, {
-                    ...O,
+                    ...R,
                     "aria-disabled": T,
                     "aria-describedby": S,
-                    tabIndex: c ?? O.tabIndex,
+                    tabIndex: c ?? R.tabIndex,
                     className: s()(N.yM, { [N.wH]: d }, a),
                     style: l,
                     onClick: d ? g.tEg : o,
@@ -78,7 +78,7 @@ function O(e) {
         }),
     });
 }
-function R(e) {
+function O(e) {
     let { theme: t, isSelected: n, onSelect: r, size: a, tabIndex: d } = e,
         c = (0, o.bG)([p.A], () => p.A.systemTheme),
         u = p.A.themePreferenceForSystemTheme(c),
@@ -99,7 +99,7 @@ function R(e) {
             .with(g.NJ8.MIDNIGHT, () => S.intl.string(S.t.Do4ZJx))
             .with("system", () => S.intl.string(S.t["7rOU6j"]))
             .exhaustive();
-    return (0, i.jsx)(O, {
+    return (0, i.jsx)(R, {
         size: a,
         onSelect: r,
         isSelected: n,
@@ -128,7 +128,7 @@ function L(e) {
         } = e,
         { colors: E, angle: A, theme: h } = n,
         I = (0, T.FK)({ colors: E, angle: A });
-    return (0, i.jsx)(O, {
+    return (0, i.jsx)(R, {
         size: t,
         onSelect: a ? void 0 : o,
         isSelected: r,

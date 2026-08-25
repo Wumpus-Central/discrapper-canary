@@ -107,11 +107,11 @@ function N(e, t, n) {
 function C(e, t) {
     E.values(_.GUILD_EVENT(e)).forEach((e) => m(e.id, t));
 }
-function O(e) {
+function R(e) {
     let { guildScheduledEvent: t } = e;
     return T(t), !0;
 }
-function R(e) {
+function O(e) {
     let { eventException: t } = e,
         n = E.get(t.event_id);
     if (null == n) return !1;
@@ -219,8 +219,8 @@ let M = new b(l.h, {
             T(e);
         return !0;
     },
-    GUILD_SCHEDULED_EVENT_CREATE: O,
-    GUILD_SCHEDULED_EVENT_UPDATE: O,
+    GUILD_SCHEDULED_EVENT_CREATE: R,
+    GUILD_SCHEDULED_EVENT_UPDATE: R,
     GUILD_SCHEDULED_EVENT_DELETE: function (e) {
         let { guildScheduledEvent: t } = e;
         return m(t.id), !0;
@@ -266,8 +266,8 @@ let M = new b(l.h, {
             n = t.guild_scheduled_event;
         return null != n && (T(n), !0);
     },
-    GUILD_SCHEDULED_EVENT_EXCEPTION_CREATE: R,
-    GUILD_SCHEDULED_EVENT_EXCEPTION_UPDATE: R,
+    GUILD_SCHEDULED_EVENT_EXCEPTION_CREATE: O,
+    GUILD_SCHEDULED_EVENT_EXCEPTION_UPDATE: O,
     GUILD_SCHEDULED_EVENT_EXCEPTION_DELETE: function (e) {
         let { eventException: t } = e,
             n = E.get(t.event_id);

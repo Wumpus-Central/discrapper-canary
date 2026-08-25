@@ -22,8 +22,8 @@ var i = n(284009),
     S = n(543465),
     N = n(287809),
     C = n(645959),
-    O = n(935208),
-    R = n(851109),
+    R = n(935208),
+    O = n(851109),
     L = n(394953),
     y = n(435558),
     D = n.n(y),
@@ -46,7 +46,7 @@ class b {
         (this._messages = [
             ...this._messages,
             ...n
-                .filter((e) => e.author.id !== i && O.default.age(e.id) < v.V$)
+                .filter((e) => e.author.id !== i && R.default.age(e.id) < v.V$)
                 .map((e) => ({
                     id: e.id,
                     channelId: e.channel_id,
@@ -74,7 +74,7 @@ class b {
         this._isSorted ||
             ((this._messages = D().sortedUniqBy(
                 this._messages.toSorted((e, t) => {
-                    let n = O.default.compare(e.id, t.id);
+                    let n = R.default.compare(e.id, t.id);
                     return 0 !== n
                         ? n
                         : e.kind === v.yL.MENTION && t.kind !== v.yL.MENTION
@@ -90,12 +90,12 @@ class b {
         if (this._messages.length <= e) return;
         let t = {};
         for (let e of this._messages)
-            O.default.age(e.id) > v.V$ ||
+            R.default.age(e.id) > v.V$ ||
                 (null == t[e.channelId] && (t[e.channelId] = { mentions: [], messages: [] }),
                 e.kind === v.yL.MENTION ? t[e.channelId].mentions.push(e) : t[e.channelId].messages.push(e));
         let n = [];
         Object.values(t).forEach((e) => {
-            let t = [...e.mentions, ...e.messages].sort((e, t) => O.default.compare(e.id, t.id)).slice(-v.EM),
+            let t = [...e.mentions, ...e.messages].sort((e, t) => R.default.compare(e.id, t.id)).slice(-v.EM),
                 i = new Set(),
                 r = [];
             for (let e of t) i.add(e.id), r.push(e);
@@ -117,7 +117,7 @@ let w = {},
     V = !1,
     B = !1,
     H = !1,
-    j = O.default.fromTimestamp(Date.now()),
+    j = R.default.fromTimestamp(Date.now()),
     W = !0,
     Y = null,
     K = null,
@@ -131,10 +131,10 @@ function z(e) {
 }
 function Z() {
     if (null == G) {
-        j = O.default.fromTimestamp(Date.now());
+        j = R.default.fromTimestamp(Date.now());
         return;
     }
-    for (let e of G.toSorted((e, t) => O.default.compare(T.Ay.lastMessageId(t), T.Ay.lastMessageId(e)))) {
+    for (let e of G.toSorted((e, t) => R.default.compare(T.Ay.lastMessageId(t), T.Ay.lastMessageId(e)))) {
         let t = w[e];
         if (t.loadState === v.Ve.UNLOADED && null != t.mostRecentMessageId) {
             j = t.mostRecentMessageId;
@@ -202,7 +202,7 @@ function q() {
                     ? n
                         ? -1
                         : 1
-                    : O.default.compare(T.Ay.lastMessageId(t), T.Ay.lastMessageId(e));
+                    : R.default.compare(T.Ay.lastMessageId(t), T.Ay.lastMessageId(e));
             })
             .reduce(
                 (e, t) => (
@@ -235,14 +235,14 @@ function X() {
         (F = !1),
         (V = !1),
         (B = !1),
-        (j = O.default.fromTimestamp(Date.now())),
+        (j = R.default.fromTimestamp(Date.now())),
         (W = !0),
         (H = !1),
         (K = null),
         (Y = null);
 }
 function Q() {
-    if (null == (0, R.GE)({ location: "NotificationsInboxStore.reinitializeInbox" })?.notificationCenterVariant)
+    if (null == (0, O.GE)({ location: "NotificationsInboxStore.reinitializeInbox" })?.notificationCenterVariant)
         return !1;
     for (let e of (X(), q(), G ?? [])) {
         let t = z(e);
@@ -304,7 +304,7 @@ class en extends a.Ay.Store {
         return (function (e) {
             let { preload: t } = e;
             return (
-                null != (0, R.GE)({ location: "NotificationsInboxStore.canLoadMore" })?.notificationCenterVariant &&
+                null != (0, O.GE)({ location: "NotificationsInboxStore.canLoadMore" })?.notificationCenterVariant &&
                 null != G &&
                 !F &&
                 !V &&
@@ -455,8 +455,8 @@ let ei = new en(s.h, {
     },
     NOTIFICATIONS_INBOX_ITEM_CLICK: function (e) {
         let { messageId: t, channelId: n, isUnread: i } = e,
-            r = (0, R.GE)({ location: "handleInboxItemClick" }).notificationCenterVariant;
-        Y = i && r === R.U5.SIDEBAR ? { channelId: n, messageId: t } : null;
+            r = (0, O.GE)({ location: "handleInboxItemClick" }).notificationCenterVariant;
+        Y = i && r === O.U5.SIDEBAR ? { channelId: n, messageId: t } : null;
     },
     NOTIFICATIONS_INBOX_ITEM_ACK: function (e) {
         let { channelId: t, messageId: n } = e;

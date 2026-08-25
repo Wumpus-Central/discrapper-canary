@@ -34,8 +34,8 @@ var i = n(477900),
     S = n(297264),
     N = n(885574),
     C = n(933832),
-    O = n(708988),
-    R = n(228366),
+    R = n(708988),
+    O = n(228366),
     L = n(830215),
     y = n(803306),
     D = n(736653),
@@ -186,8 +186,8 @@ var eg = n(214947),
     eS = n(845798),
     eN = n(687966),
     eC = n(625903),
-    eO = n(975571),
-    eR = n(441945);
+    eR = n(975571),
+    eO = n(441945);
 function eL(e) {
     let t,
         { application: n, accountScopes: r } = e,
@@ -197,9 +197,9 @@ function eL(e) {
         ? ((t = s
               ? en.intl.format(en.t.GxjwZM, {
                     applicationName: n.name,
-                    learnMoreURL: eO.A.getArticleURL(et.MVz.SOCIAL_LAYER_CONNECTIONS),
+                    learnMoreURL: eR.A.getArticleURL(et.MVz.SOCIAL_LAYER_CONNECTIONS),
                 })
-              : en.intl.format(en.t.DfBeUq, { learnMoreURL: eO.A.getArticleURL(et.MVz.SOCIAL_LAYER_CONNECTIONS) })),
+              : en.intl.format(en.t.DfBeUq, { learnMoreURL: eR.A.getArticleURL(et.MVz.SOCIAL_LAYER_CONNECTIONS) })),
           a.push(
               {
                   icon: eg.$,
@@ -218,9 +218,9 @@ function eL(e) {
           ((t = s
               ? en.intl.format(en.t.GxjwZM, {
                     applicationName: n.name,
-                    learnMoreURL: eO.A.getArticleURL(et.MVz.SOCIAL_LAYER_CONNECTIONS),
+                    learnMoreURL: eR.A.getArticleURL(et.MVz.SOCIAL_LAYER_CONNECTIONS),
                 })
-              : en.intl.format(en.t.DfBeUq, { learnMoreURL: eO.A.getArticleURL(et.MVz.SOCIAL_LAYER_CONNECTIONS) })),
+              : en.intl.format(en.t.DfBeUq, { learnMoreURL: eR.A.getArticleURL(et.MVz.SOCIAL_LAYER_CONNECTIONS) })),
           a.push(
               {
                   icon: eg.$,
@@ -237,9 +237,9 @@ function eL(e) {
     0 === a.length)
         ? null
         : (0, i.jsxs)("div", {
-              className: eR.b9,
+              className: eO.b9,
               children: [
-                  null != t ? (0, i.jsx)(S.D, { variant: "heading-sm/normal", className: eR.a9, children: t }) : null,
+                  null != t ? (0, i.jsx)(S.D, { variant: "heading-sm/normal", className: eO.a9, children: t }) : null,
                   a.map((e, t) => {
                       let { icon: n, text: r } = e;
                       return (0, i.jsx)(ey, { icon: n, text: r }, t);
@@ -250,10 +250,10 @@ function eL(e) {
 function ey(e) {
     let { icon: t, text: n } = e;
     return (0, i.jsxs)("div", {
-        className: eR.f_,
+        className: eO.f_,
         children: [
-            (0, i.jsx)(t, { className: eR.u7, color: "currentColor" }),
-            (0, i.jsx)(g.E, { variant: "text-md/normal", className: eR.u0, children: n }),
+            (0, i.jsx)(t, { className: eO.u7, color: "currentColor" }),
+            (0, i.jsx)(g.E, { variant: "text-md/normal", className: eO.u0, children: n }),
         ],
     });
 }
@@ -1131,7 +1131,7 @@ function e7(e) {
         [ep, em] = r.useState(null),
         [eg, eS] = r.useState(null),
         [eN, eC] = r.useState(!1),
-        [eO, eR] = r.useState(!1),
+        [eR, eO] = r.useState(!1),
         ey = eI?.guilds,
         [eD, ev] = r.useState(U ?? null),
         [eb, eM] = r.useState(x ?? null),
@@ -1165,7 +1165,7 @@ function e7(e) {
     (0, d.Ay)(() => {
         let e = $.default.getAnalyticsToken();
         null != e
-            ? R.h.dispatch({ type: "SET_ANALYTICS_TOKEN", analyticsToken: e, userId: $.default.getId() })
+            ? O.h.dispatch({ type: "SET_ANALYTICS_TOKEN", analyticsToken: e, userId: $.default.getId() })
             : (0, y.fetchCurrentUser)({ withAnalyticsToken: !0 }).catch(et.tEg);
     }),
         r.useEffect(() => {
@@ -1330,7 +1330,7 @@ function e7(e) {
                     : ta();
         }, [te, ta, eJ, e3, eW, eI, eg]);
     let to = r.useCallback((e) => {
-            e && eR(!0);
+            e && eO(!0);
         }, []),
         td = (0, o.K)(to);
     if (eg instanceof Error)
@@ -1489,10 +1489,10 @@ function e7(e) {
             ),
             "SELECT_INSTALL_TYPE" !== ep))
     ) {
-        let e = "CONNECT_ACCOUNT" !== ep && !eO;
+        let e = "CONNECT_ACCOUNT" !== ep && !eR;
         tg.push(
             e
-                ? { disabled: !0, loading: eN, text: en.intl.string(en.t.N22i9F), icon: O.M }
+                ? { disabled: !0, loading: eN, text: en.intl.string(en.t.N22i9F), icon: R.M }
                 : {
                       onClick: null != a ? () => em(a) : () => ti(!0),
                       loading: eN,

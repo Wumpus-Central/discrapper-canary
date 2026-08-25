@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { IU: () => O, SP: () => C, ec: () => b, rh: () => N, ei: () => v }), n(938796);
+n.d(t, { IU: () => R, SP: () => C, ec: () => b, rh: () => N, ei: () => v }), n(938796);
 var i = n(536637),
     r = n.n(i),
     a = n(721779),
@@ -66,7 +66,7 @@ function N(e) {
                   ? new c.A(e.author)
                   : (h.default.getUser(e.author.id) ?? new c.A(e.author)),
         C = e?.gift_info,
-        O = e.gifting_prompt,
+        R = e.gifting_prompt,
         L = null != e.interaction ? u.createFromServer(e.interaction) : null,
         v = e.type === m.lAJ.THREAD_STARTER_MESSAGE ? e.referenced_message?.author?.id : void 0,
         b = e.content;
@@ -99,7 +99,7 @@ function N(e) {
             content: b,
             referralTrialOfferId: t,
             premiumGroupInviteId: n,
-            call: R(e.call, a.timestamp),
+            call: O(e.call, a.timestamp),
             messageSnapshots: D(e),
             reactions: y(i ?? e.reactions, e.poll),
             interaction: L,
@@ -110,7 +110,7 @@ function N(e) {
             poll: null == e.poll ? void 0 : l(e.poll),
             sharedClientTheme: e.shared_client_theme,
             giftInfo: null == C ? void 0 : C,
-            giftingPrompt: O,
+            giftingPrompt: R,
             boostingPrompt: e.boosting_prompt,
         })
     );
@@ -120,12 +120,12 @@ function C(e, t) {
         ? { ...t, reactions: e.reactions, interaction_data: e.interaction_data }
         : { ...e, ...t };
 }
-function O(e, t) {
+function R(e, t) {
     if (null != t.edited_timestamp) return N(t, { reactions: e.reactions, interactionData: e.interactionData });
     let n = e,
         i = !1;
     return (
-        null != t.call && (n = n.set("call", R(t.call, e.timestamp))),
+        null != t.call && (n = n.set("call", O(t.call, e.timestamp))),
         null != t.attachments && (n = n.set("attachments", t.attachments)),
         null != t.application && (n = n.set("application", t.application)),
         null != t.activity && (n = n.set("activity", t.activity)),
@@ -151,7 +151,7 @@ function O(e, t) {
         n
     );
 }
-function R(e, t) {
+function O(e, t) {
     if (null != e) {
         let n = null != e.ended_timestamp ? r()(new Date(e.ended_timestamp)) : null,
             i = null != n ? r().duration(n.diff(t)) : null;

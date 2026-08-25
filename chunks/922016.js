@@ -75,7 +75,7 @@ class S extends s.Component {
             nudgeAlignIntoViewport: S = !0,
             avoidancePadding: N,
             spacing: C = 8,
-            clickTrap: O = !1,
+            clickTrap: R = !1,
         } = this.props;
         return (0, a.jsx)(d.$, {
             ref: this.ref,
@@ -118,7 +118,7 @@ class S extends s.Component {
             scrollBehavior: I,
             useMouseEnter: f,
             layerContext: T,
-            clickTrap: O,
+            clickTrap: R,
             children: e,
         });
     }

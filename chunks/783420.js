@@ -26,8 +26,8 @@ function f(e) {
             giftMessage: S,
             confirmationFooter: N,
             isGift: C,
-            initialPlanId: O = null,
-            shouldDisallowPlanSelection: R = !1,
+            initialPlanId: R = null,
+            shouldDisallowPlanSelection: O = !1,
             children: L,
         } = e,
         y = (0, r.bG)([_.default], () => _.default.getCurrentUser()),
@@ -74,7 +74,7 @@ function f(e) {
             null != r ? (s = I.AnalyticsObjectTypes.TRIAL) : C && (s = I.AnalyticsObjectTypes.GIFT);
             let _ = {
                 isGift: C,
-                initialPlanId: O,
+                initialPlanId: R,
                 subscriptionTier: f,
                 analyticsLocations: v,
                 analyticsObject: { object: I.ZSU.BUTTON_CTA, objectType: s, ...m },
@@ -85,7 +85,7 @@ function f(e) {
                 giftMessage: S,
                 confirmationFooter: N,
             };
-            R && null != O ? (0, o.A)({ ..._, initialPlanId: O, shouldDisallowPlanSelection: !0 }) : (0, o.A)(_);
+            O && null != R ? (0, o.A)({ ..._, initialPlanId: R, shouldDisallowPlanSelection: !0 }) : (0, o.A)(_);
         },
     });
 }

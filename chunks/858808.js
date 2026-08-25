@@ -1,31 +1,31 @@
-i.d(t, { A: () => u });
-var n = i(477900);
-i(582128);
-var l = i(765178),
-    s = i(866665),
-    r = i(408278),
-    a = i(241326),
-    o = i(183555),
-    d = i(735321),
-    c = i(375708);
+n.d(t, { A: () => u });
+var i = n(477900);
+n(582128);
+var l = n(765178),
+    s = n(866665),
+    r = n(408278),
+    a = n(241326),
+    o = n(183555),
+    d = n(735321),
+    c = n(375708);
 function u(e) {
-    let { game: t, widgetType: i, className: u, onRemove: g } = e,
+    let { game: t, widgetType: n, className: u, onRemove: g } = e,
         { trackUserProfileEditAction: m } = (0, o.NJ)(),
         x = c.intl.string(c.t.HUvyDc);
-    return (0, n.jsx)("div", {
+    return (0, i.jsx)("div", {
         className: u,
-        children: (0, n.jsx)(s.m, {
+        children: (0, i.jsx)(s.m, {
             text: x,
             ariaHidden: !0,
-            children: (0, n.jsx)(r.K, {
+            children: (0, i.jsx)(r.K, {
                 "aria-label": x,
                 icon: a.TrashIcon,
                 size: "sm",
                 variant: "overlay-secondary",
                 onClick: function () {
-                    (0, d.ef)(i, t.gameId),
+                    (0, d.ef)(n, t.gameId),
                         l.O.announce(c.intl.string(c.t["08HmMj"])),
-                        m({ action: "GAME_REMOVED", gameId: t.gameId, widgetEdited: i }),
+                        m({ action: "GAME_REMOVED", gameId: t.gameId, widgetEdited: n }),
                         g?.();
                 },
             }),

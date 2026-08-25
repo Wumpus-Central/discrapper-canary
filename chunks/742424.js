@@ -28,8 +28,8 @@ var l = n(477900),
     j = n(482030),
     b = n(627363),
     R = n(773669),
-    O = n(403362),
-    M = n(562153),
+    M = n(403362),
+    O = n(562153),
     L = n(939341),
     w = n(576757),
     k = n(583846);
@@ -263,8 +263,8 @@ var ef = n(554146),
     ej = n(97808),
     eb = n(738188),
     eR = n(983851),
-    eO = n(31300),
-    eM = n(308528),
+    eM = n(31300),
+    eO = n(308528),
     eL = n(367513),
     ew = n(730852),
     ek = n(401843),
@@ -464,7 +464,7 @@ ta.EmojiIntention.CHAT,
         tr.Ay.getByName("watermelon"),
         tr.Ay.getByName("fork_and_knife"),
         tr.Ay.getByName("yum"),
-    ].filter(O.Vq);
+    ].filter(M.Vq);
 var tc = n(636585),
     td = n(734057),
     th = n(71393),
@@ -516,8 +516,8 @@ let tR = function (e) {
               ],
           });
 };
-var tO = n(315246),
-    tM = n(866323),
+var tM = n(315246),
+    tO = n(866323),
     tL = n(857250),
     tw = n(97483),
     tk = n(289873),
@@ -539,7 +539,7 @@ function tU() {
 let tG = (e) => {
     let { shown: t, sent: n, className: i } = e,
         s = (0, u.bG)([m.Ay], () => m.Ay.useReducedMotion),
-        r = (0, tM.p)(
+        r = (0, tO.p)(
             t,
             {
                 from: { transform: s ? "translateY(0)" : "translateY(16px)", opacity: 0 },
@@ -984,7 +984,7 @@ function tq(e) {
                               },
                               fullWidth: !0,
                               text: g ? eu.intl.string(eu.t.I6JG46) : eu.intl.string(eu.t.VJlc0S),
-                              icon: g ? eO.k : eR.H,
+                              icon: g ? eM.k : eR.H,
                               variant: "active",
                               size: "md",
                           }),
@@ -992,7 +992,7 @@ function tq(e) {
             };
         })({ channel: o, entry: m, onVoiceChannelPreview: x }),
         { embeddedActivity: R } = (0, tS.A)(m),
-        O =
+        M =
             ((t = R),
             (n = (0, u.bG)([th.A], () => th.A.getGuild((0, eP.D)(t?.location)))),
             (s = (0, u.bG)([td.A], () => td.A.getChannel((0, eP.H)(t?.location)))),
@@ -1059,7 +1059,7 @@ function tq(e) {
         w = L.length > 0,
         k = L.length >= 2,
         [P, U] = i.useState(!w),
-        G = M.Ay.getName(o?.guild_id, o?.id, c),
+        G = O.Ay.getName(o?.guild_id, o?.id, c),
         V = (0, eq.Ay)(o, !0),
         F =
             null != o && A
@@ -1083,7 +1083,7 @@ function tq(e) {
             )
                 D()(null != o, "shareToChannelMode should only be true if a valid channel is passed"), (t = o);
             else {
-                let e = await eM.A.getOrEnsurePrivateChannel(c.id);
+                let e = await eO.A.getOrEnsurePrivateChannel(c.id);
                 t = td.A.getChannel(e) ?? null;
             }
             return (
@@ -1108,7 +1108,7 @@ function tq(e) {
         if (((0, eQ.Dr)(ef.M.CONTENT_INVENTORY_ONE_CLICK_REPLY_COACHTIP), A))
             D()(null != o, "shareToChannelMode should only be true if a valid channel is passed"), (t = o);
         else {
-            let e = await eM.A.openPrivateChannel({ recipientIds: c.id }),
+            let e = await eO.A.openPrivateChannel({ recipientIds: c.id }),
                 n = td.A.getChannel(e);
             D()(null != n, "DM channel must be defined"), (t = n);
         }
@@ -1128,7 +1128,7 @@ function tq(e) {
             }),
             l?.(i, n);
     }
-    let z = p ?? j ?? O;
+    let z = p ?? j ?? M;
     function Z() {
         C((e) => !e), P && I?.focus();
     }
@@ -1277,8 +1277,8 @@ function t$(e) {
                         variant: "heading-sm/normal",
                         className: em()(tB.Xn, tB.zA),
                         children: eu.intl.format(n, {
-                            user0: M.Ay.getName(a, t?.id, p[0]),
-                            user1: M.Ay.getName(a, t?.id, p[1]),
+                            user0: O.Ay.getName(a, t?.id, p[0]),
+                            user1: O.Ay.getName(a, t?.id, p[1]),
                             countOthers: h,
                             countOthersHook: (e, t) =>
                                 (0, l.jsx)(
@@ -1317,7 +1317,7 @@ function t$(e) {
                 ],
             }),
             null != f && (0, l.jsx)(e$.Ay, { size: e$.Ay.Sizes.SMALL }),
-            null != m && (0, l.jsx)(tO.A, { user: m, channel: t, guildId: a, entry: i, disableGameProfileLinks: s }),
+            null != m && (0, l.jsx)(tM.A, { user: m, channel: t, guildId: a, entry: i, disableGameProfileLinks: s }),
         ],
     });
 }
@@ -1470,7 +1470,7 @@ function t0(e) {
         { largeImage: j } = (0, L.nO)({ entry: x, trackingSource: "memberlist_streaming_content_popout" }),
         b = (0, te.w)({ location: "content_inventory" }),
         R = (0, u.bG)([e9.A], () => e9.A.getDetectableIdsToApplicationIds()),
-        O = i.useContext(tK);
+        M = i.useContext(tK);
     return (0, l.jsxs)("div", {
         className: tB.au,
         children: [
@@ -1520,7 +1520,7 @@ function t0(e) {
                                     (0, l.jsx)(tX, {
                                         onClick: c ?? y,
                                         children: (0, l.jsx)(eN.D, {
-                                            id: O,
+                                            id: M,
                                             variant: "heading-md/semibold",
                                             className: tB.nk,
                                             lineClamp: 3,
@@ -1588,14 +1588,14 @@ let t2 = function (e) {
                               return eu.intl
                                   .formatToMarkdownString(s, {
                                       gameName: t.extra.activity_name,
-                                      user1: M.Ay.getName(n?.guild_id, n?.id, l[0]),
-                                      user2: M.Ay.getName(n?.guild_id, n?.id, l[1]),
+                                      user1: O.Ay.getName(n?.guild_id, n?.id, l[0]),
+                                      user2: O.Ay.getName(n?.guild_id, n?.id, l[1]),
                                       countOthers: i,
                                   })
                                   .replaceAll("*", "");
                           })({ entry: n, channel: t, users: [A, P], countOthers: D })
                         : ((l = eu.t["bES+y2"]),
-                          (i = M.Ay.getName(t.guild_id, t.id, c)),
+                          (i = O.Ay.getName(t.guild_id, t.id, c)),
                           (s = n.extra.activity_name),
                           eu.intl.formatToMarkdownString(l, { gameName: s, userName: i }).replaceAll("*", ""));
                 return ec({
@@ -1652,7 +1652,7 @@ let t2 = function (e) {
                       text: eu.intl.string(eu.t.GDWYR8),
                       icon: y.k,
                   }),
-        Y = [z, W && !a ? K : Z].filter(O.Vq);
+        Y = [z, W && !a ? K : Z].filter(M.Vq);
     return (0, l.jsxs)(tz, {
         children: [
             B,
@@ -1849,8 +1849,8 @@ let nm = [...t3.n, ed.Yq],
                                   return eu.intl
                                       .formatToMarkdownString(s, {
                                           gameName: t.extra.game_name,
-                                          user1: M.Ay.getName(n?.guild_id, n?.id, l[0]),
-                                          user2: M.Ay.getName(n?.guild_id, n?.id, l[1]),
+                                          user1: O.Ay.getName(n?.guild_id, n?.id, l[0]),
+                                          user2: O.Ay.getName(n?.guild_id, n?.id, l[1]),
                                           countOthers: i,
                                       })
                                       .replaceAll("*", "");
@@ -1863,7 +1863,7 @@ let nm = [...t3.n, ed.Yq],
                                   : l
                                     ? eu.t["lLPKY+"]
                                     : eu.t["bES+y2"]),
-                              (s = M.Ay.getName(t?.guild_id, t?.id, h)),
+                              (s = O.Ay.getName(t?.guild_id, t?.id, h)),
                               (r = n.extra.game_name),
                               eu.intl.formatToMarkdownString(i, { gameName: r, userName: s }).replaceAll("*", ""));
                     return no({
@@ -1953,7 +1953,7 @@ let nm = [...t3.n, ed.Yq],
                     ? (0, l.jsx)(ni.A, { activity: p, size: "md", variant: "primary", icon: t8.EyeIcon }, "watch")
                     : null,
                 J,
-            ].filter(O.Vq);
+            ].filter(M.Vq);
         return (0, l.jsxs)(tz, {
             children: [
                 q,
@@ -2052,7 +2052,7 @@ var nC = n(363670),
     nj = n(280450),
     nb = n(121090),
     nR = n(974690);
-async function nO(e) {
+async function nM(e) {
     let { user: t, channel: n, mediaImageSrc: l, artist: i, description: s, colors: r, badges: a } = e,
         o = (function (e) {
             let { avatarSrc: t, mediaImageSrc: n } = e;
@@ -2088,7 +2088,7 @@ async function nO(e) {
         },
     });
 }
-var nM = n(693879),
+var nO = n(693879),
     nL = n(809854),
     nw = n(272984),
     nk = n(170699);
@@ -2109,7 +2109,7 @@ function nP(e) {
         : (0, l.jsxs)("div", {
               className: nk.lu,
               children: [
-                  (0, l.jsx)(nM.z, { entry: n }),
+                  (0, l.jsx)(nO.z, { entry: n }),
                   (0, l.jsx)("div", { className: nk.Lt, children: (0, l.jsx)("div", { className: nk.Vp, style: a }) }),
                   (0, l.jsx)(e_.E, {
                       className: nk.vE,
@@ -2140,7 +2140,7 @@ function nD(e) {
             if (null == r || null == x) return;
             let e = m.timestamps?.start,
                 t = (0, k.W6)(null != e ? { start: e } : a, Date.now());
-            return nO({
+            return nM({
                 user: x,
                 channel: r,
                 mediaImageSrc: h?.src,
@@ -2148,7 +2148,7 @@ function nD(e) {
                 description: (function (e, t, n) {
                     let { artist: l, media: i } = e,
                         s = eu.t["6iNxrl"],
-                        r = M.Ay.getName(t.guild_id, t.id, n);
+                        r = O.Ay.getName(t.guild_id, t.id, n);
                     return eu.intl.formatToMarkdownString(s, { artist: l, userName: r, media: i }).replaceAll("*", "");
                 })({ artist: p, media: g }, r, x),
                 colors: [A, C],
@@ -2248,7 +2248,7 @@ let nH = [ed.Y8],
         let { entry: t, channel: n, selected: i } = e,
             { largeImage: s } = (0, L.nO)({ entry: t, trackingSource: "memberlist_top_artist_content_row" }),
             r = (0, k.TQ)(t);
-        return null != r && (0, O.S1)(r, nB)
+        return null != r && (0, M.S1)(r, nB)
             ? (0, l.jsxs)(nV.Zp, {
                   selected: i,
                   children: [
@@ -2279,7 +2279,7 @@ let nz = function (e) {
         C = i.useCallback(() => {
             var e, t, n;
             let l, i, a, o;
-            if (null == s || null == f || !(0, O.S1)(A, nB)) return;
+            if (null == s || null == f || !(0, M.S1)(A, nB)) return;
             let u =
                 ((e = r),
                 (t = s),
@@ -2287,10 +2287,10 @@ let nz = function (e) {
                 (i = (function (e) {
                     if (e === nU.j.WEEK) return eu.t.SjOZfm;
                 })(A)),
-                (a = M.Ay.getName(t.guild_id, t.id, n)),
+                (a = O.Ay.getName(t.guild_id, t.id, n)),
                 (o = e.extra.artist.name),
                 eu.intl.formatToMarkdownString(i, { artist: o, userName: a }).replaceAll("*", ""));
-            return nO({
+            return nM({
                 user: f,
                 channel: s,
                 mediaImageSrc: h,
@@ -2304,7 +2304,7 @@ let nz = function (e) {
             });
         }, [h, m, s, r, p, A, x, f]),
         E = nd(eW.fg2.SPOTIFY);
-    if (null == f || !(0, O.S1)(A, nB)) return null;
+    if (null == f || !(0, M.S1)(A, nB)) return null;
     function I() {
         let e = nw.M0.ALBUM,
             t = nK.A.isProtocolRegistered()
@@ -2383,7 +2383,7 @@ let nY = function (e) {
                             (i = (function (e) {
                                 if (e === nU.j.WEEK) return eu.t["7TXfc6"];
                             })(x)),
-                            (a = M.Ay.getName(n.guild_id, n.id, l)),
+                            (a = O.Ay.getName(n.guild_id, n.id, l)),
                             (o = t.extra.game_name),
                             eu.intl.formatToMarkdownString(i, { gameName: o, userName: a }).replaceAll("*", "")),
                         timestamp: eu.intl.formatToPlainString(eu.t.YL7UE3, {
@@ -2518,7 +2518,7 @@ let n0 = function (e) {
                                 (n = s),
                                 (l = c),
                                 (i = eu.t.LHF6D9),
-                                (a = M.Ay.getName(n?.guild_id, n?.id, l)),
+                                (a = O.Ay.getName(n?.guild_id, n?.id, l)),
                                 (o = t.extra.media_title),
                                 eu.intl
                                     .formatToMarkdownString(i, {
@@ -2677,11 +2677,11 @@ let n7 = i.createContext(void 0),
             ),
             T = i.useRef(!1),
             [j, b] = i.useState(!1),
-            [R, O] = i.useState(!1),
-            M = (0, u.bG)([m.Ay], () => m.Ay.keyboardModeEnabled);
+            [R, M] = i.useState(!1),
+            O = (0, u.bG)([m.Ay], () => m.Ay.keyboardModeEnabled);
         i.useEffect(() => {
-            j && M && O(!0);
-        }, [j, M]),
+            j && O && M(!0);
+        }, [j, O]),
             i.useLayoutEffect(() => {
                 null != p.current && I(!0);
             }, []);
@@ -2721,7 +2721,7 @@ let n7 = i.createContext(void 0),
         function D() {
             (T.current = !1),
                 setTimeout(() => {
-                    T.current || (b(!1), O(M));
+                    T.current || (b(!1), M(O));
                 }, 100);
         }
         return (0, l.jsxs)(l.Fragment, {

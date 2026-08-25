@@ -66,7 +66,7 @@ function o(e) {
             strategy: "fixed",
         }),
         N = (0, r.s9)(S, { bubbles: { escapeKey: !1 } }),
-        { getReferenceProps: C, getFloatingProps: O } = (0, r.bv)([N]);
+        { getReferenceProps: C, getFloatingProps: R } = (0, r.bv)([N]);
     return {
         isOpen: E,
         setIsOpen: A,
@@ -74,6 +74,6 @@ function o(e) {
         floatingStyles: g,
         context: S,
         getReferenceProps: C,
-        getFloatingProps: O,
+        getFloatingProps: R,
     };
 }

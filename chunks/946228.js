@@ -28,8 +28,8 @@ var A = n(442433),
     j = n(900797),
     b = n(847374),
     R = n(320448),
-    O = n(939249),
-    M = n(485947),
+    M = n(939249),
+    O = n(485947),
     L = n(180170),
     w = n(435738),
     k = n(38055);
@@ -49,14 +49,14 @@ let F = i.memo(function (e) {
                 });
             }, []),
             d = i.useCallback(() => (u ? (0, L.Il)() : o > 3 ? r() : (0, D.tEg)()), [u, o, r]);
-        return (0, l.jsxs)(M.A, {
+        return (0, l.jsxs)(O.A, {
             className: V.lL,
             children: [
                 (0, l.jsx)(m.A, { children: U.intl.format(U.t.Uaqbke, { title: s, count: o }) }),
                 (0, l.jsxs)("div", {
                     className: G.N1,
                     children: [
-                        (0, l.jsx)(O.D, {
+                        (0, l.jsx)(M.D, {
                             onClick: d,
                             onContextMenu: c,
                             tag: "span",
@@ -65,7 +65,7 @@ let F = i.memo(function (e) {
                             children: (0, l.jsxs)("span", { children: [s, " \u2014 ", o] }),
                         }),
                         (0, l.jsx)(k.A, {}),
-                        (0, l.jsx)(O.D, {
+                        (0, l.jsx)(M.D, {
                             onClick: d,
                             onContextMenu: c,
                             tag: "span",
@@ -81,7 +81,7 @@ let F = i.memo(function (e) {
                                   : a
                                     ? (0, l.jsx)(b.a, { className: G.wT })
                                     : (0, l.jsx)(R._, { className: G.wT })),
-                              (0, l.jsx)(O.D, {
+                              (0, l.jsx)(M.D, {
                                   onClick: d,
                                   tag: "span",
                                   "aria-label": U.intl.string(a && !u ? U.t.iTcuma : U.t.dcl9MQ),
@@ -147,9 +147,9 @@ var ep = n(915089),
     ej = n(625494),
     eb = n(403362),
     eR = n(427262),
-    eO = n(19575),
-    eM = n(47167);
-let eL = eO.Ay.getEnableHardwareAcceleration(),
+    eM = n(19575),
+    eO = n(47167);
+let eL = eM.Ay.getEnableHardwareAcceleration(),
     ew = { origin: { x: 38, y: 11 }, targetWidth: 232, targetHeight: 40, offset: { x: 0, y: 0 } },
     ek = i.memo(function (e) {
         let {
@@ -176,7 +176,7 @@ let eL = eO.Ay.getEnableHardwareAcceleration(),
             T = i.useRef(null),
             [j, b] = i.useState(!1),
             R = null != S ? new Date(S) : null,
-            O = i.useCallback(
+            M = i.useCallback(
                 (e) => {
                     (0, A.L3)(e, async () => {
                         let { default: e } = await Promise.all([
@@ -255,7 +255,7 @@ let eL = eO.Ay.getEnableHardwareAcceleration(),
                 },
                 [c, x, g],
             ),
-            M = i.useCallback(() => {
+            O = i.useCallback(() => {
                 let e = `@${eR.Ay.getUserTag(c, { decoration: "never" })}`,
                     t = `<@${c.id}>`;
                 ej._.dispatch(D.jej.TEXTAREA_FOCUS, { channelId: g.id }),
@@ -281,7 +281,7 @@ let eL = eO.Ay.getEnableHardwareAcceleration(),
             roleId: a,
             position: d.Fr ? "window_center" : "left",
             spacing: 16,
-            onShiftClick: M,
+            onShiftClick: O,
             shouldShow: j,
             onRequestClose: () => {
                 b(!1);
@@ -291,7 +291,7 @@ let eL = eO.Ay.getEnableHardwareAcceleration(),
                 return (0, l.jsx)(I.A, {
                     ref: T,
                     className: V.Dc,
-                    onContextMenu: O,
+                    onContextMenu: M,
                     shouldAnimateStatus: eL,
                     user: c,
                     currentUser: h,
@@ -314,7 +314,7 @@ let eL = eO.Ay.getEnableHardwareAcceleration(),
                     itemProps: _,
                     nameplate: N,
                     onClick: (e) => {
-                        e.shiftKey ? M?.() : b((e) => !e);
+                        e.shiftKey ? O?.() : b((e) => !e);
                     },
                     onMouseDown: (e) => {
                         j ? e.stopPropagation() : i?.(e);
@@ -354,7 +354,7 @@ let eL = eO.Ay.getEnableHardwareAcceleration(),
             );
         return t === D.clD.UNKNOWN
             ? (0, l.jsx)("div", { className: o, children: (0, l.jsx)("div", { className: V.k1 }) })
-            : (0, l.jsxs)(M.A, {
+            : (0, l.jsxs)(O.A, {
                   className: o,
                   children: [
                       (0, l.jsx)(m.A, { children: null == r ? s : U.intl.format(U.t.Uaqbke, { title: s, count: r }) }),
@@ -613,7 +613,7 @@ class eG extends i.Component {
                                     children: (0, l.jsx)(p.H, {
                                         id: a,
                                         children: U.intl.format(U.t.JBQxV6, {
-                                            channel: (0, eM.m1)(n, e_.default, ev.A),
+                                            channel: (0, eO.m1)(n, e_.default, ev.A),
                                         }),
                                     }),
                                 }),

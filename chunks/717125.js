@@ -77,11 +77,11 @@ function C(e) {
     let { guildId: t } = e;
     delete f[t];
 }
-function O(e) {
+function R(e) {
     let { channel: t } = e;
     return null != t.guild_id && g(t.guild_id, t.id);
 }
-class R extends i.Ay.Store {
+class O extends i.Ay.Store {
     static displayName = "GatedChannelStore";
     initialize() {
         this.waitFor(u.A, _.Ay, E.A, A.A, o.A, h.default);
@@ -119,7 +119,7 @@ class R extends i.Ay.Store {
         );
     }
 }
-let L = new R(r.h, {
+let L = new O(r.h, {
     CONNECTION_OPEN: S,
     OVERLAY_INITIALIZE: S,
     CACHE_LOADED_LAZY: S,
@@ -131,8 +131,8 @@ let L = new R(r.h, {
     GUILD_ROLE_DELETE: C,
     IMPERSONATE_UPDATE: C,
     IMPERSONATE_STOP: C,
-    CHANNEL_CREATE: O,
-    CHANNEL_DELETE: O,
+    CHANNEL_CREATE: R,
+    CHANNEL_DELETE: R,
     CHANNEL_UPDATES: function (e) {
         let { channels: t } = e,
             n = !1;

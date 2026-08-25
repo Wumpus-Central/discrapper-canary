@@ -69,8 +69,8 @@ let b = i.forwardRef(function (e, t) {
         let { type: t, channelId: n } = e;
         return (0, l.jsx)(b, { type: t, channelId: n });
     });
-var O = n(931664),
-    M = n(951260),
+var M = n(931664),
+    O = n(951260),
     L = n(522602),
     w = n(158045),
     k = n(462180),
@@ -266,7 +266,7 @@ let ee = { click: { name: "click", start: 0, duration: 66 }, hover: { name: "hov
                 showAllButtons: y,
                 expressionButtonsHidden: v,
             } = e,
-            S = (0, M.n)("ChannelTextAreaButtons"),
+            S = (0, O.n)("ChannelTextAreaButtons"),
             N = (0, r.cf)([o.Ay], () => ({
                 isSubmitButtonEnabled: o.Ay.isSubmitButtonEnabled,
                 isAppsButtonEnabled: o.Ay.isAppsButtonEnabled,
@@ -283,8 +283,8 @@ let ee = { click: { name: "click", start: 0, duration: 66 }, hover: { name: "hov
                 ((t = C.id),
                 (n = x),
                 (i = I),
-                (0, r.bG)([O.A, L.A], () => {
-                    let e = O.A.getStickerPreview(t, n.drafts.type),
+                (0, r.bG)([M.A, L.A], () => {
+                    let e = M.A.getStickerPreview(t, n.drafts.type),
                         l = null != e && e.length > 0;
                     return 0 === L.A.getUploads(t, n.drafts.type).length && i && !l;
                 })),

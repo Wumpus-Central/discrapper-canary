@@ -11,7 +11,7 @@ n.d(t, {
     Pj: () => G,
     Pv: () => m,
     Rf: () => S,
-    TQ: () => R,
+    TQ: () => O,
     U3: () => h,
     W6: () => E,
     WC: () => b,
@@ -21,7 +21,7 @@ n.d(t, {
     iy: () => U,
     kR: () => v,
     sg: () => f,
-    ty: () => O,
+    ty: () => R,
     us: () => D,
     uw: () => P,
 }),
@@ -132,10 +132,10 @@ function N(e) {
 function C(e) {
     return g(e) && !N(e);
 }
-function O(e) {
+function R(e) {
     return m(e, s.K.DURATION_SECONDS)?.duration_seconds;
 }
-function R(e) {
+function O(e) {
     return m(e, s.K.AGGREGATE_RANGE)?.range;
 }
 function L(e) {
@@ -183,7 +183,7 @@ function w(e) {
     return !(Date.now() - n > 48 * o.A.Millis.HOUR);
 }
 function G(e) {
-    let t = O(e);
+    let t = R(e);
     if (null == t) return { text: null, tooltipText: null, a11yText: null };
     let n = Math.round(t / o.A.Seconds.HOUR);
     return n <= 0

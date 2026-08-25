@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => O });
+n.d(t, { A: () => R });
 var i = n(385244),
     r = n(718564),
     a = n(807081),
@@ -46,7 +46,7 @@ function N(e) {
 function C(e) {
     return (0, a.$)(o.intl.formatToParts(o.t.ihxM9x, { username: e, usernameOnClick: l.tEg }));
 }
-let O = {
+let R = {
     stringify: function (e, t) {
         let n = (function (e) {
                 let [t] = e.mentions ?? [];
@@ -73,8 +73,8 @@ let O = {
                 );
             case l.lAJ.RECIPIENT_REMOVE:
                 if (null == n) return;
-                let O = e.author;
-                if (null == O || O.id === n.id)
+                let R = e.author;
+                if (null == R || R.id === n.id)
                     return (0, a.$)(o.intl.formatToParts(o.t["Qn5+Lf"], { username: S, usernameOnClick: l.tEg }));
                 return (0, a.$)(
                     o.intl.formatToParts(o.t.QtZ0RD, {
@@ -85,8 +85,8 @@ let O = {
                     }),
                 );
             case l.lAJ.CALL:
-                let { call: R } = e;
-                if (null != R && -1 === R.participants.indexOf(h.default.getId()))
+                let { call: O } = e;
+                if (null != O && -1 === O.participants.indexOf(h.default.getId()))
                     return (0, a.$)(o.intl.formatToParts(o.t.DbgSA0, { username: S, usernameOnClick: l.tEg }));
                 return;
             case l.lAJ.CHANNEL_NAME_CHANGE:

@@ -61,29 +61,29 @@ function b(e) {
     });
 }
 var R = n(696451),
-    O = n(807094);
-function M(e) {
+    M = n(807094);
+function O(e) {
     let { name: t, className: n, state: i, isInline: s, onClick: a } = e,
         o = null;
     i?.isActive && !s
-        ? (o = O.vu)
+        ? (o = M.vu)
         : i?.lastValidationResult?.success === !1
-          ? (o = O.z3)
-          : i?.hasValue && !s && (o = O.hZ);
+          ? (o = M.z3)
+          : i?.hasValue && !s && (o = M.hZ);
     let u = (0, l.jsx)(I.E, {
         variant: s ? "text-md/normal" : "text-sm/normal",
         color: "text-strong",
-        className: r()(O.uK, { [O.mG]: s }, o, n),
+        className: r()(M.uK, { [M.mG]: s }, o, n),
         children: t + (s ? ":" : ""),
     });
-    return null == a ? u : (0, l.jsx)(c.D, { className: O.vk, onClick: () => a(t), children: u });
+    return null == a ? u : (0, l.jsx)(c.D, { className: M.vk, onClick: () => a(t), children: u });
 }
 var L = n(664929);
 n(827669);
 var w = n(375708),
     k = n(633331);
 function P(e, t, n) {
-    return (0, l.jsx)(M, { className: k.uK, name: e.displayName, state: t, onClick: n }, e.name);
+    return (0, l.jsx)(O, { className: k.uK, name: e.displayName, state: t, onClick: n }, e.name);
 }
 function D(e) {
     let { command: t, optionStates: n, onOptionClick: s } = e,

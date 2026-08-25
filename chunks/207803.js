@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
     EW: () => y,
-    Go: () => O,
+    Go: () => R,
     Gr: () => m,
     RE: () => g,
     VQ: () => f,
@@ -11,7 +11,7 @@ n.d(t, {
     gi: () => T,
     sd: () => N,
     w5: () => D,
-    xe: () => R,
+    xe: () => O,
 });
 var i = n(636537),
     r = n(765178),
@@ -76,11 +76,11 @@ function N() {
 function C(e) {
     a.h.dispatch({ type: "USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_AVATAR", avatar: e }), p(h.Ae.ANIMATED_AVATAR);
 }
-function O(e) {
+function R(e) {
     a.h.dispatch({ type: "USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_AVATAR_DECORATION", avatarDecoration: e }),
         p(h.Ae.AVATAR_DECORATION);
 }
-function R(e) {
+function O(e) {
     a.h.dispatch({ type: "USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_BANNER", banner: e }), p(h.Ae.PROFILE_BANNER);
 }
 function L(e) {

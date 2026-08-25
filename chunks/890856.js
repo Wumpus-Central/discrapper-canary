@@ -27,10 +27,10 @@ let l = (e) => {
             ref: N,
             buttonRef: C,
         } = e,
-        O = r.useRef(null),
-        R = N ?? O;
+        R = r.useRef(null),
+        O = N ?? R;
     return (0, i.jsxs)(t, {
-        ref: R,
+        ref: O,
         className: l,
         style: o,
         onClick: c,
@@ -44,7 +44,7 @@ let l = (e) => {
             (0, i.jsx)(a.D, {
                 ...m,
                 innerRef: C,
-                focusProps: { ringTarget: R, ...d },
+                focusProps: { ringTarget: O, ...d },
                 className: s.K,
                 "aria-label": g,
                 "aria-describedby": S,

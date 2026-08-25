@@ -4,7 +4,7 @@ n.d(t, {
     F9: () => _,
     GL: () => D,
     I6: () => m,
-    IO: () => R,
+    IO: () => O,
     JC: () => H,
     K$: () => b,
     Ki: () => v,
@@ -22,7 +22,7 @@ n.d(t, {
     no: () => P,
     pU: () => u,
     t: () => f,
-    uD: () => O,
+    uD: () => R,
     vS: () => E,
     vl: () => g,
     vv: () => y,
@@ -100,8 +100,8 @@ function N(e) {
 function C(e) {
     return Array.from(r.o.IN_GAME).some((t) => null != e.config.taskConfigV2.tasks[t]);
 }
-let O = N([r.n.PLAY_ON_XBOX, r.n.PLAY_ON_PLAYSTATION]),
-    R = N([r.n.WATCH_VIDEO]),
+let R = N([r.n.PLAY_ON_XBOX, r.n.PLAY_ON_PLAYSTATION]),
+    O = N([r.n.WATCH_VIDEO]),
     L = N([r.n.WATCH_VIDEO_ON_MOBILE]),
     y = N([r.n.WATCH_VIDEO, r.n.WATCH_VIDEO_ON_MOBILE]),
     D = N([
@@ -113,13 +113,13 @@ let O = N([r.n.PLAY_ON_XBOX, r.n.PLAY_ON_PLAYSTATION]),
     ]),
     v = N([r.n.ACHIEVEMENT_IN_ACTIVITY, r.n.PLAY_ACTIVITY]);
 function b(e) {
-    return L(e) && !R(e);
+    return L(e) && !O(e);
 }
 function M(e) {
-    return O(e);
+    return R(e);
 }
 function P(e) {
-    return !O(e) && f({ quest: e });
+    return !R(e) && f({ quest: e });
 }
 function U(e, t) {
     let n = e?.progress[t]?.heartbeat?.expiresAt;
@@ -207,7 +207,7 @@ function B(e, t) {
                   percentComplete: 0,
                   taskType: r.n.STREAM_ON_DESKTOP,
               }
-            : O(n)
+            : R(n)
               ? (function (e) {
                     let { quest: t, includeTaskTypes: n = r.o.ALL } = e;
                     for (let e of Object.values(t.userStatus?.progress ?? {})

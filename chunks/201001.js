@@ -33,8 +33,8 @@ function m(e, t, n, a) {
             N,
             {
                 className: C,
-                onScroll: O,
-                onResize: R = null,
+                onScroll: R,
+                onResize: O = null,
                 onContentResize: L = null,
                 sections: y,
                 sectionHeight: D,
@@ -102,14 +102,14 @@ function m(e, t, n, a) {
                         forceUpdateOnChunkChange: N,
                     } = (0, A.A)({ chunkSize: o, getScrollerState: u, forceUpdate: f }),
                     { items: C } = p.current,
-                    O = null,
-                    { scrollTop: R } = u();
+                    R = null,
+                    { scrollTop: O } = u();
                 for (let e of C) {
-                    if (0 === R) break;
+                    if (0 === O) break;
                     if ("footer" === e.type || "header" === e.type || null == e.anchorId) continue;
                     let t = "row" === e.type ? e.row : void 0;
-                    if (e.offsetTop >= R) {
-                        O = { id: e.anchorId, section: e.section, row: t, scrollOffset: e.offsetTop - R };
+                    if (e.offsetTop >= O) {
+                        R = { id: e.anchorId, section: e.section, row: t, scrollOffset: e.offsetTop - O };
                         break;
                     }
                 }
@@ -138,7 +138,7 @@ function m(e, t, n, a) {
                     (0, r.useLayoutEffect)(() => {
                         p.current = y;
                     }),
-                    { ...y, listComputer: T, forceUpdateOnChunkChange: N, anchor: O, isSidebarVisible: L }
+                    { ...y, listComputer: T, forceUpdateOnChunkChange: N, anchor: R, isSidebarVisible: L }
                 );
             })({
                 sections: y,
@@ -154,10 +154,10 @@ function m(e, t, n, a) {
                 getAnchorId: B,
             }),
             ef = (0, I.A)(el),
-            ep = r.useRef(R),
+            ep = r.useRef(O),
             eT = r.useRef(L);
         r.useLayoutEffect(() => {
-            (ep.current = R), (eT.current = L);
+            (ep.current = O), (eT.current = L);
         });
         let em = r.useCallback(
                 function () {
@@ -230,9 +230,9 @@ function m(e, t, n, a) {
                     (ei.current = setTimeout(() => {
                         (ei.current = null), es(!1);
                     }, 200)),
-                    null != O && O(e);
+                    null != R && R(e);
             },
-            [O, em],
+            [R, em],
         );
         return (
             r.useLayoutEffect(() => {

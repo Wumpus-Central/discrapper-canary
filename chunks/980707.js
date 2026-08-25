@@ -102,20 +102,20 @@ var p = n(602034),
     S = n(289873),
     N = n(955572),
     C = n(775602);
-let O = (0, n(945810).mj)({
+let R = (0, n(945810).mj)({
     name: "2025-11-mana-context-menu",
     kind: "user",
     defaultConfig: { enabled: !1 },
     variations: { 1: { enabled: !0 } },
 });
-function R(e) {
-    return O.useConfig({ location: e }).enabled;
+function O(e) {
+    return R.useConfig({ location: e }).enabled;
 }
 var L = n(477782),
     y = n(900283),
     D = n(798819);
 function v() {
-    let e = R("MenuSeparator");
+    let e = O("MenuSeparator");
     return (0, r.jsx)("div", {
         role: "separator",
         className: D.separator,
@@ -161,7 +161,7 @@ function V(e) {
 var B = n(745396),
     H = n(379261);
 function j(e) {
-    return R("MenuLabel") ? (0, r.jsx)(H.r, { children: e.children }) : e.children;
+    return O("MenuLabel") ? (0, r.jsx)(H.r, { children: e.children }) : e.children;
 }
 var W = n(844222),
     Y = n(545442),
@@ -244,14 +244,14 @@ function X(e) {
             onClose: g,
             onFocus: N,
             className: C,
-            focusedClassName: O,
+            focusedClassName: R,
             dontCloseOnActionIfHoldingShiftKey: L,
             dontCloseOnAction: v,
             iconProps: b,
         } = e,
         { onSelect: P, onInteraction: U } = a.useContext(y.x),
         H = a.useRef(null),
-        W = R("MenuItem"),
+        W = O("MenuItem"),
         Y = a.useCallback(
             (e) => {
                 if ((U?.({ type: y.Q.DEFAULT }), null == m)) return !1;
@@ -268,7 +268,7 @@ function X(e) {
         }, [p, N]),
         (0, r.jsxs)(w.D, {
             innerRef: H,
-            className: l()(D.item, D.labelContainer, q.nM, M[t], C, { [D.disabled]: f, [D.focused]: p, [O ?? ""]: p }),
+            className: l()(D.item, D.labelContainer, q.nM, M[t], C, { [D.disabled]: f, [D.focused]: p, [R ?? ""]: p }),
             onClick: f ? void 0 : Y,
             "aria-disabled": f,
             ...T,
@@ -401,7 +401,7 @@ function et(e) {
                 children: (0, r.jsx)(g.Ip, { className: l()(D.scroller, D.scrollerWithScrollbar), children: d() }),
             }),
         }),
-        h = R("MenuSubmenuItem"),
+        h = O("MenuSubmenuItem"),
         [I, f] = a.useState(!1);
     return (0, r.jsx)(T.Ow, {
         open: I || s,
@@ -478,7 +478,7 @@ function er(e) {
             focusedClassName: f,
         } = e,
         { onInteraction: p } = a.useContext(y.x),
-        T = R("MenuCheckboxItem"),
+        T = O("MenuCheckboxItem"),
         m = a.useRef(null);
     a.useEffect(() => {
         E && V(m);
@@ -544,7 +544,7 @@ function es(e) {
             action: h,
         } = e,
         { onInteraction: I } = a.useContext(y.x),
-        f = R("MenuRadioItem"),
+        f = O("MenuRadioItem"),
         p = a.useRef(null);
     a.useEffect(() => {
         E && V(p);
@@ -906,7 +906,7 @@ function eA(e) {
         })(h),
         S = a.useRef([]);
     d()(S.current, I) || (S.current = I);
-    let O = R("Menu"),
+    let R = O("Menu"),
         b = h.find((e) => null != e.key)?.key,
         M = (function (e) {
             let {
@@ -995,10 +995,10 @@ function eA(e) {
                     },
                     [A, t, h, r, l],
                 ),
-                O = a.useCallback(() => {
+                R = a.useCallback(() => {
                     I || T(!0);
                 }, [I]),
-                R = a.useCallback(
+                O = a.useCallback(
                     (e) => {
                         e.target !== e.currentTarget && !e.currentTarget.contains(e.relatedTarget) && I && T(!1);
                     },
@@ -1014,12 +1014,12 @@ function eA(e) {
                         id: t,
                         tabIndex: -1,
                         onKeyDown: C,
-                        onFocus: O,
-                        onBlur: R,
+                        onFocus: R,
+                        onBlur: O,
                         onMouseLeave: L,
                         "aria-activedescendant": h.length > 0 ? (0, p.M4)(t, h.join("--")) : void 0,
                     }),
-                    [t, C, O, R, L, h],
+                    [t, C, R, O, L, h],
                 ),
                 v = a.useCallback(
                     (e) => {
@@ -1084,8 +1084,8 @@ function eA(e) {
         children: (0, r.jsx)("div", {
             className: l()(D.menu, D[n], s),
             style: {
-                "--custom-menu-viewport-padding": O ? "48px" : "16px",
-                "--custom-menu-flexible-min-width": O ? "144px" : "188px",
+                "--custom-menu-viewport-padding": R ? "48px" : "16px",
+                "--custom-menu-flexible-min-width": R ? "144px" : "188px",
             },
             ...M.getContainerProps(),
             ref: P,

@@ -22,8 +22,8 @@ let T = "GameStoreReportedGames",
     S = new Map(),
     N = new Map(),
     C = a.w.get(T) ?? Object.create(null),
-    O = "",
-    R = null,
+    R = "",
+    O = null,
     L = !1,
     y = null,
     D = !1,
@@ -77,7 +77,7 @@ class W extends r.Ay.PersistedStore {
     ];
     initialize(e) {
         null != e &&
-            (null != e.detectableGamesEtag && (O = e.detectableGamesEtag),
+            (null != e.detectableGamesEtag && (R = e.detectableGamesEtag),
             null != e.blocklistEtag && (v = e.blocklistEtag),
             null != e.blocklistExecutables && (b = e.blocklistExecutables),
             null != e.blocklistPatterns && (M = e.blocklistPatterns.map((e) => RegExp(e, "i"))),
@@ -86,7 +86,7 @@ class W extends r.Ay.PersistedStore {
     getState() {
         return (0, h.isDesktop)()
             ? {
-                  detectableGamesEtag: O,
+                  detectableGamesEtag: R,
                   detectableGames: g.values(),
                   blocklistEtag: v,
                   blocklistExecutables: b,
@@ -178,13 +178,13 @@ class W extends r.Ay.PersistedStore {
         return !0 === i;
     }
     get detectableGamesEtag() {
-        return O;
+        return R;
     }
     get blocklistEtag() {
         return v;
     }
     get lastFetched() {
-        return R;
+        return O;
     }
     get hasAttemptedFetch() {
         return L;
@@ -193,7 +193,7 @@ class W extends r.Ay.PersistedStore {
         return m;
     }
     canFetchDetectableGames() {
-        return !0 !== i && (null == R || Date.now() >= R + m);
+        return !0 !== i && (null == O || Date.now() >= O + m);
     }
     canFetchExecutableBlocklist() {
         return !D && (null == y || Date.now() >= y + m);
@@ -283,7 +283,7 @@ let Y = new W(s.h, {
     },
     GAMES_DATABASE_UPDATE: function (e) {
         let { games: t, etag: n } = e;
-        for (let e of (null != n && O !== n && (g.clear(), S.clear(), N.clear(), (O = n)), t))
+        for (let e of (null != n && R !== n && (g.clear(), S.clear(), N.clear(), (R = n)), t))
             j(
                 (function (e) {
                     let { executables: t, aliases: n, third_party_skus: i } = e;
@@ -296,7 +296,7 @@ let Y = new W(s.h, {
                     };
                 })(e),
             );
-        (i = void 0), (R = Date.now()), (L = !0);
+        (i = void 0), (O = Date.now()), (L = !0);
     },
     GAMES_BLOCKLIST_FETCH: function () {
         D = !0;

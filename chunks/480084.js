@@ -35,8 +35,8 @@ var S = n(112107),
     j = n(157941),
     b = n(696451),
     R = n(317525),
-    O = n(71393),
-    M = n(957565),
+    M = n(71393),
+    O = n(957565),
     L = n(143145),
     w = n(785562),
     k = n(192308),
@@ -76,7 +76,7 @@ var z = n(380610),
 function ef(e) {
     let { url: t } = e,
         n = i.useCallback(() => {
-            (0, M.C)(t, () =>
+            (0, O.C)(t, () =>
                 (0, X.P0)({ id: "experiment-link-copied", message: "Copied experiment link", type: Q.Ck.SUCCESS }),
             );
         }, [t]);
@@ -198,7 +198,7 @@ function ej(e) {
         [n, s] = i.useState(!1);
     return (0, l.jsx)(o.D, {
         onClick: function () {
-            (0, M.C)(
+            (0, O.C)(
                 t,
                 () => s(!0),
                 () => s(!1),
@@ -239,7 +239,7 @@ let eb = {
                     children: (0, l.jsxs)("div", {
                         className: ev.Hy,
                         children: [
-                            M.p5
+                            O.p5
                                 ? (0, l.jsx)("div", { className: ev.lB, children: (0, l.jsx)(ej, { text: e.content }) })
                                 : null,
                             (0, l.jsx)(j.l, {
@@ -312,7 +312,7 @@ let eb = {
                           role: "link",
                           onClick: function () {
                               !(function (e, t, n) {
-                                  let l = O.A.getGuild(e);
+                                  let l = M.A.getGuild(e);
                                   if (null != e && null != l)
                                       switch (t) {
                                           case "home":
@@ -395,7 +395,7 @@ let eb = {
     },
     guild: {
         react: (e, t, n) => {
-            let i = O.A.getGuild(e.guildId);
+            let i = M.A.getGuild(e.guildId);
             return (0, l.jsx)(x.A, { guild: i, children: (0, L.t)(e, t, n) }, n.key);
         },
     },

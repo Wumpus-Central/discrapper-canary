@@ -78,8 +78,8 @@ let m = {
 var S = n(788995),
     N = n(432e3),
     C = n(734057),
-    O = n(71393),
-    R = n(17928),
+    R = n(71393),
+    O = n(17928),
     L = n(506774),
     y = n(998218),
     D = n(155078),
@@ -105,7 +105,7 @@ function G(e) {
     let t = (0, D.J)(e);
     return P.has(t);
 }
-class x extends R.Ay.Store {
+class x extends O.Ay.Store {
     static displayName = "MaskedLinkStore";
     initialize() {
         let e = L.w.get(b) ?? {};
@@ -145,7 +145,7 @@ function j(e, t) {
 function W(e, t) {
     let i = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [],
         s = arguments.length > 3 ? arguments[3] : void 0,
-        { trusted: c, onClick: u, onConfirm: E, onCancel: R, shouldConfirm: L, messageId: y, channelId: v } = e,
+        { trusted: c, onClick: u, onConfirm: E, onCancel: O, shouldConfirm: L, messageId: y, channelId: v } = e,
         b = r().sanitizeUrl(e.href);
     if (null == b) {
         null != t && t.preventDefault(),
@@ -172,7 +172,7 @@ function W(e, t) {
         let e = F.A.getMessage(v, y),
             t = C.A.getBasicChannel(v);
         P = t?.guild_id ?? null;
-        let n = O.A.getGuild(P),
+        let n = R.A.getGuild(P),
             i =
                 e?.messageReference?.guild_id != null &&
                 e?.webhookId != null &&
@@ -189,7 +189,7 @@ function W(e, t) {
     }
     if (null != v) {
         let e = C.A.getChannel(v),
-            t = O.A.getGuild(e?.getGuildId());
+            t = R.A.getGuild(e?.getGuildId());
         null != e &&
             null != t &&
             t.features.has(h.GuildFeatures.DISCOVERABLE) &&
@@ -216,7 +216,7 @@ function W(e, t) {
             ? E()
             : (0, d.A)(M);
     }
-    let B = R ?? (() => {});
+    let B = O ?? (() => {});
     if (null !== I.isBlockedDomain(M)) {
         t?.preventDefault(), _.show(M);
         return;

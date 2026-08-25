@@ -34,8 +34,8 @@ var i = n(582128),
     S = n(287809),
     N = n(174459),
     C = n(917012),
-    O = n(56494),
-    R = n(26909),
+    R = n(56494),
+    O = n(26909),
     L = n(577700),
     y = n(210978),
     D = n(392054),
@@ -197,7 +197,7 @@ class J extends d.Ay.Store {
     collator = new Intl.Collator(I.default.locale, H);
     initialize() {
         this.waitFor(I.default),
-            this.waitFor(R.Ay, E.A, p.default, T.A, m.Ay, g.A, S.default),
+            this.waitFor(O.Ay, E.A, p.default, T.A, m.Ay, g.A, S.default),
             this.syncWith([I.default], () => {
                 let e;
                 (e = I.default.locale) !== ee.oldLocale &&
@@ -423,15 +423,15 @@ function er(e, t) {
 function ea(e, t, n, r) {
     let { descriptors: a, commands: s, sectionedCommands: l, loading: o } = el(e, n, r),
         d = i.useMemo(() => ("channel" === e.type ? { channel: e.channel, guild: t } : void 0), [e, t]),
-        c = (0, O.F)(d);
+        c = (0, R.F)(d);
     return i.useMemo(() => {
         if (!r.includeFrecency || 0 === c.length)
             return { descriptors: a, commands: s, sectionedCommands: l, loading: o };
         let e = s
             .filter((e) => c.includes(e.id))
             .sort((e, t) => {
-                let n = R.Ay.getScoreWithoutLoadingLatest(d, e);
-                return R.Ay.getScoreWithoutLoadingLatest(d, t) - n;
+                let n = O.Ay.getScoreWithoutLoadingLatest(d, e);
+                return O.Ay.getScoreWithoutLoadingLatest(d, t) - n;
             })
             .splice(0, P.Ob);
         return 0 === e.length
@@ -530,13 +530,13 @@ function eo(e) {
             scoreMethod: u,
             installOnDemand: A,
         },
-        O = n.result?.sections ?? {},
+        R = n.result?.sections ?? {},
         L = i.result?.sections ?? {},
         D = new Set();
     if (o) {
         if (t.hasBaseAccessPermissions)
-            for (let e in O) {
-                let t = O[e];
+            for (let e in R) {
+                let t = R[e];
                 (null == d || t.descriptor.id === d) && D.add(e);
             }
         for (let e in L) {
@@ -553,7 +553,7 @@ function eo(e) {
     for (let e of Array.from(D)) {
         let t,
             n,
-            i = O[e],
+            i = R[e],
             r = L[e],
             a = v.get(e),
             s = null != i,
@@ -612,8 +612,8 @@ function eo(e) {
                 if (n !== i) return n - i;
             }
             if (_.commands.useFrecency) {
-                let n = R.Ay.getScoreWithoutLoadingLatest(i, e),
-                    r = R.Ay.getScoreWithoutLoadingLatest(i, t);
+                let n = O.Ay.getScoreWithoutLoadingLatest(i, e),
+                    r = O.Ay.getScoreWithoutLoadingLatest(i, t);
                 if (n !== r) return r - n;
             }
             return eh(e.displayName, t.displayName);

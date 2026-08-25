@@ -29,10 +29,10 @@ function _(e) {
             focusCancel: N = !1,
             impression: C,
         } = e,
-        O = r.useRef(null);
+        R = r.useRef(null);
     return (
         r.useEffect(() => {
-            N || setTimeout(() => O.current?.focus(), 0);
+            N || setTimeout(() => R.current?.focus(), 0);
         }, [N]),
         r.useLayoutEffect(() => () => p?.()),
         null != E &&
@@ -53,7 +53,7 @@ function _(e) {
         null != _ &&
             (n = (0, i.jsx)(o.$n, {
                 "data-migration-pending": !0,
-                buttonRef: O,
+                buttonRef: R,
                 type: "submit",
                 size: o.$n.Sizes.MEDIUM,
                 color: S,

@@ -469,7 +469,7 @@ class N extends s.G {
     }
 }
 let C = new N();
-class O extends s.G {
+class R extends s.G {
     constructor() {
         super("discord_protos.premium_marketing.v1.GiftReminderCoachmark", [
             { no: 1, name: "header", kind: "scalar", T: 9 },
@@ -535,7 +535,7 @@ class O extends s.G {
         return !1 !== r && (!0 == r ? i.f$.onWrite : r)(this.typeName, e, t), t;
     }
 }
-let R = new O();
+let O = new R();
 class L extends s.G {
     constructor() {
         super("discord_protos.premium_marketing.v1.GiftReminderNagbar", [
@@ -885,7 +885,7 @@ class Y extends s.G {
             { no: 11, name: "gift_customization_banner", kind: "message", oneof: "properties", T: () => v.E },
             { no: 12, name: "billing_settings_nitro_gift_banner", kind: "message", oneof: "properties", T: () => D.v },
             { no: 13, name: "gift_reminder_nagbar", kind: "message", oneof: "properties", T: () => y },
-            { no: 14, name: "gift_reminder_coachmark", kind: "message", oneof: "properties", T: () => R },
+            { no: 14, name: "gift_reminder_coachmark", kind: "message", oneof: "properties", T: () => O },
             { no: 15, name: "premium_tab_tooltip", kind: "message", oneof: "properties", T: () => C },
             { no: 16, name: "premium_tab_popover", kind: "message", oneof: "properties", T: () => S },
             { no: 17, name: "nagbar", kind: "message", oneof: "properties", T: () => m },
@@ -1003,7 +1003,7 @@ class Y extends s.G {
                 case 14:
                     a.properties = {
                         oneofKind: "giftReminderCoachmark",
-                        giftReminderCoachmark: R.internalBinaryRead(
+                        giftReminderCoachmark: O.internalBinaryRead(
                             e,
                             e.uint32(),
                             n,
@@ -1134,7 +1134,7 @@ class Y extends s.G {
                     .internalBinaryWrite(e.properties.giftReminderNagbar, t.tag(13, i.O0.LengthDelimited).fork(), n)
                     .join(),
             "giftReminderCoachmark" === e.properties.oneofKind &&
-                R.internalBinaryWrite(
+                O.internalBinaryWrite(
                     e.properties.giftReminderCoachmark,
                     t.tag(14, i.O0.LengthDelimited).fork(),
                     n,

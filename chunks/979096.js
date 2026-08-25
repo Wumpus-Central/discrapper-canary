@@ -4,7 +4,7 @@ n.d(t, {
     iW: () => v,
     Be: () => M,
     AR: () => U,
-    Wm: () => R,
+    Wm: () => O,
     z9: () => c,
     hh: () => u,
     uh: () => y,
@@ -468,7 +468,7 @@ class C {
             (this.initialized = !0));
     }
 }
-class O {
+class R {
     static open(e, t) {
         return C.executeAsync("database_open", (n) =>
             i.databaseOpen(n, { database: e, invalidateDisabledHandles: t?.invalidateDisabledHandles ?? !1 }),
@@ -500,20 +500,20 @@ class O {
         return i.malformedEntryCount();
     }
 }
-class R {
+class O {
     name;
     handle;
     raw;
     lastState;
     databaseStateCallback;
     static async open(e, t) {
-        return new R(await O.open(e, t));
+        return new O(await R.open(e, t));
     }
     static openSyncUnsafe(e, t) {
-        return new R(O.openSyncUnsafe(e, t));
+        return new O(R.openSyncUnsafe(e, t));
     }
     static delete(e) {
-        return O.delete(e);
+        return R.delete(e);
     }
     constructor(e) {
         (this.raw = e),

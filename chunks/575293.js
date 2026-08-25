@@ -28,8 +28,8 @@ var l = n(477900),
     j = n(652215),
     b = n(375708),
     R = n(160639);
-let O = { compact: 58, cozy: 74, default: 64 };
-function M(e) {
+let M = { compact: 58, cozy: 74, default: 64 };
+function O(e) {
     let { action: t } = e,
         n = (0, o.bG)([E.A], () => E.A.getChannel(t.channelId)),
         i = (0, x.Ay)(n, !0);
@@ -64,7 +64,7 @@ function w(e) {
         E = (0, o.bG)([g.Ay], () => g.Ay.useReducedMotion),
         I = c?.actionType === S.NewMemberActionTypes.VIEW,
         y = (0, d.r)(h.A.colors.WHITE),
-        _ = O[(0, C.C)()],
+        _ = M[(0, C.C)()],
         [T, j] = i.useState(!1),
         [w] = i.useState(new a.A.Value(0)),
         [k] = i.useState(new a.A.Value(0));
@@ -106,7 +106,7 @@ function w(e) {
                                                 color: "text-strong",
                                                 children: b.intl.format(b.t["/beONw"], { step: A.title }),
                                             }),
-                                            (0, l.jsx)(M, { action: A }),
+                                            (0, l.jsx)(O, { action: A }),
                                         ],
                                     }),
                                     (0, l.jsx)("div", {

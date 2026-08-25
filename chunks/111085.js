@@ -1,11 +1,11 @@
-i.d(t, { A: () => o });
-var n = i(17928),
-    l = i(228366);
+n.d(t, { A: () => o });
+var i = n(17928),
+    l = n(228366);
 let s = { sentGifts: {} };
 function r(e, t) {
     return `${e}:${t}`;
 }
-class a extends n.Ay.PersistedStore {
+class a extends i.Ay.PersistedStore {
     static displayName = "SentGiftsStore";
     static persistKey = "SentGiftsStore";
     initialize(e) {
@@ -15,30 +15,30 @@ class a extends n.Ay.PersistedStore {
         return s;
     }
     hasSentGift(e, t) {
-        let i = r(e, t),
-            n = s.sentGifts[i];
-        return !(null == n || new Date(n.expiresAt) < new Date());
+        let n = r(e, t),
+            i = s.sentGifts[n];
+        return !(null == i || new Date(i.expiresAt) < new Date());
     }
     getSentGift(e, t) {
-        let i = r(e, t),
-            n = s.sentGifts[i];
-        return null == n || new Date(n.expiresAt) < new Date() ? null : n;
+        let n = r(e, t),
+            i = s.sentGifts[n];
+        return null == i || new Date(i.expiresAt) < new Date() ? null : i;
     }
     cleanupExpiredGifts() {
         let e = new Date();
-        for (let [t, i] of Object.entries(s.sentGifts)) new Date(i.expiresAt) < e && delete s.sentGifts[t];
+        for (let [t, n] of Object.entries(s.sentGifts)) new Date(n.expiresAt) < e && delete s.sentGifts[t];
     }
 }
 let o = new a(l.h, {
     WISHLIST_GIFT_SENT: function (e) {
         let t = r(e.skuId, e.recipientId),
-            i = new Date(),
-            n = new Date(i.getTime() + 1728e5);
+            n = new Date(),
+            i = new Date(n.getTime() + 1728e5);
         s.sentGifts[t] = {
             skuId: e.skuId,
             recipientId: e.recipientId,
-            sentAt: i.toISOString(),
-            expiresAt: n.toISOString(),
+            sentAt: n.toISOString(),
+            expiresAt: i.toISOString(),
         };
     },
 });

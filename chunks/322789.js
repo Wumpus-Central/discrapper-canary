@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => M, n: () => O });
+n.d(t, { A: () => O, n: () => M });
 var l = n(477900),
     i = n(582128),
     s = n(696292),
@@ -28,13 +28,13 @@ var l = n(477900),
     j = n(375708),
     b = n(273783),
     R = n(804779);
-let O = [S.iq, S.Zc, S.Xy, S.$X, S.tR, S.K7, S.fg, S.sp, S.MK],
-    M = i.memo(function (e) {
+let M = [S.iq, S.Zc, S.Xy, S.$X, S.tR, S.K7, S.fg, S.sp, S.MK],
+    O = i.memo(function (e) {
         let {
                 entry: t,
                 channel: n,
                 selected: i,
-                hovered: M,
+                hovered: O,
                 isFirstApplicationOccurrence: L,
                 trackRankingItemInteraction: w,
             } = e,
@@ -85,7 +85,7 @@ let O = [S.iq, S.Zc, S.Xy, S.$X, S.tR, S.K7, S.fg, S.sp, S.MK],
                                         null != H ? (0, l.jsx)(y.A, { className: b.N4, onClick: H, children: K }) : K,
                                         (0, l.jsx)(S.mG, {
                                             location: S.N5.CARD,
-                                            children: O.map((e, n) => (0, l.jsx)(e, { entry: t, hovered: M }, n)),
+                                            children: M.map((e, n) => (0, l.jsx)(e, { entry: t, hovered: O }, n)),
                                         }),
                                     ],
                                 }),

@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { eW: () => O, em: () => N, oi: () => C, wN: () => S });
+n.d(t, { eW: () => R, em: () => N, oi: () => C, wN: () => S });
 var i = n(477900);
 n(582128);
 var r = n(503698),
@@ -46,9 +46,9 @@ function C(e) {
         if (!o) return null;
         t = p.k;
     }
-    return R({ icon: t, isCurrentUserConnected: a });
+    return O({ icon: t, isCurrentUserConnected: a });
 }
-function O(e) {
+function R(e) {
     let { guildJoinRequestStatus: t } = e,
         [n, i] = (function (e) {
             switch (e) {
@@ -62,9 +62,9 @@ function O(e) {
                     return [void 0, c.PencilIcon];
             }
         })(t);
-    return R({ icon: i, color: n });
+    return O({ icon: i, color: n });
 }
-function R(e) {
+function O(e) {
     let { icon: t, color: n, isCurrentUserConnected: r } = e;
     return (0, i.jsx)(u.fk, {
         icon: t,

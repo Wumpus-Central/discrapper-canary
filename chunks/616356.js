@@ -16,8 +16,8 @@ var c = n(17928),
     S = n(71393),
     N = n(453028),
     C = n(576705),
-    O = n(763827),
-    R = n(309010),
+    R = n(763827),
+    O = n(309010),
     L = n(977997),
     y = n(652215),
     D = n(325278);
@@ -61,7 +61,7 @@ class V extends c.Ay.PersistedStore {
     static persistKey = "ApplicationStreamingStore";
     initialize(e) {
         this.syncWith([C.A], () => !0),
-            this.waitFor(m.default, g.A, C.A, O.A, E.Ay, R.Ay),
+            this.waitFor(m.default, g.A, C.A, R.A, E.Ay, O.Ay),
             e?.selfStreamParticipantsHidden !== void 0 && Object.assign(b, e?.selfStreamParticipantsHidden);
     }
     getState() {
@@ -88,7 +88,7 @@ class V extends c.Ay.PersistedStore {
         return this.getActiveStreamForStreamKey(t) ?? null;
     }
     getCurrentUserActiveStream() {
-        let e = R.Ay.getVoiceChannelId(),
+        let e = O.Ay.getVoiceChannelId(),
             t = g.A.getChannel(e);
         return null == t ? null : this.getActiveStreamForUser(m.default.getId(), t.getGuildId());
     }
@@ -102,7 +102,7 @@ class V extends c.Ay.PersistedStore {
             : (this.getAllActiveStreams().find((t) => t.ownerId === e) ?? null);
     }
     getStreamerActiveStreamMetadata() {
-        let e = R.Ay.getVoiceChannelId(),
+        let e = O.Ay.getVoiceChannelId(),
             t = g.A.getChannel(e);
         if (null == t) return null;
         let n = this.getActiveStreamForUser(m.default.getId(), t.getGuildId());
@@ -229,7 +229,7 @@ let B = new V(u.h, {
                     n,
                     s = m.default.getId(),
                     d = m.default.getSessionId();
-                if (i === s && o !== d && null != O.A.getChannelId()) return e;
+                if (i === s && o !== d && null != R.A.getChannelId()) return e;
                 let c =
                     ((t = !1),
                     l.forEach((e, n) => {

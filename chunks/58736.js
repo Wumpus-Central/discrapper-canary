@@ -36,8 +36,8 @@ let m = r.forwardRef(function (e, t) {
                 tooltip: S = null,
                 tooltipPosition: N = "bottom",
                 tooltipAlign: C,
-                tooltipDisabled: O,
-                tooltipSpacing: R,
+                tooltipDisabled: R,
+                tooltipSpacing: O,
                 role: L,
                 "aria-label": y,
                 "aria-hidden": D,
@@ -65,8 +65,8 @@ let m = r.forwardRef(function (e, t) {
                 __unsupportedReactNodeAsText: S,
                 position: N,
                 align: C,
-                shouldShow: !O,
-                spacing: R,
+                shouldShow: !R,
+                spacing: O,
                 ariaHidden: !0,
                 children:
                     null == m
@@ -190,8 +190,8 @@ function S(e) {
                 tabIndex: S,
                 "aria-label": N,
                 "aria-selected": C,
-                "aria-controls": O,
-                "aria-current": R,
+                "aria-controls": R,
+                "aria-current": O,
             } = e,
             L = (0, i.jsx)(d.F, {
                 forceLevel: p,
@@ -218,8 +218,8 @@ function S(e) {
                   tabIndex: S,
                   "aria-label": N,
                   "aria-selected": C,
-                  "aria-controls": O,
-                  "aria-current": R,
+                  "aria-controls": R,
+                  "aria-current": O,
                   children: L,
               })
             : (0, i.jsx)("div", {
@@ -234,8 +234,8 @@ function S(e) {
                   role: g,
                   "aria-label": N,
                   "aria-selected": C,
-                  "aria-controls": O,
-                  "aria-current": R,
+                  "aria-controls": R,
+                  "aria-current": O,
                   children: L,
               });
     }),

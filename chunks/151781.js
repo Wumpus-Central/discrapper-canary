@@ -106,8 +106,8 @@ class C {
         );
     }
 }
-var O = n(230959);
-let R = 3 * _.A.Millis.SECOND;
+var R = n(230959);
+let O = 3 * _.A.Millis.SECOND;
 class L {
     guildId;
     lastRefreshTimestamp = 0;
@@ -268,7 +268,7 @@ class L {
                 ...(0, u.cloneDeep)(this.getMembersByIndex(A.Tu.CURRENT_GUILD_MEMBER)[0]),
                 ...(0, u.cloneDeep)(this.getMembersByIndex(A.Tu.NEW_GUILD_MEMBER)[0]),
             ].forEach((t) => {
-                let n = (0, O.R)(t, e),
+                let n = (0, R.R)(t, e),
                     i = this._search?.isMemberIncludedInSearchResults(t) ?? !1;
                 this._members?.updateMember(t, { sort: n, isIncludedInSearchResults: i });
             }),
@@ -304,7 +304,7 @@ class L {
             null != this._lastRefreshTimer && clearTimeout(this._lastRefreshTimer),
             (this._lastRefreshTimer = setTimeout(() => {
                 (this._lastRefreshTimer = null), (this.lastRefreshTimestamp = 0);
-            }, R));
+            }, O));
     }
     refreshNewMembersAndSearchResults() {
         if (null == this._search || null == this._members || !this._initialized) return !1;

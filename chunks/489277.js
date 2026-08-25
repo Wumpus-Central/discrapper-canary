@@ -30,11 +30,11 @@ function C(e, t) {
         i = g[e]?.error_description;
     (g[e] = { ...g[e], ...t }), null != n && (g[e].error = n), null != i && (g[e].error_description = i);
 }
-function O(e, t) {
+function R(e, t) {
     let n = l.Ay.getGameOrTransformedSubgameForPID(e);
     return { crash_type: t, gameName: n?.name };
 }
-class R extends i.Ay.Store {
+class O extends i.Ay.Store {
     static displayName = "Overlay-v3-Native-Analytics-Store";
     initialize() {
         this.waitFor(f.default, T.A, l.Ay);
@@ -43,10 +43,10 @@ class R extends i.Ay.Store {
         return N(e);
     }
     getCrashExtra(e, t) {
-        return O(e, t);
+        return R(e, t);
     }
 }
-let L = new R(
+let L = new O(
     r.h,
     __OVERLAY__ || !u.O
         ? {}
@@ -92,10 +92,10 @@ let L = new R(
                       "native" === i
                           ? (t !== c.UNSET_PID &&
                                 C(t, { host_crash_count: 1, error: r.message, error_description: r.stack }),
-                            (0, I.St)(r, _.Ue.OutOfProcess, { extra: O(t, "host") }))
+                            (0, I.St)(r, _.Ue.OutOfProcess, { extra: R(t, "host") }))
                           : (t !== c.UNSET_PID &&
                                 C(t, { renderer_crash_count: 1, error: r.message, error_description: r.stack }),
-                            (0, I.St)(r, _.Ue.OutOfProcess, { extra: O(t, "renderer") })),
+                            (0, I.St)(r, _.Ue.OutOfProcess, { extra: R(t, "renderer") })),
                       !0
                   );
               },
@@ -364,7 +364,7 @@ async function eN(e) {
     e.overlayMethod === _.Ue.OutOfProcess || e.overlayMethod === _.Ue.OutOfProcessLimitedInteraction
         ? (await eS(), eA(e.pid, e.overlayMethod))
         : eh(e.pid),
-        eR.emitChange();
+        eO.emitChange();
 }
 function eC(e) {
     let { pid: t, windowHandle: n } = e;
@@ -381,7 +381,7 @@ function eC(e) {
         !0
     );
 }
-class eO extends i.Ay.Store {
+class eR extends i.Ay.Store {
     static displayName = "Overlay-V3-Store";
     initialize() {
         this.waitFor(o.default, d.A, L, W, Y.A, K.A, $.A, T.A, l.Ay);
@@ -445,7 +445,7 @@ class eO extends i.Ay.Store {
         return ed[e] ?? null;
     }
 }
-let eR = new eO(
+let eO = new eR(
         r.h,
         __OVERLAY__ || !u.O
             ? { OVERLAY_FOCUSED: eC }
@@ -563,4 +563,4 @@ let eR = new eO(
                   },
               },
     ),
-    eL = eR;
+    eL = eO;

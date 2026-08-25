@@ -74,8 +74,8 @@ let v = function (e) {
 var R = n(769015),
     U = n(106191),
     D = n(548118),
-    G = n(376943),
-    y = n(636585),
+    y = n(376943),
+    G = n(636585),
     M = n(71393),
     P = n(994500),
     x = n(287809),
@@ -205,7 +205,7 @@ class B extends l.Component {
         let { voiceStates: e, channel: t } = this.props;
         return null == e
             ? null
-            : (0, i.jsx)(y.A, {
+            : (0, i.jsx)(G.A, {
                   className: V.x7,
                   guildId: t.guild_id,
                   users: e.map((e) => {
@@ -433,10 +433,10 @@ class Z extends l.Component {
         if (null != n.inviteCode)
             (e = L.intl.string(L.t.w6QG3F)), (t = (0, i.jsx)(o.f, { size: "xs", color: "currentColor" }));
         else {
-            let l = (0, G.vu)(n.path);
+            let l = (0, y.vu)(n.path);
             null == l || void 0 === l.messageId
                 ? ((e = L.intl.string(L.t.qbSCqj)), (t = (0, i.jsx)(d.LinkIcon, { size: "xs", color: "currentColor" })))
-                : (0, G.r9)(l)
+                : (0, y.r9)(l)
                   ? ((e = L.intl.string(L.t["6Fd/j1"])), (t = (0, i.jsx)(c.t, { size: "xs", color: "currentColor" })))
                   : ((e = L.intl.string(L.t.jQRwp4)),
                     (t = (0, i.jsx)(u.LockIcon, { size: "xs", color: "currentColor" })));

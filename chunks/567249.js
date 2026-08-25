@@ -22,11 +22,11 @@ let p = new c.A("PopoutWindowStore"),
     S = {},
     N = {},
     C = new Set(),
-    O = "app-mount";
-function R() {
+    R = "app-mount";
+function O() {
     return w.emitChange();
 }
-let L = s().debounce(R, 150);
+let L = s().debounce(O, 150);
 function y(e) {
     let t = g[e];
     null == t ||
@@ -60,8 +60,8 @@ function v(e) {
             p.info("Unmounting popout window", e),
             (n = g[e]),
             r()(null != n, "Popout window was null during unmount"),
-            n.removeEventListener("focus", R),
-            n.removeEventListener("blur", R),
+            n.removeEventListener("focus", O),
+            n.removeEventListener("blur", O),
             n.removeEventListener("resize", L),
             (i = S[e]),
             r()(null != i, "Window root was null while unmounting"),
@@ -93,13 +93,13 @@ function b(e) {
                                 n = N[e];
                             if (null == t) return p.warn("Failed to open window", e);
                             let i = t.document;
-                            (0, I.a3)(i, R),
-                                t.addEventListener("focus", R),
-                                t.addEventListener("blur", R),
+                            (0, I.a3)(i, O),
+                                t.addEventListener("focus", O),
+                                t.addEventListener("blur", O),
                                 t.addEventListener("resize", L);
                             for (let e of document.querySelectorAll('link[rel="stylesheet"]'))
                                 D(t, e.href, e.integrity);
-                            let a = (0, l.createRoot)(i.getElementById(O));
+                            let a = (0, l.createRoot)(i.getElementById(R));
                             r()(null != a, "No render target for popout!"), (S[e] = a), a.render(n(e));
                         })(i),
                         C.delete(i),
@@ -165,7 +165,7 @@ class U extends o.Ay.PersistedStore {
     }
     isWindowFullScreen(e) {
         let t = g[e];
-        return t?.document?.fullscreenElement?.id === O;
+        return t?.document?.fullscreenElement?.id === R;
     }
     unmountWindow(e) {
         return (
@@ -198,7 +198,7 @@ let w = new U(d.h, {
                         top: E.top ?? i,
                     });
             }
-            let O = (function (e) {
+            let R = (function (e) {
                 let t = "";
                 for (let n of Object.keys(e)) {
                     let i = e[n];
@@ -206,11 +206,11 @@ let w = new U(d.h, {
                 }
                 return t;
             })(E);
-            p.info("Opening popout window", { key: t, encodedFeatures: O });
-            let R = window.open(f.BVt.POPOUT_WINDOW, t, O);
-            if (null == R) return !1;
+            p.info("Opening popout window", { key: t, encodedFeatures: R });
+            let O = window.open(f.BVt.POPOUT_WINDOW, t, R);
+            if (null == O) return !1;
             try {
-                R.windowKey = t;
+                O.windowKey = t;
             } catch (e) {
                 throw (
                     ((0, u.pj)(e, r ? _.Ue.OutOfProcess : null, {
@@ -218,15 +218,15 @@ let w = new U(d.h, {
                             windowKey: t,
                             totalWindowCount: Object.keys(g).length,
                             features: E,
-                            encodedFeatures: O,
+                            encodedFeatures: R,
                             isPlatformEmbedded: A.isPlatformEmbedded,
                         },
                     }),
                     e)
                 );
             }
-            r ? p.verbose("Opening out of process overlay window", t) : R.focus(),
-                (g[t] = R),
+            r ? p.verbose("Opening out of process overlay window", t) : O.focus(),
+                (g[t] = O),
                 (N[t] = i),
                 A.isPlatformEmbedded &&
                     (h.Ay.setAlwaysOnTop(t, I), (m[t] = I), h.Ay.isAlwaysOnTop(t).then((e) => (m[t] = e))),

@@ -1,6 +1,6 @@
 "use strict";
 let i;
-n.d(t, { A: () => R }), n(321073);
+n.d(t, { A: () => O }), n(321073);
 var r = n(812729),
     a = n.n(r),
     s = n(17928),
@@ -65,7 +65,7 @@ class C extends s.Ay.Store {
         return null != I;
     }
 }
-let O = new C(
+let R = new C(
         o.h,
         __OVERLAY__ || !u.O
             ? {}
@@ -83,7 +83,7 @@ let O = new C(
                               ? null == I &&
                                 (I = setInterval(() => {
                                     A?.getDebuggingState?.((e) => {
-                                        a()(i, e) || ((i = e), O.emitChange());
+                                        a()(i, e) || ((i = e), R.emitChange());
                                     });
                                 }, 300))
                               : null != I && (clearInterval(I), (I = null)),
@@ -152,7 +152,7 @@ let O = new C(
                                                         stack: Error().stack ?? "",
                                                     }));
                                             })(t, _.ON.NativeOOP, e ?? c.UNSET_PID);
-                                        O.emitChange();
+                                        R.emitChange();
                                     });
                                 }, 3e3))
                               : null != f && (clearInterval(f), (f = null)),
@@ -161,4 +161,4 @@ let O = new C(
                   },
               },
     ),
-    R = O;
+    O = R;

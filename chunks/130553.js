@@ -23,8 +23,8 @@ var r = n(192308),
     S = n(927813),
     N = n(652896),
     C = n(325278),
-    O = n(652215);
-let R = (0, o.debounce)(u.a8, 1e3),
+    R = n(652215);
+let O = (0, o.debounce)(u.a8, 1e3),
     L = {},
     y = {},
     D = 3 * S.A.Millis.MINUTE,
@@ -90,7 +90,7 @@ class V extends _.A {
         let { ownerId: n, guildId: i } = (0, N.Iy)(t);
         if (null == i || null == n || n !== g.default.getCurrentUser()?.id) return;
         let r = f.A.getMemberCount(i);
-        null == r || r <= C.oe || r > C.G1 || (h.wv.getSetting() && R(t));
+        null == r || r <= C.oe || r > C.G1 || (h.wv.getSetting() && O(t));
     };
     handleStreamUpdate = (e) => {
         let { streamKey: t } = e;
@@ -99,7 +99,7 @@ class V extends _.A {
     handleStreamDelete = (e) => {
         let { reason: t, streamKey: n } = e;
         G(n),
-            t === O.H2B.STREAM_FULL &&
+            t === R.H2B.STREAM_FULL &&
                 ((0, E.QW)({ type: E.iy.STREAM_FULL, ...(0, A.id)(n) }),
                 (0, u.Xi)(n, !1),
                 P.has(n) || (P.add(n), this.platformShowStreamFull()));
@@ -128,12 +128,12 @@ class V extends _.A {
                 if (r && x(n, t)) return;
                 let e = a.A.getActiveStreamForUser(t, i);
                 if (null != e && e.channelId === n) {
-                    if (!r && e.state !== O.XYD.ENDED) {
+                    if (!r && e.state !== R.XYD.ENDED) {
                         let t = (0, N._z)(e),
                             n = L[t] ?? new d.Ep();
                         n.start(D, () => (0, u.Xi)(t, !1)), (L[t] = n);
                     }
-                    if (r && e.state === O.XYD.ENDED) {
+                    if (r && e.state === R.XYD.ENDED) {
                         w((0, N._z)(e));
                         let n = a.A.getStreamForUser(t, i);
                         if (null == n || a.A.isStreamMarkedFull((0, N._z)(n))) return;

@@ -127,7 +127,7 @@ function h() {
                     };
                 })
                 .sort((e, t) => e.name.toLowerCase().localeCompare(t.name.toLowerCase())),
-            O = Array.from(c.entries())
+            R = Array.from(c.entries())
                 .map((e) => {
                     let [t, i] = e,
                         r = n.clippedWithFacet === t;
@@ -138,7 +138,7 @@ function h() {
                         i = c.get(t.key) ?? 0;
                     return n !== i ? i - n : e.key.localeCompare(t.key);
                 }),
-            R = Array.from(I.entries())
+            O = Array.from(I.entries())
                 .map((e) => {
                     let [t, i] = e,
                         r = n.clippedWithFacet === t;
@@ -154,8 +154,8 @@ function h() {
             allClips: i,
             filteredClips: m,
             gamesFacet: C,
-            participantsFacet: O,
-            distributedClipInitiatorsFacet: R,
+            participantsFacet: R,
+            distributedClipInitiatorsFacet: O,
             mainLinkCounts: {
                 allClips: L && n.activeMainLink === d.oH.ALL_CLIPS ? g : f.allClips,
                 autoClips: L && n.activeMainLink === d.oH.AUTO_CLIPS ? g : f.autoClips,

@@ -38,10 +38,10 @@ let N = {},
     j = [],
     b = {},
     R = { status: "ok", lastRequest: null, lastResponse: null },
-    O = [],
-    M = [];
+    M = [],
+    O = [];
 function L() {
-    O = f.A.getProps()
+    M = f.A.getProps()
         .results.filter((e) => e.type === h.rD.TEXT_CHANNEL && 0 === e.record.type)
         .map((e) => e.record.id);
 }
@@ -69,7 +69,7 @@ class w extends u.Ay.PersistedStore {
             .sort((e, t) => y.default.extractTimestamp(t.endId) - y.default.extractTimestamp(e.endId));
     }
     summaries(e) {
-        return N[e] ?? M;
+        return N[e] ?? O;
     }
     shouldShowTopicsBar() {
         return l;
@@ -120,7 +120,7 @@ class w extends u.Ay.PersistedStore {
         let { withQuickSwitcher: t, withChannelAffinities: n, withUnreads: l, numChannels: i = 25 } = e,
             s = [];
         return (
-            t && (s = s.concat(O)),
+            t && (s = s.concat(M)),
             n && (s = s.concat(j.map((e) => e.channel_id))),
             l &&
                 (s = s.filter((e) => {

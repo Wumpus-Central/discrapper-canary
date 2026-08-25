@@ -87,7 +87,7 @@ function c(e) {
                     },
                     [t, m, b],
                 ),
-                O = l.useCallback(
+                M = l.useCallback(
                     function () {
                         let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
                             [n, l] = null != f ? f(c, d) : [c, d];
@@ -98,16 +98,16 @@ function c(e) {
                     },
                     [p, c, d, f, t, b],
                 ),
-                [M, L] = l.useState(!1);
+                [O, L] = l.useState(!1);
             l.useEffect(() => {
-                if (!M || !y) return;
+                if (!O || !y) return;
                 L(!1);
                 let e = u(o(t, c, d));
                 if (null != e) return void b(e);
                 v(!1);
                 let n = u(o(t));
                 null != n && b(n);
-            }, [t, M, y, b, c, d]);
+            }, [t, O, y, b, c, d]);
             let w = l.useCallback((e) => {
                 E.current && null == e && L(!0);
             }, []);
@@ -126,7 +126,7 @@ function c(e) {
                             !(e.shiftKey || e.altKey || e.metaKey || e.ctrlKey) &&
                             e.currentTarget === e.target
                         ) {
-                            e.preventDefault(), e.stopPropagation(), O();
+                            e.preventDefault(), e.stopPropagation(), M();
                             return;
                         }
                         let t = (function (e) {
@@ -171,16 +171,16 @@ function c(e) {
                                     null != h ? h(c, d, e) : null != I && I.click();
                         }
                     },
-                    [O, p, A, I, h, c, d],
+                    [M, p, A, I, h, c, d],
                 ),
                 P = l.useCallback(
                     (e) =>
                         e.currentTarget !== e.target
                             ? (y || (v(!0), T(!0)), !1)
                             : y
-                              ? (O(!1), !1)
-                              : void (g && null != I ? R(c, d) : O(!0)),
-                    [y, g, I, O, R, c, d],
+                              ? (M(!1), !1)
+                              : void (g && null != I ? R(c, d) : M(!0)),
+                    [y, g, I, M, R, c, d],
                 ),
                 D = l.useCallback((e) => {
                     if (e.target !== e.currentTarget) {

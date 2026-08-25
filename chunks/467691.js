@@ -1,4 +1,4 @@
-n.d(t, { US: () => R, BD: () => D, X8: () => G, mH: () => v });
+n.d(t, { US: () => R, BD: () => D, X8: () => y, mH: () => v });
 var i = n(477900);
 n(582128);
 var l = n(435558),
@@ -154,7 +154,7 @@ let f = (e, t) => {
         comboKeysBindGlobal: !0,
         action: () => (I(1, { channelPredicate: U, ensureChatIsVisible: b, withVoiceChannels: !0 }), !1),
     },
-    G = {
+    y = {
         binds: ["mod+shift+alt+up"],
         comboKeysBindGlobal: !0,
         action: () => (I(-1, { channelPredicate: U, ensureChatIsVisible: b, withVoiceChannels: !0 }), !1),

@@ -28,8 +28,8 @@ var l = n(477900),
     j = n(734057),
     b = n(696451),
     R = n(317525),
-    O = n(71393),
-    M = n(287809),
+    M = n(71393),
+    O = n(287809),
     L = n(427262),
     w = n(375708),
     k = n(165648),
@@ -37,8 +37,8 @@ var l = n(477900),
 function D(e) {
     let { member: t, guildId: s, channelId: r, role: a } = e,
         u = i.useRef(null),
-        c = (0, o.bG)([O.A], () => O.A.getGuild(s)?.ownerId, [s]),
-        d = (0, o.bG)([M.default], () => M.default.getUser(t.userId), [t.userId]),
+        c = (0, o.bG)([M.A], () => M.A.getGuild(s)?.ownerId, [s]),
+        d = (0, o.bG)([O.default], () => O.default.getUser(t.userId), [t.userId]),
         h = (0, o.bG)([j.A], () => j.A.getChannel(r), [r]);
     return null == d || null == h
         ? null
@@ -162,16 +162,16 @@ function U(e) {
             t.setPopoutRef?.(null);
         });
     let h = (0, I.A)(s),
-        m = (0, o.bG)([O.A], () => {
-            let e = O.A.getGuild(s);
+        m = (0, o.bG)([M.A], () => {
+            let e = M.A.getGuild(s);
             return null == e ? null : (0, T.af)(e);
         }, [s]),
-        f = (0, o.yK)([b.Ay, M.default], () => {
+        f = (0, o.yK)([b.Ay, O.default], () => {
             let e = b.Ay.getMembers(s),
                 t = null == n || n === m ? e : e.filter((e) => e.roles.includes(n));
             return r()(t)
-                .filter((e) => null != M.default.getUser(e.userId))
-                .sortBy((e) => e.nick ?? L.Ay.getName(M.default.getUser(e.userId)))
+                .filter((e) => null != O.default.getUser(e.userId))
+                .sortBy((e) => e.nick ?? L.Ay.getName(O.default.getUser(e.userId)))
                 .value();
         }, [s, n, m]),
         g = (0, o.bG)([R.A], () => {

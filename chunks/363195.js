@@ -28,12 +28,12 @@ let g = 0,
     S = A.qj,
     N = (0, s.A)(),
     C = S[N],
-    O = null,
-    R = {},
+    R = null,
+    O = {},
     L = !1;
 function y() {
     let e =
-        __OVERLAY__ || null == O
+        __OVERLAY__ || null == R
             ? (function (e, t) {
                   let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
                   if (__OVERLAY__) return E.NJ8.DARK;
@@ -55,7 +55,7 @@ function y() {
                         ? (0, d.GX)(a, r?.clientThemeSettings?.customUserThemeSettings)
                         : (0, d.GX)(i[s?.theme ?? l.Sx.UNSET], s?.clientThemeSettings?.customUserThemeSettings);
               })(N, S, L)
-            : O;
+            : R;
     return e !== C && (p((C = e)), !0);
 }
 class D extends i.Ay.PersistedStore {
@@ -73,13 +73,13 @@ class D extends i.Ay.PersistedStore {
             ((g = 1),
             p((C = e.theme)),
             null != e.preferences && (S = e.preferences),
-            null != e.syncedClientThemes && (R = e.syncedClientThemes),
+            null != e.syncedClientThemes && (O = e.syncedClientThemes),
             null != e.syncedThemesEnabled && (L = e.syncedThemesEnabled),
             (0, r.M)(C) && (S[A.Fc.DARK] = C)),
             this.waitFor(u.Ay, c.A, _.A);
     }
     getState() {
-        return { theme: this.theme, preferences: S, syncedClientThemes: R, syncedThemesEnabled: L, status: g };
+        return { theme: this.theme, preferences: S, syncedClientThemes: O, syncedThemesEnabled: L, status: g };
     }
     get theme() {
         return C;
@@ -91,7 +91,7 @@ class D extends i.Ay.PersistedStore {
         return S[e];
     }
     getSyncedClientTheme(e) {
-        return R[e];
+        return O[e];
     }
     isSameAsDeviceThemeEnabled() {
         return L;
@@ -118,11 +118,11 @@ let v = new D(a.h, {
         );
     },
     LOGOUT: function (e) {
-        return (O = null), (R = {}), (L = !1), !e.isSwitchingAccount && C !== E.NJ8.DARK && (p((C = E.NJ8.DARK)), y());
+        return (R = null), (O = {}), (L = !1), !e.isSwitchingAccount && C !== E.NJ8.DARK && (p((C = E.NJ8.DARK)), y());
     },
     OVERLAY_INITIALIZE: y,
     SELECTIVELY_SYNCED_USER_SETTINGS_UPDATE: function (e) {
-        return null != e.changes.appearance && (O = null), y();
+        return null != e.changes.appearance && (R = null), y();
     },
     UNSYNCED_USER_SETTINGS_UPDATE: y,
     USER_SETTINGS_PROTO_UPDATE: y,
@@ -135,20 +135,20 @@ let v = new D(a.h, {
         return (S = { ...S, ...e.preferences }), y();
     },
     UPDATE_SYNCED_CLIENT_THEME: function (e) {
-        return (R = { ...R, [e.systemTheme]: e.clientTheme }), !0;
+        return (O = { ...O, [e.systemTheme]: e.clientTheme }), !0;
     },
     SET_SAME_AS_DEVICE_THEME_ENABLED: function (e) {
         return L !== e.enabled && ((L = e.enabled), !0);
     },
     CLEAR_SYNCED_CLIENT_THEMES: function () {
-        let e = L || null != R[A.Fc.LIGHT] || null != R[A.Fc.DARK];
-        return (R = {}), (L = !1), e;
+        let e = L || null != O[A.Fc.LIGHT] || null != O[A.Fc.DARK];
+        return (O = {}), (L = !1), e;
     },
     SET_THEME_OVERRIDE: function (e) {
-        return (O = e.theme), y();
+        return (R = e.theme), y();
     },
     CLEAR_THEME_OVERRIDE: function () {
-        return (O = null), y();
+        return (R = null), y();
     },
     REFRESH_THEME: function () {
         return y();

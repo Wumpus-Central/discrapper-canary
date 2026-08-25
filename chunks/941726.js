@@ -41,8 +41,8 @@ function I(e) {
                         j,
                         b,
                         R,
-                        O,
                         M,
+                        O,
                         L,
                         { appsWithConfigs: w, isLoadingConfigs: k } =
                             ((n = g.Q_.useSetting()),
@@ -116,17 +116,17 @@ function I(e) {
                             }, [D]),
                             { identitiesByUserId: b, isLoadingIdentities: R }),
                         { profilesByUserId: F, isLoadingProfiles: H } =
-                            ((O = (0, a.cf)([f.A], () =>
+                            ((M = (0, a.cf)([f.A], () =>
                                 Object.fromEntries(D.map((e) => [e, f.A.getUserProfile(e) ?? null]).filter(x.QE)),
                             )),
-                            (M = (0, a.yK)([f.A], () =>
+                            (O = (0, a.yK)([f.A], () =>
                                 D.filter((e) => null == f.A.getUserProfile(e) && !f.A.isFetchingProfile(e)),
                             )),
                             (L = (0, a.bG)([f.A], () => D.some((e) => f.A.isFetchingProfile(e)))),
                             i.useEffect(() => {
-                                for (let e of M) (0, p.A)(e);
-                            }, [M]),
-                            { profilesByUserId: O, isLoadingProfiles: M.length > 0 || L }),
+                                for (let e of O) (0, p.A)(e);
+                            }, [O]),
+                            { profilesByUserId: M, isLoadingProfiles: O.length > 0 || L }),
                         B = (0, a.cf)(
                             [C.A],
                             () => Object.fromEntries([...w].map((e) => [e, C.A.getConfig(e)]).filter(x.QE)),

@@ -10,10 +10,10 @@ n.d(t, {
     cg: () => F,
     Y7: () => b,
     kr: () => V,
-    HG: () => R,
+    HG: () => O,
     KK: () => C,
     JX: () => v,
-    tU: () => O,
+    tU: () => R,
     k5: () => g,
     nj: () => T,
     $s: () => B,
@@ -84,10 +84,10 @@ function C(e) {
         n = t?.premiumOrbQuantity;
     return null != n && n > 0;
 }
-function O(e) {
+function R(e) {
     return null != T(e);
 }
-function R(e) {
+function O(e) {
     return e.rewardsConfig.rewards.some((e) => e.type === o.l.IN_GAME);
 }
 function L(e) {

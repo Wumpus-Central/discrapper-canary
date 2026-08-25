@@ -41,8 +41,8 @@ var N = n(174459),
     j = n(475815),
     b = n(953584),
     R = n(122641),
-    O = n(692051),
-    M = n(375708),
+    M = n(692051),
+    O = n(375708),
     L = n(317714);
 function w(e) {
     let { onPlay: t, className: n, inactive: s } = e,
@@ -52,7 +52,7 @@ function w(e) {
             ref: a,
             children: (0, l.jsx)(f.PlayIcon, { size: "xs", color: "currentColor", className: L.Kk }),
         });
-    return (0, l.jsx)(O.Y.Consumer, {
+    return (0, l.jsx)(M.Y.Consumer, {
         children: (e) =>
             s || null == t
                 ? (0, l.jsx)("div", { className: L.Iv, children: o })
@@ -60,7 +60,7 @@ function w(e) {
                       className: r()(n, L.Iv, { [L.vu]: !e.disableInteractions }),
                       onClick: t,
                       tabIndex: 0,
-                      "aria-label": M.intl.string(M.t.RscU7I),
+                      "aria-label": O.intl.string(O.t.RscU7I),
                       focusProps: { ringTarget: a },
                       children: o,
                   }),
@@ -708,7 +708,7 @@ class eu extends i.Component {
                   className: et.CY,
                   onClick: i,
                   tabIndex: r ? -1 : 0,
-                  "aria-label": M.intl.string(M.t.ZcgDJX),
+                  "aria-label": O.intl.string(O.t.ZcgDJX),
                   children: (0, l.jsx)(m.PauseIcon, { size: "xs", color: "currentColor", className: et.pd }, "pause"),
               })
             : null != t && t === n
@@ -716,14 +716,14 @@ class eu extends i.Component {
                     className: et.CY,
                     onClick: s,
                     tabIndex: r ? -1 : 0,
-                    "aria-label": M.intl.string(M.t.hsvh0i),
+                    "aria-label": O.intl.string(O.t.hsvh0i),
                     children: (0, l.jsx)(S, { className: et.pd }, "replay"),
                 })
               : (0, l.jsx)(h.D, {
                     className: et.CY,
                     onClick: s,
                     tabIndex: r ? -1 : 0,
-                    "aria-label": M.intl.string(M.t.RscU7I),
+                    "aria-label": O.intl.string(O.t.RscU7I),
                     children: (0, l.jsx)(f.PlayIcon, { size: "xs", color: "currentColor", className: et.pd }, "play"),
                 });
     }
@@ -1496,7 +1496,7 @@ class ef extends i.PureComponent {
                   children:
                       t === es.VIDEO && !1 !== this.props.allowFullScreen
                           ? (0, l.jsx)(I.A, {
-                                "aria-label": M.intl.string(M.t["2nM3Pk"]),
+                                "aria-label": O.intl.string(O.t["2nM3Pk"]),
                                 className: et.CY,
                                 iconClassName: et.pd,
                                 guestWindow: window,

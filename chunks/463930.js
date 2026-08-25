@@ -41,11 +41,11 @@ function p(e) {
         {
             gradientStyle: b,
             gradientClassname: R,
-            gradientGlowClassname: O,
+            gradientGlowClassname: M,
         } = (0, h.v5)({ colorStrings: u, roleStyle: "username", animateGradient: x || y || I?.animate }),
-        M = (0, h.CR)(n),
-        L = { className: r()(f.UU, g, C, { [f.Xh]: _, [R]: j }), children: M },
-        w = { className: r()(f.lD, O, C), children: n },
+        O = (0, h.CR)(n),
+        L = { className: r()(f.UU, g, C, { [f.Xh]: _, [R]: j }), children: O },
+        w = { className: r()(f.lD, M, C), children: n },
         k =
             "dot" === t
                 ? (0, l.jsx)(m.W, {

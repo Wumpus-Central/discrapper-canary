@@ -51,8 +51,8 @@ var m = n(604121),
     j = n(43105),
     b = n(975732),
     R = n(287809),
-    O = n(427262),
-    M = n(652215),
+    M = n(427262),
+    O = n(652215),
     L = n(49999),
     w = n(216583),
     k = n(375708);
@@ -90,11 +90,11 @@ function D(e) {
     let { channel: t, onComplete: n, markAsDismissed: s, children: r } = e,
         a = i.useRef(null),
         { analyticsLocations: o } = (0, C.Ay)(A.A.GIFTING_BADGE_COACHMARK),
-        u = (0, O.R1)(t),
+        u = (0, M.R1)(t),
         { openGiftModal: c } = (0, _.$)({
             giftRecipient: u,
             analyticsLocations: o,
-            analyticsObject: { object: M.ZSU.BUTTON_CTA, objectType: M.AnalyticsObjectTypes.GIFT },
+            analyticsObject: { object: O.ZSU.BUTTON_CTA, objectType: O.AnalyticsObjectTypes.GIFT },
             location: "NewBadgeCoachmark",
         });
     return (0, l.jsxs)(l.Fragment, {
@@ -210,7 +210,7 @@ let J = i.memo(function (e) {
         h = (0, g.A)(),
         m = (0, o.bG)([R.default], () => R.default.getCurrentUser()),
         f = null != m ? F.default.age(m.id) : 0,
-        p = (0, O.R1)(n),
+        p = (0, M.R1)(n),
         x = (0, o.bG)([G.A], () => {
             let e = G.A.getMarketingComponentByType(a.C.GIFT_ICON);
             return null == e || "giftIcon" !== e.properties.properties.oneofKind
@@ -257,17 +257,17 @@ let J = i.memo(function (e) {
             giftRecipient: p,
             analyticsLocations: s,
             analyticsObject: {
-                page: n.isPrivate() ? M.liQ.DM_CHANNEL : M.liQ.GUILD_CHANNEL,
-                section: M.JJy.CHANNEL_TEXT_AREA,
-                object: P ? M.ZSU.GIFTING_PROMOTION_BUTTON : M.ZSU.BUTTON_ICON,
-                objectType: M.AnalyticsObjectTypes.GIFT,
+                page: n.isPrivate() ? O.liQ.DM_CHANNEL : O.liQ.GUILD_CHANNEL,
+                section: O.JJy.CHANNEL_TEXT_AREA,
+                object: P ? O.ZSU.GIFTING_PROMOTION_BUTTON : O.ZSU.BUTTON_ICON,
+                objectType: O.AnalyticsObjectTypes.GIFT,
             },
             wishlistAnalyticsObject: P
                 ? {
-                      page: n.isPrivate() ? M.liQ.DM_CHANNEL : M.liQ.GUILD_CHANNEL,
-                      section: M.JJy.CHANNEL_TEXT_AREA,
-                      object: M.ZSU.BUTTON_ICON,
-                      objectType: M.AnalyticsObjectTypes.GIFT,
+                      page: n.isPrivate() ? O.liQ.DM_CHANNEL : O.liQ.GUILD_CHANNEL,
+                      section: O.JJy.CHANNEL_TEXT_AREA,
+                      object: O.ZSU.BUTTON_ICON,
+                      objectType: O.AnalyticsObjectTypes.GIFT,
                   }
                 : void 0,
             location: P ? "gift-promotion-button" : "gift-button",

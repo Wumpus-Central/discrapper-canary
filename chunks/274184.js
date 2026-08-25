@@ -22,8 +22,8 @@ let p = { hiddenSurveys: {}, surveyOverride: null, lastFetched: null, lastSeen: 
     S = !1,
     N = u.A.Millis.DAY,
     C = 10 * u.A.Millis.HOUR;
-var O =
-    (((i = O || {}).IS_OWNER = "is_owner"),
+var R =
+    (((i = R || {}).IS_OWNER = "is_owner"),
     (i.IS_ADMIN = "is_admin"),
     (i.IS_COMMUNITY = "is_community"),
     (i.GUILD_SIZE = "guild_size"),
@@ -32,7 +32,7 @@ var O =
     (i.GUILD_PERMISSIONS = "guild_permissions"),
     (i.GUILD_SIZE_ALL = "guild_size_all"),
     i);
-let R = new Set(Object.values(O));
+let O = new Set(Object.values(R));
 function L() {
     return null == T.lastFetched || Date.now() - T.lastFetched >= N;
 }
@@ -43,7 +43,7 @@ function D(e) {
     return (function (e) {
         let { guild_requirements: t = [], guild_size: n = [null, null], guild_permissions: i = [] } = e;
         if (0 === t.length) return !0;
-        for (let e of t) if (!R.has(e)) return !1;
+        for (let e of t) if (!O.has(e)) return !1;
         let r = t.includes("guild_size_all"),
             a = !0;
         for (let l of E.A.getGuildsArray()) {

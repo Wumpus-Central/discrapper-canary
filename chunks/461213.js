@@ -22,8 +22,8 @@ var i = n(812729),
 let S = !1,
     N = g.clD.ONLINE,
     C = g.clD.UNKNOWN,
-    O = 0,
-    R = [],
+    R = 0,
+    O = [],
     L = [],
     y = !1,
     D = !0,
@@ -61,23 +61,23 @@ function G(e) {
     }
 }
 function x() {
-    if (((O = I.A.getIdleSince() ?? 0), (y = I.A.isAFK()), D)) N = C;
+    if (((R = I.A.getIdleSince() ?? 0), (y = I.A.isAFK()), D)) N = C;
     else if (S) N = g.clD.INVISIBLE;
     else {
         let e = _.jP.getSetting();
         N = e !== g.clD.UNKNOWN ? e : g.clD.ONLINE;
     }
-    N === g.clD.ONLINE && O > 0 && (N = g.clD.IDLE);
+    N === g.clD.ONLINE && R > 0 && (N = g.clD.IDLE);
     let e = !1,
         t = D || N === g.clD.INVISIBLE ? [] : p.A.getActivities().filter(G);
-    r()(R, t) || ((R = t), (L = U(t)), (e = !0));
+    r()(O, t) || ((O = t), (L = U(t)), (e = !0));
     let n = m.A.getRemoteActivities();
     v !== n && ((v = n), (e = !0));
     let i = m.A.getHiddenActivities();
     b !== i && (b = i),
         e &&
             (P = U(
-                (M = s()([...R, ...v.filter((e) => e.type !== g.$pd.CUSTOM_STATUS)].sort(T.m))
+                (M = s()([...O, ...v.filter((e) => e.type !== g.$pd.CUSTOM_STATUS)].sort(T.m))
                     .uniqBy((e) => `${e.type}:${e.application_id}:${e.name}`)
                     .value()),
             ));
@@ -91,7 +91,7 @@ class F extends o.Ay.Store {
         this.waitFor(h.A, I.A, f.A, p.A, T.A, m.A, u.A, E.A), this.syncWith([p.A], x);
     }
     getLocalPresence() {
-        return { status: N, since: O, activities: L, afk: y };
+        return { status: N, since: R, activities: L, afk: y };
     }
     getStatus() {
         return N;
@@ -102,7 +102,7 @@ class F extends o.Ay.Store {
     }
     getUnfilteredActivities() {
         let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
-        return e ? M : R;
+        return e ? M : O;
     }
     getHiddenActivities() {
         return b;

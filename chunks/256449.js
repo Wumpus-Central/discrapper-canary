@@ -6,10 +6,10 @@ n.d(t, {
     UT: () => R,
     XQ: () => _,
     ZO: () => N,
-    Zq: () => O,
+    Zq: () => M,
     _c: () => S,
     ln: () => j,
-    pD: () => M,
+    pD: () => O,
 }),
     n(321073),
     n(667532);
@@ -150,7 +150,7 @@ function R() {
             t);
     return (0, i.yK)([x.A], () => n.map((e) => x.A.getStickerById(e)).filter((e) => void 0 !== e), [n]);
 }
-function O(e) {
+function M(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         n = (0, i.bG)([x.A], () => x.A.getStickerById(e.id)),
         [s, r] = l.useState(!0),
@@ -183,7 +183,7 @@ function O(e) {
         ? [e, a]
         : [n ?? null, a];
 }
-function M(e) {
+function O(e) {
     let t = (function (e) {
         let t,
             n,

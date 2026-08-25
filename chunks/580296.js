@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { openRestrictedHoursModal: () => C, k: () => O });
+n.d(t, { openRestrictedHoursModal: () => C, k: () => R });
 var i = n(477900),
     r = n(582128),
     a = n(361158),
@@ -81,8 +81,8 @@ function g(e) {
 var S = n(191627);
 let N = !1;
 function C() {
-    N || ((N = !0), (0, a.B8)(() => (0, i.jsx)(g, { onClose: () => O() }), { layerKey: S.Uy, Layer: s.Ay }));
+    N || ((N = !0), (0, a.B8)(() => (0, i.jsx)(g, { onClose: () => R() }), { layerKey: S.Uy, Layer: s.Ay }));
 }
-function O() {
+function R() {
     (N = !1), (0, a.dF)(S.Uy);
 }

@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { $2: () => M, Ky: () => b, L_: () => R, no: () => T, vV: () => y, xz: () => O, yC: () => j }), n(938796);
+n.d(t, { $2: () => O, Ky: () => b, L_: () => R, no: () => T, vV: () => y, xz: () => M, yC: () => j }), n(938796);
 var l,
     i = n(582128),
     s = n(665260),
@@ -171,7 +171,7 @@ function R(e, t) {
         i = N(e);
     return null == n[0] && null == i[0] && null != l[0];
 }
-function O(e, t) {
+function M(e, t) {
     let n = h.A.getChannel(t);
     if (null == n) return !1;
     let l = m.A.getMessage(n.id, g.default.castChannelIdAsMessageId(n.id));
@@ -185,7 +185,7 @@ function O(e, t) {
         (0 === l.attachments.length || null == l.attachments.find((e) => C(e) || E(e)))
     );
 }
-function M(e) {
+function O(e) {
     return e.reduce(
         (e, t) => ({ containsVideo: e.containsVideo || t.isVideo, containsGif: e.containsGif || (0, u.ge)(t.src) }),
         { containsVideo: !1, containsGif: !1 },

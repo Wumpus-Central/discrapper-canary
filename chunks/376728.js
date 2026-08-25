@@ -33,8 +33,8 @@ var m = n(612200),
     S = n(392054),
     N = n(197111),
     C = n(507263),
-    O = n(202384),
-    R = n(51758),
+    R = n(202384),
+    O = n(51758),
     L = n(473529),
     y = n(707592),
     D = n(698441),
@@ -191,7 +191,7 @@ function e_(e, t) {
                                                                 commandOrigin: S.iw.CHAT,
                                                             }));
                                                 };
-                                            !u && (0, R.V)(t, [j.A, Z.default, H.Ay]) ? (0, O.Ze)(t, s) : s();
+                                            !u && (0, O.V)(t, [j.A, Z.default, H.Ay]) ? (0, R.Ze)(t, s) : s();
                                         });
                                 })
                               : (0, p.AX)(h) &&

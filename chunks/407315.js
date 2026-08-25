@@ -164,9 +164,9 @@ function N(e, t) {
                                     let o = (0, u.F)(a, l);
                                     if (null == o) return i?.(a), null;
                                     let d = r()(`${a}\0${e}\0${o.backend}`),
-                                        m = O.get(d);
+                                        m = M.get(d);
                                     if (null != m && m.length === n) return m;
-                                    if (M.has(d)) return null;
+                                    if (O.has(d)) return null;
                                     for (let t of e.split("\n")) if (t.length > 1e3) return null;
                                     let f = e.endsWith("\n")
                                         ? e
@@ -177,7 +177,7 @@ function N(e, t) {
                                         if (((s = e.html), null != i)) for (let t of e.missingInjections) i(t);
                                     } catch (e) {
                                         return (
-                                            M.set(d, !0),
+                                            O.set(d, !0),
                                             h.A.captureException(e instanceof Error ? e : Error(String(e)), {
                                                 tags: { app_context: "syntax_highlighting" },
                                                 extra: { lang: a, surface: "editor" },
@@ -220,7 +220,7 @@ function N(e, t) {
                                                 );
                                             })(p[e]),
                                         );
-                                    return O.set(d, g), g;
+                                    return M.set(d, g), g;
                                 })(e, t, n.length, l, i);
                                 if (null != s) for (let e = 0; e < n.length; e++) n[e].hljsTypes = s[e];
                                 else for (let e = 0; e < n.length; e++) n[e].hljsTypes = [];
@@ -303,8 +303,8 @@ let _ = /(?:<span class="([^"]*)">)|(?:<\/span>)/g,
 for (let [e, t] of Object.entries(A)) e.startsWith("a-") && null != t && j.set(e, t);
 let b = { max: 1 / 0, maxAge: +d.A.Millis.MINUTE, updateAgeOnGet: !0 },
     R = new (i())(b),
-    O = new (i())(b),
-    M = new (i())(b);
+    M = new (i())(b),
+    O = new (i())(b);
 function L(e) {
     return e
         .replace(/&amp;/g, "&")
@@ -333,5 +333,5 @@ function k(e) {
     return w(e, t);
 }
 (0, u.Q4)(() => {
-    O.reset();
+    M.reset();
 });

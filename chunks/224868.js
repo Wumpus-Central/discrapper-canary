@@ -52,13 +52,13 @@ function g(e, t, n, p) {
             })(e, t, n, g, S);
         case ":":
             var C = e,
-                O = t,
-                R = n;
+                R = t,
+                O = n;
             let L = a.Ay.EMOJI_NAME_RE.exec(C);
             if (null == L) break;
             let y = L[1],
-                D = r.Ay.getDisambiguatedEmojiContext(O).getCustomEmoji().get(y),
-                v = null != R ? l.A.getChannel(R) : null;
+                D = r.Ay.getDisambiguatedEmojiContext(R).getCustomEmoji().get(y),
+                v = null != O ? l.A.getChannel(O) : null;
             return null == D || I.Ay.isEmojiFiltered({ emoji: D, channel: v, intention: m.EmojiIntention.CHAT })
                 ? null
                 : {

@@ -43,7 +43,7 @@ function f(e) {
         R = (0, a.bG)([u.Ay], () =>
             t.application?.bot?.id != null ? u.Ay.getMember(n, t.application?.bot?.id) : null,
         ),
-        O = i.useMemo(
+        M = i.useMemo(
             () =>
                 t.type === d.Hf.APPLICATION
                     ? c.Ay.getApplicationIconURL({
@@ -69,7 +69,7 @@ function f(e) {
             mask: A || (x && (s || S)) ? o.hW.SQUIRCLE : o.hW.AVATAR_DEFAULT,
             width: f,
             height: p,
-            children: (0, l.jsx)("img", { alt: "", className: h.Kk, style: { width: f, height: p }, src: O }),
+            children: (0, l.jsx)("img", { alt: "", className: h.Kk, style: { width: f, height: p }, src: M }),
         }),
     });
 }

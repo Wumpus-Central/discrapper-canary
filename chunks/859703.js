@@ -1,5 +1,5 @@
 "use strict";
-let i, r, a, s, l, o, d, c, u, _, E, A, h, I, f, p, T, m, g, S, N, C, O, R, L, y, D, v, b, M;
+let i, r, a, s, l, o, d, c, u, _, E, A, h, I, f, p, T, m, g, S, N, C, R, O, L, y, D, v, b, M;
 n.d(t, { A: () => eh });
 var P = n(435558),
     U = n(158390),
@@ -51,8 +51,8 @@ function ea() {
         (N = new Map()),
         (C = new Map()),
         (T = new Set()),
-        (O = new Map()),
         (R = new Map()),
+        (O = new Map()),
         eu(),
         (L = null),
         (y = null),
@@ -201,10 +201,10 @@ class eE extends k.Ay.Store {
         return q.get(e)?.get(t);
     }
     getExpiredQuestsMap() {
-        return R;
+        return O;
     }
     isQuestExpired(e) {
-        return R.get(e) ?? !1;
+        return O.get(e) ?? !1;
     }
     getQuestLoadedViaPreview(e) {
         return M.get(e);
@@ -225,7 +225,7 @@ class eE extends k.Ay.Store {
         return o?.get(e) ?? !1;
     }
     get earnedQuestForPlacement() {
-        return O;
+        return R;
     }
 }
 let eA = new eE(F.h, {
@@ -259,16 +259,16 @@ let eA = new eE(F.h, {
                         );
             for (let e of ((c = new Map()), n)) c.set(e.id, e);
             for (let e of M?.values()) d.has(e.id) || (d.set(e.id, e), u.set(e.id, (0, $.Ic)(e)));
-            (R = u),
+            (O = u),
                 eu(),
                 (function e() {
                     let t, n;
                     (t = !1),
-                        (n = new Map(R)),
+                        (n = new Map(O)),
                         d.forEach((e, i) => {
                             !0 !== n.get(i) && ((0, $.Ic)(e) ? (n.set(i, !0), (t = !0)) : n.has(i) || n.set(i, !1));
                         }),
-                        t && ((R = n), eA.emitChange());
+                        t && ((O = n), eA.emitChange());
                     let i = (0, $.v1)(Array.from(d.values()));
                     if (null == i) return;
                     let r = Math.max(5e3, i - Date.now() + 2e3);
@@ -351,15 +351,15 @@ let eA = new eE(F.h, {
             let { serverQuests: t, content: n, fetchedAt: i, responseTtlSeconds: r } = e;
             (l = !1), (o = new Map(o)).set(n, !1);
             let a = (0, V.Ce)(r),
-                s = O.get(n),
+                s = R.get(n),
                 c = new Map(s?.earnedDecisionByQuestId);
             for (let [e, n] of t)
                 if ((c.set(e, { fetchedAt: i, ttlMillis: a, shouldDeliver: null != n }), null != n)) {
                     let t = d.get(e),
                         i = (0, z.rO)(n);
-                    null != t ? es(e, i) : ((d = new Map(d)).set(e, i), (R = new Map(R)).set(e, (0, $.Ic)(i)));
+                    null != t ? es(e, i) : ((d = new Map(d)).set(e, i), (O = new Map(O)).set(e, (0, $.Ic)(i)));
                 }
-            O.set(n, { earnedDecisionByQuestId: c });
+            R.set(n, { earnedDecisionByQuestId: c });
         },
         QUESTS_FETCH_EARNED_QUEST_TO_DELIVER_FAILURE: function (e) {
             let { content: t } = e;
@@ -480,7 +480,7 @@ let eA = new eE(F.h, {
             let r = d.get(t.quest_id);
             if (null != r) {
                 let e = (0, $.Ic)(r);
-                R.get(t.quest_id) !== e && (R = new Map(R).set(t.quest_id, e));
+                O.get(t.quest_id) !== e && (O = new Map(O).set(t.quest_id, e));
             }
             0 === Object.keys(i.progress).length &&
                 q.has(i.questId) &&
@@ -502,7 +502,7 @@ let eA = new eE(F.h, {
             let n = d.get(t.questId);
             if (null != n) {
                 let e = (0, $.Ic)(n);
-                R.get(t.questId) !== e && (R = new Map(R).set(t.questId, e));
+                O.get(t.questId) !== e && (O = new Map(O).set(t.questId, e));
             }
         },
         QUESTS_PREVIEW_OVERRIDE: function (e) {

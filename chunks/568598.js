@@ -22,8 +22,8 @@ var i,
     S = n(90575),
     N = n(806931),
     C = n(652215),
-    O = n(731854);
-let R = "__EMBEDDED_ACTIVITIES__";
+    R = n(731854);
+let O = "__EMBEDDED_ACTIVITIES__";
 function L(e) {
     let { applicationId: t, instanceId: n } = e;
     return null != n ? `activity-${t}-${n}` : `activity-${t}`;
@@ -111,14 +111,14 @@ class v {
         return this.participantByIndex.get(e) ?? null;
     }
     updateEmbeddedActivities() {
-        return this.updateParticipant(R);
+        return this.updateParticipant(O);
     }
     hasEmbeddedActivity() {
         return this.size("ACTIVITY") > 0;
     }
     updateParticipant(e) {
         let t = this.participants[e],
-            n = e === R ? this._getParticipantsForEmbeddedActivities() : this._getParticipantsForUser(e);
+            n = e === O ? this._getParticipantsForEmbeddedActivities() : this._getParticipantsForUser(e);
         return (
             (null != t || 0 !== n.length) &&
             (t?.forEach((e) => {
@@ -220,7 +220,7 @@ class v {
             }),
             i.push(t));
         let S = _.A.getStreamForUser(e, c) ?? _.A.getActiveStreamForUser(e, c);
-        if (I.Ay.supports(O.O5.VIDEO) && null != S && S.channelId === this.channelId) {
+        if (I.Ay.supports(R.O5.VIDEO) && null != S && S.channelId === this.channelId) {
             let t = (0, u._z)(S),
                 s = this.getParticipant(t),
                 l = S.ownerId === E.default.getId() && _.A.isSelfStreamHidden(this.channelId),
@@ -232,7 +232,7 @@ class v {
                           }
                         : null;
             (n = {
-                ...T.A.getUserStreamData(e, c, O.x.STREAM),
+                ...T.A.getUserStreamData(e, c, R.x.STREAM),
                 ...o,
                 type: l ? N.lp.HIDDEN_STREAM : N.lp.STREAM,
                 id: t,

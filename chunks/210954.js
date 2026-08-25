@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => O });
+n.d(t, { A: () => R });
 var i = n(477900);
 n(582128);
 var r = n(503698),
@@ -65,7 +65,7 @@ function C() {
         },
     });
 }
-let O = () => {
+let R = () => {
     let { analyticsLocations: e } = (0, o.Ay)(l.A.FRAME_PIP);
     return (0, i.jsx)(o.f5, { value: e, children: (0, i.jsx)(C, {}) });
 };

@@ -29,25 +29,25 @@ function I(e) {
             to: S,
             onClick: N,
             selected: C = !1,
-            ...O
+            ...R
         } = e,
-        R = (0, l.W6)();
+        O = (0, l.W6)();
     null == f && null != p && (n = A[(t = (0, _.oN)(p)).length - 1] ?? A[A.length - 1]);
     let L = r.useCallback(
             (e) => {
                 if (null == S);
-                else if ("string" == typeof S) R.push(S);
+                else if ("string" == typeof S) O.push(S);
                 else {
                     let { pathname: e = "", state: t } = S;
-                    R.push(e, t);
+                    O.push(e, t);
                 }
                 null != N && N(e);
             },
-            [R, S, N],
+            [O, S, N],
         ),
         y = (0, u.r)(c.A.modules.guildbar.AVATAR_SIZE);
     return (0, i.jsxs)(o.D, {
-        ...O,
+        ...R,
         onClick: L,
         className: s()(m, E.iE, { [E.wH]: C }),
         style: { ...g, fontSize: n },

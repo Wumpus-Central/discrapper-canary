@@ -22,8 +22,8 @@ var i = n(228366),
     S = n(873985),
     N = n(116956),
     C = n(174459),
-    O = n(353835),
-    R = n(321034),
+    R = n(353835),
+    O = n(321034),
     L = n(652215),
     y = n(731854);
 function D(e) {
@@ -515,8 +515,8 @@ class J extends r.A {
                             gpu_device_sub_sys_id: t?.gpu_device_sub_sys_id ?? null,
                             gpu_device_revision: t?.gpu_device_revision ?? null,
                             gpu_driver_version: t?.gpu_driver_version ?? null,
-                            cpu_usage: R.A.getCurrentCPUUsagePercent() ?? null,
-                            memory_usage: R.A.getCurrentMemoryUsageKB() ?? null,
+                            cpu_usage: O.A.getCurrentCPUUsagePercent() ?? null,
+                            memory_usage: O.A.getCurrentMemoryUsageKB() ?? null,
                             outbound_bitrate_estimate:
                                 I.A.getConnectionStats(er)?.stats.transport.outboundBitrateEstimate ?? null,
                             inbound_bitrate_estimate:
@@ -540,7 +540,7 @@ class J extends r.A {
                             output_volume: m.Ay.getOutputVolume(),
                             audio_input_device_count: Object.keys(m.Ay.getInputDevices()).length,
                             audio_output_device_count: Object.keys(m.Ay.getOutputDevices()).length,
-                            app_hardware_acceleration_enabled: O.A.getAppHardwareAccelerationEnabled(),
+                            app_hardware_acceleration_enabled: R.A.getAppHardwareAccelerationEnabled(),
                             input_device_os_muted: m.Ay.getInputDeviceOSMuted() ?? null,
                             input_device_os_volume: m.Ay.getInputDeviceOSVolume() ?? null,
                         };

@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => O });
+n.d(t, { A: () => R });
 var i,
     r,
     a = n(17928),
@@ -97,7 +97,7 @@ class C extends a.Ay.Store {
         return g;
     }
 }
-let O = new C(s.h, {
+let R = new C(s.h, {
     GPLAY_UPDATE_CONNECTION_STATE: function (e) {
         let { connectionState: t } = e;
         _ = t;

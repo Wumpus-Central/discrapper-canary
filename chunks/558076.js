@@ -22,18 +22,18 @@ let d = new Map(),
     S = {},
     N = {},
     C = [];
-function O(e) {
+function R(e) {
     let { x: t, y: n } = e;
     return `${t},${n}`;
 }
-function R(e, t) {
+function O(e, t) {
     let n = N[e];
     if (null == n || 0 === n.length) return;
     let i = t.get(o.N.NOTE);
     if (null == i || 0 === i.length) return;
     let r = a.default.getId(),
-        s = new Set(i.filter((e) => e.createdBy === r).map((e) => O(e.position))),
-        l = n.filter((e) => !s.has(O(e.position)));
+        s = new Set(i.filter((e) => e.createdBy === r).map((e) => R(e.position))),
+        l = n.filter((e) => !s.has(R(e.position)));
     l.length !== n.length && (0 === l.length ? delete N[e] : (N[e] = l));
 }
 function L() {
@@ -89,7 +89,7 @@ let D = new y(r.h, {
     GUILD_ROOM_CONNECT: function (e) {
         let { room: t, guildId: n } = e,
             { users: i, objects: r, ...a } = t;
-        (E[t.roomId] = a), (A[t.roomId] = i), (h[t.roomId] = r), R(t.roomId, r), null != n && null != I && (I = null);
+        (E[t.roomId] = a), (A[t.roomId] = i), (h[t.roomId] = r), O(t.roomId, r), null != n && null != I && (I = null);
     },
     GUILD_ROOM_CONNECT_FAILURE: function (e) {
         let { roomId: t } = e;
@@ -110,7 +110,7 @@ let D = new y(r.h, {
     GUILD_ROOM_UPDATE: function (e) {
         let { room: t } = e,
             { users: n, objects: i, ...r } = t;
-        (E[t.roomId] = r), (h[t.roomId] = i), R(t.roomId, i);
+        (E[t.roomId] = r), (h[t.roomId] = i), O(t.roomId, i);
         let s = a.default.getId(),
             l = A[t.roomId]?.get(s);
         (A[t.roomId] = n), null != l && A[t.roomId]?.set(s, l);

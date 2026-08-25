@@ -48,11 +48,11 @@ function A(e, t) {
         N = null != f ? S : g,
         C = Date.now() - (N?.fetchEndedAt ?? 0) >= 6e4;
     if ((N?.fetchError?.status === 404 || N?.fetchError?.status === 429) && !C) return Promise.resolve();
-    let O = c.A.getMutualGuilds(e),
-        R = c.A.getMutualFriends(e),
+    let R = c.A.getMutualGuilds(e),
+        O = c.A.getMutualFriends(e),
         L = c.A.getMutualFriendsCount(e),
-        y = null == O && u,
-        D = null == R && A,
+        y = null == R && u,
+        D = null == O && A,
         v = null == L && _,
         b = null == f ? null == g : null == S,
         M = !b && (C || y || D || v);

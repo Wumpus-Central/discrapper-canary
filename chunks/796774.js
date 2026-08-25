@@ -2,7 +2,7 @@
 n.d(t, {
     CX: () => P,
     E7: () => S,
-    Rp: () => R,
+    Rp: () => O,
     dZ: () => v,
     eS: () => L,
     g0: () => b,
@@ -10,7 +10,7 @@ n.d(t, {
     lT: () => N,
     nh: () => y,
     qP: () => D,
-    ty: () => O,
+    ty: () => R,
     xV: () => C,
 }),
     n(321073);
@@ -97,10 +97,10 @@ async function C(e) {
         });
     return (0, A.N0)(o.body, t);
 }
-async function O(e, t) {
+async function R(e, t) {
     await a.Bo.del({ url: I.Rsh.GUILD_SOUNDBOARD_SOUND(e, t), oldFormErrors: !0, rejectWithError: (0, a.fT)() });
 }
-function R(e) {
+function O(e) {
     c.bW.updateAsync(
         "favoriteSoundboardSounds",
         (t) =>

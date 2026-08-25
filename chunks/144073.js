@@ -63,8 +63,8 @@ async function C(e, t, n) {
         total_result_count: r.total_result_count,
     });
 }
-var O = n(151781);
-let R = new u.A("MemberSafetySearchManager");
+var R = n(151781);
+let O = new u.A("MemberSafetySearchManager");
 function L(e) {
     return `guild_${e}`;
 }
@@ -119,8 +119,8 @@ async function G(e) {
     var t;
     let n,
         i,
-        r = O.A.getSearchStateByGuildId(e),
-        l = O.A.getPaginationStateByGuildId(e),
+        r = R.A.getSearchStateByGuildId(e),
+        l = R.A.getPaginationStateByGuildId(e),
         o = L(e),
         d = M(o),
         [c, u] = (function (e, t, n) {
@@ -145,7 +145,7 @@ async function G(e) {
                         { previousPagination: d } = M(L(e)),
                         c = t.currentPage,
                         u = d?.currentPage ?? 0,
-                        _ = O.A.getElasticSearchPaginationByGuildId(e);
+                        _ = R.A.getElasticSearchPaginationByGuildId(e);
                     switch (!0) {
                         case null == _:
                         case s === o && 0 === s:
@@ -161,7 +161,7 @@ async function G(e) {
                             return 1;
                     }
                 })(e, n),
-                r = O.A.getElasticSearchPaginationByGuildId(e),
+                r = R.A.getElasticSearchPaginationByGuildId(e),
                 a = (0, A.n4)(n);
             switch (i) {
                 case 0:
@@ -237,7 +237,7 @@ async function G(e) {
             sort: p,
         }));
     try {
-        if ((R.info("Making member search request", { query: T.query, guildId: e }), null == T.query))
+        if ((O.info("Making member search request", { query: T.query, guildId: e }), null == T.query))
             throw Error("Query is null");
         await C(e, T.query, { signal: T.abortController?.signal ?? void 0 });
     } catch (e) {

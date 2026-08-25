@@ -22,8 +22,8 @@ var i = n(477900),
     S = n(806911),
     N = n(734057),
     C = n(334463),
-    O = n(309010),
-    R = n(531685),
+    R = n(309010),
+    O = n(531685),
     L = n(403362),
     y = n(652215),
     D = n(5867),
@@ -84,14 +84,14 @@ class G extends r.PureComponent {
         s.EB(e, v.R8.VIDEO);
     };
 }
-let x = a.Ay.connectStores([T.A, l.Ay, R.A, m.A, N.A, O.Ay, C.A, _.A, g.Ay, A.A], (e) => {
+let x = a.Ay.connectStores([T.A, l.Ay, O.A, m.A, N.A, R.Ay, C.A, _.A, g.Ay, A.A], (e) => {
     let t,
         { popoutWindowKey: n, popoutWindowHasTitleBar: i = !1 } = e,
         r = T.A.getWindowOpen(y.MLl.CHANNEL_CALL_POPOUT),
         a = T.A.getWindowOpen(y.MLl.ACTIVITY_POPOUT),
         s = l.Ay.getCurrentEmbeddedActivity(),
         u = (0, d.H)(s?.location),
-        h = null != s && !(0, c.A)(u, N.A, O.Ay),
+        h = null != s && !(0, c.A)(u, N.A, R.Ay),
         I = l.Ay.getActivityPanelMode(),
         f = h && I === D.Gd.PANEL,
         S = null != s && null != u && _.A.getSelectedParticipant(u)?.type === v.lp.ACTIVITY,
@@ -100,7 +100,7 @@ let x = a.Ay.connectStores([T.A, l.Ay, R.A, m.A, N.A, O.Ay, C.A, _.A, g.Ay, A.A]
         U = null != n,
         G = U ? T.A.getWindow(n) : null,
         x = !!U && T.A.isWindowFullScreen(n),
-        k = R.A.windowSize();
+        k = O.A.windowSize();
     U && (k = null == G ? k : { width: G.innerWidth, height: G.innerHeight });
     let F = U ? y.BRT.POPOUT : y.BRT.APP;
     t =
@@ -119,8 +119,8 @@ let x = a.Ay.connectStores([T.A, l.Ay, R.A, m.A, N.A, O.Ay, C.A, _.A, g.Ay, A.A]
         j = V.find((e) => e.component === y.o1q.ACTIVITY),
         W = [H, j, V.find((e) => e.component === y.o1q.FRAME)].filter(L.Vq),
         Y = g.Ay.callChatSidebarWidth,
-        K = O.Ay.getVoiceChannelId(),
-        $ = O.Ay.getChannelId() === K,
+        K = R.Ay.getVoiceChannelId(),
+        $ = R.Ay.getChannelId() === K,
         z = null != K && _.A.getChatOpen(K),
         Z = f || S,
         q = Z && null != s && (0, o.q)(s.applicationId),

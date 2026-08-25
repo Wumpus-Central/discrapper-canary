@@ -28,8 +28,8 @@ let N = (0, n(600975).C)({
     treatments: [{ id: 1, label: "Show scores in QS results", config: { showScores: !0 } }],
 });
 var C = n(12351),
-    O = n(915089),
-    R = n(442325),
+    R = n(915089),
+    O = n(442325),
     L = n(734057),
     y = n(458294),
     D = n(71393),
@@ -212,7 +212,7 @@ function ee(e, t, n) {
 class et extends r.PureComponent {
     scrollerRef = r.createRef();
     inputRef = r.createRef();
-    _listId = (0, O.Ld)();
+    _listId = (0, R.Ld)();
     state = { query: this.props.query, mouseFocusDisabled: !0 };
     componentDidMount() {
         g.A.disable(), g.A.enableTemp(m.w);
@@ -1030,7 +1030,7 @@ class et extends r.PureComponent {
                 if ((e.preventDefault(), e.altKey)) return this.handleContextMenu(e);
                 let t = i[a];
                 if (null == t) return;
-                if ((e.metaKey || e.ctrlKey) && R.A.isEnabled()) return void (0, o.$U)(t);
+                if ((e.metaKey || e.ctrlKey) && O.A.isEnabled()) return void (0, o.$U)(t);
                 this.selectResult(t);
                 return;
             }

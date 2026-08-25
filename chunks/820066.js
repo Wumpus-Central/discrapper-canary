@@ -134,8 +134,8 @@ let T = {
     j = /(-# +)/,
     b = (0, p.A)([v, T]),
     R = (0, p.A)([S, T]),
-    O = c.X(b),
-    M = c.X(R),
+    M = c.X(b),
+    O = c.X(R),
     L = { max: 1 / 0, maxAge: +g.A.Millis.MINUTE, updateAgeOnGet: !0 },
     w = new (o())(L),
     k = new (o())(L);
@@ -605,7 +605,7 @@ let Z = {
                                         a = {
                                             originalMatch: { index: 0, 0: "" },
                                             type: "paragraph",
-                                            content: (n ? M : O)(r, !0, {
+                                            content: (n ? O : M)(r, !0, {
                                                 returnMentionIds: !0,
                                                 disableAutoBlockNewlines: !0,
                                                 guildId: t,

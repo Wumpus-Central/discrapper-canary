@@ -8,7 +8,7 @@ n.d(t, {
     Uq: () => tZ,
     yR: () => tz,
     OZ: () => tB,
-    $o: () => tM,
+    $o: () => tO,
     bU: () => tP,
     Uk: () => t_,
     GN: () => tH,
@@ -47,7 +47,7 @@ var l,
     j = n(256905),
     b = n(536763),
     R = n(218394);
-class O extends s.PureComponent {
+class M extends s.PureComponent {
     static defaultProps = { shouldLink: !0, autoPlay: !1, animated: !1 };
     onMouseEnter = (e) => {
         let { src: t, width: n, height: l, onMouseEnter: i, handlePreloadImage: s } = this.props;
@@ -106,10 +106,10 @@ class O extends s.PureComponent {
         return (0, i.jsx)(T.Ay, { ...n, onZoom: this.onZoom, onMouseEnter: this.onMouseEnter, shouldAnimate: t });
     }
 }
-function M(e) {
+function O(e) {
     let t = (0, _.Us)(),
         n = (0, R.j)();
-    return (0, i.jsx)(O, { ...e, isWindowFocused: n, appContext: t });
+    return (0, i.jsx)(M, { ...e, isWindowFocused: n, appContext: t });
 }
 var L = n(9578),
     w = n(56562),
@@ -573,8 +573,8 @@ var ey = n(863922),
     ej = n(707539),
     eb = n(576705),
     eR = n(573163),
-    eO = n(340833),
-    eM = n(913642),
+    eM = n(340833),
+    eO = n(913642),
     eL = n(935208),
     ew = n(453302);
 n(321073);
@@ -725,11 +725,11 @@ function eY(e) {
                     children: [
                         (0, i.jsx)(x.D, {
                             onClick: (e) => g(e, ez.P0.GOOD),
-                            children: (0, i.jsx)(eM.A, { className: eZ.O1, width: 12, height: 12 }),
+                            children: (0, i.jsx)(eO.A, { className: eZ.O1, width: 12, height: 12 }),
                         }),
                         (0, i.jsx)(x.D, {
                             onClick: (e) => g(e, ez.P0.BAD),
-                            children: (0, i.jsx)(eO.A, { className: eZ.O1, width: 12, height: 12 }),
+                            children: (0, i.jsx)(eM.A, { className: eZ.O1, width: 12, height: 12 }),
                         }),
                     ],
                 }),
@@ -1005,12 +1005,12 @@ function tm(e) {
             };
         })(c, d),
         R = { currentTime: o, duration: u, played: c },
-        O = s.useRef(R);
+        M = s.useRef(R);
     s.useEffect(() => {
-        O.current = R;
+        M.current = R;
     }),
         s.useEffect(() => {
-            let { currentTime: e, duration: t, played: n } = O.current,
+            let { currentTime: e, duration: t, played: n } = M.current,
                 l = tu({ showAll: !n, currentTime: e, duration: t, numSegments: C.length });
             A.current = C.map((e, t) => new ts(t < l ? e : 0));
         }, [C]),
@@ -1079,7 +1079,7 @@ function tm(e) {
                 }
             );
         }, [p, v, C, g, o, u, c, d, S, N, _, T, j, b]);
-    let [, M] = (function (e) {
+    let [, O] = (function (e) {
         let { ref: t, onDrag: n, onDragStart: l, onDragEnd: i } = e,
             [r, a] = s.useState(!1);
         return (
@@ -1114,7 +1114,7 @@ function tm(e) {
         );
     })({ ref: p, onDrag: h, onDragStart: m, onDragEnd: f });
     return (0, i.jsx)("canvas", {
-        onMouseDown: M,
+        onMouseDown: O,
         className: a()(ta.J, l),
         style: { width: x },
         ref: p,
@@ -1152,14 +1152,14 @@ let tx = s.memo(function (e) {
         [N, _] = s.useState(I),
         [T, j] = s.useState(c),
         [b, R] = s.useState(!1),
-        [O, M] = s.useState(!1),
+        [M, O] = s.useState(!1),
         [L, w] = s.useState(!1),
         [k, P] = s.useState(!1),
         [D, U] = s.useState("none"),
         [G, V] = s.useState(() => ("function" == typeof l ? l() : l)),
         F = s.useRef(void 0),
         H = s.useCallback(() => {
-            M((e) => !e), P(!0);
+            O((e) => !e), P(!0);
         }, []),
         B = s.useCallback(() => {
             U("metadata");
@@ -1177,7 +1177,7 @@ let tx = s.memo(function (e) {
             [C, c],
         ),
         z = s.useCallback(() => {
-            M(!1),
+            O(!1),
                 null == F.current &&
                     (F.current = setTimeout(() => {
                         S(!1), P(!1), (F.current = void 0);
@@ -1220,8 +1220,8 @@ let tx = s.memo(function (e) {
             [T, Y],
         );
     s.useEffect(() => {
-        !v && O && S(!0);
-    }, [O, v]);
+        !v && M && S(!0);
+    }, [M, v]);
     let et = s.useRef(null),
         en = { played: k, currentTime: N, onPause: g, onPlay: p },
         el = s.useRef(en);
@@ -1234,7 +1234,7 @@ let tx = s.memo(function (e) {
         s.useEffect(() => {
             let e;
             return (
-                O &&
+                M &&
                     !L &&
                     (e = setInterval(() => {
                         K(E.current?.currentTime ?? 0);
@@ -1243,31 +1243,31 @@ let tx = s.memo(function (e) {
                     null != e && clearInterval(e);
                 }
             );
-        }, [O, L, K]),
+        }, [M, L, K]),
         s.useEffect(() => {
             let { played: e, currentTime: t, onPause: n, onPlay: l } = el.current;
-            if (e || O)
-                if (O) (et.current = performance.now()), l?.(!1, t, (E.current?.duration ?? 0) * e6.A.Millis.SECOND);
+            if (e || M)
+                if (M) (et.current = performance.now()), l?.(!1, t, (E.current?.duration ?? 0) * e6.A.Millis.SECOND);
                 else {
                     let e = performance.now(),
                         l = et.current;
                     n?.(t, null != l ? (e - l) / 1e3 : 0), K(t), (et.current = null);
                 }
-        }, [O, n, T, K]),
+        }, [M, n, T, K]),
         s.useEffect(() => {
             let e;
             return (
                 !(function t() {
                     let n = E.current;
-                    null == n || (_(n.currentTime), O && (e = requestAnimationFrame(t)));
+                    null == n || (_(n.currentTime), M && (e = requestAnimationFrame(t)));
                 })(),
                 () => {
                     null != e && cancelAnimationFrame(e);
                 }
             );
-        }, [E, O, _]),
+        }, [E, M, _]),
         s.useEffect(() => {
-            if (O)
+            if (M)
                 return (
                     e5._.dispatch(eK.jej.VOICE_MESSAGE_PLAYBACK_STARTED, { src: n }),
                     e5._.subscribe(eK.jej.VOICE_MESSAGE_PLAYBACK_STARTED, e),
@@ -1277,11 +1277,11 @@ let tx = s.memo(function (e) {
                 );
             function e(e) {
                 let { src: t } = e;
-                n !== t && M(!1);
+                n !== t && O(!1);
             }
-        }, [n, O, M]);
-    let ei = O ? e$.PauseIcon : eX.PlayIcon,
-        es = O ? ec.intl.string(ec.t["3XohGn"]) : ec.intl.string(ec.t.AlHqHT),
+        }, [n, M, O]);
+    let ei = M ? e$.PauseIcon : eX.PlayIcon,
+        es = M ? ec.intl.string(ec.t["3XohGn"]) : ec.intl.string(ec.t.AlHqHT),
         er = ec.intl.formatToPlainString(ec.t.LgCPMt, { playbackRate: y }),
         ea = `${y.toString().replace(/^0/, "")}X`;
     t =
@@ -1292,7 +1292,7 @@ let tx = s.memo(function (e) {
                       className: tf.Zn,
                       src: n,
                       preload: D,
-                      playing: O && !L,
+                      playing: M && !L,
                       onEnded: Z,
                       onLoadedMetadata: W,
                       onError: q,
@@ -1312,12 +1312,12 @@ let tx = s.memo(function (e) {
                   muted: b,
                   volume: G,
                   playbackRate: y,
-                  playing: O && !L,
+                  playing: M && !L,
                   children: (0, i.jsx)("source", { src: n }),
               });
     let eo = (0, d.bG)([eQ.Ay], () => eQ.Ay.useReducedMotion);
     return (0, i.jsxs)("div", {
-        className: a()(tf.kL, { [tf.he]: O }),
+        className: a()(tf.kL, { [tf.he]: M }),
         onMouseEnter: B,
         role: "region",
         "aria-label": ec.intl.string(ec.t.c8U6xd),
@@ -1337,7 +1337,7 @@ let tx = s.memo(function (e) {
                 waveform: u,
                 currentTime: N,
                 duration: T ?? 1,
-                playing: O,
+                playing: M,
                 played: v,
                 onDrag: ee,
                 onDragStart: X,
@@ -1454,7 +1454,7 @@ function tR(e) {
           })
         : null;
 }
-function tO(e) {
+function tM(e) {
     let {
             onVolumeChange: t,
             onMute: n,
@@ -1512,8 +1512,8 @@ function tO(e) {
         ],
     });
 }
-function tM(e) {
-    return (0, i.jsx)(tO, { ...e });
+function tO(e) {
+    return (0, i.jsx)(tM, { ...e });
 }
 function tL(e) {
     let {
@@ -1576,7 +1576,7 @@ function tk(e) {
             (0, i.jsxs)("div", {
                 className: a()(tN.ZSk, o),
                 style: p,
-                children: [(0, i.jsx)(M, { ...e }), null != l && l()],
+                children: [(0, i.jsx)(O, { ...e }), null != l && l()],
             }),
             x &&
                 A &&
@@ -1788,14 +1788,14 @@ function tB(e) {
         b = (0, d.bG)([ev.A], () => ev.A.visibleSummaryIndex()) ?? -1,
         R = _?.[b]?.topic;
     null == R && null == o && _?.length >= 1 && (R = _[0]?.topic);
-    let O = s.useMemo(
+    let M = s.useMemo(
             () =>
                 u().debounce((e) => {
                     m(e?.id ?? null);
                 }, 64),
             [m],
         ),
-        M = s.useMemo(
+        O = s.useMemo(
             () =>
                 u().throttle(
                     () => {
@@ -1808,9 +1808,9 @@ function tB(e) {
         ),
         L = s.useCallback(
             (e) => {
-                M(), O(e);
+                O(), M(e);
             },
-            [O, M],
+            [M, O],
         ),
         [P, U] = s.useState(!1),
         V = s.useCallback(() => {
@@ -2063,7 +2063,7 @@ function tK(e) {
                 }, 64),
             [o],
         ),
-        O = s.useMemo(
+        M = s.useMemo(
             () =>
                 u().throttle(
                     () => {
@@ -2074,11 +2074,11 @@ function tK(e) {
                 ),
             [],
         ),
-        M = s.useCallback(
+        O = s.useCallback(
             (e) => {
-                O(), R(e);
+                M(), R(e);
             },
-            [R, O],
+            [R, M],
         ),
         [L, P] = s.useState(!1),
         U = s.useCallback(() => {
@@ -2102,11 +2102,11 @@ function tK(e) {
                 null != i &&
                     ((0, ey.sK)(t.id, i.id),
                     (0, ey.C6)(t.id, i.id),
-                    n.removeAutomaticAnchorCallback(M),
+                    n.removeAutomaticAnchorCallback(O),
                     n.addScrollCompleteCallback(function e() {
                         n.removeScrollCompleteCallback(e),
                             setTimeout(() => {
-                                n.addAutomaticAnchorCallback(M, !1);
+                                n.addAutomaticAnchorCallback(O, !1);
                             }, 100);
                     }),
                     tE.default.track(eK.HAw.SUMMARIES_TOPIC_CLICKED, {
@@ -2125,7 +2125,7 @@ function tK(e) {
                         context: "Summary Jump",
                     }));
             },
-            [A, t, M, n],
+            [A, t, O, n],
         ),
         F = s.useCallback(() => {
             V(_ - 1, tv.eh.PILL_NEXT_ARROW);
@@ -2162,12 +2162,12 @@ function tK(e) {
     );
     s.useEffect(
         () => (
-            n.addAutomaticAnchorCallback(M),
+            n.addAutomaticAnchorCallback(O),
             () => {
-                n.removeAutomaticAnchorCallback(M);
+                n.removeAutomaticAnchorCallback(O);
             }
         ),
-        [n, M],
+        [n, O],
     ),
         s.useEffect(() => {
             (0, ey.$T)(t.id);

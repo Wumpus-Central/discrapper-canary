@@ -22,8 +22,8 @@ var i = n(477900),
     S = n(538451),
     N = n(616356),
     C = n(287809),
-    O = n(403362),
-    R = n(562153),
+    R = n(403362),
+    O = n(562153),
     L = n(806931),
     y = n(652215),
     D = n(375708),
@@ -56,7 +56,7 @@ function M(e) {
                                 user: e,
                                 guildId: r ?? void 0,
                                 channelId: l,
-                                nick: R.Ay.getNickname(r, l, e),
+                                nick: O.Ay.getNickname(r, l, e),
                                 className: s()(v.kp, { [v.YR]: n }),
                                 textClassName: v.vc,
                                 disablePopout: n,
@@ -77,13 +77,13 @@ function P(e) {
             t.length < a
                 ? D.intl.format(D.t["A+bT9O"], {
                       users: t.length,
-                      user1: R.Ay.getName(n, r, t[0]),
-                      user2: R.Ay.getName(n, r, t[1]),
+                      user1: O.Ay.getName(n, r, t[0]),
+                      user2: O.Ay.getName(n, r, t[1]),
                       commaSeparatedUsers: t
                           .slice(0, t.length - 1)
-                          .map((e) => R.Ay.getName(n, r, e))
+                          .map((e) => O.Ay.getName(n, r, e))
                           .join(", "),
-                      lastUser: R.Ay.getName(n, r, t[t.length - 1]),
+                      lastUser: O.Ay.getName(n, r, t[t.length - 1]),
                   })
                 : d;
     return (0, i.jsx)(A.m, {
@@ -110,17 +110,17 @@ function w(e) {
         } = e,
         h = r.useRef(null),
         S = (0, g.A)(),
-        [R, D] = r.useState(!1),
+        [O, D] = r.useState(!1),
         b = r.useRef(new c.J_(150, () => D(!1))),
         w = (0, d.yK)([N.A, C.default], () => {
             if (l.type === L.lp.STREAM) {
                 let e = N.A.getViewerIds(l.id);
-                return e.length > 0 ? e.map((e) => C.default.getUser(e)).filter(O.Vq) : U;
+                return e.length > 0 ? e.map((e) => C.default.getUser(e)).filter(R.Vq) : U;
             }
             return l.type === L.lp.ACTIVITY && l.participants.length > 0
                 ? Array.from(l.participants)
                       .map((e) => C.default.getUser(e.userId))
-                      .filter(O.Vq)
+                      .filter(R.Vq)
                 : U;
         }, [l]);
     r.useEffect(() => {
@@ -218,7 +218,7 @@ function w(e) {
                             users: w,
                             disableInteraction: E,
                         }),
-                    shouldShow: R && !S,
+                    shouldShow: O && !S,
                     position: "top",
                     children: () => (0, i.jsx)("div", { ref: h, className: s()(v.Mj, u), children: F }),
                 }),

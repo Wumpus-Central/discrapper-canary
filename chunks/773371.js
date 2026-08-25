@@ -41,8 +41,8 @@ function g() {
 var S = n(777334),
     N = n(211753),
     C = n(41984),
-    O = n(158390),
-    R = n(296027),
+    R = n(158390),
+    O = n(296027),
     L = n(515183),
     y = n(489277),
     D = n(222506),
@@ -436,7 +436,7 @@ async function eE(e) {
         en.verbose(`updateIntendedOverlayPIDs: retrying failed overlay pid ${i}`), await t(i), (n = !0);
     }
     for (let t of e.added ?? []) {
-        let i = R.default.getTrackedGameByPid(t);
+        let i = O.default.getTrackedGameByPid(t);
         if (null == i) {
             en.error(`updateIntendedOverlayPIDs: Tracked game not found for pid=${t}`);
             continue;
@@ -565,7 +565,7 @@ function eS(e) {
             (0, c.Vz)(k.OVERLAY_LAYOUT_ID, U.A.getDefaultLayout(k.OVERLAY_LAYOUT_ID), 0),
                 Promise.all([
                     (function (e, t) {
-                        let i = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new O.A();
+                        let i = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new R.A();
                         return Promise.all([n.e("190889"), n.e("45565")])
                             .then(n.bind(n, 33164))
                             .then((n) => {
@@ -620,8 +620,8 @@ async function eN(e, t) {
 function eC(e, t) {
     e ? setTimeout(() => eN(e, t), 200) : eN(e, t);
 }
-let eO = null;
-function eR() {
+let eR = null;
+function eO() {
     f.A.hasLoadedExperiments && !j && ((j = !0), ef(N.x.legacyEnabled));
 }
 class eL extends a.Ay.Store {
@@ -629,8 +629,8 @@ class eL extends a.Ay.Store {
     initialize() {
         !(0, k.supportsLegacy)() ||
             __OVERLAY__ ||
-            (this.waitFor(M.default, f.A, P.A, U.A, R.default, D.A, v.A, y.A, p.Ay),
-            this.syncWith([f.A], eR),
+            (this.waitFor(M.default, f.A, P.A, U.A, O.default, D.A, v.A, y.A, p.Ay),
+            this.syncWith([f.A], eO),
             h.Le(eS, eg),
             M.default.addChangeListener(em),
             l.h.addInterceptor(J.queueDispatch));
@@ -640,7 +640,7 @@ class eL extends a.Ay.Store {
         return null != e && this.isInputLocked(e);
     }
     isInputLocked(e) {
-        return R.default.isOverlayOOPEnabledForPid(e) ? D.A.isInputLocked(e) : !X.has(e);
+        return O.default.isOverlayOOPEnabledForPid(e) ? D.A.isInputLocked(e) : !X.has(e);
     }
     DEV_isInputLockedV3(e) {
         return D.A.isInputLocked(e);
@@ -656,7 +656,7 @@ class eL extends a.Ay.Store {
         return null != e ? (y.A.isOverlayV3EnabledForPID(e) ? v.A.isOverlayEnabled : K) : v.A.isOverlayEnabled || K;
     }
     getAnyGlobalEnabledOverlay() {
-        return R.default.getAnyGlobalEnabledOverlay();
+        return O.default.getAnyGlobalEnabledOverlay();
     }
     getFocusedPID() {
         let e = y.A.getFocusedPID();
@@ -664,10 +664,10 @@ class eL extends a.Ay.Store {
     }
     isFocusedPidOutOfProcess() {
         let e = this.getFocusedPID();
-        return null != e && R.default.isOverlayOOPEnabledForPid(e);
+        return null != e && O.default.isOverlayOOPEnabledForPid(e);
     }
     isCurrentPidOutOfProcess() {
-        return R.default.isOverlayOOPEnabledForPid((0, k.getPID)());
+        return O.default.isOverlayOOPEnabledForPid((0, k.getPID)());
     }
     isReady(e) {
         return y.A.isOverlayV3EnabledForPID(e) ? y.A.isReady(e) : "READY" === W.get(e);
@@ -701,7 +701,7 @@ let ey = new eL(
                       j = !1;
                   },
                   CONNECTION_OPEN: function () {
-                      ($ = !0), (j = !1), eR();
+                      ($ = !0), (j = !1), eO();
                   },
                   CONNECTION_CLOSED: function () {
                       ($ = !1),
@@ -734,13 +734,13 @@ let ey = new eL(
                           (t || "READY" === i || "CRASHED" === i)
                       ) {
                           if (
-                              (t ? X.delete(n) : X.add(n), et.clear(), null != eO && (clearTimeout(eO), (eO = null), t))
+                              (t ? X.delete(n) : X.add(n), et.clear(), null != eR && (clearTimeout(eR), (eR = null), t))
                           )
                               return;
                           t
                               ? eC(t, n)
-                              : (eO = setTimeout(() => {
-                                    eC(t, n), (eO = null);
+                              : (eR = setTimeout(() => {
+                                    eC(t, n), (eR = null);
                                 }, 100));
                       }
                   },
@@ -755,7 +755,7 @@ let ey = new eL(
                       let { port: t } = e;
                       q = btoa(String.fromCharCode(...crypto.getRandomValues(new Uint8Array(8))));
                       let n = new URLSearchParams();
-                      n.append("build_id", "935f60abc70e4f621100e5bedce445ce668b3b78"),
+                      n.append("build_id", "458a4bbca9bce670640d87470caa2eb9fbb9c2da"),
                           n.append("rpc", String(t)),
                           n.append("rpc_auth_token", q),
                           (i = `${location.protocol}//${location.host}/overlay?${n.toString()}`);

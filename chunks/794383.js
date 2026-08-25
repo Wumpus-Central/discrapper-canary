@@ -37,7 +37,7 @@ async function C(e, t) {
         r = i[0]?.name;
     return (S[e] = r), r;
 }
-let O = new (class {
+let R = new (class {
     _nextCheck;
     _started;
     constructor() {
@@ -142,13 +142,13 @@ let O = new (class {
         this._started && (this._nextCheck = setTimeout(() => this._check(), h));
     }
 })();
-function R() {
-    E.A.enabled ? O.start() : O.stop();
+function O() {
+    E.A.enabled ? R.start() : R.stop();
 }
 class L extends a.Ay.Store {
     static displayName = "ExternalStreamingStore";
     initialize() {
-        E.A.enabled && O.start(), this.waitFor(_.A, E.A), this.syncWith([E.A], R);
+        E.A.enabled && R.start(), this.waitFor(_.A, E.A), this.syncWith([E.A], O);
     }
     getStream() {
         return p;
@@ -159,5 +159,5 @@ let y = new L(l.h, {
         if (r()(e.stream, p)) return !1;
         p = e.stream ?? null;
     },
-    USER_CONNECTIONS_UPDATE: () => O._check(),
+    USER_CONNECTIONS_UPDATE: () => R._check(),
 });

@@ -39,8 +39,8 @@ let A = null,
     S = new Map(),
     N = null,
     C = [],
-    O = !1;
-function R() {
+    R = !1;
+function O() {
     let e = null;
     for (let t of Object.values(m[d.pt.THIRD_PARTY_OUTBOUND])) (null == e || t.startDate > e) && (e = t.startDate);
     return e?.toISOString() ?? null;
@@ -151,7 +151,7 @@ class y extends i.Ay.PersistedStore {
         return C;
     }
     get claimedOutboundPromotionCodesLoaded() {
-        return O;
+        return R;
     }
 }
 let D = new y(r.h, {
@@ -197,20 +197,20 @@ let D = new y(r.h, {
     },
     OUTBOUND_PROMOTION_NOTICE_DISMISS: function () {
         if (0 === Object.values(m[d.pt.THIRD_PARTY_OUTBOUND]).length) return !1;
-        let e = R();
+        let e = O();
         null != e && (g = e);
     },
     OUTBOUND_PROMOTIONS_SEEN: function () {
         if (0 === Object.values(m[d.pt.THIRD_PARTY_OUTBOUND]).length) return !1;
-        let e = R();
+        let e = O();
         null != e && ((g = e), (_.lastSeenOutboundPromotionStartDate = e));
     },
     CLAIMED_OUTBOUND_PROMOTION_CODES_FETCH_SUCCESS: function (e) {
         let { claimedOutboundPromotionCodes: t } = e;
-        (C = t), (O = !0);
+        (C = t), (R = !0);
     },
     CLAIMED_OUTBOUND_PROMOTION_CODES_FETCH_FAIL: function (e) {
-        (C = []), (O = !0);
+        (C = []), (R = !0);
     },
     CLAIMED_OUTBOUND_PROMOTION_CODE_ADD: function (e) {
         let { claimedOutboundPromotionCode: t } = e;
@@ -234,7 +234,7 @@ let D = new y(r.h, {
             S.clear(),
             (N = null),
             (C = []),
-            (O = !1);
+            (R = !1);
     },
     PREMIUM_MARKETING_PREVIEW: function (e) {
         let { data: t } = e,

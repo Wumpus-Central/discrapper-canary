@@ -28,8 +28,8 @@ var l = n(477900),
     j = n(576705),
     b = n(351906),
     R = n(287809),
-    O = n(31498),
-    M = n(887129),
+    M = n(31498),
+    O = n(887129),
     L = n(741918),
     w = n(267102),
     k = n(652215),
@@ -44,7 +44,7 @@ let V = i.forwardRef(function (e, t) {
         z = i.useRef(null),
         [Z, Y, q] = (function (e, t, n) {
             let { channel: l, type: s } = e,
-                [r, a] = i.useState(() => (0, O.Ur)()),
+                [r, a] = i.useState(() => (0, M.Ur)()),
                 u = (0, y.A)(),
                 c = (0, o.bG)([T.Ay, R.default], () => {
                     let e = R.default.getCurrentUser();
@@ -90,7 +90,7 @@ let V = i.forwardRef(function (e, t) {
                             u.setFocus(e.toString()), s?.(e);
                         }
                     }
-                    let u = (0, M.Ay)({
+                    let u = (0, O.Ay)({
                             id: t,
                             isEnabled: l.isVisible,
                             orientation: L.Gl.VERTICAL,
@@ -118,7 +118,7 @@ let V = i.forwardRef(function (e, t) {
                 x = e.editorRef.current?.getCurrentWord(),
                 A = e.editorRef.current?.getSlateEditor(),
                 C = null;
-            null != A && (C = _.VW.getSelectedParentOfType(A, O.mk)?.[0] ?? null);
+            null != A && (C = _.VW.getSelectedParentOfType(A, M.mk)?.[0] ?? null);
             let I = {
                     ...e,
                     navigator: g,
@@ -145,7 +145,7 @@ let V = i.forwardRef(function (e, t) {
                               )
                             : "",
                 },
-                [U] = i.useState(() => new O.Ay(I));
+                [U] = i.useState(() => new M.Ay(I));
             return (
                 i.useEffect(() => {
                     U.updateProps(I);

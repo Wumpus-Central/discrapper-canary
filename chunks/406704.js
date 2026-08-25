@@ -6,8 +6,8 @@ n.d(t, {
     H_: () => w,
     Id: () => M,
     NI: () => L,
-    NR: () => R,
-    R: () => O,
+    NR: () => O,
+    R: () => R,
     Tb: () => S,
     UJ: () => U,
     _M: () => F,
@@ -74,7 +74,7 @@ function C(e, t, n) {
         !(__OVERLAY__ || !e || !_.wE.has(t.type) || (null != n && (n.hasFlag(p.pr7.HAS_THREAD) || (0, u.A)(n)))) && !0
     );
 }
-function O(e) {
+function R(e) {
     var t, n, i;
     let r = (0, s.bG)([A.A], () => A.A.getChannel(I.default.castMessageIdAsChannelId(e.id)), [e]);
     return (
@@ -84,7 +84,7 @@ function O(e) {
         !!n.hasFlag(p.pr7.HAS_THREAD) && null != i && !!t
     );
 }
-function R(e) {
+function O(e) {
     return (0, s.cf)([f.A, h.A], () => {
         let t = f.A.getActiveJoinedThreadsForParent(e.guild_id, e.id),
             n = f.A.getActiveJoinedRelevantThreadsForParent(e.guild_id, e.id),

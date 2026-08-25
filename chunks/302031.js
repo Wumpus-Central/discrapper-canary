@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Ay: () => M, Bs: () => b });
+n.d(t, { Ay: () => O, Bs: () => b });
 var l,
     i = n(477900),
     s = n(582128),
@@ -282,10 +282,10 @@ class R extends s.PureComponent {
         }
     }
 }
-function O(e) {
+function M(e) {
     let t = (0, C._R)() && null != e.reason && E.tY.has(e.reason),
         n = (0, A.yM)();
     return (0, i.jsx)(R, { ...e, shouldAgeVerify: t, isVerifiedTeen: n });
 }
-(O.Types = S), (O.Reasons = E.Oc);
-let M = O;
+(M.Types = S), (M.Reasons = E.Oc);
+let O = M;

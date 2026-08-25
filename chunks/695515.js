@@ -22,8 +22,8 @@ let _ = null,
     S = !1,
     N = null,
     C = null,
-    O = [],
     R = [],
+    O = [],
     L = null,
     y = null,
     D = null,
@@ -143,8 +143,8 @@ function Y(e) {
         k(t),
         null != p && H(p),
         null != T && j(T),
-        (O = c),
-        (R = u),
+        (R = c),
+        (O = u),
         (L = A),
         (y = h),
         (D = I ?? null),
@@ -187,8 +187,8 @@ function z(e) {
         B(r),
         null != A && H(A),
         null != h && j(h),
-        (O = o),
-        (R = d),
+        (R = o),
+        (O = d),
         (S = !1),
         (N = l.default.fromTimestamp(Date.now())),
         (L = c),
@@ -250,8 +250,8 @@ function ei() {
         (N = null),
         (m = w()),
         (h = !1),
-        (O = []),
         (R = []),
+        (O = []),
         (L = null),
         (y = null),
         (D = null),
@@ -366,10 +366,10 @@ class er extends r.A {
         return S;
     }
     getTopUserActivities() {
-        return O;
+        return R;
     }
     getTopGuildActivities() {
-        return R;
+        return O;
     }
     getTotalSpendAmount() {
         return L;

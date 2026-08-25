@@ -20,21 +20,21 @@ var s = n(435558),
     S = n(485296),
     N = n(977997),
     C = n(174459),
-    O = n(970928),
-    R = n(927813),
+    R = n(970928),
+    O = n(927813),
     L = n(403362),
     y = n(107750),
     D = n(272984),
     v = n(652215);
 let b = A.A.get(v.fg2.SPOTIFY),
     M = "hm://pusher/v1/connections/",
-    P = 30 * R.A.Millis.SECOND,
-    U = 30 * R.A.Millis.SECOND,
-    w = 5 * R.A.Millis.MINUTE,
-    G = 5 * R.A.Millis.SECOND,
-    x = 1.5 * R.A.Millis.SECOND,
-    k = +R.A.Millis.MINUTE,
-    F = 3 * R.A.Millis.SECOND,
+    P = 30 * O.A.Millis.SECOND,
+    U = 30 * O.A.Millis.SECOND,
+    w = 5 * O.A.Millis.MINUTE,
+    G = 5 * O.A.Millis.SECOND,
+    x = 1.5 * O.A.Millis.SECOND,
+    k = +O.A.Millis.MINUTE,
+    F = 3 * O.A.Millis.SECOND,
     V = new I.A("Spotify"),
     B = new u.Ep(),
     H = new u.Ep(),
@@ -412,7 +412,7 @@ class e_ extends d.Ay.Store {
                 return t.replace(/;/g, "");
             }).join("; "));
         let h = {},
-            I = null != s.image ? (0, O.Di)(v.fg2.SPOTIFY, s.image.url) : null;
+            I = null != s.image ? (0, R.Di)(v.fg2.SPOTIFY, s.image.url) : null;
         null != s.image && null != I && (h.large_image = I),
             "single" !== s.type && (h.large_text = s.name),
             null != E && (t = E.uri),
@@ -490,7 +490,7 @@ let eE = new e_(_.h, {
                         : null,
                 N = null != A && null != r && 0 === E && !o;
             N || (z[s] = S);
-            let O = i;
+            let R = i;
             if (
                 ((i = l()
                     .values(z)
@@ -505,7 +505,7 @@ let eE = new e_(_.h, {
                           V.info("Stopping listening along"), (0, h.A)(), Q(m.id);
                       }))
                     : Y.isStarted() && (V.info("Listen along stop cancelled as playback of track resumed"), Y.stop()),
-                O === i ||
+                R === i ||
                     (null == g && null == S) ||
                     (null != g && null != S && g.track.id === S.track.id && g.startTime === S.startTime))
             )

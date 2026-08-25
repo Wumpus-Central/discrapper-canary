@@ -68,13 +68,13 @@ function T(e, t) {
         (e.isInline = (e) => !!S.has(e.type) || d(e)),
         (e.isVoid = (e) => !!("applicationCommandOption" === e.type && N.has(e.optionType)) || f(e)),
         (e.deleteBackward = (t) => {
-            M(e, () => g(t));
+            O(e, () => g(t));
         }),
         (e.deleteForward = (t) => {
-            M(e, () => v(t));
+            O(e, () => v(t));
         }),
         (e.deleteFragment = (t) => {
-            M(e, () => T(t));
+            O(e, () => T(t));
         });
     let w = null,
         k = null,
@@ -102,7 +102,7 @@ function T(e, t) {
                                     commandChanged: o,
                                     previousOptionValues: c,
                                 } = e,
-                                { command: d, commandText: f } = O(t),
+                                { command: d, commandText: f } = M(t),
                                 p = n.activeCommand,
                                 g = t.chatInputType.commands?.enabled === !0,
                                 A = null != m.A.getPendingReply(r.id);
@@ -416,19 +416,19 @@ function R(e) {
     }
     p && s.H2(n, m);
 }
-function O(e) {
+function M(e) {
     let t = x.n$(e);
     if (null == t) return { command: null, commandText: null };
     let [n] = t,
         l = n.children[0];
     return I.l5.isText(l) ? { command: n.command, commandText: l.text } : { command: n.command, commandText: null };
 }
-function M(e, t) {
+function O(e, t) {
     let n = x.O7(e)[0];
     t();
     let l = I.ZF.toPoint(e.selection);
     if (null == l || n === x.O7(e)[0]) return;
-    let { command: i, commandText: s } = O(e);
+    let { command: i, commandText: s } = M(e);
     !(null == i || null == s || s.endsWith(" ")) &&
         I.Kh.equals(l, { path: y.fP, offset: i.displayName.length + 1 }) &&
         E.b.insertText(e, " ");

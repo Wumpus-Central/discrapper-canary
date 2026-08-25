@@ -70,8 +70,8 @@ let g = i().once(() =>
     j = i().once(() => s.aV(m())),
     b = i().once(() => s.aV(g())),
     R = i().once(() => s.aV(x())),
-    O = i().once(() => s.aV(A())),
-    M = i().once(() => s.aV(C())),
+    M = i().once(() => s.aV(A())),
+    O = i().once(() => s.aV(C())),
     L = i().once(() => s.aV(E())),
     w = i().once(() => s.aV(I())),
     k = i().once(() => s.aV(y())),
@@ -113,11 +113,11 @@ let g = i().once(() =>
             R()(e, t, { allowLinks: !0, allowGameMentions: !0, shouldFetchGameMentionData: !0, ...n }, l),
         parseVoiceChannelStatus: function () {
             for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
-            return O()(...t);
+            return M()(...t);
         },
         parseEmbedTitle: function () {
             for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
-            return M()(...t);
+            return O()(...t);
         },
         parseEmbedTitleWithoutLinks: function () {
             for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];

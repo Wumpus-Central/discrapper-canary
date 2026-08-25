@@ -209,11 +209,11 @@ function E(e) {
                                 return (t) => (0, l.jsx)(e, { ...t, user: T, channel: j, targetIsUser: !0 });
                             });
                   },
-        O = A.Ay.useName(T),
-        M = (0, r.bG)([m.A, f.Ay, p.A], () => x.Ay.getNickname(b, E, T));
+        M = A.Ay.useName(T),
+        O = (0, r.bG)([m.A, f.Ay, p.A], () => x.Ay.getNickname(b, E, T));
     if (null == T) return (0, l.jsx)(C, { userId: I, className: t, children: y });
     function L(e) {
-        return (0, l.jsx)(d.A, { ref: N, className: t, onContextMenu: R, ...e, children: `@${M ?? O}` });
+        return (0, l.jsx)(d.A, { ref: N, className: t, onContextMenu: R, ...e, children: `@${O ?? M}` });
     }
     return v
         ? (0, l.jsx)(u.f5, { value: _, children: L() })

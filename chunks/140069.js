@@ -22,19 +22,19 @@ var i,
     S = n(489277),
     N = n(222506),
     C = n(614455),
-    O = (((i = {}).PRIVATE_CHANNELS = "PRIVATE_CHANNELS"), (i.GUILD_CHANNELS = "GUILD_CHANNELS"), i),
-    R = (((r = {})[(r.READ = 0)] = "READ"), (r[(r.UNREAD = 1)] = "UNREAD"), (r[(r.MENTION = 2)] = "MENTION"), r);
+    R = (((i = {}).PRIVATE_CHANNELS = "PRIVATE_CHANNELS"), (i.GUILD_CHANNELS = "GUILD_CHANNELS"), i),
+    O = (((r = {})[(r.READ = 0)] = "READ"), (r[(r.UNREAD = 1)] = "UNREAD"), (r[(r.MENTION = 2)] = "MENTION"), r);
 function L(e, t) {
     return String(Math.max(0, Math.min(Math.floor(e), Number.MAX_SAFE_INTEGER))).padStart(t, "0");
 }
 let y = new s.J(
         function (e) {
-            return [e.isPrivateChannel ? O.PRIVATE_CHANNELS : O.GUILD_CHANNELS];
+            return [e.isPrivateChannel ? R.PRIVATE_CHANNELS : R.GUILD_CHANNELS];
         },
         function (e) {
             let t = e.isPrivateChannel ? "0" : "1",
-                n = e.mentionCount > 0 ? R.MENTION : e.hasUnread ? R.UNREAD : R.READ,
-                i = String(R.MENTION - n),
+                n = e.mentionCount > 0 ? O.MENTION : e.hasUnread ? O.UNREAD : O.READ,
+                i = String(O.MENTION - n),
                 r = L(Number.MAX_SAFE_INTEGER - e.mentionCount, 16),
                 a = L(Number.MAX_SAFE_INTEGER - e.lastActivityAtMs, 16);
             return `${t}\0${i}\0${r}\0${a}\0${e.channelId}`;

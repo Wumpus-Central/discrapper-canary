@@ -28,12 +28,12 @@ var l = n(477900),
     j = n(132500),
     b = n(104142),
     R = n(407781),
-    O = n(287809),
-    M = n(194486),
+    M = n(287809),
+    O = n(194486),
     L = n(178226);
 let w = i.forwardRef(function (e, t) {
     let { sound: n, containerDimensions: s } = e,
-        r = (0, o.bG)([O.default], () => O.default.getCurrentUser()),
+        r = (0, o.bG)([M.default], () => M.default.getCurrentUser()),
         a = (0, o.bG)([y.Ay], () => y.Ay.useReducedMotion),
         [u, c] = i.useState([]),
         d = u.length < 50,
@@ -42,7 +42,7 @@ let w = i.forwardRef(function (e, t) {
             if (!a && d && h && null != r) {
                 let e = (0, b.Br)({ id: n.emojiId, name: n.emojiName ?? "", animated: !1 }),
                     t = null != n.emojiId,
-                    l = M.B.PREMIUM,
+                    l = O.B.PREMIUM,
                     i = (0, T.random)(b.Bf[l].length, !1),
                     s = { id: (0, j.A)(), animationId: i, animationType: l, shouldResize: t, url: e, userId: r.id };
                 c((e) => [...e, s]);
@@ -131,7 +131,7 @@ let $ = i.forwardRef(function (e, t) {
             focused: j,
             forceSecondaryActions: b = !1,
             interactive: R = !0,
-            enableSecondaryActions: M = !1,
+            enableSecondaryActions: O = !1,
             suppressPlaySound: L,
             onMouseEnter: U,
             onSelectItem: G,
@@ -147,7 +147,7 @@ let $ = i.forwardRef(function (e, t) {
             ...er
         } = e,
         { name: ea, emojiId: eo, emojiName: eu } = f,
-        ec = (0, o.bG)([O.default], () => O.default.getCurrentUser()),
+        ec = (0, o.bG)([M.default], () => M.default.getCurrentUser()),
         ed = (0, B.v)(f, p?.guild_id),
         {
             playSoundboardSound: eh,
@@ -177,14 +177,14 @@ let $ = i.forwardRef(function (e, t) {
         ev = (0, a.rm)(ey),
         eS = null != eo || null != eu,
         eN = !(0, F.Ir)(ec, f, p) && !el,
-        e_ = b || (M && !eN),
+        e_ = b || (O && !eN),
         eT = N.LW.useStore().bottomPosition ?? 0,
         ej = eg.current?.getBoundingClientRect().bottom ?? 0,
         [eb, eR] = i.useState(!1),
-        eO = i.useCallback(() => {
+        eM = i.useCallback(() => {
             eR(!0);
         }, []),
-        eM = i.useCallback(() => {
+        eO = i.useCallback(() => {
             eR(!1);
         }, []),
         eL = eN && Q;
@@ -198,8 +198,8 @@ let $ = i.forwardRef(function (e, t) {
             : L || eh($);
     }
     let ek = (0, l.jsx)("div", {
-        onMouseEnter: eO,
-        onMouseLeave: eM,
+        onMouseEnter: eM,
+        onMouseLeave: eO,
         children: (function (e) {
             let { sound: t, previewSound: n, disabled: i = !1, tooltipPosition: s = "top" } = e,
                 r = (0, o.bG)([P.A], () => P.A.getGuildId());
@@ -234,8 +234,8 @@ let $ = i.forwardRef(function (e, t) {
             : (0, l.jsx)(g.PlayIcon, { size: "xs", color: "currentColor", className: r()(Y.C4, e) });
     }
     let eD = (0, l.jsx)("div", {
-        onMouseEnter: eO,
-        onMouseLeave: eM,
+        onMouseEnter: eM,
+        onMouseLeave: eO,
         children: (0, l.jsx)(J, { sound: f, disabled: !R && !b }),
     });
     i.useEffect(() => {
@@ -285,7 +285,7 @@ let $ = i.forwardRef(function (e, t) {
                     onClick: (e) => {
                         ew?.(e);
                     },
-                    onContextMenu: M && !eN ? ed : void 0,
+                    onContextMenu: O && !eN ? ed : void 0,
                     children: [
                         (0, l.jsxs)("div", {
                             className: r()(Y.KM, { [Y.hn]: eS }),

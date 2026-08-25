@@ -38,8 +38,8 @@ function f(e) {
         S = !1,
         N = !1,
         C = !1,
-        O = !1,
-        R = 0,
+        R = !1,
+        O = 0,
         L = 0;
     if (A && !l.isPhoneVerified()) {
         let e = !1;
@@ -55,18 +55,18 @@ function f(e) {
             f || a || !(t.size > 0) || (e = !0);
         }
         !e &&
-            ((R = +l.createdAt + 6e4 * _.$8o.ACCOUNT_AGE - Date.now()),
+            ((O = +l.createdAt + 6e4 * _.$8o.ACCOUNT_AGE - Date.now()),
             (L = +r.joinedAt + 6e4 * _.$8o.MEMBER_AGE - Date.now()),
             (g = r.verificationLevel >= _.PvD.LOW && !l.isClaimed()),
             l.isStaff() ||
                 ((S = r.verificationLevel >= _.PvD.LOW && !l.verified),
                 (N = r.verificationLevel >= _.PvD.VERY_HIGH),
-                (C = r.verificationLevel >= _.PvD.MEDIUM && R > 0),
-                (O = r.verificationLevel >= _.PvD.HIGH && L > 0)));
+                (C = r.verificationLevel >= _.PvD.MEDIUM && O > 0),
+                (R = r.verificationLevel >= _.PvD.HIGH && L > 0)));
     }
     let y = [];
-    O && y.push(L),
-        C && y.push(R),
+    R && y.push(L),
+        C && y.push(O),
         y.length > 0 &&
             (n = setTimeout(() => a.h.dispatch({ type: "GUILD_VERIFICATION_CHECK", guildId: e }), Math.max(...y))),
         (I[e] = {
@@ -74,11 +74,11 @@ function f(e) {
             notEmailVerified: S,
             notPhoneVerified: N,
             newAccount: C,
-            newMember: O,
+            newMember: R,
             missingVerificationRole: m,
             verificationRole: t,
-            canChat: !(g || S || N || C || O || m),
-            accountDeadline: new Date(Date.now() + R),
+            canChat: !(g || S || N || C || R || m),
+            accountDeadline: new Date(Date.now() + O),
             memberDeadline: new Date(Date.now() + L),
             timeoutRef: n,
         });

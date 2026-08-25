@@ -28,8 +28,8 @@ var l = n(477900),
     j = n(775602),
     b = n(47167),
     R = n(442247),
-    O = n(569926),
-    M = n(106191),
+    M = n(569926),
+    O = n(106191),
     L = n(545868),
     w = n(376943),
     k = n(465365),
@@ -167,9 +167,9 @@ function ea(e) {
     let { id: t } = e,
         n = (0, R.K)(t),
         i = null != n;
-    return ((0, O.I)(i ? void 0 : t), i)
+    return ((0, M.I)(i ? void 0 : t), i)
         ? (0, l.jsxs)(U.A, {
-              children: [(0, l.jsx)(M.A, { game: { id: t, icon: n.gameIcon }, iconClassName: $.Kk }), n.gameName],
+              children: [(0, l.jsx)(O.A, { game: { id: t, icon: n.gameIcon }, iconClassName: $.Kk }), n.gameName],
           })
         : (0, l.jsxs)("span", { children: ["@", J.intl.string(J.t["11pdXZ"])] });
 }

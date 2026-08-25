@@ -35,7 +35,7 @@ var r = n(702841),
 n(980504);
 var N = n(652215),
     C = n(202541);
-function O(e, t, n, i, r) {
+function R(e, t, n, i, r) {
     let a = T.A.getChannel(g.Ay.getVoiceChannelId()),
         s = a?.getGuildId(),
         l = m.A.getMediaSessionId(),
@@ -60,9 +60,9 @@ function O(e, t, n, i, r) {
         sequence_number: null != r ? r + 1 : null,
     });
 }
-var R = n(17928),
+var O = n(17928),
     L = n(194486);
-class y extends R.Ay.PersistedStore {
+class y extends O.Ay.PersistedStore {
     static displayName = "VoiceChannelEffectsPersistedStore";
     static persistKey = "VoiceChannelEffectsPersistedStore";
     initialize(e) {
@@ -132,7 +132,7 @@ function K(e, t, n, i) {
                 }).then(N.FXj, () => {
                     if (s.signal.aborted) return;
                 }),
-                O(i ?? [], n, t, f.ib.DEFAULT, r);
+                R(i ?? [], n, t, f.ib.DEFAULT, r);
         })(t, e, __OVERLAY__, n, i),
         s.h.dispatch({ type: "SOUNDBOARD_TRACK_USAGE", soundId: e.soundId });
 }
@@ -162,7 +162,7 @@ async function $(e) {
                 }).then(N.FXj, () => {
                     if (i.signal.aborted) return;
                 }),
-                    O([h.A.CHANNEL_CALL], n, t, f.ib.ENTRY);
+                    R([h.A.CHANNEL_CALL], n, t, f.ib.ENTRY);
             })(s, a, __OVERLAY__);
     }
 }

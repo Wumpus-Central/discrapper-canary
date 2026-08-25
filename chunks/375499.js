@@ -40,7 +40,7 @@ function N(e) {
         [T, j] = i.useState(50),
         b = N || s,
         R = (0, C.t)(v, "emojiButton", b ? "Hovered" : "Normal"),
-        O = (function (e) {
+        M = (function (e) {
             let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 18;
             return {
                 "--custom-emoji-sprite-size": `${t}px`,
@@ -48,7 +48,7 @@ function N(e) {
                 "--custom-emoji-sprite-col": e % 20,
             };
         })(T, A),
-        M = i.useCallback(() => {
+        O = i.useCallback(() => {
             if (b) return;
             let e = Math.floor(77 * Math.random());
             _(!0), j(e), (0, x.K)(I.EmojiInteractionPoint.EmojiButtonMouseEntered);
@@ -63,9 +63,9 @@ function N(e) {
         className: r()(R, t),
         "aria-expanded": s,
         onMouseEnter: () => {
-            M(), u?.();
+            O(), u?.();
         },
-        onMouseOver: M,
+        onMouseOver: O,
         onMouseLeave: () => {
             L(), h?.();
         },
@@ -84,7 +84,7 @@ function N(e) {
                           let { value: t } = e;
                           return (0, l.jsxs)(a.animated.div, {
                               className: v.spriteContainer,
-                              style: { ...O, transform: t.to([0, 1], [1, 1.14]).to((e) => `scale(${e})`) },
+                              style: { ...M, transform: t.to([0, 1], [1, 1.14]).to((e) => `scale(${e})`) },
                               children: [
                                   (0, l.jsx)("div", {
                                       className: r()(v.sprite, v.spriteColored, b ? v.active : v.inactive),
@@ -120,9 +120,9 @@ function _(e) {
         T = (0, A.k0)(),
         [j, b] = (0, g.kn)(T ? [u.M.TRIAL_NUX_EMOJI_BUTTON] : [], void 0, !0),
         R = I && j === u.M.TRIAL_NUX_EMOJI_BUTTON,
-        O = !a && R,
-        M = i.useRef(null),
-        L = x ?? M;
+        M = !a && R,
+        O = i.useRef(null),
+        L = x ?? O;
     function w() {
         return (0, l.jsx)(N, {
             ref: L,
@@ -141,7 +141,7 @@ function _(e) {
     }
     return null == s
         ? w()
-        : O
+        : M
           ? (0, l.jsx)(h.u, {
                 targetElementRef: L,
                 body: y.intl.format(y.t["/7R4q4"], {}),

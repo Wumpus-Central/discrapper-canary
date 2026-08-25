@@ -20,22 +20,22 @@ let A = 10 * u.A.Millis.SECOND,
     S = [],
     N = {},
     C = {},
-    O = I,
-    R = T,
+    R = I,
+    O = T,
     L = !1,
     y = {},
     D = 0;
 function v(e) {
-    R = new Map([...(O = e).values()].map((e) => [e.storeListingId, e]));
-    let t = new Map((0, _.P_)(O, !0).map((e) => [e.skuId, e]));
+    O = new Map([...(R = e).values()].map((e) => [e.storeListingId, e]));
+    let t = new Map((0, _.P_)(R, !0).map((e) => [e.skuId, e]));
     m.forEach((e) => {
         t.has(e.skuId) || t.set(e.skuId, e);
     }),
         (m = t),
-        (S = [...(g = new Map((0, _.P_)(O, !1).map((e) => [e.storeListingId, e]))).values()]);
+        (S = [...(g = new Map((0, _.P_)(R, !1).map((e) => [e.storeListingId, e]))).values()]);
 }
 function b() {
-    (O = I),
+    (R = I),
         (m = f),
         (r = void 0),
         (L = !1),
@@ -74,7 +74,7 @@ class M extends o.Ay.Store {
         return y;
     }
     get categories() {
-        return O;
+        return R;
     }
     get products() {
         return m;
@@ -86,7 +86,7 @@ class M extends o.Ay.Store {
         return D;
     }
     getCategory(e) {
-        return null != e ? O.get(e) : void 0;
+        return null != e ? R.get(e) : void 0;
     }
     getProduct(e) {
         return null != e ? m.get(e) : void 0;
@@ -101,7 +101,7 @@ class M extends o.Ay.Store {
         return null != e ? g.get(e) : void 0;
     }
     getCategoryByStoreListingId(e) {
-        return null != e ? R.get(e) : void 0;
+        return null != e ? O.get(e) : void 0;
     }
     getCategoryForProduct(e) {
         let t = this.getProduct(e);
@@ -117,11 +117,11 @@ let P = new M(d.h, {
             e.categories.collections.length > 0
                 ? e.categories.collections.map(E.A.fromStorefrontCollectionRecord)
                 : e.categories.categories;
-        if (0 === t.length) (O = I), (m = f);
-        else if (!(0, s.isEqual)([...O.values()], t) && !e.noOp) {
+        if (0 === t.length) (R = I), (m = f);
+        else if (!(0, s.isEqual)([...R.values()], t) && !e.noOp) {
             let e = new Map(t.map((e) => [e.skuId, e])),
                 n = new Date();
-            O.forEach((t, i) => {
+            R.forEach((t, i) => {
                 !e.has(i) && (null == t.unpublishedAt || t.unpublishedAt > n) && e.set(i, t);
             }),
                 v(e);
@@ -130,7 +130,7 @@ let P = new M(d.h, {
     },
     COLLECTIBLES_CATEGORIES_FETCH_FAILURE: function (e) {
         let { error: t } = e;
-        (O = I), (m = f), (L = !1), (C = {}), (i = t), (a = Date.now());
+        (R = I), (m = f), (L = !1), (C = {}), (i = t), (a = Date.now());
     },
     COLLECTIBLES_PRODUCT_FETCH: function (e) {
         let { skuId: t, startedAt: n } = e;
@@ -166,7 +166,7 @@ let P = new M(d.h, {
     COLLECTIBLES_SHOP_HOME_FETCH_SUCCESS: function (e) {
         if (0 === e.shopHome.categories.length) return;
         let t = new Map(e.shopHome.categories.map((e) => [e.skuId, e]));
-        v(new Map([...O, ...t]));
+        v(new Map([...R, ...t]));
     },
     COLLECTIBLES_SKIP_NUM_CATEGORIES: function (e) {
         D = e.skipNumCategories;

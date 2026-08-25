@@ -40,8 +40,8 @@ var p = n(80703),
     S = n(941426),
     N = n(818348);
 let C = "x-science-test",
-    O = new S.Vy("AnalyticsTrackingStore"),
-    R = [0, 100, 1e3],
+    R = new S.Vy("AnalyticsTrackingStore"),
+    O = [0, 100, 1e3],
     L = 1500,
     y = 0,
     D = 0,
@@ -177,7 +177,7 @@ let j = window.requestIdleCallback ?? ((e) => setImmediate(() => e())),
                 (P = Date.now()),
                 (M = y),
                 g([e], N.mX.CLIENT_TELEMETRY).catch((e) => {
-                    O.trace(`client telemetry flush failed (status ${e?.status ?? "unknown"})`);
+                    R.trace(`client telemetry flush failed (status ${e?.status ?? "unknown"})`);
                 })
             );
         }
@@ -287,7 +287,7 @@ let j = window.requestIdleCallback ?? ((e) => setImmediate(() => e())),
             }
             submitEventsImmediately = g;
             requestDrain = () => {
-                for (let e of (I(), R))
+                for (let e of (I(), O))
                     setTimeout(() => {
                         I();
                     }, e);
@@ -494,7 +494,7 @@ eh(
     (o = window.GLOBAL_ENV.RELEASE_CHANNEL) &&
         (null == l.release_channel || "" === l.release_channel) &&
         (l.release_channel = o.split("-")[0]),
-    isNaN((d = parseInt("600374", 10))) || (l.client_build_number = d),
+    isNaN((d = parseInt("600604", 10))) || (l.client_build_number = d),
     null == (c = eo?.app.getBuildNumber()) || isNaN(c) || (l.native_build_number = c),
     (l.client_event_source = (function () {
         try {

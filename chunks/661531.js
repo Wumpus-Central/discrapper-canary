@@ -8876,8 +8876,8 @@ let { Themes: c } = d.zv,
     },
     {
         Layout: C,
-        Space: O,
-        SpacePx: R,
+        Space: R,
+        SpacePx: O,
     } = {
         Layout: {
             SPACE_0: 0,
@@ -9122,14 +9122,14 @@ let { Themes: c } = d.zv,
         spacing: o()(S, (e) => `${e}px`),
         layout: o()(C, (e) => ("number" == typeof e ? `${e}px` : e)),
         space: {
-            ...o()(O, (e) => ({
+            ...o()(R, (e) => ({
                 css: e.css,
                 resolve(t) {
                     let { density: n } = t;
                     return e.resolve(n);
                 },
             })),
-            ...o()(R, (e) => `${e}px`),
+            ...o()(O, (e) => `${e}px`),
         },
     };
 function D(e, t) {

@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => L, J: () => M }), n(323874), n(14289), n(35956);
+n.d(t, { A: () => L, J: () => O }), n(323874), n(14289), n(35956);
 var l = n(477900),
     i = n(582128),
     s = n(503698),
@@ -128,7 +128,7 @@ function R(e) {
         }),
     });
 }
-function O(e) {
+function M(e) {
     let {
             file: t,
             alt: n,
@@ -191,13 +191,13 @@ function O(e) {
         })
     );
 }
-function M(e) {
+function O(e) {
     let { upload: t, size: n = S.L.MEDIUM, onMouseEnter: s, clip: a, guildId: o } = e,
         [u, c] = i.useState(!1);
     return t.isImage && t.item.platform === g.xz.WEB
         ? (0, l.jsx)(R, { file: t.item.file, alt: t.description, spoiler: t.spoiler, size: n, onMouseEnter: s })
         : !u && t.isVideo && t.item.platform === g.xz.WEB
-          ? (0, l.jsx)(O, {
+          ? (0, l.jsx)(M, {
                 file: t.item.file,
                 size: n,
                 alt: t.description,
@@ -237,7 +237,7 @@ function L(e) {
         j = null != y,
         b = A === S.L.SMALL,
         R = (0, a.bG)([I.A], () => I.A.getChannel(t)?.guild_id);
-    function O() {
+    function M() {
         p.A.remove(t, o.id, s);
     }
     function L(e) {
@@ -277,7 +277,7 @@ function L(e) {
                       n.e("489492"),
                       n.e("29621"),
                   ]).then(n.bind(n, 723028));
-                  return (n) => (0, l.jsx)(e, { ...n, channelId: t, clipId: y.id, onEdit: O });
+                  return (n) => (0, l.jsx)(e, { ...n, channelId: t, clipId: y.id, onEdit: M });
               })
             : (0, u.openModalLazy)(async () => {
                   let { default: e } = await Promise.all([
@@ -334,7 +334,7 @@ function L(e) {
                 (0, l.jsx)(v.A, {
                     className: r()({ [T.action]: b }),
                     tooltip: j ? N.intl.string(N.t.MskAXa) : N.intl.string(N.t.vN7REz),
-                    onClick: O,
+                    onClick: M,
                     dangerous: !0,
                     children: (0, l.jsx)(m.TrashIcon, {
                         size: "md",
@@ -352,7 +352,7 @@ function L(e) {
         size: A,
         className: r()({ [T.attachmentItemSmall]: b }),
         children: [
-            (0, l.jsx)(M, { upload: o, size: A, clip: y, guildId: R }),
+            (0, l.jsx)(O, { upload: o, size: A, clip: y, guildId: R }),
             !E &&
                 (0, l.jsx)("div", {
                     className: T.filenameContainer,

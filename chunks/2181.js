@@ -28,8 +28,8 @@ var l = n(477900),
     j = n(652215),
     b = n(109447),
     R = n(375708),
-    O = n(237790),
-    M = n(592551);
+    M = n(237790),
+    O = n(592551);
 function L(e) {
     let t,
         {
@@ -62,20 +62,20 @@ function L(e) {
                 (0, l.jsx)(u.p, { onClick: k, isVisible: !0 }),
                 (0, l.jsx)(c.h, {
                     color: U ? "nitro-pink" : "green",
-                    className: O.kL,
+                    className: M.kL,
                     children: (0, l.jsxs)(d.l, {
                         "aria-label": n,
-                        className: O.r3,
+                        className: M.r3,
                         children: [
                             (0, l.jsxs)("div", {
-                                className: O.Qs,
+                                className: M.Qs,
                                 children: [
-                                    (0, l.jsx)(o.s_, { "data-migration-pending": !0, onClick: k, className: O.b }),
+                                    (0, l.jsx)(o.s_, { "data-migration-pending": !0, onClick: k, className: M.b }),
                                     (0, l.jsxs)("div", {
-                                        className: O.hQ,
+                                        className: M.hQ,
                                         children: [
                                             (0, l.jsx)("div", {
-                                                className: M.headerGraphic,
+                                                className: O.headerGraphic,
                                                 children: (0, l.jsx)(h.v, {
                                                     type: "video",
                                                     src: t,
@@ -85,7 +85,7 @@ function L(e) {
                                             }),
                                             null != F && (0, l.jsx)(a.E, { type: { text: F }, variant: "brand" }),
                                             (0, l.jsx)(m.D, {
-                                                className: r()(O.DD, { [O.GU]: null != F }),
+                                                className: r()(M.DD, { [M.GU]: null != F }),
                                                 variant: "heading-xl/bold",
                                                 color: "text-strong",
                                                 children: n,
@@ -93,7 +93,7 @@ function L(e) {
                                             (0, l.jsx)(f.E, {
                                                 variant: "text-md/medium",
                                                 color: "text-subtle",
-                                                className: O.rf,
+                                                className: M.rf,
                                                 children: s,
                                             }),
                                         ],
@@ -101,15 +101,15 @@ function L(e) {
                                     U &&
                                         H &&
                                         (0, l.jsx)("div", {
-                                            className: O.Zr,
+                                            className: M.Zr,
                                             children: (0, l.jsx)(N.A, { subtitle: R.intl.string(b.default.BkJYQ5) }),
                                         }),
                                 ],
                             }),
                             (0, l.jsx)("div", {
-                                className: O.qr,
+                                className: M.qr,
                                 children: (0, l.jsxs)("div", {
-                                    className: O.UD,
+                                    className: M.UD,
                                     children: [
                                         (0, l.jsx)(p.$, {
                                             variant: "secondary",

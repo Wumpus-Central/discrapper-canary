@@ -1,6 +1,6 @@
 "use strict";
 let i;
-n.d(t, { A: () => O, _: () => A });
+n.d(t, { A: () => R, _: () => A });
 var r = n(17928),
     a = n(228366),
     s = n(290386),
@@ -69,7 +69,7 @@ class C extends r.Ay.Store {
         return !0;
     }
 }
-let O = new C(a.h, {
+let R = new C(a.h, {
     USER_SETTINGS_MODAL_INIT: T,
     USER_SETTINGS_MODAL_OPEN: T,
     USER_SETTINGS_MODAL_SET_SECTION: function (e) {

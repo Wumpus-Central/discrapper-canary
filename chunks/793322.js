@@ -22,8 +22,8 @@ var i = n(192308),
     S = n(718446),
     N = n(95701),
     C = n(734057),
-    O = n(189081),
-    R = n(309010),
+    R = n(189081),
+    O = n(309010),
     L = n(967198),
     y = n(174459),
     D = n(988102),
@@ -55,7 +55,7 @@ function x(e) {
 function k(e, t) {
     let { results: n, queryMode: i, query: r, maxQueryLength: a } = v.A.getProps(),
         s = L.A.getGuildId(),
-        l = R.Ay.getChannelId(s),
+        l = O.Ay.getChannelId(s),
         o = n[(0, _.Vv)(_.vB.DOWN, -1, n)],
         d = D.A.isEmail(r),
         c = D.A.isPhoneNumber(r),
@@ -118,7 +118,7 @@ function V() {
         let t;
         if (v.A.isOpen()) return;
         let n = L.A.getGuildId(),
-            i = R.Ay.getChannelId(n);
+            i = O.Ay.getChannelId(n);
         if (null != i) {
             let e = C.A.getChannel(i);
             t = null != e ? e.type : null;
@@ -146,19 +146,19 @@ function W(e) {
         o = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
     F(), (0, i.closeAllModals)(), k(b.HAw.QUICKSWITCHER_RESULT_SELECTED, e);
     let { type: g, record: N } = e,
-        R = { page: b.liQ.QUICK_SWITCHER };
+        O = { page: b.liQ.QUICK_SWITCHER };
     switch (g) {
         case _.rD.GUILD:
             (0, m.u)(N.id, { navigationReplace: !0 });
             break;
         case _.rD.TEXT_CHANNEL:
             null != (t = C.A.getChannel(N.id)) &&
-                (0, T.iN)(t.id, { state: { analyticsSource: R }, navigationReplace: !0 });
+                (0, T.iN)(t.id, { state: { analyticsSource: O }, navigationReplace: !0 });
             break;
         case _.rD.VOICE_CHANNEL:
             null != (t = C.A.getChannel(N.id)) &&
                 (o ? s.A.updateChatOpen(N.id, !0) : c.default.selectVoiceChannel(N.id),
-                (0, T.iN)(t.id, { state: { analyticsSource: R }, navigationReplace: !0 }));
+                (0, T.iN)(t.id, { state: { analyticsSource: O }, navigationReplace: !0 }));
             break;
         case _.rD.USER:
             a.A.openPrivateChannel({ recipientIds: [N.id], location: "Quickswitcher" }),
@@ -168,7 +168,7 @@ function W(e) {
             (0, T.iN)(N.id, { navigationReplace: !0 }), l.A.channelListScrollTo(b.ME, N.id);
             break;
         case _.rD.APPLICATION:
-            let L = O.A.getActiveLibraryApplication(N.id);
+            let L = R.A.getActiveLibraryApplication(N.id);
             U(N.id, L, { analyticsParams: { source: b.ThZ.QUICK_SWITCHER, location: b.ThZ.QUICK_SWITCHER } });
             break;
         case _.rD.GAME_PROFILE:

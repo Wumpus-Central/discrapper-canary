@@ -313,8 +313,8 @@ class S extends i.Component {
                 limitResponsiveWidth: j,
                 useFullWidth: b,
                 placeholder: R,
-                placeholderVersion: O,
-                dataSafeSrc: M,
+                placeholderVersion: M,
+                dataSafeSrc: O,
                 srcIsAnimated: L,
             } = this.props,
             { readyState: w, hasMouseOver: k, hasFocus: P } = this.state,
@@ -340,8 +340,8 @@ class S extends i.Component {
                 height: V,
                 src: "",
                 placeholder: R,
-                placeholderVersion: O,
-                dataSafeSrc: M,
+                placeholderVersion: M,
+                dataSafeSrc: O,
                 srcIsAnimated: L,
                 children:
                     null != h

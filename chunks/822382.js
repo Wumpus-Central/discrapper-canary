@@ -10,7 +10,7 @@ n.d(t, {
     Pp: () => M,
     Rt: () => W,
     TZ: () => w,
-    XC: () => R,
+    XC: () => O,
     Y7: () => g,
     Zf: () => v,
     Zh: () => H,
@@ -22,7 +22,7 @@ n.d(t, {
     dX: () => b,
     lX: () => G,
     mt: () => S,
-    nm: () => O,
+    nm: () => R,
     sh: () => L,
     zZ: () => P,
 }),
@@ -99,7 +99,7 @@ function C(e) {
             return null;
     }
 }
-function O(e) {
+function R(e) {
     switch (e) {
         case f.BBH.MOST_RELEVANT:
             return { sort_by: "relevance", sort_order: "desc" };
@@ -110,7 +110,7 @@ function O(e) {
             return { sort_by: "timestamp", sort_order: "desc" };
     }
 }
-function R(e) {
+function O(e) {
     return null == e.sort_by || null == e.sort_order
         ? f.BBH.NEWEST
         : "relevance" === e.sort_by

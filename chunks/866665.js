@@ -26,9 +26,9 @@ function E(e) {
             caretConfig: S,
             positionKey: N,
             ariaHidden: C = !1,
-            ...O
+            ...R
         } = e,
-        [R, L] = r.useState(null);
+        [O, L] = r.useState(null);
     r.useLayoutEffect(() => {
         null != g && L(g.current);
     }, [g]);
@@ -43,7 +43,7 @@ function E(e) {
             isVisible: v,
             targetElementRef: b,
             trigger: M,
-        } = (0, u.D)({ children: t, targetElementRef: y, asContainer: h, containerTag: I, ariaHidden: C, ...O }),
+        } = (0, u.D)({ children: t, targetElementRef: y, asContainer: h, containerTag: I, ariaHidden: C, ...R }),
         [P, U] = r.useState(!1),
         w = r.useMemo(
             () =>
@@ -80,7 +80,7 @@ function E(e) {
                       isVisible: v,
                       isRendered: x,
                       targetElementRef: b,
-                      targetElement: R,
+                      targetElement: O,
                       anchorRef: g,
                       id: D,
                       content: w,

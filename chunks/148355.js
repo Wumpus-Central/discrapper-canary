@@ -71,7 +71,7 @@ function R(e) {
         ],
     });
 }
-function O(e) {
+function M(e) {
     let {
             shouldAnimate: t,
             size: s,
@@ -143,7 +143,7 @@ function O(e) {
               }),
           });
 }
-let M = (e) => {
+let O = (e) => {
         let {
                 shouldAnimate: t,
                 sticker: n,
@@ -293,7 +293,7 @@ function w(e) {
         x = (0, E.Th)(t) && !n,
         A = i.useRef(null);
     if (null == c) return null;
-    let y = c.format_type === I.TG.LOTTIE ? O : M;
+    let y = c.format_type === I.TG.LOTTIE ? M : O;
     return (0, l.jsxs)(
         i.Fragment,
         {

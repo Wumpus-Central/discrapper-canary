@@ -28,8 +28,8 @@ var l,
     j = n(66834),
     b = n(624793),
     R = n(639245),
-    O = n(966245),
-    M = n(796774),
+    M = n(966245),
+    O = n(796774),
     L = n(807348),
     w = n(805945),
     k = n(71393),
@@ -91,7 +91,7 @@ function W(e) {
     s.useEffect(() => {
         y ||
             (_(!0),
-            (0, M.nh)(a.soundId, a.guildId)
+            (0, O.nh)(a.soundId, a.guildId)
                 .then((e) => {
                     C(e);
                 })
@@ -153,11 +153,11 @@ function W(e) {
             [g, x, A],
         );
     return V
-        ? (0, i.jsx)(O.Y0, {})
+        ? (0, i.jsx)(M.Y0, {})
         : (0, i.jsxs)("div", {
               className: H.op,
               children: [
-                  (0, i.jsxs)(O.Uq, {
+                  (0, i.jsxs)(M.Uq, {
                       children: [
                           (0, i.jsxs)("div", {
                               className: H.g4,

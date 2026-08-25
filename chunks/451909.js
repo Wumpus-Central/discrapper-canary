@@ -22,8 +22,8 @@ var i = n(435558),
     S = n(576705),
     N = n(994500),
     C = n(351906),
-    O = n(287809),
-    R = n(237116),
+    R = n(287809),
+    O = n(237116),
     L = n(690521),
     y = n(403362),
     D = n(562153),
@@ -204,7 +204,7 @@ let x = u.Ay.RULES,
             match: s().anyScopeRegex(F),
             parse(e, t, n) {
                 let { isNotification: i, guild: a, channelId: s } = n,
-                    l = O.default.getUser(e[1]);
+                    l = R.default.getUser(e[1]);
                 if (null == l) return { content: e[0] };
                 let o = v.Ay.getUserTag(l, { identifiable: i && C.A.enabled ? "never" : "always" });
                 if (i) {
@@ -239,7 +239,7 @@ let x = u.Ay.RULES,
             match: s().anyScopeRegex(B),
             parse(e) {
                 let t = f.A.getChannel(e[1]);
-                return { content: null == t ? e[0] : (0, o.m1)(t, O.default, N.A, !0, !0) };
+                return { content: null == t ? e[0] : (0, o.m1)(t, R.default, N.A, !0, !0) };
             },
         },
         emoji: {
@@ -340,7 +340,7 @@ function q(e, t) {
         s = S.A.can(b.xBc.MENTION_EVERYONE, e);
     if (e?.isPrivate()) {
         n = e.recipients.map((e) => ({ userId: e, nick: null }));
-        let t = O.default.getCurrentUser();
+        let t = R.default.getCurrentUser();
         null != t && n.push({ userId: t.id, nick: null });
     } else
         n =
@@ -353,7 +353,7 @@ function q(e, t) {
     let l = r()(
             n.reduce((e, t) => {
                 let { userId: n } = t,
-                    i = O.default.getUser(n);
+                    i = R.default.getUser(n);
                 return null == i || e.push({ id: n, text: i.tag }), e;
             }, []),
         ),
@@ -372,19 +372,19 @@ function q(e, t) {
         }),
         _ =
             null != i
-                ? r()(R.L3)
+                ? r()(O.L3)
                       .filter((e) => e !== p.I6)
                       .flatMap((e) =>
                           p.Ay.getChannels(i)[e].map((e) =>
                               e.channel.isCategory() && !S.A.can(b.xBc.VIEW_CHANNEL, e.channel)
                                   ? null
-                                  : { id: e.channel.id, text: (0, o.m1)(e.channel, O.default, N.A) },
+                                  : { id: e.channel.id, text: (0, o.m1)(e.channel, R.default, N.A) },
                           ),
                       )
                       .filter(y.Vq)
                       .value()
                 : [],
-        E = h.A.computeAllActiveJoinedThreads(i).map((e) => ({ id: e.id, text: (0, o.m1)(e, O.default, N.A) })),
+        E = h.A.computeAllActiveJoinedThreads(i).map((e) => ({ id: e.id, text: (0, o.m1)(e, R.default, N.A) })),
         A = d.Ay.getDisambiguatedEmojiContext(i),
         I = A.getEscapedCustomEmoticonNames(),
         f = A.getCustomEmoji(),

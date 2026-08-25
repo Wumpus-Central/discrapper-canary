@@ -26,10 +26,10 @@ function I(e) {
         j = (0, h.A)({ id: t.id, label: A.intl.string(A.t["/AXYnE"]) }),
         b = "application_id" in y.extra ? y.extra.application_id : null,
         R = (0, h.A)({ id: b, label: A.intl.string(A.t["FfCL+6"]) }),
-        O = (0, g.zD)(y),
-        M = (0, f.A)({
+        M = (0, g.zD)(y),
+        O = (0, f.A)({
             location: "ContentPopoutContextMenu",
-            applicationId: O && !0 !== S ? y.extra?.application_id : void 0,
+            applicationId: M && !0 !== S ? y.extra?.application_id : void 0,
             source: m.GameProfileSources.ActivityCardContextMenu,
             trackEntryPointImpression: !0,
             sourceUserId: y.author_id,
@@ -54,12 +54,12 @@ function I(e) {
                         (0, l.jsxs)(a.rX, {
                             children: [
                                 T,
-                                null != M &&
+                                null != O &&
                                     (0, l.jsx)(a.Dr, {
                                         id: "game-profile",
                                         label: A.intl.string(A.t.f7aVGn),
                                         action: (e) => {
-                                            M(e), _?.();
+                                            O(e), _?.();
                                         },
                                     }),
                             ],

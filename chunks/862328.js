@@ -56,8 +56,8 @@ function _(e) {
         S = null != I,
         N = null != f,
         C = r.useId(),
-        O = `${C}-upper_badge_masks`,
-        R = `${C}-lower_badge_masks`,
+        R = `${C}-upper_badge_masks`,
+        O = `${C}-lower_badge_masks`,
         L = `${C}-blob_mask`,
         y = `${C}-stroke_mask`,
         D = `${C}-highlight_mask`,
@@ -121,7 +121,7 @@ function _(e) {
                                     (0, i.jsx)("path", { d: U, id: L }),
                                     null != I
                                         ? (0, i.jsx)("rect", {
-                                              id: O,
+                                              id: R,
                                               x: n - P + A,
                                               y: -A,
                                               width: P,
@@ -132,7 +132,7 @@ function _(e) {
                                         : null,
                                     null != f
                                         ? (0, i.jsx)("rect", {
-                                              id: R,
+                                              id: O,
                                               x: n - (v + 2 * A) + A,
                                               y: n - (b + 2 * A) + A,
                                               width: v + 2 * A,
@@ -153,8 +153,8 @@ function _(e) {
                                 children: [
                                     E && (0, i.jsx)("use", { href: `#${D}`, fill: "black" }),
                                     (0, i.jsx)("use", { href: `#${L}`, fill: "white", className: s()({ [c.OV]: E }) }),
-                                    S ? (0, i.jsx)("use", { href: `#${O}`, fill: "black" }) : null,
-                                    N ? (0, i.jsx)("use", { href: `#${R}`, fill: "black" }) : null,
+                                    S ? (0, i.jsx)("use", { href: `#${R}`, fill: "black" }) : null,
+                                    N ? (0, i.jsx)("use", { href: `#${O}`, fill: "black" }) : null,
                                 ],
                             }),
                             S || N
@@ -168,8 +168,8 @@ function _(e) {
                                               y: "-25%",
                                               fill: "white",
                                           }),
-                                          S ? (0, i.jsx)("use", { href: `#${O}`, fill: "black" }) : null,
-                                          N ? (0, i.jsx)("use", { href: `#${R}`, fill: "black" }) : null,
+                                          S ? (0, i.jsx)("use", { href: `#${R}`, fill: "black" }) : null,
+                                          N ? (0, i.jsx)("use", { href: `#${O}`, fill: "black" }) : null,
                                       ],
                                   })
                                 : null,
@@ -184,8 +184,8 @@ function _(e) {
                                           (0, i.jsxs)("g", {
                                               className: c.e7,
                                               children: [
-                                                  null != I ? (0, i.jsx)("use", { href: `#${O}` }) : null,
-                                                  null != f ? (0, i.jsx)("use", { href: `#${R}` }) : null,
+                                                  null != I ? (0, i.jsx)("use", { href: `#${R}` }) : null,
+                                                  null != f ? (0, i.jsx)("use", { href: `#${O}` }) : null,
                                               ],
                                           }),
                                       ],

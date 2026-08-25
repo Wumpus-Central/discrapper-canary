@@ -7,7 +7,7 @@ n.d(t, {
     Xk: () => M,
     ax: () => x,
     ds: () => w,
-    fK: () => R,
+    fK: () => O,
     fS: () => G,
     nL: () => P,
     nh: () => L,
@@ -44,7 +44,7 @@ function C(e) {
     let { width: t, height: n } = e;
     return t > 0 && n > 0;
 }
-function O(e) {
+function R(e) {
     let {
         url: t,
         proxy_url: n,
@@ -69,7 +69,7 @@ function O(e) {
         contentType: c ?? void 0,
     };
 }
-function R(e, t, n) {
+function O(e, t, n) {
     var i, a;
     let o,
         I = {
@@ -101,13 +101,13 @@ function R(e, t, n) {
         switch (I.type) {
             case u.Auw.ARTICLE:
             case u.Auw.IMAGE:
-                I.image = O(n.thumbnail);
+                I.image = R(n.thumbnail);
                 break;
             default:
-                I.thumbnail = O(n.thumbnail);
+                I.thumbnail = R(n.thumbnail);
         }
     if (
-        (null != n.image && C(n.image) && (I.image = O(n.image)),
+        (null != n.image && C(n.image) && (I.image = R(n.image)),
         null != n.video &&
             (null == I.thumbnail &&
                 null != n.video.proxy_url &&
@@ -136,7 +136,7 @@ function R(e, t, n) {
                         i
                     );
                 })(t, n.provider, n.video) &&
-                (I.video = O(n.video))),
+                (I.video = R(n.video))),
         _.p.has(I.type)
             ? (I.fields = (n.fields ?? []).map((e) => {
                   let { name: t, value: n, inline: i } = e;

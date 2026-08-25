@@ -38,8 +38,8 @@ var i = n(562708),
     S = n(198052),
     N = n(367727),
     C = n(744230),
-    O = n(113267),
-    R = n(625180),
+    R = n(113267),
+    O = n(625180),
     L = n(207371),
     y = n(451909),
     D = n(195880),
@@ -107,7 +107,7 @@ async function el(e) {
             let { close: e } = n(574172);
             e(et.MLl.ACTIVITY_POPOUT);
         }
-        if ((!0 !== g && R.A.clearMainFrameSlot(), (0, Q.y)({ applicationId: i })))
+        if ((!0 !== g && O.A.clearMainFrameSlot(), (0, Q.y)({ applicationId: i })))
             return (
                 (0, Z.j$)(i, {
                     isStart: a,
@@ -209,7 +209,7 @@ async function el(e) {
                 channelId: t ?? null,
                 guildId: y ?? null,
                 isStart: a,
-                error: n instanceof C.A || n instanceof E.A || n instanceof O.A ? n : new E.A(n),
+                error: n instanceof C.A || n instanceof E.A || n instanceof R.A ? n : new E.A(n),
                 locationKind: e,
             }),
             !1
@@ -301,9 +301,9 @@ async function eo(e) {
                             }),
                             null != e && null != n && null != a
                                 ? d(new E.A({ status: a, body: { message: n, code: e } }))
-                                : null != s && s in O.A.ReasonCodes
-                                  ? d(new O.A(s))
-                                  : d(new O.A(O.A.ReasonCodes.UNKNOWN));
+                                : null != s && s in R.A.ReasonCodes
+                                  ? d(new R.A(s))
+                                  : d(new R.A(R.A.ReasonCodes.UNKNOWN));
                     },
                 }),
             });
@@ -558,7 +558,7 @@ async function eN(e, t) {
                 channelId: t,
                 guildId: i,
                 locationKind: a,
-                error: s instanceof C.A || s instanceof E.A || s instanceof O.A ? s : new E.A(s),
+                error: s instanceof C.A || s instanceof E.A || s instanceof R.A ? s : new E.A(s),
             }),
             !1
         );

@@ -22,8 +22,8 @@ var i,
     S = n(807393),
     N = n(464578),
     C = n(111162),
-    O = n(174459),
-    R = n(353835),
+    R = n(174459),
+    O = n(353835),
     L = n(927813),
     y = n(723702),
     D = n(38405),
@@ -1164,8 +1164,8 @@ function eC(e) {
     };
 }
 n(667532);
-var eO = n(499979),
-    eR = n(877166),
+var eR = n(499979),
+    eO = n(877166),
     eL = n(365971),
     ey = n(435558),
     eD =
@@ -1532,7 +1532,7 @@ class e0 {
             status: 0,
             preloadPromise: null,
             preloadedData: null,
-            receivedAt: (0, eO.tB)(),
+            receivedAt: (0, eR.tB)(),
         };
         this.queue.push(i), this.maybePreload(i) || this.scheduleFlush(t);
     }
@@ -1626,7 +1626,7 @@ class e0 {
                             break;
                         }
                     }
-                    eR.A.flush();
+                    eO.A.flush();
                 }),
                 i && A.Ay.Emitter.resume(),
                 r.length > 0)
@@ -1655,7 +1655,7 @@ class e0 {
                 (this.resumeAnalytics.lastUpdateTime = o),
                 (this.resumeAnalytics.numEvents += 1);
         }
-        if ((eR.A.flush(r, i), "READY" === r)) {
+        if ((eO.A.flush(r, i), "READY" === r)) {
             let e,
                 n,
                 d = (function (e) {
@@ -1784,13 +1784,13 @@ class e0 {
                     used_cache_at_startup: t.analytics.usedCacheAtStartup ?? !1,
                 }),
                 N.A.attachReadyPayloadProperties(n),
-                O.default.track(eS.HAw.READY_PAYLOAD_RECEIVED, n, { logEventProperties: !0 });
+                R.default.track(eS.HAw.READY_PAYLOAD_RECEIVED, n, { logEventProperties: !0 });
         } else
             "RESUMED" === r
                 ? (this.getDispatchHandler(r)?.dispatch(i, r, s, l),
                   (n = this.resumeAnalytics),
                   (!eg.default.getCurrentUser()?.isStaff() && 0.5 > Math.random()) ||
-                      O.default.track(
+                      R.default.track(
                           eS.HAw.CONNECTION_RESUMED,
                           {
                               connect_time_ms: n.connectTime,
@@ -2229,7 +2229,7 @@ class td extends e4 {
                     }),
                 onError: () => {
                     this.setResumeUrl(null),
-                        R.A.flushDNSCache(),
+                        O.A.flushDNSCache(),
                         this._handleClose(!1, 0, "An error with the websocket occurred");
                 },
                 onClose: (e) => {
@@ -2245,7 +2245,7 @@ class td extends e4 {
         e9.verbose(`[HELLO] via ${eN(e)}, heartbeat interval: ${t}, took ${i} ms`),
             (function (e) {
                 let { socket: t, altGateway: n, gatewayUrl: i, now: r } = e;
-                O.default.track(
+                R.default.track(
                     eS.HAw.GATEWAY_CONNECTED,
                     {
                         num_failed_connect_attempts: t.failedConnectAttempts,
@@ -2376,7 +2376,7 @@ class td extends e4 {
                 h.Bo.get({ url: eS.Rsh.ME, headers: { authorization: this.token }, rejectWithError: !1 }).then(
                     (e) => {
                         let { status: t } = e;
-                        O.default.track(eS.HAw.IOS_INVALID_TOKEN_WORKAROUND_TRIGGERED, { api_status_code: t });
+                        R.default.track(eS.HAw.IOS_INVALID_TOKEN_WORKAROUND_TRIGGERED, { api_status_code: t });
                     },
                     (e) => {
                         let { status: t } = e;
@@ -2384,7 +2384,7 @@ class td extends e4 {
                             ((this.connectionState = w.A.CLOSED),
                             e9.warn("[WS CLOSED] because of manual authentication failure, marking as closed."),
                             this._reset(n, 4004, "invalid token manually detected")),
-                            O.default.track(eS.HAw.IOS_INVALID_TOKEN_WORKAROUND_TRIGGERED, { api_status_code: t });
+                            R.default.track(eS.HAw.IOS_INVALID_TOKEN_WORKAROUND_TRIGGERED, { api_status_code: t });
                     },
                 ));
     }
@@ -2488,7 +2488,7 @@ class td extends e4 {
             (this.identifyCompressedByteSize = d.deflate(u).length),
             (this.identifyCount += 1),
             this.send(e5.IDENTIFY, c, !1),
-            O.default.track(eS.HAw.SESSION_START_CLIENT, {});
+            R.default.track(eS.HAw.SESSION_START_CLIENT, {});
     }
     _doFastConnectIdentify() {
         (this.seq = 0), (this.sessionId = null);
@@ -2560,7 +2560,7 @@ class td extends e4 {
         let r = (0, E.b)();
         S.A.increment({ name: _.K.SOCKET_CRASHED, tags: [`action:${i ?? t}`, `modded_client:${r}`] }, !0),
             !1 !== e.sentry && D.A.captureException(n, { tags: { socketCrashedAction: t } }),
-            O.default.track(eS.HAw.GATEWAY_SOCKET_RESET, {
+            R.default.track(eS.HAw.GATEWAY_SOCKET_RESET, {
                 error_message: n.message,
                 error_stack: n.stack,
                 has_client_mods: r,

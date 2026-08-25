@@ -97,8 +97,8 @@ let S = (e) => {
         S = (0, x.n)(),
         [_, T] = i.useState(String(Date.now())),
         [j, b] = i.useState(!1),
-        [R, O] = i.useState(!1),
-        M = i.useRef(null);
+        [R, M] = i.useState(!1),
+        O = i.useRef(null);
     function L(e) {
         return (0, l.jsx)(d.A, {
             emojiName: t.name,
@@ -128,13 +128,13 @@ let S = (e) => {
             },
             children: (0, l.jsx)(u.D, {
                 ...e,
-                innerRef: M,
+                innerRef: O,
                 onMouseEnter: () => {
                     e?.onMouseEnter?.();
                 },
                 onClick: s
                     ? (t) => {
-                          b(!1), O(!0), e?.onClick?.(t);
+                          b(!1), M(!0), e?.onClick?.(t);
                       }
                     : void 0,
                 onMouseLeave: () => {
@@ -153,7 +153,7 @@ let S = (e) => {
               scrollBehavior: "close",
               align: "center",
               onRequestClose: () => {
-                  f.default.track(A.HAw.CLOSE_POPOUT, { nonce: w }), b(!1), O(!1);
+                  f.default.track(A.HAw.CLOSE_POPOUT, { nonce: w }), b(!1), M(!1);
               },
               autoInvert: !0,
               nudgeAlignIntoViewport: !0,
@@ -162,7 +162,7 @@ let S = (e) => {
                   return (0, l.jsx)(p.iP, { ...e, node: t, refreshPositionKey: () => T(String(Date.now())), nonce: w });
               },
               positionKey: _,
-              targetElementRef: M,
+              targetElementRef: O,
               children: k,
           })
         : k();

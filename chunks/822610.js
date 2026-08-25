@@ -39,10 +39,10 @@ function b(e) {
             validateFilenames: b,
             showInvalidFileTypeAlert: R,
         } = (0, v.M1)(f),
-        O = i.useCallback(() => {
+        M = i.useCallback(() => {
             u(!0);
         }, []),
-        M = i.useCallback(() => {
+        O = i.useCallback(() => {
             u(!1);
         }, []),
         L = i.useCallback(
@@ -65,16 +65,16 @@ function b(e) {
         let e = m.current;
         return (
             null == c &&
-                (e?.addEventListener("dragover", O, !1),
-                e?.addEventListener("dragleave", M, !1),
+                (e?.addEventListener("dragover", M, !1),
+                e?.addEventListener("dragleave", O, !1),
                 e?.addEventListener("drop", w, !1)),
             () => {
-                e?.removeEventListener("dragover", O, !1),
-                    e?.removeEventListener("dragleave", M, !1),
+                e?.removeEventListener("dragover", M, !1),
+                    e?.removeEventListener("dragleave", O, !1),
                     e?.removeEventListener("drop", w, !1);
             }
         );
-    }, [c, O, M, w]),
+    }, [c, M, O, w]),
     null != c)
         ? (0, l.jsx)(N.A, {
               channelId: t,
@@ -138,8 +138,8 @@ function b(e) {
           });
 }
 var R = n(652215),
-    O = n(714731),
-    M = n(969490);
+    M = n(714731),
+    O = n(969490);
 let L = [];
 function w(e) {
     let { channelId: t, type: n, ignoreFile: s, smallAttachments: C = !1 } = e,
@@ -200,7 +200,7 @@ function w(e) {
                       return (0, l.jsx)("ul", {
                           ref: i,
                           ...s,
-                          className: r()(O.I, M.KK),
+                          className: r()(M.I, O.KK),
                           children: v
                               ? T.map((e) => (0, l.jsx)(b, { channelId: t, keyboardModeEnabled: E, option: e }, e.name))
                               : U.map((e) =>

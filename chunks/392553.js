@@ -31,8 +31,8 @@ function j(e) {
 }
 var b = n(826745),
     R = n(442433),
-    O = n(721768),
-    M = n(723702),
+    M = n(721768),
+    O = n(723702),
     L = n(677134),
     w = n(652215),
     k = n(650583);
@@ -46,7 +46,7 @@ class D extends i.PureComponent {
             this._ref?.setSelection(e.length, e.length);
         }),
             null != p.A.getActiveCommand(this.props.channel.id) &&
-                O.Gf({ channelId: this.props.channel.id, command: null, section: null });
+                M.Gf({ channelId: this.props.channel.id, command: null, section: null });
     }
     componentDidUpdate(e, t) {
         this.state.nextSelection !== t.nextSelection &&
@@ -233,7 +233,7 @@ class D extends i.PureComponent {
         this.props.maybeShowAutocomplete();
     };
     handleContextMenu = (e) => {
-        M.isPlatformEmbedded &&
+        O.isPlatformEmbedded &&
             (0, R.L3)(
                 e,
                 async () => {
@@ -418,8 +418,8 @@ let ex = i.forwardRef(function (e, t) {
             onResize: j,
             onFocus: b,
             onBlur: R,
-            onKeyDown: O,
-            onKeyUp: M,
+            onKeyDown: M,
+            onKeyUp: O,
             onTab: L,
             onEnter: P,
             onSpace: D,
@@ -441,9 +441,9 @@ let ex = i.forwardRef(function (e, t) {
             "aria-invalid": ej,
             "aria-describedby": eb,
             "aria-labelledby": eR,
-            "aria-autocomplete": eO,
+            "aria-autocomplete": eM,
         } = e,
-        eM = i.useRef(null),
+        eO = i.useRef(null),
         eL = i.useRef(null),
         ew = i.useRef(!0),
         ek = i.useRef(!0),
@@ -697,15 +697,15 @@ let ex = i.forwardRef(function (e, t) {
             let e = s.current;
             if (null == e) return;
             let t = e.offsetHeight;
-            n.current !== t && (null != eM.current && (eM.current.style.height = `${t}px`), (n.current = t), j?.(t));
-        }, [eM, j])),
+            n.current !== t && (null != eO.current && (eO.current.style.height = `${t}px`), (n.current = t), j?.(t));
+        }, [eO, j])),
         (0, ei.g)(s, o, [o, eV, j], er),
         i.useLayoutEffect(() => {
             let e = $.rL.findDocumentOrShadowRoot(eV).defaultView;
             if (e?.ResizeObserver == null) return;
             let t = ea(eV);
             null != t && ((n.current = t.offsetHeight), j?.(n.current));
-        }, [eM, eV, j]);
+        }, [eO, eV, j]);
     let { handleKeyDown: eB, handleKeyUp: eW } = (function (e) {
             let {
                 editor: t,
@@ -788,8 +788,8 @@ let ex = i.forwardRef(function (e, t) {
             editor: eV,
             channel: f,
             disableEnterToSubmit: eI,
-            onKeyDown: O,
-            onKeyUp: M,
+            onKeyDown: M,
+            onKeyUp: O,
             onTab: L,
             onEnter: P,
             onSpace: D,
@@ -930,7 +930,7 @@ let ex = i.forwardRef(function (e, t) {
         children: [
             (0, l.jsx)(A.EG, { event: w.jej.GLOBAL_CLIPBOARD_PASTE, handler: ez }),
             (0, l.jsx)("div", {
-                ref: eM,
+                ref: eO,
                 className: r()(g, eg.pC),
                 children: (0, l.jsx)(H.A, {
                     id: C,
@@ -961,7 +961,7 @@ let ex = i.forwardRef(function (e, t) {
                     "aria-labelledby": eR,
                     "aria-describedby": eb,
                     "aria-invalid": ej,
-                    "aria-autocomplete": eO,
+                    "aria-autocomplete": eM,
                     "aria-required": S,
                 }),
             }),
@@ -1154,7 +1154,7 @@ class eE extends i.Component {
                 showValueWhenDisabled: j,
             } = this.props,
             { submitting: b, popup: R } = this.state,
-            O = {
+            M = {
                 channel: d,
                 className: r()(x, eA.Tg, { [eA.w5]: m, [eA.Rr]: n || b }),
                 id: C,
@@ -1197,22 +1197,22 @@ class eE extends i.Component {
                 "aria-labelledby": _,
                 "aria-autocomplete": "list",
             },
-            M = m
+            O = m
                 ? (0, l.jsx)(ex, {
                       ref: this.ref,
-                      ...O,
+                      ...M,
                       type: h,
                       value: n && !j ? (0, y.x7)("") : t,
                       canUseCommands: h.commands?.enabled,
                       canOnlyUseTextCommands: g,
                       onSubmitFailure: c,
                   })
-                : (0, l.jsx)(D, { ref: this.ref, ...O, value: n && !j ? "" : e });
+                : (0, l.jsx)(D, { ref: this.ref, ...M, value: n && !j ? "" : e });
         return (0, l.jsxs)(l.Fragment, {
             children: [
                 (0, l.jsx)(A.EG, { event: w.jej.INSERT_TEXT, handler: this.handleInsertText }),
                 (0, l.jsx)(A.EG, { event: w.jej.CLEAR_TEXT, handler: this.handleClearText }),
-                M,
+                O,
             ],
         });
     }

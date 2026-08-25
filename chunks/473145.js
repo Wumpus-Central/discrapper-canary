@@ -1,13 +1,13 @@
 "use strict";
 n.d(t, {
-    Cp: () => O,
+    Cp: () => R,
     D$: () => P,
     I5: () => H,
     Nc: () => U,
     Os: () => B,
     P7: () => b,
     Qu: () => y,
-    Ry: () => R,
+    Ry: () => O,
     TP: () => m,
     Ys: () => D,
     aG: () => C,
@@ -68,10 +68,10 @@ function C(e, t) {
         ? s.K.MAX_STICKER_SLOTS
         : I.d8[e];
 }
-function O(e) {
+function R(e) {
     return I.nk[e];
 }
-function R(e) {
+function O(e) {
     if (e === A.TVA.NONE) return I.y7[e];
     let t = g[g.indexOf(e) - 1];
     return I.y7[e] - I.y7[t];
@@ -172,7 +172,7 @@ let G = [
     { tier: A.TVA.TIER_1, amount: A.M2T[A.TVA.TIER_1], nextTier: A.TVA.TIER_2 },
 ];
 function x(e, t) {
-    let n = O(t),
+    let n = R(t),
         i = g.indexOf(t);
     if (-1 === i) return 0;
     let r = g[i - 1],

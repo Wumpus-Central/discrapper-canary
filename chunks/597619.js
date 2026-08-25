@@ -31,8 +31,8 @@ function p(e) {
             fontScaleClass: S,
             mouseMode: N,
             keyboardModeEnabled: C,
-            saturation: O,
-            desaturateUserColors: R,
+            saturation: R,
+            desaturateUserColors: O,
             useForcedColors: L,
             systemForcedColors: y,
             useReducedMotion: D,
@@ -84,7 +84,7 @@ function p(e) {
             );
         }, [j]);
     let W = (0, o.bG)([A.Ay], () => A.Ay.hdrDynamicRange),
-        Y = `font-size: ${g}%; --saturation-factor: ${O}; dynamic-range-limit: ${W}; ${x}`,
+        Y = `font-size: ${g}%; --saturation-factor: ${R}; dynamic-range-limit: ${W}; ${x}`,
         K = s()(
             ((t = ""),
             (0, _.isWindows)()
@@ -99,7 +99,7 @@ function p(e) {
             `density-${T}`,
             S,
             {
-                "low-saturation": O <= 0.4,
+                "low-saturation": R <= 0.4,
                 "keyboard-mode": C,
                 "decorate-links": v,
                 "no-webkit-scrollbar": !w,
@@ -109,7 +109,7 @@ function p(e) {
                 "full-motion": !D,
                 "is-mobile": l.Fr,
                 "app-focused": m,
-                "desaturate-user-colors": R,
+                "desaturate-user-colors": O,
                 "disable-forced-colors": !L && "active" === y,
                 "enable-forced-colors": L,
                 "visual-refresh": !0,

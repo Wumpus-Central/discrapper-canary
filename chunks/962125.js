@@ -30,8 +30,8 @@ let u = r.memo(
                 sectionFooterHeight: S,
                 listHeaderHeight: N,
                 stickyHeaders: C = !1,
-                className: O,
-                hideScrollbar: R = !1,
+                className: R,
+                hideScrollbar: O = !1,
                 fade: L = !1,
                 initialScrollTop: y = 0,
                 role: D = "list",
@@ -224,10 +224,10 @@ let u = r.memo(
             }, [k, V, F, B, u, _, E, h, A, v, K, C, I, x, M]),
             X = r.useMemo(() => ({ top: q, right: u?.[1] ?? 0, bottom: u?.[2] ?? 0, left: u?.[3] ?? 0 }), [q, u]),
             Q = r.useMemo(() => ({ height: W }), [W]),
-            J = R ? l.zC : l.Ch;
+            J = O ? l.zC : l.Ch;
         return (0, i.jsxs)(J, {
             fade: L,
-            className: s()(d.XG, O),
+            className: s()(d.XG, R),
             ref: U,
             onScroll: z,
             children: [

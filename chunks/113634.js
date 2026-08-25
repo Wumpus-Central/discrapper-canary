@@ -51,8 +51,8 @@ var h = n(582128),
     S = n(904986),
     N = n(459838),
     C = n(70909),
-    O = n(782425),
-    R = n(143236),
+    R = n(782425),
+    O = n(143236),
     L = n(737005),
     y = n.n(L),
     D = n(731854);
@@ -167,7 +167,7 @@ class B {
 var H = n(818348);
 let j = new g.Vy("Output"),
     W = new V();
-class Y extends R.EventEmitter {
+class Y extends O.EventEmitter {
     stream;
     context;
     sourceId;
@@ -370,7 +370,7 @@ var K = n(434933),
     Z = n.n(z),
     q = n(201327);
 let X = new V();
-class Q extends R.EventEmitter {
+class Q extends O.EventEmitter {
     stream = new MediaStream();
     sourceId = D.qe;
     streamId = null;
@@ -1298,7 +1298,7 @@ function eC(e) {
         media: e,
     });
 }
-function eO(e) {
+function eR(e) {
     let {
         mid: t,
         type: n,
@@ -1401,7 +1401,7 @@ function eO(e) {
     }
     return h;
 }
-function eR(e, t, n, i, r) {
+function eO(e, t, n, i, r) {
     let a = e.find((e) => e.codec === i);
     if (null == a) return null;
     let s = t.find((e) => RegExp(`^apt=${a.payload}`).test(e.config)),
@@ -1420,7 +1420,7 @@ function eL(e, t) {
             switch ((e.outboundStreams.push({ type: r, direction: o, mid: d }), r)) {
                 case "audio":
                     [D.UK.OPUS].forEach((t, n) => {
-                        let i = eR(a, l, r, t, n);
+                        let i = eO(a, l, r, t, n);
                         null != i && e.codecs.push(i);
                     }),
                         "sendrecv" === o &&
@@ -1430,7 +1430,7 @@ function eL(e, t) {
                 case "video":
                     (t ? [D.UK.H265, D.UK.H264, D.UK.VP8, D.UK.VP9] : [D.UK.H264, D.UK.VP8, D.UK.VP9]).forEach(
                         (t, n) => {
-                            let i = eR(a, l, r, t, n);
+                            let i = eO(a, l, r, t, n);
                             null != i && e.codecs.push(i);
                         },
                     ),
@@ -1471,7 +1471,7 @@ function ev(e) {
         return { value: parseInt(t[0].split("/")[0].substr(9), 10), uri: t[1] };
     });
 }
-class eb extends R.EventEmitter {
+class eb extends O.EventEmitter {
     audioCodec = null;
     audioPayloadType = null;
     videoCodec = null;
@@ -1594,7 +1594,7 @@ class eb extends R.EventEmitter {
                     let [i, u, A, h, I] = t;
                     ("video" === A && (0 === o || 0 === c)) ||
                         E.push(
-                            eO({
+                            eR({
                                 mid: I,
                                 type: A,
                                 setup: e,
@@ -1621,7 +1621,7 @@ class eb extends R.EventEmitter {
                         });
                 if (
                     (E.push(
-                        eO({
+                        eR({
                             mid: "audio",
                             type: "audio",
                             setup: e,
@@ -1646,7 +1646,7 @@ class eb extends R.EventEmitter {
                             return eN(n, t, "v");
                         });
                     E.push(
-                        eO({
+                        eR({
                             mid: "video",
                             type: "video",
                             setup: e,
@@ -1681,7 +1681,7 @@ class eb extends R.EventEmitter {
     }
 }
 let eM = new g.Vy("PeerConnection");
-class eP extends R.EventEmitter {
+class eP extends O.EventEmitter {
     bitrate;
     pc;
     stream = null;
@@ -2366,7 +2366,7 @@ class eX extends eE {
                             ? (t = eN(I, u, "audio" === f ? "a" : "v"))
                             : ((t = []), "sendonly" === p ? (p = "inactive") : "sendrecv" === p && (p = "recvonly")),
                             A.push(
-                                eO({
+                                eR({
                                     mid: T,
                                     type: f,
                                     setup: h,
@@ -2650,7 +2650,7 @@ class eJ extends eE {
 }
 let e0 = n.p + "worklet.8d84a64a97f8451a.js",
     e1 = { voiceActivityDetection: !0, offerToReceiveAudio: !0, offerToReceiveVideo: !1, iceRestart: !1 };
-class e2 extends R.EventEmitter {
+class e2 extends O.EventEmitter {
     userId;
     sinkId;
     input;
@@ -2745,7 +2745,7 @@ class e2 extends R.EventEmitter {
         });
     };
 }
-class e3 extends R.EventEmitter {
+class e3 extends O.EventEmitter {
     id;
     stream;
     pool;
@@ -2816,18 +2816,18 @@ function e8(e) {
         let e = l.current;
         if (null != e)
             return (
-                (0, O.NM)(t),
+                (0, R.NM)(t),
                 (e.srcObject = (0, q.yL)(t)),
                 () => {
-                    (0, O.gm)(t), (e.srcObject = null), e.load();
+                    (0, R.gm)(t), (e.srcObject = null), e.load();
                 }
             );
     }, [t]),
         h.useEffect(
             () => (
-                n ? (l.current?.pause(), (0, O.gm)(t)) : l.current?.play().catch(() => {}),
+                n ? (l.current?.pause(), (0, R.gm)(t)) : l.current?.play().catch(() => {}),
                 () => {
-                    n && (0, O.NM)(t);
+                    n && (0, R.NM)(t);
                 }
             ),
             [n],
@@ -2919,7 +2919,7 @@ class tt extends p.A {
         super(),
             this.on("newListener", this.handleNewListener),
             this.on("removeListener", this.handleRemoveListener),
-            (0, O.EV)(this.handleActiveSinksChange),
+            (0, R.EV)(this.handleActiveSinksChange),
             (0, C.A)(this);
     }
     destroy() {

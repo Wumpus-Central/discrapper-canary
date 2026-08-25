@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { AC: () => T, Hb: () => N, Ol: () => y, e4: () => C, hp: () => S, jA: () => O, xl: () => R, zk: () => m });
+n.d(t, { AC: () => T, Hb: () => N, Ol: () => y, e4: () => C, hp: () => S, jA: () => R, xl: () => O, zk: () => m });
 var i = n(435558),
     r = n(665260),
     a = n(873298),
@@ -102,7 +102,7 @@ function C(e, t, n) {
             location: n,
         });
 }
-function O(e, t, n, i) {
+function R(e, t, n, i) {
     if (null == e || c.A.isFullServerPreview(e)) return;
     let a = A.Ay.getChannelIdFlags(e, t);
     !(0, r.Lt)(a, p.vv.OPT_IN_ENABLED) && n && (a = (0, r.lA)(a, p.vv.OPT_IN_ENABLED, !0)),
@@ -113,7 +113,7 @@ function O(e, t, n, i) {
             location: i,
         });
 }
-function R(e, t) {
+function O(e, t) {
     let n = A.Ay.getChannelIdFlags(null, e);
     l.A.updateChannelOverrideSettings(null, e, { flags: (0, r.lA)(n, p.vv.FAVORITED, t) }, I.G_.favorited(t));
 }

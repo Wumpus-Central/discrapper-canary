@@ -22,8 +22,8 @@ var i = n(477900),
     S = n(485947),
     N = n(915089),
     C = n(840251),
-    O = n(688151);
-let R = new C.E([], O.$G.DM_GDM_LIST_RENDER, { location: "dm/gdm list rendered" });
+    R = n(688151);
+let O = new C.E([], R.$G.DM_GDM_LIST_RENDER, { location: "dm/gdm list rendered" });
 var L = n(611924),
     y = n(277370),
     D = n(380335),
@@ -312,7 +312,7 @@ let X = function (e) {
             let e = Y.A.getPrivateChannelIds();
             return (0, v.eh)(e, [D.A, b.A]);
         });
-    (0, L.P)(R);
+    (0, L.P)(O);
     let { analyticsLocations: p } = (0, T.Ay)(f.A.CONTACTS_LIST),
         m = (0, H.NC)(),
         { keyboardModeEnabled: g, version: S } = (0, d.cf)([I.Ay, j.A], () => ({
@@ -320,10 +320,10 @@ let X = function (e) {
             version: null != n ? `${n}:${j.A.getPrivateChannelsVersion()}` : j.A.getPrivateChannelsVersion(),
         })),
         C = r.useRef(null),
-        O = c ?? C,
+        R = c ?? C,
         y = r.useCallback(
             (e) => {
-                let t = O.current,
+                let t = R.current,
                     n = document.querySelector(e);
                 null != t &&
                     null != n &&
@@ -334,21 +334,21 @@ let X = function (e) {
                         },
                     });
             },
-            [O],
+            [R],
         ),
         M = r.useCallback(
             () =>
                 new Promise((e) => {
-                    let t = O.current;
+                    let t = R.current;
                     if (null == t) return e();
                     t.scrollToTop({ callback: () => requestAnimationFrame(() => e()) });
                 }),
-            [O],
+            [R],
         ),
         P = r.useCallback(
             () =>
                 new Promise((e) => {
-                    let t = O.current;
+                    let t = R.current;
                     if (null == t) return e();
                     t.scrollToBottom({
                         callback() {
@@ -356,7 +356,7 @@ let X = function (e) {
                         },
                     });
                 }),
-            [O],
+            [R],
         ),
         U = (0, N.GV)(),
         w = (0, o.Ay)({
@@ -376,7 +376,7 @@ let X = function (e) {
                 density: t,
                 channels: E,
                 privateChannelIds: h,
-                listRef: O,
+                listRef: R,
                 theme: m ?? a,
                 version: S,
             }),

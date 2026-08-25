@@ -70,7 +70,7 @@ function T(e) {
         b = (0, p.gn)(t, a, N?.colorStrings ?? null);
     if (null == o) return null;
     let R = N?.colorString,
-        O = C.Ay.getName(t, n, o);
+        M = C.Ay.getName(t, n, o);
     return (0, l.jsxs)("div", {
         className: y.dw,
         children: [
@@ -79,7 +79,7 @@ function T(e) {
                 colorString: R ?? null,
                 roleName: j,
                 colorStrings: b,
-                name: O,
+                name: M,
                 className: y.nT,
                 displayNameStylesFont: T,
                 "aria-hidden": !0,

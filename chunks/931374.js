@@ -52,8 +52,8 @@ let N = (0, n(945810).mj)({
     variations: { 1: { enabled: !0 } },
 });
 var C = n(96358),
-    O = n(40449),
-    R = n(652215),
+    R = n(40449),
+    O = n(652215),
     L = n(204925),
     y = n(835002),
     D = n(800121),
@@ -128,7 +128,7 @@ function K(e, t) {
         null == n.embeds ||
         0 === n.embeds.length ||
         null == n.embeds[0].fields ||
-        n.embeds[0].type !== R.Auw.AGE_VERIFICATION_SYSTEM_NOTIFICATION
+        n.embeds[0].type !== O.Auw.AGE_VERIFICATION_SYSTEM_NOTIFICATION
     )
         return !1;
     let i = n.embeds[0].fields.find((e) => "ctas" === e.rawName);
@@ -141,7 +141,7 @@ function $(e, t) {
         null == n.embeds ||
         0 === n.embeds.length ||
         null == n.embeds[0].fields ||
-        n.embeds[0].type !== R.Auw.AGE_VERIFICATION_SYSTEM_NOTIFICATION
+        n.embeds[0].type !== O.Auw.AGE_VERIFICATION_SYSTEM_NOTIFICATION
     )
         return !1;
     let i = n.embeds[0].fields.find((e) => "ctas" === e.rawName);
@@ -158,7 +158,7 @@ function z(e, t) {
         null == n.embeds ||
         0 === n.embeds.length ||
         null == n.embeds[0].fields ||
-        n.embeds[0].type !== R.Auw.AGE_VERIFICATION_SYSTEM_NOTIFICATION
+        n.embeds[0].type !== O.Auw.AGE_VERIFICATION_SYSTEM_NOTIFICATION
     )
         return !1;
     let i = n.embeds[0].fields.find((e) => "ctas" === e.rawName);
@@ -207,7 +207,7 @@ function X(e) {
                     !1 === s && (h.A.showFailedToast(y.OB.TIGGER_PAWTECT_ERROR), _());
                 } catch (e) {
                     _(),
-                        null != r && e?.body?.code === R.t02.AGE_VERIFICATION_METHOD_UNAVAILABLE
+                        null != r && e?.body?.code === O.t02.AGE_VERIFICATION_METHOD_UNAVAILABLE
                             ? (h.A.showFailedToast(y.OB.AGE_VERIFICATION_METHOD_UNAVAILABLE), r())
                             : h.A.showFailedToast(y.OB.TIGGER_PAWTECT_ERROR);
                 } finally {
@@ -254,7 +254,7 @@ function ee(e) {
     }, [e, s, o]);
 }
 function et(e) {
-    return null != e && O.zn.has(e);
+    return null != e && R.zn.has(e);
 }
 function en(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];

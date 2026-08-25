@@ -26,8 +26,8 @@ function S(e) {
             onClose: S,
             onComplete: N,
             onSubscriptionConfirmation: C,
-            analyticsLocations: O,
-            analyticsObject: R,
+            analyticsLocations: R,
+            analyticsObject: O,
             analyticsLocation: L,
             analyticsSourceLocation: y,
             confirmationFooter: D,
@@ -526,7 +526,7 @@ function S(e) {
             return n[c.C.PREMIUM_CHECKOUT].get().openCheckoutModal({
                 checkoutConfiguration: { applicationId: k, skuId: z ?? null, initialPaymentSourceId: Y },
                 forwardedPaymentModalProps: {
-                    analyticsObject: R,
+                    analyticsObject: O,
                     initialPlanId: t,
                     startingStepOverride: K,
                     analyticsLocation: L,
@@ -560,7 +560,7 @@ function S(e) {
                                     null != e &&
                                         (0, E.A)({
                                             product: e,
-                                            analyticsLocations: O ?? [],
+                                            analyticsLocations: R ?? [],
                                             purchaseType: m.gs.PROMOTIONAL,
                                             overrideGradientColor: "nitro-pink",
                                         });
@@ -568,7 +568,7 @@ function S(e) {
                             }
                         })(e, ee),
                 },
-                unifiedCheckoutProviderProps: { analyticsSourceLocation: y, analyticsLocations: O },
+                unifiedCheckoutProviderProps: { analyticsSourceLocation: y, analyticsLocations: R },
                 checkoutHandlers: { onClose: S, onComplete: N },
                 giftContextProps: { isGift: v, giftMessage: b, giftStyle: M, giftingOrigin: P, giftRecipient: V },
                 tenantParams: {

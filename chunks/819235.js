@@ -22,8 +22,8 @@ let p = 2 * u.A.Millis.MINUTE,
     S = new Set(),
     N = new Map(),
     C = null,
-    O = (0, i.debounce)(E.Q1, 3e3, { trailing: !0 });
-function R() {
+    R = (0, i.debounce)(E.Q1, 3e3, { trailing: !0 });
+function O() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
     return Math.random() * (e + 1) * p;
 }
@@ -56,7 +56,7 @@ function v() {
     let t = h.A.getFeed(T);
     if (t?.refresh_stale_inbox_after_ms != null && null == C) return;
     let n = t?.expired_at == null ? 0 : new Date(t.expired_at).getTime() - Date.now(),
-        i = Math.max(0, null == C ? 0 : new Date(C).getTime() - Date.now(), n) + (e > 0 ? R() : 0);
+        i = Math.max(0, null == C ? 0 : new Date(C).getTime() - Date.now(), n) + (e > 0 ? O() : 0);
     L(T, { loading: !1, nextFetchDate: new Date(Date.now() + i) }),
         g.set(
             T,
@@ -79,7 +79,7 @@ async function b(e) {
             let e = N.get(t) ?? 0;
             if (e < 4) {
                 let r = u.A.Millis.MINUTE * Math.pow(2, e),
-                    a = R(e);
+                    a = O(e);
                 g.set(
                     t,
                     setTimeout(() => b({ feedId: t, feature: n, force: i }), r + a),
@@ -110,7 +110,7 @@ function G(e) {
 }
 function x(e) {
     let { connectionId: t, track: n } = e;
-    null == t || (o.A.getAccount(t, f.fg2.SPOTIFY)?.showActivity && O(t, n));
+    null == t || (o.A.getAccount(t, f.fg2.SPOTIFY)?.showActivity && R(t, n));
 }
 function k() {
     b({ feedId: I.X1.GLOBAL_FEED, feature: r.M.GAME_PROFILE });

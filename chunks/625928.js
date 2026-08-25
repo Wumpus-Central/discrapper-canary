@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => O });
+n.d(t, { A: () => M });
 var l = n(477900),
     i = n(582128),
     s = n(503698),
@@ -70,7 +70,7 @@ function j(e) {
 }
 var b = n(263582),
     R = n(412028);
-function O(e) {
+function M(e) {
     let { type: t, textValue: n, maxCharacterCount: i, showRemainingCharsAfterCount: s, className: A } = e,
         C = (0, o.bG)([g.default], () => x.Ay.canUseIncreasedMessageLength(g.default.getCurrentUser())),
         E = (0, p.A)(),
@@ -79,19 +79,19 @@ function O(e) {
         v = n.length,
         _ = null != t.upsellLongMessages && (v ?? 0) > S.uvi && C,
         T = null != t.upsellLongMessages && !C,
-        O = I - v,
-        M = O > y;
+        M = I - v,
+        O = M > y;
     (0, a.$)({ currentLength: v, maxLength: I, message: N.intl.string(N.t.c2Jqed) });
     let L =
-            0 === O
+            0 === M
                 ? N.intl.string(N.t.tU6YQ7)
-                : O > 0
-                  ? N.intl.formatToPlainString(N.t.qH8uFW, { count: O })
+                : M > 0
+                  ? N.intl.formatToPlainString(N.t.qH8uFW, { count: M })
                   : N.intl.string(N.t.YSRIqa),
         { analyticsLocations: w } = (0, f.Ay)(m.A.CHARACTER_COUNT),
         { isVisible: k } = (0, b.A)({ type: t, textValue: n, maxCharacterCount: i, showRemainingCharsAfterCount: s });
     if (!k) return null;
-    let P = O >= 0;
+    let P = M >= 0;
     return (0, l.jsx)(f.f5, {
         value: w,
         children: (0, l.jsxs)("div", {
@@ -107,7 +107,7 @@ function O(e) {
                                   children: (0, l.jsx)(c.t, { size: "md", color: "currentColor", className: R.y }),
                               })
                             : null,
-                        M
+                        O
                             ? null
                             : (0, l.jsx)(u.m, {
                                   text: L,
@@ -117,14 +117,14 @@ function O(e) {
                                       tabularNumbers: !0,
                                       "aria-hidden": !0,
                                       color: P ? "text-default" : "text-feedback-critical",
-                                      children: O,
+                                      children: M,
                                   }),
                               }),
                     ],
                 }),
-                (0, l.jsx)(h.A, { "aria-live": "polite", children: N.intl.format(N.t.qH8uFW, { count: O }) }),
-                T && !M
-                    ? (0, l.jsx)(j, { className: R.UX, iconOnly: t.upsellLongMessages?.iconOnly || !1, remaining: O })
+                (0, l.jsx)(h.A, { "aria-live": "polite", children: N.intl.format(N.t.qH8uFW, { count: M }) }),
+                T && !O
+                    ? (0, l.jsx)(j, { className: R.UX, iconOnly: t.upsellLongMessages?.iconOnly || !1, remaining: M })
                     : null,
             ],
         }),

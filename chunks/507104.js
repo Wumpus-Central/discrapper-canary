@@ -38,8 +38,8 @@ function N() {
     };
 }
 let C = N(),
-    O = [],
-    R = new Set(),
+    R = [],
+    O = new Set(),
     L = new Set(),
     y = {},
     D = null,
@@ -67,8 +67,8 @@ function P() {
                     null != e && e > 0.7 && i.add(n), null != e && e > 0.5 && r.add(n);
                 }
             return { highestAffinity: i, highAffinity: r };
-        })(O, (e) => d.A.getUserAffinity(e)?.dmProbability, e);
-    (R = t), (L = n);
+        })(R, (e) => d.A.getUserAffinity(e)?.dmProbability, e);
+    (O = t), (L = n);
 }
 function U() {
     if (null != D) return void x(D);
@@ -86,15 +86,15 @@ function U() {
                     if (!(0, I.default)(r, e) && 7 >= Math.abs((0, f.A)(t, r))) return !0;
                 }
                 return !1;
-            })(n) && (O.push(e), (y[e] = { friendsSince: n }));
+            })(n) && (R.push(e), (y[e] = { friendsSince: n }));
         }
     }
-    if (0 === O.length) return;
+    if (0 === R.length) return;
     let { enabled: e } = A({ location: "PremiumGiftingIntentStore updateFriendAnniversaries" });
-    e ? (O.sort((e, t) => d.A.compareByDmProbability(e, t)), P()) : w();
+    e ? (R.sort((e, t) => d.A.compareByDmProbability(e, t)), P()) : w();
 }
 function w() {
-    (O.length = 0), (R = new Set()), (L = new Set()), (y = {});
+    (R.length = 0), (O = new Set()), (L = new Set()), (y = {});
 }
 function G(e) {
     null == C.messageGiftIntentLastShownMap[e] && (C.messageGiftIntentLastShownMap[e] = M());
@@ -112,10 +112,10 @@ function x(e) {
             let t = E.A.getSince(e);
             if (null != t) {
                 let n = new Date(t);
-                O.push(e), (y[e] = { friendsSince: n });
+                R.push(e), (y[e] = { friendsSince: n });
             }
         }),
-        O.sort((e, t) => d.A.compareByDmProbability(e, t)),
+        R.sort((e, t) => d.A.compareByDmProbability(e, t)),
         P(!0);
 }
 class k extends a.Ay.PersistedStore {
@@ -171,7 +171,7 @@ class k extends a.Ay.PersistedStore {
         return C;
     }
     getFriendAnniversaries() {
-        return O;
+        return R;
     }
     canShowFriendsTabBadge() {
         return Array.from(L).some((e) => !C.lastShownFriendsListGiftIntents.includes(e));
@@ -191,7 +191,7 @@ class k extends a.Ay.PersistedStore {
         return b;
     }
     getHighestAffinityFriendAnniversaries() {
-        return Array.from(R);
+        return Array.from(O);
     }
     getHighAffinityFriendAnniversaries() {
         return Array.from(L);
@@ -215,7 +215,7 @@ let F = new k(s.h, {
         G(t);
     },
     FRIENDS_LIST_GIFT_INTENTS_SHOWN: function () {
-        C.lastShownFriendsListGiftIntents = Array.from(O);
+        C.lastShownFriendsListGiftIntents = Array.from(R);
     },
     GIFT_INTENT_FLOW_PURCHASED_GIFT: function (e) {
         let { recipientUserId: t } = e;

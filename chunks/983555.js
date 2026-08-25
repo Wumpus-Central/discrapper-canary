@@ -22,8 +22,8 @@ var i = n(607399),
     S = n(842241),
     N = n(376943),
     C = n(741231),
-    O = n(971276),
-    R = n(216934),
+    R = n(971276),
+    O = n(216934),
     L = n(976860),
     y = n(832163),
     D = n(788995),
@@ -245,7 +245,7 @@ function $(e) {
                     !0
                 );
         };
-    if (null != T && T.type === f.I.QUESTS_EMBED && (0, O.s)())
+    if (null != T && T.type === f.I.QUESTS_EMBED && (0, R.s)())
         return (e) => {
             e?.preventDefault();
             let { search: t } = V.A.toURLSafe(T.url) ?? {};
@@ -253,7 +253,7 @@ function $(e) {
                 let e = new URLSearchParams(t);
                 e.get("sort"), e.get("filter");
             }
-            return (0, R.m)({ fromContent: r.u.QUEST_SHARE_LINK, questId: T.code }), !0;
+            return (0, O.m)({ fromContent: r.u.QUEST_SHARE_LINK, questId: T.code }), !0;
         };
     if (null != T && T.type === f.I.GAME_PROFILE)
         return (e) => {
@@ -364,7 +364,7 @@ function $(e) {
         return (e) => (e?.preventDefault(), t(i, r, a), !0);
     }
     return U && b?.startsWith("/discovery/quests")
-        ? (e) => (e?.preventDefault(), (0, R.m)({ fromContent: r.u.QUEST_BADGE }), !0)
+        ? (e) => (e?.preventDefault(), (0, O.m)({ fromContent: r.u.QUEST_BADGE }), !0)
         : U && b?.startsWith("/quest-home")
           ? (e) => (e?.preventDefault(), (0, L.pX)(H.BVt.QUEST_HOME + (M ?? "")), !0)
           : U && b?.startsWith("/quest-preview")

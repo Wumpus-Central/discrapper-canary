@@ -168,9 +168,9 @@ function m(e) {
     let g = m(A),
         N = m(S(n, i), _),
         C = p(g, N, "RETURN_PREVIOUS_WHEN_CHANGED"),
-        O = l.A.getChannel(i),
-        R = C("channel_flags") ?? 0,
-        L = (N.channel_flags ?? 0) ^ R,
+        R = l.A.getChannel(i),
+        O = C("channel_flags") ?? 0,
+        L = (N.channel_flags ?? 0) ^ O,
         y = 0 === (0, r.iE)(L, E.vv.FAVORITED, E.vv.OPT_IN_ENABLED),
         D = o.A.getLastMessage(i)?.type ?? null;
     a.Ay.trackWithMetadata(c.HAw.NOTIFICATION_SETTINGS_UPDATED, {
@@ -181,7 +181,7 @@ function m(e) {
         channel_id: i,
         update_type: t,
         label: h,
-        parent_id: null != O ? O.parent_id : null,
+        parent_id: null != R ? R.parent_id : null,
         channel_flags_old: C("channel_flags"),
         channel_is_muted_old: C("channel_is_muted"),
         channel_muted_until_old: C("channel_muted_until"),

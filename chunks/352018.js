@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => R });
+n.d(t, { A: () => O });
 var i = n(477900),
     r = n(582128),
     a = n(17928),
@@ -25,7 +25,7 @@ function C(e) {
     let { className: t } = e;
     return (0, i.jsx)(s.SettingsIcon, { size: "md", color: "currentColor", className: t });
 }
-function O(e) {
+function R(e) {
     let { className: t } = e;
     return (0, i.jsxs)(r.Fragment, {
         children: [
@@ -34,10 +34,10 @@ function O(e) {
         ],
     });
 }
-function R(e) {
+function O(e) {
     let { hideBadges: t = !1, stream: n, location: s, ...u } = e,
         I = r.useRef(null),
-        { analyticsLocations: N, parentAnalyticsLocation: R } = (0, o.Ay)(),
+        { analyticsLocations: N, parentAnalyticsLocation: O } = (0, o.Ay)(),
         L = (0, a.bG)([h.default], () => f.Ay.isPremium(h.default.getCurrentUser(), g.PremiumTypes.TIER_1)),
         y = (0, a.bG)([A.A], () => A.A.getChannel(n?.channelId)),
         D = r.useMemo(() => (null != n ? [n] : []), [n]),
@@ -47,7 +47,7 @@ function R(e) {
     if (null == n || null == y) return null;
     let b = C;
     return (
-        t || L || (b = O),
+        t || L || (b = R),
         (0, i.jsx)(l.Y, {
             targetElementRef: I,
             position: "top",
@@ -61,7 +61,7 @@ function R(e) {
                         onClose: t,
                         showReportOption: !0,
                         handleGoLive: v,
-                        onInteraction: (0, c.s)("ManageStreamsButton", R ?? s, { entrypoint: m.GK.OTHER_BUTTON }),
+                        onInteraction: (0, c.s)("ManageStreamsButton", O ?? s, { entrypoint: m.GK.OTHER_BUTTON }),
                     }),
                 });
             },
@@ -73,7 +73,7 @@ function R(e) {
                     label: S.intl.string(S.t.tmiYpF),
                     iconComponent: b,
                     onClick: (t) => {
-                        (null != R || null != s) && (0, d.X)(R ?? s, d.O.STREAM_SETTINGS), e?.onClick(t);
+                        (null != O || null != s) && (0, d.X)(O ?? s, d.O.STREAM_SETTINGS), e?.onClick(t);
                     },
                     ...u,
                 }),

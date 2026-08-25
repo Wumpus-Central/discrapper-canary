@@ -49,8 +49,8 @@ var l,
     j = n(768622),
     b = n(369606),
     R = n(825860),
-    O = n(605323),
-    M = n(748562),
+    M = n(605323),
+    O = n(748562),
     L = n(306788),
     w = n(531913),
     k = n(47167),
@@ -254,7 +254,7 @@ function eu(e) {
         { location: n } = q();
     if (3 === n) return null;
     let l = U.default.extractTimestamp(t.extra.application_id);
-    return u()().diff(u()(l), "days") > 7 ? null : (0, i.jsx)($, { Icon: O.f, text: W.intl.string(W.t.vYuyWf) });
+    return u()().diff(u()(l), "days") > 7 ? null : (0, i.jsx)($, { Icon: M.f, text: W.intl.string(W.t.vYuyWf) });
 }
 function ec(e) {
     let { entry: t, hovered: n } = e,
@@ -264,7 +264,7 @@ function ec(e) {
     return (0, i.jsxs)("div", {
         className: K.fC,
         children: [
-            (0, i.jsx)(M.U, { size: "xxs", color: o }),
+            (0, i.jsx)(O.U, { size: "xxs", color: o }),
             (0, i.jsx)(B.A, { entry: t, textColor: a ? "text-feedback-positive" : l, hovered: n }),
         ],
     });

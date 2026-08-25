@@ -22,8 +22,8 @@ var i,
     S = n(280450),
     N = n(734057),
     C = n(31717),
-    O = n(232835),
-    R = n(101392),
+    R = n(232835),
+    O = n(101392),
     L = n(927813),
     y = n(935208),
     D = n(292348),
@@ -50,7 +50,7 @@ function V(e, t) {
     return e.length > t ? e.substring(0, t) + "..." : e;
 }
 function B(e, t) {
-    let n = null == t ? null : O.A.getMessage(e.id, t),
+    let n = null == t ? null : R.A.getMessage(e.id, t),
         i = n?.getContentMessage(),
         r = i?.embeds?.[0]?.rawTitle ?? "",
         a = n?.poll?.question?.text ?? "";
@@ -118,7 +118,7 @@ function H(e) {
                     });
                 });
             if (g !== m) {
-                var S, O, R, L, D;
+                var S, R, O, L, D;
                 let n = C.A.getDraft(t.id, C.C.FirstThreadMessage),
                     i = n.trim();
                 c.A.clearDraft(t.id, C.C.ThreadSettings),
@@ -127,14 +127,14 @@ function H(e) {
                     o?.(g),
                     (h || e.length > 0 || (null != r && r.length > 0) || (null != A && A.length > 0)) &&
                         ((S = g),
-                        (O = e),
-                        (R = r),
+                        (R = e),
+                        (O = r),
                         (L = A),
                         null != (D = E) && null != L && L.length > 0
-                            ? D(S, L, O, R)
-                            : null != R && R.length > 0
-                              ? u.A.sendStickers(S.id, R, T.Ay.parse(S, O), { location: w.Hx.THREAD_CREATION })
-                              : u.A.sendMessage(S.id, T.Ay.parse(S, O), void 0, { location: w.Hx.THREAD_CREATION }));
+                            ? D(S, L, R, O)
+                            : null != O && O.length > 0
+                              ? u.A.sendStickers(S.id, O, T.Ay.parse(S, R), { location: w.Hx.THREAD_CREATION })
+                              : u.A.sendMessage(S.id, T.Ay.parse(S, R), void 0, { location: w.Hx.THREAD_CREATION }));
             }
             _.A.clearAll(t.id, C.C.FirstThreadMessage);
         },
@@ -167,17 +167,17 @@ function W(e) {
             var T;
             let m,
                 N,
-                O,
-                R = 0,
+                R,
+                O = 0,
                 [L, y] = (0, g.Ay)(e);
-            L && ((e = y), (R = (0, a.UI)(R, U.pr7.SUPPRESS_NOTIFICATIONS)));
+            L && ((e = y), (O = (0, a.UI)(O, U.pr7.SUPPRESS_NOTIFICATIONS)));
             let b = (0, v.Gl)(t, null),
                 M = U.Rsh.CHANNEL_THREADS(t.id) + "?use_nested_fields=true",
                 P = {
                     name: n,
                     auto_archive_duration: b,
                     applied_tags: i,
-                    message: { content: e, sticker_ids: r, flags: 0 !== R ? R : void 0 },
+                    message: { content: e, sticker_ids: r, flags: 0 !== O ? O : void 0 },
                 },
                 G =
                     null != u
@@ -198,7 +198,7 @@ function W(e) {
             )
                 try {
                     let e = await d(I);
-                    (O = e.uploaderFile), (P.message.attachments = e.files.map((e, t) => (0, D.OW)(e, t)));
+                    (R = e.uploaderFile), (P.message.attachments = e.files.map((e, t) => (0, D.OW)(e, t)));
                 } catch (r) {
                     let { file: e, code: n, reason: i } = r;
                     throw (
@@ -212,7 +212,7 @@ function W(e) {
                         r)
                     );
                 }
-            let x = await Y(t, l, O, () => s.Bo.post({ url: M, body: P, rejectWithError: (0, s.fT)() }));
+            let x = await Y(t, l, R, () => s.Bo.post({ url: M, body: P, rejectWithError: (0, s.fT)() }));
             return (
                 c.A.clearDraft(t.id, C.C.ThreadSettings),
                 c.A.clearDraft(t.id, C.C.FirstThreadMessage),
@@ -247,7 +247,7 @@ async function Y(e, t, i, r) {
         (a = await r()),
             null == a.body
                 ? d.A.show({ title: G.intl.string(G.t.j2d6Km), body: G.intl.string(G.t.fEptJP) })
-                : (o.h.dispatch({ type: "SLOWMODE_RESET_COOLDOWN", slowmodeType: R.R.CreateThread, channelId: e.id }),
+                : (o.h.dispatch({ type: "SLOWMODE_RESET_COOLDOWN", slowmodeType: O.R.CreateThread, channelId: e.id }),
                   o.h.dispatch({ type: "THREAD_CREATE_LOCAL", channelId: a.body.id }),
                   l.O.announce(G.intl.string(s ? G.t.zDAG2N : G.t.XkUoBb)));
     } catch (r) {
@@ -264,7 +264,7 @@ async function Y(e, t, i, r) {
                 o.h.dispatch({
                     type: "SLOWMODE_SET_COOLDOWN",
                     channelId: e.id,
-                    slowmodeType: R.R.CreateThread,
+                    slowmodeType: O.R.CreateThread,
                     cooldownMs: t * L.A.Millis.SECOND,
                 });
         } else if (429 === r.status)

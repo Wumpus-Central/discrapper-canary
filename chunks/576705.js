@@ -22,18 +22,18 @@ var i = n(435558),
     S = n(287809),
     N = n(652215),
     C = n(402655);
-let O = {},
-    R = {},
+let R = {},
+    O = {},
     L = {},
     y = 0;
 function D(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-        n = O[e];
+        n = R[e];
     if (null != n) return n;
     let i = S.default.getCurrentUser();
     if (null == i) return p.x3;
     let r = g.A.getGuild(e);
-    return null == r ? p.x3 : (O[e] = p.cc({ user: i, context: r, checkElevated: t }));
+    return null == r ? p.x3 : (R[e] = p.cc({ user: i, context: r, checkElevated: t }));
 }
 function v(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
@@ -49,14 +49,14 @@ function v(e) {
 }
 function b(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-        n = R[e];
-    return null != n ? n : (R[e] = v(e, t));
+        n = O[e];
+    return null != n ? n : (O[e] = v(e, t));
 }
 function M(e) {
     null != e && (L[e] = (L[e] ?? 0) + 1);
 }
 function P() {
-    for (let e in ((O = {}), (R = {}), L)) L[e] += 1;
+    for (let e in ((R = {}), (O = {}), L)) L[e] += 1;
     y += 1;
 }
 function U() {
@@ -82,10 +82,10 @@ function k(e) {
 }
 function F(e) {
     let { guildId: t } = e;
-    delete O[t];
+    delete R[t];
     let n = T.A.getMutableBasicGuildChannelsForGuild(t);
     r().forEach(n, (e) => {
-        delete R[e.id];
+        delete O[e.id];
     }),
         (y += 1),
         M(t);
@@ -96,15 +96,15 @@ function V(e) {
     if (null == n) return !1;
     let i = S.default.getCurrentUser(),
         r = p.cc({ user: i, context: n });
-    if (r === R[n.id]) return !1;
-    (R[n.id] = r), (y += 1);
+    if (r === O[n.id]) return !1;
+    (O[n.id] = r), (y += 1);
 }
 function B(e) {
     let { guildId: t } = e;
-    delete O[t];
+    delete R[t];
     let n = T.A.getMutableBasicGuildChannelsForGuild(t);
     r().forEach(n, (e) => {
-        delete R[e.id];
+        delete O[e.id];
     }),
         (y += 1),
         M(t);
@@ -217,7 +217,7 @@ class j extends s.Ay.Store {
     }
 }
 function W() {
-    (R = {}), (O = {}), (L = {}), (y = 0);
+    (O = {}), (R = {}), (L = {}), (y = 0);
 }
 let Y = new j(l.h, {
     BACKGROUND_SYNC: U,
@@ -242,8 +242,8 @@ let Y = new j(l.h, {
         if (null == n || n.isPrivate()) return !1;
         let i = S.default.getCurrentUser(),
             r = p.cc({ user: i, context: n });
-        if (R[n.id] === r) return !1;
-        (R[n.id] = r), (y += 1), M(n.getGuildId());
+        if (O[n.id] === r) return !1;
+        (O[n.id] = r), (y += 1), M(n.getGuildId());
     },
     THREAD_CREATE: x,
     THREAD_UPDATE: x,
@@ -258,7 +258,7 @@ let Y = new j(l.h, {
             if (null == t || t.isPrivate()) continue;
             let i = S.default.getCurrentUser(),
                 r = p.cc({ user: i, context: t });
-            R[t.id] !== r && ((R[t.id] = r), M(t.getGuildId()), (n = !0));
+            O[t.id] !== r && ((O[t.id] = r), M(t.getGuildId()), (n = !0));
         }
         return !!n && ((y += 1), n);
     },
@@ -276,7 +276,7 @@ let Y = new j(l.h, {
     },
     CHANNEL_DELETE: function (e) {
         let { channel: t } = e;
-        return delete R[t.id], (y += 1), M(t.guild_id), !1;
+        return delete O[t.id], (y += 1), M(t.guild_id), !1;
     },
     GUILD_ROLE_CREATE: F,
     GUILD_ROLE_UPDATE: F,

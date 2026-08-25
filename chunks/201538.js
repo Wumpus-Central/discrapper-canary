@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { t_: () => L, UW: () => O, so: () => R });
+n.d(t, { t_: () => L, UW: () => R, so: () => O });
 var i,
     r = n(453028),
     a = n(19575),
@@ -133,7 +133,7 @@ let p = { stable: 0.05, ptb: 1, canary: 1, development: 1 },
     S = null,
     N = null,
     C = null;
-function O() {
+function R() {
     let { forceV3Capability: e = !1 } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
         t = (0, u.T)(),
         n = r.Ay.getMediaEngine(),
@@ -175,11 +175,11 @@ function O() {
           { midSessionV3Flip: c && _ })
         : { midSessionV3Flip: !1 };
 }
-function R() {
+function O() {
     let { forceV3Capability: e = !1 } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
     return null != m
         ? m
-        : (O({ forceV3Capability: e }),
+        : (R({ forceV3Capability: e }),
           (m = (async () => {
               try {
                   await a.Ay.ensureModule("discord_clips");

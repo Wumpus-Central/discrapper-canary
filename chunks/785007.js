@@ -192,11 +192,11 @@ function g(e) {
             withTransparentBackground: N,
         } = e,
         C = r.useContext(c._),
-        { ref: O, ...R } = T({ labelledBy: g ?? C?.labelId, orientation: S, isDisabled: f }),
+        { ref: R, ...O } = T({ labelledBy: g ?? C?.labelId, orientation: S, isDisabled: f }),
         L = m.some((e) => e.value === d);
     return (0, i.jsx)("div", {
-        ...R,
-        ref: O,
+        ...O,
+        ref: R,
         className: s()(A.kL, o),
         id: C?.controlId,
         "aria-describedby": C?.describedById,

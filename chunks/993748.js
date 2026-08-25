@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { $P: () => R, An: () => L, xZ: () => O, Di: () => N, bW: () => C, eP: () => S, wD: () => y });
+n.d(t, { $P: () => O, An: () => L, xZ: () => R, Di: () => N, bW: () => C, eP: () => S, wD: () => y });
 var i,
     r = n(158390),
     a = n(724002),
@@ -87,7 +87,7 @@ async function C() {
     });
     c.h.dispatch({ type: "APPLICATION_DIRECTORY_FETCH_CATEGORIES_SUCCESS", categories: n.body });
 }
-async function O(e) {
+async function R(e) {
     let { applicationId: t, guildId: n, options: i } = e,
         { page: r } = i ?? {},
         a = Date.now(),
@@ -125,7 +125,7 @@ async function O(e) {
         }
     }
 }
-async function R(e) {
+async function O(e) {
     let { query: t, guildId: n, options: i, onSuccessCallback: r } = e,
         {
             page: a,

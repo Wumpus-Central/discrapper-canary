@@ -33,13 +33,13 @@ function C(e) {
         I[(0, c.gW)(e.id, e.branchId)] = e;
     }
 }
-function O(e) {
+function R(e) {
     let { libraryApplication: t } = e,
         n = d.A.createFromServer(t),
         i = (0, c.gW)(n.id, n.branchId);
     (I[i] = n), p.delete(i);
 }
-function R(e, t) {
+function O(e, t) {
     let n = (0, c.gW)(e, t);
     return I[n] ?? f[n];
 }
@@ -74,12 +74,12 @@ class y extends s.Ay.Store {
     }
     hasApplication(e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-            i = R(e, t);
+            i = O(e, t);
         return !(null == i || (!n && i.isHidden())) && (0, c.XZ)(i);
     }
     getLibraryApplication(e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-            i = R(e, t);
+            i = O(e, t);
         return n && null != i ? ((0, c.XZ)(i) ? i : null) : i;
     }
     getActiveLibraryApplication(e) {
@@ -137,11 +137,11 @@ let D = new y(o.h, {
     LIBRARY_APPLICATION_FLAGS_UPDATE_START: function (e) {
         let { applicationId: t, branchId: n, flags: i } = e,
             r = (0, c.gW)(t, n),
-            s = R(t, n);
+            s = O(t, n);
         null != s && !s.isHidden() && a.Lt(i, _.hM6.HIDDEN) && (g = !0), p.add(r);
     },
-    LIBRARY_APPLICATION_FLAGS_UPDATE_SUCCESS: O,
-    LIBRARY_APPLICATION_UPDATE: O,
+    LIBRARY_APPLICATION_FLAGS_UPDATE_SUCCESS: R,
+    LIBRARY_APPLICATION_UPDATE: R,
     LIBRARY_APPLICATION_ACTIVE_LAUNCH_OPTION_UPDATE: function (e) {
         let { applicationId: t, branchId: n, launchOptionId: i } = e;
         (m[(0, c.gW)(t, n)] = i), S();

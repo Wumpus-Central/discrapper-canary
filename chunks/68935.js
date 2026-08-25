@@ -4,7 +4,7 @@ n.d(t, {
     sL: () => L,
     Qn: () => b,
     YS: () => M,
-    l3: () => R,
+    l3: () => O,
     Id: () => C,
     T5: () => v,
     Y4: () => G,
@@ -38,7 +38,7 @@ function C(e) {
     }
     return e.stickers[0];
 }
-function O(e) {
+function R(e) {
     switch (e) {
         case _.TG.PNG:
             return l.QB ? _.y3.WEBP : _.y3.PNG;
@@ -52,7 +52,7 @@ function O(e) {
             throw Error(`Unexpected format type: ${e}`);
     }
 }
-function R(e) {
+function O(e) {
     switch (e) {
         case "application/json":
             return _.TG.LOTTIE;
@@ -68,14 +68,14 @@ function R(e) {
     }
 }
 function L(e) {
-    return null == e ? null : `${e.name}.${O(e.format_type)}`;
+    return null == e ? null : `${e.name}.${R(e.format_type)}`;
 }
 let y = function (e) {
     let { isPreview: t = !1, size: r = 160 } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
     if (null == e.format_type) return null;
     let a = e.format_type;
     e.format_type === _.TG.GIF && t && (a = _.TG.PNG);
-    let s = O(a),
+    let s = R(a),
         l = A.Rsh.STICKER_ASSET(e.id, s),
         d = !1;
     try {
