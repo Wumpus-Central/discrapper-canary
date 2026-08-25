@@ -15532,37 +15532,52 @@ var xY = n(814390),
 let x0 = (0, tU.Ld)(),
     x1 = g.memo(function (e) {
         let { availablePrimaryGuilds: t, pendingPrimaryGuildId: n, onChange: i } = e,
-            l = g.useMemo(() => new Map(t.map((e) => [e.id, e])), [t]),
-            s = (0, m.bG)([l7.default], () => (0, xZ.Zo)(l7.default.getCurrentUser()?.primaryGuild).guildId),
-            r = void 0 !== n ? n : s,
-            a = g.useMemo(
-                () => t.reduce((e, t) => (t.profile?.tag != null && e.push({ label: t.name, value: t.id }), e), []),
-                [t],
-            ),
+            l = (0, m.cf)([l7.default], () => (0, xZ.Zo)(l7.default.getCurrentUser()?.primaryGuild)),
+            s = void 0 !== n ? n : (l.guildId ?? null),
+            r = g.useMemo(() => {
+                let e = new Map();
+                for (let n of t)
+                    n.profile?.tag != null &&
+                        e.set(n.id, {
+                            id: n.id,
+                            name: n.name,
+                            icon: n.icon,
+                            tag: n.profile.tag,
+                            badge: n.profile.badge ?? void 0,
+                        });
+                let { guildId: n, tag: i, badge: r } = l;
+                return (
+                    null == n ||
+                        null == i ||
+                        n !== s ||
+                        e.has(n) ||
+                        e.set(n, { id: n, name: j.intl.string(j.t.dtwqPR), icon: null, tag: i, badge: r }),
+                    e
+                );
+            }, [t, l, s]),
+            a = g.useMemo(() => Array.from(r.values(), (e) => ({ label: e.name, value: e.id })), [r]),
             o = g.useCallback(
                 (e) => {
                     if (null == e) return null;
-                    let t = l.get(e.value);
-                    if (null == t) return null;
-                    let n = t.profile?.tag;
-                    return null == n
+                    let t = r.get(e.value);
+                    return null == t
                         ? null
                         : (0, c.jsx)(xQ.A, {
-                              guildTag: n,
-                              guildBadge: t.profile?.badge ?? void 0,
+                              guildTag: t.tag,
+                              guildBadge: t.badge,
                               guildId: t.id,
-                              guildName: e.label,
+                              guildName: t.name,
                               guildIcon: t.icon,
                               guildIconSize: 32,
                           });
                 },
-                [l],
+                [r],
             ),
             u = g.useCallback(
                 (e) => {
                     if (null == e) return null;
-                    let t = l.get(e.value);
-                    return null == t || null == t.profile?.tag
+                    let t = r.get(e.value);
+                    return null == t
                         ? null
                         : (0, c.jsx)(xW.j, {
                               guildId: t.id,
@@ -15572,26 +15587,24 @@ let x0 = (0, tU.Ld)(),
                               animate: !1,
                           });
                 },
-                [l],
+                [r],
             ),
             d = g.useCallback(
                 (e) => {
                     if (null == e) return null;
-                    let t = l.get(e.value);
-                    if (null == t) return null;
-                    let n = t.profile?.tag;
-                    return null == n
+                    let t = r.get(e.value);
+                    return null == t
                         ? null
                         : (0, c.jsx)(xq.o9, {
                               guildId: t.id,
-                              guildTag: n,
-                              guildBadge: t.profile?.badge ?? void 0,
+                              guildTag: t.tag,
+                              guildBadge: t.badge,
                               badgeSize: xJ.Sl.SIZE_16,
                               textColor: "interactive-text-default",
                               textVariant: "text-sm/semibold",
                           });
                 },
-                [l],
+                [r],
             ),
             A = g.useCallback(
                 (e) => {
@@ -15606,7 +15619,7 @@ let x0 = (0, tU.Ld)(),
                 },
                 [i],
             ),
-            E = g.useCallback((e) => e === r, [r]),
+            E = g.useCallback((e) => e === s, [s]),
             S = g.useCallback((e) => e, []),
             p = g.useCallback(() => {
                 i?.(null);
@@ -15635,7 +15648,7 @@ let x0 = (0, tU.Ld)(),
                         renderOptionValue: A,
                         serialize: S,
                         clear: p,
-                        clearable: null != r,
+                        clearable: null != s,
                         maxVisibleItems: 8,
                         "data-migration-pending": !0,
                     }),
@@ -15763,7 +15776,8 @@ function Ts() {
         T = x?.getLegacyUsername(),
         f = (g.global_name?.length ?? 0) > 0 ? g.global_name : (h?.nick ?? []),
         I = (g.bio?.length ?? 0) > 0 ? g.bio : (h?.bio ?? []),
-        _ = (0, x2.b)();
+        _ = (0, x2.b)(),
+        N = null != (0, xZ.Zo)(e.primaryGuild).guildId;
     return (0, c.jsxs)("div", {
         className: Tl.Q,
         children: [
@@ -15847,7 +15861,7 @@ function Ts() {
                 },
                 "bio",
             ),
-            _.length > 0 &&
+            (_.length > 0 || N) &&
                 (0, c.jsx)(x1, {
                     availablePrimaryGuilds: _,
                     pendingPrimaryGuildId: d,

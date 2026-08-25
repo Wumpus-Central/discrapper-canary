@@ -3149,16 +3149,18 @@ function rb(e) {
 function rj() {
     let e = (0, rf.b)(),
         l = i.useMemo(() => new Map(e.map((e) => [e.id, e])), [e]),
-        n = (0, s.bG)([V.default], () => {
+        n = (0, s.cf)([V.default], () => {
             let e = V.default.getCurrentUser();
-            return (0, rm.Zo)(e?.primaryGuild).guildId ?? null;
+            return (0, rm.Zo)(e?.primaryGuild);
         }),
-        r = (0, s.bG)([ef.A], () => ef.A.getPendingChanges(null).pendingPrimaryGuildId),
-        a = void 0 !== r ? r : n,
-        o = null != a ? (l.get(a) ?? null) : null,
-        d = o?.profile?.tag ?? null,
-        u = o?.profile?.badge ?? void 0,
-        c = i.useCallback(
+        r = n.guildId ?? null,
+        a = (0, s.bG)([ef.A], () => ef.A.getPendingChanges(null).pendingPrimaryGuildId),
+        o = void 0 !== a ? a : r,
+        d = null != o ? (l.get(o) ?? null) : null,
+        u = null == d && o === r,
+        c = d?.profile?.tag ?? (u ? (n.tag ?? null) : null),
+        g = d?.profile?.badge ?? (u ? n.badge : void 0),
+        m = i.useCallback(
             (e) =>
                 e.id === rA
                     ? (0, t.jsx)("div", {
@@ -3173,7 +3175,7 @@ function rj() {
                     : (0, t.jsx)(tG.c, { ...e }),
             [],
         ),
-        g = i.useMemo(
+        f = i.useMemo(
             () => [
                 { id: rA, label: eY.intl.string(eY.t.VxdWWH), value: null },
                 ...e.flatMap((e) => {
@@ -3199,21 +3201,21 @@ function rj() {
             ],
             [e],
         ),
-        m = i.useCallback((e) => {
+        p = i.useCallback((e) => {
             (0, e0.p)({ primaryGuildId: e });
         }, []);
-    return 0 === e.length
+    return 0 === e.length && null == r
         ? null
         : (0, t.jsx)(tW, {
-              options: g,
-              value: a,
-              onSelectionChange: m,
+              options: f,
+              value: o,
+              onSelectionChange: p,
               label: eY.intl.string(eY.t.Pdd1nd),
               listboxClassName: rh.yt,
-              renderListItem: c,
+              renderListItem: m,
               children: (e) => {
                   let { buttonRef: l, selectButtonProps: n } = e;
-                  return (0, t.jsx)(rb, { buttonRef: l, guildId: a, guildTag: d, guildBadge: u, ...n });
+                  return (0, t.jsx)(rb, { buttonRef: l, guildId: o, guildTag: c, guildBadge: g, ...n });
               },
           });
 }
