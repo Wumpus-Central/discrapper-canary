@@ -66,6 +66,10 @@
     position: relative
 }
 
+.high-contrast-mode .card__39ec2 {
+    border: 1px solid var(--border-strong)
+}
+
 .user-profile-sidebar:not(.user-profile-sidebar-redesign) .card__39ec2 {
     --custom-activity-card-padding: var(--space-12)
 }
@@ -341,4 +345,4 @@
     margin-inline: calc(var(--custom-activity-card-padding)*-1)
 }
 
-/*# sourceMappingURL=433400.4c406f1f70d144f0.css.map*/
+/*# sourceMappingURL=433400.6cdb0d6397608c89.css.map*/
