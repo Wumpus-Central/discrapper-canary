@@ -7,6 +7,7 @@ i.exports = {
     aS: "wishlistItems3Wide_f7398d",
     HV: "wishlistItems4Wide_f7398d",
     Zp: "loadingApplicationWidgetPanel_f7398d",
+    gi: "widgetOnlyContainer_f7398d",
     kc: "loadingFeaturePanelRecomendations_f7398d",
     OQ: "ctaContainer_f7398d",
     bC: "ctaFiller_f7398d",

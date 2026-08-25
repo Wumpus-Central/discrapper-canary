@@ -55,6 +55,11 @@
     width: calc(360px + var(--space-12)*3)
 }
 
+.widgetOnlyContainer_f7398d .containerContents_f7398d {
+    align-items: stretch;
+    width: calc(360px + var(--space-12)*3)
+}
+
 .loadingFeaturePanelRecomendations_f7398d {
     height: calc(370px + var(--space-12)*2 + var(--space-12));
     width: calc(270px + var(--space-12)*2)
@@ -86,4 +91,4 @@
     flex-shrink: 0
 }
 
-/*# sourceMappingURL=944121.916f6f6074ca8585.css.map*/
+/*# sourceMappingURL=944121.a56b101c5986de66.css.map*/

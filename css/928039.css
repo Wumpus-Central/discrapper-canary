@@ -45,6 +45,17 @@
     width: inherit
 }
 
+.gameProfilePill_ca8727 .giftingButton_ca8727 {
+    padding-block: 1px;
+    padding-inline-end: var(--space-4);
+    padding-inline-start: 1px
+}
+
+.gameProfilePill_ca8727 .iconContainer_ca8727 {
+    height: var(--size-20);
+    width: var(--size-20)
+}
+
 .hoverableContainer__754bd {
     align-items: center;
     align-self: stretch;
@@ -1940,4 +1951,4 @@
     cursor: pointer
 }
 
-/*# sourceMappingURL=928039.6b37df5a3a7cc6db.css.map*/
+/*# sourceMappingURL=928039.aa96ad68031fcafc.css.map*/

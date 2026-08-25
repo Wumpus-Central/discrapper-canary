@@ -4,4 +4,5 @@ c.exports = {
     zc: "iconContainer_ca8727",
     RT: "withBorder_ca8727",
     Kk: "icon_ca8727",
+    LM: "gameProfilePill_ca8727",
 };
