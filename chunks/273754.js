@@ -6,9 +6,9 @@ n.d(t, {
     v7: () => nT,
     L0: () => nj,
     N_: () => nN,
-    MD: () => nO,
+    MD: () => nM,
     Ay: () => nL,
-    uW: () => nM,
+    uW: () => nO,
     NO: () => nv,
     ck: () => nb,
     ml: () => n_,
@@ -42,7 +42,7 @@ var l = n(477900),
     j = n(375708),
     b = n(836555);
 let R = { width: 500, height: T.$V },
-    O = (0, N.Fe)({
+    M = (0, N.Fe)({
         createPromise: () =>
             Promise.all([
                 n.e("324732"),
@@ -96,7 +96,7 @@ let R = { width: 500, height: T.$V },
         webpackId: 854379,
         renderLoader: () => (0, l.jsx)("div", { className: b.R4, style: R, children: (0, l.jsx)(S.y, {}) }),
     }),
-    M = { height: T.$V },
+    O = { height: T.$V },
     L = i.memo(function (e) {
         let { positionTargetRef: t, align: n, ...i } = e;
         return (0, l.jsx)("span", {
@@ -115,9 +115,9 @@ let R = { width: 500, height: T.$V },
                     return (0, l.jsx)("section", {
                         className: b.V6,
                         role: "dialog",
-                        style: M,
+                        style: O,
                         "aria-label": j.intl.string(j.t["3CNGLK"]),
-                        children: t && (0, l.jsx)(O, { ...i }),
+                        children: t && (0, l.jsx)(M, { ...i }),
                     });
                 },
             }),
@@ -143,7 +143,7 @@ var w = n(861382),
     $ = n(168186),
     X = n(866665),
     Q = n(939249),
-    ee = n(802019),
+    ee = n(88218),
     et = n(664929),
     en = n(934305);
 let el = [16, 8, 8, 8];
@@ -338,7 +338,7 @@ let ec = [8, 8, 0, 8],
             }),
             [C.length, x, A, p, R, u],
         );
-        let O = i.useCallback(
+        let M = i.useCallback(
                 (e) => {
                     let t = g[e];
                     if (null == t) return null;
@@ -348,7 +348,7 @@ let ec = [8, 8, 0, 8],
                 },
                 [n, g],
             ),
-            M = i.useCallback(
+            O = i.useCallback(
                 (e, t) => {
                     let n = e === g.length - 1,
                         i = g[e],
@@ -436,8 +436,8 @@ let ec = [8, 8, 0, 8],
                         listPadding: ec,
                         onScroll: S,
                         renderRow: L,
-                        renderSection: M,
-                        renderSectionHeader: O,
+                        renderSection: O,
+                        renderSectionHeader: M,
                         rowCount: g.length,
                         rowCountBySection: T,
                         rowHeight: 56,
@@ -470,7 +470,7 @@ var ef = n(702841),
     ej = n(224964),
     eb = n(31408),
     eR = n(536283);
-function eO(e) {
+function eM(e) {
     let { editorHeight: t, textValue: n, channelId: l } = e,
         s = i.useRef(n),
         r = (0, eS.l)({ editorHeight: t }),
@@ -487,8 +487,8 @@ function eO(e) {
         null
     );
 }
-function eM(e) {
-    return (0, l.jsx)(eT.A, { confettiLocation: eb.k.CHAT_INPUT, children: (0, l.jsx)(eO, { ...e }) });
+function eO(e) {
+    return (0, l.jsx)(eT.A, { confettiLocation: eb.k.CHAT_INPUT, children: (0, l.jsx)(eM, { ...e }) });
 }
 var eL = n(931664),
     ew = n(631576),
@@ -852,8 +852,8 @@ let tT = new t_(tC.h, {
 var tj = n(874546),
     tb = n(691540),
     tR = n(857250),
-    tO = n(97483),
-    tM = n(821609),
+    tM = n(97483),
+    tO = n(821609),
     tL = n(308368),
     tw = n(968522),
     tk = n(643747),
@@ -892,7 +892,7 @@ function tG(e) {
                   (0, l.jsxs)("div", {
                       className: tP.o,
                       children: [
-                          (0, l.jsx)(tM.$, {
+                          (0, l.jsx)(tO.$, {
                               variant: "active",
                               size: "sm",
                               loading: a,
@@ -919,7 +919,7 @@ function tG(e) {
                               onClick: function () {
                                   tU(t, "dismiss"),
                                       null != u && (0, tk.$)(u),
-                                      (0, tb.P0)((0, tR.o)(j.intl.string(j.t.gFwvLa), tO.Ck.INVITE));
+                                      (0, tb.P0)((0, tR.o)(j.intl.string(j.t.gFwvLa), tM.Ck.INVITE));
                               },
                               "aria-label": j.intl.string(j.t.cpT0Cq),
                           }),
@@ -1487,7 +1487,7 @@ function nR(e, t, n, l) {
         }, [e, t.permissions.requireCreateTherads, t.permissions.requireSendMessages, t.attachments, n, l, r]);
     return { isLurking: s, isPendingMember: r, ...a };
 }
-function nO(e, t, n) {
+function nM(e, t, n) {
     let [l, s, r] = (0, eA.RQ)((e) => [e.activeView, e.activeViewType, e.activeChannelId], c.x),
         a = (0, m.bG)([v.A], () => v.A.shouldShowPopup() && v.A.activeViewType() === e && v.A.activeChannelId() === n);
     i.useEffect(
@@ -1502,7 +1502,7 @@ function nO(e, t, n) {
         u = null == l || null == s || s !== e || r !== n;
     return { expressionPickerView: l, shouldHideExpressionPicker: u, handleOuterClick: o };
 }
-function nM(e, t) {
+function nO(e, t) {
     return {
         handleAutocompleteVisibilityChange: i.useCallback(
             (n) => {
@@ -1530,8 +1530,8 @@ let nL = i.memo(
                 channel: j,
                 type: b,
                 focused: R,
-                error: O,
-                renderAttachButton: M,
+                error: M,
+                renderAttachButton: O,
                 renderApplicationCommandIcon: k,
                 renderButtons: P,
                 pendingReply: D,
@@ -1578,10 +1578,10 @@ let nL = i.memo(
             })),
             ej = e_ ? eT.expressionPickerFormat : C.IG.FLEXIBLE,
             eb = !e_ || eT.condensePickerWhenNarrow,
-            [eR, eO] = i.useState(!eN);
+            [eR, eM] = i.useState(!eN);
         (0, A.i4)(ec, (e) => {
             let { width: t } = e;
-            return eO(!eN && (null == t || t > 450));
+            return eM(!eN && (null == t || t > 450));
         });
         let eL = ej === C.IG.HIDDEN,
             ew = ej === C.IG.CONDENSED || (ej === C.IG.FLEXIBLE && eb && !eR),
@@ -1661,8 +1661,8 @@ let nL = i.memo(
                     [e3, ed, ti],
                 ),
             }),
-            { expressionPickerView: t_, shouldHideExpressionPicker: tb, handleOuterClick: tR } = nO(b, eE, j.id),
-            { selectedAutocompleteInputType: tO, selectedAutocompleteInputError: tM } = (function (e, t) {
+            { expressionPickerView: t_, shouldHideExpressionPicker: tb, handleOuterClick: tR } = nM(b, eE, j.id),
+            { selectedAutocompleteInputType: tM, selectedAutocompleteInputError: tO } = (function (e, t) {
                 let [n, l] = i.useState({ selectedAutocompleteInputType: null, selectedAutocompleteInputError: !1 }),
                     s = i.useCallback(() => {
                         let e,
@@ -1688,7 +1688,7 @@ let nL = i.memo(
                     n
                 );
             })(e7, eE),
-            { handleAutocompleteVisibilityChange: tL } = nM(b, j.id),
+            { handleAutocompleteVisibilityChange: tL } = nO(b, j.id),
             tw = (function (e) {
                 let { type: t, channelId: n } = e;
                 return (0, ef.bG)([v.A], () => {
@@ -1703,7 +1703,7 @@ let nL = i.memo(
         let tP = null != D,
             tD = (eK && !((eF || eB) && e0)) || (tt && b.submit?.useDisabledStylesOnSubmit),
             tU = null;
-        null != ek ? (tU = k?.(ek, eP, t6.g$)) : (!eK || eq) && (tU = M?.(tP, t6.g$));
+        null != ek ? (tU = k?.(ek, eP, t6.g$)) : (!eK || eq) && (tU = O?.(tP, t6.g$));
         let { isVisible: tV, showsUpsell: tF } = (0, nC.A)({
                 type: b,
                 textValue: a,
@@ -1789,8 +1789,8 @@ let nL = i.memo(
                 activeCommand: ek,
                 pendingReply: D,
                 scheduledMessageDraft: er,
-                selectedAutocompleteInputType: tO,
-                selectedAutocompleteInputError: tM,
+                selectedAutocompleteInputType: tM,
+                selectedAutocompleteInputError: tO,
             }),
             tq = 0 === a.trim().length,
             tX = null != D ? [X, ta].filter(Boolean).join(" ") : X,
@@ -1844,7 +1844,7 @@ let nL = i.memo(
                                 [t6.Wn]: d.Fr,
                                 [t6.Ls]: tQ,
                                 [t6.AH]: t2,
-                                [t6.z3]: null != O,
+                                [t6.z3]: null != M,
                             }),
                             children: [
                                 tQ || t2 ? null : (0, l.jsx)(t8, { bars: tZ }),
@@ -1954,12 +1954,12 @@ let nL = i.memo(
                                     setValue: (e, t) => te?.(null, e, t),
                                     position: et,
                                 }),
-                                (0, l.jsx)(eM, { textValue: a, editorHeight: tC, channelId: j.id }),
+                                (0, l.jsx)(eO, { textValue: a, editorHeight: tC, channelId: j.id }),
                                 ne,
                                 en,
                             ],
                         }),
-                        (0, l.jsx)(g.U, { error: O }),
+                        (0, l.jsx)(g.U, { error: M }),
                         tb
                             ? null
                             : (0, l.jsx)(eC.A, {

@@ -292,7 +292,7 @@ function j(r) {
             (0, e.jsx)(I.D, {
                 "aria-label": X,
                 onClick: P,
-                tabIndex: 0,
+                tabIndex: j ? 0 : -1,
                 children: (0, e.jsx)(g.A, {
                     ...r,
                     className: u,

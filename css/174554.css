@@ -15,8 +15,14 @@
     box-sizing: border-box
 }
 
+.listNavigatorRegion__4e6ce {
+    height: 100%;
+    min-height: 0;
+    position: relative
+}
+
 .enable-forced-colors .wrapper__4e6ce {
     border-inline-end: 1px solid CanvasText
 }
 
-/*# sourceMappingURL=174554.b0ae42b90b58d162.css.map*/
+/*# sourceMappingURL=174554.1422b5ca8e5d41b9.css.map*/
