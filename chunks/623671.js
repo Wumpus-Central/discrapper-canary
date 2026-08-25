@@ -67,18 +67,21 @@ function A(e) {
                 }),
             }),
             null != n &&
-                (0, i.jsx)(d.O, {
-                    href: n.url,
-                    children: (0, i.jsx)(o.m, {
-                        text: n.text,
-                        children: (0, i.jsx)("div", {
-                            className: m.gn,
-                            children: (0, i.jsx)(c.V, {
-                                src: n.src,
-                                alt: n.alt ?? n.text,
-                                size: C,
-                                className: m.fO,
-                                constrain: "width",
+                (0, i.jsx)("div", {
+                    className: m.Mw,
+                    children: (0, i.jsx)(d.O, {
+                        href: n.url,
+                        children: (0, i.jsx)(o.m, {
+                            text: n.text,
+                            children: (0, i.jsx)("div", {
+                                className: m.gn,
+                                children: (0, i.jsx)(c.V, {
+                                    src: n.src,
+                                    alt: n.alt ?? n.text,
+                                    size: C,
+                                    className: m.fO,
+                                    constrain: "width",
+                                }),
                             }),
                         }),
                     }),

@@ -5,5 +5,6 @@ e.exports = {
     sl: "crunchyroll_ef9ae7",
     ZS: "imageContainer_ef9ae7",
     fO: "contentImage_ef9ae7",
+    Mw: "smallImagePosition_ef9ae7",
     gn: "smallImageContainer_ef9ae7",
 };
