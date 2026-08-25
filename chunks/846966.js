@@ -1060,7 +1060,7 @@ function tK(e) {
           });
 }
 var tX = n(115703),
-    tq = n(180419),
+    tq = n(81975),
     tY = n(127982);
 function t$(e) {
     let { invite: t, guild: n, profile: i, onAcceptInvite: l } = e,

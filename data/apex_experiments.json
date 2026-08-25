@@ -5373,22 +5373,6 @@
     }
   },
   {
-    "name": "2026-07-server-tag-game-profiles-desktop",
-    "kind": "user",
-    "defaultConfig": {
-      "enabled": false
-    },
-    "variations": {
-      "0": {
-        "enabled": false,
-        "variant": 0
-      },
-      "1": {
-        "enabled": true
-      }
-    }
-  },
-  {
     "name": "2026-07-shop-this-look",
     "kind": "user",
     "defaultConfig": {
