@@ -15,6 +15,7 @@
   "WIDGET_CONFIGS_FEATURED": "/widget-configs/featured",
   "WIDGET_CONFIGS_DEVELOPER": "/widget-configs/developer",
   "APPLICATION_WIDGET_CONFIGS": "/applications/:param/widget-configs",
+  "APPLICATION_WIDGET_REFRESH": "/applications/:param/widget/refresh",
   "USER_GUILD_PROFILE": "/guilds/:param/profile/:param",
   "USER_CHANNELS": "/users/@me/channels",
   "USER_CHANNELS_BULK_LEAVE": "/users/@me/channels/bulk-leave",

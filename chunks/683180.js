@@ -1,10 +1,11 @@
 "use strict";
-n.d(t, { B9: () => u, Bp: () => p, QI: () => h, SH: () => E, X0: () => _, kg: () => f, pi: () => A });
+n.d(t, { B9: () => u, Bp: () => T, QI: () => I, RZ: () => A, SH: () => E, X0: () => _, kg: () => p, pi: () => h });
 var i = n(17928),
     r = n(808728),
     a = n(71393),
-    s = n(576705),
-    l = n(906786),
+    s = n(576705);
+n(967198);
+var l = n(906786),
     o = n(652215);
 let d = "vibegrations_application_id=",
     c = /^\d{17,20}$/;
@@ -28,6 +29,13 @@ function E(e, t) {
     return null;
 }
 function A(e, t) {
+    return e
+        .filter(
+            (e) => (0, l.i)({ guildId: e.id, location: t }) && !e.features.has(o.GuildFeatures.INTERNAL_EMPLOYEE_ONLY),
+        )
+        .sort((e, t) => (e.id < t.id ? -1 : +(e.id > t.id)));
+}
+function h(e, t) {
     return (
         (0, l.i)({ guildId: e.id, location: t }) &&
         s.A.can(o.xBc.MANAGE_CHANNELS, e) &&
@@ -35,13 +43,13 @@ function A(e, t) {
         !e.features.has(o.GuildFeatures.INTERNAL_EMPLOYEE_ONLY)
     );
 }
-function h(e, t) {
+function I(e, t) {
     let n = (0, i.bG)([s.A], () => s.A.can(o.xBc.MANAGE_CHANNELS, e) && s.A.can(o.xBc.MANAGE_GUILD, e), [e]),
         r = (0, l.f)({ guildId: e.id, location: t }),
         a = e.features.has(o.GuildFeatures.INTERNAL_EMPLOYEE_ONLY);
     return r && n && !a;
 }
-function I(e, t) {
+function f(e, t) {
     return (
         null != e &&
         e.type === o.rbe.GUILD_TEXT &&
@@ -49,11 +57,11 @@ function I(e, t) {
         !t?.features.has(o.GuildFeatures.INTERNAL_EMPLOYEE_ONLY)
     );
 }
-function f(e, t) {
-    return I(e, a.A.getGuild(e?.guild_id)) && (0, l.i)({ guildId: e?.guild_id, location: t });
-}
 function p(e, t) {
+    return f(e, a.A.getGuild(e?.guild_id)) && (0, l.i)({ guildId: e?.guild_id, location: t });
+}
+function T(e, t) {
     let n = (0, i.bG)([a.A], () => a.A.getGuild(e?.guild_id)),
         r = (0, l.f)({ guildId: e?.guild_id, location: t });
-    return I(e, n) && r;
+    return f(e, n) && r;
 }

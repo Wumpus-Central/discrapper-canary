@@ -30,6 +30,8 @@
     --custom-user-profile-banner-height: 0px;
     --custom-user-profile-footer-height: 0px;
     --custom-user-profile-theme-padding: 0;
+    --custom-user-profile-popout-width: 300px;
+    --custom-user-profile-popout-body-padding-inline: 16px;
     --custom-user-profile-base-layer-z-index: 0;
     --custom-user-profile-bottom-layer-z-index: 1;
     --custom-user-profile-middle-layer-z-index: 2;
@@ -108,7 +110,7 @@
     border-radius: var(--radius-sm);
     box-shadow: var(--shadow-border), var(--shadow-high);
     max-height: calc(100vh - 20px);
-    width: 300px
+    width: var(--custom-user-profile-popout-width)
 }
 
 :where(.outer_c0bea0).user-profile-modal {
@@ -270,4 +272,4 @@
     background-color: Canvas
 }
 
-/*# sourceMappingURL=253781.7431a18b595acfb9.css.map*/
+/*# sourceMappingURL=253781.02d443e19c3c3fb6.css.map*/

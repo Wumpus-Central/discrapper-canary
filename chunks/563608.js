@@ -40,30 +40,32 @@ function w(e) {
     });
 }
 function S(e) {
-    let { application: a, rendererProps: i, className: s, onClick: r } = e,
-        { trackUserProfileAction: c } = (0, h.NJ)(),
-        d = i.surfaceConfigs[l.m.MINI_PROFILE],
-        o = a.id;
+    let { application: a, rendererProps: i, className: s, onClick: r, renderText: c } = e,
+        { trackUserProfileAction: d } = (0, h.NJ)(),
+        o = i.surfaceConfigs[l.m.MINI_PROFILE],
+        u = a.id;
     return (!(function (e) {
         let { trackUserProfileAction: a } = (0, h.NJ)(),
             i = n.useRef(!1);
         n.useEffect(() => {
             i.current || (a({ action: "VIEW_APPLICATION_WIDGET_PREVIEW", applicationId: e }), (i.current = !0));
         }, [a, e]);
-    })(o),
-    null == d)
+    })(u),
+    null == o)
         ? null
         : (0, t.jsx)(v.s, {
-              onClick: () => {
-                  c({ action: "PRESS_APPLICATION_WIDGET_PREVIEW", applicationId: o }), r?.();
+              onClick: (e) => {
+                  e.target?.closest("a") == null &&
+                      (d({ action: "PRESS_APPLICATION_WIDGET_PREVIEW", applicationId: u }), r?.());
               },
               "aria-label": a.name,
               children: (0, t.jsx)(M.A.Overlay, {
                   className: A()(b.kL, s),
                   children: (0, t.jsx)(C.kH, {
                       ...i,
+                      renderText: c,
                       surface: l.m.MINI_PROFILE,
-                      surfaceConfig: d,
+                      surfaceConfig: o,
                       header: (0, t.jsx)(w, { applicationName: a.name, applicationIcon: a.getIconURL(16) }),
                   }),
               }),
@@ -74,8 +76,8 @@ var k = i(403581),
     D = i(297264),
     V = i(939249),
     W = i(448766),
-    G = i(326009),
-    T = i(375708),
+    T = i(326009),
+    G = i(375708),
     L = i(892572),
     y = i(564118);
 function F(e) {
@@ -115,14 +117,14 @@ function U(e) {
                                 variant: "text-xs/normal",
                                 color: "text-subtle",
                                 lineClamp: 1,
-                                children: T.intl.string(T.t.KOUwKV),
+                                children: G.intl.string(G.t.KOUwKV),
                             }),
                         ],
                     }),
                 ],
             }),
             null != i.image
-                ? (0, t.jsx)(G.N, { className: A()(y.N4, { [y.kF]: !s }), userId: n, image: i.image })
+                ? (0, t.jsx)(T.N, { className: A()(y.N4, { [y.kF]: !s }), userId: n, image: i.image })
                 : null,
         ],
     });
@@ -139,7 +141,7 @@ function q(e) {
                   (0, t.jsx)("div", {
                       className: y.SS,
                       children: s.map((e, a) =>
-                          (0, t.jsx)(G.N, { className: y.Bi, userId: n, image: e, canAnimate: !1 }, a),
+                          (0, t.jsx)(T.N, { className: y.Bi, userId: n, image: e, canAnimate: !1 }, a),
                       ),
                   }),
               ],
@@ -155,7 +157,7 @@ function z(e) {
                 className: y.VC,
                 variant: "text-xs/medium",
                 color: "text-subtle",
-                children: T.intl.string(T.t.KOUwKV),
+                children: G.intl.string(G.t.KOUwKV),
             }),
         ],
     });
@@ -183,7 +185,7 @@ function J(e) {
             onClick: function () {
                 r({ action: "PRESS_PERSONAL_WIDGET_PREVIEW" }), i?.();
             },
-            "aria-label": T.intl.string(T.t["2sdfeb"]),
+            "aria-label": G.intl.string(G.t["2sdfeb"]),
             children: (0, t.jsx)(M.A.Overlay, {
                 className: A()(y.kL, a),
                 children: (0, t.jsx)(B, { userId: s, widget: l }),
@@ -250,7 +252,7 @@ function $(e) {
             0 === E.length || f.current || (c({ action: "VIEW_GAME_WIDGET_BREADCRUMB" }), (f.current = !0));
         }, [c, E.length]),
         (0, t.jsx)(V.D, {
-            "aria-label": T.intl.string(T.t.JjiwFx),
+            "aria-label": G.intl.string(G.t.JjiwFx),
             onClick: () => {
                 c({ action: "PRESS_GAME_WIDGET_BREADCRUMB" }), l();
             },
@@ -260,7 +262,7 @@ function $(e) {
                 children: [
                     (0, t.jsx)(_.E, {
                         variant: p ? "text-sm/medium" : "text-xs/medium",
-                        children: T.intl.string(T.t.JjiwFx),
+                        children: G.intl.string(G.t.JjiwFx),
                     }),
                     (0, t.jsx)("div", {
                         className: Q.Pt,
@@ -388,5 +390,5 @@ function ee(e) {
             },
             [i, A, V, O, a.id],
         );
-    return 0 === i.length ? null : (0, t.jsx)(E.A, { renderCards: W, heading: T.intl.string(T.t.Y55Tua), onExpand: C });
+    return 0 === i.length ? null : (0, t.jsx)(E.A, { renderCards: W, heading: G.intl.string(G.t.Y55Tua), onExpand: C });
 }

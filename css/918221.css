@@ -54,14 +54,15 @@
 }
 
 .container__62dd3 {
-    background: var(--user-profile-overlay-background);
-    border: 1px solid var(--border-muted);
-    border-radius: var(--radius-lg);
     container-type: inline-size;
     display: flex;
     flex-direction: column;
-    gap: var(--space-8);
-    padding: var(--space-12) var(--space-16) var(--space-16)
+    padding: var(--space-12) var(--space-16) var(--space-16);
+    --custom-application-widget-card-radius: var(--radius-lg);
+    background: var(--user-profile-overlay-background);
+    border: 1px solid var(--border-muted);
+    border-radius: var(--custom-application-widget-card-radius);
+    gap: var(--space-8)
 }
 
 .dragHandleButton__62dd3 {
@@ -227,4 +228,4 @@
     background: var(--user-profile-overlay-background)
 }
 
-/*# sourceMappingURL=918221.87edcdcdb131852c.css.map*/
+/*# sourceMappingURL=918221.a750e459722eecfd.css.map*/

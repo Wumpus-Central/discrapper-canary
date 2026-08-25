@@ -44,11 +44,11 @@
     display: flex;
     flex-direction: column;
     gap: 12px;
-    padding: 4px 16px 8px
+    padding: 4px var(--custom-user-profile-popout-body-padding-inline) 8px
 }
 
 .has-webkit-scrollbar .body__5be3e {
-    padding-inline-end: calc(16px - var(--space-8))
+    padding-inline-end: calc(var(--custom-user-profile-popout-body-padding-inline) - var(--space-8))
 }
 
 .card__5be3e {
@@ -80,4 +80,4 @@
     z-index: var(--custom-user-profile-toast-z-index)
 }
 
-/*# sourceMappingURL=352421.09ed58f39c84c245.css.map*/
+/*# sourceMappingURL=352421.4cc682679c92c315.css.map*/
