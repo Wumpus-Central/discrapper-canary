@@ -9,11 +9,11 @@ var l = s(435558),
     d = s(551965),
     u = s(268246);
 let o = ["escape", "text", "strong", "em", "u", "url", "autolink"],
-    m = (0, d.A)([n().pick(r.Ay.RULES, o), (0, c.A)({ enableBuildOverrides: !1, mustConfirmExternalLink: !0 })]),
+    m = (0, d.A)([n().pick(r.Ay.RULES, o), (0, c.Ay)({ enableBuildOverrides: !1, mustConfirmExternalLink: !0 })]),
     h = t.aV(m),
     p = (0, d.A)([
         n().pick(r.Ay.RULES, o),
-        (0, c.A)({ enableBuildOverrides: !1 }),
+        (0, c.Ay)({ enableBuildOverrides: !1 }),
         { link: { react: (e, a, s) => (0, i.jsx)("span", { className: u.p, children: a(e.content, s) }, s.key) } },
     ]),
     x = t.aV(p);

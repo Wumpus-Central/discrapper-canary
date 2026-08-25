@@ -20,12 +20,12 @@ var l = n(582128),
     E = n(500049),
     I = n(652215),
     y = n(375708);
-let v = {
+let S = {
         ...p.Ay.RULES.commandMention,
         parse: (e, t, n) => ({ content: p.Ay.RULES.commandMention.parse(e, t, n).content }),
     },
-    S = s().pick(
-        (0, g.A)([p.Ay.RULES, { commandMention: v }, (0, f.A)({ enableBuildOverrides: !1, enableEmojiClick: !1 })]),
+    v = s().pick(
+        (0, g.A)([p.Ay.RULES, { commandMention: S }, (0, f.Ay)({ enableBuildOverrides: !1, enableEmojiClick: !1 })]),
         [
             "commandMention",
             "customEmoji",
@@ -43,7 +43,7 @@ let v = {
             "spoiler",
         ],
     ),
-    N = a.aV(S);
+    N = a.aV(v);
 function _(e) {
     let {
             context: t,
@@ -55,9 +55,9 @@ function _(e) {
             launchingComponentId: p,
             submitting: g = !1,
             fetchesApplication: x = !0,
-            onConfirmActivityLaunchChecksAlertOpen: v,
+            onConfirmActivityLaunchChecksAlertOpen: S,
         } = e,
-        S = (0, o.p)(),
+        v = (0, o.p)(),
         N = (function (e) {
             let [t, n] = l.useState(e);
             return (
@@ -80,7 +80,7 @@ function _(e) {
             botUserIdForAppDM: T,
             embeddedActivitiesManager: c.A,
             context: t,
-            locationObject: S.location,
+            locationObject: v.location,
             onActivityItemSelectedProp: (e) => {
                 let { applicationId: t } = e;
                 f && A.k(E.Se.ACTIVITY),
@@ -97,7 +97,7 @@ function _(e) {
             sectionName: s,
             source: _,
             fetchesApplication: x,
-            onConfirmActivityLaunchChecksAlertOpen: v,
+            onConfirmActivityLaunchChecksAlertOpen: S,
         }),
         b = "primary",
         R = a ?? y.intl.string(y.t.zKX8Nu);

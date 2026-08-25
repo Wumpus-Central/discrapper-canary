@@ -1,37 +1,45 @@
-r.r(t),
-    r.d(t, {
-        getOrParseBioAST: () => B,
-        parseBioReact: () => k,
-        parseBioReactWithCachedAST: () => O,
-        parseBioReactWithoutScrolling: () => R,
+let r;
+n.r(t),
+    n.d(t, {
+        getOrParseBioAST: () => O,
+        parseBioReact: () => f,
+        parseBioReactWithCachedAST: () => R,
+        parseBioReactWithoutScrolling: () => g,
     });
-var i = r(435558),
-    n = r.n(i),
-    a = r(635377),
-    u = r.n(a),
-    l = r(478676),
-    o = r.n(l),
-    c = r(807081),
-    s = r(480084),
-    m = r(29814);
-r(46054);
-var p = r(551965);
-let d = (0, p.A)([m.Ay.PROFILE_BIO_RULES, (0, s.A)({ enableBuildOverrides: !1, mustConfirmExternalLink: !0 })]),
-    h = new (u())({ max: 2e3 }),
-    k = c.aV(d),
-    A;
-function B(e) {
-    let t = h.get(e);
-    return null != t || ((t = A(e, !0)), h.set(e, t)), t;
+var i = n(435558),
+    a = n.n(i),
+    l = n(635377),
+    o = n.n(l),
+    u = n(478676),
+    c = n.n(u),
+    s = n(807081),
+    m = n(480084),
+    p = n(29814);
+n(46054);
+var d = n(551965);
+let h = (0, d.A)([
+        p.Ay.PROFILE_BIO_RULES,
+        (0, m.Ay)({ enableBuildOverrides: !1, mustConfirmExternalLink: !0 }),
+        (0, m.r3)(),
+    ]),
+    k = new (o())({ max: 2e3 }),
+    A = { allowGameMentions: !0 },
+    B = s.aV(h);
+function f(e, t, n, r) {
+    return B(e, t, { ...A, ...n }, r);
 }
 function O(e) {
-    if (0 === e.trim().length) return null;
-    let t = B(e);
-    return o().reactFor(o().ruleOutput(d, "react"))(t);
+    let t = k.get(e);
+    return null != t || ((t = r(e, !0)), k.set(e, t)), t;
 }
-let R = c.aV(
-    (0, p.A)([
-        n().omit(d, ["link", "url", "autolink", "customEmoji", "emoji", "commandMention"]),
+function R(e) {
+    if (0 === e.trim().length) return null;
+    let t = O(e);
+    return c().reactFor(c().ruleOutput(h, "react"))(t);
+}
+let g = s.aV(
+    (0, d.A)([
+        a().omit(h, ["link", "url", "autolink", "customEmoji", "emoji", "commandMention"]),
         { emoji: { react: () => null } },
     ]),
 );

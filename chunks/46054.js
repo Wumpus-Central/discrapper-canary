@@ -13,16 +13,16 @@ function d(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
         l = {};
     return (
-        null != e.mention && null != u && (l = { mention: !0 === n.shouldStopPropagation ? (0, r.x)(u) : u }),
+        null != e.mention && null != u && (l = { mention: !0 === n.shouldStopPropagation ? (0, r.xS)(u) : u }),
         (0, o.A)([e, ...t, l])
     );
 }
 let h = { enableBuildOverrides: !1, enableEmojiClick: !0 },
-    m = i().once(() => d(a.Ay.RULES, [(0, r.A)({ enableBuildOverrides: !0 })])),
-    f = i().once(() => i().omit(d(a.Ay.RULES, [(0, r.A)(h)]), "paragraph", "newline"));
+    m = i().once(() => d(a.Ay.RULES, [(0, r.Ay)({ enableBuildOverrides: !0 })])),
+    f = i().once(() => i().omit(d(a.Ay.RULES, [(0, r.Ay)(h)]), "paragraph", "newline"));
 function p() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-    return (0, r.A)({
+    return (0, r.Ay)({
         ...h,
         emojiTooltipPosition: "bottom",
         shouldCloseDefaultModals: !0,
@@ -31,29 +31,31 @@ function p() {
     });
 }
 let g = i().once(() =>
-        d(a.Ay.CHANNEL_TOPIC_RULES, [p(), { codeBlock: { react: a.Ay.RULES.text.react } }], {
+        d(a.Ay.CHANNEL_TOPIC_RULES, [p(), (0, r.r3)(), { codeBlock: { react: a.Ay.RULES.text.react } }], {
             shouldStopPropagation: !0,
         }),
     ),
     x = i().once(() =>
-        d(a.Ay.CHANNEL_TOPIC_RULES, [p({ emojiFocusable: !1 }), { codeBlock: { react: a.Ay.RULES.text.react } }], {
-            shouldStopPropagation: !0,
-        }),
+        d(
+            a.Ay.CHANNEL_TOPIC_RULES,
+            [p({ emojiFocusable: !1 }), (0, r.r3)(), { codeBlock: { react: a.Ay.RULES.text.react } }],
+            { shouldStopPropagation: !0 },
+        ),
     ),
-    A = i().once(() => d(a.Ay.VOICE_CHANNEL_STATUS_RULES, [(0, r.A)({ ...h, enableEmojiClick: !1 })])),
-    C = i().once(() => d(a.Ay.EMBED_TITLE_RULES, [(0, r.A)(h)])),
-    E = i().once(() => i().omit(d(a.Ay.EMBED_TITLE_RULES, [(0, r.A)(h)]), c)),
-    I = i().once(() => d(a.Ay.INLINE_REPLY_RULES, [(0, r.A)(h)])),
-    y = i().once(() => d(a.Ay.GUILD_VERIFICATION_FORM_RULES, [(0, r.A)(h)])),
-    v = i().once(() => {
+    A = i().once(() => d(a.Ay.VOICE_CHANNEL_STATUS_RULES, [(0, r.Ay)({ ...h, enableEmojiClick: !1 })])),
+    C = i().once(() => d(a.Ay.EMBED_TITLE_RULES, [(0, r.Ay)(h)])),
+    E = i().once(() => i().omit(d(a.Ay.EMBED_TITLE_RULES, [(0, r.Ay)(h)]), c)),
+    I = i().once(() => d(a.Ay.INLINE_REPLY_RULES, [(0, r.Ay)(h)])),
+    y = i().once(() => d(a.Ay.GUILD_VERIFICATION_FORM_RULES, [(0, r.Ay)(h)])),
+    S = i().once(() => {
         let e = { ...h, shouldStopPropagation: !0 };
-        return d(a.Ay.GUILD_EVENT_RULES, [(0, r.A)(e)], e);
+        return d(a.Ay.GUILD_EVENT_RULES, [(0, r.Ay)(e)], e);
     }),
-    S = i().once(() => i().omit(v(), "subtext")),
-    N = i().once(() => d(a.Ay.AUTO_MODERATION_SYSTEM_MESSAGE_RULES, [(0, r.A)(h)])),
+    v = i().once(() => i().omit(S(), "subtext")),
+    N = i().once(() => d(a.Ay.AUTO_MODERATION_SYSTEM_MESSAGE_RULES, [(0, r.Ay)(h)])),
     _ = i().once(() =>
         i().omit(
-            d(a.Ay.RULES, [(0, r.A)(h)]),
+            d(a.Ay.RULES, [(0, r.Ay)(h)]),
             "paragraph",
             "newline",
             "strong",
@@ -70,12 +72,12 @@ let g = i().once(() =>
     j = i().once(() => s.aV(m())),
     b = i().once(() => s.aV(g())),
     R = i().once(() => s.aV(x())),
-    M = i().once(() => s.aV(A())),
-    O = i().once(() => s.aV(C())),
+    O = i().once(() => s.aV(A())),
+    M = i().once(() => s.aV(C())),
     L = i().once(() => s.aV(E())),
     w = i().once(() => s.aV(I())),
     k = i().once(() => s.aV(y())),
-    P = i().once(() => s.aV(v())),
+    P = i().once(() => s.aV(S())),
     D = i().once(() => s.aV(N())),
     U = i().once(() => s.aV(f())),
     G = i().once(() => s.X(m())),
@@ -86,16 +88,16 @@ let g = i().once(() =>
     W = i().once(() => s.X(N())),
     K = {
         combineAndInjectMentionRule: d,
-        createReactRules: r.A,
+        createReactRules: r.Ay,
         defaultReactRuleOptions: h,
         get defaultRules() {
             return m();
         },
         get guildEventRules() {
-            return v();
+            return S();
         },
         get guildEventLocationRules() {
-            return S();
+            return v();
         },
         get notifCenterV2MessagePreviewRules() {
             return _();
@@ -107,17 +109,15 @@ let g = i().once(() =>
             for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
             return j()(...t);
         },
-        parseTopic: (e, t, n, l) =>
-            b()(e, t, { allowLinks: !0, allowGameMentions: !0, shouldFetchGameMentionData: !0, ...n }, l),
-        parseTruncatedTopic: (e, t, n, l) =>
-            R()(e, t, { allowLinks: !0, allowGameMentions: !0, shouldFetchGameMentionData: !0, ...n }, l),
+        parseTopic: (e, t, n, l) => b()(e, t, { allowLinks: !0, allowGameMentions: !0, ...n }, l),
+        parseTruncatedTopic: (e, t, n, l) => R()(e, t, { allowLinks: !0, allowGameMentions: !0, ...n }, l),
         parseVoiceChannelStatus: function () {
             for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
-            return M()(...t);
+            return O()(...t);
         },
         parseEmbedTitle: function () {
             for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
-            return O()(...t);
+            return M()(...t);
         },
         parseEmbedTitleWithoutLinks: function () {
             for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];

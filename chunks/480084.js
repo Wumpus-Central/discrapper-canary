@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => eR, x: () => eT });
+n.d(t, { r3: () => eS, Ay: () => eL, xS: () => eR });
 var l = n(477900),
     i = n(582128),
     s = n(503698),
@@ -20,7 +20,7 @@ var l = n(477900),
     E = n(534890),
     I = n(375708),
     y = n(879386);
-let v = function () {
+let S = function () {
     return (0, l.jsx)(E.ChatIcon, {
         size: "md",
         color: "currentColor",
@@ -28,15 +28,15 @@ let v = function () {
         "aria-label": I.intl.string(I.t.BAB0yK),
     });
 };
-var S = n(112107),
+var v = n(112107),
     N = n(930101),
     _ = n(976860),
     T = n(302031),
     j = n(157941),
     b = n(696451),
     R = n(317525),
-    M = n(71393),
-    O = n(957565),
+    O = n(71393),
+    M = n(957565),
     L = n(143145),
     w = n(785562),
     k = n(192308),
@@ -76,7 +76,7 @@ var z = n(380610),
 function ef(e) {
     let { url: t } = e,
         n = i.useCallback(() => {
-            (0, O.C)(t, () =>
+            (0, M.C)(t, () =>
                 (0, X.P0)({ id: "experiment-link-copied", message: "Copied experiment link", type: Q.Ck.SUCCESS }),
             );
         }, [t]);
@@ -178,27 +178,35 @@ let ex = i.lazy(() =>
             .then((e) => ({ default: e.DevToolsLinkEmbed })),
     ),
     eC = RegExp("^" + Y.st.source, Y.st.flags);
-var eE = n(266645),
-    eI = n(881140),
-    ey = n(746080),
-    ev = n(165648),
-    eS = n(969490);
-let eN = { display: "inline" };
-function e_(e) {
+var eE = n(569926),
+    eI = n(266645);
+function ey(e) {
+    let { gameId: t, authorId: n } = e;
+    return (0, eE.I)(t), (0, l.jsx)(eI.A, { gameId: t, authorId: n });
+}
+function eS() {
+    return { gameMention: { react: (e, t, n) => (0, l.jsx)(ey, { gameId: e.gameId, authorId: n.authorId }, n.key) } };
+}
+var ev = n(881140),
+    eN = n(746080),
+    e_ = n(165648),
+    eT = n(969490);
+let ej = { display: "inline" };
+function eb(e) {
     return e.stopPropagation();
 }
-function eT(e) {
+function eR(e) {
     return {
         ...e,
-        react: (t, n, i) => (0, l.jsx)("span", { style: eN, onClick: e_, children: e.react(t, n, i) }, i.key),
+        react: (t, n, i) => (0, l.jsx)("span", { style: ej, onClick: eb, children: e.react(t, n, i) }, i.key),
     };
 }
-function ej(e) {
+function eO(e) {
     let { text: t } = e,
         [n, s] = i.useState(!1);
     return (0, l.jsx)(o.D, {
         onClick: function () {
-            (0, O.C)(
+            (0, M.C)(
                 t,
                 () => s(!0),
                 () => s(!1),
@@ -209,15 +217,15 @@ function ej(e) {
             : (0, l.jsx)(c.CopyIcon, { size: "xs", color: "currentColor" }),
     });
 }
-let eb = {
+let eM = {
     blockQuote: {
         react: (e, t, n) =>
             (0, l.jsxs)(
                 "div",
                 {
-                    className: ev.h,
+                    className: e_.h,
                     children: [
-                        (0, l.jsx)("div", { className: ev.r }),
+                        (0, l.jsx)("div", { className: e_.r }),
                         (0, l.jsx)("blockquote", { children: t(e.content, n) }),
                     ],
                 },
@@ -231,22 +239,22 @@ let eb = {
     codeBlock: {
         react(e, t, i) {
             function s() {
-                return (0, l.jsx)("code", { className: r()(eS.kw, "hljs"), children: (0, L.t)(e, t, i) });
+                return (0, l.jsx)("code", { className: r()(eT.kw, "hljs"), children: (0, L.t)(e, t, i) });
             }
             return (0, l.jsx)(
                 "pre",
                 {
                     children: (0, l.jsxs)("div", {
-                        className: ev.Hy,
+                        className: e_.Hy,
                         children: [
-                            O.p5
-                                ? (0, l.jsx)("div", { className: ev.lB, children: (0, l.jsx)(ej, { text: e.content }) })
+                            M.p5
+                                ? (0, l.jsx)("div", { className: e_.lB, children: (0, l.jsx)(eO, { text: e.content }) })
                                 : null,
                             (0, l.jsx)(j.l, {
                                 location: "MarkupReactRules",
                                 code: e.content,
                                 lang: e.lang,
-                                className: r()(eS.kw, "hljs"),
+                                className: r()(eT.kw, "hljs"),
                                 children: (0, l.jsx)(f.c2, {
                                     createPromise: () =>
                                         Promise.all([n.e("818449"), n.e("175134")]).then(n.bind(n, 981776)),
@@ -259,7 +267,7 @@ let eb = {
                                             return null == n
                                                 ? s()
                                                 : (0, l.jsx)("code", {
-                                                      className: r()(eS.kw, "hljs", n.language),
+                                                      className: r()(eT.kw, "hljs", n.language),
                                                       dangerouslySetInnerHTML: { __html: n.value },
                                                   });
                                         }
@@ -295,7 +303,7 @@ let eb = {
     },
     soundboard: {
         react: (e, t, n) =>
-            (0, l.jsx)(S.Ay, {
+            (0, l.jsx)(v.Ay, {
                 channelId: e.channelId,
                 messageId: e.messageId,
                 soundId: e.soundId,
@@ -312,18 +320,18 @@ let eb = {
                           role: "link",
                           onClick: function () {
                               !(function (e, t, n) {
-                                  let l = M.A.getGuild(e);
+                                  let l = O.A.getGuild(e);
                                   if (null != e && null != l)
                                       switch (t) {
                                           case "home":
                                           case "guide":
-                                              i(ey.VV.GUILD_HOME);
+                                              i(eN.VV.GUILD_HOME);
                                               break;
                                           case "browse":
-                                              i(ey.VV.CHANNEL_BROWSER);
+                                              i(eN.VV.CHANNEL_BROWSER);
                                               break;
                                           case "customize":
-                                              i(ey.VV.CUSTOMIZE_COMMUNITY);
+                                              i(eN.VV.CUSTOMIZE_COMMUNITY);
                                               break;
                                           case "linked-roles":
                                               if (null != n) {
@@ -373,7 +381,7 @@ let eb = {
                 s = null == e.start ? void 0 : (e.start + (e.items.length - 1)).toString().length;
             return (0, a.reactElement)(i, `${n.key}`, {
                 start: e.start,
-                className: n.formatInline ? ev.tZ : null,
+                className: n.formatInline ? e_.tZ : null,
                 style: { "--totalCharacters": s, "--olCounterStart": null == e.start ? void 0 : e.start - 1 },
                 children: e.items.map((e, i) => {
                     let s = (0, a.reactElement)("span", `${n.key}-${i}-innerSpan`, { children: t(e, n) });
@@ -389,24 +397,24 @@ let eb = {
             let i = (0, a.reactElement)("span", `${n.key}-innerSpan`, { children: t(e.content, n) });
             return (0, a.reactElement)("h" + e.level, n?.key != null ? `${n.key}` : null, {
                 children: [i, (0, l.jsx)(d.A, { children: "," }, "screen-reader-pause")],
-                className: n.formatInline ? ev.tZ : null,
+                className: n.formatInline ? e_.tZ : null,
             });
         },
     },
     guild: {
         react: (e, t, n) => {
-            let i = M.A.getGuild(e.guildId);
+            let i = O.A.getGuild(e.guildId);
             return (0, l.jsx)(x.A, { guild: i, children: (0, L.t)(e, t, n) }, n.key);
         },
     },
     channel: { react: (e, t, n) => (0, l.jsx)(g.A, { iconType: e.iconType, children: (0, L.t)(e, t, n) }, n.key) },
-    message: { react: (e, t, n) => (0, l.jsx)(v, {}, n.key) },
+    message: { react: (e, t, n) => (0, l.jsx)(S, {}, n.key) },
     subtext: {
         react: (e, t, n) => {
             let l = (0, a.reactElement)("span", `${n.key}-innerSpan`, { children: t(e.content, n) });
             return (0, a.reactElement)("small", n?.key != null ? `${n.key}` : null, {
                 children: l,
-                className: n.formatInline ? ev.tZ : null,
+                className: n.formatInline ? e_.tZ : null,
             });
         },
     },
@@ -417,14 +425,14 @@ let eb = {
                 : (0, l.jsx)("span", { children: t(e.content, n) }, n.key),
     },
 };
-function eR(e) {
+function eL(e) {
     let { shouldStopPropagation: t } = e;
     function s(e) {
-        return !0 === t ? eT(e) : e;
+        return !0 === t ? eR(e) : e;
     }
     return {
-        ...eb,
-        link: (0, eI.A)(e),
+        ...eM,
+        link: (0, ev.A)(e),
         devLink: {
             match: (e, t) => (t.allowLinks && t.allowDevLinks ? eC.exec(e) : null),
             parse: (e, t) => ({ target: e, type: "devLink" }),
@@ -555,15 +563,11 @@ function eR(e) {
                 );
             },
         },
-        soundboard: s(eb.soundboard),
+        soundboard: s(eM.soundboard),
         gameMention: {
             react(e, t, n) {
                 let { gameId: i } = e;
-                return (0, l.jsx)(
-                    eE.A,
-                    { gameId: i, authorId: n.authorId, shouldFetchGameMentionData: n.shouldFetchGameMentionData },
-                    n.key,
-                );
+                return (0, l.jsx)(eI.A, { gameId: i, authorId: n.authorId }, n.key);
             },
         },
     };
