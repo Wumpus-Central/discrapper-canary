@@ -34,12 +34,10 @@ var i = n(192308),
 let U = () => Promise.resolve();
 U = n(113673).playApplication;
 let w = Object.freeze({
-        ...Object.freeze({
-            [_.AT.USER]: _.rD.USER,
-            [_.AT.TEXT_CHANNEL]: _.rD.TEXT_CHANNEL,
-            [_.AT.VOICE_CHANNEL]: _.rD.VOICE_CHANNEL,
-            [_.AT.GUILD]: _.rD.GUILD,
-        }),
+        [_.AT.USER]: _.rD.USER,
+        [_.AT.TEXT_CHANNEL]: _.rD.TEXT_CHANNEL,
+        [_.AT.VOICE_CHANNEL]: _.rD.VOICE_CHANNEL,
+        [_.AT.GUILD]: _.rD.GUILD,
         [_.AT.GAME_PROFILE]: _.rD.GAME_PROFILE,
     }),
     G = RegExp(`^${_.AT.USER}|${_.AT.TEXT_CHANNEL}|${_.AT.VOICE_CHANNEL}|\\${_.AT.GUILD}|\\${_.AT.GAME_PROFILE}`);
