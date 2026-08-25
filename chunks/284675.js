@@ -9010,13 +9010,7 @@ let r7 = {
         return (t) => (0, r.jsx)(e, { ...t, detected: { applicationId: "123456789", name: "Test Game" } });
     },
     AppealIngestionModal: async () => {
-        let { default: e } = await Promise.all([
-            a.e("493057"),
-            a.e("690700"),
-            a.e("223411"),
-            a.e("292030"),
-            a.e("51471"),
-        ]).then(a.bind(a, 550560));
+        let { default: e } = await Promise.all([a.e("742978"), a.e("292030"), a.e("51471")]).then(a.bind(a, 550560));
         return (t) => (0, r.jsx)(e, { ...t, classificationId: "123456789" });
     },
     CreateTagModal: async () => {

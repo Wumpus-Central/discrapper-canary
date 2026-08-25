@@ -131,8 +131,6 @@ let eI = l.memo(function (e) {
                         n.e("926132"),
                         n.e("146652"),
                         n.e("893190"),
-                        n.e("708757"),
-                        n.e("585968"),
                         n.e("189673"),
                         n.e("229787"),
                         n.e("882073"),
@@ -435,7 +433,7 @@ var eK = n(661531),
     e9 = n(280056),
     e2 = n(204651),
     e5 = n(116108);
-function e6(e) {
+function e3(e) {
     let { width: t = 24, height: n = 24, isBadged: s = !1 } = e,
         [a] = l.useState(() => (0, e1.A)());
     return (0, i.jsxs)("svg", {
@@ -456,18 +454,18 @@ function e6(e) {
         ],
     });
 }
-function e3(e) {
+function e4(e) {
     let { className: t, numRequestToSpeak: n } = e,
         l = n > 0;
     return (0, i.jsxs)("div", {
         className: a()(e5.v, t),
         children: [
-            (0, i.jsx)(e6, { isBadged: l }),
+            (0, i.jsx)(e3, { isBadged: l }),
             l ? (0, i.jsx)(Z.E, { className: e5.F, variant: "text-xs/semibold", children: n > 99 ? "99+" : n }) : null,
         ],
     });
 }
-function e4(e) {
+function e6(e) {
     let {
             toggleRequestToSpeakSidebar: t,
             showRequestToSpeakSidebar: n,
@@ -483,7 +481,7 @@ function e4(e) {
         onClick: c,
         label: n ? ep.intl.string(ep.t.gKGz7A) : ep.intl.string(ep.t.ImQ4dW),
         className: s,
-        iconComponent: () => (0, i.jsx)(e3, { numRequestToSpeak: a, className: s }),
+        iconComponent: () => (0, i.jsx)(e4, { numRequestToSpeak: a, className: s }),
         ...o,
     });
 }
@@ -514,7 +512,7 @@ function tn(e) {
             !l && d
                 ? (0, i.jsx)("div", {
                       className: a()(tt.x6, { [tt.vc]: c }),
-                      children: (0, i.jsx)(e4, {
+                      children: (0, i.jsx)(e6, {
                           toggleRequestToSpeakSidebar: function () {
                               c && eY.A.updateChatOpen(t.id, !1), (0, j.X)(r, j.O.OPEN_REQUEST_TO_SPEAK_SIDEBAR), n();
                           },
@@ -813,8 +811,6 @@ let tj = l.memo(function (e) {
                             n.e("926132"),
                             n.e("146652"),
                             n.e("893190"),
-                            n.e("708757"),
-                            n.e("585968"),
                             n.e("189673"),
                             n.e("229787"),
                             n.e("882073"),
@@ -1116,8 +1112,6 @@ let tQ = l.memo(function (e) {
                                 n.e("926132"),
                                 n.e("146652"),
                                 n.e("893190"),
-                                n.e("708757"),
-                                n.e("585968"),
                                 n.e("189673"),
                                 n.e("229787"),
                                 n.e("882073"),
@@ -1200,7 +1194,7 @@ var t$ = n(847374),
     t9 = n(636585),
     t2 = n(486020),
     t5 = n(799656);
-function t6(e) {
+function t3(e) {
     let { channel: t, speaker: s, className: r } = e,
         o = l.useRef(null),
         { newestAnalyticsLocation: c } = (0, g.Ay)(),
@@ -1217,8 +1211,6 @@ function t6(e) {
                     n.e("926132"),
                     n.e("146652"),
                     n.e("893190"),
-                    n.e("708757"),
-                    n.e("585968"),
                     n.e("189673"),
                     n.e("229787"),
                     n.e("882073"),
@@ -1285,18 +1277,18 @@ function t6(e) {
             }),
     });
 }
-function t3(e) {
+function t4(e) {
     let { speakers: t, channel: n } = e;
     return (0, i.jsx)(t9.A, {
         className: t5.z,
         guildId: n.guild_id,
         users: t,
         max: 10,
-        renderUser: (e, t, l) => (0, i.jsx)(t6, { channel: n, speaker: e, className: t }, l),
+        renderUser: (e, t, l) => (0, i.jsx)(t3, { channel: n, speaker: e, className: t }, l),
         renderMoreUsers: (e, t, n) => (0, i.jsx)("div", { className: a()(t5.$U, t), children: e }, n),
     });
 }
-var t4 = n(784269);
+var t6 = n(784269);
 let t7 = l.memo(function (e) {
     let {
         label: t,
@@ -1310,21 +1302,21 @@ let t7 = l.memo(function (e) {
     } = e;
     return (0, i.jsxs)(W.D, {
         onClick: l,
-        className: a()(t4.kL, s),
+        className: a()(t6.kL, s),
         children: [
             null == o
-                ? (0, i.jsx)(eF.n, { size: "custom", color: "currentColor", width: 20, height: 20, className: t4.Vo })
+                ? (0, i.jsx)(eF.n, { size: "custom", color: "currentColor", width: 20, height: 20, className: t6.Vo })
                 : (0, i.jsx)(eH.MicrophoneIcon, {
                       size: "custom",
                       color: "currentColor",
                       width: 20,
                       height: 20,
-                      className: t4.Vo,
+                      className: t6.Vo,
                   }),
             (0, i.jsxs)(Z.E, {
                 color: "text-strong",
                 variant: "text-md/semibold",
-                className: t4.Qq,
+                className: t6.Qq,
                 children: [t, " \u2014 ", n],
             }),
             r &&
@@ -1332,14 +1324,14 @@ let t7 = l.memo(function (e) {
                 null != o &&
                 o.length > 0 &&
                 (0, i.jsxs)(i.Fragment, {
-                    children: [(0, i.jsx)(t3, { channel: c, speakers: o }), d && (0, i.jsx)(tJ.Ay, {})],
+                    children: [(0, i.jsx)(t4, { channel: c, speakers: o }), d && (0, i.jsx)(tJ.Ay, {})],
                 }),
             (0, i.jsx)(t$.a, {
                 size: "custom",
                 color: "currentColor",
                 width: 20,
                 height: 20,
-                className: a()(t4.mw, { [t4.VU]: r }),
+                className: a()(t6.mw, { [t6.VU]: r }),
             }),
         ],
     });
@@ -2024,14 +2016,14 @@ function n2(e) {
     );
 }
 var n5 = n(104171),
-    n6 = n(81466),
-    n3 = n(823508);
-function n4(e) {
+    n3 = n(81466),
+    n4 = n(823508);
+function n6(e) {
     let { className: t, guildId: l } = e,
-        s = (0, n3.A)();
+        s = (0, n4.A)();
     return (0, i.jsx)(nS.A, {
         className: t,
-        icon: (0, i.jsx)(n6.CalendarIcon, { size: "custom", color: "currentColor", height: 20, width: 20 }),
+        icon: (0, i.jsx)(n3.CalendarIcon, { size: "custom", color: "currentColor", height: 20, width: 20 }),
         color: eK.A.unsafe_rawColors.BRAND_500.css,
         title: ep.intl.string(ep.t["60lJ0C"]),
         description: ep.intl.string(ep.t["EYn7/y"]),
@@ -2164,7 +2156,7 @@ function it(e) {
                     }),
                     d ? null : (0, i.jsx)(nC.A, { channelId: t.id, showDismiss: !1 }),
                     s ? (0, i.jsx)(nT, { className: n7.fN, channel: t }) : null,
-                    c ? (0, i.jsx)(n4, { className: n7.fN, guildId: r }) : null,
+                    c ? (0, i.jsx)(n6, { className: n7.fN, guildId: r }) : null,
                     s ? (0, i.jsx)(n8, { className: a()({ [n7.fN]: !0 }), onClick: n }) : null,
                     (0, i.jsx)(ie, { channel: t }),
                 ],

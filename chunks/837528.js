@@ -1,12 +1,12 @@
 n.d(t, {
     U_: () => J,
-    G8: () => B,
+    G8: () => F,
     I: () => M,
     H9: () => R,
     VL: () => U,
     T0: () => L,
     UY: () => w,
-    yp: () => F,
+    yp: () => B,
     Yq: () => D,
     r4: () => G,
     Ck: () => z,
@@ -128,7 +128,6 @@ function U(e, t, s, o) {
                             n.e("622936"),
                             n.e("216947"),
                             n.e("686117"),
-                            n.e("834552"),
                             n.e("571210"),
                             n.e("88342"),
                             n.e("311802"),
@@ -136,7 +135,6 @@ function U(e, t, s, o) {
                             n.e("235313"),
                             n.e("436564"),
                             n.e("603998"),
-                            n.e("95340"),
                             n.e("458273"),
                             n.e("820930"),
                             n.e("26001"),
@@ -214,7 +212,7 @@ function V(e, t) {
         [i, n],
     );
 }
-function F(e) {
+function B(e) {
     let { groupId: t, message: n, defaultValue: i } = e,
         s = n.author.id,
         a = `${t}:${s}`,
@@ -229,7 +227,7 @@ function F(e) {
         }, [a]);
     return { hasHovered: r.current, isHovered: o, handleMouseEnter: d, handleMouseLeave: u };
 }
-function B(e, t) {
+function F(e, t) {
     let [n, i] = l.useState(!1),
         [a, r] = l.useState(!1);
     return {
