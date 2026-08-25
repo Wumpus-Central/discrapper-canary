@@ -61,7 +61,6 @@ let I = new h(a.h, {
                 name: e.name,
                 executables: (e.executables ?? []).map(l.lg),
                 aliases: e.aliases ?? [],
-                icon: e.icon_hash ?? void 0,
                 thirdPartySkus: e.third_party_skus ?? [],
             });
         (i = void 0), (E = Date.now()), (A = !0);
