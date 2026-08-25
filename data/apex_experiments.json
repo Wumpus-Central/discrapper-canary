@@ -5357,22 +5357,6 @@
     }
   },
   {
-    "kind": "user",
-    "name": "2026-07-rtc-panel-game-card",
-    "defaultConfig": {
-      "improvedGameCard": false
-    },
-    "variations": {
-      "0": {
-        "enabled": false,
-        "variant": 0
-      },
-      "1": {
-        "improvedGameCard": true
-      }
-    }
-  },
-  {
     "name": "2026-07-shop-this-look",
     "kind": "user",
     "defaultConfig": {
