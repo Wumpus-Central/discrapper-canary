@@ -58,6 +58,7 @@ function y(e) {
             direction: "vertical",
             gap: 12,
             padding: { top: 16, right: 24, bottom: 24, left: 24 },
+            className: v.Zp,
             children: [
                 (0, l.jsxs)(c.B, {
                     direction: "horizontal",
