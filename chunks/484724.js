@@ -53,12 +53,16 @@ function v(e) {
               guildScheduledEvent: S,
               isMember: R,
               onAcceptInstantInvite: function () {
-                  if ((0, d.g)({ guildId: n, guild: y, isMember: R, analyticsLocations: T }) === d.W.PROCEED) {
-                      if ((0, c.V)(n)) return void (0, o.Ze)(n);
-                      a.A.joinGuild(n, { source: C.Q4z.GUILD_EVENT_EMBED }).catch((e) => {
-                          e.body?.code === C.t02.UNKNOWN_GUILD && (0, u.showInaccessibleLinkModal)({ kind: "channel" });
-                      });
+                  function e() {
+                      (0, c.V)(n)
+                          ? (0, o.Ze)(n)
+                          : a.A.joinGuild(n, { source: C.Q4z.GUILD_EVENT_EMBED }).catch((e) => {
+                                e.body?.code === C.t02.UNKNOWN_GUILD &&
+                                    (0, u.showInaccessibleLinkModal)({ kind: "channel" });
+                            });
                   }
+                  (0, d.g)({ guildId: n, guild: y, isMember: R, analyticsLocations: T, onGateConfirm: e }) ===
+                      d.W.PROCEED && e();
               },
               onTransitionToInviteChannel: function () {
                   (0, c.V)(n)
