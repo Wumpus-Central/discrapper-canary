@@ -186,8 +186,8 @@ function Y(e) {
         children: s,
     });
 }
-var K = n(116833),
-    q = n(704640),
+var q = n(116833),
+    K = n(704640),
     Q = n(425713),
     Z = n(642481),
     J = n(720879),
@@ -208,10 +208,10 @@ let ea = function (e) {
         f = ee.VD[t].nameUnformattedNitro,
         E = c.intl.string(f).toLocaleUpperCase(),
         m = ee.VD[t].rarity,
-        g = (0, q.A)(t),
+        g = (0, K.A)(t),
         p = (0, Q.I)(t).standard;
     (0, l.useEffect)(() => {
-        K.m[K.DynamicGraphicComponent.BADGE_IMAGE_WITH_PROGRESS_CIRCLE](), (new Image().src = p);
+        q.m[q.DynamicGraphicComponent.BADGE_IMAGE_WITH_PROGRESS_CIRCLE](), (new Image().src = p);
     }, [p]);
     let b = (0, l.useCallback)(() => {
         n?.(et.i.USER_DISMISS);
@@ -238,7 +238,7 @@ let ea = function (e) {
         size: "lg",
         graphic: {
             type: "dynamic",
-            component: K.DynamicGraphicComponent.BADGE_IMAGE_WITH_PROGRESS_CIRCLE,
+            component: q.DynamicGraphicComponent.BADGE_IMAGE_WITH_PROGRESS_CIRCLE,
             aspectRatio: "6/4",
             props: { src: p, alt: E, progressCircleText: i, progressCirclePercent: d, progressCircleUrgency: o },
         },
@@ -398,25 +398,25 @@ function ey(e) {
         $ = (0, ex.CC)(V?.premiumType, ee.PremiumTypes.TIER_2),
         F = (0, T.J9)({ location: "UserProfileBadgeList" }),
         W = (0, C.d)({ location: "UserProfileBadgeList" }),
-        K = (function (e) {
+        q = (function (e) {
             let { location: t } = e;
             return D.useConfig({ location: t }).enabled;
         })({ location: "UserProfileBadgeList" });
     l.useEffect(() => {
-        (F || K) && s?.userId != null && !S.Ay.hasCatalogFor(s.userId) && (0, v.RS)(s.userId);
-    }, [F, K, s?.userId]);
-    let q = s?.userId,
+        (F || q) && s?.userId != null && !S.Ay.hasCatalogFor(s.userId) && (0, v.RS)(s.userId);
+    }, [F, q, s?.userId]);
+    let K = s?.userId,
         Q = (0, g.bG)([S.Ay], () => {
-            if (!K || null == q) return null;
+            if (!q || null == K) return null;
             let e = {};
             for (let n of t) {
                 let t = (0, j.w0)(n.id);
                 if (null == t) continue;
-                let a = S.Ay.getBadgeById(t, q)?.simple_icon_url;
+                let a = S.Ay.getBadgeById(t, K)?.simple_icon_url;
                 null != a && (e[n.id] = a);
             }
             return e;
-        }, [K, q, t]),
+        }, [q, K, t]),
         Z = s?.userId === V?.id,
         J = Z && F && W && null != E,
         et = J && M;
@@ -426,7 +426,7 @@ function ey(e) {
     let er = f((0, eT.AP)(V?.id ?? null)).some((e) => e.id === em.A.ORB_PROFILE_BADGE),
         es = (0, a.jsx)("div", {
             ref: O,
-            className: m()(eD.kL, J && eD.Tx, n),
+            className: m()(eD.kL, W && eD.Yq, J && eD.Tx, n),
             "aria-label": c.intl.string(c.t.VWV0y5),
             role: "group",
             ...(J ? { onClick: () => el(!et) } : null),

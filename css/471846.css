@@ -1931,21 +1931,24 @@
 
 .container__8061a {
     align-items: center;
-    background: var(--background-mod-subtle);
-    border: 1px solid var(--border-muted);
-    border-radius: var(--radius-sm);
     box-sizing: border-box;
     display: flex;
     flex-wrap: wrap;
     gap: 2px;
     margin: 1px 0;
-    padding: 1px 3px;
     width: -moz-fit-content;
     width: fit-content
 }
 
 .container__8061a:empty {
     visibility: hidden
+}
+
+.managed__8061a {
+    background: var(--background-mod-subtle);
+    border: 1px solid var(--border-muted);
+    border-radius: var(--radius-sm);
+    padding: 1px 3px
 }
 
 .customizable__8061a {
@@ -1989,4 +1992,4 @@
     object-fit: contain
 }
 
-/*# sourceMappingURL=471846.23b485082e6af404.css.map*/
+/*# sourceMappingURL=471846.1a718683c8c46350.css.map*/
