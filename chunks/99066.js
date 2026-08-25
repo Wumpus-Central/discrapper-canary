@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { VS: () => u, dN: () => c, sE: () => _, t4: () => o });
+n.d(t, { VS: () => d, sE: () => c, t4: () => o });
 var i = n(600975),
     r = n(945810),
     a = n(519059),
@@ -20,22 +20,13 @@ let l = (0, r.mj)({
             { id: 16, label: "ML model V3 - Nvidia small boost", config: {} },
             { id: 17, label: "ML model V3 - Nvidia big boost", config: {} },
         ],
-    }),
-    d = (0, r.mj)({
-        name: "2026-07-hotwheels-clickable-game-icon",
-        kind: "user",
-        defaultConfig: { enabled: !1 },
-        variations: { 1: { enabled: !0 } },
     });
-function c(e) {
-    return d.useConfig({ location: e }).enabled;
-}
-function u(e) {
+function d(e) {
     let { enabled: t } = l.getConfig({ location: e }),
         n = (0, a.HF)(e);
     return t || n;
 }
-function _(e) {
+function c(e) {
     let { enabled: t, impressionCappingEnabled: n } = l.getConfig({ location: e });
     return t && !0 === n;
 }

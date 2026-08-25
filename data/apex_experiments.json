@@ -5058,22 +5058,6 @@
     }
   },
   {
-    "name": "2026-07-hotwheels-clickable-game-icon",
-    "kind": "user",
-    "defaultConfig": {
-      "enabled": false
-    },
-    "variations": {
-      "0": {
-        "enabled": false,
-        "variant": 0
-      },
-      "1": {
-        "enabled": true
-      }
-    }
-  },
-  {
     "name": "2026-07-invite-server-liveliness",
     "kind": "installation",
     "defaultConfig": {
