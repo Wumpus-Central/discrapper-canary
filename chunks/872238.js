@@ -678,6 +678,7 @@ function eR(e) {
                     targetElementRef: d,
                     animation: T.Y.Animation.FADE,
                     position: "bottom",
+                    autoInvert: !1,
                     spacing: 4,
                     align: "left",
                     renderPopout: (e) => {
