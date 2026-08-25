@@ -129,8 +129,8 @@
     cursor: pointer
 }
 
-.avatarButton__38ccf:hover .videoOverlay__38ccf,
-.keyboard-mode .avatarButton__38ccf:focus-within .videoOverlay__38ccf {
+.avatarButton__38ccf:not(.trigger__38ccf):hover .videoOverlay__38ccf,
+.keyboard-mode .avatarButton__38ccf:not(.trigger__38ccf):focus-within .videoOverlay__38ccf {
     opacity: 1;
     pointer-events: auto
 }
@@ -245,4 +245,4 @@
     position: absolute
 }
 
-/*# sourceMappingURL=93656.5feb1255c0c42bc5.css.map*/
+/*# sourceMappingURL=93656.7cf14ed4b756553f.css.map*/
