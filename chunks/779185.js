@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { AZ: () => N, Ay: () => D, Qn: () => R, cR: () => O }), n(321073);
+n.d(t, { AZ: () => N, Ay: () => D, Qn: () => O, cR: () => R }), n(321073);
 var i,
     r = n(284009),
     a = n.n(r),
@@ -50,11 +50,11 @@ var h = n(280450),
 function C(e) {
     return 0 === e.type || 3 === e.type;
 }
-function R(e) {
+function O(e) {
     return 1 === e.type;
 }
-function O(e) {
-    return C(e) ? e.message.nonce : R(e) ? e.message.messageId : e.message.data.id;
+function R(e) {
+    return C(e) ? e.message.nonce : O(e) ? e.message.messageId : e.message.data.id;
 }
 let L = [+f.A.Millis.MINUTE, 5 * f.A.Millis.MINUTE];
 class y extends T.A {

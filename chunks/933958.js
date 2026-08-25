@@ -1,6 +1,6 @@
 "use strict";
 let i;
-n.d(t, { Am: () => O, Ay: () => et }), n(321073);
+n.d(t, { Am: () => R, Ay: () => et }), n(321073);
 var r = n(17928),
     a = n(228366),
     s = n(155718),
@@ -22,14 +22,14 @@ var r = n(17928),
     S = n(360469),
     N = n(5867),
     C = n(652215);
-let R = {
+let O = {
         everLaunchedActivities: new Set(),
         seenNewActivities: {},
         seenUpdatedActivities: {},
         lastCheckedForBadgeableActivities: null,
         dateRangesForSurfaces: {},
     },
-    O = [],
+    R = [],
     L = [];
 class y {
     items = [];
@@ -110,8 +110,8 @@ function Z(e) {
         m = (0, f.Ay)(r);
     if (null == m) return;
     let S = (0, T.H)(o),
-        R = 0 === (null != S ? (b.get(S)?.getItems("all") ?? O) : O).length,
-        L = (M.get(o.id)?.getItems("all") ?? O).find((e) => e.applicationId === r),
+        O = 0 === (null != S ? (b.get(S)?.getItems("all") ?? R) : R).length,
+        L = (M.get(o.id)?.getItems("all") ?? R).find((e) => e.applicationId === r),
         y = A.map((e) => e.userId),
         w = d.default.getId(),
         G = y.some((e) => e === w),
@@ -155,11 +155,11 @@ function Z(e) {
                               customId: p,
                               inviterUserId: m,
                               proxyTicket: S,
-                              renderInFramePool: R,
+                              renderInFramePool: O,
                           } = e,
-                          O = (0, f.Ay)(t),
+                          R = (0, f.Ay)(t),
                           L = d.default.getSessionId();
-                      if (null == O || null == L || D.get(t)?.location.id === s.id) return;
+                      if (null == R || null == L || D.get(t)?.location.id === s.id) return;
                       let y = (0, T.H)(s),
                           v = c.A.getChannel(y),
                           b = v?.getGuildId();
@@ -167,7 +167,7 @@ function Z(e) {
                       i = s;
                       let M = {
                           applicationId: t,
-                          url: O,
+                          url: R,
                           userIds: new Set(l.map((e) => e.userId)),
                           participants: l,
                           connectedSince: Date.now(),
@@ -177,7 +177,7 @@ function Z(e) {
                           referrerId: I,
                           customId: p,
                           proxyTicket: S,
-                          renderInFramePool: R,
+                          renderInFramePool: O,
                       };
                       D.set(t, M),
                           E._.dispatch(C.jej.OPEN_EMBEDDED_ACTIVITY, {
@@ -190,7 +190,7 @@ function Z(e) {
                               inviterUserId: m,
                           });
                       let P = (0, h.f)();
-                      !0 === R
+                      !0 === O
                           ? (j = N.Gd.DISCONNECTED)
                           : P
                             ? ((j = N.Gd.ACTIVITY_POPOUT_WINDOW),
@@ -210,7 +210,7 @@ function Z(e) {
                       compositeInstanceId: l,
                       location: o,
                       participants: A,
-                      isFirstActivityInChannel: R,
+                      isFirstActivityInChannel: O,
                       isStart: null == L,
                       referrerId: W.referrerId,
                       customId: W.customId,
@@ -241,10 +241,10 @@ class J extends r.Ay.PersistedStore {
     initialize(e) {
         this.waitFor(d.default, c.A, u.Ay, _.default);
         let t = new Set(e?.everLaunchedActivities ?? []);
-        null != e && (R = { ...e, everLaunchedActivities: t });
+        null != e && (O = { ...e, everLaunchedActivities: t });
     }
     getState() {
-        return R;
+        return O;
     }
     static migrations = [
         (e) => ({ ...e, seenFeaturedActivities: [], shouldShowNewActivityIndicator: !1 }),
@@ -282,22 +282,22 @@ class J extends r.Ay.PersistedStore {
         return D;
     }
     getEmbeddedActivitiesForGuild(e) {
-        return v.get(e)?.getItems("visible") ?? O;
+        return v.get(e)?.getItems("visible") ?? R;
     }
     getEmbeddedActivitiesForChannel(e) {
-        return b.get(e)?.getItems("visible") ?? O;
+        return b.get(e)?.getItems("visible") ?? R;
     }
     getEmbeddedActivitiesForLocation(e) {
-        return M.get(e.id)?.getItems("visible") ?? O;
+        return M.get(e.id)?.getItems("visible") ?? R;
     }
     getEmbeddedActivitiesForGuildIncludingHidden(e) {
-        return v.get(e)?.getItems("all") ?? O;
+        return v.get(e)?.getItems("all") ?? R;
     }
     getEmbeddedActivitiesForChannelIncludingHidden(e) {
-        return b.get(e)?.getItems("all") ?? O;
+        return b.get(e)?.getItems("all") ?? R;
     }
     getEmbeddedActivitiesForLocationIncludingHidden(e) {
-        return M.get(e.id)?.getItems("all") ?? O;
+        return M.get(e.id)?.getItems("all") ?? R;
     }
     getEmbeddedActivitiesByChannel() {
         let e = new Map();
@@ -374,7 +374,7 @@ class J extends r.Ay.PersistedStore {
         }
     }
     hasActivityEverBeenLaunched(e) {
-        return R.everLaunchedActivities.has(e);
+        return O.everLaunchedActivities.has(e);
     }
     getLaunchState(e, t) {
         if (null != e) return U.get(P(t ?? null, e));
@@ -409,7 +409,7 @@ let ee = new J(a.h, {
         CHANNEL_DELETE: function (e) {
             let { channel: t } = e,
                 n = b.get(t.id),
-                i = n?.getItems("all") ?? O;
+                i = n?.getItems("all") ?? R;
             b.delete(t.id);
             let r = K(t.guild_id),
                 a = v.get(r);
@@ -448,7 +448,7 @@ let ee = new J(a.h, {
         },
         EMBEDDED_ACTIVITY_LAUNCH_SUCCESS: function (e) {
             let { applicationId: t } = e;
-            R.everLaunchedActivities.add(t);
+            O.everLaunchedActivities.add(t);
         },
         EMBEDDED_ACTIVITY_LAUNCH_FAIL: function (e) {
             let { applicationId: t, channelId: n } = e;
@@ -488,7 +488,7 @@ let ee = new J(a.h, {
                 n = K(t),
                 i = x.get(n);
             x.set(n, { isFetching: !0, lastFetchTimestampMs: i?.lastFetchTimestampMs }),
-                (R.lastCheckedForBadgeableActivities = new Date(Date.now()).toISOString());
+                (O.lastCheckedForBadgeableActivities = new Date(Date.now()).toISOString());
         },
         EMBEDDED_ACTIVITY_FETCH_SHELF_SUCCESS: function (e) {
             let { guildId: t, activities: n } = e,
@@ -516,7 +516,7 @@ let ee = new J(a.h, {
                             e
                         );
                     }, {});
-                R.dateRangesForSurfaces = r;
+                O.dateRangesForSurfaces = r;
             })({ activities: n, now: r }),
                 x.set(i, { isFetching: !1, lastFetchTimestampMs: r });
         },

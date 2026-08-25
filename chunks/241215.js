@@ -11,40 +11,40 @@ var i = n(477900),
     h = n(279250),
     p = n(267102),
     m = n(874739),
-    f = n(616356),
-    A = n(734057),
+    A = n(616356),
+    f = n(734057),
     x = n(71393),
     g = n(576705),
     C = n(309010),
     y = n(977997),
     j = n(625494),
     I = n(446243),
-    N = n(889426),
-    v = n(652215),
-    E = n(806931),
+    E = n(889426),
+    N = n(652215),
+    v = n(806931),
     b = n(527133);
 let T = function (e) {
     let { channelId: t, popoutType: n, width: T, height: _, idle: R, onClose: S } = e,
         L = (0, p.Us)(),
         O = (0, a.bG)([c.A], () => c.A.getSelectedParticipant(t)),
-        P = (0, a.bG)([A.A], () => A.A.getChannel(t)),
+        P = (0, a.bG)([f.A], () => f.A.getChannel(t)),
         M = (0, a.bG)([x.A], () => x.A.getGuild(P?.getGuildId())),
         w = (0, a.bG)([C.Ay], () => null != P && C.Ay.getVoiceChannelId() === P.id),
         {
-            participants: U,
-            filteredParticipants: D,
+            participants: D,
+            filteredParticipants: U,
             participantsVersion: V,
             mode: k,
             layout: G,
             participantsOpen: B,
         } = (0, a.cf)([c.A], () => {
-            let e = null != P ? c.A.getLayout(P.id, L) : v.DUB.NORMAL;
+            let e = null != P ? c.A.getLayout(P.id, L) : N.DUB.NORMAL;
             return {
                 participants: c.A.getParticipants(t),
                 filteredParticipants: c.A.getFilteredParticipants(t),
                 participantsVersion: c.A.getParticipantsVersion(t),
                 mode: c.A.getMode(t),
-                layout: L === v.BRT.POPOUT && e !== v.DUB.FULL_SCREEN ? v.DUB.NO_CHAT : e,
+                layout: L === N.BRT.POPOUT && e !== N.DUB.FULL_SCREEN ? N.DUB.NO_CHAT : e,
                 participantsOpen: c.A.getParticipantsOpen(t),
             };
         }),
@@ -52,9 +52,9 @@ let T = function (e) {
     return ((0, l.useEffect)(() => {
         if (null != P)
             return (
-                j._.subscribe(v.jej.GUILD_ROOM_VIDEO_OVERLAY_CLOSE, e),
+                j._.subscribe(N.jej.GUILD_ROOM_VIDEO_OVERLAY_CLOSE, e),
                 () => {
-                    j._.unsubscribe(v.jej.GUILD_ROOM_VIDEO_OVERLAY_CLOSE, e);
+                    j._.unsubscribe(N.jej.GUILD_ROOM_VIDEO_OVERLAY_CLOSE, e);
                 }
             );
         function e() {
@@ -76,10 +76,10 @@ let T = function (e) {
                   channel: P,
                   hasConnectPermission: !0,
                   guild: M,
-                  participants: U,
-                  filteredParticipants: D,
+                  participants: D,
+                  filteredParticipants: U,
                   participantsVersion: V,
-                  selectedParticipant: w && k === v._Of.VIDEO ? O : null,
+                  selectedParticipant: w && k === N._Of.VIDEO ? O : null,
                   layout: G,
                   idle: R,
                   mode: k,
@@ -88,11 +88,11 @@ let T = function (e) {
                           if (
                               (t.preventDefault(),
                               t.stopPropagation(),
-                              (0, E.Ay)(e) &&
+                              (0, v.Ay)(e) &&
                                   (0, h.eo)(P, y.A, x.A, g.A, d.default)[0] &&
                                   0 ===
-                                      f.A.getAllActiveStreams().filter(
-                                          (t) => (0, u._z)(t) === e.id && t.state !== v.XYD.ENDED,
+                                      A.A.getAllActiveStreams().filter(
+                                          (t) => (0, u._z)(t) === e.id && t.state !== N.XYD.ENDED,
                                       ).length)
                           )
                               return void (0, o.A9)((0, u.Iy)(e.id), { forceMultiple: t.shiftKey });
@@ -100,7 +100,7 @@ let T = function (e) {
                       }
                   },
                   onContextMenuParticipant: function (e, n, i, l) {
-                      (0, N.A)({
+                      (0, E.A)({
                           participant: e,
                           event: n,
                           minimalContextMenu: i,

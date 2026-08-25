@@ -1,4 +1,4 @@
-n.d(t, { A: () => N });
+n.d(t, { A: () => E });
 var i = n(477900),
     l = n(582128),
     a = n(503698),
@@ -11,8 +11,8 @@ var i = n(477900),
     h = n(922016),
     p = n(43990),
     m = n(939249),
-    f = n(140735),
-    A = n(421773),
+    A = n(140735),
+    f = n(421773),
     x = n(363195),
     g = n(809369),
     C = n(1195),
@@ -54,16 +54,16 @@ function I(e) {
         ],
     });
 }
-function N(e) {
-    let { title: t, image: n, shouldShow: a = !0, forceOpen: o = !1, spacing: d, className: u, children: N } = e,
-        v = l.useId(),
-        E = l.useRef(null),
+function E(e) {
+    let { title: t, image: n, shouldShow: a = !0, forceOpen: o = !1, spacing: d, className: u, children: E } = e,
+        N = l.useId(),
+        v = l.useRef(null),
         b = (0, r.bG)([x.A], () => x.A.theme),
-        { isHovered: T, setIsHovered: _, onMouseEnter: R, onMouseLeave: S } = (0, A.A)(100, 100);
+        { isHovered: T, setIsHovered: _, onMouseEnter: R, onMouseLeave: S } = (0, f.A)(100, 100);
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(h.Y, {
-                targetElementRef: E,
+                targetElementRef: v,
                 shouldShow: a && (T || o),
                 position: "top",
                 align: "center",
@@ -102,17 +102,17 @@ function N(e) {
                 },
                 children: (e) =>
                     (0, i.jsx)("div", {
-                        ref: E,
+                        ref: v,
                         onMouseEnter: R,
                         onMouseLeave: S,
                         onFocus: R,
                         onBlur: S,
                         ...e,
-                        children: l.cloneElement(N, { "aria-describedby": v }),
+                        children: l.cloneElement(E, { "aria-describedby": N }),
                     }),
             }),
-            (0, i.jsxs)(f.A, {
-                id: v,
+            (0, i.jsxs)(A.A, {
+                id: N,
                 children: [
                     (0, i.jsx)(c.E, { variant: "text-sm/medium", children: t }),
                     (0, i.jsx)(c.E, { variant: "text-sm/normal", children: y.intl.string(C.default["2Ll0vk"]) }),

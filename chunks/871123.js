@@ -7,10 +7,10 @@ n.d(t, {
     Ri: () => C,
     S4: () => x,
     Ye: () => Y,
-    bF: () => O,
+    bF: () => R,
     eV: () => U,
     fq: () => V,
-    jd: () => R,
+    jd: () => O,
     jz: () => y,
     mC: () => S,
     mq: () => X,
@@ -64,7 +64,7 @@ function C(e) {
         n = N(e, p.lid.GIFT) ?? { amount: 0, currency: m.Yr.USD };
     return t.currency !== n.currency || t.amount !== n.amount;
 }
-function R(e) {
+function O(e) {
     let t = new Set(),
         n = [];
     for (let i of e.pages) {
@@ -73,7 +73,7 @@ function R(e) {
     }
     return n;
 }
-function O(e) {
+function R(e) {
     return null != e && e.productLine === p.EZt.SOCIAL_LAYER_GAME_ITEM;
 }
 function L() {

@@ -32,7 +32,7 @@ var i = n(435558),
 let S = {},
     N = 0,
     C = "47835198259242069";
-function R(e, t, n) {
+function O(e, t, n) {
     let i = S[e];
     if (null == i) return !1;
     let r = i;
@@ -40,7 +40,7 @@ function R(e, t, n) {
     let a = i !== r;
     return a && N++, a;
 }
-function O(e, t) {
+function R(e, t) {
     let n = S[e];
     return (
         !(null == n || (0, u.D)(n.primaryGuild, t.primary_guild)) &&
@@ -170,7 +170,7 @@ function P(e) {
         }),
         i.forEach((e) => {
             e.members.forEach((t) => {
-                R(t.user.id, e.id, t.avatar), O(t.user.id, t.user);
+                O(t.user.id, e.id, t.avatar), R(t.user.id, t.user);
             });
         }),
         null != S[p.default.getId()] &&
@@ -186,7 +186,7 @@ function U(e) {
     let { guilds: t, lazyPrivateChannels: n } = e;
     t.forEach((e) => {
         e.members.forEach((t) => {
-            R(t.user.id, e.id, t.avatar), O(t.user.id, t.user);
+            O(t.user.id, e.id, t.avatar), R(t.user.id, t.user);
         });
     }),
         n?.forEach((e) => {
@@ -298,7 +298,7 @@ function X(e) {
         if (null == t) return;
         D(t);
         let r = i?.avatar;
-        null != r && R(t.id, n, r);
+        null != r && O(t.id, n, r);
     });
 }
 function Q(e) {
@@ -367,7 +367,7 @@ function eo(e) {
 }
 function ed(e) {
     let t = D(e.user);
-    return R(e.user.id, e.guildId, e.avatar) || t;
+    return O(e.user.id, e.guildId, e.avatar) || t;
 }
 function ec(e) {
     let { ops: t } = e;
@@ -375,7 +375,7 @@ function ec(e) {
         if ("INSERT" === e.op || "UPDATE" === e.op) {
             let t = e.item.member?.user;
             if (null == t) continue;
-            O(t.id, t);
+            R(t.id, t);
         }
     return !1;
 }
@@ -386,13 +386,13 @@ function eu(e) {
         n =
             e.members.reduce((t, n) => {
                 let i = D(n.user);
-                return R(n.user.id, e.guildId, n.avatar) || i || t;
+                return O(n.user.id, e.guildId, n.avatar) || i || t;
             }, !1) || n;
     return n;
 }
 function e_(e) {
     let t = !1;
-    for (let n of e.members) D(n.user) && (t = !0), R(n.user.id, e.guildId, n.avatar) && (t = !0);
+    for (let n of e.members) D(n.user) && (t = !0), O(n.user.id, e.guildId, n.avatar) && (t = !0);
     return t;
 }
 function eE(e) {
@@ -427,7 +427,7 @@ function eI(e) {
             user: { id: n, username: i, avatar: r, discriminator: a, bot: s },
             avatar: l,
         } = e;
-        n !== p.default.getId() && D({ id: n, username: i, avatar: r, discriminator: a, bot: s }), R(n, t.id, l);
+        n !== p.default.getId() && D({ id: n, username: i, avatar: r, discriminator: a, bot: s }), O(n, t.id, l);
     });
 }
 function ef(e) {
@@ -464,13 +464,13 @@ function eC(e) {
         null != t && D(t);
     });
 }
-function eR(e) {
+function eO(e) {
     let { request: t } = e,
         { user: n, actioned_by_user: i } = t,
         r = !1;
     return null != n && (r = D(n)), null != i && (r = r || D(i)), r;
 }
-function eO(e) {
+function eR(e) {
     let { users: t, familyCenterTeenActivity: n } = e,
         { users: i } = n;
     return [...t, ...i].reduce((e, t) => D(t) || e, !1);
@@ -565,8 +565,8 @@ class ek extends T.A {
             CHANNEL_RECIPIENT_ADD: eo,
             CHANNEL_RECIPIENT_REMOVE: eo,
             GUILD_STICKERS_FETCH_SUCCESS: ex,
-            GUILD_JOIN_REQUEST_CREATE: eR,
-            GUILD_JOIN_REQUEST_UPDATE: eR,
+            GUILD_JOIN_REQUEST_CREATE: eO,
+            GUILD_JOIN_REQUEST_UPDATE: eO,
             GUILD_MEMBER_ADD: ed,
             GUILD_MEMBER_UPDATE: ed,
             GUILD_MEMBERS_CHUNK_BATCH: eu,
@@ -593,7 +593,7 @@ class ek extends T.A {
             LOAD_MESSAGE_REQUESTS_SUPPLEMENTAL_DATA_SUCCESS: q,
             PASSIVE_UPDATE_V2: e_,
             LOCAL_MESSAGES_LOADED: eE,
-            FAMILY_CENTER_INITIAL_LOAD: eO,
+            FAMILY_CENTER_INITIAL_LOAD: eR,
             FAMILY_CENTER_LINKED_USERS_FETCH_SUCCESS: eL,
             FAMILY_CENTER_TEEN_ACTIVITY_FETCH_SUCCESS: eD,
             FAMILY_CENTER_TEEN_ACTIVITY_MORE_FETCH_SUCCESS: ev,

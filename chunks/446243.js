@@ -1,6 +1,6 @@
 "use strict";
 n.d(t, {
-    Xh: () => R,
+    Xh: () => O,
     Ys: () => g,
     HW: () => D,
     zK: () => v,
@@ -131,10 +131,10 @@ function N(e) {
 async function C(e, t, n) {
     return await r.Bo.post({ url: h.Rsh.GUILD_ROOM_OBJECT_CREATE(e, t), body: n, rejectWithError: !0 });
 }
-async function R(e, t, n, i) {
+async function O(e, t, n, i) {
     return await r.Bo.post({ url: h.Rsh.GUILD_ROOM_OBJECT_UPDATE(e, t, n), body: i, rejectWithError: !0 });
 }
-async function O(e, t, n, i) {
+async function R(e, t, n, i) {
     return await r.Bo.del({ url: h.Rsh.GUILD_ROOM_OBJECT_DELETE(e, t, n), body: i, rejectWithError: !0 });
 }
 function L(e) {
@@ -157,7 +157,7 @@ async function v(e, t, n, i) {
     }
 }
 async function b(e, t, n) {
-    await O(e, t, n, { object_type: _.N.NOTE }),
+    await R(e, t, n, { object_type: _.N.NOTE }),
         t !== e && (0, d.Ql)({ interactionType: "note_deleted", guildId: e, channelId: t });
 }
 async function M(e, t) {

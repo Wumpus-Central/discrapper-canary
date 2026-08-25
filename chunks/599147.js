@@ -6,8 +6,8 @@ var a = l(477900),
     o = l(150934),
     s = l(821609),
     u = l(73825),
-    d = l(473702),
-    c = l(349738),
+    c = l(473702),
+    d = l(349738),
     p = l(669316),
     m = l(570221),
     b = l(793574),
@@ -28,17 +28,17 @@ function C(e) {
             churnDiscount: o,
             planId: s,
             renewalInvoice: u,
-            renewalInvoiceDetails: d,
-            errorOnCancel: c,
+            renewalInvoiceDetails: c,
+            errorOnCancel: d,
             errorOnRedeem: p,
             setActiveStep: m,
             activeStep: x,
         } = e,
         { analyticsLocations: f } = (0, h.Ay)(b.A.USER_SETTINGS),
-        [y, v] = n.useState(T(x));
+        [y, v] = n.useState(j(x));
     return (
         (0, n.useEffect)(() => {
-            v(T(x));
+            v(j(x));
         }, [x]),
         (0, a.jsx)(g.CancellationContext.Provider, {
             value: {
@@ -57,11 +57,11 @@ function C(e) {
                 planId: s,
                 paymentsBlocked: !1,
                 renewalInvoice: u,
-                renewalInvoiceDetails: d,
+                renewalInvoiceDetails: c,
                 handleCancellation: () =>
                     new Promise((e, t) => {
                         setTimeout(() => {
-                            c ? t() : e();
+                            d ? t() : e();
                         }, 1e3);
                     }),
                 applyOffer: () =>
@@ -77,27 +77,27 @@ function C(e) {
         })
     );
 }
-function T(e) {
+function j(e) {
     switch (e) {
-        case d.g.DISCOUNT_APPLIED:
+        case c.g.DISCOUNT_APPLIED:
             return (0, a.jsx)(y.V, {});
-        case d.g.CONFIRM_DISCOUNT:
+        case c.g.CONFIRM_DISCOUNT:
             return (0, a.jsx)(f.M, {});
-        case d.g.CONFIRM:
+        case c.g.CONFIRM:
             return (0, a.jsx)(x.r, {});
-        case d.g.PREVIEW:
+        case c.g.PREVIEW:
             return (0, a.jsx)(v.E, {});
-        case d.g.WHAT_YOU_LOSE:
+        case c.g.WHAT_YOU_LOSE:
         default:
             return (0, a.jsx)(E.Z, {});
     }
 }
-var j = l(601107),
+var T = l(601107),
     A = l(202541),
     I = l(818348);
 let P = () => {
     let [e, t] = n.useState(A.PremiumTypes.TIER_0),
-        [l, p] = n.useState(d.g.WHAT_YOU_LOSE),
+        [l, p] = n.useState(c.g.WHAT_YOU_LOSE),
         [b, h] = n.useState(null),
         [x, f] = n.useState(A.gD.PREMIUM_MONTH_TIER_0),
         [y, g] = n.useState([]),
@@ -105,9 +105,9 @@ let P = () => {
             let e = new Date();
             return e.setMonth(e.getMonth() + 1), e;
         }),
-        [T, P] = n.useState(null),
+        [j, P] = n.useState(null),
         [k, R] = n.useState(!1),
-        [M, N] = n.useState(!1),
+        [N, M] = n.useState(!1),
         [D, O] = n.useState(!1);
     (0, n.useEffect)(() => {
         (0, u.zS)();
@@ -152,9 +152,9 @@ let P = () => {
             }
         }, [e]),
         (0, n.useEffect)(() => {
-            [d.g.CONFIRM_DISCOUNT, d.g.DISCOUNT_APPLIED].includes(l) && null === b && h(_()),
-                l === d.g.PREVIEW &&
-                    null === T &&
+            [c.g.CONFIRM_DISCOUNT, c.g.DISCOUNT_APPLIED].includes(l) && null === b && h(_()),
+                l === c.g.PREVIEW &&
+                    null === j &&
                     P(
                         new m.A({
                             id: "",
@@ -185,9 +185,9 @@ let P = () => {
                             status: S.lT7.PAID,
                         }),
                     ),
-                l !== d.g.PREVIEW && null !== T && P(null);
-        }, [l, b, v, x, T]);
-    let V = n.useCallback(async () => {
+                l !== c.g.PREVIEW && null !== j && P(null);
+        }, [l, b, v, x, j]);
+    let L = n.useCallback(async () => {
         O(!0),
             await (0, i.openModalLazy)(
                 async () => (t) =>
@@ -199,10 +199,10 @@ let P = () => {
                         premiumType: e,
                         churnDiscount: b,
                         planId: x,
-                        renewalInvoice: T,
+                        renewalInvoice: j,
                         renewalInvoiceDetails: { intervalType: A.WT.MONTH, intervalCount: 1 },
                         errorOnCancel: k,
-                        errorOnRedeem: M,
+                        errorOnRedeem: N,
                         setActiveStep: (e) => {
                             p(e), t.onClose();
                         },
@@ -227,18 +227,18 @@ let P = () => {
                             streakStartedAt: null,
                             currency: I.Yr.USD,
                             pauseEndsAt: null,
-                            pauseReason: j.qf.UNKNOWN,
+                            pauseReason: T.qf.UNKNOWN,
                         },
                     }),
             );
-    }, [e, b, x, T, k, M, l, v]);
+    }, [e, b, x, j, k, N, l, v]);
     return (
         (0, n.useEffect)(() => {
-            D && V();
-        }, [l, D, V]),
-        (0, a.jsxs)(c.LB, {
+            D && L();
+        }, [l, D, L]),
+        (0, a.jsxs)(d.LB, {
             children: [
-                (0, a.jsx)(c.MG, {
+                (0, a.jsx)(d.MG, {
                     children: (0, a.jsx)(r.l, {
                         label: "Premium Subscription",
                         placeholder: "Premium Type",
@@ -254,7 +254,7 @@ let P = () => {
                     }),
                 }),
                 y.length > 0 &&
-                    (0, a.jsx)(c.MG, {
+                    (0, a.jsx)(d.MG, {
                         children: (0, a.jsx)(r.l, {
                             label: "Subscription Interval",
                             placeholder: "Premium Type",
@@ -269,24 +269,24 @@ let P = () => {
                             fullWidth: !0,
                         }),
                     }),
-                (0, a.jsx)(c.MG, {
+                (0, a.jsx)(d.MG, {
                     children: (0, a.jsx)(r.l, {
                         label: "Modal Step",
                         placeholder: "Premium Type",
                         onSelectionChange: p,
                         value: l,
                         options: [
-                            { id: "whatYouLose", label: "What You Lose", value: d.g.WHAT_YOU_LOSE },
-                            { id: "confirmDiscount", label: "Confirm Discount", value: d.g.CONFIRM_DISCOUNT },
-                            { id: "discountApplied", label: "Discount Applied", value: d.g.DISCOUNT_APPLIED },
-                            { id: "confirmCancel", label: "Confirm Cancel", value: d.g.CONFIRM },
-                            { id: "previewInvoice", label: "Preview Invoice", value: d.g.PREVIEW },
+                            { id: "whatYouLose", label: "What You Lose", value: c.g.WHAT_YOU_LOSE },
+                            { id: "confirmDiscount", label: "Confirm Discount", value: c.g.CONFIRM_DISCOUNT },
+                            { id: "discountApplied", label: "Discount Applied", value: c.g.DISCOUNT_APPLIED },
+                            { id: "confirmCancel", label: "Confirm Cancel", value: c.g.CONFIRM },
+                            { id: "previewInvoice", label: "Preview Invoice", value: c.g.PREVIEW },
                         ],
                         selectionMode: "single",
                         fullWidth: !0,
                     }),
                 }),
-                (0, a.jsx)(c.MG, {
+                (0, a.jsx)(d.MG, {
                     children: (0, a.jsx)(o.S, {
                         checked: null !== b,
                         onChange: () => {
@@ -295,16 +295,16 @@ let P = () => {
                         label: "Churn Discount",
                     }),
                 }),
-                (0, a.jsx)(c.MG, {
+                (0, a.jsx)(d.MG, {
                     children: (0, a.jsx)(o.S, {
-                        checked: M,
+                        checked: N,
                         onChange: () => {
-                            N(!M);
+                            M(!N);
                         },
                         label: "Error on Redeem Offer",
                     }),
                 }),
-                (0, a.jsx)(c.MG, {
+                (0, a.jsx)(d.MG, {
                     children: (0, a.jsx)(o.S, {
                         checked: k,
                         onChange: () => {
@@ -313,7 +313,7 @@ let P = () => {
                         label: "Error on Cancel",
                     }),
                 }),
-                (0, a.jsx)(c.nB, {}),
+                (0, a.jsx)(d.nB, {}),
                 (0, a.jsx)(s.$, {
                     onClick: () => {
                         O(!0);

@@ -1,136 +1,136 @@
-t.d(l, { X: () => C, A: () => I });
-var i = t(477900),
-    a = t(582128),
-    s = t(503698),
-    n = t.n(s),
-    r = t(17928),
-    c = t(866665),
-    o = t(297264),
-    d = t(939249),
-    m = t(834730),
-    u = t(986268),
-    x = t(534400),
-    v = t(345942),
-    g = t(773669),
-    h = t(280450),
-    j = t(696451),
-    f = t(149790),
-    b = t(935208),
-    p = t(107123);
-let N = (0, t(945810).mj)({
+l.d(t, { X: () => C, A: () => _ });
+var i = l(477900),
+    s = l(582128),
+    a = l(503698),
+    n = l.n(a),
+    r = l(17928),
+    d = l(866665),
+    o = l(297264),
+    c = l(939249),
+    m = l(834730),
+    u = l(986268),
+    x = l(534400),
+    h = l(345942),
+    v = l(773669),
+    g = l(280450),
+    j = l(696451),
+    f = l(149790),
+    N = l(935208),
+    p = l(107123);
+let b = (0, l(945810).mj)({
     name: "2026-06-guild-profile-server-tag",
     kind: "user",
     defaultConfig: { showServerTag: !1 },
     variations: { 1: { showServerTag: !0 } },
 });
-var A = t(375708),
-    k = t(604280);
+var A = l(375708),
+    G = l(604280);
 function y(e) {
-    let { profile: l, disableGuildNameClick: t, guildNameId: s } = e,
-        n = l.id,
-        m = (0, r.bG)([j.Ay, h.default], () => j.Ay.getMember(n, h.default.getId())?.joinedAt != null, [n]),
-        u = a.useCallback(
+    let { profile: t, disableGuildNameClick: l, guildNameId: a } = e,
+        n = t.id,
+        m = (0, r.bG)([j.Ay, g.default], () => j.Ay.getMember(n, g.default.getId())?.joinedAt != null, [n]),
+        u = s.useCallback(
             (e) => {
-                m && (e.stopPropagation(), (0, v.u)(l.id));
+                m && (e.stopPropagation(), (0, h.u)(t.id));
             },
-            [m, l.id],
+            [m, t.id],
         );
-    return !m || t
-        ? (0, i.jsx)(c.m, {
-              text: l.name,
+    return !m || l
+        ? (0, i.jsx)(d.m, {
+              text: t.name,
               overflowOnly: !0,
               children: (0, i.jsx)(o.D, {
-                  id: s,
-                  className: k.J5,
+                  id: a,
+                  className: G.J5,
                   variant: "heading-md/semibold",
                   color: "text-strong",
-                  children: l.name,
+                  children: t.name,
               }),
           })
-        : (0, i.jsx)(d.D, {
-              className: k.YS,
+        : (0, i.jsx)(c.D, {
+              className: G.YS,
               onClick: u,
-              children: (0, i.jsx)(c.m, {
-                  text: l.name,
+              children: (0, i.jsx)(d.m, {
+                  text: t.name,
                   overflowOnly: !0,
                   children: (0, i.jsx)(o.D, {
-                      id: s,
-                      className: k.J5,
+                      id: a,
+                      className: G.J5,
                       variant: "heading-md/semibold",
                       color: "text-strong",
-                      children: l.name,
+                      children: t.name,
                   }),
               }),
           });
 }
-function G(e) {
-    let { profile: l } = e,
-        { showServerTag: t } = N.useConfig({ location: "GuildProfileHeader" });
-    return t
+function I(e) {
+    let { profile: t } = e,
+        { showServerTag: l } = b.useConfig({ location: "GuildProfileHeader" });
+    return l
         ? (0, i.jsx)(x.o9, {
-              className: k.WD,
-              guildId: l.id,
-              guildTag: l.tag ?? void 0,
-              guildBadge: l.badgeHash ?? void 0,
+              className: G.WD,
+              guildId: t.id,
+              guildTag: t.tag ?? void 0,
+              guildBadge: t.badgeHash ?? void 0,
           })
         : null;
 }
 function C(e) {
-    let { onlineCount: l, memberCount: t, className: a, highContrast: s = !1 } = e;
+    let { onlineCount: t, memberCount: l, className: s, highContrast: a = !1 } = e;
     return (0, i.jsxs)("div", {
-        className: n()(k.ol, a),
+        className: n()(G.ol, s),
         children: [
             (0, i.jsxs)("div", {
-                className: k.Kl,
+                className: G.Kl,
                 children: [
-                    (0, i.jsx)("div", { className: k.JX }),
+                    (0, i.jsx)("div", { className: G.JX }),
                     (0, i.jsx)(m.E, {
                         variant: "text-sm/normal",
-                        color: s ? "text-default" : "text-subtle",
-                        children: A.intl.format(A.t["LC+S+m"], { membersOnline: l }),
+                        color: a ? "text-default" : "text-subtle",
+                        children: A.intl.format(A.t["LC+S+m"], { membersOnline: t }),
                     }),
                 ],
             }),
             (0, i.jsxs)("div", {
-                className: k.Kl,
+                className: G.Kl,
                 children: [
-                    (0, i.jsx)("div", { className: n()(k.Om, s && k.i7) }),
+                    (0, i.jsx)("div", { className: n()(G.Om, a && G.i7) }),
                     (0, i.jsx)(m.E, {
                         variant: "text-sm/normal",
-                        color: s ? "text-default" : "text-subtle",
-                        children: A.intl.format(A.t.zRl6XR, { count: t }),
+                        color: a ? "text-default" : "text-subtle",
+                        children: A.intl.format(A.t.zRl6XR, { count: l }),
                     }),
                 ],
             }),
         ],
     });
 }
-function I(e) {
-    let { profile: l, disableGuildNameClick: t, guildNameId: s } = e,
-        n = (0, r.bG)([g.default], () => g.default.locale),
-        c = (0, p.P)(b.default.extractTimestamp(l.id), n),
-        o = a.useMemo(() => {
-            let e = (0, f.b9)(l);
+function _(e) {
+    let { profile: t, disableGuildNameClick: l, guildNameId: a } = e,
+        n = (0, r.bG)([v.default], () => v.default.locale),
+        d = (0, p.P)(N.default.extractTimestamp(t.id), n),
+        o = s.useMemo(() => {
+            let e = (0, f.b9)(t);
             return (0, i.jsx)(u.A, { guild: e, isBannerVisible: !1 });
-        }, [l]);
+        }, [t]);
     return (0, i.jsxs)("div", {
-        className: k.wx,
+        className: G.wx,
         children: [
             (0, i.jsxs)("div", {
-                className: k.VW,
+                className: G.VW,
                 children: [
-                    (0, i.jsx)(y, { profile: l, disableGuildNameClick: t, guildNameId: s }),
+                    (0, i.jsx)(y, { profile: t, disableGuildNameClick: l, guildNameId: a }),
                     o,
-                    null != l.tag && "" !== l.tag && (0, i.jsx)(G, { profile: l }),
+                    null != t.tag && "" !== t.tag && (0, i.jsx)(I, { profile: t }),
                 ],
             }),
-            (0, i.jsx)(C, { onlineCount: l.onlineCount, memberCount: l.memberCount }),
+            (0, i.jsx)(C, { onlineCount: t.onlineCount, memberCount: t.memberCount }),
             (0, i.jsx)("div", {
-                className: k.b5,
+                className: G.b5,
                 children: (0, i.jsx)(m.E, {
                     variant: "text-sm/normal",
                     color: "text-subtle",
-                    children: A.intl.format(A.t.zb2Q56, { createdAtDate: c }),
+                    children: A.intl.format(A.t.zb2Q56, { createdAtDate: d }),
                 }),
             }),
         ],

@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => N, e: () => S });
+n.d(t, { A: () => N, e: () => v });
 var l = n(477900),
     i = n(582128),
     s = n(503698),
@@ -33,7 +33,7 @@ var C = n(46054),
     E = n(453771),
     I = n(375708),
     y = n(745268);
-function v(e) {
+function S(e) {
     let { filename: t } = e,
         i = (0, E.GD)(t),
         s = n(492313)(`./icon-file-${i}.svg`);
@@ -44,7 +44,7 @@ function v(e) {
         title: i,
     });
 }
-function S(e) {
+function v(e) {
     let { channelId: t, file: n } = e,
         s = (0, u.bG)([x.A], () => x.A.getMessageForFile(n.id)?.content),
         r = i.useMemo(() => {
@@ -69,7 +69,7 @@ function S(e) {
                 children: (0, l.jsxs)("div", {
                     className: y.NJ,
                     children: [
-                        (0, l.jsx)(v, { filename: r }),
+                        (0, l.jsx)(S, { filename: r }),
                         (0, l.jsxs)("div", {
                             className: y.Jg,
                             children: [
@@ -113,7 +113,7 @@ let N = function (e) {
             (0, l.jsxs)("div", {
                 className: y.NJ,
                 children: [
-                    (0, l.jsx)(v, { filename: i }),
+                    (0, l.jsx)(S, { filename: i }),
                     (0, l.jsxs)("div", {
                         className: y.Jg,
                         children: [

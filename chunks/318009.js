@@ -1,4 +1,4 @@
-n.d(t, { A: () => y });
+n.d(t, { A: () => v });
 var r = n(477900),
     i = n(582128),
     s = n(562708),
@@ -26,8 +26,8 @@ function A(e) {
             align: f,
             impressionName: g,
             impressionProperties: A,
-            disableClickTrap: v = !1,
-            repositionOnContentChange: y = !1,
+            disableClickTrap: y = !1,
+            repositionOnContentChange: v = !1,
         } = e,
         x = i.useRef(n);
     i.useEffect(() => {
@@ -58,9 +58,9 @@ function A(e) {
         },
         overrideTargetRect: c,
         placement: (0, o.Pv)(h ?? "right", f ?? "top"),
-        blockPointerEvents: !v,
+        blockPointerEvents: !y,
         crossAccessFlip: !1,
-        autoUpdate: y,
+        autoUpdate: v,
         renderLayer: (e) => {
             let { update: n } = e;
             return t({ position: h }, n);
@@ -68,7 +68,7 @@ function A(e) {
         children: () => null,
     });
 }
-class v extends i.PureComponent {
+class y extends i.PureComponent {
     state = { render: void 0 };
     componentDidMount() {
         let { renderLazy: e, renderWindow: t } = this.props;
@@ -140,7 +140,7 @@ class v extends i.PureComponent {
             : null;
     }
 }
-function y() {
+function v() {
     let {
             contextMenu: e,
             version: t,
@@ -148,5 +148,5 @@ function y() {
         } = (0, l.cf)([f.A], () => ({ contextMenu: f.A.getContextMenu(), version: f.A.version, isOpen: f.A.isOpen() })),
         s = (0, l.bG)([h.A], () => h.A.theme),
         { appContext: o, renderWindow: a } = i.useContext(u.Ay);
-    return (0, r.jsx)(v, { appContext: o, renderWindow: a, ...e, isOpen: n, theme: s, closeContextMenu: c.Z_ }, t);
+    return (0, r.jsx)(y, { appContext: o, renderWindow: a, ...e, isOpen: n, theme: s, closeContextMenu: c.Z_ }, t);
 }

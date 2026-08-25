@@ -365,37 +365,37 @@ function N() {
 function C() {
     return (0, S.isDesktop)() && N();
 }
-let R = C()
+let O = C()
         ? new Promise((e) => {
               Promise.resolve().then(() => (0, g.B)(() => e(m())));
           })
         : null,
-    O = null;
+    R = null;
 async function L(e) {
-    let t = await R;
+    let t = await O;
     null != t && (t.enabled = e);
 }
 async function y(e) {
-    let t = await R;
+    let t = await O;
     null != t && t.setLearnedWords(e);
 }
 async function D() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 5,
-        t = await R;
+        t = await O;
     if (null == t) return { misspelledWord: "", corrections: [] };
     let { misspelledWord: n, corrections: i } = t.getCachedMisspelling();
     return { misspelledWord: n, corrections: i.slice(0, e) };
 }
 async function v(e) {
-    let t = await R;
+    let t = await O;
     null != t && t.replaceMisspelling(e);
 }
 function b(e) {
-    null != O && O.setAppLocale(e);
+    null != R && R.setAppLocale(e);
 }
 function M(e) {
     return N() ? (i.A.spellCheck.on("spellcheck-result", e) ?? (() => {})) : () => {};
 }
-R?.then((e) => {
-    O = e;
+O?.then((e) => {
+    R = e;
 });

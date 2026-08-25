@@ -28,11 +28,11 @@ function C(e, t, n) {
     }),
         (0, c.cS)(e, null != t ? (0, T.Oy)(t) : null, n);
 }
-function R(e) {
+function O(e) {
     (0, c._r)(e, "renderer_window_focus_lost", { popoutInitializationStages: p.A.getPopoutInitializationStages() }),
         (0, c.C7)(e);
 }
-function O(e) {
+function R(e) {
     (0, c._r)(e, "successfully_shown", { popoutInitializationStages: p.A.getPopoutInitializationStages() }),
         (0, c.oW)(e);
 }
@@ -93,8 +93,8 @@ class y {
                 (0, l.setOutOfProcessSupport)(!0),
                 (e = this.module),
                 e.setFocusCallback?.(C),
-                e.setFocusLostCallback?.(R),
-                e.setSuccessfullyShownCallback?.(O),
+                e.setFocusLostCallback?.(O),
+                e.setSuccessfullyShownCallback?.(R),
                 e.setOnWindowHandleInitializedCallback?.(L),
                 (0, c._r)(null, "native_module_callbacks_setup"),
                 N.verbose("Native module callbacks setup"),

@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => N, P: () => S });
+n.d(t, { A: () => N, P: () => v });
 var l = n(477900),
     i = n(582128),
     s = n(503698),
@@ -20,40 +20,40 @@ var l = n(477900),
     E = n(339871),
     I = n(820066),
     y = n(375708),
-    v = n(9287);
-function S(e) {
+    S = n(9287);
+function v(e) {
     let { slateEditor: t, options: n, iconClassName: i, dividerClassName: s } = e;
     return null == t
         ? null
         : (0, l.jsxs)("div", {
-              className: v.Uo,
+              className: S.Uo,
               children: [
                   (0, l.jsx)(_, {
                       slateEditor: t,
                       markdownSyntax: "bold",
-                      children: (0, l.jsx)(u.$, { size: "md", color: "currentColor", className: r()(v.Kk, i) }),
+                      children: (0, l.jsx)(u.$, { size: "md", color: "currentColor", className: r()(S.Kk, i) }),
                   }),
                   (0, l.jsx)(_, {
                       slateEditor: t,
                       markdownSyntax: "italics",
-                      children: (0, l.jsx)(c.y, { size: "md", color: "currentColor", className: r()(v.Kk, i) }),
+                      children: (0, l.jsx)(c.y, { size: "md", color: "currentColor", className: r()(S.Kk, i) }),
                   }),
                   (0, l.jsx)(_, {
                       slateEditor: t,
                       markdownSyntax: "underline",
-                      children: (0, l.jsx)(d.q, { size: "md", color: "currentColor", className: r()(v.Kk, i) }),
+                      children: (0, l.jsx)(d.q, { size: "md", color: "currentColor", className: r()(S.Kk, i) }),
                   }),
                   (0, l.jsx)(_, {
                       slateEditor: t,
                       markdownSyntax: "strikethrough",
-                      children: (0, l.jsx)(h.t, { size: "md", color: "currentColor", className: r()(v.Kk, i) }),
+                      children: (0, l.jsx)(h.t, { size: "md", color: "currentColor", className: r()(S.Kk, i) }),
                   }),
-                  (0, l.jsx)("div", { className: r()(v.yF, s) }),
+                  (0, l.jsx)("div", { className: r()(S.yF, s) }),
                   !n?.disableBlockQuotes &&
                       (0, l.jsx)(T, {
                           slateEditor: t,
                           blockType: "blockQuote",
-                          children: (0, l.jsx)(m.c, { size: "md", color: "currentColor", className: r()(v.Kk, i) }),
+                          children: (0, l.jsx)(m.c, { size: "md", color: "currentColor", className: r()(S.Kk, i) }),
                       }),
                   !n?.disableInlineCode &&
                       (0, l.jsx)(_, {
@@ -64,13 +64,13 @@ function S(e) {
                               width: 20,
                               height: 20,
                               color: "currentColor",
-                              className: r()(v.Kk, i),
+                              className: r()(S.Kk, i),
                           }),
                       }),
                   (0, l.jsx)(_, {
                       slateEditor: t,
                       markdownSyntax: "spoiler",
-                      children: (0, l.jsx)(p.EyeIcon, { size: "md", color: "currentColor", className: r()(v.Kk, i) }),
+                      children: (0, l.jsx)(p.EyeIcon, { size: "md", color: "currentColor", className: r()(S.Kk, i) }),
                   }),
               ],
           });
@@ -168,7 +168,7 @@ let N = i.forwardRef(function (e, t) {
               children: (0, l.jsx)("div", {
                   id: "slate-toolbar",
                   ref: u,
-                  className: v.KE,
+                  className: S.KE,
                   style: { top: E - y, left: C - _ },
                   onMouseDown: (e) => {
                       e.preventDefault(), e.stopPropagation();
@@ -176,7 +176,7 @@ let N = i.forwardRef(function (e, t) {
                   onMouseUp: (e) => {
                       e.stopPropagation();
                   },
-                  children: (0, l.jsx)(S, { slateEditor: j, options: r }),
+                  children: (0, l.jsx)(v, { slateEditor: j, options: r }),
               }),
           });
 });
@@ -206,7 +206,7 @@ function _(e) {
                 }
             })(n),
             "aria-pressed": s,
-            className: v.x6,
+            className: S.x6,
             onClick: function () {
                 null != t && C.o.withSingleEntry(t, () => (0, E.Px)(t, n));
             },
@@ -224,7 +224,7 @@ function T(e) {
                 if ("blockQuote" === e) return y.intl.string(y.t.svB7eY);
             })(t),
             "aria-pressed": r,
-            className: v.x6,
+            className: S.x6,
             onClick: function () {
                 null != n && C.o.withSingleEntry(n, () => (0, E.fO)(n, t));
             },

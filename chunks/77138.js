@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { a: () => R });
+n.d(t, { a: () => O });
 var i = n(636537),
     r = n(306173),
     a = n(913122),
@@ -92,9 +92,9 @@ function S(e) {
 }
 var N = n(506774);
 let C = new s.A("DebugUploadManager");
-async function R(e, t) {
+async function O(e, t) {
     try {
-        await O(e), await _(0xe00000, t);
+        await R(e), await _(0xe00000, t);
     } catch (t) {
         let e;
         throw (
@@ -120,7 +120,7 @@ async function R(e, t) {
         );
     }
 }
-async function O(e) {
+async function R(e) {
     try {
         let t, n, a, s;
         try {
@@ -185,8 +185,8 @@ ${s}`;
                     h,
                     I,
                     { index: f, timestamp: p, logs: m, nativeLogs: N, serverTrace: C } = i,
-                    R = 0 === f ? (T().find(m, (e) => e.log.indexOf("Logger loaded") >= 0)?.timestamp ?? e) : p,
-                    O =
+                    O = 0 === f ? (T().find(m, (e) => e.log.indexOf("Logger loaded") >= 0)?.timestamp ?? e) : p,
+                    R =
                         ((o =
                             ((r = m),
                             (a = N),
@@ -245,7 +245,7 @@ ${s}`;
                                     !(E && e.log.includes("\u21AA")) &&
                                     !(E = (!l && e.emoji === `\u{1F3A8}`) || !1 === e.shouldKeep),
                             ))),
-                        (d = R),
+                        (d = O),
                         (A = (function (e) {
                             let t = [];
                             for (let n = 0; n < e.length; n++) {
@@ -269,7 +269,7 @@ ${s}`;
                             return `${T().padStart(t, h)} ${T().padStart(n, I)} ${i}`;
                         }).join("")),
                     L = `Trace #${f + 1} started ${(0, g.aK)(p)}
-${O}`;
+${R}`;
                 return (
                     null != C &&
                         (L += `
@@ -298,7 +298,7 @@ ${O}`;
     })()}
 
     Metadata:
-    ${JSON.stringify({ logsUploaded: new Date().toISOString(), releaseChannel: window.GLOBAL_ENV.RELEASE_CHANNEL, buildNumber: "600604", versionHash: "458a4bbca9bce670640d87470caa2eb9fbb9c2da" }, void 0, 2)}
+    ${JSON.stringify({ logsUploaded: new Date().toISOString(), releaseChannel: window.GLOBAL_ENV.RELEASE_CHANNEL, buildNumber: "600993", versionHash: "2516171c7ea14d605a33eac463e96a7682935f6a" }, void 0, 2)}
 
     ChannelStore:
     ${JSON.stringify(I.A.getDebugInfo(), void 0, 2)}

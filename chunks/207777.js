@@ -22,8 +22,8 @@ let T = [],
     S = new Set(),
     N = l.T.LATEST_ACTIVITY,
     C = s.n.MATCH_SOME,
-    R = 0,
-    O = [],
+    O = 0,
+    R = [],
     L = !1,
     y = [],
     D = a().chain(T),
@@ -45,13 +45,13 @@ function U(e) {
     };
 }
 function w() {
-    (O = []),
+    (R = []),
         (i = null),
         (g = null),
         (S = new Set()),
         (N = l.T.LATEST_ACTIVITY),
         (C = s.n.MATCH_SOME),
-        (R = 0),
+        (O = 0),
         (y = []),
         (D = a().chain(T)),
         (v = a().chain(T)),
@@ -83,14 +83,14 @@ function k(e) {
             let { id: t } = e;
             return t;
         })),
-        (R = 0),
+        (O = 0),
         (L = !0)),
         0 !== b.size && ((y = y.filter((e) => !b.has(e))), b.clear()),
         0 !== M.size && ((y = Array.from(new Set([...y, ...M]))), M.clear()),
         (e?.refreshThreadIds || e?.sortThreadIds) &&
             ((v = a().chain(y).sort(U(l.T.LATEST_ACTIVITY))), (D = a().chain(y).sort(U(l.T.CREATION_DATE))));
     let o = (N === l.T.LATEST_ACTIVITY ? v : D).value(),
-        d = (O =
+        d = (R =
             0 === S.size
                 ? o
                 : o.filter(
@@ -115,7 +115,7 @@ class F extends d.Ay.Store {
         this.waitFor(u.A, E.default, A.A, h.Ay, I.Ay, _.A);
     }
     getNewThreadCount() {
-        return R;
+        return O;
     }
     getCanAckThreads() {
         return L;
@@ -131,11 +131,11 @@ class F extends d.Ay.Store {
             (N = t),
             (C = i),
             r ? k({ refreshThreadIds: !0 }) : s ? k({ sortThreadIds: !0 }) : (a || l) && k(),
-            O
+            R
         );
     }
     getCurrentThreadIds() {
-        return O;
+        return R;
     }
     getAndDeleteMostRecentUserCreatedThreadId() {
         let e = m;
@@ -163,7 +163,7 @@ let V = new F(c.h, {
     THREAD_CREATE: function (e) {
         let { channel: t, isNewlyCreated: n } = e;
         if (null == t.parent_id || t.parent_id !== g || !n) return !1;
-        t.ownerId !== E.default.getId() ? R++ : (m = t.id);
+        t.ownerId !== E.default.getId() ? O++ : (m = t.id);
     },
     THREAD_UPDATE: function (e) {
         let { channel: t } = e;

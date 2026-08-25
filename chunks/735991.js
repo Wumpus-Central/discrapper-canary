@@ -1,6 +1,6 @@
 "use strict";
 n.d(t, {
-    $B: () => R,
+    $B: () => O,
     Ag: () => y,
     Cx: () => P,
     EF: () => B,
@@ -17,7 +17,7 @@ n.d(t, {
     fl: () => b,
     hX: () => V,
     kF: () => F,
-    lq: () => O,
+    lq: () => R,
     sw: () => k,
     u8: () => L,
 }),
@@ -44,23 +44,23 @@ var i = n(487899),
     S = n(381941),
     N = n(375708);
 let C = { id: g.Ik.BUILT_IN };
-function R(e) {
+function O(e) {
     return e.id !== g.Ik.BUILT_IN;
 }
-function O(e) {
-    return R(e) ? e.name : N.intl.string(N.t.UB2gG2);
+function R(e) {
+    return O(e) ? e.name : N.intl.string(N.t.UB2gG2);
 }
 function L(e) {
-    return R(e) ? e.description : N.intl.string(N.t.X9fusn);
+    return O(e) ? e.description : N.intl.string(N.t.X9fusn);
 }
 function y(e) {
-    return R(e) && (0, _.n)(e, m.gfo.EMBEDDED);
+    return O(e) && (0, _.n)(e, m.gfo.EMBEDDED);
 }
 function D(e) {
-    return R(e) && (0, _.n)(e, m.gfo.PARTNER);
+    return O(e) && (0, _.n)(e, m.gfo.PARTNER);
 }
 function v(e) {
-    return R(e) && (0, _.n)(e, m.gfo.PROMOTED);
+    return O(e) && (0, _.n)(e, m.gfo.PROMOTED);
 }
 function b(e) {
     let t = P(e),
@@ -84,7 +84,7 @@ function M(e) {
     }
 }
 function P(e) {
-    return R(e) && y(e) ? (e instanceof h.Ay ? e.embeddedActivityConfig : e.embedded_activity_config) : null;
+    return O(e) && y(e) ? (e instanceof h.Ay ? e.embeddedActivityConfig : e.embedded_activity_config) : null;
 }
 function U(e) {
     let {
@@ -130,7 +130,7 @@ function U(e) {
 function w(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         { fakeAppIconURL: n, ...i } = t;
-    return R(e)
+    return O(e)
         ? {
               iconURL: I.Ay.getApplicationIconURL({ ...i, id: e.id, icon: e.icon }),
               name: e.name,
@@ -139,7 +139,7 @@ function w(e) {
         : { iconURL: n ?? null, name: N.intl.string(N.t.UB2gG2), description: N.intl.string(N.t.X9fusn) };
 }
 function G(e) {
-    return !!R(e) && (e instanceof h.Ay ? e.isMonetized : e.is_monetized);
+    return !!O(e) && (e instanceof h.Ay ? e.isMonetized : e.is_monetized);
 }
 function x(e) {
     let t = P(e);

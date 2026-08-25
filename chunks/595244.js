@@ -24,8 +24,8 @@ var i = n(477900),
     S = n(174459),
     N = n(486020),
     C = n(625494),
-    R = n(998218),
-    O = n(321987),
+    O = n(998218),
+    R = n(321987),
     L = n(652215),
     y = n(375708),
     D = n(6612);
@@ -85,12 +85,12 @@ function M(e) {
         A = (0, c.bG)([m.A], () => m.A.can(L.xBc.SEND_MESSAGES, E)),
         h = null != t,
         N = null == t && A && (!u || null != o),
-        R = [];
+        O = [];
     return (
         (null != t || null != s) &&
-            (null != s && R.push({ variant: "secondary", text: y.intl.string(y.t.cpT0Cq), onClick: d }),
+            (null != s && O.push({ variant: "secondary", text: y.intl.string(y.t.cpT0Cq), onClick: d }),
             h &&
-                R.push({
+                O.push({
                     variant: "primary",
                     text:
                         t?.name.length > 30
@@ -98,8 +98,8 @@ function M(e) {
                             : y.intl.format(y.t.UdYYP3, { guildName: t?.name }),
                     onClick: l,
                 }),
-            N && R.push({ variant: "primary", text: y.intl.string(y.t["0cCDKP"]), onClick: _ })),
-        (0, i.jsx)(O.f, { ...a, actions: R, children: (0, i.jsx)(P, { guild: t, application: n, ...a }) })
+            N && O.push({ variant: "primary", text: y.intl.string(y.t["0cCDKP"]), onClick: _ })),
+        (0, i.jsx)(R.f, { ...a, actions: O, children: (0, i.jsx)(P, { guild: t, application: n, ...a }) })
     );
 }
 function P(e) {
@@ -129,7 +129,7 @@ function U(e) {
     let s = r.useCallback(() => {
         a?.(), S.default.track(L.HAw.OAUTH2_AUTHORIZE_SUCCESS_CLOSE_CLICKED, { application_id: t.id });
     }, [a, t.id]);
-    return (0, i.jsx)(O.f, {
+    return (0, i.jsx)(R.f, {
         ...n,
         actions: [{ variant: "primary", text: y.intl.string(y.t["31Bci5"]), onClick: s }],
         children: (0, i.jsxs)("div", {
@@ -163,7 +163,7 @@ function U(e) {
     });
 }
 function w(e) {
-    return (0, i.jsx)(O.f, {
+    return (0, i.jsx)(R.f, {
         ...e,
         title: y.intl.string(y.t.j2d6Km),
         subtitle: y.intl.string(y.t["/B7kXy"]),
@@ -175,9 +175,9 @@ function G(e) {
 }
 function x() {
     let e = (0, o.zy)();
-    return (0, i.jsx)(O.$, {
+    return (0, i.jsx)(R.$, {
         removeChildWrapper: !0,
-        children: (0, i.jsx)(O.f, {
+        children: (0, i.jsx)(R.f, {
             transitionState: d.i.ENTERED,
             hideHeader: !0,
             children: (0, i.jsx)(P, {
@@ -192,15 +192,15 @@ function k(e) {
     let { location: t } = e;
     r.useEffect(() => {
         if (null == t || "" === t.search) return;
-        let e = null != document.referrer && "" !== document.referrer ? R.A.toURLSafe(document.referrer) : null;
+        let e = null != document.referrer && "" !== document.referrer ? O.A.toURLSafe(document.referrer) : null;
         (null == e || e.host !== window.location.host || e.pathname !== L.BVt.OAUTH2_AUTHORIZE) &&
             (0, f.pX)(L.BVt.INDEX);
     }, [t]);
     let n = null != t ? (0, l.parse)(t.search) : {},
         a = n.error_description ?? n.error ?? y.intl.string(y.t.mqn873);
-    return (0, i.jsx)(O.$, {
+    return (0, i.jsx)(R.$, {
         removeChildWrapper: !0,
-        children: (0, i.jsx)(O.f, {
+        children: (0, i.jsx)(R.f, {
             transitionState: d.i.ENTERED,
             hideHeader: !0,
             children: (0, i.jsx)(G, { message: a, showsCloseWindowText: !0 }),

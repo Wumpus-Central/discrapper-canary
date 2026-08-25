@@ -74,15 +74,15 @@ async function C(e) {
     }
     throw Error("could not find launchable");
 }
-function R(e, t, n) {
+function O(e, t, n) {
     let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
     e()
         ? t()
         : setTimeout(() => {
-              250 * i <= 12e4 ? R(e, t, n, i + 1) : n();
+              250 * i <= 12e4 ? O(e, t, n, i + 1) : n();
           }, 250);
 }
-function O(e) {
+function R(e) {
     return (
         m.info("launch", e),
         new Promise((t, n) => {
@@ -93,12 +93,12 @@ function O(e) {
     );
 }
 let L = {
-    waitSubscribed: (e, t) => new Promise((n, i) => R(() => s.A.isSubscribed(e, t), n, i)),
-    waitParentConnected: (e) => new Promise((t, n) => R(() => o.A.isChildConnected(e), t, n)),
+    waitSubscribed: (e, t) => new Promise((n, i) => O(() => s.A.isSubscribed(e, t), n, i)),
+    waitParentConnected: (e) => new Promise((t, n) => O(() => o.A.isChildConnected(e), t, n)),
     waitConnected(e) {
-        return new Promise(R.bind(this, () => o.A.isConnected(e)));
+        return new Promise(O.bind(this, () => o.A.isConnected(e)));
     },
-    waitParentSubscribed: (e, t) => new Promise((n, i) => R(() => s.A.isChildSubscribed(e, t), n, i)),
+    waitParentSubscribed: (e, t) => new Promise((n, i) => O(() => s.A.isChildSubscribed(e, t), n, i)),
     isLaunchable: (e) =>
         C(N(e))
             .then((e) => null != e)
@@ -107,7 +107,7 @@ let L = {
         C({ id: e })
             .then((e) => null != e)
             .catch(() => !1),
-    launch: (e) => C(N(e)).then(O),
+    launch: (e) => C(N(e)).then(R),
     launchDispatchApplication(e, t, n, r, s) {
         let {
             launchOptions: o,
@@ -149,7 +149,7 @@ let L = {
             s = `${r}\\icon.ico`;
         return S().then((i) => i.createShortcuts?.(e, t, n, a, s) ?? !1);
     },
-    launchGame: (e) => (o.A.isConnected(e) ? Promise.resolve() : C({ id: e }).then(O)),
+    launchGame: (e) => (o.A.isConnected(e) ? Promise.resolve() : C({ id: e }).then(R)),
     isProtocolRegistered: (e) =>
         S()
             .then((t) => t.isProtocolSchemeRegistered?.(e) ?? !1)

@@ -28,7 +28,7 @@ function A(e) {
         S = (0, r.useRef)(null),
         N = (0, r.useRef)(null),
         C = (0, r.useRef)(null),
-        [R, O] = (0, r.useState)(void 0),
+        [O, R] = (0, r.useState)(void 0),
         L = (0, r.useRef)(!1),
         y = null != p ? p : null;
     (0, r.useEffect)(() => {
@@ -36,9 +36,9 @@ function A(e) {
             L.current = !0;
             return;
         }
-        O(t ? "animateIn" : "animateOut");
+        R(t ? "animateIn" : "animateOut");
     }, [t]);
-    let D = s()(E.checkboxOption, "string" == typeof R && E[R], "indicator" !== g && E.spacing),
+    let D = s()(E.checkboxOption, "string" == typeof O && E[O], "indicator" !== g && E.spacing),
         v = (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsxs)("div", {

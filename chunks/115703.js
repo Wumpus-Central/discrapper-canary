@@ -1,42 +1,42 @@
-t.d(l, { A: () => d });
-var i = t(582128),
-    a = t(17928),
-    s = t(997013),
-    n = t(311043),
-    r = t(569926),
-    c = t(280450),
-    o = t(403362);
-function d(e) {
-    let l,
-        t,
-        d,
+l.d(t, { A: () => c });
+var i = l(582128),
+    s = l(17928),
+    a = l(997013),
+    n = l(311043),
+    r = l(569926),
+    d = l(280450),
+    o = l(403362);
+function c(e) {
+    let t,
+        l,
+        c,
         m,
         u = e.gameActivity,
         x =
-            ((l = e.games),
-            (t = (0, a.bG)([c.default], () => c.default.isAuthenticated())),
-            (d = null != l && !t),
-            (0, r.x)(d ? [] : e.gameApplicationIds),
+            ((t = e.games),
+            (l = (0, s.bG)([d.default], () => d.default.isAuthenticated())),
+            (c = null != t && !l),
+            (0, r.x)(c ? [] : e.gameApplicationIds),
             (m = i.useMemo(() => {
                 let e = new Map();
-                if (null == l) return e;
-                for (let t of l) e.set(t.id, new s.A(t));
+                if (null == t) return e;
+                for (let l of t) e.set(l.id, new a.A(l));
                 return e;
-            }, [l])),
-            (0, a.yK)([n.A], () => e.gameApplicationIds.map((e) => n.A.getGame(e) ?? m.get(e)).filter(o.Vq))),
-        v = i.useMemo(
+            }, [t])),
+            (0, s.yK)([n.A], () => e.gameApplicationIds.map((e) => n.A.getGame(e) ?? m.get(e)).filter(o.Vq))),
+        h = i.useMemo(
             () =>
-                [...x].sort((e, l) => {
-                    let t = u[e.id]?.score ?? 0,
-                        i = u[l.id]?.score ?? 0;
-                    return t !== i ? i - t : 0;
+                [...x].sort((e, t) => {
+                    let l = u[e.id]?.score ?? 0,
+                        i = u[t.id]?.score ?? 0;
+                    return l !== i ? i - l : 0;
                 }),
             [x, u],
         ),
-        g = i.useMemo(() => v.slice(0, 5), [v]);
+        v = i.useMemo(() => h.slice(0, 5), [h]);
     return {
-        gamesToDisplay: g,
-        lastGameToDisplay: i.useMemo(() => v[5] ?? null, [v]),
-        remainingGames: i.useMemo(() => v.slice(5), [v]),
+        gamesToDisplay: v,
+        lastGameToDisplay: i.useMemo(() => h[5] ?? null, [h]),
+        remainingGames: i.useMemo(() => h.slice(5), [h]),
     };
 }

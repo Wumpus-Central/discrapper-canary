@@ -82,16 +82,16 @@ let x = /^[a-z0-9_+\-.#]+$/i,
         ["u", E],
     ]),
     y = new Set(["*", "_", "~", "|", "\\"]),
-    v = {},
-    S = {};
+    S = {},
+    v = {};
 for (let e in m.Ay.RULES) {
     if (!(e in C))
         throw Error(
             `Slate: Unknown markdown rule: ${e}.  If you have just added a new markdown rule then you probably need to add it to this file so that the rich chat box understands it.`,
         );
     let t = C[e];
-    "skip" !== t.type && (v[e] = N(m.Ay.RULES[e])),
-        "skip" !== t.type && "inlineObject" !== t.type && (S[e] = N("text" === e ? f.Ay : m.Ay.RULES[e]));
+    "skip" !== t.type && (S[e] = N(m.Ay.RULES[e])),
+        "skip" !== t.type && "inlineObject" !== t.type && (v[e] = N("text" === e ? f.Ay : m.Ay.RULES[e]));
 }
 function N(e) {
     i()(null != e.parse, "Slate: rule must have a parse function");
@@ -132,10 +132,10 @@ let T = {
         },
     },
     j = /(-# +)/,
-    b = (0, p.A)([v, T]),
-    R = (0, p.A)([S, T]),
-    M = c.X(b),
-    O = c.X(R),
+    b = (0, p.A)([S, T]),
+    R = (0, p.A)([v, T]),
+    O = c.X(b),
+    M = c.X(R),
     L = { max: 1 / 0, maxAge: +g.A.Millis.MINUTE, updateAgeOnGet: !0 },
     w = new (o())(L),
     k = new (o())(L);
@@ -605,7 +605,7 @@ let Z = {
                                         a = {
                                             originalMatch: { index: 0, 0: "" },
                                             type: "paragraph",
-                                            content: (n ? O : M)(r, !0, {
+                                            content: (n ? M : O)(r, !0, {
                                                 returnMentionIds: !0,
                                                 disableAutoBlockNewlines: !0,
                                                 guildId: t,

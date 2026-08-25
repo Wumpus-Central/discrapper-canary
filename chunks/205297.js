@@ -288,10 +288,10 @@ let T = r.memo(function (e) {
                       }),
             [n, t, a, h],
         ),
-        R = r.useCallback(() => {
+        O = r.useCallback(() => {
             N(!0);
         }, []),
-        O = r.useCallback(() => {
+        R = r.useCallback(() => {
             N(!1);
         }, []),
         L = r.useMemo(() => n.some((e) => e.component === u.o1q.ACTIVITY), [n]),
@@ -308,8 +308,8 @@ let T = r.memo(function (e) {
                       hidden: t.hidden,
                       onMove: d,
                       onResize: _,
-                      onDragStart: R,
-                      onDragEnd: O,
+                      onDragStart: O,
+                      onDragEnd: R,
                       maxX: l,
                       maxY: o,
                       width: a,

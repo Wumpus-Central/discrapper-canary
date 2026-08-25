@@ -25,9 +25,9 @@ function f(e) {
             onBlur: E,
             onMouseOver: I,
             onMouseLeave: y,
-            ...v
+            ...S
         } = e,
-        [S, N] = i.useState(!1),
+        [v, N] = i.useState(!1),
         _ = i.useCallback(() => {
             N(!0), C?.();
         }, [C]),
@@ -43,7 +43,7 @@ function f(e) {
         R = (0, a.bG)([u.Ay], () =>
             t.application?.bot?.id != null ? u.Ay.getMember(n, t.application?.bot?.id) : null,
         ),
-        M = i.useMemo(
+        O = i.useMemo(
             () =>
                 t.type === d.Hf.APPLICATION
                     ? c.Ay.getApplicationIconURL({
@@ -58,7 +58,7 @@ function f(e) {
             [t, f, R],
         );
     return (0, l.jsx)("div", {
-        ...v,
+        ...S,
         className: r()(h.iE, g, { [h.rb]: x, [h.wH]: x && s }),
         onFocus: _,
         onBlur: T,
@@ -66,10 +66,10 @@ function f(e) {
         onMouseLeave: b,
         children: (0, l.jsx)(o.Ay, {
             className: h.dK,
-            mask: A || (x && (s || S)) ? o.hW.SQUIRCLE : o.hW.AVATAR_DEFAULT,
+            mask: A || (x && (s || v)) ? o.hW.SQUIRCLE : o.hW.AVATAR_DEFAULT,
             width: f,
             height: p,
-            children: (0, l.jsx)("img", { alt: "", className: h.Kk, style: { width: f, height: p }, src: M }),
+            children: (0, l.jsx)("img", { alt: "", className: h.Kk, style: { width: f, height: p }, src: O }),
         }),
     });
 }

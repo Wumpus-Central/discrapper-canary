@@ -73,14 +73,14 @@ function C() {
         }),
         (g = {});
 }
-function R(e) {
+function O(e) {
     if (e === m) return;
     let t = !e && m;
     (m = e), t && C();
 }
-class O extends i.A {
+class R extends i.A {
     _initialize() {
-        R(N());
+        O(N());
     }
     _terminate() {
         window.requestAnimationFrame = A;
@@ -98,7 +98,7 @@ class O extends i.A {
         }
     }
     handleWindowStateChage() {
-        R(N());
+        O(N());
     }
     handleOverlayRenderDebugMode(e) {
         let { enabled: t, mode: n } = e;
@@ -112,4 +112,4 @@ class O extends i.A {
         OVERLAY_RENDER_DEBUG_MODE: this.handleOverlayRenderDebugMode,
     };
 }
-let L = new O();
+let L = new R();

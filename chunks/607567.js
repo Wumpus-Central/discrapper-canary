@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Ay: () => U, RQ: () => L, hz: () => O }), n(321073);
+n.d(t, { Ay: () => U, RQ: () => L, hz: () => R }), n(321073);
 var i = n(435558),
     r = n.n(i),
     a = n(17928),
@@ -27,11 +27,11 @@ function N(e) {
 function C(e, t) {
     return A.Ay.getMember(e, t.id);
 }
-function R(e, t, n) {
+function O(e, t, n) {
     let i = t?.nick ?? p.Ay.getName(n);
-    return { member: t, comparator: O(e, i) };
+    return { member: t, comparator: R(e, i) };
 }
-function O(e, t) {
+function R(e, t) {
     return `${e.selfStream ? "\0" : "\x01"}${t.toLowerCase()}\0${e.userId}`;
 }
 function L(e, t, n, i) {
@@ -39,7 +39,7 @@ function L(e, t, n, i) {
     let a = h.default.getUser(n),
         s = null == a;
     null == a && (a = new u.A({ id: n, username: "...", discriminator: n.slice(-5, -1) }));
-    let { member: l, comparator: o } = R(e, C(t, (r = a)), r),
+    let { member: l, comparator: o } = O(e, C(t, (r = a)), r),
         d = {
             voiceState: e,
             user: a,
@@ -78,7 +78,7 @@ class y {
             else if (n.voiceState !== t) {
                 let r = C(this.guildId, i),
                     a = r?.nick ?? p.Ay.getName(i);
-                return this._voiceStates.set(e, { ...n, member: r, comparator: O(t, a), nick: a, voiceState: t }), !0;
+                return this._voiceStates.set(e, { ...n, member: r, comparator: R(t, a), nick: a, voiceState: t }), !0;
             }
         } else if (null != n) return this._voiceStates.delete(e), !0;
         return !1;
@@ -90,7 +90,7 @@ class y {
         if (null != t && null != n) {
             let i = C(this.guildId, n);
             if (i?.nick !== t.member?.nick || i?.avatar !== t.member?.avatar) {
-                let { comparator: r } = R(t.voiceState, i, n);
+                let { comparator: r } = O(t.voiceState, i, n);
                 return this._voiceStates.set(e, { ...t, member: i, comparator: r, nick: i?.nick }), !0;
             }
         }

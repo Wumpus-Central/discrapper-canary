@@ -9,7 +9,7 @@ n.d(t, {
     VI: () => H,
     _O: () => N,
     aq: () => h,
-    ku: () => O,
+    ku: () => R,
     ns: () => b,
     o4: () => W,
     q6: () => j,
@@ -102,7 +102,7 @@ function C(e, t) {
     let s = (0, d.cG)(t, 0);
     return s > 0 ? r[s % 5] : null != e ? r[a()(e).shiftRight(22).mod(r.length).toJSNumber()] : r[0];
 }
-function R(e) {
+function O(e) {
     let { id: t, avatar: n, discriminator: r, bot: a } = e,
         s = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         l = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : _.eQT,
@@ -124,12 +124,12 @@ function R(e) {
         canWebP: d,
     });
 }
-function O(e) {
+function R(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : _.eQT,
         i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null,
         r = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : m;
-    return R(e, t, n, i, r) ?? C(e.id, e.discriminator, e.isProvisional, n);
+    return O(e, t, n, i, r) ?? C(e.id, e.discriminator, e.isProvisional, n);
 }
 function L(e) {
     let t,
@@ -287,7 +287,7 @@ function k(e) {
         if (null != e) return e;
     }
     if (null != r && a) {
-        let e = R(r, !1, i);
+        let e = O(r, !1, i);
         if (null != e) return e;
     }
     if (null != n)
@@ -304,7 +304,7 @@ function k(e) {
                   keepAspectRatio: l,
               });
     if (null != r) {
-        let e = R(r, !1, i);
+        let e = O(r, !1, i);
         if (null != e) return e;
     }
     if (s) return A;
@@ -373,7 +373,7 @@ function Y(e) {
     return "number" == typeof e ? e : { uri: e ?? void 0 };
 }
 let K = {
-    getUserAvatarURL: O,
+    getUserAvatarURL: R,
     getDefaultAvatarURL: C,
     getGuildMemberAvatarURL: y,
     getGuildMemberAvatarURLSimple: L,
@@ -389,7 +389,7 @@ let K = {
         return H(e?.icon);
     },
     isAnimatedIconHash: H,
-    getUserAvatarSource: (e, t, n) => Y(O(e, t, n)),
+    getUserAvatarSource: (e, t, n) => Y(R(e, t, n)),
     getGuildIconURL: G,
     getGuildSplashURL: M,
     getGuildSplashSource: function (e) {

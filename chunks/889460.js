@@ -1,74 +1,74 @@
-n.d(t, { A: () => I }), n(321073);
+n.d(e, { A: () => b }), n(321073);
 var i = n(477900),
     l = n(582128),
     d = n(17928),
     r = n(477782),
     a = n(308528),
-    u = n(376728),
+    s = n(376728),
     o = n(148494),
-    s = n(855687),
+    u = n(855687),
     c = n(734057),
     A = n(808728),
-    f = n(71393),
-    x = n(576705),
-    C = n(994500),
-    v = n(711014),
-    g = n(287809),
-    h = n(652215),
-    b = n(375708);
-function m(e, t) {
-    a.A.ensurePrivateChannel(e).then((e) => {
-        null != c.A.getChannel(e) && o.A.sendInvite(e, t, "context_menu", { source: h.PE1.GUILD_CONTEXT_MENU });
+    g = n(71393),
+    f = n(576705),
+    x = n(994500),
+    I = n(711014),
+    h = n(287809),
+    C = n(652215),
+    v = n(375708);
+function m(t, e) {
+    a.A.ensurePrivateChannel(t).then((t) => {
+        null != c.A.getChannel(t) && o.A.sendInvite(t, e, "context_menu", { source: C.PE1.GUILD_CONTEXT_MENU });
     });
 }
-function I(e) {
-    let { user: t, guildId: n, onAction: a } = e,
-        o = (0, d.bG)([g.default], () => g.default.getCurrentUser(), []),
-        c = (0, d.yK)([v.Ay, f.A, x.A], () => {
-            let e = v.Ay.getFlattenedGuildIds(),
-                t = [];
+function b(t) {
+    let { user: e, guildId: n, onAction: a } = t,
+        o = (0, d.bG)([h.default], () => h.default.getCurrentUser(), []),
+        c = (0, d.yK)([I.Ay, g.A, f.A], () => {
+            let t = I.Ay.getFlattenedGuildIds(),
+                e = [];
             return (
-                e.forEach((e) => {
-                    let i = f.A.getGuild(e);
-                    null != i && (0, s.K)(x.A, i) && i.id !== n && t.push(i);
+                t.forEach((t) => {
+                    let i = g.A.getGuild(t);
+                    null != i && (0, u.K)(f.A, i) && i.id !== n && e.push(i);
                 }),
-                t
+                e
             );
         }, [n]),
-        [I, T] = l.useState({});
-    return o?.id === t.id || t.bot || 0 === c.length || C.A.isBlockedOrIgnored(t.id)
+        [b, p] = l.useState({});
+    return o?.id === e.id || e.bot || 0 === c.length || x.A.isBlockedOrIgnored(e.id)
         ? null
         : (0, i.jsx)(r.Dr, {
               id: "invite-to-server",
-              label: b.intl.string(b.t.Sd8Ixw),
-              children: c.map((e) =>
-                  I[e.id]
-                      ? (0, i.jsx)(r.Dr, { id: e.id, disabled: !0, label: b.intl.string(b.t.PuLLzP) }, e.id)
+              label: v.intl.string(v.t.Sd8Ixw),
+              children: c.map((t) =>
+                  b[t.id]
+                      ? (0, i.jsx)(r.Dr, { id: t.id, disabled: !0, label: v.intl.string(v.t.PuLLzP) }, t.id)
                       : (0, i.jsx)(
                             r.Dr,
                             {
-                                id: e.id,
-                                label: e.name,
+                                id: t.id,
+                                label: t.name,
                                 action: () => {
                                     a?.(),
-                                        (function (e, t) {
-                                            let n = A.Ay.getDefaultChannel(e.id, !0, h.xBc.CREATE_INSTANT_INVITE);
+                                        (function (t, e) {
+                                            let n = A.Ay.getDefaultChannel(t.id, !0, C.xBc.CREATE_INSTANT_INVITE);
                                             if (null != n) {
                                                 if (
-                                                    (T({ ...I, [e.id]: !0 }),
-                                                    !x.A.can(h.xBc.CREATE_INSTANT_INVITE, e) && null != e.vanityURLCode)
+                                                    (p({ ...b, [t.id]: !0 }),
+                                                    !f.A.can(C.xBc.CREATE_INSTANT_INVITE, t) && null != t.vanityURLCode)
                                                 )
-                                                    return m(t, e.vanityURLCode);
-                                                u.Ay.createInvite(
+                                                    return m(e, t.vanityURLCode);
+                                                s.Ay.createInvite(
                                                     n.id,
                                                     { max_uses: 1, unique: !0 },
                                                     "User Invite Context Menu",
-                                                ).then((e) => m(t, e.code));
+                                                ).then((t) => m(e, t.code));
                                             }
-                                        })(e, t.id);
+                                        })(t, e.id);
                                 },
                             },
-                            e.id,
+                            t.id,
                         ),
               ),
           });

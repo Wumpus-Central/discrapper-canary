@@ -33,9 +33,9 @@ let A = s.forwardRef(function (e, t) {
             keyboardModeEnabled: E,
             onKeyDown: I,
             draftType: y,
-            size: v = 1,
+            size: S = 1,
         } = e,
-        S = s.useRef(null),
+        v = s.useRef(null),
         { onFocus: N, ..._ } = (0, o.rm)(n),
         { handleFocus: T, handleBlur: j } = (function (e) {
             let [t, n] = (0, s.useState)(!1);
@@ -56,7 +56,7 @@ let A = s.forwardRef(function (e, t) {
                 isFocused: t,
             };
         })(N),
-        b = 0 === v,
+        b = 0 === S,
         R = null != A;
     return (0, i.jsx)(u.vN, {
         children: (0, i.jsx)("li", {
@@ -64,8 +64,8 @@ let A = s.forwardRef(function (e, t) {
             onFocus: T,
             onBlur: j,
             onClick: function (e) {
-                if (0 === e.detail && null != S.current) {
-                    let e = S.current.querySelector('[role="button"], button');
+                if (0 === e.detail && null != v.current) {
+                    let e = v.current.querySelector('[role="button"], button');
                     e?.click();
                 }
             },
@@ -94,7 +94,7 @@ let A = s.forwardRef(function (e, t) {
             ref: t,
             children: (0, i.jsxs)("div", {
                 className: p.PO,
-                ref: S,
+                ref: v,
                 children: [
                     g,
                     R

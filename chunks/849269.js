@@ -20,8 +20,8 @@ var l,
     E = n(620148),
     I = n(283488),
     y = n(360469),
-    v = n(652215),
-    S = n(165610),
+    S = n(652215),
+    v = n(165610),
     N = (((l = {})[(l.START = 0)] = "START"), (l[(l.JOIN = 1)] = "JOIN"), (l[(l.LEAVE = 2)] = "LEAVE"), l);
 function _(e) {
     let {
@@ -45,8 +45,8 @@ function _(e) {
             null != g.label_from &&
             C > Date.parse(g.label_from),
         y = (0, I.A)({ applicationId: m.id, size: o, names: a, format: "webp" }),
-        v = null != f.activity_preview_video_asset_id ? (0, A.A)(m.id, f.activity_preview_video_asset_id) : null,
-        S = (0, p.Ay)("channel" === n.type ? n.channel : void 0).find((e) => {
+        S = null != f.activity_preview_video_asset_id ? (0, A.A)(m.id, f.activity_preview_video_asset_id) : null,
+        v = (0, p.Ay)("channel" === n.type ? n.channel : void 0).find((e) => {
             let { embeddedActivity: t } = e;
             return m.id === t.applicationId;
         }),
@@ -64,8 +64,8 @@ function _(e) {
         R = T(m, t.activity);
     return {
         imageBackground: y,
-        videoUrl: v,
-        joinableEmbeddedApp: S,
+        videoUrl: S,
+        joinableEmbeddedApp: v,
         activityAction: N,
         onActivityItemSelected: _,
         labelType: E ? g.label_type : s.Hr.NONE,
@@ -73,7 +73,7 @@ function _(e) {
     };
 }
 function T(e, t) {
-    if (!((0, o.n)(e, v.gfo.EMBEDDED_RELEASED) || (0, o.n)(e, v.gfo.EMBEDDED_FIRST_PARTY))) return;
+    if (!((0, o.n)(e, S.gfo.EMBEDDED_RELEASED) || (0, o.n)(e, S.gfo.EMBEDDED_FIRST_PARTY))) return;
     let n = t.client_platform_config[(0, x.A)((0, d.getOS)())].release_phase;
     return y.qG.includes(n) ? n.replace("_", " ").replace(/(^\w|\s\w)/g, (e) => e.toUpperCase()) : void 0;
 }
@@ -109,8 +109,8 @@ function b(e) {
             referrerId: I,
             onConfirmActivityLaunchChecksAlertOpen: y,
         } = e,
-        v = t?.id ?? "",
-        N = j({ context: l, applicationId: v, fetchesApplication: A }),
+        S = t?.id ?? "",
+        N = j({ context: l, applicationId: S, fetchesApplication: A }),
         { analyticsLocations: _ } = (0, r.Ay)(),
         T = (0, C.A)(),
         b = (0, c.x)(t);
@@ -123,7 +123,7 @@ function b(e) {
             return async () => {
                 if (b) {
                     try {
-                        await u.A.launchFrame({ applicationId: v, surface: S.sd }), o?.({ applicationId: v });
+                        await u.A.launchFrame({ applicationId: S, surface: v.sd }), o?.({ applicationId: S });
                     } catch (e) {}
                     return;
                 }
@@ -135,7 +135,7 @@ function b(e) {
                         return;
                     }
                 await (0, f.A)({
-                    targetApplicationId: v,
+                    targetApplicationId: S,
                     locationObject: s,
                     channelId: e,
                     analyticsLocations: _,
@@ -146,13 +146,13 @@ function b(e) {
                     customId: E,
                     referrerId: I,
                     onConfirmActivityLaunchChecksAlertOpen: y,
-                }).then((e) => e && o?.({ applicationId: v }));
+                }).then((e) => e && o?.({ applicationId: S }));
             };
         case 1:
             return async () => {
                 h.Ay.isLaunchingActivity() ||
                     (await (0, m.A)({
-                        applicationId: v,
+                        applicationId: S,
                         activityChannelId: "channel" === l.type ? l.channel.id : void 0,
                         locationObject: s,
                         analyticsLocations: _,
@@ -161,13 +161,13 @@ function b(e) {
                         source: x,
                         customId: E,
                         referrerId: I,
-                    }).then((e) => e && o?.({ applicationId: v })));
+                    }).then((e) => e && o?.({ applicationId: S })));
             };
         case 2:
             return () => {
                 h.Ay.isLaunchingActivity() ||
-                    (null != T && a.leaveActivity({ location: T.location, applicationId: v }),
-                    o?.({ applicationId: v }));
+                    (null != T && a.leaveActivity({ location: T.location, applicationId: S }),
+                    o?.({ applicationId: S }));
             };
     }
 }

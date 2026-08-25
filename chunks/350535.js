@@ -153,11 +153,11 @@ let C = [
     ["TAB", "\u21E5"],
     ["SPACE", "\u2423"],
 ];
-function R(e) {
+function O(e) {
     for (let [t, n] of C) if (t === e.toUpperCase()) return n;
     return e;
 }
-let O = /shift|meta|ctrl|alt$/;
+let R = /shift|meta|ctrl|alt$/;
 function L(e) {
     let t = { keyCode: 0, key: "", code: "", metaKey: !1, shiftKey: !1, altKey: !1, ctrlKey: !1 };
     return null == e
@@ -166,7 +166,7 @@ function L(e) {
               let i = g(n),
                   r = { ...t };
               if (null == i) return e.push({ ...r, combo: n }), e;
-              if (O.test(i) && ("meta" === i || "shift" === i || "alt" === i || "ctrl" === i))
+              if (R.test(i) && ("meta" === i || "shift" === i || "alt" === i || "ctrl" === i))
                   return (t[i + "Key"] = !0), e.map((e) => ((e[i + "Key"] = !0), e));
               {
                   let t = S(i, u.g$.BROWSER);
@@ -215,7 +215,7 @@ function D(e) {
             })
             .filter(o.Vq);
     return t
-        ? (-1 !== n.g.navigator.appVersion.indexOf("Mac OS X") ? i.map(R) : i).join(" + ").toUpperCase()
+        ? (-1 !== n.g.navigator.appVersion.indexOf("Mac OS X") ? i.map(O) : i).join(" + ").toUpperCase()
         : i.join("+");
 }
 function v(e, t) {

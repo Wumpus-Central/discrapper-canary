@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { $2: () => O, Ky: () => b, L_: () => R, no: () => T, vV: () => y, xz: () => M, yC: () => j }), n(938796);
+n.d(t, { $2: () => M, Ky: () => b, L_: () => R, no: () => T, vV: () => y, xz: () => O, yC: () => j }), n(938796);
 var l,
     i = n(582128),
     s = n(665260),
@@ -28,7 +28,7 @@ function I(e) {
     return C(e) || E(e);
 }
 var y = (((l = {}).EMBED = "embed"), (l.ATTACHMENT = "attachment"), (l.COMPONENT = "component"), l);
-function v(e) {
+function S(e) {
     return (function (e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : d.X6.getSetting();
         if (!t) return [];
@@ -79,7 +79,7 @@ function v(e) {
                   .filter(p.Vq);
     })(e, d.X6.useSetting());
 }
-function S(e, t) {
+function v(e, t) {
     let n = d.hD.useSetting(),
         l = d.rs.useSetting();
     if (null == e) return [];
@@ -157,21 +157,21 @@ function T(e, t) {
     }, [t, l]);
 }
 function j(e, t) {
-    return [...v(e), ...S(e, t), ...N(e)];
+    return [...S(e), ...v(e, t), ...N(e)];
 }
 function b(e, t) {
-    let n = v(e),
-        l = S(e, t),
+    let n = S(e),
+        l = v(e, t),
         i = N(e);
     return n[0] ?? l[0] ?? i[0] ?? null;
 }
 function R(e, t) {
-    let n = v(e),
-        l = S(e, t),
+    let n = S(e),
+        l = v(e, t),
         i = N(e);
     return null == n[0] && null == i[0] && null != l[0];
 }
-function M(e, t) {
+function O(e, t) {
     let n = h.A.getChannel(t);
     if (null == n) return !1;
     let l = m.A.getMessage(n.id, g.default.castChannelIdAsMessageId(n.id));
@@ -185,7 +185,7 @@ function M(e, t) {
         (0 === l.attachments.length || null == l.attachments.find((e) => C(e) || E(e)))
     );
 }
-function O(e) {
+function M(e) {
     return e.reduce(
         (e, t) => ({ containsVideo: e.containsVideo || t.isVideo, containsGif: e.containsGif || (0, u.ge)(t.src) }),
         { containsVideo: !1, containsGif: !1 },

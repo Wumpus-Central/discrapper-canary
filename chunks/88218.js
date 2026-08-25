@@ -47,8 +47,8 @@ let C = function (e) {
             className: E,
             listPadding: I,
             rowCount: y,
-            getScrollOffsetForIndex: v,
-            categoryHeight: S,
+            getScrollOffsetForIndex: S,
+            categoryHeight: v,
             onScroll: N,
             renderCategoryListItem: _,
             rowCountBySection: T,
@@ -56,8 +56,8 @@ let C = function (e) {
             navId: b,
             itemIdPrefix: R,
         } = e,
-        M = d.useStore((e) => e.activeCategoryIndex),
-        O = null != b && null != R,
+        O = d.useStore((e) => e.activeCategoryIndex),
+        M = null != b && null != R,
         { itemIdForIndex: L, parseIndex: w } = i.useMemo(() => g(R ?? "expression-category-"), [R]),
         k = (function (e) {
             let {
@@ -119,7 +119,7 @@ let C = function (e) {
                         }),
                     [n],
                 ),
-                v = i.useCallback(
+                S = i.useCallback(
                     () =>
                         new Promise((e) => {
                             let t = n.current?.getListDimensions().totalHeight ?? Number.MAX_SAFE_INTEGER;
@@ -130,7 +130,7 @@ let C = function (e) {
                         }),
                     [n],
                 ),
-                S = i.useCallback(() => {
+                v = i.useCallback(() => {
                     let e = f(s) ?? g.current;
                     null == e || e >= r - 1 || I(e + 1, !0);
                 }, [I, s, r]),
@@ -143,8 +143,8 @@ let C = function (e) {
                     isEnabled: A,
                     setFocus: E,
                     scrollToStart: y,
-                    scrollToEnd: v,
-                    onNavigateNextAtEnd: S,
+                    scrollToEnd: S,
+                    onNavigateNextAtEnd: v,
                     onNavigatePreviousAtStart: N,
                 }),
                 T = _.setFocus;
@@ -171,9 +171,9 @@ let C = function (e) {
             itemIdForIndex: L,
             parseIndex: w,
             rowCount: y,
-            activeIndex: M,
-            getScrollOffsetForIndex: v,
-            enabled: O,
+            activeIndex: O,
+            getScrollOffsetForIndex: S,
+            enabled: M,
         });
     !(function (e) {
         let { activeIndex: t, categoryListRef: n, getScrollOffsetForIndex: l } = e,
@@ -190,7 +190,7 @@ let C = function (e) {
                     n.current.scrollRowIntoView(t, { animate: !0, offset: i }), (s.current = x.An1), (r.current = t);
                 })));
         }, [t, n, l]);
-    })({ activeIndex: M, categoryListRef: t, getScrollOffsetForIndex: v });
+    })({ activeIndex: O, categoryListRef: t, getScrollOffsetForIndex: S });
     let P = i.useCallback(
             (e) => {
                 let { searchQuery: t } = u.RQ.getState();
@@ -198,8 +198,8 @@ let C = function (e) {
             },
             [n, d],
         ),
-        D = i.useCallback((e) => _(s[e], e, () => P(e), M === e), [M, s, P, _]),
-        U = i.useMemo(() => ("function" == typeof S ? (e) => S(s[e], e) : S), [s, S]),
+        D = i.useCallback((e) => _(s[e], e, () => P(e), O === e), [O, s, P, _]),
+        U = i.useMemo(() => ("function" == typeof v ? (e) => v(s[e], e) : v), [s, v]),
         G = (0, l.jsx)(o.A, {
             listPadding: I,
             onScroll: N,
@@ -210,12 +210,12 @@ let C = function (e) {
             hideScrollbar: !0,
             rowCountBySection: T,
             renderSection: j,
-            role: O ? "none presentation" : void 0,
+            role: M ? "none presentation" : void 0,
         }),
         V = (0, l.jsxs)("div", {
             className: r()(A.i, E),
             children: [
-                O
+                M
                     ? (0, l.jsx)(a.PR, {
                           children: (e) => {
                               let { ref: t, ...n } = e;
@@ -226,5 +226,5 @@ let C = function (e) {
                 C?.(P),
             ],
         });
-    return O ? (0, l.jsx)(a.hD, { navigator: k, children: V }) : V;
+    return M ? (0, l.jsx)(a.hD, { navigator: k, children: V }) : V;
 };

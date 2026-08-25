@@ -1,4 +1,4 @@
-n.d(t, { A: () => U }), n(321073);
+n.d(t, { A: () => D }), n(321073);
 var i = n(477900),
     l = n(582128),
     a = n(503698),
@@ -11,31 +11,31 @@ var i = n(477900),
     h = n(734057),
     p = n(309010),
     m = n(927813),
-    f = n(935208),
-    A = n(446243),
+    A = n(935208),
+    f = n(446243),
     x = n(920639),
     g = n(538638),
     C = n(558076),
     y = n(872772),
     j = n(360729),
     I = n(544299),
-    N = n(1195),
-    v = n(375708),
-    E = n(96674),
+    E = n(1195),
+    N = n(375708),
+    v = n(96674),
     b = n(880872),
     T = n(849351),
     _ = n(572316),
     R = n(192063);
 let S = {
-        0: { src: _.A, alt: N.default.IrukuA, heightPx: 723 },
-        1: { src: T.A, alt: N.default.yITFQ7, heightPx: 593 },
-        2: { src: b.A, alt: N.default.uUhyVw, heightPx: 490 },
+        0: { src: _.A, alt: E.default.IrukuA, heightPx: 723 },
+        1: { src: T.A, alt: E.default.yITFQ7, heightPx: 593 },
+        2: { src: b.A, alt: E.default.uUhyVw, heightPx: 490 },
     },
     L = 30 * m.A.Millis.MINUTE,
     O = m.A.Millis.HOUR;
 function P(e) {
     let t = (function (e) {
-        if (null != e) return null != e.updatedAt ? e.updatedAt.getTime() : f.default.extractTimestamp(e.objectId);
+        if (null != e) return null != e.updatedAt ? e.updatedAt.getTime() : A.default.extractTimestamp(e.objectId);
     })(e);
     if (null == t) return { stage: 0, timeUntilNextStage: null };
     let n = Date.now() - t;
@@ -47,19 +47,19 @@ function P(e) {
 }
 function M(e) {
     let { guildId: t, channelId: n, plant: a, plantPosition: c, disabled: h, plantWidth: p } = e,
-        [m, f] = l.useState(P(a).stage),
+        [m, A] = l.useState(P(a).stage),
         [C, j] = l.useState(null),
-        N = l.useRef([]),
+        E = l.useRef([]),
         b = l.useCallback(
             (e) => {
-                if (N.current.length > 0 || e === m) return;
+                if (E.current.length > 0 || e === m) return;
                 let [t, ...n] = (function (e, t) {
                     let n = t > e ? 1 : -1,
                         i = [];
                     for (let l = e + n; l !== t + n; l += n) i.push(l);
                     return i;
                 })(m, e);
-                (N.current = n), f(t);
+                (E.current = n), A(t);
             },
             [m],
         ),
@@ -72,8 +72,8 @@ function M(e) {
                 leave: { opacity: 0 },
                 config: { duration: 1e3 },
                 onRest: () => {
-                    let e = N.current.shift();
-                    null != e && f(e);
+                    let e = E.current.shift();
+                    null != e && A(e);
                 },
             },
             "respect-motion-settings",
@@ -95,17 +95,17 @@ function M(e) {
             a?.objectId != null &&
                 ((0, u.Ak)("hang_status_select", 0.1),
                 j(m),
-                (0, A.Xh)(t, n, a.objectId, { object_type: y.N.PLANT }).catch((e) => (0, g.b)()),
+                (0, f.Xh)(t, n, a.objectId, { object_type: y.N.PLANT }).catch((e) => (0, g.b)()),
                 (0, x.Ql)({ guildId: t, channelId: n, interactionType: "plant_watered" }));
         }, [a, t, n, m]),
-        O = (0, I.Sb)({ position: { x: c.x, y: 100 - c.y }, targetLabel: v.intl.string(S[m].alt) });
+        O = (0, I.Sb)({ position: { x: c.x, y: 100 - c.y }, targetLabel: N.intl.string(S[m].alt) });
     return (0, i.jsxs)(o.D, {
-        className: s()(E.CV, E.AA, h && E.r9),
+        className: s()(v.CV, v.AA, h && v.r9),
         style: { left: `${c.x}%`, bottom: `${c.y}%`, width: `${p}px` },
         onClick: h ? void 0 : L,
         "aria-disabled": h && null == O,
         role: "listitem",
-        "aria-label": v.intl.string(S[m].alt),
+        "aria-label": N.intl.string(S[m].alt),
         ...O,
         children: [
             T((e, t) => {
@@ -113,7 +113,7 @@ function M(e) {
                     { src: l, heightPx: a } = S[t],
                     o = t === m;
                 return (0, i.jsx)(r.animated.img, {
-                    className: s()(E.zs, { [E.tB]: !o, [E.eA]: t === C }),
+                    className: s()(v.zs, { [v.tB]: !o, [v.eA]: t === C }),
                     style: {
                         opacity: e.opacity,
                         ...(t === C
@@ -127,31 +127,31 @@ function M(e) {
                     draggable: !1,
                 });
             }),
-            (0, i.jsx)("img", { className: E.tB, src: R.A, alt: "", "aria-hidden": !0, draggable: !1 }),
+            (0, i.jsx)("img", { className: v.tB, src: R.A, alt: "", "aria-hidden": !0, draggable: !1 }),
         ],
     });
 }
 function w(e) {
     let { plantPosition: t, plantWidth: n } = e;
     return (0, i.jsxs)("div", {
-        className: E.CV,
+        className: v.CV,
         role: "listitem",
-        "aria-label": v.intl.string(N.default.IrukuA),
+        "aria-label": N.intl.string(E.default.IrukuA),
         style: { left: `${t.x}%`, bottom: `${t.y}%`, width: `${n}px` },
         children: [
-            (0, i.jsx)("img", { className: E.zs, src: _.A, alt: "", "aria-hidden": !0, draggable: !1 }),
-            (0, i.jsx)("img", { className: E.tB, src: R.A, alt: "", "aria-hidden": !0, draggable: !1 }),
+            (0, i.jsx)("img", { className: v.zs, src: _.A, alt: "", "aria-hidden": !0, draggable: !1 }),
+            (0, i.jsx)("img", { className: v.tB, src: R.A, alt: "", "aria-hidden": !0, draggable: !1 }),
         ],
     });
 }
-function U(e) {
+function D(e) {
     let { channelId: t, plants: n, plantConfig: a, roomWidth: s } = e,
         r = (0, c.bG)([h.A], () => h.A.getChannel(t)?.guild_id),
         o = a.map((e, t) => ({ plantPosition: e, plant: n[t] })),
         { interactionsEnabled: d } = j.A.useExperiment({ guildId: r, location: "GuildRoomPlants" }),
         u = (0, c.bG)([p.Ay], () => p.Ay.getVoiceChannelId() === t),
         m = (0, c.bG)([C.A], () => null != C.A.getPendingNote(t)),
-        f = 0.0625 * s;
+        A = 0.0625 * s;
     return (l.useEffect(() => {
         d &&
             Object.values(S).forEach((e) => {
@@ -167,10 +167,10 @@ function U(e) {
                   return d
                       ? (0, i.jsx)(
                             M,
-                            { guildId: r, channelId: t, plant: l, plantPosition: a, disabled: !u || m, plantWidth: f },
+                            { guildId: r, channelId: t, plant: l, plantPosition: a, disabled: !u || m, plantWidth: A },
                             `${l?.objectId}-${n}`,
                         )
-                      : (0, i.jsx)(w, { plantPosition: a, plantWidth: f }, n);
+                      : (0, i.jsx)(w, { plantPosition: a, plantWidth: A }, n);
               }),
           });
 }

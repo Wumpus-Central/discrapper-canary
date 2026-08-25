@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => O }), n(205816);
+n.d(t, { A: () => R }), n(205816);
 var i = n(17928),
     r = n(228366),
     a = n(511963),
@@ -80,7 +80,7 @@ function C() {
     }
     return !1;
 }
-class R extends i.Ay.PersistedStore {
+class O extends i.Ay.PersistedStore {
     static displayName = "UserOfferStore";
     static persistKey = "UserOfferStore";
     static migrations = [
@@ -244,7 +244,7 @@ class R extends i.Ay.PersistedStore {
         return p.lastFetchSuccessful;
     }
 }
-let O = new R(r.h, {
+let R = new O(r.h, {
     BILLING_USER_OFFER_FETCH_START: function () {
         p.isFetching = !0;
     },

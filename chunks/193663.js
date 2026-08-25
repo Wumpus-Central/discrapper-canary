@@ -25,8 +25,8 @@ let m = function (e) {
         muted: E,
         to: I,
         avatarClassName: y,
-        selectedClassName: v,
-        innerClassName: S,
+        selectedClassName: S,
+        innerClassName: v,
         wrapContent: N,
         highlighted: _,
         focusProps: T,
@@ -35,7 +35,7 @@ let m = function (e) {
     (j.className = r()(j.className, h.kL, {
         [h.wH]: C,
         [h.mr]: _,
-        [v ?? ""]: C,
+        [S ?? ""]: C,
         [h.vk]: !C && (null != I || null != x),
     })),
         (j["aria-selected"] = j["aria-selected"] ?? C);
@@ -46,7 +46,7 @@ let m = function (e) {
                 (0, l.jsx)(d.A, { nameplate: m, hovered: A, selected: C, content: b, placement: c.u.MEMBER_LIST }),
                 (0, l.jsxs)("div", {
                     ref: b,
-                    className: r()(S, h.Zp, { [h.SU]: !C && E, [h.Ib]: N }),
+                    className: r()(v, h.Zp, { [h.SU]: !C && E, [h.Ib]: N }),
                     children: [
                         (0, l.jsx)("div", { className: r()(h.my, y), children: n }),
                         (0, l.jsxs)("div", {

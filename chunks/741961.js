@@ -70,10 +70,10 @@ function y(e) {
         delete e[n], (x = e);
     }
 }
-function v() {
+function S() {
     (p = {}), (g = {}), (x = {});
 }
-class S extends i.Ay.Store {
+class v extends i.Ay.Store {
     initialize() {
         this.waitFor(u.default, c.A);
     }
@@ -91,7 +91,7 @@ class S extends i.Ay.Store {
         return x[e] ?? null;
     }
 }
-let N = new S(r.h, {
+let N = new v(r.h, {
     TYPING_START: I,
     TYPING_STOP: y,
     TYPING_START_LOCAL: function (e) {
@@ -147,8 +147,8 @@ let N = new S(r.h, {
             (clearTimeout(l.timeout), (l = null), y({ channelId: t, userId: n, guildId: E(t) }))
         );
     },
-    CONNECTION_OPEN: v,
-    OVERLAY_INITIALIZE: v,
+    CONNECTION_OPEN: S,
+    OVERLAY_INITIALIZE: S,
     MESSAGE_CREATE: function (e) {
         var t;
         let {

@@ -8,7 +8,7 @@ n.d(t, {
     FU: () => P,
     Gm: () => b,
     HU: () => p,
-    IX: () => R,
+    IX: () => O,
     Jb: () => S,
     M1: () => D,
     Qp: () => _,
@@ -23,7 +23,7 @@ n.d(t, {
     ts: () => C,
     uS: () => E,
     uh: () => v,
-    w_: () => O,
+    w_: () => R,
 });
 var i = n(228366),
     r = n(817281),
@@ -89,11 +89,11 @@ function N(e) {
 function C(e) {
     i.h.dispatch({ type: "ACCESSIBILITY_SET_ENABLE_CUSTOM_CURSOR", enableCustomCursor: e });
 }
-function R(e) {
+function O(e) {
     i.h.dispatch({ type: "ACCESSIBILITY_SET_ROLE_STYLE", roleStyle: e }),
         a.default.track(l.HAw.ROLE_STYLE_SETTING_UPDATED, { role_style: e });
 }
-function O(e) {
+function R(e) {
     i.h.dispatch({ type: "ACCESSIBILITY_SET_OFFICIAL_MESSAGE_STYLE", officialMessageStyle: e }),
         a.default.track(l.HAw.OFFICIAL_MESSAGE_STYLE_SETTING_UPDATED, { official_message_style: e });
 }

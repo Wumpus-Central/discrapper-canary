@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { s: () => O, iu: () => R, DN: () => C, Ay: () => v });
+n.d(t, { s: () => R, iu: () => O, DN: () => C, Ay: () => v });
 var i = n(477900),
     r = n(582128),
     a = n(503698),
@@ -36,7 +36,7 @@ let C = {
         LARGER: "Larger",
         XLARGE: "XLarge",
     },
-    R = {
+    O = {
         [C.SMOL]: 16,
         [C.MINI]: 20,
         [C.SMALLER]: 24,
@@ -46,7 +46,7 @@ let C = {
         [C.LARGER]: 64,
         [C.XLARGE]: 100,
     },
-    O = {
+    R = {
         [C.SMOL]: [10, 10, 8, 6, 6, 4],
         [C.MINI]: [12, 12, 10, 10, 8, 6, 4],
         [C.SMALLER]: [13, 13, 11, 11, 9, 7, 5],
@@ -95,7 +95,7 @@ class L extends r.PureComponent {
                 iconSize: g,
                 ...C
             } = this.props,
-            R = O[a],
+            O = R[a],
             L = null != _ ? c.D : "div",
             y = (0, T.Rb)(e);
         return (0, i.jsxs)(L, {
@@ -105,7 +105,7 @@ class L extends r.PureComponent {
                 [N.noIcon]: null == e.icon,
             }),
             "aria-hidden": p,
-            style: null == e.icon ? { fontSize: (R[y.length] ?? R[R.length - 1]) * o, ...l } : l,
+            style: null == e.icon ? { fontSize: (O[y.length] ?? O[O.length - 1]) * o, ...l } : l,
             onClick: null != E || null == _ ? void 0 : _,
             tabIndex: I,
             ...C,
@@ -137,8 +137,8 @@ let y = o.Ay.connectStores([m.A], (e) => {
         null == i &&
             (i =
                 t instanceof f.GO
-                    ? t.getIconURL(s ?? R[a], n && m.A.isFocused())
-                    : (0, T.Iv)(t, s ?? R[a], n && m.A.isFocused(), l)),
+                    ? t.getIconURL(s ?? O[a], n && m.A.isFocused())
+                    : (0, T.Iv)(t, s ?? O[a], n && m.A.isFocused(), l)),
         { style: { ...r, backgroundImage: (0, g.wU)(i) } }
     );
 })(

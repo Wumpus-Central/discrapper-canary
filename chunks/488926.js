@@ -70,7 +70,7 @@ n.d(t, {
         },
     cc: () => w,
     li: () => B,
-    qN: () => O,
+    qN: () => R,
     r: () => x,
     wO: () => F,
     wT: () => k,
@@ -100,8 +100,8 @@ var i = n(435558),
     S = n(935208),
     N = n(652215);
 let C = a.iu(0),
-    R = a.kg(...r().values(N.xBc)),
-    O = a.kg(
+    O = a.kg(...r().values(N.xBc)),
+    R = a.kg(
         N.xBc.CREATE_INSTANT_INVITE,
         N.xBc.CHANGE_NICKNAME,
         N.xBc.VIEW_CHANNEL,
@@ -205,14 +205,14 @@ function U(e) {
     let u = (s = null != s ? { ...p.A.getUnsafeMutableRoles(i.id), ...s } : p.A.getUnsafeMutableRoles(i.id))[
             (0, E.af)(i)
         ],
-        _ = null != u ? u.permissions : O;
+        _ = null != u ? u.permissions : R;
     if (null != n)
         for (let e = 0; e < n.roles.length; e++) {
             let t = s[n.roles[e]];
             void 0 !== t && (_ = a.WQ(_, t.permissions));
         }
     return (
-        (_ = a.zy(_, N.xBc.ADMINISTRATOR) ? R : P(i.id, n, _, r)),
+        (_ = a.zy(_, N.xBc.ADMINISTRATOR) ? O : P(i.id, n, _, r)),
         (c.A.isLurking(i.id) || n?.isPending) && (_ = a.pb(_, d)),
         f.Ay.isCurrentUserGuest(i.id) && (_ = a.pb(_, y)),
         M(_, i, t, l)
@@ -243,7 +243,7 @@ function w(e) {
         t = null != e ? T.A.getGuild(e) : null;
     } else (r = r ?? {}), (t = i);
     if (null == t) return C;
-    if (!(o === m.default.getCurrentUser()?.id && d.A.isViewingRoles(t.id)) && (0, E.bM)(t, o)) return M(R, t, o, s);
+    if (!(o === m.default.getCurrentUser()?.id && d.A.isViewingRoles(t.id)) && (0, E.bM)(t, o)) return M(O, t, o, s);
     let A = f.Ay.getMember(t.id, o);
     return U({
         userId: o,

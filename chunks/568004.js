@@ -22,19 +22,19 @@ let m = new Set(),
     S = new Set(),
     N = {},
     C = new Set(),
-    R = {},
-    O = 10 * f.A.Millis.MINUTE,
+    O = {},
+    R = 10 * f.A.Millis.MINUTE,
     L = 6 * f.A.Millis.HOUR,
     y = 10 * f.A.Millis.MINUTE,
     D = new s.Ep();
 function v(e) {
-    D.start(e + Math.random() * O, o.r);
+    D.start(e + Math.random() * R, o.r);
 }
 function b() {
     if (!(0, T.S)() || _.l_.getSetting()) return !1;
     let e = A.A.entitledBranchIds,
         t = [];
-    for (let n of e) R.hasOwnProperty(n) || ((R[n] = null), t.push(n));
+    for (let n of e) O.hasOwnProperty(n) || ((O[n] = null), t.push(n));
     if (0 === t.length) return !1;
     l.h.wait(() => o.r(t));
 }
@@ -129,11 +129,11 @@ let w = new U(l.h, {
         }
         for (let e of t) {
             let { id: t, liveBuildId: i } = e;
-            if (i !== R[t]) {
+            if (i !== O[t]) {
                 let e = n[t];
                 null != e && l.h.wait(() => d.n(e.id, e.branchId, !0));
             }
-            R[t] = i;
+            O[t] = i;
         }
         v(L);
     },

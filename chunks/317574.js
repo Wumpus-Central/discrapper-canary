@@ -1,4 +1,4 @@
-i.d(t, { P: () => A });
+i.d(t, { P: () => I });
 var n = i(477900),
     l = i(582128),
     a = i(503698),
@@ -15,7 +15,7 @@ var n = i(477900),
     x = i(125075),
     E = i(375708),
     v = i(397462);
-function I(e) {
+function p(e) {
     let { title: t, disabled: i = !1, dragHandleRef: l, canEdit: a = !1, onEdit: r, onRemove: g } = e;
     return (0, n.jsxs)("div", {
         className: v.wx,
@@ -64,14 +64,14 @@ function I(e) {
         ],
     });
 }
-function p(e) {
+function A(e) {
     let { title: t } = e;
     return (0, n.jsx)("div", {
         className: v.wx,
         children: (0, n.jsx)(s.D, { variant: "heading-sm/medium", className: v.DD, children: t }),
     });
 }
-function A(e) {
+function I(e) {
     let {
             widget: t,
             guildSpaceMode: i,
@@ -107,15 +107,15 @@ function A(e) {
         }, [t, o, c]),
         x = o?.useTitle?.(t) ?? t.default_title ?? "";
     if (null == o) return null;
-    let { View: E, Edit: A } = o,
-        _ = "edit" === i,
-        C = null != A && null != c;
+    let { View: E, Edit: I } = o,
+        S = "edit" === i,
+        C = null != I && null != c;
     return (0, n.jsxs)("div", {
-        className: r()(v.kL, { [v.Dy]: _ }),
+        className: r()(v.kL, { [v.Dy]: S }),
         children: [
-            _
-                ? (0, n.jsx)(I, { title: x, disabled: u, dragHandleRef: d, canEdit: C, onEdit: f, onRemove: s })
-                : (0, n.jsx)(p, { title: x }),
+            S
+                ? (0, n.jsx)(p, { title: x, disabled: u, dragHandleRef: d, canEdit: C, onEdit: f, onRemove: s })
+                : (0, n.jsx)(A, { title: x }),
             (0, n.jsx)("div", {
                 className: v.rf,
                 children: (0, n.jsx)(E, { widget: t, hydration: a, guildSpaceMode: i }),

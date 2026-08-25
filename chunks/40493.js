@@ -22,7 +22,7 @@ function f(e) {
     i.useEffect(() => {
         !0 !== I || E || (t(), f(h.i.AUTO_DISMISS));
     }, [I, E, t, f]);
-    let v = {
+    let S = {
         text: m.intl.string(m.t.RzWDqY),
         onClick: () => {
             n(), t(), f(h.i.TAKE_ACTION);
@@ -40,7 +40,7 @@ function f(e) {
                 body: p?.body ?? "",
                 assetUrl: x ?? "",
                 badge: null != C ? { type: { text: C.toUpperCase() }, variant: "brand", icon: a.ClockIcon } : void 0,
-                action: v,
+                action: S,
                 caretConfig: { align: "center" },
                 onRequestClose: function () {
                     t(), f(h.i.USER_DISMISS);

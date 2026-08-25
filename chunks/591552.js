@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => O }), n(321073);
+n.d(t, { A: () => R }), n(321073);
 var i = n(435558),
     r = n.n(i),
     a = n(17928),
@@ -53,7 +53,7 @@ let g = [],
     S = [],
     N = [],
     C = [];
-class R extends a.Ay.Store {
+class O extends a.Ay.Store {
     static displayName = "GuildOnboardingPromptsStore";
     initialize() {
         this.waitFor(o.A, _.Ay, l.A);
@@ -142,7 +142,7 @@ class R extends a.Ay.Store {
         return 0 === n.length ? (t.connections ?? C) : [...(t.connections ?? []), ...n];
     }
 }
-let O = new R(s.h, {
+let R = new O(s.h, {
     CONNECTION_OPEN: function () {
         (f = !1), (A = {});
     },

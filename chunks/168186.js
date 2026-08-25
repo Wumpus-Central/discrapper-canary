@@ -14,7 +14,7 @@ n.d(t, {
     gI: () => P,
     hT: () => m,
     my: () => b,
-    zl: () => R,
+    zl: () => O,
 }),
     n(321073);
 var i = n(824120),
@@ -210,7 +210,7 @@ function N(e) {
     return r()(e).subtract(1).toString();
 }
 let C = d.iu(0);
-function R(e) {
+function O(e) {
     let {
         PermissionStore: t,
         guild: n,
@@ -222,13 +222,13 @@ function R(e) {
     if (n.ownerId === i.userId || t.can(f.xB.ADMINISTRATOR, n)) return !0;
     let l = n.id;
     if (null != a) {
-        let e = O(i, l, a);
+        let e = R(i, l, a);
         if ("boolean" == typeof e) return e;
     }
-    let o = O(i, l, r);
+    let o = R(i, l, r);
     return ("boolean" != typeof o || !!o) && (null == s || (!d.aI(s, C) && t.can(s, n)));
 }
-function O(e, t, n) {
+function R(e, t, n) {
     let i = n[(0, _.Eu)(e.userId, A.RA.USER)];
     if (null != i) return i.permission;
     let r = !1;

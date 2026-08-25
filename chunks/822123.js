@@ -46,16 +46,16 @@ var i = n(582128),
     S = n(316884),
     N = n(732139),
     C = n(652215),
-    R = n(307731),
-    O = n(698279),
+    O = n(307731),
+    R = n(698279),
     L = n(202541),
     y = n(375708);
 let D = /-/g;
 function v(e) {
     switch (e) {
-        case R.EmojiIntention.REACTION:
+        case O.EmojiIntention.REACTION:
             return C.I4_.EMOJI_REACTION;
-        case R.EmojiIntention.AUTO_SUGGESTION:
+        case O.EmojiIntention.AUTO_SUGGESTION:
             return C.I4_.EMOJI_AUTO_SUGGESTION;
         default:
             return C.I4_.EMOJI;
@@ -74,19 +74,19 @@ function P(e, t) {
         r = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
         a = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
     (0, c.V)(n);
-    let l = (0, R.isExternalEmojiAllowedForIntention)(e),
+    let l = (0, O.isExternalEmojiAllowedForIntention)(e),
         d = K(n),
         u = $(n),
         E = z(n),
         { topEmojis: f, newlyAddedEmojis: p } = (0, S.A)(n, e),
         { allEmojis: C } = (0, g.A)({ topEmojis: f, newlyAddedEmojis: p }),
-        O = (0, s.bG)([o.Ay], () => o.Ay.getDisambiguatedEmojiContext(n), [n]),
+        R = (0, s.bG)([o.Ay], () => o.Ay.getDisambiguatedEmojiContext(n), [n]),
         L = (0, s.bG)([A.A], () => A.A.getGuild(n)?.name),
         D = (0, s.bG)([I.default], () => I.default.getCurrentUser()),
         v = (0, m.ki)(D),
         b = (0, _.Ym)({ location: "useEmojiCategories" });
     return i.useMemo(() => {
-        let i = O.getGroupedCustomEmoji(),
+        let i = R.getGroupedCustomEmoji(),
             s = h.Ay.getFlattenedGuildIds(),
             c = [],
             _ = { type: N.s.SOUNDMOJI, name: y.intl.string(y.t.f0Ezmv), id: N.R2.SOUNDMOJI, isNitroLocked: !1 };
@@ -142,7 +142,7 @@ function P(e, t) {
                         });
                     } else if (i === N.R2.RECENT) {
                         let { emojisDisabled: n, emojisUnfiltered: r } = I(
-                            [R.EmojiIntention.REACTION, R.EmojiIntention.DEFAULT_REACT_EMOJI].includes(e) ? u : d,
+                            [O.EmojiIntention.REACTION, O.EmojiIntention.DEFAULT_REACT_EMOJI].includes(e) ? u : d,
                         );
                         if (null == r || 0 === r.length) return t;
                         t.push({
@@ -174,7 +174,7 @@ function P(e, t) {
                 b && r ? [_] : [],
             )
         );
-    }, [O, t, n, e, v, C, L, u, d, E, l, b, r, a]);
+    }, [R, t, n, e, v, C, L, u, d, E, l, b, r, a]);
 }
 function U() {
     return d.Ay.getCategories().map((e) => ({ type: N.s.UNICODE, id: e, name: e, isNitroLocked: !1 }));
@@ -266,10 +266,10 @@ function B(e) {
             visibleRowIndex: E,
         } = e;
     switch (r) {
-        case R.EmojiIntention.REACTION:
+        case O.EmojiIntention.REACTION:
             t = c ? L.e.EMOJI_PICKER_SUPER_REACTION_EMOJI_CLICKED : L.e.EMOJI_PICKER_REACTION_EMOJI_CLICKED;
             break;
-        case R.EmojiIntention.STATUS:
+        case O.EmojiIntention.STATUS:
             t = L.e.EMOJI_PICKER_STATUS_EMOJI_CLICKED;
             break;
         default:
@@ -292,7 +292,7 @@ function B(e) {
             newly_added_highlight: d,
             is_burst: c,
             message_id: u,
-            ...(null != _ && { locked_reason: R.EmojiDisabledReasons[_], visible_row_index: E }),
+            ...(null != _ && { locked_reason: O.EmojiDisabledReasons[_], visible_row_index: E }),
         },
     );
 }
@@ -301,7 +301,7 @@ function H(e) {
         i = t.uniqueName ?? t.name;
     l.Ay.trackWithMetadata(C.HAw.EXPRESSION_FAVORITED, {
         location: n,
-        expression_type: O.kx.EMOJI,
+        expression_type: R.kx.EMOJI,
         expression_id: t.id,
         expression_name: i,
         expression_guild_id: t.guildId,
@@ -348,7 +348,7 @@ function Y(e, t, n, r) {
     i.useEffect(() => {
         E.bW.loadIfNecessary();
     }, []);
-    let a = (0, R.isExternalEmojiAllowedForIntention)(n);
+    let a = (0, O.isExternalEmojiAllowedForIntention)(n);
     return (0, s.bG)(
         [o.Ay],
         () => {
@@ -420,7 +420,7 @@ function X(e, t, n) {
     return i.includes(n) ? N.tm.TOP_GUILD_EMOJI : r.includes(n) ? N.tm.NEWLY_ADDED_EMOJI : N.tm.NONE;
 }
 function Q(e, t) {
-    return e === R.EmojiIntention.REACTION
+    return e === O.EmojiIntention.REACTION
         ? t
             ? y.intl.string(y.t["h7ES+n"])
             : y.intl.string(y.t["6any2A"])

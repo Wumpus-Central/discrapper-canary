@@ -14,8 +14,8 @@ var r = n(477900),
     p = n(521502),
     m = n(380610),
     A = n(807393),
-    v = n(976860),
-    y = n(174459),
+    y = n(976860),
+    v = n(174459),
     x = n(38405),
     w = n(19575),
     E = n(721668),
@@ -61,11 +61,11 @@ class D extends i.PureComponent {
         this.triggerSoftCrash(e, t);
     }
     triggerSoftCrash(e, t) {
-        let n = (0, v.JK)().location;
+        let n = (0, y.JK)().location;
         this.setState({ error: e, info: t });
         let r = (0, d.b)(),
             i = x.A.captureCrash(e, { extra: t });
-        y.default.track(C.HAw.APP_CRASHED, {
+        v.default.track(C.HAw.APP_CRASHED, {
             path: n.pathname,
             extra: t,
             error_message: e.message,

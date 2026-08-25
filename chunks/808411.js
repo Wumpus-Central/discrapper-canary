@@ -6,21 +6,21 @@ var a = l(477900),
     o = l(691885),
     s = l(150934),
     u = l(834730),
-    d = l(914410),
-    c = l(349738);
+    c = l(914410),
+    d = l(349738);
 let p = function () {
     let [e, t] = n.useState(0),
         [l, p] = n.useState(4),
         [m, b] = n.useState(2),
-        [h, x] = n.useState(d.fh.LIGHT),
-        [f, y] = n.useState(d.qP.BLUE),
+        [h, x] = n.useState(c.fh.LIGHT),
+        [f, y] = n.useState(c.qP.BLUE),
         [g, v] = n.useState("darkslategray"),
         [E, S] = n.useState("blanchedalmond"),
-        [C, T] = n.useState("pink"),
-        [j, A] = n.useState(!0),
+        [C, j] = n.useState("pink"),
+        [T, A] = n.useState(!0),
         I = n.useMemo(
             () =>
-                Object.entries(d.fh).map((e) => {
+                Object.entries(c.fh).map((e) => {
                     let [t, l] = e;
                     return { id: l, label: t, value: l };
                 }),
@@ -28,25 +28,25 @@ let p = function () {
         ),
         P = n.useMemo(
             () =>
-                Object.entries(d.qP).map((e) => {
+                Object.entries(c.qP).map((e) => {
                     let [t, l] = e;
                     return { id: l, label: t, value: l };
                 }),
             [],
         );
-    return (0, a.jsxs)(c.LB, {
+    return (0, a.jsxs)(d.LB, {
         children: [
-            (0, a.jsx)(d.Ay, {
+            (0, a.jsx)(c.Ay, {
                 progress: m,
                 minimum: e,
                 maximum: l,
                 weight: h,
                 variant: f,
                 override: { default: { background: g, gradientStart: E, gradientEnd: C } },
-                glowing: j,
+                glowing: T,
             }),
-            (0, a.jsx)(c.nB, {}),
-            (0, a.jsx)(c.MG, {
+            (0, a.jsx)(d.nB, {}),
+            (0, a.jsx)(d.MG, {
                 children: (0, a.jsx)(r.k, {
                     type: "number",
                     value: m.toString(),
@@ -56,7 +56,7 @@ let p = function () {
                     label: `Progress ( ${e} - ${l} ) `,
                 }),
             }),
-            (0, a.jsx)(c.MG, {
+            (0, a.jsx)(d.MG, {
                 children: (0, a.jsx)(r.k, {
                     type: "number",
                     value: e.toString(),
@@ -66,7 +66,7 @@ let p = function () {
                     label: "Minimum Value",
                 }),
             }),
-            (0, a.jsx)(c.MG, {
+            (0, a.jsx)(d.MG, {
                 children: (0, a.jsx)(r.k, {
                     type: "number",
                     value: l.toString(),
@@ -76,7 +76,7 @@ let p = function () {
                     label: "Maximum Value",
                 }),
             }),
-            (0, a.jsx)(c.MG, {
+            (0, a.jsx)(d.MG, {
                 children: (0, a.jsx)(o.l, {
                     label: "Variant",
                     hideLabel: !0,
@@ -90,7 +90,7 @@ let p = function () {
                     fullWidth: !0,
                 }),
             }),
-            (0, a.jsx)(c.MG, {
+            (0, a.jsx)(d.MG, {
                 children: (0, a.jsx)(o.l, {
                     label: "Weight",
                     selectionMode: "single",
@@ -102,16 +102,16 @@ let p = function () {
                     options: I,
                 }),
             }),
-            (0, a.jsx)(c.MG, {
+            (0, a.jsx)(d.MG, {
                 children: (0, a.jsx)(s.S, {
                     label: "Glowing",
-                    checked: j,
+                    checked: T,
                     onChange: (e) => {
                         A(e);
                     },
                 }),
             }),
-            (0, a.jsx)(c.nB, {}),
+            (0, a.jsx)(d.nB, {}),
             (0, a.jsx)(u.E, {
                 variant: "text-lg/semibold",
                 color: "text-feedback-critical",
@@ -122,7 +122,7 @@ let p = function () {
                 children:
                     'Note: this component allows setting overrides per theme. For simplicity in this story, we only set the "default" override which applies to all themes',
             }),
-            (0, a.jsx)(c.MG, {
+            (0, a.jsx)(d.MG, {
                 children: (0, a.jsx)(r.k, {
                     value: g,
                     onChange: (e) => {
@@ -131,7 +131,7 @@ let p = function () {
                     label: "Background (optional)",
                 }),
             }),
-            (0, a.jsx)(c.MG, {
+            (0, a.jsx)(d.MG, {
                 children: (0, a.jsx)(r.k, {
                     value: E,
                     onChange: (e) => {
@@ -140,11 +140,11 @@ let p = function () {
                     label: "Gradient Start",
                 }),
             }),
-            (0, a.jsx)(c.MG, {
+            (0, a.jsx)(d.MG, {
                 children: (0, a.jsx)(r.k, {
                     value: C,
                     onChange: (e) => {
-                        T(e);
+                        j(e);
                     },
                     label: "Gradient End",
                 }),

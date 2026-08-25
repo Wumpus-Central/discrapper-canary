@@ -1,4 +1,4 @@
-p.r(
+r.r(
     (e.exports = {
         wrapper: "wrapper__48b20",
         video: "video__48b20",

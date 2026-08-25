@@ -16,8 +16,8 @@ var c = n(435558),
     S = n(71393),
     N = n(453028),
     C = n(576705),
-    R = n(967198),
-    O = n(652215),
+    O = n(967198),
+    R = n(652215),
     L = n(746080);
 let y = "SelectedChannelStore",
     D = {},
@@ -63,7 +63,7 @@ function G(e, t) {
 }
 function x(e) {
     let t = m.A.getMutableBasicGuildChannelsForGuild(e),
-        n = u().find(t, (e) => e.type === O.rbe.GUILD_VOICE);
+        n = u().find(t, (e) => e.type === R.rbe.GUILD_VOICE);
     return n?.id;
 }
 function k() {
@@ -88,7 +88,7 @@ function k() {
 function F(e, t, n) {
     let i = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
     if ((M.delete(e), null == t)) {
-        let n = R.A.getGuildId();
+        let n = O.A.getGuildId();
         D[P(n)] === e && (t = n);
     }
     let r = null != S.A.getGuild(t) ? t : null,
@@ -96,7 +96,7 @@ function F(e, t, n) {
     l === e && ((l = null), (a = !0)),
         D[P(r)] === e &&
             ((D[P(r)] = i && null != n ? n : w(P(r))),
-            R.A.getGuildId() === r && (0, I.bG)(O.BVt.CHANNEL(t, D[P(r)])),
+            O.A.getGuildId() === r && (0, I.bG)(R.BVt.CHANNEL(t, D[P(r)])),
             (a = !0)),
         null != r && b[r] === e && (delete b[r], (a = !0)),
         a && U();
@@ -125,11 +125,11 @@ class B extends E.Ay.Store {
                 null != e.selectedChannelIds && (D = { ...e.selectedChannelIds, null: null });
         }
         this.mustEmitChanges((e) => "CONNECTION_OPEN" !== e.type && "VOICE_STATE_UPDATES" !== e.type),
-            this.waitFor(T.default, m.A, g.Ay, S.A, N.Ay, C.A, R.A);
+            this.waitFor(T.default, m.A, g.Ay, S.A, N.Ay, C.A, O.A);
     }
     getChannelId(e) {
         let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-            n = P(e === O.ME ? null : (e ?? R.A.getGuildId() ?? null));
+            n = P(e === R.ME ? null : (e ?? O.A.getGuildId() ?? null));
         return t ? (D[n] ?? w(n)) : D[n];
     }
     getVoiceChannelId() {
@@ -155,7 +155,7 @@ let H = new B(h.h, {
     CONNECTION_OPEN: function (e) {
         if (((i = e.sessionId), null != l)) {
             let e = m.A.getChannel(l);
-            (null != e && (e.isPrivate() || C.A.can(_.kg(O.xBc.VIEW_CHANNEL, O.xBc.CONNECT), e))) || (l = null);
+            (null != e && (e.isPrivate() || C.A.can(_.kg(R.xBc.VIEW_CHANNEL, R.xBc.CONNECT), e))) || (l = null);
         }
         k() && U();
     },
@@ -185,8 +185,8 @@ let H = new B(h.h, {
     CHANNEL_CREATE: function (e) {
         let { channel: t } = e;
         switch (t.type) {
-            case O.rbe.GUILD_ANNOUNCEMENT:
-            case O.rbe.GUILD_TEXT:
+            case R.rbe.GUILD_ANNOUNCEMENT:
+            case R.rbe.GUILD_TEXT:
                 let n = t.guild_id;
                 if ((null != n && null == b[n] && (b[n] = t.id), null != n && null == D[n])) return (D[n] = w(n)), !0;
         }
@@ -221,7 +221,7 @@ let H = new B(h.h, {
         if (null == t) {
             let e = m.A.getChannel(l),
                 t = e?.guild_id;
-            null != t && t !== R.A.getGuildId() && D[t] === l && (D[t] = w(t));
+            null != t && t !== O.A.getGuildId() && D[t] === l && (D[t] = w(t));
         }
         (l = t), U();
     },

@@ -1,18 +1,18 @@
-n.d(i, { D: () => h });
-var s = n(17928),
-    e = n(994500),
-    r = n(800828),
-    p = n(652215),
+n.d(e, { D: () => s });
+var i = n(17928),
+    l = n(994500),
+    d = n(800828),
+    r = n(652215),
     a = n(375708);
-function h(t, i) {
-    return (0, s.bG)(
-        [r.A, e.A],
+function s(t, e) {
+    return (0, i.bG)(
+        [d.A, l.A],
         () =>
-            e.A.getRelationshipType(t) === p.eA$.PENDING_INCOMING
+            l.A.getRelationshipType(t) === r.eA$.PENDING_INCOMING
                 ? a.intl.string(a.t.wPI56w)
-                : r.A.getGameRelationshipsForUser(t).length > 0
+                : d.A.getGameRelationshipsForUser(t).length > 0
                   ? a.intl.string(a.t.LAcY7m)
-                  : (i ?? a.intl.string(a.t.w5uwoI)),
-        [t, i],
+                  : (e ?? a.intl.string(a.t.w5uwoI)),
+        [t, e],
     );
 }

@@ -24,12 +24,12 @@ function p(e) {
         E,
         I,
         y,
-        { id: v, unrankedEntries: S = !1 } = e,
-        { feed: N, filters: _ } = (0, i.cf)([s.A], () => ({ feed: s.A.getFeed(v), filters: s.A.getFilters() })),
+        { id: S, unrankedEntries: v = !1 } = e,
+        { feed: N, filters: _ } = (0, i.cf)([s.A], () => ({ feed: s.A.getFeed(S), filters: s.A.getFilters() })),
         T = l.useMemo(() => {
-            let e = S ? N?.unranked_game_entries.map((e) => e.content) : N?.entries.map((e) => e.content);
+            let e = v ? N?.unranked_game_entries.map((e) => e.content) : N?.entries.map((e) => e.content);
             return null != _ ? e?.filter((e) => f(_, e)) : e;
-        }, [N, _, S]);
+        }, [N, _, v]);
     return (
         (t = T),
         (g = (0, i.bG)([r.A], () => r.A.getPrivateChannelsVersion())),

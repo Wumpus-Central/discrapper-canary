@@ -43,7 +43,7 @@ function y(e, t) {
         (null == e.embeddedActivityConfig || I({ countryCode: t, activity: e.embeddedActivityConfig }))
     );
 }
-function v(e) {
+function S(e) {
     let { data: t, refetch: n } = (0, a.YY)(e);
     return (
         l.useEffect(() => {
@@ -52,12 +52,12 @@ function v(e) {
         t
     );
 }
-function S(e) {
-    return v((0, g.A)(e?.linkedGames)?.id);
+function v(e) {
+    return S((0, g.A)(e?.linkedGames)?.id);
 }
 function N(e) {
     let { data: t } = f(),
-        n = S(e);
+        n = v(e);
     return (
         null != e &&
         (e?.embeddedActivityConfig == null || !!I({ countryCode: t?.alpha2, activity: e.embeddedActivityConfig })) &&
@@ -68,7 +68,7 @@ function _(e) {
     let { application: t, analyticsLocations: n } = e,
         i = N(t),
         { bot: r } = t ?? { bot: null },
-        a = S(t),
+        a = v(t),
         { bot: o } = a ?? { bot: null },
         u = a?.id,
         c = o?.id;
@@ -103,7 +103,7 @@ function _(e) {
 function T(e) {
     let { applicationId: t, sourceApplicationId: n, analyticsLocations: i } = e,
         { data: r } = f(),
-        a = v(t);
+        a = S(t);
     return l.useMemo(() => {
         if (a?.bot == null || !y(a, r?.alpha2)) return null;
         let e = a.bot;

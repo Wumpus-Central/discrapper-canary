@@ -10,7 +10,7 @@ n.d(t, {
     Vd: () => e7,
     CY: () => eb,
     NO: () => V,
-    D_: () => O,
+    D_: () => R,
     pK: () => ti,
     JI: () => eF,
     HZ: () => e5,
@@ -25,7 +25,7 @@ n.d(t, {
     Yt: () => ts,
     Q_: () => eH,
     hH: () => eE,
-    he: () => eO,
+    he: () => eR,
     FA: () => ec,
     Hu: () => tl,
     gs: () => b,
@@ -83,7 +83,7 @@ n.d(t, {
     Yh: () => eI,
     _z: () => K,
     zS: () => F,
-    cj: () => eR,
+    cj: () => eO,
     $s: () => ed,
     oz: () => G,
     _3: () => $,
@@ -199,8 +199,8 @@ function g(e, t) {
 var S = n(397438),
     N = n(750714),
     C = n(652215),
-    R = n(823894);
-let O = f(
+    O = n(823894);
+let R = f(
         "textAndImages",
         "useLegacyChatInput",
         (e) => e?.value ?? !1,
@@ -569,7 +569,7 @@ let eN = f(
         (e) => e?.value ?? !0,
         (e) => l._t.create({ value: e }),
     ),
-    eR = f(
+    eO = f(
         "textAndImages",
         "explicitContentFilter",
         (e) => e?.value ?? N.Je.NON_FRIENDS,
@@ -581,7 +581,7 @@ f(
     (e) => e?.value ?? N.uH.NON_FRIENDS,
     (e) => l.ZQ.create({ value: e }),
 );
-let eO = f(
+let eR = f(
         "textAndImages",
         "dmSpamFilterV2",
         (e) => e ?? s.he.DEFAULT_UNSET,
@@ -810,7 +810,7 @@ let eH = p(
             f(
                 "textAndImages",
                 "animateStickers",
-                (e) => e?.value ?? R.BJ.ALWAYS_ANIMATE,
+                (e) => e?.value ?? O.BJ.ALWAYS_ANIMATE,
                 (e) => l.ZQ.create({ value: e }),
             ),
             "text",

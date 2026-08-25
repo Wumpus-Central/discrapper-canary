@@ -27,8 +27,8 @@ n(622794);
 var S = n(152007),
     N = n(607508),
     C = n(885386),
-    R = n(882035),
-    O = n(121894);
+    O = n(882035),
+    R = n(121894);
 let L = (0, n(945810).mj)({
     kind: "user",
     name: "2026-03-stage-voice-panel",
@@ -36,7 +36,7 @@ let L = (0, n(945810).mj)({
     variations: { 0: { enabled: !1 }, 1: { enabled: !0 } },
 });
 var y = n(734057);
-(0, R.h)((e, t) => ({
+(0, O.h)((e, t) => ({
     channels: new Set(),
     isActivityFocused: !1,
     isVoicePanelFullscreen: () => t().voicePanelsFullscreen.size > 0,
@@ -47,7 +47,7 @@ var y = n(734057);
     openChannel(n) {
         (!L.getConfig({ location: "voice_panel_store" }).enabled && y.A.getChannel(n)?.isGuildStageVoice() === !0) ||
             t().channels.has(n) ||
-            (0, O.r)(() => {
+            (0, R.r)(() => {
                 e((e) => ({
                     ...e,
                     channels: new Set([n, ...Array.from(e.channels)]),
@@ -56,7 +56,7 @@ var y = n(734057);
             });
     },
     closeChannel(t) {
-        (0, O.r)(() => {
+        (0, R.r)(() => {
             e((e) => {
                 let { channels: n, voicePanelsFullscreen: i, voicePanelsOpened: r } = e;
                 return n.has(t) || i.has(t) || r.has(t)
@@ -70,12 +70,12 @@ var y = n(734057);
     },
     isMounted: (e) => t().channels.has(e),
     setIsActivityFocused(t) {
-        (0, O.r)(() => {
+        (0, R.r)(() => {
             e((e) => (e.isActivityFocused === t ? e : { ...e, isActivityFocused: t }));
         });
     },
     setChannelPanelFullscreen(t, n) {
-        (0, O.r)(() => {
+        (0, R.r)(() => {
             e((e) => {
                 let i = new Set(e.voicePanelsFullscreen);
                 if (n) {
@@ -90,7 +90,7 @@ var y = n(734057);
         });
     },
     setChannelPanelOpen(t, n) {
-        (0, O.r)(() => {
+        (0, R.r)(() => {
             e((e) => {
                 if (!e.channels.has(t)) return e;
                 let i = new Set(e.voicePanelsOpened);
@@ -107,7 +107,7 @@ var y = n(734057);
     },
     isChannelOpen: (e) => t().voicePanelsOpened.has(e),
     setChannelPanelPIP(t, n) {
-        (0, O.r)(() => {
+        (0, R.r)(() => {
             e((e) => {
                 let i = new Set(e.voicePanelsPIP);
                 if (n) {

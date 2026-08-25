@@ -5,7 +5,7 @@ n.r(t),
         encryptAndStoreTokens: () => v,
         getAnalyticsToken: () => g,
         getToken: () => S,
-        hideToken: () => O,
+        hideToken: () => R,
         init: () => m,
         removeAnalyticsToken: () => D,
         removeToken: () => y,
@@ -75,15 +75,15 @@ function S(e) {
     return (m(), null != e) ? E[e] : i;
 }
 function N(e) {
-    null == e ? y(o) : R(e, o);
+    null == e ? y(o) : O(e, o);
 }
 function C(e, t) {
-    null == e ? y(t) : ((i = e), R(e, t));
+    null == e ? y(t) : ((i = e), O(e, t));
 }
-function R(e, t) {
+function O(e, t) {
     null != t && (E[t] = e), _ ? v() : ((r = i), (A = E), f());
 }
-function O() {
+function R() {
     h || ((h = !0), f());
 }
 function L() {

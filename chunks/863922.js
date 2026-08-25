@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { $T: () => A, Ay: () => j, C6: () => C, C7: () => v, O$: () => _, Oz: () => E, sK: () => I, s_: () => y });
+n.d(t, { $T: () => A, Ay: () => j, C6: () => C, C7: () => S, O$: () => _, Oz: () => E, sK: () => I, s_: () => y });
 var l = n(582128),
     i = n(435558),
     s = n.n(i),
@@ -68,10 +68,10 @@ function I(e, t) {
 function y(e, t) {
     o.h.dispatch({ type: "UPDATE_VISIBLE_MESSAGES", topVisibleMessage: e ?? null, bottomVisibleMessage: t ?? null });
 }
-function v(e, t) {
+function S(e, t) {
     o.h.dispatch({ type: "SET_SUMMARY_FEEDBACK", summary: e, rating: t });
 }
-async function S() {
+async function v() {
     let e, t;
     if (!f.A.shouldFetchChannelAffinities()) return Promise.resolve(null);
     let n = Date.now();
@@ -142,7 +142,7 @@ async function _(e) {
 let T =
         221552 == n.j
             ? {
-                  setSummaryFeedback: v,
+                  setSummaryFeedback: S,
                   updateVisibleMessages: y,
                   setSelectedSummary: I,
                   setHighlightedSummary: C,
@@ -159,7 +159,7 @@ let T =
                                   t && e();
                                   async function e() {
                                       try {
-                                          await S();
+                                          await v();
                                       } catch (e) {}
                                       await N(n.split(","));
                                   }

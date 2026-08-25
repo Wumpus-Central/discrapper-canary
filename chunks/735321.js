@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
     AD: () => G,
-    BF: () => R,
+    BF: () => O,
     FM: () => g,
     L: () => m,
     N5: () => U,
@@ -60,23 +60,23 @@ function N(e) {
 function C(e) {
     return e in i.u ? i.u[e] : 0;
 }
-function R() {
+function O() {
     let e = c.default.getCurrentUser(),
         t = null != e ? A.A.getUserProfile(e.id) : null;
     return t?.widgets ?? [];
 }
-function O() {
-    return I.A.hasPendingChanges() ? (I.A.getPendingWidgets() ?? []) : R();
+function R() {
+    return I.A.hasPendingChanges() ? (I.A.getPendingWidgets() ?? []) : O();
 }
 function L(e) {
     return (
-        O()
+        R()
             .filter(_.fu)
             .find((t) => t.type === e) ?? null
     );
 }
 function y(e) {
-    let t = O(),
+    let t = R(),
         n = t.findIndex((t) => t.getUniqueKey() === e.getUniqueKey());
     if (-1 === n) return [e, ...t];
     {
@@ -85,18 +85,18 @@ function y(e) {
     }
 }
 function D(e) {
-    let t = O();
+    let t = R();
     null == t.find((t) => t.getUniqueKey() === e.getUniqueKey()) &&
         (e.type === a.x.PERSONAL &&
             (0, o.Dr)(s.M.USER_PROFILE_PERSONAL_WIDGET_COACHMARK, { dismissAction: p.i.INDIRECT_ACTION }),
         h.A.setPendingWidgets([e, ...t]));
 }
 function v(e) {
-    let t = O().filter((t) => t.getUniqueKey() !== e.getUniqueKey());
+    let t = R().filter((t) => t.getUniqueKey() !== e.getUniqueKey());
     h.A.setPendingWidgets(t);
 }
 function b() {
-    return O().find((e) => e instanceof u.k) ?? null;
+    return R().find((e) => e instanceof u.k) ?? null;
 }
 function M(e) {
     let t = b(),
@@ -129,7 +129,7 @@ function w(e) {
     h.A.setPendingWidgets(y(n));
 }
 function G(e) {
-    let t = y(e(O().find((e) => e instanceof E.Tu) ?? null ?? (0, E.g0)()));
+    let t = y(e(R().find((e) => e instanceof E.Tu) ?? null ?? (0, E.g0)()));
     h.A.setPendingWidgets(t);
 }
 function x(e, t, n) {
@@ -178,7 +178,7 @@ function V(e) {
 }
 function B(e, t) {
     if (e === t) return;
-    let n = O();
+    let n = R();
     if (e < 0 || e >= n.length || t < 0 || t >= n.length) return;
     let i = [...n],
         [r] = i.splice(e, 1);

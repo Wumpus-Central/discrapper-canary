@@ -7,7 +7,7 @@ n.d(t, {
     Im: () => I,
     St: () => m,
     UT: () => g,
-    Vh: () => R,
+    Vh: () => O,
     WU: () => A,
     _7: () => h,
     mU: () => N,
@@ -114,6 +114,6 @@ var C =
     (d.ID_FAILED = "id_failed"),
     (d.UNDERAGE = "underage"),
     d);
-function R(e) {
+function O(e) {
     u.default.track(_.HAw.AGE_VERIFICATION_TOAST_VIEWED, { toast_type: e });
 }

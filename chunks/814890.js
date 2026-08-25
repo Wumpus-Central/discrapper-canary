@@ -5,10 +5,10 @@ n.d(t, {
     ZV: () => y,
     c7: () => T,
     fw: () => L,
-    j2: () => O,
+    j2: () => R,
     kC: () => S,
     p4: () => g,
-    so: () => R,
+    so: () => O,
     wT: () => C,
     zv: () => p,
 });
@@ -150,10 +150,10 @@ function C(e, t) {
         return null;
     })(e);
 }
-function R(e) {
+function O(e) {
     return JSON.stringify({ type: "component-upload", containerId: e, uniqueId: crypto.randomUUID?.() ?? (0, i.A)() });
 }
-function O(e) {
+function R(e) {
     try {
         let t = JSON.parse(e);
         if (t?.type !== "component-upload" || "string" != typeof t.containerId || "string" != typeof t.uniqueId)

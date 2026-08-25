@@ -27,8 +27,8 @@ function A(e) {
             spacing: S = 8,
             alignmentSpacing: N,
             autoFlip: C = !0,
-            crossAccessFlip: R = !0,
-            autoShift: O = !0,
+            crossAccessFlip: O = !0,
+            autoShift: R = !0,
             strategy: L = "fixed",
             portal: y = !0,
             blockPointerEvents: D = !1,
@@ -48,8 +48,8 @@ function A(e) {
     let F = r.useMemo(() => {
             let e = [(0, a.cY)({ mainAxis: S, alignmentAxis: N })];
             return (
-                C && e.push((0, a.UU)({ crossAxis: R, padding: M, boundary: A.body })),
-                O && e.push((0, a.BN)({ padding: P ?? M, limiter: (0, a.ER)(), boundary: A.body })),
+                C && e.push((0, a.UU)({ crossAxis: O, padding: M, boundary: A.body })),
+                R && e.push((0, a.BN)({ padding: P ?? M, limiter: (0, a.ER)(), boundary: A.body })),
                 e.push((0, a.jD)({ strategy: "referenceHidden" })),
                 null != U &&
                     e.push(
@@ -65,7 +65,7 @@ function A(e) {
                     ),
                 e
             );
-        }, [S, N, C, O, M, P, R, A, U]),
+        }, [S, N, C, R, M, P, O, A, U]),
         V = (0, s.fI)(),
         {
             refs: B,

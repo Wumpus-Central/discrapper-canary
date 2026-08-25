@@ -31,8 +31,8 @@ var I = n(550642),
     S = n(209489),
     N = n(38405),
     C = n(292348),
-    R = n(565150),
-    O = n(787458),
+    O = n(565150),
+    R = n(787458),
     L = n(972711),
     y = n(201115),
     D = n(652215);
@@ -121,7 +121,7 @@ class U {
     conversionFailureReason;
 }
 i = n(122924).A;
-class w extends R.Ay {
+class w extends O.Ay {
     status = "NOT_STARTED";
     channelId;
     responseUrl;
@@ -161,13 +161,13 @@ class w extends R.Ay {
             (this.currentSize = e.file?.size ?? 0),
             (this.reactNativeFileIndex = n),
             null != i && (this.allowOptimization = i),
-            e.platform === R.xz.WEB &&
+            e.platform === O.xz.WEB &&
                 null != e.compressionMetadata &&
                 (this.mimeType = e.compressionMetadata.originalContentType),
-            e.platform === R.xz.WEB && null != e.originalMd5 && (this._originalMd5 = e.originalMd5),
+            e.platform === O.xz.WEB && null != e.originalMd5 && (this._originalMd5 = e.originalMd5),
             (this._abortController = new AbortController()),
             null != this.origin &&
-                (this.uploadAnalytics.origin = "string" == typeof this.origin ? this.origin : R.Cj[this.origin]),
+                (this.uploadAnalytics.origin = "string" == typeof this.origin ? this.origin : O.Cj[this.origin]),
             (this._uploadHttpClient = new L.nd()),
             (this._libdiscoreEnabled = !1);
     }
@@ -182,7 +182,7 @@ class w extends R.Ay {
         this.emit("progress", n, i, r), (this.loaded = n);
     };
     retryOpts() {
-        return this.item.platform === R.xz.REACT_NATIVE
+        return this.item.platform === O.xz.REACT_NATIVE
             ? {
                   timeout: +g.A.Millis.HOUR,
                   backoff: new l.A(0.5 * g.A.Millis.SECOND, 30 * g.A.Millis.MINUTE),
@@ -191,7 +191,7 @@ class w extends R.Ay {
             : { timeout: +g.A.Millis.HOUR, retries: 12, backoff: new l.A() };
     }
     createAttachmentUrlRetryOpts() {
-        return this.item.platform === R.xz.REACT_NATIVE
+        return this.item.platform === O.xz.REACT_NATIVE
             ? {
                   timeout: { response: 30 * g.A.Millis.SECOND, deadline: 30 * g.A.Millis.MINUTE },
                   backoff: new l.A(0.5 * g.A.Millis.SECOND, 60 * g.A.Millis.SECOND),
@@ -203,7 +203,7 @@ class w extends R.Ay {
         return d.A.buildHeadersForMd5(this._originalMd5);
     }
     supportsResume() {
-        return this._libdiscoreEnabled || this.item.platform !== R.xz.REACT_NATIVE;
+        return this._libdiscoreEnabled || this.item.platform !== O.xz.REACT_NATIVE;
     }
     async uploadFileToCloud() {
         let e, t;
@@ -211,11 +211,11 @@ class w extends R.Ay {
         return (
             v.log(
                 `Uploading ${this.id}`,
-                this.item.platform === R.xz.REACT_NATIVE
+                this.item.platform === O.xz.REACT_NATIVE
                     ? `filename=${this.item.filename}, uri=${this.item.uri}`
                     : `filename=${this.item.file.name}`,
             ),
-            this.item.platform === R.xz.REACT_NATIVE
+            this.item.platform === O.xz.REACT_NATIVE
                 ? (t =
                       null != (e = { type: this.item.mimeType, uri: this.item.uri, name: this.item.filename }).type &&
                       "application/json" !== e.type
@@ -337,7 +337,7 @@ class w extends R.Ay {
         let e = !1;
         if (
             this.allowOptimization &&
-            this.item.platform === R.xz.WEB &&
+            this.item.platform === O.xz.WEB &&
             !0 !== this.item.heicConversionEvaluated &&
             null != this.item.file &&
             (0, y.E5)(this.item.file)
@@ -371,7 +371,7 @@ class w extends R.Ay {
         if (this.isCancelled()) return void this.handleComplete(this.id);
         if (
             this.allowOptimization &&
-            this.item.platform === R.xz.WEB &&
+            this.item.platform === O.xz.WEB &&
             !e &&
             !0 !== this.item.heicConversionEvaluated
         ) {
@@ -386,7 +386,7 @@ class w extends R.Ay {
                 (this.uploadAnalytics.timing.compressTimeMs = e.compressTimeMs));
         }
         let t = await i.getUploadPayload(this),
-            n = (0, O.B)(this.item.target);
+            n = (0, R.B)(this.item.target);
         if (null == t.filename || "" === t.filename) {
             v.error("File does not have a filename.", JSON.stringify(t)), this.handleError(D.t02.INVALID_FILE_ASSET);
             return;
@@ -442,7 +442,7 @@ class w extends R.Ay {
         }
     }
     async reactNativeCompressAndExtractData() {
-        if (!(0, O.B)(this.item.target).shouldReactNativeCompressUploads)
+        if (!(0, R.B)(this.item.target).shouldReactNativeCompressUploads)
             return (
                 (this.uploadAnalytics.compressAndExtractDisabled = !0),
                 v.log("reactNativeCompressAndExtractData() disabled by upload target"),
@@ -463,7 +463,7 @@ class w extends R.Ay {
         let t = e.uri,
             n = e.file.name;
         if (
-            ((0, R.Sm)(e.file) &&
+            ((0, O.Sm)(e.file) &&
                 ((this.uploadAnalytics.imageCompressionQuality = e.file.imageCompressionQuality),
                 (this.uploadAnalytics.videoCompressionQuality = e.file.videoCompressionQuality),
                 (this.uploadAnalytics.imageEncoderType = e.file.imageEncoderType),
@@ -646,7 +646,7 @@ class w extends R.Ay {
     }
     async delete() {
         if (null == this.uploadedFilename) return;
-        let e = (0, O.B)(this.item.target).getDeleteUploadURL(this.uploadedFilename);
+        let e = (0, R.B)(this.item.target).getDeleteUploadURL(this.uploadedFilename);
         try {
             await o.Bo.del(e);
         } catch {}
@@ -663,7 +663,7 @@ class w extends R.Ay {
         let e;
         if (!w.isResponseUrlStale(this.responseUrlSetAt)) return;
         let t = await i.getUploadPayload(this),
-            n = (0, O.B)(this.item.target).getCreateAttachmentURL(this.channelId);
+            n = (0, R.B)(this.item.target).getCreateAttachmentURL(this.channelId);
         try {
             e = await o.Bo.post({
                 url: n,

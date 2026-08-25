@@ -97,7 +97,7 @@ function w(e) {
                               : i.type === P.fg2.XBOX
                                 ? (0, a.openModalLazy)(async () => {
                                       let { default: t } = await Promise.all([
-                                          n.e("500000"),
+                                          n.e("262546"),
                                           n.e("648241"),
                                           n.e("595429"),
                                           n.e("582830"),

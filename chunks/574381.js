@@ -8,7 +8,7 @@ n.d(t, {
     R0: () => C,
     Sn: () => h,
     cX: () => d,
-    cZ: () => R,
+    cZ: () => O,
     fg: () => r,
     j9: () => c,
     m0: () => I,
@@ -93,6 +93,6 @@ function C() {
         return null != window.navigator.maxTouchPoints && window.navigator.maxTouchPoints > 2 ? "ios" : "macos";
     else if (/Linux/i.test(e)) return "linux";
 }
-function R() {
+function O() {
     return o() ? "win" : d() ? "osx" : void 0;
 }

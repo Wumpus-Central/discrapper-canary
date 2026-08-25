@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { kz: () => A, gc: () => I, JW: () => g, Mq: () => C, K5: () => E, MD: () => v, px: () => x, x: () => y });
+n.d(t, { kz: () => A, gc: () => I, JW: () => g, Mq: () => C, K5: () => E, MD: () => S, px: () => x, x: () => y });
 var l = n(582128),
     i = n(517950),
     s = n(877624),
@@ -99,7 +99,7 @@ function y(e, t) {
     }
     return null != e ? e : null != t ? t : {};
 }
-function v() {
+function S() {
     let { enabled: e } = d.getConfig({ location: "shouldShowGiftPromotionReminderNotice" });
     if (!e || null == c.A.getMarketingComponentByType(s.C.GIFT_REMINDER_NAGBAR)) return !1;
     let t = c.A.getGiftPromotion()?.id;

@@ -22,8 +22,8 @@ var r = n(435558),
     S = n(573163),
     N = n(309010),
     C = n(967198),
-    R = n(543465),
-    O = n(237116),
+    O = n(543465),
+    R = n(237116),
     L = n(403362),
     y = n(652215),
     D = n(375708);
@@ -101,19 +101,19 @@ function K(e, t) {
                               case d.rD.USER_GLOBAL:
                               case d.rD.USER: {
                                   let e = h.default.getId();
-                                  return O.Ay.getRecentlyTalked(i, 100).filter((t) => {
+                                  return R.Ay.getRecentlyTalked(i, 100).filter((t) => {
                                       let { record: n } = t;
                                       return n.id !== e;
                                   });
                               }
                               case d.rD.APPLICATION:
-                                  return O.Ay.queryApplications({ query: "", limit: 100, fuzzy: !0 });
+                                  return R.Ay.queryApplications({ query: "", limit: 100, fuzzy: !0 });
                               case d.rD.GAME_PROFILE:
                                   return [];
                               case d.rD.GUILD:
-                                  return O.Ay.queryGuilds({ query: "", limit: 100, fuzzy: !0 });
+                                  return R.Ay.queryGuilds({ query: "", limit: 100, fuzzy: !0 });
                               case d.rD.TEXT_CHANNEL:
-                                  return O.Ay.queryChannels({
+                                  return R.Ay.queryChannels({
                                       query: "",
                                       guildId: C.A.getGuildId(),
                                       limit: 100,
@@ -121,7 +121,7 @@ function K(e, t) {
                                       allowEmptyQueries: !0,
                                   });
                               case d.rD.VOICE_CHANNEL:
-                                  return O.Ay.queryChannels({
+                                  return R.Ay.queryChannels({
                                       query: "",
                                       guildId: C.A.getGuildId(),
                                       limit: 100,
@@ -182,8 +182,8 @@ function K(e, t) {
                                               null == t ||
                                               e === i ||
                                               a.has(e) ||
-                                              R.Ay.isChannelMuted(t.guild_id, e) ||
-                                              (null != t.parent_id && R.Ay.isChannelMuted(t.guild_id, t.parent_id))
+                                              O.Ay.isChannelMuted(t.guild_id, e) ||
+                                              (null != t.parent_id && O.Ay.isChannelMuted(t.guild_id, t.parent_id))
                                           ) && (0, _.Y)(t)
                                       );
                                   })
@@ -264,7 +264,7 @@ class Z extends s.Ay.PersistedStore {
     static displayName = "QuickSwitcherStore";
     static persistKey = "QuickSwitcherStore";
     initialize(e) {
-        this.waitFor(E.A, h.default, I.A, f.A, u.A, p.Ay, T.Ay, m.A, g.A, S.Ay, N.Ay, C.A, A.A, R.Ay),
+        this.waitFor(E.A, h.default, I.A, f.A, u.A, p.Ay, T.Ay, m.A, g.A, S.Ay, N.Ay, C.A, A.A, O.Ay),
             this.syncWith([A.A], () => !0),
             (U = l.w.get(v) || !1),
             (B = e?.channelHistory ?? []);

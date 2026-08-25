@@ -19,17 +19,17 @@ var l = n(477900),
     C = n(495602);
 let E = "content-inventory-context";
 function I(e) {
-    let { user: t, guildId: n, channel: I, entry: y, onSelect: v, disableGameProfileLinks: S } = e,
+    let { user: t, guildId: n, channel: I, entry: y, onSelect: S, disableGameProfileLinks: v } = e,
         N = i.useRef(null),
         _ = i.useContext(x.Jd),
         T = (0, p.A)({ userId: t.id, guildId: n, channelId: I?.id, onAction: _ }),
         j = (0, h.A)({ id: t.id, label: A.intl.string(A.t["/AXYnE"]) }),
         b = "application_id" in y.extra ? y.extra.application_id : null,
         R = (0, h.A)({ id: b, label: A.intl.string(A.t["FfCL+6"]) }),
-        M = (0, g.zD)(y),
-        O = (0, f.A)({
+        O = (0, g.zD)(y),
+        M = (0, f.A)({
             location: "ContentPopoutContextMenu",
-            applicationId: M && !0 !== S ? y.extra?.application_id : void 0,
+            applicationId: O && !0 !== v ? y.extra?.application_id : void 0,
             source: m.GameProfileSources.ActivityCardContextMenu,
             trackEntryPointImpression: !0,
             sourceUserId: y.author_id,
@@ -48,18 +48,18 @@ function I(e) {
                     (0, d.Z_)(), t();
                 },
                 "aria-label": A.intl.string(A.t.liqwPJ),
-                onSelect: v,
+                onSelect: S,
                 children: (0, l.jsxs)(l.Fragment, {
                     children: [
                         (0, l.jsxs)(a.rX, {
                             children: [
                                 T,
-                                null != O &&
+                                null != M &&
                                     (0, l.jsx)(a.Dr, {
                                         id: "game-profile",
                                         label: A.intl.string(A.t.f7aVGn),
                                         action: (e) => {
-                                            O(e), _?.();
+                                            M(e), _?.();
                                         },
                                     }),
                             ],

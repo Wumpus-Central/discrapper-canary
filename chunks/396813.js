@@ -6,7 +6,7 @@ n.d(t, {
     N1: () => ee,
     xB: () => eg,
     Yb: () => eo,
-    IV: () => eR,
+    IV: () => eO,
     Oq: () => er,
     r8: () => eI,
     lk: () => el,
@@ -29,7 +29,7 @@ n.d(t, {
     Yf: () => eC,
     Ov: () => J,
     QG: () => eh,
-    Zb: () => eO,
+    Zb: () => eR,
     dQ: () => eS,
     Gt: () => ec,
 }),
@@ -58,8 +58,8 @@ var i,
     S = n(174459),
     N = n(927813),
     C = n(38405),
-    R = n(499785),
-    O = n(789999),
+    O = n(499785),
+    R = n(789999),
     L = n(322683),
     y = n(652215);
 function D(e) {
@@ -76,7 +76,7 @@ function D(e) {
         caller_source: e.callerSource,
         request_id: e.requestId,
         fetched_at: e.fetchedAt,
-        is_foregrounded: (0, O.R)(),
+        is_foregrounded: (0, R.R)(),
     });
 }
 class v {
@@ -126,7 +126,7 @@ function w(e, t, n) {
         previous_ad_request_id: e.previousAdDecision?.adDecisionData?.decision_id ?? null,
         previous_fetched_at: e.previousAdDecision?.fetchedAt ?? null,
         transition_case: t,
-        is_foregrounded: (0, O.R)(),
+        is_foregrounded: (0, R.R)(),
     });
 }
 class G {
@@ -342,7 +342,7 @@ async function et(e) {
         executableFingerprint: d,
     } = e;
     try {
-        let e = await R.A.post({
+        let e = await O.A.post({
             url: y.Rsh.QUESTS_HEARTBEAT(t),
             body: { stream_key: n, application_id: i, terminal: a, executable_path: s, executable_fingerprint: d },
             trackedActionData: {
@@ -561,21 +561,21 @@ async function eI(e, t) {
                 return t?.parentId == null || T.A.isFolderExpanded(t.parentId);
             }).slice(0, 50),
             C = c.enabled ? N : void 0,
-            R = new URLSearchParams({ placement: String(e) });
-        r?.uuid != null && R.append("client_heartbeat_session_id", r.uuid),
-            null != o.uuid && R.append("client_ad_session_id", o.uuid),
-            null != C && C.forEach((e) => R.append("visible_guild_ids", e));
-        let O = (
+            O = new URLSearchParams({ placement: String(e) });
+        r?.uuid != null && O.append("client_heartbeat_session_id", r.uuid),
+            null != o.uuid && O.append("client_ad_session_id", o.uuid),
+            null != C && C.forEach((e) => O.append("visible_guild_ids", e));
+        let R = (
                 await s.Bo.get({
-                    url: `${y.Rsh.QUEST_FETCH_QUEST_TO_DELIVER}?${R.toString()}`,
+                    url: `${y.Rsh.QUEST_FETCH_QUEST_TO_DELIVER}?${O.toString()}`,
                     rejectWithError: !1,
                     context: { connection_type: m.A.getType() },
                 })
             ).body,
             L =
-                O.creative?.creative_type !== a.p.BOUNTY ||
+                R.creative?.creative_type !== a.p.BOUNTY ||
                 W.getConfig({ location: "QuestActionCreators.fetchQuestToDeliver" }).enabled
-                    ? O.creative
+                    ? R.creative
                     : null,
             D = null;
         if (null != L)
@@ -588,7 +588,7 @@ async function eI(e, t) {
                     D = { type: a.p.BOUNTY, bounty: v };
             }
         else {
-            let e = O.quest;
+            let e = R.quest;
             null != e && ((i = (0, z.Yn)(e)), (D = { type: a.p.QUEST, questId: i.id }));
         }
         if (
@@ -597,25 +597,25 @@ async function eI(e, t) {
                 quest: i,
                 creative: D,
                 adDecisionData: {
-                    ad_id: O.ad_identifiers?.ad_id,
-                    adset_id: O.ad_identifiers?.adset_id,
-                    ad_set_id: O.ad_identifiers?.ad_set_id,
-                    campaign_id: O.ad_identifiers?.campaign_id,
-                    creative_id: O.ad_identifiers?.creative_id,
-                    creative_type: O.ad_identifiers?.creative_type,
-                    decision_id: O.request_id,
-                    is_targeted: null != O.ad_identifiers,
+                    ad_id: R.ad_identifiers?.ad_id,
+                    adset_id: R.ad_identifiers?.adset_id,
+                    ad_set_id: R.ad_identifiers?.ad_set_id,
+                    campaign_id: R.ad_identifiers?.campaign_id,
+                    creative_id: R.ad_identifiers?.creative_id,
+                    creative_type: R.ad_identifiers?.creative_type,
+                    decision_id: R.request_id,
+                    is_targeted: null != R.ad_identifiers,
                 },
-                metadataSealed: O.metadata_sealed,
-                trafficMetadataSealed: O.traffic_metadata_sealed,
-                adContext: O.ad_context,
-                responseTtlSeconds: O.response_ttl_seconds,
+                metadataSealed: R.metadata_sealed,
+                trafficMetadataSealed: R.traffic_metadata_sealed,
+                adContext: R.ad_context,
+                responseTtlSeconds: R.response_ttl_seconds,
                 placement: e,
                 fetchedAt: n,
             }),
             x.recordQuestRequestApiResponse("/quests/decision", {
                 wasSuccessful: !0,
-                adRequestId: String(O.request_id),
+                adRequestId: String(R.request_id),
                 currentCreative: D,
                 currentFetchedAt: n,
             }),
@@ -627,7 +627,7 @@ async function eI(e, t) {
                 ...(0, h.A)(),
                 quest_id: i.id,
                 caller_source: t,
-                ad_request_id: String(O.request_id),
+                ad_request_id: String(R.request_id),
             });
     } catch (i) {
         x.recordQuestRequestApiResponse("/quests/decision", { wasSuccessful: !1, currentFetchedAt: n }),
@@ -689,7 +689,7 @@ async function ep(e, t, n) {
     }
 }
 async function eT(e, t) {
-    await R.A.post({
+    await O.A.post({
         url: y.Rsh.QUESTS_VIDEO_PROGRESS(e),
         body: { timestamp: t },
         trackedActionData: {
@@ -774,7 +774,7 @@ async function eC() {
         throw (l.h.dispatch({ type: "QUESTS_FETCH_QUEST_HOME_HERO_FAILURE", error: new o.A(t), placement: e }), t);
     }
 }
-async function eR(e) {
+async function eO(e) {
     let t = V.p9.QUEST_HOME_BANNER_DESKTOP,
         n = Date.now();
     l.h.dispatch({ type: "QUESTS_FETCH_QUEST_HOME_HERO_BEGIN", placement: t });
@@ -809,7 +809,7 @@ async function eR(e) {
         throw (l.h.dispatch({ type: "QUESTS_FETCH_QUEST_HOME_HERO_FAILURE", error: new o.A(e), placement: t }), e);
     }
 }
-function eO(e) {
+function eR(e) {
     l.h.dispatch({ type: "UNENROLLED_ACTIVITY_QUEST_DISMISS", questId: e });
 }
 function eL(e, t) {

@@ -1,13 +1,13 @@
 "use strict";
 n.d(t, {
-    Kl: () => O,
+    Kl: () => R,
     SW: () => T,
     Td: () => L,
     VL: () => g,
     Wi: () => P,
     _R: () => b,
     aY: () => U,
-    bz: () => R,
+    bz: () => O,
     gm: () => N,
     hK: () => v,
     hv: () => m,
@@ -118,7 +118,7 @@ function C(e) {
     let o = i + a;
     o > 0 && d.A.distribution({ name: l.K.EXPLICIT_MEDIA_PENDING_MESSAGE_LOADED_V2 }, o);
 }
-function R(e) {
+function O(e) {
     let {
             messageId: t,
             channelId: n,
@@ -154,7 +154,7 @@ function R(e) {
         has_redactable_self_harm: h,
     });
 }
-function O(e) {
+function R(e) {
     let {
         messageId: t,
         channelId: n,

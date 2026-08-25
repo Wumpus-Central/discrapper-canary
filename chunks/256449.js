@@ -2,14 +2,14 @@
 n.d(t, {
     Gc: () => b,
     Sr: () => y,
-    Th: () => v,
+    Th: () => S,
     UT: () => R,
     XQ: () => _,
     ZO: () => N,
-    Zq: () => M,
-    _c: () => S,
+    Zq: () => O,
+    _c: () => v,
     ln: () => j,
-    pD: () => O,
+    pD: () => M,
 }),
     n(321073),
     n(667532);
@@ -39,11 +39,11 @@ function y(e) {
         t && null == x.A.getStickerPack(e) && (0, p.zk)(e);
     }, [e, t]);
 }
-function v(e) {
+function S(e) {
     let t = a.S0.useSetting();
     return (0, C.Qn)(t, e);
 }
-function S(e) {
+function v(e) {
     let {
         collapsedStickersCategories: t,
         filteredStickers: n,
@@ -70,11 +70,11 @@ function S(e) {
                     a = u.A.getGuildId(),
                     c = d.findIndex((e) => e.type === A.Z2.FAVORITE),
                     y = d.findIndex((e) => e.type === A.Z2.RECENT),
-                    v = t.length;
-                null != i && a === i.id && r && t.length < (0, h.aG)(i.premiumTier) && v++;
-                let S = Math.ceil(v / e);
-                f[x] = l ? 0 : S;
-                for (let s = 0; s < S; s++) {
+                    S = t.length;
+                null != i && a === i.id && r && t.length < (0, h.aG)(i.premiumTier) && S++;
+                let v = Math.ceil(S / e);
+                f[x] = l ? 0 : v;
+                for (let s = 0; s < v; s++) {
                     let r = s * e,
                         a = r + e,
                         o = t
@@ -92,7 +92,7 @@ function S(e) {
                     x > y &&
                         x > c &&
                         null != i &&
-                        v > t.length &&
+                        S > t.length &&
                         o.push({
                             type: A.op.CREATE_STICKER,
                             guild_id: i.id,
@@ -150,7 +150,7 @@ function R() {
             t);
     return (0, i.yK)([x.A], () => n.map((e) => x.A.getStickerById(e)).filter((e) => void 0 !== e), [n]);
 }
-function M(e) {
+function O(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         n = (0, i.bG)([x.A], () => x.A.getStickerById(e.id)),
         [s, r] = l.useState(!0),
@@ -183,7 +183,7 @@ function M(e) {
         ? [e, a]
         : [n ?? null, a];
 }
-function O(e) {
+function M(e) {
     let t = (function (e) {
         let t,
             n,

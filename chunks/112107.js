@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Ay: () => O, LF: () => R });
+n.d(t, { Ay: () => M, LF: () => R });
 var l = n(477900),
     i = n(582128),
     s = n(503698),
@@ -38,8 +38,8 @@ function y(e, t) {
         }, [t?.guild_id, t?.id, l, e?.guildId, e?.soundId, e?.volume]),
     };
 }
-var v = n(209932),
-    S = n(807348),
+var S = n(209932),
+    v = n(807348),
     N = n(805945),
     _ = n(734057),
     T = n(375708),
@@ -59,16 +59,16 @@ function b(e) {
 }
 function R(e) {
     let { soundId: t } = e,
-        n = (0, a.bG)([v.A], () => v.A.getSoundById(t)),
+        n = (0, a.bG)([S.A], () => S.A.getSoundById(t)),
         i = (0, m.tj)({ location: "SoundboardMentionInline" }),
         { isPlaying: s, playSound: r } = y(n);
     return i
         ? null == n
             ? (0, l.jsx)(b, {})
-            : (0, l.jsx)(M, { className: j.wg, isPlaying: s, playSound: r, sound: n })
+            : (0, l.jsx)(O, { className: j.wg, isPlaying: s, playSound: r, sound: n })
         : null;
 }
-function M(e) {
+function O(e) {
     let { className: t, sound: n, playSound: i, isPlaying: s } = e,
         a = n?.emojiId != null || n?.emojiName != null,
         u = T.intl.formatToPlainString(T.t.tuMUJ2, { emojiName: n?.emojiName, soundName: n?.name });
@@ -85,10 +85,10 @@ function M(e) {
           })
         : null;
 }
-let O = function (e) {
+let M = function (e) {
     let { channelId: t, messageId: n, soundId: s, messageSounds: r, jumbo: o = !1 } = e,
         u = C.hH.useSetting(),
-        d = (0, a.bG)([v.A], () => v.A.getSoundById(s), [s]),
+        d = (0, a.bG)([S.A], () => S.A.getSoundById(s), [s]),
         m = i.useMemo(() => (0, f.A)(t, n, s, r) ?? d, [t, n, s, r, d]),
         g = (0, a.bG)([_.A], () => _.A.getChannel(t)),
         x = (0, h.X)({ location: "SoundboardMention" }),
@@ -111,7 +111,7 @@ let O = function (e) {
                         onSelectItem: T,
                         isPlayingSoundOverride: E,
                         isSoundmoji: !0,
-                        buttonOverlay: S.If.SOUNDMOJI,
+                        buttonOverlay: v.If.SOUNDMOJI,
                         tooltipClassName: j.YL,
                         tooltipContentClassName: j.R3,
                         tooltipOverride: (0, l.jsx)(p.WE, { sound: m }),
@@ -125,7 +125,7 @@ let O = function (e) {
                     __unsupportedReactNodeAsText: (0, l.jsx)(p.WE, { sound: m }),
                     position: "top",
                     delay: 500,
-                    children: (0, l.jsx)("span", { children: (0, l.jsx)(M, { sound: m, playSound: T, isPlaying: E }) }),
+                    children: (0, l.jsx)("span", { children: (0, l.jsx)(O, { sound: m, playSound: T, isPlaying: E }) }),
                 })
         : null;
 };

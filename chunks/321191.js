@@ -40,8 +40,8 @@ function N(e) {
     return { collectibles: i, profileEffect: t, profileFrame: n };
 }
 var C = n(652215),
-    R = n(375708);
-let O = Symbol("NO GUILD ID"),
+    O = n(375708);
+let R = Symbol("NO GUILD ID"),
     L = new Map(),
     y = new Set(),
     D = new Map(),
@@ -125,10 +125,10 @@ function B(e, t) {
         let r = n.expiresAt.getTime() - Date.now();
         r <= 0
             ? i.push(n)
-            : (null == b[e] && (b[e] = { [O]: {} }),
-              null == b[e][t ?? O] && (b[e][t ?? O] = {}),
-              null == b[e][t ?? O][n.skuId] && (b[e][t ?? O][n.skuId] = new l.Ep()),
-              b[e][t ?? O][n.skuId].start(Math.min(C.mnr, r), () => {
+            : (null == b[e] && (b[e] = { [R]: {} }),
+              null == b[e][t ?? R] && (b[e][t ?? R] = {}),
+              null == b[e][t ?? R][n.skuId] && (b[e][t ?? R][n.skuId] = new l.Ep()),
+              b[e][t ?? R][n.skuId].start(Math.min(C.mnr, r), () => {
                   B(e, t);
               }));
     }),
@@ -138,7 +138,7 @@ function B(e, t) {
                 i.type === a.R.PROFILE_EFFECT
                     ? (n.profileEffect = void 0)
                     : i.type === a.R.PROFILE_FRAME && (n.profileFrame = void 0),
-                    delete b[e]?.[t ?? O]?.[i.skuId];
+                    delete b[e]?.[t ?? R]?.[i.skuId];
             }),
             "guildId" in n ? v.get(e)?.set(n.guildId, n) : D.set(e, n),
             ed.emitChange());
@@ -172,7 +172,7 @@ function K(e) {
 }
 function $(e) {
     let { userProfile: t, fetchStartedAt: n, guildId: i } = e,
-        r = i ?? t.guild_member_profile?.guild_id ?? O;
+        r = i ?? t.guild_member_profile?.guild_id ?? R;
     if ((L.get(t.user.id)?.delete(r), y.delete(t.user.id), null != t.mutual_guilds)) {
         let e = {};
         t.mutual_guilds.forEach((t) => {
@@ -200,14 +200,14 @@ function $(e) {
                 ? t.badges.map((e) => {
                       let t = (0, p.e0)(e.id);
                       if (("premium" === e.id || null != t) && null != a) {
-                          let n = R.intl.formatToPlainString(R.t["8zbGNR"], { date: a });
+                          let n = O.intl.formatToPlainString(O.t["8zbGNR"], { date: a });
                           return (
-                              null != t && (n = R.intl.formatToPlainString(R.t.Hu4jfi, { date: a })),
+                              null != t && (n = O.intl.formatToPlainString(O.t.Hu4jfi, { date: a })),
                               { ...e, description: n }
                           );
                       }
                       return e.id.startsWith("guild_booster_lvl") && null != s
-                          ? { ...e, description: R.intl.formatToPlainString(R.t.IWkAq7, { date: s }) }
+                          ? { ...e, description: O.intl.formatToPlainString(O.t.IWkAq7, { date: s }) }
                           : e;
                   })
                 : [];
@@ -286,7 +286,7 @@ function z(e, t) {
 }
 function Z(e) {
     let { userId: t, guildId: n, withMutualFriends: i } = e,
-        r = n ?? O,
+        r = n ?? R,
         a = L.get(t);
     if (null != a) a.add(r);
     else {
@@ -297,7 +297,7 @@ function Z(e) {
 }
 function q(e) {
     let { userId: t, guildId: n, apiError: i, fetchStartedAt: r } = e;
-    L.get(t)?.delete(n ?? O), y.delete(t);
+    L.get(t)?.delete(n ?? R), y.delete(t);
     let a = D.get(t) ?? {
             connectedAccounts: [],
             applicationRoleConnections: [],
@@ -459,7 +459,7 @@ class eo extends A.A {
     }
     isFetchingProfile(e, t) {
         let n = L.get(e);
-        return null != n && n.has(t ?? O);
+        return null != n && n.has(t ?? R);
     }
     isFetchingFriends(e) {
         return y.has(e);

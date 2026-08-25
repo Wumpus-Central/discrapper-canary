@@ -11,17 +11,17 @@ var i = n(477900),
     h = n(517461),
     p = n(793574),
     m = n(780964),
-    f = n(766075),
-    A = n(272812),
+    A = n(766075),
+    f = n(272812),
     x = n(975571),
     g = n(915725),
     C = n(572164),
     y = n(539572),
     j = n(118328),
     I = n(652215),
-    N = n(711918),
-    v = n(375708),
-    E = n(771124),
+    E = n(711918),
+    N = n(375708),
+    v = n(771124),
     b = n(253146);
 function T() {
     let [e, t] = (0, h.V)("clips-video-call-tile-dismissed", !1),
@@ -38,25 +38,25 @@ function _(e) {
 }
 function R(e) {
     let { handleClose: t } = e;
-    return (0, i.jsxs)(A.A, {
-        className: E.VP,
+    return (0, i.jsxs)(f.A, {
+        className: v.VP,
         children: [
             (0, i.jsx)(s.m, {
                 asContainer: !0,
-                text: v.intl.string(v.t.J1hsY2),
+                text: N.intl.string(N.t.J1hsY2),
                 children: (0, i.jsx)(r.D, {
                     onClick: function () {
-                        (0, f.openUserSettings)(m.X.CLIPS_PANEL);
+                        (0, A.openUserSettings)(m.X.CLIPS_PANEL);
                     },
-                    className: E.F1,
+                    className: v.F1,
                     children: (0, i.jsx)("div", {
-                        className: E.zc,
+                        className: v.zc,
                         children: (0, i.jsx)(o.x, { size: "custom", color: "currentColor", width: 40, height: 40 }),
                     }),
                 }),
             }),
             (0, i.jsx)(r.D, {
-                className: E.b,
+                className: v.b,
                 onClick: t,
                 "aria-label": "Close",
                 children: (0, i.jsx)(c.P, { size: "sm", color: "currentColor" }),
@@ -70,32 +70,32 @@ function S(e) {
         o = (0, a.bG)([g.Ay], () => g.Ay.getEnableAutoclipping()),
         [h, m] = l.useState(() => !s);
     s || h || m(!0);
-    let f = h || !s,
-        j = f ? v.intl.string(N.default.oaIXoz) : v.intl.string(N.default.DpZqVj);
-    return (0, i.jsxs)(A.A, {
-        className: E.zr,
+    let A = h || !s,
+        j = A ? N.intl.string(E.default.oaIXoz) : N.intl.string(E.default.DpZqVj);
+    return (0, i.jsxs)(f.A, {
+        className: v.zr,
         children: [
-            (0, i.jsx)("div", { className: E.D7, "aria-hidden": !0 }),
+            (0, i.jsx)("div", { className: v.D7, "aria-hidden": !0 }),
             (0, i.jsx)(r.D, {
-                className: E.b,
+                className: v.b,
                 onClick: n,
                 "aria-label": "Close",
                 children: (0, i.jsx)(c.P, { size: "sm", color: "currentColor" }),
             }),
-            (0, i.jsx)("img", { className: E.Qw, src: b, alt: "" }),
+            (0, i.jsx)("img", { className: v.Qw, src: b, alt: "" }),
             (0, i.jsx)(d.E, {
-                className: E.pG,
+                className: v.pG,
                 variant: t >= 300 ? "text-md/medium" : "text-sm/medium",
                 color: "text-default",
-                children: v.intl.format(N.default.GqojUr, { learnMoreLink: x.A.getArticleURL(I.MVz.CLIPS) }),
+                children: N.intl.format(E.default.GqojUr, { learnMoreLink: x.A.getArticleURL(I.MVz.CLIPS) }),
             }),
             (0, i.jsx)("div", {
-                className: E.wq,
+                className: v.wq,
                 children: (0, i.jsx)(u.d, {
                     label: j,
-                    checked: f ? s && o : o,
+                    checked: A ? s && o : o,
                     onChange: function (e) {
-                        f &&
+                        A &&
                             (0, y.yO)({
                                 clipsEnabled: e,
                                 trackAnalytics: !0,

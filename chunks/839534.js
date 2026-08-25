@@ -87,7 +87,7 @@ class C {
         });
     }
 }
-class R {
+class O {
     title;
     body;
     asset;
@@ -104,10 +104,10 @@ class R {
             (this.revertTextColor = e.revert_text_color);
     }
     static fromServer(e) {
-        return new R(e);
+        return new O(e);
     }
 }
-class O {
+class R {
     title;
     body;
     assetDark;
@@ -130,7 +130,7 @@ class O {
             (this.buttonLabel = e.buttonLabel);
     }
     static fromServer(e) {
-        return new O({
+        return new R({
             ...e,
             assetDark: e.asset_dark,
             assetLight: e.asset_light,
@@ -188,9 +188,9 @@ class y {
                         case N.G.BADGE:
                             return [t, C.fromServer(n)];
                         case N.G.BANNER:
-                            return [t, R.fromServer(n)];
-                        case N.G.COACHMARK:
                             return [t, O.fromServer(n)];
+                        case N.G.COACHMARK:
+                            return [t, R.fromServer(n)];
                         case N.G.TAB_TOOLTIP:
                             return [t, L.fromServer(n)];
                         default:

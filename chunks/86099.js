@@ -11,8 +11,8 @@ var i = n(477900),
     h = n(789645),
     p = n(82495),
     m = n(69361);
-let f = { tension: 350, friction: 30 },
-    A = { tension: 350, friction: 30, clamp: !0 },
+let A = { tension: 350, friction: 30 },
+    f = { tension: 350, friction: 30, clamp: !0 },
     x = l.createContext(null);
 function g() {
     let e = l.useContext(x);
@@ -32,24 +32,24 @@ function y(e) {
         h,
         x,
         y,
-        { children: j, onExited: I, ariaLabel: N, dismissable: v = !1 } = e,
-        { isOpen: E, setOpen: b, triggerRef: T, menuId: _, spacing: R, centerSingleItem: S } = g(),
+        { children: j, onExited: I, ariaLabel: E, dismissable: N = !1 } = e,
+        { isOpen: v, setOpen: b, triggerRef: T, menuId: _, spacing: R, centerSingleItem: S } = g(),
         L = l.useCallback(() => {
-            v && b(!1);
-        }, [v, b]),
+            N && b(!1);
+        }, [N, b]),
         O = (0, p.A)(null, L, T),
         P = l.useCallback(
             (e) => {
-                v && "Escape" === e.key && b(!1);
+                N && "Escape" === e.key && b(!1);
             },
-            [v, b],
+            [N, b],
         ),
         M = l.Children.toArray(j).filter(l.isValidElement),
         w = M.length,
-        U = S && 1 === w,
-        D = l.useRef(I);
+        D = S && 1 === w,
+        U = l.useRef(I);
     l.useEffect(() => {
-        D.current = I;
+        U.current = I;
     }, [I]);
     let V = l.useRef([]),
         [k, G] = l.useState([]);
@@ -115,14 +115,14 @@ function y(e) {
         [z] = (0, c.z)(
             () => ({
                 from: { progress: 0 },
-                to: { progress: +!!E },
-                config: E ? f : A,
+                to: { progress: +!!v },
+                config: v ? A : f,
                 onRest: (e) => {
-                    !0 !== e.finished || E || D.current();
+                    !0 !== e.finished || v || U.current();
                 },
             }),
             "respect-motion-settings",
-            [E],
+            [v],
         );
     return (
         l.useEffect(() => {
@@ -132,16 +132,16 @@ function y(e) {
             ref: O,
             id: _,
             role: "menu",
-            "aria-label": N,
+            "aria-label": E,
             tabIndex: -1,
-            className: s()(m.EQ, { [m.U4]: !E }),
+            className: s()(m.EQ, { [m.U4]: !v }),
             style: {
                 "--custom-radial-opacity": z.progress,
                 transform: z.progress.to([0, 1], [0.5, 1]).to((e) => `scale(${e})`),
             },
             onKeyDown: P,
             children: M.map((e, t) => {
-                let n = U ? { x: 0, y: 0 } : (H[t] ?? { x: 0, y: 0 });
+                let n = D ? { x: 0, y: 0 } : (H[t] ?? { x: 0, y: 0 });
                 return (0, i.jsx)(
                     "div",
                     {
@@ -173,17 +173,17 @@ let j = Object.assign(
             [u, h] = l.useState(a),
             p = void 0 !== t,
             m = p ? t : u,
-            f = l.useCallback(
+            A = l.useCallback(
                 (e) => {
                     p || h(e), n?.(e);
                 },
                 [p, n],
             ),
-            A = l.useMemo(
-                () => ({ isOpen: m, setOpen: f, triggerRef: c, menuId: d, spacing: s, centerSingleItem: r }),
-                [m, f, d, s, r],
+            f = l.useMemo(
+                () => ({ isOpen: m, setOpen: A, triggerRef: c, menuId: d, spacing: s, centerSingleItem: r }),
+                [m, A, d, s, r],
             );
-        return (0, i.jsx)(x.Provider, { value: A, children: o });
+        return (0, i.jsx)(x.Provider, { value: f, children: o });
     },
     {
         Trigger: function (e) {
@@ -210,12 +210,12 @@ let j = Object.assign(
                         (0, o.vq)(e, HTMLElement) && e.focus({ preventScroll: !0 });
                     }
                 }, [s, c]);
-            let f = l.useCallback(() => h(!1), []);
+            let A = l.useCallback(() => h(!1), []);
             return "below" === n
                 ? u
                     ? (0, i.jsx)("div", {
                           className: m.Fn,
-                          children: (0, i.jsx)(y, { onExited: f, ariaLabel: a, dismissable: !0, children: t }),
+                          children: (0, i.jsx)(y, { onExited: A, ariaLabel: a, dismissable: !0, children: t }),
                       })
                     : null
                 : (0, i.jsx)(d.Y, {
@@ -227,16 +227,16 @@ let j = Object.assign(
                       autoInvert: !1,
                       spacing: 0,
                       onRequestClose: () => r(!1),
-                      renderPopout: () => (0, i.jsx)(y, { onExited: f, ariaLabel: a, children: t }),
+                      renderPopout: () => (0, i.jsx)(y, { onExited: A, ariaLabel: a, children: t }),
                       children: () => null,
                   });
         },
         Item: function (e) {
             let { className: t, closeOnClick: n = !0, selected: a, onClick: r, clearButtonAriaLabel: o, ...c } = e,
                 { isOpen: d, setOpen: p } = g(),
-                [f, A] = l.useState(a),
+                [A, f] = l.useState(a),
                 [x, C] = l.useState(d);
-            d !== x && (C(d), d && A(a));
+            d !== x && (C(d), d && f(a));
             let y = (e) => {
                 r?.(e), n && p(!1);
             };
@@ -252,7 +252,7 @@ let j = Object.assign(
                             ...c,
                         }),
                     }),
-                    f &&
+                    A &&
                         (0, i.jsx)("div", {
                             className: m.AS,
                             children: (0, i.jsx)(u.$, {

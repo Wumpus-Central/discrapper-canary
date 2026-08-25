@@ -41,19 +41,19 @@ let g = new s.J(m, (e) => `${e.joinRequestId}`),
 function C(e) {
     return g.get(e);
 }
-function R(e) {
+function O(e) {
     (v[e.joinRequestId] = e),
         g.set(e.joinRequestId, e),
         (0, c.ar)(e.applicationStatus) && (N.delete(e.joinRequestId), S.set(e.joinRequestId, e)),
         (0, c.mf)(e.applicationStatus) && (S.delete(e.joinRequestId), N.set(e.joinRequestId, e));
 }
-function O(e) {
+function R(e) {
     let { guildId: t, request: n } = e,
         i = (0, _.j)(n),
         r = o.default.getCurrentUser();
     if (null == r || i.userId === r.id) return !1;
     let a = C(i.joinRequestId)?.applicationStatus;
-    return I(t, i.applicationStatus, a), R(i), !0;
+    return I(t, i.applicationStatus, a), O(i), !0;
 }
 let L = {},
     y = {},
@@ -102,18 +102,18 @@ class M extends a.Ay.Store {
 let P = new M(l.h, {
     GUILD_JOIN_REQUEST_BY_ID_FETCH_SUCCESS: function (e) {
         let { joinRequest: t } = e;
-        R(t);
+        O(t);
     },
     GUILD_JOIN_REQUESTS_FOR_USER_FETCH_SUCCESS: function (e) {
         let { guildId: t, userId: n, requests: i } = e;
-        i.forEach(R), (f[`${t}:${n}`] = i.map((e) => e.joinRequestId));
+        i.forEach(O), (f[`${t}:${n}`] = i.map((e) => e.joinRequestId));
     },
     GUILD_JOIN_REQUESTS_FETCH_SUCCESS: function (e) {
         let { status: t, requests: n, total: i, guildId: r } = e;
         (p = !1),
             t === u.B5.SUBMITTED && h(r, i),
             n.forEach((e) => {
-                R(e);
+                O(e);
             });
     },
     GUILD_JOIN_REQUESTS_FETCH_START: function () {
@@ -122,8 +122,8 @@ let P = new M(l.h, {
     GUILD_JOIN_REQUESTS_FETCH_FAILURE: function () {
         p = !1;
     },
-    GUILD_JOIN_REQUEST_CREATE: O,
-    GUILD_JOIN_REQUEST_UPDATE: O,
+    GUILD_JOIN_REQUEST_CREATE: R,
+    GUILD_JOIN_REQUEST_UPDATE: R,
     GUILD_JOIN_REQUEST_DELETE: function (e) {
         let { id: t, guildId: n } = e,
             i = C(t);

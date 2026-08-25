@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
     dD: () => S,
-    oF: () => R,
+    oF: () => O,
     _0: () => L,
     Ay: () => v,
     uW: () => C,
@@ -152,11 +152,11 @@ function N(e) {
 function C(e) {
     return _((t) => e.some((e) => t.currentlyShown.has(e)));
 }
-function R() {
+function O() {
     let e = [..._.getState().currentlyShown].filter((e) => !d.C.has(e)).length;
     return [_.getState().currentlyShown.size, e];
 }
-function O() {
+function R() {
     (0, r.r)(() => {
         _.setState(() => {
             let e = u();
@@ -192,4 +192,4 @@ class D extends a.Ay.Store {
 function v(e, t) {
     return _(e, t);
 }
-new D(s.h, { CONNECTION_OPEN: () => O(), LOGOUT: () => O() });
+new D(s.h, { CONNECTION_OPEN: () => R(), LOGOUT: () => R() });

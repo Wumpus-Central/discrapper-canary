@@ -16,7 +16,7 @@ n.d(t, {
     lo: () => L,
     n$: () => k,
     pF: () => M,
-    tB: () => O,
+    tB: () => R,
     u1: () => B,
     v3: () => x,
 }),
@@ -51,8 +51,8 @@ function N(e, t) {
         .join("-?");
 }
 let C = [N(4, 4), N(4, 6), N(5, 3), "[a-zA-Z]{4}-?[0-9a-zA-Z]{4}-?[a-zA-Z]{4}"].join("|"),
-    R = RegExp(`^(WUMP-?)?(${C})$`);
-var O =
+    O = RegExp(`^(WUMP-?)?(${C})$`);
+var R =
     (((i = {})[(i.DEFAULT = 0)] = "DEFAULT"),
     (i[(i.CUSTOM_STYLE = 1)] = "CUSTOM_STYLE"),
     (i[(i.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD = 2)] = "CUSTOM_MESSAGE_EMOJI_SOUNDBOARD"),
@@ -225,7 +225,7 @@ function H(e, t, n) {
     return a.length === r.length ? a[0] : null;
 }
 function j(e) {
-    let t = e.trim().split("/").pop().match(R);
+    let t = e.trim().split("/").pop().match(O);
     if (null == t) return null;
     let [n, i, r] = t;
     return null == r ? null : r.replace(/-/g, "");

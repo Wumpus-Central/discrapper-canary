@@ -34,7 +34,7 @@ function c(e) {
             [x],
         ),
         [I, y] = l.useReducer(E, { focusedX: c, focusedY: d, columnCounts: n }),
-        { columnCounts: v, focusedX: S, focusedY: N } = I,
+        { columnCounts: S, focusedX: v, focusedY: N } = I,
         [_] = l.useState(() => (0, r.nF)(y, 16));
     return (
         l.useEffect(() => {
@@ -57,15 +57,15 @@ function c(e) {
                 } = e,
                 E = l.useRef(x),
                 I = u(o(t, c, d)),
-                [y, v] = l.useState(!1),
-                [S, N] = l.useState(!1),
+                [y, S] = l.useState(!1),
+                [v, N] = l.useState(!1),
                 [_, T] = l.useState(!1),
                 [j] = l.useState(
                     () =>
                         new r.Lp((e) => {
                             let [t, n] = e.split(",").map(Number);
                             return () => {
-                                v(!0), p({ type: i.n.SET_FOCUSED_POSITION, x: t, y: n });
+                                S(!0), p({ type: i.n.SET_FOCUSED_POSITION, x: t, y: n });
                             };
                         }),
                 );
@@ -87,7 +87,7 @@ function c(e) {
                     },
                     [t, m, b],
                 ),
-                M = l.useCallback(
+                O = l.useCallback(
                     function () {
                         let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
                             [n, l] = null != f ? f(c, d) : [c, d];
@@ -98,22 +98,22 @@ function c(e) {
                     },
                     [p, c, d, f, t, b],
                 ),
-                [O, L] = l.useState(!1);
+                [M, L] = l.useState(!1);
             l.useEffect(() => {
-                if (!O || !y) return;
+                if (!M || !y) return;
                 L(!1);
                 let e = u(o(t, c, d));
                 if (null != e) return void b(e);
-                v(!1);
+                S(!1);
                 let n = u(o(t));
                 null != n && b(n);
-            }, [t, O, y, b, c, d]);
+            }, [t, M, y, b, c, d]);
             let w = l.useCallback((e) => {
                 E.current && null == e && L(!0);
             }, []);
             l.useEffect(() => {
-                y && S && null != I && (b(I), N(!1));
-            }, [S, I]),
+                y && v && null != I && (b(I), N(!1));
+            }, [v, I]),
                 l.useEffect(() => {
                     y && (_ || R(c, d), T(!1));
                 }, [c, d]);
@@ -126,7 +126,7 @@ function c(e) {
                             !(e.shiftKey || e.altKey || e.metaKey || e.ctrlKey) &&
                             e.currentTarget === e.target
                         ) {
-                            e.preventDefault(), e.stopPropagation(), M();
+                            e.preventDefault(), e.stopPropagation(), O();
                             return;
                         }
                         let t = (function (e) {
@@ -171,21 +171,21 @@ function c(e) {
                                     null != h ? h(c, d, e) : null != I && I.click();
                         }
                     },
-                    [M, p, A, I, h, c, d],
+                    [O, p, A, I, h, c, d],
                 ),
                 P = l.useCallback(
                     (e) =>
                         e.currentTarget !== e.target
-                            ? (y || (v(!0), T(!0)), !1)
+                            ? (y || (S(!0), T(!0)), !1)
                             : y
-                              ? (M(!1), !1)
-                              : void (g && null != I ? R(c, d) : M(!0)),
-                    [y, g, I, M, R, c, d],
+                              ? (O(!1), !1)
+                              : void (g && null != I ? R(c, d) : O(!0)),
+                    [y, g, I, O, R, c, d],
                 ),
                 D = l.useCallback((e) => {
                     if (e.target !== e.currentTarget) {
                         if (e.currentTarget.contains(e.relatedTarget)) return !1;
-                        v(!1);
+                        S(!1);
                     }
                 }, []),
                 U = l.useMemo(() => Math.max(...n), [n]),
@@ -223,8 +223,8 @@ function c(e) {
             );
         })({
             navId: t,
-            columnCounts: v,
-            focusedX: S,
+            columnCounts: S,
+            focusedX: v,
             focusedY: N,
             dispatch: _,
             onSelect: h,

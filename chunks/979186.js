@@ -14,8 +14,8 @@ var r = n(477900),
     p = n(192308),
     m = n(231723),
     A = n(259678),
-    v = n(638495),
-    y = n(965830),
+    y = n(638495),
+    v = n(965830),
     x = n(318009),
     w = n(92960),
     E = n(14214),
@@ -88,7 +88,7 @@ function ec(e) {
         A = i.useCallback(() => {
             a.set(0), null != c.current && clearTimeout(c.current), (c.current = null), n?.(), l?.();
         }, [a, n, l]),
-        v = i.useCallback(
+        y = i.useCallback(
             (e) => {
                 h ||
                     (f(!0),
@@ -103,7 +103,7 @@ function ec(e) {
             },
             [n, s, h],
         ),
-        y = i.useCallback(
+        v = i.useCallback(
             (e) => {
                 e.stopPropagation(), e.shiftKey ? (u(!0), null != c.current && clearTimeout(c.current)) : u(!1);
             },
@@ -149,8 +149,8 @@ function ec(e) {
         confirmText: es.intl.string(es.t.a3HlgJ),
         cancelText: null != w ? es.intl.string(es.t.qIYnPo) : void 0,
         icon: (0, r.jsx)($.A, { width: 40, height: 40, className: eo.Lo }),
-        onNotificationClick: y,
-        onConfirmClick: v,
+        onNotificationClick: v,
+        onConfirmClick: y,
         onCancelClick: null != w ? x : void 0,
         onDismissClick: n,
         expand: !0,
@@ -222,8 +222,8 @@ var eu = n(97469),
     ep = n(677134),
     em = n(19575),
     eA = n(346142),
-    ev = n(869146),
-    ey = n(392164),
+    ey = n(869146),
+    ev = n(392164),
     ex = n(577063);
 function ew(e) {
     let { withTitleBar: t, isFullScreen: n } = e;
@@ -251,7 +251,7 @@ class eE extends i.Component {
     beforeUnload = (e) => {
         let { onBeforeUnload: t } = this.props,
             n = () => {
-                ev.A.unmountWindow(this.props.windowKey), eg.isPlatformEmbedded && em.Ay.close(this.props.windowKey);
+                ey.A.unmountWindow(this.props.windowKey), eg.isPlatformEmbedded && em.Ay.close(this.props.windowKey);
             };
         null != t ? t({ e, unmountWindow: n }) : n();
     };
@@ -316,10 +316,10 @@ class eE extends i.Component {
                 themeOverride: g,
                 titleBarTheme: p,
                 hideModals: m = !1,
-                appContext: y,
+                appContext: v,
             } = this.props,
             w = ew({ withTitleBar: s, isFullScreen: i }),
-            E = n === ey.f,
+            E = n === ev.f,
             C = E ? ed : S.A;
         return (0, r.jsx)(c.Kd, {
             children: (0, r.jsx)(
@@ -338,7 +338,7 @@ class eE extends i.Component {
                                         children: [
                                             (0, r.jsx)(T.Al, {}),
                                             (0, r.jsx)(R.Wr, {
-                                                appContext: y ?? ei.BRT.POPOUT,
+                                                appContext: v ?? ei.BRT.POPOUT,
                                                 renderWindow: l,
                                                 children: (0, r.jsx)(I.l, {
                                                     children: (0, r.jsxs)(L.Yf, {
@@ -361,7 +361,7 @@ class eE extends i.Component {
                                                                     }),
                                                                 ],
                                                             }),
-                                                            !m && (0, r.jsx)(v.b, {}),
+                                                            !m && (0, r.jsx)(y.b, {}),
                                                             (0, r.jsx)(x.A, {}),
                                                             (0, r.jsx)(u.P, {}),
                                                             (0, r.jsx)(L.C8, {}),
@@ -403,9 +403,9 @@ let eC = i.forwardRef(function (e, t) {
         );
     }),
     eb = i.forwardRef(function (e, t) {
-        let { guestWindow: n, isFullScreen: i } = (0, g.cf)([ev.A], () => ({
-            guestWindow: ev.A.getWindow(e.windowKey),
-            isFullScreen: ev.A.isWindowFullScreen(e.windowKey),
+        let { guestWindow: n, isFullScreen: i } = (0, g.cf)([ey.A], () => ({
+            guestWindow: ey.A.getWindow(e.windowKey),
+            isFullScreen: ey.A.isWindowFullScreen(e.windowKey),
         }));
         a()(null != n, "Missing guestWindow reference");
         let { forcedColors: s, connectedEmbeddedActivity: o } = (0, g.cf)([C.Ay, N.Ay], () => ({
@@ -419,7 +419,7 @@ let eC = i.forwardRef(function (e, t) {
             h = e.themeOverride ?? u;
         return null == n
             ? null
-            : (0, r.jsx)(y.W, {
+            : (0, r.jsx)(v.W, {
                   children: (0, r.jsx)(_.f5, {
                       value: l,
                       children: (0, r.jsx)(eE, {

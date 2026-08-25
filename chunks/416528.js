@@ -11,17 +11,17 @@ var i = n(477900),
     h = n(481901),
     p = n(29540),
     m = n(793574),
-    f = n(688810),
-    A = n(402216),
+    A = n(688810),
+    f = n(402216),
     x = n(689874),
     g = n(872363),
     C = n(446243),
     y = n(920639),
     j = n(360729),
     I = n(51082),
-    N = n(275731),
-    v = n(289552),
-    E = n(246356),
+    E = n(275731),
+    N = n(289552),
+    v = n(246356),
     b = n(977851),
     T = n(204651),
     _ = n(772475),
@@ -32,8 +32,8 @@ var i = n(477900),
     P = n(546871),
     M = n(195007),
     w = n(806931),
-    U = n(375708),
-    D = n(1195),
+    D = n(375708),
+    U = n(1195),
     V = n(547368);
 function k(e) {
     let { channelId: t, guildId: n } = e,
@@ -55,7 +55,7 @@ function k(e) {
                       o.m,
                       {
                           position: "bottom",
-                          text: U.intl.formatToPlainString(U.t.JjdizN, { username: e.user.username }),
+                          text: D.intl.formatToPlainString(D.t.JjdizN, { username: e.user.username }),
                           children: (0, i.jsx)(R.Ay, { user: e.user, speaking: !0, collapsed: !0, guildId: n }),
                       },
                       e.id,
@@ -73,7 +73,7 @@ function G(e) {
             guildRoomVideoOverlayVisible: R,
         } = e,
         L = l.useRef(null),
-        { analyticsLocations: G } = (0, f.Ay)(m.A.VOICE_CHANNEL_HEADER),
+        { analyticsLocations: G } = (0, A.Ay)(m.A.VOICE_CHANNEL_HEADER),
         B = t.id,
         {
             voiceParticipantsHidden: F,
@@ -104,7 +104,7 @@ function G(e) {
                     T.A,
                     {
                         iconComponent: c.PaintPaletteIcon,
-                        label: U.intl.string(U.t["ZrN+DT"]),
+                        label: D.intl.string(D.t["ZrN+DT"]),
                         onClick: () => {
                             (0, d.openModalLazy)(async () => {
                                 let { default: e } = await Promise.all([n.e("768581"), n.e("244605")]).then(
@@ -127,15 +127,15 @@ function G(e) {
         F && q.push((0, i.jsx)(k, { channelId: B, guildId: t.guild_id }, "current-speaker")),
         q.push((0, i.jsx)(x.A, { className: V.x6, channelId: B }, "clips-enabled-indicator")),
         H?.type === w.lp.STREAM &&
-            (q.push((0, i.jsx)(N.A, { className: V.x6, participant: H }, "warning")),
+            (q.push((0, i.jsx)(E.A, { className: V.x6, participant: H }, "warning")),
             q.push(
                 (0, i.jsx)(
                     g.A,
-                    { size: A.Ay.Sizes.LARGE, className: V.x6, participant: H, showQuality: !0, premiumIndicator: !1 },
+                    { size: f.Ay.Sizes.LARGE, className: V.x6, participant: H, showQuality: !0, premiumIndicator: !1 },
                     "live-indicator",
                 ),
             )),
-        H?.type === w.lp.USER && q.push((0, i.jsx)(v.A, { className: V.x6, userId: H.id }, "video-warning")),
+        H?.type === w.lp.USER && q.push((0, i.jsx)(N.A, { className: V.x6, userId: H.id }, "video-warning")),
         F &&
             q.push(
                 (0, i.jsx)(
@@ -143,7 +143,7 @@ function G(e) {
                     {
                         targetElementRef: L,
                         position: "bottom",
-                        renderPopout: () => (0, i.jsx)(E.A, { children: (0, i.jsx)(M.A, { channel: t }) }),
+                        renderPopout: () => (0, i.jsx)(v.A, { children: (0, i.jsx)(M.A, { channel: t }) }),
                         children: (e, t) => {
                             let { isShown: n } = t;
                             return (0, l.createElement)(_.A, {
@@ -161,13 +161,13 @@ function G(e) {
             ),
         W && Y)
     ) {
-        let e = I && !R ? U.t["3jrUBj"] : D.default.f7g0DK;
+        let e = I && !R ? D.t["3jrUBj"] : U.default.f7g0DK;
         q.push(
             (0, i.jsx)(
                 T.A,
                 {
                     iconComponent: I && !R ? h.d : p.u,
-                    label: U.intl.string(e),
+                    label: D.intl.string(e),
                     onClick: () => {
                         if (!I) {
                             (0, C.zD)(t.id),
@@ -189,6 +189,6 @@ function G(e) {
     }
     return (
         K && q.push((0, i.jsx)(b.V, { channelId: t.id, className: V.x6, disabled: a }, "chat-spacer")),
-        (0, i.jsx)(f.f5, { value: G, children: q })
+        (0, i.jsx)(A.f5, { value: G, children: q })
     );
 }

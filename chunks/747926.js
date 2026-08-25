@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { JA: () => v, Tv: () => S, bA: () => _, xu: () => N });
+n.d(t, { JA: () => S, Tv: () => v, bA: () => _, xu: () => N });
 var l = n(284009),
     i = n.n(l),
     s = n(228366),
@@ -20,7 +20,7 @@ var l = n(284009),
     E = n(37411),
     I = n(652215),
     y = n(746080);
-function v(e, t, n) {
+function S(e, t, n) {
     if (!(0, d.C$)(e.id)) return void (0, u.showInaccessibleReportPostModal)();
     c.Uw.dispatch(I.jej.POPOUT_CLOSE);
     let l = { state: { hideThreadCallUI: !0 } };
@@ -46,7 +46,7 @@ function v(e, t, n) {
             C._.dispatch(I.jej.FOCUS_CHANNEL_TEXT_AREA, { channelId: e.id });
         }, 0);
 }
-function S(e, t, n) {
+function v(e, t, n) {
     if (
         (i()(!e.isForumLikeChannel(), "cannot open thread creation sidebar in forums"),
         i()(!__OVERLAY__, "Cannot create threads in the overlay."),

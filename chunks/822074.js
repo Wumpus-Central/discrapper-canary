@@ -17,7 +17,7 @@ var a = n(435558),
     E = n(287809),
     I = n(927813),
     y = n(935208);
-function v(e, t) {
+function S(e, t) {
     return {
         id: e.id,
         topic: e.topic,
@@ -31,17 +31,17 @@ function v(e, t) {
         type: e.type,
     };
 }
-var S = n(521732);
+var v = n(521732);
 let N = {},
     _ = {},
     T = {},
     j = [],
     b = {},
     R = { status: "ok", lastRequest: null, lastResponse: null },
-    M = [],
-    O = [];
+    O = [],
+    M = [];
 function L() {
-    M = f.A.getProps()
+    O = f.A.getProps()
         .results.filter((e) => e.type === h.rD.TEXT_CHANNEL && 0 === e.record.type)
         .map((e) => e.record.id);
 }
@@ -69,7 +69,7 @@ class w extends u.Ay.PersistedStore {
             .sort((e, t) => y.default.extractTimestamp(t.endId) - y.default.extractTimestamp(e.endId));
     }
     summaries(e) {
-        return N[e] ?? O;
+        return N[e] ?? M;
     }
     shouldShowTopicsBar() {
         return l;
@@ -96,7 +96,7 @@ class w extends u.Ay.PersistedStore {
         if (null != t) {
             let e = n?.summaryIdLastRequestedAt ?? 0,
                 l = Date.now() - e;
-            return t !== n?.summaryId || l > S.hf;
+            return t !== n?.summaryId || l > v.hf;
         }
         let i = n?.lastReceivedAt ?? 0;
         return !n?.fetching && 0 === i;
@@ -120,7 +120,7 @@ class w extends u.Ay.PersistedStore {
         let { withQuickSwitcher: t, withChannelAffinities: n, withUnreads: l, numChannels: i = 25 } = e,
             s = [];
         return (
-            t && (s = s.concat(M)),
+            t && (s = s.concat(O)),
             n && (s = s.concat(j.map((e) => e.channel_id))),
             l &&
                 (s = s.filter((e) => {
@@ -149,7 +149,7 @@ let k = new w(c.h, {
     RECEIVE_CHANNEL_SUMMARY(e) {
         let { summary: t, channelId: n, error: l, receivedAt: i } = e;
         if (null != t && Object.keys(t).length > 0) {
-            let e = v(t, n),
+            let e = S(t, n),
                 l = [...(N[n] ?? [])],
                 i = l.findIndex((t) => t.id === e?.id);
             i > -1 ? (l[i] = e) : l.push(e), (N[n] = l);
@@ -163,7 +163,7 @@ let k = new w(c.h, {
     },
     RECEIVE_CHANNEL_SUMMARIES(e) {
         let { summaries: t, channelId: n, error: l, receivedAt: i } = e,
-            s = t.filter((e) => Object.keys(e).length > 0).map((e) => v(e, n));
+            s = t.filter((e) => Object.keys(e).length > 0).map((e) => S(e, n));
         if (null != r && r.channelId === n && !s.some((e) => e.id === r?.summaryId)) {
             let e = (N[n] ?? []).find((e) => e.id === r?.summaryId);
             null != e && s.push(e);
@@ -249,7 +249,7 @@ let k = new w(c.h, {
                 .reduce((e, t) => {
                     let [n, l] = t,
                         i = o()
-                            .chain(l.map((e) => v(e, n)))
+                            .chain(l.map((e) => S(e, n)))
                             .sortBy((e) => y.default.extractTimestamp(e.startId))
                             .takeRight(75)
                             .reverse()
@@ -278,7 +278,7 @@ let k = new w(c.h, {
                 .chain(n)
                 .sortBy((e) => y.default.extractTimestamp(e.start_id))
                 .filter((e) => Object.keys(e).length > 0)
-                .map((e) => v(e, t))
+                .map((e) => S(e, t))
                 .reverse()
                 .value(),
             r = N[t] ?? [],

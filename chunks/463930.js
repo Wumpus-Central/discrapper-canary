@@ -28,12 +28,12 @@ function p(e) {
             displayInline: E = !1,
         } = e,
         I = i.useContext(c.C),
-        [y, v] = i.useState(!1),
-        S = i.useCallback(() => {
-            v(!0);
+        [y, S] = i.useState(!1),
+        v = i.useCallback(() => {
+            S(!0);
         }, []),
         N = i.useCallback(() => {
-            v(!1);
+            S(!1);
         }, []),
         _ = "username" === t,
         T = null != u && null != u.primaryColor && null != u.secondaryColor,
@@ -41,11 +41,11 @@ function p(e) {
         {
             gradientStyle: b,
             gradientClassname: R,
-            gradientGlowClassname: M,
+            gradientGlowClassname: O,
         } = (0, h.v5)({ colorStrings: u, roleStyle: "username", animateGradient: x || y || I?.animate }),
-        O = (0, h.CR)(n),
-        L = { className: r()(f.UU, g, C, { [f.Xh]: _, [R]: j }), children: O },
-        w = { className: r()(f.lD, M, C), children: n },
+        M = (0, h.CR)(n),
+        L = { className: r()(f.UU, g, C, { [f.Xh]: _, [R]: j }), children: M },
+        w = { className: r()(f.lD, O, C), children: n },
         k =
             "dot" === t
                 ? (0, l.jsx)(m.W, {
@@ -58,7 +58,7 @@ function p(e) {
                 : null;
     return (0, l.jsxs)("span", {
         className: r()(p, f.kL, { [f.mO]: E }),
-        onMouseEnter: S,
+        onMouseEnter: v,
         onMouseLeave: N,
         children: [
             "left" === d && k,

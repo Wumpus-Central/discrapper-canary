@@ -32,8 +32,8 @@ var I = n(400492),
     S = n(351906),
     N = n(287809),
     C = n(174459),
-    R = n(486020),
-    O = n(562153),
+    O = n(486020),
+    R = n(562153),
     L = n(723702),
     y = n(19575),
     D = n(652215);
@@ -270,11 +270,11 @@ async function Z(e, t, n, i, r) {
             null != n && (a.groupName = (0, d.m1)(n, N.default, g.A));
             let i = n?.getGuildId();
             (a.senderIdentifier = t.id),
-                (a.senderDisplayName = O.Ay.getName(i, e, t)),
+                (a.senderDisplayName = R.Ay.getName(i, e, t)),
                 (a.senderAvatar = t.getAvatarURL(i, 128, !1, !1)),
                 null != r.emoji &&
                     E.getConfig({ location: "showNotification" }).enabled &&
-                    (a.emoji = r.emoji.map((e) => ({ url: (0, R._O)({ id: e.id, animated: !1, size: 96 }), ...e })));
+                    (a.emoji = r.emoji.map((e) => ({ url: (0, O._O)({ id: e.id, animated: !1, size: 96 }), ...e })));
         }
         try {
             let e =

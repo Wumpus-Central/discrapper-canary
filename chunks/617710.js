@@ -22,8 +22,8 @@ var i = n(435558),
     S = n(723702),
     N = n(175306),
     C = n(77729),
-    R = n(183636),
-    O = n(174459),
+    O = n(183636),
+    R = n(174459),
     L = n(209489),
     y = n(655404),
     D = n(812729),
@@ -197,12 +197,12 @@ let k = new d.A("ConnectionStore"),
 (F.handleIdentify = () => {
     let e = E.default.getToken();
     if ((k.verbose("handleIdentify called", { hasToken: null != e }), null == e)) return null;
-    let t = R.A.getState(),
+    let t = O.A.getState(),
         n = E.default.getInstallationForTracking();
     return {
         token: e,
         properties: {
-            ...O.default.getSuperProperties(),
+            ...R.default.getSuperProperties(),
             client_app_state: t,
             is_fast_connect: !1,
             gateway_connect_reasons: x.L7(),
@@ -276,7 +276,7 @@ function eC(e, t, n) {
         ? null
         : n(eS.guild);
 }
-function eR(e, t) {
+function eO(e, t) {
     let n = [];
     return (
         t?.forEach((t) => {
@@ -289,7 +289,7 @@ function eR(e, t) {
         n
     );
 }
-function eO(e) {
+function eR(e) {
     return "partial" !== e.data_mode
         ? {
               id: e.id,
@@ -651,11 +651,11 @@ ek(
                 let t = (e = en.A.hydrateReadySupplemental.measure(() =>
                     (function (e, t) {
                         let { guilds: n, merged_members: i, merged_presences: r, ...a } = e,
-                            s = eR(eN, r?.friends),
+                            s = eO(eN, r?.friends),
                             l =
                                 n?.map((e, t) => {
-                                    let n = eR(eN, r?.guilds[t]),
-                                        a = eR(eN, i?.[t]);
+                                    let n = eO(eN, r?.guilds[t]),
+                                        a = eO(eN, i?.[t]);
                                     return { ...e, unavailable: void 0 === e.voice_states, presences: n, members: a };
                                 }) ?? [],
                             o = eC(t, n, (e) => ({
@@ -763,9 +763,9 @@ ek(
                                           });
                                       let d =
                                               l?.map((e, t) =>
-                                                  !0 === e.unavailable ? e : ((e.members = eR(eN, s?.[t])), eO(e)),
+                                                  !0 === e.unavailable ? e : ((e.members = eO(eN, s?.[t])), eR(e)),
                                               ) ?? [],
-                                          c = eC(t, l, (e) => eO(e));
+                                          c = eC(t, l, (e) => eR(e));
                                       return (
                                           null != c && d.push(c),
                                           { ...o, users: i, presences: [], guilds: d, private_channels: a ?? [] }

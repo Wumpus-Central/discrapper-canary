@@ -21,7 +21,7 @@ let p = 10 + Math.random() * (10 * E.A.Millis.SECOND),
     m = null,
     g = !1;
 class S extends s.A {
-    actions = { POST_CONNECTION_OPEN: N, CONNECTION_RESUMED: N, CONNECTION_CLOSED: R, APP_STATE_UPDATE: C };
+    actions = { POST_CONNECTION_OPEN: N, CONNECTION_RESUMED: N, CONNECTION_CLOSED: O, APP_STATE_UPDATE: C };
     _initialize() {
         A.bW.beforeSendCallbacks.push({
             hasChanges: () => !1,
@@ -112,12 +112,12 @@ function N() {
     (g = !0), L(p, !0);
 }
 function C(e) {
-    g && "active" !== e.state && (clearTimeout(m), (m = null), O(!1));
+    g && "active" !== e.state && (clearTimeout(m), (m = null), R(!1));
 }
-function R() {
-    g && (clearTimeout(m), (m = null), O(!1));
+function O() {
+    g && (clearTimeout(m), (m = null), R(!1));
 }
-async function O(e) {
+async function R(e) {
     L(T, !1),
         !h.A.hasLoaded(f.oD.FRECENCY_AND_FAVORITES_SETTINGS) &&
             (u.A.hasPendingUsage() ||
@@ -132,6 +132,6 @@ async function O(e) {
         });
 }
 function L(e, t) {
-    null != m && clearTimeout(m), (m = setTimeout(() => O(t), e));
+    null != m && clearTimeout(m), (m = setTimeout(() => R(t), e));
 }
 let y = new S();

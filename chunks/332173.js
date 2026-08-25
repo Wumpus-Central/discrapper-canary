@@ -33,23 +33,23 @@ let h = function (e) {
             },
             [C, p],
         ),
-        v = i.useCallback(
+        S = i.useCallback(
             (e) => {
                 C(!1), g?.(e);
             },
             [C, g],
         ),
-        S = {};
+        v = {};
     return (
-        null != h && (S = { color: (0, a.Hl)(h), backgroundColor: A ? (0, a.gq)(h, 0.3) : (0, a.gq)(h, 0.1) }),
+        null != h && (v = { color: (0, a.Hl)(h), backgroundColor: A ? (0, a.gq)(h, 0.3) : (0, a.gq)(h, 0.1) }),
         (0, l.jsx)(u.D, {
             ...x,
             innerRef: t,
             tag: "span",
             className: r()(s, { [d.i]: !0, interactive: x.onClick }),
             onMouseEnter: y,
-            onMouseLeave: v,
-            style: S,
+            onMouseLeave: S,
+            style: v,
             tabIndex: null != x.onClick ? 0 : -1,
             children:
                 null != f

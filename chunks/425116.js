@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { $: () => A, A: () => R });
+n.d(t, { $: () => A, A: () => O });
 var i = n(228366),
     r = n(439372),
     a = n(803224),
@@ -104,4 +104,4 @@ class C extends r.A {
             (h = !1);
     }
 }
-let R = new C();
+let O = new C();

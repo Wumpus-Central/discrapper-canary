@@ -14,7 +14,7 @@ n.r(t),
         log: () => g,
         setOutOfProcessSupport: () => N,
         setPID: () => p,
-        supportsLegacy: () => R,
+        supportsLegacy: () => O,
         supportsOutOfProcess: () => C,
         validResolution: () => S,
     }),
@@ -60,7 +60,7 @@ function N(e) {
 function C() {
     return I;
 }
-function R() {
+function O() {
     let e = (0, l.isWindows)() && "arm64" === o.Ay.architecture;
     return s.O && !e && !(0, r.Zi)();
 }

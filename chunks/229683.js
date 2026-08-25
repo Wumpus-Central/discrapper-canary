@@ -22,13 +22,13 @@ var i = n(284009),
     S = n(375708),
     N = n(731854);
 let C = new d.A("GameConsoleManager");
-async function R(e) {
+async function O(e) {
     let t = _.A.getChannelId();
     r()(null == t, "Syncing to remote while in voice!"),
         e.selfMute !== u.Ay.isSelfMute() && (await l.A.toggleSelfMute({ syncRemote: !1 })),
         e.selfDeaf !== u.Ay.isSelfDeaf() && l.A.toggleSelfDeaf({ syncRemote: !1 });
 }
-class O extends o.A {
+class R extends o.A {
     rollbackCommandTimeout = new a.Ep();
     awaitRemoteTimeout = new a.Ep();
     actions = {
@@ -55,7 +55,7 @@ class O extends o.A {
         if (null == n) return null;
         this.awaitRemoteTimeout.stop(), (0, I.m9)(n.sessionId);
         let i = A.A.getVoiceStateForSession(c.default.getId(), n.sessionId);
-        null != i && R(i);
+        null != i && O(i);
     };
     handleAudioStateToggle = (e) => {
         let { syncRemote: t, context: n } = e;
@@ -70,7 +70,7 @@ class O extends o.A {
             ((l.selfDeaf !== i || l.selfMute !== r) &&
                 ((0, I.JS)(s, { selfDeaf: i, selfMute: r }),
                 this.rollbackCommandTimeout.start(3e3, () => {
-                    R(l);
+                    O(l);
                 })));
     };
     handleVoiceStateUpdates = (e) => {
@@ -89,7 +89,7 @@ class O extends o.A {
             let { sessionId: t } = e;
             return t === n;
         });
-        null != i && (this.rollbackCommandTimeout.stop(), R(i));
+        null != i && (this.rollbackCommandTimeout.stop(), O(i));
     };
     handleSessionsChanged = () => {
         let e = p.default.getRemoteSessionId();
@@ -186,4 +186,4 @@ class O extends o.A {
         this.awaitRemoteTimeout.stop();
     };
 }
-let L = new O();
+let L = new R();

@@ -11,8 +11,8 @@ var i = n(477900),
     h = n(51758),
     p = n(478752),
     m = n(141035),
-    f = n(175203),
-    A = n(426660),
+    A = n(175203),
+    f = n(426660),
     x = n(806931),
     g = n(375708),
     C = n(853325);
@@ -20,24 +20,24 @@ let y = function (e) {
     let { participants: t, channel: n, hasConnectPermission: y } = e,
         j = t.filter(x.Xw),
         I = (0, h.H)(n.guild_id),
-        N = l.useCallback(() => {
+        E = l.useCallback(() => {
             I ? (0, u.Ze)(n.guild_id, () => o.default.selectVoiceChannel(n.id)) : o.default.selectVoiceChannel(n.id);
         }, [n.id, n.guild_id, I]),
-        v = 4 === j.length ? 2 : 3,
-        E = (0, d.Ay)(n),
+        N = 4 === j.length ? 2 : 3,
+        v = (0, d.Ay)(n),
         b = (0, p.R)("ChannelCallEmpty");
     return (0, i.jsxs)("div", {
         className: C.kL,
         children: [
-            (0, i.jsx)(A.A, { disableAnimation: b }),
+            (0, i.jsx)(f.A, { disableAnimation: b }),
             (0, i.jsx)("div", {
                 className: C.os,
-                style: { maxWidth: 168 * v },
+                style: { maxWidth: 168 * N },
                 children: j
                     .slice(0, 5)
                     .map((e) =>
                         (0, i.jsx)(
-                            f.Ay,
+                            A.Ay,
                             {
                                 participant: e,
                                 channel: n,
@@ -51,7 +51,7 @@ let y = function (e) {
                         ),
                     ),
             }),
-            (0, i.jsx)(a.D, { className: C.HA, variant: "heading-xxl/semibold", children: E }),
+            (0, i.jsx)(a.D, { className: C.HA, variant: "heading-xxl/semibold", children: v }),
             (0, i.jsx)("div", {
                 className: C.Nu,
                 children: (0, i.jsx)(s.E, {
@@ -81,7 +81,7 @@ let y = function (e) {
                 children: (0, i.jsx)(r.$, {
                     variant: "overlay-primary",
                     text: y ? g.intl.string(g.t["96ANUN"]) : g.intl.string(g.t.TVBCKZ),
-                    onClick: N,
+                    onClick: E,
                     disabled: !y,
                 }),
             }),

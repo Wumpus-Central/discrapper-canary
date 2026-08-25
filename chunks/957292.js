@@ -22,13 +22,13 @@ var r = n(132500),
     S = n(174459),
     N = n(625494),
     C = n(723702),
-    R = n(240248),
-    O = n(17928);
+    O = n(240248),
+    R = n(17928);
 function L() {
     return { usageByApplicationId: {}, shelfOrder: [] };
 }
 let y = L();
-class D extends O.Ay.PersistedStore {
+class D extends R.Ay.PersistedStore {
     static displayName = "ActivityShelfStore";
     static persistKey = "ActivityShelfStore";
     initialize(e) {
@@ -238,9 +238,9 @@ function ec(e) {
         N = p.A.getChannel(I);
     if ((i && null != N && N.isPrivate() && n && null == _ && l.A.selectParticipant(N.id, null), null == _)) return;
     let C = T.A.getMediaSessionId(),
-        O = s.compositeInstanceId,
+        R = s.compositeInstanceId,
         L = null == C && N?.isVocal() === !0 && N?.isPrivate() === !1;
-    if (null == O || L) return;
+    if (null == R || L) return;
     let y = (0, r.A)(),
         D = "location" in s ? 2 : 1,
         b = g.default.getCurrentUser();
@@ -253,7 +253,7 @@ function ec(e) {
         F = A.A.getRawThermalState(),
         V = null != C ? [C] : [],
         B = {
-            activitySessionId: O,
+            activitySessionId: R,
             activityUserSessionId: y,
             launchId: s.launchId,
             mediaSessionIds: V,
@@ -261,12 +261,12 @@ function ec(e) {
         };
     et[t] = B;
     let H = en[t];
-    (0, R.uJ)(_.nonce) || _.nonce === H?.nonce || (H = void 0),
+    (0, O.uJ)(_.nonce) || _.nonce === H?.nonce || (H = void 0),
         S.default.track(ee.HAw.ACTIVITY_SESSION_JOINED, {
             channel_id: I,
             guild_id: m,
             media_session_id: V[0],
-            activity_session_id: O,
+            activity_session_id: R,
             application_id: t,
             location_stack: H?.locations,
             user_premium_tier: b.premiumType,
@@ -333,9 +333,9 @@ function eu(e) {
     };
     let N = M.Ay.getShelfActivities(s),
         C = v.getState().shelfOrder,
-        R = (0, P.A)({ applicationId: e, activityConfigs: N }),
-        O = 1 + C.findIndex((t) => t === e),
-        { releasePhase: L } = er(R),
+        O = (0, P.A)({ applicationId: e, activityConfigs: N }),
+        R = 1 + C.findIndex((t) => t === e),
+        { releasePhase: L } = er(O),
         y = A.A.getRawThermalState(),
         D = en[e];
     S.default.track(ee.HAw.ACTIVITY_SESSION_JOINED, {
@@ -350,8 +350,8 @@ function eu(e) {
         n_participants: null != h ? E.A.getUserParticipantCount(h.id) : null,
         is_activity_start: n,
         release_phase: L,
-        shelf_rank: R?.activity?.shelf_rank,
-        shelf_sorted_rank: O > 0 ? O : null,
+        shelf_rank: O?.activity?.shelf_rank,
+        shelf_sorted_rank: R > 0 ? R : null,
         activity_user_session_id: m,
         channel_type: h?.type,
         source: D?.source,
@@ -371,8 +371,8 @@ function eu(e) {
             activity_user_session_id: m,
             raw_thermal_state: y,
             is_activity_start: n,
-            shelf_rank: R?.activity?.shelf_rank,
-            shelf_sorted_rank: O > 0 ? O : null,
+            shelf_rank: O?.activity?.shelf_rank,
+            shelf_sorted_rank: R > 0 ? R : null,
             activities_infra_version: c,
             embedded_activity_location_kind: l,
         });

@@ -20,16 +20,16 @@ var l = n(477900),
     E = n(597184),
     I = n(105330),
     y = n(265431),
-    v = n(459016),
-    S = n(861382),
+    S = n(459016),
+    v = n(861382),
     N = n(355622),
     _ = n(820066),
     T = n(696451),
     j = n(576705),
     b = n(351906),
     R = n(287809),
-    M = n(31498),
-    O = n(887129),
+    O = n(31498),
+    M = n(887129),
     L = n(741918),
     w = n(267102),
     k = n(652215),
@@ -44,7 +44,7 @@ let V = i.forwardRef(function (e, t) {
         z = i.useRef(null),
         [Z, Y, q] = (function (e, t, n) {
             let { channel: l, type: s } = e,
-                [r, a] = i.useState(() => (0, M.Ur)()),
+                [r, a] = i.useState(() => (0, O.Ur)()),
                 u = (0, y.A)(),
                 c = (0, o.bG)([T.Ay, R.default], () => {
                     let e = R.default.getCurrentUser();
@@ -59,9 +59,9 @@ let V = i.forwardRef(function (e, t) {
                     }),
                     [l, s, c],
                 ),
-                { activeCommand: m, activeCommandOption: f } = (0, o.cf)([S.A], () => ({
-                    activeCommand: S.A.getActiveCommand(l.id),
-                    activeCommandOption: S.A.getActiveOption(l.id),
+                { activeCommand: m, activeCommandOption: f } = (0, o.cf)([v.A], () => ({
+                    activeCommand: v.A.getActiveCommand(l.id),
+                    activeCommandOption: v.A.getActiveOption(l.id),
                 })),
                 p = i.useMemo(
                     () =>
@@ -90,7 +90,7 @@ let V = i.forwardRef(function (e, t) {
                             u.setFocus(e.toString()), s?.(e);
                         }
                     }
-                    let u = (0, O.Ay)({
+                    let u = (0, M.Ay)({
                             id: t,
                             isEnabled: l.isVisible,
                             orientation: L.Gl.VERTICAL,
@@ -118,7 +118,7 @@ let V = i.forwardRef(function (e, t) {
                 x = e.editorRef.current?.getCurrentWord(),
                 A = e.editorRef.current?.getSlateEditor(),
                 C = null;
-            null != A && (C = _.VW.getSelectedParentOfType(A, M.mk)?.[0] ?? null);
+            null != A && (C = _.VW.getSelectedParentOfType(A, O.mk)?.[0] ?? null);
             let I = {
                     ...e,
                     navigator: g,
@@ -139,13 +139,13 @@ let V = i.forwardRef(function (e, t) {
                     currentWordIsAtStart: x?.isAtStart === !0,
                     optionText:
                         null != f
-                            ? (0, v.getString)(
+                            ? (0, S.getString)(
                                   { [f.name]: e.editorRef.current?.getCurrentCommandOptionValue() ?? [] },
                                   f.name,
                               )
                             : "",
                 },
-                [U] = i.useState(() => new M.Ay(I));
+                [U] = i.useState(() => new O.Ay(I));
             return (
                 i.useEffect(() => {
                     U.updateProps(I);

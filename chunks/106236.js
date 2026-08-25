@@ -104,8 +104,8 @@ class T extends r.PureComponent {
                 barStyles: S,
                 fillStyles: N,
                 mini: C,
-                hideBubble: R,
-                defaultValue: O,
+                hideBubble: O,
+                defaultValue: R,
                 orientation: L,
                 onValueRender: y,
                 renderMarker: D,
@@ -128,7 +128,7 @@ class T extends r.PureComponent {
                 null != a && null != r
                     ? a.map((e, t) => {
                           let n = r[t],
-                              a = null != O && O === n,
+                              a = null != R && R === n,
                               l = this.renderMark(n);
                           return (0, i.jsx)(
                               "div",
@@ -215,7 +215,7 @@ class T extends r.PureComponent {
                                     (0, i.jsx)("div", {
                                         className: I.track,
                                         children: (0, i.jsx)(E.m, {
-                                            __unsupportedReactNodeAsText: R || p ? null : j,
+                                            __unsupportedReactNodeAsText: O || p ? null : j,
                                             forceOpen: t || (n && h.Ay.keyboardModeEnabled),
                                             positionKey: B,
                                             children: (0, i.jsx)("div", {

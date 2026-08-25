@@ -19,8 +19,8 @@ let E = (0, l(945810).mj)({
 });
 var C = l(975732),
     h = l(318346),
-    f = l(70926),
-    S = l(287809),
+    S = l(70926),
+    f = l(287809),
     A = l(623655),
     g = l(13875),
     x = l(80151),
@@ -31,7 +31,7 @@ var C = l(975732),
     _ = l(980707),
     j = l(146919),
     G = l(375708);
-function T(e) {
+function R(e) {
     let { shops: t, onClose: l } = e,
         a = (0, j.yB)("CollectiblesGameShopsContextMenu");
     return (0, n.jsx)("div", {
@@ -58,7 +58,7 @@ function T(e) {
         }),
     });
 }
-var R = l(278416),
+var T = l(278416),
     v = l(758836);
 let k = [
     { tab: v.G2.OFFER_ELIGIBLE, labelKey: G.t.hY8Ft1 },
@@ -71,7 +71,7 @@ let k = [
     { tab: v.G2.CATALOG, labelKey: G.t.xFcotU },
 ];
 function F(e) {
-    return e === v.G2.OFFER_ELIGIBLE ? R.TagIcon : void 0;
+    return e === v.G2.OFFER_ELIGIBLE ? T.TagIcon : void 0;
 }
 function M(e) {
     let { canViewProfileFrames: t, collabsFilterEnabled: l, hasActivePromotion: n } = e;
@@ -132,7 +132,7 @@ function z(e) {
         p = (0, H.uM)(),
         E = (0, r.bG)([P.default], () => P.default.locale),
         C = a.useRef(null),
-        [h, f] = a.useState(!1);
+        [h, S] = a.useState(!1);
     a.useEffect(() => {
         let e = setTimeout(() => {
             d(b);
@@ -143,9 +143,9 @@ function z(e) {
             m(c);
         }, [c]),
         a.useEffect(() => {
-            f(s && i);
+            S(s && i);
         }, [s, i]);
-    let S = a.useCallback(
+    let f = a.useCallback(
             (e) => {
                 "Enter" === e.key && d(b);
             },
@@ -166,16 +166,16 @@ function z(e) {
             [l, p],
         ),
         g = a.useCallback(() => {
-            l !== v.G2.CATALOG && t(v.G2.CATALOG), A(v.uY.SEARCH_ICON), f(!0), setTimeout(() => C.current?.focus());
+            l !== v.G2.CATALOG && t(v.G2.CATALOG), A(v.uY.SEARCH_ICON), S(!0), setTimeout(() => C.current?.focus());
         }, [l, t, A]),
         x = a.useCallback(() => {
             l !== v.G2.CATALOG && t(v.G2.CATALOG), A(v.uY.SEARCH_BAR);
         }, [l, t, A]),
         O = a.useCallback(() => {
-            m(""), d(""), A(v.uY.SEARCH_BAR_CLEAR), s && f(!1);
+            m(""), d(""), A(v.uY.SEARCH_BAR_CLEAR), s && S(!1);
         }, [d, A, s]),
         y = a.useCallback(() => {
-            s && "" === b && f(!1);
+            s && "" === b && S(!1);
         }, [s, b]),
         _ = s && !h,
         j = (0, n.jsx)(o.D, {
@@ -183,23 +183,23 @@ function z(e) {
             onClick: g,
             children: (0, n.jsx)(B.MagnifyingGlassIcon, { size: "sm", color: u.A.colors.INTERACTIVE_ICON_DEFAULT }),
         }),
-        T = (0, n.jsx)($.I, {
+        R = (0, n.jsx)($.I, {
             size: "sm",
             ref: C,
-            onKeyDown: S,
+            onKeyDown: f,
             query: b,
             onChange: m,
             onClear: O,
             onBlur: y,
             placeholder: "en-US" === E ? G.intl.string(G.t.arz34K) : G.intl.string(G.t["hIt/Nm"]),
         }),
-        R = { "--custom-search-bar-width": `${v.rr}px`, "--custom-search-bar-icon-width": `${v.Dy}px` };
+        T = { "--custom-search-bar-width": `${v.rr}px`, "--custom-search-bar-icon-width": `${v.Dy}px` };
     return _
-        ? (0, n.jsx)("div", { style: R, children: j })
+        ? (0, n.jsx)("div", { style: T, children: j })
         : (0, n.jsx)("div", {
               className: I()(U.ON, { [U.Nz]: h }),
-              style: R,
-              children: (0, n.jsx)(o.D, { ignoreKeyPress: !0, onClick: x, children: T }),
+              style: T,
+              children: (0, n.jsx)(o.D, { ignoreKeyPress: !0, onClick: x, children: R }),
           });
 }
 var K = l(3666),
@@ -441,8 +441,8 @@ function ec(e) {
             null != t && c.current !== t && (i(t), (c.current = t));
         }, []);
     (0, d.g)(C, h);
-    let f = 0 !== o,
-        S = E.some((e) => ei(e.tab, e, l));
+    let S = 0 !== o,
+        f = E.some((e) => ei(e.tab, e, l));
     return (0, n.jsxs)("div", {
         className: I()(en.kL, t),
         ref: C,
@@ -473,11 +473,11 @@ function ec(e) {
                     ),
                     (0, n.jsx)("div", {
                         ref: m,
-                        children: (0, n.jsx)(eo, { tabs: E, onTabSelect: r, selectedTab: l, selected: S }),
+                        children: (0, n.jsx)(eo, { tabs: E, onTabSelect: r, selectedTab: l, selected: f }),
                     }),
                 ],
             }),
-            f &&
+            S &&
                 (0, n.jsxs)(W.V, {
                     type: "top",
                     look: "brand",
@@ -502,7 +502,7 @@ function ec(e) {
                             ),
                         ),
                         0 !== E.length
-                            ? (0, n.jsx)(eo, { tabs: E, onTabSelect: r, selectedTab: l, selected: S })
+                            ? (0, n.jsx)(eo, { tabs: E, onTabSelect: r, selectedTab: l, selected: f })
                             : null,
                     ],
                 }),
@@ -518,19 +518,19 @@ var eu = l(812729),
     eC = l(44724),
     eh = l(486020);
 l(801416);
-var ef = l(518477),
-    eS = l(632847),
+var eS = l(518477),
+    ef = l(632847),
     eA = l(835018);
 function eg(e) {
     let { selectedTab: t, handleTransition: l } = e,
-        O = (0, r.bG)([S.default], () => S.default.getCurrentUser()),
+        O = (0, r.bG)([f.default], () => f.default.getCurrentUser()),
         I = (function (e) {
             let { location: t } = e;
             return E.useConfig({ location: t }).enabled;
         })({ location: "collectibles_shop_header_bar" }),
         _ = (0, g.sk)("CollectiblesShopHeaderBar"),
         j = (0, A.z)("CollectiblesShopHeaderBar"),
-        R = null != (0, x.A)(),
+        T = null != (0, x.A)(),
         { searchQuery: k } = (0, L.v)(),
         B = a.useRef(null),
         [$, P] = a.useState(!1);
@@ -645,7 +645,7 @@ function eg(e) {
                         })({
                             canViewProfileFrames: _,
                             collabsFilterEnabled: j,
-                            hasActivePromotion: R,
+                            hasActivePromotion: T,
                             onTabSelect: l,
                             onClose: t,
                         });
@@ -662,7 +662,7 @@ function eg(e) {
                         submenuOnly: !0,
                         renderSubmenu: (e) => {
                             let { onClose: t } = e;
-                            return (0, n.jsx)(T, { shops: U, onClose: t });
+                            return (0, n.jsx)(R, { shops: U, onClose: t });
                         },
                         renderOverflowContent: (e) => {
                             let { onClose: t } = e;
@@ -689,19 +689,19 @@ function eg(e) {
                 q &&
                     e.push({
                         tab: v.G2.GAME_SERVERS,
-                        label: G.intl.string(eS.default.vCzwM7),
+                        label: G.intl.string(ef.default.vCzwM7),
                         trailingBadge: G.intl.string(G.t.oW0eUd),
                     }),
                 e
             );
-        }, [l, U, _, j, R, I, K, q]),
+        }, [l, U, _, j, T, I, K, q]),
         W = t === v.G2.ORBS ? D.liQ.SHOP_ORBS_TAB : D.liQ.COLLECTIBLES_SHOP,
         Y = a.useCallback(() => {
             (0, h.Y)({ pageType: W, sectionType: D.JJy.ORBS_BALANCE_MENU, ctaObject: D.ZSU.CTA_TO_QUEST_HOME }),
                 (0, p.mA)({ fromContent: s.u.ORBS_BALANCE_MENU });
         }, [W]),
         J = a.useCallback(() => {
-            O?.id != null && (0, C.openUserProfileModal)({ userId: O.id, tabSection: ef.RP.WISHLIST });
+            O?.id != null && (0, C.openUserProfileModal)({ userId: O.id, tabSection: eS.RP.WISHLIST });
         }, [O?.id]),
         Q = a.useCallback(
             (e) => {
@@ -723,9 +723,9 @@ function eg(e) {
                         "aria-label": G.intl.string(G.t["7lZ31J"]),
                         children: (0, n.jsx)(i.HeartIcon, { size: "xs", color: "currentColor" }),
                     }),
-                    (0, n.jsx)(f.SS, {
+                    (0, n.jsx)(S.SS, {
                         analyticsPage: W,
-                        cardAlignment: f.SS.CardAlignment.END,
+                        cardAlignment: S.SS.CardAlignment.END,
                         ctaText: G.intl.string(G.t.VC4Mq0),
                         ctaOnClick: Y,
                     }),

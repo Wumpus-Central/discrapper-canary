@@ -10,11 +10,11 @@ n.d(t, {
     Le: () => V,
     Lt: () => eN,
     MK: () => P,
-    OU: () => O,
-    OY: () => eO,
+    OU: () => R,
+    OY: () => eR,
     QE: () => y,
     TA: () => eo,
-    UE: () => eR,
+    UE: () => eO,
     YB: () => eE,
     ZE: () => X,
     Z_: () => Y,
@@ -40,7 +40,7 @@ n.d(t, {
     uL: () => C,
     wE: () => H,
     xR: () => z,
-    zy: () => R,
+    zy: () => O,
 }),
     n(938796);
 var i = n(435558),
@@ -123,13 +123,13 @@ let N = new Set([
         I.rbe.GUILD_FORUM,
         I.rbe.GUILD_MEDIA,
     ]);
-function R(e) {
+function O(e) {
     return C.has(e);
 }
 I.rbe.GUILD_TEXT, I.rbe.GUILD_ANNOUNCEMENT, I.rbe.GUILD_FORUM, I.rbe.GUILD_MEDIA;
-let O = new Set([I.rbe.GUILD_VOICE, I.rbe.GUILD_STAGE_VOICE]);
+let R = new Set([I.rbe.GUILD_VOICE, I.rbe.GUILD_STAGE_VOICE]);
 function L(e) {
-    return "SELECTABLE" !== e && O.has(e);
+    return "SELECTABLE" !== e && R.has(e);
 }
 function y(e) {
     var t;
@@ -1047,10 +1047,10 @@ let eC = {
     [I.rbe.GUILD_FORUM]: ep.fromServer,
     [I.rbe.GUILD_MEDIA]: ep.fromServer,
 };
-function eR(e, t) {
+function eO(e, t) {
     return (eC[e.type ?? I.rbe.GUILD_TEXT] ?? eA.fromServer)(e, t);
 }
-function eO(e) {
+function eR(e) {
     return eD(e);
 }
 let eL = {

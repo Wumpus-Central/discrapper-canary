@@ -7,7 +7,7 @@ n.d(t, {
     mk: () => C,
     uN: () => b,
     ro: () => g,
-    Fe: () => R,
+    Fe: () => O,
     c_: () => m,
     Tf: () => v,
     K7: () => y,
@@ -85,7 +85,7 @@ function S(e, t, n) {
     return Math.abs(e.valueOf() - t.valueOf()) < n;
 }
 function N(e, t, n) {
-    let i = O(e).locale(),
+    let i = R(e).locale(),
         s = `${i}:${t}:${n ?? d.PZ.getSetting()}`,
         l = I[s];
     return (
@@ -512,21 +512,21 @@ function C(e) {
         if (n) return N(e, "LT", i);
         t = "sameDay";
     } else t = l < 2 ? "nextDay" : "sameElse";
-    return N(e, a.calendar(t, O(e), s), i);
+    return N(e, a.calendar(t, R(e), s), i);
 }
-function R(e, t) {
+function O(e, t) {
     let n = r().localeData(),
         i = r()(),
         a = T(L(e), i.toDate());
     return 0 === a
         ? N(e, "LT", t)
         : -1 === a
-          ? N(e, n.calendar("lastDay", O(e), i), t)
+          ? N(e, n.calendar("lastDay", R(e), i), t)
           : a > -7
             ? N(e, "dddd", t)
             : N(e, "L", t);
 }
-function O(e) {
+function R(e) {
     return r().isMoment(e) ? e : r()(e);
 }
 function L(e) {

@@ -22,8 +22,8 @@ var i = n(477900),
     S = n(272812),
     N = n(461782),
     C = n(334463),
-    R = n(309010),
-    O = n(287809),
+    O = n(309010),
+    R = n(287809),
     L = n(795816),
     y = n(933958),
     D = n(851907),
@@ -49,7 +49,7 @@ function j(e) {
         W = (0, l.bG)([y.Ay], () => y.Ay.getActivityPanelMode()),
         Y = (0, h.h)(v),
         K = A?.launchId,
-        $ = (0, l.bG)([R.Ay], () => R.Ay.getChannelId() === t?.id),
+        $ = (0, l.bG)([O.Ay], () => O.Ay.getChannelId() === t?.id),
         { dockedRect: z, isHidden: Z } = (0, l.cf)([C.A], () => {
             let e = C.A.pipWindow;
             return { dockedRect: null != e ? C.A.getDockedRect(e.id) : null, isHidden: C.A.isEmbeddedActivityHidden() };
@@ -108,7 +108,7 @@ function j(e) {
     )
         return null;
     let eE = Array.from(A.userIds)
-            .map((e) => O.default.getUser(e))
+            .map((e) => R.default.getUser(e))
             .filter((e) => null != e),
         eA = (0, w.A)(A, t);
     return (0, i.jsx)(N.Ay, {

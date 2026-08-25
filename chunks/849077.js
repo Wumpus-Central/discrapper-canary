@@ -7,8 +7,8 @@ n.d(t, {
     Th: () => L,
     Ur: () => g,
     V$: () => f,
-    VA: () => O,
-    Ve: () => R,
+    VA: () => R,
+    Ve: () => O,
     XU: () => A,
     Yw: () => m,
     j5: () => T,
@@ -53,8 +53,8 @@ var g = (((i = {}).UNREAD = "UNREAD"), (i.TODAY = "TODAY"), (i.YESTERDAY = "YEST
         (a.BOOKMARK = "BOOKMARK"),
         a);
 let C = { UNREAD: E.t.sRUdB8, TODAY: E.t.F4jZQs, YESTERDAY: E.t.gnv4pE, OLDER: E.t.exrPZv };
-var R = (((s = {}).UNLOADED = "unloaded"), (s.LOADED = "loaded"), (s.LOADED_UNREAD = "loadedUnread"), s),
-    O =
+var O = (((s = {}).UNLOADED = "unloaded"), (s.LOADED = "loaded"), (s.LOADED_UNREAD = "loadedUnread"), s),
+    R =
         (((l = {}).AUTO_LOAD = "auto_load"),
         (l.ON_OPEN = "on_open"),
         (l.FILL_SCROLLER = "fill_scroller"),

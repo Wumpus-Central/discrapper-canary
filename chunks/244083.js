@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Ay: () => v, YL: () => E, oN: () => I });
+n.d(t, { Ay: () => S, YL: () => E, oN: () => I });
 var l,
     i,
     s = n(477900),
@@ -80,7 +80,7 @@ class y extends r.PureComponent {
         });
     }
 }
-class v extends r.PureComponent {
+class S extends r.PureComponent {
     static TextAlignments = E;
     static defaultProps = { textAlign: "left" };
     onClickComplete = (e) => {

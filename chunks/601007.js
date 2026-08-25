@@ -28,9 +28,9 @@ function C(e) {
             fullWidth: E = !0,
             stopPropagation: I = !1,
             onAction: y,
-            onClose: v,
+            onClose: S,
         } = e,
-        S = (0, m.A)(),
+        v = (0, m.A)(),
         N = s.useRef(null),
         [_, T] = s.useState(!1);
     if (
@@ -59,8 +59,8 @@ function C(e) {
             f.default.track(p.HAw.PLAY_CTA_CLICKED, { location_stack: t, distributor: n, game_id: l, level: i });
         })({ analyticsLocations: l, distributor: t, gameId: n, level: s }),
             y?.({ action: i }),
-            v?.(),
-            S(e);
+            S?.(),
+            v(e);
     }
     if (1 === t.length) {
         let { ctaConfig: e, skuId: n } = t[0];

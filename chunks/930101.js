@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { H: () => v, X: () => S });
+n.d(t, { H: () => S, X: () => v });
 var l = n(477900),
     i = n(582128),
     s = n(503698),
@@ -20,7 +20,7 @@ var l = n(477900),
     E = n(202541),
     I = n(375708),
     y = n(17508);
-function v(e) {
+function S(e) {
     let {
             node: t,
             tooltipPosition: n = g.Uk.position,
@@ -43,7 +43,7 @@ function v(e) {
             messageId: m,
         });
     }
-    function v(e) {
+    function S(e) {
         return (0, l.jsx)(o.u, {
             asset: E("jumbo"),
             title: t.name ?? "",
@@ -81,33 +81,33 @@ function v(e) {
               },
               renderPopout: (e) => (0, l.jsx)(p.MV, { ...e, node: t }),
               targetElementRef: f,
-              children: v,
+              children: S,
           })
-        : v();
+        : S();
 }
-let S = (e) => {
+let v = (e) => {
     let {
             node: t,
             tooltipPosition: n = g.Uk.position,
             enableClick: s = !0,
             focusable: h = !0,
             channelId: E,
-            messageId: v,
+            messageId: S,
         } = e,
-        S = (0, x.n)(),
+        v = (0, x.n)(),
         [_, T] = i.useState(String(Date.now())),
         [j, b] = i.useState(!1),
-        [R, M] = i.useState(!1),
-        O = i.useRef(null);
+        [R, O] = i.useState(!1),
+        M = i.useRef(null);
     function L(e) {
         return (0, l.jsx)(d.A, {
             emojiName: t.name,
             size: e ?? (t.jumboable ? "jumbo" : "default"),
             emojiId: t.emojiId,
             animated: t.animated,
-            isInteracting: S,
+            isInteracting: v,
             channelId: E,
-            messageId: v,
+            messageId: S,
         });
     }
     let w = (0, a.A)();
@@ -128,13 +128,13 @@ let S = (e) => {
             },
             children: (0, l.jsx)(u.D, {
                 ...e,
-                innerRef: O,
+                innerRef: M,
                 onMouseEnter: () => {
                     e?.onMouseEnter?.();
                 },
                 onClick: s
                     ? (t) => {
-                          b(!1), M(!0), e?.onClick?.(t);
+                          b(!1), O(!0), e?.onClick?.(t);
                       }
                     : void 0,
                 onMouseLeave: () => {
@@ -153,7 +153,7 @@ let S = (e) => {
               scrollBehavior: "close",
               align: "center",
               onRequestClose: () => {
-                  f.default.track(A.HAw.CLOSE_POPOUT, { nonce: w }), b(!1), M(!1);
+                  f.default.track(A.HAw.CLOSE_POPOUT, { nonce: w }), b(!1), O(!1);
               },
               autoInvert: !0,
               nudgeAlignIntoViewport: !0,
@@ -162,7 +162,7 @@ let S = (e) => {
                   return (0, l.jsx)(p.iP, { ...e, node: t, refreshPositionKey: () => T(String(Date.now())), nonce: w });
               },
               positionKey: _,
-              targetElementRef: O,
+              targetElementRef: M,
               children: k,
           })
         : k();

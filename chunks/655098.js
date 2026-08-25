@@ -20,16 +20,16 @@ var l = n(477900),
     E = n(17928),
     I = n(866665),
     y = n(778712),
-    v = n(939249),
-    S = n(545442),
+    S = n(939249),
+    v = n(545442),
     N = n(922016),
     _ = n(565645),
     T = n(730134),
     j = n(775602),
     b = n(47167),
     R = n(442247),
-    M = n(569926),
-    O = n(106191),
+    O = n(569926),
+    M = n(106191),
     L = n(545868),
     w = n(376943),
     k = n(465365),
@@ -93,7 +93,7 @@ function et(e) {
             position: "top",
             "aria-label": q.Ay.getUserTag(s, { decoration: "never" }),
             asContainer: !0,
-            children: (0, l.jsx)(v.D, { tag: "span", children: o }),
+            children: (0, l.jsx)(S.D, { tag: "span", children: o }),
         });
     }
     return o;
@@ -117,7 +117,7 @@ function en(e) {
                   roleColors: h ? o : null,
                   ...e,
                   children: [
-                      d && (0, l.jsx)(S.W, { color: r.colorString, colors: o, background: !1, tooltip: !1 }),
+                      d && (0, l.jsx)(v.W, { color: r.colorString, colors: o, background: !1, tooltip: !1 }),
                       "@",
                       r.name,
                   ],
@@ -167,9 +167,9 @@ function ea(e) {
     let { id: t } = e,
         n = (0, R.K)(t),
         i = null != n;
-    return ((0, M.I)(i ? void 0 : t), i)
+    return ((0, O.I)(i ? void 0 : t), i)
         ? (0, l.jsxs)(U.A, {
-              children: [(0, l.jsx)(O.A, { game: { id: t, icon: n.gameIcon }, iconClassName: $.Kk }), n.gameName],
+              children: [(0, l.jsx)(M.A, { game: { id: t, icon: n.gameIcon }, iconClassName: $.Kk }), n.gameName],
           })
         : (0, l.jsxs)("span", { children: ["@", J.intl.string(J.t["11pdXZ"])] });
 }

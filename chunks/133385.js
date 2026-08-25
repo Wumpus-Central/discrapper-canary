@@ -1,45 +1,45 @@
-n.d(t, { Zt: () => eA, yo: () => e_ });
+n.d(t, { Zt: () => eO, yo: () => em });
 var i,
     l,
     r,
-    s = n(477900),
-    a = n(582128),
-    o = n(365199),
-    c = n(922016),
-    u = n(980707),
-    d = n(477782),
+    o = n(477900),
+    s = n(582128),
+    a = n(365199),
+    u = n(922016),
+    d = n(980707),
+    c = n(477782),
     E = n(793574),
     f = n(688810);
-let m = (0, n(945810).mj)({
+let R = (0, n(945810).mj)({
     name: "2026-07-shop-this-look",
     kind: "user",
     defaultConfig: { shopThisLookEnabled: !1 },
     variations: { 0: { shopThisLookEnabled: !1 }, 1: { shopThisLookEnabled: !0 } },
 });
-function x(e) {
-    return m.useConfig({ location: e }).shopThisLookEnabled;
+function p(e) {
+    return R.useConfig({ location: e }).shopThisLookEnabled;
 }
-var R = n(17928),
+var I = n(17928),
     g = n(540737),
-    p = n(999291),
-    I = n(287809),
-    A = n(259464),
-    _ = n(449582);
+    A = n(999291),
+    _ = n(287809),
+    O = n(259464),
+    m = n(449582);
 function h(e, t) {
-    let n = (0, R.bG)([I.default], () => I.default.getUser(e), [e]),
-        i = (0, p.Ay)(e, t),
-        l = (0, A.Z)(n, t),
-        r = (0, _.r)({ user: n, guildId: t }),
-        s = l?.skuId,
-        o = r?.skuId,
-        c = i?.profileEffect?.skuId,
-        u = i?.profileFrame?.skuId;
-    return a.useMemo(() => [s, o, c, u].filter((e) => null != e), [s, o, c, u]);
+    let n = (0, I.bG)([_.default], () => _.default.getUser(e), [e]),
+        i = (0, A.Ay)(e, t),
+        l = (0, O.Z)(n, t),
+        r = (0, m.r)({ user: n, guildId: t }),
+        o = l?.skuId,
+        a = r?.skuId,
+        u = i?.profileEffect?.skuId,
+        d = i?.profileFrame?.skuId;
+    return s.useMemo(() => [o, a, u, d].filter((e) => null != e), [o, a, u, d]);
 }
-var N = n(575593),
-    v = n(174459),
-    O = n(652215),
-    b =
+var b = n(575593),
+    x = n(174459),
+    N = n(652215),
+    T =
         (((i = {}).MENU_VIEWED = "menu_viewed"),
         (i.COACHMARK_VIEWED = "coachmark_viewed"),
         (i.COACHMARK_CTA_CLICKED = "coachmark_cta_clicked"),
@@ -47,24 +47,24 @@ var N = n(575593),
         (i.RED_DOT_VIEWED = "red_dot_viewed"),
         (i.RED_DOT_DISMISSED = "red_dot_dismissed"),
         i),
-    j = (((l = {}).ROW_VIEWED = "row_viewed"), (l.ROW_CLICKED = "row_clicked"), l);
-function C(e, t) {
-    v.default.track(O.HAw.SHOP_THIS_LOOK_MENU_ACTION, { action: e, source: t ?? void 0 });
+    v = (((l = {}).ROW_VIEWED = "row_viewed"), (l.ROW_CLICKED = "row_clicked"), l);
+function S(e, t) {
+    x.default.track(N.HAw.SHOP_THIS_LOOK_MENU_ACTION, { action: e, source: t ?? void 0 });
 }
-function T(e) {
+function C(e) {
     let { action: t, skuId: n, productType: i, isDisabled: l, source: r } = e;
-    v.default.track(O.HAw.SHOP_THIS_LOOK_ROW_ACTION, {
+    x.default.track(N.HAw.SHOP_THIS_LOOK_ROW_ACTION, {
         action: t,
         sku_id: n,
         product_type: (function (e) {
             switch (e) {
-                case N.R.PROFILE_FRAME:
+                case b.R.PROFILE_FRAME:
                     return "profile_frame";
-                case N.R.PROFILE_EFFECT:
+                case b.R.PROFILE_EFFECT:
                     return "profile_effect";
-                case N.R.AVATAR_DECORATION:
+                case b.R.AVATAR_DECORATION:
                     return "avatar_decoration";
-                case N.R.NAMEPLATE:
+                case b.R.NAMEPLATE:
                     return "nameplate";
                 default:
                     return;
@@ -74,52 +74,52 @@ function T(e) {
         source: r ?? void 0,
     });
 }
-var S = n(554146),
-    M = n(131607);
-function P(e, t, n) {
+var M = n(554146),
+    D = n(131607);
+function j(e, t, n) {
     let i = h(e, t).length > 0,
-        [l, r] = (0, M.kn)(n && i ? [S.M.SHOP_THIS_LOOK_WEB_MARKETING] : [], void 0, !0);
+        [l, r] = (0, D.kn)(n && i ? [M.M.SHOP_THIS_LOOK_WEB_MARKETING] : [], void 0, !0);
     return { isVisible: null != l, markAsDismissed: r };
 }
-var k = n(43105),
-    D = n(49999),
-    y = n(996988),
-    U = n(375708),
-    L = n(227143);
+var P = n(43105),
+    k = n(49999),
+    U = n(996988),
+    L = n(375708),
+    y = n(227143);
 function G(e) {
-    let { user: t, guildId: n, shouldShow: i, isMenuOpen: l, targetElementRef: r, onClick: o } = e,
-        c = x("UserProfileMarketing"),
-        { isVisible: u, markAsDismissed: d } = P(t.id, n, i && c);
-    return (a.useEffect(() => {
-        if (u)
+    let { user: t, guildId: n, shouldShow: i, isMenuOpen: l, targetElementRef: r, onClick: a } = e,
+        u = p("UserProfileMarketing"),
+        { isVisible: d, markAsDismissed: c } = j(t.id, n, i && u);
+    return (s.useEffect(() => {
+        if (d)
             return () => {
-                C(b.COACHMARK_DISMISSED, y.d.POPOUT), d(D.i.AUTO_DISMISS);
+                S(T.COACHMARK_DISMISSED, U.d.POPOUT), c(k.i.AUTO_DISMISS);
             };
-    }, [u, d]),
-    a.useEffect(() => {
-        i && u && C(b.COACHMARK_VIEWED, y.d.POPOUT);
-    }, [i, u]),
-    a.useEffect(() => {
-        i && u && l && d(D.i.TAKE_ACTION);
-    }, [i, u, l, d]),
-    u)
-        ? (0, s.jsx)(k.A, {
+    }, [d, c]),
+    s.useEffect(() => {
+        i && d && S(T.COACHMARK_VIEWED, U.d.POPOUT);
+    }, [i, d]),
+    s.useEffect(() => {
+        i && d && l && c(k.i.TAKE_ACTION);
+    }, [i, d, l, c]),
+    d)
+        ? (0, o.jsx)(P.A, {
               badge: "beta",
-              graphic: { type: "image", src: L.A },
-              title: U.intl.string(U.t.TrOccu),
-              body: U.intl.string(U.t["Eh5+1F"]),
+              graphic: { type: "image", src: y.A },
+              title: L.intl.string(L.t.TrOccu),
+              body: L.intl.string(L.t["Eh5+1F"]),
               position: "right",
               alignmentStrategy: "edge",
               align: "top",
               caretConfig: { align: "start" },
               targetElementRef: r,
-              onRequestClose: () => d(D.i.USER_DISMISS),
+              onRequestClose: () => c(k.i.USER_DISMISS),
               actions: [
                   {
-                      text: U.intl.string(U.t["bqZVd/"]),
+                      text: L.intl.string(L.t["bqZVd/"]),
                       variant: "primary",
                       onClick: () => {
-                          C(b.COACHMARK_CTA_CLICKED, y.d.POPOUT), d(D.i.TAKE_ACTION), o();
+                          S(T.COACHMARK_CTA_CLICKED, U.d.POPOUT), c(k.i.TAKE_ACTION), a();
                       },
                   },
               ],
@@ -139,29 +139,29 @@ var F = n(821925),
     K = n(38405),
     H = n(503698),
     q = n.n(H),
-    Q = n(834730),
-    B = n(650959),
-    Y = n(623373),
-    X = n(536572),
-    z = n(14702),
-    $ = n(728500);
-function Z() {
-    return (0, s.jsxs)("div", {
-        className: $.nM,
+    B = n(834730),
+    Q = n(650959),
+    X = n(623373),
+    $ = n(536572),
+    Y = n(14702),
+    z = n(728500);
+function J() {
+    return (0, o.jsxs)("div", {
+        className: z.nM,
         "aria-hidden": !0,
         children: [
-            (0, s.jsx)("div", { className: $.VH, children: (0, s.jsx)("div", { className: $.Qc }) }),
-            (0, s.jsxs)("div", {
-                className: q()($.Qq, $.Um),
-                children: [(0, s.jsx)("div", { className: $.Iz }), (0, s.jsx)("div", { className: $.wS })],
+            (0, o.jsx)("div", { className: z.VH, children: (0, o.jsx)("div", { className: z.Qc }) }),
+            (0, o.jsxs)("div", {
+                className: q()(z.Qq, z.Um),
+                children: [(0, o.jsx)("div", { className: z.Iz }), (0, o.jsx)("div", { className: z.wS })],
             }),
         ],
     });
 }
-function J(e) {
+function Z(e) {
     let { skuId: t, disabled: n = !1, source: i } = e,
-        { product: l, state: r } = (0, B.I)(t, { needsCategory: !1, shouldFetchProduct: !1 }),
-        o = (0, R.bG)(
+        { product: l, state: r } = (0, Q.I)(t, { needsCategory: !1, shouldFetchProduct: !1 }),
+        a = (0, I.bG)(
             [F.A],
             () =>
                 F.A.getProductsForSku(t)
@@ -169,45 +169,45 @@ function J(e) {
                     .find((e) => e.id === t),
             [t],
         ),
-        c = a.useRef(!1);
+        u = s.useRef(!1);
     if (
-        (a.useEffect(() => {
+        (s.useEffect(() => {
             null == l ||
-                c.current ||
-                ((c.current = !0),
-                T({ action: j.ROW_VIEWED, skuId: t, productType: (0, Y.YW)(l) ?? void 0, isDisabled: n, source: i }));
+                u.current ||
+                ((u.current = !0),
+                C({ action: v.ROW_VIEWED, skuId: t, productType: (0, X.YW)(l) ?? void 0, isDisabled: n, source: i }));
         }, [l, t, n, i]),
         "loading" === r)
     )
-        return (0, s.jsx)(Z, {});
+        return (0, o.jsx)(J, {});
     if (null == l) return null;
-    let u = (0, Y.YW)(l),
-        d =
-            null != u
+    let d = (0, X.YW)(l),
+        c =
+            null != d
                 ? (function (e) {
                       switch (e) {
-                          case N.R.AVATAR_DECORATION:
-                              return U.intl.string(U.t["7v0T9P"]);
-                          case N.R.PROFILE_EFFECT:
-                              return U.intl.string(U.t.wR5wOo);
-                          case N.R.NAMEPLATE:
-                              return U.intl.string(U.t.x5CoXR);
-                          case N.R.PROFILE_FRAME:
-                              return U.intl.string(U.t.GWrZOd);
+                          case b.R.AVATAR_DECORATION:
+                              return L.intl.string(L.t["7v0T9P"]);
+                          case b.R.PROFILE_EFFECT:
+                              return L.intl.string(L.t.wR5wOo);
+                          case b.R.NAMEPLATE:
+                              return L.intl.string(L.t.x5CoXR);
+                          case b.R.PROFILE_FRAME:
+                              return L.intl.string(L.t.GWrZOd);
                           default:
                               return;
                       }
-                  })(u)
+                  })(d)
                 : void 0;
-    return (0, s.jsxs)("div", {
-        className: q()($.nM, { [$.r9]: n }),
+    return (0, o.jsxs)("div", {
+        className: q()(z.nM, { [z.r9]: n }),
         children: [
-            (0, s.jsx)("div", { className: $.VH, children: (0, s.jsx)(z.O, { product: l, sku: o }) }),
-            (0, s.jsxs)("div", {
-                className: $.Qq,
+            (0, o.jsx)("div", { className: z.VH, children: (0, o.jsx)(Y.O, { product: l, sku: a }) }),
+            (0, o.jsxs)("div", {
+                className: z.Qq,
                 children: [
-                    (0, s.jsx)(Q.E, { variant: "text-sm/medium", color: "text-default", children: (0, X.VG)(l) }),
-                    null != d && (0, s.jsx)(Q.E, { variant: "text-xs/normal", color: "text-subtle", children: d }),
+                    (0, o.jsx)(B.E, { variant: "text-sm/medium", color: "text-default", children: (0, $.VG)(l) }),
+                    null != c && (0, o.jsx)(B.E, { variant: "text-xs/normal", color: "text-subtle", children: c }),
                 ],
             }),
         ],
@@ -229,12 +229,12 @@ var et = n(239211),
     ei = n.n(en),
     el = n(50268),
     er = n(486503),
-    es = n(885386),
-    ea = n(957565),
-    eo = n(399476),
-    ec = n(889460),
-    eu = n(865116),
-    ed = n(928658);
+    eo = n(885386),
+    es = n(957565),
+    ea = n(399476),
+    eu = n(889460),
+    ed = n(865116),
+    ec = n(928658);
 let eE = (0, n(600975).C)({
     kind: "user",
     id: "2023-09_iar_user_reporting",
@@ -243,153 +243,153 @@ let eE = (0, n(600975).C)({
     treatments: [{ id: 1, label: "Enabled", config: { enabled: !0 } }],
 });
 var ef = n(183555),
-    em = n(254384),
-    ex = n(939496),
-    eR = n(993401),
+    eR = n(254384),
+    ep = n(939496),
+    eI = n(993401),
     eg = n(518477),
-    ep = n(719687);
-function eI(e) {
+    eA = n(719687);
+function e_(e) {
     var t;
     let n,
         {
             user: i,
             guildId: l,
             viewProfileItem: r,
-            appContext: m,
-            popoutTargetRef: A,
-            shouldShow: _,
-            onRequestOpen: N,
-            onRequestClose: v,
-            children: S,
+            appContext: R,
+            popoutTargetRef: O,
+            shouldShow: m,
+            onRequestOpen: b,
+            onRequestClose: x,
+            children: M,
         } = e,
-        { themeType: M } = (0, ex.E)(),
-        { trackUserProfileAction: P } = (0, ef.NJ)(),
-        { analyticsLocations: k, newestAnalyticsLocation: D } = (0, f.Ay)(E.A.USER_PROFILE_OVERFLOW_MENU),
-        y = x("UserProfileOverflowMenuButton");
+        { themeType: D } = (0, ep.E)(),
+        { trackUserProfileAction: j } = (0, ef.NJ)(),
+        { analyticsLocations: P, newestAnalyticsLocation: k } = (0, f.Ay)(E.A.USER_PROFILE_OVERFLOW_MENU),
+        U = p("UserProfileOverflowMenuButton");
     (t = i.id),
         (n = h(t, l)),
-        a.useEffect(() => {
-            y && 0 !== n.length && (0, g.tu)({ skuIds: n });
-        }, [y, n]);
-    let L = {
+        s.useEffect(() => {
+            U && 0 !== n.length && (0, g.tu)({ skuIds: n });
+        }, [U, n]);
+    let y = {
             action: eg.pt.PRESS_OPTIONS,
-            icon: o.MoreHorizontalIcon,
-            tooltipText: U.intl.string(U.t["UKOtz+"]),
-            "aria-label": U.intl.string(U.t["UKOtz+"]),
+            icon: a.MoreHorizontalIcon,
+            tooltipText: L.intl.string(L.t["UKOtz+"]),
+            "aria-label": L.intl.string(L.t["UKOtz+"]),
         },
-        G = (0, ec.A)({
+        G = (0, eu.A)({
             user: i,
             guildId: l,
-            onAction: () => P({ action: "PRESS_INVITE_TO_SERVER", analyticsLocations: k }),
+            onAction: () => j({ action: "PRESS_INVITE_TO_SERVER", analyticsLocations: P }),
         }),
         H = (0, et.A)({
             user: i,
             guildId: l,
-            location: D,
-            appContext: m,
-            onBlock: () => P({ action: "BLOCK", analyticsLocations: k }),
-            onIgnore: () => P({ action: "IGNORE", analyticsLocations: k }),
-            onUnblock: () => P({ action: "UNBLOCK", analyticsLocations: k }),
+            location: k,
+            appContext: R,
+            onBlock: () => j({ action: "BLOCK", analyticsLocations: P }),
+            onIgnore: () => j({ action: "IGNORE", analyticsLocations: P }),
+            onUnblock: () => j({ action: "UNBLOCK", analyticsLocations: P }),
         }),
-        q = (0, eo.A)({
+        q = (0, ea.A)({
             user: i,
             guildId: l,
-            location: D,
-            appContext: m,
-            onBlock: () => P({ action: "BLOCK", analyticsLocations: k }),
-            onIgnore: () => P({ action: "IGNORE", analyticsLocations: k }),
-            onUnignore: () => P({ action: "UNIGNORE", analyticsLocations: k }),
+            location: k,
+            appContext: R,
+            onBlock: () => j({ action: "BLOCK", analyticsLocations: P }),
+            onIgnore: () => j({ action: "IGNORE", analyticsLocations: P }),
+            onUnignore: () => j({ action: "UNIGNORE", analyticsLocations: P }),
         }),
-        Q = (function (e) {
-            let { user: t, guildId: n, color: i, onAction: l, location: r = E.A.CONTEXT_MENU, appContext: a } = e,
-                o = eE.useExperiment({ location: r }, { autoTrackExposure: !0 }).enabled,
-                c = (0, R.bG)([w.default], () => w.default.getId() === t.id);
-            return !o || c || t.isNonUserBot()
+        B = (function (e) {
+            let { user: t, guildId: n, color: i, onAction: l, location: r = E.A.CONTEXT_MENU, appContext: s } = e,
+                a = eE.useExperiment({ location: r }, { autoTrackExposure: !0 }).enabled,
+                u = (0, I.bG)([w.default], () => w.default.getId() === t.id);
+            return !a || u || t.isNonUserBot()
                 ? null
-                : (0, s.jsx)(d.Dr, {
+                : (0, o.jsx)(c.Dr, {
                       id: "report-user",
                       color: i,
-                      label: U.intl.string(U.t.A1MM3D),
-                      action: () => (0, ed.NW)(t, n === O.ME ? void 0 : n, l, a),
+                      label: L.intl.string(L.t.A1MM3D),
+                      action: () => (0, ec.NW)(t, n === N.ME ? void 0 : n, l, s),
                   });
         })({
             user: i,
             guildId: l,
-            location: D,
-            appContext: m,
+            location: k,
+            appContext: R,
             color: "danger",
-            onAction: () => P({ action: "REPORT", analyticsLocations: k }),
+            onAction: () => j({ action: "REPORT", analyticsLocations: P }),
         }),
-        B = (function (e) {
+        Q = (function (e) {
             let { user: t, guildId: n, color: i, onAction: l, appContext: r } = e,
-                a = (0, R.bG)([eu.Ay], () => eu.Ay.get("iar_testing")),
-                o = (0, R.bG)([I.default], () => I.default.getCurrentUser());
-            return null != o && (t.id === o.id || t.isNonUserBot() || !o.isStaff() || !a)
+                s = (0, I.bG)([ed.Ay], () => ed.Ay.get("iar_testing")),
+                a = (0, I.bG)([_.default], () => _.default.getCurrentUser());
+            return null != a && (t.id === a.id || t.isNonUserBot() || !a.isStaff() || !s)
                 ? null
-                : (0, s.jsx)(d.Dr, {
+                : (0, o.jsx)(c.Dr, {
                       id: "staff-test-report-user",
                       color: i,
                       label: "[STAFF] Test Profile Report",
-                      action: () => (0, ed.RR)(t, n === O.ME ? void 0 : n, l, r),
+                      action: () => (0, ec.RR)(t, n === N.ME ? void 0 : n, l, r),
                   });
         })({
             user: i,
             guildId: l,
-            location: D,
-            appContext: m,
+            location: k,
+            appContext: R,
             color: "danger",
-            onAction: () => P({ action: "REPORT", analyticsLocations: k }),
+            onAction: () => j({ action: "REPORT", analyticsLocations: P }),
         }),
-        Y = (function (e) {
+        X = (function (e) {
             let { user: t, guildId: n, onSuccess: i } = e,
-                l = (0, p.Ay)(t.id, n ?? void 0),
-                r = es.Q_.useSetting(),
-                { tidaWebformEnabled: o } = er.A.useExperiment(
+                l = (0, A.Ay)(t.id, n ?? void 0),
+                r = eo.Q_.useSetting(),
+                { tidaWebformEnabled: a } = er.A.useExperiment(
                     { location: "useCopyUserInfoItem" },
                     { autoTrackExposure: !1 },
                 ),
-                c = (0, el.A)({ id: t.id, label: U.intl.string(U.t["/AXYnE"]), onSuccess: i }),
-                u = a.useMemo(() => (null == l ? null : l.getBannerURL({ canAnimate: !0, size: O.XAf })), [l]),
-                E = a.useCallback(() => {
-                    (0, ea.C)(t.id), i?.();
+                u = (0, el.A)({ id: t.id, label: L.intl.string(L.t["/AXYnE"]), onSuccess: i }),
+                d = s.useMemo(() => (null == l ? null : l.getBannerURL({ canAnimate: !0, size: N.XAf })), [l]),
+                E = s.useCallback(() => {
+                    (0, es.C)(t.id), i?.();
                 }, [t.id, i]),
-                f = a.useCallback(() => {
-                    let e = t.getAvatarURL(n, O.XAf, !0);
-                    ei()(null != e, "cannot copy null avatar URL"), (0, ea.C)(e), i?.();
+                f = s.useCallback(() => {
+                    let e = t.getAvatarURL(n, N.XAf, !0);
+                    ei()(null != e, "cannot copy null avatar URL"), (0, es.C)(e), i?.();
                 }, [t, n, i]),
-                m = a.useCallback(() => {
-                    ei()(null != u, "cannot copy null banner URL"), (0, ea.C)(u), i?.();
-                }, [u, i]);
-            return !__OVERLAY__ && r && ea.p5 && null != t.id
-                ? o
-                    ? (0, s.jsxs)(d.Dr, {
+                R = s.useCallback(() => {
+                    ei()(null != d, "cannot copy null banner URL"), (0, es.C)(d), i?.();
+                }, [d, i]);
+            return !__OVERLAY__ && r && es.p5 && null != t.id
+                ? a
+                    ? (0, o.jsxs)(c.Dr, {
                           id: "copy-user-info",
-                          label: U.intl.string(U.t.QvQeLv),
+                          label: L.intl.string(L.t.QvQeLv),
                           children: [
-                              (0, s.jsx)(d.Dr, { id: "copy-user-id", label: U.intl.string(U.t["/AXYnE"]), action: E }),
+                              (0, o.jsx)(c.Dr, { id: "copy-user-id", label: L.intl.string(L.t["/AXYnE"]), action: E }),
                               (null != t.avatar || t.hasAvatarForGuild(n)) &&
-                                  (0, s.jsx)(d.Dr, {
+                                  (0, o.jsx)(c.Dr, {
                                       id: "copy-user-avatar-link",
-                                      label: U.intl.string(U.t.gERDvM),
+                                      label: L.intl.string(L.t.gERDvM),
                                       action: f,
                                   }),
-                              null != u &&
-                                  (0, s.jsx)(d.Dr, {
+                              null != d &&
+                                  (0, o.jsx)(c.Dr, {
                                       id: "copy-user-banner-link",
-                                      label: U.intl.string(U.t.hsNv0R),
-                                      action: m,
+                                      label: L.intl.string(L.t.hsNv0R),
+                                      action: R,
                                   }),
                           ],
                       })
-                    : c
+                    : u
                 : null;
-        })({ user: i, guildId: l, onSuccess: () => P({ action: "COPY_USER_ID", analyticsLocations: k }) }),
-        X = (function (e, t, n) {
-            let i = x("UserProfileOverflowMenu"),
-                l = (0, R.bG)([w.default], () => w.default.getId() === e.id),
+        })({ user: i, guildId: l, onSuccess: () => j({ action: "COPY_USER_ID", analyticsLocations: P }) }),
+        $ = (function (e, t, n) {
+            let i = p("UserProfileOverflowMenu"),
+                l = (0, I.bG)([w.default], () => w.default.getId() === e.id),
                 r = h(e.id, t),
-                { analyticsLocations: a } = (0, f.Ay)(E.A.USER_PROFILE_OVERFLOW_MENU),
-                o = (0, R.bG)(
+                { analyticsLocations: s } = (0, f.Ay)(E.A.USER_PROFILE_OVERFLOW_MENU),
+                a = (0, I.bG)(
                     [F.A],
                     () =>
                         r.map((e) => {
@@ -414,14 +414,14 @@ function eI(e) {
                 );
             return !i || l || 0 === r.length
                 ? null
-                : (0, s.jsx)(d.Dr, {
+                : (0, o.jsx)(c.Dr, {
                       id: "shop-this-look",
-                      label: U.intl.string(U.t.xNdRDO),
+                      label: L.intl.string(L.t.xNdRDO),
                       badge: "beta",
-                      children: o.map((e) => {
+                      children: a.map((e) => {
                           let { skuId: t, isShoppableItem: i, productType: l } = e;
-                          return (0, s.jsx)(
-                              d.Dr,
+                          return (0, o.jsx)(
+                              c.Dr,
                               {
                                   id: `shop-this-look-${t}`,
                                   navigable: i,
@@ -429,12 +429,12 @@ function eI(e) {
                                   keepItemStyles: i,
                                   render: (e) => {
                                       let { disabled: i } = e;
-                                      return (0, s.jsx)(J, { skuId: t, disabled: i, source: n });
+                                      return (0, o.jsx)(Z, { skuId: t, disabled: i, source: n });
                                   },
                                   action: i
                                       ? () => {
-                                            T({
-                                                action: j.ROW_CLICKED,
+                                            C({
+                                                action: v.ROW_CLICKED,
                                                 skuId: t,
                                                 productType: l,
                                                 isDisabled: !1,
@@ -442,7 +442,7 @@ function eI(e) {
                                             }),
                                                 (0, V.B)({
                                                     skuId: t,
-                                                    analyticsLocations: a,
+                                                    analyticsLocations: s,
                                                     analyticsSource: E.A.USER_PROFILE_OVERFLOW_MENU,
                                                 });
                                         }
@@ -452,75 +452,75 @@ function eI(e) {
                           );
                       }),
                   });
-        })(i, l, M),
-        z = [[r, X, (0, em.A)({ user: i, location: "UserProfileOverflowMenuButton" }), G], [q, H, Q, B], [Y]];
-    return z.every((e) => e.every((e) => null == e))
+        })(i, l, D),
+        Y = [[r, $, (0, eR.A)({ user: i, location: "UserProfileOverflowMenuButton" }), G], [q, H, B, Q], [X]];
+    return Y.every((e) => e.every((e) => null == e))
         ? null
-        : (0, s.jsx)(f.f5, {
-              value: k,
-              children: (0, s.jsx)(c.Y, {
-                  targetElementRef: A,
-                  shouldShow: _,
+        : (0, o.jsx)(f.f5, {
+              value: P,
+              children: (0, o.jsx)(u.Y, {
+                  targetElementRef: O,
+                  shouldShow: m,
                   onRequestOpen: () => {
-                      null != X && C(b.MENU_VIEWED, M), N?.();
+                      null != $ && S(T.MENU_VIEWED, D), b?.();
                   },
-                  onRequestClose: v,
+                  onRequestClose: x,
                   renderPopout: (e) => {
                       let { closePopout: t } = e;
-                      return (0, s.jsx)(u.W, {
+                      return (0, o.jsx)(d.W, {
                           "data-menu-migrated-auto": !0,
                           navId: "user-profile-overflow-menu",
                           onSelect: void 0,
                           onClose: t,
-                          "aria-label": U.intl.string(U.t.AXIHpV),
-                          children: z.map((e, t) => (0, s.jsx)(d.rX, { children: e.map((e) => e) }, t)),
+                          "aria-label": L.intl.string(L.t.AXIHpV),
+                          children: Y.map((e, t) => (0, o.jsx)(c.rX, { children: e.map((e) => e) }, t)),
                       });
                   },
-                  children: (e) => S({ ...e, ...L }),
+                  children: (e) => M({ ...e, ...y }),
               }),
           });
 }
-function eA(e) {
-    let t = a.useRef(null);
-    return (0, s.jsx)(eI, { ...e, popoutTargetRef: t, children: (e) => (0, s.jsx)(eR.q3, { buttonRef: t, ...e }) });
+function eO(e) {
+    let t = s.useRef(null);
+    return (0, o.jsx)(e_, { ...e, popoutTargetRef: t, children: (e) => (0, o.jsx)(eI.q3, { buttonRef: t, ...e }) });
 }
-function e_(e) {
-    let t = a.useRef(null),
-        { themeType: n } = (0, ex.E)(),
-        i = n === y.d.POPOUT,
-        l = n === y.d.SIDEBAR,
-        r = x("UserProfileMarketing"),
-        { isVisible: o, markAsDismissed: c } = P(e.user.id, e.guildId, l && r);
-    a.useEffect(() => {
-        o && C(b.RED_DOT_VIEWED, n);
-    }, [o, n]);
-    let [u, d] = a.useState(!1),
-        E = a.useCallback(() => {
-            d(!0), o && (C(b.RED_DOT_DISMISSED, n), c(D.i.TAKE_ACTION));
-        }, [o, c, n]);
-    return (0, s.jsxs)("div", {
-        className: ep.g2,
+function em(e) {
+    let t = s.useRef(null),
+        { themeType: n } = (0, ep.E)(),
+        i = n === U.d.POPOUT,
+        l = n === U.d.SIDEBAR,
+        r = p("UserProfileMarketing"),
+        { isVisible: a, markAsDismissed: u } = j(e.user.id, e.guildId, l && r);
+    s.useEffect(() => {
+        a && S(T.RED_DOT_VIEWED, n);
+    }, [a, n]);
+    let [d, c] = s.useState(!1),
+        E = s.useCallback(() => {
+            c(!0), a && (S(T.RED_DOT_DISMISSED, n), u(k.i.TAKE_ACTION));
+        }, [a, u, n]);
+    return (0, o.jsxs)("div", {
+        className: eA.g2,
         children: [
-            (0, s.jsx)("div", {
-                className: o ? ep.t8 : void 0,
-                children: (0, s.jsx)(eI, {
+            (0, o.jsx)("div", {
+                className: a ? eA.t8 : void 0,
+                children: (0, o.jsx)(e_, {
                     ...e,
                     popoutTargetRef: t,
-                    shouldShow: i ? u : void 0,
+                    shouldShow: i ? d : void 0,
                     onRequestOpen: E,
-                    onRequestClose: () => d(!1),
-                    children: (e) => (0, s.jsx)(eR.br, { buttonRef: t, ...e }),
+                    onRequestClose: () => c(!1),
+                    children: (e) => (0, o.jsx)(eI.br, { buttonRef: t, ...e }),
                 }),
             }),
-            o && (0, s.jsx)("div", { className: ep.Vx, "aria-hidden": !0 }),
-            (0, s.jsx)(G, {
+            a && (0, o.jsx)("div", { className: eA.Vx, "aria-hidden": !0 }),
+            (0, o.jsx)(G, {
                 user: e.user,
                 guildId: e.guildId,
                 shouldShow: i,
-                isMenuOpen: u,
+                isMenuOpen: d,
                 targetElementRef: t,
                 onClick: () => {
-                    C(b.MENU_VIEWED, n), d(!0);
+                    S(T.MENU_VIEWED, n), c(!0);
                 },
             }),
         ],

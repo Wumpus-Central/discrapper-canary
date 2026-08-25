@@ -1,4 +1,4 @@
-n.d(t, { A: () => f });
+n.d(t, { A: () => A });
 var i = n(477900),
     l = n(562708),
     a = n(442433),
@@ -18,17 +18,17 @@ function m(e, t, n) {
         properties: { location: n, is_tile_owner: e.user.id === i, tile_type: t },
     });
 }
-function f(e) {
+function A(e) {
     let {
             participant: t,
             event: l,
             minimalContextMenu: r,
             entrypoint: d,
-            channelId: f,
-            appContext: A,
+            channelId: A,
+            appContext: f,
             location: x,
         } = e,
-        g = u.A.getChannel(f);
+        g = u.A.getChannel(A);
     if (null != g && t.type !== p.lp.ACTIVITY && t.type !== p.lp.HIDDEN_STREAM)
         switch (t.type) {
             case p.lp.STREAM:
@@ -48,7 +48,7 @@ function f(e) {
                                     ...n,
                                     stream: t.stream,
                                     exitFullscreen: () => {},
-                                    appContext: A,
+                                    appContext: f,
                                     minimal: r,
                                     onInteraction: () =>
                                         (0, o.s)("StreamContextMenu", s.A.GUILD_ROOM, {
@@ -58,14 +58,14 @@ function f(e) {
                                         }),
                                 });
                         },
-                        { context: A },
+                        { context: f },
                     );
                 return;
             case p.lp.USER:
                 let C = h.default.getUser(t.id);
                 if (null == C) return;
                 if ((m(t, p.qs.USER, x), r))
-                    return (0, c.r)(l, t.user, g, { context: A }, (e, n) =>
+                    return (0, c.r)(l, t.user, g, { context: f }, (e, n) =>
                         (0, o.Y)({
                             menuItemProps: n,
                             menuName: e,
@@ -122,7 +122,7 @@ function f(e) {
                                     }),
                             });
                     },
-                    { context: A },
+                    { context: f },
                 );
         }
 }

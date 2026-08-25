@@ -1,115 +1,115 @@
-n.d(t, { A: () => b });
-var i = n(477900),
-    l = n(582128),
-    r = n(503698),
-    s = n.n(r),
-    a = n(834730),
-    o = n(821609),
-    c = n(688810),
-    u = n(429913),
-    d = n(769015),
-    E = n(390848),
-    f = n(39623),
-    m = n(17928),
-    x = n(885386),
-    R = n(994500),
-    g = n(22212),
-    p = n(375708),
-    I = n(266600);
-function A(e) {
-    let { userId: t, analyticsLocation: n } = e,
-        r = x.Zd.useSetting(),
-        s = (0, m.bG)([R.A], () => R.A.getNote(t)),
-        [c, u] = l.useState(!1),
-        d = l.useCallback(() => {
-            u(!0), (0, g.Yq)({ analyticsLocation: n, noteLength: s?.length ?? 0 });
-        }, [n, s]);
-    return r || null == s || "" === s
+s.d(e, { A: () => _ });
+var n = s(477900),
+    i = s(582128),
+    a = s(503698),
+    r = s.n(a),
+    l = s(834730),
+    o = s(821609),
+    c = s(688810),
+    d = s(429913),
+    m = s(769015),
+    x = s(390848),
+    u = s(39623),
+    E = s(17928),
+    j = s(885386),
+    v = s(994500),
+    h = s(22212),
+    g = s(375708),
+    A = s(266600);
+function N(t) {
+    let { userId: e, analyticsLocation: s } = t,
+        a = j.Zd.useSetting(),
+        r = (0, E.bG)([v.A], () => v.A.getNote(e)),
+        [c, d] = i.useState(!1),
+        m = i.useCallback(() => {
+            d(!0), (0, h.Yq)({ analyticsLocation: s, noteLength: r?.length ?? 0 });
+        }, [s, r]);
+    return a || null == r || "" === r
         ? null
-        : (0, i.jsxs)("div", {
-              className: I.kL,
+        : (0, n.jsxs)("div", {
+              className: A.kL,
               children: [
                   c
                       ? null
-                      : (0, i.jsx)("div", {
-                            className: I.p6,
-                            children: (0, i.jsx)(o.$, {
-                                icon: f.EyeIcon,
+                      : (0, n.jsx)("div", {
+                            className: A.p6,
+                            children: (0, n.jsx)(o.$, {
+                                icon: u.EyeIcon,
                                 variant: "secondary",
                                 size: "sm",
-                                onClick: d,
-                                text: p.intl.string(p.t.sB0q4C),
+                                onClick: m,
+                                text: g.intl.string(g.t.sB0q4C),
                             }),
                         }),
-                  (0, i.jsx)(a.E, {
-                      className: c ? void 0 : I.R,
-                      "aria-label": c ? s : "",
+                  (0, n.jsx)(l.E, {
+                      className: c ? void 0 : A.R,
+                      "aria-label": c ? r : "",
                       variant: "redesign/message-preview/normal",
-                      children: s,
+                      children: r,
                   }),
               ],
           });
 }
-var _ = n(562153),
-    h = n(183555),
-    N = n(939496),
-    v = n(996988),
-    O = n(216057);
-function b(e) {
-    let { user: t, guildId: n, channelId: r, applicationId: f, isGameRelationship: m = !1, className: x } = e,
-        { themeType: R } = (0, N.E)(),
-        g = R === v.d.MODAL_V2,
-        I = _.Ay.getName(n, r, t),
-        { trackUserProfileAction: b } = (0, h.NJ)(),
-        { newestAnalyticsLocation: j } = (0, c.Ay)(),
-        { acceptFriendRequest: C, cancelFriendRequest: T } = (0, E.I)({
-            userId: t.id,
-            applicationId: f,
-            isGameRelationship: m,
-            location: j,
+var p = s(562153),
+    C = s(183555),
+    y = s(939496),
+    I = s(996988),
+    f = s(216057);
+function _(t) {
+    let { user: e, guildId: s, channelId: a, applicationId: u, isGameRelationship: E = !1, className: j } = t,
+        { themeType: v } = (0, y.E)(),
+        h = v === I.d.MODAL_V2,
+        A = p.Ay.getName(s, a, e),
+        { trackUserProfileAction: _ } = (0, C.NJ)(),
+        { newestAnalyticsLocation: R } = (0, c.Ay)(),
+        { acceptFriendRequest: k, cancelFriendRequest: P } = (0, x.I)({
+            userId: e.id,
+            applicationId: u,
+            isGameRelationship: E,
+            location: R,
         }),
-        S = l.useCallback(() => {
-            C(), b({ action: m ? "ACCEPT_GAME_FRIEND_REQUEST" : "ACCEPT_FRIEND_REQUEST" });
-        }, [C, m, b]),
-        M = l.useCallback(() => {
-            T(), b({ action: m ? "IGNORE_GAME_FRIEND_REQUEST" : "IGNORE_FRIEND_REQUEST" });
-        }, [T, m, b]),
-        P = null != f,
-        k = (0, u.h)(f);
-    return P && null == k
+        b = i.useCallback(() => {
+            k(), _({ action: E ? "ACCEPT_GAME_FRIEND_REQUEST" : "ACCEPT_FRIEND_REQUEST" });
+        }, [k, E, _]),
+        S = i.useCallback(() => {
+            P(), _({ action: E ? "IGNORE_GAME_FRIEND_REQUEST" : "IGNORE_FRIEND_REQUEST" });
+        }, [P, E, _]),
+        L = null != u,
+        T = (0, d.h)(u);
+    return L && null == T
         ? null
-        : (0, i.jsxs)("div", {
-              className: s()(O.kL, x),
+        : (0, n.jsxs)("div", {
+              className: r()(f.kL, j),
               children: [
-                  P
-                      ? (0, i.jsx)(a.E, {
+                  L
+                      ? (0, n.jsx)(l.E, {
                             variant: "text-sm/normal",
-                            children: p.intl.format(m ? p.t.syHjLL : p.t.V15uUI, {
-                                username: I,
+                            children: g.intl.format(E ? g.t.syHjLL : g.t.V15uUI, {
+                                username: A,
                                 applicationIcon: () =>
-                                    (0, i.jsx)(d.A, { className: O.Gt, game: k, size: d.M.XXSMALL }, k?.id),
-                                applicationName: k?.name,
+                                    (0, n.jsx)(m.A, { className: f.Gt, game: T, size: m.M.XXSMALL }, T?.id),
+                                applicationName: T?.name,
                             }),
                         })
-                      : (0, i.jsx)(a.E, {
+                      : (0, n.jsx)(l.E, {
                             variant: "text-sm/normal",
-                            children: p.intl.format(p.t.uIomXw, { username: I }),
+                            children: g.intl.format(g.t.uIomXw, { username: A }),
                         }),
-                  (0, i.jsx)(A, { userId: t.id, analyticsLocation: "User Profile" }),
-                  (0, i.jsxs)("div", {
-                      className: O.UD,
+                  (0, n.jsx)(N, { userId: e.id, analyticsLocation: "User Profile" }),
+                  (0, n.jsxs)("div", {
+                      className: f.UD,
                       children: [
-                          (0, i.jsx)(o.$, {
-                              variant: g ? "secondary" : "primary",
+                          (0, n.jsx)(o.$, {
+                              variant: h ? "secondary" : "primary",
                               size: "sm",
-                              onClick: S,
-                              text: p.intl.string(p.t.Zcibdf),
+                              onClick: b,
+                              text: g.intl.string(g.t.Zcibdf),
                           }),
-                          (0, i.jsx)(o.$, {
+                          (0, n.jsx)(o.$, {
                               variant: "secondary",
                               size: "sm",
-                              onClick: M,
-                              text: p.intl.string(p.t.xuio0C),
+                              onClick: S,
+                              text: g.intl.string(g.t.xuio0C),
                           }),
                       ],
                   }),

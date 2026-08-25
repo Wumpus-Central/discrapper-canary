@@ -22,8 +22,8 @@ var i,
     S = n(157559),
     N = n(233545),
     C = n(894539),
-    R = n(124838);
-let O = (0, n(240921).Ay)({
+    O = n(124838);
+let R = (0, n(240921).Ay)({
     kind: "user",
     name: "2026-05-ios-video-stabilization",
     defaultConfig: { mode: "off" },
@@ -361,8 +361,8 @@ var eN =
     (r[(r.REPEATED_MLS_INVALID_MESSAGES = 4803)] = "REPEATED_MLS_INVALID_MESSAGES"),
     r);
 let eC = 20 * eg.A.Millis.SECOND,
-    eR = +eg.A.Millis.MINUTE,
-    eO = 5 * eg.A.Millis.SECOND;
+    eO = +eg.A.Millis.MINUTE,
+    eR = 5 * eg.A.Millis.SECOND;
 function eL(e) {
     return e.map((e) => ({
         name: e.name,
@@ -664,7 +664,7 @@ class eb extends p.A {
         null !== this.token &&
         null !== this.sessionId &&
         this.resumable &&
-        (null == this.lastHeartbeatAckTime || e - this.lastHeartbeatAckTime <= eR)
+        (null == this.lastHeartbeatAckTime || e - this.lastHeartbeatAckTime <= eO)
             ? (this.doResume(), (this.lastHeartbeatAckTime = e))
             : this.disconnect(!1, 4801, "Cannot resume connection.");
     }
@@ -689,7 +689,7 @@ class eb extends p.A {
             this.heartbeatInterval = e.heartbeat_interval * t;
         } else
             (this.heartbeatInterval = e.heartbeat_interval * this.heartbeatIntervalModifier),
-                es.isPlatformEmbedded || (this.heartbeatInterval = Math.min(eO, this.heartbeatInterval ?? NaN));
+                es.isPlatformEmbedded || (this.heartbeatInterval = Math.min(eR, this.heartbeatInterval ?? NaN));
         let t = (0, m.tB)() - this.connectionStartTime;
         this.logger.info(
             `[HELLO] heartbeat interval: ${this.heartbeatInterval ?? "??"}, version: ${this.serverVersion}, took ${t} ms`,
@@ -1757,8 +1757,8 @@ class e4 extends p.A {
                 qpSum: S,
                 pauseCount: N,
                 freezeCount: C,
-                totalPausesDuration: R,
-                totalFreezesDuration: O,
+                totalPausesDuration: O,
+                totalFreezesDuration: R,
                 totalFramesDuration: L,
                 totalDecodeTime: y,
                 keyframes: D,
@@ -1779,14 +1779,14 @@ class e4 extends p.A {
         return (
             e instanceof e2.ET
                 ? ((u.sender_freeze_count = C),
-                  (u.sender_total_freezes_duration = O),
+                  (u.sender_total_freezes_duration = R),
                   (u.sender_total_frames_duration = L),
                   (u.consecutive_static_color_frames_max = e.consecutiveStaticColorFramesMax))
                 : ((u.receiver_freeze_count = C),
-                  (u.receiver_total_freezes_duration = O),
+                  (u.receiver_total_freezes_duration = R),
                   (u.receiver_total_frames_duration = L),
                   (u.receiver_pause_count = N),
-                  (u.receiver_total_pauses_duration = R),
+                  (u.receiver_total_pauses_duration = O),
                   (u.total_decode_time_ms = y),
                   (u.frames_dropped_network = A),
                   (0, es.isWeb)() || (u.frames_dropped_render = E)),
@@ -3227,7 +3227,7 @@ class tu extends p.A {
         let t = [];
         this._recordingEnabled && t.push("connection_log"),
             Q.Ay.supports(B.O5.FIXED_KEYFRAME_INTERVAL) && t.push("fixed_keyframe_interval");
-        let { enabled: n, dontEmitVolumeOnlySpeakingEvents: i } = R.A.getConfig({ location: "_chooseExperiments" });
+        let { enabled: n, dontEmitVolumeOnlySpeakingEvents: i } = O.A.getConfig({ location: "_chooseExperiments" });
         if (
             (n && t.push("should_analyze_user_voice_volume"),
             i && t.push("dont_emit_volume_only_speaking_events"),
@@ -3236,7 +3236,7 @@ class tu extends p.A {
                 t.push("browser_transceiver_padding_removal"),
             (0, es.isIOS)())
         ) {
-            let { mode: e } = O.getConfig({ location: "_chooseExperiments" });
+            let { mode: e } = R.getConfig({ location: "_chooseExperiments" });
             "standard" === e
                 ? t.push("ios_video_stabilization_standard")
                 : "low_latency" === e && t.push("ios_video_stabilization_low_latency");

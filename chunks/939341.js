@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { C4: () => I, D8: () => _, XN: () => S, nO: () => y });
+n.d(t, { C4: () => I, D8: () => _, XN: () => v, nO: () => y });
 var l = n(582128),
     i = n(17928),
     s = n(573648),
@@ -36,7 +36,7 @@ function y(e) {
         { activity: s, activityApplication: r, fallbackApplication: a } = (0, x.A)(n),
         o = a ?? r,
         { largeImage: u, smallImage: c } = _(s, r),
-        { largeImage: h } = v(s, o),
+        { largeImage: h } = S(s, o),
         m = o?.getCanonicalGameId(),
         { data: p } = (0, d.I)(m),
         A = p?.getCoverURL(),
@@ -64,7 +64,7 @@ function y(e) {
         t
     );
 }
-function v(e, t) {
+function S(e, t) {
     let { largeImage: n, smallImage: l } = _(e, t);
     return (function (e) {
         let { activity: t, application: n, largeImage: l, smallImage: i } = e;
@@ -91,8 +91,8 @@ function v(e, t) {
         return null != r ? { largeImage: r, smallImage: i } : { largeImage: i, smallImage: void 0 };
     })({ activity: e, application: t, largeImage: n, smallImage: l });
 }
-function S(e, t, n) {
-    let l = v(e, t);
+function v(e, t, n) {
+    let l = S(e, t);
     return N({ activity: e, application: t, largeImageSrc: l.largeImage?.src, trackingSource: n }), l;
 }
 function N(e) {

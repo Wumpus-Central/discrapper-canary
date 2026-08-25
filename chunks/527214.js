@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Ay: () => O, W1: () => R }), n(323874), n(14289), n(35956);
+n.d(t, { Ay: () => R, W1: () => O }), n(323874), n(14289), n(35956);
 var i,
     r = n(435558),
     a = n.n(r),
@@ -109,7 +109,7 @@ function C(e) {
     let n = e.split("/");
     return n.length < 3 || "" !== n[1] || _.A.safeDecodeURIComponent(n[2]) !== n[2];
 }
-function R(e) {
+function O(e) {
     try {
         if (C(e)) throw Error("Rejected due to suspicious characters in URL: " + JSON.stringify(e));
         let t = new URL(e),
@@ -125,7 +125,7 @@ function R(e) {
         return null;
     }
 }
-let O = {
+let R = {
     ...d().defaultRules.link,
     match(e, t, n) {
         if (!t.allowLinks || -1 === e.indexOf("](")) return null;
@@ -159,17 +159,17 @@ let O = {
             A = I(r),
             h = I(null != l ? l : ""),
             f = _.whitespaceSanitized,
-            O = A.fullySanitized,
+            R = A.fullySanitized,
             L = h.fullySanitized,
-            y = O.trim();
+            y = R.trim();
         if (0 === f.trim().length || 0 === y.length) return o();
-        let D = R(d().unescapeUrl(s));
+        let D = O(d().unescapeUrl(s));
         if (null == D || (0, c.Ay)(l).length > 0) return o();
         let v = { ...n, allowEscape: !1, parseInlineCodeChildContent: !0 },
             b = n.allowEmojiLinks ? T : p,
             M = [...b, ...m],
             P = [...g, ...S],
-            U = N(t(O, v), M, [E.EMOJI]),
+            U = N(t(R, v), M, [E.EMOJI]),
             w = N(t(L, v), P);
         if (null == U || null == w) return o();
         let G = (function e(t) {
@@ -213,7 +213,7 @@ let O = {
         if (
             0 === G.trim().length ||
             (0, c.Ay)(G).length > 0 ||
-            (G !== O && ((0, c.Ay)(O).length > 0 || null == N(t(G, v), [...M, E.EMOJI])))
+            (G !== R && ((0, c.Ay)(R).length > 0 || null == N(t(G, v), [...M, E.EMOJI])))
         )
             return o();
         let x = a().pick(t.rules, b),

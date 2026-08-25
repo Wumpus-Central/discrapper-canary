@@ -1,4 +1,4 @@
-n.d(t, { m: () => R, A: () => w });
+n.d(t, { m: () => w, A: () => R });
 var i = n(477900),
     s = n(582128),
     r = n(17928);
@@ -15,10 +15,10 @@ var o = n(228366),
     f = n.n(x),
     p = n(866665),
     A = n(939249),
-    b = n(194261),
+    v = n(194261),
     y = n(653523),
-    v = n(350972),
-    S = n(677056),
+    S = n(350972),
+    b = n(677056),
     j = n(174197),
     I = n(652215),
     N = n(375708),
@@ -36,7 +36,7 @@ function C(e) {
             disabled: d = !1,
         } = e,
         [m, h] = s.useState((0, j.gG)(t).name),
-        x = t === v.Ic.PIRATE;
+        x = t === S.Ic.PIRATE;
     return (0, i.jsx)(p.m, {
         text: m,
         onTooltipShow: () =>
@@ -68,7 +68,7 @@ function C(e) {
                 u &&
                     (0, i.jsx)("div", {
                         className: E.RK,
-                        children: (0, i.jsx)(b.LockIcon, { className: E.AA, color: "currentColor" }),
+                        children: (0, i.jsx)(v.LockIcon, { className: E.AA, color: "currentColor" }),
                     }),
             ],
         }),
@@ -86,11 +86,11 @@ function T(e) {
         tabIndex: a,
         locked: o,
         disabled: l,
-        children: (0, i.jsx)(S.A, { id: n.id, size: t }),
+        children: (0, i.jsx)(b.A, { id: n.id, size: t }),
     });
 }
 var P = n(40025);
-function R(e) {
+function w(e) {
     let { disabled: t, size: n } = e,
         [s] = (0, r.yK)([m.A], () => [m.A.getCurrentDesktopIcon()]);
     return (0, i.jsx)(i.Fragment, {
@@ -118,7 +118,7 @@ function R(e) {
             ),
     });
 }
-function w(e) {
+function R(e) {
     let { className: t, disabled: n, isEditor: s, renderCTAButtons: r, iconSize: o } = e,
         m = (0, u.GV)(),
         { ref: h, ...g } = (0, l._u)({ orientation: "horizontal", labelledBy: m });
@@ -162,7 +162,7 @@ function w(e) {
                     wrap: !0,
                     gap: 8,
                     style: { marginTop: 16 },
-                    children: (0, i.jsx)(R, { disabled: n, size: o }),
+                    children: (0, i.jsx)(w, { disabled: n, size: o }),
                 }),
             ],
         }),

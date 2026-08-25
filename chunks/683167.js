@@ -26,8 +26,8 @@ function I(e) {
     return { type: "other", mergeable: !1, createdAt: Date.now(), value: p.VW.richValue(e), selection: e.selection };
 }
 var y = n(113001),
-    v = n(2368);
-function S(e, t, n) {
+    S = n(2368);
+function v(e, t, n) {
     let l = p.VW.getCurrentInline(e);
     if ("block" === t) return !0;
     let i = p.VW.getCurrentText(e);
@@ -240,10 +240,10 @@ function R(e) {
                     null != e.selection && null != p.VW.getCurrentInline(e) ? f.b.insertText(e, t) : s(t);
                 }),
                 (e.deleteBackward = (t) => {
-                    S(e, t, !0) || n(t);
+                    v(e, t, !0) || n(t);
                 }),
                 (e.deleteForward = (t) => {
-                    S(e, t, !1) || l(t);
+                    v(e, t, !1) || l(t);
                 }),
                 (e.deleteFragment = (t) => {
                     if (null != e.selection && p.ZF.isExpanded(e.selection)) {
@@ -279,7 +279,7 @@ function R(e) {
             );
         })((C = t))),
         l.commands?.enabled && (C = (0, h.A)(C, r)),
-        (C = (0, v.Ay)(C, r.guild_id, r.id)),
+        (C = (0, S.Ay)(C, r.guild_id, r.id)),
         l.markdown?.disableBlockQuotes ||
             (C = (function (e) {
                 let { deleteBackward: t, deleteFragment: n, insertBreak: l, onChange: i } = e;

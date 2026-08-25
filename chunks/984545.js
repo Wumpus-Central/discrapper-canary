@@ -1,95 +1,95 @@
 i.d(t, { A: () => S });
 var e = i(477900),
-    l = i(582128),
-    o = i(17928),
+    o = i(582128),
+    l = i(17928),
     r = i(922016),
     a = i(980707),
     c = i(477782),
-    d = i(365199),
-    s = i(793574),
-    u = i(688810),
-    p = i(173936),
-    A = i(735991),
+    s = i(365199),
+    d = i(793574),
+    p = i(688810),
+    u = i(173936),
+    g = i(735991),
     I = i(287809),
     f = i(957565),
-    g = i(342384),
-    m = i(20015),
-    P = i(652215),
-    _ = i(189213),
-    O = i(192308),
-    h = i(331322),
-    C = i(928658),
-    x = i(632738),
-    N = i(627363),
-    b = i(587895),
-    y = i(375708);
-let E = "useReportAppItemModal";
-var M = i(50268),
-    R = i(239211),
-    k = i(399476),
-    j = i(183555),
-    L = i(321191),
+    A = i(342384),
+    P = i(20015),
+    b = i(652215),
+    x = i(189213),
+    y = i(192308),
+    E = i(331322),
+    O = i(928658),
+    _ = i(632738),
+    h = i(627363),
+    R = i(587895),
+    k = i(375708);
+let v = "useReportAppItemModal";
+var C = i(50268),
+    L = i(239211),
+    j = i(399476),
+    B = i(183555),
+    N = i(321191),
     U = i(254384),
-    v = i(993401);
+    m = i(993401);
 function S(n) {
     let { user: t, guildId: i, viewProfileItem: S } = n,
-        B = l.useRef(null),
-        { trackUserProfileAction: D } = (0, j.NJ)(),
-        { analyticsLocations: w, newestAnalyticsLocation: G } = (0, u.Ay)(s.A.USER_PROFILE_OVERFLOW_MENU),
-        K = (0, o.bG)([L.A], () => L.A.getUserProfile(t.id)),
-        V = K?.application,
-        W = (0, R.A)({
+        M = o.useRef(null),
+        { trackUserProfileAction: w } = (0, B.NJ)(),
+        { analyticsLocations: D, newestAnalyticsLocation: G } = (0, p.Ay)(d.A.USER_PROFILE_OVERFLOW_MENU),
+        K = (0, l.bG)([N.A], () => N.A.getUserProfile(t.id)),
+        W = K?.application,
+        V = (0, L.A)({
             user: t,
             guildId: i,
             location: G,
-            onBlock: () => D({ action: "BLOCK", analyticsLocations: w }),
-            onUnblock: () => D({ action: "UNBLOCK", analyticsLocations: w }),
+            onBlock: () => w({ action: "BLOCK", analyticsLocations: D }),
+            onUnblock: () => w({ action: "UNBLOCK", analyticsLocations: D }),
         }),
-        T = (0, k.A)({
+        Y = (0, j.A)({
             user: t,
             guildId: i,
             location: G,
-            onIgnore: () => D({ action: "IGNORE", analyticsLocations: w }),
-            onUnignore: () => D({ action: "UNIGNORE", analyticsLocations: w }),
+            onIgnore: () => w({ action: "IGNORE", analyticsLocations: D }),
+            onUnignore: () => w({ action: "UNIGNORE", analyticsLocations: D }),
         }),
-        Y = (function (n) {
+        z = (function (n) {
             let { applicationId: t, ...i } = n;
             return null == t
                 ? null
                 : (0, e.jsx)(c.Dr, {
                       id: "report-app",
                       color: i.color,
-                      label: y.intl.string(y.t.NgA5vp),
+                      label: k.intl.string(k.t.NgA5vp),
                       action: () =>
                           (function (n, t) {
                               function i() {
-                                  (0, O.closeModal)(E), t.onSubmit?.();
+                                  (0, y.closeModal)(v), t.onSubmit?.();
                               }
-                              (0, O.openModalLazy)(
+                              (0, y.openModalLazy)(
                                   async () => {
-                                      await N.Ay.fetchApplication(n);
-                                      let l = b.A.getApplication(n);
+                                      await h.Ay.fetchApplication(n);
+                                      let o = R.A.getApplication(n);
                                       return (n) =>
-                                          (0, e.jsx)(_.Modal, {
-                                              title: y.intl.string(y.t.Bd10bR),
+                                          (0, e.jsx)(x.Modal, {
+                                              title: k.intl.string(k.t.Bd10bR),
                                               actions: [],
                                               ...n,
-                                              children: (0, e.jsxs)(h.B, {
+                                              children: (0, e.jsxs)(E.B, {
                                                   children: [
-                                                      (0, e.jsx)(x.PQ, {
+                                                      (0, e.jsx)(_.PQ, {
                                                           variant: "clickable",
-                                                          title: y.intl.string(y.t.eyEkG1),
-                                                          description: y.intl.string(y.t.ptItsj),
+                                                          title: k.intl.string(k.t.eyEkG1),
+                                                          description: k.intl.string(k.t.ptItsj),
                                                           onButtonPress: () =>
-                                                              (0, C.NW)(t.user, t.guildId, i, t.appContext),
+                                                              (0, O.NW)(t.user, t.guildId, i, t.appContext),
                                                       }),
-                                                      (0, e.jsx)(x.PQ, {
+                                                      (0, e.jsx)(_.PQ, {
                                                           variant: "clickable",
-                                                          title: y.intl.string(y.t.atP0yX),
-                                                          description: y.intl.string(y.t.UGg603),
+                                                          title: k.intl.string(k.t.atP0yX),
+                                                          description: k.intl.string(k.t.UGg603),
                                                           onButtonPress: () => {
-                                                              (0, C.r3)({
-                                                                  application: l,
+                                                              (0, O.r3)({
+                                                                  application: o,
                                                                   entrypoint: t.entrypoint ?? "user_profile",
                                                                   contextualGuildId: t.guildId,
                                                                   contextualChannelId: t.channelId,
@@ -102,60 +102,60 @@ function S(n) {
                                               }),
                                           });
                                   },
-                                  { modalKey: E },
+                                  { modalKey: v },
                               );
                           })(t, i),
                   });
         })({
-            applicationId: V?.id,
+            applicationId: W?.id,
             user: t,
             guildId: i,
-            onSubmit: () => D({ action: "REPORT", analyticsLocations: w }),
+            onSubmit: () => w({ action: "REPORT", analyticsLocations: D }),
             color: "danger",
         }),
-        z = (0, M.A)({
-            id: V?.id,
-            label: y.intl.string(y.t["+NP/b2"]),
-            onSuccess: () => D({ action: "COPY_APP_ID", analyticsLocations: w }),
+        F = (0, C.A)({
+            id: W?.id,
+            label: k.intl.string(k.t["+NP/b2"]),
+            onSuccess: () => w({ action: "COPY_APP_ID", analyticsLocations: D }),
         }),
-        F = (function (n) {
-            let { application: t, label: i, onSuccess: l, showIconFirst: o } = n;
+        T = (function (n) {
+            let { application: t, label: i, onSuccess: o, showIconFirst: l } = n;
             if (__OVERLAY__ || !f.p5 || null == t) return null;
             let r = I.default.getCurrentUser(),
-                a = (0, A.EF)(t),
-                d = `copy-app-link-${t.id}`;
+                a = (0, g.EF)(t),
+                s = `copy-app-link-${t.id}`;
             return (0, e.jsx)(
                 c.Dr,
                 {
-                    id: d,
+                    id: s,
                     label: i,
                     action: function () {
                         if (null == t) return;
-                        let n = (0, m.n)(t, P.gfo.EMBEDDED)
-                            ? (0, g.W)({ applicationId: t.id, referrerId: r?.id })
-                            : (0, g.V)({ id: t.id, ...a });
-                        null != n && (0, f.C)(n, l);
+                        let n = (0, P.n)(t, b.gfo.EMBEDDED)
+                            ? (0, A.W)({ applicationId: t.id, referrerId: r?.id })
+                            : (0, A.V)({ id: t.id, ...a });
+                        null != n && (0, f.C)(n, o);
                     },
-                    icon: o ? void 0 : p.LinkIcon,
-                    iconLeft: o ? p.LinkIcon : void 0,
-                    leadingAccessory: { type: "icon", icon: p.LinkIcon },
+                    icon: l ? void 0 : u.LinkIcon,
+                    iconLeft: l ? u.LinkIcon : void 0,
+                    leadingAccessory: { type: "icon", icon: u.LinkIcon },
                 },
-                d,
+                s,
             );
         })({
-            application: V,
-            label: y.intl.string(y.t.WqhZss),
-            onSuccess: () => D({ action: "COPY_APP_LINK", analyticsLocations: w }),
+            application: W,
+            label: k.intl.string(k.t.WqhZss),
+            onSuccess: () => w({ action: "COPY_APP_LINK", analyticsLocations: D }),
         }),
-        H = [
+        X = [
             [S, (0, U.A)({ user: t, location: "BotUserProfileOverflowMenuBannerButton" })],
-            [T, W, Y],
-            [F, z],
+            [Y, V, z],
+            [T, F],
         ];
-    return H.every((n) => n.every((n) => null == n))
+    return X.every((n) => n.every((n) => null == n))
         ? null
         : (0, e.jsx)(r.Y, {
-              targetElementRef: B,
+              targetElementRef: M,
               renderPopout: (n) => {
                   let { closePopout: t } = n;
                   return (0, e.jsx)(a.W, {
@@ -163,16 +163,16 @@ function S(n) {
                       navId: "user-bot-profile-overflow-menu",
                       onSelect: void 0,
                       onClose: t,
-                      "aria-label": y.intl.string(y.t.AXIHpV),
-                      children: H.map((n, t) => (0, e.jsx)(c.rX, { children: n.map((n) => n) }, t)),
+                      "aria-label": k.intl.string(k.t.AXIHpV),
+                      children: X.map((n, t) => (0, e.jsx)(c.rX, { children: n.map((n) => n) }, t)),
                   });
               },
               children: (n) =>
-                  (0, e.jsx)(v.br, {
-                      buttonRef: B,
+                  (0, e.jsx)(m.br, {
+                      buttonRef: M,
                       action: "PRESS_OPTIONS",
-                      icon: d.MoreHorizontalIcon,
-                      tooltipText: y.intl.string(y.t["UKOtz+"]),
+                      icon: s.MoreHorizontalIcon,
+                      tooltipText: k.intl.string(k.t["UKOtz+"]),
                       ...n,
                   }),
           });

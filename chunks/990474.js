@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Ay: () => _, Oh: () => N, gn: () => S });
+n.d(t, { Ay: () => _, Oh: () => N, gn: () => v });
 var l = n(477900),
     i = n(582128),
     s = n(17928),
@@ -21,7 +21,7 @@ var l = n(477900),
     I = n(73510);
 n(827669);
 var y = n(375708);
-function v(e, t, n, l, i) {
+function S(e, t, n, l, i) {
     null != e &&
         ("" !== g.A.getDraft(e, g.C.ChannelMessage)
             ? (0, r.A)({
@@ -56,7 +56,7 @@ function v(e, t, n, l, i) {
         }
     }
 }
-function S(e) {
+function v(e) {
     let { node: t, stateKey: n, children: r } = e,
         a = (0, s.bG)([p.A, A.Ay], () => p.A.getChannel(t.channelId ?? A.Ay.getChannelId()), [t.channelId]),
         { hasSendMessagePerm: o, hasUseAppCommandsPerm: u } = (0, s.cf)([x.A], () => ({
@@ -66,7 +66,7 @@ function S(e) {
         g = void 0 !== a ? { type: "channel", channel: a } : { type: "contextless" },
         { command: C } = c.D3(g, t.commandKey ?? ""),
         y = f.D_.useSetting(),
-        S = i.useMemo(() => {
+        v = i.useMemo(() => {
             if (null == C || null == a || C.untranslatedName !== t.commandName || y) return !1;
             let e = a.isPrivate();
             if ((0, m.UJ)(a) || (!e && !o)) return !1;
@@ -79,11 +79,11 @@ function S(e) {
                     null != a &&
                         null != t.commandName &&
                         null != t.commandKey &&
-                        v(a.id, t.commandName, t.commandKey, d.Oh.MENTION);
+                        S(a.id, t.commandName, t.commandKey, d.Oh.MENTION);
             },
             [a, t.commandKey, t.commandName],
         );
-    return S
+    return v
         ? (0, l.jsxs)(h.A, { role: "link", onClick: N, children: ["/", r] }, n)
         : (0, l.jsxs)("span", { children: ["/", r] });
 }
@@ -97,12 +97,12 @@ function N(e) {
             size: "sm",
             variant: "secondary",
             onClick: function (e) {
-                e?.stopPropagation(), v(c, n, t, d.Oh.POPULAR_COMMANDS, r), u?.(t);
+                e?.stopPropagation(), S(c, n, t, d.Oh.POPULAR_COMMANDS, r), u?.(t);
             },
             text: `/${n}`,
         }),
     });
 }
 function _(e) {
-    return { react: (e, t, n) => (0, l.jsx)(S, { node: e, stateKey: n.key, children: t(e.content, n) }) };
+    return { react: (e, t, n) => (0, l.jsx)(v, { node: e, stateKey: n.key, children: t(e.content, n) }) };
 }

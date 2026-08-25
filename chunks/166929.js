@@ -3,12 +3,12 @@ n.d(t, {
     ET: () => L,
     Wn: () => I,
     aV: () => C,
-    dg: () => O,
+    dg: () => R,
     eq: () => p,
     iF: () => g,
     kZ: () => S,
     s7: () => N,
-    tH: () => R,
+    tH: () => O,
     yo: () => f,
 }),
     n(321073);
@@ -180,7 +180,7 @@ function C(e) {
     if ("AV1" === e || "AV1X" === e) return "AV1";
     else return "UNKNOWN";
 }
-class R {
+class O {
     bytes = 0;
     framesCodec = 0;
     framesCodecError = null;
@@ -230,7 +230,7 @@ class R {
     consecutiveStaticColorFrames = 0;
     screenshareFramesUnique = 0;
     static parseInboundStats(e, t) {
-        let n = new R();
+        let n = new O();
         return (
             null == e ||
                 ((n.bytes = e.bytesReceived),
@@ -269,7 +269,7 @@ class R {
         );
     }
     static parseOutboundStats(e, t) {
-        let n = new R();
+        let n = new O();
         return null == e
             ? n
             : {
@@ -324,11 +324,11 @@ class R {
               };
     }
 }
-class O {
+class R {
     decoderBuckets = Object.fromEntries(Object.values(p).map((e) => [e, 0]));
     codecBuckets = { H264: 0, H265: 0, VP8: 0, VP9: 0, AV1: 0, UNKNOWN: 0 };
     statsWindow = [];
-    previousAggregationStats = new R();
+    previousAggregationStats = new O();
     fpsHistogram = new o.d();
     bitrateHistogram = new o.d();
     inboundBitrateEstimateHistogram = new o.d();
@@ -523,7 +523,7 @@ class O {
         return e;
     }
 }
-class L extends O {
+class L extends R {
     encoderBuckets = Object.fromEntries(Object.values(f).map((e) => [e, 0]));
     encoderCodec = "UNKNOWN";
     targetFrames = 0;

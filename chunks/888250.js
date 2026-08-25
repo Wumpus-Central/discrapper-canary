@@ -14,8 +14,8 @@ var r = n(477900),
     p = n(723702),
     m = n(19575),
     A = n(9302),
-    v = n(365971),
-    y = n(777334),
+    y = n(365971),
+    v = n(777334),
     x = n(41984),
     w = n(973196);
 n(321073);
@@ -175,8 +175,8 @@ var eo = n(232554),
     ep = n(545807),
     em = n(652215),
     eA = n(645280);
-let ev = [],
-    ey = i.memo(function (e) {
+let ey = [],
+    ev = i.memo(function (e) {
         let {
                 widget: t,
                 renderWidget: n,
@@ -189,16 +189,16 @@ let ev = [],
             } = e,
             m = (0, s.bG)([h.A], () => h.A.getWidgetConfig(t.type), [t.type]),
             A = (0, ef.RE)(t.id, ef.X1),
-            y = (0, eg.A)(),
-            [w, E] = i.useState(() => u?.stores ?? ev);
+            v = (0, eg.A)(),
+            [w, E] = i.useState(() => u?.stores ?? ey);
         (0, l.Ay)(() => {
-            E(u?.stores ?? ev);
+            E(u?.stores ?? ey);
         });
-        let b = (0, s.bG)(w, () => u?.shouldRender({ widget: t, locked: y }) ?? !0, [u, y, t]),
+        let b = (0, s.bG)(w, () => u?.shouldRender({ widget: t, locked: v }) ?? !0, [u, v, t]),
             N = (0, ep.A)(),
-            O = (0, s.bG)([g.A], () => g.A.windowSize((0, v.Q2)(N))),
+            O = (0, s.bG)([g.A], () => g.A.windowSize((0, y.Q2)(N))),
             _ = i.useCallback((e, t, n, r, i) => {
-                let s = g.A.windowSize((0, v.Q2)((0, ep.b)())),
+                let s = g.A.windowSize((0, y.Q2)((0, ep.b)())),
                     l = (0, ed.NO)(n, s),
                     a = (0, ed.R9)(r, s);
                 (0, ec.uD)(t), (0, ec.Ju)({ widgetId: t, anchor: l, size: a });
@@ -223,8 +223,8 @@ let ev = [],
             L = i.useMemo(() => (0, ed.fd)(k, O), [k, O]),
             R = (0, ed.Nv)(S, O),
             { resizeX: M, resizeY: U, dragAnywhere: K, constrainAutoSizeToExplicitResizeEvents: G } = m ?? {},
-            F = !y,
-            B = T || !y,
+            F = !v,
+            B = T || !v,
             V = i.useMemo(() => ({ minX: 0, minY: 0, maxX: O.width, maxY: O.height }), [O]),
             H = i.useCallback(
                 (e) => n({ ...e, widget: t, dragging: null != e.dragOperation, className: f }),
@@ -250,7 +250,7 @@ let ev = [],
                   container: V,
                   minSize: P ?? { width: 0, height: 0 },
                   hidden: !B,
-                  locked: y,
+                  locked: v,
                   resizeX: M ?? !1,
                   resizeY: U ?? !1,
                   style: { zIndex: j },
@@ -273,13 +273,13 @@ function eE(e) {
     return e.widget.id;
 }
 function eC(e, t, n, i) {
-    return n === eo.wL.YEETED ? null : (0, r.jsx)(ey, { ...t, transitionState: n, cleanUp: i }, e);
+    return n === eo.wL.YEETED ? null : (0, r.jsx)(ev, { ...t, transitionState: n, cleanUp: i }, e);
 }
 let eb = [],
     eN = i.memo(function (e) {
         let { className: t } = e,
             n = (0, ep.A)(),
-            o = (0, s.bG)([g.A], () => g.A.windowSize((0, v.Q2)(n))),
+            o = (0, s.bG)([g.A], () => g.A.windowSize((0, y.Q2)(n))),
             l = (0, s.bG)(
                 [h.A, el.A],
                 () => {
@@ -504,13 +504,13 @@ function e1() {
         p,
         m,
         A,
-        y,
+        v,
         x,
         w,
         E = (0, ep.A)(),
         C = (0, s.bG)([F.default], () => F.default.incompatibleApp),
         b = (0, s.bG)([g.A], () => {
-            let e = (0, v.Q2)(E),
+            let e = (0, y.Q2)(E),
                 t = g.A.windowSize(e);
             return t.height < 360 || t.width < 640;
         }, [E]),
@@ -524,7 +524,7 @@ function e1() {
         }, [])),
         (d = (0, s.bG)([e_.A], () => e_.A.isInputLocked(a), [a])),
         (u = (0, s.bG)([g.A], () => {
-            let e = (0, v.Q2)(n);
+            let e = (0, y.Q2)(n);
             return g.A.isVisible(e) && g.A.isFocused(e);
         }, [n])),
         (h = i.useRef([])),
@@ -571,14 +571,14 @@ function e1() {
         (0, l.Ay)(() => {
             (0, H.E)();
         }),
-        (y = (0, ep.A)()),
+        (v = (0, ep.A)()),
         (e = () => {
             o.A.overlayReady(eO.A.getTargetPID()),
-                y.addEventListener("keydown", eq, !0),
-                y.addEventListener("keyup", eq);
+                v.addEventListener("keydown", eq, !0),
+                v.addEventListener("keyup", eq);
         }),
         (t = () => {
-            y.removeEventListener("keydown", eq, !0), y.removeEventListener("keyup", eq);
+            v.removeEventListener("keydown", eq, !0), v.removeEventListener("keyup", eq);
         }),
         (x = i.useRef({ mount: e, unmount: t })),
         i.useEffect(() => {
@@ -689,7 +689,7 @@ async function e9(e, t) {
         try {
             await m.Ay.isAlwaysOnTop(t);
         } catch (e) {
-            e4.error("Window does not exist while trying to show inactive", e), (0, y.pj)(e, x.Ue.OutOfProcess);
+            e4.error("Window does not exist while trying to show inactive", e), (0, v.pj)(e, x.Ue.OutOfProcess);
         }
         for (let i = 0; i < r; i++)
             try {
@@ -701,7 +701,7 @@ async function e9(e, t) {
                     let t = (n / 2) * Math.pow(2, i + 1);
                     e4.error(`Failed to show inactive, retrying in ${t}ms`, e),
                         await new Promise((e) => setTimeout(e, t));
-                } else throw ((0, y.pj)(e, x.Ue.OutOfProcess), e);
+                } else throw ((0, v.pj)(e, x.Ue.OutOfProcess), e);
             }
     }
 }
@@ -738,7 +738,7 @@ let tn = i.memo(function (e) {
                 c = (0, s.bG)([d.A], () => d.A.getWindow(e)),
                 u = (0, s.bG)([eO.A], () => eO.A.getFocusedPID()),
                 m = i.useMemo(() => !!(!p.isPlatformEmbedded || (0, eL.SE)()) || (null != u && u !== A.UNSET_PID), [u]),
-                [y, w] = i.useState(!1),
+                [v, w] = i.useState(!1),
                 E = i.useRef(!1),
                 C = i.useCallback(() => {
                     let e = eO.A.getTargetPID(),
@@ -799,11 +799,11 @@ let tn = i.memo(function (e) {
                 (0, l.l0)(() => {
                     clearInterval(N.current), (b.current = !0);
                 }),
-                (n = (0, s.bG)([g.A], () => g.A.windowSize(null != c ? (0, v.Q2)(c) : void 0))),
+                (n = (0, s.bG)([g.A], () => g.A.windowSize(null != c ? (0, y.Q2)(c) : void 0))),
                 (r = (0, s.bG)([eO.A], () => eO.A.getFocusedWindowHandle())),
                 i.useEffect(() => {
                     let e, t;
-                    if (null != c && y && c.innerHeight === n.height && c.innerWidth === n.width)
+                    if (null != c && v && c.innerHeight === n.height && c.innerWidth === n.width)
                         return (
                             (e = c.requestAnimationFrame(() => {
                                 e = c.requestAnimationFrame(() => {
@@ -817,12 +817,12 @@ let tn = i.memo(function (e) {
                                 c.cancelAnimationFrame(e), c.clearTimeout(t);
                             }
                         );
-                }, [y, c, u, r, n]),
-                y
+                }, [v, c, u, r, n]),
+                v
             );
         })(c, ew.G),
-        y = (0, s.bG)([eO.A], () => eO.A.getFocusedPID()),
-        E = (0, s.bG)([e_.A], () => e_.A.isInputLocked(y), [y]),
+        v = (0, s.bG)([eO.A], () => eO.A.getFocusedPID()),
+        E = (0, s.bG)([e_.A], () => e_.A.isInputLocked(v), [v]),
         C = (0, s.bG)([ek.default, eO.A], () =>
             (0, e5.S)(eO.A.getNativeLimitedInteraction(), ek.default.getOverlayMethod(eO.A.getTargetPID())),
         );

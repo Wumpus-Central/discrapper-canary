@@ -20,16 +20,16 @@ var l = n(477900),
     E = n(676279),
     I = n(158045),
     y = n(732280),
-    v = n(369805),
-    S = n(862990),
+    S = n(369805),
+    v = n(862990),
     N = n(632150),
     _ = n(792656),
     T = n(202541),
     j = n(652215),
     b = n(109447),
     R = n(375708),
-    M = n(237790),
-    O = n(592551);
+    O = n(237790),
+    M = n(592551);
 function L(e) {
     let t,
         {
@@ -47,8 +47,8 @@ function L(e) {
     }, [P, w]);
     let G = (0, y.V)(),
         V = i.useCallback(() => (0, I.LE)(G, T.pe.TIER_2) ?? R.intl.string(R.t.pj0XBN), [G]),
-        F = (0, v.A)(T.pe.TIER_2),
-        H = (0, S.O9)();
+        F = (0, S.A)(T.pe.TIER_2),
+        H = (0, v.O9)();
     return (
         (t = U
             ? (0, E.TM)()
@@ -62,20 +62,20 @@ function L(e) {
                 (0, l.jsx)(u.p, { onClick: k, isVisible: !0 }),
                 (0, l.jsx)(c.h, {
                     color: U ? "nitro-pink" : "green",
-                    className: M.kL,
+                    className: O.kL,
                     children: (0, l.jsxs)(d.l, {
                         "aria-label": n,
-                        className: M.r3,
+                        className: O.r3,
                         children: [
                             (0, l.jsxs)("div", {
-                                className: M.Qs,
+                                className: O.Qs,
                                 children: [
-                                    (0, l.jsx)(o.s_, { "data-migration-pending": !0, onClick: k, className: M.b }),
+                                    (0, l.jsx)(o.s_, { "data-migration-pending": !0, onClick: k, className: O.b }),
                                     (0, l.jsxs)("div", {
-                                        className: M.hQ,
+                                        className: O.hQ,
                                         children: [
                                             (0, l.jsx)("div", {
-                                                className: O.headerGraphic,
+                                                className: M.headerGraphic,
                                                 children: (0, l.jsx)(h.v, {
                                                     type: "video",
                                                     src: t,
@@ -85,7 +85,7 @@ function L(e) {
                                             }),
                                             null != F && (0, l.jsx)(a.E, { type: { text: F }, variant: "brand" }),
                                             (0, l.jsx)(m.D, {
-                                                className: r()(M.DD, { [M.GU]: null != F }),
+                                                className: r()(O.DD, { [O.GU]: null != F }),
                                                 variant: "heading-xl/bold",
                                                 color: "text-strong",
                                                 children: n,
@@ -93,7 +93,7 @@ function L(e) {
                                             (0, l.jsx)(f.E, {
                                                 variant: "text-md/medium",
                                                 color: "text-subtle",
-                                                className: M.rf,
+                                                className: O.rf,
                                                 children: s,
                                             }),
                                         ],
@@ -101,15 +101,15 @@ function L(e) {
                                     U &&
                                         H &&
                                         (0, l.jsx)("div", {
-                                            className: M.Zr,
+                                            className: O.Zr,
                                             children: (0, l.jsx)(N.A, { subtitle: R.intl.string(b.default.BkJYQ5) }),
                                         }),
                                 ],
                             }),
                             (0, l.jsx)("div", {
-                                className: M.qr,
+                                className: O.qr,
                                 children: (0, l.jsxs)("div", {
-                                    className: M.UD,
+                                    className: O.UD,
                                     children: [
                                         (0, l.jsx)(p.$, {
                                             variant: "secondary",

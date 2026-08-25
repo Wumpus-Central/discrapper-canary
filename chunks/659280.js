@@ -20,23 +20,23 @@ var l = n(477900),
     E = n(17928),
     I = n(834730),
     y = n(866665),
-    v = n(364360);
-function S(e) {
+    S = n(364360);
+function v(e) {
     let { children: t, className: n } = e;
-    return (0, l.jsx)("div", { className: r()(v.um, n), children: t });
+    return (0, l.jsx)("div", { className: r()(S.um, n), children: t });
 }
 function N(e) {
     let { children: t, className: n } = e;
-    return (0, l.jsx)("div", { className: r()(v.Ov, n), children: t });
+    return (0, l.jsx)("div", { className: r()(S.Ov, n), children: t });
 }
 function _(e) {
     let { children: t, className: n } = e;
-    return (0, l.jsx)("div", { className: r()(v.wq, n), children: t });
+    return (0, l.jsx)("div", { className: r()(S.wq, n), children: t });
 }
 function T(e) {
     let { children: t, className: n } = e;
     return (0, l.jsx)(I.E, {
-        className: r()(n, v.hf),
+        className: r()(n, S.hf),
         color: "interactive-text-active",
         variant: "text-md/normal",
         children: t,
@@ -45,7 +45,7 @@ function T(e) {
 function j(e) {
     let { children: t, className: n } = e;
     return (0, l.jsx)(I.E, {
-        className: r()(n, v.p3),
+        className: r()(n, S.p3),
         color: "interactive-text-default",
         variant: "text-xs/normal",
         children: t,
@@ -54,36 +54,36 @@ function j(e) {
 function b(e) {
     let { children: t, className: n } = e;
     return (0, l.jsx)(I.E, {
-        className: r()(n, v.I0),
+        className: r()(n, S.I0),
         color: "interactive-text-default",
         variant: "text-xs/normal",
         children: t,
     });
 }
 var R = n(696451),
-    M = n(807094);
-function O(e) {
+    O = n(807094);
+function M(e) {
     let { name: t, className: n, state: i, isInline: s, onClick: a } = e,
         o = null;
     i?.isActive && !s
-        ? (o = M.vu)
+        ? (o = O.vu)
         : i?.lastValidationResult?.success === !1
-          ? (o = M.z3)
-          : i?.hasValue && !s && (o = M.hZ);
+          ? (o = O.z3)
+          : i?.hasValue && !s && (o = O.hZ);
     let u = (0, l.jsx)(I.E, {
         variant: s ? "text-md/normal" : "text-sm/normal",
         color: "text-strong",
-        className: r()(M.uK, { [M.mG]: s }, o, n),
+        className: r()(O.uK, { [O.mG]: s }, o, n),
         children: t + (s ? ":" : ""),
     });
-    return null == a ? u : (0, l.jsx)(c.D, { className: M.vk, onClick: () => a(t), children: u });
+    return null == a ? u : (0, l.jsx)(c.D, { className: O.vk, onClick: () => a(t), children: u });
 }
 var L = n(664929);
 n(827669);
 var w = n(375708),
     k = n(633331);
 function P(e, t, n) {
-    return (0, l.jsx)(O, { className: k.uK, name: e.displayName, state: t, onClick: n }, e.name);
+    return (0, l.jsx)(M, { className: k.uK, name: e.displayName, state: t, onClick: n }, e.name);
 }
 function D(e) {
     let { command: t, optionStates: n, onOptionClick: s } = e,
@@ -225,7 +225,7 @@ let J = function (e) {
                   );
         }),
     });
-    return (0, l.jsxs)(S, {
+    return (0, l.jsxs)(v, {
         className: q.UX,
         children: [
             (0, l.jsx)(N, { children: (0, l.jsx)(T, { children: w.intl.format(w.t.uEky42, { count: t.length }) }) }),
@@ -241,7 +241,7 @@ var $ = n(106191),
 function en(e) {
     let { sound: t } = e,
         n = (0, E.bG)([et.A], () => ("0" === t.guildId ? w.intl.string(w.t.Rtvk9X) : et.A.getGuild(t.guildId)?.name));
-    return (0, l.jsxs)(S, {
+    return (0, l.jsxs)(v, {
         children: [
             (null != t.emojiId || null != t.emojiName) &&
                 (0, l.jsx)(_, { children: (0, l.jsx)(ee.A, { emojiId: t.emojiId, emojiName: t.emojiName }) }),
@@ -266,7 +266,7 @@ function ec(e) {
 let ed = i.createContext(null);
 class eh extends i.PureComponent {
     selectable = !0;
-    layoutClass = v.rT;
+    layoutClass = S.rT;
     constructor(e) {
         super(e), (this.state = { hovered: !1 });
     }
@@ -284,7 +284,7 @@ class eh extends i.PureComponent {
         return this.isSelectable()
             ? (0, l.jsx)(c.D, {
                   ...e,
-                  className: r()(v.vk, n, t),
+                  className: r()(S.vk, n, t),
                   id: eu(i) ?? void 0,
                   onClick: this.handleClick,
                   onMouseMove: () => {
@@ -293,13 +293,13 @@ class eh extends i.PureComponent {
                   onMouseLeave: () => this.setState({ hovered: !1 }),
                   role: "option",
                   "aria-selected": s,
-                  children: (0, l.jsx)("div", { className: v.E3, children: this.renderContent() }),
+                  children: (0, l.jsx)("div", { className: S.E3, children: this.renderContent() }),
               })
             : (0, l.jsx)("div", {
-                  className: r()(v.vk, n, t),
+                  className: r()(S.vk, n, t),
                   id: eu(i) ?? void 0,
                   role: "none",
-                  children: (0, l.jsx)("div", { className: v.E3, children: this.renderContent() }),
+                  children: (0, l.jsx)("div", { className: S.E3, children: this.renderContent() }),
               });
     }
     render() {
@@ -321,9 +321,9 @@ class em extends eh {
     renderContent() {
         let { text: e, description: t, badge: n } = this.props,
             i = (0, l.jsx)(T, { children: e });
-        return (0, l.jsxs)(S, {
+        return (0, l.jsxs)(v, {
             children: [
-                (0, l.jsx)(N, { children: null != n ? (0, l.jsxs)("div", { className: v.QN, children: [i, n] }) : i }),
+                (0, l.jsx)(N, { children: null != n ? (0, l.jsxs)("div", { className: S.QN, children: [i, n] }) : i }),
                 null != t ? (0, l.jsx)(b, { children: t }) : null,
             ],
         });
@@ -332,11 +332,11 @@ class em extends eh {
 function ef(e) {
     let t = i.useMemo(() => o().random(60, 120), []);
     return (0, l.jsx)("div", {
-        className: v.E3,
+        className: S.E3,
         "aria-busy": !0,
-        children: (0, l.jsx)(S, {
+        children: (0, l.jsx)(v, {
             children: (0, l.jsx)(N, {
-                children: (0, l.jsx)(T, { children: (0, l.jsx)("div", { className: v.M, style: { width: t } }) }),
+                children: (0, l.jsx)(T, { children: (0, l.jsx)("div", { className: S.M, style: { width: t } }) }),
             }),
         }),
     });
@@ -345,28 +345,28 @@ function ep(e) {
     let { title: t, className: n, children: s } = e,
         a = i.useContext(ed);
     return (0, l.jsx)("div", {
-        className: v.E3,
+        className: S.E3,
         children: (0, l.jsxs)(d.D, {
             id: ec(a.id),
-            className: r()(v.eu, n),
+            className: r()(S.eu, n),
             variant: "heading-deprecated-12/semibold",
             children: [t, s],
         }),
     });
 }
 class eg extends eh {
-    layoutClass = v.fF;
+    layoutClass = S.fF;
     selectable = !1;
     renderContent() {
         let { className: e } = this.props;
-        return (0, l.jsx)("div", { className: r()(e, v.yF) });
+        return (0, l.jsx)("div", { className: r()(e, S.yF) });
     }
 }
 class ex extends eh {
     renderContent() {
         let { user: e, nick: t, status: n, hidePersonalInformation: i, guildId: s } = this.props,
             r = null == s ? er.A.getNickname(e.id) : null;
-        return (0, l.jsxs)(S, {
+        return (0, l.jsxs)(v, {
             children: [
                 (0, l.jsx)(_, {
                     children: (0, l.jsx)(h.eu, {
@@ -382,7 +382,7 @@ class ex extends eh {
                         eo.Ay.getUserTag(e, { mode: "username", identifiable: i ? "never" : "always" }),
                         i || e.hasUniqueUsername()
                             ? null
-                            : (0, l.jsxs)("span", { className: v.T, children: ["#", e.discriminator] }),
+                            : (0, l.jsxs)("span", { className: S.T, children: ["#", e.discriminator] }),
                     ],
                 }),
             ],
@@ -404,12 +404,12 @@ class eA extends eh {
                 includeConvenienceGlow: !0,
             }),
             m = o ? { ...(c ? d : { color: null != i ? i : void 0 }) } : void 0;
-        return (0, l.jsxs)(S, {
+        return (0, l.jsxs)(v, {
             children: [
                 (0, l.jsx)(N, {
                     children: (0, l.jsxs)(T, {
                         children: [
-                            a && (0, l.jsx)(p.W, { className: v.m4, color: i, colors: u, tooltip: !1 }),
+                            a && (0, l.jsx)(p.W, { className: S.m4, color: i, colors: u, tooltip: !1 }),
                             (0, l.jsxs)("span", {
                                 className: r()({ [h]: c }),
                                 style: m,
@@ -427,7 +427,7 @@ class eA extends eh {
 class eC extends eh {
     renderContent() {
         let { timestamp: e, description: t } = this.props;
-        return (0, l.jsxs)(S, {
+        return (0, l.jsxs)(v, {
             children: [
                 (0, l.jsx)(N, { children: (0, l.jsx)(T, { children: (0, l.jsx)(X.A, { node: e, showTooltip: !1 }) }) }),
                 null != t ? (0, l.jsx)(b, { children: t }) : null,
@@ -439,9 +439,9 @@ class eE extends eh {
     renderContent() {
         let { channel: e, category: t } = this.props,
             n = e.type === z.rbe.GUILD_CATEGORY ? g.FolderIcon : (0, F.gU)(e);
-        return (0, l.jsxs)(S, {
+        return (0, l.jsxs)(v, {
             children: [
-                null != n && (0, l.jsx)(_, { children: (0, l.jsx)(n, { className: v.Kk }) }),
+                null != n && (0, l.jsx)(_, { children: (0, l.jsx)(n, { className: S.Kk }) }),
                 (0, l.jsx)(N, { children: (0, l.jsx)(T, { children: (0, V.m1)(e, ea.default, er.A) }) }),
                 null != t ? (0, l.jsx)(b, { children: t.name }) : null,
             ],
@@ -451,10 +451,10 @@ class eE extends eh {
 class eI extends eh {
     renderContent() {
         let { command: e } = this.props;
-        return (0, l.jsxs)(S, {
+        return (0, l.jsxs)(v, {
             children: [
                 (0, l.jsx)(_, {
-                    children: (0, l.jsx)(x.F, { size: "xs", color: "currentColor", className: v.Kk, colorClass: v.t4 }),
+                    children: (0, l.jsx)(x.F, { size: "xs", color: "currentColor", className: S.Kk, colorClass: S.t4 }),
                 }),
                 (0, l.jsx)(N, { children: (0, l.jsx)(T, { children: e.displayName }) }),
                 (0, l.jsx)(b, { children: e.displayDescription }),
@@ -482,8 +482,8 @@ class ey extends eh {
               });
     }
 }
-class ev extends eh {
-    layoutClass = r()(v.rT, v.Mf);
+class eS extends eh {
+    layoutClass = r()(S.rT, S.Mf);
     renderContent() {
         let { emoji: e, sentinel: t, guild: n } = this.props,
             i = es.Sf.getSetting(),
@@ -491,7 +491,7 @@ class ev extends eh {
                 null != e.id || "" !== e.url
                     ? (0, l.jsx)("img", {
                           alt: "",
-                          className: v.mp,
+                          className: S.mp,
                           src:
                               null != e.id
                                   ? K.Ay.getEmojiURL({
@@ -501,9 +501,9 @@ class ev extends eh {
                                     })
                                   : e.url,
                       })
-                    : (0, l.jsx)("span", { className: v.nT, children: e.surrogates }),
+                    : (0, l.jsx)("span", { className: S.nT, children: e.surrogates }),
             r = null != n ? (0, l.jsx)(b, { children: n.name }) : null;
-        return (0, l.jsxs)(S, {
+        return (0, l.jsxs)(v, {
             children: [
                 (0, l.jsx)(_, { children: s }),
                 (0, l.jsx)(N, { children: (0, l.jsxs)(T, { children: [t, e.name, t] }) }),
@@ -512,8 +512,8 @@ class ev extends eh {
         });
     }
 }
-class eS extends eh {
-    layoutClass = r()(v.rT, v.Mf);
+class ev extends eh {
+    layoutClass = r()(S.rT, S.Mf);
     renderContent() {
         let e,
             { queryMatch: t, renderSticker: n, selected: i, sticker: s } = this.props,
@@ -522,7 +522,7 @@ class eS extends eh {
             (0, ei.FD)(s)
                 ? (e = el.A.getStickerPack(s.pack_id)?.name)
                 : (0, ei.Xw)(s) && (e = et.A.getGuild(s.guild_id)?.name),
-            (0, l.jsxs)(S, {
+            (0, l.jsxs)(v, {
                 children: [
                     (0, l.jsx)(_, { children: n(s, r || !0 === i) }),
                     (0, l.jsxs)(N, {
@@ -538,7 +538,7 @@ class eS extends eh {
     }
 }
 class eN extends eh {
-    layoutClass = v.ju;
+    layoutClass = S.ju;
     renderContent() {
         let { width: e, height: t, src: n } = this.props;
         return (0, l.jsx)("img", { alt: "", src: n, width: e, height: t });
@@ -556,9 +556,9 @@ class eT extends eh {
 }
 class ej extends eh {
     renderContent() {
-        return (0, l.jsxs)(S, {
+        return (0, l.jsxs)(v, {
             children: [
-                (0, l.jsx)(_, { children: (0, l.jsx)($.A, { game: this.props.game, iconClassName: v.Kk }) }),
+                (0, l.jsx)(_, { children: (0, l.jsx)($.A, { game: this.props.game, iconClassName: S.Kk }) }),
                 (0, l.jsx)(N, { children: (0, l.jsx)(T, { children: this.props.game.name }) }),
             ],
         });
@@ -574,9 +574,9 @@ class eb extends i.PureComponent {
     static Channel = eE;
     static Command = eI;
     static NewCommand = ey;
-    static Emoji = ev;
+    static Emoji = eS;
     static GIFIntegration = eN;
-    static Sticker = eS;
+    static Sticker = ev;
     static EmojiUpsell = e_;
     static Soundmoji = eT;
     static Game = ej;
@@ -587,8 +587,8 @@ class eb extends i.PureComponent {
             ? (0, l.jsx)(ed.Provider, {
                   value: { id: s ?? "" },
                   children: (0, l.jsx)("div", {
-                      className: r()(v.nx, t),
-                      children: (0, l.jsx)("div", { className: r()(v.Fv, n), ...a, children: e }),
+                      className: r()(S.nx, t),
+                      children: (0, l.jsx)("div", { className: r()(S.Fv, n), ...a, children: e }),
                   }),
               })
             : null;

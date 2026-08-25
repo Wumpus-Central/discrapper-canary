@@ -34,8 +34,8 @@ function h(e) {
             touchScrollEnabled: S = !0,
             dynamicDataBinding: N,
             listenOnDocumentBody: C,
-            eventCapture: R,
-            assetLoader: O,
+            eventCapture: O,
+            assetLoader: R,
             onLoad: L,
             stateMachine: y,
         } = e,
@@ -58,8 +58,8 @@ function h(e) {
             }),
             isTouchScrollEnabled: S,
             listenOnDocumentBody: C,
-            eventCapture: R,
-            assetLoader: O,
+            eventCapture: O,
+            assetLoader: R,
             onLoad: L,
         });
     r.useImperativeHandle(

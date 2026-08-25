@@ -22,8 +22,8 @@ let p = 15 * _.A.Millis.MINUTE,
     S = 60 * _.A.Millis.MINUTE,
     N = "lastMemoryUsageRestart",
     C = +_.A.Millis.DAY,
-    R = 10 * _.A.Millis.MINUTE,
-    O = 60 * _.A.Millis.MINUTE;
+    O = 10 * _.A.Millis.MINUTE,
+    R = 60 * _.A.Millis.MINUTE;
 function L() {
     return E.isPlatformEmbedded && (0, E.isWindows)();
 }
@@ -75,7 +75,7 @@ class y extends a.A {
                 clearTimeout(this._checkIntervalCPUProfiler),
                 (this._checkIntervalCPUProfiler = setTimeout(() => {
                     100 * Math.random() < 0.5 && this.trackCPUProfiling();
-                }, R)));
+                }, O)));
     }
     async trackNativeHeapPerformanceStats() {
         let e = A.A.getMemoryUsageElectronProcessTypeDetails();
@@ -336,7 +336,7 @@ class y extends a.A {
                 u.default.track(f.HAw.DESKTOP_PERF_CPU_PROFILE, c),
                     (this._checkIntervalCPUProfiler = setTimeout(() => {
                         this.trackCPUProfiling();
-                    }, O));
+                    }, R));
             }, 11e3));
     }
 }

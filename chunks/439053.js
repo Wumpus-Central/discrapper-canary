@@ -1,43 +1,43 @@
-n.d(t, { A: () => O });
-var i = n(477900);
-n(582128);
-var l = n(503698),
-    r = n.n(l),
-    s = n(296704),
-    a = n(17928),
-    o = n(866323),
-    c = n(857250),
-    u = n(97483),
-    d = n(933832),
-    E = n(661531),
-    f = n(834730),
-    m = n(289873),
-    x = n(308528),
-    R = n(775602),
-    g = n(183555),
-    p = n(679492),
-    I = n(518477),
-    A = n(375708),
-    _ = n(988199),
-    h = n(655214);
-function N(e) {
-    let { message: t, userId: n, onClose: l } = e,
-        { trackUserProfileAction: s } = (0, g.NJ)();
-    return (0, i.jsxs)("div", {
-        className: r()(h.oR, _.d6),
+s.d(e, { A: () => f });
+var n = s(477900);
+s(582128);
+var i = s(503698),
+    a = s.n(i),
+    r = s(296704),
+    l = s(17928),
+    o = s(866323),
+    c = s(857250),
+    d = s(97483),
+    m = s(933832),
+    x = s(661531),
+    u = s(834730),
+    E = s(289873),
+    j = s(308528),
+    v = s(775602),
+    h = s(183555),
+    g = s(679492),
+    A = s(518477),
+    N = s(375708),
+    p = s(988199),
+    C = s(655214);
+function y(t) {
+    let { message: e, userId: s, onClose: i } = t,
+        { trackUserProfileAction: r } = (0, h.NJ)();
+    return (0, n.jsxs)("div", {
+        className: a()(C.oR, p.d6),
         children: [
-            (0, i.jsx)(d.CheckmarkLargeIcon, { size: "sm", className: _.RC, color: E.A.colors.STATUS_POSITIVE.css }),
-            (0, i.jsxs)("div", {
-                className: _.Zx,
+            (0, n.jsx)(m.CheckmarkLargeIcon, { size: "sm", className: p.RC, color: x.A.colors.STATUS_POSITIVE.css }),
+            (0, n.jsxs)("div", {
+                className: p.Zx,
                 children: [
-                    (0, i.jsx)(f.E, { color: "text-strong", variant: "text-sm/semibold", children: t }),
-                    (0, i.jsx)(f.E, {
+                    (0, n.jsx)(u.E, { color: "text-strong", variant: "text-sm/semibold", children: e }),
+                    (0, n.jsx)(u.E, {
                         variant: "text-sm/semibold",
-                        children: A.intl.format(A.t.QEW8Mq, {
+                        children: N.intl.format(N.t.QEW8Mq, {
                             onClick: () => {
-                                s({ action: "PRESS_REACT_REPLY_TOAST" }),
-                                    l?.(),
-                                    x.A.openPrivateChannel({ recipientIds: n });
+                                r({ action: "PRESS_REACT_REPLY_TOAST" }),
+                                    i?.(),
+                                    j.A.openPrivateChannel({ recipientIds: s });
                             },
                         }),
                     }),
@@ -46,51 +46,51 @@ function N(e) {
         ],
     });
 }
-function v() {
-    return (0, i.jsxs)("div", {
-        className: r()(h.oR, _.d6),
+function I() {
+    return (0, n.jsxs)("div", {
+        className: a()(C.oR, p.d6),
         children: [
-            (0, i.jsx)(m.y, { type: m.t.SPINNING_CIRCLE_SIMPLE, className: _.RC }),
-            (0, i.jsx)(f.E, { color: "text-strong", variant: "text-sm/semibold", children: A.intl.string(A.t.tcARX0) }),
+            (0, n.jsx)(E.y, { type: E.t.SPINNING_CIRCLE_SIMPLE, className: p.RC }),
+            (0, n.jsx)(u.E, { color: "text-strong", variant: "text-sm/semibold", children: N.intl.string(N.t.tcARX0) }),
         ],
     });
 }
-let O = (e) => {
-    let { userId: t, onClose: n, className: l } = e,
-        { interactionTypeSent: d, showInteractionToast: E } = (0, p.Pq)(),
-        f = d === I.AQ.REPLY ? A.intl.string(A.t.BPaiaa) : A.intl.string(A.t.Ry2EtG),
-        m = (0, a.bG)([R.Ay], () => R.Ay.useReducedMotion),
-        x = (0, o.p)(
-            E,
+let f = (t) => {
+    let { userId: e, onClose: s, className: i } = t,
+        { interactionTypeSent: m, showInteractionToast: x } = (0, g.Pq)(),
+        u = m === A.AQ.REPLY ? N.intl.string(N.t.BPaiaa) : N.intl.string(N.t.Ry2EtG),
+        E = (0, l.bG)([v.Ay], () => v.Ay.useReducedMotion),
+        j = (0, o.p)(
+            x,
             {
-                from: { transform: m ? "translateY(0)" : "translateY(16px)", opacity: 0 },
+                from: { transform: E ? "translateY(0)" : "translateY(16px)", opacity: 0 },
                 enter: { transform: "translateY(0)", opacity: 1 },
-                leave: { transform: m ? "translateY(0)" : "translateY(16px)", opacity: 0 },
+                leave: { transform: E ? "translateY(0)" : "translateY(16px)", opacity: 0 },
                 config: { mass: 1, tension: 500, friction: 18, clamp: !0 },
                 delay: 200,
             },
             "animate-always",
         );
-    return (0, i.jsx)(i.Fragment, {
-        children: x(
-            (e, a) =>
-                a &&
-                (0, i.jsx)(s.animated.div, {
-                    className: r()(_.Jt, l),
-                    style: e,
+    return (0, n.jsx)(n.Fragment, {
+        children: j(
+            (t, l) =>
+                l &&
+                (0, n.jsx)(r.animated.div, {
+                    className: a()(p.Jt, i),
+                    style: t,
                     children:
-                        null != d
-                            ? (0, i.jsx)(c.y, {
+                        null != m
+                            ? (0, n.jsx)(c.y, {
                                   message: "",
-                                  type: u.Ck.CUSTOM,
+                                  type: d.Ck.CUSTOM,
                                   id: "react_reply_success_toast",
-                                  options: { component: (0, i.jsx)(N, { userId: t, message: f, onClose: n }) },
+                                  options: { component: (0, n.jsx)(y, { userId: e, message: u, onClose: s }) },
                               })
-                            : (0, i.jsx)(c.y, {
+                            : (0, n.jsx)(c.y, {
                                   message: "",
-                                  type: u.Ck.CUSTOM,
+                                  type: d.Ck.CUSTOM,
                                   id: "react_reply_loading_toast",
-                                  options: { component: (0, i.jsx)(v, {}) },
+                                  options: { component: (0, n.jsx)(I, {}) },
                               }),
                 }),
         ),

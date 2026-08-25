@@ -25,8 +25,8 @@ function f(e) {
         C = (0, d.Ay)(),
         E = `${n}px`,
         [I, y] = i.useState(!1),
-        [v, S] = i.useState(!1),
-        N = null == g || v;
+        [S, v] = i.useState(!1),
+        N = null == g || S;
     if (null == t || (I && N))
         return (0, l.jsx)(o._, {
             size: "custom",
@@ -49,7 +49,7 @@ function f(e) {
                 src: I && null != g ? g : t,
                 "aria-hidden": x,
                 alt: p ?? (x ? void 0 : h.intl.string(h.t["2B/phM"])),
-                onError: (e) => (I ? S(!0) : y(!0)),
+                onError: (e) => (I ? v(!0) : y(!0)),
             }),
         },
         "content-image",

@@ -20,9 +20,9 @@ var l = n(485845),
     E = n(35277),
     I = n(820066),
     y = n(551483),
-    v = n(652215);
+    S = n(652215);
 n(827669);
-let S = new Set(["applicationCommandOption"]),
+let v = new Set(["applicationCommandOption"]),
     N = new Set([i.n4.ATTACHMENT]),
     _ = new Set(["line", "applicationCommand"]);
 function T(e, t) {
@@ -32,7 +32,7 @@ function T(e, t) {
         isVoid: f,
         onChange: p,
         deleteBackward: g,
-        deleteForward: v,
+        deleteForward: S,
         deleteFragment: T,
     } = e;
     (e.insertData = (l) => {
@@ -65,16 +65,16 @@ function T(e, t) {
         }
         return n(l);
     }),
-        (e.isInline = (e) => !!S.has(e.type) || d(e)),
+        (e.isInline = (e) => !!v.has(e.type) || d(e)),
         (e.isVoid = (e) => !!("applicationCommandOption" === e.type && N.has(e.optionType)) || f(e)),
         (e.deleteBackward = (t) => {
-            O(e, () => g(t));
+            M(e, () => g(t));
         }),
         (e.deleteForward = (t) => {
-            O(e, () => v(t));
+            M(e, () => S(t));
         }),
         (e.deleteFragment = (t) => {
-            O(e, () => T(t));
+            M(e, () => T(t));
         });
     let w = null,
         k = null,
@@ -102,7 +102,7 @@ function T(e, t) {
                                     commandChanged: o,
                                     previousOptionValues: c,
                                 } = e,
-                                { command: d, commandText: f } = M(t),
+                                { command: d, commandText: f } = O(t),
                                 p = n.activeCommand,
                                 g = t.chatInputType.commands?.enabled === !0,
                                 A = null != m.A.getPendingReply(r.id);
@@ -416,19 +416,19 @@ function R(e) {
     }
     p && s.H2(n, m);
 }
-function M(e) {
+function O(e) {
     let t = x.n$(e);
     if (null == t) return { command: null, commandText: null };
     let [n] = t,
         l = n.children[0];
     return I.l5.isText(l) ? { command: n.command, commandText: l.text } : { command: n.command, commandText: null };
 }
-function O(e, t) {
+function M(e, t) {
     let n = x.O7(e)[0];
     t();
     let l = I.ZF.toPoint(e.selection);
     if (null == l || n === x.O7(e)[0]) return;
-    let { command: i, commandText: s } = M(e);
+    let { command: i, commandText: s } = O(e);
     !(null == i || null == s || s.endsWith(" ")) &&
         I.Kh.equals(l, { path: y.fP, offset: i.displayName.length + 1 }) &&
         E.b.insertText(e, " ");
@@ -443,7 +443,7 @@ function L(e, t, n) {
         ? `<#${r}>	`
         : l.type === i.n4.USER || (l.type === i.n4.MENTIONABLE && null != g.default.getUser(r))
           ? `<@${r}>`
-          : l.type === i.n4.ROLE || (l.type === i.n4.MENTIONABLE && null != p.A.getRole(t.guild_id, r ?? v.dJq))
+          : l.type === i.n4.ROLE || (l.type === i.n4.MENTIONABLE && null != p.A.getRole(t.guild_id, r ?? S.dJq))
             ? `<@&${r}>`
             : r;
 }

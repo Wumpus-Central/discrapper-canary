@@ -38,8 +38,8 @@ let g = +h.A.Millis.MINUTE,
     S = {},
     N = "file://",
     C = !1,
-    R = 0,
     O = 0,
+    R = 0,
     L = 0,
     y = [],
     D = [],
@@ -273,9 +273,9 @@ let V = new F(s.h, {
                     null != S[c])
                 ) {
                     let e = k(n, c, M);
-                    e > 0 && w((R += e));
+                    e > 0 && w((O += e));
                     let i = k(n, c, P);
-                    i > 0 && x((O += i));
+                    i > 0 && x((R += i));
                     let r = k(n, c, U);
                     if ((r > 0 && G((L += r)), a === t)) {
                         let e = n[c];

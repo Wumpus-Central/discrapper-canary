@@ -11,8 +11,8 @@ var i = n(477900),
     h = n(538638),
     p = n(558076),
     m = n(544299),
-    f = n(996752),
-    A = n(1195),
+    A = n(996752),
+    f = n(1195),
     x = n(375708),
     g = n(781505);
 function C() {
@@ -55,28 +55,28 @@ function C() {
 }
 function y(e) {
     let { channelId: t, x: n, y, label: j, roomWidth: I } = e,
-        N = (0, s.bG)([d.Ay], () => d.Ay.getVoiceChannelId() === t),
-        v = (0, s.bG)([p.A], () =>
+        E = (0, s.bG)([d.Ay], () => d.Ay.getVoiceChannelId() === t),
+        N = (0, s.bG)([p.A], () =>
             p.A.getRoomUsers(t)
                 .values()
                 .some((e) => e.position?.x === n && e.position?.y === y),
         ),
-        E = (0, s.bG)([c.A], () => c.A.getChannel(t)?.guild_id),
+        v = (0, s.bG)([c.A], () => c.A.getChannel(t)?.guild_id),
         b = l.useCallback(async () => {
-            null != E &&
-                (N
-                    ? (0, u.AQ)(E, t, { user_position: { x: n, y } }).catch((e) => (0, h.b)({ silent: !0 }))
+            null != v &&
+                (E
+                    ? (0, u.AQ)(v, t, { user_position: { x: n, y } }).catch((e) => (0, h.b)({ silent: !0 }))
                     : ((0, u.TJ)({ x: n, y }), (await (0, o.A)({ channelId: t })) || (0, u.Ys)()));
-        }, [N, E, t, n, y]),
+        }, [E, v, t, n, y]),
         T = (0, m.Sb)({
             position: { x: n, y },
-            targetLabel: x.intl.formatToPlainString(A.default.NYm6Cb, { seatLabel: j }),
+            targetLabel: x.intl.formatToPlainString(f.default.NYm6Cb, { seatLabel: j }),
         });
-    if (v || null == E) return null;
-    let { numericAvatarSize: _ } = (0, f.F)(I),
+    if (N || null == v) return null;
+    let { numericAvatarSize: _ } = (0, A.F)(I),
         R = 1.2 * Math.max(_, 24);
     return (0, i.jsx)(r.m, {
-        text: N || null != T ? null : x.intl.string(x.t["96ANUN"]),
+        text: E || null != T ? null : x.intl.string(x.t["96ANUN"]),
         children: (0, i.jsx)(a.D, {
             role: "listitem",
             "aria-label": j,

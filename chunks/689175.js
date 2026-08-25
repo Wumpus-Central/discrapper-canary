@@ -24,8 +24,8 @@ function h(e, t, n) {
                 customTheme: S = !1,
                 scrollbarGutter: N = "stable",
                 style: C,
-                gap: R,
-                experimental_useStack: O,
+                gap: O,
+                experimental_useStack: R,
                 disableFocusRingScope: L = !1,
                 ...y
             } = a,
@@ -38,9 +38,9 @@ function h(e, t, n) {
         );
         let M = (0, _.A)({ scrollbarGutter: N, orientation: T, className: f, scrollerRef: D }),
             P = !1 === N || "vertical" !== T ? void 0 : "stable" === N ? A.x2 : A.GV;
-        return O
+        return R
             ? (0, i.jsx)(l.B, {
-                  gap: R,
+                  gap: O,
                   ref: D,
                   className: s()(f, P, { [e]: !0, [t]: g, [n]: S }),
                   style: (0, E.Ay)(C, T, m),

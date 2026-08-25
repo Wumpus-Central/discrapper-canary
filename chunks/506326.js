@@ -41,16 +41,16 @@ var l,
     E = n(183623),
     I = n(323384),
     y = n(687966),
-    v = n(177953),
-    S = n(432017),
+    S = n(177953),
+    v = n(432017),
     N = n(246913),
     _ = n(291747),
     T = n(417270),
     j = n(768622),
     b = n(369606),
     R = n(825860),
-    M = n(605323),
-    O = n(748562),
+    O = n(605323),
+    M = n(748562),
     L = n(306788),
     w = n(531913),
     k = n(47167),
@@ -150,7 +150,7 @@ function ee(e) {
         ? null
         : (0, i.jsxs)(J, {
               children: [
-                  (0, i.jsx)(v.n, { size: "xxs", color: l }),
+                  (0, i.jsx)(S.n, { size: "xxs", color: l }),
                   (0, i.jsx)(x.E, { variant: "text-xs/normal", color: n, lineClamp: 1, children: a }),
               ],
           });
@@ -163,7 +163,7 @@ function et(e) {
     return (0, i.jsxs)("div", {
         className: K.fC,
         children: [
-            (0, i.jsx)(S.T, { size: "xxs", color: o }),
+            (0, i.jsx)(v.T, { size: "xxs", color: o }),
             (0, i.jsx)(B.A, { entry: t, textColor: a ? "text-feedback-positive" : l, hovered: n }),
         ],
     });
@@ -254,7 +254,7 @@ function eu(e) {
         { location: n } = q();
     if (3 === n) return null;
     let l = U.default.extractTimestamp(t.extra.application_id);
-    return u()().diff(u()(l), "days") > 7 ? null : (0, i.jsx)($, { Icon: M.f, text: W.intl.string(W.t.vYuyWf) });
+    return u()().diff(u()(l), "days") > 7 ? null : (0, i.jsx)($, { Icon: O.f, text: W.intl.string(W.t.vYuyWf) });
 }
 function ec(e) {
     let { entry: t, hovered: n } = e,
@@ -264,7 +264,7 @@ function ec(e) {
     return (0, i.jsxs)("div", {
         className: K.fC,
         children: [
-            (0, i.jsx)(O.U, { size: "xxs", color: o }),
+            (0, i.jsx)(M.U, { size: "xxs", color: o }),
             (0, i.jsx)(B.A, { entry: t, textColor: a ? "text-feedback-positive" : l, hovered: n }),
         ],
     });

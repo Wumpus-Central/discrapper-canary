@@ -48,13 +48,13 @@ let { newline: u, paragraph: _, url: E, link: A, strong: h, u: I, br: f, em: p, 
     S = /\{.+?\}/,
     N = /[~*_]{2}.+?[~*_]{2}|\[.*?\]\(.+?\)|\n\n/,
     C = /!!/,
-    R = /!!/g;
-class O {
+    O = /!!/g;
+class R {
     message;
     hasMarkdown;
     intlMessage;
     constructor(e, t, n) {
-        (this.message = n ? e : e.replace(R, "")),
+        (this.message = n ? e : e.replace(O, "")),
             (this.hasMarkdown = n),
             (this.intlMessage = new (l())(this.message, t));
     }
@@ -96,7 +96,7 @@ function y(e, t) {
     null == i && L(n(759794).A), (e = e.replace(/^\n+|\n+$/g, ""));
     let r = S.test(e),
         a = N.test(e);
-    return r || a ? new O(e, t, a) : e;
+    return r || a ? new R(e, t, a) : e;
 }
 (n.g.IntlMessageFormat = l()),
     n(718931),

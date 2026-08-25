@@ -22,8 +22,8 @@ let I = "M4.10585 5.3837L5.37864 4.11091L11.884 10.61632L10.6112 11.88912L4.1058
     S = [0, 0.1, 0.4, 0.6, 0.9, 1],
     N = [0, 0.1, 0.9, 1],
     C = [0, 0.1, 0.2, 0.5, 0.7, 1],
-    R = [0, 0.3, 0.5, 0.8, 0.9, 1];
-function O() {}
+    O = [0, 0.3, 0.5, 0.8, 0.9, 1];
+function R() {}
 function L(e) {
     let t,
         {
@@ -42,7 +42,7 @@ function L(e) {
         x = r.useRef(null),
         k = r.useRef(null),
         F = w ?? k,
-        V = (0, o.H)({ isSelected: n, onChange: v ?? O, isDisabled: L }),
+        V = (0, o.H)({ isSelected: n, onChange: v ?? R, isDisabled: L }),
         {
             inputProps: B,
             labelProps: H,
@@ -67,13 +67,13 @@ function L(e) {
             {
                 config: { duration: G.enabled ? 200 : 300 },
                 opacity: L ? 0.5 : 1,
-                state: j ? (n ? R[R.length - 2] : C[1]) : +!!n,
+                state: j ? (n ? O[O.length - 2] : C[1]) : +!!n,
             },
             "animate-always",
         );
     function eo(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [...e].reverse();
-        return n ? es.to({ range: R, output: t }) : es.to({ range: C, output: e });
+        return n ? es.to({ range: O, output: t }) : es.to({ range: C, output: e });
     }
     let ed = (0, i.jsx)(l.animated.div, {
         ...(y ? {} : W),

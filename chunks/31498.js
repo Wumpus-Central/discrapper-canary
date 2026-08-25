@@ -156,17 +156,17 @@ class h extends l.EventEmitter {
         m.allowStickers = m.allowStickers ? I : m.allowStickers;
         let y = a.eK.getSetting();
         m.allowSoundmoji = m.allowSoundmoji ? y : m.allowSoundmoji;
-        let { results: v, metadata: S } = A.queryResults(this.props.channel, this.props.guild, C, m, E),
+        let { results: S, metadata: v } = A.queryResults(this.props.channel, this.props.guild, C, m, E),
             N = 0;
-        for (let e of Object.values(v)) Array.isArray(e) && (N += e.length);
+        for (let e of Object.values(S)) Array.isArray(e) && (N += e.length);
         l && C.length > 0 && C !== this.state.query?.queryText && (0, s.AR)(x, m);
-        let _ = !0 === v.isLoading,
+        let _ = !0 === S.isLoading,
             T = this.shouldShow(N, _, A),
             j = this.state.selectedIndex;
         !T || _ ? (j = null) : null != j && j >= N && (j = N - 1),
-            T && !this.state.isVisible && (0, s.uA)(x, this.props.channel, S),
+            T && !this.state.isVisible && (0, s.uA)(x, this.props.channel, v),
             this.setState({
-                query: { type: x, typeInfo: A, queryText: C, results: v, resultCount: N, options: m, isLoading: _ },
+                query: { type: x, typeInfo: A, queryText: C, results: S, resultCount: N, options: m, isLoading: _ },
                 isVisible: T,
                 selectedIndex: j,
                 hadInitialResults: !0,

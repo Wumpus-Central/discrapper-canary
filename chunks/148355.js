@@ -20,8 +20,8 @@ var l = n(477900),
     E = n(256449),
     I = n(194004),
     y = n(68935),
-    v = n(375708),
-    S = n(193833);
+    S = n(375708),
+    v = n(193833);
 function N(e) {
     return e.preventDefault();
 }
@@ -37,41 +37,41 @@ function j(e, t) {
 }
 function b(e) {
     let t = "description" in e && null != e.description ? `${e.name}, ${e.description}` : e.name;
-    return v.intl.formatToPlainString(v.t.rk6pOw, { stickerName: t });
+    return S.intl.formatToPlainString(S.t.rk6pOw, { stickerName: t });
 }
 function R(e) {
     let { children: t, hasError: n, isLoading: i, maskAsset: s, size: a, withLoadingIndicator: o = !0 } = e,
         u = a >= 33;
     return (0, l.jsxs)("div", {
-        className: r()(S.c6, { [S.v2]: n || s }),
+        className: r()(v.c6, { [v.v2]: n || s }),
         style: { height: a, width: a },
         children: [
             n
                 ? (0, l.jsxs)("div", {
-                      className: S.z3,
+                      className: v.z3,
                       children: [
                           (0, l.jsx)(h.d, {
                               size: "custom",
                               width: 20,
                               height: 20,
                               color: "currentColor",
-                              className: S.ik,
+                              className: v.ik,
                           }),
                           u &&
                               (0, l.jsx)(m.E, {
-                                  className: S.kc,
+                                  className: v.kc,
                                   color: "text-default",
                                   variant: "text-sm/normal",
-                                  children: v.intl.string(v.t["tWYWJ+"]),
+                                  children: S.intl.string(S.t["tWYWJ+"]),
                               }),
                       ],
                   })
                 : t,
-            o && i && (0, l.jsx)("div", { className: S.Mz }),
+            o && i && (0, l.jsx)("div", { className: v.Mz }),
         ],
     });
 }
-function M(e) {
+function O(e) {
     let {
             shouldAnimate: t,
             size: s,
@@ -131,7 +131,7 @@ function M(e) {
         : (0, l.jsx)("div", {
               role: "img",
               className: d,
-              "aria-label": I ? v.intl.string(v.t.yEvsK9) : b(r),
+              "aria-label": I ? S.intl.string(S.t.yEvsK9) : b(r),
               ref: m,
               children: (0, l.jsx)(R, {
                   hasError: I,
@@ -139,11 +139,11 @@ function M(e) {
                   maskAsset: h,
                   size: s,
                   withLoadingIndicator: f,
-                  children: j((0, l.jsx)("canvas", { className: S.ex, ref: g }), r),
+                  children: j((0, l.jsx)("canvas", { className: v.ex, ref: g }), r),
               }),
           });
 }
-let O = (e) => {
+let M = (e) => {
         let {
                 shouldAnimate: t,
                 sticker: n,
@@ -160,7 +160,7 @@ let O = (e) => {
             [A, C] = i.useState(!1),
             E = i.useRef(null),
             I = i.useRef(null),
-            v = m ?? (0, y.zg)(n, { isPreview: !t || !f || !s, size: a }),
+            S = m ?? (0, y.zg)(n, { isPreview: !t || !f || !s, size: a }),
             _ = i.useCallback(() => {
                 x(!1);
             }, []),
@@ -176,7 +176,7 @@ let O = (e) => {
         i.useLayoutEffect(() => {
             I.current?.complete === !0 && x(!1);
         }, []),
-        null == v)
+        null == S)
             ? null
             : (0, l.jsx)(d.L, {
                   innerRef: c,
@@ -184,7 +184,7 @@ let O = (e) => {
                   onChange: p,
                   threshold: 0.7,
                   children: (0, l.jsx)("div", {
-                      className: r()(o, S.__invalid_pngImageWrapper),
+                      className: r()(o, v.__invalid_pngImageWrapper),
                       ref: c,
                       children: (0, l.jsx)(R, {
                           hasError: A,
@@ -194,9 +194,9 @@ let O = (e) => {
                           withLoadingIndicator: h,
                           children: j(
                               (0, l.jsx)("img", {
-                                  className: S.r3,
+                                  className: v.r3,
                                   alt: b(n),
-                                  src: v,
+                                  src: S,
                                   draggable: !1,
                                   onError: T,
                                   onLoad: _,
@@ -234,20 +234,20 @@ let O = (e) => {
                 (e, i) =>
                     i &&
                     (0, l.jsx)(A.nE, {
-                        className: S.O2,
+                        className: v.O2,
                         fixed: !0,
                         align: "center",
                         position: "center",
                         targetRef: a,
                         children: () =>
                             (0, l.jsxs)("div", {
-                                className: S._7,
+                                className: v._7,
                                 children: [
                                     (0, l.jsx)(u.animated.div, {
-                                        className: S.tm,
+                                        className: v.tm,
                                         style: e,
                                         children: (0, l.jsx)(w, {
-                                            className: S.__invalid_overlaySticker,
+                                            className: v.__invalid_overlaySticker,
                                             disableAnimation: t,
                                             enlargeOnInteraction: !1,
                                             isInteracting: r,
@@ -259,11 +259,11 @@ let O = (e) => {
                                     }),
                                     s &&
                                         (0, l.jsx)(u.animated.div, {
-                                            className: S.av,
+                                            className: v.av,
                                             style: y,
                                             children: (0, l.jsx)(m.E, {
                                                 variant: "text-sm/medium",
-                                                className: S.FZ,
+                                                className: v.FZ,
                                                 children: d.name,
                                             }),
                                         }),
@@ -293,7 +293,7 @@ function w(e) {
         x = (0, E.Th)(t) && !n,
         A = i.useRef(null);
     if (null == c) return null;
-    let y = c.format_type === I.TG.LOTTIE ? M : O;
+    let y = c.format_type === I.TG.LOTTIE ? O : M;
     return (0, l.jsxs)(
         i.Fragment,
         {

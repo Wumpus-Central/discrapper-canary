@@ -242,16 +242,16 @@ function I() {
     });
 }
 var y = n(462180),
-    v = n(97808),
-    S = n(778712),
+    S = n(97808),
+    v = n(778712),
     N = n(571694),
     _ = n(548118),
     T = n(366811),
     j = n(734057),
     b = n(71393),
     R = n(287809),
-    M = n(486020),
-    O = n(316386);
+    O = n(486020),
+    M = n(316386);
 function L() {
     let { guildId: e, channelId: t } = (0, T.A)((e) => {
             let { guildId: t, channelId: n } = e;
@@ -261,23 +261,23 @@ function L() {
         i = (0, c.bG)([j.A], () => (null == n ? j.A.getChannel(t) : null)),
         s = (0, c.bG)([R.default], () => R.default.getCurrentUser()),
         r = null != i ? (0, N.Y)(i) : null,
-        a = null != s ? s.getAvatarURL(e, 80) : M.vI["0"],
-        o = (0, l.jsx)(v.eu, { src: a, "aria-hidden": !0, size: S._3.SIZE_80, className: O.HT }),
+        a = null != s ? s.getAvatarURL(e, 80) : O.vI["0"],
+        o = (0, l.jsx)(S.eu, { src: a, "aria-hidden": !0, size: v._3.SIZE_80, className: M.HT }),
         u = null;
     return (
         (u =
             null != n
                 ? (0, l.jsx)(_.Ay, { guild: n })
                 : null != r
-                  ? (0, l.jsx)(v.eu, { "aria-hidden": !0, src: r, size: S._3.SIZE_80, className: O.HT })
+                  ? (0, l.jsx)(S.eu, { "aria-hidden": !0, src: r, size: v._3.SIZE_80, className: M.HT })
                   : o),
         (0, l.jsxs)("div", {
-            className: O.kL,
+            className: M.kL,
             children: [
-                (0, l.jsx)("div", { className: O.$H, children: o }),
-                (0, l.jsx)("div", { className: O.XN, children: u }),
+                (0, l.jsx)("div", { className: M.$H, children: o }),
+                (0, l.jsx)("div", { className: M.XN, children: u }),
                 (0, l.jsx)("svg", {
-                    className: O.bm,
+                    className: M.bm,
                     xmlns: "http://www.w3.org/2000/svg",
                     width: "156",
                     height: "70",

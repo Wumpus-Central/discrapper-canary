@@ -45,11 +45,11 @@ function f(e) {
     let C = r.useCallback(() => {
             null != S.current && S.current(), null != l && l();
         }, [S, l]),
-        R = null != a;
+        O = null != a;
     return (
         r.useLayoutEffect(() => {
             let e = new ResizeObserver(() => {
-                    if (R) return void p(!0);
+                    if (O) return void p(!0);
                     let e = T?.current?.getScrollerNode() ?? null;
                     if (null == e || g?.current == null) return;
                     let t = e.getBoundingClientRect();
@@ -57,7 +57,7 @@ function f(e) {
                 }),
                 t = T?.current?.getScrollerNode() ?? null;
             return null != t && e.observe(t), g?.current != null && e.observe(g.current), () => e.disconnect();
-        }, [R]),
+        }, [O]),
         (0, i.jsxs)(c.F, {
             children: [
                 (0, i.jsx)("div", { className: s()(A.bodySpacerTop, { [A.bodySpacerTopBorder]: f && null == t }) }),

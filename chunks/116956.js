@@ -80,8 +80,8 @@ var f = n(915725),
     S = n(929921),
     N = n(280450),
     C = n(734057),
-    R = n(877717),
-    O = n(453028),
+    O = n(877717),
+    R = n(453028),
     L = n(544180),
     y = n(763827),
     D = n(873985),
@@ -343,7 +343,7 @@ class H extends A.A {
                 e === P.S7L.RTC_CONNECTED &&
                     (this._connection?.on(
                         d.yq.ScreenshareFinish,
-                        (e, t, n, i, r, a, s, l, o, d, c, u, _, E, A, h, I, f, p, T, S, N, C, R, O, L) => {
+                        (e, t, n, i, r, a, s, l, o, d, c, u, _, E, A, h, I, f, p, T, S, N, C, O, R, L) => {
                             let y = this.analyticsContext.getStreamApplicationFromHistory(
                                 this.screenshareFinishedCount,
                             );
@@ -373,8 +373,8 @@ class H extends A.A {
                                         (h ?? 0) +
                                         (T ?? 0) +
                                         (p ?? 0) +
-                                        (O ?? 0) +
-                                        (R ?? 0);
+                                        (R ?? 0) +
+                                        (O ?? 0);
                                 v.default.track(P.HAw.SCREENSHARE_FINISHED, {
                                     screenshare_frames: e,
                                     videohook_frames: t,
@@ -413,8 +413,8 @@ class H extends A.A {
                                     hdr_frames: N,
                                     discord_is_elevated: b.A.getDiscordIsElevated(),
                                     target_window_elevated: C,
-                                    pipewire_frames: R,
-                                    x11_frames: O,
+                                    pipewire_frames: O,
+                                    x11_frames: R,
                                     videohook_backend: L,
                                     ...g,
                                 });
@@ -422,7 +422,7 @@ class H extends A.A {
                         },
                     ),
                     this._connection?.on(d.yq.SoundshareAttached, () => {
-                        let e = O.Ay.getGoLiveSource();
+                        let e = R.Ay.getGoLiveSource();
                         e?.desktopSource != null &&
                             v.default.track(P.HAw.SOUNDSHARE_ATTACHED, {
                                 ...(0, x.A)(e?.desktopSource),
@@ -431,21 +431,21 @@ class H extends A.A {
                     }),
                     this._connection?.on(d.yq.SoundshareFailed, (e) => {
                         let { failureCode: t, failureReason: n, willRetry: i } = e,
-                            r = O.Ay.getGoLiveSource();
+                            r = R.Ay.getGoLiveSource();
                         this.reportSoundshareFailure(r?.desktopSource, t, n, i);
                     }),
                     this._connection?.on(d.yq.SoundshareSpeaking, () => {
-                        let e = O.Ay.getGoLiveSource();
+                        let e = R.Ay.getGoLiveSource();
                         e?.desktopSource != null &&
                             (v.default.track(P.HAw.SOUNDSHARE_TRANSMITTING, {
                                 ...(0, x.A)(e?.desktopSource),
                                 ...this.getSoundshareAnalyticsProperties(),
                             }),
-                            null != R.A.getHookError(P.LU7.SOUND) &&
+                            null != O.A.getHookError(P.LU7.SOUND) &&
                                 c.h.dispatch({ type: "MEDIA_ENGINE_SOUNDSHARE_TRANSMITTING" }));
                     }),
                     this._connection?.on(d.yq.SoundshareTrace, (e) => {
-                        let t = O.Ay.getGoLiveSource();
+                        let t = R.Ay.getGoLiveSource();
                         switch ((this.soundshareStats.traceEvent(t?.desktopSource?.soundshareSession, e), e.type)) {
                             case "soundshare_attach_requested":
                                 this.errorTimer.start(V, () => {
@@ -631,7 +631,7 @@ class H extends A.A {
     getSoundshareAnalyticsProperties() {
         return {
             rtc_connection_id: this.getRTCConnectionId(),
-            soundshare_experimental: O.Ay.getExperimentalSoundshare(),
+            soundshare_experimental: R.Ay.getExperimentalSoundshare(),
         };
     }
     trackVideoStartStats() {
@@ -676,9 +676,9 @@ class H extends A.A {
                     reason: e,
                     max_viewers: this.analyticsContext.maxViewers,
                     hostname: this.hostname,
-                    hardware_enabled: O.Ay.getHardwareEncoding(),
+                    hardware_enabled: R.Ay.getHardwareEncoding(),
                     device_performance_class: this.isOwner ? (0, T.A)() : null,
-                    soundshare_experimental: O.Ay.getExperimentalSoundshare(),
+                    soundshare_experimental: R.Ay.getExperimentalSoundshare(),
                     quality_preset: S.A.getState().preset,
                     discord_is_elevated: b.A.getDiscordIsElevated(),
                 });
@@ -701,7 +701,7 @@ class H extends A.A {
                         reason: e,
                         max_viewers: this.analyticsContext.maxViewers,
                         hostname: this.hostname,
-                        hardware_enabled: O.Ay.getHardwareEncoding(),
+                        hardware_enabled: R.Ay.getHardwareEncoding(),
                         device_performance_class: this.isOwner ? (0, T.A)() : null,
                     });
             });
@@ -736,7 +736,7 @@ function ei() {
 }
 class er extends o.Ay.Store {
     initialize() {
-        this.waitFor(N.default, O.Ay, y.A, u.Ay);
+        this.waitFor(N.default, R.Ay, y.A, u.Ay);
     }
     static displayName = "StreamRTCConnectionStore";
     getRTCConnections() {
@@ -749,7 +749,7 @@ class er extends o.Ay.Store {
         return et[e];
     }
     getQuality(e) {
-        return (0, W.A)(O.Ay) && null != e ? (et[e]?.quality ?? P.bFR.UNKNOWN) : P.bFR.UNKNOWN;
+        return (0, W.A)(R.Ay) && null != e ? (et[e]?.quality ?? P.bFR.UNKNOWN) : P.bFR.UNKNOWN;
     }
     getMediaSessionId(e) {
         if (null == e) return null;
@@ -807,7 +807,7 @@ class er extends o.Ay.Store {
 }
 let ea = new er(
     c.h,
-    !O.Ay.isSupported() || __OVERLAY__
+    !R.Ay.isSupported() || __OVERLAY__
         ? {}
         : {
               CONNECTION_OPEN: function (e) {

@@ -20,16 +20,16 @@ var l,
     E = n(967198),
     I = n(287809),
     y = n(824744),
-    v = n(158045),
-    S = n(926972),
+    S = n(158045),
+    v = n(926972),
     N = n(885386),
     _ = n(862482),
     T = n(821609),
     j = n(66834),
     b = n(624793),
     R = n(639245),
-    M = n(966245),
-    O = n(796774),
+    O = n(966245),
+    M = n(796774),
     L = n(807348),
     w = n(805945),
     k = n(71393),
@@ -85,13 +85,13 @@ function W(e) {
         g = (0, o.bG)([k.A], () => k.A.getGuild(a.guildId)),
         x = !p && null != g,
         [A, C] = s.useState(),
-        E = (0, S.tj)({ location: "SoundmojiGuildInfo" }),
+        E = (0, v.tj)({ location: "SoundmojiGuildInfo" }),
         y = p || x || null != A || !E,
         [N, _] = s.useState(!y);
     s.useEffect(() => {
         y ||
             (_(!0),
-            (0, O.nh)(a.soundId, a.guildId)
+            (0, M.nh)(a.soundId, a.guildId)
                 .then((e) => {
                     C(e);
                 })
@@ -101,8 +101,8 @@ function W(e) {
     }, [f, y, a.guildId, a.soundId]);
     let { buttonType: T, description: j } =
             ((t = "0" === a.guildId),
-            (n = (0, o.bG)([I.default], () => v.Ay.canUseSoundboardEverywhere(I.default.getCurrentUser()))),
-            (l = (0, S.tj)({ location: "useSoundmojiGuildInfoData" })),
+            (n = (0, o.bG)([I.default], () => S.Ay.canUseSoundboardEverywhere(I.default.getCurrentUser()))),
+            (l = (0, v.tj)({ location: "useSoundmojiGuildInfoData" })),
             (r = a.guildId !== c?.guild_id),
             {
                 buttonType: s.useMemo(() => (t || !l ? 2 : n ? (x || null == A ? 2 : 0) : 1), [t, n, l, x, A]),
@@ -153,11 +153,11 @@ function W(e) {
             [g, x, A],
         );
     return V
-        ? (0, i.jsx)(M.Y0, {})
+        ? (0, i.jsx)(O.Y0, {})
         : (0, i.jsxs)("div", {
               className: H.op,
               children: [
-                  (0, i.jsxs)(M.Uq, {
+                  (0, i.jsxs)(O.Uq, {
                       children: [
                           (0, i.jsxs)("div", {
                               className: H.g4,
@@ -223,8 +223,8 @@ function z() {
 }
 function Z(e) {
     let { sound: t, forceShowBetaLabel: n = !1 } = e,
-        l = (0, S.tj)({ location: "SoundmojiBanner" }),
-        s = (0, o.bG)([I.default], () => v.Ay.canUseSoundboardEverywhere(I.default.getCurrentUser())),
+        l = (0, v.tj)({ location: "SoundmojiBanner" }),
+        s = (0, o.bG)([I.default], () => S.Ay.canUseSoundboardEverywhere(I.default.getCurrentUser())),
         r = (0, o.bG)([E.A], () => E.A.getGuildId());
     return n || s || "0" === t.guildId || t.guildId === r || !l
         ? (0, i.jsx)(m.Lp, { text: "BETA", color: u.A.colors.BACKGROUND_BRAND.css, className: H.aZ })

@@ -3,11 +3,11 @@ n.d(t, {
     $r: () => L,
     Lg: () => y,
     P0: () => b,
-    Rh: () => O,
+    Rh: () => R,
     Vq: () => m,
     Wu: () => N,
     YM: () => D,
-    _x: () => R,
+    _x: () => O,
     be: () => U,
     kx: () => C,
     n$: () => g,
@@ -94,13 +94,13 @@ async function C(e, t, n) {
             .map((e) => ({ user_id: e.data.user_id, content_id: e.data.content_id }));
     await E.A.fetchHydrated(t, n, { messageItems: [...s, ...l], activityItems: o });
 }
-async function R() {
+async function O() {
     let e = I.A.getUnreadDisplayItems(),
         t = I.A.getReadDisplayItems(),
         n = I.A.getNextIndexToHydrate();
     await C([...e, ...t], n, n + f.w5);
 }
-function O(e, t) {
+function R(e, t) {
     return {
         ...t,
         message: (0, l.rh)(e.message),

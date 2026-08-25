@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => R, x: () => S });
+n.d(t, { A: () => O, x: () => S });
 var i = n(435558),
     r = n.n(i),
     a = n(17928),
@@ -62,7 +62,7 @@ class C extends a.Ay.DeviceSettingsStore {
         return m;
     }
 }
-let R = new C(s.h, {
+let O = new C(s.h, {
     MEDIA_ENGINE_DEVICES: function (e) {
         let { inputDevices: t, outputDevices: n } = e,
             i = {};

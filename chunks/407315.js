@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Ay: () => S, Q9: () => k, W: () => w }), n(321073);
+n.d(t, { Ay: () => v, Q9: () => k, W: () => w }), n(321073);
 var l = n(635377),
     i = n.n(l),
     s = n(181370),
@@ -20,8 +20,8 @@ let C = new a.Vy("withCodeBlocks"),
     E = new Set(["line"]),
     I = /^[a-z0-9_+\-.#]+$/i,
     y = null,
-    v = null;
-function S(e) {
+    S = null;
+function v(e) {
     let { onChange: t } = e,
         l = null,
         i = !1,
@@ -56,16 +56,16 @@ function S(e) {
                             null == y &&
                             !i &&
                             ((i = !0),
-                            (null == v &&
-                                (v = Promise.all([n.e("818449"), n.e("175134")])
+                            (null == S &&
+                                (S = Promise.all([n.e("818449"), n.e("175134")])
                                     .then(n.bind(n, 981776))
                                     .then((e) => {
                                         y = e.default;
                                     })
                                     .catch((e) => {
-                                        throw ((v = null), e);
+                                        throw ((S = null), e);
                                     })),
-                            v)
+                            S)
                                 .then(() => {
                                     (l = null),
                                         m.o.withoutSaving(e, () => {
@@ -164,9 +164,9 @@ function N(e, t) {
                                     let o = (0, u.F)(a, l);
                                     if (null == o) return i?.(a), null;
                                     let d = r()(`${a}\0${e}\0${o.backend}`),
-                                        m = M.get(d);
+                                        m = O.get(d);
                                     if (null != m && m.length === n) return m;
-                                    if (O.has(d)) return null;
+                                    if (M.has(d)) return null;
                                     for (let t of e.split("\n")) if (t.length > 1e3) return null;
                                     let f = e.endsWith("\n")
                                         ? e
@@ -177,7 +177,7 @@ function N(e, t) {
                                         if (((s = e.html), null != i)) for (let t of e.missingInjections) i(t);
                                     } catch (e) {
                                         return (
-                                            O.set(d, !0),
+                                            M.set(d, !0),
                                             h.A.captureException(e instanceof Error ? e : Error(String(e)), {
                                                 tags: { app_context: "syntax_highlighting" },
                                                 extra: { lang: a, surface: "editor" },
@@ -220,7 +220,7 @@ function N(e, t) {
                                                 );
                                             })(p[e]),
                                         );
-                                    return M.set(d, g), g;
+                                    return O.set(d, g), g;
                                 })(e, t, n.length, l, i);
                                 if (null != s) for (let e = 0; e < n.length; e++) n[e].hljsTypes = s[e];
                                 else for (let e = 0; e < n.length; e++) n[e].hljsTypes = [];
@@ -303,8 +303,8 @@ let _ = /(?:<span class="([^"]*)">)|(?:<\/span>)/g,
 for (let [e, t] of Object.entries(A)) e.startsWith("a-") && null != t && j.set(e, t);
 let b = { max: 1 / 0, maxAge: +d.A.Millis.MINUTE, updateAgeOnGet: !0 },
     R = new (i())(b),
-    M = new (i())(b),
-    O = new (i())(b);
+    O = new (i())(b),
+    M = new (i())(b);
 function L(e) {
     return e
         .replace(/&amp;/g, "&")
@@ -333,5 +333,5 @@ function k(e) {
     return w(e, t);
 }
 (0, u.Q4)(() => {
-    M.reset();
+    O.reset();
 });

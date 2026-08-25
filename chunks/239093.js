@@ -12,9 +12,9 @@ n.d(t, {
     d$: () => _,
     g0: () => h,
     nY: () => S,
-    qN: () => O,
+    qN: () => R,
     ti: () => D,
-    w$: () => R,
+    w$: () => O,
     wQ: () => L,
     xw: () => A,
     yN: () => N,
@@ -102,12 +102,12 @@ let C = {
     "confirm-submission": { next: "request-sent", prev: "collect-signal" },
     "request-sent": { next: null, prev: null },
 };
-var R =
+var O =
         (((o = {})[(o.USER = 1)] = "USER"),
         (o[(o.GUILD_OWNER = 2)] = "GUILD_OWNER"),
         (o[(o.GUILD_MEMBER = 3)] = "GUILD_MEMBER"),
         o),
-    O =
+    R =
         (((d = {}).LOADING = "loading"),
         (d.ERROR = "error"),
         (d.SUCCESS = "success"),

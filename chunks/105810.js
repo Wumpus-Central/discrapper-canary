@@ -100,7 +100,7 @@ function C(e) {
         { result: i }
     );
 }
-function R(e, t, n) {
+function O(e, t, n) {
     let i = S(e);
     if (null == i) return g;
     let r = { iframeId: i, answers: t ?? {}, recorded: [] };
@@ -117,7 +117,7 @@ function R(e, t, n) {
         }
     );
 }
-var O = n(948230),
+var R = n(948230),
     L = n(805332),
     y = n(796036);
 function D(e) {
@@ -146,7 +146,7 @@ async function v(e, t) {
             message:
                 "the phone/desktop lens is the Conjure builder header's, and this preview is not the builder screen's \u2014 open the app preview there to switch it",
         };
-    (0, O.GG)("phone" === t);
+    (0, R.GG)("phone" === t);
     let i = Date.now() + 2e3;
     for (;;) {
         var r;
@@ -207,7 +207,7 @@ async function U(e, t, n, i) {
             let t = await v(e, n.viewport);
             if (!t.ok) return { status: "failed", message: t.message ?? "the preview lens did not change" };
         }
-        let d = R(r, n.native);
+        let d = O(r, n.native);
         try {
             var a, s, l;
             let i,
@@ -301,7 +301,7 @@ let k = {
             })(t),
         ),
             G("opening the operation session", () => {
-                let n = R(t, void 0, { beneathBatches: !0 }),
+                let n = O(t, void 0, { beneathBatches: !0 }),
                     i = (0, E.FQ)(() => {
                         (0, E.RW)(e) || x(e);
                     });

@@ -20,16 +20,16 @@ var l = n(477900),
     E = n(734057),
     I = n(696451),
     y = n(71393),
-    v = n(225142),
-    S = n(374084),
+    S = n(225142),
+    v = n(374084),
     N = n(101611),
     _ = n(473529),
     T = n(111487),
     j = n(652215),
     b = n(375708),
     R = n(160639);
-let M = { compact: 58, cozy: 74, default: 64 };
-function O(e) {
+let O = { compact: 58, cozy: 74, default: 64 };
+function M(e) {
     let { action: t } = e,
         n = (0, o.bG)([E.A], () => E.A.getChannel(t.channelId)),
         i = (0, x.Ay)(n, !0);
@@ -62,9 +62,9 @@ function w(e) {
         { channelAction: c, completed: x } = (0, N.j4)(t, n),
         A = (0, N.Lr)(t, c?.channelId),
         E = (0, o.bG)([g.Ay], () => g.Ay.useReducedMotion),
-        I = c?.actionType === S.NewMemberActionTypes.VIEW,
+        I = c?.actionType === v.NewMemberActionTypes.VIEW,
         y = (0, d.r)(h.A.colors.WHITE),
-        _ = M[(0, C.C)()],
+        _ = O[(0, C.C)()],
         [T, j] = i.useState(!1),
         [w] = i.useState(new a.A.Value(0)),
         [k] = i.useState(new a.A.Value(0));
@@ -79,7 +79,7 @@ function w(e) {
             x && T && a.A.timing(k, { toValue: 1, duration: 350 * !E, easing: a.A.Easing.quad, delay: 400 }).start();
         }, [x, k, T, E]);
     let P = i.useCallback(() => {
-        null != A && (0, v.qo)(t, A.channelId);
+        null != A && (0, S.qo)(t, A.channelId);
     }, [t, A]);
     return null == c || (I && !T)
         ? null
@@ -106,7 +106,7 @@ function w(e) {
                                                 color: "text-strong",
                                                 children: b.intl.format(b.t["/beONw"], { step: A.title }),
                                             }),
-                                            (0, l.jsx)(O, { action: A }),
+                                            (0, l.jsx)(M, { action: A }),
                                         ],
                                     }),
                                     (0, l.jsx)("div", {

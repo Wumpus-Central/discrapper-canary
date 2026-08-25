@@ -20,19 +20,19 @@ var l = n(477900),
     E = n(741394),
     I = n(355622),
     y = n(408018),
-    v = n(579940),
-    S = n(734057),
+    S = n(579940),
+    v = n(734057),
     N = n(573163),
     _ = n(531685),
     T = n(365971);
 function j(e) {
     let t = N.Ay.getChannelIdsForWindowId(e)[0];
-    return null == t ? null : (S.A.getChannel(t) ?? null);
+    return null == t ? null : (v.A.getChannel(t) ?? null);
 }
 var b = n(826745),
     R = n(442433),
-    M = n(721768),
-    O = n(723702),
+    O = n(721768),
+    M = n(723702),
     L = n(677134),
     w = n(652215),
     k = n(650583);
@@ -46,7 +46,7 @@ class D extends i.PureComponent {
             this._ref?.setSelection(e.length, e.length);
         }),
             null != p.A.getActiveCommand(this.props.channel.id) &&
-                M.Gf({ channelId: this.props.channel.id, command: null, section: null });
+                O.Gf({ channelId: this.props.channel.id, command: null, section: null });
     }
     componentDidUpdate(e, t) {
         this.state.nextSelection !== t.nextSelection &&
@@ -233,7 +233,7 @@ class D extends i.PureComponent {
         this.props.maybeShowAutocomplete();
     };
     handleContextMenu = (e) => {
-        O.isPlatformEmbedded &&
+        M.isPlatformEmbedded &&
             (0, R.L3)(
                 e,
                 async () => {
@@ -410,16 +410,16 @@ let ex = i.forwardRef(function (e, t) {
             id: C,
             disabled: E,
             submitting: y,
-            placeholder: v,
-            required: S,
+            placeholder: S,
+            required: v,
             textAreaPaddingClassName: N,
             onChange: _,
             onPaste: T,
             onResize: j,
             onFocus: b,
             onBlur: R,
-            onKeyDown: M,
-            onKeyUp: O,
+            onKeyDown: O,
+            onKeyUp: M,
             onTab: L,
             onEnter: P,
             onSpace: D,
@@ -433,17 +433,17 @@ let ex = i.forwardRef(function (e, t) {
             disableAutoFocus: eE,
             disableEnterToSubmit: eI,
             allowNewLines: ey,
-            "aria-owns": ev,
-            "aria-expanded": eS,
+            "aria-owns": eS,
+            "aria-expanded": ev,
             "aria-haspopup": eN,
             "aria-activedescendant": e_,
             "aria-controls": eT,
             "aria-invalid": ej,
             "aria-describedby": eb,
             "aria-labelledby": eR,
-            "aria-autocomplete": eM,
+            "aria-autocomplete": eO,
         } = e,
-        eO = i.useRef(null),
+        eM = i.useRef(null),
         eL = i.useRef(null),
         ew = i.useRef(!0),
         ek = i.useRef(!0),
@@ -697,15 +697,15 @@ let ex = i.forwardRef(function (e, t) {
             let e = s.current;
             if (null == e) return;
             let t = e.offsetHeight;
-            n.current !== t && (null != eO.current && (eO.current.style.height = `${t}px`), (n.current = t), j?.(t));
-        }, [eO, j])),
+            n.current !== t && (null != eM.current && (eM.current.style.height = `${t}px`), (n.current = t), j?.(t));
+        }, [eM, j])),
         (0, ei.g)(s, o, [o, eV, j], er),
         i.useLayoutEffect(() => {
             let e = $.rL.findDocumentOrShadowRoot(eV).defaultView;
             if (e?.ResizeObserver == null) return;
             let t = ea(eV);
             null != t && ((n.current = t.offsetHeight), j?.(n.current));
-        }, [eO, eV, j]);
+        }, [eM, eV, j]);
     let { handleKeyDown: eB, handleKeyUp: eW } = (function (e) {
             let {
                 editor: t,
@@ -788,8 +788,8 @@ let ex = i.forwardRef(function (e, t) {
             editor: eV,
             channel: f,
             disableEnterToSubmit: eI,
-            onKeyDown: M,
-            onKeyUp: O,
+            onKeyDown: O,
+            onKeyUp: M,
             onTab: L,
             onEnter: P,
             onSpace: D,
@@ -930,7 +930,7 @@ let ex = i.forwardRef(function (e, t) {
         children: [
             (0, l.jsx)(A.EG, { event: w.jej.GLOBAL_CLIPBOARD_PASTE, handler: ez }),
             (0, l.jsx)("div", {
-                ref: eO,
+                ref: eM,
                 className: r()(g, eg.pC),
                 children: (0, l.jsx)(H.A, {
                     id: C,
@@ -938,7 +938,7 @@ let ex = i.forwardRef(function (e, t) {
                     channelId: f.id,
                     guildId: f.guild_id,
                     className: r()(eg.gf, N),
-                    placeholder: v,
+                    placeholder: S,
                     readOnly: eP,
                     spellCheck: eA,
                     autoFocus: !eE,
@@ -953,16 +953,16 @@ let ex = i.forwardRef(function (e, t) {
                     decorate: eq,
                     renderExtraElement: eJ,
                     renderExtraLeaf: e$,
-                    "aria-owns": ev,
+                    "aria-owns": eS,
                     "aria-haspopup": eN,
-                    "aria-expanded": eS,
+                    "aria-expanded": ev,
                     "aria-activedescendant": e_,
                     "aria-controls": eT,
                     "aria-labelledby": eR,
                     "aria-describedby": eb,
                     "aria-invalid": ej,
-                    "aria-autocomplete": eM,
-                    "aria-required": S,
+                    "aria-autocomplete": eO,
+                    "aria-required": v,
                 }),
             }),
         ],
@@ -981,12 +981,12 @@ class eE extends i.Component {
     _cachedEditorWindow = null;
     constructor(e) {
         super(e),
-            (this._unsubscribe = v.Y0.subscribe((e) => {
+            (this._unsubscribe = S.Y0.subscribe((e) => {
                 requestAnimationFrame(() => {
                     this.setState({ popup: e });
                 });
             })),
-            (this.state = { focused: !1, submitting: !1, popup: v.Y0.getState() });
+            (this.state = { focused: !1, submitting: !1, popup: S.Y0.getState() });
     }
     _getEditorWindow() {
         let e = this.ref?.current?.getSlateEditor?.()?.windowContext?.renderWindow;
@@ -1146,15 +1146,15 @@ class eE extends i.Component {
                 className: x,
                 id: C,
                 required: E,
-                maxCharacterCount: v,
-                allowNewLines: S,
+                maxCharacterCount: S,
+                allowNewLines: v,
                 "aria-describedby": N,
                 "aria-labelledby": _,
                 accessibilityLabel: T,
                 showValueWhenDisabled: j,
             } = this.props,
             { submitting: b, popup: R } = this.state,
-            M = {
+            O = {
                 channel: d,
                 className: r()(x, eA.Tg, { [eA.w5]: m, [eA.Rr]: n || b }),
                 id: C,
@@ -1173,7 +1173,7 @@ class eE extends i.Component {
                 moveSelection: this.handleMoveSelection,
                 maybeShowAutocomplete: this.maybeShowAutocomplete,
                 hideAutocomplete: this.hideAutocomplete,
-                allowNewLines: S,
+                allowNewLines: v,
                 onChange: i,
                 onResize: a,
                 onKeyDown: s,
@@ -1192,27 +1192,27 @@ class eE extends i.Component {
                 "aria-haspopup": "listbox",
                 "aria-expanded": null !== R.id || void 0,
                 "aria-activedescendant": R.activeDescendant ?? void 0,
-                "aria-invalid": e.length > v,
+                "aria-invalid": e.length > S,
                 "aria-describedby": N,
                 "aria-labelledby": _,
                 "aria-autocomplete": "list",
             },
-            O = m
+            M = m
                 ? (0, l.jsx)(ex, {
                       ref: this.ref,
-                      ...M,
+                      ...O,
                       type: h,
                       value: n && !j ? (0, y.x7)("") : t,
                       canUseCommands: h.commands?.enabled,
                       canOnlyUseTextCommands: g,
                       onSubmitFailure: c,
                   })
-                : (0, l.jsx)(D, { ref: this.ref, ...M, value: n && !j ? "" : e });
+                : (0, l.jsx)(D, { ref: this.ref, ...O, value: n && !j ? "" : e });
         return (0, l.jsxs)(l.Fragment, {
             children: [
                 (0, l.jsx)(A.EG, { event: w.jej.INSERT_TEXT, handler: this.handleInsertText }),
                 (0, l.jsx)(A.EG, { event: w.jej.CLEAR_TEXT, handler: this.handleClearText }),
-                O,
+                M,
             ],
         });
     }
