@@ -11,7 +11,7 @@ var i = n(477900),
     u = n(335180),
     _ = n(269073),
     E = n(85109),
-    A = n(566908),
+    A = n(674470),
     h = n(594061),
     I = n(617617),
     f = n(625494),
@@ -408,8 +408,8 @@ let T = (0, c.Fe)({
             n.e("623685"),
             n.e("842516"),
             n.e("391952"),
-        ]).then(n.bind(n, 318886)),
-    webpackId: 318886,
+        ]).then(n.bind(n, 86677)),
+    webpackId: 86677,
     name: "InboxPopoutRenderer",
     renderLoader: u.hc,
 });
@@ -424,9 +424,9 @@ function m(e) {
             popoutAlign: S,
             targetElementRef: N,
             spacing: C,
-            dialogClassName: O,
+            dialogClassName: R,
         } = e,
-        { analyticsLocations: R } = (0, d.Ay)(o.A.NOTIFICATION_CENTER),
+        { analyticsLocations: O } = (0, d.Ay)(o.A.NOTIFICATION_CENTER),
         [L, y] = r.useState(!1),
         [D, v] = [
             (0, a.bG)([I.A], () => I.A.settings.inbox?.currentTab ?? s.Y2.UNREADS),
@@ -485,7 +485,7 @@ function m(e) {
         ),
         k = (0, A.Sc)();
     return (0, i.jsx)(d.f5, {
-        value: R,
+        value: O,
         children: (0, i.jsx)(l.Y, {
             targetElementRef: N,
             animation: l.Y.Animation.NONE,
@@ -496,7 +496,7 @@ function m(e) {
             onRequestClose: P,
             renderPopout: function () {
                 return (0, i.jsx)(T, {
-                    dialogClassName: O,
+                    dialogClassName: R,
                     isScheduledMessagesEnabled: k,
                     tab: D,
                     setTab: v,

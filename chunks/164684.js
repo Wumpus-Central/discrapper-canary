@@ -1,4 +1,4 @@
-n.d(e, { Y: () => T, x: () => C });
+n.d(e, { Y: () => E, x: () => T });
 var a = n(477900),
     i = n(873298),
     l = n(192308),
@@ -11,21 +11,21 @@ var a = n(477900),
     u = n(625494),
     _ = n(269073),
     A = n(216623),
-    g = n(85109),
-    R = n(652215),
+    R = n(85109),
+    g = n(652215),
     S = n(375708);
-async function T(t) {
-    let { displayToast: e = !1, ...T } = t;
-    if (null == g.A.getSavedMessage(T.channelId, T.messageId) && !(0, _.we)("addOrUpdateSavedMessage"))
+async function E(t) {
+    let { displayToast: e = !1, ...E } = t;
+    if (null == R.A.getSavedMessage(E.channelId, E.messageId) && !(0, _.we)("addOrUpdateSavedMessage"))
         return void (0, l.openModalLazy)(async () => {
             let { default: t } = await n.e("422540").then(n.bind(n, 530951));
             return (e) => (0, a.jsx)(t, { ...e, analyticsLocations: [c.A.FOR_LATER_ROADBLOCK] });
         });
     if (
         null !=
-            (await (0, A.oN)(T).catch((t) => {
-                if (t?.body?.code === R.t02.TOO_MANY_SAVED_MESSAGES) {
-                    let t = null != T.dueAt;
+            (await (0, A.oN)(E).catch((t) => {
+                if (t?.body?.code === g.t02.TOO_MANY_SAVED_MESSAGES) {
+                    let t = null != E.dueAt;
                     if ((0, _.e4)("addOrUpdateSavedMessage")) {
                         let e = (0, _.lF)("addOrUpdateSavedMessage", t);
                         return (
@@ -50,7 +50,7 @@ async function T(t) {
                             }),
                             cancelText: S.intl.string(S.t.BddRzS),
                             confirmText: S.intl.string(S.t.ZGbTcy),
-                            onConfirm: () => u._.dispatch(R.jej.TOGGLE_INBOX, i.Y2.BOOKMARKS),
+                            onConfirm: () => u._.dispatch(g.jej.TOGGLE_INBOX, t ? i.Y2.REMINDERS : i.Y2.BOOKMARKS),
                         }),
                         null
                     );
@@ -59,12 +59,12 @@ async function T(t) {
             })) &&
         e
     ) {
-        let t = null != T.dueAt ? S.intl.string(S.t.i1IsOy) : S.intl.string(S.t["WQdL/6"]),
-            e = null != T.dueAt ? r.Ck.CLOCK : r.Ck.BOOKMARK;
+        let t = null != E.dueAt ? S.intl.string(S.t.i1IsOy) : S.intl.string(S.t["WQdL/6"]),
+            e = null != E.dueAt ? r.Ck.CLOCK : r.Ck.BOOKMARK;
         (0, O.Dc)({ message: t, icon: e });
     }
 }
-async function C(t) {
+async function T(t) {
     let { displayToast: e = !1, isReminder: n, ...a } = t;
     if (
         null !=
