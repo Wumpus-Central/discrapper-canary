@@ -2432,6 +2432,7 @@ var iY =
         (ea[(ea.ACCOUNT_REVERT_INVALID_TOKEN = 62e4)] = "ACCOUNT_REVERT_INVALID_TOKEN"),
         (ea[(ea.ACCOUNT_REVERT_EMAIL_ALREADY_TAKEN = 620001)] = "ACCOUNT_REVERT_EMAIL_ALREADY_TAKEN"),
         (ea[(ea.ACCOUNT_REVERT_ACCOUNT_NOT_FOUND = 620002)] = "ACCOUNT_REVERT_ACCOUNT_NOT_FOUND"),
+        (ea[(ea.TOO_MANY_SCHEDULED_MESSAGES = 640003)] = "TOO_MANY_SCHEDULED_MESSAGES"),
         (ea[(ea.USER_GUILD_JOIN_LARGE_GUILD_UNDERAGE_DISALLOWED = 7e5)] =
             "USER_GUILD_JOIN_LARGE_GUILD_UNDERAGE_DISALLOWED"),
         (ea[(ea.USER_GUILD_JOIN_DISCOVERABLE_SERVER_AGE_GATED = 700001)] =
@@ -2577,6 +2578,7 @@ var iY =
         (eo.PREMIUM_UPSELL_CLIENT_THEMES = "Premium Upsell Modal - Client Themes"),
         (eo.PREMIUM_UPSELL_APP_ICONS = "Premium Upsell Modal - App Icons"),
         (eo.PREMIUM_UPSELL_FOR_LATER = "Premium Upsell Modal - For Later"),
+        (eo.PREMIUM_UPSELL_SCHEDULED_MESSAGES = "Premium Upsell Modal - Scheduled Messages"),
         (eo.PREMIUM_UPSELL_HALLOWEEN_GIFTING_CAMPAIGN = "Premium Upsell Modal - Halloween Gifting Campaign"),
         (eo.PREMIUM_UPSELL_SEASONAL_GIFTING_CAMPAIGN = "Premium Upsell Modal - Seasonal Gifting Campaign"),
         (eo.PREMIUM_UPSELL_STREAM_HIGH_QUALITY = "Premium Upsell Modal - Stream High Quality"),
@@ -2635,6 +2637,7 @@ var iQ =
         (ed.SOUND_PICKER_FLOATING_UPSELL = "Sound Picker Floating Upsell"),
         (ed.EMPTY_STICKER_PICKER_UPSELL = "Empty Sticker Picker Upsell"),
         (ed.FOR_LATER_POPOUT_UPSELL = "For Later Popout Upsell"),
+        (ed.SCHEDULED_MESSAGES_LIST_UPSELL = "Scheduled Messages List Upsell"),
         (ed.CREATE_STICKER_MODAL = "Create Sticker Modal"),
         (ed.IOS_TWO_FA_MODAL = "Two Factor Auth Modal"),
         (ed.IOS_TWO_FA_LANDING = "Two Factor Auth Landing"),
@@ -2656,6 +2659,7 @@ var iQ =
         (ed.PREMIUM_CUSTOM_NOTIFICATION_SOUND_SETTINGS_UPSELL = "Premium Custom Notification Sound Settings Upsell"),
         (ed.PREMIUM_PERKS_DEMO_UPSELL_MODAL = "Premium Perks Demo Upsell Modal"),
         (ed.PREMIUM_FOR_LATER_UPSELL_MODAL = "Premium For Later Upsell Modal"),
+        (ed.PREMIUM_SCHEDULED_MESSAGES_UPSELL_MODAL = "Premium Scheduled Messages Upsell Modal"),
         (ed.GIFT_CATEGORY_SELECT_MODAL = "Select Gift Category Modal"),
         (ed.FOR_LATER_CREATE = "For Later Create"),
         (ed.SERVER_BANNER_TOOLTIP = "Server Banner Tooltip"),

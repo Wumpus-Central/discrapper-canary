@@ -44,7 +44,7 @@ async function u(e) {
     } catch (n) {
         o.dx.error("Failed to create scheduled message", n);
         let e = n.body?.message ?? n.message;
-        throw (a.h.dispatch({ type: "SCHEDULED_MESSAGES_CREATE_FAILURE", channelId: t, errorMsg: e }), Error(e));
+        throw (a.h.dispatch({ type: "SCHEDULED_MESSAGES_CREATE_FAILURE", channelId: t, errorMsg: e }), n);
     }
 }
 async function _(e) {

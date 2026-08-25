@@ -18,4 +18,16 @@
     padding-inline-start: var(--custom-message-margin-compact-indent)
 }
 
-/*# sourceMappingURL=494b2b30c230ab42.css.map*/
+.page__2eae8 {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    min-height: 0
+}
+
+.upsellBar__2eae8 {
+    flex-shrink: 0;
+    padding: var(--space-8) var(--space-16) var(--space-16)
+}
+
+/*# sourceMappingURL=2fef1d423d82632a.css.map*/

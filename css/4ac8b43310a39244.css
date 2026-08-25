@@ -1,25 +1,25 @@
-.upsellContainer__98678 {
+.upsellContainer_daf541 {
     align-items: center;
     background: var(--background-base-lowest);
-    border-radius: 4px;
+    border-radius: var(--radius-xs);
     display: flex;
     gap: var(--space-8);
     padding: var(--space-12)
 }
 
-.upsellText__98678 {
+.upsellText_daf541 {
     flex: 1;
     min-width: 0
 }
 
-.betaTag__98678 {
+.betaTag_daf541 {
     bottom: 1px;
     display: inline-block;
     position: relative;
     vertical-align: middle
 }
 
-.warningIcon__98678 {
+.warningIcon_daf541 {
     color: var(--text-feedback-warning)
 }
 
@@ -247,4 +247,4 @@
     overflow: hidden
 }
 
-/*# sourceMappingURL=bbfda4320e864a0e.css.map*/
+/*# sourceMappingURL=4ac8b43310a39244.css.map*/

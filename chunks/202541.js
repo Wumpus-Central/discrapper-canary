@@ -517,6 +517,7 @@ var eq =
         (c.CUSTOM_NOTIFICATION_SOUNDS_SETTINGS_UPSELL = "custom_notification_sounds_settings_inline_upsell"),
         (c.HD_STREAMING_VIEWER_UPSELL = "hd_streaming_viewer_upsell"),
         (c.FOR_LATER_MODAL_UPSELL = "for_later_modal_upsell"),
+        (c.SCHEDULED_MESSAGES_MODAL_UPSELL = "scheduled_messages_modal_upsell"),
         (c.TRY_IT_OUT_MODAL_UPSELL = "try_it_out_modal_upsell"),
         (c.ANIMATED_BANNER_MODAL_UPSELL = "animated_banner_modal_upsell"),
         (c.ANIMATED_AVATAR_MODAL_UPSELL = "animated_avatar_modal_upsell"),

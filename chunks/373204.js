@@ -40,8 +40,8 @@ n(321073), n(323874), n(14289), n(35956);
 var F = n(296704),
     H = n(132500),
     B = n(661531),
-    V = n(717421),
-    K = n(259678),
+    K = n(717421),
+    V = n(259678),
     z = n(821609),
     W = n(834730),
     $ = n(559647),
@@ -164,8 +164,8 @@ let eO = i.memo(
             } = (0, eN.Sk)(f, C, eg, p),
             eH = !ef.D_.useSetting() && !(0, eI.isAndroidWeb)() && null != window.ResizeObserver,
             eB = !eH || !C.commands?.enabled || !x || "/" !== r,
-            eV = (0, ep.A)(),
-            { fontSize: eK } = (0, h.cf)([y.Ay], () => ({
+            eK = (0, ep.A)(),
+            { fontSize: eV } = (0, h.cf)([y.Ay], () => ({
                 fontSize: y.Ay.fontSize,
                 isSubmitButtonEnabled: y.Ay.isSubmitButtonEnabled,
             })),
@@ -271,7 +271,7 @@ let eO = i.memo(
                 te(), ta(!0);
             }, [te]),
             to = ts || r.length > 0 || null != Y || Z.length > 0,
-            { editorHeaderHeight: tc, paddingTop: td } = (0, V.z)({
+            { editorHeaderHeight: tc, paddingTop: td } = (0, K.z)({
                 editorHeaderHeight: 122 * !!to,
                 paddingTop: 16 * !!to,
                 config: { tension: 120, friction: 15, clamp: !0 },
@@ -344,7 +344,7 @@ let eO = i.memo(
                                                 }),
                                                 (0, l.jsx)("div", {
                                                     className: eL.I6,
-                                                    children: (0, l.jsx)(K.vN, {
+                                                    children: (0, l.jsx)(V.vN, {
                                                         ringTarget: et,
                                                         ringClassName: ek.Rg,
                                                         children: (0, l.jsx)(ey.A, {
@@ -363,7 +363,7 @@ let eO = i.memo(
                                                             type: U.oU.CREATE_ANNOUNCEMENT_POST,
                                                             canPasteFiles: eR,
                                                             uploadPromptCharacterCount: eM.CS1,
-                                                            maxCharacterCount: R ?? eV,
+                                                            maxCharacterCount: R ?? eK,
                                                             allowNewLines: !0,
                                                             "aria-describedby": k,
                                                             onChange: E,
@@ -380,7 +380,7 @@ let eO = i.memo(
                                                             onMaybeShowAutocomplete: eQ,
                                                             onHideAutocomplete: e0,
                                                             promptToUpload: v,
-                                                            fontSize: eK,
+                                                            fontSize: eV,
                                                             spellcheckEnabled: ez,
                                                             canOnlyUseTextCommands: !1,
                                                             "aria-labelledby": P,
@@ -663,7 +663,7 @@ function eF(e) {
 }
 var eH = n(664929),
     eB = n(742287);
-let eV = i.memo(function (e) {
+let eK = i.memo(function (e) {
     let { className: t, channel: n, section: i } = e,
         s = null != i ? (0, eH.Rg)(i) : null,
         r =
@@ -679,7 +679,7 @@ let eV = i.memo(function (e) {
         children: (0, l.jsx)("div", { className: eB.K, children: r }),
     });
 });
-var eK = n(703966),
+var eV = n(703966),
     ez = n(35277);
 let eW = (0, n(945810).mj)({
     kind: "user",
@@ -916,14 +916,14 @@ var tk = n(823099),
     tF = n(926262),
     tH = n(10822),
     tB = n(537174),
-    tV = n(973196),
-    tK = n(530478),
+    tK = n(973196),
+    tV = n(530478),
     tz = n(308718);
 function tW() {
     return (0, l.jsx)(eQ, {
         containerStyles: tz.k,
-        bannerHeader: eD.intl.string(tK.default.e7ydX0),
-        bannerSubtext: eD.intl.string(tK.default.POfugg),
+        bannerHeader: eD.intl.string(tV.default.e7ydX0),
+        bannerSubtext: eD.intl.string(tV.default.POfugg),
     });
 }
 var t$ = n(512599),
@@ -955,7 +955,7 @@ let t2 = i.memo(function (e) {
             return () => clearTimeout(e);
         }, [a]);
         let c = null != a ? "100%" : "200%",
-            d = (0, V.z)(
+            d = (0, K.z)(
                 {
                     opacity: +!!r,
                     translateY: r ? "0" : c,
@@ -1044,7 +1044,7 @@ let t2 = i.memo(function (e) {
             let e = setTimeout(() => m(p), 1e3);
             return () => clearTimeout(e);
         }, [p]);
-        let A = (0, V.z)({
+        let A = (0, K.z)({
                 opacity: +!!u,
                 transform: u ? "translateY(0)" : "translateY(100%)",
                 pointerEvents: "none",
@@ -1162,8 +1162,8 @@ var nG = n(578434),
     nF = n(92650),
     nH = n(378570),
     nB = n(138298),
-    nV = n(260771);
-function nK(e) {
+    nK = n(260771);
+function nV(e) {
     let { channel: t } = e,
         n = (0, nw.k)(),
         s = (0, h.bG)([nx.default], () => nx.default.getUser(t.getRecipientId())),
@@ -1187,16 +1187,16 @@ function nK(e) {
         } = (0, nF.t)({ user: s, onAcceptSuccess: o, onRejectSuccess: r, onError: a }),
         f = u || m || g || p || A;
     return (0, l.jsxs)("div", {
-        className: nV.kL,
+        className: nK.kL,
         children: [
             (0, l.jsx)(W.E, {
-                className: nV.VA,
+                className: nK.VA,
                 variant: "text-md/medium",
                 color: "text-muted",
                 children: eD.intl.string(eD.t.YQ0uUE),
             }),
             (0, l.jsxs)("div", {
-                className: nV.o1,
+                className: nK.o1,
                 children: [
                     (0, l.jsx)(z.$, {
                         variant: "secondary",
@@ -1494,7 +1494,7 @@ class nX extends i.PureComponent {
                     }),
                         (0, nc.c_)(_.scheduledTimestamp);
                 } catch (e) {
-                    return (0, nc.V0)(e.message), j(), { shouldClear: !1, shouldRefocus: !1 };
+                    return (0, nc.vh)(e), j(), { shouldClear: !1, shouldRefocus: !1 };
                 }
             else
                 x.A.sendMessage(h.id, I, void 0, _).then(() => {
@@ -1514,7 +1514,7 @@ class nX extends i.PureComponent {
         null != t && (ez.b.select(t, []), t.insertText(e), this.editorRef?.focus());
     };
     renderAttachButton = (e, t) =>
-        (0, l.jsx)(eK.A, {
+        (0, l.jsx)(eV.A, {
             className: t,
             channel: this.props.channel,
             draftType: eC.C.ChannelMessage,
@@ -1524,7 +1524,7 @@ class nX extends i.PureComponent {
             chatInputType: this.props.chatInputType,
         });
     renderApplicationCommandIcon = (e, t, n) =>
-        (0, l.jsx)(eV, { className: n, command: e, section: t, channel: this.props.channel });
+        (0, l.jsx)(eK, { className: n, command: e, section: t, channel: this.props.channel });
     render() {
         let {
                 channel: e,
@@ -1695,7 +1695,7 @@ class nQ extends i.PureComponent {
         return t.isMediaThread()
             ? (0, l.jsx)(tL, {})
             : this.props.restrictedPreview && t.type === eM.rbe.DM
-              ? (0, l.jsx)(nK, { channel: t })
+              ? (0, l.jsx)(nV, { channel: t })
               : t.type === eM.rbe.DM && n
                 ? (0, l.jsx)(nt, {})
                 : t.isModeratorReportChannel() && t.isArchivedThread()
@@ -1876,7 +1876,7 @@ let n1 = i.memo(function (e) {
         a,
         { channel: r, guild: o, chatInputType: c, filterAfterTimestamp: d } = e,
         { placeholder: u, accessibilityLabel: m } = (0, nD.A)({ channel: r }),
-        g = (0, tV.A)(),
+        g = (0, tK.A)(),
         p = t9(nx.default.getCurrentUser(), r),
         [A] = (0, tp.c)(o?.id),
         C = (0, eZ.uZ)(o?.id),
