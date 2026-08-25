@@ -88,44 +88,55 @@ function O(e) {
             o.preview,
         );
 }
-function R(e, t, n, i, r) {
-    let a = {
-            content_name: (0, p.jO)(t.content),
-            cta_name: t.ctaContent,
-            impression_id: t.impressionId,
-            source_content_name: (0, p.jO)(t.sourceQuestContent),
-            app_id: n,
-            content_position: t.position,
-        },
-        s =
-            (i === m.HAw.QUEST_APP_STORE_OVERLAY_CLOSED || i === m.HAw.QUEST_APP_STORE_OVERLAY_RETURNED) &&
-            void 0 !== r;
-    O({
-        questId: e.id,
-        event: i,
-        properties: s ? { ...a, time_spent_ms: r } : a,
-        sourceQuestContent: t.sourceQuestContent,
-    });
-}
-function L(e, t, n, i, r) {
-    let { adContentId: a, adCreativeType: s } = e,
+function R(e) {
+    let { quest: t, trackingCtx: n, inlineStoreAppId: i, overlayVariant: r, event: a, timeSpentMs: s } = e,
         l = {
-            content_name: (0, p.jO)(t.content),
-            cta_name: t.ctaContent,
-            impression_id: t.impressionId,
-            source_content_name: (0, p.jO)(t.sourceQuestContent),
-            app_id: n,
-            content_position: t.position,
+            content_name: (0, p.jO)(n.content),
+            cta_name: n.ctaContent,
+            impression_id: n.impressionId,
+            source_content_name: (0, p.jO)(n.sourceQuestContent),
+            app_id: i,
+            content_position: n.position,
+            overlay_variant: r,
         },
         o =
-            (i === m.HAw.QUEST_APP_STORE_OVERLAY_CLOSED || i === m.HAw.QUEST_APP_STORE_OVERLAY_RETURNED) &&
-            void 0 !== r;
+            (a === m.HAw.QUEST_APP_STORE_OVERLAY_CLOSED || a === m.HAw.QUEST_APP_STORE_OVERLAY_RETURNED) &&
+            void 0 !== s;
+    O({
+        questId: t.id,
+        event: a,
+        properties: o ? { ...l, time_spent_ms: s } : l,
+        sourceQuestContent: n.sourceQuestContent,
+    });
+}
+function L(e) {
+    let {
+            adContentId: t,
+            adCreativeType: n,
+            trackingCtx: i,
+            inlineStoreAppId: r,
+            overlayVariant: a,
+            event: s,
+            timeSpentMs: l,
+        } = e,
+        o = {
+            content_name: (0, p.jO)(i.content),
+            cta_name: i.ctaContent,
+            impression_id: i.impressionId,
+            source_content_name: (0, p.jO)(i.sourceQuestContent),
+            app_id: r,
+            content_position: i.position,
+            overlay_variant: a,
+        },
+        d =
+            (s === m.HAw.QUEST_APP_STORE_OVERLAY_CLOSED || s === m.HAw.QUEST_APP_STORE_OVERLAY_RETURNED) &&
+            void 0 !== l;
     y({
-        adContentId: a,
-        adCreativeType: s,
-        event: i,
-        properties: o ? { ...l, time_spent_ms: r } : l,
-        sourceQuestContent: t.sourceQuestContent,
+        adContentId: t,
+        adCreativeType: n,
+        event: s,
+        properties: d ? { ...o, time_spent_ms: l } : o,
+        sourceQuestContent: i.sourceQuestContent,
     });
 }
 function y(e) {
