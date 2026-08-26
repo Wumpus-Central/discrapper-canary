@@ -1,4 +1,4 @@
-n.d(t, { ls: () => ek, z9: () => eB, w_: () => ew, Ay: () => eF, th: () => ez });
+n.d(t, { ls: () => eP, z9: () => eB, w_: () => ew, Ay: () => eF, th: () => ez });
 var i = n(477900),
     r = n(582128),
     l = n(503698),
@@ -34,8 +34,8 @@ var M = n(308528),
     U = n(397244),
     L = n(714114),
     O = n(394871),
-    P = n(709066),
-    k = n(262295),
+    k = n(709066),
+    P = n(262295),
     B = n(620982),
     z = n(343328),
     F = n(963027),
@@ -133,10 +133,10 @@ function eL() {
 function eO() {
     return (0, i.jsx)(_.EyeSlashIcon, { size: "xs", color: "currentColor", className: eM.wB });
 }
-function eP() {
+function ek() {
     return (0, i.jsx)(E.K, { size: "xs", color: "currentColor", className: eM.wB });
 }
-function ek(e) {
+function eP(e) {
     let {
             eventTargetRef: t,
             isNitro: n,
@@ -212,7 +212,7 @@ function eB(e) {
             className: s()(o, eM.bG, eM.$J, { [eM.Q2]: n }),
             children: [
                 x &&
-                    (0, i.jsx)(ek, {
+                    (0, i.jsx)(eP, {
                         eventTargetRef: D,
                         isNitro: _,
                         contentWidth: S,
@@ -226,7 +226,7 @@ function eB(e) {
                     innerRef: M,
                     ...C,
                     children: [
-                        (0, i.jsx)(k.A, {
+                        (0, i.jsx)(P.A, {
                             ref: x ? T : void 0,
                             muted: !1,
                             avatar: (0, i.jsx)(l, {
@@ -273,7 +273,7 @@ function ez(e) {
         ),
         eT = r.useRef(null),
         eD = R ?? eT,
-        ek = (0, A.A)(eD, eC),
+        eP = (0, A.A)(eD, eC),
         {
             avatarSrc: eB,
             avatarDecorationSrc: ez,
@@ -472,7 +472,7 @@ function ez(e) {
         ta = (0, eN.W)({ location: "PrivateChannel" }) && a?.displayNameStyles != null,
         { isIncomingCall: to, isOngoingCall: tu } = (0, B.A)(t.id),
         tc = [
-            (0, F.Ay)({ channel: t, unread: e0, isIncomingCall: to, isOngoingCall: tu }),
+            (0, F.Ay)({ channel: t, unread: e0, isIncomingCall: to, isOngoingCall: tu, ignored: e$, blocked: eq }),
             (0, F.r2)({ channel: t, muted: eK, userStatus: j, isFavorite: eQ }),
         ]
             .filter(Boolean)
@@ -531,7 +531,7 @@ function ez(e) {
                 className: s()(eM.Ix, eM.dm),
                 role: n,
                 focusProps: { ...eG, focusTarget: em, ringTarget: eD },
-                ref: ek,
+                ref: eP,
                 onMouseEnter: e1,
                 onMouseLeave: e4,
                 onMouseDown: e7,
@@ -563,7 +563,7 @@ function ez(e) {
                                 "aria-label": tc,
                                 onAuxClick: (e) => (0, e_.A)(e, t),
                                 ...r,
-                                children: (0, i.jsx)(k.A, {
+                                children: (0, i.jsx)(P.A, {
                                     ref: ts,
                                     avatar: (function () {
                                         let e = C._3.SIZE_32;
@@ -644,7 +644,7 @@ function ez(e) {
                                             : null,
                                     name: (0, i.jsx)(N.A, { className: s()(eM.uN, { [eM.e8]: ta }), children: tl }),
                                     decorators: t.isSystemDM()
-                                        ? (0, i.jsx)(P.A, { className: eM.G$, type: P.A.Types.SYSTEM_DM, verified: !0 })
+                                        ? (0, i.jsx)(k.A, { className: eM.G$, type: k.A.Types.SYSTEM_DM, verified: !0 })
                                         : null,
                                     withDisplayNameStyles: ta,
                                 }),
@@ -652,7 +652,7 @@ function ez(e) {
                             (0, i.jsxs)("div", {
                                 className: s()(eM._q, { [eM.EY]: e5 }),
                                 children: [
-                                    eq ? (0, i.jsx)(eP, {}) : e$ ? (0, i.jsx)(eO, {}) : eQ ? (0, i.jsx)(eL, {}) : null,
+                                    eq ? (0, i.jsx)(ek, {}) : e$ ? (0, i.jsx)(eO, {}) : eQ ? (0, i.jsx)(eL, {}) : null,
                                     tf && null != e2
                                         ? (0, i.jsx)(eU, { channelName: e2, onClick: tA, showNameplate: e5 })
                                         : null,
