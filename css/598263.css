@@ -68,6 +68,7 @@
     background: var(--opacity-white-24)
 }
 
+.editOverlay_f6d5bd,
 .uploading_f6d5bd {
     align-items: center;
     background: var(--background-scrim);
@@ -75,6 +76,25 @@
     inset: 0;
     justify-content: center;
     position: absolute
+}
+
+.editOverlay_f6d5bd {
+    opacity: var(--custom-edit-overlay-opacity, 0);
+    pointer-events: none;
+    transition: opacity .1s ease
+}
+
+.container_f6d5bd:focus-within .editOverlay_f6d5bd,
+.container_f6d5bd:hover .editOverlay_f6d5bd {
+    opacity: 1
+}
+
+.editOverlayIcon_f6d5bd {
+    transform: scale(calc(1/var(--custom-edit-image-scale, 1)))
+}
+
+.full-motion .editOverlayIcon_f6d5bd {
+    transition: transform .1s ease
 }
 
 .placeholderIcon_f6d5bd {
@@ -88,4 +108,4 @@
     }
 }
 
-/*# sourceMappingURL=598263.4681b2e6c6660d58.css.map*/
+/*# sourceMappingURL=598263.81be3fa9d488ec20.css.map*/
