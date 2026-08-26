@@ -29,7 +29,7 @@ var r = n(477900),
     P = n(723702),
     k = n(475815),
     N = n(396813),
-    b = n(24001),
+    b = n(738822),
     y = n(405670),
     V = n(291749),
     U = n(590202),
@@ -203,12 +203,12 @@ function eu(e) {
         e1 = (0, y.Kr)((e) => e.setVideoProgress),
         e7 = (0, y.Kr)((e) => e.muted),
         e6 = (0, y.Kr)((e) => e.setMuted),
-        e2 = (0, y.Kr)((e) => e.volume),
-        e8 = (0, y.Kr)((e) => e.setVolume),
+        e8 = (0, y.Kr)((e) => e.volume),
+        e2 = (0, y.Kr)((e) => e.setVolume),
         e4 = (0, c.bG)([I.Ay], () => I.Ay.useReducedMotion),
         e9 = (0, l.useRef)(null),
-        e5 = (0, l.useRef)(null),
         e3 = (0, l.useRef)(null),
+        e5 = (0, l.useRef)(null),
         te = l.useRef(!0),
         tt = es.userStatus?.completedAt != null,
         tn = l.useMemo(() => es.config.features.includes(et.Li.FULL_EPISODE_VIDEO_QUEST), [es.config.features]),
@@ -373,7 +373,7 @@ function eu(e) {
         if (null == e9.current) return;
         let e = Math.max(e9.current.currentTime - 10, 0);
         tE.info(`[QV] | handleSeekBackIncrement | newTime: ${e}`),
-            t2(e),
+            t8(e),
             eh === Y.Q6.ENDED && tK(Y.Q6.PAUSED),
             tL(b.uF.VIDEO_MODAL, U.Cy.SEEK_BACKWARD);
     }
@@ -381,7 +381,7 @@ function eu(e) {
         if (null == e9.current || !no) return;
         let e = Math.min(e9.current.currentTime + 10, td);
         tE.info(`[QV] | handleSeekForwardIncrement | newTime: ${e}`),
-            t2(e),
+            t8(e),
             eh !== Y.Q6.ENDED && e >= e9.current.duration && tK(Y.Q6.ENDED),
             tL(b.uF.VIDEO_MODAL, U.Cy.SEEK_FORWARD);
     }
@@ -394,15 +394,15 @@ function eu(e) {
     }, [tJ]),
         l.useEffect(() => {
             function e(e) {
-                return e3.current?.(e);
+                return e5.current?.(e);
             }
             return window.addEventListener("keydown", e), () => window.removeEventListener("keydown", e);
         }, []);
     let t7 = l.useCallback(
             (e) => {
-                e8(e), tV(e);
+                e2(e), tV(e);
             },
-            [e8, tV],
+            [e2, tV],
         ),
         t6 = l.useCallback(
             (e) => {
@@ -410,7 +410,7 @@ function eu(e) {
             },
             [e6],
         ),
-        t2 = l.useCallback(
+        t8 = l.useCallback(
             (e) => {
                 null != e9.current &&
                     (tE.info(`[QV] | seekTimeline | timeSec: ${e}`),
@@ -454,12 +454,12 @@ function eu(e) {
                 tK(Y.Q6.PAUSED), ti(b.Yg.LOST_FOCUS);
             },
         });
-    let t8 = l.useRef(!1);
+    let t2 = l.useRef(!1);
     function t4() {
         if (null != e9.current)
             switch ((tE.info(`[QV] | handlePlaybackBtnClick | playerState: ${eh}`), tQ(), eh)) {
                 case Y.Q6.ENDED:
-                    t2(0), tK(Y.Q6.PLAYING);
+                    t8(0), tK(Y.Q6.PLAYING);
                     break;
                 case Y.Q6.PLAYING:
                     tK(Y.Q6.PAUSED), ti(b.Yg.PAUSE_BUTTON);
@@ -491,16 +491,16 @@ function eu(e) {
             }
     }, [e9, tE]);
     l.useEffect(() => {
-        if (null == e5.current) return;
-        let e = e5.current;
+        if (null == e3.current) return;
+        let e = e3.current;
         return (
             e.addEventListener("load", t9),
             () => {
                 null != e && e.removeEventListener("load", t9);
             }
         );
-    }, [e5, t9]);
-    let t5 = l.useCallback(
+    }, [e3, t9]);
+    let t3 = l.useCallback(
             (e) => {
                 tE.info(
                     `[QV] | logVideoError: errorType: ${e}, videoProgress: ${e9.current?.currentTime}, videoAssetId: ${tC}, connectionSpeed: ${ew}`,
@@ -509,7 +509,7 @@ function eu(e) {
             },
             [ew, ty, e9, tC, tE],
         ),
-        t3 = l.useRef(!1);
+        t5 = l.useRef(!1);
     function ne(e) {
         tE.info(`[QV] | handleCanPlay: playerState: ${eh}`),
             null != e9.current &&
@@ -524,8 +524,8 @@ function eu(e) {
                 tK(Y.Q6.PLAYING));
     }
     l.useEffect(() => {
-        null != tS || t3.current || ((t3.current = !0), ty(Y.SB.NO_VALID_SOURCE));
-    }, [tS, ty, t3]),
+        null != tS || t5.current || ((t5.current = !0), ty(Y.SB.NO_VALID_SOURCE));
+    }, [tS, ty, t5]),
         l.useEffect(() => {
             if (!ek) return;
             let e = setTimeout(() => {
@@ -649,12 +649,12 @@ function eu(e) {
                                     null != e9.current &&
                                         (tE.info(`[QV] | handleLoadedMetadata | videoAssetId: ${tC}`),
                                         tB(null),
-                                        tC !== V.fY.VIDEO_PLAYER_VIDEO_HLS && t2(tf),
-                                        e7 ? (e9.current.volume = 0) : (e9.current.volume = e2));
+                                        tC !== V.fY.VIDEO_PLAYER_VIDEO_HLS && t8(tf),
+                                        e7 ? (e9.current.volume = 0) : (e9.current.volume = e8));
                                 },
                                 onLoadStart: function () {
                                     (eZ.current = performance.now()),
-                                        (t8.current = !1),
+                                        (t2.current = !1),
                                         tg(ew),
                                         tE.info(`[QV] | handleLoadStart | loadingStartTime: ${eZ.current}`);
                                 },
@@ -689,19 +689,19 @@ function eu(e) {
                                 onCanPlay: ne,
                                 onCanPlayThrough: ne,
                                 onSeeked: function () {
-                                    tE.info("[QV] | handleSeeked"), t8.current || ((t8.current = !0), tF(0));
+                                    tE.info("[QV] | handleSeeked"), t2.current || ((t2.current = !0), tF(0));
                                 },
                                 onAbort: function () {
-                                    return t5(Y.SB.ABORT);
+                                    return t3(Y.SB.ABORT);
                                 },
                                 onError: function () {
-                                    return t5(Y.SB.ERROR);
+                                    return t3(Y.SB.ERROR);
                                 },
                                 onEmptied: function () {
-                                    return t5(Y.SB.EMPTIED);
+                                    return t3(Y.SB.EMPTIED);
                                 },
                                 onStalled: function () {
-                                    return t5(Y.SB.STALLED);
+                                    return t3(Y.SB.STALLED);
                                 },
                                 onClick: function () {
                                     tE.info("[QV] | handleVideoClick"), t4();
@@ -710,7 +710,7 @@ function eu(e) {
                                 children: [
                                     null != na &&
                                         (0, r.jsx)("track", {
-                                            ref: e5,
+                                            ref: e3,
                                             src: na.url,
                                             label: "English",
                                             kind: "captions",
@@ -722,7 +722,7 @@ function eu(e) {
                                         null != tS.mimetype &&
                                         (0, r.jsx)("source", {
                                             onError: function () {
-                                                return t5(Y.SB.SOURCE_ERROR);
+                                                return t3(Y.SB.SOURCE_ERROR);
                                             },
                                             src: tS.url,
                                             type: tS.mimetype,
@@ -871,7 +871,7 @@ function eu(e) {
                                             isFullyVisible: tZ && e$,
                                             maxSeekableTime: tZ && e$ ? td : void 0,
                                             onClick: function (e) {
-                                                nd && (t2(e), eh === Y.Q6.ENDED && tK(Y.Q6.PLAYING));
+                                                nd && (t8(e), eh === Y.Q6.ENDED && tK(Y.Q6.PLAYING));
                                             },
                                             onScrubBack: t0,
                                             onScrubForward: t1,
@@ -913,8 +913,8 @@ function eu(e) {
                                             hidePlaybackSpeedBtn: !0,
                                             size: t_,
                                             autoFocus: $,
-                                            keyDownHandlerRef: e3,
-                                            volume: e2,
+                                            keyDownHandlerRef: e5,
+                                            volume: e8,
                                             muted: e7,
                                             transcriptEnabled: eE,
                                             captionEnabled: e_,

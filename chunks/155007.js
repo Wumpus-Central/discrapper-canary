@@ -952,23 +952,23 @@ function e3(e) {
 }
 function e5() {
     return [
-        { key: "snail", Illocon: eQ, tint: "var(--illo-yellow-40)", name: e8(R.default["2l3AEQ"]) },
-        { key: "goat", Illocon: eK, tint: "var(--illo-orange-40)", name: e8(R.default["+FPL+I"]) },
-        { key: "frog", Illocon: eX, tint: "var(--illo-green-40)", name: e8(R.default.w4GOfR) },
-        { key: "bunny", Illocon: eZ, tint: "var(--illo-pink-40)", name: e8(R.default.XmZT9M) },
-        { key: "cat", Illocon: eJ, tint: "var(--illo-pink-40)", name: e8(R.default.NnydwQ) },
-        { key: "caterpillar", Illocon: e0, tint: "var(--illo-green-40)", name: e8(R.default["4iXcNT"]) },
-        { key: "butterfly", Illocon: e1, tint: "var(--illo-purple-40)", name: e8(R.default.DoTGt5) },
-        { key: "dog", Illocon: e2, tint: "var(--illo-yellow-40)", name: e8(R.default["9zxqmP"]) },
-        { key: "spider", Illocon: e6, tint: "var(--illo-orange-40)", name: e8(R.default.HF0T3L) },
-        { key: "bee", Illocon: e7, tint: "var(--illo-yellow-40)", name: e8(R.default.XTzDga) },
-        { key: "bot", Illocon: e3, tint: "var(--illo-purple-40)", name: e8(R.default.abtC2b) },
+        { key: "snail", Illocon: eQ, tint: "var(--illo-yellow-40)", name: e4(R.default["2l3AEQ"]) },
+        { key: "goat", Illocon: eK, tint: "var(--illo-orange-40)", name: e4(R.default["+FPL+I"]) },
+        { key: "frog", Illocon: eX, tint: "var(--illo-green-40)", name: e4(R.default.w4GOfR) },
+        { key: "bunny", Illocon: eZ, tint: "var(--illo-pink-40)", name: e4(R.default.XmZT9M) },
+        { key: "cat", Illocon: eJ, tint: "var(--illo-pink-40)", name: e4(R.default.NnydwQ) },
+        { key: "caterpillar", Illocon: e0, tint: "var(--illo-green-40)", name: e4(R.default["4iXcNT"]) },
+        { key: "butterfly", Illocon: e1, tint: "var(--illo-purple-40)", name: e4(R.default.DoTGt5) },
+        { key: "dog", Illocon: e2, tint: "var(--illo-yellow-40)", name: e4(R.default["9zxqmP"]) },
+        { key: "spider", Illocon: e6, tint: "var(--illo-orange-40)", name: e4(R.default.HF0T3L) },
+        { key: "bee", Illocon: e7, tint: "var(--illo-yellow-40)", name: e4(R.default.XTzDga) },
+        { key: "bot", Illocon: e3, tint: "var(--illo-purple-40)", name: e4(R.default.abtC2b) },
     ];
 }
-function e4(e) {
+function e8(e) {
     return e5().find((t) => t.key === e);
 }
-function e8(e) {
+function e4(e) {
     return P.intl.string(e);
 }
 function e9(e) {
@@ -1302,7 +1302,7 @@ function tg(e) {
     let t = e9(e.map((e) => e.taskId));
     return e.flatMap((e) => {
         if ("running" !== e.task.status) return [];
-        let n = null != e.task.helperMark ? e4(e.task.helperMark) : void 0,
+        let n = null != e.task.helperMark ? e8(e.task.helperMark) : void 0,
             l = n ?? t.get(e.taskId);
         return null == l
             ? []
@@ -1379,7 +1379,7 @@ function tp(e) {
                     connectsDown: b.length > 0,
                 }),
                 b.map((e, n) => {
-                    let l = null != e.task.helperMark ? e4(e.task.helperMark) : void 0,
+                    let l = null != e.task.helperMark ? e8(e.task.helperMark) : void 0,
                         r = l ?? y.get(e.taskId);
                     return null == r
                         ? null
@@ -2030,8 +2030,8 @@ var tJ = n(320095),
     t7 = n(438729),
     t3 = n(622868),
     t5 = n(308334),
-    t4 = n(837528),
-    t8 = n(375199),
+    t8 = n(837528),
+    t4 = n(375199),
     t9 = n(715628),
     ne = n(752636),
     nt = n(9842),
@@ -2185,7 +2185,7 @@ function nj(e, t) {
     return null != e && e > 0 ? new Date(e).toISOString() : t;
 }
 function nb(e, t, n) {
-    let { content: l } = (0, t8.A)(e, {
+    let { content: l } = (0, t4.A)(e, {
             hideSimpleEmbedContent: !0,
             allowList: !0,
             allowHeading: !0,
@@ -2203,8 +2203,8 @@ function ny(e) {
     let [t, n] = r.useState({ usernameProfile: !1, avatarProfile: !1 }),
         l = r.useCallback((e) => n((t) => ({ ...t, ...e })), []),
         s = r.useCallback(() => n({ usernameProfile: !1, avatarProfile: !1 }), []),
-        i = (0, t4.m)(e, np, t.usernameProfile, l),
-        o = (0, t4.Jo)(t.avatarProfile, l),
+        i = (0, t8.m)(e, np, t.usernameProfile, l),
+        o = (0, t8.Jo)(t.avatarProfile, l),
         u = (0, k.bG)([nr.A], () => nr.A.getGuildId()),
         c = (0, k.bG)([ei.default], () => ei.default.getCurrentUser()),
         d = r.useCallback(
@@ -3372,8 +3372,8 @@ function n6(e) {
 var n7 = n(366010),
     n3 = n(825484),
     n5 = n(859703),
-    n4 = n(24001),
-    n8 = n(291749),
+    n8 = n(738822),
+    n4 = n(291749),
     n9 = n(971276),
     le = n(590202),
     lt = n(710969),
@@ -3391,7 +3391,7 @@ function lo(e) {
         i =
             ((t = (0, ll.dN)()),
             (n = (0, k.bG)([n5.A], () => n5.A.isQuestAccessSuspended || null != n5.A.questEnrollmentBlockedUntil, [])),
-            (l = (0, k.bG)([n5.A], () => null != n5.A.getQuestPreviewOverride(n4.uF.QUEST_BAR_V2), [])),
+            (l = (0, k.bG)([n5.A], () => null != n5.A.getQuestPreviewOverride(n8.uF.QUEST_BAR_V2), [])),
             null != t && (0, ln.vv)(t)
                 ? l
                     ? t.userStatus?.claimedAt != null
@@ -3427,13 +3427,13 @@ function lo(e) {
     let g = i ?? m,
         p = (0, k.bG)([lr.A], () => lr.A.getState().theme),
         x = (0, n7.M)(p) ? I.NJ8.DARK : I.NJ8.LIGHT,
-        j = null != g ? (0, n8.tW)(g, n8.fY.GAME_TILE, x).url : null,
+        j = null != g ? (0, n4.tW)(g, n4.fY.GAME_TILE, x).url : null,
         b = null != j && "" !== j ? j : null,
         y = r.useCallback(async () => {
             if (null == i) return;
             let e = {
-                questContent: n4.uF.QUEST_BAR_V2,
-                sourceQuestContent: n4.uF.QUEST_BAR_V2,
+                questContent: n8.uF.QUEST_BAR_V2,
+                sourceQuestContent: n8.uF.QUEST_BAR_V2,
                 sourceQuestContentCTA: le.Cy.WATCH_VIDEO,
             };
             i.userStatus?.enrolledAt != null

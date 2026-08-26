@@ -55,7 +55,7 @@ var i,
         i),
     I = n(636537),
     f = n(927813),
-    p = n(24001);
+    p = n(738822);
 let T = {
     GIFT_INVENTORY_SETTINGS_BADGE: 1,
     QUEST_BAR: 2,
