@@ -242,8 +242,9 @@
     padding-bottom: 16px
 }
 
-.newBadge__0b563 {
-    color: var(--brand-560)
+.numberBadge__0b563 {
+    background-color: var(--badge-background-default);
+    color: var(--badge-text-default)
 }
 
 .container__0b563,
@@ -262,4 +263,4 @@
     display: none
 }
 
-/*# sourceMappingURL=1ee1e2c717ed7756.css.map*/
+/*# sourceMappingURL=ee098c9ed0b01ab1.css.map*/
