@@ -659,10 +659,16 @@ let ex = i.forwardRef(function (e, t) {
             },
             replaceInlineAutocompleteInput(e, t, n) {
                 F.o.withSingleEntry(eV, () => {
-                    let l = K.VW.getSelectedParentOfType(eV, [e]);
-                    J()(null != l, `Cannot replace inline input of type ${e} when none is selected`),
-                        W.b.removeNodes(eV, { at: l[1] }),
-                        en(eV, t, n, !0);
+                    var t, l, i;
+                    let s = K.VW.getSelectedParentOfType(eV, [e]);
+                    J()(null != s, `Cannot replace inline input of type ${e} when none is selected`),
+                        W.b.removeNodes(eV, { at: s[1] }),
+                        (t = eV),
+                        (l = n),
+                        (i = !0),
+                        F.o.withSingleEntry(t, () => {
+                            W.b.insertText(t, i ? l + " " : l);
+                        });
                 });
             },
             insertEmoji(e) {
