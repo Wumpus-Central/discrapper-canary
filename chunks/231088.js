@@ -5,8 +5,8 @@ var i = n(477900),
     r = n.n(s),
     a = n(621466),
     o = n(219869),
-    d = n(17928),
-    c = n(866665),
+    c = n(17928),
+    d = n(866665),
     u = n(695366),
     g = n(738188),
     m = n(834730),
@@ -16,16 +16,16 @@ var i = n(477900),
 function p(e) {
     let { value: t, onCommit: n, disabled: i = !1 } = e,
         [s, r] = l.useState("idle"),
-        [o, c] = l.useState(t),
+        [o, d] = l.useState(t),
         u = "editing" === s && !i,
-        g = (0, d.bG)([f.Ay], () => f.Ay.useReducedMotion),
+        g = (0, c.bG)([f.Ay], () => f.Ay.useReducedMotion),
         m = l.useRef(null),
         x = l.useRef(null),
         h = l.useRef(null),
         p = l.useRef(!1),
         I = l.useRef(!0),
         j = l.useCallback(() => {
-            (I.current = !1), c(t), r("editing");
+            (I.current = !1), d(t), r("editing");
         }, [t]),
         A = l.useRef(o);
     l.useLayoutEffect(() => {
@@ -63,7 +63,7 @@ function p(e) {
         T = l.useCallback(() => {
             (p.current = !0), E();
         }, [E]),
-        N = l.useCallback(
+        y = l.useCallback(
             (e) => {
                 "Enter" !== e.key || e.shiftKey
                     ? "Escape" === e.key && (e.preventDefault(), e.stopPropagation(), T())
@@ -75,7 +75,7 @@ function p(e) {
         isEditing: u,
         committedValue: t,
         editedValue: o,
-        setEditedValue: c,
+        setEditedValue: d,
         editButtonRef: m,
         wrapperRef: x,
         inputRef: h,
@@ -84,7 +84,7 @@ function p(e) {
         handleCancel: E,
         handleInputCommit: b,
         handleInputCancel: T,
-        onInputKeyDown: N,
+        onInputKeyDown: y,
         onBlur: S,
         onContainerKeyDown: C,
     };
@@ -95,7 +95,7 @@ function I(e) {
             className: h.L7,
             children: (0, i.jsx)(o.T, { ...n, size: "sm", variant: "input-accessory" }),
         });
-    return null == t ? l : (0, i.jsx)(c.m, { text: t, ariaHidden: !0, children: l });
+    return null == t ? l : (0, i.jsx)(d.m, { text: t, ariaHidden: !0, children: l });
 }
 function j(e) {
     let { id: t, message: n, type: l } = e,
@@ -115,8 +115,8 @@ function A(e) {
             preview: n,
             placeholder: s,
             input: o,
-            editButtonRef: d,
-            editButtonAriaLabel: c,
+            editButtonRef: c,
+            editButtonAriaLabel: d,
             onStartEditing: u,
             variant: g = "default",
             trailing: f,
@@ -126,58 +126,60 @@ function A(e) {
             wrapperRef: E,
             onBlur: S,
             onKeyDown: C,
-            disabled: b = !1,
-            growWidth: T = !1,
-            removeVerticalPadding: N = !1,
+            textVariant: b,
+            textColor: T,
+            disabled: y = !1,
+            growWidth: N = !1,
+            removeVerticalPadding: k = !1,
         } = e,
-        y = l.useRef(null),
-        k = l.useId(),
-        w = l.useId(),
-        R = null == n,
-        L = null != p,
-        O = null != A && !L,
-        P = L ? "error" : O ? "warning" : null,
-        _ = L ? p : A,
-        D = null != P && null != _,
-        [G] = l.useState(t),
-        [M, U] = l.useState(!1);
-    M || t === G || U(!0);
-    let W = [];
-    R && W.push(k), D && "compact" !== g && W.push(w);
-    let F = W.length > 0 ? W.join(" ") : void 0;
-    function H() {
-        let { activeElement: e } = y.current?.ownerDocument ?? document;
+        w = l.useRef(null),
+        R = l.useId(),
+        L = l.useId(),
+        O = null == n,
+        P = null != p,
+        _ = null != A && !P,
+        D = P ? "error" : _ ? "warning" : null,
+        G = P ? p : A,
+        M = null != D && null != G,
+        [U] = l.useState(t),
+        [F, W] = l.useState(!1);
+    F || t === U || W(!0);
+    let H = [];
+    O && H.push(R), M && "compact" !== g && H.push(L);
+    let V = H.length > 0 ? H.join(" ") : void 0;
+    function B() {
+        let { activeElement: e } = w.current?.ownerDocument ?? document;
         (0, a.vq)(e, HTMLElement) && e.blur(), u();
     }
-    let V = (0, i.jsxs)("div", {
-        ref: y,
-        className: r()(h.LL, { [h.JD]: L, [h.xe]: O, [h.r9]: b }),
-        onMouseDown: b
+    let z = (0, i.jsxs)("div", {
+        ref: w,
+        className: r()(h.LL, { [h.JD]: P, [h.xe]: _, [h.r9]: y }),
+        onMouseDown: y
             ? void 0
             : function (e) {
                   e.preventDefault();
               },
-        onClick: b ? void 0 : H,
+        onClick: y ? void 0 : B,
         children: [
-            R
+            O
                 ? (0, i.jsx)(m.E, {
-                      id: k,
-                      variant: "text-sm/normal",
-                      color: "text-muted",
+                      id: R,
+                      variant: b ?? "text-sm/normal",
+                      color: T ?? "text-muted",
                       className: h.qf,
                       children: s,
                   })
                 : n,
-            !b &&
+            !y &&
                 (0, i.jsx)(x.D, {
-                    innerRef: d,
-                    "aria-label": c,
-                    "aria-describedby": F,
+                    innerRef: c,
+                    "aria-label": d,
+                    "aria-describedby": V,
                     "aria-expanded": !1,
                     onClick: (e) => {
-                        e.stopPropagation(), H();
+                        e.stopPropagation(), B();
                     },
-                    focusProps: { ringTarget: y },
+                    focusProps: { ringTarget: w },
                 }),
             null != f && (0, i.jsx)("div", { className: h.lD, children: (0, i.jsx)(I, { ...f }) }),
         ],
@@ -186,7 +188,7 @@ function A(e) {
         ref: E,
         className: r()(
             h.kL,
-            { [h.oE]: "compact" === g, [h.c1]: "multiline" === g, [h.CP]: T, [h.WK]: N, [h.Dy]: t },
+            { [h.oE]: "compact" === g, [h.c1]: "multiline" === g, [h.CP]: N, [h.WK]: k, [h.Dy]: t },
             v,
         ),
         onBlur: S,
@@ -194,13 +196,13 @@ function A(e) {
         children: (0, i.jsx)(
             "div",
             {
-                className: M ? h.qG : void 0,
+                className: F ? h.qG : void 0,
                 children: t
                     ? o
                     : (0, i.jsxs)(i.Fragment, {
                           children: [
-                              (0, i.jsx)("div", { className: h.VH, children: V }),
-                              D && "compact" !== g && (0, i.jsx)(j, { id: w, message: _, type: P }),
+                              (0, i.jsx)("div", { className: h.VH, children: z }),
+                              M && "compact" !== g && (0, i.jsx)(j, { id: L, message: G, type: D }),
                           ],
                       }),
             },

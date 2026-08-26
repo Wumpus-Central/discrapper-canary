@@ -252,7 +252,9 @@ function ea(e) {
             maxLength: o,
             className: es.ZZ,
         };
-    return 1 === c ? (0, i.jsx)(et.yV, { ...f, size: "compact" }) : (0, i.jsx)(ee.f, { ...f, rows: 1, maxRows: c });
+    return 1 === c
+        ? (0, i.jsx)(et.yV, { ...f, size: "compact", textVariant: s, textColor: r })
+        : (0, i.jsx)(ee.f, { ...f, rows: 1, maxRows: c, textVariant: s, textColor: r });
 }
 function eo(e) {
     return e.canEdit
