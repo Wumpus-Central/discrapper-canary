@@ -5843,6 +5843,28 @@
     }
   },
   {
+    "kind": "user",
+    "name": "2026-08-top-soundboard-sounds-mobile",
+    "defaultConfig": {
+      "enabled": false,
+      "topSoundsFirst": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true,
+        "topSoundsFirst": true
+      },
+      "2": {
+        "enabled": true,
+        "topSoundsFirst": false
+      }
+    }
+  },
+  {
     "name": "2026-08-user-bio-max-length",
     "kind": "user",
     "defaultConfig": {
