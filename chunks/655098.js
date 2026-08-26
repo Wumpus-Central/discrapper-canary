@@ -239,14 +239,14 @@ class eg extends i.PureComponent {
         h.A.captureException(e, { extra: t }), this.setState({ initialValue: [...this.props.editor.children] });
     }
     renderElement(e) {
-        let { guildId: t, channelId: n, renderExtraElement: i } = this.props,
-            { attributes: s, children: a } = e;
-        "rtl" === s.dir && (s.style = { ...s.style, textAlign: "right" });
-        let o =
+        let { guildId: t, channelId: n, renderExtraElement: i, spellCheck: s } = this.props,
+            { attributes: a, children: o } = e;
+        "rtl" === a.dir && (a.style = { ...a.style, textAlign: "right" });
+        let u =
             i?.(e) ??
-            (function (e, t, n) {
-                let { attributes: i, children: s, element: a, decorations: o } = e,
-                    u = Object.entries(o?.[0] ?? {})
+            (function (e, t, n, i) {
+                let { attributes: s, children: a, element: o, decorations: u } = e,
+                    c = Object.entries(u?.[0] ?? {})
                         .filter((e) => {
                             let [t] = e;
                             return "anchor" !== t && "focus" !== t;
@@ -257,98 +257,98 @@ class eg extends i.PureComponent {
                         })
                         .filter((e) => null != e)
                         .join(" ");
-                switch (a.type) {
+                switch (o.type) {
                     case "line":
-                        if (a.codeBlockState?.isInCodeBlock)
+                        if (o.codeBlockState?.isInCodeBlock)
                             return (0, l.jsx)("div", {
                                 className: eo.codeLine,
-                                spellCheck: null == a.codeBlockState || null == a.codeBlockState.lang,
-                                ...i,
-                                children: s,
+                                spellCheck: !1 !== i && (null == o.codeBlockState || null == o.codeBlockState.lang),
+                                ...s,
+                                children: a,
                             });
-                        return (0, l.jsx)("div", { ...i, children: s });
+                        return (0, l.jsx)("div", { ...s, children: a });
                     case "blockQuote": {
                         let e = r()(eh.h, eh.MN);
                         return (0, l.jsxs)("div", {
-                            ...i,
+                            ...s,
                             className: e,
                             children: [
                                 (0, l.jsx)("span", { contentEditable: !1, className: eh.r }),
-                                (0, l.jsx)("blockquote", { children: s }),
+                                (0, l.jsx)("blockquote", { children: a }),
                             ],
                         });
                     }
                     case "emoji":
                         return (0, l.jsxs)(em, {
-                            attributes: i,
-                            className: u,
-                            children: [(0, l.jsx)(X, { emoji: a.emoji }), s],
+                            attributes: s,
+                            className: c,
+                            children: [(0, l.jsx)(X, { emoji: o.emoji }), a],
                         });
                     case "customEmoji":
                         return (0, l.jsxs)(em, {
-                            attributes: i,
-                            className: u,
-                            children: [(0, l.jsx)(Q, { emoji: a.emoji }), s],
+                            attributes: s,
+                            className: c,
+                            children: [(0, l.jsx)(Q, { emoji: o.emoji }), a],
                         });
                     case "textMention":
                         return (0, l.jsxs)(em, {
-                            attributes: i,
-                            className: u,
-                            children: [(0, l.jsx)(ee, { text: a.name }), s],
+                            attributes: s,
+                            className: c,
+                            children: [(0, l.jsx)(ee, { text: o.name }), a],
                         });
                     case "userMention":
                         return (0, l.jsxs)(em, {
-                            attributes: i,
-                            className: u,
-                            children: [(0, l.jsx)(et, { id: a.userId, channelId: n, guildId: t }), s],
+                            attributes: s,
+                            className: c,
+                            children: [(0, l.jsx)(et, { id: o.userId, channelId: n, guildId: t }), a],
                         });
                     case "roleMention":
                         return (0, l.jsxs)(em, {
-                            attributes: i,
-                            className: u,
-                            children: [(0, l.jsx)(en, { id: a.roleId, guildId: t, channelId: n }), s],
+                            attributes: s,
+                            className: c,
+                            children: [(0, l.jsx)(en, { id: o.roleId, guildId: t, channelId: n }), a],
                         });
                     case "channelMention":
                         return (0, l.jsxs)(em, {
-                            attributes: i,
-                            className: u,
-                            children: [(0, l.jsx)(el, { id: a.channelId }), s],
+                            attributes: s,
+                            className: c,
+                            children: [(0, l.jsx)(el, { id: o.channelId }), a],
                         });
                     case "staticRouteLink":
                         return (0, l.jsxs)(em, {
-                            attributes: i,
-                            className: u,
-                            children: [(0, l.jsx)(ei, { id: a.id, itemId: a.itemId, guildId: t }), s],
+                            attributes: s,
+                            className: c,
+                            children: [(0, l.jsx)(ei, { id: o.id, itemId: o.itemId, guildId: t }), a],
                         });
                     case "soundboard":
                         return (0, l.jsxs)(em, {
-                            attributes: i,
-                            className: u,
-                            children: [(0, l.jsx)(C.LF, { soundId: a.soundId }), s],
+                            attributes: s,
+                            className: c,
+                            children: [(0, l.jsx)(C.LF, { soundId: o.soundId }), a],
                         });
                     case "commandMention":
                         return (0, l.jsxs)(em, {
-                            attributes: i,
-                            className: u,
-                            children: [(0, l.jsx)(es, { text: a.commandName, id: a.commandId }), s],
+                            attributes: s,
+                            className: c,
+                            children: [(0, l.jsx)(es, { text: o.commandName, id: o.commandId }), a],
                         });
                     case "timestamp":
                         return (0, l.jsxs)(em, {
-                            attributes: i,
-                            className: u,
-                            children: [(0, l.jsx)(er, { timestamp: a.parsed }), s],
+                            attributes: s,
+                            className: c,
+                            children: [(0, l.jsx)(er, { timestamp: o.parsed }), a],
                         });
                     case "gameMention":
                         return (0, l.jsxs)(em, {
-                            attributes: i,
-                            className: u,
-                            children: [(0, l.jsx)(ea, { id: a.gameId }), s],
+                            attributes: s,
+                            className: c,
+                            children: [(0, l.jsx)(ea, { id: o.gameId }), a],
                         });
                     default:
                         return null;
                 }
-            })(e, t, n);
-        return null != o ? o : (0, l.jsx)("div", { ...s, children: a });
+            })(e, t, n, s);
+        return null != u ? u : (0, l.jsx)("div", { ...a, children: o });
     }
     renderLeaf(e) {
         let { editor: t, renderExtraLeaf: n } = this.props,
