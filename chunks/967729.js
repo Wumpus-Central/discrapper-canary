@@ -499,17 +499,20 @@ function eR(e) {
                 className: r()(ek.kL, { [ek.Vp]: C }, e),
                 children: [
                     a || null != n.image
-                        ? (0, i.jsx)("div", {
+                        ? (0, i.jsxs)("div", {
                               className: ek.El,
-                              children: (0, i.jsx)(ea.A, {
-                                  cropAndUpload: m,
-                                  imageInputRef: o,
-                                  className: ek.Sl,
-                                  canEdit: a,
-                                  userId: t,
-                                  image: n.image,
-                                  previewUri: x,
-                              }),
+                              children: [
+                                  (0, i.jsx)(ea.A, {
+                                      cropAndUpload: m,
+                                      imageInputRef: o,
+                                      className: ek.Sl,
+                                      canEdit: a,
+                                      userId: t,
+                                      image: n.image,
+                                      previewUri: x,
+                                  }),
+                                  S && E ? (0, i.jsx)("div", { className: ek.cw }) : null,
+                              ],
                           })
                         : null,
                     a
@@ -537,7 +540,6 @@ function eR(e) {
                     (0, i.jsxs)("div", {
                         className: r()(ek.hQ, e, { [ek.Vp]: C }),
                         children: [
-                            S && E ? (0, i.jsx)("div", { className: ek.cw }) : null,
                             (0, i.jsx)(er, {
                                 canEdit: a,
                                 growWidth: !0,

@@ -110,10 +110,10 @@
 }
 
 .contentBackground__70feb {
-    background: linear-gradient(180deg, transparent 0, var(--background-scrim) 100%);
+    background: linear-gradient(0deg, #000, 60%, transparent);
     inset: 0;
-    position: absolute;
-    z-index: -1
+    pointer-events: none;
+    position: absolute
 }
 
 .container_fca8d7 {
@@ -285,4 +285,4 @@
     margin-inline-end: auto
 }
 
-/*# sourceMappingURL=52e0e0bbb1bc5497.css.map*/
+/*# sourceMappingURL=cfc713871cca2b26.css.map*/
