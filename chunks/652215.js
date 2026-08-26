@@ -5776,6 +5776,7 @@ var rj = (((eH = {}).ALL = "ALL"), (eH.CREATE = "CREATE"), (eH.UPDATE = "UPDATE"
         (eK.DEFAULT_CHANNEL_IDS = "default_channel_ids"),
         (eK.ENABLE_DEFAULT_CHANNELS = "enable_default_channels"),
         (eK.ENABLE_ONBOARDING_PROMPTS = "enable_onboarding_prompts"),
+        (eK.MODE = "mode"),
         (eK.APPLIED_TAGS = "applied_tags"),
         (eK.AVAILABLE_TAGS = "available_tags"),
         (eK.AVAILABLE_TAG_ADD = "available_tag_add"),
