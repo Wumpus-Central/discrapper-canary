@@ -6119,6 +6119,7 @@ let aa = Object.freeze({
     [tM.D.TWITCH]: "Twitch",
     [tM.D.EPIC]: "Epic",
     [tM.D.GOOGLE_PLAY]: "Google Play",
+    [tM.D.APPLE_APP_STORE]: "App Store",
     [tM.D.SAMSUNG_GALAXY]: "Samsung Galaxy",
     [tM.D.MICROSOFT]: "Microsoft",
     [tM.D.PLAYSTATION]: "PlayStation",
@@ -6130,6 +6131,7 @@ let aa = Object.freeze({
     [tM.D.GOP]: "GOP",
     [tM.D.GDCO]: "GDCO",
     [tM.D.OPENCRITIC]: "OpenCritic",
+    [tM.D.SENSORTOWER]: "SensorTower",
 });
 var as = (((e6 = {}).USAGE_STATISTICS = "usage_statistics"), (e6.PERSONALIZATION = "personalization"), e6),
     al =
