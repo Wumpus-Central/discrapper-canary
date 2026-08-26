@@ -58,14 +58,9 @@ var f = n(775602),
     m = n(267102),
     g = n(652215);
 let S = ["Shift", "Alt", "Meta", "Control"];
-var N = n(534409);
-let C = (0, n(945810).mj)({
-    name: "2026-05-mana-type-consolidation",
-    kind: "user",
-    defaultConfig: { enabled: !1 },
-    variations: { 1: { enabled: !0 } },
-});
-var O = n(750506),
+var N = n(534409),
+    C = n(37537),
+    O = n(750506),
     R = n(869146),
     L = n(773669),
     y = n(363195),
@@ -154,7 +149,7 @@ function G(e) {
         Q = (0, N.qK)("RootThemeContextProvider"),
         J = (0, N.k5)("RootThemeContextProvider"),
         ee = (0, N.lV)("RootThemeContextProvider"),
-        et = C.useConfig({ location: "RootThemeContextProvider" }).enabled,
+        et = (0, C.c)("RootThemeContextProvider"),
         en = (0, T.m2)({ isPopoutWindow: l }),
         ei = (function (e) {
             let { theme: t, saturation: n, enabledExperiments: i, focused: r, mainWindowVisible: l, locale: o } = e,

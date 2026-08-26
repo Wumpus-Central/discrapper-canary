@@ -1,101 +1,109 @@
-s.d(t, { $L: () => S, NI: () => _, kd: () => T, TG: () => A, P5: () => p, Ft: () => k, Yq: () => b });
-var i = s(477900),
-    r = s(582128),
-    a = s(503698),
-    n = s.n(a),
-    l = s(628284),
-    o = s(661531),
-    c = s(834730),
-    d = s(695366);
-if (221552 == s.j) var x = s(104510);
-if (221552 == s.j) var v = s(297264);
-if (221552 == s.j) var j = s(890856);
-if (221552 == s.j) var m = s(812993);
-var u = s(773669),
-    h = s(939981),
-    f = s(641641),
-    N = s(375708),
-    g = s(517826);
+i.d(t, { $L: () => T, NI: () => k, kd: () => w, TG: () => A, P5: () => b, Ft: () => G, Yq: () => S });
+var s = i(477900),
+    r = i(582128),
+    a = i(503698),
+    o = i.n(a),
+    l = i(628284),
+    n = i(661531),
+    d = i(834730),
+    c = i(695366);
+if (221552 == i.j) var x = i(104510);
+if (221552 == i.j) var m = i(297264);
+if (221552 == i.j) var u = i(890856);
+if (221552 == i.j) var v = i(812993);
+var j = i(37537),
+    h = i(773669),
+    f = i(939981),
+    g = i(641641),
+    N = i(375708),
+    p = i(517826);
 function A(e) {
-    let { text: t } = e;
-    return (0, i.jsxs)("div", {
-        className: g.mG,
+    let { text: t } = e,
+        i = (0, j.c)("GuildPowerupCardFooterActive");
+    return (0, s.jsxs)("div", {
+        className: p.mG,
         children: [
-            (0, i.jsx)(l.y, { size: "xs", color: o.A.colors.STATUS_POSITIVE }),
-            (0, i.jsx)(c.E, { color: "text-feedback-positive", variant: "text-sm/bold", children: t }),
-        ],
-    });
-}
-function p(e) {
-    let { dateString: t } = e;
-    return (0, i.jsxs)("div", {
-        className: g.mG,
-        children: [
-            (0, i.jsx)(d.E, { size: "xs", color: o.A.colors.STATUS_WARNING }),
-            (0, i.jsx)(c.E, {
-                color: "text-feedback-warning",
-                variant: "text-sm/bold",
-                children: N.intl.formatToMarkdownString(f.default["ol/ao/"], {
-                    dateString: new Date(t).toLocaleDateString(u.default.locale, { month: "2-digit", day: "2-digit" }),
-                }),
+            (0, s.jsx)(l.y, { size: "xs", color: n.A.colors.STATUS_POSITIVE }),
+            (0, s.jsx)(d.E, {
+                color: "text-feedback-positive",
+                variant: i ? "text-sm/semibold" : "text-sm/bold",
+                children: t,
             }),
         ],
     });
 }
 function b(e) {
-    let { removingAt: t } = e;
-    return (0, i.jsxs)("div", {
-        className: g.wL,
+    let { dateString: t } = e,
+        i = (0, j.c)("GuildPowerupCardFooterExpiring");
+    return (0, s.jsxs)("div", {
+        className: p.mG,
         children: [
-            (0, i.jsx)(d.E, { size: "xs", color: o.A.colors.STATUS_WARNING }),
-            (0, i.jsx)(c.E, {
+            (0, s.jsx)(c.E, { size: "xs", color: n.A.colors.STATUS_WARNING }),
+            (0, s.jsx)(d.E, {
                 color: "text-feedback-warning",
-                variant: "text-sm/bold",
-                children: N.intl.formatToPlainString(f.default["6e2ry1"], { dateString: (0, h.A)(t) }),
+                variant: i ? "text-sm/semibold" : "text-sm/bold",
+                children: N.intl.formatToMarkdownString(g.default["ol/ao/"], {
+                    dateString: new Date(t).toLocaleDateString(h.default.locale, { month: "2-digit", day: "2-digit" }),
+                }),
             }),
         ],
     });
 }
 function S(e) {
-    let { cost: t, costDecorator: s, status: r, className: a } = e,
-        l = void 0 !== t ? g._A : g.$3;
-    return (0, i.jsxs)("div", {
-        className: n()(l, a),
+    let { removingAt: t } = e,
+        i = (0, j.c)("GuildPowerupCardFooterRemoving");
+    return (0, s.jsxs)("div", {
+        className: p.wL,
         children: [
-            void 0 !== t &&
-                (0, i.jsxs)("div", {
-                    className: n()(g.mG, g.pT),
-                    children: [
-                        (0, i.jsx)(x._, { size: "sm", color: o.A.unsafe_rawColors.GUILD_BOOSTING_PINK }),
-                        (0, i.jsx)(c.E, {
-                            className: g.q9,
-                            tag: "div",
-                            variant: "heading-md/semibold",
-                            color: "text-subtle",
-                            children: N.intl.formatToPlainString(N.t.t2Wbo1, { required: t, decorator: s ?? "" }),
-                        }),
-                    ],
-                }),
-            r?.type === "expiring" && (0, i.jsx)(p, { dateString: r.expiringAt }),
-            r?.type === "removing" && (0, i.jsx)(b, { removingAt: r.removingAt }),
-            r?.type === "active" && (0, i.jsx)(A, { text: r.statusText }),
+            (0, s.jsx)(c.E, { size: "xs", color: n.A.colors.STATUS_WARNING }),
+            (0, s.jsx)(d.E, {
+                color: "text-feedback-warning",
+                variant: i ? "text-sm/semibold" : "text-sm/bold",
+                children: N.intl.formatToPlainString(g.default["6e2ry1"], { dateString: (0, f.A)(t) }),
+            }),
         ],
     });
 }
 function T(e) {
-    let { children: t } = e;
-    return (0, i.jsx)("div", { className: g.UD, children: t });
-}
-function k(e) {
-    let { title: t, textColor: s, children: r, footer: a } = e;
-    return (0, i.jsxs)("div", {
-        className: g.hQ,
+    let { cost: t, costDecorator: i, status: r, className: a } = e,
+        l = void 0 !== t ? p._A : p.$3;
+    return (0, s.jsxs)("div", {
+        className: o()(l, a),
         children: [
-            (0, i.jsxs)("div", {
+            void 0 !== t &&
+                (0, s.jsxs)("div", {
+                    className: o()(p.mG, p.pT),
+                    children: [
+                        (0, s.jsx)(x._, { size: "sm", color: n.A.unsafe_rawColors.GUILD_BOOSTING_PINK }),
+                        (0, s.jsx)(d.E, {
+                            className: p.q9,
+                            tag: "div",
+                            variant: "heading-md/semibold",
+                            color: "text-subtle",
+                            children: N.intl.formatToPlainString(N.t.t2Wbo1, { required: t, decorator: i ?? "" }),
+                        }),
+                    ],
+                }),
+            r?.type === "expiring" && (0, s.jsx)(b, { dateString: r.expiringAt }),
+            r?.type === "removing" && (0, s.jsx)(S, { removingAt: r.removingAt }),
+            r?.type === "active" && (0, s.jsx)(A, { text: r.statusText }),
+        ],
+    });
+}
+function w(e) {
+    let { children: t } = e;
+    return (0, s.jsx)("div", { className: p.UD, children: t });
+}
+function G(e) {
+    let { title: t, textColor: i, children: r, footer: a } = e;
+    return (0, s.jsxs)("div", {
+        className: p.hQ,
+        children: [
+            (0, s.jsxs)("div", {
                 children: [
-                    (0, i.jsx)("div", {
-                        className: g.N1,
-                        children: (0, i.jsx)(v.D, { color: s, variant: "heading-md/bold", children: t }),
+                    (0, s.jsx)("div", {
+                        className: p.N1,
+                        children: (0, s.jsx)(m.D, { color: i, variant: "heading-md/bold", children: t }),
                     }),
                     r,
                 ],
@@ -104,38 +112,38 @@ function k(e) {
         ],
     });
 }
-let _ =
-    221552 == s.j
+let k =
+    221552 == i.j
         ? r.forwardRef(function (e, t) {
               let {
-                  className: s,
+                  className: i,
                   label: r,
                   isActive: a,
                   isWarning: l,
-                  badge: c,
-                  canRollback: d,
+                  badge: d,
+                  canRollback: c,
                   onClick: x,
-                  onMouseOver: v,
-                  onMouseLeave: u,
+                  onMouseOver: m,
+                  onMouseLeave: j,
                   children: h,
               } = e;
-              return (0, i.jsx)("div", {
-                  className: n()(g.gp, { [g.Wq]: d && !a }),
+              return (0, s.jsx)("div", {
+                  className: o()(p.gp, { [p.Wq]: c && !a }),
                   ref: t,
-                  children: (0, i.jsxs)(j.s, {
+                  children: (0, s.jsxs)(u.s, {
                       "aria-label": r,
                       onClick: x,
-                      onMouseOver: v,
-                      onMouseLeave: u,
-                      className: n()(g.kL, { [g.vu]: a, [g.$e]: l || (d && a) }, s),
+                      onMouseOver: m,
+                      onMouseLeave: j,
+                      className: o()(p.kL, { [p.vu]: a, [p.$e]: l || (c && a) }, i),
                       children: [
                           h,
-                          "new" === c && (0, i.jsx)(m.Lp, { className: g.Hl, text: N.intl.string(N.t.y2b7CA) }),
-                          "beta" === c &&
-                              (0, i.jsx)(m.Lp, {
-                                  className: g.Hl,
+                          "new" === d && (0, s.jsx)(v.Lp, { className: p.Hl, text: N.intl.string(N.t.y2b7CA) }),
+                          "beta" === d &&
+                              (0, s.jsx)(v.Lp, {
+                                  className: p.Hl,
                                   text: N.intl.string(N.t.oW0eUd),
-                                  color: o.A.colors.BACKGROUND_BRAND.css,
+                                  color: n.A.colors.BACKGROUND_BRAND.css,
                               }),
                       ],
                   }),

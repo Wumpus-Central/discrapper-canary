@@ -12,18 +12,18 @@ var r = i(477900),
     x = i(363487),
     m = i(998418),
     v = i(193157),
-    j = i(439156),
-    h = i(568065),
-    E = i(375708),
+    E = i(439156),
+    j = i(568065),
+    h = i(375708),
     I = i(389240),
     g = i(107836);
 function A(e) {
     let { guildId: t, powerup: i, onClose: n, ...a } = e,
-        [A, _] = s.useState(void 0),
-        T = (0, m.Ay)(t, i),
-        f = T.type === h.b_.TIER_OVERRIDE_ACTIVATED,
-        k = (0, x.A)(t),
-        N = null == T.sourceEntitlement || !k;
+        [A, T] = s.useState(void 0),
+        _ = (0, m.Ay)(t, i),
+        k = _.type === j.b_.TIER_OVERRIDE_ACTIVATED,
+        f = (0, x.A)(t),
+        N = null == _.sourceEntitlement || !f;
     return (
         (0, u.Z)(t, i, u.q.DETAIL),
         (0, r.jsxs)(o.EO, {
@@ -53,19 +53,19 @@ function A(e) {
                                 (0, r.jsxs)("div", {
                                     className: l()(I.qr, { [I.r9]: N }),
                                     children: [
-                                        !f &&
-                                            k &&
-                                            (0, r.jsx)(j.A, {
+                                        !k &&
+                                            f &&
+                                            (0, r.jsx)(E.A, {
                                                 guildId: t,
                                                 powerup: i,
-                                                onError: _,
+                                                onError: T,
                                                 grow: !1,
                                                 compact: !N,
                                             }),
                                         (0, r.jsx)(p.$, {
                                             variant: N ? "secondary" : "primary",
                                             onClick: n,
-                                            text: E.intl.string(E.t.cpT0Cq),
+                                            text: h.intl.string(h.t.cpT0Cq),
                                         }),
                                     ],
                                 }),
@@ -78,35 +78,37 @@ function A(e) {
         })
     );
 }
-var _ = i(104510),
-    T = i(661531),
-    f = i(866665),
-    k = i(772707),
+var T = i(104510),
+    _ = i(661531),
+    k = i(866665),
+    f = i(772707),
     N = i(683071),
     b = i(470934),
     C = i(249286),
     y = i(933337),
     w = i(743569),
-    D = i(309326),
-    R = i(337322),
-    L = i(183699);
-function P(e) {
+    D = i(37537),
+    L = i(309326),
+    P = i(337322),
+    R = i(183699);
+function O(e) {
     let { powerup: t } = e,
-        i = (0, R.A)(t);
+        i = (0, P.A)(t),
+        s = (0, D.c)("GuildPowerupLevelPerks");
     return (0, r.jsx)("div", {
-        className: L.kL,
+        className: R.kL,
         children: i.map((e) => {
-            let { Icon: t } = (0, D.a)(e.perkIcon, !1);
+            let { Icon: t } = (0, L.a)(e.perkIcon, !1);
             return (0, r.jsxs)(
                 "div",
                 {
-                    className: L.d_,
+                    className: R.d_,
                     children: [
-                        (0, r.jsx)(t, { color: T.A.colors.TEXT_MUTED, className: L.Kk }),
+                        (0, r.jsx)(t, { color: s ? _.A.colors.TEXT_SUBTLE : _.A.colors.TEXT_MUTED, className: R.Kk }),
                         (0, r.jsx)(d.E, {
-                            className: L.Qq,
-                            color: "text-muted",
-                            variant: "text-sm/medium",
+                            className: R.Qq,
+                            color: s ? void 0 : "text-muted",
+                            variant: s ? "text-sm/normal" : "text-sm/medium",
                             children: e.description,
                         }),
                     ],
@@ -116,88 +118,88 @@ function P(e) {
         }),
     });
 }
-var O = i(652215),
+var S = i(652215),
     V = i(641641),
-    S = i(115087);
-function q(e) {
-    return (0, r.jsx)(_._, { ...e, color: T.A.unsafe_rawColors.GUILD_BOOSTING_PINK_REFRESH });
+    q = i(115087);
+function G(e) {
+    return (0, r.jsx)(T._, { ...e, color: _.A.unsafe_rawColors.GUILD_BOOSTING_PINK_REFRESH });
 }
 function M(e) {
     var t;
     let i,
         n,
         { guildId: a, powerup: l, expressiveCta: o, onClose: c, ...v } = e,
-        [j, I] = s.useState(void 0),
+        [E, I] = s.useState(void 0),
         g = (0, m.Ay)(a, l),
-        A = g.type !== h.b_.INACTIVE,
-        T = g.type === h.b_.TIER_OVERRIDE_ACTIVATED,
+        A = g.type !== j.b_.INACTIVE,
+        _ = g.type === j.b_.TIER_OVERRIDE_ACTIVATED,
         D = (0, x.A)(a),
-        { disabled: R, reason: L } = (0, b.A)(a, l, A),
-        { onActivate: M, isLoading: z, error: G } = (0, C.A)(a, l),
+        { disabled: L, reason: P } = (0, b.A)(a, l, A),
+        { onActivate: R, isLoading: M, error: z } = (0, C.A)(a, l),
         Q = (0, y.A)(a, l);
     s.useEffect(() => {
-        I(G);
-    }, [G]),
+        I(z);
+    }, [z]),
         (0, u.Z)(a, l, u.q.DETAIL);
-    let $ = { type: "rive", rive: w.T[l.skuId], aspectRatio: "16/9" },
-        U = !T && D,
+    let U = { type: "rive", rive: w.T[l.skuId], aspectRatio: "16/9" },
+        $ = !_ && D,
         B =
-            U && !A
+            $ && !A
                 ? [
                       {
-                          text: E.intl.string(V.default.AOQgki),
-                          icon: _._,
+                          text: h.intl.string(V.default.AOQgki),
+                          icon: T._,
                           variant: o ? "expressive" : "primary",
                           size: "md",
-                          disabled: R,
-                          loading: z,
+                          disabled: L,
+                          loading: M,
                           onClick: () => {
-                              M();
+                              R();
                           },
                       },
                   ]
                 : void 0,
-        F = E.intl.formatToPlainString(V.default["5HQUzD"], { boostCount: l.cost }),
+        F = h.intl.formatToPlainString(V.default["5HQUzD"], { boostCount: l.cost }),
         H =
-            U && A
-                ? (0, r.jsx)(f.m, {
+            $ && A
+                ? (0, r.jsx)(k.m, {
                       text: F,
                       delay: 100,
                       children: (0, r.jsx)(p.$, {
                           variant: "secondary",
                           size: "md",
                           fullWidth: !0,
-                          disabled: R,
-                          loading: z,
-                          text: E.intl.string(V.default.PYPdl4),
+                          disabled: L,
+                          loading: M,
+                          text: h.intl.string(V.default.PYPdl4),
                           onClick: () => {
                               Q();
                           },
                       }),
                   })
                 : void 0;
-    return (0, r.jsxs)(k.k, {
-        graphic: $,
+    return (0, r.jsxs)(f.k, {
+        graphic: U,
         title: l.title,
         subtitle: {
             text:
                 ((t = l.skuId),
-                (i = h.y7[t] ?? O.TVA.NONE),
-                (n = O.M2T[i]),
-                E.intl.formatToPlainString(E.t["pob/cL"], { subscriptions: n })),
-            leadingIcon: q,
+                (i = j.y7[t] ?? S.TVA.NONE),
+                (n = S.M2T[i]),
+                h.intl.formatToPlainString(h.t["pob/cL"], { subscriptions: n })),
+            leadingIcon: G,
         },
         actions: B,
         actionBarInput: H,
         onClose: c,
         ...v,
         children: [
-            (0, r.jsx)(P, { powerup: l }),
-            U &&
+            (0, r.jsx)(O, { powerup: l }),
+            $ &&
                 !A &&
-                null != L &&
-                (0, r.jsx)("div", { className: S.P, children: (0, r.jsx)(N.w, { type: "info", children: L }) }),
-            null != j && (0, r.jsx)(d.E, { color: "text-feedback-critical", variant: "text-sm/semibold", children: j }),
+                null != P &&
+                (0, r.jsx)("div", { className: q.P, children: (0, r.jsx)(N.w, { type: "info", children: P }) }),
+            null != E && (0, r.jsx)(d.E, { color: "text-feedback-critical", variant: "text-sm/semibold", children: E }),
         ],
     });
 }
