@@ -1,8 +1,8 @@
-n.d(t, { contextMenuCallbackNative: () => i, contextMenuCallbackWeb: () => a, u: () => s });
+n.d(t, { contextMenuCallbackNative: () => s, contextMenuCallbackWeb: () => a, u: () => i });
 var l = n(477900);
 n(582128);
 var r = n(442433);
-function s() {
+function i() {
     let e;
     return (
         null != window.getSelection
@@ -13,11 +13,11 @@ function s() {
         e ?? ""
     );
 }
-function i(e) {
-    let t = s(),
-        i = e.target;
-    if (i?.tagName === "TEXTAREA" || i?.tagName === "INPUT") {
-        if (i?.type !== "checkbox")
+function s(e) {
+    let t = i(),
+        s = e.target;
+    if (s?.tagName === "TEXTAREA" || s?.tagName === "INPUT") {
+        if (s?.type !== "checkbox")
             return (0, r.L3)(
                 e,
                 async () => {
@@ -29,16 +29,16 @@ function i(e) {
                 { enableSpellCheck: !0 },
             );
     } else {
-        if ("none" === window.getComputedStyle(i).getPropertyValue("-webkit-user-select"))
+        if ("none" === window.getComputedStyle(s).getPropertyValue("-webkit-user-select"))
             return void e.preventDefault();
-        let s,
+        let i,
             a,
             u,
-            c = e.target;
-        for (; null != c; )
-            "src" in c && null != c.src && (a = c.src),
-                "href" in c && null != c.href && ((s = c.href), (u = c.textContent)),
-                (c = c?.parentNode);
+            o = e.target;
+        for (; null != o; )
+            "src" in o && null != o.src && (a = o.src),
+                "href" in o && null != o.href && ((i = o.href), (u = o.textContent)),
+                (o = o?.parentNode);
         if (null != a)
             return (0, r.L3)(e, async () => {
                 let { default: e } = await Promise.all([
@@ -54,7 +54,7 @@ function i(e) {
                 ]).then(n.bind(n, 177079));
                 return (t) => (0, l.jsx)(e, { ...t, src: a ?? "" });
             });
-        if (null != s)
+        if (null != i)
             return (0, r.L3)(e, async () => {
                 let { default: e } = await Promise.all([
                     n.e("344265"),
@@ -65,7 +65,7 @@ function i(e) {
                     n.e("944801"),
                     n.e("605905"),
                 ]).then(n.bind(n, 945896));
-                return (t) => (0, l.jsx)(e, { ...t, href: s, textContent: u });
+                return (t) => (0, l.jsx)(e, { ...t, href: i, textContent: u });
             });
         if (null != t && "" !== t)
             return (0, r.L3)(e, async () => {
@@ -80,7 +80,7 @@ function a(e) {
         n = e.target;
     if (n?.tagName === "INPUT" || n?.tagName === "TEXTAREA") t = !0;
     else if (n?.closest != null && n?.closest("[contenteditable=true]") != null) t = !0;
-    else if (null != s() && "" !== s()) t = !0;
+    else if (null != i() && "" !== i()) t = !0;
     else {
         let n,
             l,

@@ -5453,7 +5453,7 @@ function rc(e) {
                 o = (0, tV.jz)(e),
                 d = (0, ty.d)(e.id),
                 c = (0, t_.bG)([tv.h], () => tv.h.getNewMemberActions(e.id), [e.id]),
-                h = (0, tw.QI)(e, "useGuildActionRows"),
+                h = (0, tw.by)(e, "useGuildActionRows"),
                 A = (0, tM.A)(e.id),
                 g = (0, tR.jY)(e.id),
                 m = (0, tj.fw)(e.id),

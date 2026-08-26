@@ -40,7 +40,7 @@ async function U(e) {
     if ((0, P.jq)(n))
         switch (n) {
             case P.VV.VIBEGRATIONS:
-                return null != i && (0, y.pi)(i, "isAccessibleChannelOrThreadPath");
+                return null != i && (0, y.G2)(i, "isAccessibleChannelOrThreadPath");
             case P.VV.ROLE_SUBSCRIPTIONS:
                 return (0, p.l8)(t, r);
             case P.VV.SERVER_MONETIZATION_ONBOARDING:

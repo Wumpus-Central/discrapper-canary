@@ -1,98 +1,98 @@
-n.d(t, { A: () => A, P: () => a }), n(321073);
-var i = n(17928),
-    r = n(228366),
-    o = n(287809);
-function a(e) {
-    return e.owner_user_id === o.default.getCurrentUser()?.id;
+i.d(e, { A: () => T, P: () => a }), i(321073);
+var n = i(17928),
+    l = i(228366),
+    r = i(287809);
+function a(t) {
+    return t.owner_user_id === r.default.getCurrentUser()?.id;
 }
-let l = new Map(),
-    u = new Map(),
+let o = new Map(),
+    _ = new Map(),
     c = new Map(),
-    _ = null,
-    d = new Set(),
-    s = [],
-    p = new Map();
-class E extends i.Ay.Store {
+    E = null,
+    u = new Set(),
+    d = [],
+    s = new Map();
+class p extends n.Ay.Store {
     initialize() {
-        this.waitFor(o.default);
+        this.waitFor(r.default);
     }
     getOwnedProjects() {
-        return Array.from(l.values()).filter(a);
+        return Array.from(o.values()).filter(a);
     }
-    getProject(e) {
-        return l.get(e) ?? null;
+    getProject(t) {
+        return o.get(t) ?? null;
     }
-    findProjectByApplicationId(e) {
-        for (let t of l.values()) if (t.application_id === e || t.preview_application_id === e) return t;
+    findProjectByApplicationId(t) {
+        for (let e of o.values()) if (e.application_id === t || e.preview_application_id === t) return e;
         return null;
     }
-    getSharedProjects(e) {
-        let t = [];
-        for (let n of l.values()) a(n) || n.guild_id !== e || t.push(n);
-        return t;
+    getSharedProjects(t) {
+        let e = [];
+        for (let i of o.values()) a(i) || i.guild_id !== t || e.push(i);
+        return e;
     }
-    getIntegrationStatus(e) {
-        return u.get(e) ?? null;
+    getIntegrationStatus(t) {
+        return _.get(t) ?? null;
     }
-    getSelectedProjectId(e) {
-        return c.get(e) ?? null;
+    getSelectedProjectId(t) {
+        return c.get(t) ?? null;
     }
-    getLogs(e) {
-        return p.get(e) ?? s;
+    getLogs(t) {
+        return s.get(t) ?? d;
     }
     getProjectsFetchState() {
-        return _;
+        return E;
     }
-    hasFetchedGuildProjects(e) {
-        return d.has(e);
+    hasFetchedGuildProjects(t) {
+        return u.has(t);
     }
-    isVibegrationsProjectApplication(e) {
-        return null != e && null != this.findProjectByApplicationId(e);
+    isVibegrationsProjectApplication(t) {
+        return null != t && null != this.findProjectByApplicationId(t);
     }
 }
-function h(e) {
-    let { project: t } = e;
-    l.set(t.id, t);
+function I(t) {
+    let { project: e } = t;
+    o.set(e.id, e);
 }
-let A = new E(r.h, {
+let T = new p(l.h, {
     LOGOUT: function () {
-        if (0 === l.size && 0 === u.size && 0 === c.size && 0 === p.size && 0 === d.size && null == _) return !1;
-        l.clear(), u.clear(), c.clear(), p.clear(), d.clear(), (_ = null);
+        if (0 === o.size && 0 === _.size && 0 === c.size && 0 === s.size && 0 === u.size && null == E) return !1;
+        o.clear(), _.clear(), c.clear(), s.clear(), u.clear(), (E = null);
     },
-    VIBEGRATIONS_PROJECTS_FETCH_START: function (e) {
-        _ = { type: "loading" };
+    VIBEGRATIONS_PROJECTS_FETCH_START: function (t) {
+        E = { type: "loading" };
     },
-    VIBEGRATIONS_PROJECTS_FETCH_SUCCESS: function (e) {
-        let { projects: t, guildId: n } = e,
-            i = new Set(t.map((e) => e.id));
-        for (let [e, t] of l) !i.has(e) && (a(t) || (null != n && t.guild_id === n)) && l.delete(e);
-        for (let e of t) l.set(e.id, e);
-        for (let e of (null != n && d.add(n), u.keys())) l.has(e) || u.delete(e);
-        for (let [e, t] of c) l.has(t) || c.delete(e);
-        _ = { type: "success", fetchedAt: Date.now() };
+    VIBEGRATIONS_PROJECTS_FETCH_SUCCESS: function (t) {
+        let { projects: e, guildId: i } = t,
+            n = new Set(e.map((t) => t.id));
+        for (let [t, e] of o) !n.has(t) && (a(e) || (null != i && e.guild_id === i)) && o.delete(t);
+        for (let t of e) o.set(t.id, t);
+        for (let t of (null != i && u.add(i), _.keys())) o.has(t) || _.delete(t);
+        for (let [t, e] of c) o.has(e) || c.delete(t);
+        E = { type: "success", fetchedAt: Date.now() };
     },
-    VIBEGRATIONS_PROJECTS_FETCH_FAIL: function (e) {
-        _ = { type: "error", fetchedAt: Date.now() };
+    VIBEGRATIONS_PROJECTS_FETCH_FAIL: function (t) {
+        E = { type: "error", fetchedAt: Date.now() };
     },
-    VIBEGRATIONS_PROJECT_CREATE_SUCCESS: h,
-    VIBEGRATIONS_PROJECT_UPDATE_SUCCESS: h,
-    VIBEGRATIONS_PROJECT_INTEGRATION_STATUS_UPDATE: function (e) {
-        let { projectId: t, integrationStatus: n } = e;
-        u.set(t, n);
+    VIBEGRATIONS_PROJECT_CREATE_SUCCESS: I,
+    VIBEGRATIONS_PROJECT_UPDATE_SUCCESS: I,
+    VIBEGRATIONS_PROJECT_INTEGRATION_STATUS_UPDATE: function (t) {
+        let { projectId: e, integrationStatus: i } = t;
+        _.set(e, i);
     },
-    VIBEGRATIONS_PROJECT_DELETE_SUCCESS: function (e) {
-        let { projectId: t } = e;
-        for (let [e, n] of (l.delete(t), u.delete(t), p.delete(t), c)) n === t && c.delete(e);
+    VIBEGRATIONS_PROJECT_DELETE_SUCCESS: function (t) {
+        let { projectId: e } = t;
+        for (let [t, i] of (o.delete(e), _.delete(e), s.delete(e), c)) i === e && c.delete(t);
     },
-    VIBEGRATIONS_PROJECT_SELECT: function (e) {
-        let { guildId: t, projectId: n } = e;
-        if ((c.get(t) ?? null) === n) return !1;
-        null == n ? c.delete(t) : c.set(t, n);
+    VIBEGRATIONS_PROJECT_SELECT: function (t) {
+        let { guildId: e, projectId: i } = t;
+        if ((c.get(e) ?? null) === i) return !1;
+        null == i ? c.delete(e) : c.set(e, i);
     },
-    VIBEGRATIONS_LOG_APPEND: function (e) {
-        let { projectId: t, log: n } = e,
-            i = p.get(t),
-            r = null == i ? [n] : i.concat(n);
-        p.set(t, r.length > 500 ? r.slice(-500) : r);
+    VIBEGRATIONS_LOG_APPEND: function (t) {
+        let { projectId: e, log: i } = t,
+            n = s.get(e),
+            l = null == n ? [i] : n.concat(i);
+        s.set(e, l.length > 500 ? l.slice(-500) : l);
     },
 });

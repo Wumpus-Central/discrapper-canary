@@ -53,7 +53,7 @@ var W = n(336590),
     V = n(138298),
     O = n(761640),
     D = n(47167),
-    K = n(373204),
+    K = n(802426),
     B = n(375708),
     Z = n(172039),
     X = n(612960);
@@ -252,11 +252,11 @@ var eB = n(707539),
     e$ = n(903209),
     e0 = n(346055),
     e7 = n(863439),
-    e3 = n(521981),
-    e9 = n(308334),
-    e1 = n(302031),
-    e6 = n(885386),
-    e8 = n(576705),
+    e9 = n(521981),
+    e3 = n(308334),
+    e6 = n(302031),
+    e8 = n(885386),
+    e1 = n(576705),
     e2 = n(652215),
     e4 = n(838541),
     e5 = n(282573),
@@ -272,12 +272,12 @@ let tt = l.memo(function (e) {
             }),
             [r],
         ),
-        u = (0, o.bG)([e8.A], () => e8.A.can(e2.xBc.MANAGE_MESSAGES, t)),
-        h = e6.gs.useSetting(),
+        u = (0, o.bG)([e1.A], () => e1.A.can(e2.xBc.MANAGE_MESSAGES, t)),
+        h = e8.gs.useSetting(),
         { content: m } = l.useMemo(
             () =>
                 r?.content != null && "" !== r.content
-                    ? (0, e3.Ay)(r, { formatInline: !0, noStyleAndInteraction: !0 })
+                    ? (0, e9.Ay)(r, { formatInline: !0, noStyleAndInteraction: !0 })
                     : { content: null },
             [r],
         ),
@@ -305,7 +305,7 @@ let tt = l.memo(function (e) {
                 children: B.intl.string(B.t.uxrh1O),
             });
         else if (null != r) {
-            let { contentPlaceholder: e, renderedContent: t } = (0, e9.o)(r, m, c, d, a()(e5.BK, te.tZ), {
+            let { contentPlaceholder: e, renderedContent: t } = (0, e3.o)(r, m, c, d, a()(e5.BK, te.tZ), {
                 leadingIconClass: e5.AF,
                 trailingIconClass: e5.AF,
                 iconSize: e4.eJ,
@@ -328,7 +328,7 @@ let tt = l.memo(function (e) {
                 children: B.intl.string(B.t["0KfDxM"]),
             });
     else g = null;
-    return (0, s.jsx)(e1.Bs.Provider, {
+    return (0, s.jsx)(e6.Bs.Provider, {
         value: (0, e7.A)(h, u),
         children: (0, s.jsx)(e0.M, { className: e5.JY, children: g }),
     });

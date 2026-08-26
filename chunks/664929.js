@@ -1,27 +1,27 @@
-n.d(t, { Rg: () => a, Yn: () => c, a8: () => o });
-var i = n(392054),
-    l = n(213404),
-    s = n(834968),
-    r = n(73510);
-function a(e) {
-    return e.type === i.Hf.BUILT_IN ? s.A : l.A;
+n.d(t, { Rg: () => s, Yn: () => u, a8: () => o });
+var l = n(392054),
+    i = n(213404),
+    r = n(834968),
+    a = n(73510);
+function s(e) {
+    return e.type === l.Hf.BUILT_IN ? r.A : i.A;
 }
 function o(e) {
     return `${e / 16}rem`;
 }
-function c(e, t) {
+function u(e, t) {
     let n = t,
-        i = !1,
-        l = t.indexOf(":");
-    if (l >= 0) {
-        let e = t.lastIndexOf(" ", l);
-        e >= 0 ? ((t = t.substring(0, e)), (i = !0)) : (t = t.substring(0, l));
+        l = !1,
+        i = t.indexOf(":");
+    if (i >= 0) {
+        let e = t.lastIndexOf(" ", i);
+        e >= 0 ? ((t = t.substring(0, e)), (l = !0)) : (t = t.substring(0, i));
     } else t = t.substring(0, t.length);
-    let s = t.split(" ", r.uA + 1);
+    let r = t.split(" ", a.uA + 1);
     return (
-        s.length > r.uA && ((i = !0), s.pop()),
-        (t = s.join(" ")),
-        (n.length > t.length || t.endsWith(" ")) && ((i = !0), (t = t.trimEnd())),
-        { text: t, parts: s, hasSpaceTerminator: i }
+        r.length > a.uA && ((l = !0), r.pop()),
+        (t = r.join(" ")),
+        (n.length > t.length || t.endsWith(" ")) && ((l = !0), (t = t.trimEnd())),
+        { text: t, parts: r, hasSpaceTerminator: l }
     );
 }

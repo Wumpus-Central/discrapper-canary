@@ -784,8 +784,8 @@ var e$ = n(452027),
     e5 = n(111159),
     e7 = n(241541),
     e4 = n(854378),
-    e8 = n(589935),
-    e9 = n(309010);
+    e9 = n(589935),
+    e8 = n(309010);
 function te(e) {
     let t,
         n,
@@ -924,12 +924,12 @@ function te(e) {
                               description: (0, a.jsx)(eE.E, {
                                   variant: "text-sm/medium",
                                   color: "text-default",
-                                  children: (0, a.jsx)(e8.Ay, {
+                                  children: (0, a.jsx)(e9.Ay, {
                                       userId: _.userId,
                                       guildId: _.guildId,
                                       showJoinMethodContextAsFooter: !0,
                                       onClickInviter: (e) => {
-                                          let t = e9.Ay.getChannelId();
+                                          let t = e8.Ay.getChannelId();
                                           (0, x.z)(_.guildId, e.id, t ?? Q.dJq);
                                       },
                                   }),
@@ -2080,8 +2080,8 @@ var t2 = n(97808),
     t5 = n(778712),
     t7 = n(789645),
     t4 = n(192308),
-    t8 = n(905499),
-    t9 = n(215026),
+    t9 = n(905499),
+    t8 = n(215026),
     ne = n(473935),
     nt = n(308528),
     nn = n(398590),
@@ -2226,7 +2226,7 @@ function nN(e) {
                             return (n) => (0, a.jsx)(e, { ...n, location: A, guildId: r, user: t, modReportId: s });
                         });
                     },
-                    children: (0, a.jsx)(t8.N, {
+                    children: (0, a.jsx)(t9.N, {
                         size: "custom",
                         width: 24,
                         height: 24,
@@ -2242,7 +2242,7 @@ function nN(e) {
                         return (n) => (0, a.jsx)(e, { ...n, location: A, guildId: r, user: t, modReportId: s });
                     });
                 },
-                children: (0, a.jsx)(t9.w, {
+                children: (0, a.jsx)(t8.w, {
                     size: "custom",
                     width: 24,
                     height: 24,
