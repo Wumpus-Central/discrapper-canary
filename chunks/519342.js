@@ -20,8 +20,8 @@ var i = n(477900),
     j = n(85448),
     I = n(614881),
     N = n(480890),
-    E = n(450149),
-    v = n(607407),
+    v = n(450149),
+    E = n(607407),
     b = n(776231),
     T = n(267102),
     _ = n(326567),
@@ -55,7 +55,7 @@ let et = 16 / 9;
 function en(e) {
     let { title: t, stream: n, shouldShow: a, children: s } = e,
         [r, o] = l.useState(et),
-        { previewUrl: c } = (0, E.A)(n.guildId, n.channelId, n.ownerId);
+        { previewUrl: c } = (0, v.A)(n.guildId, n.channelId, n.ownerId);
     return (
         l.useEffect(() => {
             if (null == c) return;
@@ -75,12 +75,13 @@ function en(e) {
             title: t,
             stream: n,
             shouldShow: a,
+            spacing: 0,
             className: ee.sM,
             image: (0, i.jsxs)("div", {
                 className: ee.J,
                 style: { aspectRatio: r },
                 children: [
-                    (0, i.jsx)(v.A, { stream: n, className: ee.y6, noText: !0 }),
+                    (0, i.jsx)(E.A, { stream: n, className: ee.y6, noText: !0 }),
                     (0, i.jsx)("div", {
                         className: ee.ae,
                         "aria-hidden": !0,
@@ -98,8 +99,8 @@ function ei(e) {
             channelId: n,
             x: a,
             y: d,
-            statusId: E,
-            numericAvatarSize: v,
+            statusId: v,
+            numericAvatarSize: E,
             avatarSize: B,
             posturesEnabled: z,
         } = e,
@@ -137,7 +138,7 @@ function ei(e) {
                 ((0, V.EB)({ guildId: er, channelId: n, interactionType: "clicked" }),
                 eI && (es || !ei || !z) && (x.A.selectParticipant(n, null), (0, U.UV)(!0, n)));
         }, [er, n, es, eI, ei, z]),
-        eE = l.useCallback(
+        ev = l.useCallback(
             (e) => {
                 let t = L.A.getChannel(n);
                 if (null != er && null != et && null != t)
@@ -147,11 +148,11 @@ function ei(e) {
             },
             [er, et, n, Y],
         ),
-        ev = l.useCallback(() => {
+        eE = l.useCallback(() => {
             null != er && (0, V.EB)({ guildId: er, channelId: n, interactionType: "hovered" });
         }, [er, n]),
         eb = (ei && z) || eI,
-        eT = z ? W.x.find((e) => e.id === E) : null,
+        eT = z ? W.x.find((e) => e.id === v) : null,
         e_ =
             null != eA
                 ? J.intl.formatToPlainString(eT?.userLabel ?? Q.default["4bL+KW"], {
@@ -170,7 +171,7 @@ function ei(e) {
     let eO = (0, p.Kj)(B),
         eP = eO.status + 2 * eO.offset,
         eM = eT?.src,
-        ew = (0, b.kr)(Math.ceil(v * Z.Xq) * (0, b.mZ)()),
+        ew = (0, b.kr)(Math.ceil(E * Z.Xq) * (0, b.mZ)()),
         eD = null != eM ? `${eM}?width=${ew}&height=${ew}` : null,
         eU = eI
             ? (0, i.jsx)(I.A, {
@@ -204,7 +205,7 @@ function ei(e) {
               })
             : (0, i.jsx)(j.Ay, {
                   userId: et.id,
-                  src: et.getAvatarURL(er, v, ed && eu),
+                  src: et.getAvatarURL(er, E, ed && eu),
                   size: B,
                   muted: eo?.isVoiceMuted() ?? !1,
                   deafen: eo?.isVoiceDeafened() ?? !1,
@@ -227,17 +228,17 @@ function ei(e) {
                           : void 0,
               }),
         eV = {
-            left: eg.x.to((e) => `calc(${e}% - ${v / 2}px)`),
-            top: eg.y.to((e) => `calc(${e}% - ${v / 2}px)`),
+            left: eg.x.to((e) => `calc(${e}% - ${E / 2}px)`),
+            top: eg.y.to((e) => `calc(${e}% - ${E / 2}px)`),
             zIndex: es ? 1e6 : 1e3 * Math.round(d) + Math.round(a),
         };
     if (!z) {
         let e = (0, i.jsx)(f.D, {
             "aria-label": eR,
             className: ee.KI,
-            onMouseEnter: ev,
+            onMouseEnter: eE,
             onClick: eN,
-            onContextMenu: eE,
+            onContextMenu: ev,
             ...eS,
             children: eU,
         });
@@ -252,9 +253,9 @@ function ei(e) {
         eG = (0, i.jsx)(f.D, {
             "aria-label": eR,
             className: ee.KI,
-            onMouseEnter: ev,
+            onMouseEnter: eE,
             onClick: eN,
-            onContextMenu: eE,
+            onContextMenu: ev,
             ...eS,
             children: ek,
         }),
@@ -278,11 +279,11 @@ function ei(e) {
                                       innerRef: (e) => {
                                           t.current = e;
                                       },
-                                      onMouseEnter: ev,
+                                      onMouseEnter: eE,
                                       onClick: () => {
                                           n(), eN();
                                       },
-                                      onContextMenu: eE,
+                                      onContextMenu: ev,
                                       ...eS,
                                       children: eU,
                                   });
@@ -300,9 +301,9 @@ function ei(e) {
                                   {
                                       text: J.intl.string(e.label),
                                       icon: t,
-                                      selected: E === e.id,
+                                      selected: v === e.id,
                                       onClick: () => {
-                                          let t = E === e.id;
+                                          let t = v === e.id;
                                           (0, U.AQ)(er, n, {
                                               user_status_id: t ? 0 : e.id,
                                               user_status_text: t ? "" : J.intl.string(e.label),

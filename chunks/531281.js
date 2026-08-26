@@ -3,4 +3,5 @@ e.exports = {
     Kc: "nonInteractive_e22cd8",
     rv: "tooltipContent_e22cd8",
     x8: "tooltipTextColumn_e22cd8",
+    x9: "textLineHeight_e22cd8",
 };

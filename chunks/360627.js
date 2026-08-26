@@ -1,51 +1,53 @@
-n.d(t, { A: () => N });
+n.d(t, { A: () => E });
 var i = n(477900),
     l = n(582128),
     a = n(503698),
     s = n.n(a),
     r = n(17928),
-    o = n(331322),
-    c = n(834730),
-    d = n(748562),
-    u = n(661531),
-    h = n(922016),
-    p = n(43990),
-    m = n(939249),
-    A = n(140735),
-    f = n(421773),
-    x = n(363195),
-    g = n(809369),
-    C = n(1195),
-    y = n(375708),
-    j = n(531281);
-function I(e) {
+    o = n(273875),
+    c = n(798618),
+    d = n(331322),
+    u = n(834730),
+    h = n(748562),
+    p = n(661531),
+    m = n(922016),
+    A = n(43990),
+    f = n(939249),
+    x = n(140735),
+    g = n(421773),
+    C = n(363195),
+    y = n(809369),
+    j = n(1195),
+    I = n(375708),
+    N = n(531281);
+function v(e) {
     let { title: t, image: n } = e;
-    return (0, i.jsxs)(o.B, {
+    return (0, i.jsxs)(d.B, {
         direction: "horizontal",
         align: "center",
         gap: 8,
         fullWidth: !1,
-        padding: 8,
-        className: j.rv,
+        padding: 12,
+        className: N.rv,
         children: [
             n,
-            (0, i.jsxs)(o.B, {
+            (0, i.jsxs)(d.B, {
                 gap: 0,
                 fullWidth: !1,
-                className: j.x8,
+                className: N.x8,
                 children: [
-                    (0, i.jsx)(c.E, { variant: "text-md/medium", lineClamp: 1, children: t }),
-                    (0, i.jsxs)(o.B, {
+                    (0, i.jsx)(u.E, { variant: "text-md/medium", lineClamp: 1, className: N.x9, children: t }),
+                    (0, i.jsxs)(d.B, {
                         direction: "horizontal",
                         align: "center",
                         gap: 4,
                         fullWidth: !1,
                         children: [
-                            (0, i.jsx)(d.U, { size: "xs", color: u.A.colors.TEXT_FEEDBACK_POSITIVE }),
-                            (0, i.jsx)(c.E, {
+                            (0, i.jsx)(h.U, { size: "xs", color: p.A.colors.TEXT_FEEDBACK_POSITIVE }),
+                            (0, i.jsx)(u.E, {
                                 variant: "text-sm/normal",
                                 color: "text-feedback-positive",
-                                children: y.intl.string(C.default["2Ll0vk"]),
+                                children: I.intl.string(j.default["2Ll0vk"]),
                             }),
                         ],
                     }),
@@ -54,68 +56,71 @@ function I(e) {
         ],
     });
 }
-function N(e) {
-    let { title: t, image: n, shouldShow: a = !0, forceOpen: o = !1, spacing: d, className: u, children: N } = e,
-        E = l.useId(),
-        v = l.useRef(null),
-        b = (0, r.bG)([x.A], () => x.A.theme),
-        { isHovered: T, setIsHovered: _, onMouseEnter: R, onMouseLeave: S } = (0, f.A)(100, 100);
+function E(e) {
+    let { title: t, image: n, shouldShow: a = !0, forceOpen: d = !1, spacing: h, className: p, children: E } = e,
+        b = l.useId(),
+        T = l.useRef(null),
+        _ = (0, r.bG)([C.A], () => C.A.theme),
+        { isHovered: R, setIsHovered: S, onMouseEnter: L, onMouseLeave: O } = (0, g.A)(100, 100);
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)(h.Y, {
-                targetElementRef: v,
-                shouldShow: a && (T || o),
+            (0, i.jsx)(m.Y, {
+                targetElementRef: T,
+                shouldShow: a && (R || d),
                 position: "top",
                 align: "center",
-                spacing: d,
-                animation: h.Y.Animation.FADE,
-                onRequestClose: () => _(!1),
+                spacing: h + 10,
+                animation: m.Y.Animation.FADE,
+                onRequestClose: () => S(!1),
                 renderPopout: (l) => {
-                    let { closePopout: a, setPopoutRef: r } = l;
-                    return (0, i.jsx)(p.N, {
-                        theme: b,
-                        children: (l) =>
-                            e.clickable
-                                ? (0, i.jsx)(m.D, {
-                                      tag: "div",
-                                      className: u,
-                                      "aria-label": y.intl.formatToPlainString(C.default.hZobvN, { username: t }),
-                                      onMouseEnter: R,
-                                      onMouseLeave: S,
-                                      onFocus: R,
-                                      onBlur: S,
-                                      onClick: () => {
-                                          (0, g.k)(e.stream), a();
-                                      },
-                                      children: (0, i.jsx)("div", {
+                    let { closePopout: a, setPopoutRef: r, position: d, nudge: u } = l;
+                    return (0, i.jsx)(o.e.Provider, {
+                        value: { position: d ?? "top", caretConfig: { align: "custom", customOffset: u } },
+                        children: (0, i.jsx)(A.N, {
+                            theme: _,
+                            children: (l) =>
+                                e.clickable
+                                    ? (0, i.jsx)(f.D, {
+                                          tag: "div",
+                                          className: p,
+                                          "aria-label": I.intl.formatToPlainString(j.default.hZobvN, { username: t }),
+                                          onMouseEnter: L,
+                                          onMouseLeave: O,
+                                          onFocus: L,
+                                          onBlur: O,
+                                          onClick: () => {
+                                              (0, y.k)(e.stream), a();
+                                          },
+                                          children: (0, i.jsxs)("div", {
+                                              ref: r,
+                                              className: s()(N.hB, l),
+                                              children: [(0, i.jsx)(c.F, {}), (0, i.jsx)(v, { title: t, image: n })],
+                                          }),
+                                      })
+                                    : (0, i.jsxs)("div", {
                                           ref: r,
-                                          className: s()(j.hB, l),
-                                          children: (0, i.jsx)(I, { title: t, image: n }),
+                                          className: s()(N.hB, N.Kc, p, l),
+                                          children: [(0, i.jsx)(c.F, {}), (0, i.jsx)(v, { title: t, image: n })],
                                       }),
-                                  })
-                                : (0, i.jsx)("div", {
-                                      ref: r,
-                                      className: s()(j.hB, j.Kc, u, l),
-                                      children: (0, i.jsx)(I, { title: t, image: n }),
-                                  }),
+                        }),
                     });
                 },
                 children: (e) =>
                     (0, i.jsx)("div", {
-                        ref: v,
-                        onMouseEnter: R,
-                        onMouseLeave: S,
-                        onFocus: R,
-                        onBlur: S,
+                        ref: T,
+                        onMouseEnter: L,
+                        onMouseLeave: O,
+                        onFocus: L,
+                        onBlur: O,
                         ...e,
-                        children: l.cloneElement(N, { "aria-describedby": E }),
+                        children: l.cloneElement(E, { "aria-describedby": b }),
                     }),
             }),
-            (0, i.jsxs)(A.A, {
-                id: E,
+            (0, i.jsxs)(x.A, {
+                id: b,
                 children: [
-                    (0, i.jsx)(c.E, { variant: "text-sm/medium", children: t }),
-                    (0, i.jsx)(c.E, { variant: "text-sm/normal", children: y.intl.string(C.default["2Ll0vk"]) }),
+                    (0, i.jsx)(u.E, { variant: "text-sm/medium", children: t }),
+                    (0, i.jsx)(u.E, { variant: "text-sm/normal", children: I.intl.string(j.default["2Ll0vk"]) }),
                 ],
             }),
         ],
