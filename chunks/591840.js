@@ -783,7 +783,7 @@ let t0 = a.memo(function (e) {
             }, [O]);
         let ei = null == v || null == p ? null : (0, r.jsx)(t5, { applicationId: v.id }),
             er = V
-                ? (0, r.jsx)(t3, { gameName: q, runningGameId: u?.id, onClick: J })
+                ? (0, r.jsx)(t3, { gameName: q, runningGameId: u?.id, isGameServerHostingInShopEnabled: P, onClick: J })
                 : H
                   ? (0, r.jsx)(t2, {
                         tooltipText: Z.intl.formatToPlainString(tF.default.YhnUVO, { gameName: q }),
@@ -966,8 +966,8 @@ function t2(e) {
     });
 }
 function t3(e) {
-    let { gameName: t, runningGameId: n, onClick: i } = e,
-        a = (function (e) {
+    let { gameName: t, runningGameId: n, isGameServerHostingInShopEnabled: i, onClick: a } = e,
+        s = (function (e) {
             let { location: t } = e;
             return tw.useConfig({ location: t }).enabled;
         })({ location: "activity-panel" });
@@ -975,17 +975,17 @@ function t3(e) {
         tooltipText: Z.intl.formatToPlainString(tF.default.oZ4ZFn, { gameName: t }),
         coachmarkContent: E.M.GAME_SERVER_HOSTING_IN_SHOP_DETECTION_COACHMARK,
         badgeContent: E.M.GAME_SERVER_HOSTING_IN_SHOP_DETECTION_NEW_BADGE,
-        marketingEnabled: a,
-        onClick: i,
+        marketingEnabled: i && s,
+        onClick: a,
         onViewed: () => (0, tM.ET)({ gameApplicationId: n, buttonVariant: "shop" }),
         renderCoachmark: (e) => {
-            let { targetElementRef: a, markAsDismissed: s, markBadgeAsDismissed: l } = e;
+            let { targetElementRef: i, markAsDismissed: s, markBadgeAsDismissed: l } = e;
             return (0, r.jsx)(tj, {
                 gameName: t,
                 runningGameId: n,
-                targetElementRef: a,
+                targetElementRef: i,
                 onClick: () => {
-                    i(), s(ea.i.TAKE_ACTION), l(ea.i.TAKE_ACTION);
+                    a(), s(ea.i.TAKE_ACTION), l(ea.i.TAKE_ACTION);
                 },
                 onClose: () => s(ea.i.USER_DISMISS),
             });
