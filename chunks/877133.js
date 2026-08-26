@@ -42,6 +42,7 @@ var r,
         (l.INTERACTION_USER_ID = "interaction_user_id"),
         (l.INTERACTION_CALLBACK_TYPE = "interaction_callback_type"),
         (l.DECISION_OUTCOME = "decision_outcome"),
+        (l.GUILD_ROOM_NOTE_OUTCOME = "guild_room_note_outcome"),
         l),
     I = n(385244),
     f =
