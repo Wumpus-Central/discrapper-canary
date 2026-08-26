@@ -99,6 +99,12 @@ class h {
                 this.socket.send(JSON.stringify({ type: "control_ack", id: e, status: t, response: n, message: r }));
             } catch {}
     }
+    sendAppIconAck(e, t) {
+        if (null != this.socket && this.socket.readyState === WebSocket.OPEN)
+            try {
+                this.socket.send(JSON.stringify({ type: "app_icon_ack", id: e, status: t }));
+            } catch {}
+    }
     close() {
         this.socket?.close(), (this.socket = null);
     }
@@ -486,6 +492,22 @@ async function q(e, t) {
                             (n.pendingPublish = null),
                                 null != e && (clearTimeout(e.timeout), e.resolve(r)),
                                 !0 !== r.ok && (0, d.Is)(t, r.error ?? "publish_result not ok", !1);
+                        } else if ("app_icon_set" === r.kind) {
+                            let e = r.icon;
+                            if (null != e && "" !== e) {
+                                let i = r.attachment_id;
+                                function h(e) {
+                                    null != i && "" !== i && n.ws.sendAppIconAck(i, e);
+                                }
+                                (0, d.Ru)(t, e)
+                                    .then((e) => {
+                                        e.ok || console.error("[vibegrations] icon from agent rejected", t, e.status),
+                                            h(e.ok ? "applied" : "failed");
+                                    })
+                                    .catch((e) => {
+                                        console.error("[vibegrations] icon from agent failed", t, e), h("failed");
+                                    });
+                            }
                         } else if ("turn_result" === r.kind)
                             (0, u.Xv)(t, r),
                                 "deployed" === r.result &&

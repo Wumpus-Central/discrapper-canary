@@ -34,6 +34,7 @@ a.exports = {
     uc: "sharedProjectsHeading_f8194a",
     OY: "projectCard_f8194a",
     W6: "projectCardSelect_f8194a",
+    VJ: "projectIcon_f8194a",
     M2: "projectCardAction_f8194a",
     Pl: "projectSettingsAction_f8194a",
     O$: "projectCardStatus_f8194a",

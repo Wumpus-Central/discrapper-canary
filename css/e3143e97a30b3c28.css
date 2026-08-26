@@ -375,9 +375,19 @@
     cursor: pointer;
     display: flex;
     flex: 1;
+    gap: var(--space-12);
     min-width: 0;
     padding: var(--space-8) var(--space-12);
     text-align: start
+}
+
+.projectIcon_f8194a {
+    align-self: flex-start;
+    background: var(--background-mod-subtle);
+    border-radius: var(--radius-sm);
+    flex: 0 0 auto;
+    height: 40px;
+    width: 40px
 }
 
 .projectCardAction_f8194a {
@@ -492,4 +502,4 @@
     text-align: center
 }
 
-/*# sourceMappingURL=38c79b665935c7bc.css.map*/
+/*# sourceMappingURL=e3143e97a30b3c28.css.map*/
