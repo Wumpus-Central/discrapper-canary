@@ -196,6 +196,7 @@ var z = (((l = {}).GOOGLE_PAY = "google_pay"), (l.APPLE_PAY = "apple_pay"), l),
         (o[(o.APPLE = 18)] = "APPLE"),
         (o[(o.TDS_WALLET = 19)] = "TDS_WALLET"),
         (o[(o.PIX = 20)] = "PIX"),
+        (o[(o.PIX_AUTOMATICO = 21)] = "PIX_AUTOMATICO"),
         (o[(o.PAYMENT_REQUEST = 99)] = "PAYMENT_REQUEST"),
         o);
 let q = new Map([
@@ -215,7 +216,7 @@ let q = new Map([
     ]),
     Q = new Set([7, 8, 9, 12, 10, 13, 14, 15, 16, 4, 3, 5, 17]),
     J = new Set([7, 9, 3, 5, 4, 14, 15, 16]),
-    ee = new Set([1, 2, 6, 8, 10, 11, 13, 12, 17, 19]),
+    ee = new Set([1, 2, 6, 8, 10, 11, 13, 12, 17, 19, 21]),
     et = new Set([3, 4, 5, 14, 15, 16, 7, 9, 12]),
     en = new Set([6]);
 var ei = (((d = {})[(d.NEW = 1)] = "NEW"), (d[(d.FAILED_ADDRESS = 16)] = "FAILED_ADDRESS"), d),
