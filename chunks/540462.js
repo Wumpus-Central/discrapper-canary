@@ -20,8 +20,8 @@ var i = n(477900),
     j = n(730852),
     I = n(401843),
     N = n(817281),
-    E = n(820284),
-    v = n(765671),
+    v = n(820284),
+    E = n(765671),
     b = n(475743),
     T = n(646865),
     _ = n(10716),
@@ -74,8 +74,8 @@ var i = n(477900),
     ej = n(174459),
     eI = n(871237),
     eN = n(625494),
-    eE = n(723702),
-    ev = n(19575),
+    ev = n(723702),
+    eE = n(19575),
     eb = n(475815),
     eT = n(198052),
     e_ = n(520698),
@@ -160,7 +160,7 @@ class ez extends l.PureComponent {
     componentWillUnmount() {
         this._videoBackgroundTooltipTimeout.stop(),
             this.currentDocument.removeEventListener(eb.Wb, this.handleFullScreenChange),
-            (this.inPopout && (0, eE.isMac)()) || this.maybeLeaveFullScreen();
+            (this.inPopout && (0, ev.isMac)()) || this.maybeLeaveFullScreen();
     }
     componentDidUpdate(e) {
         let { participantsOpen: t, inCall: n, mode: i, layout: l } = this.props,
@@ -174,10 +174,10 @@ class ez extends l.PureComponent {
             e.inCall && !n && this.inPopout && g.h.wait(() => this.handleClosePopout());
     }
     get nativePopoutSupported() {
-        return eE.isPlatformEmbedded && ev.Ay.supportsFeature(eU.BYE.POPOUT_WINDOWS);
+        return ev.isPlatformEmbedded && eE.Ay.supportsFeature(eU.BYE.POPOUT_WINDOWS);
     }
     get popoutSupported() {
-        return !eE.isPlatformEmbedded || this.nativePopoutSupported;
+        return !ev.isPlatformEmbedded || this.nativePopoutSupported;
     }
     get popoutOpen() {
         let { popoutWindow: e } = this.props;
@@ -658,8 +658,8 @@ class ez extends l.PureComponent {
             I = l && s === eU._Of.VIDEO,
             N = (f?.length ?? 0) > 0 && u.isPrivate();
         this._lastIdleProps = e;
-        let E = !l || !(this.popoutOpen && !this.inPopout),
-            v = !m && l && !y && e.idle,
+        let v = !l || !(this.popoutOpen && !this.inPopout),
+            E = !m && l && !y && e.idle,
             b = g
                 ? (0, i.jsx)(W.A, { channelId: u.id, popoutType: t, idle: e.idle })
                 : (0, i.jsx)(J.A, {
@@ -693,8 +693,8 @@ class ez extends l.PureComponent {
             screenMessage: this.screenMessage,
             disableGradients: !l || y,
             hideControls: C,
-            idle: v,
-            children: E && b,
+            idle: E,
+            children: v && b,
         });
     }
     render() {
@@ -760,9 +760,9 @@ class ez extends l.PureComponent {
 }
 let eW = function (e) {
     let { channel: t, renderExternalHeader: n, maxHeight: a, canPopout: s = !0, popoutType: r } = e,
-        { width: o = 0, ref: c } = (0, v.Ay)(),
-        { width: h = 0, height: p = 0, ref: g } = (0, v.Ay)(),
-        { ref: C } = (0, v.Ay)(),
+        { width: o = 0, ref: c } = (0, E.Ay)(),
+        { width: h = 0, height: p = 0, ref: g } = (0, E.Ay)(),
+        { ref: C } = (0, E.Ay)(),
         y = (0, $.Us)(),
         j = (0, G.A)(),
         I = (0, d.bG)([eg.Ay], () => (j?.channelId ?? eg.Ay.getVoiceChannelId()) === t.id),
@@ -832,7 +832,7 @@ let eW = function (e) {
         { theme: eC } = (0, x.wR)();
     return (0, i.jsx)(M.f5, {
         value: eo,
-        children: (0, i.jsx)(E.A, {
+        children: (0, i.jsx)(v.A, {
             page: eU.liQ.CHANNEL_CALL,
             children: (0, i.jsx)(eR.qh, {
                 children: (0, i.jsxs)(eP.CB, {

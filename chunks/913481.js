@@ -69,12 +69,12 @@ function I(e) {
             () => document.removeEventListener("mousemove", e)
         );
     }, []);
-    let { interactionsEnabled: E } = h.A.useExperiment({ guildId: c.A.getChannel(t)?.guild_id, location: "GuildRoom" });
-    if (!E || (0 === I.length && null == A && 0 === y.length)) return null;
-    let v = null != A && null == A.position;
+    let { interactionsEnabled: v } = h.A.useExperiment({ guildId: c.A.getChannel(t)?.guild_id, location: "GuildRoom" });
+    if (!v || (0 === I.length && null == A && 0 === y.length)) return null;
+    let E = null != A && null == A.position;
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            v &&
+            E &&
                 !N &&
                 (0, i.jsx)("div", {
                     ref: a,
@@ -97,7 +97,7 @@ function I(e) {
                 (0, i.jsx)("div", {
                     role: "list",
                     "aria-label": g.intl.string(x.default.zzZaRe),
-                    className: s()({ [C.IU]: v }),
+                    className: s()({ [C.IU]: E }),
                     children: I.map((e) => (0, i.jsx)(p.A, { channelId: t, note: e, roomWidth: n }, e.objectId)),
                 }),
         ],

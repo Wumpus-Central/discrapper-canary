@@ -20,8 +20,8 @@ var i = n(477900),
     j = n(625494),
     I = n(446243),
     N = n(889426),
-    E = n(652215),
-    v = n(806931),
+    v = n(652215),
+    E = n(806931),
     b = n(527133);
 let T = function (e) {
     let { channelId: t, popoutType: n, width: T, height: _, idle: R, onClose: S } = e,
@@ -38,13 +38,13 @@ let T = function (e) {
             layout: G,
             participantsOpen: B,
         } = (0, a.cf)([c.A], () => {
-            let e = null != P ? c.A.getLayout(P.id, L) : E.DUB.NORMAL;
+            let e = null != P ? c.A.getLayout(P.id, L) : v.DUB.NORMAL;
             return {
                 participants: c.A.getParticipants(t),
                 filteredParticipants: c.A.getFilteredParticipants(t),
                 participantsVersion: c.A.getParticipantsVersion(t),
                 mode: c.A.getMode(t),
-                layout: L === E.BRT.POPOUT && e !== E.DUB.FULL_SCREEN ? E.DUB.NO_CHAT : e,
+                layout: L === v.BRT.POPOUT && e !== v.DUB.FULL_SCREEN ? v.DUB.NO_CHAT : e,
                 participantsOpen: c.A.getParticipantsOpen(t),
             };
         }),
@@ -52,9 +52,9 @@ let T = function (e) {
     return ((0, l.useEffect)(() => {
         if (null != P)
             return (
-                j._.subscribe(E.jej.GUILD_ROOM_VIDEO_OVERLAY_CLOSE, e),
+                j._.subscribe(v.jej.GUILD_ROOM_VIDEO_OVERLAY_CLOSE, e),
                 () => {
-                    j._.unsubscribe(E.jej.GUILD_ROOM_VIDEO_OVERLAY_CLOSE, e);
+                    j._.unsubscribe(v.jej.GUILD_ROOM_VIDEO_OVERLAY_CLOSE, e);
                 }
             );
         function e() {
@@ -79,7 +79,7 @@ let T = function (e) {
                   participants: D,
                   filteredParticipants: U,
                   participantsVersion: V,
-                  selectedParticipant: w && k === E._Of.VIDEO ? O : null,
+                  selectedParticipant: w && k === v._Of.VIDEO ? O : null,
                   layout: G,
                   idle: R,
                   mode: k,
@@ -88,11 +88,11 @@ let T = function (e) {
                           if (
                               (t.preventDefault(),
                               t.stopPropagation(),
-                              (0, v.Ay)(e) &&
+                              (0, E.Ay)(e) &&
                                   (0, h.eo)(P, y.A, x.A, g.A, d.default)[0] &&
                                   0 ===
                                       A.A.getAllActiveStreams().filter(
-                                          (t) => (0, u._z)(t) === e.id && t.state !== E.XYD.ENDED,
+                                          (t) => (0, u._z)(t) === e.id && t.state !== v.XYD.ENDED,
                                       ).length)
                           )
                               return void (0, o.A9)((0, u.Iy)(e.id), { forceMultiple: t.shiftKey });

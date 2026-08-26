@@ -1,15 +1,15 @@
-t.d(i, { A: () => D }), t(321073);
+t.d(i, { A: () => R }), t(321073);
 var n = t(477900),
     l = t(582128),
     s = t(503698),
     a = t.n(s),
     r = t(17928),
     d = t(451988),
-    u = t(717558),
-    o = t(933958),
+    o = t(717558),
+    u = t(933958),
     c = t(191424),
-    A = t(627363),
-    m = t(429913),
+    m = t(627363),
+    A = t(429913),
     g = t(198052),
     h = t(202163),
     p = t(550946),
@@ -31,7 +31,7 @@ var n = t(477900),
     P = t(652215),
     k = t(31408),
     V = t(616352);
-let R = l.memo((e) => {
+let w = l.memo((e) => {
     let { mute: i, deaf: t, user: l, channel: s, sessionId: a, nick: d } = e,
         f = l.id,
         I = (0, r.bG)([E.default], () => E.default.getId() === f, [f]),
@@ -44,23 +44,23 @@ let R = l.memo((e) => {
             [I, f],
         ),
         V = (0, r.bG)([j.A], () => j.A.isPrioritySpeaker(f)),
-        R = (0, u.A)({ userId: f, checkSoundSharing: !0 }),
-        w = (0, p.A)(s.guild_id, f),
-        D = (0, r.bG)([g.A], () => g.A.getGuildRingingUsers(s.id).has(f)),
-        U = (0, r.bG)(
-            [o.Ay],
+        w = (0, o.A)({ userId: f, checkSoundSharing: !0 }),
+        D = (0, p.A)(s.guild_id, f),
+        R = (0, r.bG)([g.A], () => g.A.getGuildRingingUsers(s.id).has(f)),
+        M = (0, r.bG)(
+            [u.Ay],
             () =>
-                o.Ay.getEmbeddedActivitiesForChannel(s.id).find((e) => {
+                u.Ay.getEmbeddedActivitiesForChannel(s.id).find((e) => {
                     let { userIds: i } = e;
                     return i.has(f);
                 }),
             [f, s.id],
         ),
-        M = (0, m.A)(null != U ? [U.applicationId] : []),
+        U = (0, A.A)(null != M ? [M.applicationId] : []),
         L = (0, c.A)(f, s.guild_id)[0],
-        F = (0, A.YY)(L?.application_id).data ?? void 0,
+        F = (0, m.YY)(L?.application_id).data ?? void 0,
         { gameRecord: z } = (0, h.A)(L?.application_id),
-        [K, B] = (0, r.yK)(
+        [B, K] = (0, r.yK)(
             [_.A],
             () => [_.A.getStreamForUser(f, s.getGuildId()), _.A.getActiveStreamForUser(f, s.getGuildId())],
             [s, f],
@@ -71,11 +71,11 @@ let R = l.memo((e) => {
         H = (0, x.uy)(s.id, f);
     return (0, n.jsx)(v.A, {
         shakeLocation: k.uD.VOICE_USER,
-        isShaking: R,
+        isShaking: w,
         children: (0, n.jsx)(O.Ay, {
             ...e,
             nick: d ?? q,
-            canDrag: e.canDrag && !w,
+            canDrag: e.canDrag && !D,
             disconnected: H,
             otherClientSessionType: Y?.clientInfo?.os,
             voicePlatform: $,
@@ -83,30 +83,30 @@ let R = l.memo((e) => {
             localVideoDisabled: C,
             mute: i || S,
             deaf: t || y,
-            speaking: R,
-            ringing: D,
+            speaking: w,
+            ringing: R,
             priority: V,
-            embeddedApplication: M[0],
-            isStreaming: null != K && K.channelId === s.id,
-            isWatching: null != B && B.state !== P.XYD.ENDED,
-            isGuest: w,
+            embeddedApplication: U[0],
+            isStreaming: null != B && B.channelId === s.id,
+            isWatching: null != K && K.state !== P.XYD.ENDED,
+            isGuest: D,
             isSelf: I,
             application: L?.session_id != null ? F : void 0,
             game: L?.session_id != null ? (z ?? void 0) : void 0,
         }),
     });
 });
-R.displayName = "ConnectedVoiceUser";
-let w = [],
-    D = function (e) {
+w.displayName = "ConnectedVoiceUser";
+let D = [],
+    R = function (e) {
         let {
                 allowPreviews: i = !0,
                 allowDragging: t = !0,
                 channel: s,
-                voiceStates: u,
-                collapsed: o,
+                voiceStates: o,
+                collapsed: u,
                 collapsedMax: c = 6,
-                tabIndex: A,
+                tabIndex: m,
                 numAudience: h,
                 withGuildIcon: p = !1,
                 className: v,
@@ -115,34 +115,34 @@ let w = [],
             } = e,
             [b, j] = l.useState(null),
             T = l.useRef(null),
-            G = (0, x.$n)(s.id, u ?? w),
-            { shouldShow: k, dismiss: D } = (0, I.Z0)(s, { collapsed: o }),
-            U = l.useRef(
+            G = (0, x.$n)(s.id, o ?? D),
+            { shouldShow: k, dismiss: R } = (0, I.Z0)(s, { collapsed: u }),
+            M = l.useRef(
                 new d.J_(50, () => {
                     j(T.current), (T.current = null);
                 }),
             ),
-            M = l.useRef(
+            U = l.useRef(
                 new d.J_(175, () => {
                     j(null);
                 }),
             ),
             L = l.useCallback(
                 (e) => {
-                    i && (M.current.cancel(), (T.current = e), U.current.delay());
+                    i && (U.current.cancel(), (T.current = e), M.current.delay());
                 },
                 [i],
             ),
             F = l.useCallback(
                 (e) => {
-                    i && (U.current.cancel(), (T.current = null), M.current.delay());
+                    i && (M.current.cancel(), (T.current = null), U.current.delay());
                 },
                 [i],
             ),
             z = (0, r.bG)([y.A], () => y.A.can(P.xBc.MOVE_MEMBERS, s)),
-            K = t && z,
-            B = (0, r.yK)([C.A], () => {
-                if (o) return [];
+            B = t && z,
+            K = (0, r.yK)([C.A], () => {
+                if (u) return [];
                 let e = new Set();
                 return (
                     G?.forEach((i) => {
@@ -154,16 +154,16 @@ let w = [],
                     Array.from(e)
                 );
             });
-        (0, m.A)(B);
+        (0, A.A)(K);
         let Y = (function () {
             if (null == G || 0 === G.length) return null;
-            let e = o && G.length > c + 1 ? G.slice(0, c) : G,
+            let e = u && G.length > c + 1 ? G.slice(0, c) : G,
                 i = g.A.getGuildRingingUsers(s.id),
                 t = e.map((e) => {
                     let { user: t, nick: l, voiceState: a } = e,
                         r = i.has(t.id);
                     return (0, n.jsx)(
-                        R,
+                        w,
                         {
                             user: t,
                             nick: l,
@@ -175,29 +175,29 @@ let w = [],
                             serverDeaf: a.deaf,
                             sessionId: a.sessionId ?? "",
                             channel: s,
-                            collapsed: o,
-                            canDrag: K,
+                            collapsed: u,
+                            canDrag: B,
                             showPreview: L,
                             hidePreview: F,
                             shouldShowHoverPopout: b === t.id,
-                            tabIndex: A,
+                            tabIndex: m,
                         },
                         `voice-user-${t.id}-${r}`,
                     );
                 });
             return (
                 null != h && h > 0
-                    ? t.push((0, n.jsx)(O.aI, { collapsed: o, numAudience: h }, "audience"))
-                    : o && G.length > c + 1 && t.push((0, n.jsx)(O.LR, { numUsers: G.length - c }, "collapsed-users")),
-                k && t.push((0, n.jsx)(f.p, { channel: s, onClose: D }, "voice-invite-suggestions-button")),
+                    ? t.push((0, n.jsx)(O.aI, { collapsed: u, numAudience: h }, "audience"))
+                    : u && G.length > c + 1 && t.push((0, n.jsx)(O.LR, { numUsers: G.length - c }, "collapsed-users")),
+                k && t.push((0, n.jsx)(f.p, { channel: s, onClose: R }, "voice-invite-suggestions-button")),
                 t
             );
         })();
         return null == Y && null == _
             ? null
             : (0, n.jsxs)(S.Wr, {
-                  className: a()(v, V.p_, { [V.yZ]: o, [V.lY]: p, [V.fT]: N }),
-                  collapsed: o,
+                  className: a()(v, V.p_, { [V.yZ]: u, [V.lY]: p, [V.fT]: N }),
+                  collapsed: u,
                   children: [Y, _],
               });
     };

@@ -1,4 +1,4 @@
-n.d(t, { A: () => v });
+n.d(t, { A: () => E });
 var i = n(477900),
     l = n(582128),
     a = n(17928),
@@ -20,9 +20,9 @@ var i = n(477900),
     j = n(544299),
     I = n(1195),
     N = n(375708),
-    E = n(505252);
-function v(e) {
-    let { channelId: t, note: n, roomWidth: v } = e,
+    v = n(505252);
+function E(e) {
+    let { channelId: t, note: n, roomWidth: E } = e,
         [b, T] = (0, l.useState)(!1),
         _ = (0, l.useRef)(null),
         R = (0, a.bG)([A.default], () => A.default.getUser(n.createdBy)),
@@ -40,13 +40,13 @@ function v(e) {
                       innerRef: _,
                       role: "listitem",
                       "aria-label": N.intl.formatToPlainString(I.default.w5Latp, { userName: L }),
-                      className: E.kL,
+                      className: v.kL,
                       onClick: () => {
                           b || (0, g.Ql)({ channelId: t, interactionType: "note_opened" }), T(!b);
                       },
                       style: { left: `${n.position.x}%`, top: `${n.position.y}%` },
                       ...O,
-                      children: (0, i.jsx)(y.A, { roomWidth: v }),
+                      children: (0, i.jsx)(y.A, { roomWidth: E }),
                   }),
                   (0, i.jsxs)(s.x, {
                       shouldShow: b,
@@ -57,19 +57,19 @@ function v(e) {
                       targetElementRef: _,
                       children: [
                           (0, i.jsxs)("div", {
-                              className: E.oO,
+                              className: v.oO,
                               children: [
                                   (0, i.jsxs)("div", {
-                                      className: E.wx,
+                                      className: v.wx,
                                       children: [
                                           (0, i.jsxs)("div", {
-                                              className: E.kQ,
+                                              className: v.kQ,
                                               children: [
                                                   (0, i.jsx)(c.eu, {
                                                       "aria-label": L,
                                                       src: R.getAvatarURL(S, 24),
                                                       size: d._3.SIZE_24,
-                                                      className: E.my,
+                                                      className: v.my,
                                                   }),
                                                   (0, i.jsx)(u.E, {
                                                       variant: "text-md/normal",
@@ -82,7 +82,7 @@ function v(e) {
                                               onClick: function () {
                                                   null != S && (0, x.yF)(S, t, n.objectId).catch((e) => (0, C.b)());
                                               },
-                                              className: E.Kk,
+                                              className: v.Kk,
                                               children: (0, i.jsx)(h.TrashIcon, { size: "sm", color: "currentColor" }),
                                           }),
                                       ],
@@ -90,7 +90,7 @@ function v(e) {
                                   (0, i.jsx)(u.E, {
                                       variant: "text-sm/normal",
                                       color: "text-muted",
-                                      className: E.Qs,
+                                      className: v.Qs,
                                       children: p.A.parseTopic(n.content, !0, { channelId: t }),
                                   }),
                               ],

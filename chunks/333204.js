@@ -20,8 +20,8 @@ var i = n(477900),
     j = n(118328),
     I = n(652215),
     N = n(711918),
-    E = n(375708),
-    v = n(771124),
+    v = n(375708),
+    E = n(771124),
     b = n(253146);
 function T() {
     let [e, t] = (0, h.V)("clips-video-call-tile-dismissed", !1),
@@ -39,24 +39,24 @@ function _(e) {
 function R(e) {
     let { handleClose: t } = e;
     return (0, i.jsxs)(f.A, {
-        className: v.VP,
+        className: E.VP,
         children: [
             (0, i.jsx)(s.m, {
                 asContainer: !0,
-                text: E.intl.string(E.t.J1hsY2),
+                text: v.intl.string(v.t.J1hsY2),
                 children: (0, i.jsx)(r.D, {
                     onClick: function () {
                         (0, A.openUserSettings)(m.X.CLIPS_PANEL);
                     },
-                    className: v.F1,
+                    className: E.F1,
                     children: (0, i.jsx)("div", {
-                        className: v.zc,
+                        className: E.zc,
                         children: (0, i.jsx)(o.x, { size: "custom", color: "currentColor", width: 40, height: 40 }),
                     }),
                 }),
             }),
             (0, i.jsx)(r.D, {
-                className: v.b,
+                className: E.b,
                 onClick: t,
                 "aria-label": "Close",
                 children: (0, i.jsx)(c.P, { size: "sm", color: "currentColor" }),
@@ -71,26 +71,26 @@ function S(e) {
         [h, m] = l.useState(() => !s);
     s || h || m(!0);
     let A = h || !s,
-        j = A ? E.intl.string(N.default.oaIXoz) : E.intl.string(N.default.DpZqVj);
+        j = A ? v.intl.string(N.default.oaIXoz) : v.intl.string(N.default.DpZqVj);
     return (0, i.jsxs)(f.A, {
-        className: v.zr,
+        className: E.zr,
         children: [
-            (0, i.jsx)("div", { className: v.D7, "aria-hidden": !0 }),
+            (0, i.jsx)("div", { className: E.D7, "aria-hidden": !0 }),
             (0, i.jsx)(r.D, {
-                className: v.b,
+                className: E.b,
                 onClick: n,
                 "aria-label": "Close",
                 children: (0, i.jsx)(c.P, { size: "sm", color: "currentColor" }),
             }),
-            (0, i.jsx)("img", { className: v.Qw, src: b, alt: "" }),
+            (0, i.jsx)("img", { className: E.Qw, src: b, alt: "" }),
             (0, i.jsx)(d.E, {
-                className: v.pG,
+                className: E.pG,
                 variant: t >= 300 ? "text-md/medium" : "text-sm/medium",
                 color: "text-default",
-                children: E.intl.format(N.default.GqojUr, { learnMoreLink: x.A.getArticleURL(I.MVz.CLIPS) }),
+                children: v.intl.format(N.default.GqojUr, { learnMoreLink: x.A.getArticleURL(I.MVz.CLIPS) }),
             }),
             (0, i.jsx)("div", {
-                className: v.wq,
+                className: E.wq,
                 children: (0, i.jsx)(u.d, {
                     label: j,
                     checked: A ? s && o : o,

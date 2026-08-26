@@ -1,4 +1,4 @@
-n.d(t, { A: () => E });
+n.d(t, { A: () => v });
 var i = n(477900),
     l = n(582128),
     a = n(503698),
@@ -21,7 +21,7 @@ var y = n(1195),
     j = n(375708),
     I = n(130390),
     N = n(452933);
-function E(e) {
+function v(e) {
     let { channelId: t, position: n } = e,
         a = (0, o.bG)([p.A], () => p.A.getChannel(t)?.guild_id),
         { interactionsEnabled: s } = g.A.useExperiment(
@@ -35,17 +35,17 @@ function E(e) {
         u = (0, i.jsx)("img", { className: I.wZ, src: N.A, alt: j.intl.string(y.default["93KE7U"]) }),
         h = { insetInlineStart: `${n.x}%`, insetBlockStart: `${n.y}%` };
     return s && null != r
-        ? (0, i.jsx)(v, { channelId: t, position: n, positionStyle: h, sound: r, children: u })
+        ? (0, i.jsx)(E, { channelId: t, position: n, positionStyle: h, sound: r, children: u })
         : (0, i.jsx)("div", { role: "listitem", className: I.p9, style: h, children: u });
 }
-function v(e) {
+function E(e) {
     let { channelId: t, position: n, positionStyle: a, sound: c, children: d } = e,
         g = (0, o.bG)([f.default], () => f.default.getCurrentUser()),
         N = (0, o.bG)([p.A], () => p.A.getChannel(t)),
-        E = (0, o.bG)([m.Ay], () => m.Ay.isDeaf()),
-        v = (0, o.bG)([A.Ay], () => A.Ay.getVoiceChannelId() === t),
+        v = (0, o.bG)([m.Ay], () => m.Ay.isDeaf()),
+        E = (0, o.bG)([A.Ay], () => A.Ay.getVoiceChannelId() === t),
         { playSoundboardSound: b } = (0, h.A)(c, t),
-        T = v && (0, u.Ir)(g, c, N) && (0, u.Au)(N) && !E,
+        T = E && (0, u.Ir)(g, c, N) && (0, u.Au)(N) && !v,
         _ = l.useCallback(() => {
             if (T) {
                 b();

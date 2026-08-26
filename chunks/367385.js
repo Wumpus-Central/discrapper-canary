@@ -34,8 +34,8 @@ var L = n(265422),
     y = n(92960),
     G = n(739008),
     M = n(314519),
-    P = n(837057),
-    x = n(310419),
+    x = n(837057),
+    P = n(310419),
     w = n(488995),
     V = n(675704),
     j = n(806964),
@@ -271,9 +271,9 @@ let eE = {
         comboKeysBindGlobal: !0,
         action() {
             let e = o.A.getGuildId() ?? void 0;
-            (0, P.transitionToGlobalDiscovery)({
+            (0, x.transitionToGlobalDiscovery)({
                 tab: w.GlobalDiscoveryTab.APPS,
-                newSessionState: { guildId: e ?? null, entrypoint: { name: x.sW.KEYBOARD_SHORTCUT } },
+                newSessionState: { guildId: e ?? null, entrypoint: { name: P.sW.KEYBOARD_SHORTCUT } },
             });
         },
     },

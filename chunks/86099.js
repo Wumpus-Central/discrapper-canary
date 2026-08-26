@@ -32,17 +32,17 @@ function y(e) {
         h,
         x,
         y,
-        { children: j, onExited: I, ariaLabel: N, dismissable: E = !1 } = e,
-        { isOpen: v, setOpen: b, triggerRef: T, menuId: _, spacing: R, centerSingleItem: S } = g(),
+        { children: j, onExited: I, ariaLabel: N, dismissable: v = !1 } = e,
+        { isOpen: E, setOpen: b, triggerRef: T, menuId: _, spacing: R, centerSingleItem: S } = g(),
         L = l.useCallback(() => {
-            E && b(!1);
-        }, [E, b]),
+            v && b(!1);
+        }, [v, b]),
         O = (0, p.A)(null, L, T),
         P = l.useCallback(
             (e) => {
-                E && "Escape" === e.key && b(!1);
+                v && "Escape" === e.key && b(!1);
             },
-            [E, b],
+            [v, b],
         ),
         M = l.Children.toArray(j).filter(l.isValidElement),
         w = M.length,
@@ -115,14 +115,14 @@ function y(e) {
         [z] = (0, c.z)(
             () => ({
                 from: { progress: 0 },
-                to: { progress: +!!v },
-                config: v ? A : f,
+                to: { progress: +!!E },
+                config: E ? A : f,
                 onRest: (e) => {
-                    !0 !== e.finished || v || U.current();
+                    !0 !== e.finished || E || U.current();
                 },
             }),
             "respect-motion-settings",
-            [v],
+            [E],
         );
     return (
         l.useEffect(() => {
@@ -134,7 +134,7 @@ function y(e) {
             role: "menu",
             "aria-label": N,
             tabIndex: -1,
-            className: s()(m.EQ, { [m.U4]: !v }),
+            className: s()(m.EQ, { [m.U4]: !E }),
             style: {
                 "--custom-radial-opacity": z.progress,
                 transform: z.progress.to([0, 1], [0.5, 1]).to((e) => `scale(${e})`),

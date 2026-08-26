@@ -20,8 +20,8 @@ var i = n(477900),
     j = n(652215),
     I = n(806931),
     N = n(804273),
-    E = n(517689);
-let v = 16 / 9,
+    v = n(517689);
+let E = 16 / 9,
     b = 8 + y.Vp;
 function T(e) {
     let t,
@@ -61,7 +61,7 @@ function T(e) {
         ea = 0;
     (q || J) && (ea += 72), q && !J && (en ? (ea += 48) : (ea += 8)), J && (ea += 0.5 * b + 8);
     let es = l.useMemo(
-            () => (q && X ? D / (U - 2 * ea) : Z && null != F && F.width > 0 && F.height > 0 ? F.width / F.height : v),
+            () => (q && X ? D / (U - 2 * ea) : Z && null != F && F.width > 0 && F.height > 0 ? F.width / F.height : E),
             [Z, F, q, D, U, ea, X],
         ),
         er = U - 2 * ea,
@@ -117,19 +117,19 @@ function T(e) {
         ey = J ? [] : (0, C.Cf)(_, P, B),
         { visibleParticipants: ej, participantTileWidth: eI } = (0, y.i4)(D, R);
     return (0, i.jsxs)("div", {
-        className: s()(E.zr, N.tR, w),
+        className: s()(v.zr, N.tR, w),
         children: [
             (0, i.jsxs)("div", {
-                className: E.QX,
+                className: v.QX,
                 style: { opacity: Z && W ? 0 : 1 },
                 children: [
                     (0, i.jsxs)(r.animated.div, {
-                        className: E.pc,
+                        className: v.pc,
                         style: { top: eA.value.to((e) => (-e * b) / 2) },
                         children: [
                             (0, i.jsx)(r.animated.div, {
                                 style: { width: ef.value },
-                                className: E.tN,
+                                className: v.tN,
                                 children: (0, i.jsx)("div", {
                                     className: N.xS,
                                     style: { aspectRatio: es },
@@ -166,7 +166,7 @@ function T(e) {
                             }),
                             en
                                 ? (0, i.jsx)(r.animated.div, {
-                                      className: s()(E.$l, { [E.N7]: k }),
+                                      className: s()(v.$l, { [v.N7]: k }),
                                       style: { bottom: ex.value },
                                       children: (0, i.jsx)(h.A, {
                                           channelId: O.id,
@@ -178,7 +178,7 @@ function T(e) {
                         ],
                     }),
                     (0, i.jsx)(r.animated.div, {
-                        className: E.Vx,
+                        className: v.Vx,
                         style: {
                             translateY: em.value.to((e) => (e * b) / 2),
                             opacity: em.value,

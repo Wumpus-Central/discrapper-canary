@@ -1,4 +1,4 @@
-u.d(t, { A: () => c, H: () => n });
+u.d(t, { A: () => R, H: () => n });
 var r,
     i = u(945810),
     n =
@@ -6,7 +6,7 @@ var r,
         (r[(r.OPEN_PURCHASE = 1)] = "OPEN_PURCHASE"),
         (r[(r.PAID_PREMIUM_SUBSCRIBERS_ONLY = 2)] = "PAID_PREMIUM_SUBSCRIBERS_ONLY"),
         r);
-let c = (0, i.mj)({
+let R = (0, i.mj)({
     name: "2026-04-collectibles-profile-frames-purchase",
     kind: "user",
     defaultConfig: { bucket: 0 },

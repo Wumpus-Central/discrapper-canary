@@ -56,7 +56,7 @@ var Z = n(661531),
     en = n(111219),
     el = n(835723),
     ei = n(39623),
-    es = n(339350),
+    es = n(588190),
     ea = n(152367),
     er = n(55730),
     eo = n(47167),
@@ -538,7 +538,7 @@ let eE = s.memo(function (e) {
                                 activity: e,
                             }));
                 }),
-                u && g.push({ type: "SCHEDULED_MESSAGE", icon: es.Q, display: eh.intl.string(eh.t["3+ii4F"]) }),
+                u && g.push({ type: "SCHEDULED_MESSAGE", icon: es.U, display: eh.intl.string(eh.t["3+ii4F"]) }),
                 a.isThread() &&
                     h &&
                     g.push({ type: "SUMMARIZE_THREAD", icon: ea.D, display: eh.intl.string(eh.t.EXfguE) }),

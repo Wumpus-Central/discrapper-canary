@@ -18,8 +18,8 @@ function x(e) {
         g = (0, a.bG)([r.Ay], () => r.Ay.keyboardModeEnabled),
         [C, y] = (0, l.useState)(""),
         [j, I] = (0, l.useState)(""),
-        [N, E] = (0, l.useState)((0, c.x7)("")),
-        [v, b] = (0, l.useState)(g),
+        [N, v] = (0, l.useState)((0, c.x7)("")),
+        [E, b] = (0, l.useState)(g),
         T = (0, l.useRef)(!1);
     return (0, i.jsx)(s.l, {
         className: f.kL,
@@ -29,7 +29,7 @@ function x(e) {
             maxCharacterCount: 512,
             showRemainingCharsAfterCount: 10,
             onChange: function (e, t, n) {
-                I(t), E(n), y(u.Ay.translateInlineEmojiToSurrogates(t));
+                I(t), v(n), y(u.Ay.translateInlineEmojiToSurrogates(t));
             },
             placeholder: A.intl.string(m.default.IAcEEn),
             channel: t,
@@ -42,7 +42,7 @@ function x(e) {
             onBlur: () => {
                 b(!1);
             },
-            focused: v,
+            focused: E,
             onSubmit: function () {
                 let e = t.guild_id;
                 return 0 === C.trim().length || null == e

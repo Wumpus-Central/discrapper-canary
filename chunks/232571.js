@@ -56,23 +56,23 @@ function C() {
 function y(e) {
     let { channelId: t, x: n, y, label: j, roomWidth: I } = e,
         N = (0, s.bG)([d.Ay], () => d.Ay.getVoiceChannelId() === t),
-        E = (0, s.bG)([p.A], () =>
+        v = (0, s.bG)([p.A], () =>
             p.A.getRoomUsers(t)
                 .values()
                 .some((e) => e.position?.x === n && e.position?.y === y),
         ),
-        v = (0, s.bG)([c.A], () => c.A.getChannel(t)?.guild_id),
+        E = (0, s.bG)([c.A], () => c.A.getChannel(t)?.guild_id),
         b = l.useCallback(async () => {
-            null != v &&
+            null != E &&
                 (N
-                    ? (0, u.AQ)(v, t, { user_position: { x: n, y } }).catch((e) => (0, h.b)({ silent: !0 }))
+                    ? (0, u.AQ)(E, t, { user_position: { x: n, y } }).catch((e) => (0, h.b)({ silent: !0 }))
                     : ((0, u.TJ)({ x: n, y }), (await (0, o.A)({ channelId: t })) || (0, u.Ys)()));
-        }, [N, v, t, n, y]),
+        }, [N, E, t, n, y]),
         T = (0, m.Sb)({
             position: { x: n, y },
             targetLabel: x.intl.formatToPlainString(f.default.NYm6Cb, { seatLabel: j }),
         });
-    if (E || null == v) return null;
+    if (v || null == E) return null;
     let { numericAvatarSize: _ } = (0, A.F)(I),
         R = 1.2 * Math.max(_, 24);
     return (0, i.jsx)(r.m, {

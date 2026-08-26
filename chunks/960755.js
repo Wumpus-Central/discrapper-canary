@@ -54,11 +54,11 @@ function M(e) {
     let { channel: t } = e;
     return v.nonPositionalChannelIdUpdate(t.id);
 }
-function P(e) {
+function x(e) {
     let { id: t } = e;
     return v.nonPositionalChannelIdUpdate(t);
 }
-function x() {
+function P() {
     let e = p.Ay.getChannelId(),
         t = p.Ay.getVoiceChannelId(),
         n = O !== e || b !== t;
@@ -147,7 +147,7 @@ let F = new B(s.h, {
     CHANNEL_LOCAL_ACK: G,
     CHANNEL_MUTE_EXPIRED: y,
     CHANNEL_RTC_UPDATE_CHAT_OPEN: G,
-    CHANNEL_SELECT: x,
+    CHANNEL_SELECT: P,
     CHANNEL_INFO: function (e) {
         let { guildId: t } = e;
         return v.clearGuildId(t);
@@ -239,8 +239,8 @@ let F = new B(s.h, {
         return v.nonPositionalChannelUpdate(t);
     },
     THREAD_LIST_SYNC: y,
-    THREAD_MEMBER_UPDATE: P,
-    THREAD_MEMBERS_UPDATE: P,
+    THREAD_MEMBER_UPDATE: x,
+    THREAD_MEMBERS_UPDATE: x,
     THREAD_UPDATE: M,
     TRY_ACK: G,
     UPDATE_CHANNEL_DIMENSIONS: G,
@@ -274,13 +274,13 @@ let F = new B(s.h, {
     },
     VOICE_CATEGORY_COLLAPSE: V,
     VOICE_CATEGORY_EXPAND: V,
-    VOICE_CHANNEL_SELECT: x,
+    VOICE_CHANNEL_SELECT: P,
     VOICE_CHANNEL_STATUS_UPDATE: function (e) {
         return v.nonPositionalChannelIdUpdate(e.id);
     },
     VOICE_STATE_UPDATES: function (e) {
         let { voiceStates: t } = e,
-            n = x(),
+            n = P(),
             i = new Set();
         for (let { channelId: e, oldChannelId: l } of t)
             null == l || i.has(l) || (v.nonPositionalChannelIdUpdate(l) && (n = !0), i.add(l)),

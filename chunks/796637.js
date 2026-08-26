@@ -4,7 +4,7 @@ var i = n(582128),
     r = n.n(l),
     s = n(873298),
     a = n(933958),
-    o = n(617710),
+    o = n(597643),
     d = n(698441),
     c = n(297469),
     u = n(863005),
@@ -184,9 +184,9 @@ function y(e) {
         G = 0;
     for (let e of [D, ...y]) for (let t of ((e.position = ++G), e.channelList)) t.position = ++G;
     let M = { isEmpty: () => !0, getRows: () => [], getRow: () => null },
-        P = [];
-    t && P.push(b.r.FAVORITES_SUGGESTIONS);
-    let x = { isEmpty: () => 0 === P.length, getRows: () => P, getRow: (e) => P[e] ?? null };
+        x = [];
+    t && x.push(b.r.FAVORITES_SUGGESTIONS);
+    let P = { isEmpty: () => 0 === x.length, getRows: () => x, getRow: (e) => x[e] ?? null };
     return {
         id: O.Vc,
         hideMutedChannels: i,
@@ -195,7 +195,7 @@ function y(e) {
         voiceChannelsSectionNumber: -999,
         getSections() {
             let e = [];
-            (e[c.Xt] = P.length), (e[c.PU] = 0), (e[c.HP] = 0), (e[c.yO] = 0), (e[c.bK] = D.channelList.length);
+            (e[c.Xt] = x.length), (e[c.PU] = 0), (e[c.HP] = 0), (e[c.yO] = 0), (e[c.bK] = D.channelList.length);
             for (let t = 0; t < y.length; t++) e[c.TF + t] = Math.max(1, y[t].channelList.length);
             return e;
         },
@@ -207,7 +207,7 @@ function y(e) {
             return null == n || null == n.channelList[t] ? null : { category: n, channel: n.channelList[t] };
         },
         getGuildActionSection: () => M,
-        getChannelNoticeSection: () => x,
+        getChannelNoticeSection: () => P,
         getFirstVoiceChannel: () => null,
         getSectionRowsFromChannel(e) {
             let t = [D, ...y];

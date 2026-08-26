@@ -61,8 +61,8 @@ function C(e) {
                 boundingBoxCorners: t,
             };
         }, [n]),
-        { ref: N, width: E, height: v } = (0, r.Ay)(),
-        b = l.useMemo(() => (null == E || null == v ? null : (0, p.t)(I, E, v, g)), [I, E, v]),
+        { ref: N, width: v, height: E } = (0, r.Ay)(),
+        b = l.useMemo(() => (null == v || null == E ? null : (0, p.t)(I, v, E, g)), [I, v, E]),
         T = Math.min(48, Math.max(20, 0.025 * a)),
         _ = (0, o.yK)([d.A, u.default], () => {
             if ((0, c.F2)(t)) return [];
@@ -72,15 +72,15 @@ function C(e) {
             );
         }),
         R = (0, h.Y1)(t),
-        S = l.useMemo(() => (null == v ? 0 : -(((I.topLeft.y + I.topRight.y) / 2 / 100) * v)), [I, v]);
+        S = l.useMemo(() => (null == E ? 0 : -(((I.topLeft.y + I.topRight.y) / 2 / 100) * E)), [I, E]);
     return (0, i.jsxs)("div", {
         ref: N,
         className: x.nj,
         inert: R,
         style: { left: `${C.left}%`, top: `${C.top}%`, width: `${C.width}%`, height: `${C.height}%`, clipPath: y },
         children: [
-            _.length > 0 && null != b && null != E
-                ? (0, i.jsx)(f.A, { streams: _, fit: b, tooltipSpacing: S, containerWidthPx: E })
+            _.length > 0 && null != b && null != v
+                ? (0, i.jsx)(f.A, { streams: _, fit: b, tooltipSpacing: S, containerWidthPx: v })
                 : (0, i.jsx)(A.A, { channelId: t, center: j, iconSize: T }),
             (0, i.jsx)(m.A, { className: s()(x.MQ, x.zq) }),
         ],

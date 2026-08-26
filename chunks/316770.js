@@ -1,4 +1,4 @@
-l.d(t, { A: () => v });
+l.d(t, { A: () => C });
 var e = l(477900),
     n = l(503698),
     s = l.n(n),
@@ -15,32 +15,32 @@ var e = l(477900),
     m = l(576705),
     p = l(531648),
     j = l(10862),
-    C = l(818348),
-    N = l(375708),
-    _ = l(260155);
-function v(i) {
-    let { channel: t, guild: l, onAction: n, onClose: v } = i,
+    N = l(818348),
+    _ = l(375708),
+    v = l(260155);
+function C(i) {
+    let { channel: t, guild: l, onAction: n, onClose: C } = i,
         f = (0, A.Ay)(t),
-        O = (0, a.bG)([m.A], () => t.isPrivate() || m.A.can(C.xB.CONNECT, t));
+        O = (0, a.bG)([m.A], () => t.isPrivate() || m.A.can(N.xB.CONNECT, t));
     return (0, e.jsxs)("div", {
         children: [
             (0, e.jsxs)(o.E, {
                 tag: "div",
                 variant: "heading-sm/semibold",
                 color: "text-default",
-                className: _.CT,
+                className: v.CT,
                 children: [
-                    (0, e.jsx)(j.A, { channel: t, size: "xxs", color: r.A.colors.TEXT_DEFAULT, className: _.Ow }),
+                    (0, e.jsx)(j.A, { channel: t, size: "xxs", color: r.A.colors.TEXT_DEFAULT, className: v.Ow }),
                     O
                         ? (0, e.jsx)(d.D, {
-                              className: s()(_.sd, _.mG),
+                              className: s()(v.sd, v.mG),
                               onClick: (i) => {
                                   i.stopPropagation(),
                                       t.isGuildStageVoice()
                                           ? (0, g.av)(t)
                                           : (c.default.selectVoiceChannel(t.id), (0, h.iN)(t.id)),
                                       n?.({ action: "OPEN_VOICE_CHANNEL" }),
-                                      v?.();
+                                      C?.();
                               },
                               "aria-label": (0, u.Ay)({ channel: t }),
                               children: f,
@@ -52,11 +52,11 @@ function v(i) {
                 ? null
                 : (0, e.jsx)(p.A, {
                       variant: "text-xs/normal",
-                      text: N.intl.formatToPlainString(N.t["hq/Qze"], { guildName: l.name }),
+                      text: _.intl.formatToPlainString(_.t["hq/Qze"], { guildName: l.name }),
                       onClick: (i) => {
-                          i.stopPropagation(), (0, x.u)(l.id), n?.({ action: "OPEN_VOICE_GUILD" }), v?.();
+                          i.stopPropagation(), (0, x.u)(l.id), n?.({ action: "OPEN_VOICE_GUILD" }), C?.();
                       },
-                      className: _.J5,
+                      className: v.J5,
                   }),
         ],
     });

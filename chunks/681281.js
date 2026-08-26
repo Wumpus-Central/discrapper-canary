@@ -20,8 +20,8 @@ var i = n(477900),
     j = n(47167),
     I = n(882840),
     N = n(713654),
-    E = n(611371),
-    v = n(769015),
+    v = n(611371),
+    E = n(769015),
     b = n(208971),
     T = n(446243),
     _ = n(920639),
@@ -70,7 +70,7 @@ function Q(e) {
             (t = (0, i.jsxs)(i.Fragment, {
                 children: [
                     (0, i.jsx)(M.Ay.Divider, { className: q.yF }),
-                    (0, i.jsx)(v.A, { game: n, className: q.RI }),
+                    (0, i.jsx)(E.A, { game: n, className: q.RI }),
                     (0, i.jsx)(c.E, {
                         className: q.W$,
                         variant: "text-md/normal",
@@ -93,7 +93,7 @@ function Q(e) {
     return (0, i.jsx)("div", { className: q.kL, children: t });
 }
 function J(e) {
-    let { channel: t, guild: a, appContext: o, inCall: x, isChatOpen: g, exitFullScreen: v, guildRoomVisible: L } = e,
+    let { channel: t, guild: a, appContext: o, inCall: x, isChatOpen: g, exitFullScreen: E, guildRoomVisible: L } = e,
         O = (0, r.bG)([F.A], () => F.A.getSelectedParticipant(t.id), [t.id]),
         { enabled: P } = S.A.useExperiment({ guildId: a?.id, location: "ChannelCallHeader" }),
         D = (0, r.bG)([R.A], () => R.A.getVideoOverlayVisibility()),
@@ -176,7 +176,7 @@ function J(e) {
                     appContext: o,
                     inCall: x,
                     isChatOpen: g,
-                    exitFullScreen: v,
+                    exitFullScreen: E,
                     focusedApplication: et,
                     shouldShowHeaderParticipants: !0,
                     guildRoomVisible: L,
@@ -196,7 +196,7 @@ function J(e) {
                                       })
                                     : null,
                                 J,
-                                P && (0, i.jsx)(E.A, { className: q.vW }),
+                                P && (0, i.jsx)(v.A, { className: q.vW }),
                                 er &&
                                     (0, i.jsx)(u.m, {
                                         text: Y.intl.string(Y.t.QyZ4Td),

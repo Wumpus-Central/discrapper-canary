@@ -20,8 +20,8 @@ var i = n(477900),
     j = n(131607),
     I = n(409626),
     N = n(613902),
-    E = n(692969),
-    v = n(738250),
+    v = n(692969),
+    E = n(738250),
     b = n(834757),
     T = n(548118),
     _ = n(832163),
@@ -68,8 +68,8 @@ function U(e) {
 }
 function V(e) {
     let { className: t, applicationId: n } = e,
-        { gameId: l, gameRecord: a } = (0, v.A)({ applicationId: n }),
-        r = (0, E.A)({ gameId: l ?? void 0, source: I.GameProfileSources.VcHeaderActivity });
+        { gameId: l, gameRecord: a } = (0, E.A)({ applicationId: n }),
+        r = (0, v.A)({ gameId: l ?? void 0, source: I.GameProfileSources.VcHeaderActivity });
     if (null == r) return null;
     let o = a?.getIconURL(T.iu.MEDIUM),
         c = (0, L.uJ)(o)
@@ -91,9 +91,9 @@ function k(e) {
         y = u?.id,
         j = (0, r.bG)([_.A], () => _.A.getDetectableIdsToApplicationIds()),
         I = null != y ? j[y] : null,
-        E = (0, C.h)(I),
-        v = (0, N.E)({ location: "SocialLayerCommerceStreamHeader" }),
-        L = v ? (I ?? y ?? null) : I,
+        v = (0, C.h)(I),
+        E = (0, N.E)({ location: "SocialLayerCommerceStreamHeader" }),
+        L = E ? (I ?? y ?? null) : I,
         k = (0, C.h)(L),
         {
             isLoading: G,
@@ -129,7 +129,7 @@ function k(e) {
             renderPopout: ec,
             positionKey: ed,
         } = l.useMemo(() => {
-            if (!v && (null == E || null == I)) return { isAppIcon: !1 };
+            if (!E && (null == v || null == I)) return { isAppIcon: !1 };
             if (ei && null != L) {
                 let e = el ?? k?.getIconURL(T.iu.SMALL),
                     t = null != e && null == el,
@@ -157,7 +157,7 @@ function k(e) {
                     positionKey: "widget-version",
                 };
             }
-            if (null == E || null == I) return { isAppIcon: !1 };
+            if (null == v || null == I) return { isAppIcon: !1 };
             let { icon: e, text: t } =
                 z === n.id
                     ? { icon: (0, i.jsx)(p.U, { className: w.Kk }), text: M.intl.string(M.t.e6S76Q) }
@@ -173,8 +173,8 @@ function k(e) {
                 },
                 positionKey: "feature-card-version",
             };
-        }, [v, ei, L, k, E, I, z, n.id, s, ee, K, et, el, ea]);
-    return G || J || (null == ec && !v)
+        }, [E, ei, L, k, v, I, z, n.id, s, ee, K, et, el, ea]);
+    return G || J || (null == ec && !E)
         ? null
         : (0, i.jsx)(A.N, {
               theme: P.NJ.DARKER,

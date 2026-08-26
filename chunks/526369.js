@@ -20,8 +20,8 @@ var i = n(477900),
     j = n(686502),
     I = n(175203),
     N = n(263854),
-    E = n(652215),
-    v = n(886179);
+    v = n(652215),
+    E = n(886179);
 function b(e) {
     let {
             participants: t,
@@ -34,7 +34,7 @@ function b(e) {
             totalNumberOfParticipants: L,
             popoutType: O,
         } = e,
-        P = (0, f.Us)() === E.BRT.POPOUT,
+        P = (0, f.Us)() === v.BRT.POPOUT,
         M = (0, r.bG)([C.A], () => C.A.getGuild(_.guild_id), [_.guild_id]),
         { dismissedActivityEntryPointTileChannel: w } = (0, N.P)(),
         D = (0, r.bG)([h.A], () => h.A.getUserParticipantCount(_.id), [_]),
@@ -65,7 +65,7 @@ function b(e) {
                     {
                         participant: e,
                         channel: _,
-                        className: v.V,
+                        className: E.V,
                         onClick: n,
                         onDoubleClick: b,
                         onContextMenu: T,

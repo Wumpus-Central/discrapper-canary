@@ -430,7 +430,7 @@ var eE = l(9842),
     ey = l(657048),
     e_ = l(674470),
     eM = l(873298),
-    eS = l(339350),
+    eS = l(588190),
     eR = l(625494),
     eT = l(621235);
 function ew() {
@@ -456,7 +456,7 @@ function ew() {
                     "aria-label": en.intl.string(en.t["h+Imbu"]),
                     onClick: e,
                     children: [
-                        (0, t.jsx)(eS.Q, {
+                        (0, t.jsx)(eS.U, {
                             className: eT.Kk,
                             color: "currentColor",
                             size: "custom",

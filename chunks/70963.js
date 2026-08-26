@@ -17,7 +17,7 @@ function m(i) {
     let { channel: t, onAction: l, onClose: m } = i,
         { themeType: p } = (0, u.E)(),
         j = p === x.d.MODAL_V2,
-        C = (0, n.bG)([c.A], () => c.A.isInChannel(t.id));
+        N = (0, n.bG)([c.A], () => c.A.isInChannel(t.id));
     if (
         !(0, n.bG)([r.A], () => {
             let i = (0, a.r9)() && (0, a.UK)(t.id);
@@ -25,9 +25,9 @@ function m(i) {
         })
     )
         return null;
-    let N = p === x.d.MODAL || p === x.d.MODAL_V2;
+    let _ = p === x.d.MODAL || p === x.d.MODAL_V2;
     return (0, e.jsx)(A.FD, {
-        text: C
+        text: N
             ? (function (i) {
                   let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
                   return t
@@ -37,7 +37,7 @@ function m(i) {
                         : i.isGuildStageVoice()
                           ? g.intl.string(g.t.Acqcot)
                           : g.intl.string(g.t.BXxdl7);
-              })(t, N)
+              })(t, _)
             : (function (i) {
                   let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
                   return t
@@ -47,7 +47,7 @@ function m(i) {
                         : i.isGuildStageVoice()
                           ? g.intl.string(g.t["7vb2cc"])
                           : g.intl.string(g.t["96ANUN"]);
-              })(t, N),
+              })(t, _),
         fullWidth: !j,
         onClick: (i) => {
             i.stopPropagation(),

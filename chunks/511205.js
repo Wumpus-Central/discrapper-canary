@@ -29,7 +29,7 @@ function h(e) {
             tileStyle: j,
             tileWidth: I,
             rows: N,
-            columns: E,
+            columns: v,
         } = l.useMemo(
             () =>
                 (function (e, t, n) {
@@ -62,8 +62,8 @@ function h(e) {
                 })(g, C, y),
             [g, C, y],
         ),
-        v = E + 1,
-        b = v * I + (v - 1) * 8 <= f,
+        E = v + 1,
+        b = E * I + (E - 1) * 8 <= f,
         T = Math.floor(I / c) + 8,
         _ = Math.max(0, y - T * N) / 2;
     return (0, i.jsx)(r.A, {
@@ -71,12 +71,12 @@ function h(e) {
         className: t,
         listPadding: [h + _, 0, p + _ - 8, 8],
         renderRow: function (e) {
-            let t = e * E;
+            let t = e * v;
             return (0, i.jsx)(
                 "div",
                 {
                     className: o.nM,
-                    children: n?.slice(t, t + E)?.map((e, n) => {
+                    children: n?.slice(t, t + v)?.map((e, n) => {
                         let l = t + n;
                         return (0, i.jsx)(
                             "div",
@@ -84,8 +84,8 @@ function h(e) {
                                 style: j,
                                 className: s()(o.Vs, {
                                     [o.E3]: b,
-                                    [o.k4]: l >= (N - 1) * E,
-                                    [o.Kk]: (l + 1) % E == 0 || l === g - 1,
+                                    [o.k4]: l >= (N - 1) * v,
+                                    [o.Kk]: (l + 1) % v == 0 || l === g - 1,
                                 }),
                                 children: (0, i.jsx)("div", { className: o.eP, children: e(I) }),
                             },

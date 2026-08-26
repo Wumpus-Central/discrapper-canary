@@ -20,8 +20,8 @@ var i = n(477900),
     j = n(360729),
     I = n(51082),
     N = n(275731),
-    E = n(289552),
-    v = n(246356),
+    v = n(289552),
+    E = n(246356),
     b = n(977851),
     T = n(204651),
     _ = n(772475),
@@ -135,7 +135,7 @@ function G(e) {
                     "live-indicator",
                 ),
             )),
-        H?.type === w.lp.USER && q.push((0, i.jsx)(E.A, { className: V.x6, userId: H.id }, "video-warning")),
+        H?.type === w.lp.USER && q.push((0, i.jsx)(v.A, { className: V.x6, userId: H.id }, "video-warning")),
         F &&
             q.push(
                 (0, i.jsx)(
@@ -143,7 +143,7 @@ function G(e) {
                     {
                         targetElementRef: L,
                         position: "bottom",
-                        renderPopout: () => (0, i.jsx)(v.A, { children: (0, i.jsx)(M.A, { channel: t }) }),
+                        renderPopout: () => (0, i.jsx)(E.A, { children: (0, i.jsx)(M.A, { channel: t }) }),
                         children: (e, t) => {
                             let { isShown: n } = t;
                             return (0, l.createElement)(_.A, {

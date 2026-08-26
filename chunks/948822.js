@@ -20,8 +20,8 @@ var i = n(477900),
     j = n(920639),
     I = n(82715),
     N = n(731854),
-    E = n(375708),
-    v = n(989952),
+    v = n(375708),
+    E = n(989952),
     b = n(550234);
 function T(e) {
     let { channelId: t, center: n, iconSize: a } = e,
@@ -42,17 +42,17 @@ function T(e) {
         }, [_, S, t, O]);
     return null != T && null != _ && L && R && M
         ? (0, i.jsxs)(c.D, {
-              "aria-label": E.intl.string(E.t.fjBNo1),
+              "aria-label": v.intl.string(v.t.fjBNo1),
               className: b.XI,
               onClick: D,
               focusProps: { ringTarget: w },
               children: [
-                  (0, i.jsx)(I.A, { className: s()(b.ys, v.zq) }),
+                  (0, i.jsx)(I.A, { className: s()(b.ys, E.zq) }),
                   (0, i.jsx)("div", {
                       className: b.F$,
                       style: { left: `${n.x}%`, top: `${n.y}%` },
                       children: (0, i.jsx)("div", {
-                          className: v.zq,
+                          className: E.zq,
                           ref: w,
                           children: (0, i.jsx)(P, {
                               className: b.Kk,

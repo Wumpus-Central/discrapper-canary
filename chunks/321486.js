@@ -20,8 +20,8 @@ var i = n(477900),
     j = n(562153),
     I = n(218394),
     N = n(393371),
-    E = n(360627),
-    v = n(809369),
+    v = n(360627),
+    E = n(809369),
     b = n(652215),
     T = n(1195),
     _ = n(375708),
@@ -71,7 +71,7 @@ function w(e) {
         let e = setTimeout(ee, S);
         return () => clearTimeout(e);
     }, [W, X, V, $, ee]);
-    let et = l.useCallback(() => (0, v.k)(H), [H]),
+    let et = l.useCallback(() => (0, E.k)(H), [H]),
         en = { left: `${n.originX}%`, top: `${n.originY}%`, transform: n.matrix },
         ei = (0, c.p)(H, {
             keys: () => `${D.sequence}:${(0, x._z)(H)}`,
@@ -95,7 +95,7 @@ function w(e) {
         onFocus: el,
         onBlur: ea,
         children: [
-            (0, i.jsx)(E.A, {
+            (0, i.jsx)(v.A, {
                 title: q,
                 image: (0, i.jsx)(d.eu, { src: K?.getAvatarURL(Y.guildId, 96), size: u._3.SIZE_48, "aria-hidden": !0 }),
                 forceOpen: G,

@@ -5,11 +5,11 @@ var n = t(477900),
     a = t.n(s),
     r = t(296704),
     d = t(562708),
-    u = t(17928),
-    o = t(192308),
+    o = t(17928),
+    u = t(192308),
     c = t(717421),
-    A = t(922016),
-    m = t(939249),
+    m = t(922016),
+    A = t(939249),
     g = t(283973),
     h = t(866665),
     p = t(834730),
@@ -36,18 +36,18 @@ function k(e) {
     let { channel: i, onClose: s } = e,
         k = l.useRef(null),
         V = l.useRef(null),
-        [R, w] = l.useState(!1),
-        [D, U] = l.useState(0),
-        { analyticsLocations: M } = (0, S.Ay)(x.A.VOICE_INVITE_SUGGESTIONS);
+        [w, D] = l.useState(!1),
+        [R, M] = l.useState(0),
+        { analyticsLocations: U } = (0, S.Ay)(x.A.VOICE_INVITE_SUGGESTIONS);
     (0, _.A)({
         name: d.ImpressionNames.VOICE_INVITE_SUGGESTIONS_ENTRYPOINT,
         type: d.ImpressionTypes.VIEW,
-        properties: { voice_channel_id: i.id, voice_guild_id: i.guild_id, location_stack: M },
+        properties: { voice_channel_id: i.id, voice_guild_id: i.guild_id, location_stack: U },
     });
-    let L = (0, u.bG)([y.A], () => y.A.can(j.xBc.CREATE_INSTANT_INVITE, i), [i]),
-        F = (0, u.bG)([N.A], () => N.A.getGuild(i.guild_id)),
-        z = (0, u.bG)([v.Ay], () => v.Ay.useReducedMotion),
-        [K, B] = l.useState(!1),
+    let L = (0, o.bG)([y.A], () => y.A.can(j.xBc.CREATE_INSTANT_INVITE, i), [i]),
+        F = (0, o.bG)([N.A], () => N.A.getGuild(i.guild_id)),
+        z = (0, o.bG)([v.Ay], () => v.Ay.useReducedMotion),
+        [B, K] = l.useState(!1),
         Y = l.useRef(null),
         q = (0, E.M)(L ? k : Y),
         [$, H] = l.useState(!1),
@@ -61,16 +61,16 @@ function k(e) {
                     reason: e,
                     channel_id: i.id,
                     guild_id: i.guild_id,
-                    location_stack: M,
+                    location_stack: U,
                 }),
-                    w(!1),
+                    D(!1),
                     s?.();
             },
-            [i.id, i.guild_id, s, M],
+            [i.id, i.guild_id, s, U],
         ),
         ee = l.useCallback(() => {
             null != F &&
-                (0, o.openModalLazy)(async () => {
+                (0, u.openModalLazy)(async () => {
                     let { default: e } = await Promise.all([
                         t.e("683621"),
                         t.e("711162"),
@@ -89,14 +89,14 @@ function k(e) {
         })),
         en = l.useCallback(
             (e) => {
-                B(!0), et({ to: { height: "0px" }, onRest: () => Q(e) });
+                K(!0), et({ to: { height: "0px" }, onRest: () => Q(e) });
             },
             [et, Q],
         );
     l.useEffect(() => {
-        if (X) return void w(!0);
+        if (X) return void D(!0);
         let e = setTimeout(() => {
-            w(!1);
+            D(!1);
         }, 150);
         return () => {
             clearTimeout(e);
@@ -113,22 +113,22 @@ function k(e) {
             null != el.current ? Math.max(1e4 - (Date.now() - el.current), 0) : 1e4,
         );
         return (
-            null == el.current && (U((e) => e + 1), (el.current = Date.now())),
+            null == el.current && (M((e) => e + 1), (el.current = Date.now())),
             () => {
                 clearTimeout(e);
             }
         );
     }, [X, z, en]);
     let es = l.useCallback(() => {
-            w(!0);
+            D(!0);
         }, []),
         ea = l.useCallback(() => {
-            w(!1), H(!1), Z && (J(!1), k.current?.focus());
+            D(!1), H(!1), Z && (J(!1), k.current?.focus());
         }, [Z]);
     return L
-        ? (0, n.jsx)(A.Y, {
+        ? (0, n.jsx)(m.Y, {
               targetElementRef: k,
-              shouldShow: R,
+              shouldShow: w,
               position: "right",
               align: "top",
               spacing: 17,
@@ -141,11 +141,11 @@ function k(e) {
                   return (0, n.jsx)(r.animated.div, {
                       className: G.lY,
                       style: ei,
-                      children: (0, n.jsx)(m.D, {
+                      children: (0, n.jsx)(A.D, {
                           innerRef: k,
-                          className: a()({ [G.vk]: !K }, O.q7, O.L9, O.vk),
+                          className: a()({ [G.vk]: !B }, O.q7, O.L9, O.vk),
                           focusProps: { offset: { right: 4 } },
-                          "aria-disabled": K,
+                          "aria-disabled": B,
                           "aria-label": T.intl.string(T.t.F3qiJr),
                           onClick: ee,
                           ignoreKeyPress: W,
@@ -172,7 +172,7 @@ function k(e) {
                                                             (0, n.jsx)("circle", { className: G.hN }),
                                                         ],
                                                     },
-                                                    `voice-invite-suggestions-timer-${D}`,
+                                                    `voice-invite-suggestions-timer-${R}`,
                                                 ),
                                           (0, n.jsx)(g.R, {
                                               size: "custom",
@@ -196,7 +196,7 @@ function k(e) {
                                   (0, n.jsx)("div", {
                                       ref: V,
                                       children: q
-                                          ? (0, n.jsx)(m.D, {
+                                          ? (0, n.jsx)(A.D, {
                                                 className: G.VN,
                                                 onClick: (e) => {
                                                     e.stopPropagation(), en("user_explicit");
@@ -208,7 +208,7 @@ function k(e) {
                                                     className: G.Kk,
                                                 }),
                                             })
-                                          : (0, n.jsx)(m.D, {
+                                          : (0, n.jsx)(A.D, {
                                                 onClick: (e) => {
                                                     e.stopPropagation(), J(!0);
                                                 },

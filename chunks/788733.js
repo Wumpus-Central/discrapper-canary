@@ -1,6 +1,6 @@
-e.d(n, { A: () => s });
-var l = e(360469),
+e.d(l, { A: () => a });
+var n = e(360469),
     r = e(652215);
-function s(t) {
-    return t?.application_id === l.D4 && (t?.platform === r.yTV.ANDROID || t?.platform === r.yTV.IOS);
+function a(t) {
+    return t?.application_id === n.D4 && (t?.platform === r.yTV.ANDROID || t?.platform === r.yTV.IOS);
 }

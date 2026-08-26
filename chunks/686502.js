@@ -20,8 +20,8 @@ var i = n(477900),
     j = n(964486),
     I = n(648027),
     N = n(855446),
-    E = n(793574),
-    v = n(688810),
+    v = n(793574),
+    E = n(688810),
     b = n(975412),
     T = n(392054),
     _ = n(826673),
@@ -50,8 +50,8 @@ function D(e) {
 }
 function U(e) {
     let { channel: t, inPopout: n, handleClose: l } = e,
-        { analyticsLocations: a, newestAnalyticsLocation: r } = (0, v.Ay)(E.A.VC_TILE_ACTIVITY_SHELF_BUTTON);
-    return (0, i.jsx)(v.f5, {
+        { analyticsLocations: a, newestAnalyticsLocation: r } = (0, E.Ay)(v.A.VC_TILE_ACTIVITY_SHELF_BUTTON);
+    return (0, i.jsx)(E.f5, {
         value: a,
         children: (0, i.jsxs)(L.A, {
             className: M.zr,
@@ -100,7 +100,7 @@ function V(e) {
             n_participants: 1,
         });
     }, []);
-    let { analyticsLocations: c, newestAnalyticsLocation: d } = (0, v.Ay)(E.A.VC_TILE_ACTIVITY_INVITE);
+    let { analyticsLocations: c, newestAnalyticsLocation: d } = (0, E.Ay)(v.A.VC_TILE_ACTIVITY_INVITE);
     function p() {
         (0, m.openModalLazy)(
             async () => {
@@ -124,7 +124,7 @@ function V(e) {
             analyticsLocation: d,
         });
     }
-    return (0, i.jsx)(v.f5, {
+    return (0, i.jsx)(E.f5, {
         value: c,
         children: (0, i.jsx)(h.N, {
             disableAdaptiveTheme: !0,
@@ -167,9 +167,9 @@ function k(e) {
         });
     });
     let u = (0, I.A)({ guildId: n.id }).slice(0, 3),
-        { analyticsLocations: h } = (0, v.Ay)(E.A.VC_TILE_ACTIVITY_SUGGESTION),
+        { analyticsLocations: h } = (0, E.Ay)(v.A.VC_TILE_ACTIVITY_SUGGESTION),
         p = l.useMemo(() => ({ channel: t, type: "channel" }), [t]);
-    return (0, i.jsx)(v.f5, {
+    return (0, i.jsx)(E.f5, {
         value: h,
         children: (0, i.jsxs)(L.A, {
             className: M.zr,

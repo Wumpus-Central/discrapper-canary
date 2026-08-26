@@ -1,4 +1,4 @@
-n.d(t, { b: () => b });
+n.d(t, { b: () => A });
 var a = n(477900),
     l = n(582128),
     r = n(503698),
@@ -12,29 +12,29 @@ var a = n(477900),
     f = n(652215),
     x = n(375708),
     h = n(492931),
-    j = n(503928),
-    v = n(268920),
-    g = n(633217);
+    g = n(503928),
+    j = n(268920),
+    v = n(633217);
 function C() {
     return (0, a.jsx)("div", {
         className: h.s,
-        children: (0, a.jsx)(o.A, { src: g.A, fallbackImage: v.A, className: h.Cb }),
+        children: (0, a.jsx)(o.A, { src: v.A, fallbackImage: j.A, className: h.Cb }),
     });
 }
-function b(e) {
+function A(e) {
     let {
             ctaText: t,
             ctaOnClick: n,
             analyticsPage: r,
             linkPreText: o = x.intl.string(x.t["5qZv9E"]),
-            linkText: v = x.intl.string(x.t.XRdyjz),
+            linkText: j = x.intl.string(x.t.XRdyjz),
         } = e,
-        g = l.useCallback(() => {
+        v = l.useCallback(() => {
             null != r &&
                 (0, m.Y)({ pageType: r, sectionType: f.JJy.ORBS_BALANCE_MENU, ctaObject: f.ZSU.ORBS_LEARN_MORE_LINK });
         }, [r]);
     return (0, a.jsxs)("div", {
-        className: s()(h.kL, j.O),
+        className: s()(h.kL, g.O),
         children: [
             (0, a.jsx)(C, {}),
             (0, a.jsx)(i.$, { text: t, variant: "primary", size: "sm", onClick: n, fullWidth: !0 }),
@@ -48,8 +48,8 @@ function b(e) {
                         rel: "author",
                         href: d.A.getArticleURL(f.MVz.ORBS_FAQ),
                         className: h.CU,
-                        onClick: g,
-                        children: v,
+                        onClick: v,
+                        children: j,
                     }),
                 ],
             }),

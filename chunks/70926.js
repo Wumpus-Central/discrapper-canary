@@ -12,16 +12,16 @@ var a = n(477900),
     f = n(916845),
     x = n(834730),
     h = n(43990),
-    j = n(821609),
-    v = n(303136),
-    g = n(366505),
+    g = n(821609),
+    j = n(303136),
+    v = n(366505),
     C = n(976860),
-    b = n(309954),
-    A = n(287809),
-    N = n(975571),
-    R = n(474090),
-    k = n(920050),
-    E = n(94264),
+    A = n(309954),
+    N = n(287809),
+    b = n(975571),
+    E = n(474090),
+    R = n(920050),
+    k = n(94264),
     p = n(549384),
     y = n(566119),
     S = n(202541),
@@ -36,28 +36,28 @@ var a = n(477900),
 function B() {
     return (0, a.jsx)("div", {
         className: _.s,
-        children: (0, a.jsx)(v.A, { src: w.A, fallbackImage: L.A, className: _.Cb }),
+        children: (0, a.jsx)(j.A, { src: w.A, fallbackImage: L.A, className: _.Cb }),
     });
 }
 function F() {
-    (0, y.RQ)(), (0, C.pX)(D.BV.NITRO_HOME, { search: (0, o.stringify)({ perk: k.NITRO_ORBS_REWARDS_CARD_ID }) });
+    (0, y.RQ)(), (0, C.pX)(D.BV.NITRO_HOME, { search: (0, o.stringify)({ perk: R.NITRO_ORBS_REWARDS_CARD_ID }) });
 }
 function U() {
     (0, y.gP)(), (0, C.pX)(D.BV.NITRO_HOME, { search: (0, o.stringify)({ section: p.L }) });
 }
 function I() {
-    (0, y.b)(), window.open(N.A.getArticleURL(O.MVz.ORBS_FAQ), "_blank");
+    (0, y.b)(), window.open(b.A.getArticleURL(O.MVz.ORBS_FAQ), "_blank");
 }
 function $(e) {
     let { targetElementRef: t, shouldShow: n, onRequestClose: r, ctaText: i, ctaOnClick: u } = e,
-        { passesGeneralUIInvariant: o, programReward: C } = (0, g.F)({
+        { passesGeneralUIInvariant: o, programReward: C } = (0, v.F)({
             location: "PremiumTenureRewardsOrbsBalancePopover",
         }),
-        N = (0, d.bG)([A.default], () => A.default.getCurrentUser()),
-        { balance: k } = (0, b.W)(),
-        p = !(0, R.ki)(N),
+        b = (0, d.bG)([N.default], () => N.default.getCurrentUser()),
+        { balance: R } = (0, A.W)(),
+        p = !(0, E.ki)(b),
         y = l.useMemo(() => {
-            let e = (0, R.YE)(N, S.PremiumTypes.TIER_2);
+            let e = (0, E.YE)(b, S.PremiumTypes.TIER_2);
             if (!o || p) return null;
             if (e && null != C) {
                 let e = (0, c.default)(new Date(C.next_reward_date), new Date());
@@ -71,13 +71,13 @@ function $(e) {
                                 deepLinkToNitroOrbs: F,
                             }),
                         }),
-                        (0, a.jsx)(E.A, {}),
+                        (0, a.jsx)(k.A, {}),
                     ],
                 });
             }
             return null;
-        }, [N, p, C, o]),
-        D = (k ?? 0) >= 4100;
+        }, [b, p, C, o]),
+        D = (R ?? 0) >= 4100;
     return (0, a.jsx)(m.x, {
         targetElementRef: t,
         shouldShow: n,
@@ -92,7 +92,7 @@ function $(e) {
                 (0, a.jsxs)("div", {
                     className: s()(e, _.j),
                     children: [
-                        D && (0, a.jsx)(v.A, { src: P.A, className: _.yG }),
+                        D && (0, a.jsx)(j.A, { src: P.A, className: _.yG }),
                         (0, a.jsxs)("div", {
                             className: _.Qs,
                             children: [
@@ -104,14 +104,14 @@ function $(e) {
                                         (0, a.jsxs)("div", {
                                             className: _.y$,
                                             children: [
-                                                (k ?? 0) > 0 &&
+                                                (R ?? 0) > 0 &&
                                                     (0, a.jsxs)("div", {
                                                         className: _.E2,
                                                         children: [
                                                             (0, a.jsx)(x.E, {
                                                                 variant: "display-lg",
                                                                 className: _.K,
-                                                                children: k ?? 0,
+                                                                children: R ?? 0,
                                                             }),
                                                             (0, a.jsx)(x.E, {
                                                                 variant: "text-xs/normal",
@@ -123,7 +123,7 @@ function $(e) {
                                                 y,
                                             ],
                                         }),
-                                        (0, a.jsx)(j.$, {
+                                        (0, a.jsx)(g.$, {
                                             text: i,
                                             variant: "primary",
                                             size: "sm",
@@ -155,7 +155,7 @@ var z = n(440005),
     G = n(922016);
 n(964486), n(786953);
 var J = n(505274),
-    Q = n(65738);
+    Q = n(37402);
 function X(e) {
     let { pillRef: t, ...n } = e,
         { balancePillOverlay: l } = (0, d.cf)([J.A], () => ({ balancePillOverlay: J.A.balancePillOverlay })),
@@ -188,15 +188,15 @@ function Z(e) {
             cardAlignment: d = H.START,
             className: m,
         } = e,
-        { balance: f } = (0, b.W)(),
+        { balance: f } = (0, A.W)(),
         x = (0, W.DK)(z.W.NITRO, "BalanceWidgetMenu"),
-        [h, j] = l.useState(V.k.DEFAULT),
-        [v, g] = l.useState(!1),
-        [C, A] = l.useState(!1),
-        N = l.useRef(null);
-    (0, u.j)(!v);
-    let R = l.useCallback(() => {
-            let e = !v;
+        [h, g] = l.useState(V.k.DEFAULT),
+        [j, v] = l.useState(!1),
+        [C, N] = l.useState(!1),
+        b = l.useRef(null);
+    (0, u.j)(!j);
+    let E = l.useCallback(() => {
+            let e = !j;
             e &&
                 null != c &&
                 (0, K.Y)({
@@ -204,52 +204,52 @@ function Z(e) {
                     sectionType: O.JJy.ORBS_BALANCE_MENU,
                     ctaObject: O.ZSU.OPEN_ORB_BALANCE_MENU_FROM_PILL,
                 }),
-                j(e ? V.k.SELECTED : V.k.DEFAULT),
-                g(e);
-        }, [v, c]),
-        k = l.useCallback(() => {
-            v && R();
-        }, [v, R]),
-        E = (0, i.A)(null, k),
+                g(e ? V.k.SELECTED : V.k.DEFAULT),
+                v(e);
+        }, [j, c]),
+        R = l.useCallback(() => {
+            j && E();
+        }, [j, E]),
+        k = (0, i.A)(null, R),
         p = l.useMemo(
             () =>
                 (0, a.jsx)(q.b, {
                     analyticsPage: c,
                     ctaText: n,
                     ctaOnClick: () => {
-                        R(), r();
+                        E(), r();
                     },
                     linkText: o,
                 }),
-            [c, n, o, R, r],
+            [c, n, o, E, r],
         ),
         y = l.useMemo(
             () =>
                 (0, a.jsx)($, {
-                    targetElementRef: N,
-                    shouldShow: v,
-                    onRequestClose: R,
+                    targetElementRef: b,
+                    shouldShow: j,
+                    onRequestClose: E,
                     ctaText: n,
                     ctaOnClick: () => {
-                        R(), r();
+                        E(), r();
                     },
                 }),
-            [v, R, n, r],
+            [j, E, n, r],
         );
     return (0, a.jsxs)("div", {
         className: s()(Y.kL, m, { [Y.R]: C, [Y.RK]: !C }),
         children: [
             (0, a.jsx)(X, {
-                pillRef: N,
+                pillRef: b,
                 balance: f,
                 balanceWidgetMode: h,
                 onMouseDown: (e) => {
                     e.stopPropagation();
                 },
-                onClick: R,
+                onClick: E,
                 showNotificationBadge: t,
             }),
-            x ? y : v && (0, a.jsx)("div", { className: s()(Y.Ui, d, { [Y.R]: C, [Y.RK]: !C }), ref: E, children: p }),
+            x ? y : j && (0, a.jsx)("div", { className: s()(Y.Ui, d, { [Y.R]: C, [Y.RK]: !C }), ref: k, children: p }),
         ],
     });
 }

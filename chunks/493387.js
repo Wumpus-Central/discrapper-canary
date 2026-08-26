@@ -1,4 +1,4 @@
-n.d(t, { A: () => E }), n(321073);
+n.d(t, { A: () => v }), n(321073);
 var i = n(477900),
     l = n(582128),
     a = n(503698),
@@ -95,18 +95,18 @@ class N extends l.PureComponent {
         });
     }
 }
-function E(e) {
+function v(e) {
     var t;
     let { participants: n, onContextMenu: l, className: a, onClick: r, width: d, guildId: y } = e,
         j = (0, p.Ay)(),
         I = ((t = n.length), ((0, u.FT)(u._3.SIZE_80) + 16) * t > d ? u._3.SIZE_40 : u._3.SIZE_80),
-        E = (0, o.bG)([A.A], () => A.A.isFocused()),
-        v = (0, o.bG)([m.Ay], () => new Map(n.filter(x.Xw).map((e) => [e.user.id, m.Ay.isLocalMute(e.user.id)])), [n]),
+        v = (0, o.bG)([A.A], () => A.A.isFocused()),
+        E = (0, o.bG)([m.Ay], () => new Map(n.filter(x.Xw).map((e) => [e.user.id, m.Ay.isLocalMute(e.user.id)])), [n]),
         b = n.map((e) => {
             if (e.type !== x.lp.USER) return null;
             let { user: t, voiceState: n, speaking: a, ringing: s } = e,
                 o = null;
-            !0 === v.get(t.id)
+            !0 === E.get(t.id)
                 ? (o = g.intl.string(g.t.Q8Uzof))
                 : n?.isVoiceDeafened() === !0
                   ? (o = g.intl.string(g.t.NjmiOL))
@@ -127,7 +127,7 @@ function E(e) {
                             f.Ay,
                             {
                                 userId: t.id,
-                                src: t.getAvatarURL(y, (0, u.FT)(I), a && E),
+                                src: t.getAvatarURL(y, (0, u.FT)(I), a && v),
                                 size: I,
                                 muted: n?.isVoiceMuted() ?? !1,
                                 deafen: n?.isVoiceDeafened() ?? !1,

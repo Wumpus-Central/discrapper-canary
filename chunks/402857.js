@@ -15,22 +15,22 @@ var e = l(477900),
     m = l(939249),
     p = l(793574),
     j = l(688810),
-    C = l(939341),
-    N = l(623671),
-    _ = l(365185),
-    v = l(915089),
+    N = l(939341),
+    _ = l(623671),
+    v = l(365185),
+    C = l(915089),
     f = l(172710),
     O = l(92240),
-    I = l(257367),
-    E = l(160376),
+    E = l(257367),
+    I = l(160376),
     L = l(939496),
     y = l(282197),
     S = l(584904),
     D = l(351638),
     V = l(531648),
     b = l(753713),
-    T = l(866665),
-    M = l(835723),
+    M = l(866665),
+    T = l(835723),
     P = l(55730),
     w = l(353411),
     G = l(879945),
@@ -54,7 +54,7 @@ function H(i) {
     return s === F.d.MODAL_V2
         ? (0, e.jsxs)(e.Fragment, {
               children: [
-                  (0, e.jsx)(T.m, {
+                  (0, e.jsx)(M.m, {
                       text: o.tooltip,
                       children: (0, e.jsx)(U.FD, {
                           text: o.label ?? R.intl.string(R.t.eU3inB),
@@ -63,7 +63,7 @@ function H(i) {
                           loading: o.loading,
                       }),
                   }),
-                  (0, e.jsx)(T.m, {
+                  (0, e.jsx)(M.m, {
                       text: a.tooltip,
                       children: (0, e.jsx)(U.FD, {
                           text: a.label ?? R.intl.string(R.t.rRffNz),
@@ -78,7 +78,7 @@ function H(i) {
               children: [
                   (0, e.jsx)("div", {
                       className: z.FS,
-                      children: (0, e.jsx)(T.m, {
+                      children: (0, e.jsx)(M.m, {
                           text: a.tooltip,
                           children: (0, e.jsx)(U.FD, {
                               icon: () => (0, e.jsx)(G.A, {}),
@@ -91,7 +91,7 @@ function H(i) {
                       }),
                   }),
                   (0, e.jsx)(U.q3, {
-                      icon: M.J,
+                      icon: T.J,
                       tooltipText: o.tooltip ?? R.intl.string(R.t.eU3inB),
                       "aria-label": o.label ?? R.intl.string(R.t.eU3inB),
                       disabled: o.disabled,
@@ -105,16 +105,16 @@ var B = l(269587);
 function Q(i) {
     let t,
         { user: l, currentUser: s, activity: a, className: o, onClose: r } = i,
-        c = (0, v.GV)(),
-        u = (0, v.GV)(),
+        c = (0, C.GV)(),
+        u = (0, C.GV)(),
         { themeType: A } = (0, L.E)(),
-        h = (0, _.A)({ activity: a, user: l }),
-        x = (0, E.A)(a),
-        T = null != x.text && "" !== x.text,
-        { largeImage: M } = (0, C.XN)(a, void 0, "user_profile_spotify"),
+        h = (0, v.A)({ activity: a, user: l }),
+        x = (0, I.A)(a),
+        M = null != x.text && "" !== x.text,
+        { largeImage: T } = (0, N.XN)(a, void 0, "user_profile_spotify"),
         { analyticsLocations: P } = (0, j.Ay)(p.A.USER_PROFILE_LIVE_ACTIVITY_CARD),
         w = (0, O.A)({ display: "live", user: l, activity: a, entry: h, analyticsLocations: P }),
-        G = (0, I.A)({ userId: l.id, onAction: w });
+        G = (0, E.A)({ userId: l.id, onAction: w });
     if (!(0, d.A)(a)) return null;
     function U() {
         return l.id === s.id
@@ -128,7 +128,7 @@ function Q(i) {
             className: g()(z.Nr, o),
             onAction: w,
             onClose: r,
-            "aria-labelledby": T ? `${u} ${c}` : c,
+            "aria-labelledby": M ? `${u} ${c}` : c,
             children: [
                 (0, e.jsx)(D.A, {
                     textId: u,
@@ -140,9 +140,9 @@ function Q(i) {
                     children: (0, e.jsxs)("div", {
                         className: z.Qs,
                         children: [
-                            (0, e.jsx)(N.d, {
-                                image: M,
-                                size: A === F.d.MODAL_V2 ? N.w.SIZE_100 : N.w.SIZE_60,
+                            (0, e.jsx)(_.d, {
+                                image: T,
+                                size: A === F.d.MODAL_V2 ? _.w.SIZE_100 : _.w.SIZE_60,
                                 className: z.mM,
                                 onClick: (i) => {
                                     i.stopPropagation(), w({ action: "OPEN_SPOTIFY_ALBUM" }), (0, f.QX)(a, l.id);

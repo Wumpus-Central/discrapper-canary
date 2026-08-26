@@ -1,4 +1,4 @@
-l.d(t, { A: () => X });
+l.d(t, { A: () => K });
 var e = l(477900),
     n = l(582128),
     s = l(503698),
@@ -15,14 +15,14 @@ var e = l(477900),
     m = l(575731),
     p = l(92240),
     j = l(257367),
-    C = l(939496),
-    N = l(584904),
-    _ = l(351638),
-    v = l(316770),
+    N = l(939496),
+    _ = l(584904),
+    v = l(351638),
+    C = l(316770),
     f = l(435558),
     O = l(3026),
-    I = l(834730),
-    E = l(778712),
+    E = l(834730),
+    I = l(778712),
     L = l(562153),
     y = l(996988),
     S = l(378502);
@@ -64,7 +64,7 @@ let D = [
     ];
 function b(i) {
     let { users: t, channel: l } = i,
-        { themeType: n } = (0, C.E)(),
+        { themeType: n } = (0, N.E)(),
         s = n === y.d.MODAL_V2 ? V : D,
         a = t.length > 4,
         d = t.length - 4 + 1,
@@ -84,7 +84,7 @@ function b(i) {
                               a && n === r
                                   ? (0, e.jsx)("div", {
                                         className: S.mB,
-                                        children: (0, e.jsx)(I.E, {
+                                        children: (0, e.jsx)(E.E, {
                                             variant: "text-xxs/semibold",
                                             lineClamp: 1,
                                             children: (0, e.jsx)(O.A, { children: d > 99 ? ">99" : `+${d}` }),
@@ -94,7 +94,7 @@ function b(i) {
                                         text: L.Ay.getName(l.guild_id, l.id, s),
                                         children: (0, e.jsx)("img", {
                                             className: S.my,
-                                            src: s.getAvatarURL(l.guild_id, (0, E.FT)(E._3.SIZE_80)),
+                                            src: s.getAvatarURL(l.guild_id, (0, I.FT)(I._3.SIZE_80)),
                                             alt: "",
                                         }),
                                     }),
@@ -104,8 +104,8 @@ function b(i) {
         }),
     });
 }
-var T = l(939249),
-    M = l(22231),
+var M = l(939249),
+    T = l(22231),
     P = l(532622),
     w = l(271683),
     G = l(882840),
@@ -119,7 +119,7 @@ var T = l(939249),
     Q = l(105065);
 function Y(i) {
     let { voiceChannel: t, onAction: l, onClose: s } = i,
-        { themeType: d } = (0, C.E)(),
+        { themeType: d } = (0, N.E)(),
         { analyticsLocations: o } = (0, h.Ay)(),
         r = (0, F.b)(t),
         c = (0, P.Ay)(t, !0),
@@ -137,7 +137,7 @@ function Y(i) {
             });
     }, [A, t.id, t.guild_id, o]),
     c && r)
-        ? (0, e.jsxs)(T.D, {
+        ? (0, e.jsxs)(M.D, {
               className: Q.vk,
               onClick: (i) => {
                   i.stopPropagation(),
@@ -152,7 +152,7 @@ function Y(i) {
                       color: "text-subtle",
                       className: Q.Qq,
                   }),
-                  (0, e.jsx)(M.PencilIcon, {
+                  (0, e.jsx)(T.PencilIcon, {
                       color: "currentColor",
                       size: "xxs",
                       className: a()(Q.rD, null != A ? Q.R : void 0),
@@ -167,22 +167,22 @@ function Y(i) {
 var $ = l(70963),
     q = l(269587),
     J = l(260155);
-function X(i) {
+function K(i) {
     let { user: t, currentUser: l, voiceChannel: s, className: f, onClose: O } = i,
-        { themeType: I } = (0, C.E)(),
-        { analyticsLocations: E } = (0, h.Ay)(A.A.USER_PROFILE_VOICE_ACTIVITY_CARD),
+        { themeType: E } = (0, N.E)(),
+        { analyticsLocations: I } = (0, h.Ay)(A.A.USER_PROFILE_VOICE_ACTIVITY_CARD),
         L = (0, p.A)({
             display: "voice",
             activity: { type: "VOICE" },
             voiceChannelId: s.id,
             user: t,
-            analyticsLocations: E,
+            analyticsLocations: I,
         }),
         S = (0, j.A)({ userId: t.id, onAction: L }),
         D = (0, d.bG)([g.A], () => g.A.getGuild(s.guild_id)),
         V = (0, m.A)(s),
-        T = (0, x.Ay)(s),
-        M = n.useId();
+        M = (0, x.Ay)(s),
+        T = n.useId();
     function P() {
         return (0, e.jsx)("div", {
             className: J.o1,
@@ -196,15 +196,15 @@ function X(i) {
               ? B.intl.string(B.t.QygGCN)
               : B.intl.string(B.t.msxteM);
     return (0, e.jsx)(h.f5, {
-        value: E,
-        children: (0, e.jsxs)(N.A, {
+        value: I,
+        children: (0, e.jsxs)(_.A, {
             ref: S,
             className: a()(J.Nr, f),
             onAction: L,
             onClose: O,
-            "aria-labelledby": M,
+            "aria-labelledby": T,
             children: [
-                (0, e.jsx)(_.A, {
+                (0, e.jsx)(v.A, {
                     text: w,
                     tags: (function () {
                         if (t.id !== l.id) return null;
@@ -216,7 +216,7 @@ function X(i) {
                     })(),
                     contextMenu: (0, e.jsx)(q.A, { display: "voice", user: t, onClose: O }),
                 }),
-                (0, e.jsx)(c.A, { children: (0, e.jsx)(u.H, { id: M, children: `${w}, ${T}` }) }),
+                (0, e.jsx)(c.A, { children: (0, e.jsx)(u.H, { id: T, children: `${w}, ${M}` }) }),
                 (0, e.jsx)("div", {
                     className: J.rf,
                     children: (0, e.jsxs)("div", {
@@ -226,16 +226,16 @@ function X(i) {
                             (0, e.jsxs)("div", {
                                 className: J.zH,
                                 children: [
-                                    (0, e.jsx)(v.A, { channel: s, guild: D, onAction: L, onClose: O }),
+                                    (0, e.jsx)(C.A, { channel: s, guild: D, onAction: L, onClose: O }),
                                     s.isGuildVoice() && (0, e.jsx)(Y, { voiceChannel: s, onAction: L, onClose: O }),
-                                    I === y.d.MODAL_V2 && P(),
+                                    E === y.d.MODAL_V2 && P(),
                                 ],
                             }),
-                            I === y.d.MODAL && P(),
+                            E === y.d.MODAL && P(),
                         ],
                     }),
                 }),
-                I !== y.d.MODAL && I !== y.d.MODAL_V2 && P(),
+                E !== y.d.MODAL && E !== y.d.MODAL_V2 && P(),
             ],
         }),
     });

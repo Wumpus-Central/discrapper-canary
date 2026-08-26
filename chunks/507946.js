@@ -532,7 +532,7 @@ function e7(e) {
                                       ...l,
                                       children: s.map((e) =>
                                           (0, a.jsx)(
-                                              e8,
+                                              e6,
                                               { savedMessage: e, closePopout: t, throttledNow: x },
                                               e.saveData.messageId,
                                           ),
@@ -551,7 +551,7 @@ function e7(e) {
               }),
           });
 }
-function e8(e) {
+function e6(e) {
     let { savedMessage: t, closePopout: n, throttledNow: s } = e,
         l = (0, eN.vr)(t),
         r = i.useCallback(
@@ -581,7 +581,7 @@ function e8(e) {
                       children: (0, a.jsx)(I.e, {
                           size: "sm",
                           className: ei.GC,
-                          children: (0, a.jsx)(e6, { savedMessage: t, jumpToMessage: r, throttledNow: s }),
+                          children: (0, a.jsx)(e8, { savedMessage: t, jumpToMessage: r, throttledNow: s }),
                       }),
                   }),
                   (0, a.jsx)(
@@ -637,7 +637,7 @@ function e8(e) {
               ],
           });
 }
-function e6(e) {
+function e8(e) {
     let { savedMessage: t, jumpToMessage: s, throttledNow: l } = e;
     x()(null != t.message, "Saved message must be cached for For Later action buttons");
     let i = ea.intl.string(null != t.saveData.dueAt ? ea.t["a6gcZ/"] : ea.t.SvXS1Z),
@@ -1010,17 +1010,17 @@ function t3(e) {
 }
 var t2 = n(350527),
     t7 = n(218152),
-    t8 = n(970278),
-    t6 = n(747926),
+    t6 = n(970278),
+    t8 = n(747926),
     t4 = n(935208),
     t5 = n(37411),
     t9 = n(278489);
 function ne(e) {
     let { channel: t, channelRecord: n, deleteChannel: s } = e,
         l = (0, j.yK)(
-            [t8.A, Q.A],
+            [t6.A, Q.A],
             () =>
-                tF()(t8.A.getThreadsForParent(n.guild_id, n.id))
+                tF()(t6.A.getThreadsForParent(n.guild_id, n.id))
                     .values()
                     .filter((e) => {
                         let { id: n } = e;
@@ -1036,7 +1036,7 @@ function ne(e) {
             [t.oldestReadMessageId, n.guild_id, n.id],
         ),
         r = i.useCallback((e, t) => {
-            (0, t6.JA)(e, t, t5.H9.INBOX);
+            (0, t8.JA)(e, t, t5.H9.INBOX);
         }, []);
     return (
         i.useEffect(() => {
@@ -1292,7 +1292,7 @@ class n$ extends nk.EventEmitter {
             case "nsfw":
                 return { ...e, isFullyLoaded: !0, hasLoadedAnything: !0 };
             case "forum": {
-                let t = t8.A.hasLoaded(e.guildId);
+                let t = t6.A.hasLoaded(e.guildId);
                 return { ...e, isFullyLoaded: t, hasLoadedAnything: !0 };
             }
             default:
@@ -1399,7 +1399,7 @@ class n$ extends nk.EventEmitter {
             if ("forum" !== e.type) return e;
             {
                 if (!e.hasLoadedAnything) return e;
-                let t = t8.A.hasLoaded(e.guildId);
+                let t = t6.A.hasLoaded(e.guildId);
                 return { ...e, isFullyLoaded: t, hasLoadedAnything: !0 };
             }
         });
@@ -1586,8 +1586,8 @@ let n1 = 2 * ej.A.Millis.DAY,
     n3 = 10 * ej.A.Millis.DAY;
 var n2 = n(743373);
 let n7 = { left: 4, right: -12 },
-    n8 = [ez.lAJ.THREAD_CREATED];
-function n6(e) {
+    n6 = [ez.lAJ.THREAD_CREATED];
+function n8(e) {
     let { channel: t, message: n, compact: s, isGroupStart: l, gotoChannel: r } = e,
         d = (0, f.rm)(n.id ?? ""),
         c = i.useCallback(
@@ -1600,7 +1600,7 @@ function n6(e) {
             },
             [t.id, r, n.id],
         ),
-        o = n8.includes(n.type);
+        o = n6.includes(n.type);
     return (0, a.jsx)(G.vN, {
         offset: n7,
         children: (0, a.jsxs)("div", {
@@ -1636,7 +1636,7 @@ function n4(e) {
             r.push((0, a.jsx)(tP.A, { className: n2.yF, children: t }, t)), (d = nn()(e.timestamp));
         }
         let t = null == c || (0, nl.A)(n, c, e);
-        (c = e), r.push((0, a.jsx)(n6, { channel: n, message: e, compact: l, isGroupStart: t, gotoChannel: s }, e.id));
+        (c = e), r.push((0, a.jsx)(n8, { channel: n, message: e, compact: l, isGroupStart: t, gotoChannel: s }, e.id));
     });
     let u = o[o.length - 1];
     return (
@@ -1861,8 +1861,8 @@ function sl(e) {
                 ),
                 i.useEffect(
                     () => (
-                        t8.A.addChangeListener(t.handleActiveThreadsStoreChange),
-                        () => t8.A.removeChangeListener(t.handleActiveThreadsStoreChange)
+                        t6.A.addChangeListener(t.handleActiveThreadsStoreChange),
+                        () => t6.A.removeChangeListener(t.handleActiveThreadsStoreChange)
                     ),
                     [t],
                 ),
@@ -2330,10 +2330,10 @@ var sy = n(285796),
     sv = n(151282),
     sC = n(199160),
     sI = n(81369),
-    sS = n(339350),
+    sS = n(588190),
     sE = n(663341),
     sM = n(626891),
-    sR = n(832475);
+    sR = n(632946);
 function sb() {
     return (0, a.jsx)("div", {
         className: sM.kL,
@@ -2363,7 +2363,7 @@ function sb() {
                             className: sM.MK,
                             children: [
                                 (0, a.jsx)(s_, { icon: sI.H, label: ea.intl.string(ea.t["d3+iYs"]), highlighted: !1 }),
-                                (0, a.jsx)(s_, { icon: sS.Q, label: ea.intl.string(ea.t["3+ii4F"]), highlighted: !0 }),
+                                (0, a.jsx)(s_, { icon: sS.U, label: ea.intl.string(ea.t["3+ii4F"]), highlighted: !0 }),
                             ],
                         }),
                         (0, a.jsxs)("div", {

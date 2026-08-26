@@ -25,8 +25,8 @@ let y = (0, s.A)((e) => {
         layout: j,
         onSelectParticipant: I,
         onContextMenuParticipant: N,
-        onFullscreenParticipant: E,
-        channel: v,
+        onFullscreenParticipant: v,
+        channel: E,
         hasConnectPermission: b,
         className: T,
         inCall: _,
@@ -46,28 +46,28 @@ let y = (0, s.A)((e) => {
             () => n.filter((e) => e.type !== g.lp.ACTIVITY || !e.participants.some((e) => (0, r.S)(e))),
             [n, y],
         ),
-        V = (0, a.bG)([o.A], () => o.A.getVoiceParticipantsHidden(v.id), [v.id]);
-    if (w?.channelId === v.id) return (0, i.jsx)(p.A, { height: L });
-    if (v?.isGuildVocalOrThread() && !_)
-        return (0, i.jsx)(h.A, { channel: v, participants: t, hasConnectPermission: b });
+        V = (0, a.bG)([o.A], () => o.A.getVoiceParticipantsHidden(E.id), [E.id]);
+    if (w?.channelId === E.id) return (0, i.jsx)(p.A, { height: L });
+    if (E?.isGuildVocalOrThread() && !_)
+        return (0, i.jsx)(h.A, { channel: E, participants: t, hasConnectPermission: b });
     if (((n = _ ? n : t), P === x._Of.VOICE))
-        return (0, i.jsx)(c.A, { guildId: v.guild_id, width: S, className: C.Er, participants: t, onContextMenu: N });
+        return (0, i.jsx)(c.A, { guildId: E.guild_id, width: S, className: C.Er, participants: t, onContextMenu: N });
     if (null == s) {
         if (0 === n.length) {
             let e = t.length > 0 && !V;
-            return (0, i.jsx)(f.A, { channelId: v.id, allPoppedOut: e });
+            return (0, i.jsx)(f.A, { channelId: E.id, allPoppedOut: e });
         }
         return (0, i.jsx)(d.A, {
             className: C.HA,
             justify: d.A.Justify.CENTER,
             align: d.A.Align.CENTER,
             children: (0, i.jsx)(m.A, {
-                channel: v,
+                channel: E,
                 className: C.g9,
                 participants: U,
                 totalNumberOfParticipants: t.length,
                 onClick: I,
-                onDoubleClick: E,
+                onDoubleClick: v,
                 onContextMenu: N,
                 inCall: _,
                 popoutType: M,
@@ -75,7 +75,7 @@ let y = (0, s.A)((e) => {
         });
     }
     return (0, i.jsx)(A.A, {
-        onFullscreenParticipant: E,
+        onFullscreenParticipant: v,
         onContextMenuParticipant: N,
         onSelectParticipant: I,
         selectedParticipant: s,
@@ -88,7 +88,7 @@ let y = (0, s.A)((e) => {
         width: S,
         layout: j,
         inCall: _,
-        channel: v,
+        channel: E,
         showParticipants: R,
     });
 });

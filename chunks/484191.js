@@ -23,8 +23,8 @@ let y = function (e) {
         N = l.useCallback(() => {
             I ? (0, u.Ze)(n.guild_id, () => o.default.selectVoiceChannel(n.id)) : o.default.selectVoiceChannel(n.id);
         }, [n.id, n.guild_id, I]),
-        E = 4 === j.length ? 2 : 3,
-        v = (0, d.Ay)(n),
+        v = 4 === j.length ? 2 : 3,
+        E = (0, d.Ay)(n),
         b = (0, p.R)("ChannelCallEmpty");
     return (0, i.jsxs)("div", {
         className: C.kL,
@@ -32,7 +32,7 @@ let y = function (e) {
             (0, i.jsx)(f.A, { disableAnimation: b }),
             (0, i.jsx)("div", {
                 className: C.os,
-                style: { maxWidth: 168 * E },
+                style: { maxWidth: 168 * v },
                 children: j
                     .slice(0, 5)
                     .map((e) =>
@@ -51,7 +51,7 @@ let y = function (e) {
                         ),
                     ),
             }),
-            (0, i.jsx)(a.D, { className: C.HA, variant: "heading-xxl/semibold", children: v }),
+            (0, i.jsx)(a.D, { className: C.HA, variant: "heading-xxl/semibold", children: E }),
             (0, i.jsx)("div", {
                 className: C.Nu,
                 children: (0, i.jsx)(s.E, {
