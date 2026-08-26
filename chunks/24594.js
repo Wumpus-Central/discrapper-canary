@@ -1811,10 +1811,13 @@ function iD(e) {
     let t = (0, A.bG)([en.Ay], () => en.Ay.isMuted(e)),
         n = (0, iL.M)("useGuildMediaState"),
         i = (0, iN.BP)(e),
-        r = (0, A.yK)([G.Ay, to.A], () =>
-            G.Ay.getEmbeddedActivitiesForGuild(e).filter(
-                (e) => !(0, ta.PH)([...e.userIds], to.A.getBlockedOrIgnoredIDs()),
-            ),
+        r = (0, A.yK)([G.Ay, W.A, to.A], () =>
+            G.Ay.getEmbeddedActivitiesForGuild(e).filter((e) => {
+                let t = W.A.getBasicChannel((0, x.H)(e.location));
+                if (t?.type === im.r.GUILD_SPACE) return !1;
+                let n = to.A.getBlockedOrIgnoredIDs();
+                return !(0, ta.PH)([...e.userIds], n);
+            }),
         ),
         a = (0, x.H)(r[0]?.location),
         s = (0, ig.Gp)(a),
@@ -1858,7 +1861,7 @@ function iD(e) {
             };
         }, [e, t, n]),
         c = iR.default.getId();
-    return (0, A.cf)([Y.Ay, W.A, G.Ay, iC.A, j.A, ee.A, en.Ay], () => {
+    return (0, A.cf)([Y.Ay, W.A, iC.A, j.A, ee.A, en.Ay], () => {
         let a = Y.Ay.getVoiceChannelId(),
             u = W.A.getChannel(a)?.guild_id === e,
             _ = !1,
@@ -1895,7 +1898,7 @@ function iD(e) {
                 }
                 return !1;
             })(),
-            C = G.Ay.getEmbeddedActivitiesForGuild(e).length > 0;
+            C = r.length > 0;
         return (
             u
                 ? ((_ = !0), (E = i?.channel_id === a), (A = T), (h = S), (I = m), (f = C))

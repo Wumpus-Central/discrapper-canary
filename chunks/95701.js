@@ -89,6 +89,7 @@ let m = new Set([
         I.rbe.GUILD_DIRECTORY,
         I.rbe.GUILD_FORUM,
         I.rbe.GUILD_MEDIA,
+        I.rbe.GUILD_SPACE,
         I.rbe.MEDIA_THREAD,
     ]),
     g = new Set([
@@ -1046,6 +1047,7 @@ let eC = {
     [I.rbe.GUILD_DIRECTORY]: eI.fromServer,
     [I.rbe.GUILD_FORUM]: ep.fromServer,
     [I.rbe.GUILD_MEDIA]: ep.fromServer,
+    [I.rbe.GUILD_SPACE]: eI.fromServer,
 };
 function eO(e, t) {
     return (eC[e.type ?? I.rbe.GUILD_TEXT] ?? eA.fromServer)(e, t);
@@ -1069,6 +1071,7 @@ let eL = {
     [I.rbe.GUILD_DIRECTORY]: class extends eI {},
     [I.rbe.GUILD_FORUM]: ep,
     [I.rbe.GUILD_MEDIA]: ep,
+    [I.rbe.GUILD_SPACE]: class extends eI {},
 };
 function ey(e) {
     let t = eL[e.type ?? I.rbe.GUILD_TEXT] ?? eA;

@@ -1573,63 +1573,62 @@ let nL = (0, N.A)(function (e) {
         g = (0, _.bG)([e8.A], () => e8.A.getGuild(m?.guild_id)),
         [S, N] = (0, _.yK)([e5.A], () => [e5.A.getCurrentUserActiveStream(), e5.A.getStreamerActiveStreamMetadata()]),
         O = (0, _.bG)([y.Ay], () => y.Ay.getCurrentEmbeddedActivity()),
-        R = (0, _.bG)([eM.A], () => (0, nu.ny)(eM.A.getMainFrame())),
-        L = (0, _.bG)([e8.A, te.A], () => null == p || eY.vz(p, e8.A, te.A, !1)),
-        [D] = (0, e_.A)([
+        R = m?.type === x.rbe.GUILD_SPACE ? null : O,
+        L = (0, _.bG)([eM.A], () => (0, nu.ny)(eM.A.getMainFrame())),
+        D = (0, _.bG)([e8.A, te.A], () => null == p || eY.vz(p, e8.A, te.A, !1)),
+        [M] = (0, e_.A)([
             (function () {
                 if (null != N && null != N.id) return N.id;
                 if (null != A) return A.id;
-                if (null != O) return O.applicationId;
                 if (null != R) return R.applicationId;
+                if (null != L) return L.applicationId;
                 if (null != I && null != I.id) return I.id;
             })(),
         ]),
-        M =
-            ((0, _.bG)([y.Ay], () => y.Ay.getCurrentEmbeddedActivity()),
-            (0, _.bG)([e9.Ay], () => (0, eK.A)(e9.Ay) && (0, tl.isWindows)()) || !1),
-        U = (0, _.bG)([tt.A], () => (null != c ? tt.A.findActivity(c, (e) => e.type === x.$pd.PLAYING) : null)),
-        G = null != S && S.ownerId === c && S.state !== x.XYD.ENDED,
-        k = (0, _.bG)([tr.default, tn.A], () => (null != m ? (0, eh.m1)(m, tr.default, tn.A) : void 0)),
-        F = (function () {
+        U = (0, _.bG)([e9.Ay], () => (0, eK.A)(e9.Ay) && (0, tl.isWindows)()) || !1,
+        G = (0, _.bG)([tt.A], () => (null != c ? tt.A.findActivity(c, (e) => e.type === x.$pd.PLAYING) : null)),
+        k = null != S && S.ownerId === c && S.state !== x.XYD.ENDED,
+        F = (0, _.bG)([tr.default, tn.A], () => (null != m ? (0, eh.m1)(m, tr.default, tn.A) : void 0)),
+        V = (function () {
             let { resolution: e, fps: t } = (0, _.cf)([eQ.A], () => eQ.A.getState());
             if (e !== e0.on.RESOLUTION_720 || t === e0.kn.FPS_60) return `${(0, e0.zr)(e)} ${(0, eJ.Bs)(t)}`;
         })(),
-        [V, B] = a.useState(!1),
-        H = (0, _.bG)([eX.A], () => eX.A.getWindowOpen(x.MLl.ACTIVITY_POPOUT)),
-        { parentAnalyticsLocation: j, analyticsLocations: W } = (0, el.Ay)(),
+        [B, H] = a.useState(!1),
+        j = (0, _.bG)([eX.A], () => eX.A.getWindowOpen(x.MLl.ACTIVITY_POPOUT)),
+        { parentAnalyticsLocation: W, analyticsLocations: Y } = (0, el.Ay)(),
         {
-            hasAlreadyLinked: Y,
-            canStartAuthorization: K,
-            connectionApp: $,
-            startAuthorization: z,
-        } = (0, ec.RD)(D, { allowedFlows: [tq._.RPC, tq._.WEB] }),
-        [Z, q] = a.useState(null),
-        X = null != Z,
-        Q = a.useCallback(
+            hasAlreadyLinked: K,
+            canStartAuthorization: $,
+            connectionApp: z,
+            startAuthorization: Z,
+        } = (0, ec.RD)(M, { allowedFlows: [tq._.RPC, tq._.WEB] }),
+        [q, X] = a.useState(null),
+        Q = null != q,
+        J = a.useCallback(
             function () {
                 for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
-                return q(D?.id ?? null), z(...t);
+                return X(M?.id ?? null), Z(...t);
             },
-            [D?.id, z],
+            [M?.id, Z],
         ),
-        J = (0, C.Ay)(D?.id);
+        ee = (0, C.Ay)(M?.id);
     a.useEffect(() => {
-        null != D && J !== D?.id && q(null);
-    }, [D, J]);
-    let ee = (0, u.K)((e) => {
+        null != M && ee !== M?.id && X(null);
+    }, [M, ee]);
+    let et = (0, u.K)((e) => {
             e &&
-                null != $ &&
-                w.default.track(x.HAw.ACTIVITY_PANEL_SDK_LINK_VIEWED, { game_id: A?.id ?? null, application_id: $.id });
+                null != z &&
+                w.default.track(x.HAw.ACTIVITY_PANEL_SDK_LINK_VIEWED, { game_id: A?.id ?? null, application_id: z.id });
         }),
-        et = a.useMemo(() => {
+        en = a.useMemo(() => {
             let e = A?.id ?? I?.id;
             return null != e ? n_[e] : void 0;
         }, [A?.id, I?.id]),
-        en = (0, _.bG)([e7.A], () => null != et && e7.A.isMember(et), [et]),
-        ei = h && null != et && !en && (null != A || f) ? et : void 0,
-        er = !(0, _.bG)([e9.Ay], () => e9.Ay.supports(nA.O5.VIDEO)) && (0, tl.isWindows)(),
-        es = null != A && (M || K || er) && (!G || N?.pid != null),
-        [eo, ed] = (function (e) {
+        ei = (0, _.bG)([e7.A], () => null != en && e7.A.isMember(en), [en]),
+        er = h && null != en && !ei && (null != A || f) ? en : void 0,
+        es = !(0, _.bG)([e9.Ay], () => e9.Ay.supports(nA.O5.VIDEO)) && (0, tl.isWindows)(),
+        eo = null != A && (U || $ || es) && (!k || N?.pid != null),
+        [ed, eu] = (function (e) {
             let {
                     application: t,
                     activity: n,
@@ -1700,77 +1699,77 @@ let nL = (0, N.A)(function (e) {
                 return T ? [0, m] : g ? [1, () => s(null)] : O ? [4, R] : [null, () => {}];
             }, [m, R, C, s, O, T, g, N]);
         })({
-            application: D,
-            activity: U,
-            embeddedActivity: O,
-            connectingGameId: Z,
-            setConnectingGameId: q,
-            canStartAuthorization: K,
-            hasAlreadyLinked: Y,
-            didStartAuthorization: X,
-            gameCommunityGuildId: ei,
-            canShowCurrentRunningGamePanel: es,
-            isStreamingCurrentRunningGame: G && null != A && N?.id != null && N.id === A.id,
+            application: M,
+            activity: G,
+            embeddedActivity: R,
+            connectingGameId: q,
+            setConnectingGameId: X,
+            canStartAuthorization: $,
+            hasAlreadyLinked: K,
+            didStartAuthorization: Q,
+            gameCommunityGuildId: er,
+            canShowCurrentRunningGamePanel: eo,
+            isStreamingCurrentRunningGame: k && null != A && N?.id != null && N.id === A.id,
         }),
-        eu = null != I && (1 === eo || (f && (0 === eo || 3 === eo))) ? I : null,
-        eE = a.useCallback(
+        eE = null != I && (1 === ed || (f && (0 === ed || 3 === ed))) ? I : null,
+        eA = a.useCallback(
             (e, t, n) => {
                 let { isGameRunning: i } = n;
                 return (0, r.jsx)(nd, {
-                    isStreaming: G,
+                    isStreaming: k,
                     application: e,
                     game: t,
-                    onClickNotSharing: () => B(!0),
-                    isForceShowSharingPopout: V,
-                    setIsForceShowSharingPopout: B,
+                    onClickNotSharing: () => H(!0),
+                    isForceShowSharingPopout: B,
+                    setIsForceShowSharingPopout: H,
                     ref: o,
                     popoutTargetRef: s,
                     isCurrentlyRunningGame: i,
                 });
             },
-            [V, G],
+            [B, k],
         ),
-        eA = a.useMemo(
+        eI = a.useMemo(
             () =>
-                es
-                    ? eE(D, A, { isGameRunning: !0 })
-                    : null != O && null != D && tJ(D, U, O)
+                eo
+                    ? eA(M, A, { isGameRunning: !0 })
+                    : null != R && null != M && tJ(M, G, R)
                       ? (0, r.jsx)(nC, {
-                            application: D,
-                            embeddedActivity: O,
+                            application: M,
+                            embeddedActivity: R,
                             channel: m,
-                            channelName: k,
+                            channelName: F,
                             guildForConnectedChannel: g,
-                            isForceShowSharingPopout: V,
-                            setIsForceShowSharingPopout: B,
+                            isForceShowSharingPopout: B,
+                            setIsForceShowSharingPopout: H,
                             accountLinkUpsellTargetRef: o,
                             activityPopoutTargetRef: s,
-                            isActivityPopoutOpen: H,
+                            isActivityPopoutOpen: j,
                         })
-                      : null != R &&
-                          null != D &&
+                      : null != L &&
+                          null != M &&
                           (function (e) {
                               let { application: t, frame: n } = e;
                               return null != t && null != n && n.applicationId === t.id;
-                          })({ application: D, frame: R })
+                          })({ application: M, frame: L })
                         ? (0, r.jsx)(nO, {
-                              application: D,
+                              application: M,
                               accountLinkUpsellTargetRef: o,
-                              frame: R,
-                              isActivityPopoutOpen: H,
+                              frame: L,
+                              isActivityPopoutOpen: j,
                           })
-                        : G
+                        : k
                           ? (0, r.jsx)(nR, {
                                 streamMetadata: N,
                                 accountLinkUpsellTargetRef: o,
-                                streamQualityIndicator: F,
+                                streamQualityIndicator: V,
                             })
-                          : null != eu
-                            ? eE(D, eu, { isGameRunning: !1 })
+                          : null != eE
+                            ? eA(M, eE, { isGameRunning: !1 })
                             : null,
-            [N, U, D, k, m, O, R, g, H, V, G, es, eu, eE, A, F],
+            [N, G, M, F, m, R, L, g, j, B, k, eo, eE, eA, A, V],
         );
-    return null == eA
+    return null == eI
         ? null
         : (0, r.jsx)("div", {
               className: l()(nI.nd, i),
@@ -1778,44 +1777,44 @@ let nL = (0, N.A)(function (e) {
               children: (0, r.jsxs)("div", {
                   className: nI.rf,
                   children: [
-                      eA,
+                      eI,
                       (0, r.jsx)(t0, {
                           stream: S,
-                          canGoLive: M,
+                          canGoLive: U,
                           guildId: t,
-                          isStreaming: G,
+                          isStreaming: k,
                           channel: m,
-                          canStream: L,
+                          canStream: D,
                           runningGame: A,
-                          activity: U,
-                          application: D,
-                          embeddedActivity: O,
-                          frame: R,
+                          activity: G,
+                          application: M,
+                          embeddedActivity: R,
+                          frame: L,
                           analyticsContext: n,
                           inviteButtonRef: d,
-                          accountLinkButtonRef: ee,
-                          canStartAuthorization: K,
-                          startAuthorization: Q,
-                          hasAlreadyLinked: Y,
-                          connectionApp: $,
+                          accountLinkButtonRef: et,
+                          canStartAuthorization: $,
+                          startAuthorization: J,
+                          hasAlreadyLinked: K,
+                          connectionApp: z,
                       }),
                       (0, r.jsx)(nS, {
-                          popover: eo,
-                          dismissPopover: ed,
-                          application: D,
-                          connectionApp: $,
-                          activity: U,
+                          popover: ed,
+                          dismissPopover: eu,
+                          application: M,
+                          connectionApp: z,
+                          activity: G,
                           runningGame: A,
-                          hasAlreadyLinked: Y,
-                          didStartAuthorization: X,
-                          startAuthorization: Q,
+                          hasAlreadyLinked: K,
+                          didStartAuthorization: Q,
+                          startAuthorization: J,
                           accountLinkUpsellTargetRef: o,
                           activityPopoutTargetRef: s,
                           inviteButtonRef: d,
-                          accountLinkButtonRef: ee,
-                          gameCommunityGuildId: ei,
-                          parentAnalyticsLocation: j,
-                          analyticsLocations: W,
+                          accountLinkButtonRef: et,
+                          gameCommunityGuildId: er,
+                          parentAnalyticsLocation: W,
+                          analyticsLocations: Y,
                           analyticsContext: n,
                       }),
                   ],
