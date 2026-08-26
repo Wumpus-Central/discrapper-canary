@@ -101,7 +101,7 @@ let A = new Set(["PageDown", "PageUp", "Home", "End", "ArrowUp", "ArrowDown", "A
                 d._.hasSubscribers(u.jej.TEXTAREA_FOCUS) &&
                 null != document.querySelector('[data-can-focus="true"]')
             )
-                return e.preventDefault(), d._.dispatch(u.jej.TEXTAREA_FOCUS), !1;
+                return e.repeat || (e.preventDefault(), d._.dispatch(u.jej.TEXTAREA_FOCUS)), !1;
             if (
                 (o.A.isConnected() &&
                     a.Ay.getMode() === u.TBI.PUSH_TO_TALK &&
