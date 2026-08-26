@@ -37,7 +37,6 @@ a.exports = {
     VJ: "projectIcon_f8194a",
     M2: "projectCardAction_f8194a",
     Pl: "projectSettingsAction_f8194a",
-    O$: "projectCardStatus_f8194a",
     j1: "projectName_f8194a",
     h3: "projectMetadata_f8194a",
     E8: "listState_f8194a",

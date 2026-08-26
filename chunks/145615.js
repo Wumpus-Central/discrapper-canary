@@ -1,8 +1,11 @@
-e.exports = {
+i.exports = {
     P5: "dither_c1a26c",
     wY: "ditherConversation_c1a26c",
     Qy: "ditherHome_c1a26c",
     fR: "ditherThinking_c1a26c",
     SK: "vibegrationsDitherMaskRipple_c1a26c",
     DX: "ditherCanvas_c1a26c",
+    L$: "ditherRight_c1a26c",
+    ix: "vibegrationsDitherMaskRippleRight_c1a26c",
+    l4: "ditherCanvasRight_c1a26c",
 };

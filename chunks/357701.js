@@ -4050,7 +4050,7 @@ function sT(e) {
 }
 var sU = n(152367),
     sD = n(972786),
-    sO = n(20386),
+    sO = n(321593),
     sP = n(309010),
     sV = n(295813);
 function sw(e) {
@@ -4064,7 +4064,7 @@ function sw(e) {
             (0, s.jsx)(sU.D, { size: "custom", color: "currentColor", width: 20, height: 20, className: e }),
         text: eg.intl.string(sV.default.Xmvb23),
         selected: n,
-        trailing: (0, s.jsx)(sO.iT, { guildId: t.id }),
+        background: (0, s.jsx)(sO.gT, { guildId: t.id }),
         onClick: () => {
             let e = i === eu.VV.VIBEGRATIONS && r === t.id;
             (0, ec.pX)(B.BVt.CHANNEL(t.id, eu.VV.VIBEGRATIONS, null == l || e ? null : l));

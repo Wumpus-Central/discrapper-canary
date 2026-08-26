@@ -1,4 +1,4 @@
-e.exports = {
+i.exports = {
     D1: "glowLayer__80f2e",
     ys: "glow__80f2e",
     Oe: "vibegrationsGlowThinkingPulse__80f2e",
@@ -6,4 +6,6 @@ e.exports = {
     _7: "vibegrationsGlowDrift__80f2e",
     dW: "glowImageThinking__80f2e",
     Tn: "vibegrationsGlowThinkingMaskRipple__80f2e",
+    WR: "glowRight__80f2e",
+    C$: "vibegrationsGlowThinkingPulseRight__80f2e",
 };

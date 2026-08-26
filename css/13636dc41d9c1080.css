@@ -46,6 +46,38 @@
     --background-gradient-lowest: var(--background-gradient-chat)
 }
 
+.glowMask__16f18 {
+    border-radius: var(--custom-vibegrations-glow-radius, var(--radius-sm));
+    inset: 0;
+    opacity: 0;
+    overflow: hidden;
+    pointer-events: none;
+    position: absolute;
+    transition: opacity .3s ease-in-out
+}
+
+.glowMask__16f18[data-thinking] {
+    opacity: 1;
+    transition: opacity 1s ease-in-out
+}
+
+.glowMask__16f18 {
+    --custom-vibegrations-glow-extent: 100%
+}
+
+@media (prefers-reduced-motion:reduce) {
+
+    .glowMask__16f18,
+    .glowMask__16f18[data-thinking] {
+        transition: none
+    }
+}
+
+.reduce-motion .glowMask__16f18,
+.reduce-motion .glowMask__16f18[data-thinking] {
+    transition: none
+}
+
 .root__92459 {
     position: relative
 }
@@ -361,7 +393,8 @@
 .projectCard_f8194a {
     align-items: center;
     border-radius: var(--radius-sm);
-    display: flex
+    display: flex;
+    position: relative
 }
 
 .projectCard_f8194a:focus-within,
@@ -407,21 +440,10 @@
     transition: opacity .15s ease-out
 }
 
-.projectCardStatus_f8194a {
-    inset-inline-end: var(--space-12);
-    position: absolute;
-    transition: inset-inline-end .15s ease-out
-}
-
 .projectCard_f8194a:focus-within .projectSettingsAction_f8194a,
 .projectCard_f8194a:hover .projectSettingsAction_f8194a {
     opacity: 1;
     pointer-events: auto
-}
-
-.projectCard_f8194a:focus-within .projectCardStatus_f8194a,
-.projectCard_f8194a:hover .projectCardStatus_f8194a {
-    inset-inline-end: calc(100% + var(--space-8))
 }
 
 @media (hover:none) {
@@ -429,13 +451,8 @@
         opacity: 1;
         pointer-events: auto
     }
-
-    .projectCardStatus_f8194a {
-        inset-inline-end: calc(100% + var(--space-8))
-    }
 }
 
-.reduce-motion .projectCardStatus_f8194a,
 .reduce-motion .projectSettingsAction_f8194a {
     transition: none
 }
@@ -502,4 +519,4 @@
     text-align: center
 }
 
-/*# sourceMappingURL=e3143e97a30b3c28.css.map*/
+/*# sourceMappingURL=13636dc41d9c1080.css.map*/
