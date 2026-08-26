@@ -1,4 +1,4 @@
-n.d(t, { Ay: () => F, BL: () => v, bi: () => x }), n(667532), n(321073);
+n.d(t, { Ay: () => j, BL: () => v, bi: () => W }), n(667532), n(321073);
 var l = n(17928),
     i = n(228366),
     r = n(695515),
@@ -67,8 +67,8 @@ function P(e) {
         null == e.steps && null == e.events && null != e.todos && e.todos.length > 0 && (t.todos = e.todos),
         null != e.steps
             ? (t.steps = (function (e) {
-                  let t = W();
-                  for (let n of e) $(t, n);
+                  let t = $();
+                  for (let n of e) F(t, n);
                   return t.steps;
               })(e.steps))
             : null != e.events &&
@@ -105,25 +105,38 @@ function L(e, t, n) {
     I.set(e, [...l.slice(0, i), n(s), ...l.slice(i + 1)]);
 }
 function D(e) {
-    let t = I.get(e);
-    return null != t && t.some((e) => "assistant" === e.role && !v(e));
+    if (null == e) return !1;
+    let t = !1;
+    for (let n = e.length - 1; n >= 0; n--) {
+        let l = e[n];
+        if (
+            "assistant" === l.role &&
+            "side_reply" !== l.kind &&
+            ((!t && ((t = !0), !v(l))) || (null != l.turn_id && !v(l)))
+        )
+            return !0;
+    }
+    return !1;
 }
 function B(e) {
+    return D(I.get(e));
+}
+function V(e) {
     let t = I.get(e);
     if (null == t) return null;
     for (let e = t.length - 1; e >= 0; e--) if ("assistant" === t[e].role && "side_reply" !== t[e].kind) return t[e];
     return null;
 }
-function V(e) {
+function G(e) {
     let t = E.get(e) ?? !1,
-        n = D(e);
+        n = B(e);
     if (t === n) return;
     E.set(e, n);
     let l = S.indexOf(e);
     if ((-1 !== l && S.splice(l, 1), S.unshift(e), n)) T.delete(e);
     else {
         let t;
-        null != (t = B(e)) &&
+        null != (t = V(e)) &&
         ("" !== t.content.trim() ||
             null != t.proposal ||
             t.steps.some((e) => A.has(e.kind) && "terminal_error" !== e.kind))
@@ -157,7 +170,7 @@ function V(e) {
                     A = null != i && a.Ay.getChannelId() === h.VV.VIBEGRATIONS && f.A.isWindowFocused(),
                     v = i ?? t.guild_id ?? t.preview_guild_id,
                     I = (function (e) {
-                        let t = B(e);
+                        let t = V(e);
                         if (null == t) return null;
                         if ("" !== t.content.trim()) return t.content;
                         if (null != t.proposal) return t.proposal.summary;
@@ -194,9 +207,9 @@ function V(e) {
             })(e);
     }
 }
-function G(e) {
+function H(e) {
     let t = I.delete(e);
-    q.delete(e);
+    x.delete(e);
     let n = T.delete(e),
         l = E.delete(e),
         i = b.delete(e),
@@ -205,7 +218,7 @@ function G(e) {
         o = S.indexOf(e);
     return -1 !== o && S.splice(o, 1), t || n || l || i || r || s || -1 !== o;
 }
-class H extends l.Ay.Store {
+class q extends l.Ay.Store {
     initialize() {
         this.waitFor(r.A, u.A, a.Ay, d.A, c.A, p.A);
     }
@@ -218,13 +231,13 @@ class H extends l.Ay.Store {
         return null != n && "assistant" === n.role && null != n.settingsRequest;
     }
     isThinking(e) {
-        return D(e);
+        return B(e);
     }
     hasLoadedHistory(e) {
-        return q.has(e);
+        return x.has(e);
     }
     getFinishedAt(e) {
-        return D(e) ? null : (T.get(e) ?? null);
+        return B(e) ? null : (T.get(e) ?? null);
     }
     getProjectUsage(e) {
         return b.get(e) ?? null;
@@ -246,11 +259,11 @@ class H extends l.Ay.Store {
         return !1;
     }
 }
-let q = new Map();
-function x(e) {
-    return q.get(e) ?? null;
+let x = new Map();
+function W(e) {
+    return x.get(e) ?? null;
 }
-function W() {
+function $() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [],
         t = new Set(),
         n = -1;
@@ -258,7 +271,7 @@ function W() {
         null != i.turn_seq && t.add(i.turn_seq), -1 === n && "todos" === i.kind && null == i.task_id && (n = l);
     return { steps: [...e], seenSeq: t, todosAt: n };
 }
-function $(e, t) {
+function F(e, t) {
     if (null != t.turn_seq && e.seenSeq.has(t.turn_seq)) return;
     if ("todos" !== t.kind || null != t.task_id) {
         e.steps.push(t), null != t.turn_seq && e.seenSeq.add(t.turn_seq);
@@ -273,7 +286,7 @@ function $(e, t) {
         (e.steps[e.todosAt] = t),
         null != t.turn_seq && e.seenSeq.add(t.turn_seq);
 }
-let F = new H(i.h, {
+let j = new q(i.h, {
     LOGOUT: function () {
         if (
             0 === I.size &&
@@ -290,14 +303,14 @@ let F = new H(i.h, {
     },
     VIBEGRATIONS_CHAT_HISTORY_SET: function (e) {
         let { projectId: t, entries: n, cursor: l } = e;
-        q.set(t, l ?? null), y.delete(t), N.delete(t);
+        x.set(t, l ?? null), y.delete(t), N.delete(t);
         let i = new Set(),
             r = n.filter((e) => null == e.id || (!i.has(e.id) && (i.add(e.id), !0)));
-        I.set(t, r.map(P)), V(t);
+        I.set(t, r.map(P)), G(t);
     },
     VIBEGRATIONS_CHAT_HISTORY_PREPEND: function (e) {
         let { projectId: t, entries: n, cursor: l } = e;
-        if ((q.set(t, l), 0 === n.length)) return;
+        if ((x.set(t, l), 0 === n.length)) return;
         let i = I.get(t) ?? [],
             r = n.map(P),
             s = new Set(i.flatMap((e) => (null == e.id ? [] : [e.id]))),
@@ -311,11 +324,11 @@ let F = new H(i.h, {
         let a = R("user", n, { ts: s, id: l, userId: r, attachments: o }),
             d = null == i ? -1 : u.findIndex((e) => e.id === i);
         if (-1 !== d) {
-            (a.render_id = u[d].render_id), I.set(t, [...u.slice(0, d), a, ...u.slice(d + 1)]), V(t);
+            (a.render_id = u[d].render_id), I.set(t, [...u.slice(0, d), a, ...u.slice(d + 1)]), G(t);
             return;
         }
         let c = [...u, a];
-        c.some((e) => "assistant" === e.role && !v(e)) || c.push(R("assistant", "")), I.set(t, c), V(t);
+        D(c) || c.push(R("assistant", "")), I.set(t, c), G(t);
     },
     VIBEGRATIONS_CHAT_MESSAGE_DISPOSITION: function (e) {
         let { projectId: t, id: n, activeTurnId: l, disposition: i } = e,
@@ -332,7 +345,7 @@ let F = new H(i.h, {
             ...o.slice(u + 1),
             R("assistant", "", { turnId: l }),
         ]),
-            V(t);
+            G(t);
     },
     VIBEGRATIONS_CHAT_SIDE_REPLY: function (e) {
         let { projectId: t, id: n, inReplyTo: l, content: i, timestamp: r } = e,
@@ -350,9 +363,9 @@ let F = new H(i.h, {
         L(t, l, (e) => {
             var t;
             let l;
-            return { ...e, steps: ((t = e.steps), $((l = W(t)), n), l.steps) };
+            return { ...e, steps: ((t = e.steps), F((l = $(t)), n), l.steps) };
         }),
-            V(t);
+            G(t);
     },
     VIBEGRATIONS_CHAT_TURN_FINISHED: function (e) {
         let { projectId: t, summary: n, turnId: l } = e,
@@ -374,8 +387,8 @@ let F = new H(i.h, {
                 provisionalTodo: void 0,
                 content: "" !== e.content ? e.content : (n ?? ""),
             })),
-            D(t) || (y.delete(t), N.delete(t)),
-            V(t);
+            B(t) || (y.delete(t), N.delete(t)),
+            G(t);
     },
     VIBEGRATIONS_CHAT_INTERRUPTED: function (e) {
         let { projectId: t } = e,
@@ -423,7 +436,7 @@ let F = new H(i.h, {
             let t = { ...e, ...n };
             return "todos" in n && (t.provisionalTodo = void 0), t;
         }),
-            V(t);
+            G(t);
     },
     VIBEGRATIONS_CHAT_CONN_STATE: function (e) {
         let { projectId: t, connState: n } = e;
@@ -451,16 +464,16 @@ let F = new H(i.h, {
                       };
             }),
         ),
-            V(t);
+            G(t);
     },
     VIBEGRATIONS_PROJECT_DELETE_SUCCESS: function (e) {
         let { projectId: t } = e;
-        if (!G(t)) return !1;
+        if (!H(t)) return !1;
     },
     VIBEGRATIONS_PROJECTS_FETCH_SUCCESS: function (e) {
         let t = new Set([...I.keys(), ...T.keys(), ...E.keys(), ...b.keys()]),
             n = !1;
-        for (let e of t) null == p.A.getProject(e) && G(e) && (n = !0);
+        for (let e of t) null == p.A.getProject(e) && H(e) && (n = !0);
         if (!n) return !1;
     },
 });

@@ -311,16 +311,17 @@ async function q(e, t) {
                         o.h.dispatch({ type: "VIBEGRATIONS_CHAT_STOPPED_SET", projectId: t, stopped: r.stopped }),
                             r.stopped || "open" !== b.get(t) || D(t, n);
                     else if ("user_message" === r.type) {
-                        let e;
-                        (e = null != r.nonce && U.has(r.nonce) && U.get(r.nonce) === r.user_id) &&
-                            null != r.nonce &&
-                            U.delete(r.nonce),
+                        let e, n, i;
+                        (n = (e = null != r.nonce && U.has(r.nonce)) && null != r.nonce ? U.get(r.nonce) : void 0),
+                            (i = e && (null == n || null == r.user_id || n === r.user_id)) &&
+                                null != r.nonce &&
+                                U.delete(r.nonce),
                             o.h.dispatch({
                                 type: "VIBEGRATIONS_CHAT_MESSAGE_APPEND",
                                 projectId: t,
                                 content: r.content,
                                 id: r.id,
-                                ...(e && null != r.nonce ? { optimisticId: $(r.nonce) } : {}),
+                                ...(i && null != r.nonce ? { optimisticId: $(r.nonce) } : {}),
                                 userId: r.user_id,
                                 timestamp: r.ts,
                                 attachments: r.attachments,
@@ -990,7 +991,7 @@ let eN = [],
         LOGOUT: function () {
             if (0 === I.size) return !1;
             for (let e of Array.from(I.keys())) X(e);
-            v.clear(), ei.clear();
+            v.clear(), U.clear(), ei.clear();
         },
     }),
     eR = 221552 == n.j ? eP : null;
