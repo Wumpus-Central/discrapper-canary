@@ -30,19 +30,8 @@ function h(e, t) {
     return r < a ? -1 : +(r > a);
 }
 var I = n(626584),
-    f = n(236285);
-(0, n(945810).mj)({
-    name: "2026-07-game-mentions-v2-mobile",
-    kind: "user",
-    defaultConfig: { enabled: !1, showNewTag: !1, combineMentionAutocomplete: !1 },
-    variations: {
-        0: { enabled: !1, showNewTag: !1, combineMentionAutocomplete: !1 },
-        1: { enabled: !0, showNewTag: !0, combineMentionAutocomplete: !1 },
-        2: { enabled: !0, showNewTag: !1, combineMentionAutocomplete: !1 },
-        3: { enabled: !0, showNewTag: !1, combineMentionAutocomplete: !0 },
-    },
-});
-var p = n(202776),
+    f = n(236285),
+    p = n(202776),
     T = n(473529),
     m = n(69945),
     g = n(796774),
