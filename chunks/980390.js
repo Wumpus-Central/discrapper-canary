@@ -17782,13 +17782,14 @@ function xL(e) {
             ).enabled),
         j = h || E,
         f = (0, L.bG)([e_.A], () => e_.A.getRoleMemberCount(s.id)?.[r.id], [r.id, s.id]),
-        N = (0, L.yK)([g$.A], () => g$.A.getEditedRoleConnectionConfigurationsMap().get(r.id) ?? []),
-        A = N.length > 1 ? g6.jO.OR : g6.jO.AND,
-        I = R.useMemo(() => (A === g6.jO.OR ? N.flat() : null != N && N.length > 0 ? N[0] : []), [A, N]),
-        S = R.useMemo(() => new Set(I.map((e) => e.connectionType)), [I]);
-    function C(e) {
+        N = null != f && f > 0,
+        A = (0, L.yK)([g$.A], () => g$.A.getEditedRoleConnectionConfigurationsMap().get(r.id) ?? []),
+        I = A.length > 1 ? g6.jO.OR : g6.jO.AND,
+        S = R.useMemo(() => (I === g6.jO.OR ? A.flat() : null != A && A.length > 0 ? A[0] : []), [I, A]),
+        C = R.useMemo(() => new Set(S.map((e) => e.connectionType)), [S]);
+    function v(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : void 0,
-            n = [...I];
+            n = [...S];
         n.push({
             connectionType: e,
             connectionMetadataField: void 0,
@@ -17796,35 +17797,35 @@ function xL(e) {
             operator: void 0,
             value: void 0,
         }),
-            (0, g1.pn)(r.id, xy(n, A));
+            (0, g1.pn)(r.id, xy(n, I));
     }
-    function v() {
+    function _() {
         eh.h.dispatch({
             type: "CONNECTIONS_GRID_MODAL_SHOW",
-            onComplete: (e) => C(e),
-            excludedPlatformTypes: S,
+            onComplete: (e) => v(e),
+            excludedPlatformTypes: C,
             integrations: c,
-            onCompleteApplication: (e) => C(xt.zR, e),
+            onCompleteApplication: (e) => v(xt.zR, e),
             includeApplicationConnections: !1,
             gameApplicationIds: j ? s.gameApplicationIds : null,
-            onCompleteIdentityApplication: j ? (e) => C(xt.UX, e) : void 0,
+            onCompleteIdentityApplication: j ? (e) => v(xt.UX, e) : void 0,
         });
     }
-    let _ = null;
-    if (0 === I.length) _ = (0, p.jsx)(xR, { handleAddVerificationClicked: v, locked: a });
-    else if (I.length > 0) {
+    let T = null;
+    if (0 === S.length) T = (0, p.jsx)(xR, { handleAddVerificationClicked: _, locked: a || N });
+    else if (S.length > 0) {
         let e,
             t = null;
-        I.length < 10 &&
+        S.length < 10 &&
             (t = (0, p.jsx)(eg.$, {
                 disabled: a,
-                onClick: v,
+                onClick: _,
                 text: el.intl.string(el.t["OSvW5+"]),
                 icon: tI.U,
                 fullWidth: !0,
                 variant: "secondary",
             })),
-            (_ = (0, p.jsxs)(p.Fragment, {
+            (T = (0, p.jsxs)(p.Fragment, {
                 children: [
                     ((i = () => (0, g1.pn)(r.id, [])),
                     (0, p.jsxs)(p.Fragment, {
@@ -17858,15 +17859,15 @@ function xL(e) {
                     })),
                     (r.id,
                     (l = (e, t) => (0, g1.pn)(r.id, xy(e, t))),
-                    (e = xy(I, g6.jO.OR)),
+                    (e = xy(S, g6.jO.OR)),
                     (0, p.jsx)(iW.z, {
                         label: el.intl.string(el.t.Xs7PHX),
                         options: [
                             { name: el.intl.string(el.t.W3iY58), value: g6.jO.OR },
                             { name: el.intl.string(el.t.gHXS9A), value: g6.jO.AND },
                         ],
-                        onChange: (e) => l(I, e),
-                        value: A,
+                        onChange: (e) => l(S, e),
+                        value: I,
                         disabled: a || e.length < 2,
                     })),
                     (function (e, t, n, i, l) {
@@ -17921,7 +17922,7 @@ function xL(e) {
                                 ),
                             ),
                         });
-                    })(I, (e) => (0, g1.pn)(r.id, xy(e, A)), a, r.id, c),
+                    })(S, (e) => (0, g1.pn)(r.id, xy(e, I)), a, r.id, c),
                     t,
                 ],
             }));
@@ -17944,7 +17945,7 @@ function xL(e) {
                         setRoleNameFocusRoleId: d,
                     }),
                 }),
-                (f ?? 0) > 0
+                N
                     ? (0, p.jsxs)("div", {
                           className: xT.UW,
                           children: [
@@ -17963,7 +17964,7 @@ function xL(e) {
                           ],
                       })
                     : null,
-                _,
+                T,
             ],
         }),
     });
