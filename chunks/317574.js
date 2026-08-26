@@ -11,50 +11,50 @@ var n = i(477900),
     f = i(451395),
     g = i(189213),
     h = i(192308),
-    m = i(521810),
-    x = i(125075),
-    E = i(375708),
-    v = i(397462);
-function p(e) {
+    m = i(403632),
+    E = i(125075),
+    x = i(375708),
+    p = i(397462);
+function A(e) {
     let { title: t, disabled: i = !1, dragHandleRef: l, canEdit: a = !1, onEdit: r, onRemove: g } = e;
     return (0, n.jsxs)("div", {
-        className: v.wx,
+        className: p.wx,
         children: [
             null != l &&
                 (0, n.jsx)("div", {
-                    className: v.BU,
+                    className: p.BU,
                     children: (0, n.jsx)(f.jV, {
                         buttonRef: l,
-                        "aria-label": E.intl.formatToPlainString(x.default.NV85DR, { widgetName: t }),
+                        "aria-label": x.intl.formatToPlainString(E.default.NV85DR, { widgetName: t }),
                     }),
                 }),
-            (0, n.jsx)(s.D, { variant: "heading-sm/medium", className: v.DD, children: t }),
+            (0, n.jsx)(s.D, { variant: "heading-sm/medium", className: p.DD, children: t }),
             (0, n.jsxs)("div", {
-                className: v.o1,
+                className: p.o1,
                 children: [
                     a &&
                         (0, n.jsx)(c.m, {
-                            text: E.intl.string(E.t.bt75uw),
+                            text: x.intl.string(x.t.bt75uw),
                             children: (0, n.jsx)(d.K, {
                                 variant: "secondary",
                                 size: "sm",
                                 icon: u.PencilIcon,
-                                "aria-label": E.intl.string(E.t.bt75uw),
+                                "aria-label": x.intl.string(x.t.bt75uw),
                                 disabled: i,
                                 onClick: r,
                             }),
                         }),
                     null != g &&
                         (0, n.jsx)(c.m, {
-                            text: E.intl.string(E.t.Mm07Yc),
+                            text: x.intl.string(x.t.Mm07Yc),
                             children: (0, n.jsx)(d.K, {
                                 variant: "critical-secondary",
                                 size: "sm",
                                 icon: o.TrashIcon,
                                 "aria-label":
                                     null == t
-                                        ? E.intl.string(E.t.Mm07Yc)
-                                        : E.intl.formatToPlainString(x.default.hmNYxk, { widgetName: t }),
+                                        ? x.intl.string(x.t.Mm07Yc)
+                                        : x.intl.formatToPlainString(E.default.hmNYxk, { widgetName: t }),
                                 disabled: i,
                                 onClick: g,
                             }),
@@ -64,11 +64,11 @@ function p(e) {
         ],
     });
 }
-function A(e) {
+function v(e) {
     let { title: t } = e;
     return (0, n.jsx)("div", {
-        className: v.wx,
-        children: (0, n.jsx)(s.D, { variant: "heading-sm/medium", className: v.DD, children: t }),
+        className: p.wx,
+        children: (0, n.jsx)(s.D, { variant: "heading-sm/medium", className: p.DD, children: t }),
     });
 }
 function I(e) {
@@ -105,20 +105,20 @@ function I(e) {
                     (0, h.openModalLazy)(() => Promise.resolve(a), { modalKey: "guild-space-widget-edit" });
                 })({ widget: t, Edit: o.Edit, onCommit: c });
         }, [t, o, c]),
-        x = o?.useTitle?.(t) ?? t.default_title ?? "";
+        E = o?.useTitle?.(t) ?? t.default_title ?? "";
     if (null == o) return null;
-    let { View: E, Edit: I } = o,
+    let { View: x, Edit: I } = o,
         S = "edit" === i,
         C = null != I && null != c;
     return (0, n.jsxs)("div", {
-        className: r()(v.kL, { [v.Dy]: S }),
+        className: r()(p.kL, { [p.Dy]: S }),
         children: [
             S
-                ? (0, n.jsx)(p, { title: x, disabled: u, dragHandleRef: d, canEdit: C, onEdit: f, onRemove: s })
-                : (0, n.jsx)(A, { title: x }),
+                ? (0, n.jsx)(A, { title: E, disabled: u, dragHandleRef: d, canEdit: C, onEdit: f, onRemove: s })
+                : (0, n.jsx)(v, { title: E }),
             (0, n.jsx)("div", {
-                className: v.rf,
-                children: (0, n.jsx)(E, { widget: t, hydration: a, guildSpaceMode: i }),
+                className: p.rf,
+                children: (0, n.jsx)(x, { widget: t, hydration: a, guildSpaceMode: i }),
             }),
         ],
     });

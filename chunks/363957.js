@@ -1,4 +1,4 @@
-i.d(t, { A: () => x }), i(321073);
+i.d(t, { A: () => E }), i(321073);
 var n = i(158390),
     l = i(17928),
     a = i(228366),
@@ -42,7 +42,7 @@ class m extends l.Ay.Store {
               : t.filter((e) => "idle" === (i.entriesByWidgetId.get(e)?.state ?? d).status);
     }
 }
-let x = new m(a.h, {
+let E = new m(a.h, {
     GUILD_SPACE_HYDRATE_START: function (e) {
         let t,
             { guildId: i, requestId: n, widgetIds: l } = e,

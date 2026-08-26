@@ -186,7 +186,7 @@ var q = n(435558),
     H = n(537652),
     U = n(166862),
     W = n(545152),
-    j = n(237116),
+    j = n(768038),
     G = n(74448),
     P = n(911385);
 let b = { results: { choices: [] } },
@@ -1146,8 +1146,8 @@ var eX = n(59892),
     e4 = n(717470),
     e2 = n(977936),
     e6 = n(849455),
-    e7 = n(288116),
-    e8 = n(406002),
+    e8 = n(288116),
+    e7 = n(406002),
     e3 = n(381349),
     e5 = n(860323),
     e9 = n(670441),
@@ -1371,8 +1371,8 @@ let tr = ["h:mm:ssa", "h:mm:ss a", "H:mm:ss", "h:mma", "h:mm a", "H:mm", "HHmm",
                         if ("ja" === e) return e4;
                         else if ("nl" === e) return e2;
                         else if ("ru" === e) return e6;
-                        else if ("it" === e) return e7;
-                        else if ("uk" === e) return e8;
+                        else if ("it" === e) return e8;
+                        else if ("uk" === e) return e7;
                         else if ("zh-CN" === e) return e3;
                         else if ("zh-TW" === e) return e5;
                         else if (e.startsWith("sv-")) return e9;

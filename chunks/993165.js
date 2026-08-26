@@ -5,25 +5,25 @@ var i = n(477900),
     r = n(461797),
     a = n(287809),
     o = n(158045),
-    d = n(23722);
-let c = { id: "default" },
+    c = n(23722);
+let d = { id: "default" },
     u = l.createContext(null),
     g = l.createContext(null);
 function m(e) {
     let { children: t } = e,
-        [n, m] = l.useState(c),
+        [n, m] = l.useState(d),
         [x, f] = l.useState(null),
         [h] = l.useState(r.B$),
         p = l.useRef(h),
-        I = (0, d.A)((e) => {
+        I = (0, c.A)((e) => {
             m(e);
         }),
         j = l.useCallback(() => {
-            m(c);
+            m(d);
         }, []),
         A = l.useCallback(() => p.current, []),
         v = (0, s.bG)([a.default], () => o.Ay.canUsePremiumProfileCustomization(a.default.getCurrentUser())),
-        E = v ? c : n,
+        E = v ? d : n,
         S = !v && x?.id === "premiumTryItOut",
         C = l.useCallback(() => {
             f(E);

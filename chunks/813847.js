@@ -1,8 +1,8 @@
 l.d(t, { e: () => o });
 var n = l(582128),
     i = l(568065),
-    s = l(641641),
-    r = l(375708);
+    r = l(641641),
+    s = l(375708);
 function o(e, t, l) {
     return n.useMemo(
         () =>
@@ -13,12 +13,12 @@ function o(e, t, l) {
                   : t.type === i.b_.LEVEL_ACTIVATED
                     ? {
                           type: "active",
-                          statusText: r.intl.formatToPlainString(s.default.WRRYUT, {
-                              perkName: t.sourcePowerup?.title ?? r.intl.string(r.t.BfF6ED),
+                          statusText: s.intl.formatToPlainString(r.default.WRRYUT, {
+                              perkName: t.sourcePowerup?.title ?? s.intl.string(s.t.BfF6ED),
                           }),
                       }
                     : t.type !== i.b_.INACTIVE
-                      ? { type: "active", statusText: r.intl.string(s.default.FFLkmx) }
+                      ? { type: "active", statusText: s.intl.string(r.default.FFLkmx) }
                       : void 0,
         [t, l, e],
     );

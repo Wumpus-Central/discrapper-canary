@@ -1,13 +1,13 @@
-l.d(t, { A: () => r });
+l.d(t, { A: () => s });
 var n = l(477900);
 l(582128);
 var i = l(192308),
-    s = l(568065);
-function r(e, t) {
+    r = l(568065);
+function s(e, t) {
     (0, i.openModalLazy)(
         async () => {
             switch (t.type) {
-                case s.o9.LEVEL: {
+                case r.o9.LEVEL: {
                     let { default: i } = await Promise.all([
                         l.e("463455"),
                         l.e("470532"),
@@ -26,7 +26,7 @@ function r(e, t) {
                     ]).then(l.bind(l, 787367));
                     return (l) => (0, n.jsx)(i, { guildId: e, powerup: t, ...l });
                 }
-                case s.o9.PERK: {
+                case r.o9.PERK: {
                     let { default: i } = await Promise.all([
                         l.e("269714"),
                         l.e("19385"),
@@ -52,6 +52,6 @@ function r(e, t) {
                 }
             }
         },
-        { modalKey: s.Fq },
+        { modalKey: r.Fq },
     );
 }
