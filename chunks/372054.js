@@ -1,4 +1,4 @@
-e.exports = {
+a.exports = {
     LB: "channelView__67841",
     Mh: "channelViewMain__67841",
     ez: "channelViewMainPanel__67841",

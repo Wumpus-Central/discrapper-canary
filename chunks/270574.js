@@ -18,14 +18,14 @@ let _ = function (e) {
         discriminatorClass: c,
         botClass: o,
         botVerified: I = !1,
-        style: T,
-        useRemSizes: d = !1,
+        style: d,
+        useRemSizes: T = !1,
         usernameIcon: R,
         guildTag: N,
     } = e;
     return (0, E.jsxs)("div", {
         className: n()(_, a.oM),
-        style: T,
+        style: d,
         children: [
             (0, E.jsxs)("span", {
                 className: n()(a.Xh, A),
@@ -35,7 +35,7 @@ let _ = function (e) {
             N,
             null != i ? (0, E.jsxs)("span", { className: c ?? void 0, children: ["#", i] }) : null,
             null != S
-                ? (0, E.jsx)(r.A, { type: S, invertColor: s, className: n()(o, a.Od), verified: I, useRemSizes: d })
+                ? (0, E.jsx)(r.A, { type: S, invertColor: s, className: n()(o, a.Od), verified: I, useRemSizes: T })
                 : null,
         ],
     });

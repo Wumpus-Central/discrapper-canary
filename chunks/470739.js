@@ -1,16 +1,16 @@
-n.d(t, { _: () => d });
+n.d(t, { _: () => o });
 var a = n(477900),
     l = n(277057),
     r = n.n(l),
     s = n(192308);
 let i = null;
-function d() {
+function o() {
     let {
         initialBadgeId: e,
         targetUserId: t,
         targetUsername: l,
-        viewingCurrentUserBadges: d,
-        stackingBehavior: o,
+        viewingCurrentUserBadges: o,
+        stackingBehavior: d,
     } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
     null != i && (0, s.closeModalInAllContexts)(i);
     let c = r()("badge-directory-modal");
@@ -27,12 +27,12 @@ function d() {
                         initialBadgeId: e,
                         targetUserId: t,
                         targetUsername: l,
-                        viewingCurrentUserBadges: d,
+                        viewingCurrentUserBadges: o,
                     });
             },
             {
                 modalKey: c,
-                stackingBehavior: o ?? "stack",
+                stackingBehavior: d ?? "stack",
                 onCloseCallback: () => {
                     i === c && (i = null);
                 },

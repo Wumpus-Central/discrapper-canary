@@ -1,4 +1,4 @@
-e.exports = {
+c.exports = {
     ue: "assistantTurn__30c5c",
     ky: "chatMessageAssistant__30c5c",
     cW: "chatMarkdown__30c5c",

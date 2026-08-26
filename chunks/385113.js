@@ -25,10 +25,10 @@ function I(e) {
         (a = { ...a }), (_ = { ..._, ...Object.fromEntries(Object.keys(e).map((e) => [e, "SUCCESS"])) });
     }
 }
-function T() {
+function d() {
     (a = {}), (_ = {}), (S = "NOT_FETCHED"), (A = []), (c = "NOT_FETCHED"), (o = []);
 }
-class d extends s.Ay.Store {
+class T extends s.Ay.Store {
     static displayName = "ApplicationWidgetConfigStore";
     getConfig(e) {
         return a[e]?.[0] ?? void 0;
@@ -55,9 +55,9 @@ class d extends s.Ay.Store {
         return o;
     }
 }
-let R = new d(n.h, {
-    LOGOUT: T,
-    APPLICATION_WIDGET_CONFIG_DEBUG_RESET: T,
+let R = new T(n.h, {
+    LOGOUT: d,
+    APPLICATION_WIDGET_CONFIG_DEBUG_RESET: d,
     APPLICATION_WIDGET_CONFIG_FEATURED_FETCH_START: function (e) {
         S = "FETCHING";
     },

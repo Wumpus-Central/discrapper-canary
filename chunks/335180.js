@@ -1,5 +1,5 @@
 i.d(t, {
-    Bj: () => ed,
+    Bj: () => eT,
     IA: () => eI,
     L: () => el,
     NU: () => eu,
@@ -8,7 +8,7 @@ i.d(t, {
     Ub: () => eO,
     Zm: () => eC,
     c5: () => eo,
-    cL: () => eT,
+    cL: () => ed,
     g4: () => eA,
     hc: () => eD,
     l3: () => e_,
@@ -31,8 +31,8 @@ if (221552 == i.j) var A = i(836480);
 if (221552 == i.j) var c = i(332837);
 if (221552 == i.j) var o = i(34188);
 if (221552 == i.j) var I = i(231483);
-if (221552 == i.j) var T = i(104510);
-if (221552 == i.j) var d = i(740426);
+if (221552 == i.j) var d = i(104510);
+if (221552 == i.j) var T = i(740426);
 if (221552 == i.j) var R = i(305866);
 if (221552 == i.j) var N = i(912592);
 if (221552 == i.j) var u = i(297264);
@@ -362,7 +362,7 @@ function z() {
         className: j.MY,
         role: "status",
         "aria-label": "Powerups",
-        children: [(0, E.jsx)(W, { icon: T._, title: "Powerups" }), (0, E.jsx)(Y, { cardCount: 6 })],
+        children: [(0, E.jsx)(W, { icon: d._, title: "Powerups" }), (0, E.jsx)(Y, { cardCount: 6 })],
     });
 }
 function X() {
@@ -370,7 +370,7 @@ function X() {
         className: j.MY,
         role: "status",
         "aria-label": C.intl.string(C.t.h9mGOP),
-        children: [(0, E.jsx)(W, { icon: d.k, title: C.intl.string(C.t.h9mGOP) }), (0, E.jsx)(K, { rowCount: 6 })],
+        children: [(0, E.jsx)(W, { icon: T.k, title: C.intl.string(C.t.h9mGOP) }), (0, E.jsx)(K, { rowCount: 6 })],
     });
 }
 function ee() {
@@ -607,10 +607,10 @@ function eo() {
 function eI() {
     return (0, E.jsx)(eE, {});
 }
-function eT() {
+function ed() {
     return (0, E.jsx)(Q, {});
 }
-function ed() {
+function eT() {
     return (0, E.jsx)(J, {});
 }
 function eR() {

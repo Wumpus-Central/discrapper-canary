@@ -1,5 +1,5 @@
-_.r(
-    (e.exports = {
+o.r(
+    (a.exports = {
         uploadIconAnimateInLeft: "uploadIconAnimateInLeft_b78547",
         uploadIconAnimateInMiddle: "uploadIconAnimateInMiddle_b78547",
         uploadIconAnimateInRight: "uploadIconAnimateInRight_b78547",

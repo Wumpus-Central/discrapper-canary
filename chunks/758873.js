@@ -11,8 +11,8 @@ var E = i(582128),
     c = i(290863),
     o = i(994500),
     I = i(461213),
-    T = i(977997),
-    d = i(321191),
+    d = i(977997),
+    T = i(321191),
     R = i(343129),
     N = i(489379),
     u = i(818348),
@@ -24,9 +24,9 @@ let h = Object.freeze([]),
         PresenceStore: c.A,
         RelationshipStore: o.A,
         SelfPresenceStore: I.A,
-        UserProfileStore: d.A,
+        UserProfileStore: T.A,
     },
-    C = { ChannelStore: _.A, PermissionStore: A.A, PresenceStore: c.A, VoiceStateStore: T.A },
+    C = { ChannelStore: _.A, PermissionStore: A.A, PresenceStore: c.A, VoiceStateStore: d.A },
     D = { ...O, ...C },
     j = Object.freeze({ voiceActivity: void 0, voiceChannel: void 0, voiceState: void 0 });
 function L(e) {
@@ -98,7 +98,7 @@ function m(e) {
     let { userId: t, currentUserId: i, guildId: n } = e,
         r = (0, s.bG)([a.default], () => i ?? a.default.getId()),
         R = (0, s.cf)(
-            [l.A, S.Ay, c.A, o.A, I.A, d.A],
+            [l.A, S.Ay, c.A, o.A, I.A, T.A],
             () =>
                 L(
                     { userId: t, currentUserId: r, guildId: n },
@@ -108,17 +108,17 @@ function m(e) {
                         PresenceStore: c.A,
                         RelationshipStore: o.A,
                         SelfPresenceStore: I.A,
-                        UserProfileStore: d.A,
+                        UserProfileStore: T.A,
                     },
                 ),
             [r, n, t],
         ),
         N = (0, s.cf)(
-            [_.A, A.A, c.A, T.A],
+            [_.A, A.A, c.A, d.A],
             () =>
                 v(
                     { userId: t, guildId: n },
-                    { ChannelStore: _.A, PermissionStore: A.A, PresenceStore: c.A, VoiceStateStore: T.A },
+                    { ChannelStore: _.A, PermissionStore: A.A, PresenceStore: c.A, VoiceStateStore: d.A },
                 ),
             [n, t],
         );

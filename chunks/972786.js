@@ -1,34 +1,34 @@
-n.d(t, { A: () => A, P: () => l }), n(321073);
+n.d(t, { A: () => A, P: () => a }), n(321073);
 var i = n(17928),
     r = n(228366),
     o = n(287809);
-function l(e) {
+function a(e) {
     return e.owner_user_id === o.default.getCurrentUser()?.id;
 }
-let a = new Map(),
+let l = new Map(),
     u = new Map(),
     c = new Map(),
     _ = null,
-    s = new Set(),
-    d = [],
+    d = new Set(),
+    s = [],
     p = new Map();
 class E extends i.Ay.Store {
     initialize() {
         this.waitFor(o.default);
     }
     getOwnedProjects() {
-        return Array.from(a.values()).filter(l);
+        return Array.from(l.values()).filter(a);
     }
     getProject(e) {
-        return a.get(e) ?? null;
+        return l.get(e) ?? null;
     }
     findProjectByApplicationId(e) {
-        for (let t of a.values()) if (t.application_id === e || t.preview_application_id === e) return t;
+        for (let t of l.values()) if (t.application_id === e || t.preview_application_id === e) return t;
         return null;
     }
     getSharedProjects(e) {
         let t = [];
-        for (let n of a.values()) l(n) || n.guild_id !== e || t.push(n);
+        for (let n of l.values()) a(n) || n.guild_id !== e || t.push(n);
         return t;
     }
     getIntegrationStatus(e) {
@@ -38,13 +38,13 @@ class E extends i.Ay.Store {
         return c.get(e) ?? null;
     }
     getLogs(e) {
-        return p.get(e) ?? d;
+        return p.get(e) ?? s;
     }
     getProjectsFetchState() {
         return _;
     }
     hasFetchedGuildProjects(e) {
-        return s.has(e);
+        return d.has(e);
     }
     isVibegrationsProjectApplication(e) {
         return null != e && null != this.findProjectByApplicationId(e);
@@ -52,12 +52,12 @@ class E extends i.Ay.Store {
 }
 function h(e) {
     let { project: t } = e;
-    a.set(t.id, t);
+    l.set(t.id, t);
 }
 let A = new E(r.h, {
     LOGOUT: function () {
-        if (0 === a.size && 0 === u.size && 0 === c.size && 0 === p.size && 0 === s.size && null == _) return !1;
-        a.clear(), u.clear(), c.clear(), p.clear(), s.clear(), (_ = null);
+        if (0 === l.size && 0 === u.size && 0 === c.size && 0 === p.size && 0 === d.size && null == _) return !1;
+        l.clear(), u.clear(), c.clear(), p.clear(), d.clear(), (_ = null);
     },
     VIBEGRATIONS_PROJECTS_FETCH_START: function (e) {
         _ = { type: "loading" };
@@ -65,10 +65,10 @@ let A = new E(r.h, {
     VIBEGRATIONS_PROJECTS_FETCH_SUCCESS: function (e) {
         let { projects: t, guildId: n } = e,
             i = new Set(t.map((e) => e.id));
-        for (let [e, t] of a) !i.has(e) && (l(t) || (null != n && t.guild_id === n)) && a.delete(e);
-        for (let e of t) a.set(e.id, e);
-        for (let e of (null != n && s.add(n), u.keys())) a.has(e) || u.delete(e);
-        for (let [e, t] of c) a.has(t) || c.delete(e);
+        for (let [e, t] of l) !i.has(e) && (a(t) || (null != n && t.guild_id === n)) && l.delete(e);
+        for (let e of t) l.set(e.id, e);
+        for (let e of (null != n && d.add(n), u.keys())) l.has(e) || u.delete(e);
+        for (let [e, t] of c) l.has(t) || c.delete(e);
         _ = { type: "success", fetchedAt: Date.now() };
     },
     VIBEGRATIONS_PROJECTS_FETCH_FAIL: function (e) {
@@ -82,7 +82,7 @@ let A = new E(r.h, {
     },
     VIBEGRATIONS_PROJECT_DELETE_SUCCESS: function (e) {
         let { projectId: t } = e;
-        for (let [e, n] of (a.delete(t), u.delete(t), p.delete(t), c)) n === t && c.delete(e);
+        for (let [e, n] of (l.delete(t), u.delete(t), p.delete(t), c)) n === t && c.delete(e);
     },
     VIBEGRATIONS_PROJECT_SELECT: function (e) {
         let { guildId: t, projectId: n } = e;

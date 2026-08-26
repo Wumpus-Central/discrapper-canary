@@ -44,8 +44,8 @@ var U = n(363487),
     F = n(287809),
     H = n(147925),
     B = n(625494),
-    V = n(975571),
-    K = n(723702),
+    K = n(975571),
+    V = n(723702),
     z = n(314307),
     W = n(936649),
     $ = n(375708),
@@ -346,7 +346,7 @@ function Z(e) {
                     "message",
                 ),
             ),
-        (0, K.isWeb)() &&
+        (0, V.isWeb)() &&
             ev.push(
                 (0, l.jsx)(
                     r.A.div,
@@ -400,7 +400,7 @@ function Z(e) {
             ));
     let eT = ea ? $.intl.string($.t["1ach9C"]) : $.intl.string($.t["ezm+/j"]);
     es && (eT = $.intl.string($.t["gwyU/J"]));
-    let eM = `${V.A.getArticleURL(L.MVz.GUILD_GETTING_STARTED)}?utm_source=discord&utm_medium=blog&utm_campaign=2020-06_help-new-user&utm_content=--t%3Apm`;
+    let eM = `${K.A.getArticleURL(L.MVz.GUILD_GETTING_STARTED)}?utm_source=discord&utm_medium=blog&utm_campaign=2020-06_help-new-user&utm_content=--t%3Apm`;
     return (0, l.jsx)(z.Ay, {
         channelId: el.id,
         children: (0, l.jsx)("div", {

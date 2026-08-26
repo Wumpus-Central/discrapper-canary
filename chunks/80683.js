@@ -86,24 +86,24 @@ let B = function (e) {
         ],
     });
 };
-var V = n(228366),
-    K = n(857071);
+var K = n(228366),
+    V = n(857071);
 let z = null,
     W = null;
 function $() {
-    let e = K.A.mostRecentLurkedGuildId();
+    let e = V.A.mostRecentLurkedGuildId();
     null != e ? ((z = e), (W = null)) : ((W = null != z ? z : null), (z = null));
 }
 class J extends r.Ay.Store {
     static displayName = "LurkerModePopoutStore";
     initialize() {
-        this.syncWith([K.A], $);
+        this.syncWith([V.A], $);
     }
     shouldShowPopout(e) {
         return W === e;
     }
 }
-let q = new J(V.h);
+let q = new J(K.h);
 var Z = n(821609),
     Y = n(299409);
 let X = function (e) {
@@ -406,7 +406,7 @@ function eA(e) {
         o = (0, r.bG)([ea.A], () => ea.A.getCheck(s)),
         c = t.type === y.rbe.GUILD_ANNOUNCEMENT && null != a && a.features.has(y.GuildFeatures.NEWS),
         d = (0, r.bG)([el.A], () => (c ? el.A.getFollowerStatsForChannel(t.id) : null)),
-        u = (0, r.bG)([K.A], () => K.A.isLurking(s)),
+        u = (0, r.bG)([V.A], () => V.A.isLurking(s)),
         h = (0, r.bG)([eo.default], () => eo.default.getCurrentUser()),
         m = h?.isStaff() ?? !1,
         g = (0, r.bG)([ei.Ay], () => null != h && (ei.Ay.getMember(s, h.id)?.isPending ?? !1)),

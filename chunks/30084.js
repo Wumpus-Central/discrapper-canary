@@ -4,13 +4,13 @@ var a = n(477900),
     r = n(174459),
     s = n(652215);
 function i(e) {
-    let { analyticsLocations: t, displayProfile: i, location: d } = e;
-    null == d && (d = t[t.length - 1]),
+    let { analyticsLocations: t, displayProfile: i, location: o } = e;
+    null == o && (o = t[t.length - 1]),
         r.default.track(s.HAw.OPEN_MODAL, {
             type: "Tiered Tenure Badge Details",
             location_stack: t,
-            location: d,
-            source: d,
+            location: o,
+            source: o,
         }),
         (0, l.openModalLazy)(async () => {
             let { default: e } = await Promise.all([

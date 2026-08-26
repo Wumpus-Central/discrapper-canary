@@ -5,8 +5,8 @@ i.d(t, {
     L7: () => u,
     Mq: () => N,
     RP: () => I,
-    bk: () => T,
-    d6: () => d,
+    bk: () => d,
+    d6: () => T,
     dS: () => P,
     jM: () => O,
     pt: () => R,
@@ -36,14 +36,14 @@ var I =
         (E.WISHLIST = "WISHLIST"),
         (E.MAIN = "MAIN"),
         E),
-    T =
+    d =
         (((s = {}).ROLES = "ROLES"),
         (s.CONNECTIONS = "CONNECTIONS"),
         (s.APPS = "APPS"),
         (s.NOTE = "NOTE"),
         (s.RECENT_ACTIVITY = "RECENT_ACTIVITY"),
         s),
-    d =
+    T =
         (((n = {})[(n.NICKNAME = 0)] = "NICKNAME"),
         (n[(n.PRONOUNS = 1)] = "PRONOUNS"),
         (n[(n.AVATAR = 2)] = "AVATAR"),

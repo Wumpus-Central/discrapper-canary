@@ -37,7 +37,7 @@ function I() {
     else if (_.A.getFeaturedFetchState() === _.e.SUCCESS || c.pending) return Promise.resolve();
     return A.one(void 0, o, { force: e });
 }
-async function T() {
+async function d() {
     r.h.dispatch({ type: "APPLICATION_WIDGET_CONFIG_DEVELOPER_FETCH_START" });
     try {
         let e = await n.Bo.get({ url: S.Rsh.WIDGET_CONFIGS_DEVELOPER, rejectWithError: !0 });
@@ -51,10 +51,10 @@ async function T() {
     }
 }
 r.h.subscribe("LOGOUT", () => c.succeed());
-let d = new s.Zy();
+let T = new s.Zy();
 function R() {
     let { force: e = !1 } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-    return e || _.A.getDeveloperFetchState() !== _.e.SUCCESS ? d.one(void 0, T, { force: e }) : Promise.resolve();
+    return e || _.A.getDeveloperFetchState() !== _.e.SUCCESS ? T.one(void 0, d, { force: e }) : Promise.resolve();
 }
 async function N(e) {
     r.h.dispatch({ type: "APPLICATION_WIDGET_CONFIG_FETCH_START", applicationId: e });

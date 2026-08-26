@@ -9,14 +9,14 @@ var l = n(308528),
     c = n(381941);
 async function d(e) {
     let { userId: t, content: n, location: d, openChannel: f = !0, whenReady: h = !1, entry: m, nonce: A } = e,
-        { valid: x, failureReason: T } = await (0, u.i)({ type: a.oU.NORMAL, content: n, channel: null });
-    if (!x) throw Error(T);
-    let S = f ? await l.A.openPrivateChannel({ recipientIds: t, location: d }) : await l.A.getOrEnsurePrivateChannel(t),
-        g = o.A.getChannel(S);
-    if (null == g) throw Error("Failed to open private channel");
+        { valid: T, failureReason: S } = await (0, u.i)({ type: a.oU.NORMAL, content: n, channel: null });
+    if (!T) throw Error(S);
+    let g = f ? await l.A.openPrivateChannel({ recipientIds: t, location: d }) : await l.A.getOrEnsurePrivateChannel(t),
+        x = o.A.getChannel(g);
+    if (null == x) throw Error("Failed to open private channel");
     if (null != m)
         (0, i.d)({
-            channel: g,
+            channel: x,
             content: n,
             entry: m,
             whenReady: h,
@@ -24,7 +24,7 @@ async function d(e) {
             location: c.Hx.USER_PROFILE,
         });
     else {
-        let e = s.Ay.parse(g, n);
-        return r.A.sendMessage(g.id, e, h, { location: c.Hx.USER_PROFILE, nonce: A });
+        let e = s.Ay.parse(x, n);
+        return r.A.sendMessage(x.id, e, h, { location: c.Hx.USER_PROFILE, nonce: A });
     }
 }

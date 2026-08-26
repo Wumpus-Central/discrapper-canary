@@ -16,8 +16,8 @@ function I(e) {
             guildId: i,
             channelId: n,
             nick: I,
-            className: T,
-            textClassName: d,
+            className: d,
+            textClassName: T,
             disablePopout: R,
             ignoreModalClicks: N,
             onClick: u,
@@ -41,7 +41,7 @@ function I(e) {
             return (0, E.jsxs)(l.D, {
                 ...n,
                 innerRef: C,
-                className: r()(o.DV, T, { [o.YR]: R }),
+                className: r()(o.DV, d, { [o.YR]: R }),
                 onContextMenu: P,
                 onClick: (e) => {
                     s(e), u?.(e);
@@ -54,7 +54,7 @@ function I(e) {
                         size: _._3.SIZE_24,
                     }),
                     (0, E.jsx)(S.E, {
-                        className: r()(o.Ft, d),
+                        className: r()(o.Ft, T),
                         variant: "text-sm/normal",
                         children: (0, E.jsx)(A.A, { user: t, nick: I, usernameClass: o.Xh, hideDiscriminator: !0 }),
                     }),

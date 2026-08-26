@@ -1,12 +1,12 @@
-n.d(t, { A: () => o });
+n.d(t, { A: () => d });
 var a = n(582128),
     l = n(440745),
     r = n.n(l),
     s = n(317097),
     i = n(17928),
-    d = n(775602);
-let o = function (e) {
-    let t = (0, i.bG)([d.Ay], () => (d.Ay.desaturateUserColors ? d.Ay.saturation : 1));
+    o = n(775602);
+let d = function (e) {
+    let t = (0, i.bG)([o.Ay], () => (o.Ay.desaturateUserColors ? o.Ay.saturation : 1));
     return (0, a.useMemo)(() => {
         let { h: n, s: a, l } = r()((0, s.Hl)(e)).toHsl(),
             i = r()({ h: n, s: a * t, l });
