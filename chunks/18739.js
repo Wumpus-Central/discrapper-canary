@@ -2,7 +2,7 @@ n.d(t, {
     r2: () => Q,
     $S: () => ey,
     _v: () => eh,
-    n6: () => ek,
+    n6: () => eI,
     ss: () => ew,
     fu: () => z,
     cS: () => ef,
@@ -17,7 +17,7 @@ n.d(t, {
     vX: () => eu,
     Hc: () => Z,
     ST: () => ea,
-    PK: () => eI,
+    PK: () => ek,
     Bn: () => eb,
     y_: () => eE,
     XZ: () => ee,
@@ -132,11 +132,11 @@ var S = n(557875),
     T = n(652215),
     m = n(295813),
     A = n(375708);
-function I(e, t) {
+function k(e, t) {
     let n = e.pendingPublish;
     null != n && ((e.pendingPublish = null), clearTimeout(n.timeout), n.reject(Error(t)));
 }
-let k = new Map(),
+let I = new Map(),
     b = new Map(),
     v = new Map(),
     N = new Set(),
@@ -508,38 +508,41 @@ async function q(e, t) {
                                         console.error("[vibegrations] icon from agent failed", t, e), h("failed");
                                     });
                             }
-                        } else if ("turn_result" === r.kind)
-                            (0, u.Xv)(t, r),
-                                "deployed" === r.result &&
-                                    o.h.dispatch({
-                                        type: "VIBEGRATIONS_CHAT_TURN_PATCH",
-                                        projectId: t,
-                                        turnId: r.turn_id,
-                                        patch: { kind: "plan_implemented" },
-                                    }),
-                                o.h.dispatch({
-                                    type: "VIBEGRATIONS_CHAT_TURN_FINISHED",
-                                    projectId: t,
-                                    turnId: r.turn_id,
-                                    summary: r.summary,
-                                }),
-                                N.delete(t) &&
-                                    "cancelled" === r.result &&
-                                    o.h.dispatch({ type: "VIBEGRATIONS_CHAT_INTERRUPTED", projectId: t });
-                        else {
-                            o.h.dispatch({
-                                type: "VIBEGRATIONS_CHAT_STEP_APPEND",
-                                projectId: t,
-                                turnId: r.turn_id,
-                                step: r,
-                            });
-                            let e = L[r.kind];
-                            null != e && (0, u.Z0)(t, { ...e, message: r.message, details: r.stderr_tail }),
-                                "preview_ready" === r.kind &&
-                                    (0, d.tZ)(t, { isPreview: !0 }).catch((e) => {
-                                        console.error("[vibegrations] post-preview-publish refresh failed", t, e);
-                                    });
-                        }
+                        } else
+                            "turn_result" === r.kind
+                                ? ((0, u.Xv)(t, r),
+                                  "deployed" === r.result &&
+                                      o.h.dispatch({
+                                          type: "VIBEGRATIONS_CHAT_TURN_PATCH",
+                                          projectId: t,
+                                          turnId: r.turn_id,
+                                          patch: { kind: "plan_implemented" },
+                                      }),
+                                  o.h.dispatch({
+                                      type: "VIBEGRATIONS_CHAT_TURN_FINISHED",
+                                      projectId: t,
+                                      turnId: r.turn_id,
+                                      summary: r.summary,
+                                  }),
+                                  N.delete(t) &&
+                                      "cancelled" === r.result &&
+                                      o.h.dispatch({ type: "VIBEGRATIONS_CHAT_INTERRUPTED", projectId: t }))
+                                : (o.h.dispatch({
+                                      type: "VIBEGRATIONS_CHAT_STEP_APPEND",
+                                      projectId: t,
+                                      turnId: r.turn_id,
+                                      step: r,
+                                  }),
+                                  ("build_error" === r.kind || "healthcheck_failed" === r.kind || "error" === r.kind) &&
+                                      (0, u.Z0)(t, {
+                                          ...L[r.kind],
+                                          message: r.message,
+                                          details: "build_error" === r.kind ? r.stderr_tail : void 0,
+                                      }),
+                                  "preview_ready" === r.kind &&
+                                      (0, d.tZ)(t, { isPreview: !0 }).catch((e) => {
+                                          console.error("[vibegrations] post-preview-publish refresh failed", t, e);
+                                      }));
                     else if ("capture_preview" === r.type) J(t, n, r).catch(() => {});
                     else if ("control_preview" === r.type) W(t, n, r).catch(() => {});
                     else if ("control_claim" === r.type || "capture_claim" === r.type) {
@@ -591,7 +594,7 @@ async function q(e, t) {
                                   })(t, r));
                 })(e, t, n),
             onClose: () => {
-                (I(t, "Connection closed before the publish result arrived"), y(e), t.disposed)
+                (k(t, "Connection closed before the publish result arrived"), y(e), t.disposed)
                     ? O(e, "closed")
                     : t.helloSeen
                       ? ((t.reconnectPending = !0), O(e, "connecting"), t.backoff.fail(() => F(e)))
@@ -608,7 +611,7 @@ async function q(e, t) {
         O(e, "failed"),
             M(e, t, n instanceof Error ? n.message : "ws open failed"),
             (t.pendingModelSettings = null),
-            I(t, "Connection failed before the publish result arrived"),
+            k(t, "Connection failed before the publish result arrived"),
             (0, u.Z0)(e, {
                 location: "connection",
                 code: u.xA.WS_OPEN_FAILED,
@@ -617,7 +620,7 @@ async function q(e, t) {
     }
 }
 function F(e) {
-    let t = k.get(e);
+    let t = I.get(e);
     null == t &&
         ((t = {
             ws: new h(),
@@ -630,7 +633,7 @@ function F(e) {
             pendingModelSettings: null,
             pendingPublish: null,
         }),
-        k.set(e, t));
+        I.set(e, t));
     let n = t;
     (n.pendingEvents = []),
         (n.helloSeen = !1),
@@ -641,14 +644,14 @@ function F(e) {
 }
 function X(e) {
     var t;
-    let n = k.get(e);
+    let n = I.get(e);
     return (
         null != n &&
         ((n.disposed = !0),
         n.backoff.cancel(),
-        I(n, "Connection closed before the publish result arrived"),
+        k(n, "Connection closed before the publish result arrived"),
         n.ws.close(),
-        k.delete(e),
+        I.delete(e),
         (t = e),
         et.delete(t),
         p.A.releasePreviewControl(e),
@@ -658,7 +661,7 @@ function X(e) {
     );
 }
 function Z(e) {
-    let t = k.get(e);
+    let t = I.get(e);
     if (null == t) return void F(e);
     let n = b.get(e);
     ("closed" !== n && "failed" !== n) || t.reconnectPending || F(e);
@@ -668,7 +671,7 @@ function K(e, t, n) {
         i = null != n && n.length > 0 ? n : void 0;
     if ("" === r && null == i) return;
     let s = { content: r, nonce: (0, a.m)(), attachments: i },
-        o = k.get(e);
+        o = I.get(e);
     if (null != o && ("connecting" === b.get(e) || o.reconnectPending)) return void o.pendingSends.push(s);
     B(e, s);
     try {
@@ -683,7 +686,7 @@ function K(e, t, n) {
     }
 }
 function z(e) {
-    let t = k.get(e);
+    let t = I.get(e);
     try {
         if (null == t) throw Error("Not connected");
         t.ws.sendInterrupt(), w.Ay.isThinking(e) && N.add(e);
@@ -693,11 +696,11 @@ function z(e) {
 }
 function Y(e) {
     return new Promise((t, n) => {
-        let r = k.get(e);
+        let r = I.get(e);
         if (null == r) return void n(Error("Not connected"));
         if (null != r.pendingPublish) return void n(Error("Publish already in flight"));
         let i = setTimeout(() => {
-            I(r, "Publish timed out");
+            k(r, "Publish timed out");
         }, 12e4);
         r.pendingPublish = { resolve: t, reject: n, timeout: i };
         try {
@@ -710,13 +713,13 @@ function Y(e) {
     });
 }
 function Q(e, t) {
-    let n = k.get(e);
+    let n = I.get(e);
     null == n
         ? console.error("[vibegrations] stageModelSettings with no connection \u2014 call ensureConnection first")
         : (n.pendingModelSettings = t);
 }
 function ee(e, t) {
-    let n = k.get(e);
+    let n = I.get(e);
     try {
         if (null == n) throw Error("Not connected");
         n.ws.sendModelSettings(t);
@@ -729,7 +732,7 @@ function en(e) {
     let t = (0, w.bi)(e);
     if (null == t) return !1;
     if (et.get(e) === t) return !0;
-    let n = k.get(e);
+    let n = I.get(e);
     return null != n && (et.set(e, t), n.ws.sendLoadHistory(t), !0);
 }
 async function er(e) {
@@ -917,15 +920,15 @@ async function eA(e, t) {
         i = new URLSearchParams({ ticket: n });
     return `${r}/agent/screenshots/${encodeURIComponent(t)}?${i}`;
 }
-async function eI(e, t) {
+async function ek(e, t) {
     let { download: n = !1 } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
         { ticket: r, baseUrl: i } = await eo(e),
         s = new URLSearchParams({ ticket: r });
     return n && s.set("download", "1"), `${ed(i, t)}?${s}`;
 }
-async function ek(e, t) {
+async function eI(e, t) {
     async function n() {
-        return fetch(await eI(e, t), { method: "HEAD" });
+        return fetch(await ek(e, t), { method: "HEAD" });
     }
     let r = await n();
     if ((401 === r.status && (ei.delete(e), (r = await n())), 404 === r.status)) return !1;
@@ -981,12 +984,12 @@ let eN = [],
         },
         VIBEGRATIONS_PROJECTS_FETCH_SUCCESS: function (e) {
             let t = !1;
-            for (let e of Array.from(k.keys())) null == E.A.getProject(e) && X(e) && (t = !0);
+            for (let e of Array.from(I.keys())) null == E.A.getProject(e) && X(e) && (t = !0);
             if (!t) return !1;
         },
         LOGOUT: function () {
-            if (0 === k.size) return !1;
-            for (let e of Array.from(k.keys())) X(e);
+            if (0 === I.size) return !1;
+            for (let e of Array.from(I.keys())) X(e);
             v.clear(), ei.clear();
         },
     }),
