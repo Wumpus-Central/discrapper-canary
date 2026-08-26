@@ -79,6 +79,7 @@ function x(e) {
                                   gameId: e.game_id,
                                   title: e.title ?? void 0,
                                   tags: e.tags,
+                                  localClipId: e.local_clip_id ?? void 0,
                               }
                             : null,
                     )

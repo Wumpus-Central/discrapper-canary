@@ -1038,7 +1038,7 @@ async function tA(e, t) {
                 (0, W.XW)({
                     status: "pending",
                     id: (0, tf.m)(),
-                    sourceClipId: e.id,
+                    localClipId: e.id,
                     gameId: e.applicationId,
                     title: e.name,
                     uploadFilename: l,
@@ -1051,7 +1051,7 @@ async function tA(e, t) {
     }
 }
 function tv(e) {
-    let { widgetClipId: t, sourceClipId: n, className: l } = e,
+    let { widgetClipId: t, localClipId: n, className: l } = e,
         { trackUserProfileEditAction: s } = (0, eJ.NJ)(),
         r = V.intl.string(V.t.ib6Mgx);
     return (0, i.jsx)("div", {
@@ -1095,7 +1095,7 @@ function tS(e) {
                             (0, i.jsx)(tu.jV, { buttonRef: d(t.key), className: tE.BU }),
                             (0, i.jsx)(tv, {
                                 widgetClipId: t.key,
-                                sourceClipId: "pending" === t.status ? t.sourceClipId : void 0,
+                                localClipId: "pending" === t.status ? t.localClipId : void 0,
                                 className: tE.nM,
                             }),
                         ],
@@ -1205,13 +1205,13 @@ function tw(e) {
                                     title: e.title,
                                 },
                             ];
-                        let n = s.get(e.sourceClipId);
+                        let n = s.get(e.localClipId);
                         return null != n
                             ? [
                                   {
                                       status: "pending",
                                       key: e.id,
-                                      sourceClipId: e.sourceClipId,
+                                      localClipId: e.localClipId,
                                       thumbnail: n.clip.thumbnail,
                                       title: e.title,
                                   },
