@@ -44,6 +44,8 @@
     display: flex;
     flex-direction: column;
     gap: 12px;
+    -webkit-mask-image: linear-gradient(to bottom, #000 calc(100% - var(--space-16)), transparent);
+    mask-image: linear-gradient(to bottom, #000 calc(100% - var(--space-16)), transparent);
     padding: 4px var(--custom-user-profile-popout-body-padding-inline) 8px
 }
 
@@ -80,4 +82,4 @@
     z-index: var(--custom-user-profile-toast-z-index)
 }
 
-/*# sourceMappingURL=352421.4cc682679c92c315.css.map*/
+/*# sourceMappingURL=352421.53a7850ecf997a57.css.map*/
