@@ -15,48 +15,48 @@ let A = r.memo(function (e) {
     let {
             userId: t,
             userBio: n,
-            heading: a,
-            onClose: A,
-            animateOnHoverOrFocusOnly: x = !1,
+            onClose: a,
+            animateOnHoverOrFocusOnly: A = !1,
             isHoveringOrFocusing: T = !1,
             hidePersonalInformation: S = !1,
             hideRestrictedProfile: g = !1,
-            viewFullBioDisabled: p = !1,
+            viewFullBioDisabled: x = !1,
         } = e,
-        { context: E } = (0, u.NJ)(),
-        { analyticsLocations: v } = (0, o.Ay)(),
+        { context: p } = (0, u.NJ)(),
+        { analyticsLocations: E } = (0, o.Ay)(),
         [R, y] = r.useState(!1),
-        [j, C] = r.useState(!1),
-        N = r.useRef(null);
+        [v, C] = r.useState(!1),
+        j = r.useRef(null);
     return S || null == n || "" === n
         ? null
         : (0, l.jsxs)(f.A, {
-              heading: a,
+              heading: h.intl.string(h.t.ZzAR2Y),
+              hideHeading: !0,
               children: [
                   (0, l.jsx)("div", {
                       ref: (e) => {
-                          (N.current = e),
+                          (j.current = e),
                               null == e ||
-                                  (y(!j && e.scrollHeight - e.clientHeight > 1),
+                                  (y(!v && e.scrollHeight - e.clientHeight > 1),
                                   e.getBoundingClientRect().height > 57.75 && C(!0));
                       },
-                      className: i()(m.mA, j && m.Em),
+                      className: i()(m.mA, v && m.Em),
                       onBlur: function (e) {
-                          null == N.current ||
-                              N.current.contains(e.relatedTarget) ||
-                              (null == N.current.querySelector('[aria-expanded="true"][aria-controls]') &&
-                                  (N.current.scrollTop = 0));
+                          null == j.current ||
+                              j.current.contains(e.relatedTarget) ||
+                              (null == j.current.querySelector('[aria-expanded="true"][aria-controls]') &&
+                                  (j.current.scrollTop = 0));
                       },
                       children: (0, l.jsx)(d.A, {
                           userId: t,
                           userBio: n,
                           setLineClamp: !1,
                           textColor: "text-strong",
-                          animateOnHoverOrFocusOnly: x,
+                          animateOnHoverOrFocusOnly: A,
                           isHoveringOrFocusing: T,
                       }),
                   }),
-                  (R || j) &&
+                  (R || v) &&
                       (0, l.jsx)("div", {
                           className: m.HV,
                           children: (0, l.jsx)(s.Q, {
@@ -65,15 +65,15 @@ let A = r.memo(function (e) {
                               variant: "secondary",
                               text: h.intl.string(h.t.YDiPq8),
                               onClick: function () {
-                                  A?.(),
+                                  a?.(),
                                       (0, c.openUserProfileModal)({
-                                          ...E,
+                                          ...p,
                                           userId: t,
                                           hideRestrictedProfile: g,
-                                          sourceAnalyticsLocations: v,
+                                          sourceAnalyticsLocations: E,
                                       });
                               },
-                              disabled: p,
+                              disabled: x,
                           }),
                       }),
               ],

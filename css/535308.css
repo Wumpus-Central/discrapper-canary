@@ -47,7 +47,11 @@
 .header_bf424d {
     align-items: center;
     display: flex;
-    gap: 4px
+    gap: 2px
+}
+
+.headingIcon_bf424d {
+    display: block
 }
 
 .list__20827 {
@@ -74,4 +78,4 @@
     flex: 0 0 auto
 }
 
-/*# sourceMappingURL=535308.5693bf0d651c0174.css.map*/
+/*# sourceMappingURL=535308.47c69a2d297f202f.css.map*/

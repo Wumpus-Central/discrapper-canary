@@ -1,0 +1,121 @@
+.container__9bfb9 {
+    gap: 16px;
+    width: 100%
+}
+
+.connectionList__9bfb9,
+.container__9bfb9 {
+    display: flex;
+    flex-direction: column
+}
+
+.connectionList__9bfb9 {
+    gap: var(--space-16)
+}
+
+.addConnectionButton__9bfb9 {
+    align-items: center;
+    align-self: flex-start;
+    color: var(--text-muted);
+    cursor: pointer;
+    display: flex;
+    gap: 2px;
+    transition: color 50ms ease-in
+}
+
+.addConnectionButton__9bfb9:hover {
+    color: var(--interactive-text-hover);
+    transition: color .15s ease-out
+}
+
+.connection__9bfb9 {
+    display: flex;
+    gap: 8px
+}
+
+.connectionInfo__9bfb9 {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    justify-content: center;
+    min-width: 0
+}
+
+.platformIconContainer__9bfb9 {
+    align-items: center;
+    background-color: var(--white);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-sm);
+    box-sizing: border-box;
+    color: var(--neutral-69);
+    display: flex;
+    flex-shrink: 0;
+    height: 24px;
+    justify-content: center;
+    width: 24px
+}
+
+.platformIcon__9bfb9 {
+    height: 18px;
+    width: 18px
+}
+
+.applicationConnectionIcon__9bfb9 {
+    border-radius: 18px
+}
+
+.accountName__9bfb9 {
+    align-items: center;
+    display: flex;
+    gap: 2px;
+    min-width: 0
+}
+
+.linkIcon__9bfb9 {
+    flex: 0 0 auto
+}
+
+.accountNameText__9bfb9 {
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    user-select: text;
+    white-space: nowrap
+}
+
+.platformUrlAnchor__9bfb9 {
+    color: var(--text-default)
+}
+
+.platformUrlAnchor__9bfb9:hover {
+    text-decoration: underline
+}
+
+.metadata__9bfb9 {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    overflow: hidden
+}
+
+.metadata__9bfb9:empty {
+    display: none
+}
+
+.connectedAppRoleAccountClickable__9bfb9 {
+    cursor: pointer;
+    margin-bottom: 2px
+}
+
+.connectedAppRoleAccountPoweredBy__9bfb9 {
+    display: inline
+}
+
+.section_be87fd {
+    color: var(--text-default)
+}
+
+/*# sourceMappingURL=639a574509f56578.css.map*/

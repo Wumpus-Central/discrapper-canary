@@ -1,31 +1,29 @@
-n.d(t, { E: () => x, A: () => R });
+n.d(t, { E: () => A, A: () => x });
 var a = n(477900),
     l = n(582128),
     r = n(503698),
     s = n.n(r),
     i = n(834730),
-    d = n(140735),
-    o = n(707554),
-    c = n(28863),
-    u = n(174459),
-    f = n(559868),
-    E = n(652215),
-    m = n(375708);
-function g() {
-    u.default.track(E.HAw.CHANGE_LOG_CTA_CLICKED, { cta_type: "profile_bio", target: f.Do });
+    o = n(28863),
+    d = n(174459),
+    c = n(559868),
+    u = n(652215),
+    f = n(375708);
+function m() {
+    d.default.track(u.HAw.CHANGE_LOG_CTA_CLICKED, { cta_type: "profile_bio", target: c.Do });
 }
-function p() {
+function E() {
     return (0, a.jsxs)(a.Fragment, {
         children: [
-            (0, a.jsx)("span", { children: m.intl.string(m.t.OJmNR9) }),
+            (0, a.jsx)("span", { children: f.intl.string(f.t.OJmNR9) }),
             (0, a.jsx)("br", {}),
             (0, a.jsx)("br", {}),
             (0, a.jsx)("span", {
-                children: m.intl.format(m.t.RCYeBL, {
+                children: f.intl.format(f.t.RCYeBL, {
                     blogHook: (e, t) =>
                         (0, a.jsx)(
-                            c.Anchor,
-                            { onClick: g, target: "_blank", rel: "noreferrer noopener", href: f.Do, children: e },
+                            o.Anchor,
+                            { onClick: m, target: "_blank", rel: "noreferrer noopener", href: c.Do, children: e },
                             t,
                         ),
                 }),
@@ -33,50 +31,44 @@ function p() {
         ],
     });
 }
-var b = n(311016),
-    _ = n(692051),
-    h = n(713804),
-    A = n(165648);
-function R(e) {
+var g = n(311016),
+    p = n(692051),
+    b = n(713804),
+    h = n(900179),
+    _ = n(165648);
+function x(e) {
     let {
             userBio: t,
             className: n,
             animateOnHoverOrFocusOnly: r = !1,
-            isHoveringOrFocusing: d = !1,
-            lineClamp: o = 6,
+            isHoveringOrFocusing: o = !1,
+            lineClamp: d = 6,
             setLineClamp: c = !0,
             textColor: u,
             userId: f,
         } = e,
-        E = l.useMemo(
-            () => ((0, b.A)(f) ? (0, a.jsx)(p, {}) : null == t || "" === t ? null : (0, h.parseBioReact)(t)),
+        m = l.useMemo(
+            () => ((0, g.A)(f) ? (0, a.jsx)(E, {}) : null == t || "" === t ? null : (0, b.parseBioReact)(t)),
             [f, t],
         );
-    return null == E
+    return null == m
         ? null
         : (0, a.jsx)("div", {
-              className: s()(n, A.PT),
+              className: s()(n, _.PT),
               children: (0, a.jsx)(i.E, {
                   variant: "text-sm/normal",
-                  lineClamp: c ? o : void 0,
+                  lineClamp: c ? d : void 0,
                   color: void 0 !== u ? u : void 0,
-                  children: (0, a.jsx)(_.Y.Provider, {
-                      value: { disableAnimations: r && !d, disableInteractions: !1 },
-                      children: E,
+                  children: (0, a.jsx)(p.Y.Provider, {
+                      value: { disableAnimations: r && !o, disableInteractions: !1 },
+                      children: m,
                   }),
               }),
           });
 }
-function x(e) {
-    let t = l.useId(),
-        { userBio: n, userId: r } = e;
-    return (0, b.A)(r) || (null != n && "" !== n)
-        ? (0, a.jsxs)("section", {
-              "aria-labelledby": t,
-              children: [
-                  (0, a.jsx)(d.A, { children: (0, a.jsx)(o.H, { id: t, children: m.intl.string(m.t.ZzAR2Y) }) }),
-                  (0, a.jsx)(R, { ...e }),
-              ],
-          })
+function A(e) {
+    let { userBio: t, userId: n } = e;
+    return (0, g.A)(n) || (null != t && "" !== t)
+        ? (0, a.jsx)(h.A, { heading: f.intl.string(f.t.ZzAR2Y), hideHeading: !0, children: (0, a.jsx)(x, { ...e }) })
         : null;
 }
