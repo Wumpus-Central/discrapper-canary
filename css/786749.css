@@ -11,7 +11,7 @@
 
 .separator_aa63ab {
     align-self: center;
-    background-color: var(--border-muted);
+    background-color: var(--border-normal);
     height: var(--chat-markup-line-height);
     margin-inline-start: 0;
     width: 1px
@@ -118,4 +118,4 @@
     display: inline
 }
 
-/*# sourceMappingURL=786749.5ed5a9f9d032da92.css.map*/
+/*# sourceMappingURL=786749.4ac6f092b5b662cc.css.map*/
