@@ -2434,6 +2434,7 @@ var e5 = n(335871),
         (I[(I.ROLLING_OUT = 4)] = "ROLLING_OUT"),
         (I[(I.ARCHIVED = 6)] = "ARCHIVED"),
         (I[(I.AA_MODE = 7)] = "AA_MODE"),
+        (I[(I.PAUSED = 8)] = "PAUSED"),
         I);
 class tl extends m.G {
     constructor() {
