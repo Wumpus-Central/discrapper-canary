@@ -4,7 +4,7 @@ var i = n(17928),
     r = n(228366),
     a = n(511963),
     s = n(851746),
-    l = n(945960);
+    l = n(10392);
 let o = (0, n(945810).mj)({
     name: "2026-02-premium-offer-reminder-xp",
     kind: "user",

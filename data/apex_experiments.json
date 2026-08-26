@@ -3778,28 +3778,6 @@
     }
   },
   {
-    "name": "2026-06-android-two-week-trials",
-    "kind": "user",
-    "defaultConfig": {
-      "enabled": false,
-      "trialCTAEnabled": false
-    },
-    "variations": {
-      "0": {
-        "enabled": false,
-        "variant": 0
-      },
-      "1": {
-        "enabled": true,
-        "trialCTAEnabled": true
-      },
-      "2": {
-        "enabled": true,
-        "trialCTAEnabled": false
-      }
-    }
-  },
-  {
     "name": "2026-06-av1-encode-linux",
     "kind": "user",
     "defaultConfig": {

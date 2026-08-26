@@ -11,13 +11,7 @@ var i = n(636537),
     u = n(174459),
     _ = n(723702),
     E = n(38405);
-(0, n(945810).mj)({
-    name: "2026-06-android-two-week-trials",
-    kind: "user",
-    defaultConfig: { enabled: !1, trialCTAEnabled: !1 },
-    variations: { 1: { enabled: !0, trialCTAEnabled: !0 }, 2: { enabled: !0, trialCTAEnabled: !1 } },
-}),
-    n(202541);
+n(202541);
 var A = n(652215);
 function h() {
     let e = null;

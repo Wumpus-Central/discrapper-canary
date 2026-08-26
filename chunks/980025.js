@@ -1455,7 +1455,7 @@ if (
     n.e("859864").then(n.t.bind(n, 122123, 19));
 let e2 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 new eB.A().log(
-    `[BUILD INFO] Release Channel: ${e2}, Build Number: 601491, Version Hash: 159b3ae69488153ca9444e24f95cf7431d107407`,
+    `[BUILD INFO] Release Channel: ${e2}, Build Number: 601560, Version Hash: 387173773cb89ea2d8164b889d17a4be6e57cc43`,
 ),
     D.A.setTags({ appContext: G.QCW }),
     eI.A.initBasic(),
@@ -20909,7 +20909,7 @@ let Nu = "isHideDevBanner",
                     className: ta()(Nc.Wz, Nc.mr),
                     children: [
                         (0, O.jsx)(Nd, { className: Nc.Kk }),
-                        tT.intl.format(tT.t.uyrfYF, { buildNumber: "601491" }),
+                        tT.intl.format(tT.t.uyrfYF, { buildNumber: "601560" }),
                         (0, O.jsx)(r, {}),
                     ],
                 })
@@ -34382,7 +34382,7 @@ var va = n(499454),
     vs = n(17159),
     vl = n(478437),
     vo = n(116956),
-    vd = n(945960),
+    vd = n(10392),
     vc = n(818348);
 class vu extends t8.A {
     _initialize() {
