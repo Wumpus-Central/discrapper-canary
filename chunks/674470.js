@@ -21,8 +21,8 @@ var i,
     d = n(17928),
     c = n(626584),
     u = n(945810),
-    _ = n(677413),
-    E = n(383233),
+    _ = n(320095),
+    E = n(677413),
     A = n(287809),
     h = n(403362),
     I = n(474090),
@@ -54,12 +54,12 @@ let N = (0, u.mj)({
 });
 function C(e) {
     let { content: t, flags: n } = e,
-        [i, r] = (0, _.Ay)(t);
+        [i, r] = (0, E.Ay)(t);
     return i ? [r, (0, o.UI)(n ?? 0, p.pr7.SUPPRESS_NOTIFICATIONS)] : [t, n ?? 0];
 }
 function O(e) {
     let { content: t, flags: n } = e;
-    return (0, o.Lt)(n ?? 0, p.pr7.SUPPRESS_NOTIFICATIONS) ? `${_.f5} ${t}` : t;
+    return (0, o.Lt)(n ?? 0, p.pr7.SUPPRESS_NOTIFICATIONS) ? `${E.f5} ${t}` : t;
 }
 function R() {
     return N.useConfig({ location: "useCanUseScheduledMessages" }).enabled;
@@ -95,8 +95,8 @@ function M(e) {
         userId: e.user_id,
         scheduledMessageId: e.scheduled_message_id,
         sendAtTimestamp: e.send_at_timestamp,
-        scheduledMessage: {
-            channelId: (t = e.scheduled_message).channel_id,
+        createArgs: {
+            channelId: (t = e.create_args).channel_id,
             content: t.content,
             type: t.type,
             flags: t.flags,
@@ -109,13 +109,7 @@ function M(e) {
             description: e.description,
             title: e.title,
         })),
-        record: new E.Ay({
-            id: e.scheduled_message_id,
-            content: e.scheduled_message.content,
-            author: A.default.getUser(e.user_id),
-            timestamp: l()(e.send_at_timestamp).toDate(),
-            channel_id: e.scheduled_message.channel_id,
-        }),
+        record: (0, _.rh)({ ...e.message_preview, timestamp: e.send_at_timestamp }),
     };
 }
 function P(e) {

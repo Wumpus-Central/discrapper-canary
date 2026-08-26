@@ -2411,7 +2411,7 @@ function sG(e) {
     let { scheduledMessage: t, channel: n, onCancel: s } = e,
         [l, r] = i.useState(() => {
             let e = eA.D_.getSetting(),
-                s = (0, tt.zs)(t.scheduledMessage),
+                s = (0, tt.zs)(t.createArgs),
                 l = sk.Ay.unparse(s, n.id);
             return { textValue: l, richValue: (0, sT.x7)(e ? l : s) };
         }),
@@ -2419,7 +2419,7 @@ function sG(e) {
             r({ textValue: t, richValue: n });
         }, []),
         c = t.scheduledMessageId,
-        o = t.scheduledMessage.flags,
+        o = t.createArgs.flags,
         u = i.useCallback(
             (e, t, n) => {
                 let { content: s } = n;
@@ -2487,7 +2487,7 @@ function sU(e) {
                                             sz,
                                             {
                                                 scheduledMessage: e,
-                                                channelId: e.scheduledMessage.channelId,
+                                                channelId: e.createArgs.channelId,
                                                 isPendingDeletion: l.has(e.scheduledMessageId),
                                                 onJump: t,
                                             },
