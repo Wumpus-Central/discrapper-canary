@@ -3742,6 +3742,7 @@ var rb =
         (ew.UI_LIFECYCLE = "ui_lifecycle"),
         (ew.FOREGROUND_SERVICE = "foreground_service"),
         (ew.IOS_METRIC_KIT_PAYLOAD_RECEIVED = "ios_metric_kit_payload_received"),
+        (ew.ANDROID_ART_PROFILE_SNAPSHOT = "android_art_profile_snapshot"),
         (ew.ANDROID_JANK_STATS = "android_jank_stats"),
         (ew.ANDROID_JANK_SESSION = "android_jank_session"),
         (ew.IOS_JANK_STATS = "ios_jank_stats"),
