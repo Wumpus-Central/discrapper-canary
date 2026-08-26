@@ -8,28 +8,48 @@ function a(e) {
 async function s(e) {
     if (!a(e)) return e;
     try {
-        let [{ preConvertHeicForUpload: t }, { HeicUploadConversionExperiment: i }, { default: a }] = await Promise.all(
-                [
-                    n.e("422405").then(n.bind(n, 158948)),
-                    Promise.resolve().then(n.bind(n, 669646)),
-                    Promise.resolve().then(n.bind(n, 860840)),
-                ],
-            ),
-            s = i.getConfig({ location: "heicPreConvert.maybePreConvertHeicItem" });
-        if (!s.enabled) return { ...e, heicConversionEvaluated: !0 };
-        let l = e.file,
-            o = await t(l, s.quality, s.maxFileSizeBytes);
-        if (o === l) return { ...e, heicConversionEvaluated: !0 };
-        let d = (await a.fromBlob(l).catch(() => null)) ?? void 0,
-            c = {
+        let [
+                { maybeConvertHeicToJpeg: t, renameToJpegExtension: i, HeicConversionFailureReason: a },
+                { HeicUploadConversionExperiment: s },
+                { default: l },
+            ] = await Promise.all([
+                n.e("422405").then(n.bind(n, 158948)),
+                Promise.resolve().then(n.bind(n, 669646)),
+                Promise.resolve().then(n.bind(n, 860840)),
+            ]),
+            o = s.getConfig({ location: "heicPreConvert.maybePreConvertHeicItem" });
+        if (!o.enabled) return { ...e, heicConversionEvaluated: !0 };
+        let d = e.file,
+            c = await t(d, o.quality, o.maxFileSizeBytes);
+        if (null == c || !c.success || null == c.convertedBlob) {
+            let t =
+                null == c
+                    ? void 0
+                    : {
+                          convertedMimeType: null,
+                          conversionFailureReason: c.reason ?? a.UNKNOWN_ERROR,
+                          compressTimeMs: c.compressTimeMs,
+                      };
+            return { ...e, heicConversionEvaluated: !0, heicConversionAnalytics: t };
+        }
+        let u = new File([c.convertedBlob], i(d.name), { type: "image/jpeg", lastModified: d.lastModified }),
+            _ = (await l.fromBlob(d).catch(() => null)) ?? void 0,
+            E = {
                 originalContentType:
                     e.compressionMetadata?.originalContentType != null &&
                     "" !== e.compressionMetadata.originalContentType
                         ? e.compressionMetadata.originalContentType
-                        : (0, r.II)(l),
-                preCompressionSize: e.compressionMetadata?.preCompressionSize ?? l.size,
+                        : (0, r.II)(d),
+                preCompressionSize: e.compressionMetadata?.preCompressionSize ?? d.size,
             };
-        return { ...e, file: o, compressionMetadata: c, originalMd5: d, heicConversionEvaluated: !0 };
+        return {
+            ...e,
+            file: u,
+            compressionMetadata: E,
+            originalMd5: _,
+            heicConversionEvaluated: !0,
+            heicConversionAnalytics: { convertedMimeType: "image/jpeg", compressTimeMs: c.compressTimeMs },
+        };
     } catch {
         return e;
     }

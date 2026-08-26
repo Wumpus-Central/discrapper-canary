@@ -155,7 +155,8 @@ class w extends O.Ay {
         );
     }
     constructor(e, t, n, i) {
-        super(e),
+        if (
+            (super(e),
             (this.channelId = t),
             (this.preCompressionSize = e.file?.size ?? 0),
             (this.currentSize = e.file?.size ?? 0),
@@ -163,9 +164,17 @@ class w extends O.Ay {
             null != i && (this.allowOptimization = i),
             e.platform === O.xz.WEB &&
                 null != e.compressionMetadata &&
-                (this.mimeType = e.compressionMetadata.originalContentType),
+                ((this.mimeType = e.compressionMetadata.originalContentType),
+                (this.preCompressionSize = e.compressionMetadata.preCompressionSize)),
             e.platform === O.xz.WEB && null != e.originalMd5 && (this._originalMd5 = e.originalMd5),
-            (this._abortController = new AbortController()),
+            e.platform === O.xz.WEB && null != e.heicConversionAnalytics)
+        ) {
+            const { convertedMimeType: t, conversionFailureReason: n, compressTimeMs: i } = e.heicConversionAnalytics;
+            null != t && (this.uploadAnalytics.convertedMimeType = t),
+                null != n && (this.uploadAnalytics.conversionFailureReason = n),
+                (this.uploadAnalytics.timing.compressTimeMs = i);
+        }
+        (this._abortController = new AbortController()),
             null != this.origin &&
                 (this.uploadAnalytics.origin = "string" == typeof this.origin ? this.origin : O.Cj[this.origin]),
             (this._uploadHttpClient = new L.nd()),
