@@ -4875,22 +4875,6 @@
     }
   },
   {
-    "name": "2026-07-collectibles-collabs-filter",
-    "kind": "user",
-    "defaultConfig": {
-      "collabsFilterEnabled": false
-    },
-    "variations": {
-      "0": {
-        "enabled": false,
-        "variant": 0
-      },
-      "1": {
-        "collabsFilterEnabled": true
-      }
-    }
-  },
-  {
     "kind": "user",
     "name": "2026-07-create-gdm-title",
     "defaultConfig": {
