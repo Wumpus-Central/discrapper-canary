@@ -979,6 +979,7 @@ class eE extends i.Component {
     _unsubscribe;
     _initTimeoutId = null;
     _cachedEditorWindow = null;
+    _emptyRichValue = (0, y.x7)("");
     constructor(e) {
         super(e),
             (this._unsubscribe = S.Y0.subscribe((e) => {
@@ -1146,23 +1147,23 @@ class eE extends i.Component {
                 className: x,
                 id: C,
                 required: E,
-                maxCharacterCount: S,
-                allowNewLines: v,
-                "aria-describedby": N,
-                "aria-labelledby": _,
-                accessibilityLabel: T,
-                showValueWhenDisabled: j,
+                maxCharacterCount: y,
+                allowNewLines: S,
+                "aria-describedby": v,
+                "aria-labelledby": N,
+                accessibilityLabel: _,
+                showValueWhenDisabled: T,
             } = this.props,
-            { submitting: b, popup: R } = this.state,
-            O = {
+            { submitting: j, popup: b } = this.state,
+            R = {
                 channel: d,
-                className: r()(x, eA.Tg, { [eA.w5]: m, [eA.Rr]: n || b }),
+                className: r()(x, eA.Tg, { [eA.w5]: m, [eA.Rr]: n || j }),
                 id: C,
                 placeholder: this.getPlaceholder(),
                 required: E,
-                accessibilityLabel: T,
+                accessibilityLabel: _,
                 disabled: n || !1,
-                submitting: b,
+                submitting: j,
                 isEdit: h === I.oU.EDIT,
                 onFocus: this.handleFocus,
                 onBlur: this.handleBlur,
@@ -1173,7 +1174,7 @@ class eE extends i.Component {
                 moveSelection: this.handleMoveSelection,
                 maybeShowAutocomplete: this.maybeShowAutocomplete,
                 hideAutocomplete: this.hideAutocomplete,
-                allowNewLines: v,
+                allowNewLines: S,
                 onChange: i,
                 onResize: a,
                 onKeyDown: s,
@@ -1188,31 +1189,31 @@ class eE extends i.Component {
                 useNewSlashCommands: p,
                 disableAutoFocus: u.Fr || (h.disableAutoFocus ?? !1),
                 disableEnterToSubmit: h.submit?.disableEnterToSubmit ?? !1,
-                "aria-controls": R.id ?? void 0,
+                "aria-controls": b.id ?? void 0,
                 "aria-haspopup": "listbox",
-                "aria-expanded": null !== R.id || void 0,
-                "aria-activedescendant": R.activeDescendant ?? void 0,
-                "aria-invalid": e.length > S,
-                "aria-describedby": N,
-                "aria-labelledby": _,
+                "aria-expanded": null !== b.id || void 0,
+                "aria-activedescendant": b.activeDescendant ?? void 0,
+                "aria-invalid": e.length > y,
+                "aria-describedby": v,
+                "aria-labelledby": N,
                 "aria-autocomplete": "list",
             },
-            M = m
+            O = m
                 ? (0, l.jsx)(ex, {
                       ref: this.ref,
-                      ...O,
+                      ...R,
                       type: h,
-                      value: n && !j ? (0, y.x7)("") : t,
+                      value: n && !T ? this._emptyRichValue : t,
                       canUseCommands: h.commands?.enabled,
                       canOnlyUseTextCommands: g,
                       onSubmitFailure: c,
                   })
-                : (0, l.jsx)(D, { ref: this.ref, ...O, value: n && !j ? "" : e });
+                : (0, l.jsx)(D, { ref: this.ref, ...R, value: n && !T ? "" : e });
         return (0, l.jsxs)(l.Fragment, {
             children: [
                 (0, l.jsx)(A.EG, { event: w.jej.INSERT_TEXT, handler: this.handleInsertText }),
                 (0, l.jsx)(A.EG, { event: w.jej.CLEAR_TEXT, handler: this.handleClearText }),
-                M,
+                O,
             ],
         });
     }
