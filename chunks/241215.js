@@ -67,7 +67,7 @@ let T = function (e) {
               style: { width: T, height: _ },
               className: b.Lw,
               onClick: function () {
-                  null != P && (r.A.selectParticipant(P.id, null), S());
+                  null != P && S();
               },
               tabIndex: -1,
               "aria-hidden": !0,
