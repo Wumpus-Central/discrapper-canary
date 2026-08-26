@@ -74,6 +74,18 @@
     padding-inline: var(--space-md) var(--space-xxs)
 }
 
+@media (hover:hover) {
+    .membersGroupNitroLabel_c8ffbb:hover {
+        color: var(--interactive-text-hover)
+    }
+}
+
+.membersGroupNitroWheel_c8ffbb {
+    margin-inline-end: var(--space-xxs);
+    transform: translateY(-2px);
+    vertical-align: middle
+}
+
 .membersGroupHeader_c8ffbb {
     display: flex;
     flex-direction: row
@@ -163,4 +175,4 @@
     }
 }
 
-/*# sourceMappingURL=245758.54ef86b90bf2fc48.css.map*/
+/*# sourceMappingURL=245758.cdd125d464664edb.css.map*/

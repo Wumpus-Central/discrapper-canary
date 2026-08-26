@@ -135,6 +135,21 @@
     margin-inline: -8px
 }
 
+.nitroUpsellBannerOverlay_cba592 {
+    inset-inline: 0;
+    bottom: calc(var(--space-8) + 1px);
+    height: calc(var(--space-64) + var(--space-24) + var(--space-48));
+    overflow: clip;
+    pointer-events: none;
+    position: absolute
+}
+
+footer:has(>.nitroUpsellBannerOverlay_cba592) {
+    padding: 0;
+    position: relative;
+    z-index: 1
+}
+
 .mobileToolsContainer_cba592 {
     inset-inline-end: 16px;
     position: absolute;
@@ -227,4 +242,4 @@
     gap: 8px
 }
 
-/*# sourceMappingURL=274972.27455c16fe92940a.css.map*/
+/*# sourceMappingURL=274972.3ce052fc3fb980e8.css.map*/

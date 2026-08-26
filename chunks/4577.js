@@ -5,6 +5,8 @@ e.exports = {
     ol: "members_c8ffbb",
     Dc: "member_c8ffbb",
     lL: "membersGroup_c8ffbb",
+    BY: "membersGroupNitroLabel_c8ffbb",
+    K4: "membersGroupNitroWheel_c8ffbb",
     CN: "membersGroupHeader_c8ffbb",
     iy: "membersGroupName_c8ffbb",
     ML: "hiddenMembers_c8ffbb",

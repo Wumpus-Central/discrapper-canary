@@ -4173,6 +4173,22 @@
     }
   },
   {
+    "kind": "user",
+    "name": "2026-06-nitro-gdm-cap-increase",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
     "name": "2026-06-non-friend-messages-requests-in-uk",
     "kind": "user",
     "defaultConfig": {
