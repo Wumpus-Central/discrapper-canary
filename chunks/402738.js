@@ -3934,72 +3934,93 @@ function ld(e) {
 var lc = n(643278),
     lm = n(405189);
 function lh(e) {
-    let { line: t, placement: n, todos: l, provisionalTodo: r, agents: o } = e,
-        u = null != n,
-        [d, c] = i.useState(n ?? "top"),
-        [m, h] = i.useState(u),
-        [f, g] = i.useState(!1),
-        [x, p] = i.useState(!1),
-        [v, j] = i.useState(u);
-    v !== u && (j(u), null != n ? (c(n), h(!0)) : (g(!1), p(!1))),
+    let { line: t, placement: n, todos: l, provisionalTodo: r, agents: o, onJumpToActivity: u } = e,
+        d = null != n,
+        [c, m] = i.useState(n ?? "top"),
+        [h, f] = i.useState(d),
+        [g, x] = i.useState(!1),
+        [p, v] = i.useState(!1),
+        [j, b] = i.useState(d);
+    j !== d && (b(d), null != n ? (m(n), f(!0)) : (x(!1), v(!1))),
         i.useEffect(() => {
-            if (u || !m) return;
-            let e = setTimeout(() => h(!1), 150);
+            if (d || !h) return;
+            let e = setTimeout(() => f(!1), 150);
             return () => clearTimeout(e);
-        }, [u, m]),
+        }, [d, h]),
         i.useEffect(() => {
-            if (!m || !u) return;
+            if (!h || !d) return;
             let e = 0,
                 t = requestAnimationFrame(() => {
-                    e = requestAnimationFrame(() => g(!0));
+                    e = requestAnimationFrame(() => x(!0));
                 });
             return () => {
                 cancelAnimationFrame(t), cancelAnimationFrame(e);
             };
-        }, [m, u]);
-    let [b, y] = i.useState(!1),
-        [k, A] = i.useState(!1),
-        [w, N] = i.useState(x);
-    w !== x && (N(x), x ? y(!0) : A(!1)),
+        }, [h, d]);
+    let [y, k] = i.useState(!1),
+        [A, w] = i.useState(!1),
+        [N, C] = i.useState(p);
+    N !== p && (C(p), p ? k(!0) : w(!1)),
         i.useEffect(() => {
-            if (x || !b) return;
-            let e = setTimeout(() => y(!1), 150);
+            if (p || !y) return;
+            let e = setTimeout(() => k(!1), 150);
             return () => clearTimeout(e);
-        }, [x, b]),
+        }, [p, y]),
         i.useEffect(() => {
-            if (!b || !x) return;
+            if (!y || !p) return;
             let e = 0,
                 t = requestAnimationFrame(() => {
-                    e = requestAnimationFrame(() => A(!0));
+                    e = requestAnimationFrame(() => w(!0));
                 });
             return () => {
                 cancelAnimationFrame(t), cancelAnimationFrame(e);
             };
-        }, [b, x]);
-    let C = null != l && l.length > 0,
-        S = i.useCallback(() => p((e) => !e), []);
-    return m
+        }, [y, p]);
+    let S = null != l && l.length > 0,
+        I = i.useCallback(() => v((e) => !e), []);
+    return h
         ? (0, a.jsxs)("div", {
               className: lm.qd,
-              "data-placement": d,
+              "data-placement": c,
               "data-vibegrations-floating-activity": !0,
               children: [
                   (0, a.jsxs)("div", {
-                      className: s()(lm.vK, { [lm.ho]: f && u, [lm.ET]: !u }),
+                      className: s()(lm.vK, { [lm.ho]: g && d, [lm.ET]: !d }),
                       children: [
-                          (0, a.jsx)("ol", {
-                              className: s()(lm.Rk, eE.pj),
-                              "data-live": "true",
-                              children: (0, a.jsx)(eL, { glyph: (0, a.jsx)(eM, {}), line: t, live: !0, settled: !1 }),
-                          }),
-                          C
+                          null == u
+                              ? (0, a.jsx)("ol", {
+                                    className: s()(lm.Rk, eE.pj),
+                                    "data-live": "true",
+                                    children: (0, a.jsx)(eL, {
+                                        glyph: (0, a.jsx)(eM, {}),
+                                        line: t,
+                                        live: !0,
+                                        settled: !1,
+                                    }),
+                                })
+                              : (0, a.jsx)(eP.D, {
+                                    className: lm.pZ,
+                                    onClick: u,
+                                    "aria-label": P.intl.string(R.default.tYjQFG),
+                                    children: (0, a.jsx)("ol", {
+                                        className: s()(lm.Rk, eE.pj),
+                                        "data-live": "true",
+                                        children: (0, a.jsx)(eL, {
+                                            glyph: (0, a.jsx)(eM, {}),
+                                            line: t,
+                                            live: !0,
+                                            settled: !1,
+                                        }),
+                                    }),
+                                }),
+                          S
                               ? (0, a.jsx)(eG.m, {
                                     text: P.intl.string(R.default.qCRC6c),
                                     ariaHidden: !0,
                                     children: (0, a.jsx)(eP.D, {
                                         className: lm.BO,
-                                        onClick: S,
-                                        "aria-expanded": x,
+                                        onClick: I,
+                                        "aria-expanded": p,
                                         "aria-label": P.intl.string(R.default.qCRC6c),
                                         children: (0, a.jsx)(lc.ClipboardListIcon, {
                                             size: "custom",
@@ -4012,9 +4033,9 @@ function lh(e) {
                               : null,
                       ],
                   }),
-                  b && C
+                  y && S
                       ? (0, a.jsx)("div", {
-                            className: s()(lm.vB, { [lm.pg]: x && k, [lm.ui]: !x }),
+                            className: s()(lm.vB, { [lm.pg]: p && A, [lm.ui]: !p }),
                             children: (0, a.jsx)(tK, { todos: l, provisional: r, agents: o, announceProgress: !1 }),
                         })
                       : null,
@@ -4185,13 +4206,23 @@ function lL(e) {
         p.current && g.current?.scrollToBottom();
     }, [r]);
     let b = i.useCallback(() => {
-        let e = g.current;
-        if (null == e) return;
-        let t = e.getDistanceFromBottom();
-        p.current = t < 32;
-        let n = t > 1;
-        j((e) => (!n === e ? e : !n));
-    }, []);
+            let e = f.current;
+            if (null == e) return;
+            let t = e.querySelector('[data-vibegrations-turn-status="true"][data-live="true"]'),
+                n = e.querySelectorAll('[data-vibegrations-turn-status="true"]'),
+                l = t ?? n[n.length - 1];
+            if (null == l) return;
+            let a = window.matchMedia?.("(prefers-reduced-motion: reduce)").matches === !0;
+            l.scrollIntoView({ block: "center", behavior: a ? "auto" : "smooth" });
+        }, []),
+        y = i.useCallback(() => {
+            let e = g.current;
+            if (null == e) return;
+            let t = e.getDistanceFromBottom();
+            p.current = t < 32;
+            let n = t > 1;
+            j((e) => (!n === e ? e : !n));
+        }, []);
     i.useLayoutEffect(() => {
         let e = f.current,
             t = x.current;
@@ -4253,54 +4284,54 @@ function lL(e) {
                 })(t),
             [t],
         );
-    let y = i.useCallback(
+    let k = i.useCallback(
             (e, n) => {
                 (0, m.dv)(t, e, n);
             },
             [t],
         ),
-        k = i.useCallback(() => (0, m.fu)(t), [t]),
-        w = i.useCallback((e) => y(e.implementation_prompt), [y]),
-        N = i.useCallback((e) => y(e), [y]),
-        C = i.useCallback((e) => (0, m.XZ)(t, e), [t]),
-        S = i.useCallback((e) => (0, m.vX)(t, e), [t]),
-        I = i.useCallback((e) => (0, m.Vm)(t, e), [t]),
-        E = i.useCallback(() => y(P.intl.string(R.default.Jj8Ftb)), [y]),
-        M = l?.status === "restoring",
-        T = "open" === s && !o && !M,
-        _ = r[r.length - 1],
-        L = null != _ && "assistant" === _.role && null != _.proposal,
-        [F, q] = i.useState(null),
-        D = _?.clarification != null && _.clarification.id !== F ? _.clarification : null,
-        $ = i.useCallback(() => {
-            null != D && q(D.id);
-        }, [D]),
-        z = (0, A.bG)([eI.Ay], () => eI.Ay.hasLoadedHistory(t), [t]),
-        O = i.useMemo(() => {
+        w = i.useCallback(() => (0, m.fu)(t), [t]),
+        N = i.useCallback((e) => k(e.implementation_prompt), [k]),
+        C = i.useCallback((e) => k(e), [k]),
+        S = i.useCallback((e) => (0, m.XZ)(t, e), [t]),
+        I = i.useCallback((e) => (0, m.vX)(t, e), [t]),
+        E = i.useCallback((e) => (0, m.Vm)(t, e), [t]),
+        M = i.useCallback(() => k(P.intl.string(R.default.Jj8Ftb)), [k]),
+        T = l?.status === "restoring",
+        _ = "open" === s && !o && !T,
+        L = r[r.length - 1],
+        F = null != L && "assistant" === L.role && null != L.proposal,
+        [q, D] = i.useState(null),
+        $ = L?.clarification != null && L.clarification.id !== q ? L.clarification : null,
+        z = i.useCallback(() => {
+            null != $ && D($.id);
+        }, [$]),
+        O = (0, A.bG)([eI.Ay], () => eI.Ay.hasLoadedHistory(t), [t]),
+        U = i.useMemo(() => {
             let e = 0;
             for (let n = 0; n < t.length; n++) e = (31 * e + t.charCodeAt(n)) % 0x7fffffff;
             return l_[e % l_.length];
         }, [t]),
-        U = L
+        G = F
             ? P.intl.string(R.default.Jj8Ftb)
-            : _?.kind === "plan_implemented"
+            : L?.kind === "plan_implemented"
               ? P.intl.string(R.default["3sTTBu"])
-              : z && 0 === r.length
-                ? O
+              : O && 0 === r.length
+                ? U
                 : null,
-        G = i.useMemo(() => {
+        B = i.useMemo(() => {
             for (let e = r.length - 1; e >= 0; e--) {
                 let t = r[e];
                 if ("assistant" === t.role && !(0, eI.BL)(t)) return t;
             }
         }, [r]),
-        B = null != G,
-        W = L && T ? E : void 0,
-        [H, V] = i.useState(null),
-        [K, Y] = i.useState(B);
-    K !== B && (Y(B), B || V(null)),
+        W = null != B,
+        H = F && _ ? M : void 0,
+        [V, K] = i.useState(null),
+        [Y, Q] = i.useState(W);
+    Y !== W && (Q(W), W || K(null)),
         i.useEffect(() => {
-            if (!B) return;
+            if (!W) return;
             let e = f.current?.querySelector("[data-vibegrations-chat-log]"),
                 t = e?.querySelector('[data-vibegrations-turn-status="true"][data-live="true"]');
             if (null == e || null == t) return;
@@ -4308,52 +4339,53 @@ function lL(e) {
                 (e) => {
                     let [t] = e;
                     null == t || t.isIntersecting || null == t.rootBounds
-                        ? V(null)
-                        : V(t.boundingClientRect.top < t.rootBounds.top ? "top" : "bottom");
+                        ? K(null)
+                        : K(t.boundingClientRect.top < t.rootBounds.top ? "top" : "bottom");
                 },
                 { root: e, threshold: 0 },
             );
             return n.observe(t), () => n.disconnect();
-        }, [B, G?.steps]);
-    let Q = i.useMemo(() => {
+        }, [W, B?.steps]);
+    let Z = i.useMemo(() => {
             let e, t;
-            return null != G
-                ? null != (t = ew((e = eA(G.steps, { turnActive: !0 })).steps))
+            return null != B
+                ? null != (t = ew((e = eA(B.steps, { turnActive: !0 })).steps))
                     ? ek(t)
                     : (e.tasks.find((e) => null != e.task.groupLabel)?.task.groupLabel ??
                       P.intl.string(R.default.nv6pUM))
                 : "";
-        }, [G]),
-        Z = i.useMemo(() => (null != G ? (eS(G.steps) ?? G.todos) : void 0), [G]),
-        X = G?.provisionalTodo,
-        J = i.useMemo(() => (null != G ? tQ(eA(G.steps, { turnActive: !0 }).tasks) : void 0), [G]);
+        }, [B]),
+        X = i.useMemo(() => (null != B ? (eS(B.steps) ?? B.todos) : void 0), [B]),
+        J = B?.provisionalTodo,
+        ee = i.useMemo(() => (null != B ? tQ(eA(B.steps, { turnActive: !0 }).tasks) : void 0), [B]);
     return (0, a.jsxs)("section", {
         ref: f,
         "data-vibegrations-chat": !0,
         className: lP.TE,
         children: [
-            (0, a.jsx)(lI, { open: null != G }),
+            (0, a.jsx)(lI, { open: null != B }),
             (0, a.jsx)(lh, {
-                line: Q,
-                placement: B && "top" === H ? "top" : null,
-                todos: Z,
-                provisionalTodo: X,
-                agents: J,
+                onJumpToActivity: b,
+                line: Z,
+                placement: W && "top" === V ? "top" : null,
+                todos: X,
+                provisionalTodo: J,
+                agents: ee,
             }),
             (0, a.jsx)(eb.Ch, {
                 ref: g,
-                onScroll: b,
+                onScroll: y,
                 "data-vibegrations-chat-log": !0,
                 className: v ? lP.N$ : `${lP.N$} ${lP.hB}`,
-                children: (0, a.jsx)(nY, { ref: x, projectId: t, messages: r, onPickIdea: T ? w : void 0 }),
+                children: (0, a.jsx)(nY, { ref: x, projectId: t, messages: r, onPickIdea: _ ? N : void 0 }),
             }),
             (0, a.jsxs)("div", {
                 className: lP.im,
                 children: [
                     (0, a.jsx)(la, {
                         projectId: t,
-                        thinking: B,
-                        restoring: M,
+                        thinking: W,
+                        restoring: T,
                         thinkingActivity: d,
                         compacting: c,
                         projectUsage: u,
@@ -4363,36 +4395,37 @@ function lL(e) {
                         className: lP.Jx,
                         children: [
                             (0, a.jsx)(lh, {
-                                line: Q,
-                                placement: B && "bottom" === H ? "bottom" : null,
-                                todos: Z,
-                                provisionalTodo: X,
-                                agents: J,
+                                onJumpToActivity: b,
+                                line: Z,
+                                placement: W && "bottom" === V ? "bottom" : null,
+                                todos: X,
+                                provisionalTodo: J,
+                                agents: ee,
                             }),
-                            null == D
+                            null == $
                                 ? null
                                 : (0, a.jsx)("div", {
                                       className: lP.B5,
                                       children: (0, a.jsx)(
                                           ld,
-                                          { clarification: D, onSubmit: T ? N : void 0, onDismiss: $ },
-                                          D.id,
+                                          { clarification: $, onSubmit: _ ? C : void 0, onDismiss: z },
+                                          $.id,
                                       ),
                                   }),
                             (0, a.jsx)(nr, {
-                                canSend: T,
+                                canSend: _,
                                 stopped: o,
-                                running: B,
-                                restoring: M,
-                                onSend: y,
-                                onInterrupt: T ? k : void 0,
-                                onUploadFile: S,
-                                onDeleteFile: I,
-                                onApprove: W,
-                                suggestion: U,
-                                questionOpen: null != D,
+                                running: W,
+                                restoring: T,
+                                onSend: k,
+                                onInterrupt: _ ? w : void 0,
+                                onUploadFile: I,
+                                onDeleteFile: E,
+                                onApprove: H,
+                                suggestion: G,
+                                questionOpen: null != $,
                                 modelSettings: h,
-                                onModelSettingsChange: C,
+                                onModelSettingsChange: S,
                             }),
                         ],
                     }),

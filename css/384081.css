@@ -3209,6 +3209,13 @@
     width: calc(100% - var(--space-32)*2)
 }
 
+.bannerJump_a7b103 {
+    cursor: pointer;
+    display: flex;
+    flex: 1;
+    min-width: 0
+}
+
 .bannerLine_a7b103 {
     flex: 1;
     list-style: none;
@@ -3903,4 +3910,4 @@
     min-width: 0
 }
 
-/*# sourceMappingURL=384081.d47bfff010aea047.css.map*/
+/*# sourceMappingURL=384081.0b0efd0c8ed95da9.css.map*/
