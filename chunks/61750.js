@@ -6,18 +6,20 @@ var r = n(192308),
     a = n(758836);
 let s = function (e) {
     let {
-        product: t,
-        analyticsLocations: s,
-        overrideTitle: l,
-        overrideDescription: o,
-        shouldShowPromotionalExperience: d,
-        onCloseCallback: c,
-        itemConsumed: u,
-        purchaseType: _ = a.gs.FIAT,
-        overrideGraphic: E,
-        overrideGradientColor: A,
-        rentalExpiresAt: h,
-    } = e;
+            product: t,
+            remainingProducts: s,
+            analyticsLocations: l,
+            overrideTitle: o,
+            overrideDescription: d,
+            shouldShowPromotionalExperience: c,
+            onCloseCallback: u,
+            itemConsumed: _,
+            purchaseType: E = a.gs.FIAT,
+            overrideGraphic: A,
+            overrideGradientColor: h,
+            rentalExpiresAt: I,
+        } = e,
+        f = null != s && s.length > 0;
     (0, r.openModalLazy)(
         async () => {
             if ((0, a.EZ)(t.skuId) || t.skuId === a.Dp.ORB_PROFILE_BADGE) {
@@ -64,10 +66,10 @@ let s = function (e) {
                 return (n) =>
                     (0, i.jsx)(e, {
                         product: t,
-                        analyticsLocations: s,
-                        overrideTitle: l,
-                        overrideDescription: o,
-                        itemConsumed: u,
+                        analyticsLocations: l,
+                        overrideTitle: o,
+                        overrideDescription: d,
+                        itemConsumed: _,
                         purchaseType: a.gs.ORB,
                         ...n,
                     });
@@ -114,17 +116,19 @@ let s = function (e) {
             return (n) =>
                 (0, i.jsx)(e, {
                     product: t,
-                    analyticsLocations: s,
-                    overrideTitle: l,
-                    overrideDescription: o,
-                    shouldShowPromotionalExperience: d,
-                    purchaseType: _,
-                    overrideGraphic: E,
-                    overrideGradientColor: A,
-                    rentalExpiresAt: h,
+                    remainingProducts: s,
+                    analyticsLocations: l,
+                    overrideTitle: o,
+                    overrideDescription: d,
+                    shouldShowPromotionalExperience: c,
+                    purchaseType: E,
+                    overrideGraphic: A,
+                    overrideGradientColor: h,
+                    rentalExpiresAt: I,
+                    onCloseCallback: u,
                     ...n,
                 });
         },
-        { onCloseCallback: c },
+        { onCloseCallback: f ? void 0 : u },
     );
 };

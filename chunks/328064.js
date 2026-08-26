@@ -1,8 +1,8 @@
-s.d(t, { default: () => O });
+s.d(e, { default: () => O });
 var n = s(477900),
-    r = s(582128),
-    i = s(776310),
-    o = s(772707),
+    o = s(582128),
+    r = s(776310),
+    i = s(772707),
     a = s(289873),
     c = s(116833),
     p = s(793574),
@@ -10,19 +10,19 @@ var n = s(477900),
     d = s(207803),
     l = s(298072),
     E = s(450481),
-    C = s(623373),
-    L = s(181774),
+    L = s(623373),
+    C = s(181774),
     h = s(536572),
-    k = s(524246),
-    m = s(14368),
-    y = s(213530),
+    y = s(524246),
+    k = s(14368),
+    m = s(213530),
     I = s(132198),
     f = s(184264),
     _ = s(758836),
     x = s(232666);
-let O = (e) => {
+let O = (t) => {
     let {
-            transitionState: t,
+            transitionState: e,
             product: s,
             onClose: O,
             analyticsLocations: j,
@@ -30,14 +30,14 @@ let O = (e) => {
             overrideDescription: G,
             itemConsumed: S = !0,
             purchaseType: A = _.gs.ORB,
-        } = e,
+        } = t,
         b = (0, l.Q)(s),
-        g = (0, C.rb)(s, b),
+        g = (0, L.rb)(s, b),
         { analyticsLocations: B } = (0, u.Ay)([...j, p.A.COLLECTIBLES_COLLECTED_MODAL]);
-    r.useEffect(() => {
+    o.useEffect(() => {
         _.Dp.ORB_PROFILE_BADGE === g.skuId && (0, d.Gr)([(0, I._)()], 600);
     }, [g.skuId]);
-    let { isLoading: D, isFractionalPremiumActive: R, expiresAt: T } = (0, L.EZ)(),
+    let { isLoading: D, isFractionalPremiumActive: R, expiresAt: T } = (0, C.EZ)(),
         {
             environment: N,
             modalRef: P,
@@ -66,21 +66,20 @@ let O = (e) => {
             expiresAt: T,
         }),
         q = (0, f.aG)({
+            props: { product: s, analyticsLocations: j, onClose: O, itemConsumed: S },
             product: g,
-            onClose: O,
             analyticsLocations: B,
             handleUseNow: K,
             isApplying: M,
             canUseNow: Q,
-            itemConsumed: S,
         });
     return (0, n.jsx)(u.f5, {
         value: B,
         children: (0, n.jsxs)("div", {
             ref: P,
             children: [
-                (0, n.jsx)(i.Fk, { ref: w, className: x.L, environment: N }),
-                (0, n.jsx)(o.k, {
+                (0, n.jsx)(r.Fk, { ref: w, className: x.L, environment: N }),
+                (0, n.jsx)(i.k, {
                     graphic: {
                         type: "dynamic",
                         component: c.DynamicGraphicComponent.COLLECTIBLES_PREVIEW,
@@ -89,15 +88,15 @@ let O = (e) => {
                     title: W,
                     subtitle: Z ?? void 0,
                     onClose: O,
-                    transitionState: t,
+                    transitionState: e,
                     actions: q,
                 }),
                 null != F
-                    ? (0, n.jsx)(y.K, { options: F })
-                    : (0, n.jsx)(k.A, {
+                    ? (0, n.jsx)(m.K, { options: F })
+                    : (0, n.jsx)(y.A, {
                           confettiTarget: P.current,
                           confettiCanvas: V,
-                          sprites: (0, m.rA)(g.categorySkuId),
+                          sprites: (0, k.rA)(g.categorySkuId),
                       }),
             ],
         }),

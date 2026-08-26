@@ -2867,81 +2867,83 @@ var lL = n(771566),
     lB = n(837015),
     lH = n(643860);
 function lW(e) {
-    let { rewardSkuId: t, onClose: n, onRewardModalClose: i } = e,
+    let { rewardSkuIds: t, onClose: n, onRewardModalClose: i } = e,
         r = (0, k.bG)([D.default], () => D.default.getCurrentUser()),
         a = (0, k.bG)([nj.Ay], () => nj.Ay.useReducedMotion),
         { analyticsLocations: s } = (0, ti.Ay)(),
         u = nz._3.SIZE_32,
-        { product: c, isFetching: d } = (0, nX.q)(t),
-        [m, p] = o.useState(!1),
-        C = c?.items[0],
+        { products: c, isFetching: d } = (0, nX.D)(t),
+        [m, ...p] = c,
+        [C, h] = o.useState(!1),
+        f = m?.items[0],
         {
-            isNameplateReward: h,
-            nameplateData: f,
-            rewardAvatarDecorationSrc: E,
+            isNameplateReward: E,
+            nameplateData: S,
+            rewardAvatarDecorationSrc: y,
         } = o.useMemo(
             () =>
-                null == C
+                null == f
                     ? { isNameplateReward: !1, nameplateData: null, rewardAvatarDecorationSrc: null }
-                    : (0, lB.F)(C)
+                    : (0, lB.F)(f)
                       ? {
                             isNameplateReward: !0,
                             nameplateData: {
-                                skuId: C.skuId,
-                                src: C.asset,
-                                palette: (0, lG.H6)(C.palette ?? "sky"),
-                                imgAlt: C.label,
+                                skuId: f.skuId,
+                                src: f.asset,
+                                palette: (0, lG.H6)(f.palette ?? "sky"),
+                                imgAlt: f.label,
                             },
                             rewardAvatarDecorationSrc: null,
                         }
-                      : (0, n0.T)(C)
+                      : (0, n0.T)(f)
                         ? {
                               isNameplateReward: !1,
                               nameplateData: null,
                               rewardAvatarDecorationSrc: (0, lD.A)({
-                                  legacyAssetId: C.asset,
-                                  skuId: C.skuId,
+                                  legacyAssetId: f.asset,
+                                  skuId: f.skuId,
                                   size: u,
                                   canAnimate: !a,
                               }),
                           }
                         : { isNameplateReward: !1, nameplateData: null, rewardAvatarDecorationSrc: null },
-            [C, u, a],
+            [f, u, a],
         );
     return (0, l.jsx)(eW.UX, {
         children: (0, l.jsx)(tZ.j, {
             children: (0, l.jsxs)("div", {
                 className: lH.W,
                 children: [
-                    h && null != f
+                    E && null != S
                         ? (0, l.jsx)("div", {
                               className: lH.D,
-                              onMouseEnter: () => p(!0),
-                              onMouseLeave: () => p(!1),
+                              onMouseEnter: () => h(!0),
+                              onMouseLeave: () => h(!1),
                               children: (0, l.jsx)(lF.a, {
                                   user: r,
                                   nameplate: null,
-                                  nameplateData: f,
+                                  nameplateData: S,
                                   showPlaceholderUser: !0,
                                   nameplatePreviewSize: "xsmall",
-                                  isHighlighted: m,
+                                  isHighlighted: C,
                               }),
                           })
                         : (0, l.jsx)(lU.Js, {
                               "aria-label": r?.username,
                               size: u,
                               src: r?.getAvatarURL(void 0, (0, nz.FT)(u), !a),
-                              avatarDecoration: E,
+                              avatarDecoration: y,
                           }),
                     (0, l.jsx)(eQ.$, {
                         variant: "primary",
                         text: F.intl.string(F.t.kMYVwv),
                         loading: d,
                         onClick: () => {
-                            null != c &&
+                            null != m &&
                                 (n(),
                                 (0, nU.A)({
-                                    product: c,
+                                    product: m,
+                                    remainingProducts: p,
                                     shouldShowPromotionalExperience: !0,
                                     analyticsLocations: s,
                                     purchaseType: nx.gs.PROMOTIONAL,
@@ -3002,24 +3004,23 @@ function lV(e) {
         { confirmationFooter: G } = (0, s.cG)(),
         F = (0, lT.px)(_, N, w),
         B = (0, lT.Mq)(_),
-        H = U[0],
-        W = (0, lx.Mv)(H, !1),
-        Y = (0, k.bG)([lj.A], () => lj.A.getGiftPromotion()?.id),
-        V = (0, k.bG)([lj.A], () => {
+        { purchases: H } = (0, lx.Wg)(!1),
+        W = (0, k.bG)([lj.A], () => lj.A.getGiftPromotion()?.id),
+        Y = (0, k.bG)([lj.A], () => {
             let e = lj.A.getMarketingComponentByType(lg.C.GIFT_REMINDER_NAGBAR);
             return null == e || "giftReminderNagbar" !== e.properties.properties.oneofKind
                 ? null
                 : e.properties.properties.giftReminderNagbar;
         }),
-        K = (0, R.g)(p, I),
-        Z = null != x ? x.orbsReward : null,
-        q = null != Z && Z > 0,
-        z = N && !q && null != H && null != W && B,
-        Q = { selectedPlan: _, selectedSkuId: S, step: T };
-    if (null == _) throw new C.v({ message: "Expected plan to be selected", extraSentryInformation: Q });
-    if (null == S) throw new C.v({ message: "Expected selectedSkuId", extraSentryInformation: Q });
-    if (null == T) throw new C.v({ message: "Step should be set", extraSentryInformation: Q });
-    let $ = o.useCallback(() => {
+        V = (0, R.g)(p, I),
+        K = null != x ? x.orbsReward : null,
+        Z = null != K && K > 0,
+        q = N && !Z && U.length > 0 && U.every((e) => null != H.get(e)) && B,
+        z = { selectedPlan: _, selectedSkuId: S, step: T };
+    if (null == _) throw new C.v({ message: "Expected plan to be selected", extraSentryInformation: z });
+    if (null == S) throw new C.v({ message: "Expected selectedSkuId", extraSentryInformation: z });
+    if (null == T) throw new C.v({ message: "Step should be set", extraSentryInformation: z });
+    let Q = o.useCallback(() => {
         i(), a?.();
     }, [i, a]);
     (0, ee.Ay)(() => {
@@ -3030,7 +3031,7 @@ function lV(e) {
                 subscription_id: y?.id,
             });
     });
-    let J = (0, lv.A)();
+    let $ = (0, lv.A)();
     o.useEffect(() => {
         function e() {
             if (A)
@@ -3070,9 +3071,9 @@ function lV(e) {
                     }),
                         lk._.dispatch(eG.jej.PREMIUM_GROUP_PURCHASE_FLOW_COMPLETED);
             else
-                null != Z && Z > 0
-                    ? (0, lN.$)({ orbsAmount: Z })
-                    : lO(N, S) && (J?.id === lb.Ym || J?.name?.includes(lb.YX)) && (0, lb.tu)();
+                null != K && K > 0
+                    ? (0, lN.$)({ orbsAmount: K })
+                    : lO(N, S) && ($?.id === lb.Ym || $?.name?.includes(lb.YX)) && (0, lb.tu)();
         }
         return (
             lk._.subscribe(eG.jej.WOW_MOMENT_CONFIRMATION_MODAL_CLOSED, e),
@@ -3080,19 +3081,19 @@ function lV(e) {
                 lk._.unsubscribe(eG.jej.WOW_MOMENT_CONFIRMATION_MODAL_CLOSED, e);
             }
         );
-    }, [A, y, Z, J, N, S, E]),
+    }, [A, y, K, $, N, S, E]),
         o.useEffect(() => {
             !N || null == b || null == j || M || O || (0, lw.Ik)(b) || L({ onSubscriptionConfirmation: a });
         }, [L, N, b, j, M, O, a]),
         o.useEffect(() => {
             F &&
-                null != V &&
                 null != Y &&
-                (0, l_.qr)(lP.M.GIFTING_PROMOTION_REMINDER, Y, { dismissAction: lY.i.INDIRECT_ACTION });
-        }, [V, Y, F]);
-    let X = null != m ? lL.Rs.DEEPLINK_TO_DESKTOP_APP : void 0;
-    if (null != u) t = u(_, $, y);
-    else if (N) t = (0, l.jsx)(lL.fw, { planId: _.id, onClose: $ });
+                null != W &&
+                (0, l_.qr)(lP.M.GIFTING_PROMOTION_REMINDER, W, { dismissAction: lY.i.INDIRECT_ACTION });
+        }, [Y, W, F]);
+    let J = null != m ? lL.Rs.DEEPLINK_TO_DESKTOP_APP : void 0;
+    if (null != u) t = u(_, Q, y);
+    else if (N) t = (0, l.jsx)(lL.fw, { planId: _.id, onClose: Q });
     else {
         let e =
             g === _.id
@@ -3104,11 +3105,11 @@ function lV(e) {
                   };
         t = (0, l.jsx)(lL.Ay, {
             planId: _.id,
-            onClose: $,
-            paymentSourceType: K,
+            onClose: Q,
+            paymentSourceType: V,
             hideClose: null != G,
             startingFractionalPremiumEndsAt: v,
-            customCTAType: X,
+            customCTAType: J,
             ...e,
         });
     }
@@ -3116,7 +3117,7 @@ function lV(e) {
         children: [
             (0, l.jsxs)(eW.dZ, { children: [(0, l.jsx)(nG.A, {}), t] }),
             null != G && G,
-            z && null != H && (0, l.jsx)(lW, { rewardSkuId: H, onClose: $, onRewardModalClose: D }),
+            q && (0, l.jsx)(lW, { rewardSkuIds: U, onClose: Q, onRewardModalClose: D }),
         ],
     });
 }
