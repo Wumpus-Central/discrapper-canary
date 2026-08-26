@@ -5898,5 +5898,30 @@
         "truncateMoreThanSeconds": 60
       }
     }
+  },
+  {
+    "kind": "user",
+    "name": "2026-09-soundboard-quick-action",
+    "defaultConfig": {
+      "enabled": false,
+      "showQuickAccess": false,
+      "showOnRTCHover": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true,
+        "showQuickAccess": true,
+        "showOnRTCHover": true
+      },
+      "2": {
+        "enabled": true,
+        "showQuickAccess": false,
+        "showOnRTCHover": true
+      }
+    }
   }
 ]
