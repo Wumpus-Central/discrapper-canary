@@ -123,6 +123,7 @@ let N = new Set([
         I.rbe.GUILD_DIRECTORY,
         I.rbe.GUILD_FORUM,
         I.rbe.GUILD_MEDIA,
+        I.rbe.GUILD_SPACE,
     ]);
 function O(e) {
     return C.has(e);
