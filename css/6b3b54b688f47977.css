@@ -236,4 +236,13 @@
     --control-icon-only-icon-hover: var(--control-icon-only-icon-default)
 }
 
-/*# sourceMappingURL=1ab3a782e08cd8ac.css.map*/
+.orbWalletHeaderTagUpsell__583ca {
+    align-items: center;
+    -moz-column-gap: var(--space-4);
+    column-gap: var(--space-4);
+    cursor: pointer;
+    display: flex;
+    flex-direction: row
+}
+
+/*# sourceMappingURL=6b3b54b688f47977.css.map*/

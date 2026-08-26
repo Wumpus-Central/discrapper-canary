@@ -1,17 +1,31 @@
-.balanceCounterMargin__98f64 {
+.balanceCounterText__98f64 {
+    color: var(--text-strong)
+}
+
+.full-motion .balanceCounterText__98f64 {
+    transition: all .4s ease-out, opacity .4s ease-in
+}
+
+.balanceCounterMarginRightAlign__98f64 {
     margin-inline-start: 2px
 }
 
-.balanceCounterText__98f64 {
-    color: var(--text-strong);
+.balanceCounterTextRightAlign__98f64 {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
     text-align: end
 }
 
-.full-motion .balanceCounterText__98f64 {
-    transition: all .4s ease-out, opacity .4s ease-in
+.balanceCounterMarginLeftAlign__98f64 {
+    margin-inline-end: 2px
+}
+
+.balanceCounterTextLeftAlign__98f64 {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    text-align: start
 }
 
 .clickable_a3e8db {
@@ -104,4 +118,4 @@
     position: absolute
 }
 
-/*# sourceMappingURL=0bc8fe2f8e4a9608.css.map*/
+/*# sourceMappingURL=1872a69808eb8768.css.map*/
