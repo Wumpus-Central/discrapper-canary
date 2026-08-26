@@ -18,28 +18,28 @@ var i,
         (((i = {})[(i.PREMIUM_TIER_2_MULTIPLIER_PERCENTAGE_POINTS = 120)] =
             "PREMIUM_TIER_2_MULTIPLIER_PERCENTAGE_POINTS"),
         i),
-    a = n(945810),
-    l = n(646917),
+    l = n(945810),
+    a = n(646917),
     u = n(576761);
-let d = (0, a.mj)({
+let d = (0, l.mj)({
         name: "2025-11-video-end-card-v2",
         kind: "user",
         defaultConfig: { enabled: !1 },
         variations: { 1: { enabled: !0 } },
     }),
-    c = (0, a.mj)({
+    c = (0, l.mj)({
         name: "2026-05-app-store-overlay-feature-gate",
         kind: "user",
         defaultConfig: { enabled: !1 },
         variations: { 1: { enabled: !0 } },
     });
-(0, a.mj)({
+(0, l.mj)({
     name: "2026-07-custom-app-store-overlay",
     kind: "user",
     defaultConfig: { enabled: !1 },
     variations: { 1: { enabled: !0 } },
 });
-let C = (0, a.mj)({
+let C = (0, l.mj)({
     name: "2026-03-quest-reload-video-on-obscured",
     kind: "user",
     defaultConfig: { enabled: !1 },
@@ -50,13 +50,13 @@ var f =
     (r[(r.AUTO_ENABLE_CAPTIONS = 1)] = "AUTO_ENABLE_CAPTIONS"),
     (r[(r.AUTO_UNMUTE = 2)] = "AUTO_UNMUTE"),
     r);
-let E = (0, a.mj)({
+let E = (0, l.mj)({
         name: "2026-03-muted-video-quest-new-defaults",
         kind: "user",
         defaultConfig: { enabled: !1, variant: 0 },
         variations: { 0: { enabled: !1, variant: 0 }, 1: { enabled: !0, variant: 1 }, 2: { enabled: !0, variant: 2 } },
     }),
-    m = (0, a.mj)({
+    m = (0, l.mj)({
         name: "2026-04-quests-premium-orb-multiplier-marketing",
         kind: "user",
         defaultConfig: { enabled: !1 },
@@ -64,31 +64,31 @@ let E = (0, a.mj)({
     });
 function p(e) {
     let { enabled: t } = m.useConfig({ location: e }),
-        n = (0, l.z)();
+        n = (0, a.z)();
     return {
         shouldShowBonusOrbsUX: n !== u.MA.INELIGIBLE && n !== u.MA.CREPE && t,
         multiplier: o.PREMIUM_TIER_2_MULTIPLIER_PERCENTAGE_POINTS / 100,
     };
 }
-(0, a.mj)({
+(0, l.mj)({
     name: "2026-03-video-quest-player-refactor",
     kind: "user",
     defaultConfig: { enabled: !1 },
     variations: { 1: { enabled: !0 } },
 });
-let A = (0, a.mj)({
+let A = (0, l.mj)({
     name: "2026-04-composed-quest-player",
     kind: "user",
     defaultConfig: { enabled: !1 },
     variations: { 1: { enabled: !0 } },
 });
-(0, a.mj)({
+(0, l.mj)({
     name: "2026-03-mobile-quest-home-red-dot-notification",
     kind: "user",
     defaultConfig: { enabled: !1 },
     variations: { 0: { enabled: !1 }, 1: { enabled: !0 } },
 });
-let T = (0, a.mj)({
+let T = (0, l.mj)({
     name: "2026-05-quest-home-tile-redesign",
     kind: "user",
     defaultConfig: {
@@ -107,7 +107,7 @@ let T = (0, a.mj)({
         5: { useNewLayoutWithSearch: !0, useNewTile: !0, useLargeFeaturedTiles: !0, ctaOnHover: !0, clickableTile: !0 },
     },
 });
-(0, a.mj)({
+(0, l.mj)({
     name: "2026-05-bounty-stale-refresh-quest-home",
     kind: "user",
     defaultConfig: { enabled: !1 },
@@ -122,7 +122,7 @@ var h =
           (s[(s.REPLACE_QUEST_NAME_WITH_GAME_PUBLISHER = 4)] = "REPLACE_QUEST_NAME_WITH_GAME_PUBLISHER"),
           s)
         : null;
-let S = (0, a.mj)({
+let S = (0, l.mj)({
         name: "2026-06-quest-home-layout-visual-tweaks",
         kind: "user",
         defaultConfig: { enabled: !1, variant: 0 },
@@ -134,7 +134,7 @@ let S = (0, a.mj)({
             4: { enabled: !0, variant: 4 },
         },
     }),
-    I = (0, a.mj)({
+    I = (0, l.mj)({
         name: "2026-07-quest-bar-secondary-cta",
         kind: "user",
         defaultConfig: { enabled: !1, showPlayInstantlyLabel: !1 },

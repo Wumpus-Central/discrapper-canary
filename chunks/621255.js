@@ -1,4 +1,4 @@
-i.exports = {
+_.exports = {
     kL: "container__5287f",
     DM: "containerHovered__5287f",
     zc: "iconContainer__5287f",

@@ -1,10 +1,10 @@
-n.d(t, { n0: () => w, xs: () => N });
+n.d(t, { n0: () => N, xs: () => w });
 var i = n(477900),
     r = n(582128),
     s = n(132500),
     o = n(323889),
-    a = n(731738),
-    l = n(17928),
+    l = n(731738),
+    a = n(17928),
     u = n(964486),
     d = n(274670),
     c = n(144779),
@@ -50,8 +50,8 @@ class L {
             adCreativeType: n,
             questContent: i,
             triggeredByStatusChange: r,
-            trackGuildAndChannelMetadata: a,
-            questContentPosition: l,
+            trackGuildAndChannelMetadata: l,
+            questContentPosition: a,
             questContentRowIndex: u,
             minViewTimeSeconds: d = 1,
             isQuestEnrollmentBlocked: c,
@@ -60,10 +60,10 @@ class L {
         } = e;
         (this.id = (0, s.A)()),
             (this.questContent = i),
-            (this.questContentPosition = l),
+            (this.questContentPosition = a),
             (this.minViewTimeSeconds = d),
             (this.minViewportPercentage = 0.5),
-            (this.trackGuildAndChannelMetadata = a),
+            (this.trackGuildAndChannelMetadata = l),
             (this.triggeredByStatusChange = r),
             (this.questContentRowIndex = u),
             (this.isQuestEnrollmentBlocked = c),
@@ -111,7 +111,7 @@ class L {
             };
         this.entity.adContentIds.forEach((i, r) => {
             let s = (0, h.L4)(this.sourceQuestContent, i),
-                a = this.shouldExtendSession(i);
+                l = this.shouldExtendSession(i);
             if ((this.trackViewedPlacement(i), this.migrateQuestContentViewedToCaptureAdUserAction)) {
                 if (this.entity.adCreativeType === o.p.QUEST) {
                     let e = this.entity.adContentIds[r],
@@ -132,7 +132,7 @@ class L {
                     minViewTimeSeconds: this.minViewTimeSeconds,
                     minViewportPercentage: this.minViewportPercentage,
                     isQuestEnrollmentBlocked: this.isQuestEnrollmentBlocked,
-                    shouldExtendSession: a,
+                    shouldExtendSession: l,
                     adUser: e,
                     questContentPosition: this.questContentPosition,
                     questContentRowIndex: this.questContentRowIndex,
@@ -155,7 +155,7 @@ class L {
                     ),
                     (0, I.av)({
                         ...t,
-                        shouldExtendSession: a,
+                        shouldExtendSession: l,
                         questId: e,
                         event: b.HAw.QUEST_CONTENT_VIEWED,
                         properties: {
@@ -174,7 +174,7 @@ class L {
                 ),
                     (0, I.Qg)({
                         ...t,
-                        shouldExtendSession: a,
+                        shouldExtendSession: l,
                         adContentId: e,
                         adCreativeType: this.entity.adCreativeType,
                         event: b.HAw.QUEST_CONTENT_VIEWED,
@@ -199,9 +199,9 @@ class L {
                         viewed_time_ms: n,
                         triggered_by_status_change: e.triggeredByStatusChange,
                     };
-                e.entity.adContentIds.forEach((s, a) => {
+                e.entity.adContentIds.forEach((s, l) => {
                     if (e.entity.adCreativeType === o.p.QUEST) {
-                        let s = e.entity.adContentIds[a],
+                        let s = e.entity.adContentIds[l],
                             o = A.A.getQuest(s);
                         (0, S.L)().info(
                             `${o?.config.messages.questName ?? s} Quest impression ${t ? "terminal " : ""}heartbeat: ${n}ms since last heartbeat`,
@@ -214,7 +214,7 @@ class L {
                                 properties: { ...r, ...e.commonProperties() },
                             });
                     } else {
-                        let s = e.entity.adContentIds[a];
+                        let s = e.entity.adContentIds[l];
                         (0, S.L)().info(
                             `${s} ad content impression ${t ? "terminal " : ""}heartbeat: ${n}ms since last heartbeat`,
                             { impressionId: e.id },
@@ -319,7 +319,7 @@ class L {
             }
         }),
             E.A.increment({
-                name: a.K.QUEST_CONTENT_IMPRESSION,
+                name: l.K.QUEST_CONTENT_IMPRESSION,
                 tags: [`quest_content:${(0, _.jO)(this.questContent)}`],
             }),
             (this.isRunning = !0);
@@ -336,12 +336,12 @@ class L {
         };
     })();
 }
-let w = r.createContext(void 0);
-function N(e) {
-    let { visible: t, visibleChanged: n, focused: s, reference: a, focusedChanged: d, sourceQuestContent: c } = e,
+let N = r.createContext(void 0);
+function w(e) {
+    let { visible: t, visibleChanged: n, focused: s, reference: l, focusedChanged: d, sourceQuestContent: c } = e,
         C = (0, O.iY)(e),
         f = r.useRef(null),
-        E = (0, l.bG)([A.A], () => null != A.A.questEnrollmentBlockedUntil, []);
+        E = (0, a.bG)([A.A], () => null != A.A.questEnrollmentBlockedUntil, []);
     return (
         (0, u.Ay)(() => () => {
             null != f.current && f.current.stop();
@@ -349,8 +349,8 @@ function N(e) {
         r.useEffect(() => {
             let i = s && t,
                 r = (n || d || C) && i,
-                a = ((n || d) && !i) || C;
-            if (((r || a) && null != f.current && f.current.stop(), r)) {
+                l = ((n || d) && !i) || C;
+            if (((r || l) && null != f.current && f.current.stop(), r)) {
                 let t = {
                     isQuestEnrollmentBlocked: E,
                     minViewTimeSeconds: e.minViewTimeSeconds,
@@ -384,6 +384,6 @@ function N(e) {
             c,
             e.adCreativeType,
         ]),
-        (0, i.jsx)(w.Provider, { value: f, children: e.children(a, f) })
+        (0, i.jsx)(N.Provider, { value: f, children: e.children(l, f) })
     );
 }

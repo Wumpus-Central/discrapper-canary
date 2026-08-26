@@ -1,9 +1,9 @@
 n.d(t, { A: () => x });
 var l = n(477900),
     a = n(582128),
-    i = n(834730),
-    r = n(691885),
-    s = n(922016),
+    r = n(834730),
+    s = n(691885),
+    i = n(922016),
     o = n(866665),
     u = n(939249),
     c = n(783977);
@@ -19,14 +19,14 @@ var h = n(295813),
     f = n(375708),
     g = n(752065);
 function p(e) {
-    let { title: t, modelChoices: n, thinkingChoices: s, value: o, disabled: u, onChange: c } = e,
+    let { title: t, modelChoices: n, thinkingChoices: i, value: o, disabled: u, onChange: c } = e,
         p = a.useMemo(() => n.map((e) => ({ id: e.id, label: e.label, value: e.id, description: m[e.provider] })), [n]),
-        x = a.useMemo(() => s.map((e) => ({ id: e, label: d[e] ?? e, value: e })), [s]);
+        x = a.useMemo(() => i.map((e) => ({ id: e, label: d[e] ?? e, value: e })), [i]);
     return (0, l.jsxs)("div", {
         className: g.uW,
         children: [
-            (0, l.jsx)(i.E, { variant: "text-sm/semibold", color: "text-default", children: t }),
-            (0, l.jsx)(r.l, {
+            (0, l.jsx)(r.E, { variant: "text-sm/semibold", color: "text-default", children: t }),
+            (0, l.jsx)(s.l, {
                 label: f.intl.string(h.default["9FRudW"]),
                 options: p,
                 value: o.model,
@@ -35,7 +35,7 @@ function p(e) {
                 disabled: u,
                 fullWidth: !0,
             }),
-            (0, l.jsx)(r.l, {
+            (0, l.jsx)(s.l, {
                 label: f.intl.string(h.default["4AsQHS"]),
                 options: x,
                 value: o.thinking,
@@ -48,7 +48,7 @@ function p(e) {
     });
 }
 function x(e) {
-    let { settings: t, choices: n, disabled: r, onChange: d, className: m, icon: x } = e,
+    let { settings: t, choices: n, disabled: s, onChange: d, className: m, icon: x } = e,
         v = a.useRef(null),
         [j, b] = a.useState(null),
         [y, A] = a.useState(t);
@@ -60,7 +60,7 @@ function x(e) {
             },
             [d],
         );
-    return (0, l.jsx)(s.Y, {
+    return (0, l.jsx)(i.Y, {
         targetElementRef: v,
         position: "top",
         align: "right",
@@ -75,7 +75,7 @@ function x(e) {
                         modelChoices: n.main,
                         thinkingChoices: n.thinking,
                         value: k.main,
-                        disabled: r,
+                        disabled: s,
                         onChange: (e) => w({ ...k, main: e }),
                     }),
                     (0, l.jsx)(p, {
@@ -83,10 +83,10 @@ function x(e) {
                         modelChoices: n.subagent,
                         thinkingChoices: n.thinking,
                         value: k.subagent,
-                        disabled: r,
+                        disabled: s,
                         onChange: (e) => w({ ...k, subagent: e }),
                     }),
-                    (0, l.jsx)(i.E, {
+                    (0, l.jsx)(r.E, {
                         variant: "text-xs/normal",
                         color: "text-muted",
                         children: f.intl.string(h.default.ICU5aW),

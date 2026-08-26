@@ -1,7 +1,7 @@
 n.d(t, {
     $J: () => P,
-    IG: () => w,
-    Ps: () => U,
+    IG: () => N,
+    Ps: () => D,
     UR: () => g,
     W1: () => v,
     WU: () => b,
@@ -22,8 +22,8 @@ var i,
     r = n(132500),
     s = n(323889),
     o = n(412703),
-    a = n(228366),
-    l = n(975807),
+    l = n(228366),
+    a = n(975807),
     u = n(274670),
     d = n(144779),
     c = n(968309),
@@ -87,10 +87,10 @@ function L(e, t) {
           }),
         (0, c.A)({ platformType: n, location: t.ctaContent });
 }
-function w(e) {
+function N(e) {
     return P(e) === I.fg2.XBOX ? _.t["mytEv+"] : _.t.iDiwby;
 }
-function N(e) {
+function w(e) {
     if (((0, E.isIOS)() || "ios" === (0, E.getOS)()) && e.ios?.iosAppId != null) {
         let t = e.ios.iosAppId.startsWith("id") ? e.ios.iosAppId : `id${e.ios.iosAppId}`;
         return `https://apps.apple.com/app/${t}`;
@@ -115,30 +115,30 @@ function y(e) {
 }
 function M(e) {
     let { link: t, directLink: n, inlineStoreParams: i, trackOverlayEvent: r } = e;
-    m.OO.getConfig({ location: "quest_open_game_link" }).enabled, (0, l.A)(t);
+    m.OO.getConfig({ location: "quest_open_game_link" }).enabled, (0, a.A)(t);
 }
 function R(e, t) {
     let n,
         i,
         o,
-        a = (0, T.Jx)(e.config),
-        l = null == (n = e.config.ctaConfig) ? null : N({ url: (0, T.Jx)(e.config), android: n.android, ios: n.ios });
-    null != l && (a = l),
+        l = (0, T.Jx)(e.config),
+        a = null == (n = e.config.ctaConfig) ? null : w({ url: (0, T.Jx)(e.config), android: n.android, ios: n.ios });
+    null != a && (l = a),
         (function (e) {
             try {
                 return new URL(e).searchParams.has("dclid");
             } catch {
                 return !1;
             }
-        })(a) &&
-            (a = (function (e, t) {
+        })(l) &&
+            (l = (function (e, t) {
                 try {
                     let n = new URL(e);
                     return n.searchParams.set("dclid", t), n.toString();
                 } catch {
                     return e;
                 }
-            })(a, (o = (0, r.A)()))),
+            })(l, (o = (0, r.A)()))),
         (0, p.E5)(p.kI.STEP_3_CLICKED_EXTERNAL, "open_game_link_directly")
             ? (0, u.r)({
                   type: d.F.CLICK_EXTERNAL_ADVERTISER_CTA,
@@ -162,8 +162,8 @@ function R(e, t) {
               }),
         f._.dispatch(I.jej.QUEST_GAME_LINK_OPENED),
         M({
-            link: a,
-            directLink: l,
+            link: l,
+            directLink: a,
             inlineStoreParams:
                 null == (i = e.config.ctaConfig)
                     ? null
@@ -182,7 +182,7 @@ function R(e, t) {
 function k(e, t) {
     let { adContentId: n, adCreativeType: i, cta: r } = e,
         s = r.url,
-        o = N(r);
+        o = w(r);
     null != o && (s = o),
         (0, p.E5)(p.kI.STEP_3_CLICKED_EXTERNAL, "open_ad_game_link_directly")
             ? (0, u.r)({
@@ -274,14 +274,14 @@ function q(e, t) {
           });
     let i = O(n);
     if (1 === i.length) return (0, c.A)({ platformType: i.at(0) });
-    a.h.dispatch({
+    l.h.dispatch({
         type: "CONNECTIONS_GRID_MODAL_SHOW",
         onComplete: (e) => (0, c.A)({ platformType: e }),
         includedPlatformTypes: new Set(i),
         includeApplicationConnections: !1,
     });
 }
-function U(e, t, n) {
+function D(e, t, n) {
     let { quest: i } = e;
     return (
         (0, p.E5)(p.kI.STEP_2_CLICKED_INTERNAL, "open_single_console_connection_modal")
