@@ -50,12 +50,17 @@
     width: 100%
 }
 
-.launchButtonContainer__36d06 {
+.launchButtonContainer__36d06,
+.noAccess__36d06 {
     align-items: center;
     display: flex;
     height: 100%;
     justify-content: center;
     width: 100%
+}
+
+.noAccess__36d06 {
+    flex-direction: column
 }
 
 .container__535da {
@@ -110,4 +115,4 @@
     min-height: var(--space-32)
 }
 
-/*# sourceMappingURL=ee4b893835963965.css.map*/
+/*# sourceMappingURL=4284126d189cf7b1.css.map*/
