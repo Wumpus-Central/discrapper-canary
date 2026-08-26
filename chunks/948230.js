@@ -1,13 +1,14 @@
 n.d(t, {
     Eo: () => A,
-    GG: () => b,
-    HV: () => G,
+    GG: () => U,
+    HV: () => b,
+    I$: () => L,
     Is: () => E,
     M7: () => y,
     Ok: () => P,
     Ru: () => B,
     U1: () => f,
-    Zq: () => L,
+    Zq: () => G,
     dm: () => v,
     gA: () => S,
     gv: () => k,
@@ -150,12 +151,15 @@ async function m(e, t) {
     null != u && (await (0, a.TA)(u), await (0, o.un)(u, { force: !0 }).catch(() => {}), (n && (!r || i)) || h(u)),
         (0, _.qs)(e, { isPreview: n });
 }
-function L(e) {
-    r.h.dispatch({ type: "VIBEGRATIONS_CHAT_SIDEBAR_WIDTH_SET", width: e });
+function L(e, t) {
+    r.h.dispatch({ type: "VIBEGRATIONS_COMPOSER_DRAFT_SET", projectId: e, draft: t });
 }
 function G(e) {
-    r.h.dispatch({ type: "VIBEGRATIONS_BUILDER_PREVIEW_APPLICATION_SET", applicationId: e });
+    r.h.dispatch({ type: "VIBEGRATIONS_CHAT_SIDEBAR_WIDTH_SET", width: e });
 }
 function b(e) {
+    r.h.dispatch({ type: "VIBEGRATIONS_BUILDER_PREVIEW_APPLICATION_SET", applicationId: e });
+}
+function U(e) {
     r.h.dispatch({ type: "VIBEGRATIONS_BUILDER_PREVIEW_MOBILE_SET", enabled: e });
 }
