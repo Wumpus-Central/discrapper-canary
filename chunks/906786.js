@@ -1,18 +1,31 @@
 "use strict";
-n.d(t, { f: () => s, i: () => l });
-var i = n(945810),
-    r = n(652215);
-let a = (0, i.mj)({
+n.d(t, { f: () => o, ix: () => d, oS: () => c });
+var i = n(17928),
+    r = n(945810),
+    a = n(71393),
+    s = n(652215);
+let l = (0, r.mj)({
     name: "2026-07-vibegrations-guild",
     kind: "guild",
     defaultConfig: { enabled: !1 },
     variations: { 0: { enabled: !1 }, 1: { enabled: !0 } },
 });
-function s(e) {
+function o(e) {
     let { guildId: t, location: n } = e;
-    return a.useConfig({ guildId: t ?? r.dJq, location: n }).enabled;
+    return l.useConfig({ guildId: t ?? s.dJq, location: n }).enabled;
 }
-function l(e) {
+function d(e) {
     let { guildId: t, location: n } = e;
-    return null != t && a.getConfig({ guildId: t, location: n }).enabled;
+    return null != t && l.getConfig({ guildId: t, location: n }).enabled;
+}
+function c(e) {
+    return (0, i.bG)(
+        [a.A, r.Bt],
+        () =>
+            (function (e, t) {
+                for (let n of e) if (d({ guildId: n.id, location: t })) return !0;
+                return !1;
+            })(Object.values(a.A.getGuilds()), e),
+        [e],
+    );
 }

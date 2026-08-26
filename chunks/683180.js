@@ -2,12 +2,13 @@
 n.d(t, {
     $X: () => f,
     B9: () => _,
-    Bp: () => S,
-    QI: () => T,
+    Bp: () => N,
+    QI: () => m,
     RZ: () => I,
     SH: () => A,
     X0: () => E,
-    kg: () => g,
+    kg: () => S,
+    pG: () => T,
     pi: () => p,
 });
 var i = n(17928),
@@ -39,7 +40,7 @@ function A(e, t) {
     return null;
 }
 function h(e, t) {
-    return (0, o.i)({ guildId: e.id, location: t }) && !e.features.has(d.GuildFeatures.INTERNAL_EMPLOYEE_ONLY);
+    return (0, o.ix)({ guildId: e.id, location: t }) && !e.features.has(d.GuildFeatures.INTERNAL_EMPLOYEE_ONLY);
 }
 function I(e, t) {
     return e.filter((e) => h(e, t)).sort((e, t) => (e.id < t.id ? -1 : +(e.id > t.id)));
@@ -51,19 +52,27 @@ function f(e) {
 }
 function p(e, t) {
     return (
-        (0, o.i)({ guildId: e.id, location: t }) &&
+        (0, o.ix)({ guildId: e.id, location: t }) &&
         s.A.can(d.xBc.MANAGE_CHANNELS, e) &&
         s.A.can(d.xBc.MANAGE_GUILD, e) &&
         !e.features.has(d.GuildFeatures.INTERNAL_EMPLOYEE_ONLY)
     );
 }
 function T(e, t) {
+    return (
+        !e.features.has(d.GuildFeatures.INTERNAL_EMPLOYEE_ONLY) &&
+        s.A.can(d.xBc.MANAGE_CHANNELS, e) &&
+        s.A.can(d.xBc.MANAGE_GUILD, e) &&
+        (0, o.ix)({ guildId: e.id, location: t })
+    );
+}
+function m(e, t) {
     let n = (0, i.bG)([s.A], () => s.A.can(d.xBc.MANAGE_CHANNELS, e) && s.A.can(d.xBc.MANAGE_GUILD, e), [e]),
         r = (0, o.f)({ guildId: e.id, location: t }),
         a = e.features.has(d.GuildFeatures.INTERNAL_EMPLOYEE_ONLY);
     return r && n && !a;
 }
-function m(e, t) {
+function g(e, t) {
     return (
         null != e &&
         e.type === d.rbe.GUILD_TEXT &&
@@ -71,11 +80,11 @@ function m(e, t) {
         !t?.features.has(d.GuildFeatures.INTERNAL_EMPLOYEE_ONLY)
     );
 }
-function g(e, t) {
-    return m(e, a.A.getGuild(e?.guild_id)) && (0, o.i)({ guildId: e?.guild_id, location: t });
-}
 function S(e, t) {
+    return g(e, a.A.getGuild(e?.guild_id)) && (0, o.ix)({ guildId: e?.guild_id, location: t });
+}
+function N(e, t) {
     let n = (0, i.bG)([a.A], () => a.A.getGuild(e?.guild_id)),
         r = (0, o.f)({ guildId: e?.guild_id, location: t });
-    return m(e, n) && r;
+    return g(e, n) && r;
 }
