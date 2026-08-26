@@ -1,4 +1,4 @@
-s.d(t, { A: () => a3 }), s(323874), s(14289), s(35956);
+s.d(t, { A: () => a3 }), s(323874), s(14289), s(35956), s(205816);
 var i,
     n,
     a,
@@ -5380,11 +5380,12 @@ let a3 = function (e) {
             if (J.current || !$) return;
             let e = new URLSearchParams(Q.search).get("checkout");
             if (null == e) return;
-            let t = { nitro_basic: tF.pe.TIER_0, nitro: tF.pe.TIER_2 }[e];
-            null != t &&
+            let t = { nitro_basic: tF.pe.TIER_0, nitro: tF.pe.TIER_2 },
+                s = Object.hasOwn(t, e) ? t[e] : void 0;
+            null != s &&
                 ((J.current = !0),
                 (0, S.bG)(e1.BVt.APPLICATION_STORE),
-                (0, P.A)({ subscriptionTier: t, analyticsLocations: r }));
+                (0, P.A)({ subscriptionTier: s, analyticsLocations: r }));
         }, [$, Q.search, r]);
     let es = (0, g.bG)([y.A], () => y.A.enabled),
         ei = t === tF.tU.ApplicationStoreHome,
