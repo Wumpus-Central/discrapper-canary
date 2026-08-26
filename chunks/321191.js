@@ -80,6 +80,8 @@ function x(e) {
                                   title: e.title ?? void 0,
                                   tags: e.tags,
                                   localClipId: e.local_clip_id ?? void 0,
+                                  videoURL: e.video_url,
+                                  thumbnailURL: e.thumbnail_url,
                               }
                             : null,
                     )

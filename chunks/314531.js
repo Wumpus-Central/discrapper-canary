@@ -1,42 +1,57 @@
-n.d(t, { A: () => g });
-var i = n(477900);
-n(582128);
-var l = n(503698),
-    s = n.n(l),
-    r = n(607470),
-    a = n(590251),
-    o = n(375708),
+n.d(t, { A: () => m });
+var i = n(477900),
+    l = n(582128),
+    s = n(503698),
+    r = n.n(s),
+    a = n(607470),
+    o = n(590251),
+    c = n(375708),
     d = n(869006);
-function c(e) {
+function u(e) {
     let { item: t, size: n } = e,
         l = "exporting" === t.status,
-        r = "uploading" === t.status ? Math.round(100 * t.progress) : 25;
+        s = "uploading" === t.status ? Math.round(100 * t.progress) : 25;
     return (0, i.jsx)("div", {
-        className: s()(d.ring, d[n], { [d.indeterminate]: l }),
+        className: r()(d.ring, d[n], { [d.indeterminate]: l }),
         role: "progressbar",
-        "aria-label": o.intl.string(o.t.RFRuwZ),
-        "aria-valuenow": l ? void 0 : r,
-        children: (0, i.jsx)(a.a, {
-            percent: r,
-            strokeSize: a.a.StrokeSizes.MEDIUM,
+        "aria-label": c.intl.string(c.t.RFRuwZ),
+        "aria-valuenow": l ? void 0 : s,
+        children: (0, i.jsx)(o.a, {
+            percent: s,
+            strokeSize: o.a.StrokeSizes.MEDIUM,
             colorOverride: "var(--icon-overlay-light)",
         }),
     });
 }
-var u = n(579460);
-function g(e) {
-    let { item: t, ringSize: n, className: l } = e,
-        a = "exporting" === t.status || "uploading" === t.status,
-        o = s()(u.Gt, { [u.ob]: a });
-    return (0, i.jsxs)("div", {
-        className: s()(u.$_, l),
-        children: [
-            "saved" === t.status
-                ? null != t.videoURL
-                    ? (0, i.jsx)(r.A, { src: t.videoURL, preload: "metadata", muted: !0, className: o })
-                    : null
-                : (0, i.jsx)("img", { src: t.thumbnail, alt: "", className: o, loading: "lazy" }),
-            a && (0, i.jsx)(c, { item: t, size: n }),
-        ],
-    });
+var g = n(579460);
+function m(e) {
+    let { item: t, ringSize: n, isPlaying: s = !1, className: o } = e,
+        c = l.useRef(null),
+        d = "exporting" === t.status || "uploading" === t.status,
+        m = r()(g.Gt, { [g.ob]: d });
+    return (
+        l.useEffect(() => {
+            let e = c.current;
+            null != e && (s ? e.play().catch(() => {}) : e.pause());
+        }, [s]),
+        (0, i.jsxs)("div", {
+            className: r()(g.$_, o),
+            children: [
+                "saved" === t.status
+                    ? null != t.videoURL
+                        ? (0, i.jsx)(a.A, {
+                              ref: c,
+                              src: t.videoURL,
+                              poster: t.thumbnailURL,
+                              preload: "none",
+                              muted: !0,
+                              loop: !0,
+                              className: m,
+                          })
+                        : null
+                    : (0, i.jsx)("img", { src: t.thumbnail, alt: "", className: m, loading: "lazy" }),
+                d && (0, i.jsx)(u, { item: t, size: n }),
+            ],
+        })
+    );
 }

@@ -941,8 +941,8 @@ let e7 = (e) => {
               ],
           });
 };
-var e9 = l(101405);
-let e6 = (e) => {
+var e6 = l(101405);
+let e9 = (e) => {
         let {
                 node: { header: t, subheader: l, button: i },
                 isModeratorReport: s,
@@ -952,7 +952,7 @@ let e6 = (e) => {
             u = i?.type === "submit",
             o = a.useMemo(() => e_.A.reactParserFor({ ...e_.A.defaultRules, link: eA }), []);
         return (0, n.jsxs)("div", {
-            className: e9.N,
+            className: e6.N,
             children: [
                 d || null == t || "" === t
                     ? null
@@ -961,7 +961,7 @@ let e6 = (e) => {
                     ? (0, n.jsx)(P.E, {
                           variant: "text-md/normal",
                           color: "text-subtle",
-                          className: e9.m,
+                          className: e6.m,
                           children: o(l),
                       })
                     : null,
@@ -1547,12 +1547,12 @@ let t7 = (e) => {
         ],
     });
 };
-var t9 = l(967729),
-    t6 = l(287809),
+var t6 = l(81876),
+    t9 = l(287809),
     le = l(818972);
 let lt = (e) => {
         let { widget: t, userId: l } = e,
-            a = (0, G.bG)([t6.default], () => t6.default.getUser(l));
+            a = (0, G.bG)([t9.default], () => t9.default.getUser(l));
         return null == a
             ? null
             : (0, n.jsxs)("div", {
@@ -1563,7 +1563,7 @@ let lt = (e) => {
                           variant: "heading-sm/semibold",
                           children: T.intl.string(T.t.SpsnDY),
                       }),
-                      (0, n.jsx)(t9.u, { widget: t, user: a, allowEditing: !1, disableInteraction: !0 }),
+                      (0, n.jsx)(t6.u, { widget: t, user: a, allowEditing: !1, disableInteraction: !0 }),
                   ],
               });
     },
@@ -1788,7 +1788,7 @@ let ls = (e) => {
                 className: ec.wx,
                 children: [
                     (0, n.jsx)(tZ, { element: la(t, "success") }),
-                    (0, n.jsx)(e6, { node: t, isModeratorReport: P, isTidaReport: B, hideTitle: !0 }),
+                    (0, n.jsx)(e9, { node: t, isModeratorReport: P, isTidaReport: B, hideTitle: !0 }),
                     (0, n.jsx)(tn, { node: t }),
                 ],
             }),
