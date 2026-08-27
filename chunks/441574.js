@@ -2597,6 +2597,7 @@ class eV extends O.G {
             },
             { no: 7, name: "is_regional_adult", kind: "scalar", T: 8 },
             { no: 8, name: "cooldown_reset_at", kind: "message", T: () => L.D },
+            { no: 9, name: "excluded_from_prediction_since", kind: "message", T: () => L.D },
         ]);
     }
     create(e) {
@@ -2637,6 +2638,14 @@ class eV extends O.G {
                 case 8:
                     r.cooldownResetAt = L.D.internalBinaryRead(e, e.uint32(), n, r.cooldownResetAt);
                     break;
+                case 9:
+                    r.excludedFromPredictionSince = L.D.internalBinaryRead(
+                        e,
+                        e.uint32(),
+                        n,
+                        r.excludedFromPredictionSince,
+                    );
+                    break;
                 default:
                     let a = n.readUnknownField;
                     if ("throw" === a)
@@ -2657,7 +2666,9 @@ class eV extends O.G {
             0 !== e.estimatedAgeGroup && t.tag(6, S.O0.Varint).int32(e.estimatedAgeGroup),
             !1 !== e.isRegionalAdult && t.tag(7, S.O0.Varint).bool(e.isRegionalAdult),
             e.cooldownResetAt &&
-                L.D.internalBinaryWrite(e.cooldownResetAt, t.tag(8, S.O0.LengthDelimited).fork(), n).join();
+                L.D.internalBinaryWrite(e.cooldownResetAt, t.tag(8, S.O0.LengthDelimited).fork(), n).join(),
+            e.excludedFromPredictionSince &&
+                L.D.internalBinaryWrite(e.excludedFromPredictionSince, t.tag(9, S.O0.LengthDelimited).fork(), n).join();
         let i = n.writeUnknownFields;
         return !1 !== i && (!0 == i ? S.f$.onWrite : i)(this.typeName, e, t), t;
     }
