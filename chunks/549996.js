@@ -16,7 +16,7 @@ function c(e) {
                 r = u.A.getPromotionByTypeAndId(a.pt.MARKETING_MOMENT, n);
             if (r?.trialId != null) {
                 let e = l.A.getUserTrialOffer(r.trialId);
-                if (null == e || e.hasExpired()) return null;
+                if (null == e || e.hasExpired) return null;
             }
             return t;
         }),

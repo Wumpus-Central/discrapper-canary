@@ -13,7 +13,7 @@ let c = function (e, t) {
         d = (0, l.O)(),
         h = (0, l.p)();
     if (null != c && (null == e || c.subscriptionTrial?.skuId === e))
-        return null != c.referrerId ? u.intl.string(u.t.gtNqJQ) : u.intl.string(u.t.IBYG5U);
+        return c.isReferralTrial ? u.intl.string(u.t.gtNqJQ) : u.intl.string(u.t.IBYG5U);
     if (null != d && (null == e || (0, s.U9)(d, e))) {
         let e = r.U4.includes(d.discountId);
         return u.intl.formatToPlainString(e ? u.t.mYNXed : u.t.iiLbvu, { percent: d.discount.amount });

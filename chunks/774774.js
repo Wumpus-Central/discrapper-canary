@@ -99,7 +99,7 @@ function p(e, t, n, i, r) {
         return e ? _.intl.string(_.t.EyjDRE) : _.intl.formatToPlainString(_.t.iiLbvu, { percent: n.discount.amount });
     if (r === u.pe.TIER_2) {
         let e = _.intl.string(_.t.IBYG5U);
-        return i?.trialId === u.Dw && (e = _.intl.string(_.t.gtNqJQ)), e;
+        return i?.isReferralTrial === !0 && (e = _.intl.string(_.t.gtNqJQ)), e;
     }
     return t === u.PremiumTypes.TIER_2 ? _.intl.string(_.t.qYKftX) : e ? _.intl.string(_.t.EyjDRE) : null;
 }

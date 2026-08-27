@@ -7,22 +7,22 @@ var r = n(158045),
     o = n(375708);
 function a(t) {
     var i;
-    let { subscriptionTier: n, hasActivePromotion: a = !1, useShorterCTA: p = !1, isPersistentCTA: c = !1 } = t,
-        T = (0, u.V)(),
-        d = T?.subscriptionTrial,
+    let { subscriptionTier: n, hasActivePromotion: a = !1, useShorterCTA: p = !1, isPersistentCTA: T = !1 } = t,
+        c = (0, u.V)(),
+        d = c?.subscriptionTrial,
         v = (0, e.O)(),
         b = (0, l.U9)(v, s.pe.TIER_2) ? s.pe.TIER_2 : void 0,
         f = (0, r.tS)({ intervalType: d?.interval, intervalCount: d?.intervalCount }),
-        k = n ?? T?.subscriptionTrial?.skuId ?? b,
-        I = null != d && k === d.skuId,
-        C = T?.trialId === s.Dw,
+        k = n ?? c?.subscriptionTrial?.skuId ?? b,
+        C = null != d && k === d.skuId,
+        I = c?.isReferralTrial === !0,
         h = null != v && s.U4.includes(v.discountId);
     return {
         buttonText: a
             ? o.intl.string(o.t.J61px0)
             : null != v
               ? ((i = v.discount.amount),
-                p || c
+                p || T
                     ? o.intl.string(o.t.fkPGat)
                     : k === s.pe.TIER_2
                       ? o.intl.formatToPlainString(h ? o.t.ZhPpOu : o.t.bkQ4bH, { percent: i })
@@ -44,11 +44,11 @@ function a(t) {
                             ? o.intl.formatToPlainString(o.t.nTmm2v, { freeTrialText: e })
                             : void 0;
                 })({
-                    showTrialCTA: I,
+                    showTrialCTA: C,
                     subscriptionTier: k,
                     trialDurationCopy: f,
-                    isPersistentCTA: c,
-                    shouldShowReferralTrialCopy: C,
+                    isPersistentCTA: T,
+                    shouldShowReferralTrialCopy: I,
                     subscriptionTrial: d,
                 }),
         marketingSubscriptionTierSkuId: k,

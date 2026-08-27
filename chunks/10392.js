@@ -87,7 +87,7 @@ async function p() {
     return e;
 }
 function T(e, t) {
-    let n = null != e && null == e.expiresAt ? e.id : void 0,
+    let n = null == e || e.hasAcknowledged ? void 0 : e.id,
         r = null == t || t.hasAcknowledged() ? void 0 : t.id;
     if (void 0 !== n || void 0 !== r)
         return i.Bo.post({

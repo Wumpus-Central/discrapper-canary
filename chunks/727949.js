@@ -27,8 +27,8 @@ function I() {
 function N(e) {
     let { trialOffer: t } = e;
     if (null == t) return !1;
-    let n = null != t.referrerId,
-        i = !t.isRedeemed(),
+    let n = t.isReferralTrial,
+        i = !t.isRedeemed,
         l = new Date(E.default.extractTimestamp(t.id)),
         r = new Date();
     return n && i && r >= l;

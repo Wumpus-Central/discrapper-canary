@@ -10007,8 +10007,8 @@ function op(e) {
             })?.label ?? "Unknown";
     null != b && (y = `${y} from @${b.username}`);
     let E = null != v,
-        _ = t.hasExpired(),
-        C = t.isRedeemed(),
+        _ = t.hasExpired,
+        C = t.isRedeemed,
         S = f?.skuId === tD.pe.TIER_0;
     async function N() {
         m(!0), E ? await A({ expiresAt: null }) : await (0, on.u1)(t), n(), m(!1);

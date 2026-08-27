@@ -16,6 +16,6 @@ function u() {
 }
 function c() {
     return a.MB.map((e) => r.A.getUserTrialOffer(e))
-        .filter((e) => null != e && !e.hasExpired())
+        .filter((e) => null != e && !e.hasExpired)
         .shift();
 }

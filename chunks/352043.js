@@ -739,7 +739,7 @@ class tt extends a.Component {
             t = null != e ? e.username : "???",
             n = T.default.getUser(this.trialOffer.referrerId),
             i = null != n ? n.username : "???";
-        return this.recipientHasNitro && null == this.trialOffer.redeemedAt
+        return this.recipientHasNitro && !this.trialOffer.isRedeemed
             ? y.intl.formatToPlainString(y.t["Mptau/"], { username: t })
             : this.offerExpired
               ? this.isSender
@@ -748,11 +748,11 @@ class tt extends a.Component {
               : y.intl.formatToPlainString(y.t.IiWKwg, { senderUserName: i, recipientUserName: t });
     }
     getBodyText() {
-        return this.recipientHasNitro && !this.isSender && null == this.trialOffer.redeemedAt
-            ? y.intl.format(y.t.LwCwT9, { helpdeskArticle: e0.A.getArticleURL(D.MVz.REFERRAL_PROGRAM) })
-            : this.offerExpired
-              ? null
-              : y.intl.string(y.t.lQLlOb);
+        return !this.recipientHasNitro || this.isSender || this.trialOffer.isRedeemed
+            ? this.offerExpired
+                ? null
+                : y.intl.string(y.t.lQLlOb)
+            : y.intl.format(y.t.LwCwT9, { helpdeskArticle: e0.A.getArticleURL(D.MVz.REFERRAL_PROGRAM) });
     }
     renderActions() {
         let e =
@@ -787,7 +787,7 @@ class tt extends a.Component {
     }
     renderExpirationDate() {
         let { trialOffer: e, trialEndsAt: t } = this.props;
-        if (null != e.redeemedAt && !this.isSender && null !== t)
+        if (e.isRedeemed && !this.isSender && null !== t)
             return y.intl.formatToPlainString(y.t.nP0ivR, { date: (0, e$.i$)(eW()(t), "LL") });
         if (this.recipientHasNitro || null == e.expiresAt) return null;
         let n = eW()(e.expiresAt);
@@ -805,7 +805,7 @@ class tt extends a.Component {
                     n = T.default.getUser(this.trialOffer.referrerId),
                     i = null != n ? n.username : "???";
                 if (this.isSender)
-                    if (this.recipientHasNitro && null == this.trialOffer.redeemedAt)
+                    if (this.recipientHasNitro && !this.trialOffer.isRedeemed)
                         return {
                             headerText: y.intl.formatToPlainString(y.t.qABVhL, { recipient: t }),
                             bodyText: y.intl.formatToPlainString(y.t.u7hyDx, {

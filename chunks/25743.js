@@ -59,27 +59,27 @@ var L = n(573359),
     I = n(724651),
     T = n(732280),
     E = n(795269),
-    j = n(202541),
-    A = n(221549);
-let N = function (e) {
+    j = n(221549);
+let A = function (e) {
     let { discountAmount: t } = e,
         n = (0, T.V)(),
-        r = null != n && n.trialId === j.Dw,
+        r = null != n && n.isReferralTrial,
         i = v.intl.string(v.t.IBYG5U);
     return (
         void 0 !== t
             ? (i = v.intl.formatToPlainString(v.t.iiLbvu, { percent: t }))
             : r && (i = v.intl.string(v.t.gtNqJQ)),
-        (0, s.jsx)("div", { className: A.f, children: (0, s.jsx)(E.R, { text: i }) })
+        (0, s.jsx)("div", { className: j.f, children: (0, s.jsx)(E.R, { text: i }) })
     );
 };
-var b = n(88001),
+var N = n(202541),
+    b = n(88001),
     S = n(910705),
     y = n(592551),
     P = n(232266),
     _ = n(243002),
-    M = n(303930),
-    R = n(241988);
+    R = n(303930),
+    M = n(241988);
 function D(e) {
     let { isOneStepCheckout: t, headerText: n, step: r, filteredBreadcrumbs: i } = e;
     if (t)
@@ -119,9 +119,9 @@ let w = function (e) {
             isPremiumGroupPurchase: h = !1,
             forceBrandRefreshHeader: T = !1,
         } = e,
-        E = f === j.PremiumTypes.TIER_2,
-        A = (0, I.O)(),
-        P = A?.discount?.amount,
+        E = f === N.PremiumTypes.TIER_2,
+        j = (0, I.O)(),
+        P = j?.discount?.amount,
         { startedPaymentFlowWithPaymentSources: _, isInOneStepSubscriptionCheckout: w } = (0, m.t4)((e) => ({
             startedPaymentFlowWithPaymentSources: e.startedPaymentFlowWithPaymentSources,
             isInOneStepSubscriptionCheckout: e.getIsInOneStepSubscriptionCheckout({ isTrial: x }),
@@ -165,7 +165,7 @@ let w = function (e) {
                                   onClick: r,
                                   className: S.Ep,
                               }),
-                          (0, s.jsx)("img", { src: E ? R : M, alt: "", className: V ? S.i_ : S.kX }),
+                          (0, s.jsx)("img", { src: E ? M : R, alt: "", className: V ? S.i_ : S.kX }),
                           (0, s.jsxs)("div", {
                               className: S.FS,
                               children: [
@@ -184,7 +184,7 @@ let w = function (e) {
                           }),
                       ],
                   }),
-                  (g || C) && (0, s.jsx)(N, { discountAmount: P }),
+                  (g || C) && (0, s.jsx)(A, { discountAmount: P }),
                   G && (0, s.jsx)(D, { isOneStepCheckout: w, headerText: B, step: k, filteredBreadcrumbs: F }),
               ],
           });

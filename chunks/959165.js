@@ -1,8 +1,9 @@
 "use strict";
-n.d(t, { A: () => a });
+n.d(t, { A: () => s });
 var i = n(315069),
-    r = n(310507);
-class a extends i.A {
+    r = n(310507),
+    a = n(202541);
+class s extends i.A {
     id;
     userId;
     trialId;
@@ -12,7 +13,7 @@ class a extends i.A {
     subscriptionTrial;
     redeemedAt;
     static createFromServer(e) {
-        return new a({
+        return new s({
             id: e.id,
             userId: e.user_id,
             trialId: e.trial_id,
@@ -34,10 +35,16 @@ class a extends i.A {
             (this.subscriptionTrial = e.subscriptionTrial ?? null),
             (this.redeemedAt = e.redeemedAt ?? null);
     }
-    hasExpired() {
+    get hasExpired() {
         return null != this.expiresAt && Date.now() > this.expiresAt.getTime();
     }
-    isRedeemed() {
+    get isRedeemed() {
         return null != this.redeemedAt;
+    }
+    get hasAcknowledged() {
+        return null != this.expiresAt;
+    }
+    get isReferralTrial() {
+        return this.trialId === a.Dw || null != this.referrerId;
     }
 }

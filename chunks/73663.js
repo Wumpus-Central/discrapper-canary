@@ -504,50 +504,50 @@ function ev(e) {
     a()(void 0 !== f, "should not be undefined");
     let [M, w] = (0, s.yK)([L.A], () => [null != f ? L.A.get(f.planId) : null, null != t ? L.A.get(t) : null]),
         D = E?.subscriptionTrial,
-        G = E?.trialId === K.Dw,
+        G = E?.isReferralTrial === !0,
         F = (0, ec.Sq)() && !G,
         B = w ?? N,
         W = n ?? m;
     a()(null != W, "Price option has to be set");
     let Y = y?.discount?.planIds,
         V = null != y && l.some((e) => Y?.includes(e)) && null != y.discount,
-        Z = null != I && l.includes(I) ? (0, U.y8)(I, !1, A, W) : void 0,
-        q = null != B ? B.id : void 0,
-        z = null != q && l.includes(q);
+        K = null != I && l.includes(I) ? (0, U.y8)(I, !1, A, W) : void 0,
+        Z = null != B ? B.id : void 0,
+        q = null != Z && l.includes(Z);
     i.useEffect(() => {
-        if (z) return void d(q, { shouldUpdateQuantity: !1 });
+        if (q) return void d(Z, { shouldUpdateQuantity: !1 });
         let e = !A && null != I && l.includes(I) ? I : null;
         if (null == M || A) d(e ?? l[0]);
         else if (null != M) {
             let e = l.find((e) => e !== M.id);
             null != e && d(e);
         }
-    }, [z, A, l, M, d, q, I]),
+    }, [q, A, l, M, d, Z, I]),
         i.useEffect(() => {
             b && null != _ && _.length > 0 && T(_);
         }, [_, T, b]);
-    let { ref: Q, ...$ } = (0, o._u)(),
-        J = B?.id != null ? (0, U.y8)(B.id, !1, A, W) : void 0,
-        { ipCountryCode: X } = (0, eu.A)(),
-        ee = "HR" === X && null != J && J.currency === ey.Yr.EUR,
-        et = (0, U.J$)(W.paymentSourceId),
-        en = !A && (V || (null != D && S && null != r)),
-        { copy: el } = eP();
+    let { ref: z, ...Q } = (0, o._u)(),
+        $ = B?.id != null ? (0, U.y8)(B.id, !1, A, W) : void 0,
+        { ipCountryCode: J } = (0, eu.A)(),
+        X = "HR" === J && null != $ && $.currency === ey.Yr.EUR,
+        ee = (0, U.J$)(W.paymentSourceId),
+        et = !A && (V || (null != D && S && null != r)),
+        { copy: en } = eP();
     return {
         skuId: c,
         selectedPlan: B,
-        selectedPlanPrice: J,
+        selectedPlanPrice: $,
         premiumSubscriptionPlan: M,
         premiumSubscription: f,
         thePriceOptions: W,
         hasSeenCollectiblesInSkuSelect: j,
-        shouldShowTrialOrDiscountLayout: en,
-        shouldShowHRKEuroWarning: ee,
-        shouldShowTotalInSubscriptionFlow: !S && !V && z && u,
-        canContinue: z,
-        isPrepaid: et,
-        radioGroupRef: Q,
-        radioGroupProps: $,
+        shouldShowTrialOrDiscountLayout: et,
+        shouldShowHRKEuroWarning: X,
+        shouldShowTotalInSubscriptionFlow: !S && !V && q && u,
+        canContinue: q,
+        isPrepaid: ee,
+        radioGroupRef: z,
+        radioGroupProps: Q,
         isGift: A,
         giftRecipient: g,
         customGiftMessage: v,
@@ -556,9 +556,9 @@ function ev(e) {
         isEligibleForBOGOPromotion: F,
         isEligibleForTrial: S,
         userTrialOffer: E,
-        trialPeriodCopy: el,
+        trialPeriodCopy: en,
         isPlansEligibleForDiscount: V,
-        discountedPlanRegularPrice: Z,
+        discountedPlanRegularPrice: K,
     };
 }
 function ex(e) {
@@ -715,7 +715,7 @@ function eN(e) {
 }
 function eb(e, t) {
     let { subscriptionPeriodEnd: n, trialPeriodCopy: l } = t,
-        i = e?.trialId === K.Dw;
+        i = e?.isReferralTrial === !0;
     return null == n
         ? null
         : i

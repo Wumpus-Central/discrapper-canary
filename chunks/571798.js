@@ -1455,7 +1455,7 @@ if (
     n.e("859864").then(n.t.bind(n, 122123, 19));
 let e2 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 new eB.A().log(
-    `[BUILD INFO] Release Channel: ${e2}, Build Number: 602300, Version Hash: 104558fe3145cba1c4ac6423a3c4254f594665da`,
+    `[BUILD INFO] Release Channel: ${e2}, Build Number: 602335, Version Hash: 9396b3eae1bb95ac3c22ceda2b33529ef7371a26`,
 ),
     D.A.setTags({ appContext: G.QCW }),
     eI.A.initBasic(),
@@ -20034,7 +20034,7 @@ function SS(e) {
             showAfterTimestamp: eo.valueOf(),
             cooldownDurationMs: 0,
         }),
-        eA = f?.trialId === du.Dw,
+        eA = f?.isReferralTrial === !0,
         eh = (0, gs.TF)({ location: "NitroTabButton" }),
         eI = (0, gD.q)(E, eh === gs.Iz.NITRO_TAB_POPOVER),
         ef = i1.M.MONTHLY_TO_YEARLY_UPSELL_NITRO_TAB_POPOVER,
@@ -20197,7 +20197,7 @@ function SS(e) {
                         : ((t = (0, O.jsx)(gg.Ag, { trialOffer: f, isTabSelected: a, badgeStyle: ea })),
                           (n = 4),
                           (eB = er === gn.F.POPOVER && eG === i1.M.PREMIUM_OFFER_TAB_BADGE_POPOVER),
-                          (eH = er === gn.F.TOOLTIP && null == f.expiresAt));
+                          (eH = er === gn.F.TOOLTIP && !f.hasAcknowledged));
     let eX = Sp.NONE;
     eD === i1.M.PREMIUM_MARKETING_MOMENT_REMINDER_UPSELL
         ? (eX = Sp.MARKETING_MOMENT_POPOVER)
@@ -20918,7 +20918,7 @@ let Nu = "isHideDevBanner",
                     className: ta()(Nc.Wz, Nc.mr),
                     children: [
                         (0, O.jsx)(Nd, { className: Nc.Kk }),
-                        tT.intl.format(tT.t.uyrfYF, { buildNumber: "602300" }),
+                        tT.intl.format(tT.t.uyrfYF, { buildNumber: "602335" }),
                         (0, O.jsx)(r, {}),
                     ],
                 })
@@ -34355,7 +34355,7 @@ class vl extends t8.A {
             if (null != t.marketingComponents) {
                 if (null != t.trialId) {
                     let e = D9.A.getUserTrialOffer(t.trialId);
-                    if (null == e || e.hasExpired()) continue;
+                    if (null == e || e.hasExpired) continue;
                 }
                 for (let e of (n.set(t.id, t), t.marketingComponents))
                     e.componentType === mJ.C.ANNOUNCEMENT_MODAL && i.push(e);

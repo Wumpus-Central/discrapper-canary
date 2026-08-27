@@ -74,7 +74,7 @@ var h = n(158045),
 function N(e) {
     let { isTier0: t, discountAmount: n } = e,
         r = (0, T.V)(),
-        a = null != r && r.trialId === E.Dw,
+        a = null != r && r.isReferralTrial,
         l = j.intl.string(j.t.IBYG5U);
     return (
         void 0 !== n
@@ -173,7 +173,7 @@ function _(e) {
         pause: i,
     });
 }
-function M(e) {
+function R(e) {
     let { currentStep: t, purchaseState: n, className: r, pause: i } = e,
         [a, l] = (0, y.f)({
             purchaseState: n,
@@ -191,7 +191,7 @@ function M(e) {
         pause: i,
     });
 }
-function R(e) {
+function M(e) {
     let { currentStep: t, purchaseState: n, className: r, pause: i } = e,
         [a, l] = (0, y.f)({
             purchaseState: n,
@@ -268,8 +268,8 @@ function U(e) {
                         d === E.PremiumTypes.TIER_0
                             ? (0, s.jsx)(_, { className: D.mv, currentStep: t, purchaseState: r, pause: A })
                             : d === E.PremiumTypes.TIER_1
-                              ? (0, s.jsx)(M, { className: D.mv, currentStep: t, purchaseState: r, pause: A })
-                              : (0, s.jsx)(R, { className: D.mv, currentStep: t, purchaseState: r, pause: A }),
+                              ? (0, s.jsx)(R, { className: D.mv, currentStep: t, purchaseState: r, pause: A })
+                              : (0, s.jsx)(M, { className: D.mv, currentStep: t, purchaseState: r, pause: A }),
                     plan: null,
                     isGift: !1,
                     className: D.wx,

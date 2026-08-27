@@ -261,7 +261,7 @@ class y extends i.Ay.PersistedStore {
             : Object.values(m.userTrialOffers).filter((t) => e.includes(t.trialId) && null == t.expiresAt);
     }
     hasAnyUnexpiredOffer() {
-        return Object.values(m.userTrialOffers).some((e) => !e.hasExpired());
+        return Object.values(m.userTrialOffers).some((e) => !e.hasExpired);
     }
     hasAnyUnexpiredDiscountOffer() {
         return Object.values(m.userDiscountOffers).some((e) => !e.hasExpired());
