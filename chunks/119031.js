@@ -201,6 +201,7 @@ function J(e) {
         b
             ? (D = (0, n.jsxs)("div", {
                   className: a()(X.IW, { "stop-animation": !i, [X.Il]: m }, r),
+                  "data-mtctest-ignore": "true",
                   children: [
                       0 === l.length && p
                           ? (0, n.jsx)(w.A, {})
