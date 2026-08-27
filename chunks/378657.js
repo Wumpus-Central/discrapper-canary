@@ -847,11 +847,11 @@ function e6(e) {
         });
 }
 var e9 = l(97808),
-    e5 = l(778712),
-    e8 = l(463930),
+    e8 = l(778712),
+    e5 = l(463930),
     e3 = l(730134),
     e4 = l(906199),
-    e2 = l(319756),
+    e2 = l(483625),
     e7 = l(854627),
     te = l(696451),
     tt = l(317525),
@@ -873,7 +873,7 @@ function to(e) {
             avatarDecorationSrc: m,
             avatarSrc: p,
             eventHandlers: x,
-        } = (0, e7.A)({ userId: r?.id, guildId: t, size: e5._3.SIZE_40, animateOnHover: !d }),
+        } = (0, e7.A)({ userId: r?.id, guildId: t, size: e8._3.SIZE_40, animateOnHover: !d }),
         A = (0, j.c)("GuildPowerupsBoostInfoContainerMember");
     return null == l || null == a || null == r
         ? null
@@ -912,11 +912,11 @@ function to(e) {
                               user: r,
                               src: p,
                               avatarDecoration: m,
-                              size: e5._3.SIZE_40,
+                              size: e8._3.SIZE_40,
                               "aria-hidden": !0,
                               animate: !0,
                           }),
-                          username: (0, n.jsx)(e8.g, {
+                          username: (0, n.jsx)(e5.g, {
                               variant: "text-md/semibold",
                               name: tn.Ay.getName(t, null, r),
                               colorString: i.colorString,
@@ -1007,7 +1007,7 @@ function tA(e) {
                             shouldShow: !0,
                             asContainer: !0,
                             delay: 1e3,
-                            children: (0, n.jsx)(e8.g, {
+                            children: (0, n.jsx)(e5.g, {
                                 variant: "text-md/semibold",
                                 name: o,
                                 colorString: a ?? null,

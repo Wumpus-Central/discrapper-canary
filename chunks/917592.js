@@ -1,11 +1,11 @@
-n.d(t, { A: () => s });
+n.d(t, { A: () => r });
 var i = n(652215),
     l = n(375708);
-let s = {
+let r = {
     getStatus: function (e) {
         let t,
             n,
-            s = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+            r = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
         switch (e) {
             case i.S7L.CONNECTING:
                 (t = i.vkP.CONNECTING), (n = l.intl.string(l.t.MzW9sN));
@@ -17,7 +17,7 @@ let s = {
                 (t = i.vkP.CONNECTING), (n = l.intl.string(l.t.uQle7a));
                 break;
             case i.S7L.RTC_CONNECTED:
-                (t = i.vkP.CONNECTED), (n = s ? l.intl.string(l.t.HtVOdd) : l.intl.string(l.t.daXg45));
+                (t = i.vkP.CONNECTED), (n = r ? l.intl.string(l.t.HtVOdd) : l.intl.string(l.t.daXg45));
                 break;
             case i.S7L.RTC_CONNECTING:
                 (t = i.vkP.CONNECTING), (n = l.intl.string(l.t.Gp51dl));

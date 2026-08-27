@@ -1,8 +1,8 @@
 n.d(t, { A: () => h }), n(321073);
 var i = n(17928),
     l = n(228366),
-    s = n(427358),
-    r = n(153488),
+    r = n(427358),
+    s = n(153488),
     a = n(994500),
     o = n(287809);
 let u = [],
@@ -11,7 +11,7 @@ class c extends i.Ay.PersistedStore {
     static displayName = "FriendGroupsStore";
     static persistKey = "FriendGroupsStoreV2";
     initialize(e) {
-        this.waitFor(r.A, a.A, s.A, o.default), null != e && ((u = e.groups ?? []), (d = e.isInitialized ?? !1));
+        this.waitFor(s.A, a.A, r.A, o.default), null != e && ((u = e.groups ?? []), (d = e.isInitialized ?? !1));
     }
     getGroups() {
         return u;
@@ -70,17 +70,17 @@ let h = new c(l.h, {
             i = u.findIndex((e) => e.id === t);
         if (-1 === i) return !1;
         let l = u[i],
-            s = new Set(l.userIds),
-            r = n.filter((e) => !s.has(e));
-        return 0 !== r.length && ((u[i] = { ...l, userIds: [...l.userIds, ...r] }), !0);
+            r = new Set(l.userIds),
+            s = n.filter((e) => !r.has(e));
+        return 0 !== s.length && ((u[i] = { ...l, userIds: [...l.userIds, ...s] }), !0);
     },
     REMOVE_USERS_FROM_GROUP: function (e) {
         let { groupId: t, userIds: n } = e,
             i = u.findIndex((e) => e.id === t);
         if (-1 === i) return !1;
         let l = u[i],
-            s = new Set(n),
-            r = l.userIds.filter((e) => !s.has(e));
-        return r.length !== l.userIds.length && ((u[i] = { ...l, userIds: r }), !0);
+            r = new Set(n),
+            s = l.userIds.filter((e) => !r.has(e));
+        return s.length !== l.userIds.length && ((u[i] = { ...l, userIds: s }), !0);
     },
 });

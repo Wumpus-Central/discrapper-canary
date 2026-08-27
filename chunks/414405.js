@@ -1,8 +1,8 @@
 n.d(t, { A: () => g });
 var i = n(17928),
     l = n(616356),
-    s = n(453028),
-    r = n(532624),
+    r = n(453028),
+    s = n(532624),
     a = n(350535),
     o = n(915725),
     u = n(572164),
@@ -13,10 +13,10 @@ function g() {
     let e = (0, u.E)(),
         t = (0, i.bG)([o.Ay], () => o.Ay.getLastClipsError()),
         n = (0, i.bG)(
-            [s.Ay, l.A],
-            () => s.Ay.hasClipsSource() || l.A.getCurrentUserActiveStream()?.state === d.XYD.ACTIVE,
+            [r.Ay, l.A],
+            () => r.Ay.hasClipsSource() || l.A.getCurrentUserActiveStream()?.state === d.XYD.ACTIVE,
         ),
-        g = (0, i.bG)([r.Ay], () => r.Ay.getKeybindForAction(d.hCu.SAVE_CLIP));
+        g = (0, i.bG)([s.Ay], () => s.Ay.getKeybindForAction(d.hCu.SAVE_CLIP));
     return {
         tooltip:
             null != t

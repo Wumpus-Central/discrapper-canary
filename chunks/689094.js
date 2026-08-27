@@ -1,4 +1,4 @@
-_.exports = {
+e.exports = {
     jE: "modalContent__46773",
     r2: "iconSection__46773",
     zc: "iconContainer__46773",

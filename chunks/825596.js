@@ -1,4 +1,4 @@
-n.d(t, { A: () => O, i: () => M });
+n.d(t, { A: () => O, i: () => k });
 var i = n(477900),
     l = n(582128),
     s = n(503698),
@@ -56,7 +56,7 @@ function b() {
 }
 var R = n(818348),
     L = n(402805);
-function k(e) {
+function M(e) {
     let {
         showEditProduct: t,
         showUnpublishProduct: n,
@@ -141,7 +141,7 @@ function k(e) {
         }),
     });
 }
-function M(e) {
+function k(e) {
     let {
             product: t,
             guildId: n,
@@ -170,7 +170,7 @@ function M(e) {
             spacing: -8,
             animation: m.Y.Animation.FADE,
             renderPopout: (e) =>
-                (0, i.jsx)(k, {
+                (0, i.jsx)(M, {
                     ...e,
                     guildId: n,
                     productId: t.id,
@@ -228,7 +228,7 @@ function O(e) {
         onContextMenu: function (e) {
             (0, E.L3)(e, () =>
                 Promise.resolve((e) =>
-                    (0, i.jsx)(k, {
+                    (0, i.jsx)(M, {
                         ...e,
                         closePopout: E.Z_,
                         guildId: n,
@@ -288,7 +288,7 @@ function O(e) {
                         ],
                     }),
                     !d &&
-                        (0, i.jsx)(M, {
+                        (0, i.jsx)(k, {
                             product: t,
                             guildId: n,
                             showEditProduct: !0,

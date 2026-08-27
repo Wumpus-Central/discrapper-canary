@@ -1,8 +1,8 @@
 n.d(t, { E: () => a });
 var i = n(477900),
     l = n(582128),
-    s = n(744682);
-let r = { all: { name: "all", start: 0, duration: 66 } };
+    r = n(744682);
+let s = { all: { name: "all", start: 0, duration: 66 } };
 function a() {
     let e = l.useRef(null),
         t = l.useCallback(() => {
@@ -16,7 +16,7 @@ function a() {
         }, []),
         u = l.useCallback(
             (t) =>
-                (0, i.jsx)(s.P, { ...t, src: () => n.e("905506").then(n.t.bind(n, 206905, 19)), ref: e, markers: r }),
+                (0, i.jsx)(r.P, { ...t, src: () => n.e("905506").then(n.t.bind(n, 206905, 19)), ref: e, markers: s }),
             [],
         );
     return {

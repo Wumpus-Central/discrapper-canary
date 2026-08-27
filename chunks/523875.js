@@ -1,8 +1,8 @@
 n.d(t, { L: () => a });
 var i = n(477900),
     l = n(582128),
-    s = n(744682);
-let r = {
+    r = n(744682);
+let s = {
     mute: { name: "mute", start: 0, duration: 70 },
     unmute: { name: "unmute", start: 100, duration: 70 },
     hover_unmuted: { name: "hover_unmuted", start: 180, duration: 40 },
@@ -30,12 +30,12 @@ function a(e) {
         }, [e]),
         c = l.useCallback(
             (e) =>
-                (0, i.jsx)(s.P, {
+                (0, i.jsx)(r.P, {
                     ...e,
                     src: () => n.e("218133").then(n.t.bind(n, 705844, 19)),
                     ref: t,
                     initialAnimation: a.current,
-                    markers: r,
+                    markers: s,
                 }),
             [],
         );

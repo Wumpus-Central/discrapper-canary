@@ -46,21 +46,21 @@ function T(e) {
     r.useEffect(() => {
         !N && P && n && i(!1);
     }, [N, P, n, i]);
-    let M = E || j || y || (!N && P),
-        R = M || N,
+    let R = E || j || y || (!N && P),
+        M = R || N,
         D = r.useCallback(() => {
-            R || i(!n);
-        }, [i, n, R]);
+            M || i(!n);
+        }, [i, n, M]);
     if (P && !N) return null;
-    let U = M && null != A && b,
-        w = R && null != A,
+    let U = R && null != A && b,
+        w = M && null != A,
         O = a()(L.kL, T),
         k = j
             ? (0, s.jsx)("div", {
                   className: L.tv,
                   children: (0, s.jsx)(c.y, { type: c.y.Type.SPINNING_CIRCLE_SIMPLE, className: L.u1 }),
               })
-            : (0, s.jsx)(o.S, { checked: n && (N || !P), onChange: D, disabled: R, label: "" }),
+            : (0, s.jsx)(o.S, { checked: n && (N || !P), onChange: D, disabled: M, label: "" }),
         W = (0, s.jsxs)("div", {
             children: [
                 (0, s.jsx)(d.E, {
@@ -78,13 +78,13 @@ function T(e) {
                     }),
             ],
         }),
-        F = R
+        F = M
             ? (0, s.jsxs)("div", {
                   className: O,
                   role: "checkbox",
                   "aria-checked": !j && n,
                   "aria-busy": j || void 0,
-                  "aria-disabled": M || void 0,
+                  "aria-disabled": R || void 0,
                   children: [
                       (0, s.jsx)("div", { children: k }),
                       W,

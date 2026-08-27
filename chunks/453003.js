@@ -28,8 +28,8 @@ var i,
     b = n(205184),
     R = n(928550),
     L = n(689168),
-    k = n(403362),
-    M = n(456060),
+    M = n(403362),
+    k = n(456060),
     O = n(723702),
     P = n(850670),
     D = n(206589),
@@ -138,7 +138,7 @@ function en(e) {
                                 return null;
                         }
                     })
-                    .filter(k.Vq),
+                    .filter(M.Vq),
             [a],
         );
     if (!(null != n || r.length > 0)) return null;
@@ -206,7 +206,7 @@ function el(e) {
             onView: A,
             presenceActivity: f,
             currentUserPresenceActivity: T,
-            hideParty: k,
+            hideParty: M,
             hideBanner: Z = !1,
             partyStatusElement: q,
             analyticsLocations: Q,
@@ -237,7 +237,7 @@ function el(e) {
                     className: et.dS,
                     color: "none",
                     lineClamp: 2,
-                    children: [ec ? (0, M.YC)(t, i, a, c, !1) : (0, l.jsx)(ei, { activity: f }), ec ? null : eu],
+                    children: [ec ? (0, k.YC)(t, i, a, c, !1) : (0, l.jsx)(ei, { activity: f }), ec ? null : eu],
                 }),
             [ec, t, i, a, c, f, eu],
         ),
@@ -248,8 +248,8 @@ function el(e) {
                 : (0, l.jsx)(x.E, { variant: "text-xs/normal", color: "none", lineClamp: 1, children: e });
         }, [f?.details]),
         eg = s.useMemo(
-            () => (0, l.jsxs)("div", { className: et.pq, children: [eh, em, k || ec ? null : q] }),
-            [em, k, ec, q, eh],
+            () => (0, l.jsxs)("div", { className: et.pq, children: [eh, em, M || ec ? null : q] }),
+            [em, M, ec, q, eh],
         ),
         ep = !!(0, R.au)(n.id),
         eA = (0, y.x)(n),

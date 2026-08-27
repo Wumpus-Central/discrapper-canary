@@ -11,12 +11,12 @@ function l(t) {
             buttonTextOverride: o,
             ...a
         } = t,
-        { buttonText: p, marketingSubscriptionTierSkuId: c } = (0, r.s)({
+        { buttonText: p, marketingSubscriptionTierSkuId: T } = (0, r.s)({
             subscriptionTier: i,
             hasActivePromotion: n,
             useShorterCTA: l,
             isPersistentCTA: s,
         }),
-        { subscribeButtonProps: T } = (0, e.B)({ ...a, subscriptionTier: c, buttonTextOverride: o ?? p });
-    return { subscribeButtonProps: T, subscriptionTier: c === u.pe.NONE ? null : c };
+        { subscribeButtonProps: c } = (0, e.B)({ ...a, subscriptionTier: T, buttonTextOverride: o ?? p });
+    return { subscribeButtonProps: c, subscriptionTier: T === u.pe.NONE ? null : T };
 }

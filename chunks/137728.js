@@ -1,4 +1,4 @@
-n.d(t, { l: () => eM, A: () => eR }), n(321073);
+n.d(t, { l: () => eR, A: () => eM }), n(321073);
 var s = n(477900),
     r = n(582128),
     i = n(503698),
@@ -28,8 +28,8 @@ var s = n(477900),
     y = n(775602),
     P = n(793574),
     _ = n(688810),
-    M = n(822123),
-    R = n(770335),
+    R = n(822123),
+    M = n(770335),
     D = n(548118),
     U = n(931959),
     w = n(148355),
@@ -291,8 +291,8 @@ function eN(e) {
 function eb(e) {
     let { premiumType: t } = e,
         n = (0, d.bG)([y.Ay], () => y.Ay.useReducedMotion),
-        r = (0, M.Fj)(null)
-            .filter((e) => e.type === R.i.GUILD && (e.animated || null != e.guildId))
+        r = (0, R.Fj)(null)
+            .filter((e) => e.type === M.i.GUILD && (e.animated || null != e.guildId))
             .slice(0, 3),
         i = (0, d.yK)([U.A], () => U.A.stickerFrecencyWithoutFetchingLatest.frequently.slice(0, 3 - r.length)),
         a = eT().emojiStickersVisual,
@@ -427,7 +427,7 @@ function eP(e) {
     });
 }
 let e_ = r.createContext({ isPremiumRebrand: !1 });
-function eM(e) {
+function eR(e) {
     let { currentUser: t, premiumType: n, onClose: i, isDowngrade: l = !1, isPremiumRebrand: u = !1 } = e,
         c = r.useMemo(() => {
             let e = [];
@@ -476,7 +476,7 @@ function eM(e) {
         }),
     });
 }
-let eR = function (e) {
+let eM = function (e) {
     let {
             premiumType: t,
             titleText: n,
@@ -536,7 +536,7 @@ let eR = function (e) {
                                   className: L,
                                   children: [h, (0, s.jsx)(v.E, { variant: "text-md/normal", children: i })],
                               }),
-                              (0, s.jsx)(eM, { currentUser: I, premiumType: t, onClose: l, isDowngrade: C }),
+                              (0, s.jsx)(eR, { currentUser: I, premiumType: t, onClose: l, isDowngrade: C }),
                           ],
                       }),
                   }),

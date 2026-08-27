@@ -1,4 +1,4 @@
-b.exports = {
+e.exports = {
     Se: "friendWrapper_bbd192",
     r9: "disabled_bbd192",
     my: "avatar_bbd192",

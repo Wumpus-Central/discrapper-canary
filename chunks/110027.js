@@ -2,8 +2,8 @@ n.d(t, { A: () => c });
 var i = n(477900);
 n(582128);
 var l = n(17928),
-    s = n(477782),
-    r = n(827343),
+    r = n(477782),
+    s = n(827343),
     a = n(453028),
     o = n(852712),
     u = n(621380),
@@ -18,18 +18,18 @@ function c(e) {
         c = (0, l.bG)([a.Ay], () => a.Ay.getActiveInputProfile()),
         h = t.map((t) =>
             (0, i.jsx)(
-                s.iD,
+                r.iD,
                 {
                     id: t,
                     group: "input-profiles",
                     label: n[t],
                     checked: t === (c ?? u.m.CUSTOM),
-                    action: () => r.A.setActiveInputProfile(t, { analyticsLocations: e }),
+                    action: () => s.A.setActiveInputProfile(t, { analyticsLocations: e }),
                 },
                 t,
             ),
         );
-    return (0, i.jsx)(s.Dr, {
+    return (0, i.jsx)(r.Dr, {
         id: "input-profiles",
         label: d.intl.string(d.t.LM3U3k),
         subtext: n[c ?? u.m.CUSTOM],

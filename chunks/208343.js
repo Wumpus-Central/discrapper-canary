@@ -1,8 +1,8 @@
-n.d(t, { A: () => r });
+n.d(t, { A: () => s });
 var i = n(17928),
     l = n(531685),
-    s = n(3137);
-function r(e) {
+    r = n(3137);
+function s(e) {
     let t = (0, i.bG)([l.A], () => l.A.isFocused());
-    return (0, i.bG)([s.A], () => (s.A.isEnabled({ shakeLocation: e }) && t ? s.A.shakeIntensity : 0));
+    return (0, i.bG)([r.A], () => (r.A.isEnabled({ shakeLocation: e }) && t ? r.A.shakeIntensity : 0));
 }

@@ -1,8 +1,8 @@
 n.d(t, { pJ: () => a.pJ, $l: () => a.$l, Ay: () => f });
 var i,
     l,
-    s = n(477900),
-    r = n(582128),
+    r = n(477900),
+    s = n(582128),
     a = n(499979),
     o = n(451988),
     u = n(375708),
@@ -107,7 +107,7 @@ let g = {
         },
     },
     f = (function (e) {
-        return class extends r.PureComponent {
+        return class extends s.PureComponent {
             static Locations = d;
             static Types = c;
             timer = new o.IX();
@@ -155,18 +155,18 @@ let g = {
             }
             render() {
                 let { location: t, messageProps: n, isApplicationStreaming: i, ...l } = this.props,
-                    { time: r } = this.state,
+                    { time: s } = this.state,
                     o = this.getType();
                 if (null == o) return null;
-                let u = this.getTimeUnit(r, t, o),
+                let u = this.getTimeUnit(s, t, o),
                     d = g[t][o];
                 if (null == d) return null;
                 let c = d[u],
-                    h = Math.floor((0, a.eZ)(r, u));
-                return (0, s.jsx)(e, { ...l, children: c?.(h, n, i) });
+                    h = Math.floor((0, a.eZ)(s, u));
+                return (0, r.jsx)(e, { ...l, children: c?.(h, n, i) });
             }
         };
     })(function (e) {
         let { children: t, className: n } = e;
-        return (0, s.jsx)("span", { className: n, children: t });
+        return (0, r.jsx)("span", { className: n, children: t });
     });

@@ -28,8 +28,8 @@ var i = n(477900),
     b = n(625494),
     R = n(58703),
     L = n(763754),
-    k = n(799162),
-    M = n(834730),
+    M = n(799162),
+    k = n(834730),
     O = n(289873),
     P = n(47167),
     D = n(842209),
@@ -46,7 +46,7 @@ var z = n(375708),
 let Y = { tag: "span", variant: "text-md/normal", color: "text-default" },
     K = { className: a()("mention", J.lE) };
 function W(e) {
-    return (0, i.jsx)(M.E, { ...Y, color: "text-strong", children: e });
+    return (0, i.jsx)(k.E, { ...Y, color: "text-strong", children: e });
 }
 let X = l.memo(function (e) {
     var t;
@@ -97,7 +97,7 @@ let X = l.memo(function (e) {
                                     {
                                         children: [
                                             " ",
-                                            (0, i.jsx)(M.E, { ...Y, children: d?.name_localized ?? s.name }),
+                                            (0, i.jsx)(k.E, { ...Y, children: d?.name_localized ?? s.name }),
                                         ],
                                     },
                                     m,
@@ -191,7 +191,7 @@ let X = l.memo(function (e) {
                                 l.Fragment,
                                 {
                                     children: [
-                                        (0, i.jsxs)(M.E, { ...Y, children: [" ", d?.name_localized ?? s.name, ": "] }),
+                                        (0, i.jsxs)(k.E, { ...Y, children: [" ", d?.name_localized ?? s.name, ": "] }),
                                         n,
                                     ],
                                 },
@@ -210,7 +210,7 @@ let X = l.memo(function (e) {
                 }),
             );
         a = (0, i.jsxs)(i.Fragment, {
-            children: [(0, i.jsxs)(M.E, { ...Y, children: ["/", c.application_command?.name_localized ?? c.name] }), e],
+            children: [(0, i.jsxs)(k.E, { ...Y, children: ["/", c.application_command?.name_localized ?? c.name] }), e],
         });
     }
     return (0, i.jsxs)("div", {
@@ -310,7 +310,7 @@ function et(e, t, n, l, s) {
         onTargetUserContextMenu: h,
         onPopoutRequestClose: g,
     } = e;
-    return (0, i.jsx)(k.A, {
+    return (0, i.jsx)(M.A, {
         className: 1 === n ? Q.iu : "",
         compact: !0,
         author: l,
@@ -333,8 +333,8 @@ function ei(e) {
         { analyticsLocations: r, newestAnalyticsLocation: c } = (0, I.Ay)(E.A.EXECUTED_COMMAND),
         p = (0, u.bG)([S.default], () => S.default.getCurrentUser()),
         y = l.useRef(null),
-        k = l.useRef(null),
-        M = l.useMemo(
+        M = l.useRef(null),
+        k = l.useMemo(
             () => (e, t, l) => (
                 o()(null != t, "ExecutedCommand: user cannot be undefined"),
                 o()(null != p, "ExecutedCommand: currentUser cannot be undefined"),
@@ -369,8 +369,8 @@ function ei(e) {
     if (null == B || null == G) return null;
     function F() {
         if (null == B) return null;
-        let t = ee(e, B.user, 0, G, (e) => M(e, B.user, [E.A.AVATAR]), y),
-            n = et(e, B.user, 0, G, (e) => M(e, B.user));
+        let t = ee(e, B.user, 0, G, (e) => k(e, B.user, [E.A.AVATAR]), y),
+            n = et(e, B.user, 0, G, (e) => k(e, B.user));
         return (0, i.jsxs)(l.Fragment, { children: [t, n] }, "user");
     }
     if (n?.activityInstance === null || (0, N.V)(n))
@@ -440,7 +440,7 @@ function ei(e) {
                             }
                         },
                     });
-                })(e, O, k);
+                })(e, O, M);
                 return (0, i.jsx)(l.Fragment, { children: t }, "command");
             },
         })),
@@ -453,8 +453,8 @@ function ei(e) {
                           (0, i.jsx)(en, {}),
                           (0, i.jsx)(function () {
                               if (null == D) return null;
-                              let t = ee(e, D, 1, w, (e) => M(e, D, [E.A.AVATAR]), y),
-                                  n = et(e, D, 1, w, (e) => M(e, D));
+                              let t = ee(e, D, 1, w, (e) => k(e, D, [E.A.AVATAR]), y),
+                                  n = et(e, D, 1, w, (e) => k(e, D));
                               return (0, i.jsxs)(l.Fragment, { children: [t, n] }, "target");
                           }, {}),
                       ],

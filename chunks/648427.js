@@ -1,8 +1,8 @@
 n.d(t, { A: () => A }), n(667532);
 var i = n(17928),
     l = n(228366),
-    s = n(95701),
-    r = n(734057),
+    r = n(95701),
+    s = n(734057),
     a = n(696451),
     o = n(71393);
 let u = [],
@@ -16,10 +16,10 @@ function g(e) {
         return e.unshift(t), { didChange: !0, history: e, historySet: new Set([...e]) };
     }
     let l = [t, ...n],
-        s = new Set(i);
-    return (s.add(t), l.length > 10)
+        r = new Set(i);
+    return (r.add(t), l.length > 10)
         ? ((l.length = 10), { didChange: !0, history: l, historySet: new Set([...l]) })
-        : { didChange: !0, history: l, historySet: s };
+        : { didChange: !0, history: l, historySet: r };
 }
 class f extends i.Ay.PersistedStore {
     static displayName = "RecentVoiceChannelStore";
@@ -34,7 +34,7 @@ class f extends i.Ay.PersistedStore {
                   },
     ];
     initialize(e) {
-        this.waitFor(a.Ay, o.A, r.A),
+        this.waitFor(a.Ay, o.A, s.A),
             (u = e?.voiceChannelHistory ?? []),
             (c = e?.textChannelHistory ?? []),
             (d = new Set([...u])),
@@ -56,15 +56,15 @@ let A = new f(l.h, {
     },
     VOICE_CHANNEL_SELECT: function (e) {
         let { channelId: t } = e;
-        if (null == t || !r.A.getChannel(t)?.isVocal()) return !1;
+        if (null == t || !s.A.getChannel(t)?.isVocal()) return !1;
         let n = g({ channelId: t, history: u, historySet: d });
         return (u = n.history), (d = n.historySet), n.didChange;
     },
     CHANNEL_SELECT: function (e) {
         let { channelId: t } = e;
         if (null == t) return !1;
-        let n = r.A.getChannel(t);
-        if (null == n || n.isVocal() || n.isPrivate() || !(0, s.ke)(n.type)) return !1;
+        let n = s.A.getChannel(t);
+        if (null == n || n.isVocal() || n.isPrivate() || !(0, r.ke)(n.type)) return !1;
         let i = g({ channelId: t, history: c, historySet: h });
         return (c = i.history), (h = i.historySet), i.didChange;
     },

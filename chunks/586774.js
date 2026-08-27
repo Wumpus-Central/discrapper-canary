@@ -1,8 +1,8 @@
 n.d(t, { A: () => E });
 var i = n(435558),
     l = n.n(i),
-    s = n(17928),
-    r = n(228366),
+    r = n(17928),
+    s = n(228366),
     a = n(889227),
     o = n(287809),
     u = n(38910);
@@ -20,7 +20,7 @@ function f(e) {
         contactNames: t,
     };
 }
-class A extends s.Ay.Store {
+class A extends r.Ay.Store {
     static displayName = "FriendSuggestionStore";
     initialize() {
         this.waitFor(o.default);
@@ -38,7 +38,7 @@ class A extends s.Ay.Store {
         return d[e];
     }
 }
-let E = new A(r.h, {
+let E = new A(s.h, {
     CONNECTION_OPEN: function (e) {
         (d = {}),
             (c = e.friendSuggestionCount) > 0

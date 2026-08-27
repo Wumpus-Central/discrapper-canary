@@ -1,8 +1,8 @@
-n.d(t, { A: () => I });
+n.d(t, { A: () => p });
 var i = n(17928),
     l = n(228366),
-    s = n(640631),
-    r = n(626584),
+    r = n(640631),
+    s = n(626584),
     a = n(734057),
     o = n(232835),
     u = n(320095),
@@ -42,8 +42,8 @@ class g {
     }
     putNew(e, t, n) {
         var i, l;
-        let s = this.messages.get(e);
-        null != t && ((i = t.id), null == (l = s?.message?.id) || h.default.compare(i, l) > 0) && this.put(e, t, n);
+        let r = this.messages.get(e);
+        null != t && ((i = t.id), null == (l = r?.message?.id) || h.default.compare(i, l) > 0) && this.put(e, t, n);
     }
     putMany(e, t) {
         for (let n of e) this.put(n.channel_id, n, t);
@@ -61,7 +61,7 @@ class g {
     }
 }
 let f = -1 / 0,
-    A = new r.A("MessagePreviewStore");
+    A = new s.A("MessagePreviewStore");
 class E extends i.Ay.Store {
     initialize() {
         this.waitFor(a.A, o.A);
@@ -139,14 +139,14 @@ class E extends i.Ay.Store {
     handleLoadMessagesSuccess(e) {
         let t = a.A.getBasicChannel(e.channelId);
         if (null == t) return !1;
-        (0, s.D)(e.messages),
+        (0, r.D)(e.messages),
             e.isAfter || e.isBefore || e.hasMoreAfter
                 ? this.data(t.guild_id).putNew(e.channelId, e.messages[0] ?? null, this.generation)
                 : this.data(t.guild_id).put(e.channelId, e.messages[0] ?? null, this.generation);
     }
     handleLocalMessagesLoaded(e) {
         let t = a.A.getBasicChannel(e.channelId);
-        null != t && ((0, s.D)(e.messages), this.data(t.guild_id).putNew(e.channelId, e.messages[0] ?? null, f));
+        null != t && ((0, r.D)(e.messages), this.data(t.guild_id).putNew(e.channelId, e.messages[0] ?? null, f));
     }
     handleMessagePreviewsLoaded(e) {
         A.verbose(`adding remote previews (guildId: ${e.guildId}, messages: ${e.messages.length})`);
@@ -163,4 +163,4 @@ class E extends i.Ay.Store {
         this.guilds.clear();
     }
 }
-let I = new E();
+let p = new E();

@@ -26,8 +26,8 @@ function a(e, t) {
                 n.e("639855"),
                 n.e("835778"),
                 n.e("377663"),
-                n.e("743004"),
-            ]).then(n.bind(n, 501335));
+                n.e("439738"),
+            ]).then(n.bind(n, 831937));
             return (n) => (0, i.jsx)(l, { guildId: e, productId: t, ...n });
         },
         { modalKey: s.DG },

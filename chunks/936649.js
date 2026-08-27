@@ -1,8 +1,8 @@
-n.d(t, { AG: () => a, XT: () => o, gj: () => r });
+n.d(t, { AG: () => a, XT: () => o, gj: () => s });
 var i,
     l,
-    s,
-    r = /^(221552|614256)$/.test(n.j)
+    r,
+    s = /^(221552|614256)$/.test(n.j)
         ? (((i = {}).INVITE = "member_joined"),
           (i.CHANNEL = "create_channel"),
           (i.AVATAR = "avatar"),
@@ -26,7 +26,7 @@ var i,
         (l.DISMISS = "Dismiss"),
         l),
     o =
-        (((s = {}).CHANNEL_WELCOME = "Channel Welcome CTA"),
-        (s.GUILD_PROGRESS = "Guild Progress"),
-        (s.HUB_PROGRESS = "Hub Progress"),
-        s);
+        (((r = {}).CHANNEL_WELCOME = "Channel Welcome CTA"),
+        (r.GUILD_PROGRESS = "Guild Progress"),
+        (r.HUB_PROGRESS = "Hub Progress"),
+        r);

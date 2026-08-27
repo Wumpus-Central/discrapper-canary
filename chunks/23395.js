@@ -7,8 +7,8 @@ var i = n(477900),
     l = n(189213),
     o = n(192308),
     d = n(151282),
-    c = n(388096),
-    u = n(970244),
+    c = n(859403),
+    u = n(388096),
     _ = n(375708);
 let E = "SCHEDULED_MESSAGE_EDIT_MODAL_KEY";
 function A(e) {
@@ -20,10 +20,10 @@ function A(e) {
         p(!0);
         try {
             await (0, d.Eg)({ scheduledMessageId: t.scheduledMessageId, scheduledTimestamp: h.toISOString() }),
-                (0, u.kb)(),
+                (0, c.kb)(),
                 (0, o.closeModal)(E);
         } catch (e) {
-            (0, u.xP)(e.message);
+            (0, c.xP)(e.message);
         } finally {
             p(!1);
         }
@@ -37,6 +37,6 @@ function A(e) {
             { variant: "secondary", text: _.intl.string(_.t["ETE/oC"]), onClick: a },
             { variant: "primary", text: _.intl.string(_.t.VZANAD), onClick: T, loading: f },
         ],
-        children: (0, i.jsx)(c.A, { defaultValue: A, onChange: I }),
+        children: (0, i.jsx)(u.A, { defaultValue: A, onChange: I }),
     });
 }

@@ -11,8 +11,8 @@ function l(t) {
             buttonTextOverride: o,
             defaultTextOverride: a,
             iconOverride: p,
-            variantOverride: c,
-            ...T
+            variantOverride: T,
+            ...c
         } = t,
         { subscribeButtonProps: d, subscriptionTier: v } = (0, u.$)({
             subscriptionTier: i,
@@ -22,7 +22,7 @@ function l(t) {
             buttonTextOverride: o,
             defaultTextOverride: a,
             iconOverride: p,
-            variantOverride: c,
+            variantOverride: T,
         });
-    return (0, r.jsx)(e.A, { ...T, ...d, subscriptionTier: v });
+    return (0, r.jsx)(e.A, { ...c, ...d, subscriptionTier: v });
 }

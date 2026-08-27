@@ -42,8 +42,8 @@ function v(e) {
         onClickBanner: R,
     } = e;
     y = (0, f.Q)(y);
-    let { primaryColor: L, secondaryColor: k } = (0, A.A)(j ?? c),
-        M = `linear-gradient(45deg, ${L}, ${k})`,
+    let { primaryColor: L, secondaryColor: M } = (0, A.A)(j ?? c),
+        k = `linear-gradient(45deg, ${L}, ${M})`,
         O = (0, h.bG)([p.Ay], () => p.Ay.useReducedMotion),
         P = (0, x.DC)(y),
         D = null != c && !v,
@@ -89,7 +89,7 @@ function v(e) {
     return (0, l.jsxs)("div", {
         ref: P,
         className: I.E6,
-        style: { background: M },
+        style: { background: k },
         children: [
             G &&
                 (0, l.jsxs)(_, {

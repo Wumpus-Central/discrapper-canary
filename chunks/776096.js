@@ -1,8 +1,8 @@
 n.d(t, { A: () => c }), n(321073);
 var i = n(17928),
     l = n(228366),
-    s = n(636537),
-    r = n(652215),
+    r = n(636537),
+    s = n(652215),
     a = n(71393);
 let o = {};
 function u() {
@@ -32,7 +32,7 @@ let c = new d(l.h, {
     CONNECTION_OPEN: function () {
         return (
             Date.now() - o.lastFetched > 864e5 &&
-                s.Bo.get({ url: r.Rsh.GUILD_AFFINITIES, oldFormErrors: !0, rejectWithError: (0, s.fT)() }).then(
+                r.Bo.get({ url: s.Rsh.GUILD_AFFINITIES, oldFormErrors: !0, rejectWithError: (0, r.fT)() }).then(
                     (e) => {
                         let {
                             body: { guild_affinities: t },

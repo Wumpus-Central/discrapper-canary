@@ -1,14 +1,14 @@
-n.d(t, { A: () => s });
+n.d(t, { A: () => r });
 var i = n(477900);
 n(582128);
 var l = n(953727);
-function s(e) {
-    let { width: t = 20, height: n = 20, className: s, ...r } = e;
+function r(e) {
+    let { width: t = 20, height: n = 20, className: r, ...s } = e;
     return (0, i.jsx)("svg", {
         width: t,
         height: n,
-        className: s,
-        ...(0, l.A)(r),
+        className: r,
+        ...(0, l.A)(s),
         viewBox: "0 0 20 20",
         children: (0, i.jsxs)("g", {
             clipPath: "url(#clip0_198_5469)",

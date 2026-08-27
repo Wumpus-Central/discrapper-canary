@@ -1,8 +1,8 @@
 n.d(t, { A: () => f });
 var i = n(17928),
     l = n(228366),
-    s = n(320095),
-    r = n(287809),
+    r = n(320095),
+    s = n(287809),
     a = n(380335),
     o = n(157550);
 let u = {},
@@ -13,13 +13,13 @@ function c(e) {
 function h(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
     if (!c(e) || (null != t && e !== t?.channel_id)) return;
-    let i = null == t ? null : (0, s.rh)(t);
+    let i = null == t ? null : (0, r.rh)(t);
     u[e] = { loaded: !0, error: n, message: i };
 }
 class g extends i.Ay.Store {
     static displayName = "MessageRequestPreviewStore";
     initialize() {
-        this.waitFor(a.A, o.A, r.default);
+        this.waitFor(a.A, o.A, s.default);
     }
     shouldLoadMessageRequestPreview(e) {
         return !d.has(e);
@@ -53,7 +53,7 @@ let f = new g(l.h, {
         if (null == t) return !1;
         let n = u[t];
         if (null == n || null == n.message) return !1;
-        u[t] = { ...n, message: (0, s.IU)(n.message, e.message) };
+        u[t] = { ...n, message: (0, r.IU)(n.message, e.message) };
     },
     MESSAGE_DELETE: function (e) {
         if (!c(e.channelId)) return !1;

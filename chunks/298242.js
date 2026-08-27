@@ -2,8 +2,8 @@ n.d(t, { A: () => h });
 var i = n(477900);
 n(582128);
 var l = n(17928),
-    s = n(477782),
-    r = n(964355),
+    r = n(477782),
+    s = n(964355),
     a = n(827343),
     o = n(453028),
     u = n(824744),
@@ -11,12 +11,12 @@ var l = n(17928),
     c = n(375708);
 function h(e) {
     let t = (0, l.bG)([o.Ay], () => (0, u.M)(o.Ay.getOutputVolume()));
-    return (0, i.jsx)(s.aK, {
+    return (0, i.jsx)(r.aK, {
         id: "output",
         label: c.intl.string(c.t.eATD2B),
         interactive: !1,
         control: (n, l) =>
-            (0, i.jsx)(r.i, {
+            (0, i.jsx)(s.i, {
                 ...n,
                 ref: l,
                 value: t,

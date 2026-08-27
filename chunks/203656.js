@@ -1,26 +1,26 @@
-h.d(v, { M: () => H });
-var g = h(477900);
-h(582128);
-var B = h(534400),
-    C = h(620757),
-    f = h(743981),
-    M = h(557682);
-function H(A) {
-    let v = null === A.tag || 0 === A.tag.length ? "WUMP" : A.tag;
-    return (0, g.jsx)("div", {
-        className: M.fC,
-        children: (0, g.jsx)(B.o9, {
+v.d(h, { M: () => t });
+var l = v(477900);
+v(582128);
+var H = v(534400),
+    M = v(620757),
+    V = v(743981),
+    Z = v(557682);
+function t(A) {
+    let h = null === A.tag || 0 === A.tag.length ? "WUMP" : A.tag;
+    return (0, l.jsx)("div", {
+        className: Z.fC,
+        children: (0, l.jsx)(H.o9, {
             guildId: A.guildId,
-            textClassName: M.em,
-            guildTag: v,
+            textClassName: Z.em,
+            guildTag: h,
             guildBadge:
                 "string" == typeof A.badge
                     ? A.badge
-                    : (0, g.jsx)(C.J, {
-                          className: M.i6,
+                    : (0, l.jsx)(M.J, {
+                          className: Z.i6,
                           badge: A.badge,
-                          width: f.Sl.SIZE_12,
-                          height: f.Sl.SIZE_12,
+                          width: V.Sl.SIZE_12,
+                          height: V.Sl.SIZE_12,
                           primaryTintColor: A.primaryColor ?? void 0,
                           secondaryTintColor: A.secondaryColor ?? void 0,
                       }),

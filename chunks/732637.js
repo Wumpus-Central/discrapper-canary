@@ -1,8 +1,8 @@
-n.d(t, { A: () => I });
+n.d(t, { A: () => p });
 var i = n(477900),
     l = n(582128),
-    s = n(17928),
-    r = n(228366),
+    r = n(17928),
+    s = n(228366),
     a = n(31728),
     o = n(869146),
     u = n(625494),
@@ -13,19 +13,19 @@ var i = n(477900),
     f = n(5867),
     A = n(652215);
 function E(e, t) {
-    r.h.wait(() => {
+    s.h.wait(() => {
         (0, a.I_)(e, t);
     });
 }
-function I(e) {
+function p(e) {
     let t,
-        { embedId: n, className: r, style: a } = e,
-        I = (0, s.bG)([o.A], () => o.A.getWindow(A.MLl.CHANNEL_CALL_POPOUT)),
-        p = (0, g.A)(),
-        m = (0, s.bG)([d.Ay], () => d.Ay.getActivityPanelMode());
-    t = null == p || (0, h.A)((0, c.H)(p.location)) || m !== f.Gd.PANEL ? (I?.window ?? window) : window;
+        { embedId: n, className: s, style: a } = e,
+        p = (0, r.bG)([o.A], () => o.A.getWindow(A.MLl.CHANNEL_CALL_POPOUT)),
+        m = (0, g.A)(),
+        I = (0, r.bG)([d.Ay], () => d.Ay.getActivityPanelMode());
+    t = null == m || (0, h.A)((0, c.H)(m.location)) || I !== f.Gd.PANEL ? (p?.window ?? window) : window;
     let S = l.useRef(null),
-        _ = l.useMemo(() => {
+        C = l.useMemo(() => {
             let e = null;
             return () => {
                 null == e &&
@@ -37,28 +37,28 @@ function I(e) {
     return (
         l.useEffect(
             () => (
-                t.addEventListener("resize", _),
-                u._.subscribe(A.jej.REMEASURE_TARGET, _),
+                t.addEventListener("resize", C),
+                u._.subscribe(A.jej.REMEASURE_TARGET, C),
                 () => {
-                    t.removeEventListener("resize", _), u._.unsubscribe(A.jej.REMEASURE_TARGET, _);
+                    t.removeEventListener("resize", C), u._.unsubscribe(A.jej.REMEASURE_TARGET, C);
                 }
             ),
-            [_, t],
+            [C, t],
         ),
         l.useLayoutEffect(() => {
             let e = S.current;
             if (null == e) return;
             let t = e.ownerDocument.defaultView;
             if (null == t) return;
-            _();
-            let i = new t.ResizeObserver(_);
+            C();
+            let i = new t.ResizeObserver(C);
             return (
                 i.observe(e),
                 () => {
                     i.disconnect(), E(n, null);
                 }
             );
-        }, [n, _]),
-        (0, i.jsx)("div", { ref: S, style: a, className: r })
+        }, [n, C]),
+        (0, i.jsx)("div", { ref: S, style: a, className: s })
     );
 }

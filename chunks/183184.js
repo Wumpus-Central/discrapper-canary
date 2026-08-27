@@ -2,8 +2,8 @@ n.d(t, { A: () => u });
 var i = n(477900);
 n(582128);
 var l = n(192308),
-    s = n(827343),
-    r = n(579872),
+    r = n(827343),
+    s = n(579872),
     a = n(48686),
     o = n(375708);
 function u(e, t, u) {
@@ -13,8 +13,8 @@ function u(e, t, u) {
               return (t) => (0, i.jsx)(e, { ...t });
           })
         : t
-          ? r.A.show({ title: o.intl.string(o.t.FJSZVM), body: o.intl.string(o.t.etJjgW) })
+          ? s.A.show({ title: o.intl.string(o.t.FJSZVM), body: o.intl.string(o.t.etJjgW) })
           : e
-            ? r.A.show({ title: o.intl.string(o.t["+JQCa/"]), body: o.intl.string(o.t.hsNm7d) })
-            : s.A.toggleSelfMute({ location: u });
+            ? s.A.show({ title: o.intl.string(o.t["+JQCa/"]), body: o.intl.string(o.t.hsNm7d) })
+            : r.A.toggleSelfMute({ location: u });
 }

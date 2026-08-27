@@ -1,8 +1,8 @@
 n.d(t, { A: () => d }), n(134528), n(947204);
 var i = n(477900),
     l = n(582128),
-    s = n(546738),
-    r = n(661531),
+    r = n(546738),
+    s = n(661531),
     a = n(602853);
 let o = 1e3 / 30;
 class u {
@@ -24,11 +24,11 @@ class u {
     getValues(e, t, n) {
         let i = this.getSource(),
             l = this.getConverter(),
-            s = i.length,
-            r = Array(n),
+            r = i.length,
+            s = Array(n),
             a = 0,
             o = 0;
-        if (s >= 2) {
+        if (r >= 2) {
             let t = i.at(0),
                 n = i.at(1);
             if (null != t && null != n) {
@@ -38,7 +38,7 @@ class u {
         }
         let u = e;
         for (let e = 0; e < n; e++) {
-            for (; a < s; ) {
+            for (; a < r; ) {
                 let e = i.at(a);
                 if (null == e) {
                     a++;
@@ -47,18 +47,18 @@ class u {
                 if (e.time >= u) break;
                 (o = null != l ? l(e.value) : e.value), a++;
             }
-            (r[e] = o), (u += t);
+            (s[e] = o), (u += t);
         }
-        return r;
+        return s;
     }
 }
 function d(e) {
     let t = (0, l.useRef)(null),
         [n, d] = (0, l.useState)(null),
-        c = (0, a.r)(r.A.colors.BACKGROUND_BASE_LOW).hsl(),
-        h = (0, a.r)(r.A.colors.TEXT_DEFAULT).hsl(),
-        g = (0, a.r)(r.A.colors.BACKGROUND_MOD_MUTED).hsl(),
-        f = (0, a.r)(r.A.unsafe_rawColors.BRAND_500).hsl(),
+        c = (0, a.r)(s.A.colors.BACKGROUND_BASE_LOW).hsl(),
+        h = (0, a.r)(s.A.colors.TEXT_DEFAULT).hsl(),
+        g = (0, a.r)(s.A.colors.BACKGROUND_MOD_MUTED).hsl(),
+        f = (0, a.r)(s.A.unsafe_rawColors.BRAND_500).hsl(),
         A = e.windowMs,
         E = (0, l.useRef)(e);
     (0, l.useEffect)(() => {
@@ -68,7 +68,7 @@ function d(e) {
             let n = t.current;
             if (null == n) return;
             (n.width = e.width), (n.height = e.height);
-            let i = new s.TimelineGraphView(n, window.devicePixelRatio ?? 1);
+            let i = new r.TimelineGraphView(n, window.devicePixelRatio ?? 1);
             (i.backgroundColor = c),
                 (i.textColor = h),
                 (i.gridColor = g),
@@ -87,33 +87,33 @@ function d(e) {
             let e = 0,
                 i = 0;
             return (
-                (e = requestAnimationFrame(function l(s) {
-                    if (null == n || ((e = requestAnimationFrame(l)), s - i < o)) return;
-                    (i = s), n.updateEndDate(), n.repaint();
-                    let r = E.current,
-                        a = r.markers,
-                        u = r.windowMs;
+                (e = requestAnimationFrame(function l(r) {
+                    if (null == n || ((e = requestAnimationFrame(l)), r - i < o)) return;
+                    (i = r), n.updateEndDate(), n.repaint();
+                    let s = E.current,
+                        a = s.markers,
+                        u = s.windowMs;
                     if (null != a && a.length > 0 && null != u && null != t.current) {
                         let e = t.current,
                             n = e.getContext("2d");
                         if (null == n) return;
                         let i = Date.now(),
                             l = window.devicePixelRatio ?? 1,
-                            s = e.height - Math.ceil(11 * l) - 4;
+                            r = e.height - Math.ceil(11 * l) - 4;
                         for (let t of ((n.lineWidth = l), a)) {
                             let l = i - t.time;
                             if (l < 0 || l > u) continue;
-                            let r = e.width * (1 - l / u);
+                            let s = e.width * (1 - l / u);
                             n.save(),
                                 (n.strokeStyle = t.color),
                                 n.beginPath(),
-                                n.moveTo(r, 0),
-                                n.lineTo(r, s),
+                                n.moveTo(s, 0),
+                                n.lineTo(s, r),
                                 n.stroke(),
                                 n.restore();
                         }
                     }
-                    let d = r.hoverSource?.time;
+                    let d = s.hoverSource?.time;
                     if (null != d && null != u && null != t.current) {
                         let e = t.current,
                             n = e.getContext("2d");
@@ -122,13 +122,13 @@ function d(e) {
                         if (i >= 0 && i <= u) {
                             let t = window.devicePixelRatio ?? 1,
                                 l = Math.round(e.width * (1 - i / u)),
-                                s = e.height - Math.ceil(11 * t) - 4;
+                                r = e.height - Math.ceil(11 * t) - 4;
                             n.save(),
-                                (n.strokeStyle = r.crosshairColor ?? h),
+                                (n.strokeStyle = s.crosshairColor ?? h),
                                 (n.lineWidth = t),
                                 n.beginPath(),
                                 n.moveTo(l, 0),
-                                n.lineTo(l, s),
+                                n.lineTo(l, r),
                                 n.stroke(),
                                 n.restore();
                         }
@@ -137,8 +137,8 @@ function d(e) {
                 () => cancelAnimationFrame(e)
             );
         }, [n, h]);
-    let I = { width: e.width, height: e.height },
-        { onHoverTime: p, onHoverClick: m } = e;
+    let p = { width: e.width, height: e.height },
+        { onHoverTime: m, onHoverClick: I } = e;
     function S(e) {
         if (null == A) return null;
         let t = e.currentTarget.getBoundingClientRect();
@@ -146,30 +146,30 @@ function d(e) {
         let n = Math.max(0, Math.min(1, (e.clientX - t.left) / t.width));
         return Date.now() - (1 - n) * A;
     }
-    let _ =
-            null != p && null != A
-                ? (e) => {
-                      let t = S(e);
-                      null != t && p(t);
-                  }
-                : void 0,
-        C =
+    let C =
             null != m && null != A
                 ? (e) => {
                       let t = S(e);
                       null != t && m(t);
                   }
+                : void 0,
+        _ =
+            null != I && null != A
+                ? (e) => {
+                      let t = S(e);
+                      null != t && I(t);
+                  }
                 : void 0;
     return (0, i.jsx)(
         "canvas",
         {
-            style: I,
+            style: p,
             width: e.width,
             height: e.height,
             ref: t,
-            onPointerMove: _,
-            onPointerLeave: null != p ? () => p(null) : void 0,
-            onPointerDown: C,
+            onPointerMove: C,
+            onPointerLeave: null != m ? () => m(null) : void 0,
+            onPointerDown: _,
         },
         "canvas",
     );

@@ -1,4 +1,4 @@
-i.d(t, { A: () => f });
+i.d(e, { A: () => f });
 var n = i(477900),
     l = i(582128),
     a = i(765178),
@@ -8,25 +8,25 @@ var n = i(477900),
     d = i(125075),
     u = i(375708),
     o = i(146108);
-function f(e) {
-    let { onPublish: t } = e,
+function f(t) {
+    let { onPublish: e } = t,
         [i, f] = l.useState(!1),
-        [g, h] = l.useState(!1),
+        [h, g] = l.useState(!1),
         m = l.useCallback(async () => {
-            f(!0), h(!1);
+            f(!0), g(!1);
             try {
-                await t(), a.O.announce(u.intl.string(d.default.pDzipI));
+                await e(), a.O.announce(u.intl.string(d.default.pDzipI));
             } catch {
-                h(!0);
+                g(!0);
             } finally {
                 f(!1);
             }
-        }, [t]);
+        }, [e]);
     return (0, n.jsxs)("div", {
         className: o.lm,
         children: [
             (0, n.jsx)(r.CircleInformationIcon, { size: "sm", color: "currentColor", className: o.Kk }),
-            g
+            h
                 ? (0, n.jsx)(s.E, {
                       variant: "text-sm/medium",
                       color: "text-feedback-critical",
