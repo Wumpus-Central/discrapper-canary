@@ -62,19 +62,21 @@ let S = new g(_.h, {
             responseTtlSeconds: d,
             metadataSealed: c,
             trafficMetadataSealed: u,
-            fetchedAt: _,
+            provenanceMetadataSealed: _,
+            fetchedAt: E,
         } = e;
         (r = Date.now()), m(n, !1), s.get(n)?.succeed(), l.delete(n);
-        let E = {
+        let h = {
             creative: t ?? null,
-            fetchedAt: _,
+            fetchedAt: E,
             ttlMillis: (0, A.Ce)(d),
             adDecisionData: i,
             adContext: o,
             metadataSealed: c,
             trafficMetadataSealed: u,
+            provenanceMetadataSealed: _,
         };
-        (a = new Map(a)).set(n, E);
+        (a = new Map(a)).set(n, h);
     },
     QUESTS_FETCH_QUEST_TO_DELIVER_FAILURE: function (e) {
         let { placement: t } = e;
@@ -102,6 +104,7 @@ let S = new g(_.h, {
             adContext: e.adContext,
             metadataSealed: e.metadataSealed,
             trafficMetadataSealed: e.trafficMetadataSealed,
+            provenanceMetadataSealed: e.provenanceMetadataSealed,
         };
         (a = new Map(a)).set(e.placement, t);
     },

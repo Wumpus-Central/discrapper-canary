@@ -98,6 +98,7 @@ function O(e) {
         adContext: e.adContext,
         metadataSealed: e.metadataSealed,
         trafficMetadataSealed: e.trafficMetadataSealed,
+        provenanceMetadataSealed: e.provenanceMetadataSealed,
     };
 }
 function R(e, t) {
