@@ -1901,6 +1901,9 @@ eV(
     eF(["VIRTUAL_CURRENCY_BALANCE_UPDATE"], (e) => {
         eH({ type: "VIRTUAL_CURRENCY_BALANCE_UPDATE", balance: e.balance });
     }),
+    eF(["USER_DISCORD_ACHIEVEMENT_STATE_UPDATE"], (e) => {
+        eH({ type: "USER_DISCORD_ACHIEVEMENT_STATE_UPDATE", payload: e });
+    }),
     eF(["WALLET_BALANCE_UPDATE"], (e) => {
         eH({
             type: "WALLET_BALANCE_UPDATE",

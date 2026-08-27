@@ -825,6 +825,8 @@
   "ACCOUNT_REVERT": "/auth/revert",
   "VIRTUAL_CURRENCY_SKU_REDEEM": "/virtual-currency/skus/:param/redeem",
   "VIRTUAL_CURRENCY_USER_BALANCE": "/users/@me/virtual-currency/balance",
+  "ORB_USER_CHALLENGES_LIST": "/users/@me/achievements/list?reward_type=orbs",
+  "ORB_USER_CHALLENGE_CLAIM": "/users/@me/achievements/:param/claim",
   "IGNORE_USER": "/users/@me/relationships/:param/ignore",
   "SCHEDULED_MESSAGES": "/users/@me/scheduled-messages",
   "SCHEDULED_MESSAGE": "/users/@me/scheduled-messages/:param",
