@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { CI: () => S, XM: () => p, e0: () => g, s: () => m, tu: () => T }), n(938796), n(321073);
+n.d(t, { CI: () => N, XM: () => p, e0: () => S, fK: () => m, s: () => g, tu: () => T }), n(938796), n(321073);
 var i = n(477900),
     r = n(536637),
     a = n.n(r),
@@ -30,7 +30,14 @@ async function T(e) {
         (0, _.kM)(e.message);
     }
 }
-function m(e) {
+async function m(e) {
+    try {
+        await (0, u.fK)(e), (0, _.Ki)();
+    } catch (e) {
+        (0, _.Do)(e.message);
+    }
+}
+function g(e) {
     let { channel: t } = e,
         n = a()().add(1, "day").startOf("day").set("hours", 9),
         r = a()().add(1, "day").startOf("day").set("hours", 13),
@@ -57,7 +64,7 @@ function m(e) {
                     (0, i.jsx)(s.bX, {}),
                     (0, i.jsx)(
                         s.Dr,
-                        { id: "custom-time", label: f.intl.string(f.t.stHooC), action: () => g({ channel: t }) },
+                        { id: "custom-time", label: f.intl.string(f.t.stHooC), action: () => S({ channel: t }) },
                         "custom-time",
                     ),
                 ],
@@ -66,7 +73,7 @@ function m(e) {
         d
     );
 }
-function g(e) {
+function S(e) {
     let { channel: t, defaultValue: r = (0, E.US)(), message: a, onSubmit: s, onClear: o } = e,
         c =
             s ??
@@ -83,7 +90,7 @@ function g(e) {
         { modalKey: A.t },
     );
 }
-function S(e) {
+function N(e) {
     let { scheduledMessage: t } = e;
     (0, l.openModalLazy)(
         async () => {

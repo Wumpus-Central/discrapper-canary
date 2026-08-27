@@ -831,6 +831,7 @@
   "IGNORE_USER": "/users/@me/relationships/:param/ignore",
   "SCHEDULED_MESSAGES": "/users/@me/scheduled-messages",
   "SCHEDULED_MESSAGE": "/users/@me/scheduled-messages/:param",
+  "SCHEDULED_MESSAGE_SEND": "/users/@me/scheduled-messages/:param/send",
   "HOLIDAY_REDEEM_PRIZE": "/holidays/redeem-prize",
   "APPLIED_BOOST_MODIFY_END_DATE": "/debug/applied-boosts/ends-at",
   "SEND_POWERUPS_SYSTEM_MESSAGE": "/guilds/:param/powerups-system-message",

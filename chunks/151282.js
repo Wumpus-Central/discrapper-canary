@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Eg: () => d, mk: () => c, pr: () => o, sy: () => _ }), n(938796);
+n.d(t, { Eg: () => d, fK: () => u, mk: () => c, pr: () => o, sy: () => E }), n(938796);
 var i = n(665260),
     r = n(636537),
     a = n(228366),
@@ -71,13 +71,27 @@ async function c(e) {
         );
     }
 }
-async function u() {
-    return (await r.Bo.get({ url: l.Rsh.SCHEDULED_MESSAGES, rejectWithError: !0 })).body.map(s.Lg);
+async function u(e) {
+    a.h.dispatch({ type: "SCHEDULED_MESSAGES_SEND_NOW_START", scheduledMessageId: e });
+    try {
+        await r.Bo.post({ url: l.Rsh.SCHEDULED_MESSAGE_SEND(e), rejectWithError: !0 }),
+            a.h.dispatch({ type: "SCHEDULED_MESSAGES_SEND_NOW_SUCCESS", scheduledMessageId: e });
+    } catch (n) {
+        s.dx.error("Failed to send scheduled message now", n);
+        let t = n.body?.message ?? n.message;
+        throw (
+            (a.h.dispatch({ type: "SCHEDULED_MESSAGES_SEND_NOW_FAILURE", scheduledMessageId: e, errorMsg: t }),
+            Error(t))
+        );
+    }
 }
 async function _() {
+    return (await r.Bo.get({ url: l.Rsh.SCHEDULED_MESSAGES, rejectWithError: !0 })).body.map(s.Lg);
+}
+async function E() {
     a.h.dispatch({ type: "FETCH_SCHEDULED_MESSAGES" });
     try {
-        let e = await u();
+        let e = await _();
         s.dx.info("Fetched scheduled messages", e),
             a.h.dispatch({ type: "FETCH_SCHEDULED_MESSAGES_SUCCESS", messages: e });
     } catch (e) {
