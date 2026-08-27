@@ -137,7 +137,6 @@ let f = new I("2026-01-android-rmle", "Android Pull Mode Rendering", 4);
 new I("2026-02-android-fresco-cache", "Android Fresco Cache", 3),
     new _("2026-02-android-chat-mosaic-shared-pool", "Android Chat Mosaic Shared Pool"),
     new _("2026-03-mobile-hermes-occupancy-target", "Android Hermes Occupancy Target"),
-    new _("2026-06-ios-ota-streaming", "iOS OTA Streaming Download"),
     new _(
         "2026-08-android-rn-reparenting-flag",
         "RN Flag, was false on RN 0.81 and true in RN 0.86, suspect of causing RMLE regressions",
