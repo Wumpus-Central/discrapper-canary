@@ -1,4 +1,4 @@
-s.r(t), s.d(t, { default: () => ed }), s(801541);
+s.r(t), s.d(t, { default: () => ec }), s(801541);
 var i = s(477900),
     n = s(582128),
     r = s(503698),
@@ -12,8 +12,8 @@ var i = s(477900),
     m = s(939249),
     T = s(285796),
     A = s(707554),
-    _ = s(364522),
-    h = s(817281),
+    h = s(364522),
+    _ = s(817281),
     I = s(82495),
     x = s(775602),
     f = s(793574),
@@ -22,75 +22,74 @@ var i = s(477900),
     p = s(996254),
     v = s(732280),
     j = s(792656),
-    P = s(400669),
+    P = s(41219),
     C = s(450232),
     y = s(973654),
     M = s(780964),
     D = s(141343),
     R = s(766075),
-    g = s(909536),
-    k = s(186111),
-    H = s(287809),
-    b = s(174459),
-    L = s(158045),
-    w = s(823459),
-    G = s(147248),
-    O = s(11029),
-    V = s(742023),
-    U = s(617617),
-    W = s(652215),
-    z = s(202541),
-    X = s(185928);
-function Y() {
-    let { previewPaneVariant: e } = (0, c.cf)([G.A], () => ({
-            previewPaneVariant: G.A.isPreview ? z.tz.FREE : z.tz.PREMIUM_STANDARD,
+    g = s(186111),
+    k = s(287809),
+    H = s(174459),
+    b = s(158045),
+    L = s(823459),
+    w = s(147248),
+    G = s(11029),
+    O = s(742023),
+    V = s(617617),
+    U = s(652215),
+    W = s(202541),
+    z = s(185928);
+function X() {
+    let { previewPaneVariant: e } = (0, c.cf)([w.A], () => ({
+            previewPaneVariant: w.A.isPreview ? W.tz.FREE : W.tz.PREMIUM_STANDARD,
         })),
-        t = (0, c.bG)([U.A], () => {
-            let e = U.A.settings.appearance?.theme;
-            return `default ${e === d.Sx.LIGHT ? W.NJ8.LIGHT : W.NJ8.DARK}`;
+        t = (0, c.bG)([V.A], () => {
+            let e = V.A.settings.appearance?.theme;
+            return `default ${e === d.Sx.LIGHT ? U.NJ8.LIGHT : U.NJ8.DARK}`;
         });
     return (0, n.useCallback)(
         (s) => {
-            b.default.track(s, { preview_pane_variant: e, original_theme: t });
+            H.default.track(s, { preview_pane_variant: e, original_theme: t });
         },
         [e, t],
     );
 }
-var $ = s(562708),
-    B = s(834730),
-    F = s(139286),
-    J = s(738419),
-    K = s(767243),
-    q = s(375708),
-    Q = s(663635),
-    Z = s(114149);
-function ee() {
+var Y = s(562708),
+    $ = s(834730),
+    B = s(139286),
+    F = s(738419),
+    J = s(767243),
+    K = s(375708),
+    q = s(663635),
+    Q = s(114149);
+function Z() {
     let { analyticsLocations: e } = (0, S.Ay)();
     return (
-        (0, F.A)({
-            name: $.ImpressionNames.CUSTOM_THEMES_PREVIEW_THEMES_BANNER,
-            type: $.ImpressionTypes.VIEW,
+        (0, B.A)({
+            name: Y.ImpressionNames.CUSTOM_THEMES_PREVIEW_THEMES_BANNER,
+            type: Y.ImpressionTypes.VIEW,
             properties: { location_stack: e },
         }),
         (0, i.jsxs)("div", {
-            className: Q.kL,
+            className: q.kL,
             children: [
                 (0, i.jsxs)("div", {
-                    className: Q.r$,
+                    className: q.r$,
                     children: [
-                        (0, i.jsx)("img", { src: Z.A, className: Q._e, alt: "" }),
+                        (0, i.jsx)("img", { src: Q.A, className: q._e, alt: "" }),
                         (0, i.jsxs)("div", {
-                            className: Q.P_,
+                            className: q.P_,
                             children: [
-                                (0, i.jsx)(B.E, {
+                                (0, i.jsx)($.E, {
                                     variant: "text-md/semibold",
                                     color: "text-strong",
-                                    children: q.intl.string(K.default.XP4jzJ),
+                                    children: K.intl.string(J.default.XP4jzJ),
                                 }),
-                                (0, i.jsx)(B.E, {
+                                (0, i.jsx)($.E, {
                                     variant: "text-sm/medium",
                                     color: "text-muted",
-                                    children: q.intl.string(K.default.MJYvmG),
+                                    children: K.intl.string(J.default.MJYvmG),
                                 }),
                             ],
                         }),
@@ -99,9 +98,9 @@ function ee() {
                 (0, i.jsx)(o.$, {
                     variant: "secondary",
                     size: "sm",
-                    text: q.intl.string(K.default.eGxkmm),
+                    text: K.intl.string(J.default.eGxkmm),
                     onClick: function () {
-                        (0, J.b0)(J.G8.PREVIEW_THEMES),
+                        (0, F.b0)(F.G8.PREVIEW_THEMES),
                             (0, N.nf)(N.HP.CUSTOM_THEME, { from: N.xv.CLIENT_THEMES_EDITOR });
                     },
                     fullWidth: !0,
@@ -110,160 +109,157 @@ function ee() {
         })
     );
 }
-var et = s(487245),
-    es = s(385803),
-    ei = s(49999),
-    en = s(737440);
-function er() {
+var ee = s(487245),
+    et = s(385803),
+    es = s(49999),
+    ei = s(737440);
+function en() {
     return (0, i.jsx)("div", {
-        className: en.nV,
+        className: ei.nV,
         children: (0, i.jsxs)("div", {
-            className: en.mR,
+            className: ei.mR,
             children: [
-                (0, i.jsx)(C.A, { className: en.PC, size: "md" }),
+                (0, i.jsx)(C.A, { className: ei.PC, size: "md" }),
                 (0, i.jsx)(E.D, {
                     variant: "heading-md/bold",
                     color: "text-overlay-light",
-                    children: q.intl.string(q.t.POSLGY),
+                    children: K.intl.string(K.t.POSLGY),
                 }),
             ],
         }),
     });
 }
-function ea(e) {
+function er(e) {
     let { markAsDismissed: t } = e,
-        s = Y();
+        s = X();
     return (0, i.jsxs)("div", {
-        className: en.nV,
+        className: ei.nV,
         children: [
             (0, i.jsx)(m.D, {
-                className: en.VV,
+                className: ei.VV,
                 onClick: function () {
-                    null != t && t(ei.i.DISMISS), s(W.HAw.CLIENT_THEME_PREVIEW_CLOSED), (0, O.D)();
+                    null != t && t(es.i.DISMISS), s(U.HAw.CLIENT_THEME_PREVIEW_CLOSED), (0, G.D)();
                 },
-                children: (0, i.jsx)(T.a, { size: "md", color: "currentColor", className: en.P0 }),
+                children: (0, i.jsx)(T.a, { size: "md", color: "currentColor", className: ei.P0 }),
             }),
-            (0, i.jsx)(E.D, { variant: "heading-lg/extrabold", children: q.intl.string(q.t["xSR+a/"]) }),
+            (0, i.jsx)(E.D, { variant: "heading-lg/extrabold", children: K.intl.string(K.t["xSR+a/"]) }),
         ],
     });
 }
-function el(e) {
+function ea(e) {
     let { onSubscribeSuccess: t, markAsDismissed: s } = e,
         { analyticsLocations: n } = (0, S.Ay)(f.A.CLIENT_THEMES_EDITOR),
-        [r, a] = (0, c.yK)([H.default, G.A], () => [G.A.gradientPreset, L.Ay.isPremium(H.default.getCurrentUser())]),
+        [r, a] = (0, c.yK)([k.default, w.A], () => [w.A.gradientPreset, b.Ay.isPremium(k.default.getCurrentUser())]),
         l = (0, D.V)(),
         o = (0, v.V)(),
-        E = (0, L.FY)({
+        E = (0, b.FY)({
             intervalType: o?.subscriptionTrial?.interval,
             intervalCount: o?.subscriptionTrial?.intervalCount,
         }),
-        m = a ? q.intl.string(q.t.IJI7yk) : o?.subscriptionTrial?.skuId === z.pe.TIER_2 ? E : q.intl.string(q.t.mr4K7D);
+        m = a ? K.intl.string(K.t.IJI7yk) : o?.subscriptionTrial?.skuId === W.pe.TIER_2 ? E : K.intl.string(K.t.mr4K7D);
     return (0, i.jsx)(j.A, {
-        subscriptionTier: z.pe.TIER_2,
+        subscriptionTier: W.pe.TIER_2,
         defaultTextOverride: m,
-        premiumModalAnalyticsLocation: { object: W.ZSU.BUTTON_CTA, objectType: W.AnalyticsObjectTypes.BUY },
+        premiumModalAnalyticsLocation: { object: U.ZSU.BUTTON_CTA, objectType: U.AnalyticsObjectTypes.BUY },
         onSubscribeModalClose: function (e) {
-            if (e && (t?.(), null != s && s(ei.i.PRIMARY), null != r)) {
+            if (e && (t?.(), null != s && s(es.i.PRIMARY), null != r)) {
                 if (l) {
-                    let e = (0, u.M)(r.theme) ? X.Fc.DARK : X.Fc.LIGHT;
-                    (0, et.X8)({ isPersisted: !0, themeName: `${e}-mode-${d.ju[r.id]}`, analyticsLocations: n }),
+                    let e = (0, u.M)(r.theme) ? z.Fc.DARK : z.Fc.LIGHT;
+                    (0, ee.X8)({ isPersisted: !0, themeName: `${e}-mode-${d.ju[r.id]}`, analyticsLocations: n }),
                         (0, y.NA)({ [e]: r.theme }),
                         (0, y.qX)(e, { backgroundGradientPresetId: r.id }),
-                        (0, w.S8)(),
-                        (0, O.D)();
+                        (0, L.S8)(),
+                        (0, G.D)();
                     return;
                 }
-                (0, et.X8)({ isPersisted: !0, themeName: d.ju[r.id], analyticsLocations: n }),
-                    (0, h.u_)({ backgroundGradientPresetId: r.id, theme: r.theme }),
+                (0, ee.X8)({ isPersisted: !0, themeName: d.ju[r.id], analyticsLocations: n }),
+                    (0, _.u_)({ backgroundGradientPresetId: r.id, theme: r.theme }),
                     (0, y.XG)();
             }
         },
         fullWidth: !0,
     });
 }
-function ec(e) {
+function el(e) {
     let { markAsDismissed: t, isCoachmark: s } = e,
-        { isPreview: r } = (0, c.cf)([G.A], () => ({ isPreview: G.A.isPreview })),
+        { isPreview: r } = (0, c.cf)([w.A], () => ({ isPreview: w.A.isPreview })),
         [a, d] = n.useState(!1),
-        u = Y(),
-        E = (0, g.St)("client_themes_editor_footer"),
-        m = (0, p.X)(
-            { no: q.t["3D5yo/"], "sv-SE": q.t["3D5yo/"], uk: q.t["3D5yo/"], de: q.t["3D5yo/"] },
-            q.t["dqH+qr"],
+        u = X(),
+        E = (0, p.X)(
+            { no: K.t["3D5yo/"], "sv-SE": K.t["3D5yo/"], uk: K.t["3D5yo/"], de: K.t["3D5yo/"] },
+            K.t["dqH+qr"],
         ),
-        T = (0, l.YW)({ isPreview: r, isCoachmark: s, forceShowCloseButton: a })
-            .with({ isCoachmark: !0 }, { forceShowCloseButton: !0 }, () => q.intl.string(q.t.cpT0Cq))
-            .with({ isPreview: !0 }, () => m)
-            .otherwise(() => q.intl.string(q.t.Olc2K3)),
-        A = (0, i.jsx)(el, {
+        m = (0, l.YW)({ isPreview: r, isCoachmark: s, forceShowCloseButton: a })
+            .with({ isCoachmark: !0 }, { forceShowCloseButton: !0 }, () => K.intl.string(K.t.cpT0Cq))
+            .with({ isPreview: !0 }, () => E)
+            .otherwise(() => K.intl.string(K.t.Olc2K3)),
+        T = (0, i.jsx)(ea, {
             onSubscribeSuccess: () => {
                 d(!0);
             },
             markAsDismissed: t,
         });
     return (0, i.jsxs)("div", {
-        className: en.N3,
+        className: ei.N3,
         children: [
             r &&
-                (E
-                    ? (0, i.jsxs)("div", {
-                          className: en.rV,
-                          children: [
-                              (0, i.jsx)(P.l, {
-                                  size: "md",
-                                  className: en.Tf,
-                                  location: f.A.PREMIUM_WISHLIST_CLIENT_THEMES_EDITOR,
-                              }),
-                              A,
-                          ],
-                      })
-                    : A),
+                (0, i.jsxs)("div", {
+                    className: ei.rV,
+                    children: [
+                        (0, i.jsx)(P.l, {
+                            size: "md",
+                            className: ei.Tf,
+                            location: f.A.PREMIUM_WISHLIST_CLIENT_THEMES_EDITOR,
+                        }),
+                        T,
+                    ],
+                }),
             (0, i.jsx)(o.$, {
                 fullWidth: !0,
                 onClick: function () {
-                    null != t && t(ei.i.DISMISS),
-                        u(W.HAw.CLIENT_THEME_PREVIEW_CLOSED),
-                        (0, O.D)(),
+                    null != t && t(es.i.DISMISS),
+                        u(U.HAw.CLIENT_THEME_PREVIEW_CLOSED),
+                        (0, G.D)(),
                         s || (0, R.openUserSettings)(M.X.APPEARANCE_THEME_CATEGORY);
                 },
                 variant: "secondary",
-                text: T,
+                text: m,
             }),
         ],
     });
 }
-function ed(e) {
-    let { markAsDismissed: t, showClientThemesCoachmark: s, iconSize: r = es.ni.SIZE_60 } = e,
+function ec(e) {
+    let { markAsDismissed: t, showClientThemesCoachmark: s, iconSize: r = et.ni.SIZE_60 } = e,
         { analyticsLocations: l } = (0, S.Ay)(f.A.CLIENT_THEMES_EDITOR),
-        d = (0, c.bG)([k.A], () => k.A.hasLayers()),
-        { isPreview: o, shouldEditorAnimate: u } = (0, c.cf)([G.A, x.Ay], () => ({
-            isPreview: G.A.isPreview,
+        d = (0, c.bG)([g.A], () => g.A.hasLayers()),
+        { isPreview: o, shouldEditorAnimate: u } = (0, c.cf)([w.A, x.Ay], () => ({
+            isPreview: w.A.isPreview,
             shouldEditorAnimate: s && !x.Ay.useReducedMotion,
         })),
         E = (0, N.fy)().activePanel === N.HP.CLIENT_THEMES,
-        m = Y();
-    n.useEffect(() => m(W.HAw.CLIENT_THEME_PREVIEW_VIEWED), [m]),
+        m = X();
+    n.useEffect(() => m(U.HAw.CLIENT_THEME_PREVIEW_VIEWED), [m]),
         n.useEffect(() => {
             o &&
-                b.default.track(W.HAw.PREMIUM_UPSELL_VIEWED, {
-                    type: z.e.PREMIUM_CLIENT_THEME_TRY_IT_OUT,
+                H.default.track(U.HAw.PREMIUM_UPSELL_VIEWED, {
+                    type: W.e.PREMIUM_CLIENT_THEME_TRY_IT_OUT,
                     location_stack: l,
                 });
         }, [o, l]);
     let T = (() => {
-            let e = (0, c.bG)([G.A], () => G.A.gradientPreset),
-                t = (0, c.bG)([V.Ay], () => V.Ay.useSystemTheme === X.Q_.ON),
+            let e = (0, c.bG)([w.A], () => w.A.gradientPreset),
+                t = (0, c.bG)([O.Ay], () => O.Ay.useSystemTheme === z.Q_.ON),
                 [s, i] = (0, n.useState)(t);
             return (
                 (0, n.useEffect)(() => {
                     null == e && i(t);
                 }, [e, t]),
                 (0, n.useCallback)(() => {
-                    null == e || ((0, w.S8)(), (0, y.XG)(), s && (0, y.k7)(X.Q_.ON));
+                    null == e || ((0, L.S8)(), (0, y.XG)(), s && (0, y.k7)(z.Q_.ON));
                 }, [e, s])
             );
         })(),
-        h = (0, I.A)(null, o ? T : W.tEg);
+        _ = (0, I.A)(null, o ? T : U.tEg);
     n.useEffect(() => {
         if (o && !E) return T;
     }, [o, E, T]);
@@ -279,25 +275,25 @@ function ed(e) {
         : (0, i.jsx)(S.f5, {
               value: l,
               children: (0, i.jsx)("div", {
-                  ref: h,
+                  ref: _,
                   "data-app-right-panel": !0,
-                  className: a()(en.HS, u ? en.hP : null),
+                  className: a()(ei.HS, u ? ei.hP : null),
                   style: p,
                   children: (0, i.jsxs)(A.F, {
                       children: [
-                          s ? (0, i.jsx)(er, {}) : (0, i.jsx)(ea, { markAsDismissed: t }),
-                          (0, i.jsx)(ee, {}),
-                          (0, i.jsx)(_.Ip, {
-                              className: en.sV,
-                              children: (0, i.jsxs)(et.Ay, {
-                                  type: et.v0.EDITOR,
+                          s ? (0, i.jsx)(en, {}) : (0, i.jsx)(er, { markAsDismissed: t }),
+                          (0, i.jsx)(Z, {}),
+                          (0, i.jsx)(h.Ip, {
+                              className: ei.sV,
+                              children: (0, i.jsxs)(ee.Ay, {
+                                  type: ee.v0.EDITOR,
                                   children: [
-                                      !o && (0, i.jsx)(et.Ay.Basic, { className: en.Gg, iconSize: r }),
-                                      (0, i.jsx)(et.Ay.Gradient, { className: en.Gg, isCoachmark: s, iconSize: r }),
+                                      !o && (0, i.jsx)(ee.Ay.Basic, { className: ei.Gg, iconSize: r }),
+                                      (0, i.jsx)(ee.Ay.Gradient, { className: ei.Gg, isCoachmark: s, iconSize: r }),
                                   ],
                               }),
                           }),
-                          (0, i.jsx)(ec, { markAsDismissed: t, isCoachmark: s }),
+                          (0, i.jsx)(el, { markAsDismissed: t, isCoachmark: s }),
                       ],
                   }),
               }),

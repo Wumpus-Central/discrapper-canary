@@ -1,20 +1,18 @@
-t.d(s, { L: () => r }), t(667532);
+t.d(s, { L: () => o }), t(667532);
 var i = t(582128),
     l = t(840411),
-    n = t(909536),
-    a = t(862772),
-    o = t(202541);
-function r(e) {
-    let { userId: s, wishlist: t, numWishlistItemsToRecommend: r, maxWishlistItemsToShow: u = r, source: c } = e,
-        { recommendations: d, status: m } = (0, a.Ul)({ userId: s, numItems: r, source: c }),
-        p = (0, n.Gh)("add_to_wishlist_grid_suggested_nitro"),
-        f = i.useMemo(() => new Set(t?.items.map((e) => e.skuId) ?? []), [t]),
-        g = p && "success" === m && !f.has(o.pe.TIER_2);
+    n = t(862772),
+    a = t(202541);
+function o(e) {
+    let { userId: s, wishlist: t, numWishlistItemsToRecommend: o, maxWishlistItemsToShow: r = o, source: u } = e,
+        { recommendations: c, status: d } = (0, n.Ul)({ userId: s, numItems: o, source: u }),
+        m = i.useMemo(() => new Set(t?.items.map((e) => e.skuId) ?? []), [t]),
+        p = "success" === d && !m.has(a.pe.TIER_2);
     return {
         items: i.useMemo(() => {
-            let e = d.filter((e) => !f.has(e.id)).map((e) => ({ sku: e, itemSource: "recommendation" }));
-            return g && e.unshift({ sku: (0, l.rI)(), itemSource: "takeover" }), e.slice(0, u);
-        }, [d, f, g, u]),
-        status: m,
+            let e = c.filter((e) => !m.has(e.id)).map((e) => ({ sku: e, itemSource: "recommendation" }));
+            return p && e.unshift({ sku: (0, l.rI)(), itemSource: "takeover" }), e.slice(0, r);
+        }, [c, m, p, r]),
+        status: d,
     };
 }

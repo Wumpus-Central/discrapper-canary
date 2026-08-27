@@ -2314,28 +2314,6 @@
     }
   },
   {
-    "name": "2026-03-wishlisting-nitro",
-    "kind": "user",
-    "defaultConfig": {
-      "isEnabled": false,
-      "isRoadblocksEnabled": false
-    },
-    "variations": {
-      "0": {
-        "enabled": false,
-        "variant": 0
-      },
-      "1": {
-        "isEnabled": true,
-        "isRoadblocksEnabled": false
-      },
-      "2": {
-        "isEnabled": true,
-        "isRoadblocksEnabled": true
-      }
-    }
-  },
-  {
     "name": "2026-03-wysiwyg-user-profile-editing",
     "kind": "user",
     "defaultConfig": {
