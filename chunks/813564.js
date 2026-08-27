@@ -117,7 +117,7 @@ function Y(e) {
     return !t && !n;
 }
 function K(e, t, n, i) {
-    (0, x.qP)(t, e, f.Zm.SOUNDBOARD),
+    (0, x.qP)(t, e),
         (function (e, t, n, i, r) {
             let a = null != t.emojiId ? I.Ay.getCustomEmojiById(t.emojiId) : null,
                 { abortController: s, onRequestProgress: l } = b(e),
@@ -148,7 +148,7 @@ async function $(e) {
         var s;
         if (!j(a, n) || !W(t, a, n, !0) || !Y(n)) return null;
         (s = n.id),
-            (0, x.qP)(s, a, f.Zm.JOINED_VOICE_CHANNEL),
+            (0, x.qP)(s, a),
             (function (e, t, n) {
                 let { abortController: i, onRequestProgress: r } = b(e),
                     a = D.getState().animationType ?? L.B.BASIC,

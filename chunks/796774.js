@@ -131,8 +131,8 @@ async function y(e, t) {
         throw new o.A(e);
     }
 }
-function D(e, t, n) {
-    s.h.dispatch({ type: "GUILD_SOUNDBOARD_SOUND_PLAY_LOCALLY", sound: t, channelId: e, trigger: n });
+function D(e, t) {
+    s.h.dispatch({ type: "GUILD_SOUNDBOARD_SOUND_PLAY_LOCALLY", sound: t, channelId: e });
 }
 function v(e, t) {
     s.h.dispatch({ type: "GUILD_SOUNDBOARD_SOUND_PLAY_START", soundId: e, userId: t });
