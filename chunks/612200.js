@@ -6,9 +6,8 @@ var r = n(174459),
     a = n(204925),
     s = n(652215);
 function l(e) {
-    let { onConfirm: t, guild: n } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
     r.default.track(s.HAw.OPEN_MODAL, { type: "Enter Your Birthday", source: { section: e } }),
-        i.h.dispatch({ type: "AGE_GATE_MODAL_OPEN", source: e, onConfirm: t, guild: n });
+        i.h.dispatch({ type: "AGE_GATE_MODAL_OPEN", source: e });
 }
 function o(e) {
     i.h.wait(() => i.h.dispatch({ type: "AGE_GATE_MODAL_CLOSE" })),
