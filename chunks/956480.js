@@ -12,7 +12,7 @@ var i = n(582128),
     p = n(375708);
 function m(e, t, n) {
     let m = (0, l.bG)([s.A], () => s.A.getChannel(e)?.guild_id),
-        { posturesEnabled: f, interactionsEnabled: A } = (0, d.mf)(
+        { posturesEnabled: A, interactionsEnabled: f } = (0, d.mf)(
             { guildId: m, location: "GuildRoomAnnouncer" },
             { autoTrackExposure: !1 },
         ),
@@ -34,25 +34,25 @@ function m(e, t, n) {
         let d = [],
             g = [],
             C = [];
-        for (let [e, n] of t) {
-            let t = l.positions.get(e);
+        for (let [n, i] of t) {
+            let t = l.positions.get(n);
             if (
-                (null == t && d.push(p.intl.formatToPlainString(h.default["qMj+2W"], { userName: s(e) })),
-                null == t || t.x !== n.position.x || t.y !== n.position.y)
+                (null == t && d.push(p.intl.formatToPlainString(h.default["qMj+2W"], { userName: s(n) })),
+                null == t || t.x !== i.position.x || t.y !== i.position.y)
             ) {
-                let t = (0, c.r)(n.position);
+                let t = (0, c.r)(i.seat, i.position, e);
                 null != t &&
-                    g.push(p.intl.formatToPlainString(h.default.nPRAZX, { userName: s(e), seatLabel: t.getLabel() }));
+                    g.push(p.intl.formatToPlainString(h.default.nPRAZX, { userName: s(n), seatLabel: t.getLabel() }));
             }
-            if (null != t && f && l.statusIds.get(e) !== n.statusId) {
-                let t = u.x.find((e) => e.id === n.statusId);
+            if (null != t && A && l.statusIds.get(n) !== i.statusId) {
+                let e = u.x.find((e) => e.id === i.statusId);
                 C.push(
-                    null != t
+                    null != e
                         ? p.intl.formatToPlainString(h.default.gzrysL, {
-                              userName: s(e),
-                              postureLabel: p.intl.string(t.label),
+                              userName: s(n),
+                              postureLabel: p.intl.string(e.label),
                           })
-                        : p.intl.formatToPlainString(h.default["vNuh/e"], { userName: s(e) }),
+                        : p.intl.formatToPlainString(h.default["vNuh/e"], { userName: s(n) }),
                 );
             }
         }
@@ -60,7 +60,7 @@ function m(e, t, n) {
         for (let [e] of l.positions)
             i.positions.has(e) || y.push(p.intl.formatToPlainString(h.default.u7LUkR, { userName: s(e) }));
         let j = [];
-        if (A) {
+        if (f) {
             for (let e of n)
                 l.noteAuthors.has(e.objectId) ||
                     j.push(p.intl.formatToPlainString(h.default.zTbxKr, { userName: s(e.createdBy) }));
@@ -69,5 +69,5 @@ function m(e, t, n) {
         }
         let I = [...d, ...y, ...g, ...C, ...j];
         0 !== I.length && a.O.announce(I.join(". "), "polite");
-    }, [t, n, e, m, f, A]);
+    }, [t, n, e, m, A, f]);
 }

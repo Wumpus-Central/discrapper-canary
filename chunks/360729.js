@@ -30,6 +30,11 @@ let s = "2026-06_guild_rooms",
                 label: "Enable Guild Rooms without Postures",
                 config: { enabled: !0, interactionsEnabled: !0, multipleRoomsEnabled: !1, posturesEnabled: !1 },
             },
+            {
+                id: 5,
+                label: "Enable Guild Rooms with Room 2 Default and Selector",
+                config: { enabled: !0, interactionsEnabled: !0, multipleRoomsEnabled: !0, posturesEnabled: !0 },
+            },
         ],
     });
 function o(e, t) {

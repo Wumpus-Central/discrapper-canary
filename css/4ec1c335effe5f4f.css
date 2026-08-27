@@ -1,6 +1,5 @@
 .content__60f16 {
-    align-items: center;
-    flex-wrap: wrap
+    align-items: stretch
 }
 
 .content__60f16,
@@ -15,7 +14,9 @@
     border-radius: var(--radius-sm);
     box-sizing: border-box;
     cursor: pointer;
+    flex-basis: 50%;
     flex-direction: column;
+    justify-content: space-between;
     padding: var(--space-8)
 }
 
@@ -28,7 +29,8 @@
 }
 
 .image__60f16 {
-    height: 132px
+    height: auto;
+    width: 100%
 }
 
-/*# sourceMappingURL=f4f2e4db0ec70d23.css.map*/
+/*# sourceMappingURL=4ec1c335effe5f4f.css.map*/

@@ -11,8 +11,8 @@ var i = n(477900),
     h = n(538638),
     p = n(558076),
     m = n(544299),
-    f = n(996752),
-    A = n(1195),
+    A = n(996752),
+    f = n(1195),
     x = n(375708),
     g = n(781505);
 function C() {
@@ -54,36 +54,38 @@ function C() {
     });
 }
 function y(e) {
-    let { channelId: t, x: n, y, label: j, roomWidth: I } = e,
-        N = (0, s.bG)([d.Ay], () => d.Ay.getVoiceChannelId() === t),
-        v = (0, s.bG)([p.A], () =>
+    let { channelId: t, x: n, y, label: j, roomWidth: I, seat: N } = e,
+        v = (0, s.bG)([d.Ay], () => d.Ay.getVoiceChannelId() === t),
+        E = (0, s.bG)([p.A], () =>
             p.A.getRoomUsers(t)
                 .values()
-                .some((e) => e.position?.x === n && e.position?.y === y),
+                .some((e) => e.seat === N || (e.position?.x === n && e.position?.y === y)),
         ),
-        E = (0, s.bG)([c.A], () => c.A.getChannel(t)?.guild_id),
-        b = l.useCallback(async () => {
-            null != E &&
-                (N
-                    ? (0, u.AQ)(E, t, { user_position: { x: n, y } }).catch((e) => (0, h.b)({ silent: !0 }))
-                    : ((0, u.TJ)({ x: n, y }), (await (0, o.A)({ channelId: t })) || (0, u.Ys)()));
-        }, [N, E, t, n, y]),
-        T = (0, m.Sb)({
+        b = (0, s.bG)([c.A], () => c.A.getChannel(t)?.guild_id),
+        T = l.useCallback(async () => {
+            null != b &&
+                (v
+                    ? (0, u.AQ)(b, t, { user_position: { x: n, y }, user_seat: N }).catch((e) =>
+                          (0, h.b)({ silent: !0 }),
+                      )
+                    : ((0, u.TJ)({ x: n, y }, N), (await (0, o.A)({ channelId: t })) || (0, u.Ys)()));
+        }, [v, b, t, n, y, N]),
+        _ = (0, m.Sb)({
             position: { x: n, y },
-            targetLabel: x.intl.formatToPlainString(A.default.NYm6Cb, { seatLabel: j }),
+            targetLabel: x.intl.formatToPlainString(f.default.NYm6Cb, { seatLabel: j }),
         });
-    if (v || null == E) return null;
-    let { numericAvatarSize: _ } = (0, f.F)(I),
-        R = 1.2 * Math.max(_, 24);
+    if (E || null == b) return null;
+    let { numericAvatarSize: R } = (0, A.F)(I),
+        S = 1.2 * Math.max(R, 24);
     return (0, i.jsx)(r.m, {
-        text: N || null != T ? null : x.intl.string(x.t["96ANUN"]),
+        text: v || null != _ ? null : x.intl.string(x.t["96ANUN"]),
         children: (0, i.jsx)(a.D, {
             role: "listitem",
             "aria-label": j,
             className: g.am,
-            style: { width: R, height: R, left: `calc(${n}% - ${R / 2}px)`, top: `calc(${y}% - ${R / 2}px)` },
-            onClick: b,
-            ...T,
+            style: { width: S, height: S, left: `calc(${n}% - ${S / 2}px)`, top: `calc(${y}% - ${S / 2}px)` },
+            onClick: T,
+            ..._,
             children: (0, i.jsx)(C, {}),
         }),
     });

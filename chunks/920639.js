@@ -81,24 +81,28 @@ function p(e) {
     });
 }
 function T(e) {
-    let { actualSeatPosition: t, targetSeatPosition: n, ...i } = e;
-    A(i.channelId, (e) => {
-        var a;
-        let s, l, o, d;
+    let { actualSeatPosition: t, targetSeatPosition: n, actualSeatId: i, targetSeatId: a, ...s } = e;
+    A(s.channelId, (e) => {
+        var l;
+        let o, d, A, h;
         r.Ay.trackWithMetadata(_.HAw.GUILD_ROOM_SEAT_SELECTED, {
-            ...E(i),
-            seat_name: (0, u.r)(t)?.name ?? "",
+            ...E(s),
+            seat_name: (0, u.r)(i, t, s.channelId)?.name ?? "",
             seat_position_v2: [t.x, t.y],
-            update_reason: t.x !== n?.x || t.y !== n?.y ? "default" : "user_selected",
-            ...((a = i.channelId),
-            (s = []),
-            (l = []),
+            seat_id: i,
+            update_reason: t.x !== n?.x || t.y !== n?.y || i !== a ? "default" : "user_selected",
+            ...((l = s.channelId),
             (o = []),
             (d = []),
-            c.A.getRoomUsers(a).forEach((e, t) => {
-                s.push(t), l.push((0, u.r)(e.position)?.name ?? ""), o.push(e.position.x), d.push(e.position.y);
+            (A = []),
+            (h = []),
+            c.A.getRoomUsers(l).forEach((e, t) => {
+                o.push(t),
+                    d.push((0, u.r)(e.seat, e.position, l)?.name ?? ""),
+                    A.push(e.position.x),
+                    h.push(e.position.y);
             }),
-            { seated_user_ids: s, seated_user_seat_names: l, seated_user_x_positions: o, seated_user_y_positions: d }),
+            { seated_user_ids: o, seated_user_seat_names: d, seated_user_x_positions: A, seated_user_y_positions: h }),
             ...e,
         });
     });
@@ -135,6 +139,8 @@ function C(e) {
                 switch (e.updateType) {
                     case "position":
                         return { ...t, position_v2: [e.position.x, e.position.y] };
+                    case "seat":
+                        return { ...t, seat_id: e.seat };
                     case "status_id":
                         return { ...t, status_id: e.statusId };
                     case "status_text":

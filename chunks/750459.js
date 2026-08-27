@@ -1,0 +1,28 @@
+"use strict";
+n.d(t, { x: () => r });
+var i,
+    r =
+        (((i = {})[(i.UNSET = 0)] = "UNSET"),
+        (i[(i.SEAT_1 = 1)] = "SEAT_1"),
+        (i[(i.SEAT_2 = 2)] = "SEAT_2"),
+        (i[(i.SEAT_3 = 3)] = "SEAT_3"),
+        (i[(i.SEAT_4 = 4)] = "SEAT_4"),
+        (i[(i.SEAT_5 = 5)] = "SEAT_5"),
+        (i[(i.SEAT_6 = 6)] = "SEAT_6"),
+        (i[(i.SEAT_7 = 7)] = "SEAT_7"),
+        (i[(i.SEAT_8 = 8)] = "SEAT_8"),
+        (i[(i.SEAT_9 = 9)] = "SEAT_9"),
+        (i[(i.SEAT_10 = 10)] = "SEAT_10"),
+        (i[(i.SEAT_11 = 11)] = "SEAT_11"),
+        (i[(i.SEAT_12 = 12)] = "SEAT_12"),
+        (i[(i.SEAT_13 = 13)] = "SEAT_13"),
+        (i[(i.SEAT_14 = 14)] = "SEAT_14"),
+        (i[(i.SEAT_15 = 15)] = "SEAT_15"),
+        (i[(i.SEAT_16 = 16)] = "SEAT_16"),
+        (i[(i.SEAT_17 = 17)] = "SEAT_17"),
+        (i[(i.SEAT_18 = 18)] = "SEAT_18"),
+        (i[(i.SEAT_19 = 19)] = "SEAT_19"),
+        (i[(i.SEAT_20 = 20)] = "SEAT_20"),
+        (i[(i.SEAT_21 = 21)] = "SEAT_21"),
+        (i[(i.SEAT_22 = 22)] = "SEAT_22"),
+        i);

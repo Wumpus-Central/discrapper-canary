@@ -23,7 +23,7 @@ var i = n(477900),
     v = n(241215),
     E = n(207274),
     b = n(956480),
-    T = n(189998),
+    T = n(761583),
     _ = n(1195),
     R = n(375708),
     S = n(923932);
@@ -36,7 +36,7 @@ function L(e) {
             seats: M,
             aspectRatio: w,
             plants: U,
-            ducky: D,
+            duck: D,
             screen: V,
             getName: k,
         } = T.iX[L],
@@ -47,14 +47,14 @@ function L(e) {
         $ = W ? (0, T.bf)(w, H) : 1,
         Y = l.useRef(null),
         K = l.useRef(null),
-        q = (0, u.bG)([f.A], () => f.A.getRoomUsers(t)),
-        X = (0, u.bG)([f.A], () => f.A.getNotes(t)),
-        Z = q.size,
-        Q = Math.max(0, M.length - q.size),
-        J = U.length + +(null != D) + X.length,
+        X = (0, u.bG)([f.A], () => f.A.getRoomUsers(t)),
+        q = (0, u.bG)([f.A], () => f.A.getNotes(t)),
+        Z = X.size,
+        Q = Math.max(0, Object.values(M).length - X.size),
+        J = U.length + +(null != D) + q.length,
         [ee, et] = l.useState(!1),
         en = l.useMemo(() => ({ isMenuOpen: ee, setMenuOpen: et }), [ee, et]);
-    (0, b.A)(t, q, X);
+    (0, b.A)(t, X, q);
     let ei = (0, g.Y1)(t),
         el = R.intl.string(ei ? _.default.F9DcvR : _.default["sV/+Cu"]);
     return (
@@ -115,19 +115,21 @@ function L(e) {
                                                           (0, i.jsx)("div", {
                                                               role: "list",
                                                               "aria-label": el,
-                                                              children: M.map((e, n) =>
-                                                                  (0, i.jsx)(
+                                                              children: Object.entries(M).map((e) => {
+                                                                  let [n, l] = e;
+                                                                  return (0, i.jsx)(
                                                                       I.A,
                                                                       {
                                                                           channelId: t,
-                                                                          x: e.position.x,
-                                                                          y: e.position.y,
-                                                                          label: e.getLabel(),
+                                                                          x: l.position.x,
+                                                                          y: l.position.y,
+                                                                          label: l.getLabel(),
                                                                           roomWidth: z,
+                                                                          seat: parseInt(n),
                                                                       },
                                                                       n,
-                                                                  ),
-                                                              ),
+                                                                  );
+                                                              }),
                                                           }),
                                                           (0, i.jsxs)("div", {
                                                               role: "list",
@@ -139,7 +141,10 @@ function L(e) {
                                                                       roomWidth: z,
                                                                   }),
                                                                   null != D &&
-                                                                      (0, i.jsx)(E.A, { channelId: t, position: D }),
+                                                                      (0, i.jsx)(E.A, {
+                                                                          channelId: t,
+                                                                          position: D.position,
+                                                                      }),
                                                               ],
                                                           }),
                                                           (0, i.jsx)(C.A, { channelId: t, roomWidth: z }),

@@ -28,8 +28,9 @@ class c extends i.A {
                     (null != o && null != d && this.isExperimentEnabled(d, "VOICE_STATE_UPDATE") && (0, a.x2)(d, o),
                     null != i && null != n)
                 ) {
-                    let e = s.A.getPendingPosition();
-                    this.isExperimentEnabled(n, "VOICE_STATE_UPDATE") && (0, a.tB)(n, i, e);
+                    let e = s.A.getPendingPosition(),
+                        t = s.A.getPendingSeat();
+                    this.isExperimentEnabled(n, "VOICE_STATE_UPDATE") && (0, a.tB)(n, i, e, t);
                 }
                 (o = i), (d = n);
             }
