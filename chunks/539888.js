@@ -1,4 +1,4 @@
-i.d(e, { P: () => R });
+i.d(e, { P: () => L });
 var n = i(477900),
     l = i(582128),
     a = i(503698),
@@ -15,40 +15,40 @@ var n = i(477900),
     x = i(451395),
     E = i(328006),
     A = i(857909),
-    p = i(334840),
-    v = i(393750);
+    v = i(334840),
+    p = i(393750);
 let S = [
     { avatar: E.A, topBarWidth: "68%", bottomBarWidths: ["26%", "55%"] },
     { avatar: A.A, topBarWidth: "48%", bottomBarWidths: ["26%", "100%"] },
-    { avatar: p.A, topBarWidth: "96%", bottomBarWidths: ["26%", "24%"] },
+    { avatar: v.A, topBarWidth: "96%", bottomBarWidths: ["26%", "24%"] },
 ];
 function I(t) {
     let { width: e } = t;
-    return (0, n.jsx)("div", { className: v.M0, style: { width: e } });
+    return (0, n.jsx)("div", { className: p.M0, style: { width: e } });
 }
-function _(t) {
+function j(t) {
     let { rank: e, row: i } = t;
     return (0, n.jsxs)("div", {
-        className: v.nM,
+        className: p.nM,
         children: [
             (0, n.jsx)("div", {
-                className: v.Tm,
+                className: p.Tm,
                 "aria-hidden": !0,
                 children: (0, n.jsx)(h.E, {
                     variant: "text-xs/medium",
                     color: "text-muted",
-                    className: v._k,
+                    className: p._k,
                     children: e,
                 }),
             }),
-            (0, n.jsx)("img", { className: v.my, src: i.avatar, alt: "", "aria-hidden": !0 }),
+            (0, n.jsx)("img", { className: p.my, src: i.avatar, alt: "", "aria-hidden": !0 }),
             (0, n.jsxs)("div", {
-                className: v.n_,
+                className: p.n_,
                 "aria-hidden": !0,
                 children: [
                     (0, n.jsx)(I, { width: i.topBarWidth }),
                     (0, n.jsxs)("div", {
-                        className: v.O3,
+                        className: p.O3,
                         children: [
                             (0, n.jsx)(I, { width: i.bottomBarWidths[0] }),
                             (0, n.jsx)(I, { width: i.bottomBarWidths[1] }),
@@ -59,8 +59,8 @@ function _(t) {
         ],
     });
 }
-function j() {
-    return (0, n.jsx)("div", { className: v.kL, children: S.map((t, e) => (0, n.jsx)(_, { rank: e + 1, row: t }, e)) });
+function _() {
+    return (0, n.jsx)("div", { className: p.kL, children: S.map((t, e) => (0, n.jsx)(j, { rank: e + 1, row: t }, e)) });
 }
 var C = i(189213),
     y = i(192308),
@@ -125,7 +125,7 @@ function G(t) {
     });
 }
 function k(t) {
-    let { title: e, boostPrice: i } = t;
+    let { title: e, boostPrice: i, LockedPreview: l } = t;
     return (0, n.jsxs)(f.B, {
         className: D.xt,
         align: "center",
@@ -136,7 +136,7 @@ function k(t) {
                 align: "center",
                 gap: 12,
                 children: [
-                    (0, n.jsx)(j, {}),
+                    null != l ? (0, n.jsx)(l, { alt: "", ariaHidden: !0 }) : (0, n.jsx)(_, {}),
                     (0, n.jsxs)(f.B, {
                         align: "center",
                         gap: 4,
@@ -166,7 +166,7 @@ function k(t) {
         ],
     });
 }
-function R(t) {
+function L(t) {
     let {
             widget: e,
             guildSpaceMode: i,
@@ -217,7 +217,7 @@ function R(t) {
                 className: D.rf,
                 children:
                     null != o
-                        ? (0, n.jsx)(k, { title: g, boostPrice: o.boostPrice })
+                        ? (0, n.jsx)(k, { title: g, boostPrice: o.boostPrice, LockedPreview: f.LockedPreview })
                         : (0, n.jsx)(m, { widget: e, hydration: a, guildSpaceMode: i }),
             }),
         ],
