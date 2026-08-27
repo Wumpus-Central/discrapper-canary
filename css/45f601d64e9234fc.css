@@ -1,5 +1,6 @@
 .host__7803e {
     --custom-vibegrations-thread-gap: 0;
+    --custom-vibegrations-shimmer-tint: var(--text-default);
     min-width: 0;
     width: 100%
 }
@@ -19,12 +20,9 @@
     color: var(--text-muted)
 }
 
-.icon__7803e {
-    align-items: center;
-    display: flex;
-    flex: 0 0 auto;
-    justify-content: center;
-    margin-inline-end: var(--space-4)
+.row__7803e.row__7803e:focus-visible,
+.row__7803e.row__7803e:hover {
+    color: var(--text-muted)
 }
 
 .label__7803e {
@@ -442,23 +440,37 @@
     cursor: pointer;
     display: flex;
     gap: 12px;
-    padding: 4px 8px;
+    padding: 8px;
     position: relative;
     text-align: start;
     width: 100%;
     z-index: 0
 }
 
-.guildIcon_f31b36,
-.iconPlaceholder_f31b36 {
+.guildIcon_f31b36 {
     flex: 0 0 auto;
     height: 32px;
     width: 32px
 }
 
+.appIcon_f31b36,
 .iconPlaceholder_f31b36 {
     background: var(--background-mod-subtle);
-    border-radius: 50%
+    border-radius: var(--radius-sm);
+    box-sizing: border-box;
+    flex: 0 0 auto;
+    height: 44px;
+    width: 44px
+}
+
+.appIcon_f31b36 {
+    padding: 6px
+}
+
+.iconPlaceholder_f31b36 {
+    align-items: center;
+    display: flex;
+    justify-content: center
 }
 
 .rowBody_f31b36 {
@@ -485,39 +497,65 @@
 }
 
 .serverName_f31b36 {
+    flex: 0 1 auto;
     min-width: 0;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap
 }
 
-.rowStatus_f31b36 {
+.rowSubline_f31b36 {
     align-items: center;
     display: flex;
-    gap: var(--space-xs);
-    margin-top: var(--space-4);
     min-width: 0
 }
 
-.taskCount_f31b36 {
-    flex: 0 0 auto
+.rowSeparator_f31b36 {
+    color: var(--text-muted);
+    flex: 0 0 auto;
+    padding-inline: 8px
+}
+
+.rowStatus_f31b36 {
+    align-items: center;
+    display: flex;
+    flex-shrink: 100;
+    gap: var(--space-xs);
+    min-width: 0
+}
+
+.taskChip_f31b36 {
+    -webkit-backdrop-filter: blur(28px);
+    backdrop-filter: blur(28px);
+    background: var(--background-mod-subtle);
+    border: 1px solid var(--border-muted);
+    border-radius: var(--radius-sm);
+    flex: 0 0 auto;
+    font-variant-numeric: tabular-nums;
+    min-width: 5ch;
+    padding: var(--space-4) 0
+}
+
+.state_f31b36,
+.taskChip_f31b36 {
+    align-items: center;
+    display: flex;
+    justify-content: center
 }
 
 .state_f31b36 {
-    align-items: center;
-    justify-content: center;
     padding: var(--space-24) var(--space-16);
     text-align: center
 }
 
 .emptyState_f31b36,
 .state_f31b36 {
-    display: flex;
     flex-direction: column;
     gap: var(--space-12)
 }
 
 .emptyState_f31b36 {
+    display: flex;
     padding: var(--space-16)
 }
 
@@ -569,9 +607,9 @@
     flex-direction: column;
     height: calc(100vh - var(--custom-app-top-bar-height) - var(--custom-app-panels-height) - 1rem);
     max-height: 640px;
+    max-width: calc(100vw - var(--space-16));
     min-height: 0;
-    min-width: 320px;
-    width: calc(var(--custom-guild-sidebar-width) - var(--custom-guild-list-width) + 10px)
+    width: 452px
 }
 
 .backgroundContainer__2a142,
@@ -645,6 +683,7 @@
     flex: 0 0 auto;
     height: var(--space-24);
     justify-content: center;
+    position: relative;
     width: var(--space-24)
 }
 
@@ -654,6 +693,40 @@
 
 .icon__67467 {
     cursor: pointer
+}
+
+.iconShine__67467 {
+    color: var(--text-strong);
+    -webkit-mask-image: linear-gradient(90deg, transparent, transparent 40%, #000 50%, transparent 60%, transparent);
+    mask-image: linear-gradient(90deg, transparent, transparent 40%, #000 50%, transparent 60%, transparent);
+    -webkit-mask-position: 100% 0;
+    mask-position: 100% 0;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: 400% 100%;
+    mask-size: 400% 100%;
+    pointer-events: none;
+    position: absolute
+}
+
+.iconShineOpen__67467 {
+    color: var(--text-brand)
+}
+
+.full-motion .iconShine__67467 {
+    animation: vibegrations-title-bar-wand-shine__67467 2s linear infinite
+}
+
+@keyframes vibegrations-title-bar-wand-shine__67467 {
+    0% {
+        -webkit-mask-position: 100% 0;
+        mask-position: 100% 0
+    }
+
+    to {
+        -webkit-mask-position: 0 0;
+        mask-position: 0 0
+    }
 }
 
 .card__4b8a6 {
@@ -2306,4 +2379,4 @@
     width: 4px
 }
 
-/*# sourceMappingURL=1869f96a604c8cfc.css.map*/
+/*# sourceMappingURL=45f601d64e9234fc.css.map*/

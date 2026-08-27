@@ -510,7 +510,7 @@
   "1SDxuI": "Active",
   "r9EdXu": "Idle",
   "7Io+dh": "Tasks: {completed} of {total} done",
-  "JmMDaL": "{completed}/{total} tasks",
+  "JmMDaL": "{completed}/{total}",
   "ZnvpQR": "Conjuring",
   "wjWm+/": "We lost the thread. Reconnecting…",
   "JXACNA": "Connect {label}",
