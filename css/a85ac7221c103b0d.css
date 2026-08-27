@@ -422,8 +422,8 @@
 }
 
 .rowHost_f31b36 {
-    --custom-vibegrations-glow-radius: 8px;
-    border-radius: 8px;
+    --custom-vibegrations-glow-radius: 12px;
+    border-radius: 12px;
     margin-bottom: 2px;
     position: relative
 }
@@ -435,7 +435,7 @@
 
 .row_f31b36 {
     align-items: center;
-    border-radius: 8px;
+    border-radius: 12px;
     box-sizing: border-box;
     cursor: pointer;
     display: flex;
@@ -455,20 +455,25 @@
 
 .appIcon_f31b36,
 .iconPlaceholder_f31b36 {
-    background: var(--background-mod-subtle);
     border-radius: var(--radius-sm);
     box-sizing: border-box;
     flex: 0 0 auto;
     height: 44px;
+    outline: 1px solid var(--border-muted);
+    outline-offset: -1px;
     width: 44px
 }
 
 .appIcon_f31b36 {
-    padding: 6px
+    border-radius: var(--radius-sm);
+    -o-object-fit: cover;
+    object-fit: cover;
+    outline-color: var(--border-normal)
 }
 
 .iconPlaceholder_f31b36 {
     align-items: center;
+    background: var(--background-mod-muted);
     display: flex;
     justify-content: center
 }
@@ -2552,4 +2557,4 @@
     width: 4px
 }
 
-/*# sourceMappingURL=f9ed7ebc849a6845.css.map*/
+/*# sourceMappingURL=a85ac7221c103b0d.css.map*/
