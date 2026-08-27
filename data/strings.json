@@ -1138,6 +1138,8 @@
   "MXsMRk": "Scheduled message updated",
   "MQcRX/": "Scheduling message for {timestamp, date, ::MMMMd} at {timestamp, time, short}",
   "ZN3tIx": "Scheduling for {timestamp, date, ::MMMMd} at {timestamp, time, short}",
+  "Nt0tz7": "Scheduled time is too far away",
+  "w/fgvh": "Scheduled time is too soon",
   "SZVs3K": "Scheduled Messages",
   "EMRZyS": "Tomorrow at 1:00pm",
   "tjIn9i": "Tomorrow at 9:00am",

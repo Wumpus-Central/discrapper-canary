@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { c: () => g });
+n.d(t, { c: () => S });
 var i = n(477900),
     r = n(582128),
     a = n(890497);
@@ -20,30 +20,32 @@ function h(e) {
 }
 function I(e, t) {
     let n = t.toUpperCase().trim();
-    if (n.length > 0) {
-        let t = l()(`${e?.format("YYYY-MM-DD")} ${n}`, "YYYY-MM-DD LT");
-        if (A(t.format("LT")) === A(n)) return t;
-    }
+    if (0 !== n.length)
+        for (let t of [p, "H:mm", "H.mm"]) {
+            let i = l()(`${e?.format("YYYY-MM-DD")} ${n}`, `YYYY-MM-DD ${t}`);
+            if (A(i.format(t)) === A(n)) return i;
+        }
 }
-let f = l()("2021-04-12T00:00:00");
-function p(e, t) {
+let f = l()("2021-04-12T00:00:00"),
+    p = "LT";
+function T(e, t) {
     return e.clone().hours(t.hour()).minutes(t.minutes()).seconds(0);
 }
-function T(e, t) {
+function m(e, t) {
     return e.value.unix() - t.value.unix();
 }
-class m {
+class g {
     intervalInMinutes;
     labelFormat;
     options = [];
     _index = {};
-    constructor({ intervalInMinutes: e = 15, labelFormat: t = "LT" } = {}) {
+    constructor({ intervalInMinutes: e = 15, labelFormat: t = p } = {}) {
         if (e <= 0) throw Error(`intervalInMinutes should be positive number, got ${e}`);
         (this.intervalInMinutes = e), (this.labelFormat = t), this._generateTimeOptions();
     }
     lookupByValue(e) {
         if (null == e) return;
-        let t = p(f, e);
+        let t = T(f, e);
         return this._index[t.unix()];
     }
     _createLabel(e) {
@@ -60,17 +62,17 @@ class m {
         }
     }
     _createNewOption(e) {
-        let t = p(f, e),
+        let t = T(f, e),
             n = this._createLabel(t);
         return { id: t.toISOString(), label: n, value: t };
     }
     _addNewOption(e) {
-        let t = p(f, e),
+        let t = T(f, e),
             n = this._createLabel(t);
         return (
             (this._index[t.unix()] = t),
             this.options.push({ id: t.toISOString(), label: n, value: t }),
-            this.options.sort(T),
+            this.options.sort(m),
             e
         );
     }
@@ -95,7 +97,7 @@ class m {
                 t.forEach((t) => {
                     null == this.lookupByValue(t) && e.push(this._createNewOption(t));
                 }),
-                e.sort(T),
+                e.sort(m),
                 e
             );
         }
@@ -105,12 +107,16 @@ class m {
         return null == t ? this._addNewOption(e) : t;
     }
 }
-function g(e) {
+function S(e) {
     let { value: t, onChange: n, hideValue: s, disabled: l = !1, ...o } = e,
-        d = r.useMemo(() => new m(), []),
+        d = r.useMemo(() => new g(), []),
         [c, u] = r.useState("");
     function _(e) {
-        null != t && n(p(t, d.selectValue(e)));
+        null != t && n(T(t, d.selectValue(e)));
+    }
+    function E() {
+        let e = I(t, c);
+        null != e && _(e);
     }
     return (0, i.jsx)(a.Z, {
         ...o,
@@ -121,10 +127,8 @@ function g(e) {
         disabled: l,
         onQueryChange: (e) => u(e.target.value),
         onKeyDown: function (e) {
-            if ("Enter" === e.key) {
-                let e = I(t, c);
-                null != e && _(e);
-            }
+            "Enter" === e.key && E();
         },
+        onBlur: E,
     });
 }

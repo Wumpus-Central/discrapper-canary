@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { B: () => E, default: () => A });
+n.d(t, { B: () => A, default: () => h });
 var i = n(477900),
     r = n(582128),
     a = n(536637),
@@ -8,35 +8,37 @@ var i = n(477900),
     o = n(192308),
     d = n(151282),
     c = n(859403),
-    u = n(388096),
-    _ = n(375708);
-let E = "SCHEDULED_MESSAGE_EDIT_MODAL_KEY";
-function A(e) {
+    u = n(674470),
+    _ = n(388096),
+    E = n(375708);
+let A = "SCHEDULED_MESSAGE_EDIT_MODAL_KEY";
+function h(e) {
     let { scheduledMessage: t, transitionState: n, onClose: a } = e,
-        A = s()(t.sendAtTimestamp.substring(0, 200)),
-        [h, I] = r.useState(A),
-        [f, p] = r.useState(!1);
-    async function T() {
-        p(!0);
+        h = s()(t.sendAtTimestamp.substring(0, 200)),
+        [I, f] = r.useState(h),
+        [p, T] = r.useState(!1),
+        m = (0, u.Vf)(I, t.scheduledMessageId);
+    async function g() {
+        T(!0);
         try {
-            await (0, d.Eg)({ scheduledMessageId: t.scheduledMessageId, scheduledTimestamp: h.toISOString() }),
+            await (0, d.Eg)({ scheduledMessageId: t.scheduledMessageId, scheduledTimestamp: I.toISOString() }),
                 (0, c.kb)(),
-                (0, o.closeModal)(E);
+                (0, o.closeModal)(A);
         } catch (e) {
             (0, c.xP)(e.message);
         } finally {
-            p(!1);
+            T(!1);
         }
     }
     return (0, i.jsx)(l.Modal, {
         transitionState: n,
         size: "md",
-        title: _.intl.string(_.t.jbdHj3),
+        title: E.intl.string(E.t.jbdHj3),
         onClose: a,
         actions: [
-            { variant: "secondary", text: _.intl.string(_.t["ETE/oC"]), onClick: a },
-            { variant: "primary", text: _.intl.string(_.t.VZANAD), onClick: T, loading: f },
+            { variant: "secondary", text: E.intl.string(E.t["ETE/oC"]), onClick: a },
+            { variant: "primary", text: E.intl.string(E.t.VZANAD), onClick: g, loading: p, disabled: null != m },
         ],
-        children: (0, i.jsx)(u.A, { defaultValue: A, onChange: I }),
+        children: (0, i.jsx)(_.A, { defaultValue: h, onChange: f, scheduledMessageId: t.scheduledMessageId }),
     });
 }

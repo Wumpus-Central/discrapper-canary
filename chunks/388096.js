@@ -1,53 +1,52 @@
 "use strict";
-n.d(t, { A: () => _ });
+n.d(t, { A: () => u });
 var i = n(477900),
     r = n(582128),
-    a = n(536637),
-    s = n.n(a),
-    l = n(331322),
-    o = n(582306),
-    d = n(666944);
-n(853297);
-var c = n(375708),
-    u = n(177600);
-function _(e) {
-    let { defaultValue: t, onChange: n } = e,
-        [a, _] = r.useState(t),
-        E = s()().add(600, "seconds"),
-        A = s()().add(691200, "seconds");
-    function h(e) {
-        e.isValid() && _(e);
+    a = n(331322),
+    s = n(582306),
+    l = n(666944),
+    o = n(674470),
+    d = n(375708),
+    c = n(177600);
+function u(e) {
+    let { defaultValue: t, onChange: n, scheduledMessageId: u } = e,
+        [_, E] = r.useState(t),
+        A = (0, o._O)(),
+        h = (0, o.yp)(u);
+    function I(e) {
+        e.isValid() && E(e);
     }
     return (
         r.useEffect(() => {
-            n?.(a);
-        }, [a, n]),
-        (0, i.jsxs)(l.B, {
+            n?.(_);
+        }, [_, n]),
+        (0, i.jsxs)(a.B, {
             direction: "horizontal",
             gap: 16,
-            className: u.i,
+            className: c.i,
             children: [
                 (0, i.jsx)("div", {
-                    className: u.f,
-                    children: (0, i.jsx)(o.J, {
+                    className: c.f,
+                    children: (0, i.jsx)(s.J, {
                         required: !0,
-                        label: c.intl.string(c.t.pSZKvM),
-                        value: a,
-                        onSelect: h,
-                        minDate: E,
-                        maxDate: A,
+                        label: d.intl.string(d.t.pSZKvM),
+                        value: _,
+                        onSelect: I,
+                        minDate: A,
+                        maxDate: h,
                         disabled: !1,
                     }),
                 }),
                 (0, i.jsx)("div", {
-                    className: u.f,
-                    children: (0, i.jsx)(d.c, {
-                        label: c.intl.string(c.t.GOmEb8),
+                    className: c.f,
+                    children: (0, i.jsx)(l.c, {
+                        label: d.intl.string(d.t.GOmEb8),
                         required: !0,
-                        value: a,
-                        onChange: h,
+                        value: _,
+                        onChange: I,
                         hideValue: !1,
                         disabled: !1,
+                        errorMessage: (0, o.Vf)(_, u),
                     }),
                 }),
             ],
