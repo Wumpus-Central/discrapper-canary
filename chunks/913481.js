@@ -11,8 +11,8 @@ var i = n(477900),
     h = n(360729),
     p = n(967388),
     m = n(781137),
-    A = n(743943),
-    f = n(950075),
+    f = n(743943),
+    A = n(950075),
     x = n(1195),
     g = n(375708),
     C = n(232059);
@@ -50,13 +50,13 @@ function j(e) {
     }, [a, s, t]),
     null == r)
         ? null
-        : (0, i.jsx)(A.A, { position: r, roomWidth: n });
+        : (0, i.jsx)(f.A, { position: r, roomWidth: n });
 }
 function I(e) {
     let { channelId: t, roomWidth: n } = e,
         a = (0, l.useRef)(null),
         d = (0, l.useRef)({ x: 0, y: 0, hasValue: !1 }),
-        A = (0, r.bG)([u.A], () => u.A.getPendingNote(t)),
+        f = (0, r.bG)([u.A], () => u.A.getPendingNote(t)),
         y = (0, r.bG)([u.A], () => u.A.getCreatingNotes(t)),
         I = (0, r.bG)([u.A], () => u.A.getNotes(t)),
         N = (0, r.bG)([o.Ay], () => o.Ay.keyboardModeEnabled);
@@ -69,9 +69,9 @@ function I(e) {
             () => document.removeEventListener("mousemove", e)
         );
     }, []);
-    let { interactionsEnabled: v } = h.A.useExperiment({ guildId: c.A.getChannel(t)?.guild_id, location: "GuildRoom" });
-    if (!v || (0 === I.length && null == A && 0 === y.length)) return null;
-    let E = null != A && null == A.position;
+    let { interactionsEnabled: v } = (0, h.mf)({ guildId: c.A.getChannel(t)?.guild_id, location: "GuildRoom" });
+    if (!v || (0 === I.length && null == f && 0 === y.length)) return null;
+    let E = null != f && null == f.position;
     return (0, i.jsxs)(i.Fragment, {
         children: [
             E &&
@@ -81,7 +81,7 @@ function I(e) {
                     className: C.kL,
                     children: (0, i.jsx)(j, { channelId: t, roomWidth: n, containerRef: a, pointerRef: d }),
                 }),
-            A?.position != null && (0, i.jsx)(f.A, { channelId: t, position: A.position, roomWidth: n }),
+            f?.position != null && (0, i.jsx)(A.A, { channelId: t, position: f.position, roomWidth: n }),
             y.map((e) =>
                 (0, i.jsx)(
                     "div",

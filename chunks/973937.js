@@ -12,16 +12,16 @@ var l = t(477900),
     m = t(375708);
 function h(e, n) {
     let t = (0, a.bG)([d.A], () => d.A.getSelectedParticipant(e), [e]),
-        { enabled: h } = u.A.useExperiment({ guildId: n, location: "useGridViewItem" }),
-        { isGuildRoomVisible: C, isVideoOverlayVisible: E } = (0, a.cf)(
+        { enabled: h } = (0, u.mf)({ guildId: n, location: "useGridViewItem" }),
+        { isGuildRoomVisible: C, isVideoOverlayVisible: f } = (0, a.cf)(
             [c.A],
             () => ({ isGuildRoomVisible: c.A.isVisible(e), isVideoOverlayVisible: c.A.getVideoOverlayVisibility() }),
             [e],
         ),
-        f = h && C,
-        p = f ? E : null == t,
+        E = h && C,
+        p = E ? f : null == t,
         g = i.useCallback(() => {
-            f ? (0, o.UV)(!E, e) : null != t ? r.A.selectParticipant(e, null) : r.A.selectParticipant(e, A.jd.AUTO);
-        }, [f, E, t, e]);
+            E ? (0, o.UV)(!f, e) : null != t ? r.A.selectParticipant(e, null) : r.A.selectParticipant(e, A.jd.AUTO);
+        }, [E, f, t, e]);
     return (0, l.jsx)(s.sL, { id: "call-grid-view", label: m.intl.string(m.t["3jrUBj"]), checked: p, action: g });
 }

@@ -4567,7 +4567,7 @@ function rr(e) {
             };
         }),
         A = (0, u.bG)([lI.A], () => lI.A.hasVideo(n.id)),
-        { enabled: g } = sz.A.useExperiment({ guildId: t.id, location: "VoiceChannel" }),
+        { enabled: g } = (0, sz.mf)({ guildId: t.id, location: "VoiceChannel" }),
         m = (0, id.Ay)(n),
         f = (0, u.yK)([s7.A, s5.A, is.default], () => {
             if (null == o || 0 === o.length) return [];

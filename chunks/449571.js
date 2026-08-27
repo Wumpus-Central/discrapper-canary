@@ -74,7 +74,7 @@ function j(e) {
         et = (0, M.A)(t?.id),
         en = t?.id,
         ei = t?.getGuildId(),
-        { enabled: er } = m.A.useExperiment({ guildId: ei ?? void 0, location: "PictureInPictureEmbeddedActivity" }),
+        { enabled: er } = (0, m.mf)({ guildId: ei ?? void 0, location: "PictureInPictureEmbeddedActivity" }),
         ea = (0, l.bG)([T.A], () => null != en && T.A.isVisible(en), [en]),
         es = et && er && ea,
         el = et && Q?.type !== F.lp.ACTIVITY,

@@ -11,8 +11,8 @@ var i = n(477900),
     h = n(939249),
     p = n(22231),
     m = n(192308),
-    A = n(254138),
-    f = n(661531),
+    f = n(254138),
+    A = n(661531),
     x = n(730134),
     g = n(440594),
     C = n(793574),
@@ -95,7 +95,7 @@ function Q(e) {
 function J(e) {
     let { channel: t, guild: a, appContext: o, inCall: x, isChatOpen: g, exitFullScreen: E, guildRoomVisible: L } = e,
         O = (0, r.bG)([F.A], () => F.A.getSelectedParticipant(t.id), [t.id]),
-        { enabled: P } = S.A.useExperiment({ guildId: a?.id, location: "ChannelCallHeader" }),
+        { enabled: P } = (0, S.mf)({ guildId: a?.id, location: "ChannelCallHeader" }),
         D = (0, r.bG)([R.A], () => R.A.getVideoOverlayVisibility()),
         B = P && !L,
         Z = (0, j.Ay)(t),
@@ -200,10 +200,10 @@ function J(e) {
                                 er &&
                                     (0, i.jsx)(u.m, {
                                         text: Y.intl.string(Y.t.QyZ4Td),
-                                        children: (0, i.jsx)(A.m, {
+                                        children: (0, i.jsx)(f.m, {
                                             size: "xs",
                                             "aria-label": Y.intl.string(Y.t.VHXh8a),
-                                            color: f.A.colors.INTERACTIVE_TEXT_DEFAULT,
+                                            color: A.A.colors.INTERACTIVE_TEXT_DEFAULT,
                                             className: q.vW,
                                         }),
                                     }),

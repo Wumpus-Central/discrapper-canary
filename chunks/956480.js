@@ -12,7 +12,7 @@ var i = n(582128),
     p = n(375708);
 function m(e, t, n) {
     let m = (0, l.bG)([s.A], () => s.A.getChannel(e)?.guild_id),
-        { posturesEnabled: A, interactionsEnabled: f } = d.A.useExperiment(
+        { posturesEnabled: f, interactionsEnabled: A } = (0, d.mf)(
             { guildId: m, location: "GuildRoomAnnouncer" },
             { autoTrackExposure: !1 },
         ),
@@ -44,7 +44,7 @@ function m(e, t, n) {
                 null != t &&
                     g.push(p.intl.formatToPlainString(h.default.nPRAZX, { userName: s(e), seatLabel: t.getLabel() }));
             }
-            if (null != t && A && l.statusIds.get(e) !== n.statusId) {
+            if (null != t && f && l.statusIds.get(e) !== n.statusId) {
                 let t = u.x.find((e) => e.id === n.statusId);
                 C.push(
                     null != t
@@ -60,7 +60,7 @@ function m(e, t, n) {
         for (let [e] of l.positions)
             i.positions.has(e) || y.push(p.intl.formatToPlainString(h.default.u7LUkR, { userName: s(e) }));
         let j = [];
-        if (f) {
+        if (A) {
             for (let e of n)
                 l.noteAuthors.has(e.objectId) ||
                     j.push(p.intl.formatToPlainString(h.default.zTbxKr, { userName: s(e.createdBy) }));
@@ -69,5 +69,5 @@ function m(e, t, n) {
         }
         let I = [...d, ...y, ...g, ...C, ...j];
         0 !== I.length && a.O.announce(I.join(". "), "polite");
-    }, [t, n, e, m, A, f]);
+    }, [t, n, e, m, f, A]);
 }

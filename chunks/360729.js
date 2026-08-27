@@ -1,10 +1,12 @@
 "use strict";
-n.d(t, { A: () => a, v: () => r });
-var i = n(600975);
-let r = "2026-06_guild_rooms",
-    a = (0, i.C)({
+n.d(t, { W8: () => o, mf: () => d, vJ: () => s });
+var i = n(17928),
+    r = n(600975),
+    a = n(696451);
+let s = "2026-06_guild_rooms",
+    l = (0, r.C)({
         kind: "guild",
-        id: r,
+        id: s,
         label: "Guild Rooms",
         defaultConfig: { enabled: !1, interactionsEnabled: !1, multipleRoomsEnabled: !1, posturesEnabled: !1 },
         treatments: [
@@ -30,3 +32,15 @@ let r = "2026-06_guild_rooms",
             },
         ],
     });
+function o(e, t) {
+    var n;
+    return l.getCurrentConfig(e, {
+        autoTrackExposure: !0,
+        ...t,
+        disable: (t?.disable ?? !1) || !(null != (n = e.guildId) && !a.Ay.isCurrentUserGuest(n)),
+    });
+}
+function d(e, t) {
+    let n = (0, i.bG)([a.Ay], () => null != e.guildId && !a.Ay.isCurrentUserGuest(e.guildId), [e.guildId]);
+    return l.useExperiment(e, { autoTrackExposure: !0, ...t, disable: (t?.disable ?? !1) || !n });
+}

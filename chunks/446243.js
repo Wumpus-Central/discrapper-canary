@@ -175,8 +175,7 @@ function P(e, t) {
         e !== n && (0, d.n0)({ interactionType: e ? "video_overlay_opened" : "video_overlay_closed", channelId: t });
 }
 function U(e, t, n) {
-    A.A.getCurrentConfig({ guildId: t, location: "maybeSetGuildRoomVideoOverlay" }, { autoTrackExposure: !1 })
-        .enabled && P(e, n);
+    (0, A.W8)({ guildId: t, location: "maybeSetGuildRoomVideoOverlay" }, { autoTrackExposure: !1 }).enabled && P(e, n);
 }
 function w(e) {
     a.h.dispatch({ type: "GUILD_ROOM_SET_REMEMBER_VIDEO_OVERLAY_VISIBILITY", rememberVideoOverlayVisibility: e }),

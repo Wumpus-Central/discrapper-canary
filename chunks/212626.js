@@ -3374,15 +3374,15 @@ let re = (0, a.zD)(o.X.GUILD_ROOMS_REMEMBER_LAST_VIEW_SETTING, {
         usePredicate: function () {
             let e = (0, m.yK)([lc.A], () => lc.A.getGuildIds()),
                 { loaded: t, override: n } = (0, m.cf)([s5.A], () => ({
-                    loaded: s5.A.getLoadedGuildExperiment(s4.v),
-                    override: s5.A.getExperimentOverrideDescriptor(s4.v),
+                    loaded: s5.A.getLoadedGuildExperiment(s4.vJ),
+                    override: s5.A.getExperimentOverrideDescriptor(s4.vJ),
                 }));
             return (0, g.useMemo)(
                 () =>
                     (null != t || null != n) &&
                     e.some(
                         (e) =>
-                            s4.A.getCurrentConfig(
+                            (0, s4.W8)(
                                 { guildId: e, location: "useHasGuildRoomsEligibleGuild" },
                                 { autoTrackExposure: !1 },
                             ).enabled,

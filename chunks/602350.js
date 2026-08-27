@@ -13,7 +13,7 @@ class c extends i.A {
         CONNECTION_RESUMED: () => this.handleConnectionResumed(),
     };
     isExperimentEnabled(e, t) {
-        return l.A.getCurrentConfig({ guildId: e, location: t }).enabled;
+        return (0, l.W8)({ guildId: e, location: t }).enabled;
     }
     handleVoiceStateUpdates(e) {
         let { voiceStates: t } = e;

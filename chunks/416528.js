@@ -11,8 +11,8 @@ var i = n(477900),
     h = n(481901),
     p = n(29540),
     m = n(793574),
-    A = n(688810),
-    f = n(402216),
+    f = n(688810),
+    A = n(402216),
     x = n(689874),
     g = n(872363),
     C = n(446243),
@@ -73,7 +73,7 @@ function G(e) {
             guildRoomVideoOverlayVisible: R,
         } = e,
         L = l.useRef(null),
-        { analyticsLocations: G } = (0, A.Ay)(m.A.VOICE_CHANNEL_HEADER),
+        { analyticsLocations: G } = (0, f.Ay)(m.A.VOICE_CHANNEL_HEADER),
         B = t.id,
         {
             voiceParticipantsHidden: F,
@@ -88,7 +88,7 @@ function G(e) {
             }),
             [B],
         ),
-        { enabled: W, multipleRoomsEnabled: $ } = j.A.useExperiment({
+        { enabled: W, multipleRoomsEnabled: $ } = (0, j.mf)({
             guildId: t.guild_id,
             location: "ChannelCallHeaderToolbar",
         }),
@@ -131,7 +131,7 @@ function G(e) {
             q.push(
                 (0, i.jsx)(
                     g.A,
-                    { size: f.Ay.Sizes.LARGE, className: V.x6, participant: H, showQuality: !0, premiumIndicator: !1 },
+                    { size: A.Ay.Sizes.LARGE, className: V.x6, participant: H, showQuality: !0, premiumIndicator: !1 },
                     "live-indicator",
                 ),
             )),
@@ -189,6 +189,6 @@ function G(e) {
     }
     return (
         K && q.push((0, i.jsx)(b.V, { channelId: t.id, className: V.x6, disabled: a }, "chat-spacer")),
-        (0, i.jsx)(A.f5, { value: G, children: q })
+        (0, i.jsx)(f.f5, { value: G, children: q })
     );
 }

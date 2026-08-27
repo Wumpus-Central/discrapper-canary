@@ -11,8 +11,8 @@ var i = n(477900),
     h = n(717421),
     p = n(778712),
     m = n(748562),
-    A = n(26430),
-    f = n(939249),
+    f = n(26430),
+    A = n(939249),
     x = n(367513),
     g = n(717558),
     C = n(793574),
@@ -117,8 +117,8 @@ function ei(e) {
         eh = (0, D.tx)(er, n, et),
         ep = (0, c.bG)([G.A], () => G.A.getRoom(n)?.background ?? o.I.DEFAULT),
         { seats: em } = q.iX[ep],
-        eA = em.find((e) => e.position.x === a && e.position.y === d),
-        [ef, ex] = l.useState(!1),
+        ef = em.find((e) => e.position.x === a && e.position.y === d),
+        [eA, ex] = l.useState(!1),
         eg = (0, h.z)({
             x: a,
             y: d,
@@ -154,10 +154,10 @@ function ei(e) {
         eb = (ei && z) || eI,
         eT = z ? W.x.find((e) => e.id === v) : null,
         e_ =
-            null != eA
+            null != ef
                 ? J.intl.formatToPlainString(eT?.userLabel ?? Q.default["4bL+KW"], {
                       username: eh,
-                      seatLabel: eA.getLabel(),
+                      seatLabel: ef.getLabel(),
                   })
                 : eh,
         eR = eo?.isVoiceDeafened()
@@ -182,7 +182,7 @@ function ei(e) {
                   deafen: eo?.isVoiceDeafened() ?? !1,
                   speaking: ed,
                   ringing: !1,
-                  className: eA?.dim ? ee.r3 : void 0,
+                  className: ef?.dim ? ee.r3 : void 0,
                   avatarDecoration: eD,
                   avatarClassName: s()(ee.Cy, eT?.avatarClassName),
                   renderIcon:
@@ -200,7 +200,7 @@ function ei(e) {
                   children: (0, i.jsx)("div", {
                       className: s()(ee.gP, { [ee.Kf]: es }),
                       "aria-hidden": !0,
-                      children: (0, i.jsx)(A._, { size: "md", color: "currentColor" }),
+                      children: (0, i.jsx)(f._, { size: "md", color: "currentColor" }),
                   }),
               })
             : (0, i.jsx)(j.Ay, {
@@ -211,7 +211,7 @@ function ei(e) {
                   deafen: eo?.isVoiceDeafened() ?? !1,
                   speaking: ed,
                   ringing: !1,
-                  className: eA?.dim ? ee.r3 : void 0,
+                  className: ef?.dim ? ee.r3 : void 0,
                   avatarDecoration: eD,
                   avatarClassName: eT?.avatarClassName,
                   renderIcon:
@@ -233,7 +233,7 @@ function ei(e) {
             zIndex: es ? 1e6 : 1e3 * Math.round(d) + Math.round(a),
         };
     if (!z) {
-        let e = (0, i.jsx)(f.D, {
+        let e = (0, i.jsx)(A.D, {
             "aria-label": eR,
             className: ee.KI,
             onMouseEnter: eE,
@@ -250,7 +250,7 @@ function ei(e) {
         });
     }
     let ek = (0, i.jsx)("div", { className: ee.R3, children: eU }),
-        eG = (0, i.jsx)(f.D, {
+        eG = (0, i.jsx)(A.D, {
             "aria-label": eR,
             className: ee.KI,
             onMouseEnter: eE,
@@ -259,7 +259,7 @@ function ei(e) {
             ...eS,
             children: ek,
         }),
-        eB = ef && ei ? 500 : 100;
+        eB = eA && ei ? 500 : 100;
     return (0, i.jsx)(r.animated.div, {
         role: "listitem",
         className: s()(ee.f1, { [ee.hY]: eb }),
@@ -272,7 +272,7 @@ function ei(e) {
                       (0, i.jsx)(K.T.Trigger, {
                           children: (e) => {
                               let { ref: t, onClick: n, ...l } = e,
-                                  a = (0, i.jsx)(f.D, {
+                                  a = (0, i.jsx)(A.D, {
                                       ...l,
                                       "aria-label": eR,
                                       className: s()(ee.KI, ee.hZ, { [ee.qS]: es }),
@@ -324,7 +324,7 @@ function ei(e) {
 }
 function el(e) {
     let { channelId: t, guildId: n, users: l, numericAvatarSize: a, avatarSize: s } = e,
-        { posturesEnabled: r } = B.A.useExperiment({ guildId: n, location: "GuildRoomUserList" });
+        { posturesEnabled: r } = (0, B.mf)({ guildId: n, location: "GuildRoomUserList" });
     return (0, i.jsx)("div", {
         role: "list",
         "aria-label": J.intl.string(Q.default.xn1EI9),

@@ -11,8 +11,8 @@ var i = n(477900),
     h = n(451988),
     p = n(43990),
     m = n(691540),
-    A = n(857250),
-    f = n(97483),
+    f = n(857250),
+    A = n(97483),
     x = n(38021),
     g = n(228366),
     C = n(367513),
@@ -65,8 +65,8 @@ var i = n(477900),
     eh = n(616356),
     ep = n(280450),
     em = n(249288),
-    eA = n(696451),
-    ef = n(71393),
+    ef = n(696451),
+    eA = n(71393),
     ex = n(576705),
     eg = n(309010),
     eC = n(287809),
@@ -477,7 +477,7 @@ class ez extends l.PureComponent {
     handleSelectParticipant = (e, t) => {
         let { channel: n, selectedParticipant: i, allActiveStreams: l, inCall: a, mode: s } = this.props;
         (0, eD.Ay)(e) &&
-            (0, F.eo)(n, ey.A, ef.A, ex.A, k.default)[0] &&
+            (0, F.eo)(n, ey.A, eA.A, ex.A, k.default)[0] &&
             (j.default.selectVoiceChannel(n.id),
             0 === l.filter((t) => (0, B._z)(t) === e.id && t.state !== eU.XYD.ENDED).length &&
                 (0, I.A9)((0, B.Iy)(e.id), { forceMultiple: t.shiftKey })),
@@ -490,7 +490,7 @@ class ez extends l.PureComponent {
         async function n() {
             t?.applicationId != null && (await (0, R.od)(t.applicationId, e.id));
             let n = e.getGuildId();
-            null == n || eA.Ay.isCurrentUserGuest(n) || (0, q.pX)((0, eI.vJ)(n)), Y.openChannelCallPopout(e);
+            null == n || ef.Ay.isCurrentUserGuest(n) || (0, q.pX)((0, eI.vJ)(n)), Y.openChannelCallPopout(e);
         }
         null == t || (0, T.f)() ? n() : (0, L.A)({ onConfirm: n });
     };
@@ -647,8 +647,8 @@ class ez extends l.PureComponent {
                 guild: h,
                 layout: p,
                 forceShowControls: m,
-                awaitingRemoteSessionInfo: A,
-                currentChannelActivities: f,
+                awaitingRemoteSessionInfo: f,
+                currentChannelActivities: A,
                 callContainerDimensions: x,
                 guildRoomVisible: g,
                 isPlacingNote: C,
@@ -656,7 +656,7 @@ class ez extends l.PureComponent {
             y = p === eU.DUB.MINIMUM,
             j = y || p === eU.DUB.NORMAL,
             I = l && s === eU._Of.VIDEO,
-            N = (f?.length ?? 0) > 0 && u.isPrivate();
+            N = (A?.length ?? 0) > 0 && u.isPrivate();
         this._lastIdleProps = e;
         let v = !l || !(this.popoutOpen && !this.inPopout),
             E = !m && l && !y && e.idle,
@@ -679,7 +679,7 @@ class ez extends l.PureComponent {
                       onContextMenuParticipant: this.handleContextMenu,
                       showParticipants: r && (!j || N),
                       popoutType: t,
-                      awaitingRemoteSessionInfo: A,
+                      awaitingRemoteSessionInfo: f,
                       callContainerDimensions: x,
                   });
         return (0, i.jsx)(el.A, {
@@ -712,7 +712,7 @@ class ez extends l.PureComponent {
             { resizedHeight: u } = this.state,
             h = l === eU._Of.VIDEO,
             m = e !== eU.DUB.NO_CHAT && e !== eU.DUB.FULL_SCREEN && null != c,
-            A = eU.NJ8.MIDNIGHT;
+            f = eU.NJ8.MIDNIGHT;
         return (0, i.jsxs)("div", {
             className: s()(ek.iE, eB[e], eF[r], {
                 [ek.XW]: this.popoutOpen && !this.inPopout && e !== eU.DUB.NO_CHAT && t.isPrivate(),
@@ -726,7 +726,7 @@ class ez extends l.PureComponent {
             style: m && null != u ? { minHeight: 230, maxHeight: c, height: u } : void 0,
             children: [
                 (0, i.jsx)(p.N, {
-                    theme: A,
+                    theme: f,
                     children: (t) =>
                         (0, i.jsx)("div", {
                             className: s()(ek.ik, a || e !== eU.DUB.FULL_SCREEN ? void 0 : ek.iy, t),
@@ -801,7 +801,7 @@ let eW = function (e) {
             () => ({ selectedStream: null != B ? eh.A.getActiveStreamForStreamKey(B.id) : null }),
             [B],
         ),
-        Y = (0, d.bG)([ef.A], () => ef.A.getGuild(t.getGuildId())),
+        Y = (0, d.bG)([eA.A], () => eA.A.getGuild(t.getGuildId())),
         q = (0, d.bG)([ep.default], () => ep.default.getId()),
         { popoutWindow: X, popoutWindowAlwaysOnTop: Q } = (0, d.cf)([K.A], () => ({
             popoutWindow: K.A.getWindow(eU.MLl.CHANNEL_CALL_POPOUT),
@@ -817,15 +817,15 @@ let eW = function (e) {
         el = (0, d.bG)([_.A], () => _.A.getFetchState(), []),
         ea = (0, b.Ay)(el);
     l.useEffect(() => {
-        el === _.$.ERROR && ea !== _.$.ERROR && (0, m.P0)((0, A.o)(eV.intl.string(eV.t["AlJyI+"]), f.Ck.FAILURE));
+        el === _.$.ERROR && ea !== _.$.ERROR && (0, m.P0)((0, f.o)(eV.intl.string(eV.t["AlJyI+"]), A.Ck.FAILURE));
     }, [el, ea]);
     let es = (0, d.bG)([S.Ay], () => S.Ay.getSelfEmbeddedActivityForChannel(t.id), [t]),
         er = (0, V.mB)(u.M.CALL_CHAT_BUTTON_TEXT_IN_VOICE_COACH_MARK),
         { analyticsLocations: eo } = (0, M.Ay)(O.A.CHANNEL_CALL),
         ec = S.Ay.getEmbeddedActivitiesForChannel(t.id),
-        { enabled: ed } = z.A.useExperiment({ guildId: t.guild_id, location: "ChannelCall" }),
+        { enabled: ed } = (0, z.mf)({ guildId: t.guild_id, location: "ChannelCall" }),
         eu = (0, d.bG)([H.A], () => H.A.isVisible(t.id)),
-        eA = (0, d.bG)([H.A], () => {
+        ef = (0, d.bG)([H.A], () => {
             let e = H.A.getPendingNote(t.id);
             return null != e && null == e.position;
         }),
@@ -875,7 +875,7 @@ let eW = function (e) {
                             canPopout: s,
                             popoutType: r,
                             guildRoomVisible: ed && eu,
-                            isPlacingNote: eA,
+                            isPlacingNote: ef,
                         }),
                         !t.isPrivate() && (0, i.jsx)(eP.wQ, {}),
                         (0, i.jsx)(eR.WD, {}),

@@ -11,8 +11,8 @@ var i = n(477900),
     h = n(734057),
     p = n(309010),
     m = n(927813),
-    A = n(935208),
-    f = n(446243),
+    f = n(935208),
+    A = n(446243),
     x = n(920639),
     g = n(538638),
     C = n(558076),
@@ -35,7 +35,7 @@ let S = {
     O = m.A.Millis.HOUR;
 function P(e) {
     let t = (function (e) {
-        if (null != e) return null != e.updatedAt ? e.updatedAt.getTime() : A.default.extractTimestamp(e.objectId);
+        if (null != e) return null != e.updatedAt ? e.updatedAt.getTime() : f.default.extractTimestamp(e.objectId);
     })(e);
     if (null == t) return { stage: 0, timeUntilNextStage: null };
     let n = Date.now() - t;
@@ -47,7 +47,7 @@ function P(e) {
 }
 function M(e) {
     let { guildId: t, channelId: n, plant: a, plantPosition: c, disabled: h, plantWidth: p } = e,
-        [m, A] = l.useState(P(a).stage),
+        [m, f] = l.useState(P(a).stage),
         [C, j] = l.useState(null),
         N = l.useRef([]),
         b = l.useCallback(
@@ -59,7 +59,7 @@ function M(e) {
                     for (let l = e + n; l !== t + n; l += n) i.push(l);
                     return i;
                 })(m, e);
-                (N.current = n), A(t);
+                (N.current = n), f(t);
             },
             [m],
         ),
@@ -73,7 +73,7 @@ function M(e) {
                 config: { duration: 1e3 },
                 onRest: () => {
                     let e = N.current.shift();
-                    null != e && A(e);
+                    null != e && f(e);
                 },
             },
             "respect-motion-settings",
@@ -95,7 +95,7 @@ function M(e) {
             a?.objectId != null &&
                 ((0, u.Ak)("hang_status_select", 0.1),
                 j(m),
-                (0, f.Xh)(t, n, a.objectId, { object_type: y.N.PLANT }).catch((e) => (0, g.b)()),
+                (0, A.Xh)(t, n, a.objectId, { object_type: y.N.PLANT }).catch((e) => (0, g.b)()),
                 (0, x.Ql)({ guildId: t, channelId: n, interactionType: "plant_watered" }));
         }, [a, t, n, m]),
         O = (0, I.Sb)({ position: { x: c.x, y: 100 - c.y }, targetLabel: v.intl.string(S[m].alt) });
@@ -148,10 +148,10 @@ function D(e) {
     let { channelId: t, plants: n, plantConfig: a, roomWidth: s } = e,
         r = (0, c.bG)([h.A], () => h.A.getChannel(t)?.guild_id),
         o = a.map((e, t) => ({ plantPosition: e, plant: n[t] })),
-        { interactionsEnabled: d } = j.A.useExperiment({ guildId: r, location: "GuildRoomPlants" }),
+        { interactionsEnabled: d } = (0, j.mf)({ guildId: r, location: "GuildRoomPlants" }),
         u = (0, c.bG)([p.Ay], () => p.Ay.getVoiceChannelId() === t),
         m = (0, c.bG)([C.A], () => null != C.A.getPendingNote(t)),
-        A = 0.0625 * s;
+        f = 0.0625 * s;
     return (l.useEffect(() => {
         d &&
             Object.values(S).forEach((e) => {
@@ -167,10 +167,10 @@ function D(e) {
                   return d
                       ? (0, i.jsx)(
                             M,
-                            { guildId: r, channelId: t, plant: l, plantPosition: a, disabled: !u || m, plantWidth: A },
+                            { guildId: r, channelId: t, plant: l, plantPosition: a, disabled: !u || m, plantWidth: f },
                             `${l?.objectId}-${n}`,
                         )
-                      : (0, i.jsx)(w, { plantPosition: a, plantWidth: A }, n);
+                      : (0, i.jsx)(w, { plantPosition: a, plantWidth: f }, n);
               }),
           });
 }

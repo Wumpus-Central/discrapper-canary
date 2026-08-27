@@ -11,8 +11,8 @@ var i = n(477900),
     h = n(792348),
     p = n(734057),
     m = n(453028),
-    A = n(309010),
-    f = n(287809),
+    f = n(309010),
+    A = n(287809),
     x = n(920639),
     g = n(360729),
     C = n(544299);
@@ -24,10 +24,7 @@ var y = n(1195),
 function v(e) {
     let { channelId: t, position: n } = e,
         a = (0, o.bG)([p.A], () => p.A.getChannel(t)?.guild_id),
-        { interactionsEnabled: s } = g.A.useExperiment(
-            { guildId: a, location: "GuildRoom" },
-            { autoTrackExposure: !1 },
-        );
+        { interactionsEnabled: s } = (0, g.mf)({ guildId: a, location: "GuildRoom" }, { autoTrackExposure: !1 });
     l.useEffect(() => {
         s && (0, c.E7)({ disableAnalytics: !0 });
     }, [s]);
@@ -40,10 +37,10 @@ function v(e) {
 }
 function E(e) {
     let { channelId: t, position: n, positionStyle: a, sound: c, children: d } = e,
-        g = (0, o.bG)([f.default], () => f.default.getCurrentUser()),
+        g = (0, o.bG)([A.default], () => A.default.getCurrentUser()),
         N = (0, o.bG)([p.A], () => p.A.getChannel(t)),
         v = (0, o.bG)([m.Ay], () => m.Ay.isDeaf()),
-        E = (0, o.bG)([A.Ay], () => A.Ay.getVoiceChannelId() === t),
+        E = (0, o.bG)([f.Ay], () => f.Ay.getVoiceChannelId() === t),
         { playSoundboardSound: b } = (0, h.A)(c, t),
         T = E && (0, u.Ir)(g, c, N) && (0, u.Au)(N) && !v,
         _ = l.useCallback(() => {
