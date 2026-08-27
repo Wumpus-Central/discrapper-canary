@@ -2344,29 +2344,30 @@ function ly(e) {
     let { channel: t } = e,
         { dismissReason: n, setDismissReason: l } = W(),
         { bannerMeasurementRef: i } = V(),
-        { isFocused: s, setIsFocused: o } = (0, H.D7)(),
-        d = r.useRef(!1),
-        u = r.useRef(null),
-        m = (0, h.bG)([U.A], () => U.A.getSelectedConversationId(t.id), [t.id]),
-        g = r.useCallback(
+        { isFocused: s, isFocusedRef: o, setIsFocused: d } = (0, H.D7)(),
+        u = r.useRef(!1),
+        m = r.useRef(null),
+        g = (0, h.bG)([U.A], () => U.A.getSelectedConversationId(t.id), [t.id]),
+        p = r.useCallback(
             async (e) => {
-                if (null != m && !d.current) {
+                if (o.current && !u.current) {
                     if (
-                        ((d.current = !0),
-                        F.X.trackFocusModeDismissed({ channelId: t.id, conversationId: m, dismissReason: e }),
-                        "return" === e)
+                        ((u.current = !0),
+                        null != g &&
+                            F.X.trackFocusModeDismissed({ channelId: t.id, conversationId: g, dismissReason: e }),
+                        "return" === e && null != g)
                     ) {
-                        let e = U.A.getConversationMetadata(t.id, m)?.conversation;
+                        let e = U.A.getConversationMetadata(t.id, g)?.conversation;
                         if (null != e)
                             try {
                                 await j.A.jumpToMessage({ channelId: t.id, messageId: e.startMessageId, flash: !1 });
                             } catch (e) {}
-                        await l_(u);
+                        await l_(m);
                     }
-                    l(e), o(!1), (d.current = !1);
+                    l(e), d(!1), (u.current = !1);
                 }
             },
-            [t.id, o, l, u, m],
+            [t.id, o, d, l, m, g],
         );
     !(function (e, t) {
         let { isFocused: n } = (0, H.D7)(),
@@ -2385,7 +2386,7 @@ function ly(e) {
                 let { jumpTargetId: e, jumpSequenceId: s } = i.current;
                 (l.jumpTargetId !== e || l.jumpSequenceId !== s) && t("navigation");
             }, [n, l, t]);
-    })(t, g),
+    })(t, p),
         r.useEffect(() => {
             if (s)
                 return (
@@ -2395,13 +2396,13 @@ function ly(e) {
                     }
                 );
             function e() {
-                g("return");
+                p("return");
             }
-        }, [s, g]);
-    let p = r.useCallback(() => {
-            g("return");
-        }, [g]),
-        A = r.useMemo(
+        }, [s, p]);
+    let A = r.useCallback(() => {
+            p("return");
+        }, [p]),
+        f = r.useMemo(
             () => ({
                 from: () => ({
                     cardTop: i.current ?? 0,
@@ -2433,7 +2434,7 @@ function ly(e) {
             }),
             [n, i, l],
         ),
-        f = (0, X.p)(s ? m : null, A, "respect-motion-settings");
+        C = (0, X.p)(s ? g : null, f, "respect-motion-settings");
     return (0, a.jsxs)(a.Fragment, {
         children: [
             (0, a.jsx)("div", {
@@ -2441,13 +2442,13 @@ function ly(e) {
                     [lI.Em]: !s && "navigation" === n,
                     [lI.Zp]: !s && "navigation" !== n,
                 }),
-                onClick: p,
+                onClick: A,
                 "aria-hidden": !0,
             }),
-            f((e, n) => {
+            C((e, n) => {
                 if (null == n) return null;
                 let l = U.A.getConversationMetadata(t.id, n)?.conversation ?? null;
-                return (0, a.jsx)(lj, { style: e, channel: t, conversation: l, scrollerRef: u, requestDismiss: g });
+                return (0, a.jsx)(lj, { style: e, channel: t, conversation: l, scrollerRef: m, requestDismiss: p });
             }),
         ],
     });
@@ -3792,8 +3793,9 @@ function iP(e) {
         { isShifted: o } = (function (e) {
             let { bannerRef: t, scrollManager: n, channelId: l, selectedConversationId: i } = e,
                 { bannerMeasurementRef: s, conversationJumpInProgressRef: a } = V(),
-                [o, c] = r.useState(!1),
-                d = r.useRef(!1);
+                { isFocusedRef: o } = (0, H.D7)(),
+                [c, d] = r.useState(!1),
+                u = r.useRef(!1);
             return (
                 r.useEffect(() => {
                     if (null != t.current)
@@ -3808,7 +3810,7 @@ function iP(e) {
                         return (
                             e.addEventListener("scroll", i, { passive: !0 }),
                             () => {
-                                e.removeEventListener("scroll", i), (s.current = null), (d.current = !1), c(!1);
+                                e.removeEventListener("scroll", i), (s.current = null), (u.current = !1), d(!1);
                             }
                         );
                     function i() {
@@ -3817,13 +3819,13 @@ function iP(e) {
                         s.current = n;
                         let i = e.clientHeight / 2,
                             r = n < i + 50 && n + 40 > i - 50;
-                        if ((r !== d.current && ((d.current = r), c(r)), null != a.current)) return;
-                        let o = e.getBoundingClientRect(),
-                            u = t.current.getBoundingClientRect();
-                        (u.bottom < o.top || u.top > o.bottom) && (0, w.P7)(l);
+                        if ((r !== u.current && ((u.current = r), d(r)), null != a.current || o.current)) return;
+                        let c = e.getBoundingClientRect(),
+                            h = t.current.getBoundingClientRect();
+                        (h.bottom < c.top || h.top > c.bottom) && (0, w.P7)(l);
                     }
-                }, [s, t, n, c, l, a]),
-                { isShifted: o }
+                }, [s, t, n, d, l, a, o]),
+                { isShifted: c }
             );
         })({ bannerRef: l, scrollManager: n, channelId: t.id, selectedConversationId: s?.id ?? null }),
         c = r.useCallback(() => {
