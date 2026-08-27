@@ -3756,7 +3756,7 @@ let nz = [
 ];
 function nH(e) {
     let { children: t } = e;
-    return (0, r.jsx)(g.Ip, { className: nW._D, children: (0, r.jsx)("dl", { children: t }) });
+    return (0, r.jsx)(g.Ip, { orientation: "auto", className: nW._D, children: (0, r.jsx)("dl", { children: t }) });
 }
 function nK(e) {
     let { name: t, children: a, copyValue: n } = e,
@@ -19657,7 +19657,7 @@ var x4 = a(761508),
     x7 = a(624716),
     pe = a(398590),
     pt = a(764451),
-    pa = a(264609),
+    pa = a(632598),
     pn = a(349738),
     pl = a(865868);
 let pi = [
