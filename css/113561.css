@@ -30,61 +30,54 @@
     min-width: 0
 }
 
-.radial_ded7b4 {
-    height: 0;
-    outline: none;
-    position: relative;
-    width: 0
+.menu_e3444d {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-8);
+    outline: none
 }
 
-.radialClosed_ded7b4 {
+.menuAlignEnd_e3444d {
+    align-items: flex-end
+}
+
+.menuAlignEnd_e3444d .itemGroup_e3444d {
+    flex-direction: row-reverse
+}
+
+.menuExiting_e3444d {
     pointer-events: none
 }
 
-.itemWrapper_ded7b4 {
-    inset-block-start: 0;
-    inset-inline-start: 0;
-    position: absolute
-}
-
-.itemGroup_ded7b4 {
+.itemGroup_e3444d {
     align-items: center;
     display: flex;
     gap: var(--space-4)
 }
 
-.item_ded7b4 {
+.item_e3444d {
     -webkit-backdrop-filter: blur(50px);
     backdrop-filter: blur(50px);
+    border: 1px solid var(--control-overlay-primary-border-default);
     border-radius: var(--radius-sm);
-    opacity: var(--custom-radial-opacity, 1)
+    opacity: var(--custom-menu-item-opacity, 1)
 }
 
-.itemGroup_ded7b4:has(.item_ded7b4+.item_ded7b4):has(.item_ded7b4:focus-visible) .item_ded7b4 button,
-.itemGroup_ded7b4:has(.item_ded7b4+.item_ded7b4):hover .item_ded7b4 button {
+.itemGroup_e3444d:has(.item_e3444d+.item_e3444d):has(.item_e3444d:focus-visible) .item_e3444d button,
+.itemGroup_e3444d:has(.item_e3444d+.item_e3444d):hover .item_e3444d button {
     background-color: var(--control-overlay-primary-background-hover);
     border-color: var(--control-overlay-primary-border-hover);
     color: var(--control-overlay-primary-text-hover)
 }
 
-.full-motion .itemGroup_ded7b4 {
-    transition: transform .24s cubic-bezier(.34, 1.56, .64, 1)
+.full-motion .itemGroup_e3444d {
+    transition: transform .15s ease-out
 }
 
-.full-motion .itemGroup_ded7b4:has(.item_ded7b4:focus-visible),
-.full-motion .itemGroup_ded7b4:hover {
-    transform: scale(1.08)
-}
-
-.full-motion .itemGroup_ded7b4:has(.item_ded7b4:active) {
-    transform: scale(.985)
-}
-
-.belowLayer_ded7b4 {
-    inset-block-start: 50%;
-    inset-inline-start: 50%;
-    position: absolute;
-    z-index: -1
+.full-motion .itemGroup_e3444d:has(.item_e3444d:focus-visible),
+.full-motion .itemGroup_e3444d:hover {
+    transform: scale(1.05)
 }
 
 .userContainer__38ccf {
@@ -245,4 +238,4 @@
     position: absolute
 }
 
-/*# sourceMappingURL=93656.a2425d14d88b2a27.css.map*/
+/*# sourceMappingURL=113561.d040b5f627fbbc8b.css.map*/
