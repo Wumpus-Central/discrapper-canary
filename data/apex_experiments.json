@@ -5057,7 +5057,8 @@
     "name": "2026-07-orbchievements",
     "kind": "user",
     "defaultConfig": {
-      "enabled": false
+      "enabled": false,
+      "forceEligible": false
     },
     "variations": {
       "0": {
@@ -5065,7 +5066,12 @@
         "variant": 0
       },
       "1": {
-        "enabled": true
+        "enabled": true,
+        "forceEligible": false
+      },
+      "2": {
+        "enabled": true,
+        "forceEligible": true
       }
     }
   },

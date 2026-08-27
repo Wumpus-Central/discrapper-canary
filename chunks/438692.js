@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Jd: () => nR, Ay: () => nO, h9: () => nN, bG: () => nv });
+n.d(t, { Jd: () => nR, Ay: () => nO, h9: () => nv, bG: () => nN });
 var l = n(477900),
     i = n(582128),
     s = n(435558),
@@ -21,8 +21,8 @@ var l = n(477900),
     I = n(414499),
     y = n(323384),
     S = n(55730),
-    v = n(765379),
-    N = n(146779),
+    N = n(765379),
+    v = n(146779),
     _ = n(284525),
     j = n(793574),
     T = n(482030),
@@ -194,8 +194,8 @@ var eC = n(47167),
     eI = n(402216),
     ey = n(268218),
     eS = n(826673),
-    ev = n(822123),
-    eN = n(409626),
+    eN = n(822123),
+    ev = n(409626),
     e_ = n(692969),
     ej = n(711589),
     eT = n(607407),
@@ -271,8 +271,8 @@ var eB = n(636585),
     e3 = n(623671),
     e8 = n(428249),
     e7 = n(327098),
-    e5 = n(576757),
-    e6 = n(202195),
+    e6 = n(576757),
+    e5 = n(202195),
     e4 = n(140651),
     e9 = n(43105),
     te = n(131607),
@@ -504,8 +504,8 @@ let tx = (0, ey.Fe)({
                 n.e("128504"),
                 n.e("331988"),
                 n.e("262156"),
+                n.e("697526"),
                 n.e("544571"),
-                n.e("234303"),
                 n.e("40291"),
                 n.e("402368"),
                 n.e("733115"),
@@ -516,7 +516,6 @@ let tx = (0, ey.Fe)({
                 n.e("755936"),
                 n.e("489088"),
                 n.e("730760"),
-                n.e("994723"),
                 n.e("330316"),
                 n.e("362931"),
                 n.e("745959"),
@@ -654,11 +653,11 @@ function ty(e) {
             [ez.A],
             () => null != o && em.kvI.CONTENT_ENTRY_EMBEDS.has(o.type) && ez.A.can(em.xBc.SEND_MESSAGES, o),
         ),
-        [v, N] = i.useState(!1),
+        [N, v] = i.useState(!1),
         [_, j] = i.useState(!1),
         { voiceBar: T, joinVoiceButton: b } = (function (e) {
             let { channel: t, entry: n, onVoiceChannelPreview: s } = e,
-                { streamPreviewUrl: r, channel: a } = (0, e6.A)(n),
+                { streamPreviewUrl: r, channel: a } = (0, e5.A)(n),
                 o = (0, eC.Ay)(a),
                 { needSubscriptionToAccess: c } = (0, eR.A)(t?.id),
                 h = (0, u.bG)([eK.A], () => (null != a ? eK.A.getGuild(a.guild_id) : void 0)),
@@ -869,7 +868,7 @@ function ty(e) {
                     guild_id: o?.guild_id,
                 }),
                 (0, eS.Dr)(D.M.CONTENT_INVENTORY_ONE_CLICK_REPLY_COACHTIP),
-                N(!0),
+                v(!0),
                 j(!1),
                 A)
             )
@@ -886,7 +885,7 @@ function ty(e) {
                     onComplete: (e, t) => {
                         j(!0),
                             setTimeout(() => {
-                                N(!1), h(e, t);
+                                v(!1), h(e, t);
                             }, 600);
                     },
                     interactionType: tm.PA.REACTION_EMOJI_REACT_SENT,
@@ -928,9 +927,9 @@ function ty(e) {
         G(e), e && I?.focus();
     }
     return (0, l.jsxs)("div", {
-        style: { pointerEvents: v ? "none" : "all" },
+        style: { pointerEvents: N ? "none" : "all" },
         children: [
-            (0, l.jsx)(th, { sent: _, shown: v, className: tg.Jt }),
+            (0, l.jsx)(th, { sent: _, shown: N, className: tg.Jt }),
             eo ??
                 (0, l.jsx)(tl, {
                     children: (0, l.jsxs)("div", {
@@ -1008,7 +1007,7 @@ let tS = (e) => {
         r(!0);
     }, []);
     let a = !!m.Ay.keyboardModeEnabled && !s,
-        o = (0, ev.Fj)(t?.guild_id)
+        o = (0, eN.Fj)(t?.guild_id)
             .slice(0, 5)
             .map((e) =>
                 null == e.id
@@ -1042,12 +1041,12 @@ let tS = (e) => {
         }),
     });
 };
-function tv(e) {
+function tN(e) {
     let { channel: t, userDescription: n, entry: i, disableGameProfileLinks: s, onUserPopoutClosed: r } = e,
         a = t?.guild_id,
-        { displayParticipants: o, participant1: c, participant2: d, numOtherParticipants: h } = (0, e5.A)(i, 3),
+        { displayParticipants: o, participant1: c, participant2: d, numOtherParticipants: h } = (0, e6.A)(i, 3),
         m = (0, u.bG)([g.default], () => g.default.getUser(i.author_id)),
-        { streamPreviewUrl: f } = (0, e6.A)(i),
+        { streamPreviewUrl: f } = (0, e5.A)(i),
         p = [c, d];
     return (0, l.jsxs)("div", {
         className: tg.MH,
@@ -1113,7 +1112,7 @@ function tv(e) {
         ],
     });
 }
-function tN(e) {
+function tv(e) {
     let { children: t, onClick: n } = e;
     return null == n ? t : (0, l.jsx)(d.D, { className: tg.Zw, onClick: n, children: t });
 }
@@ -1142,7 +1141,7 @@ function t_(e) {
             {
                 location: "ContentPopout",
                 applicationId: h ? void 0 : C,
-                source: eN.GameProfileSources.ActivityCard,
+                source: ev.GameProfileSources.ActivityCard,
                 trackEntryPointImpression: !0,
                 sourceUserId: x.author_id,
             },
@@ -1153,14 +1152,14 @@ function t_(e) {
             showCoverImage: m,
             trackingSource: "memberlist_content_popout",
         }),
-        v = (0, eL.w)({ location: "content_inventory" }),
-        N = (0, u.bG)([eM.A], () => eM.A.getDetectableIdsToApplicationIds()),
+        N = (0, eL.w)({ location: "content_inventory" }),
+        v = (0, u.bG)([eM.A], () => eM.A.getDetectableIdsToApplicationIds()),
         _ = A ? I : void 0,
         j = i.useContext(tA);
     return (0, l.jsxs)("div", {
         className: tg.au,
         children: [
-            (0, l.jsx)(tv, { disableGameProfileLinks: h, ...g, onUserPopoutClosed: f }),
+            (0, l.jsx)(tN, { disableGameProfileLinks: h, ...g, onUserPopoutClosed: f }),
             (0, l.jsxs)(tE, {
                 backgroundImgSrc: y?.src,
                 children: [
@@ -1180,7 +1179,7 @@ function t_(e) {
                             (0, l.jsxs)("div", {
                                 className: tg.iC,
                                 children: [
-                                    (0, l.jsx)(tN, {
+                                    (0, l.jsx)(tv, {
                                         onClick: o ?? _,
                                         children: (0, l.jsx)(Y.D, {
                                             id: j,
@@ -1191,7 +1190,7 @@ function t_(e) {
                                         }),
                                     }),
                                     null != n
-                                        ? (0, l.jsx)(tN, {
+                                        ? (0, l.jsx)(tv, {
                                               onClick: c ?? _,
                                               children: (0, l.jsx)(q.E, {
                                                   variant: "text-sm/normal",
@@ -1210,7 +1209,7 @@ function t_(e) {
                     r,
                 ],
             }),
-            v && null != C && null != N[C]
+            N && null != C && null != v[C]
                 ? (0, l.jsx)(tx, {
                       className: tg.zu,
                       applicationId: C,
@@ -1249,15 +1248,15 @@ function tj(e) {
             {
                 location: "ContentPopout",
                 applicationId: C,
-                source: eN.GameProfileSources.ActivityCard,
+                source: ev.GameProfileSources.ActivityCard,
                 trackEntryPointImpression: !0,
                 sourceUserId: x.author_id,
             },
             { onOpened: () => m?.(tm.PA.OPENED_GAME_PROFILE) },
         ),
         y = A ? I : void 0,
-        { activity: S, activityApplication: v, fallbackApplication: N } = (0, e7.A)(x),
-        { largeImage: _, smallImage: j } = (0, e0.D8)(S, v ?? N),
+        { activity: S, activityApplication: N, fallbackApplication: v } = (0, e7.A)(x),
+        { largeImage: _, smallImage: j } = (0, e0.D8)(S, N ?? v),
         { largeImage: T } = (0, e0.nO)({ entry: x, trackingSource: "memberlist_streaming_content_popout" }),
         b = (0, eL.w)({ location: "content_inventory" }),
         R = (0, u.bG)([eM.A], () => eM.A.getDetectableIdsToApplicationIds()),
@@ -1265,12 +1264,12 @@ function tj(e) {
     return (0, l.jsxs)("div", {
         className: tg.au,
         children: [
-            (0, l.jsx)(tv, { ...f, onUserPopoutClosed: h }),
+            (0, l.jsx)(tN, { ...f, onUserPopoutClosed: h }),
             (0, l.jsxs)(tE, {
                 backgroundImgSrc: T?.src,
                 className: tg.uR,
                 children: [
-                    (0, l.jsx)(tN, {
+                    (0, l.jsx)(tv, {
                         onClick: g
                             ? () => {
                                   el.default.selectVoiceChannel(a.channelId), (0, ei.Nl)(a);
@@ -1308,7 +1307,7 @@ function tj(e) {
                             (0, l.jsxs)("div", {
                                 className: tg.gv,
                                 children: [
-                                    (0, l.jsx)(tN, {
+                                    (0, l.jsx)(tv, {
                                         onClick: c ?? y,
                                         children: (0, l.jsx)(Y.D, {
                                             id: O,
@@ -1319,7 +1318,7 @@ function tj(e) {
                                         }),
                                     }),
                                     null != n
-                                        ? (0, l.jsx)(tN, {
+                                        ? (0, l.jsx)(tv, {
                                               onClick: d ?? y,
                                               children: (0, l.jsx)(q.E, {
                                                   variant: "text-sm/normal",
@@ -1360,7 +1359,7 @@ let tb = function (e) {
         (0, T.hg)(n.extra.application_id);
     }
     let { data: h } = (0, b.YY)(n.extra.application_id),
-        m = (0, N.Ay)({ application: h, analyticsLocations: [j.A.MEMBER_LIST_ACTIVITY_CONTENT_POPOUT] });
+        m = (0, v.Ay)({ application: h, analyticsLocations: [j.A.MEMBER_LIST_ACTIVITY_CONTENT_POPOUT] });
     if (null == a) return null;
     let f = (0, l.jsx)(M.iT, { location: M.N5.POPOUT, entry: n }),
         p = (0, l.jsx)(t_, {
@@ -1375,7 +1374,7 @@ let tb = function (e) {
             onClickSubtitle: r ? void 0 : d,
             onClickThumbnail: r ? void 0 : d,
         }),
-        g = (0, S.A)(u, em.jUm.JOIN) || (0, v.A)(u),
+        g = (0, S.A)(u, em.jUm.JOIN) || (0, N.A)(u),
         x = g
             ? (0, l.jsx)(_.A, { embeddedActivity: c, activity: u, user: a, variant: "primary", size: "md", icon: C.I })
             : null,
@@ -1430,7 +1429,7 @@ var tR = n(322789),
 function tG(e) {
     let { application: t, analyticsLocation: n } = e,
         { analyticsLocations: i } = (0, tD.Ay)(n),
-        s = (0, N.Ay)({ application: t, analyticsLocations: i });
+        s = (0, v.Ay)({ application: t, analyticsLocations: i });
     return (
         (0, tU.A)({
             name: tP.ImpressionNames.CLOUD_PLAY_CTA,
@@ -1491,7 +1490,7 @@ let tq = [...tR.n, M.Yq],
                 trackRankingItemInteraction: o,
             } = e,
             { user: u, details: c, appName: d, activity: h, embeddedActivity: m } = (0, tT.u)(n),
-            { streamPreviewUrl: f, stream: p } = (0, e6.A)(n),
+            { streamPreviewUrl: f, stream: p } = (0, e5.A)(n),
             g = n.extra.platform,
             x = n.extra.application_id,
             A = null != g ? tJ[g] : null,
@@ -1499,7 +1498,7 @@ let tq = [...tR.n, M.Yq],
             { data: E } = (0, b.YY)(x),
             I = (0, tw.A)(x),
             { analyticsLocations: y } = (0, tD.Ay)(j.A.MEMBER_LIST_GAMING_CONTENT_POPOUT),
-            T = (0, N.JC)(E),
+            T = (0, v.JC)(E),
             L = (0, tH.o)(h?.application_id ?? m?.applicationId ?? E?.id);
         if (null == u) return null;
         let k = (0, l.jsx)(M.mG, {
@@ -1565,7 +1564,7 @@ let tq = [...tR.n, M.Yq],
                       )
                     : null,
             D = [
-                null == P && ((0, S.A)(h, em.jUm.JOIN) || (0, v.A)(h))
+                null == P && ((0, S.A)(h, em.jUm.JOIN) || (0, N.A)(h))
                     ? (0, l.jsx)(
                           _.A,
                           { activity: h, user: u, variant: "primary", size: "md", icon: tM.GameControllerIcon },
@@ -1598,7 +1597,7 @@ function tQ(e) {
     let { entry: t, isFirstApplicationOccurrence: n, targetElementRef: s } = e,
         { data: r } = (0, b.YY)(t.extra.application_id),
         { analyticsLocations: a } = (0, tD.Ay)(j.A.CLOUD_PLAY_POPOVER),
-        o = (0, N.Ay)({ application: r, analyticsLocations: a }),
+        o = (0, v.Ay)({ application: r, analyticsLocations: a }),
         u = (0, eS.HX)(D.M.CLOUD_PLAY_NEW_BADGE),
         c = null != o && !u && n,
         { activeEntryId: d, setActiveEntryId: h } = tX(),
@@ -1664,8 +1663,8 @@ var t2 = n(205327),
     t3 = n(52133),
     t8 = n(835723),
     t7 = n(172710),
-    t5 = n(655116),
-    t6 = n(763758),
+    t6 = n(655116),
+    t5 = n(763758),
     t4 = n(286617),
     t9 = n(533207),
     ne = n(280450),
@@ -1711,8 +1710,8 @@ function na(e) {
         { activity: d, currentEntry: h, artist: m, title: f, user: p } = (0, t1.u7)(r),
         g = tZ(em.fg2.SPOTIFY),
         x = (0, u.bG)(
-            [t5.A, ne.default],
-            () => (d?.type === em.$pd.LISTENING && null != p ? (0, t4.A)(t5.A, ne.default, p, d) : void 0),
+            [t6.A, ne.default],
+            () => (d?.type === em.$pd.LISTENING && null != p ? (0, t4.A)(t6.A, ne.default, p, d) : void 0),
             [d, p],
             t3.A,
         );
@@ -1729,7 +1728,7 @@ function na(e) {
         (t = () => {
             null != g ? g() : (0, t7.Mp)(d);
         }),
-        (A = (0, l.jsx)(t6.A, {
+        (A = (0, l.jsx)(t5.A, {
             artists: m,
             canOpen: null != d.sync_id,
             linkClassName: tg.zA,
@@ -1939,12 +1938,12 @@ let nS = function (e) {
                   ],
               });
     },
-    nv = 72;
-function nN(e) {
+    nN = 72;
+function nv(e) {
     return e?.type === p.S9.CONTENT_INVENTORY
         ? e.entry.content_type === o.ContentInventoryEntryType.PLAYED_GAME && null != e.entry.applicationWidgetPreview
-            ? nv + 32
-            : nv
+            ? nN + 32
+            : nN
         : 0;
 }
 function n_(e) {
@@ -2019,7 +2018,7 @@ let nR = i.createContext(void 0),
             [E, I] = i.useState(!1),
             y = (0, a.rm)(`${t}`),
             S = g.default.getCurrentUser()?.isStaff(),
-            { isRich: v, appName: N } = (0, tT.u)(o.entry);
+            { isRich: N, appName: v } = (0, tT.u)(o.entry);
         (0, f.T2)(o.entry.id);
         let _ = i.useMemo(
                 () => ({
@@ -2027,9 +2026,9 @@ let nR = i.createContext(void 0),
                     channelId: o.channel.id,
                     guildId: o.channel.guild_id,
                     requestId: o.requestId,
-                    richPresenceName: v ? N : void 0,
+                    richPresenceName: N ? v : void 0,
                 }),
-                [N, o.channel.guild_id, o.channel.id, o.entry, o.requestId, v],
+                [v, o.channel.guild_id, o.channel.id, o.entry, o.requestId, N],
             ),
             j = i.useRef(!1),
             [T, b] = i.useState(!1),

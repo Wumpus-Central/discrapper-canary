@@ -1,0 +1,89 @@
+.orbWalletPrimaryCard__89f5f {
+    align-items: flex-start;
+    align-self: stretch;
+    background: var(--background-mod-muted);
+    border: 1px solid var(--border-muted);
+    border-radius: var(--radius-lg);
+    -moz-column-gap: var(--space-16);
+    column-gap: var(--space-16);
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-bottom: var(--space-16);
+    padding-bottom: var(--space-16);
+    padding-top: var(--space-16);
+    padding-inline: var(--space-16) var(--space-24);
+    position: relative
+}
+
+.orbWalletPrimaryCardHeaderText__89f5f {
+    margin-bottom: var(--space-4)
+}
+
+.orbWalletPrimaryCardSubText__89f5f {
+    margin-bottom: var(--space-8)
+}
+
+.orbWalletPrimaryCardGraphic__89f5f {
+    align-items: center;
+    background: var(--background-base-low);
+    border-radius: var(--radius-md);
+    display: flex;
+    flex-shrink: 0;
+    height: 56px;
+    justify-content: center;
+    width: 56px
+}
+
+.orbWalletPrimaryCardCloseButton__89f5f {
+    inset-inline-end: 0;
+    position: absolute;
+    top: 0;
+    --control-icon-only-background-hover: transparent;
+    --control-icon-only-border-hover: transparent;
+    --control-icon-only-icon-hover: var(--control-icon-only-icon-default)
+}
+
+.orbWalletHeaderTagUpsell__583ca {
+    align-items: center;
+    -moz-column-gap: var(--space-4);
+    column-gap: var(--space-4);
+    cursor: pointer;
+    display: flex;
+    flex-direction: row
+}
+
+.container__44ee9 {
+    position: relative
+}
+
+.cardContainer__44ee9 {
+    margin-top: 8px;
+    position: absolute;
+    z-index: 1000
+}
+
+.alignLeft__44ee9 {
+    inset-inline-start: 0
+}
+
+.alignRight__44ee9 {
+    inset-inline-end: 0
+}
+
+.coachmarkContainer__44ee9 {
+    align-items: flex-end;
+    display: flex;
+    flex-direction: column;
+    gap: 20px
+}
+
+.hidden__44ee9 {
+    visibility: hidden
+}
+
+.visible__44ee9 {
+    visibility: visible
+}
+
+/*# sourceMappingURL=70dcc93240cf04c4.css.map*/

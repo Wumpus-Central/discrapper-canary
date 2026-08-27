@@ -151,8 +151,8 @@ function o(e) {
                 n.e("128504"),
                 n.e("331988"),
                 n.e("262156"),
+                n.e("697526"),
                 n.e("544571"),
-                n.e("234303"),
                 n.e("40291"),
                 n.e("402368"),
                 n.e("733115"),
@@ -163,7 +163,6 @@ function o(e) {
                 n.e("755936"),
                 n.e("489088"),
                 n.e("730760"),
-                n.e("994723"),
                 n.e("330316"),
                 n.e("362931"),
                 n.e("745959"),
@@ -301,8 +300,8 @@ function p(e) {
         I = (0, u.F5)(A),
         y = (0, s.tA)({ isGift: !0, giftRecipient: t }),
         S = C && null != t,
-        v = E && null == t,
-        N = S || v,
+        N = E && null == t,
+        v = S || N,
         _ = y && null != t;
     return {
         openGiftModal: l.useCallback(() => {
@@ -341,7 +340,7 @@ function p(e) {
                           analyticsObject: a ?? r,
                           giftMessage: g,
                       })
-                    : v
+                    : N
                       ? (0, m.A)({
                             analyticsLocations: n,
                             analyticsLocation: p,
@@ -366,8 +365,8 @@ function p(e) {
                               analyticsObject: c ?? r,
                               giftMessage: g,
                           });
-        }, [I, S, v, _, t, n, p, r, a, c, g, x]),
+        }, [I, S, N, _, t, n, p, r, a, c, g, x]),
         shouldShowWishlistModal: _,
-        shouldShowGiftSelectionModal: N,
+        shouldShowGiftSelectionModal: v,
     };
 }
