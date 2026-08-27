@@ -163,7 +163,7 @@ function er(e) {
         s = t.guildId ?? l,
         r = t.project.preview_application_id ?? t.project.application_id,
         { data: d } = (0, G.YY)(r),
-        c = d?.icon == null ? null : D.Ay.getApplicationIconURL({ id: r, icon: d.icon, size: 32 }),
+        c = d?.icon == null ? null : D.Ay.getApplicationIconURL({ id: r, icon: d.icon, size: 44 }),
         u = t.guildName ?? el.intl.string(et.default["qqH+iN"]),
         m =
             null == t.guildName
@@ -188,8 +188,8 @@ function er(e) {
                               "aria-hidden": !0,
                               children: (0, n.jsx)(E.k, {
                                   size: "custom",
-                                  width: 24,
-                                  height: 24,
+                                  width: 20,
+                                  height: 20,
                                   color: "var(--icon-muted)",
                               }),
                           })

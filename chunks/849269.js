@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Ay: () => _, Hq: () => T, l$: () => j, o6: () => N, wK: () => b });
+n.d(t, { Ay: () => _, Hq: () => T, l$: () => j, o6: () => v, wK: () => b });
 var l,
     i = n(308528),
     s = n(155718),
@@ -21,8 +21,8 @@ var l,
     I = n(283488),
     y = n(360469),
     S = n(652215),
-    v = n(165610),
-    N = (((l = {})[(l.START = 0)] = "START"), (l[(l.JOIN = 1)] = "JOIN"), (l[(l.LEAVE = 2)] = "LEAVE"), l);
+    N = n(165610),
+    v = (((l = {})[(l.START = 0)] = "START"), (l[(l.JOIN = 1)] = "JOIN"), (l[(l.LEAVE = 2)] = "LEAVE"), l);
 function _(e) {
     let {
             activityItem: t,
@@ -46,11 +46,11 @@ function _(e) {
             C > Date.parse(g.label_from),
         y = (0, I.A)({ applicationId: m.id, size: o, names: a, format: "webp" }),
         S = null != f.activity_preview_video_asset_id ? (0, A.A)(m.id, f.activity_preview_video_asset_id) : null,
-        v = (0, p.Ay)("channel" === n.type ? n.channel : void 0).find((e) => {
+        N = (0, p.Ay)("channel" === n.type ? n.channel : void 0).find((e) => {
             let { embeddedActivity: t } = e;
             return m.id === t.applicationId;
         }),
-        N = T({ context: n, applicationId: m.id }),
+        v = T({ context: n, applicationId: m.id }),
         _ = b({
             application: t.application,
             context: n,
@@ -65,8 +65,8 @@ function _(e) {
     return {
         imageBackground: y,
         videoUrl: S,
-        joinableEmbeddedApp: v,
-        activityAction: N,
+        joinableEmbeddedApp: N,
+        activityAction: v,
         onActivityItemSelected: _,
         labelType: E ? g.label_type : s.Hr.NONE,
         staffReleasePhase: R,
@@ -110,7 +110,7 @@ function b(e) {
             onConfirmActivityLaunchChecksAlertOpen: y,
         } = e,
         S = t?.id ?? "",
-        N = T({ context: l, applicationId: S, fetchesApplication: A }),
+        v = T({ context: l, applicationId: S, fetchesApplication: A }),
         { analyticsLocations: _ } = (0, r.Ay)(),
         j = (0, C.A)(),
         b = (0, c.x)(t);
@@ -118,12 +118,12 @@ function b(e) {
         return () => {
             o?.({ applicationId: "" });
         };
-    switch (N) {
+    switch (v) {
         case 0:
             return async () => {
                 if (b) {
                     try {
-                        await u.A.launchFrame({ applicationId: S, surface: v.sd }), o?.({ applicationId: S });
+                        await u.A.launchFrame({ applicationId: S, surface: N.sd }), o?.({ applicationId: S });
                     } catch (e) {}
                     return;
                 }

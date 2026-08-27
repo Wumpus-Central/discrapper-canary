@@ -11,8 +11,8 @@ var i = n(477900),
     h = n(890856),
     p = n(736653),
     m = n(453028),
-    A = n(531685),
-    f = n(85448),
+    f = n(531685),
+    A = n(85448),
     x = n(806931),
     g = n(375708),
     C = n(836905),
@@ -100,7 +100,7 @@ function v(e) {
     let { participants: n, onContextMenu: l, className: a, onClick: r, width: d, guildId: y } = e,
         j = (0, p.Ay)(),
         I = ((t = n.length), ((0, u.FT)(u._3.SIZE_80) + 16) * t > d ? u._3.SIZE_40 : u._3.SIZE_80),
-        v = (0, o.bG)([A.A], () => A.A.isFocused()),
+        v = (0, o.bG)([f.A], () => f.A.isFocused()),
         E = (0, o.bG)([m.Ay], () => new Map(n.filter(x.Xw).map((e) => [e.user.id, m.Ay.isLocalMute(e.user.id)])), [n]),
         b = n.map((e) => {
             if (e.type !== x.lp.USER) return null;
@@ -124,7 +124,7 @@ function v(e) {
                         onClick: (t) => r?.(e, t),
                         onContextMenu: (t) => l?.(e, t),
                         children: (0, i.jsx)(
-                            f.Ay,
+                            A.Ay,
                             {
                                 userId: t.id,
                                 src: t.getAvatarURL(y, (0, u.FT)(I), a && v),

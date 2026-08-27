@@ -11,8 +11,8 @@ var i = n(477900),
     h = n(517461),
     p = n(793574),
     m = n(780964),
-    A = n(766075),
-    f = n(272812),
+    f = n(766075),
+    A = n(272812),
     x = n(975571),
     g = n(915725),
     C = n(572164),
@@ -38,7 +38,7 @@ function _(e) {
 }
 function R(e) {
     let { handleClose: t } = e;
-    return (0, i.jsxs)(f.A, {
+    return (0, i.jsxs)(A.A, {
         className: E.VP,
         children: [
             (0, i.jsx)(s.m, {
@@ -46,7 +46,7 @@ function R(e) {
                 text: v.intl.string(v.t.J1hsY2),
                 children: (0, i.jsx)(r.D, {
                     onClick: function () {
-                        (0, A.openUserSettings)(m.X.CLIPS_PANEL);
+                        (0, f.openUserSettings)(m.X.CLIPS_PANEL);
                     },
                     className: E.F1,
                     children: (0, i.jsx)("div", {
@@ -70,9 +70,9 @@ function S(e) {
         o = (0, a.bG)([g.Ay], () => g.Ay.getEnableAutoclipping()),
         [h, m] = l.useState(() => !s);
     s || h || m(!0);
-    let A = h || !s,
-        j = A ? v.intl.string(N.default.oaIXoz) : v.intl.string(N.default.DpZqVj);
-    return (0, i.jsxs)(f.A, {
+    let f = h || !s,
+        j = f ? v.intl.string(N.default.oaIXoz) : v.intl.string(N.default.DpZqVj);
+    return (0, i.jsxs)(A.A, {
         className: E.zr,
         children: [
             (0, i.jsx)("div", { className: E.D7, "aria-hidden": !0 }),
@@ -93,9 +93,9 @@ function S(e) {
                 className: E.wq,
                 children: (0, i.jsx)(u.d, {
                     label: j,
-                    checked: A ? s && o : o,
+                    checked: f ? s && o : o,
                     onChange: function (e) {
-                        A &&
+                        f &&
                             (0, y.yO)({
                                 clipsEnabled: e,
                                 trackAnalytics: !0,

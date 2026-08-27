@@ -6,7 +6,7 @@ var l = n(477900),
     s = n(688810),
     u = n(609174),
     c = n(721610),
-    o = n(602902),
+    o = n(406980),
     d = n(375708);
 function f(e) {
     let { variant: t = "primary" } = e,

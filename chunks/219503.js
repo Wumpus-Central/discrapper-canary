@@ -59,8 +59,8 @@ let N = {
         APP_STORE_PARENTAL_REVOCATION: "app_store_parental_revocation",
     },
     S = new Set(Object.values(N)),
-    b = new Set([10]),
-    y = new Set([11]);
+    y = new Set([10]),
+    b = new Set([11]);
 I.intl.string(_.default["Qm6K/s"]),
     I.intl.string(_.default["dSkE/A"]),
     I.intl.string(_.default.dMMSA0),
@@ -480,8 +480,8 @@ let ej = {
                 j = (0, O.bG)([Q.A], () => Q.A.getLinkCode()),
                 N = (0, O.bG)([Q.A], () => Q.A.getLinkCodeExpiresAt()),
                 S = j ?? g.link_code,
-                b = N ?? Date.parse(g.link_code_expires_at),
-                y = s.useCallback(async () => {
+                y = N ?? Date.parse(g.link_code_expires_at),
+                b = s.useCallback(async () => {
                     try {
                         await r({ type: M.Empty });
                     } catch {
@@ -525,7 +525,7 @@ let ej = {
                                     direction: "vertical",
                                     align: "center",
                                     gap: 16,
-                                    children: (0, a.jsx)(el.r, { linkCode: S, expiresAt: b, onRefresh: p }),
+                                    children: (0, a.jsx)(el.r, { linkCode: S, expiresAt: y, onRefresh: p }),
                                 }),
                             (0, a.jsx)("div", {
                                 hidden: F,
@@ -548,7 +548,7 @@ let ej = {
                                       {
                                           text: I.intl.string(_.default.OaHZUf),
                                           variant: "primary",
-                                          onClick: y,
+                                          onClick: b,
                                           disabled: !A || d,
                                       },
                                   ]
@@ -631,8 +631,8 @@ let ej = {
               });
     };
 var eS = n(754302),
-    eb = n(700265);
-let ey = {
+    ey = n(700265);
+let eb = {
         [j.EMAIL_VERIFICATION]: I.intl.string(_.default.HC4IiR),
         [j.REFRESH_APP]: I.intl.string(_.default.SzfxQ3),
         [j.AGE_VERIFICATION]: I.intl.string(_.default["dSkE/A"]),
@@ -643,12 +643,12 @@ let ey = {
         let { task: e } = T(),
             t = e.flow_context.tasks,
             n = t.findIndex((t) => t.task_type === e.task_type),
-            i = !y.has(e.task_type);
+            i = !b.has(e.task_type);
         return (0, a.jsxs)(o.B, {
             direction: "vertical",
             justify: "space-between",
             padding: H,
-            className: eb.k,
+            className: ey.k,
             children: [
                 (0, a.jsxs)(o.B, {
                     direction: "vertical",
@@ -656,7 +656,7 @@ let ey = {
                     children: [
                         (0, a.jsx)(d.D, {
                             variant: "display-md",
-                            className: eb.D,
+                            className: ey.D,
                             children: I.intl.string(_.default["/OpRAP"]),
                         }),
                         i &&
@@ -668,7 +668,7 @@ let ey = {
                                     (0, a.jsx)(
                                         eS.B,
                                         {
-                                            title: ey[e.task_type] ?? "",
+                                            title: eb[e.task_type] ?? "",
                                             listType: "numbered",
                                             index: t,
                                             color: t === n ? "text-strong" : t < n ? "feedback-positive" : "text-muted",
@@ -699,7 +699,7 @@ function ek(e) {
     s.useEffect(() => {
         o(t);
     }, [t]);
-    let c = b.has(r.task_type);
+    let c = y.has(r.task_type);
     return (0, a.jsxs)(E.Provider, {
         value: d,
         children: [!c && (0, a.jsx)(eM, {}), (0, a.jsx)(eN, { onSubmit: n, disabled: i, transitionState: l })],
@@ -710,7 +710,7 @@ let ew = function (e) {
         [i, l] = s.useState(null),
         [f, A] = s.useState(!0),
         [x, E] = s.useState(null),
-        [T, y] = s.useState(!1),
+        [T, b] = s.useState(!1),
         O = s.useCallback(async () => {
             A(!0), E(null);
             try {
@@ -734,15 +734,15 @@ let ew = function (e) {
         k = s.useCallback(
             async (e) => {
                 if (null !== i) {
-                    y(!0);
+                    b(!0);
                     try {
                         let t = { task_id: i.task_id, flow_id: i.flow_context.flow_id, data: e };
                         await C(t), O();
                     } catch (e) {
-                        if (b.has(i.task_type)) throw e;
+                        if (y.has(i.task_type)) throw e;
                         E(I.intl.string(_.default["+QRSxc"]));
                     } finally {
-                        y(!1);
+                        b(!1);
                     }
                 }
             },
@@ -752,7 +752,7 @@ let ew = function (e) {
         O();
     });
     let w = s.useMemo(() => i?.task_type === j.AGE_VERIFICATION, [i]),
-        P = null != i && null === x && b.has(i.task_type);
+        P = null != i && null === x && y.has(i.task_type);
     return (0, a.jsxs)("div", {
         className: eR.Tp,
         children: [

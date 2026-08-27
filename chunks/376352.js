@@ -11,8 +11,8 @@ var i = n(477900),
     h = n(687966),
     p = n(34188),
     m = n(597770),
-    A = n(43990),
-    f = n(922016),
+    f = n(43990),
+    A = n(922016),
     x = n(206828),
     g = n(294323),
     C = n(429913),
@@ -176,15 +176,15 @@ function k(e) {
         }, [E, ei, L, k, v, I, z, n.id, s, ee, K, et, el, ea]);
     return G || J || (null == ec && !E)
         ? null
-        : (0, i.jsx)(A.N, {
+        : (0, i.jsx)(f.N, {
               theme: P.NJ.DARKER,
               children: (e) =>
                   null == ec
                       ? (0, i.jsx)(V, { className: e, applicationId: y })
-                      : (0, i.jsx)(f.Y, {
+                      : (0, i.jsx)(A.Y, {
                             targetElementRef: W,
                             shouldShow: c,
-                            animation: f.Y.Animation.FADE,
+                            animation: A.Y.Animation.FADE,
                             position: "bottom",
                             positionKey: ed,
                             align: "center",

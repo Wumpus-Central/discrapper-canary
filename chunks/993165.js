@@ -31,7 +31,7 @@ function m(e) {
         b = l.useCallback((e) => {
             p.current = e;
         }, []),
-        T = l.useMemo(
+        y = l.useMemo(
             () => ({
                 selectedPanel: E,
                 readyPanel: x,
@@ -43,7 +43,7 @@ function m(e) {
             }),
             [E, x, S, I, j, A, b],
         );
-    return (0, i.jsx)(g.Provider, { value: C, children: (0, i.jsx)(u.Provider, { value: T, children: t }) });
+    return (0, i.jsx)(g.Provider, { value: C, children: (0, i.jsx)(u.Provider, { value: y, children: t }) });
 }
 function x() {
     let e = l.useContext(u);

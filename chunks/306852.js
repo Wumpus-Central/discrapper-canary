@@ -11,8 +11,8 @@ var i = n(477900),
     h = n(334463),
     p = n(175203),
     m = n(652215),
-    A = n(806931),
-    f = n(366700),
+    f = n(806931),
+    A = n(366700),
     x = n(969426);
 let g = "CameraPreviewPosition";
 function C(e) {
@@ -28,13 +28,13 @@ function C(e) {
         })(),
         v = l.useRef(null),
         E = null == C.getGuildId() ? 70 : 50,
-        b = (0, r.bG)([h.A], () => h.A.pipWidth(A.R8.CAMERA_PREVIEW)),
+        b = (0, r.bG)([h.A], () => h.A.pipWidth(f.R8.CAMERA_PREVIEW)),
         T = y.length,
         _ = b * T + 8 * (T - 1),
         R = l.useMemo(
             () => ({
-                minWidth: A.mn[A.R8.CAMERA_PREVIEW] * T + 8 * (T - 1),
-                maxWidth: A.cF[A.R8.CAMERA_PREVIEW] * T + 8 * (T - 1),
+                minWidth: f.mn[f.R8.CAMERA_PREVIEW] * T + 8 * (T - 1),
+                maxWidth: f.cF[f.R8.CAMERA_PREVIEW] * T + 8 * (T - 1),
             }),
             [T],
         );
@@ -44,7 +44,7 @@ function C(e) {
     let S = l.useCallback(
             (e) => {
                 let t = 0 === T ? e : (e - 8 * (T - 1)) / T;
-                c.EB(t, A.R8.CAMERA_PREVIEW);
+                c.EB(t, f.R8.CAMERA_PREVIEW);
             },
             [T],
         ),
@@ -55,7 +55,7 @@ function C(e) {
             [N],
         );
     return (0, i.jsx)("div", {
-        className: f.kL,
+        className: A.kL,
         children: (0, i.jsx)(u.S, {
             position: I,
             id: 0,
@@ -71,7 +71,7 @@ function C(e) {
             edgeOffsetRight: 16,
             resizeConfig: R,
             children: (0, i.jsx)("div", {
-                className: f.iA,
+                className: A.iA,
                 children: y.map((e) =>
                     (0, i.jsx)(
                         p.Ay,
@@ -79,7 +79,7 @@ function C(e) {
                             participant: e,
                             channel: C,
                             onContextMenu: n,
-                            className: s()(f.Vs, x.a8),
+                            className: s()(A.Vs, x.a8),
                             fit: p.Yl.COVER,
                             inCall: !0,
                             popoutType: d.N.NO_POPOUT,

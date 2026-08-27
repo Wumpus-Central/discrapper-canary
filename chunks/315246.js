@@ -19,8 +19,8 @@ var l = n(477900),
     C = n(495602);
 let E = "content-inventory-context";
 function I(e) {
-    let { user: t, guildId: n, channel: I, entry: y, onSelect: S, disableGameProfileLinks: v } = e,
-        N = i.useRef(null),
+    let { user: t, guildId: n, channel: I, entry: y, onSelect: S, disableGameProfileLinks: N } = e,
+        v = i.useRef(null),
         _ = i.useContext(x.Jd),
         j = (0, p.A)({ userId: t.id, guildId: n, channelId: I?.id, onAction: _ }),
         T = (0, h.A)({ id: t.id, label: A.intl.string(A.t["/AXYnE"]) }),
@@ -29,13 +29,13 @@ function I(e) {
         O = (0, g.zD)(y),
         M = (0, f.A)({
             location: "ContentPopoutContextMenu",
-            applicationId: O && !0 !== v ? y.extra?.application_id : void 0,
+            applicationId: O && !0 !== N ? y.extra?.application_id : void 0,
             source: m.GameProfileSources.ActivityCardContextMenu,
             trackEntryPointImpression: !0,
             sourceUserId: y.author_id,
         });
     return (0, l.jsx)(s.Y, {
-        targetElementRef: N,
+        targetElementRef: v,
         align: "top",
         position: "right",
         disablePointerEvents: !1,
@@ -74,7 +74,7 @@ function I(e) {
                 asContainer: !0,
                 text: A.intl.string(A.t["UKOtz+"]),
                 children: (0, l.jsx)(u.D, {
-                    innerRef: N,
+                    innerRef: v,
                     className: C.r,
                     ...e,
                     children: (0, l.jsx)(c.MoreHorizontalIcon, {

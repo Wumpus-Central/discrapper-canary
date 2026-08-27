@@ -11,8 +11,8 @@ var i = n(477900),
     h = n(259678),
     p = n(734057),
     m = n(446243),
-    A = n(920639),
-    f = n(558076),
+    f = n(920639),
+    A = n(558076),
     x = n(856660),
     g = n(544299),
     C = n(913481),
@@ -29,7 +29,7 @@ var i = n(477900),
     S = n(923932);
 function L(e) {
     let { channelId: t, popoutType: n, idle: a } = e,
-        L = (0, u.bG)([f.A], () => f.A.getRoom(t)?.background ?? d.I.DEFAULT),
+        L = (0, u.bG)([A.A], () => A.A.getRoom(t)?.background ?? d.I.DEFAULT),
         {
             background: O,
             backgroundBlurred: P,
@@ -43,12 +43,12 @@ function L(e) {
         { width: G = 0, height: B = 0, ref: F } = (0, c.Ay)(),
         H = G / B > w,
         z = H ? B * w : G,
-        W = (0, u.bG)([f.A], () => f.A.getVideoOverlayVisibility()),
+        W = (0, u.bG)([A.A], () => A.A.getVideoOverlayVisibility()),
         $ = W ? (0, T.bf)(w, H) : 1,
         Y = l.useRef(null),
         K = l.useRef(null),
-        q = (0, u.bG)([f.A], () => f.A.getRoomUsers(t)),
-        X = (0, u.bG)([f.A], () => f.A.getNotes(t)),
+        q = (0, u.bG)([A.A], () => A.A.getRoomUsers(t)),
+        X = (0, u.bG)([A.A], () => A.A.getNotes(t)),
         Z = q.size,
         Q = Math.max(0, M.length - q.size),
         J = D.length + +(null != U) + X.length,
@@ -59,10 +59,10 @@ function L(e) {
         el = R.intl.string(ei ? _.default.F9DcvR : _.default["sV/+Cu"]);
     return (
         l.useEffect(() => {
-            (0, A.zR)({ channelId: t });
+            (0, f.zR)({ channelId: t });
         }, [t]),
         l.useEffect(() => {
-            let e = !(0, r.isEqual)(f.A.getRoom(t), f.i),
+            let e = !(0, r.isEqual)(A.A.getRoom(t), A.i),
                 n = p.A.getChannel(t)?.guild_id;
             e || null == n || (0, m.z5)(n, t);
         }, [t]),

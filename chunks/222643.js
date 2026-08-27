@@ -17,7 +17,7 @@ function d(e) {
             skipForceHide: h = !1,
         } = e,
         C = i.useContext(c.vG),
-        [E, f] = i.useState(""),
+        [f, E] = i.useState(""),
         [p, g] = i.useState(!1),
         x = (0, a.bG)([o.Ay], () => o.Ay.callHeaderHeight),
         I = i.useRef(null),
@@ -27,7 +27,7 @@ function d(e) {
         if (null != e) return e.addEventListener("click", d), () => e.removeEventListener("click", d);
     }),
         i.useEffect(() => {
-            h || (f(String(v.current)), g(void 0 !== x && x < (I.current?.clientHeight ?? 300) + 24), (v.current += 1));
+            h || (E(String(v.current)), g(void 0 !== x && x < (I.current?.clientHeight ?? 300) + 24), (v.current += 1));
         }, [x, I, h]);
     let { preventIdle: T, allowIdle: _ } = (0, u.o)("popup");
     return n?.current == null
@@ -38,7 +38,7 @@ function d(e) {
                   position: "top",
                   align: "center",
                   spacing: 0,
-                  positionKey: E,
+                  positionKey: f,
                   nudgeAlignIntoViewport: m,
                   children: () =>
                       (0, l.jsx)("div", {

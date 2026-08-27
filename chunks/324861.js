@@ -15,6 +15,6 @@ let u = function () {
                 l.isDismissed && l.handleToggleDismissState(),
                 i.h.dispatch({ type: "VIRTUAL_CURRENCY_ONBOARDING_MODAL_RESET" });
         }, [t, l, e]),
-        { handleResetStatusClick: c } = (0, o.j$)(s.Fw);
-    return { resetOnboardingExperience: u, resetQuestStatus: c };
+        { handleResetStatusClick: d } = (0, o.j$)(s.Fw);
+    return { resetOnboardingExperience: u, resetQuestStatus: d };
 };

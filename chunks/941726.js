@@ -34,8 +34,8 @@ function I(e) {
                         I,
                         y,
                         S,
-                        v,
                         N,
+                        v,
                         _,
                         j,
                         T,
@@ -74,18 +74,18 @@ function I(e) {
                                     .filter((e) => t.has(e.id)) ?? [],
                             [e, t],
                         )),
-                        (v = i.useMemo(() => [...new Set(S.map((e) => e.extra.application_id))], [S])),
-                        (N = (0, a.bG)(
+                        (N = i.useMemo(() => [...new Set(S.map((e) => e.extra.application_id))], [S])),
+                        (v = (0, a.bG)(
                             [u.A],
                             () =>
-                                v.length > 0 &&
-                                v.some(
+                                N.length > 0 &&
+                                N.some(
                                     (e) =>
                                         u.A.isFetchingApplication(e) ||
                                         (null == u.A.getApplication(e) && !u.A.didFetchingApplicationFail(e)),
                                 ),
                         )),
-                        (_ = (0, c.A)(v)),
+                        (_ = (0, c.A)(N)),
                         (j = i.useMemo(
                             () =>
                                 Object.fromEntries(
@@ -103,7 +103,7 @@ function I(e) {
                             () => [...new Set(S.filter((e) => e.extra.application_id in j).map((e) => e.author_id))],
                             [S, j],
                         )),
-                        { widgetApps: j, userIdsWhoMightHaveWidgetData: T, isFetchingApplications: N }),
+                        { widgetApps: j, userIdsWhoMightHaveWidgetData: T, isFetchingApplications: v }),
                         { identitiesByUserId: G, isLoadingIdentities: V } =
                             ((b = (0, a.cf)([h.A], () =>
                                 Object.fromEntries(D.map((e) => [e, h.A.getUserIdentities(e)]).filter(x.QE)),

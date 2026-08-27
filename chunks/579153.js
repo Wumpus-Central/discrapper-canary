@@ -14,9 +14,9 @@ var l = t(477900),
 let C = function (e) {
     let { channel: n, remoteMode: t = !1 } = e,
         { parentAnalyticsLocation: C } = (0, r.Ay)(),
-        E = i.useRef(null);
+        f = i.useRef(null);
     return (0, l.jsx)(a.Y, {
-        targetElementRef: E,
+        targetElementRef: f,
         renderPopout: (e) => {
             let { closePopout: i } = e;
             return (0, l.jsx)(d.A, {
@@ -36,7 +36,7 @@ let C = function (e) {
             let { onClick: t } = e,
                 { isShown: i } = n;
             return (0, l.jsx)(A.l, {
-                ref: E,
+                ref: f,
                 isTrayButton: !0,
                 onClick: (e) => {
                     (0, c.X)(C, c.O.MORE), t(e);

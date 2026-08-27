@@ -12,8 +12,8 @@ var l = t(477900),
     m = t(228366),
     h = t(367513),
     C = t(148494),
-    E = t(386467),
-    f = t(521981),
+    f = t(386467),
+    E = t(521981),
     p = t(763754),
     g = t(308334),
     x = t(516287),
@@ -37,7 +37,7 @@ function L(e) {
             [n],
         ),
         r = (0, p.X4)(n),
-        o = i.useContext(E.A),
+        o = i.useContext(f.A),
         [d, A] = i.useState(!1),
         m = i.useCallback(
             (e) => {
@@ -47,7 +47,7 @@ function L(e) {
             },
             [n.channel_id, n.id],
         ),
-        T = (0, S.uJ)(n.content) ? null : (0, f.Ay)(n, { allowGameMentions: !0 }).content,
+        T = (0, S.uJ)(n.content) ? null : (0, E.Ay)(n, { allowGameMentions: !0 }).content,
         {
             contentPlaceholder: N,
             renderedContent: b,
@@ -142,25 +142,25 @@ function D(e) {
                 toastMessages: (0, c.yK)([T.A], () => C.map((e) => T.A.getMessage(n, e)), [n, C]).filter(b.Vq),
             };
         })({ channelId: n, isFrozen: a, count: 3, lingerMs: M }),
-        E = i.useRef({}),
-        [f, p] = i.useState({}),
+        f = i.useRef({}),
+        [E, p] = i.useState({}),
         g = i.useCallback((e, n) => {
-            null == n ? delete E.current[e] : (E.current[e] = n);
+            null == n ? delete f.current[e] : (f.current[e] = n);
         }, []),
-        x = i.useRef(f);
+        x = i.useRef(E);
     i.useLayoutEffect(() => {
-        x.current = f;
+        x.current = E;
     }),
         i.useLayoutEffect(() => {
             let e = {},
                 n = 0;
             for (let t of C) {
-                let l = E.current[t.id] ?? 0;
+                let l = f.current[t.id] ?? 0;
                 (e[t.id] = n), (n += l + 8);
             }
             (0, r.isEqual)(e, x.current) || p(e);
         }, [C]);
-    let I = C.map((e) => ({ message: e, height: E.current[e.id], y: f[e.id] })),
+    let I = C.map((e) => ({ message: e, height: f.current[e.id], y: E[e.id] })),
         v = (0, d.p)(I, {
             keys: (e) => e.message.id,
             from: () => ({ opacity: 0 }),

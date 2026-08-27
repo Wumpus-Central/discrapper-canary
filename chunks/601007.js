@@ -30,8 +30,8 @@ function C(e) {
             onAction: y,
             onClose: S,
         } = e,
-        v = (0, m.A)(),
-        N = s.useRef(null),
+        N = (0, m.A)(),
+        v = s.useRef(null),
         [_, j] = s.useState(!1);
     if (
         ((0, h.Ay)(() => {
@@ -60,7 +60,7 @@ function C(e) {
         })({ analyticsLocations: l, distributor: t, gameId: n, level: s }),
             y?.({ action: i }),
             S?.(),
-            v(e);
+            N(e);
     }
     if (1 === t.length) {
         let { ctaConfig: e, skuId: n } = t[0];
@@ -97,7 +97,7 @@ function C(e) {
         );
     });
     return (0, i.jsx)(o.Y, {
-        targetElementRef: N,
+        targetElementRef: v,
         position: "bottom",
         onRequestOpen: function () {
             for (let { ctaConfig: e } of (j(!0), t))
@@ -108,7 +108,7 @@ function C(e) {
             let { closePopout: t } = e;
             return (0, i.jsx)("div", {
                 onClick: (e) => e.stopPropagation(),
-                style: { width: "fit-content", minWidth: N.current?.offsetWidth },
+                style: { width: "fit-content", minWidth: v.current?.offsetWidth },
                 children: (0, i.jsx)(u.W, {
                     "data-menu-migrated": !0,
                     navId: "play-on-distributor-menu",
@@ -121,7 +121,7 @@ function C(e) {
         },
         children: (e) =>
             (0, i.jsx)(r.$, {
-                buttonRef: N,
+                buttonRef: v,
                 variant: C,
                 size: "sm",
                 icon: _ ? c.t : d.a,

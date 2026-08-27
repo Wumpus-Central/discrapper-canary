@@ -1,13 +1,13 @@
 n.d(t, { z: () => d });
-var r = n(582128),
-    l = n(192308),
+var l = n(582128),
+    r = n(192308),
     i = n(139033),
     o = n(626584),
     u = n(38405),
     s = n(794400),
     a = n(375708);
 let c = new o.A("RevenueErrorBoundary.tsx");
-class d extends r.PureComponent {
+class d extends l.PureComponent {
     state = { error: null, info: null };
     getSentryTags(e, t) {
         return { app_context: this.getSentryAppContext(), ...(t ? { crashed: "true" } : {}) };
@@ -17,7 +17,7 @@ class d extends r.PureComponent {
     }
     onErrorCaught(e, t, n) {}
     closeAndShowAlert() {
-        (0, l.closeAllModals)(),
+        (0, r.closeAllModals)(),
             (0, i.A)({
                 title: a.intl.string(a.t.iufib1),
                 subtitle: a.intl.string(a.t.ZUEGFn),
@@ -32,12 +32,12 @@ class d extends r.PureComponent {
     }
     emitSentryException(e, t) {
         let n,
-            { additionalAnalyticsData: r } = this.props,
-            l = this.getCrashedFlag(e),
+            { additionalAnalyticsData: l } = this.props,
+            r = this.getCrashedFlag(e),
             i = this.getSentryExtras(e),
             o = {
-                tags: this.getSentryTags(e, l),
-                extra: { ...i, ...(r ?? {}), ...(null != t ? { reactErrorInfo: t } : {}) },
+                tags: this.getSentryTags(e, r),
+                extra: { ...i, ...(l ?? {}), ...(null != t ? { reactErrorInfo: t } : {}) },
             };
         return (
             (e instanceof s.v && e.skipReportingToSentry) || (n = u.A.captureException(e, o)),
@@ -46,9 +46,9 @@ class d extends r.PureComponent {
         );
     }
     componentDidCatch(e, t) {
-        let { sentryErrorOptions: n, sentryEventId: r } = this.emitSentryException(e, t);
+        let { sentryErrorOptions: n, sentryEventId: l } = this.emitSentryException(e, t);
         if (
-            (this.onErrorCaught(e, t, r),
+            (this.onErrorCaught(e, t, l),
             this.setState({ error: e, info: t }),
             null != this.props.onErrorReported && this.props.onErrorReported(e, t, n),
             "rethrow" === this.getErrorHandlingBehavior(e))

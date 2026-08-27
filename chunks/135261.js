@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => N, P: () => v });
+n.d(t, { A: () => v, P: () => N });
 var l = n(477900),
     i = n(582128),
     s = n(503698),
@@ -21,7 +21,7 @@ var l = n(477900),
     I = n(820066),
     y = n(375708),
     S = n(9287);
-function v(e) {
+function N(e) {
     let { slateEditor: t, options: n, iconClassName: i, dividerClassName: s } = e;
     return null == t
         ? null
@@ -75,7 +75,7 @@ function v(e) {
               ],
           });
 }
-let N = i.forwardRef(function (e, t) {
+let v = i.forwardRef(function (e, t) {
     let { getSlateEditor: n, containerRef: s, options: r } = e,
         u = i.useRef(null),
         [c, d] = i.useState(!1),
@@ -150,13 +150,13 @@ let N = i.forwardRef(function (e, t) {
                 y: Math.max(s.current?.getBoundingClientRect()?.y ?? 0, Math.min(u.y, r.y)),
             };
         }, [s, c, n]),
-        [y, N] = i.useState(0),
+        [y, v] = i.useState(0),
         [_, j] = i.useState(0);
     if (
         (i.useLayoutEffect(() => {
             if (null == C || null == E || null == u.current) return;
             let e = u.current.getBoundingClientRect();
-            j(e.width / 2), N(e.height + 12);
+            j(e.width / 2), v(e.height + 12);
         }, [C, E]),
         null == C || null == E)
     )
@@ -176,7 +176,7 @@ let N = i.forwardRef(function (e, t) {
                   onMouseUp: (e) => {
                       e.stopPropagation();
                   },
-                  children: (0, l.jsx)(v, { slateEditor: T, options: r }),
+                  children: (0, l.jsx)(N, { slateEditor: T, options: r }),
               }),
           });
 });

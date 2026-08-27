@@ -5,9 +5,9 @@ n.d(t, {
     Th: () => S,
     UT: () => R,
     XQ: () => _,
-    ZO: () => N,
+    ZO: () => v,
     Zq: () => O,
-    _c: () => v,
+    _c: () => N,
     ln: () => T,
     pD: () => M,
 }),
@@ -43,7 +43,7 @@ function S(e) {
     let t = a.S0.useSetting();
     return (0, C.Qn)(t, e);
 }
-function v(e) {
+function N(e) {
     let {
         collapsedStickersCategories: t,
         filteredStickers: n,
@@ -72,9 +72,9 @@ function v(e) {
                     y = d.findIndex((e) => e.type === A.Z2.RECENT),
                     S = t.length;
                 null != i && a === i.id && r && t.length < (0, h.aG)(i.premiumTier) && S++;
-                let v = Math.ceil(S / e);
-                f[x] = l ? 0 : v;
-                for (let s = 0; s < v; s++) {
+                let N = Math.ceil(S / e);
+                f[x] = l ? 0 : N;
+                for (let s = 0; s < N; s++) {
                     let r = s * e,
                         a = r + e,
                         o = t
@@ -119,7 +119,7 @@ function v(e) {
         return { rowCount: g, rowCountBySection: f, stickersGrid: p, gutterWidth: l, columnCounts: m };
     }, [t, n, i, r, a, c, d]);
 }
-function N(e) {
+function v(e) {
     return !0;
 }
 function _() {

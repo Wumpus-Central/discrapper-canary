@@ -11,8 +11,8 @@ var i = n(477900),
     h = n(279250),
     p = n(267102),
     m = n(874739),
-    A = n(616356),
-    f = n(734057),
+    f = n(616356),
+    A = n(734057),
     x = n(71393),
     g = n(576705),
     C = n(309010),
@@ -27,7 +27,7 @@ let T = function (e) {
     let { channelId: t, popoutType: n, width: T, height: _, idle: R, onClose: S } = e,
         L = (0, p.Us)(),
         O = (0, a.bG)([c.A], () => c.A.getSelectedParticipant(t)),
-        P = (0, a.bG)([f.A], () => f.A.getChannel(t)),
+        P = (0, a.bG)([A.A], () => A.A.getChannel(t)),
         M = (0, a.bG)([x.A], () => x.A.getGuild(P?.getGuildId())),
         w = (0, a.bG)([C.Ay], () => null != P && C.Ay.getVoiceChannelId() === P.id),
         {
@@ -91,7 +91,7 @@ let T = function (e) {
                               (0, E.Ay)(e) &&
                                   (0, h.eo)(P, y.A, x.A, g.A, d.default)[0] &&
                                   0 ===
-                                      A.A.getAllActiveStreams().filter(
+                                      f.A.getAllActiveStreams().filter(
                                           (t) => (0, u._z)(t) === e.id && t.state !== v.XYD.ENDED,
                                       ).length)
                           )

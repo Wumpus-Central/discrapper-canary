@@ -21,8 +21,8 @@ var l,
     I = n(403362),
     y = n(375708),
     S = n(881013),
-    v = (((l = v || {}).TEXT = "text"), (l.ATTACHMENT = "attachment"), (l.EMBED = "embed"), l);
-function N(e) {
+    N = (((l = N || {}).TEXT = "text"), (l.ATTACHMENT = "attachment"), (l.EMBED = "embed"), l);
+function v(e) {
     let { className: t } = e;
     return (0, i.jsx)("div", { className: a()(S.pR, t), children: y.intl.string(y.t["F+x38C"]) });
 }
@@ -50,7 +50,7 @@ function j(e) {
     let { reason: t = E.Oc.SPOILER, className: n, isSingleMosaicItem: l = !1 } = e;
     switch (t) {
         case E.Oc.SPOILER:
-            return (0, i.jsx)(N, { className: n });
+            return (0, i.jsx)(v, { className: n });
         case E.Oc.EXPLICIT_CONTENT:
         case E.Oc.GORE_CONTENT:
         case E.Oc.SELF_HARM_CONTENT:
@@ -287,5 +287,5 @@ function O(e) {
         n = (0, A.yM)();
     return (0, i.jsx)(R, { ...e, shouldAgeVerify: t, isVerifiedTeen: n });
 }
-(O.Types = v), (O.Reasons = E.Oc);
+(O.Types = N), (O.Reasons = E.Oc);
 let M = O;

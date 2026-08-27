@@ -21,7 +21,7 @@ function h(e) {
         } = e,
         m = a.useRef(null),
         { width: h, ref: C } = (0, c.Ay)(),
-        E = (0, u.bf)(h);
+        f = (0, u.bf)(h);
     return (0, i.jsx)(o.xp, {
         containerRef: m,
         children: (0, i.jsxs)("div", {
@@ -33,7 +33,7 @@ function h(e) {
                 (0, i.jsx)("div", { className: A.K1, children: t?.() }),
                 d?.(),
                 (0, i.jsx)(u.Ay.Provider, {
-                    value: E,
+                    value: f,
                     children: (0, i.jsxs)("div", {
                         className: A.q6,
                         ref: C,
@@ -60,7 +60,7 @@ function C(e) {
         renderVoiceChannelEffects: u,
         style: m,
         hideControls: C = !1,
-        ...E
+        ...f
     } = e;
     return (0, i.jsxs)("div", {
         className: r()(A.zr, { [A.N7]: s }),
@@ -70,7 +70,7 @@ function C(e) {
         onMouseLeave: a,
         onDoubleClick: t,
         children: [
-            !C && (0, i.jsx)(h, { ...E }),
+            !C && (0, i.jsx)(h, { ...f }),
             o,
             null != n ? (0, i.jsx)(d.A, { size: "large", ...n }) : null,
             c?.(),

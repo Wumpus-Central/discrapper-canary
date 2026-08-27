@@ -12,8 +12,8 @@ var l = t(477900),
     m = t(743943),
     h = t(652215),
     C = t(1195),
-    E = t(375708),
-    f = t(107465);
+    f = t(375708),
+    E = t(107465);
 function p(e) {
     return Math.min(100, Math.max(0, e));
 }
@@ -49,7 +49,7 @@ function N(e) {
             null == l
                 ? null
                 : {
-                      "aria-label": E.intl.formatToPlainString(C.default.NBm6jz, { targetLabel: t }),
+                      "aria-label": f.intl.formatToPlainString(C.default.NBm6jz, { targetLabel: t }),
                       "aria-describedby": l.descriptionId,
                       onFocus: () => l.setPreviewTarget({ x: a, y: s }),
                       onClick: () => l.placeNextTo({ x: a, y: s }),
@@ -75,7 +75,7 @@ function b(e) {
                     }
                 );
             function e() {
-                v.add(n), (0, d.HW)(n), s.O.announce(E.intl.string(C.default.bUGP71), "assertive");
+                v.add(n), (0, d.HW)(n), s.O.announce(f.intl.string(C.default.bUGP71), "assertive");
             }
         }, [p, n]),
         i.useEffect(() => {
@@ -111,13 +111,13 @@ function b(e) {
                     containerRef: t,
                     keyboardModeEnabled: !1,
                     children: (0, l.jsx)("div", {
-                        className: f.a,
+                        className: E.a,
                         children: (0, l.jsx)("div", {
-                            className: f.G,
+                            className: E.G,
                             id: N,
                             children: (0, l.jsx)(o.E, {
                                 variant: "text-sm/medium",
-                                children: E.intl.string(C.default.xyO7AD),
+                                children: f.intl.string(C.default.xyO7AD),
                             }),
                         }),
                     }),

@@ -42,8 +42,8 @@ var l,
     I = n(323384),
     y = n(687966),
     S = n(177953),
-    v = n(432017),
-    N = n(246913),
+    N = n(432017),
+    v = n(246913),
     _ = n(291747),
     j = n(417270),
     T = n(768622),
@@ -163,7 +163,7 @@ function et(e) {
     return (0, i.jsxs)("div", {
         className: K.fC,
         children: [
-            (0, i.jsx)(v.T, { size: "xxs", color: o }),
+            (0, i.jsx)(N.T, { size: "xxs", color: o }),
             (0, i.jsx)(B.A, { entry: t, textColor: a ? "text-feedback-positive" : l, hovered: n }),
         ],
     });
@@ -172,7 +172,7 @@ function en(e) {
     let { entry: t } = e,
         { location: n } = q(),
         l = (0, D.S1)(n, [0, 3]) ? C.A.colors.STATUS_POSITIVE : void 0;
-    return (0, F.Rf)(t) ? (0, i.jsx)($, { Icon: N.P, text: W.intl.string(W.t.keY6mW), iconColor: l }) : null;
+    return (0, F.Rf)(t) ? (0, i.jsx)($, { Icon: v.P, text: W.intl.string(W.t.keY6mW), iconColor: l }) : null;
 }
 function el(e) {
     let { entry: t } = e,

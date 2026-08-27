@@ -14,15 +14,15 @@ var o = t(288104),
     m = t(576705),
     h = t(993838),
     C = t(233993),
-    E = t(446600),
-    f = t(418208);
+    f = t(446600),
+    E = t(418208);
 t(806931);
 var p = t(375708);
 function g(e) {
     let n = (0, s.bG)([A.A], () => A.A.getChannel(e), [e]),
         t = (0, s.bG)([m.A], () => m.A.can(C.QY, n)),
-        i = (0, f.zU)(),
-        a = (0, s.bG)([E.A], () => E.A.getStageInstanceByChannel(e), [e]),
+        i = (0, E.zU)(),
+        a = (0, s.bG)([f.A], () => f.A.getStageInstanceByChannel(e), [e]),
         o = (0, u.Us)();
     return n?.isGuildStageVoice() && t && !i
         ? null != a

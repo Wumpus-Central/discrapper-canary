@@ -34,7 +34,7 @@ function c(e) {
             [x],
         ),
         [I, y] = l.useReducer(E, { focusedX: c, focusedY: d, columnCounts: n }),
-        { columnCounts: S, focusedX: v, focusedY: N } = I,
+        { columnCounts: S, focusedX: N, focusedY: v } = I,
         [_] = l.useState(() => (0, r.nF)(y, 16));
     return (
         l.useEffect(() => {
@@ -58,7 +58,7 @@ function c(e) {
                 E = l.useRef(x),
                 I = u(o(t, c, d)),
                 [y, S] = l.useState(!1),
-                [v, N] = l.useState(!1),
+                [N, v] = l.useState(!1),
                 [_, j] = l.useState(!1),
                 [T] = l.useState(
                     () =>
@@ -82,7 +82,7 @@ function c(e) {
                         let l = o(t, e, n);
                         (null != m ? m(e, n, l) : Promise.resolve()).then(() => {
                             let e = u(l);
-                            null != e ? (b(e), N(!1)) : requestAnimationFrame(() => N(!0));
+                            null != e ? (b(e), v(!1)) : requestAnimationFrame(() => v(!0));
                         });
                     },
                     [t, m, b],
@@ -112,8 +112,8 @@ function c(e) {
                 E.current && null == e && L(!0);
             }, []);
             l.useEffect(() => {
-                y && v && null != I && (b(I), N(!1));
-            }, [v, I]),
+                y && N && null != I && (b(I), v(!1));
+            }, [N, I]),
                 l.useEffect(() => {
                     y && (_ || R(c, d), j(!1));
                 }, [c, d]);
@@ -224,8 +224,8 @@ function c(e) {
         })({
             navId: t,
             columnCounts: S,
-            focusedX: v,
-            focusedY: N,
+            focusedX: N,
+            focusedY: v,
             dispatch: _,
             onSelect: h,
             prepareFocus: m,

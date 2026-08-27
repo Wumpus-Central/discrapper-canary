@@ -79,7 +79,7 @@ function S(e) {
                   .filter(p.Vq);
     })(e, d.X6.useSetting());
 }
-function v(e, t) {
+function N(e, t) {
     let n = d.hD.useSetting(),
         l = d.rs.useSetting();
     if (null == e) return [];
@@ -108,7 +108,7 @@ function v(e, t) {
               .filter(p.Vq)
         : [];
 }
-function N(e) {
+function v(e) {
     let t = d.hD.useSetting();
     if (null == e) return [];
     let n = e.components;
@@ -157,18 +157,18 @@ function j(e, t) {
     }, [t, l]);
 }
 function T(e, t) {
-    return [...S(e), ...v(e, t), ...N(e)];
+    return [...S(e), ...N(e, t), ...v(e)];
 }
 function b(e, t) {
     let n = S(e),
-        l = v(e, t),
-        i = N(e);
+        l = N(e, t),
+        i = v(e);
     return n[0] ?? l[0] ?? i[0] ?? null;
 }
 function R(e, t) {
     let n = S(e),
-        l = v(e, t),
-        i = N(e);
+        l = N(e, t),
+        i = v(e);
     return null == n[0] && null == i[0] && null != l[0];
 }
 function O(e, t) {

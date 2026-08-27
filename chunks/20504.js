@@ -82,9 +82,9 @@ class f extends i.PureComponent {
                 onVolumeHide: E,
             } = this.props,
             { hovered: I, focused: y, dragging: S } = this.state,
-            v = a.H;
+            N = a.H;
         return (
-            p || A === g ? (v = o._) : A < x / 2 && (v = u.S),
+            p || A === g ? (N = o._) : A < x / 2 && (N = u.S),
             (0, l.jsxs)("div", {
                 className: r()(n, m.kL),
                 onMouseEnter: () => {
@@ -124,7 +124,7 @@ class f extends i.PureComponent {
                         className: m.bk,
                         "aria-label": h.intl.string(h.t["19lt24"]),
                         onClick: this.handleToggleMute,
-                        children: (0, l.jsx)(v, { color: t, className: e }),
+                        children: (0, l.jsx)(N, { color: t, className: e }),
                     }),
                 ],
             })

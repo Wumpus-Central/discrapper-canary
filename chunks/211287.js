@@ -1,5 +1,5 @@
-t.d(r, { A: () => n });
-let n = (0, t(945810).mj)({
+r.d(t, { A: () => n });
+let n = (0, r(945810).mj)({
     name: "2025-12-orb-redemption-thru-orders",
     kind: "user",
     defaultConfig: { enabled: !1 },

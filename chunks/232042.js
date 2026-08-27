@@ -22,8 +22,8 @@ var i = n(503698),
     I = n(534890),
     y = n(855473),
     S = n(740426),
-    v = n(191023),
-    N = n(87221),
+    N = n(191023),
+    v = n(87221),
     _ = n(173936),
     j = n(936755),
     T = n(375708),
@@ -203,7 +203,7 @@ let R = function (e) {
             });
             break;
         case "media":
-            i = (0, l.jsx)(v.ImageIcon, {
+            i = (0, l.jsx)(N.ImageIcon, {
                 size: "md",
                 color: "currentColor",
                 className: b.Kk,
@@ -211,7 +211,7 @@ let R = function (e) {
             });
             break;
         case "media-nsfw":
-            i = (0, l.jsx)(N.D, {
+            i = (0, l.jsx)(v.D, {
                 size: "md",
                 color: "currentColor",
                 className: b.Kk,

@@ -83,17 +83,17 @@ let x = /^[a-z0-9_+\-.#]+$/i,
     ]),
     y = new Set(["*", "_", "~", "|", "\\"]),
     S = {},
-    v = {};
+    N = {};
 for (let e in m.Ay.RULES) {
     if (!(e in C))
         throw Error(
             `Slate: Unknown markdown rule: ${e}.  If you have just added a new markdown rule then you probably need to add it to this file so that the rich chat box understands it.`,
         );
     let t = C[e];
-    "skip" !== t.type && (S[e] = N(m.Ay.RULES[e])),
-        "skip" !== t.type && "inlineObject" !== t.type && (v[e] = N("text" === e ? f.Ay : m.Ay.RULES[e]));
+    "skip" !== t.type && (S[e] = v(m.Ay.RULES[e])),
+        "skip" !== t.type && "inlineObject" !== t.type && (N[e] = v("text" === e ? f.Ay : m.Ay.RULES[e]));
 }
-function N(e) {
+function v(e) {
     i()(null != e.parse, "Slate: rule must have a parse function");
     let t = e.parse;
     return {
@@ -133,7 +133,7 @@ let j = {
     },
     T = /(-# +)/,
     b = (0, p.A)([S, j]),
-    R = (0, p.A)([v, j]),
+    R = (0, p.A)([N, j]),
     O = c.X(b),
     M = c.X(R),
     L = { max: 1 / 0, maxAge: +g.A.Millis.MINUTE, updateAgeOnGet: !0 },

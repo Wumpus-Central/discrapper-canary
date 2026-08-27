@@ -11,8 +11,8 @@ var i = n(477900),
     h = n(43990),
     p = n(285796),
     m = n(192308),
-    A = n(231723),
-    f = n(825484),
+    f = n(231723),
+    A = n(825484),
     x = n(821609),
     g = n(283973),
     C = n(834730),
@@ -114,7 +114,7 @@ function V(e) {
                 ]).then(n.bind(n, 1310));
                 return (n) => (0, i.jsx)(e, { ...n, guild: a, channel: t, source: O.PE1.ACTIVITY_ENTRY_POINT_TILE });
             },
-            { contextKey: r ? A.KX : A.SY },
+            { contextKey: r ? f.KX : f.SY },
         );
     }
     function C() {
@@ -134,7 +134,7 @@ function V(e) {
                     className: s()(M.zr, M.co, e),
                     children: [
                         (0, i.jsx)("img", { src: w, className: M.Qw, alt: "" }),
-                        (0, i.jsxs)(f.e, {
+                        (0, i.jsxs)(A.e, {
                             justify: "center",
                             align: "center",
                             children: [

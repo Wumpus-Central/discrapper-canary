@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Cp: () => _, Gf: () => v, Sw: () => R, V4: () => b, ak: () => N, dK: () => y, dZ: () => S }), n(321073);
+n.d(t, { Cp: () => _, Gf: () => N, Sw: () => R, V4: () => b, ak: () => v, dK: () => y, dZ: () => S }), n(321073);
 var l = n(435558),
     i = n.n(l),
     s = n(636537),
@@ -35,7 +35,7 @@ function S(e) {
             () => o.h.dispatch({ type: "EMOJI_FETCH_FAILURE", guildId: e }),
         );
 }
-function v(e) {
+function N(e) {
     let { guildId: t, image: n, name: l, roles: i, analyticsLocation: r, originalMd5: a } = e;
     return (
         o.h.dispatch({ type: "EMOJI_UPLOAD_START", guildId: t }),
@@ -52,7 +52,7 @@ function v(e) {
         )
     );
 }
-function N(e, t, n) {
+function v(e, t, n) {
     return (
         o.h.dispatch({ type: "EMOJI_DELETE", guildId: e, emojiId: t }),
         s.Bo.del({

@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Hp: () => j, UA: () => N, ZB: () => T, Zp: () => v, dM: () => b, eG: () => S, ik: () => R });
+n.d(t, { Hp: () => j, UA: () => v, ZB: () => T, Zp: () => N, dM: () => b, eG: () => S, ik: () => R });
 var l = n(477900);
 n(582128);
 var i = n(503698),
@@ -24,11 +24,11 @@ var i = n(503698),
 function S() {
     return (0, l.jsx)("div", { className: y.kL, "aria-hidden": !0 });
 }
-function v(e) {
+function N(e) {
     let { children: t, selected: n, className: i, usesCardRows: r = !1 } = e;
     return (0, l.jsx)("div", { className: s()(y.kL, y.fi, { [y.wH]: n, [y._V]: r }, i), children: t });
 }
-function N(e) {
+function v(e) {
     let { children: t } = e;
     return (0, l.jsx)("div", { className: y.iY, children: t });
 }
@@ -63,13 +63,13 @@ function j(e) {
     let { guildId: t, channelId: n, entry: i, maxAvatars: s = 3 } = e,
         a = i.author_id,
         o = (0, r.bG)([A.default], () => A.default.getUser(a)),
-        { displayParticipants: h, participant1: m, participant2: S, numOtherParticipants: v } = (0, E.A)(i, s),
-        N = (0, r.bG)([g.Ay], () => g.Ay.getMember(t, a)),
+        { displayParticipants: h, participant1: m, participant2: S, numOtherParticipants: N } = (0, E.A)(i, s),
+        v = (0, r.bG)([g.Ay], () => g.Ay.getMember(t, a)),
         j = (0, f.a)({ displayNameStyles: o?.displayNameStyles }),
-        T = (0, r.bG)([x.A], () => (N?.colorRoleId != null ? x.A.getRole(t, N.colorRoleId)?.name : void 0), [t, N]),
-        b = (0, p.gn)(t, a, N?.colorStrings ?? null);
+        T = (0, r.bG)([x.A], () => (v?.colorRoleId != null ? x.A.getRole(t, v.colorRoleId)?.name : void 0), [t, v]),
+        b = (0, p.gn)(t, a, v?.colorStrings ?? null);
     if (null == o) return null;
-    let R = N?.colorString,
+    let R = v?.colorString,
         O = C.Ay.getName(t, n, o);
     return (0, l.jsxs)("div", {
         className: y.dw,
@@ -84,7 +84,7 @@ function j(e) {
                 displayNameStylesFont: j,
                 "aria-hidden": !0,
             }),
-            v > 0
+            N > 0
                 ? (0, l.jsx)("div", {
                       className: y.kx,
                       "aria-hidden": !0,
@@ -92,7 +92,7 @@ function j(e) {
                           variant: "text-xxs/medium",
                           color: "text-default",
                           className: y.b4,
-                          children: ["+", v],
+                          children: ["+", N],
                       }),
                   })
                 : null,
@@ -100,7 +100,7 @@ function j(e) {
                 children: I.intl.format(I.t.rH95Gu, {
                     user0: C.Ay.getName(t, n, m),
                     user1: C.Ay.getName(t, n, S),
-                    countOthers: v,
+                    countOthers: N,
                     name0Hook: (e, t) => (0, l.jsx)("span", { children: e }, t),
                     name1Hook: (e, t) => (0, l.jsx)("span", { children: e }, t),
                     countOthersHook: (e, t) => (0, l.jsx)("span", { children: e }, t),

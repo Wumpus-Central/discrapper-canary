@@ -11,8 +11,8 @@ var i = n(477900),
     h = n(198052),
     p = n(333204),
     m = n(826673),
-    A = n(855687),
-    f = n(267102),
+    f = n(855687),
+    A = n(267102),
     x = n(511205),
     g = n(530804),
     C = n(71393),
@@ -34,7 +34,7 @@ function b(e) {
             totalNumberOfParticipants: L,
             popoutType: O,
         } = e,
-        P = (0, f.Us)() === v.BRT.POPOUT,
+        P = (0, A.Us)() === v.BRT.POPOUT,
         M = (0, r.bG)([C.A], () => C.A.getGuild(_.guild_id), [_.guild_id]),
         { dismissedActivityEntryPointTileChannel: w } = (0, N.P)(),
         D = (0, r.bG)([h.A], () => h.A.getUserParticipantCount(_.id), [_]),
@@ -51,7 +51,7 @@ function b(e) {
                 N.P.setState({ dismissedActivityEntryPointTileChannel: null });
             });
     }, [_.id, w]);
-    let k = (0, r.bG)([y.A], () => _.isPrivate() || (0, A.K)(y.A, M, _), [M, _]),
+    let k = (0, r.bG)([y.A], () => _.isPrivate() || (0, f.K)(y.A, M, _), [M, _]),
         G = M?.afkChannelId === _.id,
         B = _.userLimit <= 0 || _.userLimit > 1,
         F = (0, r.bG)([c.Ay], () => c.Ay.getEmbeddedActivitiesForChannel(_.id).length <= 0),

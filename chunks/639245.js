@@ -21,8 +21,8 @@ var l = n(477900),
     I = n(688810),
     y = n(139286),
     S = n(235986),
-    v = n(573435),
-    N = n(836039),
+    N = n(573435),
+    v = n(836039),
     _ = n(702841),
     j = n(71393),
     T = n(236285),
@@ -108,8 +108,8 @@ let en = (e) => {
     return (0, l.jsxs)(S.A, {
         align: S.A.Align.CENTER,
         children: [
-            (0, l.jsx)(v.Ay, {
-                mask: v.Ay.Masks.SQUIRCLE,
+            (0, l.jsx)(N.Ay, {
+                mask: N.Ay.Masks.SQUIRCLE,
                 width: 32,
                 height: 32,
                 className: ee.__invalid_guildIconContainer,
@@ -274,7 +274,7 @@ function ei(e) {
             sourceType: u,
             expressionSourceApplication: f,
             expressionSourceGuild: x,
-            joinedEmojiSourceGuildRecord: v,
+            joinedEmojiSourceGuildRecord: N,
             closePopout: _,
             onToggleShowMoreEmojis: j,
             guildEmoji: T,
@@ -284,8 +284,8 @@ function ei(e) {
         k = (0, o.bG)([B.default], () => B.default.getCurrentUser()),
         V = (0, o.bG)([H.A], () => H.A.getGuildId()),
         F = Z.Ay.isPremium(k),
-        K = null != V && (V === x?.id || V === v?.id),
-        z = null != v,
+        K = null != V && (V === x?.id || V === N?.id),
+        z = null != N,
         q = x?.isDiscoverable() ?? !1;
     b && ((F = !0), (q = !0), (z = !1), (K = !1));
     let et = {
@@ -307,7 +307,7 @@ function ei(e) {
                       },
             [T, V],
         ),
-        ea = !!ei && (0, N.tE)(T?.guildId),
+        ea = !!ei && (0, v.tE)(T?.guildId),
         { analyticsLocations: eo } = (0, I.Ay)(E.A.GUILD_ROLE_SUBSCRIPTION_EMOJI_TEXT_POPOVER_UPSELL);
     (0, y.A)(
         {
@@ -422,9 +422,9 @@ function ei(e) {
                                 fullWidth: !0,
                                 onClick: function () {
                                     _(),
-                                        v?.id != null &&
+                                        N?.id != null &&
                                             A.A.transitionToGuildSync(
-                                                v.id,
+                                                N.id,
                                                 {
                                                     sourceLocationStack: [
                                                         E.A.GUILD_ROLE_SUBSCRIPTION_EMOJI_TEXT_POPOVER_UPSELL,
@@ -449,7 +449,7 @@ function ei(e) {
                             children: z ? J.intl.string(J.t.ohTzZH) : J.intl.string(J.t["eLfh+a"]),
                         }),
                         (0, l.jsx)(en, {
-                            expressionSourceGuild: x ?? R.GO.createFromGuildRecord(v),
+                            expressionSourceGuild: x ?? R.GO.createFromGuildRecord(N),
                             hasJoinedExpressionSourceGuild: z,
                             isDisplayingJoinGuildButtonInPopout: ef,
                             closePopout: _,

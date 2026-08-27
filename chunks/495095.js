@@ -11,8 +11,8 @@ var i = n(477900),
     h = n(446243),
     p = n(538638),
     m = n(1195),
-    A = n(375708),
-    f = n(203221);
+    f = n(375708),
+    A = n(203221);
 function x(e) {
     let { channel: t, position: n, setEditorRef: x } = e,
         g = (0, a.bG)([r.Ay], () => r.Ay.keyboardModeEnabled),
@@ -22,16 +22,16 @@ function x(e) {
         [E, b] = (0, l.useState)(g),
         T = (0, l.useRef)(!1);
     return (0, i.jsx)(s.l, {
-        className: f.kL,
+        className: A.kL,
         children: (0, i.jsx)(d.Ay, {
-            className: f.Kf,
-            innerClassName: f.Kf,
+            className: A.Kf,
+            innerClassName: A.Kf,
             maxCharacterCount: 512,
             showRemainingCharsAfterCount: 10,
             onChange: function (e, t, n) {
                 I(t), v(n), y(u.Ay.translateInlineEmojiToSurrogates(t));
             },
-            placeholder: A.intl.string(m.default.IAcEEn),
+            placeholder: f.intl.string(m.default.IAcEEn),
             channel: t,
             textValue: j,
             richValue: N,

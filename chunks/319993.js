@@ -21,8 +21,8 @@ var l,
     I = n(287809),
     y = n(824744),
     S = n(158045),
-    v = n(926972),
-    N = n(885386),
+    N = n(926972),
+    v = n(885386),
     _ = n(862482),
     j = n(821609),
     T = n(66834),
@@ -85,9 +85,9 @@ function W(e) {
         g = (0, o.bG)([w.A], () => w.A.getGuild(a.guildId)),
         x = !p && null != g,
         [A, C] = s.useState(),
-        E = (0, v.tj)({ location: "SoundmojiGuildInfo" }),
+        E = (0, N.tj)({ location: "SoundmojiGuildInfo" }),
         y = p || x || null != A || !E,
-        [N, _] = s.useState(!y);
+        [v, _] = s.useState(!y);
     s.useEffect(() => {
         y ||
             (_(!0),
@@ -102,7 +102,7 @@ function W(e) {
     let { buttonType: j, description: T } =
             ((t = "0" === a.guildId),
             (n = (0, o.bG)([I.default], () => S.Ay.canUseSoundboardEverywhere(I.default.getCurrentUser()))),
-            (l = (0, v.tj)({ location: "useSoundmojiGuildInfoData" })),
+            (l = (0, N.tj)({ location: "useSoundmojiGuildInfoData" })),
             (r = a.guildId !== c?.guild_id),
             {
                 buttonType: s.useMemo(() => (t || !l ? 2 : n ? (x || null == A ? 2 : 0) : 1), [t, n, l, x, A]),
@@ -147,7 +147,7 @@ function W(e) {
                 }, [t, A, n, x, r, l]),
             }),
         P = j === G.JOIN_GUILD,
-        V = !p && N,
+        V = !p && v,
         F = s.useMemo(
             () => (x ? b.GO.createFromGuildRecord(g) : null != A ? b.GO.createFromDiscoverableGuild(A) : void 0),
             [g, x, A],
@@ -203,12 +203,12 @@ function W(e) {
 var K = n(948611);
 function z() {
     let { volume: e, onVolumeChange: t } = (function () {
-        let [e, t] = s.useState(N.HO.getSetting());
+        let [e, t] = s.useState(v.HO.getSetting());
         return {
             volume: e,
             onVolumeChange: s.useCallback((e) => {
                 let n = (0, y.w)(e);
-                t(n), N.HO.updateSetting(n);
+                t(n), v.HO.updateSetting(n);
             }, []),
         };
     })();
@@ -223,7 +223,7 @@ function z() {
 }
 function Z(e) {
     let { sound: t, forceShowBetaLabel: n = !1 } = e,
-        l = (0, v.tj)({ location: "SoundmojiBanner" }),
+        l = (0, N.tj)({ location: "SoundmojiBanner" }),
         s = (0, o.bG)([I.default], () => S.Ay.canUseSoundboardEverywhere(I.default.getCurrentUser())),
         r = (0, o.bG)([E.A], () => E.A.getGuildId());
     return n || s || "0" === t.guildId || t.guildId === r || !l

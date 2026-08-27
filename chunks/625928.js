@@ -21,8 +21,8 @@ var l = n(477900),
     I = n(734057),
     y = n(309010),
     S = n(174459),
-    v = n(652215),
-    N = n(375708),
+    N = n(652215),
+    v = n(375708),
     _ = n(845210);
 function j() {
     (0, A.openModalLazy)(async () => {
@@ -34,14 +34,14 @@ function T(e) {
     let { className: t, iconOnly: n } = e,
         s = (0, o.bG)([y.Ay, I.A], () => {
             let e = I.A.getChannel(y.Ay.getChannelId());
-            return e?.isPrivate() ? v.liQ.DM_CHANNEL : v.liQ.GUILD_CHANNEL;
+            return e?.isPrivate() ? N.liQ.DM_CHANNEL : N.liQ.GUILD_CHANNEL;
         }),
         { analyticsLocations: a } = (0, f.Ay)(m.A.PREMIUM_UPSELL);
     return (
         i.useEffect(() => {
-            S.default.track(v.HAw.PREMIUM_UPSELL_VIEWED, {
+            S.default.track(N.HAw.PREMIUM_UPSELL_VIEWED, {
                 type: "longer messages inline",
-                location: { location_page: s, location_section: v.JJy.CHANNEL_TEXT_AREA },
+                location: { location_page: s, location_section: N.JJy.CHANNEL_TEXT_AREA },
                 location_stack: a,
             });
         }, [s, a]),
@@ -50,7 +50,7 @@ function T(e) {
                   className: _.e7,
                   onClick: () => j(),
                   children: (0, l.jsx)(u.m, {
-                      text: N.intl.string(N.t["+eFIjX"]),
+                      text: v.intl.string(v.t["+eFIjX"]),
                       position: "top",
                       children: (0, l.jsx)(c.t, { size: "md", color: "currentColor", className: _.M2 }),
                   }),
@@ -62,7 +62,7 @@ function T(e) {
                       (0, l.jsx)(d.E, {
                           className: _.Qq,
                           variant: "text-sm/normal",
-                          children: N.intl.format(N.t.BNAIBU, { onLearnMore: j }),
+                          children: v.intl.format(v.t.BNAIBU, { onLearnMore: j }),
                       }),
                   ],
               })
@@ -77,17 +77,17 @@ function O(e) {
         I = i ?? E,
         y = s ?? i ?? E / 10,
         S = n.length,
-        _ = null != t.upsellLongMessages && (S ?? 0) > v.uvi && C,
+        _ = null != t.upsellLongMessages && (S ?? 0) > N.uvi && C,
         j = null != t.upsellLongMessages && !C,
         O = I - S,
         M = O > y;
-    (0, a.$)({ currentLength: S, maxLength: I, message: N.intl.string(N.t.c2Jqed) });
+    (0, a.$)({ currentLength: S, maxLength: I, message: v.intl.string(v.t.c2Jqed) });
     let L =
             0 === O
-                ? N.intl.string(N.t.tU6YQ7)
+                ? v.intl.string(v.t.tU6YQ7)
                 : O > 0
-                  ? N.intl.formatToPlainString(N.t.qH8uFW, { count: O })
-                  : N.intl.string(N.t.YSRIqa),
+                  ? v.intl.formatToPlainString(v.t.qH8uFW, { count: O })
+                  : v.intl.string(v.t.YSRIqa),
         { analyticsLocations: k } = (0, f.Ay)(m.A.CHARACTER_COUNT),
         { isVisible: w } = (0, b.A)({ type: t, textValue: n, maxCharacterCount: i, showRemainingCharsAfterCount: s });
     if (!w) return null;
@@ -102,7 +102,7 @@ function O(e) {
                     children: [
                         _ && P
                             ? (0, l.jsx)(u.m, {
-                                  text: N.intl.formatToPlainString(N.t.vcvHa0, { maxLength: I }),
+                                  text: v.intl.formatToPlainString(v.t.vcvHa0, { maxLength: I }),
                                   position: "top",
                                   children: (0, l.jsx)(c.t, { size: "md", color: "currentColor", className: R.y }),
                               })
@@ -122,7 +122,7 @@ function O(e) {
                               }),
                     ],
                 }),
-                (0, l.jsx)(h.A, { "aria-live": "polite", children: N.intl.format(N.t.qH8uFW, { count: O }) }),
+                (0, l.jsx)(h.A, { "aria-live": "polite", children: v.intl.format(v.t.qH8uFW, { count: O }) }),
                 j && !M
                     ? (0, l.jsx)(T, { className: R.UX, iconOnly: t.upsellLongMessages?.iconOnly || !1, remaining: O })
                     : null,

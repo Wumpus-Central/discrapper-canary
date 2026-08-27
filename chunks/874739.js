@@ -11,8 +11,8 @@ var i = n(477900),
     h = n(484191),
     p = n(665450),
     m = n(526369),
-    A = n(699707),
-    f = n(713397),
+    f = n(699707),
+    A = n(713397),
     x = n(652215),
     g = n(806931),
     C = n(804273);
@@ -55,7 +55,7 @@ let y = (0, s.A)((e) => {
     if (null == s) {
         if (0 === n.length) {
             let e = t.length > 0 && !V;
-            return (0, i.jsx)(f.A, { channelId: E.id, allPoppedOut: e });
+            return (0, i.jsx)(A.A, { channelId: E.id, allPoppedOut: e });
         }
         return (0, i.jsx)(d.A, {
             className: C.HA,
@@ -74,7 +74,7 @@ let y = (0, s.A)((e) => {
             }),
         });
     }
-    return (0, i.jsx)(A.A, {
+    return (0, i.jsx)(f.A, {
         onFullscreenParticipant: v,
         onContextMenuParticipant: N,
         onSelectParticipant: I,

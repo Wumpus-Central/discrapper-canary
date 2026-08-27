@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Ch: () => j, hg: () => T, dn: () => _, SD: () => N });
+n.d(t, { Ch: () => j, hg: () => T, dn: () => _, SD: () => v });
 var l = n(582128),
     i = n(435558),
     s = n.n(i),
@@ -24,7 +24,7 @@ let S = {
         ...p.Ay.RULES.commandMention,
         parse: (e, t, n) => ({ content: p.Ay.RULES.commandMention.parse(e, t, n).content }),
     },
-    v = s().pick(
+    N = s().pick(
         (0, g.A)([p.Ay.RULES, { commandMention: S }, (0, f.Ay)({ enableBuildOverrides: !1, enableEmojiClick: !1 })]),
         [
             "commandMention",
@@ -43,7 +43,7 @@ let S = {
             "spoiler",
         ],
     ),
-    N = a.aV(v);
+    v = a.aV(N);
 function _(e) {
     let {
             context: t,
@@ -57,8 +57,8 @@ function _(e) {
             fetchesApplication: x = !0,
             onConfirmActivityLaunchChecksAlertOpen: S,
         } = e,
-        v = (0, o.p)(),
-        N = (function (e) {
+        N = (0, o.p)(),
+        v = (function (e) {
             let [t, n] = l.useState(e);
             return (
                 l.useLayoutEffect(() => {
@@ -80,7 +80,7 @@ function _(e) {
             botUserIdForAppDM: j,
             embeddedActivitiesManager: c.A,
             context: t,
-            locationObject: v.location,
+            locationObject: N.location,
             onActivityItemSelectedProp: (e) => {
                 let { applicationId: t } = e;
                 f && A.k(E.Se.ACTIVITY),
@@ -88,7 +88,7 @@ function _(e) {
                         location: i,
                         application_id: t,
                         section_name: s,
-                        action: N,
+                        action: v,
                         source: _,
                     });
             },
@@ -102,10 +102,10 @@ function _(e) {
         b = "primary",
         R = a ?? y.intl.string(y.t.zKX8Nu);
     return (
-        N === u.o6.JOIN
+        v === u.o6.JOIN
             ? ((b = "active"), (R = y.intl.string(y.t.d9PsMj)))
-            : N !== u.o6.LEAVE || g || ((b = "critical-primary"), (R = y.intl.string(y.t["Hi1/aQ"]))),
-        { onActivityItemSelected: T, activityAction: N, buttonVariant: b, buttonText: R }
+            : v !== u.o6.LEAVE || g || ((b = "critical-primary"), (R = y.intl.string(y.t["Hi1/aQ"]))),
+        { onActivityItemSelected: T, activityAction: v, buttonVariant: b, buttonText: R }
     );
 }
 function j(e, t) {

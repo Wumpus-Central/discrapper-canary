@@ -1,79 +1,79 @@
-t.d(r, { Q: () => d });
-var n = t(582128),
-    a = t(158317),
-    o = t(313125),
-    i = t(786953),
-    l = t(211287),
-    u = t(375708);
+r.d(t, { Q: () => d });
+var n = r(582128),
+    a = r(158317),
+    l = r(313125),
+    i = r(786953),
+    s = r(211287),
+    c = r(375708);
 function d(e) {
-    let [r, t] = (0, n.useState)(""),
-        [d, s] = (0, n.useState)([]),
-        [c, f] = (0, n.useState)(null),
-        [p, h] = (0, n.useState)(!1),
-        { enabled: m } = l.A.useConfig({ location: "orb_checkout_modal" }),
-        g = e?.order ?? null,
-        b = e?.onSignFailure,
+    let [t, r] = (0, n.useState)(""),
+        [d, o] = (0, n.useState)([]),
+        [u, h] = (0, n.useState)(null),
+        [_, C] = (0, n.useState)(!1),
+        { enabled: E } = s.A.useConfig({ location: "orb_checkout_modal" }),
+        R = e?.order ?? null,
+        y = e?.onSignFailure,
         {
-            error: y,
-            signOrder: k,
-            reportError: w,
-        } = (0, o.f)({ order: g, errorSource: "orb_redeem_orders_api", onSignFailure: b }),
-        S = m ? y : c,
-        C = (0, n.useCallback)(
-            async (e, r, t) => {
-                h(!0);
-                let n = await k({ loadId: r, errorExtra: { skuId: e, loadId: r } });
-                if ("signed" !== n.type) return void h(!1);
+            error: A,
+            signOrder: g,
+            reportError: p,
+        } = (0, l.f)({ order: R, errorSource: "orb_redeem_orders_api", onSignFailure: y }),
+        m = E ? A : u,
+        U = (0, n.useCallback)(
+            async (e, t, r) => {
+                C(!0);
+                let n = await g({ loadId: t, errorExtra: { skuId: e, loadId: t } });
+                if ("signed" !== n.type) return void C(!1);
                 try {
                     let e = await (0, a.Vw)(n.order.id);
                     if (0 === e.length) throw new a.j2();
-                    s(e), t?.(e);
-                } catch (t) {
-                    w(t, { skuId: e, loadId: r, orderId: n.order.id });
+                    o(e), r?.(e);
+                } catch (r) {
+                    p(r, { skuId: e, loadId: t, orderId: n.order.id });
                 } finally {
-                    h(!1);
+                    C(!1);
                 }
             },
-            [k, w],
+            [g, p],
         ),
-        v = (0, n.useCallback)(
-            (e, r, t) =>
+        S = (0, n.useCallback)(
+            (e, t, r) =>
                 (0, i.J$)({
                     skuId: e,
-                    loadId: r,
+                    loadId: t,
                     onRedeemStart: function () {
-                        h(!0), f(null);
+                        C(!0), h(null);
                     },
                     onRedeemSucceed: function (e) {
-                        s(e), h(!1), t?.(e);
+                        o(e), C(!1), r?.(e);
                     },
                     onRedeemFail: function (e) {
-                        f(e), h(!1);
+                        h(e), C(!1);
                     },
                 }),
             [],
         ),
-        E = (0, n.useCallback)(
-            (e, r, t) => {
-                m ? C(e, r, t) : v(e, r, t);
+        f = (0, n.useCallback)(
+            (e, t, r) => {
+                E ? U(e, t, r) : S(e, t, r);
             },
-            [m, C, v],
+            [E, U, S],
         );
     return (
         (0, n.useEffect)(() => {
-            if (null != S) return void t(u.intl.format(u.t["7gHWrd"], { amount: "1 orb", errorMessage: S.message }));
+            if (null != m) return void r(c.intl.format(c.t["7gHWrd"], { amount: "1 orb", errorMessage: m.message }));
             if (null != d && d.length > 0) {
                 let e = d.map((e) => e.sku?.name);
-                t(
-                    u.intl.format(u.t.JxNFav, {
+                r(
+                    c.intl.format(c.t.JxNFav, {
                         amountDescription: "1 orb",
                         redeemedItemDescription: `${1 === e.length ? "SKU" : "SKUs"}: ${e.join(", ")}. Entitlement ${1 === d.length ? "ID" : "IDs"}: ${d.map((e) => e.id).join(", ")}`,
                     }),
                 );
                 return;
             }
-            t("");
-        }, [d, S]),
-        { entitlements: d, error: S, isSubmitting: p, responseMessage: r, redeemVirtualCurrency: E }
+            r("");
+        }, [d, m]),
+        { entitlements: d, error: m, isSubmitting: _, responseMessage: t, redeemVirtualCurrency: f }
     );
 }

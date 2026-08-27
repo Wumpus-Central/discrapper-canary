@@ -44,8 +44,8 @@ var m = n(604121),
     I = n(580194),
     y = n(70283),
     S = n(682618),
-    v = n(982240),
-    N = n(611881),
+    N = n(982240),
+    v = n(611881),
     _ = n(788833),
     j = n(40493),
     T = n(43105),
@@ -129,9 +129,9 @@ function D(e) {
 }
 function U(e) {
     let { channel: t, onComplete: n, markAsDismissed: i, children: s } = e,
-        { currentTier: r, giftCount: a } = (0, o.cf)([v.Ay], () => ({
-            currentTier: v.Ay.getCurrentTier(y.$.GIFTING),
-            giftCount: v.Ay.getSingleRequirementProgress(y.$.GIFTING)?.current,
+        { currentTier: r, giftCount: a } = (0, o.cf)([N.Ay], () => ({
+            currentTier: N.Ay.getCurrentTier(y.$.GIFTING),
+            giftCount: N.Ay.getSingleRequirementProgress(y.$.GIFTING)?.current,
         }));
     return null != r
         ? (0, l.jsx)(P, { currentTier: r, giftCount: a, onComplete: n, markAsDismissed: i, children: s })
@@ -239,11 +239,11 @@ let J = i.memo(function (e) {
         { showGiftingBadgeCoachmark: Y, markGiftingBadgeCoachmarkAsDismissed: J } = (function (e) {
             let { location: t, enabled: n } = e,
                 l = (0, g.A)(),
-                s = (0, N.Ls)({ platform: "web", location: t }) && n;
+                s = (0, v.Ls)({ platform: "web", location: t }) && n;
             i.useEffect(() => {
                 s && (0, S.o0)(y.$.GIFTING);
             }, [s]);
-            let r = (0, o.bG)([v.Ay], () => null != v.Ay.getBadgeById(y.$.GIFTING)),
+            let r = (0, o.bG)([N.Ay], () => null != N.Ay.getBadgeById(y.$.GIFTING)),
                 a = s && r && !l,
                 [c, d] = (0, E.kn)(a ? [u.M.NEW_GIFTING_BADGES_COACHMARK] : []);
             return { showGiftingBadgeCoachmark: null != c, markGiftingBadgeCoachmarkAsDismissed: d };

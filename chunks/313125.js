@@ -1,46 +1,46 @@
-t.d(r, { f: () => u });
-var n = t(582128),
-    a = t(136857),
-    o = t(739508),
-    i = t(158317),
-    l = t(26279);
-function u(e) {
-    let { order: r, errorSource: t, onSignFailure: u, onError: d } = e,
-        [s, c] = (0, n.useState)(null),
-        f = (0, n.useCallback)(
+r.d(t, { f: () => c });
+var n = r(582128),
+    a = r(136857),
+    l = r(739508),
+    i = r(158317),
+    s = r(26279);
+function c(e) {
+    let { order: t, errorSource: r, onSignFailure: c, onError: d } = e,
+        [o, u] = (0, n.useState)(null),
+        h = (0, n.useCallback)(
             (e) => {
-                c(e), d?.(e);
+                u(e), d?.(e);
             },
             [d],
         ),
-        p = (0, n.useCallback)(
-            (e, r) => {
+        _ = (0, n.useCallback)(
+            (e, t) => {
                 let n = e instanceof a.Ay ? e : new a.Ay(e);
                 return (
-                    (0, o.gr)(e) || (0, o.pM)(e instanceof Error ? e : n, { tags: { source: t }, extra: r }), f(n), n
+                    (0, l.gr)(e) || (0, l.pM)(e instanceof Error ? e : n, { tags: { source: r }, extra: t }), h(n), n
                 );
             },
-            [t, f],
+            [r, h],
         ),
-        h = (0, n.useCallback)(
+        C = (0, n.useCallback)(
             async function () {
-                let { loadId: e, errorExtra: t } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-                if (null == r) return f(new a.Ay("Order not created yet")), { type: "failed" };
-                c(null);
+                let { loadId: e, errorExtra: r } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+                if (null == t) return h(new a.Ay("Order not created yet")), { type: "failed" };
+                u(null);
                 try {
-                    let t = await (0, i.Ub)({ orderId: r.id, loadId: e });
-                    if (t.status !== l.Re.SIGNED) {
-                        if (null != t.errors && t.errors.length > 0)
-                            throw Error(`Order signing failed with errors: ${t.errors.join(", ")}`);
-                        throw Error(`Unexpected order status: ${t.status}`);
+                    let r = await (0, i.Ub)({ orderId: t.id, loadId: e });
+                    if (r.status !== s.Re.SIGNED) {
+                        if (null != r.errors && r.errors.length > 0)
+                            throw Error(`Order signing failed with errors: ${r.errors.join(", ")}`);
+                        throw Error(`Unexpected order status: ${r.status}`);
                     }
-                    return { type: "signed", order: t };
+                    return { type: "signed", order: r };
                 } catch (e) {
-                    if (e instanceof i.FY) return u?.(e.order), f(e), { type: "failed" };
-                    return p(e, { ...t, orderId: r.id }), { type: "failed" };
+                    if (e instanceof i.FY) return c?.(e.order), h(e), { type: "failed" };
+                    return _(e, { ...r, orderId: t.id }), { type: "failed" };
                 }
             },
-            [r, u, p, f],
+            [t, c, _, h],
         );
-    return { error: s, signOrder: h, reportError: p };
+    return { error: o, signOrder: C, reportError: _ };
 }

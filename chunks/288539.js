@@ -43,9 +43,9 @@ function E(e) {
             parsedUserId: I,
             content: y,
             inlinePreview: S = !1,
-            viewingChannelId: v,
+            viewingChannelId: N,
         } = e,
-        N = i.useRef(null),
+        v = i.useRef(null),
         { analyticsLocations: _ } = (0, u.Ay)(o.A.USER_MENTION),
         j = (0, r.bG)([g.default], () => g.default.getUser(c)),
         T = (0, r.bG)([m.A], () => m.A.getChannel(E)),
@@ -127,7 +127,7 @@ function E(e) {
                                     n.e("184841"),
                                 ]).then(n.bind(n, 107632));
                                 return (t) =>
-                                    (0, l.jsx)(e, { ...t, viewingChannelId: v, user: j, channel: T, guildId: b });
+                                    (0, l.jsx)(e, { ...t, viewingChannelId: N, user: j, channel: T, guildId: b });
                             })
                           : T.isDM() &&
                             (0, a.L3)(e, async () => {
@@ -213,14 +213,14 @@ function E(e) {
         M = (0, r.bG)([m.A, f.Ay, p.A], () => x.Ay.getNickname(b, E, j));
     if (null == j) return (0, l.jsx)(C, { userId: I, className: t, children: y });
     function L(e) {
-        return (0, l.jsx)(d.A, { ref: N, className: t, onContextMenu: R, ...e, children: `@${M ?? O}` });
+        return (0, l.jsx)(d.A, { ref: v, className: t, onContextMenu: R, ...e, children: `@${M ?? O}` });
     }
     return S
         ? (0, l.jsx)(u.f5, { value: _, children: L() })
         : (0, l.jsx)(u.f5, {
               value: _,
               children: (0, l.jsx)(h.A, {
-                  targetElementRef: N,
+                  targetElementRef: v,
                   user: j,
                   guildId: b ?? void 0,
                   channelId: E,

@@ -135,13 +135,13 @@ let S = function (e) {
             },
             [x, t, A, f],
         ),
-        v = i.useCallback(() => {
+        N = i.useCallback(() => {
             (0, s.openModalLazy)(async () => {
                 let { default: e } = await n.e("256466").then(n.bind(n, 188841));
                 return (t) => (0, l.jsx)(e, { ...t });
             });
         }, []),
-        N = i.useCallback(
+        v = i.useCallback(
             (e) => {
                 (e.stopPropagation(), e.preventDefault(), x)
                     ? u.default.openGameProfileModal({
@@ -150,9 +150,9 @@ let S = function (e) {
                           source: c.GameProfileSources.GameMention,
                           sourceUserId: f,
                       })
-                    : v();
+                    : N();
             },
-            [t, x, v, f],
+            [t, x, N, f],
         ),
         _ = x ? `@game ${A}` : void 0;
     return (0, l.jsx)(r.m, {
@@ -164,7 +164,7 @@ let S = function (e) {
         children: (0, l.jsxs)(h.A, {
             "data-mention-game-id": t,
             onContextMenu: S,
-            onClick: N,
+            onClick: v,
             children: [
                 (0, l.jsx)(m.A, {
                     children: (0, l.jsx)("span", {

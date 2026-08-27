@@ -23,7 +23,7 @@ function p(e) {
     i.useEffect(() => {
         !0 !== y || I || (t(), p(m.i.AUTO_DISMISS));
     }, [y, I, t, p]);
-    let v = {
+    let N = {
         text: f.intl.string(f.t.Ve9Ge6),
         icon: a.GiftIcon,
         onClick: () => {
@@ -43,7 +43,7 @@ function p(e) {
                 body: g?.body ?? "",
                 assetUrl: A ?? "",
                 badge: null != E ? { type: { text: E.toUpperCase() }, variant: "brand", icon: o.ClockIcon } : void 0,
-                action: v,
+                action: N,
                 caretConfig: { align: "center" },
                 onRequestClose: function () {
                     t(), p(m.i.USER_DISMISS);

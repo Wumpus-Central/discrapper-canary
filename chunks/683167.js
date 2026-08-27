@@ -27,7 +27,7 @@ function I(e) {
 }
 var y = n(113001),
     S = n(2368);
-function v(e, t, n) {
+function N(e, t, n) {
     let l = p.VW.getCurrentInline(e);
     if ("block" === t) return !0;
     let i = p.VW.getCurrentText(e);
@@ -71,7 +71,7 @@ function v(e, t, n) {
         }
     return f.b.delete(e, { at: u, unit: t, reverse: n, select: !0 }), !0;
 }
-var N = n(694403),
+var v = n(694403),
     _ = n(323350),
     j = n(530795),
     T = n(551483);
@@ -199,8 +199,8 @@ function R(e) {
             if (0 === n.length) return !1;
             if (null != t.selection && p.ZF.isExpanded(t.selection)) {
                 let e = s.KE.string(t, t.selection),
-                    l = (0, N.W1)(n),
-                    i = (0, N.W1)(e);
+                    l = (0, v.W1)(n),
+                    i = (0, v.W1)(e);
                 if (null != l && null == i) {
                     let [e, n] = p.ZF.edges(t.selection);
                     return (
@@ -240,10 +240,10 @@ function R(e) {
                     null != e.selection && null != p.VW.getCurrentInline(e) ? f.b.insertText(e, t) : s(t);
                 }),
                 (e.deleteBackward = (t) => {
-                    v(e, t, !0) || n(t);
+                    N(e, t, !0) || n(t);
                 }),
                 (e.deleteForward = (t) => {
-                    v(e, t, !1) || l(t);
+                    N(e, t, !1) || l(t);
                 }),
                 (e.deleteFragment = (t) => {
                     if (null != e.selection && p.ZF.isExpanded(e.selection)) {

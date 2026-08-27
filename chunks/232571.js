@@ -11,8 +11,8 @@ var i = n(477900),
     h = n(538638),
     p = n(558076),
     m = n(544299),
-    A = n(996752),
-    f = n(1195),
+    f = n(996752),
+    A = n(1195),
     x = n(375708),
     g = n(781505);
 function C() {
@@ -70,10 +70,10 @@ function y(e) {
         }, [N, E, t, n, y]),
         T = (0, m.Sb)({
             position: { x: n, y },
-            targetLabel: x.intl.formatToPlainString(f.default.NYm6Cb, { seatLabel: j }),
+            targetLabel: x.intl.formatToPlainString(A.default.NYm6Cb, { seatLabel: j }),
         });
     if (v || null == E) return null;
-    let { numericAvatarSize: _ } = (0, A.F)(I),
+    let { numericAvatarSize: _ } = (0, f.F)(I),
         R = 1.2 * Math.max(_, 24);
     return (0, i.jsx)(r.m, {
         text: N || null != T ? null : x.intl.string(x.t["96ANUN"]),

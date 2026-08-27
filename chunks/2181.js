@@ -21,8 +21,8 @@ var l = n(477900),
     I = n(158045),
     y = n(732280),
     S = n(369805),
-    v = n(862990),
-    N = n(632150),
+    N = n(862990),
+    v = n(632150),
     _ = n(792656),
     j = n(202541),
     T = n(652215),
@@ -48,7 +48,7 @@ function L(e) {
     let G = (0, y.V)(),
         V = i.useCallback(() => (0, I.LE)(G, j.pe.TIER_2) ?? R.intl.string(R.t.pj0XBN), [G]),
         F = (0, S.A)(j.pe.TIER_2),
-        H = (0, v.O9)();
+        H = (0, N.O9)();
     return (
         (t = U
             ? (0, E.TM)()
@@ -102,7 +102,7 @@ function L(e) {
                                         H &&
                                         (0, l.jsx)("div", {
                                             className: O.Zr,
-                                            children: (0, l.jsx)(N.A, { subtitle: R.intl.string(b.default.BkJYQ5) }),
+                                            children: (0, l.jsx)(v.A, { subtitle: R.intl.string(b.default.BkJYQ5) }),
                                         }),
                                 ],
                             }),

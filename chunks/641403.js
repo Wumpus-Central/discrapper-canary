@@ -617,8 +617,8 @@ var eY = n(554146),
     e3 = n(826673),
     e8 = n(182922),
     e7 = n(532624),
-    e5 = n(531685),
-    e6 = n(723702),
+    e6 = n(531685),
+    e5 = n(723702),
     e4 = n(350535),
     e9 = n(115023);
 function te(e) {
@@ -627,7 +627,7 @@ function te(e) {
         r = (0, h.bG)([p.A], () => null != t && p.A.isFavoriteSound(t.soundId)),
         a = (0, h.bG)([em.A], () => em.A.getGuild(t?.guildId)),
         o = (0, h.bG)([e2.Ay], () => e2.Ay.useReducedMotion, []),
-        u = (0, h.bG)([e5.A], () => e5.A.isFocused()),
+        u = (0, h.bG)([e6.A], () => e6.A.isFocused()),
         c = (0, h.bG)([e7.Ay], () => e7.Ay.getKeybindForAction(eN.hCu.SOUNDBOARD_HOLD));
     if (null != t && s.length > 0)
         return (0, l.jsx)(e8.A, {
@@ -654,7 +654,7 @@ function te(e) {
     }
     let f = (0, e3.k8)(eY.M.SOUNDBOARD_KEYBIND_TIP),
         g =
-            null != c && (0, e6.isWindows)() && !f
+            null != c && (0, e5.isWindows)() && !f
                 ? eG.intl.format(eG.t.udMTth, {
                       keybind: (0, e4.dI)(c.shortcut, !0),
                       openSettingsHook: (e, t) => (0, l.jsx)(e$.Anchor, { onClick: m, children: e }, t),
@@ -1271,7 +1271,7 @@ function tx(e) {
             [eD, eV, eF, eP.length],
         ),
         e7 = i.useCallback((e) => e_((0, eu.lG)(e, X, V, s, M)), [s, V, X, M]),
-        e5 = i.useCallback(
+        e6 = i.useCallback(
             (e) => {
                 (0, j.L3)(e, async () => {
                     let { default: e } = await n.e("811562").then(n.bind(n, 666801));
@@ -1280,7 +1280,7 @@ function tx(e) {
             },
             [M],
         ),
-        e6 = i.useCallback(
+        e5 = i.useCallback(
             () =>
                 v
                     ? (0, l.jsx)(J.Gq, {
@@ -1293,11 +1293,11 @@ function tx(e) {
                     : (0, l.jsx)(S.D, {
                           tabIndex: 0,
                           className: tc.Jm,
-                          onClick: e5,
+                          onClick: e6,
                           "aria-label": eG.intl.string(eG.t.kbFsAD),
                           children: (0, l.jsx)(tg, { className: tc.By }),
                       }),
-            [v, e5],
+            [v, e6],
         ),
         e4 = i.useCallback(
             (e) =>
@@ -1387,7 +1387,7 @@ function tx(e) {
                     renderSectionFooter: e8,
                     renderSection: e2,
                     renderCategoryList: e4,
-                    renderHeaderAccessories: e6,
+                    renderHeaderAccessories: e5,
                     rowHeight: 48,
                     sectionHeaderHeight: e0,
                     sectionFooterHeight: e1,

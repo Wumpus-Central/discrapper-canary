@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Ay: () => v, Q9: () => w, W: () => k }), n(321073);
+n.d(t, { Ay: () => N, Q9: () => w, W: () => k }), n(321073);
 var l = n(635377),
     i = n.n(l),
     s = n(181370),
@@ -21,7 +21,7 @@ let C = new a.Vy("withCodeBlocks"),
     I = /^[a-z0-9_+\-.#]+$/i,
     y = null,
     S = null;
-function v(e) {
+function N(e) {
     let { onChange: t } = e,
         l = null,
         i = !1,
@@ -37,7 +37,7 @@ function v(e) {
                             s = !1;
                             try {
                                 m.o.withoutSaving(e, () => {
-                                    g.VW.withoutNormalizing(e, () => N(e, r));
+                                    g.VW.withoutNormalizing(e, () => v(e, r));
                                 }),
                                     (l = g.VW.richValue(e));
                             } catch (e) {
@@ -52,7 +52,7 @@ function v(e) {
             g.VW.richValue(e) !== l &&
                 (m.o.withoutSaving(e, () => {
                     g.VW.withoutNormalizing(e, () => {
-                        N(e, r) &&
+                        v(e, r) &&
                             null == y &&
                             !i &&
                             ((i = !0),
@@ -69,7 +69,7 @@ function v(e) {
                                 .then(() => {
                                     (l = null),
                                         m.o.withoutSaving(e, () => {
-                                            g.VW.withoutNormalizing(e, () => N(e));
+                                            g.VW.withoutNormalizing(e, () => v(e));
                                         }),
                                         (l = g.VW.richValue(e));
                                 })
@@ -85,7 +85,7 @@ function v(e) {
         e
     );
 }
-function N(e, t) {
+function v(e, t) {
     let n = (function (e, t) {
         let n = [],
             l = null;

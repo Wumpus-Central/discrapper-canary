@@ -21,8 +21,8 @@ var l = n(477900),
     I = n(565645),
     y = n(775602),
     S = n(688810),
-    v = n(21161),
-    N = n(850992),
+    N = n(21161),
+    v = n(850992),
     _ = n(319993),
     j = n(435558),
     T = n(132500),
@@ -159,7 +159,7 @@ let $ = i.forwardRef(function (e, t) {
             (el ? w.HO.getSetting() : w.dG.getSetting()?.volume) ?? 100,
             !el && p?.isVocal() ? z.a.VOICE : z.a.DEFAULT,
         ),
-        { createMultipleConfettiAt: ep } = i.useContext(v.x),
+        { createMultipleConfettiAt: ep } = i.useContext(N.x),
         eg = i.useRef(null),
         ex =
             ((n = f.soundId),
@@ -175,10 +175,10 @@ let $ = i.forwardRef(function (e, t) {
         eI = "1" === f.soundId,
         ey = `sound-${f.soundId}`,
         eS = (0, a.rm)(ey),
-        ev = null != eo || null != eu,
-        eN = !(0, F.Ir)(ec, f, p) && !el,
-        e_ = b || (M && !eN),
-        ej = N.LW.useStore().bottomPosition ?? 0,
+        eN = null != eo || null != eu,
+        ev = !(0, F.Ir)(ec, f, p) && !el,
+        e_ = b || (M && !ev),
+        ej = v.LW.useStore().bottomPosition ?? 0,
         eT = eg.current?.getBoundingClientRect().bottom ?? 0,
         [eb, eR] = i.useState(!1),
         eO = i.useCallback(() => {
@@ -187,7 +187,7 @@ let $ = i.forwardRef(function (e, t) {
         eM = i.useCallback(() => {
             eR(!1);
         }, []),
-        eL = eN && Q;
+        eL = ev && Q;
     function ek(e) {
         (eI &&
             !eA &&
@@ -220,15 +220,15 @@ let $ = i.forwardRef(function (e, t) {
                 text: Z.intl.formatToPlainString(Z.t["/8fYO5"], { emojiName: t.emojiName, soundName: t.name }),
                 children: (0, l.jsx)(m.H, { size: "md", color: "currentColor", className: Y.Wo }),
             });
-        })({ sound: f, previewSound: em, disabled: eN && !b }),
+        })({ sound: f, previewSound: em, disabled: ev && !b }),
     });
     function eP(e) {
-        return L || eN
+        return L || ev
             ? eL
                 ? (0, l.jsx)(x.LockIcon, {
                       size: "xs",
                       color: "currentColor",
-                      className: r()(Y.C4, Y.hz, e, { [Y.hn]: ev }),
+                      className: r()(Y.C4, Y.hz, e, { [Y.hn]: eN }),
                   })
                 : null
             : (0, l.jsx)(g.PlayIcon, { size: "xs", color: "currentColor", className: r()(Y.C4, e) });
@@ -276,7 +276,7 @@ let $ = i.forwardRef(function (e, t) {
                             [Y.ju]: L,
                             [Y.wT]: R,
                             [Y.$9]: !R && !b,
-                            [Y.Au]: eN && !b,
+                            [Y.Au]: ev && !b,
                             [Y.fx]: !R && b,
                             [Y.in]: R && T,
                         },
@@ -285,18 +285,18 @@ let $ = i.forwardRef(function (e, t) {
                     onClick: (e) => {
                         ek?.(e);
                     },
-                    onContextMenu: M && !eN ? ed : void 0,
+                    onContextMenu: M && !ev ? ed : void 0,
                     children: [
                         (0, l.jsxs)("div", {
-                            className: r()(Y.KM, { [Y.hn]: ev }),
+                            className: r()(Y.KM, { [Y.hn]: eN }),
                             "aria-hidden": !0,
                             ref: eg,
                             children: [
-                                ev && (0, l.jsx)(I.A, { emojiId: eo, emojiName: eu, className: Y.Zg }),
+                                eN && (0, l.jsx)(I.A, { emojiId: eo, emojiName: eu, className: Y.Zg }),
                                 (0, l.jsx)(C.E, {
                                     variant: "text-xs/medium",
                                     color: R ? void 0 : "text-muted",
-                                    className: r()(Y.TW, { [Y.hn]: ev }),
+                                    className: r()(Y.TW, { [Y.hn]: eN }),
                                     children: ea,
                                 }),
                             ],

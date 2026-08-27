@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { C4: () => I, D8: () => _, XN: () => v, nO: () => y });
+n.d(t, { C4: () => I, D8: () => _, XN: () => N, nO: () => y });
 var l = n(582128),
     i = n(17928),
     s = n(573648),
@@ -60,7 +60,7 @@ function y(e) {
                   : null != A && l
                     ? { largeImage: { src: A }, smallImage: void 0 }
                     : { largeImage: h, smallImage: void 0 }),
-        N({ activity: s, application: a ?? r, largeImageSrc: t.largeImage?.src, trackingSource: i }),
+        v({ activity: s, application: a ?? r, largeImageSrc: t.largeImage?.src, trackingSource: i }),
         t
     );
 }
@@ -91,11 +91,11 @@ function S(e, t) {
         return null != r ? { largeImage: r, smallImage: i } : { largeImage: i, smallImage: void 0 };
     })({ activity: e, application: t, largeImage: n, smallImage: l });
 }
-function v(e, t, n) {
+function N(e, t, n) {
     let l = S(e, t);
-    return N({ activity: e, application: t, largeImageSrc: l.largeImage?.src, trackingSource: n }), l;
+    return v({ activity: e, application: t, largeImageSrc: l.largeImage?.src, trackingSource: n }), l;
 }
-function N(e) {
+function v(e) {
     let { activity: t, application: n, largeImageSrc: s, trackingSource: r } = e,
         a = t?.application_id,
         o = (0, c.h)(a),

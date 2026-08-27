@@ -6,91 +6,91 @@ var a = l(477900),
     o = l(691885),
     s = l(150934),
     u = l(834730),
-    c = l(914410),
-    d = l(349738);
+    d = l(914410),
+    c = l(349738);
 let p = function () {
     let [e, t] = n.useState(0),
         [l, p] = n.useState(4),
-        [m, h] = n.useState(2),
-        [b, x] = n.useState(c.fh.LIGHT),
-        [f, g] = n.useState(c.qP.BLUE),
-        [E, y] = n.useState("darkslategray"),
-        [v, C] = n.useState("blanchedalmond"),
-        [S, j] = n.useState("pink"),
-        [T, A] = n.useState(!0),
+        [m, b] = n.useState(2),
+        [h, x] = n.useState(d.fh.LIGHT),
+        [f, y] = n.useState(d.qP.BLUE),
+        [g, v] = n.useState("darkslategray"),
+        [E, S] = n.useState("blanchedalmond"),
+        [T, C] = n.useState("pink"),
+        [j, A] = n.useState(!0),
         I = n.useMemo(
             () =>
-                Object.entries(c.fh).map((e) => {
+                Object.entries(d.fh).map((e) => {
                     let [t, l] = e;
                     return { id: l, label: t, value: l };
                 }),
             [],
         ),
-        _ = n.useMemo(
+        P = n.useMemo(
             () =>
-                Object.entries(c.qP).map((e) => {
+                Object.entries(d.qP).map((e) => {
                     let [t, l] = e;
                     return { id: l, label: t, value: l };
                 }),
             [],
         );
-    return (0, a.jsxs)(d.LB, {
+    return (0, a.jsxs)(c.LB, {
         children: [
-            (0, a.jsx)(c.Ay, {
+            (0, a.jsx)(d.Ay, {
                 progress: m,
                 minimum: e,
                 maximum: l,
-                weight: b,
+                weight: h,
                 variant: f,
-                override: { default: { background: E, gradientStart: v, gradientEnd: S } },
-                glowing: T,
+                override: { default: { background: g, gradientStart: E, gradientEnd: T } },
+                glowing: j,
             }),
-            (0, a.jsx)(d.nB, {}),
-            (0, a.jsx)(d.MG, {
+            (0, a.jsx)(c.nB, {}),
+            (0, a.jsx)(c.MG, {
                 children: (0, a.jsx)(r.k, {
                     type: "number",
                     value: m.toString(),
                     onChange: (t) => {
-                        h((0, i.clamp)(+t, e, l));
+                        b((0, i.clamp)(+t, e, l));
                     },
                     label: `Progress ( ${e} - ${l} ) `,
                 }),
             }),
-            (0, a.jsx)(d.MG, {
+            (0, a.jsx)(c.MG, {
                 children: (0, a.jsx)(r.k, {
                     type: "number",
                     value: e.toString(),
                     onChange: (e) => {
-                        0 > +e || +e >= l || (m < +e && h(+e), t(+e));
+                        0 > +e || +e >= l || (m < +e && b(+e), t(+e));
                     },
                     label: "Minimum Value",
                 }),
             }),
-            (0, a.jsx)(d.MG, {
+            (0, a.jsx)(c.MG, {
                 children: (0, a.jsx)(r.k, {
                     type: "number",
                     value: l.toString(),
                     onChange: (t) => {
-                        +t <= e || 1 > +t || (m > +t && h(+t), p(+t));
+                        +t <= e || 1 > +t || (m > +t && b(+t), p(+t));
                     },
                     label: "Maximum Value",
                 }),
             }),
-            (0, a.jsx)(d.MG, {
+            (0, a.jsx)(c.MG, {
                 children: (0, a.jsx)(o.l, {
                     label: "Variant",
                     hideLabel: !0,
                     placeholder: "Variant",
                     onSelectionChange: (e) => {
-                        null !== e && g(e);
+                        null !== e && y(e);
                     },
                     value: f,
-                    options: _,
+                    options: P,
                     selectionMode: "single",
                     fullWidth: !0,
                 }),
             }),
-            (0, a.jsx)(d.MG, {
+            (0, a.jsx)(c.MG, {
                 children: (0, a.jsx)(o.l, {
                     label: "Weight",
                     selectionMode: "single",
@@ -98,20 +98,20 @@ let p = function () {
                     onSelectionChange: (e) => {
                         null !== e && x(e);
                     },
-                    value: b,
+                    value: h,
                     options: I,
                 }),
             }),
-            (0, a.jsx)(d.MG, {
+            (0, a.jsx)(c.MG, {
                 children: (0, a.jsx)(s.S, {
                     label: "Glowing",
-                    checked: T,
+                    checked: j,
                     onChange: (e) => {
                         A(e);
                     },
                 }),
             }),
-            (0, a.jsx)(d.nB, {}),
+            (0, a.jsx)(c.nB, {}),
             (0, a.jsx)(u.E, {
                 variant: "text-lg/semibold",
                 color: "text-feedback-critical",
@@ -122,29 +122,29 @@ let p = function () {
                 children:
                     'Note: this component allows setting overrides per theme. For simplicity in this story, we only set the "default" override which applies to all themes',
             }),
-            (0, a.jsx)(d.MG, {
+            (0, a.jsx)(c.MG, {
                 children: (0, a.jsx)(r.k, {
-                    value: E,
+                    value: g,
                     onChange: (e) => {
-                        y(e);
+                        v(e);
                     },
                     label: "Background (optional)",
                 }),
             }),
-            (0, a.jsx)(d.MG, {
+            (0, a.jsx)(c.MG, {
                 children: (0, a.jsx)(r.k, {
-                    value: v,
+                    value: E,
                     onChange: (e) => {
-                        C(e);
+                        S(e);
                     },
                     label: "Gradient Start",
                 }),
             }),
-            (0, a.jsx)(d.MG, {
+            (0, a.jsx)(c.MG, {
                 children: (0, a.jsx)(r.k, {
-                    value: S,
+                    value: T,
                     onChange: (e) => {
-                        j(e);
+                        C(e);
                     },
                     label: "Gradient End",
                 }),

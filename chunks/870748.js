@@ -22,8 +22,8 @@ var l = n(485845),
     y = n(551483),
     S = n(652215);
 n(827669);
-let v = new Set(["applicationCommandOption"]),
-    N = new Set([i.n4.ATTACHMENT]),
+let N = new Set(["applicationCommandOption"]),
+    v = new Set([i.n4.ATTACHMENT]),
     _ = new Set(["line", "applicationCommand"]);
 function j(e, t) {
     let {
@@ -65,8 +65,8 @@ function j(e, t) {
         }
         return n(l);
     }),
-        (e.isInline = (e) => !!v.has(e.type) || d(e)),
-        (e.isVoid = (e) => !!("applicationCommandOption" === e.type && N.has(e.optionType)) || f(e)),
+        (e.isInline = (e) => !!N.has(e.type) || d(e)),
+        (e.isVoid = (e) => !!("applicationCommandOption" === e.type && v.has(e.optionType)) || f(e)),
         (e.deleteBackward = (t) => {
             M(e, () => g(t));
         }),
@@ -162,7 +162,7 @@ function j(e, t) {
                                                 for (let l of s.options)
                                                     if (!e.has(l.name) && (l.required || null != i[l.name])) {
                                                         let e, i;
-                                                        o.length > 0 && !N.has(l.type)
+                                                        o.length > 0 && !v.has(l.type)
                                                             ? ((e = o), (o = ""))
                                                             : (e = (i = L(n, t, l.name)) ?? "");
                                                         let s = {
@@ -347,7 +347,7 @@ function b(e, t) {
         null == t.options ||
         1 !== t.options.length ||
         !0 === t.options[0].required ||
-        N.has(t.options[0].type) ||
+        v.has(t.options[0].type) ||
         x.O7(e).length > 0 ||
         null == x.n$(e)
     )

@@ -243,8 +243,8 @@ function I() {
 }
 var y = n(462180),
     S = n(97808),
-    v = n(778712),
-    N = n(571694),
+    N = n(778712),
+    v = n(571694),
     _ = n(548118),
     j = n(366811),
     T = n(734057),
@@ -260,16 +260,16 @@ function L() {
         n = (0, c.bG)([b.A], () => b.A.getGuild(e)),
         i = (0, c.bG)([T.A], () => (null == n ? T.A.getChannel(t) : null)),
         s = (0, c.bG)([R.default], () => R.default.getCurrentUser()),
-        r = null != i ? (0, N.Y)(i) : null,
+        r = null != i ? (0, v.Y)(i) : null,
         a = null != s ? s.getAvatarURL(e, 80) : O.vI["0"],
-        o = (0, l.jsx)(S.eu, { src: a, "aria-hidden": !0, size: v._3.SIZE_80, className: M.HT }),
+        o = (0, l.jsx)(S.eu, { src: a, "aria-hidden": !0, size: N._3.SIZE_80, className: M.HT }),
         u = null;
     return (
         (u =
             null != n
                 ? (0, l.jsx)(_.Ay, { guild: n })
                 : null != r
-                  ? (0, l.jsx)(S.eu, { "aria-hidden": !0, src: r, size: v._3.SIZE_80, className: M.HT })
+                  ? (0, l.jsx)(S.eu, { "aria-hidden": !0, src: r, size: N._3.SIZE_80, className: M.HT })
                   : o),
         (0, l.jsxs)("div", {
             className: M.kL,

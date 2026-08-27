@@ -11,8 +11,8 @@ var i = n(477900),
     h = n(51758),
     p = n(478752),
     m = n(141035),
-    A = n(175203),
-    f = n(426660),
+    f = n(175203),
+    A = n(426660),
     x = n(806931),
     g = n(375708),
     C = n(853325);
@@ -29,7 +29,7 @@ let y = function (e) {
     return (0, i.jsxs)("div", {
         className: C.kL,
         children: [
-            (0, i.jsx)(f.A, { disableAnimation: b }),
+            (0, i.jsx)(A.A, { disableAnimation: b }),
             (0, i.jsx)("div", {
                 className: C.os,
                 style: { maxWidth: 168 * v },
@@ -37,7 +37,7 @@ let y = function (e) {
                     .slice(0, 5)
                     .map((e) =>
                         (0, i.jsx)(
-                            A.Ay,
+                            f.Ay,
                             {
                                 participant: e,
                                 channel: n,

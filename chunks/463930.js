@@ -29,10 +29,10 @@ function p(e) {
         } = e,
         I = i.useContext(c.C),
         [y, S] = i.useState(!1),
-        v = i.useCallback(() => {
+        N = i.useCallback(() => {
             S(!0);
         }, []),
-        N = i.useCallback(() => {
+        v = i.useCallback(() => {
             S(!1);
         }, []),
         _ = "username" === t,
@@ -58,8 +58,8 @@ function p(e) {
                 : null;
     return (0, l.jsxs)("span", {
         className: r()(p, f.kL, { [f.mO]: E }),
-        onMouseEnter: v,
-        onMouseLeave: N,
+        onMouseEnter: N,
+        onMouseLeave: v,
         children: [
             "left" === d && w,
             (0, l.jsxs)("span", {

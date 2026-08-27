@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => N, e: () => v });
+n.d(t, { A: () => v, e: () => N });
 var l = n(477900),
     i = n(582128),
     s = n(503698),
@@ -44,7 +44,7 @@ function S(e) {
         title: i,
     });
 }
-function v(e) {
+function N(e) {
     let { channelId: t, file: n } = e,
         s = (0, u.bG)([x.A], () => x.A.getMessageForFile(n.id)?.content),
         r = i.useMemo(() => {
@@ -105,7 +105,7 @@ function v(e) {
         ],
     });
 }
-let N = function (e) {
+let v = function (e) {
     let { className: t, url: n, fileName: i, fileSize: s, onClick: a, onContextMenu: u, renderAdjacentContent: c } = e;
     return (0, l.jsxs)("div", {
         className: r()(y.Ig, t),

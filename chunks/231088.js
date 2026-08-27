@@ -60,16 +60,16 @@ function p(e) {
         b = l.useCallback(() => {
             (p.current = !0), v();
         }, [v]),
-        T = l.useCallback(() => {
+        y = l.useCallback(() => {
             (p.current = !0), E();
         }, [E]),
-        y = l.useCallback(
+        T = l.useCallback(
             (e) => {
                 "Enter" !== e.key || e.shiftKey
-                    ? "Escape" === e.key && (e.preventDefault(), e.stopPropagation(), T())
+                    ? "Escape" === e.key && (e.preventDefault(), e.stopPropagation(), y())
                     : (e.preventDefault(), b());
             },
-            [b, T],
+            [b, y],
         );
     return {
         isEditing: u,
@@ -83,8 +83,8 @@ function p(e) {
         handleCommit: v,
         handleCancel: E,
         handleInputCommit: b,
-        handleInputCancel: T,
-        onInputKeyDown: y,
+        handleInputCancel: y,
+        onInputKeyDown: T,
         onBlur: C,
         onContainerKeyDown: S,
     };
@@ -127,8 +127,8 @@ function A(e) {
             onBlur: C,
             onKeyDown: S,
             textVariant: b,
-            textColor: T,
-            disabled: y = !1,
+            textColor: y,
+            disabled: T = !1,
             growWidth: N = !1,
             removeVerticalPadding: k = !1,
         } = e,
@@ -142,8 +142,8 @@ function A(e) {
         G = P ? p : A,
         M = null != D && null != G,
         [U] = l.useState(t),
-        [F, W] = l.useState(!1);
-    F || t === U || W(!0);
+        [W, F] = l.useState(!1);
+    W || t === U || F(!0);
     let H = [];
     O && H.push(R), M && "compact" !== g && H.push(L);
     let V = H.length > 0 ? H.join(" ") : void 0;
@@ -153,24 +153,24 @@ function A(e) {
     }
     let z = (0, i.jsxs)("div", {
         ref: w,
-        className: r()(h.LL, { [h.JD]: P, [h.xe]: _, [h.r9]: y }),
-        onMouseDown: y
+        className: r()(h.LL, { [h.JD]: P, [h.xe]: _, [h.r9]: T }),
+        onMouseDown: T
             ? void 0
             : function (e) {
                   e.preventDefault();
               },
-        onClick: y ? void 0 : B,
+        onClick: T ? void 0 : B,
         children: [
             O
                 ? (0, i.jsx)(m.E, {
                       id: R,
                       variant: b ?? "text-sm/normal",
-                      color: T ?? "text-muted",
+                      color: y ?? "text-muted",
                       className: h.qf,
                       children: s,
                   })
                 : n,
-            !y &&
+            !T &&
                 (0, i.jsx)(x.D, {
                     innerRef: c,
                     "aria-label": d,
@@ -196,7 +196,7 @@ function A(e) {
         children: (0, i.jsx)(
             "div",
             {
-                className: F ? h.qG : void 0,
+                className: W ? h.qG : void 0,
                 children: t
                     ? o
                     : (0, i.jsxs)(i.Fragment, {

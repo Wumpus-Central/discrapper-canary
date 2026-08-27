@@ -17,8 +17,8 @@ function h(e) {
             icon: a,
             title: h,
             description: C,
-            userCount: E,
-            onClick: f,
+            userCount: f,
+            onClick: E,
             highlight: p,
             onDismiss: g,
         } = e,
@@ -30,7 +30,7 @@ function h(e) {
         );
     return (0, l.jsxs)(o.D, {
         className: s()(m.kL, n, null != p && { [m.U6]: p }),
-        onClick: f,
+        onClick: E,
         children: [
             (0, l.jsx)("div", { className: s()(m.Kk, t), children: a }),
             (0, l.jsxs)("div", {
@@ -38,7 +38,7 @@ function h(e) {
                 children: [
                     (0, l.jsx)(c.D, { variant: "heading-md/semibold", color: "text-strong", children: h }),
                     (0, l.jsx)(u.E, { variant: "text-xs/normal", color: "text-strong", className: m.mG, children: C }),
-                    null != E && E > 0
+                    null != f && f > 0
                         ? (0, l.jsxs)(l.Fragment, {
                               children: [
                                   (0, l.jsx)(u.E, {
@@ -51,7 +51,7 @@ function h(e) {
                                       variant: "text-xs/normal",
                                       color: "text-strong",
                                       className: m.mG,
-                                      children: A.intl.format(A.t.NywdIj, { count: E }),
+                                      children: A.intl.format(A.t.NywdIj, { count: f }),
                                   }),
                               ],
                           })

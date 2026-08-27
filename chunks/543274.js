@@ -12,8 +12,8 @@ var l = t(477900),
     m = t(641703),
     h = t(807067),
     C = t(521588),
-    E = t(688810),
-    f = t(975412),
+    f = t(688810),
+    E = t(975412),
     p = t(384059),
     g = t(379848),
     x = t(267102),
@@ -43,10 +43,10 @@ function b(e) {
             [P],
         ),
         H = (0, x.Us)() === _.BRT.POPOUT,
-        { parentAnalyticsLocation: w, newestAnalyticsLocation: F } = (0, E.Ay)(),
+        { parentAnalyticsLocation: w, newestAnalyticsLocation: F } = (0, f.Ay)(),
         Y = i.useCallback(() => {
             (0, p.X)(w, p.O.ACTIVITY),
-                (0, f.A)({
+                (0, E.A)({
                     context: null != n ? { type: "channel", channel: n } : { type: "contextless" },
                     openInPopout: H,
                     analyticsLocation: F,

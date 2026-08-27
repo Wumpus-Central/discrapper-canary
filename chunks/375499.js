@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => _, B: () => v });
+n.d(t, { A: () => _, B: () => N });
 var l = n(477900),
     i = n(582128),
     s = n(503698),
@@ -21,8 +21,8 @@ var l = n(477900),
     I = n(307731),
     y = n(375708),
     S = n(346089);
-let v = { tension: 800, friction: 24 };
-function N(e) {
+let N = { tension: 800, friction: 24 };
+function v(e) {
     let {
             className: t,
             renderButtonContents: n,
@@ -36,9 +36,9 @@ function N(e) {
             ref: E,
             ...y
         } = e,
-        [N, _] = i.useState(!1),
+        [v, _] = i.useState(!1),
         [j, T] = i.useState(50),
-        b = N || s,
+        b = v || s,
         R = (0, C.t)(S, "emojiButton", b ? "Hovered" : "Normal"),
         O = (function (e) {
             let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 18;
@@ -78,7 +78,7 @@ function N(e) {
             null != n
                 ? n()
                 : (0, l.jsx)(d.c, {
-                      config: v,
+                      config: N,
                       to: { value: +!!b },
                       children: (e) => {
                           let { value: t } = e;
@@ -114,7 +114,7 @@ function _(e) {
             ref: x,
             keyboardShortcut: C,
             canShowNUXPremiumTooltip: I = !1,
-            ...v
+            ...N
         } = e,
         _ = (0, o.bG)([p.Ay], () => p.Ay.useReducedMotion),
         j = (0, A.k0)(),
@@ -124,7 +124,7 @@ function _(e) {
         M = i.useRef(null),
         L = x ?? M;
     function k() {
-        return (0, l.jsx)(N, {
+        return (0, l.jsx)(v, {
             ref: L,
             onMouseLeave: () => {
                 R && b(E.i.USER_DISMISS);
@@ -136,7 +136,7 @@ function _(e) {
             "aria-controls": d,
             active: a,
             spriteClassName: R ? S.spritePremiumColored : void 0,
-            ...v,
+            ...N,
         });
     }
     return null == s

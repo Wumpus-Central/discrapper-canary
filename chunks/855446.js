@@ -12,8 +12,8 @@ var l,
     m = t(43990),
     h = t(932413),
     C = t(849269),
-    E = t(881343),
-    f = t(697675),
+    f = t(881343),
+    E = t(697675),
     p = t(869003),
     g = t(652215),
     x = t(375708),
@@ -52,7 +52,7 @@ function j(e) {
             () =>
                 (0, i.jsx)("div", {
                     className: I.Gz,
-                    children: (0, i.jsx)("div", { className: I.fC, children: (0, i.jsx)(f.A, { labelType: O }) }),
+                    children: (0, i.jsx)("div", { className: I.fC, children: (0, i.jsx)(E.A, { labelType: O }) }),
                 }),
             [O],
         ),
@@ -112,7 +112,7 @@ function j(e) {
                                     className: r()(e, I.LM, _, { [I.$g]: 0 === s, [I.J3]: 1 === s }),
                                     style: { transform: n.to([0, 1], [1, 1.05]).to((e) => `scale(${e})`) },
                                     children: [
-                                        (0, i.jsx)(E.A, {
+                                        (0, i.jsx)(f.A, {
                                             imageBackground: b,
                                             applicationName: t.application.name,
                                             imageClassName: I.jj,

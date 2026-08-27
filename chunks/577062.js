@@ -16,8 +16,8 @@ function A(e) {
             centerButton: m = !1,
             awaitingRemote: h,
             onMouseEnter: C,
-            onMouseLeave: E,
-            onClick: f,
+            onMouseLeave: f,
+            onClick: E,
             ...p
         } = e,
         { parentAnalyticsLocation: g } = (0, r.Ay)(),
@@ -40,10 +40,10 @@ function A(e) {
                 C?.(e), T.onMouseEnter();
             },
             onMouseLeave: (e) => {
-                E?.(e), T.onMouseLeave();
+                f?.(e), T.onMouseLeave();
             },
             onClick: (e) => {
-                f?.(e), (0, c.X)(g, c.O.MIC, n);
+                E?.(e), (0, c.X)(g, c.O.MIC, n);
             },
         })
     );

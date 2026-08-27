@@ -1,55 +1,55 @@
-n.d(t, { b: () => A });
-var a = n(477900),
-    l = n(582128),
-    r = n(503698),
-    s = n.n(r),
-    i = n(821609),
-    u = n(834730),
-    c = n(28863),
-    o = n(303136),
-    d = n(975571),
-    m = n(318346),
-    f = n(652215),
-    x = n(375708),
-    h = n(492931),
-    g = n(503928),
-    j = n(268920),
-    v = n(633217);
-function C() {
-    return (0, a.jsx)("div", {
-        className: h.s,
-        children: (0, a.jsx)(o.A, { src: v.A, fallbackImage: j.A, className: h.Cb }),
+l.d(t, { b: () => b });
+var n = l(477900),
+    a = l(582128),
+    s = l(503698),
+    r = l.n(s),
+    i = l(821609),
+    c = l(834730),
+    o = l(28863),
+    u = l(303136),
+    d = l(975571),
+    h = l(318346),
+    m = l(652215),
+    C = l(375708),
+    x = l(492931),
+    g = l(503928),
+    f = l(268920),
+    E = l(633217);
+function j() {
+    return (0, n.jsx)("div", {
+        className: x.s,
+        children: (0, n.jsx)(u.A, { src: E.A, fallbackImage: f.A, className: x.Cb }),
     });
 }
-function A(e) {
+function b(e) {
     let {
             ctaText: t,
-            ctaOnClick: n,
-            analyticsPage: r,
-            linkPreText: o = x.intl.string(x.t["5qZv9E"]),
-            linkText: j = x.intl.string(x.t.XRdyjz),
+            ctaOnClick: l,
+            analyticsPage: s,
+            linkPreText: u = C.intl.string(C.t["5qZv9E"]),
+            linkText: f = C.intl.string(C.t.XRdyjz),
         } = e,
-        v = l.useCallback(() => {
-            null != r &&
-                (0, m.Y)({ pageType: r, sectionType: f.JJy.ORBS_BALANCE_MENU, ctaObject: f.ZSU.ORBS_LEARN_MORE_LINK });
-        }, [r]);
-    return (0, a.jsxs)("div", {
-        className: s()(h.kL, g.O),
+        E = a.useCallback(() => {
+            null != s &&
+                (0, h.Y)({ pageType: s, sectionType: m.JJy.ORBS_BALANCE_MENU, ctaObject: m.ZSU.ORBS_LEARN_MORE_LINK });
+        }, [s]);
+    return (0, n.jsxs)("div", {
+        className: r()(x.kL, g.O),
         children: [
-            (0, a.jsx)(C, {}),
-            (0, a.jsx)(i.$, { text: t, variant: "primary", size: "sm", onClick: n, fullWidth: !0 }),
-            (0, a.jsxs)("div", {
-                className: h.kx,
+            (0, n.jsx)(j, {}),
+            (0, n.jsx)(i.$, { text: t, variant: "primary", size: "sm", onClick: l, fullWidth: !0 }),
+            (0, n.jsxs)("div", {
+                className: x.kx,
                 children: [
-                    void 0 !== o &&
-                        (0, a.jsxs)(u.E, { variant: "text-xs/normal", className: h.D5, children: [o, "\xa0"] }),
-                    (0, a.jsx)(c.Anchor, {
+                    void 0 !== u &&
+                        (0, n.jsxs)(c.E, { variant: "text-xs/normal", className: x.D5, children: [u, "\xa0"] }),
+                    (0, n.jsx)(o.Anchor, {
                         target: "_blank",
                         rel: "author",
-                        href: d.A.getArticleURL(f.MVz.ORBS_FAQ),
-                        className: h.CU,
-                        onClick: v,
-                        children: j,
+                        href: d.A.getArticleURL(m.MVz.ORBS_FAQ),
+                        className: x.CU,
+                        onClick: E,
+                        children: f,
                     }),
                 ],
             }),

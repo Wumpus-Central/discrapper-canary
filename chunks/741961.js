@@ -1,6 +1,6 @@
 "use strict";
 let l;
-n.d(t, { A: () => N });
+n.d(t, { A: () => v });
 var i = n(17928),
     s = n(636537),
     r = n(228366),
@@ -73,7 +73,7 @@ function y(e) {
 function S() {
     (p = {}), (g = {}), (x = {});
 }
-class v extends i.Ay.Store {
+class N extends i.Ay.Store {
     initialize() {
         this.waitFor(u.default, c.A);
     }
@@ -91,7 +91,7 @@ class v extends i.Ay.Store {
         return x[e] ?? null;
     }
 }
-let N = new v(r.h, {
+let v = new N(r.h, {
     TYPING_START: I,
     TYPING_STOP: y,
     TYPING_START_LOCAL: function (e) {

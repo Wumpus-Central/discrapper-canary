@@ -31,8 +31,8 @@ function S(e, t) {
         type: e.type,
     };
 }
-var v = n(521732);
-let N = {},
+var N = n(521732);
+let v = {},
     _ = {},
     j = {},
     T = [],
@@ -56,10 +56,10 @@ class k extends u.Ay.PersistedStore {
             this.syncWith([f.A], L);
     }
     allSummaries() {
-        return N;
+        return v;
     }
     topSummaries() {
-        return Object.values(N)
+        return Object.values(v)
             .flat()
             .filter(
                 (e) =>
@@ -69,7 +69,7 @@ class k extends u.Ay.PersistedStore {
             .sort((e, t) => y.default.extractTimestamp(t.endId) - y.default.extractTimestamp(e.endId));
     }
     summaries(e) {
-        return N[e] ?? M;
+        return v[e] ?? M;
     }
     shouldShowTopicsBar() {
         return l;
@@ -96,7 +96,7 @@ class k extends u.Ay.PersistedStore {
         if (null != t) {
             let e = n?.summaryIdLastRequestedAt ?? 0,
                 l = Date.now() - e;
-            return t !== n?.summaryId || l > v.hf;
+            return t !== n?.summaryId || l > N.hf;
         }
         let i = n?.lastReceivedAt ?? 0;
         return !n?.fetching && 0 === i;
@@ -150,9 +150,9 @@ let w = new k(c.h, {
         let { summary: t, channelId: n, error: l, receivedAt: i } = e;
         if (null != t && Object.keys(t).length > 0) {
             let e = S(t, n),
-                l = [...(N[n] ?? [])],
+                l = [...(v[n] ?? [])],
                 i = l.findIndex((t) => t.id === e?.id);
-            i > -1 ? (l[i] = e) : l.push(e), (N[n] = l);
+            i > -1 ? (l[i] = e) : l.push(e), (v[n] = l);
         }
         let s = { ...(_[n] ?? { fetching: !1 }), summaryId: void 0, summaryIdLastReceivedAt: i, summaryIdError: l };
         _[n] = s;
@@ -165,10 +165,10 @@ let w = new k(c.h, {
         let { summaries: t, channelId: n, error: l, receivedAt: i } = e,
             s = t.filter((e) => Object.keys(e).length > 0).map((e) => S(e, n));
         if (null != r && r.channelId === n && !s.some((e) => e.id === r?.summaryId)) {
-            let e = (N[n] ?? []).find((e) => e.id === r?.summaryId);
+            let e = (v[n] ?? []).find((e) => e.id === r?.summaryId);
             null != e && s.push(e);
         }
-        N[n] = (0, a.sortBy)(s, (e) => y.default.extractTimestamp(e.startId)).reverse();
+        v[n] = (0, a.sortBy)(s, (e) => y.default.extractTimestamp(e.startId)).reverse();
         let o = { ..._[n], fetching: !1, error: void 0, lastReceivedAt: i };
         null != l && (o.error = l), (_[n] = o);
     },
@@ -183,7 +183,7 @@ let w = new k(c.h, {
             i.channelId === e.channelId &&
             null != i.summaryId
         ) {
-            let e = N[i.channelId];
+            let e = v[i.channelId];
             s = e?.findIndex((e) => e.id === i?.summaryId);
         }
     },
@@ -191,10 +191,10 @@ let w = new k(c.h, {
         let t = A.Ay.getChannelId();
         if (null != t)
             if (null != i && i.channelId === t && null != i.summaryId) {
-                let e = N[i.channelId];
+                let e = v[i.channelId];
                 s = e?.findIndex((e) => e.id === i?.summaryId);
             } else
-                s = N[t]?.findIndex((t) => {
+                s = v[t]?.findIndex((t) => {
                     var n, l, i, s;
                     return (
                         (n = e.topVisibleMessage),
@@ -269,7 +269,7 @@ let w = new k(c.h, {
                 },
                 { summariesByChannel: {}, summaryFetchStatusByChannel: {} },
             );
-        (N = { ...N, ...r.summariesByChannel }), (_ = { ..._, ...r.summaryFetchStatusByChannel });
+        (v = { ...v, ...r.summariesByChannel }), (_ = { ..._, ...r.summaryFetchStatusByChannel });
     },
     CONVERSATION_SUMMARY_UPDATE(e) {
         let { channel_id: t, summaries: n, guild_id: l } = e,
@@ -281,7 +281,7 @@ let w = new k(c.h, {
                 .map((e) => S(e, t))
                 .reverse()
                 .value(),
-            r = N[t] ?? [],
+            r = v[t] ?? [],
             a = o()
                 .chain(s)
                 .concat(r)
@@ -290,14 +290,14 @@ let w = new k(c.h, {
                 .uniqBy("id")
                 .reverse()
                 .value();
-        (N[t] = a), (_[t] = { ..._[t], error: void 0, fetching: _[t]?.fetching ?? !1, lastReceivedAt: i });
+        (v[t] = a), (_[t] = { ..._[t], error: void 0, fetching: _[t]?.fetching ?? !1, lastReceivedAt: i });
     },
     CLEAR_CONVERSATION_SUMMARIES() {
-        (N = {}), (_ = {});
+        (v = {}), (_ = {});
     },
     DELETE_SUMMARY(e) {
         let t = e.summary.channelId,
-            n = (N[t] ?? []).indexOf(e.summary);
-        -1 !== n && N[t].splice(n, 1);
+            n = (v[t] ?? []).indexOf(e.summary);
+        -1 !== n && v[t].splice(n, 1);
     },
 });

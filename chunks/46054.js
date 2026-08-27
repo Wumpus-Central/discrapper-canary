@@ -51,8 +51,8 @@ let g = i().once(() =>
         let e = { ...h, shouldStopPropagation: !0 };
         return d(a.Ay.GUILD_EVENT_RULES, [(0, r.Ay)(e)], e);
     }),
-    v = i().once(() => i().omit(S(), "subtext")),
-    N = i().once(() => d(a.Ay.AUTO_MODERATION_SYSTEM_MESSAGE_RULES, [(0, r.Ay)(h)])),
+    N = i().once(() => i().omit(S(), "subtext")),
+    v = i().once(() => d(a.Ay.AUTO_MODERATION_SYSTEM_MESSAGE_RULES, [(0, r.Ay)(h)])),
     _ = i().once(() =>
         i().omit(
             d(a.Ay.RULES, [(0, r.Ay)(h)]),
@@ -78,14 +78,14 @@ let g = i().once(() =>
     k = i().once(() => s.aV(I())),
     w = i().once(() => s.aV(y())),
     P = i().once(() => s.aV(S())),
-    D = i().once(() => s.aV(N())),
+    D = i().once(() => s.aV(v())),
     U = i().once(() => s.aV(f())),
     G = i().once(() => s.X(m())),
     V = i().once(() => s.X(g())),
     F = i().once(() => s.X(C())),
     H = i().once(() => s.X(E())),
     B = i().once(() => s.X(I())),
-    W = i().once(() => s.X(N())),
+    W = i().once(() => s.X(v())),
     K = {
         combineAndInjectMentionRule: d,
         createReactRules: r.Ay,
@@ -97,7 +97,7 @@ let g = i().once(() =>
             return S();
         },
         get guildEventLocationRules() {
-            return v();
+            return N();
         },
         get notifCenterV2MessagePreviewRules() {
             return _();

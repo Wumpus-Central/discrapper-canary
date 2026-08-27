@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { JA: () => S, Tv: () => v, bA: () => _, xu: () => N });
+n.d(t, { JA: () => S, Tv: () => N, bA: () => _, xu: () => v });
 var l = n(284009),
     i = n.n(l),
     s = n(228366),
@@ -46,7 +46,7 @@ function S(e, t, n) {
             C._.dispatch(I.jej.FOCUS_CHANNEL_TEXT_AREA, { channelId: e.id });
         }, 0);
 }
-function v(e, t, n) {
+function N(e, t, n) {
     if (
         (i()(!e.isForumLikeChannel(), "cannot open thread creation sidebar in forums"),
         i()(!__OVERLAY__, "Cannot create threads in the overlay."),
@@ -62,7 +62,7 @@ function v(e, t, n) {
         s.h.dispatch({ type: "SIDEBAR_CREATE_THREAD", parentChannelId: e.id, parentMessageId: t?.id, location: n });
     }, 0);
 }
-function N(e, t) {
+function v(e, t) {
     (0, h.pX)(I.BVt.CHANNEL(e, (0, y.mP)(t) ? y.VV.GUILD_HOME : t)),
         s.h.dispatch({ type: "SIDEBAR_CLOSE", baseChannelId: t });
 }

@@ -21,8 +21,8 @@ var l = n(477900),
     I = n(194004),
     y = n(68935),
     S = n(375708),
-    v = n(193833);
-function N(e) {
+    N = n(193833);
+function v(e) {
     return e.preventDefault();
 }
 let _ = { tension: 1100, friction: 40 },
@@ -43,23 +43,23 @@ function R(e) {
     let { children: t, hasError: n, isLoading: i, maskAsset: s, size: a, withLoadingIndicator: o = !0 } = e,
         u = a >= 33;
     return (0, l.jsxs)("div", {
-        className: r()(v.c6, { [v.v2]: n || s }),
+        className: r()(N.c6, { [N.v2]: n || s }),
         style: { height: a, width: a },
         children: [
             n
                 ? (0, l.jsxs)("div", {
-                      className: v.z3,
+                      className: N.z3,
                       children: [
                           (0, l.jsx)(h.d, {
                               size: "custom",
                               width: 20,
                               height: 20,
                               color: "currentColor",
-                              className: v.ik,
+                              className: N.ik,
                           }),
                           u &&
                               (0, l.jsx)(m.E, {
-                                  className: v.kc,
+                                  className: N.kc,
                                   color: "text-default",
                                   variant: "text-sm/normal",
                                   children: S.intl.string(S.t["tWYWJ+"]),
@@ -67,7 +67,7 @@ function R(e) {
                       ],
                   })
                 : t,
-            o && i && (0, l.jsx)("div", { className: v.Mz }),
+            o && i && (0, l.jsx)("div", { className: N.Mz }),
         ],
     });
 }
@@ -88,7 +88,7 @@ function O(e) {
         g = i.useRef(null),
         A = i.useRef(null),
         [C, E] = i.useState(!0),
-        [I, N] = i.useState(!1),
+        [I, v] = i.useState(!1),
         _ = i.useRef(!1);
     _.current = t && c;
     let j = null == a ? (0, y.zg)(r) : a;
@@ -112,7 +112,7 @@ function O(e) {
                             t || E(!1);
                         },
                         onError: () => {
-                            t || (E(!1), N(!0), p?.());
+                            t || (E(!1), v(!0), p?.());
                         },
                     })),
                     _.current && A.current.setState(!0));
@@ -139,7 +139,7 @@ function O(e) {
                   maskAsset: h,
                   size: s,
                   withLoadingIndicator: f,
-                  children: T((0, l.jsx)("canvas", { className: v.ex, ref: g }), r),
+                  children: T((0, l.jsx)("canvas", { className: N.ex, ref: g }), r),
               }),
           });
 }
@@ -184,7 +184,7 @@ let M = (e) => {
                   onChange: p,
                   threshold: 0.7,
                   children: (0, l.jsx)("div", {
-                      className: r()(o, v.__invalid_pngImageWrapper),
+                      className: r()(o, N.__invalid_pngImageWrapper),
                       ref: c,
                       children: (0, l.jsx)(R, {
                           hasError: A,
@@ -194,13 +194,13 @@ let M = (e) => {
                           withLoadingIndicator: h,
                           children: T(
                               (0, l.jsx)("img", {
-                                  className: v.r3,
+                                  className: N.r3,
                                   alt: b(n),
                                   src: S,
                                   draggable: !1,
                                   onError: j,
                                   onLoad: _,
-                                  onContextMenu: N,
+                                  onContextMenu: v,
                                   ref: I,
                               }),
                               n,
@@ -234,20 +234,20 @@ let M = (e) => {
                 (e, i) =>
                     i &&
                     (0, l.jsx)(A.nE, {
-                        className: v.O2,
+                        className: N.O2,
                         fixed: !0,
                         align: "center",
                         position: "center",
                         targetRef: a,
                         children: () =>
                             (0, l.jsxs)("div", {
-                                className: v._7,
+                                className: N._7,
                                 children: [
                                     (0, l.jsx)(u.animated.div, {
-                                        className: v.tm,
+                                        className: N.tm,
                                         style: e,
                                         children: (0, l.jsx)(k, {
-                                            className: v.__invalid_overlaySticker,
+                                            className: N.__invalid_overlaySticker,
                                             disableAnimation: t,
                                             enlargeOnInteraction: !1,
                                             isInteracting: r,
@@ -259,11 +259,11 @@ let M = (e) => {
                                     }),
                                     s &&
                                         (0, l.jsx)(u.animated.div, {
-                                            className: v.av,
+                                            className: N.av,
                                             style: y,
                                             children: (0, l.jsx)(m.E, {
                                                 variant: "text-sm/medium",
-                                                className: v.FZ,
+                                                className: N.FZ,
                                                 children: d.name,
                                             }),
                                         }),

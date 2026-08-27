@@ -27,18 +27,18 @@ function f(e) {
             onMouseLeave: y,
             ...S
         } = e,
-        [v, N] = i.useState(!1),
+        [N, v] = i.useState(!1),
         _ = i.useCallback(() => {
-            N(!0), C?.();
+            v(!0), C?.();
         }, [C]),
         j = i.useCallback(() => {
-            N(!1), E?.();
+            v(!1), E?.();
         }, [E]),
         T = i.useCallback(() => {
-            N(!0), I?.();
+            v(!0), I?.();
         }, [I]),
         b = i.useCallback(() => {
-            N(!1), y?.();
+            v(!1), y?.();
         }, [y]),
         R = (0, a.bG)([u.Ay], () =>
             t.application?.bot?.id != null ? u.Ay.getMember(n, t.application?.bot?.id) : null,
@@ -66,7 +66,7 @@ function f(e) {
         onMouseLeave: b,
         children: (0, l.jsx)(o.Ay, {
             className: h.dK,
-            mask: A || (x && (s || v)) ? o.hW.SQUIRCLE : o.hW.AVATAR_DEFAULT,
+            mask: A || (x && (s || N)) ? o.hW.SQUIRCLE : o.hW.AVATAR_DEFAULT,
             width: f,
             height: p,
             children: (0, l.jsx)("img", { alt: "", className: h.Kk, style: { width: f, height: p }, src: O }),

@@ -37,8 +37,8 @@ let p = function (e) {
                   : m.e.EMOJI_PICKER_EMOJI_CLICKED;
     let y = null != x ? x.emoji : void 0,
         S = null != y && y.animated,
-        v = null != y && !o.Ay.isInternalEmojiForGuildId(y, g?.getGuildId()),
-        N = null != y ? d.ZSU.EMOJI : d.ZSU.EMOJI_PICKER_FLOATING_UPSELL;
+        N = null != y && !o.Ay.isInternalEmojiForGuildId(y, g?.getGuildId()),
+        v = null != y ? d.ZSU.EMOJI : d.ZSU.EMOJI_PICKER_FLOATING_UPSELL;
     return (0, l.jsx)(a.A, {
         title: f.intl.string(f.t["0+11FF"]),
         description: f.intl.string(f.t.dURIzS),
@@ -47,8 +47,8 @@ let p = function (e) {
         onUpsellClicked: p,
         upsellViewedTrackingData: {
             type: t,
-            is_external: v,
-            location: { ...C, object: N },
+            is_external: N,
+            location: { ...C, object: v },
             location_stack: I,
             sku_id: (0, u.mH)(u.Ay.getSkuIdForPremiumType(m.PremiumTypes.TIER_2)),
             has_search_query: null != E && "" !== E,

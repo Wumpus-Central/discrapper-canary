@@ -12,8 +12,8 @@ var l = t(477900),
     m = t(404355),
     h = t(734057),
     C = t(707592),
-    E = t(496092),
-    f = t(132860),
+    f = t(496092),
+    E = t(132860),
     p = t(508654),
     g = t(375708);
 function x(e) {
@@ -26,10 +26,10 @@ function x(e) {
         j = i.useRef(null);
     if (null == I) return null;
     function N() {
-        null != v && (0, f.A)(v) ? (0, C.Py)(v, x) : t();
+        null != v && (0, E.A)(v) ? (0, C.Py)(v, x) : t();
     }
     function b() {
-        null != I && E.default.endEvent(I.id, I.guild_id);
+        null != I && f.default.endEvent(I.id, I.guild_id);
     }
     return _
         ? (0, l.jsx)(s.Y, {

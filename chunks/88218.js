@@ -48,8 +48,8 @@ let C = function (e) {
             listPadding: I,
             rowCount: y,
             getScrollOffsetForIndex: S,
-            categoryHeight: v,
-            onScroll: N,
+            categoryHeight: N,
+            onScroll: v,
             renderCategoryListItem: _,
             rowCountBySection: j,
             renderSection: T,
@@ -130,11 +130,11 @@ let C = function (e) {
                         }),
                     [n],
                 ),
-                v = i.useCallback(() => {
+                N = i.useCallback(() => {
                     let e = f(s) ?? g.current;
                     null == e || e >= r - 1 || I(e + 1, !0);
                 }, [I, s, r]),
-                N = i.useCallback(() => {
+                v = i.useCallback(() => {
                     let e = f(s) ?? g.current;
                     null == e || e <= 0 || I(e - 1, !1);
                 }, [I, s]),
@@ -144,8 +144,8 @@ let C = function (e) {
                     setFocus: E,
                     scrollToStart: y,
                     scrollToEnd: S,
-                    onNavigateNextAtEnd: v,
-                    onNavigatePreviousAtStart: N,
+                    onNavigateNextAtEnd: N,
+                    onNavigatePreviousAtStart: v,
                 }),
                 j = _.setFocus;
             return (
@@ -199,10 +199,10 @@ let C = function (e) {
             [n, d],
         ),
         D = i.useCallback((e) => _(s[e], e, () => P(e), O === e), [O, s, P, _]),
-        U = i.useMemo(() => ("function" == typeof v ? (e) => v(s[e], e) : v), [s, v]),
+        U = i.useMemo(() => ("function" == typeof N ? (e) => N(s[e], e) : N), [s, N]),
         G = (0, l.jsx)(o.A, {
             listPadding: I,
-            onScroll: N,
+            onScroll: v,
             ref: t,
             renderRow: D,
             rowCount: y,

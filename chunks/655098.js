@@ -21,8 +21,8 @@ var l = n(477900),
     I = n(866665),
     y = n(778712),
     S = n(939249),
-    v = n(545442),
-    N = n(922016),
+    N = n(545442),
+    v = n(922016),
     _ = n(565645),
     j = n(730134),
     T = n(775602),
@@ -117,7 +117,7 @@ function en(e) {
                   roleColors: h ? o : null,
                   ...e,
                   children: [
-                      d && (0, l.jsx)(v.W, { color: r.colorString, colors: o, background: !1, tooltip: !1 }),
+                      d && (0, l.jsx)(N.W, { color: r.colorString, colors: o, background: !1, tooltip: !1 }),
                       "@",
                       r.name,
                   ],
@@ -125,7 +125,7 @@ function en(e) {
     }
     return null == n || null == s
         ? m()
-        : (0, l.jsx)(N.Y, {
+        : (0, l.jsx)(v.Y, {
               targetElementRef: u,
               preload: async () => {
                   await (0, L.a)(n, t);

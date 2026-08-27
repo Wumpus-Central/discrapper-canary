@@ -21,8 +21,8 @@ var l,
     I = n(714114),
     y = n(394871),
     S = n(296948),
-    v = n(709066),
-    N = n(235986),
+    N = n(709066),
+    v = n(235986),
     _ = n(141504),
     j = (((l = j || {}).SINGLE_AVATAR = "1"), (l.MULTIPLE_AVATAR = "2"), l);
 let T = { [x._3.SIZE_32]: _.dT, [x._3.SIZE_40]: _.Jb };
@@ -36,21 +36,21 @@ class b extends s.Component {
             ? (0, i.jsxs)("div", {
                   className: a()(_.ce, _.jO, n),
                   children: [
-                      (0, i.jsxs)(N.A, {
+                      (0, i.jsxs)(v.A, {
                           children: [
                               (0, i.jsx)("div", { className: a()(_.RH, T[t], _.hC) }),
                               (0, i.jsx)("div", { className: a()(_.RH, T[t], _.hC) }),
                               (0, i.jsx)("div", { className: a()(_.RH, T[t]) }),
                           ],
                       }),
-                      (0, i.jsx)(N.A, { grow: 1, className: _.eC, style: { maxWidth: this.placeholderMaxWidth } }),
+                      (0, i.jsx)(v.A, { grow: 1, className: _.eC, style: { maxWidth: this.placeholderMaxWidth } }),
                   ],
               })
-            : (0, i.jsxs)(N.A, {
+            : (0, i.jsxs)(v.A, {
                   className: a()(_.qf, !s && _.lN, n),
                   children: [
                       (0, i.jsx)("div", { className: a()(_.RH, T[t], l) }),
-                      (0, i.jsx)(N.A, {
+                      (0, i.jsx)(v.A, {
                           grow: 1,
                           className: a()(_.gM, l),
                           style: { maxWidth: this.placeholderMaxWidth },
@@ -168,7 +168,7 @@ let en = s.memo(function (e) {
         let { user: t } = e;
         if (null == t) return null;
         let n = (0, S.r)(t);
-        return null == n ? null : (0, i.jsx)(v.A, { className: ee.AO, type: n, verified: t.isVerifiedBot() });
+        return null == n ? null : (0, i.jsx)(N.A, { className: ee.AO, type: n, verified: t.isVerifiedBot() });
     }),
     es = s.memo(function (e) {
         let {
@@ -334,8 +334,8 @@ let en = s.memo(function (e) {
                 applicationStream: E,
                 status: y,
                 shouldAnimateStatus: S = !1,
-                isMobile: v,
-                isVR: N,
+                isMobile: N,
+                isVR: v,
                 premiumSince: _,
                 channel: j,
                 guildId: T,
@@ -372,8 +372,8 @@ let en = s.memo(function (e) {
                 eventHandlers: eI,
             } = (0, Y.A)({ userId: ei, size: x._3.SIZE_32, animateOnHover: !(t || eh), guildId: T }),
             { onFocus: ey, ...eS } = en ?? {},
-            ev = (0, W.gn)(T, ei, l ?? null),
-            [eN, e_] = s.useState(!1);
+            eN = (0, W.gn)(T, ei, l ?? null),
+            [ev, e_] = s.useState(!1);
         s.useEffect(() => {
             t && e_(!1);
         }, [t]);
@@ -382,7 +382,7 @@ let en = s.memo(function (e) {
             eb = null != eT,
             eR = eb ? eT : ej,
             eO = (0, Z.Yl)(ej, E, ei),
-            eM = (eb || eO) && t && !eN,
+            eM = (eb || eO) && t && !ev,
             eL = s.useCallback(() => {
                 em(!0);
             }, []),
@@ -445,7 +445,7 @@ let en = s.memo(function (e) {
                                             colorRoleName: r,
                                             colorString: n ?? null,
                                             name: f ?? eu,
-                                            colorStrings: ev,
+                                            colorStrings: eN,
                                             hideClanTag: L,
                                             user: p,
                                             guildId: T,
@@ -460,7 +460,7 @@ let en = s.memo(function (e) {
                                                 colorRoleName: r,
                                                 colorString: n ?? null,
                                                 name: f ?? eu,
-                                                colorStrings: ev,
+                                                colorStrings: eN,
                                                 hideClanTag: L,
                                                 user: p,
                                                 guildId: T,
@@ -475,8 +475,8 @@ let en = s.memo(function (e) {
                               status: y,
                               eventHandlers: eI,
                               avatarSrc: eE,
-                              isMobile: v,
-                              isVR: N,
+                              isMobile: N,
+                              isVR: v,
                               isTyping: m,
                               avatarDecorationSrc: eC,
                               handleSetTypingRef: eD,

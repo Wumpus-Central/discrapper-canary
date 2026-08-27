@@ -1,11 +1,11 @@
 "use strict";
 n.d(t, {
-    C: () => nv,
+    C: () => nN,
     Sk: () => nR,
     Zx: () => nI,
     v7: () => nj,
     L0: () => nT,
-    N_: () => nN,
+    N_: () => nv,
     MD: () => nO,
     Ay: () => nL,
     uW: () => nM,
@@ -35,14 +35,14 @@ var l = n(477900),
     I = n(688810),
     y = n(177640),
     S = n(989837),
-    v = n(289873),
-    N = n(268218),
+    N = n(289873),
+    v = n(268218),
     _ = n(750506),
     j = n(60809),
     T = n(375708),
     b = n(836555);
 let R = { width: 500, height: j.$V },
-    O = (0, N.Fe)({
+    O = (0, v.Fe)({
         createPromise: () =>
             Promise.all([
                 n.e("324732"),
@@ -95,7 +95,7 @@ let R = { width: 500, height: j.$V },
                 n.e("135621"),
             ]).then(n.bind(n, 854379)),
         webpackId: 854379,
-        renderLoader: () => (0, l.jsx)("div", { className: b.R4, style: R, children: (0, l.jsx)(v.y, {}) }),
+        renderLoader: () => (0, l.jsx)("div", { className: b.R4, style: R, children: (0, l.jsx)(N.y, {}) }),
     }),
     M = { height: j.$V },
     L = i.memo(function (e) {
@@ -280,17 +280,17 @@ let ec = [8, 8, 0, 8],
                 scrollOffset: 20,
                 searchQuery: "",
             });
-        function v(e) {
+        function N(e) {
             let t = g.length,
                 n = x.reduce((e, t) => e + t.data.length, 0) - 7 * !!A;
             A && e + 420 > 48 * t + 56 * n - 512 && I(), S(e), ed(), (o.current = e);
         }
-        let N = i.useRef(v);
+        let v = i.useRef(N);
         i.useEffect(() => {
-            N.current = v;
+            v.current = N;
         }),
             i.useEffect(() => {
-                N.current(o.current);
+                v.current(o.current);
             }, [C]);
         let _ = i.useCallback((e) => (e !== g.length - 1 || A ? 16 : 0), [g.length, A]),
             j = x.map((e) => e.data.length);
@@ -435,7 +435,7 @@ let ec = [8, 8, 0, 8],
                         role: "listbox",
                         className: eo.p_,
                         listPadding: ec,
-                        onScroll: v,
+                        onScroll: N,
                         renderRow: L,
                         renderSection: M,
                         renderSectionHeader: O,
@@ -464,8 +464,8 @@ var ef = n(702841),
     eI = n(336807),
     ey = n(857071),
     eS = n(135621),
-    ev = n(105330),
-    eN = n(280450),
+    eN = n(105330),
+    ev = n(280450),
     e_ = n(559908),
     ej = n(620141),
     eT = n(224964),
@@ -474,9 +474,9 @@ var ef = n(702841),
 function eO(e) {
     let { editorHeight: t, textValue: n, channelId: l } = e,
         s = i.useRef(n),
-        r = (0, ev.l)({ editorHeight: t }),
+        r = (0, eN.l)({ editorHeight: t }),
         a = (0, eT.A)(),
-        o = (0, m.bG)([e_.Ay, eN.default], () => e_.Ay.isComboing(eN.default.getId(), l)),
+        o = (0, m.bG)([e_.Ay, ev.default], () => e_.Ay.isComboing(ev.default.getId(), l)),
         u = r?.left ?? 0,
         c = (r?.top ?? 0) - 16,
         d = 0 === n.length,
@@ -518,8 +518,8 @@ var eL = n(931664),
     e3 = n(463930),
     e8 = n(935063),
     e7 = n(73392),
-    e5 = n(650019),
-    e6 = n(763754),
+    e6 = n(650019),
+    e5 = n(763754),
     e4 = n(967144),
     e9 = n(118517),
     te = n(976860),
@@ -589,11 +589,11 @@ function tu(e) {
             colorRoleName: A,
             authorId: C,
             displayNameStyles: E,
-        } = (0, e6.Ay)(u),
+        } = (0, e5.Ay)(u),
         I = (0, e4.gn)(f, C, x),
         y = (0, e7.a)({ displayNameStyles: E }),
-        S = (0, e5.A)(h, u.attachments),
-        v =
+        S = (0, e6.A)(h, u.attachments),
+        N =
             ((t = o.id),
             (n = u.id),
             (0, m.bG)([tn.A], () => {
@@ -605,8 +605,8 @@ function tu(e) {
                 }
                 return 10;
             }, [t, n])),
-        N = (0, eP.n)(o, u),
-        _ = a.showThreadPromptOnReply && v >= 2 && N;
+        v = (0, eP.n)(o, u),
+        _ = a.showThreadPromptOnReply && N >= 2 && v;
     return (0, l.jsx)("div", {
         className: tr.e1,
         children: (0, l.jsxs)("div", {
@@ -714,7 +714,7 @@ function tu(e) {
                         }),
                     ],
                 }),
-                _ && (0, l.jsx)(to, { channel: o, message: u, replyChainLength: v }),
+                _ && (0, l.jsx)(to, { channel: o, message: u, replyChainLength: N }),
             ],
         }),
     });
@@ -780,8 +780,8 @@ var tp = n(587895),
 let tI = new Map(),
     ty = new Set(),
     tS = 0,
-    tv = !1;
-function tN() {
+    tN = !1;
+function tv() {
     let e = (function () {
             let e = new Set();
             for (let t of tA.A.getActivities()) {
@@ -812,8 +812,8 @@ class t_ extends m.Ay.PersistedStore {
             )),
             (ty = new Set(e?.dismissedSessionKeys ?? [])),
             (tS = e?.consecutiveDismissesWithoutInvite ?? 0),
-            (tv = e?.permanentlyDismissed ?? !1),
-            this.syncWith([tA.A], tN);
+            (tN = e?.permanentlyDismissed ?? !1),
+            this.syncWith([tA.A], tv);
     }
     hasInvitedChannel(e, t) {
         return tI.get(e)?.has(t) ?? !1;
@@ -822,7 +822,7 @@ class t_ extends m.Ay.PersistedStore {
         return ty.has(e);
     }
     isPermanentlyDismissed() {
-        return tv;
+        return tN;
     }
     getState() {
         return {
@@ -832,7 +832,7 @@ class t_ extends m.Ay.PersistedStore {
             }),
             dismissedSessionKeys: [...ty],
             consecutiveDismissesWithoutInvite: tS,
-            permanentlyDismissed: tv,
+            permanentlyDismissed: tN,
         };
     }
 }
@@ -847,7 +847,7 @@ let tj = new t_(tC.h, {
     RICH_PRESENCE_INVITE_BAR_SESSION_DISMISSED: function (e) {
         let { sessionKey: t } = e;
         if (ty.has(t)) return !1;
-        (ty = new Set(ty).add(t)), tI.has(t) ? (tS = 0) : (tS += 1) >= 2 && (tv = !0);
+        (ty = new Set(ty).add(t)), tI.has(t) ? (tS = 0) : (tS += 1) >= 2 && (tN = !0);
     },
 });
 var tT = n(874546),
@@ -1100,7 +1100,7 @@ function t8(e) {
     });
 }
 var t7 = n(495088);
-function t5(e) {
+function t6(e) {
     let { bars: t } = e,
         n = t.stacked.map((e, t) => (0, l.jsx)("div", { children: e }, t)),
         s = t.floating.map((e, t) => (0, l.jsx)(i.Fragment, { children: e }, t));
@@ -1113,7 +1113,7 @@ function t5(e) {
               ],
           });
 }
-var t6 = n(123583),
+var t5 = n(123583),
     t4 = n(562708),
     t9 = n(150934),
     ne = n(139286),
@@ -1390,7 +1390,7 @@ function nS(e) {
         [e],
     );
 }
-function nv(e) {
+function nN(e) {
     let { editorRef: t, disabled: n, textValue: l, channelId: s, chatInputType: r, submit: a } = e,
         { analyticsLocations: o } = (0, I.Ay)();
     return i.useCallback(
@@ -1411,7 +1411,7 @@ function nv(e) {
         [n, l, s, t, o, a, r],
     );
 }
-function nN(e, t, n) {
+function nv(e, t, n) {
     let l = i.useCallback(() => {
             t || (0, eA.r$)(nE.kx.EMOJI, e, n);
         }, [t, e, n]),
@@ -1528,8 +1528,8 @@ let nL = i.memo(
                 innerClassName: h,
                 editorClassName: f,
                 id: x,
-                required: v,
-                disabled: N,
+                required: N,
+                disabled: v,
                 placeholder: _,
                 accessibilityLabel: j,
                 channel: T,
@@ -1573,9 +1573,9 @@ let nL = i.memo(
             eE = i.useRef(null),
             eI = i.useRef(null),
             ey = i.useRef(null),
-            ev = i.useCallback(() => eE.current?.getSlateEditor() ?? null, []);
+            eN = i.useCallback(() => eE.current?.getSlateEditor() ?? null, []);
         ee?.(eE.current);
-        let eN = (0, y.A)(T),
+        let ev = (0, y.A)(T),
             e_ = (0, eU.n)("ChannelTextAreaContainer"),
             ej = (0, m.cf)([C.Ay], () => ({
                 expressionPickerFormat: C.Ay.expressionPickerFormat,
@@ -1583,10 +1583,10 @@ let nL = i.memo(
             })),
             eT = e_ ? ej.expressionPickerFormat : C.IG.FLEXIBLE,
             eb = !e_ || ej.condensePickerWhenNarrow,
-            [eR, eO] = i.useState(!eN);
+            [eR, eO] = i.useState(!ev);
         (0, A.i4)(ec, (e) => {
             let { width: t } = e;
-            return eO(!eN && (null == t || t > 450));
+            return eO(!ev && (null == t || t > 450));
         });
         let eL = eT === C.IG.HIDDEN,
             ek = eT === C.IG.CONDENSED || (eT === C.IG.FLEXIBLE && eb && !eR),
@@ -1601,29 +1601,29 @@ let nL = i.memo(
                 canAttachFiles: eZ,
                 canCreateThreads: eq,
                 canEveryoneSendMessages: e0,
-            } = nR(T, b, ew, N),
+            } = nR(T, b, ew, v),
             e1 = b.toolbarType === eX.O1.STATIC,
             e2 = !eD.D_.useSetting() && !(0, eJ.isAndroidWeb)() && null != window.ResizeObserver,
             e3 = !e2 || !b.commands?.enabled || !R || "/" !== a,
             e8 = (0, eS.A)(),
             { fontSize: e7 } = (0, m.cf)([C.Ay], () => ({ fontSize: C.Ay.fontSize })),
-            e5 = (0, m.bG)([eH.A], () => eH.A.isEnabled());
-        nN(b, eK, T.id);
-        let { eventEmitter: e6, handleEditorSelectionChanged: e4 } = n_(eE, a, o),
+            e6 = (0, m.bG)([eH.A], () => eH.A.isEnabled());
+        nv(b, eK, T.id);
+        let { eventEmitter: e5, handleEditorSelectionChanged: e4 } = n_(eE, a, o),
             e9 = i.useRef(a);
         e9.current = a;
         let te = i.useCallback(
                 (e, t, n) => {
-                    "/" === t && "" === e9.current && b.commands?.enabled && e6.emit("command-sentinel-typed"),
+                    "/" === t && "" === e9.current && b.commands?.enabled && e5.emit("command-sentinel-typed"),
                         U?.(e, t, n);
                 },
-                [U, b.commands?.enabled, e6],
+                [U, b.commands?.enabled, e5],
             ),
             { submitting: tt, submit: tn, handleSubmit: tl } = nI(B, b, eE, ey, T.id),
             { autocompleteRef: ti, handleMaybeShowAutocomplete: ts, handleHideAutocomplete: tr } = nj(),
             to = ny(tn, b, eE),
             tc = nS(eE),
-            td = nv({ editorRef: eE, disabled: eK, textValue: a, channelId: T.id, chatInputType: b, submit: B }),
+            td = nN({ editorRef: eE, disabled: eK, textValue: a, channelId: T.id, chatInputType: b, submit: B }),
             th = i.useCallback(
                 (e, t, n) => {
                     let l = eE.current;
@@ -1647,8 +1647,8 @@ let nL = i.memo(
             {
                 handleTab: ty,
                 handleEnter: tS,
-                handleSpace: tv,
-                handleMoveSelection: tN,
+                handleSpace: tN,
+                handleMoveSelection: tv,
             } = ((n = i.useCallback(
                 () => !!(!e3 && ed.current?.onTabOrEnter(!1)) || ti.current?.onTabOrEnter(!1) || !1,
                 [e3, ed, ti],
@@ -1692,7 +1692,7 @@ let nL = i.memo(
                     ),
                     n
                 );
-            })(e6, eE),
+            })(e5, eE),
             { handleAutocompleteVisibilityChange: tL } = nM(b, T.id),
             tk = (function (e) {
                 let { type: t, channelId: n } = e;
@@ -1702,9 +1702,9 @@ let nL = i.memo(
                 }, [t, n]);
             })({ type: b, channelId: T.id }),
             tw = i.useCallback(() => {
-                e6.emit("submit-failure");
-            }, [e6]);
-        (0, e$.R)(e6, T.guild_id, T.id);
+                e5.emit("submit-failure");
+            }, [e5]);
+        (0, e$.R)(e5, T.guild_id, T.id);
         let tP = null != D,
             tD = (eK && !((eF || eB) && e0)) || (tt && b.submit?.useDisabledStylesOnSubmit),
             tU = null;
@@ -1806,7 +1806,7 @@ let nL = i.memo(
             t9 =
                 null != P
                     ? P()
-                    : (0, l.jsx)(t6.A, {
+                    : (0, l.jsx)(t5.A, {
                           type: b,
                           disabled: eK,
                           channel: T,
@@ -1829,14 +1829,14 @@ let nL = i.memo(
                 R && eY._.dispatch(ea.jej.CHANNEL_TEXT_AREA_FOCUSED, { channelId: T.id });
             }, [R, T.id]),
             (0, l.jsx)(ex.Sv, {
-                value: e6,
+                value: e5,
                 children: (0, l.jsxs)(I.f5, {
                     value: eu,
                     children: [
                         tK && e1
-                            ? (0, l.jsx)(nA, { getSlateEditor: ev, onInsertEmoji: tc, type: b, channel: T })
+                            ? (0, l.jsx)(nA, { getSlateEditor: eN, onInsertEmoji: tc, type: b, channel: T })
                             : tK
-                              ? (0, l.jsx)(nd.A, { ref: ey, getSlateEditor: ev, containerRef: eI, options: b.markdown })
+                              ? (0, l.jsx)(nd.A, { ref: ey, getSlateEditor: eN, containerRef: eI, options: b.markdown })
                               : null,
                         (0, l.jsxs)("div", {
                             ref: ec,
@@ -1852,7 +1852,7 @@ let nL = i.memo(
                                 [t7.z3]: null != O,
                             }),
                             children: [
-                                tQ || t2 ? null : (0, l.jsx)(t5, { bars: tZ }),
+                                tQ || t2 ? null : (0, l.jsx)(t6, { bars: tZ }),
                                 (0, l.jsxs)("div", {
                                     ref: eI,
                                     onScroll: tf,
@@ -1887,7 +1887,7 @@ let nL = i.memo(
                                                         richValue: o,
                                                         disabled: eK,
                                                         placeholder: _,
-                                                        required: v,
+                                                        required: N,
                                                         accessibilityLabel: j,
                                                         isPreviewing: (eF || eB) && e0,
                                                         channel: T,
@@ -1906,14 +1906,14 @@ let nL = i.memo(
                                                         onSubmitFailure: tw,
                                                         onTab: ty,
                                                         onEnter: tS,
-                                                        onSpace: tv,
-                                                        onMoveSelection: tN,
+                                                        onSpace: tN,
+                                                        onMoveSelection: tv,
                                                         onSelectionChanged: e4,
                                                         onMaybeShowAutocomplete: ts,
                                                         onHideAutocomplete: tr,
                                                         promptToUpload: W,
                                                         fontSize: e7,
-                                                        spellcheckEnabled: e5,
+                                                        spellcheckEnabled: e6,
                                                         canOnlyUseTextCommands: tP,
                                                         className: r()(
                                                             {

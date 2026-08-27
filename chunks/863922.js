@@ -71,7 +71,7 @@ function y(e, t) {
 function S(e, t) {
     o.h.dispatch({ type: "SET_SUMMARY_FEEDBACK", summary: e, rating: t });
 }
-async function v() {
+async function N() {
     let e, t;
     if (!f.A.shouldFetchChannelAffinities()) return Promise.resolve(null);
     let n = Date.now();
@@ -90,7 +90,7 @@ async function v() {
         receivedAt: Date.now(),
     });
 }
-async function N(e) {
+async function v(e) {
     let t,
         n,
         { useQuickSwitcher: l = !0, useChannelAffinities: i = !0 } =
@@ -147,7 +147,7 @@ let j =
                   setSelectedSummary: I,
                   setHighlightedSummary: C,
                   fetchSummaries: A,
-                  fetchSummariesBulk: N,
+                  fetchSummariesBulk: v,
                   useChannelSummaries: function (e) {
                       let { channelIds: t = [] } = e;
                       return (
@@ -159,9 +159,9 @@ let j =
                                   t && e();
                                   async function e() {
                                       try {
-                                          await v();
+                                          await N();
                                       } catch (e) {}
-                                      await N(n.split(","));
+                                      await v(n.split(","));
                                   }
                               }, [n, t]);
                           })(t),

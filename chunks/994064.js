@@ -21,7 +21,7 @@ var l = n(477900),
     I = n(423562),
     y = n(544180),
     S = n(953727);
-function v(e) {
+function N(e) {
     let { width: t = 16, height: n = 16, color: i = "currentColor", foreground: s, ...r } = e;
     return (0, l.jsx)("svg", {
         ...(0, S.A)(r),
@@ -35,7 +35,7 @@ function v(e) {
         }),
     });
 }
-var N = n(174459),
+var v = n(174459),
     _ = n(927813),
     j = n(824744),
     T = n(475815),
@@ -717,7 +717,7 @@ class eu extends i.Component {
                     onClick: s,
                     tabIndex: r ? -1 : 0,
                     "aria-label": M.intl.string(M.t.hsvh0i),
-                    children: (0, l.jsx)(v, { className: et.pd }, "replay"),
+                    children: (0, l.jsx)(N, { className: et.pd }, "replay"),
                 })
               : (0, l.jsx)(h.D, {
                     className: et.CY,
@@ -881,7 +881,7 @@ class em {
                 !1 === this.metadata.hasValidFrame &&
                 ((this.errorCode = 4),
                 (this.errorMessage = "No valid video frames detected - codec may be unsupported")),
-            N.default.track(X.HAw.MEDIA_PLAY_FINISHED, {
+            v.default.track(X.HAw.MEDIA_PLAY_FINISHED, {
                 play_time_sec: this.playTimeSec,
                 play_wall_time_ms: this.playWallTimeMs,
                 first_play_waiting_ms: this.firstPlayWaitingMs,

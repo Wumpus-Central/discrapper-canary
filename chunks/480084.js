@@ -28,8 +28,8 @@ let S = function () {
         "aria-label": I.intl.string(I.t.BAB0yK),
     });
 };
-var v = n(112107),
-    N = n(930101),
+var N = n(112107),
+    v = n(930101),
     _ = n(976860),
     j = n(302031),
     T = n(157941),
@@ -187,8 +187,8 @@ function ey(e) {
 function eS() {
     return { gameMention: { react: (e, t, n) => (0, l.jsx)(ey, { gameId: e.gameId, authorId: n.authorId }, n.key) } };
 }
-var ev = n(881140),
-    eN = n(746080),
+var eN = n(881140),
+    ev = n(746080),
     e_ = n(165648),
     ej = n(969490);
 let eT = { display: "inline" };
@@ -303,7 +303,7 @@ let eM = {
     },
     soundboard: {
         react: (e, t, n) =>
-            (0, l.jsx)(v.Ay, {
+            (0, l.jsx)(N.Ay, {
                 channelId: e.channelId,
                 messageId: e.messageId,
                 soundId: e.soundId,
@@ -325,13 +325,13 @@ let eM = {
                                       switch (t) {
                                           case "home":
                                           case "guide":
-                                              i(eN.VV.GUILD_HOME);
+                                              i(ev.VV.GUILD_HOME);
                                               break;
                                           case "browse":
-                                              i(eN.VV.CHANNEL_BROWSER);
+                                              i(ev.VV.CHANNEL_BROWSER);
                                               break;
                                           case "customize":
-                                              i(eN.VV.CUSTOMIZE_COMMUNITY);
+                                              i(ev.VV.CUSTOMIZE_COMMUNITY);
                                               break;
                                           case "linked-roles":
                                               if (null != n) {
@@ -432,7 +432,7 @@ function eL(e) {
     }
     return {
         ...eM,
-        link: (0, ev.A)(e),
+        link: (0, eN.A)(e),
         devLink: {
             match: (e, t) => (t.allowLinks && t.allowDevLinks ? eC.exec(e) : null),
             parse: (e, t) => ({ target: e, type: "devLink" }),
@@ -484,7 +484,7 @@ function eL(e) {
                         let { key: a, channelId: o, messageId: u } = r;
                         return e.src
                             ? (0, l.jsx)(
-                                  N.H,
+                                  v.H,
                                   {
                                       node: e,
                                       tooltipPosition: t,
@@ -512,7 +512,7 @@ function eL(e) {
                             e = { ...e, name: t ? `:${d.name}:` : d.name };
                         }
                         return (0, l.jsx)(
-                            N.X,
+                            v.X,
                             { node: e, tooltipPosition: t, enableClick: n, focusable: i, channelId: u, messageId: c },
                             a,
                         );

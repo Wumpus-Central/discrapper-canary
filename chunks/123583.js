@@ -21,8 +21,8 @@ var l = n(477900),
     I = n(795816),
     y = n(211401),
     S = n(989837),
-    v = n(500049),
-    N = n(598071),
+    N = n(500049),
+    v = n(598071),
     _ = n(60809),
     j = n(375708),
     T = n(215837);
@@ -33,7 +33,7 @@ let b = i.forwardRef(function (e, t) {
                 () => S.A.shouldShowPopup() && S.A.activeViewType() === n && S.A.activeChannelId() === s,
             ),
             { Component: o, events: u, play: c } = (0, E.c)(),
-            d = i.useContext(N.Ay);
+            d = i.useContext(v.Ay);
         i.useEffect(() => {
             function e() {
                 u.onMouseEnter();
@@ -46,7 +46,7 @@ let b = i.forwardRef(function (e, t) {
             );
         }, [d, u]);
         let h = i.useCallback(() => {
-                a ? y.k(v.Se.DISMISSED) : (y.R(v.s4.TEXT, n, void 0, s), I.LK()), c();
+                a ? y.k(N.Se.DISMISSED) : (y.R(N.s4.TEXT, n, void 0, s), I.LK()), c();
             }, [a, n, s, c]),
             m = (0, l.jsx)(o, { size: "refresh_sm", color: "currentColor" });
         return (0, l.jsx)("div", {
@@ -266,19 +266,19 @@ let ee = { click: { name: "click", start: 0, duration: 66 }, hover: { name: "hov
                 showAllButtons: y,
                 expressionButtonsHidden: S,
             } = e,
-            v = (0, M.n)("ChannelTextAreaButtons"),
-            N = (0, r.cf)([o.Ay], () => ({
+            N = (0, M.n)("ChannelTextAreaButtons"),
+            v = (0, r.cf)([o.Ay], () => ({
                 isSubmitButtonEnabled: o.Ay.isSubmitButtonEnabled,
                 isAppsButtonEnabled: o.Ay.isAppsButtonEnabled,
                 isEmojiButtonEnabled: o.Ay.isEmojiButtonEnabled,
                 isGifButtonEnabled: o.Ay.isGifButtonEnabled,
                 isStickerButtonEnabled: o.Ay.isStickerButtonEnabled,
             })),
-            _ = N.isSubmitButtonEnabled,
-            j = !v || N.isAppsButtonEnabled,
-            T = !v || N.isEmojiButtonEnabled,
-            b = !v || N.isGifButtonEnabled,
-            w = !v || N.isStickerButtonEnabled,
+            _ = v.isSubmitButtonEnabled,
+            j = !N || v.isAppsButtonEnabled,
+            T = !N || v.isEmojiButtonEnabled,
+            b = !N || v.isGifButtonEnabled,
+            w = !N || v.isStickerButtonEnabled,
             P =
                 ((t = C.id),
                 (n = x),

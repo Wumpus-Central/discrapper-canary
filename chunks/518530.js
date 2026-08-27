@@ -12,8 +12,8 @@ var l = t(477900),
     m = t(355622),
     h = t(826673),
     C = t(58736),
-    E = t(31717),
-    f = t(625494),
+    f = t(31717),
+    E = t(625494),
     p = t(43189),
     g = t(652215),
     x = t(49999),
@@ -26,7 +26,7 @@ let T = function (e) {
         (0, h.Dr)(a.M.CALL_CHAT_BUTTON_TEXT_IN_VOICE_COACH_MARK, { dismissAction: x.i.AUTO });
     }, []);
     let j = i.useCallback(() => {
-            o.A.updateChatOpen(n.id, !1), f._.safeDispatch(g.jej.FOCUS_CHAT_BUTTON);
+            o.A.updateChatOpen(n.id, !1), E._.safeDispatch(g.jej.FOCUS_CHAT_BUTTON);
         }, [n.id]),
         N = (0, l.jsx)(C.Ay.Icon, { icon: s.P, tooltip: I.intl.string(I.t.cpT0Cq), onClick: j });
     return (0, l.jsxs)(A.A, {
@@ -34,7 +34,7 @@ let T = function (e) {
         maxWidth: T,
         floatingLayer: p.Ay,
         children: [
-            (0, l.jsx)(c.A, { channel: n, draftType: E.C.ChannelMessage }),
+            (0, l.jsx)(c.A, { channel: n, draftType: f.C.ChannelMessage }),
             (0, l.jsxs)(C.Ay, {
                 toolbar: N,
                 "aria-label": I.intl.string(I.t.BIYAqa),

@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Ay: () => _, Oh: () => N, gn: () => v });
+n.d(t, { Ay: () => _, Oh: () => v, gn: () => N });
 var l = n(477900),
     i = n(582128),
     s = n(17928),
@@ -56,7 +56,7 @@ function S(e, t, n, l, i) {
         }
     }
 }
-function v(e) {
+function N(e) {
     let { node: t, stateKey: n, children: r } = e,
         a = (0, s.bG)([p.A, A.Ay], () => p.A.getChannel(t.channelId ?? A.Ay.getChannelId()), [t.channelId]),
         { hasSendMessagePerm: o, hasUseAppCommandsPerm: u } = (0, s.cf)([x.A], () => ({
@@ -66,14 +66,14 @@ function v(e) {
         g = void 0 !== a ? { type: "channel", channel: a } : { type: "contextless" },
         { command: C } = c.D3(g, t.commandKey ?? ""),
         y = f.D_.useSetting(),
-        v = i.useMemo(() => {
+        N = i.useMemo(() => {
             if (null == C || null == a || C.untranslatedName !== t.commandName || y) return !1;
             let e = a.isPrivate();
             if ((0, m.UJ)(a) || (!e && !o)) return !1;
             let n = C?.applicationId === I.Ik.BUILT_IN;
             return !!e || !!n || !!u;
         }, [a, C, o, u, t.commandName, y]),
-        N = i.useCallback(
+        v = i.useCallback(
             (e) => {
                 e?.stopPropagation(),
                     null != a &&
@@ -83,11 +83,11 @@ function v(e) {
             },
             [a, t.commandKey, t.commandName],
         );
-    return v
-        ? (0, l.jsxs)(h.A, { role: "link", onClick: N, children: ["/", r] }, n)
+    return N
+        ? (0, l.jsxs)(h.A, { role: "link", onClick: v, children: ["/", r] }, n)
         : (0, l.jsxs)("span", { children: ["/", r] });
 }
-function N(e) {
+function v(e) {
     let { commandId: t, commandName: n, commandDescription: i, applicationId: r, onClick: u } = e,
         c = (0, s.bG)([A.Ay], () => A.Ay.getChannelId());
     return (0, l.jsx)(a.m, {
@@ -104,5 +104,5 @@ function N(e) {
     });
 }
 function _(e) {
-    return { react: (e, t, n) => (0, l.jsx)(v, { node: e, stateKey: n.key, children: t(e.content, n) }) };
+    return { react: (e, t, n) => (0, l.jsx)(N, { node: e, stateKey: n.key, children: t(e.content, n) }) };
 }

@@ -21,8 +21,8 @@ var l = n(477900),
     I = n(105330),
     y = n(265431),
     S = n(459016),
-    v = n(861382),
-    N = n(355622),
+    N = n(861382),
+    v = n(355622),
     _ = n(820066),
     j = n(696451),
     T = n(576705),
@@ -54,14 +54,14 @@ let V = i.forwardRef(function (e, t) {
                     [T.A, b.A],
                     () => ({
                         canMentionEveryone:
-                            l.isPrivate() || c || s === N.oU.RULES_INPUT || T.A.can(w.xBc.MENTION_EVERYONE, l),
+                            l.isPrivate() || c || s === v.oU.RULES_INPUT || T.A.can(w.xBc.MENTION_EVERYONE, l),
                         hidePersonalInformation: b.A.hidePersonalInformation,
                     }),
                     [l, s, c],
                 ),
-                { activeCommand: m, activeCommandOption: f } = (0, o.cf)([v.A], () => ({
-                    activeCommand: v.A.getActiveCommand(l.id),
-                    activeCommandOption: v.A.getActiveOption(l.id),
+                { activeCommand: m, activeCommandOption: f } = (0, o.cf)([N.A], () => ({
+                    activeCommand: N.A.getActiveCommand(l.id),
+                    activeCommandOption: N.A.getActiveOption(l.id),
                 })),
                 p = i.useMemo(
                     () =>
@@ -128,9 +128,9 @@ let V = i.forwardRef(function (e, t) {
                     canMentionUsers: s.users?.allowMentioning ?? !1,
                     canMentionEveryone: d,
                     hidePersonalInformation: h,
-                    hideMentionDescription: s === N.oU.RULES_INPUT,
+                    hideMentionDescription: s === v.oU.RULES_INPUT,
                     emojiIntention:
-                        s === N.oU.RULES_INPUT
+                        s === v.oU.RULES_INPUT
                             ? P.EmojiIntention.COMMUNITY_CONTENT
                             : p
                               ? P.EmojiIntention.NO_CUSTOM_EMOJI

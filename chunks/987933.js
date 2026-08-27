@@ -12,7 +12,7 @@ var l = t(477900),
 function m(e) {
     let { targetElementRef: n, openSoundboardPicker: t, shouldShowSoundboardPicker: m } = e,
         [h, C] = (0, o.kn)([s.M.SOUNDBOARD_DESKTOP_NUX]),
-        E = i.useMemo(
+        f = i.useMemo(
             () => [
                 {
                     icon: a.J,
@@ -37,7 +37,7 @@ function m(e) {
                   body: d.intl.string(d.t.lyhz2x),
                   position: "top",
                   gradientColor: "pink",
-                  actions: E,
+                  actions: f,
                   onRequestClose: () => C(u.i.DISMISS),
               }),
           });

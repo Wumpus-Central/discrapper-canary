@@ -31,12 +31,12 @@ function E(t) {
     return { heading: t.heading ?? "" };
 }
 var A = i(17928),
-    p = i(331322),
-    v = i(452027),
+    v = i(331322),
+    p = i(452027),
     S = i(103557),
     I = i(825484),
-    _ = i(866665),
-    j = i(408278),
+    j = i(866665),
+    _ = i(408278),
     C = i(241326),
     y = i(683071),
     N = i(2553),
@@ -46,7 +46,7 @@ var A = i(17928),
     w = i(776231),
     G = i(486020),
     k = i(652215);
-function R(t, e, i) {
+function L(t, e, i) {
     let n = G.QB ? "webp" : "jpg",
         { CDN_HOST: l, API_ENDPOINT: a } = window.GLOBAL_ENV,
         r = k.Rsh.GUILD_SPACE_IMAGE_TEXT_WIDGET_IMAGE(t, e, i, n),
@@ -54,7 +54,7 @@ function R(t, e, i) {
         c = { size: (0, w.kr)(500 * (0, w.mZ)()) };
     return "jpg" === n && (c.quality = "lossless"), (s += `?${D.stringify(c)}`);
 }
-var L = i(125075),
+var R = i(125075),
     W = i(868602),
     B = i(445187),
     U = i(890497),
@@ -117,7 +117,7 @@ let tf = {
                 { text: n, image_hash: a } = e.config,
                 r = (0, A.bG)([T.A], () => T.A.getGuildId()),
                 c = "edit" === i ? e.config.image : void 0,
-                d = void 0 !== c ? c : null != a && null != r ? R(r, e.id, a) : null;
+                d = void 0 !== c ? c : null != a && null != r ? L(r, e.id, a) : null;
             return (0, l.jsxs)("div", {
                 className: B.k,
                 children: [
@@ -134,8 +134,8 @@ let tf = {
                 [m, x] = a.useState(s.image),
                 [E, D] = a.useState(null),
                 w = (0, A.bG)([T.A], () => T.A.getGuildId()),
-                G = void 0 !== m ? m : null != s.image_hash && null != w ? R(w, e.id, s.image_hash) : null;
-            return (0, l.jsxs)(p.B, {
+                G = void 0 !== m ? m : null != s.image_hash && null != w ? L(w, e.id, s.image_hash) : null;
+            return (0, l.jsxs)(v.B, {
                 gap: 16,
                 children: [
                     (0, l.jsx)(c.k, {
@@ -147,16 +147,16 @@ let tf = {
                         maxLength: 100,
                         showCharacterCount: !0,
                     }),
-                    (0, l.jsx)(v.D, {
+                    (0, l.jsx)(p.D, {
                         label: f.intl.string(f.t.X4IxWL),
-                        children: (0, l.jsxs)(p.B, {
+                        children: (0, l.jsxs)(v.B, {
                             gap: 16,
                             direction: "horizontal",
                             align: "center",
                             justify: "space-between",
                             className: W.B,
                             children: [
-                                (0, l.jsxs)(p.B, {
+                                (0, l.jsxs)(v.B, {
                                     gap: 8,
                                     direction: "horizontal",
                                     children: [
@@ -170,10 +170,10 @@ let tf = {
                                             onFileSizeError: () => (0, N.A)(0xa00000),
                                         }),
                                         null != G &&
-                                            (0, l.jsx)(_.m, {
+                                            (0, l.jsx)(j.m, {
                                                 text: f.intl.string(f.t.N86XcP),
                                                 ariaHidden: !0,
-                                                children: (0, l.jsx)(j.K, {
+                                                children: (0, l.jsx)(_.K, {
                                                     variant: "critical-secondary",
                                                     icon: C.TrashIcon,
                                                     onClick: function () {
@@ -215,7 +215,7 @@ let tf = {
                                     let t;
                                     if (
                                         ((t = void 0 !== m ? null !== m : null != s.image_hash),
-                                        0 === h.length && !t && (D(f.intl.string(L.default.zleX9q)), 1))
+                                        0 === h.length && !t && (D(f.intl.string(R.default.zleX9q)), 1))
                                     )
                                         return;
                                     let e = {
@@ -375,7 +375,7 @@ let tf = {
                                   className: to.P5,
                                   children: (0, l.jsx)(d.$, {
                                       variant: "secondary",
-                                      text: f.intl.string(L.default.PSuly6),
+                                      text: f.intl.string(R.default.PSuly6),
                                       loading: u,
                                       onClick: m,
                                   }),
@@ -389,7 +389,7 @@ let tf = {
                           children: (0, l.jsx)(s.E, {
                               variant: "text-sm/normal",
                               color: "text-muted",
-                              children: f.intl.string(L.default["nXc/MQ"]),
+                              children: f.intl.string(R.default["nXc/MQ"]),
                           }),
                       }),
                   });
@@ -418,45 +418,45 @@ let tf = {
                 }, [s, u]),
                 [h, g] = a.useState(null),
                 [m, x] = a.useState(!1),
-                [E, v] = a.useState(!1),
+                [E, p] = a.useState(!1),
                 S = h ?? o,
-                _ = a.useMemo(() => u.map((t) => ({ id: t.id, label: t.name, value: t.id })), [u]);
-            async function j() {
+                j = a.useMemo(() => u.map((t) => ({ id: t.id, label: t.name, value: t.id })), [u]);
+            async function _() {
                 if (null != s) {
-                    v(!1), x(!0);
+                    p(!1), x(!0);
                     try {
                         await ta({ channel: s, selectedRoleIds: S }), e();
                     } catch {
-                        x(!1), v(!0);
+                        x(!1), p(!0);
                     }
                 }
             }
             return null == s
                 ? null
-                : (0, l.jsxs)(p.B, {
+                : (0, l.jsxs)(v.B, {
                       gap: 16,
                       children: [
                           (0, l.jsx)(U.Z, {
                               selectionMode: "multiple",
-                              label: f.intl.string(L.default.XXLbfv),
-                              description: f.intl.string(L.default.XrpYIG),
-                              placeholder: f.intl.string(L.default.pp6WeD),
-                              options: _,
+                              label: f.intl.string(R.default.XXLbfv),
+                              description: f.intl.string(R.default.XrpYIG),
+                              placeholder: f.intl.string(R.default.pp6WeD),
+                              options: j,
                               value: S,
                               onSelectionChange: function (t) {
-                                  v(!1), g(t);
+                                  p(!1), g(t);
                               },
                               disabled: !c || m,
                               fullWidth: !0,
                               wrapTags: !0,
                           }),
-                          !c && (0, l.jsx)(y.w, { type: "warning", children: f.intl.string(L.default.UPLtlA) }),
+                          !c && (0, l.jsx)(y.w, { type: "warning", children: f.intl.string(R.default.UPLtlA) }),
                           E &&
                               (0, l.jsx)("div", {
                                   role: "alert",
                                   children: (0, l.jsx)(y.w, {
                                       type: "critical",
-                                      children: f.intl.string(L.default.xyCJYs),
+                                      children: f.intl.string(R.default.xyCJYs),
                                   }),
                               }),
                           (0, l.jsxs)(I.e, {
@@ -471,7 +471,7 @@ let tf = {
                                   (0, l.jsx)(d.$, {
                                       variant: "primary",
                                       text: f.intl.string(f.t["R3BPH+"]),
-                                      onClick: j,
+                                      onClick: _,
                                       disabled: !c,
                                       loading: m,
                                   }),

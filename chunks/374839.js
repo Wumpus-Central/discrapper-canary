@@ -1,4 +1,4 @@
-d.exports = {
+_.exports = {
     wG: "loader__8cd1f",
     NI: "slot__8cd1f",
     u4: "track__8cd1f",

@@ -12,8 +12,8 @@ var l = t(477900),
     m = t(140735),
     h = t(323384),
     C = t(834730),
-    E = t(320448),
-    f = t(793574),
+    f = t(320448),
+    E = t(793574),
     p = t(688810),
     g = t(735991),
     x = t(786115),
@@ -52,7 +52,7 @@ function V(e) {
             let e = m?.application_directory_collection_items[0];
             return null == e ? null : e.type === o.L.APPLICATION_BANNER ? e : null;
         }, [m?.application_directory_collection_items]),
-        { trackItemImpressionRef: E } = (0, x.A)({
+        { trackItemImpressionRef: f } = (0, x.A)({
             applicationId: C?.application.id ?? "",
             applicationFlags: C?.application.flags,
             sectionName: "app_launcher_in_voice_banner",
@@ -67,13 +67,13 @@ function V(e) {
               (t = (0, j.DH)({ itemId: C.id, hash: C.image_hash, containerWidth: 584 })),
           (0, l.jsxs)(u.D, {
               className: P.V8,
-              innerRef: E,
+              innerRef: f,
               onClick: () => {
                   d(),
                       (0, I.A)({
                           context: { type: "channel", channel: a },
                           openInPopout: r,
-                          analyticsLocation: f.A.APP_LAUNCHER_IN_VOICE_BANNER,
+                          analyticsLocation: E.A.APP_LAUNCHER_IN_VOICE_BANNER,
                           initialState: { applicationId: C.application.id },
                       });
               },
@@ -94,7 +94,7 @@ let U = i.forwardRef(function (e, n) {
             s || r();
         }, [r, s]);
     let j = (0, N.Us)(),
-        { analyticsLocations: S, newestAnalyticsLocation: k } = (0, p.Ay)(f.A.ACTIVITIES_MINI_SHELF),
+        { analyticsLocations: S, newestAnalyticsLocation: k } = (0, p.Ay)(E.A.ACTIVITIES_MINI_SHELF),
         U = j === L.BRT.POPOUT,
         B = ((t = a.getGuildId()), (0, R.A)({ guildId: t }).slice(0, 5));
     i.useEffect(() => {
@@ -164,7 +164,7 @@ let U = i.forwardRef(function (e, n) {
                                                 variant: "eyebrow",
                                                 children: D.intl.string(D.t["K8+z4S"]),
                                             }),
-                                            (0, l.jsx)(E._, {
+                                            (0, l.jsx)(f._, {
                                                 size: "custom",
                                                 width: 12,
                                                 height: 12,

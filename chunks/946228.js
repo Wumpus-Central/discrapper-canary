@@ -21,8 +21,8 @@ var A = n(442433),
     I = n(589158),
     y = n(775602),
     S = n(793574),
-    v = n(95561),
-    N = n(688810),
+    N = n(95561),
+    v = n(688810),
     _ = n(941726),
     j = n(449582),
     T = n(900797),
@@ -140,8 +140,8 @@ var ep = n(915089),
     eI = n(773669),
     ey = n(317525),
     eS = n(994500),
-    ev = n(309010),
-    eN = n(741961),
+    eN = n(309010),
+    ev = n(741961),
     e_ = n(287809),
     ej = n(977997),
     eT = n(625494),
@@ -169,13 +169,13 @@ let eL = eO.Ay.getEnableHardwareAcceleration(),
                 isTyping: C,
                 isMobileOnline: y,
                 isVROnline: S,
-                premiumSince: v,
-                nameplate: N,
+                premiumSince: N,
+                nameplate: v,
                 ..._
             } = e,
             j = i.useRef(null),
             [T, b] = i.useState(!1),
-            R = null != v ? new Date(v) : null,
+            R = null != N ? new Date(N) : null,
             O = i.useCallback(
                 (e) => {
                     (0, A.L3)(e, async () => {
@@ -249,7 +249,7 @@ let eL = eO.Ay.getEnableHardwareAcceleration(),
                                 n.e("717334"),
                                 n.e("184841"),
                             ]).then(n.bind(n, 107632)),
-                            t = ej.A.isInChannel(ev.Ay.getVoiceChannelId(), c.id);
+                            t = ej.A.isInChannel(eN.Ay.getVoiceChannelId(), c.id);
                         return (n) => (0, l.jsx)(e, { ...n, user: c, guildId: x, channel: g, showMediaItems: t });
                     });
                 },
@@ -312,7 +312,7 @@ let eL = eO.Ay.getEnableHardwareAcceleration(),
                     onClickPremiumGuildIcon: L,
                     selected: T,
                     itemProps: _,
-                    nameplate: N,
+                    nameplate: v,
                     onClick: (e) => {
                         e.shiftKey ? M?.() : b((e) => !e);
                     },
@@ -328,7 +328,7 @@ let eL = eO.Ay.getEnableHardwareAcceleration(),
         let { colorRoleId: t, ...n } = e,
             { channel: i, user: s, index: r } = e,
             a = (0, u.rm)(`${r}`),
-            o = (0, h.bG)([eN.A], () => eN.A.isTyping(i.id, s.id)),
+            o = (0, h.bG)([ev.A], () => ev.A.isTyping(i.id, s.id)),
             c = (0, h.bG)([e_.default], () => e_.default.getCurrentUser()),
             d = (0, h.bG)([ey.A], () => (null != t ? ey.A.getRole(i.guild_id, t)?.name : void 0), [i, t]),
             m = (0, j.r)({ user: s, guildId: i.guild_id });
@@ -597,7 +597,7 @@ class eG extends i.Component {
             },
         );
         (this.lastReportedAnalyticsChannel = this.props.channel.id),
-            v.Ay.trackWithMetadata(D.HAw.MEMBER_LIST_VIEWED, { ...l });
+            N.Ay.trackWithMetadata(D.HAw.MEMBER_LIST_VIEWED, { ...l });
     };
     render() {
         let { groups: e, listId: t, channel: n, sectionHeight: i } = this.props;
@@ -654,7 +654,7 @@ class eG extends i.Component {
 }
 function eV(e) {
     let { channel: t, className: n } = e,
-        { analyticsLocations: s } = (0, N.Ay)(S.A.MEMBER_LIST),
+        { analyticsLocations: s } = (0, v.Ay)(S.A.MEMBER_LIST),
         a = (0, h.bG)([y.Ay], () => y.Ay.keyboardModeEnabled),
         o = (0, h.cf)([K.Ay], () => K.Ay.getProps(t.guild_id, t.id)),
         {
@@ -775,8 +775,8 @@ function eV(e) {
                 }, [s, c, a, t, r, u, n, l, m, x]),
                 y = i.useRef(0),
                 S = i.useRef(c),
-                v = i.useRef(void 0),
-                N = i.useRef({ impressionCappedEntryIds: d }),
+                N = i.useRef(void 0),
+                v = i.useRef({ impressionCappedEntryIds: d }),
                 j = i.useCallback(
                     (e) => {
                         let t = Math.floor(e / B.bG),
@@ -790,14 +790,14 @@ function eV(e) {
                     S.current = c;
                 }, [c]),
                 i.useEffect(() => {
-                    N.current = { impressionCappedEntryIds: d };
+                    v.current = { impressionCappedEntryIds: d };
                 }, [d]),
                 i.useEffect(
                     () => (
                         (y.current = 0),
-                        (v.current = Date.now()),
+                        (N.current = Date.now()),
                         () => {
-                            if (null == u || null == v.current || Date.now() - v.current < ef) return;
+                            if (null == u || null == N.current || Date.now() - N.current < ef) return;
                             let e = S.current?.map((e) => e.id) ?? [],
                                 t = e.slice(0, y.current);
                             !m &&
@@ -805,13 +805,13 @@ function eV(e) {
                                 x &&
                                 ((0, X.D)(D.HAw.RANKING_ITEMS_SEEN_MUST_BE_SAMPLED, {
                                     request_id: u,
-                                    first_shown_at: v.current,
+                                    first_shown_at: N.current,
                                     item_ids: t,
                                     surface_type: eh.UG.GUILD_MEMBER_LIST,
                                     channel_id: s,
                                     guild_id: r,
                                     all_item_ids: e,
-                                    impression_capped_item_ids: [...N.current.impressionCappedEntryIds],
+                                    impression_capped_item_ids: [...v.current.impressionCappedEntryIds],
                                 }),
                                 (0, J.sE)("useInjectContentInventoryFeed") &&
                                     W.h.dispatch({ type: "CONTENT_INVENTORY_TRACK_ITEM_IMPRESSIONS", itemIds: t }));
@@ -857,7 +857,7 @@ function eV(e) {
                 }),
             [],
         ),
-        v = i.useCallback(
+        N = i.useCallback(
             () =>
                 new Promise((e) => {
                     let t = g.current;
@@ -870,8 +870,8 @@ function eV(e) {
                 }),
             [],
         ),
-        j = (0, c.Ay)({ id: `members-${t.id}`, setFocus: E, isEnabled: a, scrollToStart: I, scrollToEnd: v });
-    return (0, l.jsx)(N.f5, {
+        j = (0, c.Ay)({ id: `members-${t.id}`, setFocus: E, isEnabled: a, scrollToStart: I, scrollToEnd: N });
+    return (0, l.jsx)(v.f5, {
         value: s,
         children: (0, l.jsx)("div", {
             ref: A,

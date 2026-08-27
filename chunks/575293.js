@@ -21,8 +21,8 @@ var l = n(477900),
     I = n(696451),
     y = n(71393),
     S = n(225142),
-    v = n(374084),
-    N = n(101611),
+    N = n(374084),
+    v = n(101611),
     _ = n(473529),
     j = n(111487),
     T = n(652215),
@@ -59,10 +59,10 @@ function L(e) {
 }
 function k(e) {
     let { guildId: t, channel: n, className: s } = e,
-        { channelAction: c, completed: x } = (0, N.j4)(t, n),
-        A = (0, N.Lr)(t, c?.channelId),
+        { channelAction: c, completed: x } = (0, v.j4)(t, n),
+        A = (0, v.Lr)(t, c?.channelId),
         E = (0, o.bG)([g.Ay], () => g.Ay.useReducedMotion),
-        I = c?.actionType === v.NewMemberActionTypes.VIEW,
+        I = c?.actionType === N.NewMemberActionTypes.VIEW,
         y = (0, d.r)(h.A.colors.WHITE),
         _ = O[(0, C.C)()],
         [j, T] = i.useState(!1),
@@ -158,7 +158,7 @@ function w(e) {
     let { guildId: t, channel: n, className: i } = e,
         s = (0, _.d)(t),
         r = (0, o.bG)([I.Ay], () => I.Ay.getSelfMember(t)?.isPending === !0),
-        a = (0, N.jY)(t),
+        a = (0, v.jY)(t),
         u = (0, o.bG)([y.A], () => y.A.getGuild(t)?.features.has(T.GuildFeatures.GUILD_SERVER_GUIDE));
     return a || r || !s || !u ? null : (0, l.jsx)(k, { guildId: t, channel: n, className: i });
 }

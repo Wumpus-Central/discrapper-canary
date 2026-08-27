@@ -21,8 +21,8 @@ var l = n(477900),
     I = n(291594),
     y = n(263577),
     S = n(506326),
-    v = n(868065),
-    N = n(424994),
+    N = n(868065),
+    v = n(424994),
     _ = n(518477),
     j = n(375708),
     T = n(273783),
@@ -54,7 +54,7 @@ let R = [S.iq, S.Zc, S.Xy, S.$X, S.tR, S.K7, S.fg, S.sp, S.MK],
                     trackEntryPointImpression: !0,
                     sourceUserId: t.author_id,
                 },
-                { onOpened: () => L(N.PA.OPENED_GAME_PROFILE) },
+                { onOpened: () => L(v.PA.OPENED_GAME_PROFILE) },
             ),
             V = j.intl.formatToPlainString(j.t["9sZWVp"], { gameName: t.extra.game_name }),
             F = (0, l.jsx)(y.V, {
@@ -64,8 +64,8 @@ let R = [S.iq, S.Zc, S.Xy, S.$X, S.tR, S.K7, S.fg, S.sp, S.MK],
                 className: b.xn,
                 showTooltip: k?.text != null,
             }),
-            H = (0, l.jsx)(v.ZB, { children: t.extra.game_name });
-        return (0, l.jsxs)(v.Zp, {
+            H = (0, l.jsx)(N.ZB, { children: t.extra.game_name });
+        return (0, l.jsxs)(N.Zp, {
             selected: i,
             usesCardRows: !0,
             children: [
@@ -73,12 +73,12 @@ let R = [S.iq, S.Zc, S.Xy, S.$X, S.tR, S.K7, S.fg, S.sp, S.MK],
                     applicationId: t.extra.application_id,
                     questContent: s.u.MEMBERS_LIST_CARD,
                     children: (e) =>
-                        (0, l.jsxs)(v.dM, {
+                        (0, l.jsxs)(N.dM, {
                             ref: e,
                             children: [
-                                (0, l.jsxs)(v.UA, {
+                                (0, l.jsxs)(N.UA, {
                                     children: [
-                                        (0, l.jsx)(v.Hp, { entry: t, channelId: n.id, guildId: n.guild_id }),
+                                        (0, l.jsx)(N.Hp, { entry: t, channelId: n.id, guildId: n.guild_id }),
                                         null != G ? (0, l.jsx)(I.A, { className: T.N4, onClick: G, children: H }) : H,
                                         (0, l.jsx)(S.mG, {
                                             location: S.N5.CARD,
@@ -95,8 +95,8 @@ let R = [S.iq, S.Zc, S.Xy, S.$X, S.tR, S.K7, S.fg, S.sp, S.MK],
                 P &&
                     (0, l.jsxs)(l.Fragment, {
                         children: [
-                            (0, l.jsx)(v.ik, {}),
-                            (0, l.jsxs)(v.dM, {
+                            (0, l.jsx)(N.ik, {}),
+                            (0, l.jsxs)(N.dM, {
                                 className: T.DK,
                                 children: [
                                     (0, l.jsxs)("div", {
@@ -128,7 +128,7 @@ let R = [S.iq, S.Zc, S.Xy, S.$X, S.tR, S.K7, S.fg, S.sp, S.MK],
                         className: T.AB,
                         compactViewMore: !0,
                         onClickViewMore: () => {
-                            L(N.PA.APPLICATION_WIDGET_PREVIEW_VIEW_MORE),
+                            L(v.PA.APPLICATION_WIDGET_PREVIEW_VIEW_MORE),
                                 (0, A.openUserProfileModal)({ userId: t.author_id, tabSection: _.RP.WIDGETS });
                         },
                     }),

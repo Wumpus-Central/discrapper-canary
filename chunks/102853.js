@@ -21,8 +21,8 @@ var l = n(582128),
     I = n(429913),
     y = n(20015),
     S = n(207371),
-    v = n(498642),
-    N = n(71393),
+    N = n(498642),
+    v = n(71393),
     _ = n(480595),
     j = n(576705),
     T = n(994500),
@@ -76,7 +76,7 @@ function U(e) {
         en = (0, I.h)(Z),
         el = (0, S.x)(en),
         ei = (0, g.vG)({ userId: G.id, activity: n, channelId: $, application: en }),
-        es = (0, i.bG)([m.A, N.A, v.A, T.A, b.Ay, f.A, j.A, _.A, R.A, u.Ay], () =>
+        es = (0, i.bG)([m.A, v.A, N.A, T.A, b.Ay, f.A, j.A, _.A, R.A, u.Ay], () =>
             null != U
                 ? ei === g.Gy.CAN_JOIN
                     ? p.o.CAN_JOIN
@@ -89,8 +89,8 @@ function U(e) {
                       currentUser: q,
                       isEmbedded: Y,
                       ChannelStore: m.A,
-                      GuildStore: N.A,
-                      GuildMemberCountStore: v.A,
+                      GuildStore: v.A,
+                      GuildMemberCountStore: N.A,
                       RelationshipStore: T.A,
                       SelectedChannelStore: b.Ay,
                       VoiceStateStore: f.A,

@@ -35,8 +35,8 @@ let A = s.forwardRef(function (e, t) {
             draftType: y,
             size: S = 1,
         } = e,
-        v = s.useRef(null),
-        { onFocus: N, ..._ } = (0, o.rm)(n),
+        N = s.useRef(null),
+        { onFocus: v, ..._ } = (0, o.rm)(n),
         { handleFocus: j, handleBlur: T } = (function (e) {
             let [t, n] = (0, s.useState)(!1);
             return {
@@ -55,7 +55,7 @@ let A = s.forwardRef(function (e, t) {
                 ),
                 isFocused: t,
             };
-        })(N),
+        })(v),
         b = 0 === S,
         R = null != A;
     return (0, i.jsx)(u.vN, {
@@ -64,8 +64,8 @@ let A = s.forwardRef(function (e, t) {
             onFocus: j,
             onBlur: T,
             onClick: function (e) {
-                if (0 === e.detail && null != v.current) {
-                    let e = v.current.querySelector('[role="button"], button');
+                if (0 === e.detail && null != N.current) {
+                    let e = N.current.querySelector('[role="button"], button');
                     e?.click();
                 }
             },
@@ -94,7 +94,7 @@ let A = s.forwardRef(function (e, t) {
             ref: t,
             children: (0, i.jsxs)("div", {
                 className: p.PO,
-                ref: v,
+                ref: N,
                 children: [
                     g,
                     R

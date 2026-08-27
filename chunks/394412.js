@@ -13,8 +13,8 @@ var i = t(17928),
     m = t(935159),
     h = t(508654),
     C = t(974930),
-    E = t(47868),
-    f = t(375708),
+    f = t(47868),
+    E = t(375708),
     p = t(410476);
 function g(e) {
     let { channelId: n, showDismiss: g = !0 } = e,
@@ -31,7 +31,7 @@ function g(e) {
         : (0, l.jsx)(l.Fragment, {
               children: _.map((e) =>
                   (0, l.jsx)(
-                      E.A,
+                      f.A,
                       {
                           icon: (0, l.jsx)(r.CalendarIcon, {
                               size: "custom",
@@ -40,8 +40,8 @@ function g(e) {
                               width: 20,
                           }),
                           color: a.A.unsafe_rawColors.GREEN_360.css,
-                          title: f.intl.formatToPlainString(T(e) ? f.t["1vGXqM"] : f.t.xMJyla, { eventName: e.name }),
-                          description: f.intl.formatToPlainString(f.t.PTebCR, {
+                          title: E.intl.formatToPlainString(T(e) ? E.t["1vGXqM"] : E.t.xMJyla, { eventName: e.name }),
+                          description: E.intl.formatToPlainString(E.t.PTebCR, {
                               startTime: (0, C.CC)(e.scheduled_start_time).startDateTimeString,
                           }),
                           onClick: () => {

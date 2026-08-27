@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { H: () => S, X: () => v });
+n.d(t, { H: () => S, X: () => N });
 var l = n(477900),
     i = n(582128),
     s = n(503698),
@@ -53,7 +53,7 @@ function S(e) {
             position: n,
             shouldShow: !A,
             onTooltipShow: () => {
-                s && N({ emojiNode: t, isCustomEmoji: !1 });
+                s && v({ emojiNode: t, isCustomEmoji: !1 });
             },
             children: (0, l.jsx)(u.D, {
                 ...e,
@@ -85,7 +85,7 @@ function S(e) {
           })
         : S();
 }
-let v = (e) => {
+let N = (e) => {
     let {
             node: t,
             tooltipPosition: n = g.Uk.position,
@@ -94,7 +94,7 @@ let v = (e) => {
             channelId: E,
             messageId: S,
         } = e,
-        v = (0, x.n)(),
+        N = (0, x.n)(),
         [_, j] = i.useState(String(Date.now())),
         [T, b] = i.useState(!1),
         [R, O] = i.useState(!1),
@@ -105,7 +105,7 @@ let v = (e) => {
             size: e ?? (t.jumboable ? "jumbo" : "default"),
             emojiId: t.emojiId,
             animated: t.animated,
-            isInteracting: v,
+            isInteracting: N,
             channelId: E,
             messageId: S,
         });
@@ -123,7 +123,7 @@ let v = (e) => {
             onTooltipShow: () => {
                 b(!0),
                     s &&
-                        (N({ emojiNode: t, isCustomEmoji: !0, nonce: k }),
+                        (v({ emojiNode: t, isCustomEmoji: !0, nonce: k }),
                         (0, m.K)(C.EmojiInteractionPoint.CustomEmojiTooltipShown));
             },
             children: (0, l.jsx)(u.D, {
@@ -167,7 +167,7 @@ let v = (e) => {
           })
         : w();
 };
-function N(e) {
+function v(e) {
     let { emojiNode: t, isCustomEmoji: n, nonce: l } = e;
     h.Ay.trackWithMetadata(A.HAw.EXPRESSION_TOOLTIP_VIEWED, {
         type: E.e.EMOJI_IN_MESSAGE_HOVER,

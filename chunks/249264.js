@@ -23,8 +23,8 @@ var c = n(297264),
     C = n(735321),
     S = n(451395),
     b = n(823016),
-    T = n(788593),
-    y = n(492280),
+    y = n(788593),
+    T = n(492280),
     N = n(866665),
     k = n(789645),
     w = n(147925);
@@ -38,13 +38,13 @@ var R = n(477782),
     G = n(148795),
     M = n(214947),
     U = n(375708),
-    F =
+    W =
         (((i = {}).RIBBON = "ribbon"),
         (i.THUMBS_UP = "thumbsUp"),
         (i.THUMBS_DOWN = "thumbsDown"),
         (i.FRIENDS = "friends"),
         i);
-let W = {
+let F = {
         [P.X.BETTER_THAN_YOU]: { getText: () => U.intl.string(U.t.jbIRBE), iconRole: "ribbon" },
         [P.X.CASUAL]: { getText: () => U.intl.string(U.t.xcFFv6), iconRole: "ribbon" },
         [P.X.INTERMEDIATE]: { getText: () => U.intl.string(U.t["A/mIs/"]), iconRole: "ribbon" },
@@ -62,12 +62,12 @@ let W = {
     },
     H = (function (e) {
         let t = {};
-        for (let n of Object.keys(W)) {
-            let i = W[n];
+        for (let n of Object.keys(F)) {
+            let i = F[n];
             null != i && (t[n] = { getText: i.getText, icon: e[i.iconRole] });
         }
         return t;
-    })({ [F.RIBBON]: _.q, [F.THUMBS_UP]: D.G, [F.THUMBS_DOWN]: G.d, [F.FRIENDS]: M.$ });
+    })({ [W.RIBBON]: _.q, [W.THUMBS_UP]: D.G, [W.THUMBS_DOWN]: G.d, [W.FRIENDS]: M.$ });
 function V(e) {
     let t = H[e];
     return null != t ? t : null;
@@ -451,8 +451,8 @@ function ec(e) {
         [j, A] = r.useState("idle"),
         [v, S] = r.useState(t ?? ""),
         b = r.useRef(null),
-        T = r.useRef(null),
-        y = U.intl.string(U.t.xKSfBT),
+        y = r.useRef(null),
+        T = U.intl.string(U.t.xKSfBT),
         N = null != t && "" !== t.trim(),
         k = r.useCallback(() => {
             I({ action: "PRESS_ADD_COMMENTARY", widgetEdited: a }), A("editing");
@@ -482,7 +482,7 @@ function ec(e) {
                       (0, s.jsx)(f.f, {
                           id: g,
                           value: v,
-                          placeholder: y,
+                          placeholder: T,
                           onChange: R,
                           onBlur: w,
                           rows: 3,
@@ -495,7 +495,7 @@ function ec(e) {
                   ],
               })
             : (0, s.jsxs)("div", {
-                  ref: T,
+                  ref: y,
                   role: "group",
                   "aria-labelledby": m,
                   onClick: k,
@@ -503,14 +503,14 @@ function ec(e) {
                   children: [
                       (0, s.jsx)(h.PencilIcon, { size: "xxs", color: x.A.colors.ICON_MUTED, className: ei.Ls }),
                       (0, s.jsx)(er, { user: n, guildId: i, channelId: l, id: m }),
-                      (0, s.jsx)(ea, { text: t ?? y, className: o()(ei.qC, !N && ei.qf) }),
+                      (0, s.jsx)(ea, { text: t ?? T, className: o()(ei.qC, !N && ei.qf) }),
                       (0, s.jsx)(d.D, {
                           innerRef: b,
                           "aria-label": U.intl.string(U.t.ppb9MJ),
                           onClick: (e) => {
                               e.stopPropagation(), k();
                           },
-                          focusProps: { ringTarget: T },
+                          focusProps: { ringTarget: y },
                       }),
                   ],
               })
@@ -539,9 +539,9 @@ function ed(e) {
         L = w && (0, C.y9)(a),
         O = w && !R,
         { registerDragHandleRef: P } = (0, b.r)();
-    if (N) return (0, s.jsx)(y.E, {});
+    if (N) return (0, s.jsx)(T.E, {});
     function _() {
-        return (0, s.jsx)(T.A, {
+        return (0, s.jsx)(y.A, {
             coverRef: x,
             className: null == v || u ? void 0 : en.iL,
             imageSrc: v,

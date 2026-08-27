@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { JC: () => N, Ay: () => _, rC: () => j });
+n.d(t, { JC: () => v, Ay: () => _, rC: () => j });
 var l = n(582128),
     i = n(554146),
     s = n(522305),
@@ -52,12 +52,12 @@ function S(e) {
         t
     );
 }
-function v(e) {
+function N(e) {
     return S((0, g.A)(e?.linkedGames)?.id);
 }
-function N(e) {
+function v(e) {
     let { data: t } = f(),
-        n = v(e);
+        n = N(e);
     return (
         null != e &&
         (e?.embeddedActivityConfig == null || !!I({ countryCode: t?.alpha2, activity: e.embeddedActivityConfig })) &&
@@ -66,9 +66,9 @@ function N(e) {
 }
 function _(e) {
     let { application: t, analyticsLocations: n } = e,
-        i = N(t),
+        i = v(t),
         { bot: r } = t ?? { bot: null },
-        a = v(t),
+        a = N(t),
         { bot: o } = a ?? { bot: null },
         u = a?.id,
         c = o?.id;

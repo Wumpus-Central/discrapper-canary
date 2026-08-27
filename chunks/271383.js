@@ -84,11 +84,11 @@ function C(e) {
 }
 var S = n(570002),
     b = n(202541),
-    T = n(375708);
-function y() {
+    y = n(375708);
+function T() {
     let e = (0, g.YW)(),
         { goBack: t } = (0, g.pA)(),
-        n = (0, S.A)(T.intl.string(T.t.pj0XBN));
+        n = (0, S.A)(y.intl.string(y.t.pj0XBN));
     return (0, i.jsx)(x.A, {
         subscriptionTier: b.pe.TIER_2,
         onSubscribeModalClose: (e) => {
@@ -99,10 +99,10 @@ function y() {
             return (0, i.jsx)(C, {
                 isVisible: e,
                 labelId: "premium-try-it-out-footer-bar-label",
-                noticeText: T.intl.string(T.t.X0ir7L),
-                a11yAnnounceOnShow: T.intl.string(T.t.X0ir7L),
-                a11yAnnounceOnHide: T.intl.string(T.t.ZcyFYa),
-                secondaryAction: { text: T.intl.string(T.t.V3S9WW), onClick: t },
+                noticeText: y.intl.string(y.t.X0ir7L),
+                a11yAnnounceOnShow: y.intl.string(y.t.X0ir7L),
+                a11yAnnounceOnHide: y.intl.string(y.t.ZcyFYa),
+                secondaryAction: { text: y.intl.string(y.t.V3S9WW), onClick: t },
                 primaryAction: { text: n, onClick: s, icon: m.t, variant: "expressive" },
             });
         },
@@ -120,8 +120,8 @@ var N = n(631670),
     G = n(958805),
     M = n(61881),
     U = n(624826),
-    F = n(384377),
-    W = n(518477),
+    W = n(384377),
+    F = n(518477),
     H = n(652215);
 function V(e) {
     let { guildId: t } = e,
@@ -230,7 +230,7 @@ function V(e) {
                 } catch {
                     e = !1;
                 }
-            e ? (0, N.x8)() : (0, F.XA)(W.jM.PROFILE_SAVE_GENERIC_FAILURE), c(!1);
+            e ? (0, N.x8)() : (0, W.XA)(F.jM.PROFILE_SAVE_GENERIC_FAILURE), c(!1);
         }, [h, j, x, d, g, m, n, t]);
     return (
         l.useEffect(() => {
@@ -252,11 +252,11 @@ function V(e) {
         (0, i.jsx)(C, {
             isVisible: A,
             labelId: "user-profile-save-reset-toolbar-label",
-            noticeText: T.intl.string(T.t["/lQiX/"]),
+            noticeText: y.intl.string(y.t["/lQiX/"]),
             isEmphasized: s,
-            a11yAnnounceOnShow: T.intl.string(T.t["0Y/qkL"]),
-            secondaryAction: { text: T.intl.string(T.t.yBZMsQ), onClick: E, disabled: !A || o },
-            primaryAction: { text: T.intl.string(T.t["R3BPH+"]), onClick: S, loading: o, disabled: !v || !A },
+            a11yAnnounceOnShow: y.intl.string(y.t["0Y/qkL"]),
+            secondaryAction: { text: y.intl.string(y.t.yBZMsQ), onClick: E, disabled: !A || o },
+            primaryAction: { text: y.intl.string(y.t["R3BPH+"]), onClick: S, loading: o, disabled: !v || !A },
         })
     );
 }
@@ -286,7 +286,7 @@ function Y(e) {
                   "dnd" === g
                       ? (0, i.jsx)(c.S, { className: z.W })
                       : "premium-try-it-out" === g
-                        ? (0, i.jsx)(y, {})
+                        ? (0, i.jsx)(T, {})
                         : "save" === g
                           ? (0, i.jsx)(V, { guildId: n })
                           : null,

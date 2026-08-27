@@ -21,8 +21,8 @@ var l = n(477900),
     I = n(780777),
     y = n(565150),
     S = n(424170),
-    v = n(31717),
-    N = n(914905),
+    N = n(31717),
+    v = n(914905),
     _ = n(650583),
     j = n(375708),
     T = n(40974);
@@ -30,7 +30,7 @@ function b(e) {
     let { channelId: t, option: n, keyboardModeEnabled: s } = e,
         a = i.useRef(null),
         [o, u] = i.useState(!1),
-        c = g.A.getUpload(t, n.name, v.C.SlashCommand),
+        c = g.A.getUpload(t, n.name, N.C.SlashCommand),
         m = i.useRef(null),
         f = n.type === h.n4.ATTACHMENT ? n.fileTypes : void 0,
         {
@@ -49,7 +49,7 @@ function b(e) {
             (e, l) => {
                 if (p.length > 0 && !b([e.name])) return R();
                 let i = { id: n.name, file: e, platform: y.xz.WEB, origin: l };
-                d.A.setFile({ channelId: t, id: n.name, file: i, draftType: v.C.SlashCommand, allowOptimization: !1 });
+                d.A.setFile({ channelId: t, id: n.name, file: i, draftType: N.C.SlashCommand, allowOptimization: !1 });
             },
             [p.length, b, n.name, t, R],
         ),
@@ -76,11 +76,11 @@ function b(e) {
         );
     }, [c, O, M, k]),
     null != c)
-        ? (0, l.jsx)(N.A, {
+        ? (0, l.jsx)(v.A, {
               channelId: t,
               upload: c,
               keyboardModeEnabled: s,
-              draftType: v.C.SlashCommand,
+              draftType: N.C.SlashCommand,
               label: (0, l.jsxs)(i.Fragment, {
                   children: [
                       (0, l.jsxs)(C.E, { tag: "span", variant: "text-md/normal", children: [n.displayName, ": "] }),
@@ -102,7 +102,7 @@ function b(e) {
                   e.key === _.dh.ENTER && (e.preventDefault(), a.current?.activateUploadDialogue());
               },
               className: r()(T.xd, { [T.LB]: o }),
-              draftType: v.C.SlashCommand,
+              draftType: N.C.SlashCommand,
               ref: m,
               children: [
                   (0, l.jsx)("span", { className: r()(T.fS, { [T.Vg]: o }), children: n.displayName }),
@@ -148,7 +148,7 @@ function k(e) {
         y = (0, u.bG)([g.A], () => g.A.getUploads(t, n.drafts.type)),
         {
             isApplicationCommand: S,
-            commandOptions: v,
+            commandOptions: N,
             commandOptionStates: _,
         } = (0, u.cf)([p.A], () => {
             let e = p.A.getActiveCommand(t);
@@ -156,7 +156,7 @@ function k(e) {
             let n = p.A.getOptionStates(t);
             return { isApplicationCommand: !0, commandOptions: e.options, commandOptionStates: n };
         }),
-        j = i.useMemo(() => v?.filter((e) => e.type === h.n4.ATTACHMENT && _?.[e.name]?.hasValue) ?? [], [v, _]),
+        j = i.useMemo(() => N?.filter((e) => e.type === h.n4.ATTACHMENT && _?.[e.name]?.hasValue) ?? [], [N, _]),
         [T, k] = i.useState([]);
     i.useEffect(() => {
         function e() {
@@ -205,7 +205,7 @@ function k(e) {
                               ? j.map((e) => (0, l.jsx)(b, { channelId: t, keyboardModeEnabled: E, option: e }, e.name))
                               : U.map((e) =>
                                     (0, l.jsx)(
-                                        N.A,
+                                        v.A,
                                         {
                                             channelId: t,
                                             draftType: n.drafts.type,
