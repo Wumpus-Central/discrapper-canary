@@ -4,4 +4,5 @@ e.exports = {
     nV: "gallery__91876",
     aM: "previewFrame__91876",
     VH: "preview__91876",
+    Hf: "playHitArea__91876",
 };
