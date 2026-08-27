@@ -323,8 +323,8 @@ function k(e) {
                     },
                     primaryInvoicesError: () => i().checkoutInvoiceError ?? i().renewalInvoiceError,
                     isOrderLocked: () => {
-                        let { order: e, isOrderSyncing: t } = i();
-                        return null != e && t;
+                        let { order: e, isOrderSyncing: t, isOrderSigning: n } = i();
+                        return null != e && (t || n);
                     },
                 });
         return {
@@ -485,6 +485,8 @@ function k(e) {
             setHasAddedPaymentSourceThisSession: () => e({ hasAddedPaymentSourceThisSession: !0 }),
             isOrderSyncing: !1,
             setIsOrderSyncing: (t) => e({ isOrderSyncing: t }),
+            isOrderSigning: !1,
+            setIsOrderSigning: (t) => e({ isOrderSigning: t }),
             orderSyncError: null,
             setOrderSyncError: (t) => e({ orderSyncError: t ?? null }),
             checkoutPriceOptions: { paymentSourceId: l ?? void 0, currency: o, loaded: !1 },
