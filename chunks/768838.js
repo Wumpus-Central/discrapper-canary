@@ -896,6 +896,7 @@ function e9(e) {
                               "data-migration-pending": !0,
                               className: i()(e2.jE, { [e2.st]: em }),
                               style: { overflow: "hidden auto" },
+                              scrollbarGutter: !1,
                               children: [
                                   (0, a.jsxs)("div", {
                                       className: e2.w1,
