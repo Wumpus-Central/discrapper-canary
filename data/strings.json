@@ -4243,6 +4243,7 @@
   "UqnlQF": "Your badges",
   "q3t0Ht": "{count, plural,one {Badge hidden}other {# badges hidden}",
   "nPQVxb": "Badge is always visible",
+  "t3udZb": "Badge is always visible and appears first",
   "qPHr0x": "Badge moved, from position {from} to position {to}",
   "eIHfGZ": "{overflow_count, plural,one {# more badge}other {# more badges}",
   "21W3EN": "Badge {position}, {badgeName}",
