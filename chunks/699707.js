@@ -11,8 +11,8 @@ var i = n(477900),
     h = n(80051),
     p = n(280450),
     m = n(453028),
-    f = n(625494),
-    A = n(220144),
+    A = n(625494),
+    f = n(220144),
     x = n(175203),
     g = n(306852),
     C = n(947580),
@@ -37,8 +37,8 @@ function T(e) {
             selectedParticipant: P,
             showParticipants: M = !0,
             className: w,
-            width: D,
-            height: U,
+            width: U,
+            height: D,
             layout: V,
             idle: k,
         } = e,
@@ -48,28 +48,28 @@ function T(e) {
         z = (0, d.Ay)(F),
         [W, $] = l.useState(!0),
         [Y, K] = l.useState(!1),
-        q = P.type === I.lp.ACTIVITY,
-        X = (0, u.A)(q ? P.applicationId : void 0),
-        Z = !q && null != P.streamId,
-        Q = U <= 2 * b + 144,
+        X = P.type === I.lp.ACTIVITY,
+        q = (0, u.A)(X ? P.applicationId : void 0),
+        Z = !X && null != P.streamId,
+        Q = D <= 2 * b + 144,
         J = M && !Q,
         ee = (0, d.Ay)(J),
         et = V === j.DUB.MINIMUM || V === j.DUB.NORMAL,
-        en = !Q && (!et || q),
-        ei = (0, A.A)(en, 100),
+        en = !Q && (!et || X),
+        ei = (0, f.A)(en, 100),
         el = ((0, d.Ay)(P.id) ?? P.id) !== P.id,
         ea = 0;
-    (q || J) && (ea += 72), q && !J && (en ? (ea += 48) : (ea += 8)), J && (ea += 0.5 * b + 8);
+    (X || J) && (ea += 72), X && !J && (en ? (ea += 48) : (ea += 8)), J && (ea += 0.5 * b + 8);
     let es = l.useMemo(
-            () => (q && X ? D / (U - 2 * ea) : Z && null != F && F.width > 0 && F.height > 0 ? F.width / F.height : E),
-            [Z, F, q, D, U, ea, X],
+            () => (X && q ? U / (D - 2 * ea) : Z && null != F && F.width > 0 && F.height > 0 ? F.width / F.height : E),
+            [Z, F, X, U, D, ea, q],
         ),
-        er = U - 2 * ea,
-        eo = q && X ? D : er * es,
-        ec = Math.floor(Math.min(D, eo) / es),
-        ed = U > D / es + 72 + b + 8;
-    t = J || q ? (J ? -16 : -8) : 40 + Math.max(0, 72 - (U - ec) / 2);
-    let eu = Math.max(0, 72 - (U - ec) / 2);
+        er = D - 2 * ea,
+        eo = X && q ? U : er * es,
+        ec = Math.floor(Math.min(U, eo) / es),
+        ed = D > U / es + 72 + b + 8;
+    t = J || X ? (J ? -16 : -8) : 40 + Math.max(0, 72 - (D - ec) / 2);
+    let eu = Math.max(0, 72 - (D - ec) / 2);
     l.useEffect(() => {
         let e = setTimeout(() => {
             $(!1);
@@ -86,17 +86,17 @@ function T(e) {
                 delay: ed || !J ? 0 : 100,
                 config: { ...r.config.stiff, clamp: !0 },
                 onStart: () => K(!0),
-                onChange: () => f._.dispatch(j.jej.REMEASURE_TARGET),
+                onChange: () => A._.dispatch(j.jej.REMEASURE_TARGET),
                 onRest: () => {
-                    K(!1), f._.dispatch(j.jej.REMEASURE_TARGET);
+                    K(!1), A._.dispatch(j.jej.REMEASURE_TARGET);
                 },
             },
             ep,
         ),
-        ef = (0, o.z)({ value: +!!J, config: { ...r.config.stiff, clamp: !0 } }, ep),
-        eA = (0, o.z)(
+        eA = (0, o.z)({ value: +!!J, config: { ...r.config.stiff, clamp: !0 } }, ep),
+        ef = (0, o.z)(
             { value: eo, config: { ...r.config.stiff, clamp: !0 } },
-            (ee === J && ef.value.idle && !ei) || el || eh ? "animate-never" : "animate-always",
+            (ee === J && eA.value.idle && !ei) || el || eh ? "animate-never" : "animate-always",
         ),
         ex = (0, o.z)({ value: t, config: { ...r.config.stiff, clamp: !0 } }, ep),
         eg = (0, c.p)(
@@ -115,7 +115,7 @@ function T(e) {
             H(e), $(!1);
         }, []),
         ey = J ? [] : (0, C.Cf)(_, P, B),
-        { visibleParticipants: ej, participantTileWidth: eI } = (0, y.i4)(D, R);
+        { visibleParticipants: ej, participantTileWidth: eI } = (0, y.i4)(U, R);
     return (0, i.jsxs)("div", {
         className: s()(v.zr, N.tR, w),
         children: [
@@ -125,10 +125,10 @@ function T(e) {
                 children: [
                     (0, i.jsxs)(r.animated.div, {
                         className: v.pc,
-                        style: { top: ef.value.to((e) => (-e * b) / 2) },
+                        style: { top: eA.value.to((e) => (-e * b) / 2) },
                         children: [
                             (0, i.jsx)(r.animated.div, {
-                                style: { width: eA.value },
+                                style: { width: ef.value },
                                 className: v.tN,
                                 children: (0, i.jsx)("div", {
                                     className: N.xS,
@@ -143,11 +143,11 @@ function T(e) {
                                                       style: e,
                                                       children: (0, i.jsx)(x.Ay, {
                                                           focused: !0,
-                                                          noBorder: eo >= D || er >= U,
+                                                          noBorder: eo >= U || er >= D,
                                                           channel: O,
                                                           className: N.JS,
                                                           videoComponent: G,
-                                                          width: D,
+                                                          width: U,
                                                           participant: t,
                                                           onClick: n,
                                                           onDoubleClick: T,
@@ -202,8 +202,8 @@ function T(e) {
             ey.length > 0
                 ? (0, i.jsx)(g.A, {
                       onContextMenuParticipant: a,
-                      width: D,
-                      height: U,
+                      width: U,
+                      height: D,
                       channel: O,
                       participants: ey,
                       onSelectParticipant: n,

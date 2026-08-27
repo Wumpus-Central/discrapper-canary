@@ -1,4 +1,4 @@
-n.d(t, { A: () => A });
+n.d(t, { A: () => f });
 var i = n(477900),
     l = n(582128),
     a = n(17928),
@@ -11,18 +11,18 @@ var i = n(477900),
     h = n(781137),
     p = n(495095),
     m = n(505252);
-function f(e, t) {
+function A(e, t) {
     return null != e.activeView && e.activeViewType === o.oU.GUILD_ROOM && e.activeChannelId === t;
 }
-function A(e) {
+function f(e) {
     let { channelId: t, position: n, roomWidth: o } = e,
-        A = (0, l.useRef)(null),
+        f = (0, l.useRef)(null),
         x = (0, a.bG)([d.A], () => d.A.getChannel(t)),
-        g = (0, c.RQ)((e) => f(e, t)),
+        g = (0, c.RQ)((e) => A(e, t)),
         C = (0, l.useRef)(null),
         y = (0, l.useRef)(!1);
     return ((0, l.useEffect)(() => {
-        let e = A.current?.ownerDocument;
+        let e = f.current?.ownerDocument;
         if (null != e)
             return (
                 e.addEventListener("mousedown", n, !0),
@@ -31,13 +31,13 @@ function A(e) {
                 }
             );
         function n() {
-            y.current = f(c.RQ.getState(), t);
+            y.current = A(c.RQ.getState(), t);
         }
     }, [t]),
     null == x)
         ? null
         : (0, i.jsx)(r.Y, {
-              targetElementRef: A,
+              targetElementRef: f,
               position: "top",
               align: "center",
               spacing: 16,
@@ -56,7 +56,7 @@ function A(e) {
                   }),
               children: () =>
                   (0, i.jsx)("div", {
-                      ref: A,
+                      ref: f,
                       className: m.kL,
                       style: { left: `${n.x}%`, top: `${n.y}%` },
                       children: (0, i.jsx)(h.A, { roomWidth: o }),

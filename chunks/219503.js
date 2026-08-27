@@ -1,4 +1,4 @@
-n.d(t, { A: () => ew });
+n.d(t, { A: () => eP });
 var i,
     l,
     a = n(477900),
@@ -69,8 +69,8 @@ var M = (((l = {}).Empty = "empty"), (l.VerificationCode = "verification_code"),
     R = n(627575),
     O = n(17928),
     k = n(155718),
-    w = n(31720),
-    P = n(287809),
+    P = n(31720),
+    w = n(287809),
     L = n(430993),
     D = n(503698),
     U = n.n(D),
@@ -133,7 +133,7 @@ function es() {
         className: ea.Q,
         children: I.intl.format(_.default.ifObbX, {
             handleAgeVerifyHook: () =>
-                w.A.showAgeVerificationGetStartedModal({ entryPoint: m.q1.PARENTAL_CONSENT_LOCKOUT }),
+                P.A.showAgeVerificationGetStartedModal({ entryPoint: m.q1.PARENTAL_CONSENT_LOCKOUT }),
         }),
     });
 }
@@ -167,7 +167,7 @@ function ex(e) {
             onAccept: u,
             onDecline: h,
         } = e,
-        m = (0, O.bG)([P.default], () => P.default.getUser(n.parent_id)),
+        m = (0, O.bG)([w.default], () => w.default.getUser(n.parent_id)),
         p = m?.globalName ?? m?.username ?? n.parent_username,
         g = m?.username ?? n.parent_username,
         f = g !== p,
@@ -400,7 +400,7 @@ let ej = {
         },
         age_verification: function (e) {
             let { onSubmit: t } = e,
-                n = (0, O.bG)([P.default], () => P.default.getCurrentUser());
+                n = (0, O.bG)([w.default], () => w.default.getCurrentUser());
             return (0, a.jsx)(W, {
                 title: "Lorem ipsum dolor",
                 actions: [
@@ -409,7 +409,7 @@ let ej = {
                         variant: "primary",
                         onClick: function () {
                             n?.ageVerificationStatus === k.Tk.UNVERIFIED
-                                ? w.A.showAgeVerificationGetStartedModal({
+                                ? P.A.showAgeVerificationGetStartedModal({
                                       entryPoint: m.q1.SAFETY_FLOWS,
                                       onClose: () => t({ type: M.Empty }),
                                   })
@@ -457,14 +457,14 @@ let ej = {
                 C =
                     ((t = g.pending_requests),
                     (n = (0, O.bG)([Q.A], () => Q.A.getLinkedUsers())),
-                    (i = (0, O.bG)([P.default], () => P.default.getCurrentUser()?.id)),
+                    (i = (0, O.bG)([w.default], () => w.default.getCurrentUser()?.id)),
                     s.useMemo(() => {
                         if (!v) return t;
                         let e = new Map(t.map((e) => [e.parent_id, e])),
                             l = [];
                         for (let t of Object.values(n)) {
                             if (null == t || t.link_status !== er.Ef.PENDING || t.requestor_id === i) continue;
-                            let n = P.default.getUser(t.user_id),
+                            let n = w.default.getUser(t.user_id),
                                 a = e.get(t.user_id);
                             l.push({
                                 parent_id: t.user_id,
@@ -488,8 +488,8 @@ let ej = {
                         (0, Y.P0)((0, $.o)(I.intl.string(_.default["+QRSxc"]), X.Ck.FAILURE));
                     }
                 }, [r]),
-                [k, w] = s.useState(E);
-            E && !k && w(!0);
+                [k, P] = s.useState(E);
+            E && !k && P(!0);
             let [D, U] = s.useState(!1),
                 G = s.useCallback(() => {
                     U(!1), p();
@@ -705,7 +705,7 @@ function ek(e) {
         children: [!c && (0, a.jsx)(eM, {}), (0, a.jsx)(eN, { onSubmit: n, disabled: i, transitionState: l })],
     });
 }
-let ew = function (e) {
+let eP = function (e) {
     let { transitionState: t, onClose: n } = e,
         [i, l] = s.useState(null),
         [f, A] = s.useState(!0),
@@ -751,13 +751,13 @@ let ew = function (e) {
     (0, h.Ay)(() => {
         O();
     });
-    let w = s.useMemo(() => i?.task_type === j.AGE_VERIFICATION, [i]),
-        P = null != i && null === x && y.has(i.task_type);
+    let P = s.useMemo(() => i?.task_type === j.AGE_VERIFICATION, [i]),
+        w = null != i && null === x && y.has(i.task_type);
     return (0, a.jsxs)("div", {
         className: eR.Tp,
         children: [
             (0, a.jsx)("img", { className: eR.xX, src: eO, alt: "" }),
-            w
+            P
                 ? (0, a.jsx)(p.default, {
                       transitionState: t ?? eC.ip.ENTERED,
                       entryPoint: m.q1.SAFETY_FLOWS,
@@ -767,7 +767,7 @@ let ew = function (e) {
                       },
                       dismissable: !1,
                   })
-                : P && null != i
+                : w && null != i
                   ? (0, a.jsx)(ek, { task: i, handleSubmit: k, disabled: T, transitionState: t ?? eC.ip.ENTERED })
                   : (0, a.jsx)("div", {
                         className: eR.nA,

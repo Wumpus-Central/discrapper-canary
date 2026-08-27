@@ -1,4 +1,4 @@
-n.d(t, { y: () => D });
+n.d(t, { y: () => U });
 var i = n(477900),
     l = n(582128),
     a = n(503698),
@@ -11,8 +11,8 @@ var i = n(477900),
     h = n(43990),
     p = n(285796),
     m = n(192308),
-    f = n(231723),
-    A = n(825484),
+    A = n(231723),
+    f = n(825484),
     x = n(821609),
     g = n(283973),
     C = n(834730),
@@ -32,7 +32,7 @@ var i = n(477900),
     P = n(375708),
     M = n(253802),
     w = n(867010);
-function D(e) {
+function U(e) {
     let {
         channel: t,
         guild: n,
@@ -43,12 +43,12 @@ function D(e) {
         activitiesEnabled: o = !0,
     } = e;
     return l < 250
-        ? (0, i.jsx)(U, { channel: t, guild: n, width: l, inPopout: a, handleClose: s, userParticipantCount: r })
+        ? (0, i.jsx)(D, { channel: t, guild: n, width: l, inPopout: a, handleClose: s, userParticipantCount: r })
         : r > 1
           ? (0, i.jsx)(k, { channel: t, guild: n, width: l, inPopout: a, handleClose: s, userParticipantCount: r })
           : (0, i.jsx)(V, { channel: t, guild: n, width: l, inPopout: a, activitiesEnabled: o });
 }
-function U(e) {
+function D(e) {
     let { channel: t, inPopout: n, handleClose: l } = e,
         { analyticsLocations: a, newestAnalyticsLocation: r } = (0, E.Ay)(v.A.VC_TILE_ACTIVITY_SHELF_BUTTON);
     return (0, i.jsx)(E.f5, {
@@ -114,7 +114,7 @@ function V(e) {
                 ]).then(n.bind(n, 1310));
                 return (n) => (0, i.jsx)(e, { ...n, guild: a, channel: t, source: O.PE1.ACTIVITY_ENTRY_POINT_TILE });
             },
-            { contextKey: r ? f.KX : f.SY },
+            { contextKey: r ? A.KX : A.SY },
         );
     }
     function C() {
@@ -134,7 +134,7 @@ function V(e) {
                     className: s()(M.zr, M.co, e),
                     children: [
                         (0, i.jsx)("img", { src: w, className: M.Qw, alt: "" }),
-                        (0, i.jsxs)(A.e, {
+                        (0, i.jsxs)(f.e, {
                             justify: "center",
                             align: "center",
                             children: [

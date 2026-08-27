@@ -11,8 +11,8 @@ var i = n(477900),
     h = n(279250),
     p = n(880144),
     m = n(702904),
-    f = n(471993),
-    A = n(734057),
+    A = n(471993),
+    f = n(734057),
     x = n(71393),
     g = n(453028),
     C = n(576705),
@@ -25,7 +25,7 @@ var i = n(477900),
     b = n(550234);
 function T(e) {
     let { channelId: t, center: n, iconSize: a } = e,
-        T = (0, r.bG)([A.A], () => A.A.getChannel(t)),
+        T = (0, r.bG)([f.A], () => f.A.getChannel(t)),
         _ = T?.guild_id,
         R = (0, r.bG)([y.Ay], () => y.Ay.getVoiceChannelId() === t),
         S = (0, r.bG)([g.Ay], () => (0, p.A)(g.Ay)),
@@ -34,17 +34,17 @@ function T(e) {
         { Component: P } = (0, o.c)("enable"),
         M = (0, r.bG)([g.Ay], () => g.Ay.supports(N.O5.VIDEO)),
         w = l.useRef(null),
-        D = l.useCallback(() => {
+        U = l.useCallback(() => {
             if (null != _) {
                 if (!S) return void (0, m.A)();
-                (0, f.A)(_, t, O), (0, j.n0)({ channelId: t, interactionType: "tv_stream_clicked" });
+                (0, A.A)(_, t, O), (0, j.n0)({ channelId: t, interactionType: "tv_stream_clicked" });
             }
         }, [_, S, t, O]);
     return null != T && null != _ && L && R && M
         ? (0, i.jsxs)(c.D, {
               "aria-label": v.intl.string(v.t.fjBNo1),
               className: b.XI,
-              onClick: D,
+              onClick: U,
               focusProps: { ringTarget: w },
               children: [
                   (0, i.jsx)(I.A, { className: s()(b.ys, E.zq) }),

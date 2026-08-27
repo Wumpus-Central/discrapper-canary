@@ -17,15 +17,15 @@ let _ = function (e) {
         usernameClass: A,
         discriminatorClass: c,
         botClass: o,
-        botVerified: I = !1,
-        style: d,
-        useRemSizes: T = !1,
+        botVerified: T = !1,
+        style: I,
+        useRemSizes: d = !1,
         usernameIcon: R,
         guildTag: N,
     } = e;
     return (0, E.jsxs)("div", {
         className: n()(_, a.oM),
-        style: d,
+        style: I,
         children: [
             (0, E.jsxs)("span", {
                 className: n()(a.Xh, A),
@@ -35,7 +35,7 @@ let _ = function (e) {
             N,
             null != i ? (0, E.jsxs)("span", { className: c ?? void 0, children: ["#", i] }) : null,
             null != S
-                ? (0, E.jsx)(r.A, { type: S, invertColor: s, className: n()(o, a.Od), verified: I, useRemSizes: T })
+                ? (0, E.jsx)(r.A, { type: S, invertColor: s, className: n()(o, a.Od), verified: T, useRemSizes: d })
                 : null,
         ],
     });

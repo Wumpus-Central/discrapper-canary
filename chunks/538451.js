@@ -1,4 +1,4 @@
-i.d(t, { A: () => I });
+i.d(t, { A: () => T });
 var E = i(477900),
     s = i(582128),
     n = i(503698),
@@ -10,20 +10,20 @@ var E = i(477900),
     A = i(297413),
     c = i(342296),
     o = i(475977);
-function I(e) {
+function T(e) {
     let {
             user: t,
             guildId: i,
             channelId: n,
-            nick: I,
-            className: d,
-            textClassName: T,
+            nick: T,
+            className: I,
+            textClassName: d,
             disablePopout: R,
             ignoreModalClicks: N,
             onClick: u,
             onContextMenu: P,
-            onPopoutRequestOpen: h,
-            onPopoutRequestClose: O,
+            onPopoutRequestOpen: O,
+            onPopoutRequestClose: h,
         } = e,
         C = s.useRef(null);
     return (0, E.jsx)(c.A, {
@@ -33,15 +33,15 @@ function I(e) {
         channelId: n,
         position: "left",
         shouldShow: !R && void 0,
-        onRequestOpen: h,
-        onRequestClose: O,
+        onRequestOpen: O,
+        onRequestClose: h,
         ignoreModalClicks: N,
         children: (e) => {
             let { onClick: s, ...n } = e;
             return (0, E.jsxs)(l.D, {
                 ...n,
                 innerRef: C,
-                className: r()(o.DV, d, { [o.YR]: R }),
+                className: r()(o.DV, I, { [o.YR]: R }),
                 onContextMenu: P,
                 onClick: (e) => {
                     s(e), u?.(e);
@@ -54,9 +54,9 @@ function I(e) {
                         size: _._3.SIZE_24,
                     }),
                     (0, E.jsx)(S.E, {
-                        className: r()(o.Ft, T),
+                        className: r()(o.Ft, d),
                         variant: "text-sm/normal",
-                        children: (0, E.jsx)(A.A, { user: t, nick: I, usernameClass: o.Xh, hideDiscriminator: !0 }),
+                        children: (0, E.jsx)(A.A, { user: t, nick: T, usernameClass: o.Xh, hideDiscriminator: !0 }),
                     }),
                 ],
             });

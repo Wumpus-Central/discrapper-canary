@@ -11,8 +11,8 @@ var i = n(477900),
     h = n(687966),
     p = n(34188),
     m = n(597770),
-    f = n(43990),
-    A = n(922016),
+    A = n(43990),
+    f = n(922016),
     x = n(206828),
     g = n(294323),
     C = n(429913),
@@ -32,11 +32,11 @@ var i = n(477900),
     P = n(818348),
     M = n(375708),
     w = n(472344);
-function D(e) {
+function U(e) {
     let [t, n] = (0, j.RF)(e, (0, y.c)(e), void 0, !0);
     return [t === e, n];
 }
-function U(e) {
+function D(e) {
     let {
         className: t,
         containerRef: n,
@@ -75,7 +75,7 @@ function V(e) {
         c = (0, L.uJ)(o)
             ? (0, i.jsx)(h.GameControllerIcon, { className: w.Kk })
             : (0, i.jsx)("img", { className: w.Kk, src: o, alt: "", "aria-hidden": !0 });
-    return (0, i.jsx)(U, {
+    return (0, i.jsx)(D, {
         className: s()(t, w.LM),
         icon: c,
         isAppIcon: !(0, L.uJ)(o),
@@ -103,17 +103,17 @@ function k(e) {
         } = (0, g.A)(n.id, L),
         z = (0, r.bG)([S.default], () => S.default.getId()),
         W = l.useRef(null),
-        [$, Y] = D(o.M.SLAYER_STOREFRONT_VC_GIFTING_STREAM_HEADER_NEW_BADGE),
-        [K, q] = D(o.M.SLAYER_STOREFRONT_VC_GIFTING_PANEL_APP_WIDGET_CTA),
-        { hasAlreadyLinked: X, canStartAuthorization: Z, fetched: Q } = (0, x.RD)(z === n.id ? k : null),
+        [$, Y] = U(o.M.SLAYER_STOREFRONT_VC_GIFTING_STREAM_HEADER_NEW_BADGE),
+        [K, X] = U(o.M.SLAYER_STOREFRONT_VC_GIFTING_PANEL_APP_WIDGET_CTA),
+        { hasAlreadyLinked: q, canStartAuthorization: Z, fetched: Q } = (0, x.RD)(z === n.id ? k : null),
         J = z === n.id && Z && !Q,
         ee = l.useCallback(() => {
             d(!1);
         }, []),
         et = l.useCallback(() => {
-            q(O.i.USER_DISMISS);
-        }, [q]),
-        en = K && null != B && (X || Z),
+            X(O.i.USER_DISMISS);
+        }, [X]),
+        en = K && null != B && (q || Z),
         ei = null != F || en,
         { rankIconUrl: el, rankText: ea } =
             ((t = H?.profile),
@@ -176,15 +176,15 @@ function k(e) {
         }, [E, ei, L, k, v, I, z, n.id, s, ee, K, et, el, ea]);
     return G || J || (null == ec && !E)
         ? null
-        : (0, i.jsx)(f.N, {
+        : (0, i.jsx)(A.N, {
               theme: P.NJ.DARKER,
               children: (e) =>
                   null == ec
                       ? (0, i.jsx)(V, { className: e, applicationId: y })
-                      : (0, i.jsx)(A.Y, {
+                      : (0, i.jsx)(f.Y, {
                             targetElementRef: W,
                             shouldShow: c,
-                            animation: A.Y.Animation.FADE,
+                            animation: f.Y.Animation.FADE,
                             position: "bottom",
                             positionKey: ed,
                             align: "center",
@@ -192,7 +192,7 @@ function k(e) {
                             onRequestClose: ee,
                             renderPopout: () => ec(e),
                             children: () =>
-                                (0, i.jsx)(U, {
+                                (0, i.jsx)(D, {
                                     className: e,
                                     containerRef: W,
                                     icon: er,

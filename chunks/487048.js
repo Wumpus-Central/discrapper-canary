@@ -11,8 +11,8 @@ var i = n(477900),
     h = n(544299),
     p = n(861094),
     m = n(170865),
-    f = n(948822),
-    A = n(321486),
+    A = n(948822),
+    f = n(321486),
     x = n(989952);
 let g = 16 / 9;
 function C(e) {
@@ -80,8 +80,8 @@ function C(e) {
         style: { left: `${C.left}%`, top: `${C.top}%`, width: `${C.width}%`, height: `${C.height}%`, clipPath: y },
         children: [
             _.length > 0 && null != b && null != v
-                ? (0, i.jsx)(A.A, { streams: _, fit: b, tooltipSpacing: S, containerWidthPx: v })
-                : (0, i.jsx)(f.A, { channelId: t, center: j, iconSize: T }),
+                ? (0, i.jsx)(f.A, { streams: _, fit: b, tooltipSpacing: S, containerWidthPx: v })
+                : (0, i.jsx)(A.A, { channelId: t, center: j, iconSize: T }),
             (0, i.jsx)(m.A, { className: s()(x.MQ, x.zq) }),
         ],
     });

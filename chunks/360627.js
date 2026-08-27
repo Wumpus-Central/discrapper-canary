@@ -11,8 +11,8 @@ var i = n(477900),
     h = n(748562),
     p = n(661531),
     m = n(922016),
-    f = n(43990),
-    A = n(939249),
+    A = n(43990),
+    f = n(939249),
     x = n(140735),
     g = n(421773),
     C = n(363195),
@@ -76,11 +76,11 @@ function E(e) {
                     let { closePopout: a, setPopoutRef: r, position: d, nudge: u } = l;
                     return (0, i.jsx)(o.e.Provider, {
                         value: { position: d ?? "top", caretConfig: { align: "custom", customOffset: u } },
-                        children: (0, i.jsx)(f.N, {
+                        children: (0, i.jsx)(A.N, {
                             theme: _,
                             children: (l) =>
                                 e.clickable
-                                    ? (0, i.jsx)(A.D, {
+                                    ? (0, i.jsx)(f.D, {
                                           tag: "div",
                                           className: p,
                                           "aria-label": I.intl.formatToPlainString(j.default.hZobvN, { username: t }),

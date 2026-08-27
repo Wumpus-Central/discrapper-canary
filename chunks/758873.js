@@ -1,4 +1,4 @@
-i.d(t, { A: () => m, G: () => U });
+i.d(t, { A: () => m, G: () => x });
 var E = i(582128),
     s = i(17928),
     n = i(714114),
@@ -10,32 +10,32 @@ var E = i(582128),
     A = i(576705),
     c = i(290863),
     o = i(994500),
-    I = i(461213),
-    d = i(977997),
-    T = i(321191),
+    T = i(461213),
+    I = i(977997),
+    d = i(321191),
     R = i(343129),
     N = i(489379),
     u = i(818348),
     P = i(731854);
-let h = Object.freeze([]),
-    O = {
+let O = Object.freeze([]),
+    h = {
         ApplicationStreamingStore: l.A,
         MediaEngineStore: S.Ay,
         PresenceStore: c.A,
         RelationshipStore: o.A,
-        SelfPresenceStore: I.A,
-        UserProfileStore: T.A,
+        SelfPresenceStore: T.A,
+        UserProfileStore: d.A,
     },
-    C = { ChannelStore: _.A, PermissionStore: A.A, PresenceStore: c.A, VoiceStateStore: d.A },
-    D = { ...O, ...C },
+    C = { ChannelStore: _.A, PermissionStore: A.A, PresenceStore: c.A, VoiceStateStore: I.A },
+    D = { ...h, ...C },
     j = Object.freeze({ voiceActivity: void 0, voiceChannel: void 0, voiceState: void 0 });
 function L(e) {
     let { userId: t, currentUserId: i, guildId: E } = e,
-        s = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : O,
-        n = null != t ? s.PresenceStore.getActivities(t) : h,
+        s = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : h,
+        n = null != t ? s.PresenceStore.getActivities(t) : O,
         l = (function (e) {
             let { userId: t, currentUserId: i, guildId: E } = e,
-                s = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : O;
+                s = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : h;
             return null == t
                 ? u.cl.OFFLINE
                 : t === i
@@ -51,7 +51,7 @@ function L(e) {
             : null,
     };
 }
-function v(e) {
+function U(e) {
     let { userId: t, guildId: i } = e,
         E = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : C,
         s = (0, n.t$)({ userId: t, guildId: i }, E);
@@ -74,7 +74,7 @@ function v(e) {
               })(t, s.voiceChannel.id, E),
           };
 }
-function x(e, t) {
+function v(e, t) {
     let { activities: i, isOffline: E, isPrivate: s, stream: n } = e,
         { voiceActivity: r, voiceChannel: l, voiceState: a } = t,
         _ = (0, R.U)(i);
@@ -89,16 +89,16 @@ function x(e, t) {
         voiceState: a,
     };
 }
-function U(e) {
+function x(e) {
     let { userId: t, currentUserId: i, guildId: E } = e,
         s = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : D;
-    return x(L({ userId: t, currentUserId: i ?? a.default.getId(), guildId: E }, s), v({ userId: t, guildId: E }, s));
+    return v(L({ userId: t, currentUserId: i ?? a.default.getId(), guildId: E }, s), U({ userId: t, guildId: E }, s));
 }
 function m(e) {
     let { userId: t, currentUserId: i, guildId: n } = e,
         r = (0, s.bG)([a.default], () => i ?? a.default.getId()),
         R = (0, s.cf)(
-            [l.A, S.Ay, c.A, o.A, I.A, T.A],
+            [l.A, S.Ay, c.A, o.A, T.A, d.A],
             () =>
                 L(
                     { userId: t, currentUserId: r, guildId: n },
@@ -107,20 +107,20 @@ function m(e) {
                         MediaEngineStore: S.Ay,
                         PresenceStore: c.A,
                         RelationshipStore: o.A,
-                        SelfPresenceStore: I.A,
-                        UserProfileStore: T.A,
+                        SelfPresenceStore: T.A,
+                        UserProfileStore: d.A,
                     },
                 ),
             [r, n, t],
         ),
         N = (0, s.cf)(
-            [_.A, A.A, c.A, d.A],
+            [_.A, A.A, c.A, I.A],
             () =>
-                v(
+                U(
                     { userId: t, guildId: n },
-                    { ChannelStore: _.A, PermissionStore: A.A, PresenceStore: c.A, VoiceStateStore: d.A },
+                    { ChannelStore: _.A, PermissionStore: A.A, PresenceStore: c.A, VoiceStateStore: I.A },
                 ),
             [n, t],
         );
-    return E.useMemo(() => x(R, N), [R, N]);
+    return E.useMemo(() => v(R, N), [R, N]);
 }

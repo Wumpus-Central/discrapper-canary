@@ -11,8 +11,8 @@ var i = n(477900),
     h = n(198052),
     p = n(333204),
     m = n(826673),
-    f = n(855687),
-    A = n(267102),
+    A = n(855687),
+    f = n(267102),
     x = n(511205),
     g = n(530804),
     C = n(71393),
@@ -34,11 +34,11 @@ function b(e) {
             totalNumberOfParticipants: L,
             popoutType: O,
         } = e,
-        P = (0, A.Us)() === v.BRT.POPOUT,
+        P = (0, f.Us)() === v.BRT.POPOUT,
         M = (0, r.bG)([C.A], () => C.A.getGuild(_.guild_id), [_.guild_id]),
         { dismissedActivityEntryPointTileChannel: w } = (0, N.P)(),
-        D = (0, r.bG)([h.A], () => h.A.getUserParticipantCount(_.id), [_]),
-        U = (0, g.vp)(_.id, t),
+        U = (0, r.bG)([h.A], () => h.A.getUserParticipantCount(_.id), [_]),
+        D = (0, g.vp)(_.id, t),
         V = l.useCallback(() => {
             (0, s.r)(() => {
                 N.P.setState({ dismissedActivityEntryPointTileChannel: _.id });
@@ -51,14 +51,14 @@ function b(e) {
                 N.P.setState({ dismissedActivityEntryPointTileChannel: null });
             });
     }, [_.id, w]);
-    let k = (0, r.bG)([y.A], () => _.isPrivate() || (0, f.K)(y.A, M, _), [M, _]),
+    let k = (0, r.bG)([y.A], () => _.isPrivate() || (0, A.K)(y.A, M, _), [M, _]),
         G = M?.afkChannelId === _.id,
         B = _.userLimit <= 0 || _.userLimit > 1,
         F = (0, r.bG)([c.Ay], () => c.Ay.getEmbeddedActivitiesForChannel(_.id).length <= 0),
         H = (0, m.HX)(o.M.VC_TILE_ACTIVITIES_ENTRY_POINT),
         z = (0, d.et)(_.id) !== d.xy.CAN_LAUNCH,
         W = null != w && w === _.id,
-        $ = U.map(
+        $ = D.map(
             (e) => (t) =>
                 (0, i.jsx)(
                     I.Ay,
@@ -86,12 +86,12 @@ function b(e) {
         [],
     );
     let Y = F && !z,
-        [K, q] = (0, p._)();
+        [K, X] = (0, p._)();
     null != M &&
         !G &&
         (K
-            ? $.push((e) => (0, i.jsx)(p.V, { width: e, handleClose: q }, "clips-video-call-tile"))
-            : D >= 2 && Y && !H && !W
+            ? $.push((e) => (0, i.jsx)(p.V, { width: e, handleClose: X }, "clips-video-call-tile"))
+            : U >= 2 && Y && !H && !W
               ? $.push((e) =>
                     (0, i.jsx)(j.y, {
                         channel: _,
@@ -99,11 +99,11 @@ function b(e) {
                         width: e,
                         inPopout: P,
                         handleClose: V,
-                        userParticipantCount: D,
+                        userParticipantCount: U,
                     }),
                 )
               : B &&
-                1 === D &&
+                1 === U &&
                 k &&
                 $.push((e) =>
                     (0, i.jsx)(j.y, {
@@ -112,10 +112,10 @@ function b(e) {
                         width: e,
                         inPopout: P,
                         handleClose: V,
-                        userParticipantCount: D,
+                        userParticipantCount: U,
                         activitiesEnabled: Y,
                     }),
                 ));
-    let X = l.useCallback((e) => U[e]?.id ?? "empty-tile", [U]);
-    return (0, i.jsx)(x.A, { className: R, keyExtractor: X, paddingTop: 64, paddingBottom: 64, children: $ });
+    let q = l.useCallback((e) => D[e]?.id ?? "empty-tile", [D]);
+    return (0, i.jsx)(x.A, { className: R, keyExtractor: q, paddingTop: 64, paddingBottom: 64, children: $ });
 }

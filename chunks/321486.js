@@ -11,8 +11,8 @@ var i = n(477900),
     h = n(939249),
     p = n(821609),
     m = n(408278),
-    f = n(881636),
-    A = n(402216),
+    A = n(881636),
+    f = n(402216),
     x = n(652896),
     g = n(616356),
     C = n(287809),
@@ -44,12 +44,12 @@ function w(e) {
                     .map((e) => (0, x._z)(e)),
             [t],
         ),
-        [D, U] = l.useState({ streamKey: w[0] ?? null, sequence: 0 }),
+        [U, D] = l.useState({ streamKey: w[0] ?? null, sequence: 0 }),
         [V, k] = l.useState(!1),
         [G, B] = l.useState(!1),
         F = Math.max(
             0,
-            t.findIndex((e) => (0, x._z)(e) === D.streamKey),
+            t.findIndex((e) => (0, x._z)(e) === U.streamKey),
         ),
         H = t[F],
         z = t[(F + 1) % t.length],
@@ -57,24 +57,24 @@ function w(e) {
         $ = w.includes((0, x._z)(H)),
         Y = G ? z : H,
         K = (0, o.bG)([C.default], () => C.default.getUser(Y.ownerId), [Y]),
-        q = j.Ay.useName(Y.guildId, Y.channelId, K),
-        X = (0, I.j)(),
+        X = j.Ay.useName(Y.guildId, Y.channelId, K),
+        q = (0, I.j)(),
         Z = y / 225,
         Q = $ ? _.intl.string(T.default.zW6Hyu) : _.intl.string(_.t["7Xq/nV"]),
         J = _.intl.string(T.default["t+GPi4"]),
         ee = l.useCallback(() => {
             let e = (0, x._z)(z);
-            U((t) => ({ streamKey: e, sequence: t.sequence + 1 }));
+            D((t) => ({ streamKey: e, sequence: t.sequence + 1 }));
         }, [z]);
     l.useEffect(() => {
-        if (!W || !X || V || $) return;
+        if (!W || !q || V || $) return;
         let e = setTimeout(ee, S);
         return () => clearTimeout(e);
-    }, [W, X, V, $, ee]);
+    }, [W, q, V, $, ee]);
     let et = l.useCallback(() => (0, E.k)(H), [H]),
         en = { left: `${n.originX}%`, top: `${n.originY}%`, transform: n.matrix },
         ei = (0, c.p)(H, {
-            keys: () => `${D.sequence}:${(0, x._z)(H)}`,
+            keys: () => `${U.sequence}:${(0, x._z)(H)}`,
             initial: P,
             from: O,
             enter: P,
@@ -96,7 +96,7 @@ function w(e) {
         onBlur: ea,
         children: [
             (0, i.jsx)(v.A, {
-                title: q,
+                title: X,
                 image: (0, i.jsx)(d.eu, { src: K?.getAvatarURL(Y.guildId, 96), size: u._3.SIZE_48, "aria-hidden": !0 }),
                 forceOpen: G,
                 spacing: a,
@@ -116,8 +116,8 @@ function w(e) {
                                 }),
                             ),
                         }),
-                        (0, i.jsx)(A.Ay, {
-                            size: A.Ay.Sizes.SMALL,
+                        (0, i.jsx)(f.Ay, {
+                            size: f.Ay.Sizes.SMALL,
                             className: R.Ok,
                             style: { transform: `scale(${Z})` },
                             count: t.length,
@@ -151,7 +151,7 @@ function w(e) {
                                       onFocus: () => B(!0),
                                       onBlur: () => B(!1),
                                       children: (0, i.jsx)(m.K, {
-                                          icon: f.u,
+                                          icon: A.u,
                                           variant: "overlay-secondary",
                                           size: "sm",
                                           "aria-label": J,

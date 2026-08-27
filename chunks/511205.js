@@ -20,10 +20,10 @@ function u(e, t, n) {
 }
 function h(e) {
     let { className: t, children: n, keyExtractor: a, paddingTop: h = 0, paddingBottom: p = 0 } = e,
-        [m, f] = l.useState({ width: 0, height: 0 }),
-        { width: A, height: x } = m,
+        [m, A] = l.useState({ width: 0, height: 0 }),
+        { width: f, height: x } = m,
         g = n?.length ?? 0,
-        C = A - 16,
+        C = f - 16,
         y = x - (h + p),
         {
             tileStyle: j,
@@ -41,7 +41,7 @@ function h(e) {
                         {
                             rows: p,
                             columns: m,
-                            tileWidth: f,
+                            tileWidth: A,
                         } = ((i = e),
                         (l = t),
                         (a = n),
@@ -58,12 +58,12 @@ function h(e) {
                                   }) - 1),
                         (h = Math.ceil(i / (o = d(s, l)))),
                         { tileWidth: s, columns: Math.max(1, o), rows: h });
-                    return { tileStyle: { width: f }, tileWidth: f, rows: p, columns: m };
+                    return { tileStyle: { width: A }, tileWidth: A, rows: p, columns: m };
                 })(g, C, y),
             [g, C, y],
         ),
         E = v + 1,
-        b = E * I + (E - 1) * 8 <= A,
+        b = E * I + (E - 1) * 8 <= f,
         T = Math.floor(I / c) + 8,
         _ = Math.max(0, y - T * N) / 2;
     return (0, i.jsx)(r.A, {
@@ -99,6 +99,6 @@ function h(e) {
         rowCount: N,
         rowCountBySection: [N],
         rowHeight: T,
-        onResize: f,
+        onResize: A,
     });
 }

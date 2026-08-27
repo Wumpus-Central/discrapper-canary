@@ -1,4 +1,4 @@
-n.d(t, { A: () => A });
+n.d(t, { A: () => f });
 var i = n(477900),
     l = n(582128),
     a = n(503698),
@@ -11,7 +11,7 @@ var i = n(477900),
     h = n(775602),
     p = n(213160);
 let m = [p.u8, p.n$, p.uN, p.no],
-    f = l.memo(function (e) {
+    A = l.memo(function (e) {
         let { emoji: t, onAnimationEnd: n } = e,
             a = (0, r.sample)(m),
             o = l.useCallback(() => {
@@ -23,7 +23,7 @@ let m = [p.u8, p.n$, p.uN, p.no],
             children: (0, i.jsx)(u.A, { emojiId: t.id, emojiName: t.name, animated: t.animated ?? !1 }),
         });
     });
-function A(e) {
+function f(e) {
     let { channelId: t, callHeight: n } = e,
         a = (0, c.bG)([h.Ay], () => h.Ay.useReducedMotion),
         [s, r] = l.useState([]);
@@ -48,6 +48,6 @@ function A(e) {
               className: p.kL,
               style: { top: n - 50, left: "52%" },
               "aria-hidden": !0,
-              children: s.map((e) => (0, i.jsx)(f, { emoji: e, onAnimationEnd: u }, e.key)),
+              children: s.map((e) => (0, i.jsx)(A, { emoji: e, onAnimationEnd: u }, e.key)),
           });
 }
