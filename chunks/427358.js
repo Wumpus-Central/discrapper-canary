@@ -16,7 +16,7 @@ class _ extends i.Ay.PersistedStore {
     static persistKey = "UserAffinitiesStoreV2";
     initialize(e) {
         this.waitFor(a.A),
-            null != e && ((c.userAffinities = e.userAffinities), (c.lastFetched = e.lastFetched), u()),
+            e?.userAffinities != null && ((c.userAffinities = e.userAffinities), (c.lastFetched = e.lastFetched), u()),
             this.syncWith([a.A], u);
     }
     shouldFetch() {
