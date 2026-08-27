@@ -67,17 +67,18 @@ function m(e) {
     );
 }
 function g(e) {
-    let { channel: t, defaultValue: r = (0, E.US)(), message: a } = e,
-        s =
-            null != a
+    let { channel: t, defaultValue: r = (0, E.US)(), message: a, onSubmit: s, onClear: o } = e,
+        c =
+            s ??
+            (null != a
                 ? (e) => {
                       d.A.sendMessage(t.id, a, void 0, { scheduledTimestamp: e, location: I.Hx.APP_COMMAND });
                   }
-                : void 0;
+                : void 0);
     (0, l.openModalLazy)(
         async () => {
             let { default: e } = await Promise.resolve().then(n.bind(n, 896455));
-            return (n) => (0, i.jsx)(e, { ...n, channel: t, defaultValue: r, onSubmit: s });
+            return (n) => (0, i.jsx)(e, { ...n, channel: t, defaultValue: r, onSubmit: c, onClear: o });
         },
         { modalKey: A.t },
     );

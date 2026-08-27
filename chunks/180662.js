@@ -262,10 +262,19 @@ let H = {
     handleUpdateVoteEditingState: N,
     handlePollActionTapped: V,
     createPoll: async function (e) {
-        let { channel: t, question: n, answers: l, allowMultiSelect: i, duration: s, layout: r, onClose: a } = e,
-            u = S.A.getUploads(t.id, y.C.Poll),
-            d = l.map((e) => {
-                let t = u?.findIndex((t) => t.id === e.localCreationAnswerId),
+        let {
+                channel: t,
+                question: n,
+                answers: l,
+                allowMultiSelect: i,
+                duration: s,
+                layout: r,
+                onClose: a,
+                scheduledTimestamp: u,
+            } = e,
+            d = S.A.getUploads(t.id, y.C.Poll),
+            c = l.map((e) => {
+                let t = d?.findIndex((t) => t.id === e.localCreationAnswerId),
                     n = { attachment_ids: -1 !== t ? [`${t}`] : void 0 };
                 r === o.Z.DEFAULT && (n.text = e.text?.trim());
                 let l = e.image?.emoji;
@@ -277,18 +286,20 @@ let H = {
                     { poll_media: n }
                 );
             }),
-            c = { question: { text: n.trim() }, answers: d, allow_multiselect: i, duration: s, layout_type: r };
+            g = { question: { text: n.trim() }, answers: c, allow_multiselect: i, duration: s, layout_type: r };
         try {
-            await f.A.sendPollMessage(t.id, c, {
-                attachmentsToUpload: u,
+            await f.A.sendPollMessage(t.id, g, {
+                attachmentsToUpload: d,
+                scheduledTimestamp: u,
                 onAttachmentUploadError: (e, n, l) => {
                     (0, m.k)({ file: e, guildId: t.getGuildId(), analyticsLocations: [], code: n, reason: l });
                 },
             }),
-                a?.();
+                a?.(u);
         } catch (e) {
             if ("poll" === (e instanceof w.LG ? e : new w.LG(e)).getAnyErrorMessage() && null != e.text)
                 throw { ...e, body: JSON.parse(e.text) };
+            if (null != u) return;
             throw e;
         }
     },

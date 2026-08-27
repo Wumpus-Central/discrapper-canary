@@ -1131,6 +1131,7 @@
   "sHmiIC": "Options",
   "WfTDdG": "Schedule even more messages with {nitroTierName}.",
   "3+ii4F": "Schedule Message",
+  "rlf0tb": "Schedule Poll",
   "iQ1SwX": "Set Schedule",
   "CvHu/j": "Message scheduled for {timestamp, date, long} at {timestamp, time, short}",
   "JF/LWn": "Successfully canceled the message.",
