@@ -1,13 +1,15 @@
 i.d(t, {
-    nR: () => U,
-    Wn: () => k,
-    vP: () => R,
-    pT: () => F,
-    un: () => S,
-    wd: () => C,
-    Tu: () => T,
-    UI: () => b,
-    am: () => O,
+    XH: () => v,
+    Wn: () => C,
+    CD: () => I,
+    vP: () => O,
+    pT: () => U,
+    nR: () => w,
+    un: () => F,
+    wd: () => T,
+    Tu: () => R,
+    UI: () => y,
+    am: () => S,
 }),
     i(321073);
 var r = i(95561),
@@ -53,48 +55,46 @@ function v(e) {
     );
 }
 function I(e) {
-    var t;
-    let i,
-        r,
-        { layout: l, userId: n, guildId: a, sessionId: u, sourceSessionId: s, showGuildProfile: c = !0 } = e,
-        f = d.default.getUser(n);
-    if (null == f) return {};
-    let p = (0, g.AP)(f?.id, c ? a : void 0),
-        m = c && null != a ? o.Ay.getMember(a, f?.id) : null;
+    let t = _.A.getStatus(e),
+        i = _.A.isMobileOnline(e);
+    return t === E.cl.ONLINE && i ? `${t}-mobile` : t === E.cl.ONLINE ? `${t}-desktop` : t;
+}
+function b(e) {
+    let { layout: t, userId: i, guildId: r, sessionId: l, sourceSessionId: n, showGuildProfile: a = !0 } = e,
+        u = d.default.getUser(i);
+    if (null == u) return {};
+    let s = (0, g.AP)(u?.id, a ? r : void 0),
+        c = a && null != r ? o.Ay.getMember(r, u?.id) : null;
     return {
-        profile_layout: l,
-        profile_session_id: u,
-        source_profile_session_id: s,
-        profile_properties: v({ user: f, userProfile: p?._userProfile }),
-        guild_profile_properties: v({ guildMember: m, guildMemberProfile: p?._guildMemberProfile }),
-        profile_activity_types: _.A.getActivities(f.id)
+        profile_layout: t,
+        profile_session_id: l,
+        source_profile_session_id: n,
+        profile_properties: v({ user: u, userProfile: s?._userProfile }),
+        guild_profile_properties: v({ guildMember: c, guildMemberProfile: s?._guildMemberProfile }),
+        profile_activity_types: _.A.getActivities(u.id)
             .map((e) => {
                 let { type: t } = e;
                 return t;
             })
             .filter((e) => void 0 !== e),
         profile_badges:
-            p
+            s
                 ?.getBadges()
                 ?.map((e) => {
                     let { id: t } = e;
                     return t;
                 })
                 .filter((e) => "string" == typeof e) ?? [],
-        avatar_decoration_sku_id: f.avatarDecoration?.skuId,
-        profile_effect_sku_id: p?.profileEffect?.skuId,
-        profile_frame_sku_id: p?.profileFrame?.skuId,
-        user_status:
-            ((t = f.id),
-            (i = _.A.getStatus(t)),
-            (r = _.A.isMobileOnline(t)),
-            i === E.cl.ONLINE && r ? `${i}-mobile` : i === E.cl.ONLINE ? `${i}-desktop` : i),
-        is_guild_profile: p?.guildId != null,
-        is_bot_profile: f.bot,
-        is_private_to_viewer: p?.private ?? !1,
+        avatar_decoration_sku_id: u.avatarDecoration?.skuId,
+        profile_effect_sku_id: s?.profileEffect?.skuId,
+        profile_frame_sku_id: s?.profileFrame?.skuId,
+        user_status: I(u.id),
+        is_guild_profile: s?.guildId != null,
+        is_bot_profile: u.bot,
+        is_private_to_viewer: s?.private ?? !1,
     };
 }
-function b(e) {
+function y(e) {
     let { userId: t } = e;
     if (null == t) return {};
     let i = a.A.getUserAffinity(t);
@@ -108,7 +108,7 @@ function b(e) {
         communication_rank: i?.communicationRank,
     };
 }
-function y(e) {
+function k(e) {
     return {
         application_id: e,
         application_linked:
@@ -117,7 +117,7 @@ function y(e) {
                 : null,
     };
 }
-function k(e) {
+function C(e) {
     let {
         guildId: t,
         channelId: i,
@@ -132,9 +132,9 @@ function k(e) {
     c.default.track(A.HAw.USER_PROFILE_ACTION, {
         ...(0, r.H$)(t),
         ...(0, r.Ou)(i),
-        ...I(e),
         ...b(e),
-        ...y(s),
+        ...y(e),
+        ...k(s),
         location_stack: u,
         profile_action: o,
         profile_section: _,
@@ -143,7 +143,7 @@ function k(e) {
         widget_type: a,
     });
 }
-function C(e) {
+function T(e) {
     if (
         !(function (e) {
             let { performanceAnalyticsEnabled: t } = m.getConfig({ location: e });
@@ -168,8 +168,8 @@ function C(e) {
         c.default.track(A.HAw.USER_PROFILE_UI_VIEWED, {
             ...(0, r.H$)(t),
             ...(0, r.Ou)(i),
-            ...I(e),
             ...b(e),
+            ...y(e),
             location_stack: l,
             profile_ui: n,
             view_started_at: a,
@@ -179,7 +179,7 @@ function C(e) {
             time_to_fetch_ms: s,
         });
 }
-function T(e) {
+function R(e) {
     var t;
     let {
         guildId: i,
@@ -196,8 +196,8 @@ function T(e) {
     c.default.track(A.HAw.USER_PROFILE_ACTIVITY_ACTION, {
         ...(0, r.H$)(i),
         ...(0, r.Ou)(l),
-        ...I(e),
         ...b(e),
+        ...y(e),
         location_stack: n,
         activity_action: a,
         activity_display: u,
@@ -224,14 +224,14 @@ function T(e) {
         voice_channel_id: f,
     });
 }
-function R(e) {
+function O(e) {
     let { guildId: t, channelId: i, analyticsLocations: n, badgeId: a, badgeAction: u, position: o, userId: _ } = e,
         s = null != a && null != _ ? l.Ay.getBadgeById(a, _)?.current_tier : void 0;
     c.default.track(A.HAw.USER_PROFILE_BADGE_ACTION, {
         ...(0, r.H$)(t),
         ...(0, r.Ou)(i),
-        ...I(e),
         ...b(e),
+        ...y(e),
         location_stack: n,
         badge_action: u,
         badge_id: a,
@@ -239,7 +239,7 @@ function R(e) {
         position: o,
     });
 }
-function O(e) {
+function S(e) {
     let { displayProfile: t, isProfileOpen: i } = e,
         r = t?.userId,
         l =
@@ -250,7 +250,7 @@ function O(e) {
                   })
                 : null;
     c.default.track(A.HAw.DM_PROFILE_TOGGLED, {
-        ...I({ userId: r }),
+        ...b({ userId: r }),
         is_profile_open: i,
         has_images: !!(l?.assets?.large_image ?? l?.assets?.small_image),
         is_friend: s.A.isFriend(r),
@@ -260,7 +260,7 @@ function O(e) {
         profile_has_theme_animation: t?.popoutAnimationParticleType != null,
     });
 }
-function S(e) {
+function F(e) {
     let {
         guildId: t,
         channelId: i,
@@ -272,12 +272,12 @@ function S(e) {
         numCharacters: _,
         applicationId: s,
     } = e;
-    k({ ...e, action: n }),
+    C({ ...e, action: n }),
         c.default.track(A.HAw.USER_PROFILE_EDIT_ACTION, {
             ...(0, r.H$)(t),
             ...(0, r.Ou)(i),
-            ...I(e),
-            ...y(s),
+            ...b(e),
+            ...k(s),
             location_stack: l,
             edit_action: n,
             widget_edited: a,
@@ -287,7 +287,7 @@ function S(e) {
             application_id: s,
         });
 }
-function F(e) {
+function U(e) {
     let {
         guildId: t,
         channelId: i,
@@ -298,11 +298,11 @@ function F(e) {
         numCharactersCommentary: o,
         isWidgetRemoved: _,
     } = e;
-    k({ ...e, action: "EDIT_SAVED" }),
+    C({ ...e, action: "EDIT_SAVED" }),
         c.default.track(A.HAw.USER_PROFILE_EDIT_SAVED, {
             ...(0, r.H$)(t),
             ...(0, r.Ou)(i),
-            ...I(e),
+            ...b(e),
             location_stack: l,
             widget_edited: n,
             game_ids: a,
@@ -311,13 +311,13 @@ function F(e) {
             is_widget_removed: _,
         });
 }
-function U(e) {
+function w(e) {
     let { guildId: t, channelId: i, analyticsLocations: l, action: n, wishlistId: a, skuId: u, productLines: o } = e;
-    k({ ...e, action: n }),
+    C({ ...e, action: n }),
         c.default.track(A.HAw.USER_PROFILE_WISHLIST_ACTION, {
             ...(0, r.H$)(t),
             ...(0, r.Ou)(i),
-            ...I(e),
+            ...b(e),
             location_stack: l,
             action_type: n,
             wishlist_id: a,
