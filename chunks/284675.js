@@ -10544,43 +10544,75 @@ function o_() {
                 n(!1);
             }
         }, []);
-    return (
-        o.useEffect(() => {
-            s();
-        }, [s]),
-        (0, r.jsx)(g.Ip, {
-            className: tH.nd,
-            children: (0, r.jsxs)("div", {
-                className: iE.l$,
-                children: [
-                    (0, r.jsxs)("div", {
-                        className: iE.dL,
-                        style: { marginBottom: "16px" },
-                        children: [
-                            (0, r.jsxs)(p.E, { variant: "text-lg/bold", children: ["Orders (last ", 5, ")"] }),
-                            (0, r.jsx)(x.$, {
-                                variant: "secondary",
-                                size: "sm",
-                                text: "Refresh",
-                                onClick: s,
-                                loading: a,
-                            }),
-                        ],
+    o.useEffect(() => {
+        s();
+    }, [s]);
+    let [d, c] = o.useState(!1),
+        [u, m] = o.useState(null),
+        [h, v] = o.useState(() => {
+            let e = rH.Ay.getChannelId();
+            return null != e ? e : "";
+        }),
+        j = o.useCallback(async () => {
+            c(!0), m(null);
+            try {
+                let e = h.trim(),
+                    t = await lW.Bo.post({
+                        url: er.Rsh.DEBUG_TEMPORAL_INFRA_PROOF_OF_CONCEPT,
+                        body: "" !== e ? { channel_id: e } : {},
+                        rejectWithError: !0,
                     }),
-                    null != l && (0, r.jsx)(V.w, { type: "critical", children: l }),
-                    !a &&
-                        null != e &&
-                        0 === e.length &&
-                        (0, r.jsx)(p.E, {
-                            variant: "text-sm/normal",
-                            color: "text-muted",
-                            children: "No orders found.",
+                    a = null != t.body ? t.body.run_id : "unknown";
+                m(`Started workflow run ${a}`);
+            } catch (e) {
+                m(e instanceof Error ? e.message : "Failed to start workflow");
+            } finally {
+                c(!1);
+            }
+        }, [h]);
+    return (0, r.jsx)(g.Ip, {
+        className: tH.nd,
+        children: (0, r.jsxs)("div", {
+            className: iE.l$,
+            children: [
+                (0, r.jsxs)("div", {
+                    className: iE.dL,
+                    style: { marginBottom: "16px" },
+                    children: [
+                        (0, r.jsxs)(p.E, { variant: "text-lg/bold", children: ["Orders (last ", 5, ")"] }),
+                        (0, r.jsx)(x.$, { variant: "secondary", size: "sm", text: "Refresh", onClick: s, loading: a }),
+                    ],
+                }),
+                null != l && (0, r.jsx)(V.w, { type: "critical", children: l }),
+                !a &&
+                    null != e &&
+                    0 === e.length &&
+                    (0, r.jsx)(p.E, { variant: "text-sm/normal", color: "text-muted", children: "No orders found." }),
+                null != e && e.map((e) => (0, r.jsx)(oC, { order: e }, e.id)),
+                (0, r.jsxs)(W.B, {
+                    direction: "vertical",
+                    gap: 8,
+                    style: { marginTop: "16px" },
+                    children: [
+                        (0, r.jsx)(f.k, {
+                            fullWidth: !0,
+                            value: h,
+                            onChange: v,
+                            placeholder: "Channel ID (blank to skip the message)",
                         }),
-                    null != e && e.map((e) => (0, r.jsx)(oC, { order: e }, e.id)),
-                ],
-            }),
-        })
-    );
+                        (0, r.jsx)(x.$, {
+                            variant: "primary",
+                            size: "sm",
+                            text: "Run Temporal Infra Proof of Concept",
+                            onClick: j,
+                            loading: d,
+                        }),
+                        null != u && (0, r.jsx)(p.E, { variant: "text-xs/normal", color: "text-muted", children: u }),
+                    ],
+                }),
+            ],
+        }),
+    });
 }
 function oC(e) {
     let { order: t } = e,

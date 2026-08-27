@@ -506,6 +506,7 @@
   "ORDER_CANCEL_SIGNING": "/billing/orders/:param/cancel-signing",
   "ORDER_DISCARD": "/billing/orders/:param/discard",
   "ORDER_ENTITLEMENTS": "/billing/orders/:param/entitlements",
+  "DEBUG_TEMPORAL_INFRA_PROOF_OF_CONCEPT": "/debug/temporal/infra-proof-of-concept",
   "APPLICATION_SKUS": "/applications/:param/skus",
   "APPLICATION_MANAGED_ACTIVITY_LINK": "/applications/:param/managed-links/:param",
   "APPLICATION_QUICK_ACTIVITY_LINK": "/applications/:param/quick-links/:param",
