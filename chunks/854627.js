@@ -13,30 +13,30 @@ function A(e) {
             size: A,
             showPending: d = !1,
             animateOnHover: c = !1,
-            avatarDecorationOverride: v,
-            avatarOverride: E,
+            avatarOverride: v,
+            avatarDecorationOverride: E,
         } = e,
-        f = (0, a.bG)([o.default], () => o.default.getUser(t)),
+        g = (0, a.bG)([o.default], () => o.default.getUser(t)),
         {
-            avatarSrc: g,
+            avatarSrc: f,
             isAvatarAnimating: p,
             eventHandlers: R,
-        } = (0, s.A)({ user: f, guildId: n, size: (0, l.FT)(A), showPending: d, animateOnHover: c, avatarOverride: E }),
+        } = (0, s.A)({ user: g, guildId: n, size: (0, l.FT)(A), showPending: d, animateOnHover: c, avatarOverride: v }),
         {
             avatarPlaceholderSrc: m,
             avatarDecorationSrc: T,
             eventHandlers: _,
         } = (0, u.A)({
-            user: f,
+            user: g,
             guildId: n,
-            avatarDecorationOverride: v,
+            avatarDecorationOverride: E,
             size: (0, i.Te)(A),
             onlyAnimateOnHoverOrFocus: c,
         });
     return {
         avatarPlaceholderSrc: m,
         avatarDecorationSrc: T,
-        avatarSrc: g,
+        avatarSrc: f,
         isAnimating: p,
         eventHandlers: {
             onMouseEnter: r.useCallback(() => {

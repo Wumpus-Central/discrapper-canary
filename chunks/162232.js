@@ -11,43 +11,45 @@ let u = l.Ay.getEnableHardwareAcceleration() ? r.Js : r.eu,
         let {
                 user: a,
                 guildId: i,
-                avatarDecorationOverride: r,
-                status: l,
-                avatarSize: c = n._3.SIZE_120,
-                "aria-hidden": o = !1,
-                className: h,
-                animateOnHover: p = !1,
-                questPreviewRewardAssetUrl: g = null,
-                decorationName: _,
+                avatarOverride: r,
+                avatarDecorationOverride: l,
+                status: c,
+                avatarSize: o = n._3.SIZE_120,
+                "aria-hidden": h = !1,
+                className: p,
+                animateOnHover: g = !1,
+                questPreviewRewardAssetUrl: _ = null,
+                decorationName: b,
             } = t,
             {
-                avatarDecorationSrc: b,
-                avatarSrc: f,
-                eventHandlers: k,
+                avatarDecorationSrc: f,
+                avatarSrc: k,
+                eventHandlers: w,
             } = (0, s.A)({
                 userId: a.id,
                 guildId: i,
-                size: c,
+                size: o,
                 showPending: !0,
-                avatarDecorationOverride: r,
-                animateOnHover: p,
+                avatarOverride: r,
+                avatarDecorationOverride: l,
+                animateOnHover: g,
             }),
-            w = (() => {
-                if (!o)
-                    return "string" == typeof _
-                        ? d.intl.formatToPlainString(d.t.Do2lxE, { a11y_text: _ })
-                        : null === _
+            x = (() => {
+                if (!h)
+                    return "string" == typeof b
+                        ? d.intl.formatToPlainString(d.t.Do2lxE, { a11y_text: b })
+                        : null === b
                           ? d.intl.string(d.t["7hRBmC"])
                           : d.intl.string(d.t.lqaIxI);
             })();
         return (0, e.jsx)(u, {
-            avatarDecoration: b ?? g,
-            src: f,
-            size: c,
-            status: l,
-            "aria-label": w,
-            "aria-hidden": o,
-            className: h,
-            ...k,
+            avatarDecoration: f ?? _,
+            src: k,
+            size: o,
+            status: c,
+            "aria-label": x,
+            "aria-hidden": h,
+            className: p,
+            ...w,
         });
     };

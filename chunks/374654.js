@@ -39,27 +39,29 @@ function j(e) {
         f = (0, s.bG)([h.A], () => h.A.getPendingChanges(l ?? null).pendingNickname),
         p = (0, s.bG)([h.A], () => h.A.getPendingChanges(l ?? null).pendingDisplayNameStyles),
         A = (0, s.bG)([h.A], () => h.A.getPendingChanges(null).pendingPrimaryGuildId),
-        I = (function (e) {
+        I = (0, s.bG)([h.A], () => h.A.getPendingChanges(l ?? null).pendingAvatar),
+        k = (function (e) {
             let { enabled: n, isInteracting: l } = e,
                 { categories: t, purchases: r } = (0, b.Ay)({ stalePurchasesOK: !0 }),
                 i = a.useMemo(() => (0, m.zd)(r, t), [r, t]),
                 s = (0, C.A)({ enabled: n, isInteracting: l, items: i, preload: x });
             return null != s ? { skuId: s.skuId, asset: s.asset, label: s.label, palette: s.palette } : null;
         })({ enabled: u && !o && !g, isInteracting: c }),
-        k = null != I;
+        j = null != k;
     return (0, t.jsx)("div", {
-        className: i()(y.M, { [N.O]: k }),
+        className: i()(y.M, { [N.O]: j }),
         "aria-hidden": !0,
         children: (0, t.jsx)(d.A, {
             user: n,
             guildId: l ?? void 0,
-            nameplate: k ? I : r,
+            nameplate: j ? k : r,
             showPlaceholderUser: (u && !o) || !c,
             isHighlighted: c,
             pendingGlobalName: v,
             pendingNickname: f,
             pendingDisplayNameStyles: p,
             pendingPrimaryGuildId: A,
+            pendingAvatar: I,
         }),
     });
 }
@@ -76,7 +78,7 @@ function E(e) {
         y = (0, v.lw)({ pendingValue: m, userValue: b, guildValue: h, guildId: l ?? void 0 }),
         { product: N } = (0, o.q)(y?.skuId),
         E = I ? null != m : null != A,
-        w =
+        P =
             null != y && E
                 ? {
                       onClick: () => (0, f.p)({ guildId: l ?? void 0, nameplate: null }),
@@ -84,13 +86,13 @@ function E(e) {
                       accessibleLabel: k.intl.string(x ? k.t.neYqhR : k.t["9zwziY"]),
                   }
                 : void 0,
-        P = a.useCallback(() => {
+        w = a.useCallback(() => {
             (0, c.p)({ analyticsLocations: s, guildId: l ?? void 0, stackingBehavior: "stack" });
         }, [s, l]);
     return (0, t.jsx)(p.A, {
-        affordance: C && !x ? "add" : w,
+        affordance: C && !x ? "add" : P,
         variant: "bar",
-        onClick: P,
+        onClick: w,
         accessibleLabel: k.intl.string(k.t.x5CoXR),
         accessibleValue: (function (e) {
             let { nameplatePreview: n, productName: l, hasPendingSelection: t } = e;
