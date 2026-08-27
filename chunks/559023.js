@@ -1,4 +1,4 @@
-s.d(t, { init: () => M });
+s.d(t, { init: () => I });
 var r = s(626584);
 s(321073);
 var i = s(228366),
@@ -32,8 +32,8 @@ function m(e) {
 }
 let u = new r.A("MeticulousActionTracker"),
     h = "meticulous-start",
-    c = "meticulous-end",
-    d = new Set([
+    d = "meticulous-end",
+    c = new Set([
         "APP_STATE_UPDATE",
         "CONNECTION_CLOSED",
         "CONNECTION_OPEN",
@@ -110,10 +110,11 @@ class p {
             branch_name: this.mode.branchName,
             commit_date: this.mode.commitDate,
             timestamp: new Date().toISOString(),
-            build_number: "603126",
-            built_at: "1787869836065",
+            build_number: "603149",
+            built_at: "1787870756023",
             release_channel: n.y ?? "unknown",
-            meticulous_perf_version: 5,
+            meticulous_perf_version: 6,
+            browser_version: this.mode.browserVersion,
             tags: this.getTags(),
             metrics: {
                 report_time_memory: null != t ? o(t) : void 0,
@@ -133,7 +134,7 @@ class p {
         null != this.mode &&
             (this.interceptorAdded ||
                 (i.h.addInterceptor((e) => {
-                    if (null != this.mode && d.has(e.type)) {
+                    if (null != this.mode && c.has(e.type)) {
                         let t = ++this.dispatchCounter,
                             s = this.mode.getMemory(),
                             r = this.pendingDispatches.get(e.type) ?? [];
@@ -144,7 +145,7 @@ class p {
                     return !1;
                 }),
                 (this.interceptorAdded = !0)),
-            d.forEach((e) => {
+            c.forEach((e) => {
                 if (this.actionHandlers.has(e)) return;
                 let t = () => {
                     let t = this.pendingDispatches.get(e),
@@ -152,7 +153,7 @@ class p {
                     if (null == s) return void u.warn(`No pending dispatch ID for action: ${e}`);
                     let r = () => {
                         let t = this.mode?.getMemory();
-                        this.mode?.mark(`${c}-${e}-${s}`, { detail: { memory: t, actionType: e, dispatchId: s } });
+                        this.mode?.mark(`${d}-${e}-${s}`, { detail: { memory: t, actionType: e, dispatchId: s } });
                     };
                     requestAnimationFrame(() => {
                         requestAnimationFrame(r);
@@ -166,7 +167,7 @@ class p {
             try {
                 (this.observer = new this.mode.PerformanceObserver((e) => {
                     for (let t of e.getEntries())
-                        "mark" === t.entryType && -1 !== t.name.indexOf(c) && this.collectEntry(t);
+                        "mark" === t.entryType && -1 !== t.name.indexOf(d) && this.collectEntry(t);
                     this.collectedEntries.length >= 100 && this.flush();
                 })),
                     this.observer.observe({ type: "mark", buffered: !0 });
@@ -192,16 +193,16 @@ class p {
                 n = a.detail?.memory,
                 l = e.detail?.memory,
                 m = this.mode?.baselineUsedMemory,
-                c = l?.usedJSHeapSize != null && null != m ? l.usedJSHeapSize - m : void 0,
-                d = null != this.mode ? this.mode.performanceNow() : 0;
+                d = l?.usedJSHeapSize != null && null != m ? l.usedJSHeapSize - m : void 0,
+                c = null != this.mode ? this.mode.performanceNow() : 0;
             this.collectedEntries.push({
                 name: t,
                 start_time: a.startTime,
                 end_time: e.startTime,
-                collected_at: d,
+                collected_at: c,
                 start_memory: null != n ? o(n) : void 0,
                 end_memory: null != l ? o(l) : void 0,
-                memory_delta_from_baseline: c,
+                memory_delta_from_baseline: d,
             }),
                 performance.clearMarks(r),
                 performance.clearMarks(e.name);
@@ -254,8 +255,8 @@ class y {
             l = (0, S.collectNonHeapMetrics)(),
             u = this.getPressureMetrics?.(),
             h = null != e.baselineUsedMemory ? t.usedJSHeapSize - e.baselineUsedMemory : void 0,
-            c = await e.measureAgentMemory?.(),
-            d = {
+            d = await e.measureAgentMemory?.(),
+            c = {
                 type: "heap_snapshot_interval",
                 session_id: e.sessionId,
                 commit_sha: e.commitSha,
@@ -263,10 +264,11 @@ class y {
                 branch_name: e.branchName,
                 commit_date: e.commitDate,
                 timestamp: i,
-                build_number: "603126",
-                built_at: "1787869836065",
+                build_number: "603149",
+                built_at: "1787870756023",
                 release_channel: n.y ?? "unknown",
-                meticulous_perf_version: 5,
+                meticulous_perf_version: 6,
+                browser_version: e.browserVersion,
                 tags: { platform: (0, a.getNativePlatform)(), release_channel: n.y ?? "unknown", uptime_bucket: m(o) },
                 metrics: {
                     js_heap_size_limit: t.jsHeapSizeLimit,
@@ -277,19 +279,19 @@ class y {
                     baseline_memory: e.baselineUsedMemory,
                     ...l,
                     ...u,
-                    ...(null != c
+                    ...(null != d
                         ? {
-                              agent_memory_bytes: c.bytes,
-                              agent_memory_breakdown: c.breakdown.map((e) => ({ bytes: e.bytes, types: e.types })),
+                              agent_memory_bytes: d.bytes,
+                              agent_memory_breakdown: d.breakdown.map((e) => ({ bytes: e.bytes, types: e.types })),
                               agent_baseline_memory_bytes: e.baselineAgentMemoryBytes,
                               agent_delta_from_baseline:
-                                  null != e.baselineAgentMemoryBytes ? c.bytes - e.baselineAgentMemoryBytes : void 0,
+                                  null != e.baselineAgentMemoryBytes ? d.bytes - e.baselineAgentMemoryBytes : void 0,
                           }
                         : {}),
                     timing: { collected_at: r },
                 },
             };
-        e.sendToIngest(d);
+        e.sendToIngest(c);
     }
 }
 let f = ["nominal", "fair", "serious", "critical"];
@@ -359,22 +361,24 @@ class v {
         return this.mode?.baselineUsedMemory;
     }
     init() {
-        let e, t;
+        let e, t, s;
         if (this.isInitialized) return !0;
-        let s =
+        let r =
             null != (e = window.Meticulous) && e.isRunningAsTest && e.replay?.isBenchmarkableReplay ? e.replay : null;
         return (
-            null != s &&
+            null != r &&
             ((this.mode =
-                ((t = s.native.performance),
+                ((t = r.native.performance),
+                (s = r.browser?.version ?? "unknown"),
                 {
                     name: "meticulous",
-                    sessionId: s.sessionBeingReplayed.id,
-                    commitSha: s.commitUnderTest?.sha,
-                    baseCommitSha: s.commitUnderTest?.baseCommitSha,
-                    branchName: s.commitUnderTest?.branchName,
-                    commitDate: s.commitUnderTest?.date,
-                    PerformanceObserver: s.native.PerformanceObserver,
+                    sessionId: r.sessionBeingReplayed.id,
+                    commitSha: r.commitUnderTest?.sha,
+                    baseCommitSha: r.commitUnderTest?.baseCommitSha,
+                    branchName: r.commitUnderTest?.branchName,
+                    commitDate: r.commitUnderTest?.date,
+                    browserVersion: s,
+                    PerformanceObserver: r.native.PerformanceObserver,
                     performanceNow: () => t.now(),
                     mark: (e, t) => performance.mark(e, t),
                     getMemory: () => {
@@ -416,7 +420,7 @@ class v {
                         }
                     },
                 })),
-            this.start(s.native.PressureObserver),
+            this.start(r.native.PressureObserver),
             g.log(`Performance reporter initialized [${this.mode.name}]`),
             !0)
         );
@@ -430,6 +434,8 @@ class v {
                 commitSha: "dev",
                 branchName: "local",
                 commitDate: null,
+                browserVersion:
+                    navigator.userAgentData?.brands?.find((e) => /Chrom(ium|e)/.test(e.brand))?.version ?? "unknown",
                 PerformanceObserver: window.PerformanceObserver,
                 performanceNow: () => performance.now(),
                 mark: (e, t) => performance.mark(e, t),
@@ -482,7 +488,7 @@ class v {
             (this.mode = null));
     }
 }
-let I = new v();
-function M() {
-    return I.init();
+let w = new v();
+function I() {
+    return w.init();
 }
