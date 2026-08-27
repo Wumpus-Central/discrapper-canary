@@ -68,6 +68,7 @@ function T(e, t, n) {
                     : A.intl.string(P.default["/FQWfA"]),
         };
     else if (e instanceof h.IE) return { brand: C.Ay.Types.PIX, label: A.intl.string(A.t.JG3WQU) };
+    else if (e instanceof h.WV) return { brand: C.Ay.Types.PIX, label: A.intl.string(A.t.JkKNss) };
     throw Error("Invalid Payment Source");
 }
 function N(e) {

@@ -2756,6 +2756,8 @@ let lY = {
         [D.hes.IDEAL]: () => U.intl.string(U.t.nSbwqC),
         [D.hes.CASH_APP]: () => U.intl.string(U.t["+rbTmL"]),
         [D.hes.APPLE]: () => U.intl.string(U.t.RFi12i),
+        [D.hes.PIX]: () => U.intl.string(U.t.JG3WQU),
+        [D.hes.PIX_AUTOMATICO]: () => U.intl.string(U.t.JkKNss),
     };
 var lq = l(295405),
     lJ = l(71532),

@@ -13,6 +13,7 @@ n.d(t, {
     Tu: () => _,
     UG: () => S,
     Ux: () => h,
+    WV: () => L,
     Xj: () => f,
     YS: () => o,
     _1: () => T,
@@ -105,6 +106,8 @@ class l extends r.A {
                 return new O({ ...n });
             case s.hes.PIX:
                 return new R({ ...n, email: e.email });
+            case s.hes.PIX_AUTOMATICO:
+                return new L({ ...n, email: e.email });
             default:
                 (0, a.xb)(e);
         }
@@ -149,6 +152,8 @@ class l extends r.A {
                 return new O(e);
             case s.hes.PIX:
                 return new R(e);
+            case s.hes.PIX_AUTOMATICO:
+                return new L(e);
             default:
                 (0, a.xb)(t);
         }
@@ -326,6 +331,15 @@ class R extends l {
     constructor(e) {
         if ((super(e), e.type !== s.hes.PIX))
             throw Error(`Cannot instantiate PixSourceRecord with type: ${e.type}, must be ${s.hes.PIX}`);
+        this.email = e.email;
+    }
+}
+class L extends l {
+    constructor(e) {
+        if ((super(e), e.type !== s.hes.PIX_AUTOMATICO))
+            throw Error(
+                `Cannot instantiate PixAutomaticoSourceRecord with type: ${e.type}, must be ${s.hes.PIX_AUTOMATICO}`,
+            );
         this.email = e.email;
     }
 }
