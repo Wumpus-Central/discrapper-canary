@@ -619,17 +619,19 @@ class e8 extends l.PureComponent {
     }
     renderTenantStatusOverride() {
         let { payment: e, hasLinkedToApplication: t } = this.props;
-        return (0, eO.bF)(e.sku) && e.status === M.__0.COMPLETED
-            ? null != e.entitlements && e.entitlements.some((e) => e.isFulfilled())
-                ? (0, i.jsx)("span", { className: eS.gD, children: N.intl.string(N.t.Osji1u) })
-                : e.isGift
-                  ? null != e.entitlements && e.entitlements.some((e) => null != e.gifterId)
-                      ? (0, i.jsx)("span", { className: eS.gD, children: N.intl.string(N.t.lIsIFo) })
-                      : (0, i.jsx)("span", { className: eS.Tf, children: N.intl.string(N.t["+tqSi3"]) })
-                  : t
-                    ? (0, i.jsx)("span", { className: eS.Tf, children: N.intl.string(N.t.y7F0Re) })
-                    : (0, i.jsx)("span", { className: eS.Tf, children: N.intl.string(N.t.HHC5Z4) })
-            : null;
+        if (!(0, eO.bF)(e.sku) || e.status !== M.__0.COMPLETED) return null;
+        let n = e.entitlements ?? [];
+        return e.isGift
+            ? n.some((e) => null != e.gifterId)
+                ? (0, i.jsx)("span", { className: eS.gD, children: N.intl.string(N.t.lIsIFo) })
+                : (0, i.jsx)("span", { className: eS.Tf, children: N.intl.string(N.t["+tqSi3"]) })
+            : n.some((e) => e.isFulfilled())
+              ? (0, i.jsx)("span", { className: eS.gD, children: N.intl.string(N.t.Osji1u) })
+              : n.some((e) => e.isFulfillmentFailed())
+                ? (0, i.jsx)("span", { className: eS.ob, children: N.intl.string(N.t.Yo4ru6) })
+                : t
+                  ? (0, i.jsx)("span", { className: eS.Tf, children: N.intl.string(N.t.y7F0Re) })
+                  : (0, i.jsx)("span", { className: eS.Tf, children: N.intl.string(N.t.HHC5Z4) });
     }
     renderStatus() {
         return this.renderTenantStatusOverride() ?? this.renderDefaultStatus();

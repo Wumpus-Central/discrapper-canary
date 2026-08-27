@@ -97,4 +97,7 @@ class d extends r.A {
     isFulfilled() {
         return this.fulfillmentStatus === i.w.FULFILLED;
     }
+    isFulfillmentFailed() {
+        return this.fulfillmentStatus === i.w.FULFILLMENT_FAILED;
+    }
 }
