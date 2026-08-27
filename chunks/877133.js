@@ -158,8 +158,15 @@ function P(e, t) {
             let r = "blocked" === i ? D.t.cLQrqz : D.t.bma6cs;
             return D.intl.format(r, { channelName: t, channelHook: n });
         })(e, a, n);
-    return null != S
-        ? S
+    if (null != S) return S;
+    let R = (function (e, t, n) {
+        let i = M(e, h.GUILD_ROOM_NOTE_OUTCOME);
+        if (null == i) return null;
+        let r = "blocked" === i ? D.t["9x7Jdd"] : D.t["srla2+"];
+        return D.intl.format(r, { channelName: t, channelHook: n });
+    })(e, a, n);
+    return null != R
+        ? R
         : null != I
           ? u === A.MODAL && null != r
               ? c !== E.BLOCKED
