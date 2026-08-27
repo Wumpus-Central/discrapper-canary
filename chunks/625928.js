@@ -24,13 +24,13 @@ var l = n(477900),
     v = n(652215),
     N = n(375708),
     _ = n(845210);
-function T() {
+function j() {
     (0, A.openModalLazy)(async () => {
         let { default: e } = await Promise.all([n.e("235257"), n.e("66920")]).then(n.bind(n, 220763));
         return (t) => (0, l.jsx)(e, { ...t });
     });
 }
-function j(e) {
+function T(e) {
     let { className: t, iconOnly: n } = e,
         s = (0, o.bG)([y.Ay, I.A], () => {
             let e = I.A.getChannel(y.Ay.getChannelId());
@@ -48,7 +48,7 @@ function j(e) {
         n
             ? (0, l.jsx)(C.D, {
                   className: _.e7,
-                  onClick: () => T(),
+                  onClick: () => j(),
                   children: (0, l.jsx)(u.m, {
                       text: N.intl.string(N.t["+eFIjX"]),
                       position: "top",
@@ -62,7 +62,7 @@ function j(e) {
                       (0, l.jsx)(d.E, {
                           className: _.Qq,
                           variant: "text-sm/normal",
-                          children: N.intl.format(N.t.BNAIBU, { onLearnMore: T }),
+                          children: N.intl.format(N.t.BNAIBU, { onLearnMore: j }),
                       }),
                   ],
               })
@@ -78,7 +78,7 @@ function O(e) {
         y = s ?? i ?? E / 10,
         S = n.length,
         _ = null != t.upsellLongMessages && (S ?? 0) > v.uvi && C,
-        T = null != t.upsellLongMessages && !C,
+        j = null != t.upsellLongMessages && !C,
         O = I - S,
         M = O > y;
     (0, a.$)({ currentLength: S, maxLength: I, message: N.intl.string(N.t.c2Jqed) });
@@ -88,12 +88,12 @@ function O(e) {
                 : O > 0
                   ? N.intl.formatToPlainString(N.t.qH8uFW, { count: O })
                   : N.intl.string(N.t.YSRIqa),
-        { analyticsLocations: w } = (0, f.Ay)(m.A.CHARACTER_COUNT),
-        { isVisible: k } = (0, b.A)({ type: t, textValue: n, maxCharacterCount: i, showRemainingCharsAfterCount: s });
-    if (!k) return null;
+        { analyticsLocations: k } = (0, f.Ay)(m.A.CHARACTER_COUNT),
+        { isVisible: w } = (0, b.A)({ type: t, textValue: n, maxCharacterCount: i, showRemainingCharsAfterCount: s });
+    if (!w) return null;
     let P = O >= 0;
     return (0, l.jsx)(f.f5, {
-        value: w,
+        value: k,
         children: (0, l.jsxs)("div", {
             className: r()(A, R.Dq),
             children: [
@@ -123,8 +123,8 @@ function O(e) {
                     ],
                 }),
                 (0, l.jsx)(h.A, { "aria-live": "polite", children: N.intl.format(N.t.qH8uFW, { count: O }) }),
-                T && !M
-                    ? (0, l.jsx)(j, { className: R.UX, iconOnly: t.upsellLongMessages?.iconOnly || !1, remaining: O })
+                j && !M
+                    ? (0, l.jsx)(T, { className: R.UX, iconOnly: t.upsellLongMessages?.iconOnly || !1, remaining: O })
                     : null,
             ],
         }),

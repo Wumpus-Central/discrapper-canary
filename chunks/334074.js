@@ -98,16 +98,16 @@ function p(e) {
             () => clearTimeout(t)
         );
     }, [s, f, p]);
-    let w = t ? [] : s.filter((e) => g.has(e.id)).map((e) => e.id),
-        [I, S] = (0, n.Wl)(w.length > 0 ? c : null, { cooldownDurationMs: p.globalCooldownMs }, d, m),
-        M = I === c ? w : [],
-        _ = s.map((e) => e.id).join(","),
-        E = M.join(",");
+    let I = t ? [] : s.filter((e) => g.has(e.id)).map((e) => e.id),
+        [S, w] = (0, n.Wl)(I.length > 0 ? c : null, { cooldownDurationMs: p.globalCooldownMs }, d, m),
+        M = S === c ? I : [],
+        E = s.map((e) => e.id).join(","),
+        k = M.join(",");
     return (
         (0, i.useEffect)(() => {
-            let e = _.length > 0 ? _.split(",") : [],
-                s = new Set(E.length > 0 ? E.split(",") : []),
-                i = I !== c,
+            let e = E.length > 0 ? E.split(",") : [],
+                s = new Set(k.length > 0 ? k.split(",") : []),
+                i = S !== c,
                 l = {};
             for (let n of e)
                 !s.has(n) &&
@@ -124,11 +124,11 @@ function p(e) {
                 disabled: t,
                 excludedReasons: l,
             });
-        }, [_, E, c, t, g, I]),
+        }, [E, k, c, t, g, S]),
         {
             eligibleToShow: M,
             markAsDismissed: function (e, s) {
-                (0, a.M)(e, c), S(s);
+                (0, a.M)(e, c), w(s);
             },
         }
     );

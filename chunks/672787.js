@@ -32,45 +32,45 @@ var N = s(975571),
     C = s(852218),
     E = s(652215),
     T = s(221799),
-    R = s(555091),
-    v = s(375708);
+    v = s(555091),
+    R = s(375708);
 let I = {
     [C.XY]: {
-        getModalTitle: () => v.intl.string(R.default["2I7nK+"]),
+        getModalTitle: () => R.intl.string(v.default["2I7nK+"]),
         getModalSubtitle: () =>
-            v.intl.format(R.default.W8jOD0, { termsUrl: N.A.getArticleURL(E.MVz.LOGITECH_PROMOTION) }),
+            R.intl.format(v.default.W8jOD0, { termsUrl: N.A.getArticleURL(E.MVz.LOGITECH_PROMOTION) }),
         landingUrl: "https://www.logitech.com/",
         outboundConfigs: {
             "Logitech G": {
-                getTitle: () => v.intl.formatToPlainString(R.default.jkdhZq, { discountPercent: j.aW }),
-                getBody: () => v.intl.formatToPlainString(R.default.mH30Yx, {}),
+                getTitle: () => R.intl.formatToPlainString(v.default.jkdhZq, { discountPercent: j.aW }),
+                getBody: () => R.intl.formatToPlainString(v.default.mH30Yx, {}),
             },
             "Logitech 5%": {
-                getTitle: () => v.intl.formatToPlainString(R.default.zeBjoX, { discountPercent: j.y$ }),
-                getBody: () => v.intl.formatToPlainString(R.default.fC4abC, { months: 6 }),
+                getTitle: () => R.intl.formatToPlainString(v.default.zeBjoX, { discountPercent: j.y$ }),
+                getBody: () => R.intl.formatToPlainString(v.default.fC4abC, { months: 6 }),
             },
             "Logitech PRO Series Sim": {
-                getTitle: () => v.intl.formatToPlainString(R.default.pSBCjv, { discountPercent: j.K2 }),
-                getBody: () => v.intl.formatToPlainString(R.default.lsRjfl, {}),
+                getTitle: () => R.intl.formatToPlainString(v.default.pSBCjv, { discountPercent: j.K2 }),
+                getBody: () => R.intl.formatToPlainString(v.default.lsRjfl, {}),
             },
         },
     },
     [C.Bt]: {
-        getModalTitle: () => v.intl.string(T.default.YJsqDS),
+        getModalTitle: () => R.intl.string(T.default.YJsqDS),
         getModalSubtitle: () =>
-            v.intl.format(T.default.ieA3V0, {
+            R.intl.format(T.default.ieA3V0, {
                 termsUrl: "https://support.discord.com/hc/en-us/articles/39188406147479-Nitro-Rewards",
             }),
-        getModalTeaser: () => ({ title: v.intl.string(T.default.Dkm10r), body: v.intl.string(T.default.LHAkT9) }),
+        getModalTeaser: () => ({ title: R.intl.string(T.default.Dkm10r), body: R.intl.string(T.default.LHAkT9) }),
         showSectionHeaders: !1,
         landingUrl: "https://www.callofduty.com/",
         outboundConfigs: {
             "CoD MW4 Beta": {
-                getTitle: () => v.intl.string(T.default["6vVfeK"]),
-                getBody: (e) => v.intl.formatToPlainString(T.default.nsmhS2, { date: (0, A.mh)(e.endDate) }),
+                getTitle: () => R.intl.string(T.default["6vVfeK"]),
+                getBody: (e) => R.intl.formatToPlainString(T.default.nsmhS2, { date: (0, A.mh)(e.endDate) }),
                 getAsset: (e, t) => (0, b.WD)(e.id, t),
-                getClaimCtaText: () => v.intl.string(T.default["lbyFG+"]),
-                getRedeemCtaText: () => v.intl.string(T.default["6rwUm2"]),
+                getClaimCtaText: () => R.intl.string(T.default["lbyFG+"]),
+                getRedeemCtaText: () => R.intl.string(T.default["6rwUm2"]),
                 claimButtonPlacement: p.u5.FOOTER,
             },
         },
@@ -109,7 +109,7 @@ function S(e) {
     let C = m?.getModalSubtitle?.(),
         E = m?.getModalTitle() ?? t,
         T = m?.showSectionHeaders !== !1,
-        S = T ? { recurring: v.intl.string(R.default["9Y2p6p"]), oneTime: v.intl.string(R.default.Wm58LR) } : void 0,
+        S = T ? { recurring: R.intl.string(v.default["9Y2p6p"]), oneTime: R.intl.string(v.default.Wm58LR) } : void 0,
         y = m?.getModalTeaser?.(),
         D = (0, i.jsx)("div", {
             className: _.kR,

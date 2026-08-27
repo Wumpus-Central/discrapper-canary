@@ -1371,7 +1371,7 @@ function tl(e) {
     let { children: l, hasGradientBackground: n = !1 } = e;
     return (0, t.jsx)(f.F, { children: (0, t.jsx)("div", { className: a()(te.k, { [te.V]: n }), children: l }) });
 }
-var tn = n(296704),
+var tn = n(221877),
     tt = n(689175),
     ti = n(424290);
 function tr(e) {

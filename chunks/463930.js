@@ -36,21 +36,21 @@ function p(e) {
             S(!1);
         }, []),
         _ = "username" === t,
-        T = null != u && null != u.primaryColor && null != u.secondaryColor,
-        j = _ && T,
+        j = null != u && null != u.primaryColor && null != u.secondaryColor,
+        T = _ && j,
         {
             gradientStyle: b,
             gradientClassname: R,
             gradientGlowClassname: O,
         } = (0, h.v5)({ colorStrings: u, roleStyle: "username", animateGradient: x || y || I?.animate }),
         M = (0, h.CR)(n),
-        L = { className: r()(f.UU, g, C, { [f.Xh]: _, [R]: j }), children: M },
-        w = { className: r()(f.lD, O, C), children: n },
-        k =
+        L = { className: r()(f.UU, g, C, { [f.Xh]: _, [R]: T }), children: M },
+        k = { className: r()(f.lD, O, C), children: n },
+        w =
             "dot" === t
                 ? (0, l.jsx)(m.W, {
                       color: s,
-                      colors: T ? u : null,
+                      colors: j ? u : null,
                       name: o,
                       className: "left" === d ? f.Hf : f.WN,
                       hoverOverride: x || y || I?.animate,
@@ -61,27 +61,27 @@ function p(e) {
         onMouseEnter: v,
         onMouseLeave: N,
         children: [
-            "left" === d && k,
+            "left" === d && w,
             (0, l.jsxs)("span", {
                 className: r()(f.VW, { [f.mO]: E }),
-                style: { color: _ && !T && null != s ? s : void 0, ...(j ? b : {}) },
+                style: { color: _ && !j && null != s ? s : void 0, ...(T ? b : {}) },
                 children: [
                     null != A
                         ? (0, l.jsx)(a.E, { tag: "span", color: "currentColor", variant: A, ...L })
                         : (0, l.jsx)("span", { ...L }),
-                    j &&
+                    T &&
                         (null != A
                             ? (0, l.jsx)(a.E, {
                                   tag: "span",
                                   color: "currentColor",
                                   "aria-hidden": !0,
                                   variant: A,
-                                  ...w,
+                                  ...k,
                               })
-                            : (0, l.jsx)("span", { "aria-hidden": !0, ...w })),
+                            : (0, l.jsx)("span", { "aria-hidden": !0, ...k })),
                 ],
             }),
-            "right" === d && k,
+            "right" === d && w,
         ],
     });
 }

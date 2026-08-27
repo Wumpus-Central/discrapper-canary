@@ -1,6 +1,6 @@
 "use strict";
 let l, i, s, r;
-n.d(t, { A: () => k }), n(321073);
+n.d(t, { A: () => w }), n(321073);
 var a = n(435558),
     o = n.n(a),
     u = n(17928),
@@ -34,8 +34,8 @@ function S(e, t) {
 var v = n(521732);
 let N = {},
     _ = {},
-    T = {},
-    j = [],
+    j = {},
+    T = [],
     b = {},
     R = { status: "ok", lastRequest: null, lastResponse: null },
     O = [],
@@ -45,7 +45,7 @@ function L() {
         .results.filter((e) => e.type === h.rD.TEXT_CHANNEL && 0 === e.record.type)
         .map((e) => e.record.id);
 }
-class w extends u.Ay.PersistedStore {
+class k extends u.Ay.PersistedStore {
     static persistKey = "SummaryStore";
     getState() {
         return { shouldShowTopicsBar: l };
@@ -81,7 +81,7 @@ class w extends u.Ay.PersistedStore {
         return null != r && r.channelId === e && null != r.summaryId ? this.findSummary(e, r?.summaryId) : null;
     }
     summaryFeedback(e) {
-        return null == e ? null : T[e.id];
+        return null == e ? null : j[e.id];
     }
     isFetching(e, t) {
         return null != t ? _[e]?.summaryId === t : _[e]?.fetching === !0;
@@ -102,7 +102,7 @@ class w extends u.Ay.PersistedStore {
         return !n?.fetching && 0 === i;
     }
     channelAffinities() {
-        return j;
+        return T;
     }
     channelAffinitiesById() {
         return b;
@@ -121,7 +121,7 @@ class w extends u.Ay.PersistedStore {
             s = [];
         return (
             t && (s = s.concat(O)),
-            n && (s = s.concat(j.map((e) => e.channel_id))),
+            n && (s = s.concat(T.map((e) => e.channel_id))),
             l &&
                 (s = s.filter((e) => {
                     let t = p.A.getChannel(e);
@@ -137,7 +137,7 @@ class w extends u.Ay.PersistedStore {
         return s;
     }
 }
-let k = new w(c.h, {
+let w = new k(c.h, {
     CONNECTION_OPEN: () => !1,
     CHANNEL_SELECT(e) {
         let { channelId: t } = e;
@@ -214,7 +214,7 @@ let k = new w(c.h, {
     },
     SET_SUMMARY_FEEDBACK(e) {
         let { summary: t, rating: n } = e;
-        null != n ? (T[t.id] = n) : delete T[t.id];
+        null != n ? (j[t.id] = n) : delete j[t.id];
     },
     REQUEST_CHANNEL_AFFINITIES() {
         R = { ...R, status: "fetching", lastRequest: Date.now() };
@@ -222,10 +222,10 @@ let k = new w(c.h, {
     RECEIVE_CHANNEL_AFFINITIES(e) {
         let { affinities: t, error: n } = e;
         if (null != n) {
-            (j = []), (b = {}), (R = { ...R, status: "error", lastResponse: Date.now() });
+            (T = []), (b = {}), (R = { ...R, status: "error", lastResponse: Date.now() });
             return;
         }
-        (j = t ?? []),
+        (T = t ?? []),
             (b = t?.reduce((e, t) => ((e[t.channel_id] = t.affinity), e), {}) ?? {}),
             (R = { ...R, status: "ok", lastResponse: Date.now() });
     },

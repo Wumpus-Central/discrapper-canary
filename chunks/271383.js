@@ -12,14 +12,14 @@ var i = n(477900),
     m = n(403581),
     x = n(783420),
     f = n(206697),
-    h = n(296704),
+    h = n(221877),
     p = n(866323),
     I = n(765178),
     j = n(834730),
     A = n(821609),
     v = n(775602),
     E = n(485038);
-function S(e) {
+function C(e) {
     let {
             isVisible: t,
             labelId: n,
@@ -82,13 +82,13 @@ function S(e) {
         )
     );
 }
-var C = n(570002),
+var S = n(570002),
     b = n(202541),
     T = n(375708);
 function y() {
     let e = (0, g.YW)(),
         { goBack: t } = (0, g.pA)(),
-        n = (0, C.A)(T.intl.string(T.t.pj0XBN));
+        n = (0, S.A)(T.intl.string(T.t.pj0XBN));
     return (0, i.jsx)(x.A, {
         subscriptionTier: b.pe.TIER_2,
         onSubscribeModalClose: (e) => {
@@ -96,7 +96,7 @@ function y() {
         },
         children: (l) => {
             let { onClick: s } = l;
-            return (0, i.jsx)(S, {
+            return (0, i.jsx)(C, {
                 isVisible: e,
                 labelId: "premium-try-it-out-footer-bar-label",
                 noticeText: T.intl.string(T.t.X0ir7L),
@@ -155,7 +155,7 @@ function V(e) {
         E = l.useCallback(() => {
             G.A.clearPendingWidgets(), h && (0, O.XQ)();
         }, [h]),
-        C = l.useCallback(async () => {
+        S = l.useCallback(async () => {
             if (h && !D.A.canSubmit()) return;
             c(!0);
             let e = !0;
@@ -249,14 +249,14 @@ function V(e) {
                 }
             );
         }, []),
-        (0, i.jsx)(S, {
+        (0, i.jsx)(C, {
             isVisible: A,
             labelId: "user-profile-save-reset-toolbar-label",
             noticeText: T.intl.string(T.t["/lQiX/"]),
             isEmphasized: s,
             a11yAnnounceOnShow: T.intl.string(T.t["0Y/qkL"]),
             secondaryAction: { text: T.intl.string(T.t.yBZMsQ), onClick: E, disabled: !A || o },
-            primaryAction: { text: T.intl.string(T.t["R3BPH+"]), onClick: C, loading: o, disabled: !v || !A },
+            primaryAction: { text: T.intl.string(T.t["R3BPH+"]), onClick: S, loading: o, disabled: !v || !A },
         })
     );
 }

@@ -1,4 +1,4 @@
-r.d(e, { A: () => c });
+r.d(e, { A: () => d });
 var i = r(582128),
     n = r(435558),
     s = r(17928),
@@ -6,15 +6,15 @@ var i = r(582128),
     u = r(289173),
     a = r(999291),
     o = r(832163),
-    d = r(501838);
-function c(t) {
+    c = r(501838);
+function d(t) {
     let { userId: e } = t,
         r = (0, a.Ay)(e),
-        c = i.useMemo(() => (r?.userId != null ? [r.userId] : []), [r]),
-        S = (0, d.w)({ userIds: c }),
-        I = (0, d.mn)({ userIds: c }),
-        p = (0, d.tR)(c),
-        h = (0, s.yK)([o.A], () => {
+        d = i.useMemo(() => (r?.userId != null ? [r.userId] : []), [r]),
+        S = (0, c.w)({ userIds: d }),
+        I = (0, c.mn)({ userIds: d }),
+        p = (0, c.tR)(d),
+        _ = (0, s.yK)([o.A], () => {
             if (r?.widgets == null) return [];
             let t = new Set();
             for (let e of r?.widgets ?? [])
@@ -30,7 +30,7 @@ function c(t) {
             return Array.from(t).sort();
         }, [r]);
     return i.useMemo(
-        () => (r?.application != null ? [] : (0, n.uniq)([...S, ...I, ...p, ...h])),
-        [r?.application, S, I, p, h],
+        () => (r?.application != null ? [] : (0, n.uniq)([...S, ...I, ...p, ..._])),
+        [r?.application, S, I, p, _],
     );
 }

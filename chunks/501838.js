@@ -1,4 +1,4 @@
-r.d(e, { mn: () => S, px: () => A, qx: () => h, rY: () => _, tR: () => I, w: () => p }), r(321073);
+r.d(e, { mn: () => S, px: () => A, qx: () => _, rY: () => h, tR: () => I, w: () => p }), r(321073);
 var i = r(17928),
     n = r(517164),
     s = r(20805),
@@ -6,30 +6,30 @@ var i = r(17928),
     u = r(321191),
     a = r(71393),
     o = r(290863),
-    d = r(832163),
-    c = r(533562);
+    c = r(832163),
+    d = r(533562);
 function S(t) {
     let { userIds: e } = t;
-    return (0, i.yK)([n.A, d.A], () => {
+    return (0, i.yK)([n.A, c.A], () => {
         let t = [];
         for (let r of e)
             for (let e of n.A.getUserOutbox(r)?.entries ?? [])
                 if (null != e && (0, s.zD)(e)) {
-                    let r = d.A.getApplicationIdFromDetectableId(e.extra.application_id);
+                    let r = c.A.getApplicationIdFromDetectableId(e.extra.application_id);
                     null != r && t.push(r);
                 }
         return t;
     }, [e]);
 }
 function I(t) {
-    return (0, i.yK)([u.A, d.A], () => {
+    return (0, i.yK)([u.A, c.A], () => {
         let e = [];
         for (let r of t) {
             let t = u.A.getMutualGuilds(r);
             if (null != t) {
                 for (let r of t)
-                    if (d.A.getStorefrontGuildIds().has(r.guild.id)) {
-                        let t = d.A.getApplicationIdFromGuildId(r.guild.id);
+                    if (c.A.getStorefrontGuildIds().has(r.guild.id)) {
+                        let t = c.A.getApplicationIdFromGuildId(r.guild.id);
                         null != t && e.push(t);
                     }
             }
@@ -39,36 +39,36 @@ function I(t) {
 }
 function p(t) {
     let { userIds: e } = t,
-        r = (0, i.yK)([o.A, d.A], () => {
+        r = (0, i.yK)([o.A, c.A], () => {
             let t = [];
             for (let r of e)
                 for (let e of o.A.getActivities(r))
                     if (null != e.application_id) {
-                        let r = d.A.getApplicationIdFromDetectableId(e.application_id);
+                        let r = c.A.getApplicationIdFromDetectableId(e.application_id);
                         null != r && t.push(r);
                     }
             return t;
         }, [e]),
-        n = (0, c.W)();
+        n = (0, d.W)();
     return null != n ? [...r, n] : r;
 }
-function h() {
-    return (0, i.yK)([l.Ay, d.A], () => {
+function _() {
+    return (0, i.yK)([l.Ay, c.A], () => {
         let t = [];
         for (let e of l.Ay.getGamesSeen(!1, !1))
             if (null != e.id) {
-                let r = d.A.getApplicationIdFromDetectableId(e.id);
+                let r = c.A.getApplicationIdFromDetectableId(e.id);
                 null != r && t.push(r);
             }
         return t;
     });
 }
-function _() {
-    return (0, i.yK)([l.Ay, d.A], () => {
+function h() {
+    return (0, i.yK)([l.Ay, c.A], () => {
         let t = [];
         for (let e of l.Ay.getRunningGames())
             if (null != e.id && l.Ay.isDetectionEnabled(e)) {
-                let r = d.A.getApplicationIdFromDetectableId(e.id);
+                let r = c.A.getApplicationIdFromDetectableId(e.id);
                 null != r && t.push(r);
             }
         return t;
@@ -76,10 +76,10 @@ function _() {
 }
 function A() {
     let t = (0, i.bG)([a.A], () => a.A.getGuildIds());
-    return (0, i.yK)([d.A], () => {
+    return (0, i.yK)([c.A], () => {
         let e = [];
         for (let r of t) {
-            let t = d.A.getApplicationIdFromGuildId(r);
+            let t = c.A.getApplicationIdFromGuildId(r);
             null != t && e.push(t);
         }
         return e;

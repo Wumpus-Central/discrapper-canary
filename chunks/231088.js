@@ -45,13 +45,13 @@ function p(e) {
                 (x.current?.scrollIntoView({ block: "nearest", behavior: g ? "auto" : "smooth" }),
                 h.current?.focus({ preventScroll: !0 }));
         }, [u, g]);
-    let S = l.useCallback(
+    let C = l.useCallback(
             (e) => {
                 !u || (null != x.current && (0, a.vq)(e.relatedTarget) && x.current.contains(e.relatedTarget)) || v();
             },
             [u, v],
         ),
-        C = l.useCallback(
+        S = l.useCallback(
             (e) => {
                 u && "Escape" === e.key && (e.preventDefault(), e.stopPropagation(), (p.current = !0), E());
             },
@@ -85,8 +85,8 @@ function p(e) {
         handleInputCommit: b,
         handleInputCancel: T,
         onInputKeyDown: y,
-        onBlur: S,
-        onContainerKeyDown: C,
+        onBlur: C,
+        onContainerKeyDown: S,
     };
 }
 function I(e) {
@@ -124,8 +124,8 @@ function A(e) {
             previewWarningMessage: A,
             className: v,
             wrapperRef: E,
-            onBlur: S,
-            onKeyDown: C,
+            onBlur: C,
+            onKeyDown: S,
             textVariant: b,
             textColor: T,
             disabled: y = !1,
@@ -191,8 +191,8 @@ function A(e) {
             { [h.oE]: "compact" === g, [h.c1]: "multiline" === g, [h.CP]: N, [h.WK]: k, [h.Dy]: t },
             v,
         ),
-        onBlur: S,
-        onKeyDown: C,
+        onBlur: C,
+        onKeyDown: S,
         children: (0, i.jsx)(
             "div",
             {

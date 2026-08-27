@@ -24,17 +24,17 @@ var t = l(477900),
     N = l(702483),
     j = l(490682),
     E = l(683167),
-    w = l(375499),
-    P = l(267889),
+    P = l(375499),
+    w = l(267889),
     R = l(267102),
     S = l(363195),
     D = l(885386),
     M = l(95701),
     L = l(652215),
     T = l(551483),
-    O = l(307731),
-    V = l(569622),
-    G = l(465410);
+    G = l(307731),
+    O = l(569622),
+    V = l(465410);
 let z = (0, M.createChannelRecord)({ id: "1", type: L.rbe.DM });
 function _(e) {
     let { editor: n, pickerIntention: l, containerClassName: r } = e,
@@ -68,7 +68,7 @@ function _(e) {
                     children: (e) =>
                         (0, t.jsx)("div", {
                             className: e,
-                            children: (0, t.jsx)(P.A, {
+                            children: (0, t.jsx)(w.A, {
                                 persistSearch: !0,
                                 closePopout: n,
                                 onSelectEmoji: (e) => {
@@ -83,7 +83,7 @@ function _(e) {
             [o, l, s],
         );
     return (0, t.jsx)("div", {
-        className: i()(V.S0, r),
+        className: i()(O.S0, r),
         onMouseDown: (e) => e.preventDefault(),
         children: (0, t.jsx)(f.Y, {
             targetElementRef: u,
@@ -93,7 +93,7 @@ function _(e) {
             align: "right",
             children: (e, n) => {
                 let { isShown: l } = n;
-                return (0, t.jsx)(w.A, { ...e, ref: u, active: l, tabIndex: 0, className: V.Z8 });
+                return (0, t.jsx)(P.A, { ...e, ref: u, active: l, tabIndex: 0, className: O.Z8 });
             },
         }),
     });
@@ -114,7 +114,7 @@ function B(e) {
             );
         }, [n]),
         (0, t.jsxs)("div", {
-            className: V.aL,
+            className: O.aL,
             onMouseDown: (e) => e.preventDefault(),
             children: [(0, t.jsx)(x.P, { slateEditor: n }), (0, t.jsx)(_, { editor: n, pickerIntention: l })],
         })
@@ -139,13 +139,13 @@ function H(e) {
         C = a.useContext(o._),
         y = C?.errorMessageId != null,
         E = a.useRef(null),
-        w = a.useRef(null),
-        P = a.useCallback(() => n, [n]),
+        P = a.useRef(null),
+        w = a.useCallback(() => n, [n]),
         R = a.useCallback((e) => [...(0, j.A)(n, e, void 0), ...(0, N.A)(n, e)], [n]);
     return (
         a.useEffect(() => {
             if ("floating" !== l) return;
-            let e = w.current;
+            let e = P.current;
             if (null != e)
                 return (
                     e.ownerDocument.addEventListener("scroll", n, { capture: !0 }),
@@ -157,17 +157,17 @@ function H(e) {
         }, [l]),
         (0, t.jsxs)(t.Fragment, {
             children: [
-                "floating" === l && (0, t.jsx)(x.A, { ref: E, getSlateEditor: P, containerRef: w }),
+                "floating" === l && (0, t.jsx)(x.A, { ref: E, getSlateEditor: w, containerRef: P }),
                 (0, t.jsx)(d.vN, {
                     children: (0, t.jsxs)("div", {
-                        className: i()(V.I6, { [V.mq]: "static" === l }),
+                        className: i()(O.I6, { [O.mq]: "static" === l }),
                         "data-error": y || void 0,
                         "data-disabled": s || void 0,
                         children: [
                             "static" === l && !s && (0, t.jsx)(B, { editor: n, pickerIntention: f }),
                             (0, t.jsx)("div", {
-                                ref: w,
-                                className: i()(V.XG, G.yL),
+                                ref: P,
+                                className: i()(O.XG, V.yL),
                                 style: { "--custom-rich-text-area-rows": v },
                                 onMouseDown: (e) => {
                                     e.target === e.currentTarget &&
@@ -176,8 +176,8 @@ function H(e) {
                                 onScroll: () => E.current?.hide(),
                                 children: (0, t.jsx)(I.A, {
                                     id: C?.controlId,
-                                    containerClassName: V.RZ,
-                                    className: V.EN,
+                                    containerClassName: O.RZ,
+                                    className: O.EN,
                                     editor: n,
                                     placeholder: r,
                                     readOnly: s,
@@ -197,7 +197,7 @@ function H(e) {
                             }),
                             "floating" === l &&
                                 !s &&
-                                (0, t.jsx)(_, { editor: n, pickerIntention: f, containerClassName: V.C7 }),
+                                (0, t.jsx)(_, { editor: n, pickerIntention: f, containerClassName: O.C7 }),
                         ],
                     }),
                 }),
@@ -215,15 +215,15 @@ function F(e) {
             autosize: d = !0,
             autoFocus: g = !1,
             error: v,
-            emojiPickerIntention: f = O.EmojiIntention.CHAT,
+            emojiPickerIntention: f = G.EmojiIntention.CHAT,
             toolbarVariant: A = "floating",
             editorRef: I,
             onChange: x,
             onKeyDown: y,
             onFocus: N,
             onBlur: j,
-            "aria-labelledby": w,
-            ...P
+            "aria-labelledby": P,
+            ...w
         } = e,
         S = (function (e) {
             let n = a.useContext(R.Ay),
@@ -258,7 +258,7 @@ function F(e) {
             );
         })(n),
         [M, L] = a.useState(n),
-        [V, G] = a.useState(() => S.children.length);
+        [O, V] = a.useState(() => S.children.length);
     a.useImperativeHandle(
         I,
         () => ({
@@ -271,7 +271,7 @@ function F(e) {
         }),
         [S],
     );
-    let { fieldProps: _ } = (0, c.n)(P),
+    let { fieldProps: _ } = (0, c.n)(w),
         { disabled: B, required: F } = _,
         {
             setShouldValidate: K,
@@ -283,7 +283,7 @@ function F(e) {
     let Y = a.useCallback(
         (e) => {
             let n = (0, C.WO)(e, { mode: "raw" });
-            n !== W.current && (L(n), K(!0), x?.(n)), d && G(e.length);
+            n !== W.current && (L(n), K(!0), x?.(n)), d && V(e.length);
         },
         [d, x, K],
     );
@@ -293,9 +293,9 @@ function F(e) {
             (S.selection = { anchor: T.K, focus: T.K }),
             S.onChange(),
             L(n),
-            d && G(S.children.length));
+            d && V(S.children.length));
     }, [d, n, S]);
-    let U = d ? Math.max(o, Math.min(V, 15)) : o,
+    let U = d ? Math.max(o, Math.min(O, 15)) : o,
         $ = null != i ? (0, t.jsx)(p.n, { value: M, maxLength: i }) : null;
     return (0, t.jsx)(c.D, {
         ..._,
@@ -314,7 +314,7 @@ function F(e) {
             onKeyDown: y,
             onFocus: N,
             onBlur: j,
-            ariaLabelledByProp: w,
+            ariaLabelledByProp: P,
         }),
     });
 }

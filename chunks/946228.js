@@ -24,15 +24,15 @@ var A = n(442433),
     v = n(95561),
     N = n(688810),
     _ = n(941726),
-    T = n(449582),
-    j = n(900797),
+    j = n(449582),
+    T = n(900797),
     b = n(847374),
     R = n(320448),
     O = n(939249),
     M = n(485947),
     L = n(180170),
-    w = n(435738),
-    k = n(38055);
+    k = n(435738),
+    w = n(38055);
 let P = "content-inventory-feed";
 var D = n(652215),
     U = n(375708),
@@ -41,7 +41,7 @@ var D = n(652215),
 let F = i.memo(function (e) {
         let t,
             { title: s, onToggleExpand: r, expanded: a, expandedCount: o } = e,
-            u = (0, h.bG)([w.A], () => w.A.hidden),
+            u = (0, h.bG)([k.A], () => k.A.hidden),
             c = i.useCallback((e) => {
                 (0, A.L3)(e, async () => {
                     let { MemberListContentSettingsMenu: e } = await Promise.resolve().then(n.bind(n, 38055));
@@ -64,7 +64,7 @@ let F = i.memo(function (e) {
                             "aria-hidden": !0,
                             children: (0, l.jsxs)("span", { children: [s, " \u2014 ", o] }),
                         }),
-                        (0, l.jsx)(k.A, {}),
+                        (0, l.jsx)(w.A, {}),
                         (0, l.jsx)(O.D, {
                             onClick: d,
                             onContextMenu: c,
@@ -77,7 +77,7 @@ let F = i.memo(function (e) {
                         o <= 3 && !u
                             ? null
                             : ((t = u
-                                  ? (0, l.jsx)(j.t, { className: G.wT })
+                                  ? (0, l.jsx)(T.t, { className: G.wT })
                                   : a
                                     ? (0, l.jsx)(b.a, { className: G.wT })
                                     : (0, l.jsx)(R._, { className: G.wT })),
@@ -97,7 +97,7 @@ let F = i.memo(function (e) {
     H = function () {
         return null;
     };
-var B = n(742424),
+var B = n(438692),
     W = n(228366),
     K = n(963307),
     z = n(734057),
@@ -143,15 +143,15 @@ var ep = n(915089),
     ev = n(309010),
     eN = n(741961),
     e_ = n(287809),
-    eT = n(977997),
-    ej = n(625494),
+    ej = n(977997),
+    eT = n(625494),
     eb = n(403362),
     eR = n(427262),
     eO = n(19575),
     eM = n(47167);
 let eL = eO.Ay.getEnableHardwareAcceleration(),
-    ew = { origin: { x: 38, y: 11 }, targetWidth: 232, targetHeight: 40, offset: { x: 0, y: 0 } },
-    ek = i.memo(function (e) {
+    ek = { origin: { x: 38, y: 11 }, targetWidth: 232, targetHeight: 40, offset: { x: 0, y: 0 } },
+    ew = i.memo(function (e) {
         let {
                 colorString: t,
                 colorStrings: s,
@@ -173,8 +173,8 @@ let eL = eO.Ay.getEnableHardwareAcceleration(),
                 nameplate: N,
                 ..._
             } = e,
-            T = i.useRef(null),
-            [j, b] = i.useState(!1),
+            j = i.useRef(null),
+            [T, b] = i.useState(!1),
             R = null != v ? new Date(v) : null,
             O = i.useCallback(
                 (e) => {
@@ -249,7 +249,7 @@ let eL = eO.Ay.getEnableHardwareAcceleration(),
                                 n.e("717334"),
                                 n.e("184841"),
                             ]).then(n.bind(n, 107632)),
-                            t = eT.A.isInChannel(ev.Ay.getVoiceChannelId(), c.id);
+                            t = ej.A.isInChannel(ev.Ay.getVoiceChannelId(), c.id);
                         return (n) => (0, l.jsx)(e, { ...n, user: c, guildId: x, channel: g, showMediaItems: t });
                     });
                 },
@@ -258,8 +258,8 @@ let eL = eO.Ay.getEnableHardwareAcceleration(),
             M = i.useCallback(() => {
                 let e = `@${eR.Ay.getUserTag(c, { decoration: "never" })}`,
                     t = `<@${c.id}>`;
-                ej._.dispatch(D.jej.TEXTAREA_FOCUS, { channelId: g.id }),
-                    ej._.dispatchToLastSubscribed(D.jej.INSERT_TEXT, { plainText: e, rawText: t }),
+                eT._.dispatch(D.jej.TEXTAREA_FOCUS, { channelId: g.id }),
+                    eT._.dispatchToLastSubscribed(D.jej.INSERT_TEXT, { plainText: e, rawText: t }),
                     E.A.startTyping(g.id);
             }, [c, g.id]),
             L = i.useCallback(
@@ -274,7 +274,7 @@ let eL = eO.Ay.getEnableHardwareAcceleration(),
                 [x],
             );
         return (0, l.jsx)(eE.A, {
-            targetElementRef: T,
+            targetElementRef: j,
             user: c,
             guildId: x,
             channelId: g.id,
@@ -282,14 +282,14 @@ let eL = eO.Ay.getEnableHardwareAcceleration(),
             position: d.Fr ? "window_center" : "left",
             spacing: 16,
             onShiftClick: M,
-            shouldShow: j,
+            shouldShow: T,
             onRequestClose: () => {
                 b(!1);
             },
             children: (e) => {
                 let { onClick: n, onMouseDown: i, ...a } = e;
                 return (0, l.jsx)(I.A, {
-                    ref: T,
+                    ref: j,
                     className: V.Dc,
                     onContextMenu: O,
                     shouldAnimateStatus: eL,
@@ -310,14 +310,14 @@ let eL = eO.Ay.getEnableHardwareAcceleration(),
                     isMobile: y,
                     isVR: S,
                     onClickPremiumGuildIcon: L,
-                    selected: j,
+                    selected: T,
                     itemProps: _,
                     nameplate: N,
                     onClick: (e) => {
                         e.shiftKey ? M?.() : b((e) => !e);
                     },
                     onMouseDown: (e) => {
-                        j ? e.stopPropagation() : i?.(e);
+                        T ? e.stopPropagation() : i?.(e);
                     },
                     ...a,
                 });
@@ -331,8 +331,8 @@ let eL = eO.Ay.getEnableHardwareAcceleration(),
             o = (0, h.bG)([eN.A], () => eN.A.isTyping(i.id, s.id)),
             c = (0, h.bG)([e_.default], () => e_.default.getCurrentUser()),
             d = (0, h.bG)([ey.A], () => (null != t ? ey.A.getRole(i.guild_id, t)?.name : void 0), [i, t]),
-            m = (0, T.r)({ user: s, guildId: i.guild_id });
-        return (0, l.jsx)(ek, { ...n, ...a, isTyping: o, currentUser: c, colorRoleName: d, nameplate: m });
+            m = (0, j.r)({ user: s, guildId: i.guild_id });
+        return (0, l.jsx)(ew, { ...n, ...a, isTyping: o, currentUser: c, colorRoleName: d, nameplate: m });
     }),
     eD = i.memo(function (e) {
         let { id: t, title: s, count: r, guildId: a, className: o } = e,
@@ -415,7 +415,7 @@ class eG extends i.Component {
                 {
                     tutorialId: "whos-online",
                     position: "left",
-                    inlineSpecs: ew,
+                    inlineSpecs: ek,
                     children: (0, i.createElement)(eD, {
                         ...r,
                         key: `section-${e}`,
@@ -711,11 +711,11 @@ function eV(e) {
                     })({ entries: l, channelId: e });
                     let { entries: s, filteredIds: r } =
                         ((t = l = i.useMemo(() => l?.filter((e) => em.has(e.content_type)), [l])),
-                        (n = (0, h.bG)([w.A, ee.A], () => {
+                        (n = (0, h.bG)([k.A, ee.A], () => {
                             let e = ee.A.getDebugImpressionCappingDisabled();
                             return !(0, J.sE)("useFilterImpressionCappedContent") || e
                                 ? ec
-                                : w.A.getImpressionCappedItemIds();
+                                : k.A.getImpressionCappedItemIds();
                         }, [t])),
                         i.useMemo(() => {
                             if (null == t) return { entries: t, filteredIds: ec };
@@ -734,7 +734,7 @@ function eV(e) {
                         }
                     );
                 })(s),
-                m = (0, h.bG)([w.A], () => w.A.hidden),
+                m = (0, h.bG)([k.A], () => k.A.hidden),
                 f = (0, h.bG)([Y.A], () => Y.A.isFocused()),
                 p = (0, h.bG)([z.A], () => z.A.getChannel(s)),
                 g = (0, h.bG)([Z.A], () => Z.A.getGuild(r), [r]),
@@ -777,7 +777,7 @@ function eV(e) {
                 S = i.useRef(c),
                 v = i.useRef(void 0),
                 N = i.useRef({ impressionCappedEntryIds: d }),
-                T = i.useCallback(
+                j = i.useCallback(
                     (e) => {
                         let t = Math.floor(e / B.bG),
                             n = Math.min(I?.length ?? 0, t);
@@ -819,7 +819,7 @@ function eV(e) {
                     ),
                     [u, s, r, m, f, x],
                 ),
-                { groups: A, rows: C, version: E, updateMaxRowSeen: T }
+                { groups: A, rows: C, version: E, updateMaxRowSeen: j }
             );
         })({ memberStoreProps: o, channelId: t.id, guildId: t.guild_id }),
         g = i.useRef(null),
@@ -870,7 +870,7 @@ function eV(e) {
                 }),
             [],
         ),
-        T = (0, c.Ay)({ id: `members-${t.id}`, setFocus: E, isEnabled: a, scrollToStart: I, scrollToEnd: v });
+        j = (0, c.Ay)({ id: `members-${t.id}`, setFocus: E, isEnabled: a, scrollToStart: I, scrollToEnd: v });
     return (0, l.jsx)(N.f5, {
         value: s,
         children: (0, l.jsx)("div", {
@@ -878,7 +878,7 @@ function eV(e) {
             tabIndex: -1,
             className: r()(V.kL, n),
             children: (0, l.jsx)(u.hD, {
-                navigator: T,
+                navigator: j,
                 children: (0, l.jsx)(eG, {
                     ...e,
                     ...o,

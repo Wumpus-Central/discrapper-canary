@@ -5,7 +5,7 @@ var l = t(477900),
     s = t.n(a),
     r = t(284009),
     o = t.n(r),
-    c = t(296704),
+    c = t(221877),
     u = t(17928),
     d = t(554146),
     A = t(922016),
@@ -21,8 +21,8 @@ var l = t(477900),
     v = t(688810),
     T = t(198052),
     _ = t(829773),
-    N = t(329072),
-    j = t(183184),
+    j = t(329072),
+    N = t(183184),
     b = t(384059),
     S = t(480890),
     O = t(379848),
@@ -32,8 +32,8 @@ var l = t(477900),
     L = t(880144),
     D = t(338771),
     P = t(558076),
-    G = t(360729),
-    k = t(508654),
+    k = t(360729),
+    G = t(508654),
     V = t(984624),
     U = t(394412),
     B = t(267102),
@@ -95,10 +95,10 @@ function e_(e) {
         I = (0, H.k0)(),
         [T, _] = i.useState(!1);
     if (!(0, u.bG)([ei.Ay], () => ei.Ay.supports(eI.O5.VIDEO))) return null;
-    function N() {
+    function j() {
         ((0, b.X)(c, b.O.STREAM, !0), s) ? x() : (0, eC.A)();
     }
-    function j() {
+    function N() {
         (0, b.X)(c, b.O.STREAM, !1), (0, D.A)(E);
     }
     return (0, l.jsxs)(l.Fragment, {
@@ -170,7 +170,7 @@ function e_(e) {
                                     shouldShowTooltip: !n,
                                     renderNUXHighlight: T,
                                     buttonRef: f,
-                                    onClick: null != E ? j : N,
+                                    onClick: null != E ? N : j,
                                 });
                             })(t, i),
                         });
@@ -180,7 +180,7 @@ function e_(e) {
         ],
     });
 }
-function eN(e) {
+function ej(e) {
     let { channel: n, idle: t, whichPopoutIsOpen: i, setWhichPopoutIsOpen: a } = e,
         s = n.getGuildId();
     return (0, x.A)(s, n.id)
@@ -190,7 +190,7 @@ function eN(e) {
           })
         : null;
 }
-let ej = i.memo(function (e) {
+let eN = i.memo(function (e) {
     let { currentUser: n, onDisconnectCall: t, channel: a, connectedEmbeddedActivity: s } = e,
         { parentAnalyticsLocation: r } = (0, v.Ay)(),
         o = (0, u.bG)([T.A], () => T.A.getSelectedParticipant(a.id)),
@@ -205,16 +205,16 @@ let ej = i.memo(function (e) {
                 return t !== n?.id;
             }),
         ),
-        N = (0, u.bG)([et.A], () =>
+        j = (0, u.bG)([et.A], () =>
             et.A.getAllActiveStreamsForChannel(a.id).some((e) => {
                 let { ownerId: t } = e;
                 return t !== n?.id;
             }),
         ),
-        j = (0, u.bG)([P.A], () => P.A.isVisible(a.id)),
-        { enabled: S } = G.A.useExperiment({ guildId: a.guild_id, location: "CenterControlTray" }),
-        O = N && j && S,
-        y = (0, k.Qs)(a.id),
+        N = (0, u.bG)([P.A], () => P.A.isVisible(a.id)),
+        { enabled: S } = k.A.useExperiment({ guildId: a.guild_id, location: "CenterControlTray" }),
+        O = j && N && S,
+        y = (0, G.Qs)(a.id),
         R = i.useRef(null),
         L = i.useCallback(
             () =>
@@ -372,7 +372,7 @@ let eO = function (e) {
         { suppress: b, selfMute: S, mute: O } = (0, eu.A)(n),
         { canGoLive: M } = (0, u.cf)([ei.Ay], () => ({ canGoLive: (0, L.A)(ei.Ay) })),
         D = (0, R.A)(),
-        k = (0, u.bG)([y.default], () => null != y.default.getAwaitingRemoteSessionInfo()),
+        G = (0, u.bG)([y.default], () => null != y.default.getAwaitingRemoteSessionInfo()),
         V = null != D,
         H = (0, u.bG)([ea.Ay], () => (D?.channelId ?? ea.Ay.getVoiceChannelId()) === n.id),
         w = (0, u.bG)([g.Ay], () => g.Ay.getCurrentEmbeddedActivity()),
@@ -383,7 +383,7 @@ let eO = function (e) {
         ee = i.useRef(null),
         et = (0, B.Us)(),
         el = (0, u.bG)([P.A], () => P.A.isVisible(n.id)),
-        { interactionsEnabled: ed } = G.A.useExperiment({ guildId: n.guild_id, location: "CenterControlTray" });
+        { interactionsEnabled: ed } = k.A.useExperiment({ guildId: n.guild_id, location: "CenterControlTray" });
     return H
         ? (0, l.jsx)(v.f5, {
               value: J,
@@ -434,8 +434,8 @@ let eO = function (e) {
                                                   serverMute: O,
                                                   suppress: b,
                                                   popoutOpen: i,
-                                                  awaitingRemote: k,
-                                                  onClick: () => (0, j.A)(O, b, ep.JJy.VOICE_CONTROL_TRAY),
+                                                  awaitingRemote: G,
+                                                  onClick: () => (0, N.A)(O, b, ep.JJy.VOICE_CONTROL_TRAY),
                                               });
                                           },
                                       }),
@@ -445,7 +445,7 @@ let eO = function (e) {
                                               renderPopout: (e) => {
                                                   let { closePopout: n } = e;
                                                   return (0, l.jsx)(z.A, {
-                                                      children: (0, l.jsx)(N.A, {
+                                                      children: (0, l.jsx)(j.A, {
                                                           onClose: n,
                                                           minimal: !0,
                                                           onInteraction: eS("VideoDeviceMenu"),
@@ -490,7 +490,7 @@ let eO = function (e) {
                                                     hasPermission: T,
                                                 }),
                                             !V &&
-                                                (0, l.jsx)(eN, {
+                                                (0, l.jsx)(ej, {
                                                     channel: n,
                                                     idle: c?.idle ?? !0,
                                                     whichPopoutIsOpen: h,
@@ -514,7 +514,7 @@ let eO = function (e) {
                                         ],
                                     })
                                   : null,
-                              (0, l.jsx)(ej, {
+                              (0, l.jsx)(eN, {
                                   connectedEmbeddedActivity: w,
                                   currentUser: E,
                                   channel: n,

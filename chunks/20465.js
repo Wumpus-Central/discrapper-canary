@@ -4,7 +4,7 @@ var l = t(477900),
     a = t(503698),
     s = t.n(a),
     r = t(435558),
-    o = t(296704),
+    o = t(221877),
     c = t(17928),
     u = t(939249),
     d = t(866323),
@@ -21,14 +21,14 @@ var l = t(477900),
     v = t(148355),
     T = t(232835),
     _ = t(994500),
-    N = t(486020),
-    j = t(927813),
+    j = t(486020),
+    N = t(927813),
     b = t(403362),
     S = t(240248),
     O = t(652215),
     y = t(838541),
     R = t(538347);
-let M = 10 * j.A.Millis.SECOND;
+let M = 10 * N.A.Millis.SECOND;
 function L(e) {
     let { message: n } = e,
         { isBlocked: t, isIgnored: a } = (0, c.cf)(
@@ -49,7 +49,7 @@ function L(e) {
         ),
         T = (0, S.uJ)(n.content) ? null : (0, f.Ay)(n, { allowGameMentions: !0 }).content,
         {
-            contentPlaceholder: j,
+            contentPlaceholder: N,
             renderedContent: b,
             trailingIcon: O,
             leadingIcon: M,
@@ -75,7 +75,7 @@ function L(e) {
                     className: s()(R.kn, { [R.mK]: n.mentioned }),
                     children: [
                         null != D ? null : M,
-                        b ?? D ?? (0, l.jsx)("span", { children: j }),
+                        b ?? D ?? (0, l.jsx)("span", { children: N }),
                         null != D ? null : O,
                     ],
                 }),
@@ -83,7 +83,7 @@ function L(e) {
                     alt: "",
                     src:
                         r?.guildMemberAvatar != null && null != o
-                            ? (0, N.s7)({ guildId: o, userId: n.author.id, avatar: r.guildMemberAvatar })
+                            ? (0, j.s7)({ guildId: o, userId: n.author.id, avatar: r.guildMemberAvatar })
                             : n.author.getAvatarURL(o, 32),
                     className: R.my,
                 }),

@@ -24,13 +24,13 @@ function A(e) {
         x = n || t || A,
         I = m ? u.l : u.A,
         v = (0, o.A)(n, t, A, h),
-        { events: T, play: _, Component: N } = (0, a.L)(x ? "unmute" : "mute"),
-        j = t || A ? s.O : N;
+        { events: T, play: _, Component: j } = (0, a.L)(x ? "unmute" : "mute"),
+        N = t || A ? s.O : j;
     return (
         i.useEffect(() => () => _(), [_, x]),
         (0, l.jsx)(I, {
             ...p,
-            iconComponent: j,
+            iconComponent: N,
             isTrayButton: !0,
             caretColor: x ? "red" : "primaryDark",
             caretAriaLabel: d.intl.string(d.t["+ybWO4"]),

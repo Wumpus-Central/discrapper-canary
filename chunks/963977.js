@@ -10,8 +10,8 @@ var r = n(582128),
     d = n(601255),
     c = n(476324);
 let v = function (e) {
-    let { user: t, guildId: n, size: v, avatarDecorationOverride: E, onlyAnimateOnHoverOrFocus: f = !1 } = e,
-        [g, p] = r.useState(!1),
+    let { user: t, guildId: n, size: v, avatarDecorationOverride: E, onlyAnimateOnHoverOrFocus: g = !1 } = e,
+        [f, p] = r.useState(!1),
         { canAnimate: R } = ((e, t) => {
             let n = (0, a.bG)([o.Ay], () => o.Ay.useReducedMotion),
                 l = (0, a.bG)([s.A], () => s.A.isFocused()),
@@ -35,7 +35,7 @@ let v = function (e) {
                 ),
                 { canAnimate: i }
             );
-        })(g, f),
+        })(f, g),
         m = (0, a.bG)([i.Ay], () => (null != n && null != t ? i.Ay.getMember(n, t.id) : null)),
         T = (0, d.A)((0, l.lw)({ userValue: t?.avatarDecoration, guildValue: m?.avatarDecoration, guildId: n })),
         _ = (0, A.VU)(),

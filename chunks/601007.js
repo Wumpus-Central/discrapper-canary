@@ -32,7 +32,7 @@ function C(e) {
         } = e,
         v = (0, m.A)(),
         N = s.useRef(null),
-        [_, T] = s.useState(!1);
+        [_, j] = s.useState(!1);
     if (
         ((0, h.Ay)(() => {
             0 !== t.length &&
@@ -53,7 +53,7 @@ function C(e) {
         0 === t.length)
     )
         return null;
-    function j(e, t, i, s) {
+    function T(e, t, i, s) {
         !(function (e) {
             let { analyticsLocations: t, distributor: n, gameId: l, level: i } = e;
             f.default.track(p.HAw.PLAY_CTA_CLICKED, { location_stack: t, distributor: n, game_id: l, level: i });
@@ -71,7 +71,7 @@ function C(e) {
             text: e.getLabel(),
             fullWidth: E,
             onClick: (t) => {
-                I && t.stopPropagation(), j(e.getStoreUrl(n), e.distributor, e.analyticsAction, g.PRIMARY);
+                I && t.stopPropagation(), T(e.getStoreUrl(n), e.distributor, e.analyticsAction, g.PRIMARY);
             },
         });
     }
@@ -88,7 +88,7 @@ function C(e) {
                         label: n.getStoreName(),
                         iconLeft: n.icon,
                         leadingAccessory: { type: "icon", icon: n.icon },
-                        action: () => j(n.getStoreUrl(l), n.distributor, n.analyticsAction, g.SECONDARY),
+                        action: () => T(n.getStoreUrl(l), n.distributor, n.analyticsAction, g.SECONDARY),
                     },
                     n.distributor,
                 ),
@@ -100,10 +100,10 @@ function C(e) {
         targetElementRef: N,
         position: "bottom",
         onRequestOpen: function () {
-            for (let { ctaConfig: e } of (T(!0), t))
+            for (let { ctaConfig: e } of (j(!0), t))
                 x({ analyticsLocations: l, distributor: e.distributor, gameId: n, level: g.SECONDARY });
         },
-        onRequestClose: () => T(!1),
+        onRequestClose: () => j(!1),
         renderPopout: (e) => {
             let { closePopout: t } = e;
             return (0, i.jsx)("div", {

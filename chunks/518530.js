@@ -25,10 +25,10 @@ let T = function (e) {
     i.useEffect(() => {
         (0, h.Dr)(a.M.CALL_CHAT_BUTTON_TEXT_IN_VOICE_COACH_MARK, { dismissAction: x.i.AUTO });
     }, []);
-    let N = i.useCallback(() => {
+    let j = i.useCallback(() => {
             o.A.updateChatOpen(n.id, !1), f._.safeDispatch(g.jej.FOCUS_CHAT_BUTTON);
         }, [n.id]),
-        j = (0, l.jsx)(C.Ay.Icon, { icon: s.P, tooltip: I.intl.string(I.t.cpT0Cq), onClick: N });
+        N = (0, l.jsx)(C.Ay.Icon, { icon: s.P, tooltip: I.intl.string(I.t.cpT0Cq), onClick: j });
     return (0, l.jsxs)(A.A, {
         sidebarType: A.X.CallChatSidebar,
         maxWidth: T,
@@ -36,7 +36,7 @@ let T = function (e) {
         children: [
             (0, l.jsx)(c.A, { channel: n, draftType: E.C.ChannelMessage }),
             (0, l.jsxs)(C.Ay, {
-                toolbar: j,
+                toolbar: N,
                 "aria-label": I.intl.string(I.t.BIYAqa),
                 children: [
                     (0, l.jsx)(C.Ay.ChannelIcon, { icon: r.ChatIcon, "aria-label": I.intl.string(I.t.Kx5kCN) }),

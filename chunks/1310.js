@@ -182,7 +182,7 @@ var eE = n(842241),
     eb = n(317525),
     eT = n(488926),
     eM = n(545442),
-    eN = n(783878),
+    eN = n(890497),
     ej = n(243721),
     eR = n(375708),
     ew = n(372996);
@@ -390,8 +390,8 @@ var e2 = n(486020),
     e4 = n(240248),
     e3 = n(427262),
     e7 = n(806931),
-    e8 = n(87617);
-function e6(e, t) {
+    e6 = n(87617);
+function e8(e, t) {
     if (null != e) return { suggestionData: Y.getSelectedInviteMetadata(e), source: t };
 }
 let e5 = d.memo(
@@ -459,7 +459,7 @@ let e5 = d.memo(
                                   channel: i,
                                   inviteKey: l,
                                   location: a,
-                                  inviteAnalyticsMetadata: e6(s, r),
+                                  inviteAnalyticsMetadata: e8(s, r),
                               },
                               (e) => {
                                   p(!1), m(e);
@@ -473,7 +473,7 @@ let e5 = d.memo(
                                   user: n,
                                   inviteKey: l,
                                   location: a,
-                                  inviteAnalyticsMetadata: e6(s, r),
+                                  inviteAnalyticsMetadata: e8(s, r),
                               },
                               (e) => {
                                   p(!1), m(e);
@@ -513,30 +513,30 @@ let e5 = d.memo(
         return (0, u.jsxs)("div", {
             ref: f,
             tabIndex: -1,
-            className: e8.Og,
+            className: e6.Og,
             children: [
                 (0, u.jsxs)("div", {
-                    className: e8.mQ,
+                    className: e6.mQ,
                     children: [
                         z
                             ? G
-                                ? (0, u.jsx)(eY.Ay, { size: eF._3.SIZE_32, ringing: G, src: q, className: e8.hO })
+                                ? (0, u.jsx)(eY.Ay, { size: eF._3.SIZE_32, ringing: G, src: q, className: e6.hO })
                                 : (0, u.jsx)(ek.eu, {
                                       src: q,
                                       "aria-label": Q,
                                       size: eF._3.SIZE_32,
-                                      className: e8.hO,
+                                      className: e6.hO,
                                       status: null != n ? K : void 0,
                                       isMobile: null != n ? b : void 0,
                                   })
                             : (0, u.jsx)(y.E, {
                                   variant: "text-md/medium",
-                                  className: e8.q9,
+                                  className: e6.q9,
                                   "aria-hidden": !0,
                                   children: W,
                               }),
                         (0, u.jsxs)("div", {
-                            className: eL()(e8.BT, { [e8.DF]: G }),
+                            className: eL()(e6.BT, { [e6.DF]: G }),
                             children: [
                                 (0, u.jsxs)(y.E, {
                                     id: v,
@@ -547,17 +547,17 @@ let e5 = d.memo(
                                 }),
                                 ee &&
                                     (0, u.jsxs)("div", {
-                                        className: eL()(e8.eq, { [e8.DF]: G }),
+                                        className: eL()(e6.eq, { [e6.DF]: G }),
                                         children: [
                                             X
                                                 ? (0, u.jsx)(eJ.A, {
                                                       size: "custom",
                                                       color: U,
                                                       channel: j,
-                                                      className: e8.j8,
+                                                      className: e6.j8,
                                                   })
                                                 : null != N
-                                                  ? (0, u.jsx)(eQ.A, { icon: N, className: e8.j8 })
+                                                  ? (0, u.jsx)(eQ.A, { icon: N, className: e6.j8 })
                                                   : null,
                                             X
                                                 ? (0, u.jsx)(y.E, {
@@ -592,7 +592,7 @@ let e5 = d.memo(
                     ],
                 }),
                 (0, u.jsxs)("div", {
-                    className: e8.t$,
+                    className: e6.t$,
                     children: [
                         o && null != n && null != c && (0, u.jsx)(e1, { user: n, channel: c, location: "InviteRow" }),
                         J,
@@ -744,11 +744,11 @@ class tl extends d.PureComponent {
         let { inviteChannel: e } = this.props;
         return (0, ee.A)(e)
             ? (0, u.jsxs)("div", {
-                  className: e8.UW,
+                  className: e6.UW,
                   children: [
                       (0, u.jsx)(S.E, {
                           size: "custom",
-                          className: e8.QW,
+                          className: e6.QW,
                           color: v.A.unsafe_rawColors.YELLOW_300.css,
                           width: 12,
                       }),
@@ -784,7 +784,7 @@ class tl extends d.PureComponent {
                 t = eR.intl.format(eR.t.MkSwTR, {
                     channelName: n,
                     channelNameHook: (t, n) =>
-                        (0, u.jsxs)("span", { children: [(0, u.jsx)(e, { className: e8.p }), t] }, n),
+                        (0, u.jsxs)("span", { children: [(0, u.jsx)(e, { className: e6.p }), t] }, n),
                 });
             }
         }
@@ -824,7 +824,7 @@ class tl extends d.PureComponent {
                   sectionHeight: 0,
                   renderRow: () =>
                       (0, u.jsx)("div", {
-                          className: e8.Iq,
+                          className: e6.Iq,
                           children: (0, u.jsx)(E.SG, { children: eR.intl.string(eR.t.ojoWgX) }),
                       }),
                   rowHeight: 200,
@@ -835,7 +835,7 @@ class tl extends d.PureComponent {
                     sectionHeight: 0,
                     renderRow: () =>
                         (0, u.jsx)("div", {
-                            className: e8.Iq,
+                            className: e6.Iq,
                             children: (0, u.jsx)(E.SG, { children: eR.intl.string(eR.t.hzPwGG) }),
                         }),
                     rowHeight: 200,
@@ -940,7 +940,7 @@ class tl extends d.PureComponent {
             {
                 bodyContent: (0, u.jsxs)(u.Fragment, {
                     children: [
-                        (0, u.jsx)(y.E, { className: e8.Sv, variant: "text-sm/normal", children: s }),
+                        (0, u.jsx)(y.E, { className: e6.Sv, variant: "text-sm/normal", children: s }),
                         (0, u.jsx)(eO.p, { ...this.props, setInviteFlags: this.handleSetInviteFlags, copyValue: l }),
                     ],
                 }),
@@ -982,7 +982,7 @@ class tl extends d.PureComponent {
         } else
             e ||
                 (o = (0, u.jsxs)("div", {
-                    className: e8.xF,
+                    className: e6.xF,
                     children: [
                         (0, u.jsx)(C.S, {
                             checked: r === tt.value,
@@ -1047,12 +1047,12 @@ function ta(e) {
             "--custom-invite-section-header-gap": 12 * (0 !== t),
             "--custom-icon-collapse-rotate": i ? "0deg" : "-90deg",
         },
-        className: e8.uP,
+        className: e6.uP,
         onClick: () => l(t),
         "aria-expanded": i,
         children: [
             (0, u.jsx)(y.E, { variant: "text-sm/medium", color: "text-muted", children: n }),
-            (0, u.jsx)(N.a, { size: "md", color: "currentColor", className: e8.ep }),
+            (0, u.jsx)(N.a, { size: "md", color: "currentColor", className: e6.ep }),
         ],
     });
 }

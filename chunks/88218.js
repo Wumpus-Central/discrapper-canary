@@ -51,15 +51,15 @@ let C = function (e) {
             categoryHeight: v,
             onScroll: N,
             renderCategoryListItem: _,
-            rowCountBySection: T,
-            renderSection: j,
+            rowCountBySection: j,
+            renderSection: T,
             navId: b,
             itemIdPrefix: R,
         } = e,
         O = d.useStore((e) => e.activeCategoryIndex),
         M = null != b && null != R,
-        { itemIdForIndex: L, parseIndex: w } = i.useMemo(() => g(R ?? "expression-category-"), [R]),
-        k = (function (e) {
+        { itemIdForIndex: L, parseIndex: k } = i.useMemo(() => g(R ?? "expression-category-"), [R]),
+        w = (function (e) {
             let {
                     navId: t,
                     categoryListRef: n,
@@ -147,7 +147,7 @@ let C = function (e) {
                     onNavigateNextAtEnd: v,
                     onNavigatePreviousAtStart: N,
                 }),
-                T = _.setFocus;
+                j = _.setFocus;
             return (
                 i.useEffect(() => {
                     if (!u || a < 0 || a >= r) return;
@@ -156,20 +156,20 @@ let C = function (e) {
                     let t = 0,
                         i = requestAnimationFrame(() => {
                             t = requestAnimationFrame(() => {
-                                (g.current = a), T(l(a));
+                                (g.current = a), j(l(a));
                             });
                         });
                     return () => {
                         cancelAnimationFrame(i), cancelAnimationFrame(t);
                     };
-                }, [a, n, u, l, T, r]),
+                }, [a, n, u, l, j, r]),
                 _
             );
         })({
             navId: b ?? "expression-picker-categories-disabled",
             categoryListRef: t,
             itemIdForIndex: L,
-            parseIndex: w,
+            parseIndex: k,
             rowCount: y,
             activeIndex: O,
             getScrollOffsetForIndex: S,
@@ -208,8 +208,8 @@ let C = function (e) {
             rowCount: y,
             rowHeight: U,
             hideScrollbar: !0,
-            rowCountBySection: T,
-            renderSection: j,
+            rowCountBySection: j,
+            renderSection: T,
             role: M ? "none presentation" : void 0,
         }),
         V = (0, l.jsxs)("div", {
@@ -226,5 +226,5 @@ let C = function (e) {
                 C?.(P),
             ],
         });
-    return M ? (0, l.jsx)(a.hD, { navigator: k, children: V }) : V;
+    return M ? (0, l.jsx)(a.hD, { navigator: w, children: V }) : V;
 };

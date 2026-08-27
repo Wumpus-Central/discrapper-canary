@@ -21,8 +21,8 @@ var l = t(477900),
     v = t(392054),
     T = t(993748),
     _ = t(111042),
-    N = t(939635),
-    j = t(267102),
+    j = t(939635),
+    N = t(267102),
     b = t(246356),
     S = t(111162),
     O = t(174459),
@@ -32,8 +32,8 @@ var l = t(477900),
     L = t(652215),
     D = t(375708),
     P = t(472489);
-let G = r.K.APP_LAUNCHER_IN_VOICE_BANNER,
-    k = `vc-activities-${(0, a.A)()}`;
+let k = r.K.APP_LAUNCHER_IN_VOICE_BANNER,
+    G = `vc-activities-${(0, a.A)()}`;
 function V(e) {
     let n,
         t,
@@ -41,11 +41,11 @@ function V(e) {
         { fetchState: A, voiceBannerCollection: m } =
             ((n = (0, c.bG)([S.default], () => S.default.onlyShowPreviewAppCollections) ? s.W.PREVIEW : s.W.ACTIVE),
             i.useEffect(() => {
-                (0, T.An)({ surface: G, activeState: n });
+                (0, T.An)({ surface: k, activeState: n });
             }, [n]),
             {
-                fetchState: (0, c.bG)([_.A], () => _.A.getFetchState({ surface: G, activeState: n })),
-                voiceBannerCollection: (0, c.bG)([_.A], () => _.A.getCollections({ surface: G, activeState: n }))[0],
+                fetchState: (0, c.bG)([_.A], () => _.A.getFetchState({ surface: k, activeState: n })),
+                voiceBannerCollection: (0, c.bG)([_.A], () => _.A.getCollections({ surface: k, activeState: n }))[0],
             }),
         h = A === _.e.FETCHING,
         C = i.useMemo(() => {
@@ -64,7 +64,7 @@ function V(e) {
         ? null
         : (null != C.id &&
               null != C.image_hash &&
-              (t = (0, N.DH)({ itemId: C.id, hash: C.image_hash, containerWidth: 584 })),
+              (t = (0, j.DH)({ itemId: C.id, hash: C.image_hash, containerWidth: 584 })),
           (0, l.jsxs)(u.D, {
               className: P.V8,
               innerRef: E,
@@ -93,9 +93,9 @@ let U = i.forwardRef(function (e, n) {
         i.useEffect(() => {
             s || r();
         }, [r, s]);
-    let N = (0, j.Us)(),
-        { analyticsLocations: S, newestAnalyticsLocation: G } = (0, p.Ay)(f.A.ACTIVITIES_MINI_SHELF),
-        U = N === L.BRT.POPOUT,
+    let j = (0, N.Us)(),
+        { analyticsLocations: S, newestAnalyticsLocation: k } = (0, p.Ay)(f.A.ACTIVITIES_MINI_SHELF),
+        U = j === L.BRT.POPOUT,
         B = ((t = a.getGuildId()), (0, R.A)({ guildId: t }).slice(0, 5));
     i.useEffect(() => {
         let e = setTimeout(() => y.LK(), 1e3);
@@ -105,11 +105,11 @@ let U = i.forwardRef(function (e, n) {
             (0, I.A)({
                 context: null != a ? { type: "channel", channel: a } : { type: "contextless" },
                 openInPopout: U,
-                analyticsLocation: G,
+                analyticsLocation: k,
             }),
                 c(),
                 g();
-        }, [a, G, g, c, U]),
+        }, [a, k, g, c, U]),
         w = i.useCallback(
             (e) => {
                 o(),
@@ -125,13 +125,13 @@ let U = i.forwardRef(function (e, n) {
         children: (0, l.jsx)(b.A, {
             children: (0, l.jsxs)(d.l, {
                 ref: n,
-                "aria-labelledby": k,
+                "aria-labelledby": G,
                 className: x,
                 children: [
                     (0, l.jsx)(A.F, {
                         forceLevel: 2,
                         children: (0, l.jsx)(m.A, {
-                            children: (0, l.jsx)(A.H, { id: k, children: D.intl.string(D.t["2lnYtB"]) }),
+                            children: (0, l.jsx)(A.H, { id: G, children: D.intl.string(D.t["2lnYtB"]) }),
                         }),
                     }),
                     (0, l.jsxs)("div", {

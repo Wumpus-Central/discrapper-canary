@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => k }), n(321073);
+n.d(t, { A: () => w }), n(321073);
 var l = n(477900),
     i = n(582128),
     s = n(503698),
@@ -24,8 +24,8 @@ var l = n(477900),
     v = n(31717),
     N = n(914905),
     _ = n(650583),
-    T = n(375708),
-    j = n(40974);
+    j = n(375708),
+    T = n(40974);
 function b(e) {
     let { channelId: t, option: n, keyboardModeEnabled: s } = e,
         a = i.useRef(null),
@@ -53,7 +53,7 @@ function b(e) {
             },
             [p.length, b, n.name, t, R],
         ),
-        w = i.useCallback(
+        k = i.useCallback(
             (e) => {
                 u(!1);
                 let t = e.dataTransfer?.files[0];
@@ -67,14 +67,14 @@ function b(e) {
             null == c &&
                 (e?.addEventListener("dragover", O, !1),
                 e?.addEventListener("dragleave", M, !1),
-                e?.addEventListener("drop", w, !1)),
+                e?.addEventListener("drop", k, !1)),
             () => {
                 e?.removeEventListener("dragover", O, !1),
                     e?.removeEventListener("dragleave", M, !1),
-                    e?.removeEventListener("drop", w, !1);
+                    e?.removeEventListener("drop", k, !1);
             }
         );
-    }, [c, O, M, w]),
+    }, [c, O, M, k]),
     null != c)
         ? (0, l.jsx)(N.A, {
               channelId: t,
@@ -101,23 +101,23 @@ function b(e) {
               onKeyDown: function (e) {
                   e.key === _.dh.ENTER && (e.preventDefault(), a.current?.activateUploadDialogue());
               },
-              className: r()(j.xd, { [j.LB]: o }),
+              className: r()(T.xd, { [T.LB]: o }),
               draftType: v.C.SlashCommand,
               ref: m,
               children: [
-                  (0, l.jsx)("span", { className: r()(j.fS, { [j.Vg]: o }), children: n.displayName }),
+                  (0, l.jsx)("span", { className: r()(T.fS, { [T.Vg]: o }), children: n.displayName }),
                   (0, l.jsx)(E.D, {
-                      className: j.uN,
+                      className: T.uN,
                       onClick: () => a.current?.activateUploadDialogue(),
                       children: (0, l.jsxs)("div", {
-                          className: j.wi,
+                          className: T.wi,
                           children: [
-                              (0, l.jsx)("img", { src: "/assets/27c3681a77f271c6.svg", className: j.H9, alt: "" }),
+                              (0, l.jsx)("img", { src: "/assets/27c3681a77f271c6.svg", className: T.H9, alt: "" }),
                               (0, l.jsx)(C.E, {
-                                  className: j.L,
+                                  className: T.L,
                                   variant: "text-sm/normal",
                                   children:
-                                      null != x ? T.intl.format(T.t.JJzx48, { types: x }) : T.intl.string(T.t.IJyOUf),
+                                      null != x ? j.intl.format(j.t.JJzx48, { types: x }) : j.intl.string(j.t.IJyOUf),
                               }),
                               (0, l.jsx)(I.A, {
                                   ref: a,
@@ -129,7 +129,7 @@ function b(e) {
                                   filters: p.length > 0 ? [{ name: "", extensions: p }] : void 0,
                                   tabIndex: -1,
                                   "aria-hidden": !0,
-                                  className: j.Fg,
+                                  className: T.Fg,
                               }),
                           ],
                       }),
@@ -141,7 +141,7 @@ var R = n(652215),
     O = n(714731),
     M = n(969490);
 let L = [];
-function w(e) {
+function k(e) {
     let { channelId: t, type: n, ignoreFile: s, smallAttachments: C = !1 } = e,
         E = (0, u.bG)([m.Ay], () => m.Ay.keyboardModeEnabled),
         I = (0, f.A)("attachments", o.Gl.HORIZONTAL),
@@ -156,8 +156,8 @@ function w(e) {
             let n = p.A.getOptionStates(t);
             return { isApplicationCommand: !0, commandOptions: e.options, commandOptionStates: n };
         }),
-        T = i.useMemo(() => v?.filter((e) => e.type === h.n4.ATTACHMENT && _?.[e.name]?.hasValue) ?? [], [v, _]),
-        [j, w] = i.useState([]);
+        j = i.useMemo(() => v?.filter((e) => e.type === h.n4.ATTACHMENT && _?.[e.name]?.hasValue) ?? [], [v, _]),
+        [T, k] = i.useState([]);
     i.useEffect(() => {
         function e() {
             d.A.clearAll(t, n.drafts.type);
@@ -167,11 +167,11 @@ function w(e) {
             () => c.h.unsubscribe("APPLICATION_COMMAND_SET_ACTIVE_COMMAND", e)
         );
     }, [t, n]);
-    let k = i.useCallback(() => {
+    let w = i.useCallback(() => {
         I.focusFirstVisibleItem();
     }, [I]);
-    (0, x.Vo)({ event: R.jej.FOCUS_ATTACHMENT_AREA, handler: k });
-    let P = { isApplicationCommand: S, previousUploadOptions: j, uploadOptions: T },
+    (0, x.Vo)({ event: R.jej.FOCUS_ATTACHMENT_AREA, handler: w });
+    let P = { isApplicationCommand: S, previousUploadOptions: T, uploadOptions: j },
         D = i.useRef(P);
     i.useEffect(() => {
         D.current = P;
@@ -186,11 +186,11 @@ function w(e) {
                     e.forEach((e) => {
                         d.A.remove(t, e.name, n.drafts.type);
                     }),
-                    w(i);
+                    k(i);
             }
-        }, [t, T.length, n]);
+        }, [t, j.length, n]);
     let U = y.filter((e) => e.filename !== s);
-    return (!S && 0 === U.length) || (S && 0 === T.length)
+    return (!S && 0 === U.length) || (S && 0 === j.length)
         ? null
         : (0, l.jsx)(a.hD, {
               navigator: I,
@@ -202,7 +202,7 @@ function w(e) {
                           ...s,
                           className: r()(O.I, M.KK),
                           children: S
-                              ? T.map((e) => (0, l.jsx)(b, { channelId: t, keyboardModeEnabled: E, option: e }, e.name))
+                              ? j.map((e) => (0, l.jsx)(b, { channelId: t, keyboardModeEnabled: E, option: e }, e.name))
                               : U.map((e) =>
                                     (0, l.jsx)(
                                         N.A,
@@ -222,7 +222,7 @@ function w(e) {
               }),
           });
 }
-let k = i.memo(function (e) {
+let w = i.memo(function (e) {
     let { channelId: t, type: n, canAttachFiles: i, ignoreFile: s, smallAttachments: r = !1 } = e;
-    return i ? (0, l.jsx)(w, { channelId: t, type: n, ignoreFile: s, smallAttachments: r }) : null;
+    return i ? (0, l.jsx)(k, { channelId: t, type: n, ignoreFile: s, smallAttachments: r }) : null;
 });

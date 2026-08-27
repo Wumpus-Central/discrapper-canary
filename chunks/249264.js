@@ -20,8 +20,8 @@ var c = n(297264),
     A = n(201438),
     v = n(562153),
     E = n(183555),
-    S = n(735321),
-    C = n(451395),
+    C = n(735321),
+    S = n(451395),
     b = n(823016),
     T = n(788593),
     y = n(492280),
@@ -176,7 +176,7 @@ function Y(e) {
                     l.has(e)
                         ? (l.delete(e), o({ action: "TAG_REMOVED", widgetEdited: n, gameId: i }))
                         : (l.add(e), o({ action: "TAG_ADDED", widgetEdited: n, gameId: i }));
-                (0, S.s1)(n, i, Array.from(l));
+                (0, C.s1)(n, i, Array.from(l));
             },
             [c, o, n, i],
         ),
@@ -187,7 +187,7 @@ function Y(e) {
                     t.delete(e);
                 }),
                     o({ action: "TAG_REMOVED", widgetEdited: n, gameId: i }),
-                    (0, S.s1)(n, i, Array.from(t));
+                    (0, C.s1)(n, i, Array.from(t));
             },
             [c, o, n, i],
         );
@@ -228,24 +228,24 @@ function q(e) {
         d = n && !c,
         u = t?.filter((e) => null != V(e)) ?? [],
         g = u.length > 0,
-        m = d && (0, S.mS)(i) && u.length < 20,
+        m = d && (0, C.mS)(i) && u.length < 20,
         { trackUserProfileAction: x } = (0, E.NJ)(),
         f = (0, r.useRef)(new Map()),
         h = (0, r.useRef)(null),
         p = (0, r.useRef)(null),
         [I, j] = (0, r.useState)(0),
         [A, v] = (0, r.useState)(!1),
-        C = ee(h, p, u, f, j);
+        S = ee(h, p, u, f, j);
     if (
         ((0, r.useEffect)(
             () => (
-                C(),
-                window.addEventListener("resize", C),
+                S(),
+                window.addEventListener("resize", S),
                 () => {
-                    window.removeEventListener("resize", C);
+                    window.removeEventListener("resize", S);
                 }
             ),
-            [C, u?.join("")],
+            [S, u?.join("")],
         ),
         !g && !m)
     )
@@ -313,7 +313,7 @@ function Z(e) {
                     ariaHidden: !0,
                     children: (0, s.jsx)(d.D, {
                         onClick: function () {
-                            (0, S.tg)(i, n, t), a({ action: "TAG_REMOVED", widgetEdited: i, gameId: n });
+                            (0, C.tg)(i, n, t), a({ action: "TAG_REMOVED", widgetEdited: i, gameId: n });
                         },
                         className: X.DT,
                         "aria-label": U.intl.formatToPlainString(U.t.GCn1ne, { tag: c() }),
@@ -391,14 +391,14 @@ var et = n(858808),
 function el(e) {
     let { index: t, widgetType: n, game: i, children: l, getWidth: r } = e,
         { manageFocusOnReorder: a } = (0, b.r)();
-    return (0, s.jsx)(C.mG, {
+    return (0, s.jsx)(S.mG, {
         index: t,
         itemId: i.gameId,
         listType: n,
         itemType: "GAME_DETAILS_CARD",
         itemPreviewProps: { game: i, widgetType: n, getWidth: r },
         "aria-label": U.intl.formatToPlainString(U.t["0dR3gw"], { positionNumber: t + 1 }),
-        onReorder: (e, t) => (0, S.Un)(n, e, t),
+        onReorder: (e, t) => (0, C.Un)(n, e, t),
         onEnd: () => a(i.gameId),
         className: ei.vF,
         dropBeforeClassName: ei.A,
@@ -449,7 +449,7 @@ function ec(e) {
         m = (0, p.GV)(),
         { trackUserProfileEditAction: I } = (0, E.NJ)(),
         [j, A] = r.useState("idle"),
-        [v, C] = r.useState(t ?? ""),
+        [v, S] = r.useState(t ?? ""),
         b = r.useRef(null),
         T = r.useRef(null),
         y = U.intl.string(U.t.xKSfBT),
@@ -460,16 +460,16 @@ function ec(e) {
         w = r.useCallback(() => {
             let e = v.trim(),
                 n = e !== (t ?? "").trim();
-            (0, S.oc)(a, c, "" !== e ? e : void 0),
+            (0, C.oc)(a, c, "" !== e ? e : void 0),
                 A("completed"),
                 n && I({ action: "COMMENTARY_EDITED", widgetEdited: a, gameId: c });
         }, [a, c, v, t, I]),
         R = r.useCallback((e) => {
-            C(e);
+            S(e);
         }, []);
     return (
         r.useEffect(() => {
-            "editing" === j && C(t ?? "");
+            "editing" === j && S(t ?? "");
         }, [t, j]),
         r.useEffect(() => {
             "completed" === j && b.current?.focus();
@@ -535,8 +535,8 @@ function ed(e) {
         { coverImageUrl: v, gameName: E, isLoading: N } = (0, A.A)(p),
         k = { variant: "heading-sm/medium", color: "text-default" },
         w = d && !u,
-        R = 1 === (0, S.cv)(a),
-        L = w && (0, S.y9)(a),
+        R = 1 === (0, C.cv)(a),
+        L = w && (0, C.y9)(a),
         O = w && !R,
         { registerDragHandleRef: P } = (0, b.r)();
     if (N) return (0, s.jsx)(y.E, {});
@@ -560,7 +560,7 @@ function ed(e) {
                 O
                     ? (0, s.jsxs)("div", {
                           className: ei.An,
-                          children: [_(), (0, s.jsx)(C.jV, { buttonRef: P(l.gameId), className: ei.BU })],
+                          children: [_(), (0, s.jsx)(S.jV, { buttonRef: P(l.gameId), className: ei.BU })],
                       })
                     : _(),
                 (0, s.jsxs)("div", {

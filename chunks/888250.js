@@ -650,9 +650,9 @@ function e8(e, t) {
         e3.h.dispatch({ type: "OVERLAY_OOP_POPOUT_INITIALIZATION_STAGE_CHANGED", update: { [e]: t } });
 }
 n(96175);
-var e4 = n(366032);
+var e7 = n(366032);
 n(191701), n(921955);
-let e7 = !p.isPlatformEmbedded && !1,
+let e4 = !p.isPlatformEmbedded && !1,
     e5 = new c.A("AppOverlay");
 function e6(e, t) {
     return new Promise((n, r) => {
@@ -717,7 +717,7 @@ let tn = i.memo(function (e) {
     (t = (0, s.bG)([d.A], () => d.A.getWindow(c))),
         (0, l.Ay)(() => {
             if (null == t) return;
-            let e = e7 || (0, eL.SE)();
+            let e = e4 || (0, eL.SE)();
             return (
                 e &&
                     (t.document.hasFocus() && o.A.setFocusedPID(A.DEV_PID, null),
@@ -824,7 +824,7 @@ let tn = i.memo(function (e) {
         v = (0, s.bG)([eO.A], () => eO.A.getFocusedPID()),
         E = (0, s.bG)([e_.A], () => e_.A.isInputLocked(v), [v]),
         C = (0, s.bG)([ek.default, eO.A], () =>
-            (0, e4.S)(eO.A.getNativeLimitedInteraction(), ek.default.getOverlayMethod(eO.A.getTargetPID())),
+            (0, e7.S)(eO.A.getNativeLimitedInteraction(), ek.default.getOverlayMethod(eO.A.getTargetPID())),
         );
     return m
         ? (0, r.jsx)(w.p, {

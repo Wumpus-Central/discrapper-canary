@@ -45,8 +45,8 @@ function _(e) {
             toggleRequestToSpeakSidebar: p,
             ..._
         } = e,
-        { parentAnalyticsLocation: N } = (0, u.Ay)(),
-        { disabled: j } = _,
+        { parentAnalyticsLocation: j } = (0, u.Ay)(),
+        { disabled: N } = _,
         b = i.useRef(null),
         S = (0, o.bG)([d.A], () => d.A.getChatOpen(t), [t]),
         {
@@ -70,8 +70,8 @@ function _(e) {
             );
         })(t),
         M = i.useCallback(() => {
-            (0, A.X)(N, A.O.CHAT, !S), m?.(), !S && C && p?.(), c.A.updateChatOpen(t, !S);
-        }, [t, S, m, C, p, N]),
+            (0, A.X)(j, A.O.CHAT, !S), m?.(), !S && C && p?.(), c.A.updateChatOpen(t, !S);
+        }, [t, S, m, C, p, j]),
         L = i.useCallback(
             (e) => {
                 let { className: n } = e;
@@ -82,25 +82,25 @@ function _(e) {
         D = i.useCallback(() => {
             b.current?.focus();
         }, []);
-    (0, E.Vo)({ event: x.jej.FOCUS_CHAT_BUTTON, handler: j ? null : D });
-    let [P, G] = i.useState(!1),
-        k = i.useCallback(() => {
-            h && G(!0);
+    (0, E.Vo)({ event: x.jej.FOCUS_CHAT_BUTTON, handler: N ? null : D });
+    let [P, k] = i.useState(!1),
+        G = i.useCallback(() => {
+            h && k(!0);
         }, [h]);
-    (0, E.Vo)({ event: x.jej.SHOW_TEXT_IN_VOICE_POPOUT_COMING_SOON_TIP, handler: k }),
+    (0, E.Vo)({ event: x.jej.SHOW_TEXT_IN_VOICE_POPOUT_COMING_SOON_TIP, handler: G }),
         i.useEffect(() => {
             let e;
             return (
                 P &&
                     (e = setTimeout(() => {
-                        G(!1);
+                        k(!1);
                     }, 3e3)),
                 () => {
                     clearTimeout(e);
                 }
             );
         }, [P]);
-    let V = [(n = h && j ? I.intl.string(I.t.DPgc5h) : S ? I.intl.string(I.t.nthdxB) : I.intl.string(I.t["5KxXrK"]))];
+    let V = [(n = h && N ? I.intl.string(I.t.DPgc5h) : S ? I.intl.string(I.t.nthdxB) : I.intl.string(I.t["5KxXrK"]))];
     return (
         R > 0 && V.push(I.intl.formatToPlainString(I.t["3l1GOx"], { mentionCount: R })),
         y > 0 && V.push(I.intl.string(I.t.x5zAGZ)),

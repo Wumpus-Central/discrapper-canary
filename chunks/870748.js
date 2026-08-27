@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => T, t: () => j }), n(321073), n(667532);
+n.d(t, { A: () => j, t: () => T }), n(321073), n(667532);
 var l = n(485845),
     i = n(155718),
     s = n(721768),
@@ -25,7 +25,7 @@ n(827669);
 let v = new Set(["applicationCommandOption"]),
     N = new Set([i.n4.ATTACHMENT]),
     _ = new Set(["line", "applicationCommand"]);
-function T(e, t) {
+function j(e, t) {
     let {
         insertData: n,
         isInline: d,
@@ -33,7 +33,7 @@ function T(e, t) {
         onChange: p,
         deleteBackward: g,
         deleteForward: S,
-        deleteFragment: T,
+        deleteFragment: j,
     } = e;
     (e.insertData = (l) => {
         if (null != t && I.VW.isEditorEmpty(e) && l.types.includes("application/x-discord-interaction-data")) {
@@ -74,10 +74,10 @@ function T(e, t) {
             M(e, () => S(t));
         }),
         (e.deleteFragment = (t) => {
-            M(e, () => T(t));
+            M(e, () => j(t));
         });
-    let w = null,
-        k = null,
+    let k = null,
+        w = null,
         P = null,
         D = null,
         U = null;
@@ -87,8 +87,8 @@ function T(e, t) {
                 let n = o.A.getState(t.id),
                     r = a.j8({ channel: t, type: "channel" });
                 if (
-                    I.VW.richValue(e) !== w ||
-                    !I.Ot.equals(e.selection, k) ||
+                    I.VW.richValue(e) !== k ||
+                    !I.Ot.equals(e.selection, w) ||
                     n.activeCommand !== P ||
                     null == U ||
                     r.some((e, t) => U[t] !== e)
@@ -110,16 +110,16 @@ function T(e, t) {
                                 (!g && p?.integration_types?.includes(l.b.GUILD_INSTALL)) ||
                                 (A && p?.inputType !== u.y$.BUILT_IN_TEXT && p?.inputType !== u.y$.BUILT_IN_INTEGRATION)
                             )
-                                return null != d && j(t, r.id, p, !0), null;
+                                return null != d && T(t, r.id, p, !0), null;
                             if (null != d) {
-                                if (I.VW.isEditorEmpty(t) || null == p) return j(t, r.id, p, !1), null;
+                                if (I.VW.isEditorEmpty(t) || null == p) return T(t, r.id, p, !1), null;
                                 let e = `/${d.displayName}`;
                                 if (
                                     null == f ||
                                     !f.startsWith(e) ||
                                     (0 === x.O7(t).length && (f.length < e.length + 1 || " " !== f[e.length]))
                                 )
-                                    return j(t, r.id, p, !0), null;
+                                    return T(t, r.id, p, !0), null;
                             } else {
                                 if (null != p && o) {
                                     let e = (function (e, t, n) {
@@ -324,7 +324,7 @@ function T(e, t) {
                         let t = A.o.currentEntry(e);
                         null != t && (t.commandId = o.commandId), (D = o.optionValues);
                     } else D = null;
-                    (w = I.VW.richValue(e)), (k = e.selection), (P = n.activeCommand), (U = r);
+                    (k = I.VW.richValue(e)), (w = e.selection), (P = n.activeCommand), (U = r);
                 }
             }
             p();
@@ -332,7 +332,7 @@ function T(e, t) {
         e
     );
 }
-function j(e, t, n, l) {
+function T(e, t, n, l) {
     let [i] = I.VW.blocks(e)[0],
         r = (l ? (0, C.IQ)(i, { mode: "plain" }).trimEnd() : "")
             .split("\n")

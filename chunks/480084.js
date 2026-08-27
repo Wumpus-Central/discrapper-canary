@@ -31,15 +31,15 @@ let S = function () {
 var v = n(112107),
     N = n(930101),
     _ = n(976860),
-    T = n(302031),
-    j = n(157941),
+    j = n(302031),
+    T = n(157941),
     b = n(696451),
     R = n(317525),
     O = n(71393),
     M = n(957565),
     L = n(143145),
-    w = n(785562),
-    k = n(192308),
+    k = n(785562),
+    w = n(192308),
     P = n(588975),
     D = n(442433),
     U = n(975807),
@@ -190,15 +190,15 @@ function eS() {
 var ev = n(881140),
     eN = n(746080),
     e_ = n(165648),
-    eT = n(969490);
-let ej = { display: "inline" };
+    ej = n(969490);
+let eT = { display: "inline" };
 function eb(e) {
     return e.stopPropagation();
 }
 function eR(e) {
     return {
         ...e,
-        react: (t, n, i) => (0, l.jsx)("span", { style: ej, onClick: eb, children: e.react(t, n, i) }, i.key),
+        react: (t, n, i) => (0, l.jsx)("span", { style: eT, onClick: eb, children: e.react(t, n, i) }, i.key),
     };
 }
 function eO(e) {
@@ -239,7 +239,7 @@ let eM = {
     codeBlock: {
         react(e, t, i) {
             function s() {
-                return (0, l.jsx)("code", { className: r()(eT.kw, "hljs"), children: (0, L.t)(e, t, i) });
+                return (0, l.jsx)("code", { className: r()(ej.kw, "hljs"), children: (0, L.t)(e, t, i) });
             }
             return (0, l.jsx)(
                 "pre",
@@ -250,11 +250,11 @@ let eM = {
                             M.p5
                                 ? (0, l.jsx)("div", { className: e_.lB, children: (0, l.jsx)(eO, { text: e.content }) })
                                 : null,
-                            (0, l.jsx)(j.l, {
+                            (0, l.jsx)(T.l, {
                                 location: "MarkupReactRules",
                                 code: e.content,
                                 lang: e.lang,
-                                className: r()(eT.kw, "hljs"),
+                                className: r()(ej.kw, "hljs"),
                                 children: (0, l.jsx)(f.c2, {
                                     createPromise: () =>
                                         Promise.all([n.e("818449"), n.e("175134")]).then(n.bind(n, 981776)),
@@ -267,7 +267,7 @@ let eM = {
                                             return null == n
                                                 ? s()
                                                 : (0, l.jsx)("code", {
-                                                      className: r()(eT.kw, "hljs", n.language),
+                                                      className: r()(ej.kw, "hljs", n.language),
                                                       dangerouslySetInnerHTML: { __html: n.value },
                                                   });
                                         }
@@ -290,9 +290,9 @@ let eM = {
     spoiler: {
         react: (e, t, n) =>
             (0, l.jsx)(
-                T.Ay,
+                j.Ay,
                 {
-                    type: T.Ay.Types.TEXT,
+                    type: j.Ay.Types.TEXT,
                     inline: n.formatInline,
                     renderTextElement: (e, t) =>
                         null == e || e.type !== m.A || t ? e : i.cloneElement(e, { tabIndex: -1 }),
@@ -374,7 +374,7 @@ let eM = {
                   )
                 : null,
     },
-    timestamp: { react: (e, t, n) => (0, l.jsx)(w.A, { node: e }, n.key) },
+    timestamp: { react: (e, t, n) => (0, l.jsx)(k.A, { node: e }, n.key) },
     list: {
         react: (e, t, n) => {
             let i = e.ordered ? "ol" : "ul",
@@ -530,7 +530,7 @@ function eL(e) {
                               let l = await V.AN(t.attachmentUrl);
                               e.shouldStopPropagation && n?.stopPropagation(),
                                   G.A.trackLinkClicked(l),
-                                  e.shouldCloseDefaultModals && (0, k.closeAllModals)(),
+                                  e.shouldCloseDefaultModals && (0, w.closeAllModals)(),
                                   (0, U.A)(l);
                           },
                     o = s.noStyleAndInteraction

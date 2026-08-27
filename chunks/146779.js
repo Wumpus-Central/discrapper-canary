@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { JC: () => N, Ay: () => _, rC: () => T });
+n.d(t, { JC: () => N, Ay: () => _, rC: () => j });
 var l = n(582128),
     i = n(554146),
     s = n(522305),
@@ -100,7 +100,7 @@ function _(e) {
         [i, t, r, u, c, n],
     );
 }
-function T(e) {
+function j(e) {
     let { applicationId: t, sourceApplicationId: n, analyticsLocations: i } = e,
         { data: r } = f(),
         a = S(t);

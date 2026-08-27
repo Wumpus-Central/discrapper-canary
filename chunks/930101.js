@@ -95,8 +95,8 @@ let v = (e) => {
             messageId: S,
         } = e,
         v = (0, x.n)(),
-        [_, T] = i.useState(String(Date.now())),
-        [j, b] = i.useState(!1),
+        [_, j] = i.useState(String(Date.now())),
+        [T, b] = i.useState(!1),
         [R, O] = i.useState(!1),
         M = i.useRef(null);
     function L(e) {
@@ -110,8 +110,8 @@ let v = (e) => {
             messageId: S,
         });
     }
-    let w = (0, a.A)();
-    function k(e) {
+    let k = (0, a.A)();
+    function w(e) {
         return (0, l.jsx)(o.u, {
             asset: L("jumbo"),
             title: t.name,
@@ -123,7 +123,7 @@ let v = (e) => {
             onTooltipShow: () => {
                 b(!0),
                     s &&
-                        (N({ emojiNode: t, isCustomEmoji: !0, nonce: w }),
+                        (N({ emojiNode: t, isCustomEmoji: !0, nonce: k }),
                         (0, m.K)(C.EmojiInteractionPoint.CustomEmojiTooltipShown));
             },
             children: (0, l.jsx)(u.D, {
@@ -138,7 +138,7 @@ let v = (e) => {
                       }
                     : void 0,
                 onMouseLeave: () => {
-                    j && (f.default.track(A.HAw.CLOSE_POPOUT, { nonce: w }), b(!1));
+                    T && (f.default.track(A.HAw.CLOSE_POPOUT, { nonce: k }), b(!1));
                 },
                 tag: "span",
                 tabIndex: h ? 0 : -1,
@@ -153,19 +153,19 @@ let v = (e) => {
               scrollBehavior: "close",
               align: "center",
               onRequestClose: () => {
-                  f.default.track(A.HAw.CLOSE_POPOUT, { nonce: w }), b(!1), O(!1);
+                  f.default.track(A.HAw.CLOSE_POPOUT, { nonce: k }), b(!1), O(!1);
               },
               autoInvert: !0,
               nudgeAlignIntoViewport: !0,
               position: "right",
               renderPopout: function (e) {
-                  return (0, l.jsx)(p.iP, { ...e, node: t, refreshPositionKey: () => T(String(Date.now())), nonce: w });
+                  return (0, l.jsx)(p.iP, { ...e, node: t, refreshPositionKey: () => j(String(Date.now())), nonce: k });
               },
               positionKey: _,
               targetElementRef: M,
-              children: k,
+              children: w,
           })
-        : k();
+        : w();
 };
 function N(e) {
     let { emojiNode: t, isCustomEmoji: n, nonce: l } = e;

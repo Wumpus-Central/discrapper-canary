@@ -24,15 +24,15 @@ var l,
     v = n(926972),
     N = n(885386),
     _ = n(862482),
-    T = n(821609),
-    j = n(66834),
+    j = n(821609),
+    T = n(66834),
     b = n(624793),
     R = n(639245),
     O = n(966245),
     M = n(796774),
     L = n(807348),
-    w = n(805945),
-    k = n(71393),
+    k = n(805945),
+    w = n(71393),
     P = n(725807);
 n(801541);
 var D = n(889137);
@@ -51,7 +51,7 @@ function B(e) {
         r = s.useCallback(async () => {
             if ((n(), null != t))
                 try {
-                    await j.A.joinGuild(t), j.A.transitionToGuildSync(t);
+                    await T.A.joinGuild(t), T.A.transitionToGuildSync(t);
                 } catch {}
         }, [n, t]);
     return l === G.GET_NITRO
@@ -66,7 +66,7 @@ function B(e) {
               textOptions: { textOverride: U.intl.string(U.t.pj0XBN) },
           })
         : l === G.JOIN_GUILD
-          ? (0, i.jsx)(T.$, {
+          ? (0, i.jsx)(j.$, {
                 variant: "primary",
                 size: "sm",
                 text: U.intl.string(U.t.riu2R5),
@@ -82,7 +82,7 @@ function W(e) {
         r,
         { sound: a, channel: c, closePopout: h, refreshPosition: f } = e,
         p = "0" === a.guildId,
-        g = (0, o.bG)([k.A], () => k.A.getGuild(a.guildId)),
+        g = (0, o.bG)([w.A], () => w.A.getGuild(a.guildId)),
         x = !p && null != g,
         [A, C] = s.useState(),
         E = (0, v.tj)({ location: "SoundmojiGuildInfo" }),
@@ -99,7 +99,7 @@ function W(e) {
                     _(!1), f();
                 }));
     }, [f, y, a.guildId, a.soundId]);
-    let { buttonType: T, description: j } =
+    let { buttonType: j, description: T } =
             ((t = "0" === a.guildId),
             (n = (0, o.bG)([I.default], () => S.Ay.canUseSoundboardEverywhere(I.default.getCurrentUser()))),
             (l = (0, v.tj)({ location: "useSoundmojiGuildInfoData" })),
@@ -146,7 +146,7 @@ function W(e) {
                         .exhaustive();
                 }, [t, A, n, x, r, l]),
             }),
-        P = T === G.JOIN_GUILD,
+        P = j === G.JOIN_GUILD,
         V = !p && N,
         F = s.useMemo(
             () => (x ? b.GO.createFromGuildRecord(g) : null != A ? b.GO.createFromDiscoverableGuild(A) : void 0),
@@ -162,14 +162,14 @@ function W(e) {
                           (0, i.jsxs)("div", {
                               className: H.g4,
                               children: [
-                                  (0, i.jsx)(w.Ay, {
+                                  (0, i.jsx)(k.Ay, {
                                       buttonOverlay: L.If.NONE,
                                       sound: a,
                                       channel: void 0,
                                       isSoundmoji: !0,
                                       onSelectItem: () => {},
                                   }),
-                                  (0, i.jsx)(d.E, { variant: "text-sm/normal", children: j }),
+                                  (0, i.jsx)(d.E, { variant: "text-sm/normal", children: T }),
                               ],
                           }),
                           null != F &&
@@ -191,7 +191,7 @@ function W(e) {
                                               closePopout: h,
                                           }),
                                       }),
-                                      (0, i.jsx)(B, { buttonType: T, discoverableGuildId: A?.id, closePopout: h }),
+                                      (0, i.jsx)(B, { buttonType: j, discoverableGuildId: A?.id, closePopout: h }),
                                   ],
                               }),
                       ],

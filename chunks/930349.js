@@ -62,13 +62,13 @@ function A(e) {
         { isHoveringOrFocusing: N } = (0, f.A)(y),
         j = N && !v,
         E = a.useRef(null),
-        w = A ?? E,
-        P =
+        P = A ?? E,
+        w =
             null != I && "add" !== I
                 ? {
                       ...I,
                       onClick: () => {
-                          I.onClick(), w.current?.focus();
+                          I.onClick(), P.current?.focus();
                       },
                   }
                 : void 0;
@@ -77,10 +77,10 @@ function A(e) {
         variant: n,
         disabled: v,
         isInteracting: j,
-        deleteButton: P,
+        deleteButton: w,
         hasError: null != C,
         children: (0, t.jsxs)(d.D, {
-            innerRef: w,
+            innerRef: P,
             className: p.tileButton,
             "aria-label": h.intl.formatToPlainString(h.t["E+mIJ+"], { label: r, value: s }),
             onClick: v ? void 0 : l,

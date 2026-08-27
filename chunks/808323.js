@@ -26,12 +26,12 @@ function p(e) {
         y,
         { id: S, unrankedEntries: v = !1 } = e,
         { feed: N, filters: _ } = (0, i.cf)([s.A], () => ({ feed: s.A.getFeed(S), filters: s.A.getFilters() })),
-        T = l.useMemo(() => {
+        j = l.useMemo(() => {
             let e = v ? N?.unranked_game_entries.map((e) => e.content) : N?.entries.map((e) => e.content);
             return null != _ ? e?.filter((e) => f(_, e)) : e;
         }, [N, _, v]);
     return (
-        (t = T),
+        (t = j),
         (g = (0, i.bG)([r.A], () => r.A.getPrivateChannelsVersion())),
         (x = (0, i.bG)([r.A], () => r.A.getMutableDMsByUserIds(), [g])),
         (A = (0, i.bG)([a.Ay], () => a.Ay.getMutedChannels(null))),
@@ -43,7 +43,7 @@ function p(e) {
             }
             return e;
         }, [x, A])),
-        (n = T =
+        (n = j =
             l.useMemo(
                 () =>
                     t?.filter((e) => {
@@ -52,7 +52,7 @@ function p(e) {
                     }),
                 [t, C],
             )),
-        (p = T = (0, i.yK)([o.A], () => (null == n ? u : n.filter(o.A.canRenderContent)), [n])),
+        (p = j = (0, i.yK)([o.A], () => (null == n ? u : n.filter(o.A.canRenderContent)), [n])),
         (E = l.useRef(new Set())),
         (I = l.useMemo(() => {
             let e = new Set(p?.map((e) => e.author_id));
@@ -64,7 +64,7 @@ function p(e) {
                 return null !== t && [m.cl.OFFLINE, m.cl.INVISIBLE].includes(t);
             }),
         )),
-        (T = l.useMemo(() => {
+        (j = l.useMemo(() => {
             let e = new Set(y);
             return p?.filter((t) => !(0, h.JM)(t) || !e.has(t.author_id));
         }, [p, y]))

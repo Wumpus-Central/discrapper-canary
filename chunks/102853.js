@@ -24,15 +24,15 @@ var l = n(582128),
     v = n(498642),
     N = n(71393),
     _ = n(480595),
-    T = n(576705),
-    j = n(994500),
+    j = n(576705),
+    T = n(994500),
     b = n(309010),
     R = n(461213),
     O = n(287809),
     M = n(689168),
     L = n(723702),
-    w = n(928550),
-    k = n(652215),
+    k = n(928550),
+    w = n(652215),
     P = n(360469),
     D = n(375708);
 function U(e) {
@@ -61,8 +61,8 @@ function U(e) {
                     : f.A.getVoiceStateForSession(n, l?.session_id)?.channelId) ?? void 0
             );
         })({ channelId: (0, d.H)(U?.location), userId: G.id, activity: n }),
-        X = (0, w.au)(Z),
-        Q = Y || (0, x.A)(n, k.jUm.SUPPORTS_JOIN_URL) || null != X,
+        X = (0, k.au)(Z),
+        Q = Y || (0, x.A)(n, w.jUm.SUPPORTS_JOIN_URL) || null != X,
         ee = (0, i.bG)([u.Ay], () =>
             Array.from(u.Ay.getSelfEmbeddedActivities().values()).some((e) => {
                 let { applicationId: t, location: l } = e;
@@ -71,12 +71,12 @@ function U(e) {
         ),
         et = (0, i.bG)(
             [M.A],
-            () => null != n && null != n.application_id && M.A.getState(n.application_id, k.xL.JOIN) === k.eAD.LOADING,
+            () => null != n && null != n.application_id && M.A.getState(n.application_id, w.xL.JOIN) === w.eAD.LOADING,
         ),
         en = (0, I.h)(Z),
         el = (0, S.x)(en),
         ei = (0, g.vG)({ userId: G.id, activity: n, channelId: $, application: en }),
-        es = (0, i.bG)([m.A, N.A, v.A, j.A, b.Ay, f.A, T.A, _.A, R.A, u.Ay], () =>
+        es = (0, i.bG)([m.A, N.A, v.A, T.A, b.Ay, f.A, j.A, _.A, R.A, u.Ay], () =>
             null != U
                 ? ei === g.Gy.CAN_JOIN
                     ? p.o.CAN_JOIN
@@ -91,10 +91,10 @@ function U(e) {
                       ChannelStore: m.A,
                       GuildStore: N.A,
                       GuildMemberCountStore: v.A,
-                      RelationshipStore: j.A,
+                      RelationshipStore: T.A,
                       SelectedChannelStore: b.Ay,
                       VoiceStateStore: f.A,
-                      PermissionStore: T.A,
+                      PermissionStore: j.A,
                       LocalActivityStore: _.A,
                       SelfPresenceStore: R.A,
                       EmbeddedActivitiesStore: u.Ay,
@@ -108,9 +108,9 @@ function U(e) {
                 ),
         ),
         ea = (0, o.p)();
-    if (Y && null == U && (null == n || !(0, x.A)(n, k.jUm.CONTEXTLESS))) return null;
+    if (Y && null == U && (null == n || !(0, x.A)(n, w.jUm.CONTEXTLESS))) return null;
     let eo = !L.isPlatformEmbedded;
-    if (!((0, x.A)(n, k.jUm.JOIN) || Y) || null == Z) return null;
+    if (!((0, x.A)(n, w.jUm.JOIN) || Y) || null == Z) return null;
     let eu = (!Y && es === p.o.JOINED) || (Y && er),
         ec = !J || Y,
         ed = ec && !eu && (eo || Q) && !K && !ee;
@@ -122,7 +122,7 @@ function U(e) {
     let eh = U?.launchId ?? n?.session_id;
     async function em(e, t) {
         if (null == eh || null == Z) return;
-        let n = (0, x.A)(t, k.jUm.EMBEDDED),
+        let n = (0, x.A)(t, w.jUm.EMBEDDED),
             l = b.Ay.getVoiceChannelId(),
             i = m.A.getChannel(l);
         await r.Ay.join({
@@ -138,7 +138,7 @@ function U(e) {
         }),
             n ||
                 (0, C.A)({
-                    type: k.UqL.JOIN,
+                    type: w.UqL.JOIN,
                     userId: e.id,
                     guildId: i?.guild_id,
                     channelId: l,
@@ -156,10 +156,10 @@ function U(e) {
             z(!0),
                 null != n &&
                     (e = await s.A.sendActivityInviteUser({
-                        type: k.xL.JOIN_REQUEST,
+                        type: w.xL.JOIN_REQUEST,
                         userId: G.id,
                         activity: n,
-                        location: k.ThZ.USER_ACTIVITY_ACTIONS,
+                        location: w.ThZ.USER_ACTIVITY_ACTIONS,
                     })),
                 null != e && a.default.selectPrivateChannel(e.id);
         }
@@ -186,7 +186,7 @@ function U(e) {
     }
     if (
         (es === p.o.CANNOT_JOIN && !B) ||
-        (es === p.o.CANNOT_JOIN && (0, y.n)(en, k.gfo.EMBEDDED)) ||
+        (es === p.o.CANNOT_JOIN && (0, y.n)(en, w.gfo.EMBEDDED)) ||
         (!ed && !K && null == t)
     )
         return null;

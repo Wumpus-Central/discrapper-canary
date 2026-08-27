@@ -13,8 +13,8 @@ var i = n(268429),
     c = n(469054),
     v = n(601298),
     E = n(228366),
-    f = n(478644),
-    g = n(339984),
+    g = n(478644),
+    f = n(339984),
     p = n(375708);
 function R(e) {
     let {
@@ -55,27 +55,27 @@ function R(e) {
             return (n) =>
                 (0, r.jsx)(e, {
                     filters: A,
-                    maxFileSizeBytes: f.j,
-                    imageSpecifications: t === g.HL.BANNER ? p.intl.string(p.t.IhzZlo) : void 0,
+                    maxFileSizeBytes: g.j,
+                    imageSpecifications: t === f.HL.BANNER ? p.intl.string(p.t.IhzZlo) : void 0,
                     onFileSelected: (e) => {
                         _ = null != T ? i.A.fromBlob(T, e) : null;
                     },
                     onComplete: async (e) => {
                         var n;
-                        let { assetOrigin: r, imageUri: l, staticImageUri: u, file: A, originalAsset: f } = e;
+                        let { assetOrigin: r, imageUri: l, staticImageUri: u, file: A, originalAsset: g } = e;
                         null == _ && null != T && (_ = i.A.fromBlob(T, A));
                         let R = (await _?.getOriginalMd5()) ?? null,
                             m = A.name.replace(/\.[^/.]+$/, ""),
                             I = { imageUri: l, staticImageUri: u, originalMd5: R };
                         (n = {
-                            ...(t === g.HL.AVATAR
+                            ...(t === f.HL.AVATAR
                                 ? {
                                       uploadType: t,
                                       pendingImage: (0, v.X)({
                                           ...I,
                                           assetOrigin: r,
                                           description: (0, o.Rh)({ filename: m, assetOrigin: r }),
-                                          originalAsset: f,
+                                          originalAsset: g,
                                       }),
                                   }
                                 : {

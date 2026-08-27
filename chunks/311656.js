@@ -1,13 +1,13 @@
 n.d(t, { A: () => x });
 var l = n(477900),
     a = n(582128),
-    r = n(834730),
-    s = n(691885),
-    i = n(922016),
+    i = n(834730),
+    r = n(691885),
+    s = n(922016),
     o = n(866665),
     u = n(939249),
-    c = n(783977);
-let d = { low: "Low", medium: "Medium", high: "High", xhigh: "Extra high", max: "Max" },
+    d = n(783977);
+let c = { low: "Low", medium: "Medium", high: "High", xhigh: "Extra high", max: "Max" },
     m = {
         anthropic: "Anthropic",
         openai: "OpenAI",
@@ -19,27 +19,27 @@ var h = n(295813),
     f = n(375708),
     g = n(752065);
 function p(e) {
-    let { title: t, modelChoices: n, thinkingChoices: i, value: o, disabled: u, onChange: c } = e,
+    let { title: t, modelChoices: n, thinkingChoices: s, value: o, disabled: u, onChange: d } = e,
         p = a.useMemo(() => n.map((e) => ({ id: e.id, label: e.label, value: e.id, description: m[e.provider] })), [n]),
-        x = a.useMemo(() => i.map((e) => ({ id: e, label: d[e] ?? e, value: e })), [i]);
+        x = a.useMemo(() => s.map((e) => ({ id: e, label: c[e] ?? e, value: e })), [s]);
     return (0, l.jsxs)("div", {
         className: g.uW,
         children: [
-            (0, l.jsx)(r.E, { variant: "text-sm/semibold", color: "text-default", children: t }),
-            (0, l.jsx)(s.l, {
+            (0, l.jsx)(i.E, { variant: "text-sm/semibold", color: "text-default", children: t }),
+            (0, l.jsx)(r.l, {
                 label: f.intl.string(h.default["9FRudW"]),
                 options: p,
                 value: o.model,
-                onSelectionChange: (e) => c({ ...o, model: e }),
+                onSelectionChange: (e) => d({ ...o, model: e }),
                 selectionMode: "single",
                 disabled: u,
                 fullWidth: !0,
             }),
-            (0, l.jsx)(s.l, {
+            (0, l.jsx)(r.l, {
                 label: f.intl.string(h.default["4AsQHS"]),
                 options: x,
                 value: o.thinking,
-                onSelectionChange: (e) => c({ ...o, thinking: e }),
+                onSelectionChange: (e) => d({ ...o, thinking: e }),
                 selectionMode: "single",
                 disabled: u,
                 fullWidth: !0,
@@ -48,7 +48,7 @@ function p(e) {
     });
 }
 function x(e) {
-    let { settings: t, choices: n, disabled: s, onChange: d, className: m, icon: x } = e,
+    let { settings: t, choices: n, disabled: r, onChange: c, className: m, icon: x } = e,
         v = a.useRef(null),
         [j, b] = a.useState(null),
         [y, A] = a.useState(t);
@@ -56,11 +56,11 @@ function x(e) {
     let k = j ?? t,
         w = a.useCallback(
             (e) => {
-                b(e), d(e);
+                b(e), c(e);
             },
-            [d],
+            [c],
         );
-    return (0, l.jsx)(i.Y, {
+    return (0, l.jsx)(s.Y, {
         targetElementRef: v,
         position: "top",
         align: "right",
@@ -75,7 +75,7 @@ function x(e) {
                         modelChoices: n.main,
                         thinkingChoices: n.thinking,
                         value: k.main,
-                        disabled: s,
+                        disabled: r,
                         onChange: (e) => w({ ...k, main: e }),
                     }),
                     (0, l.jsx)(p, {
@@ -83,10 +83,10 @@ function x(e) {
                         modelChoices: n.subagent,
                         thinkingChoices: n.thinking,
                         value: k.subagent,
-                        disabled: s,
+                        disabled: r,
                         onChange: (e) => w({ ...k, subagent: e }),
                     }),
-                    (0, l.jsx)(r.E, {
+                    (0, l.jsx)(i.E, {
                         variant: "text-xs/normal",
                         color: "text-muted",
                         children: f.intl.string(h.default.ICU5aW),
@@ -102,7 +102,7 @@ function x(e) {
                     className: m ?? g.hZ,
                     "aria-label": f.intl.string(h.default.COVYeS),
                     ...e,
-                    children: x ?? (0, l.jsx)(c.R, { size: "xxs", color: "currentColor", "aria-hidden": !0 }),
+                    children: x ?? (0, l.jsx)(d.R, { size: "xxs", color: "currentColor", "aria-hidden": !0 }),
                 }),
             }),
     });

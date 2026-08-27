@@ -47,15 +47,15 @@ var m = n(604121),
     v = n(982240),
     N = n(611881),
     _ = n(788833),
-    T = n(40493),
-    j = n(43105),
+    j = n(40493),
+    T = n(43105),
     b = n(975732),
     R = n(287809),
     O = n(427262),
     M = n(652215),
     L = n(49999),
-    w = n(216583),
-    k = n(375708);
+    k = n(216583),
+    w = n(375708);
 function P(e) {
     let { currentTier: t, giftCount: n, onComplete: s, markAsDismissed: r, children: a } = e,
         u = i.useRef(null),
@@ -63,16 +63,16 @@ function P(e) {
     return (0, l.jsxs)(l.Fragment, {
         children: [
             (0, l.jsx)("div", { ref: u, children: a }),
-            (0, l.jsx)(j.A, {
+            (0, l.jsx)(T.A, {
                 targetElementRef: u,
                 shouldShow: !0,
                 position: "top",
-                title: k.intl.format(w.default["a+jfuy"], { tierName: t.name ?? "" }),
-                body: k.intl.formatToPlainString(w.default.QxRA6w, { giftCount: n ?? 0 }),
+                title: w.intl.format(k.default["a+jfuy"], { tierName: t.name ?? "" }),
+                body: w.intl.formatToPlainString(k.default.QxRA6w, { giftCount: n ?? 0 }),
                 graphic: null != t.simple_icon_url ? { type: "image", src: t.simple_icon_url } : void 0,
                 actions: [
                     {
-                        text: k.intl.string(k.t.RzWDqY),
+                        text: w.intl.string(w.t.RzWDqY),
                         onClick: () => {
                             null != c && (0, b.openUserProfileModal)({ userId: c.id }), s?.(), r(L.i.TAKE_ACTION);
                         },
@@ -100,19 +100,19 @@ function D(e) {
     return (0, l.jsxs)(l.Fragment, {
         children: [
             (0, l.jsx)("div", { ref: a, children: r }),
-            (0, l.jsx)(j.A, {
+            (0, l.jsx)(T.A, {
                 targetElementRef: a,
                 shouldShow: !0,
                 position: "top",
-                title: k.intl.string(w.default.Q2RQka),
-                body: k.intl.string(w.default["3EQnkg"]),
+                title: w.intl.string(k.default.Q2RQka),
+                body: w.intl.string(k.default["3EQnkg"]),
                 graphic: {
                     type: "image",
                     src: "https://cdn.discordapp.com/assets/content/6c3ba62d914abaf06acb2e664bd0515aaf49ab966e671dcd013678208b3d7d58.png",
                 },
                 actions: [
                     {
-                        text: k.intl.string(w.default.DZnomS),
+                        text: w.intl.string(k.default.DZnomS),
                         icon: f.GiftIcon,
                         onClick: () => {
                             c(), n?.(), s(L.i.TAKE_ACTION);
@@ -150,7 +150,7 @@ function Z(e) {
         r = i.useCallback(() => Promise.resolve({ default: t }), [t]);
     return (0, l.jsx)(B.A, {
         className: K.x6,
-        "aria-label": k.intl.string(k.t.Z1RnTk),
+        "aria-label": w.intl.string(w.t.Z1RnTk),
         isActive: !1,
         noHover: !0,
         onClick: s,
@@ -166,7 +166,7 @@ function Y(e) {
         u = (0, o.bG)([x.Ay], () => x.Ay.useReducedMotion);
     return (0, l.jsxs)(B.A, {
         className: K.x6,
-        "aria-label": k.intl.string(k.t.Z1RnTk),
+        "aria-label": w.intl.string(w.t.Z1RnTk),
         isActive: !1,
         noHover: !0,
         onClick: function () {
@@ -188,11 +188,11 @@ function q(e) {
     return (0, H.uJ)(c)
         ? (0, l.jsx)(p.m, {
               ariaHidden: i,
-              text: k.intl.string(i ? k.t.TW4JV0 : k.t.sWtWDX),
+              text: w.intl.string(i ? w.t.TW4JV0 : w.t.sWtWDX),
               children: (0, l.jsx)(B.A, {
                   className: K.x6,
                   isActive: !1,
-                  "aria-label": k.intl.string(i ? k.t.TW4JV0 : k.t.Z1RnTk),
+                  "aria-label": w.intl.string(i ? w.t.TW4JV0 : w.t.Z1RnTk),
                   "aria-haspopup": "dialog",
                   onClick: () => {
                       s(), o();
@@ -217,23 +217,23 @@ let J = i.memo(function (e) {
                 ? null
                 : e.properties.properties.giftIcon;
         }),
-        j = (0, o.bG)([G.A], () => {
+        T = (0, o.bG)([G.A], () => {
             let e = G.A.getMarketingComponentByType(a.C.GIFT_ICON_COACHMARK);
             return null == e || "giftIconCoachmark" !== e.properties.properties.oneofKind
                 ? null
                 : e.properties.properties.giftIconCoachmark;
         }),
         b = x?.gradient,
-        w =
+        k =
             null != b && null != b.colors && b.colors.length >= 2
                 ? (0, I.K5)({ gradient: b.colors, angle: b.angle ?? void 0 }, { defaultAngle: 180 })
                 : void 0,
-        k = i.useMemo(() => {
-            if (w?.background != null) return { "--custom-promotion-gradient": w.background };
-        }, [w]),
+        w = i.useMemo(() => {
+            if (k?.background != null) return { "--custom-promotion-gradient": k.background };
+        }, [k]),
         P = !(0, H.uJ)(x?.boxAnimationUrl) || !(0, H.uJ)(x?.trinketAnimationUrl),
         D = (0, o.bG)([G.A], () => G.A.getGiftPromotion()?.id),
-        V = null != j && !t && !h && f >= z && null != D,
+        V = null != T && !t && !h && f >= z && null != D,
         [B, K] = (0, E.Cc)(V ? u.M.GIFTING_PROMOTION_DESKTOP_FIRST_TIME_COACHMARK : null, D ?? ""),
         Z = null != B,
         { showGiftingBadgeCoachmark: Y, markGiftingBadgeCoachmarkAsDismissed: J } = (function (e) {
@@ -283,7 +283,7 @@ let J = i.memo(function (e) {
     });
     return (0, l.jsx)("div", {
         className: r()(W.kL, { [W.DM]: $ }),
-        style: k,
+        style: w,
         onMouseEnter: () => {
             c || d(!0);
         },
@@ -291,11 +291,11 @@ let J = i.memo(function (e) {
             d(!1);
         },
         children: Z
-            ? (0, l.jsx)(T.A, {
+            ? (0, l.jsx)(j.A, {
                   onComplete: () => d(!1),
                   onCheckItOutClick: X,
                   markAsDismissed: K,
-                  coachmarkConfig: j,
+                  coachmarkConfig: T,
                   children: et,
               })
             : Y

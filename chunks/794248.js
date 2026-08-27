@@ -129,19 +129,19 @@ function _(e) {
         ],
     });
 }
-var T = n(170118);
-function j(e) {
+var j = n(170118);
+function T(e) {
     let { small: t = !1 } = e,
         { surfaceConfig: n, resolveFieldValue: l } = en(),
         s = l(n.components.contained_image?.fields.image, [v.o.MEDIA]);
     return (0, i.jsx)(_, {
         small: t,
         image: (0, i.jsx)("div", {
-            className: T.ZS,
+            className: j.ZS,
             children:
                 null != s
-                    ? (0, i.jsx)("img", { alt: "", src: s.media.url, className: T.Sl })
-                    : (0, i.jsx)(S, { className: T.h2 }),
+                    ? (0, i.jsx)("img", { alt: "", src: s.media.url, className: j.Sl })
+                    : (0, i.jsx)(S, { className: j.h2 }),
         }),
     });
 }
@@ -171,19 +171,19 @@ function M(e) {
     });
 }
 var L = n(123292),
-    w = n(402233);
-function k(e) {
+    k = n(402233);
+function w(e) {
     let { image: t } = e,
         { header: n, surfaceConfig: l, onClick: s } = en();
     return (0, i.jsxs)("div", {
-        className: w.zr,
+        className: k.zr,
         children: [
             (0, i.jsxs)("div", {
-                className: w.rf,
+                className: k.rf,
                 children: [
                     n,
                     (0, i.jsxs)("div", {
-                        className: w.Qs,
+                        className: k.Qs,
                         children: [
                             (0, i.jsx)(C, {
                                 component: l.components.stat,
@@ -209,7 +209,7 @@ var P = n(425367);
 function D() {
     let { surfaceConfig: e, resolveFieldValue: t } = en(),
         n = t(e.components.contained_image?.fields.image, [v.o.MEDIA]);
-    return (0, i.jsx)(k, {
+    return (0, i.jsx)(w, {
         image: (0, i.jsx)("div", {
             className: P.ZS,
             children:
@@ -223,7 +223,7 @@ var U = n(853512);
 function G() {
     let { surfaceConfig: e, resolveFieldValue: t } = en(),
         n = t(e.components.hero_image?.fields.image, [v.o.MEDIA]);
-    return (0, i.jsx)(k, {
+    return (0, i.jsx)(w, {
         image:
             null != n
                 ? (0, i.jsx)("div", {
@@ -506,7 +506,7 @@ let el = {
     [a.m.ACTIVITY_ACCESSORY]: { [o.ACTIVITY_ACCESSORY_STAT]: (e) => (0, i.jsx)(I, { ...e }) },
     [a.m.ADD_WIDGET_PREVIEW]: {
         [o.ADD_WIDGET_PREVIEW_HERO]: (e) => (0, i.jsx)(M, { ...e }),
-        [o.ADD_WIDGET_PREVIEW_CONTAINED]: (e) => (0, i.jsx)(j, { ...e }),
+        [o.ADD_WIDGET_PREVIEW_CONTAINED]: (e) => (0, i.jsx)(T, { ...e }),
     },
 };
 function ei(e) {

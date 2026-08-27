@@ -11,12 +11,12 @@ var a = l(477900),
 let p = function () {
     let [e, t] = n.useState(0),
         [l, p] = n.useState(4),
-        [m, b] = n.useState(2),
-        [h, x] = n.useState(c.fh.LIGHT),
-        [f, y] = n.useState(c.qP.BLUE),
-        [g, v] = n.useState("darkslategray"),
-        [E, S] = n.useState("blanchedalmond"),
-        [j, C] = n.useState("pink"),
+        [m, h] = n.useState(2),
+        [b, x] = n.useState(c.fh.LIGHT),
+        [f, g] = n.useState(c.qP.BLUE),
+        [E, y] = n.useState("darkslategray"),
+        [v, C] = n.useState("blanchedalmond"),
+        [S, j] = n.useState("pink"),
         [T, A] = n.useState(!0),
         I = n.useMemo(
             () =>
@@ -26,7 +26,7 @@ let p = function () {
                 }),
             [],
         ),
-        P = n.useMemo(
+        _ = n.useMemo(
             () =>
                 Object.entries(c.qP).map((e) => {
                     let [t, l] = e;
@@ -40,9 +40,9 @@ let p = function () {
                 progress: m,
                 minimum: e,
                 maximum: l,
-                weight: h,
+                weight: b,
                 variant: f,
-                override: { default: { background: g, gradientStart: E, gradientEnd: j } },
+                override: { default: { background: E, gradientStart: v, gradientEnd: S } },
                 glowing: T,
             }),
             (0, a.jsx)(d.nB, {}),
@@ -51,7 +51,7 @@ let p = function () {
                     type: "number",
                     value: m.toString(),
                     onChange: (t) => {
-                        b((0, i.clamp)(+t, e, l));
+                        h((0, i.clamp)(+t, e, l));
                     },
                     label: `Progress ( ${e} - ${l} ) `,
                 }),
@@ -61,7 +61,7 @@ let p = function () {
                     type: "number",
                     value: e.toString(),
                     onChange: (e) => {
-                        0 > +e || +e >= l || (m < +e && b(+e), t(+e));
+                        0 > +e || +e >= l || (m < +e && h(+e), t(+e));
                     },
                     label: "Minimum Value",
                 }),
@@ -71,7 +71,7 @@ let p = function () {
                     type: "number",
                     value: l.toString(),
                     onChange: (t) => {
-                        +t <= e || 1 > +t || (m > +t && b(+t), p(+t));
+                        +t <= e || 1 > +t || (m > +t && h(+t), p(+t));
                     },
                     label: "Maximum Value",
                 }),
@@ -82,10 +82,10 @@ let p = function () {
                     hideLabel: !0,
                     placeholder: "Variant",
                     onSelectionChange: (e) => {
-                        null !== e && y(e);
+                        null !== e && g(e);
                     },
                     value: f,
-                    options: P,
+                    options: _,
                     selectionMode: "single",
                     fullWidth: !0,
                 }),
@@ -98,7 +98,7 @@ let p = function () {
                     onSelectionChange: (e) => {
                         null !== e && x(e);
                     },
-                    value: h,
+                    value: b,
                     options: I,
                 }),
             }),
@@ -124,27 +124,27 @@ let p = function () {
             }),
             (0, a.jsx)(d.MG, {
                 children: (0, a.jsx)(r.k, {
-                    value: g,
+                    value: E,
                     onChange: (e) => {
-                        v(e);
+                        y(e);
                     },
                     label: "Background (optional)",
                 }),
             }),
             (0, a.jsx)(d.MG, {
                 children: (0, a.jsx)(r.k, {
-                    value: E,
+                    value: v,
                     onChange: (e) => {
-                        S(e);
+                        C(e);
                     },
                     label: "Gradient Start",
                 }),
             }),
             (0, a.jsx)(d.MG, {
                 children: (0, a.jsx)(r.k, {
-                    value: j,
+                    value: S,
                     onChange: (e) => {
-                        C(e);
+                        j(e);
                     },
                     label: "Gradient End",
                 }),

@@ -4,7 +4,7 @@ let { createLoader: h } = n(173875),
         {
             bg: () => n.e("524008").then(n.t.bind(n, 412123, 19)),
             cs: () => n.e("886271").then(n.t.bind(n, 311170, 19)),
-            da: () => n.e("913864").then(n.t.bind(n, 209787, 19)),
+            da: () => n.e("913864").then(n.t.bind(n, 432168, 19)),
             de: () => n.e("801596").then(n.t.bind(n, 197303, 19)),
             el: () => n.e("278562").then(n.t.bind(n, 569721, 19)),
             "en-GB": () => n.e("192562").then(n.t.bind(n, 579081, 19)),

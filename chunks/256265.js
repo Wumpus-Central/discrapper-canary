@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { $2: () => M, Ky: () => b, L_: () => R, no: () => T, vV: () => y, xz: () => O, yC: () => j }), n(938796);
+n.d(t, { $2: () => M, Ky: () => b, L_: () => R, no: () => j, vV: () => y, xz: () => O, yC: () => T }), n(938796);
 var l,
     i = n(582128),
     s = n(665260),
@@ -144,9 +144,9 @@ function _(e, t) {
               srcUnfurledMediaItem: e,
           };
 }
-function T(e, t) {
+function j(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-        l = j(e, n);
+        l = T(e, n);
     return i.useMemo(() => {
         if (null == t) return [];
         if (!t.isMediaChannel()) return l;
@@ -156,7 +156,7 @@ function T(e, t) {
         }
     }, [t, l]);
 }
-function j(e, t) {
+function T(e, t) {
     return [...S(e), ...v(e, t), ...N(e)];
 }
 function b(e, t) {

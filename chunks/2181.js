@@ -24,8 +24,8 @@ var l = n(477900),
     v = n(862990),
     N = n(632150),
     _ = n(792656),
-    T = n(202541),
-    j = n(652215),
+    j = n(202541),
+    T = n(652215),
     b = n(109447),
     R = n(375708),
     O = n(237790),
@@ -36,18 +36,18 @@ function L(e) {
             title: n,
             description: s,
             analyticsLocationSection: L,
-            upsellViewedTrackingData: w,
-            onClose: k,
+            upsellViewedTrackingData: k,
+            onClose: w,
             onDisplay: P,
             onUpsellClicked: D,
             isEmojiPickerOverlay: U = !1,
         } = e;
     i.useEffect(() => {
-        C.default.track(j.HAw.PREMIUM_UPSELL_VIEWED, w), P?.();
-    }, [P, w]);
+        C.default.track(T.HAw.PREMIUM_UPSELL_VIEWED, k), P?.();
+    }, [P, k]);
     let G = (0, y.V)(),
-        V = i.useCallback(() => (0, I.LE)(G, T.pe.TIER_2) ?? R.intl.string(R.t.pj0XBN), [G]),
-        F = (0, S.A)(T.pe.TIER_2),
+        V = i.useCallback(() => (0, I.LE)(G, j.pe.TIER_2) ?? R.intl.string(R.t.pj0XBN), [G]),
+        F = (0, S.A)(j.pe.TIER_2),
         H = (0, v.O9)();
     return (
         (t = U
@@ -59,7 +59,7 @@ function L(e) {
               : "https://cdn.discordapp.com/assets/content/c6188b952b5f1901da6986f4f06d690db24c805dfed5df35db3537ed5efb35a5.webm"),
         (0, l.jsxs)(l.Fragment, {
             children: [
-                (0, l.jsx)(u.p, { onClick: k, isVisible: !0 }),
+                (0, l.jsx)(u.p, { onClick: w, isVisible: !0 }),
                 (0, l.jsx)(c.h, {
                     color: U ? "nitro-pink" : "green",
                     className: O.kL,
@@ -70,7 +70,7 @@ function L(e) {
                             (0, l.jsxs)("div", {
                                 className: O.Qs,
                                 children: [
-                                    (0, l.jsx)(o.s_, { "data-migration-pending": !0, onClick: k, className: O.b }),
+                                    (0, l.jsx)(o.s_, { "data-migration-pending": !0, onClick: w, className: O.b }),
                                     (0, l.jsxs)("div", {
                                         className: O.hQ,
                                         children: [
@@ -114,24 +114,24 @@ function L(e) {
                                         (0, l.jsx)(p.$, {
                                             variant: "secondary",
                                             onClick: function () {
-                                                C.default.track(j.HAw.PREMIUM_PROMOTION_OPENED, {
+                                                C.default.track(T.HAw.PREMIUM_PROMOTION_OPENED, {
                                                     location_section: L,
-                                                    location_object: j.ZSU.NAVIGATION_LINK,
+                                                    location_object: T.ZSU.NAVIGATION_LINK,
                                                 }),
                                                     D?.(),
                                                     (0, x.A)(),
-                                                    k(),
+                                                    w(),
                                                     (0, g.jH)(),
-                                                    (0, A.pX)(j.BVt.APPLICATION_STORE);
+                                                    (0, A.pX)(T.BVt.APPLICATION_STORE);
                                             },
                                             text: R.intl.string(R.t.ZnqyZ2),
                                             fullWidth: !0,
                                         }),
                                         (0, l.jsx)(_.A, {
-                                            premiumModalAnalyticsLocation: { section: L, object: j.ZSU.BUTTON_CTA },
-                                            subscriptionTier: T.pe.TIER_2,
+                                            premiumModalAnalyticsLocation: { section: L, object: T.ZSU.BUTTON_CTA },
+                                            subscriptionTier: j.pe.TIER_2,
                                             onClick: () => {
-                                                k(), D?.();
+                                                w(), D?.();
                                             },
                                             defaultTextOverride: V(),
                                             fullWidth: !0,

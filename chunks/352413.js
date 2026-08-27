@@ -29,13 +29,13 @@ function A(e) {
                 pendingErrors: s.A.getErrors(A).avatarDecoration,
             };
         }),
-        f = (0, r.useCallback)(
+        g = (0, r.useCallback)(
             (e) => {
                 (0, o.p)({ guildId: A, avatar: e }), (0, i.WU)(null == e ? "remove" : "set");
             },
             [A],
         ),
-        g = (0, r.useCallback)(
+        f = (0, r.useCallback)(
             (e) => {
                 (0, o.p)({ guildId: A, avatarDecoration: e }), null != e && d(e);
             },
@@ -45,7 +45,7 @@ function A(e) {
         pendingAvatar: c,
         pendingAvatarDecoration: v,
         pendingErrors: E,
-        setPendingAvatar: t ? u.e$ : f,
-        setPendingAvatarDecoration: t ? u.Go : g,
+        setPendingAvatar: t ? u.e$ : g,
+        setPendingAvatarDecoration: t ? u.Go : f,
     };
 }

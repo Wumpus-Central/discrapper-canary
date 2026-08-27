@@ -6,8 +6,8 @@ var i = r(575593),
     u = r(203632),
     a = r(892118),
     o = r(32731),
-    d = r(520606),
-    c = r(652215);
+    c = r(520606),
+    d = r(652215);
 function S(t) {
     switch (t.type) {
         case i.R.AVATAR_DECORATION:
@@ -22,11 +22,11 @@ function S(t) {
             return null;
     }
 }
-class I extends d.A {
+class I extends c.A {
     collectiblesItem;
     bundleItems;
     constructor(t) {
-        if ((super(t), (this.skuProductLine = c.EZt.COLLECTIBLES), null != t.bundle_items)) {
+        if ((super(t), (this.skuProductLine = d.EZt.COLLECTIBLES), null != t.bundle_items)) {
             const e = [];
             for (const r of t.bundle_items) {
                 const t = S(r);
@@ -49,7 +49,7 @@ class I extends d.A {
         if (null == e) return null;
         let r = new I({
             sku_id: t.id,
-            sku_product_line: c.EZt.COLLECTIBLES,
+            sku_product_line: d.EZt.COLLECTIBLES,
             sku_name: t.name,
             sku: t,
             skipValidation: !0,

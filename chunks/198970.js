@@ -86,7 +86,7 @@ let c = [
     ],
     d = Object.freeze(c.reduce((e, t) => ({ ...e, [t.label.toLowerCase()]: t.value }), {}));
 var m = n(95477),
-    p = n(783878),
+    p = n(890497),
     C = n(915089),
     h = n(403362),
     f = n(832208),

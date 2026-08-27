@@ -2007,13 +2007,13 @@ e.exports = (() => {
                                       e2(e))
                                     : ((e2 = (e) => e), e),
                             e3 = {},
-                            e4 = (e) => {
+                            e5 = (e) => {
                                 for (; e.length; ) {
                                     var t = e.pop();
                                     e.pop()(t);
                                 }
                             };
-                        function e5(e) {
+                        function e4(e) {
                             return this.Aa(C[e >> 2]);
                         }
                         var e6 = {},
@@ -2261,7 +2261,7 @@ e.exports = (() => {
                                     f[1] = r;
                                 }
                                 for (var o = 0; o < u; ++o) (c[o] = t[o + 2].Ea(d, e[o])), f.push(c[o]);
-                                if (((e = n(...f)), s)) e4(d);
+                                if (((e = n(...f)), s)) e5(d);
                                 else
                                     for (o = a ? 1 : 2; o < t.length; o++) {
                                         var p = 1 === o ? r : c[o - 2];
@@ -2298,7 +2298,7 @@ e.exports = (() => {
                                     return tT(e), t;
                                 },
                                 Ea: (e, t) => eH(t),
-                                Ma: e5,
+                                Ma: e4,
                                 La: null,
                             },
                             tP = (e, t, r) => {
@@ -2574,7 +2574,7 @@ e.exports = (() => {
                                 ac(e) {
                                     this.Va?.(e);
                                 },
-                                Ma: e5,
+                                Ma: e4,
                                 Aa: function (e) {
                                     function t() {
                                         return this.vb
@@ -2616,8 +2616,8 @@ e.exports = (() => {
                             t1,
                             t2,
                             t3,
-                            t4,
                             t5,
+                            t4,
                             t6,
                             t8,
                             t7,
@@ -2735,7 +2735,7 @@ e.exports = (() => {
                                                 e == window.miniaudio.device_type.playback ||
                                                 e == window.miniaudio.device_type.duplex
                                             )
-                                                for (t4(o, n, i), s = 0; s < r.outputBuffer.numberOfChannels; ++s)
+                                                for (t5(o, n, i), s = 0; s < r.outputBuffer.numberOfChannels; ++s)
                                                     for (
                                                         l = r.outputBuffer.getChannelData(s), u = a.tb, c = 0;
                                                         c < n;
@@ -2957,7 +2957,7 @@ e.exports = (() => {
                                                 read: (e) => t.Aa(r(n, e)),
                                                 write: (e, t) => {
                                                     var r = [];
-                                                    u(c, e, l.Ea(r, t)), e4(r);
+                                                    u(c, e, l.Ea(r, t)), e5(r);
                                                 },
                                                 optional: t.optional,
                                             };
@@ -2979,7 +2979,7 @@ e.exports = (() => {
                                                     for (i in s) s[i].write(o, t[i]);
                                                     return null !== e && e.push(n, o), o;
                                                 },
-                                                Ma: e5,
+                                                Ma: e4,
                                                 La: n,
                                             },
                                         ];
@@ -3124,7 +3124,7 @@ e.exports = (() => {
                                                             ((s = tg(a, s)),
                                                             (i.set = (e) => {
                                                                 var t = [];
-                                                                s(n, r.Ea(t, e)), e4(t);
+                                                                s(n, r.Ea(t, e)), e5(t);
                                                             })),
                                                         Object.defineProperty(e.wa.constructor, t, i),
                                                         []
@@ -3229,7 +3229,7 @@ e.exports = (() => {
                                                         c.set = function (t) {
                                                             var r = tC(this, e, n + " setter"),
                                                                 i = [];
-                                                            l(u, r, f.Ea(i, t)), e4(i);
+                                                            l(u, r, f.Ea(i, t)), e5(i);
                                                         };
                                                     }
                                                     return Object.defineProperty(e.wa.Sa, t, c), [];
@@ -3400,7 +3400,7 @@ e.exports = (() => {
                                                 i
                                             );
                                         },
-                                        Ma: e5,
+                                        Ma: e4,
                                         La(e) {
                                             tZ(e);
                                         },
@@ -3427,7 +3427,7 @@ e.exports = (() => {
                                                 (C[s >> 2] = a / t), i(n, s + 4, a + t), null !== e && e.push(tZ, s), s
                                             );
                                         },
-                                        Ma: e5,
+                                        Ma: e4,
                                         La(e) {
                                             tZ(e);
                                         },
@@ -3504,7 +3504,7 @@ e.exports = (() => {
                                 ba: (e) => eH(tK(e)),
                                 da: () => eH({}),
                                 w: (e) => {
-                                    e4(eW(e)), tT(e);
+                                    e5(eW(e)), tT(e);
                                 },
                                 g: (e, t, r) => {
                                     (e = eW(e)), (t = eW(t)), (r = eW(r)), (e[t] = r);
@@ -3550,7 +3550,7 @@ e.exports = (() => {
                                     if ((tU[e] && (clearTimeout(tU[e].id), delete tU[e]), !t)) return 0;
                                     var r = setTimeout(() => {
                                         delete tU[e];
-                                        var t = () => t5(e, performance.now());
+                                        var t = () => t4(e, performance.now());
                                         if (!D)
                                             try {
                                                 if ((t(), !(H || 0 < tN)))
@@ -3822,8 +3822,8 @@ e.exports = (() => {
                                         (e._ma_malloc_emscripten = t.ma),
                                         (e._ma_free_emscripten = t.na),
                                         (t3 = e._ma_device_process_pcm_frames_capture__webaudio = t.oa),
-                                        (t4 = e._ma_device_process_pcm_frames_playback__webaudio = t.pa),
-                                        (t5 = t.ra),
+                                        (t5 = e._ma_device_process_pcm_frames_playback__webaudio = t.pa),
+                                        (t4 = t.ra),
                                         (t6 = t.sa),
                                         (t8 = t.ta),
                                         (t7 = t.ua),

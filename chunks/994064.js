@@ -37,14 +37,14 @@ function v(e) {
 }
 var N = n(174459),
     _ = n(927813),
-    T = n(824744),
-    j = n(475815),
+    j = n(824744),
+    T = n(475815),
     b = n(953584),
     R = n(122641),
     O = n(692051),
     M = n(375708),
     L = n(317714);
-function w(e) {
+function k(e) {
     let { onPlay: t, className: n, inactive: s } = e,
         a = i.useRef(null),
         o = (0, l.jsx)("div", {
@@ -66,7 +66,7 @@ function w(e) {
                   }),
     });
 }
-var k = n(821209);
+var w = n(821209);
 let P = new (n(626584).A)("mp4box"),
     D = {
         videoCodec: null,
@@ -1132,13 +1132,13 @@ class ef extends i.PureComponent {
             ? (this.play(), this.handleMouseMove(), this.handleUIUpdate(), t.hasClickedPlay && f?.pop(a))
             : !a && t.playing && (m.pause(), f?.pop(a), n?.()),
             a && null == this._analytics.metadata.hasValidFrame && this.checkVideoDecodability();
-        let p = (0, j.qf)(m.parentNode, m);
+        let p = (0, T.qf)(m.parentNode, m);
         o && !t.fullscreen && null != p
-            ? ((0, j.tl)(p), p.addEventListener(j.Wb, this.handleFullScreenExit))
+            ? ((0, T.tl)(p), p.addEventListener(T.Wb, this.handleFullScreenExit))
             : !o &&
               t.fullscreen &&
               null != p &&
-              (p.removeEventListener(j.Wb, this.handleFullScreenExit), (0, j.sP)(p, p.ownerDocument)),
+              (p.removeEventListener(T.Wb, this.handleFullScreenExit), (0, T.sP)(p, p.ownerDocument)),
             c === R.A.Types.DURATION && t.dragging !== R.A.Types.DURATION && a
                 ? m.pause()
                 : c !== R.A.Types.DURATION && t.dragging === R.A.Types.DURATION && a && m.play(),
@@ -1154,8 +1154,8 @@ class ef extends i.PureComponent {
                 this.props.type === es.VIDEO && b.Ay.clearVideoStats(this.props.src));
         let { current: e } = this.mediaRef;
         if (null == e) return;
-        let t = (0, j.qf)(e.parentNode, e);
-        null != t && (t.removeEventListener(j.Wb, this.handleFullScreenExit), (0, j.sP)(t));
+        let t = (0, T.qf)(e.parentNode, e);
+        null != t && (t.removeEventListener(T.Wb, this.handleFullScreenExit), (0, T.sP)(t));
     }
     play() {
         let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
@@ -1185,8 +1185,8 @@ class ef extends i.PureComponent {
     handleFullScreenExit = () => {
         let { current: e } = this.mediaRef;
         if (null == e) return;
-        let t = (0, j.qf)(e.parentNode, e);
-        (null != t && (0, j._U)(t, t?.ownerDocument)) || this.setState({ fullscreen: !1 });
+        let t = (0, T.qf)(e.parentNode, e);
+        (null != t && (0, T._U)(t, t?.ownerDocument)) || this.setState({ fullscreen: !1 });
     };
     toggleFullscreen = () => {
         if (null != this.props.onFullscreenChange) return void this.props.onFullscreenChange(!this.state.fullscreen);
@@ -1238,7 +1238,7 @@ class ef extends i.PureComponent {
         let { current: n } = this.mediaRef;
         if (t === R.A.Types.DURATION) null != n && isFinite(n.duration) && this.setTime(n.duration * e, !1);
         else if (t === R.A.Types.VOLUME) {
-            let t = (0, T.w)(e, 1);
+            let t = (0, j.w)(e, 1);
             0 === t
                 ? this.setState({ muted: !0, volume: t })
                 : this.state.muted && t > 0
@@ -1473,7 +1473,7 @@ class ef extends i.PureComponent {
                   buffers: u,
                   currentTime: c,
                   duration: d,
-                  volume: (0, T.M)(x, 1),
+                  volume: (0, j.M)(x, 1),
                   hide: t === es.VIDEO && m,
                   muted: f,
                   autoPlay: n,
@@ -1501,11 +1501,11 @@ class ef extends i.PureComponent {
                                 iconClassName: et.pd,
                                 guestWindow: window,
                                 onClick: this.toggleFullscreen,
-                                node: (0, j.qf)(e?.parentNode, e),
+                                node: (0, T.qf)(e?.parentNode, e),
                             })
                           : null,
               })
-            : (0, l.jsx)(w, { onPlay: this.handleVideoClick, inactive: !i });
+            : (0, l.jsx)(k, { onPlay: this.handleVideoClick, inactive: !i });
     }
     renderMetadata() {
         let { fileName: e, fileSize: t, src: n, type: i, playable: s, mimeType: r } = this.props;
@@ -1550,7 +1550,7 @@ class ef extends i.PureComponent {
                     this.renderVideo(),
                     (0, l.jsx)("div", {
                         className: et.s4,
-                        children: (0, l.jsx)(k.A, {
+                        children: (0, l.jsx)(w.A, {
                             className: et.__invalid_playButton,
                             externalURL: n,
                             renderLinkComponent: a,

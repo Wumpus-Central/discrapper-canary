@@ -1,10 +1,10 @@
-t.d(n, { C: () => N });
+t.d(n, { C: () => j });
 var l,
     i = t(477900),
     a = t(582128),
     s = t(503698),
     r = t.n(s),
-    o = t(296704),
+    o = t(221877),
     c = t(696292),
     u = t(834730),
     d = t(939249),
@@ -24,10 +24,10 @@ var _ =
     (((l = _ || {})[(l.THIRTEEN_BY_ELEVEN = 0)] = "THIRTEEN_BY_ELEVEN"),
     (l[(l.SIXTEEN_BY_NINE = 1)] = "SIXTEEN_BY_NINE"),
     l);
-function N(e) {
-    let { context: n, activityItem: t, onClick: l, aspectRatio: s = 0, animatedDivClass: _, commandOrigin: N } = e,
+function j(e) {
+    let { context: n, activityItem: t, onClick: l, aspectRatio: s = 0, animatedDivClass: _, commandOrigin: j } = e,
         {
-            onActivityItemSelected: j,
+            onActivityItemSelected: N,
             imageBackground: b,
             activityAction: S,
             labelType: O,
@@ -39,7 +39,7 @@ function N(e) {
             onActivityItemSelected: l,
             embeddedActivitiesManager: p.A,
             assetNames: v,
-            commandOrigin: N,
+            commandOrigin: j,
         }),
         [y, R] = a.useState(!1),
         M = a.useCallback(() => {
@@ -88,7 +88,7 @@ function N(e) {
             }
         }, [S]);
     return (0, i.jsx)(d.D, {
-        onClick: j,
+        onClick: N,
         onFocus: M,
         onBlur: L,
         onMouseEnter: M,
@@ -128,4 +128,4 @@ function N(e) {
         }),
     });
 }
-N.AspectRatio = _;
+j.AspectRatio = _;

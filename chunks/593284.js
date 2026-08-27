@@ -24,22 +24,22 @@ var l = n(477900),
     v = n(176201),
     N = n(676608),
     _ = n(342296),
-    T = n(260509),
-    j = n(734057),
+    j = n(260509),
+    T = n(734057),
     b = n(696451),
     R = n(317525),
     O = n(71393),
     M = n(287809),
     L = n(427262),
-    w = n(375708),
-    k = n(165648),
+    k = n(375708),
+    w = n(165648),
     P = n(778724);
 function D(e) {
     let { member: t, guildId: s, channelId: r, role: a } = e,
         u = i.useRef(null),
         c = (0, o.bG)([O.A], () => O.A.getGuild(s)?.ownerId, [s]),
         d = (0, o.bG)([M.default], () => M.default.getUser(t.userId), [t.userId]),
-        h = (0, o.bG)([j.A], () => j.A.getChannel(r), [r]);
+        h = (0, o.bG)([T.A], () => T.A.getChannel(r), [r]);
     return null == d || null == h
         ? null
         : (0, l.jsx)(
@@ -164,7 +164,7 @@ function U(e) {
     let h = (0, I.A)(s),
         m = (0, o.bG)([O.A], () => {
             let e = O.A.getGuild(s);
-            return null == e ? null : (0, T.af)(e);
+            return null == e ? null : (0, j.af)(e);
         }, [s]),
         f = (0, o.yK)([b.Ay, M.default], () => {
             let e = b.Ay.getMembers(s),
@@ -191,19 +191,19 @@ function U(e) {
         : (0, l.jsx)(u.C.Provider, {
               value: void 0,
               children: (0, l.jsx)("div", {
-                  className: k.qm,
+                  className: w.qm,
                   ref: d,
                   ...t,
                   children: (0, l.jsxs)(c.Ip, {
-                      className: k.bY,
+                      className: w.bY,
                       children: [
-                          (0, l.jsx)(C.Y, { id: n, guildId: s, title: g.name, count: x, className: k.sd }),
+                          (0, l.jsx)(C.Y, { id: n, guildId: s, title: g.name, count: x, className: w.sd }),
                           A,
                           null == x || x <= A.length
                               ? null
                               : (0, l.jsx)(E.A, {
-                                    className: k.sd,
-                                    children: w.intl.formatToPlainString(w.t["9oMmZC"], { count: x - A.length }),
+                                    className: w.sd,
+                                    children: k.intl.formatToPlainString(k.t["9oMmZC"], { count: x - A.length }),
                                 }),
                       ],
                   }),
@@ -219,21 +219,21 @@ function G(e) {
         E = !c && null != p && !(0, v.Qv)(p),
         I = E && "dot" === f,
         _ = E && "username" === f,
-        T = C && null != p ? p.colorStrings : null,
-        j = i.useRef(null);
+        j = C && null != p ? p.colorStrings : null,
+        T = i.useRef(null);
     function b(e) {
         return (0, l.jsxs)(S.A, {
-            ref: j,
-            className: k.Dz,
+            ref: T,
+            className: w.Dz,
             color: _ ? p.color : null,
-            roleColors: _ ? T : null,
+            roleColors: _ ? j : null,
             ...e,
             children: [
                 I &&
                     null != p.color &&
                     (0, l.jsx)(d.W, {
                         color: (0, a.Hl)(p.color),
-                        colors: T,
+                        colors: j,
                         className: P.m,
                         background: !1,
                         tooltip: !1,
@@ -247,7 +247,7 @@ function G(e) {
         : (0, l.jsx)(A.f5, {
               value: m,
               children: (0, l.jsx)(h.Y, {
-                  targetElementRef: j,
+                  targetElementRef: T,
                   preload: async () => {
                       null != t && (await (0, y.a)(r, t));
                   },

@@ -4,7 +4,7 @@ var l = n(477900),
     i = n(582128),
     s = n(503698),
     r = n.n(s),
-    a = n(296704),
+    a = n(221877),
     o = n(17928),
     u = n(554146),
     c = n(939249),
@@ -37,7 +37,7 @@ function N(e) {
             ...y
         } = e,
         [N, _] = i.useState(!1),
-        [T, j] = i.useState(50),
+        [j, T] = i.useState(50),
         b = N || s,
         R = (0, C.t)(S, "emojiButton", b ? "Hovered" : "Normal"),
         O = (function (e) {
@@ -47,17 +47,17 @@ function N(e) {
                 "--custom-emoji-sprite-row": Math.floor(e / 20),
                 "--custom-emoji-sprite-col": e % 20,
             };
-        })(T, A),
+        })(j, A),
         M = i.useCallback(() => {
             if (b) return;
             let e = Math.floor(77 * Math.random());
-            _(!0), j(e), (0, x.K)(I.EmojiInteractionPoint.EmojiButtonMouseEntered);
-        }, [b, _, j]),
+            _(!0), T(e), (0, x.K)(I.EmojiInteractionPoint.EmojiButtonMouseEntered);
+        }, [b, _, T]),
         L = i.useCallback(() => {
             _(!1);
         }, [_]),
-        w = i.useCallback(() => (0, x.K)(I.EmojiInteractionPoint.EmojiButtonFocused), []),
-        k = (0, o.bG)([p.Ay], () => p.Ay.useReducedMotion);
+        k = i.useCallback(() => (0, x.K)(I.EmojiInteractionPoint.EmojiButtonFocused), []),
+        w = (0, o.bG)([p.Ay], () => p.Ay.useReducedMotion);
     return (0, l.jsx)(c.D, {
         innerRef: E,
         className: r()(R, t),
@@ -70,7 +70,7 @@ function N(e) {
             L(), h?.();
         },
         onFocus: () => {
-            w(), f?.();
+            k(), f?.();
         },
         onContextMenu: m,
         ...y,
@@ -94,7 +94,7 @@ function N(e) {
                                           S.sprite,
                                           S.spriteGreyscale,
                                           b ? S.inactive : S.active,
-                                          { [S.reducedMotion]: k },
+                                          { [S.reducedMotion]: w },
                                           g,
                                       ),
                                   }),
@@ -117,13 +117,13 @@ function _(e) {
             ...v
         } = e,
         _ = (0, o.bG)([p.Ay], () => p.Ay.useReducedMotion),
-        T = (0, A.k0)(),
-        [j, b] = (0, g.kn)(T ? [u.M.TRIAL_NUX_EMOJI_BUTTON] : [], void 0, !0),
-        R = I && j === u.M.TRIAL_NUX_EMOJI_BUTTON,
+        j = (0, A.k0)(),
+        [T, b] = (0, g.kn)(j ? [u.M.TRIAL_NUX_EMOJI_BUTTON] : [], void 0, !0),
+        R = I && T === u.M.TRIAL_NUX_EMOJI_BUTTON,
         O = !a && R,
         M = i.useRef(null),
         L = x ?? M;
-    function w() {
+    function k() {
         return (0, l.jsx)(N, {
             ref: L,
             onMouseLeave: () => {
@@ -140,7 +140,7 @@ function _(e) {
         });
     }
     return null == s
-        ? w()
+        ? k()
         : O
           ? (0, l.jsx)(h.u, {
                 targetElementRef: L,
@@ -154,7 +154,7 @@ function _(e) {
                 }),
                 position: "top",
                 shouldShow: !0,
-                children: w(),
+                children: k(),
             })
-          : (0, l.jsx)(f.m, { targetElementRef: L, shouldShow: !0, text: s, keyboardShortcut: C, children: w() });
+          : (0, l.jsx)(f.m, { targetElementRef: L, shouldShow: !0, text: s, keyboardShortcut: C, children: k() });
 }

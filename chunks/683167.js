@@ -73,8 +73,8 @@ function v(e, t, n) {
 }
 var N = n(694403),
     _ = n(323350),
-    T = n(530795),
-    j = n(551483);
+    j = n(530795),
+    T = n(551483);
 function b(e) {
     let t = l.useContext(o.Ay),
         n = c.SI.useSetting(),
@@ -82,7 +82,7 @@ function b(e) {
             let l = (0, s.ie)();
             return (
                 (l.children = (0, d.x7)("")),
-                (l.selection = { anchor: j.K, focus: j.K }),
+                (l.selection = { anchor: T.K, focus: T.K }),
                 R({ ...e, editor: l, windowContext: t, previewMarkdown: n }),
                 l
             );
@@ -144,7 +144,7 @@ function R(e) {
                     insertTextData: u,
                 } = e;
                 return (
-                    ((e = (0, T.o$)(e)).addMark = n),
+                    ((e = (0, j.o$)(e)).addMark = n),
                     (e.removeMark = l),
                     (e.setFragmentData = r),
                     (e.insertData = a),
@@ -546,12 +546,12 @@ function R(e) {
                                     s = !1;
                                 for (
                                     ;
-                                    null != l && null != (t = p.VW.getParentVoid(e, l)) && !j.XR.includes(t[0].type);
+                                    null != l && null != (t = p.VW.getParentVoid(e, l)) && !T.XR.includes(t[0].type);
                                 )
                                     (l = p.VW.before(e, l, { unit: "offset" })), (s = !0);
                                 for (
                                     ;
-                                    null != i && null != (n = p.VW.getParentVoid(e, i)) && !j.XR.includes(n[0].type);
+                                    null != i && null != (n = p.VW.getParentVoid(e, i)) && !T.XR.includes(n[0].type);
                                 )
                                     (i = p.VW.after(e, i, { unit: "offset" })), (s = !0);
                                 s &&

@@ -1,16 +1,16 @@
 n.d(t, {
     $J: () => P,
-    IG: () => N,
-    Ps: () => D,
+    IG: () => L,
+    Ps: () => U,
     UR: () => g,
-    W1: () => v,
+    W1: () => O,
     WU: () => b,
-    _Q: () => k,
-    b6: () => Q,
-    bg: () => O,
-    pu: () => R,
+    _Q: () => R,
+    b6: () => k,
+    bg: () => v,
+    pu: () => Q,
     se: () => q,
-    v0: () => L,
+    v0: () => y,
 }),
     n(321073),
     n(323874),
@@ -22,8 +22,8 @@ var i,
     r = n(132500),
     s = n(323889),
     o = n(412703),
-    l = n(228366),
-    a = n(975807),
+    a = n(228366),
+    l = n(975807),
     u = n(274670),
     d = n(144779),
     c = n(968309),
@@ -32,41 +32,41 @@ var i,
     E = n(723702),
     m = n(192444),
     p = n(104886),
-    A = n(561844),
-    T = n(651892),
+    T = n(561844),
+    A = n(651892),
     h = n(792620),
-    S = n(190107),
-    I = n(652215),
+    I = n(190107),
+    S = n(652215),
     _ = n(375708);
 function g(e) {
     let t = (0, h.t)({ quest: e }) || (0, h.fE)({ quest: e }) || (0, h.I6)(e),
         n = (0, h.uD)(e),
         i = [];
-    return t && i.push(S.fO.DESKTOP), n && i.push(S.fO.CONSOLE), i;
+    return t && i.push(I.fO.DESKTOP), n && i.push(I.fO.CONSOLE), i;
 }
-function O(e) {
+function v(e) {
     let t = Object.keys(e.config.taskConfigV2.tasks),
         n = [];
     for (let e of t)
         switch (e) {
             case o.n.PLAY_ON_XBOX:
-                n.push(I.fg2.XBOX);
+                n.push(S.fg2.XBOX);
                 break;
             case o.n.PLAY_ON_PLAYSTATION:
-                n.push(I.fg2.PLAYSTATION);
+                n.push(S.fg2.PLAYSTATION);
         }
     return n;
 }
-function v(e) {
+function O(e) {
     let t = (0, h.vv)(e),
         n = (0, h.vl)(e);
     return t || n;
 }
 var b = (((i = {}).DESKTOP = "desktop"), (i.XBOX = "xbox"), (i.PLAYSTATION = "playstation"), i);
 function P(e) {
-    return "xbox" === e.connected_account_type ? I.fg2.XBOX : I.fg2.PLAYSTATION;
+    return "xbox" === e.connected_account_type ? S.fg2.XBOX : S.fg2.PLAYSTATION;
 }
-function L(e, t) {
+function y(e, t) {
     let { platformType: n, quest: i } = e;
     (0, p.E5)(p.kI.STEP_2_CLICKED_INTERNAL, "open_authorization_connection_modal")
         ? (0, u.r)({
@@ -78,7 +78,7 @@ function L(e, t) {
               sourceQuestContent: t.sourceQuestContent,
               impressionId: t.impressionId,
           })
-        : (0, A.Y5)({
+        : (0, T.Y5)({
               questId: i.id,
               questContent: t.content,
               sourceQuestContent: t.sourceQuestContent,
@@ -87,8 +87,8 @@ function L(e, t) {
           }),
         (0, c.A)({ platformType: n, location: t.ctaContent });
 }
-function N(e) {
-    return P(e) === I.fg2.XBOX ? _.t["mytEv+"] : _.t.iDiwby;
+function L(e) {
+    return P(e) === S.fg2.XBOX ? _.t["mytEv+"] : _.t.iDiwby;
 }
 function w(e) {
     if (((0, E.isIOS)() || "ios" === (0, E.getOS)()) && e.ios?.iosAppId != null) {
@@ -99,7 +99,7 @@ function w(e) {
         ? `https://play.google.com/store/apps/details?id=${e.android.androidAppId}`
         : null;
 }
-function y(e) {
+function N(e) {
     if ((0, E.isAndroid)() && e.android?.androidAppId != null)
         return {
             url: `https://play.google.com/d?id=${e.android.androidAppId}`,
@@ -115,30 +115,30 @@ function y(e) {
 }
 function M(e) {
     let { link: t, directLink: n, inlineStoreParams: i, trackOverlayEvent: r } = e;
-    m.OO.getConfig({ location: "quest_open_game_link" }).enabled, (0, a.A)(t);
+    m.OO.getConfig({ location: "quest_open_game_link" }).enabled, (0, l.A)(t);
 }
-function R(e, t) {
+function Q(e, t) {
     let n,
         i,
         o,
-        l = (0, T.Jx)(e.config),
-        a = null == (n = e.config.ctaConfig) ? null : w({ url: (0, T.Jx)(e.config), android: n.android, ios: n.ios });
-    null != a && (l = a),
+        a = (0, A.Jx)(e.config),
+        l = null == (n = e.config.ctaConfig) ? null : w({ url: (0, A.Jx)(e.config), android: n.android, ios: n.ios });
+    null != l && (a = l),
         (function (e) {
             try {
                 return new URL(e).searchParams.has("dclid");
             } catch {
                 return !1;
             }
-        })(l) &&
-            (l = (function (e, t) {
+        })(a) &&
+            (a = (function (e, t) {
                 try {
                     let n = new URL(e);
                     return n.searchParams.set("dclid", t), n.toString();
                 } catch {
                     return e;
                 }
-            })(l, (o = (0, r.A)()))),
+            })(a, (o = (0, r.A)()))),
         (0, p.E5)(p.kI.STEP_3_CLICKED_EXTERNAL, "open_game_link_directly")
             ? (0, u.r)({
                   type: d.F.CLICK_EXTERNAL_ADVERTISER_CTA,
@@ -151,7 +151,7 @@ function R(e, t) {
                   impressionId: t.impressionId,
                   clickId: o,
               })
-            : (0, A.Y5)({
+            : (0, T.Y5)({
                   questId: e.id,
                   questContent: t.content,
                   questContentCTA: t.ctaContent,
@@ -160,16 +160,16 @@ function R(e, t) {
                   sourceQuestContent: t.sourceQuestContent,
                   clickId: o,
               }),
-        f._.dispatch(I.jej.QUEST_GAME_LINK_OPENED),
+        f._.dispatch(S.jej.QUEST_GAME_LINK_OPENED),
         M({
-            link: l,
-            directLink: a,
+            link: a,
+            directLink: l,
             inlineStoreParams:
                 null == (i = e.config.ctaConfig)
                     ? null
-                    : y({ url: (0, T.Jx)(e.config), android: i.android, ios: i.ios }),
+                    : N({ url: (0, A.Jx)(e.config), android: i.android, ios: i.ios }),
             trackOverlayEvent: (n, i, r, s) =>
-                (0, A.eA)({
+                (0, T.eA)({
                     quest: e,
                     trackingCtx: t,
                     inlineStoreAppId: i,
@@ -179,7 +179,7 @@ function R(e, t) {
                 }),
         });
 }
-function k(e, t) {
+function R(e, t) {
     let { adContentId: n, adCreativeType: i, cta: r } = e,
         s = r.url,
         o = w(r);
@@ -195,7 +195,7 @@ function k(e, t) {
                   questContentPosition: t.position,
                   impressionId: t.impressionId,
               })
-            : (0, A.vK)({
+            : (0, T.vK)({
                   adContentId: n,
                   adCreativeType: i,
                   questContent: t.content,
@@ -204,13 +204,13 @@ function k(e, t) {
                   impressionId: t.impressionId,
                   sourceQuestContent: t.sourceQuestContent,
               }),
-        f._.dispatch(I.jej.QUEST_GAME_LINK_OPENED),
+        f._.dispatch(S.jej.QUEST_GAME_LINK_OPENED),
         M({
             link: s,
             directLink: o,
-            inlineStoreParams: y(r),
+            inlineStoreParams: N(r),
             trackOverlayEvent: (e, r, s, o) =>
-                (0, A.YE)({
+                (0, T.YE)({
                     adContentId: n,
                     adCreativeType: i,
                     trackingCtx: t,
@@ -221,7 +221,7 @@ function k(e, t) {
                 }),
         });
 }
-function Q(e, t) {
+function k(e, t) {
     let { quest: i } = e;
     (0, p.E5)(p.kI.STEP_2_CLICKED_INTERNAL, "open_console_connection_settings")
         ? (0, u.r)({
@@ -234,7 +234,7 @@ function Q(e, t) {
               impressionId: t.impressionId,
               questContentPosition: t.position,
           })
-        : (0, A.Y5)({
+        : (0, T.Y5)({
               questId: i.id,
               questContent: t.content,
               questContentPosition: t.position,
@@ -263,7 +263,7 @@ function q(e, t) {
               questContentPosition: t.position,
               questContentRowIndex: t.rowIndex,
           })
-        : (0, A.Y5)({
+        : (0, T.Y5)({
               questId: n.id,
               questContent: t.content,
               questContentPosition: t.position,
@@ -272,16 +272,16 @@ function q(e, t) {
               impressionId: t.impressionId,
               sourceQuestContent: t.sourceQuestContent,
           });
-    let i = O(n);
+    let i = v(n);
     if (1 === i.length) return (0, c.A)({ platformType: i.at(0) });
-    l.h.dispatch({
+    a.h.dispatch({
         type: "CONNECTIONS_GRID_MODAL_SHOW",
         onComplete: (e) => (0, c.A)({ platformType: e }),
         includedPlatformTypes: new Set(i),
         includeApplicationConnections: !1,
     });
 }
-function D(e, t, n) {
+function U(e, t, n) {
     let { quest: i } = e;
     return (
         (0, p.E5)(p.kI.STEP_2_CLICKED_INTERNAL, "open_single_console_connection_modal")
@@ -296,7 +296,7 @@ function D(e, t, n) {
                   questContentPosition: t.position,
                   questContentRowIndex: t.rowIndex,
               })
-            : (0, A.Y5)({
+            : (0, T.Y5)({
                   questId: i.id,
                   questContent: t.content,
                   questContentPosition: t.position,

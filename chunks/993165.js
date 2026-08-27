@@ -24,8 +24,8 @@ function m(e) {
         A = l.useCallback(() => p.current, []),
         v = (0, s.bG)([a.default], () => o.Ay.canUsePremiumProfileCustomization(a.default.getCurrentUser())),
         E = v ? d : n,
-        S = !v && x?.id === "premiumTryItOut",
-        C = l.useCallback(() => {
+        C = !v && x?.id === "premiumTryItOut",
+        S = l.useCallback(() => {
             f(E);
         }, [E]),
         b = l.useCallback((e) => {
@@ -35,15 +35,15 @@ function m(e) {
             () => ({
                 selectedPanel: E,
                 readyPanel: x,
-                handlePanelTransitionComplete: C,
+                handlePanelTransitionComplete: S,
                 navigate: I,
                 goBack: j,
                 getCurrentPreset: A,
                 cachePreset: b,
             }),
-            [E, x, C, I, j, A, b],
+            [E, x, S, I, j, A, b],
         );
-    return (0, i.jsx)(g.Provider, { value: S, children: (0, i.jsx)(u.Provider, { value: T, children: t }) });
+    return (0, i.jsx)(g.Provider, { value: C, children: (0, i.jsx)(u.Provider, { value: T, children: t }) });
 }
 function x() {
     let e = l.useContext(u);

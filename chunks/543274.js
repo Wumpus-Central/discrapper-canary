@@ -21,16 +21,16 @@ var l = t(477900),
     v = t(168754),
     T = t(376086),
     _ = t(652215),
-    N = t(49999),
-    j = t(375708);
+    j = t(49999),
+    N = t(375708);
 function b(e) {
     let { channel: n, idle: t, whichPopoutIsOpen: b, setWhichPopoutIsOpen: S } = e,
         O = (0, a.bG)([u.Ay], () => u.Ay.isLaunchingActivity()),
         y = (0, A.et)(n.id),
         R = (0, A.dL)(y),
         M = y !== A.xy.CAN_LAUNCH || O,
-        { isHovered: L, setIsHovered: D, onMouseEnter: P, onMouseLeave: G } = (0, I.A)(200, 300),
-        k = (0, d.b)({ surface: c.YI.VOICE_LAUNCHER }),
+        { isHovered: L, setIsHovered: D, onMouseEnter: P, onMouseLeave: k } = (0, I.A)(200, 300),
+        G = (0, d.b)({ surface: c.YI.VOICE_LAUNCHER }),
         V = (0, a.bG)(
             [u.Ay],
             () => null != u.Ay.getSelfEmbeddedActivityForLocation(u.Ay.getConnectedActivityLocation()),
@@ -64,7 +64,7 @@ function b(e) {
             let { visibleContent: i, markAsDismissed: a } = e,
                 c = i === s.M.VOICE_PANEL_ACTIVITIES_SHAPES_BUTTON_EDUCATION_TOOLTIP && !t && !L;
             return (
-                K.current && !c && a(N.i.AUTO_DISMISS),
+                K.current && !c && a(j.i.AUTO_DISMISS),
                 K.current !== c && (K.current = c),
                 (0, l.jsx)(r.Y, {
                     targetElementRef: X,
@@ -88,22 +88,22 @@ function b(e) {
                                   channel: n,
                                   closePopout: t,
                                   onMouseEnter: P,
-                                  onMouseLeave: G,
+                                  onMouseLeave: k,
                                   isHovered: L,
-                                  onClick: () => a(N.i.UNKNOWN),
+                                  onClick: () => a(j.i.UNKNOWN),
                               })
                             : (0, l.jsx)(l.Fragment, {});
                     },
                     children: () =>
                         (0, l.jsx)(g.GY, {
                             contentType: s.M.ACTIVITIES_VOICE_LAUNCHER_BADGE,
-                            latestVersion: k,
+                            latestVersion: G,
                             children: (e) => {
                                 let { visibleContent: n, markAsDismissed: t } = e;
                                 return (0, l.jsxs)(l.Fragment, {
                                     children: [
                                         (0, l.jsx)(o.m, {
-                                            text: j.intl.string(j.t.P8vmUv),
+                                            text: N.intl.string(N.t.P8vmUv),
                                             forceOpen: !0,
                                             shouldShow: c,
                                             children: (0, l.jsx)("div", {
@@ -126,12 +126,12 @@ function b(e) {
                                                                 i ===
                                                                     s.M
                                                                         .VOICE_PANEL_ACTIVITIES_SHAPES_BUTTON_EDUCATION_TOOLTIP) &&
-                                                                a(N.i.TAKE_ACTION),
+                                                                a(j.i.TAKE_ACTION),
                                                             n === s.M.ACTIVITIES_VOICE_LAUNCHER_BADGE &&
-                                                                t(N.i.TAKE_ACTION);
+                                                                t(j.i.TAKE_ACTION);
                                                     },
                                                     onMouseEnter: B,
-                                                    onMouseLeave: G,
+                                                    onMouseLeave: k,
                                                 }),
                                             }),
                                         }),

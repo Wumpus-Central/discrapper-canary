@@ -24,14 +24,14 @@ var l = n(477900),
     v = n(21161),
     N = n(850992),
     _ = n(319993),
-    T = n(435558),
-    j = n(132500),
+    j = n(435558),
+    T = n(132500),
     b = n(104142),
     R = n(407781),
     O = n(287809),
     M = n(194486),
     L = n(178226);
-let w = i.forwardRef(function (e, t) {
+let k = i.forwardRef(function (e, t) {
     let { sound: n, containerDimensions: s } = e,
         r = (0, o.bG)([O.default], () => O.default.getCurrentUser()),
         a = (0, o.bG)([y.Ay], () => y.Ay.useReducedMotion),
@@ -43,8 +43,8 @@ let w = i.forwardRef(function (e, t) {
                 let e = (0, b.Br)({ id: n.emojiId, name: n.emojiName ?? "", animated: !1 }),
                     t = null != n.emojiId,
                     l = M.B.PREMIUM,
-                    i = (0, T.random)(b.Bf[l].length, !1),
-                    s = { id: (0, j.A)(), animationId: i, animationType: l, shouldResize: t, url: e, userId: r.id };
+                    i = (0, j.random)(b.Bf[l].length, !1),
+                    s = { id: (0, T.A)(), animationId: i, animationType: l, shouldResize: t, url: e, userId: r.id };
                 c((e) => [...e, s]);
             }
         }, [a, d, h, r, n]);
@@ -64,7 +64,7 @@ let w = i.forwardRef(function (e, t) {
               children: u.map((e) => (0, l.jsx)(R.A, { containerDimensions: s, effect: e, onComplete: f }, e.id)),
           });
 });
-var k = n(885386),
+var w = n(885386),
     P = n(967198),
     D = n(174459),
     U = n(796774),
@@ -127,8 +127,8 @@ let $ = i.forwardRef(function (e, t) {
             sound: f,
             channel: p,
             containerClassName: S,
-            className: T,
-            focused: j,
+            className: j,
+            focused: T,
             forceSecondaryActions: b = !1,
             interactive: R = !0,
             enableSecondaryActions: M = !1,
@@ -156,7 +156,7 @@ let $ = i.forwardRef(function (e, t) {
         } = (0, H.A)(
             f,
             p?.id ?? null,
-            (el ? k.HO.getSetting() : k.dG.getSetting()?.volume) ?? 100,
+            (el ? w.HO.getSetting() : w.dG.getSetting()?.volume) ?? 100,
             !el && p?.isVocal() ? z.a.VOICE : z.a.DEFAULT,
         ),
         { createMultipleConfettiAt: ep } = i.useContext(v.x),
@@ -178,8 +178,8 @@ let $ = i.forwardRef(function (e, t) {
         ev = null != eo || null != eu,
         eN = !(0, F.Ir)(ec, f, p) && !el,
         e_ = b || (M && !eN),
-        eT = N.LW.useStore().bottomPosition ?? 0,
-        ej = eg.current?.getBoundingClientRect().bottom ?? 0,
+        ej = N.LW.useStore().bottomPosition ?? 0,
+        eT = eg.current?.getBoundingClientRect().bottom ?? 0,
         [eb, eR] = i.useState(!1),
         eO = i.useCallback(() => {
             eR(!0);
@@ -188,7 +188,7 @@ let $ = i.forwardRef(function (e, t) {
             eR(!1);
         }, []),
         eL = eN && Q;
-    function ew(e) {
+    function ek(e) {
         (eI &&
             !eA &&
             ((eC.current = Math.min(eC.current + 0.01, 0.1)),
@@ -197,7 +197,7 @@ let $ = i.forwardRef(function (e, t) {
             ? G(e)
             : L || eh($);
     }
-    let ek = (0, l.jsx)("div", {
+    let ew = (0, l.jsx)("div", {
         onMouseEnter: eO,
         onMouseLeave: eM,
         children: (function (e) {
@@ -261,7 +261,7 @@ let $ = i.forwardRef(function (e, t) {
             (0, l.jsx)(d.m, {
                 "aria-label": null != es ? f.name : void 0,
                 __unsupportedReactNodeAsText: es ?? f.name,
-                position: ej + 50 > eT ? "top" : "bottom",
+                position: eT + 50 > ej ? "top" : "bottom",
                 shouldShow: !eb,
                 delay: 500,
                 children: (0, l.jsxs)(E.s, {
@@ -278,12 +278,12 @@ let $ = i.forwardRef(function (e, t) {
                             [Y.$9]: !R && !b,
                             [Y.Au]: eN && !b,
                             [Y.fx]: !R && b,
-                            [Y.in]: R && j,
+                            [Y.in]: R && T,
                         },
-                        T,
+                        j,
                     ),
                     onClick: (e) => {
-                        ew?.(e);
+                        ek?.(e);
                     },
                     onContextMenu: M && !eN ? ed : void 0,
                     children: [
@@ -311,7 +311,7 @@ let $ = i.forwardRef(function (e, t) {
                                             (0, l.jsxs)("div", {
                                                 className: Y.O5,
                                                 children: [
-                                                    ek,
+                                                    ew,
                                                     (0, l.jsxs)("div", {
                                                         className: Y.c9,
                                                         children: [
@@ -346,7 +346,7 @@ let $ = i.forwardRef(function (e, t) {
                                                       className: Y.d7,
                                                       children: (0, l.jsxs)("div", {
                                                           className: Y.O5,
-                                                          children: [e_ && ek, e_ && eD],
+                                                          children: [e_ && ew, e_ && eD],
                                                       }),
                                                   }),
                                               ],
@@ -365,7 +365,7 @@ let $ = i.forwardRef(function (e, t) {
                                                                     setTooltipShowing: eR,
                                                                 })
                                                               : (0, l.jsxs)(l.Fragment, {
-                                                                    children: [e_ && ek, eP(), e_ && eD],
+                                                                    children: [e_ && ew, eP(), e_ && eD],
                                                                 }),
                                                   }),
                                               ],
@@ -381,10 +381,10 @@ let $ = i.forwardRef(function (e, t) {
                     shouldShow: !eb,
                     children: (0, l.jsx)("div", {
                         className: Y.ET,
-                        children: !ee && (0, l.jsxs)("div", { className: Y.ld, children: [ek, eD] }),
+                        children: !ee && (0, l.jsxs)("div", { className: Y.ld, children: [ew, eD] }),
                     }),
                 }),
-            !0 === el && (0, l.jsx)(w, { sound: f, containerDimensions: eU, ref: ei }),
+            !0 === el && (0, l.jsx)(k, { sound: f, containerDimensions: eU, ref: ei }),
         ],
     });
 });

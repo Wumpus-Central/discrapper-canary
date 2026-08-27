@@ -107,7 +107,7 @@ function N(e) {
 function _(e) {
     return { type: "autolink", content: e[1], originalMatch: e };
 }
-let T = {
+let j = {
         url: {
             parse: (e) =>
                 null == (0, h.W1)(e[1])
@@ -131,14 +131,14 @@ let T = {
                     : { type: "codeBlockSyntax", content: e[0], originalMatch: e },
         },
     },
-    j = /(-# +)/,
-    b = (0, p.A)([S, T]),
-    R = (0, p.A)([v, T]),
+    T = /(-# +)/,
+    b = (0, p.A)([S, j]),
+    R = (0, p.A)([v, j]),
     O = c.X(b),
     M = c.X(R),
     L = { max: 1 / 0, maxAge: +g.A.Millis.MINUTE, updateAgeOnGet: !0 },
-    w = new (o())(L),
-    k = new (o())(L);
+    k = new (o())(L),
+    w = new (o())(L);
 function P(e, t, n, l, s) {
     let { content: r, type: a, originalMatch: o } = n;
     switch ((i()(null != o, "Slate: originalMatch must be set " + JSON.stringify(n, void 0, 2)), a)) {
@@ -224,7 +224,7 @@ function P(e, t, n, l, s) {
             let { before: n, after: i } = (function (e, t, n, l) {
                     if ("inlineCode" === t) return { before: l[1], after: l[1] };
                     if ("em" === t && "_" === e.substring(n, n + 1)) return { before: "_", after: "_" };
-                    if ("subtext" === t) return { before: j.exec(l.input)[1], after: "" };
+                    if ("subtext" === t) return { before: T.exec(l.input)[1], after: "" };
                     let i = C["link" === t ? "url" : t];
                     if ("inlineStyle" === i.type) return i;
                     throw Error("Slate: rule must be an inlineStyle");
@@ -594,7 +594,7 @@ let Z = {
                             "" !== o &&
                                 (function (e, t, n) {
                                     let l = [],
-                                        i = n ? k : w,
+                                        i = n ? w : k,
                                         s = i.get(e);
                                     if (null != s) return s;
                                     let r =

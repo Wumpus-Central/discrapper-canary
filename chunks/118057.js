@@ -59,8 +59,8 @@ function c(e) {
                 I = u(o(t, c, d)),
                 [y, S] = l.useState(!1),
                 [v, N] = l.useState(!1),
-                [_, T] = l.useState(!1),
-                [j] = l.useState(
+                [_, j] = l.useState(!1),
+                [T] = l.useState(
                     () =>
                         new r.Lp((e) => {
                             let [t, n] = e.split(",").map(Number);
@@ -69,7 +69,7 @@ function c(e) {
                             };
                         }),
                 );
-            l.useEffect(() => () => j.clean(), [j]);
+            l.useEffect(() => () => T.clean(), [T]);
             let b = l.useCallback(
                     (e) => {
                         if (!E.current || !A) return !1;
@@ -92,9 +92,9 @@ function c(e) {
                         let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
                             [n, l] = null != f ? f(c, d) : [c, d];
                         if ((n !== c || l !== d) && (p({ type: i.n.SET_FOCUSED_POSITION, x: n, y: l }), !e))
-                            return void T(!0);
+                            return void j(!0);
                         let s = u(o(t, n, l));
-                        null != s && (T(!0), b(s));
+                        null != s && (j(!0), b(s));
                     },
                     [p, c, d, f, t, b],
                 ),
@@ -108,16 +108,16 @@ function c(e) {
                 let n = u(o(t));
                 null != n && b(n);
             }, [t, M, y, b, c, d]);
-            let w = l.useCallback((e) => {
+            let k = l.useCallback((e) => {
                 E.current && null == e && L(!0);
             }, []);
             l.useEffect(() => {
                 y && v && null != I && (b(I), N(!1));
             }, [v, I]),
                 l.useEffect(() => {
-                    y && (_ || R(c, d), T(!1));
+                    y && (_ || R(c, d), j(!1));
                 }, [c, d]);
-            let k = l.useCallback(
+            let w = l.useCallback(
                     (e) => {
                         if (!E.current) return;
                         if (
@@ -176,7 +176,7 @@ function c(e) {
                 P = l.useCallback(
                     (e) =>
                         e.currentTarget !== e.target
-                            ? (y || (S(!0), T(!0)), !1)
+                            ? (y || (S(!0), j(!0)), !1)
                             : y
                               ? (O(!1), !1)
                               : void (g && null != I ? R(c, d) : O(!0)),
@@ -196,11 +196,11 @@ function c(e) {
                         "aria-colcount": U,
                         tabIndex: y && g ? -1 : 0,
                         "data-ref-id": t,
-                        onKeyDown: k,
+                        onKeyDown: w,
                         onFocus: P,
                         onBlur: D,
                     }),
-                    [n.length, U, y, g, t, k, P, D],
+                    [n.length, U, y, g, t, w, P, D],
                 ),
                 V = l.useCallback(
                     (e, n) => {
@@ -210,11 +210,11 @@ function c(e) {
                             "aria-colindex": e + 1,
                             id: (0, r.Aq)(t, e, n),
                             tabIndex: g && e === c && n === d ? 0 : -1,
-                            onFocus: j.get(`${e},${n}`),
+                            onFocus: T.get(`${e},${n}`),
                         };
-                        return e === c && n === d && (l.ref = w), l;
+                        return e === c && n === d && (l.ref = k), l;
                     },
-                    [t, g, c, d, j, w],
+                    [t, g, c, d, T, k],
                 ),
                 F = l.useCallback((e) => ({ role: "row", "aria-rowindex": e + 1 }), []);
             return l.useMemo(

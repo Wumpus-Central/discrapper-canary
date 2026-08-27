@@ -3,7 +3,7 @@ var s = n(477900),
     r = n(582128),
     l = n(503698),
     i = n.n(l),
-    a = n(296704),
+    a = n(221877),
     o = n(323889),
     u = n(17928),
     c = n(475743),
@@ -894,8 +894,8 @@ var eq = n(889137),
     e3 = n(442734),
     e6 = n(139384),
     e7 = n(114046),
-    e9 = n(695366),
-    e8 = n(274670),
+    e8 = n(695366),
+    e9 = n(274670),
     e5 = n(144779),
     e4 = n(30370),
     te = n(178540),
@@ -913,7 +913,7 @@ function ta(e) {
         className: ti.Z0,
         onClick: () => {
             (0, tt.E5)(tt.kI.STEP_2_CLICKED_INTERNAL, "console_connection_step")
-                ? (0, e8.r)({
+                ? (0, e9.r)({
                       type: e5.F.CLICK_INTERNAL,
                       adCreativeType: o.p.QUEST,
                       adCreativeId: n.id,
@@ -959,7 +959,7 @@ function tx(e) {
             questId: t.id,
             beforeRequest: () => {
                 (0, tt.E5)(tt.kI.STEP_2_CLICKED_INTERNAL, "quest_bar_console_task_checklist")
-                    ? (0, e8.r)({
+                    ? (0, e9.r)({
                           type: e5.F.CLICK_INTERNAL,
                           adCreativeType: o.p.QUEST,
                           adCreativeId: t.id,
@@ -1039,7 +1039,7 @@ function tx(e) {
             (0, s.jsxs)("div", {
                 className: tc.oK,
                 children: [
-                    (0, s.jsx)(e9.E, {
+                    (0, s.jsx)(e8.E, {
                         size: "custom",
                         color: "currentColor",
                         className: 0 === d.length ? tc.pH : tc.JA,
@@ -1145,7 +1145,7 @@ function th(e) {
             (0, s.jsxs)("div", {
                 className: tE.wx,
                 children: [
-                    (0, s.jsx)(e9.E, {
+                    (0, s.jsx)(e8.E, {
                         size: "custom",
                         color: "currentColor",
                         className: tE.Kk,

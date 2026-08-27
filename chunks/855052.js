@@ -1,4 +1,4 @@
-r.d(e, { Ay: () => d, C3: () => S, Lh: () => c, y9: () => I });
+r.d(e, { Ay: () => c, C3: () => S, Lh: () => d, y9: () => I });
 var i = r(315069),
     n = r(395671),
     s = r(520606),
@@ -6,7 +6,7 @@ var i = r(315069),
     u = r(394300),
     a = r(721932),
     o = r(652215);
-class d extends i.A {
+class c extends i.A {
     id;
     userId;
     items;
@@ -20,7 +20,7 @@ class d extends i.A {
     }
     static fromServer(t) {
         let { user_id: e, wishlist_items: r, ...i } = t,
-            c = r.map((t) => {
+            d = r.map((t) => {
                 switch (t.sku_product_line) {
                     case o.EZt.COLLECTIBLES:
                         return l.A.fromServer(t);
@@ -32,15 +32,15 @@ class d extends i.A {
                         return s.A.fromServer(t);
                 }
             });
-        return new d({
+        return new c({
             ...i,
             userId: e,
-            items: c,
+            items: d,
             applications: i.applications?.map((t) => n.Ay.createFromServer(t)) ?? void 0,
         });
     }
 }
-function c(t) {
+function d(t) {
     return t.items.map((t) => t.skuId);
 }
 function S(t, e) {

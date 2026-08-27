@@ -23,7 +23,7 @@ function g(e) {
         v = null != (0, h.Qs)(n),
         { canManageGuildEvent: T } = (0, o.nr)(x),
         _ = (0, i.bG)([u.A], () => I.filter((e) => !u.A.isEventDismissed(e.id)), [I]),
-        N = (0, i.cf)([A.Ay], () => _.reduce((e, n) => ((e[n.id] = A.Ay.getUserCount(n.id, (0, C.G3)(n))), e), {}), [
+        j = (0, i.cf)([A.Ay], () => _.reduce((e, n) => ((e[n.id] = A.Ay.getUserCount(n.id, (0, C.G3)(n))), e), {}), [
             _,
         ]);
     return _.length < 1 || v
@@ -67,7 +67,7 @@ function g(e) {
                                     return (n = e.id), void (0, m.Nt)(n);
                                 }
                               : void 0,
-                          userCount: N[e.id],
+                          userCount: j[e.id],
                           className: p.f,
                       },
                       e.id,

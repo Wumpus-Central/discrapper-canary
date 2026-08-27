@@ -45,15 +45,15 @@ var l,
     v = n(432017),
     N = n(246913),
     _ = n(291747),
-    T = n(417270),
-    j = n(768622),
+    j = n(417270),
+    T = n(768622),
     b = n(369606),
     R = n(825860),
     O = n(605323),
     M = n(748562),
     L = n(306788),
-    w = n(531913),
-    k = n(47167),
+    k = n(531913),
+    w = n(47167),
     P = n(927813),
     D = n(403362),
     U = n(935208),
@@ -119,7 +119,7 @@ function X(e) {
     let { entry: t } = e,
         { channel: n } = (0, V.A)(t),
         { location: l } = q(),
-        s = (0, k.Ay)(n);
+        s = (0, w.Ay)(n);
     return null == n || (0, D.S1)(l, [1, 2, 3, 4]) ? null : (0, i.jsx)($, { Icon: A.H, text: s });
 }
 function Q(e) {
@@ -192,7 +192,7 @@ function ei(e) {
     if (null == s) return null;
     let r = (0, F.us)(s);
     return (0, i.jsx)($, {
-        Icon: T.RetryIcon,
+        Icon: j.RetryIcon,
         showTooltip: !l,
         tooltipText: r,
         text: l ? r : W.intl.string(W.t.adnLsB),
@@ -204,7 +204,7 @@ function es(e) {
         l = (0, F.iy)(t);
     return (0, F.BZ)(t)
         ? (0, i.jsx)($, {
-              Icon: j.g,
+              Icon: T.g,
               showTooltip: 0 === n,
               text: W.intl.formatToPlainString(W.t["Klie/P"], { days: l }),
               tooltipText: W.intl.formatToPlainString(W.t.PwMe0s, { days: l }),
@@ -279,7 +279,7 @@ function ed(e) {
 function eh(e) {
     let { userId: t, widgetApplicationId: n } = e,
         { defaultTextColor: l } = q(),
-        s = (0, w.A)(t, n),
+        s = (0, k.A)(t, n),
         r = s.surfaceConfigs[d.m.ACTIVITY_ACCESSORY];
     return null != r && s.hasIdentity
         ? (0, i.jsx)(J, {

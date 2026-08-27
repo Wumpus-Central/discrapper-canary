@@ -309,15 +309,15 @@ class v extends i.Component {
                 maxHeight: y,
                 onClick: S,
                 renderAccessory: N,
-                tabIndex: T,
-                limitResponsiveWidth: j,
+                tabIndex: j,
+                limitResponsiveWidth: T,
                 useFullWidth: b,
                 placeholder: R,
                 placeholderVersion: O,
                 dataSafeSrc: M,
                 srcIsAnimated: L,
             } = this.props,
-            { readyState: w, hasMouseOver: k, hasFocus: P } = this.state,
+            { readyState: k, hasMouseOver: w, hasFocus: P } = this.state,
             D = null != n,
             U = this.getRatio(),
             G = (0, s.clamp)(Math.round(g * U), C ?? 0, I ?? 1 / 0),
@@ -325,7 +325,7 @@ class v extends i.Component {
             F = _.getConfig({ location: "LazyImage_render" }).enabled,
             H = {
                 alt: e,
-                readyState: w,
+                readyState: k,
                 onContextMenu: r ?? void 0,
                 zoomable: D,
                 className: c,
@@ -333,9 +333,9 @@ class v extends i.Component {
                 minWidth: C,
                 minHeight: E,
                 mediaLayoutType: this.getType(),
-                limitResponsiveWidth: j,
+                limitResponsiveWidth: T,
                 useFullWidth: b,
-                tabIndex: T,
+                tabIndex: j,
                 width: G,
                 height: V,
                 src: "",
@@ -357,7 +357,7 @@ class v extends i.Component {
             };
         if (1 === H.width && 1 === H.height) return null;
         switch (
-            ((D || null != S) && (H.onClick = this.onClick), i && (H.original = null != u && "" !== u ? u : H.src), w)
+            ((D || null != S) && (H.onClick = this.onClick), i && (H.original = null != u && "" !== u ? u : H.src), k)
         ) {
             case A.Rv1.LOADING:
                 null != t && (H.src = t);
@@ -365,7 +365,7 @@ class v extends i.Component {
             case A.Rv1.READY:
                 if (v.isAnimated(this.props)) {
                     H.onMouseLeave = this.onMouseLeave;
-                    let e = (a || k || P) && (null == f || f) && v.visibilityObserver.isVisible(this);
+                    let e = (a || w || P) && (null == f || f) && v.visibilityObserver.isVisible(this);
                     e
                         ? ((H.src = this.getSrc(U, p)), (H.renderAccessory = N))
                         : ((H.src = this.getSrc(U, p || !m || !a)), (H.renderAccessory = this.renderAccessory)),

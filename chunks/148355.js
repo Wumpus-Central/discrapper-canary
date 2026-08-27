@@ -1,12 +1,12 @@
 "use strict";
-n.d(t, { A: () => k, h: () => b });
+n.d(t, { A: () => w, h: () => b });
 var l = n(477900),
     i = n(582128),
     s = n(503698),
     r = n.n(s),
     a = n(284009),
     o = n.n(a),
-    u = n(296704),
+    u = n(221877),
     c = n(17928),
     d = n(269115),
     h = n(395899),
@@ -26,8 +26,8 @@ function N(e) {
     return e.preventDefault();
 }
 let _ = { tension: 1100, friction: 40 },
-    T = { tension: 1600, friction: 60 };
-function j(e, t) {
+    j = { tension: 1600, friction: 60 };
+function T(e, t) {
     return i.cloneElement(e, {
         "data-type": "sticker",
         "data-id": t.id,
@@ -91,22 +91,22 @@ function O(e) {
         [I, N] = i.useState(!1),
         _ = i.useRef(!1);
     _.current = t && c;
-    let T = null == a ? (0, y.zg)(r) : a;
-    return (o()(null != T, `Unable to determine sticker asset URL. Sticker ID: ${r.id}`),
+    let j = null == a ? (0, y.zg)(r) : a;
+    return (o()(null != j, `Unable to determine sticker asset URL. Sticker ID: ${r.id}`),
     i.useEffect(() => {
-        if (null == g.current || null == T) return;
+        if (null == g.current || null == j) return;
         let e = Math.min(2, (0, x.mZ)());
         (g.current.width = s * e), (g.current.height = s * e);
         let t = !1;
         return (
             (async function () {
-                if (null == T) return;
+                if (null == j) return;
                 let { default: e } = await Promise.all([n.e("570716"), n.e("709330")]).then(n.bind(n, 140521));
                 null != g.current &&
                     ((A.current = new e({
                         canvas: g.current,
                         animationId: r.id,
-                        assetUrl: T,
+                        assetUrl: j,
                         assetData: u,
                         onInitialDraw: () => {
                             t || E(!1);
@@ -121,12 +121,12 @@ function O(e) {
                 A.current?.drop(), (A.current = null), (t = !0);
             }
         );
-    }, [T, s, r.id, u, p]),
+    }, [j, s, r.id, u, p]),
     i.useEffect(() => {
         let e;
         t || (e = 0), A.current?.setState(t && c, e);
     }, [r, t, c]),
-    null == T)
+    null == j)
         ? null
         : (0, l.jsx)("div", {
               role: "img",
@@ -139,7 +139,7 @@ function O(e) {
                   maskAsset: h,
                   size: s,
                   withLoadingIndicator: f,
-                  children: j((0, l.jsx)("canvas", { className: v.ex, ref: g }), r),
+                  children: T((0, l.jsx)("canvas", { className: v.ex, ref: g }), r),
               }),
           });
 }
@@ -164,7 +164,7 @@ let M = (e) => {
             _ = i.useCallback(() => {
                 x(!1);
             }, []),
-            T = i.useCallback(() => {
+            j = i.useCallback(() => {
                 C(!0);
             }, []);
         return (i.useEffect(() => {
@@ -192,13 +192,13 @@ let M = (e) => {
                           maskAsset: u,
                           size: a,
                           withLoadingIndicator: h,
-                          children: j(
+                          children: T(
                               (0, l.jsx)("img", {
                                   className: v.r3,
                                   alt: b(n),
                                   src: S,
                                   draggable: !1,
-                                  onError: T,
+                                  onError: j,
                                   onLoad: _,
                                   onContextMenu: N,
                                   ref: I,
@@ -225,7 +225,7 @@ let M = (e) => {
             E = (0, f.p)(r, { ref: x, from: C, enter: { transform: "scale(1)", opacity: 1 }, leave: C, config: _ }),
             I = i.useRef(null),
             y = (0, p.z)(
-                { ref: I, transform: r || h ? "translateY(0)" : "translateY(-25px)", opacity: +!!r, config: T },
+                { ref: I, transform: r || h ? "translateY(0)" : "translateY(-25px)", opacity: +!!r, config: j },
                 "animate-always",
             );
         return (
@@ -246,7 +246,7 @@ let M = (e) => {
                                     (0, l.jsx)(u.animated.div, {
                                         className: v.tm,
                                         style: e,
-                                        children: (0, l.jsx)(w, {
+                                        children: (0, l.jsx)(k, {
                                             className: v.__invalid_overlaySticker,
                                             disableAnimation: t,
                                             enlargeOnInteraction: !1,
@@ -273,7 +273,7 @@ let M = (e) => {
             )
         );
     };
-function w(e) {
+function k(e) {
     let {
             isInteracting: t = !1,
             disableAnimation: n = !1,
@@ -326,4 +326,4 @@ function w(e) {
         `${c.id},${u}`,
     );
 }
-let k = w;
+let w = k;

@@ -24,12 +24,12 @@ var l,
     v = n(709066),
     N = n(235986),
     _ = n(141504),
-    T = (((l = T || {}).SINGLE_AVATAR = "1"), (l.MULTIPLE_AVATAR = "2"), l);
-let j = { [x._3.SIZE_32]: _.dT, [x._3.SIZE_40]: _.Jb };
+    j = (((l = j || {}).SINGLE_AVATAR = "1"), (l.MULTIPLE_AVATAR = "2"), l);
+let T = { [x._3.SIZE_32]: _.dT, [x._3.SIZE_40]: _.Jb };
 class b extends s.Component {
     placeholderMaxWidth = `${Math.floor(40 * Math.random()) + 40}%`;
     static defaultProps = { type: "1" };
-    static Types = T;
+    static Types = j;
     render() {
         let { type: e, avatarSize: t, className: n, childrenClassName: l, doNotAnimate: s } = this.props;
         return "2" === e
@@ -38,9 +38,9 @@ class b extends s.Component {
                   children: [
                       (0, i.jsxs)(N.A, {
                           children: [
-                              (0, i.jsx)("div", { className: a()(_.RH, j[t], _.hC) }),
-                              (0, i.jsx)("div", { className: a()(_.RH, j[t], _.hC) }),
-                              (0, i.jsx)("div", { className: a()(_.RH, j[t]) }),
+                              (0, i.jsx)("div", { className: a()(_.RH, T[t], _.hC) }),
+                              (0, i.jsx)("div", { className: a()(_.RH, T[t], _.hC) }),
+                              (0, i.jsx)("div", { className: a()(_.RH, T[t]) }),
                           ],
                       }),
                       (0, i.jsx)(N.A, { grow: 1, className: _.eC, style: { maxWidth: this.placeholderMaxWidth } }),
@@ -49,7 +49,7 @@ class b extends s.Component {
             : (0, i.jsxs)(N.A, {
                   className: a()(_.qf, !s && _.lN, n),
                   children: [
-                      (0, i.jsx)("div", { className: a()(_.RH, j[t], l) }),
+                      (0, i.jsx)("div", { className: a()(_.RH, T[t], l) }),
                       (0, i.jsx)(N.A, {
                           grow: 1,
                           className: a()(_.gM, l),
@@ -63,8 +63,8 @@ var R = n(268218),
     O = n(193663),
     M = n(490427),
     L = n(609425),
-    w = n(922301),
-    k = n(660184),
+    k = n(922301),
+    w = n(660184),
     P = n(73392),
     D = n(534400),
     U = n(531685),
@@ -204,10 +204,10 @@ let en = s.memo(function (e) {
         return (0, i.jsxs)(i.Fragment, {
             children: [
                 h
-                    ? (0, i.jsx)(k.A, {
+                    ? (0, i.jsx)(w.A, {
                           userName: s ?? "",
                           displayNameStyles: c,
-                          effectDisplayType: u ? w.G.ANIMATED : w.G.STATIC,
+                          effectDisplayType: u ? k.G.ANIMATED : k.G.STATIC,
                           loop: !0,
                       })
                     : (0, i.jsx)(p.g, {
@@ -337,13 +337,13 @@ let en = s.memo(function (e) {
                 isMobile: v,
                 isVR: N,
                 premiumSince: _,
-                channel: T,
-                guildId: j,
+                channel: j,
+                guildId: T,
                 className: R,
                 nameplate: M,
                 hideClanTag: L = !1,
-                hideSubtext: w = !1,
-                hideTooltip: k = !1,
+                hideSubtext: k = !1,
+                hideTooltip: w = !1,
                 onMouseDown: P,
                 onKeyDown: D,
                 onClick: U,
@@ -365,31 +365,31 @@ let en = s.memo(function (e) {
             [eh, em] = s.useState(!1),
             [ef, ep] = s.useState(!1),
             [eg, ex] = s.useState(null),
-            { voiceChannel: eA } = (0, I.Ay)({ userId: ei, guildId: j }),
+            { voiceChannel: eA } = (0, I.Ay)({ userId: ei, guildId: T }),
             {
                 avatarDecorationSrc: eC,
                 avatarSrc: eE,
                 eventHandlers: eI,
-            } = (0, Y.A)({ userId: ei, size: x._3.SIZE_32, animateOnHover: !(t || eh), guildId: j }),
+            } = (0, Y.A)({ userId: ei, size: x._3.SIZE_32, animateOnHover: !(t || eh), guildId: T }),
             { onFocus: ey, ...eS } = en ?? {},
-            ev = (0, W.gn)(j, ei, l ?? null),
+            ev = (0, W.gn)(T, ei, l ?? null),
             [eN, e_] = s.useState(!1);
         s.useEffect(() => {
             t && e_(!1);
         }, [t]);
-        let eT = (0, Z.YW)(C),
-            ej = (0, o.bG)([K.A], () => K.A.getQuestPreviewOverride(z.uF.MEMBERS_LIST), []),
-            eb = null != ej,
-            eR = eb ? ej : eT,
-            eO = (0, Z.Yl)(eT, E, ei),
+        let ej = (0, Z.YW)(C),
+            eT = (0, o.bG)([K.A], () => K.A.getQuestPreviewOverride(z.uF.MEMBERS_LIST), []),
+            eb = null != eT,
+            eR = eb ? eT : ej,
+            eO = (0, Z.Yl)(ej, E, ei),
             eM = (eb || eO) && t && !eN,
             eL = s.useCallback(() => {
                 em(!0);
             }, []),
-            ew = s.useCallback(() => {
+            ek = s.useCallback(() => {
                 em(!1);
             }, []),
-            ek = s.useCallback(() => {
+            ew = s.useCallback(() => {
                 ep(!0), ey?.();
             }, [ey]),
             eP = s.useCallback(() => {
@@ -434,7 +434,7 @@ let en = s.memo(function (e) {
                           onMouseDown: P,
                           onContextMenu: G,
                           onMouseEnter: eL,
-                          onMouseLeave: ew,
+                          onMouseLeave: ek,
                           onBlur: eP,
                           hovered: eh,
                           name:
@@ -448,7 +448,7 @@ let en = s.memo(function (e) {
                                             colorStrings: ev,
                                             hideClanTag: L,
                                             user: p,
-                                            guildId: j,
+                                            guildId: T,
                                             isHovering: eh,
                                         }),
                                     })
@@ -463,7 +463,7 @@ let en = s.memo(function (e) {
                                                 colorStrings: ev,
                                                 hideClanTag: L,
                                                 user: p,
-                                                guildId: j,
+                                                guildId: T,
                                                 isHovering: eh,
                                             }),
                                         }),
@@ -485,16 +485,16 @@ let en = s.memo(function (e) {
                           }),
                           nameplate: M,
                           subText: (0, i.jsx)(eo, {
-                              hideSubtext: w,
+                              hideSubtext: k,
                               activities: C,
                               status: y,
                               applicationStream: E,
                               voiceStatusChannel: eA,
                               user: p,
-                              channel: T,
+                              channel: j,
                               isHoveringOrFocusing: eh || ef,
-                              quest: eT,
-                              hideTooltip: k,
+                              quest: ej,
+                              hideTooltip: w,
                           }),
                           decorators: (0, i.jsx)(es, {
                               user: p,
@@ -510,7 +510,7 @@ let en = s.memo(function (e) {
                           "aria-posinset": B,
                           id: X,
                           tabIndex: Q,
-                          onFocus: ek,
+                          onFocus: ew,
                           focusProps: { offset: { top: 4, bottom: 4, left: 4, right: 4 } },
                           ...eS,
                       }),

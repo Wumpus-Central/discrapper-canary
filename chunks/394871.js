@@ -76,8 +76,8 @@ function S(e) {
 var v = n(748562),
     N = n(47167),
     _ = n(734057),
-    T = n(864436),
-    j = n(200041),
+    j = n(864436),
+    T = n(200041),
     b = n(375708);
 function R(e) {
     let {
@@ -98,8 +98,8 @@ function R(e) {
         g = null != p ? p : b.intl.string(b.t.eXan7B),
         x = null != f ? `${g} (${f})` : g,
         A = h ? x : g;
-    return (0, l.jsx)(j.A, {
-        icon: a ? void 0 : (0, l.jsx)(T.A, { icon: v.U, className: r }),
+    return (0, l.jsx)(T.A, {
+        icon: a ? void 0 : (0, l.jsx)(j.A, { icon: v.U, className: r }),
         text: A,
         tooltipText: c ? void 0 : x,
         textVariant: i,
@@ -147,8 +147,8 @@ function L(e) {
                   })),
     });
 }
-var w = n(835072),
-    k = n(935154),
+var k = n(835072),
+    w = n(935154),
     P = n(652215),
     D = n(10862);
 function U(e) {
@@ -162,7 +162,7 @@ function U(e) {
             canTruncate: u = !0,
             showChannelName: c = !1,
         } = e,
-        d = (0, k.S3)(P.clD.ONLINE),
+        d = (0, w.S3)(P.clD.ONLINE),
         h = (0, N.Ay)(t),
         m =
             t.isDM() || t.isGroupDM()
@@ -172,7 +172,7 @@ function U(e) {
                   : b.intl.string(b.t.msxteM),
         f = null != h ? `${m} (${h})` : m,
         p = c ? f : m;
-    return (0, l.jsx)(j.A, {
+    return (0, l.jsx)(T.A, {
         icon: (0, l.jsx)(D.A, { size: "custom", color: d, channel: t, className: r()(A.Kk, s) }),
         text: p,
         tooltipText: o ? void 0 : f,
@@ -213,8 +213,8 @@ function F(e) {
     } = e;
     (0, h.A)(t?.id);
     let _ = s?.discoverable !== !1 ? s : null,
-        T = (0, m.AO)(_),
-        j = i.useMemo(() => {
+        j = (0, m.AO)(_),
+        T = i.useMemo(() => {
             let e = n?.find((e) => {
                 let { type: t } = e;
                 return t === P.$pd.CUSTOM_STATUS;
@@ -224,13 +224,13 @@ function F(e) {
             return null == ("" === t ? null : t) && null == e.emoji ? null : e;
         }, [n]),
         b = (0, f.Uk)("ActivityStatus"),
-        O = i.useMemo(() => (null != j, null), [j, b]),
+        O = i.useMemo(() => (null != T, null), [T, b]),
         M = i.useMemo(
             () =>
                 (0, a.uniqWith)(
                     n?.filter((e) => {
                         let { type: t, name: n } = e;
-                        return t !== P.$pd.CUSTOM_STATUS && t !== P.$pd.HANG_STATUS && n !== T?.name;
+                        return t !== P.$pd.CUSTOM_STATUS && t !== P.$pd.HANG_STATUS && n !== j?.name;
                     }) ?? [],
                     (e, t) =>
                         (null != e.application_id &&
@@ -238,17 +238,17 @@ function F(e) {
                             e.application_id === t.application_id) ||
                         (null != e.name && null != t.name && e.name === t.name),
                 ),
-            [n, T?.name],
+            [n, j?.name],
         ),
-        k = n?.find((e) => e.name === T?.name),
+        w = n?.find((e) => e.name === j?.name),
         D = t?.bot === !0,
         F = (0, u.bG)([E.A], () => E.A.isBlockedOrIgnored(t?.id)),
-        H = j?.state != null,
+        H = T?.state != null,
         B = null != _,
         W = !B && null != o,
         K = M.length + (B || W ? 1 : 0),
         z = K > 1,
-        Z = j?.state != null && "xs" === x;
+        Z = T?.state != null && "xs" === x;
     if (F) return null;
     function Y() {
         let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
@@ -256,7 +256,7 @@ function F(e) {
         if (null != _)
             return (0, l.jsx)(R, {
                 stream: _,
-                game: k,
+                game: w,
                 textVariant: `text-${x}/medium`,
                 textClassName: p,
                 iconClassName: g,
@@ -266,7 +266,7 @@ function F(e) {
             });
         let n = M?.[0];
         return null != n
-            ? (0, l.jsx)(w.A, {
+            ? (0, l.jsx)(k.A, {
                   activity: n,
                   textVariant: `text-${x}/medium`,
                   textClassName: p,
@@ -316,7 +316,7 @@ function F(e) {
                                   (0, l.jsx)(R, { stream: _, game: n?.find(d.A), ...t, showChannelName: !0 }, "stream"),
                               ),
                           M.forEach((n, i) => {
-                              e.push((0, l.jsx)(w.A, { activity: n, ...t }, `activity-${i}`));
+                              e.push((0, l.jsx)(k.A, { activity: n, ...t }, `activity-${i}`));
                           }),
                           W && e.push((0, l.jsx)(U, { channel: o, ...t, showChannelName: !0 }, "voice")),
                           e),
@@ -333,7 +333,7 @@ function F(e) {
                   null == O
                       ? null
                       : (0, l.jsx)(C, {
-                            customStatusActivity: j,
+                            customStatusActivity: T,
                             textSize: x,
                             animateEmoji: I,
                             hideEmoji: v,
@@ -352,11 +352,11 @@ function F(e) {
               className: $,
               children: [
                   J(),
-                  null != j && K > 0 && (0, l.jsx)(V, { textVariant: `text-${x}/normal`, className: p }),
-                  null == j
+                  null != T && K > 0 && (0, l.jsx)(V, { textVariant: `text-${x}/normal`, className: p }),
+                  null == T
                       ? null
                       : (0, l.jsx)(L, {
-                            customStatusActivity: j,
+                            customStatusActivity: T,
                             textSize: x,
                             animateEmoji: I,
                             hideEmoji: v,

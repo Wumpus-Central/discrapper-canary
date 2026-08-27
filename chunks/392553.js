@@ -24,8 +24,8 @@ var l = n(477900),
     v = n(734057),
     N = n(573163),
     _ = n(531685),
-    T = n(365971);
-function j(e) {
+    j = n(365971);
+function T(e) {
     let t = N.Ay.getChannelIdsForWindowId(e)[0];
     return null == t ? null : (v.A.getChannel(t) ?? null);
 }
@@ -34,8 +34,8 @@ var b = n(826745),
     O = n(721768),
     M = n(723702),
     L = n(677134),
-    w = n(652215),
-    k = n(650583);
+    k = n(652215),
+    w = n(650583);
 let P = /(\t|\s)/;
 class D extends i.PureComponent {
     _ref;
@@ -135,7 +135,7 @@ class D extends i.PureComponent {
         } = this.props;
         return (0, l.jsxs)(l.Fragment, {
             children: [
-                (0, l.jsx)(A.EG, { event: w.jej.GLOBAL_CLIPBOARD_PASTE, handler: this.handleGlobalPaste }),
+                (0, l.jsx)(A.EG, { event: k.jej.GLOBAL_CLIPBOARD_PASTE, handler: this.handleGlobalPaste }),
                 (0, l.jsx)(b.y, {
                     ref: this.handleSetRef,
                     className: r()(a, c),
@@ -173,7 +173,7 @@ class D extends i.PureComponent {
     };
     handleKeyPress = (e) => {
         if (
-            e.key === k.dh.ENTER &&
+            e.key === w.dh.ENTER &&
             !e.shiftKey &&
             !this.hasOpenCodeBlock() &&
             (!this.props.disableEnterToSubmit || e.ctrlKey)
@@ -182,40 +182,40 @@ class D extends i.PureComponent {
     };
     handleKeyDown = (e) => {
         switch (e.which) {
-            case w.Ks6.ARROW_DOWN:
+            case k.Ks6.ARROW_DOWN:
                 this.props.moveSelection(1) && e.preventDefault();
                 break;
-            case w.Ks6.N:
+            case k.Ks6.N:
                 e.ctrlKey && this.props.moveSelection(1) && e.preventDefault();
                 break;
-            case w.Ks6.ARROW_UP:
+            case k.Ks6.ARROW_UP:
                 this.props.moveSelection(-1) && e.preventDefault();
                 break;
-            case w.Ks6.P:
+            case k.Ks6.P:
                 e.ctrlKey && this.props.moveSelection(-1) && e.preventDefault();
                 break;
-            case w.Ks6.TAB:
-            case w.Ks6.ENTER:
+            case k.Ks6.TAB:
+            case k.Ks6.ENTER:
                 this.handleTabOrEnterDown(e);
         }
         let { onKeyDown: t } = this.props;
         t?.(e);
     };
     handleTabOrEnterDown(e) {
-        (e.key === k.dh.TAB && this.props.onTab()) || (e.key === k.dh.ENTER && this.props.onEnter(e))
+        (e.key === w.dh.TAB && this.props.onTab()) || (e.key === w.dh.ENTER && this.props.onEnter(e))
             ? (e.preventDefault(), e.stopPropagation())
-            : e.key === k.dh.ESCAPE
+            : e.key === w.dh.ESCAPE
               ? (e.preventDefault(), e.stopPropagation(), this.props.hideAutocomplete())
-              : e.key === k.dh.TAB &&
+              : e.key === w.dh.TAB &&
                 this.hasOpenCodeBlock() &&
                 (e.preventDefault(), e.stopPropagation(), this.insertText("	", void 0, !1));
     }
     handleKeyUp = (e) => {
         switch (e.key) {
-            case k.dh.ARROW_RIGHT:
-            case k.dh.ARROW_LEFT:
-            case k.dh.HOME:
-            case k.dh.END:
+            case w.dh.ARROW_RIGHT:
+            case w.dh.ARROW_LEFT:
+            case w.dh.HOME:
+            case w.dh.END:
                 this.props.maybeShowAutocomplete();
         }
         let { onKeyUp: t } = this.props;
@@ -414,8 +414,8 @@ let ex = i.forwardRef(function (e, t) {
             required: v,
             textAreaPaddingClassName: N,
             onChange: _,
-            onPaste: T,
-            onResize: j,
+            onPaste: j,
+            onResize: T,
             onFocus: b,
             onBlur: R,
             onKeyDown: O,
@@ -437,16 +437,16 @@ let ex = i.forwardRef(function (e, t) {
             "aria-expanded": ev,
             "aria-haspopup": eN,
             "aria-activedescendant": e_,
-            "aria-controls": eT,
-            "aria-invalid": ej,
+            "aria-controls": ej,
+            "aria-invalid": eT,
             "aria-describedby": eb,
             "aria-labelledby": eR,
             "aria-autocomplete": eO,
         } = e,
         eM = i.useRef(null),
         eL = i.useRef(null),
-        ew = i.useRef(!0),
         ek = i.useRef(!0),
+        ew = i.useRef(!0),
         eP = E || y,
         eD = i.useCallback(
             (e, t, n) => {
@@ -486,19 +486,19 @@ let ex = i.forwardRef(function (e, t) {
                 )
                     if ("parent" === t)
                         try {
-                            (ek.current = !1), e.onChange();
+                            (ew.current = !1), e.onChange();
                         } finally {
-                            ek.current = !0;
+                            ew.current = !0;
                         }
                     else e.onChange();
             },
             [f.id, f.guild_id],
         ),
         eU = i.useCallback(() => {
-            ew.current = !1;
+            ek.current = !1;
         }, []),
         eG = i.useCallback(() => {
-            ew.current = !0;
+            ek.current = !0;
         }, []),
         eV = (0, Y.A)({ channel: f, chatInputType: h, onChangeStart: eU, onChangeEnd: eG, updateState: eD }),
         eF = i.useCallback(
@@ -527,7 +527,7 @@ let ex = i.forwardRef(function (e, t) {
                     let e = n[0];
                     W.b.selectCommandOption(eV, e.name),
                         (i = !0),
-                        (0, U.zV)(w.HAw.APPLICATION_COMMAND_VALIDATION_FAILED, {
+                        (0, U.zV)(k.HAw.APPLICATION_COMMAND_VALIDATION_FAILED, {
                             application_id: l?.applicationId,
                             command_id: l?.rootCommand?.id,
                             argument_type: m.n4[e?.type ?? 3],
@@ -539,7 +539,7 @@ let ex = i.forwardRef(function (e, t) {
                 for (let [e, t] of n)
                     W.b.setNodes(eV, { error: !0 }, { at: t }), i || W.b.select(eV, K.VW.end(eV, t)), (i = !0);
             if (i) {
-                G._.dispatch(w.jej.SHAKE_APP, { duration: 200, intensity: 2 }), es?.();
+                G._.dispatch(k.jej.SHAKE_APP, { duration: 200, intensity: 2 }), es?.();
                 return;
             }
             q?.((0, B.WO)(K.VW.richValue(eV), { mode: "raw", ignoreTrailingEmptyNodes: !0 }), l, e);
@@ -703,15 +703,15 @@ let ex = i.forwardRef(function (e, t) {
             let e = s.current;
             if (null == e) return;
             let t = e.offsetHeight;
-            n.current !== t && (null != eM.current && (eM.current.style.height = `${t}px`), (n.current = t), j?.(t));
-        }, [eM, j])),
-        (0, ei.g)(s, o, [o, eV, j], er),
+            n.current !== t && (null != eM.current && (eM.current.style.height = `${t}px`), (n.current = t), T?.(t));
+        }, [eM, T])),
+        (0, ei.g)(s, o, [o, eV, T], er),
         i.useLayoutEffect(() => {
             let e = $.rL.findDocumentOrShadowRoot(eV).defaultView;
             if (e?.ResizeObserver == null) return;
             let t = ea(eV);
-            null != t && ((n.current = t.offsetHeight), j?.(n.current));
-        }, [eM, eV, j]);
+            null != t && ((n.current = t.offsetHeight), T?.(n.current));
+        }, [eM, eV, T]);
     let { handleKeyDown: eB, handleKeyUp: eW } = (function (e) {
             let {
                 editor: t,
@@ -731,22 +731,22 @@ let ex = i.forwardRef(function (e, t) {
                 handleKeyDown: i.useCallback(
                     (e) => {
                         switch (e.which) {
-                            case w.Ks6.ARROW_UP:
+                            case k.Ks6.ARROW_UP:
                                 if (m(-1)) return void e.preventDefault();
                                 break;
-                            case w.Ks6.ARROW_DOWN:
+                            case k.Ks6.ARROW_DOWN:
                                 if (m(1)) return void e.preventDefault();
                                 break;
-                            case w.Ks6.P:
+                            case k.Ks6.P:
                                 if ((0, el.j)(e, { ctrl: !0 }) && m(-1)) return void e.preventDefault();
                                 break;
-                            case w.Ks6.N:
+                            case k.Ks6.N:
                                 if ((0, el.j)(e, { ctrl: !0 }) && m(1)) return void e.preventDefault();
                                 break;
-                            case w.Ks6.ESCAPE:
+                            case k.Ks6.ESCAPE:
                                 h?.();
                                 break;
-                            case w.Ks6.TAB:
+                            case k.Ks6.TAB:
                                 if ((0, el.j)(e, {}) && a?.()) {
                                     e.preventDefault(), e.stopPropagation();
                                     return;
@@ -760,13 +760,13 @@ let ex = i.forwardRef(function (e, t) {
                                     return;
                                 }
                                 break;
-                            case w.Ks6.ENTER:
+                            case k.Ks6.ENTER:
                                 if ((0, el.j)(e, {}) && o?.(e)) {
                                     e.preventDefault(), e.stopPropagation();
                                     return;
                                 }
                                 break;
-                            case w.Ks6.SPACE:
+                            case k.Ks6.SPACE:
                                 if ((0, el.j)(e, {}) && u?.()) {
                                     e.preventDefault(), e.stopPropagation();
                                     return;
@@ -776,7 +776,7 @@ let ex = i.forwardRef(function (e, t) {
                             e.preventDefault(), e.stopPropagation();
                             return;
                         }
-                        e.key !== k.dh.ENTER ||
+                        e.key !== w.dh.ENTER ||
                             ((e.altKey || e.shiftKey || (l && !e.ctrlKey) || (0, X.Q9)(t)) && c) ||
                             (e.preventDefault(), e.stopPropagation(), d()),
                             s?.(e);
@@ -809,10 +809,10 @@ let ex = i.forwardRef(function (e, t) {
                 (e) => {
                     if (eP) return !0;
                     if (!0 === e.defaultPrevented) return !1;
-                    let t = T(e);
+                    let t = j(e);
                     return t && (e.preventDefault(), e.stopPropagation()), t;
                 },
-                [eP, T],
+                [eP, j],
             )),
             (c = i.useCallback(
                 (e) => {
@@ -833,12 +833,12 @@ let ex = i.forwardRef(function (e, t) {
         ),
         eY = i.useCallback(
             (e) => {
-                e !== eL.current ? ek.current && _?.(null, (0, B.WO)(e, { mode: "raw" }), e) : ek.current && eu();
+                e !== eL.current ? ew.current && _?.(null, (0, B.WO)(e, { mode: "raw" }), e) : ew.current && eu();
             },
             [eu, _],
         );
     i.useLayoutEffect(() => {
-        ew.current && ((eL.current = d), eD(eV, "parent", { value: d }));
+        ek.current && ((eL.current = d), eD(eV, "parent", { value: d }));
     }, [eV, d, eD]),
         i.useEffect(() => {
             function e() {
@@ -934,7 +934,7 @@ let ex = i.forwardRef(function (e, t) {
         );
     return (0, l.jsxs)(l.Fragment, {
         children: [
-            (0, l.jsx)(A.EG, { event: w.jej.GLOBAL_CLIPBOARD_PASTE, handler: ez }),
+            (0, l.jsx)(A.EG, { event: k.jej.GLOBAL_CLIPBOARD_PASTE, handler: ez }),
             (0, l.jsx)("div", {
                 ref: eM,
                 className: r()(g, eg.pC),
@@ -963,10 +963,10 @@ let ex = i.forwardRef(function (e, t) {
                     "aria-haspopup": eN,
                     "aria-expanded": ev,
                     "aria-activedescendant": e_,
-                    "aria-controls": eT,
+                    "aria-controls": ej,
                     "aria-labelledby": eR,
                     "aria-describedby": eb,
-                    "aria-invalid": ej,
+                    "aria-invalid": eT,
                     "aria-autocomplete": eO,
                     "aria-required": v,
                 }),
@@ -1158,18 +1158,18 @@ class eE extends i.Component {
                 "aria-describedby": v,
                 "aria-labelledby": N,
                 accessibilityLabel: _,
-                showValueWhenDisabled: T,
+                showValueWhenDisabled: j,
             } = this.props,
-            { submitting: j, popup: b } = this.state,
+            { submitting: T, popup: b } = this.state,
             R = {
                 channel: d,
-                className: r()(x, eA.Tg, { [eA.w5]: m, [eA.Rr]: n || j }),
+                className: r()(x, eA.Tg, { [eA.w5]: m, [eA.Rr]: n || T }),
                 id: C,
                 placeholder: this.getPlaceholder(),
                 required: E,
                 accessibilityLabel: _,
                 disabled: n || !1,
-                submitting: j,
+                submitting: T,
                 isEdit: h === I.oU.EDIT,
                 onFocus: this.handleFocus,
                 onBlur: this.handleBlur,
@@ -1209,16 +1209,16 @@ class eE extends i.Component {
                       ref: this.ref,
                       ...R,
                       type: h,
-                      value: n && !T ? this._emptyRichValue : t,
+                      value: n && !j ? this._emptyRichValue : t,
                       canUseCommands: h.commands?.enabled,
                       canOnlyUseTextCommands: g,
                       onSubmitFailure: c,
                   })
-                : (0, l.jsx)(D, { ref: this.ref, ...R, value: n && !T ? "" : e });
+                : (0, l.jsx)(D, { ref: this.ref, ...R, value: n && !j ? "" : e });
         return (0, l.jsxs)(l.Fragment, {
             children: [
-                (0, l.jsx)(A.EG, { event: w.jej.INSERT_TEXT, handler: this.handleInsertText }),
-                (0, l.jsx)(A.EG, { event: w.jej.CLEAR_TEXT, handler: this.handleClearText }),
+                (0, l.jsx)(A.EG, { event: k.jej.INSERT_TEXT, handler: this.handleInsertText }),
+                (0, l.jsx)(A.EG, { event: k.jej.CLEAR_TEXT, handler: this.handleClearText }),
                 O,
             ],
         });
@@ -1258,15 +1258,15 @@ class eE extends i.Component {
                 null != n
                     ? (function (e) {
                           if (null == e) return null;
-                          let t = (0, T.Q2)(e);
-                          return null == t ? null : j(t);
+                          let t = (0, j.Q2)(e);
+                          return null == t ? null : T(t);
                       })(n)
                     : null,
-            c = null == (t = _.A.getFocusedWindowId()) ? null : j(t),
+            c = null == (t = _.A.getFocusedWindowId()) ? null : T(t),
             g = !(function (e, t) {
                 if (null == e || null == t) return !1;
-                let n = (0, T.Q2)(e);
-                return n === (0, T.Q2)(t) && null != n;
+                let n = (0, j.Q2)(e);
+                return n === (0, j.Q2)(t) && null != n;
             })(n, this._getEditorWindow())
                 ? (u ?? c ?? l)
                 : l;

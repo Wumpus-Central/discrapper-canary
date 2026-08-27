@@ -114,8 +114,8 @@
         e1 = ec(Q),
         e2 = ec(Z),
         e3 = ec(ee),
-        e4 = ec(et),
-        e5 = ec(er),
+        e5 = ec(et),
+        e4 = ec(er),
         e6 = ec(en),
         e8 = ec(ei),
         e7 = ec(eo),
@@ -296,7 +296,7 @@
         return t_(t) ? t : null;
     }
     function t_(e, t) {
-        return (t = t || new Date("1/1/1000")), eh.default(e) && e4.default(e, t);
+        return (t = t || new Date("1/1/1000")), eh.default(e) && e5.default(e, t);
     }
     function tS(e, t, r) {
         if ("en" === r) return em.default(e, t, { awareOfUnicodeTokens: !0 });
@@ -855,7 +855,7 @@
             );
         })(ef.default.Component),
         t3 = te.default(t2),
-        t4 = (function (e) {
+        t5 = (function (e) {
             tc(r, e);
             var t = th(r);
             function r() {
@@ -963,7 +963,7 @@
                 r
             );
         })(ef.default.Component),
-        t5 = (function (e) {
+        t4 = (function (e) {
             tc(r, e);
             var t = th(r);
             function r(e) {
@@ -1002,7 +1002,7 @@
                     }),
                     (n.state = {
                         monthYearsList: (function (e, t) {
-                            for (var r = [], n = tC(e), i = tC(t); !e4.default(n, i); )
+                            for (var r = [], n = tC(e), i = tC(t); !e5.default(n, i); )
                                 r.push(tw(n)), (n = ew.default(n, 1));
                             return r;
                         })(n.props.minDate, n.props.maxDate),
@@ -1027,7 +1027,7 @@
                 r
             );
         })(ef.default.Component),
-        t6 = te.default(t5),
+        t6 = te.default(t4),
         t8 = (function (e) {
             tc(r, e);
             var t = th(r);
@@ -1038,7 +1038,7 @@
                 return (
                     tl(tp((e = t.call.apply(t, [this].concat(i)))), "state", { dropdownVisible: !1 }),
                     tl(tp(e), "renderSelectOptions", function () {
-                        for (var t = tC(e.props.minDate), r = tC(e.props.maxDate), n = []; !e4.default(t, r); ) {
+                        for (var t = tC(e.props.minDate), r = tC(e.props.maxDate), n = []; !e5.default(t, r); ) {
                             var i = eL.default(t);
                             n.push(
                                 ef.default.createElement(
@@ -1206,10 +1206,10 @@
                             u = null != (t = e.props.selectingDate) ? t : e.props.preSelection;
                         return (
                             !(!(i || o || a) || !u || e.isDisabled()) &&
-                            (i && l && (e5.default(u, l) || tO(u, l))
+                            (i && l && (e4.default(u, l) || tO(u, l))
                                 ? tD(n, u, l)
-                                : ((o && s && (e4.default(u, s) || tO(u, s))) ||
-                                      !(!a || !s || l || (!e4.default(u, s) && !tO(u, s)))) &&
+                                : ((o && s && (e5.default(u, s) || tO(u, s))) ||
+                                      !(!a || !s || l || (!e5.default(u, s) && !tO(u, s)))) &&
                                   tD(n, s, u))
                         );
                     }),
@@ -2003,7 +2003,7 @@
                                     for (var o = i.length, a = [], s = 0; s < o; s++) {
                                         var l = ev.default(ey.default(e, eM.default(i[s])), eT.default(i[s])),
                                             u = ev.default(e, (r + 1) * n);
-                                        e4.default(l, t) && e5.default(l, u) && a.push(i[s]);
+                                        e5.default(l, t) && e4.default(l, u) && a.push(i[s]);
                                     }
                                     return a;
                                 })(o, p, d, i, s);
@@ -2018,7 +2018,7 @@
                                     onClick: e.handleClick.bind(tp(e), t),
                                     className: e.liClasses(t, u, c),
                                     ref: function (r) {
-                                        (e5.default(t, f) || tO(t, f)) && (e.centerLi = r);
+                                        (e4.default(t, f) || tO(t, f)) && (e.centerLi = r);
                                     },
                                     onKeyDown: function (r) {
                                         e.handleOnKeyDown(r, t);
@@ -2341,7 +2341,7 @@
                             o = tq(n.props),
                             a = tY(n.props),
                             s = tw();
-                        return i || r || t || (o && e5.default(s, o) ? o : a && e4.default(s, a) ? a : s);
+                        return i || r || t || (o && e4.default(s, o) ? o : a && e5.default(s, a) ? a : s);
                     }),
                     tl(tp(n), "increaseMonth", function () {
                         n.setState(
@@ -2650,7 +2650,7 @@
                     tl(tp(n), "renderMonthDropdown", function () {
                         var e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
                         if (n.props.showMonthDropdown && !e)
-                            return ef.default.createElement(t4, {
+                            return ef.default.createElement(t5, {
                                 dropdownMode: n.props.dropdownMode,
                                 locale: n.props.locale,
                                 onChange: n.changeMonth,
@@ -3221,7 +3221,7 @@
                             t = n.getPreSelection(),
                             r = tq(n.props),
                             i = tY(n.props),
-                            o = r && e5.default(t, eG.default(r)) ? r : i && e4.default(t, eQ.default(i)) ? i : t;
+                            o = r && e4.default(t, eG.default(r)) ? r : i && e5.default(t, eQ.default(i)) ? i : t;
                         return {
                             open: n.props.startOpen || !1,
                             preventFocus: !1,
@@ -3373,7 +3373,7 @@
                             var i = n.props,
                                 o = i.startDate,
                                 a = i.endDate;
-                            !o || a || e5.default(e, o) || n.setOpen(!1);
+                            !o || a || e4.default(e, o) || n.setOpen(!1);
                         }
                     }),
                     tl(tp(n), "setSelected", function (e, t, r, i) {
@@ -3403,7 +3403,7 @@
                                 ) {
                                     var f = u && !c,
                                         d = u && c;
-                                    u || c ? f && (e5.default(o, u) ? s([o, null], t) : s([u, o], t)) : s([o, null], t),
+                                    u || c ? f && (e4.default(o, u) ? s([o, null], t) : s([u, o], t)) : s([o, null], t),
                                         d && s([o, null], t);
                                 } else s(o, t);
                             r || (n.props.onSelect(o, t), n.setState({ inputValue: null }));
@@ -3418,10 +3418,10 @@
                             if (t && r) i = tD(e, n.props.minDate, n.props.maxDate);
                             else if (t) {
                                 var a = eG.default(n.props.minDate);
-                                i = e4.default(e, a) || tO(o, a);
+                                i = e5.default(e, a) || tO(o, a);
                             } else if (r) {
                                 var s = eQ.default(n.props.maxDate);
-                                i = e5.default(e, s) || tO(o, s);
+                                i = e4.default(e, s) || tO(o, s);
                             }
                         }
                         i && n.setState({ preSelection: e });

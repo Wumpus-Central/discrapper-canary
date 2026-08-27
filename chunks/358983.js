@@ -1,4 +1,4 @@
-var i = {
+var o = {
     button: "button__75098",
     buttonChildrenWrapper: "buttonChildrenWrapper__75098",
     buttonChildren: "buttonChildren__75098",
@@ -13,8 +13,8 @@ var i = {
     "spinner-transform-out": "spinner-transform-out__75098",
     xs: "xs__75098",
     hasText: "hasText__75098",
-    sm: "sm__75098 " + o(736541)["text-sm/normal"],
-    md: "md__75098 " + o(736541)["text-md/normal"],
+    sm: "sm__75098 " + _(736541)["text-sm/normal"],
+    md: "md__75098 " + _(736541)["text-md/normal"],
     spinnerItem: "spinnerItem__75098",
     spinner: "spinner__75098",
     "spinner-sm": "spinner-sm__75098",
@@ -50,4 +50,4 @@ var i = {
     hasTrailing: "hasTrailing__75098",
     hasTags: "hasTags__75098",
 };
-o.r((e.exports = i));
+_.r((e.exports = o));

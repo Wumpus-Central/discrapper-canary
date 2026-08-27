@@ -1,4 +1,4 @@
-t.d(n, { A: () => N });
+t.d(n, { A: () => j });
 var l = t(477900);
 t(582128);
 var i = t(17928),
@@ -22,25 +22,25 @@ var i = t(17928),
     v = t(806931),
     T = t(652215),
     _ = t(375708);
-function N(e) {
-    let { onClose: n, onSelect: t, channel: N, remoteMode: j, onInteraction: b } = e,
+function j(e) {
+    let { onClose: n, onSelect: t, channel: j, remoteMode: N, onInteraction: b } = e,
         S = (0, c.Us)(),
-        { id: O, type: y } = N,
-        R = (0, i.bG)([d.A], () => d.A.getGuild(N.guild_id), [N.guild_id]),
+        { id: O, type: y } = j,
+        R = (0, i.bG)([d.A], () => d.A.getGuild(j.guild_id), [j.guild_id]),
         M = (0, i.bG)([A.A], () => A.A.getSelectedParticipant(O)),
         L = M?.type === v.lp.STREAM ? M.stream : null,
         D = (0, i.bG)([r.A], () => (M?.type === v.lp.ACTIVITY ? r.A.getApplication(M.applicationId) : void 0)),
         P = (0, C.A)(O),
-        G = (0, x.A)(O),
-        k = (0, f.A)(N, R, L?.ownerId, D?.id),
-        V = (0, h.A)(O, N.guild_id),
+        k = (0, x.A)(O),
+        G = (0, f.A)(j, R, L?.ownerId, D?.id),
+        V = (0, h.A)(O, j.guild_id),
         U = (0, I.A)(),
         B = (0, u.RQ)(O),
         H = (0, u.dA)(O),
         w = (0, g.A)(L, S),
         F = (0, p.A)(D, O),
         Y = (0, E.A)(),
-        z = (0, o.A)(N),
+        z = (0, o.A)(j),
         K = (0, m.f)(O);
     return (0, l.jsxs)(a.W, {
         "data-menu-migrated": !0,
@@ -50,19 +50,19 @@ function N(e) {
         navId: "more-settings-context",
         "aria-label": _.intl.string(_.t.FTLzdR),
         children: [
-            (0, l.jsx)(s.rX, { children: y !== T.rbe.GUILD_STAGE_VOICE ? k : null }),
+            (0, l.jsx)(s.rX, { children: y !== T.rbe.GUILD_STAGE_VOICE ? G : null }),
             (0, l.jsxs)(s.rX, {
                 children: [
                     y === T.rbe.GUILD_STAGE_VOICE ? B : null,
                     y === T.rbe.GUILD_STAGE_VOICE ? H : null,
-                    j || y === T.rbe.GUILD_STAGE_VOICE ? null : V,
+                    N || y === T.rbe.GUILD_STAGE_VOICE ? null : V,
                     Y,
                     y !== T.rbe.GUILD_STAGE_VOICE ? P : null,
-                    y === T.rbe.GUILD_STAGE_VOICE || y === T.rbe.GUILD_VOICE ? G : null,
+                    y === T.rbe.GUILD_STAGE_VOICE || y === T.rbe.GUILD_VOICE ? k : null,
                 ],
             }),
             (0, l.jsx)(s.rX, { children: z }),
-            (0, l.jsxs)(s.rX, { children: [U, !N.isManaged() && N.isPrivate() ? K : null] }),
+            (0, l.jsxs)(s.rX, { children: [U, !j.isManaged() && j.isPrivate() ? K : null] }),
             (0, l.jsxs)(s.rX, { children: [null != L ? w : null, null != D ? F : null] }),
         ],
     });

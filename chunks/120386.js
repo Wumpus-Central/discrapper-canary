@@ -26,8 +26,8 @@ function j(e) {
     return null != e.asset && "" !== e.asset;
 }
 var E = l(375708),
-    w = l(214097),
-    P = l(249360);
+    P = l(214097),
+    w = l(249360);
 let R = s._3.SIZE_72,
     S = p.Ay.getEnableHardwareAcceleration() ? u.Js : u.eu;
 function D(e) {
@@ -75,9 +75,9 @@ function D(e) {
         }),
         A = "default" === f && null != h && o;
     return (0, t.jsx)(S, {
-        className: r()({ [w.yT]: null == h, [P.O]: "placeholder" === f }),
+        className: r()({ [P.yT]: null == h, [w.O]: "placeholder" === f }),
         src: A ? p : m,
-        imageClassName: A ? w.WG : void 0,
+        imageClassName: A ? P.WG : void 0,
         avatarDecoration: h,
         size: R,
         "aria-hidden": !0,
@@ -96,10 +96,10 @@ function M(e) {
         y = p && null != b,
         N = k && y,
         j = (0, d.A)((0, f.lw)({ userValue: b, guildValue: I, pendingValue: C, guildId: l })),
-        { product: w } = (0, g.q)(j?.skuId),
-        P = x ? null != C : null != I,
+        { product: P } = (0, g.q)(j?.skuId),
+        w = x ? null != C : null != I,
         R =
-            null != j && P
+            null != j && w
                 ? {
                       onClick: () => (0, m.p)({ guildId: l ?? void 0, avatarDecoration: null }),
                       type: y ? "reset" : "remove",
@@ -120,7 +120,7 @@ function M(e) {
                 : null != l && "" !== l
                   ? l
                   : E.intl.string(t ? E.t.SZPJG4 : E.t.K77yQe);
-        })({ avatarDecorationPreview: j, productName: (0, v.VG)(w), hasPendingSelection: null != C }),
+        })({ avatarDecorationPreview: j, productName: (0, v.VG)(P), hasPendingSelection: null != C }),
         "aria-haspopup": "dialog",
         disabled: a,
         errorMessageId: r,

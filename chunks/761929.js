@@ -49,20 +49,20 @@ let u = function (e) {
                     u = 1 === a(f) ? "width" : "height";
                 (n.current.style[u] = `${s}px`), v.current || ((v.current = !0), o?.(s)), r(s, i);
             }
-            function C(n) {
+            function x(n) {
                 g(!1);
                 let l = e(n),
                     r = t(l);
                 u(r, l), c?.(r), (v.current = !1);
             }
-            let x = h ? "pointerup" : "mouseup",
-                I = h ? "pointermove" : "mousemove",
-                S = n.current.ownerDocument;
+            let C = h ? "pointerup" : "mouseup",
+                S = h ? "pointermove" : "mousemove",
+                I = n.current.ownerDocument;
             return (
-                S.addEventListener(x, C),
-                S.addEventListener(I, E),
+                I.addEventListener(C, x),
+                I.addEventListener(S, E),
                 () => {
-                    S.removeEventListener(x, C), S.removeEventListener(I, E), r.cancel();
+                    I.removeEventListener(C, x), I.removeEventListener(S, E), r.cancel();
                 }
             );
         }, [p, u, s, l, f, n, d, c, h, m, o]),

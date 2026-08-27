@@ -60,8 +60,8 @@ function d(e) {
             size: A = "default",
             maxLength: v,
             error: E,
-            warning: S,
-            trailing: C,
+            warning: C,
+            trailing: S,
             className: b,
             disabled: T = !1,
             growWidth: y,
@@ -72,7 +72,7 @@ function d(e) {
         R =
             (null != v && (t ? l : n).length > v ? a.intl.formatToPlainString(a.t.ICT5S6, { maxLength: v }) : void 0) ??
             E,
-        L = "compact" === A ? { variant: "compact" } : { variant: "default", trailing: C };
+        L = "compact" === A ? { variant: "compact" } : { variant: "default", trailing: S };
     return (0, i.jsx)(r.ZL, {
         ...L,
         isEditing: t,
@@ -98,11 +98,11 @@ function d(e) {
             onKeyDown: f,
             maxLength: v,
             placeholder: p,
-            trailing: C,
+            trailing: S,
             error: R,
-            helperText: S,
+            helperText: C,
         }),
         previewErrorMessage: R,
-        previewWarningMessage: S,
+        previewWarningMessage: C,
     });
 }

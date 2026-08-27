@@ -1,11 +1,11 @@
 n.d(t, {
     $x: () => b,
-    AO: () => x,
+    AO: () => C,
     MO: () => R,
-    YB: () => C,
-    oI: () => I,
+    YB: () => x,
+    oI: () => S,
     p9: () => T,
-    sl: () => S,
+    sl: () => I,
     uK: () => _,
     vr: () => k,
     x5: () => w,
@@ -33,7 +33,7 @@ async function E(e, t) {
     let { body: n } = await (0, m.aP)({ url: y.Rsh.STICKER_PACK(e), rejectWithError: (0, i.fT)() });
     return s.h.dispatch({ type: "STICKER_PACK_FETCH_SUCCESS", packId: e, pack: n, ingestStickers: t }), n;
 }
-async function C() {
+async function x() {
     let { locale: e = c.default.locale } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
     if (p.A.isFetchingStickerPacks || p.A.hasLoadedStickerPacks) return;
     s.h.wait(() => {
@@ -44,13 +44,13 @@ async function C() {
     } = await i.Bo.get({ url: y.Rsh.STICKER_PACKS, query: { locale: e }, rejectWithError: (0, i.fT)() });
     s.h.dispatch({ type: "STICKER_PACKS_FETCH_SUCCESS", packs: t });
 }
-async function x(e) {
+async function C(e) {
     let { body: t } = await i.Bo.get({ url: y.Rsh.STICKER(e), rejectWithError: (0, i.fT)() });
     if ((0, g.Xw)(t)) s.h.dispatch({ type: "GUILD_STICKER_FETCH_SUCCESS", sticker: t });
     else if ((0, g.FD)(t)) s.h.dispatch({ type: "PACK_STICKER_FETCH_SUCCESS", sticker: t });
     else throw Error("Invalid sticker type");
 }
-async function I(e, t) {
+async function S(e, t) {
     let { body: n } = await i.Bo.get({ url: y.Rsh.GUILD_STICKER_PACKS(e), rejectWithError: (0, i.fT)(), signal: t });
     s.h.dispatch({
         type: "GUILD_STICKERS_FETCH_SUCCESS",
@@ -58,7 +58,7 @@ async function I(e, t) {
         stickers: n.map((e) => (null != e.user ? { ...e, user_id: e.user.id, user: e.user } : e)),
     });
 }
-async function S(e) {
+async function I(e) {
     await i.Bo.del({ url: y.Rsh.GUILD_STICKER(e.guild_id, e.id), rejectWithError: (0, i.fT)() });
 }
 async function T(e) {

@@ -1,4 +1,4 @@
-t.d(n, { FE: () => T, Sb: () => j, Y1: () => N, bE: () => b });
+t.d(n, { FE: () => T, Sb: () => N, Y1: () => j, bE: () => b });
 var l = t(477900),
     i = t(582128),
     a = t(17928),
@@ -35,12 +35,12 @@ function _(e) {
         return null != n && null == n.position;
     });
 }
-function N(e) {
+function j(e) {
     let n = _(e),
         t = (0, a.bG)([c.Ay], () => c.Ay.keyboardModeEnabled);
     return n && t;
 }
-function j(e) {
+function N(e) {
     let { position: n, targetLabel: t } = e,
         l = i.useContext(I),
         { x: a, y: s } = n;
@@ -60,8 +60,8 @@ function j(e) {
 function b(e) {
     let { channelId: n, containerRef: t, roomWidth: a, children: c } = e,
         p = _(n),
-        T = N(n),
-        j = i.useId(),
+        T = j(n),
+        N = i.useId(),
         [b, S] = i.useState(null),
         O = i.useRef(null);
     T || null == b || S(null),
@@ -88,7 +88,7 @@ function b(e) {
         () =>
             T
                 ? {
-                      descriptionId: j,
+                      descriptionId: N,
                       setPreviewTarget: (e) => {
                           let n = O.current ?? g();
                           (O.current = n), S(x(e, n));
@@ -101,7 +101,7 @@ function b(e) {
                       },
                   }
                 : null,
-        [T, j, n],
+        [T, N, n],
     );
     return (0, l.jsxs)(I.Provider, {
         value: y,
@@ -114,7 +114,7 @@ function b(e) {
                         className: f.a,
                         children: (0, l.jsx)("div", {
                             className: f.G,
-                            id: j,
+                            id: N,
                             children: (0, l.jsx)(o.E, {
                                 variant: "text-sm/medium",
                                 children: E.intl.string(C.default.xyO7AD),

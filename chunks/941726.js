@@ -37,14 +37,14 @@ function I(e) {
                         v,
                         N,
                         _,
-                        T,
                         j,
+                        T,
                         b,
                         R,
                         O,
                         M,
                         L,
-                        { appsWithConfigs: w, isLoadingConfigs: k } =
+                        { appsWithConfigs: k, isLoadingConfigs: w } =
                             ((n = g.Q_.useSetting()),
                             i.useEffect(() => {
                                 (0, A.Wq)().catch(() => {});
@@ -86,7 +86,7 @@ function I(e) {
                                 ),
                         )),
                         (_ = (0, c.A)(v)),
-                        (T = i.useMemo(
+                        (j = i.useMemo(
                             () =>
                                 Object.fromEntries(
                                     _.filter(x.Vq)
@@ -94,16 +94,16 @@ function I(e) {
                                         .filter(x.QE)
                                         .filter((e) => {
                                             let [t, n] = e;
-                                            return w.has(n.id);
+                                            return k.has(n.id);
                                         }),
                                 ),
-                            [w, _],
+                            [k, _],
                         )),
-                        (j = i.useMemo(
-                            () => [...new Set(S.filter((e) => e.extra.application_id in T).map((e) => e.author_id))],
-                            [S, T],
+                        (T = i.useMemo(
+                            () => [...new Set(S.filter((e) => e.extra.application_id in j).map((e) => e.author_id))],
+                            [S, j],
                         )),
-                        { widgetApps: T, userIdsWhoMightHaveWidgetData: j, isFetchingApplications: N }),
+                        { widgetApps: j, userIdsWhoMightHaveWidgetData: T, isFetchingApplications: N }),
                         { identitiesByUserId: G, isLoadingIdentities: V } =
                             ((b = (0, a.cf)([h.A], () =>
                                 Object.fromEntries(D.map((e) => [e, h.A.getUserIdentities(e)]).filter(x.QE)),
@@ -129,10 +129,10 @@ function I(e) {
                             { profilesByUserId: O, isLoadingProfiles: M.length > 0 || L }),
                         B = (0, a.cf)(
                             [C.A],
-                            () => Object.fromEntries([...w].map((e) => [e, C.A.getConfig(e)]).filter(x.QE)),
-                            [w],
+                            () => Object.fromEntries([...k].map((e) => [e, C.A.getConfig(e)]).filter(x.QE)),
+                            [k],
                         ),
-                        W = k || U || V || H,
+                        W = w || U || V || H,
                         K = i.useMemo(() => {
                             if (!W && void 0 !== e)
                                 return e.map((e) => {

@@ -1,4 +1,4 @@
-o.r(
+_.r(
     (e.exports = {
         "heading-sm/normal": "heading-sm/normal_c1e9c4",
         fontScaling: "fontScaling_c1e9c4",

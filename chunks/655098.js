@@ -24,15 +24,15 @@ var l = n(477900),
     v = n(545442),
     N = n(922016),
     _ = n(565645),
-    T = n(730134),
-    j = n(775602),
+    j = n(730134),
+    T = n(775602),
     b = n(47167),
     R = n(442247),
     O = n(569926),
     M = n(106191),
     L = n(545868),
-    w = n(376943),
-    k = n(465365),
+    k = n(376943),
+    w = n(465365),
     P = n(78390),
     D = n(785562),
     U = n(332173),
@@ -84,7 +84,7 @@ function et(e) {
             __unsupportedReactNodeAsText: (0, l.jsxs)("div", {
                 className: $.fX,
                 children: [
-                    (0, l.jsx)(T.A, { user: s, animate: !0, size: y._3.SIZE_16, className: $.my }),
+                    (0, l.jsx)(j.A, { user: s, animate: !0, size: y._3.SIZE_16, className: $.my }),
                     q.Ay.getUserTag(s, { mode: "username", identifiable: r ? "never" : "always" }),
                     (0, l.jsx)("span", { className: $.D2, children: e }),
                 ],
@@ -101,7 +101,7 @@ function et(e) {
 function en(e) {
     let { id: t, guildId: n, channelId: s } = e,
         r = (0, E.bG)([B.A], () => (null != n ? B.A.getRole(n, t) : void 0)),
-        a = (0, E.bG)([j.Ay], () => j.Ay.roleStyle),
+        a = (0, E.bG)([T.Ay], () => T.Ay.roleStyle),
         o = (0, F.X_)(n, r, r?.colorStrings),
         u = i.useRef(null);
     if (null == r) return (0, l.jsxs)("span", { children: ["@", J.intl.string(J.t["YV4F/n"])] });
@@ -142,9 +142,9 @@ function el(e) {
         s = "text",
         r = !0;
     return (null != n &&
-        ((i = (0, w.nc)(n) ? (0, b.m1)(n, z.default, W.A) : J.intl.string(J.t["/YzI63"])),
-        (s = (0, w.nc)(n) ? ((0, Z.QG)(n) ?? "text") : "locked"),
-        (r = (0, k.Y)(n.type))),
+        ((i = (0, k.nc)(n) ? (0, b.m1)(n, z.default, W.A) : J.intl.string(J.t["/YzI63"])),
+        (s = (0, k.nc)(n) ? ((0, Z.QG)(n) ?? "text") : "locked"),
+        (r = (0, w.Y)(n.type))),
     r)
         ? (0, l.jsx)(U.A, { iconType: s, children: i })
         : (0, l.jsx)("span", { children: "#" + i });

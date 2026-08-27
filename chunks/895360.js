@@ -1,22 +1,22 @@
-l.d(t, { D: () => m });
-var n = l(477900),
-    i = l(503698),
-    s = l.n(i),
-    r = l(933832),
-    u = l(661531),
-    a = l(834730),
-    d = l(691540),
-    o = l(857250),
-    c = l(97483),
-    f = l(375708),
-    h = l(819296),
-    A = l(655214);
-function g() {
-    return (0, n.jsxs)("div", {
-        className: s()(A.oR, h.o),
+n.d(t, { D: () => g });
+var l = n(477900),
+    r = n(503698),
+    i = n.n(r),
+    s = n(933832),
+    a = n(661531),
+    u = n(834730),
+    o = n(691540),
+    c = n(857250),
+    d = n(97483),
+    f = n(375708),
+    h = n(819296),
+    m = n(655214);
+function p() {
+    return (0, l.jsxs)("div", {
+        className: i()(m.oR, h.o),
         children: [
-            (0, n.jsx)(r.CheckmarkLargeIcon, { size: "custom", className: h.K, color: u.A.colors.STATUS_POSITIVE.css }),
-            (0, n.jsx)(a.E, {
+            (0, l.jsx)(s.CheckmarkLargeIcon, { size: "custom", className: h.K, color: a.A.colors.STATUS_POSITIVE.css }),
+            (0, l.jsx)(u.E, {
                 color: "text-strong",
                 variant: "text-sm/semibold",
                 children: f.intl.string(f.t["3T2jbf"]),
@@ -24,6 +24,6 @@ function g() {
         ],
     });
 }
-function m() {
-    (0, d.P0)((0, o.o)("", c.Ck.CUSTOM, { component: (0, n.jsx)(g, {}) }));
+function g() {
+    (0, o.P0)((0, c.o)("", d.Ck.CUSTOM, { component: (0, l.jsx)(p, {}) }));
 }

@@ -68,15 +68,15 @@ let g = i().once(() =>
             ...c,
         ),
     ),
-    T = { text: a.Ay.RULES.text },
-    j = i().once(() => s.aV(m())),
+    j = { text: a.Ay.RULES.text },
+    T = i().once(() => s.aV(m())),
     b = i().once(() => s.aV(g())),
     R = i().once(() => s.aV(x())),
     O = i().once(() => s.aV(A())),
     M = i().once(() => s.aV(C())),
     L = i().once(() => s.aV(E())),
-    w = i().once(() => s.aV(I())),
-    k = i().once(() => s.aV(y())),
+    k = i().once(() => s.aV(I())),
+    w = i().once(() => s.aV(y())),
     P = i().once(() => s.aV(S())),
     D = i().once(() => s.aV(N())),
     U = i().once(() => s.aV(f())),
@@ -102,12 +102,12 @@ let g = i().once(() =>
         get notifCenterV2MessagePreviewRules() {
             return _();
         },
-        lockscreenWidgetMessageRules: T,
+        lockscreenWidgetMessageRules: j,
         astParserFor: s.X,
         reactParserFor: s.aV,
         parse: function () {
             for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
-            return j()(...t);
+            return T()(...t);
         },
         parseTopic: (e, t, n, l) => b()(e, t, { allowLinks: !0, allowGameMentions: !0, ...n }, l),
         parseTruncatedTopic: (e, t, n, l) => R()(e, t, { allowLinks: !0, allowGameMentions: !0, ...n }, l),
@@ -125,11 +125,11 @@ let g = i().once(() =>
         },
         parseInlineReply: function () {
             for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
-            return w()(...t);
+            return k()(...t);
         },
         parseGuildVerificationFormRule: function () {
             for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
-            return k()(...t);
+            return w()(...t);
         },
         parseGuildEventDescription: function () {
             for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];

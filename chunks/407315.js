@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Ay: () => v, Q9: () => k, W: () => w }), n(321073);
+n.d(t, { Ay: () => v, Q9: () => w, W: () => k }), n(321073);
 var l = n(635377),
     i = n.n(l),
     s = n(181370),
@@ -196,7 +196,7 @@ function N(e, t) {
                                                     l = [],
                                                     i = 0,
                                                     s = 0;
-                                                for (T.lastIndex = 0; null != (t = T.exec(e)); ) {
+                                                for (j.lastIndex = 0; null != (t = j.exec(e)); ) {
                                                     let r = t.index + t[0].length,
                                                         a = L(e.substring(s, t.index)).length,
                                                         o = l.filter((e) => null != e);
@@ -207,7 +207,7 @@ function N(e, t) {
                                                         a > 0 && (i += a),
                                                         null != t[1])
                                                     ) {
-                                                        let e = j.get(t[1]);
+                                                        let e = T.get(t[1]);
                                                         l.push(e ?? null);
                                                     } else l.pop();
                                                     s = r;
@@ -298,9 +298,9 @@ function N(e, t) {
     );
 }
 let _ = /(?:<span class="([^"]*)">)|(?:<\/span>)/g,
-    T = /(?:<(a-[a-z]{1,2})>)|(?:<\/a-[a-z]{1,2}>)/g,
-    j = new Map();
-for (let [e, t] of Object.entries(A)) e.startsWith("a-") && null != t && j.set(e, t);
+    j = /(?:<(a-[a-z]{1,2})>)|(?:<\/a-[a-z]{1,2}>)/g,
+    T = new Map();
+for (let [e, t] of Object.entries(A)) e.startsWith("a-") && null != t && T.set(e, t);
 let b = { max: 1 / 0, maxAge: +d.A.Millis.MINUTE, updateAgeOnGet: !0 },
     R = new (i())(b),
     O = new (i())(b),
@@ -313,7 +313,7 @@ function L(e) {
         .replace(/&quot;/g, '"')
         .replace(/&#x27;/g, "'");
 }
-function w(e, t) {
+function k(e, t) {
     let n = 0;
     for (let l of g.VW.nodes(e, {
         at: { anchor: { path: x.fP, offset: 0 }, focus: t },
@@ -327,10 +327,10 @@ function w(e, t) {
     }
     return n % 2 != 0;
 }
-function k(e) {
+function w(e) {
     if (null == e.selection) return !1;
     let t = g.ZF.start(e.selection);
-    return w(e, t);
+    return k(e, t);
 }
 (0, u.Q4)(() => {
     O.reset();

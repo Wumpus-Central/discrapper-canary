@@ -246,19 +246,19 @@ var y = n(462180),
     v = n(778712),
     N = n(571694),
     _ = n(548118),
-    T = n(366811),
-    j = n(734057),
+    j = n(366811),
+    T = n(734057),
     b = n(71393),
     R = n(287809),
     O = n(486020),
     M = n(316386);
 function L() {
-    let { guildId: e, channelId: t } = (0, T.A)((e) => {
+    let { guildId: e, channelId: t } = (0, j.A)((e) => {
             let { guildId: t, channelId: n } = e;
             return { guildId: t, channelId: n };
         }, y.x),
         n = (0, c.bG)([b.A], () => b.A.getGuild(e)),
-        i = (0, c.bG)([j.A], () => (null == n ? j.A.getChannel(t) : null)),
+        i = (0, c.bG)([T.A], () => (null == n ? T.A.getChannel(t) : null)),
         s = (0, c.bG)([R.default], () => R.default.getCurrentUser()),
         r = null != i ? (0, N.Y)(i) : null,
         a = null != s ? s.getAvatarURL(e, 80) : O.vI["0"],
@@ -356,7 +356,7 @@ function L() {
         })
     );
 }
-let w = Object.freeze({
+let k = Object.freeze({
     "voice-conversations": {
         popoutPosition: "right",
         highPriority: !0,
@@ -384,7 +384,7 @@ let w = Object.freeze({
     "friends-list": { spacing: 8, popoutPosition: "right" },
     "create-more-servers": { spacing: 8, popoutPosition: "right" },
 });
-var k = n(241541),
+var w = n(241541),
     P = n(967198),
     D = n(375708),
     U = n(851230);
@@ -392,7 +392,7 @@ function G() {
     return (0, l.jsx)(l.Fragment, {
         children: D.intl.format(D.t.ymkBti, {
             shareIcon: D.intl.string(D.t.VINpSK),
-            shareIconHook: () => (0, l.jsx)(k.D, { className: U.Kk }, "icon"),
+            shareIconHook: () => (0, l.jsx)(w.D, { className: U.Kk }, "icon"),
         }),
     });
 }
@@ -486,7 +486,7 @@ class B extends i.PureComponent {
     }
     render() {
         let { tutorialId: e, autoInvert: t, focused: n, origin: i } = this.props,
-            s = e in w ? w[e] : null;
+            s = e in k ? k[e] : null;
         if (null == s) return null;
         let {
                 media: a,
