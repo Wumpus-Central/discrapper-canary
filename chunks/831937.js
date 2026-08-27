@@ -150,7 +150,7 @@ var D = e(465932),
     Ar = e(280889),
     Al = e(565150),
     Aa = e(787458),
-    Ai = e(723444),
+    Ai = e(395780),
     As = e(626584),
     Ao = e(71393),
     Ad = e(292348),
@@ -231,7 +231,7 @@ class Am {
             i = this.uploads
                 .filter((A) => this.existingAttachmentIds.has(A.id))
                 .map((A) => ({ filename: A.item.file?.name, id: A.id })),
-            s = (0, Ai.I)(),
+            s = new Ai.A(),
             o = (await s.uploadFiles(a)).map((A, t) => (0, Ad.OW)(A, t)),
             d = null != this.editSkuId ? AA.Bo.patch : AA.Bo.post,
             u =

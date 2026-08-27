@@ -1142,17 +1142,21 @@ function na(e) {
             },
             [t],
         );
+    (0, ne.A)(
+        { name: t4.ImpressionNames.MESSAGE_ALSO_SEND_TO_CHANNEL, type: t4.ImpressionTypes.VIEW },
+        { disableTrack: null == r || !s.enabled },
+        [r, s.enabled],
+    );
+    let c = null != n;
     if (
-        ((0, ne.A)(
-            { name: t4.ImpressionNames.MESSAGE_ALSO_SEND_TO_CHANNEL, type: t4.ImpressionTypes.VIEW },
-            { disableTrack: null == r || !s.enabled },
-            [r, s.enabled],
-        ),
+        (i.useEffect(() => {
+            c && a && (0, nl.B)({ channelId: t.id, enabled: !1 });
+        }, [c, a, t.id]),
         !s.enabled || null == r)
     )
         return null;
-    let c = (0, nn.gU)(r),
-        d = j.intl.format(j.t.UqL10G, {
+    let d = (0, nn.gU)(r),
+        h = j.intl.format(j.t.UqL10G, {
             callToActionHook: (e, t) =>
                 (0, l.jsx)(
                     e0.E,
@@ -1174,14 +1178,14 @@ function na(e) {
                         color: "text-subtle",
                         lineClamp: 1,
                         className: nr.Pf,
-                        children: [null == c ? null : (0, l.jsx)(c, { color: "currentColor", className: nr.Kk }, t), e],
+                        children: [null == d ? null : (0, l.jsx)(d, { color: "currentColor", className: nr.Kk }, t), e],
                     },
                     t,
                 ),
         });
     return (0, l.jsx)("div", {
         className: nr.kL,
-        children: (0, l.jsx)(t9.S, { checked: a, disabled: null != n, onChange: u, label: d, labelType: "secondary" }),
+        children: (0, l.jsx)(t9.S, { checked: a, disabled: c, onChange: u, label: h, labelType: "secondary" }),
     });
 }
 function no(e) {

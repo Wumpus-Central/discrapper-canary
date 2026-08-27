@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => m });
+n.d(t, { A: () => g });
 var i = n(435558),
     r = n.n(i),
     a = n(314116),
@@ -7,46 +7,47 @@ var i = n(435558),
     l = n(148494),
     o = n(155718),
     d = n(47167),
-    c = n(135621),
-    u = n(674470),
-    _ = n(970244),
-    E = n(994500),
-    A = n(287809),
-    h = n(392054),
-    I = n(73510),
-    f = n(652215),
-    p = n(375708);
-function T(e) {
-    return e === f.Z86.GIF.title ? p.intl.string(p.t["0vrCgJ"]) : "";
+    c = n(451909),
+    u = n(135621),
+    _ = n(674470),
+    E = n(970244),
+    A = n(994500),
+    h = n(287809),
+    I = n(392054),
+    f = n(73510),
+    p = n(652215),
+    T = n(375708);
+function m(e) {
+    return e === p.Z86.GIF.title ? T.intl.string(T.t["0vrCgJ"]) : "";
 }
-let m = [
-    ...r()(f.Z86)
+let g = [
+    ...r()(p.Z86)
         .values()
         .map((e) => ({
             id: e.commandId,
             untranslatedName: e.command,
             displayName: e.command,
             type: o.kc.CHAT,
-            inputType: h.y$.BUILT_IN_INTEGRATION,
-            applicationId: I.Ik.BUILT_IN,
+            inputType: I.y$.BUILT_IN_INTEGRATION,
+            applicationId: f.Ik.BUILT_IN,
             get untranslatedDescription() {
-                return T(e.title);
+                return m(e.title);
             },
             get displayDescription() {
-                return T(e.title);
+                return m(e.title);
             },
             options:
-                e.type === f.p_j.GIF
+                e.type === p.p_j.GIF
                     ? [
                           {
                               name: "query",
                               displayName: "query",
                               type: o.n4.STRING,
                               get description() {
-                                  return p.intl.string(p.t["+9g3Du"]);
+                                  return T.intl.string(T.t["+9g3Du"]);
                               },
                               get displayDescription() {
-                                  return p.intl.string(p.t["+9g3Du"]);
+                                  return T.intl.string(T.t["+9g3Du"]);
                               },
                               required: !0,
                           },
@@ -61,13 +62,13 @@ let m = [
         untranslatedName: "leave",
         displayName: "leave",
         type: o.kc.CHAT,
-        inputType: h.y$.BUILT_IN,
-        applicationId: I.Ik.BUILT_IN,
+        inputType: I.y$.BUILT_IN,
+        applicationId: f.Ik.BUILT_IN,
         get untranslatedDescription() {
-            return p.intl.string(p.t["26C4oi"]);
+            return T.intl.string(T.t["26C4oi"]);
         },
         get displayDescription() {
-            return p.intl.string(p.t["26C4oi"]);
+            return T.intl.string(T.t["26C4oi"]);
         },
         options: [
             {
@@ -75,10 +76,10 @@ let m = [
                 displayName: "silent",
                 type: o.n4.BOOLEAN,
                 get description() {
-                    return p.intl.string(p.t.YH7PkD);
+                    return T.intl.string(T.t.YH7PkD);
                 },
                 get displayDescription() {
-                    return p.intl.string(p.t.bq3JXs);
+                    return T.intl.string(T.t.bq3JXs);
                 },
                 required: !1,
             },
@@ -90,22 +91,22 @@ let m = [
         execute: (e, t) => {
             let { channel: n } = t;
             if (null == n) return;
-            let i = (0, d.m1)(n, A.default, E.A),
-                r = p.intl.formatToPlainString(p.t.hJ5Ap4, { name: i }),
-                o = p.intl.format(p.t.SSIVOu, { name: i }),
+            let i = (0, d.m1)(n, h.default, A.A),
+                r = T.intl.formatToPlainString(T.t.hJ5Ap4, { name: i }),
+                o = T.intl.format(T.t.SSIVOu, { name: i }),
                 c = e.find((e) => "silent" === e.name)?.value ?? !1;
             async function u() {
                 if (null != n)
                     try {
                         await s.A.closePrivateChannel(n.id, void 0, c);
                     } catch (e) {
-                        l.A.sendBotMessage(n.id, p.intl.string(p.t["YOsuT/"]));
+                        l.A.sendBotMessage(n.id, T.intl.string(T.t["YOsuT/"]));
                     }
             }
             n.isManaged() &&
-                ((r = p.intl.formatToPlainString(p.t.hVGjEW, { name: i })),
-                (o = p.intl.format(p.t.IK1Qvs, { name: i }))),
-                (0, a.A)({ title: r, subtitle: o, confirmText: p.intl.string(p.t["26C4oi"]), onConfirm: u });
+                ((r = T.intl.formatToPlainString(T.t.hVGjEW, { name: i })),
+                (o = T.intl.format(T.t.IK1Qvs, { name: i }))),
+                (0, a.A)({ title: r, subtitle: o, confirmText: T.intl.string(T.t["26C4oi"]), onConfirm: u });
         },
     },
     {
@@ -113,13 +114,13 @@ let m = [
         untranslatedName: "schedule",
         displayName: "schedule",
         type: o.kc.CHAT,
-        inputType: h.y$.BUILT_IN,
-        applicationId: I.Ik.BUILT_IN,
+        inputType: I.y$.BUILT_IN,
+        applicationId: f.Ik.BUILT_IN,
         get untranslatedDescription() {
-            return p.intl.string(p.t.Xw97sv);
+            return T.intl.string(T.t.Xw97sv);
         },
         get displayDescription() {
-            return p.intl.string(p.t.Xw97sv);
+            return T.intl.string(T.t.Xw97sv);
         },
         options: [
             {
@@ -127,25 +128,25 @@ let m = [
                 displayName: "message",
                 type: o.n4.STRING,
                 get description() {
-                    return p.intl.string(p.t.WPXiIk);
+                    return T.intl.string(T.t.WPXiIk);
                 },
                 get displayDescription() {
-                    return p.intl.string(p.t.WPXiIk);
+                    return T.intl.string(T.t.WPXiIk);
                 },
                 required: !0,
                 get maxLength() {
-                    return (0, c.a)();
+                    return (0, u.a)();
                 },
             },
         ],
         predicate: (e) => {
             let { channel: t } = e;
-            return null != t && (0, u.f8)("ApplicationCommandBuiltInCommands");
+            return null != t && (0, _.f8)("ApplicationCommandBuiltInCommands");
         },
         execute: (e, t) => {
             let { channel: n } = t,
                 i = e.find((e) => "message" === e.name)?.value;
-            null != n && "string" == typeof i && "" !== i && (0, _.e0)({ channel: n, content: i });
+            null != n && "string" == typeof i && "" !== i && (0, E.e0)({ channel: n, message: c.Ay.parse(n, i) });
         },
     },
     {
@@ -153,13 +154,13 @@ let m = [
         untranslatedName: "sticker",
         displayName: "sticker",
         type: o.kc.CHAT,
-        inputType: h.y$.BUILT_IN_INTEGRATION,
-        applicationId: I.Ik.BUILT_IN,
+        inputType: I.y$.BUILT_IN_INTEGRATION,
+        applicationId: f.Ik.BUILT_IN,
         get untranslatedDescription() {
-            return p.intl.string(p.t.GUH9II);
+            return T.intl.string(T.t.GUH9II);
         },
         get displayDescription() {
-            return p.intl.string(p.t.GUH9II);
+            return T.intl.string(T.t.GUH9II);
         },
         options: [
             {
@@ -167,15 +168,15 @@ let m = [
                 displayName: "query",
                 type: o.n4.STRING,
                 get description() {
-                    return p.intl.string(p.t.hIbHm1);
+                    return T.intl.string(T.t.hIbHm1);
                 },
                 get displayDescription() {
-                    return p.intl.string(p.t.hIbHm1);
+                    return T.intl.string(T.t.hIbHm1);
                 },
                 required: !0,
             },
         ],
-        integrationType: f.p_j.STICKER,
+        integrationType: p.p_j.STICKER,
         integrationTitle: "sticker",
     },
 ];
