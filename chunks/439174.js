@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Xr: () => o, cZ: () => l, e0: () => s });
+n.d(t, { UO: () => d, Xr: () => o, cZ: () => l, e0: () => s });
 var i = n(536637),
     r = n.n(i),
     a = n(202541);
@@ -15,4 +15,14 @@ function o(e, t) {
     if (null == n) return null;
     let i = r()(t);
     return i.add(n.tenureReqNumMonths, "months"), i.add(1, "days"), i.toDate();
+}
+function d(e) {
+    if (null == e) return null;
+    let t = new Date().getTime();
+    for (let n = a.sp.length - 1; n >= 0; n--) {
+        let i = a.sp[n],
+            r = o(i, e);
+        if (null != r && t >= r.getTime()) return i;
+    }
+    return null;
 }

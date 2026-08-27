@@ -51,7 +51,7 @@ var s = n(477900),
     J = n(975571),
     Q = n(158045),
     ee = n(19575),
-    et = n(878784),
+    et = n(19886),
     en = n(627380),
     es = n(704640),
     er = n(425713),
@@ -266,7 +266,7 @@ function eN(e) {
         d = r?.nameUnformatted ?? ep.VD[ep.Ac.PREMIUM_TENURE_1_MONTH].nameUnformatted,
         m = (0, er.I)(u).standard,
         p = ec.intl.string(d),
-        f = o === et.Wo.EARNED,
+        f = o === et.Wo.EARNED || o === et.Wo.WITHHELD,
         x = l?.days ?? 1,
         v = ec.t.pwkxYF;
     if (f) {

@@ -2456,7 +2456,7 @@ function ai(e) {
         children: (0, r.jsx)(p.E, { variant: "text-xs/normal", color: "text-muted", children: t.name }),
     });
 }
-var as = a(783878),
+var as = a(890497),
     ar = a(769015),
     ao = a(311043),
     ad = a(569926),
@@ -17220,7 +17220,7 @@ var hy = a(803306),
     h_ = a(189213),
     hC = a(543767),
     hS = a(935208),
-    hN = a(878784);
+    hN = a(19886);
 let hA = [
     { id: "1week", label: "1 Week", value: 0 },
     { id: "1month", label: "1 Month (Bronze)", value: 1 },

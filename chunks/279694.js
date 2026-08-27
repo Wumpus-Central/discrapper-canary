@@ -75,7 +75,7 @@ var z = s(554146),
     ee = s(131168),
     et = s(482589),
     es = s(511484),
-    ei = s(296704),
+    ei = s(221877),
     en = s(661531),
     ea = s(717421),
     el = s(331322),
@@ -281,7 +281,7 @@ function e6(e) {
             return (s) => (0, c.jsx)(e, { ...s, startingScreen: t });
         });
 }
-function e8(e) {
+function e5(e) {
     let { user: t } = e,
         { avatarSrc: s, eventHandlers: i } = (0, eZ.A)({ userId: t.id, size: eK._3.SIZE_24 });
     return (0, c.jsx)(
@@ -290,7 +290,7 @@ function e8(e) {
         t.id,
     );
 }
-function e5(e) {
+function e8(e) {
     let { slotIndex: t } = e;
     return (0, c.jsx)("div", { className: e3.p, children: t });
 }
@@ -302,10 +302,10 @@ function e9(e) {
             let e = [];
             for (let s = 0; s < e0.Z; s++)
                 if (t?.[s] !== void 0) {
-                    let i = (0, c.jsx)(e8, { user: t[s] }, t[s].id);
+                    let i = (0, c.jsx)(e5, { user: t[s] }, t[s].id);
                     e.push(i);
                 } else {
-                    let t = (0, c.jsx)(e5, { slotIndex: s + 1 }, s);
+                    let t = (0, c.jsx)(e8, { slotIndex: s + 1 }, s);
                     e.push(t);
                 }
             return e;
@@ -1065,8 +1065,8 @@ function tV(e, t, i) {
             s.e("983513"),
             s.e("216806"),
             s.e("310734"),
-            s.e("762332"),
-            s.e("208607"),
+            s.e("348567"),
+            s.e("900277"),
             s.e("127962"),
             s.e("364827"),
             s.e("907167"),
@@ -1546,8 +1546,8 @@ let t6 = function () {
         ],
     });
 };
-var t8 = s(325499),
-    t5 = s(562708),
+var t5 = s(325499),
+    t8 = s(562708),
     t9 = s(885574),
     t4 = s(43990),
     se = s(993077),
@@ -1622,8 +1622,8 @@ function sd(e) {
 function su(e) {
     let { glowing: t = !1 } = e;
     (0, st.A)({
-        type: t5.ImpressionTypes.VIEW,
-        name: t5.ImpressionNames.PERK_DISCOVERABILITY_CARD,
+        type: t8.ImpressionTypes.VIEW,
+        name: t8.ImpressionNames.PERK_DISCOVERABILITY_CARD,
         properties: { name: si.XBOX_PREMIUM_PERK_HERO_ID, third_party_partner: "xbox" },
     });
     let { analyticsLocations: i } = (0, j.Ay)(A.A.CROISSANT_PREMIUM_HERO_CARD),
@@ -1769,7 +1769,7 @@ function sy() {
         a = (0, sj.Zk)({ location: "useHardwarePartnerPerkCards" }),
         l = (0, sj.S9)({ location: "useHardwarePartnerPerkCards" }),
         r = null === (0, sE.N)(),
-        d = (0, t8.b)("useHardwarePartnerPerkCards"),
+        d = (0, t5.b)("useHardwarePartnerPerkCards"),
         { currentDate: u, nDaysInMonth: m } = (0, o.useMemo)(() => {
             let e = new Date();
             return { currentDate: e, nDaysInMonth: new Date(e.getFullYear(), e.getMonth() + 1, 0).getDate() };
@@ -1874,7 +1874,7 @@ var sD = s(762493);
 let sM = "xgpp";
 function sO(e) {
     let { glowingSectionId: t, glowingPerkId: s } = e,
-        i = (0, t8.b)("premium_subscriber_home_rewards"),
+        i = (0, t5.b)("premium_subscriber_home_rewards"),
         { callOfDutyCard: n, expiredCallOfDutyCard: a, logitechCard: l, steelseriesCard: r } = sy();
     if (!i) return null;
     let o = null != n || null != a || null != l || null != r;
@@ -1962,8 +1962,8 @@ let sU = function (e) {
                                 s.e("983513"),
                                 s.e("216806"),
                                 s.e("310734"),
-                                s.e("762332"),
-                                s.e("208607"),
+                                s.e("348567"),
+                                s.e("900277"),
                                 s.e("127962"),
                                 s.e("364827"),
                                 s.e("907167"),
@@ -2161,8 +2161,8 @@ var s1 = s(462887),
     s7 = s(259065),
     s3 = s(206835),
     s6 = s(591179),
-    s8 = s(462463),
-    s5 = s(878784),
+    s5 = s(462463),
+    s8 = s(19886),
     s9 = s(425713),
     s4 = s(696292),
     ie = s(192444),
@@ -2356,8 +2356,8 @@ function iL() {
         { analyticsLocations: i } = (0, j.Ay)(A.A.PREMIUM_MARKETING_PERK_CARD),
         n = (0, s6.X)("useWhatsNewPerkCards"),
         { callOfDutyCard: a, expiredCallOfDutyCard: l, logitechCard: r, steelseriesCard: d } = sy(),
-        m = (0, t8.b)("premium_subscriber_home_rewards"),
-        x = (0, s8.A)({ analyticsLocations: i }),
+        m = (0, t5.b)("premium_subscriber_home_rewards"),
+        x = (0, s5.A)({ analyticsLocations: i }),
         f = (0, o.useCallback)(() => {
             (0, ey.openUserSettings)(eS.X.PROFILE_PANEL, { analyticsLocations: i }, () =>
                 (0, s7.L)({ analyticsLocations: i }),
@@ -2374,73 +2374,77 @@ function iL() {
         N = (function (e) {
             let { fractionalState: t } = (0, eP.A)(),
                 s = t === tF.xc.FP_ONLY,
-                i = (0, s5.$F)(),
-                n = (0, s5.Xb)(),
-                a = i?.status === s5.Wo.UPCOMING || s,
-                l = (0, s9.N)(i?.id),
-                r = (function () {
-                    let e = (0, s5.$F)(),
+                i = (0, s8.$F)(),
+                n = (0, s8.Xb)(),
+                a = i?.status === s8.Wo.UPCOMING || s,
+                l = i?.status === s8.Wo.WITHHELD,
+                r = a || l,
+                c = (0, s9.N)(i?.id),
+                d = (function () {
+                    let e = (0, s8.$F)(),
                         t = (0, iR.P)(),
-                        s = (0, s5.Xb)(),
+                        s = (0, s8.Xb)(),
                         i = (function (e) {
                             let { measureFromStreakStart: t } = iv.useConfig({ location: e });
                             return t;
                         })("tenure_badge_progress_bar");
-                    if (null == e || null == t || null == s) return null;
+                    if (null == e || null == t || null == s || e.status === s8.Wo.WITHHELD) return null;
                     let n = ti()(),
                         a = ti()(s),
-                        l = i || e.status === s5.Wo.UPCOMING ? 0 : e.tenureReqNumMonths,
+                        l = i || e.status === s8.Wo.UPCOMING ? 0 : e.tenureReqNumMonths,
                         r = t.tenureReqNumMonths,
                         c = a.clone().add(l, "months"),
                         o = a.clone().add(r, "months").diff(c);
                     return Math.max(0, Math.min(1, (n.diff(c) - 864e5) / o));
                 })(),
-                c = (0, g.bG)([eI.Ay], () => eI.Ay.useReducedMotion) && !a,
-                d = (0, i_.t)(),
-                m = (0, iR.P)();
+                m = (0, g.bG)([eI.Ay], () => eI.Ay.useReducedMotion) && !r,
+                x = (0, i_.t)(),
+                f = (0, iR.P)();
             return (0, o.useMemo)(() => {
                 let t,
-                    o = null != m ? ex.intl.string(m.nameUnformattedNitro) : void 0;
+                    a = null != f ? ex.intl.string(f.nameUnformattedNitro) : void 0;
                 null == i
                     ? s && (t = (0, iI.T)(tF.Ac.PREMIUM_TENURE_1_MONTH, 1) ?? void 0)
                     : (t =
-                          i.status === s5.Wo.UPCOMING
-                              ? ex.intl.formatToPlainString(ex.t.a1eKDi, { days: d?.days ?? 0 })
-                              : ((function (e, t) {
-                                    if (null != e && null != t) {
-                                        if (e.days <= 30)
-                                            return ex.intl.formatToPlainString(ex.t.NEXoaI, {
-                                                days: e.days,
-                                                nextBadgeName: t,
-                                            });
-                                        if (e.months <= 3)
-                                            return ex.intl.formatToPlainString(ex.t.KDV8oD, {
-                                                months: e.months,
-                                                nextBadgeName: t,
-                                            });
-                                    }
-                                })(d, o) ??
-                                (0, iI.T)(i.id, i.tenureReqNumMonths) ??
-                                void 0));
-                let g = null;
+                          i.status === s8.Wo.UPCOMING
+                              ? ex.intl.formatToPlainString(ex.t.a1eKDi, { days: x?.days ?? 0 })
+                              : i.status === s8.Wo.WITHHELD
+                                ? ((0, iI.T)(i.id, i.tenureReqNumMonths) ?? void 0)
+                                : ((function (e, t) {
+                                      if (null != e && null != t) {
+                                          if (e.days <= 30)
+                                              return ex.intl.formatToPlainString(ex.t.NEXoaI, {
+                                                  days: e.days,
+                                                  nextBadgeName: t,
+                                              });
+                                          if (e.months <= 3)
+                                              return ex.intl.formatToPlainString(ex.t.KDV8oD, {
+                                                  months: e.months,
+                                                  nextBadgeName: t,
+                                              });
+                                      }
+                                  })(x, a) ??
+                                  (0, iI.T)(i.id, i.tenureReqNumMonths) ??
+                                  void 0));
+                let l = null;
                 return (
-                    null != l ? (g = a || c ? l.standard : l.ambientLarge) : s && (g = iy),
+                    null != c ? (l = r || m ? c.standard : c.ambientLarge) : s && (l = iy),
                     {
                         id: si.TENURE_BADGE_CARD_ID,
                         title:
                             null != i ? ex.intl.string(i.nameUnformattedNitro) : s ? ex.intl.string(ex.t.tx9Fvw) : "",
                         pillText: ex.intl.string(ex.t["jyYgZ+"]),
-                        primaryAsset: g,
-                        primaryAssetClassName: u()(iS.pq, { [iS.n6]: a, [iS.kE]: c }),
+                        primaryAsset: l,
+                        primaryAssetClassName: u()(iS.pq, { [iS.rX]: r, [iS.kE]: m }),
                         caption: null != n ? ex.intl.formatToPlainString(ex.t.Hu4jfi, { date: new Date(n) }) : void 0,
                         description: t,
                         subscriptionRequired: !0,
-                        progress: r ?? void 0,
+                        progress: d ?? void 0,
                         ctaText: ex.intl.string(ex.t.jVcuVY),
                         onCtaClick: () => (0, iP.D)({ analyticsLocations: e }),
                     }
                 );
-            }, [i, l, a, c, n, r, s, d, m, e]);
+            }, [i, c, r, m, n, d, s, x, f, e]);
         })(i),
         b =
             ((e = (0, $.TF)({ location: "useWhatsNewPerkCards" })),
@@ -2545,7 +2549,7 @@ function iV(e) {
         s = (function () {
             let e = (0, s2.DP)(),
                 t = (0, s6.X)("useFavoritesPerkCards"),
-                s = (0, s5.Lh)(),
+                s = (0, s8.Lh)(),
                 i = (0, s9.N)(s)?.standard ?? null,
                 { analyticsLocations: n } = (0, j.Ay)(A.A.PREMIUM_MARKETING_PERK_CARD),
                 a = (0, s3.A)({ scrollPosition: ik._F.TRY_IT_OUT, analyticsLocations: n }),
@@ -2564,7 +2568,7 @@ function iV(e) {
                 m = (0, o.useCallback)(() => {
                     (0, ey.openUserSettings)(eS.X.SOUNDBOARD_CATEGORY, { analyticsLocations: n });
                 }, [n]),
-                g = (0, s8.A)({ analyticsLocations: n }),
+                g = (0, s5.A)({ analyticsLocations: n }),
                 x = (0, o.useCallback)(() => {
                     (0, ey.openUserSettings)(eS.X.PROFILE_PANEL, { analyticsLocations: n }, () =>
                         (0, s7.L)({ analyticsLocations: n }),
@@ -3006,7 +3010,7 @@ let i7 = (0, w.mj)({
 var i3 = s(860839);
 let i6 =
     "https://cdn.discordapp.com/assets/content/dfb187cfa9d267774f50c4f67cb7628658cefc11db41c6a04c08fc5aadc9dbcc.png";
-function i8(e) {
+function i5(e) {
     let { alt: t, ariaLabel: s, ariaHidden: i, role: n, width: a = 288, height: l = 192 } = e;
     return (0, c.jsx)("img", {
         style: { width: a, height: l },
@@ -3018,7 +3022,7 @@ function i8(e) {
         role: n ?? "img",
     });
 }
-var i5 = s(783420),
+var i8 = s(783420),
     i9 = s(204413),
     i4 = s(245383),
     ne = s(824069),
@@ -3142,7 +3146,7 @@ function np(e) {
     let { skuId: t, selectedPlanId: s, subscribeButtonProps: i } = e,
         n = null == s || !0 === i.disabled,
         a = null == s ? "secondary" : i.variant;
-    return (0, c.jsx)(i5.A, {
+    return (0, c.jsx)(i8.A, {
         subscriptionTier: t,
         initialPlanId: s,
         shouldDisallowPlanSelection: !0,
@@ -3352,7 +3356,7 @@ function nh(e) {
                   (0, c.jsx)("div", {
                       className: nf.kX,
                       "aria-hidden": !0,
-                      children: (0, c.jsx)(i8, { alt: "", ariaHidden: !0, width: "100%", height: "auto" }),
+                      children: (0, c.jsx)(i5, { alt: "", ariaHidden: !0, width: "100%", height: "auto" }),
                   }),
                   b,
               ],
@@ -3375,7 +3379,7 @@ function nN(e) {
                   premiumGroupProductName: (0, ih.DP)(),
               })
             : ex.intl.string(ex.t["2pG5Ga"]),
-        p = (0, c.jsx)(i5.A, {
+        p = (0, c.jsx)(i8.A, {
             subscriptionTier: tF.pe.TIER_2,
             initialPlanId: tF.gD.PREMIUM_GROUP_MONTH,
             children: (e) => {
@@ -3891,7 +3895,7 @@ function nW(e) {
     });
 }
 let nK = o.memo(function (e) {
-        let t = (0, t8.b)("premium_marketing_bento"),
+        let t = (0, t5.b)("premium_marketing_bento"),
             { whatsNewBoxes: s } = (0, nV.Ay)(t);
         return (0, c.jsx)(nW, {
             boxLayout: s,
@@ -4082,8 +4086,8 @@ let n6 = o.memo(
         });
     }),
 );
-var n8 = s(820081),
-    n5 = s(140735),
+var n5 = s(820081),
+    n8 = s(140735),
     n9 = s(401432),
     n4 = s(580630),
     ae = s(795269),
@@ -4096,14 +4100,14 @@ function aa(e) {
     return t
         ? (0, c.jsxs)(c.Fragment, {
               children: [
-                  (0, c.jsx)(n8.B, { size: "sm", color: en.A.colors.TEXT_STRONG, "aria-hidden": !0 }),
-                  (0, c.jsx)(n5.A, { children: ex.intl.string(ex.t["tq+6t/"]) }),
+                  (0, c.jsx)(n5.B, { size: "sm", color: en.A.colors.TEXT_STRONG, "aria-hidden": !0 }),
+                  (0, c.jsx)(n8.A, { children: ex.intl.string(ex.t["tq+6t/"]) }),
               ],
           })
         : (0, c.jsxs)(c.Fragment, {
               children: [
                   (0, c.jsx)(n9.a, { size: "xs", color: en.A.colors.TEXT_STRONG, "aria-hidden": !0 }),
-                  (0, c.jsx)(n5.A, { children: ex.intl.string(ex.t.l4qZrp) }),
+                  (0, c.jsx)(n8.A, { children: ex.intl.string(ex.t.l4qZrp) }),
               ],
           });
 }
@@ -4213,7 +4217,7 @@ let ad = function (e) {
             p = (0, eO.JM)(tF.gD.PREMIUM_MONTH_TIER_0),
             h = (0, eO.JM)(tF.gD.PREMIUM_MONTH_TIER_2),
             N = (function () {
-                let e = (0, t8.b)("premium_marketing_comparison"),
+                let e = (0, t5.b)("premium_marketing_comparison"),
                     t = [
                         {
                             id: 10,
