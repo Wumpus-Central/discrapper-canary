@@ -463,8 +463,8 @@ function et(e) {
 }
 var er = t(435558),
     el = t(770178),
-    ei = t(875031),
-    es = t(538790),
+    ei = t(99018),
+    es = t(160844),
     ea = t(138017),
     ec = t(661531),
     eo = t(259678),
@@ -1113,8 +1113,8 @@ function e3(e) {
         );
     throw Error("Panels must have a list of categories");
 }
-var e9 = t(749364);
-function e4(e) {
+var e4 = t(749364);
+function e9(e) {
     let { node: n } = e;
     return (0, r.jsxs)(x.B, {
         gap: 8,
@@ -1123,7 +1123,7 @@ function e4(e) {
             (0, r.jsx)(B.D, {
                 variant: "heading-md/semibold",
                 color: "text-muted",
-                className: e9.D,
+                className: e4.D,
                 children: eK.intl.string(eK.t.rPREPG),
             }),
             n.layout.map((e) => (0, r.jsx)(nr, { node: e }, e.key)),
@@ -1159,7 +1159,7 @@ function nt(e) {
         case i.Z6.FIELD_SET:
             return (0, r.jsx)(eF, { node: t });
         case i.Z6.RELATED:
-            return (0, r.jsx)(e4, { node: t });
+            return (0, r.jsx)(e9, { node: t });
         case i.Z6.CARD:
             return (0, r.jsx)(em, { node: t });
         case i.Z6.CATEGORY:

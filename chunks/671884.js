@@ -411,7 +411,7 @@ function e1(e) {
                             onProgressChange: L,
                             children: [
                                 (0, n.jsx)(e3, { isNew: a }),
-                                T && !t ? (0, n.jsx)(e5, { onMenu: K, onBeforeDelete: H }) : (0, n.jsx)(e9, {}),
+                                T && !t ? (0, n.jsx)(e5, { onMenu: K, onBeforeDelete: H }) : (0, n.jsx)(e7, {}),
                                 (0, n.jsx)("div", { className: eJ.dH, "aria-hidden": "true" }),
                             ],
                         }),
@@ -473,12 +473,12 @@ function e5(e) {
         ],
     });
 }
-function e9() {
+function e7() {
     let e = (0, eR.Y_)();
     return (0, n.jsxs)("div", {
         className: eJ.E4,
         children: [
-            (0, n.jsx)(e7, {}),
+            (0, n.jsx)(e9, {}),
             e.isFavorite &&
                 (0, n.jsx)("div", {
                     className: s()(eJ.cH, eJ.y8),
@@ -488,7 +488,7 @@ function e9() {
         ],
     });
 }
-function e7() {
+function e9() {
     let e = (0, eR.Y_)(),
         t = 0 === e.length,
         l = !0 === e.pending,
@@ -922,8 +922,8 @@ var tr = l(922016),
     tf = l(305866),
     tp = l(939249),
     tj = l(789645),
-    ty = l(939546),
-    tv = l(99478);
+    ty = l(620409),
+    tv = l(569737);
 function tb(e) {
     return e.setHours(0, 0, 0, 0), e.getTime();
 }
@@ -1887,7 +1887,7 @@ var t1 = l(770178),
     t2 = l(765548),
     t3 = l(202163),
     t5 = l(68408);
-function t9(e) {
+function t7(e) {
     let {
             session: t,
             recentClipIds: l,
@@ -2073,7 +2073,7 @@ function t9(e) {
         ],
     });
 }
-var t7 = l(799888);
+var t9 = l(799888);
 function t8(e) {
     let { filteredClips: t, totalClipCount: l, onEdit: a, onClipClick: s, isLoading: r } = e,
         { enableAutoClipsReview: o } = tq.useConfig({ location: "ClipsGalleryHome" }),
@@ -2131,15 +2131,15 @@ function t8(e) {
         }, []);
     return p.length > 0 || d
         ? (0, n.jsx)(t$.Ip, {
-              className: t7.iR,
+              className: t9.iR,
               fade: !0,
               children: (0, n.jsxs)("div", {
-                  className: t7.Qs,
+                  className: t9.Qs,
                   ref: v,
                   children: [
                       d &&
                           (0, n.jsx)("div", {
-                              className: t7.Dk,
+                              className: t9.Dk,
                               children: (0, n.jsx)(t0, { clips: t, onEdit: a, onEdgeNavigate: b }),
                           }),
                       p.length > 0 &&
@@ -2152,7 +2152,7 @@ function t8(e) {
                                   }),
                                   p.map((e, t) =>
                                       (0, n.jsx)(
-                                          t9,
+                                          t7,
                                           {
                                               session: e,
                                               recentClipIds: m,
@@ -2167,7 +2167,7 @@ function t8(e) {
                                       ),
                                   ),
                                   (0, n.jsx)("div", {
-                                      className: t7.dp,
+                                      className: t9.dp,
                                       children: (0, n.jsx)(eC.$, {
                                           variant: "primary",
                                           text: eu.intl.string(ec.default.RQtkop),
@@ -2180,7 +2180,7 @@ function t8(e) {
               }),
           })
         : r
-          ? (0, n.jsx)("div", { className: t7.dc, children: (0, n.jsx)(q.y, {}) })
+          ? (0, n.jsx)("div", { className: t9.dc, children: (0, n.jsx)(q.y, {}) })
           : (0, n.jsx)(ex, { isEmptyBecauseQuery: l > 0 });
 }
 var t4 = l(7689),

@@ -80,8 +80,8 @@ function $(e) {
 }
 var K = n(488926),
     ee = n(495273),
-    et = n(875031),
-    en = n(538790),
+    et = n(99018),
+    en = n(160844),
     el = n(707554),
     ei = n(259678),
     es = n(847374);
@@ -92,7 +92,7 @@ var ea = n(435558),
     ed = n(113325),
     ec = n(36525),
     eu = n(462887),
-    eh = n(732771),
+    eh = n(453318),
     eg = n(922016),
     em = n(761508),
     ex = n(28863),
@@ -721,19 +721,19 @@ function e4(e) {
     });
 }
 var e6 = n(661531),
-    e8 = n(993077),
-    e9 = n(625586);
+    e9 = n(993077),
+    e8 = n(625586);
 let te = function (e) {
     let { className: t, icon: n, noticeText: i, buttonText: s, onClick: r, canSync: o } = e;
-    return (0, l.jsx)(e8.Z, {
-        className: A()(t, e9.N),
+    return (0, l.jsx)(e9.Z, {
+        className: A()(t, e8.N),
         children: (0, l.jsxs)(e7.A, {
             justify: e7.A.Justify.BETWEEN,
             align: e7.A.Align.CENTER,
             children: [
                 (0, l.jsx)(n, { width: 20, height: 20, size: "custom", color: e6.A.unsafe_rawColors.YELLOW_300.css }),
                 (0, l.jsx)("div", {
-                    className: e9.P,
+                    className: e8.P,
                     children: (0, l.jsx)(a.E, { variant: "text-md/normal", children: i }),
                 }),
                 o && (0, l.jsx)(T.$, { size: "sm", variant: "secondary", onClick: r, text: s ?? void 0 }),
@@ -1385,13 +1385,13 @@ function t4(e) {
     });
 }
 var t6 = n(235640),
-    t8 = n(268761),
-    t9 = n(474078),
-    ne = n(783878),
+    t9 = n(268761),
+    t8 = n(474078),
+    ne = n(890497),
     nt = n(580679);
 let nn = function (e) {
     let { autoArchiveDuration: t, onChange: n, isDisabled: i, helperText: s } = e,
-        a = (0, t8.Gk)();
+        a = (0, t9.Gk)();
     return (0, l.jsx)("div", {
         className: nt.gy,
         children: (0, l.jsx)(ne.Z, {
@@ -1757,7 +1757,7 @@ let nA = {
                     defaultForumLayout: j,
                     defaultTagSetting: b,
                 } = e;
-                e.isThread() && 0 === (t = (0, t9.A)(t, !0)).length
+                e.isThread() && 0 === (t = (0, t8.A)(t, !0)).length
                     ? o.h.dispatch({
                           type: "CHANNEL_SETTINGS_SUBMIT_FAILURE",
                           errors: { name: eH.intl.string(eH.t.uXA573) },
@@ -2191,7 +2191,7 @@ class nN extends i.PureComponent {
                           page: eB.liQ.CHANNEL_SETTINGS,
                           children: (0, l.jsx)(nn, {
                               isDisabled: !s,
-                              autoArchiveDuration: (0, t8.Gl)(e, null),
+                              autoArchiveDuration: (0, t9.Gl)(e, null),
                               onChange: this.handleChangeDefaultAutoArchiveDuration,
                               helperText: e.isForumLikeChannel()
                                   ? eH.intl.string(eH.t.fyXclY)
@@ -2434,7 +2434,7 @@ class nN extends i.PureComponent {
     handleChangeName = (e) => {
         let { channel: t } = this.props;
         if (null == t) return;
-        t.isThread() ? (e = (0, t9.A)(e, !1)) : eB.kvI.LIMITED_CHANNEL_NAME.has(t.type) && (e = (0, ns.an)(e));
+        t.isThread() ? (e = (0, t8.A)(e, !1)) : eB.kvI.LIMITED_CHANNEL_NAME.has(t.type) && (e = (0, ns.an)(e));
         let n = this.nameInputRef.current?.selectionStart ?? 0;
         (0, d.fy)({ name: e }),
             setTimeout(() => {
@@ -2447,7 +2447,7 @@ class nN extends i.PureComponent {
             l = t?.length ?? 0,
             i = n?.selectionStart === 0 && n?.selectionEnd === l;
         if (((this.cursorPosition = i ? l : (n?.selectionStart ?? l)), e?.isThread() && null != t)) {
-            let e = (0, t9.A)(t, !0);
+            let e = (0, t8.A)(t, !0);
             e !== t && (0, d.fy)({ name: e });
         }
     };
