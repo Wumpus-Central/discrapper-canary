@@ -6,4 +6,5 @@ _.exports = {
     o1: "actions__535da",
     BU: "dragHandle__535da",
     rf: "body__535da",
+    xt: "locked__535da",
 };

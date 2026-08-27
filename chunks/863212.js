@@ -77,6 +77,7 @@ function g(e, t, a, l) {
         position: { column: a, order: l },
         config: { type: t, ...r },
         requires_hydration: t === h.a.LEADERBOARD,
+        locked: !1,
     };
 }
 var b = a(81253);
@@ -182,7 +183,7 @@ let v = [
             },
         ],
     };
-var E = a(317574),
+var E = a(539888),
     x = a(546184);
 function S(e) {
     let { label: t, className: a, children: r } = e;

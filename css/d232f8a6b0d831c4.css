@@ -42,6 +42,18 @@
     width: 100%
 }
 
+.lockedBadge__94629 {
+    align-items: center;
+    background-color: var(--background-base-low);
+    border-radius: var(--radius-round);
+    display: flex;
+    inset-inline-start: var(--space-8);
+    justify-content: center;
+    padding: var(--space-4);
+    position: absolute;
+    top: var(--space-8)
+}
+
 .widgetOverlay__94629 {
     inset: 0;
     pointer-events: none;
@@ -81,6 +93,62 @@
     padding: var(--space-16);
     position: absolute;
     z-index: 2
+}
+
+.container_ebf8c0 {
+    flex-direction: column;
+    width: calc(var(--space-96) + 5px)
+}
+
+.container_ebf8c0,
+.row_ebf8c0 {
+    display: flex;
+    gap: calc(var(--space-8) - 2px)
+}
+
+.rank_ebf8c0,
+.row_ebf8c0 {
+    align-items: center
+}
+
+.rank_ebf8c0 {
+    background-color: var(--background-base-lower);
+    border-radius: var(--radius-round);
+    display: flex;
+    flex-shrink: 0;
+    height: calc(var(--space-16) + 2px);
+    justify-content: center;
+    width: calc(var(--space-16) + 2px)
+}
+
+.rankText_ebf8c0 {
+    display: block;
+    transform: scale(.64)
+}
+
+.avatar_ebf8c0 {
+    border-radius: var(--radius-round);
+    flex-shrink: 0;
+    height: calc(var(--space-16) + 2px);
+    width: calc(var(--space-16) + 2px)
+}
+
+.bars_ebf8c0 {
+    flex: 1;
+    flex-direction: column;
+    min-width: 0
+}
+
+.barRow_ebf8c0,
+.bars_ebf8c0 {
+    display: flex;
+    gap: calc(var(--space-8) - 3px)
+}
+
+.bar_ebf8c0 {
+    background-color: var(--background-mod-subtle);
+    border-radius: var(--radius-round);
+    height: calc(var(--space-8) - 3px)
 }
 
 .state_f0c906 {
@@ -144,4 +212,4 @@
     justify-content: flex-end
 }
 
-/*# sourceMappingURL=34712c250da78e9b.css.map*/
+/*# sourceMappingURL=d232f8a6b0d831c4.css.map*/
