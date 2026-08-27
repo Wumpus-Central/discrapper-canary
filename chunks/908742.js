@@ -428,7 +428,7 @@ let eZ = i.memo(function (e) {
         ],
     });
 });
-var e0 = s(296704);
+var e0 = s(221877);
 function e1(e, t, s) {
     if (null != s) {
         if (e)
@@ -1038,6 +1038,7 @@ function tO(e) {
                               {
                                   adContentId: t.id,
                                   adCreativeType: m.p.QUEST_HOME_HERO,
+                                  relatedQuestId: e.id,
                                   questContent: es.uF.QUEST_HOME_HERO_SHELF,
                                   questContentPosition: s + 1,
                                   sourceQuestContent: es.uF.QUEST_HOME_HERO_SHELF,
@@ -1290,7 +1291,7 @@ var ty = s(201805),
     tU = s(228366),
     tD = s(396813);
 s(667532);
-var tF = s(783878),
+var tF = s(890497),
     tq = s(663417),
     tP = s(922016),
     tk = s(624479),

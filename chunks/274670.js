@@ -132,6 +132,7 @@ function g(e) {
     (0, l.Qg)({
         event: f.HAw.QUEST_CONTENT_VIEWED,
         adContentId: e.adCreativeId,
+        relatedQuestId: e.relatedQuestId,
         adCreativeType: e.adCreativeType,
         trackGuildAndChannelMetadata: g,
         shouldExtendSession: I,
@@ -183,6 +184,7 @@ function C(e) {
                     (0, l.Qg)({
                         event: f.HAw.QUEST_CONTENT_LOADED,
                         adContentId: e.adCreativeId,
+                        relatedQuestId: e.relatedQuestId,
                         adCreativeType: e.adCreativeType,
                         trackGuildAndChannelMetadata: e.trackGuildAndChannelMetadata,
                         sourceQuestContent: e.sourceQuestContent,
