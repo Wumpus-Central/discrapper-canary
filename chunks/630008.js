@@ -1,4 +1,4 @@
-a.d(t, { default: () => L });
+a.d(t, { default: () => k });
 var s = a(477900),
     l = a(582128),
     r = a(503698),
@@ -9,23 +9,29 @@ var s = a(477900),
     c = a(991049),
     h = a(280645),
     u = a(952146),
-    m = a(331322),
-    v = a(289873),
-    E = a(512950),
-    p = a(821609),
+    v = a(331322),
+    m = a(289873),
+    p = a(512950),
+    E = a(821609),
     x = a(109112),
     f = a(939249),
     g = a(834730),
-    A = a(320448),
-    _ = a(975571),
+    _ = a(320448),
+    A = a(975571),
     w = a(31720),
     R = a(847599),
-    j = a(931374),
-    S = a(228366),
-    I = a(636537),
-    C = a(652215);
-async function M() {
-    let e = (await I.Bo.get({ url: C.Rsh.AGE_VERIFICATION_METHODS_V2, rejectWithError: !0 })).body;
+    j = a(931374);
+let S = (0, a(945810).mj)({
+    kind: "user",
+    name: "2026-08-show-expressive-modal-subtitle-alt",
+    defaultConfig: { enabled: !1 },
+    variations: { 1: { enabled: !0 } },
+});
+var I = a(228366),
+    C = a(636537),
+    M = a(652215);
+async function V() {
+    let e = (await C.Bo.get({ url: M.Rsh.AGE_VERIFICATION_METHODS_V2, rejectWithError: !0 })).body;
     return {
         methods: e.methods.map((e) => {
             var t;
@@ -50,8 +56,8 @@ async function M() {
         footerMessage: e.footer_message ?? null,
     };
 }
-var V = a(787301);
-let y = function (e) {
+var y = a(787301);
+let N = function (e) {
     let { icon: t, size: a = 24 } = e;
     return (0, s.jsx)("svg", {
         width: a,
@@ -62,34 +68,34 @@ let y = function (e) {
         children: t.paths.map((e) => (0, s.jsx)("path", { d: e.d, fillRule: e.fillRule, clipRule: e.fillRule }, e.d)),
     });
 };
-var N = a(40449),
-    T = a(800121),
-    b = a(375708),
-    O = a(126106);
-let L = function (e) {
-    let { transitionState: t, entryPoint: a, onClose: r, dismissable: I } = e,
+var T = a(40449),
+    b = a(800121),
+    O = a(375708),
+    L = a(126106);
+let k = function (e) {
+    let { transitionState: t, entryPoint: a, onClose: r, dismissable: C } = e,
         {
-            loading: L,
+            loading: k,
             error: Z,
-            methods: k,
-            footerMessage: U,
-            refetch: B,
+            methods: U,
+            footerMessage: B,
+            refetch: D,
         } = (function () {
-            let [e, t] = l.useState(() => V.A.methodsV2 ?? []),
-                [a, s] = l.useState(() => V.A.methodsV2FooterMessage),
-                [r, i] = l.useState(() => null == V.A.methodsV2),
+            let [e, t] = l.useState(() => y.A.methodsV2 ?? []),
+                [a, s] = l.useState(() => y.A.methodsV2FooterMessage),
+                [r, i] = l.useState(() => null == y.A.methodsV2),
                 [n, o] = l.useState(!1),
                 d = l.useRef(!0),
                 c = l.useCallback(async (e) => {
-                    let a = V.A.methodsV2;
+                    let a = y.A.methodsV2;
                     if (!e && null != a) {
-                        t(a), s(V.A.methodsV2FooterMessage), i(!1), o(!1);
+                        t(a), s(y.A.methodsV2FooterMessage), i(!1), o(!1);
                         return;
                     }
                     i(!0), o(!1);
                     try {
-                        let e = await M();
-                        S.h.dispatch({
+                        let e = await V();
+                        I.h.dispatch({
                             type: "AGE_VERIFICATION_METHODS_V2_LOAD_SUCCESS",
                             methods: e.methods,
                             footerMessage: e.footerMessage,
@@ -123,33 +129,34 @@ let L = function (e) {
                 }
             );
         })(),
-        D = k.length > 0,
-        { initiateAgeVerificationV2: G } = (0, j.Ny)({ onComplete: r, entryPoint: a, onMethodUnavailable: B }),
-        H = l.useRef(!1),
-        [F, P] = l.useState(null),
-        W = null != F,
-        z = l.useMemo(() => (0, n.A)(), []);
+        G = U.length > 0,
+        { initiateAgeVerificationV2: H } = (0, j.Ny)({ onComplete: r, entryPoint: a, onMethodUnavailable: D }),
+        F = l.useRef(!1),
+        [P, W] = l.useState(null),
+        z = null != P,
+        X = l.useMemo(() => (0, n.A)(), []),
+        J = S.useConfig({ location: "age_verification_expressive_v2_modal" }).enabled;
     l.useEffect(() => {
-        (0, R.Bs)(z, R.WU.EXPRESSIVE_V2, a);
-    }, [z, a]);
-    let X = l.useCallback(
+        (0, R.Bs)(X, R.WU.EXPRESSIVE_V2, a);
+    }, [X, a]);
+    let Y = l.useCallback(
         async (e, t) => {
-            if (!H.current) {
-                (0, R.St)(z, R.WU.EXPRESSIVE_V2, R._7.METHOD_SELECT, e.method), (H.current = !0), P(t);
+            if (!F.current) {
+                (0, R.St)(X, R.WU.EXPRESSIVE_V2, R._7.METHOD_SELECT, e.method), (F.current = !0), W(t);
                 try {
-                    await G(e);
+                    await H(e);
                 } finally {
-                    (H.current = !1), P(null);
+                    (F.current = !1), W(null);
                 }
             }
         },
-        [G, z],
+        [H, X],
     );
     return (0, s.jsxs)(o.k, {
         transitionState: t,
         onClose: r,
         gradientColor: "blue",
-        dismissable: I,
+        dismissable: C,
         graphic: {
             type: "image",
             src: "https://cdn.discordapp.com/assets/content/78be134dd5dcecb7d0b26e1aead0c61f79a95c93893a4acc82c9828c87d2165a.svg",
@@ -159,34 +166,37 @@ let L = function (e) {
         subtitle: (0, j.mK)(
             a,
             () => {
-                w.A.openUrl(_.A.getArticleURL(C.MVz.TIGGER_PAWTECT_LEARN_MORE)),
-                    (0, R.St)(z, R.WU.EXPRESSIVE_V2, R._7.LEARN_MORE);
+                w.A.openUrl(A.A.getArticleURL(M.MVz.TIGGER_PAWTECT_LEARN_MORE)),
+                    (0, R.St)(X, R.WU.EXPRESSIVE_V2, R._7.LEARN_MORE);
             },
             void 0,
-            () => {
-                w.A.openUrl(N.zS), (0, R.St)(z, R.WU.EXPRESSIVE_V2, R._7.TRUSTED_PROVIDERS);
-            },
+            J
+                ? () => {
+                      w.A.openUrl(T.zS), (0, R.St)(X, R.WU.EXPRESSIVE_V2, R._7.TRUSTED_PROVIDERS);
+                  }
+                : void 0,
+            !0,
         ),
         children: [
             (0, s.jsx)("div", { "data-expressive-v2-graphic": !0, hidden: !0 }),
-            L && (0, s.jsx)(m.B, { direction: "vertical", align: "center", children: (0, s.jsx)(v.y, {}) }),
-            !L &&
-                !D &&
-                (0, s.jsx)(E.p, {
-                    messageType: E.Y.ERROR,
-                    action: (0, s.jsx)(p.$, {
+            k && (0, s.jsx)(v.B, { direction: "vertical", align: "center", children: (0, s.jsx)(m.y, {}) }),
+            !k &&
+                !G &&
+                (0, s.jsx)(p.p, {
+                    messageType: p.Y.ERROR,
+                    action: (0, s.jsx)(E.$, {
                         variant: "overlay-secondary",
                         size: "sm",
-                        text: b.intl.string(T.default.hDvmYP),
-                        onClick: B,
+                        text: O.intl.string(b.default.hDvmYP),
+                        onClick: D,
                     }),
-                    children: b.intl.string(Z ? T.default.Bkmk4Y : T.default.cR6336),
+                    children: O.intl.string(Z ? b.default.Bkmk4Y : b.default.cR6336),
                 }),
-            D &&
-                (0, s.jsx)(m.B, {
+            G &&
+                (0, s.jsx)(v.B, {
                     direction: "vertical",
                     gap: 8,
-                    children: k.map((e) => {
+                    children: U.map((e) => {
                         let t,
                             a = (function (e) {
                                 switch (e) {
@@ -204,21 +214,21 @@ let L = function (e) {
                             null != a
                                 ? (0, s.jsx)(a, { size: "md", color: "var(--text-strong)" })
                                 : null != e.icon
-                                  ? (0, s.jsx)(y, { icon: e.icon })
+                                  ? (0, s.jsx)(N, { icon: e.icon })
                                   : (0, s.jsx)(x._, { size: "md", color: "var(--text-strong)" });
                         let l = `${e.method}-${e.vendor}`,
-                            r = F === l;
+                            r = P === l;
                         return (0, s.jsxs)(
                             f.D,
                             {
-                                className: i()(O.kZ, { [O.w1]: W }),
+                                className: i()(L.kZ, { [L.w1]: z }),
                                 "aria-busy": r,
-                                "aria-disabled": W,
-                                onClick: W ? void 0 : () => X(e, l),
+                                "aria-disabled": z,
+                                onClick: z ? void 0 : () => Y(e, l),
                                 children: [
-                                    (0, s.jsx)("div", { className: O.zc, children: t }),
+                                    (0, s.jsx)("div", { className: L.zc, children: t }),
                                     (0, s.jsxs)("div", {
-                                        className: O.Qq,
+                                        className: L.Qq,
                                         children: [
                                             (0, s.jsx)(g.E, {
                                                 variant: "text-md/normal",
@@ -232,7 +242,7 @@ let L = function (e) {
                                             }),
                                             null != e.providedBy &&
                                                 (0, s.jsx)("div", {
-                                                    className: O.Vp,
+                                                    className: L.Vp,
                                                     children: (0, s.jsx)(g.E, {
                                                         variant: "text-sm/normal",
                                                         color: "text-muted",
@@ -242,20 +252,20 @@ let L = function (e) {
                                         ],
                                     }),
                                     r
-                                        ? (0, s.jsx)(v.y, { type: v.t.SPINNING_CIRCLE_SIMPLE, className: O.wt })
-                                        : (0, s.jsx)(A._, { className: O.ai }),
+                                        ? (0, s.jsx)(m.y, { type: m.t.SPINNING_CIRCLE_SIMPLE, className: L.wt })
+                                        : (0, s.jsx)(_._, { className: L.ai }),
                                 ],
                             },
                             l,
                         );
                     }),
                 }),
-            !L &&
-                D &&
-                null != U &&
+            !k &&
+                G &&
+                null != B &&
                 (0, s.jsx)("div", {
-                    className: O.qr,
-                    children: (0, s.jsx)(g.E, { variant: "text-sm/normal", color: "text-muted", children: U }),
+                    className: L.qr,
+                    children: (0, s.jsx)(g.E, { variant: "text-sm/normal", color: "text-muted", children: B }),
                 }),
         ],
     });

@@ -262,16 +262,19 @@ function en(e) {
 }
 function ei(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-        i = arguments.length > 3 ? arguments[3] : void 0;
+        i = arguments.length > 3 ? arguments[3] : void 0,
+        r = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
     return b.has(e)
         ? v.intl.string(v.t["S/xS/w"])
         : n
           ? v.intl.string(D.default.h7qzoa)
-          : null != t && null != i
+          : r && null != t && null != i
             ? v.intl.format(D.default["+Ft5ch"], { handleOnHelpUrlHook: t, handleOnTrustedProvidersHook: i })
-            : null != t
-              ? v.intl.format(D.default.RpMIT0, { handleOnHelpUrlHook: t })
-              : v.intl.string(v.t.HxS3oQ);
+            : r && null != t
+              ? v.intl.format(D.default["22HSSI"], { handleOnHelpUrlHook: t })
+              : null != t
+                ? v.intl.format(D.default.RpMIT0, { handleOnHelpUrlHook: t })
+                : v.intl.string(v.t.HxS3oQ);
 }
 function er(e) {
     let t,
