@@ -9398,6 +9398,14 @@
     src: url(/assets/aa59ae54ce7e540a.woff2) format("woff2")
 }
 
+@font-face {
+    font-display: swap;
+    font-family: AI Visual Identity Glyphs;
+    font-style: normal;
+    font-weight: 400;
+    src: url(/assets/0dfedd0800b12997.woff2) format("woff2")
+}
+
 :root {
     --font-primary: "gg sans", "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     --font-display: "gg sans", "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -9873,4 +9881,4 @@
     --motion-spring-subtle-duration: 598ms
 }
 
-/*# sourceMappingURL=952007.c27c57c196b43097.css.map*/
+/*# sourceMappingURL=952007.fab7e11df39d4137.css.map*/

@@ -1,0 +1,151 @@
+.loader__8cd1f {
+    color: currentcolor;
+    display: flex;
+    font-family: AI Visual Identity Glyphs, monospace;
+    font-size: var(--custom-ai-loader-size, 16px);
+    gap: .375em;
+    line-height: 1;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none
+}
+
+.slot__8cd1f {
+    height: 1em;
+    overflow: clip;
+    width: 1em
+}
+
+.slot__8cd1f,
+.track__8cd1f {
+    display: block
+}
+
+.track__8cd1f {
+    transform: translateY(0);
+    will-change: transform
+}
+
+.app-focused .track__8cd1f {
+    animation-delay: 0s;
+    animation-duration: 2.4s;
+    animation-iteration-count: infinite;
+    animation-name: ai-loader-cycle__8cd1f;
+    animation-timing-function: step-end
+}
+
+.slot__8cd1f:nth-child(2) .track__8cd1f {
+    animation-delay: .1s
+}
+
+.slot__8cd1f:nth-child(3) .track__8cd1f {
+    animation-delay: .2s
+}
+
+.glyph__8cd1f {
+    display: block;
+    height: 1em;
+    text-align: center
+}
+
+@keyframes ai-loader-cycle__8cd1f {
+    0% {
+        transform: translateY(0)
+    }
+
+    31.25% {
+        transform: translateY(-1em)
+    }
+
+    37.5% {
+        transform: translateY(-2em)
+    }
+
+    43.75% {
+        transform: translateY(-3em)
+    }
+
+    50% {
+        transform: translateY(-4em)
+    }
+
+    56.25% {
+        transform: translateY(-5em)
+    }
+
+    62.5% {
+        transform: translateY(-6em)
+    }
+
+    68.75% {
+        transform: translateY(-5em)
+    }
+
+    75% {
+        transform: translateY(-4em)
+    }
+
+    81.25% {
+        transform: translateY(-3em)
+    }
+
+    87.5% {
+        transform: translateY(-2em)
+    }
+
+    93.75% {
+        transform: translateY(-1em)
+    }
+
+    to {
+        transform: translateY(0)
+    }
+}
+
+.reduce-motion .slot__8cd1f .track__8cd1f {
+    animation-delay: 0s;
+    animation-duration: 4.8s
+}
+
+.stop-animation .track__8cd1f {
+    animation-name: none
+}
+
+.matrix__7d0da {
+    gap: var(--space-24)
+}
+
+.matrix__7d0da,
+.section__7d0da {
+    display: flex;
+    flex-direction: column
+}
+
+.section__7d0da {
+    gap: var(--space-8)
+}
+
+.row__7d0da {
+    flex-wrap: wrap;
+    gap: var(--space-24)
+}
+
+.cell__7d0da,
+.row__7d0da {
+    align-items: center;
+    display: flex
+}
+
+.cell__7d0da {
+    background: var(--background-mod-subtle);
+    border-radius: var(--radius-sm);
+    flex-direction: column;
+    gap: var(--space-8);
+    padding: var(--space-12)
+}
+
+.bounds__7d0da {
+    outline: 1px dashed var(--border-subtle)
+}
+
+/*# sourceMappingURL=567a357acc1d7917.css.map*/
