@@ -72,7 +72,7 @@ function h() {
         return {};
     }
 }
-let I = RegExp("^https://(?:ptb\\.|canary\\.)?(discordapp|discord)\\.com/__development/link?[\\S]+$", "i");
+let I = RegExp("^https://(?:ptb\\.|canary\\.)?(discordapp|discord)\\.com/__development/link/?\\?[\\S]+$", "i");
 function f(e) {
     return null != e && I.test(e);
 }
