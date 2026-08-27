@@ -807,15 +807,16 @@ let ne = i.memo(function (e) {
             className: f,
             channel: I,
             preview: C,
+            enableScheduledBadge: b = !1,
         } = e,
-        b = i.useMemo(() => (null != d ? (e) => d(e, n) : void 0), [d, n]),
-        [, E] = (0, eu.Ay)(n.author.id, e.guildId),
-        y = (0, c.bG)([eV.A, eU.A], () => {
+        E = i.useMemo(() => (null != d ? (e) => d(e, n) : void 0), [d, n]),
+        [, y] = (0, eu.Ay)(n.author.id, e.guildId),
+        _ = (0, c.bG)([eV.A, eU.A], () => {
             let l = eU.A.getGuild(e.guildId);
             return null != n.author && null != l && eV.A.canManageUser(Q.xBc.MODERATE_MEMBERS, n.author, l);
         }, [n.author, e.guildId]),
-        _ = E && y,
-        M = (function (e) {
+        M = y && _,
+        S = (function (e) {
             let {
                     props: n,
                     guildId: l,
@@ -948,33 +949,33 @@ let ne = i.memo(function (e) {
                               className: o,
                           }),
                       });
-        })({ props: e, guildId: e.guildId, handleRenderPopout: b, showCommunicationDisabledStyles: _ }),
-        S = (0, c.bG)([eL.Ay], () => e.displayCompactAvatars ?? eL.Ay.displayCompactAvatars),
-        R = i.useMemo(
+        })({ props: e, guildId: e.guildId, handleRenderPopout: E, showCommunicationDisabledStyles: M }),
+        R = (0, c.bG)([eL.Ay], () => e.displayCompactAvatars ?? eL.Ay.displayCompactAvatars),
+        T = i.useMemo(
             () => (0, e7.k)({ message: n, channel: I, user: n?.author, compact: a, isRepliedMessage: !1 }),
             [n, I, a],
         ),
-        T = (0, c.bG)([eU.A], () => e5(a, S, j, eU.A.getGuild(e.guildId)), [a, S, j, e.guildId]),
-        w = (0, e_.Sc)(),
-        O = i.useMemo(() => {
+        w = (0, c.bG)([eU.A], () => e5(a, R, j, eU.A.getGuild(e.guildId)), [a, R, j, e.guildId]),
+        O = (0, e_.Sc)(),
+        G = i.useMemo(() => {
             let e = [];
             return (
                 (0, o.Lt)(n.flags, Q.pr7.SUPPRESS_NOTIFICATIONS) &&
                     e.push((0, t.jsx)(ek, {}, "suppress-notifications")),
-                !a && w && (0, o.Lt)(n.flags, Q.pr7.IS_SCHEDULED) && e.push((0, t.jsx)(ew, {}, "scheduled")),
+                !a && b && O && (0, o.Lt)(n.flags, Q.pr7.IS_SCHEDULED) && e.push((0, t.jsx)(ew, {}, "scheduled")),
                 e
             );
-        }, [n, a, w]),
-        G = (0, eB.d$)(n, p),
-        k = (0, eB.xl)(n),
-        P = v ? `${G}` : `${G} ${k}`,
-        D = l?.state === eE.a.LOADED ? (0, eB.nS)(n) : void 0;
+        }, [n, a, O, b]),
+        k = (0, eB.d$)(n, p),
+        P = (0, eB.xl)(n),
+        D = v ? `${k}` : `${k} ${P}`,
+        L = l?.state === eE.a.LOADED ? (0, eB.nS)(n) : void 0;
     return (0, t.jsx)(e9, {
         message: n,
-        avatar: M,
+        avatar: S,
         username: (0, t.jsxs)(t.Fragment, {
             children: [
-                _ &&
+                M &&
                     (0, t.jsx)(m.m, {
                         text: en.intl.string(en.t["AeYyL+"]),
                         children: (0, t.jsxs)(t.Fragment, {
@@ -990,7 +991,7 @@ let ne = i.memo(function (e) {
                     channel: I,
                     compact: a,
                     roleIconProps: j,
-                    renderPopout: b,
+                    renderPopout: E,
                     preview: C,
                     subscribeToGroupId: p,
                     hideGuildTag: N,
@@ -998,13 +999,13 @@ let ne = i.memo(function (e) {
             ],
         }),
         usernameSpanId: (0, eB.d$)(n, p),
-        usernameClassName: s()(e6.TK, { [e6.yF]: 0 !== T, [e6.hB]: null != R || O.length > 0 }),
+        usernameClassName: s()(e6.TK, { [e6.yF]: 0 !== w, [e6.hB]: null != T || G.length > 0 }),
         compact: a,
         showTimestamp: !0 !== v,
         showTimestampOnHover: u,
-        ariaLabelledBy: P,
-        ariaDescribedBy: D,
+        ariaLabelledBy: D,
+        ariaDescribedBy: L,
         className: f,
-        badges: O,
+        badges: G,
     });
 });

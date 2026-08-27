@@ -1,7 +1,6 @@
 .messageWithAttachments__2eae8 {
     margin-block-end: 2px;
-    margin-block-start: var(--space-12);
-    overflow: hidden
+    margin-block-start: var(--space-12)
 }
 
 .attachmentCount__2eae8 {
@@ -30,4 +29,26 @@
     padding: var(--space-8) var(--space-16) var(--space-16)
 }
 
-/*# sourceMappingURL=2fef1d423d82632a.css.map*/
+.unknownChannel__2eae8 {
+    display: flex;
+    justify-content: space-between;
+    padding: var(--space-12)
+}
+
+.unknownChannelLabel__2eae8 {
+    align-items: center;
+    display: flex;
+    gap: var(--space-8)
+}
+
+.unknownChannelIcon__2eae8 {
+    align-items: center;
+    background: var(--background-base-lowest);
+    border-radius: var(--radius-sm);
+    display: flex;
+    height: 24px;
+    justify-content: center;
+    width: 24px
+}
+
+/*# sourceMappingURL=7ede4b11192aa7af.css.map*/

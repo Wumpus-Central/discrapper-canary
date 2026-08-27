@@ -1374,6 +1374,7 @@ let nO = r.memo(function (e) {
             onContextMenu: g,
             onPopoutRequestClose: f,
             roleIcon: m,
+            enableScheduledBadge: !0,
         });
     }),
     nG = r.memo(tD.A);
