@@ -1916,7 +1916,9 @@
 }
 
 .storePage__1add6 {
-    background-color: var(--background-base-low)
+    background-color: var(--background-base-low);
+    container-name: premium-marketing-page-container;
+    container-type: inline-size
 }
 
 .header__1add6 {
@@ -2195,38 +2197,57 @@
     min-width: 0
 }
 
-.storeHero__1add6 {
-    gap: var(--space-16);
-    max-width: 800px;
-    padding-block: var(--space-40)
+.storeSectionsContainer__1add6 {
+    box-sizing: border-box;
+    padding-inline: var(--space-32)
 }
 
 .storeHero__1add6,
-.storeSection__1add6 {
+.storeSectionsContainer__1add6 {
     align-items: center;
     display: flex;
     flex-direction: column;
     width: 100%
 }
 
+.storeHero__1add6 {
+    gap: var(--space-16);
+    max-width: 800px;
+    padding-block: var(--space-40)
+}
+
+.storeSection__1add6 {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px
+}
+
+.storeBentoGrid__1add6,
 .storeSection__1add6 {
     gap: var(--space-24);
-    max-width: 1256px
+    width: 100%
 }
 
 .storeBentoGrid__1add6 {
     display: grid;
-    gap: var(--space-12);
-    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-    width: 100%
+    grid-template-columns: minmax(0, 1fr)
 }
 
 .storeBentoCard__1add6 {
-    height: 320px
+    height: 380px
 }
 
-.storeBentoCardTall__1add6 {
-    height: 480px
+@container premium-marketing-page-container (min-width: 720px) {
+    .storeBentoGrid__1add6 {
+        grid-template-columns: repeat(2, minmax(0, 1fr))
+    }
+}
+
+@container premium-marketing-page-container (min-width: 960px) {
+    .storeBentoGrid__1add6 {
+        grid-template-columns: repeat(3, minmax(0, 1fr))
+    }
 }
 
 .gridBody__1add6 {
@@ -2924,97 +2945,6 @@
     width: 100%
 }
 
-.container__02f2d {
-    align-items: center;
-    display: flex;
-    flex: 1;
-    flex-direction: column;
-    margin: 0 auto;
-    position: relative
-}
-
-.fadeInFromTop__02f2d {
-    animation: fadeInFromTop__02f2d .6s ease-out forwards;
-    will-change: opacity, transform
-}
-
-@keyframes fadeInFromTop__02f2d {
-    0% {
-        opacity: 0;
-        transform: translateY(-20px)
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0)
-    }
-}
-
-.containerBackground__02f2d {
-    background: var(--background-base-lowest)
-}
-
-.responsiveContainer__02f2d {
-    container-name: premium-marketing-page-container;
-    container-type: inline-size
-}
-
-.sectionsContainer__02f2d {
-    align-items: center;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    padding: 0 40px;
-    width: 100%
-}
-
-.bestOfNitroSectionContainer__02f2d,
-.heroHeadingContainer__02f2d,
-.planComparisonTableContainer__02f2d,
-.premiumTierCardsContainer__02f2d,
-.whatsNewSectionContainer__02f2d {
-    display: flex;
-    justify-content: center;
-    position: relative;
-    width: 100%
-}
-
-.whatsNewSectionContainer__02f2d {
-    margin-top: 80px
-}
-
-.bestOfNitroSectionContainer__02f2d,
-.planComparisonTableContainer__02f2d,
-.premiumTierCardsContainer__02f2d {
-    margin-top: 164px
-}
-
-.bottomOfPageVisibilitySensor__02f2d {
-    bottom: 0;
-    height: 300px;
-    position: absolute
-}
-
-.scroller__02f2d {
-    background-color: var(--background-base-low);
-    contain: layout size
-}
-
-.topOfPageGradient__02f2d {
-    position: absolute;
-    top: 0
-}
-
-.topOfPageGradientWithCountdown__02f2d {
-    opacity: .75
-}
-
-.bottomOfPageGradient__02f2d {
-    bottom: 0;
-    position: absolute;
-    transform: rotate(180deg)
-}
-
 html .tabBadge_e6b769 {
     background-color: var(--background-feedback-notification)
 }
@@ -3222,4 +3152,4 @@ html .tabBadge_e6b769 {
     color: CanvasText
 }
 
-/*# sourceMappingURL=582118.1525a174cbd4bba7.css.map*/
+/*# sourceMappingURL=398929.9f8770cf468c26d9.css.map*/

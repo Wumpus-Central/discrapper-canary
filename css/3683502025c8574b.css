@@ -396,4 +396,95 @@
     fill: var(--icon-strong)
 }
 
-/*# sourceMappingURL=775591568214c77a.css.map*/
+.container__02f2d {
+    align-items: center;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    margin: 0 auto;
+    position: relative
+}
+
+.fadeInFromTop__02f2d {
+    animation: fadeInFromTop__02f2d .6s ease-out forwards;
+    will-change: opacity, transform
+}
+
+@keyframes fadeInFromTop__02f2d {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px)
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0)
+    }
+}
+
+.containerBackground__02f2d {
+    background: var(--background-base-lowest)
+}
+
+.responsiveContainer__02f2d {
+    container-name: premium-marketing-page-container;
+    container-type: inline-size
+}
+
+.sectionsContainer__02f2d {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    padding: 0 40px;
+    width: 100%
+}
+
+.bestOfNitroSectionContainer__02f2d,
+.heroHeadingContainer__02f2d,
+.planComparisonTableContainer__02f2d,
+.premiumTierCardsContainer__02f2d,
+.whatsNewSectionContainer__02f2d {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: 100%
+}
+
+.whatsNewSectionContainer__02f2d {
+    margin-top: 80px
+}
+
+.bestOfNitroSectionContainer__02f2d,
+.planComparisonTableContainer__02f2d,
+.premiumTierCardsContainer__02f2d {
+    margin-top: 164px
+}
+
+.bottomOfPageVisibilitySensor__02f2d {
+    bottom: 0;
+    height: 300px;
+    position: absolute
+}
+
+.scroller__02f2d {
+    background-color: var(--background-base-low);
+    contain: layout size
+}
+
+.topOfPageGradient__02f2d {
+    position: absolute;
+    top: 0
+}
+
+.topOfPageGradientWithCountdown__02f2d {
+    opacity: .75
+}
+
+.bottomOfPageGradient__02f2d {
+    bottom: 0;
+    position: absolute;
+    transform: rotate(180deg)
+}
+
+/*# sourceMappingURL=3683502025c8574b.css.map*/

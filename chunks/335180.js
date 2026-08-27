@@ -1,22 +1,22 @@
 i.d(t, {
-    Bj: () => eT,
-    IA: () => eI,
-    L: () => el,
-    NU: () => eu,
-    O7: () => ea,
-    Ru: () => eP,
-    Ub: () => eO,
-    Zm: () => eC,
-    c5: () => eo,
-    cL: () => ed,
-    g4: () => eA,
-    hc: () => eD,
-    l3: () => e_,
-    n: () => eh,
-    rt: () => ec,
-    so: () => eS,
-    tV: () => eR,
-    uW: () => eN,
+    Bj: () => ed,
+    IA: () => eo,
+    L: () => er,
+    NU: () => eN,
+    O7: () => el,
+    Ru: () => eu,
+    Ub: () => eh,
+    Zm: () => eO,
+    c5: () => ec,
+    cL: () => eI,
+    g4: () => eS,
+    hc: () => eC,
+    l3: () => ea,
+    n: () => eP,
+    rt: () => eA,
+    so: () => e_,
+    tV: () => eT,
+    uW: () => eR,
 });
 var E = i(477900);
 i(582128);
@@ -49,19 +49,18 @@ var h = i(846930),
     m = i(238304),
     f = i(324149),
     M = i(220330),
-    G = i(415017),
-    g = i(773188);
+    G = i(415017);
 i(674117);
-var p = i(935675);
-function F(e) {
+var g = i(935675);
+function p(e) {
     let { width: t, height: i, style: s } = e;
     return (0, E.jsx)("div", { className: j.M0, style: { width: t, height: i, ...s }, "aria-hidden": !0 });
 }
-function V(e) {
+function F(e) {
     let { size: t } = e;
     return (0, E.jsx)("div", { className: j.n1, style: { width: t, height: t }, "aria-hidden": !0 });
 }
-function W(e) {
+function V(e) {
     let { icon: t, title: i } = e;
     return (0, E.jsxs)("div", {
         className: j.wx,
@@ -74,26 +73,26 @@ function W(e) {
         ],
     });
 }
-function y(e) {
+function W(e) {
     let { width: t } = e;
     return (0, E.jsxs)("div", {
         className: j.f0,
         children: [
-            (0, E.jsx)(V, { size: 32 }),
+            (0, E.jsx)(F, { size: 32 }),
             (0, E.jsxs)("div", {
                 className: j.iq,
-                children: [(0, E.jsx)(F, { width: t, height: 14 }), (0, E.jsx)(F, { width: "14%", height: 10 })],
+                children: [(0, E.jsx)(p, { width: t, height: 14 }), (0, E.jsx)(p, { width: "14%", height: 10 })],
             }),
         ],
     });
 }
-function H() {
+function y() {
     return (0, E.jsxs)("div", {
         className: j.MY,
         role: "status",
         "aria-label": C.intl.string(C.t["jnXV/V"]),
         children: [
-            (0, E.jsx)(W, { icon: r.g, title: C.intl.string(C.t["jnXV/V"]) }),
+            (0, E.jsx)(V, { icon: r.g, title: C.intl.string(C.t["jnXV/V"]) }),
             (0, E.jsx)("div", {
                 className: G.MJ,
                 children: (0, E.jsx)("div", {
@@ -106,21 +105,21 @@ function H() {
         ],
     });
 }
-function w() {
+function H() {
     let { showHeroPlaceholder: e } = (0, O.x)();
     return (0, E.jsxs)("div", {
         className: j.NO,
         role: "status",
         "aria-label": C.intl.string(C.t.JALI2K),
         children: [
-            (0, E.jsx)(W, { icon: l.r, title: C.intl.string(C.t.JALI2K) }),
+            (0, E.jsx)(V, { icon: l.r, title: C.intl.string(C.t.JALI2K) }),
             (0, E.jsx)("div", {
                 className: n()(j.W2, j.hv),
                 children: (0, E.jsxs)("div", {
                     className: j.Jt,
                     children: [
                         e && (0, E.jsx)("div", { className: n()(j.Nr, j.hV) }),
-                        (0, E.jsx)(F, { width: 145, height: 32 }),
+                        (0, E.jsx)(p, { width: 145, height: 32 }),
                         (0, E.jsx)("div", {
                             className: j.Jm,
                             children: Array.from({ length: 6 }).map((e, t) =>
@@ -133,13 +132,13 @@ function w() {
         ],
     });
 }
-function b() {
+function w() {
     return (0, E.jsxs)("div", {
         className: j.MY,
         role: "status",
         "aria-label": C.intl.string(C.t.flPU6g),
         children: [
-            (0, E.jsx)(W, { icon: a.u, title: C.intl.string(C.t.flPU6g) }),
+            (0, E.jsx)(V, { icon: a.u, title: C.intl.string(C.t.flPU6g) }),
             (0, E.jsxs)("div", {
                 className: G.MJ,
                 children: [
@@ -148,7 +147,7 @@ function b() {
                         children: (0, E.jsx)("div", {
                             className: j.p_,
                             children: ["58%", "34%", "48%", "40%", "52%", "44%"].map((e, t) =>
-                                (0, E.jsx)(y, { width: e }, t),
+                                (0, E.jsx)(W, { width: e }, t),
                             ),
                         }),
                     }),
@@ -158,14 +157,14 @@ function b() {
         ],
     });
 }
-function B() {
+function b() {
     let e = C.intl.string(D.default.RZqaJn);
     return (0, E.jsxs)("div", {
         className: j.dA,
         role: "status",
         "aria-label": e,
         children: [
-            (0, E.jsx)(W, { icon: _.n, title: e }),
+            (0, E.jsx)(V, { icon: _.n, title: e }),
             (0, E.jsx)("div", {
                 className: M.O4,
                 children: (0, E.jsxs)("div", {
@@ -177,11 +176,11 @@ function B() {
                                 (0, E.jsxs)("div", {
                                     className: x.TK,
                                     children: [
-                                        (0, E.jsx)(F, { width: "90%", height: 24 }),
-                                        (0, E.jsx)(F, { width: "80%", height: 24 }),
-                                        (0, E.jsx)(F, { width: "100%", height: 14 }),
-                                        (0, E.jsx)(F, { width: "75%", height: 14 }),
-                                        (0, E.jsx)(F, {
+                                        (0, E.jsx)(p, { width: "90%", height: 24 }),
+                                        (0, E.jsx)(p, { width: "80%", height: 24 }),
+                                        (0, E.jsx)(p, { width: "100%", height: 14 }),
+                                        (0, E.jsx)(p, { width: "75%", height: 14 }),
+                                        (0, E.jsx)(p, {
                                             width: 112,
                                             height: 32,
                                             style: { borderRadius: 16, marginTop: 12 },
@@ -203,9 +202,9 @@ function B() {
                                             (0, E.jsxs)("div", {
                                                 className: j.oX,
                                                 children: [
-                                                    (0, E.jsx)(F, { width: "70%", height: 16 }),
-                                                    (0, E.jsx)(F, { width: "100%", height: 12 }),
-                                                    (0, E.jsx)(F, { width: "85%", height: 12 }),
+                                                    (0, E.jsx)(p, { width: "70%", height: 16 }),
+                                                    (0, E.jsx)(p, { width: "100%", height: 12 }),
+                                                    (0, E.jsx)(p, { width: "85%", height: 12 }),
                                                 ],
                                             }),
                                         ],
@@ -220,9 +219,9 @@ function B() {
                                 (0, E.jsxs)("div", {
                                     className: j.ni,
                                     children: [
-                                        (0, E.jsx)(F, { width: "70%", height: 18 }),
-                                        (0, E.jsx)(F, { width: "100%", height: 13 }),
-                                        (0, E.jsx)(F, { width: "90%", height: 13 }),
+                                        (0, E.jsx)(p, { width: "70%", height: 18 }),
+                                        (0, E.jsx)(p, { width: "100%", height: 13 }),
+                                        (0, E.jsx)(p, { width: "90%", height: 13 }),
                                     ],
                                 }),
                                 (0, E.jsx)("div", {
@@ -233,12 +232,12 @@ function B() {
                                             {
                                                 className: j.IE,
                                                 children: [
-                                                    (0, E.jsx)(V, { size: 36 }),
+                                                    (0, E.jsx)(F, { size: 36 }),
                                                     (0, E.jsxs)("div", {
                                                         className: j.Tf,
                                                         children: [
-                                                            (0, E.jsx)(F, { width: "40%", height: 14 }),
-                                                            (0, E.jsx)(F, { width: "75%", height: 12 }),
+                                                            (0, E.jsx)(p, { width: "40%", height: 14 }),
+                                                            (0, E.jsx)(p, { width: "75%", height: 12 }),
                                                         ],
                                                     }),
                                                 ],
@@ -255,7 +254,7 @@ function B() {
         ],
     });
 }
-function Y(e) {
+function B(e) {
     let { cardCount: t = 9 } = e;
     return (0, E.jsx)("div", {
         className: G.MJ,
@@ -268,7 +267,7 @@ function Y(e) {
         }),
     });
 }
-function k(e) {
+function Y(e) {
     let { tileCount: t = 8 } = e;
     return (0, E.jsx)("div", {
         className: G.MJ,
@@ -281,7 +280,7 @@ function k(e) {
         }),
     });
 }
-function K(e) {
+function k(e) {
     let { rowCount: t = 8 } = e,
         i = ["55%", "32%", "44%", "28%", "50%", "36%", "42%", "30%", "46%", "34%"];
     return (0, E.jsx)("div", {
@@ -290,38 +289,38 @@ function K(e) {
             className: G.UL,
             children: (0, E.jsx)("div", {
                 className: j.p_,
-                children: Array.from({ length: t }).map((e, t) => (0, E.jsx)(y, { width: i[t % i.length] }, t)),
+                children: Array.from({ length: t }).map((e, t) => (0, E.jsx)(W, { width: i[t % i.length] }, t)),
             }),
         }),
     });
 }
-function Q() {
+function K() {
     return (0, E.jsxs)("div", {
         className: j.MY,
         role: "status",
         "aria-label": C.intl.string(C.t.cw57ar),
         children: [
-            (0, E.jsx)(W, { icon: S.GameControllerIcon, title: C.intl.string(C.t.cw57ar) }),
-            (0, E.jsx)(Y, { cardCount: 9 }),
+            (0, E.jsx)(V, { icon: S.GameControllerIcon, title: C.intl.string(C.t.cw57ar) }),
+            (0, E.jsx)(B, { cardCount: 9 }),
         ],
     });
 }
-function J() {
+function Q() {
     let e = C.intl.string(C.t["4nEZLk"]);
     return (0, E.jsxs)("div", {
         className: j.MY,
         role: "status",
         "aria-label": e,
-        children: [(0, E.jsx)(W, { icon: A.CompassIcon, title: e }), (0, E.jsx)(k, { tileCount: 9 })],
+        children: [(0, E.jsx)(V, { icon: A.CompassIcon, title: e }), (0, E.jsx)(Y, { tileCount: 9 })],
     });
 }
-function $() {
+function J() {
     return (0, E.jsxs)("div", {
         className: j.MY,
         role: "status",
         "aria-label": C.intl.string(C.t.Ym2Ri6),
         children: [
-            (0, E.jsx)(W, { icon: c.HomeIcon, title: C.intl.string(C.t.Ym2Ri6) }),
+            (0, E.jsx)(V, { icon: c.HomeIcon, title: C.intl.string(C.t.Ym2Ri6) }),
             (0, E.jsx)("div", {
                 className: G.MJ,
                 children: (0, E.jsxs)("div", {
@@ -340,21 +339,21 @@ function $() {
         ],
     });
 }
-function Z() {
+function $() {
     return (0, E.jsxs)("div", {
         className: j.MY,
         role: "status",
         "aria-label": C.intl.string(C.t.al5EXL),
-        children: [(0, E.jsx)(W, { icon: o.U, title: C.intl.string(C.t.al5EXL) }), (0, E.jsx)(Y, { cardCount: 8 })],
+        children: [(0, E.jsx)(V, { icon: o.U, title: C.intl.string(C.t.al5EXL) }), (0, E.jsx)(B, { cardCount: 8 })],
     });
 }
-function q() {
+function Z() {
     let e = C.intl.string(C.t.oclz3Z);
     return (0, E.jsxs)("div", {
         className: j.MY,
         role: "status",
         "aria-label": e,
-        children: [(0, E.jsx)(W, { icon: I.ShieldIcon, title: e }), (0, E.jsx)(K, { rowCount: 8 })],
+        children: [(0, E.jsx)(V, { icon: I.ShieldIcon, title: e }), (0, E.jsx)(k, { rowCount: 8 })],
     });
 }
 function z() {
@@ -362,24 +361,24 @@ function z() {
         className: j.MY,
         role: "status",
         "aria-label": "Powerups",
-        children: [(0, E.jsx)(W, { icon: d._, title: "Powerups" }), (0, E.jsx)(Y, { cardCount: 6 })],
+        children: [(0, E.jsx)(V, { icon: d._, title: "Powerups" }), (0, E.jsx)(B, { cardCount: 6 })],
+    });
+}
+function q() {
+    return (0, E.jsxs)("div", {
+        className: j.MY,
+        role: "status",
+        "aria-label": C.intl.string(C.t.h9mGOP),
+        children: [(0, E.jsx)(V, { icon: T.k, title: C.intl.string(C.t.h9mGOP) }), (0, E.jsx)(k, { rowCount: 6 })],
     });
 }
 function X() {
     return (0, E.jsxs)("div", {
         className: j.MY,
         role: "status",
-        "aria-label": C.intl.string(C.t.h9mGOP),
-        children: [(0, E.jsx)(W, { icon: T.k, title: C.intl.string(C.t.h9mGOP) }), (0, E.jsx)(K, { rowCount: 6 })],
-    });
-}
-function ee() {
-    return (0, E.jsxs)("div", {
-        className: j.MY,
-        role: "status",
         "aria-label": "Game Server",
         children: [
-            (0, E.jsx)(W, { icon: S.GameControllerIcon, title: "Game Server" }),
+            (0, E.jsx)(V, { icon: S.GameControllerIcon, title: "Game Server" }),
             (0, E.jsx)("div", {
                 className: G.MJ,
                 children: (0, E.jsxs)("div", {
@@ -388,28 +387,28 @@ function ee() {
                         (0, E.jsxs)("div", {
                             className: j.JA,
                             children: [
-                                (0, E.jsx)(F, { width: "20%", height: 14 }),
+                                (0, E.jsx)(p, { width: "20%", height: 14 }),
                                 (0, E.jsx)("div", { className: j.Nr, style: { height: 40, borderRadius: 8 } }),
                             ],
                         }),
                         (0, E.jsxs)("div", {
                             className: j.JA,
                             children: [
-                                (0, E.jsx)(F, { width: "25%", height: 14 }),
+                                (0, E.jsx)(p, { width: "25%", height: 14 }),
                                 (0, E.jsx)("div", { className: j.Nr, style: { height: 80, borderRadius: 8 } }),
                             ],
                         }),
                         (0, E.jsxs)("div", {
                             className: j.JA,
                             children: [
-                                (0, E.jsx)(F, { width: "18%", height: 14 }),
+                                (0, E.jsx)(p, { width: "18%", height: 14 }),
                                 (0, E.jsx)("div", { className: j.Nr, style: { height: 40, borderRadius: 8 } }),
                             ],
                         }),
                         (0, E.jsxs)("div", {
                             className: j.JA,
                             children: [
-                                (0, E.jsx)(F, { width: "22%", height: 14 }),
+                                (0, E.jsx)(p, { width: "22%", height: 14 }),
                                 (0, E.jsx)("div", { className: j.Nr, style: { height: 120, borderRadius: 8 } }),
                             ],
                         }),
@@ -419,7 +418,7 @@ function ee() {
         ],
     });
 }
-function et() {
+function ee() {
     return (0, E.jsxs)("div", {
         className: j.hf,
         role: "status",
@@ -429,29 +428,29 @@ function et() {
             (0, E.jsx)("div", { className: j.jU }),
             (0, E.jsxs)("div", {
                 className: j.eP,
-                children: [(0, E.jsx)(F, { width: "55%", height: 18 }), (0, E.jsx)(F, { width: "35%", height: 12 })],
+                children: [(0, E.jsx)(p, { width: "55%", height: 18 }), (0, E.jsx)(p, { width: "35%", height: 12 })],
             }),
             (0, E.jsxs)("div", {
                 className: j._V,
                 children: [
-                    (0, E.jsx)(F, { width: 52, height: 16 }),
-                    (0, E.jsx)(F, { width: 72, height: 16 }),
-                    (0, E.jsx)(F, { width: 48, height: 16 }),
+                    (0, E.jsx)(p, { width: 52, height: 16 }),
+                    (0, E.jsx)(p, { width: 72, height: 16 }),
+                    (0, E.jsx)(p, { width: 48, height: 16 }),
                 ],
             }),
             (0, E.jsxs)("div", {
                 className: j.bs,
                 children: [
-                    (0, E.jsx)(F, { width: "90%", height: 12 }),
-                    (0, E.jsx)(F, { width: "75%", height: 12 }),
-                    (0, E.jsx)(F, { width: "85%", height: 12 }),
-                    (0, E.jsx)(F, { width: "60%", height: 12 }),
+                    (0, E.jsx)(p, { width: "90%", height: 12 }),
+                    (0, E.jsx)(p, { width: "75%", height: 12 }),
+                    (0, E.jsx)(p, { width: "85%", height: 12 }),
+                    (0, E.jsx)(p, { width: "60%", height: 12 }),
                 ],
             }),
         ],
     });
 }
-function ei(e) {
+function et(e) {
     let { dialogClassName: t } = e;
     return (0, E.jsx)(R.l, {
         "aria-label": C.intl.string(C.t.GSmTKJ),
@@ -481,7 +480,7 @@ function ei(e) {
                                 children: Array.from({ length: 3 }).map((e, t) =>
                                     (0, E.jsx)(
                                         "div",
-                                        { className: L.Mf, children: (0, E.jsx)(F, { width: 60, height: 14 }) },
+                                        { className: L.Mf, children: (0, E.jsx)(p, { width: 60, height: 14 }) },
                                         t,
                                     ),
                                 ),
@@ -497,12 +496,12 @@ function ei(e) {
                             {
                                 className: j.D7,
                                 children: [
-                                    (0, E.jsx)(V, { size: 28 }),
+                                    (0, E.jsx)(F, { size: 28 }),
                                     (0, E.jsxs)("div", {
                                         className: j.iq,
                                         children: [
-                                            (0, E.jsx)(F, { width: "55%", height: 13 }),
-                                            (0, E.jsx)(F, { width: "35%", height: 11 }),
+                                            (0, E.jsx)(p, { width: "55%", height: 13 }),
+                                            (0, E.jsx)(p, { width: "35%", height: 11 }),
                                         ],
                                     }),
                                 ],
@@ -515,34 +514,35 @@ function ei(e) {
         }),
     });
 }
-function eE() {
+function ei() {
     return (0, E.jsxs)("div", {
         className: j.zz,
         role: "status",
         "aria-label": "Nitro",
         children: [
-            (0, E.jsx)(W, { icon: P.t, title: "Nitro" }),
+            (0, E.jsx)(V, { icon: P.t, title: "Nitro" }),
             (0, E.jsx)("div", {
                 className: j.W2,
                 children: (0, E.jsxs)("div", {
-                    className: g.Qr,
+                    className: j.jz,
                     children: [
                         (0, E.jsxs)("div", {
                             className: j.uH,
                             children: [
-                                (0, E.jsx)(F, { width: "70%", height: 36, style: { marginTop: 32 } }),
-                                (0, E.jsx)(F, { width: "55%", height: 36 }),
-                                (0, E.jsx)(F, { width: 128, height: 40, style: { borderRadius: 20, marginTop: 24 } }),
+                                (0, E.jsx)(p, { width: "70%", height: 36, style: { marginTop: 32 } }),
+                                (0, E.jsx)(p, { width: "55%", height: 36 }),
+                                (0, E.jsx)(p, { width: 128, height: 40, style: { borderRadius: 20, marginTop: 24 } }),
                             ],
                         }),
                         (0, E.jsxs)("div", {
                             className: j.Lv,
                             children: [
-                                (0, E.jsx)(F, { width: 220, height: 28 }),
+                                (0, E.jsx)(p, { width: 220, height: 28 }),
                                 (0, E.jsxs)("div", {
                                     className: j.md,
                                     children: [
-                                        (0, E.jsx)("div", { className: n()(j.Nr, j.pD), style: { gridRow: "span 2" } }),
+                                        (0, E.jsx)("div", { className: n()(j.Nr, j.e2) }),
+                                        (0, E.jsx)("div", { className: n()(j.Nr, j.e2) }),
                                         (0, E.jsx)("div", { className: n()(j.Nr, j.e2) }),
                                         (0, E.jsx)("div", { className: n()(j.Nr, j.e2) }),
                                         (0, E.jsx)("div", { className: n()(j.Nr, j.e2) }),
@@ -557,12 +557,12 @@ function eE() {
         ],
     });
 }
-function es() {
+function eE() {
     return (0, E.jsxs)("div", {
         className: j.MY,
         role: "status",
         children: [
-            (0, E.jsx)(W, {}),
+            (0, E.jsx)(V, {}),
             (0, E.jsxs)("div", {
                 className: j.Ix,
                 children: [(0, E.jsx)("div", {}), (0, E.jsx)("div", { className: j.pz })],
@@ -570,27 +570,30 @@ function es() {
         ],
     });
 }
-function en() {
-    return (0, E.jsx)("div", { className: p.ON });
+function es() {
+    return (0, E.jsx)("div", { className: g.ON });
 }
-function er() {
+function en() {
     return (0, E.jsxs)("nav", {
         className: j.uC,
         role: "status",
         children: [
-            (0, E.jsx)("div", { className: j.Bm, children: (0, E.jsx)(F, { width: "55%", height: 14 }) }),
+            (0, E.jsx)("div", { className: j.Bm, children: (0, E.jsx)(p, { width: "55%", height: 14 }) }),
             (0, E.jsx)(h.A, { withBannerPadding: !1 }),
         ],
     });
 }
-function el() {
-    return (0, E.jsx)(er, {});
-}
-function ea() {
+function er() {
     return (0, E.jsx)(en, {});
 }
-function e_() {
+function el() {
     return (0, E.jsx)(es, {});
+}
+function ea() {
+    return (0, E.jsx)(eE, {});
+}
+function e_() {
+    return (0, E.jsx)(y, {});
 }
 function eS() {
     return (0, E.jsx)(H, {});
@@ -602,10 +605,10 @@ function ec() {
     return (0, E.jsx)(b, {});
 }
 function eo() {
-    return (0, E.jsx)(B, {});
+    return (0, E.jsx)(ei, {});
 }
 function eI() {
-    return (0, E.jsx)(eE, {});
+    return (0, E.jsx)(K, {});
 }
 function ed() {
     return (0, E.jsx)(Q, {});
@@ -620,10 +623,10 @@ function eN() {
     return (0, E.jsx)(Z, {});
 }
 function eu() {
-    return (0, E.jsx)(q, {});
+    return (0, E.jsx)(z, {});
 }
 function eP() {
-    return (0, E.jsx)(z, {});
+    return (0, E.jsx)(q, {});
 }
 function eh() {
     return (0, E.jsx)(X, {});
@@ -633,7 +636,4 @@ function eO() {
 }
 function eC() {
     return (0, E.jsx)(et, {});
-}
-function eD() {
-    return (0, E.jsx)(ei, {});
 }
