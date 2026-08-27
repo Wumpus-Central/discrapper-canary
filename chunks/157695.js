@@ -24,14 +24,14 @@ class g extends u.Ay.Store {
     get lastFetchedQuestToDeliver() {
         return r;
     }
-    isFetchingQuestToDeliverByPlacement(e) {
+    isFetchingAdToDeliverByPlacement(e) {
         return i?.get(e) ?? !1;
     }
     canRefreshAd(e) {
         let t = l?.get(e);
         return null == t || Date.now() >= t;
     }
-    get questAdDecisionByPlacement() {
+    get deliveryAdDecisionByPlacement() {
         return a;
     }
     isFetchingQuestHomeHero() {

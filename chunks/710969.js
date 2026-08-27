@@ -107,7 +107,7 @@ function R(e, t) {
         return null != n ? O(n) : null;
     })(e, t);
     if (null != n) return n;
-    let i = r.A.questAdDecisionByPlacement.get(e);
+    let i = r.A.deliveryAdDecisionByPlacement.get(e);
     return e === c.p9.QUEST_HOME_BANNER_DESKTOP && null != i ? O(i) : null == i ? null : O(i);
 }
 function L(e, t) {

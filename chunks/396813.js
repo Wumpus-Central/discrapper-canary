@@ -133,7 +133,7 @@ class G {
     pendingRequests = new Map();
     recordQuestRequestAttempt(e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
-            i = null != n ? (d.A.questAdDecisionByPlacement.get(n) ?? null) : null,
+            i = null != n ? (d.A.deliveryAdDecisionByPlacement.get(n) ?? null) : null,
             r = {
                 initialSendTimestamp: Date.now(),
                 endpoint: e,
@@ -730,7 +730,7 @@ async function eN(e) {
 let eC = 5 * C.A.Millis.MINUTE;
 async function eO() {
     let e = B.p9.QUEST_HOME_BANNER_DESKTOP;
-    if (d.A.isFetchingQuestToDeliverByPlacement(e)) return;
+    if (d.A.isFetchingAdToDeliverByPlacement(e)) return;
     let t = d.A.getLastFetchedQuestHomeHero();
     if (null != t && Date.now() - t <= eC) return;
     let n = Date.now();

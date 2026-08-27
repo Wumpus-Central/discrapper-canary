@@ -30,11 +30,11 @@ function g(e, t, n) {
             null != e && (0, o.Fr)(t, e.ttlMillis);
             return;
         }
-        s.A.isFetchingQuestToDeliverByPlacement(t) || (s.A.canRefreshAd(t) && ((0, o.N1)(), (0, o.r8)(t, n)));
+        s.A.isFetchingAdToDeliverByPlacement(t) || (s.A.canRefreshAd(t) && ((0, o.N1)(), (0, o.r8)(t, n)));
     }
 }
 function T(e) {
-    return (0, i.bG)([s.A], () => s.A.questAdDecisionByPlacement.get(e) ?? null, [e]);
+    return (0, i.bG)([s.A], () => s.A.deliveryAdDecisionByPlacement.get(e) ?? null, [e]);
 }
 function m(e) {
     !(function (e) {
@@ -46,7 +46,7 @@ function m(e) {
             let r = i ? _ : E;
             g(n, e, "questBar-open"),
                 (t.current = setInterval(() => {
-                    g(s.A.questAdDecisionByPlacement.get(e) ?? null, e, "questBar-interval");
+                    g(s.A.deliveryAdDecisionByPlacement.get(e) ?? null, e, "questBar-interval");
                 }, r));
             let l = t.current;
             return () => {
