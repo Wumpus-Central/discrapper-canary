@@ -5,7 +5,7 @@ var s,
     r = n(582128),
     o = n(503698),
     c = n.n(o),
-    d = n(296704),
+    d = n(221877),
     u = n(837381),
     h = n(17928),
     m = n(446837),
@@ -3097,7 +3097,7 @@ class im {
             this.loadMorePausedUntilUserScroll = !1;
         else if (t.loadingMore && !e.messages.loadingMore) {
             let e = Math.abs(i - this.scrollHeightBeforeLoad);
-            this.loadMorePausedUntilUserScroll = e < 100;
+            this.loadMorePausedUntilUserScroll = this.loadMorePausedUntilUserScroll || e < 100;
         }
         if (this.isInitialized() || this.isReady()) {
             if (!this.isInitialized()) return void this.restoreScroll();
@@ -3441,15 +3441,17 @@ class im {
             let t,
                 n,
                 l = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
-                { messages: i } = e.props;
+                i = arguments.length > 1 ? arguments[1] : void 0,
+                { messages: s } = e.props;
             if (l) {
-                let e = i.last();
+                let e = s.last();
                 null != e && (n = e.id);
             } else {
-                let e = i.first();
+                let e = s.first();
                 null != e && (t = e.id);
             }
-            (e.messageFetchAnchor = e.findFetchAnchor(l)),
+            i?.pauseUntilUserScroll === !0 && (e.loadMorePausedUntilUserScroll = !0),
+                (e.messageFetchAnchor = e.findFetchAnchor(l)),
                 (e.scrollHeightBeforeLoad = e.scrollHeightCache),
                 (e.loading = !0),
                 j.A.fetchMessages({
@@ -3457,7 +3459,7 @@ class im {
                     before: t,
                     after: n,
                     limit: Math.min(eu.EMb, 2 * (0, l5.h)("scrollManager.loadMore")),
-                    truncate: !0,
+                    ...(i?.truncate === !1 ? null : { truncate: !0 }),
                 });
         };
     })();
@@ -6469,16 +6471,27 @@ function oo(e) {
             ) {
                 o.length > 0 &&
                     (o.length > 1 &&
+                        o.length < eu.UNo &&
                         (function (e) {
-                            let t = !1;
-                            for (let n of e)
-                                if (n.type !== eu.TZK.DIVIDER) {
-                                    if (!ol(n)) return !1;
-                                    t = !0;
-                                }
-                            return t;
+                            let t = 0,
+                                n = 0;
+                            for (let l of e)
+                                l.type !== eu.TZK.DIVIDER &&
+                                    (ol(l)
+                                        ? (t += l.content.filter((e) => e.type !== eu.TZK.DIVIDER).length)
+                                        : (n += 1));
+                            return t > n;
                         })(m) &&
-                        z.unshift((0, a.jsx)(r1, { loading: o.loadingMore, onClick: () => p() }, "load-more-before")),
+                        z.unshift(
+                            (0, a.jsx)(
+                                r1,
+                                {
+                                    loading: o.loadingMore,
+                                    onClick: () => p(!1, { pauseUntilUserScroll: !0, truncate: !1 }),
+                                },
+                                "load-more-before",
+                            ),
+                        ),
                     z.unshift((0, a.jsx)("div", { style: { height: n1.N0, flex: "0 0 auto" } }, "buffer")));
                 let { useReducedMotion: e } = N.Ay;
                 ((e && b()) || !e) && z.unshift((0, a.jsx)(l9, { compact: u, ...f }, "has-more"));
