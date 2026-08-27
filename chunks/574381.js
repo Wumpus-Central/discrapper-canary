@@ -23,7 +23,7 @@ n.d(t, {
 });
 var i,
     r = (((i = {}).WINDOWS = "WINDOWS"), (i.OSX = "OSX"), (i.LINUX = "LINUX"), (i.WEB = "WEB"), i);
-let a = window.DiscordNative,
+let a = "u" < typeof window ? null : window.DiscordNative,
     s = null != a,
     l = null != a ? a.process.platform : "";
 function o() {
