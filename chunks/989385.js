@@ -5149,193 +5149,183 @@ e.exports = (() => {
                             w = e.listenOnDocumentBody,
                             _ = e.eventCapture;
                         if (!t || !a.length || !s || !l || !r || "u" < typeof window) return null;
-                        var S = null,
-                            x = !1,
-                            E = null,
-                            k = function () {
-                                E = null;
+                        var S = w ? t.ownerDocument.body : t,
+                            x = !0 === w,
+                            E = null != _ ? _ : x,
+                            k = null,
+                            C = !1,
+                            T = null,
+                            M = new Set(),
+                            P = new Set(),
+                            A = null,
+                            I = null,
+                            O = "function" == typeof requestAnimationFrame,
+                            D = function (e, t, r) {
+                                var n = t - e.left,
+                                    i = r - e.top;
+                                return n >= 0 && n <= e.width && i >= 0 && i <= e.height;
                             },
-                            C = function (e) {
-                                if (x && e instanceof MouseEvent) {
-                                    "mouseup" == e.type && (x = !1);
-                                    return;
+                            R = function (e, t) {
+                                if (0 !== e.length) {
+                                    var n = l.computeAlignment(
+                                            u,
+                                            c,
+                                            { minX: 0, minY: 0, maxX: t.width, maxY: t.height },
+                                            r.bounds,
+                                            g,
+                                        ),
+                                        i = new l.Mat2D();
+                                    n.invert(i),
+                                        e.forEach(function (e) {
+                                            var r = new l.Vec2D(e.clientX - t.left, e.clientY - t.top),
+                                                n = l.mapXY(i, r);
+                                            (e.transformedX = n.x()), (e.transformedY = n.y()), n.delete(), r.delete();
+                                        }),
+                                        i.delete(),
+                                        n.delete();
                                 }
-                                (x = d && "touchend" === e.type && "touchstart" === S), (S = e.type);
-                                var n,
-                                    i = t.getBoundingClientRect();
-                                if (!v && "touchstart" === e.type && null === E) {
-                                    var s = null == (n = e.changedTouches) ? void 0 : n[0];
-                                    s && (E = s.identifier);
-                                }
-                                var f = o(e, d, v, v ? null : E),
-                                    p = l.computeAlignment(
-                                        u,
-                                        c,
-                                        { minX: 0, minY: 0, maxX: i.width, maxY: i.height },
-                                        r.bounds,
-                                        g,
-                                    ),
-                                    m = new l.Mat2D();
-                                p.invert(m);
-                                var y = [];
-                                switch (
-                                    (f.forEach(function (t) {
-                                        var r = t.clientX,
-                                            n = t.clientY;
-                                        if (r || n) {
-                                            var o = r - i.left,
-                                                a = n - i.top;
-                                            if (
-                                                (o >= 0 && o <= i.width && a >= 0 && a <= i.height) ||
-                                                ["mouseleave", "mouseout"].includes(e.type)
-                                            ) {
-                                                var s = new l.Vec2D(o, a),
-                                                    u = l.mapXY(m, s),
-                                                    c = u.x(),
-                                                    f = u.y();
-                                                (t.transformedX = c),
-                                                    (t.transformedY = f),
-                                                    u.delete(),
-                                                    s.delete(),
-                                                    y.push(t);
+                            },
+                            L = function (e, t) {
+                                if (0 !== e.length)
+                                    for (var r = 0; r < a.length; r++) for (var n = 0; n < e.length; n++) t(a[r], e[n]);
+                            },
+                            F = function (e) {
+                                L(e, function (e, t) {
+                                    e.pointerMove(t.transformedX, t.transformedY, t.identifier);
+                                });
+                            },
+                            N = function (e) {
+                                L(e, function (e, t) {
+                                    h
+                                        ? e.pointerExit(
+                                              t.transformedX < 0 ? t.transformedX - 1e4 : t.transformedX + 1e4,
+                                              t.transformedY < 0 ? t.transformedY - 1e4 : t.transformedY + 1e4,
+                                              t.identifier,
+                                          )
+                                        : e.pointerMove(t.transformedX, t.transformedY, t.identifier);
+                                });
+                            },
+                            j = function () {
+                                (T = null), M.clear(), P.clear();
+                            },
+                            B = function (e) {
+                                var r,
+                                    n = "mouseout" === e.type || "mouseleave" === e.type;
+                                if (!n || !x || null == e.relatedTarget) {
+                                    if (C && e instanceof MouseEvent) {
+                                        "mouseup" == e.type && (C = !1);
+                                        return;
+                                    }
+                                    (C = d && "touchend" === e.type && "touchstart" === k), (k = e.type);
+                                    var i = "mouseup" === e.type || "touchend" === e.type,
+                                        a = "mousedown" === e.type || "touchstart" === e.type,
+                                        s =
+                                            ((!x || a || i || null === A) && (A = t.getBoundingClientRect()),
+                                            null === I &&
+                                                O &&
+                                                (I = requestAnimationFrame(function () {
+                                                    (I = null), (A = null);
+                                                })),
+                                            A);
+                                    if (!v && "touchstart" === e.type && null === T) {
+                                        var l = null == (r = e.changedTouches) ? void 0 : r[0];
+                                        l && (T = l.identifier);
+                                    }
+                                    var u = o(e, d, v, v ? null : T),
+                                        c = "touchend" === e.type,
+                                        f = [],
+                                        p = [],
+                                        h = [],
+                                        m = [];
+                                    if (
+                                        (u.forEach(function (e) {
+                                            var t = e.clientX,
+                                                r = e.clientY;
+                                            if (Number.isFinite(t) && Number.isFinite(r)) {
+                                                var o = e.identifier,
+                                                    l = M.has(o),
+                                                    u = !n && (!x || D(s, t, r));
+                                                u ? f.push(e) : l && p.push(e);
+                                                var d = i && (u || P.has(o));
+                                                d && h.push(e),
+                                                    (u || l || d) && m.push(e),
+                                                    a && u ? P.add(o) : i && P.delete(o),
+                                                    u && !c ? M.add(o) : M.delete(o);
                                             }
+                                        }),
+                                        !v &&
+                                            "touchend" === e.type &&
+                                            u.some(function (e) {
+                                                return e.identifier === T;
+                                            }) &&
+                                            (T = null),
+                                        ("mousemove" !== e.type &&
+                                            "mouseover" !== e.type &&
+                                            "mouseenter" !== e.type &&
+                                            "touchmove" !== e.type) ||
+                                            0 !== f.length ||
+                                            0 !== p.length)
+                                    )
+                                        switch ((R(m, s), N(p), e.type)) {
+                                            case "mouseleave":
+                                            case "mouseout":
+                                                break;
+                                            case "mouseenter":
+                                            case "touchmove":
+                                            case "mouseover":
+                                            case "mousemove":
+                                                F(f);
+                                                break;
+                                            case "touchstart":
+                                            case "mousedown":
+                                                L(f, function (e, t) {
+                                                    e.pointerDown(t.transformedX, t.transformedY, t.identifier);
+                                                }),
+                                                    b(0);
+                                                break;
+                                            case "touchend":
+                                                L(h, function (e, t) {
+                                                    e.pointerUp(t.transformedX, t.transformedY, t.identifier),
+                                                        e.pointerExit(t.transformedX, t.transformedY, t.identifier);
+                                                }),
+                                                    b(0);
+                                                break;
+                                            case "mouseup":
+                                                L(h, function (e, t) {
+                                                    e.pointerUp(t.transformedX, t.transformedY, t.identifier);
+                                                }),
+                                                    b(0);
                                         }
-                                    }),
-                                    m.delete(),
-                                    p.delete(),
-                                    e.type)
-                                ) {
-                                    case "mouseleave":
-                                    case "mouseout":
-                                        for (
-                                            var w = function (e) {
-                                                    h
-                                                        ? y.forEach(function (t) {
-                                                              e.pointerExit(
-                                                                  t.transformedX < 0
-                                                                      ? t.transformedX - 1e4
-                                                                      : t.transformedX + 1e4,
-                                                                  t.transformedY < 0
-                                                                      ? t.transformedY - 1e4
-                                                                      : t.transformedY + 1e4,
-                                                                  t.identifier,
-                                                              );
-                                                          })
-                                                        : y.forEach(function (t) {
-                                                              e.pointerMove(
-                                                                  t.transformedX,
-                                                                  t.transformedY,
-                                                                  t.identifier,
-                                                              );
-                                                          });
-                                                },
-                                                _ = 0;
-                                            _ < a.length;
-                                            _++
-                                        ) {
-                                            var k = a[_];
-                                            w(k);
-                                        }
-                                        break;
-                                    case "mouseenter":
-                                    case "touchmove":
-                                    case "mouseover":
-                                    case "mousemove":
-                                        for (
-                                            var C = function (e) {
-                                                    y.forEach(function (t) {
-                                                        e.pointerMove(t.transformedX, t.transformedY, t.identifier);
-                                                    });
-                                                },
-                                                T = 0;
-                                            T < a.length;
-                                            T++
-                                        ) {
-                                            var k = a[T];
-                                            C(k);
-                                        }
-                                        break;
-                                    case "touchstart":
-                                    case "mousedown":
-                                        for (
-                                            var M = function (e) {
-                                                    y.forEach(function (t) {
-                                                        e.pointerDown(t.transformedX, t.transformedY, t.identifier);
-                                                    });
-                                                },
-                                                P = 0;
-                                            P < a.length;
-                                            P++
-                                        ) {
-                                            var k = a[P];
-                                            M(k);
-                                        }
-                                        b(0);
-                                        break;
-                                    case "touchend":
-                                        for (
-                                            var A = function (e) {
-                                                    y.forEach(function (t) {
-                                                        e.pointerUp(t.transformedX, t.transformedY, t.identifier),
-                                                            e.pointerExit(t.transformedX, t.transformedY, t.identifier);
-                                                    });
-                                                },
-                                                I = 0;
-                                            I < a.length;
-                                            I++
-                                        ) {
-                                            var k = a[I];
-                                            A(k);
-                                        }
-                                        b(0),
-                                            !v &&
-                                                f.some(function (e) {
-                                                    return e.identifier === E;
-                                                }) &&
-                                                (E = null);
-                                        break;
-                                    case "mouseup":
-                                        for (
-                                            var O = function (e) {
-                                                    y.forEach(function (t) {
-                                                        e.pointerUp(t.transformedX, t.transformedY, t.identifier);
-                                                    });
-                                                },
-                                                D = 0;
-                                            D < a.length;
-                                            D++
-                                        ) {
-                                            var k = a[D];
-                                            O(k);
-                                        }
-                                        b(0);
                                 }
-                            }.bind(n),
-                            T = w ? t.ownerDocument.body : t;
+                            }.bind(n);
                         return (
-                            T.addEventListener("mouseover", C, _),
-                            T.addEventListener("mouseenter", C, _),
-                            T.addEventListener("mouseout", C, _),
-                            T.addEventListener("mouseleave", C, _),
-                            T.addEventListener("mousemove", C, _),
-                            T.addEventListener("mousedown", C, _),
-                            T.addEventListener("mouseup", C, _),
-                            t.addEventListener("touchmove", C, { passive: d }),
-                            t.addEventListener("touchstart", C, { passive: d }),
-                            t.addEventListener("touchend", C),
-                            t.addEventListener("touchcancel", k),
+                            S.addEventListener("mouseover", B, E),
+                            S.addEventListener("mouseout", B, E),
+                            S.addEventListener("mousemove", B, E),
+                            S.addEventListener("mousedown", B, E),
+                            S.addEventListener("mouseup", B, E),
+                            x && (S.addEventListener("mouseenter", B, E), S.addEventListener("mouseleave", B, E)),
+                            t.addEventListener("touchmove", B, { passive: d }),
+                            t.addEventListener("touchstart", B, { passive: d }),
+                            t.addEventListener("touchend", B),
+                            t.addEventListener("touchcancel", j),
                             function () {
-                                T.removeEventListener("mouseover", C, _),
-                                    T.removeEventListener("mouseenter", C, _),
-                                    T.removeEventListener("mouseout", C, _),
-                                    T.removeEventListener("mouseleave", C, _),
-                                    T.removeEventListener("mousemove", C, _),
-                                    T.removeEventListener("mousedown", C, _),
-                                    T.removeEventListener("mouseup", C, _),
-                                    t.removeEventListener("touchmove", C),
-                                    t.removeEventListener("touchstart", C),
-                                    t.removeEventListener("touchend", C),
-                                    t.removeEventListener("touchcancel", k);
+                                S.removeEventListener("mouseover", B, E),
+                                    S.removeEventListener("mouseout", B, E),
+                                    S.removeEventListener("mousemove", B, E),
+                                    S.removeEventListener("mousedown", B, E),
+                                    S.removeEventListener("mouseup", B, E),
+                                    x &&
+                                        (S.removeEventListener("mouseenter", B, E),
+                                        S.removeEventListener("mouseleave", B, E)),
+                                    t.removeEventListener("touchmove", B),
+                                    t.removeEventListener("touchstart", B),
+                                    t.removeEventListener("touchend", B),
+                                    t.removeEventListener("touchcancel", j),
+                                    null !== I && (cancelAnimationFrame(I), (I = null)),
+                                    (A = null),
+                                    M.clear(),
+                                    P.clear();
                             }
                         );
                     };
@@ -7124,9 +7114,8 @@ e.exports = (() => {
                     (this._audioEventListener = null),
                     (this._boundDraw = null),
                     (this.eventTarget = e.eventTarget),
-                    (this.eventCapture = null == e.eventCapture || e.eventCapture),
-                    (this.listenOnDocumentBody = null != e.listenOnDocumentBody && e.listenOnDocumentBody),
-                    null != e.eventTarget && (this.listenOnDocumentBody = !1),
+                    (this.eventCapture = e.eventCapture),
+                    (this.listenOnDocumentBody = null == e.eventTarget && !0 === e.listenOnDocumentBody),
                     (this._pageVisibilityHandler = null),
                     (this._explicitlyStoppedRendering = !1),
                     (this._viewModelInstance = null),

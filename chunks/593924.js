@@ -1,49 +1,51 @@
 o.r(e),
     o.d(e, {
-        CheckpointNumbersCenterAlignedRive: () => w,
-        UnlockRive: () => H.V,
-        ThemeAwareNitroWishlistingWumpusRive: () => Q.u,
-        CheckpointKnickKnacksRive: () => M,
-        AnimatedNitroOrbRewardsRive: () => t.Z,
-        FistBumpRive: () => U.l,
-        PerfTestRive: () => D.Q,
-        NitroRewardsMouseRive: () => W.C,
-        BoostGemLevelTwoRive: () => l.J,
-        GameServerHostingRive: () => R.E,
-        CheckpointFriendsRive: () => S,
-        BoostGemLevelOneRive: () => a.t,
-        TabHoverGradientRive: () => j.U,
-        WandAndSparklesRive: () => q,
-        BoostThisServerRive: () => s.D,
-        NitroQuestOrbsMultiplierRive: () => _.E,
-        BoostGemLevelThreeRive: () => n.z,
-        AVSurveyFacesRive: () => i.i,
-        NitroCoinRive: () => O.s,
-        CheckpointIntroRive: () => k,
-        DiceRive: () => F.m,
-        CheckpointCardRive: () => v,
-        CheckpointNumbersLeftAlignedRive: () => I,
+        CheckpointNumbersCenterAlignedRive: () => L,
+        UnlockRive: () => J.V,
+        ThemeAwareNitroWishlistingWumpusRive: () => H.u,
+        CheckpointKnickKnacksRive: () => y,
+        AnimatedNitroOrbRewardsRive: () => i.Z,
+        FistBumpRive: () => R.l,
+        PerfTestRive: () => j.Q,
+        NitroRewardsMouseRive: () => E.C,
+        BoostGemLevelTwoRive: () => s.J,
+        GameServerHostingRive: () => B.E,
+        CheckpointFriendsRive: () => f,
+        BoostGemLevelOneRive: () => n.t,
+        TabHoverGradientRive: () => X.U,
+        WandAndSparklesRive: () => Y,
+        BoostThisServerRive: () => b.D,
+        NitroQuestOrbsMultiplierRive: () => W.E,
+        BoostGemLevelThreeRive: () => l.z,
+        AVSurveyFacesRive: () => a.i,
+        NitroCoinRive: () => _.s,
+        CheckpointIntroRive: () => V,
+        AIVisualIdentitySmallSurfaceRive: () => t.j,
+        DiceRive: () => U.m,
+        CheckpointCardRive: () => g,
+        CheckpointNumbersLeftAlignedRive: () => F,
         PulseGradientRive: () => T.M,
-        VibingWumpusBackgroundRive: () => K.R,
-        JetpackWumpusWithTrinketsRive: () => N.e,
-        GlowButtonRive: () => B.s,
-        TeenScreenTimeRive: () => X.w,
-        NitroWishlistingWumpusRive: () => x,
-        VibingWumpusRive: () => J.Z,
+        VibingWumpusBackgroundRive: () => Z.R,
+        JetpackWumpusWithTrinketsRive: () => O.e,
+        GlowButtonRive: () => N.s,
+        TeenScreenTimeRive: () => Q.w,
+        NitroWishlistingWumpusRive: () => D,
+        VibingWumpusRive: () => K.Z,
     });
-var t = o(567341),
-    i = o(896572),
-    a = o(565553),
-    n = o(285828),
-    l = o(168900),
-    s = o(527383),
-    b = o(477900);
+var t = o(402386),
+    i = o(567341),
+    a = o(896572),
+    n = o(565553),
+    l = o(285828),
+    s = o(168900),
+    b = o(527383),
+    c = o(477900);
 o(582128);
-let c =
+let d =
     "https://cdn.discordapp.com/assets/content/90100f5bba072ea8759cb5badbe01f05187ed7b573e7b6d6553775a3f78eef9d.riv";
-var d = o(502377),
-    u = o(799226);
-let m = {
+var u = o(502377),
+    m = o(799226);
+let v = {
     Main: {
         reducedMotion: "boolean",
         Icon: "artboard",
@@ -225,25 +227,25 @@ let m = {
         FillColor: "color",
     },
 };
-function v(r) {
+function g(r) {
     let { artboard: e = "Main", stateMachine: o, ...t } = r,
-        { status: i, buffer: a } = (0, u.CE)(c),
-        n = (0, u.m2)(c);
-    return i === u.BW.Loading
+        { status: i, buffer: a } = (0, m.CE)(d),
+        n = (0, m.m2)(d);
+    return i === m.BW.Loading
         ? null
-        : (0, b.jsx)(d.w, {
+        : (0, c.jsx)(u.w, {
               ...(n ? { key: "override" } : {}),
               buffer: a,
               artboard: e,
               stateMachine: o,
-              artboardProperties: m,
+              artboardProperties: v,
               ...t,
           });
 }
-v.riveSrc = c;
-let g =
+g.riveSrc = d;
+let A =
         "https://cdn.discordapp.com/assets/content/944cf05122af903e5091602b52fbd726c5c4956954d3628f659f21040a431c4e.riv",
-    A = {
+    S = {
         MAIN: {
             reducedMotion: "boolean",
             twoFriends: "boolean",
@@ -386,25 +388,25 @@ let g =
             ConnectorColor: "color",
         },
     };
-function S(r) {
+function f(r) {
     let { artboard: e = "MAIN", stateMachine: o, ...t } = r,
-        { status: i, buffer: a } = (0, u.CE)(g),
-        n = (0, u.m2)(g);
-    return i === u.BW.Loading
+        { status: i, buffer: a } = (0, m.CE)(A),
+        n = (0, m.m2)(A);
+    return i === m.BW.Loading
         ? null
-        : (0, b.jsx)(d.w, {
+        : (0, c.jsx)(u.w, {
               ...(n ? { key: "override" } : {}),
               buffer: a,
               artboard: e,
               stateMachine: o,
-              artboardProperties: A,
+              artboardProperties: S,
               ...t,
           });
 }
-S.riveSrc = g;
-let f =
+f.riveSrc = A;
+let p =
         "https://cdn.discordapp.com/assets/content/756c8e37a14fc267712502cc0892be86b2e98d9132fe075f9ba75fd9e9a0aa48.riv",
-    p = {
+    k = {
         "Checkpoint Intro Desktop": {
             reducedMotion: "boolean",
             Subtitle: "string",
@@ -433,25 +435,25 @@ let f =
             StartButton: "string",
         },
     };
-function k(r) {
+function V(r) {
     let { artboard: e = "Checkpoint Intro Desktop", stateMachine: o, ...t } = r,
-        { status: i, buffer: a } = (0, u.CE)(f),
-        n = (0, u.m2)(f);
-    return i === u.BW.Loading
+        { status: i, buffer: a } = (0, m.CE)(p),
+        n = (0, m.m2)(p);
+    return i === m.BW.Loading
         ? null
-        : (0, b.jsx)(d.w, {
+        : (0, c.jsx)(u.w, {
               ...(n ? { key: "override" } : {}),
               buffer: a,
               artboard: e,
               stateMachine: o,
-              artboardProperties: p,
+              artboardProperties: k,
               ...t,
           });
 }
-k.riveSrc = f;
+V.riveSrc = p;
 let C =
         "https://cdn.discordapp.com/assets/content/b938a7ed497f825ee131572ca37f34e5c674b47edec8a88661d2a7d380966f1c.riv",
-    V = {
+    M = {
         Preview: { reducedMotion: "boolean", iconColor: "color" },
         Friends: { reducedMotion: "boolean", iconColor: "color" },
         Globe: { reducedMotion: "boolean", iconColor: "color" },
@@ -467,55 +469,55 @@ let C =
         Messages: { reducedMotion: "boolean", iconColor: "color" },
         Servers: { reducedMotion: "boolean", iconColor: "color" },
     };
-function M(r) {
+function y(r) {
     let { artboard: e = "Preview", stateMachine: o, ...t } = r,
-        { status: i, buffer: a } = (0, u.CE)(C),
-        n = (0, u.m2)(C);
-    return i === u.BW.Loading
+        { status: i, buffer: a } = (0, m.CE)(C),
+        n = (0, m.m2)(C);
+    return i === m.BW.Loading
         ? null
-        : (0, b.jsx)(d.w, {
+        : (0, c.jsx)(u.w, {
               ...(n ? { key: "override" } : {}),
               buffer: a,
               artboard: e,
               stateMachine: o,
-              artboardProperties: V,
+              artboardProperties: M,
               ...t,
           });
 }
-M.riveSrc = C;
-let y =
+y.riveSrc = C;
+let h =
         "https://cdn.discordapp.com/assets/content/ce09db302fba4b6308baf379d0cbd02ee57cbf2503a998192e31df9637cc161e.riv",
-    h = {
+    w = {
         Artboard: { reducedMotion: "boolean", TextColor: "color", "Fire CountUp": "trigger", DisplayValue: "number" },
     };
-function w(r) {
+function L(r) {
     let { artboard: e = "Artboard", stateMachine: o, ...t } = r,
-        { status: i, buffer: a } = (0, u.CE)(y),
-        n = (0, u.m2)(y);
-    return i === u.BW.Loading
+        { status: i, buffer: a } = (0, m.CE)(h),
+        n = (0, m.m2)(h);
+    return i === m.BW.Loading
         ? null
-        : (0, b.jsx)(d.w, {
+        : (0, c.jsx)(u.w, {
               ...(n ? { key: "override" } : {}),
               buffer: a,
               artboard: e,
               stateMachine: o,
-              artboardProperties: h,
+              artboardProperties: w,
               ...t,
           });
 }
-w.riveSrc = y;
-let L =
+L.riveSrc = h;
+let I =
         "https://cdn.discordapp.com/assets/content/b5a7e4dd53b173c7d1f38ddbd65142267a79529a228987d184c858c16c21ddf6.riv",
     P = {
         Artboard: { reducedMotion: "boolean", TextColor: "color", "Fire CountUp": "trigger", DisplayValue: "number" },
     };
-function I(r) {
+function F(r) {
     let { artboard: e = "Artboard", stateMachine: o, ...t } = r,
-        { status: i, buffer: a } = (0, u.CE)(L),
-        n = (0, u.m2)(L);
-    return i === u.BW.Loading
+        { status: i, buffer: a } = (0, m.CE)(I),
+        n = (0, m.m2)(I);
+    return i === m.BW.Loading
         ? null
-        : (0, b.jsx)(d.w, {
+        : (0, c.jsx)(u.w, {
               ...(n ? { key: "override" } : {}),
               buffer: a,
               artboard: e,
@@ -524,58 +526,58 @@ function I(r) {
               ...t,
           });
 }
-I.riveSrc = L;
-var F = o(908803),
-    U = o(90517),
-    R = o(289704),
-    B = o(570950),
-    N = o(970002),
-    O = o(149282),
-    _ = o(122720),
-    W = o(907581);
-let E =
+F.riveSrc = I;
+var U = o(908803),
+    R = o(90517),
+    B = o(289704),
+    N = o(570950),
+    O = o(970002),
+    _ = o(149282),
+    W = o(122720),
+    E = o(907581);
+let G =
         "https://cdn.discordapp.com/assets/content/7d79185ce3c3038667277ee16ba8cb835b1b012f20b92ef5428b9166c5347c59.riv",
-    G = { "Nitro Wishlist": { reducedMotion: "boolean" } };
-function x(r) {
+    x = { "Nitro Wishlist": { reducedMotion: "boolean" } };
+function D(r) {
     let { artboard: e = "Nitro Wishlist", stateMachine: o, ...t } = r,
-        { status: i, buffer: a } = (0, u.CE)(E),
-        n = (0, u.m2)(E);
-    return i === u.BW.Loading
+        { status: i, buffer: a } = (0, m.CE)(G),
+        n = (0, m.m2)(G);
+    return i === m.BW.Loading
         ? null
-        : (0, b.jsx)(d.w, {
+        : (0, c.jsx)(u.w, {
               ...(n ? { key: "override" } : {}),
               buffer: a,
               artboard: e,
               stateMachine: o,
-              artboardProperties: G,
+              artboardProperties: x,
               ...t,
           });
 }
-x.riveSrc = E;
-var D = o(102079),
+D.riveSrc = G;
+var j = o(102079),
     T = o(440166),
-    j = o(549254),
-    X = o(632679),
-    Q = o(583094),
-    H = o(242644),
-    J = o(773350),
-    K = o(615429);
-let Z =
+    X = o(549254),
+    Q = o(632679),
+    H = o(583094),
+    J = o(242644),
+    K = o(773350),
+    Z = o(615429);
+let z =
         "https://cdn.discordapp.com/assets/content/026e9c119f280f5edf3ba486ba20c26e21c5dac14dfedd0a238373298bf289f0.riv",
-    z = { "Surprise Me": { fill: "color" } };
-function q(r) {
+    q = { "Surprise Me": { fill: "color" } };
+function Y(r) {
     let { artboard: e = "Surprise Me", stateMachine: o, ...t } = r,
-        { status: i, buffer: a } = (0, u.CE)(Z),
-        n = (0, u.m2)(Z);
-    return i === u.BW.Loading
+        { status: i, buffer: a } = (0, m.CE)(z),
+        n = (0, m.m2)(z);
+    return i === m.BW.Loading
         ? null
-        : (0, b.jsx)(d.w, {
+        : (0, c.jsx)(u.w, {
               ...(n ? { key: "override" } : {}),
               buffer: a,
               artboard: e,
               stateMachine: o,
-              artboardProperties: z,
+              artboardProperties: q,
               ...t,
           });
 }
-q.riveSrc = Z;
+Y.riveSrc = z;

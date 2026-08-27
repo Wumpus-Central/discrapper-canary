@@ -148,4 +148,18 @@
     outline: 1px dashed var(--border-subtle)
 }
 
-/*# sourceMappingURL=567a357acc1d7917.css.map*/
+.demo__578c2 {
+    padding: var(--space-128)
+}
+
+.surface__578c2 {
+    background: var(--background-surface-higher);
+    border: 1px dashed var(--border-subtle);
+    border-radius: var(--radius-md);
+    box-sizing: border-box;
+    height: 180px;
+    position: relative;
+    width: var(--__demo-area)
+}
+
+/*# sourceMappingURL=9d8a6081c329ae31.css.map*/
