@@ -5743,6 +5743,22 @@
     }
   },
   {
+    "kind": "user",
+    "name": "2026-08-rocketleague-events",
+    "defaultConfig": {
+      "enableRocketLeagueEvents": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enableRocketLeagueEvents": true
+      }
+    }
+  },
+  {
     "name": "2026-08-scheduled-messages",
     "kind": "user",
     "defaultConfig": null,

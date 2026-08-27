@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Ly: () => y, Q4: () => O, Tv: () => D, pn: () => v, GC: () => R, lq: () => b }), n(321073);
+n.d(t, { Ly: () => w, Q4: () => M, Tv: () => G, pn: () => x, GC: () => P, lq: () => k }), n(321073);
 var i = n(284009),
     r = n.n(i),
     a = n(997649),
@@ -91,8 +91,64 @@ function E(e, t) {
     let n = e.findLast((e) => e.timestamp_ms <= t);
     return r()(null != n, "bad timeline!"), n;
 }
-var A = n(435558);
-function h(e, t, n) {
+var A = n(190443),
+    h = n(979563);
+let I = 1 / 4,
+    f = new Set([h.d.Goal, h.d.Save, h.d.EpicSave, h.d.Demolition, h.d.Demolished, h.d.BicycleHit, h.d.FlipReset]);
+class p {
+    gameAxisScoreThreshold = 0.25;
+    gameStateTimeline = [];
+    constructor(e) {
+        this.gameStateTimeline = (function (e) {
+            let t = !1,
+                n = [{ inMatch: !1, timestamp_ms: 0 }];
+            function i(e, i) {
+                e !== t && ((t = e), n.push({ inMatch: t, timestamp_ms: i }));
+            }
+            for (let t of [...e].sort((e, t) => e.timestamp_ms - t.timestamp_ms))
+                switch (t.eventName) {
+                    case h.d.MatchStart:
+                        i(!0, t.timestamp_ms);
+                        break;
+                    case h.d.MatchEnd:
+                        i(!1, t.timestamp_ms);
+                        break;
+                    default:
+                        null != t.eventName && null != h._[t.eventName] && i(!0, t.timestamp_ms);
+                }
+            return n;
+        })(e);
+    }
+    calculateModifiers(e, t) {
+        let n = [],
+            i = (t - e) / 1e3 + 1;
+        for (let t = 0; t < i; t++) {
+            let i = e + 1e3 * t,
+                r = m(this.gameStateTimeline, i);
+            n.push({ timestamp_ms: i, modifier: r.inMatch ? 1 : I });
+        }
+        return n;
+    }
+    getInGameState(e, t) {
+        return (0, l.r)(this.gameStateTimeline, e, t, (e) => e.inMatch);
+    }
+    rescoreEvent(e) {
+        return null != e.eventName ? h._[e.eventName]?.scoreBoost : void 0;
+    }
+    isInGame(e) {
+        return m(this.gameStateTimeline, e).inMatch;
+    }
+    canAnchorReaction(e) {
+        return null != e.eventName && f.has(e.eventName);
+    }
+}
+let T = { applicationIds: [A.e], create: (e) => new p(e) };
+function m(e, t) {
+    let n = e.findLast((e) => e.timestamp_ms <= t);
+    return r()(null != n, "bad timeline!"), n;
+}
+var g = n(435558);
+function S(e, t, n) {
     return e.map((e) => {
         let i = Array(e.length).fill(!1),
             r = -1;
@@ -106,7 +162,7 @@ function h(e, t, n) {
         return e.map((e, t) => (i[t] ? e : 0));
     });
 }
-function I(e, t) {
+function N(e, t) {
     let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
         i = e.length,
         r = i > 0 ? e[0].length : 0,
@@ -115,7 +171,7 @@ function I(e, t) {
                 if (0 === e.length) return 0;
                 if (1 === e.length) return e[0];
                 let n = [...e].sort((e, t) => e - t),
-                    i = ((0, A.clamp)(t, 0, 100) / 100) * (n.length - 1),
+                    i = ((0, g.clamp)(t, 0, 100) / 100) * (n.length - 1),
                     r = Math.floor(i),
                     a = Math.ceil(i);
                 if (r === a) return n[r];
@@ -141,18 +197,18 @@ function I(e, t) {
     }
     return s;
 }
-function f(e, t) {
+function C(e, t) {
     return e.map((e, n) => e.map((e, i) => (t[n][i] ? e : 0)));
 }
-function p(e, t, n, i) {
+function O(e, t, n, i) {
     if (!i.requireAttribution) return { laughter: e, shouting: t };
-    let r = I(n, i, !1);
-    return { laughter: f(e, r), shouting: f(t, r) };
+    let r = N(n, i, !1);
+    return { laughter: C(e, r), shouting: C(t, r) };
 }
-function T(e, t) {
+function R(e, t) {
     return e.map((e, n) => e.map((e, i) => e * t[n][i]));
 }
-function m(e, t) {
+function L(e, t) {
     if (0 === e.length) return [];
     let n = [...e].sort((e, t) => e.tStart - t.tStart),
         i = [{ ...n[0] }];
@@ -163,13 +219,13 @@ function m(e, t) {
     }
     return i;
 }
-function g(e, t, n) {
+function y(e, t, n) {
     let i = e[t];
     for (let r = t + 1; r <= n; r++) i = Math.max(i, e[r]);
     return i;
 }
-function S(e, t, n) {
-    return m(
+function D(e, t, n) {
+    return L(
         (function (e, t) {
             let n = [],
                 i = -1;
@@ -190,28 +246,28 @@ function S(e, t, n) {
                 for (let r = t + 1; r <= n; r++) e[r] > e[i] && (i = r);
                 return i;
             })(e, n, i),
-            peakV: g(e, n, i),
+            peakV: y(e, n, i),
         };
     });
 }
-var N = n(696016);
-let C = [s.E, _];
-function O(e, t) {
+var v = n(696016);
+let b = [s.E, _, T];
+function M(e, t) {
     if (null == e) return;
-    let n = C.find((t) => t.applicationIds.includes(e));
+    let n = b.find((t) => t.applicationIds.includes(e));
     return n?.create(t);
 }
-function R(e) {
-    return null != e && C.some((t) => t.applicationIds.includes(e));
+function P(e) {
+    return null != e && b.some((t) => t.applicationIds.includes(e));
 }
-function L(e) {
+function U(e) {
     r()(null != e.decision, "clip missing .decision");
     let t = e.decision.timestamp - e.length;
     return null != e.editMetadata
         ? { startMs: t + 1e3 * e.editMetadata.start, endMs: t + 1e3 * e.editMetadata.end }
         : { startMs: t, endMs: e.decision.timestamp };
 }
-function y(e, t, n, i) {
+function w(e, t, n, i) {
     let s,
         l = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {},
         { requestedCount: o = 3, preTrimmedSignalsByFilepath: d, debug: c = !1 } = l,
@@ -249,39 +305,39 @@ function y(e, t, n, i) {
         },
         _ = [],
         E = Object.keys(t.audioModelDataPerUser).length,
-        C = [...t.gameEventData].sort((e, t) => e.timestamp_ms - t.timestamp_ms),
-        R = O(i, C),
-        y = null != R ? C : [],
-        M = Number.MAX_VALUE,
-        P = -Number.MAX_VALUE;
+        A = [...t.gameEventData].sort((e, t) => e.timestamp_ms - t.timestamp_ms),
+        h = M(i, A),
+        I = null != h ? A : [],
+        f = Number.MAX_VALUE,
+        p = -Number.MAX_VALUE;
     for (let e in t.audioModelDataPerUser) {
         let n = t.audioModelDataPerUser[e];
         for (let e of [n.laughterData, n.shoutingData, n.rmsData])
-            0 !== e.length && ((M = Math.min(M, e[0].timestamp_ms)), (P = Math.max(P, e[e.length - 1].timestamp_ms)));
+            0 !== e.length && ((f = Math.min(f, e[0].timestamp_ms)), (p = Math.max(p, e[e.length - 1].timestamp_ms)));
     }
-    null != R && M <= P && (s = R.calculateModifiers?.(M, P));
-    let U = (function (e) {
+    null != h && f <= p && (s = h.calculateModifiers?.(f, p));
+    let T = (function (e) {
         if (null == e) return () => 1;
         let t = new Map(e.map((e) => [e.timestamp_ms, e.modifier]));
         return (e) => t.get(1e3 * Math.floor(e / 1e3)) ?? 1;
     })(s);
-    function w(e) {
-        return R?.eventScoreMultiplier?.(e) ?? 1;
+    function m(e) {
+        return h?.eventScoreMultiplier?.(e) ?? 1;
     }
-    function G(e) {
-        return R?.canAnchorReaction(e) ?? !1;
+    function b(e) {
+        return h?.canAnchorReaction(e) ?? !1;
     }
     for (let i of e) {
         let e;
         r()(null != i.decision, "candidate clip missing .decision");
         let s = i.decision.timestamp - i.length;
-        function x(e, n) {
+        function P(e, n) {
             let a = d?.[i.filepath],
                 l = {};
             if (null != a) {
                 let t = 1e3 * Math.floor(s / 1e3);
                 function o(i) {
-                    return D(
+                    return G(
                         i.map((e) => ({ ...e, timestamp_ms: e.timestamp_ms + t })),
                         e,
                         n,
@@ -295,9 +351,9 @@ function y(e, t, n, i) {
                 for (let i in t.audioModelDataPerUser) {
                     let r = t.audioModelDataPerUser[i];
                     l[i] = {
-                        laughterData: D(r.laughterData, e, n),
-                        shoutingData: D(r.shoutingData, e, n),
-                        rmsData: D(r.rmsData, e, n),
+                        laughterData: G(r.laughterData, e, n),
+                        shoutingData: G(r.shoutingData, e, n),
+                        rmsData: G(r.rmsData, e, n),
                     };
                 }
             let c = (function (e) {
@@ -311,15 +367,15 @@ function y(e, t, n, i) {
                                 e[e.length - 1].timestamp_ms > n && (n = e[e.length - 1].timestamp_ms));
                     }
                     if (t === Number.MAX_VALUE || n === -Number.MAX_VALUE) return e;
-                    r()(t % v == 0 && n % v == 0, "bad timestamps!");
-                    let i = (n - t) / v + 1,
+                    r()(t % x == 0 && n % x == 0, "bad timestamps!");
+                    let i = (n - t) / x + 1,
                         a = {};
                     for (let n in e) {
                         let r = e[n];
                         a[n] = {
-                            laughterData: b(r.laughterData, t, i),
-                            shoutingData: b(r.shoutingData, t, i),
-                            rmsData: b(r.rmsData, t, i),
+                            laughterData: k(r.laughterData, t, i),
+                            shoutingData: k(r.shoutingData, t, i),
+                            rmsData: k(r.rmsData, t, i),
                         };
                     }
                     return a;
@@ -344,15 +400,15 @@ function y(e, t, n, i) {
                 chunkCount: h?.laughterData.length ?? 0,
             };
         }
-        let { startMs: l, endMs: o } = L(i),
-            { userIds: C, pLaughter: O, pShouting: R, rms: M, gridStartMs: P, chunkCount: k } = x(l, o),
-            F = C.indexOf(n),
-            V = (0, a.p)(y, l, o),
-            B = V.filter(G);
-        null != P &&
-            k > 0 &&
+        let { startMs: l, endMs: o } = U(i),
+            { userIds: A, pLaughter: h, pShouting: f, rms: p, gridStartMs: M, chunkCount: w } = P(l, o),
+            F = A.indexOf(n),
+            V = (0, a.p)(I, l, o),
+            B = V.filter(b);
+        null != M &&
+            w > 0 &&
             B.length > 0 &&
-            (e = B.map((e) => Math.max(0, Math.min(k - 1, Math.round((e.timestamp_ms - P) / 1e3)))));
+            (e = B.map((e) => Math.max(0, Math.min(w - 1, Math.round((e.timestamp_ms - M) / 1e3)))));
         let H = (function (e, t) {
                 let n,
                     { pLaughter: i, pShouting: r, rms: a, main: s, gameEventChunks: l } = e,
@@ -372,21 +428,21 @@ function y(e, t, n, i) {
                             coContribPerChunk: [],
                         },
                     };
-                let d = h(i, t, t.laughterEventThreshold),
-                    c = h(r, t, t.shoutingEventThreshold),
-                    u = t.requireAttribution ? I(a, t) : void 0,
-                    _ = null != u ? f(d, u) : d,
-                    E = null != u ? f(c, u) : c,
-                    N =
+                let d = S(i, t, t.laughterEventThreshold),
+                    c = S(r, t, t.shoutingEventThreshold),
+                    u = t.requireAttribution ? N(a, t) : void 0,
+                    _ = null != u ? C(d, u) : d,
+                    E = null != u ? C(c, u) : c,
+                    A =
                         0 === t.rmsScale
                             ? a.map((e) => e.map(() => 1))
-                            : a.map((e) => e.map((e) => (0, A.clamp)(e * t.rmsScale, 0, 1))),
-                    C = T(_, N),
-                    O = T(E, N),
+                            : a.map((e) => e.map((e) => (0, g.clamp)(e * t.rmsScale, 0, 1))),
+                    h = R(_, A),
+                    I = R(E, A),
                     {
-                        mainEventScore: R,
-                        anchors: L,
-                        events: y,
+                        mainEventScore: f,
+                        anchors: p,
+                        events: T,
                     } = (function (e, t, n, i) {
                         if (n < 0 || n >= e.laughter.length) return { mainEventScore: 0, anchors: [], events: [] };
                         let r = [],
@@ -411,7 +467,7 @@ function y(e, t, n, i) {
                         for (let { emotion: e, gated: t, intensity: n, threshold: o, weight: d } of s) {
                             let s;
                             if (0 === t.length) continue;
-                            let c = S(t, o, i);
+                            let c = D(t, o, i);
                             if (0 === c.length) continue;
                             for (let e of (a.push(
                                 ...c.map((e) => {
@@ -421,7 +477,7 @@ function y(e, t, n, i) {
                             ),
                             c)) {
                                 let t = e.tEnd - e.tStart + 1,
-                                    i = g(n, e.tStart, e.tEnd) * Math.log1p(t);
+                                    i = y(n, e.tStart, e.tEnd) * Math.log1p(t);
                                 (null == s || i > s.mag) && (s = { mag: i, window: e });
                             }
                             if (null == s) continue;
@@ -429,11 +485,11 @@ function y(e, t, n, i) {
                             let { tStart: u, tEnd: _, peakT: E, peakV: A } = s.window;
                             r.push({ emotion: e, peakT: E, peakV: A, sustain: _ - u + 1, tStart: u, tEnd: _ });
                         }
-                        return { mainEventScore: l, anchors: m(a, i.eventChainGapChunks), events: r };
-                    })({ laughter: _, shouting: E }, { laughter: C, shouting: O }, s, t),
-                    D = m(
+                        return { mainEventScore: l, anchors: L(a, i.eventChainGapChunks), events: r };
+                    })({ laughter: _, shouting: E }, { laughter: h, shouting: I }, s, t),
+                    m = L(
                         [
-                            ...L,
+                            ...p,
                             ...(t.gameEventsAsReactionAnchors && null != l
                                 ? l.map((e) => ({ tStart: e, tEnd: e }))
                                 : []),
@@ -447,8 +503,8 @@ function y(e, t, n, i) {
                         if (0 === s) return 0;
                         let l = [];
                         for (let o of e) {
-                            let e = (0, A.clamp)(o.tStart - r.lagPreChunks, 0, s - 1),
-                                d = (0, A.clamp)(o.tEnd + r.lagPostChunks, 0, s - 1),
+                            let e = (0, g.clamp)(o.tStart - r.lagPreChunks, 0, s - 1),
+                                d = (0, g.clamp)(o.tEnd + r.lagPostChunks, 0, s - 1),
                                 c = 1;
                             for (let r = 0; r < a; r++) {
                                 if (r === i) continue;
@@ -459,8 +515,8 @@ function y(e, t, n, i) {
                             l.push(1 - c);
                         }
                         return Math.max(0, ...l);
-                    })(D, C, O, s, t),
-                    { laughter: b, shouting: M } = p(d, c, a, t),
+                    })(m, h, I, s, t),
+                    { laughter: b, shouting: M } = O(d, c, a, t),
                     { coOccurrenceScore: P, coContribPerChunk: U } = (function (e, t, n) {
                         let i = e.length,
                             r = i > 0 ? e[0].length : 0,
@@ -475,10 +531,10 @@ function y(e, t, n, i) {
                         }
                         return { coOccurrenceScore: s, coContribPerChunk: a };
                     })(b, M, t),
-                    w = R,
+                    w = f,
                     G = v;
                 if (t.normalizeComponents) {
-                    (w = (R - t.sMainMedian) / t.sMainIqr), (G = (v - t.sReactionMedian) / t.sReactionIqr);
+                    (w = (f - t.sMainMedian) / t.sMainIqr), (G = (v - t.sReactionMedian) / t.sReactionIqr);
                     let e = Math.max(1, o - 1);
                     n = (P - t.sCoMedianPerPair * e) / (t.sCoIqrPerPair * e);
                 } else n = Math.log1p(P);
@@ -489,19 +545,19 @@ function y(e, t, n, i) {
                     audioScore: t.mainWeight * w + k * G + F * n,
                     components: t.normalizeComponents
                         ? { mainEventScore: w, reactionScore: G, coOccurrenceScore: n }
-                        : { mainEventScore: R, reactionScore: v, coOccurrenceScore: P },
+                        : { mainEventScore: f, reactionScore: v, coOccurrenceScore: P },
                     debug: {
                         pGatedLaughter: _,
                         pGatedShouting: E,
-                        intensityLaughter: C,
-                        intensityShouting: O,
-                        rmsWeighted: N,
-                        mainEvents: y,
-                        reactionAnchors: D,
+                        intensityLaughter: h,
+                        intensityShouting: I,
+                        rmsWeighted: A,
+                        mainEvents: T,
+                        reactionAnchors: m,
                         coContribPerChunk: U,
                     },
                 };
-            })({ pLaughter: O, pShouting: R, rms: M, main: F, gameEventChunks: e, participantCount: E }, u),
+            })({ pLaughter: h, pShouting: f, rms: p, main: F, gameEventChunks: e, participantCount: E }, u),
             j = (function (e, t, n) {
                 let i = 0;
                 for (let r of e) {
@@ -510,9 +566,9 @@ function y(e, t, n, i) {
                     i += (r.score ?? 0) * e * a;
                 }
                 return i;
-            })(V, U, w),
+            })(V, T, m),
             W = (0.5 + 1 / (1 + Math.exp(-H.audioScore))) * (1 + Math.tanh(j / u.gameSquashScale)) - 0.5,
-            Y = x(s, i.decision.timestamp),
+            Y = P(s, i.decision.timestamp),
             K = Y.gridStartMs,
             $ =
                 null != K
@@ -537,7 +593,7 @@ function y(e, t, n, i) {
                                         for (let e = 0; e < r.length; e++) {
                                             let s = r[e];
                                             if (0 !== s.length)
-                                                for (let { tStart: r, tEnd: l, peakT: o, peakV: d } of S(s, a, t))
+                                                for (let { tStart: r, tEnd: l, peakT: o, peakV: d } of D(s, a, t))
                                                     n.push({
                                                         channel: e,
                                                         emotion: i,
@@ -548,9 +604,9 @@ function y(e, t, n, i) {
                                                     });
                                         }
                                     return n;
-                                })(p(h(n, t, t.laughterEventThreshold), h(i, t, t.shoutingEventThreshold), r, t), t);
+                                })(O(S(n, t, t.laughterEventThreshold), S(i, t, t.shoutingEventThreshold), r, t), t);
                       })({ pLaughter: Y.pLaughter, pShouting: Y.pShouting, rms: Y.rms }, u).map((e) => ({
-                          type: "laughter" === e.emotion ? N.Gy.LAUGHTER : N.Gy.SHOUTING,
+                          type: "laughter" === e.emotion ? v.Gy.LAUGHTER : v.Gy.SHOUTING,
                           userId: Y.userIds[e.channel],
                           startMs: K + 1e3 * e.tStart,
                           endMs: K + (e.tEnd + 1) * 1e3,
@@ -563,26 +619,26 @@ function y(e, t, n, i) {
                 score: W,
                 audioScore: H.audioScore,
                 gameEventsScore: j,
-                hasAudio: O.length > 0,
+                hasAudio: h.length > 0,
                 hasGameEvents: V.length > 0,
                 audioEvents: $,
             };
         if (c) {
             z.components = { ...H.components, gameEventsScore: j };
-            let e = null != P ? (P - l) / 1e3 : 0;
+            let e = null != M ? (M - l) / 1e3 : 0;
             z.debug = {
                 ...H.debug,
-                userIds: C,
-                tsSec: Array.from({ length: k }, (t, n) => e + n),
-                pLaughter: O,
-                pShouting: R,
-                rms: M,
+                userIds: A,
+                tsSec: Array.from({ length: w }, (t, n) => e + n),
+                pLaughter: h,
+                pShouting: f,
+                rms: p,
             };
         }
         _.push(z);
     }
     _.sort((e, t) => t.score - e.score);
-    let k = (function (e, t, n, i) {
+    let w = (function (e, t, n, i) {
         function r(t) {
             return [...e].sort((e, n) => t(n) - t(e));
         }
@@ -618,9 +674,9 @@ function y(e, t, n, i) {
                     !d.has(t) &&
                     e.eligible(t) &&
                     !(function (e) {
-                        let { startMs: t, endMs: n } = L(e.clip);
+                        let { startMs: t, endMs: n } = U(e.clip);
                         for (let e of o) {
-                            let { startMs: i, endMs: r } = L(e.clip);
+                            let { startMs: i, endMs: r } = U(e.clip);
                             if (Math.min(n, r) - Math.max(t, i) >= 5e3) return !0;
                         }
                         return !1;
@@ -640,22 +696,22 @@ function y(e, t, n, i) {
                 c(e) && (_ = !0);
             }
         return o;
-    })(_, u, o, R?.gameAxisScoreThreshold);
-    return { allClipsRanked: _, selected: k };
+    })(_, u, o, h?.gameAxisScoreThreshold);
+    return { allClipsRanked: _, selected: w };
 }
-function D(e, t, n) {
+function G(e, t, n) {
     return e.filter((e) => e.timestamp_ms >= t && e.timestamp_ms <= n);
 }
-let v = 1e3;
-function b(e, t, n) {
+let x = 1e3;
+function k(e, t, n) {
     let i = [],
         a = 0;
     for (let s = 0; s < n; s++) {
-        let n = t + v * s,
+        let n = t + x * s,
             l = e[a];
         null != l && l.timestamp_ms === n
             ? (i.push({ ...l }), a++)
-            : (null != l && r()(l.timestamp_ms % v == 0, `bad timestamp! ${l.timestamp_ms}`),
+            : (null != l && r()(l.timestamp_ms % x == 0, `bad timestamp! ${l.timestamp_ms}`),
               i.push({ value: 0, timestamp_ms: n }));
     }
     return r()(i.length === n, "bad track!"), i;

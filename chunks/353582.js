@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => p });
+n.d(t, { A: () => g });
 var i = n(439372),
     r = n(952818),
     a = n(287809),
@@ -10,11 +10,19 @@ var i = n(439372),
     c = n(974293),
     u = n(240899),
     _ = n(458977),
-    E = n(526233),
-    A = n(270962);
-let h = n(786661).E.applicationIds["0"];
-var I = n(876474);
-class f extends i.A {
+    E = n(526233);
+let A = (0, n(945810).mj)({
+    kind: "user",
+    name: "2026-08-rocketleague-events",
+    defaultConfig: { enableRocketLeagueEvents: !1 },
+    variations: { 1: { enableRocketLeagueEvents: !0 } },
+});
+var h = n(270962);
+let I = n(786661).E.applicationIds["0"];
+var f = n(876474),
+    p = n(190443);
+let T = "Clip signal handler registration";
+class m extends i.A {
     registrations = new Map();
     activeHandlers = new Map();
     initialized = !1;
@@ -32,42 +40,43 @@ class f extends i.A {
                 {
                     type: "voiceChannel",
                     name: "ml-audio-classification",
-                    isEnabled: () => (0, c.$i)("Clip signal handler registration") && d.Ay.getEnableAutoclipping(),
+                    isEnabled: () => (0, c.$i)(T) && d.Ay.getEnableAutoclipping(),
                     importHandler: () => n.e("553725").then(n.bind(n, 691148)),
                 },
                 {
                     type: "voiceChannel",
                     name: "distributed-clipping",
                     isEnabled: () =>
-                        d.Ay.getEnableAutoclipping() &&
-                        _.A.getConfig({ location: "Clip signal handler registration" }).enableDistributedClips,
+                        d.Ay.getEnableAutoclipping() && _.A.getConfig({ location: T }).enableDistributedClips,
                     importHandler: () => n.e("878045").then(n.bind(n, 359788)),
                 },
                 {
                     type: "application",
                     name: "steam-timeline",
-                    isEnabled: () =>
-                        d.Ay.getEnableAutoclipping() &&
-                        A.A.getConfig({ location: "Clip signal handler registration" }).enableSteamTimeline,
+                    isEnabled: () => d.Ay.getEnableAutoclipping() && h.A.getConfig({ location: T }).enableSteamTimeline,
                     importHandler: () => n.e("533196").then(n.bind(n, 551367)),
                 },
                 {
                     type: "application",
                     name: "league-of-legends",
-                    applicationId: I.m,
-                    isEnabled: () =>
-                        d.Ay.getEnableAutoclipping() &&
-                        E.A.getConfig({ location: "Clip signal handler registration" }).enableLeagueEvents,
+                    applicationId: f.m,
+                    isEnabled: () => d.Ay.getEnableAutoclipping() && E.A.getConfig({ location: T }).enableLeagueEvents,
                     importHandler: () => n.e("618549").then(n.bind(n, 877588)),
                 },
                 {
                     type: "application",
                     name: "cs2-gsi",
-                    applicationId: h,
-                    isEnabled: () =>
-                        d.Ay.getEnableAutoclipping() &&
-                        u.A.getConfig({ location: "Clip signal handler registration" }).enableCs2Gsi,
+                    applicationId: I,
+                    isEnabled: () => d.Ay.getEnableAutoclipping() && u.A.getConfig({ location: T }).enableCs2Gsi,
                     importHandler: () => Promise.all([n.e("864931"), n.e("860838")]).then(n.bind(n, 525509)),
+                },
+                {
+                    type: "application",
+                    name: "rocket-league",
+                    applicationId: p.e,
+                    isEnabled: () =>
+                        d.Ay.getEnableAutoclipping() && A.getConfig({ location: T }).enableRocketLeagueEvents,
+                    importHandler: () => Promise.all([n.e("864931"), n.e("182150")]).then(n.bind(n, 446885)),
                 },
             ]))
                 switch (e.type) {
@@ -140,4 +149,4 @@ class f extends i.A {
         this.terminatedCount++, this.stopAllHandlers();
     }
 }
-let p = new f();
+let g = new m();

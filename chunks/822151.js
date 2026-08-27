@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => y, i: () => L }), n(321073);
+n.d(t, { A: () => L, i: () => R }), n(321073);
 var i = n(284009),
     r = n.n(i),
     a = n(459838),
@@ -52,18 +52,17 @@ class f {
 }
 var p = n(439818),
     T = n(572164),
-    m = n(796617),
+    m = n(363144),
     g = n(539572),
     S = n(31048),
     N = n(997649),
-    C = n(786661),
-    O = n(696016);
-function R(e, t) {
+    C = n(696016);
+function O(e, t) {
     if (e.length < 2) return !1;
     for (let n = e.length - 2; n < e.length; n++) if (e[n].value <= t) return !1;
     return !0;
 }
-class L extends l.A {
+class R extends l.A {
     timeline;
     scheduledClips = [];
     decisionSignals = (0, N.A)();
@@ -96,16 +95,16 @@ class L extends l.A {
             t.data_points))
                 "laughter" === n.label
                     ? (e.laughterData.push({ timestamp_ms: n.timestamp_ms, value: n.confidence }),
-                      R(e.laughterData, 0.5) &&
+                      O(e.laughterData, 0.5) &&
                           this.process(
-                              { type: O.Gy.LAUGHTER, userId: t.user_id, confidence: n.confidence },
+                              { type: C.Gy.LAUGHTER, userId: t.user_id, confidence: n.confidence },
                               n.timestamp_ms,
                           ))
                     : "shouting" === n.label
                       ? (e.shoutingData.push({ timestamp_ms: n.timestamp_ms, value: n.confidence }),
-                        R(e.shoutingData, 0.35) &&
+                        O(e.shoutingData, 0.35) &&
                             this.process(
-                                { type: O.Gy.SHOUTING, userId: t.user_id, confidence: n.confidence },
+                                { type: C.Gy.SHOUTING, userId: t.user_id, confidence: n.confidence },
                                 n.timestamp_ms,
                             ))
                       : "rms" === n.label && e.rmsData.push({ timestamp_ms: n.timestamp_ms, value: n.confidence });
@@ -115,7 +114,7 @@ class L extends l.A {
         if (!(0, T.T)() || e.context !== a.x.DEFAULT) return;
         let t = I.Ay.isVoiceRecordingAllowedForUser(e.userId);
         (e.userId === E.default.getId() || t) &&
-            this.process({ type: O.Gy.SPEAKING, speakingFlags: e.speakingFlags, userId: e.userId });
+            this.process({ type: C.Gy.SPEAKING, speakingFlags: e.speakingFlags, userId: e.userId });
     }
     handleSoundboardPlayStart(e) {
         if (!(0, T.T)()) return;
@@ -123,7 +122,7 @@ class L extends l.A {
         if (null == t) return;
         let n = d.A.getGuildEmojis(t.guildId)?.[t.emojiId ?? ""];
         this.process({
-            type: O.Gy.SOUNDBOARD,
+            type: C.Gy.SOUNDBOARD,
             playing: !0,
             soundboardId: e.soundId,
             emojiId: n?.id,
@@ -139,7 +138,7 @@ class L extends l.A {
         if (null == t) return;
         let n = d.A.getGuildEmojis(t.guildId)?.[t.emojiId ?? ""];
         this.process({
-            type: O.Gy.SOUNDBOARD,
+            type: C.Gy.SOUNDBOARD,
             playing: !1,
             soundboardId: e.soundId,
             emojiId: n?.id,
@@ -151,9 +150,9 @@ class L extends l.A {
     }
     isSignalEnabled(e) {
         switch (e) {
-            case O.Gy.DISTRIBUTED:
+            case C.Gy.DISTRIBUTED:
                 return I.Ay.getSettings().clipSignals.enableDistributedSignals;
-            case O.Gy.GAME_EVENT:
+            case C.Gy.GAME_EVENT:
                 return I.Ay.getSettings().clipSignals.enableGameSignals;
             default:
                 return !0;
@@ -203,29 +202,29 @@ class L extends l.A {
     process(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : (0, S.l)();
         switch ((this.timeline.add({ signal: e, timestamp: t }), e.type)) {
-            case O.Gy.MANUAL:
-            case O.Gy.DISTRIBUTED:
+            case C.Gy.MANUAL:
+            case C.Gy.DISTRIBUTED:
                 this.scheduleClip(e);
                 break;
-            case O.Gy.SHOUTING:
-            case O.Gy.LAUGHTER:
-            case O.Gy.GAME_EVENT: {
+            case C.Gy.SHOUTING:
+            case C.Gy.LAUGHTER:
+            case C.Gy.GAME_EVENT: {
                 let n = 0;
-                if (e.type === O.Gy.GAME_EVENT) {
+                if (e.type === C.Gy.GAME_EVENT) {
                     if ((this.decisionSignals.gameEventData.push({ ...e, timestamp_ms: t }), 1 !== e.importance)) break;
                     n = Math.max((0, S.l)(), t + 1e4);
                 } else n = (0, S.l)() + 1e4;
                 if (
                     this.scheduledClips.some(
                         (e) =>
-                            (e.signal.type === O.Gy.GAME_EVENT ||
-                                e.signal.type === O.Gy.LAUGHTER ||
-                                e.signal.type === O.Gy.SHOUTING) &&
+                            (e.signal.type === C.Gy.GAME_EVENT ||
+                                e.signal.type === C.Gy.LAUGHTER ||
+                                e.signal.type === C.Gy.SHOUTING) &&
                             t >= e.request.trimStartMs &&
                             t <= e.request.trimEndMs,
                     )
                 ) {
-                    O.nx.info(
+                    C.nx.info(
                         `decider: suppressing ${e.type} clip \u{2014} timestamp ${t} falls within an existing scheduled candidate's trimmed range`,
                     );
                     break;
@@ -241,10 +240,10 @@ class L extends l.A {
         this.sessionTransition = this.sessionTransition
             .catch(() => {})
             .then(t)
-            .catch((t) => O.nx.error(`decider: ${e} failed`, t));
+            .catch((t) => C.nx.error(`decider: ${e} failed`, t));
     }
     async clearAsync() {
-        O.nx.info(
+        C.nx.info(
             `decider: clear() called \u{2014} currentSessionGameKey=${this.currentSessionGameKey} currentSessionId=${I.Ay.getCurrentClipsSession()?.id} pendingSessionGameKey=${this.pendingSessionGameKey} candidates=${I.Ay.getClipCandidates().length}`,
         ),
             this.unscheduleClip(),
@@ -264,9 +263,8 @@ class L extends l.A {
         if (null == t || c.Ay.getVisibleGame()?.isLauncher === !0) return !1;
         if (null != A.Ay.getVoiceChannelId()) return !0;
         let n = h.default.getCurrentUser(),
-            i = n?.isStaff() === !0 || n?.isStaffPersonal() === !0,
-            r = null != t.gameId && C.E.applicationIds.includes(t.gameId);
-        return e.type === O.Gy.GAME_EVENT && i && r;
+            i = n?.isStaff() === !0 || n?.isStaffPersonal() === !0;
+        return e.type === C.Gy.GAME_EVENT && i && (0, m.GC)(t.gameId ?? void 0);
     }
     scheduleClip(e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
@@ -282,17 +280,17 @@ class L extends l.A {
                 trimStartMs: t?.trimStartMs != null ? t.trimStartMs : o,
                 trimEndMs: t?.trimEndMs != null ? t.trimEndMs : l,
             };
-        O.nx.info(`decider: scheduleClip signal=${e.type}, request=${JSON.stringify(t)}`);
+        C.nx.info(`decider: scheduleClip signal=${e.type}, request=${JSON.stringify(t)}`);
         let c = { timeout: new s.Ep(), request: d, signal: e };
         this.scheduledClips.push(c),
             c.timeout.start(l > a ? l - a : 0, async () => {
                 try {
                     let t = i ? this.adjustTrimForRms(d) : d;
-                    O.nx.info(
+                    C.nx.info(
                         `decider: scheduled timeout fired \u{2014} saving clip (signal=${e.type}, finalRequest=${JSON.stringify(t)})`,
                     ),
                         await (0, g.yd)({
-                            clipMethod: e.type === O.Gy.MANUAL ? "manual" : "auto",
+                            clipMethod: e.type === C.Gy.MANUAL ? "manual" : "auto",
                             request: t,
                             timeline: [...this.timeline.read(t.startMs, t.endMs)],
                             decision: { signal: e, timestamp: (0, S.l)() },
@@ -316,7 +314,7 @@ class L extends l.A {
         this.currentSessionGameKey = (0, c.Es)(e);
         let t = crypto.randomUUID();
         (0, g.Vp)(t, e.id ?? null),
-            O.nx.info(
+            C.nx.info(
                 `decider: handleVoiceChannelSelect \u{2014} new gaming session id: ${t}, for game: ${this.currentSessionGameKey}`,
             );
     }
@@ -327,7 +325,7 @@ class L extends l.A {
         let e = c.Ay.getVisibleGame(),
             t = null != e ? (0, c.Es)(e) : null;
         if (
-            (O.nx.info(
+            (C.nx.info(
                 `decider: handleRunningGamesChange visibleGame=${e?.name ?? "null"} newPrimaryKey=${t} currentSessionGameKey=${this.currentSessionGameKey} currentSessionId=${I.Ay.getCurrentClipsSession()?.id} pendingSessionGameKey=${this.pendingSessionGameKey}`,
             ),
             null === this.currentSessionGameKey)
@@ -336,18 +334,18 @@ class L extends l.A {
                 this.currentSessionGameKey = t;
                 let n = crypto.randomUUID();
                 (0, g.Vp)(n, e?.id ?? null),
-                    O.nx.info(`decider: handleRunningGamesChange \u{2014} starting session for ${t} (id=${n})`);
-            } else O.nx.info(`decider: handleRunningGamesChange \u{2014} not starting session (newPrimaryKey=${t})`);
+                    C.nx.info(`decider: handleRunningGamesChange \u{2014} starting session for ${t} (id=${n})`);
+            } else C.nx.info(`decider: handleRunningGamesChange \u{2014} not starting session (newPrimaryKey=${t})`);
             return;
         }
         if (t === this.currentSessionGameKey) {
-            O.nx.info("decider: handleRunningGamesChange \u2014 same primary, cancelling pending end"),
+            C.nx.info("decider: handleRunningGamesChange \u2014 same primary, cancelling pending end"),
                 this.sessionEndTimeout.stop(),
                 (this.pendingSessionGameKey = null);
             return;
         }
         if (null === t) {
-            O.nx.info(
+            C.nx.info(
                 "decider: handleRunningGamesChange \u2014 visible game became null, finalizing session immediately",
             ),
                 this.sessionEndTimeout.stop(),
@@ -359,8 +357,8 @@ class L extends l.A {
             return;
         }
         this.pendingSessionGameKey === t
-            ? O.nx.info("decider: handleRunningGamesChange \u2014 already debouncing for this key")
-            : (O.nx.info(
+            ? C.nx.info("decider: handleRunningGamesChange \u2014 already debouncing for this key")
+            : (C.nx.info(
                   `decider: handleRunningGamesChange \u{2014} primary game changed from ${this.currentSessionGameKey} to ${t}, debouncing 30000ms`,
               ),
               (this.pendingSessionGameKey = t),
@@ -370,7 +368,7 @@ class L extends l.A {
                       let n = crypto.randomUUID();
                       (0, g.Vp)(n, e?.id ?? null),
                           (this.pendingSessionGameKey = null),
-                          O.nx.info(
+                          C.nx.info(
                               `decider: sessionEndTimeout fired after debounce \u{2014} finalizing previous session, started new session (newPrimaryKey=${t}, id=${n})`,
                           );
                   });
@@ -384,17 +382,17 @@ class L extends l.A {
                 gameId: n?.gameId ?? void 0,
             },
             a = o.A.clips.debugStashClipDeciderData;
-        null != a && (await a(r, i), O.nx.info(`stashDeciderData: stashed ${e.length} candidates to ${i}`));
+        null != a && (await a(r, i), C.nx.info(`stashDeciderData: stashed ${e.length} candidates to ${i}`));
     }
     static async debugRerunRanking(e) {
-        O.nx.info(`DEBUG RERUN RANKING${null != e ? ` (${e})` : ""}`);
+        C.nx.info(`DEBUG RERUN RANKING${null != e ? ` (${e})` : ""}`);
         let t = o.A.clips.debugReadStashedClipDeciderData;
         if (null == t) return;
         let n = await t(e),
             i = (0, m.Ly)(n.clipCandidates, n.decisionSignals, n.localUserId, n.gameId);
-        O.nx.info("ranked clips:", i),
+        C.nx.info("ranked clips:", i),
             i.selected.forEach((e, t) => {
-                O.nx.info(`Clip ${t + 1} score ${e.score}, ${o.A.fileManager.basename(e.clip.filepath)}`);
+                C.nx.info(`Clip ${t + 1} score ${e.score}, ${o.A.fileManager.basename(e.clip.filepath)}`);
             });
     }
     debugCreateRankableLaughterClip() {
@@ -406,10 +404,10 @@ class L extends l.A {
             for (let e of i.laughterData) e.timestamp_ms >= n - t && (e.value = 1);
             for (let e of i.rmsData) e.timestamp_ms >= n - t && (e.value = 0.9);
         } else
-            O.nx.warn(
+            C.nx.warn(
                 "debugCreateRankableLaughterClip: no ML audio samples for the local user yet \u2014 join a VC and wait a moment before invoking",
             );
-        this.process({ type: O.Gy.LAUGHTER, userId: e, confidence: 1 });
+        this.process({ type: C.Gy.LAUGHTER, userId: e, confidence: 1 });
     }
     async processClipCandidates() {
         let e = I.Ay.getCurrentClipsSession(),
@@ -419,7 +417,7 @@ class L extends l.A {
             r = this.decisionSignals;
         if (
             ((this.decisionSignals = (0, N.A)()),
-            O.nx.info(
+            C.nx.info(
                 `decider: processClipCandidates \u{2014} sessionId=${e?.id} candidates=${n.length} staleCandidates=${i.length} autoStashEnabled=${I.Ay.isAutoStashEnabled()}`,
             ),
             I.Ay.isAutoStashEnabled())
@@ -436,17 +434,17 @@ class L extends l.A {
                     "" !== a ? `${t}_${a}` : t),
                 );
             } catch (e) {
-                O.nx.error("decider: auto-stash failed", e);
+                C.nx.error("decider: auto-stash failed", e);
             }
         let a = (0, m.Ly)(n, r, E.default.getId(), e?.gameId ?? void 0);
-        O.nx.info("ranked clips:", a);
+        C.nx.info("ranked clips:", a);
         let s = new Set(a.selected.map((e) => e.clip.id));
         await Promise.all(
             a.selected.map(async (e) => {
                 try {
                     await (0, g.K7)(e.clip, e.score, e.audioEvents);
                 } catch (e) {
-                    O.nx.error("decider: failed to promote clip candidate", e);
+                    C.nx.error("decider: failed to promote clip candidate", e);
                 }
             }),
         ),
@@ -456,7 +454,7 @@ class L extends l.A {
                         try {
                             await (0, g.oH)(e, !1);
                         } catch (e) {
-                            O.nx.error("decider: failed to delete unpromoted clip candidate", e);
+                            C.nx.error("decider: failed to delete unpromoted clip candidate", e);
                         }
                 }),
             );
@@ -465,4 +463,4 @@ class L extends l.A {
         this.timeline.updateLength(Math.max(I.Ay.getSettings().clipsLength, 6e4));
     }
 }
-let y = new L();
+let L = new R();
