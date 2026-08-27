@@ -14,8 +14,8 @@ var n = t(477900),
     g = t(95477),
     x = t(106236),
     v = t(181658),
-    j = t(964486),
-    b = t(776568),
+    b = t(964486),
+    j = t(776568),
     p = t(643374),
     C = t(174459),
     y = t(796774),
@@ -232,7 +232,7 @@ let es = a.memo(function (e) {
         m = a.useRef(null),
         [h, g] = a.useState(0),
         [x, v] = a.useState(0),
-        [j, b] = a.useState(0),
+        [b, j] = a.useState(0),
         [p, C] = a.useState(!1),
         [y, w] = a.useState(!1),
         [S, M] = a.useState(!1),
@@ -242,7 +242,7 @@ let es = a.memo(function (e) {
     a.useEffect(() => {
         if (null == o) return;
         let e = o.duration * A.A.Millis.SECOND;
-        g(0), v(0), b(e), k(e);
+        g(0), v(0), j(e), k(e);
     }, [o]);
     let D = a.useCallback(
             (e, l) => {
@@ -277,39 +277,39 @@ let es = a.memo(function (e) {
             (e) => {
                 if (null == o || !p) return;
                 let l = parseInt(e.target.value),
-                    t = l > j ? j : l;
+                    t = l > b ? b : l;
                 i(_(t)), g(t), v(t);
             },
-            [o, i, j, p],
+            [o, i, b, p],
         ),
         G = a.useCallback(
             (e) => {
                 if (null == o || !y) return;
                 let l = parseInt(e.target.value);
-                l < h ? (i(_(h)), v(h)) : l > j ? (i(_(j)), v(j)) : (i(_(l)), v(l));
+                l < h ? (i(_(h)), v(h)) : l > b ? (i(_(b)), v(b)) : (i(_(l)), v(l));
             },
-            [o, i, j, y, h],
+            [o, i, b, y, h],
         ),
         V = a.useCallback(
             (e) => {
                 if (null == o || !S) return;
                 let l = parseInt(e.target.value),
                     t = l > h ? l : h;
-                i(_(h)), v(h), b(t);
+                i(_(h)), v(h), j(t);
             },
             [o, i, S, h],
         );
     return (
         a.useEffect(() => {
-            null != s && d && s({ startPositionMs: h, endPositionMs: j, playheadPositionMs: x });
-        }, [h, j, s, d, x]),
+            null != s && d && s({ startPositionMs: h, endPositionMs: b, playheadPositionMs: x });
+        }, [h, b, s, d, x]),
         a.useEffect(() => {
             let e;
             if (null != o)
                 return (
                     l &&
                         (e = setInterval(() => {
-                            o.currentTime < _(j)
+                            o.currentTime < _(b)
                                 ? o.currentTime >= _(x) && v(o.currentTime * A.A.Millis.SECOND)
                                 : (t(_(h)), v(h));
                         }, 16)),
@@ -317,16 +317,16 @@ let es = a.memo(function (e) {
                         clearInterval(e);
                     }
                 );
-        }, [o, j, t, x, l, h]),
+        }, [o, b, t, x, l, h]),
         a.useEffect(() => {
             if (u.fineTuningDelay <= 0) return;
             let e = setTimeout(() => {
-                p && h == h && -1 === T ? I(h) : S && j == j && -1 === T ? I(j) : y && x == x && -1 === T && I(x);
+                p && h == h && -1 === T ? I(h) : S && b == b && -1 === T ? I(b) : y && x == x && -1 === T && I(x);
             }, u.fineTuningDelay);
             return () => {
                 clearTimeout(e);
             };
-        }, [u.fineTuningDelay, S, j, T, y, x, p, h]),
+        }, [u.fineTuningDelay, S, b, T, y, x, p, h]),
         (0, n.jsxs)("div", {
             className: N()(ei.IO, { [ei.J_]: d }),
             children: [
@@ -354,7 +354,7 @@ let es = a.memo(function (e) {
                                     type: "range",
                                     min: R(T, F, E),
                                     max: L(T, F, E),
-                                    value: j,
+                                    value: b,
                                     onChange: V,
                                     onMouseDown: (e) => D(e, 2),
                                     onMouseUp: () => P(2),
@@ -386,7 +386,7 @@ let es = a.memo(function (e) {
                             className: N()(ei.Wm, { [ei.Em]: p, [ei.z6]: S }),
                             style: {
                                 left: `${J(h, T, F, E)}%`,
-                                right: `${(T >= 0 && F > 0 ? -((j - (T + (F * (E - T)) / E)) * 100) / F : -(100 * j * 1) / E + 100).toFixed(4)}%`,
+                                right: `${(T >= 0 && F > 0 ? -((b - (T + (F * (E - T)) / E)) * 100) / F : -(100 * b * 1) / E + 100).toFixed(4)}%`,
                             },
                             children: [
                                 (0, n.jsx)("div", {
@@ -453,18 +453,18 @@ let eo = { startPositionMs: 0, endPositionMs: 2 * (10 * A.A.Millis.SECOND), play
                     }
                 );
         }, [r]);
-        let j = a.useCallback(
+        let b = a.useCallback(
                 (e) => {
                     null != r && (r.pause(), null != e && (r.currentTime = e), o(!1));
                 },
                 [r],
             ),
-            b = a.useCallback(() => {
+            j = a.useCallback(() => {
                 if (null != r) {
-                    if (u) return void j();
+                    if (u) return void b();
                     f >= m ? (r.currentTime = _(h)) : (r.currentTime = _(f)), (r.volume = (0, T.A)(t)), r.play(), o(!0);
                 }
-            }, [r, m, j, f, u, h, t]),
+            }, [r, m, b, f, u, h, t]),
             p = a.useCallback(
                 (e) => {
                     c(e), s?.({ startMs: e.startPositionMs, endMs: e.endPositionMs });
@@ -485,7 +485,7 @@ let eo = { startPositionMs: 0, endPositionMs: 2 * (10 * A.A.Millis.SECOND), play
                     children: [
                         (0, n.jsx)(S.D, {
                             className: eu.Rr,
-                            onClick: g ? b : void 0,
+                            onClick: g ? j : void 0,
                             children: u
                                 ? (0, n.jsx)(M.w, { size: "xs", color: "currentColor", className: eu.CJ })
                                 : (0, n.jsx)(E.PlayIcon, { size: "xs", color: "currentColor", className: eu.CJ }),
@@ -504,7 +504,7 @@ let eo = { startPositionMs: 0, endPositionMs: 2 * (10 * A.A.Millis.SECOND), play
                 (0, n.jsx)(es, {
                     playing: u,
                     onPlaybackChange: C,
-                    onPausePlayback: j,
+                    onPausePlayback: b,
                     onChangePosition: p,
                     disabled: i,
                 }),
@@ -570,8 +570,8 @@ let eg = a.memo(function (e) {
 });
 var ex = t(983069),
     ev = t(17928),
-    ej = t(444550),
-    eb = t(983851),
+    eb = t(444550),
+    ej = t(983851),
     ep = t(548118),
     eC = t(931991),
     ey = t(71393),
@@ -590,7 +590,7 @@ function eI(e) {
         variant: "text-sm/medium",
         color: "text-strong",
         children: [
-            (0, n.jsx)(eb.H, { size: "md", color: "currentColor", className: eT.Xk }),
+            (0, n.jsx)(ej.H, { size: "md", color: "currentColor", className: eT.Xk }),
             P.intl.format(P.t["8Dyg1C"], { slots: l }),
         ],
     });
@@ -654,7 +654,7 @@ function eF(e) {
             [o, r],
         ),
         g = null == (l = o[i ?? eA.dJq]) || l > 0 ? i : void 0;
-    return (0, n.jsx)(ej.p, {
+    return (0, n.jsx)(eb.p, {
         label: t,
         className: s,
         onChange: h,
@@ -774,13 +774,13 @@ function eO(e) {
                 W("ready"), U(!1), A(1), L(1);
             }
         }, [ee, w, Y, i, M, k, T, F, en, L]);
-    (0, j.Ay)(() => {
+    (0, b.Ay)(() => {
         R(null), C.default.track(eA.HAw.OPEN_MODAL, { type: "Soundboard Upload Sound", guild_id: Y });
     }),
         a.useEffect(() => {
             A(Math.min(k, _));
         }, [k, A, _]);
-    let ei = (0, n.jsx)(b.A, {
+    let ei = (0, n.jsx)(j.A, {
             guildId: Y,
             emojiId: T,
             emojiName: F,
@@ -848,6 +848,7 @@ function eO(e) {
                     onValueChange: (e) => A(Math.round(100 * e) / 100),
                     minValue: 0,
                     maxValue: _,
+                    keyboardStep: 0.05,
                 }),
             ],
         }),
