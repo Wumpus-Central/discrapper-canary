@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Q_: () => _, Uq: () => c, gD: () => u, lz: () => E }), n(321073);
+n.d(t, { Ae: () => u, Q_: () => E, Uq: () => c, gD: () => _, lz: () => A }), n(321073);
 var i,
     r = n(174459),
     a = n(974293),
@@ -11,15 +11,20 @@ function c(e) {
     return new Date(e).toISOString();
 }
 function u(e) {
+    if (null == e.syncTimestamp) return;
+    let t = e.editMetadata?.end != null ? 1e3 * e.editMetadata.end : e.length;
+    return new Date(e.syncTimestamp - (e.length - t)).toISOString();
+}
+function _(e) {
     return e.slice(0, l.GU);
 }
-var _ =
+var E =
     (((i = {})[(i.UNKNOWN = 0)] = "UNKNOWN"),
     (i[(i.KILL = 1)] = "KILL"),
     (i[(i.MULTIKILL = 2)] = "MULTIKILL"),
     (i[(i.DEATH = 3)] = "DEATH"),
     i);
-function E(e) {
+function A(e) {
     if ((e.timeline?.length ?? 0) === 0 || e.decision?.timestamp == null) return;
     let t = e.editMetadata ?? { start: 0, end: e.length / 1e3 },
         n = e.decision.timestamp - e.length,

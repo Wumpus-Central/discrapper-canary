@@ -40,7 +40,8 @@ function o(e) {
             (a.clip_created_at = (0, r.Uq)(e.clip.createdAt)),
             (a.clip_participant_ids = (0, r.gD)(e.clip.users)),
             (a.clip_remote_id = e.clip.remoteClipId),
-            (a.clip_events_timeline = (0, r.lz)(e.clip))),
+            (a.clip_events_timeline = (0, r.lz)(e.clip)),
+            (a.clip_sync_timestamp = (0, r.Ae)(e.clip))),
         "item" in e &&
             null != e.item &&
             e.item.platform === i.xz.WEB &&

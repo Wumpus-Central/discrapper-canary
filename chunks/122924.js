@@ -21,6 +21,7 @@ let o = {
                 clip_participant_ids: null != e.clip ? (0, l.gD)(e.clip.users) : void 0,
                 clip_remote_id: e.clip?.remoteClipId,
                 clip_events_timeline: null != e.clip ? (0, l.lz)(e.clip) : void 0,
+                clip_sync_timestamp: null != e.clip ? (0, l.Ae)(e.clip) : void 0,
                 original_content_type: e.mimeType,
             }
         );

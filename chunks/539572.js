@@ -1019,8 +1019,8 @@ async function eU(e) {
         : r.h.dispatch({ type: "CLIPS_DELETE_CLIP", id: i, filepath: n });
 }
 async function ew(e, t) {
-    let { analyticsLocations: n } = t,
-        i = performance.now();
+    let { analyticsLocations: n, isTemporaryEdit: i = !1 } = t,
+        r = performance.now();
     try {
         ex([e.id]);
         let t = p.Ay.getMediaEngine();
@@ -1030,12 +1030,12 @@ async function ew(e, t) {
             (await (0, es.so)({ forceV3Capability: !0 }), !(0, es.t_)())
         )
             throw Error("discord_clips module failed to load");
-        let { filepath: n, ...i } = e;
-        await eg(e.id, i);
-        let r = (0, R._1)(e.editMetadata?.crop),
-            s = e.editMetadata?.start ?? 0,
-            l = e.editMetadata?.end ?? e.length / 1e3,
-            o = {
+        let { filepath: n, ...r } = e;
+        i || (await eg(e.id, r));
+        let s = (0, R._1)(e.editMetadata?.crop),
+            l = e.editMetadata?.start ?? 0,
+            o = e.editMetadata?.end ?? e.length / 1e3,
+            d = {
                 ...(e.editMetadata ?? {
                     start: 0,
                     end: e.length / 1e3,
@@ -1043,27 +1043,27 @@ async function ew(e, t) {
                     voiceAudio: !0,
                     soundboardAudio: !0,
                 }),
-                crop: r ?? void 0,
-                tracks: await q(e.tracks ?? [], r, a.A.clips.getClipProtocolURLFromPath(e.filepath), s, l),
+                crop: s ?? void 0,
+                tracks: await q(e.tracks ?? [], s, a.A.clips.getClipProtocolURLFromPath(e.filepath), l, o),
             };
         if (t.hasExportClipToFile() && (0, b.qi)("exportClip")) {
             let n = await a.A.app.getPath("temp"),
                 i = a.A.fileManager.join(n, "Discord Clips"),
                 r = `${crypto.randomUUID()}-${Date.now()}.mp4`,
                 s = a.A.fileManager.join(i, r),
-                { filepath: l, formattedForUpload: d } = await t.exportClipToFile(e.filepath, s, o);
+                { filepath: l, formattedForUpload: o } = await t.exportClipToFile(e.filepath, s, d);
             try {
                 let t = await a.A.clips.loadClip(l),
                     n = new Blob([t.data], { type: "video/mp4" });
-                if (e.type === R.nQ.SCREENSHOT || d) return n;
+                if (e.type === R.nQ.SCREENSHOT || o) return n;
                 return J(n);
             } finally {
                 await eG(l);
             }
         }
-        let d = await t.exportClip(e.filepath, o);
-        if (e.type === R.nQ.SCREENSHOT) return d;
-        return J(d);
+        let c = await t.exportClip(e.filepath, d);
+        if (e.type === R.nQ.SCREENSHOT) return c;
+        return J(c);
     } finally {
         ex(null);
         let t = performance.now();
@@ -1071,7 +1071,7 @@ async function ew(e, t) {
             ...N.lc("exportClip"),
             ...N.Zy(e),
             location_stack: n,
-            export_duration: t - i,
+            export_duration: t - r,
         });
     }
 }
