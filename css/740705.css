@@ -1,3 +1,23 @@
+.container_b2dcc1 {
+    background: var(--background-surface-high);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    padding: var(--space-sm);
+    width: 486px
+}
+
+.headerContainer_b2dcc1 {
+    display: flex;
+    justify-content: space-between
+}
+
+.headerText_b2dcc1 {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: var(--space-xxs)
+}
+
 .container__9fa5a {
     align-items: flex-start;
     background-color: var(--background-surface-high);
@@ -78,4 +98,4 @@
     transform: scale(1.025)
 }
 
-/*# sourceMappingURL=232658.8f7d037aea9ccd3f.css.map*/
+/*# sourceMappingURL=740705.bb382a3533a3a356.css.map*/
