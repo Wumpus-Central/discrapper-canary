@@ -144,9 +144,7 @@
     color: var(--channel-icon);
     display: flex;
     margin-inline-start: 28px;
-    max-width: 50%;
-    width: -moz-fit-content;
-    width: fit-content
+    max-width: 75cqw
 }
 
 .channelStatusClickable__49508 .channelStatus__49508 {
@@ -281,4 +279,4 @@
     visibility: hidden
 }
 
-/*# sourceMappingURL=546813.e8145111bfa839cf.css.map*/
+/*# sourceMappingURL=546813.00d8eea21df19d59.css.map*/

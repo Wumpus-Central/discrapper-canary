@@ -111,7 +111,6 @@ function J(e) {
             ? (0, i.jsx)("div", {
                   className: q.Ke,
                   children: (0, i.jsx)(u.m, {
-                      asContainer: !0,
                       text: Y.intl.string(Y.t.Mgpxiw),
                       delay: 500,
                       position: "bottom",
