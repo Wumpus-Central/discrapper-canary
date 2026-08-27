@@ -1,14 +1,14 @@
 "use strict";
 n.d(t, { Z: () => d });
 var i = n(477900),
-    r = n(641668),
-    a = n(44482),
-    s = n(452027),
-    l = n(732771),
+    r = n(452027),
+    a = n(453318),
+    s = n(44482),
+    l = n(641668),
     o = n(470791);
 function d(e) {
     let { hideTags: t, wrapTags: n, maxOptionsVisible: d = 5, ...c } = e,
-        { fieldProps: u } = (0, s.n)(c),
+        { fieldProps: u } = (0, r.n)(c),
         {
             disabled: _,
             required: E,
@@ -28,15 +28,15 @@ function d(e) {
             getFloatingProps: O,
             getReferenceProps: R,
             transitionStyles: L,
-        } = (0, r.G)();
-    return (0, i.jsxs)(l.iS, {
+        } = (0, l.G)();
+    return (0, i.jsxs)(a.iS, {
         ...c,
         isCollapsible: !0,
         isOpen: g,
         setIsOpen: S,
         closeOnSelect: T ?? "single" === m,
         children: [
-            (0, i.jsx)(l.a3, {
+            (0, i.jsx)(a.a3, {
                 hideTags: t,
                 required: E,
                 disabled: _,
@@ -57,8 +57,8 @@ function d(e) {
                     className: o.S_,
                     style: { ...C, ...L },
                     ...O(),
-                    children: (0, i.jsx)(l.X2, {
-                        renderListItem: (e) => (0, i.jsx)(a.c, { ...e }),
+                    children: (0, i.jsx)(a.X2, {
+                        renderListItem: (e) => (0, i.jsx)(s.c, { ...e }),
                         maxVisibleItems: d,
                     }),
                 }),

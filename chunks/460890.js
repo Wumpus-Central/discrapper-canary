@@ -54,6 +54,7 @@ let s = {
             SELECT_PLACEHOLDER: "Select...",
             CLEAR_SELECTION: "Clear",
             SELECTED_TAGS_HEADING: "Selected",
+            PRESS_DELETE_TO_REMOVE_TAG: "Press Delete to remove tag",
             PERCENT_COMPLETE: (e) => `${e} percent complete`,
             TEXT_INPUT_CLEAR: "Clear",
             CHARACTER_COUNT_LIMIT_REACHED: "Character limit reached",

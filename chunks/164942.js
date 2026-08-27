@@ -222,6 +222,7 @@ function G(e) {
                             SELECT_PLACEHOLDER: U.intl.string(P.default["A+pfVR"]),
                             CLEAR_SELECTION: U.intl.string(P.default.JA5C7L),
                             SELECTED_TAGS_HEADING: U.intl.string(P.default.VMNfsY),
+                            PRESS_DELETE_TO_REMOVE_TAG: U.intl.string(P.default["/Y7vRd"]),
                             PERCENT_COMPLETE: (e) => U.intl.formatToPlainString(P.default["2L/ygS"], { percent: e }),
                             TEXT_INPUT_CLEAR: U.intl.string(U.t.VkKicb),
                             CHARACTER_COUNT_LIMIT_REACHED: U.intl.string(U.t.c2Jqed),
