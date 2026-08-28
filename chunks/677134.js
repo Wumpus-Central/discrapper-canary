@@ -1,4 +1,4 @@
-n.d(t, { contextMenuCallbackNative: () => s, contextMenuCallbackWeb: () => a, u: () => i });
+n.d(t, { contextMenuCallbackNative: () => a, contextMenuCallbackWeb: () => s, u: () => i });
 var l = n(477900);
 n(582128);
 var r = n(442433);
@@ -13,11 +13,11 @@ function i() {
         e ?? ""
     );
 }
-function s(e) {
+function a(e) {
     let t = i(),
-        s = e.target;
-    if (s?.tagName === "TEXTAREA" || s?.tagName === "INPUT") {
-        if (s?.type !== "checkbox")
+        a = e.target;
+    if (a?.tagName === "TEXTAREA" || a?.tagName === "INPUT") {
+        if (a?.type !== "checkbox")
             return (0, r.L3)(
                 e,
                 async () => {
@@ -27,17 +27,17 @@ function s(e) {
                 { enableSpellCheck: !0 },
             );
     } else {
-        if ("none" === window.getComputedStyle(s).getPropertyValue("-webkit-user-select"))
+        if ("none" === window.getComputedStyle(a).getPropertyValue("-webkit-user-select"))
             return void e.preventDefault();
         let i,
-            a,
+            s,
             u,
             o = e.target;
         for (; null != o; )
-            "src" in o && null != o.src && (a = o.src),
+            "src" in o && null != o.src && (s = o.src),
                 "href" in o && null != o.href && ((i = o.href), (u = o.textContent)),
                 (o = o?.parentNode);
-        if (null != a)
+        if (null != s)
             return (0, r.L3)(e, async () => {
                 let { default: e } = await Promise.all([
                     n.e("948804"),
@@ -50,7 +50,7 @@ function s(e) {
                     n.e("944801"),
                     n.e("947260"),
                 ]).then(n.bind(n, 177079));
-                return (t) => (0, l.jsx)(e, { ...t, src: a ?? "" });
+                return (t) => (0, l.jsx)(e, { ...t, src: s ?? "" });
             });
         if (null != i)
             return (0, r.L3)(e, async () => {
@@ -73,7 +73,7 @@ function s(e) {
     }
     return e.preventDefault(), null;
 }
-function a(e) {
+function s(e) {
     let t = !1,
         n = e.target;
     if (n?.tagName === "INPUT" || n?.tagName === "TEXTAREA") t = !0;

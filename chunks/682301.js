@@ -60,8 +60,8 @@ function _(e) {
             () => ({ collection: c.A.getCollection(C), fetchState: c.A.getFetchState(C) }),
             [C],
         ),
-        p = l.useMemo(() => (null != F ? (d.A.fromStorefrontProductRecord(F) ?? null) : null), [F]),
-        A = l.useMemo(() => (t && null != O ? f.A.fromStorefrontCollectionRecord(O) : null), [t, O]),
+        A = l.useMemo(() => (null != F ? (d.A.fromStorefrontProductRecord(F) ?? null) : null), [F]),
+        p = l.useMemo(() => (t && null != O ? f.A.fromStorefrontCollectionRecord(O) : null), [t, O]),
         g = h(e, T),
         I = h(t ? C : "", R),
         U = l.useMemo(
@@ -73,18 +73,18 @@ function _(e) {
                     collectionAbsent: I,
                     needsCategory: t,
                     collectionId: C,
-                    product: p,
-                    category: A,
+                    product: A,
+                    category: p,
                 }),
-            [T, g, R, I, t, C, p, A],
+            [T, g, R, I, t, C, A, p],
         );
     return (
         l.useEffect(() => {
-            r && null != p && (0, a.rh)(p);
-        }, [r, p]),
+            r && null != A && (0, a.rh)(A);
+        }, [r, A]),
         {
-            product: p,
-            category: A,
+            product: A,
+            category: p,
             state: U,
             retry: l.useCallback(() => {
                 (0, n.tu)({ skuIds: [e], ignoreCache: !0 }),

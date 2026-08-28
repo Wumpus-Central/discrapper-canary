@@ -6,8 +6,8 @@ var i = s(477900),
     l = s(615300),
     o = s(837381),
     u = s(259678),
-    h = s(939249),
-    c = s(442433),
+    c = s(939249),
+    h = s(442433),
     d = s(688810),
     A = s(595623),
     m = s(22212);
@@ -45,7 +45,7 @@ class N extends n.PureComponent {
     handleContextMenu = (e, t) => {
         let { analyticsLocations: n } = this.props;
         this.setState({ isContextMenuActive: !0 }),
-            (0, c.L3)(
+            (0, h.L3)(
                 e,
                 async () => {
                     let { default: e } = await Promise.all([
@@ -86,7 +86,7 @@ class N extends n.PureComponent {
         let { height: e, opacity: t, hovered: s, isContextMenuActive: n } = this.state,
             {
                 children: a,
-                user: c,
+                user: h,
                 onClick: d,
                 isActive: A,
                 className: m,
@@ -98,7 +98,7 @@ class N extends n.PureComponent {
             children: [
                 I ? null : (0, i.jsx)("div", { className: r()(p.yF, { [p._]: A || n || s }) }),
                 (0, i.jsx)(o.tG, {
-                    id: c.id,
+                    id: h.id,
                     children: (o) => {
                         let { role: I, ...g } = o,
                             y = r()(m, p.Vg, null != N ? { [N]: A || n } : null, { [p.vu]: A || n });
@@ -106,14 +106,14 @@ class N extends n.PureComponent {
                             ? (0, i.jsxs)(l.A.div, {
                                   role: I,
                                   className: y,
-                                  onContextMenu: (e) => this.handleContextMenu(e, c),
+                                  onContextMenu: (e) => this.handleContextMenu(e, h),
                                   onMouseEnter: this.handleMouseEnter,
                                   onMouseLeave: this.handleMouseLeave,
                                   style: { height: e, opacity: t },
                                   children: [
                                       (0, i.jsx)(u.vN, {
                                           offset: { left: -8, right: -8 },
-                                          children: (0, i.jsx)(h.D, {
+                                          children: (0, i.jsx)(c.D, {
                                               tag: "div",
                                               "aria-label": E,
                                               className: p.J5,
@@ -128,7 +128,7 @@ class N extends n.PureComponent {
                                   offset: { left: -8, right: -8 },
                                   children: (0, i.jsx)(l.A.div, {
                                       className: y,
-                                      onContextMenu: (e) => this.handleContextMenu(e, c),
+                                      onContextMenu: (e) => this.handleContextMenu(e, h),
                                       onMouseEnter: this.handleMouseEnter,
                                       onMouseLeave: this.handleMouseLeave,
                                       onClick: d ?? void 0,

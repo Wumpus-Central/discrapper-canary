@@ -1,21 +1,21 @@
-n.d(t, { EyeIcon: () => a });
+n.d(t, { EyeIcon: () => s });
 var l = n(477900);
 n(582128);
 var r = n(661531),
     i = n(996682),
-    s = n(27989);
-function a(e) {
+    a = n(27989);
+function s(e) {
     let {
             size: t = "md",
             width: n,
-            height: a,
+            height: s,
             color: u = r.A.colors.INTERACTIVE_ICON_DEFAULT,
             colorClass: o = "",
             ...c
         } = e,
-        d = (0, s.J)(t),
+        d = (0, a.J)(t),
         f = d?.width ?? n,
-        h = d?.height ?? a;
+        h = d?.height ?? s;
     return (0, l.jsxs)("svg", {
         ...(0, i.A)(c),
         xmlns: "http://www.w3.org/2000/svg",

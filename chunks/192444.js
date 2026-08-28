@@ -1,13 +1,13 @@
 n.d(t, {
     Bm: () => S,
     m8: () => f,
-    n6: () => T,
+    n6: () => p,
     OO: () => c,
     Ig: () => m,
     aD: () => I,
     Se: () => C,
     uK: () => d,
-    lk: () => p,
+    lk: () => T,
     Mk: () => _,
     sy: () => E,
     d: () => h,
@@ -69,7 +69,7 @@ let m = (0, a.mj)({
         defaultConfig: { enabled: !1 },
         variations: { 0: { enabled: !1 }, 1: { enabled: !0 } },
     });
-function p(e) {
+function T(e) {
     let { enabled: t } = A.useConfig({ location: e }),
         n = (0, l.z)();
     return {
@@ -77,7 +77,7 @@ function p(e) {
         multiplier: o.PREMIUM_TIER_2_MULTIPLIER_PERCENTAGE_POINTS / 100,
     };
 }
-let T = (0, a.mj)({
+let p = (0, a.mj)({
     name: "2026-04-composed-quest-player",
     kind: "user",
     defaultConfig: { enabled: !1 },

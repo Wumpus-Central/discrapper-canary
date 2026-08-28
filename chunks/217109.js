@@ -2,8 +2,8 @@ n.d(t, { Ay: () => A, JZ: () => g, Mm: () => h, Wk: () => v, hi: () => p, oP: ()
 var r = n(477900),
     l = n(582128),
     a = n(503698),
-    s = n.n(a),
-    i = n(123292),
+    i = n.n(a),
+    s = n(123292),
     c = n(770178),
     o = n(152858),
     u = n(498381),
@@ -12,8 +12,8 @@ let h = 6;
 function m(e) {
     let { index: t, active: n, setPage: l } = e;
     return (0, r.jsx)("div", {
-        className: s()(d.page, { [d.active]: n }),
-        children: (0, r.jsx)(i.Q, {
+        className: i()(d.page, { [d.active]: n }),
+        children: (0, r.jsx)(s.Q, {
             role: "button",
             variant: n ? "always-white" : "secondary",
             size: "sm",
@@ -24,7 +24,7 @@ function m(e) {
 }
 function p(e) {
     let { page: t, pages: n, setPage: a } = e,
-        [s, o] = l.useState(0),
+        [i, o] = l.useState(0),
         h = (0, c.w)((e) => {
             let { contentRect: t } = e;
             o(t.width);
@@ -32,15 +32,15 @@ function p(e) {
         p = l.useMemo(() => {
             let e;
             if (null == n || n < 1) return null;
-            let l = Math.min(8, Math.max(3, Math.floor((s - 160) / 32)));
+            let l = Math.min(8, Math.max(3, Math.floor((i - 160) / 32)));
             if (n <= l) e = Array.from({ length: n }, (e, t) => t);
             else {
                 let r = l - 2,
                     a = Math.max(1, t - Math.floor(r / 2)),
-                    s = Math.min(n - 2, a + r - 1);
-                a = Math.max(1, s - r + 1);
-                let i = Array.from({ length: r }, (e, t) => a + t);
-                a > 1 && (i[0] = "ellipsis"), s < n - 2 && (i[i.length - 1] = "ellipsis"), (e = [0, ...i, n - 1]);
+                    i = Math.min(n - 2, a + r - 1);
+                a = Math.max(1, i - r + 1);
+                let s = Array.from({ length: r }, (e, t) => a + t);
+                a > 1 && (s[0] = "ellipsis"), i < n - 2 && (s[s.length - 1] = "ellipsis"), (e = [0, ...s, n - 1]);
             }
             return e.map((e, n) =>
                 "number" == typeof e
@@ -54,7 +54,7 @@ function p(e) {
                           `ellipsis-${n}`,
                       ),
             );
-        }, [t, n, a, s]);
+        }, [t, n, a, i]);
     return (0, r.jsx)("div", {
         ref: h,
         className: d.pagination,
@@ -63,7 +63,7 @@ function p(e) {
             justify: "center",
             align: "center",
             children: [
-                (0, r.jsx)(i.Q, {
+                (0, r.jsx)(s.Q, {
                     variant: "secondary",
                     disabled: 0 === t,
                     text: "Back",
@@ -80,7 +80,7 @@ function p(e) {
                         children: p,
                     }),
                 }),
-                (0, r.jsx)(i.Q, {
+                (0, r.jsx)(s.Q, {
                     variant: "secondary",
                     disabled: t === n - 1,
                     text: "Next",
@@ -103,8 +103,8 @@ function v(e, t, n) {
     let {
             paginationStrategy: r = o.oV.PAGINATE,
             perPage: a,
-            paginationPosition: s = "bottom",
-            scrollToTop: i = !0,
+            paginationPosition: i = "bottom",
+            scrollToTop: s = !0,
         } = t ?? {},
         c = r === o.oV.TRUNCATE,
         [u, d] = l.useState(0),
@@ -119,21 +119,21 @@ function v(e, t, n) {
             pages: g,
             paginate: E,
             showPagination: !c && E && g > 1,
-            paginationPosition: s,
+            paginationPosition: i,
             truncate: c,
             perPage: a,
             setPage: l.useCallback(
                 (e) => {
-                    d(e), i && n?.current != null && n.current.scrollIntoView({ behavior: "instant", block: "start" });
+                    d(e), s && n?.current != null && n.current.scrollIntoView({ behavior: "instant", block: "start" });
                 },
-                [i, n],
+                [s, n],
             ),
         }
     );
 }
 let A = function (e) {
     let { columns: t = 3, paginationOptions: n, children: a } = e,
-        i = Math.max(1, Math.min(h, Math.floor(t))),
+        s = Math.max(1, Math.min(h, Math.floor(t))),
         c = l.Children.count(a),
         o = l.useRef(null),
         {
@@ -155,7 +155,7 @@ let A = function (e) {
                 children: (0, r.jsx)("div", {
                     ref: o,
                     className: d.gridContainer,
-                    children: (0, r.jsx)("div", { className: s()(d.grid, d[`columns${i}`]), children: j }),
+                    children: (0, r.jsx)("div", { className: i()(d.grid, d[`columns${s}`]), children: j }),
                 }),
             }),
             A && "bottom" === x && (0, r.jsx)(p, { page: u, pages: m, setPage: y }),

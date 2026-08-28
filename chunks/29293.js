@@ -19,7 +19,7 @@ function o(n) {
             o?.(),
                 (0, d.openModalLazy)(
                     async () => {
-                        let { default: n } = await Promise.all([t.e("896162"), t.e("188941"), t.e("659139")]).then(
+                        let { default: n } = await Promise.all([t.e("722514"), t.e("188941"), t.e("659139")]).then(
                             t.bind(t, 609422),
                         );
                         return (t) => (0, l.jsx)(n, { user: e, nickname: b, ...t });

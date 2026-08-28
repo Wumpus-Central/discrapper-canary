@@ -12,8 +12,8 @@ var i = n(503698),
     m = n(429913),
     p = n(769015),
     h = n(409626),
-    g = n(692969),
-    f = n(202163),
+    f = n(692969),
+    g = n(202163),
     x = n(287809),
     y = n(58703),
     v = n(403362),
@@ -24,8 +24,8 @@ var i = n(503698),
 function j(e) {
     let { applicationId: t, hasTrailingDate: n } = e,
         i = (0, m.h)(t),
-        { gameRecord: a } = (0, f.A)(t),
-        s = (0, g.A)({ applicationId: t, location: "ClipEmbed", source: h.GameProfileSources.ClipEmbed }),
+        { gameRecord: a } = (0, g.A)(t),
+        s = (0, f.A)({ applicationId: t, location: "ClipEmbed", source: h.GameProfileSources.ClipEmbed }),
         o = a?.name ?? i?.name;
     if (null == o) return null;
     let u = (0, l.jsxs)(l.Fragment, {
@@ -59,15 +59,15 @@ let O = function (e) {
             guildId: m,
             className: p,
             activeLayer: h,
-            playerState: g = s.Q6.PAUSED,
-            isControlBarExpanded: f = !0,
+            playerState: f = s.Q6.PAUSED,
+            isControlBarExpanded: g = !0,
             isFullScreen: O = !1,
             showTextContent: C = !0,
         } = e,
         S = (0, a.yK)([x.default], () => n.map((e) => x.default.getUser(e)).filter(v.Vq) ?? []),
         V = null != t ? (0, y.Fe)(new Date(t)) : null;
     return (0, l.jsxs)("div", {
-        className: r()(w.oK, { [w.pd]: g === s.Q6.PLAYING && !f, [w.aS]: O }, p),
+        className: r()(w.oK, { [w.pd]: f === s.Q6.PLAYING && !g, [w.aS]: O }, p),
         children: [
             (0, l.jsx)("div", { className: w.Lu }),
             (0, l.jsxs)("div", {

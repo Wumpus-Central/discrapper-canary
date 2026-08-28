@@ -13,8 +13,8 @@ var i = n(477900),
     E = n(692184),
     m = n(929482),
     A = n(345353),
-    p = n(69114),
-    T = n(807393),
+    T = n(69114),
+    p = n(807393),
     I = n(723702),
     h = n(396813),
     _ = n(859703),
@@ -125,7 +125,7 @@ class R {
                 triggered_by_status_change: this.triggeredByStatusChange,
                 apple_advertising_id: null != e && (0, I.isIOS)() ? e.advertisingId : null,
                 android_advertising_id: null != e && (0, I.isAndroid)() ? e.advertisingId : null,
-                ...(0, p.A)(),
+                ...(0, T.A)(),
                 ...(0, N.X)(this.questContent),
             };
         this.entity.adContentIds.forEach((i, r) => {
@@ -362,7 +362,7 @@ class R {
                     });
             }
         }),
-            T.A.increment({
+            p.A.increment({
                 name: a.K.QUEST_CONTENT_IMPRESSION,
                 tags: [`quest_content:${(0, b.jO)(this.questContent)}`],
             }),

@@ -2,15 +2,15 @@ n.d(t, { A: () => x });
 var r = n(17928),
     l = n(228366),
     a = n(403362),
-    s = n(817934);
-let i = (0, a.m6)() ? { [s.C8]: { "dummy-shop-home": s.uG, "dummy-orb-shelf": s.oP, "dummy-sku-list": s.Ej } } : {},
+    i = n(817934);
+let s = (0, a.m6)() ? { [i.C8]: { "dummy-shop-home": i.uG, "dummy-orb-shelf": i.oP, "dummy-sku-list": i.Ej } } : {},
     c = (0, a.m6)() ? ["dummy-skeleton"] : [],
-    o = (0, a.m6)() ? { [s.C8]: { "dummy-popular-picks": s.Ot } } : {},
+    o = (0, a.m6)() ? { [i.C8]: { "dummy-popular-picks": i.Ot } } : {},
     u = (0, a.m6)() ? ["dummy-skeleton-template"] : [];
 function d(e, t) {
     return `${e}/${t}`;
 }
-let h = i,
+let h = s,
     m = new Set(c),
     p = {},
     f = o,

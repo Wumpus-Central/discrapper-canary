@@ -1,9 +1,9 @@
-n.d(t, { A: () => s });
+n.d(t, { A: () => i });
 var r = n(477900),
     l = n(582128),
     a = n(395399);
-let s = function (e) {
-    let { colors: t, angle: n = 180, padding: s = 16, children: i } = e,
+let i = function (e) {
+    let { colors: t, angle: n = 180, padding: i = 16, children: s } = e,
         c = l.useMemo(() => {
             if (t.length > 1) return `linear-gradient(${n}deg, ${t.join(", ")})`;
             if (t.length > 0) {
@@ -11,5 +11,5 @@ let s = function (e) {
                 return `linear-gradient(${n}deg, ${e}, ${e})`;
             }
         }, [t, n]);
-    return (0, r.jsx)("div", { className: a.k, style: { backgroundImage: c, padding: s }, children: i });
+    return (0, r.jsx)("div", { className: a.k, style: { backgroundImage: c, padding: i }, children: s });
 };

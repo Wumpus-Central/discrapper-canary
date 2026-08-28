@@ -2,18 +2,18 @@ n.d(t, { A: () => d });
 var r = n(477900),
     l = n(939249),
     a = n(834730),
-    s = n(976860),
-    i = n(801966),
+    i = n(976860),
+    s = n(801966),
     c = n(364801),
     o = n(197498),
     u = n(217651);
 let d = function (e) {
     let { backgroundImage: t, href: n, ctaText: d } = e,
-        h = (0, i.W)(d);
+        h = (0, s.W)(d);
     return (0, r.jsx)(o.A, {
         children: (0, r.jsx)(l.D, {
             className: u.v,
-            onClick: () => (0, s.pX)(n),
+            onClick: () => (0, i.pX)(n),
             children: (0, r.jsx)(c.A, {
                 backgroundImage: t,
                 backgroundPosition: "left",

@@ -1,21 +1,21 @@
-n.d(t, { A: () => p });
+n.d(t, { A: () => m });
 var l = n(377941),
     r = n.n(l),
     i = n(17928),
-    s = n(506774),
-    a = n(228366),
+    a = n(506774),
+    s = n(228366),
     u = n(724066),
     o = n(900582);
 let c = "SpellcheckStore",
     d = !0,
     f = new Set();
 function h() {
-    s.w.set(c, { enabled: d, learnedWords: f });
+    a.w.set(c, { enabled: d, learnedWords: f });
 }
-class m extends i.Ay.Store {
+class p extends i.Ay.Store {
     static displayName = "SpellcheckStore";
     initialize() {
-        let e = s.w.get(c);
+        let e = a.w.get(c);
         null != e && ((d = e.enabled), (f = new Set(e.learnedWords)), (0, o.kv)(d), (0, o.d1)(f)), (0, u.I)(o.Av);
     }
     isEnabled() {
@@ -31,7 +31,7 @@ class m extends i.Ay.Store {
         return null;
     }
 }
-let p = new m(a.h, {
+let m = new p(s.h, {
     SPELLCHECK_TOGGLE() {
         (d = !d), (0, o.kv)(d), h();
     },

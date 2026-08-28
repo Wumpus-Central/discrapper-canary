@@ -1,4 +1,4 @@
-d.exports = {
+e.exports = {
     _C: "guildIconContainer__85d16",
     Qv: "guildIconV2Container__85d16",
     n2: "guildBadge__85d16",

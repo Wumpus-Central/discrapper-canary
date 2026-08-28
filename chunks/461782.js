@@ -1,14 +1,14 @@
-n.d(t, { Ay: () => u, k3: () => s, vG: () => a });
+n.d(t, { Ay: () => u, k3: () => a, vG: () => s });
 var l = n(477900),
     r = n(582128),
     i = n(451988);
-let s = r.createContext({
+let a = r.createContext({
         onPreventIdle: () => null,
         onAllowIdle: () => null,
         onForceIdle: () => null,
         onActive: () => null,
     }),
-    a = r.createContext(!1);
+    s = r.createContext(!1);
 function u(e) {
     let { children: t, timeout: n } = e,
         [u, o] = r.useState(!1),
@@ -36,15 +36,15 @@ function u(e) {
             },
             [c, d],
         ),
-        m = r.useCallback(() => {
+        p = r.useCallback(() => {
             o(!1), 0 === c.current.size && d.current?.delay();
         }, [c, d, o]),
-        p = r.useCallback(() => {
+        m = r.useCallback(() => {
             c.current.size > 0 || (d.current?.cancel(), o(!0));
         }, [d, o]),
-        g = r.useMemo(() => ({ onAllowIdle: h, onPreventIdle: f, onActive: m, onForceIdle: p }), [h, f, m, p]);
-    return (0, l.jsx)(a.Provider, {
+        g = r.useMemo(() => ({ onAllowIdle: h, onPreventIdle: f, onActive: p, onForceIdle: m }), [h, f, p, m]);
+    return (0, l.jsx)(s.Provider, {
         value: u,
-        children: (0, l.jsx)(s.Provider, { value: g, children: t({ idle: u, ...g }) }),
+        children: (0, l.jsx)(a.Provider, { value: g, children: t({ idle: u, ...g }) }),
     });
 }

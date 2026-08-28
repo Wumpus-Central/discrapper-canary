@@ -612,7 +612,7 @@ let e1 = (0, F.Fe)({
             n.e("245758"),
             n.e("561672"),
             n.e("977306"),
-            n.e("896162"),
+            n.e("722514"),
             n.e("847980"),
             n.e("957251"),
             n.e("677624"),
@@ -823,7 +823,7 @@ let e1 = (0, F.Fe)({
             n.e("455924"),
             n.e("88160"),
             n.e("59413"),
-            n.e("430856"),
+            n.e("565716"),
             n.e("87306"),
             n.e("219795"),
             n.e("444795"),
@@ -1048,7 +1048,7 @@ function e5(e) {
         })
     );
 }
-function e6(e) {
+function e4(e) {
     let { platformType: t, platformName: n, connectedAccount: r, applicationName: a } = e,
         s = (0, D.Ay)(),
         l = v.A.get(t),
@@ -1085,7 +1085,7 @@ function e6(e) {
         ],
     });
 }
-function e4() {
+function e6() {
     return (0, i.jsx)("div", { className: e0.g4, children: (0, i.jsx)(m.y, { className: e0.u1 }) });
 }
 function e7(e) {
@@ -1362,7 +1362,7 @@ function e7(e) {
         tI = !1;
     switch (ep) {
         case null:
-            return { label: en.intl.string(en.t.ZTNur7), body: (0, i.jsx)(e4, {}) };
+            return { label: en.intl.string(en.t.ZTNur7), body: (0, i.jsx)(e6, {}) };
         case "CONNECT_ACCOUNT":
             (t = (0, i.jsx)(e5, { clientId: A, platformType: e_, platformName: tc })),
                 (tE = !1),
@@ -1371,7 +1371,7 @@ function e7(e) {
                 (tu = !0);
             break;
         case "SELECT_INSTALL_TYPE":
-            if (null == e$) return { label: en.intl.string(en.t.ZTNur7), body: (0, i.jsx)(e4, {}) };
+            if (null == e$) return { label: en.intl.string(en.t.ZTNur7), body: (0, i.jsx)(e6, {}) };
             (t = (0, i.jsx)(e1, {
                 application: e$,
                 onSelect: function (e) {
@@ -1385,7 +1385,7 @@ function e7(e) {
             break;
         case "AUTHORIZE_SCOPES":
             if (null == eI || null == eF || null == eW)
-                return { label: en.intl.string(en.t.ZTNur7), body: (0, i.jsx)(e4, {}) };
+                return { label: en.intl.string(en.t.ZTNur7), body: (0, i.jsx)(e6, {}) };
             let tf = null == eg || eg instanceof Error ? {} : eg,
                 tp = ey?.sort((e, t) => e.name.toLowerCase().localeCompare(t.name.toLowerCase())),
                 tT = eW === u.b.GUILD_INSTALL && eJ.includes(_.F.WEBHOOK_INCOMING),
@@ -1396,7 +1396,7 @@ function e7(e) {
                 children: [
                     null != eG &&
                         ex &&
-                        (0, i.jsx)(e6, {
+                        (0, i.jsx)(e4, {
                             platformType: eG.type,
                             platformName: tc,
                             connectedAccount: eG,
@@ -1437,7 +1437,7 @@ function e7(e) {
                 (tu = !0);
             break;
         case "AUTHORIZE_BOT_PERMISSIONS":
-            if (null == eI) return { label: en.intl.string(en.t.ZTNur7), body: (0, i.jsx)(e4, {}) };
+            if (null == eI) return { label: en.intl.string(en.t.ZTNur7), body: (0, i.jsx)(e6, {}) };
             (t = (0, i.jsx)(ek, {
                 application: eI.application,
                 permissions: e3,

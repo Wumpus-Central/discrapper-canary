@@ -2001,10 +2001,10 @@ async function e3(e) {
 function e5() {
     B.update();
 }
-function e6() {
+function e4() {
     return B.update(), !1;
 }
-function e4() {
+function e6() {
     return V.update(), !1;
 }
 function e7(e) {
@@ -2014,8 +2014,8 @@ class e8 extends a.Ay.Store {
     static displayName = "GatewayConnectionStore";
     initialize() {
         this.waitFor(E.default, A.A, h.A, I.Ay, f.A, p.A, T.Ay, m.A, g.A, _.A),
-            this.syncWith([I.Ay], e6),
-            this.syncWith([m.A], e4);
+            this.syncWith([I.Ay], e4),
+            this.syncWith([m.A], e6);
     }
     getSocket() {
         return F;

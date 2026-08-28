@@ -503,8 +503,8 @@ function e2(e) {
 }
 var e3 = n(95701),
     e5 = n(616356),
-    e6 = n(280450),
-    e4 = n(734057),
+    e4 = n(280450),
+    e6 = n(734057),
     e7 = n(184989),
     e8 = n(71393),
     e9 = n(453028),
@@ -1009,8 +1009,8 @@ function t5(e) {
         }, [t, s]);
     return (0, r.jsx)(tR.A, { tooltipText: Z.intl.string(Z.t.vyaWs7), onClick: l, onMouseDown: i, icon: tp.U, ref: n });
 }
-var t6 = n(428689),
-    t4 = n(409626),
+var t4 = n(428689),
+    t6 = n(409626),
     t7 = n(692969),
     t8 = n(475358),
     t9 = n(939409);
@@ -1062,7 +1062,7 @@ function ns(e) {
         i = (0, t7.A)({
             location: "ActivityPanelGameCard",
             applicationId: n,
-            source: t4.GameProfileSources.RtcPanel,
+            source: t6.GameProfileSources.RtcPanel,
             trackEntryPointImpression: !0,
         });
     return (0, r.jsx)(I.D, {
@@ -1077,7 +1077,7 @@ function nl(e) {
         className: na.f9,
         children: [
             (0, r.jsx)(ej.A, { className: na.Gt, game: t, pid: n?.pid, ref: a }),
-            i ? (0, r.jsx)(t6.VideoIcon, { size: "md", color: "currentColor", className: na.it }) : null,
+            i ? (0, r.jsx)(t4.VideoIcon, { size: "md", color: "currentColor", className: na.it }) : null,
         ],
     });
 }
@@ -1086,7 +1086,7 @@ function no(e) {
         l = (0, t7.A)({
             location: "ActivityPanelGameCardIcon",
             applicationId: n?.id,
-            source: t4.GameProfileSources.RtcPanel,
+            source: t6.GameProfileSources.RtcPanel,
             trackEntryPointImpression: !1,
         }),
         o = null != l,
@@ -1544,7 +1544,7 @@ let nL = (0, N.A)(function (e) {
         s = a.useRef(null),
         o = a.useRef(null),
         d = a.useRef(null),
-        c = (0, _.bG)([e6.default], () => e6.default.getId()),
+        c = (0, _.bG)([e4.default], () => e4.default.getId()),
         A = (0, _.bG)([ex.Ay, ta.A], () => (0, eZ.A)(ex.Ay, ta.A)),
         { enabled: h } = eG.useConfig({ location: "ActivityPanelGameCard" }),
         { previouslyRunningGame: I, isWithinThreshold: f } = (function () {
@@ -1567,9 +1567,9 @@ let nL = (0, N.A)(function (e) {
             let i = e - n.endedAt;
             return { previouslyRunningGame: n, isWithinThreshold: i < eH };
         })(),
-        p = (0, _.bG)([ti.Ay, e4.A], () => e4.A.getChannel(ti.Ay.getVoiceChannelId())),
+        p = (0, _.bG)([ti.Ay, e6.A], () => e6.A.getChannel(ti.Ay.getVoiceChannelId())),
         T = (0, _.bG)([y.Ay], () => y.Ay.getConnectedActivityChannelId()),
-        m = (0, _.bG)([e4.A], () => e4.A.getChannel(T)),
+        m = (0, _.bG)([e6.A], () => e6.A.getChannel(T)),
         g = (0, _.bG)([e8.A], () => e8.A.getGuild(m?.guild_id)),
         [S, N] = (0, _.yK)([e5.A], () => [e5.A.getCurrentUserActiveStream(), e5.A.getStreamerActiveStreamMetadata()]),
         O = (0, _.bG)([y.Ay], () => y.Ay.getCurrentEmbeddedActivity()),

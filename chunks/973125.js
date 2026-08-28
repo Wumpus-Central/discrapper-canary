@@ -2,8 +2,8 @@ n.d(t, { E: () => N, e: () => P });
 var r = n(582128),
     l = n(435558),
     a = n(364801),
-    s = n(197498),
-    i = n(488757),
+    i = n(197498),
+    s = n(488757),
     c = n(70613),
     o = n(217109),
     u = n(273340),
@@ -17,15 +17,15 @@ var r = n(582128),
     v = n(834805),
     A = n(74871),
     x = n(498381),
-    T = n(745308),
+    T = n(857623),
     S = n(477900),
     y = n(790219),
     j = n(356118),
     _ = n(879923),
     C = n(575593),
-    L = n(674658),
-    b = n(258245),
-    k = n(561769),
+    b = n(674658),
+    k = n(258245),
+    L = n(561769),
     I = n(303720),
     O = n(538235),
     M = n(891167);
@@ -35,11 +35,11 @@ let N = {
     NarrowContent: f.A,
     FullBleedContent: p.A,
     InteractiveHScroll: d.A,
-    Carousel: i.A,
+    Carousel: s.A,
     Grid: o.Ay,
     GridItem: u.A,
     Section: h.A,
-    Card: s.A,
+    Card: i.A,
     BackgroundImage: a.A,
     GradientBackground: c.A,
     Skeleton: m.A,
@@ -49,55 +49,55 @@ let N = {
     ShopProductCard: I.A,
     GridItemShopProductCard: function (e) {
         let { skuId: t, auto: n, columns: l, rows: a } = e,
-            { product: s } = (0, L.q)(t, !0),
-            i = r.useContext(k.v3);
-        if (null == s) return null;
-        let { flattenProductVariants: c, ...o } = i;
-        if (s.type === C.R.BUNDLE) {
+            { product: i } = (0, b.q)(t, !0),
+            s = r.useContext(L.v3);
+        if (null == i) return null;
+        let { flattenProductVariants: c, ...o } = s;
+        if (i.type === C.R.BUNDLE) {
             let e = n ? 2 : l,
                 r = n ? 1 : a,
-                s = `${e}/${r}`;
-            return (0, S.jsx)(k.v3.Provider, {
+                i = `${e}/${r}`;
+            return (0, S.jsx)(L.v3.Provider, {
                 value: { flattenProductVariants: c ?? !1, ...o },
                 children: (0, S.jsx)(u.A, {
                     columns: e,
                     rows: r,
-                    children: (0, S.jsx)(b.A, { skuId: t, aspectRatio: s }),
+                    children: (0, S.jsx)(k.A, { skuId: t, aspectRatio: i }),
                 }),
             });
         }
-        if (s.type === C.R.PROFILE_EFFECT) {
+        if (i.type === C.R.PROFILE_EFFECT) {
             let e = n ? 1 : l,
                 r = n ? 2 : a,
-                s = `${e}/${r}`;
-            return (0, S.jsx)(k.v3.Provider, {
+                i = `${e}/${r}`;
+            return (0, S.jsx)(L.v3.Provider, {
                 value: { flattenProductVariants: c ?? !1, ...o },
                 children: (0, S.jsx)(u.A, {
                     columns: e,
                     rows: r,
-                    children: (0, S.jsx)(b.A, { skuId: t, aspectRatio: s }),
+                    children: (0, S.jsx)(k.A, { skuId: t, aspectRatio: i }),
                 }),
             });
         }
         return n
-            ? (0, S.jsx)(k.v3.Provider, {
+            ? (0, S.jsx)(L.v3.Provider, {
                   value: { flattenProductVariants: c ?? !1, ...o },
-                  children: (0, S.jsx)(b.A, { skuId: t, aspectRatio: "1/1" }),
+                  children: (0, S.jsx)(k.A, { skuId: t, aspectRatio: "1/1" }),
               })
-            : (0, S.jsx)(k.v3.Provider, {
+            : (0, S.jsx)(L.v3.Provider, {
                   value: { flattenProductVariants: c ?? !1, ...o },
                   children: (0, S.jsx)(u.A, {
                       columns: l,
                       rows: a,
-                      children: (0, S.jsx)(b.A, { skuId: t, aspectRatio: `${l}/${a}` }),
+                      children: (0, S.jsx)(k.A, { skuId: t, aspectRatio: `${l}/${a}` }),
                   }),
               });
     },
     SkuList: T.A,
     SubLayout: function (e) {
         let { layoutId: t, tenantId: n, skeleton: r, componentMap: l } = e,
-            { layout: a, loading: s } = (0, y.A)(n, t);
-        return s && null != r
+            { layout: a, loading: i } = (0, y.A)(n, t);
+        return i && null != r
             ? (0, S.jsx)(j.Ay, { overrides: l, layout: { id: "skeleton", children: r } })
             : null == a
               ? null
@@ -105,12 +105,12 @@ let N = {
     },
     SubTemplate: function (e) {
         let { templateId: t, tenantId: n, skeleton: r, requestParams: l, componentMap: a } = e,
-            { layout: s, loading: i } = (0, _.A)(n, t, l);
-        return i && null != r
+            { layout: i, loading: s } = (0, _.A)(n, t, l);
+        return s && null != r
             ? (0, S.jsx)(j.Ay, { overrides: a, layout: { id: "skeleton", children: r } })
-            : null == s
+            : null == i
               ? null
-              : (0, S.jsx)(j.Ay, { layout: s, overrides: a });
+              : (0, S.jsx)(j.Ay, { layout: i, overrides: a });
     },
     Button: x.aF,
     Heading: x.i0,

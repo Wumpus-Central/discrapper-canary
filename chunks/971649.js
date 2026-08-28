@@ -3,8 +3,8 @@ var i = n(582128),
     r = n(323889),
     s = n(17928),
     o = n(475743),
-    l = n(859703),
-    a = n(590202),
+    a = n(859703),
+    l = n(590202),
     u = n(266569);
 function d(e) {
     var t, n;
@@ -26,8 +26,8 @@ function d(e) {
 }
 function c(e) {
     let { adContentIds: t, adCreativeType: n } = e,
-        u = (0, s.bG)([l.A], () => (n !== r.p.QUEST || 1 !== t.length ? null : l.A.getQuest(t[0])), [t, n]),
-        d = i.useMemo(() => (null == u ? null : (0, a.NI)(u)), [u]),
+        u = (0, s.bG)([a.A], () => (n !== r.p.QUEST || 1 !== t.length ? null : a.A.getQuest(t[0])), [t, n]),
+        d = i.useMemo(() => (null == u ? null : (0, l.NI)(u)), [u]),
         c = (0, o.Ay)(d);
     return d !== c;
 }

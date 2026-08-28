@@ -2,7 +2,7 @@ n.d(t, { A: () => p, c: () => c }), n(323874), n(14289), n(35956), n(321073);
 var r = n(582128),
     l = n(435558),
     a = n(736653);
-let s = {
+let i = {
         gif: "image/gif",
         webp: "image/webp",
         apng: "image/apng",
@@ -14,9 +14,9 @@ let s = {
         webm: "video/webm",
         mov: "video/quicktime",
     },
-    i = new Set(["video/mp4", "video/webm", "video/quicktime"]);
+    s = new Set(["video/mp4", "video/webm", "video/quicktime"]);
 function c(e) {
-    return null != e && i.has(e);
+    return null != e && s.has(e);
 }
 let o = [],
     u = new Map(),
@@ -27,9 +27,9 @@ function h(e, t) {
 function m(e) {
     try {
         let t = new URL(e).pathname;
-        return s[t.split(".").pop()?.toLowerCase() ?? ""];
+        return i[t.split(".").pop()?.toLowerCase() ?? ""];
     } catch {
-        return s[e.split("?")[0].split(".").pop()?.toLowerCase() ?? ""];
+        return i[e.split("?")[0].split(".").pop()?.toLowerCase() ?? ""];
     }
 }
 let p = function (e) {
@@ -49,8 +49,8 @@ let p = function (e) {
                       return null != n ? [{ src: n, mimeType: m(n) }] : [];
                   }));
         }, [e, t]),
-        [l, s] = r.useState({}),
-        [i, c] = r.useState(new Set());
+        [l, i] = r.useState({}),
+        [s, c] = r.useState(new Set());
     return (
         r.useEffect(() => {
             if (0 === n.length) return;
@@ -88,7 +88,7 @@ let p = function (e) {
                         let t = {},
                             r = [];
                         for (let [e, l] of n) null != l.status && l.status >= 400 ? r.push(e) : (t[e] = l.mimeType);
-                        s((n) => ({ ...n, ...e, ...t })), r.length > 0 && c((e) => new Set([...e, ...r]));
+                        i((n) => ({ ...n, ...e, ...t })), r.length > 0 && c((e) => new Set([...e, ...r]));
                     }
                 })(),
                 () => {
@@ -99,7 +99,7 @@ let p = function (e) {
         r.useMemo(() => {
             if (0 === n.length) return null;
             let e = n.map((e) => ({ ...e, mimeType: e.mimeType ?? l[e.src] }));
-            return e.find((e) => !i.has(e.src)) ?? e[0];
-        }, [n, l, i])
+            return e.find((e) => !s.has(e.src)) ?? e[0];
+        }, [n, l, s])
     );
 };

@@ -6,8 +6,8 @@ var i = s(435558),
     l = s(717398),
     o = s(315069),
     u = s(736056),
-    h = s(710195),
-    c = s(586774),
+    c = s(710195),
+    h = s(586774),
     d = s(800828),
     A = s(507104),
     m = s(616356),
@@ -43,7 +43,7 @@ function L(e) {
         { mutualGuildsLength: t.length, mutualGuilds: t.slice(0, 5) }
     );
 }
-class D extends o.A {
+class S extends o.A {
     key;
     userId;
     type;
@@ -87,7 +87,7 @@ class D extends o.A {
         return [this.type, this.nickname?.toLowerCase() ?? this.user?.globalName?.toLowerCase() ?? this.usernameLower];
     }
 }
-class S {
+class D {
     _rows;
     constructor(e = []) {
         this._rows = e;
@@ -98,7 +98,7 @@ class S {
                 let [s, i] = t;
                 return (
                     i === y.eA$.FRIEND && e.add(s),
-                    new D({
+                    new S({
                         key: s,
                         type: i,
                         userId: s,
@@ -125,7 +125,7 @@ class S {
                 (r === y.eA$.FRIEND && a.has(i)) ||
                 (r === y.eA$.FRIEND && a.add(i),
                 s.push(
-                    new D({
+                    new S({
                         key: `${i}-${n}`,
                         type: r,
                         userId: i,
@@ -141,14 +141,14 @@ class S {
                 ));
         });
         let r = n().map(
-            c.A.getSuggestions(),
+            h.A.getSuggestions(),
             (e) =>
-                new D({ key: e.key, userId: e.key, type: 99, nickname: e.name, ...v(e.key), ...C(e.key), ...L(e.key) }),
+                new S({ key: e.key, userId: e.key, type: 99, nickname: e.name, ...v(e.key), ...C(e.key), ...L(e.key) }),
         );
-        return new S(n().concat(t, s, r));
+        return new D(n().concat(t, s, r));
     }
     clone() {
-        return new S(this._rows);
+        return new D(this._rows);
     }
     update(e) {
         let t = !1;
@@ -213,52 +213,52 @@ class S {
 let w = !0,
     G = !1,
     _ = y.m3P.ONLINE,
-    x = new S(),
+    x = new D(),
     R = !0,
     O = !1,
-    M = !1;
-function P() {
+    P = !1;
+function M() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
     w && (e || (_ !== y.m3P.ONLINE && _ !== y.m3P.ADD_FRIEND)) && !G && ((w = !1), (G = !0), l.A.fetchRelationships());
 }
 function k() {
-    if (((w = !0), R ? (G = !1) : P(), (x = x.reset()), O)) return;
+    if (((w = !0), R ? (G = !1) : M(), (x = x.reset()), O)) return;
     let e = x.getRelationshipCounts();
     _ = 0 === e[y.eA$.FRIEND] ? (0 !== e[y.eA$.PENDING_INCOMING] ? y.m3P.PENDING : y.m3P.ADD_FRIEND) : y.m3P.ONLINE;
 }
 function F() {
-    x = R ? new S() : x.reset();
+    x = R ? new D() : x.reset();
 }
-function b(e) {
+function T(e) {
     return function () {
         return !R && !!x.update(e) && ((x = x.clone()), !0);
     };
 }
-class T extends a.Ay.Store {
+class b extends a.Ay.Store {
     static displayName = "FriendsStore";
     initialize() {
-        this.waitFor(h.A, m.A, u.A, c.A, d.A, p.Ay, N.A, A.Ay, I.A, E.A, g.default),
+        this.waitFor(c.A, m.A, u.A, h.A, d.A, p.Ay, N.A, A.Ay, I.A, E.A, g.default),
             this.syncWith([E.A], F),
             this.syncWith([d.A], F),
-            this.syncWith([c.A], F),
+            this.syncWith([h.A], F),
             this.syncWith([A.Ay], F),
-            this.syncWith([g.default], b(v)),
-            this.syncWith([I.A, m.A], b(C)),
+            this.syncWith([g.default], T(v)),
+            this.syncWith([I.A, m.A], T(C)),
             k();
     }
     getState() {
         return { fetching: G, section: _, rows: x };
     }
     isInitialized() {
-        return M;
+        return P;
     }
 }
-let j = new T(r.h, {
+let j = new b(r.h, {
     CONNECTION_OPEN: function () {
-        k(), (M = !0);
+        k(), (P = !0);
     },
     FRIENDS_SET_SECTION: function (e) {
-        (_ = e.section), P();
+        (_ = e.section), M();
     },
     CHANNEL_SELECT: function (e) {
         let { channelId: t } = e;

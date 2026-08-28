@@ -1,4 +1,4 @@
-n.d(t, { FV: () => y, M3: () => g, O7: () => f, SQ: () => x, cd: () => v, ke: () => N, n$: () => h, pY: () => E }),
+n.d(t, { FV: () => y, M3: () => f, O7: () => g, SQ: () => x, cd: () => v, ke: () => N, n$: () => h, pY: () => E }),
     n(321073);
 var l = n(155718),
     i = n(721768),
@@ -15,14 +15,14 @@ function h(e) {
     let t = d.VW.richValue(e)[0];
     return null == t || "applicationCommand" !== t.type ? null : [t, m.Xg];
 }
-function g(e) {
+function f(e) {
     if (null == e.selection) return null;
     let t = d.VW.above(e, { at: e.selection.focus, match: (e) => d.AS.isType(e, "applicationCommandOption") }) ?? null;
     return null != t || d.ZF.isCollapsed(e.selection)
         ? t
         : (d.VW.above(e, { at: e.selection.anchor, match: (e) => d.AS.isType(e, "applicationCommandOption") }) ?? null);
 }
-function f(e) {
+function g(e) {
     let t = h(e),
         n = [],
         l = t?.[0].children;
@@ -86,7 +86,7 @@ function E(e, t) {
     if (null == t.options || 0 === t.options.length) return [];
     let n = d.VW.richValue(e),
         l = [],
-        i = new Set(f(e)),
+        i = new Set(g(e)),
         r = {},
         a = new Set();
     for (let e of t.options) (r[e.displayName] = e), i.has(e.name) || a.add(e.displayName);

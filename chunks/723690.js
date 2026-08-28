@@ -6,8 +6,8 @@ var i = s(477900),
     l = s(17928),
     o = s(778712),
     u = s(97808),
-    h = s(297413),
-    c = s(966327),
+    c = s(297413),
+    h = s(966327),
     d = s(562819),
     A = s(963977),
     m = s(386467),
@@ -29,21 +29,21 @@ let g = I.Ay.getEnableHardwareAcceleration(),
                 className: C,
             } = e,
             L = (0, l.bG)([N.A], () => N.A.getNickname(t.id)),
-            D = n.useContext(m.A),
-            S = (0, p.r)("PeopleUserInfo"),
-            w = t.getAvatarURL(D, (0, o.FT)(o._3.SIZE_32), s),
+            S = n.useContext(m.A),
+            D = (0, p.r)("PeopleUserInfo"),
+            w = t.getAvatarURL(S, (0, o.FT)(o._3.SIZE_32), s),
             {
                 avatarDecorationSrc: G,
                 eventHandlers: { onMouseEnter: _, onMouseLeave: x },
-            } = (0, A.A)({ user: t, guildId: D, size: (0, d.Te)(o._3.SIZE_32), onlyAnimateOnHoverOrFocus: !0 });
+            } = (0, A.A)({ user: t, guildId: S, size: (0, d.Te)(o._3.SIZE_32), onlyAnimateOnHoverOrFocus: !0 });
         n.useEffect(() => {
-            S && (s ? _() : x());
-        }, [s, S, _, x]);
+            D && (s ? _() : x());
+        }, [s, D, _, x]);
         let R = g ? u.Js : u.eu;
         return (0, i.jsxs)("div", {
             className: r()(E.eF, C, { [E.yo]: s }),
             children: [
-                S
+                D
                     ? (0, i.jsx)(R, {
                           src: w,
                           size: o._3.SIZE_32,
@@ -54,11 +54,11 @@ let g = I.Ay.getEnableHardwareAcceleration(),
                           "aria-label": t.username,
                           className: E.my,
                       })
-                    : (0, i.jsx)(c.A, { user: t, className: E.my, animate: s, status: y, isMobile: f, isVR: v }),
+                    : (0, i.jsx)(h.A, { user: t, className: E.my, animate: s, status: y, isMobile: f, isVR: v }),
                 (0, i.jsxs)("div", {
                     className: E.Qq,
                     children: [
-                        (0, i.jsx)(h.A, {
+                        (0, i.jsx)(c.A, {
                             user: t,
                             nick: L,
                             botClass: E.AO,
@@ -66,7 +66,7 @@ let g = I.Ay.getEnableHardwareAcceleration(),
                             usernameClass: E.Xh,
                             discriminatorClass: E.D2,
                             showAccountIdentifier: I,
-                            showGuildTag: S,
+                            showGuildTag: D,
                         }),
                         (0, i.jsx)("div", { className: E.W$, children: a }),
                     ],

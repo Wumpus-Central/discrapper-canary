@@ -17,7 +17,7 @@ var s = t(477900),
     I = t(964486),
     N = t(793574),
     f = t(688810),
-    j = t(599882),
+    j = t(960628),
     E = t(85109),
     y = t(734057),
     S = t(71393),
@@ -886,8 +886,8 @@ var eQ = t(435558),
     e2 = t(912592),
     e8 = t(821609),
     e4 = t(475825),
-    e7 = t(928039),
-    e6 = t(625494);
+    e6 = t(928039),
+    e7 = t(625494);
 let e9 = { [eC.Ur.UNREAD]: !0, [eC.Ur.TODAY]: !0, [eC.Ur.YESTERDAY]: !1, [eC.Ur.OLDER]: !1 },
     e5 = { [eC.Ur.UNREAD]: !0, [eC.Ur.TODAY]: !1, [eC.Ur.YESTERDAY]: !1, [eC.Ur.OLDER]: !1 },
     ne = (0, L.v)((e, n) => ({
@@ -987,7 +987,7 @@ function nr(e) {
         x = (0, M.op)(),
         p = i.useRef(null),
         A = i.useRef(0),
-        I = (0, e7.A)(g, p),
+        I = (0, e6.A)(g, p),
         { entrypoint: N, notificationCenterVariant: f } = (0, U.X8)({ location: "NotificationsInboxSidebarList" }),
         {
             isLoading: j,
@@ -1017,10 +1017,10 @@ function nr(e) {
             p.current?.scrollPageDown({ animate: !0 });
         }
         return (
-            e6._.subscribe(eR.jej.SCROLL_PAGE_DOWN, n),
-            e6._.subscribe(eR.jej.SCROLL_PAGE_UP, e),
+            e7._.subscribe(eR.jej.SCROLL_PAGE_DOWN, n),
+            e7._.subscribe(eR.jej.SCROLL_PAGE_UP, e),
             () => {
-                e6._.unsubscribe(eR.jej.SCROLL_PAGE_DOWN, n), e6._.unsubscribe(eR.jej.SCROLL_PAGE_UP, e);
+                e7._.unsubscribe(eR.jej.SCROLL_PAGE_DOWN, n), e7._.unsubscribe(eR.jej.SCROLL_PAGE_UP, e);
             }
         );
     }, []);

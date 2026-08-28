@@ -2,12 +2,12 @@ n.d(t, { A: () => c });
 var r = n(477900),
     l = n(364801),
     a = n(498381),
-    s = n(891167),
-    i = n(132407);
+    i = n(891167),
+    s = n(132407);
 let c = function (e) {
     let { bannerSrc: t, logoSrc: n, backgroundColor: c, href: o, children: u } = e;
     return (0, r.jsx)("div", {
-        className: i.ZK,
+        className: s.ZK,
         children: (0, r.jsx)(l.A, {
             backgroundImage: t,
             backgroundColor: c,
@@ -16,12 +16,12 @@ let c = function (e) {
             backgroundPosition: "left center",
             padding: "var(--space-8)",
             children: (0, r.jsxs)("div", {
-                className: i.Qs,
+                className: s.Qs,
                 children: [
                     (0, r.jsxs)("div", {
-                        className: i.VW,
+                        className: s.VW,
                         children: [
-                            null != n && (0, r.jsx)("div", { className: i.wm, children: (0, r.jsx)(s.A, { src: n }) }),
+                            null != n && (0, r.jsx)("div", { className: s.wm, children: (0, r.jsx)(i.A, { src: n }) }),
                             null != o &&
                                 (0, r.jsx)(a.aF, {
                                     variant: "overlay-primary",
@@ -30,7 +30,7 @@ let c = function (e) {
                                 }),
                         ],
                     }),
-                    null != u && (0, r.jsx)("div", { className: i.Y_, children: u }),
+                    null != u && (0, r.jsx)("div", { className: s.Y_, children: u }),
                 ],
             }),
         }),

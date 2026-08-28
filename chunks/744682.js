@@ -1,21 +1,21 @@
-n.d(t, { P: () => p });
+n.d(t, { P: () => m });
 var l = n(477900),
     r = n(582128),
     i = n(503698),
-    s = n.n(i),
-    a = n(480664),
-    u = n.n(a),
+    a = n.n(i),
+    s = n(480664),
+    u = n.n(s),
     o = n(844222),
     c = n(460890),
     d = n(260612),
     f = n(964486),
     h = n(354328),
-    m = n(162118);
-let p = r.forwardRef(function (e, t) {
+    p = n(162118);
+let m = r.forwardRef(function (e, t) {
     let {
             color: i,
-            useLottieDefaultColors: a,
-            src: p,
+            useLottieDefaultColors: s,
+            src: m,
             size: g = "md",
             width: y,
             height: v,
@@ -73,8 +73,8 @@ let p = r.forwardRef(function (e, t) {
             [j, _, x, C],
         ),
         r.useEffect(() => {
-            null == I && p().then((e) => T(e.default));
-        }, [I, p]),
+            null == I && m().then((e) => T(e.default));
+        }, [I, m]),
         r.useEffect(
             () => (
                 n
@@ -107,7 +107,7 @@ let p = r.forwardRef(function (e, t) {
         ),
         (0, l.jsx)("div", {
             style: { "--__lottieIconColor": null != i && "string" == typeof i ? i : i?.css, display: "flex", ...N },
-            className: s()(m.f, a ? void 0 : m.P, E),
+            className: a()(p.f, s ? void 0 : p.P, E),
             ref: R,
         })
     );

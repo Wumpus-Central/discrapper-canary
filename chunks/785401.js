@@ -2365,12 +2365,12 @@ class e2 extends m.G {
 }
 let e3 = new e2();
 var e5 = n(335871),
-    e6 =
+    e4 =
         (((a = {})[(a.EXCLUSIVE = 0)] = "EXCLUSIVE"),
         (a[(a.SYNCED = 1)] = "SYNCED"),
         (a[(a.PRE_ALLOCATED = 2)] = "PRE_ALLOCATED"),
         a),
-    e4 =
+    e6 =
         (((s = {})[(s.UNSPECIFIED = 0)] = "UNSPECIFIED"),
         (s[(s.USER = 1)] = "USER"),
         (s[(s.INSTALLATION = 2)] = "INSTALLATION"),
@@ -2456,7 +2456,7 @@ class tl extends m.G {
                 no: 14,
                 name: "unit_type",
                 kind: "enum",
-                T: () => ["discord_protos.discord_experimentation.v1.Experiment.UnitType", e4],
+                T: () => ["discord_protos.discord_experimentation.v1.Experiment.UnitType", e6],
             },
             { no: 15, name: "variations", kind: "message", repeat: 1, T: () => tu },
             { no: 16, name: "rules", kind: "message", repeat: 1, T: () => O },
@@ -2815,7 +2815,7 @@ class to extends m.G {
                 no: 1,
                 name: "mode",
                 kind: "enum",
-                T: () => ["discord_protos.discord_experimentation.v1.Experiment.NumberLineSettings.Mode", e6],
+                T: () => ["discord_protos.discord_experimentation.v1.Experiment.NumberLineSettings.Mode", e4],
             },
             { no: 2, name: "linked_id", kind: "scalar", T: 6 },
             { no: 3, name: "shared_control", kind: "scalar", T: 8 },

@@ -1,4 +1,4 @@
-n.d(t, { FW: () => _, bg: () => S, RH: () => T }), n(134528), n(947204);
+n.d(t, { FW: () => _, bg: () => S, RH: () => p }), n(134528), n(947204);
 var i,
     r = (((i = {}).AD_ATTRIBUTION_KIT = "aak"), i),
     s = n(626584),
@@ -35,10 +35,10 @@ function m(e, t) {
 function A(e, t) {
     m(e, t) && E.delete(e);
 }
-function p(e) {
+function T(e) {
     null != e && (0, a.bg)(e).catch(() => {});
 }
-function T(e) {
+function p(e) {
     let { impressionId: t, metadataSealed: n, framework: i } = e,
         r = { framework: i, token: null, signAbort: new AbortController(), registration: Promise.resolve() };
     E.set(t, r),
@@ -61,7 +61,7 @@ async function I(e) {
         return;
     }
     let d = await (0, a.EO)(t, i, JSON.stringify(u));
-    if (!m(t, r)) return void p(d);
+    if (!m(t, r)) return void T(d);
     if (null == d) {
         (0, o.$8)(o.vI.NO_TOKEN, i, t), E.delete(t);
         return;
@@ -89,5 +89,5 @@ async function _(e) {
 }
 function S(e) {
     let t = E.get(e);
-    null != t && (E.delete(e), t.signAbort.abort(), p(t.token));
+    null != t && (E.delete(e), t.signAbort.abort(), T(t.token));
 }

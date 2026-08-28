@@ -2,18 +2,18 @@ n.d(t, { A: () => u });
 var r = n(477900),
     l = n(582128),
     a = n(503698),
-    s = n.n(a),
-    i = n(713517),
+    i = n.n(a),
+    s = n(713517),
     c = n(715591);
 function o(e) {
     let { position: t, children: n } = e;
-    return (0, r.jsx)("div", { className: s()(c.child, c[t]), children: n });
+    return (0, r.jsx)("div", { className: i()(c.child, c[t]), children: n });
 }
 let u = (e) => {
     let { children: t, paused: n = !1, slideDuration: a = 5e3 } = e,
-        [s, u] = l.useState(0),
+        [i, u] = l.useState(0),
         d = l.useRef(null),
-        h = (0, i.M)(d),
+        h = (0, s.M)(d),
         m = l.useRef(void 0),
         p = l.useMemo(
             () =>
@@ -27,8 +27,8 @@ let u = (e) => {
             [t],
         );
     l.useEffect(() => {
-        Array.isArray(p) ? u(s >= p?.length ? Math.max(p?.length - 1, 0) : s) : u(0);
-    }, [p, s]);
+        Array.isArray(p) ? u(i >= p?.length ? Math.max(p?.length - 1, 0) : i) : u(0);
+    }, [p, i]);
     let f = n || h;
     return (l.useEffect(() => {
         if (f) {
@@ -60,9 +60,9 @@ let u = (e) => {
                     className: c.children,
                     children: p?.map((e, t) => {
                         var n, l, a;
-                        let i =
+                        let s =
                             ((n = t),
-                            (l = s),
+                            (l = i),
                             (a = p.length),
                             n === l
                                 ? "center"
@@ -73,7 +73,7 @@ let u = (e) => {
                                   : 0 === l && n === a - 1
                                     ? "left"
                                     : "right");
-                        return (0, r.jsx)(o, { position: i, children: e }, t);
+                        return (0, r.jsx)(o, { position: s, children: e }, t);
                     }),
                 }),
             })

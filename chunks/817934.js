@@ -1,4 +1,4 @@
-n.d(t, { C8: () => r, Ej: () => i, Ot: () => a, oP: () => s, uG: () => l });
+n.d(t, { C8: () => r, Ej: () => s, Ot: () => a, oP: () => i, uG: () => l });
 let r = "dummy-tenant",
     l = {
         id: "dummy-shop-home",
@@ -125,7 +125,7 @@ let r = "dummy-tenant",
             },
         ],
     },
-    s = {
+    i = {
         id: "dummy-orb-shelf",
         children: [
             {
@@ -167,7 +167,7 @@ let r = "dummy-tenant",
             },
         ],
     },
-    i = {
+    s = {
         id: "dummy-sku-list",
         children: [
             {

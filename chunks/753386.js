@@ -1,10 +1,10 @@
-n.d(t, { J$: () => p, WM: () => a.WM, cZ: () => A, eG: () => f, vd: () => T, vm: () => m, zh: () => E, zv: () => C });
+n.d(t, { J$: () => p, WM: () => l.WM, cZ: () => A, eG: () => f, vd: () => T, vm: () => m, zh: () => E, zv: () => C });
 var i = n(544180),
     r = n(396813),
     s = n(859703),
     o = n(405670),
-    l = n(561844),
-    a = n(546121),
+    a = n(561844),
+    l = n(546121),
     u = n(710969),
     d = n(792620),
     c = n(652215);
@@ -22,18 +22,18 @@ function E(e, t) {
 function m(e) {
     let { questId: t, sourceQuestContent: n, videoSessionId: r } = e;
     o.Ay.getState().setTranscriptEnabled(!1);
-    let a = o.Ay.getState().getVideoProgress(t);
-    if (null == a) return;
+    let l = o.Ay.getState().getVideoProgress(t);
+    if (null == l) return;
     let u = s.A.getQuest(t);
-    null != u && u.userStatus?.enrolledAt != null && u.userStatus?.completedAt == null && C(u, a.maxTimestampSec);
-    let d = E(a.maxTimestampSec, a.duration);
-    (0, l.av)({
+    null != u && u.userStatus?.enrolledAt != null && u.userStatus?.completedAt == null && C(u, l.maxTimestampSec);
+    let d = E(l.maxTimestampSec, l.duration);
+    (0, a.av)({
         questId: t,
         event: c.HAw.QUEST_VIDEO_PROGRESSED,
-        properties: { progress: d, video_timestamp_seconds: a.maxTimestampSec, video_session_id: r },
+        properties: { progress: d, video_timestamp_seconds: l.maxTimestampSec, video_session_id: r },
         sourceQuestContent: n,
     }),
-        (0, l.av)({
+        (0, a.av)({
             questId: t,
             event: c.HAw.QUEST_VIDEO_MODAL_CLOSED,
             properties: {

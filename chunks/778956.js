@@ -1,4 +1,4 @@
-o.r(
+_.r(
     (e.exports = {
         textButton: "textButton__7a01b",
         text: "text__7a01b",

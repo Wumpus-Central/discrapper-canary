@@ -2,8 +2,8 @@ n.d(t, { Ay: () => E, F2: () => d, Qs: () => f, Z_: () => g });
 var r = n(477900),
     l = n(582128),
     a = n(132500),
-    s = n(152858),
-    i = n(973125),
+    i = n(152858),
+    s = n(973125),
     c = n(790219),
     o = n(879923);
 function u(e, t) {
@@ -11,8 +11,8 @@ function u(e, t) {
         (function e(t, n) {
             if ("string" == typeof t) return t;
             let l = "Any" === t.block && "string" == typeof t.tag ? `Any:${t.tag}` : t.block,
-                { block: i, ...c } = t,
-                o = n[l] ?? n[i];
+                { block: s, ...c } = t,
+                o = n[l] ?? n[s];
             if (null == o) return null;
             let u = (() => {
                     if ("children" in t) {
@@ -21,13 +21,13 @@ function u(e, t) {
                     }
                     return null;
                 })(),
-                d = s.E6.has(i) ? { ...c, componentMap: n } : c;
+                d = i.E6.has(s) ? { ...c, componentMap: n } : c;
             return (0, r.jsx)(o, { ...d, children: u }, (0, a.A)());
         })(e, t),
     );
 }
 function d(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : i.E;
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : s.E;
     try {
         return u(e, t), !0;
     } catch (e) {
@@ -51,33 +51,33 @@ function m(e) {
     return l.useMemo(() => u(t, n), [t, n]);
 }
 function p(e) {
-    let { layout: t, overrides: n, onError: a, onEmptyLayout: s } = e,
-        c = (0, i.e)({ overrides: n });
+    let { layout: t, overrides: n, onError: a, onEmptyLayout: i } = e,
+        c = (0, s.e)({ overrides: n });
     return (
         l.useEffect(() => {
-            0 === t.children.length && s?.();
-        }, [t, s]),
+            0 === t.children.length && i?.();
+        }, [t, i]),
         (0, r.jsx)(h, { onError: a, children: (0, r.jsx)(m, { layout: t, Components: c }) })
     );
 }
 function f(e) {
-    let { layoutId: t, tenantId: n, overrides: a, onError: s, onEmptyLayout: i } = e,
+    let { layoutId: t, tenantId: n, overrides: a, onError: i, onEmptyLayout: s } = e,
         { layout: o, error: u } = (0, c.A)(n, t);
     return (l.useEffect(() => {
-        null != u && s?.();
-    }, [u, s]),
+        null != u && i?.();
+    }, [u, i]),
     null == o)
         ? null
-        : (0, r.jsx)(p, { layout: o, overrides: a, onError: s, onEmptyLayout: i });
+        : (0, r.jsx)(p, { layout: o, overrides: a, onError: i, onEmptyLayout: s });
 }
 function g(e) {
-    let { templateId: t, tenantId: n, overrides: a, onError: s, onEmptyLayout: i, requestParams: c } = e,
+    let { templateId: t, tenantId: n, overrides: a, onError: i, onEmptyLayout: s, requestParams: c } = e,
         { layout: u, error: d } = (0, o.A)(n, t, c);
     return (l.useEffect(() => {
-        null != d && s?.();
-    }, [d, s]),
+        null != d && i?.();
+    }, [d, i]),
     null == u)
         ? null
-        : (0, r.jsx)(p, { layout: u, overrides: a, onError: s, onEmptyLayout: i });
+        : (0, r.jsx)(p, { layout: u, overrides: a, onError: i, onEmptyLayout: s });
 }
 let E = p;
