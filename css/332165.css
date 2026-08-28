@@ -33,4 +33,34 @@
     text-align: center
 }
 
-/*# sourceMappingURL=7b485b67697d8de8.css.map*/
+@use postcss-pxtorem;
+
+.gameIcon__5a366 {
+    height: 1rem;
+    margin-inline-end: 4px;
+    vertical-align: text-top
+}
+
+.gameMessageTooltip__5a366 {
+    max-width: unset
+}
+
+.gameMessageTooltipContent__5a366 {
+    align-items: center;
+    display: flex;
+    padding: 16px
+}
+
+.textContainer__5a366 {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    margin-inline-start: 8px;
+    width: 240px
+}
+
+.timestamp__5a366 {
+    margin-bottom: 4px
+}
+
+/*# sourceMappingURL=332165.51a85f29421ce7a0.css.map*/

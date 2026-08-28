@@ -420,37 +420,6 @@
     color: var(--control-overlay-secondary-text-active)
 }
 
-.togglebutton__75098 {
-    background-color: var(--control-secondary-background-default);
-    border-color: var(--control-secondary-border-default);
-    color: var(--control-secondary-text-default)
-}
-
-.togglebutton__75098:hover {
-    background-color: var(--control-secondary-background-hover);
-    border-color: var(--control-secondary-border-hover);
-    color: var(--control-secondary-text-hover)
-}
-
-.togglebutton__75098[aria-pressed=true] {
-    background-color: var(--togglebutton-background-selected);
-    border-color: var(--togglebutton-border-selected)
-}
-
-.togglebutton__75098[aria-pressed=true]:hover {
-    background-color: var(--togglebutton-background-selected-hover)
-}
-
-.togglebutton__75098:active {
-    background-color: var(--control-secondary-background-active);
-    border-color: var(--togglebutton-border-selected);
-    color: var(--control-secondary-text-active)
-}
-
-.togglebutton__75098[aria-pressed=true]:active {
-    background-color: var(--togglebutton-background-selected-active)
-}
-
 .expressive__75098>* {
     pointer-events: none;
     z-index: 1
@@ -6234,4 +6203,4 @@ svg.radioIcon_c1e9c4 {
     top: -4px
 }
 
-/*# sourceMappingURL=252641.b402518b278e1be5.css.map*/
+/*# sourceMappingURL=252641.e4e1f8f861c0306a.css.map*/

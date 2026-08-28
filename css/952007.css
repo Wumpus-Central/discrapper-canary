@@ -1132,10 +1132,15 @@
     --text-voice-speaking: var(--green-new-40);
     --textbox-markdown-syntax: var(--primary-360);
     --thread-channel-spine: var(--primary-500);
-    --togglebutton-background-selected: hsl(var(--opacity-blurple-8-hsl)/0.0784313725490196);
+    --togglebutton-background-selected: hsl(var(--opacity-blurple-16-hsl)/0.1607843137254902);
     --togglebutton-background-selected-active: hsl(var(--opacity-blurple-24-hsl)/0.23921568627450981);
-    --togglebutton-background-selected-hover: hsl(var(--opacity-blurple-12-hsl)/0.12156862745098039);
+    --togglebutton-background-selected-hover: hsl(var(--opacity-blurple-24-hsl)/0.23921568627450981);
+    --togglebutton-border-active: hsl(var(--opacity-blurple-84-hsl)/0.8392156862745098);
     --togglebutton-border-selected: var(--blurple-50);
+    --togglebutton-critical-background-selected: hsl(var(--opacity-red-12-hsl)/0.12156862745098039);
+    --togglebutton-critical-background-selected-hover: hsl(var(--opacity-red-16-hsl)/0.1607843137254902);
+    --togglebutton-critical-border-active: hsl(var(--opacity-red-32-hsl)/0.3215686274509804);
+    --togglebutton-critical-icon-selected: var(--red-new-46);
     --user-profile-activity-toolbar-background: var(--neutral-60);
     --user-profile-background-hover: hsl(var(--opacity-12-hsl)/0.12156862745098039);
     --user-profile-border: hsl(var(--opacity-12-hsl)/0.12156862745098039);
@@ -1449,10 +1454,15 @@
         --text-voice-speaking: color-mix(in oklab, var(--green-new-40) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --textbox-markdown-syntax: color-mix(in oklab, var(--primary-360) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --thread-channel-spine: color-mix(in oklab, var(--primary-500) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-border-color-amount, var(--custom-theme-base-color-amount, 0%)));
-        --togglebutton-background-selected: color-mix(in oklab, hsl(var(--opacity-blurple-8-hsl)/0.0784313725490196) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.0784313725490196) var(--custom-theme-base-color-amount, 0%));
+        --togglebutton-background-selected: color-mix(in oklab, hsl(var(--opacity-blurple-16-hsl)/0.1607843137254902) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.1607843137254902) var(--custom-theme-base-color-amount, 0%));
         --togglebutton-background-selected-active: color-mix(in oklab, hsl(var(--opacity-blurple-24-hsl)/0.23921568627450981) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.23921568627450981) var(--custom-theme-base-color-amount, 0%));
-        --togglebutton-background-selected-hover: color-mix(in oklab, hsl(var(--opacity-blurple-12-hsl)/0.12156862745098039) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.12156862745098039) var(--custom-theme-base-color-amount, 0%));
+        --togglebutton-background-selected-hover: color-mix(in oklab, hsl(var(--opacity-blurple-24-hsl)/0.23921568627450981) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.23921568627450981) var(--custom-theme-base-color-amount, 0%));
+        --togglebutton-border-active: color-mix(in oklab, hsl(var(--opacity-blurple-84-hsl)/0.8392156862745098) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.8392156862745098) var(--custom-theme-border-color-amount, var(--custom-theme-base-color-amount, 0%)));
         --togglebutton-border-selected: color-mix(in oklab, var(--blurple-50) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-border-color-amount, var(--custom-theme-base-color-amount, 0%)));
+        --togglebutton-critical-background-selected: color-mix(in oklab, hsl(var(--opacity-red-12-hsl)/0.12156862745098039) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.12156862745098039) var(--custom-theme-base-color-amount, 0%));
+        --togglebutton-critical-background-selected-hover: color-mix(in oklab, hsl(var(--opacity-red-16-hsl)/0.1607843137254902) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.1607843137254902) var(--custom-theme-base-color-amount, 0%));
+        --togglebutton-critical-border-active: color-mix(in oklab, hsl(var(--opacity-red-32-hsl)/0.3215686274509804) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.3215686274509804) var(--custom-theme-border-color-amount, var(--custom-theme-base-color-amount, 0%)));
+        --togglebutton-critical-icon-selected: color-mix(in oklab, var(--red-new-46) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --user-profile-activity-toolbar-background: color-mix(in oklab, var(--neutral-60) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
         --user-profile-background-hover: color-mix(in oklab, hsl(var(--opacity-12-hsl)/0.12156862745098039) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.12156862745098039) var(--custom-theme-base-color-amount, 0%));
         --user-profile-border: color-mix(in oklab, hsl(var(--opacity-12-hsl)/0.12156862745098039) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.12156862745098039) var(--custom-theme-border-color-amount, var(--custom-theme-base-color-amount, 0%)));
@@ -2017,10 +2027,15 @@
     --text-voice-speaking: var(--green-new-45);
     --textbox-markdown-syntax: var(--primary-530);
     --thread-channel-spine: var(--primary-300);
-    --togglebutton-background-selected: hsl(var(--opacity-blurple-4-hsl)/0.0392156862745098);
+    --togglebutton-background-selected: hsl(var(--opacity-blurple-16-hsl)/0.1607843137254902);
     --togglebutton-background-selected-active: hsl(var(--opacity-blurple-24-hsl)/0.23921568627450981);
-    --togglebutton-background-selected-hover: hsl(var(--opacity-blurple-8-hsl)/0.0784313725490196);
+    --togglebutton-background-selected-hover: hsl(var(--opacity-blurple-24-hsl)/0.23921568627450981);
+    --togglebutton-border-active: hsl(var(--opacity-blurple-84-hsl)/0.8392156862745098);
     --togglebutton-border-selected: var(--blurple-50);
+    --togglebutton-critical-background-selected: hsl(var(--opacity-red-12-hsl)/0.12156862745098039);
+    --togglebutton-critical-background-selected-hover: hsl(var(--opacity-red-16-hsl)/0.1607843137254902);
+    --togglebutton-critical-border-active: hsl(var(--opacity-red-32-hsl)/0.3215686274509804);
+    --togglebutton-critical-icon-selected: var(--red-new-50);
     --user-profile-activity-toolbar-background: var(--neutral-1);
     --user-profile-background-hover: hsl(var(--opacity-12-hsl)/0.12156862745098039);
     --user-profile-border: hsl(var(--opacity-28-hsl)/0.2784313725490196);
@@ -2334,10 +2349,15 @@
         --text-voice-speaking: color-mix(in oklab, var(--green-new-45) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --textbox-markdown-syntax: color-mix(in oklab, var(--primary-530) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --thread-channel-spine: color-mix(in oklab, var(--primary-300) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-border-color-amount, var(--custom-theme-base-color-amount, 0%)));
-        --togglebutton-background-selected: color-mix(in oklab, hsl(var(--opacity-blurple-4-hsl)/0.0392156862745098) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.0392156862745098) var(--custom-theme-base-color-amount, 0%));
+        --togglebutton-background-selected: color-mix(in oklab, hsl(var(--opacity-blurple-16-hsl)/0.1607843137254902) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.1607843137254902) var(--custom-theme-base-color-amount, 0%));
         --togglebutton-background-selected-active: color-mix(in oklab, hsl(var(--opacity-blurple-24-hsl)/0.23921568627450981) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.23921568627450981) var(--custom-theme-base-color-amount, 0%));
-        --togglebutton-background-selected-hover: color-mix(in oklab, hsl(var(--opacity-blurple-8-hsl)/0.0784313725490196) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.0784313725490196) var(--custom-theme-base-color-amount, 0%));
+        --togglebutton-background-selected-hover: color-mix(in oklab, hsl(var(--opacity-blurple-24-hsl)/0.23921568627450981) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.23921568627450981) var(--custom-theme-base-color-amount, 0%));
+        --togglebutton-border-active: color-mix(in oklab, hsl(var(--opacity-blurple-84-hsl)/0.8392156862745098) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.8392156862745098) var(--custom-theme-border-color-amount, var(--custom-theme-base-color-amount, 0%)));
         --togglebutton-border-selected: color-mix(in oklab, var(--blurple-50) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-border-color-amount, var(--custom-theme-base-color-amount, 0%)));
+        --togglebutton-critical-background-selected: color-mix(in oklab, hsl(var(--opacity-red-12-hsl)/0.12156862745098039) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.12156862745098039) var(--custom-theme-base-color-amount, 0%));
+        --togglebutton-critical-background-selected-hover: color-mix(in oklab, hsl(var(--opacity-red-16-hsl)/0.1607843137254902) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.1607843137254902) var(--custom-theme-base-color-amount, 0%));
+        --togglebutton-critical-border-active: color-mix(in oklab, hsl(var(--opacity-red-32-hsl)/0.3215686274509804) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.3215686274509804) var(--custom-theme-border-color-amount, var(--custom-theme-base-color-amount, 0%)));
+        --togglebutton-critical-icon-selected: color-mix(in oklab, var(--red-new-50) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --user-profile-activity-toolbar-background: color-mix(in oklab, var(--neutral-1) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
         --user-profile-background-hover: color-mix(in oklab, hsl(var(--opacity-12-hsl)/0.12156862745098039) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.12156862745098039) var(--custom-theme-base-color-amount, 0%));
         --user-profile-border: color-mix(in oklab, hsl(var(--opacity-28-hsl)/0.2784313725490196) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.2784313725490196) var(--custom-theme-border-color-amount, var(--custom-theme-base-color-amount, 0%)));
@@ -2902,10 +2922,15 @@
     --text-voice-speaking: var(--green-new-40);
     --textbox-markdown-syntax: var(--plum-9);
     --thread-channel-spine: var(--plum-13);
-    --togglebutton-background-selected: hsl(var(--opacity-blurple-8-hsl)/0.0784313725490196);
+    --togglebutton-background-selected: hsl(var(--opacity-blurple-16-hsl)/0.1607843137254902);
     --togglebutton-background-selected-active: hsl(var(--opacity-blurple-24-hsl)/0.23921568627450981);
-    --togglebutton-background-selected-hover: hsl(var(--opacity-blurple-12-hsl)/0.12156862745098039);
+    --togglebutton-background-selected-hover: hsl(var(--opacity-blurple-24-hsl)/0.23921568627450981);
+    --togglebutton-border-active: hsl(var(--opacity-blurple-84-hsl)/0.8392156862745098);
     --togglebutton-border-selected: var(--blurple-50);
+    --togglebutton-critical-background-selected: hsl(var(--opacity-red-12-hsl)/0.12156862745098039);
+    --togglebutton-critical-background-selected-hover: hsl(var(--opacity-red-16-hsl)/0.1607843137254902);
+    --togglebutton-critical-border-active: hsl(var(--opacity-red-32-hsl)/0.3215686274509804);
+    --togglebutton-critical-icon-selected: var(--red-new-46);
     --user-profile-activity-toolbar-background: var(--neutral-83);
     --user-profile-background-hover: hsl(var(--opacity-12-hsl)/0.12156862745098039);
     --user-profile-border: hsl(var(--opacity-20-hsl)/0.2);
@@ -3219,10 +3244,15 @@
         --text-voice-speaking: color-mix(in oklab, var(--green-new-40) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --textbox-markdown-syntax: color-mix(in oklab, var(--plum-9) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --thread-channel-spine: color-mix(in oklab, var(--plum-13) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-border-color-amount, var(--custom-theme-base-color-amount, 0%)));
-        --togglebutton-background-selected: color-mix(in oklab, hsl(var(--opacity-blurple-8-hsl)/0.0784313725490196) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.0784313725490196) var(--custom-theme-base-color-amount, 0%));
+        --togglebutton-background-selected: color-mix(in oklab, hsl(var(--opacity-blurple-16-hsl)/0.1607843137254902) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.1607843137254902) var(--custom-theme-base-color-amount, 0%));
         --togglebutton-background-selected-active: color-mix(in oklab, hsl(var(--opacity-blurple-24-hsl)/0.23921568627450981) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.23921568627450981) var(--custom-theme-base-color-amount, 0%));
-        --togglebutton-background-selected-hover: color-mix(in oklab, hsl(var(--opacity-blurple-12-hsl)/0.12156862745098039) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.12156862745098039) var(--custom-theme-base-color-amount, 0%));
+        --togglebutton-background-selected-hover: color-mix(in oklab, hsl(var(--opacity-blurple-24-hsl)/0.23921568627450981) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.23921568627450981) var(--custom-theme-base-color-amount, 0%));
+        --togglebutton-border-active: color-mix(in oklab, hsl(var(--opacity-blurple-84-hsl)/0.8392156862745098) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.8392156862745098) var(--custom-theme-border-color-amount, var(--custom-theme-base-color-amount, 0%)));
         --togglebutton-border-selected: color-mix(in oklab, var(--blurple-50) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-border-color-amount, var(--custom-theme-base-color-amount, 0%)));
+        --togglebutton-critical-background-selected: color-mix(in oklab, hsl(var(--opacity-red-12-hsl)/0.12156862745098039) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.12156862745098039) var(--custom-theme-base-color-amount, 0%));
+        --togglebutton-critical-background-selected-hover: color-mix(in oklab, hsl(var(--opacity-red-16-hsl)/0.1607843137254902) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.1607843137254902) var(--custom-theme-base-color-amount, 0%));
+        --togglebutton-critical-border-active: color-mix(in oklab, hsl(var(--opacity-red-32-hsl)/0.3215686274509804) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.3215686274509804) var(--custom-theme-border-color-amount, var(--custom-theme-base-color-amount, 0%)));
+        --togglebutton-critical-icon-selected: color-mix(in oklab, var(--red-new-46) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --user-profile-activity-toolbar-background: color-mix(in oklab, var(--neutral-83) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
         --user-profile-background-hover: color-mix(in oklab, hsl(var(--opacity-12-hsl)/0.12156862745098039) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.12156862745098039) var(--custom-theme-base-color-amount, 0%));
         --user-profile-border: color-mix(in oklab, hsl(var(--opacity-20-hsl)/0.2) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.2) var(--custom-theme-border-color-amount, var(--custom-theme-base-color-amount, 0%)));
@@ -3787,10 +3817,15 @@
     --text-voice-speaking: var(--green-new-40);
     --textbox-markdown-syntax: var(--plum-9);
     --thread-channel-spine: var(--plum-13);
-    --togglebutton-background-selected: hsl(var(--opacity-blurple-8-hsl)/0.0784313725490196);
+    --togglebutton-background-selected: hsl(var(--opacity-blurple-16-hsl)/0.1607843137254902);
     --togglebutton-background-selected-active: hsl(var(--opacity-blurple-24-hsl)/0.23921568627450981);
-    --togglebutton-background-selected-hover: hsl(var(--opacity-blurple-12-hsl)/0.12156862745098039);
+    --togglebutton-background-selected-hover: hsl(var(--opacity-blurple-24-hsl)/0.23921568627450981);
+    --togglebutton-border-active: hsl(var(--opacity-blurple-84-hsl)/0.8392156862745098);
     --togglebutton-border-selected: var(--blurple-50);
+    --togglebutton-critical-background-selected: hsl(var(--opacity-red-12-hsl)/0.12156862745098039);
+    --togglebutton-critical-background-selected-hover: hsl(var(--opacity-red-16-hsl)/0.1607843137254902);
+    --togglebutton-critical-border-active: hsl(var(--opacity-red-32-hsl)/0.3215686274509804);
+    --togglebutton-critical-icon-selected: var(--red-new-46);
     --user-profile-activity-toolbar-background: var(--neutral-73);
     --user-profile-background-hover: hsl(var(--opacity-12-hsl)/0.12156862745098039);
     --user-profile-border: hsl(var(--opacity-12-hsl)/0.12156862745098039);
@@ -4104,10 +4139,15 @@
         --text-voice-speaking: color-mix(in oklab, var(--green-new-40) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --textbox-markdown-syntax: color-mix(in oklab, var(--plum-9) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --thread-channel-spine: color-mix(in oklab, var(--plum-13) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-border-color-amount, var(--custom-theme-base-color-amount, 0%)));
-        --togglebutton-background-selected: color-mix(in oklab, hsl(var(--opacity-blurple-8-hsl)/0.0784313725490196) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.0784313725490196) var(--custom-theme-base-color-amount, 0%));
+        --togglebutton-background-selected: color-mix(in oklab, hsl(var(--opacity-blurple-16-hsl)/0.1607843137254902) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.1607843137254902) var(--custom-theme-base-color-amount, 0%));
         --togglebutton-background-selected-active: color-mix(in oklab, hsl(var(--opacity-blurple-24-hsl)/0.23921568627450981) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.23921568627450981) var(--custom-theme-base-color-amount, 0%));
-        --togglebutton-background-selected-hover: color-mix(in oklab, hsl(var(--opacity-blurple-12-hsl)/0.12156862745098039) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.12156862745098039) var(--custom-theme-base-color-amount, 0%));
+        --togglebutton-background-selected-hover: color-mix(in oklab, hsl(var(--opacity-blurple-24-hsl)/0.23921568627450981) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.23921568627450981) var(--custom-theme-base-color-amount, 0%));
+        --togglebutton-border-active: color-mix(in oklab, hsl(var(--opacity-blurple-84-hsl)/0.8392156862745098) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.8392156862745098) var(--custom-theme-border-color-amount, var(--custom-theme-base-color-amount, 0%)));
         --togglebutton-border-selected: color-mix(in oklab, var(--blurple-50) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-border-color-amount, var(--custom-theme-base-color-amount, 0%)));
+        --togglebutton-critical-background-selected: color-mix(in oklab, hsl(var(--opacity-red-12-hsl)/0.12156862745098039) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.12156862745098039) var(--custom-theme-base-color-amount, 0%));
+        --togglebutton-critical-background-selected-hover: color-mix(in oklab, hsl(var(--opacity-red-16-hsl)/0.1607843137254902) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.1607843137254902) var(--custom-theme-base-color-amount, 0%));
+        --togglebutton-critical-border-active: color-mix(in oklab, hsl(var(--opacity-red-32-hsl)/0.3215686274509804) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.3215686274509804) var(--custom-theme-border-color-amount, var(--custom-theme-base-color-amount, 0%)));
+        --togglebutton-critical-icon-selected: color-mix(in oklab, var(--red-new-46) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --user-profile-activity-toolbar-background: color-mix(in oklab, var(--neutral-73) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
         --user-profile-background-hover: color-mix(in oklab, hsl(var(--opacity-12-hsl)/0.12156862745098039) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.12156862745098039) var(--custom-theme-base-color-amount, 0%));
         --user-profile-border: color-mix(in oklab, hsl(var(--opacity-12-hsl)/0.12156862745098039) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.12156862745098039) var(--custom-theme-border-color-amount, var(--custom-theme-base-color-amount, 0%)));
@@ -4330,8 +4370,6 @@
     --text-subtle: var(--neutral-2);
     --text-voice-disconnected: var(--red-new-5);
     --thread-channel-spine: var(--neutral-27);
-    --togglebutton-background-selected: hsl(var(--opacity-blurple-12-hsl)/0.12156862745098039);
-    --togglebutton-background-selected-hover: hsl(var(--opacity-blurple-16-hsl)/0.1607843137254902);
     --user-profile-background-hover: hsl(var(--opacity-12-hsl)/0.12156862745098039);
     --user-profile-border: var(--neutral-12);
     --user-profile-overlay-background-hover: hsl(var(--opacity-12-hsl)/0.12156862745098039);
@@ -4461,8 +4499,6 @@
         --text-subtle: color-mix(in oklab, var(--neutral-2) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --text-voice-disconnected: color-mix(in oklab, var(--red-new-5) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --thread-channel-spine: color-mix(in oklab, var(--neutral-27) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-border-color-amount, var(--custom-theme-base-color-amount, 0%)));
-        --togglebutton-background-selected: color-mix(in oklab, hsl(var(--opacity-blurple-12-hsl)/0.12156862745098039) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.12156862745098039) var(--custom-theme-base-color-amount, 0%));
-        --togglebutton-background-selected-hover: color-mix(in oklab, hsl(var(--opacity-blurple-16-hsl)/0.1607843137254902) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.1607843137254902) var(--custom-theme-base-color-amount, 0%));
         --user-profile-background-hover: color-mix(in oklab, hsl(var(--opacity-12-hsl)/0.12156862745098039) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.12156862745098039) var(--custom-theme-base-color-amount, 0%));
         --user-profile-border: color-mix(in oklab, var(--neutral-12) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-border-color-amount, var(--custom-theme-base-color-amount, 0%)));
         --user-profile-overlay-background-hover: color-mix(in oklab, hsl(var(--opacity-12-hsl)/0.12156862745098039) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.12156862745098039) var(--custom-theme-base-color-amount, 0%));
@@ -4653,8 +4689,6 @@
     --text-subtle: var(--neutral-64);
     --text-voice-disconnected: var(--red-new-66);
     --thread-channel-spine: var(--neutral-40);
-    --togglebutton-background-selected: hsl(var(--opacity-blurple-8-hsl)/0.0784313725490196);
-    --togglebutton-background-selected-hover: hsl(var(--opacity-blurple-12-hsl)/0.12156862745098039);
     --user-profile-background-hover: hsl(var(--opacity-16-hsl)/0.1607843137254902);
     --user-profile-border: var(--neutral-50);
     --user-profile-overlay-background-hover: hsl(var(--opacity-16-hsl)/0.1607843137254902);
@@ -4784,8 +4818,6 @@
         --text-subtle: color-mix(in oklab, var(--neutral-64) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --text-voice-disconnected: color-mix(in oklab, var(--red-new-66) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --thread-channel-spine: color-mix(in oklab, var(--neutral-40) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-border-color-amount, var(--custom-theme-base-color-amount, 0%)));
-        --togglebutton-background-selected: color-mix(in oklab, hsl(var(--opacity-blurple-8-hsl)/0.0784313725490196) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.0784313725490196) var(--custom-theme-base-color-amount, 0%));
-        --togglebutton-background-selected-hover: color-mix(in oklab, hsl(var(--opacity-blurple-12-hsl)/0.12156862745098039) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.12156862745098039) var(--custom-theme-base-color-amount, 0%));
         --user-profile-background-hover: color-mix(in oklab, hsl(var(--opacity-16-hsl)/0.1607843137254902) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.1607843137254902) var(--custom-theme-base-color-amount, 0%));
         --user-profile-border: color-mix(in oklab, var(--neutral-50) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-border-color-amount, var(--custom-theme-base-color-amount, 0%)));
         --user-profile-overlay-background-hover: color-mix(in oklab, hsl(var(--opacity-16-hsl)/0.1607843137254902) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.1607843137254902) var(--custom-theme-base-color-amount, 0%));
@@ -4976,8 +5008,6 @@
     --text-subtle: var(--neutral-15);
     --text-voice-disconnected: var(--red-new-23);
     --thread-channel-spine: var(--neutral-38);
-    --togglebutton-background-selected: hsl(var(--opacity-blurple-12-hsl)/0.12156862745098039);
-    --togglebutton-background-selected-hover: hsl(var(--opacity-blurple-16-hsl)/0.1607843137254902);
     --user-profile-background-hover: hsl(var(--opacity-16-hsl)/0.1607843137254902);
     --user-profile-border: var(--neutral-24);
     --user-profile-overlay-background-hover: hsl(var(--opacity-16-hsl)/0.1607843137254902);
@@ -5107,8 +5137,6 @@
         --text-subtle: color-mix(in oklab, var(--neutral-15) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --text-voice-disconnected: color-mix(in oklab, var(--red-new-23) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --thread-channel-spine: color-mix(in oklab, var(--neutral-38) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-border-color-amount, var(--custom-theme-base-color-amount, 0%)));
-        --togglebutton-background-selected: color-mix(in oklab, hsl(var(--opacity-blurple-12-hsl)/0.12156862745098039) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.12156862745098039) var(--custom-theme-base-color-amount, 0%));
-        --togglebutton-background-selected-hover: color-mix(in oklab, hsl(var(--opacity-blurple-16-hsl)/0.1607843137254902) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.1607843137254902) var(--custom-theme-base-color-amount, 0%));
         --user-profile-background-hover: color-mix(in oklab, hsl(var(--opacity-16-hsl)/0.1607843137254902) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.1607843137254902) var(--custom-theme-base-color-amount, 0%));
         --user-profile-border: color-mix(in oklab, var(--neutral-24) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-border-color-amount, var(--custom-theme-base-color-amount, 0%)));
         --user-profile-overlay-background-hover: color-mix(in oklab, hsl(var(--opacity-16-hsl)/0.1607843137254902) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.1607843137254902) var(--custom-theme-base-color-amount, 0%));
@@ -5299,8 +5327,6 @@
     --text-subtle: var(--neutral-10);
     --text-voice-disconnected: var(--red-new-16);
     --thread-channel-spine: var(--neutral-35);
-    --togglebutton-background-selected: hsl(var(--opacity-blurple-12-hsl)/0.12156862745098039);
-    --togglebutton-background-selected-hover: hsl(var(--opacity-blurple-16-hsl)/0.1607843137254902);
     --user-profile-background-hover: hsl(var(--opacity-12-hsl)/0.12156862745098039);
     --user-profile-border: var(--neutral-19);
     --user-profile-overlay-background-hover: hsl(var(--opacity-12-hsl)/0.12156862745098039);
@@ -5430,8 +5456,6 @@
         --text-subtle: color-mix(in oklab, var(--neutral-10) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --text-voice-disconnected: color-mix(in oklab, var(--red-new-16) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --thread-channel-spine: color-mix(in oklab, var(--neutral-35) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-border-color-amount, var(--custom-theme-base-color-amount, 0%)));
-        --togglebutton-background-selected: color-mix(in oklab, hsl(var(--opacity-blurple-12-hsl)/0.12156862745098039) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.12156862745098039) var(--custom-theme-base-color-amount, 0%));
-        --togglebutton-background-selected-hover: color-mix(in oklab, hsl(var(--opacity-blurple-16-hsl)/0.1607843137254902) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.1607843137254902) var(--custom-theme-base-color-amount, 0%));
         --user-profile-background-hover: color-mix(in oklab, hsl(var(--opacity-12-hsl)/0.12156862745098039) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.12156862745098039) var(--custom-theme-base-color-amount, 0%));
         --user-profile-border: color-mix(in oklab, var(--neutral-19) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-border-color-amount, var(--custom-theme-base-color-amount, 0%)));
         --user-profile-overlay-background-hover: color-mix(in oklab, hsl(var(--opacity-12-hsl)/0.12156862745098039) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.12156862745098039) var(--custom-theme-base-color-amount, 0%));
@@ -9881,4 +9905,4 @@
     --motion-spring-subtle-duration: 598ms
 }
 
-/*# sourceMappingURL=952007.fab7e11df39d4137.css.map*/
+/*# sourceMappingURL=952007.e914469c3c679621.css.map*/

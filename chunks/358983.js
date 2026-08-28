@@ -31,7 +31,6 @@ var o = {
     active: "active__75098",
     "overlay-primary": "overlay-primary__75098",
     "overlay-secondary": "overlay-secondary__75098",
-    togglebutton: "togglebutton__75098",
     expressive: "expressive__75098",
     expressiveRive: "expressiveRive__75098",
     expressiveBackground: "expressiveBackground__75098",
