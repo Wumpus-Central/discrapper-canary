@@ -3478,8 +3478,7 @@
       "useNewLayoutWithSearch": false,
       "useNewTile": false,
       "useLargeFeaturedTiles": false,
-      "ctaOnHover": false,
-      "clickableTile": false
+      "ctaOnHover": false
     },
     "variations": {
       "0": {
@@ -3490,36 +3489,25 @@
         "useNewLayoutWithSearch": true,
         "useNewTile": false,
         "useLargeFeaturedTiles": false,
-        "ctaOnHover": false,
-        "clickableTile": false
+        "ctaOnHover": false
       },
       "2": {
         "useNewLayoutWithSearch": true,
         "useNewTile": true,
         "useLargeFeaturedTiles": true,
-        "ctaOnHover": true,
-        "clickableTile": false
+        "ctaOnHover": true
       },
       "3": {
         "useNewLayoutWithSearch": true,
         "useNewTile": true,
         "useLargeFeaturedTiles": false,
-        "ctaOnHover": true,
-        "clickableTile": false
+        "ctaOnHover": true
       },
       "4": {
         "useNewLayoutWithSearch": true,
         "useNewTile": true,
         "useLargeFeaturedTiles": true,
-        "ctaOnHover": false,
-        "clickableTile": false
-      },
-      "5": {
-        "useNewLayoutWithSearch": true,
-        "useNewTile": true,
-        "useLargeFeaturedTiles": true,
-        "ctaOnHover": true,
-        "clickableTile": true
+        "ctaOnHover": false
       }
     }
   },

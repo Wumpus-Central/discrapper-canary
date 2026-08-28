@@ -619,12 +619,16 @@
     width: 24px
 }
 
+.lift__72b14 {
+    --custom-quest-tile-lift: 8px
+}
+
 .full-motion .lift__72b14 {
     transition: transform .4s cubic-bezier(.4, 0, .2, 1)
 }
 
 .lift__72b14:has([data-quest-tile-hovered]) {
-    transform: translateY(-8px) translateZ(0)
+    transform: translateY(calc(var(--custom-quest-tile-lift)*-1)) translateZ(0)
 }
 
 .badgeContainer_d5a27a {
@@ -936,6 +940,14 @@
     position: relative
 }
 
+.hoverArea__6d3d8[data-quest-tile-hovered]:after {
+    content: "";
+    height: var(--custom-quest-tile-lift, 8px);
+    position: absolute;
+    top: 100%;
+    inset-inline: 0
+}
+
 .container__6d3d8 {
     --custom-quest-hover-bezier: cubic-bezier(0.4, 0, 0.2, 1);
     border-radius: var(--radius-lg);
@@ -944,16 +956,11 @@
     isolation: isolate;
     overflow: hidden;
     position: relative;
-    transform: translateZ(0);
-    will-change: transform
+    transform: translateZ(0)
 }
 
 .full-motion .container__6d3d8 {
     transition: transform .4s var(--custom-quest-hover-bezier), opacity .4s ease
-}
-
-.clickableTile__6d3d8 {
-    cursor: pointer
 }
 
 .contentColumn__6d3d8 {
@@ -1091,4 +1098,4 @@
     color: var(--control-overlay-secondary-text-active)
 }
 
-/*# sourceMappingURL=376991.8b070651e32d2e82.css.map*/
+/*# sourceMappingURL=376991.b62a3b3e565e8a9b.css.map*/
