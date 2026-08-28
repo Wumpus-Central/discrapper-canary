@@ -5332,6 +5332,34 @@
   },
   {
     "kind": "user",
+    "name": "2026-08-ad-topic-opt-out-client",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": false
+      },
+      "2": {
+        "enabled": true
+      },
+      "3": {
+        "enabled": true
+      },
+      "4": {
+        "enabled": true
+      },
+      "5": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "kind": "user",
     "name": "2026-08-audio-fidelity",
     "defaultConfig": {
       "capSampleRate": false,
