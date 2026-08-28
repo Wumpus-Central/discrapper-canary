@@ -5549,7 +5549,7 @@ class uC extends g.PureComponent {
         }
     }
     handleRevoke(e) {
-        uu.A.revokeGiftCode(e);
+        uu.Ay.revokeGiftCode(e);
     }
     handleCopy = (e) => {
         let { giftCode: t, sku: n } = this.props;
@@ -5613,13 +5613,13 @@ class ub extends g.PureComponent {
         e.stopPropagation();
         let { skuId: t, subscriptionPlanId: n, giftStyle: i } = this.props;
         this.setState({ isCreating: !0 }),
-            await uu.A.createGiftCode(t, n, i),
+            await uu.Ay.createGiftCode(t, n, i),
             this.setState({ isCreating: !1, isOpen: !0 });
     };
     handleToggleOpen = () => {
         let { skuId: e, subscriptionPlanId: t, loadedAt: n } = this.props,
             i = !this.state.isOpen;
-        (null == n || null == this._loadedAt || n < this._loadedAt) && i && uu.A.fetchUserGiftCodesForSKU(e, t),
+        (null == n || null == this._loadedAt || n < this._loadedAt) && i && uu.Ay.fetchUserGiftCodesForSKU(e, t),
             this.setState({ isOpen: !this.state.isOpen });
     };
     renderGiftIcon() {
@@ -6157,7 +6157,7 @@ class uq extends g.Component {
                 } catch {}
             let e = (0, ua.Vd)(t);
             if (null == e) return void this.setState({ hasError: !0 });
-            let i = await uu.A.resolveGiftCode(e);
+            let i = await uu.Ay.resolveGiftCode(e);
             if (null != i && null != i.giftCode.promotion)
                 throw (this.setState({ isPromoCode: !0 }), Error("Cannnot redeem promotion code as gift"));
             e7.default.track(A.HAw.OPEN_MODAL, {

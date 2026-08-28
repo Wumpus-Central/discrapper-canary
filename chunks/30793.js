@@ -46,7 +46,7 @@ function g(e) {
         (n.forEach((e) => {
             C.includes(e) ||
                 a.includes(e) ||
-                (h({ code: e }), s.h.wait(() => i.A.resolveGiftCode(e, !1, !0).catch(o.FXj)));
+                (h({ code: e }), s.h.wait(() => i.Ay.resolveGiftCode(e, !1, !0).catch(o.FXj)));
         }),
         !1)
     );

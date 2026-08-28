@@ -5107,7 +5107,7 @@ function rT(e) {
             x(!0), b(null), N(eu.h.PURCHASING);
             try {
                 return (
-                    await rA.A.redeemGiftCode({ code: t, options: { paymentSource: e } }),
+                    await rA.Ay.redeemGiftCode({ code: t, options: { paymentSource: e } }),
                     N(eu.h.COMPLETED),
                     e_.default.track(eG.HAw.PAYMENT_FLOW_COMPLETED, { ...H }),
                     !0

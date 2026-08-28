@@ -1455,7 +1455,7 @@ if (
     n.e("859864").then(n.t.bind(n, 122123, 19));
 let e2 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 new eB.A().log(
-    `[BUILD INFO] Release Channel: ${e2}, Build Number: 603527, Version Hash: 038eb0d191e49abf23869225e90bbe46352953f0`,
+    `[BUILD INFO] Release Channel: ${e2}, Build Number: 603554, Version Hash: b5735c819351ee24d78c36d09a395f72befa092e`,
 ),
     D.A.setTags({ appContext: G.QCW }),
     eI.A.initBasic(),
@@ -20933,7 +20933,7 @@ let Nd = "isHideDevBanner",
                     className: ta()(No.Wz, No.mr),
                     children: [
                         (0, O.jsx)(Nl, { className: No.Kk }),
-                        tT.intl.format(tT.t.uyrfYF, { buildNumber: "603527" }),
+                        tT.intl.format(tT.t.uyrfYF, { buildNumber: "603554" }),
                         (0, O.jsx)(r, {}),
                     ],
                 })
@@ -39618,7 +39618,7 @@ let PD = {
                 } = e;
                 return new Promise((e, i) => {
                     b.h.wait(() => {
-                        tW.A.resolveGiftCode(t, !0, !0)
+                        tW.Ay.resolveGiftCode(t, !0, !0)
                             .then((i) => {
                                 let { giftCode: r } = i;
                                 eU.Ay.focus(),
@@ -44109,10 +44109,12 @@ let xg = [
                 { giftCode: n } = t.params;
             return (
                 (0, yB.B)(() => {
-                    (0, tW.G)(n, !0, !0).then((e) => {
-                        let { giftCode: t } = e;
-                        null != t && (0, vo.h)({ processedCode: t.code });
-                    });
+                    (0, tW.GM)(n, !0, !0)
+                        .then((e) => {
+                            let { giftCode: t } = e;
+                            null != t && (0, vo.h)({ processedCode: t.code });
+                        })
+                        .catch(tW.HY);
                 }),
                 (0, O.jsx)(tP.rd, { to: Nt.A.defaultRoute })
             );

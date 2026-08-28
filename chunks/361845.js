@@ -257,7 +257,7 @@ class tx extends n.Component {
         let { giftCode: t, channelContext: e, onAccept: i } = this.props;
         if (null == t) throw Error("GiftCode is null at acceptance.");
         try {
-            await h.A.redeemGiftCode({ code: t.code, options: { channelId: e } }),
+            await h.Ay.redeemGiftCode({ code: t.code, options: { channelId: e } }),
                 this.setState({ accepted: !0 }),
                 i?.();
         } catch (t) {
