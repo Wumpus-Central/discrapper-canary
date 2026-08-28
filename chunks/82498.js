@@ -1,20 +1,20 @@
-i.d(t, { By: () => b, E4: () => C, Gb: () => y, Yc: () => A });
+i.d(t, { By: () => b, E4: () => C, Gb: () => A, Yc: () => y, uq: () => k });
 var n = i(95561),
     l = i(427358),
     r = i(47675),
     u = i(321191),
     a = i(734057),
-    o = i(498642),
-    s = i(696451),
+    s = i(498642),
+    o = i(696451),
     _ = i(71393),
-    d = i(453028),
-    p = i(573163),
+    p = i(453028),
+    d = i(573163),
     c = i(994500),
     f = i(116956),
     g = i(287809),
     m = i(927813),
     h = i(652215);
-function A(e) {
+function y(e) {
     if (null == e) return;
     let t = a.A.getChannel(e);
     if (null == t) return;
@@ -22,15 +22,15 @@ function A(e) {
         n = null == i && t.isDM() && g.default.getUser(t.recipients[0])?.bot === !0,
         l = t.isPrivate() ? t.recipients.length : 0,
         r = i?.features.has(h.GuildFeatures.VIP_REGIONS),
-        u = o.A.getMemberCount(t.guild_id),
-        s = p.Ay.getSnapshot(e, 10 * m.A.Millis.SECOND),
-        d = s.unread,
-        c = s.mentionCount;
+        u = s.A.getMemberCount(t.guild_id),
+        o = d.Ay.getSnapshot(e, 10 * m.A.Millis.SECOND),
+        p = o.unread,
+        c = o.mentionCount;
     return {
         channel_type: t.type,
         is_app_dm: n,
         channel_size_total: l,
-        channel_was_unread: d,
+        channel_was_unread: p,
         channel_mention_count: c,
         guild_is_vip: r,
         guild_size_total: u,
@@ -41,19 +41,19 @@ function b(e) {
     let t = a.A.getChannel(e);
     if (null == t) return;
     let i = t.guild_id,
-        l = d.Ay.isVideoEnabled(),
-        { voice_state_count: r, video_stream_count: u, video_enabled: o } = (0, n.JK)(i, e, l),
-        { custom_status_count: s } = (0, n.dL)(i, e);
+        l = p.Ay.isVideoEnabled(),
+        { voice_state_count: r, video_stream_count: u, video_enabled: s } = (0, n.JK)(i, e, l),
+        { custom_status_count: o } = (0, n.dL)(i, e);
     return {
         voice_state_count: r,
         channel_type: t.type,
         channel_bitrate: t.bitrate,
         video_stream_count: u,
-        video_enabled: o,
-        custom_status_count: s,
+        video_enabled: s,
+        custom_status_count: o,
     };
 }
-function y(e) {
+function A(e) {
     let t = f.A.getRTCConnection(e);
     if (null == t) return;
     let { duration: i, avg_resolution: n } = t.getVideoStats() ?? {};
@@ -69,8 +69,8 @@ function C(e, t) {
     if (null == e) return;
     let { userId: i, guildId: n } = e,
         a = g.default.getUser(i),
-        o = l.A.getUserAffinity(i),
-        _ = null != n ? s.Ay.getMember(n, i) : null;
+        s = l.A.getUserAffinity(i),
+        _ = null != n ? o.Ay.getMember(n, i) : null;
     return {
         relationship_type: c.A.getRelationshipType(i),
         profile_layout: t,
@@ -89,11 +89,18 @@ function C(e, t) {
                     return t;
                 })
                 .filter((e) => "string" == typeof e) ?? [],
-        communication_probability: o?.communicationProbability,
-        communication_rank: o?.communicationRank,
+        communication_probability: s?.communicationProbability,
+        communication_rank: s?.communicationRank,
         related_since: c.A.getSince(i),
         avatar_decoration_sku_id: a?.avatarDecoration?.skuId,
         profile_effect_sku_id: e.profileEffect?.skuId,
         profile_frame_sku_id: e.profileFrame?.skuId,
+    };
+}
+function k(e, t, i) {
+    return {
+        upsell_type: e,
+        ...(null != t && { has_premium_stream_fps: t }),
+        ...(null != i && { has_premium_stream_resolution: i }),
     };
 }

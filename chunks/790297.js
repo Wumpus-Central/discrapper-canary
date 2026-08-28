@@ -1,67 +1,70 @@
-n.d(t, { N0: () => A, lC: () => g, uS: () => _ });
-var s = n(582128),
-    l = n(17928),
-    r = n(793574),
+n.d(t, { N0: () => A, lC: () => L, uS: () => g });
+var r = n(582128),
+    s = n(17928),
+    l = n(793574),
     a = n(688810),
-    i = n(174459),
-    o = n(158045),
-    u = n(870216),
-    c = n(758836),
-    d = n(652215),
-    E = n(202541);
-function g(e) {
-    let { analyticsSource: t, analyticsLocations: n } = (0, l.cf)([u.A], () => u.A.getAnalytics()),
-        s = (function (e) {
+    i = n(10392),
+    o = n(82498),
+    u = n(174459),
+    c = n(158045),
+    d = n(870216),
+    E = n(758836),
+    _ = n(652215),
+    S = n(202541);
+function L(e) {
+    let { analyticsSource: t, analyticsLocations: n } = (0, s.cf)([d.A], () => d.A.getAnalytics()),
+        r = (function (e) {
             switch (e) {
-                case c.G2.ORBS:
-                    return r.A.COLLECTIBLES_SHOP_ORBS_TAB;
-                case c.G2.HOME:
-                    return r.A.COLLECTIBLES_SHOP_HOME_SCREEN;
-                case c.G2.BUNDLES:
-                    return r.A.COLLECTIBLES_SHOP_BUNDLES_TAB;
-                case c.G2.AVATAR_DECORATIONS:
-                    return r.A.COLLECTIBLES_SHOP_AVATAR_DECORATIONS_TAB;
-                case c.G2.PROFILE_EFFECTS:
-                    return r.A.COLLECTIBLES_SHOP_PROFILE_EFFECTS_TAB;
-                case c.G2.NAMEPLATES:
-                    return r.A.COLLECTIBLES_SHOP_NAMEPLATES_TAB;
-                case c.G2.PROFILE_FRAMES:
-                    return r.A.COLLECTIBLES_SHOP_PROFILE_FRAMES_TAB;
-                case c.G2.COLLECTION_INDEX:
-                    return r.A.COLLECTIBLES_SHOP_INDEX_PAGE;
-                case c.G2.COLLABS:
-                case c.G2.OFFER_ELIGIBLE:
-                case c.G2.CATALOG:
-                case c.G2.LAYOUT:
-                    return r.A.COLLECTIBLES_SHOP;
-                case c.G2.GAME_SHOPS:
-                    return r.A.SLAYER_STOREFRONT_SHOP_TAB;
-                case c.G2.GAME_SERVERS:
-                    return r.A.COLLECTIBLES_SHOP_GAME_SERVERS_TAB;
+                case E.G2.ORBS:
+                    return l.A.COLLECTIBLES_SHOP_ORBS_TAB;
+                case E.G2.HOME:
+                    return l.A.COLLECTIBLES_SHOP_HOME_SCREEN;
+                case E.G2.BUNDLES:
+                    return l.A.COLLECTIBLES_SHOP_BUNDLES_TAB;
+                case E.G2.AVATAR_DECORATIONS:
+                    return l.A.COLLECTIBLES_SHOP_AVATAR_DECORATIONS_TAB;
+                case E.G2.PROFILE_EFFECTS:
+                    return l.A.COLLECTIBLES_SHOP_PROFILE_EFFECTS_TAB;
+                case E.G2.NAMEPLATES:
+                    return l.A.COLLECTIBLES_SHOP_NAMEPLATES_TAB;
+                case E.G2.PROFILE_FRAMES:
+                    return l.A.COLLECTIBLES_SHOP_PROFILE_FRAMES_TAB;
+                case E.G2.COLLECTION_INDEX:
+                    return l.A.COLLECTIBLES_SHOP_INDEX_PAGE;
+                case E.G2.COLLABS:
+                case E.G2.OFFER_ELIGIBLE:
+                case E.G2.CATALOG:
+                case E.G2.LAYOUT:
+                    return l.A.COLLECTIBLES_SHOP;
+                case E.G2.GAME_SHOPS:
+                    return l.A.SLAYER_STOREFRONT_SHOP_TAB;
+                case E.G2.GAME_SERVERS:
+                    return l.A.COLLECTIBLES_SHOP_GAME_SERVERS_TAB;
             }
         })(e),
-        { analyticsLocations: i, newestAnalyticsLocation: o } = (0, a.Ay)([...n, r.A.COLLECTIBLES_SHOP, s]);
-    return { analyticsSource: t, analyticsLocations: i, newestAnalyticsLocation: o, currentTabLocation: s };
+        { analyticsLocations: i, newestAnalyticsLocation: o } = (0, a.Ay)([...n, l.A.COLLECTIBLES_SHOP, r]);
+    return { analyticsSource: t, analyticsLocations: i, newestAnalyticsLocation: o, currentTabLocation: r };
 }
-function _(e, t, n, l, r) {
-    let { analyticsLocations: a, analyticsSource: o, currentTabLocation: u, newestAnalyticsLocation: E } = g(t);
-    s.useEffect(() => {
-        if (l !== c.Pf.VISIBLE || E !== u) return;
-        let s = t === c.G2.CATALOG ? r : o;
-        i.default.track(d.HAw.COLLECTIBLES_SHOP_VIEWED, {
+function g(e, t, n, s, l) {
+    let { analyticsLocations: a, analyticsSource: i, currentTabLocation: o, newestAnalyticsLocation: c } = L(t);
+    r.useEffect(() => {
+        if (s !== E.Pf.VISIBLE || c !== o) return;
+        let r = t === E.G2.CATALOG ? l : i;
+        u.default.track(_.HAw.COLLECTIBLES_SHOP_VIEWED, {
             location_stack: a,
-            source: s,
+            source: r,
             page_session_id: e,
-            page_type: t === c.G2.CATALOG ? "full" : t,
-            category: t === c.G2.HOME ? void 0 : n,
+            page_type: t === E.G2.CATALOG ? "full" : t,
+            category: t === E.G2.HOME ? void 0 : n,
         });
-    }, [a, e, t, n, u, l, r, o, E]);
+    }, [a, e, t, n, o, s, l, i, c]);
 }
 function A(e, t) {
-    let { analyticsLocations: n } = g(e);
-    s.useEffect(() => {
+    let { analyticsLocations: n } = L(e);
+    r.useEffect(() => {
         null == t ||
-            o.Ay.canUseCollectibles(t) ||
-            i.default.track(d.HAw.PREMIUM_UPSELL_VIEWED, { type: E.e.COLLECTIBLES_SHOP, location_stack: n });
+            c.Ay.canUseCollectibles(t) ||
+            (u.default.track(_.HAw.PREMIUM_UPSELL_VIEWED, { type: S.e.COLLECTIBLES_SHOP, location_stack: n }),
+            (0, i.sq)(_.U7l.PREMIUM_UPSELL_VIEWED, n, () => (0, o.uq)(S.e.COLLECTIBLES_SHOP)));
     }, [n, t]);
 }

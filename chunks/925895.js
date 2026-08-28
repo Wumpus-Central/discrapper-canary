@@ -1,4 +1,4 @@
-s.d(e, { A: () => T });
+s.d(e, { A: () => D });
 var n = s(477900),
     i = s(582128),
     a = s(17928),
@@ -9,20 +9,20 @@ var n = s(477900),
     u = s(688810),
     d = s(188989),
     A = s(631305),
-    x = s(71393),
-    N = s(967198),
-    E = s(652215),
-    m = s(625633),
-    _ = s(375708),
+    E = s(71393),
+    x = s(967198),
+    N = s(652215),
+    _ = s(625633),
+    m = s(375708),
     L = s(109876);
 function f(t) {
     let { analyticsSection: e, analyticsPage: s, isGIF: i, banner: f } = t,
-        I = (0, a.bG)([N.A], () => N.A.getGuildId()),
-        R = (0, a.bG)([x.A], () => x.A.getGuild(I)),
-        { analyticsLocations: h } = (0, u.Ay)();
-    return null == R ||
-        R.features.has(E.GuildFeatures.ANIMATED_BANNER) ||
-        (!i && R.features.has(E.GuildFeatures.BANNER))
+        I = (0, a.bG)([x.A], () => x.A.getGuildId()),
+        U = (0, a.bG)([E.A], () => E.A.getGuild(I)),
+        { analyticsLocations: R } = (0, u.Ay)();
+    return null == U ||
+        U.features.has(N.GuildFeatures.ANIMATED_BANNER) ||
+        (!i && U.features.has(N.GuildFeatures.BANNER))
         ? null
         : (0, n.jsxs)("div", {
               className: L.kL,
@@ -31,28 +31,28 @@ function f(t) {
                   (0, n.jsx)(o.E, {
                       color: "text-strong",
                       variant: "text-sm/semibold",
-                      children: _.intl.string(_.t["56M7xe"]),
+                      children: m.intl.string(m.t["56M7xe"]),
                   }),
                   (0, n.jsx)("div", {
                       className: L.xF,
                       children: (0, n.jsx)(c.Q, {
-                          text: _.intl.string(_.t.WUHdZV),
+                          text: m.intl.string(m.t.WUHdZV),
                           onClick: function () {
-                              if (null == R) return;
-                              let t = { section: e, page: s, object: E.ZSU.UPSELL_HEADER };
+                              if (null == U) return;
+                              let t = { section: e, page: s, object: N.ZSU.UPSELL_HEADER };
                               null != f
                                   ? (0, d._)({
-                                        analyticsLocations: h,
+                                        analyticsLocations: R,
                                         analyticsLocation: t,
-                                        guild: R,
+                                        guild: U,
                                         isGIF: i,
                                         banner: f,
                                     })
                                   : (0, A.A)({
-                                        analyticsLocations: h,
+                                        analyticsLocations: R,
                                         analyticsSourceLocation: t,
-                                        guild: R,
-                                        perks: i ? (0, m.Pf)() : (0, m.QR)(),
+                                        guild: U,
+                                        perks: i ? (0, _.Pf)() : (0, _.QR)(),
                                     });
                           },
                           textVariant: "text-sm/semibold",
@@ -62,67 +62,71 @@ function f(t) {
           });
 }
 var I = s(862482),
-    R = s(793574),
-    h = s(725807),
-    p = s(503698),
-    U = s.n(p),
-    g = s(403581),
-    j = s(404374),
-    k = s(727181);
-function b(t) {
+    U = s(793574),
+    R = s(10392),
+    h = s(82498),
+    p = s(725807),
+    g = s(503698),
+    j = s.n(g),
+    P = s(403581),
+    k = s(404374),
+    b = s(727181);
+function v(t) {
     let { text: e, className: s, button: i, reducedRightPadding: a = !1 } = t;
     return (0, n.jsxs)("div", {
-        className: U()(a ? k.wp : k.Ug, s),
+        className: j()(a ? b.wp : b.Ug, s),
         children: [
             (0, n.jsxs)("div", {
-                className: k.g9,
+                className: b.g9,
                 children: [
-                    (0, n.jsx)(g.t, { size: "md", className: k.Kk, color: j.k0.PREMIUM_TIER_2 }),
-                    (0, n.jsx)(o.E, { className: k.Qq, variant: "text-md/normal", color: "text-strong", children: e }),
+                    (0, n.jsx)(P.t, { size: "md", className: b.Kk, color: k.k0.PREMIUM_TIER_2 }),
+                    (0, n.jsx)(o.E, { className: b.Qq, variant: "text-md/normal", color: "text-strong", children: e }),
                 ],
             }),
             i,
         ],
     });
 }
-var v = s(287809),
-    P = s(174459),
-    S = s(158045),
-    y = s(339984),
-    G = s(202541),
-    C = s(68405);
-function M(t) {
+var S = s(287809),
+    M = s(174459),
+    y = s(158045),
+    G = s(339984),
+    C = s(202541),
+    T = s(68405);
+function H(t) {
     let { analyticsSection: e, type: s } = t,
-        l = (0, a.bG)([v.default], () => v.default.getCurrentUser()),
-        r = S.Ay.canUseAnimatedAvatar(l),
-        o = S.Ay.canUsePremiumProfileCustomization(l),
-        c = (s === y.HL.BANNER && o) || (s === y.HL.AVATAR && r),
-        { sourceAnalyticsLocations: d } = (0, u.Ay)(R.A.PREMIUM_PREVIEW_UPSELL_HEADER);
+        l = (0, a.bG)([S.default], () => S.default.getCurrentUser()),
+        r = y.Ay.canUseAnimatedAvatar(l),
+        o = y.Ay.canUsePremiumProfileCustomization(l),
+        c = (s === G.HL.BANNER && o) || (s === G.HL.AVATAR && r),
+        { sourceAnalyticsLocations: d } = (0, u.Ay)(U.A.PREMIUM_PREVIEW_UPSELL_HEADER);
     if (
         (i.useEffect(() => {
-            c || P.default.track(E.HAw.PREMIUM_UPSELL_VIEWED, { type: e, location_stack: d });
+            c ||
+                (M.default.track(N.HAw.PREMIUM_UPSELL_VIEWED, { type: e, location_stack: d }),
+                (0, R.sq)(N.U7l.PREMIUM_UPSELL_VIEWED, d, () => (0, h.uq)(e)));
         }, [c, e, d]),
         c)
     )
         return null;
-    let A = (0, n.jsx)(h.A, {
-        className: C.__invalid_getNitroLink,
+    let A = (0, n.jsx)(p.A, {
+        className: T.__invalid_getNitroLink,
         size: I.$n.Sizes.SMALL,
         look: I.$n.Looks.LINK,
         color: I.$n.Colors.LINK,
-        subscriptionTier: G.pe.TIER_2,
-        textOptions: { textOverride: _.intl.format(_.t["944tDv"], {}) },
+        subscriptionTier: C.pe.TIER_2,
+        textOptions: { textOverride: m.intl.format(m.t["944tDv"], {}) },
         showIcon: !1,
-        premiumModalAnalyticsLocation: { section: e, object: E.ZSU.BUTTON_CTA },
+        premiumModalAnalyticsLocation: { section: e, object: N.ZSU.BUTTON_CTA },
         disableShine: !0,
     });
-    return (0, n.jsx)(b, { reducedRightPadding: !0, className: C.C, text: _.intl.format(_.t.Og803x, {}), button: A });
+    return (0, n.jsx)(v, { reducedRightPadding: !0, className: T.C, text: m.intl.format(m.t.Og803x, {}), button: A });
 }
-function T(t) {
+function D(t) {
     let { type: e, analyticsPage: s, analyticsSection: i, isGIF: a, banner: l } = t;
-    return [y.HL.BANNER, y.HL.AVATAR].includes(e) && a
-        ? (0, n.jsx)(M, { analyticsSection: i, type: e })
-        : e === y.HL.GUILD_BANNER
+    return [G.HL.BANNER, G.HL.AVATAR].includes(e) && a
+        ? (0, n.jsx)(H, { analyticsSection: i, type: e })
+        : e === G.HL.GUILD_BANNER
           ? (0, n.jsx)(f, { analyticsSection: i, analyticsPage: s, isGIF: a, banner: l })
           : null;
 }

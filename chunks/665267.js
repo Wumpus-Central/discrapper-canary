@@ -1,4 +1,4 @@
-n.d(t, { J3: () => v, sB: () => R });
+n.d(t, { J3: () => O, sB: () => G });
 var i = n(477900),
     l = n(582128),
     s = n(17928),
@@ -11,106 +11,109 @@ var i = n(477900),
     g = n(487245),
     m = n(793943),
     A = n(826673),
-    h = n(724651),
-    E = n(732280),
-    S = n(792656),
+    E = n(10392),
+    h = n(82498),
+    S = n(724651),
+    T = n(732280),
+    x = n(792656),
     p = n(511484),
-    x = n(811611),
-    T = n(174459),
-    f = n(830543),
-    I = n(652215),
-    _ = n(385803),
-    N = n(49999),
-    C = n(202541),
-    b = n(375708),
-    y = n(510081);
-function v() {
-    (0, A.Dr)(r.M.CLIENT_THEMES_SPARKLE_PREVIEW, { dismissAction: N.i.PRIMARY, forceTrack: !0 }),
+    f = n(811611),
+    I = n(174459),
+    _ = n(830543),
+    N = n(652215),
+    C = n(385803),
+    b = n(49999),
+    y = n(202541),
+    v = n(375708),
+    j = n(510081);
+function O() {
+    (0, A.Dr)(r.M.CLIENT_THEMES_SPARKLE_PREVIEW, { dismissAction: b.i.PRIMARY, forceTrack: !0 }),
         (0, m.nf)(m.HP.CLIENT_THEMES),
-        (0, f.default)();
+        (0, _.default)();
 }
-function j() {
-    let e = (0, h.O)(),
-        t = (0, p.U9)(e, C.pe.TIER_2)
-            ? b.intl.formatToPlainString(b.t.bkQ4bH, { percent: e?.discount.amount })
-            : b.intl.string(b.t.mr4K7D);
-    return (0, i.jsx)(S.A, {
-        subscriptionTier: C.pe.TIER_2,
+function L() {
+    let e = (0, S.O)(),
+        t = (0, p.U9)(e, y.pe.TIER_2)
+            ? v.intl.formatToPlainString(v.t.bkQ4bH, { percent: e?.discount.amount })
+            : v.intl.string(v.t.mr4K7D);
+    return (0, i.jsx)(x.A, {
+        subscriptionTier: y.pe.TIER_2,
         defaultTextOverride: t,
-        premiumModalAnalyticsLocation: { object: I.ZSU.BUTTON_CTA, objectType: I.AnalyticsObjectTypes.BUY },
+        premiumModalAnalyticsLocation: { object: N.ZSU.BUTTON_CTA, objectType: N.AnalyticsObjectTypes.BUY },
         fullWidth: !0,
     });
 }
-function O() {
+function R() {
     let e = (0, s.bG)([c.A], () => c.A.isPreview),
-        t = (0, E.V)()?.subscriptionTrial?.skuId === C.pe.TIER_2;
+        t = (0, T.V)()?.subscriptionTrial?.skuId === y.pe.TIER_2;
     return !e || t
         ? null
         : (0, i.jsxs)("div", {
-              className: y.gY,
+              className: j.gY,
               children: [
-                  (0, i.jsx)(a.$, { variant: "secondary", text: b.intl.string(b.t["E+COuA"]), onClick: v }),
-                  (0, i.jsx)(j, {}),
+                  (0, i.jsx)(a.$, { variant: "secondary", text: v.intl.string(v.t["E+COuA"]), onClick: O }),
+                  (0, i.jsx)(L, {}),
               ],
           });
 }
-function L(e) {
+function D(e) {
     let { children: t } = e,
         n = (0, s.bG)([c.A], () => c.A.isPreview),
         { analyticsLocations: r } = (0, d.Ay)(u.A.USER_SETTINGS);
     return (l.useEffect(() => {
         n &&
-            T.default.track(I.HAw.PREMIUM_UPSELL_VIEWED, {
-                type: C.e.PREMIUM_CLIENT_THEME_TRY_IT_OUT,
+            (I.default.track(N.HAw.PREMIUM_UPSELL_VIEWED, {
+                type: y.e.PREMIUM_CLIENT_THEME_TRY_IT_OUT,
                 location_stack: r,
-            });
+            }),
+            (0, E.sq)(N.U7l.PREMIUM_UPSELL_VIEWED, r, () => (0, h.uq)(y.e.PREMIUM_CLIENT_THEME_TRY_IT_OUT)));
     }, [n, r]),
     n)
-        ? (0, i.jsx)("div", { className: y._$, children: t })
+        ? (0, i.jsx)("div", { className: j._$, children: t })
         : t;
 }
-function D() {
+function P() {
     let e = (0, s.bG)([c.A], () => c.A.isPreview),
-        t = (0, E.V)()?.subscriptionTrial?.skuId === C.pe.TIER_2;
+        t = (0, T.V)()?.subscriptionTrial?.skuId === y.pe.TIER_2;
     return e && t
         ? (0, i.jsxs)("div", {
               children: [
                   (0, i.jsx)("div", {
-                      className: y.c7,
+                      className: j.c7,
                       children: (0, i.jsx)(a.$, {
                           variant: "secondary",
                           fullWidth: !0,
-                          text: b.intl.string(b.t["E+COuA"]),
-                          onClick: () => v(),
+                          text: v.intl.string(v.t["E+COuA"]),
+                          onClick: () => O(),
                       }),
                   }),
-                  (0, i.jsx)("div", { className: y.BU }),
-                  (0, i.jsx)(x.Ay, { type: C.e.PREMIUM_CLIENT_THEME_SETTINGS_UPSELL, subscriptionTier: C.pe.TIER_2 }),
+                  (0, i.jsx)("div", { className: j.BU }),
+                  (0, i.jsx)(f.Ay, { type: y.e.PREMIUM_CLIENT_THEME_SETTINGS_UPSELL, subscriptionTier: y.pe.TIER_2 }),
               ],
           })
         : null;
 }
-function R() {
+function G() {
     return (0, i.jsx)(g.Ay, {
         type: g.v0.SETTINGS,
-        children: (0, i.jsxs)(L, {
+        children: (0, i.jsxs)(D, {
             children: [
                 (0, i.jsx)(g.ew, {
                     isCoachmark: !1,
-                    renderCTAButtons: () => (0, i.jsx)(O, {}),
-                    headingClassName: y.EK,
+                    renderCTAButtons: () => (0, i.jsx)(R, {}),
+                    headingClassName: j.EK,
                     titleTextVariant: "text-md/semibold",
-                    titleClassName: y.cI,
-                    titleIconClassName: y.Hq,
+                    titleClassName: j.cI,
+                    titleIconClassName: j.Hq,
                 }),
                 (0, i.jsx)(o.B, {
                     direction: "horizontal",
                     wrap: !0,
                     gap: 8,
                     padding: { top: 24 },
-                    children: (0, i.jsx)(g.Zg, { disabled: !1, size: _.ni.SIZE_48 }),
+                    children: (0, i.jsx)(g.Zg, { disabled: !1, size: C.ni.SIZE_48 }),
                 }),
-                (0, i.jsx)(D, {}),
+                (0, i.jsx)(P, {}),
             ],
         }),
     });
