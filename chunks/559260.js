@@ -3364,14 +3364,7 @@ function ir(e) {
                 title: F.intl.string(F.t.OEtqpm),
                 subtitle: F.intl.string(F.t.h2nMp0),
             }),
-            (0, l.jsx)(eI.c, {
-                children: (0, l.jsx)(tJ.B, {
-                    direction: "vertical",
-                    justify: "center",
-                    align: "center",
-                    children: (0, l.jsx)("div", { className: ii.Dq, children: x }),
-                }),
-            }),
+            (0, l.jsx)(eI.c, { children: (0, l.jsx)("div", { className: ii.Dq, children: x }) }),
             _,
         ],
     });
@@ -3389,26 +3382,26 @@ function ia(e) {
         } = (0, ny.Pv)(),
         m = (0, k.bG)([D.default], () => D.default.getCurrentUser()),
         p = (0, k.yK)([lj.A], () => lj.A.getGiftPromotionRewardSkuIds()),
-        S = Math.min(i, d?.length ?? 0);
+        E = Math.min(i, d?.length ?? 0);
     o.useEffect(() => {
-        null == d || (S > 0 && S === d.length ? u(d) : c.length > S && u([]));
-    }, [d, S, u, c.length]);
-    let y = { selectedPlan: r, selectedSkuId: n, step: s };
-    if (null == r) throw new C.v({ message: "Expected plan to be selected", extraSentryInformation: y });
-    if (null == n) throw new C.v({ message: "Expected selectedSkuId", extraSentryInformation: y });
-    if (null == s) throw new C.v({ message: "Step should be set", extraSentryInformation: y });
-    let I = o.useMemo(() => S > 0 && c.length === S && c.every((e) => (d ?? []).includes(e)), [c, d, S]),
-        A = o.useMemo(() => 0 === p.length || !I, [p, I]);
-    function g(e) {
-        c.includes(e) ? u(c.filter((t) => t !== e)) : c.length >= S || u([...c, e]);
+        null == d || (E > 0 && E === d.length ? u(d) : c.length > E && u([]));
+    }, [d, E, u, c.length]);
+    let S = { selectedPlan: r, selectedSkuId: n, step: s };
+    if (null == r) throw new C.v({ message: "Expected plan to be selected", extraSentryInformation: S });
+    if (null == n) throw new C.v({ message: "Expected selectedSkuId", extraSentryInformation: S });
+    if (null == s) throw new C.v({ message: "Step should be set", extraSentryInformation: S });
+    let y = o.useMemo(() => E > 0 && c.length === E && c.every((e) => (d ?? []).includes(e)), [c, d, E]),
+        I = o.useMemo(() => 0 === p.length || !y, [p, y]);
+    function A(e) {
+        c.includes(e) ? u(c.filter((t) => t !== e)) : c.length >= E || u([...c, e]);
     }
     o.useEffect(() => {
         if (0 === p.length) return void u([]);
         let e = c.filter((e) => p.includes(e) && (d ?? []).includes(e));
         e.length !== c.length && u(e);
     }, [p, d, c, u]);
-    let P = null != d && S > 0 && c.length >= S,
-        v = p.map((e) => {
+    let g = null != d && E > 0 && c.length >= E,
+        P = p.map((e) => {
             let t = c.includes(e);
             return (0, l.jsx)(
                 l8,
@@ -3416,14 +3409,14 @@ function ia(e) {
                     skuId: e,
                     claimed: null != d && !d.includes(e),
                     user: m,
-                    onSelect: g,
+                    onSelect: A,
                     isSelected: t,
-                    disabled: !t && P,
+                    disabled: !t && g,
                 },
                 e,
             );
         }),
-        x = (0, l.jsx)(eW.UX, {
+        v = (0, l.jsx)(eW.UX, {
             children: (0, l.jsx)(il, {
                 onStepChange: t,
                 onBackClick: () => t(a.pn.PLAN_SELECT),
@@ -3431,7 +3424,7 @@ function ia(e) {
                 showBackButton: !0,
                 planOptions: [r.id],
                 selectedPlanId: r.id,
-                isNextDisabled: A,
+                isNextDisabled: I,
             }),
         });
     return (0, l.jsxs)(l.Fragment, {
@@ -3439,26 +3432,10 @@ function ia(e) {
             (0, l.jsx)(nS.rQ, {
                 titleTextVariant: "heading-lg/semibold",
                 title: F.intl.string(F.t.B2MCEq),
-                subtitle: F.intl.string(F.t.h2nMp0),
+                subtitle: F.intl.formatToPlainString(F.t.UGXnmY, { rewardCount: c.length, maxRewardCount: E }),
             }),
-            (0, l.jsx)(eI.c, {
-                children: (0, l.jsxs)(tJ.B, {
-                    direction: "vertical",
-                    justify: "center",
-                    align: "center",
-                    children: [
-                        (0, l.jsx)("div", {
-                            className: ii.fT,
-                            children: (0, l.jsx)(E.E, {
-                                variant: "text-md/medium",
-                                children: F.intl.format(F.t.UGXnmY, { rewardCount: c.length, maxRewardCount: S }),
-                            }),
-                        }),
-                        (0, l.jsx)("div", { className: ii.Dq, children: v }),
-                    ],
-                }),
-            }),
-            x,
+            (0, l.jsx)(eI.c, { children: (0, l.jsx)("div", { className: ii.Dq, children: P }) }),
+            v,
         ],
     });
 }
