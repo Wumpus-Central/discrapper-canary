@@ -1,5 +1,5 @@
 "use strict";
-r.d(t, { Fe: () => l, HI: () => u, rd: () => s });
+r.d(t, { Fe: () => l, HI: () => u, _h: () => c, rd: () => s });
 var n = r(346711),
     i = r(644255),
     o = r(582128);
@@ -56,5 +56,13 @@ function u(e) {
         "data-ping": e.ping,
         "data-referrer-policy": e.referrerPolicy,
     };
+}
+function c(e) {
+    let t = s().useHref(e?.href ?? ""),
+        r = {};
+    if (e)
+        for (let n of ["href", "target", "rel", "download", "ping", "referrerPolicy"])
+            n in e && void 0 !== e[n] && (r[n] = "href" === n ? t : e[n]);
+    return r;
 }
 l.isOpening = !1;

@@ -1,5 +1,5 @@
 "use strict";
-r.d(t, { vw: () => ef, LY: () => eu, CR: () => es });
+r.d(t, { vw: () => es, LY: () => eo, CR: () => en });
 var n = r(160844),
     i = r(407815),
     o = r(866007),
@@ -214,141 +214,40 @@ function q(e) {
     return t;
 }
 var Y = r(668310),
-    X = r(481238);
-class J {
-    constructor(e) {
-        (this.keyMap = new Map()), (this.firstKey = null), (this.lastKey = null), (this.iterable = e);
-        let t = (e) => {
-            if ((this.keyMap.set(e.key, e), e.childNodes && "section" === e.type)) for (let r of e.childNodes) t(r);
-        };
-        for (let r of e) t(r);
-        let r = null,
-            n = 0,
-            i = 0;
-        for (let [e, t] of this.keyMap)
-            r ? ((r.nextKey = e), (t.prevKey = r.key)) : ((this.firstKey = e), (t.prevKey = void 0)),
-                "item" === t.type && (t.index = n++),
-                ("section" === t.type || "item" === t.type) && i++,
-                ((r = t).nextKey = void 0);
-        (this._size = i), (this.lastKey = r?.key ?? null);
-    }
-    *[Symbol.iterator]() {
-        yield* this.iterable;
-    }
-    get size() {
-        return this._size;
-    }
-    getKeys() {
-        return this.keyMap.keys();
-    }
-    getKeyBefore(e) {
-        let t = this.keyMap.get(e);
-        return t ? (t.prevKey ?? null) : null;
-    }
-    getKeyAfter(e) {
-        let t = this.keyMap.get(e);
-        return t ? (t.nextKey ?? null) : null;
-    }
-    getFirstKey() {
-        return this.firstKey;
-    }
-    getLastKey() {
-        return this.lastKey;
-    }
-    getItem(e) {
-        return this.keyMap.get(e) ?? null;
-    }
-    at(e) {
-        let t = [...this.getKeys()];
-        return this.getItem(t[e]);
-    }
-    getChildren(e) {
-        let t = this.keyMap.get(e);
-        return t?.childNodes || [];
-    }
-}
-var Q = r(782114),
-    Z = r(696921),
-    ee = r(96047);
-function et(e, t) {
-    let r = (0, p.useRef)(null);
-    (0, p.useEffect)(() => {
-        if (null != t.focusedKey && !e.getItem(t.focusedKey) && r.current) {
-            let n = r.current.getKeyAfter(t.focusedKey),
-                i = null;
-            for (; null != n; ) {
-                let o = e.getItem(n);
-                if (o && "item" === o.type && !t.isDisabled(n)) {
-                    i = n;
-                    break;
-                }
-                n = r.current.getKeyAfter(n);
-            }
-            if (null == i)
-                for (n = r.current.getKeyBefore(t.focusedKey); null != n; ) {
-                    let o = e.getItem(n);
-                    if (o && "item" === o.type && !t.isDisabled(n)) {
-                        i = n;
-                        break;
-                    }
-                    n = r.current.getKeyBefore(n);
-                }
-            t.setFocusedKey(i);
-        }
-        r.current = e;
-    }, [e, t]);
-}
-var er = r(288378),
-    en = r(500731),
-    ei = r(475921);
-let eo = (0, p.createContext)(null),
-    ea = (0, p.createContext)(null),
-    es = (0, p.forwardRef)(function (e, t) {
+    X = r(481238),
+    J = r(270651),
+    Q = r(288378),
+    Z = r(500731),
+    ee = r(475921);
+let et = (0, p.createContext)(null),
+    er = (0, p.createContext)(null),
+    en = (0, p.forwardRef)(function (e, t) {
         return (
-            ([e, t] = (0, i.JT)(e, t, eo)),
+            ([e, t] = (0, i.JT)(e, t, et)),
             p.createElement(
                 h.Provider,
                 { value: null },
                 p.createElement(s.GQ, { content: e.children }, (r) =>
-                    p.createElement(el, { props: e, forwardedRef: t, collection: r }),
+                    p.createElement(ei, { props: e, forwardedRef: t, collection: r }),
                 ),
             )
         );
     });
-function el({ props: e, forwardedRef: t, collection: r }) {
-    var n;
-    let o,
-        s,
-        u = (0, p.useRef)(null),
-        { id: c, ...f } = e;
-    [f, u] = (0, i.JT)(f, u, m.Co);
-    let { filter: v, shouldUseVirtualFocus: y, ...w } = f,
-        [O, D] = (0, i._E)(!e["aria-label"] && !e["aria-labelledby"]),
-        R =
-            ((n = (function (e) {
-                let { filter: t, layoutDelegate: r } = e,
-                    n = (0, Q.R)(e),
-                    i = (0, p.useMemo)(() => (e.disabledKeys ? new Set(e.disabledKeys) : new Set()), [e.disabledKeys]),
-                    o = (0, p.useCallback)((e) => new J(t ? t(e) : e), [t]),
-                    a = (0, p.useMemo)(
-                        () => ({ suppressTextValueWarning: e.suppressTextValueWarning }),
-                        [e.suppressTextValueWarning],
-                    ),
-                    s = (0, ee.G)(e, o, a),
-                    l = (0, p.useMemo)(() => new (0, Z.Y)(s, n, { layoutDelegate: r }), [s, n, r]);
-                return et(s, l), { collection: s, disabledKeys: i, selectionManager: l };
-            })({ ...w, children: void 0, collection: r })),
-            (o = (0, p.useMemo)(() => (v ? n.collection.filter(v) : n.collection), [n.collection, v])),
-            (s = n.selectionManager.withCollection(o)),
-            et(o, s),
-            { collection: o, selectionManager: s, disabledKeys: n.disabledKeys }),
-        L = (0, l.$)(f, { global: !0 }),
-        F = Object.fromEntries(Object.entries(L).map(([e, t]) => [e, "id" === e ? t : void 0])),
+function ei({ props: e, forwardedRef: t, collection: r }) {
+    let n = (0, p.useRef)(null),
+        { id: o, ...s } = e;
+    [s, n] = (0, i.JT)(s, n, m.Co);
+    let { filter: u, shouldUseVirtualFocus: c, ...f } = s,
+        [v, y] = (0, i._E)(!e["aria-label"] && !e["aria-labelledby"]),
+        w = (0, J.p)({ ...f, children: void 0, collection: r }),
+        O = (0, J.Z)(w, u),
+        D = (0, l.$)(s, { global: !0 }),
+        R = Object.fromEntries(Object.entries(D).map(([e, t]) => [e, "id" === e ? t : void 0])),
         {
-            gridProps: N,
-            labelProps: j,
-            descriptionProps: B,
-            errorMessageProps: K,
+            gridProps: L,
+            labelProps: F,
+            descriptionProps: N,
+            errorMessageProps: j,
         } = (function (e, t, r) {
             let { direction: n } = (0, A.Y)(),
                 i =
@@ -494,13 +393,13 @@ function el({ props: e, forwardedRef: t, collection: r }) {
                     errorMessageProps: u,
                 }
             );
-        })({ ...w, ...F, label: D }, R, u);
+        })({ ...f, ...R, label: y }, O, n);
     return p.createElement(
         i.tT.div,
         {
             render: e.render,
-            ...L,
-            id: c,
+            ...D,
+            id: o,
             ref: t,
             slot: e.slot || void 0,
             className: e.className ?? "react-aria-TagGroup",
@@ -510,24 +409,24 @@ function el({ props: e, forwardedRef: t, collection: r }) {
             i.Kq,
             {
                 values: [
-                    [a.I, { ...j, elementType: "span", ref: O }],
-                    [ea, { ...N, ref: u }],
-                    [h, R],
-                    [g.h, { slots: { description: B, errorMessage: K } }],
+                    [a.I, { ...F, elementType: "span", ref: v }],
+                    [er, { ...L, ref: n }],
+                    [h, O],
+                    [g.h, { slots: { description: N, errorMessage: j } }],
                 ],
             },
             e.children,
         ),
     );
 }
-let eu = (0, p.forwardRef)(function (e, t) {
-    return (0, p.useContext)(h) ? p.createElement(ec, { props: e, forwardedRef: t }) : p.createElement(s.pM, e);
+let eo = (0, p.forwardRef)(function (e, t) {
+    return (0, p.useContext)(h) ? p.createElement(ea, { props: e, forwardedRef: t }) : p.createElement(s.pM, e);
 });
-function ec({ props: e, forwardedRef: t }) {
+function ea({ props: e, forwardedRef: t }) {
     let r = (0, p.useContext)(h),
         { CollectionRoot: n } = (0, p.useContext)(o.zL),
-        [a, s] = (0, i.JT)({}, t, ea),
-        { focusProps: u, isFocused: c, isFocusVisible: f } = (0, er.o)(),
+        [a, s] = (0, i.JT)({}, t, er),
+        { focusProps: u, isFocused: c, isFocusVisible: f } = (0, Q.o)(),
         m = { isEmpty: 0 === r.collection.size, isFocused: c, isFocusVisible: f, state: r },
         v = (0, i.Sl)({ ...e, children: void 0, defaultClassName: "react-aria-TagList", values: m }),
         g = (0, o.l2)(r.selectionManager.focusedKey),
@@ -550,10 +449,10 @@ function ec({ props: e, forwardedRef: t }) {
         ),
     );
 }
-let ef = (0, s.KU)(c._B, (e, t, r) => {
+let es = (0, s.KU)(c._B, (e, t, r) => {
     let a = (0, p.useContext)(h),
-        s = (0, ei.U)(t),
-        { focusProps: u, isFocusVisible: c } = (0, er.o)({ within: !1 }),
+        s = (0, ee.U)(t),
+        { focusProps: u, isFocusVisible: c } = (0, Q.o)({ within: !1 }),
         {
             rowProps: f,
             gridCellProps: m,
@@ -828,7 +727,7 @@ let ef = (0, s.KU)(c._B, (e, t, r) => {
                 allowsRemoving: !!s,
             };
         })({ item: r }, a, s),
-        { hoverProps: _, isHovered: S } = (0, en.M)({
+        { hoverProps: _, isHovered: S } = (0, Z.M)({
             isDisabled: !g.allowsSelection && !g.hasAction,
             onHoverStart: r.props.onHoverStart,
             onHoverChange: r.props.onHoverChange,
