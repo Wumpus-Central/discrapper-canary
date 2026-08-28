@@ -1,4 +1,4 @@
-.modal__4331e {
+.modal__48934 {
     background: radial-gradient(181.07% 122.33% at -20.89% -23.8%, rgba(5, 75, 22, .4) 0, transparent 100%), var(--background-base-lower);
     border-radius: var(--radius-md);
     display: flex;
@@ -10,40 +10,40 @@
     padding: var(--space-24)
 }
 
-.header__4331e {
+.header__48934 {
     flex-shrink: 0;
     justify-content: space-between
 }
 
-.header__4331e,
-.logoRow__4331e {
+.header__48934,
+.logoRow__48934 {
     align-items: center;
     display: flex
 }
 
-.xboxLogo__4331e {
+.xboxLogo__48934 {
     height: 16px;
     width: auto
 }
 
-.logoSeparator__4331e {
+.logoSeparator__48934 {
     margin-inline-end: var(--space-8);
     margin-inline-start: var(--space-8)
 }
 
-.subtitle__4331e {
+.subtitle__48934 {
     flex-shrink: 0;
     margin-top: var(--space-8);
     width: 330px
 }
 
-.perkList__4331e {
+.perkList__48934 {
     display: flex;
     flex-direction: column;
     margin-top: var(--space-16)
 }
 
-.perkCard__4331e {
+.perkCard__48934 {
     align-items: center;
     background: var(--background-mod-subtle);
     border: 1px solid var(--border-subtle);
@@ -54,7 +54,7 @@
     padding: var(--space-20) var(--space-16)
 }
 
-.perkContent__4331e {
+.perkContent__48934 {
     display: flex;
     flex-direction: column;
     min-width: 0;
@@ -63,25 +63,25 @@
     width: 256px
 }
 
-.perkIcon__4331e,
-.perkTitleRow__4331e {
+.perkIcon__48934,
+.perkTitleRow__48934 {
     align-items: center;
     display: flex
 }
 
-.perkIcon__4331e {
+.perkIcon__48934 {
     margin-inline-end: var(--space-6)
 }
 
-.perkDescription__4331e {
+.perkDescription__48934 {
     margin-top: var(--space-4)
 }
 
-.progressBar__4331e {
+.progressBar__48934 {
     margin-top: var(--space-12)
 }
 
-.perkThumbnail__4331e {
+.perkThumbnail__48934 {
     align-items: center;
     background: var(--background-mod-subtle);
     border: 1px solid var(--border-subtle);
@@ -95,32 +95,32 @@
     width: 120px
 }
 
-.perkThumbnailImage__4331e {
+.perkThumbnailImage__48934 {
     height: 100%;
     -o-object-fit: cover;
     object-fit: cover;
     width: 100%
 }
 
-.orbsMultiplierThumbnailImage__4331e {
+.orbsMultiplierThumbnailImage__48934 {
     height: 55px;
     -o-object-fit: contain;
     object-fit: contain;
     width: 100px
 }
 
-.shopDiscountThumbnailImage__4331e {
+.shopDiscountThumbnailImage__48934 {
     height: 70px;
     -o-object-fit: contain;
     object-fit: contain;
     width: 100%
 }
 
-.footer__4331e {
+.footer__48934 {
     display: flex;
     flex-shrink: 0;
     justify-content: center;
     margin-top: var(--space-16)
 }
 
-/*# sourceMappingURL=986b5a6c4dbcc07b.css.map*/
+/*# sourceMappingURL=e495b6a4910e65ac.css.map*/

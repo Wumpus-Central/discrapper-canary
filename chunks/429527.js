@@ -28,12 +28,12 @@ var a = t(477900),
     E = t(555837),
     R = t(174459),
     y = t(975571),
-    X = t(346017),
+    X = t(377368),
     D = t(652215),
     M = t(202541),
-    I = t(378803),
+    I = t(763430),
     P = t(375708),
-    T = t(106711);
+    T = t(521857);
 function z(e) {
     let { icon: s, title: t, description: c, footer: l, thumbnailSrc: r, thumbnailImageClassName: n } = e;
     return (0, a.jsxs)("div", {

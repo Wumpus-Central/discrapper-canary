@@ -45,7 +45,7 @@ var i,
     r = n(435558),
     a = n(575593),
     s = n(441574),
-    l = n(968671),
+    l = n(114516),
     o = n(349871),
     d = n(723702),
     c = n(158045),
@@ -71,7 +71,7 @@ function O(e) {
     let t = (0, o.kQ)(e?.perks, s.bb.SHOP_DISCOUNTS);
     return t?.includes(s.g$.SOURCE_NITRO)
         ? "nitro"
-        : (0, l.f0)("getShopDiscountSource") && t?.includes(s.g$.SOURCE_THIRDPARTY_CROISSANT)
+        : (0, l.v)("getShopDiscountSource") && t?.includes(s.g$.SOURCE_THIRDPARTY_CROISSANT)
           ? "thirdparty"
           : null;
 }

@@ -1,4 +1,4 @@
-a.d(s, { A: () => k, o: () => R });
+a.d(s, { A: () => R, n: () => k });
 var t = a(477900);
 a(582128);
 var i = a(562708),
@@ -13,54 +13,54 @@ var i = a(562708),
     u = a(688810),
     N = a(139286),
     h = a(792656),
-    p = a(346017),
-    _ = a(757036),
+    _ = a(377368),
+    p = a(757036),
     v = a(555837),
-    j = a(968671),
+    j = a(114516),
     T = a(652215),
     f = a(202541),
-    C = a(378803),
-    O = a(375708),
-    E = a(370146);
-let A = [C.default.HZz88k, C.default.Aau2G1, C.default["6Udfv9"]];
-function R() {
+    O = a(763430),
+    C = a(375708),
+    E = a(836800);
+let A = [O.default.HZz88k, O.default.Aau2G1, O.default["6Udfv9"]];
+function k() {
     (0, l.openModalLazy)(async () => {
         let { default: e } = await Promise.all([
-            a.e("417867"),
-            a.e("896988"),
+            a.e("556298"),
+            a.e("43578"),
             a.e("317225"),
             a.e("126780"),
             a.e("851130"),
             a.e("906723"),
             a.e("707319"),
-            a.e("707837"),
-        ]).then(a.bind(a, 323148));
+            a.e("258780"),
+        ]).then(a.bind(a, 429527));
         return (s) => (0, t.jsx)(e, { ...s });
     });
 }
-function k(e) {
+function R(e) {
     let s,
         a,
         l,
-        { partner: k } = e,
+        { partner: R } = e,
         y =
-            ((s = (0, _.L)(f.PremiumTypes.TIER_2)),
-            (a = (0, j.GM)("connectionBottomBanner")),
-            (l = (0, v.G)({ location: "useShouldShowCrepeConnectionBottomBanner" })),
-            k === T.fg2.XBOX && a && !1 === s && l),
+            ((s = (0, p.L)(f.PremiumTypes.TIER_2)),
+            (a = (0, j.mO)("connectionBottomBanner")),
+            (l = (0, v.G)({ location: "useShouldShowXboxGamePassPerksConnectionBanner" })),
+            R === T.fg2.XBOX && a && !1 === s && l),
         I = (0, x.A)("(max-width: 485px)"),
-        { analyticsLocations: B } = (0, u.Ay)(m.A.XBOX_PERKS_CONNECTION_FOOTER);
+        { analyticsLocations: b } = (0, u.Ay)(m.A.XBOX_PERKS_CONNECTION_FOOTER);
     return ((0, N.A)(
         {
             type: i.ImpressionTypes.VIEW,
             name: i.ImpressionNames.THIRD_PARTY_PARTNER_PERK,
-            properties: { type: p.wX.CONNECTION_FOOTER, third_party_partner: p.NB },
+            properties: { type: _.wX.CONNECTION_FOOTER, third_party_partner: _.NB },
         },
         { disableTrack: !y },
     ),
     y)
         ? (0, t.jsx)(u.f5, {
-              value: B,
+              value: b,
               children: (0, t.jsx)("div", {
                   className: E.cy,
                   children: (0, t.jsx)(c.N, {
@@ -83,7 +83,7 @@ function k(e) {
                                                   (0, t.jsx)(d.E, {
                                                       variant: "text-sm/semibold",
                                                       color: "text-default",
-                                                      children: O.intl.string(C.default.f1ygW4),
+                                                      children: C.intl.string(O.default.f1ygW4),
                                                   }),
                                                   (0, t.jsx)("div", {
                                                       className: E.md,
@@ -103,11 +103,11 @@ function k(e) {
                                                                       (0, t.jsx)(d.E, {
                                                                           variant: "text-xs/normal",
                                                                           color: "text-default",
-                                                                          children: O.intl.string(e),
+                                                                          children: C.intl.string(e),
                                                                       }),
                                                                   ],
                                                               },
-                                                              O.intl.string(e),
+                                                              C.intl.string(e),
                                                           ),
                                                       ),
                                                   }),
@@ -121,14 +121,14 @@ function k(e) {
                                                       children: (0, t.jsx)(r.$, {
                                                           variant: "secondary",
                                                           size: "sm",
-                                                          text: O.intl.string(O.t.hvVgAZ),
-                                                          onClick: R,
+                                                          text: C.intl.string(C.t.hvVgAZ),
+                                                          onClick: k,
                                                       }),
                                                   }),
                                                   (0, t.jsx)("div", {
                                                       className: E.lI,
                                                       children: (0, t.jsx)(h.A, {
-                                                          defaultTextOverride: O.intl.string(C.default.oBYFF3),
+                                                          defaultTextOverride: C.intl.string(O.default.oBYFF3),
                                                           size: "sm",
                                                           fullWidth: I,
                                                           subscriptionTier: f.pe.TIER_2,

@@ -27,7 +27,7 @@ n.d(t, {
     re: () => th,
     nB: () => eq,
     pb: () => ex,
-    Zb: () => e6,
+    Zb: () => e4,
     Pr: () => ew,
     nK: () => tP,
     mv: () => tL,
@@ -41,7 +41,7 @@ n.d(t, {
     L_: () => tk,
     Uf: () => tr,
     sS: () => ta,
-    ji: () => e4,
+    ji: () => e6,
     Q8: () => tt,
     Mn: () => eY,
     m6: () => eW,
@@ -85,9 +85,9 @@ var i,
     E = n(975807),
     A = n(366999),
     h = n(930767),
-    I = n(968671),
-    f = n(626584),
-    p = n(981088),
+    I = n(626584),
+    f = n(981088),
+    p = n(114516),
     T = n(367888),
     m = n(83790),
     g = n(683760),
@@ -133,7 +133,7 @@ let D = (0, L.mj)({
     variations: { 0: 0, 1: 1, 2: 2 },
 });
 var v = n(349871);
-let b = new f.A("ProductCatalog.tsx");
+let b = new I.A("ProductCatalog.tsx");
 class M extends O {
     constructor(e, t) {
         super(
@@ -301,7 +301,7 @@ let ey = {
         PAYMENT_SOURCE_MANAGEMENT: "https://play.google.com/store/paymentmethods",
         BILLING_HISTORY: "https://play.google.com/store/account/orderhistory",
     },
-    ev = new f.A("PremiumUtils.tsx");
+    ev = new I.A("PremiumUtils.tsx");
 var eb = (((r = {}).MID = "mid"), (r.HIGH = "high"), r);
 function eM(e) {
     return e.items.find((e) => N.JM.has(e.planId));
@@ -661,7 +661,7 @@ function eZ(e) {
                     return eR.intl.format(eR.t["6RTdZA"], { resumeDate: t.pauseEndsAt });
                 case S.Dmq.PAST_DUE:
                     return eR.intl.format(eR.t["d+0vwo"], {
-                        endDate: (0, em.i$)(e4(t).expiresDate, "LL"),
+                        endDate: (0, em.i$)(e6(t).expiresDate, "LL"),
                         onClick: () => {
                             (0, E.A)("https://support.discord.com/hc/articles/23082866222871");
                         },
@@ -696,7 +696,7 @@ function eZ(e) {
                     return eR.intl.format(eR.t["6RTdZA"], { resumeDate: t.pauseEndsAt });
                 case S.Dmq.PAST_DUE:
                     return eR.intl.format(eR.t["d+0vwo"], {
-                        endDate: (0, em.i$)(e4(t).expiresDate, "LL"),
+                        endDate: (0, em.i$)(e6(t).expiresDate, "LL"),
                         onClick: () => {
                             (0, E.A)("https://support.discord.com/hc/articles/23082866222871");
                         },
@@ -738,7 +738,7 @@ function eZ(e) {
                     });
                 case S.Dmq.PAST_DUE:
                     return eR.intl.format(eR.t["d+0vwo"], {
-                        endDate: (0, em.i$)(e4(t).expiresDate, "LL"),
+                        endDate: (0, em.i$)(e6(t).expiresDate, "LL"),
                         onClick: () => {
                             (0, E.A)("https://support.discord.com/hc/articles/23082866222871");
                         },
@@ -895,10 +895,10 @@ function e3(e) {
 function e5(e) {
     return e2(e) || e3(e);
 }
-function e6(e) {
+function e4(e) {
     return null != e && e === N.gD.PREMIUM_GROUP_MONTH;
 }
-function e4(e) {
+function e6(e) {
     if (e.isPurchasedViaApple && e.metadata?.apple_grace_period_expires_date != null) {
         let t = c()(e.metadata.apple_grace_period_expires_date);
         return { days: c().duration(t.diff(e.currentPeriodStart)).days(), expiresDate: t };
@@ -1029,7 +1029,7 @@ function tr(e) {
         case S.Dmq.PAST_DUE:
             if (n.isBoostOnly)
                 return eR.intl.format(eR.t["d+0vwo"], {
-                    endDate: (0, em.i$)(e4(n).expiresDate, "LL"),
+                    endDate: (0, em.i$)(e6(n).expiresDate, "LL"),
                     onClick: () => {
                         (0, E.A)("https://support.discord.com/hc/articles/23082866222871");
                     },
@@ -1494,7 +1494,7 @@ let tW = Object.freeze({
                       })
                     : eR.intl.format(eR.t["V8+l6k"], { resumeDate: e.pauseEndsAt });
         if (e.status === S.Dmq.PAST_DUE) {
-            let t = e4(e).expiresDate;
+            let t = e6(e).expiresDate;
             return (e.isPurchasedViaGoogle &&
                 e.metadata?.google_grace_period_expires_date != null &&
                 (t = c()(e.metadata.google_grace_period_expires_date)),
@@ -1517,7 +1517,7 @@ let tW = Object.freeze({
                     price: s,
                 });
             if (e.status === S.Dmq.ACCOUNT_HOLD)
-                return e.isPurchasedViaGoogle && !(0, p.xv)()
+                return e.isPurchasedViaGoogle && !(0, f.xv)()
                     ? eR.intl.format(eR.t["dtcxw+"], {
                           endDate: c()(e.currentPeriodStart).add(N.ph, "days").toDate(),
                           paymentGatewayName: eO.qm[e.paymentGateway],
@@ -1690,13 +1690,13 @@ let tW = Object.freeze({
     },
     canUseCollectibles: tD,
     canUseMonthlyOrbs: function (e) {
-        return !!(0, I.f0)("canUseMonthlyOrbs") && (0, v.Nh)(e?.perks, _.bb.MONTHLY_ORBS);
+        return !!(0, p.v)("canUseMonthlyOrbs") && (0, v.Nh)(e?.perks, _.bb.MONTHLY_ORBS);
     },
     canUseShopDiscounts: function (e) {
-        return ((0, I.f0)("canUseShopDiscounts") && (0, v.Nh)(e?.perks, _.bb.SHOP_DISCOUNTS)) || tD(e);
+        return ((0, p.v)("canUseShopDiscounts") && (0, v.Nh)(e?.perks, _.bb.SHOP_DISCOUNTS)) || tD(e);
     },
     canUseMoreQuestOrbs: function (e) {
-        return ((0, I.f0)("canUseMoreQuestOrbs") && (0, v.Nh)(e?.perks, _.bb.MORE_QUEST_ORBS)) || ty(e);
+        return ((0, p.v)("canUseMoreQuestOrbs") && (0, v.Nh)(e?.perks, _.bb.MORE_QUEST_ORBS)) || ty(e);
     },
     formatPriceString: tv,
     StreamQuality: eb,

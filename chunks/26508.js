@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, { CC: () => A, CZ: () => I, DK: () => E, J8: () => u });
 var i = n(239266),
-    r = n(968671),
+    r = n(114516),
     a = n(84483),
     s = n(287809),
     l = n(158045),
@@ -21,7 +21,7 @@ function _(e) {
             return e;
         }
         case o.W.XBOX:
-            return (0, r.f0)(t);
+            return (0, r.v)(t);
         default:
             return !1;
     }
@@ -29,7 +29,7 @@ function _(e) {
 function E(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "ProgramRewardsUtils",
         { isInTreatment: n } = (0, a.uX)(t),
-        i = (0, r.GM)(t);
+        i = (0, r.mO)(t);
     switch (e) {
         case o.W.NITRO:
             return n;

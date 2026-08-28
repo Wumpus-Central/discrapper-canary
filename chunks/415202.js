@@ -6,7 +6,7 @@ var i = n(439372),
     s = n(532309),
     l = n(440005),
     o = n(26508),
-    d = n(25827);
+    d = n(216238);
 let c = 5 * r.A.Millis.MINUTE,
     u = 30 * r.A.Millis.SECOND;
 class _ extends i.A {
@@ -26,7 +26,7 @@ class _ extends i.A {
         ENTITLEMENT_DELETE: (e) => this._handleCrepeEntitlementChange(e),
     };
     _handleCrepeEntitlementChange(e) {
-        e.entitlement.sku_id === d.S && (0, a.uM)();
+        e.entitlement.sku_id === d.f && (0, a.uM)();
     }
     _handleVirtualCurrencyUpdate() {
         null != this.virtualCurrencyUpdateTimeoutId && clearTimeout(this.virtualCurrencyUpdateTimeoutId),

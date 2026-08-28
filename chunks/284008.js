@@ -11544,21 +11544,21 @@ var hS = n(462887),
     hb = n(968309);
 let hy = new Set([A.fg2.XBOX, A.fg2.PLAYSTATION, A.fg2.PLAYSTATION_STAGING, A.fg2.CRUNCHYROLL]);
 var hv = n(169869),
-    hj = n(235693),
-    hO = n(757036),
-    hL = n(555837),
-    hD = n(814925),
-    hR = n(733110),
+    hj = n(814925),
+    hO = n(733110),
+    hL = n(479785),
+    hD = n(757036),
+    hR = n(555837),
     hP = n(43990),
     hG = n(241524),
-    hM = n(346017),
-    hU = n(51965),
+    hM = n(51965),
+    hU = n(377368),
     hV = n(631368),
-    hk = n(968671),
-    hw = n(212739),
-    hF = n(30370),
-    hB = n(477767),
-    hz = n(378803),
+    hk = n(212739),
+    hw = n(30370),
+    hF = n(114516),
+    hB = n(763430),
+    hz = n(477767),
     hX = n(660594);
 function hY() {
     let e,
@@ -11568,14 +11568,14 @@ function hY() {
         s,
         { variant: r, showFooter: a } =
             ((e = (0, hV.$)()),
-            (t = (0, hk.GM)("connectedAccountsBannerFooter")),
-            (i = (0, hw.O)()),
-            (s = null != (l = (0, m.bG)([hF.A], () => hF.A.getAccount(null, A.fg2.XBOX))) && !l.revoked),
+            (t = (0, hF.mO)("connectedAccountsBannerFooter")),
+            (i = (0, hk.O)()),
+            (s = null != (l = (0, m.bG)([hw.A], () => hw.A.getAccount(null, A.fg2.XBOX))) && !l.revoked),
             e === hV.C.NONE || i
                 ? { variant: hV.C.NONE, showFooter: !1 }
                 : { variant: e, showFooter: t && e === hV.C.NO_ACCESS && !s }),
         { analyticsLocations: o } = (0, eL.Ay)(tv.A.XBOX_CONNECTED_ACCOUNTS_BANNER),
-        u = (0, hM.yW)(o),
+        u = (0, hU.yW)(o),
         d = (0, hG.A)("(max-width: 485px)");
     if (r === hV.C.NONE) return null;
     let g = d ? "md" : "sm",
@@ -11584,12 +11584,12 @@ function hY() {
     switch (r) {
         case hV.C.HAS_ACCESS:
         case hV.C.BLOCK_CLAIM:
-            (h = j.intl.string(hB.default["7PdsMK"])),
-                (S = (0, c.jsx)(hU.A, {
+            (h = j.intl.string(hz.default["7PdsMK"])),
+                (S = (0, c.jsx)(hM.A, {
                     variant: "overlay-primary",
                     size: g,
                     fullWidth: d,
-                    text: j.intl.string(hB.default.CubeLC),
+                    text: j.intl.string(hz.default.CubeLC),
                     onClick: () => {
                         (0, lt.openModalLazy)(async () => {
                             let { default: e } = await Promise.all([n.e("878140"), n.e("813088")]).then(
@@ -11601,9 +11601,9 @@ function hY() {
                 }));
             break;
         case hV.C.NO_ACCESS:
-            (h = j.intl.string(hB.default.NwkRTZ)),
+            (h = j.intl.string(hz.default.NwkRTZ)),
                 (S = (0, c.jsx)(tR.A, {
-                    defaultTextOverride: j.intl.string(hB.default["0vY+ie"]),
+                    defaultTextOverride: j.intl.string(hz.default["0vY+ie"]),
                     variantOverride: "overlay-primary",
                     size: g,
                     fullWidth: d,
@@ -11685,9 +11685,9 @@ function hY() {
                                                     (0, c.jsx)(z.E, {
                                                         variant: "text-sm/normal",
                                                         color: "text-default",
-                                                        children: j.intl.format(hz.default.mXY4Rb, {
+                                                        children: j.intl.format(hB.default.mXY4Rb, {
                                                             onConnect: () => {
-                                                                u(hM.Hx.CONNECT),
+                                                                u(hU.Hx.CONNECT),
                                                                     (0, hb.A)({
                                                                         platformType: A.fg2.XBOX,
                                                                         location: "Connected Accounts Banner",
@@ -11760,8 +11760,8 @@ function h$() {
 let h0 = "/assets/9df988a227916145.png";
 function h1() {
     return (0, c.jsx)(hJ, {
-        title: j.intl.string(hz.default["9cLtDI"]),
-        body: j.intl.format(hz.default["D+kUbg"], { learnMoreLink: eS.A.getArticleURL(A.MVz.XBOX_GAME_PASS_PERKS) }),
+        title: j.intl.string(hB.default["9cLtDI"]),
+        body: j.intl.format(hB.default["D+kUbg"], { learnMoreLink: eS.A.getArticleURL(A.MVz.XBOX_GAME_PASS_PERKS) }),
         img: (0, c.jsx)("img", { src: h0, width: "auto", height: "45", alt: "" }),
         newIndicatorDismissibleContent: er.M.XBOX_PERKS_RECONNECT_UPSELL,
         onClick: () => (0, hb.A)({ platformType: A.fg2.XBOX, location: "Xbox perks reconnect upsell" }),
@@ -11789,12 +11789,12 @@ function h8(e) {
             joinErrorMessage: l,
             showJoinErrorMessage: s,
         } = (0, m.cf)(
-            [hF.A],
+            [hw.A],
             () => ({
-                isJoining: hF.A.isJoining(n.id),
+                isJoining: hw.A.isJoining(n.id),
                 joinErrorMessage:
-                    "" === hF.A.joinErrorMessage(n.id) ? j.intl.string(j.t.j2d6Km) : hF.A.joinErrorMessage(n.id),
-                showJoinErrorMessage: void 0 !== hF.A.joinErrorMessage(n.id),
+                    "" === hw.A.joinErrorMessage(n.id) ? j.intl.string(j.t.j2d6Km) : hw.A.joinErrorMessage(n.id),
+                showJoinErrorMessage: void 0 !== hw.A.joinErrorMessage(n.id),
             }),
             [n.id],
         );
@@ -11855,8 +11855,8 @@ function h7(e) {
         { account: l } = e,
         s =
             ((t = l.id),
-            (n = (0, hL.G)({ location: "useShouldShowXboxPerksReconnectUpsell" })),
-            (i = (0, hO.L)(tk.PremiumTypes.TIER_2)),
+            (n = (0, hR.G)({ location: "useShouldShowXboxPerksReconnectUpsell" })),
+            (i = (0, hD.L)(tk.PremiumTypes.TIER_2)),
             !n && !i && !/^\d+$/.test(t));
     return l.type === A.fg2.XBOX && s
         ? (0, c.jsx)(h1, {})
@@ -11913,7 +11913,7 @@ function h9(e) {
                     i &&
                     (l = (0, c.jsx)(i5.m, {
                         text: j.intl.string(j.t.Jebrww),
-                        children: (0, c.jsx)(hD.A, {
+                        children: (0, c.jsx)(hj.A, {
                             color: nH.A.unsafe_rawColors.PLATFORM_TWITTER.css,
                             children: (0, c.jsx)(hp.U, { size: "xs", color: nH.A.unsafe_rawColors.WHITE.css }),
                         }),
@@ -12152,7 +12152,7 @@ function h9(e) {
                             children: u.integrations.map((e) => (0, c.jsx)(h8, { integration: e }, e.id)),
                         })
                       : void 0,
-                (0, c.jsx)(hj.A, { partner: u.type }),
+                (0, c.jsx)(hL.A, { partner: u.type }),
             ],
         })
     );
@@ -12343,11 +12343,11 @@ let El = (0, a.E2)(o.X.CONNECTIONS_ADD_CONNECTIONS_SETTING, {
     Es = (0, a.E2)(o.X.CONNECTIONS_CONNECTED_ACCOUNTS_SETTING, {
         Component: function () {
             let e = (0, m.bG)([e8.A], () => e8.A.hidePersonalInformation),
-                t = (0, m.bG)([hF.A], () => hF.A.isFetching()),
-                n = (0, m.bG)([hF.A], () => hF.A.getAccounts()),
-                { authorizedAppsFetchState: i, authorizedApps: l } = (0, m.cf)([hR.default], () => ({
-                    authorizedAppsFetchState: hR.default.getFetchState(),
-                    authorizedApps: hR.default.getNewestTokensForNonChildrenApplications(),
+                t = (0, m.bG)([hw.A], () => hw.A.isFetching()),
+                n = (0, m.bG)([hw.A], () => hw.A.getAccounts()),
+                { authorizedAppsFetchState: i, authorizedApps: l } = (0, m.cf)([hO.default], () => ({
+                    authorizedAppsFetchState: hO.default.getFetchState(),
+                    authorizedApps: hO.default.getNewestTokensForNonChildrenApplications(),
                 })),
                 { isLoading: s, filteredAppIdentities: r } = (0, hK.A)(l8.default.getCurrentUser().id, {
                     includeHidden: !0,
@@ -12355,7 +12355,7 @@ let El = (0, a.E2)(o.X.CONNECTIONS_ADD_CONNECTIONS_SETTING, {
                 a = (0, uv.Ay)(),
                 o = (0, m.bG)([oD.default], () => oD.default.locale);
             return (g.useEffect(() => {
-                i === hR.FetchState.NOT_FETCHED && hA.A.fetch();
+                i === hO.FetchState.NOT_FETCHED && hA.A.fetch();
             }, [i]),
             e)
                 ? null
@@ -12363,7 +12363,7 @@ let El = (0, a.E2)(o.X.CONNECTIONS_ADD_CONNECTIONS_SETTING, {
                       children: [
                           (0, c.jsx)(hY, {}),
                           (0, c.jsx)(Ei, {
-                              fetching: t || s || (r.length > 0 && i !== hR.FetchState.FETCHED),
+                              fetching: t || s || (r.length > 0 && i !== hO.FetchState.FETCHED),
                               accounts: n,
                               appIdentities: r,
                               authorizedApps: l,
@@ -12389,7 +12389,7 @@ let Ea = (0, a.zZ)(o.X.CONNECTIONS_CATEGORY, {
         useTitle: () => j.intl.string(j.t["3fe7U5"]),
         useSubtitle: () => j.intl.string(j.t.U22vw6),
         useInlineNotice: function () {
-            let e = (0, m.bG)([hF.A], () => hF.A.getAccounts()),
+            let e = (0, m.bG)([hw.A], () => hw.A.getAccounts()),
                 t = g.useMemo(
                     () =>
                         h_.A.filter(
@@ -12857,7 +12857,7 @@ let EX = (0, a.E2)(o.X.OVERLAY_CURRENT_GAME, {
                           null != a && a.verified
                               ? (0, c.jsx)(i5.m, {
                                     text: j.intl.string(j.t["4PJP5p"]),
-                                    children: (0, c.jsx)(hD.A, {
+                                    children: (0, c.jsx)(hj.A, {
                                         size: 16,
                                         color: nH.A.colors.BACKGROUND_BRAND.css,
                                         children: (0, c.jsx)(hp.U, {
@@ -13761,7 +13761,7 @@ function SL(e) {
                                           (0, c.jsx)("div", { className: Sv.mO, children: p }),
                                           (0, c.jsx)(i5.m, {
                                               text: j.intl.string(j.t["4PJP5p"]),
-                                              children: (0, c.jsx)(hD.A, {
+                                              children: (0, c.jsx)(hj.A, {
                                                   className: Sv.qf,
                                                   size: 18,
                                                   color: nH.A.unsafe_rawColors.BRAND_500.css,
@@ -14808,7 +14808,7 @@ var p$ = n(427262),
 function p3(e) {
     let { errors: t, pendingNick: n, currentNick: i, username: l, user: s, guild: r } = e,
         a = (0, m.bG)([p1.A], () => p1.A.can(A.xBc.CHANGE_NICKNAME, r) || p1.A.can(A.xBc.MANAGE_NICKNAMES, r)),
-        o = (0, hO.L)(tk.PremiumTypes.TIER_2);
+        o = (0, hD.L)(tk.PremiumTypes.TIER_2);
     return (0, c.jsxs)(rZ.A, {
         title: j.intl.string(j.t.me1lRk),
         errors: t,
@@ -14901,7 +14901,7 @@ function p7() {
             let e = l8.default.getCurrentUser();
             return tl()(null != e, "GuildIdentitySettingsPage: user cannot be undefined"), e;
         }),
-        t = (0, hO.L)(tk.PremiumTypes.TIER_2),
+        t = (0, hD.L)(tk.PremiumTypes.TIER_2),
         n = (0, m.bG)([SQ.A, ld.A], () => ld.A.getGuild(SQ.A.selectedGuildId));
     tl()(null != n, "guild should not be null");
     let {
@@ -15674,7 +15674,7 @@ let x3 = function () {
 var x6 = n(953726);
 let x5 = (0, tU.Ld)();
 function x4(e) {
-    let t = (0, hO.L)(tk.PremiumTypes.TIER_2);
+    let t = (0, hD.L)(tk.PremiumTypes.TIER_2);
     return (0, c.jsxs)(rZ.A, {
         errors: e.errors,
         disabled: e.disabled,
@@ -18131,9 +18131,9 @@ let _v = (0, a.AK)(o.X.CONNECTED_GAMES_AUTHORIZED_APPS_NAVIGATOR, {
     _j = (0, a.gN)(o.X.CONNECTED_GAMES_RELATED_SETTINGS, { buildLayout: () => [_v] });
 var _O = n(875444);
 function _L(e, t) {
-    let n = (0, m.bG)([hR.default], () => hR.default.getFetchState()),
-        i = (0, m.bG)([hR.default], () =>
-            e ? hR.default.getNewestTokensForNonChildrenApplications() : hR.default.getNewestTokens(),
+    let n = (0, m.bG)([hO.default], () => hO.default.getFetchState()),
+        i = (0, m.bG)([hO.default], () =>
+            e ? hO.default.getNewestTokensForNonChildrenApplications() : hO.default.getNewestTokens(),
         ),
         l = g.useMemo(
             () => (null == i ? [] : i.filter((e) => (0, _O.O)(e.application, e.scopes)).map((e) => e.application)),
@@ -18143,7 +18143,7 @@ function _L(e, t) {
         g.useEffect(() => {
             t || hA.A.fetch();
         }, [t]),
-        { showLoadingIndicator: n !== hR.FetchState.FETCHED && (null == i || 0 === i.length), slayerSdkApplications: l }
+        { showLoadingIndicator: n !== hO.FetchState.FETCHED && (null == i || 0 === i.length), slayerSdkApplications: l }
     );
 }
 var _D = n(514479);

@@ -1,0 +1,15 @@
+e.exports = {
+    vK: "banner_fadcaf",
+    JS: "artContainer_fadcaf",
+    gm: "artOverlay_fadcaf",
+    Ge: "blur_fadcaf",
+    Qs: "content_fadcaf",
+    C: "copy_fadcaf",
+    md: "perks_fadcaf",
+    d_: "perk_fadcaf",
+    kf: "perkIcon_fadcaf",
+    o1: "actions_fadcaf",
+    AJ: "learnMoreButton_fadcaf",
+    lI: "ctaButton_fadcaf",
+    cy: "bannerWrapper_fadcaf",
+};

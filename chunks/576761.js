@@ -3,7 +3,7 @@ n.d(t, { B9: () => _, Et: () => c, MA: () => d, _z: () => E });
 var i,
     r,
     a = n(441574),
-    s = n(968671),
+    s = n(114516),
     l = n(349871),
     o = n(158045),
     d = (((i = {}).UPSELL = "UPSELL"), (i.NITRO = "NITRO"), (i.CREPE = "CREPE"), (i.INELIGIBLE = "INELIGIBLE"), i),
@@ -18,7 +18,7 @@ function E(e) {
     let t = (0, l.kQ)(e?.perks, a.bb.MORE_QUEST_ORBS);
     return t?.includes(a.g$.SOURCE_NITRO)
         ? "nitro"
-        : (0, s.f0)("getQuestOrbMultiplierSource") && t?.includes(a.g$.SOURCE_THIRDPARTY_CROISSANT)
+        : (0, s.v)("getQuestOrbMultiplierSource") && t?.includes(a.g$.SOURCE_THIRDPARTY_CROISSANT)
           ? "crepe"
           : null;
 }
