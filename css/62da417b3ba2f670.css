@@ -1,3 +1,28 @@
+.block_cee34d {
+    background: transparent;
+    cursor: not-allowed;
+    pointer-events: auto;
+    touch-action: none;
+    z-index: 1003
+}
+
+.announcer_cee34d,
+.block_cee34d {
+    overflow: hidden;
+    position: fixed
+}
+
+.announcer_cee34d {
+    border: 0;
+    clip-path: inset(50%);
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    pointer-events: none;
+    white-space: nowrap;
+    width: 1px
+}
+
 .assistantTurn__30c5c {
     align-self: flex-start;
     box-sizing: border-box;
@@ -488,4 +513,4 @@
     flex-shrink: 0
 }
 
-/*# sourceMappingURL=3e84e015a130ee33.css.map*/
+/*# sourceMappingURL=62da417b3ba2f670.css.map*/
