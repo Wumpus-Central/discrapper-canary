@@ -636,6 +636,7 @@ var i,
         (i[(i.APP_GROWTH_HALT_SINGLE_4PA_ADMIN = 6090)] = "APP_GROWTH_HALT_SINGLE_4PA_ADMIN"),
         (i[(i.BAD_BOT_QUARANTINE_SINGLE_ADMIN = 6100)] = "BAD_BOT_QUARANTINE_SINGLE_ADMIN"),
         (i[(i.BAD_BOT_QUARANTINE_PROPAGATE_ADMIN = 6110)] = "BAD_BOT_QUARANTINE_PROPAGATE_ADMIN"),
+        (i[(i.LEGALLY_REQUIRED_CONTENT_REMOVAL_ADMIN = 6120)] = "LEGALLY_REQUIRED_CONTENT_REMOVAL_ADMIN"),
         (i[(i.HIGH_RISK_DANGEROUS_AND_REGULATED_GOODS_GUILD_RETOOL = 7005)] =
             "HIGH_RISK_DANGEROUS_AND_REGULATED_GOODS_GUILD_RETOOL"),
         (i[(i.MEDIUM_RISK_DANGEROUS_AND_REGULATED_GOODS_GUILD_RETOOL = 7015)] =
@@ -3070,7 +3071,7 @@ class e3 extends O.G {
     constructor() {
         super("discord_protos.users.v1.PerkConfig", [
             { no: 1, name: "source", kind: "enum", repeat: 1, T: () => ["discord_protos.users.v1.PerkSource", er] },
-            { no: 2, name: "increased_file_upload_size", kind: "message", oneof: "kind", T: () => e4 },
+            { no: 2, name: "increased_file_upload_size", kind: "message", oneof: "kind", T: () => e6 },
             { no: 3, name: "increased_guild_limit", kind: "message", oneof: "kind", T: () => e8 },
         ]);
     }
@@ -3096,7 +3097,7 @@ class e3 extends O.G {
                 case 2:
                     r.kind = {
                         oneofKind: "increasedFileUploadSize",
-                        increasedFileUploadSize: e4.internalBinaryRead(
+                        increasedFileUploadSize: e6.internalBinaryRead(
                             e,
                             e.uint32(),
                             n,
@@ -3127,7 +3128,7 @@ class e3 extends O.G {
             t.join();
         }
         "increasedFileUploadSize" === e.kind.oneofKind &&
-            e4.internalBinaryWrite(e.kind.increasedFileUploadSize, t.tag(2, S.O0.LengthDelimited).fork(), n).join(),
+            e6.internalBinaryWrite(e.kind.increasedFileUploadSize, t.tag(2, S.O0.LengthDelimited).fork(), n).join(),
             "increasedGuildLimit" === e.kind.oneofKind &&
                 e8.internalBinaryWrite(e.kind.increasedGuildLimit, t.tag(3, S.O0.LengthDelimited).fork(), n).join();
         let i = n.writeUnknownFields;
@@ -3135,7 +3136,7 @@ class e3 extends O.G {
     }
 }
 let e5 = new e3();
-class e6 extends O.G {
+class e4 extends O.G {
     constructor() {
         super("discord_protos.users.v1.PerkConfigIncreasedFileUploadSize", [
             { no: 1, name: "max_size", kind: "scalar", T: 4 },
@@ -3171,7 +3172,7 @@ class e6 extends O.G {
         return !1 !== i && (!0 == i ? S.f$.onWrite : i)(this.typeName, e, t), t;
     }
 }
-let e4 = new e6();
+let e6 = new e4();
 class e7 extends O.G {
     constructor() {
         super("discord_protos.users.v1.PerkConfigIncreasedGuildLimit", [
