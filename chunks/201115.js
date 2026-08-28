@@ -5,8 +5,9 @@ let i = new Set(["image/heic", "image/heif", "image/heic-sequence", "image/heif-
     a = /\.(heic|heif|hif)$/i;
 function s(e) {
     if (i.has(e.type)) return !0;
-    let t = e.name.lastIndexOf(".");
-    return !(t < 0) && r.has(e.name.slice(t).toLowerCase());
+    let t = "string" == typeof e.name ? e.name : "",
+        n = t.lastIndexOf(".");
+    return !(n < 0) && r.has(t.slice(n).toLowerCase());
 }
 function l(e) {
     return "" !== e.type ? e.type : e.name.toLowerCase().endsWith(".heic") ? "image/heic" : "image/heif";
