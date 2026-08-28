@@ -10345,6 +10345,8 @@
   "ABMKx3": "{members, number} Members",
   "BXG0Eh": "{users, plural,=1 {{user1}}=2 {{user1} and {user2}}other {{user1}, {user2}, and {extras, plural,one {# other}other {# others}}",
   "yZOtoD": "Add to Group",
+  "U3CkDg": "Fit up to {number} people in this GDM with Nitro.",
+  "iZDK8I": "Fit up to {number} people in this GDM with Nitro Premium.",
   "ePNvSP": "Fit up to {number} people in this GDM with Nitro Premium.",
   "SXkUiv": "Fit up to {number} people in this GDM with Nitro.",
   "d8Spvj": "Bigger Groups are here.",

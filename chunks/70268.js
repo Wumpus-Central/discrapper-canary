@@ -889,7 +889,7 @@ function tM(e) {
         c = s.useMemo(
             () =>
                 (0, tp.once)(() => {
-                    (0, e4.x)({ type: e6.ImpressionTypes.VIEW, name: tx.I.CUSTOM_THEME_SHARE, properties: {} });
+                    (0, e4.x)({ type: e6.ImpressionTypes.VIEW, name: tx.IJ.CUSTOM_THEME_SHARE, properties: {} });
                 }),
             [],
         ),

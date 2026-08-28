@@ -385,7 +385,7 @@ function ep(e) {
     var t;
     let n,
         { channel: l, transitionState: r, onClose: u, initialQuestion: m, initialAnswers: D, initialDuration: O } = e;
-    (0, w.A)({ type: eg.z.MODAL, name: s.I.POLL_EDITOR_VIEWED });
+    (0, w.A)({ type: eg.z.MODAL, name: s.IJ.POLL_EDITOR_VIEWED });
     let T = i.useRef(null),
         G = i.useRef([]),
         z = i.useRef(null),

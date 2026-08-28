@@ -47,7 +47,7 @@ function f() {
         t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
     return _.A.patch({
         url: E.Rsh.USER_AGREEMENTS,
-        trackedActionData: { event: a.D.USER_ACCEPT_AGREEMENTS },
+        trackedActionData: { event: a.D3.USER_ACCEPT_AGREEMENTS },
         body: { terms: e, privacy: t },
         oldFormErrors: !0,
         rejectWithError: (0, s.fT)(),

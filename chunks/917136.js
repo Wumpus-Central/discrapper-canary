@@ -64,7 +64,7 @@ async function A(e, t, n) {
     let r = await s.A.post({
         url: l.Rsh.MFA_WEBAUTHN_CREDENTIALS,
         body: { name: e, ticket: t, credential: n },
-        trackedActionData: { event: i.D.WEBAUTHN_REGISTER },
+        trackedActionData: { event: i.D3.WEBAUTHN_REGISTER },
         rejectWithError: !0,
     });
     a.h.dispatch({ type: "AUTHENTICATOR_CREATE", credential: r.body }),
