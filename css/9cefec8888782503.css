@@ -162,4 +162,87 @@
     width: var(--__demo-area)
 }
 
-/*# sourceMappingURL=9d8a6081c329ae31.css.map*/
+.host__575df {
+    display: inline-block;
+    font-kerning: none;
+    font-variant-ligatures: none;
+    height: 1lh;
+    line-height: inherit;
+    position: relative;
+    white-space: pre
+}
+
+.textLayer__575df {
+    display: block;
+    white-space: pre
+}
+
+.textLayer__575df.hidden__575df {
+    opacity: 0
+}
+
+.char__575df {
+    display: inline-block;
+    text-align: start;
+    transition: opacity 90ms linear
+}
+
+.char__575df.shifted__575df {
+    opacity: .55
+}
+
+.char__575df.scrambled__575df {
+    opacity: 0
+}
+
+.glyphLayer__575df {
+    display: block;
+    font-family: AI Visual Identity Glyphs, monospace;
+    font-size: .76em;
+    inset-block-start: 50%;
+    inset-inline-start: 0;
+    line-height: 1;
+    pointer-events: none;
+    position: absolute;
+    transform: translateY(-50%);
+    white-space: pre
+}
+
+.glyphCell__575df {
+    display: inline-block;
+    text-align: center;
+    width: 1em
+}
+
+.reduce-motion .char__575df {
+    transition: none
+}
+
+.showcase__43208 {
+    gap: var(--space-24)
+}
+
+.section__43208,
+.showcase__43208 {
+    display: flex;
+    flex-direction: column
+}
+
+.section__43208 {
+    gap: var(--space-8)
+}
+
+.stage__43208 {
+    align-items: center;
+    background: var(--background-mod-subtle);
+    border-radius: var(--radius-sm);
+    display: flex;
+    min-height: 48px;
+    padding: var(--space-12) var(--space-16)
+}
+
+.log__43208 {
+    font-variant-numeric: tabular-nums
+}
+
+/*# sourceMappingURL=9cefec8888782503.css.map*/

@@ -3115,7 +3115,7 @@ async function s() {
                 n.e("972580"),
             ]).then(n.bind(n, 863212))
         ).playgroundConfig,
-        (await Promise.all([n.e("635874"), n.e("156751"), n.e("122777")]).then(n.bind(n, 117568))).playgroundConfig,
+        (await Promise.all([n.e("254787"), n.e("156751"), n.e("52765")]).then(n.bind(n, 896236))).playgroundConfig,
     ];
 }
 function l() {
