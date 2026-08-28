@@ -1,0 +1,154 @@
+.field_ccf340 {
+    color: var(--text-overlay-light);
+    min-width: 0
+}
+
+.editing_ccf340 {
+    --input-background-default: var(--background-surface-highest)
+}
+
+.titleRow_ccf340 {
+    align-items: center;
+    display: flex;
+    gap: var(--space-4);
+    min-width: 0
+}
+
+.editableRow_ccf340:hover {
+    text-decoration: underline
+}
+
+.pencil_ccf340 {
+    flex-shrink: 0
+}
+
+.titleText_ccf340 {
+    min-width: 0
+}
+
+.placeholder_ccf340 {
+    font-style: italic
+}
+
+.filmstrip_afbdeb {
+    display: flex;
+    gap: var(--space-12)
+}
+
+.slot_afbdeb {
+    aspect-ratio: 16/9;
+    flex: 1;
+    min-width: 0;
+    position: relative
+}
+
+.dragTarget_afbdeb {
+    cursor: grab;
+    height: 100%;
+    position: relative;
+    width: 100%
+}
+
+.addTile_afbdeb,
+.tile_afbdeb {
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    height: 100%;
+    width: 100%
+}
+
+.tile_afbdeb {
+    border: 1px solid var(--border-subtle);
+    box-shadow: 0 3px 12px 0 rgba(0, 0, 0, .16);
+    overflow: hidden
+}
+
+.selected_afbdeb {
+    border-color: var(--border-strong)
+}
+
+.tileMedia_afbdeb {
+    border-radius: inherit
+}
+
+.removeClipButton_afbdeb {
+    inset-inline-end: var(--space-8);
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: opacity 50ms ease-in
+}
+
+.removeClipButton_afbdeb:focus-within,
+.slot_afbdeb:hover .removeClipButton_afbdeb,
+.keyboard-mode .slot_afbdeb:focus-within .removeClipButton_afbdeb {
+    opacity: 1;
+    transition: opacity .15s ease-out
+}
+
+.isDragging_afbdeb .removeClipButton_afbdeb,
+.keyboard-mode .slot_afbdeb:focus-within .isDragging_afbdeb .removeClipButton_afbdeb {
+    opacity: 0
+}
+
+.dragHandle_afbdeb {
+    align-items: center;
+    border-radius: var(--radius-sm);
+    color: var(--white);
+    display: flex;
+    inset: 0;
+    justify-content: flex-start;
+    opacity: 0;
+    padding-inline-start: var(--space-4);
+    pointer-events: none;
+    position: absolute;
+    z-index: 1
+}
+
+.dragHandle_afbdeb:focus-visible {
+    background: var(--opacity-black-72);
+    opacity: 1;
+    pointer-events: auto
+}
+
+.dropIndicatorAfter_afbdeb:after,
+.dropIndicatorBefore_afbdeb:before {
+    background-color: var(--icon-strong);
+    border-radius: var(--radius-xs);
+    bottom: 0;
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    width: 2px
+}
+
+.dropIndicatorBefore_afbdeb:before {
+    inset-inline-start: -7px
+}
+
+.dropIndicatorAfter_afbdeb:after {
+    inset-inline-end: -7px
+}
+
+.isDragging_afbdeb {
+    opacity: .15
+}
+
+.addTile_afbdeb {
+    align-items: center;
+    border: 1px dashed var(--border-normal);
+    color: var(--icon-muted);
+    display: flex;
+    justify-content: center;
+    transition: color 50ms ease-in, border-color 50ms ease-in
+}
+
+.addTile_afbdeb:hover {
+    border-color: var(--border-strong);
+    color: var(--icon-strong);
+    transition: color .15s ease-out, border-color .15s ease-out
+}
+
+/*# sourceMappingURL=c5694baca8d7b935.css.map*/
