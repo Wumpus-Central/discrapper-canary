@@ -1,37 +1,37 @@
-a.d(t, { default: () => k });
+a.d(t, { default: () => L });
 var s = a(477900),
     l = a(582128),
-    r = a(503698),
-    i = a.n(r),
-    n = a(132500),
+    n = a(503698),
+    r = a.n(n),
+    i = a(132500),
     o = a(772707),
     d = a(441574),
     c = a(991049),
     h = a(280645),
     u = a(952146),
-    v = a(331322),
-    m = a(289873),
-    p = a(512950),
-    E = a(821609),
-    x = a(109112),
-    f = a(939249),
-    g = a(834730),
+    m = a(331322),
+    v = a(289873),
+    g = a(512950),
+    p = a(821609),
+    E = a(109112),
+    x = a(939249),
+    f = a(834730),
     _ = a(320448),
     A = a(975571),
     w = a(31720),
     R = a(847599),
     j = a(931374);
-let S = (0, a(945810).mj)({
+let M = (0, a(945810).mj)({
     kind: "user",
     name: "2026-08-show-expressive-modal-subtitle-alt",
     defaultConfig: { enabled: !1 },
     variations: { 1: { enabled: !0 } },
 });
 var I = a(228366),
-    C = a(636537),
-    M = a(652215);
-async function V() {
-    let e = (await C.Bo.get({ url: M.Rsh.AGE_VERIFICATION_METHODS_V2, rejectWithError: !0 })).body;
+    S = a(636537),
+    C = a(652215);
+async function N() {
+    let e = (await S.Bo.get({ url: C.Rsh.AGE_VERIFICATION_METHODS_V2, rejectWithError: !0 })).body;
     return {
         methods: e.methods.map((e) => {
             var t;
@@ -54,10 +54,11 @@ async function V() {
             };
         }),
         footerMessage: e.footer_message ?? null,
+        outageBannerMessage: e.outage_banner_message ?? null,
     };
 }
-var y = a(787301);
-let N = function (e) {
+var V = a(787301);
+let y = function (e) {
     let { icon: t, size: a = 24 } = e;
     return (0, s.jsx)("svg", {
         width: a,
@@ -70,93 +71,97 @@ let N = function (e) {
 };
 var T = a(40449),
     b = a(800121),
-    O = a(375708),
-    L = a(126106);
-let k = function (e) {
-    let { transitionState: t, entryPoint: a, onClose: r, dismissable: C } = e,
+    B = a(375708),
+    O = a(126106);
+let L = function (e) {
+    let { transitionState: t, entryPoint: a, onClose: n, dismissable: S } = e,
         {
-            loading: k,
-            error: Z,
-            methods: U,
-            footerMessage: B,
-            refetch: D,
+            loading: L,
+            error: k,
+            methods: Z,
+            footerMessage: U,
+            outageBannerMessage: D,
+            refetch: G,
         } = (function () {
-            let [e, t] = l.useState(() => y.A.methodsV2 ?? []),
-                [a, s] = l.useState(() => y.A.methodsV2FooterMessage),
-                [r, i] = l.useState(() => null == y.A.methodsV2),
-                [n, o] = l.useState(!1),
-                d = l.useRef(!0),
-                c = l.useCallback(async (e) => {
-                    let a = y.A.methodsV2;
+            let [e, t] = l.useState(() => V.A.methodsV2 ?? []),
+                [a, s] = l.useState(() => V.A.methodsV2FooterMessage),
+                [n, r] = l.useState(() => V.A.methodsV2OutageBannerMessage),
+                [i, o] = l.useState(() => null == V.A.methodsV2),
+                [d, c] = l.useState(!1),
+                h = l.useRef(!0),
+                u = l.useCallback(async (e) => {
+                    let a = V.A.methodsV2;
                     if (!e && null != a) {
-                        t(a), s(y.A.methodsV2FooterMessage), i(!1), o(!1);
+                        t(a), s(V.A.methodsV2FooterMessage), r(V.A.methodsV2OutageBannerMessage), o(!1), c(!1);
                         return;
                     }
-                    i(!0), o(!1);
+                    o(!0), c(!1);
                     try {
-                        let e = await V();
+                        let e = await N();
                         I.h.dispatch({
                             type: "AGE_VERIFICATION_METHODS_V2_LOAD_SUCCESS",
                             methods: e.methods,
                             footerMessage: e.footerMessage,
+                            outageBannerMessage: e.outageBannerMessage,
                         }),
-                            d.current && (t(e.methods), s(e.footerMessage));
+                            h.current && (t(e.methods), s(e.footerMessage), r(e.outageBannerMessage));
                     } catch {
-                        d.current && o(!0);
+                        h.current && c(!0);
                     } finally {
-                        d.current && i(!1);
+                        h.current && o(!1);
                     }
                 }, []);
             return (
                 l.useEffect(
                     () => (
-                        (d.current = !0),
-                        c(!1),
+                        (h.current = !0),
+                        u(!1),
                         () => {
-                            d.current = !1;
+                            h.current = !1;
                         }
                     ),
-                    [c],
+                    [u],
                 ),
                 {
-                    loading: r,
-                    error: n,
+                    loading: i,
+                    error: d,
                     methods: e,
                     footerMessage: a,
+                    outageBannerMessage: n,
                     refetch: l.useCallback(() => {
-                        c(!0);
-                    }, [c]),
+                        u(!0);
+                    }, [u]),
                 }
             );
         })(),
-        G = U.length > 0,
-        { initiateAgeVerificationV2: H } = (0, j.Ny)({ onComplete: r, entryPoint: a, onMethodUnavailable: D }),
-        F = l.useRef(!1),
-        [P, W] = l.useState(null),
-        z = null != P,
-        X = l.useMemo(() => (0, n.A)(), []),
-        J = S.useConfig({ location: "age_verification_expressive_v2_modal" }).enabled;
+        H = Z.length > 0,
+        { initiateAgeVerificationV2: F } = (0, j.Ny)({ onComplete: n, entryPoint: a, onMethodUnavailable: G }),
+        P = l.useRef(!1),
+        [W, z] = l.useState(null),
+        X = null != W,
+        Y = l.useMemo(() => (0, i.A)(), []),
+        J = M.useConfig({ location: "age_verification_expressive_v2_modal" }).enabled;
     l.useEffect(() => {
-        (0, R.Bs)(X, R.WU.EXPRESSIVE_V2, a);
-    }, [X, a]);
-    let Y = l.useCallback(
+        (0, R.Bs)(Y, R.WU.EXPRESSIVE_V2, a);
+    }, [Y, a]);
+    let $ = l.useCallback(
         async (e, t) => {
-            if (!F.current) {
-                (0, R.St)(X, R.WU.EXPRESSIVE_V2, R._7.METHOD_SELECT, e.method), (F.current = !0), W(t);
+            if (!P.current) {
+                (0, R.St)(Y, R.WU.EXPRESSIVE_V2, R._7.METHOD_SELECT, e.method), (P.current = !0), z(t);
                 try {
-                    await H(e);
+                    await F(e);
                 } finally {
-                    (F.current = !1), W(null);
+                    (P.current = !1), z(null);
                 }
             }
         },
-        [H, X],
+        [F, Y],
     );
     return (0, s.jsxs)(o.k, {
         transitionState: t,
-        onClose: r,
+        onClose: n,
         gradientColor: "blue",
-        dismissable: C,
+        dismissable: S,
         graphic: {
             type: "image",
             src: "https://cdn.discordapp.com/assets/content/78be134dd5dcecb7d0b26e1aead0c61f79a95c93893a4acc82c9828c87d2165a.svg",
@@ -166,37 +171,38 @@ let k = function (e) {
         subtitle: (0, j.mK)(
             a,
             () => {
-                w.A.openUrl(A.A.getArticleURL(M.MVz.TIGGER_PAWTECT_LEARN_MORE)),
-                    (0, R.St)(X, R.WU.EXPRESSIVE_V2, R._7.LEARN_MORE);
+                w.A.openUrl(A.A.getArticleURL(C.MVz.TIGGER_PAWTECT_LEARN_MORE)),
+                    (0, R.St)(Y, R.WU.EXPRESSIVE_V2, R._7.LEARN_MORE);
             },
             void 0,
             J
                 ? () => {
-                      w.A.openUrl(T.zS), (0, R.St)(X, R.WU.EXPRESSIVE_V2, R._7.TRUSTED_PROVIDERS);
+                      w.A.openUrl(T.zS), (0, R.St)(Y, R.WU.EXPRESSIVE_V2, R._7.TRUSTED_PROVIDERS);
                   }
                 : void 0,
             !0,
         ),
         children: [
             (0, s.jsx)("div", { "data-expressive-v2-graphic": !0, hidden: !0 }),
-            k && (0, s.jsx)(v.B, { direction: "vertical", align: "center", children: (0, s.jsx)(m.y, {}) }),
-            !k &&
-                !G &&
-                (0, s.jsx)(p.p, {
-                    messageType: p.Y.ERROR,
-                    action: (0, s.jsx)(E.$, {
+            L && (0, s.jsx)(m.B, { direction: "vertical", align: "center", children: (0, s.jsx)(v.y, {}) }),
+            !L && null != D && (0, s.jsx)(g.p, { messageType: g.Y.WARNING, className: O.Ih, children: D }),
+            !L &&
+                !H &&
+                (0, s.jsx)(g.p, {
+                    messageType: g.Y.ERROR,
+                    action: (0, s.jsx)(p.$, {
                         variant: "overlay-secondary",
                         size: "sm",
-                        text: O.intl.string(b.default.hDvmYP),
-                        onClick: D,
+                        text: B.intl.string(b.default.hDvmYP),
+                        onClick: G,
                     }),
-                    children: O.intl.string(Z ? b.default.Bkmk4Y : b.default.cR6336),
+                    children: B.intl.string(k ? b.default.Bkmk4Y : b.default.cR6336),
                 }),
-            G &&
-                (0, s.jsx)(v.B, {
+            H &&
+                (0, s.jsx)(m.B, {
                     direction: "vertical",
                     gap: 8,
-                    children: U.map((e) => {
+                    children: Z.map((e) => {
                         let t,
                             a = (function (e) {
                                 switch (e) {
@@ -214,36 +220,36 @@ let k = function (e) {
                             null != a
                                 ? (0, s.jsx)(a, { size: "md", color: "var(--text-strong)" })
                                 : null != e.icon
-                                  ? (0, s.jsx)(N, { icon: e.icon })
-                                  : (0, s.jsx)(x._, { size: "md", color: "var(--text-strong)" });
+                                  ? (0, s.jsx)(y, { icon: e.icon })
+                                  : (0, s.jsx)(E._, { size: "md", color: "var(--text-strong)" });
                         let l = `${e.method}-${e.vendor}`,
-                            r = P === l;
+                            n = W === l;
                         return (0, s.jsxs)(
-                            f.D,
+                            x.D,
                             {
-                                className: i()(L.kZ, { [L.w1]: z }),
-                                "aria-busy": r,
-                                "aria-disabled": z,
-                                onClick: z ? void 0 : () => Y(e, l),
+                                className: r()(O.kZ, { [O.w1]: X }),
+                                "aria-busy": n,
+                                "aria-disabled": X,
+                                onClick: X ? void 0 : () => $(e, l),
                                 children: [
-                                    (0, s.jsx)("div", { className: L.zc, children: t }),
+                                    (0, s.jsx)("div", { className: O.zc, children: t }),
                                     (0, s.jsxs)("div", {
-                                        className: L.Qq,
+                                        className: O.Qq,
                                         children: [
-                                            (0, s.jsx)(g.E, {
+                                            (0, s.jsx)(f.E, {
                                                 variant: "text-md/normal",
                                                 color: "text-strong",
                                                 children: e.title,
                                             }),
-                                            (0, s.jsx)(g.E, {
+                                            (0, s.jsx)(f.E, {
                                                 variant: "text-sm/normal",
                                                 color: "text-muted",
                                                 children: e.description,
                                             }),
                                             null != e.providedBy &&
                                                 (0, s.jsx)("div", {
-                                                    className: L.Vp,
-                                                    children: (0, s.jsx)(g.E, {
+                                                    className: O.Vp,
+                                                    children: (0, s.jsx)(f.E, {
                                                         variant: "text-sm/normal",
                                                         color: "text-muted",
                                                         children: e.providedBy,
@@ -251,21 +257,21 @@ let k = function (e) {
                                                 }),
                                         ],
                                     }),
-                                    r
-                                        ? (0, s.jsx)(m.y, { type: m.t.SPINNING_CIRCLE_SIMPLE, className: L.wt })
-                                        : (0, s.jsx)(_._, { className: L.ai }),
+                                    n
+                                        ? (0, s.jsx)(v.y, { type: v.t.SPINNING_CIRCLE_SIMPLE, className: O.wt })
+                                        : (0, s.jsx)(_._, { className: O.ai }),
                                 ],
                             },
                             l,
                         );
                     }),
                 }),
-            !k &&
-                G &&
-                null != B &&
+            !L &&
+                H &&
+                null != U &&
                 (0, s.jsx)("div", {
-                    className: L.qr,
-                    children: (0, s.jsx)(g.E, { variant: "text-sm/normal", color: "text-muted", children: B }),
+                    className: O.qr,
+                    children: (0, s.jsx)(f.E, { variant: "text-sm/normal", color: "text-muted", children: U }),
                 }),
         ],
     });

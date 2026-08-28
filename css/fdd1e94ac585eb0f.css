@@ -77,6 +77,10 @@
     text-align: center
 }
 
+.outageBanner_bbc786 {
+    margin-bottom: var(--space-12)
+}
+
 .methodRowDisabled_bbc786 {
     cursor: default
 }
@@ -93,4 +97,4 @@
     width: var(--space-24)
 }
 
-/*# sourceMappingURL=d9b2ab729ab54ab3.css.map*/
+/*# sourceMappingURL=fdd1e94ac585eb0f.css.map*/
