@@ -231,7 +231,7 @@ function ii(i) {
                 ),
             [r],
         );
-    return "error" === c
+    return "error" === c || ("success" === c && 0 === r.length)
         ? null
         : (0, n.jsx)("div", {
               className: J.v8,
@@ -255,31 +255,30 @@ function ii(i) {
                                       }),
                                       (0, n.jsx)("div", {
                                           className: i,
-                                          children:
-                                              S || 0 === r.length
-                                                  ? (0, n.jsx)(Z, { wishlistInDmLength: P.pl })
-                                                  : (0, n.jsx)(W.dB, {
-                                                        newValue: {
-                                                            impressionSessionId: h,
-                                                            surface: "dm_gifting_banner",
-                                                            wishlistOwnerId: e.id,
-                                                            wishlistId: o,
+                                          children: S
+                                              ? (0, n.jsx)(Z, { wishlistInDmLength: P.pl })
+                                              : (0, n.jsx)(W.dB, {
+                                                    newValue: {
+                                                        impressionSessionId: h,
+                                                        surface: "dm_gifting_banner",
+                                                        wishlistOwnerId: e.id,
+                                                        wishlistId: o,
+                                                        analyticsLocations: u,
+                                                    },
+                                                    children: (0, n.jsx)(G.h, {
+                                                        isGifting: !0,
+                                                        location: "WishlistBanner",
+                                                        children: (0, n.jsx)(q, {
+                                                            items: y,
+                                                            giftRecipient: e,
+                                                            defaultWishlistId: o,
+                                                            onOpenWishlist: f,
+                                                            onWishlistItemClick: t,
                                                             analyticsLocations: u,
-                                                        },
-                                                        children: (0, n.jsx)(G.h, {
-                                                            isGifting: !0,
-                                                            location: "WishlistBanner",
-                                                            children: (0, n.jsx)(q, {
-                                                                items: y,
-                                                                giftRecipient: e,
-                                                                defaultWishlistId: o,
-                                                                onOpenWishlist: f,
-                                                                onWishlistItemClick: t,
-                                                                analyticsLocations: u,
-                                                                includedSources: F,
-                                                            }),
+                                                            includedSources: F,
                                                         }),
                                                     }),
+                                                }),
                                       }),
                                       null != d && !S && r.length > 0
                                           ? (0, n.jsx)("div", { className: i, children: d })

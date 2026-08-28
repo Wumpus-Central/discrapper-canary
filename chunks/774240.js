@@ -1,4 +1,4 @@
-i.exports = {
+e.exports = {
     kL: "container_f7398d",
     U: "containerContents_f7398d",
     In: "applicationIcon_f7398d",
@@ -9,6 +9,8 @@ i.exports = {
     Zp: "loadingApplicationWidgetPanel_f7398d",
     gi: "widgetOnlyContainer_f7398d",
     kc: "loadingFeaturePanelRecomendations_f7398d",
+    RQ: "emtpyRecommendationsContainer_f7398d",
+    Vt: "emptyRecommendationsImage_f7398d",
     OQ: "ctaContainer_f7398d",
     bC: "ctaFiller_f7398d",
     Ku: "ctaIcon_f7398d",

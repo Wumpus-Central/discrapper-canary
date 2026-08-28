@@ -65,6 +65,20 @@
     width: calc(270px + var(--space-12)*2)
 }
 
+.emtpyRecommendationsContainer_f7398d {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-16);
+    justify-content: center;
+    text-align: center
+}
+
+.emptyRecommendationsImage_f7398d {
+    height: auto;
+    width: 60%
+}
+
 .contextContainer_f7398d {
     background-color: var(--background-surface-high)
 }
@@ -91,4 +105,4 @@
     flex-shrink: 0
 }
 
-/*# sourceMappingURL=944121.a56b101c5986de66.css.map*/
+/*# sourceMappingURL=944121.81d84a0b4aa13af4.css.map*/
