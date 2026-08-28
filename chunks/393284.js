@@ -1,4 +1,4 @@
-n.d(t, { k: () => $ });
+n.d(t, { k: () => J });
 var i = n(419954),
     l = n(780964),
     s = n(17928),
@@ -255,11 +255,10 @@ let W = (0, i.E2)(l.X.APPEARANCE_DUAL_THEME_SELECTOR, {
     },
     usePredicate: a.V,
 });
-var Z = n(458024),
-    q = n(462887),
-    Q = n(817281);
+var Z = n(462887),
+    q = n(817281);
 n(644235);
-let J = (0, i.zD)(l.X.APPEARANCE_SAME_AS_DEVICE_THEME, {
+let Q = (0, i.zD)(l.X.APPEARANCE_SAME_AS_DEVICE_THEME, {
         useTitle: () => u.intl.string(u.t.c445ix),
         useSubtitle: () => u.intl.string(u.t["+tBsvs"]),
         useSearchTerms: () => [u.intl.string(u.t.Ksh3ik)],
@@ -269,11 +268,11 @@ let J = (0, i.zD)(l.X.APPEARANCE_SAME_AS_DEVICE_THEME, {
         setValue: function (e) {
             if (e) {
                 if (
-                    (Q.Ay.setShouldSyncAppearanceSettings(!1),
+                    (q.Ay.setShouldSyncAppearanceSettings(!1),
                     null == R.A.getSyncedClientTheme(Y.Fc.LIGHT) && null == R.A.getSyncedClientTheme(Y.Fc.DARK))
                 ) {
                     let e = R.A.theme,
-                        t = (0, q.M)(e) ? Y.Fc.DARK : Y.Fc.LIGHT,
+                        t = (0, Z.M)(e) ? Y.Fc.DARK : Y.Fc.LIGHT,
                         n = r.A.isPreview ? void 0 : r.A.gradientPreset?.id;
                     (0, X.NA)({ [t]: e }),
                         null != n ? (0, X.qX)(t, { backgroundGradientPresetId: n }) : (0, X.qX)(t, { theme: e });
@@ -281,10 +280,9 @@ let J = (0, i.zD)(l.X.APPEARANCE_SAME_AS_DEVICE_THEME, {
                 (0, X.ZM)(!0), (0, X.k7)(Y.Q_.ON);
             } else (0, X.k7)(Y.Q_.OFF), (0, X.ZM)(!1);
         },
-        usePredicate: () => (0, Z.Ay)("SameAsDeviceThemeSetting"),
     }),
-    $ = (0, i.FW)(l.X.APPEARANCE_THEME_FIELDSET, {
+    J = (0, i.FW)(l.X.APPEARANCE_THEME_FIELDSET, {
         useTitle: () => u.intl.string(u.t.Ksh3ik),
         isTitleHiddenVisually: !0,
-        buildLayout: () => [J, W, w, M, v, d],
+        buildLayout: () => [Q, W, w, M, v, d],
     });
