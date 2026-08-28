@@ -270,6 +270,7 @@
   "AGE_ASSURANCE_TEST": "/age-verification/test",
   "VERIFY_AGE": "/age-verification/verify",
   "VERIFY_AGE_V2": "/age-verification/verify/v2",
+  "AGE_VERIFICATION_MANUAL_REVIEW": "/age-verification/manual-review",
   "REGISTER_INCODE_INTERVIEW": "/age-verification/incode/interview",
   "CREATE_INCODE_SESSION": "/age-verification/incode/session",
   "AGE_VERIFICATION_METHODS": "/age-verification/methods",
