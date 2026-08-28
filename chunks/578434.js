@@ -25,8 +25,8 @@ function S(e) {
         y,
         b,
         N,
-        v,
         T,
+        v,
         { channel: M, children: R } = e,
         D = (0, s.bG)([A.A], () => A.A.isBlocked(M.getRecipientId()));
     (S = t = M.id),
@@ -36,10 +36,10 @@ function S(e) {
         (y = (0, s.bG)([h.A], () => h.A.getChangelog(_ ?? "", j), [_, j])),
         (b = (0, g.A)(t)),
         (N = i.useRef(b ? Date.now() : null)),
-        (v = (0, s.bG)([d.Ay], () => d.Ay.getUnreadCount(t), [t])),
-        (T = i.useRef(v)),
+        (T = (0, s.bG)([d.Ay], () => d.Ay.getUnreadCount(t), [t])),
+        (v = i.useRef(T)),
         i.useEffect(() => {
-            T.current = v;
+            v.current = T;
         }),
         i.useEffect(() => {
             N.current = Date.now();
@@ -52,7 +52,7 @@ function S(e) {
                 null != y &&
                 u.default.track(p.HAw.CHANGE_LOG_OPENED, {
                     change_log_id: `${y.date}:${y.revision}`,
-                    unread_count: T.current,
+                    unread_count: v.current,
                 });
         }, [b, y]),
         i.useEffect(() => {
@@ -64,7 +64,7 @@ function S(e) {
                     (u.default.track(p.HAw.CHANGE_LOG_CLOSED, {
                         seconds_open: Math.round((Date.now() - e) / 1e3),
                         change_log_id: `${y.date}:${y.revision}`,
-                        unread_count: T.current,
+                        unread_count: v.current,
                     }),
                     (N.current = 0));
             };

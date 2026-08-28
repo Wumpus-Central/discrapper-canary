@@ -20,8 +20,8 @@ function p(e) {
     let g,
         x,
         A,
-        C,
         E,
+        C,
         I,
         y,
         { id: S, unrankedEntries: N = !1 } = e,
@@ -35,7 +35,7 @@ function p(e) {
         (g = (0, i.bG)([r.A], () => r.A.getPrivateChannelsVersion())),
         (x = (0, i.bG)([r.A], () => r.A.getMutableDMsByUserIds(), [g])),
         (A = (0, i.bG)([a.Ay], () => a.Ay.getMutedChannels(null))),
-        (C = l.useMemo(() => {
+        (E = l.useMemo(() => {
             let e = new Set();
             for (let t in x) {
                 let n = x[t];
@@ -47,16 +47,16 @@ function p(e) {
             l.useMemo(
                 () =>
                     t?.filter((e) => {
-                        for (let t of e.participants) if (C.has(t)) return !1;
+                        for (let t of e.participants) if (E.has(t)) return !1;
                         return !0;
                     }),
-                [t, C],
+                [t, E],
             )),
         (p = j = (0, i.yK)([o.A], () => (null == n ? u : n.filter(o.A.canRenderContent)), [n])),
-        (E = l.useRef(new Set())),
+        (C = l.useRef(new Set())),
         (I = l.useMemo(() => {
             let e = new Set(p?.map((e) => e.author_id));
-            return (0, c.v)([...E.current], [...e]) || (E.current = e), E.current;
+            return (0, c.v)([...C.current], [...e]) || (C.current = e), C.current;
         }, [p])),
         (y = (0, i.yK)([d.A], () =>
             Array.from(I).filter((e) => {

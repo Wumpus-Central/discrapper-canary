@@ -1,62 +1,62 @@
-i.d(t, { A: () => T });
-var E = i(477900),
-    s = i(582128),
-    n = i(503698),
-    r = i.n(n),
-    l = i(939249),
-    a = i(97808),
-    _ = i(778712),
-    S = i(834730),
-    A = i(297413),
-    c = i(342296),
-    o = i(475977);
-function T(e) {
+i.d(t, { A: () => x });
+var s = i(477900),
+    n = i(582128),
+    r = i(503698),
+    l = i.n(r),
+    a = i(939249),
+    c = i(97808),
+    o = i(778712),
+    d = i(834730),
+    u = i(297413),
+    h = i(342296),
+    j = i(475977);
+function x(e) {
     let {
             user: t,
             guildId: i,
-            channelId: n,
-            nick: T,
-            className: I,
-            textClassName: d,
-            disablePopout: R,
+            channelId: r,
+            nick: x,
+            className: v,
+            textClassName: m,
+            disablePopout: f,
             ignoreModalClicks: N,
-            onClick: u,
-            onContextMenu: P,
-            onPopoutRequestOpen: O,
-            onPopoutRequestClose: h,
+            onClick: A,
+            onContextMenu: g,
+            onPopoutRequestOpen: p,
+            onPopoutRequestClose: C,
         } = e,
-        C = s.useRef(null);
-    return (0, E.jsx)(c.A, {
-        targetElementRef: C,
+        S = n.useRef(null);
+    return (0, s.jsx)(h.A, {
+        targetElementRef: S,
         user: t,
         guildId: i,
-        channelId: n,
+        channelId: r,
         position: "left",
-        shouldShow: !R && void 0,
-        onRequestOpen: O,
-        onRequestClose: h,
+        shouldShow: !f && void 0,
+        onRequestOpen: p,
+        onRequestClose: C,
         ignoreModalClicks: N,
         children: (e) => {
-            let { onClick: s, ...n } = e;
-            return (0, E.jsxs)(l.D, {
-                ...n,
-                innerRef: C,
-                className: r()(o.DV, I, { [o.YR]: R }),
-                onContextMenu: P,
+            let { onClick: n, ...r } = e;
+            return (0, s.jsxs)(a.D, {
+                ...r,
+                innerRef: S,
+                className: l()(j.DV, v, { [j.YR]: f }),
+                onContextMenu: g,
                 onClick: (e) => {
-                    s(e), u?.(e);
+                    n(e), A?.(e);
                 },
                 children: [
-                    (0, E.jsx)(a.eu, {
-                        src: t.getAvatarURL(i, (0, _.FT)(_._3.SIZE_24)),
-                        className: o.my,
+                    (0, s.jsx)(c.eu, {
+                        src: t.getAvatarURL(i, (0, o.FT)(o._3.SIZE_24)),
+                        className: j.my,
                         "aria-label": t.username,
-                        size: _._3.SIZE_24,
+                        size: o._3.SIZE_24,
                     }),
-                    (0, E.jsx)(S.E, {
-                        className: r()(o.Ft, d),
+                    (0, s.jsx)(d.E, {
+                        className: l()(j.Ft, m),
                         variant: "text-sm/normal",
-                        children: (0, E.jsx)(A.A, { user: t, nick: T, usernameClass: o.Xh, hideDiscriminator: !0 }),
+                        children: (0, s.jsx)(u.A, { user: t, nick: x, usernameClass: j.Xh, hideDiscriminator: !0 }),
                     }),
                 ],
             });

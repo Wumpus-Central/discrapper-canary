@@ -15,8 +15,8 @@ var i = n(477900),
     h = n(82498),
     S = n(724651),
     T = n(732280),
-    x = n(792656),
-    p = n(511484),
+    p = n(792656),
+    x = n(511484),
     f = n(811611),
     I = n(174459),
     _ = n(830543),
@@ -33,10 +33,10 @@ function O() {
 }
 function L() {
     let e = (0, S.O)(),
-        t = (0, p.U9)(e, y.pe.TIER_2)
+        t = (0, x.U9)(e, y.pe.TIER_2)
             ? v.intl.formatToPlainString(v.t.bkQ4bH, { percent: e?.discount.amount })
             : v.intl.string(v.t.mr4K7D);
-    return (0, i.jsx)(x.A, {
+    return (0, i.jsx)(p.A, {
         subscriptionTier: y.pe.TIER_2,
         defaultTextOverride: t,
         premiumModalAnalyticsLocation: { object: N.ZSU.BUTTON_CTA, objectType: N.AnalyticsObjectTypes.BUY },

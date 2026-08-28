@@ -22,10 +22,10 @@ var p = n(174459),
     g = n(881698),
     x = n(49999);
 let A = new Set();
-function C(e) {
+function E(e) {
     return (0, o.n)(e, m.gfo.CLOUD_GAMING_DEMO) && (0, o.n)(e, m.gfo.EMBEDDED);
 }
-function E() {
+function C() {
     (0, u.Dr)(i.M.CLOUD_PLAY_NEW_BADGE, { dismissAction: x.i.TAKE_ACTION }),
         (0, u.Dr)(i.M.CLOUD_PLAY_POPOVER, { dismissAction: x.i.TAKE_ACTION });
 }
@@ -61,7 +61,7 @@ function v(e) {
     return (
         null != e &&
         (e?.embeddedActivityConfig == null || !!I({ countryCode: t?.alpha2, activity: e.embeddedActivityConfig })) &&
-        (!!C(e) || y(n, t?.alpha2))
+        (!!E(e) || y(n, t?.alpha2))
     );
 }
 function _(e) {
@@ -75,9 +75,9 @@ function _(e) {
     return l.useMemo(
         () =>
             i && null != t
-                ? C(t) && null != r
+                ? E(t) && null != r
                     ? () => {
-                          E(),
+                          C(),
                               p.default.track(m.HAw.CLOUD_PLAY_CTA_CLICKED, {
                                   source_application_id: t.id,
                                   launching_application_id: t.id,
@@ -87,7 +87,7 @@ function _(e) {
                       }
                     : null != u && null != c
                       ? () => {
-                            E(),
+                            C(),
                                 p.default.track(m.HAw.CLOUD_PLAY_CTA_CLICKED, {
                                     source_application_id: t.id,
                                     launching_application_id: u,
@@ -108,7 +108,7 @@ function j(e) {
         if (a?.bot == null || !y(a, r?.alpha2)) return null;
         let e = a.bot;
         return () => {
-            E(),
+            C(),
                 p.default.track(m.HAw.CLOUD_PLAY_CTA_CLICKED, {
                     source_application_id: n ?? a.id,
                     launching_application_id: a.id,

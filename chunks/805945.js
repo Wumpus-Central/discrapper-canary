@@ -16,8 +16,8 @@ var l = n(477900),
     g = n(782134),
     x = n(194261),
     A = n(307301),
-    C = n(834730),
-    E = n(890856),
+    E = n(834730),
+    C = n(890856),
     I = n(565645),
     y = n(775602),
     S = n(688810),
@@ -170,8 +170,8 @@ let $ = i.forwardRef(function (e, t) {
                 return { x: e.left + e.width / 2, y: e.top + e.height / 2 };
             }, [s, n])),
         eA = (0, o.bG)([y.Ay], () => y.Ay.useReducedMotion),
-        eC = i.useRef(0.01),
-        eE = i.useRef(new u.IX()),
+        eE = i.useRef(0.01),
+        eC = i.useRef(new u.IX()),
         eI = "1" === f.soundId,
         ey = `sound-${f.soundId}`,
         eS = (0, a.rm)(ey),
@@ -191,8 +191,8 @@ let $ = i.forwardRef(function (e, t) {
     function ek(e) {
         (eI &&
             !eA &&
-            ((eC.current = Math.min(eC.current + 0.01, 0.1)),
-            Math.random() < eC.current && ep(ex.x, ex.y, void 0, void 0, { sprite: K.dR })),
+            ((eE.current = Math.min(eE.current + 0.01, 0.1)),
+            Math.random() < eE.current && ep(ex.x, ex.y, void 0, void 0, { sprite: K.dR })),
         null != G)
             ? G(e)
             : L || eh($);
@@ -239,11 +239,11 @@ let $ = i.forwardRef(function (e, t) {
         children: (0, l.jsx)(J, { sound: f, disabled: !R && !b }),
     });
     i.useEffect(() => {
-        let e = eE.current;
+        let e = eC.current;
         return (
             eI &&
                 e.start(1e3, () => {
-                    eC.current = Math.max(eC.current - 0.01, 0.01);
+                    eE.current = Math.max(eE.current - 0.01, 0.01);
                 }),
             () => e.stop()
         );
@@ -264,7 +264,7 @@ let $ = i.forwardRef(function (e, t) {
                 position: eT + 50 > ej ? "top" : "bottom",
                 shouldShow: !eb,
                 delay: 500,
-                children: (0, l.jsxs)(E.s, {
+                children: (0, l.jsxs)(C.s, {
                     ...er,
                     buttonProps: { ...eS, id: ey, role: "button" },
                     "aria-label": Z.intl.formatToPlainString(Z.t.tuMUJ2, { emojiName: f.emojiName, soundName: f.name }),
@@ -293,7 +293,7 @@ let $ = i.forwardRef(function (e, t) {
                             ref: eg,
                             children: [
                                 eN && (0, l.jsx)(I.A, { emojiId: eo, emojiName: eu, className: Y.Zg }),
-                                (0, l.jsx)(C.E, {
+                                (0, l.jsx)(E.E, {
                                     variant: "text-xs/medium",
                                     color: R ? void 0 : "text-muted",
                                     className: r()(Y.TW, { [Y.hn]: eN }),
@@ -320,7 +320,7 @@ let $ = i.forwardRef(function (e, t) {
                                                                 color: "currentColor",
                                                                 className: Y.y_,
                                                             }),
-                                                            (0, l.jsx)(C.E, {
+                                                            (0, l.jsx)(E.E, {
                                                                 variant: "text-xs/medium",
                                                                 color: "text-strong",
                                                                 children: Z.intl.string(Z.t.QqqXLY),

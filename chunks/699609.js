@@ -33,16 +33,16 @@ var M = n(136722),
     k = n(696451),
     x = n(317525),
     G = n(71393),
-    v = n(287809),
-    j = n(488926),
+    j = n(287809),
+    v = n(488926),
     q = n(935208),
-    b = n(209700),
-    X = n(652215),
+    X = n(209700),
+    b = n(652215),
     B = n(375708),
     w = n(588397);
 function F(e) {
     let { guildId: t } = e,
-        n = (0, a.bG)([v.default], () => v.default.getCurrentUser()),
+        n = (0, a.bG)([j.default], () => j.default.getCurrentUser()),
         r = (0, a.bG)([G.A], () => G.A.getGuild(t)),
         s = (0, a.bG)([x.A], () => x.A.getRolesSnapshot(t)),
         E = (0, a.bG)([x.A], () => x.A.getSortedRoles(t)),
@@ -50,7 +50,7 @@ function F(e) {
             impersonateType: f.A.getImpersonateType(t),
             viewingRoles: f.A.getViewingRoles(t),
         })),
-        _ = o === b._.SERVER_SHOP,
+        _ = o === X._.SERVER_SHOP,
         u = (0, a.bG)([k.Ay], () => (null != n ? k.Ay.getTrueMember(t, n.id) : null)),
         A = null != r ? s[(0, L.af)(r)] : null,
         [T, d] = l.useState(() => {
@@ -75,7 +75,7 @@ function F(e) {
                 null != r && null != n
                     ? E.filter((e) => !(0, y.Oy)(e))
                           .filter((e) => !_ || e.tags?.subscription_listing_id != null)
-                          .filter((e) => N?.id === e.id || j.wO(r, n.id, N, e))
+                          .filter((e) => N?.id === e.id || v.wO(r, n.id, N, e))
                     : [],
             [r, n, _, N, E],
         ),
@@ -100,7 +100,7 @@ function F(e) {
         let t = s[e];
         null != t && (S[t.id] = t);
     }),
-    M.zy(j.aH({ forceRoles: S, context: r }), M.kg(X.xBc.MANAGE_GUILD, X.xBc.MANAGE_ROLES)) || (0, L.bM)(r, n))
+    M.zy(v.aH({ forceRoles: S, context: r }), M.kg(b.xBc.MANAGE_GUILD, b.xBc.MANAGE_ROLES)) || (0, L.bM)(r, n))
         ? (0, i.jsx)("div", {
               className: w.kL,
               children: (0, i.jsxs)(U.iS, {
@@ -168,26 +168,26 @@ function z() {
     if (null == r || null == t) return null;
     let M = (function (e) {
             switch (e) {
-                case X.BEX.INTEGRATIONS:
+                case b.BEX.INTEGRATIONS:
                     return B.intl.string(B.t.k7LGdh);
-                case X.BEX.ROLE_SUBSCRIPTIONS:
+                case b.BEX.ROLE_SUBSCRIPTIONS:
                     return B.intl.string(B.t.bRqiqa);
-                case X.BEX.ONBOARDING:
+                case b.BEX.ONBOARDING:
                     return B.intl.string(B.t.qZpU3S);
                 default:
                     return B.intl.string(B.t.MTIXhi);
             }
         })(s),
-        g = s === X.BEX.ROLE_SUBSCRIPTIONS ? B.intl.string(B.t.hZUCzd) : B.intl.string(B.t["/djIh7"]),
+        g = s === b.BEX.ROLE_SUBSCRIPTIONS ? B.intl.string(B.t.hZUCzd) : B.intl.string(B.t["/djIh7"]),
         h = n === V.VV.GUILD_ONBOARDING;
     function U(e) {
         let { backToSettings: n } = e;
         null != t &&
-            (f.A.isFullServerPreview(t) && (0, O.pX)(X.BVt.CHANNEL(t)),
+            (f.A.isFullServerPreview(t) && (0, O.pX)(b.BVt.CHANNEL(t)),
             d.Ay.shouldShowOnboarding(t) && (T.A.finishOnboarding(t), (0, I.Jg)(t)),
             (0, p.rf)(t),
             n && R.A.open(t, s),
-            s === X.BEX.ROLE_SUBSCRIPTIONS && (0, N.Fx)(t));
+            s === b.BEX.ROLE_SUBSCRIPTIONS && (0, N.Fx)(t));
     }
     return (0, i.jsxs)(c.$T, {
         color: c.Hv.BRAND,
@@ -250,7 +250,7 @@ function z() {
                               }),
                       ],
                   }),
-            o || s === X.BEX.ROLE_SUBSCRIPTIONS
+            o || s === b.BEX.ROLE_SUBSCRIPTIONS
                 ? null
                 : (0, i.jsx)(Z, { onClick: () => U({ backToSettings: !1 }), className: K.ZY }),
         ],

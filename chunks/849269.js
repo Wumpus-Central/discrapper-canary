@@ -16,8 +16,8 @@ var l,
     g = n(969151),
     x = n(847381),
     A = n(435582),
-    C = n(902439),
-    E = n(620148),
+    E = n(902439),
+    C = n(620148),
     I = n(283488),
     y = n(360469),
     S = n(652215),
@@ -38,12 +38,12 @@ function _(e) {
         } = e,
         { application: m, activity: f } = t,
         g = f.client_platform_config[(0, x.A)((0, d.getOS)())],
-        C = Date.now(),
-        E =
+        E = Date.now(),
+        C =
             null != g.label_until &&
-            C < Date.parse(g.label_until) &&
+            E < Date.parse(g.label_until) &&
             null != g.label_from &&
-            C > Date.parse(g.label_from),
+            E > Date.parse(g.label_from),
         y = (0, I.A)({ applicationId: m.id, size: o, names: a, format: "webp" }),
         S = null != f.activity_preview_video_asset_id ? (0, A.A)(m.id, f.activity_preview_video_asset_id) : null,
         N = (0, p.Ay)("channel" === n.type ? n.channel : void 0).find((e) => {
@@ -68,7 +68,7 @@ function _(e) {
         joinableEmbeddedApp: N,
         activityAction: v,
         onActivityItemSelected: _,
-        labelType: E ? g.label_type : s.Hr.NONE,
+        labelType: C ? g.label_type : s.Hr.NONE,
         staffReleasePhase: R,
     };
 }
@@ -81,8 +81,8 @@ function T(e) {
     let { context: t, applicationId: n, fetchesApplication: l = !0 } = e,
         i = 0,
         s = "channel" === t.type ? t.channel : void 0,
-        r = (0, C.A)(),
-        o = (0, E.A)({ fetchesApplication: l }),
+        r = (0, E.A)(),
+        o = (0, C.A)({ fetchesApplication: l }),
         u = (0, a.h)(n, l),
         c = (0, p.Ay)(s).find((e) => {
             let { embeddedActivity: t } = e;
@@ -105,14 +105,14 @@ function b(e) {
             sectionName: g,
             source: x,
             fetchesApplication: A = !0,
-            customId: E,
+            customId: C,
             referrerId: I,
             onConfirmActivityLaunchChecksAlertOpen: y,
         } = e,
         S = t?.id ?? "",
         v = T({ context: l, applicationId: S, fetchesApplication: A }),
         { analyticsLocations: _ } = (0, r.Ay)(),
-        j = (0, C.A)(),
+        j = (0, E.A)(),
         b = (0, c.x)(t);
     if (null == t)
         return () => {
@@ -143,7 +143,7 @@ function b(e) {
                     commandOrigin: p,
                     sectionName: g,
                     source: x,
-                    customId: E,
+                    customId: C,
                     referrerId: I,
                     onConfirmActivityLaunchChecksAlertOpen: y,
                 }).then((e) => e && o?.({ applicationId: S }));
@@ -159,7 +159,7 @@ function b(e) {
                         componentId: d,
                         sectionName: g,
                         source: x,
-                        customId: E,
+                        customId: C,
                         referrerId: I,
                     }).then((e) => e && o?.({ applicationId: S })));
             };

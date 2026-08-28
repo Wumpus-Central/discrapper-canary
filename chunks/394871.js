@@ -17,7 +17,7 @@ var l = n(477900),
     x = n(823854);
 n(851883);
 var A = n(607013);
-function C(e) {
+function E(e) {
     let t,
         {
             customStatusActivity: n,
@@ -26,8 +26,8 @@ function C(e) {
             userId: d,
             textSize: h = "xs",
             animateEmoji: m = !0,
-            hideEmoji: C = !1,
-            hideTooltip: E = !1,
+            hideEmoji: E = !1,
+            hideTooltip: C = !1,
         } = e,
         I = n?.emoji,
         y = (function (e) {
@@ -43,7 +43,7 @@ function C(e) {
         S = y.statusTextOverride ?? n?.state,
         N = null != S && "" !== S,
         v = null;
-    null == I || C || (v = (0, l.jsx)(p.A, { emoji: I, animate: m, className: s, hideTooltip: E || N }));
+    null == I || E || (v = (0, l.jsx)(p.A, { emoji: I, animate: m, className: s, hideTooltip: C || N }));
     let _ = N ? (null != v ? ` ${S}` : S) : null;
     return null == n
         ? null
@@ -52,15 +52,15 @@ function C(e) {
               color: "none",
               className: r()(A.ps, a),
               children:
-                  ((t = null != I && !C && !N),
-                  E || t
+                  ((t = null != I && !E && !N),
+                  C || t
                       ? (0, l.jsxs)(l.Fragment, { children: [v, _] })
                       : null != y.presence
                         ? (0, l.jsx)(c.m, { delay: 150, children: (0, l.jsxs)("span", { children: [v, _] }) })
                         : (0, l.jsxs)("span", { children: [v, _] })),
           });
 }
-var E = n(994500),
+var C = n(994500),
     I = n(577473),
     y = n(661531);
 function S(e) {
@@ -130,7 +130,7 @@ function L(e) {
         g = null != m && "" !== m,
         x = null;
     null == f || d || (x = (0, l.jsx)(p.A, { emoji: f, animate: c, className: s, hideTooltip: h || g }));
-    let C = g && (null != x ? ` ${m}` : m);
+    let E = g && (null != x ? ` ${m}` : m);
     return (0, l.jsx)(o.E, {
         variant: `text-${u}/medium`,
         color: "none",
@@ -138,12 +138,12 @@ function L(e) {
         children:
             ((t = null != f && !d && !g),
             h || t
-                ? (0, l.jsxs)(l.Fragment, { children: [x, C] })
+                ? (0, l.jsxs)(l.Fragment, { children: [x, E] })
                 : (0, l.jsxs)(O.A, {
                       delay: 150,
                       tooltipClassName: a,
                       className: A.Nu,
-                      children: [x, !1 !== C && (0, l.jsx)("span", { className: A.ps, children: C })],
+                      children: [x, !1 !== E && (0, l.jsx)("span", { className: A.ps, children: E })],
                   })),
     });
 }
@@ -242,7 +242,7 @@ function F(e) {
         ),
         w = n?.find((e) => e.name === j?.name),
         D = t?.bot === !0,
-        F = (0, u.bG)([E.A], () => E.A.isBlockedOrIgnored(t?.id)),
+        F = (0, u.bG)([C.A], () => C.A.isBlockedOrIgnored(t?.id)),
         H = T?.state != null,
         B = null != _,
         W = !B && null != o,
@@ -332,7 +332,7 @@ function F(e) {
               children: [
                   null == O
                       ? null
-                      : (0, l.jsx)(C, {
+                      : (0, l.jsx)(E, {
                             customStatusActivity: T,
                             textSize: x,
                             animateEmoji: I,

@@ -16,8 +16,8 @@ var l = n(477900),
     g = n(565150),
     x = n(478531),
     A = n(607470),
-    C = n(256905),
-    E = n(302031),
+    E = n(256905),
+    C = n(302031),
     I = n(734057),
     y = n(515718),
     S = n(851023),
@@ -29,10 +29,10 @@ let T = ["image/jpeg", "image/png", "image/webp", "image/gif", "image/avif", "vi
 function b(e) {
     let { alt: t, spoiler: n, renderContent: s, size: a } = e,
         [o, u] = i.useState(!1);
-    return (0, l.jsx)(E.Bs.Provider, {
+    return (0, l.jsx)(C.Bs.Provider, {
         value: !n,
-        children: (0, l.jsx)(E.Ay, {
-            type: E.Ay.Types.ATTACHMENT,
+        children: (0, l.jsx)(C.Ay, {
+            type: C.Ay.Types.ATTACHMENT,
             onReveal: () => u(!0),
             className: r()(j.spoilerContainer, {
                 [j.sizeXSmall]: a === N.L.XSMALL,
@@ -105,7 +105,7 @@ function R(e) {
         ),
         g = i.useCallback(() => {
             null != c &&
-                (0, C.R)({
+                (0, E.R)({
                     location: "ChannelAttachmentUpload",
                     items: [{ type: "IMAGE", url: c }],
                     shouldHideMediaOptions: !0,
@@ -230,8 +230,8 @@ function L(e) {
             keyboardModeEnabled: g,
             label: x,
             size: A = N.L.MEDIUM,
-            canEdit: C = !0,
-            hideFileName: E = !1,
+            canEdit: E = !0,
+            hideFileName: C = !1,
             clip: y,
         } = e,
         T = null != y,
@@ -301,7 +301,7 @@ function L(e) {
     return (0, l.jsxs)(N.A, {
         actions: (0, l.jsxs)(i.Fragment, {
             children: [
-                C
+                E
                     ? (0, l.jsx)(S.A, {
                           className: r()({ [j.action]: b }),
                           tooltip: T ? v.intl.string(v.t.MYgdY2) : v.intl.string(v.t.cuurzA),
@@ -319,7 +319,7 @@ function L(e) {
                                 }),
                       })
                     : null,
-                C
+                E
                     ? (0, l.jsx)(S.A, {
                           className: r()({ [j.action]: b }),
                           tooltip: T ? v.intl.string(_.default.V8YlF7) : v.intl.string(v.t.Y8ujqr),
@@ -353,7 +353,7 @@ function L(e) {
         className: r()({ [j.attachmentItemSmall]: b }),
         children: [
             (0, l.jsx)(M, { upload: o, size: A, clip: y, guildId: R }),
-            !E &&
+            !C &&
                 (0, l.jsx)("div", {
                     className: j.filenameContainer,
                     "aria-hidden": !0,

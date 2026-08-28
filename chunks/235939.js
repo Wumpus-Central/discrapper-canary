@@ -1,20 +1,20 @@
-n.d(t, { A: () => d });
-var s = n(477900);
-n(582128);
-var l = n(877624),
-    r = n(554146),
-    a = n(131607),
-    i = n(549996),
-    o = n(613556),
-    u = n(814124),
-    c = n(49999);
+l.d(n, { A: () => d });
+var s = l(477900);
+l(582128);
+var t = l(877624),
+    r = l(554146),
+    i = l(131607),
+    a = l(549996),
+    o = l(613556),
+    u = l(814124),
+    c = l(49999);
 function d(e) {
-    let { tab: t, handleTransition: n } = e,
-        d = (0, i.c)(l.C.SHOP_NAGBAR),
-        E = d?.properties.properties.oneofKind === "shopNagbar" ? d.properties.properties.shopNagbar : null,
-        g = d?.promotionId,
-        [_, A] = (0, a.Cc)(null != E && null != g ? r.M.PREMIUM_SHOP_NAGBAR_NOTICE : null, g ?? "", c.m.NOTICE_BAR, !0);
-    return null != d && null != E && null != _
-        ? (0, s.jsx)(o.A, { shopNagbar: E, componentId: d.id, promotionId: d.promotionId, tab: t, onDismiss: A })
-        : (0, s.jsx)(u.A, { tab: t, handleTransition: n });
+    let { tab: n, handleTransition: l } = e,
+        d = (0, a.c)(t.C.SHOP_NAGBAR),
+        p = d?.properties.properties.oneofKind === "shopNagbar" ? d.properties.properties.shopNagbar : null,
+        h = d?.promotionId,
+        [m, A] = (0, i.Cc)(null != p && null != h ? r.M.PREMIUM_SHOP_NAGBAR_NOTICE : null, h ?? "", c.m.NOTICE_BAR, !0);
+    return null != d && null != p && null != m
+        ? (0, s.jsx)(o.A, { shopNagbar: p, componentId: d.id, promotionId: d.promotionId, tab: n, onDismiss: A })
+        : (0, s.jsx)(u.A, { tab: n, handleTransition: l });
 }

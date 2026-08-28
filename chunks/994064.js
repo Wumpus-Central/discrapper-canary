@@ -16,8 +16,8 @@ var l = n(477900),
     g = n(43990),
     x = n(607470),
     A = n(384015),
-    C = n(945810),
-    E = n(953051),
+    E = n(945810),
+    C = n(953051),
     I = n(423562),
     y = n(544180),
     S = n(953727);
@@ -843,7 +843,7 @@ class ed extends i.Component {
         });
     }
 }
-let eh = (0, C.mj)({
+let eh = (0, E.mj)({
     name: "2026-03-media-play-metrics",
     kind: "user",
     defaultConfig: { enabled: !1 },
@@ -1327,7 +1327,7 @@ class ef extends i.PureComponent {
         if (e.key === ee.dh.SPACE) e.preventDefault(), this.setPlay(!this.state.playing);
         else if (e.key !== ee.dh.ARROW_LEFT || null == t || n)
             if (e.key !== ee.dh.ARROW_RIGHT || null == t || n) {
-                if ((0, E.A)(e.key) && null != t) {
+                if ((0, C.A)(e.key) && null != t) {
                     e.preventDefault(), e.stopPropagation();
                     let n = Number(e.key) / 10;
                     (t.currentTime = t.duration * n), this.setPlay(!0);
@@ -1467,7 +1467,7 @@ class ef extends i.PureComponent {
                     dragging: A,
                 },
             } = this,
-            C = this.getWidth();
+            E = this.getWidth();
         return h || n || t === es.AUDIO
             ? (0, l.jsx)(eu, {
                   buffers: u,
@@ -1491,7 +1491,7 @@ class ef extends i.PureComponent {
                   dragging: A,
                   type: t,
                   ref: this.controlsRef,
-                  width: g ? window.screen.width : C,
+                  width: g ? window.screen.width : E,
                   disabled: !i,
                   children:
                       t === es.VIDEO && !1 !== this.props.allowFullScreen

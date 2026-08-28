@@ -16,8 +16,8 @@ var l = n(477900),
     g = n(259678),
     x = n(750506),
     A = n(267102),
-    C = n(186306),
-    E = n(339871),
+    E = n(186306),
+    C = n(339871),
     I = n(820066),
     y = n(375708),
     S = n(9287);
@@ -128,7 +128,7 @@ let v = i.forwardRef(function (e, t) {
                 }
             );
         }, [m, f, p, g]);
-    let { x: C, y: E } = i.useMemo(() => {
+    let { x: E, y: C } = i.useMemo(() => {
             let e = n();
             if (e?.selection == null || I.ZF.isCollapsed(e.selection) || !c) return { x: null, y: null };
             let t = a.rL.findDocumentOrShadowRoot(e),
@@ -154,11 +154,11 @@ let v = i.forwardRef(function (e, t) {
         [_, j] = i.useState(0);
     if (
         (i.useLayoutEffect(() => {
-            if (null == C || null == E || null == u.current) return;
+            if (null == E || null == C || null == u.current) return;
             let e = u.current.getBoundingClientRect();
             j(e.width / 2), v(e.height + 12);
-        }, [C, E]),
-        null == C || null == E)
+        }, [E, C]),
+        null == E || null == C)
     )
         return null;
     let T = n();
@@ -169,7 +169,7 @@ let v = i.forwardRef(function (e, t) {
                   id: "slate-toolbar",
                   ref: u,
                   className: S.KE,
-                  style: { top: E - y, left: C - _ },
+                  style: { top: C - y, left: E - _ },
                   onMouseDown: (e) => {
                       e.preventDefault(), e.stopPropagation();
                   },
@@ -185,7 +185,7 @@ function _(e) {
         s = !1;
     if (t?.selection != null) {
         let [e, l] = I.ZF.edges(t.selection);
-        s = null != (0, E.Sx)(t, e, l).before[n];
+        s = null != (0, C.Sx)(t, e, l).before[n];
     }
     return (0, l.jsx)(g.vN, {
         children: (0, l.jsx)("button", {
@@ -208,7 +208,7 @@ function _(e) {
             "aria-pressed": s,
             className: S.x6,
             onClick: function () {
-                null != t && C.o.withSingleEntry(t, () => (0, E.Px)(t, n));
+                null != t && E.o.withSingleEntry(t, () => (0, C.Px)(t, n));
             },
             children: i,
         }),
@@ -226,7 +226,7 @@ function j(e) {
             "aria-pressed": r,
             className: S.x6,
             onClick: function () {
-                null != n && C.o.withSingleEntry(n, () => (0, E.fO)(n, t));
+                null != n && E.o.withSingleEntry(n, () => (0, C.fO)(n, t));
             },
             children: i,
         }),

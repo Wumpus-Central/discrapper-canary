@@ -11,10 +11,10 @@ var i = n(477900),
     g = n(857250),
     m = n(97483),
     A = n(375708);
-function h() {
+function E() {
     (0, c.P0)((0, g.o)(A.intl.string(A.t["84MExs"]), m.Ck.FAILURE));
 }
-var E = n(159001);
+var h = n(159001);
 function S() {
     let {
             selectedGuildId: e,
@@ -25,8 +25,8 @@ function S() {
             canSubmit: u.A.canSubmit(),
             errors: u.A.getErrors(u.A.selectedGuildId),
         })),
-        [h, S] = l.useState(!1),
-        p = l.useMemo(
+        [E, S] = l.useState(!1),
+        T = l.useMemo(
             () =>
                 n?.guild_tag !== void 0 && n.guild_tag.length > 0
                     ? n.guild_tag[0]
@@ -35,14 +35,14 @@ function S() {
                       : null,
             [n],
         ),
-        x = l.useCallback(async () => {
+        p = l.useCallback(async () => {
             S(!0);
             let t = u.A.getPendingChanges(e),
                 n = (0, a.C5)(t),
                 i = (0, a.yX)(t, e),
                 l = !0;
             if (Object.keys(n).length > 0) {
-                let i = await (0, E.GL)(e, n);
+                let i = await (0, h.GL)(e, n);
                 if (((l = l && (i?.ok ?? !1)), i?.ok)) {
                     let e = i.body;
                     void 0 !== t.pendingAvatar &&
@@ -52,25 +52,25 @@ function S() {
                             avatarId: n.avatarId,
                             avatarAssetOrigin: t.pendingAvatar?.assetOrigin,
                         }),
-                        (0, E.go)();
+                        (0, h.go)();
                 }
             }
             if (Object.keys(i).length > 0) {
                 let { bannerOriginalMd5: t, ...n } = i,
                     s = await (0, o.gi)(n, e, t);
                 (l = l && (s?.ok ?? !1)),
-                    s?.ok ? (0, E.RE)() : (0, c.P0)((0, g.o)(A.intl.string(A.t.s35OuK), m.Ck.FAILURE));
+                    s?.ok ? (0, h.RE)() : (0, c.P0)((0, g.o)(A.intl.string(A.t.s35OuK), m.Ck.FAILURE));
             }
-            l && (0, E.x8)(), S(!1);
+            l && (0, h.x8)(), S(!1);
         }, [e]),
-        T = l.useCallback(() => {
-            (0, E.IM)();
+        x = l.useCallback(() => {
+            (0, h.IM)();
         }, []);
-    return (0, i.jsx)(r.A, { submitting: h, onSave: x, onReset: T, disabled: !t, errorMessage: p ?? void 0 });
+    return (0, i.jsx)(r.A, { submitting: E, onSave: p, onReset: x, disabled: !t, errorMessage: T ?? void 0 });
 }
-var p = n(631670),
-    x = n(933725),
-    T = n(885386),
+var T = n(631670),
+    p = n(933725),
+    x = n(885386),
     f = n(774914);
 function I() {
     let { canSubmit: e, errors: t } = (0, s.cf)([u.A], () => ({ canSubmit: u.A.canSubmit(), errors: u.A.getErrors() })),
@@ -84,7 +84,7 @@ function I() {
                 i = (0, a.yg)(e),
                 l = !0;
             if (Object.keys(t).length > 0) {
-                let n = await (0, p._L)(t);
+                let n = await (0, T._L)(t);
                 if (((l = l && (n?.ok ?? !1)), n?.ok)) {
                     let i = n.body;
                     void 0 !== e.pendingAvatar &&
@@ -93,33 +93,33 @@ function I() {
                             avatarId: t.avatarId,
                             avatarAssetOrigin: e.pendingAvatar?.assetOrigin,
                         }),
-                        (0, p.pZ)();
+                        (0, T.pZ)();
                 } else n?.body?.username != null && (0, f.E)();
             }
             if (Object.keys(n).length > 0) {
                 let { bannerOriginalMd5: e, ...t } = n,
                     i = await (0, o.gi)(t, void 0, e);
-                (l = l && (i?.ok ?? !1)), i?.ok ? (0, o.RE)() : h();
+                (l = l && (i?.ok ?? !1)), i?.ok ? (0, o.RE)() : E();
             }
             if (void 0 !== e.pendingLegacyUsernameDisabled)
                 try {
-                    await T.m$.updateSetting(e.pendingLegacyUsernameDisabled), (0, p._e)();
+                    await x.m$.updateSetting(e.pendingLegacyUsernameDisabled), (0, T._e)();
                 } catch {
-                    h(), (l = !1);
+                    E(), (l = !1);
                 }
             if (Object.keys(i).length > 0) {
                 let { primaryGuildId: e } = i;
                 if (void 0 !== e) {
-                    let t = await (0, x.m)(e, null !== e);
-                    (l = l && (t?.ok ?? !1)), t?.ok ? (0, p.fw)() : h();
+                    let t = await (0, p.m)(e, null !== e);
+                    (l = l && (t?.ok ?? !1)), t?.ok ? (0, T.fw)() : E();
                 }
             }
-            l && (0, p.x8)(), c(!1);
+            l && (0, T.x8)(), c(!1);
         }, []),
-        E = l.useCallback(() => {
-            (0, p.IM)();
+        h = l.useCallback(() => {
+            (0, T.IM)();
         }, []);
-    return (0, i.jsx)(r.A, { submitting: n, onSave: m, onReset: E, disabled: !e, errorMessage: g ?? void 0 });
+    return (0, i.jsx)(r.A, { submitting: n, onSave: m, onReset: h, disabled: !e, errorMessage: g ?? void 0 });
 }
 var _ = n(507553),
     N = n(355097);

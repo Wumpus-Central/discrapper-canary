@@ -16,7 +16,7 @@ var l = n(477900),
     g = n(953792);
 let x = "/assets/b6c2e5ec03845c03.jpg",
     A = "/assets/f2e13fd1d0c497be.jpg";
-function C() {
+function E() {
     return (0, l.jsx)("div", {
         className: g.k,
         children: (0, l.jsxs)("svg", {
@@ -90,10 +90,10 @@ function C() {
         }),
     });
 }
-var E = n(781380);
+var C = n(781380);
 function I() {
     return (0, l.jsx)("div", {
-        className: E.k,
+        className: C.k,
         children: (0, l.jsxs)("svg", {
             width: "248",
             height: "67",
@@ -376,7 +376,7 @@ let k = Object.freeze({
         popoutPosition: "right",
         textAlign: p.YL.CENTER,
         spacing: 8,
-        media: () => (0, l.jsx)(C, {}),
+        media: () => (0, l.jsx)(E, {}),
     },
     "instant-invite": { popoutPosition: "right", spacing: 24, highPriority: !0 },
     "whos-online": { spacing: 16, popoutPosition: "left" },
@@ -499,11 +499,11 @@ class B extends i.PureComponent {
             } = s,
             { offsetX: g, offsetY: x } = this.state,
             A = { left: null != g ? i.x + g : void 0, top: null != x ? i.y + x : void 0 };
-        function C(e) {
+        function E(e) {
             let t = n && !e;
             return { [H.bW]: t, [H.EO]: !t, [H.TX]: c };
         }
-        let E = this.getTutorialPopoutText();
+        let C = this.getTutorialPopoutText();
         return (0, l.jsx)(p.Ay, {
             innerRef: this.contentRef,
             position: f,
@@ -516,7 +516,7 @@ class B extends i.PureComponent {
             arrowAlignment: m,
             onSkipAll: this.handleSkipTips,
             onComplete: this.handleDismiss,
-            ...E,
+            ...C,
             children: (e, t) => {
                 let i,
                     { isShown: s } = t;
@@ -527,7 +527,7 @@ class B extends i.PureComponent {
                     style: A,
                     innerRef: this.contentRef,
                     children: (0, l.jsxs)("div", {
-                        className: r()(H.Mp, C(s)),
+                        className: r()(H.Mp, E(s)),
                         children: [
                             ((i = n && !s),
                             !0 !== c
@@ -538,8 +538,8 @@ class B extends i.PureComponent {
                                           (0, l.jsx)("div", { className: r()(H.sQ, { [H.bW]: i, [H.EO]: !i }) }),
                                       ],
                                   })),
-                            (0, l.jsx)("div", { className: r()(H.r6, C(s)) }),
-                            (0, l.jsx)("div", { className: r()(H.CY, C(s)) }),
+                            (0, l.jsx)("div", { className: r()(H.r6, E(s)) }),
+                            (0, l.jsx)("div", { className: r()(H.CY, E(s)) }),
                         ],
                     }),
                 });

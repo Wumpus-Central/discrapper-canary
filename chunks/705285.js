@@ -4,8 +4,8 @@ var s,
     a = n(582128),
     i = n(440938),
     r = n(174459),
-    o = n(652215),
-    c = n(758836),
+    c = n(652215),
+    o = n(758836),
     d =
         (((s = {}).SHOP_CARD = "GAME_SERVER_SHOP_CARD"),
         (s.ACTIVITY_PANEL_DEEP_LINK = "GAME_SERVER_ACTIVITY_PANEL_DEEP_LINK"),
@@ -16,7 +16,7 @@ function m(e) {
 }
 function g(e) {
     let { server: t, channels: n, hasContextMessage: s, source: l } = e;
-    r.default.track(o.HAw.GAME_SERVER_SHARE_FORWARDED, {
+    r.default.track(c.HAw.GAME_SERVER_SHARE_FORWARDED, {
         destination_type: (function (e) {
             if (0 === e.length) return null;
             let t = new Set(e.map(m)),
@@ -36,9 +36,9 @@ function h() {
     let e = (0, i.uM)();
     return a.useCallback(
         (t, n) => {
-            r.default.track(o.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+            r.default.track(c.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                 collectibles_shop_session_id: e?.sessionId,
-                page_type: c.G2.GAME_SERVERS,
+                page_type: o.G2.GAME_SERVERS,
                 page_category: e?.pageCategory,
                 page_section: e?.pageSection,
                 tile_type: n,

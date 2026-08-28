@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => I, n: () => E });
+n.d(t, { A: () => I, n: () => C });
 var l = n(477900),
     i = n(582128),
     s = n(922016),
@@ -16,8 +16,8 @@ var l = n(477900),
     g = n(20805),
     x = n(438692),
     A = n(375708),
-    C = n(495602);
-let E = "content-inventory-context";
+    E = n(495602);
+let C = "content-inventory-context";
 function I(e) {
     let { user: t, guildId: n, channel: I, entry: y, onSelect: S, disableGameProfileLinks: N } = e,
         v = i.useRef(null),
@@ -43,7 +43,7 @@ function I(e) {
             let { closePopout: t } = e;
             return (0, l.jsx)(r.W, {
                 "data-menu-migrated-auto": !0,
-                navId: E,
+                navId: C,
                 onClose: () => {
                     (0, d.Z_)(), t();
                 },
@@ -75,7 +75,7 @@ function I(e) {
                 text: A.intl.string(A.t["UKOtz+"]),
                 children: (0, l.jsx)(u.D, {
                     innerRef: v,
-                    className: C.r,
+                    className: E.r,
                     ...e,
                     children: (0, l.jsx)(c.MoreHorizontalIcon, {
                         color: "currentColor",

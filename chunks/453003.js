@@ -43,8 +43,8 @@ var G = n(665260),
     F = n(652215),
     z = n(55730),
     J = n(287613),
-    Y = n(659051),
-    K = n(702631),
+    K = n(659051),
+    Y = n(702631),
     W = n(375708),
     X = n(946255),
     Z =
@@ -264,9 +264,9 @@ function el(e) {
                 isFrameApplication: r,
                 isGameLaunchable: o,
             } = e;
-            if (l.author.id === i || !(0, Y.A)(t, l, s.id)) return { canJoin: !1, remoteJoinPlatform: null };
+            if (l.author.id === i || !(0, K.A)(t, l, s.id)) return { canJoin: !1, remoteJoinPlatform: null };
             let c = (0, U._)(t);
-            if (!(0, J.A)(c) || (0, K.U)(c) || (0, D.w)(n, t) || (0, P.v)(l))
+            if (!(0, J.A)(c) || (0, Y.U)(c) || (0, D.w)(n, t) || (0, P.v)(l))
                 return { canJoin: !1, remoteJoinPlatform: null };
             if (a && r) return { canJoin: !0, remoteJoinPlatform: null };
             if (l.activity?.type === F.xL.JOIN && null != t) {
@@ -306,7 +306,7 @@ function el(e) {
         }),
         eE = !(
             null == f ||
-            !(0, Y.A)(f, t, n.id) ||
+            !(0, K.A)(f, t, n.id) ||
             !(0, z.A)(f, F.jUm.SYNC) ||
             !O.isPlatformEmbedded ||
             (0, D.w)(T, f)
@@ -314,13 +314,13 @@ function el(e) {
         eI = (function (e, t, n, i) {
             if (
                 t.author.id === i ||
-                !(0, Y.A)(e, t, n.id) ||
+                !(0, K.A)(e, t, n.id) ||
                 t.activity?.type !== F.xL.JOIN_REQUEST ||
                 !(0, z.A)(e, F.jUm.JOIN)
             )
                 return !1;
             let l = (0, U._)(e);
-            return !(!(0, J.A)(l) || (0, K.U)(l));
+            return !(!(0, J.A)(l) || (0, Y.U)(l));
         })(f, t, n, c),
         eC = (0, D.w)(T, f),
         e_ = null != f && (0, z.A)(f, F.jUm.SUPPORTS_REMOTE_ACTIVITY_ACTION_JOIN),

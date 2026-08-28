@@ -6,12 +6,12 @@ var i = n(477900),
     a = n(287809),
     o = n(158045),
     c = n(23722);
-let u = { id: "default" },
-    d = l.createContext(null),
+let d = { id: "default" },
+    u = l.createContext(null),
     g = l.createContext(null);
 function m(e) {
     let { children: t } = e,
-        [n, m] = l.useState(u),
+        [n, m] = l.useState(d),
         [x, f] = l.useState(null),
         [h] = l.useState(r.B$),
         p = l.useRef(h),
@@ -19,11 +19,11 @@ function m(e) {
             m(e);
         }),
         j = l.useCallback(() => {
-            m(u);
+            m(d);
         }, []),
         A = l.useCallback(() => p.current, []),
         E = (0, s.bG)([a.default], () => o.Ay.canUsePremiumProfileCustomization(a.default.getCurrentUser())),
-        v = E ? u : n,
+        v = E ? d : n,
         C = !E && x?.id === "premiumTryItOut",
         S = l.useCallback(() => {
             f(v);
@@ -43,10 +43,10 @@ function m(e) {
             }),
             [v, x, S, I, j, A, b],
         );
-    return (0, i.jsx)(g.Provider, { value: C, children: (0, i.jsx)(d.Provider, { value: T, children: t }) });
+    return (0, i.jsx)(g.Provider, { value: C, children: (0, i.jsx)(u.Provider, { value: T, children: t }) });
 }
 function x() {
-    let e = l.useContext(d);
+    let e = l.useContext(u);
     if (null == e)
         throw Error("useNavigationContext must be used within UserProfileModalV2EditingPanelNavigationProvider");
     return e;

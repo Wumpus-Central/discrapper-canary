@@ -16,8 +16,8 @@ var l = n(477900),
     g = n(775602),
     x = n(776231),
     A = n(750506),
-    C = n(218394),
-    E = n(256449),
+    E = n(218394),
+    C = n(256449),
     I = n(194004),
     y = n(68935),
     S = n(375708),
@@ -87,7 +87,7 @@ function O(e) {
         } = e,
         g = i.useRef(null),
         A = i.useRef(null),
-        [C, E] = i.useState(!0),
+        [E, C] = i.useState(!0),
         [I, v] = i.useState(!1),
         _ = i.useRef(!1);
     _.current = t && c;
@@ -109,10 +109,10 @@ function O(e) {
                         assetUrl: j,
                         assetData: u,
                         onInitialDraw: () => {
-                            t || E(!1);
+                            t || C(!1);
                         },
                         onError: () => {
-                            t || (E(!1), v(!0), p?.());
+                            t || (C(!1), v(!0), p?.());
                         },
                     })),
                     _.current && A.current.setState(!0));
@@ -135,7 +135,7 @@ function O(e) {
               ref: m,
               children: (0, l.jsx)(R, {
                   hasError: I,
-                  isLoading: C,
+                  isLoading: E,
                   maskAsset: h,
                   size: s,
                   withLoadingIndicator: f,
@@ -157,19 +157,19 @@ let M = (e) => {
             } = e,
             [f, p] = i.useState(!1),
             [g, x] = i.useState(!0),
-            [A, C] = i.useState(!1),
-            E = i.useRef(null),
+            [A, E] = i.useState(!1),
+            C = i.useRef(null),
             I = i.useRef(null),
             S = m ?? (0, y.zg)(n, { isPreview: !t || !f || !s, size: a }),
             _ = i.useCallback(() => {
                 x(!1);
             }, []),
             j = i.useCallback(() => {
-                C(!0);
+                E(!0);
             }, []);
         return (i.useEffect(() => {
-            if (null != E.current) {
-                let { isVisible: e } = E.current;
+            if (null != C.current) {
+                let { isVisible: e } = C.current;
                 p(e);
             }
         }, []),
@@ -180,7 +180,7 @@ let M = (e) => {
             ? null
             : (0, l.jsx)(d.L, {
                   innerRef: c,
-                  ref: E,
+                  ref: C,
                   onChange: p,
                   threshold: 0.7,
                   children: (0, l.jsx)("div", {
@@ -221,8 +221,8 @@ let M = (e) => {
             } = e,
             h = (0, c.bG)([g.Ay], () => g.Ay.useReducedMotion),
             x = i.useRef(null),
-            C = { transform: `scale(${h ? 1 : 1 / n})`, opacity: 0 },
-            E = (0, f.p)(r, { ref: x, from: C, enter: { transform: "scale(1)", opacity: 1 }, leave: C, config: _ }),
+            E = { transform: `scale(${h ? 1 : 1 / n})`, opacity: 0 },
+            C = (0, f.p)(r, { ref: x, from: E, enter: { transform: "scale(1)", opacity: 1 }, leave: E, config: _ }),
             I = i.useRef(null),
             y = (0, p.z)(
                 { ref: I, transform: r || h ? "translateY(0)" : "translateY(-25px)", opacity: +!!r, config: j },
@@ -230,7 +230,7 @@ let M = (e) => {
             );
         return (
             (0, u.useChain)(r ? [x, I] : [I, x], r ? [0, 0.0625] : [0, 0]),
-            E(
+            C(
                 (e, i) =>
                     i &&
                     (0, l.jsx)(A.nE, {
@@ -289,8 +289,8 @@ function k(e) {
             fileUri: f,
             onError: p,
         } = e,
-        g = (0, C.j)(),
-        x = (0, E.Th)(t) && !n,
+        g = (0, E.j)(),
+        x = (0, C.Th)(t) && !n,
         A = i.useRef(null);
     if (null == c) return null;
     let y = c.format_type === I.TG.LOTTIE ? O : M;

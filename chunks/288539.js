@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => E });
+n.d(t, { A: () => C });
 var l = n(477900),
     i = n(582128),
     s = n(607399),
@@ -16,7 +16,7 @@ var l = n(477900),
     g = n(287809),
     x = n(562153),
     A = n(427262);
-function C(e) {
+function E(e) {
     let { userId: t, className: s, children: r } = e,
         o = i.useCallback(() => {
             (0, c.showInaccessibleLinkModal)({ kind: "user" });
@@ -35,11 +35,11 @@ function C(e) {
         );
     return (0, l.jsx)(d.A, { className: s, onClick: o, onContextMenu: u, children: r });
 }
-function E(e) {
+function C(e) {
     let {
             className: t,
             userId: c,
-            channelId: E,
+            channelId: C,
             parsedUserId: I,
             content: y,
             inlinePreview: S = !1,
@@ -48,10 +48,10 @@ function E(e) {
         v = i.useRef(null),
         { analyticsLocations: _ } = (0, u.Ay)(o.A.USER_MENTION),
         j = (0, r.bG)([g.default], () => g.default.getUser(c)),
-        T = (0, r.bG)([m.A], () => m.A.getChannel(E)),
+        T = (0, r.bG)([m.A], () => m.A.getChannel(C)),
         b = null != T ? T.getGuildId() : null,
         R =
-            S || null == j || null == E || null == T
+            S || null == j || null == C || null == T
                 ? void 0
                 : (e) => {
                       null != b
@@ -210,8 +210,8 @@ function E(e) {
                             });
                   },
         O = A.Ay.useName(j),
-        M = (0, r.bG)([m.A, f.Ay, p.A], () => x.Ay.getNickname(b, E, j));
-    if (null == j) return (0, l.jsx)(C, { userId: I, className: t, children: y });
+        M = (0, r.bG)([m.A, f.Ay, p.A], () => x.Ay.getNickname(b, C, j));
+    if (null == j) return (0, l.jsx)(E, { userId: I, className: t, children: y });
     function L(e) {
         return (0, l.jsx)(d.A, { ref: v, className: t, onContextMenu: R, ...e, children: `@${M ?? O}` });
     }
@@ -223,7 +223,7 @@ function E(e) {
                   targetElementRef: v,
                   user: j,
                   guildId: b ?? void 0,
-                  channelId: E,
+                  channelId: C,
                   position: s.Fr ? "top" : "right",
                   clickTrap: !0,
                   children: (e) => L(e),

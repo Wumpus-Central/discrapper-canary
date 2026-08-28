@@ -16,8 +16,8 @@ var l = n(477900),
     g = n(775602),
     x = n(47167),
     A = n(713654),
-    C = n(418842),
-    E = n(734057),
+    E = n(418842),
+    C = n(734057),
     I = n(696451),
     y = n(71393),
     S = n(225142),
@@ -31,7 +31,7 @@ var l = n(477900),
 let O = { compact: 58, cozy: 74, default: 64 };
 function M(e) {
     let { action: t } = e,
-        n = (0, o.bG)([E.A], () => E.A.getChannel(t.channelId)),
+        n = (0, o.bG)([C.A], () => C.A.getChannel(t.channelId)),
         i = (0, x.Ay)(n, !0);
     return null == n
         ? (0, l.jsx)(u.E, {
@@ -47,7 +47,7 @@ function M(e) {
 }
 function L(e) {
     let { channelId: t, emojiId: n, emojiName: i } = e,
-        s = (0, o.bG)([E.A], () => E.A.getChannel(t));
+        s = (0, o.bG)([C.A], () => C.A.getChannel(t));
     if (null == s) return null;
     let r = (0, A.gU)(s) ?? c.N;
     return (0, l.jsx)(j.A, {
@@ -61,23 +61,23 @@ function k(e) {
     let { guildId: t, channel: n, className: s } = e,
         { channelAction: c, completed: x } = (0, v.j4)(t, n),
         A = (0, v.Lr)(t, c?.channelId),
-        E = (0, o.bG)([g.Ay], () => g.Ay.useReducedMotion),
+        C = (0, o.bG)([g.Ay], () => g.Ay.useReducedMotion),
         I = c?.actionType === N.NewMemberActionTypes.VIEW,
         y = (0, d.r)(h.A.colors.WHITE),
-        _ = O[(0, C.C)()],
+        _ = O[(0, E.C)()],
         [j, T] = i.useState(!1),
         [k] = i.useState(new a.A.Value(0)),
         [w] = i.useState(new a.A.Value(0));
     i.useEffect(() => {
         x
-            ? a.A.timing(k, { toValue: 0, duration: E ? 1 : 350, easing: a.A.Easing.quad, delay: 500 * !I }).start(() =>
+            ? a.A.timing(k, { toValue: 0, duration: C ? 1 : 350, easing: a.A.Easing.quad, delay: 500 * !I }).start(() =>
                   T(!0),
               )
-            : a.A.timing(k, { toValue: 1, duration: E ? 1 : 350, easing: a.A.Easing.quad, delay: 400 }).start();
-    }, [x, k, I, E]),
+            : a.A.timing(k, { toValue: 1, duration: C ? 1 : 350, easing: a.A.Easing.quad, delay: 400 }).start();
+    }, [x, k, I, C]),
         i.useEffect(() => {
-            x && j && a.A.timing(w, { toValue: 1, duration: 350 * !E, easing: a.A.Easing.quad, delay: 400 }).start();
-        }, [x, w, j, E]);
+            x && j && a.A.timing(w, { toValue: 1, duration: 350 * !C, easing: a.A.Easing.quad, delay: 400 }).start();
+        }, [x, w, j, C]);
     let P = i.useCallback(() => {
         null != A && (0, S.qo)(t, A.channelId);
     }, [t, A]);

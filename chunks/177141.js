@@ -32,28 +32,28 @@ var i = n(536637),
     k = n(577517),
     x = n(748209),
     G = n(869968),
-    v = n(243217),
-    j = n(287809),
+    j = n(243217),
+    v = n(287809),
     q = n(158045);
-let b = !1;
-class X extends s.Ay.Store {
+let X = !1;
+class b extends s.Ay.Store {
     initialize() {
-        this.waitFor(j.default);
+        this.waitFor(v.default);
     }
     static displayName = "SubscriptionRemindersStore";
     shouldShowReactivateNotice() {
-        let e = j.default.getCurrentUser();
-        return !(0, q.TW)(e) && b;
+        let e = v.default.getCurrentUser();
+        return !(0, q.TW)(e) && X;
     }
 }
-let B = new X(c.h, {
+let B = new b(c.h, {
     BILLING_MOST_RECENT_SUBSCRIPTION_FETCH_SUCCESS: function (e) {
         let { subscription: t } = e;
         if (null != t) {
-            let e = v.A.createFromServer(t);
+            let e = j.A.createFromServer(t);
             if (null == (0, q.EL)(e) || e.metadata?.ended_at == null) return;
             let n = l()(e.metadata.ended_at);
-            l()().isBetween(n.clone().add(4, "days"), n.clone().add(11, "days")) && (b = !0);
+            l()().isBetween(n.clone().add(4, "days"), n.clone().add(11, "days")) && (X = !0);
         }
     },
 });
@@ -107,7 +107,7 @@ function eD() {
             continue;
         }
         ed.A.applicationIdsFetching.has(i.id) ||
-        ed.A.isEntitledToSku(j.default.getCurrentUser(), t, i.id, i.id) ||
+        ed.A.isEntitledToSku(v.default.getCurrentUser(), t, i.id, i.id) ||
         !l.available
             ? null != eO[t] && (delete eO[t], (e = !0))
             : ((eO[t] = { skuId: t, applicationId: n }), (e = !0));
@@ -117,7 +117,7 @@ function eD() {
 class em extends s.Ay.Store {
     static displayName = "DetectedOffPlatformPremiumPerksStore";
     initialize() {
-        this.waitFor(T.A, ed.A, D.Ay, eI.A, j.default), (eC = o.w.get(eR) ?? eC);
+        this.waitFor(T.A, ed.A, D.Ay, eI.A, v.default), (eC = o.w.get(eR) ?? eC);
     }
     getDetectedOffPlatformPremiumPerks() {
         return e_().values(eO);
@@ -164,11 +164,11 @@ var ep = n(696451),
     ek = n(309010),
     ex = n(967198),
     eG = n(437959),
-    ev = n(351906),
-    ej = n(274184),
+    ej = n(351906),
+    ev = n(274184),
     eq = n(870570),
-    eb = n(977997),
-    eX = n(295405),
+    eX = n(977997),
+    eb = n(295405),
     eB = n(166403),
     ew = n(354670),
     eF = n(147964),
@@ -475,7 +475,7 @@ let ts = {
             let { voiceChannelId: t } = e;
             return (
                 null != t &&
-                eb.A.hasVideo(t) &&
+                eX.A.hasVideo(t) &&
                 !eg.Ay.supports(eJ.O5.VIDEO) &&
                 L.k.getConfig({ location: "NoticeStore.VIDEO_UNSUPPORTED_BROWSER" }).videoEnabled &&
                 !tl(eN.kqX.VIDEO_UNSUPPORTED_BROWSER)
@@ -494,7 +494,7 @@ let ts = {
             !tl(eN.kqX.DETECTED_OFF_PLATFORM_PREMIUM_PERK_UPSELL) && eP.getDetectedOffPlatformPremiumPerks().length > 0,
         metadata: () => eP.getDetectedOffPlatformPremiumPerks()[0],
     },
-    [eN.kqX.STREAMER_MODE]: { predicate: () => ev.A.enabled },
+    [eN.kqX.STREAMER_MODE]: { predicate: () => ej.A.enabled },
     [eN.kqX.DOWNLOAD_NAG]: { predicate: () => !eH.isPlatformEmbedded && !tl(eN.kqX.DOWNLOAD_NAG) },
     [eN.kqX.QUEST_APP_UPSELL]: { predicate: () => (0, eH.isOculusWeb)() && !tl(eN.kqX.QUEST_APP_UPSELL) },
     [eN.kqX.SCHEDULED_MAINTENANCE]: {
@@ -504,7 +504,7 @@ let ts = {
             if (null != e) return { id: e.id, start: new Date(e.scheduled_for), end: new Date(e.scheduled_until) };
         },
     },
-    [eN.kqX.SURVEY]: { predicate: () => null != ej.Ay.getCurrentSurvey(), metadata: () => ej.Ay.getCurrentSurvey() },
+    [eN.kqX.SURVEY]: { predicate: () => null != ev.Ay.getCurrentSurvey(), metadata: () => ev.Ay.getCurrentSurvey() },
     [eN.kqX.UNVERIFIED_ACCOUNT]: {
         predicate: (e) => {
             let { currentUser: t } = e;
@@ -654,7 +654,7 @@ let ts = {
     [eN.kqX.PREMIUM_PAST_DUE_INVALID_PAYMENT]: {
         predicate: (e) => {
             let { premiumSubscription: t, currentUser: n } = e,
-                i = null != t && null != t.paymentSourceId ? eX.A.getPaymentSource(t.paymentSourceId) : null,
+                i = null != t && null != t.paymentSourceId ? eb.A.getPaymentSource(t.paymentSourceId) : null,
                 r = null != t && l()(t.currentPeriodEnd).isBefore(l()()),
                 s =
                     null != t &&
@@ -703,7 +703,7 @@ let ts = {
         predicate: (e) => {
             let { premiumSubscription: t, currentUser: n } = e,
                 i = null != t && l()(t.currentPeriodEnd).isBefore(l()()),
-                r = null != t && null != t.paymentSourceId ? eX.A.getPaymentSource(t.paymentSourceId) : null,
+                r = null != t && null != t.paymentSourceId ? eb.A.getPaymentSource(t.paymentSourceId) : null,
                 s = null != r && eQ.AD.has(r.type),
                 a =
                     null != t &&
@@ -762,7 +762,7 @@ let ts = {
     [eN.kqX.CHECKOUT_RECOVERY_NAGBAR]: {
         predicate: (e) => {
             let { currentUser: t } = e,
-                n = eX.A.paymentSources ?? {};
+                n = eb.A.paymentSources ?? {};
             return G.A.getIsTargeted() && !(0, q.TW)(t) && 0 !== Object.keys(n).length;
         },
     },
@@ -881,12 +881,12 @@ let ts = {
 function ta() {
     if (!m.A.isConnected()) return !1;
     e4 = null;
-    let e = j.default.getCurrentUser();
+    let e = v.default.getCurrentUser();
     if (null == e) return !1;
     let t = eB.A.getPremiumSubscription(),
         n = ex.A.getGuildId(),
         i = ek.Ay.getVoiceChannelId(),
-        l = null != i ? eb.A.getVoiceStateForChannel(i) : null;
+        l = null != i ? eX.A.getVoiceStateForChannel(i) : null;
     for (let r of tr)
         if (
             null != ts[r] &&
@@ -911,13 +911,13 @@ function ta() {
     }
 }
 function tE() {
-    return ev.A.enabled || delete e9[eN.kqX.STREAMER_MODE], ta();
+    return ej.A.enabled || delete e9[eN.kqX.STREAMER_MODE], ta();
 }
 class to extends s.Ay.Store {
     static displayName = "NoticeStore";
     initialize() {
         this.syncWith(
-            [S.A, ej.Ay, eL.A, eP, ex.A, K.A, ew.A, y.default, eo.A, et.A, f.A, Z.A, er.A, D.Ay, el.A, S.A, d.A, k.A],
+            [S.A, ev.Ay, eL.A, eP, ex.A, K.A, ew.A, y.default, eo.A, et.A, f.A, Z.A, er.A, D.Ay, el.A, S.A, d.A, k.A],
             ta,
         ),
             this.waitFor(
@@ -948,7 +948,7 @@ class to extends s.Ay.Store {
                 eg.Ay,
                 eh.A,
                 k.A,
-                eX.A,
+                eb.A,
                 eU.A,
                 H.A,
                 eL.A,
@@ -960,18 +960,18 @@ class to extends s.Ay.Store {
                 ex.A,
                 $.A,
                 eG.A,
-                ev.A,
+                ej.A,
                 B,
                 eB.A,
-                ej.Ay,
+                ev.Ay,
                 eF.A,
                 ee.Ay,
                 ew.A,
                 eq.A,
                 et.A,
-                j.default,
+                v.default,
                 en.A,
-                eb.A,
+                eX.A,
                 el.A,
             );
     }

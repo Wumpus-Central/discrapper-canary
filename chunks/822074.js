@@ -13,8 +13,8 @@ var a = n(435558),
     g = n(71393),
     x = n(573163),
     A = n(309010),
-    C = n(543465),
-    E = n(287809),
+    E = n(543465),
+    C = n(287809),
     I = n(927813),
     y = n(935208);
 function S(e, t) {
@@ -52,7 +52,7 @@ class k extends u.Ay.PersistedStore {
     }
     initialize(e) {
         (l = e?.shouldShowTopicsBar ?? !0),
-            this.waitFor(p.A, m.A, g.A, f.A, x.Ay, A.Ay, C.Ay, E.default),
+            this.waitFor(p.A, m.A, g.A, f.A, x.Ay, A.Ay, E.Ay, C.default),
             this.syncWith([f.A], L);
     }
     allSummaries() {
@@ -125,7 +125,7 @@ class k extends u.Ay.PersistedStore {
             l &&
                 (s = s.filter((e) => {
                     let t = p.A.getChannel(e);
-                    return null != t && !C.Ay.isChannelMuted(t.guild_id, e) && x.Ay.hasUnread(e);
+                    return null != t && !E.Ay.isChannelMuted(t.guild_id, e) && x.Ay.hasUnread(e);
                 })),
             (s = s.filter((e) => {
                 let t = p.A.getChannel(e);

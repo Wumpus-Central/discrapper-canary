@@ -11,16 +11,16 @@ var l = n(477900),
     m = n(652215),
     p = n(983156);
 function g(e) {
-    let { channelId: t, guildId: n, userId: g, containerDimensions: h } = e,
-        f = (0, r.bG)([o.Ay], () => o.Ay.useReducedMotion),
-        [x, A] = i.useState([]),
-        v = x.length < 50;
+    let { channelId: t, guildId: n, userId: g, containerDimensions: f } = e,
+        x = (0, r.bG)([o.Ay], () => o.Ay.useReducedMotion),
+        [h, A] = i.useState([]),
+        v = h.length < 50;
     i.useEffect(() => {
         function e(e) {
             let { channelId: l, userId: i, emoji: r, animationType: a, animationId: o } = e;
             if (null != g && g !== i) return;
             let d = null != r && null != a && null != o;
-            if (l === t && !f && v && d) {
+            if (l === t && !x && v && d) {
                 let e = (0, c.Br)(r),
                     l = null != r.id && !r.animated,
                     d = { id: (0, s.A)(), animationType: a, animationId: o, shouldResize: l, url: e, userId: i };
@@ -34,7 +34,7 @@ function g(e) {
                 a.h.unsubscribe("VOICE_CHANNEL_EFFECT_SEND", e);
             }
         );
-    }, [t, n, g, f, v]);
+    }, [t, n, g, x, v]);
     let E = i.useCallback((e) => {
         A((t) => {
             let n = [...t],
@@ -42,14 +42,14 @@ function g(e) {
             return n.splice(l, 1), n;
         });
     }, []);
-    return f
+    return x
         ? null
         : (0, l.jsx)("div", {
               className: p.Y,
-              style: { width: h.width },
+              style: { width: f.width },
               children: (0, l.jsx)("div", {
                   className: p.z,
-                  children: x.map((e) => (0, l.jsx)(d.A, { containerDimensions: h, effect: e, onComplete: E }, e.id)),
+                  children: h.map((e) => (0, l.jsx)(d.A, { containerDimensions: f, effect: e, onComplete: E }, e.id)),
               }),
           });
 }

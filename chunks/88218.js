@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => C, J: () => g });
+n.d(t, { A: () => E, J: () => g });
 var l = n(477900),
     i = n(582128),
     s = n(503698),
@@ -37,14 +37,14 @@ function g(e) {
 }
 var x = n(652215),
     A = n(14753);
-let C = function (e) {
+let E = function (e) {
     let {
             categoryListRef: t,
             expressionsListRef: n,
             categories: s,
             store: d,
-            children: C,
-            className: E,
+            children: E,
+            className: C,
             listPadding: I,
             rowCount: y,
             getScrollOffsetForIndex: S,
@@ -80,19 +80,19 @@ let C = function (e) {
                 },
                 [],
             );
-            let C = i.useCallback(
+            let E = i.useCallback(
                     (e, t) => {
                         let l = o?.(e, t) ?? 0;
                         n.current?.scrollRowIntoView(e, { animate: !1, offset: l });
                     },
                     [n, o],
                 ),
-                E = i.useCallback(
+                C = i.useCallback(
                     (e, n) => {
                         let i = s(n);
                         if (null != i) {
                             let e = f(s) ?? g.current;
-                            C(i, null == e || i >= e), (g.current = i);
+                            E(i, null == e || i >= e), (g.current = i);
                         }
                         let r = document.querySelector(e);
                         if (null != r) {
@@ -101,13 +101,13 @@ let C = function (e) {
                         }
                         null != i && p(t, l(i), x);
                     },
-                    [l, t, s, C],
+                    [l, t, s, E],
                 ),
                 I = i.useCallback(
                     (e, n) => {
-                        C(e, n), (g.current = e), p(t, l(e), x);
+                        E(e, n), (g.current = e), p(t, l(e), x);
                     },
-                    [l, t, C],
+                    [l, t, E],
                 ),
                 y = i.useCallback(
                     () =>
@@ -141,7 +141,7 @@ let C = function (e) {
                 _ = (0, c.Ay)({
                     id: t,
                     isEnabled: A,
-                    setFocus: E,
+                    setFocus: C,
                     scrollToStart: y,
                     scrollToEnd: S,
                     onNavigateNextAtEnd: N,
@@ -213,7 +213,7 @@ let C = function (e) {
             role: M ? "none presentation" : void 0,
         }),
         V = (0, l.jsxs)("div", {
-            className: r()(A.i, E),
+            className: r()(A.i, C),
             children: [
                 M
                     ? (0, l.jsx)(a.PR, {
@@ -223,7 +223,7 @@ let C = function (e) {
                           },
                       })
                     : G,
-                C?.(P),
+                E?.(P),
             ],
         });
     return M ? (0, l.jsx)(a.hD, { navigator: w, children: V }) : V;

@@ -6,8 +6,8 @@ var s = i(536637),
     o = i(310507),
     a = i(835095),
     p = i(832946),
-    d = i(202541);
-let c = Object.freeze({
+    c = i(202541);
+let d = Object.freeze({
     PAYMENT_SOURCE_REQUIRED: 1,
     EXISTING_PREMIUM_SUBSCRIPTION_DISALLOWED: 2,
     NOT_SELF_REDEEMABLE: 4,
@@ -88,13 +88,13 @@ class u extends l.A {
         return null != this.subscriptionPlanId;
     }
     get premiumSubscriptionType() {
-        return this.isSubscription ? (d.WN[this.skuId] ?? null) : null;
+        return this.isSubscription ? (c.WN[this.skuId] ?? null) : null;
     }
     get isSelfRedeemable() {
-        return !(0, n.Lt)(this.flags, c.NOT_SELF_REDEEMABLE);
+        return !(0, n.Lt)(this.flags, d.NOT_SELF_REDEEMABLE);
     }
     get isExistingPremiumSubscriptionDisallowed() {
-        return (0, n.Lt)(this.flags, c.EXISTING_PREMIUM_SUBSCRIPTION_DISALLOWED);
+        return (0, n.Lt)(this.flags, d.EXISTING_PREMIUM_SUBSCRIPTION_DISALLOWED);
     }
     get analyticsData() {
         return { gift_code: this.code, gift_code_max_uses: this.maxUses };

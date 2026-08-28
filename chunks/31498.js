@@ -150,23 +150,23 @@ class h extends l.EventEmitter {
             g = m.commands !== u.Ze.DISABLED ? o(this.props.activeCommandOption, this.props.currentWord) : null;
         if (null == p && null != g) p = g;
         else if (null == p || (null != g && p.type !== g.type)) return void this.clearQuery();
-        let { type: x, typeInfo: A, query: C } = p,
-            E = i || (l && (this.state.query?.queryText !== C || this.state.query?.typeInfo !== A)),
+        let { type: x, typeInfo: A, query: E } = p,
+            C = i || (l && (this.state.query?.queryText !== E || this.state.query?.typeInfo !== A)),
             I = a.ML.getSetting();
         m.allowStickers = m.allowStickers ? I : m.allowStickers;
         let y = a.eK.getSetting();
         m.allowSoundmoji = m.allowSoundmoji ? y : m.allowSoundmoji;
-        let { results: S, metadata: N } = A.queryResults(this.props.channel, this.props.guild, C, m, E),
+        let { results: S, metadata: N } = A.queryResults(this.props.channel, this.props.guild, E, m, C),
             v = 0;
         for (let e of Object.values(S)) Array.isArray(e) && (v += e.length);
-        l && C.length > 0 && C !== this.state.query?.queryText && (0, s.AR)(x, m);
+        l && E.length > 0 && E !== this.state.query?.queryText && (0, s.AR)(x, m);
         let _ = !0 === S.isLoading,
             j = this.shouldShow(v, _, A),
             T = this.state.selectedIndex;
         !j || _ ? (T = null) : null != T && T >= v && (T = v - 1),
             j && !this.state.isVisible && (0, s.uA)(x, this.props.channel, N),
             this.setState({
-                query: { type: x, typeInfo: A, queryText: C, results: S, resultCount: v, options: m, isLoading: _ },
+                query: { type: x, typeInfo: A, queryText: E, results: S, resultCount: v, options: m, isLoading: _ },
                 isVisible: j,
                 selectedIndex: T,
                 hadInitialResults: !0,

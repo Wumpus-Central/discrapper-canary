@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { J: () => C });
+n.d(t, { J: () => E });
 var l = n(459016),
     i = n(392054),
     s = n(284009),
@@ -157,7 +157,7 @@ function x(e) {
     return e.toLocaleString(m.intl.currentLocale, { useGrouping: !1 });
 }
 var A = n(73510);
-function C(e) {
+function E(e) {
     let { option: t, content: n, guildId: s, channelId: r, allowEmptyValues: a, commandOrigin: o = i.iw.CHAT } = e,
         u = null != n ? (0, l.getString)({ content: n }, "content").trim() : "",
         c = t.required;

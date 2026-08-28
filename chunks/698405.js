@@ -1,4 +1,4 @@
-n.d(t, { A: () => x, w: () => N });
+n.d(t, { A: () => I, w: () => N });
 var i,
     l = n(477900),
     a = n(582128),
@@ -16,14 +16,14 @@ var i,
     A = n(375708),
     E = n(299409),
     N = (((i = {})[(i.CHAT = 0)] = "CHAT"), (i[(i.REACTIONS = 1)] = "REACTIONS"), i);
-let x = function (e) {
-    let { type: t, guild: i, closePopout: N, ctaRef: x } = e,
-        j = (0, h.GV)(),
-        [v, I] = a.useState(!1),
+let I = function (e) {
+    let { type: t, guild: i, closePopout: N, ctaRef: I } = e,
+        x = (0, h.GV)(),
+        [j, v] = a.useState(!1),
         T = (0, r.bG)([g.A], () => g.A.isLurking(i.id), [i.id]);
     a.useEffect(() => {
-        v && !T && N();
-    }, [v, T, N]);
+        j && !T && N();
+    }, [j, T, N]);
     let R = null,
         b = A.intl.string(A.t.d7b1p6);
     switch (t) {
@@ -38,22 +38,22 @@ let x = function (e) {
     }
     if (null == R) return null;
     async function S() {
-        I(!0);
+        v(!0);
         try {
             await m.A.joinGuild(i.id, { source: f.Q4z.CHAT_INPUT_BLOCKER }), N();
         } catch {
-            I(!1);
+            v(!1);
         }
     }
     return (0, l.jsxs)(s.l, {
         className: E.kL,
-        "aria-labelledby": j,
+        "aria-labelledby": x,
         children: [
             (0, l.jsx)("img", { alt: "", className: E.Sl, src: n(303528) }),
             (0, l.jsxs)("div", {
                 className: E.Qs,
                 children: [
-                    (0, l.jsx)(u.D, { variant: "heading-md/semibold", id: j, children: R }),
+                    (0, l.jsx)(u.D, { variant: "heading-md/semibold", id: x, children: R }),
                     (0, l.jsx)(c.E, { color: "text-default", variant: "text-sm/normal", children: b }),
                     (0, l.jsxs)("div", {
                         className: E.UD,
@@ -61,9 +61,9 @@ let x = function (e) {
                             (0, l.jsx)(d.$, {
                                 variant: "primary",
                                 text: A.intl.string(A.t["9VLmlZ"]),
-                                buttonRef: x,
+                                buttonRef: I,
                                 onClick: S,
-                                loading: v,
+                                loading: j,
                             }),
                             (0, l.jsx)(o.$n, {
                                 onClick: N,

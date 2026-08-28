@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => C, MemberListContentSettingsMenu: () => A });
+n.d(t, { A: () => E, MemberListContentSettingsMenu: () => A });
 var l = n(477900),
     i = n(582128),
     s = n(17928),
@@ -57,7 +57,7 @@ function A(e) {
         }),
     });
 }
-let C = function () {
+let E = function () {
     let e = i.useRef(null);
     return (0, l.jsx)(d.Y, {
         targetElementRef: e,

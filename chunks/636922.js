@@ -57,13 +57,13 @@ let y = l.memo(function (e) {
         }),
         z = t.type === T.lAJ.REPLY ? t.messageReference : void 0,
         J = (0, o.bG)([u.A], () => u.A.getMessageByReference(z)),
-        Y = (0, r.rm)(t.id),
-        K = (0, p.Ay)(t),
+        K = (0, r.rm)(t.id),
+        Y = (0, p.Ay)(t),
         W = (0, o.bG)(
             [m.A],
             () => t.hasFlag(T.pr7.HAS_THREAD) && m.A.getChannel(h.default.castMessageIdAsChannelId(t.id)),
         ),
-        X = (0, c.$7)({ guildId: R.guild_id, roleId: K.iconRoleId }),
+        X = (0, c.$7)({ guildId: R.guild_id, roleId: Y.iconRoleId }),
         Z = (0, E.A)({ message: t, channel: R, announcementEnabled: P }),
         q = (0, x.fF)(t),
         Q = (0, x.ZD)(t);
@@ -73,7 +73,7 @@ let y = l.memo(function (e) {
         disableInteraction: G,
         childrenRepliedMessage: (0, j.A)(t, R, z, J, n),
         childrenExecutedCommand: (0, N.A)(t, R, n),
-        childrenHeader: (0, _.A)({ ...e, guildId: R.guild_id, author: K, roleIcon: X }),
+        childrenHeader: (0, _.A)({ ...e, guildId: R.guild_id, author: Y, roleIcon: X }),
         childrenAccessories: e.hideAccessories ? void 0 : (0, I.J)(e, B, F),
         childrenMessageContent: D ?? (0, C.A)(e, V),
         childrenSystemMessage: (0, v.A)({ ...e, disableInteraction: G }),
@@ -84,8 +84,8 @@ let y = l.memo(function (e) {
         "aria-labelledby": q,
         "aria-describedby": Q,
         messageRef: Z,
-        author: K,
-        ...Y,
+        author: Y,
+        ...K,
         ...U,
     });
 });

@@ -16,8 +16,8 @@ var l = n(477900),
     g = n(775602),
     x = n(793574),
     A = n(688810),
-    C = n(946228),
-    E = n(485947),
+    E = n(946228),
+    C = n(485947),
     I = n(386784),
     y = n(545868),
     S = n(332173),
@@ -197,11 +197,11 @@ function U(e) {
                   children: (0, l.jsxs)(c.Ip, {
                       className: w.bY,
                       children: [
-                          (0, l.jsx)(C.Y, { id: n, guildId: s, title: g.name, count: x, className: w.sd }),
+                          (0, l.jsx)(E.Y, { id: n, guildId: s, title: g.name, count: x, className: w.sd }),
                           A,
                           null == x || x <= A.length
                               ? null
-                              : (0, l.jsx)(E.A, {
+                              : (0, l.jsx)(C.A, {
                                     className: w.sd,
                                     children: k.intl.formatToPlainString(k.t["9oMmZC"], { count: x - A.length }),
                                 }),
@@ -215,11 +215,11 @@ function G(e) {
         { analyticsLocations: m } = (0, A.Ay)(x.A.ROLE_MENTION),
         f = (0, o.bG)([g.Ay], () => g.Ay.roleStyle),
         p = (0, o.bG)([R.A], () => (null == r || null == t ? null : R.A.getRole(r, t))),
-        C = (0, v.jV)(r, p),
-        E = !c && null != p && !(0, N.Qv)(p),
-        I = E && "dot" === f,
-        _ = E && "username" === f,
-        j = C && null != p ? p.colorStrings : null,
+        E = (0, v.jV)(r, p),
+        C = !c && null != p && !(0, N.Qv)(p),
+        I = C && "dot" === f,
+        _ = C && "username" === f,
+        j = E && null != p ? p.colorStrings : null,
         T = i.useRef(null);
     function b(e) {
         return (0, l.jsxs)(S.A, {

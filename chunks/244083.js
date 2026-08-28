@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Ay: () => S, YL: () => E, oN: () => I });
+n.d(t, { Ay: () => S, YL: () => C, oN: () => I });
 var l,
     i,
     s = n(477900),
@@ -16,8 +16,8 @@ var l,
     g = n(174459),
     x = n(652215),
     A = n(375708),
-    C = n(51377),
-    E = (((l = {}).CENTER = "center"), (l.LEFT = "left"), l),
+    E = n(51377),
+    C = (((l = {}).CENTER = "center"), (l.LEFT = "left"), l),
     I = (((i = {}).TOP = "top"), (i.MIDDLE = "middle"), i);
 class y extends r.PureComponent {
     state = { confirmed: !1 };
@@ -45,17 +45,17 @@ class y extends r.PureComponent {
             m = "left" === t || n,
             f = "center" === t || !m;
         return (0, s.jsxs)(u.l, {
-            className: o()(C.Sy, r),
+            className: o()(E.Sy, r),
             children: [
                 null != e &&
                     (0, s.jsx)(p.A, {
-                        className: C.il,
+                        className: E.il,
                         justify: m ? p.A.Justify.START : p.A.Justify.CENTER,
                         children: e(),
                     }),
-                (0, s.jsx)(c.H, { className: o()({ [C.Av]: f, [C.gH]: m }), children: l }),
+                (0, s.jsx)(c.H, { className: o()({ [E.Av]: f, [E.gH]: m }), children: l }),
                 (0, s.jsx)("string" == typeof i ? "p" : "div", {
-                    className: o()({ [C.IF]: f, [C.If]: m }),
+                    className: o()({ [E.IF]: f, [E.If]: m }),
                     children: i,
                 }),
                 (0, s.jsxs)(d.e, {
@@ -81,7 +81,7 @@ class y extends r.PureComponent {
     }
 }
 class S extends r.PureComponent {
-    static TextAlignments = E;
+    static TextAlignments = C;
     static defaultProps = { textAlign: "left" };
     onClickComplete = (e) => {
         e(), this.props.onComplete();
@@ -101,16 +101,16 @@ class S extends r.PureComponent {
                     ...this.props,
                     className: o()(
                         {
-                            [C.sQ]: "bottom" === n,
-                            [C.eV]: !i && !u,
-                            [C.tJ]: !i && u,
-                            [C.II]: i && !u,
-                            [C.HU]: i && u,
-                            [C.pG]: "right" === n,
-                            [C.Mn]: "top" === n,
-                            [C.kb]: "left" === n,
-                            [C.ks]: "top" === r,
-                            [C.Eo]: "middle" === r,
+                            [E.sQ]: "bottom" === n,
+                            [E.eV]: !i && !u,
+                            [E.tJ]: !i && u,
+                            [E.II]: i && !u,
+                            [E.HU]: i && u,
+                            [E.pG]: "right" === n,
+                            [E.Mn]: "top" === n,
+                            [E.kb]: "left" === n,
+                            [E.ks]: "top" === r,
+                            [E.Eo]: "middle" === r,
                             "force-theme": null != l,
                         },
                         e,

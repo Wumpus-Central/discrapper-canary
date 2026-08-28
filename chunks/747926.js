@@ -16,8 +16,8 @@ var l = n(284009),
     g = n(761640),
     x = n(31717),
     A = n(309010),
-    C = n(625494),
-    E = n(37411),
+    E = n(625494),
+    C = n(37411),
     I = n(652215),
     y = n(746080);
 function S(e, t, n) {
@@ -40,10 +40,10 @@ function S(e, t, n) {
     e.parent_id === a || (0, y.mP)(a) || (0, m.iN)(e.parent_id),
         (0, h.pX)(
             I.BVt.CHANNEL_THREAD_VIEW((0, f.j)(e), (0, y.mP)(a) ? y.VV.GUILD_HOME : e.parent_id, e.id),
-            e.isForumPost() ? { source: E.H9.FORUM } : void 0,
+            e.isForumPost() ? { source: C.H9.FORUM } : void 0,
         ),
         setTimeout(() => {
-            C._.dispatch(I.jej.FOCUS_CHANNEL_TEXT_AREA, { channelId: e.id });
+            E._.dispatch(I.jej.FOCUS_CHANNEL_TEXT_AREA, { channelId: e.id });
         }, 0);
 }
 function N(e, t, n) {

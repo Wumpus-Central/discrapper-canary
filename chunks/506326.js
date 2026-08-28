@@ -37,8 +37,8 @@ var l,
     g = n(140735),
     x = n(834730),
     A = n(983851),
-    C = n(661531),
-    E = n(183623),
+    E = n(661531),
+    C = n(183623),
     I = n(323384),
     y = n(687966),
     S = n(177953),
@@ -126,9 +126,9 @@ function Q(e) {
     let { entry: t, hovered: n } = e,
         { defaultTextColor: l, defaultIconColor: s, location: r } = q(),
         a = (0, F.Hd)(t) && (0, D.S1)(r, [0, 4, 7, 9]),
-        o = a ? C.A.colors.TEXT_FEEDBACK_POSITIVE : s,
+        o = a ? E.A.colors.TEXT_FEEDBACK_POSITIVE : s,
         { streamPreviewUrl: u } = (0, V.A)(t),
-        c = null != u ? E.F : (0, G.yl)(t) ? I.k : y.GameControllerIcon;
+        c = null != u ? C.F : (0, G.yl)(t) ? I.k : y.GameControllerIcon;
     return (0, i.jsxs)(J, {
         children: [
             (0, i.jsx)(c, { size: "xxs", color: o }),
@@ -159,7 +159,7 @@ function et(e) {
     let { entry: t, hovered: n } = e,
         { defaultTextColor: l, defaultIconColor: s, location: r } = q(),
         a = (0, F.Hd)(t) && (0, D.S1)(r, [0, 4]),
-        o = a ? C.A.colors.TEXT_FEEDBACK_POSITIVE : s;
+        o = a ? E.A.colors.TEXT_FEEDBACK_POSITIVE : s;
     return (0, i.jsxs)("div", {
         className: K.fC,
         children: [
@@ -171,7 +171,7 @@ function et(e) {
 function en(e) {
     let { entry: t } = e,
         { location: n } = q(),
-        l = (0, D.S1)(n, [0, 3]) ? C.A.colors.STATUS_POSITIVE : void 0;
+        l = (0, D.S1)(n, [0, 3]) ? E.A.colors.STATUS_POSITIVE : void 0;
     return (0, F.Rf)(t) ? (0, i.jsx)($, { Icon: v.P, text: W.intl.string(W.t.keY6mW), iconColor: l }) : null;
 }
 function el(e) {
@@ -260,7 +260,7 @@ function ec(e) {
     let { entry: t, hovered: n } = e,
         { defaultTextColor: l, defaultIconColor: s, location: r } = q(),
         a = (0, F.Hd)(t) && 4 === r,
-        o = a ? C.A.colors.TEXT_FEEDBACK_POSITIVE : s;
+        o = a ? E.A.colors.TEXT_FEEDBACK_POSITIVE : s;
     return (0, i.jsxs)("div", {
         className: K.fC,
         children: [
@@ -305,14 +305,14 @@ function ef(e) {
         (t = (0, D.S1)(n, [1, 5, 6])
             ? {
                   defaultTextColor: "content-inventory-overlay-text-secondary",
-                  defaultIconColor: C.A.colors.CONTENT_INVENTORY_OVERLAY_TEXT_SECONDARY,
+                  defaultIconColor: E.A.colors.CONTENT_INVENTORY_OVERLAY_TEXT_SECONDARY,
               }
             : 2 === n
               ? { defaultTextColor: "interactive-text-default" }
               : 3 === n
                 ? { defaultTextColor: "text-muted" }
                 : 4 === n
-                  ? { defaultTextColor: "text-subtle", defaultIconColor: C.A.colors.TEXT_SUBTLE }
+                  ? { defaultTextColor: "text-subtle", defaultIconColor: E.A.colors.TEXT_SUBTLE }
                   : { defaultTextColor: "text-subtle" }),
         (0, i.jsx)(Y.Provider, {
             value: { location: n, ...t },

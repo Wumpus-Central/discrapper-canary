@@ -24,8 +24,8 @@ var l = n(477900),
     y = n(734057),
     b = n(808728),
     N = n(498642),
-    v = n(71393),
-    T = n(186111),
+    T = n(71393),
+    v = n(186111),
     M = n(232835),
     R = n(576705),
     D = n(935208),
@@ -96,7 +96,7 @@ function Z(e) {
         et,
         en,
         { channel: el } = e,
-        ei = (0, c.bG)([v.A], () => (null != el ? v.A.getGuild(el.getGuildId()) : null), [el]),
+        ei = (0, c.bG)([T.A], () => (null != el ? T.A.getGuild(el.getGuildId()) : null), [el]),
         es = null != ei && D.default.extractTimestamp(ei.id) < Date.now() - L.NOr,
         ea = (0, c.bG)([j.default], () => ei?.ownerId === j.default.getId(), [ei]),
         {
@@ -141,8 +141,8 @@ function Z(e) {
                     }),
                 )),
             guildPersonalized:
-                ((E = (0, c.bG)([T.A], () => T.A.hasLayers())),
-                (H = (0, c.bG)([v.A], () => v.A.getGuild(ei?.id))),
+                ((E = (0, c.bG)([v.A], () => v.A.hasLayers())),
+                (H = (0, c.bG)([T.A], () => T.A.getGuild(ei?.id))),
                 H?.icon != null && !E),
             guildChannelCreated: (0, c.bG)([b.Ay], () => {
                 let e = b.Ay.getChannels(ei?.id),
@@ -293,15 +293,15 @@ function Z(e) {
         null == ei)
     )
         return null;
-    let ev = [];
+    let eT = [];
     !es &&
         (er &&
-            ev.push(
+            eT.push(
                 (0, l.jsx)(
                     r.A.div,
                     {
                         className: J.cW,
-                        style: eI ? { opacity: ej[ev.length] } : {},
+                        style: eI ? { opacity: ej[eT.length] } : {},
                         children: (0, l.jsx)(q, {
                             iconUrl: "/assets/ea08bfae3e0ab96d.svg",
                             header: $.intl.string($.t.q9n0Ta),
@@ -313,12 +313,12 @@ function Z(e) {
                 ),
             ),
         eo &&
-            ev.push(
+            eT.push(
                 (0, l.jsx)(
                     r.A.div,
                     {
                         className: J.cW,
-                        style: eI ? { opacity: ej[ev.length] } : {},
+                        style: eI ? { opacity: ej[eT.length] } : {},
                         children: (0, l.jsx)(q, {
                             iconUrl: "/assets/428a003b3c729aa6.svg",
                             header: $.intl.string($.t.c5kxPh),
@@ -330,12 +330,12 @@ function Z(e) {
                 ),
             ),
         ec &&
-            ev.push(
+            eT.push(
                 (0, l.jsx)(
                     r.A.div,
                     {
                         className: J.cW,
-                        style: eI ? { opacity: ej[ev.length] } : {},
+                        style: eI ? { opacity: ej[eT.length] } : {},
                         children: (0, l.jsx)(q, {
                             iconUrl: "/assets/2ed198e767bd5423.svg",
                             header: $.intl.string($.t["SoP7+l"]),
@@ -347,12 +347,12 @@ function Z(e) {
                 ),
             ),
         (0, V.isWeb)() &&
-            ev.push(
+            eT.push(
                 (0, l.jsx)(
                     r.A.div,
                     {
                         className: J.cW,
-                        style: eI ? { opacity: ej[ev.length] } : {},
+                        style: eI ? { opacity: ej[eT.length] } : {},
                         children: (0, l.jsx)(q, {
                             iconUrl: "/assets/eea7561d0cfcff41.svg",
                             header: $.intl.string($.t.pGVNI9),
@@ -363,12 +363,12 @@ function Z(e) {
                     "download",
                 ),
             ),
-        ev.push(
+        eT.push(
             (0, l.jsx)(
                 r.A.div,
                 {
                     className: J.cW,
-                    style: eI ? { opacity: ej[ev.length] } : {},
+                    style: eI ? { opacity: ej[eT.length] } : {},
                     children: (0, l.jsx)(q, {
                         iconUrl: p,
                         header: $.intl.string($.t.IhHDEO),
@@ -381,12 +381,12 @@ function Z(e) {
         ),
         ep &&
             G.getConfig({ location: "WelcomeArea" }).enabled &&
-            ev.push(
+            eT.push(
                 (0, l.jsx)(
                     r.A.div,
                     {
                         className: J.cW,
-                        style: eI ? { opacity: ej[ev.length] } : {},
+                        style: eI ? { opacity: ej[eT.length] } : {},
                         children: (0, l.jsx)(q, {
                             iconUrl:
                                 "https://cdn.discordapp.com/assets/content/bc3217e772906510d881b75ebefea754b9c3ba903ddf6f994e46e5c5a85770a3.svg",
@@ -398,8 +398,8 @@ function Z(e) {
                     "boost",
                 ),
             ));
-    let eT = ea ? $.intl.string($.t["1ach9C"]) : $.intl.string($.t["ezm+/j"]);
-    es && (eT = $.intl.string($.t["gwyU/J"]));
+    let ev = ea ? $.intl.string($.t["1ach9C"]) : $.intl.string($.t["ezm+/j"]);
+    es && (ev = $.intl.string($.t["gwyU/J"]));
     let eM = `${K.A.getArticleURL(L.MVz.GUILD_GETTING_STARTED)}?utm_source=discord&utm_medium=blog&utm_campaign=2020-06_help-new-user&utm_content=--t%3Apm`;
     return (0, l.jsx)(z.Ay, {
         channelId: el.id,
@@ -418,13 +418,13 @@ function Z(e) {
                             }),
                             (0, l.jsxs)(h.E, {
                                 color: "text-default",
-                                className: a()({ [J.VA]: !0, [J.lg]: 0 === ev.length }),
+                                className: a()({ [J.VA]: !0, [J.lg]: 0 === eT.length }),
                                 variant: "text-sm/normal",
-                                children: [eT, " ", ev.length > 0 ? $.intl.format($.t.UOtD32, { guideURL: eM }) : null],
+                                children: [ev, " ", eT.length > 0 ? $.intl.format($.t.UOtD32, { guideURL: eM }) : null],
                             }),
                         ],
                     }),
-                    ev,
+                    eT,
                 ],
             }),
         }),

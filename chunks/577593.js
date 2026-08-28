@@ -470,7 +470,7 @@ function e0(e) {
                 ? (0, l.jsx)(eI, { user: s, displayProfile: t, guildId: d, onClose: a })
                 : (0, l.jsx)(ez, { user: s, displayProfile: t, onClose: a });
 }
-function e3(e) {
+function e5(e) {
     let {
             user: i,
             currentUser: s,
@@ -543,7 +543,7 @@ function e3(e) {
               ],
           });
 }
-var e5 = s(186272),
+var e3 = s(186272),
     e7 = s(996988),
     e1 = s(985253),
     e9 = s(174217);
@@ -588,7 +588,7 @@ function e2(e) {
                 s = i?.length;
             return [
                 { section: eA.RP.BOT_INFO, text: X.intl.string(X.t.ZzAR2Y) },
-                { section: eA.RP.MUTUAL_GUILDS, text: (0, e5.A)(s) },
+                { section: eA.RP.MUTUAL_GUILDS, text: (0, e3.A)(s) },
                 { section: eA.RP.BOT_DATA_ACCESS, text: X.intl.string(X.t.WstFb0) },
             ];
         })(i),
@@ -689,7 +689,7 @@ function e2(e) {
                                                 onClose: z,
                                             }),
                                         }),
-                                        (0, l.jsx)(e3, {
+                                        (0, l.jsx)(e5, {
                                             user: i,
                                             currentUser: s,
                                             displayProfile: Y,
@@ -991,7 +991,7 @@ function iI(e) {
         }),
     });
 }
-var im = s(208048);
+var im = s(815007);
 function ip(e) {
     let { hideRestrictedProfile: i, ...s } = e,
         { user: o } = s,

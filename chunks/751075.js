@@ -1,4 +1,4 @@
-n.d(t, { CD: () => d, YP: () => c, e0: () => g, qP: () => h });
+n.d(t, { CD: () => d, YP: () => c, e0: () => g, qP: () => E });
 var i,
     l = n(477900),
     s = n(582128),
@@ -50,7 +50,7 @@ function A(e) {
             return (0, l.jsx)("div", { className: a()(u.Gt, i, u.Nb), style: r, children: t.icon });
     }
 }
-function h(e) {
+function E(e) {
     let { icons: t } = e,
         { frontIcon: n, backIcon: i } = t;
     return (0, l.jsxs)("div", {

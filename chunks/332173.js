@@ -21,23 +21,23 @@ let h = function (e) {
             onMouseLeave: g,
             ...x
         } = e,
-        [A, C] = i.useState(!1),
-        { gradientStyle: E, gradientClassname: I } = (0, o.v5)({
+        [A, E] = i.useState(!1),
+        { gradientStyle: C, gradientClassname: I } = (0, o.v5)({
             colorStrings: m ?? null,
             roleStyle: "username",
             animateGradient: A,
         }),
         y = i.useCallback(
             (e) => {
-                C(!0), p?.(e);
+                E(!0), p?.(e);
             },
-            [C, p],
+            [E, p],
         ),
         S = i.useCallback(
             (e) => {
-                C(!1), g?.(e);
+                E(!1), g?.(e);
             },
-            [C, g],
+            [E, g],
         ),
         N = {};
     return (
@@ -55,7 +55,7 @@ let h = function (e) {
                 null != f
                     ? (0, l.jsx)(c.A, { iconType: f, children: n })
                     : null != m
-                      ? (0, l.jsx)("span", { style: { ...E }, className: I, children: n })
+                      ? (0, l.jsx)("span", { style: { ...C }, className: I, children: n })
                       : n,
         })
     );

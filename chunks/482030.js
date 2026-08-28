@@ -16,8 +16,8 @@ var l = n(582128),
     g = n(551965),
     x = n(625494),
     A = n(211401),
-    C = n(989837),
-    E = n(500049),
+    E = n(989837),
+    C = n(500049),
     I = n(652215),
     y = n(375708);
 let S = {
@@ -71,7 +71,7 @@ function _(e) {
                 t
             );
         })((0, u.Hq)({ context: t, applicationId: n.id, fetchesApplication: x })),
-        _ = (0, r.bG)([C.A], () => C.A.entrypoint()),
+        _ = (0, r.bG)([E.A], () => E.A.entrypoint()),
         j = l.useMemo(() => {
             if ("channel" !== t.type) return n.bot?.id ?? (0, h.Sx)(t, n.id).descriptor?.botId;
         }, [t, n.id, n.bot]),
@@ -83,7 +83,7 @@ function _(e) {
             locationObject: N.location,
             onActivityItemSelectedProp: (e) => {
                 let { applicationId: t } = e;
-                f && A.k(E.Se.ACTIVITY),
+                f && A.k(C.Se.ACTIVITY),
                     (0, d.zV)(I.HAw.APP_LAUNCHER_ACTIVITY_ITEM_SELECTED, {
                         location: i,
                         application_id: t,
@@ -109,7 +109,7 @@ function _(e) {
     );
 }
 function j(e, t) {
-    let n = C.A.entrypoint(),
+    let n = E.A.entrypoint(),
         s = l.useMemo(
             () =>
                 (0, i.debounce)(

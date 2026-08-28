@@ -16,8 +16,8 @@ var l,
     g = n(97808),
     x = n(778712),
     A = n(922016),
-    C = n(960076),
-    E = n(397244),
+    E = n(960076),
+    C = n(397244),
     I = n(714114),
     y = n(394871),
     S = n(296948),
@@ -248,9 +248,9 @@ let en = s.memo(function (e) {
             } = e,
             p = s === $.clD.OFFLINE,
             A = n ? g.Js : g.eu,
-            E = (0, C.A)(l) ? $.clD.STREAMING : s;
+            C = (0, E.A)(l) ? $.clD.STREAMING : s;
         return (
-            (E = p ? void 0 : E),
+            (C = p ? void 0 : C),
             (0, i.jsxs)(i.Fragment, {
                 children: [
                     (0, i.jsx)(A, {
@@ -260,7 +260,7 @@ let en = s.memo(function (e) {
                         isMobile: o,
                         isVR: u,
                         isTyping: c,
-                        status: E,
+                        status: C,
                         "aria-label": t.username,
                         statusTooltip: !0,
                         avatarDecoration: d,
@@ -289,7 +289,7 @@ let en = s.memo(function (e) {
                 quest: h,
             } = e,
             m = s.useMemo(
-                () => (0, E.A)({ activities: l, status: r, applicationStream: a, voiceChannel: o }),
+                () => (0, C.A)({ activities: l, status: r, applicationStream: a, voiceChannel: o }),
                 [l, r, a, o],
             ),
             f = s.useMemo(
@@ -330,8 +330,8 @@ let en = s.memo(function (e) {
                 nick: f,
                 user: p,
                 currentUser: g,
-                activities: C,
-                applicationStream: E,
+                activities: E,
+                applicationStream: C,
                 status: y,
                 shouldAnimateStatus: S = !1,
                 isMobile: N,
@@ -367,8 +367,8 @@ let en = s.memo(function (e) {
             [eg, ex] = s.useState(null),
             { voiceChannel: eA } = (0, I.Ay)({ userId: ei, guildId: T }),
             {
-                avatarDecorationSrc: eC,
-                avatarSrc: eE,
+                avatarDecorationSrc: eE,
+                avatarSrc: eC,
                 eventHandlers: eI,
             } = (0, Y.A)({ userId: ei, size: x._3.SIZE_32, animateOnHover: !(t || eh), guildId: T }),
             { onFocus: ey, ...eS } = en ?? {},
@@ -377,11 +377,11 @@ let en = s.memo(function (e) {
         s.useEffect(() => {
             t && e_(!1);
         }, [t]);
-        let ej = (0, Z.YW)(C),
+        let ej = (0, Z.YW)(E),
             eT = (0, o.bG)([K.A], () => K.A.getQuestPreviewOverride(z.uF.MEMBERS_LIST), []),
             eb = null != eT,
             eR = eb ? eT : ej,
-            eO = (0, Z.Yl)(ej, E, ei),
+            eO = (0, Z.Yl)(ej, C, ei),
             eM = (eb || eO) && t && !ev,
             eL = s.useCallback(() => {
                 em(!0);
@@ -406,11 +406,11 @@ let en = s.memo(function (e) {
                               name: f ?? eu,
                               quest: eR,
                               memberListItemRef: ed,
-                              applicationStream: E,
+                              applicationStream: C,
                               ...e,
                               closePopout: () => e_(!0),
                           }),
-                [eR, ed, E, f, eu],
+                [eR, ed, C, f, eu],
             );
         return null == p
             ? (0, i.jsx)(b, { avatarSize: x._3.SIZE_32, className: ee.qf })
@@ -471,14 +471,14 @@ let en = s.memo(function (e) {
                           avatar: (0, i.jsx)(ea, {
                               user: p,
                               shouldAnimateStatus: S,
-                              activities: C,
+                              activities: E,
                               status: y,
                               eventHandlers: eI,
-                              avatarSrc: eE,
+                              avatarSrc: eC,
                               isMobile: N,
                               isVR: v,
                               isTyping: m,
-                              avatarDecorationSrc: eC,
+                              avatarDecorationSrc: eE,
                               handleSetTypingRef: eD,
                               typingRef: eg,
                               currentUser: g,
@@ -486,9 +486,9 @@ let en = s.memo(function (e) {
                           nameplate: M,
                           subText: (0, i.jsx)(eo, {
                               hideSubtext: k,
-                              activities: C,
+                              activities: E,
                               status: y,
-                              applicationStream: E,
+                              applicationStream: C,
                               voiceStatusChannel: eA,
                               user: p,
                               channel: j,

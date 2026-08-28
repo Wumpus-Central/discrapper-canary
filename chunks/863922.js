@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { $T: () => A, Ay: () => T, C6: () => C, C7: () => S, O$: () => _, Oz: () => E, sK: () => I, s_: () => y });
+n.d(t, { $T: () => A, Ay: () => T, C6: () => E, C7: () => S, O$: () => _, Oz: () => C, sK: () => I, s_: () => y });
 var l = n(582128),
     i = n(435558),
     s = n.n(i),
@@ -55,10 +55,10 @@ async function A(e) {
             receivedAt: Date.now(),
         });
 }
-function C(e, t) {
+function E(e, t) {
     o.h.dispatch({ type: "SET_HIGHLIGHTED_SUMMARY", channelId: e, summaryId: t ?? null });
 }
-function E() {
+function C() {
     o.h.dispatch({ type: "TOGGLE_TOPICS_BAR" });
 }
 function I(e, t) {
@@ -145,7 +145,7 @@ let j =
                   setSummaryFeedback: S,
                   updateVisibleMessages: y,
                   setSelectedSummary: I,
-                  setHighlightedSummary: C,
+                  setHighlightedSummary: E,
                   fetchSummaries: A,
                   fetchSummariesBulk: v,
                   useChannelSummaries: function (e) {

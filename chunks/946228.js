@@ -16,8 +16,8 @@ var d = n(607399),
     g = n(475825);
 if (221552 == n.j) var x = n(506309);
 var A = n(442433),
-    C = n(361610),
-    E = n(414798),
+    E = n(361610),
+    C = n(414798),
     I = n(589158),
     y = n(775602),
     S = n(793574),
@@ -135,8 +135,8 @@ var ep = n(915089),
     eg = n(906199),
     ex = n(201275),
     eA = n(657048),
-    eC = n(728321),
-    eE = n(342296),
+    eE = n(728321),
+    eC = n(342296),
     eI = n(773669),
     ey = n(317525),
     eS = n(994500),
@@ -166,7 +166,7 @@ let eL = eO.Ay.getEnableHardwareAcceleration(),
                 status: p,
                 channel: g,
                 guildId: x,
-                isTyping: C,
+                isTyping: E,
                 isMobileOnline: y,
                 isVROnline: S,
                 premiumSince: N,
@@ -260,7 +260,7 @@ let eL = eO.Ay.getEnableHardwareAcceleration(),
                     t = `<@${c.id}>`;
                 eT._.dispatch(D.jej.TEXTAREA_FOCUS, { channelId: g.id }),
                     eT._.dispatchToLastSubscribed(D.jej.INSERT_TEXT, { plainText: e, rawText: t }),
-                    E.A.startTyping(g.id);
+                    C.A.startTyping(g.id);
             }, [c, g.id]),
             L = i.useCallback(
                 (e) => {
@@ -273,7 +273,7 @@ let eL = eO.Ay.getEnableHardwareAcceleration(),
                 },
                 [x],
             );
-        return (0, l.jsx)(eE.A, {
+        return (0, l.jsx)(eC.A, {
             targetElementRef: j,
             user: c,
             guildId: x,
@@ -304,7 +304,7 @@ let eL = eO.Ay.getEnableHardwareAcceleration(),
                     colorString: t,
                     colorStrings: s,
                     colorRoleName: r,
-                    isTyping: C,
+                    isTyping: E,
                     channel: g,
                     guildId: x,
                     isMobile: y,
@@ -411,7 +411,7 @@ class eG extends i.Component {
         if (0 === t) {
             let { key: e } = r;
             return (0, l.jsx)(
-                eC.A,
+                eE.A,
                 {
                     tutorialId: "whos-online",
                     position: "left",
@@ -561,7 +561,7 @@ class eG extends i.Component {
         if (null == this._list) return;
         let { channel: e } = this.props,
             { rowHeight: t, y: n, height: l } = this.getDimensions();
-        (0, C.NJ)({ guildId: e.guild_id, channelId: e.id, y: n, height: l, rowHeight: t });
+        (0, E.NJ)({ guildId: e.guild_id, channelId: e.id, y: n, height: l, rowHeight: t });
     }, 50);
     trackMemberListViewed = () => {
         if (this.lastReportedAnalyticsChannel === this.props.channel.id) return;
@@ -739,7 +739,7 @@ function eV(e) {
                 p = (0, h.bG)([z.A], () => z.A.getChannel(s)),
                 g = (0, h.bG)([Z.A], () => Z.A.getGuild(r), [r]),
                 x = ((0, $.T)(g) ?? !1) && p?.isForumChannel() === !1,
-                [A, C, E, I] = i.useMemo(() => {
+                [A, E, C, I] = i.useMemo(() => {
                     let e;
                     if (null == c || 0 === c.length || null == u || !x) return [t, n, l];
                     let i = a ? c.length : 3,
@@ -819,7 +819,7 @@ function eV(e) {
                     ),
                     [u, s, r, m, f, x],
                 ),
-                { groups: A, rows: C, version: E, updateMaxRowSeen: j }
+                { groups: A, rows: E, version: C, updateMaxRowSeen: j }
             );
         })({ memberStoreProps: o, channelId: t.id, guildId: t.guild_id }),
         g = i.useRef(null),
@@ -830,8 +830,8 @@ function eV(e) {
                 document.activeElement !== document.body &&
                 A.current?.focus({ preventScroll: !0 }));
     }, []);
-    let C = (0, x.W)("lg") + (0, x.W)("xxs"),
-        E = i.useCallback(
+    let E = (0, x.W)("lg") + (0, x.W)("xxs"),
+        C = i.useCallback(
             (e, t) => {
                 let n = g.current;
                 if (null == n) return;
@@ -870,7 +870,7 @@ function eV(e) {
                 }),
             [],
         ),
-        j = (0, c.Ay)({ id: `members-${t.id}`, setFocus: E, isEnabled: a, scrollToStart: I, scrollToEnd: N });
+        j = (0, c.Ay)({ id: `members-${t.id}`, setFocus: C, isEnabled: a, scrollToStart: I, scrollToEnd: N });
     return (0, l.jsx)(v.f5, {
         value: s,
         children: (0, l.jsx)("div", {
@@ -887,7 +887,7 @@ function eV(e) {
                     rows: d,
                     listRef: g,
                     updateMaxContentFeedRowSeen: p,
-                    sectionHeight: 18 + C,
+                    sectionHeight: 18 + E,
                     rowHeight: 42,
                 }),
             }),

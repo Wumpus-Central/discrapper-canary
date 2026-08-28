@@ -16,18 +16,18 @@ var l = n(477900),
     g = n(102597),
     x = n(904054),
     A = n(584014),
-    C = n(885386),
-    E = n(174459),
+    E = n(885386),
+    C = n(174459),
     I = n(652215);
 function y(e, t) {
     let { isPlaying: n, playSound: l } = (0, A.A)(null != e ? (0, g.A)(e.soundId) : null);
     return {
         isPlaying: n,
         playSound: i.useCallback(async () => {
-            let n = (0, x.A)(e?.volume ?? 1, C.HO.getSetting());
+            let n = (0, x.A)(e?.volume ?? 1, E.HO.getSetting());
             return (
                 !!(await l({ volume: n })) &&
-                (E.default.track(I.HAw.SOUNDMOJI_PLAY, {
+                (C.default.track(I.HAw.SOUNDMOJI_PLAY, {
                     guild_id: t?.guild_id,
                     channel_id: t?.id,
                     sound_guild_id: e?.guildId,
@@ -87,13 +87,13 @@ function O(e) {
 }
 let M = function (e) {
     let { channelId: t, messageId: n, soundId: s, messageSounds: r, jumbo: o = !1 } = e,
-        u = C.hH.useSetting(),
+        u = E.hH.useSetting(),
         d = (0, a.bG)([S.A], () => S.A.getSoundById(s), [s]),
         m = i.useMemo(() => (0, f.A)(t, n, s, r) ?? d, [t, n, s, r, d]),
         g = (0, a.bG)([_.A], () => _.A.getChannel(t)),
         x = (0, h.X)({ location: "SoundboardMention" }),
         A = i.useRef(null),
-        { isPlaying: E, playSound: I } = y(m, g),
+        { isPlaying: C, playSound: I } = y(m, g),
         j = i.useCallback(async () => {
             (await I()) && A.current?.addAnimation();
         }, [I]);
@@ -109,7 +109,7 @@ let M = function (e) {
                         sound: m,
                         channel: g,
                         onSelectItem: j,
-                        isPlayingSoundOverride: E,
+                        isPlayingSoundOverride: C,
                         isSoundmoji: !0,
                         buttonOverlay: N.If.SOUNDMOJI,
                         tooltipClassName: T.YL,
@@ -125,7 +125,7 @@ let M = function (e) {
                     __unsupportedReactNodeAsText: (0, l.jsx)(p.WE, { sound: m }),
                     position: "top",
                     delay: 500,
-                    children: (0, l.jsx)("span", { children: (0, l.jsx)(O, { sound: m, playSound: j, isPlaying: E }) }),
+                    children: (0, l.jsx)("span", { children: (0, l.jsx)(O, { sound: m, playSound: j, isPlaying: C }) }),
                 })
         : null;
 };

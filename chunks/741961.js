@@ -16,8 +16,8 @@ let m = 10 * o.A.Millis.SECOND,
     g = {},
     x = {},
     A = Object.freeze({}),
-    C = Object.freeze({});
-function E(e) {
+    E = Object.freeze({});
+function C(e) {
     return c.A.getChannel(e)?.getGuildId() ?? void 0;
 }
 function I(e) {
@@ -37,7 +37,7 @@ function I(e) {
             (n = o),
             (l = u),
             (i = f),
-            clearTimeout((a = { ...((s = { ...(g[t] ?? C) })[n] ?? A) })[l]),
+            clearTimeout((a = { ...((s = { ...(g[t] ?? E) })[n] ?? A) })[l]),
             (a[l] = i),
             (s[n] = a),
             (g[t] = s)),
@@ -82,7 +82,7 @@ class N extends i.Ay.Store {
         return p[e] ?? A;
     }
     getTypingUsersByGuild(e) {
-        return g[e] ?? C;
+        return g[e] ?? E;
     }
     isTyping(e, t) {
         return null != (p[e] ?? A)[t];
@@ -134,7 +134,7 @@ let v = new N(r.h, {
             },
             null == l || l.prevSend > i - 2 * o ? f : 0,
         );
-        return (l = { channelId: t, timeout: c, prevSend: i }), I({ channelId: t, userId: n, guildId: E(t) });
+        return (l = { channelId: t, timeout: c, prevSend: i }), I({ channelId: t, userId: n, guildId: C(t) });
     },
     TYPING_STOP_LOCAL: function (e) {
         let { channelId: t } = e,
@@ -144,7 +144,7 @@ let v = new N(r.h, {
             null != l &&
             l.channelId === t &&
             null != l.timeout &&
-            (clearTimeout(l.timeout), (l = null), y({ channelId: t, userId: n, guildId: E(t) }))
+            (clearTimeout(l.timeout), (l = null), y({ channelId: t, userId: n, guildId: C(t) }))
         );
     },
     CONNECTION_OPEN: S,
@@ -160,7 +160,7 @@ let v = new N(r.h, {
         return (
             r &&
                 ((t = n), null == l || l.channelId !== t || (null != l.timeout && clearTimeout(l.timeout), (l = null))),
-            null != s && y({ channelId: n, userId: s.id, guildId: i ?? E(n) })
+            null != s && y({ channelId: n, userId: s.id, guildId: i ?? C(n) })
         );
     },
 });

@@ -16,8 +16,8 @@ var l,
     g = n(922016),
     x = n(866665),
     A = n(983851),
-    C = n(885574),
-    E = n(967198),
+    E = n(885574),
+    C = n(967198),
     I = n(287809),
     y = n(824744),
     S = n(158045),
@@ -84,16 +84,16 @@ function W(e) {
         p = "0" === a.guildId,
         g = (0, o.bG)([w.A], () => w.A.getGuild(a.guildId)),
         x = !p && null != g,
-        [A, C] = s.useState(),
-        E = (0, N.tj)({ location: "SoundmojiGuildInfo" }),
-        y = p || x || null != A || !E,
+        [A, E] = s.useState(),
+        C = (0, N.tj)({ location: "SoundmojiGuildInfo" }),
+        y = p || x || null != A || !C,
         [v, _] = s.useState(!y);
     s.useEffect(() => {
         y ||
             (_(!0),
             (0, M.nh)(a.soundId, a.guildId)
                 .then((e) => {
-                    C(e);
+                    E(e);
                 })
                 .finally(() => {
                     _(!1), f();
@@ -225,7 +225,7 @@ function Z(e) {
     let { sound: t, forceShowBetaLabel: n = !1 } = e,
         l = (0, N.tj)({ location: "SoundmojiBanner" }),
         s = (0, o.bG)([I.default], () => S.Ay.canUseSoundboardEverywhere(I.default.getCurrentUser())),
-        r = (0, o.bG)([E.A], () => E.A.getGuildId());
+        r = (0, o.bG)([C.A], () => C.A.getGuildId());
     return n || s || "0" === t.guildId || t.guildId === r || !l
         ? (0, i.jsx)(m.Lp, { text: "BETA", color: u.A.colors.BACKGROUND_BRAND.css, className: H.aZ })
         : (0, i.jsxs)("div", {
@@ -290,7 +290,7 @@ function q(e) {
     s.useEffect(() => {
         u ? A.current?.focus() : A.current?.blur(), a?.(u);
     }, [u, a]);
-    let C = !u;
+    let E = !u;
     return (0, i.jsx)(g.Y, {
         targetElementRef: A,
         renderPopout: (e) =>
@@ -310,14 +310,14 @@ function q(e) {
         children: (e) =>
             (0, i.jsx)(x.m, {
                 onTooltipHide: () => {
-                    C && a?.(!1);
+                    E && a?.(!1);
                 },
                 onTooltipShow: () => {
-                    C && a?.(!0);
+                    E && a?.(!0);
                 },
                 text: l,
                 position: "top",
-                shouldShow: C,
+                shouldShow: E,
                 children: (0, i.jsx)(c.D, {
                     ...e,
                     innerRef: A,
@@ -345,7 +345,7 @@ function J(e) {
                 renderPopout: (e) => (0, i.jsx)(W, { sound: t, channel: n, ...e }),
                 tooltipText: U.intl.string(U.t["KVbJU/"]),
                 position: "right",
-                children: (0, i.jsx)(C.CircleInformationIcon, { size: "md", color: "currentColor", className: K.Wo }),
+                children: (0, i.jsx)(E.CircleInformationIcon, { size: "md", color: "currentColor", className: K.Wo }),
             }),
         ],
     });

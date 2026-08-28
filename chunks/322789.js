@@ -16,8 +16,8 @@ var l = n(477900),
     g = n(692969),
     x = n(932413),
     A = n(975732),
-    C = n(964195),
-    E = n(939341),
+    E = n(964195),
+    C = n(939341),
     I = n(291594),
     y = n(263577),
     S = n(506326),
@@ -37,7 +37,7 @@ let R = [S.iq, S.Zc, S.Xy, S.$X, S.tR, S.K7, S.fg, S.sp, S.MK],
                 isFirstApplicationOccurrence: M,
                 trackRankingItemInteraction: L,
             } = e,
-            { largeImage: k } = (0, E.nO)({
+            { largeImage: k } = (0, C.nO)({
                 entry: t,
                 showCoverImage: !1,
                 trackingSource: "memberlist_gaming_content_row",
@@ -121,7 +121,7 @@ let R = [S.iq, S.Zc, S.Xy, S.$X, S.tR, S.K7, S.fg, S.sp, S.MK],
                     }),
                 "applicationWidgetPreview" in t &&
                     null != t.applicationWidgetPreview &&
-                    (0, l.jsx)(C.F, {
+                    (0, l.jsx)(E.F, {
                         userId: t.author_id,
                         widgetApplicationId: t.applicationWidgetPreview.widgetApplicationId,
                         hasWidget: t.applicationWidgetPreview.hasWidget,

@@ -16,8 +16,8 @@ var l = n(477900),
     g = n(131607),
     x = n(189551),
     A = n(526292),
-    C = n(821589),
-    E = n(49999),
+    E = n(821589),
+    C = n(49999),
     I = n(307731),
     y = n(375708),
     S = n(346089);
@@ -33,13 +33,13 @@ function v(e) {
             onFocus: f,
             spriteClassName: g,
             spriteSize: A,
-            ref: E,
+            ref: C,
             ...y
         } = e,
         [v, _] = i.useState(!1),
         [j, T] = i.useState(50),
         b = v || s,
-        R = (0, C.t)(S, "emojiButton", b ? "Hovered" : "Normal"),
+        R = (0, E.t)(S, "emojiButton", b ? "Hovered" : "Normal"),
         O = (function (e) {
             let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 18;
             return {
@@ -59,7 +59,7 @@ function v(e) {
         k = i.useCallback(() => (0, x.K)(I.EmojiInteractionPoint.EmojiButtonFocused), []),
         w = (0, o.bG)([p.Ay], () => p.Ay.useReducedMotion);
     return (0, l.jsx)(c.D, {
-        innerRef: E,
+        innerRef: C,
         className: r()(R, t),
         "aria-expanded": s,
         onMouseEnter: () => {
@@ -112,7 +112,7 @@ function _(e) {
             onClick: c,
             "aria-controls": d,
             ref: x,
-            keyboardShortcut: C,
+            keyboardShortcut: E,
             canShowNUXPremiumTooltip: I = !1,
             ...N
         } = e,
@@ -127,7 +127,7 @@ function _(e) {
         return (0, l.jsx)(v, {
             ref: L,
             onMouseLeave: () => {
-                R && b(E.i.USER_DISMISS);
+                R && b(C.i.USER_DISMISS);
             },
             onClick: (e) => {
                 c?.(e);
@@ -156,5 +156,5 @@ function _(e) {
                 shouldShow: !0,
                 children: k(),
             })
-          : (0, l.jsx)(f.m, { targetElementRef: L, shouldShow: !0, text: s, keyboardShortcut: C, children: k() });
+          : (0, l.jsx)(f.m, { targetElementRef: L, shouldShow: !0, text: s, keyboardShortcut: E, children: k() });
 }

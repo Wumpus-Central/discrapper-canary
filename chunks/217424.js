@@ -43,10 +43,10 @@ var i = n(477900),
 n(827669);
 var z = n(375708),
     J = n(894625);
-let Y = { tag: "span", variant: "text-md/normal", color: "text-default" },
-    K = { className: a()("mention", J.lE) };
+let K = { tag: "span", variant: "text-md/normal", color: "text-default" },
+    Y = { className: a()("mention", J.lE) };
 function W(e) {
-    return (0, i.jsx)(k.E, { ...Y, color: "text-strong", children: e });
+    return (0, i.jsx)(k.E, { ...K, color: "text-strong", children: e });
 }
 let X = l.memo(function (e) {
     var t;
@@ -97,7 +97,7 @@ let X = l.memo(function (e) {
                                     {
                                         children: [
                                             " ",
-                                            (0, i.jsx)(k.E, { ...Y, children: d?.name_localized ?? s.name }),
+                                            (0, i.jsx)(k.E, { ...K, children: d?.name_localized ?? s.name }),
                                         ],
                                     },
                                     m,
@@ -127,7 +127,7 @@ let X = l.memo(function (e) {
                                 if (null != t) {
                                     let e = (0, L.FT)(t, a);
                                     n = (0, i.jsxs)(G.A, {
-                                        ...K,
+                                        ...Y,
                                         onClick: () =>
                                             (0, w.openUserProfileModal)({
                                                 userId: t.id,
@@ -145,13 +145,13 @@ let X = l.memo(function (e) {
                                 let e = s.value.toString(),
                                     t = H.A.getChannel(e);
                                 null != t &&
-                                    (n = (0, i.jsxs)(G.A, { ...K, children: ["#", (0, P.m1)(t, S.default, F.A)] }));
+                                    (n = (0, i.jsxs)(G.A, { ...Y, children: ["#", (0, P.m1)(t, S.default, F.A)] }));
                                 break;
                             }
                             case A.n4.ROLE: {
                                 let e = s.value.toString(),
                                     t = null != r ? V.A.getRole(r.id, e) : void 0;
-                                null != t && (n = (0, i.jsxs)(G.A, { ...K, children: ["@", t.name] }));
+                                null != t && (n = (0, i.jsxs)(G.A, { ...Y, children: ["@", t.name] }));
                                 break;
                             }
                             case A.n4.MENTIONABLE: {
@@ -163,7 +163,7 @@ let X = l.memo(function (e) {
                                     if (null != t) {
                                         let e = (0, L.FT)(t, a);
                                         n = (0, i.jsxs)(G.A, {
-                                            ...K,
+                                            ...Y,
                                             onClick: () =>
                                                 (0, w.openUserProfileModal)({
                                                     userId: t.id,
@@ -191,7 +191,7 @@ let X = l.memo(function (e) {
                                 l.Fragment,
                                 {
                                     children: [
-                                        (0, i.jsxs)(k.E, { ...Y, children: [" ", d?.name_localized ?? s.name, ": "] }),
+                                        (0, i.jsxs)(k.E, { ...K, children: [" ", d?.name_localized ?? s.name, ": "] }),
                                         n,
                                     ],
                                 },
@@ -210,7 +210,7 @@ let X = l.memo(function (e) {
                 }),
             );
         a = (0, i.jsxs)(i.Fragment, {
-            children: [(0, i.jsxs)(k.E, { ...Y, children: ["/", c.application_command?.name_localized ?? c.name] }), e],
+            children: [(0, i.jsxs)(k.E, { ...K, children: ["/", c.application_command?.name_localized ?? c.name] }), e],
         });
     }
     return (0, i.jsxs)("div", {

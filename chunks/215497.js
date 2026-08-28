@@ -29,8 +29,8 @@ let A = s.forwardRef(function (e, t) {
             className: r,
             children: g,
             actions: A,
-            handleEditModal: C,
-            keyboardModeEnabled: E,
+            handleEditModal: E,
+            keyboardModeEnabled: C,
             onKeyDown: I,
             draftType: y,
             size: S = 1,
@@ -70,13 +70,13 @@ let A = s.forwardRef(function (e, t) {
                 }
             },
             onKeyDown: function (e) {
-                if (E) {
+                if (C) {
                     switch (e.which) {
                         case m.Ks6.D:
                             e.preventDefault(), c.A.remove(l, n, y);
                             return;
                         case m.Ks6.E:
-                            null != C && (e.preventDefault(), C(e));
+                            null != E && (e.preventDefault(), E(e));
                             return;
                         case m.Ks6.BACKSPACE:
                             e.ctrlKey

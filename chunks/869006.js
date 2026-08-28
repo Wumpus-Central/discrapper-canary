@@ -1,5 +1,5 @@
-_.r(
-    (e.exports = {
+i.r(
+    (d.exports = {
         ring: "ring_ddf8f1",
         lg: "lg_ddf8f1",
         sm: "sm_ddf8f1",

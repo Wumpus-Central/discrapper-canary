@@ -16,8 +16,8 @@ var l = n(477900),
     g = n(847374),
     x = n(866665),
     A = n(66834),
-    C = n(565645),
-    E = n(793574),
+    E = n(565645),
+    C = n(793574),
     I = n(688810),
     y = n(139286),
     S = n(235986),
@@ -69,7 +69,7 @@ function et(e) {
             children: (0, l.jsxs)(S.A, {
                 className: ee.gH,
                 children: [
-                    (0, l.jsx)(C.A, { emojiName: r.name, className: ee.P$, src: r.src, animated: !1, size: "jumbo" }),
+                    (0, l.jsx)(E.A, { emojiName: r.name, className: ee.P$, src: r.src, animated: !1, size: "jumbo" }),
                     (0, l.jsxs)(S.A, {
                         direction: S.A.Direction.VERTICAL,
                         justify: S.A.Justify.CENTER,
@@ -308,7 +308,7 @@ function ei(e) {
             [T, V],
         ),
         ea = !!ei && (0, v.tE)(T?.guildId),
-        { analyticsLocations: eo } = (0, I.Ay)(E.A.GUILD_ROLE_SUBSCRIPTION_EMOJI_TEXT_POPOVER_UPSELL);
+        { analyticsLocations: eo } = (0, I.Ay)(C.A.GUILD_ROLE_SUBSCRIPTION_EMOJI_TEXT_POPOVER_UPSELL);
     (0, y.A)(
         {
             type: a.ImpressionTypes.MODAL,
@@ -370,7 +370,7 @@ function ei(e) {
                     children: [
                         (0, l.jsxs)(S.A, {
                             children: [
-                                (0, l.jsx)(C.A, {
+                                (0, l.jsx)(E.A, {
                                     className: ee.P$,
                                     emojiId: s.emojiId,
                                     emojiName: s.name,
@@ -427,7 +427,7 @@ function ei(e) {
                                                 N.id,
                                                 {
                                                     sourceLocationStack: [
-                                                        E.A.GUILD_ROLE_SUBSCRIPTION_EMOJI_TEXT_POPOVER_UPSELL,
+                                                        C.A.GUILD_ROLE_SUBSCRIPTION_EMOJI_TEXT_POPOVER_UPSELL,
                                                     ],
                                                 },
                                                 X.VV.ROLE_SUBSCRIPTIONS,
@@ -527,7 +527,7 @@ function es(e) {
                           {
                               text: e.require_colons ? `:${e.name}:` : e.name,
                               ...$.Uk,
-                              children: (0, l.jsx)(C.A, { className: ee.Th, emojiId: e.id, animated: e.animated }),
+                              children: (0, l.jsx)(E.A, { className: ee.Th, emojiId: e.id, animated: e.animated }),
                           },
                           e.id,
                       ),

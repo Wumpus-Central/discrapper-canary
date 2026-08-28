@@ -30,8 +30,8 @@ var l = n(477900),
     g = n(281595),
     x = n(465532),
     A = n(765671),
-    C = n(775602),
-    E = n(793574),
+    E = n(775602),
+    C = n(793574),
     I = n(688810),
     y = n(177640),
     S = n(989837),
@@ -252,8 +252,8 @@ let ec = [8, 8, 0, 8],
                 activeSections: g,
                 commandsByActiveSection: x,
                 hasMoreAfter: A,
-                commands: C,
-                filteredSectionId: E,
+                commands: E,
+                filteredSectionId: C,
                 scrollDown: I,
                 filterSection: y,
             } = Y.cu({
@@ -291,20 +291,20 @@ let ec = [8, 8, 0, 8],
         }),
             i.useEffect(() => {
                 v.current(o.current);
-            }, [C]);
+            }, [E]);
         let _ = i.useCallback((e) => (e !== g.length - 1 || A ? 16 : 0), [g.length, A]),
             j = x.map((e) => e.data.length);
         i.useEffect(() => {
             null != d.current && h && null != u && d.current.scrollRowIntoView(u);
         }, [h, u]),
             i.useLayoutEffect(() => {
-                null != E && d.current?.scrollToSectionTop(0);
-            }, [C, E]);
+                null != C && d.current?.scrollToSectionTop(0);
+            }, [E, C]);
         let b = i.useCallback(
                 (e) => {
-                    e.id === E || e.id === er.Ik.FRECENCY ? (y(null), d.current?.scrollToSectionTop(0)) : y(e.id);
+                    e.id === C || e.id === er.Ik.FRECENCY ? (y(null), d.current?.scrollToSectionTop(0)) : y(e.id);
                 },
-                [y, E],
+                [y, C],
             ),
             R = i.useCallback(
                 (e, t, l) => {
@@ -330,14 +330,14 @@ let ec = [8, 8, 0, 8],
                     return !0;
                 },
                 onMoveSelection: (e) => {
-                    if (0 === C.length) return !0;
+                    if (0 === E.length) return !0;
                     let t = 7 * !!A,
-                        n = C.length + t,
+                        n = E.length + t,
                         l = null == u ? 0 : u + e;
                     return l >= n ? (l = n - 1) : l < 0 && (l = 0), c(l), m(!0), !0;
                 },
             }),
-            [C.length, x, A, p, R, u],
+            [E.length, x, A, p, R, u],
         );
         let O = i.useCallback(
                 (e) => {
@@ -426,7 +426,7 @@ let ec = [8, 8, 0, 8],
                         className: eo.H$,
                         channel: n,
                         sections: p,
-                        filteredSectionId: E,
+                        filteredSectionId: C,
                         activeCategoryIndex: f,
                         onSectionClick: b,
                         applicationCommandListRef: d,
@@ -459,8 +459,8 @@ var ef = n(702841),
     eg = n(31498),
     ex = n(598071),
     eA = n(151271),
-    eC = n(442152),
-    eE = n(256265),
+    eE = n(442152),
+    eC = n(256265),
     eI = n(336807),
     ey = n(857071),
     eS = n(135621),
@@ -518,8 +518,8 @@ var eL = n(931664),
     e3 = n(463930),
     e8 = n(935063),
     e7 = n(73392),
-    e6 = n(650019),
-    e5 = n(763754),
+    e5 = n(650019),
+    e6 = n(763754),
     e4 = n(967144),
     e9 = n(118517),
     te = n(976860),
@@ -587,12 +587,12 @@ function tu(e) {
             colorString: g,
             colorStrings: x,
             colorRoleName: A,
-            authorId: C,
-            displayNameStyles: E,
-        } = (0, e5.Ay)(u),
-        I = (0, e4.gn)(f, C, x),
-        y = (0, e7.a)({ displayNameStyles: E }),
-        S = (0, e6.A)(h, u.attachments),
+            authorId: E,
+            displayNameStyles: C,
+        } = (0, e6.Ay)(u),
+        I = (0, e4.gn)(f, E, x),
+        y = (0, e7.a)({ displayNameStyles: C }),
+        S = (0, e5.A)(h, u.attachments),
         N =
             ((t = o.id),
             (n = u.id),
@@ -775,8 +775,8 @@ var tp = n(587895),
     tg = n(20015),
     tx = n(629016),
     tA = n(461213),
-    tC = n(228366),
-    tE = n(361310);
+    tE = n(228366),
+    tC = n(361310);
 let tI = new Map(),
     ty = new Set(),
     tS = 0,
@@ -785,7 +785,7 @@ function tv() {
     let e = (function () {
             let e = new Set();
             for (let t of tA.A.getActivities()) {
-                let n = (0, tE.N)(t);
+                let n = (0, tC.N)(t);
                 null != n && e.add(n);
             }
             return e;
@@ -836,7 +836,7 @@ class t_ extends m.Ay.PersistedStore {
         };
     }
 }
-let tj = new t_(tC.h, {
+let tj = new t_(tE.h, {
     RICH_PRESENCE_INVITE_BAR_CHANNEL_INVITED: function (e) {
         let { sessionKey: t, channelId: n } = e,
             l = tI.get(t);
@@ -872,7 +872,7 @@ function tG(e) {
     let { channel: t, activity: n } = e,
         s = (0, tk.Ay)(tk.P8.CHANNEL_TEXT_AREA_BARS),
         [a, o] = i.useState(!1),
-        u = (0, tE.N)(n);
+        u = (0, tC.N)(n);
     return (i.useEffect(() => {
         s &&
             ez.default.track(ea.HAw.CHANNEL_BANNER_VIEWED, {
@@ -905,7 +905,7 @@ function tG(e) {
                                           channelId: t.id,
                                           type: ea.xL.JOIN,
                                           activity: n,
-                                          location: E.A.RICH_PRESENCE_INVITE_COMPOSER_BANNER,
+                                          location: C.A.RICH_PRESENCE_INVITE_COMPOSER_BANNER,
                                       }).then(
                                           () => {
                                               o(!1);
@@ -998,7 +998,7 @@ class tK extends m.Ay.PersistedStore {
         return [...tW];
     }
 }
-let tz = new tK(tC.h, {});
+let tz = new tK(tE.h, {});
 function tZ() {
     let e = eF.Ay.getChannelId();
     if (null == e) return;
@@ -1071,32 +1071,32 @@ var t1 = n(575293),
     t3 = n.n(t2),
     t8 = n(31717),
     t7 = n(970244),
-    t6 = n(29621);
-function t5(e) {
+    t5 = n(29621);
+function t6(e) {
     let { channel: t, scheduledMessageDraft: n } = e,
         { scheduledTimestamp: i } = n;
     return (0, l.jsx)("div", {
-        className: t6.e1,
+        className: t5.e1,
         children: (0, l.jsx)("div", {
-            className: t6.kL,
+            className: t5.kL,
             children: (0, l.jsxs)("div", {
-                className: t6.g3,
+                className: t5.g3,
                 children: [
                     (0, l.jsx)(Q.D, {
-                        className: t6.a3,
+                        className: t5.a3,
                         "aria-label": T.intl.string(T.t.SBcdAN),
                         onClick: function () {
                             (0, t7.e0)({ channel: t, defaultValue: t3()(i) });
                         },
                         children: (0, l.jsx)(e0.E, {
                             color: "text-default",
-                            className: t6.Qq,
+                            className: t5.Qq,
                             variant: "text-sm/normal",
                             children: T.intl.formatToPlainString(T.t["MQcRX/"], { timestamp: new Date(i).valueOf() }),
                         }),
                     }),
                     (0, l.jsx)("div", {
-                        className: t6.o1,
+                        className: t5.o1,
                         children: (0, l.jsx)(ts, {
                             onClick: function (e) {
                                 e.stopPropagation(), x.A.clearDraft(t.id, t8.C.ScheduledMessage);
@@ -1218,8 +1218,8 @@ var nh = n(822610),
     ng = n(922016),
     nx = n(375499),
     nA = n(267889),
-    nC = n(307731),
-    nE = n(9287);
+    nE = n(307731),
+    nC = n(9287);
 function nI(e) {
     let { getSlateEditor: t, onInsertEmoji: n, type: s, channel: r } = e,
         a = t(),
@@ -1228,15 +1228,15 @@ function nI(e) {
         ? null
         : (0, l.jsxs)("div", {
               id: "slate-toolbar",
-              className: nE.aL,
+              className: nC.aL,
               children: [
                   (0, l.jsx)("div", {
-                      className: nE.Wy,
+                      className: nC.Wy,
                       children: (0, l.jsx)(nf.P, {
                           slateEditor: a,
                           options: s.markdown,
-                          iconClassName: nE.C7,
-                          dividerClassName: nE.us,
+                          iconClassName: nC.C7,
+                          dividerClassName: nC.us,
                       }),
                   }),
                   (0, l.jsx)(ng.Y, {
@@ -1252,7 +1252,7 @@ function nI(e) {
                                   n({ emoji: l, willClose: i }), i && t();
                               },
                               pickerIntention:
-                                  s.expressionPicker?.emojiIntention ?? nC.EmojiIntention.COMMUNITY_CONTENT,
+                                  s.expressionPicker?.emojiIntention ?? nE.EmojiIntention.COMMUNITY_CONTENT,
                           });
                       },
                       position: "bottom",
@@ -1260,7 +1260,7 @@ function nI(e) {
                       align: "left",
                       children: (e, t) => {
                           let { isShown: n } = t;
-                          return (0, l.jsx)(nx.A, { ...e, ref: o, active: n, className: nE.Z8, tabIndex: 0 });
+                          return (0, l.jsx)(nx.A, { ...e, ref: o, active: n, className: nC.Z8, tabIndex: 0 });
                       },
                   }),
               ],
@@ -1275,8 +1275,8 @@ function nN(e, t, s, r, a) {
                 if (o) return;
                 u(!0);
                 let A = eL.A.getStickerPreview(a, t.drafts.type)?.map((e) => e.id) ?? [],
-                    C = eB.A.getUploads(a, t.drafts.type) ?? [];
-                if (null == d && !m && !p && (0, eE.xz)(C, a)) {
+                    E = eB.A.getUploads(a, t.drafts.type) ?? [];
+                if (null == d && !m && !p && (0, eC.xz)(E, a)) {
                     u(!1),
                         (0, f.openModalLazy)(async () => {
                             let { default: e } = await Promise.all([
@@ -1333,7 +1333,7 @@ function nN(e, t, s, r, a) {
                                 (0, l.jsx)(e, {
                                     ...t,
                                     threadId: a,
-                                    attachments: C,
+                                    attachments: E,
                                     sendMessage: () => c(i, void 0, void 0, void 0, !0),
                                 });
                         });
@@ -1341,7 +1341,7 @@ function nN(e, t, s, r, a) {
                 }
                 e({
                     value: i,
-                    uploads: C,
+                    uploads: E,
                     stickers: A,
                     command: d,
                     commandOptionValues: h,
@@ -1576,30 +1576,30 @@ let nP = i.memo(
                 showValueWhenDisabled: eo = !1,
             } = e;
         u()(null != b, "chat input type must be set");
-        let { analyticsLocations: eu } = (0, I.Ay)(E.A.CHANNEL_TEXT_AREA),
+        let { analyticsLocations: eu } = (0, I.Ay)(C.A.CHANNEL_TEXT_AREA),
             ec = nO(t),
             ed = i.useRef(null),
             em = i.useRef(null),
-            eE = i.useRef(null),
+            eC = i.useRef(null),
             eI = i.useRef(null),
             ey = i.useRef(null),
-            eN = i.useCallback(() => eE.current?.getSlateEditor() ?? null, []);
-        ee?.(eE.current);
+            eN = i.useCallback(() => eC.current?.getSlateEditor() ?? null, []);
+        ee?.(eC.current);
         let ev = (0, y.A)(T),
             e_ = (0, eU.n)("ChannelTextAreaContainer"),
-            ej = (0, m.cf)([C.Ay], () => ({
-                expressionPickerFormat: C.Ay.expressionPickerFormat,
-                condensePickerWhenNarrow: C.Ay.condensePickerWhenNarrow,
+            ej = (0, m.cf)([E.Ay], () => ({
+                expressionPickerFormat: E.Ay.expressionPickerFormat,
+                condensePickerWhenNarrow: E.Ay.condensePickerWhenNarrow,
             })),
-            eT = e_ ? ej.expressionPickerFormat : C.IG.FLEXIBLE,
+            eT = e_ ? ej.expressionPickerFormat : E.IG.FLEXIBLE,
             eb = !e_ || ej.condensePickerWhenNarrow,
             [eR, eO] = i.useState(!ev);
         (0, A.i4)(ec, (e) => {
             let { width: t } = e;
             return eO(!ev && (null == t || t > 450));
         });
-        let eL = eT === C.IG.HIDDEN,
-            ek = eT === C.IG.CONDENSED || (eT === C.IG.FLEXIBLE && eb && !eR),
+        let eL = eT === E.IG.HIDDEN,
+            ek = eT === E.IG.CONDENSED || (eT === E.IG.FLEXIBLE && eb && !eR),
             { activeCommand: ew, activeCommandSection: eP } = (0, m.cf)([k.A], () => ({
                 activeCommand: b.commands?.enabled ? k.A.getActiveCommand(T.id) : null,
                 activeCommandSection: b.commands?.enabled ? k.A.getActiveCommandSection(T.id) : null,
@@ -1616,27 +1616,27 @@ let nP = i.memo(
             e2 = !eD.D_.useSetting() && !(0, eJ.isAndroidWeb)() && null != window.ResizeObserver,
             e3 = !e2 || !b.commands?.enabled || !R || "/" !== a,
             e8 = (0, eS.A)(),
-            { fontSize: e7 } = (0, m.cf)([C.Ay], () => ({ fontSize: C.Ay.fontSize })),
-            e6 = (0, m.bG)([eH.A], () => eH.A.isEnabled());
+            { fontSize: e7 } = (0, m.cf)([E.Ay], () => ({ fontSize: E.Ay.fontSize })),
+            e5 = (0, m.bG)([eH.A], () => eH.A.isEnabled());
         nT(b, eK, T.id);
-        let { eventEmitter: e5, handleEditorSelectionChanged: e4 } = nb(eE, a, o),
+        let { eventEmitter: e6, handleEditorSelectionChanged: e4 } = nb(eC, a, o),
             e9 = i.useRef(a);
         e9.current = a;
         let te = i.useCallback(
                 (e, t, n) => {
-                    "/" === t && "" === e9.current && b.commands?.enabled && e5.emit("command-sentinel-typed"),
+                    "/" === t && "" === e9.current && b.commands?.enabled && e6.emit("command-sentinel-typed"),
                         U?.(e, t, n);
                 },
-                [U, b.commands?.enabled, e5],
+                [U, b.commands?.enabled, e6],
             ),
-            { submitting: tt, submit: tn, handleSubmit: tl } = nN(B, b, eE, ey, T.id),
+            { submitting: tt, submit: tn, handleSubmit: tl } = nN(B, b, eC, ey, T.id),
             { autocompleteRef: ti, handleMaybeShowAutocomplete: ts, handleHideAutocomplete: tr } = nR(),
-            to = nv(tn, b, eE),
-            tc = n_(eE),
-            td = nj({ editorRef: eE, disabled: eK, textValue: a, channelId: T.id, chatInputType: b, submit: B }),
+            to = nv(tn, b, eC),
+            tc = n_(eC),
+            td = nj({ editorRef: eC, disabled: eK, textValue: a, channelId: T.id, chatInputType: b, submit: B }),
             th = i.useCallback(
                 (e, t, n) => {
-                    let l = eE.current;
+                    let l = eC.current;
                     null != e &&
                         null != l &&
                         (ez.default.track(ea.HAw.SOUNDMOJI_SELECT, {
@@ -1650,10 +1650,10 @@ let nP = i.memo(
                         n && (0, eA.v8)(),
                         l?.focus();
                 },
-                [eE, T.id, T.guild_id],
+                [eC, T.id, T.guild_id],
             ),
             tf = i.useCallback(() => ey?.current?.hide(), []),
-            { editorHeight: tC, handleResize: tI } = nM(G),
+            { editorHeight: tE, handleResize: tI } = nM(G),
             {
                 handleTab: ty,
                 handleEnter: tS,
@@ -1676,7 +1676,7 @@ let nP = i.memo(
                     [e3, ed, ti],
                 ),
             }),
-            { expressionPickerView: t_, shouldHideExpressionPicker: tb, handleOuterClick: tR } = nk(b, eE, T.id),
+            { expressionPickerView: t_, shouldHideExpressionPicker: tb, handleOuterClick: tR } = nk(b, eC, T.id),
             { selectedAutocompleteInputType: tO, selectedAutocompleteInputError: tM } = (function (e, t) {
                 let [n, l] = i.useState({ selectedAutocompleteInputType: null, selectedAutocompleteInputError: !1 }),
                     s = i.useCallback(() => {
@@ -1702,7 +1702,7 @@ let nP = i.memo(
                     ),
                     n
                 );
-            })(e5, eE),
+            })(e6, eC),
             { handleAutocompleteVisibilityChange: tL } = nw(b, T.id),
             tk = (function (e) {
                 let { type: t, channelId: n } = e;
@@ -1712,9 +1712,9 @@ let nP = i.memo(
                 }, [t, n]);
             })({ type: b, channelId: T.id }),
             tw = i.useCallback(() => {
-                e5.emit("submit-failure");
-            }, [e5]);
-        (0, e$.R)(e5, T.guild_id, T.id);
+                e6.emit("submit-failure");
+            }, [e6]);
+        (0, e$.R)(e6, T.guild_id, T.id);
         let tP = null != D,
             tD = (eK && !((eF || eB) && e0)) || (tt && b.submit?.useDisabledStylesOnSubmit),
             tU = null;
@@ -1768,11 +1768,11 @@ let nP = i.memo(
                         )),
                         (r = (0, m.bG)([tj], () => {
                             if (tj.isPermanentlyDismissed()) return !0;
-                            let e = null != t ? (0, tE.N)(t) : null;
+                            let e = null != t ? (0, tC.N)(t) : null;
                             return null != e && (tj.isDismissedSession(e) || tj.hasInvitedChannel(e, a.id));
                         })),
                         null == t || !n || s || r ? null : t),
-                    C = (0, t$.Ay)((e) => e.channelId === a.id);
+                    E = (0, t$.Ay)((e) => e.channelId === a.id);
                 return i.useMemo(() => {
                     let e = [],
                         t = [];
@@ -1792,12 +1792,12 @@ let nP = i.memo(
                         null != c && e.push((0, l.jsx)(tu, { reply: c, chatInputType: o })),
                         x && e.push((0, l.jsx)(tY, {})),
                         null != A && e.push((0, l.jsx)(tG, { channel: a, activity: A })),
-                        null != d && e.push((0, l.jsx)(t5, { channel: a, scheduledMessageDraft: d })),
+                        null != d && e.push((0, l.jsx)(t6, { channel: a, scheduledMessageDraft: d })),
                         "timestampMentionInput" === h && t.push((0, l.jsx)(tJ, { error: f ?? !1 })),
-                        C && e.push((0, l.jsx)(t0, { channelId: a.id })),
+                        E && e.push((0, l.jsx)(t0, { channelId: a.id })),
                         { stacked: e, floating: t }
                     );
-                }, [u, p, g, a, C, c, x, A, o, d, h, f]);
+                }, [u, p, g, a, E, c, x, A, o, d, h, f]);
             })({
                 channel: T,
                 type: b,
@@ -1825,7 +1825,7 @@ let nP = i.memo(
                           showAllButtons: !ek && !eL,
                           expressionButtonsHidden: eL,
                       }),
-            t6 = tB
+            t5 = tB
                 ? (0, l.jsx)(nm.A, {
                       type: b,
                       textValue: a,
@@ -1839,7 +1839,7 @@ let nP = i.memo(
                 R && eY._.dispatch(ea.jej.CHANNEL_TEXT_AREA_FOCUSED, { channelId: T.id });
             }, [R, T.id]),
             (0, l.jsx)(ex.Sv, {
-                value: e5,
+                value: e6,
                 children: (0, l.jsxs)(I.f5, {
                     value: eu,
                     children: [
@@ -1889,7 +1889,7 @@ let nP = i.memo(
                                                     ringTarget: ec,
                                                     ringClassName: t4.Rg,
                                                     children: (0, l.jsx)(eQ.A, {
-                                                        ref: eE,
+                                                        ref: eC,
                                                         id: x,
                                                         focused: R,
                                                         useSlate: e2,
@@ -1923,7 +1923,7 @@ let nP = i.memo(
                                                         onHideAutocomplete: tr,
                                                         promptToUpload: W,
                                                         fontSize: e7,
-                                                        spellcheckEnabled: e6,
+                                                        spellcheckEnabled: e5,
                                                         canOnlyUseTextCommands: tP,
                                                         className: r()(
                                                             {
@@ -1959,25 +1959,25 @@ let nP = i.memo(
                                     expressionPickerView: t_,
                                     type: b,
                                     targetRef: ec,
-                                    editorRef: eE,
+                                    editorRef: eC,
                                     onSendMessage: tn,
                                     onSendSticker: td,
                                     onVisibilityChange: tL,
                                     editorScrollerRef: eI,
-                                    editorHeight: tC,
+                                    editorHeight: tE,
                                     barsHeight: 40 * tZ.floating.length,
                                     setValue: (e, t) => te?.(null, e, t),
                                     position: et,
                                 }),
-                                (0, l.jsx)(eM, { textValue: a, editorHeight: tC, channelId: T.id }),
-                                t6,
+                                (0, l.jsx)(eM, { textValue: a, editorHeight: tE, channelId: T.id }),
+                                t5,
                                 en,
                             ],
                         }),
                         (0, l.jsx)(g.U, { error: O }),
                         tb
                             ? null
-                            : (0, l.jsx)(eC.A, {
+                            : (0, l.jsx)(eE.A, {
                                   positionTargetRef: ec,
                                   type: b,
                                   onSelectGIF: to,

@@ -16,21 +16,21 @@ var l = n(477900),
     g = n(885386),
     x = n(403362),
     A = n(382483),
-    C = n(385113);
-let E = i.createContext({ markAsVisible: () => {}, useInjectEntriesWithPreviewData: (e) => e });
+    E = n(385113);
+let C = i.createContext({ markAsVisible: () => {}, useInjectEntriesWithPreviewData: (e) => e });
 function I(e) {
     let [t, n] = i.useState(new Set()),
         I = i.useCallback((e) => {
             n((t) => (t.has(e) ? t : new Set(t).add(e)));
         }, []);
-    return (0, l.jsx)(E.Provider, {
+    return (0, l.jsx)(C.Provider, {
         value: {
             markAsVisible: I,
             useInjectEntriesWithPreviewData: (e) =>
                 (function (e, t) {
                     let n,
                         l,
-                        E,
+                        C,
                         I,
                         y,
                         S,
@@ -52,16 +52,16 @@ function I(e) {
                             i.useEffect(() => {
                                 n && (0, A.i$)().catch(() => {});
                             }, [n]),
-                            (l = (0, a.bG)([C.A], () => C.A.getFeaturedFetchState())),
-                            (E = (0, a.bG)([C.A], () => C.A.getDeveloperFetchState())),
-                            (I = (0, a.yK)([C.A], () => C.A.getFeaturedApplicationIds())),
-                            (y = (0, a.yK)([C.A], () => C.A.getDeveloperApplicationIds())),
+                            (l = (0, a.bG)([E.A], () => E.A.getFeaturedFetchState())),
+                            (C = (0, a.bG)([E.A], () => E.A.getDeveloperFetchState())),
+                            (I = (0, a.yK)([E.A], () => E.A.getFeaturedApplicationIds())),
+                            (y = (0, a.yK)([E.A], () => E.A.getDeveloperApplicationIds())),
                             {
                                 appsWithConfigs: i.useMemo(() => new Set([...I, ...y]), [I, y]),
                                 isLoadingConfigs:
-                                    l === C.e.NOT_FETCHED ||
-                                    l === C.e.FETCHING ||
-                                    (n && (E === C.e.NOT_FETCHED || E === C.e.FETCHING)),
+                                    l === E.e.NOT_FETCHED ||
+                                    l === E.e.FETCHING ||
+                                    (n && (C === E.e.NOT_FETCHED || C === E.e.FETCHING)),
                             }),
                         {
                             widgetApps: P,
@@ -128,8 +128,8 @@ function I(e) {
                             }, [M]),
                             { profilesByUserId: O, isLoadingProfiles: M.length > 0 || L }),
                         B = (0, a.cf)(
-                            [C.A],
-                            () => Object.fromEntries([...k].map((e) => [e, C.A.getConfig(e)]).filter(x.QE)),
+                            [E.A],
+                            () => Object.fromEntries([...k].map((e) => [e, E.A.getConfig(e)]).filter(x.QE)),
                             [k],
                         ),
                         W = w || U || V || H,
@@ -163,9 +163,9 @@ function I(e) {
     });
 }
 function y(e) {
-    return i.useContext(E).useInjectEntriesWithPreviewData(e);
+    return i.useContext(C).useInjectEntriesWithPreviewData(e);
 }
 function S(e) {
-    let { markAsVisible: t } = i.useContext(E);
+    let { markAsVisible: t } = i.useContext(C);
     i.useEffect(() => t(e), [t, e]);
 }

@@ -1,4 +1,4 @@
-n.d(t, { K: () => j, default: () => q });
+n.d(t, { K: () => v, default: () => q });
 var i = n(477900),
     l = n(582128),
     r = n(189213),
@@ -283,7 +283,7 @@ function k(e) {
 }
 var x = n(375708),
     G = n(424355);
-function v(e) {
+function j(e) {
     let { surveyId: t, survey: n, onClose: s, transitionState: _ } = e,
         { getSurveyResponses: d, setResponse: I, trackDisplayedQuestions: N } = (0, c.i)(),
         R = d(t),
@@ -530,7 +530,7 @@ function v(e) {
               }),
           });
 }
-async function j(e) {
+async function v(e) {
     null != (await o.Ay.fetchSurveyDetails(e)) &&
         (c.i.getState().clearSurveyResponses(e),
         (0, a.openModalLazy)(
@@ -546,5 +546,5 @@ function q(e) {
         r = (0, s.bG)([_.A], () => _.A.getSurvey(t));
     return null == r
         ? (0, i.jsx)(E.E, { variant: "text-md/medium", className: G.Lq, children: x.intl.string(x.t.MKDeyL) })
-        : (0, i.jsx)(v, { surveyId: t, survey: r, onClose: n, transitionState: l });
+        : (0, i.jsx)(j, { surveyId: t, survey: r, onClose: n, transitionState: l });
 }

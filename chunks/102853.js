@@ -16,8 +16,8 @@ var l = n(582128),
     g = n(550151),
     x = n(55730),
     A = n(765379),
-    C = n(946255),
-    E = n(688810),
+    E = n(946255),
+    C = n(688810),
     I = n(429913),
     y = n(20015),
     S = n(207371),
@@ -46,7 +46,7 @@ function U(e) {
             location: H,
             supportsAskToJoin: B = !0,
         } = e,
-        { analyticsLocations: W } = (0, E.Ay)(H ?? []),
+        { analyticsLocations: W } = (0, C.Ay)(H ?? []),
         [K, z] = l.useState(!1),
         Z = U?.applicationId ?? n?.application_id,
         Y = null != U || (0, A.A)(n),
@@ -137,7 +137,7 @@ function U(e) {
             analyticsLocations: W,
         }),
             n ||
-                (0, C.A)({
+                (0, E.A)({
                     type: w.UqL.JOIN,
                     userId: e.id,
                     guildId: i?.guild_id,

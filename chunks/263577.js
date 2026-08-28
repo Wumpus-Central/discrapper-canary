@@ -22,8 +22,8 @@ function f(e) {
             "aria-hidden": x,
             showTooltip: A = !1,
         } = e,
-        C = (0, d.Ay)(),
-        E = `${n}px`,
+        E = (0, d.Ay)(),
+        C = `${n}px`,
         [I, y] = i.useState(!1),
         [S, N] = i.useState(!1),
         v = null == g || S;
@@ -32,11 +32,11 @@ function f(e) {
             size: "custom",
             width: "100%",
             height: "100%",
-            color: (0, a.M)(C) ? u.A.colors.WHITE : u.A.colors.BLACK,
-            style: { maxWidth: E },
+            color: (0, a.M)(E) ? u.A.colors.WHITE : u.A.colors.BLACK,
+            style: { maxWidth: C },
             className: r()(m.f, f),
         });
-    let _ = "height" === s ? { maxWidth: E, height: E } : { maxWidth: E, minHeight: E };
+    let _ = "height" === s ? { maxWidth: C, height: C } : { maxWidth: C, minHeight: C };
     return (0, l.jsx)(
         c.m,
         {

@@ -21,19 +21,19 @@ function f(e) {
             className: g,
             selectable: x = !1,
             isSquircle: A,
-            onFocus: C,
-            onBlur: E,
+            onFocus: E,
+            onBlur: C,
             onMouseOver: I,
             onMouseLeave: y,
             ...S
         } = e,
         [N, v] = i.useState(!1),
         _ = i.useCallback(() => {
-            v(!0), C?.();
-        }, [C]),
-        j = i.useCallback(() => {
-            v(!1), E?.();
+            v(!0), E?.();
         }, [E]),
+        j = i.useCallback(() => {
+            v(!1), C?.();
+        }, [C]),
         T = i.useCallback(() => {
             v(!0), I?.();
         }, [I]),

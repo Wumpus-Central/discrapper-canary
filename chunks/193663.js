@@ -21,8 +21,8 @@ let m = function (e) {
         decorators: g,
         onClick: x,
         hovered: A,
-        selected: C,
-        muted: E,
+        selected: E,
+        muted: C,
         to: I,
         avatarClassName: y,
         selectedClassName: S,
@@ -33,20 +33,20 @@ let m = function (e) {
         ...T
     } = e;
     (T.className = r()(T.className, h.kL, {
-        [h.wH]: C,
+        [h.wH]: E,
         [h.mr]: _,
-        [S ?? ""]: C,
-        [h.vk]: !C && (null != I || null != x),
+        [S ?? ""]: E,
+        [h.vk]: !E && (null != I || null != x),
     })),
-        (T["aria-selected"] = T["aria-selected"] ?? C);
+        (T["aria-selected"] = T["aria-selected"] ?? E);
     let b = i.useRef(null),
         R = (0, l.jsxs)("div", {
             className: r()(h.sn, { [h.EY]: null != m }),
             children: [
-                (0, l.jsx)(d.A, { nameplate: m, hovered: A, selected: C, content: b, placement: c.u.MEMBER_LIST }),
+                (0, l.jsx)(d.A, { nameplate: m, hovered: A, selected: E, content: b, placement: c.u.MEMBER_LIST }),
                 (0, l.jsxs)("div", {
                     ref: b,
-                    className: r()(N, h.Zp, { [h.SU]: !C && E, [h.Ib]: v }),
+                    className: r()(N, h.Zp, { [h.SU]: !E && C, [h.Ib]: v }),
                     children: [
                         (0, l.jsx)("div", { className: r()(h.my, y), children: n }),
                         (0, l.jsxs)("div", {

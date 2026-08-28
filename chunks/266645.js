@@ -37,11 +37,11 @@ function A(e) {
     let t = e.nodeType === Node.ELEMENT_NODE ? e : e.parentElement;
     return t?.closest('[contenteditable="true"]') != null;
 }
-function C(e) {
+function E(e) {
     let t = e.nodeType === Node.ELEMENT_NODE ? e : e.parentElement;
     return t?.closest(`[${g}]`) ?? null;
 }
-function E(e) {
+function C(e) {
     let t;
     if (null == e.clipboardData) return;
     let n = window.getSelection();
@@ -54,8 +54,8 @@ function E(e) {
     if (t.collapsed || A(t.startContainer) || A(t.endContainer)) return;
     let l = t.cloneContents(),
         i = null != l.querySelector(`[${g}]`),
-        s = C(t.startContainer),
-        r = C(t.endContainer),
+        s = E(t.startContainer),
+        r = E(t.endContainer),
         a = !i && null != s && s === r;
     if (i || a) {
         let t, n;
@@ -113,12 +113,12 @@ let S = function (e) {
         g = (0, o.K)(t),
         x = null != g,
         A = g?.gameName ?? I.intl.string(I.t["11pdXZ"]),
-        C = g?.gameIcon;
+        E = g?.gameIcon;
     i.useEffect(
         () => (
-            1 === (p += 1) && document.addEventListener("copy", E),
+            1 === (p += 1) && document.addEventListener("copy", C),
             () => {
-                0 == (p -= 1) && document.removeEventListener("copy", E);
+                0 == (p -= 1) && document.removeEventListener("copy", C);
             }
         ),
         [],
@@ -170,7 +170,7 @@ let S = function (e) {
                     children: (0, l.jsx)("span", {
                         "aria-hidden": "true",
                         className: y.P0,
-                        children: (0, l.jsx)(d.A, { game: { id: t, icon: C }, iconClassName: y.Kk, allowFetch: !1 }),
+                        children: (0, l.jsx)(d.A, { game: { id: t, icon: E }, iconClassName: y.Kk, allowFetch: !1 }),
                     }),
                 }),
                 (0, l.jsx)("span", { className: y.UU, children: A }),

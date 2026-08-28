@@ -171,8 +171,8 @@ function F(e) {
 }
 var z = n(860227),
     J = n(172218),
-    Y = n(317097),
-    K = n(565645),
+    K = n(317097),
+    Y = n(565645),
     W = n(114166),
     X = n(891734),
     Z = n(815807),
@@ -204,7 +204,7 @@ let Q = l.memo(function (e) {
             j = {};
         if (E && null != C) {
             let { accentColor: e, backgroundColor: i, opacity: l } = C,
-                s = (0, Y.xp)(i ?? "", l) ?? "";
+                s = (0, K.xp)(i ?? "", l) ?? "";
             I && (j.borderColor = i), (j.background = s), (t = e), (n = e);
         }
         let T = { minWidth: N, color: t, borderColor: n };
@@ -212,7 +212,7 @@ let Q = l.memo(function (e) {
             className: a()(_.reaction, _.reactionInner, r, { [_.reactionMe]: I, [_.reactionReadOnly]: g && !p && !A }),
             style: j,
             children: [
-                (0, i.jsx)(K.A, { emojiId: s.id, emojiName: s.name, size: f, animated: E && s.animated }),
+                (0, i.jsx)(Y.A, { emojiId: s.id, emojiName: s.name, size: f, animated: E && s.animated }),
                 (0, i.jsx)("div", { className: _.reactionCount, style: T, children: v }),
             ],
         });

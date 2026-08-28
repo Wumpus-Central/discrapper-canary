@@ -1,14 +1,14 @@
-i.d(t, { A: () => a });
-var n = i(582128),
-    l = i(10392),
-    r = i(82498),
-    u = i(652215);
-function a(e, t, i) {
-    let a = t?.isLoaded ?? !1;
-    n.useEffect(() => {
-        a &&
-            (0, l.sq)(u.U7l.USER_PROFILE_ACTION, e, function () {
-                return (0, r.E4)(t, i);
+c.d(t, { A: () => n });
+var e = c(582128),
+    i = c(10392),
+    u = c(82498),
+    d = c(652215);
+function n(s, t, c) {
+    let n = t?.isLoaded ?? !1;
+    e.useEffect(() => {
+        n &&
+            (0, i.sq)(d.U7l.USER_PROFILE_ACTION, s, function () {
+                return (0, u.E4)(t, c);
             });
-    }, [a]);
+    }, [n]);
 }

@@ -11,8 +11,8 @@ var i = n(477900),
     g = n(935208),
     m = n(240248),
     A = n(375708),
-    h = n(832505),
-    E = n(849405);
+    E = n(832505),
+    h = n(849405);
 class S extends l.PureComponent {
     static defaultProps = {
         isForSubscription: !1,
@@ -86,7 +86,7 @@ class S extends l.PureComponent {
                                           : e instanceof d.Pw
                                             ? A.intl.string(A.t.RFi12i)
                                             : e instanceof d.LQ
-                                              ? A.intl.string(h.default["/FQWfA"])
+                                              ? A.intl.string(E.default["/FQWfA"])
                                               : e instanceof d.IE
                                                 ? A.intl.string(A.t.JG3WQU)
                                                 : e instanceof d.WV
@@ -133,18 +133,18 @@ class S extends l.PureComponent {
                 s && this.renderIcon(),
                 (0, i.jsxs)(o.A, {
                     direction: o.A.Direction.VERTICAL,
-                    className: E.Wi,
+                    className: h.Wi,
                     children: [
                         (0, i.jsxs)(o.A, {
                             align: o.A.Align.CENTER,
                             children: [
                                 this.renderDescription(),
                                 a && e
-                                    ? (0, i.jsx)("div", { className: E.Zn, children: A.intl.string(A.t.bBvAEH) })
+                                    ? (0, i.jsx)("div", { className: h.Zn, children: A.intl.string(A.t.bBvAEH) })
                                     : null,
-                                l ? (0, i.jsx)("div", { className: E.NV, children: A.intl.string(A.t.YCrcPL) }) : null,
+                                l ? (0, i.jsx)("div", { className: h.NV, children: A.intl.string(A.t.YCrcPL) }) : null,
                                 a && t.invalid
-                                    ? (0, i.jsx)("div", { className: E.tG, children: A.intl.string(A.t["851k93"]) })
+                                    ? (0, i.jsx)("div", { className: h.tG, children: A.intl.string(A.t["851k93"]) })
                                     : null,
                             ],
                         }),
@@ -152,7 +152,7 @@ class S extends l.PureComponent {
                             ? (0, i.jsx)(r.E, {
                                   variant: "text-sm/normal",
                                   color: "text-subtle",
-                                  className: E.Sv,
+                                  className: h.Sv,
                                   children: u,
                               })
                             : null,

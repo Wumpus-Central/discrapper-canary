@@ -1,4 +1,4 @@
-n.d(t, { M: () => h, u: () => p });
+n.d(t, { M: () => f, u: () => p });
 var l,
     i = n(499979),
     s = n(626584),
@@ -18,7 +18,7 @@ var l,
         (l.REPLAY_VIDEO_STREAM = "replay_video_stream"),
         l);
 let g = new Map();
-class h {
+class f {
     logger;
     spinnerVisibleStart = null;
     constructor(e) {
@@ -37,9 +37,9 @@ class h {
         [${e}, count for stream: ${s}]`);
         this.logger.info(`spinner visible for ${p} ms
       [${e}, count for stream: ${s}]`);
-        let h = u.A.getGuildId(),
-            f = c.A.getUserVoiceChannelId(h, r.default.getId()),
-            x = (function (e) {
+        let f = u.A.getGuildId(),
+            x = c.A.getUserVoiceChannelId(f, r.default.getId()),
+            h = (function (e) {
                 if (null != e) {
                     if (e.isGuildVoice()) return "guild_voice";
                     if (e.isGuildStageVoice()) return "is_stage_channel";
@@ -47,16 +47,16 @@ class h {
                     if (e.isGroupDM()) return "group_dm";
                 }
                 return null;
-            })(a.A.getChannel(f));
+            })(a.A.getChannel(x));
         d.default.track(m.HAw.VIDEO_SPINNER_SHOWN_V2, {
             video_spinner_context: e,
             duration_video_spinner_visible_ms: p,
             rtc_connection_id: u.A.getRTCConnectionId(),
             media_session_id: u.A.getMediaSessionId(),
             event_count_for_stream: s,
-            guild_id: h,
-            channel_id: f,
-            channel_type: x,
+            guild_id: f,
+            channel_id: x,
+            channel_type: h,
             spinning_user_id: t,
             connection_type: o.A.getType(),
             effective_connection_speed: o.A.getEffectiveConnectionSpeed(),

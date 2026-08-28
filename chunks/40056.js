@@ -1,4 +1,4 @@
-n.d(t, { Ay: () => x, e9: () => g, qd: () => p });
+n.d(t, { Ay: () => h, e9: () => g, qd: () => p });
 var l = n(477900),
     i = n(582128),
     s = n(435558),
@@ -32,7 +32,7 @@ let p = { x: 0, y: 0 },
         doZoom: () => {},
         wrapperRef: i.createRef(),
     }),
-    h = (0, s.debounce)((e, t, n) => {
+    f = (0, s.debounce)((e, t, n) => {
         let l = null,
             i = null;
         if (null != n && (0, o.wL)(n)) {
@@ -47,21 +47,21 @@ let p = { x: 0, y: 0 },
             share_application_id: i,
         });
     }, 2e3),
-    f = i.memo(function (e) {
+    x = i.memo(function (e) {
         let { streamKey: t, minZoom: n = 1, maxZoom: o = 5, children: u } = e,
             [c, d] = i.useState(n),
-            [m, f] = i.useState(!1),
-            [x, A] = i.useState(!1),
+            [m, x] = i.useState(!1),
+            [h, A] = i.useState(!1),
             [v, E] = i.useState(!1),
-            [C, I] = i.useState(!1),
-            [j, S] = i.useState(16 / 9),
+            [C, j] = i.useState(!1),
+            [I, S] = i.useState(16 / 9),
             [_, N] = i.useState({ x: 0, y: 0 }),
             b = i.useRef(null),
             y = i.useRef(null);
         (0, a.l0)(() => {
             y.current?.stop();
         });
-        let D = i.useCallback(
+        let R = i.useCallback(
                 (e, t) => {
                     if (null == b.current) return p;
                     let n = t ?? c,
@@ -73,23 +73,23 @@ let p = { x: 0, y: 0 },
                 },
                 [c],
             ),
-            R = i.useCallback(
+            k = i.useCallback(
                 (e, l, i) => {
                     let a = (0, s.clamp)(e, n, o);
                     if (null == l || a === c) return;
-                    f(!0);
+                    x(!0);
                     let u = a / c;
-                    N((e) => D({ x: (e.x - l.x) * u + l.x, y: (e.y - l.y) * u + l.y }, a)),
+                    N((e) => R({ x: (e.x - l.x) * u + l.x, y: (e.y - l.y) * u + l.y }, a)),
                         d(a),
-                        h(a, i, t),
+                        f(a, i, t),
                         null == y.current && (y.current = new r.Ep()),
                         y.current.start(2e3, () => {
-                            f(!1);
+                            x(!1);
                         });
                 },
-                [D, o, n, t, c],
+                [R, o, n, t, c],
             ),
-            k = i.useMemo(
+            D = i.useMemo(
                 () => ({
                     enabled: !0,
                     zoomLevel: c,
@@ -97,25 +97,25 @@ let p = { x: 0, y: 0 },
                     maxZoom: o,
                     setZoomLevel: d,
                     isZooming: m,
-                    setIsZooming: f,
-                    isDragging: x,
+                    setIsZooming: x,
+                    isDragging: h,
                     setIsDragging: A,
                     isWheeling: v,
                     setIsWheeling: E,
                     isSlidering: C,
-                    setIsSlidering: I,
-                    videoAspectRatio: j,
+                    setIsSlidering: j,
+                    videoAspectRatio: I,
                     setVideoAspectRatio: S,
-                    doZoom: R,
+                    doZoom: k,
                     panOffset: _,
                     setPanOffset: N,
                     wrapperRef: b,
-                    clampPanOffset: D,
+                    clampPanOffset: R,
                 }),
-                [D, R, x, C, v, m, o, n, _, j, c],
+                [R, k, h, C, v, m, o, n, _, I, c],
             );
-        return (0, l.jsx)(g.Provider, { value: k, children: u });
+        return (0, l.jsx)(g.Provider, { value: D, children: u });
     });
-function x(e) {
-    return e.enableZoom ? (0, l.jsx)(f, { ...e }) : e.children;
+function h(e) {
+    return e.enableZoom ? (0, l.jsx)(x, { ...e }) : e.children;
 }

@@ -1,4 +1,4 @@
-l.d(t, { b: () => b });
+l.d(t, { b: () => j });
 var n = l(477900),
     a = l(582128),
     s = l(503698),
@@ -11,45 +11,45 @@ var n = l(477900),
     h = l(318346),
     m = l(652215),
     C = l(375708),
-    x = l(492931),
-    g = l(503928),
-    f = l(268920),
+    f = l(492931),
+    x = l(503928),
+    g = l(268920),
     E = l(633217);
-function j() {
+function b() {
     return (0, n.jsx)("div", {
-        className: x.s,
-        children: (0, n.jsx)(u.A, { src: E.A, fallbackImage: f.A, className: x.Cb }),
+        className: f.s,
+        children: (0, n.jsx)(u.A, { src: E.A, fallbackImage: g.A, className: f.Cb }),
     });
 }
-function b(e) {
+function j(e) {
     let {
             ctaText: t,
             ctaOnClick: l,
             analyticsPage: s,
             linkPreText: u = C.intl.string(C.t["5qZv9E"]),
-            linkText: f = C.intl.string(C.t.XRdyjz),
+            linkText: g = C.intl.string(C.t.XRdyjz),
         } = e,
         E = a.useCallback(() => {
             null != s &&
                 (0, h.Y)({ pageType: s, sectionType: m.JJy.ORBS_BALANCE_MENU, ctaObject: m.ZSU.ORBS_LEARN_MORE_LINK });
         }, [s]);
     return (0, n.jsxs)("div", {
-        className: r()(x.kL, g.O),
+        className: r()(f.kL, x.O),
         children: [
-            (0, n.jsx)(j, {}),
+            (0, n.jsx)(b, {}),
             (0, n.jsx)(i.$, { text: t, variant: "primary", size: "sm", onClick: l, fullWidth: !0 }),
             (0, n.jsxs)("div", {
-                className: x.kx,
+                className: f.kx,
                 children: [
                     void 0 !== u &&
-                        (0, n.jsxs)(c.E, { variant: "text-xs/normal", className: x.D5, children: [u, "\xa0"] }),
+                        (0, n.jsxs)(c.E, { variant: "text-xs/normal", className: f.D5, children: [u, "\xa0"] }),
                     (0, n.jsx)(o.Anchor, {
                         target: "_blank",
                         rel: "author",
                         href: d.A.getArticleURL(m.MVz.ORBS_FAQ),
-                        className: x.CU,
+                        className: f.CU,
                         onClick: E,
-                        children: f,
+                        children: g,
                     }),
                 ],
             }),

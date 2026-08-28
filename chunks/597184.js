@@ -4,9 +4,9 @@ n.d(t, {
     VN: () => h,
     Vf: () => m,
     Ze: () => g,
-    e: () => E,
+    e: () => C,
     eP: () => f,
-    kc: () => C,
+    kc: () => E,
     lg: () => x,
     xS: () => p,
 });
@@ -56,7 +56,7 @@ var l,
         (u.GAME = "GAME"),
         (u.TIMESTAMPS = "TIMESTAMPS"),
         u),
-    C =
+    E =
         (((c = {}).MENTION = "MENTION"),
         (c.CHANNEL = "CHANNEL"),
         (c.EMOJI = "EMOJI"),
@@ -72,7 +72,7 @@ var l,
         (c.GAME_MENTION = "GAME_MENTION"),
         (c.TIMESTAMP = "TIMESTAMP"),
         c),
-    E =
+    C =
         (((d = {})[(d.AUTO = 0)] = "AUTO"),
         (d[(d.AUTO_WHEN_FILTERED = 1)] = "AUTO_WHEN_FILTERED"),
         (d[(d.MANUAL = 2)] = "MANUAL"),

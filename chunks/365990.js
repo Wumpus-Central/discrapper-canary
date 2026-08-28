@@ -39,8 +39,8 @@ var m = n(604121),
     g = n(942857),
     x = n(775602),
     A = n(793574),
-    C = n(688810),
-    E = n(131607),
+    E = n(688810),
+    C = n(131607),
     I = n(580194),
     y = n(70283),
     S = n(682618),
@@ -89,7 +89,7 @@ function P(e) {
 function D(e) {
     let { channel: t, onComplete: n, markAsDismissed: s, children: r } = e,
         a = i.useRef(null),
-        { analyticsLocations: o } = (0, C.Ay)(A.A.GIFTING_BADGE_COACHMARK),
+        { analyticsLocations: o } = (0, E.Ay)(A.A.GIFTING_BADGE_COACHMARK),
         u = (0, O.R1)(t),
         { openGiftModal: c } = (0, _.$)({
             giftRecipient: u,
@@ -205,7 +205,7 @@ function q(e) {
 }
 let J = i.memo(function (e) {
     let { disabled: t, channel: n } = e,
-        { analyticsLocations: s } = (0, C.Ay)(A.A.GIFT_BUTTON),
+        { analyticsLocations: s } = (0, E.Ay)(A.A.GIFT_BUTTON),
         [c, d] = i.useState(!1),
         h = (0, g.A)(),
         m = (0, o.bG)([R.default], () => R.default.getCurrentUser()),
@@ -234,7 +234,7 @@ let J = i.memo(function (e) {
         P = !(0, H.uJ)(x?.boxAnimationUrl) || !(0, H.uJ)(x?.trinketAnimationUrl),
         D = (0, o.bG)([G.A], () => G.A.getGiftPromotion()?.id),
         V = null != T && !t && !h && f >= z && null != D,
-        [B, K] = (0, E.Cc)(V ? u.M.GIFTING_PROMOTION_DESKTOP_FIRST_TIME_COACHMARK : null, D ?? ""),
+        [B, K] = (0, C.Cc)(V ? u.M.GIFTING_PROMOTION_DESKTOP_FIRST_TIME_COACHMARK : null, D ?? ""),
         Z = null != B,
         { showGiftingBadgeCoachmark: Y, markGiftingBadgeCoachmarkAsDismissed: J } = (function (e) {
             let { location: t, enabled: n } = e,
@@ -245,7 +245,7 @@ let J = i.memo(function (e) {
             }, [s]);
             let r = (0, o.bG)([N.Ay], () => null != N.Ay.getBadgeById(y.$.GIFTING)),
                 a = s && r && !l,
-                [c, d] = (0, E.kn)(a ? [u.M.NEW_GIFTING_BADGES_COACHMARK] : []);
+                [c, d] = (0, C.kn)(a ? [u.M.NEW_GIFTING_BADGES_COACHMARK] : []);
             return { showGiftingBadgeCoachmark: null != c, markGiftingBadgeCoachmarkAsDismissed: d };
         })({ location: "ChannelPremiumGiftButton", enabled: !t && !Z }),
         $ = c || Z || Y,

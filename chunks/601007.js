@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => C }), n(321073);
+n.d(t, { A: () => E }), n(321073);
 var l,
     i = n(477900),
     s = n(582128),
@@ -19,13 +19,13 @@ function x(e) {
     f.default.track(p.HAw.PLAY_CTA_IMPRESSION, { location_stack: t, distributor: n, game_id: l, level: i });
 }
 var A = n(375708);
-function C(e) {
+function E(e) {
     let {
             distributorCTAConfigs: t,
             applicationId: n,
             analyticsLocations: l,
-            buttonVariant: C = "secondary",
-            fullWidth: E = !0,
+            buttonVariant: E = "secondary",
+            fullWidth: C = !0,
             stopPropagation: I = !1,
             onAction: y,
             onClose: S,
@@ -65,11 +65,11 @@ function C(e) {
     if (1 === t.length) {
         let { ctaConfig: e, skuId: n } = t[0];
         return (0, i.jsx)(r.$, {
-            variant: C,
+            variant: E,
             size: "sm",
             icon: e.icon,
             text: e.getLabel(),
-            fullWidth: E,
+            fullWidth: C,
             onClick: (t) => {
                 I && t.stopPropagation(), T(e.getStoreUrl(n), e.distributor, e.analyticsAction, g.PRIMARY);
             },
@@ -122,12 +122,12 @@ function C(e) {
         children: (e) =>
             (0, i.jsx)(r.$, {
                 buttonRef: v,
-                variant: C,
+                variant: E,
                 size: "sm",
                 icon: _ ? c.t : d.a,
                 iconPosition: "end",
                 text: A.intl.string(A.t.nSHoxC),
-                fullWidth: E,
+                fullWidth: C,
                 ...e,
                 onClick: (t) => {
                     I && t.stopPropagation(), e.onClick?.(t);

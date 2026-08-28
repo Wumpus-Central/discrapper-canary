@@ -1,10 +1,10 @@
-n.d(r, { U: () => h });
-var t = n(582128),
-    a = n(435558),
-    o = n.n(a),
-    i = n(29814),
-    l = n(46054),
-    c = n(551965);
+r.d(n, { U: () => h });
+var t = r(582128),
+    a = r(435558),
+    o = r.n(a),
+    i = r(29814),
+    l = r(46054),
+    c = r(551965);
 let u = ["heading", "list", "blockQuote"],
     s = o().once(() =>
         o().omit(
@@ -24,13 +24,13 @@ let u = ["heading", "list", "blockQuote"],
                     ...i.Ay.RULES.br,
                     requiredFirstCharacters: ["\n"],
                     match: (e) => /^\n/.exec(e),
-                    react: (e, r, n) => t.createElement("br", { key: n.key }),
+                    react: (e, n, r) => t.createElement("br", { key: r.key }),
                 },
             },
         ]),
     ),
     b = o().once(() => l.A.reactParserFor(p()));
 function h(e) {
-    let r = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-    return (r.enableNewlines ? b() : d())(e, !0, { allowLinks: !0 });
+    let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+    return (n.enableNewlines ? b() : d())(e, !0, { allowLinks: !0 });
 }

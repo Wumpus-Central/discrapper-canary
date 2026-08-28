@@ -8,7 +8,7 @@ var r = n(477900),
     p = n(775602),
     u = n(793574),
     c = n(688810),
-    d = n(235693),
+    d = n(479785),
     b = n(532794),
     M = n(976860),
     R = n(975571),
@@ -16,7 +16,7 @@ var r = n(477900),
     A = n(652215),
     C = n(202541),
     k = n(375708),
-    E = n(378803);
+    E = n(763430);
 function O(t) {
     let { onClose: i, multiplier: n, orbMultiplierEligibility: O, ...g } = t,
         { analyticsLocations: T } = (0, c.Ay)(u.A.QUEST_ORB_MULTIPLIER_INFO_MODAL),
@@ -50,7 +50,7 @@ function O(t) {
                       onClick: function () {
                           i(),
                               U
-                                  ? (0, d.o)()
+                                  ? (0, d.n)()
                                   : window.open(
                                         R.A.getArticleURL(A.MVz.VIRTUAL_CURRENCY_ORB_MULTIPLIER_LEARN_MORE),
                                         "_blank",

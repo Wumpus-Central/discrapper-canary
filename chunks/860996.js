@@ -1,20 +1,20 @@
-i.d(t, { C: () => _, x: () => S });
-var E = i(17928),
-    s = i(945810),
-    n = i(710195),
-    r = i(287809);
-let l = { showDefaultBanner: !0, showHeroPlaceholder: !0 },
-    a = {
-        0: l,
+i.d(t, { C: () => o, x: () => d });
+var s = i(17928),
+    n = i(945810),
+    r = i(710195),
+    l = i(287809);
+let a = { showDefaultBanner: !0, showHeroPlaceholder: !0 },
+    c = {
+        0: a,
         1: { showDefaultBanner: !1, showHeroPlaceholder: !0 },
         2: { showDefaultBanner: !1, showHeroPlaceholder: !1 },
     },
-    _ = (0, s.mj)({ name: "2026-07-quest-home-default-banner-removal", kind: "user", defaultConfig: l, variations: a });
-function S() {
-    return (0, E.bG)([r.default, n.A], () => {
-        let e = r.default.getCurrentUser()?.id;
-        if (null == e) return l;
-        let t = n.A.getAssignment("user", e, _.definition.name);
-        return t?.variantId == null || t.useAsEligibility ? l : (a[t.variantId] ?? l);
+    o = (0, n.mj)({ name: "2026-07-quest-home-default-banner-removal", kind: "user", defaultConfig: a, variations: c });
+function d() {
+    return (0, s.bG)([l.default, r.A], () => {
+        let e = l.default.getCurrentUser()?.id;
+        if (null == e) return a;
+        let t = r.A.getAssignment("user", e, o.definition.name);
+        return t?.variantId == null || t.useAsEligibility ? a : (c[t.variantId] ?? a);
     });
 }

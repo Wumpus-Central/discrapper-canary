@@ -16,11 +16,11 @@ var l = n(582128),
     g = n(407315);
 let x = new Set(["line", "blockQuote"]),
     A = ["applicationCommand"],
-    C = ["gameMentionInput", "timestampMentionInput"];
-function E(e) {
+    E = ["gameMentionInput", "timestampMentionInput"];
+function C(e) {
     let t = p.VW.getCurrentBlock(e),
         n = p.VW.getCurrentInline(e);
-    return null != t && !A.includes(t[0].type) && !C.includes(n?.[0]?.type);
+    return null != t && !A.includes(t[0].type) && !E.includes(n?.[0]?.type);
 }
 function I(e) {
     return { type: "other", mergeable: !1, createdAt: Date.now(), value: p.VW.richValue(e), selection: e.selection };
@@ -120,18 +120,18 @@ function R(e) {
             onChangeEnd: d,
             updateState: A,
         } = e,
-        C = n,
-        { onChange: b } = C;
-    (C.chatInputType = l),
-        (C.windowContext = a),
-        (C.previewMarkdown = o),
-        (C.composition = null),
-        (C.events = new i.EventEmitter()),
-        (C.isMac = "MacIntel" === navigator.platform),
-        (C.onChange = () => {
-            C.events.emit("onChange"), b();
+        E = n,
+        { onChange: b } = E;
+    (E.chatInputType = l),
+        (E.windowContext = a),
+        (E.previewMarkdown = o),
+        (E.composition = null),
+        (E.events = new i.EventEmitter()),
+        (E.isMac = "MacIntel" === navigator.platform),
+        (E.onChange = () => {
+            E.events.emit("onChange"), b();
         }),
-        ((t = C =
+        ((t = E =
             (function (e, t) {
                 let {
                     addMark: n,
@@ -184,7 +184,7 @@ function R(e) {
                     }),
                     e
                 );
-            })(C, !0 === u)).setFragmentData = (e) => {
+            })(E, !0 === u)).setFragmentData = (e) => {
             if (null != t.selection && !p.Kh.equals(t.selection.anchor, t.selection.focus)) {
                 let n = (0, _.WO)(p.VW.richValue(t), { mode: "plain", range: t.selection, preventEmojiSurrogates: !0 });
                 e.setData("text/plain", n);
@@ -219,7 +219,7 @@ function R(e) {
             }
             return t.insertText(n), !0;
         }),
-        (C = (function (e) {
+        (E = (function (e) {
             let { apply: t, deleteBackward: n, deleteForward: l, deleteFragment: i, insertText: s } = e;
             return (
                 (e.apply = (n) => {
@@ -277,11 +277,11 @@ function R(e) {
                 }),
                 e
             );
-        })((C = t))),
-        l.commands?.enabled && (C = (0, h.A)(C, r)),
-        (C = (0, S.Ay)(C, r.guild_id, r.id)),
+        })((E = t))),
+        l.commands?.enabled && (E = (0, h.A)(E, r)),
+        (E = (0, S.Ay)(E, r.guild_id, r.id)),
         l.markdown?.disableBlockQuotes ||
-            (C = (function (e) {
+            (E = (function (e) {
                 let { deleteBackward: t, deleteFragment: n, insertBreak: l, onChange: i } = e;
                 (e.deleteBackward = (n) => {
                     let l = p.VW.getCurrentBlock(e);
@@ -383,18 +383,18 @@ function R(e) {
                     }),
                     e
                 );
-            })(C)),
-        l.markdown?.disableCodeBlocks || (C = (0, g.Ay)(C)),
+            })(E)),
+        l.markdown?.disableCodeBlocks || (E = (0, g.Ay)(E)),
         u &&
-            (C = (function (e) {
+            (E = (function (e) {
                 let { isInline: t, isVoid: n } = e;
                 return (
                     (e.isInline = (e) => "testInline" === e.type || "testInlineVoid" === e.type || t(e)),
                     (e.isVoid = (e) => "testInlineVoid" === e.type || n(e)),
                     e
                 );
-            })(C)),
-        (C = (function (e, t) {
+            })(E)),
+        (E = (function (e, t) {
             let {
                 apply: n,
                 deleteBackward: l,
@@ -491,7 +491,7 @@ function R(e) {
                 e
             );
         })(
-            (C = (function (e, t, n) {
+            (E = (function (e, t, n) {
                 let { onChange: l } = e,
                     i = !1,
                     s = !1;
@@ -520,7 +520,7 @@ function R(e) {
                     e
                 );
             })(
-                (C = (function (e) {
+                (E = (function (e) {
                     let { apply: t, onChange: n } = e;
                     return (
                         (e.apply = (n) => {
@@ -566,11 +566,11 @@ function R(e) {
                         e
                     );
                 })(
-                    (C = (function (e) {
+                    (E = (function (e) {
                         let { insertBreak: t, insertText: n } = e;
                         return (
                             (e.insertBreak = () => {
-                                E(e) && t();
+                                C(e) && t();
                             }),
                             (e.insertSoftBreak = () => {
                                 e.insertBreak();
@@ -578,7 +578,7 @@ function R(e) {
                             (e.insertText = (t) => {
                                 if (0 > t.indexOf("\r") && 0 > t.indexOf("\n")) return void n(t);
                                 let l = t.split(/\r\n|\r|\n/);
-                                E(e)
+                                C(e)
                                     ? m.o.withSingleEntry(e, () => {
                                           let t = !1;
                                           for (let i of l) t && f.b.splitNodes(e, { always: !0 }), n(i), (t = !0);
@@ -587,14 +587,14 @@ function R(e) {
                             }),
                             e
                         );
-                    })((C = (0, y.A)(C)))),
+                    })((E = (0, y.A)(E)))),
                 )),
                 c,
                 d,
             )),
             (e) => {
                 let { newValue: t, newSelection: n } = e;
-                return A(C, "undo", { value: t, selection: n });
+                return A(E, "undo", { value: t, selection: n });
             },
         ));
 }

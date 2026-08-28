@@ -24,8 +24,8 @@ var l = n(477900),
     y = n(652215),
     b = n(624458),
     N = n(821124),
-    v = n(202384),
-    T = n(513461),
+    T = n(202384),
+    v = n(513461),
     M = n(709977),
     R = n(212455),
     D = n(224640),
@@ -191,7 +191,7 @@ class ep extends i.PureComponent {
     };
     handleShowMemberVerification = () => {
         let { guild: e } = this.props;
-        null != e && (0, v.Ze)(e.id);
+        null != e && (0, T.Ze)(e.id);
     };
     handleClaimAccount = () => {
         x.R();
@@ -254,7 +254,7 @@ class ep extends i.PureComponent {
     };
     renderMemberVerificationSuccessModal = () => {
         let { guild: e, guildJoinRequest: t } = this.props,
-            n = t?.applicationStatus === T.B5.APPROVED;
+            n = t?.applicationStatus === v.B5.APPROVED;
         if (null == e || null == t || !n || (0, N.NK)(t)) return null;
         function i() {
             null != e && null != t && b.A.ackUserGuildJoinRequest(e.id, t.joinRequestId);
@@ -288,7 +288,7 @@ class ep extends i.PureComponent {
                 guildJoinRequest: j,
                 showLinkedLobbyApplicationLoadingIndicator: b,
                 requiredLinkedLobbyApplication: N,
-                shouldRelaunchLinkedLobbyApplication: v,
+                shouldRelaunchLinkedLobbyApplication: T,
                 pendingGameProfileReturn: M,
                 guild: R,
             } = this.props,
@@ -317,13 +317,13 @@ class ep extends i.PureComponent {
                 (k.onButtonClick = C ? this.handleShowMemberVerification : this.handleClaimAccount);
         else if (C)
             switch (j?.applicationStatus) {
-                case T.B5.SUBMITTED:
+                case v.B5.SUBMITTED:
                     (k.message = w.intl.string(w.t["5iLvSx"])),
                         (k.subtitle = w.intl.string(w.t.FdsK4h)),
                         (k.buttonText = w.intl.string(w.t.mqtdmQ)),
                         (k.onButtonClick = this.handleCancelApplication);
                     break;
-                case T.B5.REJECTED:
+                case v.B5.REJECTED:
                     (k.message = w.intl.string(w.t.lk30cY)),
                         (k.buttonText = w.intl.string(w.t["8RrsHr"])),
                         (k.onButtonClick = this.handleViewApplicationRejection);
@@ -355,7 +355,7 @@ class ep extends i.PureComponent {
                             ((k.message = w.intl.formatToPlainString(w.t["2JA2GH"], { min: y.$8o.ACCOUNT_AGE })),
                             (k.countdown = c))
                   : ((k.imageSrc = N.getIconURL(eh.iu.SMALL) ?? void 0),
-                    v
+                    T
                         ? (k.message = w.intl.format(w.t["SU2mY/"], { name: N.name }))
                         : ((k.message = w.intl.format(w.t.EvDn1D, { name: N.name })),
                           null != N.connectionEntrypointUrl &&
@@ -419,7 +419,7 @@ function eA(e) {
             requiredLinkedLobbyApplication: b,
             shouldRelaunchLinkedLobbyApplication: N,
         } = (0, ed.A)(t.linkedLobby),
-        v = (function (e) {
+        T = (function (e) {
             let { channelId: t } = e,
                 n = (0, r.bG)([j.A], () => {
                     let e = j.A.getPendingReturn();
@@ -454,14 +454,14 @@ function eA(e) {
             channelFollowingUsersSeen: null != d ? d.usersSeenEver : null,
             hasVerificationGate: p,
             showMemberVerificationModal: g && p,
-            guildJoinRequestStatus: x?.applicationStatus ?? T.B5.STARTED,
+            guildJoinRequestStatus: x?.applicationStatus ?? v.B5.STARTED,
             guildJoinRequest: x,
             showLinkedLobbyApplicationLoadingIndicator: E,
             requiredLinkedLobbyApplication: b,
             shouldRelaunchLinkedLobbyApplication: N,
             useReducedMotion: C.Ay.useReducedMotion,
             isStaff: m,
-            pendingGameProfileReturn: v,
+            pendingGameProfileReturn: T,
         };
     return (0, l.jsx)(ep, { ...D, channel: t, children: n });
 }

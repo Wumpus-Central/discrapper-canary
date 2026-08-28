@@ -16,12 +16,12 @@ var l = n(477900),
     g = n(232042),
     x = n(906754),
     A = n(332173),
-    C = n(37632),
-    E = n(534890),
+    E = n(37632),
+    C = n(534890),
     I = n(375708),
     y = n(879386);
 let S = function () {
-    return (0, l.jsx)(E.ChatIcon, {
+    return (0, l.jsx)(C.ChatIcon, {
         size: "md",
         color: "currentColor",
         className: y.K,
@@ -109,12 +109,12 @@ function ep(e) {
     let g = (0, J.hp)(c).find((e) => e.value === s),
         x = null != g ? eh.Ps.EXPERIMENT_TREATMENT : eh.Ps.EXPERIMENT,
         A = null != d && null != g && d.variantId === g.value,
-        C = (0, l.jsx)(ef, { url: t }),
-        E = null;
+        E = (0, l.jsx)(ef, { url: t }),
+        C = null;
     return (x === eh.Ps.EXPERIMENT_TREATMENT && null != g
-        ? (E = (0, l.jsx)(et.E, { variant: "text-xs/normal", color: "text-muted", children: g.label }))
+        ? (C = (0, l.jsx)(et.E, { variant: "text-xs/normal", color: "text-muted", children: g.label }))
         : null != m &&
-          (E = (0, l.jsxs)(et.E, { variant: "text-xs/normal", color: "text-muted", children: ["Server Config: ", f] })),
+          (C = (0, l.jsxs)(et.E, { variant: "text-xs/normal", color: "text-muted", children: ["Server Config: ", f] })),
     p)
         ? (0, l.jsxs)("div", {
               className: em.zr,
@@ -136,12 +136,12 @@ function ep(e) {
                                               gap: 0,
                                               children: [
                                                   (0, l.jsx)(et.E, { variant: "text-md/semibold", children: c.title }),
-                                                  E,
+                                                  C,
                                               ],
                                           }),
                                       ],
                                   }),
-                                  C,
+                                  E,
                               ],
                           }),
                       }),
@@ -177,12 +177,12 @@ let ex = i.lazy(() =>
             .then(n.bind(n, 909261))
             .then((e) => ({ default: e.DevToolsLinkEmbed })),
     ),
-    eC = RegExp("^" + Y.st.source, Y.st.flags);
-var eE = n(569926),
+    eE = RegExp("^" + Y.st.source, Y.st.flags);
+var eC = n(569926),
     eI = n(266645);
 function ey(e) {
     let { gameId: t, authorId: n } = e;
-    return (0, eE.I)(t), (0, l.jsx)(eI.A, { gameId: t, authorId: n });
+    return (0, eC.I)(t), (0, l.jsx)(eI.A, { gameId: t, authorId: n });
 }
 function eS() {
     return { gameMention: { react: (e, t, n) => (0, l.jsx)(ey, { gameId: e.gameId, authorId: n.authorId }, n.key) } };
@@ -366,7 +366,7 @@ let eM = {
                           iconType: e.id,
                           children: [
                               t(e.mainContent, n),
-                              null != e.itemContent ? (0, l.jsx)(C.A, {}) : null,
+                              null != e.itemContent ? (0, l.jsx)(E.A, {}) : null,
                               null != e.itemContent ? t(e.itemContent, n) : null,
                           ],
                       },
@@ -434,7 +434,7 @@ function eL(e) {
         ...eM,
         link: (0, eN.A)(e),
         devLink: {
-            match: (e, t) => (t.allowLinks && t.allowDevLinks ? eC.exec(e) : null),
+            match: (e, t) => (t.allowLinks && t.allowDevLinks ? eE.exec(e) : null),
             parse: (e, t) => ({ target: e, type: "devLink" }),
             react: (e, t, n) => {
                 let s = e.target[0];

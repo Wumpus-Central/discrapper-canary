@@ -16,8 +16,8 @@ var l = n(477900),
     g = n(522602),
     x = n(234320),
     A = n(215497),
-    C = n(834730),
-    E = n(939249),
+    E = n(834730),
+    C = n(939249),
     I = n(780777),
     y = n(565150),
     S = n(424170),
@@ -83,8 +83,8 @@ function b(e) {
               draftType: N.C.SlashCommand,
               label: (0, l.jsxs)(i.Fragment, {
                   children: [
-                      (0, l.jsxs)(C.E, { tag: "span", variant: "text-md/normal", children: [n.displayName, ": "] }),
-                      (0, l.jsx)(C.E, {
+                      (0, l.jsxs)(E.E, { tag: "span", variant: "text-md/normal", children: [n.displayName, ": "] }),
+                      (0, l.jsx)(E.E, {
                           tag: "span",
                           variant: "text-md/normal",
                           color: "text-brand",
@@ -106,14 +106,14 @@ function b(e) {
               ref: m,
               children: [
                   (0, l.jsx)("span", { className: r()(T.fS, { [T.Vg]: o }), children: n.displayName }),
-                  (0, l.jsx)(E.D, {
+                  (0, l.jsx)(C.D, {
                       className: T.uN,
                       onClick: () => a.current?.activateUploadDialogue(),
                       children: (0, l.jsxs)("div", {
                           className: T.wi,
                           children: [
                               (0, l.jsx)("img", { src: "/assets/27c3681a77f271c6.svg", className: T.H9, alt: "" }),
-                              (0, l.jsx)(C.E, {
+                              (0, l.jsx)(E.E, {
                                   className: T.L,
                                   variant: "text-sm/normal",
                                   children:
@@ -142,8 +142,8 @@ var R = n(652215),
     M = n(969490);
 let L = [];
 function k(e) {
-    let { channelId: t, type: n, ignoreFile: s, smallAttachments: C = !1 } = e,
-        E = (0, u.bG)([m.Ay], () => m.Ay.keyboardModeEnabled),
+    let { channelId: t, type: n, ignoreFile: s, smallAttachments: E = !1 } = e,
+        C = (0, u.bG)([m.Ay], () => m.Ay.keyboardModeEnabled),
         I = (0, f.A)("attachments", o.Gl.HORIZONTAL),
         y = (0, u.bG)([g.A], () => g.A.getUploads(t, n.drafts.type)),
         {
@@ -202,7 +202,7 @@ function k(e) {
                           ...s,
                           className: r()(O.I, M.KK),
                           children: S
-                              ? j.map((e) => (0, l.jsx)(b, { channelId: t, keyboardModeEnabled: E, option: e }, e.name))
+                              ? j.map((e) => (0, l.jsx)(b, { channelId: t, keyboardModeEnabled: C, option: e }, e.name))
                               : U.map((e) =>
                                     (0, l.jsx)(
                                         v.A,
@@ -210,9 +210,9 @@ function k(e) {
                                             channelId: t,
                                             draftType: n.drafts.type,
                                             upload: e,
-                                            keyboardModeEnabled: E,
+                                            keyboardModeEnabled: C,
                                             clip: e.clip,
-                                            size: C ? A.L.SMALL : A.L.MEDIUM,
+                                            size: E ? A.L.SMALL : A.L.MEDIUM,
                                         },
                                         e.id,
                                     ),

@@ -16,8 +16,8 @@ var l = n(477900),
     g = n(654821),
     x = n(35277),
     A = n(820066),
-    C = n(112107),
-    E = n(17928),
+    E = n(112107),
+    C = n(17928),
     I = n(866665),
     y = n(778712),
     S = n(939249),
@@ -74,8 +74,8 @@ function ee(e) {
 }
 function et(e) {
     let { id: t, guildId: n, channelId: i } = e,
-        s = (0, E.bG)([z.default], () => z.default.getUser(t)),
-        r = (0, E.bG)([K.A], () => K.A.hidePersonalInformation),
+        s = (0, C.bG)([z.default], () => z.default.getUser(t)),
+        r = (0, C.bG)([K.A], () => K.A.hidePersonalInformation),
         a = Y.Ay.useName(n, i, s),
         o = (0, l.jsx)(U.A, { children: null == a ? `<@${t}>` : `@${a}` });
     if (null != s) {
@@ -100,8 +100,8 @@ function et(e) {
 }
 function en(e) {
     let { id: t, guildId: n, channelId: s } = e,
-        r = (0, E.bG)([B.A], () => (null != n ? B.A.getRole(n, t) : void 0)),
-        a = (0, E.bG)([T.Ay], () => T.Ay.roleStyle),
+        r = (0, C.bG)([B.A], () => (null != n ? B.A.getRole(n, t) : void 0)),
+        a = (0, C.bG)([T.Ay], () => T.Ay.roleStyle),
         o = (0, F.X_)(n, r, r?.colorStrings),
         u = i.useRef(null);
     if (null == r) return (0, l.jsxs)("span", { children: ["@", J.intl.string(J.t["YV4F/n"])] });
@@ -137,7 +137,7 @@ function en(e) {
 }
 function el(e) {
     let { id: t } = e,
-        n = (0, E.bG)([H.A], () => H.A.getChannel(t)),
+        n = (0, C.bG)([H.A], () => H.A.getChannel(t)),
         i = J.intl.string(J.t.zLZPmk).toLowerCase(),
         s = "text",
         r = !0;
@@ -324,7 +324,7 @@ class eg extends i.PureComponent {
                         return (0, l.jsxs)(em, {
                             attributes: s,
                             className: c,
-                            children: [(0, l.jsx)(C.LF, { soundId: o.soundId }), a],
+                            children: [(0, l.jsx)(E.LF, { soundId: o.soundId }), a],
                         });
                     case "commandMention":
                         return (0, l.jsxs)(em, {
@@ -610,8 +610,8 @@ class eg extends i.PureComponent {
             onKeyDown: g,
             onKeyUp: x,
             renderExtraElement: A,
-            renderExtraLeaf: C,
-            ...E
+            renderExtraLeaf: E,
+            ...C
         } = this.props;
         return (0, l.jsxs)("div", {
             ref: this.containerRef,
@@ -629,7 +629,7 @@ class eg extends i.PureComponent {
                     editor: e,
                     value: [...this.state.initialValue],
                     children: (0, l.jsx)(a.Fo, {
-                        ...E,
+                        ...C,
                         className: r()(eh.PT, ep.E, t),
                         decorate: u,
                         renderElement: this.renderElement,

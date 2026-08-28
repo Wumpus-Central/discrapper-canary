@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Ay: () => N, P8: () => I, bp: () => E, p4: () => y });
+n.d(t, { Ay: () => N, P8: () => I, bp: () => C, p4: () => y });
 var l = n(477900),
     i = n(582128),
     s = n(435558),
@@ -16,8 +16,8 @@ var l = n(477900),
     g = n(486020),
     x = n(515718),
     A = n(652215),
-    C = n(838541);
-let E = /\.gif($|\?|#)/i,
+    E = n(838541);
+let C = /\.gif($|\?|#)/i,
     I = /\.webp($|\?|#)/i,
     y = /\.avif($|\?|#)/i,
     S = /\.png($|\?|#)/i;
@@ -53,7 +53,7 @@ class N extends i.Component {
         let { src: t, original: n, animated: l, srcIsAnimated: i } = e;
         return (
             l ||
-            E.test(null != n && "" !== n ? n : t) ||
+            C.test(null != n && "" !== n ? n : t) ||
             (null != i && i && (I.test(null != n && "" !== n ? n : t) || y.test(null != n && "" !== n ? n : t)))
         );
     }
@@ -129,9 +129,9 @@ class N extends i.Component {
         } = e;
         if ((t && h.A.increment({ name: r.K.IMAGE_LOAD_ERROR }), !v.getConfig({ location: "lazy_image" }).enabled))
             return;
-        let C = await fetch(n.url).catch(() => void 0),
-            E = C?.headers?.get("content-length"),
-            I = null != E ? Number(E) : null,
+        let E = await fetch(n.url).catch(() => void 0),
+            C = E?.headers?.get("content-length"),
+            I = null != C ? Number(C) : null,
             y = Date.now() - i;
         p.default.track(A.HAw.IMAGE_LOADING_COMPLETED, {
             duration_ms: y,
@@ -203,8 +203,8 @@ class N extends i.Component {
             width: l,
             height: i,
             ratio: e,
-            maxWidth: a === C.dG.MOSAIC ? s : void 0,
-            maxHeight: a === C.dG.MOSAIC ? r : void 0,
+            maxWidth: a === E.dG.MOSAIC ? s : void 0,
+            maxHeight: a === E.dG.MOSAIC ? r : void 0,
             format: o,
             quality: u,
             animated: !t,
@@ -220,13 +220,13 @@ class N extends i.Component {
             mediaLayoutType: i,
             useFullWidth: s,
         } = this.props;
-        return i === C.dG.MOSAIC && s
+        return i === E.dG.MOSAIC && s
             ? (0, x.V)({ width: e, height: t, maxWidth: n, maxHeight: l })
             : (0, x.U8)({ width: e, height: t, maxWidth: n, maxHeight: l });
     }
     getType() {
         let { mediaLayoutType: e, responsive: t } = this.props;
-        return e ?? (t ? C.dG.RESPONSIVE : C.dG.STATIC);
+        return e ?? (t ? E.dG.RESPONSIVE : E.dG.STATIC);
     }
     _triggerLazyLoad() {
         this._unmounted ||
@@ -303,8 +303,8 @@ class N extends i.Component {
                 freeze: p,
                 width: g,
                 height: x,
-                minWidth: C,
-                minHeight: E,
+                minWidth: E,
+                minHeight: C,
                 maxWidth: I,
                 maxHeight: y,
                 onClick: S,
@@ -320,8 +320,8 @@ class N extends i.Component {
             { readyState: k, hasMouseOver: w, hasFocus: P } = this.state,
             D = null != n,
             U = this.getRatio(),
-            G = (0, s.clamp)(Math.round(g * U), C ?? 0, I ?? 1 / 0),
-            V = (0, s.clamp)(Math.round(x * U), E ?? 0, y ?? 1 / 0),
+            G = (0, s.clamp)(Math.round(g * U), E ?? 0, I ?? 1 / 0),
+            V = (0, s.clamp)(Math.round(x * U), C ?? 0, y ?? 1 / 0),
             F = _.getConfig({ location: "LazyImage_render" }).enabled,
             H = {
                 alt: e,
@@ -330,8 +330,8 @@ class N extends i.Component {
                 zoomable: D,
                 className: c,
                 imageClassName: d,
-                minWidth: C,
-                minHeight: E,
+                minWidth: E,
+                minHeight: C,
                 mediaLayoutType: this.getType(),
                 limitResponsiveWidth: T,
                 useFullWidth: b,

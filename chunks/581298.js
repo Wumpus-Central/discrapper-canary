@@ -1,4 +1,4 @@
-n.d(t, { KA: () => E, Ay: () => S, jL: () => h });
+n.d(t, { KA: () => h, Ay: () => S, jL: () => E });
 var i = n(582128),
     l = n(839214),
     s = n(419954),
@@ -81,23 +81,23 @@ var c = n(91871),
     g = n.n(c),
     m = n(614820);
 let A = (0, l.D)(() => ({ enabled: !1 }));
-function h(e) {
+function E(e) {
     A.setState({ enabled: e });
 }
-function E() {
+function h() {
     return A.useField("enabled");
 }
 function S(e, t) {
     let n = i.useMemo(() => (0, s.hl)(e), [e]),
-        l = p(n, t ?? ""),
-        r = p(n, "");
+        l = T(n, t ?? ""),
+        r = T(n, "");
     return i.useMemo(() => {
         let e = new u(),
             t = new u();
         return d(n, r, t), { node: d(n, l, e) ?? { ...n, layout: [] }, visibleDirectory: e, accessibleDirectory: t };
     }, [l, r, n]);
 }
-function p(e, t) {
+function T(e, t) {
     let n = (function (e, t) {
             let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
                 i = new Set(),
@@ -126,7 +126,7 @@ function p(e, t) {
                     return !a && (u || d) && i.add(e.key), u || d;
                 };
             return l(e), i;
-        })(e, t, E()),
+        })(e, t, h()),
         [l, s] = i.useState(n),
         r = (function (e, t) {
             if (e.size !== t.size) return !0;

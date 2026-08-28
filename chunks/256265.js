@@ -16,16 +16,16 @@ var l,
     g = n(935208),
     x = n(998218),
     A = n(652215);
-function C(e) {
+function E(e) {
     if (null == e) return !1;
     let { filename: t, height: n, width: l } = e;
     return (0, u.u)(t) && null != n && n > 0 && null != l && l > 0;
 }
-function E(e) {
+function C(e) {
     return null != e && null != e && (0, u.AE)(e.filename) && null != e.proxy_url;
 }
 function I(e) {
-    return C(e) || E(e);
+    return E(e) || C(e);
 }
 var y = (((l = {}).EMBED = "embed"), (l.ATTACHMENT = "attachment"), (l.COMPONENT = "component"), l);
 function S(e) {
@@ -182,7 +182,7 @@ function O(e, t) {
         n.isForumPost() &&
         n.ownerId === f.default.getCurrentUser()?.id &&
         0 === c.A.getCount(n.id) &&
-        (0 === l.attachments.length || null == l.attachments.find((e) => C(e) || E(e)))
+        (0 === l.attachments.length || null == l.attachments.find((e) => E(e) || C(e)))
     );
 }
 function M(e) {

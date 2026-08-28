@@ -131,8 +131,8 @@ let F = (0, n(945810).mj)({
 });
 var z = n(359800),
     J = n(206828),
-    Y = n(574660),
-    K = n(379848),
+    K = n(574660),
+    Y = n(379848),
     W = n(409626),
     X = n(692969),
     Z = n(928550),
@@ -409,7 +409,7 @@ function ef(e) {
             if (null != y)
                 return { label: j.intl.string(j.t["jaYS/h"]), icon: H.h, trackingArea: h.kY.CLOUD_PLAY, onClick: y };
         }, [y]),
-        R = (0, Y.F)(o),
+        R = (0, K.F)(o),
         L = l.useMemo(() => (null != T ? T : null != R && C ? R : void 0), [C, T, R]),
         M = F.useConfig({ location: "RichPresenceGameActivityInviteEmbed" }),
         { canStartAuthorization: k, hasAlreadyLinked: O, startAuthorization: P } = (0, J.RD)(o),
@@ -428,7 +428,7 @@ function ef(e) {
                 !O &&
                 M.enabled &&
                 t.push(G.M.GAME_INVITE_ACCOUNT_LINK_UPSELL),
-            (0, i.jsx)(K.Ay, {
+            (0, i.jsx)(Y.Ay, {
                 contentTypes: t,
                 children: (e) => {
                     let { visibleContent: t, markAsDismissed: n } = e;

@@ -11,47 +11,47 @@ var l = n(477900),
     m = n(92259),
     p = n(106236),
     g = n(218429),
-    h = n(964486),
-    f = n(461782),
-    x = n(453028),
+    f = n(964486),
+    x = n(461782),
+    h = n(453028),
     A = n(40056),
     v = n(375708),
     E = n(950183),
     C = n(507199);
-function I(e) {
+function j(e) {
     e.preventDefault(), e.stopPropagation();
 }
-function j(e) {
+function I(e) {
     return (1 & e.buttons) == 1;
 }
 let S = i.memo(function (e) {
     let { mirror: t = !1, streamId: n, paused: s } = e,
-        { onActive: S, onPreventIdle: _, onAllowIdle: N } = i.useContext(f.k3),
+        { onActive: S, onPreventIdle: _, onAllowIdle: N } = i.useContext(x.k3),
         {
             enabled: b,
             zoomLevel: y,
-            minZoom: D,
-            maxZoom: R,
-            isDragging: k,
+            minZoom: R,
+            maxZoom: k,
+            isDragging: D,
             isWheeling: T,
             isSlidering: w,
             setIsSlidering: L,
-            doZoom: O,
-            isZooming: M,
+            doZoom: M,
+            isZooming: O,
             videoAspectRatio: V,
             wrapperRef: G,
             panOffset: P,
             setPanOffset: F,
             clampPanOffset: H,
         } = i.useContext(A.e9),
-        [U, W] = i.useState(!1),
-        z = i.useRef(null),
-        $ = y > D,
+        [U, z] = i.useState(!1),
+        W = i.useRef(null),
+        $ = y > R,
         B = i.useCallback(() => {
             _("interact");
         }, [_]),
         Y = i.useCallback(() => {
-            W(!1), N("interact");
+            z(!1), N("interact");
         }, [N]),
         Z = i.useMemo(() => {
             let e = 120 * Math.min(V, 32 / 9);
@@ -59,8 +59,8 @@ let S = i.memo(function (e) {
         }, [V]),
         Q = i.useCallback(
             (e) => {
-                if (null == z.current || null == G.current) return;
-                let t = z.current.getBoundingClientRect(),
+                if (null == W.current || null == G.current) return;
+                let t = W.current.getBoundingClientRect(),
                     n = G.current.clientWidth,
                     l = G.current.clientHeight,
                     i = e.x - t.left,
@@ -71,7 +71,7 @@ let S = i.memo(function (e) {
         ),
         K = i.useCallback(
             (e) => {
-                j(e) && (e.preventDefault(), e.stopPropagation(), W(!0), Q({ x: e.clientX, y: e.clientY }));
+                I(e) && (e.preventDefault(), e.stopPropagation(), z(!0), Q({ x: e.clientX, y: e.clientY }));
             },
             [Q],
         ),
@@ -83,11 +83,11 @@ let S = i.memo(function (e) {
         ),
         q = i.useCallback(
             (e) => {
-                !U || j(e) || (e.preventDefault(), e.stopPropagation(), W(!1));
+                !U || I(e) || (e.preventDefault(), e.stopPropagation(), z(!1));
             },
             [U],
         ),
-        J = x.Ay.getVideoComponent(),
+        J = h.Ay.getVideoComponent(),
         ee = i.useMemo(() => {
             let e = null != G.current ? G.current.clientWidth : 1,
                 t = null != G.current ? G.current.clientHeight : 1,
@@ -101,57 +101,57 @@ let S = i.memo(function (e) {
                 "--custom-zoom-indicator-width": `${100 * n}%`,
                 "--custom-zoom-indicator-height": `${100 * l}%`,
                 "--custom-zoom-indicator-transition":
-                    k || U || T || w
+                    D || U || T || w
                         ? "none"
                         : "top 0.1s ease-out, left 0.1s ease-out, width 0.1s ease-out, height 0.1s ease-out",
             };
-        }, [k, U, T, w, P, y, G]),
+        }, [D, U, T, w, P, y, G]),
         et = i.useCallback(
             (e) => {
-                e.preventDefault(), e.stopPropagation(), O(y - 0.25, A.qd, "button");
+                e.preventDefault(), e.stopPropagation(), M(y - 0.25, A.qd, "button");
             },
-            [O, y],
+            [M, y],
         ),
         en = i.useCallback(
             (e) => {
-                e.preventDefault(), e.stopPropagation(), O(y + 0.25, A.qd, "button");
+                e.preventDefault(), e.stopPropagation(), M(y + 0.25, A.qd, "button");
             },
-            [O, y],
+            [M, y],
         ),
         el = i.useRef(null),
         ei = i.useCallback(
             (e) => {
                 L(!0),
-                    O(e, A.qd, "slider"),
+                    M(e, A.qd, "slider"),
                     S(),
                     null == el.current && (el.current = new o.Ep()),
                     el.current.start(100, () => {
                         L(!1);
                     });
             },
-            [O, S, L],
+            [M, S, L],
         );
-    return ((0, h.l0)(() => {
+    return ((0, f.l0)(() => {
         el.current?.stop();
     }),
     b && null != n)
         ? (0, l.jsxs)("div", {
-              className: r()(C.ne, { [C.Ge]: M || $ }),
+              className: r()(C.ne, { [C.Ge]: O || $ }),
               onMouseEnter: B,
               onMouseLeave: Y,
-              onClick: I,
+              onClick: j,
               children: [
-                  (M || $) &&
+                  (O || $) &&
                       (0, l.jsx)(u.D, {
-                          onClick: I,
+                          onClick: j,
                           onMouseEnter: B,
                           onMouseLeave: Y,
                           children: (0, l.jsxs)("div", {
-                              ref: z,
+                              ref: W,
                               className: C.Wc,
                               style: Z,
                               onPointerDown: function (e) {
-                                  j(e) && e.currentTarget.setPointerCapture(e.pointerId);
+                                  I(e) && e.currentTarget.setPointerCapture(e.pointerId);
                               },
                               onMouseDown: K,
                               onMouseMove: X,
@@ -170,7 +170,7 @@ let S = i.memo(function (e) {
                   (0, l.jsxs)("div", {
                       className: C.xu,
                       children: [
-                          (M || $) &&
+                          (O || $) &&
                               (0, l.jsxs)(l.Fragment, {
                                   children: [
                                       (0, l.jsx)(c.m, {
@@ -179,15 +179,15 @@ let S = i.memo(function (e) {
                                           children: (0, l.jsx)(d.K, {
                                               icon: m.V,
                                               onClick: et,
-                                              disabled: y <= D,
+                                              disabled: y <= R,
                                               variant: "overlay-secondary",
                                               size: "sm",
                                               "aria-label": v.intl.string(v.t.M6Cmwy),
                                           }),
                                       }),
                                       (0, l.jsx)(p.A, {
-                                          minValue: D,
-                                          maxValue: R,
+                                          minValue: R,
+                                          maxValue: k,
                                           initialValue: y,
                                           value: y,
                                           asValueChanges: ei,
@@ -202,7 +202,7 @@ let S = i.memo(function (e) {
                               children: (0, l.jsx)(d.K, {
                                   icon: g.r,
                                   onClick: en,
-                                  disabled: y >= R,
+                                  disabled: y >= k,
                                   variant: "overlay-secondary",
                                   size: "sm",
                                   "aria-label": v.intl.string(v.t["9hMafy"]),

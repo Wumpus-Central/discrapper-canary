@@ -17,8 +17,8 @@ var i = n(503698),
     g = n(696451),
     x = n(317525),
     A = n(287809),
-    C = n(562153),
-    E = n(576757),
+    E = n(562153),
+    C = n(576757),
     I = n(375708),
     y = n(804779);
 function S() {
@@ -63,14 +63,14 @@ function j(e) {
     let { guildId: t, channelId: n, entry: i, maxAvatars: s = 3 } = e,
         a = i.author_id,
         o = (0, r.bG)([A.default], () => A.default.getUser(a)),
-        { displayParticipants: h, participant1: m, participant2: S, numOtherParticipants: N } = (0, E.A)(i, s),
+        { displayParticipants: h, participant1: m, participant2: S, numOtherParticipants: N } = (0, C.A)(i, s),
         v = (0, r.bG)([g.Ay], () => g.Ay.getMember(t, a)),
         j = (0, f.a)({ displayNameStyles: o?.displayNameStyles }),
         T = (0, r.bG)([x.A], () => (v?.colorRoleId != null ? x.A.getRole(t, v.colorRoleId)?.name : void 0), [t, v]),
         b = (0, p.gn)(t, a, v?.colorStrings ?? null);
     if (null == o) return null;
     let R = v?.colorString,
-        O = C.Ay.getName(t, n, o);
+        O = E.Ay.getName(t, n, o);
     return (0, l.jsxs)("div", {
         className: y.dw,
         children: [
@@ -98,8 +98,8 @@ function j(e) {
                 : null,
             (0, l.jsx)(d.A, {
                 children: I.intl.format(I.t.rH95Gu, {
-                    user0: C.Ay.getName(t, n, m),
-                    user1: C.Ay.getName(t, n, S),
+                    user0: E.Ay.getName(t, n, m),
+                    user1: E.Ay.getName(t, n, S),
                     countOthers: N,
                     name0Hook: (e, t) => (0, l.jsx)("span", { children: e }, t),
                     name1Hook: (e, t) => (0, l.jsx)("span", { children: e }, t),

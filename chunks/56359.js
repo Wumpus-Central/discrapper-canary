@@ -100,8 +100,8 @@ function z(e) {
     });
 }
 var J = n(821609),
-    Y = n(975732),
-    K = n(375708),
+    K = n(975732),
+    Y = n(375708),
     W = n(820555);
 function X(e) {
     let { userId: t, guildId: n, channelId: l } = e;
@@ -111,9 +111,9 @@ function X(e) {
             variant: "primary",
             size: "md",
             fullWidth: !0,
-            text: K.intl.string(K.t.iXAna6),
+            text: Y.intl.string(Y.t.iXAna6),
             onClick: function () {
-                (0, Y.openUserProfileModal)({ userId: t, guildId: n, channelId: l, hideRestrictedProfile: !0 });
+                (0, K.openUserProfileModal)({ userId: t, guildId: n, channelId: l, hideRestrictedProfile: !0 });
             },
         }),
     });
@@ -149,7 +149,7 @@ function et(e) {
               displayProfile: c,
               size: "sm",
               style: $,
-              headingText: K.intl.formatToPlainString(K.t["8yRya1"], { name: g }),
+              headingText: Y.intl.formatToPlainString(Y.t["8yRya1"], { name: g }),
               children: [
                   (0, i.jsx)(S, { user: a, displayProfile: c, guildId: n, bannerHeight: 120, avatarSize: Q }),
                   (0, i.jsx)(D, { user: a, guildId: n }),

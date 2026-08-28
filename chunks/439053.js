@@ -15,9 +15,9 @@ var i = s(503698),
     j = s(308528),
     v = s(775602),
     h = s(183555),
-    g = s(679492),
-    A = s(518477),
-    N = s(375708),
+    A = s(679492),
+    N = s(518477),
+    g = s(375708),
     p = s(988199),
     C = s(655214);
 function y(t) {
@@ -33,7 +33,7 @@ function y(t) {
                     (0, n.jsx)(u.E, { color: "text-strong", variant: "text-sm/semibold", children: e }),
                     (0, n.jsx)(u.E, {
                         variant: "text-sm/semibold",
-                        children: N.intl.format(N.t.QEW8Mq, {
+                        children: g.intl.format(g.t.QEW8Mq, {
                             onClick: () => {
                                 r({ action: "PRESS_REACT_REPLY_TOAST" }),
                                     i?.(),
@@ -51,14 +51,14 @@ function I() {
         className: a()(C.oR, p.d6),
         children: [
             (0, n.jsx)(E.y, { type: E.t.SPINNING_CIRCLE_SIMPLE, className: p.RC }),
-            (0, n.jsx)(u.E, { color: "text-strong", variant: "text-sm/semibold", children: N.intl.string(N.t.tcARX0) }),
+            (0, n.jsx)(u.E, { color: "text-strong", variant: "text-sm/semibold", children: g.intl.string(g.t.tcARX0) }),
         ],
     });
 }
 let f = (t) => {
     let { userId: e, onClose: s, className: i } = t,
-        { interactionTypeSent: m, showInteractionToast: x } = (0, g.Pq)(),
-        u = m === A.AQ.REPLY ? N.intl.string(N.t.BPaiaa) : N.intl.string(N.t.Ry2EtG),
+        { interactionTypeSent: m, showInteractionToast: x } = (0, A.Pq)(),
+        u = m === N.AQ.REPLY ? g.intl.string(g.t.BPaiaa) : g.intl.string(g.t.Ry2EtG),
         E = (0, l.bG)([v.Ay], () => v.Ay.useReducedMotion),
         j = (0, o.p)(
             x,

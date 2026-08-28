@@ -29,7 +29,7 @@ var a = n(635377),
     g = n(927813);
 let x = /^[a-z0-9_+\-.#]+$/i,
     A = new d.A("MarkdownToSlate"),
-    C = {
+    E = {
         link: { type: "skip" },
         highlight: { type: "skip" },
         blockQuote: { type: "skip" },
@@ -73,23 +73,23 @@ let x = /^[a-z0-9_+\-.#]+$/i,
         inlineCode: { type: "inlineStyle", before: "`", after: "`" },
         subtext: { type: "inlineStyle", before: "-# ", after: "" },
     },
-    E = new Set(["start", "end"]),
+    C = new Set(["start", "end"]),
     I = new Map([
-        ["inlineCode", E],
-        ["spoiler", E],
-        ["s", E],
+        ["inlineCode", C],
+        ["spoiler", C],
+        ["s", C],
         ["subtext", new Set(["start"])],
-        ["u", E],
+        ["u", C],
     ]),
     y = new Set(["*", "_", "~", "|", "\\"]),
     S = {},
     N = {};
 for (let e in m.Ay.RULES) {
-    if (!(e in C))
+    if (!(e in E))
         throw Error(
             `Slate: Unknown markdown rule: ${e}.  If you have just added a new markdown rule then you probably need to add it to this file so that the rich chat box understands it.`,
         );
-    let t = C[e];
+    let t = E[e];
     "skip" !== t.type && (S[e] = v(m.Ay.RULES[e])),
         "skip" !== t.type && "inlineObject" !== t.type && (N[e] = v("text" === e ? f.Ay : m.Ay.RULES[e]));
 }
@@ -225,7 +225,7 @@ function P(e, t, n, l, s) {
                     if ("inlineCode" === t) return { before: l[1], after: l[1] };
                     if ("em" === t && "_" === e.substring(n, n + 1)) return { before: "_", after: "_" };
                     if ("subtext" === t) return { before: T.exec(l.input)[1], after: "" };
-                    let i = C["link" === t ? "url" : t];
+                    let i = E["link" === t ? "url" : t];
                     if ("inlineStyle" === i.type) return i;
                     throw Error("Slate: rule must be an inlineStyle");
                 })(t, a, l, o),
@@ -370,10 +370,10 @@ if ((n(654821), !s.KE._addedDiscordOverrides)) {
                     p = f.length,
                     g = $.isAncestor(f, c.path),
                     x = $.isAncestor(f, d.path),
-                    C = g ? c.path[p] : 0,
-                    E = x ? d.path[p] : h.children.length - 1,
-                    I = o ? E : C,
-                    y = o ? C : E;
+                    E = g ? c.path[p] : 0,
+                    C = x ? d.path[p] : h.children.length - 1,
+                    I = o ? C : E,
+                    y = o ? E : C;
                 for (let r = I; !A && (!o ? r <= y : r >= y); r += m) {
                     let m = h.children[r],
                         p = $.child(f, r);

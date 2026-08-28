@@ -51,7 +51,7 @@ function x(e) {
     });
 }
 var A = n(33683);
-function C(e) {
+function E(e) {
     let {
             component: t,
             variant: n,
@@ -63,29 +63,29 @@ function C(e) {
             hideLabel: u = !1,
         } = e,
         { resolveFieldValue: c, numberFormat: f, renderText: g } = en(),
-        C = (0, m.Hx)(t, c, f, s, u);
-    if ("hidden" === C.status) return null;
-    if ("skeleton" === C.status) return (0, i.jsx)(x, { variant: n, className: r });
-    let E = null != C.icon ? (0, i.jsx)(p, { media: C.icon, variant: n }) : null;
+        E = (0, m.Hx)(t, c, f, s, u);
+    if ("hidden" === E.status) return null;
+    if ("skeleton" === E.status) return (0, i.jsx)(x, { variant: n, className: r });
+    let C = null != E.icon ? (0, i.jsx)(p, { media: E.icon, variant: n }) : null;
     return (0, i.jsxs)("div", {
         className: d()(A.k, r),
         children: [
-            null != E && "left" === o ? E : null,
-            (0, i.jsx)(h.E, { variant: n, color: l, lineClamp: a, children: g?.(C.text) ?? C.text }),
-            null != E && "right" === o ? E : null,
+            null != C && "left" === o ? C : null,
+            (0, i.jsx)(h.E, { variant: n, color: l, lineClamp: a, children: g?.(E.text) ?? E.text }),
+            null != C && "right" === o ? C : null,
         ],
     });
 }
-var E = n(640056);
+var C = n(640056);
 function I(e) {
     let { variant: t = "default", textColor: n } = e,
         { surfaceConfig: l } = en(),
         s = "badge" === t;
     return (0, i.jsx)("div", {
-        className: E.z,
-        children: (0, i.jsx)(C, {
+        className: C.z,
+        children: (0, i.jsx)(E, {
             component: l.components.stat,
-            className: E.Q,
+            className: C.Q,
             variant: s ? "text-xs/normal" : "text-xs/semibold",
             color: n,
             hideLabel: s,
@@ -185,7 +185,7 @@ function w(e) {
                     (0, i.jsxs)("div", {
                         className: k.Qs,
                         children: [
-                            (0, i.jsx)(C, {
+                            (0, i.jsx)(E, {
                                 component: l.components.stat,
                                 variant: "heading-sm/semibold",
                                 lineClamp: 1,
@@ -419,26 +419,26 @@ function J() {
     return (0, i.jsxs)("div", {
         className: q.Q,
         children: [
-            (0, i.jsx)(C, {
+            (0, i.jsx)(E, {
                 component: e.components.title,
                 variant: "text-lg/medium",
                 lineClamp: 2,
                 required: !0,
                 className: q.D,
             }),
-            (0, i.jsx)(C, {
+            (0, i.jsx)(E, {
                 component: e.components.subtitle_1,
                 variant: "text-sm/normal",
                 color: "text-subtle",
                 lineClamp: 2,
             }),
-            (0, i.jsx)(C, {
+            (0, i.jsx)(E, {
                 component: e.components.subtitle_2,
                 variant: "text-sm/normal",
                 color: "text-subtle",
                 lineClamp: 2,
             }),
-            (0, i.jsx)(C, {
+            (0, i.jsx)(E, {
                 component: e.components.subtitle_3,
                 variant: "text-sm/normal",
                 color: "text-subtle",

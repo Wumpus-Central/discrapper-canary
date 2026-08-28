@@ -16,8 +16,8 @@ var l = n(635377),
     g = n(820066),
     x = n(551483),
     A = n(389437);
-let C = new a.Vy("withCodeBlocks"),
-    E = new Set(["line"]),
+let E = new a.Vy("withCodeBlocks"),
+    C = new Set(["line"]),
     I = /^[a-z0-9_+\-.#]+$/i,
     y = null,
     S = null;
@@ -41,7 +41,7 @@ function N(e) {
                                 }),
                                     (l = g.VW.richValue(e));
                             } catch (e) {
-                                C.warn("error applying arborium highlighting to editor", e);
+                                E.warn("error applying arborium highlighting to editor", e);
                             }
                         })));
             })
@@ -94,7 +94,7 @@ function v(e, t) {
                 let s = (function (e) {
                         let t,
                             [n, l] = e;
-                        if (!E.has(n.type)) return [];
+                        if (!C.has(n.type)) return [];
                         let i = [],
                             s = /\\|```/g;
                         for (let e = 0; e < n.children.length; e++) {

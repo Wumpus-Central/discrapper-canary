@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => eE }), n(321073), n(323874), n(14289), n(35956);
+n.d(t, { A: () => eC }), n(321073), n(323874), n(14289), n(35956);
 var l = n(477900),
     i = n(582128),
     s = n(503698),
@@ -16,8 +16,8 @@ var l = n(477900),
     g = n(626584),
     x = n(522602),
     A = n(234320),
-    C = n(453771),
-    E = n(741394),
+    E = n(453771),
+    C = n(741394),
     I = n(355622),
     y = n(408018),
     S = n(579940),
@@ -318,8 +318,8 @@ let em = (e) => {
         ),
         g = (0, eu.bG)([x.A], () => x.A.getUpload(n, s.optionName, ec.C.SlashCommand), [n, s.optionName]),
         A = s.children[s.children.length - 1],
-        C = null != A && K.l5.isText(A) && A.text.endsWith("\n"),
-        E = r()(eh.S0, eh.xP, { [eh.t$]: c && u, [eh.$2]: (!c || !u) && f }),
+        E = null != A && K.l5.isText(A) && A.text.endsWith("\n"),
+        C = r()(eh.S0, eh.xP, { [eh.t$]: c && u, [eh.$2]: (!c || !u) && f }),
         I = i.useCallback(() => {
             K.VW.isVoid(d, s) || W.b.selectCommandOption(d, s.optionName, !0);
         }, [d, s]);
@@ -339,11 +339,11 @@ let em = (e) => {
                       })
                 : (0, l.jsxs)("span", {
                       className: eh._K,
-                      children: [o, C ? (0, l.jsx)("span", { className: eh.Nx, contentEditable: !1 }) : null],
+                      children: [o, E ? (0, l.jsx)("span", { className: eh.Nx, contentEditable: !1 }) : null],
                   })),
         (0, l.jsxs)("span", {
             ...a,
-            className: E,
+            className: C,
             children: [
                 (0, l.jsxs)("span", {
                     className: eh.gA,
@@ -407,8 +407,8 @@ let ex = i.forwardRef(function (e, t) {
             type: h,
             channel: f,
             className: g,
-            id: C,
-            disabled: E,
+            id: E,
+            disabled: C,
             submitting: y,
             placeholder: S,
             required: N,
@@ -429,8 +429,8 @@ let ex = i.forwardRef(function (e, t) {
             hideAutocomplete: ec,
             moveSelection: ex,
             spellcheckEnabled: eA,
-            canUseCommands: eC,
-            disableAutoFocus: eE,
+            canUseCommands: eE,
+            disableAutoFocus: eC,
             disableEnterToSubmit: eI,
             allowNewLines: ey,
             "aria-owns": eS,
@@ -447,7 +447,7 @@ let ex = i.forwardRef(function (e, t) {
         eL = i.useRef(null),
         ek = i.useRef(!0),
         ew = i.useRef(!0),
-        eP = E || y,
+        eP = C || y,
         eD = i.useCallback(
             (e, t, n) => {
                 let { value: l, selection: i } = n,
@@ -513,7 +513,7 @@ let ex = i.forwardRef(function (e, t) {
             let e,
                 t = K.VW.getNodesOfType(eV, ["gameMentionInput", "timestampMentionInput"]),
                 n = null != t ? [...t] : null,
-                l = eC ? p.A.getActiveCommand(f.id) : null,
+                l = eE ? p.A.getActiveCommand(f.id) : null,
                 i = !1;
             if (null != l && null != l.options) {
                 let t = eF(l, !1);
@@ -543,7 +543,7 @@ let ex = i.forwardRef(function (e, t) {
                 return;
             }
             q?.((0, B.WO)(K.VW.richValue(eV), { mode: "raw", ignoreTrailingEmptyNodes: !0 }), l, e);
-        }, [f.id, eV, q, es, eF, eC]);
+        }, [f.id, eV, q, es, eF, eE]);
     i.useImperativeHandle(
         t,
         () => ({
@@ -939,7 +939,7 @@ let ex = i.forwardRef(function (e, t) {
                 ref: eM,
                 className: r()(g, eg.pC),
                 children: (0, l.jsx)(H.A, {
-                    id: C,
+                    id: E,
                     editor: eV,
                     channelId: f.id,
                     guildId: f.guild_id,
@@ -947,8 +947,8 @@ let ex = i.forwardRef(function (e, t) {
                     placeholder: S,
                     readOnly: eP,
                     spellCheck: eA,
-                    autoFocus: !eE,
-                    canFocus: !E,
+                    autoFocus: !eC,
+                    canFocus: !C,
                     onChange: eY,
                     onFocus: b,
                     onBlur: R,
@@ -976,10 +976,10 @@ let ex = i.forwardRef(function (e, t) {
 });
 var eA = n(495088);
 new g.A("ChannelEditor.tsx");
-let eC = function () {
+let eE = function () {
     for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
 };
-class eE extends i.Component {
+class eC extends i.Component {
     ref = i.createRef();
     _focusBlurQueue = Promise.resolve();
     _unsubscribe;
@@ -1151,8 +1151,8 @@ class eE extends i.Component {
                 useNewSlashCommands: p,
                 canOnlyUseTextCommands: g,
                 className: x,
-                id: C,
-                required: E,
+                id: E,
+                required: C,
                 maxCharacterCount: y,
                 allowNewLines: S,
                 "aria-describedby": N,
@@ -1164,9 +1164,9 @@ class eE extends i.Component {
             R = {
                 channel: d,
                 className: r()(x, eA.Tg, { [eA.w5]: m, [eA.Rr]: n || T }),
-                id: C,
+                id: E,
                 placeholder: this.getPlaceholder(),
-                required: E,
+                required: C,
                 accessibilityLabel: _,
                 disabled: n || !1,
                 submitting: T,
@@ -1303,12 +1303,12 @@ class eE extends i.Component {
                                     let e;
                                     try {
                                         let { pathname: n } = new URL(t.src);
-                                        null != n && n.length > 0 && (e = (0, E.kh)(n));
+                                        null != n && n.length > 0 && (e = (0, C.kh)(n));
                                     } catch {}
                                     if (null != e && e.length > 0) return `${e}.png`;
                                 }
                             })(e.getData(s.type)) ?? t.name;
-                    return { files: [(0, C.VE)(t, n, t.type)], errors: r };
+                    return { files: [(0, E.VE)(t, n, t.type)], errors: r };
                 }
                 return { files: l, errors: r };
             }
@@ -1316,12 +1316,12 @@ class eE extends i.Component {
                 let n = e.getData(i.type);
                 if (n.length > t) {
                     let e = new Blob([n], { type: "text/plain" });
-                    return { files: [(0, C.VE)(e, "message.txt", "text/plain")], convertedStringToFile: !0, errors: r };
+                    return { files: [(0, E.VE)(e, "message.txt", "text/plain")], convertedStringToFile: !0, errors: r };
                 }
             }
             return { files: [], errors: r };
         })(e.clipboardData, o.uploadLongMessages ? (s ?? a) : null);
-        return (eC(
+        return (eE(
             "onPaste",
             [...e.clipboardData.items].map((e) => {
                 if ("file" !== e.kind) return { kind: e.kind, type: e.type };

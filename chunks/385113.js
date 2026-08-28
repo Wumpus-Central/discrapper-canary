@@ -1,88 +1,88 @@
-i.d(t, { A: () => R, e: () => r });
-var E,
-    s = i(17928),
-    n = i(228366),
-    r =
-        (((E = {}).NOT_FETCHED = "NOT_FETCHED"),
-        (E.FETCHING = "FETCHING"),
-        (E.SUCCESS = "SUCCESS"),
-        (E.FAILURE = "FAILURE"),
-        E);
-let l = [],
-    a = {},
-    _ = {},
-    S = "NOT_FETCHED",
-    A = [],
-    c = "NOT_FETCHED",
-    o = [];
-function T(e) {
+i.d(t, { A: () => f, e: () => l });
+var s,
+    n = i(17928),
+    r = i(228366),
+    l =
+        (((s = {}).NOT_FETCHED = "NOT_FETCHED"),
+        (s.FETCHING = "FETCHING"),
+        (s.SUCCESS = "SUCCESS"),
+        (s.FAILURE = "FAILURE"),
+        s);
+let a = [],
+    c = {},
+    o = {},
+    d = "NOT_FETCHED",
+    u = [],
+    h = "NOT_FETCHED",
+    j = [];
+function x(e) {
     if (0 !== Object.keys(e).length) {
         for (let [t, i] of Object.entries(e)) {
             let e = new Set(i.map((e) => e.config_id)),
-                E = a[t]?.filter((t) => !e.has(t.config_id)) ?? [];
-            a[t] = [...E, ...i];
+                s = c[t]?.filter((t) => !e.has(t.config_id)) ?? [];
+            c[t] = [...s, ...i];
         }
-        (a = { ...a }), (_ = { ..._, ...Object.fromEntries(Object.keys(e).map((e) => [e, "SUCCESS"])) });
+        (c = { ...c }), (o = { ...o, ...Object.fromEntries(Object.keys(e).map((e) => [e, "SUCCESS"])) });
     }
 }
-function I() {
-    (a = {}), (_ = {}), (S = "NOT_FETCHED"), (A = []), (c = "NOT_FETCHED"), (o = []);
+function v() {
+    (c = {}), (o = {}), (d = "NOT_FETCHED"), (u = []), (h = "NOT_FETCHED"), (j = []);
 }
-class d extends s.Ay.Store {
+class m extends n.Ay.Store {
     static displayName = "ApplicationWidgetConfigStore";
     getConfig(e) {
-        return a[e]?.[0] ?? void 0;
+        return c[e]?.[0] ?? void 0;
     }
     getConfigs(e) {
-        return a[e] ?? l;
+        return c[e] ?? a;
     }
     getFetchState(e) {
-        return _[e] ?? "NOT_FETCHED";
+        return o[e] ?? "NOT_FETCHED";
     }
     getFeaturedFetchState() {
-        return S;
+        return d;
     }
     getDeveloperFetchState() {
-        return c;
+        return h;
     }
     getAllConfigsByApplication() {
-        return a;
+        return c;
     }
     getFeaturedApplicationIds() {
-        return A;
+        return u;
     }
     getDeveloperApplicationIds() {
-        return o;
+        return j;
     }
 }
-let R = new d(n.h, {
-    LOGOUT: I,
-    APPLICATION_WIDGET_CONFIG_DEBUG_RESET: I,
+let f = new m(r.h, {
+    LOGOUT: v,
+    APPLICATION_WIDGET_CONFIG_DEBUG_RESET: v,
     APPLICATION_WIDGET_CONFIG_FEATURED_FETCH_START: function (e) {
-        S = "FETCHING";
+        d = "FETCHING";
     },
     APPLICATION_WIDGET_CONFIG_FEATURED_FETCH_SUCCESS: function (e) {
-        (S = "SUCCESS"), (A = Object.keys(e.configs)), T(e.configs);
+        (d = "SUCCESS"), (u = Object.keys(e.configs)), x(e.configs);
     },
     APPLICATION_WIDGET_CONFIG_FEATURED_FETCH_FAILURE: function () {
-        S = "FAILURE";
+        d = "FAILURE";
     },
     APPLICATION_WIDGET_CONFIG_DEVELOPER_FETCH_START: function () {
-        c = "FETCHING";
+        h = "FETCHING";
     },
     APPLICATION_WIDGET_CONFIG_DEVELOPER_FETCH_SUCCESS: function (e) {
-        (c = "SUCCESS"), (o = Object.keys(e.configs)), T(e.configs);
+        (h = "SUCCESS"), (j = Object.keys(e.configs)), x(e.configs);
     },
     APPLICATION_WIDGET_CONFIG_DEVELOPER_FETCH_FAILURE: function () {
-        c = "FAILURE";
+        h = "FAILURE";
     },
     APPLICATION_WIDGET_CONFIG_FETCH_START: function (e) {
-        _ = { ..._, [e.applicationId]: "FETCHING" };
+        o = { ...o, [e.applicationId]: "FETCHING" };
     },
     APPLICATION_WIDGET_CONFIG_FETCH_SUCCESS: function (e) {
-        T({ [e.applicationId]: e.configs });
+        x({ [e.applicationId]: e.configs });
     },
     APPLICATION_WIDGET_CONFIG_FETCH_FAILURE: function (e) {
-        _ = { ..._, [e.applicationId]: "FAILURE" };
+        o = { ...o, [e.applicationId]: "FAILURE" };
     },
 });
