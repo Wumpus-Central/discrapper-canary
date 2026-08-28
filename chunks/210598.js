@@ -1,55 +1,57 @@
 "use strict";
-n.d(t, { K: () => u, Tu: () => C, g0: () => h, t0: () => I, wv: () => g, yL: () => A }), n(321073);
+n.d(t, { K: () => E, Tu: () => R, g0: () => f, t0: () => p, wv: () => N, yL: () => I }), n(321073);
 var i = n(812729),
     r = n.n(i),
     a = n(869484),
     s = n(540185),
-    l = n(287809),
-    o = n(403362),
-    d = n(474090),
-    c = n(202541);
-function u() {
+    l = n(554146),
+    o = n(826673),
+    d = n(287809),
+    c = n(403362),
+    u = n(474090),
+    _ = n(202541);
+function E() {
     return { type: a.K.COVER, title: "", subtitle: "" };
 }
-let _ = 0;
-function E() {
-    return `field-${_++}`;
-}
-function A() {
-    return { key: E(), title: "", description: "" };
-}
+let A = 0;
 function h() {
-    return new C({ header: "", sections: [u(), { type: a.K.FIELDS, fields: [A(), A(), A(), A()] }] });
+    return `field-${A++}`;
 }
 function I() {
-    return 17907264e5 > Date.now();
+    return { key: h(), title: "", description: "" };
 }
-function f(e) {
+function f() {
+    return new R({ header: "", sections: [E(), { type: a.K.FIELDS, fields: [I(), I(), I(), I()] }] });
+}
+function p() {
+    return !(0, o.k8)(l.M.USER_PROFILE_PERSONAL_WIDGET_NEW_BADGE);
+}
+function T(e) {
     return "" === e.title.trim() && "" === e.description.trim() && null == e.image;
 }
-function p(e) {
+function m(e) {
     switch (e.type) {
         case a.K.COVER:
             return "" === e.title.trim() && "" === e.subtitle.trim() && null == e.image;
         case a.K.FIELDS:
-            return e.fields.every(f);
+            return e.fields.every(T);
     }
 }
-function T(e) {
+function g(e) {
     if (null != e && "file_id" in e)
         return { fileId: e.file_id, width: e.width, height: e.height, isAnimated: e.is_animated ?? !1 };
 }
-function m(e) {
-    let t = T(e.image);
+function S(e) {
+    let t = g(e.image);
     return {
-        key: E(),
+        key: h(),
         title: e.title ?? "",
         description: e.description ?? "",
         image: t,
         hideImage: null == t || void 0,
     };
 }
-function g(e) {
+function N(e) {
     var t;
     let n =
         null == (t = e)
@@ -62,38 +64,38 @@ function g(e) {
                                   type: e.type,
                                   title: e.title ?? "",
                                   subtitle: e.subtitle ?? "",
-                                  image: T(e.image),
+                                  image: g(e.image),
                               };
                           case a.K.FIELDS:
-                              return { type: e.type, fields: e.fields.map(m) };
+                              return { type: e.type, fields: e.fields.map(S) };
                           default:
                               return;
                       }
                   })
-                  .filter(o.Vq);
+                  .filter(c.Vq);
     return n.some((e) => e.type === a.K.FIELDS) || n.push({ type: a.K.FIELDS, fields: [] }), n;
 }
-function S(e) {
+function C(e) {
     if (null != e)
         return "localDataUri" in e
             ? { filename: e.filename }
             : { file_id: e.fileId, width: e.width, height: e.height, is_animated: e.isAnimated };
 }
-function N(e) {
+function O(e) {
     switch (e.type) {
         case a.K.COVER:
-            return { type: e.type, title: e.title, subtitle: e.subtitle, image: S(e.image) };
+            return { type: e.type, title: e.title, subtitle: e.subtitle, image: C(e.image) };
         case a.K.FIELDS: {
             let t = e.fields
-                .filter((e) => !f(e))
-                .map((e) => ({ title: e.title, description: e.description, image: S(e.image) }));
+                .filter((e) => !T(e))
+                .map((e) => ({ title: e.title, description: e.description, image: C(e.image) }));
             return { type: e.type, fields: t };
         }
         default:
             return e;
     }
 }
-class C {
+class R {
     id;
     type;
     header;
@@ -108,24 +110,24 @@ class C {
                 type: this.type,
                 header: this.header,
                 sections: this.sections
-                    .filter((e) => !p(e))
-                    .map(N)
-                    .filter(o.Vq),
+                    .filter((e) => !m(e))
+                    .map(O)
+                    .filter(c.Vq),
             },
         };
     }
     isDiscardable() {
-        return this.sections.every(p);
+        return this.sections.every(m);
     }
     isValid() {
-        return "" !== this.header.trim() && this.sections.some((e) => !p(e));
+        return "" !== this.header.trim() && this.sections.some((e) => !m(e));
     }
     isUpdatable() {
-        return (0, d.ki)(l.default.getCurrentUser(), c.PremiumTypes.TIER_2);
+        return (0, u.ki)(d.default.getCurrentUser(), _.PremiumTypes.TIER_2);
     }
     isEqual(e) {
         return (
-            e instanceof C &&
+            e instanceof R &&
             this.header === e.header &&
             (function (e, t) {
                 if (e.length !== t.length) return !1;

@@ -88,7 +88,8 @@ function D(e) {
     let t = R();
     null == t.find((t) => t.getUniqueKey() === e.getUniqueKey()) &&
         (e.type === a.x.PERSONAL &&
-            (0, o.Dr)(s.M.USER_PROFILE_PERSONAL_WIDGET_COACHMARK, { dismissAction: p.i.INDIRECT_ACTION }),
+            ((0, o.Dr)(s.M.USER_PROFILE_PERSONAL_WIDGET_COACHMARK, { dismissAction: p.i.INDIRECT_ACTION }),
+            (0, o.Dr)(s.M.USER_PROFILE_PERSONAL_WIDGET_NEW_BADGE, { dismissAction: p.i.INDIRECT_ACTION })),
         h.A.setPendingWidgets([e, ...t]));
 }
 function v(e) {
