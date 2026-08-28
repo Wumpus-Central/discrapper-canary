@@ -359,31 +359,31 @@ var eA = n(691540),
     eT = n(741394),
     eN = n(38405);
 function ek(e) {
-    let { uploadType: t, returnRef: s, onUploadSuccess: r } = e,
-        a = l.useRef(0),
-        [o, c] = l.useState(null),
-        [d, u] = l.useState(null),
-        g = (0, eS.A)(r),
-        m = l.useCallback(() => {
-            (a.current = a.current + 1), c(null), u(null);
+    let { uploadType: t, returnRef: s, getCropAspectRatio: r, onUploadSuccess: a } = e,
+        o = l.useRef(0),
+        [c, d] = l.useState(null),
+        [u, g] = l.useState(null),
+        m = (0, eS.A)(a),
+        x = l.useCallback(() => {
+            (o.current = o.current + 1), d(null), g(null);
         }, []),
-        x = l.useCallback(
+        f = l.useCallback(
             async (e, t, n, i) => {
-                a.current = a.current + 1;
-                let l = a.current;
-                c(e);
+                o.current = o.current + 1;
+                let l = o.current;
+                d(e);
                 try {
                     let s = await v.A.uploadWidgetAsset(t);
-                    if (a.current !== l) return;
-                    c(null), u({ filename: s, unprocessedFile: n, transform: i }), g({ filename: s, localDataUri: e });
+                    if (o.current !== l) return;
+                    d(null), g({ filename: s, unprocessedFile: n, transform: i }), m({ filename: s, localDataUri: e });
                 } catch (e) {
-                    if (a.current !== l) return;
-                    c(null), (0, eA.P0)((0, ev.o)(V.intl.string(V.t.F4Neqh), eE.Ck.FAILURE)), eN.A.captureException(e);
+                    if (o.current !== l) return;
+                    d(null), (0, eA.P0)((0, ev.o)(V.intl.string(V.t.F4Neqh), eE.Ck.FAILURE)), eN.A.captureException(e);
                 }
             },
-            [g],
+            [m],
         ),
-        f = l.useCallback(
+        h = l.useCallback(
             (e) => {
                 var t, n;
                 let i,
@@ -392,7 +392,7 @@ function ek(e) {
                     o = (0, ey.aU)(s);
                 o.size > 0xa00000
                     ? (0, eA.P0)((0, ev.o)(V.intl.string(V.t.YbdEFK), eE.Ck.FAILURE))
-                    : x(
+                    : f(
                           s,
                           new File(
                               [o],
@@ -407,14 +407,15 @@ function ek(e) {
                           a,
                       );
             },
-            [x],
+            [f],
         );
     return {
         cropAndUpload: l.useCallback(
-            (e, l, r) => {
+            (e, l, a) => {
+                let o = r?.();
                 (0, eC.openModalLazy)(
                     async () => {
-                        let { default: a } = await Promise.all([
+                        let { default: r } = await Promise.all([
                             n.e("940226"),
                             n.e("655327"),
                             n.e("67702"),
@@ -435,26 +436,27 @@ function ek(e) {
                             n.e("750348"),
                         ]).then(n.bind(n, 142630));
                         return (n) =>
-                            (0, i.jsx)(a, {
+                            (0, i.jsx)(r, {
                                 ...n,
                                 file: l,
                                 imageUri: e,
                                 uploadType: t,
                                 returnRef: s,
-                                initialTransform: r,
-                                onCrop: f,
+                                initialTransform: a,
+                                cropAspectRatio: o,
+                                onCrop: h,
                             });
                     },
                     { stackingBehavior: "stack" },
                 );
             },
-            [f, t, s],
+            [h, t, s, r],
         ),
-        previewUri: o,
-        cancelUpload: m,
+        previewUri: c,
+        cancelUpload: x,
         getLastEdit: l.useCallback(
-            (e) => (null != d && null != e && "filename" in e && e.filename === d.filename ? d : null),
-            [d],
+            (e) => (null != u && null != e && "filename" in e && e.filename === u.filename ? u : null),
+            [u],
         ),
     };
 }
@@ -473,8 +475,9 @@ function eO() {
 function eP(e) {
     let { userId: t, section: n, sectionIndex: s, canEdit: a } = e,
         o = l.useRef(null),
-        c = l.useRef(null);
-    function d(e) {
+        c = l.useRef(null),
+        d = l.useRef(null);
+    function u(e) {
         (0, W.AD)((t) => {
             let n = t.sections[s];
             if (n?.type !== P.K.COVER) return t;
@@ -482,57 +485,63 @@ function eP(e) {
             return (i[s] = e(n)), new I.Tu({ ...t, sections: i });
         });
     }
-    function u(e) {
-        d((t) => ({ ...t, title: e }));
-    }
     function g(e) {
-        d((t) => ({ ...t, subtitle: e }));
+        u((t) => ({ ...t, title: e }));
     }
-    let {
-        cropAndUpload: m,
-        previewUri: x,
-        cancelUpload: f,
-        getLastEdit: h,
-    } = ek({
-        uploadType: eR.HL.PERSONAL_WIDGET_COVER,
-        returnRef: c,
-        onUploadSuccess: (e) => d((t) => ({ ...t, image: e })),
-    });
-    function p() {
-        f(), d((e) => ({ ...e, image: void 0 }));
+    function m(e) {
+        u((t) => ({ ...t, subtitle: e }));
     }
-    function j() {
+    let x = l.useCallback(() => {
+            let e = d.current?.getBoundingClientRect();
+            return null != e && e.width > 0 && e.height > 0 ? e.width / e.height : void 0;
+        }, []),
+        {
+            cropAndUpload: f,
+            previewUri: h,
+            cancelUpload: p,
+            getLastEdit: j,
+        } = ek({
+            uploadType: eR.HL.PERSONAL_WIDGET_COVER,
+            returnRef: c,
+            getCropAspectRatio: x,
+            onUploadSuccess: (e) => u((t) => ({ ...t, image: e })),
+        });
+    function A() {
+        p(), u((e) => ({ ...e, image: void 0 }));
+    }
+    function v() {
         o.current?.activateUploadDialogue();
     }
-    function A() {
+    function E() {
         (0, W.AD)((e) => new I.Tu({ ...e, sections: e.sections.filter((e, t) => t !== s) }));
     }
-    let v = null != x,
-        E = a || "" !== n.title.trim() || "" !== n.subtitle.trim(),
-        C = null != n.image || v,
-        S = C || a,
-        b = h(n.image);
+    let C = null != h,
+        S = a || "" !== n.title.trim() || "" !== n.subtitle.trim(),
+        b = null != n.image || C,
+        y = b || a,
+        T = j(n.image);
     return (0, i.jsx)(X.N, {
-        theme: C ? ew.NJ8.DARK : void 0,
+        theme: b ? ew.NJ8.DARK : void 0,
         children: (e) =>
             (0, i.jsxs)("div", {
-                className: r()(eL.kL, { [eL.Vp]: S }, e),
+                ref: d,
+                className: r()(eL.kL, { [eL.Vp]: y }, e),
                 children: [
                     a || null != n.image
                         ? (0, i.jsxs)("div", {
                               className: eL.El,
                               children: [
                                   (0, i.jsx)(ec.A, {
-                                      cropAndUpload: m,
+                                      cropAndUpload: f,
                                       imageInputRef: o,
                                       className: eL.Sl,
                                       canEdit: a,
                                       userId: t,
                                       image: n.image,
-                                      previewUri: x,
+                                      previewUri: h,
                                       editVariant: "tooltip",
                                   }),
-                                  C && E ? (0, i.jsx)("div", { className: eL.cw }) : null,
+                                  b && S ? (0, i.jsx)("div", { className: eL.cw }) : null,
                               ],
                           })
                         : null,
@@ -542,24 +551,24 @@ function eP(e) {
                               children: [
                                   null != n.image
                                       ? (0, i.jsx)(ej, {
-                                            lastEdit: b,
+                                            lastEdit: T,
                                             buttonRef: c,
-                                            disabled: v,
-                                            cropAndUpload: m,
-                                            onChangeImage: j,
+                                            disabled: C,
+                                            cropAndUpload: f,
+                                            onChangeImage: v,
                                         })
                                       : null,
                                   (0, i.jsx)(Y.Y, {
                                       icon: K.TrashIcon,
                                       variant: "overlay-secondary",
-                                      tooltipText: C ? V.intl.string(V.t.RyK5Ww) : V.intl.string(V.t.g2jVww),
-                                      onClick: C ? p : A,
+                                      tooltipText: b ? V.intl.string(V.t.RyK5Ww) : V.intl.string(V.t.g2jVww),
+                                      onClick: b ? A : E,
                                   }),
                               ],
                           })
                         : null,
                     (0, i.jsxs)("div", {
-                        className: r()(eL.hQ, e, { [eL.Vp]: S }),
+                        className: r()(eL.hQ, e, { [eL.Vp]: y }),
                         children: [
                             (0, i.jsx)(eo, {
                                 canEdit: a,
@@ -568,7 +577,7 @@ function eP(e) {
                                 color: "text-strong",
                                 value: n.title,
                                 placeholder: V.intl.string(V.t.KqCDvK),
-                                onCommit: u,
+                                onCommit: g,
                                 maxLength: 50,
                                 maxLines: 2,
                             }),
@@ -578,7 +587,7 @@ function eP(e) {
                                 color: "text-default",
                                 value: n.subtitle,
                                 placeholder: V.intl.string(V.t.k8zZFd),
-                                onCommit: g,
+                                onCommit: m,
                                 maxLength: 150,
                                 maxLines: 3,
                             }),

@@ -1,4 +1,4 @@
-r.d(t, { F3: () => h, MS: () => l, Qp: () => f, Qx: () => u, l$: () => s, ny: () => o }),
+r.d(t, { F3: () => h, MS: () => l, Qp: () => f, Qx: () => c, l$: () => s, ny: () => o }),
     r(323874),
     r(14289),
     r(35956),
@@ -19,8 +19,8 @@ async function o(e) {
             cropDimensions: o,
             cropOriginCoordinates: l,
             maxDimensions: h,
-            imageRotation: c = 0,
-            flipHorizontal: u = !1,
+            imageRotation: u = 0,
+            flipHorizontal: c = !1,
             resizeWidth: s = null,
             resizeHeight: f = null,
         } = e,
@@ -34,8 +34,8 @@ async function o(e) {
             cropDimensions: o,
             cropOriginCoordinates: l,
             maxDimensions: h,
-            imageRotation: c,
-            flipHorizontal: u,
+            imageRotation: u,
+            flipHorizontal: c,
         }),
         w = await t.arrayBuffer(),
         _ = new Worker(new URL("/assets/" + r.u("724962"), r.b)),
@@ -67,11 +67,11 @@ async function o(e) {
         g = Math.max(0, Math.round(m)),
         y = Math.max(0, Math.round(A)),
         M = Math.round(E),
-        H = Math.round(d),
-        I = a.naturalWidth - g,
+        I = Math.round(d),
+        H = a.naturalWidth - g,
         L = a.naturalHeight - y,
-        D = Math.min(M, I),
-        P = Math.min(H, L);
+        D = Math.min(M, H),
+        P = Math.min(I, L);
     return (
         _.postMessage({
             type: i.lA.CROP_ANIMATED_IMAGE_START,
@@ -80,8 +80,8 @@ async function o(e) {
             y: y,
             width: D,
             height: P,
-            imageRotation: 0 | c,
-            flipHorizontal: u,
+            imageRotation: 0 | u,
+            flipHorizontal: c,
             resizeWidth: s,
             resizeHeight: f,
             format: b,
@@ -105,7 +105,7 @@ async function l(e) {
 function h(e, t, r) {
     return { x: (0, a.clamp)(e, r.left, r.right), y: (0, a.clamp)(t, r.bottom, r.top) };
 }
-function c(e, t, r, a) {
+function u(e, t, r, a) {
     let n = r,
         o = a,
         l = i.Ip;
@@ -113,7 +113,8 @@ function c(e, t, r, a) {
         ? { width: n, height: o }
         : { width: (t / o) * n, height: t };
 }
-function u(e, t, r) {
+function c(e, t, r, a) {
+    if (null != a) return u(a, i.Ip / a, t, r);
     switch (e) {
         case i.HL.AVATAR:
         case i.HL.AVATAR_DECORATION:
@@ -121,21 +122,21 @@ function u(e, t, r) {
         case i.HL.PERSONAL_WIDGET_FIELD:
             return { width: t, height: r };
         case i.HL.BANNER:
-            let a = i.pj;
-            return c(i.wL, a, t, r);
+            let n = i.pj;
+            return u(i.wL, n, t, r);
         case i.HL.GUILD_BANNER:
-            let n = i.Jz;
-            return c(i.AB, n, t, r);
+            let o = i.Jz;
+            return u(i.AB, o, t, r);
         case i.HL.VIDEO_BACKGROUND:
-            let o = i.yi;
-            return c(i.G9, o, t, r);
+            let l = i.yi;
+            return u(i.G9, l, t, r);
         case i.HL.SCHEDULED_EVENT_IMAGE:
-            let l = i.pr;
-            return c(i.Uw, l, t, r);
+            let h = i.pr;
+            return u(i.Uw, h, t, r);
         case i.HL.HOME_HEADER:
-            return c(i.ny, i.eJ, t, r);
+            return u(i.ny, i.eJ, t, r);
         case i.HL.PERSONAL_WIDGET_COVER:
-            return c(i.ge, i.sW, t, r);
+            return u(i.ge, i.sW, t, r);
     }
 }
 function s(e, t, r) {
@@ -148,31 +149,35 @@ function s(e, t, r) {
         a
     );
 }
-function f(e, t, r, a) {
+function f(e, t, r, a, n) {
+    if (null != n) {
+        let e = Math.min(Math.min(t, i.Ip) / n, a);
+        return { width: e * n, height: e };
+    }
     switch (e) {
         case i.HL.AVATAR:
         case i.HL.AVATAR_DECORATION:
         case i.HL.GUILD_ICON:
         case i.HL.PERSONAL_WIDGET_FIELD:
-            let n = Math.min(t, r);
-            return { width: n, height: n };
+            let o = Math.min(t, r);
+            return { width: o, height: o };
         case i.HL.BANNER:
-            let o = Math.min(t, i.Ip);
-            return { width: o, height: o * (1 / i.wL) };
-        case i.HL.GUILD_BANNER:
             let l = Math.min(t, i.Ip);
-            return { width: l, height: Math.min((9 / 16) * l, a) };
-        case i.HL.VIDEO_BACKGROUND:
+            return { width: l, height: l * (1 / i.wL) };
+        case i.HL.GUILD_BANNER:
             let h = Math.min(t, i.Ip);
-            return { width: h, height: (9 / 16) * h };
+            return { width: h, height: Math.min((9 / 16) * h, a) };
+        case i.HL.VIDEO_BACKGROUND:
+            let u = Math.min(t, i.Ip);
+            return { width: u, height: (9 / 16) * u };
         case i.HL.SCHEDULED_EVENT_IMAGE:
             let c = Math.min(t, i.Ip);
             return { width: c, height: 0.4 * c };
         case i.HL.HOME_HEADER:
-            let u = Math.min(t, i.Ip);
-            return { width: u, height: u * (1 / i.ny) };
-        case i.HL.PERSONAL_WIDGET_COVER:
             let s = Math.min(t, i.Ip);
-            return { width: s, height: Math.min(s * (1 / i.ge), a) };
+            return { width: s, height: s * (1 / i.ny) };
+        case i.HL.PERSONAL_WIDGET_COVER:
+            let f = Math.min(t, i.Ip);
+            return { width: f, height: Math.min(f * (1 / i.ge), a) };
     }
 }
