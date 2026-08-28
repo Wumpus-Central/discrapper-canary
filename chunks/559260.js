@@ -2939,7 +2939,7 @@ function lV(e) {
                           }),
                     (0, l.jsx)(eQ.$, {
                         variant: "primary",
-                        text: F.intl.string(F.t.kMYVwv),
+                        text: F.intl.formatToPlainString(F.t.o18gVZ, { count: t.length }),
                         loading: d,
                         onClick: () => {
                             null != m &&
