@@ -1,7 +1,7 @@
 "use strict";
 let i;
 n.r(t),
-    n.d(t, { OverlayPIDStatus: () => B, default: () => eD, getOverlayURL: () => eI }),
+    n.d(t, { ACTION_DENYLIST: () => ee, getOverlayURL: () => eI, default: () => eD, OverlayPIDStatus: () => B }),
     n(393431),
     n(532706),
     n(42231),
@@ -257,6 +257,9 @@ let J = new Q(),
         "ACTIVE_AV_ERRORS_CHANGED",
         "BURST_REACTION_ANIMATION_ADD",
         "ADYEN_CREATE_CASH_APP_PAY_COMPONENT_SUCCESS",
+        "UPLOAD_ATTACHMENT_ADD_FILES",
+        "UPLOAD_ATTACHMENT_SET_FILE",
+        "UPLOAD_ATTACHMENT_SET_UPLOADS",
     ]),
     et = new Set(),
     en = new I.A("OverlayBridgeStore"),
@@ -755,7 +758,7 @@ let ey = new eL(
                       let { port: t } = e;
                       q = btoa(String.fromCharCode(...crypto.getRandomValues(new Uint8Array(8))));
                       let n = new URLSearchParams();
-                      n.append("build_id", "f9ffe1f02b001396b0e207f6e64a3129f54f1305"),
+                      n.append("build_id", "4c1fcf240319e8e6058788e8f1776767dd9e1055"),
                           n.append("rpc", String(t)),
                           n.append("rpc_auth_token", q),
                           (i = `${location.protocol}//${location.host}/overlay?${n.toString()}`);
