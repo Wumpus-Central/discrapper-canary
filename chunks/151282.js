@@ -1,16 +1,19 @@
 "use strict";
-n.d(t, { Eg: () => d, fK: () => u, mk: () => c, pr: () => o, sy: () => E }), n(938796);
+n.d(t, { Eg: () => _, fK: () => A, mk: () => E, pr: () => u, sy: () => I }), n(938796);
 var i = n(665260),
     r = n(636537),
-    a = n(228366),
-    s = n(674470),
-    l = n(652215);
-async function o(e) {
+    a = n(554146),
+    s = n(228366),
+    l = n(826673),
+    o = n(674470),
+    d = n(652215),
+    c = n(49999);
+async function u(e) {
     let { channelId: t, scheduledTimestamp: n, messageSendData: i } = e;
-    a.h.dispatch({ type: "SCHEDULED_MESSAGES_CREATE_START", channelId: t });
+    s.h.dispatch({ type: "SCHEDULED_MESSAGES_CREATE_START", channelId: t });
     try {
         let e = await r.Bo.post({
-            url: l.Rsh.SCHEDULED_MESSAGES,
+            url: d.Rsh.SCHEDULED_MESSAGES,
             body: {
                 channel_id: t,
                 content: i.content,
@@ -25,77 +28,78 @@ async function o(e) {
             rejectWithError: !0,
         });
         return (
-            a.h.dispatch({
+            s.h.dispatch({
                 type: "SCHEDULED_MESSAGES_CREATE_SUCCESS",
                 channelId: t,
-                scheduledMessageSend: (0, s.Lg)(e.body),
+                scheduledMessageSend: (0, o.Lg)(e.body),
             }),
+            (0, l.Dr)(a.M.SCHEDULED_MESSAGES_DRAFT_COACHMARK, { dismissAction: c.i.INDIRECT_ACTION }),
             e
         );
     } catch (n) {
-        s.dx.error("Failed to create scheduled message", n);
+        o.dx.error("Failed to create scheduled message", n);
         let e = n.body?.message ?? n.message;
-        throw (a.h.dispatch({ type: "SCHEDULED_MESSAGES_CREATE_FAILURE", channelId: t, errorMsg: e }), n);
+        throw (s.h.dispatch({ type: "SCHEDULED_MESSAGES_CREATE_FAILURE", channelId: t, errorMsg: e }), n);
     }
 }
-async function d(e) {
-    let { scheduledMessageId: t, scheduledTimestamp: n, content: o, flags: d } = e;
-    a.h.dispatch({ type: "SCHEDULED_MESSAGES_UPDATE_START", scheduledMessageId: t });
+async function _(e) {
+    let { scheduledMessageId: t, scheduledTimestamp: n, content: a, flags: l } = e;
+    s.h.dispatch({ type: "SCHEDULED_MESSAGES_UPDATE_START", scheduledMessageId: t });
     try {
         let [e, c] =
-                null == o ? [o, d] : (0, s.UF)({ content: o, flags: (0, i.VL)(d ?? 0, l.pr7.SUPPRESS_NOTIFICATIONS) }),
+                null == a ? [a, l] : (0, o.UF)({ content: a, flags: (0, i.VL)(l ?? 0, d.pr7.SUPPRESS_NOTIFICATIONS) }),
             u = await r.Bo.patch({
-                url: l.Rsh.SCHEDULED_MESSAGE(t),
+                url: d.Rsh.SCHEDULED_MESSAGE(t),
                 body: { scheduled_timestamp: n, content: e, flags: c },
                 rejectWithError: !0,
             });
-        a.h.dispatch({ type: "SCHEDULED_MESSAGES_UPDATE_SUCCESS", scheduledMessageSend: (0, s.Lg)(u.body) });
+        s.h.dispatch({ type: "SCHEDULED_MESSAGES_UPDATE_SUCCESS", scheduledMessageSend: (0, o.Lg)(u.body) });
     } catch (n) {
-        s.dx.error("Failed to update scheduled message", n);
+        o.dx.error("Failed to update scheduled message", n);
         let e = n.body?.message ?? n.message;
         throw (
-            (a.h.dispatch({ type: "SCHEDULED_MESSAGES_UPDATE_FAILURE", scheduledMessageId: t, errorMsg: e }), Error(e))
+            (s.h.dispatch({ type: "SCHEDULED_MESSAGES_UPDATE_FAILURE", scheduledMessageId: t, errorMsg: e }), Error(e))
         );
     }
 }
-async function c(e) {
-    a.h.dispatch({ type: "SCHEDULED_MESSAGES_DELETE_START", scheduledMessageId: e });
+async function E(e) {
+    s.h.dispatch({ type: "SCHEDULED_MESSAGES_DELETE_START", scheduledMessageId: e });
     try {
-        await r.Bo.del({ url: l.Rsh.SCHEDULED_MESSAGE(e), rejectWithError: !0 }),
-            a.h.dispatch({ type: "SCHEDULED_MESSAGES_DELETE_SUCCESS", scheduledMessageId: e });
+        await r.Bo.del({ url: d.Rsh.SCHEDULED_MESSAGE(e), rejectWithError: !0 }),
+            s.h.dispatch({ type: "SCHEDULED_MESSAGES_DELETE_SUCCESS", scheduledMessageId: e });
     } catch (n) {
-        s.dx.error("Failed to cancel scheduled message", n);
+        o.dx.error("Failed to cancel scheduled message", n);
         let t = n.body?.message ?? n.message;
         throw (
-            (a.h.dispatch({ type: "SCHEDULED_MESSAGES_DELETE_FAILURE", scheduledMessageId: e, errorMsg: t }), Error(t))
+            (s.h.dispatch({ type: "SCHEDULED_MESSAGES_DELETE_FAILURE", scheduledMessageId: e, errorMsg: t }), Error(t))
         );
     }
 }
-async function u(e) {
-    a.h.dispatch({ type: "SCHEDULED_MESSAGES_SEND_NOW_START", scheduledMessageId: e });
+async function A(e) {
+    s.h.dispatch({ type: "SCHEDULED_MESSAGES_SEND_NOW_START", scheduledMessageId: e });
     try {
-        await r.Bo.post({ url: l.Rsh.SCHEDULED_MESSAGE_SEND(e), rejectWithError: !0 }),
-            a.h.dispatch({ type: "SCHEDULED_MESSAGES_SEND_NOW_SUCCESS", scheduledMessageId: e });
+        await r.Bo.post({ url: d.Rsh.SCHEDULED_MESSAGE_SEND(e), rejectWithError: !0 }),
+            s.h.dispatch({ type: "SCHEDULED_MESSAGES_SEND_NOW_SUCCESS", scheduledMessageId: e });
     } catch (n) {
-        s.dx.error("Failed to send scheduled message now", n);
+        o.dx.error("Failed to send scheduled message now", n);
         let t = n.body?.message ?? n.message;
         throw (
-            (a.h.dispatch({ type: "SCHEDULED_MESSAGES_SEND_NOW_FAILURE", scheduledMessageId: e, errorMsg: t }),
+            (s.h.dispatch({ type: "SCHEDULED_MESSAGES_SEND_NOW_FAILURE", scheduledMessageId: e, errorMsg: t }),
             Error(t))
         );
     }
 }
-async function _() {
-    return (await r.Bo.get({ url: l.Rsh.SCHEDULED_MESSAGES, rejectWithError: !0 })).body.map(s.Lg);
+async function h() {
+    return (await r.Bo.get({ url: d.Rsh.SCHEDULED_MESSAGES, rejectWithError: !0 })).body.map(o.Lg);
 }
-async function E() {
-    a.h.dispatch({ type: "FETCH_SCHEDULED_MESSAGES" });
+async function I() {
+    s.h.dispatch({ type: "FETCH_SCHEDULED_MESSAGES" });
     try {
-        let e = await _();
-        s.dx.info("Fetched scheduled messages", e),
-            a.h.dispatch({ type: "FETCH_SCHEDULED_MESSAGES_SUCCESS", messages: e });
+        let e = await h();
+        o.dx.info("Fetched scheduled messages", e),
+            s.h.dispatch({ type: "FETCH_SCHEDULED_MESSAGES_SUCCESS", messages: e });
     } catch (e) {
-        s.dx.error("Failed to fetch scheduled messages", e),
-            a.h.dispatch({ type: "FETCH_SCHEDULED_MESSAGES_FAILURE", error: e });
+        o.dx.error("Failed to fetch scheduled messages", e),
+            s.h.dispatch({ type: "FETCH_SCHEDULED_MESSAGES_FAILURE", error: e });
     }
 }
