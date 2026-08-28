@@ -1972,6 +1972,7 @@ let nM = "",
         QUESTS_PREVIEW_DISMISSIBILITY: (e) => `/quests/${e}/preview/dismissibility`,
         QUESTS_PREVIEW_COMPLETE: (e) => `/quests/${e}/preview/complete`,
         QUESTS_RESET_RECENT_QUEST_COMPLETIONS: "/quests/reset-recent-quest-completions",
+        ADS_IOS_ATTRIBUTION_SIGN_PAYLOAD: "/ads/ios-attributions/sign-payload",
         QUEST_FETCH_QUEST_TO_DELIVER: "/quests/decision",
         QUEST_EARNED_DECISION: (e, t, n) =>
             `/quests/earned-decision?quest_ids=${e}&content=${t}${null != n ? `&client_heartbeat_session_id=${n}` : ""}`,

@@ -1,19 +1,20 @@
 "use strict";
 n.d(t, {
     GR: () => m,
-    Gp: () => D,
+    Gp: () => v,
     HN: () => N,
     Ic: () => f,
     Kc: () => L,
     L4: () => y,
     Oh: () => _,
-    RF: () => b,
+    RF: () => M,
     ZG: () => g,
     gO: () => h,
     if: () => p,
     kd: () => I,
+    s9: () => D,
     v1: () => T,
-    vZ: () => v,
+    vZ: () => b,
     vc: () => E,
     vy: () => A,
     xn: () => C,
@@ -121,7 +122,11 @@ function y(e, t) {
     let n = S[e];
     if (null != n) return R(n, t)?.metadataSealed;
 }
-function D(e, t, n) {
+function D(e, t) {
+    let n = S[e];
+    if (null != n) return R(n, t)?.provenanceMetadataSealed;
+}
+function v(e, t, n) {
     let i = S[e];
     if (null != i) {
         let { trafficMetadataSealed: e, questId: r } = R(i, n) ?? {};
@@ -132,10 +137,10 @@ function D(e, t, n) {
         return e?.trafficMetadataSealed;
     }
 }
-function v(e, t) {
+function b(e, t) {
     let n = S[e];
     if (null != n) return R(n, t)?.adContext;
 }
-function b(e, t) {
+function M(e, t) {
     l.A.captureException(e, { ...t, tags: { ...t?.tags, app_context: "quests" } });
 }

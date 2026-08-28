@@ -804,6 +804,7 @@
   "QUESTS_PREVIEW_DISMISSIBILITY": "/quests/:param/preview/dismissibility",
   "QUESTS_PREVIEW_COMPLETE": "/quests/:param/preview/complete",
   "QUESTS_RESET_RECENT_QUEST_COMPLETIONS": "/quests/reset-recent-quest-completions",
+  "ADS_IOS_ATTRIBUTION_SIGN_PAYLOAD": "/ads/ios-attributions/sign-payload",
   "QUEST_FETCH_QUEST_TO_DELIVER": "/quests/decision",
   "QUEST_EARNED_DECISION": "/quests/earned-decision?quest_ids=:param&content=:param",
   "ATTACHMENTS_REFRESH_URLS": "/attachments/refresh-urls",

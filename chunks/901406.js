@@ -1,16 +1,16 @@
 n.d(t, {
     $J: () => P,
     IG: () => L,
-    Ps: () => U,
-    UR: () => g,
-    W1: () => O,
-    WU: () => b,
-    _Q: () => R,
-    b6: () => k,
-    bg: () => v,
+    Ps: () => G,
+    UR: () => v,
+    W1: () => N,
+    WU: () => y,
+    _Q: () => D,
+    b6: () => q,
+    bg: () => b,
     pu: () => Q,
-    se: () => q,
-    v0: () => y,
+    se: () => U,
+    v0: () => w,
 }),
     n(321073),
     n(323874),
@@ -22,51 +22,53 @@ var i,
     r = n(132500),
     s = n(323889),
     o = n(412703),
-    a = n(228366),
-    l = n(975807),
+    l = n(228366),
+    a = n(975807),
     u = n(274670),
     d = n(144779),
-    c = n(968309),
-    C = n(780964),
-    f = n(625494),
-    E = n(723702),
-    m = n(192444),
+    c = n(7588),
+    C = n(657375),
+    f = n(968309),
+    E = n(780964),
+    m = n(625494),
+    A = n(723702),
+    T = n(192444),
     p = n(104886),
-    T = n(561844),
-    A = n(651892),
-    h = n(792620),
-    I = n(190107),
-    S = n(652215),
-    _ = n(375708);
-function g(e) {
-    let t = (0, h.t)({ quest: e }) || (0, h.fE)({ quest: e }) || (0, h.I6)(e),
-        n = (0, h.uD)(e),
-        i = [];
-    return t && i.push(I.fO.DESKTOP), n && i.push(I.fO.CONSOLE), i;
-}
+    I = n(561844),
+    h = n(651892),
+    _ = n(792620),
+    S = n(190107),
+    g = n(652215),
+    O = n(375708);
 function v(e) {
+    let t = (0, _.t)({ quest: e }) || (0, _.fE)({ quest: e }) || (0, _.I6)(e),
+        n = (0, _.uD)(e),
+        i = [];
+    return t && i.push(S.fO.DESKTOP), n && i.push(S.fO.CONSOLE), i;
+}
+function b(e) {
     let t = Object.keys(e.config.taskConfigV2.tasks),
         n = [];
     for (let e of t)
         switch (e) {
             case o.n.PLAY_ON_XBOX:
-                n.push(S.fg2.XBOX);
+                n.push(g.fg2.XBOX);
                 break;
             case o.n.PLAY_ON_PLAYSTATION:
-                n.push(S.fg2.PLAYSTATION);
+                n.push(g.fg2.PLAYSTATION);
         }
     return n;
 }
-function O(e) {
-    let t = (0, h.vv)(e),
-        n = (0, h.vl)(e);
+function N(e) {
+    let t = (0, _.vv)(e),
+        n = (0, _.vl)(e);
     return t || n;
 }
-var b = (((i = {}).DESKTOP = "desktop"), (i.XBOX = "xbox"), (i.PLAYSTATION = "playstation"), i);
+var y = (((i = {}).DESKTOP = "desktop"), (i.XBOX = "xbox"), (i.PLAYSTATION = "playstation"), i);
 function P(e) {
-    return "xbox" === e.connected_account_type ? S.fg2.XBOX : S.fg2.PLAYSTATION;
+    return "xbox" === e.connected_account_type ? g.fg2.XBOX : g.fg2.PLAYSTATION;
 }
-function y(e, t) {
+function w(e, t) {
     let { platformType: n, quest: i } = e;
     (0, p.E5)(p.kI.STEP_2_CLICKED_INTERNAL, "open_authorization_connection_modal")
         ? (0, u.r)({
@@ -78,67 +80,68 @@ function y(e, t) {
               sourceQuestContent: t.sourceQuestContent,
               impressionId: t.impressionId,
           })
-        : (0, T.Y5)({
+        : (0, I.Y5)({
               questId: i.id,
               questContent: t.content,
               sourceQuestContent: t.sourceQuestContent,
               questContentCTA: t.ctaContent,
               impressionId: t.impressionId,
           }),
-        (0, c.A)({ platformType: n, location: t.ctaContent });
+        (0, f.A)({ platformType: n, location: t.ctaContent });
 }
 function L(e) {
-    return P(e) === S.fg2.XBOX ? _.t["mytEv+"] : _.t.iDiwby;
+    return P(e) === g.fg2.XBOX ? O.t["mytEv+"] : O.t.iDiwby;
 }
-function w(e) {
-    if (((0, E.isIOS)() || "ios" === (0, E.getOS)()) && e.ios?.iosAppId != null) {
+function R(e) {
+    if (((0, A.isIOS)() || "ios" === (0, A.getOS)()) && e.ios?.iosAppId != null) {
         let t = e.ios.iosAppId.startsWith("id") ? e.ios.iosAppId : `id${e.ios.iosAppId}`;
         return `https://apps.apple.com/app/${t}`;
     }
-    return ((0, E.isAndroid)() || "android" === (0, E.getOS)()) && e.android?.androidAppId != null
+    return ((0, A.isAndroid)() || "android" === (0, A.getOS)()) && e.android?.androidAppId != null
         ? `https://play.google.com/store/apps/details?id=${e.android.androidAppId}`
         : null;
 }
-function N(e) {
-    if ((0, E.isAndroid)() && e.android?.androidAppId != null)
+function M(e) {
+    if ((0, A.isAndroid)() && e.android?.androidAppId != null)
         return {
             url: `https://play.google.com/d?id=${e.android.androidAppId}`,
             os: "android",
             storeAppId: e.android.androidAppId,
             appId: null,
         };
-    if ((0, E.isIOS)() && e.ios?.iosAppId != null) {
+    if ((0, A.isIOS)() && e.ios?.iosAppId != null) {
         let t = e.ios.iosAppId.startsWith("id") ? e.ios.iosAppId.slice(2) : e.ios.iosAppId;
         return { url: `https://apps.apple.com/app/id${t}`, os: "ios", storeAppId: t, appId: parseInt(t, 10) };
     }
     return null;
 }
-function M(e) {
-    let { link: t, directLink: n, inlineStoreParams: i, trackOverlayEvent: r } = e;
-    m.OO.getConfig({ location: "quest_open_game_link" }).enabled, (0, l.A)(t);
+function k(e) {
+    let t,
+        { link: n, directLink: i, inlineStoreParams: r, trackOverlayEvent: s, getIosAttribution: o } = e;
+    (t = T.OO.getConfig({ location: "quest_open_game_link" }).enabled), (0, a.A)(n);
 }
 function Q(e, t) {
     let n,
         i,
         o,
-        a = (0, A.Jx)(e.config),
-        l = null == (n = e.config.ctaConfig) ? null : w({ url: (0, A.Jx)(e.config), android: n.android, ios: n.ios });
-    null != l && (a = l),
+        l = (0, h.Jx)(e.config),
+        a = null == (n = e.config.ctaConfig) ? null : R({ url: (0, h.Jx)(e.config), android: n.android, ios: n.ios });
+    null != a && (l = a),
         (function (e) {
             try {
                 return new URL(e).searchParams.has("dclid");
             } catch {
                 return !1;
             }
-        })(a) &&
-            (a = (function (e, t) {
+        })(l) &&
+            (l = (function (e, t) {
                 try {
                     let n = new URL(e);
                     return n.searchParams.set("dclid", t), n.toString();
                 } catch {
                     return e;
                 }
-            })(a, (o = (0, r.A)()))),
+            })(l, (o = (0, r.A)()))),
         (0, p.E5)(p.kI.STEP_3_CLICKED_EXTERNAL, "open_game_link_directly")
             ? (0, u.r)({
                   type: d.F.CLICK_EXTERNAL_ADVERTISER_CTA,
@@ -151,7 +154,7 @@ function Q(e, t) {
                   impressionId: t.impressionId,
                   clickId: o,
               })
-            : (0, T.Y5)({
+            : (0, I.Y5)({
                   questId: e.id,
                   questContent: t.content,
                   questContentCTA: t.ctaContent,
@@ -159,17 +162,19 @@ function Q(e, t) {
                   impressionId: t.impressionId,
                   sourceQuestContent: t.sourceQuestContent,
                   clickId: o,
-              }),
-        f._.dispatch(S.jej.QUEST_GAME_LINK_OPENED),
-        M({
-            link: a,
-            directLink: l,
+              });
+    let { impressionId: f } = t,
+        E = null != f ? (0, c.vV)(e.config.ctaConfig?.ios?.iosAppId != null, t.sourceQuestContent, e.id) : null;
+    m._.dispatch(g.jej.QUEST_GAME_LINK_OPENED),
+        k({
+            link: l,
+            directLink: a,
             inlineStoreParams:
                 null == (i = e.config.ctaConfig)
                     ? null
-                    : N({ url: (0, A.Jx)(e.config), android: i.android, ios: i.ios }),
+                    : M({ url: (0, h.Jx)(e.config), android: i.android, ios: i.ios }),
             trackOverlayEvent: (n, i, r, s, o) =>
-                (0, T.eA)({
+                (0, I.eA)({
                     quest: e,
                     trackingCtx: t,
                     inlineStoreAppId: i,
@@ -178,12 +183,13 @@ function Q(e, t) {
                     timeSpentMs: s,
                     overlaySurface: o,
                 }),
+            getIosAttribution: null != E && null != f ? () => (0, C.FW)({ impressionId: f }) : void 0,
         });
 }
-function R(e, t) {
+function D(e, t) {
     let { adContentId: n, adCreativeType: i, cta: r } = e,
         s = r.url,
-        o = w(r);
+        o = R(r);
     null != o && (s = o),
         (0, p.E5)(p.kI.STEP_3_CLICKED_EXTERNAL, "open_ad_game_link_directly")
             ? (0, u.r)({
@@ -196,7 +202,7 @@ function R(e, t) {
                   questContentPosition: t.position,
                   impressionId: t.impressionId,
               })
-            : (0, T.vK)({
+            : (0, I.vK)({
                   adContentId: n,
                   adCreativeType: i,
                   questContent: t.content,
@@ -205,25 +211,28 @@ function R(e, t) {
                   impressionId: t.impressionId,
                   sourceQuestContent: t.sourceQuestContent,
               }),
-        f._.dispatch(S.jej.QUEST_GAME_LINK_OPENED),
-        M({
-            link: s,
-            directLink: o,
-            inlineStoreParams: N(r),
-            trackOverlayEvent: (e, r, s, o, a) =>
-                (0, T.YE)({
-                    adContentId: n,
-                    adCreativeType: i,
-                    trackingCtx: t,
-                    inlineStoreAppId: r,
-                    overlayVariant: s,
-                    event: e,
-                    timeSpentMs: o,
-                    overlaySurface: a,
-                }),
-        });
+        m._.dispatch(g.jej.QUEST_GAME_LINK_OPENED);
+    let { impressionId: l } = t,
+        a = null != l ? (0, c.vV)(r.ios?.iosAppId != null, t.sourceQuestContent, n) : null;
+    k({
+        link: s,
+        directLink: o,
+        inlineStoreParams: M(r),
+        trackOverlayEvent: (e, r, s, o, l) =>
+            (0, I.YE)({
+                adContentId: n,
+                adCreativeType: i,
+                trackingCtx: t,
+                inlineStoreAppId: r,
+                overlayVariant: s,
+                event: e,
+                timeSpentMs: o,
+                overlaySurface: l,
+            }),
+        getIosAttribution: null != a && null != l ? () => (0, C.FW)({ impressionId: l }) : void 0,
+    });
 }
-function k(e, t) {
+function q(e, t) {
     let { quest: i } = e;
     (0, p.E5)(p.kI.STEP_2_CLICKED_INTERNAL, "open_console_connection_settings")
         ? (0, u.r)({
@@ -236,7 +245,7 @@ function k(e, t) {
               impressionId: t.impressionId,
               questContentPosition: t.position,
           })
-        : (0, T.Y5)({
+        : (0, I.Y5)({
               questId: i.id,
               questContent: t.content,
               questContentPosition: t.position,
@@ -247,11 +256,11 @@ function k(e, t) {
         (function () {
             {
                 let { openUserSettings: e } = n(766075);
-                e(C.X.CONNECTIONS_CATEGORY);
+                e(E.X.CONNECTIONS_CATEGORY);
             }
         })();
 }
-function q(e, t) {
+function U(e, t) {
     let { quest: n } = e;
     (0, p.E5)(p.kI.STEP_2_CLICKED_INTERNAL, "open_add_console_connection_modal")
         ? (0, u.r)({
@@ -265,7 +274,7 @@ function q(e, t) {
               questContentPosition: t.position,
               questContentRowIndex: t.rowIndex,
           })
-        : (0, T.Y5)({
+        : (0, I.Y5)({
               questId: n.id,
               questContent: t.content,
               questContentPosition: t.position,
@@ -274,16 +283,16 @@ function q(e, t) {
               impressionId: t.impressionId,
               sourceQuestContent: t.sourceQuestContent,
           });
-    let i = v(n);
-    if (1 === i.length) return (0, c.A)({ platformType: i.at(0) });
-    a.h.dispatch({
+    let i = b(n);
+    if (1 === i.length) return (0, f.A)({ platformType: i.at(0) });
+    l.h.dispatch({
         type: "CONNECTIONS_GRID_MODAL_SHOW",
-        onComplete: (e) => (0, c.A)({ platformType: e }),
+        onComplete: (e) => (0, f.A)({ platformType: e }),
         includedPlatformTypes: new Set(i),
         includeApplicationConnections: !1,
     });
 }
-function U(e, t, n) {
+function G(e, t, n) {
     let { quest: i } = e;
     return (
         (0, p.E5)(p.kI.STEP_2_CLICKED_INTERNAL, "open_single_console_connection_modal")
@@ -298,7 +307,7 @@ function U(e, t, n) {
                   questContentPosition: t.position,
                   questContentRowIndex: t.rowIndex,
               })
-            : (0, T.Y5)({
+            : (0, I.Y5)({
                   questId: i.id,
                   questContent: t.content,
                   questContentPosition: t.position,
@@ -307,6 +316,6 @@ function U(e, t, n) {
                   impressionId: t.impressionId,
                   sourceQuestContent: t.sourceQuestContent,
               }),
-        (0, c.A)({ platformType: n })
+        (0, f.A)({ platformType: n })
     );
 }

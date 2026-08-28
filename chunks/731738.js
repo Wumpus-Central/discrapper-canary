@@ -56,4 +56,6 @@ var i,
         (i.INCODE_VERIFICATION_FAILED = "incode_verification_failed"),
         (i.SLAYER_STOREFRONT_CARD_IMPRESSION = "slayer_storefront_card_impression"),
         (i.PRICE_DRIFT_IN_CHECKOUT = "price_drift_in_checkout"),
+        (i.IOS_ATTRIBUTION_IMPRESSION = "ios_attribution_impression"),
+        (i.IOS_ATTRIBUTION_CLICK = "ios_attribution_click"),
         i);
