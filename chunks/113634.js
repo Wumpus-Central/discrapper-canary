@@ -2805,9 +2805,9 @@ class e5 {
         this.pool[e.id] = e;
     }
 }
-var e4 = n(935399),
-    e6 = n(503698),
-    e7 = n.n(e6);
+var e6 = n(935399),
+    e4 = n(503698),
+    e7 = n.n(e4);
 function e8(e) {
     let { streamId: t, paused: n = !1, onReady: i, onResize: r, className: a, ...s } = e,
         l = h.useRef(null),
@@ -2879,7 +2879,7 @@ function e9(e) {
             ),
             [o, a],
         ),
-        (0, e4.l0)(() => {
+        (0, e6.l0)(() => {
             o.destroy();
         }),
         h.useEffect(() => {

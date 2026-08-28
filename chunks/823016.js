@@ -1,4 +1,4 @@
-n.d(t, { B: () => d, r: () => c });
+n.d(t, { B: () => u, r: () => c });
 var i = n(477900),
     l = n(582128),
     s = n(775602),
@@ -13,12 +13,12 @@ let a = l.createContext(null),
 function c() {
     return l.useContext(a) ?? o;
 }
-function d(e) {
+function u(e) {
     let { children: t, emptyListFallbackRef: n } = e,
         r = l.useRef(new Map()),
         o = l.useRef(new Map()),
         c = l.useRef([]),
-        d = l.useCallback(() => {
+        u = l.useCallback(() => {
             c.current = Array.from(r.current.keys()).sort((e, t) => {
                 let n = r.current.get(e),
                     i = r.current.get(t);
@@ -29,7 +29,7 @@ function d(e) {
                     : +((l & Node.DOCUMENT_POSITION_PRECEDING) != 0);
             });
         }, []),
-        u = l.useCallback(
+        d = l.useCallback(
             (e) => (t) => {
                 null != t ? o.current.set(e, t) : o.current.delete(e);
             },
@@ -51,7 +51,7 @@ function d(e) {
         x = l.useCallback(
             (e) => {
                 if (!s.Ay.keyboardModeEnabled) return;
-                d();
+                u();
                 let t = c.current,
                     i = t.indexOf(e);
                 if (-1 === i) return;
@@ -67,11 +67,11 @@ function d(e) {
                         n?.focus();
                     });
             },
-            [n, d],
+            [n, u],
         ),
         f = l.useMemo(
-            () => ({ registerDragHandleRef: u, registerItemRef: g, manageFocusOnReorder: m, manageFocusOnDelete: x }),
-            [u, g, m, x],
+            () => ({ registerDragHandleRef: d, registerItemRef: g, manageFocusOnReorder: m, manageFocusOnDelete: x }),
+            [d, g, m, x],
         );
     return (0, i.jsx)(a.Provider, { value: f, children: t });
 }

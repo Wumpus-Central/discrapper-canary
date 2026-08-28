@@ -1,15 +1,15 @@
 n.d(t, {
-    $x: () => b,
-    AO: () => C,
+    $x: () => w,
+    AO: () => x,
     MO: () => R,
-    YB: () => x,
+    YB: () => C,
     oI: () => S,
     p9: () => T,
     sl: () => I,
     uK: () => _,
-    vr: () => k,
-    x5: () => w,
-    zk: () => E,
+    vr: () => L,
+    x5: () => b,
+    zk: () => A,
 }),
     n(321073);
 var l = n(435558),
@@ -28,12 +28,12 @@ var l = n(435558),
     g = n(68935),
     y = n(652215),
     v = n(355097),
-    A = n(375708);
-async function E(e, t) {
+    E = n(375708);
+async function A(e, t) {
     let { body: n } = await (0, m.aP)({ url: y.Rsh.STICKER_PACK(e), rejectWithError: (0, i.fT)() });
     return s.h.dispatch({ type: "STICKER_PACK_FETCH_SUCCESS", packId: e, pack: n, ingestStickers: t }), n;
 }
-async function x() {
+async function C() {
     let { locale: e = c.default.locale } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
     if (p.A.isFetchingStickerPacks || p.A.hasLoadedStickerPacks) return;
     s.h.wait(() => {
@@ -44,7 +44,7 @@ async function x() {
     } = await i.Bo.get({ url: y.Rsh.STICKER_PACKS, query: { locale: e }, rejectWithError: (0, i.fT)() });
     s.h.dispatch({ type: "STICKER_PACKS_FETCH_SUCCESS", packs: t });
 }
-async function C(e) {
+async function x(e) {
     let { body: t } = await i.Bo.get({ url: y.Rsh.STICKER(e), rejectWithError: (0, i.fT)() });
     if ((0, g.Xw)(t)) s.h.dispatch({ type: "GUILD_STICKER_FETCH_SUCCESS", sticker: t });
     else if ((0, g.FD)(t)) s.h.dispatch({ type: "PACK_STICKER_FETCH_SUCCESS", sticker: t });
@@ -93,10 +93,10 @@ async function T(e) {
 async function R(e, t, n) {
     return (await i.Bo.patch({ url: y.Rsh.GUILD_STICKER(e, t), body: n, rejectWithError: (0, i.fT)() })).body;
 }
-function b(e, t, n) {
+function w(e, t, n) {
     s.h.dispatch({ type: "ADD_STICKER_PREVIEW", channelId: e, sticker: t, draftType: n });
 }
-function w(e, t) {
+function b(e, t) {
     s.h.dispatch({ type: "CLEAR_STICKER_PREVIEW", channelId: e, draftType: t });
 }
 function N(e) {
@@ -108,15 +108,15 @@ function _(e) {
         (t) =>
             ((t.stickerIds = N(t.stickerIds)), r().size(t.stickerIds) >= 250)
                 ? (a.A.show({
-                      title: A.intl.string(A.t["+XYXtZ"]),
-                      body: A.intl.formatToPlainString(A.t.JaIyFi, { count: 250 }),
+                      title: E.intl.string(E.t["+XYXtZ"]),
+                      body: E.intl.formatToPlainString(E.t.JaIyFi, { count: 250 }),
                   }),
                   !1)
                 : !t.stickerIds.includes(e) && void t.stickerIds.push(e),
         v.Sb.INFREQUENT_USER_ACTION,
     );
 }
-function k(e) {
+function L(e) {
     d.bW.updateAsync(
         "favoriteStickers",
         (t) => {

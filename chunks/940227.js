@@ -1318,7 +1318,7 @@ function e3(e) {
     return null != e ? Math.round(e) : t;
 }
 var e5 = (((l = {}).FpsUpdate = "fps-update"), l);
-class e4 extends p.A {
+class e6 extends p.A {
     connection;
     timestampProducer;
     networkQuality = new e1();
@@ -1968,7 +1968,7 @@ class e4 extends p.A {
         this.videoEffectDuration.value = t?.type === "video" && null != t.filter;
     }
 }
-var e6 = n(935172);
+var e4 = n(935172);
 let e7 = [1, 100, 1e3, 1e4],
     e8 = [100, 500, 1e3, 5e3];
 class e9 {
@@ -2018,15 +2018,15 @@ class e9 {
             this.speakingMinimumChunkCounts.clear(),
             (this.speechEventCount = 0),
             this.connected.start(),
-            this.connection.on(e6.y.Speaking, (e, t, n) => {
+            this.connection.on(e4.y.Speaking, (e, t, n) => {
                 this.userId === e ? this.onSpeaking(0 !== t) : this.onListening(0 !== t, e);
             }),
             this.onMuted(e),
             this.onDeafened(t),
-            this.connection.on(e6.y.Mute, (e) => {
+            this.connection.on(e4.y.Mute, (e) => {
                 this.onMuted(e);
             }),
-            this.connection.on(e6.y.Deafen, (e) => {
+            this.connection.on(e4.y.Deafen, (e) => {
                 this.onDeafened(e);
             });
     }
@@ -3817,7 +3817,7 @@ class tu extends p.A {
     }
     getOrCreateVideoQuality() {
         if (null != this._connection && null == this._videoQuality) {
-            (this._videoQuality = new e4(this._connection)),
+            (this._videoQuality = new e6(this._connection)),
                 this._videoQuality.updateCallUserIdsCount(this._userIds.size),
                 this._videoQuality.start();
             let {

@@ -201,11 +201,11 @@ function m(e) {
 function A(e, t) {
     return t.includes(e.key);
 }
-function y(e) {
+function v(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
     return (!!t && !1 === e.isTrusted) || (e.key?.toLowerCase() === "d" && (e.metaKey || e.ctrlKey) && !e.altKey);
 }
-class v {
+class y {
     static isSetUp;
     manager;
     actions;
@@ -234,13 +234,13 @@ class v {
             (this._announcer = new c(n?.announcer));
     }
     setup() {
-        if (v.isSetUp) throw Error("Cannot have two Keyboard backends at the same time.");
-        (v.isSetUp = !0),
+        if (y.isSetUp) throw Error("Cannot have two Keyboard backends at the same time.");
+        (y.isSetUp = !0),
             (this._handlingFirstEvent = !0),
             this.context.window?.addEventListener("keydown", this.handleGlobalKeyDown, { capture: !0 });
     }
     teardown() {
-        (v.isSetUp = !1),
+        (y.isSetUp = !1),
             this.context.window?.removeEventListener("keydown", this.handleGlobalKeyDown, { capture: !0 }),
             this.endDrag();
     }
@@ -295,7 +295,7 @@ class v {
             return { x: r, y: n };
         })(this.sourceNodes.get(e));
     handleDragStart = (e, t) => {
-        if (!y(t, this._handlingFirstEvent) || ((this._handlingFirstEvent = !1), !this.monitor.canDragSource(e)))
+        if (!v(t, this._handlingFirstEvent) || ((this._handlingFirstEvent = !1), !this.monitor.canDragSource(e)))
             return;
         if (this.monitor.isDragging()) return void this.actions.publishDragSource();
         m(t);
@@ -323,7 +323,7 @@ class v {
             this.setDndMode(!1);
     }
 }
-let x = (0, s.eV)("keydown", (e) => !!y(e) && (e.preventDefault(), !0)),
+let x = (0, s.eV)("keydown", (e) => !!v(e) && (e.preventDefault(), !0)),
     w = (0, s.eV)(
         "mousedown",
         (e) => -1 === e.type.indexOf("touch") && -1 !== e.type.indexOf("mouse") && ((0, l.ef)(!1), !0),
@@ -333,7 +333,7 @@ let x = (0, s.eV)("keydown", (e) => !!y(e) && (e.preventDefault(), !0)),
             { id: "html5", backend: i.t, transition: w },
             {
                 id: "keyboard",
-                backend: (e, t, n) => new v(e, t, n),
+                backend: (e, t, n) => new y(e, t, n),
                 context: { window, document },
                 options: { onDndModeChanged: l.ef, announcer: o.O },
                 preview: !0,

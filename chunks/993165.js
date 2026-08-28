@@ -6,12 +6,12 @@ var i = n(477900),
     a = n(287809),
     o = n(158045),
     c = n(23722);
-let d = { id: "default" },
-    u = l.createContext(null),
+let u = { id: "default" },
+    d = l.createContext(null),
     g = l.createContext(null);
 function m(e) {
     let { children: t } = e,
-        [n, m] = l.useState(d),
+        [n, m] = l.useState(u),
         [x, f] = l.useState(null),
         [h] = l.useState(r.B$),
         p = l.useRef(h),
@@ -19,21 +19,21 @@ function m(e) {
             m(e);
         }),
         j = l.useCallback(() => {
-            m(d);
+            m(u);
         }, []),
         A = l.useCallback(() => p.current, []),
-        v = (0, s.bG)([a.default], () => o.Ay.canUsePremiumProfileCustomization(a.default.getCurrentUser())),
-        E = v ? d : n,
-        C = !v && x?.id === "premiumTryItOut",
+        E = (0, s.bG)([a.default], () => o.Ay.canUsePremiumProfileCustomization(a.default.getCurrentUser())),
+        v = E ? u : n,
+        C = !E && x?.id === "premiumTryItOut",
         S = l.useCallback(() => {
-            f(E);
-        }, [E]),
+            f(v);
+        }, [v]),
         b = l.useCallback((e) => {
             p.current = e;
         }, []),
-        y = l.useMemo(
+        T = l.useMemo(
             () => ({
-                selectedPanel: E,
+                selectedPanel: v,
                 readyPanel: x,
                 handlePanelTransitionComplete: S,
                 navigate: I,
@@ -41,12 +41,12 @@ function m(e) {
                 getCurrentPreset: A,
                 cachePreset: b,
             }),
-            [E, x, S, I, j, A, b],
+            [v, x, S, I, j, A, b],
         );
-    return (0, i.jsx)(g.Provider, { value: C, children: (0, i.jsx)(u.Provider, { value: y, children: t }) });
+    return (0, i.jsx)(g.Provider, { value: C, children: (0, i.jsx)(d.Provider, { value: T, children: t }) });
 }
 function x() {
-    let e = l.useContext(u);
+    let e = l.useContext(d);
     if (null == e)
         throw Error("useNavigationContext must be used within UserProfileModalV2EditingPanelNavigationProvider");
     return e;

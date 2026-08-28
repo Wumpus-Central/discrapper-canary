@@ -1850,7 +1850,7 @@ var e1 = n(143236),
         (s[(s.UPDATE_TIME_SPENT_SESSION_ID = 41)] = "UPDATE_TIME_SPENT_SESSION_ID"),
         (s[(s.REQUEST_CHANNEL_INFO = 43)] = "REQUEST_CHANNEL_INFO"),
         s);
-class e4 extends e1.EventEmitter {
+class e6 extends e1.EventEmitter {
     presenceUpdate(e, t, n, i) {
         this.send(e5.PRESENCE_UPDATE, { status: e, since: t, activities: n, afk: i });
     }
@@ -1948,7 +1948,7 @@ class e4 extends e1.EventEmitter {
         this.send(e5.REMOTE_COMMAND, { target_session_id: e, payload: t });
     }
 }
-var e6 = n(33282),
+var e4 = n(33282),
     e7 = n(981133),
     e8 = n(751124);
 let e9 = new g.A("GatewaySocket"),
@@ -1965,7 +1965,7 @@ function tl(e) {
     return null == e ? 0 : "string" == typeof e ? e.length : e.byteLength;
 }
 let to = window.GLOBAL_ENV.GATEWAY_ENDPOINT;
-class td extends e4 {
+class td extends e6 {
     gatewayBackoff;
     handleIdentify;
     dispatchExceptionBackoff = new u.A(1e3, ts);
@@ -2068,7 +2068,7 @@ class td extends e4 {
         var e, t, n;
         let i, r;
         if (!this.willReconnect()) return void e9.verbose("Skipping _connect because willReconnect is false");
-        if (e6.j()) return void e9.info("Skipping _connect because socket is paused");
+        if (e4.j()) return void e9.info("Skipping _connect because socket is paused");
         (this.connectionState = w.A.CONNECTING), (this.nextReconnectIsImmediate = !1);
         let a = this.compressionHandler.getAlgorithm(),
             s = te.getName(),

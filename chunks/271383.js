@@ -6,8 +6,8 @@ var i = n(477900),
     a = n(17928),
     o = n(425763),
     c = n(447453),
-    d = n(280450),
-    u = n(591179),
+    u = n(280450),
+    d = n(591179),
     g = n(993165),
     m = n(403581),
     x = n(783420),
@@ -17,8 +17,8 @@ var i = n(477900),
     I = n(765178),
     j = n(834730),
     A = n(821609),
-    v = n(775602),
-    E = n(485038);
+    E = n(775602),
+    v = n(485038);
 function C(e) {
     let {
             isVisible: t,
@@ -26,11 +26,11 @@ function C(e) {
             noticeText: s,
             primaryAction: o,
             secondaryAction: c,
-            isEmphasized: d = !1,
-            a11yAnnounceOnShow: u,
+            isEmphasized: u = !1,
+            a11yAnnounceOnShow: d,
             a11yAnnounceOnHide: g,
         } = e,
-        m = (0, a.bG)([v.Ay], () => v.Ay.useReducedMotion),
+        m = (0, a.bG)([E.Ay], () => E.Ay.useReducedMotion),
         x = l.useRef(null);
     return (
         l.useEffect(
@@ -45,7 +45,7 @@ function C(e) {
             leave: { opacity: 0, y: 80 * !m },
             onRest: (e, t) => {
                 if (!e.finished) return;
-                let n = t.item ? u : g;
+                let n = t.item ? d : g;
                 null != x.current && clearTimeout(x.current),
                     null != n
                         ? (x.current = setTimeout(() => {
@@ -58,18 +58,18 @@ function C(e) {
                 ? (0, i.jsx)(h.animated.div, {
                       style: e,
                       children: (0, i.jsxs)("footer", {
-                          className: r()(E.Qs, { [E.hO]: d }),
+                          className: r()(v.Qs, { [v.hO]: u }),
                           "aria-labelledby": n,
                           children: [
                               (0, i.jsx)(j.E, {
                                   variant: "text-sm/normal",
                                   color: "text-strong",
                                   id: n,
-                                  className: E.ut,
+                                  className: v.ut,
                                   children: s,
                               }),
                               (0, i.jsxs)("div", {
-                                  className: E.o1,
+                                  className: v.o1,
                                   children: [
                                       (0, i.jsx)(A.$, { variant: "secondary", size: "sm", ...c }),
                                       (0, i.jsx)(A.$, { variant: "primary", size: "sm", ...o }),
@@ -84,11 +84,11 @@ function C(e) {
 }
 var S = n(570002),
     b = n(202541),
-    y = n(375708);
-function T() {
+    T = n(375708);
+function y() {
     let e = (0, g.YW)(),
         { goBack: t } = (0, g.pA)(),
-        n = (0, S.A)(y.intl.string(y.t.pj0XBN));
+        n = (0, S.A)(T.intl.string(T.t.pj0XBN));
     return (0, i.jsx)(x.A, {
         subscriptionTier: b.pe.TIER_2,
         onSubscribeModalClose: (e) => {
@@ -99,10 +99,10 @@ function T() {
             return (0, i.jsx)(C, {
                 isVisible: e,
                 labelId: "premium-try-it-out-footer-bar-label",
-                noticeText: y.intl.string(y.t.X0ir7L),
-                a11yAnnounceOnShow: y.intl.string(y.t.X0ir7L),
-                a11yAnnounceOnHide: y.intl.string(y.t.ZcyFYa),
-                secondaryAction: { text: y.intl.string(y.t.V3S9WW), onClick: t },
+                noticeText: T.intl.string(T.t.X0ir7L),
+                a11yAnnounceOnShow: T.intl.string(T.t.X0ir7L),
+                a11yAnnounceOnHide: T.intl.string(T.t.ZcyFYa),
+                secondaryAction: { text: T.intl.string(T.t.V3S9WW), onClick: t },
                 primaryAction: { text: n, onClick: s, icon: m.t, variant: "expressive" },
             });
         },
@@ -120,8 +120,8 @@ var N = n(631670),
     G = n(958805),
     M = n(61881),
     U = n(624826),
-    W = n(384377),
-    F = n(518477),
+    F = n(384377),
+    W = n(518477),
     H = n(652215);
 function V(e) {
     let { guildId: t } = e,
@@ -129,7 +129,7 @@ function V(e) {
         [s, r] = l.useState(!1),
         [o, c] = l.useState(!1),
         {
-            widgetsToSave: d,
+            widgetsToSave: u,
             changedWidgets: g,
             removedWidgets: m,
             hasUnsavedWidgets: x,
@@ -144,15 +144,15 @@ function V(e) {
                 }));
             return { widgetsToSave: e, changedWidgets: t, removedWidgets: n, hasUnsavedWidgets: i, canSaveWidgets: l };
         })(),
-        h = (0, u.X)("UserProfileModalV2SaveBar"),
+        h = (0, d.X)("UserProfileModalV2SaveBar"),
         { hasUnsavedProfileChanges: p, canSubmitProfileChanges: I } = (0, a.cf)([D.A], () => ({
             hasUnsavedProfileChanges: D.A.hasUnsavedChanges(),
             canSubmitProfileChanges: D.A.canSubmit(),
         })),
         j = h && p,
         A = x || j,
-        v = !(x && !f) && (!h || I),
-        E = l.useCallback(() => {
+        E = !(x && !f) && (!h || I),
+        v = l.useCallback(() => {
             G.A.clearPendingWidgets(), h && (0, O.XQ)();
         }, [h]),
         S = l.useCallback(async () => {
@@ -218,7 +218,7 @@ function V(e) {
                 }
             if (x)
                 try {
-                    for (let e of (await G.A.savePendingWidgets(d), g)) {
+                    for (let e of (await G.A.savePendingWidgets(u), g)) {
                         let t = { widgetEdited: e.type, isWidgetRemoved: !1 };
                         (0, _.fu)(e) &&
                             ((t.gameIds = e.games.map((e) => e.gameId)),
@@ -230,8 +230,8 @@ function V(e) {
                 } catch {
                     e = !1;
                 }
-            e ? (0, N.x8)() : (0, W.XA)(F.jM.PROFILE_SAVE_GENERIC_FAILURE), c(!1);
-        }, [h, j, x, d, g, m, n, t]);
+            e ? (0, N.x8)() : (0, F.XA)(W.jM.PROFILE_SAVE_GENERIC_FAILURE), c(!1);
+        }, [h, j, x, u, g, m, n, t]);
     return (
         l.useEffect(() => {
             let e = null;
@@ -252,41 +252,41 @@ function V(e) {
         (0, i.jsx)(C, {
             isVisible: A,
             labelId: "user-profile-save-reset-toolbar-label",
-            noticeText: y.intl.string(y.t["/lQiX/"]),
+            noticeText: T.intl.string(T.t["/lQiX/"]),
             isEmphasized: s,
-            a11yAnnounceOnShow: y.intl.string(y.t["0Y/qkL"]),
-            secondaryAction: { text: y.intl.string(y.t.yBZMsQ), onClick: E, disabled: !A || o },
-            primaryAction: { text: y.intl.string(y.t["R3BPH+"]), onClick: S, loading: o, disabled: !v || !A },
+            a11yAnnounceOnShow: T.intl.string(T.t["0Y/qkL"]),
+            secondaryAction: { text: T.intl.string(T.t.yBZMsQ), onClick: v, disabled: !A || o },
+            primaryAction: { text: T.intl.string(T.t["R3BPH+"]), onClick: S, loading: o, disabled: !E || !A },
         })
     );
 }
 var B = n(485745),
     z = n(893757);
 function X() {
-    let e = !(0, u.X)("useEditingFooterState"),
+    let e = !(0, d.X)("useEditingFooterState"),
         t = (0, o.VU)(),
         n = (0, B.A)(e),
         i = (0, g.YW)();
     return t ? "dnd" : i ? "premium-try-it-out" : n ? "save" : null;
 }
 function K(e) {
-    let t = (0, a.bG)([d.default], () => d.default.getId() === e),
+    let t = (0, a.bG)([u.default], () => u.default.getId() === e),
         n = X();
     return t && null != n;
 }
 function Y(e) {
     let { userId: t, guildId: n, className: s } = e,
-        o = (0, a.bG)([d.default], () => d.default.getId() === t),
-        u = X(),
-        [g, m] = l.useState(u);
-    return (null != u && g !== u && m(u), o)
+        o = (0, a.bG)([u.default], () => u.default.getId() === t),
+        d = X(),
+        [g, m] = l.useState(d);
+    return (null != d && g !== d && m(d), o)
         ? (0, i.jsx)("div", {
               className: r()(z.k, s),
               children:
                   "dnd" === g
                       ? (0, i.jsx)(c.S, { className: z.W })
                       : "premium-try-it-out" === g
-                        ? (0, i.jsx)(T, {})
+                        ? (0, i.jsx)(y, {})
                         : "save" === g
                           ? (0, i.jsx)(V, { guildId: n })
                           : null,

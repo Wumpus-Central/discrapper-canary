@@ -14,17 +14,17 @@ function u(e) {
         g = i.useRef(void 0),
         p = i.useRef(new Set()),
         [m, A] = i.useState(!1),
-        y = (0, o.bG)([l.Ay], () => l.Ay.getCurrentlySelectedChannelId()),
-        v = i.useCallback((e) => {
+        v = (0, o.bG)([l.Ay], () => l.Ay.getCurrentlySelectedChannelId()),
+        y = i.useCallback((e) => {
             p.current.delete(e), A(p.current.size > 0);
         }, []),
-        x = i.useCallback((e) => (p.current.add(e), A(!0), () => v(e)), [v]),
+        x = i.useCallback((e) => (p.current.add(e), A(!0), () => y(e)), [y]),
         w = i.useCallback((e, t) => {
             for (let n of p.current) n(e, t);
         }, []);
     i.useEffect(() => {
         h?.clearConfetti();
-    }, [h, y]);
+    }, [h, v]);
     let E = i.useCallback((e) => {
             window.clearTimeout(g.current),
                 (g.current = window.setTimeout(() => {
@@ -64,7 +64,7 @@ function u(e) {
                     spriteCanvas: n,
                     baseConfig: c.Mw,
                     addClickListener: x,
-                    removeClickListener: v,
+                    removeClickListener: y,
                     children: t,
                 }),
                 (0, r.jsx)(s.Fk, {

@@ -14,19 +14,19 @@ var i = n(17928),
     p = n(645959),
     m = n(652215);
 let A = [l.rD.TEXT_CHANNEL, l.rD.GROUP_DM, l.rD.USER],
-    y = null,
     v = null,
+    y = null,
     x = [],
     w = [];
 function E(e) {
     (x = [...x, e]), (w = w.map((e) => ({ ...e, sent: x.includes(e.data.record.id) }))), O.emitChange();
 }
 function C() {
-    (y = null), null != r && (r.destroy(), (r = null)), null != v && v();
+    (v = null), null != r && (r.destroy(), (r = null)), null != y && y();
 }
 function b() {
-    let e = null != y && null != y.application_id ? u.A.getApplicationActivity(y.application_id) : null;
-    if (null != y && (null == e || null == e.party || null == e.party.id)) return C();
+    let e = null != v && null != v.application_id ? u.A.getApplicationActivity(v.application_id) : null;
+    if (null != v && (null == e || null == e.party || null == e.party.id)) return C();
 }
 class N extends i.Ay.Store {
     static displayName = "ActivityInviteModalStore";
@@ -34,7 +34,7 @@ class N extends i.Ay.Store {
         this.waitFor(c.A, d.A, u.A, h.A, p.A, g.default);
     }
     getActivity() {
-        return y;
+        return v;
     }
     getQuery() {
         return r?.query ?? "";
@@ -45,8 +45,8 @@ class N extends i.Ay.Store {
 }
 let O = new N(s.h, {
         ACTIVITY_INVITE_MODAL_OPEN: function (e) {
-            (y = e.activity),
-                (v = e.resolve),
+            (v = e.activity),
+                (y = e.resolve),
                 (x = []),
                 null == r &&
                     (r = new l.Ay(
@@ -113,28 +113,28 @@ let O = new N(s.h, {
             null != r && r.search(t);
         },
         ACTIVITY_INVITE_MODAL_SEND: function (e) {
-            if (null == y) return;
+            if (null == v) return;
             let t = e.channelId,
                 n = e.userId;
             null != t
                 ? o.A.sendActivityInvite({
                       channelId: t,
                       type: m.xL.JOIN,
-                      activity: y,
+                      activity: v,
                       location: "Channel Text Area - Invite to Join Modal",
                   }).then(() => E(t))
                 : null != n &&
                   o.A.sendActivityInviteUser({
                       userId: n,
                       type: m.xL.JOIN,
-                      activity: y,
+                      activity: v,
                       location: "Channel Text Area - Invite to Join Modal",
                   }).then(() => E(n));
         },
         ACTIVITY_INVITE_MODAL_CLOSE: C,
         OVERLAY_SET_INPUT_LOCKED: function (e) {
             let { locked: t } = e;
-            return !!t && null != y && (C(), !0);
+            return !!t && null != v && (C(), !0);
         },
         LOCAL_ACTIVITY_UPDATE: b,
         RPC_APP_DISCONNECTED: b,

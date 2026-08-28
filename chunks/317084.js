@@ -14,8 +14,8 @@ var r = n(477900),
     p = n(813564),
     m = n(933204),
     A = n(805143),
-    y = n(435558),
-    v = n.n(y),
+    v = n(435558),
+    y = n.n(v),
     x = n(939249);
 function w(e, t, n) {
     return (n.y - e.y) * (t.x - e.x) > (t.y - e.y) * (n.x - e.x);
@@ -107,7 +107,7 @@ let I = i.memo(function (e) {
         [w, I] = i.useState(0),
         [T, j] = i.useState({ x: 0, y: 0 }),
         k = Math.abs(T.x) + Math.abs(T.y) > 0,
-        S = i.useMemo(() => v().chunk(f, _), [f]),
+        S = i.useMemo(() => y().chunk(f, _), [f]),
         P = i.useCallback(
             (e, t) => {
                 null == p.current[w] ? (p.current[w] = []) : (p.current[w][t] = e);
@@ -155,7 +155,7 @@ let I = i.memo(function (e) {
         ),
         G = i.useMemo(
             () =>
-                (0, y.throttle)((e) => {
+                (0, v.throttle)((e) => {
                     var r;
                     let i;
                     if (null == g.current) return;
@@ -322,8 +322,8 @@ function S(e) {
     let {
             guildId: t,
             channel: n,
-            width: y,
-            height: v,
+            width: v,
+            height: y,
             keepOpen: x,
             interactive: w = !0,
             analyticsSource: E,
@@ -410,8 +410,8 @@ function S(e) {
         : (0, r.jsx)(a.f5, {
               value: P,
               children: (0, r.jsx)(I, {
-                  wheelWidth: y,
-                  wheelHeight: v,
+                  wheelWidth: v,
+                  wheelHeight: y,
                   itemWidth: 96,
                   itemHeight: 52,
                   showDeadZoneIndicator: !x,
