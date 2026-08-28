@@ -3974,7 +3974,7 @@ var rK = n(403581),
     r5 = n(158045),
     r4 = n(792348),
     r8 = n(674168),
-    r7 = n(641403),
+    r7 = n(930946),
     r9 = n(805945),
     ae = n(647451);
 function at(e) {
@@ -18717,7 +18717,6 @@ let NO = (0, a.zD)(o.X.FRIEND_REQUESTS_NOTES_SETTING, {
         setValue: function (e) {
             v.Zd.updateSetting(!e);
         },
-        usePredicate: () => N_.A.useConfig({ location: "Friend Request Setting" }).enabled,
         usePersistentBadge: () => ({ badgeType: d.Xi.BETA }),
     }),
     NL = (0, a.zZ)(o.X.FRIEND_REQUESTS_CATEGORY, {
