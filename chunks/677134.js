@@ -21,9 +21,7 @@ function s(e) {
             return (0, r.L3)(
                 e,
                 async () => {
-                    let { default: e } = await Promise.all([n.e("499593"), n.e("230803"), n.e("342312")]).then(
-                        n.bind(n, 216603),
-                    );
+                    let { default: e } = await Promise.all([n.e("230803"), n.e("342312")]).then(n.bind(n, 216603));
                     return (n) => (0, l.jsx)(e, { ...n, text: t });
                 },
                 { enableSpellCheck: !0 },

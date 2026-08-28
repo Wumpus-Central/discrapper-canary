@@ -1,4 +1,4 @@
-n.d(t, { TX: () => o, yV: () => d });
+n.d(t, { TX: () => o, yV: () => u });
 var i = n(477900),
     l = n(582128),
     s = n(95477),
@@ -22,9 +22,10 @@ function c(e) {
         onKeyDown: a,
         maxLength: o,
         placeholder: c,
-        trailing: d,
-        error: u,
+        trailing: u,
+        error: d,
         helperText: g,
+        spellCheck: m,
     } = e;
     return (0, i.jsx)(s.k, {
         label: n,
@@ -35,20 +36,21 @@ function c(e) {
         onKeyDown: a,
         maxLength: o,
         placeholder: c,
-        trailing: d,
-        error: u,
+        trailing: u,
+        error: d,
         helperText: g,
+        spellCheck: m,
     });
 }
-function d(e) {
+function u(e) {
     let {
             isEditing: t,
             committedValue: n,
             editedValue: l,
             setEditedValue: s,
             editButtonRef: o,
-            handleStartEditing: d,
-            wrapperRef: u,
+            handleStartEditing: u,
+            wrapperRef: d,
             onBlur: g,
             onContainerKeyDown: m,
             inputRef: x,
@@ -58,36 +60,37 @@ function d(e) {
             editButtonAriaLabel: I,
             label: j,
             size: A = "default",
-            maxLength: v,
-            error: E,
+            maxLength: E,
+            error: v,
             warning: C,
             trailing: S,
             className: b,
-            disabled: y = !1,
-            growWidth: T,
+            disabled: T = !1,
+            growWidth: y,
             removeVerticalPadding: N,
             textVariant: k,
             textColor: w,
+            spellCheck: R,
         } = e,
-        R =
-            (null != v && (t ? l : n).length > v ? a.intl.formatToPlainString(a.t.ICT5S6, { maxLength: v }) : void 0) ??
-            E,
-        L = "compact" === A ? { variant: "compact" } : { variant: "default", trailing: S };
+        L =
+            (null != E && (t ? l : n).length > E ? a.intl.formatToPlainString(a.t.ICT5S6, { maxLength: E }) : void 0) ??
+            v,
+        O = "compact" === A ? { variant: "compact" } : { variant: "default", trailing: S };
     return (0, i.jsx)(r.ZL, {
-        ...L,
+        ...O,
         isEditing: t,
         preview: h,
         placeholder: p,
         editButtonRef: o,
         editButtonAriaLabel: I,
-        onStartEditing: d,
+        onStartEditing: u,
         className: b,
-        growWidth: T,
+        growWidth: y,
         removeVerticalPadding: N,
-        wrapperRef: u,
+        wrapperRef: d,
         onBlur: g,
         onKeyDown: m,
-        disabled: y,
+        disabled: T,
         textVariant: k,
         textColor: w,
         input: (0, i.jsx)(c, {
@@ -96,13 +99,14 @@ function d(e) {
             value: l,
             onChange: s,
             onKeyDown: f,
-            maxLength: v,
+            maxLength: E,
             placeholder: p,
             trailing: S,
-            error: R,
+            error: L,
             helperText: C,
+            spellCheck: R,
         }),
-        previewErrorMessage: R,
+        previewErrorMessage: L,
         previewWarningMessage: C,
     });
 }

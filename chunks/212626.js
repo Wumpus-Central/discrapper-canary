@@ -14800,6 +14800,7 @@ function p$(e) {
                 i(e === r ? void 0 : e);
             },
             disabled: a,
+            spellCheck: !1,
         }),
     });
 }

@@ -3109,6 +3109,7 @@ function rm(e) {
         label: eY.intl.string(eY.t["rniRE+"]),
         placeholder: v,
         maxLength: Q.VE5,
+        spellCheck: !1,
     });
 }
 var rf = n(145497),

@@ -1,4 +1,4 @@
-n.d(t, { q: () => ew, A: () => eb });
+n.d(t, { q: () => eE, A: () => eN });
 var r = n(477900),
     i = n(582128),
     s = n(503698),
@@ -14,8 +14,8 @@ var r = n(477900),
     p = n(192308),
     m = n(231723),
     A = n(259678),
-    y = n(638495),
-    v = n(965830),
+    v = n(638495),
+    y = n(965830),
     x = n(318009),
     w = n(92960),
     E = n(14214),
@@ -88,7 +88,7 @@ function ec(e) {
         A = i.useCallback(() => {
             a.set(0), null != c.current && clearTimeout(c.current), (c.current = null), n?.(), l?.();
         }, [a, n, l]),
-        y = i.useCallback(
+        v = i.useCallback(
             (e) => {
                 h ||
                     (f(!0),
@@ -103,7 +103,7 @@ function ec(e) {
             },
             [n, s, h],
         ),
-        v = i.useCallback(
+        y = i.useCallback(
             (e) => {
                 e.stopPropagation(), e.shiftKey ? (u(!0), null != c.current && clearTimeout(c.current)) : u(!1);
             },
@@ -149,8 +149,8 @@ function ec(e) {
         confirmText: es.intl.string(es.t.a3HlgJ),
         cancelText: null != w ? es.intl.string(es.t.qIYnPo) : void 0,
         icon: (0, r.jsx)($.A, { width: 40, height: 40, className: eo.Lo }),
-        onNotificationClick: v,
-        onConfirmClick: y,
+        onNotificationClick: y,
+        onConfirmClick: v,
         onCancelClick: null != w ? x : void 0,
         onDismissClick: n,
         expand: !0,
@@ -218,18 +218,19 @@ class ed extends i.PureComponent {
 var eu = n(97469),
     eh = n(164942),
     ef = n(597619),
-    eg = n(723702),
-    ep = n(677134),
-    em = n(19575),
-    eA = n(346142),
+    eg = n(892019),
+    ep = n(723702),
+    em = n(677134),
+    eA = n(19575),
+    ev = n(346142),
     ey = n(869146),
-    ev = n(392164),
-    ex = n(577063);
-function ew(e) {
+    ex = n(392164),
+    ew = n(577063);
+function eE(e) {
     let { withTitleBar: t, isFullScreen: n } = e;
-    return t && eg.isPlatformEmbedded && !n;
+    return t && ep.isPlatformEmbedded && !n;
 }
-class eE extends i.Component {
+class eC extends i.Component {
     rootRef = i.createRef();
     _cleanupWindowActionCreators = void 0;
     _combokeys = null;
@@ -240,18 +241,18 @@ class eE extends i.Component {
         null == t.querySelector("title") && null != t.head && t.head.appendChild(t.createElement("title")),
             this.updateTitle(),
             this.updateClientTheme(),
-            (0, eA.M)(e),
+            (0, ev.M)(e),
             e.addEventListener("blur", this.handleBlur),
-            eg.isPlatformEmbedded
-                ? t.addEventListener("contextmenu", ep.contextMenuCallbackNative, !1)
-                : t.addEventListener("contextmenu", ep.contextMenuCallbackWeb, !1),
+            ep.isPlatformEmbedded
+                ? t.addEventListener("contextmenu", em.contextMenuCallbackNative, !1)
+                : t.addEventListener("contextmenu", em.contextMenuCallbackWeb, !1),
             e.addEventListener("beforeunload", this.beforeUnload),
             this.registerPopoutGlobalKeybinds();
     }
     beforeUnload = (e) => {
         let { onBeforeUnload: t } = this.props,
             n = () => {
-                ey.A.unmountWindow(this.props.windowKey), eg.isPlatformEmbedded && em.Ay.close(this.props.windowKey);
+                ey.A.unmountWindow(this.props.windowKey), ep.isPlatformEmbedded && eA.Ay.close(this.props.windowKey);
             };
         null != t ? t({ e, unmountWindow: n }) : n();
     };
@@ -264,9 +265,9 @@ class eE extends i.Component {
             t = e.document;
         this.unregisterPopoutGlobalKeybinds(),
             e.removeEventListener("blur", this.handleBlur),
-            eg.isPlatformEmbedded
-                ? t.removeEventListener("contextmenu", ep.contextMenuCallbackNative)
-                : t.removeEventListener("contextmenu", ep.contextMenuCallbackWeb),
+            ep.isPlatformEmbedded
+                ? t.removeEventListener("contextmenu", em.contextMenuCallbackNative)
+                : t.removeEventListener("contextmenu", em.contextMenuCallbackWeb),
             (0, d.r)(() => p.useModalsStore.setState((e) => ({ ...e, [m.KX]: [] }))),
             e.removeEventListener("beforeunload", this.beforeUnload);
     }
@@ -316,10 +317,10 @@ class eE extends i.Component {
                 themeOverride: g,
                 titleBarTheme: p,
                 hideModals: m = !1,
-                appContext: v,
+                appContext: y,
             } = this.props,
-            w = ew({ withTitleBar: s, isFullScreen: i }),
-            E = n === ev.f,
+            w = eE({ withTitleBar: s, isFullScreen: i }),
+            E = n === ex.f,
             C = E ? ed : S.A;
         return (0, r.jsx)(c.Kd, {
             children: (0, r.jsx)(
@@ -331,20 +332,20 @@ class eE extends i.Component {
                         children: (0, r.jsxs)(A.xp, {
                             containerRef: this.rootRef,
                             children: [
-                                (0, r.jsx)(eC, {
+                                (0, r.jsx)(eb, {
                                     guestWindow: l,
                                     className: o()(a, { overlay: E }),
                                     children: (0, r.jsxs)(C, {
                                         children: [
                                             (0, r.jsx)(T.Al, {}),
                                             (0, r.jsx)(R.Wr, {
-                                                appContext: v ?? ei.BRT.POPOUT,
+                                                appContext: y ?? ei.BRT.POPOUT,
                                                 renderWindow: l,
                                                 children: (0, r.jsx)(I.l, {
                                                     children: (0, r.jsxs)(L.Yf, {
                                                         children: [
                                                             (0, r.jsxs)("div", {
-                                                                className: ex.SW,
+                                                                className: ew.SW,
                                                                 children: [
                                                                     w &&
                                                                         (0, r.jsx)(h.N, {
@@ -352,16 +353,16 @@ class eE extends i.Component {
                                                                             children: (e) =>
                                                                                 (0, r.jsx)(j.cq, {
                                                                                     windowKey: n,
-                                                                                    className: o()(e, ex.uv),
+                                                                                    className: o()(e, ew.uv),
                                                                                 }),
                                                                         }),
                                                                     (0, r.jsx)("div", {
-                                                                        className: o()(ex.Qs, d),
+                                                                        className: o()(ew.Qs, d),
                                                                         children: t,
                                                                     }),
                                                                 ],
                                                             }),
-                                                            !m && (0, r.jsx)(y.b, {}),
+                                                            !m && (0, r.jsx)(v.b, {}),
                                                             (0, r.jsx)(x.A, {}),
                                                             (0, r.jsx)(u.P, {}),
                                                             (0, r.jsx)(L.C8, {}),
@@ -382,7 +383,7 @@ class eE extends i.Component {
         });
     }
 }
-let eC = i.forwardRef(function (e, t) {
+let eb = i.forwardRef(function (e, t) {
         let { guestWindow: n, className: s, children: l } = e,
             { lang: c, style: d, className: u } = (0, ef.xb)();
         i.useEffect(() => {
@@ -392,7 +393,8 @@ let eC = i.forwardRef(function (e, t) {
             i.useEffect(() => {
                 let e = n.document.documentElement;
                 a()(null != e, "Window document element was null"), e.setAttribute("lang", c);
-            }, [n, c]);
+            }, [n, c]),
+            (0, eg.A)(n.document.documentElement);
         let h = o()(u, s, "in-popout");
         return (
             i.useLayoutEffect(() => {
@@ -402,7 +404,7 @@ let eC = i.forwardRef(function (e, t) {
             (0, r.jsx)("div", { "data-popout-root": !0, ref: t, children: l })
         );
     }),
-    eb = i.forwardRef(function (e, t) {
+    eN = i.forwardRef(function (e, t) {
         let { guestWindow: n, isFullScreen: i } = (0, g.cf)([ey.A], () => ({
             guestWindow: ey.A.getWindow(e.windowKey),
             isFullScreen: ey.A.isWindowFullScreen(e.windowKey),
@@ -419,10 +421,10 @@ let eC = i.forwardRef(function (e, t) {
             h = e.themeOverride ?? u;
         return null == n
             ? null
-            : (0, r.jsx)(v.W, {
+            : (0, r.jsx)(y.W, {
                   children: (0, r.jsx)(_.f5, {
                       value: l,
-                      children: (0, r.jsx)(eE, {
+                      children: (0, r.jsx)(eC, {
                           ref: t,
                           ...e,
                           titleBarTheme: h,
