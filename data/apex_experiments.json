@@ -5468,6 +5468,28 @@
     }
   },
   {
+    "name": "2026-08-dcf-new-user-cooldown",
+    "kind": "user",
+    "defaultConfig": {
+      "newUserCooldownMs": null
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "newUserCooldownMs": null
+      },
+      "2": {
+        "newUserCooldownMs": null
+      },
+      "3": {
+        "newUserCooldownMs": null
+      }
+    }
+  },
+  {
     "kind": "user",
     "name": "2026-08-dont-close-chat",
     "defaultConfig": {
