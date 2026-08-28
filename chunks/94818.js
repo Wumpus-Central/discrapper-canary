@@ -1,4 +1,4 @@
-o.r(s), o.d(s, { default: () => r });
-let r = JSON.parse(
-    '{"H6Ny8N":["ACTIVE CHALLENGES"],"k6h2J3":["Challenge completed"],"WmfVjs":["Claim"],"mOsACs":["Claim ",[1,"orbAmount"]," Orbs"],"o6s7yg":["Explore Shop"],"aBVuHF":["Get ",[1,"orbAmount"]," Orbs"],"+kdkTi":["Orbs in ",[1,"days"]," days"],"pJz0/A":["Get Nitro to earn more Orbs"],"qa1xyr":["Shop"],"HACucK":["You have enough Orbs to get something in the Shop!"]}',
+e.r(o), e.d(o, { default: () => t });
+let t = JSON.parse(
+    '{"H6Ny8N":["Active Challenges"],"k6h2J3":["Challenge completed"],"WmfVjs":["Claim"],"h2qWpS":["Claim ",[8,"orbIconHook",["orbIcon"]]," ",[1,"orbAmount"]," Orbs"],"B8Fxns":["Earn ",[8,"orbIconHook",["orbIcon"]]," ",[1,"orbAmount"]," Orbs"],"o6s7yg":["Explore Shop"],"OHLdjq":[[1,"multiplier"],"x"],"04j3XV":[[1,"orbAmount"]," Orbs in ",[1,"days"]," days"],"+kdkTi":["Orbs in ",[1,"days"]," days"],"XW2CuY":["Keep earning to unlock your next reward!"],"xOP5OP":["You\'re all caught up"],"pJz0/A":["Get Nitro to earn more Orbs"],"FkfrRH":["Nitro Orbs"],"U9UQJE":["Get Nitro"],"Ba/7wO":["Nitro members earn ",[1,"multiplier"],"x on everything"],"ZqCAos":["Earn Orbs faster"],"qa1xyr":["Shop"],"HACucK":["You have enough Orbs to get something in the Shop!"],"WOMrJf":["Unlock ",[1,"multiplier"],"x"]}',
 );

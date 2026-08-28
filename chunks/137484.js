@@ -8,4 +8,5 @@ e.exports = {
     AM: "orbChallengeTileWithProgressRing__84ece",
     t9: "orbChallengeGlyph__84ece",
     Zs: "orbChallengeRing__84ece",
+    fN: "orbIconAligned__84ece",
 };

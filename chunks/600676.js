@@ -4,4 +4,5 @@ e.exports = {
     Gd: "orbWalletPrimaryCardSubText__89f5f",
     db: "orbWalletPrimaryCardGraphic__89f5f",
     Fx: "orbWalletPrimaryCardCloseButton__89f5f",
+    ml: "orbWalletNitroUpsellCard__89f5f",
 };

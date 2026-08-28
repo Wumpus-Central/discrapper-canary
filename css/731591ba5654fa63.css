@@ -44,13 +44,8 @@
     --control-icon-only-icon-hover: var(--control-icon-only-icon-default)
 }
 
-.orbWalletHeaderTagUpsell__583ca {
-    align-items: center;
-    -moz-column-gap: var(--space-4);
-    column-gap: var(--space-4);
-    cursor: pointer;
-    display: flex;
-    flex-direction: row
+.orbWalletNitroUpsellCard__89f5f {
+    background: radial-gradient(80% 60% at 50% 100%, color-mix(in srgb, var(--expressive-gradient-nitro-pink-start) 55%, transparent) 0, color-mix(in srgb, var(--expressive-gradient-nitro-pink-start) 0%, transparent) 70%, transparent 100%), var(--background-mod-muted)
 }
 
 .container__44ee9 {
@@ -86,4 +81,4 @@
     visibility: visible
 }
 
-/*# sourceMappingURL=70dcc93240cf04c4.css.map*/
+/*# sourceMappingURL=731591ba5654fa63.css.map*/
