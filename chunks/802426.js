@@ -1476,15 +1476,17 @@ class n7 extends i.PureComponent {
     handleTextareaChange = (e, t, n) => {
         let {
             keyboardModeEnabled: l,
-            channel: { id: i },
+            chatInputType: i,
+            channel: { id: s },
         } = this.props;
-        C.A.changeDraft(i, t, eC.C.ChannelMessage);
-        let s = "" !== t && n !== this.state.richValue,
-            a = s && !n2.test(t) && !t.startsWith("/") && (!this.isFirstChange || t !== this.state.textValue);
+        if (i === U.oU.NORMAL && s !== nR.Ay.getChannelId()) return;
+        C.A.changeDraft(s, t, eC.C.ChannelMessage);
+        let a = "" !== t && n !== this.state.richValue,
+            r = a && !n2.test(t) && !t.startsWith("/") && (!this.isFirstChange || t !== this.state.textValue);
         (this.isFirstChange = !1),
-            a && this.state.textValue.length < t.length && this.handleIncrementCombo(),
-            a ? E.A.startTyping(i) : "" === t && E.A.stopTyping(i),
-            s && l && (0, j.Bm)(),
+            r && this.state.textValue.length < t.length && this.handleIncrementCombo(),
+            r ? E.A.startTyping(s) : "" === t && E.A.stopTyping(s),
+            a && l && (0, j.Bm)(),
             this.setState({ textValue: t, richValue: n });
     };
     handleSendMessage = async (e) => {

@@ -16,7 +16,7 @@ var i = n(582128),
     h = n(73510),
     I = n(652215);
 function f(e, t, n) {
-    if (null == t) return { application: void 0, command: void 0 };
+    if (null == t) return { application: void 0, command: void 0, section: void 0 };
     let i = d.Ay.getUserState(),
         r = d.Ay.getContextState(e),
         a = Object.values(i.result?.sections ?? {}).concat(Object.values(r.result?.sections ?? {}));
@@ -24,14 +24,14 @@ function f(e, t, n) {
         let e = a.find((e) => e.descriptor.application?.id === n);
         if (null != e) {
             let n = p(e, t);
-            return { application: e.descriptor.application, command: n };
+            return { application: e.descriptor.application, command: n, section: e.descriptor };
         }
     } else
         for (let e of a) {
             let n = p(e, t);
-            if (null != n) return { application: e.descriptor.application, command: n };
+            if (null != n) return { application: e.descriptor.application, command: n, section: e.descriptor };
         }
-    return { application: void 0, command: void 0 };
+    return { application: void 0, command: void 0, section: void 0 };
 }
 function p(e, t) {
     if (null == t) return;
