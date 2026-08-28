@@ -1,0 +1,47 @@
+.bannerVideoBackground_aff7d9 {
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    -o-object-position: top center;
+    object-position: top center;
+    width: 100%
+}
+
+.bannerImage_aff7d9 {
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%
+}
+
+.responsive_aff7d9.bannerAsset_aff7d9 {
+    inset-inline-start: 50%;
+    position: absolute;
+    transform: translate(-50%)
+}
+
+.responsive_aff7d9.bannerImage_aff7d9 {
+    background-position: top;
+    background-size: contain
+}
+
+.responsive_aff7d9.bannerVideoBackground_aff7d9 {
+    -o-object-fit: contain;
+    object-fit: contain;
+    -o-object-position: center top;
+    object-position: center top
+}
+
+@media (max-width:1160px) {
+    .responsive_aff7d9.bannerImage_aff7d9 {
+        background-size: cover
+    }
+
+    .responsive_aff7d9.bannerVideoBackground_aff7d9 {
+        -o-object-fit: cover;
+        object-fit: cover
+    }
+}
+
+/*# sourceMappingURL=d1bb0158f4d5361c.css.map*/

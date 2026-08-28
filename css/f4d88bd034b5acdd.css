@@ -220,6 +220,20 @@
     text-shadow: 0 0 4px var(--background-base-low)
 }
 
+@keyframes cardFadeIn_fcbddd {
+    0% {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+.full-motion .cardFadeIn_fcbddd {
+    animation: cardFadeIn_fcbddd .25s ease-out
+}
+
 @keyframes pulse_e4f643 {
     0% {
         background: var(--background-base-lower)
@@ -289,4 +303,4 @@
     width: 40%
 }
 
-/*# sourceMappingURL=781151e631620f5a.css.map*/
+/*# sourceMappingURL=f4d88bd034b5acdd.css.map*/

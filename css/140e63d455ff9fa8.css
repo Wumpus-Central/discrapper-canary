@@ -1,0 +1,33 @@
+.transitionRail__014df {
+    inset-inline: 0;
+    bottom: 0;
+    position: fixed
+}
+
+.jumbleWrapper__014df {
+    inset-inline: calc(var(--custom-guild-sidebar-width) + 25px) 0;
+    bottom: -330px;
+    height: 128px;
+    transition: bottom .15s cubic-bezier(.48, -.08, .06, 1.4), opacity .1s linear
+}
+
+.asset__014df,
+.jumbleWrapper__014df {
+    position: absolute
+}
+
+.full-motion .asset__014df {
+    transition-property: top, left, transform;
+    transition-timing-function: ease-in-out
+}
+
+.peaking__014df {
+    bottom: 48px;
+    transition-duration: .3s
+}
+
+.transitioned__014df {
+    opacity: 0
+}
+
+/*# sourceMappingURL=140e63d455ff9fa8.css.map*/

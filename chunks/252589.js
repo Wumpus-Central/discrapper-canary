@@ -25,7 +25,7 @@ let C = n(568065).Wb,
 function f() {
     let [e, t] = l.useState(0);
     l.useEffect(() => {
-        (0, a.d)({ applicationId: C, skuTypes: h, includePricing: !0 }), r.Ay.getDetectableGames();
+        (0, a.d2)({ applicationId: C, skuTypes: h, includePricing: !0 }), r.Ay.getDetectableGames();
     }, [e]);
     let n = (0, i.bG)([s.A], () => s.A.getCollectionsForApplication(C)),
         c = (0, i.bG)([s.A], () => s.A.getFetchStateForApplication(C)),

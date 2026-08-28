@@ -16,4 +16,5 @@ d.exports = {
     wY: "footerGradient_fcbddd",
     KY: "staticBundleFooterGradient_fcbddd",
     tZ: "productName_fcbddd",
+    w: "cardFadeIn_fcbddd",
 };

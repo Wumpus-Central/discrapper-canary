@@ -16,6 +16,8 @@ class a {
     primaryCollectionPdpBgUrl;
     primaryCollectionWillUnpublishAt;
     gameApplicationId;
+    badgeOverride;
+    hideBadge;
     constructor(e) {
         (this.id = e.id),
             (this.skuIds = e.skuIds),
@@ -29,7 +31,9 @@ class a {
             (this.primaryCollectionStyles = e.primaryCollectionStyles),
             (this.primaryCollectionPdpBgUrl = e.primaryCollectionPdpBgUrl),
             (this.primaryCollectionWillUnpublishAt = e.primaryCollectionWillUnpublishAt),
-            (this.gameApplicationId = e.gameApplicationId);
+            (this.gameApplicationId = e.gameApplicationId),
+            (this.badgeOverride = e.badgeOverride),
+            (this.hideBadge = e.hideBadge);
     }
     static fromServer(e) {
         let { sku_ids: t, options: n, created_at: s, updated_at: l, skus: o, tenant_metadata: d, ...c } = e;
@@ -51,6 +55,8 @@ class a {
                     ? new Date(d.collectibles.primary_collection_will_unpublish_at)
                     : void 0,
             gameApplicationId: d.guild_monetization?.game_server?.game_application_id,
+            badgeOverride: d.collectibles?.badge_override,
+            hideBadge: d.collectibles?.hide_badge,
         });
     }
 }

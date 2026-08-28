@@ -8,7 +8,7 @@ var n = r(477900),
     o = r(594832),
     d = r(4227),
     c = r(298072),
-    f = r(650959),
+    f = r(682301),
     h = r(841702),
     p = r(466459),
     y = r(623373),
@@ -30,7 +30,12 @@ let x = { isPurchased: !1, isPartiallyOwnedBundle: !1, isPartiallyOwnedVariantsG
                 giftRecipient: P,
                 giftingOrigin: w,
             } = e,
-            { product: E, category: N, state: _, retry: m } = (0, f.I)(t, { needsCategory: !0, seedCategoryStore: !0 }),
+            {
+                product: E,
+                category: N,
+                state: _,
+                retry: m,
+            } = (0, f.IK)(t, { needsCategory: !0, seedCategoryStore: !0 }),
             { hasPreviouslyFetched: v, fetchPurchasesError: D } = (0, h.b5)(),
             G = v || null != D;
         (0, u.A)(I.FYj), (0, o.pE)();

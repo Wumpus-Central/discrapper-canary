@@ -106,6 +106,8 @@ class c extends l.A {
                 return n === t.id;
             }),
             prices: t.prices,
+            badgeOverride: e.badgeOverride,
+            hideBadge: e.hideBadge,
             previewAssets: t.previewAssetPaths ?? void 0,
             variants:
                 r === i.R.VARIANTS_GROUP
@@ -139,7 +141,7 @@ class c extends l.A {
                                       [d.lid.MOBILE]: "",
                                       [d.lid.MOBILE_PREMIUM_TIER_2]: "",
                                   },
-                                  eligibleOffers: void 0,
+                                  eligibleOffers: n.eligibleOffers,
                                   variants: void 0,
                                   bundledProducts: void 0,
                                   isFirstParty: i.isFirstParty,
@@ -148,7 +150,7 @@ class c extends l.A {
                           .filter((e) => null != e)
                     : void 0,
             googleSkuIds: t.googleSkuIds ?? { [d.lid.MOBILE]: "", [d.lid.MOBILE_PREMIUM_TIER_2]: "" },
-            eligibleOffers: void 0,
+            eligibleOffers: t.eligibleOffers,
             isFirstParty: n.isFirstParty,
             bundledProducts: t.bundledSkus
                 ?.map((e) => {

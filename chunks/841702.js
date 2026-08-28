@@ -1,4 +1,4 @@
-r.d(t, { Ay: () => h, Bf: () => f, Wg: () => o, b5: () => l });
+r.d(t, { Ay: () => l, Bf: () => f, Wg: () => o, b5: () => h });
 var s = r(582128),
     n = r(702841),
     i = r(736056),
@@ -8,7 +8,7 @@ var s = r(582128),
 function o() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
         t = (0, n.bG)([i.A], () => i.A.hasLoadedExperiments),
-        [r, a, o, l, h, f] = (0, n.yK)([u.A], () => [
+        [r, a, o, h, l, f] = (0, n.yK)([u.A], () => [
             u.A.isFetching,
             u.A.isClaiming,
             u.A.fetchError,
@@ -32,24 +32,33 @@ function o() {
         (0, s.useEffect)(() => {
             !t || d.current || (!0 === e && A.current && null == g.current) || (0, c.gB)();
         }, [e, t]),
-        { isClaiming: a, fetchPurchasesError: o, claimError: l, isFetching: r, purchases: h, hasPreviouslyFetched: f }
+        { isClaiming: a, fetchPurchasesError: o, claimError: h, isFetching: r, purchases: l, hasPreviouslyFetched: f }
     );
 }
-function l() {
+function h() {
     return o(!0);
 }
-function h(e, t) {
+function l(e, t) {
     let r = e?.paymentGateway,
         {
             isFetching: s,
             categories: n,
             fetchCategoriesError: i,
             refreshCategories: c,
-        } = (0, a.A)({ paymentGateway: r, noOp: e?.noOp, logPerf: e?.logPerf, countryCode: e?.countryCode }, t),
+        } = (0, a.A)(
+            {
+                paymentGateway: r,
+                noOp: e?.noOp,
+                logPerf: e?.logPerf,
+                countryCode: e?.countryCode,
+                skipFetch: e?.skipFetch,
+            },
+            t,
+        ),
         {
             isClaiming: u,
-            fetchPurchasesError: l,
-            claimError: h,
+            fetchPurchasesError: h,
+            claimError: l,
             isFetching: f,
             purchases: A,
             hasPreviouslyFetched: g,
@@ -62,12 +71,12 @@ function h(e, t) {
         categories: n,
         purchases: A,
         fetchCategoriesError: i,
-        fetchPurchasesError: l,
-        claimError: h,
+        fetchPurchasesError: h,
+        claimError: l,
         refreshCategories: c,
         hasPreviouslyFetched: g,
     };
 }
 function f(e) {
-    return h({ ...(e ?? {}), stalePurchasesOK: !0 });
+    return l({ ...(e ?? {}), stalePurchasesOK: !0 });
 }

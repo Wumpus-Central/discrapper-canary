@@ -143,19 +143,6 @@
     margin-inline-start: auto
 }
 
-.grid__5af4c {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(246px, 1fr));
-    grid-gap: var(--space-xl);
-    width: 100%
-}
-
-.tile__5af4c {
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-8)
-}
-
 .container__85f5c {
     gap: 32px;
     padding: 24px
@@ -621,4 +608,4 @@
     padding: var(--space-24)
 }
 
-/*# sourceMappingURL=451044.9cb410cb320df38c.css.map*/
+/*# sourceMappingURL=226956.5c460e03242b8888.css.map*/

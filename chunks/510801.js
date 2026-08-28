@@ -33,7 +33,10 @@ class d extends l.A {
             (this.heroRanking = e.heroRanking),
             (this.unpublishedAt = e.unpublishedAt),
             (this.isOrbsExclusive =
-                Array.isArray(e.products) && e.products.length > 0 && void 0 === e.products.find((e) => !(0, a.Ab)(e))),
+                e.isOrbsExclusive ??
+                (Array.isArray(e.products) &&
+                    e.products.length > 0 &&
+                    void 0 === e.products.find((e) => !(0, a.Ab)(e)))),
             (this.heroBannerUrl = e.heroBannerUrl),
             (this.heroBannerAnimatedUrl = e.heroBannerAnimatedUrl),
             (this.heroRiveUrl = e.heroRiveUrl),
@@ -101,6 +104,7 @@ class d extends l.A {
             name: e.name,
             summary: e.description,
             unpublishedAt: e.unpublishedAt,
+            isOrbsExclusive: e.isOrbsExclusive,
             styles: e.styles,
             products: e.products.reduce((e, t) => {
                 let n = s.A.fromStorefrontProductRecord(t);

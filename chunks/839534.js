@@ -316,6 +316,7 @@ class x {
 var k = n(424918);
 class F {
     categoryStoreListingId;
+    categorySkuId;
     name;
     unpublishedAt;
     bodyText;
@@ -325,6 +326,7 @@ class F {
     constructor(e) {
         (this.type = k.u.CATEGORY),
             (this.categoryStoreListingId = e.category_store_listing_id),
+            (this.categorySkuId = e.category_sku_id),
             (this.name = e.name),
             (this.unpublishedAt = null != e.unpublished_at ? new Date(e.unpublished_at) : null),
             (this.bodyText = e.body_text),

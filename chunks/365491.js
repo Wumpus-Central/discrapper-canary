@@ -1,38 +1,27 @@
-r.d(t, { S: () => m, v: () => O });
+r.d(t, { S: () => p, v: () => b });
 var s = r(582128),
     i = r(196765),
     l = r(537812),
     o = r(401864),
     n = r(124987),
-    a = r(636537),
-    u = r(319400),
-    f = r(39418),
-    c = r(652215);
-async function g(e) {
-    let { timeout: t } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-    try {
-        return (await a.Bo.get({ url: c.Rsh.COLLECTIBLES_SEARCH, query: e, rejectWithError: !0, timeout: t })).body;
-    } catch (t) {
-        let e = new u.LG(t);
-        throw ((0, f.o)(e), e);
-    }
-}
-var y = r(856686);
-function S(e, t) {
+    a = r(946716),
+    u = r(395856),
+    f = r(856686);
+function c(e, t) {
     let r = new Set(e);
     return r.has(t) ? r.delete(t) : r.add(t), r;
 }
-let h = { sortType: n.$.RECENCY, sortDirection: o.A.DESC },
-    d = { sortType: n.$.POPULARITY, sortDirection: o.A.DESC },
-    b = { sortType: n.$.RELEVANCE, sortDirection: o.A.DESC },
-    E = {
+let g = { sortType: n.$.RECENCY, sortDirection: o.A.DESC },
+    y = { sortType: n.$.POPULARITY, sortDirection: o.A.DESC },
+    S = { sortType: n.$.RELEVANCE, sortDirection: o.A.DESC },
+    h = {
         itemTypeFilters: new Set(),
         colorFilters: new Set(),
         themeFilters: new Set(),
         orbEligible: !1,
         thirdPartyOnly: !1,
         offerEligible: !1,
-        sort: h,
+        sort: g,
         searchQuery: "",
         queryPageSize: 0,
         queryPageOffset: 0,
@@ -40,15 +29,15 @@ let h = { sortType: n.$.RECENCY, sortDirection: o.A.DESC },
         userHasSelectedSort: !1,
         currentTab: null,
     };
-function p(e) {
+function d(e) {
     let { colorFilters: t, themeFilters: r, searchQuery: s, itemTypeFilters: i } = e;
-    return t.size > 0 || r.size > 0 || "" !== s.trim() ? b : i.size > 0 ? d : h;
+    return t.size > 0 || r.size > 0 || "" !== s.trim() ? S : i.size > 0 ? y : g;
 }
-let O = (0, i.v)(
+let b = (0, i.v)(
     (0, l.eh)((e, t) => ({
-        ...E,
+        ...h,
         hasDefaultFilters: () =>
-            !t().hasFilters() && t().sort.sortType === h.sortType && t().sort.sortDirection === h.sortDirection,
+            !t().hasFilters() && t().sort.sortType === g.sortType && t().sort.sortDirection === g.sortDirection,
         hasFilters: () => {
             let {
                 itemTypeFilters: e,
@@ -67,41 +56,41 @@ let O = (0, i.v)(
         },
         onToggleItemType: (t) => {
             e((e) => {
-                let r = S(e.itemTypeFilters, t),
+                let r = c(e.itemTypeFilters, t),
                     s = { ...e, itemTypeFilters: r, queryPageOffset: 0 };
-                return e.userHasSelectedSort || (s.sort = p(s)), s;
+                return e.userHasSelectedSort || (s.sort = d(s)), s;
             });
         },
         onToggleColor: (t) => {
             e((e) => {
-                let r = S(e.colorFilters, t),
+                let r = c(e.colorFilters, t),
                     s = { ...e, colorFilters: r, queryPageOffset: 0 };
-                return e.userHasSelectedSort || (s.sort = p(s)), s;
+                return e.userHasSelectedSort || (s.sort = d(s)), s;
             });
         },
         onToggleTheme: (t) => {
             e((e) => {
-                let r = S(e.themeFilters, t),
+                let r = c(e.themeFilters, t),
                     s = { ...e, themeFilters: r, queryPageOffset: 0 };
-                return e.userHasSelectedSort || (s.sort = p(s)), s;
+                return e.userHasSelectedSort || (s.sort = d(s)), s;
             });
         },
         onToggleOrbEligible: () => {
             e((e) => {
                 let t = { ...e, orbEligible: !e.orbEligible, queryPageOffset: 0 };
-                return e.userHasSelectedSort || (t.sort = p(t)), t;
+                return e.userHasSelectedSort || (t.sort = d(t)), t;
             });
         },
         onToggleThirdPartyOnly: () => {
             e((e) => {
                 let t = { ...e, thirdPartyOnly: !e.thirdPartyOnly, queryPageOffset: 0 };
-                return e.userHasSelectedSort || (t.sort = p(t)), t;
+                return e.userHasSelectedSort || (t.sort = d(t)), t;
             });
         },
         onToggleOfferEligible: () => {
             e((e) => {
                 let t = { ...e, offerEligible: !e.offerEligible, queryPageOffset: 0 };
-                return e.userHasSelectedSort || (t.sort = p(t)), t;
+                return e.userHasSelectedSort || (t.sort = d(t)), t;
             });
         },
         onSetSort: (t) => {
@@ -115,8 +104,8 @@ let O = (0, i.v)(
                 let r = { ...e, searchQuery: t, queryPageOffset: 0 };
                 return (
                     "" !== t.trim()
-                        ? ((r.sort = b), (r.userHasSelectedSort = !1))
-                        : e.userHasSelectedSort || (r.sort = p(r)),
+                        ? ((r.sort = S), (r.userHasSelectedSort = !1))
+                        : e.userHasSelectedSort || (r.sort = d(r)),
                     r
                 );
             });
@@ -140,7 +129,7 @@ let O = (0, i.v)(
                         itemTypeFilters: r,
                         queryPageOffset: 0,
                     };
-                return e.userHasSelectedSort || (s.sort = p(s)), s;
+                return e.userHasSelectedSort || (s.sort = d(s)), s;
             });
         },
         setThirdPartyOnlyFilter: () => {
@@ -155,7 +144,7 @@ let O = (0, i.v)(
                     itemTypeFilters: new Set(),
                     queryPageOffset: 0,
                 };
-                return e.userHasSelectedSort || (t.sort = p(t)), t;
+                return e.userHasSelectedSort || (t.sort = d(t)), t;
             });
         },
         setOfferEligibleFilter: () => {
@@ -170,7 +159,7 @@ let O = (0, i.v)(
                     itemTypeFilters: new Set(),
                     queryPageOffset: 0,
                 };
-                return e.userHasSelectedSort || (t.sort = p(t)), t;
+                return e.userHasSelectedSort || (t.sort = d(t)), t;
             });
         },
         clearFilters: () => {
@@ -186,15 +175,16 @@ let O = (0, i.v)(
         },
         reset: () => {
             let { queryPageSize: r, queryPageOffset: s } = t();
-            e({ ...E, queryPageSize: r, queryPageOffset: s });
+            e({ ...h, queryPageSize: r, queryPageOffset: s });
         },
         setCurrentTab: (t) => {
             e({ currentTab: t });
         },
     })),
 );
-function m(e) {
-    let { onSetResponse: t, setSearchError: r, setIsFetchingResults: i } = (0, y.S)();
+function p(e) {
+    let { onSetResponse: t, setSearchError: r, setIsFetchingResults: i } = (0, f.S)(),
+        l = (0, u.$)("collectibles_browse_search");
     s.useEffect(() => {
         function s(e) {
             async function s() {
@@ -204,7 +194,7 @@ function m(e) {
                         s,
                         i,
                         l,
-                        o = await g(e);
+                        o = await (0, a.$)(e);
                     t(
                         ((r = o.skus),
                         (s = o.pagination.total),
@@ -220,49 +210,51 @@ function m(e) {
             }
             0 !== e.limit && s();
         }
-        function l(t) {
-            return (function (e, t) {
+        function o(t) {
+            return (function (e, t, r) {
                 let {
-                    itemTypeFilters: r,
-                    colorFilters: s,
-                    themeFilters: i,
-                    orbEligible: l,
-                    thirdPartyOnly: o,
-                    offerEligible: n,
-                    sort: a,
-                    searchQuery: u,
-                    queryPageSize: f,
-                    queryPageOffset: c,
+                    itemTypeFilters: s,
+                    colorFilters: i,
+                    themeFilters: l,
+                    orbEligible: o,
+                    thirdPartyOnly: n,
+                    offerEligible: a,
+                    sort: u,
+                    searchQuery: f,
+                    queryPageSize: c,
+                    queryPageOffset: g,
                 } = e;
                 return {
-                    item_types: Array.from(r),
-                    colors: Array.from(s),
-                    themes: Array.from(i),
-                    orbs_eligible: !!l || void 0,
-                    is_first_party: !o && void 0,
-                    promotion_filter: !!n || void 0,
-                    offset: c,
-                    limit: f,
-                    sort_type: a.sortType,
-                    sort_direction: a.sortDirection,
-                    search: "" !== u ? u : void 0,
+                    item_types: Array.from(s),
+                    colors: Array.from(i),
+                    themes: Array.from(l),
+                    orbs_eligible: !!o || void 0,
+                    is_first_party: !n && void 0,
+                    promotion_filter: !!a || void 0,
+                    offset: g,
+                    limit: c,
+                    sort_type: u.sortType,
+                    sort_direction: u.sortDirection,
+                    search: "" !== f ? f : void 0,
                     include_unpublished: !!t || void 0,
+                    representative_only: !!r || void 0,
+                    published_collections_only: !!r || void 0,
                 };
-            })(t, e);
+            })(t, e, l);
         }
-        s(l(O.getState()));
-        let o = O.subscribe(l, s, { equalityFn: (e, t) => JSON.stringify(e) === JSON.stringify(t) }),
-            n = O.subscribe(
+        s(o(b.getState()));
+        let n = b.subscribe(o, s, { equalityFn: (e, t) => JSON.stringify(e) === JSON.stringify(t) }),
+            u = b.subscribe(
                 (e) => e.hasFilters(),
                 (e, t) => {
                     if (!e && t) {
-                        let e = O.getState();
-                        e.userHasSelectedSort || O.setState({ sort: p(e) });
+                        let e = b.getState();
+                        e.userHasSelectedSort || b.setState({ sort: d(e) });
                     }
                 },
             );
         return () => {
-            o(), n();
+            n(), u();
         };
-    }, [t, r, i, e]);
+    }, [t, r, i, e, l]);
 }

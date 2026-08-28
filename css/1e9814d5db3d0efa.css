@@ -1,0 +1,20 @@
+.grid__5af4c {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(246px, 1fr));
+    grid-gap: var(--space-xl);
+    width: 100%
+}
+
+.tile__5af4c {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-8)
+}
+
+.feedHarness__5af4c {
+    height: 100%;
+    min-height: 640px;
+    width: 100%
+}
+
+/*# sourceMappingURL=1e9814d5db3d0efa.css.map*/
