@@ -4290,22 +4290,6 @@
   },
   {
     "kind": "user",
-    "name": "2026-06-soundboard-frequently-used",
-    "defaultConfig": {
-      "enabled": false
-    },
-    "variations": {
-      "0": {
-        "enabled": false,
-        "variant": 0
-      },
-      "1": {
-        "enabled": true
-      }
-    }
-  },
-  {
-    "kind": "user",
     "name": "2026-06-systemwide-echo-cancellation-for-people-who-refuse-to-wear-headphones",
     "defaultConfig": {
       "echoReferenceMode": "mix"
