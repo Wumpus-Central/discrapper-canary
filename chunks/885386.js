@@ -995,6 +995,6 @@ let tr = f(
     td = f(
         "privacy",
         "hideFriendRequestNotes",
-        (e) => e?.value ?? !1,
+        (e) => e?.value,
         (e) => l._t.create({ value: e }),
     );
