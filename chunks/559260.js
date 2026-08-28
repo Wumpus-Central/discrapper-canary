@@ -3000,27 +3000,28 @@ function lV(e) {
             claimableRewards: w,
             selectedGiftingPromotionRewards: U,
             openGiftingBadgePostPurchaseModal: D,
+            canShowGiftingBadgePostPurchase: G,
         } = (0, ny.Pv)(),
-        { confirmationFooter: G } = (0, s.cG)(),
-        F = (0, lT.px)(_, N, w),
-        B = (0, lT.Mq)(_),
-        { purchases: H } = (0, lx.Wg)(!1),
-        W = (0, k.bG)([lj.A], () => lj.A.getGiftPromotion()?.id),
-        Y = (0, k.bG)([lj.A], () => {
+        { confirmationFooter: F } = (0, s.cG)(),
+        B = (0, lT.px)(_, N, w),
+        H = (0, lT.Mq)(_),
+        { purchases: W } = (0, lx.Wg)(!1),
+        Y = (0, k.bG)([lj.A], () => lj.A.getGiftPromotion()?.id),
+        V = (0, k.bG)([lj.A], () => {
             let e = lj.A.getMarketingComponentByType(lg.C.GIFT_REMINDER_NAGBAR);
             return null == e || "giftReminderNagbar" !== e.properties.properties.oneofKind
                 ? null
                 : e.properties.properties.giftReminderNagbar;
         }),
-        V = (0, R.g)(p, I),
-        K = null != x ? x.orbsReward : null,
-        Z = null != K && K > 0,
-        q = N && !Z && U.length > 0 && U.every((e) => null != H.get(e)) && B,
-        z = { selectedPlan: _, selectedSkuId: S, step: T };
-    if (null == _) throw new C.v({ message: "Expected plan to be selected", extraSentryInformation: z });
-    if (null == S) throw new C.v({ message: "Expected selectedSkuId", extraSentryInformation: z });
-    if (null == T) throw new C.v({ message: "Step should be set", extraSentryInformation: z });
-    let Q = o.useCallback(() => {
+        K = (0, R.g)(p, I),
+        Z = null != x ? x.orbsReward : null,
+        q = null != Z && Z > 0,
+        z = N && !q && U.length > 0 && U.every((e) => null != W.get(e)) && H,
+        Q = { selectedPlan: _, selectedSkuId: S, step: T };
+    if (null == _) throw new C.v({ message: "Expected plan to be selected", extraSentryInformation: Q });
+    if (null == S) throw new C.v({ message: "Expected selectedSkuId", extraSentryInformation: Q });
+    if (null == T) throw new C.v({ message: "Step should be set", extraSentryInformation: Q });
+    let $ = o.useCallback(() => {
         i(), a?.();
     }, [i, a]);
     (0, ee.Ay)(() => {
@@ -3031,7 +3032,7 @@ function lV(e) {
                 subscription_id: y?.id,
             });
     });
-    let $ = (0, lv.A)();
+    let J = (0, lv.A)();
     o.useEffect(() => {
         function e() {
             if (A)
@@ -3071,9 +3072,9 @@ function lV(e) {
                     }),
                         lk._.dispatch(eG.jej.PREMIUM_GROUP_PURCHASE_FLOW_COMPLETED);
             else
-                null != K && K > 0
-                    ? (0, lN.$)({ orbsAmount: K })
-                    : lO(N, S) && ($?.id === lb.Ym || $?.name?.includes(lb.YX)) && (0, lb.tu)();
+                null != Z && Z > 0
+                    ? (0, lN.$)({ orbsAmount: Z, openGiftingBadgePostPurchaseModal: N && G ? D : void 0 })
+                    : lO(N, S) && (J?.id === lb.Ym || J?.name?.includes(lb.YX)) && (0, lb.tu)();
         }
         return (
             lk._.subscribe(eG.jej.WOW_MOMENT_CONFIRMATION_MODAL_CLOSED, e),
@@ -3081,19 +3082,19 @@ function lV(e) {
                 lk._.unsubscribe(eG.jej.WOW_MOMENT_CONFIRMATION_MODAL_CLOSED, e);
             }
         );
-    }, [A, y, K, $, N, S, E]),
+    }, [A, y, Z, J, N, S, E, D, G]),
         o.useEffect(() => {
             !N || null == b || null == j || M || O || (0, lw.Ik)(b) || L({ onSubscriptionConfirmation: a });
         }, [L, N, b, j, M, O, a]),
         o.useEffect(() => {
-            F &&
+            B &&
+                null != V &&
                 null != Y &&
-                null != W &&
-                (0, l_.qr)(lP.M.GIFTING_PROMOTION_REMINDER, W, { dismissAction: lY.i.INDIRECT_ACTION });
-        }, [Y, W, F]);
-    let J = null != m ? lL.Rs.DEEPLINK_TO_DESKTOP_APP : void 0;
-    if (null != u) t = u(_, Q, y);
-    else if (N) t = (0, l.jsx)(lL.fw, { planId: _.id, onClose: Q });
+                (0, l_.qr)(lP.M.GIFTING_PROMOTION_REMINDER, Y, { dismissAction: lY.i.INDIRECT_ACTION });
+        }, [V, Y, B]);
+    let X = null != m ? lL.Rs.DEEPLINK_TO_DESKTOP_APP : void 0;
+    if (null != u) t = u(_, $, y);
+    else if (N) t = (0, l.jsx)(lL.fw, { planId: _.id, onClose: $ });
     else {
         let e =
             g === _.id
@@ -3105,19 +3106,19 @@ function lV(e) {
                   };
         t = (0, l.jsx)(lL.Ay, {
             planId: _.id,
-            onClose: Q,
-            paymentSourceType: V,
-            hideClose: null != G,
+            onClose: $,
+            paymentSourceType: K,
+            hideClose: null != F,
             startingFractionalPremiumEndsAt: v,
-            customCTAType: J,
+            customCTAType: X,
             ...e,
         });
     }
     return (0, l.jsxs)(l.Fragment, {
         children: [
             (0, l.jsxs)(eW.dZ, { children: [(0, l.jsx)(nG.A, {}), t] }),
-            null != G && G,
-            q && (0, l.jsx)(lW, { rewardSkuIds: U, onClose: Q, onRewardModalClose: D }),
+            null != F && F,
+            z && (0, l.jsx)(lW, { rewardSkuIds: U, onClose: $, onRewardModalClose: D }),
         ],
     });
 }
