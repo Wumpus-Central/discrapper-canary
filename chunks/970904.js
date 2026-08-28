@@ -1,4 +1,4 @@
-n.d(t, { A: () => z });
+n.d(t, { A: () => Z });
 var l,
     i = n(477900),
     r = n(582128),
@@ -345,10 +345,8 @@ n(321073);
 var B = n(38785),
     H = n(577381),
     W = n(845012),
-    Y = n(755880),
-    V = n(134638),
-    K = n(906234);
-function Z(e) {
+    Y = n(134638);
+function V(e) {
     let {
             loading: t,
             disabled: n,
@@ -406,18 +404,16 @@ function Z(e) {
         { priceOptions: N, planPricesLoading: b } = (0, j.Pr)(I, m, u),
         M = (0, H.i)({ planSkuId: E.skuId, invoice: m }),
         L = r.useMemo(() => (C && null != M ? M : null), [C, M]),
-        k = (0, K.G)(S),
-        w = r.useMemo(() => (k ? (0, i.jsx)(Y.a, {}) : null), [k]),
-        U = r.useMemo(() => (null != L ? L : null != w ? w : null), [L, w]),
-        D = (0, j.J$)(I.paymentSourceId),
-        G = null,
-        F = null,
-        Z = _ ? null : d;
+        k = r.useMemo(() => (null != L ? L : null), [L]),
+        w = (0, j.J$)(I.paymentSourceId),
+        U = null,
+        D = null,
+        G = _ ? null : d;
     return (
         C
-            ? (F = (0, i.jsx)(W.X, {
+            ? (D = (0, i.jsx)(W.X, {
                   disabled: n,
-                  headingSubText: Z,
+                  headingSubText: G,
                   planOptions: A,
                   selectedPlanId: S,
                   showPlanStatusSubText: !0,
@@ -425,13 +421,13 @@ function Z(e) {
                   planPricesLoading: b,
               }))
             : null != m &&
-              (G = (0, i.jsx)(V._, {
+              (U = (0, i.jsx)(Y._, {
                   type: c.u$.SUBSCRIPTION_SWITCH_PLAN,
                   invoicePreview: m,
                   subscriptionPlan: E,
-                  isPrepaidPaymentSource: D,
+                  isPrepaidPaymentSource: w,
                   isPremiumGroupPurchase: s,
-                  bottomSubText: Z,
+                  bottomSubText: G,
               })),
         (0, i.jsx)(B.T_, {
             isStepLoading: t,
@@ -440,18 +436,18 @@ function Z(e) {
             upperInlineNoticeProps: T,
             paymentMethodContent: v,
             subscriptionDetailsContent: g,
-            purchaseItemContent: G,
-            planSelectContent: F,
+            purchaseItemContent: U,
+            planSelectContent: D,
             invoiceSummaryContent: p,
             legalContent: x,
             invoiceTotalDueLabel: P ? y.intl.string(O.default.R0cZsM) : y.intl.string(O.default["11g67A"]),
             invoiceTotalDueValue: null != m ? (0, R.U5)(m) : void 0,
-            promotionalNoticeContent: U,
+            promotionalNoticeContent: k,
         })
     );
 }
-var q = n(510552);
-function z(e) {
+var K = n(510552);
+function Z(e) {
     let { handlePaymentSourceAdd: t, planGroup: n, hasOpenInvoice: l, isInPastDueCheckout: a } = e,
         A = (0, d.mx)(),
         { paymentSources: g, hasPaymentSources: P } = (0, u.j)(),
@@ -483,7 +479,7 @@ function z(e) {
         })),
         { isPremiumPurchase: H, isPremiumGroupPurchase: W } = (0, p.t4)((e) => e.get("selectedPlanAttributes")),
         Y = (0, E.g)(g, T),
-        { showFractionalPremiumBanner: V, fractionalPremiumInfo: K } = (0, h._V)({
+        { showFractionalPremiumBanner: Z, fractionalPremiumInfo: q } = (0, h._V)({
             premiumSubscription: L,
             selectedPlanId: x,
             planGroup: n,
@@ -564,7 +560,7 @@ function z(e) {
                           premiumSubscription: L,
                           newPlan: v,
                           planGroup: n,
-                          fractionalPremiumInfo: K,
+                          fractionalPremiumInfo: q,
                           priceOptions: N,
                       },
                       en,
@@ -579,7 +575,7 @@ function z(e) {
                 resolvePaymentSourceOptions: a
                     ? (e) => e.map((e) => (e.id === es ? { ...e, tooltipText: y.intl.string(O.default["hjsn+s"]) } : e))
                     : void 0,
-                className: s()({ [q.E]: H }),
+                className: s()({ [K.E]: H }),
             }),
             [L?.eligiblePaymentGateways, H, a, es],
         ),
@@ -606,7 +602,7 @@ function z(e) {
                 null == j || null == b || ep
                     ? null
                     : (0, i.jsx)(f.P, {
-                          fractionalPremiumInfo: K,
+                          fractionalPremiumInfo: q,
                           overrideRenewalDate: ee,
                           activeSubscription: L,
                           isTrial: !1,
@@ -620,14 +616,14 @@ function z(e) {
                               renewalInvoicePreview: b,
                           },
                       }),
-            [K, j, b, ep, ee, L, v, Y, ei],
+            [q, j, b, ep, ee, L, v, Y, ei],
         );
-    return (0, i.jsx)(Z, {
+    return (0, i.jsx)(V, {
         loading: R,
         disabled: z,
         isInPastDueCheckout: a,
-        showFractionalPremiumBanner: V,
-        fractionalPremiumInfo: K,
+        showFractionalPremiumBanner: Z,
+        fractionalPremiumInfo: q,
         isPremiumGroupPurchase: W,
         paymentRestrictionBannerType: ea,
         invoiceError: A,
