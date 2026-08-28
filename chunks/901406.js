@@ -168,7 +168,7 @@ function Q(e, t) {
                 null == (i = e.config.ctaConfig)
                     ? null
                     : N({ url: (0, A.Jx)(e.config), android: i.android, ios: i.ios }),
-            trackOverlayEvent: (n, i, r, s) =>
+            trackOverlayEvent: (n, i, r, s, o) =>
                 (0, T.eA)({
                     quest: e,
                     trackingCtx: t,
@@ -176,6 +176,7 @@ function Q(e, t) {
                     overlayVariant: r,
                     event: n,
                     timeSpentMs: s,
+                    overlaySurface: o,
                 }),
         });
 }
@@ -209,7 +210,7 @@ function R(e, t) {
             link: s,
             directLink: o,
             inlineStoreParams: N(r),
-            trackOverlayEvent: (e, r, s, o) =>
+            trackOverlayEvent: (e, r, s, o, a) =>
                 (0, T.YE)({
                     adContentId: n,
                     adCreativeType: i,
@@ -218,6 +219,7 @@ function R(e, t) {
                     overlayVariant: s,
                     event: e,
                     timeSpentMs: o,
+                    overlaySurface: a,
                 }),
         });
 }

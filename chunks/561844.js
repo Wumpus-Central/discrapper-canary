@@ -89,8 +89,16 @@ function O(e) {
         );
 }
 function R(e) {
-    let { quest: t, trackingCtx: n, inlineStoreAppId: i, overlayVariant: r, event: a, timeSpentMs: s } = e,
-        l = {
+    let {
+            quest: t,
+            trackingCtx: n,
+            inlineStoreAppId: i,
+            overlayVariant: r,
+            event: a,
+            timeSpentMs: s,
+            overlaySurface: l,
+        } = e,
+        o = {
             content_name: (0, p.jO)(n.content),
             cta_name: n.ctaContent,
             impression_id: n.impressionId,
@@ -98,16 +106,36 @@ function R(e) {
             app_id: i,
             content_position: n.position,
             overlay_variant: r,
-        },
-        o =
-            (a === m.HAw.QUEST_APP_STORE_OVERLAY_CLOSED || a === m.HAw.QUEST_APP_STORE_OVERLAY_RETURNED) &&
-            void 0 !== s;
-    O({
-        questId: t.id,
-        event: a,
-        properties: o ? { ...l, time_spent_ms: s } : l,
-        sourceQuestContent: n.sourceQuestContent,
-    });
+        };
+    switch (a) {
+        case m.HAw.QUEST_APP_STORE_OVERLAY_CLOSED:
+            O({
+                questId: t.id,
+                event: a,
+                properties: { ...o, time_spent_ms: s ?? null },
+                sourceQuestContent: n.sourceQuestContent,
+            });
+            break;
+        case m.HAw.QUEST_APP_STORE_OVERLAY_RETURNED:
+            O({
+                questId: t.id,
+                event: a,
+                properties: { ...o, time_spent_ms: s ?? null, overlay_surface: l ?? null },
+                sourceQuestContent: n.sourceQuestContent,
+            });
+            break;
+        case m.HAw.QUEST_APP_STORE_OVERLAY_BACKGROUNDED:
+            O({
+                questId: t.id,
+                event: a,
+                properties: { ...o, overlay_surface: l ?? null },
+                sourceQuestContent: n.sourceQuestContent,
+            });
+            break;
+        case m.HAw.QUEST_APP_STORE_OVERLAY_OPEN_SUCCEEDED:
+        case m.HAw.QUEST_APP_STORE_OVERLAY_OPEN_FAILED:
+            O({ questId: t.id, event: a, properties: o, sourceQuestContent: n.sourceQuestContent });
+    }
 }
 function L(e) {
     let {
@@ -118,8 +146,9 @@ function L(e) {
             overlayVariant: a,
             event: s,
             timeSpentMs: l,
+            overlaySurface: o,
         } = e,
-        o = {
+        d = {
             content_name: (0, p.jO)(i.content),
             cta_name: i.ctaContent,
             impression_id: i.impressionId,
@@ -127,17 +156,39 @@ function L(e) {
             app_id: r,
             content_position: i.position,
             overlay_variant: a,
-        },
-        d =
-            (s === m.HAw.QUEST_APP_STORE_OVERLAY_CLOSED || s === m.HAw.QUEST_APP_STORE_OVERLAY_RETURNED) &&
-            void 0 !== l;
-    y({
-        adContentId: t,
-        adCreativeType: n,
-        event: s,
-        properties: d ? { ...o, time_spent_ms: l } : o,
-        sourceQuestContent: i.sourceQuestContent,
-    });
+        };
+    switch (s) {
+        case m.HAw.QUEST_APP_STORE_OVERLAY_CLOSED:
+            y({
+                adContentId: t,
+                adCreativeType: n,
+                event: s,
+                properties: { ...d, time_spent_ms: l ?? null },
+                sourceQuestContent: i.sourceQuestContent,
+            });
+            break;
+        case m.HAw.QUEST_APP_STORE_OVERLAY_RETURNED:
+            y({
+                adContentId: t,
+                adCreativeType: n,
+                event: s,
+                properties: { ...d, time_spent_ms: l ?? null, overlay_surface: o ?? null },
+                sourceQuestContent: i.sourceQuestContent,
+            });
+            break;
+        case m.HAw.QUEST_APP_STORE_OVERLAY_BACKGROUNDED:
+            y({
+                adContentId: t,
+                adCreativeType: n,
+                event: s,
+                properties: { ...d, overlay_surface: o ?? null },
+                sourceQuestContent: i.sourceQuestContent,
+            });
+            break;
+        case m.HAw.QUEST_APP_STORE_OVERLAY_OPEN_SUCCEEDED:
+        case m.HAw.QUEST_APP_STORE_OVERLAY_OPEN_FAILED:
+            y({ adContentId: t, adCreativeType: n, event: s, properties: d, sourceQuestContent: i.sourceQuestContent });
+    }
 }
 function y(e) {
     let {
