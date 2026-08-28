@@ -170,7 +170,7 @@ function U(e) {
                         },
                     });
                 },
-                position: "top",
+                position: "right",
                 align: "center",
                 clickTrap: !0,
                 children: (e) =>
@@ -276,8 +276,8 @@ function en(e) {
                       className: ee.IO,
                       style: {
                           transform: f
-                              ? (0, c.to)([t.to({ range: [0, 1], output: [56, 0] })], (e) => `translateY(${e}px)`)
-                              : "translateY(56px)",
+                              ? (0, c.to)([t.to({ range: [0, 1], output: [54, 0] })], (e) => `translateY(${e}px)`)
+                              : "translateY(54px)",
                       },
                       children: I.map((e) => (0, l.jsx)(el, { hidden: u, message: e, durationSeconds: a }, e.id)),
                   }),
@@ -373,7 +373,6 @@ function el(e) {
         ? b
         : (0, l.jsx)(g.u, {
               positionKey: `${p}`,
-              delay: 200,
               forceOpen: h && null == r && !_,
               asset: (0, l.jsx)(X.eu, {
                   src: t.author.getAvatarURL(void 0, 16),

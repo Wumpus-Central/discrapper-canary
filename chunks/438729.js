@@ -1,4 +1,4 @@
-n.d(t, { _A: () => C, Ay: () => O, sP: () => N }), n(938796);
+n.d(e, { _A: () => N, Ay: () => O, sP: () => $ }), n(938796);
 var s = n(477900),
     i = n(582128),
     a = n(503698),
@@ -10,79 +10,80 @@ var s = n(477900),
     o = n(834730),
     u = n(613373),
     p = n(625494),
-    E = n(652215),
-    g = n(580950);
-function A(e) {
-    let { timestampMs: t, attachmentId: n } = e;
+    E = n(609969),
+    g = n(652215),
+    A = n(580950);
+function h(t) {
+    let { timestampMs: e, attachmentId: n } = t;
     return (0, s.jsx)(d.D, {
         tag: "span",
-        className: g.v,
-        onClick: () => p._.dispatchKeyed(E.zOV.CLIP_SEEK_VIDEO, n, { timestampMs: t }),
+        className: A.v,
+        onClick: () => p._.dispatchKeyed(g.zOV.CLIP_SEEK_VIDEO, n, { timestampMs: (0, E.$)(e) }),
         children: (0, s.jsxs)(o.E, {
             tag: "span",
             variant: "text-md/normal",
             color: "text-link",
-            className: g.v,
-            children: ["@", (0, u.rB)(t / 1e3)],
+            className: A.v,
+            children: ["@", (0, u.rB)(e / 1e3)],
         }),
     });
 }
-var h = n(860227),
-    I = n(861986),
-    T = n(375708),
-    f = n(318626),
-    _ = n(165648),
-    S = n(13673);
-function C(e, t) {
-    return e.type === E.lAJ.VOICE_HANGOUT_INVITE
+var I = n(860227),
+    T = n(861986),
+    f = n(375708),
+    _ = n(318626),
+    S = n(165648),
+    C = n(13673);
+function N(t, e) {
+    return t.type === g.lAJ.VOICE_HANGOUT_INVITE
         ? ""
-        : e.hasFlag(E.pr7.SOURCE_MESSAGE_DELETED)
-          ? T.intl.string(T.t.JOtgSw)
-          : t;
+        : t.hasFlag(g.pr7.SOURCE_MESSAGE_DELETED)
+          ? f.intl.string(f.t.JOtgSw)
+          : e;
 }
-function N(e, t) {
-    let { message: n } = t,
-        { message: s } = e;
+function $(t, e) {
+    let { message: n } = e,
+        { message: s } = t;
     return (
-        (0, m.A)(e, t, ["message"]) &&
+        (0, m.A)(t, e, ["message"]) &&
         n.content === s.content &&
         n.state === s.state &&
         n.flags === s.flags &&
         n.editedTimestamp?.toString() === s.editedTimestamp?.toString()
     );
 }
-let O = i.memo(function (e) {
-    let { className: t, message: n, children: a, content: l, onUpdate: m, contentRef: d, compact: o } = e,
-        u = n.state === E.cmJ.SEND_FAILED,
-        p = n.state === E.cmJ.SENDING,
-        g = n.isCommandType(),
-        T = n.editedTimestamp?.toString(),
-        N = i.useRef(!1);
+let O = i.memo(function (t) {
+    let { className: e, message: n, children: a, content: l, onUpdate: m, contentRef: d, compact: o } = t,
+        u = n.state === g.cmJ.SEND_FAILED,
+        p = n.state === g.cmJ.SENDING,
+        E = n.isCommandType(),
+        A = n.editedTimestamp?.toString(),
+        f = i.useRef(!1);
     return (
         i.useLayoutEffect(() => {
-            N.current ? null != m && m() : (N.current = !0);
-        }, [m, n.content, l, T, a]),
+            f.current ? null != m && m() : (f.current = !0);
+        }, [m, n.content, l, A, a]),
         (0, s.jsxs)("div", {
-            id: (0, h.CJ)(n),
+            id: (0, I.CJ)(n),
             ref: d,
-            className: r()(t, _.PT, {
-                [f.BK]: !0,
-                [S.t6]: n.hasFlag(E.pr7.IS_GUILD_OFFICIAL),
-                [f.Tn]: p && !g,
-                [f.nB]: "rtl" === c()(n.content),
-                [f.Ix]: u,
-                [f.w3]: n.isUnsupported,
+            className: r()(e, S.PT, {
+                [_.BK]: !0,
+                [C.t6]: n.hasFlag(g.pr7.IS_GUILD_OFFICIAL),
+                [_.Tn]: p && !E,
+                [_.nB]: "rtl" === c()(n.content),
+                [_.Ix]: u,
+                [_.w3]: n.isUnsupported,
             }),
             children: [
-                n.type === E.lAJ.MEDIA_MENTION_MESSAGE &&
+                n.type === g.lAJ.MEDIA_MENTION_MESSAGE &&
                     null != n.mediaMention &&
-                    (0, s.jsx)(A, {
+                    (0, s.jsx)(h, {
                         timestampMs: n.mediaMention.timestamp,
                         attachmentId: n.mediaMention.attachment_id,
                     }),
-                a ?? C(n, l),
-                (0, s.jsx)(I.A, { message: n, compact: o, location: I.O.WITH_CONTENT }),
+                a ?? N(n, l),
+                (0, s.jsx)(T.A, { message: n, compact: o, location: T.O.WITH_CONTENT }),
             ],
         })
     );
-}, N);
+}, $);

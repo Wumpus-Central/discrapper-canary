@@ -6,7 +6,6 @@
     border-radius: 62px;
     bottom: var(--space-6);
     box-sizing: border-box;
-    gap: var(--space-8);
     height: 36px;
     inset-inline-start: 50%;
     padding: var(--space-4) var(--space-8);
@@ -20,11 +19,11 @@
 .bar_a750ac,
 .emojis_a750ac {
     align-items: center;
-    display: flex
+    display: flex;
+    gap: var(--space-4)
 }
 
 .emojis_a750ac {
-    gap: var(--space-4);
     justify-content: center
 }
 
@@ -54,11 +53,16 @@
 }
 
 .messageCount_a750ac {
-    cursor: pointer
+    cursor: pointer;
+    margin-inline-start: var(--space-4)
+}
+
+.messageCount_a750ac>div:hover {
+    text-decoration: underline
 }
 
 .timeline__76ea6 {
-    bottom: 68px;
+    bottom: 66px;
     inset-inline-end: var(--space-20);
     inset-inline-start: var(--space-20);
     pointer-events: none;
@@ -113,4 +117,4 @@
     white-space: nowrap
 }
 
-/*# sourceMappingURL=848826.7f1198f8d2e86d7a.css.map*/
+/*# sourceMappingURL=848826.8ca31d71a2c14e84.css.map*/
