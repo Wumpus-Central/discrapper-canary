@@ -30,6 +30,11 @@
     width: var(--custom-clips-mosaic-stack-width)
 }
 
+.stackEven_b97d98 {
+    flex: none;
+    width: calc(50% - var(--space-8)/2)
+}
+
 .stackTile_b97d98 {
     flex: 1;
     min-height: 0
@@ -50,12 +55,6 @@
     min-width: 0
 }
 
-.playHitArea_b97d98 {
-    cursor: pointer;
-    inset: 0;
-    position: absolute
-}
-
 .playButton_b97d98 {
     align-items: center;
     -webkit-backdrop-filter: blur(10px);
@@ -63,10 +62,10 @@
     background: rgba(48, 48, 48, .4);
     border-radius: 50%;
     color: var(--text-overlay-light);
+    cursor: pointer;
     display: flex;
     flex-shrink: 0;
-    justify-content: center;
-    pointer-events: none
+    justify-content: center
 }
 
 .lg_b97d98 {
@@ -106,4 +105,4 @@
     word-break: break-word
 }
 
-/*# sourceMappingURL=269614.03bab02b9909d3ca.css.map*/
+/*# sourceMappingURL=269614.31c4f99bc1b64061.css.map*/

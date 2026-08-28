@@ -1,4 +1,5 @@
 .overlay__65dc6 {
+    border-radius: inherit;
     inset-inline: 0;
     bottom: 0;
     pointer-events: none;
@@ -12,6 +13,7 @@
 .backdrop__65dc6 {
     -webkit-backdrop-filter: blur(8px);
     backdrop-filter: blur(8px);
+    border-radius: inherit;
     inset-inline: 0;
     bottom: 0;
     height: 100%;
@@ -30,4 +32,4 @@
     position: relative
 }
 
-/*# sourceMappingURL=887789.5f77a10da5a7538d.css.map*/
+/*# sourceMappingURL=887789.c9b5b7d433caa3b7.css.map*/
