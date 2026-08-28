@@ -196,8 +196,8 @@ function F(e, t, n, i) {
         (0, A.oo)({
             content: e,
             groupName: t?.groupName,
-            onAdded: () => {
-                (0, _.rF)(e, t?.guildId), z(e, t), t?.onShown?.();
+            onAdded: (n) => {
+                (0, _.rF)(e, t?.guildId), z(e, t, n), t?.onShown?.();
             },
         }));
 }
@@ -254,11 +254,13 @@ async function $(e, t) {
     V(e, t), await N(e, n), B(e, t);
 }
 function z(e, t) {
-    let [n, i] = (0, A.oF)();
+    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
+        [i, a] = (0, A.oF)();
     o.default.track(T.HAw.DISMISSIBLE_CONTENT_SHOWN, {
         type: r.M[e],
-        content_count: n,
-        fatigable_content_count: i,
+        unselected_content_types: n?.map((e) => r.M[e]) ?? null,
+        content_count: i,
+        fatigable_content_count: a,
         group_name: t?.groupName,
         bypass_fatigue: u.C.has(e),
         guild_id: t?.guildId,

@@ -65,19 +65,20 @@ function h(e, t) {
     );
 }
 function I(e, t) {
+    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
     if (null == t) return e;
     e.currentlyShown.add(t.content);
-    let n = e.recentlyShown.filter((e) => e !== t.content);
+    let i = e.recentlyShown.filter((e) => e !== t.content);
     return (
-        n.unshift(t.content),
-        n.splice(5),
-        (e.recentlyShown = n),
+        i.unshift(t.content),
+        i.splice(5),
+        (e.recentlyShown = i),
         null != t.groupName && e.currentlyShownGroup.add(t.groupName),
         d.C.has(t.content) ||
             ((e.shownFatigableCandidate = t),
             e.prevFatigableCandidate?.content !== t.content &&
                 ((e.prevFatigableCandidate = t), (e.lastWinnerTime = new Date().getTime()))),
-        t.onAdded?.(),
+        t.onAdded?.(n),
         e
     );
 }
@@ -85,7 +86,8 @@ function f(e, t) {
     return e.candidates.delete(t.content), e;
 }
 function p(e, t) {
-    return I(h(e, e.shownFatigableCandidate), t);
+    let n = [...e.candidates.keys()].filter((e) => e !== t?.content);
+    return I(h(e, e.shownFatigableCandidate), t, n);
 }
 function T(e) {
     var t;
