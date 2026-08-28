@@ -93,10 +93,7 @@ let s = new n(o.h, {
             r = Date.now();
         t.forEach((e) => {
             e.products.forEach((e) => {
-                (u[e.id] = { state: "success", product: e, fetchedAt: r }),
-                    e.skuIds.forEach((t) => {
-                        c[t] = { state: "success", products: [e], fetchedAt: r };
-                    });
+                u[e.id] = { state: "success", product: e, fetchedAt: r };
             });
         });
     },
