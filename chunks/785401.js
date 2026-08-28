@@ -2365,12 +2365,12 @@ class e2 extends m.G {
 }
 let e3 = new e2();
 var e5 = n(335871),
-    e4 =
+    e6 =
         (((a = {})[(a.EXCLUSIVE = 0)] = "EXCLUSIVE"),
         (a[(a.SYNCED = 1)] = "SYNCED"),
         (a[(a.PRE_ALLOCATED = 2)] = "PRE_ALLOCATED"),
         a),
-    e6 =
+    e4 =
         (((s = {})[(s.UNSPECIFIED = 0)] = "UNSPECIFIED"),
         (s[(s.USER = 1)] = "USER"),
         (s[(s.INSTALLATION = 2)] = "INSTALLATION"),
@@ -2456,7 +2456,7 @@ class tl extends m.G {
                 no: 14,
                 name: "unit_type",
                 kind: "enum",
-                T: () => ["discord_protos.discord_experimentation.v1.Experiment.UnitType", e6],
+                T: () => ["discord_protos.discord_experimentation.v1.Experiment.UnitType", e4],
             },
             { no: 15, name: "variations", kind: "message", repeat: 1, T: () => tu },
             { no: 16, name: "rules", kind: "message", repeat: 1, T: () => O },
@@ -2514,6 +2514,7 @@ class tl extends m.G {
                 repeat: 1,
                 T: () => ["discord_protos.discord_experimentation.v1.Experiment.ExposurePointId", tn],
             },
+            { no: 47, name: "dynamic_config_model", kind: "scalar", T: 9 },
             { no: 37, name: "growthbook_tags", kind: "scalar", repeat: 2, T: 9 },
             { no: 38, name: "allocate_right_to_left", kind: "scalar", T: 8 },
             { no: 39, name: "is_managed", kind: "scalar", T: 8 },
@@ -2561,6 +2562,7 @@ class tl extends m.G {
             suppressEditorMention: !1,
             customUnitPrefix: 0,
             exposurePoints: [],
+            dynamicConfigModel: "",
             growthbookTags: [],
             allocateRightToLeft: !1,
             isManaged: !1,
@@ -2703,6 +2705,9 @@ class tl extends m.G {
                         for (let t = e.int32() + e.pos; e.pos < t; ) r.exposurePoints.push(e.int32());
                     else r.exposurePoints.push(e.int32());
                     break;
+                case 47:
+                    r.dynamicConfigModel = e.string();
+                    break;
                 case 37:
                     r.growthbookTags.push(e.string());
                     break;
@@ -2791,6 +2796,7 @@ class tl extends m.G {
             for (let n = 0; n < e.exposurePoints.length; n++) t.int32(e.exposurePoints[n]);
             t.join();
         }
+        "" !== e.dynamicConfigModel && t.tag(47, f.O0.LengthDelimited).string(e.dynamicConfigModel);
         for (let n = 0; n < e.growthbookTags.length; n++) t.tag(37, f.O0.LengthDelimited).string(e.growthbookTags[n]);
         !1 !== e.allocateRightToLeft && t.tag(38, f.O0.Varint).bool(e.allocateRightToLeft),
             !1 !== e.isManaged && t.tag(39, f.O0.Varint).bool(e.isManaged),
@@ -2809,7 +2815,7 @@ class to extends m.G {
                 no: 1,
                 name: "mode",
                 kind: "enum",
-                T: () => ["discord_protos.discord_experimentation.v1.Experiment.NumberLineSettings.Mode", e4],
+                T: () => ["discord_protos.discord_experimentation.v1.Experiment.NumberLineSettings.Mode", e6],
             },
             { no: 2, name: "linked_id", kind: "scalar", T: 6 },
             { no: 3, name: "shared_control", kind: "scalar", T: 8 },
