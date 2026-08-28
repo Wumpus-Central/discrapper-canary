@@ -11,15 +11,15 @@ var n = s(477900),
     x = s(390848),
     u = s(39623),
     E = s(17928),
-    j = s(994500),
-    v = s(420825),
+    j = s(885386),
+    v = s(994500),
     h = s(22212),
-    A = s(375708),
-    N = s(266600);
-function g(t) {
+    g = s(375708),
+    A = s(266600);
+function N(t) {
     let { userId: e, analyticsLocation: s } = t,
-        a = (0, v.q)(),
-        r = (0, E.bG)([j.A], () => j.A.getNote(e)),
+        a = j.Zd.useSetting(),
+        r = (0, E.bG)([v.A], () => v.A.getNote(e)),
         [c, d] = i.useState(!1),
         m = i.useCallback(() => {
             d(!0), (0, h.Yq)({ analyticsLocation: s, noteLength: r?.length ?? 0 });
@@ -27,22 +27,22 @@ function g(t) {
     return a || null == r || "" === r
         ? null
         : (0, n.jsxs)("div", {
-              className: N.kL,
+              className: A.kL,
               children: [
                   c
                       ? null
                       : (0, n.jsx)("div", {
-                            className: N.p6,
+                            className: A.p6,
                             children: (0, n.jsx)(o.$, {
                                 icon: u.EyeIcon,
                                 variant: "secondary",
                                 size: "sm",
                                 onClick: m,
-                                text: A.intl.string(A.t.sB0q4C),
+                                text: g.intl.string(g.t.sB0q4C),
                             }),
                         }),
                   (0, n.jsx)(l.E, {
-                      className: c ? void 0 : N.R,
+                      className: c ? void 0 : A.R,
                       "aria-label": c ? r : "",
                       variant: "redesign/message-preview/normal",
                       children: r,
@@ -59,7 +59,7 @@ function _(t) {
     let { user: e, guildId: s, channelId: a, applicationId: u, isGameRelationship: E = !1, className: j } = t,
         { themeType: v } = (0, y.E)(),
         h = v === I.d.MODAL_V2,
-        N = p.Ay.getName(s, a, e),
+        A = p.Ay.getName(s, a, e),
         { trackUserProfileAction: _ } = (0, C.NJ)(),
         { newestAnalyticsLocation: R } = (0, c.Ay)(),
         { acceptFriendRequest: k, cancelFriendRequest: P } = (0, x.I)({
@@ -84,8 +84,8 @@ function _(t) {
                   L
                       ? (0, n.jsx)(l.E, {
                             variant: "text-sm/normal",
-                            children: A.intl.format(E ? A.t.syHjLL : A.t.V15uUI, {
-                                username: N,
+                            children: g.intl.format(E ? g.t.syHjLL : g.t.V15uUI, {
+                                username: A,
                                 applicationIcon: () =>
                                     (0, n.jsx)(m.A, { className: f.Gt, game: T, size: m.M.XXSMALL }, T?.id),
                                 applicationName: T?.name,
@@ -93,9 +93,9 @@ function _(t) {
                         })
                       : (0, n.jsx)(l.E, {
                             variant: "text-sm/normal",
-                            children: A.intl.format(A.t.uIomXw, { username: N }),
+                            children: g.intl.format(g.t.uIomXw, { username: A }),
                         }),
-                  (0, n.jsx)(g, { userId: e.id, analyticsLocation: "User Profile" }),
+                  (0, n.jsx)(N, { userId: e.id, analyticsLocation: "User Profile" }),
                   (0, n.jsxs)("div", {
                       className: f.UD,
                       children: [
@@ -103,13 +103,13 @@ function _(t) {
                               variant: h ? "secondary" : "primary",
                               size: "sm",
                               onClick: b,
-                              text: A.intl.string(A.t.Zcibdf),
+                              text: g.intl.string(g.t.Zcibdf),
                           }),
                           (0, n.jsx)(o.$, {
                               variant: "secondary",
                               size: "sm",
                               onClick: S,
-                              text: A.intl.string(A.t.xuio0C),
+                              text: g.intl.string(g.t.xuio0C),
                           }),
                       ],
                   }),
