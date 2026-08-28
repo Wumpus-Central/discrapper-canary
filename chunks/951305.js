@@ -52,18 +52,21 @@ function N(e) {
         { openGiftingBadgePostPurchaseModal: X, canShowGiftingBadgePostPurchase: $ } = (function () {
             let { enabled: e } = c.J.useConfig({ location: "useOpenGiftingBadgePostPurchaseModal" }),
                 t = (0, d.bG)([g.Ay], () => g.Ay.getBadgeById(i.$.GIFTING)?.tiers),
-                a = (0, s.t4)((e) => e.purchaseState),
-                o = l.useRef(null);
+                { purchaseState: a, quantity: o } = (0, s.t4)((e) => ({
+                    purchaseState: e.purchaseState,
+                    quantity: e.quantity,
+                })),
+                u = l.useRef(null);
             return (
                 l.useEffect(() => {
                     e &&
                         a === x.h.PURCHASING &&
-                        (o.current = g.Ay.getSingleRequirementProgress(i.$.GIFTING)?.current ?? null);
+                        (u.current = g.Ay.getSingleRequirementProgress(i.$.GIFTING)?.current ?? null);
                 }, [e, a]),
                 {
                     openGiftingBadgePostPurchaseModal: l.useCallback(() => {
-                        if (e && null != o.current && null != (null != t ? (0, T.aZ)(t, o.current) : null)) {
-                            let e = o.current;
+                        if (e && null != u.current && null != (null != t ? (0, T.aZ)(t, u.current) : null)) {
+                            let e = u.current;
                             (0, m.openModalLazy)(async () => {
                                 let { default: t } = await Promise.all([
                                     n.e("417867"),
@@ -71,12 +74,12 @@ function N(e) {
                                     n.e("707319"),
                                     n.e("83703"),
                                 ]).then(n.bind(n, 855210));
-                                return (n) => (0, r.jsx)(t, { ...n, currentProgress: e });
+                                return (n) => (0, r.jsx)(t, { ...n, currentProgress: e, quantity: o });
                             });
                         }
-                    }, [e, t]),
+                    }, [e, t, o]),
                     canShowGiftingBadgePostPurchase:
-                        e && null != o.current && null != t && null != (0, T.aZ)(t, o.current),
+                        e && null != u.current && null != t && null != (0, T.aZ)(t, u.current),
                 }
             );
         })();

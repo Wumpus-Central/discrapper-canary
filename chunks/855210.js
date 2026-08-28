@@ -144,63 +144,63 @@ function I(e) {
     });
 }
 function B(e) {
-    let { currentProgress: t } = e,
-        i = (0, o.bG)([x.Ay], () => x.Ay.getBadgeById(r.$.GIFTING)?.tiers);
-    if (null == i) return null;
-    let s = (0, y.XX)(i, t),
-        n = t + 1,
-        a = (0, y.XX)(i, n),
-        c = a?.key !== s?.key,
-        d = (0, y.aZ)(i, n),
-        u = (0, y.cz)(i, n),
-        m = 1 === u;
-    return c && null != a
-        ? (0, l.jsx)(I, { simulatedProgress: n, currentTier: s, newTier: a, nextTier: d, giftsToNextTier: u })
-        : m
+    let { currentProgress: t, quantity: i } = e,
+        s = (0, o.bG)([x.Ay], () => x.Ay.getBadgeById(r.$.GIFTING)?.tiers);
+    if (null == s) return null;
+    let n = (0, y.XX)(s, t),
+        a = t + i,
+        c = (0, y.XX)(s, a),
+        d = c?.key !== n?.key,
+        u = (0, y.aZ)(s, a),
+        m = (0, y.cz)(s, a),
+        h = 1 === m;
+    return d && null != c
+        ? (0, l.jsx)(I, { simulatedProgress: a, currentTier: n, newTier: c, nextTier: u, giftsToNextTier: m })
+        : h
           ? (0, l.jsx)(E, {
-                title: N.intl.formatToPlainString(T.default.KjdBPz, { nextTier: d?.name ?? "" }),
+                title: N.intl.formatToPlainString(T.default.KjdBPz, { nextTier: u?.name ?? "" }),
                 description: N.intl.string(T.default.oqDrEM),
                 progressBarTitle: N.intl.string(T.default["Ka5s+Q"]),
-                progress: n,
-                currentTier: a ?? void 0,
-                nextTier: d ?? void 0,
+                progress: a,
+                currentTier: c ?? void 0,
+                nextTier: u ?? void 0,
             })
           : (0, l.jsx)(E, {
                 title: N.intl.string(T.default["/rBQud"]),
                 description: N.intl.string(T.default.DDQMlx),
                 progressBarTitle:
-                    s?.name != null ? N.intl.formatToPlainString(T.default.bwyQt8, { tierName: s?.name }) : "",
-                progress: n,
-                currentTier: a ?? void 0,
-                nextTier: d ?? void 0,
+                    n?.name != null ? N.intl.formatToPlainString(T.default.bwyQt8, { tierName: n?.name }) : "",
+                progress: a,
+                currentTier: c ?? void 0,
+                nextTier: u ?? void 0,
             });
 }
 function D(e) {
-    let { transitionState: t, onClose: i, currentProgress: r } = e,
-        { analyticsLocations: n } = (0, m.Ay)(u.A.GIFTING_BADGE_POST_PURCHASE),
-        { openGiftModal: a } = (0, j.$)({
+    let { transitionState: t, onClose: i, currentProgress: r, quantity: n } = e,
+        { analyticsLocations: a } = (0, m.Ay)(u.A.GIFTING_BADGE_POST_PURCHASE),
+        { openGiftModal: o } = (0, j.$)({
             giftRecipient: void 0,
-            analyticsLocations: n,
+            analyticsLocations: a,
             analyticsObject: { object: k.ZSU.BUTTON_CTA, objectType: k.AnalyticsObjectTypes.GIFT },
             location: "gifting-badge-post-purchase",
         }),
-        o = s.useCallback(() => {
+        x = s.useCallback(() => {
             i();
             let e = g.default.getCurrentUser();
             null != e && (0, h.openUserProfileModal)({ userId: e.id });
         }, [i]),
-        x = s.useCallback(() => {
-            i(), a();
-        }, [i, a]);
+        f = s.useCallback(() => {
+            i(), o();
+        }, [i, o]);
     return (0, l.jsx)(c.Modal, {
         transitionState: t,
         size: "sm",
         onClose: i,
         title: void 0,
         actions: [
-            { variant: "secondary", text: N.intl.string(T.default["sa/cfM"]), onClick: o },
-            { variant: "primary", text: N.intl.string(T.default.g86YiI), icon: d.GiftIcon, onClick: x },
+            { variant: "secondary", text: N.intl.string(T.default["sa/cfM"]), onClick: x },
+            { variant: "primary", text: N.intl.string(T.default.g86YiI), icon: d.GiftIcon, onClick: f },
         ],
-        children: (0, l.jsx)(B, { currentProgress: r }),
+        children: (0, l.jsx)(B, { currentProgress: r, quantity: n }),
     });
 }
