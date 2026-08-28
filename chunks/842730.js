@@ -7,5 +7,7 @@ d.exports = {
     HU: "editOverlay_f6d5bd",
     ob: "uploading_f6d5bd",
     _1: "editOverlayIcon_f6d5bd",
+    Eq: "menuTrigger_f6d5bd",
+    YZ: "inactiveInput_f6d5bd",
     Dm: "placeholderIcon_f6d5bd",
 };

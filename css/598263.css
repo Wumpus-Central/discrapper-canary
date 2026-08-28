@@ -97,6 +97,15 @@
     transition: transform .1s ease
 }
 
+.menuTrigger_f6d5bd {
+    inset: 0;
+    position: absolute
+}
+
+.inactiveInput_f6d5bd {
+    pointer-events: none
+}
+
 .placeholderIcon_f6d5bd {
     margin-top: var(--space-16);
     margin-inline-start: var(--space-16)
@@ -108,4 +117,4 @@
     }
 }
 
-/*# sourceMappingURL=598263.81be3fa9d488ec20.css.map*/
+/*# sourceMappingURL=598263.04abe95d2729c9d4.css.map*/
