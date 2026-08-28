@@ -11,7 +11,7 @@ var l = n(477900),
     m = n(463376),
     p = n(266060),
     C = n(951305),
-    h = n(87725),
+    h = n(206441),
     f = n(473617),
     E = n(699595),
     S = n(558620),
@@ -386,7 +386,7 @@ function $(e) {
     if (null == ep || ep.type === d.u$.LOADING)
         return (0, l.jsx)(u.Ed, { shouldShowUnifiedHeader: !0, headerBadgeConfig: eB });
     let e0 = null != eO ? eO.subscriptionTrial : void 0,
-        e2 =
+        e1 =
             ep.type === d.u$.PREMIUM_WITH_TRIAL
                 ? null
                 : (0, l.jsx)(o.k, {
@@ -396,7 +396,7 @@ function $(e) {
                       subscriptionTrial: e0,
                       isCustomGift: eA,
                   }),
-        e1 = null;
+        e2 = null;
     if (
         !eN &&
         (d.ME.has(ep.type) || ep.type === d.u$.PREMIUM_WITH_TRIAL) &&
@@ -408,7 +408,7 @@ function $(e) {
             isSubscriptionUpdate: null != et,
             fractionalPremiumInfo: ev,
         });
-        e1 = (0, l.jsx)(y._, { ...e, defaultExpanded: ei });
+        e2 = (0, l.jsx)(y._, { ...e, defaultExpanded: ei });
     }
     let e4 = eg
             ? void 0
@@ -438,8 +438,8 @@ function $(e) {
     return (0, l.jsx)(u.T_, {
         ...eX,
         purchaseItemContent: e4,
-        subscriptionDetailsContent: e1,
-        invoiceSummaryContent: e2,
+        subscriptionDetailsContent: e2,
+        invoiceSummaryContent: e1,
         legalContent: e3,
         invoiceTotalDueValue: e7,
         invoiceTotalDueLabel: ee ? x.intl.string(Q.default.Zxav97) : x.intl.string(Q.default.R0cZsM),

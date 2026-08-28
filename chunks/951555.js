@@ -1,4 +1,4 @@
-n.d(t, { A: () => U });
+n.d(t, { A: () => M });
 var i = n(477900),
     l = n(582128),
     s = n(503698),
@@ -14,8 +14,8 @@ var i = n(477900),
     h = n(158032),
     E = n(362111),
     S = n(457287),
-    p = n(637141),
-    x = n(688810),
+    x = n(637141),
+    p = n(688810),
     T = n(160946),
     f = n(351906),
     I = n(295405),
@@ -25,43 +25,39 @@ var i = n(477900),
     b = n(615396),
     y = n(543767),
     v = n(793574),
-    j = n(658040),
-    O = n(166532),
-    L = n(532794);
-function D(e) {
+    j = n(166532),
+    O = n(532794);
+function L(e) {
     let { dropdownProps: t, subscription: n, openInvoice: l } = e,
-        { enabled: s } = (0, j.z0)({ location: "premium_settings_payment_source_dropdown" }),
-        { analyticsLocations: r } = (0, x.Ay)(v.A.SUBSCRIPTION_DETAILS);
-    return s
-        ? null == l
-            ? (0, i.jsx)(p.Ay, { ...t, disabled: !0 })
-            : (0, i.jsx)(p.Ay, {
-                  ...t,
-                  onChange: (e) => {
-                      null != e &&
-                          (0, L.A)({
-                              initialPlanId: n.planIdFromItems,
-                              openInvoiceId: l.id,
-                              analyticsLocations: r,
-                              initialPaymentSourceId: e.id,
-                          });
-                  },
-                  onPaymentSourceAdd: () => {
-                      (0, L.A)({
+        { analyticsLocations: s } = (0, p.Ay)(v.A.SUBSCRIPTION_DETAILS);
+    return null == l
+        ? (0, i.jsx)(x.Ay, { ...t, disabled: !0 })
+        : (0, i.jsx)(x.Ay, {
+              ...t,
+              onChange: (e) => {
+                  null != e &&
+                      (0, O.A)({
                           initialPlanId: n.planIdFromItems,
                           openInvoiceId: l.id,
-                          analyticsLocations: r,
-                          startingStepOverride: O.pn.ADD_PAYMENT_STEPS,
+                          analyticsLocations: s,
+                          initialPaymentSourceId: e.id,
                       });
-                  },
-              })
-        : (0, i.jsx)(p.Ay, { ...t });
+              },
+              onPaymentSourceAdd: () => {
+                  (0, O.A)({
+                      initialPlanId: n.planIdFromItems,
+                      openInvoiceId: l.id,
+                      analyticsLocations: s,
+                      startingStepOverride: j.pn.ADD_PAYMENT_STEPS,
+                  });
+              },
+          });
 }
-var R = n(652215),
-    P = n(375708),
-    G = n(153345),
-    M = n(938442);
-function U(e) {
+var D = n(652215),
+    R = n(375708),
+    P = n(153345),
+    G = n(938442);
+function M(e) {
     let {
             subscription: t,
             onPaymentSourceAdded: n,
@@ -71,16 +67,16 @@ function U(e) {
             disabled: j = !1,
             openInvoice: O,
         } = e,
-        L = (0, u.bG)([f.A], () => f.A.hidePersonalInformation),
-        [U, k] = (0, u.yK)([I.A], () => [I.A.paymentSources, I.A.hasFetchedPaymentSources]),
+        M = (0, u.bG)([f.A], () => f.A.hidePersonalInformation),
+        [V, k] = (0, u.yK)([I.A], () => [I.A.paymentSources, I.A.hasFetchedPaymentSources]),
         w = (0, T.Y)((0, b.MP)(t)),
-        { analyticsLocations: F } = (0, x.Ay)(),
+        { analyticsLocations: F } = (0, p.Ay)(),
         B = l.useMemo(() => {
             let e = v.checkoutContext;
-            if (null == e) return Object.values(U).filter((e) => !e.invalid);
+            if (null == e) return Object.values(V).filter((e) => !e.invalid);
             let t = new Set(e.payment_sources.filter((e) => e.enabled).map((e) => e.id));
-            return Object.values(U).filter((e) => !e.invalid && t.has(e.id));
-        }, [U, v.checkoutContext]),
+            return Object.values(V).filter((e) => !e.invalid && t.has(e.id));
+        }, [V, v.checkoutContext]),
         [z, X] = l.useState(!1),
         [Y, H] = l.useState(t.currency);
     async function K(e, n, i) {
@@ -99,7 +95,7 @@ function U(e) {
             }),
             s = { amount: l.subtotal, currency: l.currency };
         v.currency !== l.currency || (v.currency === l.currency && v.total !== l.total)
-            ? await V(
+            ? await U(
                   l,
                   () => {
                       i(e, l.currency, s);
@@ -123,7 +119,7 @@ function U(e) {
                 onCloseCallback: () => {
                     (0, A.ET)();
                 },
-                onCloseRequest: R.tEg,
+                onCloseRequest: D.tEg,
             },
         );
     };
@@ -135,8 +131,8 @@ function U(e) {
             (0, i.jsx)(g.Anchor, {
                 href: e,
                 useDefaultUnderlineStyles: !1,
-                className: G.uZ,
-                children: (0, i.jsx)(c.$, { variant: "secondary", text: P.intl.string(P.t.SgX7Ra), fullWidth: !0 }),
+                className: P.uZ,
+                children: (0, i.jsx)(c.$, { variant: "secondary", text: R.intl.string(R.t.SgX7Ra), fullWidth: !0 }),
             })
         );
     }
@@ -146,7 +142,7 @@ function U(e) {
             fullWidth: !0,
             variant: s ? "primary" : "secondary",
             onClick: q,
-            text: P.intl.string(P.t.CpOiEO),
+            text: R.intl.string(R.t.CpOiEO),
         });
     {
         let e,
@@ -156,14 +152,14 @@ function U(e) {
         let s = null != v.checkoutContext ? v.checkoutContext.allowed_currencies : null,
             a = null != s && s.length > 0 ? s : (0, C._w)(l, t.paymentSourceId, !1),
             u = null != t.paymentSourceId ? B.find((e) => e.id === t.paymentSourceId) : null,
-            d = u?.type === R.hes.TDS_WALLET;
+            d = u?.type === D.hes.TDS_WALLET;
         return (0, i.jsxs)(i.Fragment, {
             children: [
                 ((n = {
                     prependOption:
-                        null == (e = t.paymentSourceId) ? { label: P.intl.string(P.t.iA5vA1), value: null } : null,
+                        null == (e = t.paymentSourceId) ? { label: R.intl.string(R.t.iA5vA1), value: null } : null,
                     paymentSources: B,
-                    hidePersonalInformation: L,
+                    hidePersonalInformation: M,
                     selectedPaymentSourceId: e,
                     onChange: function (e) {
                         null != e && W(e, void 0, K);
@@ -173,17 +169,17 @@ function U(e) {
                     disabled: j,
                     paymentGatewayRestrictions: t.eligiblePaymentGateways,
                 }),
-                t.status === R.Dmq.PAST_DUE
-                    ? (0, i.jsx)(D, { dropdownProps: n, subscription: t, openInvoice: O ?? null })
-                    : (0, i.jsx)(p.Ay, { ...n })),
+                t.status === D.Dmq.PAST_DUE && t.isPremium
+                    ? (0, i.jsx)(L, { dropdownProps: n, subscription: t, openInvoice: O ?? null })
+                    : (0, i.jsx)(x.Ay, { ...n })),
                 null == t.paymentSourceId || d
                     ? null
                     : (0, i.jsx)(S.f, {
                           currencies: a,
                           children: (0, i.jsx)("div", {
-                              className: r()(G.Gl, M.Uu, M.Hu),
+                              className: r()(P.Gl, G.Uu, G.Hu),
                               children: (0, i.jsx)(S.A, {
-                                  label: P.intl.string(P.t["0YjaXf"]),
+                                  label: R.intl.string(R.t["0YjaXf"]),
                                   selectedCurrency: Y,
                                   currencies: a,
                                   onChange: (e) => {
@@ -196,7 +192,7 @@ function U(e) {
         });
     }
 }
-async function V(e, t, l) {
+async function U(e, t, l) {
     let s = await (0, d.openModalLazy)(
         async () => {
             let { default: s } = await n.e("771678").then(n.bind(n, 760941));

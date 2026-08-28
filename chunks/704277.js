@@ -17,7 +17,6 @@ _.exports = {
     aS: "tier1__84995",
     CJ: "classicWordmark__84995",
     hA: "tier2__84995",
-    Yj: "pastDueCheckoutGreyBanner__84995",
     Lv: "toolsButtons__84995",
     au: "toolsButton__84995",
     lB: "premiumSettingsPushButton__84995",

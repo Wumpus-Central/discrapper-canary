@@ -5057,25 +5057,6 @@
     }
   },
   {
-    "name": "2026-07-past-due-checkout",
-    "kind": "user",
-    "defaultConfig": null,
-    "variations": {
-      "0": {
-        "enabled": false,
-        "variant": 0
-      },
-      "1": {
-        "enabled": true,
-        "bannerVariant": "red_expressive"
-      },
-      "2": {
-        "enabled": true,
-        "bannerVariant": "grey_primary"
-      }
-    }
-  },
-  {
     "name": "2026-07-personal-widget",
     "kind": "user",
     "defaultConfig": {

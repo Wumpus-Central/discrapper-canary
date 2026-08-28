@@ -19,7 +19,7 @@ var i = n(477900),
     h = n(558620),
     I = n(427675),
     P = n(480642),
-    k = n(87725),
+    k = n(206441),
     y = n(174459),
     v = n(840251),
     M = n(688151),
@@ -190,9 +190,9 @@ function et(e) {
             if (null != e1) return e1.options;
         }, [e1]),
         e4 = (0, f.qv)(),
-        e8 = "sm";
-    eT ? (e8 = "xl") : (ef || e2 === x.pn.ADD_PAYMENT_STEPS) && (e8 = "md");
-    let e6 = null != e5 ? e5.modalSizeGetter : void 0,
+        e6 = "sm";
+    eT ? (e6 = "xl") : (ef || e2 === x.pn.ADD_PAYMENT_STEPS) && (e6 = "md");
+    let e8 = null != e5 ? e5.modalSizeGetter : void 0,
         e3 = (0, w.O)(),
         e9 = null != $ && !eB && (0, R.U9)(e3, $),
         [e7, te] = l.useState({
@@ -323,9 +323,9 @@ function et(e) {
                 isGift: eB,
                 giftRecipient: eQ,
                 returnRef: eh,
-                manaModalSize: e8,
+                manaModalSize: e6,
                 modalSizeOverride: em,
-                modalSizeGetter: e6,
+                modalSizeGetter: e8,
                 handleClose: tu,
                 children: (0, i.jsx)(Z.Ay, {
                     header: (0, i.jsx)(K, { handleClose: tu, renderHeader: ed }),
