@@ -17,6 +17,7 @@ function s(e) {
                             videoURL: e.videoURL,
                             thumbnailURL: e.thumbnailURL,
                             title: e.title,
+                            tags: e.tags,
                         },
                     ];
                 let a = t.get(e.localClipId);
@@ -28,6 +29,7 @@ function s(e) {
                               localClipId: e.localClipId,
                               thumbnail: a.clip.thumbnail,
                               title: e.title,
+                              tags: e.tags,
                           },
                       ]
                     : [];

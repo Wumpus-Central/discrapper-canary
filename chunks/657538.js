@@ -1,8 +1,8 @@
 i.d(t, { A: () => ed }), i(321073);
 var a = i(477900),
     l = i(582128),
-    n = i(176999),
-    s = i(598748),
+    s = i(176999),
+    n = i(598748),
     r = i(540185),
     c = i(17928),
     o = i(688810),
@@ -56,18 +56,18 @@ function G(e) {
     });
 }
 function U(e) {
-    let { item: t, isPlaying: i, onHoverStart: l, onHoverEnd: n, className: s, children: r } = e;
+    let { item: t, isPlaying: i, onHoverStart: l, onHoverEnd: s, className: n, children: r } = e;
     return (0, a.jsxs)("div", {
-        className: k()(W.tile, s),
+        className: k()(W.tile, n),
         onMouseEnter: () => l(t.key),
-        onMouseLeave: n,
+        onMouseLeave: s,
         children: [(0, a.jsx)(T.A, { item: t, ringSize: "sm", isPlaying: i, className: W.tileMedia }), r],
     });
 }
 function z(e) {
     let { items: t } = e,
-        [i, n] = l.useState(null),
-        s = l.useRef(void 0),
+        [i, s] = l.useState(null),
+        n = l.useRef(void 0),
         r = l.useCallback(
             (e) => {
                 (0, D.A)({ clips: t, startingIndex: e });
@@ -75,12 +75,12 @@ function z(e) {
             [t],
         ),
         c = l.useCallback((e) => {
-            window.clearTimeout(s.current), (s.current = window.setTimeout(() => n(e), 150));
+            window.clearTimeout(n.current), (n.current = window.setTimeout(() => s(e), 150));
         }, []),
         o = l.useCallback(() => {
-            window.clearTimeout(s.current), n(null);
+            window.clearTimeout(n.current), s(null);
         }, []);
-    l.useEffect(() => () => window.clearTimeout(s.current), []);
+    l.useEffect(() => () => window.clearTimeout(n.current), []);
     let [d, ...u] = t;
     if (null == d) return null;
     let m = d.title;
@@ -134,17 +134,17 @@ function z(e) {
 }
 var F = i(4431);
 function B(e) {
-    let { items: t, onViewAll: i, className: n } = e,
-        s = l.useId();
+    let { items: t, onViewAll: i, className: s } = e,
+        n = l.useId();
     return (0, a.jsx)("section", {
-        "aria-labelledby": s,
+        "aria-labelledby": n,
         children: (0, a.jsxs)(P.A.Overlay, {
-            className: k()(F.k, n),
+            className: k()(F.k, s),
             children: [
                 (0, a.jsxs)("div", {
                     className: F.w,
                     children: [
-                        (0, a.jsx)(b.D, { variant: "text-xs/medium", id: s, children: V.intl.string(V.t.zY8Ghg) }),
+                        (0, a.jsx)(b.D, { variant: "text-xs/medium", id: n, children: V.intl.string(V.t.zY8Ghg) }),
                         (0, a.jsx)(w.Q, {
                             variant: "secondary",
                             textVariant: "text-xs/medium",
@@ -176,7 +176,7 @@ function $(e) {
 }
 function Z(e) {
     let { header: t, section: i, userId: l } = e,
-        n = "" !== i.title;
+        s = "" !== i.title;
     return (0, a.jsxs)("div", {
         className: Q.PY,
         children: [
@@ -187,7 +187,7 @@ function Z(e) {
                     (0, a.jsxs)("div", {
                         className: Q.I_,
                         children: [
-                            n
+                            s
                                 ? (0, a.jsx)(b.D, {
                                       className: k()(Q.CH, Y.YD),
                                       variant: "heading-sm/semibold",
@@ -208,15 +208,15 @@ function Z(e) {
                 ],
             }),
             null != i.image
-                ? (0, a.jsx)(K.N, { className: k()(Q.N4, { [Q.kF]: !n }), userId: l, image: i.image })
+                ? (0, a.jsx)(K.N, { className: k()(Q.N4, { [Q.kF]: !s }), userId: l, image: i.image })
                 : null,
         ],
     });
 }
 function X(e) {
     let { header: t, section: i, userId: l } = e,
-        n = i.fields.map((e) => e.image).filter(h.Vq);
-    return 0 === n.length
+        s = i.fields.map((e) => e.image).filter(h.Vq);
+    return 0 === s.length
         ? (0, a.jsx)(ee, { header: t })
         : (0, a.jsxs)("div", {
               className: Q.Zz,
@@ -224,7 +224,7 @@ function X(e) {
                   (0, a.jsx)($, { header: t }),
                   (0, a.jsx)("div", {
                       className: Q.SS,
-                      children: n.map((e, t) =>
+                      children: s.map((e, t) =>
                           (0, a.jsx)(K.N, { className: Q.Bi, userId: l, image: e, canAnimate: !1 }, t),
                       ),
                   }),
@@ -258,13 +258,13 @@ function et(e) {
             : (0, a.jsx)(ee, { header: i.header });
 }
 function ei(e) {
-    let { className: t, onClick: i, userId: n, widget: s } = e,
+    let { className: t, onClick: i, userId: s, widget: n } = e,
         { trackUserProfileAction: r } = (0, g.NJ)(),
         c = l.useRef(!1);
     return (
         l.useEffect(() => {
             c.current || (r({ action: "VIEW_PERSONAL_WIDGET_PREVIEW" }), (c.current = !0));
-        }, [r, s.id]),
+        }, [r, n.id]),
         (0, a.jsx)(y.D, {
             onClick: function () {
                 r({ action: "PRESS_PERSONAL_WIDGET_PREVIEW" }), i?.();
@@ -272,22 +272,22 @@ function ei(e) {
             "aria-label": V.intl.string(V.t["2sdfeb"]),
             children: (0, a.jsx)(P.A.Overlay, {
                 className: k()(Q.kL, t),
-                children: (0, a.jsx)(et, { userId: n, widget: s }),
+                children: (0, a.jsx)(et, { userId: s, widget: n }),
             }),
         })
     );
 }
 var ea = i(321108),
     el = i(939496),
-    en = i(996988),
-    es = i(580065);
+    es = i(996988),
+    en = i(580065);
 function er(e) {
     var t;
     let i,
-        { widgets: n = [], onClick: s, className: r } = e,
+        { widgets: s = [], onClick: n, className: r } = e,
         { trackUserProfileAction: c } = (0, g.NJ)(),
         o =
-            ((t = n.filter((e) => e instanceof j.R)),
+            ((t = s.filter((e) => e instanceof j.R)),
             (i = (0, x.A)(t.map((e) => e.applicationId))),
             (0, l.useMemo)(
                 () =>
@@ -305,7 +305,7 @@ function er(e) {
         d = (0, l.useMemo)(
             () => [
                 ...new Set(
-                    n
+                    s
                         .map((e) =>
                             e instanceof v.Yy
                                 ? e.games.map((e) => e.gameId)
@@ -317,10 +317,10 @@ function er(e) {
                         .flat(),
                 ),
             ],
-            [n, o],
+            [s, o],
         ),
         { themeType: u } = (0, el.E)(),
-        m = u === en.d.SIDEBAR,
+        m = u === es.d.SIDEBAR,
         f = (0, l.useRef)(!1),
         p = (0, ea.A)(d),
         I = (0, l.useMemo)(
@@ -338,18 +338,18 @@ function er(e) {
         (0, a.jsx)(y.D, {
             "aria-label": V.intl.string(V.t.JjiwFx),
             onClick: () => {
-                c({ action: "PRESS_GAME_WIDGET_BREADCRUMB" }), s();
+                c({ action: "PRESS_GAME_WIDGET_BREADCRUMB" }), n();
             },
-            className: es.QF,
+            className: en.QF,
             children: (0, a.jsxs)(P.A.Overlay, {
-                className: k()(es.WH, r),
+                className: k()(en.WH, r),
                 children: [
                     (0, a.jsx)(M.E, {
                         variant: m ? "text-sm/medium" : "text-xs/medium",
                         children: V.intl.string(V.t.JjiwFx),
                     }),
                     (0, a.jsx)("div", {
-                        className: es.Pt,
+                        className: en.Pt,
                         children: I.map((e, t) =>
                             (0, a.jsx)(
                                 ec,
@@ -369,15 +369,15 @@ function er(e) {
     );
 }
 function ec(e) {
-    let { iconUrl: t, name: i, displayCount: l, gameCount: n } = e;
+    let { iconUrl: t, name: i, displayCount: l, gameCount: s } = e;
     return (0, a.jsxs)("div", {
-        className: es.Kk,
+        className: en.Kk,
         children: [
-            (0, a.jsx)("img", { className: k()({ [es.um]: l }), src: t, alt: i }),
+            (0, a.jsx)("img", { className: k()({ [en.um]: l }), src: t, alt: i }),
             l &&
                 (0, a.jsx)("div", {
-                    className: es.pp,
-                    children: (0, a.jsxs)(M.E, { variant: "text-xs/medium", className: es.gq, children: ["+", n] }),
+                    className: en.pp,
+                    children: (0, a.jsxs)(M.E, { variant: "text-xs/medium", className: en.gq, children: ["+", s] }),
                 }),
         ],
     });
@@ -393,15 +393,15 @@ function ed(e) {
             let { onOpenUserProfileModal: t } = e,
                 { analyticsLocations: i } = (0, o.Ay)(),
                 { trackUserProfileAction: a } = (0, g.NJ)(),
-                n = l.useCallback(() => {
+                s = l.useCallback(() => {
                     t?.({ tabSection: eo.RP.WIDGETS });
                 }, [t]),
-                s = l.useCallback(() => {
-                    a({ action: "PRESS_SHOW_MORE_WIDGETS", analyticsLocations: i }), n();
-                }, [a, i, n]);
+                n = l.useCallback(() => {
+                    a({ action: "PRESS_SHOW_MORE_WIDGETS", analyticsLocations: i }), s();
+                }, [a, i, s]);
             return {
-                openModal: n,
-                onExpand: s,
+                openModal: s,
+                onExpand: n,
                 openClipsGallery: l.useCallback(() => {
                     t?.({ tabSection: eo.RP.WIDGETS, scrollTarget: r.x.CLIPS_GALLERY });
                 }, [t]),
@@ -429,8 +429,8 @@ function ed(e) {
                                   a = W.get(e.applicationId);
                               if (null == t || null == i || null == a) return null;
                               let l = i.surfaces;
-                              if (null == l || null == l[s.m.MINI_PROFILE]) return null;
-                              let r = (0, n.VG)(a.profile),
+                              if (null == l || null == l[n.m.MINI_PROFILE]) return null;
+                              let r = (0, s.VG)(a.profile),
                                   c = Object.values(U[e.applicationId] ?? {}).filter(h.Vq);
                               return [e, { surfaceConfigs: i.surfaces, data: r, application: t, assets: c }];
                           }).filter(h.Vq),
@@ -440,10 +440,10 @@ function ed(e) {
         F = l.useCallback(
             (e) => {
                 let l = [],
-                    n = !1;
-                for (let s of i)
-                    if (s instanceof j.R) {
-                        let t = z?.get(s);
+                    s = !1;
+                for (let n of i)
+                    if (n instanceof j.R) {
+                        let t = z?.get(n);
                         if (null == t) continue;
                         l.push(
                             (0, a.jsx)(
@@ -459,25 +459,25 @@ function ed(e) {
                                             data: t.data,
                                             applicationAssets: t.assets,
                                             getApplicationAssetUrl: (e) =>
-                                                (0, d.Q)(s.applicationId, e, e.metadata.width),
+                                                (0, d.Q)(n.applicationId, e, e.metadata.width),
                                             localizedStrings: [],
                                         },
                                     },
                                     onClick: k,
                                     ...e,
                                 },
-                                `application-widget-${s.applicationId}`,
+                                `application-widget-${n.applicationId}`,
                             ),
                         );
-                    } else if (s instanceof v.Yy && !n)
-                        l.push((0, a.jsx)(er, { widgets: i, onClick: k, ...e }, "collection-breadcrumb")), (n = !0);
-                    else if (s instanceof E.Tu)
+                    } else if (n instanceof v.Yy && !s)
+                        l.push((0, a.jsx)(er, { widgets: i, onClick: k, ...e }, "collection-breadcrumb")), (s = !0);
+                    else if (n instanceof E.Tu)
                         l.push(
-                            (0, a.jsx)(ei, { userId: t.id, widget: s, onClick: k, ...e }, s.id ?? "personal-widget"),
+                            (0, a.jsx)(ei, { userId: t.id, widget: n, onClick: k, ...e }, n.id ?? "personal-widget"),
                         );
-                    else if (s instanceof I.k) {
+                    else if (n instanceof I.k) {
                         if (!P) continue;
-                        let t = s.clips
+                        let t = n.clips
                             .flatMap((e) =>
                                 "saved" === e.status
                                     ? [
@@ -487,6 +487,7 @@ function ed(e) {
                                               videoURL: e.videoURL,
                                               thumbnailURL: e.thumbnailURL,
                                               title: e.title,
+                                              tags: e.tags,
                                           },
                                       ]
                                     : [],
@@ -494,7 +495,7 @@ function ed(e) {
                             .filter(O.K)
                             .slice(0, 3);
                         if (0 === t.length) continue;
-                        l.push((0, a.jsx)(B, { items: t, onViewAll: w, ...e }, s.id ?? "clips-gallery-widget"));
+                        l.push((0, a.jsx)(B, { items: t, onViewAll: w, ...e }, n.id ?? "clips-gallery-widget"));
                     }
                 return l;
             },
