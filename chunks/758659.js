@@ -1,11 +1,11 @@
 l.r(t),
     l.d(t, {
-        nitroCollection: () => ac,
-        virtualCurrencyCollection: () => ad,
-        playgroundConfig: () => am,
-        identityCollection: () => ap,
-        RevenuePlaygroundCollectionId: () => ao,
-        paymentsCollection: () => au,
+        nitroCollection: () => ap,
+        virtualCurrencyCollection: () => ac,
+        playgroundConfig: () => ab,
+        identityCollection: () => am,
+        RevenuePlaygroundCollectionId: () => as,
+        paymentsCollection: () => ad,
     });
 var a,
     n = l(700623),
@@ -1099,8 +1099,8 @@ var eZ = l(993077),
     e6 = l(287809),
     e4 = l(403362),
     e8 = l(784018),
-    e7 = l(668025);
-let e9 = {
+    e9 = l(668025);
+let e7 = {
     name: "Clip Embed Overlay",
     id: "clip-embed-overlay",
     component: function (e) {
@@ -1121,10 +1121,10 @@ let e9 = {
             p = u.useCallback(() => (0, s.jsx)(e1.A, { title: a, participantIds: c }), [a, c]),
             m = "landscape" === l ? 640 : 360;
         return (0, s.jsxs)("div", {
-            className: e7.iE,
+            className: e9.iE,
             children: [
                 (0, s.jsx)("div", {
-                    className: e7.j,
+                    className: e9.j,
                     style: { width: m, height: "landscape" === l ? 360 : 640 },
                     children: (0, s.jsx)(e2.default, {
                         src: t,
@@ -1136,12 +1136,12 @@ let e9 = {
                     }),
                 }),
                 (0, s.jsxs)(eZ.Z, {
-                    className: e7.nd,
+                    className: e9.nd,
                     type: eZ.s.PRIMARY,
                     style: { width: m },
                     children: [
                         (0, s.jsxs)("div", {
-                            className: e7.Iv,
+                            className: e9.Iv,
                             children: [
                                 (0, s.jsx)(f.E, {
                                     variant: "text-sm/semibold",
@@ -1158,7 +1158,7 @@ let e9 = {
                         (0, s.jsx)(ei.c, {}),
                         0 === i.length
                             ? (0, s.jsx)("div", {
-                                  className: e7.p$,
+                                  className: e9.p$,
                                   children: (0, s.jsx)(f.E, {
                                       variant: "text-sm/normal",
                                       color: "text-muted",
@@ -1166,14 +1166,14 @@ let e9 = {
                                   }),
                               })
                             : (0, s.jsx)("div", {
-                                  className: e7.p_,
+                                  className: e9.p_,
                                   onScroll: (e) => e.stopPropagation(),
                                   children: i.map((e) => {
                                       let t = r.has(e.id);
                                       return (0, s.jsxs)(
                                           eQ.D,
                                           {
-                                              className: e7.nM,
+                                              className: e9.nM,
                                               role: "checkbox",
                                               "aria-checked": t,
                                               onClick: () => d(e.id, !t),
@@ -2206,8 +2206,8 @@ var t3 = l(295405),
     t6 = l(71532),
     t4 = l(818348),
     t8 = l(336899);
-let t7 = e$();
-async function t9(e) {
+let t9 = e$();
+async function t7(e) {
     return (await t1.Bo.post({ url: N.Rsh.ORDER_SIGN(e), rejectWithError: !0 })).body;
 }
 async function t5(e) {
@@ -2225,7 +2225,7 @@ function lt() {
         [l, a] = u.useState(!1),
         [n, i] = u.useState(null),
         [r, o] = u.useState(null),
-        [d, c] = u.useState(t7.defaultValue),
+        [d, c] = u.useState(t9.defaultValue),
         [p, m] = u.useState(null),
         b = (0, ee.bG)([t3.A], () => t3.A.paymentSources),
         h = (0, ee.bG)([t3.A], () => t3.A.hasFetchedPaymentSources),
@@ -2301,7 +2301,7 @@ Payment source changed.`);
         if (null == r || "" === r) return void i("No order ID available. Please create an order first.");
         a(!0);
         try {
-            let e = await t9(r);
+            let e = await t7(r);
             if (null == e.errors) {
                 i(`Order signed successfully! Order ID: ${r}`), o(null);
                 return;
@@ -2455,7 +2455,7 @@ Error: ${t}`);
                                     selectionMode: "single",
                                     value: d,
                                     onSelectionChange: c,
-                                    options: t7.options,
+                                    options: t9.options,
                                     formatOption: (e) => {
                                         let { value: t, label: l } = e;
                                         return { id: t, value: t, label: l };
@@ -3410,7 +3410,7 @@ let l0 = {
             shouldAppendDisclaimer: !1,
         },
     },
-    l7 = {
+    l9 = {
         title: "Unified Checkout",
         stories: [
             l6,
@@ -3656,15 +3656,16 @@ let l0 = {
             },
         ],
     };
-var l9 = l(56359),
-    l5 = l(734057),
-    ae = l(890497),
-    at = l(711014),
-    al = l(427262),
-    aa = l(198498);
-function an(e) {
+var l7 = l(903209),
+    l5 = l(56359),
+    ae = l(734057),
+    at = l(890497),
+    al = l(711014),
+    aa = l(427262),
+    an = l(198498);
+function ai(e) {
     let { label: t, options: l, value: a, onChange: n } = e;
-    return (0, s.jsx)(ae.Z, {
+    return (0, s.jsx)(at.Z, {
         label: t,
         selectionMode: "single",
         options: l,
@@ -3673,24 +3674,24 @@ function an(e) {
         placeholder: 0 === l.length ? "Waiting for client to connect\u2026" : void 0,
     });
 }
-function ai(e) {
+function ar(e) {
     let { children: t } = e;
-    return (0, s.jsx)("div", { className: aa.t, children: t });
+    return (0, s.jsx)("div", { className: an.t, children: t });
 }
-let ar = "default";
-var ao =
+let ao = "default";
+var as =
     (((a = {}).PAYMENTS = "payments"),
     (a.VIRTUAL_CURRENCY = "virtual-currency"),
     (a.NITRO = "nitro"),
     (a.IDENTITY = "identity"),
     a);
-let as = ["Revenue Storybook", "Revenue Playground"],
-    au = {
+let au = ["Revenue Storybook", "Revenue Playground"],
+    ad = {
         id: "payments",
         name: "Payments",
         groups: [
             eL,
-            l7,
+            l9,
             {
                 title: "Gift Card",
                 stories: [
@@ -3922,10 +3923,10 @@ let as = ["Revenue Storybook", "Revenue Playground"],
                 ],
             },
         ],
-        tags: as,
+        tags: au,
         IconComponent: n.d,
     },
-    ad = {
+    ac = {
         id: "virtual-currency",
         name: "Virtual Currency",
         groups: [
@@ -3982,10 +3983,10 @@ let as = ["Revenue Storybook", "Revenue Playground"],
                 ],
             },
         ],
-        tags: as,
+        tags: au,
         IconComponent: i.C,
     },
-    ac = {
+    ap = {
         id: "nitro",
         name: "Nitro",
         groups: [
@@ -4370,12 +4371,12 @@ let as = ["Revenue Storybook", "Revenue Playground"],
                     },
                 ],
             },
-            { title: "Clips", stories: [e9] },
+            { title: "Clips", stories: [e7] },
         ],
-        tags: as,
+        tags: au,
         IconComponent: r.t,
     },
-    ap = {
+    am = {
         id: "identity",
         name: "Identity",
         groups: [
@@ -4487,19 +4488,19 @@ let as = ["Revenue Storybook", "Revenue Playground"],
                                         let l = e
                                             .map((e) => {
                                                 let t = e6.default.getUser(e);
-                                                return null == t ? null : { id: e, label: al.Ay.getName(t), value: e };
+                                                return null == t ? null : { id: e, label: aa.Ay.getName(t), value: e };
                                             })
                                             .filter((e) => null != e)
                                             .sort((e, t) => e.label.localeCompare(t.label));
                                         return null == t
                                             ? l
                                             : [
-                                                  { id: t.id, label: `${al.Ay.getName(t)} (You)`, value: t.id },
+                                                  { id: t.id, label: `${aa.Ay.getName(t)} (You)`, value: t.id },
                                                   ...l.filter((e) => e.value !== t.id),
                                               ];
                                     }, [e, t])),
                                 n =
-                                    ((l = (0, ee.yK)([at.Ay], () => at.Ay.getFlattenedGuildIds())),
+                                    ((l = (0, ee.yK)([al.Ay], () => al.Ay.getFlattenedGuildIds())),
                                     u.useMemo(
                                         () =>
                                             l.reduce((e, t) => {
@@ -4509,51 +4510,56 @@ let as = ["Revenue Storybook", "Revenue Playground"],
                                         [l],
                                     )),
                                 [i, r] = u.useState(),
-                                [o, d] = u.useState(ar),
+                                [o, d] = u.useState(ao),
                                 c = i ?? a[0]?.value,
                                 p = u.useMemo(
                                     () => [
                                         { id: "dm", label: "DM", value: "dm" },
-                                        { id: ar, label: "Default (main profile)", value: ar },
+                                        { id: ao, label: "Default (main profile)", value: ao },
                                         ...n,
                                     ],
                                     [n],
                                 ),
                                 m = (0, ee.bG)(
-                                    [l5.A],
+                                    [ae.A],
                                     () =>
                                         null == c
                                             ? void 0
-                                            : (l5.A.getDMFromUserId(c) ?? l5.A.getSortedPrivateChannels()[0]?.id),
+                                            : (ae.A.getDMFromUserId(c) ?? ae.A.getSortedPrivateChannels()[0]?.id),
                                     [c],
                                 ),
-                                b = o === ar || "dm" === o ? void 0 : o,
+                                b = o === ao || "dm" === o ? void 0 : o,
                                 h = "dm" === o ? m : void 0;
-                            return (0, s.jsxs)(ea.B, {
-                                direction: "vertical",
-                                gap: 16,
-                                children: [
-                                    (0, s.jsxs)(ea.B, {
-                                        direction: "horizontal",
-                                        gap: 8,
-                                        children: [
-                                            (0, s.jsx)(an, { label: "User", options: a, value: c, onChange: r }),
-                                            (0, s.jsx)(an, { label: "Context", options: p, value: o, onChange: d }),
-                                        ],
-                                    }),
-                                    (0, s.jsx)(ai, {
-                                        children:
-                                            null != c && (0, s.jsx)(l9.G, { userId: c, guildId: b, channelId: h }),
-                                    }),
-                                ],
-                            });
+                            return (
+                                u.useEffect(() => {
+                                    null != c && (0, l7.A)(c, void 0, { guildId: b });
+                                }, [c, b]),
+                                (0, s.jsxs)(ea.B, {
+                                    direction: "vertical",
+                                    gap: 16,
+                                    children: [
+                                        (0, s.jsxs)(ea.B, {
+                                            direction: "horizontal",
+                                            gap: 8,
+                                            children: [
+                                                (0, s.jsx)(ai, { label: "User", options: a, value: c, onChange: r }),
+                                                (0, s.jsx)(ai, { label: "Context", options: p, value: o, onChange: d }),
+                                            ],
+                                        }),
+                                        (0, s.jsx)(ar, {
+                                            children:
+                                                null != c && (0, s.jsx)(l5.G, { userId: c, guildId: b, channelId: h }),
+                                        }),
+                                    ],
+                                })
+                            );
                         },
                         id: "user-profile-embed",
                     },
                 ],
             },
         ],
-        tags: as,
+        tags: au,
         IconComponent: o.UserIcon,
     },
-    am = { playgroundBaseUrl: "revenue", collections: [au, ad, ac, ap] };
+    ab = { playgroundBaseUrl: "revenue", collections: [ad, ac, ap, am] };

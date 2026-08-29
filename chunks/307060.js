@@ -1,64 +1,83 @@
 "use strict";
-n.d(t, { A: () => A }), n(376728);
+n.d(t, { A: () => p }), n(376728);
 var i = n(439372);
 n(993748);
 var r = n(292572),
     a = n(122906),
-    s = n(128391);
+    s = n(128391),
+    l = n(168543),
+    o = n(903209),
+    d = n(734057);
 n(299091);
-var l = n(167189),
-    o = n(887924);
-let d = new (n(626584).A)("codedLinkQueue"),
-    c = new o.default({ concurrency: 5, intervalCap: 10, interval: 2e3 });
-c.on("add", () => {
-    c.size > 0 && d.warn("Message link fetch queue backlog:", c.size);
+var c = n(167189),
+    u = n(887924);
+let _ = new (n(626584).A)("codedLinkQueue"),
+    E = new u.default({ concurrency: 5, intervalCap: 10, interval: 2e3 });
+E.on("add", () => {
+    E.size > 0 && _.warn("Message link fetch queue backlog:", E.size);
 });
-var u = n(721779);
-function _(e) {
-    let t = (0, u.Ay)(e.content);
-    null != t &&
-        0 !== t.length &&
-        t.forEach((e) => {
-            let { type: t, code: n } = e;
-            switch (t) {
-                case l.I.INVITE:
+var A = n(721779);
+function h(e, t) {
+    let n = (0, A.Ay)(e);
+    null != n &&
+        0 !== n.length &&
+        n.forEach((e) => {
+            var n, i;
+            let { type: s, code: u } = e;
+            switch (s) {
+                case c.I.INVITE:
                     break;
-                case l.I.TEMPLATE:
-                    var i;
-                    (i = async () => {
-                        null == a.A.getGuildTemplate(n) && (await r.A.resolveGuildTemplate(n));
+                case c.I.TEMPLATE:
+                    (n = async () => {
+                        null == a.A.getGuildTemplate(u) && (await r.A.resolveGuildTemplate(u));
                     }),
-                        c.add(i);
+                        E.add(n);
                     break;
-                case l.I.BUILD_OVERRIDE:
-                case l.I.MANUAL_BUILD_OVERRIDE:
-                case l.I.EVENT:
-                case l.I.CHANNEL_LINK:
-                case l.I.ACTIVITY_BOOKMARK:
-                case l.I.EMBEDDED_ACTIVITY_INVITE:
-                case l.I.GUILD_PRODUCT:
-                case l.I.SERVER_SHOP:
-                case l.I.SOCIAL_LAYER_STOREFRONT:
-                case l.I.SOCIAL_LAYER_STOREFRONT_APP:
-                case l.I.QUESTS_EMBED:
-                case l.I.APP_DIRECTORY_STOREFRONT:
-                case l.I.APP_DIRECTORY_STOREFRONT_SKU:
-                case l.I.APP_OAUTH2_LINK:
-                case l.I.COLLECTIBLES_SHOP:
-                case l.I.EXPERIMENT:
-                case l.I.GAME_PROFILE:
-                case l.I.GAME_SERVER_SHARE:
-                case l.I.USER_PROFILE:
-                case l.I.APP_DIRECTORY_PROFILE:
+                case c.I.BUILD_OVERRIDE:
+                case c.I.MANUAL_BUILD_OVERRIDE:
+                case c.I.EVENT:
+                case c.I.CHANNEL_LINK:
+                case c.I.ACTIVITY_BOOKMARK:
+                case c.I.EMBEDDED_ACTIVITY_INVITE:
+                case c.I.GUILD_PRODUCT:
+                case c.I.SERVER_SHOP:
+                case c.I.SOCIAL_LAYER_STOREFRONT:
+                case c.I.SOCIAL_LAYER_STOREFRONT_APP:
+                case c.I.QUESTS_EMBED:
+                case c.I.APP_DIRECTORY_STOREFRONT:
+                case c.I.APP_DIRECTORY_STOREFRONT_SKU:
+                case c.I.APP_OAUTH2_LINK:
+                case c.I.COLLECTIBLES_SHOP:
+                case c.I.EXPERIMENT:
+                case c.I.GAME_PROFILE:
+                case c.I.GAME_SERVER_SHARE:
+                    break;
+                case c.I.USER_PROFILE:
+                    if ((0, l.l)("MessageCodedLinkManager")) {
+                        let e = null == t ? null : d.A.getChannel(t);
+                        (i = async () => {
+                            await (0, o.A)(u, void 0, { guildId: e?.guild_id ?? void 0 });
+                        }),
+                            E.add(i);
+                    }
+                    break;
+                case c.I.APP_DIRECTORY_PROFILE:
                     break;
                 default:
-                    throw Error(`Unknown coded link type: ${t}`);
+                    throw Error(`Unknown coded link type: ${s}`);
             }
         });
 }
-class E extends i.A {
+function I(e) {
+    h(e.content ?? null, e.channel_id),
+        e.message_snapshots?.forEach((t) => {
+            let { message: n } = t;
+            return h(n.content, e.channel_id);
+        });
+}
+class f extends i.A {
     constructor() {
-        super(), (0, s.A)(this, _);
+        super(), (0, s.A)(this, I);
     }
 }
-let A = new E();
+let p = new f();
