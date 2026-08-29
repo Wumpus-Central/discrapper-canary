@@ -514,7 +514,7 @@ let eI = {
             let e = null != _ ? (0, d.jN)(_) : (0, d.BH)(),
                 t = (0, c.I_)();
             (l = (0, c.Ay)(e, {
-                utmSource: 2 === a ? "friend_invite" : ed,
+                utmSource: a?.inviteType === 2 ? "friend_invite" : ed,
                 fingerprint: n,
                 installationId: F.default.getInstallationForTracking(),
                 username: i,
@@ -522,6 +522,7 @@ let eI = {
                 event: o?.guildScheduledEventId,
                 channel: A,
                 message: E,
+                didRegister: a?.didRegister === !0 ? "true" : void 0,
                 iosFallbackLink: `https://discord.com/api/download/mobile?invite_code=${_}`,
             })),
                 q.default.track(ei.HAw.DEEP_LINK_CLICKED, {

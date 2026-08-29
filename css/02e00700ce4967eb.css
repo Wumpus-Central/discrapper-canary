@@ -1,0 +1,127 @@
+.page__1c2c9 {
+    background-color: var(--background-base-low);
+    display: flex;
+    flex-direction: column;
+    inset: 0;
+    overflow-y: auto;
+    position: fixed
+}
+
+.headerTitleRow__1c2c9 {
+    align-items: center;
+    display: flex;
+    gap: var(--space-4);
+    min-width: 0
+}
+
+.headerTitle__1c2c9 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.hero__1c2c9 {
+    background-color: var(--background-base-lowest);
+    background-position: 50%;
+    background-size: cover;
+    flex-shrink: 0;
+    height: 124px
+}
+
+.heroDetails__1c2c9 {
+    align-items: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+    margin: 0 auto;
+    max-width: 480px;
+    padding: 0 var(--space-16) var(--space-16);
+    text-align: start;
+    width: 100%
+}
+
+.heroGuildIcon__1c2c9 {
+    margin-top: -32px
+}
+
+.divider__1c2c9 {
+    background: var(--border-subtle);
+    flex-shrink: 0;
+    height: 1px;
+    width: 100%
+}
+
+.body__1c2c9 {
+    box-sizing: border-box;
+    margin: 0 auto;
+    max-width: 480px;
+    padding: var(--space-16) var(--space-16) var(--space-24);
+    text-align: start;
+    width: 100%
+}
+
+.body__1c2c9 a {
+    color: var(--text-link)
+}
+
+.openAppLink__1c2c9 {
+    margin-top: var(--space-20)
+}
+
+.joinedContainer__1c2c9 {
+    box-sizing: border-box;
+    margin: 0 auto;
+    max-width: 480px;
+    padding: var(--space-16) var(--space-16) 0
+}
+
+.joinedContainer__1c2c9,
+.joinedContent__1c2c9 {
+    align-items: center;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    text-align: center;
+    width: 100%
+}
+
+.joinedContent__1c2c9 {
+    justify-content: center
+}
+
+.joinedBody__1c2c9,
+.joinedHeader__1c2c9 {
+    margin-top: var(--space-8)
+}
+
+.getAppButton__1c2c9 {
+    margin-top: var(--space-16)
+}
+
+.joinedAppPreview__1c2c9 {
+    flex-shrink: 0;
+    margin-top: var(--space-24);
+    max-height: 300px;
+    max-width: 280px;
+    overflow: hidden;
+    position: relative;
+    width: 100%
+}
+
+.joinedAppPreview__1c2c9 img {
+    display: block;
+    width: 100%
+}
+
+.joinedAppPreview__1c2c9:after {
+    background: linear-gradient(to bottom, transparent, var(--background-base-low));
+    content: "";
+    inset-inline: 0;
+    bottom: 0;
+    height: 48px;
+    pointer-events: none;
+    position: absolute
+}
+
+/*# sourceMappingURL=02e00700ce4967eb.css.map*/
