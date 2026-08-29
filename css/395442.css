@@ -248,6 +248,84 @@
     opacity: .2
 }
 
+.tag_f7b6a0 {
+    align-items: center;
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-sm);
+    display: flex;
+    flex-direction: row;
+    gap: var(--space-4);
+    padding-block: calc(var(--space-4) - 1px);
+    padding-inline: var(--space-6) var(--space-8)
+}
+
+.button_f7b6a0 {
+    color: var(--text-subtle);
+    cursor: pointer;
+    transition: background 50ms ease-in, border-style 50ms ease-in, color 50ms ease-in
+}
+
+.button_f7b6a0:not(.disabled_f7b6a0):hover {
+    background: var(--background-mod-normal);
+    color: var(--text-strong);
+    transition: background .15s ease-out, border-style .15s ease-out, color .15s ease-out
+}
+
+.custom-user-profile-theme.theme-light .button_f7b6a0:not(.disabled_f7b6a0):hover {
+    background: var(--opacity-white-32)
+}
+
+.disabled_f7b6a0 {
+    cursor: default;
+    transition: none
+}
+
+.addButton_f7b6a0 {
+    background: transparent;
+    border: 1px dashed var(--border-subtle)
+}
+
+.addButton_f7b6a0:hover {
+    border-style: solid
+}
+
+.removeButton_f7b6a0 {
+    align-items: center;
+    color: var(--icon-subtle);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    margin-block: calc((var(--space-4) - 1px)*-1);
+    margin-inline: -1px calc((var(--space-4) - 1px)*-1);
+    padding: calc(var(--space-4) - 1px);
+    transition: color 50ms ease-in
+}
+
+.removeButton_f7b6a0:hover {
+    color: var(--icon-strong);
+    transition: color .15s ease-out
+}
+
+.tagsMenu_f7b6a0 {
+    max-height: 400px;
+    overflow-y: auto
+}
+
+.enable-forced-colors .removeButton_f7b6a0 {
+    color: ButtonText
+}
+
+.enable-forced-colors .button_f7b6a0,
+.enable-forced-colors .button_f7b6a0:hover {
+    border-color: ButtonText;
+    color: ButtonText
+}
+
+.enable-forced-colors .button_f7b6a0.disabled_f7b6a0 {
+    border-color: GrayText;
+    color: GrayText
+}
+
 .tagListContainer__25a50 {
     box-sizing: border-box;
     display: flex;
@@ -260,37 +338,7 @@
     display: contents
 }
 
-.tag__25a50 {
-    align-items: center;
-    border: 1px solid var(--border-subtle);
-    border-radius: var(--radius-sm);
-    display: flex;
-    flex-direction: row;
-    gap: 4px;
-    padding-block: 3px;
-    padding-inline: 6px 8px
-}
-
-.button__25a50 {
-    color: var(--text-subtle);
-    cursor: pointer;
-    transition: background 50ms ease-in, border-style 50ms ease-in, color 50ms ease-in
-}
-
-.button__25a50:not(.disabled__25a50):hover {
-    background: var(--background-mod-normal);
-    color: var(--text-strong);
-    transition: background .15s ease-out, border-style .15s ease-out, color .15s ease-out
-}
-
-.custom-user-profile-theme.theme-light .button__25a50:not(.disabled__25a50):hover {
-    background: var(--opacity-white-32)
-}
-
-.disabled__25a50 {
-    cursor: default;
-    transition: none
-}
+.disabled__25a50 {}
 
 .collapseButton__25a50,
 .expandButton__25a50 {}
@@ -300,54 +348,8 @@
     padding: 3px 4px
 }
 
-.addButton__25a50 {
-    background: transparent;
-    border: 1px dashed var(--border-subtle)
-}
-
-.addButton__25a50:hover {
-    border-style: solid
-}
-
 .caret__25a50 {
     color: var(--text-subtle)
-}
-
-.removeButton__25a50 {
-    align-items: center;
-    color: var(--icon-subtle);
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    margin-block: -3px;
-    margin-inline: -1px -3px;
-    padding: 3px;
-    transition: color 50ms ease-in
-}
-
-.removeButton__25a50:hover {
-    color: var(--icon-strong);
-    transition: color .15s ease-out
-}
-
-.gameTagsMenu__25a50 {
-    max-height: 400px;
-    overflow-y: auto
-}
-
-.enable-forced-colors .removeButton__25a50 {
-    color: ButtonText
-}
-
-.enable-forced-colors .button__25a50,
-.enable-forced-colors .button__25a50:hover {
-    border-color: ButtonText;
-    color: ButtonText
-}
-
-.enable-forced-colors .button__25a50.disabled__25a50 {
-    border-color: GrayText;
-    color: GrayText
 }
 
 .enable-forced-colors .caret__25a50 {
@@ -2596,4 +2598,4 @@
     margin-top: 4px
 }
 
-/*# sourceMappingURL=395442.ae558cc428452986.css.map*/
+/*# sourceMappingURL=395442.91f99b0c5dd713a8.css.map*/
