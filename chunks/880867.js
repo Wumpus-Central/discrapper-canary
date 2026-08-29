@@ -1,107 +1,107 @@
-l.d(t, { default: () => _ });
-var i = l(477900),
-    a = l(582128),
-    n = l(691540),
-    s = l(857250),
-    o = l(97483),
-    r = l(192308),
-    c = l(173936),
-    d = l(148494),
-    u = l(953832),
-    m = l(451909),
-    C = l(378570),
-    h = l(223863),
-    p = l(734057),
-    x = l(957565),
-    k = l(403362),
-    f = l(97808),
-    S = l(778712),
-    v = l(834730),
-    g = l(427262),
-    A = l(19575),
-    E = l(999291),
-    w = l(718019),
-    y = l(887640);
-let j = A.Ay.getEnableHardwareAcceleration() ? f.Js : f.eu,
-    P = S._3.SIZE_40;
-function b(e) {
+i.d(t, { default: () => N });
+var l = i(477900),
+    a = i(582128),
+    n = i(691540),
+    s = i(857250),
+    r = i(97483),
+    o = i(192308),
+    c = i(173936),
+    d = i(148494),
+    u = i(953832),
+    m = i(451909),
+    C = i(378570),
+    h = i(223863),
+    x = i(734057),
+    k = i(957565),
+    p = i(403362),
+    f = i(640794),
+    v = i(97808),
+    A = i(778712),
+    g = i(834730),
+    S = i(427262),
+    w = i(19575),
+    E = i(999291),
+    y = i(718019),
+    j = i(887640);
+let P = w.Ay.getEnableHardwareAcceleration() ? v.Js : v.eu,
+    b = A._3.SIZE_40;
+function I(e) {
     let { user: t } = e,
-        l = (0, E._c)(t.id),
-        { avatarProps: a, eventHandlers: n } = (0, w.V)({ user: t, displayProfile: l, avatarSize: P }),
-        s = g.Ay.useName(t),
-        o = g.Ay.useUserTag(t);
-    return (0, i.jsxs)("div", {
-        className: y.V,
+        i = (0, E._c)(t.id),
+        { avatarProps: a, eventHandlers: n } = (0, y.V)({ user: t, displayProfile: i, avatarSize: b }),
+        s = S.Ay.useName(t),
+        r = S.Ay.useUserTag(t);
+    return (0, l.jsxs)("div", {
+        className: j.V,
         children: [
-            (0, i.jsx)(j, { ...a, ...n }),
-            (0, i.jsxs)("div", {
-                className: y.D,
+            (0, l.jsx)(P, { ...a, ...n }),
+            (0, l.jsxs)("div", {
+                className: j.D,
                 children: [
-                    (0, i.jsx)(v.E, { variant: "text-md/medium", color: "text-default", lineClamp: 1, children: s }),
-                    (0, i.jsx)(v.E, { variant: "text-sm/medium", color: "text-muted", lineClamp: 1, children: o }),
+                    (0, l.jsx)(g.E, { variant: "text-md/medium", color: "text-default", lineClamp: 1, children: s }),
+                    (0, l.jsx)(g.E, { variant: "text-sm/medium", color: "text-muted", lineClamp: 1, children: r }),
                 ],
             }),
         ],
     });
 }
-var I = l(652215),
-    U = l(381941),
-    V = l(375708);
-function _(e) {
-    let { user: t, source: l, onClose: f, ...S } = e,
-        v = `${location.protocol}//${location.host}${I.BVt.USERS(t.id)}`,
-        g = a.useCallback(
-            async (e, t, l) => {
-                let { withMessage: i, transitionToDestination: a, closeAfterSend: c } = t;
-                l(!0);
+var _ = i(381941),
+    M = i(375708);
+function N(e) {
+    let { user: t, source: i, onClose: v, ...A } = e,
+        g = (0, f.A)(t.id),
+        S = a.useCallback(
+            async (e, t, i) => {
+                let { withMessage: l, transitionToDestination: a, closeAfterSend: c } = t;
+                i(!0);
                 try {
-                    let t = (await Promise.all(e.map(h.pk))).filter(k.Vq);
-                    if (0 === t.length) return void l(!1);
-                    c && f();
+                    let t = (await Promise.all(e.map(h.pk))).filter(p.Vq);
+                    if (0 === t.length) return void i(!1);
+                    c && v();
                     let u =
-                        null != i && "" !== i
-                            ? `${v}
+                        null != l && "" !== l
+                            ? `${g}
 
-${i}`
-                            : v;
+${l}`
+                            : g;
                     for (let e of t) {
-                        let t = p.A.getChannel(e);
+                        let t = x.A.getChannel(e);
                         null != t &&
-                            (await d.A.sendMessage(t.id, m.Ay.parse(t, u), !1, { location: U.Hx.USER_PROFILE }));
+                            (await d.A.sendMessage(t.id, m.Ay.parse(t, u), !1, { location: _.Hx.USER_PROFILE }));
                     }
-                    (0, n.P0)((0, s.o)(V.intl.string(V.t.kwmYkt), o.Ck.SUCCESS)),
+                    (0, n.P0)((0, s.o)(M.intl.string(M.t.kwmYkt), r.Ck.SUCCESS)),
                         a &&
                             null != t[0] &&
-                            ((0, C.iN)(t[0], { openTextInVoiceIfVoiceChannel: !0 }), (0, r.closeAllModals)());
+                            ((0, C.iN)(t[0], { openTextInVoiceIfVoiceChannel: !0 }), (0, o.closeAllModals)());
                 } catch (e) {
-                    (0, n.P0)((0, s.o)(V.intl.string(V.t.iufib1), o.Ck.FAILURE));
+                    (0, n.P0)((0, s.o)(M.intl.string(M.t.iufib1), r.Ck.FAILURE));
                 } finally {
-                    l(!1);
+                    i(!1);
                 }
             },
-            [f, v],
+            [v, g],
         ),
-        A = a.useMemo(
+        w = a.useMemo(
             () => [
                 {
                     variant: "secondary",
                     text: void 0,
-                    "aria-label": V.intl.string(V.t.WqhZss),
+                    "aria-label": M.intl.string(M.t.WqhZss),
                     onClick: () => {
-                        (0, x.C)(v, () => (0, n.P0)((0, s.o)(V.intl.string(V.t["L/PwZf"]), o.Ck.SUCCESS)));
+                        (0, k.C)(g, () => (0, n.P0)((0, s.o)(M.intl.string(M.t["L/PwZf"]), r.Ck.SUCCESS)));
                     },
                     icon: c.LinkIcon,
                 },
             ],
-            [v],
+            [g],
         );
-    return (0, i.jsx)(u.ForwardModal, {
-        ...S,
-        onClose: f,
-        source: l,
-        customTitle: V.intl.string(V.t["sFN1/M"]),
-        customPreview: (0, i.jsx)(b, { user: t }),
-        customSendHandler: g,
-        additionalActions: A,
+    return (0, l.jsx)(u.ForwardModal, {
+        ...A,
+        onClose: v,
+        source: i,
+        customTitle: M.intl.string(M.t["sFN1/M"]),
+        customPreview: (0, l.jsx)(I, { user: t }),
+        customSendHandler: S,
+        additionalActions: w,
     });
 }
