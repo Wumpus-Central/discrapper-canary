@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { a: () => O });
+n.d(t, { a: () => R });
 var i = n(636537),
     r = n(306173),
     a = n(913122),
@@ -9,31 +9,31 @@ var i = n(636537),
     d = n(77729),
     c = n(652215);
 let u = new s.A("uploadRtcLogFiles");
-async function _(e, t) {
-    let n;
+async function _(e, t, n) {
+    let r;
     if (null == d.A.fileManager.readLogFiles) throw new a._(a.ct.GENERAL);
-    let r = [];
+    let s = [];
     try {
-        r = (r = await d.A.fileManager.readLogFiles(e)).map((e) => (0, o.ww)(e, "application/octet-stream"));
+        s = (s = await d.A.fileManager.readLogFiles(e, t)).map((e) => (0, o.ww)(e, "application/octet-stream"));
     } catch (e) {
         throw (u.error(`uploadDebugFiles: read error '${e}'`), new a._(a.ct.READ));
     }
-    if (0 === r.length) throw new a._(a.ct.NO_FILE);
-    let s = { extraInfo: t, mediaEngineState: l.Ay.getState() },
-        _ = [
-            ...r.map((e) => ({ name: e.name, file: e, filename: e.name })),
+    if (0 === s.length) throw new a._(a.ct.NO_FILE);
+    let _ = { extraInfo: n, mediaEngineState: l.Ay.getState() },
+        E = [
+            ...s.map((e) => ({ name: e.name, file: e, filename: e.name })),
             {
                 name: "media_engine_state.json",
                 filename: "media_engine_state.json",
-                file: new Blob([JSON.stringify(s, void 0, 2)]),
+                file: new Blob([JSON.stringify(_, void 0, 2)]),
             },
         ],
-        E = new Set();
+        A = new Set();
     try {
-        n = await i.Bo.post({
+        r = await i.Bo.post({
             url: c.Rsh.DEBUG_LOGS(c.Umv.RTC),
             attachments: [
-                ..._.map((e) => {
+                ...E.map((e) => {
                     let t = (function (e, t) {
                         let n = t.split("."),
                             i = n.length > 1 ? n.pop() : "",
@@ -42,7 +42,7 @@ async function _(e, t) {
                             s = 1;
                         for (; e.has(a); ) (a = `${r}_${s}.${i}`), (s += 1);
                         return e.add(a), a;
-                    })(E, e.name);
+                    })(A, e.name);
                     return { name: t, file: e.file, filename: t };
                 }),
             ],
@@ -52,18 +52,18 @@ async function _(e, t) {
         if (429 === e.status) throw new a._(a.ct.PROGRESS);
         throw (u.error(`Debug log upload error: status: ${e.status}, message: ${e.message}`), new a._(a.ct.UPLOAD));
     }
-    if ("success_count" in n.body && n.body.success_count !== _.length)
+    if ("success_count" in r.body && r.body.success_count !== E.length)
         throw (
-            (u.error(`Debug log upload: stored files ${n.body.success_count} !== ${_.length}`), new a._(a.ct.GENERAL))
+            (u.error(`Debug log upload: stored files ${r.body.success_count} !== ${E.length}`), new a._(a.ct.GENERAL))
         );
     if (
-        ("store_success" in n.body && !n.body.store_success) ||
-        ("id_match" in n.body && !n.body.id_match) ||
-        ("all_success" in n.body && !n.body.all_success)
+        ("store_success" in r.body && !r.body.store_success) ||
+        ("id_match" in r.body && !r.body.id_match) ||
+        ("all_success" in r.body && !r.body.all_success)
     )
         throw (
             (u.error(
-                `Debug log upload: store_success: ${n.body.store_success} / id_match: ${n.body.id_match} / all_success: ${n.body.all_success}`,
+                `Debug log upload: store_success: ${r.body.store_success} / id_match: ${r.body.id_match} / all_success: ${r.body.all_success}`,
             ),
             new a._(a.ct.GENERAL))
         );
@@ -75,14 +75,20 @@ function h(e, t) {
     let n = e.length > t ? t : e.length;
     return e.substring(0, n).padEnd(t, " ");
 }
-var I = n(734057),
-    f = n(53943);
+var I = n(734057);
+let f = (0, n(945810).mj)({
+    kind: "user",
+    name: "2026-08-compress-logs",
+    defaultConfig: { enabled: !1 },
+    variations: { 1: { enabled: !0 } },
+});
+var p = n(53943);
 n(321073);
-var p = n(435558),
-    T = n.n(p),
-    m = n(61090),
-    g = n(707539);
-function S(e) {
+var T = n(435558),
+    m = n.n(T),
+    g = n(61090),
+    S = n(707539);
+function N(e) {
     let t = null == e.tag ? e.label : `${e.label} ${e.tag}`;
     return (
         t.includes("_START") && (t = "Start " + t.replace("_START", "")),
@@ -90,11 +96,13 @@ function S(e) {
         t
     );
 }
-var N = n(506774);
-let C = new s.A("DebugUploadManager");
-async function O(e, t) {
+var C = n(506774);
+let O = new s.A("DebugUploadManager");
+async function R(e, t) {
     try {
-        await R(e), await _(0xe00000, t);
+        await L(e);
+        let { enabled: n } = f.getConfig({ location: "uploadDebugLogFiles" });
+        await _(0xe00000, n, t);
     } catch (t) {
         let e;
         throw (
@@ -120,11 +128,11 @@ async function O(e, t) {
         );
     }
 }
-async function R(e) {
+async function L(e) {
     try {
         let t, n, a, s;
         try {
-            t = f.As();
+            t = p.As();
         } catch (e) {
             t = `Logs failed: ${e}`;
         }
@@ -137,8 +145,8 @@ async function R(e) {
             a = await Promise.resolve([]).then((e) =>
                 (function (e, t) {
                     if (0 === e.length) return "No logs";
-                    let n = N.w.get(c.Xlh),
-                        i = N.w.get(c.Ahp),
+                    let n = C.w.get(c.Xlh),
+                        i = C.w.get(c.Ahp),
                         r = null != n ? `Device Token: ${n}` : "",
                         a = null != i ? `Device Voip Token: ${i}` : "",
                         s = e
@@ -174,7 +182,7 @@ ${s}`;
     ${(function (e) {
         let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
             n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
-        return m.A.logGroups
+        return g.A.logGroups
             .map((i) => {
                 var r, a, s, l, o, d;
                 let c,
@@ -184,20 +192,20 @@ ${s}`;
                     A,
                     h,
                     I,
-                    { index: f, timestamp: p, logs: m, nativeLogs: N, serverTrace: C } = i,
-                    O = 0 === f ? (T().find(m, (e) => e.log.indexOf("Logger loaded") >= 0)?.timestamp ?? e) : p,
+                    { index: f, timestamp: p, logs: T, nativeLogs: g, serverTrace: C } = i,
+                    O = 0 === f ? (m().find(T, (e) => e.log.indexOf("Logger loaded") >= 0)?.timestamp ?? e) : p,
                     R =
                         ((o =
-                            ((r = m),
-                            (a = N),
+                            ((r = T),
+                            (a = g),
                             (s = t),
                             (l = n),
                             (r = r.slice()),
-                            (c = new Set(a.map(S))),
+                            (c = new Set(a.map(N))),
                             (u = ""),
                             (_ = []),
                             a.forEach((e) => {
-                                let t = S(e),
+                                let t = N(e),
                                     n = 0,
                                     i = s || !e.autoGenerated,
                                     a =
@@ -262,13 +270,13 @@ ${s}`;
                             log: `${e.emoji.length > 0 ? `${e.emoji} ` : ""}${e.prefix}${e.log}
 `,
                         }))),
-                        (h = T().max(A.map((e) => e.totalTime.length)) ?? 0),
-                        (I = T().max(A.map((e) => e.deltaTime.length)) ?? 0),
+                        (h = m().max(A.map((e) => e.totalTime.length)) ?? 0),
+                        (I = m().max(A.map((e) => e.deltaTime.length)) ?? 0),
                         A.map((e) => {
                             let { totalTime: t, deltaTime: n, log: i } = e;
-                            return `${T().padStart(t, h)} ${T().padStart(n, I)} ${i}`;
+                            return `${m().padStart(t, h)} ${m().padStart(n, I)} ${i}`;
                         }).join("")),
-                    L = `Trace #${f + 1} started ${(0, g.aK)(p)}
+                    L = `Trace #${f + 1} started ${(0, S.aK)(p)}
 ${R}`;
                 return (
                     null != C &&
@@ -298,7 +306,7 @@ ${R}`;
     })()}
 
     Metadata:
-    ${JSON.stringify({ logsUploaded: new Date().toISOString(), releaseChannel: window.GLOBAL_ENV.RELEASE_CHANNEL, buildNumber: "604048", versionHash: "cd4561b50f939ca0dc8e9bd1c5f514dfc3b9e633" }, void 0, 2)}
+    ${JSON.stringify({ logsUploaded: new Date().toISOString(), releaseChannel: window.GLOBAL_ENV.RELEASE_CHANNEL, buildNumber: "604173", versionHash: "dbcfce1b5dc2723a8ba220d6083bdef37cd3f5ee" }, void 0, 2)}
 
     ChannelStore:
     ${JSON.stringify(I.A.getDebugInfo(), void 0, 2)}
@@ -315,7 +323,7 @@ ${R}`;
     Push Notifications:
     ${a}
     `;
-        f.IU();
+        p.IU();
         let d = c.Rsh.DEBUG_LOG(e, "discord_app_logs");
         await i.Bo.post({
             url: d,
@@ -326,6 +334,6 @@ ${R}`;
             rejectWithError: !1,
         });
     } catch (e) {
-        C.error(`uploadAppLogFiles: upload app log files error ${e.message}`);
+        O.error(`uploadAppLogFiles: upload app log files error ${e.message}`);
     }
 }
