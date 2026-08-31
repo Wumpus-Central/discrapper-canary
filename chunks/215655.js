@@ -1,18 +1,18 @@
 n.d(t, { A: () => s });
-var l = n(582128),
-    i = n(625494),
+var i = n(582128),
+    l = n(625494),
     a = n(652215);
-function s(e, t) {
-    l.useEffect(() => {
-        function n(e) {
-            let { timestampMs: n } = e;
-            null != t.current && (t.current.seek(n / 1e3), t.current.play());
+function s(e, t, n) {
+    i.useEffect(() => {
+        function i(e) {
+            let { timestampMs: i } = e;
+            null != n ? n(i) : null != t.current && (t.current.seek(i / 1e3), t.current.play());
         }
         return (
-            i._.subscribeKeyed(a.zOV.CLIP_SEEK_VIDEO, e, n),
+            l._.subscribeKeyed(a.zOV.CLIP_SEEK_VIDEO, e, i),
             () => {
-                i._.unsubscribeKeyed(a.zOV.CLIP_SEEK_VIDEO, e, n);
+                l._.unsubscribeKeyed(a.zOV.CLIP_SEEK_VIDEO, e, i);
             }
         );
-    }, [e, t]);
+    }, [e, t, n]);
 }

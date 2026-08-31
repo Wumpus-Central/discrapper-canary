@@ -102,7 +102,7 @@ let N = r.memo(function (e) {
     var t, n, r, s, x;
     let f,
         { media: y, obscured: A = !1, maxWidth: E, maxHeight: C, onContextMenu: N } = e,
-        { width: w, height: O, url: S, proxyUrl: _, alt: V, type: D, maxWidth: b, maxHeight: T, ...L } = y,
+        { width: S, height: w, url: O, proxyUrl: _, alt: V, type: T, maxWidth: D, maxHeight: b, ...L } = y,
         { zoomed: P } = (0, p.Q)(),
         U = (function (e) {
             if (e?.identifier?.type !== "attachment" || null == e.message) return null;
@@ -112,13 +112,13 @@ let N = r.memo(function (e) {
         })(y.sourceMetadata),
         R =
             ((t = P),
-            (n = S),
+            (n = O),
             (r = _),
             (s = y.contentType),
             (x = y.originalContentType),
             t && g.A.isDiscordAssetUrl(n, s, x) ? (0, d.XW)(n, s, x) : (0, c.E)({ proxyURL: r, url: n })),
-        k = null != w && 0 !== w && null != O && 0 !== O;
-    if ("VIDEO" === D && k && null != _) {
+        k = null != S && 0 !== S && null != w && 0 !== w;
+    if ("VIDEO" === T && k && null != _) {
         let e = y.poster ?? M(_);
         if (null == e) return null;
         if (null != U)
@@ -130,6 +130,7 @@ let N = r.memo(function (e) {
                 maxWidth: E,
                 maxHeight: C,
                 messageId: y.sourceMetadata?.message?.id,
+                initialTimeSec: y.initialTimeSec,
                 autoPlay: y.autoPlay ?? !A,
                 autoMute: "function" == typeof y.autoMute ? y.autoMute() : (y.autoMute ?? (0, m.uj)()),
                 volume: (0, m.GD)(),
@@ -142,13 +143,13 @@ let N = r.memo(function (e) {
         return (0, i.jsx)(u.A, {
             ...L,
             src: R,
-            width: w,
-            height: O,
+            width: S,
+            height: w,
             maxWidth: E,
             maxHeight: C,
             poster: e,
-            naturalWidth: w,
-            naturalHeight: O,
+            naturalWidth: S,
+            naturalHeight: w,
             volume: m.v1,
             autoMute: y.autoMute ?? m.uj,
             onVolumeChange: m.ls,
@@ -161,13 +162,13 @@ let N = r.memo(function (e) {
         });
     }
     return (
-        "IMAGE" === D &&
+        "IMAGE" === T &&
             (f = k
                 ? (0, i.jsx)(o.Ay, {
                       ...L,
                       src: R,
-                      width: w,
-                      height: O,
+                      width: S,
+                      height: w,
                       maxWidth: E,
                       maxHeight: C,
                       useFullWidth: !0,

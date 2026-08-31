@@ -1,4 +1,4 @@
-i.d(t, { Cr: () => A, I1: () => I, Nj: () => _, R6: () => M, SX: () => w, UB: () => k }), i(938796);
+i.d(t, { Cr: () => A, I1: () => I, Nj: () => _, R6: () => w, SX: () => k, UB: () => M }), i(938796);
 var n = i(477900),
     a = i(582128),
     l = i(665260);
@@ -15,9 +15,9 @@ var r = i(682176),
     g = i(966245),
     f = i(447991),
     v = i(838541),
-    y = i(652215);
+    S = i(652215);
 i(516653);
-var S = i(375708);
+var y = i(375708);
 function A(e) {
     let t = e.item.originalItem;
     return (0, g.LL)({
@@ -29,7 +29,7 @@ function A(e) {
         placeholderVersion: t.placeholder_version,
         contentType: t.content_type,
         originalContentType: t.original_content_type,
-        srcIsAnimated: (0, l.Lt)(t.flags ?? 0, y.sbO.IS_ANIMATED),
+        srcIsAnimated: (0, l.Lt)(t.flags ?? 0, S.sbO.IS_ANIMATED),
         sourceMetadata: {
             message: e.message,
             identifier: { type: "attachment", attachmentId: t.id, filename: t.filename, title: t.title, size: t.size },
@@ -39,7 +39,7 @@ function A(e) {
 }
 function I(e) {
     let t = e.item.originalItem,
-        i = (0, l.Lt)(t.flags ?? 0, y.sbO.IS_CLIP),
+        i = (0, l.Lt)(t.flags ?? 0, S.sbO.IS_CLIP),
         a = h.A.toURLSafe(t.proxy_url);
     return null == a
         ? null
@@ -58,6 +58,7 @@ function I(e) {
                         messageId: e.message.id,
                         fillContainer: !e.isSingleMosaicItem,
                         onClick: e.onClick ?? void 0,
+                        onSeekRequest: e.onSeekRequest,
                         onContextMenu: e.onContextMenu ?? void 0,
                         maxWidth: e.maxWidth,
                         maxHeight: e.maxHeight ?? v.Rk,
@@ -85,7 +86,7 @@ function x(e, t) {
         src: i.url,
         placeholder: i.placeholder,
         placeholderVersion: i.placeholder_version,
-        srcIsAnimated: (0, l.Lt)(i.flags ?? 0, y.sbO.IS_ANIMATED),
+        srcIsAnimated: (0, l.Lt)(i.flags ?? 0, S.sbO.IS_ANIMATED),
         sourceMetadata: {
             message: e.message,
             identifier: { type: "attachment", attachmentId: i.id, filename: i.filename, size: i.size },
@@ -101,7 +102,7 @@ function C(e) {
             l,
             r,
             o = null != a.width && null != a.height && a.height > a.width ? "portrait" : "landscape",
-            s = null != a.description && "" !== a.description ? a.description : S.intl.string(S.t.FlNoSV),
+            s = null != a.description && "" !== a.description ? a.description : y.intl.string(y.t.FlNoSV),
             { width: d, height: c } =
                 ((e = t.maxWidth ?? v.k6),
                 (l = t.maxHeight ?? v.Rk),
@@ -168,7 +169,7 @@ function _(e) {
     let t = e.item.originalItem;
     return (0, g.gL)({ ...e, fileSize: t.size, fileName: (0, p.A)(t), src: t.url });
 }
-function w(e) {
+function k(e) {
     let { message: t, item: i } = e,
         n = i.originalItem,
         l = (0, o.dx)(o.k0.VOICE_MESSAGE, n.id),
@@ -203,11 +204,11 @@ function w(e) {
         playbackCacheKey: l,
     });
 }
-function M(e) {
+function w(e) {
     let t = e.item.originalItem;
     return (0, g._d)({ ...e, url: t.url, fileName: (0, p.A)(t), fileSize: t.size, contentType: t.content_type });
 }
-function k(e) {
+function M(e) {
     let t = e.item.originalItem;
     return (0, g.Dk)({ ...e, url: t.url, fileName: (0, p.A)(t), fileSize: t.size });
 }

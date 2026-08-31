@@ -58,7 +58,7 @@ var v = t(338717),
     b = t(643612),
     j = t(731068);
 let A = RegExp("^music\\.amazon\\.(?:com|co\\.uk|de|co\\.jp|es|fr|it|com\\.au|in|ca|com\\.mx|com\\.br)");
-function I(e) {
+function S(e) {
     let l = null,
         t = null,
         r = null;
@@ -69,16 +69,16 @@ function I(e) {
     }
     return null != r && A.test(l ?? "") && null != t ? r : null;
 }
-function S(e) {
+function I(e) {
     let {
         className: l,
         embed: { url: t, thumbnail: s },
     } = e;
     if (null == t || null == s) return null;
-    let i = I(t);
+    let i = S(t);
     if (null == i) return null;
     let a = i.query.iframe_url;
-    if (null == a || Array.isArray(a) || null == I(a)) return null;
+    if (null == a || Array.isArray(a) || null == S(a)) return null;
     let { width: o, height: d } = s,
         u = o,
         h = d;
@@ -192,8 +192,8 @@ var T = t(619517),
     W = t(492230),
     L = t(114212),
     R = t(343552),
-    _ = t(302031);
-function k(e) {
+    k = t(302031);
+function _(e) {
     return null != e && "open.spotify.com" === e;
 }
 var H = t(272984);
@@ -211,7 +211,7 @@ function V(e) {
     } catch (e) {
         return null;
     }
-    if (!k(s) || null == i) return null;
+    if (!_(s) || null == i) return null;
     let a = i.split("/"),
         o = null != a[1] ? a[1].toLowerCase() : null,
         d = null != a[3] ? a[3].toLowerCase() : null,
@@ -311,8 +311,8 @@ function es(e) {
             volume: b,
             onPlay: j,
             onPause: A,
-            onEnded: I,
-            onControlsHide: S,
+            onEnded: S,
+            onControlsHide: I,
             onControlsShow: C,
             onVolumeChange: N,
             onMute: P,
@@ -321,23 +321,23 @@ function es(e) {
             placeholderVersion: W,
             sourceMetadata: L,
         } = e,
-        [R, _] = s.useState(w),
-        k = null != d && null == d.proxyURL,
-        H = s.useCallback(() => _(!1), [_]);
+        [R, k] = s.useState(w),
+        _ = null != d && null == d.proxyURL,
+        H = s.useCallback(() => k(!1), [k]);
     function V(e) {
         e.preventDefault(),
             e.stopPropagation(),
             j?.(!1),
-            _(!0),
-            k &&
+            k(!0),
+            _ &&
                 (G._.dispatch(c.jej.VIDEO_EMBED_PLAYBACK_STARTED),
                 G._.subscribeOnce(c.jej.VIDEO_EMBED_PLAYBACK_STARTED, H));
     }
     s.useEffect(
         () => () => {
-            k && G._.unsubscribe(c.jej.VIDEO_EMBED_PLAYBACK_STARTED, H);
+            _ && G._.unsubscribe(c.jej.VIDEO_EMBED_PLAYBACK_STARTED, H);
         },
-        [k, H],
+        [_, H],
     );
     let { width: D, height: U } = o;
     null != d && ((D = d.width), (U = d.height));
@@ -356,7 +356,7 @@ function es(e) {
                 height: U,
                 responsive: m,
                 autoPlay: w,
-                onEnded: I,
+                onEnded: S,
                 naturalWidth: d.width,
                 naturalHeight: d.height,
                 onVolumeChange: N,
@@ -366,7 +366,7 @@ function es(e) {
                 onPlay: j,
                 onPause: A,
                 onMute: P,
-                onControlsHide: S,
+                onControlsHide: I,
                 onControlsShow: C,
                 sourceMetadata: L,
             }),
@@ -770,20 +770,19 @@ class en extends s.PureComponent {
             { maxMediaWidth: h, maxMediaHeight: c, sourceMetadata: m } = this.state;
         if (null == t) return null;
         let p = (0, O.E)(t),
-            { srcToOnClickOverride: g, srcToHandlePreloadImage: f } =
-                null == a
-                    ? { srcToOnClickOverride: {}, srcToHandlePreloadImage: {} }
-                    : (0, W.o)(
-                          a.map((e) => ({
-                              ...(0, j.oU)(e, m, "IMAGE"),
-                              original: e.url,
-                              srcIsAnimated: e.srcIsAnimated,
-                          })),
-                          {},
-                          "Embed",
-                      ),
-            x = T.Ay.isAnimated({ src: (0, O.E)(t), original: t.url, animated: !1, srcIsAnimated: t.srcIsAnimated }),
-            w = {
+            {
+                srcToOnClickOverride: g,
+                srcToHandlePreloadImage: f,
+                srcToSeekOverride: x,
+            } = null == a
+                ? { srcToOnClickOverride: {}, srcToHandlePreloadImage: {}, srcToSeekOverride: {} }
+                : (0, W.o)(
+                      a.map((e) => ({ ...(0, j.oU)(e, m, "IMAGE"), original: e.url, srcIsAnimated: e.srcIsAnimated })),
+                      {},
+                      "Embed",
+                  ),
+            w = T.Ay.isAnimated({ src: (0, O.E)(t), original: t.url, animated: !1, srcIsAnimated: t.srcIsAnimated }),
+            v = {
                 containerClassName: n()(d, { [y.W$]: !s, [y.Lw]: !s, [y.I_]: s }),
                 imageContainerClassName: s ? y.FM : void 0,
                 imageClassName: s ? y.t3 : void 0,
@@ -804,9 +803,9 @@ class en extends s.PureComponent {
                 srcIsAnimated: t.srcIsAnimated,
                 mosaicStyleAlt: !0,
             },
-            v = t.url.split(".").pop()?.split("?")[0] ?? "";
+            A = t.url.split(".").pop()?.split("?")[0] ?? "";
         return (
-            "jpg" === v && (v = "jpeg"),
+            "jpg" === A && (A = "jpeg"),
             (0, r.jsx)(b.G.Consumer, {
                 children: (l) =>
                     (0, r.jsx)(
@@ -815,9 +814,9 @@ class en extends s.PureComponent {
                             children: (t) => {
                                 let { disableAnimations: r } = t;
                                 return o({
-                                    ...w,
+                                    ...v,
                                     autoPlay: u && !r && !e,
-                                    renderAccessory: x ? l : null,
+                                    renderAccessory: w ? l : null,
                                     handlePreloadImage: f[p],
                                     onClick: g[p],
                                     onMouseEnter: () => this.handleImageHover(),
@@ -1150,14 +1149,14 @@ class en extends s.PureComponent {
                     if (null == e.url || e.provider?.name !== "Spotify" || e.type !== c.Auw.LINK) return !1;
                     try {
                         let l = h.parse(e.url, !0).host;
-                        return k(l);
+                        return _(l);
                     } catch (e) {
                         return !1;
                     }
                 })(e)
               ? (0, r.jsx)(V, { embed: e, className: t })
               : e.provider?.name === "Amazon Music" && e.type === c.Auw.RICH
-                ? (0, r.jsx)(S, { embed: e, className: t })
+                ? (0, r.jsx)(I, { embed: e, className: t })
                 : (function (e) {
                         if (
                             null == e.url ||
@@ -1175,8 +1174,8 @@ class en extends s.PureComponent {
                   ? (0, r.jsx)(w, { embed: e, className: t })
                   : this.isInline()
                     ? null != l
-                        ? (0, r.jsx)(_.Ay, {
-                              type: _.Ay.Types.ATTACHMENT,
+                        ? (0, r.jsx)(k.Ay, {
+                              type: k.Ay.Types.ATTACHMENT,
                               reason: l,
                               onReveal: this.onReveal,
                               onToggleObscurity: this.onToggleObscurity,
@@ -1189,8 +1188,8 @@ class en extends s.PureComponent {
                           })
                         : this.renderInlineMediaEmbed()
                     : null != l
-                      ? (0, r.jsx)(_.Ay, {
-                            type: _.Ay.Types.EMBED,
+                      ? (0, r.jsx)(k.Ay, {
+                            type: k.Ay.Types.EMBED,
                             onReveal: this.onReveal,
                             onToggleObscurity: this.onToggleObscurity,
                             reason: l,

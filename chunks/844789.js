@@ -1362,15 +1362,18 @@ function tX(e) {
         } = (0, tK.X)();
     if (null == t || null == n) return null;
     let u = e.items.map((e) => (0, tR.FX)(e.media, t)).filter((e) => "INVALID" !== e.type),
-        { srcToOnClickOverride: c, srcToHandlePreloadImage: d } =
-            u.length > 1
-                ? (0, t_.o)(u, { shouldHideMediaOptions: l, enabledContentHarmTypeFlags: r }, "Media Mosaic")
-                : { srcToOnClickOverride: {}, srcToHandlePreloadImage: {} };
-    function m(e, n) {
+        {
+            srcToOnClickOverride: c,
+            srcToHandlePreloadImage: d,
+            srcToSeekOverride: m,
+        } = u.length > 1
+            ? (0, t_.o)(u, { shouldHideMediaOptions: l, enabledContentHarmTypeFlags: r }, "Media Mosaic")
+            : { srcToOnClickOverride: {}, srcToHandlePreloadImage: {}, srcToSeekOverride: {} };
+    function p(e, n) {
         let l = e.originalItem;
         return (0, tP.tt)(l.media, n, l.spoiler, t?.author.bot ?? !1);
     }
-    let p = e.items.map((e, n) => {
+    let x = e.items.map((e, n) => {
         let l = e.media,
             r = o?.(l),
             i = {
@@ -1388,7 +1391,7 @@ function tX(e) {
                 },
                 onContextMenu: r,
                 autoPlayGif: a,
-                getObscureReason: m,
+                getObscureReason: p,
                 renderImageComponent: tG,
                 renderVideoComponent: tV,
                 renderVisualPlaceholderComponent: tH,
@@ -1403,9 +1406,9 @@ function tX(e) {
                 onEditItem: U.tEg,
             },
             u = (0, tW.E)({ proxyURL: l.proxyUrl, url: l.url });
-        return u in c && ((i.onClick = c[u]), (i.handlePreloadImage = d[u])), i;
+        return u in c && ((i.onClick = c[u]), (i.handlePreloadImage = d[u]), (i.onSeekRequest = m[u])), i;
     });
-    return (0, i.jsx)("div", { children: (0, i.jsx)(tY.A, { items: p, isInAppComponentsV2: !0 }) });
+    return (0, i.jsx)("div", { children: (0, i.jsx)(tY.A, { items: x, isInAppComponentsV2: !0 }) });
 }
 var tq = n(210716);
 function t$(e) {

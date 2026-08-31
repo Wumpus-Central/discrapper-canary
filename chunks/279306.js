@@ -7228,18 +7228,18 @@ class cX extends s.Component {
                     srcIsAnimated: (0, c.Lt)(t.flags ?? 0, Y.sbO.IS_ANIMATED),
                 }))
                 .filter((e) => "INVALID" !== e.type),
-            { srcToOnClickOverride: g, srcToHandlePreloadImage: p } = (0, lY.o)(
-                h,
-                { enabledContentHarmTypeFlags: r, shouldHideMediaOptions: o },
-                "Media Mosaic",
-            ),
-            A = h.length > 1,
-            x = (0, c.Lt)(u, Y.pr7.IS_VOICE_MESSAGE);
-        function f(e, n) {
+            {
+                srcToOnClickOverride: g,
+                srcToHandlePreloadImage: p,
+                srcToSeekOverride: A,
+            } = (0, lY.o)(h, { enabledContentHarmTypeFlags: r, shouldHideMediaOptions: o }, "Media Mosaic"),
+            x = h.length > 1,
+            f = (0, c.Lt)(u, Y.pr7.IS_VOICE_MESSAGE);
+        function E(e, n) {
             let i = (0, c.Lt)(e.originalItem.flags ?? 0, Y.sbO.IS_SPOILER) || (0, sy.BV)(t);
             return (0, aG.iW)(e.originalItem, n, i);
         }
-        let E = m.map((l) => {
+        let I = m.map((l) => {
             let r = (0, l_.aG)(l),
                 o = {
                     message: e,
@@ -7249,14 +7249,14 @@ class cX extends s.Component {
                     onRemoveItem: this.handleRemoveAttachment,
                     canEditItem: i,
                     onEditItem: this.handleEditAttachment,
-                    getObscureReason: f,
+                    getObscureReason: E,
                     onContextMenu:
                         null != a
                             ? (e) => {
                                   e.stopPropagation(), e.preventDefault(), a(e, r);
                               }
                             : void 0,
-                    renderAudioComponent: x ? cy.SX : cy.Nj,
+                    renderAudioComponent: f ? cy.SX : cy.Nj,
                     renderImageComponent: cy.Cr,
                     renderVideoComponent: cy.I1,
                     renderPlaintextFilePreview: cy.R6,
@@ -7278,9 +7278,9 @@ class cX extends s.Component {
                     allowFullScreen: !this.props.disableComponentInteractivity,
                 },
                 c = (0, aO.E)({ proxyURL: l.proxy_url, url: l.url });
-            return c in g && A && ((o.onClick = g[c]), (o.handlePreloadImage = p[c])), o;
+            return c in g && x && ((o.onClick = g[c]), (o.handlePreloadImage = p[c]), (o.onSeekRequest = A[c])), o;
         });
-        return (0, l.jsx)(cD.A, { items: E });
+        return (0, l.jsx)(cD.A, { items: I });
     }
     renderEmbed = (e, t, n, i) => {
         let {
