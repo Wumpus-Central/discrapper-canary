@@ -57,14 +57,14 @@ let M = r.memo(function (e) {
     );
 });
 var N = n(331322),
-    w = n(87221),
-    O = n(689175),
-    S = n(939249),
+    S = n(87221),
+    w = n(689175),
+    O = n(939249),
     _ = n(775602),
     V = n(607470),
-    D = n(619517),
-    b = n(154872),
-    T = n(838541),
+    T = n(619517),
+    D = n(154872),
+    b = n(838541),
     L = n(375708),
     P = n(280462);
 function U(e) {
@@ -76,7 +76,7 @@ let R = r.memo(function (e) {
             if ("IMAGE" === e.type) return (0, g.E)({ proxyURL: e.proxyUrl, url: e.url });
             if ("VIDEO" === e.type) {
                 if (null != e.poster) return e.poster;
-                if (null != e.proxyUrl) return (0, b.VZ)(e.proxyUrl);
+                if (null != e.proxyUrl) return (0, D.VZ)(e.proxyUrl);
             }
             return null;
         })(t);
@@ -95,9 +95,9 @@ let R = r.memo(function (e) {
                   justify: "center",
                   className: P.cd,
                   style: { width: 40, height: 40 },
-                  children: (0, i.jsx)(w.D, { size: "sm", color: "white" }),
+                  children: (0, i.jsx)(S.D, { size: "sm", color: "white" }),
               })
-            : (0, i.jsx)(D.Ay, {
+            : (0, i.jsx)(T.Ay, {
                   width: t.width ?? 40,
                   height: t.height ?? 40,
                   maxWidth: 40,
@@ -108,7 +108,7 @@ let R = r.memo(function (e) {
                   shouldRenderAccessory: !1,
                   srcIsAnimated: t.srcIsAnimated,
                   alt: t.alt,
-                  mediaLayoutType: T.dG.MOSAIC,
+                  mediaLayoutType: b.dG.MOSAIC,
               });
 });
 function k(e) {
@@ -123,7 +123,7 @@ function k(e) {
         }, [n]),
         (0, i.jsx)("div", {
             className: a()(P.IL, s),
-            children: (0, i.jsx)(O.Ch, {
+            children: (0, i.jsx)(w.Ch, {
                 orientation: "horizontal",
                 className: a()(P.nV, s),
                 ref: u,
@@ -132,7 +132,7 @@ function k(e) {
                     let s = r === n,
                         u = s ? L.t["qv/U5V"] : L.t.zviMAG;
                     return (0, i.jsx)(
-                        S.D,
+                        O.D,
                         {
                             id: U(r),
                             className: a()(P.Qq, { [P.AD]: !s, [P.$1]: 0 === r, [P.HV]: r === t.length - 1 }),
@@ -220,12 +220,12 @@ function z(e) {
                   e.stopPropagation(), e.preventDefault();
               }
             : () => f.l.markActionPerformed(f.N.CONTEXT_MENU_OPENED),
-        w = t.length > 1;
+        S = t.length > 1;
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(v.Ay, {
                 children: (e) =>
-                    w
+                    S
                         ? (0, i.jsxs)(i.Fragment, {
                               children: [
                                   (0, i.jsx)(F.A, {
@@ -256,10 +256,10 @@ function z(e) {
                         isObscured: !A && C,
                         src: j.url,
                         children: (n) =>
-                            (0, i.jsx)(b.Ay, { media: j, maxWidth: e, maxHeight: t, obscured: n, onContextMenu: N }),
+                            (0, i.jsx)(D.Ay, { media: j, maxWidth: e, maxHeight: t, obscured: n, onContextMenu: N }),
                     }),
             }),
-            w &&
+            S &&
                 (0, i.jsx)(v.Ay, {
                     children: (e) =>
                         (0, i.jsx)(k, {

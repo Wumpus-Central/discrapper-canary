@@ -1,4 +1,4 @@
-t.d(e, { ko: () => f, Ay: () => w, Le: () => h, Tz: () => g, jp: () => k });
+t.d(e, { ko: () => h, Ay: () => f, Le: () => w, Tz: () => A, jp: () => k });
 var o = t(46054);
 t(321073), t(380610);
 var l = t(721779);
@@ -33,25 +33,25 @@ function c(n) {
         n
     );
 }
-function m(n, e) {
-    if (n instanceof Array) return n.some((n) => m(n, e));
+function p(n, e) {
+    if (n instanceof Array) return n.some((n) => p(n, e));
     let t = e(n);
     return null != t
         ? t
         : n.content instanceof Array
-          ? m(n.content, e)
-          : n.items instanceof Array && n.items.some((n) => m(n, e));
+          ? p(n.content, e)
+          : n.items instanceof Array && n.items.some((n) => p(n, e));
 }
-function p(n) {
-    return m(n, (n) =>
-        "spoiler" === n.type ? m(n, (n) => "link" === n.type || "attachmentLink" === n.type || null) : null,
+function m(n) {
+    return p(n, (n) =>
+        "spoiler" === n.type ? p(n, (n) => "link" === n.type || "attachmentLink" === n.type || null) : null,
     );
 }
 function y(n) {
     return "link" === n.type && null != n.target && null != (0, l.iY)(n.target);
 }
-function f(n, e) {
-    let t = h({ channelId: n.channel_id, messageId: n.id, authorId: n.author?.id, renderOptions: e }),
+function h(n, e) {
+    let t = w({ channelId: n.channel_id, messageId: n.id, authorId: n.author?.id, renderOptions: e }),
         o = null != n.webhookId;
     return {
         ...t,
@@ -61,7 +61,7 @@ function f(n, e) {
         soundboardSounds: n.soundboardSounds ?? [],
     };
 }
-function h(n) {
+function w(n) {
     let { channelId: e, messageId: t, authorId: o, renderOptions: l } = n;
     return {
         channelId: e,
@@ -89,40 +89,40 @@ function h(n) {
         disablePressableChannelMention: !!l.disablePressableChannelMention,
     };
 }
-function w(n) {
+function f(n) {
     let e = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
     return (function (n, e, t) {
         let {
                 toAST: o = !1,
-                hideSimpleEmbedContent: m = !0,
-                formatInline: h = !1,
-                postProcessor: w,
+                hideSimpleEmbedContent: p = !0,
+                formatInline: w = !1,
+                postProcessor: f,
                 contentMessage: k,
             } = t,
-            g = !1,
             A = !1,
+            g = !1,
             b = (k ?? e).content,
-            L = n(b, !0, f(e, t), (n, t, f) => {
+            L = n(b, !0, h(e, t), (n, t, h) => {
                 let { ast: L, hasSpoilerEmbeds: I } = (function (n) {
-                    var e, t, o, m;
-                    let f,
+                    var e, t, o, p;
+                    let h,
                         {
-                            ast: h,
-                            inline: w,
+                            ast: w,
+                            inline: f,
                             hasBailedAst: k,
-                            message: g,
-                            contentMessage: A,
+                            message: A,
+                            contentMessage: g,
                             messageContent: b,
                             hideSimpleEmbedContent: L,
                             formatInline: I,
-                            toAST: C,
+                            toAST: E,
                         } = n,
-                        E = Array.isArray(h) ? h : [h],
-                        M = !1;
+                        M = Array.isArray(w) ? w : [w],
+                        C = !1;
                     return (
-                        k && (E = [{ type: "text", content: b, originalMatch: { index: 0, 0: b } }]),
+                        k && (M = [{ type: "text", content: b, originalMatch: { index: 0, 0: b } }]),
                         L &&
-                            (E = (function (n, e) {
+                            (M = (function (n, e) {
                                 if (1 !== n.length || 1 !== e.length) return n;
                                 let t = n[0],
                                     o = e[0];
@@ -131,23 +131,23 @@ function w(n) {
                                     (0, a.NV)(o)
                                     ? []
                                     : n;
-                            })(E, (A ?? g).embeds)),
+                            })(M, (g ?? A).embeds)),
                         I ||
-                            g.type === s.lAJ.MEDIA_MENTION_MESSAGE ||
-                            ((e = E),
-                            (E = w
+                            A.type === s.lAJ.MEDIA_MENTION_MESSAGE ||
+                            ((e = M),
+                            (M = f
                                 ? c(e)
                                 : ("paragraph" === e[0].type &&
                                       e[0].content instanceof Array &&
                                       (e[0].content = c(e[0].content)),
                                   e))),
-                        (f = (t = E).some((n) => "link" !== n.type)),
-                        (E =
-                            !(o = E =
-                                (E = t.filter((n) => {
+                        (h = (t = M).some((n) => "link" !== n.type)),
+                        (M =
+                            !(o = M =
+                                (M = t.filter((n) => {
                                     let e = "link" === n.type,
                                         t = null != n.target ? (0, l.ts)(n.target) : null;
-                                    return !(e && null != t && !f);
+                                    return !(e && null != t && !h);
                                 })).filter((n) => {
                                     let e = "link" === n.type,
                                         t = null != n.target && null != (0, l.$9)(n.target);
@@ -157,13 +157,13 @@ function w(n) {
                             !(0, i.l)("MarkupPostProcessors")
                                 ? o
                                 : o.filter((n) => !y(n))),
-                        (A ?? g).embeds.length > 0 &&
-                            ((m = E),
-                            (M = w
-                                ? p(m)
-                                : "paragraph" === m[0].type && m[0].content instanceof Array && p(m[0].content))),
+                        (g ?? A).embeds.length > 0 &&
+                            ((p = M),
+                            (C = f
+                                ? m(p)
+                                : "paragraph" === p[0].type && p[0].content instanceof Array && m(p[0].content))),
                         I &&
-                            (E = (function n(e) {
+                            (M = (function n(e) {
                                 return (
                                     e.forEach((e) => {
                                         d.has(e.type) &&
@@ -178,25 +178,25 @@ function w(n) {
                                     }),
                                     e
                                 );
-                            })(E)),
-                        { ast: E, hasSpoilerEmbeds: M }
+                            })(M)),
+                        { ast: M, hasSpoilerEmbeds: C }
                     );
                 })({
                     ast: n,
                     inline: t,
-                    hasBailedAst: (A = f ?? !1),
+                    hasBailedAst: (g = h ?? !1),
                     message: e,
                     contentMessage: k,
                     messageContent: b,
-                    hideSimpleEmbedContent: m,
-                    formatInline: h,
+                    hideSimpleEmbedContent: p,
+                    formatInline: w,
                     toAST: o,
                 });
-                g = I;
-                let C = L;
-                return null != w && (C = w(C, t)), C;
+                A = I;
+                let E = L;
+                return null != f && (E = f(E, t)), E;
             });
-        return { hasSpoilerEmbeds: g, hasBailedAst: A, content: L };
+        return { hasSpoilerEmbeds: A, hasBailedAst: g, content: L };
     })(e.formatInline ? o.A.parseInlineReply : o.A.parse, n, e);
 }
 function k(n, e) {
@@ -233,7 +233,7 @@ function k(n, e) {
         );
     })(n, e, t);
 }
-function g(n, e, t) {
+function A(n, e, t) {
     return (0, o.A.parseAutoModerationSystemMessage)(
         n,
         !0,

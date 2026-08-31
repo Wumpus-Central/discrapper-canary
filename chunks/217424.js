@@ -28,8 +28,8 @@ var i = n(477900),
     b = n(625494),
     R = n(58703),
     L = n(763754),
-    M = n(799162),
-    k = n(834730),
+    k = n(799162),
+    M = n(834730),
     O = n(289873),
     P = n(47167),
     D = n(842209),
@@ -46,9 +46,9 @@ var z = n(375708),
 let K = { tag: "span", variant: "text-md/normal", color: "text-default" },
     Y = { className: a()("mention", J.lE) };
 function W(e) {
-    return (0, i.jsx)(k.E, { ...K, color: "text-strong", children: e });
+    return (0, i.jsx)(M.E, { ...K, color: "text-strong", children: e });
 }
-let X = l.memo(function (e) {
+let Z = l.memo(function (e) {
     var t;
     let n,
         s,
@@ -97,7 +97,7 @@ let X = l.memo(function (e) {
                                     {
                                         children: [
                                             " ",
-                                            (0, i.jsx)(k.E, { ...K, children: d?.name_localized ?? s.name }),
+                                            (0, i.jsx)(M.E, { ...K, children: d?.name_localized ?? s.name }),
                                         ],
                                     },
                                     m,
@@ -191,7 +191,7 @@ let X = l.memo(function (e) {
                                 l.Fragment,
                                 {
                                     children: [
-                                        (0, i.jsxs)(k.E, { ...K, children: [" ", d?.name_localized ?? s.name, ": "] }),
+                                        (0, i.jsxs)(M.E, { ...K, children: [" ", d?.name_localized ?? s.name, ": "] }),
                                         n,
                                     ],
                                 },
@@ -210,7 +210,7 @@ let X = l.memo(function (e) {
                 }),
             );
         a = (0, i.jsxs)(i.Fragment, {
-            children: [(0, i.jsxs)(k.E, { ...K, children: ["/", c.application_command?.name_localized ?? c.name] }), e],
+            children: [(0, i.jsxs)(M.E, { ...K, children: ["/", c.application_command?.name_localized ?? c.name] }), e],
         });
     }
     return (0, i.jsxs)("div", {
@@ -222,7 +222,7 @@ let X = l.memo(function (e) {
         children: [(0, i.jsx)("div", { className: J.YL, ref: h, children: a }), (0, i.jsx)("div", { className: J.xQ })],
     });
 });
-var Z = n(943815),
+var X = n(943815),
     q = n(652215),
     Q = n(318626);
 function $(e) {
@@ -310,7 +310,7 @@ function et(e, t, n, l, s) {
         onTargetUserContextMenu: h,
         onPopoutRequestClose: g,
     } = e;
-    return (0, i.jsx)(M.A, {
+    return (0, i.jsx)(k.A, {
         className: 1 === n ? Q.iu : "",
         compact: !0,
         author: l,
@@ -333,8 +333,8 @@ function ei(e) {
         { analyticsLocations: r, newestAnalyticsLocation: c } = (0, I.Ay)(E.A.EXECUTED_COMMAND),
         p = (0, u.bG)([S.default], () => S.default.getCurrentUser()),
         y = l.useRef(null),
-        M = l.useRef(null),
-        k = l.useMemo(
+        k = l.useRef(null),
+        M = l.useMemo(
             () => (e, t, l) => (
                 o()(null != t, "ExecutedCommand: user cannot be undefined"),
                 o()(null != p, "ExecutedCommand: currentUser cannot be undefined"),
@@ -354,7 +354,7 @@ function ei(e) {
         O = l.useMemo(
             () => (e) => (
                 o()(null != s, "ExecutedCommand: channel cannot be null"),
-                (0, i.jsx)(X, { ...e, channel: s, messageId: n.id, interactionData: n.interactionData })
+                (0, i.jsx)(Z, { ...e, channel: s, messageId: n.id, interactionData: n.interactionData })
             ),
             [s, n.id, n.interactionData],
         ),
@@ -363,14 +363,14 @@ function ei(e) {
         U = P?.type === A.G4.APPLICATION_COMMAND && null != n.messageReference && null != e.renderTargetMessage,
         G = (0, L.d8)(n.interaction?.user, s),
         w = (0, L.d8)(D, s),
-        H = l.useMemo(() => (e.compact ? (0, Z.A)((0, R.i$)(d()(), "LT")) : null), [e.compact]),
+        H = l.useMemo(() => (e.compact ? (0, X.A)((0, R.i$)(d()(), "LT")) : null), [e.compact]),
         V = (0, x.Gp)(s.id),
         B = n.interaction;
     if (null == B || null == G) return null;
     function F() {
         if (null == B) return null;
-        let t = ee(e, B.user, 0, G, (e) => k(e, B.user, [E.A.AVATAR]), y),
-            n = et(e, B.user, 0, G, (e) => k(e, B.user));
+        let t = ee(e, B.user, 0, G, (e) => M(e, B.user, [E.A.AVATAR]), y),
+            n = et(e, B.user, 0, G, (e) => M(e, B.user));
         return (0, i.jsxs)(l.Fragment, { children: [t, n] }, "user");
     }
     if (n?.activityInstance === null || (0, N.V)(n))
@@ -440,7 +440,7 @@ function ei(e) {
                             }
                         },
                     });
-                })(e, O, M);
+                })(e, O, k);
                 return (0, i.jsx)(l.Fragment, { children: t }, "command");
             },
         })),
@@ -453,8 +453,8 @@ function ei(e) {
                           (0, i.jsx)(en, {}),
                           (0, i.jsx)(function () {
                               if (null == D) return null;
-                              let t = ee(e, D, 1, w, (e) => k(e, D, [E.A.AVATAR]), y),
-                                  n = et(e, D, 1, w, (e) => k(e, D));
+                              let t = ee(e, D, 1, w, (e) => M(e, D, [E.A.AVATAR]), y),
+                                  n = et(e, D, 1, w, (e) => M(e, D));
                               return (0, i.jsxs)(l.Fragment, { children: [t, n] }, "target");
                           }, {}),
                       ],

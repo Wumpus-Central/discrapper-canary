@@ -1,4 +1,4 @@
-a.exports = {
+e.exports = {
     _C: "guildIconContainer__62e7a",
     AY: "guildIconContainerOutline__62e7a",
     $d: "guildIconMask__62e7a",

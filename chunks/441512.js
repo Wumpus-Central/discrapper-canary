@@ -20,8 +20,8 @@ var r = n(477900),
     h = n(795068),
     g = n(678968),
     I = n(576199),
-    T = n(758423),
-    D = n(458817),
+    D = n(758423),
+    T = n(458817),
     R = n(854356),
     x = n(979204),
     L = n(190107),
@@ -62,7 +62,7 @@ function N(e) {
         [en] = l.useState(() => E.A.getEffectiveConnectionSpeed()),
         er = Math.max(W.maxTimestampSec, H.progressSeconds),
         el = G ? void 0 : (0, A.vd)(er, W.duration),
-        { videoAsset: ei, videoAssetType: eu } = (0, T.A)(K, en, et, M, !1),
+        { videoAsset: ei, videoAssetType: eu } = (0, D.A)(K, en, et, M, !1),
         es = l.useCallback(
             (e) => {
                 let { hasVideoAsset: t, playerState: n, pauseReason: r } = e;
@@ -94,12 +94,12 @@ function N(e) {
             trackQuestVideoBufferingEnded: eh,
             trackQuestVideoTimeToFirstFrame: eg,
             trackQuestVideoFullscreenChanged: eI,
-            trackQuestVideoError: eT,
-            trackQuestVideoVolumeChanged: eD,
+            trackQuestVideoError: eD,
+            trackQuestVideoVolumeChanged: eT,
             trackQuestContentClick: eR,
             trackQuestVideoProgressed: ex,
             trackQuestVideoSegmentWatched: eL,
-        } = (0, D.A)({
+        } = (0, T.A)({
             questId: B.id,
             isQuestCompleted: G,
             videoRef: K,
@@ -186,9 +186,9 @@ function N(e) {
         ),
         ej = l.useCallback(
             (e) => {
-                J(e), eD(e);
+                J(e), eT(e);
             },
-            [J, eD],
+            [J, eT],
         ),
         eY = l.useCallback(
             (e, t) => {
@@ -219,9 +219,9 @@ function N(e) {
         }, [B, G, z, ex]),
         eG = l.useCallback(
             (e, t) => {
-                eT(e, t);
+                eD(e, t);
             },
-            [eT],
+            [eD],
         ),
         e$ = l.useMemo(() => (0, S.tW)(B, S.fY.VIDEO_PLAYER_CAPTION, void 0, !1), [B]),
         eq = l.useCallback(

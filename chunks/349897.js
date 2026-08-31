@@ -1,6 +1,6 @@
-n.d(t, { T: () => v });
-var l = n(477900),
-    i = n(582128),
+n.d(t, { T: () => _ });
+var i = n(477900),
+    l = n(582128),
     a = n(503698),
     s = n.n(a),
     r = n(221877),
@@ -20,7 +20,7 @@ function A(e) {
     let {
         leftPx: t,
         rightPx: n,
-        setHoveredIndex: i,
+        setHoveredIndex: l,
         isAnimated: a,
         index: c,
         activated: m,
@@ -28,23 +28,23 @@ function A(e) {
         icon: h,
         tooltip: f,
     } = e;
-    return (0, l.jsx)(u.m, {
+    return (0, i.jsx)(u.m, {
         delay: 300,
         text: f,
-        children: (0, l.jsx)(d.N, {
+        children: (0, i.jsx)(d.N, {
             theme: o.NJ.MIDNIGHT,
             children: (e) =>
-                (0, l.jsx)(r.animated.div, {
+                (0, i.jsx)(r.animated.div, {
                     className: s()(I.z, e),
-                    onMouseEnter: () => i(c),
-                    onMouseLeave: () => i(null),
+                    onMouseEnter: () => l(c),
+                    onMouseLeave: () => l(null),
                     style: {
                         left: a ? p.to((e) => t - e) : t,
                         right: n,
                         width: a ? p.to((e) => `${j + 2 * e}px`) : j,
                         height: a ? p.to((e) => `${j + 2 * e}px`) : j,
                     },
-                    children: (0, l.jsx)(h, {
+                    children: (0, i.jsx)(h, {
                         size: "custom",
                         width: "100%",
                         height: "100%",
@@ -55,29 +55,29 @@ function A(e) {
     });
 }
 let j = 12,
-    _ = { tension: 500, friction: 30, clamp: !0 };
-function v(e) {
-    let [t, n] = i.useState(null),
-        a = i.useRef(null),
+    v = { tension: 500, friction: 30, clamp: !0 };
+function _(e) {
+    let [t, n] = l.useState(null),
+        a = l.useRef(null),
         [{ expansion: s }, r] = (0, c.z)(() => ({
             expansion: 0,
-            config: _,
+            config: v,
             onRest: () => {
                 null == a.current && n(null);
             },
         })),
-        o = i.useCallback(
+        o = l.useCallback(
             (e) => {
                 (a.current = e), null != e ? (n(e), r({ expansion: 4 })) : r({ expansion: 0 });
             },
             [r],
         ),
         u = h.A.useConfig({ location: "useClipTimelineIndicators" }).enableGameEventsOnPlayer,
-        d = i.useMemo(() => (u ? e.filter((e) => null != e.game) : []), [e, u]),
-        g = i.useMemo(() => d.map((e, t) => ({ index: t, timeSec: e.timestamp_ms / 1e3, widthPx: j, gapPx: 4 })), [d]),
-        I = i.useCallback(
+        d = l.useMemo(() => (u ? e.filter((e) => null != e.game) : []), [e, u]),
+        g = l.useMemo(() => d.map((e, t) => ({ index: t, timeSec: e.timestamp_ms / 1e3, widthPx: j, gapPx: 4 })), [d]),
+        I = l.useCallback(
             (e, n) => {
-                let i,
+                let l,
                     a,
                     r = t === e.index,
                     u = d[e.index];
@@ -85,17 +85,17 @@ function v(e) {
                 let c = n > e.leftPx;
                 switch (u.game.type) {
                     case f.Q_.MULTIKILL:
-                        (a = C.intl.string(x.default.PMLPER)), (i = m.q);
+                        (a = C.intl.string(x.default.PMLPER)), (l = m.q);
                         break;
                     case f.Q_.KILL:
-                        (i = m.q), (a = C.intl.string(x.default.fYdqnM));
+                        (l = m.q), (a = C.intl.string(x.default.fYdqnM));
                         break;
                     case f.Q_.DEATH:
-                        (i = p.V), (a = C.intl.string(x.default.MhIx41));
+                        (l = p.V), (a = C.intl.string(x.default.MhIx41));
                 }
-                return null == i || null == a
+                return null == l || null == a
                     ? null
-                    : (0, l.jsx)(A, {
+                    : (0, i.jsx)(A, {
                           ...e,
                           activated: c,
                           gapPx: 4,
@@ -103,7 +103,7 @@ function v(e) {
                           expansionSpring: s,
                           setHoveredIndex: o,
                           isAnimated: r,
-                          icon: i,
+                          icon: l,
                       });
             },
             [t, d, o, s],

@@ -1,4 +1,4 @@
-n.d(t, { SE: () => k, bc: () => G, cO: () => P, ES: () => F, Ef: () => y, VI: () => w });
+n.d(t, { SE: () => P, bc: () => G, cO: () => k, ES: () => F, Ef: () => L, VI: () => w });
 var i = n(477900),
     l = n(582128),
     r = n(283973),
@@ -161,12 +161,12 @@ function j(e) {
         i = l.useCallback(() => a.A.addRelationship({ userId: t, context: { location: n } }), [n, t]);
     return { action: D.pt.SEND_FRIEND_REQUEST, icon: r.R, text: O.intl.string(O.t.w5uwoI), onClick: i };
 }
-function P(e) {
+function k(e) {
     let { userId: t, analyticsLocation: n, ...l } = e,
         r = j({ userId: t, analyticsLocation: n });
     return (0, i.jsx)(u.FD, { ...r, ...l });
 }
-function k(e) {
+function P(e) {
     let { userId: t, analyticsLocation: n } = e,
         [r, o] = l.useState(!1),
         { text: s, onClick: a, ...d } = j({ userId: t, analyticsLocation: n }),
@@ -181,15 +181,15 @@ function k(e) {
     return (0, i.jsx)(u.br, { tooltipText: s, ...d, onClick: c, loading: r });
 }
 let U = { [_.eA$.FRIEND]: o.V, [_.eA$.PENDING_OUTGOING]: s.l, [_.eA$.PENDING_INCOMING]: s.l },
-    L = {
+    y = {
         [_.eA$.FRIEND]: () => O.intl.string(O.t.G7jMpU),
         [_.eA$.PENDING_OUTGOING]: () => O.intl.string(O.t["s/+byI"]),
         [_.eA$.PENDING_INCOMING]: () => O.intl.string(O.t["6QQCQ+"]),
     };
-function y(e) {
+function L(e) {
     let { user: t, relationshipType: n, analyticsLocation: r, ...o } = e,
         s = U[n],
-        a = L[n](),
+        a = y[n](),
         d = m({ user: t, analyticsLocation: r }),
         c = l.useRef(null),
         E = { icon: s, tooltipText: a, ...o };
@@ -204,7 +204,7 @@ function y(e) {
 function G(e) {
     let { user: t, relationshipType: n, analyticsLocation: r, ...o } = e,
         s = U[n],
-        a = L[n](),
+        a = y[n](),
         d = m({ user: t, analyticsLocation: r }),
         c = l.useRef(null),
         E = { icon: s, tooltipText: a, ...o };

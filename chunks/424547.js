@@ -1,4 +1,4 @@
-d.exports = {
+e.exports = {
     kQ: "guildInfoCard__50dcd",
     s7: "presentedBy__50dcd",
     bo: "guildContainer__50dcd",

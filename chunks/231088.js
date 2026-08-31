@@ -129,11 +129,11 @@ function A(e) {
             textVariant: b,
             textColor: T,
             disabled: N = !1,
-            growWidth: y = !1,
-            removeVerticalPadding: k = !1,
+            growWidth: k = !1,
+            removeVerticalPadding: y = !1,
         } = e,
-        w = l.useRef(null),
-        R = l.useId(),
+        R = l.useRef(null),
+        w = l.useId(),
         L = l.useId(),
         O = null == n,
         P = null != p,
@@ -142,17 +142,17 @@ function A(e) {
         G = P ? p : A,
         M = null != D && null != G,
         [U] = l.useState(t),
-        [F, W] = l.useState(!1);
-    F || t === U || W(!0);
+        [W, F] = l.useState(!1);
+    W || t === U || F(!0);
     let H = [];
-    O && H.push(R), M && "compact" !== g && H.push(L);
+    O && H.push(w), M && "compact" !== g && H.push(L);
     let V = H.length > 0 ? H.join(" ") : void 0;
     function B() {
-        let { activeElement: e } = w.current?.ownerDocument ?? document;
+        let { activeElement: e } = R.current?.ownerDocument ?? document;
         (0, a.vq)(e, HTMLElement) && e.blur(), u();
     }
     let z = (0, i.jsxs)("div", {
-        ref: w,
+        ref: R,
         className: r()(h.LL, { [h.JD]: P, [h.xe]: _, [h.r9]: N }),
         onMouseDown: N
             ? void 0
@@ -163,7 +163,7 @@ function A(e) {
         children: [
             O
                 ? (0, i.jsx)(m.E, {
-                      id: R,
+                      id: w,
                       variant: b ?? "text-sm/normal",
                       color: T ?? "text-muted",
                       className: h.qf,
@@ -179,7 +179,7 @@ function A(e) {
                     onClick: (e) => {
                         e.stopPropagation(), B();
                     },
-                    focusProps: { ringTarget: w },
+                    focusProps: { ringTarget: R },
                 }),
             null != f && (0, i.jsx)("div", { className: h.lD, children: (0, i.jsx)(I, { ...f }) }),
         ],
@@ -188,7 +188,7 @@ function A(e) {
         ref: v,
         className: r()(
             h.kL,
-            { [h.oE]: "compact" === g, [h.c1]: "multiline" === g, [h.CP]: y, [h.WK]: k, [h.Dy]: t },
+            { [h.oE]: "compact" === g, [h.c1]: "multiline" === g, [h.CP]: k, [h.WK]: y, [h.Dy]: t },
             E,
         ),
         onBlur: C,
@@ -196,7 +196,7 @@ function A(e) {
         children: (0, i.jsx)(
             "div",
             {
-                className: F ? h.qG : void 0,
+                className: W ? h.qG : void 0,
                 children: t
                     ? o
                     : (0, i.jsxs)(i.Fragment, {

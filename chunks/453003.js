@@ -28,8 +28,8 @@ var i,
     b = n(205184),
     R = n(928550),
     L = n(689168),
-    M = n(403362),
-    k = n(456060),
+    k = n(403362),
+    M = n(456060),
     O = n(723702),
     P = n(850670),
     D = n(206589),
@@ -46,8 +46,8 @@ var G = n(665260),
     K = n(659051),
     Y = n(702631),
     W = n(375708),
-    X = n(946255),
-    Z =
+    Z = n(946255),
+    X =
         (((i = {}).DESKTOP = "desktop"),
         (i.MOBILE = "mobile"),
         (i.ANDROID = "android"),
@@ -120,25 +120,25 @@ function en(e) {
                 a
                     .map((e) => {
                         switch (e) {
-                            case Z.MOBILE:
+                            case X.MOBILE:
                                 return (0, l.jsx)(m.u, { size: "xxs", color: "currentColor" }, e);
-                            case Z.ANDROID:
+                            case X.ANDROID:
                                 return (0, l.jsx)(Q, { width: d.E.xxs, height: d.E.xxs, color: "currentColor" }, e);
-                            case Z.IOS:
+                            case X.IOS:
                                 return (0, l.jsx)(h.z, { size: "xxs", color: "currentColor" }, e);
-                            case Z.PLAYSTATION:
+                            case X.PLAYSTATION:
                                 return (0, l.jsx)(g.X, { size: "xxs", color: "currentColor" }, e);
-                            case Z.XBOX:
+                            case X.XBOX:
                                 return (0, l.jsx)(p.Y, { size: "xxs", color: "currentColor" }, e);
-                            case Z.VR:
+                            case X.VR:
                                 return (0, l.jsx)(c.G, { size: "xxs", color: "currentColor" }, e);
-                            case Z.DESKTOP:
+                            case X.DESKTOP:
                                 return (0, l.jsx)(A.k, { size: "xxs", color: "currentColor" }, e);
                             default:
                                 return null;
                         }
                     })
-                    .filter(M.Vq),
+                    .filter(k.Vq),
             [a],
         );
     if (!(null != n || r.length > 0)) return null;
@@ -206,8 +206,8 @@ function el(e) {
             onView: A,
             presenceActivity: f,
             currentUserPresenceActivity: T,
-            hideParty: M,
-            hideBanner: Z = !1,
+            hideParty: k,
+            hideBanner: X = !1,
             partyStatusElement: q,
             analyticsLocations: Q,
             showAuthButton: el,
@@ -237,7 +237,7 @@ function el(e) {
                     className: et.dS,
                     color: "none",
                     lineClamp: 2,
-                    children: [ec ? (0, k.YC)(t, i, a, c, !1) : (0, l.jsx)(ei, { activity: f }), ec ? null : eu],
+                    children: [ec ? (0, M.YC)(t, i, a, c, !1) : (0, l.jsx)(ei, { activity: f }), ec ? null : eu],
                 }),
             [ec, t, i, a, c, f, eu],
         ),
@@ -248,8 +248,8 @@ function el(e) {
                 : (0, l.jsx)(x.E, { variant: "text-xs/normal", color: "none", lineClamp: 1, children: e });
         }, [f?.details]),
         eg = s.useMemo(
-            () => (0, l.jsxs)("div", { className: et.pq, children: [eh, em, M || ec ? null : q] }),
-            [em, M, ec, q, eh],
+            () => (0, l.jsxs)("div", { className: et.pq, children: [eh, em, k || ec ? null : q] }),
+            [em, k, ec, q, eh],
         ),
         ep = !!(0, R.au)(n.id),
         eA = (0, y.x)(n),
@@ -349,7 +349,7 @@ function el(e) {
                               embedded: (0, z.A)(f, F.jUm.EMBEDDED),
                               remotePartyId: null != ef ? f.party?.id : void 0,
                           }),
-                              (0, X.A)({
+                              (0, Z.A)({
                                   type: F.UqL.JOIN,
                                   source: F.ThZ.MESSAGE_EMBED,
                                   userId: t.author.id,
@@ -437,7 +437,7 @@ function el(e) {
                 header: r,
                 title: i,
                 staticBannerSrc: h,
-                hideBanner: Z,
+                hideBanner: X,
                 onClickBanner: g,
                 bannerAspectRatio: N.u.ACTIVITY,
                 iconSrc: p ?? void 0,

@@ -19,7 +19,7 @@ function f(e, t, n, c) {
         [A, h] = r.useState(!1),
         g = m.taskConfigV2.tasks[l.n.WATCH_VIDEO]?.assets,
         I = r.useMemo(() => m.features.includes(i.L.FULL_EPISODE_VIDEO_QUEST), [m.features]),
-        T = r.useMemo(
+        D = r.useMemo(
             () =>
                 null != g
                     ? !A && (0, u.Ap)() && null != g.videoHls
@@ -32,14 +32,14 @@ function f(e, t, n, c) {
                     : null,
             [g, t, I, A],
         ),
-        D = r.useMemo(
+        T = r.useMemo(
             () =>
                 null != c
                     ? { url: c, mimetype: "video/mp4", isAnimated: !0 }
-                    : null != T
-                      ? (0, a.tW)(_, T, void 0, !1)
+                    : null != D
+                      ? (0, a.tW)(_, D, void 0, !1)
                       : null,
-            [_, T, c],
+            [_, D, c],
         );
     function R() {
         null != S.current && S.current.config.minAutoBitrate !== s.XY && (S.current.config.minAutoBitrate = s.XY);
@@ -49,7 +49,7 @@ function f(e, t, n, c) {
     }, []);
     return (
         r.useEffect(() => {
-            if (!f || T !== a.fY.VIDEO_PLAYER_VIDEO_HLS || null == D || null == e.current || p.current) return;
+            if (!f || D !== a.fY.VIDEO_PLAYER_VIDEO_HLS || null == T || null == e.current || p.current) return;
             let t = !1,
                 r = null;
             return (
@@ -63,7 +63,7 @@ function f(e, t, n, c) {
                             startFragPrefetch: !0,
                             startLevel: -1,
                         })).on(l.Events.FRAG_LOADING, R),
-                            r.loadSource(D.url),
+                            r.loadSource(T.url),
                             r.attachMedia(e.current),
                             (S.current = r),
                             v(r),
@@ -76,7 +76,7 @@ function f(e, t, n, c) {
                     null != r && null != e && r.off(e.Events.FRAG_LOADING, R);
                 }
             );
-        }, [f, D, T, e, n]),
-        { videoAssetType: T, videoAsset: D, hlsRef: S, hls: C, onFirstChunkLoaded: f ? x : d }
+        }, [f, T, D, e, n]),
+        { videoAssetType: D, videoAsset: T, hlsRef: S, hls: C, onFirstChunkLoaded: f ? x : d }
     );
 }

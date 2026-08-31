@@ -19,8 +19,8 @@ var s = i(477900),
     v = i(676279),
     _ = i(406860),
     j = i(387640),
-    E = i(652215),
-    R = i(693591),
+    R = i(652215),
+    E = i(693591),
     P = i(505051);
 let A = (e) => {
     let {
@@ -56,7 +56,7 @@ let A = (e) => {
         J = n.useMemo(
             () =>
                 (0, l.debounce)(() => {
-                    C.default.track(E.HAw.PREMIUM_WHATS_NEW_BOX_CTA_CLICKED, { box_type: (0, l.snakeCase)(t) });
+                    C.default.track(R.HAw.PREMIUM_WHATS_NEW_BOX_CTA_CLICKED, { box_type: (0, l.snakeCase)(t) });
                 }, 800),
             [t],
         );
@@ -144,7 +144,7 @@ let A = (e) => {
                               loop: !0,
                               className: a()($ ? P.overlayImage : P.boxVideo, { [O]: null != O }),
                               ref: G,
-                              children: (0, s.jsx)("source", { src: N, type: F ? R.a.MP4 : R.a.WEBM }),
+                              children: (0, s.jsx)("source", { src: N, type: F ? E.a.MP4 : E.a.WEBM }),
                           },
                           N,
                       ),

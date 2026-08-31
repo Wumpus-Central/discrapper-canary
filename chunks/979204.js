@@ -29,11 +29,11 @@ let v = { duration: 250 },
                 onMouseEnter: A,
                 onMouseLeave: h,
             } = e,
-            { label: g, targetSec: I, leftPx: T, rightPx: D, index: R } = n,
+            { label: g, targetSec: I, leftPx: D, rightPx: T, index: R } = n,
             x = s.userStatus?.completedAt != null,
             [L, O] = l.useState(!1),
-            P = T - 4,
-            k = t >= P ? Math.min(1, (t - P) / (D - P)) : 0,
+            P = D - 4,
+            k = t >= P ? Math.min(1, (t - P) / (T - P)) : 0,
             N = 0 === R && !x,
             { fill: b } = (0, i.z)({
                 fill: 100 * k,
@@ -57,7 +57,7 @@ let v = { duration: 250 },
         return (0, r.jsxs)(d.animated.div, {
             className: c()(C.ck, { [C.a]: N && L, [C.C9]: !N && L }),
             style: {
-                left: u ? o.to((e) => T - e) : T,
+                left: u ? o.to((e) => D - e) : D,
                 "--custom-indicator-size": u ? o.to((e) => `${26 + 2 * e}px`) : "26px",
                 "--custom-indicator-fill": b.to((e) => e),
             },
@@ -125,10 +125,10 @@ function g(e) {
             [v],
         ),
         I = l.useMemo(() => [{ index: 0, timeSec: t, widthPx: 32, gapPx: 4, align: "end", clickable: d }], [t, d]),
-        T = l.useMemo(() => (f ? (0, a.mq)(c, E) : void 0), [c, f, E]),
-        D = l.useCallback(
+        D = l.useMemo(() => (f ? (0, a.mq)(c, E) : void 0), [c, f, E]),
+        T = l.useCallback(
             (e, l, i) => {
-                let u = { leftPx: e.leftPx, rightPx: e.rightPx, targetSec: t, index: e.index, label: T };
+                let u = { leftPx: e.leftPx, rightPx: e.rightPx, targetSec: t, index: e.index, label: D };
                 return (0, r.jsx)(
                     A,
                     {
@@ -145,7 +145,7 @@ function g(e) {
                     `indicator-${e.index}`,
                 );
             },
-            [t, T, _, C, n, o, g],
+            [t, D, _, C, n, o, g],
         );
-    if (f) return { indicators: I, animatingIndex: _, expansionSpring: C, hoverExpansionPx: 4, renderIndicator: D };
+    if (f) return { indicators: I, animatingIndex: _, expansionSpring: C, hoverExpansionPx: 4, renderIndicator: T };
 }

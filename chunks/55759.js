@@ -20,8 +20,8 @@ var r = n(477900),
     h = n(834730),
     g = n(964486),
     I = n(775602),
-    T = n(607470),
-    D = n(53200),
+    D = n(607470),
+    T = n(53200),
     R = n(613373),
     x = n(683574),
     L = n(906892),
@@ -179,8 +179,8 @@ function eu(e) {
         { focused: ep, focusedChanged: eS } = (0, R.A7)(),
         { visible: eC, visibleChanged: ev, targetRef: eA } = (0, R.O7)(),
         [eh, eg] = l.useState(!0 === i ? Y.Q6.PLAYING : Y.Q6.PAUSED),
-        [eI, eT] = l.useState(!1),
-        [eD, eR] = l.useState(!1),
+        [eI, eD] = l.useState(!1),
+        [eT, eR] = l.useState(!1),
         ex = (0, M.Yh)(es),
         [eL, eO] = l.useState(ex.percentComplete),
         eP = l.useCallback((e) => {
@@ -232,8 +232,8 @@ function eu(e) {
         {
             trackQuestVideoLoadingStarted: tg,
             trackQuestVideoLoadingEnded: tI,
-            trackQuestVideoProgressed: tT,
-            trackQuestVideoResumed: tD,
+            trackQuestVideoProgressed: tD,
+            trackQuestVideoResumed: tT,
             trackQuestVideoPaused: tR,
             trackQuestVideoFocusChange: tx,
             trackQuestContentClick: tL,
@@ -287,7 +287,7 @@ function eu(e) {
             if ((tE.info(`[QV] | updatePlayerState | playerState: ${e}`), tw(e, null), eg(e), null != e9.current))
                 switch (e) {
                     case Y.Q6.PLAYING:
-                        e9.current.paused && tD(tl), ti(null), e9.current.play();
+                        e9.current.paused && tT(tl), ti(null), e9.current.play();
                         break;
                     case Y.Q6.PAUSED:
                         e9.current.pause(), (eX.current = !1);
@@ -296,7 +296,7 @@ function eu(e) {
                         ef(!1);
                 }
         },
-        [tw, tD, tl, ef, tE],
+        [tw, tT, tl, ef, tE],
     );
     l.useEffect(() => {
         tR(tl);
@@ -309,9 +309,9 @@ function eu(e) {
             tt ||
                 es.userStatus?.enrolledAt == null ||
                 (tE.info(`[QV] sendServerProgressUpdate: ${e}`), (0, w.zv)(es, e)),
-                tT();
+                tD();
         },
-        [tt, es, tE, tT],
+        [tt, es, tE, tD],
     );
     l.useEffect(() => {
         (q !== f.ip.HIDDEN &&
@@ -363,7 +363,7 @@ function eu(e) {
             }
         );
     }, [eh, tz]);
-    let tZ = !tG && (eD || eI || eh === Y.Q6.ENDED),
+    let tZ = !tG && (eT || eI || eh === Y.Q6.ENDED),
         tJ = l.useCallback(() => {
             tE.info("[QV] | handleFullScreenExit");
             let e = (0, k.qf)(e9.current?.parentNode, e9.current);
@@ -433,7 +433,7 @@ function eu(e) {
             );
         function t() {
             if (null == e) return;
-            let t = (0, D.LA)();
+            let t = (0, T.LA)();
             null != t &&
                 null != tv.current &&
                 tv.current.mainForwardBufferInfo?.len === 0 &&
@@ -582,13 +582,13 @@ function eu(e) {
                     "data-testid": "discord-web-video-player-container",
                     tabIndex: -1,
                     onMouseEnter: function () {
-                        eT(!0),
+                        eD(!0),
                             t$(!1),
                             (tW.current = performance.now()),
                             null != tq.current && clearTimeout(tq.current);
                     },
                     onMouseLeave: function () {
-                        eT(!1), t$(!1);
+                        eD(!1), t$(!1);
                     },
                     onMouseMove: tX,
                     onKeyDown: tX,
@@ -597,7 +597,7 @@ function eu(e) {
                         style: { "--custom-footer-bottom": "4px" },
                         children: [
                             nu && (0, r.jsx)(F.A, { videoRef: e9, onTrackQuestContentClick: tL, orientation: X }),
-                            (0, r.jsxs)(T.A, {
+                            (0, r.jsxs)(D.A, {
                                 ref: (e) => {
                                     (e9.current = e), (eA.current = e);
                                 },

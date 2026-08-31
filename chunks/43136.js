@@ -74,14 +74,14 @@ function L(e) {
         { isTruncated: A, ExpandableTextContainer: x } = (0, v.e)(),
         I = (n?.description?.trim().length ?? 0) > 0,
         [_, L] = l.useState(1),
-        M = (0, m.A)("(max-width: 1439px)"),
-        { selectedTab: k, isPhantomPreview: O } = (0, N.k)(),
-        P = k === j.B.GUILD_PRODUCTS_PREVIEW ? S.intl.string(S.t["LvXy/H"]) : S.intl.string(S.t.XyqKh8),
+        k = (0, m.A)("(max-width: 1439px)"),
+        { selectedTab: M, isPhantomPreview: O } = (0, N.k)(),
+        P = M === j.B.GUILD_PRODUCTS_PREVIEW ? S.intl.string(S.t["LvXy/H"]) : S.intl.string(S.t.XyqKh8),
         D = I
             ? (0, i.jsxs)(i.Fragment, {
                   children: [
                       (0, i.jsx)(x, {
-                          lineClamp: M || 2 === _ ? 2 : 3,
+                          lineClamp: k || 2 === _ ? 2 : 3,
                           children: (0, i.jsx)(c.E, {
                               variant: "text-sm/normal",
                               color: "text-default",

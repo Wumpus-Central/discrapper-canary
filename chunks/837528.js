@@ -1,10 +1,10 @@
 n.d(t, {
     U_: () => K,
     G8: () => z,
-    I: () => k,
+    I: () => M,
     H9: () => L,
     VL: () => G,
-    T0: () => M,
+    T0: () => k,
     UY: () => H,
     yp: () => F,
     Yq: () => U,
@@ -68,11 +68,11 @@ function L(e, t, n, i) {
     let l = y("referencedUsernameProfile", n, i);
     return b(e?.author.id, t.id, l);
 }
-function M(e, t, n, i) {
+function k(e, t, n, i) {
     let l = y("interactionUsernameProfile", n, i);
     return b(e?.user.id, t.id, l);
 }
-function k(e, t, n, i) {
+function M(e, t, n, i) {
     let l = y("referencedUsernameProfile", n, i);
     return b(e, t.id, l);
 }

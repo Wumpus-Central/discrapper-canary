@@ -1,9 +1,9 @@
 n.d(t, {
-    $b: () => M,
+    $b: () => k,
     DT: () => N,
     Io: () => L,
     Le: () => R,
-    Nw: () => k,
+    Nw: () => M,
     RC: () => T,
     S: () => j,
     Z4: () => U,
@@ -74,13 +74,13 @@ function R(e, t) {
 function L(e, t) {
     (0, I.A)(e, t, void 0, f.A.getOptions(t.id));
 }
-function M(e, t, n) {
+function k(e, t, n) {
     let i = e.isPrivate(),
         l = t.author.id === u.default.getId();
     (0, o.Yf)({ channel: e, message: t, shouldMention: !n.shiftKey && !l, showMentionToggle: !i && !l }),
         A._.dispatch(_.jej.FOCUS_CHANNEL_TEXT_AREA, { channelId: e.id });
 }
-function k(e, t) {
+function M(e, t) {
     (0, d.Tv)(e, t, "Message");
 }
 function O(e, t) {
