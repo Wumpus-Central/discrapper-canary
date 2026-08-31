@@ -6,7 +6,7 @@ n.d(t, {
     jK: () => et,
     g$: () => er,
     qT: () => en,
-    mG: () => Z,
+    mG: () => q,
     bb: () => ei,
     fE: () => ee,
 }),
@@ -1267,7 +1267,7 @@ var j =
         (u[(u.INACCESSIBLE_ANONYMIZED_USER = 2)] = "INACCESSIBLE_ANONYMIZED_USER"),
         (u[(u.ANONYMOUS_USER = 3)] = "ANONYMOUS_USER"),
         u),
-    Z =
+    q =
         (((_ = {})[(_.UNSPECIFIED = 0)] = "UNSPECIFIED"),
         (_[(_.ID_SELFIE_MATCH = 1)] = "ID_SELFIE_MATCH"),
         (_[(_.ID_SCAN = 2)] = "ID_SCAN"),
@@ -1282,7 +1282,7 @@ var j =
         (_[(_.MANUAL_REVIEW = 11)] = "MANUAL_REVIEW"),
         (_[(_.OS_SIGNAL_CONFIRMED = 12)] = "OS_SIGNAL_CONFIRMED"),
         _),
-    q =
+    Z =
         (((E = {})[(E.UNSPECIFIED = 0)] = "UNSPECIFIED"),
         (E[(E.K_ID = 1)] = "K_ID"),
         (E[(E.PERSONA = 2)] = "PERSONA"),
@@ -2364,7 +2364,7 @@ class eF extends O.G {
         super("discord_protos.users.v1.UserData", [
             { no: 1, name: "linked_users", kind: "map", K: 6, V: { kind: "message", T: () => ej } },
             { no: 2, name: "safety_feature_limits", kind: "map", K: 13, V: { kind: "message", T: () => e$ } },
-            { no: 3, name: "safety_flags", kind: "map", K: 13, V: { kind: "message", T: () => eZ } },
+            { no: 3, name: "safety_flags", kind: "map", K: 13, V: { kind: "message", T: () => eq } },
             { no: 4, name: "quest", kind: "message", T: () => eQ },
             { no: 5, name: "primary_guild", kind: "message", T: () => eS },
             { no: 6, name: "cross_platform_restriction", kind: "message", T: () => ey },
@@ -2381,10 +2381,17 @@ class eF extends O.G {
             { no: 17, name: "is_pending_required_action", kind: "scalar", T: 8 },
             { no: 18, name: "anonymization_info", kind: "message", T: () => ek },
             { no: 19, name: "typing_indicator_style", kind: "message", T: () => eI },
+            { no: 20, name: "disable_staff_discount", kind: "scalar", T: 8 },
         ]);
     }
     create(e) {
-        let t = { linkedUsers: {}, safetyFeatureLimits: {}, safetyFlags: {}, isPendingRequiredAction: !1 };
+        let t = {
+            linkedUsers: {},
+            safetyFeatureLimits: {},
+            safetyFlags: {},
+            isPendingRequiredAction: !1,
+            disableStaffDiscount: !1,
+        };
         return (
             globalThis.Object.defineProperty(t, C.$, { enumerable: !1, value: this }),
             void 0 !== e && (0, N.x)(this, t, e),
@@ -2454,6 +2461,9 @@ class eF extends O.G {
                 case 19:
                     r.typingIndicatorStyle = eI.internalBinaryRead(e, e.uint32(), n, r.typingIndicatorStyle);
                     break;
+                case 20:
+                    r.disableStaffDiscount = e.bool();
+                    break;
                 default:
                     let a = n.readUnknownField;
                     if ("throw" === a)
@@ -2520,7 +2530,7 @@ class eF extends O.G {
                     a = t.uint32();
                     break;
                 case 2:
-                    s = eZ.internalBinaryRead(t, t.uint32(), n);
+                    s = eq.internalBinaryRead(t, t.uint32(), n);
                     break;
                 default:
                     throw new globalThis.Error(
@@ -2528,7 +2538,7 @@ class eF extends O.G {
                     );
             }
         }
-        e[a ?? 0] = s ?? eZ.create();
+        e[a ?? 0] = s ?? eq.create();
     }
     internalBinaryWrite(e, t, n) {
         for (let i of Object.keys(e.linkedUsers))
@@ -2544,7 +2554,7 @@ class eF extends O.G {
         for (let i of Object.keys(e.safetyFlags))
             t.tag(3, S.O0.LengthDelimited).fork().tag(1, S.O0.Varint).uint32(parseInt(i)),
                 t.tag(2, S.O0.LengthDelimited).fork(),
-                eZ.internalBinaryWrite(e.safetyFlags[i], t, n),
+                eq.internalBinaryWrite(e.safetyFlags[i], t, n),
                 t.join().join();
         e.quest && eQ.internalBinaryWrite(e.quest, t.tag(4, S.O0.LengthDelimited).fork(), n).join(),
             e.primaryGuild && eS.internalBinaryWrite(e.primaryGuild, t.tag(5, S.O0.LengthDelimited).fork(), n).join(),
@@ -2567,7 +2577,8 @@ class eF extends O.G {
             e.anonymizationInfo &&
                 ek.internalBinaryWrite(e.anonymizationInfo, t.tag(18, S.O0.LengthDelimited).fork(), n).join(),
             e.typingIndicatorStyle &&
-                eI.internalBinaryWrite(e.typingIndicatorStyle, t.tag(19, S.O0.LengthDelimited).fork(), n).join();
+                eI.internalBinaryWrite(e.typingIndicatorStyle, t.tag(19, S.O0.LengthDelimited).fork(), n).join(),
+            !1 !== e.disableStaffDiscount && t.tag(20, S.O0.Varint).bool(e.disableStaffDiscount);
         let i = n.writeUnknownFields;
         return !1 !== i && (!0 == i ? S.f$.onWrite : i)(this.typeName, e, t), t;
     }
@@ -2581,14 +2592,14 @@ class eV extends O.G {
                 no: 2,
                 name: "method",
                 kind: "enum",
-                T: () => ["discord_protos.users.v1.AgeAssuranceMethod", Z, "AGE_ASSURANCE_METHOD_"],
+                T: () => ["discord_protos.users.v1.AgeAssuranceMethod", q, "AGE_ASSURANCE_METHOD_"],
             },
             { no: 3, name: "method_version", kind: "scalar", T: 5 },
             {
                 no: 4,
                 name: "vendor",
                 kind: "enum",
-                T: () => ["discord_protos.users.v1.AgeAssuranceVendor", q, "AGE_ASSURANCE_VENDOR_"],
+                T: () => ["discord_protos.users.v1.AgeAssuranceVendor", Z, "AGE_ASSURANCE_VENDOR_"],
             },
             { no: 5, name: "verified_at", kind: "message", T: () => L.D },
             {
@@ -2875,8 +2886,8 @@ class ez extends O.G {
         return !1 !== i && (!0 == i ? S.f$.onWrite : i)(this.typeName, e, t), t;
     }
 }
-let eZ = new ez();
-class eq extends O.G {
+let eq = new ez();
+class eZ extends O.G {
     constructor() {
         super("discord_protos.users.v1.GuildShardingConfig", [
             { no: 1, name: "shards", kind: "scalar", repeat: 1, T: 5 },
@@ -2918,7 +2929,7 @@ class eq extends O.G {
         return !1 !== i && (!0 == i ? S.f$.onWrite : i)(this.typeName, e, t), t;
     }
 }
-new eq();
+new eZ();
 class eX extends O.G {
     constructor() {
         super("discord_protos.users.v1.QuestMetadata", [{ no: 1, name: "quests_completed", kind: "scalar", T: 13 }]);
