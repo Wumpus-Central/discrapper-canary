@@ -37,7 +37,8 @@
 
 .plant_b29b5a {
     position: absolute;
-    width: 6.25%
+    width: 6.25%;
+    z-index: 0
 }
 
 .plantInteractive_b29b5a {
@@ -429,4 +430,4 @@
     border-radius: var(--radius-round)
 }
 
-/*# sourceMappingURL=280574.e7b9be53a1d4b371.css.map*/
+/*# sourceMappingURL=280574.ccfcaeb522999632.css.map*/
