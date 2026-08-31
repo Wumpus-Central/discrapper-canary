@@ -15,7 +15,7 @@
     flex-direction: column;
     justify-content: flex-start;
     margin-inline-start: var(--space-8);
-    row-gap: var(--space-4)
+    row-gap: 2px
 }
 
 .orbChallengeItem__84ece {
@@ -27,12 +27,16 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 8px
+    margin-inline-start: calc(var(--space-16)*-1);
+    padding: 8px;
+    padding-inline: var(--space-16);
+    width: 100%
 }
 
 .orbChallengeItemHovered__84ece {
     background: var(--background-mod-normal);
-    background-color: var(--background-mod-normal)
+    background-color: var(--background-mod-normal);
+    border-radius: 0
 }
 
 .orbChallengeItemActionIcon__84ece {
@@ -88,6 +92,13 @@
     vertical-align: top
 }
 
+.orbChallengeItemDivider__84ece {
+    margin-bottom: var(--space-4);
+    margin-top: var(--space-4);
+    margin-inline-start: var(--space-48);
+    width: calc(100% - var(--space-16)*2) !important
+}
+
 .orbWalletContainer__81c60 {
     background: var(--background-base-low);
     border: 1px solid var(--border-subtle);
@@ -106,27 +117,23 @@
 }
 
 .orbWalletHeader__81c60 {
-    align-items: center;
     -moz-column-gap: var(--space-12);
     column-gap: var(--space-12);
-    display: flex;
-    flex-direction: row;
     justify-content: flex-start;
     margin-bottom: var(--space-16)
 }
 
-.orbWalletHeaderText__81c60 {
-    font-size: 36px;
-    font-weight: 700
+.orbWalletHeader__81c60,
+.orbWalletHeaderTagInlineText__81c60 {
+    align-items: center;
+    display: flex;
+    flex-direction: row
 }
 
 .orbWalletHeaderTagInlineText__81c60 {
-    align-items: center;
     -moz-column-gap: var(--space-4);
     column-gap: var(--space-4);
-    cursor: pointer;
-    display: flex;
-    flex-direction: row
+    cursor: pointer
 }
 
 .assetContainer__81c60 {
@@ -140,15 +147,6 @@
 
 .orbAsset__81c60 {
     height: 60px
-}
-
-.sectionDivider__81c60 {
-    width: 100%
-}
-
-.sectionDividerFullWidth__81c60 {
-    margin-inline-start: calc(var(--space-16)*-1);
-    width: calc(100% + var(--space-16)*2) !important
 }
 
 .nitroMultiplierPill__81c60 {
@@ -173,7 +171,7 @@
     flex-direction: column;
     justify-content: flex-start;
     padding-bottom: 16px;
-    padding-top: 16px
+    padding-top: 18px
 }
 
 .orbChallengesCardTitleBlock__81c60 {
@@ -186,29 +184,23 @@
 }
 
 .orbChallengesCardEmptyContent__81c60 {
-    align-items: center;
-    align-self: stretch;
-    display: flex;
     flex-direction: column;
-    justify-content: center;
     row-gap: var(--space-4)
 }
 
-.orbChallengeItemDivider__81c60 {
-    margin-bottom: var(--space-4);
-    margin-top: var(--space-4)
-}
-
+.orbChallengesCardEmptyContent__81c60,
 .orbWalletFooter__81c60 {
     align-items: center;
     align-self: stretch;
-    -moz-column-gap: var(--space-12);
-    column-gap: var(--space-12);
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    padding-bottom: 16px;
-    padding-top: 16px
+    justify-content: center
 }
 
-/*# sourceMappingURL=42b00c67c2116a9a.css.map*/
+.orbWalletFooter__81c60 {
+    -moz-column-gap: var(--space-12);
+    column-gap: var(--space-12);
+    flex-direction: row;
+    padding-bottom: 16px
+}
+
+/*# sourceMappingURL=4b18df8aa2690d0d.css.map*/

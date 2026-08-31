@@ -9,4 +9,5 @@ e.exports = {
     t9: "orbChallengeGlyph__84ece",
     Zs: "orbChallengeRing__84ece",
     fN: "orbIconAligned__84ece",
+    Fu: "orbChallengeItemDivider__84ece",
 };
