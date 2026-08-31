@@ -1,23 +1,23 @@
-n.d(t, { w: () => $, A: () => z });
+n.d(t, { w: () => z, A: () => Z });
 var i = n(477900),
     l = n(582128),
     r = n(503698),
     s = n.n(r),
     a = n(17928),
-    E = n(661531),
-    o = n(862482),
+    o = n(661531),
+    E = n(862482),
     c = n(417098),
-    _ = n(922016),
-    u = n(866665),
+    u = n(922016),
+    _ = n(866665),
     A = n(695366),
-    T = n(669953),
-    d = n(713125),
+    d = n(669953),
+    T = n(713125),
     I = n(608401),
     N = n(739455),
     R = n(468689),
-    O = n(976860),
+    C = n(976860),
     S = n(309010),
-    C = n(967198),
+    O = n(967198),
     D = n(792831),
     m = n(147925),
     P = n(723702),
@@ -36,8 +36,8 @@ var M = n(136722),
     j = n(287809),
     v = n(488926),
     q = n(935208),
-    X = n(209700),
-    b = n(652215),
+    b = n(209700),
+    X = n(652215),
     B = n(375708),
     w = n(588397);
 function F(e) {
@@ -45,15 +45,15 @@ function F(e) {
         n = (0, a.bG)([j.default], () => j.default.getCurrentUser()),
         r = (0, a.bG)([G.A], () => G.A.getGuild(t)),
         s = (0, a.bG)([x.A], () => x.A.getRolesSnapshot(t)),
-        E = (0, a.bG)([x.A], () => x.A.getSortedRoles(t)),
-        { impersonateType: o, viewingRoles: c } = (0, a.cf)([f.A], () => ({
+        o = (0, a.bG)([x.A], () => x.A.getSortedRoles(t)),
+        { impersonateType: E, viewingRoles: c } = (0, a.cf)([f.A], () => ({
             impersonateType: f.A.getImpersonateType(t),
             viewingRoles: f.A.getViewingRoles(t),
         })),
-        _ = o === X._.SERVER_SHOP,
-        u = (0, a.bG)([k.Ay], () => (null != n ? k.Ay.getTrueMember(t, n.id) : null)),
+        u = E === b._.SERVER_SHOP,
+        _ = (0, a.bG)([k.Ay], () => (null != n ? k.Ay.getTrueMember(t, n.id) : null)),
         A = null != r ? s[(0, L.af)(r)] : null,
-        [T, d] = l.useState(() => {
+        [d, T] = l.useState(() => {
             let e = null == c ? [] : q.default.keys(c);
             return null != A && e.push(A.id), e;
         }),
@@ -61,25 +61,26 @@ function F(e) {
     l.useEffect(() => {
         let e = {},
             t = I.current;
-        if (null != t && null != o) {
-            for (let t of T) {
+        if (null != t && null != E) {
+            for (let t of d) {
                 let n = s[t];
                 null != n && (e[t] = n);
             }
-            (0, p.IA)(t.id, { type: o, roles: e });
+            (0, p.IA)(t.id, { type: E, roles: e });
         }
-    }, [T, o, s]);
-    let N = null != r && null != n && null != u ? E.find((e) => u.roles.includes(e.id)) : void 0,
+    }, [d, E, s]);
+    let N = null != r && null != n && null != _ ? o.find((e) => _.roles.includes(e.id)) : void 0,
         R = l.useMemo(
             () =>
                 null != r && null != n
-                    ? E.filter((e) => !(0, y.Oy)(e))
-                          .filter((e) => !_ || e.tags?.subscription_listing_id != null)
+                    ? o
+                          .filter((e) => !(0, y.Oy)(e))
+                          .filter((e) => !u || e.tags?.subscription_listing_id != null)
                           .filter((e) => N?.id === e.id || v.wO(r, n.id, N, e))
                     : [],
-            [r, n, _, N, E],
+            [r, n, u, N, o],
         ),
-        O = l.useMemo(() => {
+        C = l.useMemo(() => {
             let e = Array.from(R).map((e) => ({
                 leading: H(e),
                 value: e.id,
@@ -94,21 +95,21 @@ function F(e) {
                 e
             );
         }, [R, r, A]);
-    if (null == n || null == r || null == u) return null;
+    if (null == n || null == r || null == _) return null;
     let S = {};
-    return (u.roles.forEach((e) => {
+    return (_.roles.forEach((e) => {
         let t = s[e];
         null != t && (S[t.id] = t);
     }),
-    M.zy(v.aH({ forceRoles: S, context: r }), M.kg(b.xBc.MANAGE_GUILD, b.xBc.MANAGE_ROLES)) || (0, L.bM)(r, n))
+    M.zy(v.aH({ forceRoles: S, context: r }), M.kg(X.xBc.MANAGE_GUILD, X.xBc.MANAGE_ROLES)) || (0, L.bM)(r, n))
         ? (0, i.jsx)("div", {
               className: w.kL,
               children: (0, i.jsxs)(U.iS, {
                   selectionMode: "multiple",
-                  options: O,
-                  value: T,
+                  options: C,
+                  value: d,
                   onSelectionChange: (e) => {
-                      d(e);
+                      T(e);
                   },
                   children: [
                       (0, i.jsx)(U.a3, { hideTags: !0, autoFocus: !0, placeholder: B.intl.string(B.t.Sojqsr) }),
@@ -131,33 +132,33 @@ function H(e) {
 }
 var V = n(746080);
 n(500208);
-var Y = n(2242),
-    K = n(539009);
+var K = n(2242),
+    Y = n(539009);
 function W(e) {
     let { className: t, onClick: n, children: l, buttonRef: r } = e;
-    return (0, i.jsx)(o.$n, {
+    return (0, i.jsx)(E.$n, {
         buttonRef: r,
-        className: s()(K.x6, t),
-        innerClassName: K.hZ,
-        look: o.$n.Looks.OUTLINED,
-        color: o.$n.Colors.WHITE,
-        size: o.$n.Sizes.NONE,
+        className: s()(Y.x6, t),
+        innerClassName: Y.hZ,
+        look: E.$n.Looks.OUTLINED,
+        color: E.$n.Colors.WHITE,
+        size: E.$n.Sizes.NONE,
         onClick: n,
         children: l,
     });
 }
-function Z(e) {
+function Q(e) {
     let { onClick: t, className: n } = e;
     return (0, i.jsx)(W, { onClick: t, className: n, children: B.intl.string(B.t.R9GHya) });
 }
-function z() {
+function Z() {
     let e = l.useRef(null),
-        t = (0, a.bG)([C.A], () => C.A.getGuildId()),
+        t = (0, a.bG)([O.A], () => O.A.getGuildId()),
         n = (0, a.bG)([S.Ay], () => S.Ay.getChannelId(t)),
         {
             viewingRoles: r,
             backNavigationSection: s,
-            isFullServerPreview: o,
+            isFullServerPreview: E,
             isServerShopPreview: P,
         } = (0, a.cf)([f.A], () => ({
             viewingRoles: null != t ? f.A.getViewingRoles(t) : null,
@@ -168,54 +169,54 @@ function z() {
     if (null == r || null == t) return null;
     let M = (function (e) {
             switch (e) {
-                case b.BEX.INTEGRATIONS:
+                case X.BEX.INTEGRATIONS:
                     return B.intl.string(B.t.k7LGdh);
-                case b.BEX.ROLE_SUBSCRIPTIONS:
+                case X.BEX.ROLE_SUBSCRIPTIONS:
                     return B.intl.string(B.t.bRqiqa);
-                case b.BEX.ONBOARDING:
+                case X.BEX.ONBOARDING:
                     return B.intl.string(B.t.qZpU3S);
                 default:
                     return B.intl.string(B.t.MTIXhi);
             }
         })(s),
-        g = s === b.BEX.ROLE_SUBSCRIPTIONS ? B.intl.string(B.t.hZUCzd) : B.intl.string(B.t["/djIh7"]),
+        g = s === X.BEX.ROLE_SUBSCRIPTIONS ? B.intl.string(B.t.hZUCzd) : B.intl.string(B.t["/djIh7"]),
         h = n === V.VV.GUILD_ONBOARDING;
     function U(e) {
         let { backToSettings: n } = e;
         null != t &&
-            (f.A.isFullServerPreview(t) && (0, O.pX)(b.BVt.CHANNEL(t)),
-            d.Ay.shouldShowOnboarding(t) && (T.A.finishOnboarding(t), (0, I.Jg)(t)),
+            (f.A.isFullServerPreview(t) && (0, C.pX)(X.BVt.CHANNEL(t)),
+            T.Ay.shouldShowOnboarding(t) && (d.A.finishOnboarding(t), (0, I.Jg)(t)),
             (0, p.rf)(t),
             n && R.A.open(t, s),
-            s === b.BEX.ROLE_SUBSCRIPTIONS && (0, N.Fx)(t));
+            s === X.BEX.ROLE_SUBSCRIPTIONS && (0, N.Fx)(t));
     }
     return (0, i.jsxs)(c.$T, {
         color: c.Hv.BRAND,
-        className: K.lm,
+        className: Y.lm,
         children: [
             (0, i.jsxs)(W, {
                 onClick: () => U({ backToSettings: !0 }),
-                className: K.R4,
+                className: Y.R4,
                 children: [
-                    (0, i.jsx)(D.A, { width: 16, height: 16, direction: D.A.Directions.LEFT, className: K.lJ }),
+                    (0, i.jsx)(D.A, { width: 16, height: 16, direction: D.A.Directions.LEFT, className: Y.lJ }),
                     M,
                 ],
             }),
-            h && o
+            h && E
                 ? (0, i.jsx)("div", {
-                      className: K.XI,
-                      children: (0, i.jsx)("div", { className: K.ut, children: B.intl.string(B.t.PxbiAf) }),
+                      className: Y.XI,
+                      children: (0, i.jsx)("div", { className: Y.ut, children: B.intl.string(B.t.PxbiAf) }),
                   })
                 : (0, i.jsxs)("div", {
-                      className: K.XI,
+                      className: Y.XI,
                       children: [
                           (0, i.jsx)("div", {
-                              className: K.ut,
-                              children: o
+                              className: Y.ut,
+                              children: E
                                   ? B.intl.formatToPlainString(B.t["0PHahI"], { numRoles: Object.keys(r).length })
                                   : B.intl.formatToPlainString(B.t.vMlK8t, { numRoles: Object.keys(r).length }),
                           }),
-                          (0, i.jsx)(_.Y, {
+                          (0, i.jsx)(u.Y, {
                               targetElementRef: e,
                               position: "bottom",
                               renderPopout: () => (0, i.jsx)(F, { guildId: t }),
@@ -230,38 +231,38 @@ function z() {
                                               width: 16,
                                               height: 16,
                                               direction: m.A.Directions.DOWN,
-                                              className: K.k5,
+                                              className: Y.k5,
                                           }),
                                       ],
                                   });
                               },
                           }),
-                          o &&
-                              (0, i.jsx)(u.m, {
+                          E &&
+                              (0, i.jsx)(_.m, {
                                   asContainer: !0,
                                   text: B.intl.string(B.t.mW4DUE),
-                                  children: (0, i.jsx)(A.E, { size: "xs", color: E.A.unsafe_rawColors.YELLOW_300.css }),
+                                  children: (0, i.jsx)(A.E, { size: "xs", color: o.A.unsafe_rawColors.YELLOW_300.css }),
                               }),
                           P &&
-                              (0, i.jsx)(u.m, {
+                              (0, i.jsx)(_.m, {
                                   asContainer: !0,
-                                  text: B.intl.formatToPlainString(B.t.eummvd, { maxTiers: Y.f7, maxProducts: 50 }),
-                                  children: (0, i.jsx)(A.E, { size: "xs", color: E.A.unsafe_rawColors.YELLOW_300.css }),
+                                  text: B.intl.formatToPlainString(B.t.eummvd, { maxTiers: K.f7, maxProducts: 50 }),
+                                  children: (0, i.jsx)(A.E, { size: "xs", color: o.A.unsafe_rawColors.YELLOW_300.css }),
                               }),
                       ],
                   }),
-            o || s === b.BEX.ROLE_SUBSCRIPTIONS
+            E || s === X.BEX.ROLE_SUBSCRIPTIONS
                 ? null
-                : (0, i.jsx)(Z, { onClick: () => U({ backToSettings: !1 }), className: K.ZY }),
+                : (0, i.jsx)(Q, { onClick: () => U({ backToSettings: !1 }), className: Y.ZY }),
         ],
     });
 }
-function $(e) {
+function z(e) {
     let { guildId: t } = e;
     return (0, a.bG)([f.A], () => f.A.isViewingRoles(t))
         ? (0, i.jsx)("div", {
-              className: s()(K.xd, { [K.KF]: (0, P.isWindows)(), [K.Xz]: (0, P.isMac)(), [K.pS]: (0, P.isLinux)() }),
-              children: (0, i.jsx)(z, {}),
+              className: s()(Y.xd, { [Y.KF]: (0, P.isWindows)(), [Y.Xz]: (0, P.isMac)(), [Y.pS]: (0, P.isLinux)() }),
+              children: (0, i.jsx)(Z, {}),
           })
         : null;
 }

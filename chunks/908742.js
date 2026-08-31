@@ -1562,7 +1562,18 @@ let t7 = function (e) {
                     variant: "heading-md/semibold",
                     children: ew.intl.string(ew.t.L2mlUb),
                 }),
-                (0, r.jsx)(t3.default, { quest: t }),
+                (0, r.jsx)(ec.R, {
+                    questOrQuests: t,
+                    questContent: es.uF.ACTIVITY_PANEL,
+                    sourceQuestContent: es.uF.ACTIVITY_PANEL,
+                    children: (e) =>
+                        (0, r.jsx)("div", {
+                            ref: (t) => {
+                                e.current = t;
+                            },
+                            children: (0, r.jsx)(t3.default, { quest: t }),
+                        }),
+                }),
             ],
         }),
     });

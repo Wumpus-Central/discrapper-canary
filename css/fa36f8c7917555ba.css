@@ -1,7 +1,7 @@
 .wrapper__11054 {
     background-color: var(--background-base-low);
     border-radius: 0 0 8px 8px;
-    cursor: default;
+    cursor: pointer;
     overflow: hidden;
     padding: 12px;
     position: relative
@@ -11,33 +11,15 @@
     border-radius: 8px
 }
 
-.submenuIcon__11054 {
-    color: var(--interactive-text-default);
-    cursor: pointer
-}
-
-.submenuIcon__11054:focus,
-.submenuIcon__11054:hover {
-    color: var(--interactive-text-hover)
-}
-
-.submenuIcon__11054:active {
-    color: var(--interactive-text-active)
-}
-
 .foreground__11054 {
     position: relative
 }
 
-.contextMenu__11054 {
-    inset-block-start: 0;
-    inset-inline-end: 0;
-    position: absolute
-}
-
 .gameTile__11054 {
+    aspect-ratio: 1;
     border-radius: 8px;
-    height: 100%;
+    flex: 0 0 50px;
+    height: 50px;
     -o-object-fit: cover;
     object-fit: cover;
     width: 50px
@@ -46,7 +28,7 @@
 .ctas__11054 {
     align-items: center;
     display: flex;
-    gap: 12px
+    gap: var(--space-8)
 }
 
 .primaryButtonWrapper__11054 {
@@ -74,4 +56,4 @@
     vertical-align: middle
 }
 
-/*# sourceMappingURL=e9f0aae709d310b7.css.map*/
+/*# sourceMappingURL=fa36f8c7917555ba.css.map*/

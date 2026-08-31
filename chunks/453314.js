@@ -165,7 +165,7 @@ class z extends r.Component {
         });
     }
 }
-let Z = E.Ay.connectStores([b.Ay, L.A], (e) => {
+let q = E.Ay.connectStores([b.Ay, L.A], (e) => {
         let { channel: t } = e;
         return {
             unread: b.Ay.hasUnread(t.id),
@@ -174,7 +174,7 @@ let Z = E.Ay.connectStores([b.Ay, L.A], (e) => {
             category: L.A.getChannel(t.parent_id),
         };
     })(z),
-    q = E.Ay.connectStores([P.Ay], (e) => {
+    Z = E.Ay.connectStores([P.Ay], (e) => {
         let { channel: t } = e;
         if (null == t.guild_id)
             throw Error("ConnectedVoiceChannel - somehow we got a voice channel with no guild_id...");
@@ -622,7 +622,6 @@ class et extends r.PureComponent {
                         n.e("934771"),
                         n.e("37977"),
                         n.e("691671"),
-                        n.e("49653"),
                         n.e("147626"),
                         n.e("795596"),
                         n.e("382644"),
@@ -634,7 +633,6 @@ class et extends r.PureComponent {
                         n.e("720590"),
                         n.e("884601"),
                         n.e("31267"),
-                        n.e("886414"),
                         n.e("480830"),
                         n.e("451224"),
                         n.e("179745"),
@@ -1155,7 +1153,7 @@ class et extends r.PureComponent {
                 return (0, i.jsx)(x.Y9, { children: n.record.text }, `${n.type}-${n.record.id}`);
             case S.rD.TEXT_CHANNEL:
                 return (0, i.jsx)(
-                    Z,
+                    q,
                     {
                         id: this.getRowId(t),
                         focused: r >= 0 && t === r,
@@ -1170,7 +1168,7 @@ class et extends r.PureComponent {
                 );
             case S.rD.VOICE_CHANNEL:
                 return (0, i.jsx)(
-                    q,
+                    Z,
                     {
                         id: this.getRowId(t),
                         focused: r >= 0 && t === r,
