@@ -162,7 +162,7 @@
     border-bottom: 1px solid var(--border-subtle);
     box-shadow: none;
     box-sizing: border-box;
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-weight: var(--font-weight-medium);
     height: var(--custom-channel-header-height);
     padding: var(--space-xs);
@@ -639,4 +639,4 @@
     }
 }
 
-/*# sourceMappingURL=398791.c7151d98faf78dc5.css.map*/
+/*# sourceMappingURL=398791.70fdc529a8720a21.css.map*/

@@ -266,7 +266,7 @@
 .markup__75297 h5,
 .markup__75297 h6 {
     color: var(--custom-message-content-color, var(--text-strong));
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-weight: var(--font-weight-bold);
     line-height: 1.375em;
     margin: 16px 0 4px
@@ -503,4 +503,4 @@
     text-decoration: underline
 }
 
-/*# sourceMappingURL=606633.c792f3784245c6cc.css.map*/
+/*# sourceMappingURL=606633.5cdfc89771dcc54b.css.map*/

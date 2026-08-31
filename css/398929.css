@@ -57,7 +57,7 @@
 }
 
 .heading-sm\/normal__1add6 {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 14px;
     font-weight: 400;
     line-height: 1.2857142857142858
@@ -68,7 +68,7 @@
 }
 
 .heading-sm\/medium__1add6 {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 14px;
     font-weight: 500;
     line-height: 1.2857142857142858
@@ -79,7 +79,7 @@
 }
 
 .heading-sm\/semibold__1add6 {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 14px;
     font-weight: 600;
     line-height: 1.2857142857142858
@@ -90,7 +90,7 @@
 }
 
 .heading-sm\/bold__1add6 {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 14px;
     font-weight: 700;
     line-height: 1.2857142857142858
@@ -101,7 +101,7 @@
 }
 
 .heading-sm\/extrabold__1add6 {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 14px;
     font-weight: 800;
     line-height: 1.2857142857142858
@@ -112,7 +112,7 @@
 }
 
 .heading-md\/normal__1add6 {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 16px;
     font-weight: 400;
     line-height: 1.25
@@ -123,7 +123,7 @@
 }
 
 .heading-md\/medium__1add6 {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 16px;
     font-weight: 500;
     line-height: 1.25
@@ -134,7 +134,7 @@
 }
 
 .heading-md\/semibold__1add6 {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 16px;
     font-weight: 600;
     line-height: 1.25
@@ -145,7 +145,7 @@
 }
 
 .heading-md\/bold__1add6 {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 16px;
     font-weight: 700;
     line-height: 1.25
@@ -156,7 +156,7 @@
 }
 
 .heading-md\/extrabold__1add6 {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 16px;
     font-weight: 800;
     line-height: 1.25
@@ -167,7 +167,7 @@
 }
 
 .heading-lg\/normal__1add6 {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 20px;
     font-weight: 400;
     line-height: 1.2
@@ -178,7 +178,7 @@
 }
 
 .heading-lg\/medium__1add6 {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 20px;
     font-weight: 500;
     line-height: 1.2
@@ -189,7 +189,7 @@
 }
 
 .heading-lg\/semibold__1add6 {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 20px;
     font-weight: 600;
     line-height: 1.2
@@ -200,7 +200,7 @@
 }
 
 .heading-lg\/bold__1add6 {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 20px;
     font-weight: 700;
     line-height: 1.2
@@ -211,7 +211,7 @@
 }
 
 .heading-lg\/extrabold__1add6 {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 20px;
     font-weight: 800;
     line-height: 1.2
@@ -222,7 +222,7 @@
 }
 
 .heading-xl\/normal__1add6 {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 24px;
     font-weight: 400;
     line-height: 1.25
@@ -233,7 +233,7 @@
 }
 
 .heading-xl\/medium__1add6 {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 24px;
     font-weight: 500;
     line-height: 1.25
@@ -244,7 +244,7 @@
 }
 
 .heading-xl\/semibold__1add6 {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 24px;
     font-weight: 600;
     line-height: 1.25
@@ -255,7 +255,7 @@
 }
 
 .heading-xl\/bold__1add6 {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 24px;
     font-weight: 700;
     line-height: 1.25
@@ -266,7 +266,7 @@
 }
 
 .heading-xl\/extrabold__1add6 {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 24px;
     font-weight: 800;
     line-height: 1.25
@@ -277,7 +277,7 @@
 }
 
 .heading-xxl\/normal__1add6 {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 32px;
     font-weight: 400;
     line-height: 1.25
@@ -288,7 +288,7 @@
 }
 
 .heading-xxl\/medium__1add6 {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 32px;
     font-weight: 500;
     line-height: 1.25
@@ -299,7 +299,7 @@
 }
 
 .heading-xxl\/semibold__1add6 {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 32px;
     font-weight: 600;
     line-height: 1.25
@@ -310,7 +310,7 @@
 }
 
 .heading-xxl\/bold__1add6 {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 32px;
     font-weight: 700;
     line-height: 1.25
@@ -321,7 +321,7 @@
 }
 
 .heading-xxl\/extrabold__1add6 {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 32px;
     font-weight: 800;
     line-height: 1.25
@@ -332,7 +332,7 @@
 }
 
 .experimental\/heading-xs\/medium__1add6 {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 14px;
     font-weight: 500;
     line-height: 1.2857142857142858
@@ -343,7 +343,7 @@
 }
 
 .experimental\/heading-xs\/semibold__1add6 {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 14px;
     font-weight: 600;
     line-height: 1.2857142857142858
@@ -354,7 +354,7 @@
 }
 
 .experimental\/heading-sm\/medium__1add6 {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 16px;
     font-weight: 500;
     line-height: 1.25
@@ -365,7 +365,7 @@
 }
 
 .experimental\/heading-sm\/semibold__1add6 {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 16px;
     font-weight: 600;
     line-height: 1.25
@@ -376,7 +376,7 @@
 }
 
 .experimental\/heading-md\/medium__1add6 {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 18px;
     font-weight: 500;
     line-height: 1.2222222222222223
@@ -387,7 +387,7 @@
 }
 
 .experimental\/heading-md\/semibold__1add6 {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 18px;
     font-weight: 600;
     line-height: 1.2222222222222223
@@ -398,7 +398,7 @@
 }
 
 .experimental\/heading-lg\/medium__1add6 {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 20px;
     font-weight: 500;
     line-height: 1.2
@@ -409,7 +409,7 @@
 }
 
 .experimental\/heading-lg\/semibold__1add6 {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 20px;
     font-weight: 600;
     line-height: 1.2
@@ -420,7 +420,7 @@
 }
 
 .experimental\/heading-xl\/medium__1add6 {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 24px;
     font-weight: 500;
     line-height: 1.3333333333333333
@@ -431,7 +431,7 @@
 }
 
 .experimental\/heading-xl\/semibold__1add6 {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 24px;
     font-weight: 600;
     line-height: 1.3333333333333333
@@ -442,7 +442,7 @@
 }
 
 .experimental\/heading-xxl\/medium__1add6 {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 32px;
     font-weight: 500;
     line-height: 1.25
@@ -453,7 +453,7 @@
 }
 
 .experimental\/heading-xxl\/semibold__1add6 {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 32px;
     font-weight: 600;
     line-height: 1.25
@@ -464,7 +464,7 @@
 }
 
 .eyebrow__1add6 {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 12px;
     font-weight: 700;
     letter-spacing: .02em;
@@ -477,7 +477,7 @@
 }
 
 .heading-deprecated-12\/normal__1add6 {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 12px;
     font-weight: 400;
     line-height: 1.3333333333333333
@@ -488,7 +488,7 @@
 }
 
 .heading-deprecated-12\/medium__1add6 {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 12px;
     font-weight: 500;
     line-height: 1.3333333333333333
@@ -499,7 +499,7 @@
 }
 
 .heading-deprecated-12\/semibold__1add6 {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 12px;
     font-weight: 600;
     line-height: 1.3333333333333333
@@ -510,7 +510,7 @@
 }
 
 .heading-deprecated-12\/bold__1add6 {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 12px;
     font-weight: 700;
     line-height: 1.3333333333333333
@@ -521,7 +521,7 @@
 }
 
 .heading-deprecated-12\/extrabold__1add6 {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 12px;
     font-weight: 800;
     line-height: 1.3333333333333333
@@ -532,7 +532,7 @@
 }
 
 .redesign\/heading-18\/medium__1add6 {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 18px;
     font-weight: 500;
     line-height: 1.3333333333333333
@@ -543,7 +543,7 @@
 }
 
 .redesign\/heading-18\/semibold__1add6 {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 18px;
     font-weight: 600;
     line-height: 1.3333333333333333
@@ -554,7 +554,7 @@
 }
 
 .redesign\/heading-18\/bold__1add6 {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 18px;
     font-weight: 700;
     line-height: 1.3333333333333333
@@ -1148,7 +1148,7 @@
 }
 
 :where(.mana-type-consolidation) .heading-sm\/normal__1add6 {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 14px;
     font-weight: 500;
     line-height: 1.2857142857142858
@@ -1159,7 +1159,7 @@
 }
 
 :where(.mana-type-consolidation) .heading-sm\/medium__1add6 {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 14px;
     font-weight: 500;
     line-height: 1.2857142857142858
@@ -1170,7 +1170,7 @@
 }
 
 :where(.mana-type-consolidation) .heading-sm\/semibold__1add6 {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 14px;
     font-weight: 600;
     line-height: 1.2857142857142858
@@ -1181,7 +1181,7 @@
 }
 
 :where(.mana-type-consolidation) .heading-sm\/bold__1add6 {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 14px;
     font-weight: 600;
     line-height: 1.2857142857142858
@@ -1192,7 +1192,7 @@
 }
 
 :where(.mana-type-consolidation) .heading-sm\/extrabold__1add6 {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 14px;
     font-weight: 600;
     line-height: 1.2857142857142858
@@ -1203,7 +1203,7 @@
 }
 
 :where(.mana-type-consolidation) .heading-md\/normal__1add6 {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 16px;
     font-weight: 500;
     line-height: 1.25
@@ -1214,7 +1214,7 @@
 }
 
 :where(.mana-type-consolidation) .heading-md\/medium__1add6 {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 16px;
     font-weight: 500;
     line-height: 1.25
@@ -1225,7 +1225,7 @@
 }
 
 :where(.mana-type-consolidation) .heading-md\/semibold__1add6 {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 16px;
     font-weight: 600;
     line-height: 1.25
@@ -1236,7 +1236,7 @@
 }
 
 :where(.mana-type-consolidation) .heading-md\/bold__1add6 {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 16px;
     font-weight: 600;
     line-height: 1.25
@@ -1247,7 +1247,7 @@
 }
 
 :where(.mana-type-consolidation) .heading-md\/extrabold__1add6 {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 16px;
     font-weight: 600;
     line-height: 1.25
@@ -1258,7 +1258,7 @@
 }
 
 :where(.mana-type-consolidation) .heading-lg\/normal__1add6 {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 20px;
     font-weight: 500;
     line-height: 1.2
@@ -1269,7 +1269,7 @@
 }
 
 :where(.mana-type-consolidation) .heading-lg\/medium__1add6 {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 20px;
     font-weight: 500;
     line-height: 1.2
@@ -1280,7 +1280,7 @@
 }
 
 :where(.mana-type-consolidation) .heading-lg\/semibold__1add6 {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 20px;
     font-weight: 600;
     line-height: 1.2
@@ -1291,7 +1291,7 @@
 }
 
 :where(.mana-type-consolidation) .heading-lg\/bold__1add6 {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 20px;
     font-weight: 600;
     line-height: 1.2
@@ -1302,7 +1302,7 @@
 }
 
 :where(.mana-type-consolidation) .heading-lg\/extrabold__1add6 {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 20px;
     font-weight: 600;
     line-height: 1.2
@@ -1313,7 +1313,7 @@
 }
 
 :where(.mana-type-consolidation) .heading-xl\/normal__1add6 {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 24px;
     font-weight: 500;
     line-height: 1.3333333333333333
@@ -1324,7 +1324,7 @@
 }
 
 :where(.mana-type-consolidation) .heading-xl\/medium__1add6 {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 24px;
     font-weight: 500;
     line-height: 1.3333333333333333
@@ -1335,7 +1335,7 @@
 }
 
 :where(.mana-type-consolidation) .heading-xl\/semibold__1add6 {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 24px;
     font-weight: 600;
     line-height: 1.3333333333333333
@@ -1346,7 +1346,7 @@
 }
 
 :where(.mana-type-consolidation) .heading-xl\/bold__1add6 {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 24px;
     font-weight: 600;
     line-height: 1.3333333333333333
@@ -1357,7 +1357,7 @@
 }
 
 :where(.mana-type-consolidation) .heading-xl\/extrabold__1add6 {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 24px;
     font-weight: 600;
     line-height: 1.3333333333333333
@@ -1368,7 +1368,7 @@
 }
 
 :where(.mana-type-consolidation) .heading-xxl\/normal__1add6 {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 32px;
     font-weight: 500;
     line-height: 1.25
@@ -1379,7 +1379,7 @@
 }
 
 :where(.mana-type-consolidation) .heading-xxl\/medium__1add6 {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 32px;
     font-weight: 500;
     line-height: 1.25
@@ -1390,7 +1390,7 @@
 }
 
 :where(.mana-type-consolidation) .heading-xxl\/semibold__1add6 {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 32px;
     font-weight: 600;
     line-height: 1.25
@@ -1401,7 +1401,7 @@
 }
 
 :where(.mana-type-consolidation) .heading-xxl\/bold__1add6 {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 32px;
     font-weight: 600;
     line-height: 1.25
@@ -1412,7 +1412,7 @@
 }
 
 :where(.mana-type-consolidation) .heading-xxl\/extrabold__1add6 {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 32px;
     font-weight: 600;
     line-height: 1.25
@@ -1491,7 +1491,7 @@
 }
 
 :where(.mana-type-consolidation) .redesign\/heading-18\/medium__1add6 {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 18px;
     font-weight: 500;
     line-height: 1.2222222222222223
@@ -1502,7 +1502,7 @@
 }
 
 :where(.mana-type-consolidation) .redesign\/heading-18\/semibold__1add6 {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 18px;
     font-weight: 600;
     line-height: 1.2222222222222223
@@ -1513,7 +1513,7 @@
 }
 
 :where(.mana-type-consolidation) .redesign\/heading-18\/bold__1add6 {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 18px;
     font-weight: 600;
     line-height: 1.2222222222222223
@@ -1744,7 +1744,7 @@
 }
 
 :where(.mana-type-consolidation) .redesign\/message-preview\/normal__1add6 {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 16px;
     font-weight: 500;
     line-height: 1.25
@@ -1755,7 +1755,7 @@
 }
 
 :where(.mana-type-consolidation) .redesign\/message-preview\/medium__1add6 {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 16px;
     font-weight: 500;
     line-height: 1.25
@@ -1766,7 +1766,7 @@
 }
 
 :where(.mana-type-consolidation) .redesign\/message-preview\/semibold__1add6 {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 16px;
     font-weight: 600;
     line-height: 1.25
@@ -1777,7 +1777,7 @@
 }
 
 :where(.mana-type-consolidation) .redesign\/message-preview\/bold__1add6 {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 16px;
     font-weight: 600;
     line-height: 1.25
@@ -1788,7 +1788,7 @@
 }
 
 :where(.mana-type-consolidation) .redesign\/channel-title\/normal__1add6 {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 16px;
     font-weight: 500;
     line-height: 1.25
@@ -1799,7 +1799,7 @@
 }
 
 :where(.mana-type-consolidation) .redesign\/channel-title\/medium__1add6 {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 16px;
     font-weight: 500;
     line-height: 1.25
@@ -1810,7 +1810,7 @@
 }
 
 :where(.mana-type-consolidation) .redesign\/channel-title\/semibold__1add6 {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 16px;
     font-weight: 600;
     line-height: 1.25
@@ -1821,7 +1821,7 @@
 }
 
 :where(.mana-type-consolidation) .redesign\/channel-title\/bold__1add6 {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 16px;
     font-weight: 600;
     line-height: 1.25
@@ -3152,4 +3152,4 @@ html .tabBadge_e6b769 {
     color: CanvasText
 }
 
-/*# sourceMappingURL=398929.9f8770cf468c26d9.css.map*/
+/*# sourceMappingURL=398929.b7e371e091328e76.css.map*/

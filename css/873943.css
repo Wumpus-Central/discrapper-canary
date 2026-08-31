@@ -28,7 +28,7 @@
     background-color: transparent;
     border: none !important;
     color: var(--text-strong);
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 20px;
     font-weight: 700;
     line-height: 24px;
@@ -40,7 +40,7 @@
 
 .titleEditorContainer__36c1b::-moz-placeholder,
 .titleInput__36c1b::-moz-placeholder {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 20px;
     font-weight: 700;
     line-height: 24px
@@ -48,7 +48,7 @@
 
 .titleEditorContainer__36c1b::placeholder,
 .titleInput__36c1b::placeholder {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 20px;
     font-weight: 700;
     line-height: 24px
@@ -590,4 +590,4 @@
     border-radius: 0 0 5px 5px
 }
 
-/*# sourceMappingURL=873943.75b1580d506b1f28.css.map*/
+/*# sourceMappingURL=873943.8130ed4568345b09.css.map*/

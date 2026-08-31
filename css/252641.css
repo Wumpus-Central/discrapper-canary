@@ -2518,7 +2518,7 @@
 }
 
 .heading-sm\/normal_c1e9c4 {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 14px;
     font-weight: 400;
     line-height: 1.2857142857142858
@@ -2529,7 +2529,7 @@
 }
 
 .heading-sm\/medium_c1e9c4 {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 14px;
     font-weight: 500;
     line-height: 1.2857142857142858
@@ -2540,7 +2540,7 @@
 }
 
 .heading-sm\/semibold_c1e9c4 {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 14px;
     font-weight: 600;
     line-height: 1.2857142857142858
@@ -2551,7 +2551,7 @@
 }
 
 .heading-sm\/bold_c1e9c4 {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 14px;
     font-weight: 700;
     line-height: 1.2857142857142858
@@ -2562,7 +2562,7 @@
 }
 
 .heading-sm\/extrabold_c1e9c4 {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 14px;
     font-weight: 800;
     line-height: 1.2857142857142858
@@ -2573,7 +2573,7 @@
 }
 
 .heading-md\/normal_c1e9c4 {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 16px;
     font-weight: 400;
     line-height: 1.25
@@ -2584,7 +2584,7 @@
 }
 
 .heading-md\/medium_c1e9c4 {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 16px;
     font-weight: 500;
     line-height: 1.25
@@ -2595,7 +2595,7 @@
 }
 
 .heading-md\/semibold_c1e9c4 {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 16px;
     font-weight: 600;
     line-height: 1.25
@@ -2606,7 +2606,7 @@
 }
 
 .heading-md\/bold_c1e9c4 {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 16px;
     font-weight: 700;
     line-height: 1.25
@@ -2617,7 +2617,7 @@
 }
 
 .heading-md\/extrabold_c1e9c4 {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 16px;
     font-weight: 800;
     line-height: 1.25
@@ -2628,7 +2628,7 @@
 }
 
 .heading-lg\/normal_c1e9c4 {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 20px;
     font-weight: 400;
     line-height: 1.2
@@ -2639,7 +2639,7 @@
 }
 
 .heading-lg\/medium_c1e9c4 {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 20px;
     font-weight: 500;
     line-height: 1.2
@@ -2650,7 +2650,7 @@
 }
 
 .heading-lg\/semibold_c1e9c4 {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 20px;
     font-weight: 600;
     line-height: 1.2
@@ -2661,7 +2661,7 @@
 }
 
 .heading-lg\/bold_c1e9c4 {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 20px;
     font-weight: 700;
     line-height: 1.2
@@ -2672,7 +2672,7 @@
 }
 
 .heading-lg\/extrabold_c1e9c4 {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 20px;
     font-weight: 800;
     line-height: 1.2
@@ -2683,7 +2683,7 @@
 }
 
 .heading-xl\/normal_c1e9c4 {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 24px;
     font-weight: 400;
     line-height: 1.25
@@ -2694,7 +2694,7 @@
 }
 
 .heading-xl\/medium_c1e9c4 {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 24px;
     font-weight: 500;
     line-height: 1.25
@@ -2705,7 +2705,7 @@
 }
 
 .heading-xl\/semibold_c1e9c4 {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 24px;
     font-weight: 600;
     line-height: 1.25
@@ -2716,7 +2716,7 @@
 }
 
 .heading-xl\/bold_c1e9c4 {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 24px;
     font-weight: 700;
     line-height: 1.25
@@ -2727,7 +2727,7 @@
 }
 
 .heading-xl\/extrabold_c1e9c4 {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 24px;
     font-weight: 800;
     line-height: 1.25
@@ -2738,7 +2738,7 @@
 }
 
 .heading-xxl\/normal_c1e9c4 {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 32px;
     font-weight: 400;
     line-height: 1.25
@@ -2749,7 +2749,7 @@
 }
 
 .heading-xxl\/medium_c1e9c4 {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 32px;
     font-weight: 500;
     line-height: 1.25
@@ -2760,7 +2760,7 @@
 }
 
 .heading-xxl\/semibold_c1e9c4 {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 32px;
     font-weight: 600;
     line-height: 1.25
@@ -2771,7 +2771,7 @@
 }
 
 .heading-xxl\/bold_c1e9c4 {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 32px;
     font-weight: 700;
     line-height: 1.25
@@ -2782,7 +2782,7 @@
 }
 
 .heading-xxl\/extrabold_c1e9c4 {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 32px;
     font-weight: 800;
     line-height: 1.25
@@ -2793,7 +2793,7 @@
 }
 
 .experimental\/heading-xs\/medium_c1e9c4 {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 14px;
     font-weight: 500;
     line-height: 1.2857142857142858
@@ -2804,7 +2804,7 @@
 }
 
 .experimental\/heading-xs\/semibold_c1e9c4 {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 14px;
     font-weight: 600;
     line-height: 1.2857142857142858
@@ -2815,7 +2815,7 @@
 }
 
 .experimental\/heading-sm\/medium_c1e9c4 {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 16px;
     font-weight: 500;
     line-height: 1.25
@@ -2826,7 +2826,7 @@
 }
 
 .experimental\/heading-sm\/semibold_c1e9c4 {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 16px;
     font-weight: 600;
     line-height: 1.25
@@ -2837,7 +2837,7 @@
 }
 
 .experimental\/heading-md\/medium_c1e9c4 {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 18px;
     font-weight: 500;
     line-height: 1.2222222222222223
@@ -2848,7 +2848,7 @@
 }
 
 .experimental\/heading-md\/semibold_c1e9c4 {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 18px;
     font-weight: 600;
     line-height: 1.2222222222222223
@@ -2859,7 +2859,7 @@
 }
 
 .experimental\/heading-lg\/medium_c1e9c4 {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 20px;
     font-weight: 500;
     line-height: 1.2
@@ -2870,7 +2870,7 @@
 }
 
 .experimental\/heading-lg\/semibold_c1e9c4 {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 20px;
     font-weight: 600;
     line-height: 1.2
@@ -2881,7 +2881,7 @@
 }
 
 .experimental\/heading-xl\/medium_c1e9c4 {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 24px;
     font-weight: 500;
     line-height: 1.3333333333333333
@@ -2892,7 +2892,7 @@
 }
 
 .experimental\/heading-xl\/semibold_c1e9c4 {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 24px;
     font-weight: 600;
     line-height: 1.3333333333333333
@@ -2903,7 +2903,7 @@
 }
 
 .experimental\/heading-xxl\/medium_c1e9c4 {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 32px;
     font-weight: 500;
     line-height: 1.25
@@ -2914,7 +2914,7 @@
 }
 
 .experimental\/heading-xxl\/semibold_c1e9c4 {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 32px;
     font-weight: 600;
     line-height: 1.25
@@ -2925,7 +2925,7 @@
 }
 
 .eyebrow_c1e9c4 {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 12px;
     font-weight: 700;
     letter-spacing: .02em;
@@ -2938,7 +2938,7 @@
 }
 
 .heading-deprecated-12\/normal_c1e9c4 {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 12px;
     font-weight: 400;
     line-height: 1.3333333333333333
@@ -2949,7 +2949,7 @@
 }
 
 .heading-deprecated-12\/medium_c1e9c4 {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 12px;
     font-weight: 500;
     line-height: 1.3333333333333333
@@ -2960,7 +2960,7 @@
 }
 
 .heading-deprecated-12\/semibold_c1e9c4 {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 12px;
     font-weight: 600;
     line-height: 1.3333333333333333
@@ -2971,7 +2971,7 @@
 }
 
 .heading-deprecated-12\/bold_c1e9c4 {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 12px;
     font-weight: 700;
     line-height: 1.3333333333333333
@@ -2982,7 +2982,7 @@
 }
 
 .heading-deprecated-12\/extrabold_c1e9c4 {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 12px;
     font-weight: 800;
     line-height: 1.3333333333333333
@@ -2993,7 +2993,7 @@
 }
 
 .redesign\/heading-18\/medium_c1e9c4 {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 18px;
     font-weight: 500;
     line-height: 1.3333333333333333
@@ -3004,7 +3004,7 @@
 }
 
 .redesign\/heading-18\/semibold_c1e9c4 {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 18px;
     font-weight: 600;
     line-height: 1.3333333333333333
@@ -3015,7 +3015,7 @@
 }
 
 .redesign\/heading-18\/bold_c1e9c4 {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 18px;
     font-weight: 700;
     line-height: 1.3333333333333333
@@ -3609,7 +3609,7 @@
 }
 
 :where(.mana-type-consolidation) .heading-sm\/normal_c1e9c4 {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 14px;
     font-weight: 500;
     line-height: 1.2857142857142858
@@ -3620,7 +3620,7 @@
 }
 
 :where(.mana-type-consolidation) .heading-sm\/medium_c1e9c4 {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 14px;
     font-weight: 500;
     line-height: 1.2857142857142858
@@ -3631,7 +3631,7 @@
 }
 
 :where(.mana-type-consolidation) .heading-sm\/semibold_c1e9c4 {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 14px;
     font-weight: 600;
     line-height: 1.2857142857142858
@@ -3642,7 +3642,7 @@
 }
 
 :where(.mana-type-consolidation) .heading-sm\/bold_c1e9c4 {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 14px;
     font-weight: 600;
     line-height: 1.2857142857142858
@@ -3653,7 +3653,7 @@
 }
 
 :where(.mana-type-consolidation) .heading-sm\/extrabold_c1e9c4 {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 14px;
     font-weight: 600;
     line-height: 1.2857142857142858
@@ -3664,7 +3664,7 @@
 }
 
 :where(.mana-type-consolidation) .heading-md\/normal_c1e9c4 {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 16px;
     font-weight: 500;
     line-height: 1.25
@@ -3675,7 +3675,7 @@
 }
 
 :where(.mana-type-consolidation) .heading-md\/medium_c1e9c4 {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 16px;
     font-weight: 500;
     line-height: 1.25
@@ -3686,7 +3686,7 @@
 }
 
 :where(.mana-type-consolidation) .heading-md\/semibold_c1e9c4 {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 16px;
     font-weight: 600;
     line-height: 1.25
@@ -3697,7 +3697,7 @@
 }
 
 :where(.mana-type-consolidation) .heading-md\/bold_c1e9c4 {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 16px;
     font-weight: 600;
     line-height: 1.25
@@ -3708,7 +3708,7 @@
 }
 
 :where(.mana-type-consolidation) .heading-md\/extrabold_c1e9c4 {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 16px;
     font-weight: 600;
     line-height: 1.25
@@ -3719,7 +3719,7 @@
 }
 
 :where(.mana-type-consolidation) .heading-lg\/normal_c1e9c4 {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 20px;
     font-weight: 500;
     line-height: 1.2
@@ -3730,7 +3730,7 @@
 }
 
 :where(.mana-type-consolidation) .heading-lg\/medium_c1e9c4 {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 20px;
     font-weight: 500;
     line-height: 1.2
@@ -3741,7 +3741,7 @@
 }
 
 :where(.mana-type-consolidation) .heading-lg\/semibold_c1e9c4 {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 20px;
     font-weight: 600;
     line-height: 1.2
@@ -3752,7 +3752,7 @@
 }
 
 :where(.mana-type-consolidation) .heading-lg\/bold_c1e9c4 {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 20px;
     font-weight: 600;
     line-height: 1.2
@@ -3763,7 +3763,7 @@
 }
 
 :where(.mana-type-consolidation) .heading-lg\/extrabold_c1e9c4 {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 20px;
     font-weight: 600;
     line-height: 1.2
@@ -3774,7 +3774,7 @@
 }
 
 :where(.mana-type-consolidation) .heading-xl\/normal_c1e9c4 {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 24px;
     font-weight: 500;
     line-height: 1.3333333333333333
@@ -3785,7 +3785,7 @@
 }
 
 :where(.mana-type-consolidation) .heading-xl\/medium_c1e9c4 {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 24px;
     font-weight: 500;
     line-height: 1.3333333333333333
@@ -3796,7 +3796,7 @@
 }
 
 :where(.mana-type-consolidation) .heading-xl\/semibold_c1e9c4 {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 24px;
     font-weight: 600;
     line-height: 1.3333333333333333
@@ -3807,7 +3807,7 @@
 }
 
 :where(.mana-type-consolidation) .heading-xl\/bold_c1e9c4 {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 24px;
     font-weight: 600;
     line-height: 1.3333333333333333
@@ -3818,7 +3818,7 @@
 }
 
 :where(.mana-type-consolidation) .heading-xl\/extrabold_c1e9c4 {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 24px;
     font-weight: 600;
     line-height: 1.3333333333333333
@@ -3829,7 +3829,7 @@
 }
 
 :where(.mana-type-consolidation) .heading-xxl\/normal_c1e9c4 {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 32px;
     font-weight: 500;
     line-height: 1.25
@@ -3840,7 +3840,7 @@
 }
 
 :where(.mana-type-consolidation) .heading-xxl\/medium_c1e9c4 {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 32px;
     font-weight: 500;
     line-height: 1.25
@@ -3851,7 +3851,7 @@
 }
 
 :where(.mana-type-consolidation) .heading-xxl\/semibold_c1e9c4 {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 32px;
     font-weight: 600;
     line-height: 1.25
@@ -3862,7 +3862,7 @@
 }
 
 :where(.mana-type-consolidation) .heading-xxl\/bold_c1e9c4 {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 32px;
     font-weight: 600;
     line-height: 1.25
@@ -3873,7 +3873,7 @@
 }
 
 :where(.mana-type-consolidation) .heading-xxl\/extrabold_c1e9c4 {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 32px;
     font-weight: 600;
     line-height: 1.25
@@ -3952,7 +3952,7 @@
 }
 
 :where(.mana-type-consolidation) .redesign\/heading-18\/medium_c1e9c4 {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 18px;
     font-weight: 500;
     line-height: 1.2222222222222223
@@ -3963,7 +3963,7 @@
 }
 
 :where(.mana-type-consolidation) .redesign\/heading-18\/semibold_c1e9c4 {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 18px;
     font-weight: 600;
     line-height: 1.2222222222222223
@@ -3974,7 +3974,7 @@
 }
 
 :where(.mana-type-consolidation) .redesign\/heading-18\/bold_c1e9c4 {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 18px;
     font-weight: 600;
     line-height: 1.2222222222222223
@@ -4205,7 +4205,7 @@
 }
 
 :where(.mana-type-consolidation) .redesign\/message-preview\/normal_c1e9c4 {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 16px;
     font-weight: 500;
     line-height: 1.25
@@ -4216,7 +4216,7 @@
 }
 
 :where(.mana-type-consolidation) .redesign\/message-preview\/medium_c1e9c4 {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 16px;
     font-weight: 500;
     line-height: 1.25
@@ -4227,7 +4227,7 @@
 }
 
 :where(.mana-type-consolidation) .redesign\/message-preview\/semibold_c1e9c4 {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 16px;
     font-weight: 600;
     line-height: 1.25
@@ -4238,7 +4238,7 @@
 }
 
 :where(.mana-type-consolidation) .redesign\/message-preview\/bold_c1e9c4 {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 16px;
     font-weight: 600;
     line-height: 1.25
@@ -4249,7 +4249,7 @@
 }
 
 :where(.mana-type-consolidation) .redesign\/channel-title\/normal_c1e9c4 {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 16px;
     font-weight: 500;
     line-height: 1.25
@@ -4260,7 +4260,7 @@
 }
 
 :where(.mana-type-consolidation) .redesign\/channel-title\/medium_c1e9c4 {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 16px;
     font-weight: 500;
     line-height: 1.25
@@ -4271,7 +4271,7 @@
 }
 
 :where(.mana-type-consolidation) .redesign\/channel-title\/semibold_c1e9c4 {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 16px;
     font-weight: 600;
     line-height: 1.25
@@ -4282,7 +4282,7 @@
 }
 
 :where(.mana-type-consolidation) .redesign\/channel-title\/bold_c1e9c4 {
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 16px;
     font-weight: 600;
     line-height: 1.25
@@ -4714,7 +4714,7 @@
 
 .groupLabel_c1e9c4 {
     color: var(--text-muted);
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 14px;
     font-weight: 500;
     line-height: 20px
@@ -6203,4 +6203,4 @@ svg.radioIcon_c1e9c4 {
     top: -4px
 }
 
-/*# sourceMappingURL=252641.e4e1f8f861c0306a.css.map*/
+/*# sourceMappingURL=252641.40b73c48a0eadec4.css.map*/

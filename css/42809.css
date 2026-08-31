@@ -280,7 +280,7 @@
     color: var(--text-strong);
     cursor: pointer;
     display: flex;
-    font-family: var(--font-display);
+    font-family: var(--font-primary);
     font-size: 12px;
     font-weight: var(--font-weight-semibold);
     height: 24px;
@@ -345,4 +345,4 @@
     opacity: 1
 }
 
-/*# sourceMappingURL=42809.4582f920cdee49b3.css.map*/
+/*# sourceMappingURL=42809.ba3498bcf671e8fe.css.map*/
