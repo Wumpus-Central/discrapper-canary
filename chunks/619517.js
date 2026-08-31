@@ -101,7 +101,7 @@ class N extends i.Component {
                 format: m,
                 quality: f,
             }),
-            g = Date.now();
+            g = performance.now();
         return (0, d.yt)(p, (e, n) => {
             N.trackLoadingCompleted({
                 error: e,
@@ -132,7 +132,7 @@ class N extends i.Component {
         let E = await fetch(n.url).catch(() => void 0),
             C = E?.headers?.get("content-length"),
             I = null != C ? Number(C) : null,
-            y = Date.now() - i;
+            y = Math.round(performance.now() - i);
         p.default.track(A.HAw.IMAGE_LOADING_COMPLETED, {
             duration_ms: y,
             requested_height: n.height,
@@ -157,7 +157,7 @@ class N extends i.Component {
         });
     }
     state = { readyState: A.Rv1.LOADING, hasMouseOver: !1, hasFocus: !1 };
-    startLoadingTime = Date.now();
+    startLoadingTime = performance.now();
     _cancellers = new Set();
     _unmounted = !1;
     _imageRef = i.createRef();
@@ -235,7 +235,7 @@ class N extends i.Component {
     }
     loadImage(e, t) {
         let { width: n, height: l } = this.props;
-        if (((this.startLoadingTime = Date.now()), 1 === n && 1 === l)) return;
+        if (((this.startLoadingTime = performance.now()), 1 === n && 1 === l)) return;
         let i = (0, d.yt)(e, (e, n) => {
             null != i && this._cancellers.delete(i), t?.(e, n);
         });
