@@ -32,20 +32,20 @@ function T(e) {
         L = (0, r.bG)([x.A, C.A], () => null != T && (0, h.vz)(T, x.A, C.A, !0)),
         { analyticsLocations: O } = (0, u.Ay)(d.A.GUILD_ROOM),
         { Component: P } = (0, o.c)("enable"),
-        M = (0, r.bG)([g.Ay], () => g.Ay.supports(N.O5.VIDEO)),
-        w = l.useRef(null),
+        w = (0, r.bG)([g.Ay], () => g.Ay.supports(N.O5.VIDEO)),
+        M = l.useRef(null),
         U = l.useCallback(() => {
             if (null != _) {
                 if (!S) return void (0, m.A)();
-                (0, A.A)(_, t, O), (0, j.n0)({ channelId: t, interactionType: "tv_stream_clicked" });
+                (0, A.A)(_, t, O), (0, j.n0)({ channelId: t, interactionType: "tv_clicked_empty_screen" });
             }
         }, [_, S, t, O]);
-    return null != T && null != _ && L && R && M
+    return null != T && null != _ && L && R && w
         ? (0, i.jsxs)(c.D, {
               "aria-label": v.intl.string(v.t.fjBNo1),
               className: b.XI,
               onClick: U,
-              focusProps: { ringTarget: w },
+              focusProps: { ringTarget: M },
               children: [
                   (0, i.jsx)(I.A, { className: s()(b.ys, E.zq) }),
                   (0, i.jsx)("div", {
@@ -53,7 +53,7 @@ function T(e) {
                       style: { left: `${n.x}%`, top: `${n.y}%` },
                       children: (0, i.jsx)("div", {
                           className: E.zq,
-                          ref: w,
+                          ref: M,
                           children: (0, i.jsx)(P, {
                               className: b.Kk,
                               color: "currentColor",
