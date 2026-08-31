@@ -14,15 +14,12 @@ function o({ node: e, renderers: n, ...t }) {
         case "code_block":
             return (0, r.jsx)(a, { node: e, ...e.value, ...t });
         case "link": {
-            let i = e.value,
-                o = null;
-            if ("normal" === i.type) {
-                let {
-                    value: { text: e, url: t },
-                } = i;
-                o = e ? (0, r.jsx)(_, { nodes: e, renderers: n }) : t;
-            }
-            return (0, r.jsx)(a, { node: e, ...e.value, ...t, children: o });
+            let { text: i, target: o } = e.value,
+                u = null;
+            return (
+                i ? (u = (0, r.jsx)(_, { nodes: i, renderers: n })) : "url" === o.type && (u = o.value),
+                (0, r.jsx)(a, { node: e, ...e.value, ...t, children: u })
+            );
         }
         case "text":
         case "code":

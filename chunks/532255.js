@@ -1,13 +1,13 @@
 t.a(e, async function (e, l) {
     try {
-        t.r(n), t.d(n, { default: () => w });
+        t.r(n), t.d(n, { default: () => S });
         var r = t(477900),
             a = t(582128),
-            s = t(255635),
-            i = t(828263),
+            i = t(960218),
+            s = t(730340),
             c = t(292442),
-            d = t(834730),
-            u = t(791606),
+            u = t(834730),
+            d = t(791606),
             o = t(38405),
             h = t(715764),
             m = t(614740),
@@ -16,24 +16,24 @@ t.a(e, async function (e, l) {
             g = t(750854),
             f = t(131765),
             p = t(167507),
-            I = t(908347),
-            v = t(62849),
+            v = t(908347),
+            I = t(62849),
             A = t(558447),
-            k = t(886609),
-            y = t(580019),
+            y = t(886609),
+            k = t(580019),
             C = t(596008),
             b = t(375708),
             N = t(254221),
-            S = e([i]);
-        i = (S.then ? (await S)() : S)[0];
+            w = e([p, s]);
+        [p, s] = w.then ? (await w)() : w;
         let _ = {
             text: h.EY,
             paragraph: h.fz,
             empty: h.Sv,
             emoji: j.z,
             link: p.N,
-            list: I.B,
-            listItem: I.c,
+            list: v.B,
+            listItem: v.c,
             code: m.C,
             code_block: x.N,
             quote: A.P,
@@ -41,28 +41,28 @@ t.a(e, async function (e, l) {
             italic: g.J2,
             underline: g.z2,
             strikethrough: g.Gk,
-            mention: v.P,
+            mention: I.P,
             heading: f.D,
             small: f.O,
-            spoiler: k.d,
-            timestamp: y.D,
+            spoiler: y.d,
+            timestamp: k.D,
         };
-        function w(e) {
+        function S(e) {
             let { content: n } = e;
             return (0, r.jsx)(c.tH, {
                 fallbackRender: (e) => {
                     let { error: t } = e;
-                    return (0, r.jsx)(M, { content: n, error: t });
+                    return (0, r.jsx)($, { content: n, error: t });
                 },
-                children: (0, r.jsx)($, { content: n }),
+                children: (0, r.jsx)(M, { content: n }),
             });
         }
-        function $(e) {
-            let { content: n } = e,
-                t = a.useMemo(() => (0, i.q)(n), [n]);
-            return (0, r.jsx)(C.K.Provider, { value: t, children: (0, r.jsx)(s.$, { nodes: t, renderers: _ }) });
-        }
         function M(e) {
+            let { content: n } = e,
+                t = a.useMemo(() => (0, s.q)(n), [n]);
+            return (0, r.jsx)(C.K.Provider, { value: t, children: (0, r.jsx)(i.$, { nodes: t, renderers: _ }) });
+        }
+        function $(e) {
             let { content: n, error: t } = e;
             return (
                 a.useEffect(() => {
@@ -71,11 +71,11 @@ t.a(e, async function (e, l) {
                 (0, r.jsxs)(r.Fragment, {
                     children: [
                         (0, r.jsx)("span", { children: n }),
-                        (0, r.jsxs)(d.E, {
+                        (0, r.jsxs)(u.E, {
                             variant: "text-md/normal",
                             color: "text-feedback-critical",
                             className: N.g,
-                            children: [(0, r.jsx)(u.A, { width: 16, height: 16 }), b.intl.string(b.t.dpFK4M)],
+                            children: [(0, r.jsx)(d.A, { width: 16, height: 16 }), b.intl.string(b.t.dpFK4M)],
                         }),
                     ],
                 })
