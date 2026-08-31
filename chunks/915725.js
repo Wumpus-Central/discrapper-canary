@@ -36,7 +36,7 @@ let T = "default",
     b = null,
     M = new Set(),
     P = !1,
-    U = new Map(),
+    U = new Set(),
     w = {
         clipsEnabled: !1,
         storageLocation: T,
@@ -75,16 +75,15 @@ async function x() {
         (G.clipsSettings.storageLocation = e), V.emitChange();
     }
 }
-function k(e, t, n) {
-    if (!A.A.getConfig({ location: "trackSharedRemoteClipId" }).enableDistributedClips || n !== u.default.getId())
+function k(e) {
+    if (!A.A.getConfig({ location: "trackClipReply" }).enableDistributedClips || e.author?.id !== u.default.getId())
         return !1;
-    let i = !1;
-    for (let n of t) {
-        if (null == n.clip_remote_id) continue;
-        let t = U.get(e);
-        null == t && ((t = new Set()), U.set(e, t)), t.add(n.clip_remote_id), (i = !0);
-    }
-    return i;
+    let { message_reference: t } = e;
+    return (
+        !(t?.message_id == null || (null != t.type && t.type !== f.SH7.DEFAULT) || U.has(t.message_id)) &&
+        !!e.attachments?.some((e) => (0, a.Lt)(e.flags ?? 0, f.sbO.IS_CLIP)) &&
+        (U.add(t.message_id), !0)
+    );
 }
 class F extends s.Ay.DeviceSettingsStore {
     static displayName = "ClipsStore";
@@ -271,9 +270,8 @@ class F extends s.Ay.DeviceSettingsStore {
     isAutoStashEnabled() {
         return P;
     }
-    wasClipSharedInChannel(e, t) {
-        let n = U.get(t);
-        return n?.has(e) ?? !1;
+    hasRepliedWithClip(e) {
+        return U.has(e);
     }
 }
 let V = new F(l.h, {
@@ -449,11 +447,11 @@ let V = new F(l.h, {
             P = t;
         },
         MESSAGE_CREATE: function (e) {
-            return k(e.channelId, e.message.attachments ?? [], e.message.author?.id);
+            return k(e.message);
         },
         LOAD_MESSAGES_SUCCESS: function (e) {
             let t = !1;
-            for (let n of e.messages) t = t || k(e.channelId, n.attachments ?? [], n.author?.id);
+            for (let n of e.messages) t = k(n) || t;
             return t;
         },
         LOGOUT: function () {
