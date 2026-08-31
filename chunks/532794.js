@@ -51,8 +51,8 @@ function S(e) {
         } = e,
         $ = r()("payment-modal"),
         z = (0, f.mH)(U),
-        Z = v || z !== (0, f.mH)(g.pe.TIER_2) ? null : h.A.getMarketingMomentPromotion(),
-        q = Z?.rewardSkuIds[0] ?? null,
+        q = v || z !== (0, f.mH)(g.pe.TIER_2) ? null : h.A.getMarketingMomentPromotion(),
+        Z = q?.rewardSkuIds[0] ?? null,
         X = !1;
     function Q() {
         X ||
@@ -236,7 +236,7 @@ function S(e) {
         n.e("701335"),
         n.e("257935"),
         n.e("724086"),
-        n.e("877223"),
+        n.e("358937"),
         n.e("448738"),
         n.e("590994"),
         n.e("258407"),
@@ -317,9 +317,10 @@ function S(e) {
         n.e("858529"),
         n.e("207264"),
         n.e("481987"),
+        n.e("595653"),
         n.e("958038"),
         n.e("171202"),
-        n.e("875201"),
+        n.e("80669"),
         n.e("576909"),
         n.e("406174"),
         n.e("188941"),
@@ -517,7 +518,7 @@ function S(e) {
         n.e("174016"),
         n.e("736926"),
         n.e("221856"),
-        n.e("520913"),
+        n.e("187796"),
         n.e("474907"),
     ])
         .then(n.bind(n, 529427))
@@ -553,10 +554,10 @@ function S(e) {
                                 if (
                                     (null != t && t(),
                                     s.h.dispatch({ type: "PREMIUM_PAYMENT_MODAL_CLOSE", didSucceed: e }),
-                                    e && null != q && Z.endDate >= new Date())
+                                    e && null != Z && q.endDate >= new Date())
                                 ) {
-                                    await (0, u.RE)(q);
-                                    let e = _.A.getProduct(q);
+                                    await (0, u.RE)(Z);
+                                    let e = _.A.getProduct(Z);
                                     null != e &&
                                         (0, E.A)({
                                             product: e,

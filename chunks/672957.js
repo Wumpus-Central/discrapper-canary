@@ -1634,7 +1634,7 @@ class ic extends r.PureComponent {
             if ((0, es.ai)(t.id)) return void this.props.onFavoriteGuildContextMenu(e);
             (0, N.L3)(e, async () => {
                 let { default: e } = await Promise.all([
-                    n.e("866676"),
+                    n.e("203112"),
                     n.e("876364"),
                     n.e("925807"),
                     n.e("996907"),
@@ -1704,7 +1704,7 @@ class ic extends r.PureComponent {
                     n.e("701335"),
                     n.e("257935"),
                     n.e("724086"),
-                    n.e("877223"),
+                    n.e("358937"),
                     n.e("448738"),
                     n.e("590994"),
                     n.e("258407"),
@@ -1923,9 +1923,10 @@ class ic extends r.PureComponent {
                     n.e("834552"),
                     n.e("207264"),
                     n.e("481987"),
+                    n.e("595653"),
                     n.e("958038"),
                     n.e("171202"),
-                    n.e("875201"),
+                    n.e("80669"),
                     n.e("576909"),
                     n.e("708757"),
                     n.e("993103"),
@@ -1988,7 +1989,7 @@ class ic extends r.PureComponent {
                     n.e("691671"),
                     n.e("147626"),
                     n.e("795596"),
-                    n.e("382644"),
+                    n.e("803434"),
                     n.e("203589"),
                     n.e("613867"),
                     n.e("553984"),

@@ -55,4 +55,13 @@
     text-decoration-color: var(--text-link)
 }
 
-/*# sourceMappingURL=877223.081ce1b3ea823e3b.css.map*/
+.picker__4761e [role=option]>div:first-child {
+    grid-template-columns: auto minmax(0, max-content) auto;
+    justify-content: start
+}
+
+[aria-hidden=true] .username__4761e {
+    display: none
+}
+
+/*# sourceMappingURL=358937.632fa9292c48012b.css.map*/
