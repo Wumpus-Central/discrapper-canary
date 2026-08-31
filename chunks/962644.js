@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Ay: () => g, BE: () => f, Ak: () => p, hS: () => m, b8: () => T });
+n.d(t, { LI: () => g, Ay: () => S, BE: () => f, Ak: () => p, hS: () => m, b8: () => T });
 var i,
     r = (((i = {})[(i.DESKTOP = 0)] = "DESKTOP"), (i[(i.MOBILE = 1)] = "MOBILE"), i),
     a = n(636537),
@@ -57,9 +57,12 @@ async function m() {
             l.h.dispatch({ type: "ACTIVE_BOGO_PROMOTION_FETCH_FAIL" });
         }
 }
-let g = {
+function g(e) {
+    l.h.dispatch({ type: "CLAIMED_OUTBOUND_PROMOTION_CODE_ADD", claimedOutboundPromotionCode: e });
+}
+let S = {
     fetchActivePromotions: T,
-    fetchClaimedOutboundPromotionCodes: async function e() {
+    fetchClaimedOutboundPromotionCodes: async function () {
         try {
             let e = (
                 await a.Bo.get({
@@ -74,9 +77,7 @@ let g = {
             l.h.dispatch({ type: "CLAIMED_OUTBOUND_PROMOTION_CODES_FETCH_FAIL" });
         }
     },
-    addClaimedOutboundPromotionCode: function (e) {
-        l.h.dispatch({ type: "CLAIMED_OUTBOUND_PROMOTION_CODE_ADD", claimedOutboundPromotionCode: e });
-    },
+    addClaimedOutboundPromotionCode: g,
     dismissOutboundPromotionNotice: function () {
         l.h.dispatch({ type: "OUTBOUND_PROMOTION_NOTICE_DISMISS" });
         let e = A.A.lastDismissedOutboundPromotionStartDate;

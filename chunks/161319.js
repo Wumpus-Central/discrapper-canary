@@ -19,50 +19,48 @@ var s = i(477900),
     v = i(412260),
     _ = i(593687),
     j = i(772167),
-    E = i(294219),
-    R = i(202541),
+    R = i(294219),
+    E = i(202541),
     P = i(652215),
     A = i(375708),
     y = i(341973);
-let N = "recurring-3p-progress-label",
-    I = (e) => {
-        let { promotionRecurrences: t } = e,
-            [i, l] = n.useState(t.length > 1),
-            [o, d] = n.useState([]);
-        return (
-            n.useEffect(() => {
-                d([t.sort((e, t) => (t.startDate > e.startDate ? 1 : -1))[0]]);
-            }, [t]),
-            (0, s.jsxs)("div", {
-                children: [
-                    o.map((e) =>
-                        (0, s.jsx)(
-                            j.wx,
-                            {
-                                recurrence: e,
-                                showPartnerLogo: !0,
-                                showPartnerImage: !0,
-                                analyticsLocations: [u.A.RECURRING_3PP_MODAL],
-                            },
-                            e.id,
-                        ),
-                    ),
-                    i &&
-                        (0, s.jsx)(r.D, {
-                            className: y.K8,
-                            onClick: () => {
-                                l(!1), d([...o, ...t.slice(1)]);
-                            },
-                            children: (0, s.jsx)(a.E, {
-                                variant: "text-sm/medium",
-                                color: "text-subtle",
-                                children: A.intl.string(A.t.rjjZxV),
-                            }),
-                        }),
-                ],
-            })
-        );
-    };
+let N = "recurring-3p-progress-label";
+function I(e) {
+    let { promotionRecurrences: t } = e,
+        [i, l] = n.useState(!1),
+        o = [...t].sort((e, t) => (t.startDate > e.startDate ? 1 : -1)),
+        d = o[0],
+        c = i ? o : [d],
+        m = !i && o.length > 1;
+    return (0, s.jsxs)("div", {
+        children: [
+            c.map((e) =>
+                (0, s.jsx)(
+                    j.wx,
+                    {
+                        recurrence: e,
+                        showPartnerLogo: !0,
+                        showPartnerImage: !0,
+                        analyticsLocations: [u.A.RECURRING_3PP_MODAL],
+                    },
+                    e.id,
+                ),
+            ),
+            m &&
+                (0, s.jsx)(r.D, {
+                    className: y.K8,
+                    onClick: () => {
+                        l(!0);
+                    },
+                    children: (0, s.jsx)(a.E, {
+                        variant: "text-sm/medium",
+                        color: "text-subtle",
+                        children: A.intl.string(A.t.rjjZxV),
+                    }),
+                }),
+        ],
+    });
+}
 function T(e) {
     return e.partnerId?.toLowerCase() ?? null;
 }
@@ -72,7 +70,7 @@ function O(e) {
         { transitionState: n, onClose: r, partnerIds: c, isLocked: u } = e,
         { promotionsLoaded: p, claimedOutboundPromotionCodeMap: O } = (0, C.y7)(),
         w = (0, d.yK)([v.A], () => v.A.outboundRecurringPromotions),
-        M = (0, E.G)(c, { isLockedCardView: u });
+        M = (0, R.G)(c, { isLockedCardView: u });
     if (!1 === p) return (0, s.jsx)(l.y, {});
     let L = (function (e) {
         let { promotions: t, codesByPromotion: i, partnerIds: s } = e,
@@ -112,7 +110,7 @@ function O(e) {
         preview: (function () {
             if (!0 === u)
                 return (0, s.jsx)(h.A, {
-                    subscriptionTier: R.pe.TIER_2,
+                    subscriptionTier: E.pe.TIER_2,
                     fullWidth: !0,
                     onClick: () => {
                         r();
