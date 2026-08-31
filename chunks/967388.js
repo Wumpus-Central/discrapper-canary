@@ -1,101 +1,117 @@
-n.d(t, { A: () => E });
+n.d(t, { A: () => S });
 var i = n(477900),
     l = n(582128),
-    a = n(17928),
-    s = n(273875),
-    r = n(798618),
-    o = n(939249),
-    c = n(97808),
-    d = n(778712),
-    u = n(834730),
-    h = n(241326),
-    p = n(46054),
-    m = n(734057),
-    A = n(287809),
-    f = n(562153),
-    x = n(446243),
-    g = n(920639),
-    C = n(538638),
-    y = n(781137),
-    j = n(544299),
-    I = n(1195),
-    N = n(375708),
-    v = n(505252);
-function E(e) {
-    let { channelId: t, note: n, roomWidth: E } = e,
-        [b, T] = (0, l.useState)(!1),
-        _ = (0, l.useRef)(null),
-        R = (0, a.bG)([A.default], () => A.default.getUser(n.createdBy)),
-        S = (0, a.bG)([m.A], () => m.A.getChannel(t)?.guild_id),
-        L = (0, f.tx)(S, t, R),
-        O = (0, j.Sb)({
+    a = n(503698),
+    s = n.n(a),
+    r = n(17928),
+    o = n(273875),
+    c = n(798618),
+    d = n(939249),
+    u = n(97808),
+    h = n(778712),
+    p = n(834730),
+    m = n(866665),
+    A = n(241326),
+    f = n(46054),
+    x = n(734057),
+    g = n(309010),
+    C = n(287809),
+    y = n(562153),
+    j = n(446243),
+    I = n(920639),
+    N = n(538638),
+    v = n(781137),
+    E = n(544299),
+    b = n(1195),
+    T = n(375708),
+    _ = n(292670),
+    R = n(505252);
+function S(e) {
+    let { channelId: t, note: n, roomWidth: a } = e,
+        [S, L] = (0, l.useState)(!1),
+        O = (0, l.useRef)(null),
+        P = (0, r.bG)([C.default], () => C.default.getUser(n.createdBy)),
+        w = (0, r.bG)([x.A], () => x.A.getChannel(t)?.guild_id),
+        M = (0, r.bG)([g.Ay], () => g.Ay.getVoiceChannelId() === t, [t]),
+        U = (0, y.tx)(w, t, P),
+        D = (0, E.Sb)({
             position: n.position,
-            targetLabel: N.intl.formatToPlainString(I.default.w5Latp, { userName: L }),
+            targetLabel: T.intl.formatToPlainString(b.default.w5Latp, { userName: U }),
         });
-    return null == R || null == S
+    return null == P || null == w
         ? null
         : (0, i.jsxs)(i.Fragment, {
               children: [
-                  (0, i.jsx)(o.D, {
-                      innerRef: _,
+                  (0, i.jsx)(d.D, {
+                      innerRef: O,
                       role: "listitem",
-                      "aria-label": N.intl.formatToPlainString(I.default.w5Latp, { userName: L }),
-                      className: v.kL,
+                      "aria-label": T.intl.formatToPlainString(b.default.w5Latp, { userName: U }),
+                      className: R.kL,
                       onClick: () => {
-                          b || (0, g.Ql)({ channelId: t, interactionType: "note_opened" }), T(!b);
+                          S || (0, I.Ql)({ channelId: t, interactionType: "note_opened" }), L(!S);
                       },
                       style: { left: `${n.position.x}%`, top: `${n.position.y}%` },
-                      ...O,
-                      children: (0, i.jsx)(y.A, { roomWidth: E }),
+                      ...D,
+                      children: (0, i.jsx)(v.A, { roomWidth: a }),
                   }),
-                  (0, i.jsxs)(s.x, {
-                      shouldShow: b,
+                  (0, i.jsxs)(o.x, {
+                      shouldShow: S,
                       onRequestClose: () => {
-                          T(!1);
+                          L(!1);
                       },
                       closeOnClickOutside: !0,
-                      targetElementRef: _,
+                      targetElementRef: O,
                       children: [
                           (0, i.jsxs)("div", {
-                              className: v.oO,
+                              className: R.oO,
                               children: [
                                   (0, i.jsxs)("div", {
-                                      className: v.wx,
+                                      className: R.wx,
                                       children: [
                                           (0, i.jsxs)("div", {
-                                              className: v.kQ,
+                                              className: R.kQ,
                                               children: [
-                                                  (0, i.jsx)(c.eu, {
-                                                      "aria-label": L,
-                                                      src: R.getAvatarURL(S, 24),
-                                                      size: d._3.SIZE_24,
-                                                      className: v.my,
+                                                  (0, i.jsx)(u.eu, {
+                                                      "aria-label": U,
+                                                      src: P.getAvatarURL(w, 24),
+                                                      size: h._3.SIZE_24,
+                                                      className: R.my,
                                                   }),
-                                                  (0, i.jsx)(u.E, {
+                                                  (0, i.jsx)(p.E, {
                                                       variant: "text-md/normal",
                                                       lineClamp: 1,
-                                                      children: L,
+                                                      children: U,
                                                   }),
                                               ],
                                           }),
-                                          (0, i.jsx)(o.D, {
-                                              onClick: function () {
-                                                  null != S && (0, x.yF)(S, t, n.objectId).catch((e) => (0, C.b)());
-                                              },
-                                              className: v.Kk,
-                                              children: (0, i.jsx)(h.TrashIcon, { size: "sm", color: "currentColor" }),
+                                          (0, i.jsx)(m.m, {
+                                              text: M ? null : T.intl.string(_.default.qRXats),
+                                              children: (0, i.jsx)(d.D, {
+                                                  onClick: M
+                                                      ? function () {
+                                                            null != w &&
+                                                                (0, j.yF)(w, t, n.objectId).catch((e) => (0, N.b)());
+                                                        }
+                                                      : void 0,
+                                                  "aria-disabled": !M,
+                                                  className: s()(R.Kk, { [R.Ir]: !M }),
+                                                  children: (0, i.jsx)(A.TrashIcon, {
+                                                      size: "sm",
+                                                      color: "currentColor",
+                                                  }),
+                                              }),
                                           }),
                                       ],
                                   }),
-                                  (0, i.jsx)(u.E, {
+                                  (0, i.jsx)(p.E, {
                                       variant: "text-sm/normal",
                                       color: "text-muted",
-                                      className: v.Qs,
-                                      children: p.A.parseTopic(n.content, !0, { channelId: t }),
+                                      className: R.Qs,
+                                      children: f.A.parseTopic(n.content, !0, { channelId: t }),
                                   }),
                               ],
                           }),
-                          (0, i.jsx)(r.F, {}),
+                          (0, i.jsx)(c.F, {}),
                       ],
                   }),
               ],

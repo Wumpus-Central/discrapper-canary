@@ -65,6 +65,11 @@
     color: var(--interactive-icon-active)
 }
 
+.icon__52fde.iconDisabled__52fde {
+    color: var(--interactive-icon-default);
+    cursor: not-allowed
+}
+
 .content__52fde {
     word-wrap: break-word
 }
@@ -94,4 +99,4 @@
     text-align: center
 }
 
-/*# sourceMappingURL=651299.a8e19aff681e6996.css.map*/
+/*# sourceMappingURL=651299.e12615f490de7925.css.map*/

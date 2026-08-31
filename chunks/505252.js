@@ -6,5 +6,6 @@ e.exports = {
     kQ: "user__52fde",
     my: "avatar__52fde",
     Kk: "icon__52fde",
+    Ir: "iconDisabled__52fde",
     Qs: "content__52fde",
 };
