@@ -1091,7 +1091,7 @@ function tR() {
 function tb(e) {
     let { heroImage: t, heroVideo: s } = e,
         n = i.useRef(null);
-    (0, ed.A)(n, tN.rE.QUEST_HOME_DESKTOP);
+    (0, ed.A)(n);
     let l = i.useMemo(() => (null != s ? (0, el.WV)(s) : null) ?? t, [s, t]);
     return (0, r.jsx)(Y._M, {
         id: "QuestHomeHeroBackground_heroVideoWithImageFallback",

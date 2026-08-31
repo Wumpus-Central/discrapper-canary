@@ -1208,7 +1208,7 @@ let tv = r.forwardRef(function (e, t) {
         r.useEffect(() => {
             null != x.current && (c && (!d || n) ? ((x.current.currentTime = 0), x.current.play()) : x.current.pause());
         }, [x, c, n, d]),
-        (0, e6.A)(x, W.rE.QUESTS_BAR),
+        (0, e6.A)(x),
         (0, s.jsx)(ez.A, {
             ref: (e) => {
                 (x.current = e), null != t && ("function" == typeof t ? t(e) : (t.current = e));
