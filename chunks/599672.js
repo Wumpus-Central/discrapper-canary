@@ -5,7 +5,7 @@ a.r(
         tileMedia: "tileMedia_b97d98",
         feature: "feature_b97d98",
         stack: "stack_b97d98",
-        stackEven: "stackEven_b97d98",
+        equallySizedTile: "equallySizedTile_b97d98",
         stackTile: "stackTile_b97d98",
         featureOverlayContent: "featureOverlayContent_b97d98",
         featureFooter: "featureFooter_b97d98",
@@ -13,5 +13,7 @@ a.r(
         playButton: "playButton_b97d98",
         lg: "lg_b97d98",
         sm: "sm_b97d98",
+        featurePlayButton: "featurePlayButton_b97d98",
+        stackPlayButton: "stackPlayButton_b97d98",
     }),
 );

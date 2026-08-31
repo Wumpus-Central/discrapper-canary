@@ -52,6 +52,7 @@ var i,
         (a[(a.VERIFIED_TEEN = 2)] = "VERIFIED_TEEN"),
         (a[(a.VERIFIED_ADULT = 3)] = "VERIFIED_ADULT"),
         (a[(a.INFERRED_ADULT = 4)] = "INFERRED_ADULT"),
+        (a[(a.INFERRED_TEEN = 5)] = "INFERRED_TEEN"),
         (a[(a.CLIENT_ONLY_PENDING = 99999)] = "CLIENT_ONLY_PENDING"),
         a),
     y =

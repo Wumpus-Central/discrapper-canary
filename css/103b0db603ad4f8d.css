@@ -221,7 +221,7 @@
 
 .slot_afbdeb {
     aspect-ratio: 16/9;
-    flex: 1;
+    flex: 0 0 calc((100% - (var(--custom-clips-filmstrip-slots) - 1)*var(--space-12))/var(--custom-clips-filmstrip-slots));
     min-width: 0;
     position: relative
 }
@@ -335,4 +335,4 @@
     transition: color .15s ease-out, border-color .15s ease-out
 }
 
-/*# sourceMappingURL=3b7bfa624871b2b7.css.map*/
+/*# sourceMappingURL=103b0db603ad4f8d.css.map*/

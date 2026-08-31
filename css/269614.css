@@ -30,7 +30,7 @@
     width: var(--custom-clips-mosaic-stack-width)
 }
 
-.stackEven_b97d98 {
+.equallySizedTile_b97d98 {
     flex: none;
     width: calc(50% - var(--space-8)/2)
 }
@@ -41,7 +41,9 @@
 }
 
 .featureOverlayContent_b97d98 {
-    padding: 0 var(--space-8) var(--space-8)
+    padding-bottom: var(--space-4);
+    padding-inline-end: var(--space-4);
+    padding-inline-start: var(--space-8)
 }
 
 .featureFooter_b97d98 {
@@ -70,16 +72,22 @@
 
 .lg_b97d98 {
     height: 24px;
-    margin-inline-start: auto;
     width: 24px
 }
 
 .sm_b97d98 {
     height: 16px;
+    width: 16px
+}
+
+.featurePlayButton_b97d98 {
+    margin-inline-start: auto
+}
+
+.stackPlayButton_b97d98 {
     inset-block-end: var(--space-4);
     inset-inline-end: var(--space-4);
-    position: absolute;
-    width: 16px
+    position: absolute
 }
 
 .container_bf99ae {
@@ -105,4 +113,4 @@
     word-break: break-word
 }
 
-/*# sourceMappingURL=269614.31c4f99bc1b64061.css.map*/
+/*# sourceMappingURL=269614.e52e7748e1826f25.css.map*/
