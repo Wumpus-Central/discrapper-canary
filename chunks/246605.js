@@ -8,8 +8,8 @@ var i = n(562708),
     o = n(174459),
     d = n(499785),
     c = n(652215);
-function u(e) {
-    s.h.dispatch({ type: "SURVEY_OVERRIDE", id: e });
+function u(e, t) {
+    s.h.dispatch({ type: "SURVEY_OVERRIDE", id: e, isActionTriggered: t });
 }
 function _(e, t) {
     s.h.dispatch({ type: "SURVEY_HIDE", key: e }),
