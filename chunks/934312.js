@@ -1,1 +1,3 @@
-e.exports = JSON.parse('{"WmfVjs":["Claimen"],"o6s7yg":["Verken de winkel"],"qa1xyr":["Winkel"]}');
+e.exports = JSON.parse(
+    '{"WmfVjs":["Claimen"],"o6s7yg":["Verken de winkel"],"U9UQJE":["Nitro kopen"],"qa1xyr":["Winkel"]}',
+);

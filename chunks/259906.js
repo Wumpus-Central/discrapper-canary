@@ -1,0 +1,3 @@
+s.exports = JSON.parse(
+    '{"mRy6sO":["\u041E\u0442\u043A\u0440\u043E\u0439\u0442\u0435 \u0441 \u043F\u043E\u0434\u043F\u0438\u0441\u043A\u043E\u0439 Nitro"]}',
+);
