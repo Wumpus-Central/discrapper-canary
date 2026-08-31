@@ -31,18 +31,15 @@ var v = n(781121),
     h = n(375708);
 function g(e) {
     let { videoRef: t, onTrackQuestContentClick: n, orientation: m } = e,
-        { onClose: p, sourceQuestContent: g, quest: I, isFullscreenEnabled: T } = l.useContext(_.a),
-        D = (0, v.H)({ quest: I, onClose: p, sourceQuestContent: g }),
-        R = l.useCallback(
-            (e) => {
-                if (T) {
-                    let e = (0, s.qf)(t.current?.parentNode, t.current);
-                    null != e && (0, s.sP)(e);
-                }
-                n(e, d.Cy.LEARN_MORE), D(e, d.Cy.OPEN_GAME_LINK);
-            },
-            [T, t, D, n],
-        ),
+        { onClose: p, sourceQuestContent: g, quest: I, isFullscreenEnabled: D } = l.useContext(_.a),
+        T = (0, v.H)({ quest: I, onClose: p, sourceQuestContent: g }),
+        R = l.useCallback(() => {
+            if (D) {
+                let e = (0, s.qf)(t.current?.parentNode, t.current);
+                null != e && (0, s.sP)(e);
+            }
+            n(a.uF.VIDEO_MODAL_END_CARD, d.Cy.LEARN_MORE), T(a.uF.VIDEO_MODAL_END_CARD, d.Cy.OPEN_GAME_LINK);
+        }, [D, t, T, n]),
         { title: x, subtitle: L } = {
             title: (0, E.wr)(I),
             subtitle: I.config.ctaConfig.subtitle ?? h.intl.string(h.t.mxaHfx),
@@ -76,7 +73,7 @@ function g(e) {
                               subtitle: L,
                               ctaBtnLabel: I.config.ctaConfig.buttonLabel,
                               ctaIcon: i.K,
-                              onCTAClick: () => R(a.uF.VIDEO_MODAL),
+                              onCTAClick: R,
                               orientation: m,
                           }),
                       ],
@@ -104,7 +101,7 @@ function g(e) {
                       subtitle: L,
                       icon: i.K,
                       className: S.mT,
-                      onClick: () => R(a.uF.VIDEO_MODAL),
+                      onClick: R,
                       divider: (0, r.jsx)(C, { color: "#747783" }),
                   }),
               ],
