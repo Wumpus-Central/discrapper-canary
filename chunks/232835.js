@@ -43,11 +43,12 @@ function F(e, t) {
     if (t.hasMoreAfter) return t;
     let n = f.A.getMessages(e);
     if (0 === n.length) return t;
-    let i = n.filter((e) => !t.has(e.id));
-    return 0 === i.length
+    let i = t.hasMoreBefore ? t.first() : null,
+        r = n.filter((e) => !t.has(e.id) && (null == i || N.default.compare(e.id, i.id) > 0));
+    return 0 === r.length
         ? t
         : t.mutate((e) => {
-              e._merge(i), e._array.sort((e, t) => N.default.compare(e.id, t.id));
+              e._merge(r), e._array.sort((e, t) => N.default.compare(e.id, t.id));
           }, !0);
 }
 function V() {
