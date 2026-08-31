@@ -1,60 +1,58 @@
 "use strict";
 n.d(t, {
-    A2: () => a,
-    CA: () => E,
-    Hz: () => i,
-    IU: () => o,
-    Is: () => f,
-    RX: () => d,
-    S8: () => S,
-    Wb: () => I,
-    XE: () => s,
-    ZJ: () => m,
-    a7: () => c,
-    aM: () => u,
-    hk: () => N,
-    sj: () => _,
-    sq: () => r,
-    tr: () => l,
-    wF: () => O,
-    wU: () => A,
-    wV: () => h,
-    x5: () => T,
-    yr: () => p,
+    A2: () => r,
+    CA: () => _,
+    IU: () => l,
+    Is: () => I,
+    RX: () => o,
+    S8: () => g,
+    Wb: () => h,
+    XE: () => a,
+    ZJ: () => T,
+    a7: () => d,
+    aM: () => c,
+    hk: () => S,
+    sj: () => u,
+    sq: () => i,
+    tr: () => s,
+    wF: () => C,
+    wU: () => E,
+    wV: () => A,
+    x5: () => p,
+    yr: () => f,
 }),
     n(938796);
-let i = "Untitled App",
-    r = 25,
-    a = Object.freeze({ PUBLIC: 1, SHAREABLE: 2 });
+let i = 25,
+    r = Object.freeze({ PUBLIC: 1, SHAREABLE: 2 });
+function a(e) {
+    return ((e.flags ?? 0) & r.PUBLIC) != 0;
+}
 function s(e) {
-    return ((e.flags ?? 0) & a.PUBLIC) != 0;
+    return ((e.flags ?? 0) & r.SHAREABLE) != 0;
 }
 function l(e) {
-    return ((e.flags ?? 0) & a.SHAREABLE) != 0;
-}
-function o(e) {
     return null != e.flags;
 }
-function d(e) {
+function o(e) {
     return null != e.collaborator_role_ids;
 }
-function c(e) {
+function d(e) {
     return Math.floor(100 * e);
 }
-function u(e) {
+function c(e) {
     return e.input_tokens + e.output_tokens + e.cache_creation_input_tokens + e.cache_read_input_tokens;
 }
-function _(e) {
+function u(e) {
     return e.input_tokens + e.cache_creation_input_tokens + e.cache_read_input_tokens;
 }
-function E(e) {
-    let t = _(e);
+function _(e) {
+    let t = u(e);
     return 0 === t ? 0 : e.cache_read_input_tokens / t;
 }
-function A(e) {
+function E(e) {
     return e ?? { input_tokens: 0, output_tokens: 0, cache_creation_input_tokens: 0, cache_read_input_tokens: 0 };
 }
-function h(e, t) {
+function A(e, t) {
     return {
         input_tokens: e.input_tokens + t.input_tokens,
         output_tokens: e.output_tokens + t.output_tokens,
@@ -62,18 +60,18 @@ function h(e, t) {
         cache_read_input_tokens: e.cache_read_input_tokens + t.cache_read_input_tokens,
     };
 }
-let I = new Set(["image/png", "image/jpeg", "image/gif", "image/webp"]),
-    f = 10;
-function p(e) {
-    return I.has(e) ? 5242880 : 0x3200000;
+let h = new Set(["image/png", "image/jpeg", "image/gif", "image/webp"]),
+    I = 10;
+function f(e) {
+    return h.has(e) ? 5242880 : 0x3200000;
 }
-function T(e, t) {
-    return e <= p(t);
+function p(e, t) {
+    return e <= f(t);
 }
-function m(e) {
+function T(e) {
     return `${Math.round(e / 1048576)} MB`;
 }
-let g = [
+let m = [
         { id: "claude-fable-5", label: "Claude Fable 5", provider: "anthropic" },
         { id: "claude-opus-5", label: "Claude Opus 5", provider: "anthropic" },
         { id: "claude-sonnet-5", label: "Claude Sonnet 5", provider: "anthropic" },
@@ -82,12 +80,12 @@ let g = [
         { id: "gpt-5.6-terra", label: "GPT-5.6 Terra", provider: "openai" },
         { id: "gpt-5.6-luna", label: "GPT-5.6 Luna", provider: "openai" },
     ],
-    S = { main: g, subagent: g, thinking: ["low", "medium", "high", "xhigh", "max"] },
-    N = {
+    g = { main: m, subagent: m, thinking: ["low", "medium", "high", "xhigh", "max"] },
+    S = {
         main: { model: "claude-opus-5", thinking: "high" },
         subagent: { model: "claude-sonnet-5", thinking: "medium" },
     },
-    C = [
+    N = [
         { id: "workers-ai/@cf/moonshotai/kimi-k2.6", label: "Kimi K2.6", provider: "workers-ai" },
         { id: "workers-ai/@cf/zai-org/glm-5.2", label: "GLM 5.2", provider: "workers-ai" },
         { id: "workers-ai/@cf/nvidia/nemotron-3-120b-a12b", label: "Nemotron 3 Super 120B", provider: "workers-ai" },
@@ -95,4 +93,4 @@ let g = [
         { id: "xai/grok-4.6", label: "Grok 4.6", provider: "xai" },
         { id: "workers-ai/@cf/zai-org/glm-4.7-flash", label: "GLM 4.7 Flash", provider: "workers-ai" },
     ],
-    O = { main: C, subagent: C, thinking: S.thinking };
+    C = { main: N, subagent: N, thinking: g.thinking };
