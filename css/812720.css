@@ -446,6 +446,15 @@
     margin-bottom: var(--space-xs)
 }
 
+.noticeText__35939 a {
+    color: currentColor;
+    text-decoration: underline
+}
+
+.noticeDismiss__35939 {
+    display: flex
+}
+
 .title__3c320 {
     padding-top: var(--space-xs)
 }
@@ -454,4 +463,4 @@
     padding-bottom: var(--space-xxs)
 }
 
-/*# sourceMappingURL=812720.933e8e783814b29f.css.map*/
+/*# sourceMappingURL=812720.135a00e2acf39fa8.css.map*/
