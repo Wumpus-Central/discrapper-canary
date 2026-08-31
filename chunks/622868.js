@@ -16,8 +16,8 @@ var t = l(477900),
     j = l(429913),
     p = l(593643),
     v = l(61230),
-    N = l(284009),
-    f = l.n(N),
+    f = l(284009),
+    N = l.n(f),
     I = l(435558),
     C = l.n(I),
     b = l(661531),
@@ -141,9 +141,9 @@ function ei(e) {
                                     description: s,
                                 } = e;
                                 return (
-                                    f()(null != l, "connectionMetadataField is null"),
-                                    f()(null != i, "operator is null"),
-                                    f()(null != a, "value is null"),
+                                    N()(null != l, "connectionMetadataField is null"),
+                                    N()(null != i, "operator is null"),
+                                    N()(null != a, "value is null"),
                                     (0, t.jsx)(
                                         et,
                                         {
@@ -248,7 +248,7 @@ function es(e) {
         x = i.useRef(null);
     if (null == o) return null;
     async function j() {
-        f()(null != o, "visibleConnectionsRole is null"),
+        N()(null != o, "visibleConnectionsRole is null"),
             h && null == u && (await T.A.fetchGuildRoleConnectionsEligibility(a.id, o.id), g(!1));
     }
     return (0, t.jsx)(d.Q, {
@@ -259,7 +259,7 @@ function es(e) {
                 let { closePopout: i } = e;
                 return null == u
                     ? (0, t.jsx)(t.Fragment, {})
-                    : (f()(null != o, "visibleConnectionsRole is null"),
+                    : (N()(null != o, "visibleConnectionsRole is null"),
                       (0, t.jsx)(ea, {
                           eligibilityStates: u,
                           userId: n,
@@ -323,26 +323,26 @@ var eu = l(870136),
     ej = l(964486),
     ep = l(966245),
     ev = l(448290),
-    eN = l(309010),
-    ef = l(933884);
+    ef = l(309010),
+    eN = l(933884);
 let eI = function (e) {
     let { guild: n, message: l, onClose: i } = e,
-        a = K.A.getChannel(eN.Ay.getChannelId(n.id));
+        a = K.A.getChannel(ef.Ay.getChannelId(n.id));
     return ((0, ej.Ay)(() => {
         V.default.track(Q.HAw.OPEN_POPOUT, { type: "New Member Badge Popout", guild_id: n.id, channel_id: a?.id });
     }),
     null == a)
         ? null
         : (0, t.jsx)(ep.Uq, {
-              className: ef.cc,
+              className: eN.cc,
               children: (0, t.jsxs)("div", {
-                  className: ef.jC,
+                  className: eN.jC,
                   children: [
                       (0, t.jsxs)("div", {
-                          className: ef.rb,
+                          className: eN.rb,
                           children: [
                               (0, t.jsx)("div", {
-                                  className: ef.zc,
+                                  className: eN.zc,
                                   children: (0, t.jsx)(eh.N, {
                                       size: "custom",
                                       color: "currentColor",
@@ -354,7 +354,7 @@ let eI = function (e) {
                                   children: [
                                       (0, t.jsx)(ex.D, {
                                           variant: "heading-md/semibold",
-                                          className: ef.wx,
+                                          className: eN.wx,
                                           children: en.intl.string(en.t["v/OYd2"]),
                                       }),
                                       (0, t.jsx)(M.E, {
@@ -367,7 +367,7 @@ let eI = function (e) {
                       }),
                       (0, t.jsx)("div", {
                           "data-button-hoisted-classname-wrapper": !0,
-                          className: ef.lI,
+                          className: eN.lI,
                           children: (0, t.jsx)(eA.$, {
                               variant: "primary",
                               size: "sm",
@@ -513,7 +513,7 @@ let e1 = function (e) {
         V.default.track(Q.HAw.OPEN_POPOUT, {
             type: "Role Icon Popout",
             guild_id: l.id,
-            ...(0, k.dI)(K.A.getChannel(eN.Ay.getChannelId(l.id))),
+            ...(0, k.dI)(K.A.getChannel(ef.Ay.getChannelId(l.id))),
         });
     });
     let a = (0, c.bG)([q.A], () => (null != n.roleId ? q.A.getRole(l.id, n.roleId) : void 0)),
@@ -625,71 +625,72 @@ let e3 = i.memo(function (e) {
             displayCompactAvatars: x = !1,
             onPopoutRequestClose: A,
             preview: j,
-            subscribeToGroupId: N,
-            hideGuildTag: f,
+            subscribeToGroupId: f,
+            hideGuildTag: N,
+            disableGuildTagProfile: I,
         } = e,
-        I = (0, e$.Ay)(n, l),
-        C = i.useMemo(
+        C = (0, e$.Ay)(n, l),
+        b = i.useMemo(
             () => (0, e7.y)({ message: n, channel: a, user: n?.author, compact: r, isRepliedMessage: !1 }),
             [n, a, r],
         ),
-        b = i.useRef(null),
-        E = (0, c.bG)([eU.A], () => eU.A.getGuild(s)),
-        y = i.useMemo(() => e5(r, x, o, E), [r, x, o, E]),
-        _ = i.useMemo(
+        E = i.useRef(null),
+        y = (0, c.bG)([eU.A], () => eU.A.getGuild(s)),
+        _ = i.useMemo(() => e5(r, x, o, y), [r, x, o, y]),
+        M = i.useMemo(
             () =>
                 null == o
                     ? null
-                    : 1 === y && null != E
+                    : 1 === _ && null != y
                       ? (0, t.jsx)(
                             d.Y,
                             {
-                                targetElementRef: b,
+                                targetElementRef: E,
                                 animation: d.Y.Animation.TRANSLATE,
                                 align: "center",
                                 autoInvert: !0,
                                 nudgeAlignIntoViewport: !0,
                                 position: "right",
-                                renderPopout: () => (0, t.jsx)(e1, { roleIcon: o, guild: E }),
+                                renderPopout: () => (0, t.jsx)(e1, { roleIcon: o, guild: y }),
                                 clickTrap: !0,
                                 children: (e) => {
                                     let { onClick: n } = e;
-                                    return (0, t.jsx)(ey.A, { ref: b, ...o, className: e6.UT, onClick: n });
+                                    return (0, t.jsx)(ey.A, { ref: E, ...o, className: e6.UT, onClick: n });
                                 },
                             },
                             "role-icon-children",
                         )
-                      : 2 === y
+                      : 2 === _
                         ? (0, t.jsx)(ey.A, { ...o, className: e6.UT }, "role-icon-children")
                         : null,
-            [y, o, E],
+            [_, o, y],
         ),
-        { enabled: M } = (0, p.D8)({ guildId: E?.id, location: "MessageHeader" }),
-        S = er.LX.useConfig({ location: "message_header" }).enabled,
-        R = i.useMemo(() => {
+        { enabled: S } = (0, p.D8)({ guildId: y?.id, location: "MessageHeader" }),
+        R = er.LX.useConfig({ location: "message_header" }).enabled,
+        T = i.useMemo(() => {
             let e = [];
             return (
-                null != _ && e.push(_),
-                null != E &&
-                    (e.push((0, t.jsx)(eb, { guild: E, message: n }, "new-member")),
-                    M && e.push((0, t.jsx)(v.A, { guild: E, message: n }, "voice-channel"))),
+                null != M && e.push(M),
+                null != y &&
+                    (e.push((0, t.jsx)(eb, { guild: y, message: n }, "new-member")),
+                    S && e.push((0, t.jsx)(v.A, { guild: y, message: n }, "voice-channel"))),
                 null != a &&
-                    null != E &&
+                    null != y &&
                     e.push(
-                        (0, t.jsx)(es, { guild: E, channel: a, userId: n.author.id, messageId: n.id }, "connections"),
+                        (0, t.jsx)(es, { guild: y, channel: a, userId: n.author.id, messageId: n.id }, "connections"),
                     ),
-                S && null != a && e.push((0, t.jsx)(ed, { channelId: a.id, messageId: n.id }, "moderation-label")),
+                R && null != a && e.push((0, t.jsx)(ed, { channelId: a.id, messageId: n.id }, "moderation-label")),
                 e
             );
-        }, [n, a, _, E, M, S]);
-    return null == I
+        }, [n, a, M, y, S, R]);
+    return null == C
         ? null
         : (0, t.jsxs)(t.Fragment, {
               children: [
                   (0, t.jsx)(ez.A, {
                       message: n,
                       channel: a,
-                      author: I,
+                      author: C,
                       compact: r,
                       roleIcon: o,
                       showPopout: u,
@@ -697,11 +698,12 @@ let e3 = i.memo(function (e) {
                       onClick: h,
                       onContextMenu: g,
                       onPopoutRequestClose: A,
-                      decorations: { [ez.w.SYSTEM_TAG]: C, [ez.w.BADGES]: R },
+                      decorations: { [ez.w.SYSTEM_TAG]: b, [ez.w.BADGES]: T },
                       previewGuildId: s,
                       preview: j,
-                      subscribeToGroupId: N,
-                      hideGuildTag: f,
+                      subscribeToGroupId: f,
+                      hideGuildTag: N,
+                      disableGuildTagProfile: I,
                   }),
                   r &&
                       (0, t.jsxs)(t.Fragment, {
@@ -759,7 +761,7 @@ function e9(e) {
             badges: p,
         } = e,
         v = (0, o.Lt)(n.flags, Q.pr7.SENT_BY_SOCIAL_LAYER_INTEGRATION) ? n.applicationId : null,
-        N = (0, j.h)(v);
+        f = (0, j.h)(v);
     return (0, t.jsxs)(t.Fragment, {
         children: [
             !c && l,
@@ -777,13 +779,13 @@ function e9(e) {
                             isVisibleOnlyOnHover: m,
                             className: A,
                             isInline: !1,
-                            application: N,
+                            application: f,
                         }),
                     c && l,
                     (0, t.jsx)("span", { id: a, className: r, children: i }),
                     d &&
                         !c &&
-                        (0, t.jsx)(eF.A, { id: (0, eB.xl)(n), timestamp: n.timestamp, className: A, application: N }),
+                        (0, t.jsx)(eF.A, { id: (0, eB.xl)(n), timestamp: n.timestamp, className: A, application: f }),
                     null != p && p.length > 0 ? (0, t.jsx)("div", { className: e6.cV, children: p }) : null,
                 ],
             }),
@@ -803,8 +805,8 @@ let ne = i.memo(function (e) {
             roleIcon: j,
             subscribeToGroupId: p,
             hideTimestamp: v,
-            hideGuildTag: N,
-            className: f,
+            hideGuildTag: f,
+            className: N,
             channel: I,
             preview: C,
             enableScheduledBadge: b = !1,
@@ -833,9 +835,9 @@ let ne = i.memo(function (e) {
                     onContextMenu: j,
                     onClickAvatar: p,
                     onPopoutRequestClose: v,
-                    showAvatarPopout: N,
+                    showAvatarPopout: f,
                 } = n,
-                f = i.useRef(null),
+                N = i.useRef(null),
                 [I, C] = i.useState(!1),
                 { analyticsLocations: b } = (0, A.Ay)(x.A.AVATAR),
                 E = (0, c.bG)([eL.Ay], () => n.displayCompactAvatars ?? eL.Ay.displayCompactAvatars),
@@ -902,22 +904,22 @@ let ne = i.memo(function (e) {
                 }, [d.author.id, h]),
                 !m || E)
             )
-                return null != a && null != N
+                return null != a && null != f
                     ? (0, t.jsx)(A.f5, {
                           value: b,
                           children: (0, t.jsx)(eD.A, {
-                              targetElementRef: f,
+                              targetElementRef: N,
                               user: d.author,
                               guildId: l,
                               channelId: d.channel_id,
                               messageId: d.id,
-                              shouldShow: N,
+                              shouldShow: f,
                               shouldPreload: y,
                               renderPopout: a,
                               position: r.Fr ? "window_center" : "right",
                               avatarUrl: O,
                               onRequestClose: v,
-                              clickTrap: N,
+                              clickTrap: f,
                               children: (e) =>
                                   e8({
                                       ...T,
@@ -930,7 +932,7 @@ let ne = i.memo(function (e) {
                                       onKeyDown: e.onKeyDown,
                                       showCommunicationDisabledStyles: s,
                                       className: o,
-                                      avatarImgRef: f,
+                                      avatarImgRef: N,
                                   }),
                           }),
                       })
@@ -994,7 +996,7 @@ let ne = i.memo(function (e) {
                     renderPopout: E,
                     preview: C,
                     subscribeToGroupId: p,
-                    hideGuildTag: N,
+                    hideGuildTag: f,
                 }),
             ],
         }),
@@ -1005,7 +1007,7 @@ let ne = i.memo(function (e) {
         showTimestampOnHover: u,
         ariaLabelledBy: D,
         ariaDescribedBy: L,
-        className: f,
+        className: N,
         badges: G,
     });
 });

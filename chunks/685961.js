@@ -1085,7 +1085,13 @@ let tj = (e) => {
                       className: tv.PI,
                       children: (0, n.jsx)(tm.A, {
                           childrenMessageContent: u(),
-                          childrenHeader: (0, n.jsx)(th.Ay, { message: t, channel: i, author: l, guildId: i.guild_id }),
+                          childrenHeader: (0, n.jsx)(th.Ay, {
+                              message: t,
+                              channel: i,
+                              author: l,
+                              guildId: i.guild_id,
+                              disableGuildTagProfile: !0,
+                          }),
                           disableInteraction: !0,
                           author: l,
                       }),
