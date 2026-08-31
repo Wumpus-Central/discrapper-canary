@@ -574,24 +574,33 @@ async function W(e, t) {
                                           connections: r.connections,
                                       },
                                   })
-                                : (o.h.dispatch({ type: "VIBEGRATIONS_LOG_APPEND", projectId: t, log: r }),
-                                  (function (e, t) {
-                                      if ("error" !== t.level) return;
-                                      let n = null != t.source ? L[t.source] : void 0;
-                                      if (null == n) return;
-                                      let r = j.get(e);
-                                      null == r && ((r = new Set()), j.set(e, r));
-                                      let i = `${t.source}:${t.message.replace(/\d+/g, "#").slice(0, 200)}`;
-                                      r.has(i) ||
-                                          r.size >= 10 ||
-                                          (r.add(i),
-                                          (0, d.Z0)(e, {
-                                              location: n.location,
-                                              code: n.code,
-                                              message: t.message,
-                                              details: t.source,
-                                          }));
-                                  })(t, r));
+                                : "debug_history_state" === r.type
+                                  ? o.h.dispatch({
+                                        type: "VIBEGRATIONS_HISTORY_LOAD_SETTLE",
+                                        projectId: t,
+                                        scope: r.scope,
+                                        status: r.status,
+                                        count: r.count,
+                                        truncated: !0 === r.truncated,
+                                    })
+                                  : (o.h.dispatch({ type: "VIBEGRATIONS_LOG_APPEND", projectId: t, log: r }),
+                                    (function (e, t) {
+                                        if (!0 === t.historical || "error" !== t.level) return;
+                                        let n = null != t.source ? L[t.source] : void 0;
+                                        if (null == n) return;
+                                        let r = j.get(e);
+                                        null == r && ((r = new Set()), j.set(e, r));
+                                        let i = `${t.source}:${t.message.replace(/\d+/g, "#").slice(0, 200)}`;
+                                        r.has(i) ||
+                                            r.size >= 10 ||
+                                            (r.add(i),
+                                            (0, d.Z0)(e, {
+                                                location: n.location,
+                                                code: n.code,
+                                                message: t.message,
+                                                details: t.source,
+                                            }));
+                                    })(t, r));
                 })(e, t, n),
             onClose: () => {
                 (A(t, "Connection closed before the publish result arrived"), g(e), t.disposed)
