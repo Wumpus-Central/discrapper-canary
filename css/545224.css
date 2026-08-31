@@ -18,6 +18,7 @@
 }
 
 .day_b0f4cc {
+    min-width: calc(2ch + 70px);
     width: 30%
 }
 
@@ -26,6 +27,7 @@
 }
 
 .year_b0f4cc {
+    min-width: calc(4ch + 70px);
     width: 30%
 }
 
@@ -33,4 +35,4 @@
     color: var(--text-feedback-critical)
 }
 
-/*# sourceMappingURL=545224.981c11a174d90099.css.map*/
+/*# sourceMappingURL=545224.cdd5ba6bd071424b.css.map*/
