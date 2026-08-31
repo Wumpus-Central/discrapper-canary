@@ -35,8 +35,8 @@ let y = (0, s.A)((e) => {
         height: L,
         idle: O,
         mode: P,
-        popoutType: M,
-        awaitingRemoteSessionInfo: w,
+        popoutType: w,
+        awaitingRemoteSessionInfo: M,
         callContainerDimensions: U,
     } = e;
     l.useEffect(() => {
@@ -47,7 +47,7 @@ let y = (0, s.A)((e) => {
             [n, y],
         ),
         V = (0, a.bG)([o.A], () => o.A.getVoiceParticipantsHidden(E.id), [E.id]);
-    if (w?.channelId === E.id) return (0, i.jsx)(p.A, { height: L });
+    if (M?.channelId === E.id) return (0, i.jsx)(p.A, { height: L });
     if (E?.isGuildVocalOrThread() && !_)
         return (0, i.jsx)(h.A, { channel: E, participants: t, hasConnectPermission: b });
     if (((n = _ ? n : t), P === x._Of.VOICE))
@@ -70,7 +70,7 @@ let y = (0, s.A)((e) => {
                 onDoubleClick: v,
                 onContextMenu: N,
                 inCall: _,
-                popoutType: M,
+                popoutType: w,
             }),
         });
     }
@@ -81,7 +81,7 @@ let y = (0, s.A)((e) => {
         selectedParticipant: s,
         filteredParticipants: D,
         participants: t,
-        popoutType: M,
+        popoutType: w,
         className: T,
         idle: O,
         height: L,

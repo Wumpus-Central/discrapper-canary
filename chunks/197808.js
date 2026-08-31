@@ -122,9 +122,9 @@ let x = a.Ay.connectStores([T.A, l.Ay, R.A, m.A, N.A, O.Ay, C.A, _.A, g.Ay, A.A]
         K = O.Ay.getVoiceChannelId(),
         $ = O.Ay.getChannelId() === K,
         z = null != K && _.A.getChatOpen(K),
-        Z = f || S,
-        q = Z && null != s && (0, o.q)(s.applicationId),
-        X = !Z && null != t && $;
+        q = f || S,
+        Z = q && null != s && (0, o.q)(s.applicationId),
+        X = !q && null != t && $;
     return {
         selectedPIPWindow: t,
         pipWindows: 0 === W.length ? w : W,
@@ -137,7 +137,7 @@ let x = a.Ay.connectStores([T.A, l.Ay, R.A, m.A, N.A, O.Ay, C.A, _.A, g.Ay, A.A]
             return U && (0, p.q)({ withTitleBar: i, isFullScreen: x }) ? e - (0, E.LI)({ isPopoutWindow: U }) : e;
         },
         appContext: F,
-        roundCorners: !q,
+        roundCorners: !Z,
         windowSize: k,
         inPopoutWindow: U,
         activityPIPWindow: j,

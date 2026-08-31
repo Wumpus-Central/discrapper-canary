@@ -1,24 +1,24 @@
 l.d(t, { A: () => o });
-var i = l(477900),
-    n = l(582128),
+var n = l(477900),
+    i = l(582128),
     a = l(130147),
     r = l(344346),
     s = l(309239);
-let o = n.memo(function (e) {
-    let { user: t, guildId: l, nameplate: n, isHighlighted: o, size: c = "default" } = e,
-        d = "small" === c ? 62 : 94,
-        u = "small" === c ? 72 : 110;
-    return (0, i.jsx)("div", {
+let o = i.memo(function (e) {
+    let { user: t, guildId: l, nameplate: i, isHighlighted: o, size: c = "default" } = e,
+        u = "small" === c ? 62 : 94,
+        d = "small" === c ? 72 : 110;
+    return (0, n.jsx)("div", {
         className: s.Dz,
-        children: (0, i.jsxs)("div", {
+        children: (0, n.jsxs)("div", {
             className: s.ur,
             children: [
-                (0, i.jsx)(a._, { showStatus: !0, width: d, opacity: 0.7, size: c }),
-                (0, i.jsx)(a._, { showStatus: !0, width: u, opacity: 0.85, size: c }),
-                (0, i.jsx)(r.A, {
+                (0, n.jsx)(a._, { showStatus: !0, width: u, opacity: 0.7, size: c }),
+                (0, n.jsx)(a._, { showStatus: !0, width: d, opacity: 0.85, size: c }),
+                (0, n.jsx)(r.A, {
                     user: t,
                     guildId: l,
-                    nameplate: n,
+                    nameplate: i,
                     className: s.tZ,
                     isHighlighted: o,
                     showPlaceholderUser: !o,
@@ -26,8 +26,8 @@ let o = n.memo(function (e) {
                     nameplatePreviewSize: "small" === c ? "small" : "default",
                     hideDecorators: !0,
                 }),
-                (0, i.jsx)(a._, { showStatus: !0, width: u, opacity: 0.85, size: c }),
-                (0, i.jsx)(a._, { showStatus: !0, width: d, opacity: 0.7, size: c }),
+                (0, n.jsx)(a._, { showStatus: !0, width: d, opacity: 0.85, size: c }),
+                (0, n.jsx)(a._, { showStatus: !0, width: u, opacity: 0.7, size: c }),
             ],
         }),
     });

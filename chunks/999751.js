@@ -12,8 +12,8 @@ var i = n(477900),
     g = n(939249),
     f = n(793574),
     A = n(384059),
-    E = n(917592),
-    p = n(978171),
+    p = n(917592),
+    E = n(978171),
     m = n(834730),
     I = n(29160),
     S = n(375708),
@@ -30,11 +30,11 @@ let _ = function (e) {
 var N = n(652215),
     T = n(473718);
 let v = { [N.vkP.CONNECTED]: T.nf, [N.vkP.CONNECTING]: T._6, [N.vkP.ERROR]: T.Il },
-    y = { [N.bFR.FINE]: T.LP, [N.bFR.AVERAGE]: T.mq, [N.bFR.BAD]: T.yA, [N.bFR.UNKNOWN]: null },
-    M = { [N.bFR.FINE]: a.Q, [N.bFR.AVERAGE]: o.j, [N.bFR.BAD]: u.R, [N.bFR.UNKNOWN]: d.e };
+    M = { [N.bFR.FINE]: T.LP, [N.bFR.AVERAGE]: T.mq, [N.bFR.BAD]: T.yA, [N.bFR.UNKNOWN]: null },
+    y = { [N.bFR.FINE]: a.Q, [N.bFR.AVERAGE]: o.j, [N.bFR.BAD]: u.R, [N.bFR.UNKNOWN]: d.e };
 function D(e) {
     let { quality: t, largePing: n, ...l } = e,
-        r = M[t];
+        r = y[t];
     return (0, i.jsx)(r, { className: s()(T.hU, { [T.kV]: n }), ...l });
 }
 function R(e) {
@@ -51,17 +51,17 @@ function R(e) {
         } = e,
         S = l.useRef(null),
         C = r === N.S7L.RTC_CONNECTED,
-        M = l.useCallback((e) => (0, i.jsx)(p.A, { ...e, channelId: u }), [u]),
-        { connectionStatus: R, connectionStatusText: x } = E.A.getStatus(r, I);
+        y = l.useCallback((e) => (0, i.jsx)(E.A, { ...e, channelId: u }), [u]),
+        { connectionStatus: R, connectionStatusText: x } = p.A.getStatus(r, I);
     return (0, i.jsxs)("div", {
         className: T.pe,
         children: [
             (0, i.jsx)("div", {
-                className: s()(T.yH, y[t], a),
+                className: s()(T.yH, M[t], a),
                 ref: S,
                 children: (0, i.jsx)(c.Y, {
                     targetElementRef: S,
-                    renderPopout: M,
+                    renderPopout: y,
                     position: "top",
                     children: (e) => {
                         let { onClick: l } = e;

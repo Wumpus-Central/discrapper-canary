@@ -19,10 +19,10 @@ function S(e) {
         [r, S] = i.useState(!1),
         y = i.useRef(null),
         I = a()(f.Qq, f.Ow);
-    function A(e) {
+    function g(e) {
         S(!1), t?.(e);
     }
-    function g(e) {
+    function A(e) {
         return (0, l.jsxs)("div", {
             className: f.Ry,
             children: [
@@ -52,11 +52,11 @@ function S(e) {
                     guildId: null,
                     channel: null,
                     onClose: t,
-                    onSelect: A,
+                    onSelect: g,
                     analyticsSource: "gift soundboard",
                     soundButtonOverlay: p.If.ADD,
                     listPadding: E,
-                    renderHeader: g,
+                    renderHeader: A,
                     defaultSoundsOnly: !0,
                 }),
             });

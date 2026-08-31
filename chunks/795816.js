@@ -62,8 +62,8 @@ var i = n(562708),
     K = n(817636),
     $ = n(782091),
     z = n(108959),
-    Z = n(400115),
-    q = n(90804),
+    q = n(400115),
+    Z = n(90804),
     X = n(946255),
     Q = n(859007),
     J = n(360469),
@@ -109,7 +109,7 @@ async function el(e) {
         }
         if ((!0 !== g && R.A.clearMainFrameSlot(), (0, Q.y)({ applicationId: i })))
             return (
-                (0, Z.j$)(i, {
+                (0, q.j$)(i, {
                     isStart: a,
                     inviterUserId: T,
                     channelId: t ?? null,
@@ -358,7 +358,7 @@ async function ed(e) {
         let e = (0, z.A)(_.id),
             n = J.lk.includes(_.type);
         if (e) {
-            if (!(await (0, q.A)({ channelId: _.id, bypassChangeModal: null != t })))
+            if (!(await (0, Z.A)({ channelId: _.id, bypassChangeModal: null != t })))
                 return { result: "failure", reason: 8 };
         } else if (!(0, H.pE)(_) || !n) return { result: "failure", reason: 9 };
     }

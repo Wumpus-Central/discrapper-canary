@@ -46,7 +46,7 @@ var i,
     K = n(767243),
     $ = n(375708),
     z = n(643790);
-function Z() {
+function q() {
     return (0, r.jsxs)("svg", {
         className: z.JR,
         width: "68",
@@ -81,7 +81,7 @@ function Z() {
         ],
     });
 }
-function q(e) {
+function Z(e) {
     let t,
         { isDisabled: n, onSelect: i, size: s, ariaDescribedBy: o } = e,
         c = D.eh.useSetting().customUserThemeSettings,
@@ -141,7 +141,7 @@ function q(e) {
                 style: T,
                 ariaDescribedBy: o,
                 children: [
-                    !E && !p && (0, r.jsx)(Z, {}),
+                    !E && !p && (0, r.jsx)(q, {}),
                     (0, r.jsx)("div", { className: z.JU }),
                     (0, r.jsx)(U.PaintPaletteIcon, { color: m, className: z.vL }),
                 ],
@@ -280,7 +280,7 @@ function eu(e) {
         (0, r.jsxs)(r.Fragment, {
             children: [
                 L && (0, r.jsx)(A.A, { id: y, children: $.intl.string($.t.JIZSqz) }),
-                (0, r.jsx)(q, {
+                (0, r.jsx)(Z, {
                     size: i,
                     isDisabled: t,
                     ariaDescribedBy: b,

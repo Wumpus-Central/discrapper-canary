@@ -22,8 +22,8 @@ function I(e) {
             initialPlanId: n,
             breadcrumbSteps: l,
             handleStepChange: I,
-            onReturn: A,
-            continueSessionToInitialStep: g,
+            onReturn: g,
+            continueSessionToInitialStep: A,
         } = e,
         { paymentSources: P } = (0, a.j)(),
         {
@@ -62,7 +62,7 @@ function I(e) {
             isGift: U,
         },
         G =
-            A ??
+            g ??
             function () {
                 I(Object.values(P).length < 1 && null == n ? f.pn.PLAN_SELECT : f.pn.REVIEW, {
                     trackedFromStep: f.pn.PAYMENT_ELEMENT,
@@ -100,7 +100,7 @@ function I(e) {
         isEligibleForTrial: k,
         allowDesktopRedirectPurchase:
             (0, C.isDesktop)() && null != v && [y.pe.TIER_0, y.pe.TIER_2].includes(v) && !U && null == R,
-        continueSessionToInitialStep: g,
+        continueSessionToInitialStep: A,
         shouldUseManaModal: !0,
     });
 }

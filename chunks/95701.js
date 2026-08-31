@@ -4,9 +4,9 @@ n.d(t, {
     B4: () => et,
     Do: () => D,
     Gw: () => b,
-    IY: () => Z,
+    IY: () => q,
     JT: () => K,
-    LE: () => q,
+    LE: () => Z,
     Le: () => V,
     Lt: () => eN,
     MK: () => P,
@@ -232,8 +232,8 @@ let K = new Set([
         I.rbe.GUILD_MEDIA,
     ]),
     z = new Set([I.rbe.GUILD_TEXT, I.rbe.GUILD_ANNOUNCEMENT]),
-    Z = new Set([I.rbe.GUILD_TEXT, I.rbe.GUILD_ANNOUNCEMENT, I.rbe.GUILD_FORUM, I.rbe.GUILD_MEDIA]),
-    q = new Set([
+    q = new Set([I.rbe.GUILD_TEXT, I.rbe.GUILD_ANNOUNCEMENT, I.rbe.GUILD_FORUM, I.rbe.GUILD_MEDIA]),
+    Z = new Set([
         I.rbe.GUILD_TEXT,
         I.rbe.GUILD_ANNOUNCEMENT,
         I.rbe.GUILD_FORUM,

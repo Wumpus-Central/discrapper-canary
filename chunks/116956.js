@@ -719,8 +719,8 @@ var j = n(834757),
     K = n(290863),
     $ = n(325278);
 let z = {},
-    Z = {},
     q = {},
+    Z = {},
     X = {},
     Q = {},
     J = {},
@@ -864,12 +864,12 @@ let ea = new er(
                       }),
                       null == a && (a = o),
                       (X[E] = s),
-                      (q[E] = a),
+                      (Z[E] = a),
                       null != a)
                   ) {
                       let e = u.Ay.getGameForPID(a);
                       null != e &&
-                          (Z[E] = {
+                          (q[E] = {
                               name: e.name,
                               id: e.id,
                               exe: e.exeName,
@@ -877,7 +877,7 @@ let ea = new er(
                               sku: e.sku,
                               gameMetadata: e.gameMetadata,
                           }),
-                          et[E]?.analyticsContext.updateStreamApplication(Z[E]);
+                          et[E]?.analyticsContext.updateStreamApplication(q[E]);
                   } else et[E]?.analyticsContext.updateStreamApplication(null);
                   null != c ? (Q[E] = c) : delete Q[E];
               },
@@ -889,7 +889,7 @@ let ea = new er(
                           n.setActionContext(t), i && n.trackEnd();
                       }),
                       (X[n] = null),
-                      (q[n] = null),
+                      (Z[n] = null),
                       delete Q[n];
               },
               STREAM_CREATE: function (e) {
@@ -897,10 +897,10 @@ let ea = new er(
                       o = et[t],
                       d = (0, G.Iy)(t);
                   if (null == o && null != n) {
-                      null == q[t] && (Z[t] = null), null == Z[t] && null == X[t] && (Z[t] = (0, j.Ee)(d, K.A));
+                      null == Z[t] && (q[t] = null), null == q[t] && null == X[t] && (q[t] = (0, j.Ee)(d, K.A));
                       let e = new B({
                           streamRegion: s,
-                          streamApplication: Z[t],
+                          streamApplication: q[t],
                           streamSourceType: (function (e) {
                               if (null == e) return "unknown";
                               if (Y.isPlatformEmbedded || platform?.name === "Chrome") {

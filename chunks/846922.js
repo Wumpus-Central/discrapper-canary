@@ -1,12 +1,12 @@
 l.d(t, { h: () => r, y: () => s });
-var i,
-    n = l(196765),
+var n,
+    i = l(196765),
     a = l(121894),
     r =
-        (((i = {})[(i.ALL_CHANNELS_ACCESS = 0)] = "ALL_CHANNELS_ACCESS"),
-        (i[(i.SOME_CHANNELS_ACCESS = 1)] = "SOME_CHANNELS_ACCESS"),
-        i);
-let s = (0, n.v)((e) => ({
+        (((n = {})[(n.ALL_CHANNELS_ACCESS = 0)] = "ALL_CHANNELS_ACCESS"),
+        (n[(n.SOME_CHANNELS_ACCESS = 1)] = "SOME_CHANNELS_ACCESS"),
+        n);
+let s = (0, i.v)((e) => ({
     listings: {},
     setListing: (t, l) => (0, a.r)(() => e((e) => ({ listings: { ...e.listings, [t]: l(e.listings[t]) } }))),
     editStateIdsForGroup: {},

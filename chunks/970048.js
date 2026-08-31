@@ -68,8 +68,8 @@ var W = n(403362),
 let $ = 20 * P.A.Millis.SECOND;
 var z = n(877717);
 n(321073);
-var Z = n(803301);
-let q = {
+var q = n(803301);
+let Z = {
         [d.iy.NO_AUDIO_INPUT_DETECTED]: {
             getActiveErrors: (e) => {
                 let { voiceChannelId: t, voiceState: n } = e,
@@ -259,7 +259,7 @@ let q = {
         },
         [d.iy.VIDEO_STREAM_SENDER_READY_TIMEOUT]: {
             getActiveErrors: () =>
-                Object.values(Z.A.getTimedoutVideos())
+                Object.values(q.A.getTimedoutVideos())
                     .filter((e) => {
                         let { userId: t, videoStreamId: n } = e;
                         return G.default.getId() === t && null != n;
@@ -269,7 +269,7 @@ let q = {
         },
         [d.iy.VIDEO_STREAM_RECEIVER_READY_TIMEOUT]: {
             getActiveErrors: () =>
-                Object.values(Z.A.getTimedoutVideos())
+                Object.values(q.A.getTimedoutVideos())
                     .filter((e) => {
                         let { userId: t, videoStreamId: n } = e;
                         return G.default.getId() !== t && null != n;
@@ -279,7 +279,7 @@ let q = {
         },
         [d.iy.VIDEO_STREAM_SENDER_READY_TIMEOUT_NO_STREAM]: {
             getActiveErrors: () =>
-                Object.values(Z.A.getTimedoutVideos())
+                Object.values(q.A.getTimedoutVideos())
                     .filter((e) => {
                         let { userId: t, videoStreamId: n } = e;
                         return G.default.getId() === t && null == n;
@@ -289,7 +289,7 @@ let q = {
         },
         [d.iy.VIDEO_STREAM_RECEIVER_READY_TIMEOUT_NO_STREAM]: {
             getActiveErrors: () =>
-                Object.values(Z.A.getTimedoutVideos())
+                Object.values(q.A.getTimedoutVideos())
                     .filter((e) => {
                         let { userId: t, videoStreamId: n } = e;
                         return G.default.getId() !== t && null == n;
@@ -355,13 +355,13 @@ class J extends r.A {
             t = null != e ? (o.A.getVoiceStateForChannel(e) ?? null) : null,
             n = s.A.getAllActiveStreams(),
             r = new Map();
-        for (let i of Object.values(q)) {
+        for (let i of Object.values(Z)) {
             let a = i.getActiveErrors({ voiceChannelId: e, voiceState: t, activeStreams: n });
             if (null != a)
                 for (let e of a)
                     r.set(
                         (function (e) {
-                            let t = q[e.type];
+                            let t = Z[e.type];
                             return `${e.type}:${t?.makeErrorContextKey(e)}`;
                         })(e),
                         e,
@@ -415,8 +415,8 @@ class J extends r.A {
                     Y = null != o ? N.A.getRTCConnection(o) : null,
                     K = null != o ? Y : g.A.getRTCConnection(),
                     $ = null != o ? Y?.analyticsContext?.streamApplication : null,
-                    { resolution: z, fps: Z } = p.A.getState(),
-                    { gameName: q, gameId: X, exe: Q, distributor: J } = (0, A.wH)($),
+                    { resolution: z, fps: q } = p.A.getState(),
+                    { gameName: Z, gameId: X, exe: Q, distributor: J } = (0, A.wH)($),
                     ee = r.isErrorOutbound,
                     et = c ?? y.x.DEFAULT,
                     en = null != W ? W.ownerId : j,
@@ -468,13 +468,13 @@ class J extends r.A {
                             bitrate: b(ee, er, en)?.bitrate ?? null,
                             target_bitrate: ee ? (D(er)?.bitrateTarget ?? null) : null,
                             fps: (ee ? (D(et)?.frameRateEncode ?? null) : (v(et, en)?.frameRateDecode ?? null)) ?? null,
-                            target_fps: et === y.x.STREAM && ee ? Z : null,
+                            target_fps: et === y.x.STREAM && ee ? q : null,
                             sender_user_id: W?.ownerId ?? null,
                             stream_region: Y?.getRegion() ?? null,
                             stream_source_type: ee ? (Y?.analyticsContext?.streamSourceType ?? null) : null,
                             num_stream_viewers: Y?.analyticsContext?.numViewers ?? null,
                             video_input_resolution_height: ee ? (z ?? null) : null,
-                            video_input_frame_rate: ee ? (Z ?? null) : null,
+                            video_input_frame_rate: ee ? (q ?? null) : null,
                             screenshare_capture_method: (function (e) {
                                 let t = I.A.getConnectionStats(e),
                                     n = I.A.getLastConnectionStats(e);
@@ -500,7 +500,7 @@ class J extends r.A {
                                 for (let [e, t] of Object.entries(i)) t > r && ((r = t), (a = e));
                                 return r > 0 ? a : null;
                             })(er),
-                            share_application_name: q ?? null,
+                            share_application_name: Z ?? null,
                             share_application_id: X ?? null,
                             share_application_executable: Q ?? null,
                             share_application_distributor: J ?? null,

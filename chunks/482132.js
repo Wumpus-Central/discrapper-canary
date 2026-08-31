@@ -21,8 +21,8 @@ function S(e) {
         })(e),
         { step: r, stepConfigs: s } = (0, m.Ay)(),
         { setBodyNode: S, setFooterNode: y, setModalOverlayNode: I } = (0, p.Gm)(),
-        A = (0, u.bG)([h.A], () => h.A.isDisplayingWowMomentConfirmation),
-        { setReadySlideId: g, unifiedCheckoutFlow: P } = (0, C.t4)((e) => ({
+        g = (0, u.bG)([h.A], () => h.A.isDisplayingWowMomentConfirmation),
+        { setReadySlideId: A, unifiedCheckoutFlow: P } = (0, C.t4)((e) => ({
             setReadySlideId: e.setReadySlideId,
             unifiedCheckoutFlow: e.unifiedCheckoutFlow,
         })),
@@ -62,10 +62,10 @@ function S(e) {
                                         shouldUseMediaQueriesForSizing: !0,
                                         activeSlide: r,
                                         centered: !1,
-                                        onSlideReady: (e) => g(e),
+                                        onSlideReady: (e) => A(e),
                                         width: "100%",
                                         disableDefaultTransformStyling: N,
-                                        overflow: A ? "visible" : void 0,
+                                        overflow: g ? "visible" : void 0,
                                         children: s
                                             .filter((e) => null != e.key)
                                             .map((e) =>

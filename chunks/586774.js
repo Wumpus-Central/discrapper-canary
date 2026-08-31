@@ -1,72 +1,72 @@
-n.d(t, { A: () => E });
-var i = n(435558),
-    l = n.n(i),
-    r = n(17928),
-    s = n(228366),
-    a = n(889227),
-    o = n(287809),
-    u = n(38910);
-let d = {},
-    c = 0,
+l.d(t, { A: () => _ });
+var n = l(435558),
+    i = l.n(n),
+    a = l(17928),
+    r = l(228366),
+    s = l(889227),
+    o = l(287809),
+    c = l(38910);
+let u = {},
+    d = 0,
     h = !1,
-    g = !1;
-function f(e) {
+    f = !1;
+function p(e) {
     let t = null != e.contact_names && e.contact_names.length >= 2 ? e.contact_names.slice(0, 2) : [];
     return {
         key: e.suggested_user.id,
-        name: l().first(e.reasons)?.name,
-        user: new a.A(e.suggested_user),
+        name: i().first(e.reasons)?.name,
+        user: new s.A(e.suggested_user),
         mutualFriendsCount: e.mutual_friends_count,
         contactNames: t,
     };
 }
-class A extends r.Ay.Store {
+class S extends a.Ay.Store {
     static displayName = "FriendSuggestionStore";
     initialize() {
         this.waitFor(o.default);
     }
     getSuggestionCount() {
-        return c;
+        return d;
     }
     getSuggestions() {
-        return Object.entries(d).map((e) => {
-            let [t, n] = e;
-            return n;
+        return Object.entries(u).map((e) => {
+            let [t, l] = e;
+            return l;
         });
     }
     getSuggestion(e) {
-        return d[e];
+        return u[e];
     }
 }
-let E = new A(s.h, {
+let _ = new S(r.h, {
     CONNECTION_OPEN: function (e) {
-        (d = {}),
-            (c = e.friendSuggestionCount) > 0
-                ? ((g = !0), !h && g && ((h = !0), (g = !1), u.A.fetch()))
+        (u = {}),
+            (d = e.friendSuggestionCount) > 0
+                ? ((f = !0), !h && f && ((h = !0), (f = !1), c.A.fetch()))
                 : (function () {
                       arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
                   })();
     },
     FRIEND_SUGGESTION_CREATE: function (e) {
-        let t = f(e.suggestion);
-        if (null != d[t.key]) return !1;
-        c++, (d = { ...d, [t.key]: t });
+        let t = p(e.suggestion);
+        if (null != u[t.key]) return !1;
+        d++, (u = { ...u, [t.key]: t });
     },
     FRIEND_SUGGESTION_DELETE: function (e) {
-        (c = Math.max(0, --c)), delete d[e.suggestedUserId];
+        (d = Math.max(0, --d)), delete u[e.suggestedUserId];
     },
     LOAD_FRIEND_SUGGESTIONS_SUCCESS: function (e) {
         var t;
         (h = !1),
             (t = e.suggestions),
-            (d = l()
+            (u = i()
                 .chain(t)
-                .map((e) => f(e))
+                .map((e) => p(e))
                 .keyBy((e) => e.key)
                 .value()),
-            (c = l().keys(d).length);
+            (d = i().keys(u).length);
     },
     LOAD_FRIEND_SUGGESTIONS_FAILURE: function () {
-        (h = !1), (d = {});
+        (h = !1), (u = {});
     },
 });

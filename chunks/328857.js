@@ -11,8 +11,8 @@ var l = n(477900),
     h = n(834730),
     m = n(933832),
     g = n(192308),
-    p = n(383669),
-    A = n(297264),
+    A = n(383669),
+    p = n(297264),
     f = n(444927),
     C = n(793574),
     x = n(95561),
@@ -52,12 +52,12 @@ var U = n(363487),
     J = n(936820);
 function q(e) {
     let { className: t, iconUrl: n, icon: s, header: r, completed: c, onClick: d } = e,
-        [g, p] = i.useState(!1),
-        A = (0, o.A)(c);
+        [g, A] = i.useState(!1),
+        p = (0, o.A)(c);
     return (
         i.useEffect(() => {
-            null != A && c !== A && (p(!0), setTimeout(() => p(!1), 1e3));
-        }, [c, A]),
+            null != p && c !== p && (A(!0), setTimeout(() => A(!1), 1e3));
+        }, [c, p]),
         (0, l.jsxs)(u.D, {
             className: a()(t, J.Nr, { [J.so]: c }),
             onClick: d,
@@ -156,9 +156,9 @@ function Z(e) {
             }, [ei]),
         },
         eg = (ei?.premiumSubscriberCount ?? 0) > 0,
-        ep = !0 === (0, U.A)(ei?.id),
+        eA = !0 === (0, U.A)(ei?.id),
         {
-            handleInvite: eA,
+            handleInvite: ep,
             handleMessage: ef,
             handlePersonalize: eC,
             handleDownload: ex,
@@ -306,7 +306,7 @@ function Z(e) {
                             iconUrl: "/assets/ea08bfae3e0ab96d.svg",
                             header: $.intl.string($.t.q9n0Ta),
                             completed: eu,
-                            onClick: eA,
+                            onClick: ep,
                         }),
                     },
                     "invite",
@@ -370,7 +370,7 @@ function Z(e) {
                     className: J.cW,
                     style: eI ? { opacity: ej[eT.length] } : {},
                     children: (0, l.jsx)(q, {
-                        iconUrl: p,
+                        iconUrl: A,
                         header: $.intl.string($.t.IhHDEO),
                         completed: eN,
                         onClick: eE,
@@ -379,7 +379,7 @@ function Z(e) {
                 "addapp",
             ),
         ),
-        ep &&
+        eA &&
             G.getConfig({ location: "WelcomeArea" }).enabled &&
             eT.push(
                 (0, l.jsx)(
@@ -411,7 +411,7 @@ function Z(e) {
                     (0, l.jsxs)(r.A.div, {
                         style: e_,
                         children: [
-                            (0, l.jsx)(A.D, {
+                            (0, l.jsx)(p.D, {
                                 className: J.ud,
                                 variant: "heading-xxl/medium",
                                 children: $.intl.format($.t.rkHVKf, { guildName: ei.name }),

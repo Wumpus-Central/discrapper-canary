@@ -237,8 +237,8 @@ var j = n(73825),
     K = n(628856),
     $ = n(870600),
     z = n(945096),
-    Z = n(996512),
-    q = n(814890),
+    q = n(996512),
+    Z = n(814890),
     X = n(505527),
     Q = n(455598),
     J = n(761821);
@@ -1602,7 +1602,7 @@ eV(
             customId: e.custom_id,
             application: e.application,
             title: e.title,
-            components: (0, q.ZV)(e.components),
+            components: (0, Z.ZV)(e.components),
             nonce: e.nonce,
             resolved: e.resolved,
         });
@@ -1949,13 +1949,13 @@ eV(
         });
     }),
     eF(["GUILD_ROOM_CONNECT"], (e, t) => {
-        eH({ type: t, room: (0, Z.S)(e) });
+        eH({ type: t, room: (0, q.S)(e) });
     }),
     eF(["GUILD_ROOM_DISCONNECT"], (e, t) => {
         eH({ type: t, userId: e.user_id, roomId: e.room_id });
     }),
     eF(["GUILD_ROOM_UPDATE"], (e, t) => {
-        eH({ type: t, room: (0, Z.S)(e) });
+        eH({ type: t, room: (0, q.S)(e) });
     }),
     eF(["GUILD_OFFICIAL_GAME_APPLICATIONS_UPDATE"], (e, t) => {
         eH({ type: t, gameApplicationIds: e.game_application_ids, guildId: e.guild_id });
@@ -1967,8 +1967,8 @@ eV(
             numMutualGuilds: e.num_mutual_guilds,
         });
     });
-var eZ = n(355097);
-let eq = window.DiscordNative;
+var eq = n(355097);
+let eZ = window.DiscordNative;
 F.dispatcher.getDispatchHandler = function (e) {
     return ek[e];
 };
@@ -1989,7 +1989,7 @@ async function e3(e) {
             (s.w.remove("discord_watchdog_restart_timestamp"),
             window?.performance?.getEntriesByType?.("navigation")?.[0]?.type === "reload" ||
                 i ||
-                (await eq?.processUtils?.getLastCrash?.())?.rendererCrashReason != null ||
+                (await eZ?.processUtils?.getLastCrash?.())?.rendererCrashReason != null ||
                 !e0)
         ) {
             let e = h.A.getChannel(n);
@@ -2001,10 +2001,10 @@ async function e3(e) {
 function e5() {
     B.update();
 }
-function e4() {
+function e6() {
     return B.update(), !1;
 }
-function e6() {
+function e4() {
     return V.update(), !1;
 }
 function e7(e) {
@@ -2014,8 +2014,8 @@ class e8 extends a.Ay.Store {
     static displayName = "GatewayConnectionStore";
     initialize() {
         this.waitFor(E.default, A.A, h.A, I.Ay, f.A, p.A, T.Ay, m.A, g.A, _.A),
-            this.syncWith([I.Ay], e4),
-            this.syncWith([m.A], e6);
+            this.syncWith([I.Ay], e6),
+            this.syncWith([m.A], e4);
     }
     getSocket() {
         return F;
@@ -2207,7 +2207,7 @@ let e9 = new e8(l.h, {
     CLIPS_SETTINGS_UPDATE: e5,
     RUNNING_GAMES_CHANGE: e5,
     USER_SETTINGS_PROTO_UPDATE: function (e) {
-        e.settings.type === eZ.oD.PRELOADED_USER_SETTINGS &&
+        e.settings.type === eq.oD.PRELOADED_USER_SETTINGS &&
             e.settings.proto.clips?.allowVoiceRecording != null &&
             e5();
     },

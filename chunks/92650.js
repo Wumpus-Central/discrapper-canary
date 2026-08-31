@@ -11,8 +11,8 @@ var l = n(582128),
     h = n(966107),
     m = n(477900),
     g = n(192308),
-    p = n(687599),
-    A = n(652215),
+    A = n(687599),
+    p = n(652215),
     f = n(166643);
 function C(e) {
     let { user: t, onAcceptSuccess: i, onRejectSuccess: C, onError: x } = e,
@@ -89,7 +89,7 @@ function C(e) {
                     }
                     !(function (e) {
                         let { channelId: t, onConfirm: l, onCancel: i } = e;
-                        u.default.track(A.HAw.OPEN_MODAL, { type: p.PY, channel_id: t }),
+                        u.default.track(p.HAw.OPEN_MODAL, { type: A.PY, channel_id: t }),
                             (0, g.openModalLazy)(async () => {
                                 let { default: e } = await n.e("661841").then(n.bind(n, 987176));
                                 return (t) => (0, m.jsx)(e, { onConfirm: l, onDismiss: i, ...t });
@@ -99,8 +99,8 @@ function C(e) {
                         onConfirm: l,
                         onCancel: function () {
                             let n = null != t ? o.A.getMutualGuilds(t.id)?.map((e) => e.guild.id) : [];
-                            u.default.track(A.HAw.MESSAGE_REQUEST_ACTION, {
-                                action: p.LD.DISMISS_CONFIRMATION_PROMPT,
+                            u.default.track(p.HAw.MESSAGE_REQUEST_ACTION, {
+                                action: A.LD.DISMISS_CONFIRMATION_PROMPT,
                                 channel_id: e,
                                 mutual_guild_ids: n ?? [],
                                 other_user_id: t?.id,
@@ -110,8 +110,8 @@ function C(e) {
                 }
                 async function l() {
                     let n = null != t ? o.A.getMutualGuilds(t.id)?.map((e) => e.guild.id) : [];
-                    u.default.track(A.HAw.MESSAGE_REQUEST_ACTION, {
-                        action: p.LD.ACCEPT_CONFIRMATION_PROMPT,
+                    u.default.track(p.HAw.MESSAGE_REQUEST_ACTION, {
+                        action: A.LD.ACCEPT_CONFIRMATION_PROMPT,
                         channel_id: e,
                         mutual_guild_ids: n ?? [],
                         other_user_id: t?.id,
@@ -127,8 +127,8 @@ function C(e) {
                     i && d.WY.updateSetting(n),
                         n && null != t && (0, r.tJ)(t),
                         D(e.id),
-                        u.default.track(A.HAw.MESSAGE_REQUEST_ACTION, {
-                            action: p.LD.ACCEPT_HAM_CONFIRMATION_PROMPT,
+                        u.default.track(p.HAw.MESSAGE_REQUEST_ACTION, {
+                            action: A.LD.ACCEPT_HAM_CONFIRMATION_PROMPT,
                             channel_id: e.id,
                             is_dont_show_again_checked: i,
                             non_spam_retraining_opt_in: n,
@@ -147,8 +147,8 @@ function C(e) {
                           channel: e,
                           onConfirm: i,
                           onCancel: function () {
-                              u.default.track(A.HAw.MESSAGE_REQUEST_ACTION, {
-                                  action: p.LD.DISMISS_HAM_CONFIRMATION_PROMPT,
+                              u.default.track(p.HAw.MESSAGE_REQUEST_ACTION, {
+                                  action: A.LD.DISMISS_HAM_CONFIRMATION_PROMPT,
                                   channel_id: e.id,
                               });
                           },

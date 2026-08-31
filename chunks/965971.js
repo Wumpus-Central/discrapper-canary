@@ -663,7 +663,7 @@ class z {
         z.previousHasConnection !== n && (M.toggleRtcConnection(n), (z.previousHasConnection = n));
     }
 }
-class Z {
+class q {
     static handleMessageAcked(e) {
         L.verbose("MESSAGE_ACKED", e);
         let t = h.A.getGame();
@@ -685,9 +685,9 @@ class Z {
               });
     }
 }
-class q extends l.A {
+class Z extends l.A {
     actions = __OVERLAY__
-        ? { MESSAGE_ACKED: Z.handleMessageAcked, MESSAGE_CREATE: Z.handleMessageCreate }
+        ? { MESSAGE_ACKED: q.handleMessageAcked, MESSAGE_CREATE: q.handleMessageCreate }
         : {
               OVERLAY_FOCUSED: k,
               OVERLAY_NOTIFICATION_EVENT: G,
@@ -706,4 +706,4 @@ class q extends l.A {
               OVERLAY_TRACK_STATE_CHANGED: $,
           };
 }
-let X = new q();
+let X = new Z();

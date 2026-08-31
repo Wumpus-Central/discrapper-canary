@@ -206,8 +206,8 @@ function M(e) {
             isInert: K,
             isCollapsible: $,
             hasValue: z,
-            handleSelectionChange: Z,
-            onSelectionChange: q,
+            handleSelectionChange: q,
+            onSelectionChange: Z,
             isOpen: X,
             setIsOpen: Q,
             options: J,
@@ -224,8 +224,8 @@ function M(e) {
             K || Q?.((e) => (e || b.current?.focus(), !e));
         }, [K, Q]),
         ed = r.useCallback(() => {
-            !0 === B && ("multiple" === x ? q([]) : q(null), ei(""), b.current?.focus());
-        }, [q, x, B, ei]),
+            !0 === B && ("multiple" === x ? Z([]) : Z(null), ei(""), b.current?.focus());
+        }, [Z, x, B, ei]),
         ec = r.useCallback(
             (e) => {
                 ea(!0), h?.(e), b.current?.setSelectionRange(en?.length ?? 0, en?.length ?? 0);
@@ -258,9 +258,9 @@ function M(e) {
             (e) => {
                 if (K) return;
                 let t = Array.from(e)[0];
-                Z(ee.filter((e) => e.id !== t));
+                q(ee.filter((e) => e.id !== t));
             },
-            [Z, ee, K],
+            [q, ee, K],
         ),
         eI = r.useCallback(
             (e) => {
@@ -300,8 +300,8 @@ function M(e) {
                         if (null == w || t - 1 < w) return;
                         let i = et[w];
                         if (null == i || !0 === i.disabled) return;
-                        if (H && 1 === ee.length && ee.includes(i)) return void Z(ee);
-                        Z("single" === x ? [i] : (0, R.qH)(x, ee, i));
+                        if (H && 1 === ee.length && ee.includes(i)) return void q(ee);
+                        q("single" === x ? [i] : (0, R.qH)(x, ee, i));
                         break;
                     case "Backspace":
                         "multiple" === x &&
@@ -322,7 +322,7 @@ function M(e) {
                         G(t - 1);
                 }
             },
-            [x, H, B, z, Y, X, N, ed, Z, ee, en, Q, et, w, G],
+            [x, H, B, z, Y, X, N, ed, q, ee, en, Q, et, w, G],
         ),
         ef = r.useCallback(
             (e) => {
@@ -426,7 +426,7 @@ function M(e) {
                 disabled: K,
                 selectionMode: x,
                 selectedItems: ee,
-                onSelectionChange: Z,
+                onSelectionChange: q,
                 listItems: J,
             }),
         ],

@@ -11,7 +11,7 @@ var l = n(477900),
     h = n(744898),
     m = n(562708),
     g = n(139286);
-function p(e) {
+function A(e) {
     return (
         (0, g.A)({ type: m.ImpressionTypes.VIEW, name: m.ImpressionNames.NOTIFICATION_SETTING_UNREAD_NUDGE }, void 0, [
             e.id,
@@ -19,7 +19,7 @@ function p(e) {
         null
     );
 }
-var A = n(832712),
+var p = n(832712),
     f = n(543465),
     C = n(477427),
     x = n(393432),
@@ -33,7 +33,7 @@ function y(e) {
     return (0, l.jsxs)("div", {
         className: j.l,
         children: [
-            (0, l.jsx)(p, { id: t.id }),
+            (0, l.jsx)(A, { id: t.id }),
             (0, l.jsx)("div", {
                 className: j.p,
                 children: (0, l.jsx)(d.E, { variant: "text-sm/medium", children: _.intl.format(_.t.P6Y2N1, {}) }),
@@ -48,7 +48,7 @@ function y(e) {
                     (e = t.guild_id),
                         (l = t.id),
                         (i = I.vv.UNREADS_ONLY_MENTIONS),
-                        A.A.updateChannelOverrideSettings(
+                        p.A.updateChannelOverrideSettings(
                             e,
                             l,
                             { flags: (0, x.mD)(f.Ay.getChannelIdFlags(e, l), i) },

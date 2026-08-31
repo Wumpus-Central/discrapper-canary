@@ -30,8 +30,8 @@ var i = n(477900),
     L = n(485296),
     O = n(198052),
     P = n(546871),
-    M = n(195007),
-    w = n(806931),
+    w = n(195007),
+    M = n(806931),
     U = n(375708),
     D = n(1195),
     V = n(547368);
@@ -41,7 +41,7 @@ function k(e) {
             let e = Date.now();
             return s()(L.A.getSpeakers())
                 .map((e) => O.A.getParticipant(t, e))
-                .filter((e) => null != e && e.type === w.lp.USER && e.speaking && !(0, I.Ay)(e))
+                .filter((e) => null != e && e.type === M.lp.USER && e.speaking && !(0, I.Ay)(e))
                 .sortBy((t) => -L.A.getSpeakingDuration(t.user.id, e))
                 .slice(0, 3)
                 .value();
@@ -119,14 +119,14 @@ function G(e) {
                 ),
             ),
         o &&
-            (H?.type === w.lp.STREAM
+            (H?.type === M.lp.STREAM
                 ? X.push((0, i.jsx)(P.A, { channel: t, focusedParticipant: H }, "stream-participants"))
-                : H?.type === w.lp.ACTIVITY &&
+                : H?.type === M.lp.ACTIVITY &&
                   null != s &&
                   X.push((0, i.jsx)(P.A, { channel: t, focusedParticipant: H }, "activity-participants"))),
         F && X.push((0, i.jsx)(k, { channelId: B, guildId: t.guild_id }, "current-speaker")),
         X.push((0, i.jsx)(x.A, { className: V.x6, channelId: B }, "clips-enabled-indicator")),
-        H?.type === w.lp.STREAM &&
+        H?.type === M.lp.STREAM &&
             (X.push((0, i.jsx)(N.A, { className: V.x6, participant: H }, "warning")),
             X.push(
                 (0, i.jsx)(
@@ -135,7 +135,7 @@ function G(e) {
                     "live-indicator",
                 ),
             )),
-        H?.type === w.lp.USER && X.push((0, i.jsx)(v.A, { className: V.x6, userId: H.id }, "video-warning")),
+        H?.type === M.lp.USER && X.push((0, i.jsx)(v.A, { className: V.x6, userId: H.id }, "video-warning")),
         F &&
             X.push(
                 (0, i.jsx)(
@@ -143,7 +143,7 @@ function G(e) {
                     {
                         targetElementRef: L,
                         position: "bottom",
-                        renderPopout: () => (0, i.jsx)(E.A, { children: (0, i.jsx)(M.A, { channel: t }) }),
+                        renderPopout: () => (0, i.jsx)(E.A, { children: (0, i.jsx)(w.A, { channel: t }) }),
                         children: (e, t) => {
                             let { isShown: n } = t;
                             return (0, l.createElement)(_.A, {

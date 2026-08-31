@@ -1,4 +1,4 @@
-n.d(t, { A: () => eA });
+n.d(t, { A: () => ep });
 var l = n(477900),
     i = n(582128),
     s = n(284009),
@@ -11,8 +11,8 @@ var l = n(477900),
     h = n(477155),
     m = n(922016),
     g = n(939249),
-    p = n(830215),
-    A = n(857182),
+    A = n(830215),
+    p = n(857182),
     f = n(66834),
     C = n(775602),
     x = n(315982),
@@ -149,13 +149,13 @@ var Q = n(698405),
     eh = n(360469),
     em = n(53516),
     eg = n(514559);
-class ep extends i.PureComponent {
+class eA extends i.PureComponent {
     state = { submitting: !1, shouldShowLurkerModeUpsellPopout: !1, shouldShowLurkerModeSuccessPopout: !1 };
     textAreaContainerRef = i.createRef();
     upsellTargetRef = i.createRef();
     componentDidMount() {
         let { isFollowable: e, channelFollowingUsersSeen: t, channel: n } = this.props;
-        e && null == t && A.A.fetchChannelFollowerStats(n.id);
+        e && null == t && p.A.fetchChannelFollowerStats(n.id);
     }
     componentDidUpdate(e) {
         let { shouldShowLurkerModeSuccessPopout: t, guild: n, showMemberVerificationModal: l } = this.props;
@@ -215,7 +215,7 @@ class ep extends i.PureComponent {
         );
     };
     handleResendVerification = () => {
-        p.A.verifyResend();
+        A.A.verifyResend();
         let e = eo.default.getCurrentUser()?.email;
         null != e && (0, o.A)({ title: w.intl.string(w.t.LykQYk), subtitle: w.intl.format(w.t.azKEPy, { email: e }) });
     };
@@ -277,8 +277,8 @@ class ep extends i.PureComponent {
                 accountDeadline: c,
                 theme: d,
                 children: u,
-                canSendMessages: p,
-                channelFollowingUsersSeen: A,
+                canSendMessages: A,
+                channelFollowingUsersSeen: p,
                 showLurkerModeUpsellPopout: f,
                 showMemberVerificationModal: C,
                 missingVerificationRole: x,
@@ -294,16 +294,16 @@ class ep extends i.PureComponent {
             } = this.props,
             { shouldShowLurkerModeUpsellPopout: D, shouldShowLurkerModeSuccessPopout: L } = this.state,
             k = { theme: d, useReducedMotion: I };
-        if (e && !p && null != M)
+        if (e && !A && null != M)
             null != M.gameIconUrl && (k.imageSrc = M.gameIconUrl),
                 (k.message = w.intl.format(w.t["qxH/YE"], { gameName: M.gameName })),
                 (k.buttonText = w.intl.string(w.t.DjifDP)),
                 (k.buttonIcon = h.r),
                 (k.buttonVariant = "primary"),
                 (k.onButtonClick = M.onReturnToGameProfile);
-        else if (e && !p) {
-            if (((k.message = w.intl.string(w.t.Hl0Mqh)), null != A && A >= 1e3)) {
-                let e = 1e3 * Math.floor(A / 1e3);
+        else if (e && !A) {
+            if (((k.message = w.intl.string(w.t.Hl0Mqh)), null != p && p >= 1e3)) {
+                let e = 1e3 * Math.floor(p / 1e3);
                 k.subtitle = w.intl.formatToPlainString(w.t.C5bgrC, { count: e.toLocaleString() });
             }
             (k.buttonText = w.intl.string(w.t["3aOv+h"])),
@@ -399,7 +399,7 @@ class ep extends i.PureComponent {
         });
     }
 }
-function eA(e) {
+function ep(e) {
     let { channel: t, children: n } = e,
         s = t.getGuildId(),
         a = (0, r.bG)([es.A], () => es.A.getGuild(s)),
@@ -410,8 +410,8 @@ function eA(e) {
         h = (0, r.bG)([eo.default], () => eo.default.getCurrentUser()),
         m = h?.isStaff() ?? !1,
         g = (0, r.bG)([ei.Ay], () => null != h && (ei.Ay.getMember(s, h.id)?.isPending ?? !1)),
-        p = !!(0, M.Qd)(a),
-        A = (0, r.bG)([q], () => q.shouldShowPopout(s)),
+        A = !!(0, M.Qd)(a),
+        p = (0, r.bG)([q], () => q.shouldShowPopout(s)),
         f = (0, r.bG)([er.A], () => er.A.can(y.xBc.SEND_MESSAGES, t)),
         x = (0, r.bG)([R.A], () => R.A.getRequest(s)),
         {
@@ -447,13 +447,13 @@ function eA(e) {
             guild: a,
             isLurking: u,
             isFollowable: c,
-            shouldShowLurkerModeSuccessPopout: A,
+            shouldShowLurkerModeSuccessPopout: p,
             showLurkerModeUpsellPopout: u && null != a && ec.MJ(y.xBc.SEND_MESSAGES, t),
             theme: en.A.theme,
             canSendMessages: f,
             channelFollowingUsersSeen: null != d ? d.usersSeenEver : null,
-            hasVerificationGate: p,
-            showMemberVerificationModal: g && p,
+            hasVerificationGate: A,
+            showMemberVerificationModal: g && A,
             guildJoinRequestStatus: x?.applicationStatus ?? v.B5.STARTED,
             guildJoinRequest: x,
             showLinkedLobbyApplicationLoadingIndicator: E,
@@ -463,5 +463,5 @@ function eA(e) {
             isStaff: m,
             pendingGameProfileReturn: T,
         };
-    return (0, l.jsx)(ep, { ...D, channel: t, children: n });
+    return (0, l.jsx)(eA, { ...D, channel: t, children: n });
 }

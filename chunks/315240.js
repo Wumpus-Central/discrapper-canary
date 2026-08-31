@@ -12,8 +12,8 @@ var i,
     g = n(573163),
     f = n(543465),
     A = n(287809),
-    E = n(977997),
-    p = n(927813),
+    p = n(977997),
+    E = n(927813),
     m = n(935208),
     I = n(914853),
     S = n(41984),
@@ -30,7 +30,7 @@ function T(e, t, n, i) {
     for (let [r, s] of e.entries()) {
         let e = i(r);
         if (e <= 0) continue;
-        let a = e * M(s, t, n);
+        let a = e * y(s, t, n);
         a > l && (l = a);
     }
     return l;
@@ -45,9 +45,9 @@ class v {
     }
     _computeMentionScore(e) {
         if (this.signals.mentionCount <= 0) return 0;
-        let t = M(this.signals.lastDirectMentionAtMs, e, 6e5);
+        let t = y(this.signals.lastDirectMentionAtMs, e, 6e5);
         this.scoreInfo.rawSignalsScore.lastDirectMentionAtMs = t;
-        let n = M(this.signals.lastRoleMentionAtMs, e, 6e5);
+        let n = y(this.signals.lastRoleMentionAtMs, e, 6e5);
         return (
             (this.scoreInfo.rawSignalsScore.lastRoleMentionAtMs = n),
             2 * Math.min(this.signals.mentionCount, 3) * Math.max(t, n)
@@ -65,7 +65,7 @@ class v {
                 })(this.signals.lastMessageAtMs, e)),
             this.signals.unread)
         ) {
-            let n = M(this.signals.lastUnreadAtMs, e, 18e5);
+            let n = y(this.signals.lastUnreadAtMs, e, 18e5);
             (t += 0.8 * n), (this.scoreInfo.rawSignalsScore.lastUnreadAtMs = n);
         }
         let n = T(this.signals.recentMessageAuthorIds, e, 6e5, this.providers.getNormalizedUserAffinity);
@@ -117,7 +117,7 @@ class v {
         (this.lastActivityAtMs = t), (this.signals = e);
     }
 }
-class y {
+class M {
     signals;
     providers;
     lastActivityAtMs;
@@ -147,7 +147,7 @@ class y {
     }
     _computeVoiceActivityScore(e) {
         let t = 0;
-        null != this.signals.lastVoiceJoinAtMs && (t = Math.max(t, M(this.signals.lastVoiceJoinAtMs, e, 12e4))),
+        null != this.signals.lastVoiceJoinAtMs && (t = Math.max(t, y(this.signals.lastVoiceJoinAtMs, e, 12e4))),
             (this.scoreInfo.rawSignalsScore.lastVoiceJoinAtMs = t);
         let n = T(this.signals.lastUnmuteActivityAtMs, e, 12e4, this.providers.getNormalizedUserAffinity);
         return (
@@ -198,7 +198,7 @@ class y {
         this._textualScore.updateSignals(e, t), (this.signals = e), (this.lastActivityAtMs = t);
     }
 }
-function M(e, t, n) {
+function y(e, t, n) {
     if (null == e) return 0;
     let i = t - e;
     return i <= 0 ? 1 : i >= n ? 0 : 1 - i / n;
@@ -245,7 +245,7 @@ class w {
         (this.candidate = e),
             (this.signals = t),
             "GUILD_VOICE" === e.kind || "GROUP_DM" === e.kind
-                ? (this._activeNowScoreSource = new y(t, n))
+                ? (this._activeNowScoreSource = new M(t, n))
                 : (this._activeNowScoreSource = new v(t, n)),
             this.recomputeScore(Date.now());
     }
@@ -486,7 +486,7 @@ function et(e, t, n) {
     let s = new w(l, t, n);
     return B.upsert(s), s;
 }
-let en = 30 * p.A.Millis.MINUTE;
+let en = 30 * E.A.Millis.MINUTE;
 function ei() {
     let e = Date.now(),
         t = e - en,
@@ -518,7 +518,7 @@ function ei() {
                 }
                 if (s.isVocal()) {
                     if (null != B.getChannel(i)) continue;
-                    let t = Object.entries(E.A.getVoiceStatesForChannel(i));
+                    let t = Object.entries(p.A.getVoiceStatesForChannel(i));
                     if (0 === t.length) continue;
                     let n = new Map();
                     for (let [i] of t) n.set(i, e);
@@ -541,7 +541,7 @@ function el(e) {
 class er extends r.Ay.Store {
     static displayName = "OverlayActiveNowStore";
     initialize() {
-        this.waitFor(u.A, d.A, P.A, _.default, c.A, g.Ay, h.A, a.A, A.default, f.Ay, E.A);
+        this.waitFor(u.A, d.A, P.A, _.default, c.A, g.Ay, h.A, a.A, A.default, f.Ay, p.A);
     }
     getActiveNowChannelByChannelId(e, t) {
         return "TEXT" === t ? H.getChannel(e) : B.getChannel(e);
@@ -652,7 +652,7 @@ let ea = new er(
                       g = a.prepareForUpdate(l),
                       f = new Map(g.recentMessageAuthorIds);
                   f.set(n, l);
-                  let E = {
+                  let p = {
                       lastMessageAtMs: l,
                       unread: !0,
                       lastUnreadAtMs: l,
@@ -661,10 +661,10 @@ let ea = new er(
                   };
                   return (
                       (d || h) &&
-                          ((E.mentionCount = Math.max(g.mentionCount, +!!d + +!!h)),
-                          d && (E.lastDirectMentionAtMs = l),
-                          h && (E.lastRoleMentionAtMs = l)),
-                      a.updateSignalsAndRescore(E, l),
+                          ((p.mentionCount = Math.max(g.mentionCount, +!!d + +!!h)),
+                          d && (p.lastDirectMentionAtMs = l),
+                          h && (p.lastRoleMentionAtMs = l)),
+                      a.updateSignalsAndRescore(p, l),
                       a.prunable && H.delete(e.channelId),
                       K(),
                       !0
@@ -787,15 +787,15 @@ let ea = new er(
                                   l.selfStream ? f.has(e) || f.set(e, t) : f.delete(e);
                                   let A = new Map(c.videoUsersWithTimestampMs);
                                   l.selfVideo ? A.has(e) || A.set(e, t) : A.delete(e);
-                                  let E = new Map(c.lastUnmuteActivityAtMs);
+                                  let p = new Map(c.lastUnmuteActivityAtMs);
                                   if (!l.selfMute && !l.mute) {
-                                      let n = E.get(e) ?? null;
-                                      (null == n || t - n >= 15e3) && E.set(e, t);
-                                  }
-                                  let p = new Map(c.lastUndeafenActivityAtMs);
-                                  if (!l.selfDeaf && !l.deaf) {
                                       let n = p.get(e) ?? null;
                                       (null == n || t - n >= 15e3) && p.set(e, t);
+                                  }
+                                  let E = new Map(c.lastUndeafenActivityAtMs);
+                                  if (!l.selfDeaf && !l.deaf) {
+                                      let n = E.get(e) ?? null;
+                                      (null == n || t - n >= 15e3) && E.set(e, t);
                                   }
                                   d.updateSignalsAndRescore(
                                       {
@@ -803,8 +803,8 @@ let ea = new er(
                                           lastVoiceJoinAtMs: h ? t : c.lastVoiceJoinAtMs,
                                           streamUsersWithTimestampMs: f,
                                           videoUsersWithTimestampMs: A,
-                                          lastUnmuteActivityAtMs: E,
-                                          lastUndeafenActivityAtMs: p,
+                                          lastUnmuteActivityAtMs: p,
+                                          lastUndeafenActivityAtMs: E,
                                       },
                                       t,
                                   ),

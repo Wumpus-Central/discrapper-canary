@@ -18,7 +18,7 @@ var o = n(17928),
     S = n(184015),
     y = n(723702),
     I = n(652215);
-function A() {
+function g() {
     let e = f.A.getClient();
     null != e &&
         (0, S.j)().then((t) => {
@@ -32,7 +32,7 @@ function A() {
                 });
         });
 }
-function g() {
+function A() {
     let e = f.A.getClient();
     null != e &&
         (0, S.j)().then((t) => {
@@ -150,7 +150,7 @@ class R extends a.PureComponent {
     }
     componentWillUnmount() {
         x(f.A.getPayPalClient(), { type: "BRAINTREE_TEARDOWN_PAYPAL_CLIENT" }).then(() => {
-            null != f.A.getClient() && g();
+            null != f.A.getClient() && A();
         });
     }
     render() {
@@ -180,7 +180,7 @@ class w extends a.PureComponent {
     }
     componentWillUnmount() {
         x(f.A.getVenmoClient(), { type: "BRAINTREE_TEARDOWN_VENMO_CLIENT" }).then(() => {
-            null != f.A.getClient() && A();
+            null != f.A.getClient() && g();
         });
     }
     render() {
@@ -384,8 +384,8 @@ let eI = new ey(p.h, {
         ef === e.loadId && ((eE = e.skuId ?? null), (eS = e.skuSubscriptionPlanId ?? null), (eh = 2));
     },
 });
-var eA = n(202541),
-    eg = n(731075);
+var eg = n(202541),
+    eA = n(731075);
 function eP(e) {
     let t,
         { step: n, onPurchaseComplete: l, onHandoffFailure: i } = e,
@@ -427,7 +427,7 @@ function eP(e) {
                     (0, h.Ze)(c.loadId),
                     (0, em.my)(
                         {
-                            planId: f?.id ?? eA.gD.PREMIUM_MONTH_TIER_2,
+                            planId: f?.id ?? eg.gD.PREMIUM_MONTH_TIER_2,
                             isGift: E,
                             loadId: c.loadId,
                             paymentMethodType: t,
@@ -438,15 +438,15 @@ function eP(e) {
             return () => clearTimeout(e);
         }, [f, E, c, i, y, S, t]),
         a.useEffect(() => {
-            null !== p && (eA.oz.includes(p) && ((0, eu.ur)(p), (0, h.hP)()), s(p)),
+            null !== p && (eg.oz.includes(p) && ((0, eu.ur)(p), (0, h.hP)()), s(p)),
                 null !== C && u(C),
                 m === c.loadId && d === eC.DONE && l();
         }, [s, u, d, m, p, C, c, l]),
         (0, r.jsxs)("div", {
-            className: eg.rf,
+            className: eA.rf,
             children: [
                 (0, r.jsx)(O.D, { variant: "heading-xl/bold", children: j.intl.string(j.t.C4HYfy) }),
-                (0, r.jsx)(L.E, { variant: "text-md/normal", className: eg.h_, children: j.intl.string(j.t.xfG7Jp) }),
+                (0, r.jsx)(L.E, { variant: "text-md/normal", className: eA.h_, children: j.intl.string(j.t.xfG7Jp) }),
             ],
         })
     );
@@ -455,7 +455,7 @@ function ev(e) {
     let { onPrimaryClick: t, onBackClick: n } = e;
     return (0, r.jsx)(eo.j, {
         children: (0, r.jsxs)("div", {
-            className: eg.kL,
+            className: eA.kL,
             children: [
                 (0, r.jsx)(ed.A, { onClick: n }),
                 (0, r.jsx)(ed.F, { onClick: t, children: j.intl.string(j.t["4Qvmmj"]) }),
@@ -635,7 +635,7 @@ let e1 = function (e) {
         [f, E] = a.useState(null),
         [S, y] = a.useState({}),
         I = (0, s.useElements)(),
-        A = a.useCallback(() => {
+        g = a.useCallback(() => {
             if (null != I)
                 switch (n) {
                     case "cardNumber": {
@@ -657,7 +657,7 @@ let e1 = function (e) {
                     }
                 }
         }, [I, n]),
-        g = a.useCallback(
+        A = a.useCallback(
             (e) => {
                 C || e.empty || h(!0), null != i && i(e.complete), null != e.error && p(!1);
             },
@@ -682,7 +682,7 @@ let e1 = function (e) {
                                     : null != e.error
                                       ? E(j.intl.string(j.t.x4pWtJ))
                                       : E(null),
-                                g(e);
+                                A(e);
                         }),
                             e.on("focus", P),
                             e.on("blur", v);
@@ -692,7 +692,7 @@ let e1 = function (e) {
                         let e = I.getElement(s.CardExpiryElement);
                         if (null == e) return;
                         e.on("change", (e) => {
-                            null != e.error || (e.empty && C) ? E(j.intl.string(j.t["9/zZdl"])) : E(null), g(e);
+                            null != e.error || (e.empty && C) ? E(j.intl.string(j.t["9/zZdl"])) : E(null), A(e);
                         }),
                             e.on("focus", P),
                             e.on("blur", v);
@@ -702,21 +702,21 @@ let e1 = function (e) {
                         let e = I.getElement(s.CardCvcElement);
                         if (null == e) return;
                         e.on("change", (e) => {
-                            null != e.error || (e.empty && C) ? E(j.intl.string(j.t.ro4isZ)) : E(null), g(e);
+                            null != e.error || (e.empty && C) ? E(j.intl.string(j.t.ro4isZ)) : E(null), A(e);
                         }),
                             e.on("focus", P),
                             e.on("blur", v);
                     }
                 }
-        }, [v, g, P, c, I, C, n]);
+        }, [v, A, P, c, I, C, n]);
     a.useEffect(
         () => (
             x(),
             () => {
-                A();
+                g();
             }
         ),
-        [x, A],
+        [x, g],
     );
     let _ = (0, W.r)(Y.A.colors.TEXT_SUBTLE).hex(),
         T = (0, W.r)(Y.A.colors.TEXT_STRONG).hex();
@@ -1056,9 +1056,9 @@ function tc(e) {
             setIsSubmittingCurrentStep: S,
             hasRedirectURL: y,
             setHasRedirectURL: I,
-            isAuthenticating: A,
+            isAuthenticating: g,
         } = t;
-    async function g() {
+    async function A() {
         S(!0);
         let e = p ? u : o.methodType,
             n = d.current,
@@ -1112,8 +1112,8 @@ function tc(e) {
         primaryCTA: ea.Ay.CTAType.CONTINUE,
         primaryText: j.intl.string(j.t.PDTjLN),
         primarySubmitting: f,
-        primaryDisabled: !E.isValid || A,
-        onPrimary: g,
+        primaryDisabled: !E.isValid || g,
+        onPrimary: A,
         shouldUseManaModal: n,
     });
 }
@@ -1187,12 +1187,12 @@ var th = n(667648),
 let tS = new en.A("AddPaymentStep.tsx"),
     ty = { name: "", cardNumber: "", expirationDate: "", cvc: "" },
     tI = { email: "", name: "", country: "", line1: "", line2: "", city: "", postalCode: "", state: "" };
-function tA(e) {
+function tg(e) {
     let { onCardInfoChange: t } = e,
         n = (0, o.bG)([b.A], () => b.A.error);
     return (0, r.jsx)(ts, { billingError: n, onCardInfoChange: t });
 }
-function tg() {
+function tA() {
     return (0, r.jsx)(M, {});
 }
 function tP() {
@@ -1214,8 +1214,8 @@ function t_(e) {
             appendSteps: E,
             onReturn: S,
             onComplete: y,
-            onStepChange: A,
-            breadcrumpSteps: g,
+            onStepChange: g,
+            breadcrumpSteps: A,
             currentBreadcrumpStep: x,
             header: _,
             analyticsData: T,
@@ -1330,9 +1330,9 @@ function t_(e) {
     let eE = a.useCallback(
             function (e) {
                 let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
-                ec(e), t && A({ currentStep: eu, toStep: e });
+                ec(e), t && g({ currentStep: eu, toStep: e });
             },
-            [eu, A],
+            [eu, g],
         ),
         eS = a.useCallback(
             (e) => {
@@ -1361,7 +1361,7 @@ function t_(e) {
                     error_message: ey.message,
                 });
     }, [ey, H.loadId, N, ed.methodType]);
-    let eA = a.useCallback(
+    let eg = a.useCallback(
             (e) => {
                 eS(e),
                     (0, u.P0)(
@@ -1375,7 +1375,7 @@ function t_(e) {
             [eE, V, eu, y, k, eS],
         ),
         {
-            setPaymentSourceId: eg,
+            setPaymentSourceId: eA,
             creditCardState: ex,
             setCreditCardState: eT,
             setTokenState: ej,
@@ -1393,7 +1393,7 @@ function t_(e) {
             setP24BankState: eK,
         } = l;
     function eZ(e) {
-        eg(e.id), eA(e);
+        eA(e.id), eg(e);
     }
     let eq = a.useCallback(
             (e, t) => {
@@ -1461,7 +1461,7 @@ function t_(e) {
                     ek(!1);
                 }
             };
-            t = (0, r.jsx)(tA, {
+            t = (0, r.jsx)(tg, {
                 onCardInfoChange: (e, t) => {
                     eT({ info: e, isValid: t }), eL((t) => ({ ...t, info: { ...t.info, name: e.name } }));
                 },
@@ -1542,7 +1542,7 @@ function t_(e) {
             break;
         case el.pn.PAYPAL_INFORMATION:
             let tl = 0 !== eU.length && null != eD;
-            (t = (0, r.jsx)(tg, {})),
+            (t = (0, r.jsx)(tA, {})),
                 (n = (0, r.jsx)(eV, {
                     onBack: () => e8(Z.he.PAYPAL),
                     primaryCTA: ea.Ay.CTAType.CONTINUE,
@@ -1657,7 +1657,7 @@ function t_(e) {
           })
         : (0, r.jsx)(eR.A, {
               shouldUseManaModal: D,
-              steps: g ?? ed.steps,
+              steps: A ?? ed.steps,
               currentStep: x ?? eu,
               overrideKey: to,
               paymentError: l.paymentError,
@@ -1698,7 +1698,7 @@ function tT(e) {
                         });
                     })
                         .then(() => {
-                            g(), A();
+                            A(), g();
                         })
                         .catch((e) => {
                             E.pM(e);

@@ -1,4 +1,4 @@
-n.d(t, { A: () => E });
+n.d(t, { A: () => o });
 var i = n(17928),
     l = n(228366),
     r = n(71393);
@@ -12,7 +12,7 @@ class a extends i.Ay.Store {
         return s.get(e);
     }
 }
-let E = new a(l.h, {
+let o = new a(l.h, {
     GUILD_ROLE_CONNECTIONS_CONFIGURATIONS_FETCH_SUCCESS: function (e) {
         let { roleId: t, roleConnectionConfigurations: n } = e;
         s.set(t, n);

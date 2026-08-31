@@ -132,8 +132,8 @@ async function Y(e) {
 var K = n(956549),
     $ = n(907645),
     z = n(969151),
-    Z = n(847381),
-    q = n(166352),
+    q = n(847381),
+    Z = n(166352),
     X = n(108959),
     Q = n(400115),
     J = n(859007),
@@ -142,7 +142,7 @@ let et = {},
     en = {},
     ei = {};
 function er(e) {
-    return { releasePhase: e?.activity?.client_platform_config[(0, Z.A)((0, C.getOS)())].release_phase };
+    return { releasePhase: e?.activity?.client_platform_config[(0, q.A)((0, C.getOS)())].release_phase };
 }
 function ea(e) {
     let { applicationId: t, nonce: n, locations: i, source: r } = e;
@@ -553,7 +553,7 @@ class eA extends d.A {
         if (l?.applicationId === n) return;
         let o = await _.Ay.fetchApplication(n);
         if (!(0, H.A)()) return void this.showLaunchErrorModal(W.intl.string(W.t.UXoQTp));
-        if (!(0, q.A)(o?.embedded_activity_config?.supported_platforms))
+        if (!(0, Z.A)(o?.embedded_activity_config?.supported_platforms))
             return void this.showLaunchErrorModal(W.intl.string(W.t.uGDCcw));
         let d = s?.getGuildId() ?? void 0,
             { activityConfigs: c, applications: u } = await (0, b.LV)({ guildId: d });

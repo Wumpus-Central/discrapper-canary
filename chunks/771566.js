@@ -17,8 +17,8 @@ var l,
     S = n(97352),
     y = n(67480),
     I = n(975571),
-    A = n(158045),
-    g = n(615396),
+    g = n(158045),
+    A = n(615396),
     P = n(573359),
     v = n(462887),
     x = n(659746);
@@ -186,7 +186,7 @@ function H(e) {
         })),
         { theme: Y } = (0, c.wR)(),
         V = (0, o.bG)([y.A], () => (null != h ? y.A.get(h.id) : null)),
-        K = (0, g.b2)(T),
+        K = (0, A.b2)(T),
         Z = H === k.uH.META_QUEST_WEB_REDIRECT_CHECKOUT;
     function q(e) {
         return B
@@ -318,7 +318,7 @@ function H(e) {
         b)
     )
         return (0, i.jsx)(R.A, { type: J(), text: t, buttonText: n, hideClose: E || Z, onClose: $, buttonLoading: z });
-    let X = (0, A.z4)(l);
+    let X = (0, g.z4)(l);
     return (0, i.jsxs)("div", {
         className: G.EL,
         children: [

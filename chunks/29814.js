@@ -232,8 +232,8 @@ var Y = n(223637),
     K = n(694403),
     $ = n(873879),
     z = n(683412),
-    Z = n(236285),
-    q = n(690521);
+    q = n(236285),
+    Z = n(690521);
 let X = {
     s: { requiredFirstCharacters: ["~"], match: s().inlineRegex(/^~~([\s\S]+?)~~(?!_)/) },
     highlight: { order: v.Ay.order, match: () => null },
@@ -249,7 +249,7 @@ let X = {
                 i = l.Ay.convertNameToSurrogate(n);
             return null == i || "" === i
                 ? { type: "text", content: t }
-                : { name: `:${n}:`, surrogate: i, src: q.Ay.getURL(i) };
+                : { name: `:${n}:`, surrogate: i, src: Z.Ay.getURL(i) };
         },
     },
     customEmoji: {
@@ -259,7 +259,7 @@ let X = {
         parse(e, t, n) {
             let [i, r, a, s] = e,
                 { guildId: l } = n,
-                o = Z.Ay.getDisambiguatedEmojiContext(l).getById(s),
+                o = q.Ay.getDisambiguatedEmojiContext(l).getById(s),
                 d = null == o || o.require_colons;
             return null != o && (a = o.name), { emojiId: s, name: d ? `:${a}:` : a, animated: "a" === r };
         },
@@ -281,7 +281,7 @@ let X = {
                             type: "emoji",
                             name: e.emojiName,
                             surrogate: e.surrogate,
-                            src: q.Ay.getURL(e.surrogate),
+                            src: Z.Ay.getURL(e.surrogate),
                             originalMatch: t,
                         }
                     );

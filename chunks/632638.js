@@ -18,8 +18,8 @@ var l = n(477900),
     y = n(783327),
     I = n(166532);
 n(69494), n(482132);
-var A = n(739508),
-    g = n(927813),
+var g = n(739508),
+    A = n(927813),
     P = n(652215),
     v = n(375708),
     x = n(304082);
@@ -61,9 +61,9 @@ function T(e) {
         return (
             null != Y || e.isStarted()
                 ? null != Y && e.stop()
-                : e.start(10 * g.A.Millis.SECOND, () => {
+                : e.start(10 * A.A.Millis.SECOND, () => {
                       let e = Error("Stripe took too long to load");
-                      (0, A.pM)(e);
+                      (0, g.pM)(e);
                   }),
             () => {
                 e.stop();

@@ -98,7 +98,7 @@ function H(e, t, n) {
     u.A.restored(e),
     a.A.mark("\u2757", `loaded guild channels (guild: ${e})`, l),
     s))
-        Object.hasOwn(O, n.id) || q((0, I.oh)(n));
+        Object.hasOwn(O, n.id) || Z((0, I.oh)(n));
     N.verbose(`hydration complete (guild: ${e}, channels: ${s.length}, guilds_loaded: ${V})`);
 }
 function j(e, t, n) {
@@ -121,18 +121,18 @@ function K(e) {
     return j(e, 1, "getChannel"), O[e] ?? L[e] ?? D[e] ?? U[e] ?? k[e];
 }
 function $(e) {
-    e.isPrivate() ? (delete k[e.id], z(e)) : e.isThread() ? Z(e) : I.uL.has(e.type) && q(e);
+    e.isPrivate() ? (delete k[e.id], z(e)) : e.isThread() ? q(e) : I.uL.has(e.type) && Z(e);
 }
 function z(e) {
     if (null != e.recipients.find((e) => (0, E.A)(e))) return !1;
     (L[e.id] = e), e.type === S.rbe.DM && (b[e.getRecipientId()] = e.id), (M += 1);
 }
-function Z(e) {
+function q(e) {
     let t = O[e.parent_id];
     (D[e.id] = e.merge({ nsfw: t?.nsfw === !0, parentChannelThreadType: t?.type })),
         e.isScheduledForDeletion() && l.h.dispatch({ type: "THREAD_DELETE", channel: e });
 }
-function q(e) {
+function Z(e) {
     let { id: t, guild_id: n } = e;
     (O[t] = e),
         (R[n] = R[n] ?? {}),
@@ -149,13 +149,13 @@ function X(e) {
             w.add(t),
             u.A.restored(t),
             n.items))
-                q(e);
+                Z(e);
             break;
         case "update":
             for (let e of ((n.writes.length > 0 || n.deletes.length > 0) && u.A.invalidate(t), n.deletes)) ee(O[e]);
-            for (let e of n.writes) q(e);
+            for (let e of n.writes) Z(e);
     }
-    if (null != i) for (let e of i) Z(e);
+    if (null != i) for (let e of i) q(e);
 }
 function Q(e) {
     if (!I.A_.has(e.channel.type)) return !1;
@@ -193,7 +193,7 @@ function et(e) {
 }
 function en(e) {
     let { messages: t } = e;
-    for (let e of t) null != e.thread && !(e.thread.id in D) && I.A_.has(e.thread.type) && Z((0, I.UE)(e.thread));
+    for (let e of t) null != e.thread && !(e.thread.id in D) && I.A_.has(e.thread.type) && q((0, I.UE)(e.thread));
 }
 function ei(e) {
     let { data: t } = e;
@@ -214,7 +214,7 @@ function ei(e) {
     });
 }
 function er(e) {
-    null != e && !(e.id in D) && I.A_.has(e.type) && Z((0, I.UE)(e));
+    null != e && !(e.id in D) && I.A_.has(e.type) && q((0, I.UE)(e));
 }
 function ea() {
     for (let e in ((U = {}), h.A.getFavoriteChannels())) {
@@ -321,19 +321,19 @@ let eo = new es(l.h, {
             t.forEach((e) => {
                 if ("unavailable" === e.data_mode)
                     N.fileOnly(`Restoring guild channels b/c unavailable in bg sync, for ${e.id} #:${el(e.id)}`),
-                        r().forEach(n[e.id], q);
+                        r().forEach(n[e.id], Z);
                 else if ("partial" === e.data_mode) {
                     N.fileOnly(`Restoring guild channels b/c partial in bg sync, for ${e.id} #:${el(e.id)}`),
-                        r().forEach(n[e.id], q);
+                        r().forEach(n[e.id], Z);
                     let t = e.partial_updates.deleted_channel_ids ?? [];
                     t.length > 0 && (H(e.id, 1, "handleBackgroundSync"), t.forEach((e) => ee(O[e]))),
-                        e.partial_updates.channels?.forEach((t) => q((0, I.UE)(t, e.id)));
+                        e.partial_updates.channels?.forEach((t) => Z((0, I.UE)(t, e.id)));
                 } else
                     N.fileOnly(`BG sync contained full channels for ${e.id} #:${e.channels.length}`),
                         W(e.id),
                         w.add(e.id),
                         u.A.restored(e.id),
-                        e.channels.forEach((t) => q((0, I.UE)(t, e.id)));
+                        e.channels.forEach((t) => Z((0, I.UE)(t, e.id)));
             });
     },
     CACHE_LOADED_LAZY: function (e) {
@@ -388,7 +388,7 @@ let eo = new es(l.h, {
         e.initialPrivateChannels.forEach(z),
         e.guilds))
             "partial" === n.dataMode &&
-                (r().forEach(t[n.id], q), N.fileOnly(`Restoring guild channels for ${n.id} #:${el(n.id)}`)),
+                (r().forEach(t[n.id], Z), N.fileOnly(`Restoring guild channels for ${n.id} #:${el(n.id)}`)),
                 X(n);
         ea();
     },
@@ -419,7 +419,7 @@ let eo = new es(l.h, {
             w.add(t),
             u.A.restored(t),
             n))
-                Object.hasOwn(O, e.id) || q((0, I.oh)(e));
+                Object.hasOwn(O, e.id) || Z((0, I.oh)(e));
         return !1;
     },
     LOAD_MESSAGES_AROUND_SUCCESS: en,

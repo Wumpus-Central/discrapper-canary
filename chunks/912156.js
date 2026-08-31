@@ -16,8 +16,8 @@ let I = { TINY_24: 24, SMALL_32: 32, MEDIUM_40: 40 },
     E = { TINY_24: 24, SMALL_32: 26, MEDIUM_40: 34 },
     A = { TINY_24: [13, 11, 10], SMALL_32: [13, 11, 10], MEDIUM_40: [24, 20, 16] },
     f = { TINY_24: [9, 8, 7], SMALL_32: [12, 11, 9.5], MEDIUM_40: [14, 13, 11] },
-    p = { TINY_24: g.d7, SMALL_32: g.OI, MEDIUM_40: g.H5 },
-    S = { TINY_24: 12, SMALL_32: 16, MEDIUM_40: 20 };
+    S = { TINY_24: g.d7, SMALL_32: g.OI, MEDIUM_40: g.H5 },
+    p = { TINY_24: 12, SMALL_32: 16, MEDIUM_40: 20 };
 function N(e, t) {
     return 0 === e.length
         ? 0
@@ -38,7 +38,7 @@ let x = function (e) {
         D = E[m],
         b = I[m],
         j = (0, c.Iv)(T, 48),
-        k = S[m],
+        k = p[m],
         M =
             0 ===
             (n =
@@ -77,7 +77,7 @@ let x = function (e) {
                           }),
             }),
             (0, i.jsx)("div", {
-                className: s()(g._C, p[m], r),
+                className: s()(g._C, S[m], r),
                 "aria-hidden": !0,
                 children: (0, i.jsx)(d.Ay, {
                     mask: d.hW.SQUIRCLE,
@@ -85,12 +85,12 @@ let x = function (e) {
                     height: k,
                     children: _
                         ? (0, i.jsx)("div", {
-                              className: s()(p[m], g.WQ),
+                              className: s()(S[m], g.WQ),
                               style: { backgroundColor: y ?? v },
                               children: (0, i.jsx)(a.n, { dotRadius: k / 10 }),
                           })
                         : (0, i.jsx)("div", {
-                              className: s()(p[m], g.q9),
+                              className: s()(S[m], g.q9),
                               style: { fontSize: N(f[m], M) },
                               children: M,
                           }),

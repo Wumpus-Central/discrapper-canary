@@ -309,7 +309,7 @@ d.A.setGetKeybindList(() => {
     for (let t in v) v.hasOwnProperty(t) && e.push((0, f.dI)(v[t].shortcut));
     return e;
 });
-class Z extends l.Ay.DeviceSettingsStore {
+class q extends l.Ay.DeviceSettingsStore {
     static displayName = "KeybindsStore";
     static persistKey = "keybinds";
     static migrations = [
@@ -405,12 +405,12 @@ class Z extends l.Ay.DeviceSettingsStore {
         return this.getKeybindForAction(T.hCu.OVERLAY_ACTIVATE_REGION_TEXT_WIDGET, !0);
     }
 }
-let q = new Z(o.h, {
+let Z = new q(o.h, {
         CONNECTION_OPEN: z,
         LOGIN_SUCCESS: function () {
             return (
                 (async () => {
-                    await (0, I.AD)(), z() && q.emitChange();
+                    await (0, I.AD)(), z() && Z.emitChange();
                 })(),
                 !1
             );
@@ -456,4 +456,4 @@ let q = new Z(o.h, {
                 (M = !0);
         },
     }),
-    X = q;
+    X = Z;

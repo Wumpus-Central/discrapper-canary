@@ -4,13 +4,13 @@ n.d(t, {
     S_: () => j,
     w6: () => Y,
     od: () => K,
-    Ub: () => q,
+    Ub: () => Z,
     JD: () => J,
     zN: () => Q,
     tV: () => et,
     _2: () => X,
     kG: () => en,
-    Ye: () => Z,
+    Ye: () => q,
     uM: () => ee,
     nR: () => $,
     i_: () => W,
@@ -211,7 +211,7 @@ async function $(e) {
 function z(e) {
     W(e);
 }
-async function Z(e) {
+async function q(e) {
     if (!p.A.autoAddJoinedThreads || p.A.isFavorite(e)) return;
     let t = E.A.getChannel(e);
     null != t &&
@@ -220,7 +220,7 @@ async function Z(e) {
         (0, m.ad)().hasAccess &&
         (await H([e], { categoryName: D.A }, "auto_thread_join", { silent: !0 }));
 }
-function q(e) {
+function Z(e) {
     F({
         update: (t) => {
             if (

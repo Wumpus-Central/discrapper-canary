@@ -529,8 +529,8 @@ function b(e) {
             avatarCutoutWidth: K,
             avatarCutoutHeight: $,
             avatarCutoutRadius: z,
-            fill: Z,
-            ...q
+            fill: q,
+            ...Z
         } = (0, c.z)({ config: S, from: H, to: j }, N() ? "animate-always" : "animate-never"),
         X = (0, T.FT)(m),
         Q = (0, T.Kj)(m),
@@ -606,8 +606,8 @@ function b(e) {
                                 viewBox: `0 0 ${J} ${ee}`,
                                 className: M ? g.Oi : void 0,
                                 children: [
-                                    (0, _.pF)(q, Q.status, B),
-                                    (0, i.jsx)(l.animated.rect, { fill: Z, width: J, height: ee, mask: `url(#${B})` }),
+                                    (0, _.pF)(Z, Q.status, B),
+                                    (0, i.jsx)(l.animated.rect, { fill: q, width: J, height: ee, mask: `url(#${B})` }),
                                     (0, i.jsx)(u.C, {
                                         ref: A,
                                         location: "Avatar",

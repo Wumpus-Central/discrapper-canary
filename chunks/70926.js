@@ -21,32 +21,32 @@ var a = n(477900),
     N = n(975571),
     _ = n(474090),
     j = n(920050),
-    p = n(94264),
-    S = n(549384),
-    R = n(566119),
-    L = n(202541),
+    S = n(94264),
+    p = n(549384),
+    L = n(566119),
+    R = n(202541),
     O = n(652215),
     y = n(901123),
     T = n(131277),
     U = n(375708),
     k = n(226068),
     M = n(268920),
-    F = n(633217),
-    I = n(909340);
+    I = n(633217),
+    F = n(909340);
 function D() {
     return (0, a.jsx)("div", {
         className: k.s,
-        children: (0, a.jsx)(g.A, { src: F.A, fallbackImage: M.A, className: k.Cb }),
+        children: (0, a.jsx)(g.A, { src: I.A, fallbackImage: M.A, className: k.Cb }),
     });
 }
-function w() {
-    (0, R.RQ)(), (0, A.pX)(y.BV.NITRO_HOME, { search: (0, u.stringify)({ perk: j.NITRO_ORBS_REWARDS_CARD_ID }) });
-}
 function B() {
-    (0, R.gP)(), (0, A.pX)(y.BV.NITRO_HOME, { search: (0, u.stringify)({ section: S.L }) });
+    (0, L.RQ)(), (0, A.pX)(y.BV.NITRO_HOME, { search: (0, u.stringify)({ perk: j.NITRO_ORBS_REWARDS_CARD_ID }) });
+}
+function w() {
+    (0, L.gP)(), (0, A.pX)(y.BV.NITRO_HOME, { search: (0, u.stringify)({ section: p.L }) });
 }
 function P() {
-    (0, R.b)(), window.open(N.A.getArticleURL(O.MVz.ORBS_FAQ), "_blank");
+    (0, L.b)(), window.open(N.A.getArticleURL(O.MVz.ORBS_FAQ), "_blank");
 }
 function G(e) {
     let { targetElementRef: t, shouldShow: n, onRequestClose: s, ctaText: i, ctaOnClick: c } = e,
@@ -55,10 +55,10 @@ function G(e) {
         }),
         N = (0, d.bG)([b.default], () => b.default.getCurrentUser()),
         { balance: j } = (0, v.W)(),
-        S = !(0, _.ki)(N),
-        R = l.useMemo(() => {
-            let e = (0, _.YE)(N, L.PremiumTypes.TIER_2);
-            if (!u || S) return null;
+        p = !(0, _.ki)(N),
+        L = l.useMemo(() => {
+            let e = (0, _.YE)(N, R.PremiumTypes.TIER_2);
+            if (!u || p) return null;
             if (e && null != A) {
                 let e = (0, o.default)(new Date(A.next_reward_date), new Date());
                 return (0, a.jsxs)(a.Fragment, {
@@ -68,15 +68,15 @@ function G(e) {
                             color: "text-default",
                             children: U.intl.format(T.default["AvL/At"], {
                                 days: Math.max(1, e),
-                                deepLinkToNitroOrbs: w,
+                                deepLinkToNitroOrbs: B,
                             }),
                         }),
-                        (0, a.jsx)(p.A, {}),
+                        (0, a.jsx)(S.A, {}),
                     ],
                 });
             }
             return null;
-        }, [N, S, A, u]),
+        }, [N, p, A, u]),
         y = (j ?? 0) >= 4100;
     return (0, a.jsx)(h.x, {
         targetElementRef: t,
@@ -92,7 +92,7 @@ function G(e) {
                 (0, a.jsxs)("div", {
                     className: r()(e, k.j),
                     children: [
-                        y && (0, a.jsx)(g.A, { src: I.A, className: k.yG }),
+                        y && (0, a.jsx)(g.A, { src: F.A, className: k.yG }),
                         (0, a.jsxs)("div", {
                             className: k.Qs,
                             children: [
@@ -120,7 +120,7 @@ function G(e) {
                                                             }),
                                                         ],
                                                     }),
-                                                R,
+                                                L,
                                             ],
                                         }),
                                         (0, a.jsx)(f.$, {
@@ -132,10 +132,10 @@ function G(e) {
                                         }),
                                         (0, a.jsx)(C.E, {
                                             variant: "text-xs/normal",
-                                            color: S ? "text-default" : "text-muted",
+                                            color: p ? "text-default" : "text-muted",
                                             className: k.CU,
-                                            children: S
-                                                ? U.intl.format(T.default.juvXqj, { deepLinkToNitroOrbs: B })
+                                            children: p
+                                                ? U.intl.format(T.default.juvXqj, { deepLinkToNitroOrbs: w })
                                                 : U.intl.format(T.default.fhAVek, { helpdeskArticle: P }),
                                         }),
                                     ],
@@ -213,8 +213,8 @@ function en(e) {
         j = l.useCallback(() => {
             g && _();
         }, [g, _]),
-        p = (0, i.A)(null, j),
-        S = l.useMemo(
+        S = (0, i.A)(null, j),
+        p = l.useMemo(
             () =>
                 (0, a.jsx)(q.b, {
                     analyticsPage: o,
@@ -226,9 +226,9 @@ function en(e) {
                 }),
             [o, n, u, _, s],
         ),
-        R = (0, V.H)({ location: "BalanceWidgetMenu" }),
-        { hasUnreadUpdate: L } = (0, $.I)({ enabled: R }),
-        y = t ?? L,
+        L = (0, V.H)({ location: "BalanceWidgetMenu" }),
+        { hasUnreadUpdate: R } = (0, $.I)({ enabled: L }),
+        y = t ?? R,
         T = l.useMemo(
             () =>
                 (0, a.jsx)(Q, {
@@ -245,9 +245,9 @@ function en(e) {
         ),
         k = l.useCallback(
             (e, t) =>
-                R
+                L
                     ? e
-                        ? (0, a.jsx)(Z.EA, { cardRef: p, targetElementRef: N, shouldShow: e })
+                        ? (0, a.jsx)(Z.EA, { cardRef: S, targetElementRef: N, shouldShow: e })
                         : null
                     : C
                       ? (0, a.jsx)(G, {
@@ -262,11 +262,11 @@ function en(e) {
                       : e
                         ? (0, a.jsx)("div", {
                               className: r()(ee.Ui, d, { [ee.R]: t, [ee.RK]: !t }),
-                              ref: p,
-                              children: S,
+                              ref: S,
+                              children: p,
                           })
                         : null,
-            [R, S, d, p, N, _, n, s, C],
+            [L, p, d, S, N, _, n, s, C],
         );
     return (0, a.jsxs)("div", { className: r()(ee.kL, h, { [ee.R]: A, [ee.RK]: !A }), children: [T, k(g, A)] });
 }

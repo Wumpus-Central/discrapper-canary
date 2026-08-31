@@ -227,10 +227,10 @@ function $(e, t) {
 function z(e) {
     return y("has", Y(), e);
 }
-function Z(e) {
+function q(e) {
     return y("author_type", K(), e);
 }
-function q(e) {
+function Z(e) {
     let t = e.getMatch(1);
     return "true" === t ? (e.setData("pinned", !0), !0) : "false" === t && (e.setData("pinned", !1), !0);
 }
@@ -612,7 +612,7 @@ function ea(e) {
             componentType: "ANSWER",
             follows: [D.LWr.FILTER_PINNED],
             queryKey: "pinned",
-            validator: q,
+            validator: Z,
         },
         [D.LWr.FILTER_AUTHOR_TYPE]: {
             regex: B(v.intl.string(v.t.us8IQi)),
@@ -627,7 +627,7 @@ function ea(e) {
         [D.LWr.ANSWER_AUTHOR_TYPE]: {
             regex: L(t),
             follows: [D.LWr.FILTER_AUTHOR_TYPE],
-            validator: Z,
+            validator: q,
             componentType: "ANSWER",
             queryKey: "author_type",
         },

@@ -17,8 +17,8 @@ var l = n(477900),
     S = n(890497),
     y = n(398590),
     I = n(717398),
-    A = n(966327),
-    g = n(769015),
+    g = n(966327),
+    A = n(769015),
     P = n(242874),
     v = n(580194),
     x = n(219271),
@@ -78,7 +78,7 @@ function B(e) {
               className: F.EL,
               children: [
                   null != n
-                      ? (0, l.jsx)(g.A, { game: n, className: F.__invalid_icon, size: g.M.LARGE, skuId: Q() })
+                      ? (0, l.jsx)(A.A, { game: n, className: F.__invalid_icon, size: A.M.LARGE, skuId: Q() })
                       : null,
                   (0, l.jsx)(E.y, { type: E.t.PULSING_ELLIPSIS }),
               ],
@@ -89,7 +89,7 @@ function B(e) {
                       className: a()(F.EL, { [F.L1]: q }),
                       children: [
                           null != n
-                              ? (0, l.jsx)(g.A, { game: n, className: F.__invalid_icon, size: g.M.LARGE, skuId: Q() })
+                              ? (0, l.jsx)(A.A, { game: n, className: F.__invalid_icon, size: A.M.LARGE, skuId: Q() })
                               : null,
                           (0, l.jsx)(f.D, {
                               variant: "heading-lg/semibold",
@@ -107,7 +107,7 @@ function B(e) {
                                         (0, l.jsxs)("div", {
                                             className: F.jx,
                                             children: [
-                                                (0, l.jsx)(A.A, { user: P, size: h._3.SIZE_40 }),
+                                                (0, l.jsx)(g.A, { user: P, size: h._3.SIZE_40 }),
                                                 (0, l.jsxs)("div", {
                                                     className: F.gn,
                                                     children: [
@@ -223,8 +223,8 @@ function H(e) {
         })),
         E = Array.from(C.keys()).sort((e, t) => _.A.compare(e, t)),
         y = (0, u.bG)([N.A], () => N.A.getFriendIDs()),
-        g = o().difference(y, E),
-        v = [...E, ...g],
+        A = o().difference(y, E),
+        v = [...E, ...A],
         T = (0, u.bG)([j.default], () => j.default.filter((e) => v.includes(e.id) && !e.bot), [v]);
     if (null == T || 0 === T.length) return null;
     let b = o().sortBy(T, (e) => v.indexOf(e.id));
@@ -247,7 +247,7 @@ function H(e) {
                             id: e.id,
                             value: e,
                             label: `${L.Ay.getUserTag(e)}`,
-                            leading: (0, l.jsx)(A.A, { user: e, size: h._3.SIZE_20 }),
+                            leading: (0, l.jsx)(g.A, { user: e, size: h._3.SIZE_20 }),
                         })),
                     }),
                     (0, l.jsx)("div", {

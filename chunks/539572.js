@@ -341,7 +341,7 @@ async function z(e, t, i) {
         s.terminate();
     }
 }
-async function Z(e, t) {
+async function q(e, t) {
     let { width: n, height: i } = await $(e);
     if (t?.width != null && t?.height != null)
         return { width: Math.round(n * t.width), height: Math.round(i * t.height) };
@@ -352,7 +352,7 @@ async function Z(e, t) {
     }
     return { width: n, height: i };
 }
-async function q(e, t, n) {
+async function Z(e, t, n) {
     let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
         r = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 1 / 0,
         a = e
@@ -366,7 +366,7 @@ async function q(e, t, n) {
                 return n > t;
             });
     if (0 === a.length) return [];
-    let { width: s, height: l } = await Z(n, t),
+    let { width: s, height: l } = await q(n, t),
         o = await z(
             a.map((e) => {
                 let { track: t } = e;
@@ -1044,7 +1044,7 @@ async function ew(e, t) {
                     soundboardAudio: !0,
                 }),
                 crop: s ?? void 0,
-                tracks: await q(e.tracks ?? [], s, a.A.clips.getClipProtocolURLFromPath(e.filepath), l, o),
+                tracks: await Z(e.tracks ?? [], s, a.A.clips.getClipProtocolURLFromPath(e.filepath), l, o),
             };
         if (t.hasExportClipToFile() && (0, b.qi)("exportClip")) {
             let n = await a.A.app.getPath("temp"),

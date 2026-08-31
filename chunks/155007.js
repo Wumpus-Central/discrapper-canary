@@ -952,23 +952,23 @@ function e3(e) {
 }
 function e5() {
     return [
-        { key: "snail", Illocon: eY, tint: "var(--illo-yellow-40)", name: e4(R.default["2l3AEQ"]) },
-        { key: "goat", Illocon: eX, tint: "var(--illo-orange-40)", name: e4(R.default["+FPL+I"]) },
-        { key: "frog", Illocon: eK, tint: "var(--illo-green-40)", name: e4(R.default.w4GOfR) },
-        { key: "bunny", Illocon: eJ, tint: "var(--illo-pink-40)", name: e4(R.default.XmZT9M) },
-        { key: "cat", Illocon: eZ, tint: "var(--illo-pink-40)", name: e4(R.default.NnydwQ) },
-        { key: "caterpillar", Illocon: e0, tint: "var(--illo-green-40)", name: e4(R.default["4iXcNT"]) },
-        { key: "butterfly", Illocon: e1, tint: "var(--illo-purple-40)", name: e4(R.default.DoTGt5) },
-        { key: "dog", Illocon: e2, tint: "var(--illo-yellow-40)", name: e4(R.default["9zxqmP"]) },
-        { key: "spider", Illocon: e7, tint: "var(--illo-orange-40)", name: e4(R.default.HF0T3L) },
-        { key: "bee", Illocon: e6, tint: "var(--illo-yellow-40)", name: e4(R.default.XTzDga) },
-        { key: "bot", Illocon: e3, tint: "var(--illo-purple-40)", name: e4(R.default.abtC2b) },
+        { key: "snail", Illocon: eY, tint: "var(--illo-yellow-40)", name: e8(R.default["2l3AEQ"]) },
+        { key: "goat", Illocon: eX, tint: "var(--illo-orange-40)", name: e8(R.default["+FPL+I"]) },
+        { key: "frog", Illocon: eK, tint: "var(--illo-green-40)", name: e8(R.default.w4GOfR) },
+        { key: "bunny", Illocon: eJ, tint: "var(--illo-pink-40)", name: e8(R.default.XmZT9M) },
+        { key: "cat", Illocon: eZ, tint: "var(--illo-pink-40)", name: e8(R.default.NnydwQ) },
+        { key: "caterpillar", Illocon: e0, tint: "var(--illo-green-40)", name: e8(R.default["4iXcNT"]) },
+        { key: "butterfly", Illocon: e1, tint: "var(--illo-purple-40)", name: e8(R.default.DoTGt5) },
+        { key: "dog", Illocon: e2, tint: "var(--illo-yellow-40)", name: e8(R.default["9zxqmP"]) },
+        { key: "spider", Illocon: e7, tint: "var(--illo-orange-40)", name: e8(R.default.HF0T3L) },
+        { key: "bee", Illocon: e6, tint: "var(--illo-yellow-40)", name: e8(R.default.XTzDga) },
+        { key: "bot", Illocon: e3, tint: "var(--illo-purple-40)", name: e8(R.default.abtC2b) },
     ];
 }
-function e8(e) {
+function e4(e) {
     return e5().find((t) => t.key === e);
 }
-function e4(e) {
+function e8(e) {
     return P.intl.string(e);
 }
 function e9(e) {
@@ -1302,7 +1302,7 @@ function tg(e) {
     let t = e9(e.map((e) => e.taskId));
     return e.flatMap((e) => {
         if ("running" !== e.task.status) return [];
-        let n = null != e.task.helperMark ? e8(e.task.helperMark) : void 0,
+        let n = null != e.task.helperMark ? e4(e.task.helperMark) : void 0,
             l = n ?? t.get(e.taskId);
         return null == l
             ? []
@@ -1379,7 +1379,7 @@ function tp(e) {
                     connectsDown: b.length > 0,
                 }),
                 b.map((e, n) => {
-                    let l = null != e.task.helperMark ? e8(e.task.helperMark) : void 0,
+                    let l = null != e.task.helperMark ? e4(e.task.helperMark) : void 0,
                         i = l ?? y.get(e.taskId);
                     return null == i
                         ? null
@@ -2030,8 +2030,8 @@ var tZ = n(320095),
     t6 = n(438729),
     t3 = n(622868),
     t5 = n(308334),
-    t8 = n(837528),
-    t4 = n(375199),
+    t4 = n(837528),
+    t8 = n(432433),
     t9 = n(715628),
     ne = n(752636),
     nt = n(9842),
@@ -2185,7 +2185,7 @@ function nj(e, t) {
     return null != e && e > 0 ? new Date(e).toISOString() : t;
 }
 function nb(e, t, n) {
-    let { content: l } = (0, t4.A)(e, {
+    let { content: l } = (0, t8.A)(e, {
             hideSimpleEmbedContent: !0,
             allowList: !0,
             allowHeading: !0,
@@ -2203,8 +2203,8 @@ function ny(e) {
     let [t, n] = i.useState({ usernameProfile: !1, avatarProfile: !1 }),
         l = i.useCallback((e) => n((t) => ({ ...t, ...e })), []),
         r = i.useCallback(() => n({ usernameProfile: !1, avatarProfile: !1 }), []),
-        s = (0, t8.m)(e, np, t.usernameProfile, l),
-        o = (0, t8.Jo)(t.avatarProfile, l),
+        s = (0, t4.m)(e, np, t.usernameProfile, l),
+        o = (0, t4.Jo)(t.avatarProfile, l),
         u = (0, k.bG)([ni.A], () => ni.A.getGuildId()),
         d = (0, k.bG)([es.default], () => es.default.getCurrentUser()),
         c = i.useCallback(
@@ -3398,8 +3398,8 @@ function n6(e) {
 }
 var n3 = n(643278),
     n5 = n(191521),
-    n8 = n(405189);
-function n4(e) {
+    n4 = n(405189);
+function n8(e) {
     let { line: t, placement: n, todos: l, provisionalTodo: r, agents: o, onJumpToActivity: u } = e,
         d = null != n,
         [c, m] = i.useState(n ?? "top"),
@@ -3446,16 +3446,16 @@ function n4(e) {
         I = i.useCallback(() => v((e) => !e), []);
     return h
         ? (0, a.jsxs)("div", {
-              className: n8.qd,
+              className: n4.qd,
               "data-placement": c,
               "data-vibegrations-floating-activity": !0,
               children: [
                   (0, a.jsxs)("div", {
-                      className: s()(n8.vK, { [n8.ho]: g && d, [n8.ET]: !d }),
+                      className: s()(n4.vK, { [n4.ho]: g && d, [n4.ET]: !d }),
                       children: [
                           null == u
                               ? (0, a.jsx)("ol", {
-                                    className: s()(n8.Rk, tl.pj),
+                                    className: s()(n4.Rk, tl.pj),
                                     "data-live": "true",
                                     children: (0, a.jsx)(eQ.A, {
                                         glyph: (0, a.jsx)(n5.A, {}),
@@ -3465,11 +3465,11 @@ function n4(e) {
                                     }),
                                 })
                               : (0, a.jsx)(eS.D, {
-                                    className: n8.pZ,
+                                    className: n4.pZ,
                                     onClick: u,
                                     "aria-label": P.intl.string(R.default.tYjQFG),
                                     children: (0, a.jsx)("ol", {
-                                        className: s()(n8.Rk, tl.pj),
+                                        className: s()(n4.Rk, tl.pj),
                                         "data-live": "true",
                                         children: (0, a.jsx)(eQ.A, {
                                             glyph: (0, a.jsx)(n5.A, {}),
@@ -3484,7 +3484,7 @@ function n4(e) {
                                     text: P.intl.string(R.default.qCRC6c),
                                     ariaHidden: !0,
                                     children: (0, a.jsx)(eS.D, {
-                                        className: n8.BO,
+                                        className: n4.BO,
                                         onClick: I,
                                         "aria-expanded": x,
                                         "aria-label": P.intl.string(R.default.qCRC6c),
@@ -3501,7 +3501,7 @@ function n4(e) {
                   }),
                   y && S
                       ? (0, a.jsx)("div", {
-                            className: s()(n8.vB, { [n8.pg]: x && k, [n8.ui]: !x }),
+                            className: s()(n4.vB, { [n4.pg]: x && k, [n4.ui]: !x }),
                             children: (0, a.jsx)(tm, { todos: l, provisional: r, agents: o, announceProgress: !1 }),
                         })
                       : null,
@@ -3831,7 +3831,7 @@ function lj(e) {
         className: lx.TE,
         children: [
             (0, a.jsx)(lh, { open: null != B }),
-            (0, a.jsx)(n4, {
+            (0, a.jsx)(n8, {
                 onJumpToActivity: b,
                 line: K,
                 placement: H && "top" === V ? "top" : null,
@@ -3875,7 +3875,7 @@ function lj(e) {
             (0, a.jsxs)("div", {
                 className: lx.Jx,
                 children: [
-                    (0, a.jsx)(n4, {
+                    (0, a.jsx)(n8, {
                         onJumpToActivity: b,
                         line: K,
                         placement: H && "bottom" === V ? "bottom" : null,

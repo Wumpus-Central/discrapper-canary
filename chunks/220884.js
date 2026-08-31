@@ -1,4 +1,4 @@
-n.d(t, { j: () => p });
+n.d(t, { j: () => S });
 var l = n(477900),
     i = n(582128),
     r = n(17928),
@@ -15,12 +15,12 @@ var l = n(477900),
     E = n(652215),
     A = n(530478),
     f = n(375708);
-function p(e) {
+function S(e) {
     let {
             tab: t,
             targetId: n,
-            widgetType: p = E.uss.FRIENDS,
-            showTooltip: S = !0,
+            widgetType: S = E.uss.FRIENDS,
+            showTooltip: p = !0,
             shouldStopPropagation: N = !0,
             className: x,
         } = e,
@@ -41,7 +41,7 @@ function p(e) {
                 },
                 [l, t, n, r],
             );
-        })({ tab: t, targetId: n, shouldStopPropagation: N, widgetType: p }),
+        })({ tab: t, targetId: n, shouldStopPropagation: N, widgetType: S }),
         y = T ? s.StarIcon : a.y,
         C = (0, u.r)(o.A.colors.ICON_FEEDBACK_WARNING),
         v = (0, u.r)(o.A.colors.ICON_DEFAULT),
@@ -55,7 +55,7 @@ function p(e) {
                   : f.intl.string(A.default.iK1QsY);
     return (0, l.jsx)(h.S, {
         tooltipText: R,
-        showTooltip: S,
+        showTooltip: p,
         className: x,
         onClick: _,
         children: (0, l.jsx)(y, { size: "sm", color: T ? C.hex() : v.hex() }),

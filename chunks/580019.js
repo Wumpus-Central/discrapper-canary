@@ -1,10 +1,10 @@
-t.d(n, { D: () => s });
+t.d(n, { D: () => i });
 var l = t(477900);
 t(582128);
 var r = t(785562),
     a = t(379418);
-function s(e) {
+function i(e) {
     let { value: n, style: t } = e,
-        s = (0, a.EH)(String(n), t);
-    return null == s ? null : (0, l.jsx)(r.A, { node: s });
+        i = (0, a.EH)(String(n), t);
+    return null == i ? null : (0, l.jsx)(r.A, { node: i });
 }

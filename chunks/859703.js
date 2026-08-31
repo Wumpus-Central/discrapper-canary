@@ -76,10 +76,10 @@ function z(e, t) {
     let n = new Map(p);
     n.set(e, t), (p = n);
 }
-function Z(e) {
+function q(e) {
     null != m.get(e) && (m = new Map(m)).delete(e);
 }
-function q(e) {
+function Z(e) {
     let t = new Set(u);
     t.delete(e), (u = t);
 }
@@ -306,7 +306,7 @@ let et = new ee(M.h, {
         },
         QUESTS_SEND_HEARTBEAT_SUCCESS: function (e) {
             let { questId: t, streamKey: n, userStatus: i } = e;
-            f.add(t), $(t, { userStatus: i }), null != n && Z(n);
+            f.add(t), $(t, { userStatus: i }), null != n && q(n);
         },
         QUESTS_SEND_HEARTBEAT_FAILURE: function (e) {
             let { questId: t, streamKey: n } = e;
@@ -321,11 +321,11 @@ let et = new ee(M.h, {
         },
         QUESTS_ENROLL_SUCCESS: function (e) {
             let { enrolledQuestUserStatus: t } = e;
-            $(t.questId, { userStatus: t }), q(t.questId);
+            $(t.questId, { userStatus: t }), Z(t.questId);
         },
         QUESTS_ENROLL_FAILURE: function (e) {
             let { questId: t } = e;
-            q(t);
+            Z(t);
         },
         QUESTS_FETCH_REWARD_CODE_BEGIN: function (e) {
             let { questId: t } = e,
@@ -417,11 +417,11 @@ let et = new ee(M.h, {
         },
         STREAM_CLOSE: function (e) {
             let { streamKey: t } = e;
-            Z(t);
+            q(t);
         },
         QUESTS_DISMISS_PROGRESS_TRACKING_FAILURE_NOTICE: function (e) {
             let { streamKey: t } = e;
-            Z(t);
+            q(t);
         },
         QUESTS_PREVIEW_UPDATE_SUCCESS: function (e) {
             let { previewQuestUserStatus: t } = e;

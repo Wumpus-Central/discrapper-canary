@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Ay: () => Z, b5: () => j, wn: () => H }), n(938796);
+n.d(t, { Ay: () => q, b5: () => j, wn: () => H }), n(938796);
 var i = n(435558),
     r = n.n(i),
     a = n(665260),
@@ -370,7 +370,7 @@ class z extends s.Ay.PersistedStore {
               : p.e.UNSET;
     }
 }
-let Z = new z(l.h, {
+let q = new z(l.h, {
     USER_GUILD_SETTINGS_FULL_UPDATE: function (e) {
         let { userGuildSettings: t } = e;
         t.forEach((e) => {

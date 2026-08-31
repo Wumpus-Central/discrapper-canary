@@ -287,8 +287,8 @@ H.push(W);
 let K = BigInt(0),
     $ = BigInt(8),
     z = BigInt(16),
-    Z = BigInt(32),
-    q = BigInt(64),
+    q = BigInt(32),
+    Z = BigInt(64),
     X = BigInt(128),
     Q = BigInt(256),
     J = BigInt(65536),
@@ -521,7 +521,7 @@ let eI = new (class {
                             (this._u[this._i] = 110),
                             (this._u[this._i + 2] = +!!t),
                             this._v.setBigUint64(this._i + 3, n & es, !0),
-                            this._v.setBigUint64(this._i + 11, n >> q, !0);
+                            this._v.setBigUint64(this._i + 11, n >> Z, !0);
                         for (let e = 18; e > 10; e--)
                             if (0 !== this._u[this._i + e]) {
                                 (this._u[this._i + 1] = e - 2), (this._i += e + 1);
@@ -532,9 +532,9 @@ let eI = new (class {
                         let e = n >> X,
                             i = n & eo;
                         this._v.setBigUint64(this._i + 3, i & es, !0),
-                            this._v.setBigUint64(this._i + 11, i >> q, !0),
+                            this._v.setBigUint64(this._i + 11, i >> Z, !0),
                             this._v.setBigUint64(this._i + 19, e & es, !0),
-                            this._v.setBigUint64(this._i + 27, e >> q, !0);
+                            this._v.setBigUint64(this._i + 27, e >> Z, !0);
                         for (let e = 34; e > 18; e--)
                             if (0 !== this._u[this._i + e]) {
                                 (this._u[this._i + 1] = e - 2), (this._i += e + 1);
@@ -547,13 +547,13 @@ let eI = new (class {
                             let t = e & ec,
                                 n = t >> X,
                                 r = t & eo;
-                            i.push(r & es, r >> q, n & es, n >> q), (e >>= Q);
+                            i.push(r & es, r >> Z, n & es, n >> Z), (e >>= Q);
                         }
                         if (e > eo) {
                             let t = e >> X,
                                 n = e & eo;
-                            i.push(n & es, n >> q, t & es, t >> q);
-                        } else e > es ? i.push(e & es, e >> q) : e > K && i.push(e);
+                            i.push(n & es, n >> Z, t & es, t >> Z);
+                        } else e > es ? i.push(e & es, e >> Z) : e > K && i.push(e);
                         let r = i[i.length - 1],
                             a =
                                 8 * i.length -
@@ -965,9 +965,9 @@ let eI = new (class {
                         let e = t;
                         for (n = K; e > 0; )
                             e >= 8
-                                ? ((n <<= q), (n += this._v.getBigUint64(this._i + (e -= 8), !0)))
+                                ? ((n <<= Z), (n += this._v.getBigUint64(this._i + (e -= 8), !0)))
                                 : e >= 4
-                                  ? ((n <<= Z), (n += BigInt(this._v.getUint32(this._i + (e -= 4), !0))))
+                                  ? ((n <<= q), (n += BigInt(this._v.getUint32(this._i + (e -= 4), !0))))
                                   : e >= 2
                                     ? ((n <<= z), (n += BigInt(this._v.getUint16(this._i + (e -= 2), !0))))
                                     : ((n <<= $), (n += BigInt(this._d[this._i])), e--);
@@ -1476,13 +1476,13 @@ class ez extends eW {
                 (clearTimeout(this._flushIdleMaxTimeoutHandler), (this._flushIdleMaxTimeoutHandler = null));
     }
 }
-let eZ = (0, eE.mj)({
+let eq = (0, eE.mj)({
         name: "2026-08-voice-server-update-immediate",
         kind: "user",
         defaultConfig: { enabled: !1 },
         variations: { 1: { enabled: !0 } },
     }),
-    eq = new g.A("GatewaySocket"),
+    eZ = new g.A("GatewaySocket"),
     eX = new Set(["INITIAL_GUILD", "READY"]),
     eQ = new Set(["READY", "INITIAL_GUILD"]),
     eJ = new Set(["VOICE_SERVER_UPDATE", "STREAM_SERVER_UPDATE"]),
@@ -1561,7 +1561,7 @@ class e3 {
         return !1;
     }
     shouldFlushImmediately(e) {
-        return !!eQ.has(e) || (!!eJ.has(e) && (eZ?.getConfig({ location: "GatewaySocketDispatcher" }).enabled ?? !1));
+        return !!eQ.has(e) || (!!eJ.has(e) && (eq?.getConfig({ location: "GatewaySocketDispatcher" }).enabled ?? !1));
     }
     scheduleFlush(e) {
         !this.paused &&
@@ -1580,7 +1580,7 @@ class e3 {
             r = this.dispatchMultiple(i, e);
         r && this.scheduler.telemetry.timeEnd(eb.TIME_TO_QUEUE_EMPTY);
         let a = performance.now() - t;
-        return a > eF && !r && eq.log(`Dispatched ${i.length} messages in ${a}ms`), r;
+        return a > eF && !r && eZ.log(`Dispatched ${i.length} messages in ${a}ms`), r;
     };
     getDispatchTimings() {
         return e2;
@@ -1825,8 +1825,8 @@ class e3 {
 }
 n(938796);
 var e5 = n(143236),
-    e4 = n(873985),
-    e6 = n(935208),
+    e6 = n(873985),
+    e4 = n(935208),
     e7 =
         (((s = {})[(s.DISPATCH = 0)] = "DISPATCH"),
         (s[(s.HEARTBEAT = 1)] = "HEARTBEAT"),
@@ -1878,7 +1878,7 @@ class e8 extends e5.EventEmitter {
                 flags: d = 0,
             } = e,
             c = { guild_id: t, channel_id: n, self_mute: i, self_deaf: r, self_video: a, flags: d };
-        null != n && e4.A.shouldIncludePreferredRegion() && ((c.preferred_region = s), (c.preferred_regions = l)),
+        null != n && e6.A.shouldIncludePreferredRegion() && ((c.preferred_region = s), (c.preferred_regions = l)),
             null != o && (c.tracks = o?.map((e) => ({ type: e.type, rid: e.rid, quality: e.quality }))),
             this.send(e7.VOICE_STATE_UPDATE, c);
     }
@@ -1896,7 +1896,7 @@ class e8 extends e5.EventEmitter {
     updateGuildSubscriptions(e) {
         let t = {},
             n = 0;
-        e6.default.keys(e).forEach((i) => {
+        e4.default.keys(e).forEach((i) => {
             let r = e[i],
                 a = JSON.stringify([i, r]).length;
             n + a > 15360 && (this.send(e7.GUILD_SUBSCRIPTIONS_BULK, { subscriptions: t }), (t = {}), (n = 0)),

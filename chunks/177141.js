@@ -4,20 +4,20 @@ var i = n(536637),
     r = n(877624),
     s = n(17928),
     a = n(206959),
-    E = n(554146),
-    o = n(506774),
+    o = n(554146),
+    E = n(506774),
     c = n(228366),
-    _ = n(77729),
-    u = n(573648),
+    u = n(77729),
+    _ = n(573648),
     A = n(521790),
-    T = n(587895),
-    d = n(145643),
+    d = n(587895),
+    T = n(145643),
     I = n(826673),
     N = n(367727),
     R = n(532205),
-    O = n(487329),
+    C = n(487329),
     S = n(161518),
-    C = n(736056),
+    O = n(736056),
     D = n(952818),
     m = n(597643),
     P = n(652896),
@@ -35,25 +35,25 @@ var i = n(536637),
     j = n(243217),
     v = n(287809),
     q = n(158045);
-let X = !1;
-class b extends s.Ay.Store {
+let b = !1;
+class X extends s.Ay.Store {
     initialize() {
         this.waitFor(v.default);
     }
     static displayName = "SubscriptionRemindersStore";
     shouldShowReactivateNotice() {
         let e = v.default.getCurrentUser();
-        return !(0, q.TW)(e) && X;
+        return !(0, q.TW)(e) && b;
     }
 }
-let B = new b(c.h, {
+let B = new X(c.h, {
     BILLING_MOST_RECENT_SUBSCRIPTION_FETCH_SUCCESS: function (e) {
         let { subscription: t } = e;
         if (null != t) {
             let e = j.A.createFromServer(t);
             if (null == (0, q.EL)(e) || e.metadata?.ended_at == null) return;
             let n = l()(e.metadata.ended_at);
-            l()().isBetween(n.clone().add(4, "days"), n.clone().add(11, "days")) && (X = !0);
+            l()().isBetween(n.clone().add(4, "days"), n.clone().add(11, "days")) && (b = !0);
         }
     },
 });
@@ -61,13 +61,13 @@ var w = n(220038),
     F = n(580194),
     H = n(233317),
     V = n(862990),
-    Y = n(264779),
-    K = n(412260),
+    K = n(264779),
+    Y = n(412260),
     W = n(852218),
-    Z = n(859703),
-    z = n(988903),
-    $ = n(655116),
-    Q = n(105530),
+    Q = n(859703),
+    Z = n(988903),
+    z = n(655116),
+    $ = n(105530),
     J = n(935671),
     ee = n(742023),
     et = n(617617),
@@ -77,28 +77,28 @@ var w = n(220038),
     er = n(616356),
     es = n(280450),
     ea = n(347481),
-    eE = n(734057),
-    eo = n(30370);
+    eo = n(734057),
+    eE = n(30370);
 n(321073);
 var ec = n(435558),
-    e_ = n.n(ec),
-    eu = n(339048),
+    eu = n.n(ec),
+    e_ = n(339048),
     eA = n(830382),
-    eT = n(627363),
-    ed = n(469778),
+    ed = n(627363),
+    eT = n(469778),
     eI = n(67480),
     eN = n(652215);
 let eR = "DetectedOffPlatformPremiumPerksStore",
-    eO = {},
+    eC = {},
     eS = {},
-    eC = [];
+    eO = [];
 function eD() {
     let e = !1;
-    for (let { skuId: t, applicationId: n } of e_().values(eS)) {
-        if (eC.includes(t)) continue;
-        let i = T.A.getApplication(n);
+    for (let { skuId: t, applicationId: n } of eu().values(eS)) {
+        if (eO.includes(t)) continue;
+        let i = d.A.getApplication(n);
         if (null == i) {
-            T.A.isFetchingApplication(n) || T.A.didFetchingApplicationFail(n) || eT.Ay.fetchApplication(n);
+            d.A.isFetchingApplication(n) || d.A.didFetchingApplicationFail(n) || ed.Ay.fetchApplication(n);
             continue;
         }
         let l = eI.A.get(t);
@@ -106,26 +106,26 @@ function eD() {
             eI.A.isFetching(t) || eI.A.didFetchingSkuFail(t) || eA.EX(i.id, t);
             continue;
         }
-        ed.A.applicationIdsFetching.has(i.id) ||
-        ed.A.isEntitledToSku(v.default.getCurrentUser(), t, i.id, i.id) ||
+        eT.A.applicationIdsFetching.has(i.id) ||
+        eT.A.isEntitledToSku(v.default.getCurrentUser(), t, i.id, i.id) ||
         !l.available
-            ? null != eO[t] && (delete eO[t], (e = !0))
-            : ((eO[t] = { skuId: t, applicationId: n }), (e = !0));
+            ? null != eC[t] && (delete eC[t], (e = !0))
+            : ((eC[t] = { skuId: t, applicationId: n }), (e = !0));
     }
     return e;
 }
 class em extends s.Ay.Store {
     static displayName = "DetectedOffPlatformPremiumPerksStore";
     initialize() {
-        this.waitFor(T.A, ed.A, D.Ay, eI.A, v.default), (eC = o.w.get(eR) ?? eC);
+        this.waitFor(d.A, eT.A, D.Ay, eI.A, v.default), (eO = E.w.get(eR) ?? eO);
     }
     getDetectedOffPlatformPremiumPerks() {
-        return e_().values(eO);
+        return eu().values(eC);
     }
 }
 let eP = new em(c.h, {
     LOGOUT: function () {
-        (eO = {}), (eS = {});
+        (eC = {}), (eS = {});
     },
     SKU_FETCH_SUCCESS: eD,
     ENTITLEMENT_FETCH_APPLICATION_SUCCESS: eD,
@@ -133,8 +133,8 @@ let eP = new em(c.h, {
     APPLICATION_FETCH_SUCCESS: eD,
     DETECTED_OFF_PLATFORM_PREMIUM_PERKS_DISMISS: function (e) {
         let { skuId: t } = e;
-        if ((delete eO[t], eC.includes(t))) return !1;
-        eC.push(t), o.w.set(eR, eC);
+        if ((delete eC[t], eO.includes(t))) return !1;
+        eO.push(t), E.w.set(eR, eO);
     },
     RUNNING_GAMES_CHANGE: function () {
         let e = !1;
@@ -142,12 +142,12 @@ let eP = new em(c.h, {
             if (null != t && n !== eN.d3x.DISCORD)
                 for (let { skuId: n, applicationId: i } of eN.m_i)
                     i !== t ||
-                        eC.includes(n) ||
+                        eO.includes(n) ||
                         (null == eS[n] &&
-                            (ed.A.applicationIdsFetched.has(i) ||
-                                ed.A.applicationIdsFetching.has(i) ||
-                                null != ed.A.getForSku(n) ||
-                                eu.LM(i),
+                            (eT.A.applicationIdsFetched.has(i) ||
+                                eT.A.applicationIdsFetching.has(i) ||
+                                null != eT.A.getForSku(n) ||
+                                e_.LM(i),
                             (eS[n] = { skuId: n, applicationId: i }),
                             (e = !0)));
         return e && eD(), e;
@@ -167,49 +167,49 @@ var ep = n(696451),
     ej = n(351906),
     ev = n(274184),
     eq = n(870570),
-    eX = n(977997),
-    eb = n(295405),
+    eb = n(977997),
+    eX = n(295405),
     eB = n(166403),
     ew = n(354670),
     eF = n(147964),
     eH = n(723702),
     eV = n(19575),
-    eY = n(755439),
-    eK = n(422033),
+    eK = n(755439),
+    eY = n(422033),
     eW = n(966846);
 n(436317);
-var eZ = n(202541),
-    ez = n(88001),
-    e$ = n(190107),
-    eQ = n(818348),
+var eQ = n(202541),
+    eZ = n(88001),
+    ez = n(190107),
+    e$ = n(818348),
     eJ = n(731854);
 let e0 = {
-        [eN.kqX.DOWNLOAD_NAG]: E.M.NAGBAR_NOTICE_DOWNLOAD,
-        [eN.kqX.CONNECT_SPOTIFY]: E.M.NAGBAR_NOTICE_CONNECT_SPOTIFY,
-        [eN.kqX.CONNECT_PLAYSTATION]: E.M.NAGBAR_NOTICE_CONNECT_PLAYSTATION,
-        [eN.kqX.PASSKEY_BACKUP]: E.M.NAGBAR_NOTICE_PASSKEY_BACKUP,
-        [eN.kqX.PREMIUM_TIER_2_TRIAL_ENDING]: E.M.NAGBAR_NOTICE_PREMIUM_TIER_TWO_TRIAL_ENDING,
-        [eN.kqX.PREMIUM_REACTIVATE]: E.M.NAGBAR_NOTICE_PREMIUM_REACTIVATE,
-        [eN.kqX.BOUNCED_EMAIL_DETECTED]: E.M.NAGBAR_BOUNCED_EMAIL_NOTICE,
-        [eN.kqX.PREMIUM_TIER_0_TRIAL_ENDING]: E.M.NAGBAR_NOTICE_PREMIUM_TIER_0_TRIAL_ENDING,
-        [eN.kqX.CHECKOUT_RECOVERY_NAGBAR]: E.M.CHECKOUT_RECOVERY_NAGBAR,
-        [eN.kqX.QUEST_APP_UPSELL]: E.M.NAGBAR_QUEST_APP_UPSELL,
-        [eN.kqX.RIOT_MIGRATION]: E.M.RIOT_CONNECTION_DEPRECATION_DISABLE,
-        [eN.kqX.RIOT_CONNECTION_DEPRECATION_ADMIN]: E.M.RIOT_CONNECTION_DEPRECATION_ADMIN_DISABLE,
-        [eN.kqX.BATTLENET_MIGRATION]: E.M.BATTLENET_CONNECTION_DEPRECATION_DISABLE,
-        [eN.kqX.BATTLENET_LINKED_ROLE_DEPRECATION]: E.M.BATTLENET_CONNECTION_DEPRECATION_LINKED_ROLES_DISABLE,
-        [eN.kqX.COD_3PP_NAGBAR]: E.M.COD_3PP_NAGBAR_NOTICE,
+        [eN.kqX.DOWNLOAD_NAG]: o.M.NAGBAR_NOTICE_DOWNLOAD,
+        [eN.kqX.CONNECT_SPOTIFY]: o.M.NAGBAR_NOTICE_CONNECT_SPOTIFY,
+        [eN.kqX.CONNECT_PLAYSTATION]: o.M.NAGBAR_NOTICE_CONNECT_PLAYSTATION,
+        [eN.kqX.PASSKEY_BACKUP]: o.M.NAGBAR_NOTICE_PASSKEY_BACKUP,
+        [eN.kqX.PREMIUM_TIER_2_TRIAL_ENDING]: o.M.NAGBAR_NOTICE_PREMIUM_TIER_TWO_TRIAL_ENDING,
+        [eN.kqX.PREMIUM_REACTIVATE]: o.M.NAGBAR_NOTICE_PREMIUM_REACTIVATE,
+        [eN.kqX.BOUNCED_EMAIL_DETECTED]: o.M.NAGBAR_BOUNCED_EMAIL_NOTICE,
+        [eN.kqX.PREMIUM_TIER_0_TRIAL_ENDING]: o.M.NAGBAR_NOTICE_PREMIUM_TIER_0_TRIAL_ENDING,
+        [eN.kqX.CHECKOUT_RECOVERY_NAGBAR]: o.M.CHECKOUT_RECOVERY_NAGBAR,
+        [eN.kqX.QUEST_APP_UPSELL]: o.M.NAGBAR_QUEST_APP_UPSELL,
+        [eN.kqX.RIOT_MIGRATION]: o.M.RIOT_CONNECTION_DEPRECATION_DISABLE,
+        [eN.kqX.RIOT_CONNECTION_DEPRECATION_ADMIN]: o.M.RIOT_CONNECTION_DEPRECATION_ADMIN_DISABLE,
+        [eN.kqX.BATTLENET_MIGRATION]: o.M.BATTLENET_CONNECTION_DEPRECATION_DISABLE,
+        [eN.kqX.BATTLENET_LINKED_ROLE_DEPRECATION]: o.M.BATTLENET_CONNECTION_DEPRECATION_LINKED_ROLES_DISABLE,
+        [eN.kqX.COD_3PP_NAGBAR]: o.M.COD_3PP_NAGBAR_NOTICE,
     },
-    e1 = { [eN.kqX.GIFTING_PROMOTION_REMINDER]: E.M.GIFTING_PROMOTION_REMINDER },
+    e1 = { [eN.kqX.GIFTING_PROMOTION_REMINDER]: o.M.GIFTING_PROMOTION_REMINDER },
     e2 = {
-        [eN.kqX.PREMIUM_TIER_2_TRIAL_ENDING]: E.M.NAGBAR_NOTICE_OFFER_EXPIRING,
-        [eN.kqX.PREMIUM_TIER_2_DISCOUNT_ENDING]: E.M.NAGBAR_NOTICE_OFFER_EXPIRING,
-        [eN.kqX.RIOT_MIGRATION]: E.M.RIOT_CONNECTION_DEPRECATION,
-        [eN.kqX.RIOT_CONNECTION_DEPRECATION_ADMIN]: E.M.RIOT_CONNECTION_DEPRECATION_ADMIN,
-        [eN.kqX.BATTLENET_MIGRATION]: E.M.BATTLENET_CONNECTION_DEPRECATION,
-        [eN.kqX.BATTLENET_LINKED_ROLE_DEPRECATION]: E.M.BATTLENET_CONNECTION_DEPRECATION_LINKED_ROLES,
+        [eN.kqX.PREMIUM_TIER_2_TRIAL_ENDING]: o.M.NAGBAR_NOTICE_OFFER_EXPIRING,
+        [eN.kqX.PREMIUM_TIER_2_DISCOUNT_ENDING]: o.M.NAGBAR_NOTICE_OFFER_EXPIRING,
+        [eN.kqX.RIOT_MIGRATION]: o.M.RIOT_CONNECTION_DEPRECATION,
+        [eN.kqX.RIOT_CONNECTION_DEPRECATION_ADMIN]: o.M.RIOT_CONNECTION_DEPRECATION_ADMIN,
+        [eN.kqX.BATTLENET_MIGRATION]: o.M.BATTLENET_CONNECTION_DEPRECATION,
+        [eN.kqX.BATTLENET_LINKED_ROLE_DEPRECATION]: o.M.BATTLENET_CONNECTION_DEPRECATION_LINKED_ROLES,
     },
-    e5 = { [eN.kqX.OUTBOUND_PROMOTION]: E.M.THIRD_PARTY_OUTBOUND_PROMO_NAGBAR },
+    e5 = { [eN.kqX.OUTBOUND_PROMOTION]: o.M.THIRD_PARTY_OUTBOUND_PROMO_NAGBAR },
     e3 = {
         [eN.kqX.DETECTED_OFF_PLATFORM_PREMIUM_PERK_UPSELL]: "hideDetectedOffPlatformPremiumPerkUpsell",
         [eN.kqX.PREMIUM_UNCANCEL]: "hideUncancelReminder",
@@ -250,9 +250,9 @@ function te(e) {
 function tt(e, t, n) {
     if (null == e) return;
     let i = e3[e];
-    (null == i || t || o.w.set(i, !0), e7.has(e) && (e9[e] = !0), null != n && null != i)
-        ? o.w.set(te(e), n.format("YYYY-MM-DDTHH:mm:ss.SSSZ"))
-        : o.w.remove(te(e));
+    (null == i || t || E.w.set(i, !0), e7.has(e) && (e9[e] = !0), null != n && null != i)
+        ? E.w.set(te(e), n.format("YYYY-MM-DDTHH:mm:ss.SSSZ"))
+        : E.w.remove(te(e));
 }
 let tn = null;
 function ti() {
@@ -280,11 +280,11 @@ function tl(e) {
     let i = e3[e];
     if (null != i) {
         let t,
-            n = null != (t = o.w.get(te(e))) ? l()(t) : null;
+            n = null != (t = E.w.get(te(e))) ? l()(t) : null;
         if (null != n) return n?.isAfter(l()());
     }
     let r = e9[e];
-    return !!r || (null != i && "" !== i ? o.w.get(i) : !!e7.has(e) && r);
+    return !!r || (null != i && "" !== i ? E.w.get(i) : !!e7.has(e) && r);
 }
 let tr = [
     eN.kqX.QUARANTINED,
@@ -405,7 +405,7 @@ let ts = {
     [eN.kqX.INVITED_TO_SPEAK]: {
         predicate: (e) => {
             let { voiceState: t } = e;
-            return (0, Q.eY)(t) === Q.zF.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK;
+            return (0, $.eY)(t) === $.zF.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK;
         },
     },
     [eN.kqX.LURKING_GUILD]: {
@@ -416,8 +416,8 @@ let ts = {
     },
     [eN.kqX.VOICE_DISABLED]: { predicate: () => null != ey.A.getRemoteDisconnectVoiceChannelId() },
     [eN.kqX.VOICE_CONNECTED_LAST_SESSION]: { predicate: () => null != ey.A.getLastSessionVoiceChannelId() },
-    [eN.kqX.NO_INPUT_DETECTED]: { predicate: () => S.A.hasActiveErrorOfType(O.iy.NO_AUDIO_INPUT_DETECTED) },
-    [eN.kqX.NO_INPUT_DEVICES_DETECTED]: { predicate: () => S.A.hasActiveErrorOfType(O.iy.NO_INPUT_DEVICES) },
+    [eN.kqX.NO_INPUT_DETECTED]: { predicate: () => S.A.hasActiveErrorOfType(C.iy.NO_AUDIO_INPUT_DETECTED) },
+    [eN.kqX.NO_INPUT_DEVICES_DETECTED]: { predicate: () => S.A.hasActiveErrorOfType(C.iy.NO_INPUT_DEVICES) },
     [eN.kqX.VIDEO_BACKGROUND_UNAVAILABLE]: { predicate: () => ey.A.isConnected() && en.A.videoBackgroundUnavailable },
     [eN.kqX.HARDWARE_MUTE]: {
         predicate: () =>
@@ -440,14 +440,14 @@ let ts = {
             !!ei.A.getConfig({ location: "NoticeStore" }).showPTTNoKeybindWarning,
     },
     [eN.kqX.DISPATCH_ERROR]: {
-        predicate: () => null != eY.A.getLastError(),
-        metadata: () => ({ error: eY.A.getLastError() }),
+        predicate: () => null != eK.A.getLastError(),
+        metadata: () => ({ error: eK.A.getLastError() }),
     },
     [eN.kqX.DISPATCH_INSTALL_SCRIPT_PROGRESS]: {
-        predicate: () => null != eK.A.getLastProgress(),
-        metadata: () => eK.A.getLastProgress(),
+        predicate: () => null != eY.A.getLastProgress(),
+        metadata: () => eY.A.getLastProgress(),
     },
-    [eN.kqX.SPOTIFY_AUTO_PAUSED]: { predicate: () => $.A.wasAutoPaused() },
+    [eN.kqX.SPOTIFY_AUTO_PAUSED]: { predicate: () => z.A.wasAutoPaused() },
     [eN.kqX.UNCLAIMED_ACCOUNT]: {
         predicate: (e) => {
             let { currentUser: t } = e;
@@ -466,7 +466,7 @@ let ts = {
             );
         },
     },
-    [eN.kqX.OUTBOUND_PROMOTION]: { predicate: () => (0, Y.So)() },
+    [eN.kqX.OUTBOUND_PROMOTION]: { predicate: () => (0, K.So)() },
     [eN.kqX.CORRUPT_INSTALLATION]: {
         predicate: () => eH.isPlatformEmbedded && (!a.A.supported() || eW.A.isCorruptInstallation()),
     },
@@ -475,7 +475,7 @@ let ts = {
             let { voiceChannelId: t } = e;
             return (
                 null != t &&
-                eX.A.hasVideo(t) &&
+                eb.A.hasVideo(t) &&
                 !eg.Ay.supports(eJ.O5.VIDEO) &&
                 L.k.getConfig({ location: "NoticeStore.VIDEO_UNSUPPORTED_BROWSER" }).videoEnabled &&
                 !tl(eN.kqX.VIDEO_UNSUPPORTED_BROWSER)
@@ -519,19 +519,19 @@ let ts = {
     },
     [eN.kqX.CONNECT_SPOTIFY]: {
         predicate: () =>
-            !$.A.hasConnectedAccount() &&
-            D.Ay.isObservedAppRunning(u.A.get(eN.fg2.SPOTIFY).name) &&
+            !z.A.hasConnectedAccount() &&
+            D.Ay.isObservedAppRunning(_.A.get(eN.fg2.SPOTIFY).name) &&
             !tl(eN.kqX.CONNECT_SPOTIFY),
     },
     [eN.kqX.WIN32_DEPRECATED_MESSAGE]: {
-        predicate: () => _.A?.os.arch === "ia32" && _.A?.process.platform === "win32",
+        predicate: () => u.A?.os.arch === "ia32" && u.A?.process.platform === "win32",
         metadata: () => ({ dismissUntil: l()().add(5, "days").toDate() }),
     },
     [eN.kqX.WIN7_8_DEPRECATED_MESSAGE]: {
         predicate: () => {
-            if (_.A?.process.platform === "win32")
+            if (u.A?.process.platform === "win32")
                 try {
-                    if (parseInt(_.A?.os.release.split(".")[0]) >= 10) return !1;
+                    if (parseInt(u.A?.os.release.split(".")[0]) >= 10) return !1;
                     return !ti();
                 } catch (e) {}
             return !1;
@@ -540,9 +540,9 @@ let ts = {
     },
     [eN.kqX.WIN_COMPAT_MODE_MESSAGE]: {
         predicate: () => {
-            if (_.A?.process.platform === "win32")
+            if (u.A?.process.platform === "win32")
                 try {
-                    if (parseInt(_.A?.os.release.split(".")[0]) >= 10) return !1;
+                    if (parseInt(u.A?.os.release.split(".")[0]) >= 10) return !1;
                     return ti();
                 } catch (e) {}
             return !1;
@@ -551,9 +551,9 @@ let ts = {
     },
     [eN.kqX.MACOS_DEPRECATED_MESSAGE]: {
         predicate: () => {
-            if (_.A?.process.platform === "darwin")
+            if (u.A?.process.platform === "darwin")
                 try {
-                    return 21 > parseInt(_.A?.os.release.split(".")[0]);
+                    return 21 > parseInt(u.A?.os.release.split(".")[0]);
                 } catch (e) {}
             return !1;
         },
@@ -561,8 +561,8 @@ let ts = {
     },
     [eN.kqX.CONNECT_PLAYSTATION]: {
         predicate: () =>
-            eo.A.isSuggestedAccountType(eN.fg2.PLAYSTATION) &&
-            null == eo.A.getAccount(null, eN.fg2.PLAYSTATION) &&
+            eE.A.isSuggestedAccountType(eN.fg2.PLAYSTATION) &&
+            null == eE.A.getAccount(null, eN.fg2.PLAYSTATION) &&
             !tl(eN.kqX.CONNECT_PLAYSTATION),
     },
     [eN.kqX.PASSKEY_BACKUP]: {
@@ -573,17 +573,17 @@ let ts = {
     },
     [eN.kqX.PREMIUM_TIER_2_TRIAL_ENDING]: {
         predicate: () =>
-            ew.A.getAlmostExpiringTrialOffersForReminder([eZ.pe.TIER_2]).length > 0 &&
+            ew.A.getAlmostExpiringTrialOffersForReminder([eQ.pe.TIER_2]).length > 0 &&
             !tl(eN.kqX.PREMIUM_TIER_2_TRIAL_ENDING),
     },
     [eN.kqX.PREMIUM_TIER_0_TRIAL_ENDING]: {
         predicate: () =>
-            ew.A.getAlmostExpiringTrialOffersForReminder([eZ.pe.TIER_0]).length > 0 &&
+            ew.A.getAlmostExpiringTrialOffersForReminder([eQ.pe.TIER_0]).length > 0 &&
             !tl(eN.kqX.PREMIUM_TIER_0_TRIAL_ENDING),
     },
     [eN.kqX.PREMIUM_TIER_2_DISCOUNT_ENDING]: {
         predicate: () =>
-            ew.A.getAlmostExpiringDiscountOffersForReminder([eZ.pe.TIER_2]).length > 0 &&
+            ew.A.getAlmostExpiringDiscountOffersForReminder([eQ.pe.TIER_2]).length > 0 &&
             !tl(eN.kqX.PREMIUM_TIER_2_DISCOUNT_ENDING),
     },
     [eN.kqX.PREMIUM_UNCANCEL]: {
@@ -601,7 +601,7 @@ let ts = {
                     !s &&
                     i <= 7 &&
                     i >= 0 &&
-                    (0, q.YE)(n, eZ.PremiumTypes.TIER_2) &&
+                    (0, q.YE)(n, eQ.PremiumTypes.TIER_2) &&
                     !r &&
                     !n.hasFreePremium() &&
                     !t.isPurchasedExternally;
@@ -620,29 +620,29 @@ let ts = {
                 i = null != t ? l()(t.currentPeriodEnd).diff(l()().startOf("day"), "days") : 0,
                 r = null != t ? l()(t.currentPeriodEnd).diff(l()(t.currentPeriodStart).startOf("day"), "days") : 0,
                 s = null != t && l()(t.currentPeriodEnd).isBefore(l()()),
-                a = ed.A.applicationIdsFetched.has(eZ.tv),
-                E = ed.A.getForApplication(eZ.tv),
-                o = null != t ? (0, q.EL)(t) : null,
-                c = null != o ? q.Ay.getSkuIdForPlan(o.planId) : null,
-                _ =
-                    null != E &&
+                a = eT.A.applicationIdsFetched.has(eQ.tv),
+                o = eT.A.getForApplication(eQ.tv),
+                E = null != t ? (0, q.EL)(t) : null,
+                c = null != E ? q.Ay.getSkuIdForPlan(E.planId) : null,
+                u =
                     null != o &&
-                    Array.from(E).filter((e) => {
+                    null != E &&
+                    Array.from(o).filter((e) => {
                         let { skuId: t, consumed: n } = e;
                         return !n && t === c;
                     }).length > 0,
-                u =
+                _ =
                     null != t &&
                     i <= (r > 14 ? 7 : 2) &&
                     i >= 0 &&
                     t.status !== eN.Dmq.PAST_DUE &&
                     !s &&
                     a &&
-                    !_ &&
+                    !u &&
                     null === t.paymentSourceId &&
                     !n.hasFreePremium() &&
                     !t.isPurchasedExternally;
-            return !tl(eN.kqX.PREMIUM_MISSING_PAYMENT) && u;
+            return !tl(eN.kqX.PREMIUM_MISSING_PAYMENT) && _;
         },
         metadata: (e) => {
             let { premiumSubscription: t } = e,
@@ -654,7 +654,7 @@ let ts = {
     [eN.kqX.PREMIUM_PAST_DUE_INVALID_PAYMENT]: {
         predicate: (e) => {
             let { premiumSubscription: t, currentUser: n } = e,
-                i = null != t && null != t.paymentSourceId ? eb.A.getPaymentSource(t.paymentSourceId) : null,
+                i = null != t && null != t.paymentSourceId ? eX.A.getPaymentSource(t.paymentSourceId) : null,
                 r = null != t && l()(t.currentPeriodEnd).isBefore(l()()),
                 s =
                     null != t &&
@@ -694,7 +694,7 @@ let ts = {
         metadata: () => {
             if (null == eF.A.testModeApplicationId) return {};
             let e = eF.A.testModeApplicationId,
-                t = T.A.getApplication(e);
+                t = d.A.getApplication(e);
             return { applicationName: null != t ? t.name : e, applicationId: e };
         },
     },
@@ -703,8 +703,8 @@ let ts = {
         predicate: (e) => {
             let { premiumSubscription: t, currentUser: n } = e,
                 i = null != t && l()(t.currentPeriodEnd).isBefore(l()()),
-                r = null != t && null != t.paymentSourceId ? eb.A.getPaymentSource(t.paymentSourceId) : null,
-                s = null != r && eQ.AD.has(r.type),
+                r = null != t && null != t.paymentSourceId ? eX.A.getPaymentSource(t.paymentSourceId) : null,
+                s = null != r && e$.AD.has(r.type),
                 a =
                     null != t &&
                     t.status === eN.Dmq.PAST_DUE &&
@@ -751,8 +751,8 @@ let ts = {
             let e = er.A.getCurrentUserActiveStream();
             if (null == e) return !1;
             let t = (0, P._z)(e),
-                n = Z.A.getStreamHeartbeatFailure(t);
-            return null != n && Date.now() - n.firstFailedAt >= e$.tZ;
+                n = Q.A.getStreamHeartbeatFailure(t);
+            return null != n && Date.now() - n.firstFailedAt >= ez.tZ;
         },
         metadata: () => {
             let e = er.A.getCurrentUserActiveStream();
@@ -762,19 +762,19 @@ let ts = {
     [eN.kqX.CHECKOUT_RECOVERY_NAGBAR]: {
         predicate: (e) => {
             let { currentUser: t } = e,
-                n = eb.A.paymentSources ?? {};
+                n = eX.A.paymentSources ?? {};
             return G.A.getIsTargeted() && !(0, q.TW)(t) && 0 !== Object.keys(n).length;
         },
     },
     [eN.kqX.PREMIUM_MARKETING_NAGBAR]: {
         predicate: () => {
-            let e = K.A.getMarketingComponentByType(r.C.NAGBAR);
+            let e = Y.A.getMarketingComponentByType(r.C.NAGBAR);
             if (null == e) return !1;
             if (null == e.promotionId) return !0;
-            let t = K.A.getPromotionByTypeAndId(W.pt.MARKETING_MOMENT, e.promotionId);
+            let t = Y.A.getPromotionByTypeAndId(W.pt.MARKETING_MOMENT, e.promotionId);
             return (
                 !(null != t && t.endDate < new Date()) &&
-                !(0, I.u$)(E.M.PREMIUM_MARKETING_MOMENT_NAGBAR_UPSELL, e.promotionId).isDismissed
+                !(0, I.u$)(o.M.PREMIUM_MARKETING_MOMENT_NAGBAR_UPSELL, e.promotionId).isDismissed
             );
         },
     },
@@ -791,15 +791,15 @@ let ts = {
             if (null == n) return !1;
             let i = H.A.hasFetchedMembers(),
                 l = H.A.getNumAvailableInvites();
-            return (0, V.ux)(t, n) && i && l >= ez.Vu;
+            return (0, V.ux)(t, n) && i && l >= eZ.Vu;
         },
         metadata: () => ({ premiumSubscription: eB.A.getPremiumGroupSubscription() }),
     },
     [eN.kqX.BLOCK_USER_FEEDBACK_NAGBAR]: {
-        predicate: () => !tl(eN.kqX.BLOCK_USER_FEEDBACK_NAGBAR) && z.Cm(),
+        predicate: () => !tl(eN.kqX.BLOCK_USER_FEEDBACK_NAGBAR) && Z.Cm(),
         metadata: () => ({ dismissUntil: l()().add(180, "days").toDate(), sampleRate: 0.1 }),
     },
-    [eN.kqX.IGNORE_USER_FEEDBACK_NAGBAR]: { predicate: () => z.h6(), metadata: () => ({ sampleRate: 0.1 }) },
+    [eN.kqX.IGNORE_USER_FEEDBACK_NAGBAR]: { predicate: () => Z.h6(), metadata: () => ({ sampleRate: 0.1 }) },
     [eN.kqX.SYSTEM_SERVICE_WARNING]: {
         predicate: (e) => {
             let { voiceChannelId: t } = e;
@@ -826,19 +826,19 @@ let ts = {
         predicate: () =>
             !(
                 !eH.isPlatformEmbedded ||
-                _.A?.process.platform !== "win32" ||
+                u.A?.process.platform !== "win32" ||
                 tl(eN.kqX.WINDOWS_MEDIA_PACK_REQUIRED) ||
                 eV.Ay.getEnableHardwareAcceleration()
             ) && !1 === eg.Ay.isH264MfDecodeAvailable(),
     },
     [eN.kqX.RIOT_MIGRATION]: {
         predicate: () => {
-            let e = null != eo.A.getAccount(null, eN.fg2.RIOT_GAMES),
-                t = null != eo.A.getAccount(null, eN.fg2.LEAGUE_OF_LEGENDS);
-            if (tl(eN.kqX.RIOT_MIGRATION) || (0, I.k8)(E.M.RIOT_CONNECTION_DEPRECATION_DISABLE) || (!e && !t))
+            let e = null != eE.A.getAccount(null, eN.fg2.RIOT_GAMES),
+                t = null != eE.A.getAccount(null, eN.fg2.LEAGUE_OF_LEGENDS);
+            if (tl(eN.kqX.RIOT_MIGRATION) || (0, I.k8)(o.M.RIOT_CONNECTION_DEPRECATION_DISABLE) || (!e && !t))
                 return !1;
-            let n = u.A.get(eN.fg2.LEAGUE_OF_LEGENDS),
-                i = u.A.get(eN.fg2.RIOT_GAMES);
+            let n = _.A.get(eN.fg2.LEAGUE_OF_LEGENDS),
+                i = _.A.get(eN.fg2.RIOT_GAMES);
             return null != n.migrationData && null != i.migrationData;
         },
     },
@@ -849,19 +849,19 @@ let ts = {
                 currentUser: t,
                 selectedGuildId: n,
                 platformTypes: [eN.fg2.RIOT_GAMES, eN.fg2.LEAGUE_OF_LEGENDS],
-                dismissibleContent: E.M.RIOT_CONNECTION_DEPRECATION_ADMIN_DISABLE,
+                dismissibleContent: o.M.RIOT_CONNECTION_DEPRECATION_ADMIN_DISABLE,
                 noticeType: eN.kqX.RIOT_CONNECTION_DEPRECATION_ADMIN,
             });
         },
     },
     [eN.kqX.BATTLENET_MIGRATION]: {
         predicate: () => {
-            let e = u.A.get(eN.fg2.BATTLENET);
+            let e = _.A.get(eN.fg2.BATTLENET);
             return !(
                 !e.migrationData?.getMigrationExperimentEnabled("NoticeStore") ||
-                null == eo.A.getAccount(null, eN.fg2.BATTLENET) ||
+                null == eE.A.getAccount(null, eN.fg2.BATTLENET) ||
                 tl(eN.kqX.BATTLENET_MIGRATION) ||
-                (0, I.k8)(E.M.BATTLENET_CONNECTION_DEPRECATION_DISABLE)
+                (0, I.k8)(o.M.BATTLENET_CONNECTION_DEPRECATION_DISABLE)
             );
         },
     },
@@ -872,7 +872,7 @@ let ts = {
                 currentUser: t,
                 selectedGuildId: n,
                 platformTypes: [eN.fg2.BATTLENET],
-                dismissibleContent: E.M.BATTLENET_CONNECTION_DEPRECATION_LINKED_ROLES_DISABLE,
+                dismissibleContent: o.M.BATTLENET_CONNECTION_DEPRECATION_LINKED_ROLES_DISABLE,
                 noticeType: eN.kqX.BATTLENET_LINKED_ROLE_DEPRECATION,
             });
         },
@@ -886,7 +886,7 @@ function ta() {
     let t = eB.A.getPremiumSubscription(),
         n = ex.A.getGuildId(),
         i = ek.Ay.getVoiceChannelId(),
-        l = null != i ? eX.A.getVoiceStateForChannel(i) : null;
+        l = null != i ? eb.A.getVoiceStateForChannel(i) : null;
     for (let r of tr)
         if (
             null != ts[r] &&
@@ -910,37 +910,37 @@ function ta() {
         (tl(e4.type) || e) && (e4 = null);
     }
 }
-function tE() {
+function to() {
     return ej.A.enabled || delete e9[eN.kqX.STREAMER_MODE], ta();
 }
-class to extends s.Ay.Store {
+class tE extends s.Ay.Store {
     static displayName = "NoticeStore";
     initialize() {
         this.syncWith(
-            [S.A, ev.Ay, eL.A, eP, ex.A, K.A, ew.A, y.default, eo.A, et.A, f.A, Z.A, er.A, D.Ay, el.A, S.A, d.A, k.A],
+            [S.A, ev.Ay, eL.A, eP, ex.A, Y.A, ew.A, y.default, eE.A, et.A, f.A, Q.A, er.A, D.Ay, el.A, S.A, T.A, k.A],
             ta,
         ),
             this.waitFor(
                 S.A,
-                T.A,
+                d.A,
                 er.A,
                 es.default,
                 y.default,
                 ea.A,
-                eE.A,
-                G.A,
                 eo.A,
+                G.A,
+                eE.A,
                 eP,
-                eY.A,
                 eK.A,
+                eY.A,
                 eW.A,
-                ed.A,
-                C.A,
+                eT.A,
+                O.A,
                 m.A,
                 g.A,
                 f.A,
                 ep.Ay,
-                d.A,
+                T.A,
                 ef.A,
                 eM.A,
                 h.A,
@@ -948,17 +948,17 @@ class to extends s.Ay.Store {
                 eg.Ay,
                 eh.A,
                 k.A,
-                eb.A,
+                eX.A,
                 eU.A,
                 H.A,
                 eL.A,
-                K.A,
-                Z.A,
+                Y.A,
+                Q.A,
                 ey.A,
                 D.Ay,
                 ek.Ay,
                 ex.A,
-                $.A,
+                z.A,
                 eG.A,
                 ej.A,
                 B,
@@ -971,7 +971,7 @@ class to extends s.Ay.Store {
                 et.A,
                 v.default,
                 en.A,
-                eX.A,
+                eb.A,
                 el.A,
             );
     }
@@ -985,7 +985,7 @@ class to extends s.Ay.Store {
         return tl(e);
     }
 }
-let tc = new to(c.h, {
+let tc = new tE(c.h, {
     CURRENT_USER_UPDATE: ta,
     MEDIA_ENGINE_SET_AUDIO_ENABLED: ta,
     CLEAR_REMOTE_DISCONNECT_VOICE_CHANNEL_ID: ta,
@@ -1040,8 +1040,8 @@ let tc = new to(c.h, {
             ta()
         );
     },
-    STREAMER_MODE_UPDATE: tE,
-    RUNNING_STREAMER_TOOLS_CHANGE: tE,
+    STREAMER_MODE_UPDATE: to,
+    RUNNING_STREAMER_TOOLS_CHANGE: to,
     DISPATCH_APPLICATION_ERROR: function () {
         return delete e9[eN.kqX.DISPATCH_ERROR], ta();
     },

@@ -1,23 +1,23 @@
-n.d(t, { $: () => K, D: () => Y });
+n.d(t, { $: () => Y, D: () => K });
 var i = n(477900),
     l = n(582128),
     r = n(536637),
     s = n.n(r),
     a = n(554146),
-    E = n(573648),
-    o = n(503698),
-    c = n.n(o),
-    _ = n(17928);
-if (221552 == n.j) var u = n(192308);
+    o = n(573648),
+    E = n(503698),
+    c = n.n(E),
+    u = n(17928);
+if (221552 == n.j) var _ = n(192308);
 if (221552 == n.j) var A = n(417098);
-if (221552 == n.j) var T = n(318254);
-if (221552 == n.j) var d = n(661531);
+if (221552 == n.j) var d = n(318254);
+if (221552 == n.j) var T = n(661531);
 var I = n(736653),
     N = n(793574),
     R = n(688810),
-    O = n(429913),
+    C = n(429913),
     S = n(30370),
-    C = n(772680),
+    O = n(772680),
     D = n(281020),
     m = n(206828),
     P = n(49999),
@@ -32,17 +32,17 @@ let g =
                       recurringDismiss: r,
                       platformTypes: s,
                       platformIconOverride: a,
-                      noticeType: o,
+                      noticeType: E,
                   } = e,
-                  g = (0, _.bG)([S.A], () => S.A.getAccounts().find((e) => s.includes(e.type))?.type),
+                  g = (0, u.bG)([S.A], () => S.A.getAccounts().find((e) => s.includes(e.type))?.type),
                   h = (0, I.Ay)(),
-                  U = null != g ? E.A.get(g) : null,
+                  U = null != g ? o.A.get(g) : null,
                   L = U?.migrationData?.replacedBy,
-                  y = (0, O.h)(L),
+                  y = (0, C.h)(L),
                   k = y?.name,
                   { startAuthorization: x, canStartAuthorization: G, hasAlreadyLinked: j, fetched: v } = (0, m.RD)(y),
                   { analyticsLocations: q } = (0, R.Ay)(N.A.NOTICE),
-                  X = null == a ? U : a;
+                  b = null == a ? U : a;
               if (
                   (l.useEffect(() => {
                       j && v && (null != L && (0, D.M8)(L), t(P.i.INDIRECT_ACTION));
@@ -50,12 +50,12 @@ let g =
                   null == y || !G || !v || j)
               )
                   return null;
-              function b() {
+              function X() {
                   null != y &&
-                      (0, C.RI)({
+                      (0, O.RI)({
                           applicationId: y.id,
                           onSuccess: () => {
-                              (0, u.openModalLazy)(async () => {
+                              (0, _.openModalLazy)(async () => {
                                   let { default: e } = await Promise.all([n.e("380339"), n.e("289387")]).then(
                                       n.bind(n, 494886),
                                   );
@@ -68,32 +68,32 @@ let g =
                   color: A.Hv.WARNING,
                   children: [
                       (0, i.jsx)(A.PM, {
-                          noticeType: o,
+                          noticeType: E,
                           onClick: () => {
                               t(P.i.USER_DISMISS);
                           },
                       }),
                       (0, i.jsx)("img", {
-                          src: "light" === h ? X?.icon.blackSVG : X?.icon.whiteSVG,
+                          src: "light" === h ? b?.icon.blackSVG : b?.icon.whiteSVG,
                           alt: k,
                           className: c()(M.tV, M.Y5),
                       }),
                       f.intl.format(p.default.qV9zT6, {
                           connectionName: U?.name,
                           orbsIconHook: () =>
-                              (0, i.jsx)(T.C, {
+                              (0, i.jsx)(d.C, {
                                   size: "xs",
                                   style: { verticalAlign: "-0.22em" },
-                                  color: d.A.colors.NOTICE_TEXT_WARNING,
+                                  color: T.A.colors.NOTICE_TEXT_WARNING,
                               }),
                           orbCount: 200,
                       }),
                       (0, i.jsx)(A.Z_, {
                           onClick: function () {
-                              x({ analyticsLocations: q, onSuccess: b });
+                              x({ analyticsLocations: q, onSuccess: X });
                           },
                           className: M.NS,
-                          noticeType: o,
+                          noticeType: E,
                           children: f.intl.string(p.default.ZeOhh9),
                       }),
                       (0, i.jsx)(A.zr, {
@@ -115,8 +115,8 @@ var h = n(521790),
     j = n(635995),
     v = n(99462),
     q = n(202541),
-    X = n(652215);
-let b =
+    b = n(652215);
+let X =
     221552 == n.j
         ? function (e) {
               let { dismissCurrentNotice: t, subscriptionTier: n } = e,
@@ -131,8 +131,8 @@ let b =
                   : (0, i.jsxs)(j.T0, {
                         onClick: () => {
                             t(),
-                                k.default.track(X.HAw.APP_NOTICE_CLOSED, {
-                                    notice_type: X.kqX.PREMIUM_TIER_2_DISCOUNT_ENDING,
+                                k.default.track(b.HAw.APP_NOTICE_CLOSED, {
+                                    notice_type: b.kqX.PREMIUM_TIER_2_DISCOUNT_ENDING,
                                 });
                         },
                         children: [
@@ -143,9 +143,9 @@ let b =
                                         subscriptionTier: n,
                                         analyticsLocations: l,
                                         analyticsObject: {
-                                            page: X.liQ.IN_APP,
-                                            section: X.JJy.NOTIFICATION_BAR,
-                                            object: X.ZSU.BUTTON_CTA,
+                                            page: b.liQ.IN_APP,
+                                            section: b.JJy.NOTIFICATION_BAR,
+                                            object: b.ZSU.BUTTON_CTA,
                                         },
                                     });
                                 },
@@ -160,91 +160,91 @@ var B = n(745299),
     F = n(158045),
     H = n(826673),
     V = n(595529);
-function Y(e) {
+function K(e) {
     switch (e) {
-        case X.kqX.PREMIUM_TIER_2_TRIAL_ENDING:
+        case b.kqX.PREMIUM_TIER_2_TRIAL_ENDING:
             let t = w.A.getAlmostExpiringTrialOffersForReminder([q.pe.TIER_2]);
             return { cooldownDurationMs: (0, F.e1)(t[0]) };
-        case X.kqX.PREMIUM_TIER_2_DISCOUNT_ENDING:
+        case b.kqX.PREMIUM_TIER_2_DISCOUNT_ENDING:
             let n = w.A.getAlmostExpiringDiscountOffersForReminder([q.pe.TIER_2]);
             return { cooldownDurationMs: (0, F.e1)(n[0]) };
-        case X.kqX.RIOT_MIGRATION:
-        case X.kqX.RIOT_CONNECTION_DEPRECATION_ADMIN:
-        case X.kqX.BATTLENET_MIGRATION:
-        case X.kqX.BATTLENET_LINKED_ROLE_DEPRECATION:
+        case b.kqX.RIOT_MIGRATION:
+        case b.kqX.RIOT_CONNECTION_DEPRECATION_ADMIN:
+        case b.kqX.BATTLENET_MIGRATION:
+        case b.kqX.BATTLENET_LINKED_ROLE_DEPRECATION:
             return { cooldownDurationMs: 6048e5 };
         default:
             return { cooldownDurationMs: 1 / 0 };
     }
 }
-function K(e) {
+function Y(e) {
     let { dismissibleContent: t, noticeType: n } = e,
-        r = l.useMemo(() => Y(n), [n]),
-        o = s()().add(5, "days").toDate(),
-        [c, _] = (0, V.Bo)(t, r, P.m.NOTICE_BAR);
+        r = l.useMemo(() => K(n), [n]),
+        E = s()().add(5, "days").toDate(),
+        [c, u] = (0, V.Bo)(t, r, P.m.NOTICE_BAR);
     if (null == c) return null;
     switch (c) {
         case a.M.NAGBAR_NOTICE_OFFER_EXPIRING:
-            if (n === X.kqX.PREMIUM_TIER_2_TRIAL_ENDING)
+            if (n === b.kqX.PREMIUM_TIER_2_TRIAL_ENDING)
                 return (0, i.jsx)(B.A, {
                     dismissCurrentNotice: () => {
-                        _(P.i.USER_DISMISS), (0, U.w)(o);
+                        u(P.i.USER_DISMISS), (0, U.w)(E);
                     },
                     subscriptionTier: q.pe.TIER_2,
                 });
-            if (n === X.kqX.PREMIUM_TIER_2_DISCOUNT_ENDING)
-                return (0, i.jsx)(b, {
+            if (n === b.kqX.PREMIUM_TIER_2_DISCOUNT_ENDING)
+                return (0, i.jsx)(X, {
                     dismissCurrentNotice: () => {
-                        _(P.i.USER_DISMISS), (0, U.w)(o);
+                        u(P.i.USER_DISMISS), (0, U.w)(E);
                     },
                     subscriptionTier: q.pe.TIER_2,
                 });
             break;
         case a.M.RIOT_CONNECTION_DEPRECATION:
             return (0, i.jsx)(g, {
-                noticeType: X.kqX.RIOT_MIGRATION,
+                noticeType: b.kqX.RIOT_MIGRATION,
                 markAsDismissed: (e) => {
-                    (0, H.Dr)(a.M.RIOT_CONNECTION_DEPRECATION_DISABLE), _(e);
+                    (0, H.Dr)(a.M.RIOT_CONNECTION_DEPRECATION_DISABLE), u(e);
                 },
                 recurringDismiss: (e) => {
-                    _(e);
+                    u(e);
                 },
-                platformTypes: [X.fg2.LEAGUE_OF_LEGENDS, X.fg2.RIOT_GAMES],
-                platformIconOverride: E.A.get(X.fg2.RIOT_GAMES),
+                platformTypes: [b.fg2.LEAGUE_OF_LEGENDS, b.fg2.RIOT_GAMES],
+                platformIconOverride: o.A.get(b.fg2.RIOT_GAMES),
             });
         case a.M.RIOT_CONNECTION_DEPRECATION_ADMIN:
             return (0, i.jsx)(h.Ay, {
-                noticeType: X.kqX.RIOT_CONNECTION_DEPRECATION_ADMIN,
+                noticeType: b.kqX.RIOT_CONNECTION_DEPRECATION_ADMIN,
                 markAsDismissed: (e) => {
-                    (0, H.Dr)(a.M.RIOT_CONNECTION_DEPRECATION_ADMIN_DISABLE), _(e);
+                    (0, H.Dr)(a.M.RIOT_CONNECTION_DEPRECATION_ADMIN_DISABLE), u(e);
                 },
                 recurringDismiss: (e) => {
-                    _(e);
+                    u(e);
                 },
-                platformType: X.fg2.RIOT_GAMES,
+                platformType: b.fg2.RIOT_GAMES,
             });
         case a.M.BATTLENET_CONNECTION_DEPRECATION:
             return (0, i.jsx)(g, {
-                noticeType: X.kqX.BATTLENET_MIGRATION,
+                noticeType: b.kqX.BATTLENET_MIGRATION,
                 markAsDismissed: (e) => {
-                    (0, H.Dr)(a.M.BATTLENET_CONNECTION_DEPRECATION_DISABLE), _(e);
+                    (0, H.Dr)(a.M.BATTLENET_CONNECTION_DEPRECATION_DISABLE), u(e);
                 },
                 recurringDismiss: (e) => {
-                    _(e);
+                    u(e);
                 },
-                platformTypes: [X.fg2.BATTLENET],
-                platformIconOverride: E.A.get(X.fg2.BATTLENET),
+                platformTypes: [b.fg2.BATTLENET],
+                platformIconOverride: o.A.get(b.fg2.BATTLENET),
             });
         case a.M.BATTLENET_CONNECTION_DEPRECATION_LINKED_ROLES:
             return (0, i.jsx)(h.Ay, {
-                noticeType: X.kqX.BATTLENET_LINKED_ROLE_DEPRECATION,
+                noticeType: b.kqX.BATTLENET_LINKED_ROLE_DEPRECATION,
                 markAsDismissed: (e) => {
-                    (0, H.Dr)(a.M.BATTLENET_CONNECTION_DEPRECATION_LINKED_ROLES_DISABLE), _(e);
+                    (0, H.Dr)(a.M.BATTLENET_CONNECTION_DEPRECATION_LINKED_ROLES_DISABLE), u(e);
                 },
                 recurringDismiss: (e) => {
-                    _(e);
+                    u(e);
                 },
-                platformType: X.fg2.BATTLENET,
+                platformType: b.fg2.BATTLENET,
             });
     }
 }

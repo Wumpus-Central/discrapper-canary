@@ -1,6 +1,6 @@
 "use strict";
 let i;
-n.d(t, { A: () => q });
+n.d(t, { A: () => Z });
 var r = n(506774),
     a = n(228366),
     s = n(157559),
@@ -224,7 +224,7 @@ function z() {
     if (null == e) return !1;
     l.A.fetchNewLocalMessages(e, L.EMb);
 }
-class Z extends d.A {
+class q extends d.A {
     fetchMessages = M;
     loadSelectedChannelIfNecessary = G;
     stores = new Map().set(p.Ay, B);
@@ -252,4 +252,4 @@ class Z extends d.A {
         a.h.unsubscribe("CONNECTION_OPEN", w);
     }
 }
-let q = new Z();
+let Z = new q();

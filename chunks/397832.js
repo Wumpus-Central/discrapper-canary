@@ -17,8 +17,8 @@ var l = n(477900),
     S = n(558620),
     y = n(669510),
     I = n(683071),
-    A = n(834730),
-    g = n(212739);
+    g = n(834730),
+    A = n(212739);
 n(216238);
 var P = n(202541),
     v = n(763430),
@@ -90,12 +90,12 @@ function K(e) {
                       alt: "",
                       src: "https://cdn.discordapp.com/assets/content/b6d1d954e5c9ccfd2356d7af86ca2a4a59717635cc6f558f731edb2e6046b25c.png",
                   }),
-                  title: (0, l.jsx)(A.E, {
+                  title: (0, l.jsx)(g.E, {
                       variant: "text-md/medium",
                       color: "text-strong",
                       children: x.intl.formatToPlainString(x.t.vXqqUc, { orbCount: 5e3 }),
                   }),
-                  body: (0, l.jsx)(A.E, {
+                  body: (0, l.jsx)(g.E, {
                       variant: "text-sm/medium",
                       color: "text-muted",
                       children: x.intl.string(x.t.Ev7DO6),
@@ -179,8 +179,8 @@ function $(e) {
                         { isGift: y } = (0, C.Pv)(),
                         {
                             subscriptionPlan: I,
-                            purchaseDisabled: A,
-                            newItems: g,
+                            purchaseDisabled: g,
+                            newItems: A,
                             preventInvoiceFetch: P,
                         } = (0, f.TP)({ selectedPlanId: t, priceOptions: n }),
                         {
@@ -188,7 +188,7 @@ function $(e) {
                             checkoutInvoiceRequestParams: x,
                             renewalInvoiceRequestParams: _,
                         } = (0, f.jq)({
-                            items: g,
+                            items: A,
                             preventFetch: P,
                             priceOptions: n,
                             trialId: l,
@@ -231,7 +231,7 @@ function $(e) {
                         discriminatedInvoicePreview: O,
                         proratedInvoicePreview: b,
                         renewalInvoicePreview: m,
-                        purchaseDisabled: A,
+                        purchaseDisabled: g,
                         invoiceError: R,
                         subscriptionPeriodEnd: L,
                     };
@@ -249,8 +249,8 @@ function $(e) {
         { giftRecipient: eE, selectedGiftingPromotionRewards: eS } = (0, C.Pv)(),
         ey = J && (0, R.Ik)(eE),
         eI = (0, h.t4)((e) => e.getIsInOneStepSubscriptionCheckout({ isTrial: ec })) && !eu && !ee,
-        eA = U?.guild_id ?? void 0,
-        eg = (0, a.A)({ forceFetch: !1, excludeReverseTrial: !1, excludeReverseTrialFromCountdown: !0 }),
+        eg = U?.guild_id ?? void 0,
+        eA = (0, a.A)({ forceFetch: !1, excludeReverseTrial: !1, excludeReverseTrialFromCountdown: !0 }),
         { paymentSources: eP } = (0, c.j)(),
         {
             hasEntitlements: ev,
@@ -295,7 +295,7 @@ function $(e) {
         eR = (0, T.V)($),
         { copy: eM, daysCount: eO, userTrialOffer: eL } = (0, N.O8)(),
         ek = (0, w.pt)({
-            fractionalPremiumInfo: eg,
+            fractionalPremiumInfo: eA,
             selectedPlanId: er,
             planGroup: n,
             premiumSubscription: X,
@@ -327,14 +327,14 @@ function $(e) {
         }, [eL, eb, ef, eO, ed, eU, ew]),
         eB = (function (e) {
             let { skuId: t, isGift: n } = e,
-                r = (0, g.O)();
+                r = (0, A.O)();
             return i.useMemo(
                 () =>
                     n || t !== P.pe.TIER_2 || !1 === r
                         ? null
                         : (0, l.jsx)(I.w, {
                               type: "info",
-                              children: (0, l.jsx)(A.E, {
+                              children: (0, l.jsx)(g.E, {
                                   variant: "text-sm/medium",
                                   children: x.intl.format(v.default.Urtyu9, { days: 7 }),
                               }),
@@ -356,7 +356,7 @@ function $(e) {
                 ek
                     ? e.push({
                           directContent: (0, l.jsx)(H.l, {
-                              fractionalPremiumInfo: eg,
+                              fractionalPremiumInfo: eA,
                               isEligibleForTrial: ea,
                               trialPeriodCopy: eM,
                               subscriptionPeriodEnd: em,
@@ -367,7 +367,7 @@ function $(e) {
                 null != eB && e.push({ directContent: eB, key: "xbox-perks-notice" }),
                 e.length > 0 ? e : null
             );
-        }, [D, eT, ek, eg, ea, eM, em, eu, eB]),
+        }, [D, eT, ek, eA, ea, eM, em, eu, eB]),
         eK = null != ed ? ed.invoicePreview : null,
         { priceOptions: eZ, planPricesLoading: eq } = (0, M.Pr)(Y, eK, V),
         ez = {
@@ -411,7 +411,7 @@ function $(e) {
         let e = (0, z.Gj)(ed.invoicePreview, ed.renewalInvoicePreview, eQ, {
             discountOffer: ef,
             isSubscriptionUpdate: null != X,
-            fractionalPremiumInfo: eg,
+            fractionalPremiumInfo: eA,
         });
         eJ = (0, l.jsx)(y._, { ...e, defaultExpanded: en });
     }
@@ -425,7 +425,7 @@ function $(e) {
                   isPrepaidPaymentSource: e_,
                   giftRecipient: eE,
                   isPremiumGroupPurchase: eu,
-                  guildId: eA,
+                  guildId: eg,
               }),
         e0 = (0, l.jsx)(H.P, {
             activeSubscription: X,
@@ -434,7 +434,7 @@ function $(e) {
             isGift: J,
             paymentSourceType: ex,
             discriminatedInvoicePreview: ed,
-            fractionalPremiumInfo: eg,
+            fractionalPremiumInfo: eA,
         }),
         e1 =
             ed.type === d.u$.PREMIUM_WITH_TRIAL

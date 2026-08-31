@@ -8,7 +8,7 @@ n.d(t, {
     Sx: () => ef,
     XC: () => ea,
     ZA: () => el,
-    Zn: () => Z,
+    Zn: () => q,
 }),
     n(321073),
     n(938796);
@@ -95,7 +95,7 @@ function z() {
     for (let e of Object.values(ee.indices)) e.fetchState.fetching && e.fetchState.abort.abort();
     ee.indices = {};
 }
-async function Z(e) {
+async function q(e) {
     let t = Y(e),
         n = ee.indices[t] ?? B;
     if (!eu(n)) {
@@ -105,9 +105,9 @@ async function Z(e) {
         }
         return n;
     }
-    return await q(e), ee.indices[t] ?? B;
+    return await Z(e), ee.indices[t] ?? B;
 }
-async function q(e) {
+async function Z(e) {
     let t = new AbortController(),
         n = new o.K();
     K(e, { fetchState: { fetching: !0, abort: t, promise: n.promise } }, !0),
@@ -299,7 +299,7 @@ let ee = new J(c.h, {
         APPLICATION_COMMAND_INDEX_FETCH_REQUEST: function (e) {
             let { target: t } = e,
                 n = Y(t);
-            eu(ee.indices[n] ?? B) && q(t);
+            eu(ee.indices[n] ?? B) && Z(t);
         },
         APPLICATION_COMMAND_INDEX_FETCH_SUCCESS: X,
         APPLICATION_COMMAND_INDEX_FETCH_FAILURE: function (e) {

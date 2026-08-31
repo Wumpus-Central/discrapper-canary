@@ -48,8 +48,8 @@ let L = new A.A("AuthenticationStore"),
     K = !1,
     $ = null,
     z = null,
-    Z = !1,
     q = !1,
+    Z = !1,
     X = [];
 function Q(e) {
     let t = null != a.getToken(),
@@ -172,8 +172,8 @@ function ed(e) {
         (H = ""),
         (W = null),
         (j = !1),
-        (Z = !1),
         (q = !1),
+        (Z = !1),
         es();
 }
 class ec extends l.Ay.Store {
@@ -244,10 +244,10 @@ class ec extends l.Ay.Store {
         return z;
     }
     getIsPasswordlessActive() {
-        return Z;
+        return q;
     }
     attemptedPasswordLogin() {
-        return q;
+        return Z;
     }
 }
 let eu = new ec(
@@ -302,11 +302,11 @@ let eu = new ec(
         },
         LOGIN: function (e) {
             let { isPasswordAttempt: t } = e;
-            (F = f.aUe.LOGGING_IN), (q = q || !0 === t);
+            (F = f.aUe.LOGGING_IN), (Z = Z || !0 === t);
         },
         LOGIN_SUCCESS: function (e) {
             let { token: t } = e;
-            (F = f.aUe.NONE), ei(t), en(), (H = ""), (j = !1), (W = null), (r = null), es(), (Z = !1);
+            (F = f.aUe.NONE), ei(t), en(), (H = ""), (j = !1), (W = null), (r = null), es(), (q = !1);
         },
         LOGIN_FAILURE: function (e) {
             let { error: t } = e;
@@ -345,7 +345,7 @@ let eu = new ec(
         },
         LOGIN_SUSPENDED_USER: function (e) {
             let { suspendedUserToken: t } = e;
-            (Z = !1), (z = t), setImmediate(() => (0, p.pX)(f.BVt.ACCOUNT_STANDING));
+            (q = !1), (z = t), setImmediate(() => (0, p.pX)(f.BVt.ACCOUNT_STANDING));
         },
         LOGOUT: ed,
         FINGERPRINT: function (e) {
@@ -398,12 +398,12 @@ let eu = new ec(
             (H = ""),
                 (j = !1),
                 (W = null),
-                (Z = !1),
+                (q = !1),
                 (r = null),
                 (F = t instanceof c.A && null != (0, _.W)(t).date_of_birth ? f.aUe.LOGIN_AGE_GATE : f.aUe.NONE);
         },
         PASSWORDLESS_START: function () {
-            Z = !0;
+            q = !0;
         },
     },
     d.A.Early,

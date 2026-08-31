@@ -12,8 +12,8 @@ var i = n(477900),
     g = n(834730),
     f = n(821609),
     A = n(92446),
-    E = n(628284),
-    p = n(95635),
+    p = n(628284),
+    E = n(95635),
     m = n(993077),
     I = n(194261),
     S = n(661531),
@@ -22,8 +22,8 @@ var i = n(477900),
     N = n(229659),
     T = n(885386),
     v = n(453028),
-    y = n(174459),
-    M = n(975571),
+    M = n(174459),
+    y = n(975571),
     D = n(917592),
     R = n(652215),
     x = n(731854),
@@ -33,7 +33,7 @@ var i = n(477900),
 let P = function (e) {
     let [t, n] = (0, l.useState)("idle");
     (0, l.useEffect)(() => {
-        y.default.track(R.HAw.OPEN_POPOUT, { type: "RTC Connection" });
+        M.default.track(R.HAw.OPEN_POPOUT, { type: "RTC Connection" });
     }, []);
     let r = (0, l.useCallback)(() => {
             let { closePopout: t } = e;
@@ -43,7 +43,7 @@ let P = function (e) {
             "idle" === t &&
                 (n("uploading"),
                 (0, _.a)(R.Umv.RTC),
-                y.default.track(R.HAw.DEBUG_LOG_UPLOADED, {
+                M.default.track(R.HAw.DEBUG_LOG_UPLOADED, {
                     media_session_id: o.A.getMediaSessionId() ?? null,
                     rtc_connection_id: o.A.getRTCConnectionId() ?? null,
                 }),
@@ -51,7 +51,7 @@ let P = function (e) {
                     n("success"), setTimeout(() => n("idle"), 2e3);
                 }, 2e3));
         }, [t]),
-        a = M.A.getArticleURL(R.MVz.VOICE_VIDEO_TROUBLESHOOTING),
+        a = y.A.getArticleURL(R.MVz.VOICE_VIDEO_TROUBLESHOOTING),
         u =
             null != e.outboundLossRate
                 ? O.intl.format(O.t["3pFz1P"], { badPing: 250, badLossRate: 10, url: a })
@@ -118,12 +118,12 @@ let P = function (e) {
             [R.S7L.AUTHENTICATING]: O.intl.string(O.t["5lGIZH"]),
             [R.S7L.DISCONNECTED]: O.intl.string(O.t.fOX25I),
             [R.S7L.RTC_CONNECTING]: O.intl.string(O.t.b5Ubd5),
-            [R.S7L.ICE_CHECKING]: O.intl.format(O.t.SyoYUb, { url: M.A.getArticleURL(R.MVz.VOICE_CONNECTION_ERRORS) }),
+            [R.S7L.ICE_CHECKING]: O.intl.format(O.t.SyoYUb, { url: y.A.getArticleURL(R.MVz.VOICE_CONNECTION_ERRORS) }),
             [R.S7L.DTLS_CONNECTING]: O.intl.format(O.t.SyoYUb, {
-                url: M.A.getArticleURL(R.MVz.VOICE_CONNECTION_ERRORS),
+                url: y.A.getArticleURL(R.MVz.VOICE_CONNECTION_ERRORS),
             }),
             [R.S7L.RTC_CONNECTED]: d,
-            [R.S7L.NO_ROUTE]: O.intl.format(O.t["2tgQnk"], { url: M.A.getArticleURL(R.MVz.VOICE_CONNECTION_ERRORS) }),
+            [R.S7L.NO_ROUTE]: O.intl.format(O.t["2tgQnk"], { url: y.A.getArticleURL(R.MVz.VOICE_CONNECTION_ERRORS) }),
             [R.S7L.RTC_DISCONNECTED]: O.intl.string(O.t.fOX25I),
         }[c];
     return (0, i.jsxs)("div", {
@@ -150,7 +150,7 @@ let P = function (e) {
                                         onClick: r,
                                     }),
                                 (0, i.jsx)(f.$, {
-                                    icon: "success" === t ? E.y : p.UploadIcon,
+                                    icon: "success" === t ? p.y : E.UploadIcon,
                                     text: "success" === t ? O.intl.string(O.t.i4jeWR) : O.intl.string(O.t.EbwFfR),
                                     variant: "secondary",
                                     size: "sm",
@@ -226,7 +226,7 @@ function Y(e) {
                         (0, i.jsx)("div", {
                             className: a ? w.t6 : w.Dx,
                             children: (0, i.jsx)(f.$, {
-                                icon: E.y,
+                                icon: p.y,
                                 text: O.intl.string(O.t.t5VZ88),
                                 variant: "secondary",
                                 size: "sm",

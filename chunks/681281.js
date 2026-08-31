@@ -30,8 +30,8 @@ var i = n(477900),
     L = n(508654),
     O = n(974930),
     P = n(961314),
-    M = n(58736),
-    w = n(742589),
+    w = n(58736),
+    M = n(742589),
     U = n(376352),
     D = n(353428),
     V = n(46054),
@@ -69,7 +69,7 @@ function Q(e) {
         null != n &&
             (t = (0, i.jsxs)(i.Fragment, {
                 children: [
-                    (0, i.jsx)(M.Ay.Divider, { className: X.yF }),
+                    (0, i.jsx)(w.Ay.Divider, { className: X.yF }),
                     (0, i.jsx)(E.A, { game: n, className: X.RI }),
                     (0, i.jsx)(c.E, {
                         className: X.W$,
@@ -84,7 +84,7 @@ function Q(e) {
             n = l.stream;
         t = (0, i.jsxs)(i.Fragment, {
             children: [
-                (0, i.jsx)(M.Ay.Divider, { className: X.yF }),
+                (0, i.jsx)(w.Ay.Divider, { className: X.yF }),
                 (0, i.jsx)(Z, { user: e, channel: a, stream: n, color: "text-strong" }),
                 (0, i.jsx)(U.F, { user: e, stream: n, channel: a }),
             ],
@@ -163,8 +163,8 @@ function J(e) {
     return (0, i.jsxs)("div", {
         className: X.SC,
         children: [
-            (0, i.jsxs)(M.Ay, {
-                onDoubleClick: w.I,
+            (0, i.jsxs)(w.Ay, {
+                onDoubleClick: M.I,
                 transparent: !0,
                 className: X.jr,
                 innerClassName: X.gi,
@@ -182,13 +182,13 @@ function J(e) {
                     guildRoomVideoOverlayVisible: U,
                 }),
                 children: [
-                    (0, i.jsx)(M.Ay.Title, {
+                    (0, i.jsx)(w.Ay.Title, {
                         wrapperClassName: X.DD,
                         onClick: B ? eo : void 0,
                         children: (0, i.jsxs)(i.Fragment, {
                             children: [
                                 null != ee
-                                    ? (0, i.jsx)(M.Ay.ChannelIcon, {
+                                    ? (0, i.jsx)(w.Ay.ChannelIcon, {
                                           icon: ee,
                                           "aria-label": en,
                                           color: B ? "white" : void 0,

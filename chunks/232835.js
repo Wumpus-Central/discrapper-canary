@@ -152,7 +152,7 @@ function z(e) {
     )),
         d.A.commit(l);
 }
-function Z(e) {
+function q(e) {
     let { type: t, messageData: n } = e,
         { message: i } = n,
         r = (0, c.cR)(n),
@@ -169,7 +169,7 @@ function Z(e) {
     )),
         d.A.commit(l);
 }
-class q extends s.Ay.Store {
+class Z extends s.Ay.Store {
     static displayName = "MessageStore";
     initialize() {
         this.waitFor(C.default, O.A, R.A, f.A, L.Ay, y.Ay, D.A, I.A, S.default, v.A, b.A, M.Ay, P.A, U.default),
@@ -251,7 +251,7 @@ class q extends s.Ay.Store {
         return k;
     }
 }
-let X = new q(l.h, {
+let X = new Z(l.h, {
         BACKGROUND_SYNC_CHANNEL_MESSAGES: function (e) {
             let { changesByChannelId: t } = e;
             for (let e in t) {
@@ -402,8 +402,8 @@ let X = new q(l.h, {
                       )),
                 d.A.commit(r);
         },
-        MESSAGE_SEND_FAILED_AUTOMOD: Z,
-        MESSAGE_EDIT_FAILED_AUTOMOD: Z,
+        MESSAGE_SEND_FAILED_AUTOMOD: q,
+        MESSAGE_EDIT_FAILED_AUTOMOD: q,
         MESSAGE_UPDATE: function (e) {
             let t = e.message.id,
                 n = e.message.channel_id,

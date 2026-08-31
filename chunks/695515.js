@@ -196,12 +196,12 @@ function z(e) {
         (D = I ?? null),
         (v = f ?? null);
 }
-function Z(e) {
+function q(e) {
     let { familyCenterTeenActivity: t } = e,
         { actions: n, guilds: i } = t;
     V(n, !0), B(i);
 }
-function q(e) {
+function Z(e) {
     let { linkedUsers: t } = e;
     k(t);
 }
@@ -273,9 +273,9 @@ class er extends r.A {
             FAMILY_CENTER_FETCH_START: W,
             FAMILY_CENTER_LINKED_USERS_FETCH_SUCCESS: K,
             FAMILY_CENTER_TEEN_ACTIVITY_FETCH_SUCCESS: z,
-            FAMILY_CENTER_TEEN_ACTIVITY_MORE_FETCH_SUCCESS: Z,
+            FAMILY_CENTER_TEEN_ACTIVITY_MORE_FETCH_SUCCESS: q,
             FAMILY_CENTER_REQUEST_LINK_SUCCESS: $,
-            FAMILY_CENTER_REQUEST_LINK_UPDATE_SUCCESS: q,
+            FAMILY_CENTER_REQUEST_LINK_UPDATE_SUCCESS: Z,
             FAMILY_CENTER_REQUEST_LINK_REMOVE_SUCCESS: X,
             FAMILY_CENTER_LINK_CODE_FETCH_SUCCESS: Q,
             FAMILY_CENTER_HANDLE_TAB_SELECT: J,

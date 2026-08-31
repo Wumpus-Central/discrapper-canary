@@ -14,7 +14,7 @@ function h(e) {
         h = e.isDM() && !e.isSystemDM() && !e.rawRecipients.some((e) => e.bot),
         m = h ? e.getRecipientId() : null,
         g = (0, a.l)(e.id),
-        p = e.hasFlag(u.lx.HAS_ONLY_SYSTEM_MESSAGES);
+        A = e.hasFlag(u.lx.HAS_ONLY_SYSTEM_MESSAGES);
     return (0, i.bG)([r.A, s.A, o.A, c.default], () => {
         if (
             (n.current !== e.id && ((t.current = !1), (n.current = e.id)),
@@ -31,7 +31,7 @@ function h(e) {
         let l = r.A.getMessages(e.id),
             i = !l.hasMoreBefore && !l.hasMoreAfter && l.length < 25,
             a = r.A.hasCurrentUserSentWaveBlockingMessage(e.id),
-            u = (l.ready || t.current) && (p || i) && !a;
+            u = (l.ready || t.current) && (A || i) && !a;
         return (t.current = u), u;
-    }, [g, h, e.id, m, p]);
+    }, [g, h, e.id, m, A]);
 }

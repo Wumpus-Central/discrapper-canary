@@ -29,18 +29,18 @@ function g(e) {
         }, [n]),
         u = (0, s.bG)([d.A], () => d.A.shouldLoadMessageRequestPreview(n), [n]);
     return (
-        l && !i && null == a && u && ((t = n), h.add(t), null == m && (m = setTimeout(p, 0))),
+        l && !i && null == a && u && ((t = n), h.add(t), null == m && (m = setTimeout(A, 0))),
         { loaded: i, error: r, message: a }
     );
 }
-async function p() {
+async function A() {
     try {
-        for (; !i().isEmpty(h); ) await A();
+        for (; !i().isEmpty(h); ) await p();
     } finally {
         m = null;
     }
 }
-async function A() {
+async function p() {
     let e = Array.from(h).slice(0, 25);
     try {
         let t = await a.Bo.get({

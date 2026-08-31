@@ -30,8 +30,8 @@ var i = n(477900),
     L = n(616356),
     O = n(734057),
     P = n(309010),
-    M = n(287809),
-    w = n(977997),
+    w = n(287809),
+    M = n(977997),
     U = n(531685),
     D = n(562153),
     V = n(446243),
@@ -107,12 +107,12 @@ function el(e) {
             seat: K,
         } = e,
         en = (0, _.Us)(),
-        el = (0, d.bG)([M.default], () => M.default.getUser(t)),
-        ea = (0, d.bG)([M.default], () => M.default.getCurrentUser()?.id === t),
+        el = (0, d.bG)([w.default], () => w.default.getUser(t)),
+        ea = (0, d.bG)([w.default], () => w.default.getCurrentUser()?.id === t),
         { isMenuOpen: es, setMenuOpen: er } = l.useContext(H.t),
         eo = !!ea && es,
         ec = (0, d.bG)([O.A], () => O.A.getChannel(n)?.guild_id),
-        ed = (0, d.bG)([w.A], () => w.A.getVoiceState(ec, t)),
+        ed = (0, d.bG)([M.A], () => M.A.getVoiceState(ec, t)),
         eu = (0, d.bG)([L.A], () => L.A.getStreamForUser(t, ec)),
         eh = (0, C.A)({ userId: t }),
         ep = (0, d.bG)([U.A], () => U.A.isFocused()),
@@ -173,8 +173,8 @@ function el(e) {
         eO = (0, z.Sb)({ position: { x: a, y: u }, targetLabel: eL }),
         eP = null != eO;
     if (null == el || null == ec) return null;
-    let eM = (0, m.Kj)(F),
-        ew = eM.status + 2 * eM.offset,
+    let ew = (0, m.Kj)(F),
+        eM = ew.status + 2 * ew.offset,
         eU = eR?.src,
         eD = (0, T.kr)(Math.ceil(b * Q.Xq) * (0, T.mZ)()),
         eV = null != eU ? `${eU}?width=${eD}&height=${eD}` : null,
@@ -195,10 +195,10 @@ function el(e) {
                           ? () =>
                                 (0, i.jsx)("div", {
                                     className: et.Sl,
-                                    style: { width: ew, height: ew },
+                                    style: { width: eM, height: eM },
                                     children: (0, i.jsx)(A.U, {
                                         color: h.A.colors.WHITE,
-                                        style: { width: eM.status, height: eM.status },
+                                        style: { width: ew.status, height: ew.status },
                                     }),
                                 })
                           : void 0,
@@ -224,10 +224,10 @@ function el(e) {
                           ? () =>
                                 (0, i.jsx)("div", {
                                     className: et.Sl,
-                                    style: { width: ew, height: ew },
+                                    style: { width: eM, height: eM },
                                     children: (0, i.jsx)(A.U, {
                                         color: h.A.colors.WHITE,
-                                        style: { width: eM.status, height: eM.status },
+                                        style: { width: ew.status, height: ew.status },
                                     }),
                                 })
                           : void 0,

@@ -89,7 +89,7 @@ function $(e, t) {
 function z(e) {
     return { userId: e.user_id, sessionId: e.session_id, nonce: e.nonce };
 }
-function Z(e) {
+function q(e) {
     var t;
     let n,
         {
@@ -223,9 +223,9 @@ function Z(e) {
         $(M, o.id).upsert(r, o.id, t),
         null != (n = (0, T.H)(o)) && ($(b, n).upsert(r, o.id, t), $(v, K((0, T.D)(o))).upsert(r, o.id, t));
 }
-function q(e) {
+function Z(e) {
     e.activity_instances?.forEach((e) => {
-        Z(e);
+        q(e);
     });
 }
 function X(e) {
@@ -393,7 +393,7 @@ let ee = new J(a.h, {
         },
         CONNECTION_OPEN_SUPPLEMENTAL: function (e) {
             let { guilds: t } = e;
-            b.clear(), v.clear(), M.clear(), t.forEach((e) => q(e));
+            b.clear(), v.clear(), M.clear(), t.forEach((e) => Z(e));
             let n = d.default.getId();
             for (let e of Array.from(D.values()))
                 ee
@@ -404,7 +404,7 @@ let ee = new J(a.h, {
         },
         GUILD_CREATE: function (e) {
             let { guild: t } = e;
-            q(t);
+            Z(t);
         },
         CHANNEL_DELETE: function (e) {
             let { channel: t } = e,
@@ -469,7 +469,7 @@ let ee = new J(a.h, {
         },
         EMBEDDED_ACTIVITY_UPDATE_V2: function (e) {
             let { instance: t } = e;
-            Z(t);
+            q(t);
         },
         LOCAL_ACTIVITY_UPDATE: function (e) {
             let { activity: t } = e;

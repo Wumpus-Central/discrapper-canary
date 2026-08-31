@@ -15,7 +15,7 @@ n.d(t, {
     mC: () => S,
     mq: () => X,
     n5: () => J,
-    nG: () => Z,
+    nG: () => q,
     nY: () => Q,
     pV: () => g,
     rG: () => $,
@@ -83,7 +83,7 @@ function L() {
 function y(e) {
     if (h.A.getStorefrontGuildIds().has(e.id)) return !0;
     if ("type" in e) return !1;
-    let t = q(e, h.A.getApplicationIdFromGuildId(e.id)),
+    let t = Z(e, h.A.getApplicationIdFromGuildId(e.id)),
         n = h.A.getStorefrontApplicationIds();
     return !!(null != t && n.has(t)) || (e.features?.has(p.GuildFeatures.SOCIAL_LAYER_STOREFRONT) ?? !1);
 }
@@ -237,21 +237,21 @@ function z(e) {
     let { pathname: t, search: n, pageIndex: i = 0, applicationId: r, guildId: a, skuId: s } = e;
     return H(t, n, r, s) || (null != a && t.includes(p.BVt.CHANNELS_GAME_SHOP(a, i, s)));
 }
-function Z(e) {
+function q(e) {
     let t = (0, s.bG)([h.A], () => h.A.getGuildIdFromApplicationId(e)),
         n = (0, o.h)(e);
     return { guildId: t ?? n?.guildId, application: n };
 }
-function q(e, t) {
+function Z(e, t) {
     return t ?? (e?.gameApplicationIds?.length === 1 ? e.gameApplicationIds[0] : void 0);
 }
 function X(e) {
     let t = h.A.getApplicationIdFromGuildId(e);
-    return q(_.A.getGuild(e), t);
+    return Z(_.A.getGuild(e), t);
 }
 function Q(e) {
     let t = (0, s.bG)([h.A], () => h.A.getApplicationIdFromGuildId(e));
-    return q(
+    return Z(
         (0, s.bG)([_.A], () => _.A.getGuild(e), [e]),
         t,
     );

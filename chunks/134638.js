@@ -17,8 +17,8 @@ var l = n(477900),
     S = n(67480),
     y = n(486020),
     I = n(158045),
-    A = n(580630),
-    g = n(888751),
+    g = n(580630),
+    A = n(888751),
     P = n(652215),
     v = n(202541),
     x = n(88001),
@@ -54,7 +54,7 @@ function b(e) {
                     ? (0, C.Tp)(s, l)
                     : _.intl.formatToPlainString(N.default["8bPDtb"], { premiumGroupProductName: (0, x.DP)() });
             if (R(t)) {
-                let e = (0, g.iK)(l);
+                let e = (0, A.iK)(l);
                 return a > 1 ? _.intl.format(T.default.kyGViz, { quantity: a, label: e }) : e;
             }
             return (0, I.ys)(l.id) ? (0, I.Mn)(l.id, !1, r) : l.name;
@@ -132,8 +132,8 @@ function b(e) {
                         d = R(t),
                         m = t === s.u$.PREMIUM_WITH_TRIAL,
                         f = (d ? c?.amount : c?.subscriptionPlanPrice) ?? 0,
-                        E = (0, A.$g)(f, l.currency),
-                        S = (0, A.CE)(E, n.interval, n.intervalCount),
+                        E = (0, g.$g)(f, l.currency),
+                        S = (0, g.CE)(E, n.interval, n.intervalCount),
                         y = null,
                         P = null,
                         x = !1,
@@ -141,26 +141,26 @@ function b(e) {
                         b = o?.discountOffer;
                     if (m)
                         (y = (0, h.O7)(n, { amount: f, currency: l.currency })),
-                            (N = (0, g.ib)(l.currency, { includeNowSuffix: !0 }));
+                            (N = (0, A.ib)(l.currency, { includeNowSuffix: !0 }));
                     else if (d) {
                         if (((N = E), n.interval === v.WT.YEAR && (0, I.xq)(n.id))) {
                             let e = (0, I.VA)({ subscriptionPlan: n, isGift: d, priceOptions: i });
-                            (y = null != e ? (0, A.$g)(e * u, l.currency) : null), (x = !0);
+                            (y = null != e ? (0, g.$g)(e * u, l.currency) : null), (x = !0);
                         }
                     } else if (r) {
                         let e = (0, p.pg)(l, n.id);
                         if (null != a && a.discount.applicableSubscriptionInterval === n.interval && null != e) {
-                            let t = (0, A.$g)(f - e, l.currency);
+                            let t = (0, g.$g)(f - e, l.currency);
                             (N = _.intl.format(T.default.U2CmMW, { priceAmount: t })),
                                 (y = _.intl.format(T.default.JsSin7, {
-                                    priceRate: (0, A.CE)(E, n.interval, n.intervalCount),
+                                    priceRate: (0, g.CE)(E, n.interval, n.intervalCount),
                                     intervalCount: a.discount.intervalCount,
                                 }));
                         }
                     } else if ((0, I.xq)(n.id) && null != b) {
                         let e = (0, p.pg)(l, n.id);
                         if ((0, C.Ro)(l, b.discount.id) && null != e) {
-                            let t = (0, A.$g)(f - e, l.currency);
+                            let t = (0, g.$g)(f - e, l.currency);
                             (N = _.intl.format(_.t.hXcaLT, { price: t })),
                                 (P = E),
                                 (y = (0, p.hm)(b)

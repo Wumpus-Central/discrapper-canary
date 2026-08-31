@@ -33,24 +33,24 @@ function L(e) {
         {
             background: O,
             backgroundBlurred: P,
-            seats: M,
-            aspectRatio: w,
+            seats: w,
+            aspectRatio: M,
             plants: U,
             duck: D,
             screen: V,
             getName: k,
         } = T.iX[L],
         { width: G = 0, height: B = 0, ref: F } = (0, c.Ay)(),
-        H = G / B > w,
-        z = H ? B * w : G,
+        H = G / B > M,
+        z = H ? B * M : G,
         W = (0, u.bG)([f.A], () => f.A.getVideoOverlayVisibility()),
-        $ = W ? (0, T.bf)(w, H) : 1,
+        $ = W ? (0, T.bf)(M, H) : 1,
         Y = l.useRef(null),
         K = l.useRef(null),
         X = (0, u.bG)([f.A], () => f.A.getRoomUsers(t)),
         q = (0, u.bG)([f.A], () => f.A.getNotes(t)),
         Z = X.size,
-        Q = Math.max(0, Object.values(M).length - X.size),
+        Q = Math.max(0, Object.values(w).length - X.size),
         J = U.length + +(null != D) + q.length,
         [ee, et] = l.useState(!1),
         en = l.useMemo(() => ({ isMenuOpen: ee, setMenuOpen: et }), [ee, et]);
@@ -96,7 +96,7 @@ function L(e) {
                               }),
                               (0, i.jsx)("div", {
                                   className: s()(S.hk, { [S.Nb]: H }),
-                                  style: { aspectRatio: w },
+                                  style: { aspectRatio: M },
                                   ref: Y,
                                   children: (0, i.jsx)(x.t.Provider, {
                                       value: en,
@@ -115,7 +115,7 @@ function L(e) {
                                                           (0, i.jsx)("div", {
                                                               role: "list",
                                                               "aria-label": el,
-                                                              children: Object.entries(M).map((e) => {
+                                                              children: Object.entries(w).map((e) => {
                                                                   let [n, l] = e;
                                                                   return (0, i.jsx)(
                                                                       I.A,

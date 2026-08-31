@@ -4,7 +4,7 @@ n.r(t),
     n.d(t, {
         encodeProperties: () => I,
         isThrottled: () => em,
-        analyticsTrackingStoreMaker: () => q,
+        analyticsTrackingStoreMaker: () => Z,
         getOS: () => ed,
         getDevice: () => eu,
         getCampaignParams: () => eE,
@@ -73,13 +73,13 @@ let j = window.requestIdleCallback ?? ((e) => setImmediate(() => e())),
     K = [],
     $ = null,
     z = !1,
-    Z = () => Promise.resolve({ sessionId: void 0 }),
-    q = (e) => {
+    q = () => Promise.resolve({ sessionId: void 0 }),
+    Z = (e) => {
         let {
             dispatcher: t,
             actionHandler: n,
             getFingerprint: a,
-            getSessionId: s = Z,
+            getSessionId: s = q,
             TRACKING_URL: l,
             drainTimeoutOverride: o,
             waitFor: d,
@@ -145,7 +145,7 @@ let j = window.requestIdleCallback ?? ((e) => setImmediate(() => e())),
                 ((K = []), ($ = null), e.forEach((e) => e.resolve?.()), !0)
             );
         }
-        function q() {
+        function Z() {
             let e = {
                 type: N.bZ.CLIENT_TELEMETRY,
                 properties: {
@@ -201,7 +201,7 @@ let j = window.requestIdleCallback ?? ((e) => setImmediate(() => e())),
                                 type: "timeout",
                                 id: setTimeout(
                                     () => {
-                                        q(), e();
+                                        Z(), e();
                                     },
                                     Math.max(36e5 + (Math.floor(36e4 * Math.random() * 2) - 36e4), 6e4),
                                 ),
@@ -211,7 +211,7 @@ let j = window.requestIdleCallback ?? ((e) => setImmediate(() => e())),
                             type: "timeout",
                             id: setTimeout(
                                 () => {
-                                    q(), e();
+                                    Z(), e();
                                 },
                                 Math.floor(354e4 * Math.random() + 6e4),
                             ),
@@ -494,7 +494,7 @@ eh(
     (o = window.GLOBAL_ENV.RELEASE_CHANNEL) &&
         (null == l.release_channel || "" === l.release_channel) &&
         (l.release_channel = o.split("-")[0]),
-    isNaN((d = parseInt("604460", 10))) || (l.client_build_number = d),
+    isNaN((d = parseInt("604897", 10))) || (l.client_build_number = d),
     null == (c = eo?.app.getBuildNumber()) || isNaN(c) || (l.native_build_number = c),
     (l.client_event_source = (function () {
         try {

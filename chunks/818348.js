@@ -6,7 +6,7 @@ n.d(t, {
     FX: () => eA,
     Gg: () => $,
     Jo: () => ev,
-    Kc: () => q,
+    Kc: () => Z,
     L_: () => eW,
     Lt: () => ep,
     Lw: () => eO,
@@ -39,7 +39,7 @@ n.d(t, {
     gx: () => e$,
     hC: () => F,
     hV: () => eu,
-    he: () => Z,
+    he: () => q,
     il: () => ey,
     js: () => eh,
     kM: () => W,
@@ -174,7 +174,7 @@ let K = Object.freeze({
         ADYEN: { KEY: window.GLOBAL_ENV.ADYEN_KEY, PAYMENT_GATEWAY: "adyen" },
     });
 var z = (((l = {}).GOOGLE_PAY = "google_pay"), (l.APPLE_PAY = "apple_pay"), l),
-    Z =
+    q =
         (((o = {})[(o.UNKNOWN = 0)] = "UNKNOWN"),
         (o[(o.CARD = 1)] = "CARD"),
         (o[(o.PAYPAL = 2)] = "PAYPAL"),
@@ -199,7 +199,7 @@ var z = (((l = {}).GOOGLE_PAY = "google_pay"), (l.APPLE_PAY = "apple_pay"), l),
         (o[(o.PIX_AUTOMATICO = 21)] = "PIX_AUTOMATICO"),
         (o[(o.PAYMENT_REQUEST = 99)] = "PAYMENT_REQUEST"),
         o);
-let q = new Map([
+let Z = new Map([
         [7, "paysafecard"],
         [8, "gcash"],
         [9, "grabpay_MY"],

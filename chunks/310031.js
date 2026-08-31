@@ -129,7 +129,7 @@ function z(e) {
     if (n.hasPresent() && 0 !== n.length)
         return k.addChannelMessages({ channel: t, channelMessages: n, userId: N.default.getCurrentUser()?.id }), n;
 }
-function Z() {
+function q() {
     if (null == G) {
         j = O.default.fromTimestamp(Date.now());
         return;
@@ -143,7 +143,7 @@ function Z() {
     }
     j = "0";
 }
-function q() {
+function Z() {
     let { notifyingChannelIds: e, staleChannelIds: t } = (function () {
         let e = g.Ay.getFlattenedGuildIds().flatMap((e) => f.Ay.getSelectableChannelIds(e)),
             t = u.A.getAllActiveJoinedThreads();
@@ -225,7 +225,7 @@ function q() {
             null != t &&
                 ((w[e].loadState = v.Ve.LOADED), (w[e].mostRecentMessageId = t.last()?.id ?? w[e].mostRecentMessageId));
         }
-    k.updateChannelIds(G), Z();
+    k.updateChannelIds(G), q();
 }
 function X() {
     (w = {}),
@@ -244,11 +244,11 @@ function X() {
 function Q() {
     if (null == (0, R.GE)({ location: "NotificationsInboxStore.reinitializeInbox" })?.notificationCenterVariant)
         return !1;
-    for (let e of (X(), q(), G ?? [])) {
+    for (let e of (X(), Z(), G ?? [])) {
         let t = z(e);
         null != t && ((w[e].loadState = v.Ve.LOADED), (w[e].mostRecentMessageId = t.last()?.id ?? null));
     }
-    Z();
+    q();
     let e = d.Ay.getSettingsFilteredMentions() ?? [];
     k.addMessages(
         e.map((e) => ({
@@ -261,7 +261,7 @@ function Q() {
     );
 }
 function J() {
-    let e = q(),
+    let e = Z(),
         t = (function () {
             let e = d.Ay.getSettingsFilteredMentions();
             if (null == e) return !1;
@@ -386,7 +386,7 @@ let ei = new en(s.h, {
             })(n),
             a = r.mentioned;
         if (!i) {
-            if (x.includes(t)) q();
+            if (x.includes(t)) Z();
             else if (!a) return !1;
             else if (!(0, d.pK)(r)) return !1;
         }
@@ -448,7 +448,7 @@ let ei = new en(s.h, {
     },
     NOTIFICATIONS_INBOX_LOAD_MORE_INBOX_SUCCESS: function (e) {
         let { preload: t, hasMoreToLoad: n, analyticsPayload: i } = e;
-        (F = !1), t && (H = !0), null != n && (W = n), t || (B = !0), Z(), (K = i ?? null);
+        (F = !1), t && (H = !0), null != n && (W = n), t || (B = !0), q(), (K = i ?? null);
     },
     NOTIFICATIONS_INBOX_LOAD_MORE_INBOX_FAILURE: function () {
         (F = !1), (K = null), (V = !0);

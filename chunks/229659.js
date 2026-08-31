@@ -60,9 +60,9 @@ function d(e) {
         g = (0, a.r)(s.A.colors.BACKGROUND_MOD_MUTED).hsl(),
         f = (0, a.r)(s.A.unsafe_rawColors.BRAND_500).hsl(),
         A = e.windowMs,
-        E = (0, l.useRef)(e);
+        p = (0, l.useRef)(e);
     (0, l.useEffect)(() => {
-        E.current = e;
+        p.current = e;
     }),
         (0, l.useEffect)(() => {
             let n = t.current;
@@ -77,8 +77,8 @@ function d(e) {
                 (i.fontSize = 11),
                 null != A && i.setScale(A / n.width);
             let l = new u(
-                () => E.current.dataPoints,
-                () => E.current.converter,
+                () => p.current.dataPoints,
+                () => p.current.converter,
             );
             l.setColor(f), i.addDataSeries(l), i.updateEndDate(), d(i);
         }, [t, c, f, g, h, A, e.width, e.height]),
@@ -90,7 +90,7 @@ function d(e) {
                 (e = requestAnimationFrame(function l(r) {
                     if (null == n || ((e = requestAnimationFrame(l)), r - i < o)) return;
                     (i = r), n.updateEndDate(), n.repaint();
-                    let s = E.current,
+                    let s = p.current,
                         a = s.markers,
                         u = s.windowMs;
                     if (null != a && a.length > 0 && null != u && null != t.current) {
@@ -137,7 +137,7 @@ function d(e) {
                 () => cancelAnimationFrame(e)
             );
         }, [n, h]);
-    let p = { width: e.width, height: e.height },
+    let E = { width: e.width, height: e.height },
         { onHoverTime: m, onHoverClick: I } = e;
     function S(e) {
         if (null == A) return null;
@@ -163,7 +163,7 @@ function d(e) {
     return (0, i.jsx)(
         "canvas",
         {
-            style: p,
+            style: E,
             width: e.width,
             height: e.height,
             ref: t,

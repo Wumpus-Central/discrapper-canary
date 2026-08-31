@@ -22,8 +22,8 @@ function E(e) {
             renderStepBody: S,
             resolveInternalState: y,
             resolveTenantReviewButtonProps: I,
-            handleStepChange: A,
-            openInvoiceId: g,
+            handleStepChange: g,
+            openInvoiceId: A,
             analyticsData: P,
             analyticsLocation: v,
         } = e,
@@ -84,9 +84,9 @@ function E(e) {
         }, [j, n]),
         W = i.useCallback(
             (e) => {
-                R(e?.linkWalletEnabled ?? !0), A(o.pn.ADD_PAYMENT_STEPS);
+                R(e?.linkWalletEnabled ?? !0), g(o.pn.ADD_PAYMENT_STEPS);
             },
-            [A, R],
+            [g, R],
         ),
         Y = i.useMemo(() => S({ handlePaymentSourceAdd: W }), [S, W]),
         V = (0, l.jsx)(d.U, {
@@ -97,8 +97,8 @@ function E(e) {
             disablePurchase: B,
             analyticsLocation: v,
             baseAnalyticsData: P,
-            openInvoiceId: g,
-            handleStepChange: A,
+            openInvoiceId: A,
+            handleStepChange: g,
             postPurchaseStep: o.pn.CONFIRM,
             backButtonEligible: r,
             metadata: E,

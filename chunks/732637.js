@@ -1,4 +1,4 @@
-n.d(t, { A: () => p });
+n.d(t, { A: () => E });
 var i = n(477900),
     l = n(582128),
     r = n(17928),
@@ -12,25 +12,25 @@ var i = n(477900),
     g = n(902439),
     f = n(5867),
     A = n(652215);
-function E(e, t) {
+function p(e, t) {
     s.h.wait(() => {
         (0, a.I_)(e, t);
     });
 }
-function p(e) {
+function E(e) {
     let t,
         { embedId: n, className: s, style: a } = e,
-        p = (0, r.bG)([o.A], () => o.A.getWindow(A.MLl.CHANNEL_CALL_POPOUT)),
+        E = (0, r.bG)([o.A], () => o.A.getWindow(A.MLl.CHANNEL_CALL_POPOUT)),
         m = (0, g.A)(),
         I = (0, r.bG)([d.Ay], () => d.Ay.getActivityPanelMode());
-    t = null == m || (0, h.A)((0, c.H)(m.location)) || I !== f.Gd.PANEL ? (p?.window ?? window) : window;
+    t = null == m || (0, h.A)((0, c.H)(m.location)) || I !== f.Gd.PANEL ? (E?.window ?? window) : window;
     let S = l.useRef(null),
         C = l.useMemo(() => {
             let e = null;
             return () => {
                 null == e &&
                     (e = t.requestAnimationFrame(() => {
-                        E(n, S.current?.getBoundingClientRect() ?? null), (e = null);
+                        p(n, S.current?.getBoundingClientRect() ?? null), (e = null);
                     }));
             };
         }, [n, t]);
@@ -55,7 +55,7 @@ function p(e) {
             return (
                 i.observe(e),
                 () => {
-                    i.disconnect(), E(n, null);
+                    i.disconnect(), p(n, null);
                 }
             );
         }, [n, C]),

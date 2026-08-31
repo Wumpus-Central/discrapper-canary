@@ -108,7 +108,7 @@ function G(e) {
             alwaysShowLinkDecorations: f.Ay.alwaysShowLinkDecorations,
             highContrastMode: f.Ay.isHighContrastModeEnabled,
         })),
-        Z = (function (e, t) {
+        q = (function (e, t) {
             let [n, i] = a.useState(0),
                 r = (0, m.aL)();
             a.useEffect(() => {
@@ -143,8 +143,8 @@ function G(e) {
                 t && 0 === n && s
             );
         })(k, __OVERLAY__ || G),
-        q = 0;
-    1 !== H && (q |= _.REDUCE_SATURATION_ENABLED);
+        Z = 0;
+    1 !== H && (Z |= _.REDUCE_SATURATION_ENABLED);
     let X = (0, b.C)(),
         Q = (0, N.qK)("RootThemeContextProvider"),
         J = (0, N.k5)("RootThemeContextProvider"),
@@ -276,7 +276,7 @@ function G(e) {
         value: ei,
         children: (0, r.jsx)(I, {
             theme: h,
-            flags: q,
+            flags: Z,
             saturation: H,
             density: X,
             children: (0, r.jsx)(M.fs, {
@@ -287,7 +287,7 @@ function G(e) {
                 fontScale: F,
                 fontScaleClass: V,
                 keyboardModeEnabled: B,
-                mouseMode: Z,
+                mouseMode: q,
                 saturation: H,
                 desaturateUserColors: j,
                 useForcedColors: W,

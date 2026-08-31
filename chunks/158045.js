@@ -25,9 +25,9 @@ n.d(t, {
     l6: () => eU,
     y8: () => eG,
     re: () => th,
-    nB: () => eq,
+    nB: () => eZ,
     pb: () => ex,
-    Zb: () => e4,
+    Zb: () => e6,
     Pr: () => ew,
     nK: () => tP,
     mv: () => tL,
@@ -41,7 +41,7 @@ n.d(t, {
     L_: () => tk,
     Uf: () => tr,
     sS: () => ta,
-    ji: () => e6,
+    ji: () => e4,
     Q8: () => tt,
     Mn: () => eY,
     m6: () => eW,
@@ -181,8 +181,8 @@ let P = new M(m.w.ANIMATED_EMOJIS),
     K = new M(m.w.CLIENT_THEMES),
     $ = new M("boostDiscount"),
     z = new M("freeBoosts"),
-    Z = new M(m.w.STREAM_MID_QUALITY),
-    q = new M(m.w.STREAM_HIGH_QUALITY),
+    q = new M(m.w.STREAM_MID_QUALITY),
+    Z = new M(m.w.STREAM_HIGH_QUALITY),
     X = new M(m.w.CUSTOM_NOTIFICATION_SOUNDS),
     Q = new M("fancyVoiceChannelReactions"),
     J = new M("installPremiumApplications"),
@@ -196,7 +196,7 @@ let en = new M(m.w.INCREASED_GUILD_LIMIT),
     es = new M(m.w.QUEST_ORB_MULTIPLIER),
     el = Object.freeze({
         [N.pe.TIER_0]: new R(N.pe.TIER_0, [P, U, w, H, et, er, ea, Y]),
-        [N.pe.TIER_1]: new R(N.pe.TIER_1, [P, U, F, V, H, $, Z, Q, er, ea, Y]),
+        [N.pe.TIER_1]: new R(N.pe.TIER_1, [P, U, F, V, H, $, q, Q, er, ea, Y]),
         [N.pe.TIER_2]: new R(N.pe.TIER_2, [
             P,
             U,
@@ -211,8 +211,8 @@ let en = new M(m.w.INCREASED_GUILD_LIMIT),
             K,
             $,
             z,
-            Z,
             q,
+            Z,
             Q,
             J,
             ee,
@@ -244,8 +244,8 @@ let en = new M(m.w.INCREASED_GUILD_LIMIT),
         [j, _.bb.PROFILE_PREMIUM_FEATURES],
         [W, _.bb.PREMIUM_COLLECTIBLES],
         [K, _.bb.CLIENT_THEMES],
-        [Z, _.bb.STREAM_MID_QUALITY],
-        [q, _.bb.STREAM_HIGH_QUALITY],
+        [q, _.bb.STREAM_MID_QUALITY],
+        [Z, _.bb.STREAM_HIGH_QUALITY],
         [et, _.bb.VIDEO_FILTER_ASSETS],
         [en, _.bb.INCREASED_GUILD_LIMIT],
         [ei, _.bb.INCREASED_MESSAGE_LENGTH],
@@ -590,7 +590,7 @@ function ez(e) {
             return eR.intl.string(eR.t.lG6a5x);
     }
 }
-function eZ(e) {
+function eq(e) {
     let {
             subscription: t,
             planId: n,
@@ -660,7 +660,7 @@ function eZ(e) {
                     return eR.intl.format(eR.t["6RTdZA"], { resumeDate: t.pauseEndsAt });
                 case S.Dmq.PAST_DUE:
                     return eR.intl.format(eR.t["d+0vwo"], {
-                        endDate: (0, em.i$)(e6(t).expiresDate, "LL"),
+                        endDate: (0, em.i$)(e4(t).expiresDate, "LL"),
                         onClick: () => {
                             (0, E.A)("https://support.discord.com/hc/articles/23082866222871");
                         },
@@ -695,7 +695,7 @@ function eZ(e) {
                     return eR.intl.format(eR.t["6RTdZA"], { resumeDate: t.pauseEndsAt });
                 case S.Dmq.PAST_DUE:
                     return eR.intl.format(eR.t["d+0vwo"], {
-                        endDate: (0, em.i$)(e6(t).expiresDate, "LL"),
+                        endDate: (0, em.i$)(e4(t).expiresDate, "LL"),
                         onClick: () => {
                             (0, E.A)("https://support.discord.com/hc/articles/23082866222871");
                         },
@@ -737,7 +737,7 @@ function eZ(e) {
                     });
                 case S.Dmq.PAST_DUE:
                     return eR.intl.format(eR.t["d+0vwo"], {
-                        endDate: (0, em.i$)(e6(t).expiresDate, "LL"),
+                        endDate: (0, em.i$)(e4(t).expiresDate, "LL"),
                         onClick: () => {
                             (0, E.A)("https://support.discord.com/hc/articles/23082866222871");
                         },
@@ -767,7 +767,7 @@ function eZ(e) {
             throw Error(`Invalid planId ${n}`);
     }
 }
-function eq(e) {
+function eZ(e) {
     var t, n, i;
     let r,
         a,
@@ -785,7 +785,7 @@ function eq(e) {
         I = ef.A.get(c);
     return (
         o()(null != I, "Missing plan"),
-        eZ({
+        eq({
             subscription: d,
             planId: I.id,
             price:
@@ -894,10 +894,10 @@ function e3(e) {
 function e5(e) {
     return e2(e) || e3(e);
 }
-function e4(e) {
+function e6(e) {
     return null != e && e === N.gD.PREMIUM_GROUP_MONTH;
 }
-function e6(e) {
+function e4(e) {
     if (e.isPurchasedViaApple && e.metadata?.apple_grace_period_expires_date != null) {
         let t = c()(e.metadata.apple_grace_period_expires_date);
         return { days: c().duration(t.diff(e.currentPeriodStart)).days(), expiresDate: t };
@@ -1028,7 +1028,7 @@ function tr(e) {
         case S.Dmq.PAST_DUE:
             if (n.isBoostOnly)
                 return eR.intl.format(eR.t["d+0vwo"], {
-                    endDate: (0, em.i$)(e6(n).expiresDate, "LL"),
+                    endDate: (0, em.i$)(e4(n).expiresDate, "LL"),
                     onClick: () => {
                         (0, E.A)("https://support.discord.com/hc/articles/23082866222871");
                     },
@@ -1421,7 +1421,7 @@ let tW = Object.freeze({
         if (e === N.WT.MONTH) return eR.intl.string(eR.t.FPybU7);
         throw Error(`Invalid interval type: ${e}`);
     },
-    getPlanDescription: eZ,
+    getPlanDescription: eq,
     isPremiumSku: function (e) {
         return e === N.pe.TIER_0 || e === N.pe.TIER_1 || e === N.pe.TIER_2;
     },
@@ -1493,7 +1493,7 @@ let tW = Object.freeze({
                       })
                     : eR.intl.format(eR.t["V8+l6k"], { resumeDate: e.pauseEndsAt });
         if (e.status === S.Dmq.PAST_DUE) {
-            let t = e6(e).expiresDate;
+            let t = e4(e).expiresDate;
             return (e.isPurchasedViaGoogle &&
                 e.metadata?.google_grace_period_expires_date != null &&
                 (t = c()(e.metadata.google_grace_period_expires_date)),
@@ -1675,7 +1675,7 @@ let tW = Object.freeze({
         return e_(K, e);
     },
     canStreamQuality: function (e, t) {
-        return "high" === e ? e_(q, t) : e_(Z, t);
+        return "high" === e ? e_(Z, t) : e_(q, t);
     },
     canUseQuestOrbMultiplier: ty,
     hasFreeBoosts: function (e) {

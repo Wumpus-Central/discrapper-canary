@@ -60,11 +60,11 @@ function $() {
 function z(e) {
     return M.A.findActivity(e, (e) => e.type !== x.$pd.CUSTOM_STATUS);
 }
-function Z(e) {
+function q(e) {
     let t = j.get(e);
     return null == t && ((t = new O.A({ name: e })), j.set(e, t)), t;
 }
-function q(e) {
+function Z(e) {
     return null == W[e] && (W = { ...W, [e]: new C.A({ url: e }) }), W[e];
 }
 function X(e) {
@@ -77,7 +77,7 @@ function Q(e) {
         if (null != t) return t;
         X(e.application_id);
     }
-    return (0, _.A)(e) && null != e.url ? q(e.url) : (0, u.A)(e) ? Z(e.name) : null;
+    return (0, _.A)(e) && null != e.url ? Z(e.url) : (0, u.A)(e) ? q(e.name) : null;
 }
 function J(e) {
     let t = w.A.getVoiceStateForUser(e);
@@ -119,8 +119,8 @@ function et(e, t, n) {
                     null
                 );
             if (e === N.WY) return N.HT;
-            if (e.startsWith(O.W)) return Z(e.slice(O.W.length));
-            if (e.startsWith(C.K)) return q(e.slice(C.K.length));
+            if (e.startsWith(O.W)) return q(e.slice(O.W.length));
+            if (e.startsWith(C.K)) return Z(e.slice(C.K.length));
             let t = h.A.getApplication(e);
             return null != t ? t : (X(e), null);
         })(a);

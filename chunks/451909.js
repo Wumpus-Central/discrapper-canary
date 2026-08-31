@@ -289,7 +289,7 @@ let x = u.Ay.RULES,
 });
 let $ = s().parserFor(Y),
     z = /(?:<a?:\w+:(\d+)>)|:(?:([^\s:]+?)(?:::skin-tone-\d)?:)/g;
-function Z(e, t, n, i) {
+function q(e, t, n, i) {
     let r = "",
         a = [];
     return (
@@ -325,7 +325,7 @@ function Z(e, t, n, i) {
                         r += n(e.content);
                 }
             else if (e.content.constructor === Array) {
-                let { content: s, emoji: l } = Z(e.content, t, n, i);
+                let { content: s, emoji: l } = q(e.content, t, n, i);
                 for (let e of l) a.push({ position: r.length + e.position, length: e.length, id: e.id });
                 r += s;
             } else console.warn("Unknown message item type: ", e);
@@ -333,7 +333,7 @@ function Z(e, t, n, i) {
         { content: r, emoji: a }
     );
 }
-function q(e, t) {
+function Z(e, t) {
     let n,
         i = e?.getGuildId(),
         a = null != i ? g.A.getGuild(i) : null,
@@ -417,14 +417,14 @@ function Q(e, t, n) {
         d = n ? X : c.Ay.translateSurrogatesToInlineEmoji,
         u = s().parserFor(o),
         _ = { inline: !0, guild: l, channelId: t, isNotification: n };
-    return Z(u(e, _), _, d);
+    return q(u(e, _), _, d);
 }
 let J = {
     parse(e, t) {
         var n, i;
         let r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : void 0,
             a = arguments.length > 3 ? arguments[3] : void 0,
-            s = r ?? q(e, a),
+            s = r ?? Z(e, a),
             l = { content: t, tts: !1, invalidEmojis: [], validNonShortcutEmojis: [] };
         return (
             (n = l.content),
@@ -433,11 +433,11 @@ let J = {
                     ? l.invalidEmojis.push(t)
                     : n || l.validNonShortcutEmojis.push(t);
             }),
-            (l.content = Z($(n, s), s, c.Ay.translateInlineEmojiToSurrogates, i).content),
+            (l.content = q($(n, s), s, c.Ay.translateInlineEmojiToSurrogates, i).content),
             l
         );
     },
-    parsePreprocessor: (e, t) => $(t, q(e)),
+    parsePreprocessor: (e, t) => $(t, Z(e)),
     unparse: (e, t, n) => Q(e, t, n).content,
     unparseWithMeta: Q,
 };

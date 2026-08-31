@@ -50,11 +50,11 @@ function j(e) {
         Y = (0, h.h)(v),
         K = A?.launchId,
         $ = (0, l.bG)([O.Ay], () => O.Ay.getChannelId() === t?.id),
-        { dockedRect: z, isHidden: Z } = (0, l.cf)([C.A], () => {
+        { dockedRect: z, isHidden: q } = (0, l.cf)([C.A], () => {
             let e = C.A.pipWindow;
             return { dockedRect: null != e ? C.A.getDockedRect(e.id) : null, isHidden: C.A.isEmbeddedActivityHidden() };
         }),
-        q = (0, D.xi)({ channelId: t?.id }),
+        Z = (0, D.xi)({ channelId: t?.id }),
         {
             activityParticipant: X,
             selectedParticipant: Q,
@@ -70,7 +70,7 @@ function j(e) {
             selectedParticipant: null != t ? f.A.getSelectedParticipant(t.id) : null,
             participantsOpen: null != t && f.A.getParticipantsOpen(t.id),
         })),
-        ee = $ || null != q,
+        ee = $ || null != Z,
         et = (0, M.A)(t?.id),
         en = t?.id,
         ei = t?.getGuildId(),
@@ -79,7 +79,7 @@ function j(e) {
         es = et && er && ea,
         el = et && Q?.type !== F.lp.ACTIVITY,
         eo = !et && W === x.Gd.PIP,
-        ed = (!ee || (ee && (el || eo || es) && null == z)) && !Z,
+        ed = (!ee || (ee && (el || eo || es) && null == z)) && !q,
         ec = ed && null != C.A.pipVideoWindow && null != C.A.pipActivityWindow;
     function eu() {
         if (null != t) {
@@ -92,7 +92,7 @@ function j(e) {
             let e = t.getGuildId() ?? k.ME;
             u.A.channelListScrollTo(e, t.id), (0, g.uh)(e, t.id);
         }
-        null == q && (0, _.bz)();
+        null == Z && (0, _.bz)();
     }
     function e_() {
         E(!a);
@@ -122,7 +122,7 @@ function j(e) {
                     [B.N7]: r && !A.config?.useInteractivePIP,
                     [V.p0]: ed && !a,
                     [V.ST]: ed && a,
-                    [V.R]: Z,
+                    [V.R]: q,
                     [V.Gq]: ec,
                 }),
                 noBorder: !ed,

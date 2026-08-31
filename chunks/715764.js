@@ -1,4 +1,4 @@
-t.d(n, { EY: () => r, Sv: () => s, fz: () => a });
+t.d(n, { EY: () => r, Sv: () => i, fz: () => a });
 var l = t(477900);
 function r(e) {
     let { children: n } = e;
@@ -8,7 +8,7 @@ function a(e) {
     let { siblings: n, index: t, children: r } = e;
     return (0, l.jsxs)("span", { children: [r, t < n.length - 1 ? (0, l.jsx)("br", {}) : null] });
 }
-function s() {
+function i() {
     return "\n";
 }
 t(582128);

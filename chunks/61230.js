@@ -16,8 +16,8 @@ var t = l(477900),
     j = l(693879),
     p = l(607407),
     v = l(966245),
-    N = l(790535),
-    f = l(575731),
+    f = l(790535),
+    N = l(575731),
     I = l(616356),
     C = l(977997),
     b = l(47167),
@@ -29,7 +29,7 @@ var t = l(477900),
 let R = function (e) {
     let { channel: n } = e,
         l = (0, a.bG)([C.A], () => C.A.isInChannel(n.id)),
-        i = (0, f.A)(n),
+        i = (0, N.A)(n),
         s = (0, b.Ay)(n),
         r = (0, E.H)(n),
         o = (0, a.bG)([I.A], () => I.A.getAllApplicationStreamsForChannel(n.id)[0]);
@@ -94,7 +94,7 @@ let R = function (e) {
                         fullWidth: !0,
                         onClick: function () {
                             n.isGuildStageVoice()
-                                ? (0, N.av)(n)
+                                ? (0, f.av)(n)
                                 : y.A.handleVoiceConnect({
                                       channel: n,
                                       connected: l,

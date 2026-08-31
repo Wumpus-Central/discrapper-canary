@@ -44,8 +44,8 @@ let b = A.A.get(v.fg2.SPOTIFY),
     K = {},
     $ = {},
     z = {},
-    Z = !1,
-    q = null;
+    q = !1,
+    Z = null;
 function X() {
     for (let e in K) {
         let t = K[e];
@@ -234,7 +234,7 @@ function eo() {
     let e = X();
     if (null == e) return;
     let { socket: t } = e;
-    (Z = !0),
+    (q = !0),
         (0, y.v7)(t.accountId, t.accessToken),
         C.default.track(v.HAw.SPOTIFY_AUTO_PAUSED),
         V.info("Playback auto paused");
@@ -383,7 +383,7 @@ class e_ extends d.Ay.Store {
         return r;
     }
     wasAutoPaused() {
-        return Z;
+        return q;
     }
     getLastPlayedTrackId() {
         return a;
@@ -471,7 +471,7 @@ let eE = new e_(_.h, {
                     null == e ? ($[s].push(A), (f = !0)) : (0, c.A)(e, A) || (Object.assign(e, A), (f = !0)),
                         er(s, A.id);
                 } else ($[s] = [A]), (f = !0);
-            o ? q?.start(U, eo) : ((u = null), q?.stop());
+            o ? Z?.start(U, eo) : ((u = null), Z?.stop());
             let m = T.A.getAccount(s, v.fg2.SPOTIFY);
             if (null == m) return f;
             let g = z[s],
@@ -576,12 +576,12 @@ let eE = new e_(_.h, {
         MEDIA_ENGINE_SET_GO_LIVE_SOURCE: function (e) {
             let { settings: t } = e;
             if (t?.desktopSettings != null) {
-                q?.stop();
+                Z?.stop();
                 let { sourceId: e, sound: n } = t?.desktopSettings;
                 null != e && f.Ay.getObservedAppNameForWindow(e) === b.name && n
-                    ? (q = new u.IX()).start(U, eo)
-                    : (q?.stop(), (q = null));
-            } else null == t && (q?.stop(), (q = null));
+                    ? (Z = new u.IX()).start(U, eo)
+                    : (Z?.stop(), (Z = null));
+            } else null == t && (Z?.stop(), (Z = null));
         },
     }),
     eA = eE;

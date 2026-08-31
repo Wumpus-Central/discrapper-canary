@@ -367,8 +367,8 @@ n(142703);
 var K = n(434933),
     $ = n.n(K),
     z = n(811315),
-    Z = n.n(z),
-    q = n(201327);
+    q = n.n(z),
+    Z = n(201327);
 let X = new V();
 class Q extends R.EventEmitter {
     stream = new MediaStream();
@@ -377,7 +377,7 @@ class Q extends R.EventEmitter {
     destroyed = !1;
     destroy() {
         null != this.stream && (X.release(this.stream), (this.stream = null)),
-            null != this.streamId && (0, q.it)(this.streamId),
+            null != this.streamId && (0, Z.it)(this.streamId),
             (this.destroyed = !0);
     }
     getStreamId() {
@@ -414,10 +414,10 @@ class Q extends R.EventEmitter {
     }
     setStream(e) {
         return (
-            null != this.streamId && ((0, q.it)(this.streamId), (this.streamId = null)),
+            null != this.streamId && ((0, Z.it)(this.streamId), (this.streamId = null)),
             (this.stream = e),
             (e.onaddtrack = (e) => this.emit("add-video-track", e)),
-            e.getVideoTracks().length > 0 && (this.streamId = (0, q.ju)(e)),
+            e.getVideoTracks().length > 0 && (this.streamId = (0, Z.ju)(e)),
             this.emit("stream", e),
             this.emit("video", this.getStreamId()),
             e
@@ -571,7 +571,7 @@ class ei extends p.A {
     }
     destroy() {
         this.audioElement?.pause(),
-            null != this.videoStreamId && (0, q.it)(this.videoStreamId),
+            null != this.videoStreamId && (0, Z.it)(this.videoStreamId),
             null != this.streamSourceNode && (this.streamSourceNode.disconnect(), (this.streamSourceNode = null)),
             null != this.levelNode &&
                 (this.levelNode.disconnect(), this.levelNode.port.postMessage("close"), (this.levelNode = null)),
@@ -602,11 +602,11 @@ class ei extends p.A {
         }
         return (
             "video" === e.kind &&
-                (null != this.videoStreamId && (0, q.it)(this.videoStreamId),
+                (null != this.videoStreamId && (0, Z.it)(this.videoStreamId),
                 this.stream.getVideoTracks().forEach((t) => {
                     e !== t && ((t.discordIsTearingDown = !0), this.stream.removeTrack(t));
                 }),
-                (this.videoStreamId = (0, q.ju)(this.stream)),
+                (this.videoStreamId = (0, Z.ju)(this.stream)),
                 this.emit("video", this.videoStreamId)),
             "audio" === e.kind &&
                 this.stream.getAudioTracks().forEach((t) => {
@@ -619,7 +619,7 @@ class ei extends p.A {
         return (
             this.stream.removeTrack(e),
             "video" === e.kind &&
-                (null != this.videoStreamId && (0, q.it)(this.videoStreamId), this.emit("video", null)),
+                (null != this.videoStreamId && (0, Z.it)(this.videoStreamId), this.emit("video", null)),
             this.stream.getTracks().length
         );
     }
@@ -1137,7 +1137,7 @@ class eE extends S.A {
             for (let t of this.videoStreamParameters) {
                 let i = e.findIndex((e) => e.rid === t.rid);
                 if (-1 === i) return void n(Error("Invalid rid"));
-                Z()(this.videoStreamParameters[i], e[i]) || (this.videoStreamParameters[i] = { ...e[i] });
+                q()(this.videoStreamParameters[i], e[i]) || (this.videoStreamParameters[i] = { ...e[i] });
             }
             t();
         });
@@ -1444,7 +1444,7 @@ function eL(e, t) {
         },
         { outboundStreams: [], codecs: [], audioSSRC: 0, videoSSRC: 0, rtxSSRC: 0 },
     );
-    return (n.codecs = ef()(n.codecs, Z())), n;
+    return (n.codecs = ef()(n.codecs, q())), n;
 }
 function ey(e, t) {
     let { codecs: n } = eL(e, t),
@@ -2007,8 +2007,8 @@ let ej = new g.Vy("LibDaveManager"),
 function ez() {
     return ("Firefox" !== A().name || !(eu.It < 142)) && eu.PF && eu.zU;
 }
-let eZ = A().name?.toLowerCase().includes("firefox");
-function eq(e, t) {
+let eq = A().name?.toLowerCase().includes("firefox");
+function eZ(e, t) {
     e.sender.replaceTrack(t), (e.direction = null != t ? "sendrecv" : "recvonly");
 }
 class eX extends eE {
@@ -2100,8 +2100,8 @@ class eX extends eE {
         let t = "closed" === this.iceConnectionState;
         null != e &&
             !t &&
-            (eq(this.audioTransceiver, e.getAudioTracks()[0]),
-            this.videoSupported && eq(this.videoTransceiver, e.getVideoTracks()[0])),
+            (eZ(this.audioTransceiver, e.getAudioTracks()[0]),
+            this.videoSupported && eZ(this.videoTransceiver, e.getVideoTracks()[0])),
             this.logger.info("Renegotiating: Streams changed"),
             this.handleNegotiationNeeded();
     }
@@ -2118,7 +2118,7 @@ class eX extends eE {
                 s = 10 * !this.experimentFlags.has(D.fd.BROWSER_TRANSCEIVER_PADDING_REMOVAL) + a - n;
             this.addTransceivers("audio", "recvonly", s);
         }
-        if (this.videoSupported && void 0 !== n && (!eZ || void 0 === r.videoSSRC)) {
+        if (this.videoSupported && void 0 !== n && (!eq || void 0 === r.videoSSRC)) {
             let t = null != n && n.length > 0 ? n[0] : 0;
             if (t > 0) {
                 if (r.videoSSRC !== t) {
@@ -2768,14 +2768,14 @@ class e3 extends R.EventEmitter {
             }),
             (this.id = e.getVideoTracks()[0].label),
             (this.stream = e),
-            (this.streamId = (0, q.ju)(e)),
+            (this.streamId = (0, Z.ju)(e)),
             (this.pool = t);
     }
     reuse() {
         this.removeAllListeners(), this.pool.release(this);
     }
     destroy() {
-        this.removeAllListeners(), (0, q.it)(this.streamId), this.stream.getTracks().forEach((e) => e.stop());
+        this.removeAllListeners(), (0, Z.it)(this.streamId), this.stream.getTracks().forEach((e) => e.stop());
     }
     reset() {
         this.refreshSpeaking();
@@ -2805,9 +2805,9 @@ class e5 {
         this.pool[e.id] = e;
     }
 }
-var e4 = n(935399),
-    e6 = n(503698),
-    e7 = n.n(e6);
+var e6 = n(935399),
+    e4 = n(503698),
+    e7 = n.n(e4);
 function e8(e) {
     let { streamId: t, paused: n = !1, onReady: i, onResize: r, className: a, ...s } = e,
         l = h.useRef(null),
@@ -2817,7 +2817,7 @@ function e8(e) {
         if (null != e)
             return (
                 (0, O.NM)(t),
-                (e.srcObject = (0, q.yL)(t)),
+                (e.srcObject = (0, Z.yL)(t)),
                 () => {
                     (0, O.gm)(t), (e.srcObject = null), e.load();
                 }
@@ -2879,7 +2879,7 @@ function e9(e) {
             ),
             [o, a],
         ),
-        (0, e4.l0)(() => {
+        (0, e6.l0)(() => {
             o.destroy();
         }),
         h.useEffect(() => {

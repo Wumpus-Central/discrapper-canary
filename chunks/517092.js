@@ -12,14 +12,14 @@ var i = n(665260),
     g = n(887560),
     f = n(652215),
     A = n(790782),
-    E = n(355097);
-let p = [
+    p = n(355097);
+let E = [
         { timeSinceJoin: +c.A.Millis.HOUR, sends: 1, viewTime: +c.A.Millis.MINUTE },
         { timeSinceJoin: +c.A.Millis.DAY, sends: 2, viewTime: 2 * c.A.Millis.MINUTE },
         { timeSinceJoin: +c.A.Millis.WEEK, sends: 5, viewTime: 5 * c.A.Millis.MINUTE },
         { timeSinceJoin: +c.A.Millis.DAYS_30, sends: 10, viewTime: 30 * c.A.Millis.MINUTE },
     ],
-    m = 5 * p[p.length - 1].viewTime,
+    m = 5 * E[E.length - 1].viewTime,
     I = c.A.Millis.WEEK,
     S = { channels: {} },
     C = new Set(),
@@ -28,12 +28,12 @@ let p = [
     T = 0;
 function v() {
     if (null == _ || !D(_)) return !1;
-    let e = M(_);
+    let e = y(_);
     if (e.lastActionTime > Date.now() - c.A.Millis.DAY && e.viewDuration > m) return !1;
     let t = Date.now();
     return (e.lastActionTime = t), (e.viewDuration += t - N), (N = t), !0;
 }
-function y() {
+function M() {
     return (
         0 !== T && (clearInterval(T), (T = 0)),
         d.Ay.useNewNotifications &&
@@ -43,7 +43,7 @@ function y() {
         !1
     );
 }
-function M(e) {
+function y(e) {
     return e in S.channels || (S.channels[e] = { lastActionTime: 0, viewDuration: 0, numSends: 0 }), S.channels[e];
 }
 function D(e) {
@@ -67,7 +67,7 @@ function R(e, t) {
         null != n &&
         !!(
             (null != n.message_notifications && n.message_notifications !== f.orn.NULL) ||
-            (null != n.flags && (0, i.br)(n.flags, E.vv.UNREADS_ALL_MESSAGES | E.vv.UNREADS_ONLY_MENTIONS))
+            (null != n.flags && (0, i.br)(n.flags, p.vv.UNREADS_ALL_MESSAGES | p.vv.UNREADS_ONLY_MENTIONS))
         )
     );
 }
@@ -75,7 +75,7 @@ class x extends l.Ay.PersistedStore {
     static displayName = "UnreadSettingNoticeStore2";
     static persistKey = "UnreadSettingNoticeStore2";
     initialize(e) {
-        null != e && (S.channels = e.channels), this.syncWith([d.Ay], y), this.waitFor(s.default, a.A, o.A, u.Ay, d.Ay);
+        null != e && (S.channels = e.channels), this.syncWith([d.Ay], M), this.waitFor(s.default, a.A, o.A, u.Ay, d.Ay);
     }
     getState() {
         return S;
@@ -95,7 +95,7 @@ class x extends l.Ay.PersistedStore {
                     i = Math.min(h.default.age(e.id), Date.now() - n.getTime()),
                     l = S.channels[e.id];
                 if (null == l || l.lastActionTime < Date.now() - I) return !1;
-                for (let e of p)
+                for (let e of E)
                     if (i < e.timeSinceJoin && (l.numSends >= e.sends || l.viewDuration >= e.viewTime)) return !0;
                 return !1;
             })(t) &&
@@ -109,7 +109,7 @@ let O = new x(r.h, {
             return (_ = u.Ay.getChannelId()), (N = Date.now()), e;
         },
         CONNECTION_OPEN: function () {
-            (_ = u.Ay.getChannelId()), (N = Date.now()), y();
+            (_ = u.Ay.getChannelId()), (N = Date.now()), M();
             let e = Date.now() - I;
             h.default.forEach(S.channels, (t, n) => {
                 let { lastActionTime: i } = t;
@@ -119,7 +119,7 @@ let O = new x(r.h, {
         MESSAGE_CREATE: function (e) {
             if (e.optimistic || e.isPushNotification || e.message.author?.id !== s.default.getId() || !D(e.channelId))
                 return !1;
-            let t = M(e.channelId);
+            let t = y(e.channelId);
             (t.lastActionTime = Date.now()), t.numSends++;
         },
     }),

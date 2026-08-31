@@ -287,7 +287,7 @@ function z(e, t) {
         i = t?.badges.filter((e) => !n.has(e.id));
     return i.length > 0 && e.push(...i), e;
 }
-function Z(e) {
+function q(e) {
     let { userId: t, guildId: n, withMutualFriends: i } = e,
         r = n ?? R,
         a = L.get(t);
@@ -298,7 +298,7 @@ function Z(e) {
     }
     i && y.add(t);
 }
-function q(e) {
+function Z(e) {
     let { userId: t, guildId: n, apiError: i, fetchStartedAt: r } = e;
     L.get(t)?.delete(n ?? R), y.delete(t);
     let a = D.get(t) ?? {
@@ -433,8 +433,8 @@ class eo extends A.A {
     constructor() {
         super({
             CACHE_LOADED_LAZY: () => this.loadCache(),
-            USER_PROFILE_FETCH_START: Z,
-            USER_PROFILE_FETCH_FAILURE: q,
+            USER_PROFILE_FETCH_START: q,
+            USER_PROFILE_FETCH_FAILURE: Z,
             USER_PROFILE_FETCH_SUCCESS: $,
             USER_PROFILE_UPDATE_START: X,
             USER_PROFILE_UPDATE_SUCCESS: Q,

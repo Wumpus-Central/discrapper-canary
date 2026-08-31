@@ -68,8 +68,8 @@ let M = +g.A.Millis.DAY,
     K = !1,
     $ = !1,
     z = !1,
-    Z = null,
     q = null,
+    Z = null,
     X = 0,
     Q = [],
     J = [],
@@ -133,14 +133,14 @@ function eA() {
         (x.forEach((t) => {
             e.add(t.id);
         }),
-        null != q)
+        null != Z)
     )
-        if (e.has(q.id)) {
-            let e = q.id,
-                t = q.type,
+        if (e.has(Z.id)) {
+            let e = Z.id,
+                t = Z.type,
                 n = x.findIndex((n) => n.id === e && n.type === t);
-            -1 !== n && ((q = x[n]), (x = x.filter((t) => t.id !== e)), (x = [q, ...x]));
-        } else (x = [q, ...x]), e.add(q.id);
+            -1 !== n && ((Z = x[n]), (x = x.filter((t) => t.id !== e)), (x = [Z, ...x]));
+        } else (x = [Z, ...x]), e.add(Z.id);
     x.forEach((e) => {
         (V[e.id] = e),
             e.type === C.Mm.CUSTOM_STATUS &&
@@ -372,7 +372,7 @@ class eC extends r.Ay.PersistedStore {
         return $;
     }
     getCurrentStatusAttachments(e) {
-        return null == Z || Z[0] !== e ? [] : Z[1];
+        return null == q || q[0] !== e ? [] : q[1];
     }
     getLoadId() {
         return w;
@@ -396,7 +396,7 @@ class eC extends r.Ay.PersistedStore {
         return ea.size > 0;
     }
     notificationItem() {
-        return q;
+        return Z;
     }
     getIsTabFocused() {
         return es;
@@ -451,15 +451,15 @@ let eO = new eC(a.h, {
             (ei = !0),
             (er = !1),
             (ea = new Set()),
-            (q = null),
+            (Z = null),
             (es = !1),
             (el = !1),
-            (Z = null),
+            (q = null),
             (eo = 0);
     },
     LOAD_ICYMI_FROM_NOTIFICATION: function (e) {
         let { messageItem: t, customStatusItem: n } = e;
-        if (null != n) return (q = n), null != w && ((x = x.length > 0 ? x : [...U]), eA(), eh()), !0;
+        if (null != n) return (Z = n), null != w && ((x = x.length > 0 ? x : [...U]), eA(), eh()), !0;
         if (null != t) {
             let e = {
                 id: t.message.id,
@@ -520,7 +520,7 @@ let eO = new eC(a.h, {
         if (((k = ef(l)), !z || 0 === Y || a))
             (Y = 0), !es && ec(l, x) ? (($ = !0), (K = !0)) : ($ = !1), eh({ newUnread: l, newRead: o });
         else {
-            Y > 0 && (q = null);
+            Y > 0 && (Z = null);
             let e = k.length > C.$P;
             s || ($ = e), e && ((0, D.kx)([...l, ...o], 0, C.w5), l.length + o.length === 0 && (el = !0));
         }
@@ -668,10 +668,10 @@ let eO = new eC(a.h, {
     LOAD_ICYMI_CURRENT_STATUS_MEDIA: function (e) {
         let { attachments: t, createdAtMs: n } = e;
         if (null == t || 0 === t.length) {
-            Z = null;
+            q = null;
             return;
         }
-        Z = [n, [...t]];
+        q = [n, [...t]];
     },
     ICYMI_SCROLL_EVENT: function (e) {
         let { timestamp: t } = e;

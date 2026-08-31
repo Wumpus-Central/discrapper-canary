@@ -51,8 +51,8 @@ function O(e) {
         { id: W, required: Y, label: K, disabled: $ } = j,
         {
             isOpen: z,
-            setIsOpen: Z,
-            refs: q,
+            setIsOpen: q,
+            refs: Z,
             floatingStyles: X,
             getReferenceProps: Q,
             getFloatingProps: J,
@@ -101,8 +101,8 @@ function O(e) {
             };
         })(en, n),
         ef = r.useCallback(() => {
-            eA || Z(!z);
-        }, [eA, Z, z]),
+            eA || q(!z);
+        }, [eA, q, z]),
         ep = r.useCallback(
             (e) => {
                 z && 0 === e.button && e.preventDefault();
@@ -110,8 +110,8 @@ function O(e) {
             [z],
         ),
         eT = r.useCallback(() => {
-            Z(!1), ea.current?.focus();
-        }, [Z]),
+            q(!1), ea.current?.focus();
+        }, [q]),
         em = r.useCallback(() => {
             !1 !== f && ("multiple" === n ? x([]) : x(null), ea.current?.focus());
         }, [x, n, f]);
@@ -130,10 +130,10 @@ function O(e) {
                         let e = en[el];
                         null != e && !0 !== e.disabled && x(e.value);
                     }
-                    z && Z(!1);
+                    z && q(!1);
                 }
             },
-            [z, n, el, en, x, Z],
+            [z, n, el, en, x, q],
         ),
         eN = r.useMemo(() => {
             let e = Array.isArray(k) ? k : [k];
@@ -152,8 +152,8 @@ function O(e) {
         eL = r.useRef(null);
     r.useEffect(() => {
         let e = eO !== eL.current;
-        (eL.current = eO), null != eO && e && (eo(eO), z || ((ec.current = !0), Z(!0)));
-    }, [eO, z, Z]);
+        (eL.current = eO), null != eO && e && (eo(eO), z || ((ec.current = !0), q(!0)));
+    }, [eO, z, q]);
     let ey = r.useCallback(
             (e) => {
                 if (eA) return;
@@ -164,7 +164,7 @@ function O(e) {
                         let n = "PageDown" === e.key ? 10 : 1;
                         if (0 === t) return;
                         if ((e.preventDefault(), !z || e.altKey)) {
-                            z || Z(!0);
+                            z || q(!0);
                             return;
                         }
                         eo((e) => {
@@ -189,7 +189,7 @@ function O(e) {
                             eT();
                             break;
                         }
-                        if (!z) return void Z(!0);
+                        if (!z) return void q(!0);
                         eo((e) => {
                             if (null === e) return 0;
                             let i = e - n;
@@ -199,7 +199,7 @@ function O(e) {
                     }
                     case "Enter":
                     case " ":
-                        if ((e.preventDefault(), e.stopPropagation(), !z)) return void Z(!0);
+                        if ((e.preventDefault(), e.stopPropagation(), !z)) return void q(!0);
                         if (null == el || el > t - 1) return;
                         {
                             let e = en[el];
@@ -209,18 +209,18 @@ function O(e) {
                         break;
                     case "Home":
                         if ((e.preventDefault(), 0 === t)) return;
-                        eo(0), z || ((ec.current = !0), Z(!0));
+                        eo(0), z || ((ec.current = !0), q(!0));
                         break;
                     case "End":
                         if ((e.preventDefault(), 0 === t)) return;
-                        eo(t - 1), z || ((ec.current = !0), Z(!0));
+                        eo(t - 1), z || ((ec.current = !0), q(!0));
                         break;
                     case "Tab":
                         if (z && "single" === n && null != el) {
                             let e = en[el];
                             null != e && !0 !== e.disabled && x(e.value);
                         }
-                        (eu.current = !0), Z(!1);
+                        (eu.current = !0), q(!1);
                         break;
                     case "ArrowLeft":
                         e.preventDefault(), H.current?.firstChild?.focus();
@@ -240,7 +240,7 @@ function O(e) {
                         eR(e);
                 }
             },
-            [eA, z, en, y, n, eN, el, x, eC, eT, em, eR, eE, f, Z],
+            [eA, z, en, y, n, eN, el, x, eC, eT, em, eR, eE, f, q],
         ),
         eD = r.useMemo(() => {
             if (!O || U) return `${Math.max(eh ?? 200, 200) * ("multiple" === n ? 1.5 : 1) + 24 * !!f + 36 + 12}px`;
@@ -255,7 +255,7 @@ function O(e) {
                     H.current?.lastElementChild?.scrollIntoView({ behavior: "smooth", inline: "end", block: "end" });
                 }, 10));
     }, [eN, ev, F]);
-    let eM = (0, o.A)(es, q.setReference),
+    let eM = (0, o.A)(es, Z.setReference),
         eP = r.useCallback(
             (e) => {
                 if (eA) return;
@@ -357,7 +357,7 @@ function O(e) {
                         !eA &&
                             z &&
                             (0, i.jsx)("div", {
-                                ref: q.setFloating,
+                                ref: Z.setFloating,
                                 className: C.S_,
                                 ...J(),
                                 style: { ...X, ...ee },

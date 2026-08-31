@@ -250,7 +250,7 @@ function K(e, t) {
             let e = x[P];
             null != e && e.type === d.rD.HEADER && (P = (0, d.Vv)(d.vB.DOWN, P, x));
         }
-        q.emitChange();
+        Z.emitChange();
     }
 }
 function $() {
@@ -260,7 +260,7 @@ function z() {
     if (null == i) return !1;
     i.refreshGameProfiles();
 }
-class Z extends s.Ay.PersistedStore {
+class q extends s.Ay.PersistedStore {
     static displayName = "QuickSwitcherStore";
     static persistKey = "QuickSwitcherStore";
     initialize(e) {
@@ -310,7 +310,7 @@ class Z extends s.Ay.PersistedStore {
         };
     }
 }
-let q = new Z(o.h, {
+let Z = new q(o.h, {
         CONNECTION_OPEN: j,
         CONNECTION_OPEN_SUPPLEMENTAL: j,
         QUICKSWITCHER_SHOW: Y,
@@ -352,4 +352,4 @@ let q = new Z(o.h, {
         GAME_AUTOCOMPLETE_FETCH_SUCCESS: z,
         GAME_AUTOCOMPLETE_FETCH_FAILURE: z,
     }),
-    X = q;
+    X = Z;

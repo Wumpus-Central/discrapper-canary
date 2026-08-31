@@ -6,7 +6,7 @@ n.d(t, {
     Ay: () => Q,
     $9: () => et,
     l7: () => en,
-    tl: () => Z,
+    tl: () => q,
     ts: () => J,
     st: () => G,
 }),
@@ -86,10 +86,10 @@ function z(e, t) {
     let r = n.substring(i.length);
     return "" === r ? null : r;
 }
-function Z(e) {
+function q(e) {
     return z(F, e) ?? z(V, e) ?? z(B, e) ?? z(H, e) ?? z(j, e);
 }
-function q(e) {
+function Z(e) {
     let t = en(e);
     if (null == t || null == t.pathname)
         return {
@@ -129,7 +129,7 @@ function Q(e) {
                 inviteHostRemainingPath: _,
                 templateHostRemainingPath: E,
                 primaryHostRemainingPath: A,
-            } = q(c);
+            } = Z(c);
             if (null == e || null == e.pathname) continue;
             let h = null != e.query && e.query.length <= 1e3 ? e.query : null;
             function r(e, i) {
@@ -224,17 +224,17 @@ function Q(e) {
     })((n = n.concat(r ?? []))).slice(0, 10);
 }
 function J(e) {
-    let t = q(e),
+    let t = Z(e),
         n = t?.primaryHostRemainingPath?.match(v);
     return n?.[1] ?? null;
 }
 function ee(e) {
-    let t = q(e),
+    let t = Z(e),
         n = t?.primaryHostRemainingPath?.match(P);
     return n?.[1] ?? null;
 }
 function et(e) {
-    let t = q(e),
+    let t = Z(e),
         n = t?.primaryHostRemainingPath?.match(b);
     return n?.[1] ?? null;
 }

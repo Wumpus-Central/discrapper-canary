@@ -75,14 +75,14 @@ function C(e) {
                 }
             });
         }, [V, v]);
-    let { activeIndex: Z, handleKeyDown: q } = R(k, H);
+    let { activeIndex: q, handleKeyDown: Z } = R(k, H);
     r.useEffect(() => {
-        if (null != Z && k && -1 !== a) {
-            let e = (0, o.t$)(V, (0, f.ZN)(V, Z)),
+        if (null != q && k && -1 !== a) {
+            let e = (0, o.t$)(V, (0, f.ZN)(V, q)),
                 t = document.querySelector((0, o.Mz)(e));
             t?.focus();
         }
-    }, [Z, H, k, V, a]);
+    }, [q, H, k, V, a]);
     let X = r.useCallback((e, t) => (N(H[(0, f.rp)(C, e, t)]) ? g : m), [H, C]),
         Q = r.useCallback(
             (e) => {
@@ -200,7 +200,7 @@ function C(e) {
                     "aria-busy": w,
                     ref: n,
                     onKeyDown: (e) => {
-                        r?.(e), q(e);
+                        r?.(e), Z(e);
                     },
                     ...l,
                     role: "listbox",

@@ -211,8 +211,8 @@ let Y = {},
     K = {},
     $ = {},
     z = {},
-    Z = {};
-class q extends a.Ay.Store {
+    q = {};
+class Z extends a.Ay.Store {
     static displayName = "ActiveJoinedThreadsStore";
     initialize() {
         this.waitFor(A.A, d.A, c.A, h.A, u.Ay, _.Ay), this.syncWith([_.Ay], x);
@@ -254,7 +254,7 @@ class q extends a.Ay.Store {
         return this.getActiveUnjoinedUnreadThreadsForGuild(e)[t] ?? $;
     }
     getNewThreadCountsForGuild(e) {
-        return N[e] ?? Z;
+        return N[e] ?? q;
     }
     computeAllActiveJoinedThreads(e) {
         let t = [];
@@ -269,7 +269,7 @@ class q extends a.Ay.Store {
         return r().size(p[e]?.[t] ?? {}) + r().size(m[e]?.[t] ?? {});
     }
 }
-let X = new q(s.h, {
+let X = new Z(s.h, {
     CONNECTION_OPEN: R,
     OVERLAY_INITIALIZE: R,
     THREAD_LIST_SYNC: function (e) {

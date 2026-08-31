@@ -1,53 +1,53 @@
-l.d(t, { A: () => N, t: () => j });
-var n = l(477900),
-    a = l(582128),
-    s = l(503698),
-    r = l.n(s),
-    i = l(221877),
-    c = l(834730),
-    o = l(717421),
-    u = l(475743),
-    d = l(626584),
-    h = l(572009),
-    m = l(14115),
-    C = l(652215),
-    f = l(115093),
-    x = l(398293);
+n.d(t, { A: () => N, t: () => v });
+var a = n(477900),
+    l = n(582128),
+    s = n(503698),
+    r = n.n(s),
+    i = n(221877),
+    c = n(834730),
+    o = n(717421),
+    u = n(475743),
+    d = n(626584),
+    h = n(572009),
+    m = n(14115),
+    C = n(652215),
+    x = n(115093),
+    f = n(398293);
 let g = new d.A("BalanceCounter"),
-    E = (0, h._$)(void 0) === f.B.PRODUCTION;
-function b(e) {
+    E = (0, h._$)(void 0) === x.B.PRODUCTION;
+function A(e) {
     return null == e ? 0 : `${e.toFixed(0)}`.length;
 }
-function j(e) {
+function v(e) {
     let {
             value: t,
-            textVariant: l = "text-md/semibold",
+            textVariant: n = "text-md/semibold",
             horizontalAlignment: s = "right",
             textColor: i,
             className: o,
             ...d
         } = e,
         h = null === t,
-        [m, C] = (0, a.useState)(null),
-        f = (0, a.useMemo)(() => b(t), [t]),
-        g = (0, u.Ay)(f) ?? 0,
-        E = (0, a.useMemo)(() => (null === m ? Math.max(g, f) : Math.max(f, m)), [g, f, m]),
-        j = `${h ? 0 : E}ch`,
-        { marginClassName: N, textAlignClassName: A } = (0, a.useMemo)(
+        [m, C] = (0, l.useState)(null),
+        x = (0, l.useMemo)(() => A(t), [t]),
+        g = (0, u.Ay)(x) ?? 0,
+        E = (0, l.useMemo)(() => (null === m ? Math.max(g, x) : Math.max(x, m)), [g, x, m]),
+        v = `${h ? 0 : E}ch`,
+        { marginClassName: N, textAlignClassName: _ } = (0, l.useMemo)(
             () =>
                 "left" === s
-                    ? { marginClassName: x.v6, textAlignClassName: x.Sc }
-                    : { marginClassName: x.sl, textAlignClassName: x.$j },
+                    ? { marginClassName: f.v6, textAlignClassName: f.Sc }
+                    : { marginClassName: f.sl, textAlignClassName: f.$j },
             [s],
         );
-    return (0, n.jsx)(c.E, {
-        variant: l,
+    return (0, a.jsx)(c.E, {
+        variant: n,
         color: i,
-        className: r()(x.SP, h ? void 0 : N, A, o),
-        style: { width: j, opacity: h ? "0" : 1 },
+        className: r()(f.SP, h ? void 0 : N, _, o),
+        style: { width: v, opacity: h ? "0" : 1 },
         children: h
             ? null
-            : (0, n.jsx)(v, {
+            : (0, a.jsx)(b, {
                   onSetDigitCount: (e) => {
                       e !== m && C(e);
                   },
@@ -56,53 +56,53 @@ function j(e) {
               }),
     });
 }
-let v = (e) => {
+let b = (e) => {
         let {
                 value: t,
-                onSetDigitCount: l,
+                onSetDigitCount: n,
                 onValueChange: s = C.tEg,
                 onValueReached: r = C.tEg,
                 targetTotalCounterTime: c = 3e3,
                 isRenderedWithoutLottieAnimation: u,
             } = e,
-            [d, h] = (0, a.useState)(0),
-            f = (0, a.useRef)(null),
-            x = (0, a.useRef)(null);
-        (0, a.useEffect)(() => {
+            [d, h] = (0, l.useState)(0),
+            x = (0, l.useRef)(null),
+            f = (0, l.useRef)(null);
+        (0, l.useEffect)(() => {
             if (null === t) return;
-            if (null === f.current) {
-                f.current = t;
+            if (null === x.current) {
+                x.current = t;
                 return;
             }
-            let e = null !== f.current ? t - f.current : t;
-            0 !== e && null !== f.current && s(e), (x.current = { lastChangedAt: Date.now(), totalDelta: Math.abs(e) });
+            let e = null !== x.current ? t - x.current : t;
+            0 !== e && null !== x.current && s(e), (f.current = { lastChangedAt: Date.now(), totalDelta: Math.abs(e) });
         }, [t, s]);
-        let j = t ?? 0,
-            v = f.current ?? j,
-            { duration: N, delay: A } = (0, m.v)(j - v, { targetTime: c, isRenderedWithoutLottieAnimation: u }),
-            { number: p } = (0, o.z)({
-                from: { number: f.current ?? j },
-                number: j,
+        let v = t ?? 0,
+            b = x.current ?? v,
+            { duration: N, delay: _ } = (0, m.v)(v - b, { targetTime: c, isRenderedWithoutLottieAnimation: u }),
+            { number: j } = (0, o.z)({
+                from: { number: x.current ?? v },
+                number: v,
                 config: { mass: 1, tension: 20, friction: 10, duration: N },
-                delay: A,
+                delay: _,
                 onStart: () => {
-                    l(b(v));
+                    n(A(b));
                 },
                 onRest: () => {
-                    if ((h(d + 1), r(), !E && null !== x.current && null !== f.current)) {
+                    if ((h(d + 1), r(), !E && null !== f.current && null !== x.current)) {
                         let e = Date.now();
                         g.log("Balance Counter finished updating: ", {
-                            time: e - x.current.lastChangedAt,
-                            delta: j - f.current,
+                            time: e - f.current.lastChangedAt,
+                            delta: v - x.current,
                         });
                     }
-                    l(b(j)), (f.current = j);
+                    n(A(v)), (x.current = v);
                 },
             }),
-            S = b(Math.max(t ?? 0, p.get()));
-        return (0, n.jsx)(i.animated.div, {
+            S = A(Math.max(t ?? 0, j.get()));
+        return (0, a.jsx)(i.animated.div, {
             style: { width: `calc(${S}ch)` },
-            children: p.to((e) => `${e.toFixed(0)}`),
+            children: j.to((e) => `${e.toFixed(0)}`),
         });
     },
-    N = j;
+    N = v;

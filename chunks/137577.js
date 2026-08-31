@@ -29,10 +29,10 @@ function c(e) {
         }, [d, n, u]);
     let m = null != d && (null == d.parentId || null != u),
         g = null == c && null != d && m,
-        p = g && null != u && null != h;
+        A = g && null != u && null != h;
     return {
         showLinkedLobbyApplicationLoadingIndicator: null != t && (n !== o.FetchState.FETCHED || null == d || !m),
-        requiredLinkedLobbyApplication: g ? (p ? d : (u ?? d)) : null,
-        shouldRelaunchLinkedLobbyApplication: p,
+        requiredLinkedLobbyApplication: g ? (A ? d : (u ?? d)) : null,
+        shouldRelaunchLinkedLobbyApplication: A,
     };
 }

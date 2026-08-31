@@ -12,8 +12,8 @@ var l,
     g = n(309010),
     f = n(461213),
     A = n(287809),
-    E = n(977997),
-    p = n(562153),
+    p = n(977997),
+    E = n(562153),
     m = n(914853),
     I = n(956753),
     S = n(406595),
@@ -41,11 +41,11 @@ let v = new s.J(
         return e.sortKey;
     },
 );
-function y(e, t) {
+function M(e, t) {
     return String(Math.floor(Math.max(0, Math.min(e, Number("9".repeat(t)))))).padStart(t, "0");
 }
-function M(e) {
-    return y(1e6 - Math.max(0, Math.min(1e6, Math.round(1e6 * e))), 7);
+function y(e) {
+    return M(1e6 - Math.max(0, Math.min(1e6, Math.round(1e6 * e))), 7);
 }
 let D = new Map();
 function R() {
@@ -98,7 +98,7 @@ function U(e) {
                       sortKey:
                           ((t = Number.isFinite(u) ? u : 0),
                           (n = i),
-                          `REQ\0${y(Math.max(0, Math.min(0x9184e729fff, 0x9184e729fff - Math.floor(t))), 13)}\0${n}`),
+                          `REQ\0${M(Math.max(0, Math.min(0x9184e729fff, 0x9184e729fff - Math.floor(t))), 13)}\0${n}`),
                   };
               })({ userId: e, user: t, activities: s, nickname: a, relationshipType: n })
             : r
@@ -113,12 +113,12 @@ function U(e) {
                         u,
                         h,
                         { userId: A, user: I, activities: _, nickname: T, affinity: v } = e,
-                        { category: y, displayActivities: R } =
+                        { category: M, displayActivities: R } =
                             ((t = f.A.getPrimaryActivity()),
                             (n = i),
                             (l = t?.name != null && null != n),
                             (r = c.A.getStatus(A)),
-                            (s = E.A.getVoiceStateForUser(A)),
+                            (s = p.A.getVoiceStateForUser(A)),
                             (a = s?.channelId != null),
                             (u = (o = _.filter(O)).filter(C.A)),
                             (h = o.filter((e) => e.application_id === n)),
@@ -131,7 +131,7 @@ function U(e) {
                                     : r === N.clD.ONLINE || r === N.clD.IDLE || r === N.clD.DND
                                       ? { category: "ONLINE", displayActivities: o }
                                       : { category: "OFFLINE", displayActivities: o }),
-                        x = "IN_GAME" === y ? (R[0]?.name ?? null) : null,
+                        x = "IN_GAME" === M ? (R[0]?.name ?? null) : null,
                         U = D.get(A) ?? [],
                         [w] = S.A.isFavorite(m.x.FRIENDS, A),
                         P = g.Ay.getVoiceChannelId() ?? g.Ay.getChannelId(),
@@ -140,7 +140,7 @@ function U(e) {
                         G = b === N.clD.ONLINE,
                         F = R.some(O),
                         j = b === N.clD.DND || b === N.clD.IDLE,
-                        V = p.Ay.getName(L, P, I);
+                        V = E.Ay.getName(L, P, I);
                     return {
                         id: A,
                         userId: A,
@@ -148,7 +148,7 @@ function U(e) {
                         activities: R,
                         nickname: T,
                         category: "FRIEND",
-                        activityCategory: w ? null : y,
+                        activityCategory: w ? null : M,
                         groupIds: U,
                         sortKey: (function (e) {
                             let {
@@ -168,14 +168,14 @@ function U(e) {
                             if ("IN_GAME" === l) {
                                 let e,
                                     t = (e = r?.trim().toLowerCase() ?? "").length > 0 ? e : "\uFFFF";
-                                return `FRD\0${u}\0${d}\0${c}\0${t}\0${M(s)}\0${h}\0${o}`;
+                                return `FRD\0${u}\0${d}\0${c}\0${t}\0${y(s)}\0${h}\0${o}`;
                             }
-                            return `FRD\0${u}\0${d}\0${c}\0${M(s)}\0${h}\0${o}`;
+                            return `FRD\0${u}\0${d}\0${c}\0${y(s)}\0${h}\0${o}`;
                         })({
                             isOnline: G,
                             hasDisplayableActivity: F,
                             isDndOrIdle: j,
-                            activityCategory: y,
+                            activityCategory: M,
                             inGameActivityName: x,
                             affinity: v,
                             displayName: V,
@@ -186,11 +186,11 @@ function U(e) {
               : (function (e) {
                     let { userId: t, user: n, activities: i, nickname: l, affinity: r } = e;
                     if (!(r > _.u.HIGH_AFFINITY_MINIMUM)) return null;
-                    let s = E.A.getVoiceStateForUser(t),
+                    let s = p.A.getVoiceStateForUser(t),
                         a = s?.channelId,
                         o = null != a ? d.A.getChannel(a)?.guild_id : null,
                         u = i.length > 0 || null != a,
-                        c = p.Ay.getName(o, a, n);
+                        c = E.Ay.getName(o, a, n);
                     return {
                         id: t,
                         userId: t,
@@ -200,7 +200,7 @@ function U(e) {
                         category: "SUGGESTION",
                         activityCategory: null,
                         groupIds: [],
-                        sortKey: `SUG\0${u ? "0" : "1"}\0${M(r)}\0${c.toLowerCase()}\0${t}`,
+                        sortKey: `SUG\0${u ? "0" : "1"}\0${y(r)}\0${c.toLowerCase()}\0${t}`,
                     };
                 })({ userId: e, user: t, activities: s, nickname: a, affinity: o });
     })(e);
@@ -218,7 +218,7 @@ function w() {
 class P extends r.Ay.Store {
     static displayName = "FriendsWidgetFriendsStore";
     initialize() {
-        this.waitFor(d.A, o.A, S.A, c.A, h.A, g.Ay, f.A, u.A, A.default, E.A), w();
+        this.waitFor(d.A, o.A, S.A, c.A, h.A, g.Ay, f.A, u.A, A.default, p.A), w();
     }
     getRows(e) {
         return [v.values(e), v.version];

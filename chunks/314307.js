@@ -1,4 +1,4 @@
-n.d(t, { Ay: () => C, WK: () => p, cr: () => A, j1: () => f });
+n.d(t, { Ay: () => C, WK: () => A, cr: () => p, j1: () => f });
 var l = n(477900);
 n(582128);
 var i = n(503698),
@@ -12,7 +12,7 @@ var i = n(503698),
     h = n(375901),
     m = n(652215),
     g = n(560529);
-function p(e) {
+function A(e) {
     let { locked: t = !1, channelType: n } = e,
         i = n === m.rbe.GUILD_VOICE || n === m.rbe.GUILD_STAGE_VOICE ? a.ChatIcon : t ? r.I : o.N;
     return (0, l.jsx)("div", {
@@ -20,7 +20,7 @@ function p(e) {
         children: (0, l.jsx)(i, { color: c.A.colors.ICON_STRONG, size: "custom", width: 42, height: 42 }),
     });
 }
-function A(e) {
+function p(e) {
     let { children: t, className: n } = e;
     return (0, l.jsx)(d.D, {
         "aria-hidden": "true",

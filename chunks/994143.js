@@ -17,8 +17,8 @@ var l = n(477900),
     S = n(629042),
     y = n(1076),
     I = n(151115),
-    A = n(812095),
-    g = n(287809),
+    g = n(812095),
+    A = n(287809),
     P = n(486020),
     v = n(158045),
     x = n(580630),
@@ -97,7 +97,7 @@ function $(e) {
         r =
             null != n
                 ? (function (e) {
-                      let t = g.default.getCurrentUser(),
+                      let t = A.default.getCurrentUser(),
                           n = v.Ay.canUseShopDiscounts(t),
                           l = (0, f.xM)(t),
                           i = (0, f.WD)(e, { hasShopDiscount: n, discount: (0, f.fT)(e, n) });
@@ -147,7 +147,7 @@ function X(e) {
         {
             sku: f,
             application: y,
-            eligiblePaymentGateways: g,
+            eligiblePaymentGateways: A,
             disabled: P,
         } = (function () {
             let { selectedSkuId: e, purchaseState: t } = (0, h.t4)((e) => ({
@@ -217,7 +217,7 @@ function X(e) {
                 }, [d]),
             };
         })({ sku: f, application: y, isGift: s }),
-        K = i.useMemo(() => ({ paymentGatewayRestrictions: g, shouldUseUnifiedCheckoutUI: !0 }), [g]),
+        K = i.useMemo(() => ({ paymentGatewayRestrictions: A, shouldUseUnifiedCheckoutUI: !0 }), [A]),
         Z = (0, l.jsx)(d.N, {
             label: F.intl.string(F.t["u+Cw58"]),
             location: "OneTimePurchaseReviewStepBody",
@@ -289,7 +289,7 @@ function X(e) {
                             ? null
                             : (0, l.jsx)(u.J, {
                                   Icon: (0, I.sj)(t?.icon),
-                                  text: (0, A.U)(i),
+                                  text: (0, g.U)(i),
                                   gradientColor: (0, I.lx)(n),
                               });
                     }

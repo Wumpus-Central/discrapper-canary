@@ -1,4 +1,4 @@
-n.d(t, { a1: () => a, mh: () => E, wT: () => o });
+n.d(t, { a1: () => a, mh: () => o, wT: () => E });
 var i = n(375708);
 let l = new Date(Date.UTC(2026, 7, 21)),
     r = new Date(Date.UTC(2026, 7, 25)),
@@ -10,10 +10,10 @@ function a() {
         timeZone: "UTC",
     }).formatRange(l, r);
 }
-function E() {
+function o() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : r;
     return new Intl.DateTimeFormat(i.intl.currentLocale, { day: "numeric", month: "short", timeZone: "UTC" }).format(e);
 }
-function o() {
+function E() {
     return new Intl.DateTimeFormat(i.intl.currentLocale, { day: "numeric", month: "long", timeZone: "UTC" }).format(s);
 }

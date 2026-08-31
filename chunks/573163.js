@@ -59,8 +59,8 @@ var U = n(970278),
     K = n(72314),
     $ = n(919638),
     z = n(71393),
-    Z = n(885576),
-    q = n(232835),
+    q = n(885576),
+    Z = n(232835),
     X = n(576705),
     Q = n(994500),
     J = n(309010),
@@ -189,7 +189,7 @@ function eM(e, t) {
         E.Ay.getFocusedLayout() === er.E8.NO_CHAT
     )
         return eb(e, "In activity"), !1;
-    if (Z.A.isIdle()) return eb(e, "Is idle"), !1;
+    if (q.A.isIdle()) return eb(e, "Is idle"), !1;
     if (!e.canTrackUnreads()) return eb(e, "Cannot track unreads"), !1;
     if (n?.isForumLikeChannel() !== !0 && !eT.isAnyWindowFocused(e.channelId) && !ev(!0, e.channelId)) return !1;
     if (i && !e._persisted) return eb(e, "unpersisted forum post"), !0;
@@ -200,7 +200,7 @@ function eM(e, t) {
     if (!A.A.getChatOpen(e.channelId) && (r === ei.DUB.NO_CHAT || r === ei.DUB.FULL_SCREEN))
         return eb(e, "Fullscreen video"), !1;
     if (!eT.isChannelAckable(e.channelId)) return eb(e, "Not ackable"), !1;
-    let a = q.A.getMessages(e.channelId);
+    let a = Z.A.getMessages(e.channelId);
     return null == a || !a.ready || a.loadingMore
         ? (eb(e, "Still loading messages"), !1)
         : (0, M.oE)(e.channelId, t)
@@ -483,7 +483,7 @@ class eP {
             : null != this.flags && 0 !== this.flags && (this.flags = -5 & this.flags);
     }
     guessAckMessageId() {
-        let e = q.A.getMessages(this.channelId);
+        let e = Z.A.getMessages(this.channelId);
         if (null != this.ackMessageId || !this.isPrivate() || e.hasMoreAfter) return this.ackMessageId;
         if (!this.hasMentions()) return this.lastMessageId;
         let t = null,
@@ -528,7 +528,7 @@ class eP {
                 i = !1,
                 r = !1,
                 a = null,
-                s = q.A.getMessages(this.channelId);
+                s = Z.A.getMessages(this.channelId);
             s.forAll((s) => {
                 i
                     ? (this.oldestUnreadMessageId = this._oldestUnreadMessageId ?? s.id)
@@ -1051,7 +1051,7 @@ function ez(e) {
     let { channel: t } = e;
     return eP.clear(t.id);
 }
-function eZ() {
+function eq() {
     let e = W.Ay.getCurrentSidebarChannelId(e_),
         t = !1;
     return (
@@ -1069,7 +1069,7 @@ function eZ() {
         t
     );
 }
-function eq(e) {
+function eZ(e) {
     null == e || (eP.get(e).isManualAck = !1);
 }
 function eX(e) {
@@ -1107,7 +1107,7 @@ class e1 extends o.Ay.Store {
             $.A,
             Y.A,
             J.Ay,
-            q.A,
+            Z.A,
             X.A,
             A.A,
             U.A,
@@ -1134,9 +1134,9 @@ class e1 extends o.Ay.Store {
                 $.A,
                 T.Ay,
                 z.A,
-                Z.A,
-                w.A,
                 q.A,
+                w.A,
+                Z.A,
                 y.A,
                 X.A,
                 Q.A,
@@ -1146,7 +1146,7 @@ class e1 extends o.Ay.Store {
                 et.default,
                 en.A,
             ),
-            this.syncWith([W.Ay], eZ);
+            this.syncWith([W.Ay], eq);
     }
     getReadStatesByChannel() {
         return eP._readStates.get(el.P.CHANNEL) ?? new Map();
@@ -1415,7 +1415,7 @@ let e2 = new e1(_.h, {
             let { channelId: t, isAfter: n, messages: i } = e,
                 r = eP.get(t);
             (r.loadedMessages = !0), null == r.lastMessageId && i.length > 0 && (r.lastMessageId = i[0].id);
-            let a = q.A.getMessages(t);
+            let a = Z.A.getMessages(t);
             null != a &&
                 ((i.length > 0 && 1 === j.default.compare(i[0].id, r.ackMessageId) && 0 === r.unreadCount) ||
                 a.hasPresent() ||
@@ -1575,7 +1575,7 @@ let e2 = new e1(_.h, {
                 (e.ackMessageIdAtChannelSelect = e.ackMessageId ?? j.default.fromTimestamp(e.getAckTimestamp())),
                     e.recordLastViewedTime();
             }
-            eq(e_), eq(eE);
+            eZ(e_), eZ(eE);
             let r = !1;
             return (
                 e_ !== t && ((r = eX(e_) || r), (r = eX(eE) || r)),

@@ -1755,8 +1755,8 @@ function K() {
 n(667532);
 var $ = n(477900),
     z = n(582128),
-    Z = n(503698),
-    q = n.n(Z),
+    q = n(503698),
+    Z = n.n(q),
     X = n(229209);
 let Q = new c.Vy("DirectVideo");
 function J(e) {
@@ -1838,7 +1838,7 @@ function J(e) {
                         );
                     }
             }, [i, n]),
-            (0, $.jsx)("div", { className: q()("media-engine-video", l), ref: d, ...o })
+            (0, $.jsx)("div", { className: Z()("media-engine-video", l), ref: d, ...o })
         );
     })(e, J.onContainerResized);
 }

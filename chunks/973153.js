@@ -1,4 +1,4 @@
-n.d(t, { A: () => p });
+n.d(t, { A: () => E });
 var i = n(17928),
     l = n(228366),
     r = n(640631),
@@ -62,7 +62,7 @@ class g {
 }
 let f = -1 / 0,
     A = new s.A("MessagePreviewStore");
-class E extends i.Ay.Store {
+class p extends i.Ay.Store {
     initialize() {
         this.waitFor(a.A, o.A);
     }
@@ -163,4 +163,4 @@ class E extends i.Ay.Store {
         this.guilds.clear();
     }
 }
-let p = new E();
+let E = new p();

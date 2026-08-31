@@ -213,7 +213,7 @@ function z(e) {
             return (0, r.jsx)("div", { className: D.guildTagAccessory, children: t.element });
     }
 }
-function Z(e) {
+function q(e) {
     let { indicator: t } = e,
         { type: n, icon: i, color: a = "currentColor", className: s, ...o } = t;
     return (0, r.jsx)("div", {
@@ -221,7 +221,7 @@ function Z(e) {
         children: (0, r.jsx)(i, { "aria-hidden": !0, color: a, ...o, className: l()(D.icon, s) }),
     });
 }
-var q = n(869431);
+var Z = n(869431);
 function X(e) {
     let {
             color: t = "default",
@@ -268,7 +268,7 @@ function X(e) {
         }, [p, N]),
         (0, r.jsxs)(w.D, {
             innerRef: H,
-            className: l()(D.item, D.labelContainer, q.nM, M[t], C, { [D.disabled]: f, [D.focused]: p, [O ?? ""]: p }),
+            className: l()(D.item, D.labelContainer, Z.nM, M[t], C, { [D.disabled]: f, [D.focused]: p, [O ?? ""]: p }),
             onClick: f ? void 0 : Y,
             "aria-disabled": f,
             ...T,
@@ -316,7 +316,7 @@ function X(e) {
                         children: (0, r.jsx)(S.y, { type: S.y.Type.PULSING_ELLIPSIS }),
                     }),
                 W
-                    ? null != c && (0, r.jsx)(Z, { indicator: c })
+                    ? null != c && (0, r.jsx)(q, { indicator: c })
                     : (0, B.O)(s)
                       ? s
                       : null != s &&

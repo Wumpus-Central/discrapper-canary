@@ -62,8 +62,8 @@ var I = n(626584),
     K = n(287809),
     $ = n(67480),
     z = n(583613),
-    Z = n(403362),
-    q = n(149790),
+    q = n(403362),
+    Z = n(149790),
     X = n(695184),
     Q = n(488926),
     J = n(257120),
@@ -129,7 +129,7 @@ class ef {
             i = [];
         switch (e) {
             case ei.rD.GUILD:
-                i = t.filter((e) => (0, q.fh)(e));
+                i = t.filter((e) => (0, Z.fh)(e));
                 break;
             case ei.rD.USER:
                 i = t.filter((e) => e instanceof M.YB && e.type === E.rbe.DM);
@@ -324,7 +324,7 @@ let eL = (0, z.L_)((e, t, n) => {
                 query: t,
                 members: j.A.getFriendIDs()
                     .map((e) => K.default.getUser(e))
-                    .filter(Z.Vq),
+                    .filter(q.Vq),
                 limit: n,
                 filter: r,
             });
@@ -335,7 +335,7 @@ let eL = (0, z.L_)((e, t, n) => {
                 query: t,
                 members: _.A.getDMUserIds()
                     .map((e) => K.default.getUser(e))
-                    .filter(Z.Vq),
+                    .filter(q.Vq),
                 limit: n,
                 filter: i,
             });
@@ -832,7 +832,7 @@ let eL = (0, z.L_)((e, t, n) => {
                         );
                         return n > 0 ? { choice: e, score: n, originalIndex: t } : null;
                     })
-                    .filter(Z.Vq)
+                    .filter(q.Vq)
                     .sortBy((e) => -1 * e.score);
             return null !== i && (d = d.take(i)), d.value();
         },

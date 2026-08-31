@@ -141,10 +141,10 @@ function z(e) {
         return ($[e] = t), t;
     }
 }
-function Z(e) {
+function q(e) {
     return ((e.flags ?? 0) & D.nhx.STAFF) === D.nhx.STAFF || null != e.personal_connection_id;
 }
-function q(e, t, n, i) {
+function Z(e, t, n, i) {
     let r = `${t.type}|${e}`,
         a = t.triggerDebuggingEnabled && void 0 !== n && n.length > 0;
     switch (t.type) {
@@ -196,7 +196,7 @@ function J(e) {
     }
     if (n.override) return !1;
     let c = o === y.vf.AUTO_FALLBACK && !!n.triggerDebuggingEnabled,
-        _ = q(t, n, i, c),
+        _ = Z(t, n, i, c),
         A = X(n);
     if ((d && x.get(_) === A) || Q(_, A)) return !1;
     switch (n.type) {
@@ -263,7 +263,7 @@ function J(e) {
             } else E.default.track(e, a, { flush: !0, fingerprint: s });
         }
     }
-    d ? x.set(_, A) : ((G[q(t, n, i, c)] = { time: Date.now(), hash: X(n) }), e_(G));
+    d ? x.set(_, A) : ((G[Z(t, n, i, c)] = { time: Date.now(), hash: X(n) }), e_(G));
 }
 function ee(e) {
     let [t, n] = e;
@@ -287,7 +287,7 @@ function et(e) {
     };
 }
 function en(e) {
-    !K && "CONNECTION_OPEN" === e.type && Z(e.user) && (K = !0),
+    !K && "CONNECTION_OPEN" === e.type && q(e.user) && (K = !0),
         "EXPERIMENTS_FETCH_SUCCESS" === e.type &&
             w &&
             "ready_payload" === F.source &&
@@ -392,7 +392,7 @@ function ea(e) {
 }
 function es(e) {
     let { serializedExperimentStore: t, user: n } = e;
-    !K && Z(n) && (K = !0),
+    !K && q(n) && (K = !0),
         (w = t.hasLoadedExperiments),
         (G = t.trackedExposureExperiments),
         (V = t.loadedUserExperiments),
@@ -727,7 +727,7 @@ class eI extends _.A {
         };
     }
     hasExperimentTrackedExposure(e, t, n, i) {
-        return Q(q(e, t, n, i), X(t));
+        return Q(Z(e, t, n, i), X(t));
     }
 }
 let ef = new eI();

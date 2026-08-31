@@ -20,7 +20,7 @@ function I(e, t) {
     let { paymentSources: n, eligiblePaymentGateways: l } = t;
     return !!(null != e && e in n && (null == l || 0 === l.length || l.includes(n[e].paymentGateway)));
 }
-function A(e) {
+function g(e) {
     let {
         isGift: t,
         activeSubscription: n,
@@ -39,7 +39,7 @@ function A(e) {
     }
     return l;
 }
-let g = (e) => {
+let A = (e) => {
     let {
             isGift: t,
             activeSubscription: n,
@@ -67,7 +67,7 @@ let g = (e) => {
                     return;
                 }
                 u(
-                    A({
+                    g({
                         isGift: t,
                         activeSubscription: n,
                         defaultPaymentSourceId: l,
@@ -547,7 +547,7 @@ function eo(e) {
                         e,
                     )
                         ? (e.initialPaymentSourceId ?? null)
-                        : (A(e) ?? null);
+                        : (g(e) ?? null);
                 }, [n, l, u, s, c, r]),
                 defaultPaymentSourceId: u,
                 eligiblePaymentGateways: s,
@@ -602,7 +602,7 @@ function eo(e) {
             (0, l.jsx)(el, {}),
             (0, l.jsx)(K, {}),
             (0, l.jsx)(ee, {}),
-            (0, l.jsx)(g, {
+            (0, l.jsx)(A, {
                 isGift: r.isGift,
                 activeSubscription: r.activeSubscription,
                 defaultPaymentSourceId: P,
@@ -689,7 +689,7 @@ function ed(e) {
             selectedSkuId: S,
             selectedPlanId: y,
             paymentSourceId: I,
-            paymentGateway: A,
+            paymentGateway: g,
         } = (0, d.t4)((e) => ({
             contextMetadata: e.contextMetadata,
             unifiedCheckoutFlow: e.unifiedCheckoutFlow,
@@ -700,10 +700,10 @@ function ed(e) {
             paymentSourceId: e.paymentSourceId,
             paymentGateway: e.paymentGateway,
         })),
-        g = null != I && null != p[I] ? p[I]?.type : null,
+        A = null != I && null != p[I] ? p[I]?.type : null,
         P = i.useMemo(
-            () => ({ payment_source_id: I, payment_gateway: A, payment_source_type: g, checkout_flow: h }),
-            [I, A, g, h],
+            () => ({ payment_source_id: I, payment_gateway: g, payment_source_type: A, checkout_flow: h }),
+            [I, g, A, h],
         ),
         v = (0, r.Db)(),
         x = (0, u.BQ)();

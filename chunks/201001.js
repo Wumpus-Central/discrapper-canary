@@ -57,8 +57,8 @@ function m(e, t, n, a) {
                 customTheme: K = !1,
                 chunkSize: $,
                 style: z,
-                innerId: Z,
-                innerRole: q,
+                innerId: q,
+                innerRole: Z,
                 innerAriaLabel: X,
                 innerAriaMultiselectable: Q,
                 innerAriaOrientation: J,
@@ -294,8 +294,8 @@ function m(e, t, n, a) {
                     r.useMemo(
                         () =>
                             (0, i.jsx)(et, {
-                                id: Z,
-                                role: q,
+                                id: q,
+                                role: Z,
                                 "aria-label": X,
                                 "aria-multiselectable": Q,
                                 "aria-orientation": J,
@@ -364,7 +364,7 @@ function m(e, t, n, a) {
                                     }),
                                 }),
                             }),
-                        [et, Z, q, X, Q, J, eu, ee, e_, k, F, U, w, G, V, ec],
+                        [et, q, Z, X, Q, J, eu, ee, e_, k, F, U, w, G, V, ec],
                     ),
                     r.useMemo(
                         () =>

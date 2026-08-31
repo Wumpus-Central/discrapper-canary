@@ -157,14 +157,14 @@ function z() {
         : W(),
         c.A.getSocket()?.handleActiveStateChange(K());
 }
-function Z(e) {
+function q(e) {
     return null == e
         ? null
         : e.version !== R.Ir
           ? (U.warn(`Throwing away client session with invalid version: ${e.version}, expected ${R.Ir}`), null)
           : e;
 }
-async function q() {
+async function Z() {
     let e = await er(!1);
     null != e && c.A.getSocket()?.handleUpdateTimeSpentSessionId(e.createdAtTimestamp, e.uuid, r.C);
 }
@@ -198,7 +198,7 @@ function ei() {
         _.default.addChangeListener(X),
         l.h.subscribe("WINDOW_FOCUS", J),
         l.h.subscribe("APP_STATE_UPDATE", et),
-        l.h.subscribe("CONNECTION_OPEN", q),
+        l.h.subscribe("CONNECTION_OPEN", Z),
         (0, N.JK)().listen(ee),
         z(),
         null == G &&
@@ -218,7 +218,7 @@ async function er() {
         t = null,
         n = "loaded" === F.state ? F.session?.uuid : null;
     try {
-        t = "uninitialized" === F.state ? Z(await s.w.getAfterRefresh(M)) : F.session;
+        t = "uninitialized" === F.state ? q(await s.w.getAfterRefresh(M)) : F.session;
     } catch (e) {
         f.A.captureException(e);
     }
@@ -246,6 +246,6 @@ async function er() {
     );
 }
 function ea() {
-    let e = "uninitialized" === F.state ? Z(s.w.get(M)) : F.session;
+    let e = "uninitialized" === F.state ? q(s.w.get(M)) : F.session;
     return null == e || (0, R.aE)(e) ? null : e;
 }

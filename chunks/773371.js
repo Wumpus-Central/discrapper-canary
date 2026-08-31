@@ -77,8 +77,8 @@ function Y() {
 let K = !1,
     $ = !1,
     z = null,
-    Z = new Set(),
-    q = "",
+    q = new Set(),
+    Z = "",
     X = new Set();
 class Q {
     isDispatching = !1;
@@ -420,9 +420,9 @@ async function eE(e) {
         let t = H[e];
         delete H[e];
         try {
-            await t.deconstructor(), Z.delete(e);
+            await t.deconstructor(), q.delete(e);
         } catch (n) {
-            (0, S.pj)(n, C.Ue.Hook), en.error(`Failed to deconstruct tracked game ${e}`, n), (H[e] = t), Z.add(e);
+            (0, S.pj)(n, C.Ue.Hook), en.error(`Failed to deconstruct tracked game ${e}`, n), (H[e] = t), q.add(e);
         }
     }
     let n = !1;
@@ -431,7 +431,7 @@ async function eE(e) {
             await t(Number(i)), (n = !0);
         return;
     }
-    for (let i of Z) {
+    for (let i of q) {
         if (e.added?.includes(i)) {
             en.warn("updateIntendedOverlayPIDs: Failed PID was re-added?");
             continue;
@@ -557,7 +557,7 @@ function eg(e) {
                 i = Math.min(e.length, t.length);
             for (let r = 0; r < i; r++) n |= e.charCodeAt(r) ^ t.charCodeAt(r);
             return 0 === n && e.length === t.length;
-        })(e, q)
+        })(e, Z)
     );
 }
 function eS(e) {
@@ -733,7 +733,7 @@ let ey = new eL(
                       let { locked: t, pid: n } = e,
                           i = W.get(n);
                       if (
-                          (Z.has(n) && eA(void 0), null != i && null != H[n]) &&
+                          (q.has(n) && eA(void 0), null != i && null != H[n]) &&
                           (t || "READY" === i || "CRASHED" === i)
                       ) {
                           if (
@@ -756,11 +756,11 @@ let ey = new eL(
                   },
                   RPC_SERVER_READY: function (e) {
                       let { port: t } = e;
-                      q = btoa(String.fromCharCode(...crypto.getRandomValues(new Uint8Array(8))));
+                      Z = btoa(String.fromCharCode(...crypto.getRandomValues(new Uint8Array(8))));
                       let n = new URLSearchParams();
-                      n.append("build_id", "7e168655f284957831352d20a86875de0c979051"),
+                      n.append("build_id", "5ac4bd817207a394474c44e6b6a056f08bd1c4d6"),
                           n.append("rpc", String(t)),
-                          n.append("rpc_auth_token", q),
+                          n.append("rpc_auth_token", Z),
                           (i = `${location.protocol}//${location.host}/overlay?${n.toString()}`);
                   },
                   OVERLAY_CALL_PRIVATE_CHANNEL: function (e) {

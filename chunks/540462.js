@@ -30,8 +30,8 @@ var i = n(477900),
     L = n(47294),
     O = n(793574),
     P = n(95561),
-    M = n(688810),
-    w = n(139286),
+    w = n(688810),
+    M = n(139286),
     U = n(587895),
     D = n(235986),
     V = n(558845),
@@ -84,8 +84,8 @@ var i = n(477900),
     eL = n(681281),
     eO = n(587837),
     eP = n(675853),
-    eM = n(384059),
-    ew = n(480890),
+    ew = n(384059),
+    eM = n(480890),
     eU = n(806931),
     eD = n(652215),
     eV = n(375708),
@@ -129,7 +129,7 @@ function eH(e) {
                           direction: h,
                           className: ek.jZ,
                           onClick: () => {
-                              (0, eM.X)(O.A.VOICE_CONTROL_TRAY, eM.O.CHAT, p), r();
+                              (0, ew.X)(O.A.VOICE_CONTROL_TRAY, ew.O.CHAT, p), r();
                           },
                       }),
                   })
@@ -255,7 +255,7 @@ class ez extends l.PureComponent {
         this.props.layout === eD.DUB.FULL_SCREEN && this.handleFullScreen();
     };
     trackCallTileContextMenuImpression = (e, t) => {
-        (0, w.x)({
+        (0, M.x)({
             type: c.ImpressionTypes.MENU,
             name: c.ImpressionNames.CALL_TILE_CONTEXT_MENU,
             properties: {
@@ -267,7 +267,7 @@ class ez extends l.PureComponent {
     };
     getCallTileMenuActionHandler = function (e, t, n) {
         let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : eU.GK.CONTEXT_MENU;
-        return (0, ew.s)(e, O.A.CHANNEL_CALL, {
+        return (0, eM.s)(e, O.A.CHANNEL_CALL, {
             entrypoint: i,
             tileType: n,
             targetUserId: t.type !== eU.lp.ACTIVITY ? t.user.id : void 0,
@@ -314,7 +314,7 @@ class ez extends l.PureComponent {
                 if (null != u) {
                     if (l)
                         return (0, q.r)(t, u, s, d, (e, t) =>
-                            (0, ew.Y)({
+                            (0, eM.Y)({
                                 menuItemProps: t,
                                 menuName: e,
                                 entrypoint: eU.GK.THREE_DOT,
@@ -495,7 +495,7 @@ class ez extends l.PureComponent {
         null == t || (0, T.f)() ? n() : (0, L.A)({ onConfirm: n });
     };
     handleStayOnTop = (e) => {
-        (0, eM.X)(O.A.VOICE_CONTROL_TRAY, eM.O.STAY_ON_TOP, e), Y.setAlwaysOnTop(eD.MLl.CHANNEL_CALL_POPOUT, e);
+        (0, ew.X)(O.A.VOICE_CONTROL_TRAY, ew.O.STAY_ON_TOP, e), Y.setAlwaysOnTop(eD.MLl.CHANNEL_CALL_POPOUT, e);
     };
     handleClosePopout = () => {
         Y.close(eD.MLl.CHANNEL_CALL_POPOUT);
@@ -566,10 +566,10 @@ class ez extends l.PureComponent {
                           popoutOpen: this.popoutOpen,
                           className: ek.iq,
                           onOpenPopout: () => {
-                              (0, eM.X)(O.A.VOICE_CONTROL_TRAY, eM.O.POPOUT, !0), this.handleOpenPopout();
+                              (0, ew.X)(O.A.VOICE_CONTROL_TRAY, ew.O.POPOUT, !0), this.handleOpenPopout();
                           },
                           onClosePopout: () => {
-                              (0, eM.X)(O.A.VOICE_CONTROL_TRAY, eM.O.POPOUT, !1), this.handleClosePopout();
+                              (0, ew.X)(O.A.VOICE_CONTROL_TRAY, ew.O.POPOUT, !1), this.handleClosePopout();
                           },
                       })
                     : null,
@@ -580,9 +580,9 @@ class ez extends l.PureComponent {
                           guestWindow: e,
                           className: ek.iq,
                           onClick: () => {
-                              (0, eM.X)(
+                              (0, ew.X)(
                                   O.A.VOICE_CONTROL_TRAY,
-                                  eM.O.FULL_SCREEN,
+                                  ew.O.FULL_SCREEN,
                                   this.props.layout !== eD.DUB.FULL_SCREEN,
                               ),
                                   this.handleFullScreen();
@@ -771,7 +771,7 @@ let eW = function (e) {
             filteredParticipants: R,
             participantsVersion: L,
             mode: P,
-            layout: w,
+            layout: M,
             participantsOpen: U,
             chatOpen: D,
             selectedParticipant: B,
@@ -821,7 +821,7 @@ let eW = function (e) {
     }, [el, ea]);
     let es = (0, d.bG)([S.Ay], () => S.Ay.getSelfEmbeddedActivityForChannel(t.id), [t]),
         er = (0, V.mB)(u.M.CALL_CHAT_BUTTON_TEXT_IN_VOICE_COACH_MARK),
-        { analyticsLocations: eo } = (0, M.Ay)(O.A.CHANNEL_CALL),
+        { analyticsLocations: eo } = (0, w.Ay)(O.A.CHANNEL_CALL),
         ec = S.Ay.getEmbeddedActivitiesForChannel(t.id),
         { enabled: ed } = (0, z.mf)({ guildId: t.guild_id, location: "ChannelCall" }),
         eu = (0, d.bG)([H.A], () => H.A.isVisible(t.id)),
@@ -830,7 +830,7 @@ let eW = function (e) {
             return null != e && null == e.position;
         }),
         { theme: eC } = (0, x.wR)();
-    return (0, i.jsx)(M.f5, {
+    return (0, i.jsx)(w.f5, {
         value: eo,
         children: (0, i.jsx)(v.A, {
             page: eD.liQ.CHANNEL_CALL,
@@ -852,7 +852,7 @@ let eW = function (e) {
                             participants: T,
                             filteredParticipants: R,
                             participantsVersion: L,
-                            layout: w,
+                            layout: M,
                             chatOpen: D,
                             maxSidebarWidth: o - 550,
                             currentUserId: X,

@@ -565,7 +565,7 @@ class z {
         return new z(e);
     }
 }
-class Z {
+class q {
     shopBlocks;
     categories;
     constructor(e) {
@@ -600,10 +600,10 @@ class Z {
             (this.categories = e.categories.map((e) => g.A.fromServer(e)));
     }
     static fromServer(e) {
-        return new Z(e);
+        return new q(e);
     }
 }
-var q = n(100057),
+var Z = n(100057),
     X = n(181774);
 function Q(e) {
     let { tab: t, ...i } = e;
@@ -638,9 +638,9 @@ async function en(e, t, n) {
     let i = (0, X.ao)(e),
         r = c.Ay.get("shop_show_debug_overlay");
     e?.logPerf &&
-        (0, q.z)({
+        (0, Z.z)({
             sessionId: n?.sessionId,
-            checkpoint: q.t.CATEGORIES_FETCH_STARTED,
+            checkpoint: Z.t.CATEGORIES_FETCH_STARTED,
             tab: n?.tab,
             unpublishedCategoriesShown: e?.includeUnpublished,
             cacheDisabled: e?.noCache,
@@ -649,9 +649,9 @@ async function en(e, t, n) {
     try {
         let a = await l.Bo.get({ url: U.Rsh.COLLECTIBLES_CATEGORIES_V2, query: i, rejectWithError: !0 });
         e?.logPerf &&
-            (0, q.z)({
+            (0, Z.z)({
                 sessionId: n?.sessionId,
-                checkpoint: q.t.CATEGORIES_FETCH_COMPLETED,
+                checkpoint: Z.t.CATEGORIES_FETCH_COMPLETED,
                 tab: n?.tab,
                 unpublishedCategoriesShown: e?.includeUnpublished,
                 cacheDisabled: e?.noCache,
@@ -758,9 +758,9 @@ async function ec(e, t, n) {
     o.h.dispatch({ type: "COLLECTIBLES_SHOP_HOME_FETCH", tab: e, options: t ?? {} });
     let i = (0, X.ao)(t, e);
     t?.logPerf &&
-        (0, q.z)({
+        (0, Z.z)({
             sessionId: n?.sessionId,
-            checkpoint: q.t.SHOP_HOME_FETCH_STARTED,
+            checkpoint: Z.t.SHOP_HOME_FETCH_STARTED,
             tab: n?.tab,
             unpublishedCategoriesShown: t?.includeUnpublished,
             cacheDisabled: t?.noCache,
@@ -768,14 +768,14 @@ async function ec(e, t, n) {
     try {
         let r = await l.Bo.get({ url: U.Rsh.COLLECTIBLES_SHOP, query: i, rejectWithError: !0 });
         t?.logPerf &&
-            (0, q.z)({
+            (0, Z.z)({
                 sessionId: n?.sessionId,
-                checkpoint: q.t.SHOP_HOME_FETCH_COMPLETED,
+                checkpoint: Z.t.SHOP_HOME_FETCH_COMPLETED,
                 tab: n?.tab,
                 unpublishedCategoriesShown: t?.includeUnpublished,
                 cacheDisabled: t?.noCache,
             }),
-            o.h.dispatch({ type: "COLLECTIBLES_SHOP_HOME_FETCH_SUCCESS", tab: e, shopHome: Z.fromServer(r.body) });
+            o.h.dispatch({ type: "COLLECTIBLES_SHOP_HOME_FETCH_SUCCESS", tab: e, shopHome: q.fromServer(r.body) });
     } catch (n) {
         let t = new d.LG(n);
         (0, u.o)(t), o.h.dispatch({ type: "COLLECTIBLES_SHOP_HOME_FETCH_FAILURE", tab: e, error: t });

@@ -1,6 +1,6 @@
 n.d(t, {
-    U_: () => eA,
-    yq: () => eg,
+    U_: () => eg,
+    yq: () => eA,
     LR: () => eM,
     $p: () => eO,
     cD: () => eT,
@@ -26,8 +26,8 @@ var l = n(477900),
     S = n(939249),
     y = n(398590),
     I = n(793574),
-    A = n(688810),
-    g = n(906199),
+    g = n(688810),
+    A = n(906199),
     P = n(361158),
     v = n(976860),
     x = n(839534),
@@ -37,14 +37,14 @@ var l = n(477900),
     b = n(909753);
 let j = function (e) {
     let { onClose: t } = e,
-        { analyticsLocations: n } = (0, A.Ay)(),
+        { analyticsLocations: n } = (0, g.Ay)(),
         { isHidden: i } = _.A.useConfig({ location: "CollectiblesGiftPremiumPlanSelectUpsell" });
     function r() {
         t(),
             (0, v.pX)(T.BVt.COLLECTIBLES_SHOP),
             (0, x.Cz)({ analyticsSource: I.A.PREMIUM_PAYMENT_MODAL, analyticsLocations: n }),
             (0, y.jH)(),
-            (0, P.dF)(g.Zt);
+            (0, P.dF)(A.Zt);
     }
     return i
         ? null
@@ -125,8 +125,8 @@ function X(e) {
         C = !Q(o) && $(o) ? o : 3,
         [f, E] = i.useState(() => (Q(o) ? "preset" : "custom")),
         [S, y] = i.useState(() => String(C)),
-        [I, A] = i.useState(C),
-        g = i.useId(),
+        [I, g] = i.useState(C),
+        A = i.useId(),
         P = i.useId(),
         v = i.useId(),
         x = a.find((e) => e?.interval === K.WT.MONTH),
@@ -169,7 +169,7 @@ function X(e) {
                                     (0, l.jsx)("input", {
                                         className: q.Ts,
                                         type: "radio",
-                                        name: g,
+                                        name: A,
                                         value: n.id,
                                         checked: a,
                                         onChange: () => {
@@ -267,12 +267,12 @@ function X(e) {
                                         if (!/^\d*$/.test(t)) return;
                                         if ("" !== t && Number(t) > 50) {
                                             let e = String(50);
-                                            E("custom"), y(e), A(50), c(50);
+                                            E("custom"), y(e), g(50), c(50);
                                             return;
                                         }
                                         y(t);
                                         let n = Number(t);
-                                        $(n) && (E("custom"), A(n), c(n));
+                                        $(n) && (E("custom"), g(n), c(n));
                                     },
                                     onBlur: function () {
                                         let e = Number(S);
@@ -408,11 +408,11 @@ var eu = n(477421),
 n(26279);
 var ey = n(818348),
     eI = n(656715);
-function eA(e, t) {
+function eg(e, t) {
     let { isEligibleForBOGOPromotion: n } = t;
     return null != e && !n;
 }
-function eg(e, t) {
+function eA(e, t) {
     let n = N.intl.string(N.t.BYa62u),
         l = N.intl.string(N.t.CDa6Dq),
         i = (() => {
@@ -490,8 +490,8 @@ function ev(e) {
         { userTrialOffer: E, isEligibleForTrial: S, discountOffer: y } = (0, p.i)(),
         I = (0, ed.YJ)(y),
         {
-            isGift: A,
-            giftRecipient: g,
+            isGift: g,
+            giftRecipient: A,
             selectedGiftStyle: P,
             customGiftMessage: v,
             setCustomGiftMessage: x,
@@ -499,8 +499,8 @@ function ev(e) {
             setSelectedGiftingPromotionRewards: T,
         } = (0, R.Pv)(),
         N = (0, C.A)(),
-        b = (0, H.kz)(N, A && (0, k.Ik)(g), _),
-        j = (0, O.tA)({ giftRecipient: g, isGift: A });
+        b = (0, H.kz)(N, g && (0, k.Ik)(A), _),
+        j = (0, O.tA)({ giftRecipient: A, isGift: g });
     a()(void 0 !== f, "should not be undefined");
     let [M, w] = (0, s.yK)([L.A], () => [null != f ? L.A.get(f.planId) : null, null != t ? L.A.get(t) : null]),
         D = E?.subscriptionTrial,
@@ -511,27 +511,27 @@ function ev(e) {
     a()(null != W, "Price option has to be set");
     let Y = y?.discount?.planIds,
         V = null != y && l.some((e) => Y?.includes(e)) && null != y.discount,
-        K = null != I && l.includes(I) ? (0, U.y8)(I, !1, A, W) : void 0,
+        K = null != I && l.includes(I) ? (0, U.y8)(I, !1, g, W) : void 0,
         Z = null != B ? B.id : void 0,
         q = null != Z && l.includes(Z);
     i.useEffect(() => {
         if (q) return void d(Z, { shouldUpdateQuantity: !1 });
-        let e = !A && null != I && l.includes(I) ? I : null;
-        if (null == M || A) d(e ?? l[0]);
+        let e = !g && null != I && l.includes(I) ? I : null;
+        if (null == M || g) d(e ?? l[0]);
         else if (null != M) {
             let e = l.find((e) => e !== M.id);
             null != e && d(e);
         }
-    }, [q, A, l, M, d, Z, I]),
+    }, [q, g, l, M, d, Z, I]),
         i.useEffect(() => {
             b && null != _ && _.length > 0 && T(_);
         }, [_, T, b]);
     let { ref: z, ...Q } = (0, o._u)(),
-        $ = B?.id != null ? (0, U.y8)(B.id, !1, A, W) : void 0,
+        $ = B?.id != null ? (0, U.y8)(B.id, !1, g, W) : void 0,
         { ipCountryCode: J } = (0, eu.A)(),
         X = "HR" === J && null != $ && $.currency === ey.Yr.EUR,
         ee = (0, U.J$)(W.paymentSourceId),
-        et = !A && (V || (null != D && S && null != r)),
+        et = !g && (V || (null != D && S && null != r)),
         { copy: en } = eP();
     return {
         skuId: c,
@@ -548,8 +548,8 @@ function ev(e) {
         isPrepaid: ee,
         radioGroupRef: z,
         radioGroupProps: Q,
-        isGift: A,
-        giftRecipient: g,
+        isGift: g,
+        giftRecipient: A,
         customGiftMessage: v,
         setCustomGiftMessage: x,
         selectedGiftStyle: P,
@@ -788,8 +788,8 @@ function eO(e) {
             isEligibleForBOGOPromotion: S,
             isGift: y,
             thePriceOptions: I,
-            isEligibleForTrial: A,
-            giftRecipient: g,
+            isEligibleForTrial: g,
+            giftRecipient: A,
             customGiftMessage: P,
             setCustomGiftMessage: v,
             selectedGiftStyle: x,
@@ -810,7 +810,7 @@ function eO(e) {
         { discountAmountOff: V, applicablePlan: Z, discountOffer: q } = (0, h.t4)((e) => e.premiumDiscountInfo),
         z = (0, G.ds)(),
         Q = B.Ay.useConfig({ location: "PremiumSwitchPlanSelectBody" }),
-        $ = (0, W.M)({ isGift: y, giftRecipient: g, selectedPlanId: C?.id }),
+        $ = (0, W.M)({ isGift: y, giftRecipient: A, selectedPlanId: C?.id }),
         J = $ && Q === B.o3.STEPPER,
         ee = $ && Q === B.o3.PRESETS;
     function et() {
@@ -825,7 +825,7 @@ function eO(e) {
             selectedPlan: C,
             thePriceOptions: I,
             shouldShowTrialOrDiscountLayout: R,
-            isEligibleForTrial: A,
+            isEligibleForTrial: g,
             isPlansEligibleForDiscount: _,
         });
     }
@@ -838,7 +838,7 @@ function eO(e) {
     });
     if (y)
         return (0, l.jsx)(e_, {
-            giftRecipient: g,
+            giftRecipient: A,
             customGiftMessage: P,
             setCustomGiftMessage: v,
             selectedGiftStyle: x,
@@ -858,8 +858,8 @@ function eO(e) {
             switchPlanSelectComponent: et(),
             warningComponent: ej({ shouldShowHRKEuroWarning: U, selectedPlanPrice: w }),
         });
-    let ei = !(A && en && !z),
-        er = eA(E, { isEligibleForBOGOPromotion: S });
+    let ei = !(g && en && !z),
+        er = eg(E, { isEligibleForBOGOPromotion: S });
     return (0, l.jsxs)("div", {
         children: [
             en &&
@@ -867,9 +867,9 @@ function eO(e) {
                 (0, l.jsx)(eC.vi, {
                     fractionalPremiumInfo: el,
                     enablePremiumBrandRefresh: !0,
-                    variant: A ? eC.uA.TRIAL : void 0,
-                    trialPeriod: A ? Y : void 0,
-                    trialEnd: A ? s : void 0,
+                    variant: g ? eC.uA.TRIAL : void 0,
+                    trialPeriod: g ? Y : void 0,
+                    trialEnd: g ? s : void 0,
                 }),
             er &&
                 !en &&
@@ -877,7 +877,7 @@ function eO(e) {
                     variant: "text-md/medium",
                     color: "interactive-text-default",
                     className: eI.G3,
-                    children: eg(E, p),
+                    children: eA(E, p),
                 }),
             ei &&
                 (function (e, t, i) {
@@ -924,7 +924,7 @@ function eO(e) {
                             ],
                         });
                     }
-                })(j, A, _),
+                })(j, g, _),
             et(),
             eM({
                 selectedPlan: C,

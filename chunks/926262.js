@@ -11,8 +11,8 @@ var l = n(477900),
     h = n(363195),
     m = n(174459),
     g = n(652215),
-    p = n(375708),
-    A = n(548426),
+    A = n(375708),
+    p = n(548426),
     f = n(165648);
 function C(e) {
     let { onClose: t, onConfirm: C, onCancel: x, channel: E, analyticsType: S, popoutText: I, animation: _ } = e;
@@ -56,17 +56,17 @@ function C(e) {
         (0, l.jsx)(r.l, {
             "aria-labelledby": "content-warning-popout-label",
             children: (0, l.jsxs)("form", {
-                className: A.$,
+                className: p.$,
                 onSubmit: j,
                 children: [
                     (0, l.jsxs)("div", {
-                        className: A.rf,
+                        className: p.rf,
                         children: [
-                            null != _ && (0, l.jsx)("div", { className: A.lY, ref: b }),
+                            null != _ && (0, l.jsx)("div", { className: p.lY, ref: b }),
                             (0, l.jsxs)("div", {
-                                className: A.Qs,
+                                className: p.Qs,
                                 children: [
-                                    (0, l.jsx)("div", { className: A.wx, children: p.intl.string(p.t.mY3Y38) }),
+                                    (0, l.jsx)("div", { className: p.wx, children: A.intl.string(A.t.mY3Y38) }),
                                     (0, l.jsx)(o.E, {
                                         id: "content-warning-popout-label",
                                         className: f.PT,
@@ -74,42 +74,42 @@ function C(e) {
                                         children: I.body,
                                     }),
                                     (0, l.jsxs)("div", {
-                                        className: A._o,
+                                        className: p._o,
                                         children: [
                                             (0, l.jsxs)("div", {
-                                                className: A.UD,
+                                                className: p.UD,
                                                 children: [
                                                     (0, l.jsx)("div", {
-                                                        className: A.x6,
+                                                        className: p.x6,
                                                         children: (0, l.jsx)(c.$, {
                                                             variant: "secondary",
                                                             onClick: y,
-                                                            text: p.intl.string(p.t.fsBWmS),
+                                                            text: A.intl.string(A.t.fsBWmS),
                                                         }),
                                                     }),
                                                     (0, l.jsx)(o.E, {
                                                         variant: "text-xs/normal",
-                                                        className: A.uK,
-                                                        children: p.intl.format(p.t["0LzVPZ"], {}),
+                                                        className: p.uK,
+                                                        children: A.intl.format(A.t["0LzVPZ"], {}),
                                                     }),
                                                 ],
                                             }),
                                             (0, l.jsxs)("div", {
-                                                className: A.UD,
+                                                className: p.UD,
                                                 children: [
                                                     (0, l.jsx)("div", {
-                                                        className: A.x6,
+                                                        className: p.x6,
                                                         children: (0, l.jsx)(c.$, {
                                                             variant: "primary",
                                                             onClick: j,
-                                                            text: p.intl.string(p.t.KJnHq3),
+                                                            text: A.intl.string(A.t.KJnHq3),
                                                             autoFocus: !0,
                                                         }),
                                                     }),
                                                     (0, l.jsx)(o.E, {
                                                         variant: "text-xs/normal",
-                                                        className: A.uK,
-                                                        children: p.intl.format(p.t.khjqdH, {}),
+                                                        className: p.uK,
+                                                        children: A.intl.format(A.t.khjqdH, {}),
                                                     }),
                                                 ],
                                             }),
@@ -121,12 +121,12 @@ function C(e) {
                     }),
                     null != I.footer && "" !== I.footer
                         ? (0, l.jsxs)("div", {
-                              className: A.qr,
+                              className: p.qr,
                               children: [
                                   (0, l.jsx)(d.CircleInformationIcon, {
                                       size: "xs",
                                       color: s.A.unsafe_rawColors.PRIMARY_400.css,
-                                      className: A.Kk,
+                                      className: p.Kk,
                                   }),
                                   (0, l.jsx)(o.E, { variant: "text-sm/normal", children: I.footer }),
                               ],

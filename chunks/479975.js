@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => q, I: () => k }), n(321073), n(323874), n(14289), n(35956), n(142703);
+n.d(t, { A: () => Z, I: () => k }), n(321073), n(323874), n(14289), n(35956), n(142703);
 var i = n(435558),
     r = n.n(i),
     a = n(481613),
@@ -190,7 +190,7 @@ function z(e) {
         n = arguments.length > 2 ? arguments[2] : void 0;
     e.includes("message") ? H(e, t, n) : B(e, t, n);
 }
-async function Z(e, t, n, i, r) {
+async function q(e, t, n, i, r) {
     var a, s;
     let l,
         o,
@@ -322,8 +322,8 @@ async function Z(e, t, n, i, r) {
         w(e, t, "html5");
         return;
     }
-    let { result: $, reason: Z } = h({ embeddedMac: j, constructed: !0, nativeFailureReason: B });
-    return (w($, Z, "html5"),
+    let { result: $, reason: q } = h({ embeddedMac: j, constructed: !0, nativeFailureReason: B });
+    return (w($, q, "html5"),
     F(l, i),
     (l.onclick = (e) => {
         L.isPlatformEmbedded ? y.Ay.focus() : (window.focus(), l.close()),
@@ -343,7 +343,7 @@ async function Z(e, t, n, i, r) {
               trackingProps: i,
           };
 }
-let q = {
+let Z = {
     hasPermission: K,
     requestPermission: function (e) {
         if (o.A?.features.supports("notifications"))
@@ -364,6 +364,6 @@ let q = {
                 null != e && e(await K());
             });
     },
-    showNotification: Z,
+    showNotification: q,
     playNotificationSound: B,
 };

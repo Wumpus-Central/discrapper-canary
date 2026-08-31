@@ -326,13 +326,13 @@ function z(e) {
     let { channelId: t } = e;
     return null != t && t === f.Ay.getChannelId() && X(t);
 }
-function Z(e) {
+function q(e) {
     let { settings: t, local: n } = e;
     if (!n || t.type !== D.oD.PRELOADED_USER_SETTINGS) return !1;
     let i = f.Ay.getChannelId();
     return null != i && X(i);
 }
-function q(e) {
+function Z(e) {
     let { channelId: t, chatOpen: n } = e;
     return !!n && X(t);
 }
@@ -420,8 +420,8 @@ class Q extends d.A {
         MOD_VIEW_SEARCH_MESSAGES_SUCCESS: j,
         CHANNEL_SELECT: z,
         LOAD_PINNED_MESSAGES_SUCCESS: W,
-        USER_SETTINGS_PROTO_UPDATE: Z,
-        CHANNEL_RTC_UPDATE_CHAT_OPEN: q,
+        USER_SETTINGS_PROTO_UPDATE: q,
+        CHANNEL_RTC_UPDATE_CHAT_OPEN: Z,
     };
 }
 let J = new Q();

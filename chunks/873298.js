@@ -4,13 +4,13 @@ n.d(t, {
     Ar: () => ee,
     DQ: () => B,
     E: () => eY,
-    F1: () => eZ,
+    F1: () => eq,
     GY: () => eb,
     Ip: () => en,
     Ju: () => eT,
     KJ: () => eu,
     KP: () => $,
-    NS: () => q,
+    NS: () => Z,
     PZ: () => J,
     Q0: () => ed,
     Qd: () => W,
@@ -32,7 +32,7 @@ n.d(t, {
     nx: () => eh,
     oJ: () => eB,
     oP: () => td,
-    tI: () => Z,
+    tI: () => q,
     tR: () => z,
     te: () => tO,
     uK: () => tN,
@@ -157,12 +157,12 @@ var i,
         (h[(h.FRIENDS_AND_ALL_GUILDS = 3)] = "FRIENDS_AND_ALL_GUILDS"),
         h),
     z = (((I = {})[(I.UNSPECIFIED = 0)] = "UNSPECIFIED"), (I[(I.REAL_MONEY_GAMING = 1)] = "REAL_MONEY_GAMING"), I),
-    Z =
+    q =
         (((f = {})[(f.UNSPECIFIED = 0)] = "UNSPECIFIED"),
         (f[(f.PERSONAL = 1)] = "PERSONAL"),
         (f[(f.GUILD = 2)] = "GUILD"),
         f),
-    q =
+    Z =
         (((p = {})[(p.UNSET_UI_DENSITY = 0)] = "UNSET_UI_DENSITY"),
         (p[(p.COMPACT = 1)] = "COMPACT"),
         (p[(p.COZY = 2)] = "COZY"),
@@ -252,10 +252,10 @@ class es extends b.G {
             { no: 7, name: "notifications", kind: "message", T: () => ej },
             { no: 8, name: "privacy", kind: "message", T: () => eY },
             { no: 9, name: "debug", kind: "message", T: () => e$ },
-            { no: 10, name: "game_library", kind: "message", T: () => eZ },
+            { no: 10, name: "game_library", kind: "message", T: () => eq },
             { no: 11, name: "status", kind: "message", T: () => eX },
             { no: 12, name: "localization", kind: "message", T: () => e1 },
-            { no: 13, name: "appearance", kind: "message", T: () => e4 },
+            { no: 13, name: "appearance", kind: "message", T: () => e6 },
             { no: 14, name: "guild_folders", kind: "message", T: () => tt },
             { no: 15, name: "favorites", kind: "message", T: () => ta },
             { no: 16, name: "audio_context_settings", kind: "message", T: () => tu },
@@ -268,7 +268,7 @@ class es extends b.G {
             { no: 23, name: "applications", kind: "message", T: () => tP },
             { no: 24, name: "ads", kind: "message", T: () => tB },
             { no: 25, name: "in_app_feedback_settings", kind: "message", T: () => t$ },
-            { no: 26, name: "app_version_settings", kind: "message", T: () => tZ },
+            { no: 26, name: "app_version_settings", kind: "message", T: () => tq },
         ]);
     }
     create(e) {
@@ -313,7 +313,7 @@ class es extends b.G {
                     r.debug = e$.internalBinaryRead(e, e.uint32(), n, r.debug);
                     break;
                 case 10:
-                    r.gameLibrary = eZ.internalBinaryRead(e, e.uint32(), n, r.gameLibrary);
+                    r.gameLibrary = eq.internalBinaryRead(e, e.uint32(), n, r.gameLibrary);
                     break;
                 case 11:
                     r.status = eX.internalBinaryRead(e, e.uint32(), n, r.status);
@@ -322,7 +322,7 @@ class es extends b.G {
                     r.localization = e1.internalBinaryRead(e, e.uint32(), n, r.localization);
                     break;
                 case 13:
-                    r.appearance = e4.internalBinaryRead(e, e.uint32(), n, r.appearance);
+                    r.appearance = e6.internalBinaryRead(e, e.uint32(), n, r.appearance);
                     break;
                 case 14:
                     r.guildFolders = tt.internalBinaryRead(e, e.uint32(), n, r.guildFolders);
@@ -361,7 +361,7 @@ class es extends b.G {
                     r.inAppFeedbackSettings = t$.internalBinaryRead(e, e.uint32(), n, r.inAppFeedbackSettings);
                     break;
                 case 26:
-                    r.appVersionSettings = tZ.internalBinaryRead(e, e.uint32(), n, r.appVersionSettings);
+                    r.appVersionSettings = tq.internalBinaryRead(e, e.uint32(), n, r.appVersionSettings);
                     break;
                 default:
                     let a = n.readUnknownField;
@@ -383,10 +383,10 @@ class es extends b.G {
             e.notifications && ej.internalBinaryWrite(e.notifications, t.tag(7, y.O0.LengthDelimited).fork(), n).join(),
             e.privacy && eY.internalBinaryWrite(e.privacy, t.tag(8, y.O0.LengthDelimited).fork(), n).join(),
             e.debug && e$.internalBinaryWrite(e.debug, t.tag(9, y.O0.LengthDelimited).fork(), n).join(),
-            e.gameLibrary && eZ.internalBinaryWrite(e.gameLibrary, t.tag(10, y.O0.LengthDelimited).fork(), n).join(),
+            e.gameLibrary && eq.internalBinaryWrite(e.gameLibrary, t.tag(10, y.O0.LengthDelimited).fork(), n).join(),
             e.status && eX.internalBinaryWrite(e.status, t.tag(11, y.O0.LengthDelimited).fork(), n).join(),
             e.localization && e1.internalBinaryWrite(e.localization, t.tag(12, y.O0.LengthDelimited).fork(), n).join(),
-            e.appearance && e4.internalBinaryWrite(e.appearance, t.tag(13, y.O0.LengthDelimited).fork(), n).join(),
+            e.appearance && e6.internalBinaryWrite(e.appearance, t.tag(13, y.O0.LengthDelimited).fork(), n).join(),
             e.guildFolders && tt.internalBinaryWrite(e.guildFolders, t.tag(14, y.O0.LengthDelimited).fork(), n).join(),
             e.favorites && ta.internalBinaryWrite(e.favorites, t.tag(15, y.O0.LengthDelimited).fork(), n).join(),
             e.audioContextSettings &&
@@ -404,7 +404,7 @@ class es extends b.G {
             e.inAppFeedbackSettings &&
                 t$.internalBinaryWrite(e.inAppFeedbackSettings, t.tag(25, y.O0.LengthDelimited).fork(), n).join(),
             e.appVersionSettings &&
-                tZ.internalBinaryWrite(e.appVersionSettings, t.tag(26, y.O0.LengthDelimited).fork(), n).join();
+                tq.internalBinaryWrite(e.appVersionSettings, t.tag(26, y.O0.LengthDelimited).fork(), n).join();
         let i = n.writeUnknownFields;
         return !1 !== i && (!0 == i ? y.f$.onWrite : i)(this.typeName, e, t), t;
     }
@@ -616,7 +616,7 @@ class eA extends b.G {
                 kind: "enum",
                 T: () => [
                     "discord_protos.discord_users.v1.GuildThemeSourcePreference",
-                    Z,
+                    q,
                     "GUILD_THEME_SOURCE_PREFERENCE_",
                 ],
             },
@@ -2678,8 +2678,8 @@ class ez extends b.G {
         return !1 !== i && (!0 == i ? y.f$.onWrite : i)(this.typeName, e, t), t;
     }
 }
-let eZ = new ez();
-class eq extends b.G {
+let eq = new ez();
+class eZ extends b.G {
     constructor() {
         super("discord_protos.discord_users.v1.StatusSettings", [
             { no: 1, name: "status", kind: "message", T: () => M.hU },
@@ -2740,7 +2740,7 @@ class eq extends b.G {
         return !1 !== i && (!0 == i ? y.f$.onWrite : i)(this.typeName, e, t), t;
     }
 }
-let eX = new eq();
+let eX = new eZ();
 class eQ extends b.G {
     constructor() {
         super("discord_protos.discord_users.v1.CustomStatus", [
@@ -2926,7 +2926,7 @@ class e5 extends b.G {
                 kind: "enum",
                 T: () => ["discord_protos.discord_users.v1.LaunchPadMode", ee],
             },
-            { no: 12, name: "ui_density", kind: "enum", T: () => ["discord_protos.discord_users.v1.UIDensity", q] },
+            { no: 12, name: "ui_density", kind: "enum", T: () => ["discord_protos.discord_users.v1.UIDensity", Z] },
             {
                 no: 13,
                 name: "swipe_right_to_left_mode",
@@ -2939,7 +2939,7 @@ class e5 extends b.G {
                 kind: "enum",
                 T: () => [
                     "discord_protos.discord_users.v1.GuildThemeSourcePreference",
-                    Z,
+                    q,
                     "GUILD_THEME_SOURCE_PREFERENCE_",
                 ],
             },
@@ -3058,8 +3058,8 @@ class e5 extends b.G {
         return !1 !== i && (!0 == i ? y.f$.onWrite : i)(this.typeName, e, t), t;
     }
 }
-let e4 = new e5();
-class e6 extends b.G {
+let e6 = new e5();
+class e4 extends b.G {
     constructor() {
         super("discord_protos.discord_users.v1.CustomUserThemeSettings", [
             { no: 1, name: "colors", kind: "scalar", repeat: 2, T: 9 },
@@ -3119,7 +3119,7 @@ class e6 extends b.G {
         return !1 !== i && (!0 == i ? y.f$.onWrite : i)(this.typeName, e, t), t;
     }
 }
-let e7 = new e6();
+let e7 = new e4();
 class e8 extends b.G {
     constructor() {
         super("discord_protos.discord_users.v1.ClientThemeSettings", [
@@ -4447,4 +4447,4 @@ class tz extends b.G {
         return !1 !== i && (!0 == i ? y.f$.onWrite : i)(this.typeName, e, t), t;
     }
 }
-let tZ = new tz();
+let tq = new tz();

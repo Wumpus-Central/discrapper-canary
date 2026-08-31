@@ -14,14 +14,14 @@ n.d(t, {
     $8: () => B,
     NI: () => F,
     mK: () => er,
-    Q9: () => q,
+    Q9: () => Z,
     Sr: () => en,
     ST: () => ei,
     i2: () => x,
     nn: () => J,
     Ny: () => ee,
     I7: () => ea,
-    lW: () => Z,
+    lW: () => q,
     Wv: () => K,
     uE: () => H,
 });
@@ -156,7 +156,7 @@ function z(e, t) {
         N.getConfig({ location: "isAgeVerificationMessageWithManualReviewCta" }).enabled
     );
 }
-function Z(e, t) {
+function q(e, t) {
     if (null == _.A.getPendingConnection()) return !1;
     let n = f.A.getMessage(e, t);
     if (
@@ -173,7 +173,7 @@ function Z(e, t) {
         u.q.getConfig({ location: "isAgeVerificationMessageWithConnectToTeenCta" }).enabled
     );
 }
-function q() {
+function Z() {
     let e = p.default.getCurrentUser();
     return e?.ageVerificationStatus !== d.Tk.UNVERIFIED && e?.ageVerificationStatus !== d.Tk.CLIENT_ONLY_PENDING;
 }
@@ -294,5 +294,5 @@ function ea(e) {
     }, [i, e]);
 }
 async function es() {
-    return !q() && U() && g.A.shouldCallReactiveCheck() ? await (0, C.z)() : null;
+    return !Z() && U() && g.A.shouldCallReactiveCheck() ? await (0, C.z)() : null;
 }

@@ -195,8 +195,8 @@ let B = Object.freeze({
     K = !1,
     $ = !1,
     z = !1,
-    Z = new Set(),
-    q = !1;
+    q = new Set(),
+    Z = !1;
 function X(e) {
     let t = j[e];
     return null == t && (t = j[e] = { ...B }), t;
@@ -436,12 +436,12 @@ let Q = { ...B },
 function et() {
     if (!__OVERLAY__) return !1;
     let e = H === (0, u.getPID)(),
-        t = Y.has((0, u.getPID)()) || Z.size > 0;
+        t = Y.has((0, u.getPID)()) || q.size > 0;
     e && t ? (0, s.XC)(window, !0) : (0, s.XC)(window, !1);
 }
 function en() {
     if (H !== (0, u.getPID)()) return !1;
-    Z.clear();
+    q.clear();
 }
 function ei(e) {
     let t = (0, u.getPID)();
@@ -624,13 +624,13 @@ class ea extends i.Ay.PersistedStore {
         return K;
     }
     getActiveRegions() {
-        return Z;
+        return q;
     }
     getTextWidgetOpacity() {
         return Q.textWidgetOpacity;
     }
     isPreviewingInGame() {
-        return q;
+        return Z;
     }
     getTrackedGame(e) {
         return er.get(e) ?? null;
@@ -766,21 +766,21 @@ let es = new ea(a.h, {
     },
     OVERLAY_SET_INPUT_LOCKED: function (e) {
         let { locked: t, pid: n } = e;
-        t ? Y.delete(n) : Y.add(n), en(), et(), (q = !1);
+        t ? Y.delete(n) : Y.add(n), en(), et(), (Z = !1);
     },
     OVERLAY_ACTIVATE_REGION: function (e) {
         let { region: t } = e;
-        if (H !== (0, u.getPID)() || Z.has(t)) return !1;
-        Z.add(t);
+        if (H !== (0, u.getPID)() || q.has(t)) return !1;
+        q.add(t);
     },
     OVERLAY_DEACTIVATE_ALL_REGIONS: en,
     OVERLAY_SET_PREVIEW_IN_GAME_MODE: function (e) {
-        q = e.isPreviewingInGame;
+        Z = e.isPreviewingInGame;
     },
     WINDOW_RESIZED: function () {
         if (__OVERLAY__) {
             let e = F.A.windowSize();
-            (0, u.validResolution)(e) || (q = !1);
+            (0, u.validResolution)(e) || (Z = !1);
         }
     },
     OVERLAY_SET_ASSOCIATED_GAME: function (e) {

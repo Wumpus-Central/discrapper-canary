@@ -45,7 +45,7 @@ function P(e) {
           ? { stage: 1, timeUntilNextStage: O - n }
           : { stage: 2, timeUntilNextStage: null };
 }
-function M(e) {
+function w(e) {
     let { guildId: t, channelId: n, plant: a, plantPosition: c, disabled: h, plantWidth: p } = e,
         [m, A] = l.useState(P(a).stage),
         [C, j] = l.useState(null),
@@ -131,7 +131,7 @@ function M(e) {
         ],
     });
 }
-function w(e) {
+function M(e) {
     let { plantPosition: t, plantWidth: n } = e;
     return (0, i.jsxs)("div", {
         className: E.CV,
@@ -166,7 +166,7 @@ function U(e) {
                   let { plant: l, plantData: a } = e;
                   return d
                       ? (0, i.jsx)(
-                            M,
+                            w,
                             {
                                 guildId: r,
                                 channelId: t,
@@ -177,7 +177,7 @@ function U(e) {
                             },
                             `${l?.objectId}-${n}`,
                         )
-                      : (0, i.jsx)(w, { plantPosition: { x: a.x, y: a.y }, plantWidth: A }, n);
+                      : (0, i.jsx)(M, { plantPosition: { x: a.x, y: a.y }, plantWidth: A }, n);
               }),
           });
 }

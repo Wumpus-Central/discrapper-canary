@@ -101,7 +101,7 @@ var H = n(97469),
     K = n(715069),
     $ = n(652215),
     z = n(307636);
-let Z = r.memo(function () {
+let q = r.memo(function () {
     return (0, i.jsxs)("svg", {
         width: "184",
         height: "428",
@@ -131,7 +131,7 @@ let Z = r.memo(function () {
         ],
     });
 });
-class q extends r.Component {
+class Z extends r.Component {
     static getDerivedStateFromProps(e) {
         let { children: t, privateChannelIds: n } = e;
         if (null == t) return { preRenderedChildren: 0, nonNullChildren: [], totalRowCount: n.length };
@@ -224,7 +224,7 @@ class q extends r.Component {
         return 0 === t
             ? this.renderChild(n)
             : 0 === n && 0 === r.length
-              ? (0, i.jsx)(Z, {}, "no-private-channels")
+              ? (0, i.jsx)(q, {}, "no-private-channels")
               : this.renderDM(t, n);
     };
     renderSection = (e) => {
@@ -371,7 +371,7 @@ let X = function (e) {
         value: p,
         children: (0, i.jsx)(l.hD, {
             navigator: w,
-            children: (0, i.jsx)(q, {
+            children: (0, i.jsx)(Z, {
                 ...e,
                 density: t,
                 channels: E,
