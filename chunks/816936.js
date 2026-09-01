@@ -2496,38 +2496,54 @@ function n9(e) {
         ],
     });
 }
-var le = n(890497),
-    lt = n(896170),
-    ln = n(966327),
-    ll = n(565860);
-let li = (0, n(945810).mj)({
+var le = n(890497);
+let lt = (0, n(945810).mj)({
     name: "2026-08-gift-recipient-display-name-search",
     kind: "user",
-    defaultConfig: { enabled: !1 },
-    variations: { 0: { enabled: !1 }, 1: { enabled: !0 } },
+    defaultConfig: { displayNameSearchEnabled: !1, affinityOrderingEnabled: !1 },
+    variations: {
+        0: { displayNameSearchEnabled: !1, affinityOrderingEnabled: !1 },
+        1: { displayNameSearchEnabled: !0, affinityOrderingEnabled: !1 },
+        2: { displayNameSearchEnabled: !1, affinityOrderingEnabled: !0 },
+        3: { displayNameSearchEnabled: !0, affinityOrderingEnabled: !0 },
+    },
 });
-var lr = n(994500),
+var ln = n(896170),
+    ll = n(966327),
+    li = n(565860),
+    lr = n(994500),
     la = n(427262),
-    ls = n(428863);
-function lo(e) {
-    let t,
-        n,
-        { selectedSkuId: i, validateSelectedGift: r, className: a, recipients: s } = e,
-        { giftRecipient: u, setGiftRecipient: c } = (0, ng.Pv)(),
-        { options: d, customMatchSorter: m } =
-            ((t = li.useConfig({ location: "CollectiblesGiftRecipientPicker" }).enabled),
-            (n = o.useMemo(
+    ls = n(428863),
+    lo = n(435558),
+    lu = n.n(lo),
+    lc = n(427358);
+function ld(e) {
+    var t;
+    let n,
+        i,
+        { selectedSkuId: r, validateSelectedGift: a, className: s, recipients: u } = e,
+        { giftRecipient: c, setGiftRecipient: d } = (0, ng.Pv)(),
+        { displayNameSearchEnabled: m, affinityOrderingEnabled: p } = lt.useConfig({
+            location: "CollectiblesGiftRecipientPicker",
+        }),
+        { options: C, customMatchSorter: h } =
+            ((n = (0, k.bG)([lc.A], () => lc.A.getUserAffinitiesMap())),
+            (t = o.useMemo(
+                () => (p ? lu().sortBy(u, (e) => -(n.get(e.id)?.communicationProbability ?? 0)) : u),
+                [p, u, n],
+            )),
+            (i = o.useMemo(
                 () =>
-                    t
+                    m
                         ? new Map(
-                              s.map((e) => {
+                              t.map((e) => {
                                   let t, n;
                                   return [
                                       e.id,
                                       ((t = lr.A.getNickname(e.id) ?? la.Ay.getName(e)),
                                       (n = la.Ay.getUserTag(e)),
                                       {
-                                          names: Object.keys((0, ll.jP)(e).names),
+                                          names: Object.keys((0, li.jP)(e).names),
                                           username: e.username,
                                           baseLabel: t,
                                           userTag: n === t ? void 0 : n,
@@ -2536,13 +2552,13 @@ function lo(e) {
                               }),
                           )
                         : null,
-                [t, s],
+                [m, t],
             )),
             {
                 options: o.useMemo(
                     () =>
-                        s.map((e) => {
-                            let t = n?.get(e.id);
+                        t.map((e) => {
+                            let t = i?.get(e.id);
                             return {
                                 id: e.id,
                                 value: e.id,
@@ -2557,58 +2573,55 @@ function lo(e) {
                                               children: t.userTag,
                                           })
                                         : void 0,
-                                leading: (0, l.jsx)(ln.A, { user: e, size: n$._3.SIZE_20 }),
+                                leading: (0, l.jsx)(ll.A, { user: e, size: n$._3.SIZE_20 }),
                             };
                         }),
-                    [s, n],
+                    [t, i],
                 ),
                 customMatchSorter: o.useMemo(
                     () =>
-                        null == n
+                        null == i
                             ? void 0
                             : (e, t) =>
-                                  (0, lt.Ht)(e, t, { keys: ["label", (e) => n.get(e.value)?.names ?? []] }).map((e) => {
-                                      let l = n.get(e.value);
-                                      if (null == l) return e;
-                                      let i = (function (e, t) {
-                                          let n = (0, ll.HI)(t);
-                                          if ("" !== n) return e.find((e) => (0, ll.HI)(e).includes(n));
-                                      })(l.names, t);
-                                      return null == i || i === l.username || i === e.label ? e : { ...e, label: i };
+                                  (0, ln.Ht)(e, t, { keys: ["label", (e) => i.get(e.value)?.names ?? []] }).map((e) => {
+                                      let n = i.get(e.value);
+                                      if (null == n) return e;
+                                      let l = (function (e, t) {
+                                          let n = (0, li.HI)(t);
+                                          if ("" !== n) return e.find((e) => (0, li.HI)(e).includes(n));
+                                      })(n.names, t);
+                                      return null == l || l === n.username || l === e.label ? e : { ...e, label: l };
                                   }),
-                    [n],
+                    [i],
                 ),
             });
     return (0, l.jsx)("div", {
-        className: e1()(a, { [ls.N]: null != m }),
+        className: e1()(s, { [ls.N]: null != h }),
         children: (0, l.jsx)(le.Z, {
             selectionMode: "single",
             label: F.intl.string(F.t.xFn72s),
             placeholder: F.intl.string(F.t.R0vK0N),
-            value: u?.id,
+            value: c?.id,
             onSelectionChange: function (e) {
-                let t = s.find((t) => t.id === e);
-                null != t && (r(t, i), c(t));
+                let t = u.find((t) => t.id === e);
+                null != t && (a(t, r), d(t));
             },
-            customMatchSorter: m,
-            options: d,
+            customMatchSorter: h,
+            options: C,
         }),
     });
 }
-let lu = function (e) {
+let lm = function (e) {
     let { selectedSkuId: t, validateSelectedGift: n, className: i, recipients: r } = e;
     return null == t
         ? null
-        : (0, l.jsx)(lo, { selectedSkuId: t, validateSelectedGift: n, className: i, recipients: r });
+        : (0, l.jsx)(ld, { selectedSkuId: t, validateSelectedGift: n, className: i, recipients: r });
 };
-var lc = n(435558),
-    ld = n.n(lc),
-    lm = n(427358),
-    lp = n(570287);
+var lp = n(570287);
 function lC() {
     let e = (0, k.yK)([lr.A], () => lr.A.getFriendIDs()),
-        t = (0, k.yK)([lm.A], () =>
-            lm.A.getUserAffinities()
+        t = (0, k.yK)([lc.A], () =>
+            lc.A.getUserAffinities()
                 .filter((e) => {
                     let { isFriend: t, communicationProbability: n, vcProbability: l, otherUserId: i } = e,
                         r = (0, lp.q)(i);
@@ -2619,7 +2632,7 @@ function lC() {
                     return t;
                 }),
         ),
-        n = o.useMemo(() => ld().uniq([...e, ...t]), [e, t]);
+        n = o.useMemo(() => lu().uniq([...e, ...t]), [e, t]);
     return (0, k.yK)(
         [D.default],
         () =>
@@ -2769,7 +2782,7 @@ let l_ = {
                                       })
                                     : (0, l.jsxs)("div", {
                                           children: [
-                                              (0, l.jsx)(lu, {
+                                              (0, l.jsx)(lm, {
                                                   selectedSkuId: p,
                                                   recipients: S,
                                                   className: lg.uh,
@@ -3117,7 +3130,7 @@ function lX(e) {
             if (g)
                 if (null != y && y.hasAnyPremiumGroup) {
                     e_.default.track(eG.HAw.PREMIUM_GROUP_PURCHASE_FRIEND_SELECTOR_OPENED, { subscription_id: y.id });
-                    let e = (0, lc.uniqueId)("premium-group-purchase-flow-modal");
+                    let e = (0, lo.uniqueId)("premium-group-purchase-flow-modal");
                     (0, nr.openModalLazy)(
                         async () => {
                             let { default: e } = await Promise.all([
@@ -5871,7 +5884,7 @@ let r9 = {
                     return (0, l.jsxs)("div", {
                         className: r8.P6,
                         children: [
-                            (0, l.jsx)(lu, { recipients: c, selectedSkuId: a, validateSelectedGift: p }),
+                            (0, l.jsx)(lm, { recipients: c, selectedSkuId: a, validateSelectedGift: p }),
                             (0, l.jsx)(lE.A, {
                                 onTextChange: (e) => n?.(e),
                                 pendingText: t,
@@ -6071,7 +6084,7 @@ let a_ = {
                             (r = (0, k.yK)([D.default], () => y?.map(D.default.getUser).filter(aE.Vq) ?? [], [y])),
                             o.useMemo(
                                 () =>
-                                    ld().uniqWith(
+                                    lu().uniqWith(
                                         [...(null != d ? [d] : []), ...r, ...i, ...n],
                                         (e, t) => e.id === t.id,
                                     ),
@@ -6117,7 +6130,7 @@ let a_ = {
                             children: [
                                 null != d && (S === eU.vQ.USER_PROFILE_WISHLIST || S === eU.vQ.DM_CHANNEL_WISHLIST)
                                     ? (0, l.jsx)(ly.Z, { giftRecipient: d })
-                                    : (0, l.jsx)(lu, { selectedSkuId: I, validateSelectedGift: b, recipients: P }),
+                                    : (0, l.jsx)(lm, { selectedSkuId: I, validateSelectedGift: b, recipients: P }),
                                 (0, l.jsx)(lE.A, {
                                     onTextChange: (e) => c?.(e),
                                     pendingText: u,

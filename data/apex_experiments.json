@@ -5521,7 +5521,8 @@
     "name": "2026-08-gift-recipient-display-name-search",
     "kind": "user",
     "defaultConfig": {
-      "enabled": false
+      "displayNameSearchEnabled": false,
+      "affinityOrderingEnabled": false
     },
     "variations": {
       "0": {
@@ -5529,7 +5530,16 @@
         "variant": 0
       },
       "1": {
-        "enabled": true
+        "displayNameSearchEnabled": true,
+        "affinityOrderingEnabled": false
+      },
+      "2": {
+        "displayNameSearchEnabled": false,
+        "affinityOrderingEnabled": true
+      },
+      "3": {
+        "displayNameSearchEnabled": true,
+        "affinityOrderingEnabled": true
       }
     }
   },
