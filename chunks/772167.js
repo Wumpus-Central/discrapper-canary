@@ -1,4 +1,4 @@
-i.d(t, { u5: () => W, vw: () => V, Cf: () => H, wx: () => K });
+i.d(t, { u5: () => W, vw: () => F, Cf: () => V, wx: () => K });
 var s,
     n = i(477900),
     r = i(582128),
@@ -198,7 +198,7 @@ var S = i(652215),
     k = i(555091),
     B = i(375708),
     D = i(341973);
-function H() {
+function V() {
     let e = (0, C.i)("getRecurringPromotionPartnerAttributes");
     return {
         [O.XY]: {
@@ -234,7 +234,7 @@ function H() {
         },
     };
 }
-function V() {
+function F() {
     let e = (0, E.N5)(),
         t = (0, E.P6)();
     return (0, n.jsxs)("div", {
@@ -254,11 +254,11 @@ function V() {
         ],
     });
 }
-function Y(e) {
+function H(e) {
     let { children: t } = e;
     return (0, n.jsx)("div", { className: D.oP, children: (0, n.jsx)("div", { className: D.t0, children: t }) });
 }
-let F = (e) => {
+let Y = (e) => {
     let { recurrence: t, analyticsLocations: i = [] } = e,
         s = (0, n.jsx)(o.r, { color: g.A.colors.CONTROL_CONNECTED_BACKGROUND_DEFAULT }),
         l = (0, n.jsx)("span", {
@@ -388,7 +388,7 @@ function K(e) {
         A =
             ((t = a.partnerId),
             (i = (0, h.bG)([_.A], () => (0, l.M)(_.A.theme))),
-            null == (s = H()[t]) ? null : i ? s.logos.dark : s.logos.light),
+            null == (s = V()[t]) ? null : i ? s.logos.dark : s.logos.light),
         y = null == v;
     return (0, n.jsxs)("div", {
         className: D.lA,
@@ -464,10 +464,10 @@ function K(e) {
                 ],
             }),
             "footer" === p && g,
-            null != v && (0, n.jsx)(F, { recurrence: { ...a, code: v }, analyticsLocations: C }),
+            null != v && (0, n.jsx)(Y, { recurrence: { ...a, code: v }, analyticsLocations: C }),
             "footer" === p &&
                 null == v &&
-                (0, n.jsx)(Y, {
+                (0, n.jsx)(H, {
                     children: (0, n.jsx)(G, {
                         recurrence: a,
                         canBeClaimed: y,

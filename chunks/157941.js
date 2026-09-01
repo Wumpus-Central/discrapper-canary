@@ -3,7 +3,7 @@ var r = l(477900),
     n = l(582128),
     i = l(945810);
 let a = n.lazy(() =>
-        Promise.all([l.e("684031"), l.e("964367"), l.e("955184"), l.e("91081")])
+        Promise.all([l.e("684031"), l.e("726391"), l.e("955184"), l.e("91081")])
             .then(l.bind(l, 218755))
             .then((e) => ({ default: e.SyntaxHighlight })),
     ),

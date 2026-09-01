@@ -432,7 +432,7 @@ function e3(e) {
         }),
     });
 }
-function e5(e) {
+function e6(e) {
     let { guildId: t, guildProductListingId: n } = e,
         s = (0, ef.Qi)(t, n, { requireCurrentGuild: !1 }),
         r = (0, e_.z)(s),
@@ -455,7 +455,7 @@ function e5(e) {
         ],
     });
 }
-function e6(e) {
+function e5(e) {
     let { guildId: t, guildProductListingId: n } = e,
         l = (0, ef.Qi)(t, n, { requireCurrentGuild: !1 }),
         s = (0, d.bG)([eI.A], () => eI.A.getGuildProductFetchState(n) === eI.e.FETCHING),
@@ -712,7 +712,7 @@ class e8 extends l.PureComponent {
                         e.isGuildProductPurchase &&
                             null != d &&
                             null != e.sku &&
-                            (0, i.jsx)(e5, { guildId: d, guildProductListingId: e.sku.id }),
+                            (0, i.jsx)(e6, { guildId: d, guildProductListingId: e.sku.id }),
                         u > 0 &&
                             (0, i.jsxs)(i.Fragment, {
                                 children: [
@@ -1031,7 +1031,7 @@ class e8 extends l.PureComponent {
                             })
                           : null != l &&
                             null != e.sku &&
-                            (0, i.jsx)(e6, { guildId: l, guildProductListingId: e.sku.id }),
+                            (0, i.jsx)(e5, { guildId: l, guildProductListingId: e.sku.id }),
                   ],
               })
             : null;

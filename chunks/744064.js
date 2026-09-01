@@ -40,10 +40,10 @@ function M(e) {
             primaryAsset: k,
             primaryAssetClassName: B,
             backgroundAssetUrl: D,
-            progress: H,
-            ctaIcon: V,
-            ctaIconPosition: Y,
-            ctaText: F,
+            progress: V,
+            ctaIcon: F,
+            ctaIconPosition: H,
+            ctaText: Y,
             ctaVariant: G,
             ctaDisabled: W,
             ctaLoading: K,
@@ -90,11 +90,11 @@ function M(e) {
         ef = !(0, l.isEmpty)(D),
         eb = ef && (0, m.q)(el),
         eh = (0, p.r)(f.A.colors.BACKGROUND_BASE_LOW).hex(),
-        eg = ep || !(0, l.isEmpty)(F),
+        eg = ep || !(0, l.isEmpty)(Y),
         ex = G ?? (!ef && (0, m.q)(el) ? "primary" : "overlay-primary"),
-        eC = (0, l.isEmpty)(F)
+        eC = (0, l.isEmpty)(Y)
             ? null
-            : { icon: V, iconPosition: Y, text: F, variant: ex, onClick: em, disabled: W, loading: K },
+            : { icon: F, iconPosition: H, text: Y, variant: ex, onClick: em, disabled: W, loading: K },
         ev = (0, s.jsx)(N.A, { fullWidth: !0, defaultTextOverride: O.intl.string(O.t.sEAnVH) }),
         e_ = null == eC ? null : X ? (0, s.jsx)(y.A, { ...eC }) : (0, s.jsx)(d.$, { ...eC });
     return (0, s.jsx)(c.N, {
@@ -203,12 +203,12 @@ function M(e) {
                                                 }),
                                             ],
                                         }),
-                                    null != H &&
+                                    null != V &&
                                         (0, s.jsx)("div", {
                                             className: w.oU,
                                             children: (0, s.jsx)(j.Ay, {
                                                 variant: j.qP.BLUE,
-                                                progress: (0, l.clamp)(H, 0, 1),
+                                                progress: (0, l.clamp)(V, 0, 1),
                                                 maximum: 1,
                                                 glowing: q,
                                             }),

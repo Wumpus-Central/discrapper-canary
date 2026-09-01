@@ -41,11 +41,11 @@ let A = (e) => {
             backgroundVideoUrl: k,
             previewImageStyle: B = j.Tb.CONTAINED,
             actions: D,
-            mediaRef: H,
-            boxArtContainerClassName: V,
-            containerClassName: Y,
+            mediaRef: V,
+            boxArtContainerClassName: F,
+            containerClassName: H,
         } = e,
-        F = (0, v.TM)(),
+        Y = (0, v.TM)(),
         G = n.useRef(null),
         W = n.useRef(0),
         { sectionRef: K, handleVisibilityChange: Z } = (0, _.A)({ boxType: t }),
@@ -61,10 +61,10 @@ let A = (e) => {
             [t],
         );
     function Q() {
-        null == G.current || w || ((G.current.currentTime = W.current), G.current.play()), w || H?.current?.play();
+        null == G.current || w || ((G.current.currentTime = W.current), G.current.play()), w || V?.current?.play();
     }
     function ee() {
-        null == G.current || w || ((W.current = G.current.currentTime), G.current.pause()), w || H?.current?.pause();
+        null == G.current || w || ((W.current = G.current.currentTime), G.current.pause()), w || V?.current?.pause();
     }
     let et = S === j.A0.LARGE ? "heading-xxl/bold" : "heading-xl/bold";
     function ei() {
@@ -130,7 +130,7 @@ let A = (e) => {
     }
     function en() {
         return (0, s.jsx)("div", {
-            className: a()(P.boxArtContainer, P[`${S}`], V),
+            className: a()(P.boxArtContainer, P[`${S}`], F),
             children:
                 null == N && (0, u.O)(y) && "string" != typeof y
                     ? y
@@ -144,7 +144,7 @@ let A = (e) => {
                               loop: !0,
                               className: a()($ ? P.overlayImage : P.boxVideo, { [O]: null != O }),
                               ref: G,
-                              children: (0, s.jsx)("source", { src: N, type: F ? R.a.MP4 : R.a.WEBM }),
+                              children: (0, s.jsx)("source", { src: N, type: Y ? R.a.MP4 : R.a.WEBM }),
                           },
                           N,
                       ),
@@ -163,7 +163,7 @@ let A = (e) => {
                 P.boxContainer,
                 P[`${S}`],
                 P.gradientBackground,
-                Y,
+                H,
                 X && P.overlayImageMode,
                 $ && P.overlayMode,
             ),

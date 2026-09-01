@@ -18,7 +18,7 @@ var n = s(477900),
     j = s(765548),
     N = s(652215),
     v = s(375708),
-    A = s(163491);
+    A = s(385872);
 function _(e) {
     let { questId: t, questContent: s, fullWidth: i } = e;
     return (0, n.jsx)("div", {

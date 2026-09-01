@@ -21,8 +21,8 @@ var h = n(633075),
     A = n(140735),
     C = n(834730),
     v = n(866665),
-    b = n(192308),
-    y = n(922016),
+    y = n(192308),
+    b = n(922016),
     R = n(980707),
     N = n(477782),
     P = n(241326),
@@ -99,7 +99,7 @@ function O(e) {
                 (0, w.XA)(_.jM.WIDGET_REMOVED);
             return;
         }
-        (0, b.openModalLazy)(
+        (0, y.openModalLazy)(
             async () => {
                 let { default: e } = await Promise.all([
                     n.e("148758"),
@@ -179,7 +179,7 @@ function O(e) {
             { stackingBehavior: "stack" },
         );
     }
-    return (0, i.jsx)(y.Y, {
+    return (0, i.jsx)(b.Y, {
         targetElementRef: l,
         align: "top",
         position: "right",
@@ -224,7 +224,7 @@ function H(e) {
     function c() {
         (0, z.GJ)(n, t);
     }
-    return (0, i.jsx)(y.Y, {
+    return (0, i.jsx)(b.Y, {
         targetElementRef: o,
         align: "top",
         position: "right",
@@ -269,7 +269,7 @@ function H(e) {
     });
 }
 var K = n(948939);
-function Y(e) {
+function V(e) {
     let {
         userId: t,
         headingId: n,
@@ -291,11 +291,11 @@ function Y(e) {
                     null != o && (0, i.jsx)(C.E, { variant: "text-xs/normal", color: "text-subtle", children: o }),
                 ],
             }),
-            (0, i.jsx)(q, { widget: r, actionButtons: c, disabledInteraction: l, userId: t, additionalMenuItems: u }),
+            (0, i.jsx)(Y, { widget: r, actionButtons: c, disabledInteraction: l, userId: t, additionalMenuItems: u }),
         ],
     });
 }
-function q(e) {
+function Y(e) {
     let { widget: t, actionButtons: n, disabledInteraction: r, userId: l, additionalMenuItems: a } = e,
         s = (0, I.bG)([k.default], () => k.default.getId());
     return r
@@ -314,13 +314,13 @@ function q(e) {
               })
             : null;
 }
-var V = n(192),
+var q = n(192),
     Z = n(223503);
 function J(e) {
     let { index: t, widget: n, additionalManageWidgetMenuItems: l, children: s, getWidth: c } = e,
         u = r.useRef(null),
         g = r.useRef(null),
-        { registerManageWidgetButtonRef: f, manageFocusOnReorder: h } = (0, V.r)();
+        { registerManageWidgetButtonRef: f, manageFocusOnReorder: h } = (0, q.r)();
     r.useLayoutEffect(() => {
         let e = f(n.type);
         return e(u.current), () => e(null);
@@ -361,9 +361,9 @@ function X(e) {
             headerSubtitle: A,
             headerActionButtons: C,
             headerClassName: v,
-            additionalManageWidgetMenuItems: b,
+            additionalManageWidgetMenuItems: y,
         } = e,
-        y = (0, o.GV)(),
+        b = (0, o.GV)(),
         R = r.useRef(null),
         N = (0, x.g)(),
         { trackUserProfileAction: P } = (0, c.NJ)(),
@@ -388,16 +388,16 @@ function X(e) {
             ref: R,
             className: a()(Z.kL, p),
             children: [
-                (0, i.jsx)(Y, {
+                (0, i.jsx)(V, {
                     userId: t,
-                    headingId: y,
+                    headingId: b,
                     title: E,
                     subtitle: A,
                     actionButtons: C,
                     widget: n,
                     disableInteraction: m,
                     className: v,
-                    additionalMenuItems: b,
+                    additionalMenuItems: y,
                 }),
                 (0, i.jsxs)(s.F, { children: [l, j] }),
             ],
@@ -405,13 +405,13 @@ function X(e) {
     }
     return (0, i.jsx)("section", {
         ref: D,
-        "aria-labelledby": y,
+        "aria-labelledby": b,
         children: k
             ? (0, i.jsx)(J, {
                   index: I ?? 0,
                   widget: n,
                   getWidth: () => R.current?.offsetWidth,
-                  additionalManageWidgetMenuItems: b,
+                  additionalManageWidgetMenuItems: y,
                   children: w(),
               })
             : w(),

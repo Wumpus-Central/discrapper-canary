@@ -36,8 +36,8 @@ var s,
     k = i(503698),
     B = i.n(k),
     D = i(907581),
-    H = i(830370);
-let V = l.forwardRef((e, t) => {
+    V = i(830370);
+let F = l.forwardRef((e, t) => {
     let { className: i } = e,
         s = l.useRef(null);
     return (
@@ -48,14 +48,14 @@ let V = l.forwardRef((e, t) => {
             pause: () => s.current?.pause(),
         })),
         (0, a.jsx)("div", {
-            className: B()(i, H.k),
+            className: B()(i, V.k),
             children: (0, a.jsx)(D.C, { ref: s, autoplay: !1, stateMachine: "State Machine 1", fit: "contain" }),
         })
     );
 });
-V.displayName = "PremiumRewardsBentoBoxAsset";
-var Y = i(440005),
-    F = i(26508),
+F.displayName = "PremiumRewardsBentoBoxAsset";
+var H = i(440005),
+    Y = i(26508),
     G = i(592909),
     W = i(398523),
     K = i(881373),
@@ -123,7 +123,7 @@ let ev = function () {
         D = (0, l.useCallback)(() => {
             (0, C.A)({ subscriptionTier: z.pe.TIER_2, initialPlanId: z.gD.PREMIUM_GROUP_MONTH, analyticsLocations: t });
         }, [t]),
-        H = (0, N.TM)(),
+        V = (0, N.TM)(),
         eg = I.A.getArticleURL($.MVz.REFERRAL_PROGRAM),
         { shouldShowBonusOrbsUX: ex, multiplier: ev } = (0, _.lk)(q.rE.NITRO_HOME_MARKETING),
         e_ = l.useRef(null),
@@ -132,63 +132,63 @@ let ev = function () {
             premiumGroup: { thumbnail: el, assetUrl: el },
             serverProfiles: {
                 thumbnail: "/assets/27e5bfe55cd9ceac.png",
-                assetUrl: H
+                assetUrl: V
                     ? "https://cdn.discordapp.com/assets/content/f1e3305670fdd4713b5a31d3f844cf0ab2bd08c0add76b161c5cf0f5c2b27d9a.mov"
                     : "https://cdn.discordapp.com/assets/content/bd43688bb3e038704c4a124b520957c0af30bcea24ac2df7d4c06691fbe76b5e.webm",
             },
             customThemes: {
                 thumbnail:
                     "https://cdn.discordapp.com/assets/content/707aa6cdb55e6cb15a47fb11adf8f2831a7ca23f014da397c787c6c1ed7ea0e0.png",
-                assetUrl: H
+                assetUrl: V
                     ? "https://cdn.discordapp.com/assets/content/90d41f94afc7207e0d3e296fbd8eff69f112a94b9efd6135d2e301b366361925.mov"
                     : "https://cdn.discordapp.com/assets/content/8a21690e2b300651e204b29a14f95c8b3252f2f11cf76ac79d1531518ec651c9.webm",
             },
             displayNameStyles: {
                 thumbnail:
                     "https://cdn.discordapp.com/assets/content/2d403069b04f11e075362fc304c28dc72d50497780c0de07c63f894a7bc68332.png",
-                assetUrl: H
+                assetUrl: V
                     ? "https://cdn.discordapp.com/assets/content/dac5f465955829a1fd9f74536e3849492486391cbe0a27668155148cb7d06203.mov"
                     : "https://cdn.discordapp.com/assets/content/49f36bae4adf729fd7fef602c1abc8b1ce163f72edee89a64ad44970f5fff986.webm",
             },
             referralProgram: {
                 thumbnail:
                     "https://cdn.discordapp.com/assets/content/e3b0f0782ffec7a02f1b140b3009e64b2dd22cdf5ca953f68df710eb3197d463.png",
-                assetUrl: H
+                assetUrl: V
                     ? "https://cdn.discordapp.com/assets/content/a398a9875f05c78acf38dd98c409743b486ef5ea2e661010b44ad520045ed024.mov"
                     : "https://cdn.discordapp.com/assets/content/348fa0213a61e70aa3573892b13f8825028a59ecd50dad952df05aef1f0f20f9.webm",
             },
             showYourStyle: {
                 thumbnail:
                     "https://cdn.discordapp.com/assets/content/b1476d645dd5e91c5ce647dcaa93964348a69e91306f74d19384330afd07ad94.png",
-                assetUrl: H
+                assetUrl: V
                     ? "https://cdn.discordapp.com/assets/content/333ea4938ac5110b4e44a57fc47c07c7c27a9bae142dd35c13758e80c340e0db.mov"
                     : "https://cdn.discordapp.com/assets/content/e7d9b53851e0284950b6f412687855eab36053ea225fb42c852dfc52d58e7da3.webm",
             },
             yourSpace: {
                 thumbnail:
                     "https://cdn.discordapp.com/assets/content/14a4e932f2091109eafab5febe77a0adb77ed2e811abdd59bd28c8b8ba0d50e8.png",
-                assetUrl: H
+                assetUrl: V
                     ? "https://cdn.discordapp.com/assets/content/ed51f5617416904b6f770042a2a4ed397324c8690946c73a919dd383f6b1dcab.mov"
                     : "https://cdn.discordapp.com/assets/content/f1a6a6b7512e50f319f8749704e31d40eb06d028c854d9fb86ba89ae05cc907d.webm",
             },
             emojis: {
                 thumbnail: ep.A,
-                assetUrl: H
+                assetUrl: V
                     ? "https://cdn.discordapp.com/assets/content/3f5085611f7c0ed8a1dde79c4c7f4842cd12734a4f6f7cefe043ae166257c039.mov"
                     : ef.A,
             },
             noLimits: {
                 thumbnail:
                     "https://cdn.discordapp.com/assets/content/4d379ffac2c0b98c7b2e790c9800a35916cea7915569758b57b3d1f7f9b91682.png",
-                assetUrl: H
+                assetUrl: V
                     ? "https://cdn.discordapp.com/assets/content/a39efd6ebd57352a7cf6887285f4e13988cef7068f17d31bd4839fcbd54189e4.mov"
                     : "https://cdn.discordapp.com/assets/content/2951de28d84d4fcba8b5c4db54b094b98dca5bfb168d77d356e9896708768a5f.webm",
             },
             orbRewards: { thumbnail: eh.A, assetUrl: eb.A },
-            orbMultiplier: { thumbnail: eu, assetUrl: H ? ed : ec },
-            combinedOrbs: { thumbnail: eu, assetUrl: H ? ed : ec },
+            orbMultiplier: { thumbnail: eu, assetUrl: V ? ed : ec },
+            combinedOrbs: { thumbnail: eu, assetUrl: V ? ed : ec },
             callOfDuty: { thumbnail: em, assetUrl: em },
-            threePPromotions: { thumbnail: ej ? (0, a.jsx)(V, { ref: e_ }) : eo, assetUrl: ej ? void 0 : eo },
+            threePPromotions: { thumbnail: ej ? (0, a.jsx)(F, { ref: e_ }) : eo, assetUrl: ej ? void 0 : eo },
         },
         eR = (0, w.Y)({ location: "bento_box" }),
         eP = (0, L.A)(!eR),
@@ -393,7 +393,7 @@ let ev = function () {
                 { enabled: s } = W.Ay.useConfig({ location: "bento_box" }),
                 n = t ? eC.CALL_OF_DUTY : eC.THREE_P_PROMOTIONS,
                 r = (0, Z.O9)(),
-                a = (0, F.DK)(Y.W.NITRO, "useBentoBoxes"),
+                a = (0, Y.DK)(H.W.NITRO, "useBentoBoxes"),
                 l = a && e;
             return [
                 ...(t || i || s ? [n] : []),
