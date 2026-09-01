@@ -1,10 +1,14 @@
 "use strict";
-n.d(t, { A: () => r, Cw: () => a }), n(321073);
+n.d(t, { A: () => r, Cw: () => s, jg: () => a }), n(321073);
 var i = n(70283);
 function r(e) {
     return e === i.$.STAFF;
 }
 function a(e) {
+    let { tenureBadgeHideable: t } = e;
+    return new Set(t ? [i.$.STAFF] : [i.$.STAFF, i.$.PREMIUM_TENURE]);
+}
+function s(e) {
     let t = [],
         n = [],
         i = [];

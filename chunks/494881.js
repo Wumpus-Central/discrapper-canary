@@ -8,5 +8,7 @@ e.exports = {
     yk: "badgeTile_f18413",
     HV: "isInteracting_f18413",
     pC: "badgeTileIcon_f18413",
+    jx: "badgeTileIconHidden_f18413",
     lv: "overflowButton_f18413",
+    KJ: "unhideButton_f18413",
 };

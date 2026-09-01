@@ -74,24 +74,42 @@
     width: 28px
 }
 
+.badgeTileIconHidden_f18413 {
+    opacity: .3
+}
+
 .overflowButton_f18413 {
-    align-items: center;
     background: linear-gradient(var(--background-mod-normal), var(--background-mod-normal)), var(--background-surface-highest);
     border: 1px solid var(--border-muted);
     border-radius: var(--radius-round);
     box-shadow: var(--shadow-low);
+    height: 24px;
+    inset-block-start: -6px;
+    inset-inline-end: -6px;
+    opacity: 0;
+    transition: opacity 50ms ease-in;
+    width: 24px
+}
+
+.overflowButton_f18413,
+.unhideButton_f18413 {
+    align-items: center;
     box-sizing: border-box;
     color: var(--icon-default);
     cursor: pointer;
     display: flex;
-    height: 24px;
-    inset-block-start: -6px;
-    inset-inline-end: -6px;
     justify-content: center;
-    opacity: 0;
-    position: absolute;
-    transition: opacity 50ms ease-in;
-    width: 24px
+    position: absolute
+}
+
+.unhideButton_f18413 {
+    background: none;
+    border: none;
+    height: 20px;
+    inset-block-start: 4px;
+    inset-inline-end: 4px;
+    padding: 0;
+    width: 20px
 }
 
 .badgeTileContainer_f18413.isInteracting_f18413 .overflowButton_f18413,
@@ -112,4 +130,4 @@
     width: 20px
 }
 
-/*# sourceMappingURL=204899.0d1704f78a4c7e4a.css.map*/
+/*# sourceMappingURL=204899.7b9b9e6fda75a703.css.map*/
