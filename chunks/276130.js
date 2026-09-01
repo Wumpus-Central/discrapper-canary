@@ -1,4 +1,4 @@
-n.d(t, { Yc: () => eE, vG: () => eN, FT: () => eg, EA: () => e_ });
+n.d(t, { Yc: () => eE, vG: () => e_, FT: () => eg, EA: () => ep });
 var a = n(477900),
     l = n(582128),
     s = n(892227),
@@ -18,19 +18,19 @@ var a = n(477900),
     A = n(821609),
     v = n(661531),
     b = n(403581),
-    N = n(834730),
-    _ = n(577473),
-    j = n(34188),
-    S = n(303136),
-    p = n(626031),
+    _ = n(834730),
+    p = n(577473),
+    N = n(34188),
+    j = n(303136),
+    S = n(626031),
     L = n(628284),
     R = n(320448),
     O = n(404778),
     y = n(318254),
     T = n(939249),
     U = n(742967),
-    k = n(642529),
-    M = n(375708),
+    M = n(642529),
+    k = n(375708),
     I = n(137484),
     F = n(427483);
 function D(e) {
@@ -79,11 +79,11 @@ function w(e) {
                         (0, a.jsxs)("div", {
                             className: I.Du,
                             children: [
-                                (0, a.jsx)(N.E, { variant: "text-sm/medium", color: "text-subtle", children: n }),
-                                (0, a.jsx)(N.E, {
+                                (0, a.jsx)(_.E, { variant: "text-sm/medium", color: "text-subtle", children: n }),
+                                (0, a.jsx)(_.E, {
                                     variant: "text-sm/normal",
                                     color: "text-muted",
-                                    children: M.intl.format(r === d.x.COMPLETED ? k.default.h2qWpS : k.default.B8Fxns, {
+                                    children: k.intl.format(r === d.x.COMPLETED ? M.default.h2qWpS : M.default.B8Fxns, {
                                         orbAmount: s,
                                         orbIconHook: () =>
                                             (0, a.jsx)(y.C, {
@@ -102,7 +102,7 @@ function w(e) {
                         i = (0, a.jsx)(A.$, {
                             variant: "expressive",
                             size: "sm",
-                            text: M.intl.string(k.default.WmfVjs),
+                            text: k.intl.string(M.default.WmfVjs),
                             loading: l,
                             onClick: s,
                         });
@@ -114,7 +114,7 @@ function w(e) {
                               : (0, a.jsx)(L.y, {
                                     color: v.A.colors.STATUS_POSITIVE,
                                     size: "sm",
-                                    "aria-label": M.intl.string(k.default.k6h2J3),
+                                    "aria-label": k.intl.string(M.default.k6h2J3),
                                 })
                           : r
                             ? (0, a.jsx)(R._, { size: "sm", "aria-hidden": !0 })
@@ -122,50 +122,50 @@ function w(e) {
                 })(r, { isHovered: u, isClaiming: m, handleClaim: x, hasDiscoveryClick: f }),
             ],
         }),
-        _ = l.useMemo(() => ({ onMouseEnter: () => h(!0), onMouseLeave: () => h(!1) }), []);
+        p = l.useMemo(() => ({ onMouseEnter: () => h(!0), onMouseLeave: () => h(!1) }), []);
     return f
         ? (0, a.jsxs)(a.Fragment, {
               children: [
-                  (0, a.jsx)(T.D, { className: g, ..._, onClick: c, "aria-label": n, children: b }),
+                  (0, a.jsx)(T.D, { className: g, ...p, onClick: c, "aria-label": n, children: b }),
                   !o && (0, a.jsx)(B, {}),
               ],
           })
         : (0, a.jsxs)(a.Fragment, {
-              children: [(0, a.jsx)("div", { className: g, ..._, children: b }), !o && (0, a.jsx)(B, {})],
+              children: [(0, a.jsx)("div", { className: g, ...p, children: b }), !o && (0, a.jsx)(B, {})],
           });
 }
-var P = n(652215),
-    G = n(653877),
+var G = n(652215),
+    P = n(653877),
     H = n(268920),
     W = n(633217);
 function z() {
     return (0, a.jsx)("div", {
-        className: G.s,
-        children: (0, a.jsx)(S.A, { src: W.A, fallbackImage: H.A, className: G.Cb }),
+        className: P.s,
+        children: (0, a.jsx)(j.A, { src: W.A, fallbackImage: H.A, className: P.Cb }),
     });
 }
 function V(e) {
     let { nitroIconColor: t = v.A.colors.ICON_SUBTLE, text: n } = e;
     return (0, a.jsxs)("div", {
-        className: G.SY,
+        className: P.SY,
         children: [
             (0, a.jsx)(b.t, { size: "xs", color: t }),
-            (0, a.jsx)(N.E, { variant: "text-xs/medium", color: "text-subtle", children: n }),
+            (0, a.jsx)(_.E, { variant: "text-xs/medium", color: "text-subtle", children: n }),
         ],
     });
 }
 function $(e) {
     let { orbBalance: t, headerTagsContent: n } = e;
     return (0, a.jsxs)("div", {
-        className: G.SZ,
+        className: P.SZ,
         children: [
             (0, a.jsx)(z, {}),
             (0, a.jsxs)("div", {
                 children: [
-                    (0, a.jsx)(p.t, {
+                    (0, a.jsx)(S.t, {
                         value: t,
-                        onValueChange: P.tEg,
-                        onValueReached: P.tEg,
+                        onValueChange: G.tEg,
+                        onValueReached: G.tEg,
                         targetTotalCounterTime: 1500,
                         textVariant: "display-md",
                         textColor: "text-strong",
@@ -181,25 +181,25 @@ function $(e) {
 function K(e) {
     let { text: t } = e;
     return (0, a.jsxs)("div", {
-        className: G.lh,
+        className: P.lh,
         children: [
             (0, a.jsx)(b.t, { size: "xxs", color: "white" }),
-            (0, a.jsx)(N.E, { variant: "text-xs/semibold", color: "text-overlay-light", children: t }),
+            (0, a.jsx)(_.E, { variant: "text-xs/semibold", color: "text-overlay-light", children: t }),
         ],
     });
 }
 function q(e) {
     let { title: t, challenges: n, onClaim: s, badgeText: r } = e;
     return (0, a.jsx)("div", {
-        className: G.E6,
+        className: P.E6,
         children:
             n.length > 0
                 ? (0, a.jsxs)(a.Fragment, {
                       children: [
                           (0, a.jsxs)("div", {
-                              className: G.$b,
+                              className: P.$b,
                               children: [
-                                  (0, a.jsx)(N.E, { variant: "text-xs/medium", color: "text-subtle", children: t }),
+                                  (0, a.jsx)(_.E, { variant: "text-xs/medium", color: "text-subtle", children: t }),
                                   null != r && (0, a.jsx)(K, { text: r }),
                               ],
                           }),
@@ -213,17 +213,17 @@ function q(e) {
                       ],
                   })
                 : (0, a.jsxs)("div", {
-                      className: G.AZ,
+                      className: P.AZ,
                       children: [
-                          (0, a.jsx)(N.E, {
+                          (0, a.jsx)(_.E, {
                               variant: "text-sm/medium",
                               color: "text-default",
-                              children: M.intl.string(k.default.xOP5OP),
+                              children: k.intl.string(M.default.xOP5OP),
                           }),
-                          (0, a.jsx)(N.E, {
+                          (0, a.jsx)(_.E, {
                               variant: "text-sm/normal",
                               color: "text-muted",
-                              children: M.intl.string(k.default.XW2CuY),
+                              children: k.intl.string(M.default.XW2CuY),
                           }),
                       ],
                   }),
@@ -232,13 +232,13 @@ function q(e) {
 function X(e) {
     let { onQuestsClick: t, onShopClick: n } = e;
     return (0, a.jsxs)("div", {
-        className: G.W,
+        className: P.W,
         children: [
             (0, a.jsx)(A.$, {
                 text: "Quests",
                 variant: "secondary",
                 size: "md",
-                icon: { asset: _.r, type: "icon" },
+                icon: { asset: p.r, type: "icon" },
                 fullWidth: !0,
                 onClick: t,
             }),
@@ -246,7 +246,7 @@ function X(e) {
                 text: "Shop",
                 variant: "secondary",
                 size: "md",
-                icon: { asset: j.U, type: "icon" },
+                icon: { asset: N.U, type: "icon" },
                 fullWidth: !0,
                 onClick: n,
             }),
@@ -264,7 +264,7 @@ function Y(e) {
         } = e,
         [o, u] = l.useState(!1);
     return (0, a.jsxs)("div", {
-        className: E()(G.ql, G.Ut),
+        className: E()(P.ql, P.Ut),
         ref: c,
         children: [
             (0, a.jsx)($, { orbBalance: t, headerTagsContent: n }),
@@ -313,7 +313,7 @@ function eo(e) {
                       className: ec.Fx,
                       children: (0, a.jsx)(J.K, {
                           icon: Q.P,
-                          "aria-label": M.intl.string(M.t.cpT0Cq),
+                          "aria-label": k.intl.string(k.t.cpT0Cq),
                           variant: "icon-only",
                           size: "sm",
                           onClick: u,
@@ -323,9 +323,9 @@ function eo(e) {
             null != n && (0, a.jsx)("img", { alt: l, src: n, className: ec.db }),
             (0, a.jsxs)("div", {
                 children: [
-                    (0, a.jsx)(N.E, { variant: "text-md/bold", color: "text-default", className: ec.L8, children: t }),
+                    (0, a.jsx)(_.E, { variant: "text-md/bold", color: "text-default", className: ec.L8, children: t }),
                     null != s &&
-                        (0, a.jsx)(N.E, {
+                        (0, a.jsx)(_.E, {
                             variant: "text-xs/medium",
                             color: "text-default",
                             className: ec.Gd,
@@ -340,25 +340,27 @@ function eo(e) {
 function eu(e) {
     let { onClose: t } = e;
     return (0, a.jsx)(eo, {
-        title: M.intl.string(k.default.o6s7yg),
+        title: k.intl.string(M.default.o6s7yg),
         imageUrl: n(105644),
-        imageAlt: M.intl.string(k.default.qa1xyr),
-        subTextDescription: M.intl.string(k.default.HACucK),
-        buttonText: M.intl.string(k.default.o6s7yg),
-        buttonIcon: { asset: j.U, type: "icon" },
+        imageAlt: k.intl.string(M.default.qa1xyr),
+        subTextDescription: k.intl.string(M.default.HACucK),
+        buttonText: k.intl.string(M.default.o6s7yg),
+        buttonIcon: { asset: N.U, type: "icon" },
         onCtaClick: es,
         onClose: t,
     });
 }
 function ed(e) {
     let { onClose: t } = e,
-        { orbRewardMultiplier: l } = (0, r.cf)([f.A], () => ({ orbRewardMultiplier: f.A.orbRewardMultiplier }));
+        { nitroGatedOrbMultiplier: l } = (0, r.cf)([f.A], () => ({
+            nitroGatedOrbMultiplier: f.A.nitroGatedOrbMultiplier,
+        }));
     return (0, a.jsx)(eo, {
-        title: M.intl.string(k.default.ZqCAos),
+        title: k.intl.string(M.default.ZqCAos),
         imageUrl: n(780361),
-        imageAlt: M.intl.string(k.default.FkfrRH),
-        subTextDescription: M.intl.format(k.default["Ba/7wO"], { multiplier: l }),
-        buttonText: M.intl.string(k.default.U9UQJE),
+        imageAlt: k.intl.string(M.default.FkfrRH),
+        subTextDescription: k.intl.format(M.default["Ba/7wO"], { multiplier: l }),
+        buttonText: k.intl.string(M.default.U9UQJE),
         buttonIcon: { asset: b.t, type: "icon" },
         buttonVariant: "expressive",
         onCtaClick: ei,
@@ -409,15 +411,15 @@ function eg(e) {
     return (0, a.jsx)(Y, {
         orbBalance: n,
         headerTagsContent: t
-            ? (0, a.jsx)(V, { text: M.intl.format(k.default["04j3XV"], { orbAmount: 250, days: 16 }) })
+            ? (0, a.jsx)(V, { text: k.intl.format(M.default["04j3XV"], { orbAmount: 250, days: 16 }) })
             : null,
         renderPrimaryCard: (e) => {
             let { onClose: a } = e;
             return ef({ userHasPremium: t, onClose: a, orbBalance: n });
         },
         orbChallengesCard: (0, a.jsx)(q, {
-            title: M.intl.string(k.default.H6Ny8N),
-            badgeText: M.intl.format(t ? k.default.OHLdjq : k.default.WOMrJf, { multiplier: 1.2 }),
+            title: k.intl.string(M.default.H6Ny8N),
+            badgeText: k.intl.format(t ? M.default.OHLdjq : M.default.WOMrJf, { multiplier: 1.2 }),
             challenges: l ? [] : eC,
             onClaim: ex,
         }),
@@ -432,7 +434,7 @@ function eA() {
     let { passesGeneralUIInvariant: e, programReward: t } = (0, o.F)({ location: "OrbWallet" });
     if (!e || null == t) return null;
     let n = Math.max(1, (0, s.default)(new Date(t.next_reward_date), new Date()));
-    return (0, a.jsx)(V, { text: M.intl.format(k.default["04j3XV"], { orbAmount: t.reward_amount, days: n }) });
+    return (0, a.jsx)(V, { text: k.intl.format(M.default["04j3XV"], { orbAmount: t.reward_amount, days: n }) });
 }
 function ev() {
     return null != (0, r.bG)([u.A], () => u.A.getPremiumTypeSubscription()) ? (0, a.jsx)(eA, {}) : null;
@@ -440,17 +442,19 @@ function ev() {
 function eb() {
     let { challengesForOrbWallet: e, hasFetchedChallenges: t } = (0, C.z)({ shouldFetch: !0 }),
         n = (0, c.L)(eh.PremiumTypes.TIER_2),
-        { orbRewardMultiplier: l } = (0, r.cf)([f.A], () => ({ orbRewardMultiplier: f.A.orbRewardMultiplier }));
+        { nitroGatedOrbMultiplier: l } = (0, r.cf)([f.A], () => ({
+            nitroGatedOrbMultiplier: f.A.nitroGatedOrbMultiplier,
+        }));
     return t
         ? (0, a.jsx)(q, {
-              title: M.intl.string(k.default.H6Ny8N),
+              title: k.intl.string(M.default.H6Ny8N),
               challenges: e,
               onClaim: x.Xz,
-              badgeText: M.intl.format(n ? k.default.OHLdjq : k.default.WOMrJf, { multiplier: l }),
+              badgeText: k.intl.format(n ? M.default.OHLdjq : M.default.WOMrJf, { multiplier: l }),
           })
         : (0, a.jsx)("div", { className: em.y });
 }
-function eN(e) {
+function e_(e) {
     let { cardRef: t } = e,
         { balance: n } = (0, m.W)(),
         s = (0, h.H)({ location: "StatefulOrbWallet" }),
@@ -472,9 +476,9 @@ function eN(e) {
           })
         : null;
 }
-function e_(e) {
+function ep(e) {
     let { cardRef: t, targetElementRef: n, shouldShow: s } = e,
-        r = l.useCallback(() => (0, a.jsx)(eN, { cardRef: t }), [t]);
+        r = l.useCallback(() => (0, a.jsx)(e_, { cardRef: t }), [t]);
     return (0, a.jsx)(i.Y, {
         fixed: !0,
         autoInvert: !1,

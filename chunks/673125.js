@@ -21,6 +21,7 @@ function o() {
         isClaimingChallengeMap: {},
         claimChallengeErrorMap: {},
         orbRewardMultiplier: null,
+        nitroGatedOrbMultiplier: null,
         achievementUnreadState: null,
     };
 }
@@ -56,6 +57,7 @@ class u extends a.Ay.Store {
         let { response: t } = e;
         (this.state.challenges = t.achievements.map(i)),
             (this.state.orbRewardMultiplier = t.orb_multiplier),
+            (this.state.nitroGatedOrbMultiplier = t.nitro_gated_orb_multiplier),
             this.setAchievementUnreadState({ has_unclaimed_achievements: t.has_unclaimed_achievements }),
             (this.state.hasFetchedChallenges = !0),
             (this.state.isFetchingChallenges = !1);
@@ -93,6 +95,9 @@ class u extends a.Ay.Store {
     }
     get orbRewardMultiplier() {
         return this.state.orbRewardMultiplier;
+    }
+    get nitroGatedOrbMultiplier() {
+        return this.state.nitroGatedOrbMultiplier;
     }
     get hasUnclaimedAchievements() {
         return this.state.hasFetchedChallenges
