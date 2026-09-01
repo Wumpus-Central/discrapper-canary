@@ -6,6 +6,7 @@ a.exports = {
     nq: "classificationActionsTakenList_a48d6b",
     t8: "guidelinesExplanation_a48d6b",
     CC: "classificationLetUsKnowContainer_a48d6b",
+    IC: "classificationLetUsKnowTextCentered_a48d6b",
     F8: "classificationPolicyCard_a48d6b",
     yi: "classificationPolicyCardIcon_a48d6b",
     wC: "classificationPolicyDescriptionContainer_a48d6b",

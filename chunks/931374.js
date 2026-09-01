@@ -41,7 +41,7 @@ var i,
     I = n(280450),
     f = n(232835),
     p = n(287809),
-    T = n(31720),
+    T = n(379257),
     m = n(847599),
     g = n(787301),
     S = n(295972);
@@ -245,7 +245,7 @@ function ee(e) {
         });
     return {
         loading: r,
-        initiateAgeVerificationV2: a.useCallback((e) => s(() => (0, S.UQ)(e.method, e.vendor), e), [s]),
+        initiateAgeVerificationV2: a.useCallback((e) => s(() => (0, S.en)(e.method, e.vendor), e), [s]),
     };
 }
 function et(e) {

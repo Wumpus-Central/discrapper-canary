@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { D0: () => c, DJ: () => I, UQ: () => _, Zo: () => A, eb: () => h, uf: () => d });
+n.d(t, { D0: () => c, DJ: () => p, Zo: () => I, eb: () => f, en: () => A, uf: () => d });
 var i = n(636537),
     r = n(228366),
     a = n(393033),
@@ -8,7 +8,7 @@ var i = n(636537),
     o = n(652215);
 async function d(e) {
     let { method: t, classificationId: n, vendor: i } = e;
-    return (0, a.qn)() ? await E({ classificationId: n, method: t }) : await u(t, i);
+    return (0, a.qn)() ? await h({ classificationId: n, method: t }) : await u(t, i);
 }
 async function c(e) {
     let {
@@ -27,7 +27,20 @@ async function u(e, t) {
 async function _(e, t) {
     return (await i.Bo.post({ url: o.Rsh.VERIFY_AGE_V2, body: { method: e, vendor: t }, rejectWithError: !0 })).body;
 }
-async function E(e) {
+async function E(e, t) {
+    let n = s.default.getSuspendedUserToken();
+    return (
+        await i.Bo.post({
+            url: o.Rsh.SAFETY_HUB_REQUEST_SUSPENDED_AGE_VERIFICATION_V2,
+            body: { token: n, method: e, vendor: t },
+            rejectWithError: !0,
+        })
+    ).body;
+}
+async function A(e, t) {
+    return (0, a.qn)() ? await E(e, t) : await _(e, t);
+}
+async function h(e) {
     let { classificationId: t, method: n } = e,
         r = s.default.getSuspendedUserToken();
     return (
@@ -38,10 +51,10 @@ async function E(e) {
         })
     ).body;
 }
-async function A(e) {
+async function I(e) {
     await i.Bo.post({ url: o.Rsh.REGISTER_INCODE_INTERVIEW, body: { interview_id: e }, rejectWithError: !0 });
 }
-async function h() {
+async function f() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
     return (
         await i.Bo.post({
@@ -51,7 +64,7 @@ async function h() {
         })
     ).body;
 }
-async function I() {
+async function p() {
     let e, t;
     return (
         r.h.dispatch({ type: "AGE_VERIFICATION_METHODS_LOAD_START" }),

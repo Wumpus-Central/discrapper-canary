@@ -3573,7 +3573,7 @@ function nh() {
         );
     return 0 === i.length ? null : (0, r.jsx)(tK, { className: tH.nd, columns: c, rowClassName: nu.nM, data: s });
 }
-var nx = a(31720),
+var nx = a(379257),
     np = a(847599),
     ng = a(486866);
 function nv() {

@@ -1,153 +1,151 @@
-E.d(e, { Gf: () => o, Yn: () => s, d: () => c, hH: () => S, k9: () => U });
-var n = E(636537),
-    _ = E(228366),
-    i = E(59318),
-    A = E(280450),
-    l = E(207913),
-    a = E(393033),
-    r = E(239093),
-    T = E(652215);
-async function s() {
+i.d(t, { Gf: () => S, Yn: () => o, d: () => u, hH: () => c, k9: () => d });
+var n = i(636537),
+    _ = i(228366),
+    E = i(59318),
+    a = i(280450),
+    r = i(207913),
+    s = i(393033),
+    l = i(239093),
+    A = i(652215);
+async function o() {
     _.h.dispatch({ type: "SAFETY_HUB_FETCH_START" });
-    let t = A.default.getSuspendedUserToken(),
-        e = null != t ? T.Rsh.SAFETY_HUB_SUSPENDED : T.Rsh.SAFETY_HUB,
-        E =
-            null != t
-                ? n.Bo.post({ url: e, body: { token: t }, rejectWithError: (0, n.fT)() })
-                : n.Bo.get({ url: e, rejectWithError: (0, n.fT)() });
-    await E.then((t) => {
-        let { body: e } = t,
-            {
-                classifications: E,
-                guild_classifications: n,
-                account_standing: i,
-                is_dsa_eligible: A,
-                username: l,
-                is_appeal_eligible: a,
-                appeal_eligibility: r,
-            } = e,
-            T = E.map((t) => (u(t), t));
-        _.h.dispatch({
-            type: "SAFETY_HUB_FETCH_SUCCESS",
-            classifications: T.concat(n ?? []),
-            accountStanding: i,
-            isDsaEligible: A,
-            username: l,
-            isAppealEligible: a,
-            appealEligibility: r ?? [],
-        });
-    }).catch((t) => {
-        _.h.dispatch({ type: "SAFETY_HUB_FETCH_FAILURE", error: t?.body?.message ?? "Unknown error" });
-    });
-}
-async function S(t) {
-    _.h.dispatch({ type: "SAFETY_HUB_FETCH_CLASSIFICATION_START", classificationId: t });
-    let e = A.default.getSuspendedUserToken(),
-        E = null != e ? T.Rsh.SAFETY_HUB_SUSPENDED : T.Rsh.SAFETY_HUB,
+    let e = a.default.getSuspendedUserToken(),
+        t = null != e ? A.Rsh.SAFETY_HUB_SUSPENDED : A.Rsh.SAFETY_HUB,
         i =
             null != e
-                ? n.Bo.post({ url: E, body: { token: e }, rejectWithError: (0, n.fT)() })
-                : n.Bo.get({ url: E, rejectWithError: (0, n.fT)() });
+                ? n.Bo.post({ url: t, body: { token: e }, rejectWithError: (0, n.fT)() })
+                : n.Bo.get({ url: t, rejectWithError: (0, n.fT)() });
     await i
         .then((e) => {
-            let { body: E } = e,
-                { classifications: n, account_standing: i, is_dsa_eligible: A, username: l, is_appeal_eligible: a } = E,
-                r = n.find((e) => e.id === t);
-            null != r
-                ? (u(r),
-                  _.h.dispatch({
-                      type: "SAFETY_HUB_FETCH_CLASSIFICATION_SUCCESS",
-                      classification: r,
-                      accountStanding: i,
-                      isDsaEligible: A,
-                      username: l,
-                      isAppealEligible: a,
-                  }))
-                : _.h.dispatch({
-                      type: "SAFETY_HUB_FETCH_CLASSIFICATION_FAILURE",
-                      error: "Classification not found.",
-                      classificationId: t,
-                  });
+            let { body: t } = e,
+                {
+                    classifications: i,
+                    guild_classifications: n,
+                    account_standing: E,
+                    is_dsa_eligible: a,
+                    username: r,
+                    is_appeal_eligible: s,
+                    appeal_eligibility: l,
+                    expressive_modal_v2_enabled: A,
+                } = t,
+                o = i.map((e) => (T(e), e));
+            _.h.dispatch({
+                type: "SAFETY_HUB_FETCH_SUCCESS",
+                classifications: o.concat(n ?? []),
+                accountStanding: E,
+                isDsaEligible: a,
+                username: r,
+                isAppealEligible: s,
+                appealEligibility: l ?? [],
+                expressiveModalV2Enabled: A ?? !1,
+            });
         })
         .catch((e) => {
-            _.h.dispatch({
-                type: "SAFETY_HUB_FETCH_CLASSIFICATION_FAILURE",
-                error: e?.body?.message ?? "Unknown error",
-                classificationId: t,
-            });
+            _.h.dispatch({ type: "SAFETY_HUB_FETCH_FAILURE", error: e?.body?.message ?? "Unknown error" });
         });
 }
-function u(t) {
-    if (null != t.flagged_content && t.flagged_content.length > 0) {
-        let e = t.flagged_content[0];
-        (e.attachments = e.attachments.filter((t) => {
-            let { filename: e } = t;
-            return (0, i.u)(e) || (0, i.AE)(e);
+async function c(e) {
+    _.h.dispatch({ type: "SAFETY_HUB_FETCH_CLASSIFICATION_START", classificationId: e });
+    let t = a.default.getSuspendedUserToken(),
+        i = null != t ? A.Rsh.SAFETY_HUB_SUSPENDED : A.Rsh.SAFETY_HUB,
+        E =
+            null != t
+                ? n.Bo.post({ url: i, body: { token: t }, rejectWithError: (0, n.fT)() })
+                : n.Bo.get({ url: i, rejectWithError: (0, n.fT)() });
+    await E.then((t) => {
+        let { body: i } = t,
+            { classifications: n, account_standing: E, is_dsa_eligible: a, username: r, is_appeal_eligible: s } = i,
+            l = n.find((t) => t.id === e);
+        null != l
+            ? (T(l),
+              _.h.dispatch({
+                  type: "SAFETY_HUB_FETCH_CLASSIFICATION_SUCCESS",
+                  classification: l,
+                  accountStanding: E,
+                  isDsaEligible: a,
+                  username: r,
+                  isAppealEligible: s,
+              }))
+            : _.h.dispatch({
+                  type: "SAFETY_HUB_FETCH_CLASSIFICATION_FAILURE",
+                  error: "Classification not found.",
+                  classificationId: e,
+              });
+    }).catch((t) => {
+        _.h.dispatch({
+            type: "SAFETY_HUB_FETCH_CLASSIFICATION_FAILURE",
+            error: t?.body?.message ?? "Unknown error",
+            classificationId: e,
+        });
+    });
+}
+function T(e) {
+    if (null != e.flagged_content && e.flagged_content.length > 0) {
+        let t = e.flagged_content[0];
+        (t.attachments = t.attachments.filter((e) => {
+            let { filename: t } = e;
+            return (0, E.u)(t) || (0, E.AE)(t);
         })),
-            (t.flagged_content = (0, a.Jn)(e) ? [] : [e]);
+            (e.flagged_content = (0, s.Jn)(t) ? [] : [t]);
     }
 }
-async function o(t, e, E) {
-    let i = A.default.getSuspendedUserToken(),
-        l = null != i ? T.Rsh.SAFETY_HUB_REQUEST_SUSPENDED_USER_REVIEW(t) : T.Rsh.SAFETY_HUB_REQUEST_REVIEW(t),
-        a =
-            null != i
-                ? n.Bo.put({ url: l, body: { signal: e, user_input: E, token: i }, rejectWithError: (0, n.fT)() })
-                : n.Bo.put({ url: l, body: { signal: e, user_input: E }, rejectWithError: (0, n.fT)() });
+async function S(e, t, i) {
+    let E = a.default.getSuspendedUserToken(),
+        r = null != E ? A.Rsh.SAFETY_HUB_REQUEST_SUSPENDED_USER_REVIEW(e) : A.Rsh.SAFETY_HUB_REQUEST_REVIEW(e),
+        s =
+            null != E
+                ? n.Bo.put({ url: r, body: { signal: t, user_input: i, token: E }, rejectWithError: (0, n.fT)() })
+                : n.Bo.put({ url: r, body: { signal: t, user_input: i }, rejectWithError: (0, n.fT)() });
     _.h.dispatch({ type: "SAFETY_HUB_REQUEST_REVIEW_START" }),
-        await a
+        await s
             .then(() => {
-                _.h.dispatch({ type: "SAFETY_HUB_REQUEST_REVIEW_SUCCESS", classificationId: t });
+                _.h.dispatch({ type: "SAFETY_HUB_REQUEST_REVIEW_SUCCESS", classificationId: e });
             })
-            .catch((t) => {
+            .catch((e) => {
                 throw (
                     (_.h.dispatch({
                         type: "SAFETY_HUB_REQUEST_REVIEW_FAILURE",
-                        error: t?.body?.message ?? "Unknown error",
+                        error: e?.body?.message ?? "Unknown error",
                     }),
-                    t)
+                    e)
                 );
             });
 }
-async function U(t) {
+async function d(e) {
     _.h.dispatch({ type: "SAFETY_HUB_REQUEST_AUTOMATED_UNDERAGE_APPEAL_START" });
-    let e = A.default.getSuspendedUserToken(),
-        E = T.Rsh.SAFETY_HUB_REQUEST_SUSPENDED_AGE_VERIFICATION,
-        i = n.Bo.post({ url: E, body: { token: e, from_classification_id: t }, rejectWithError: (0, n.fT)() });
-    await i
-        .then((t) => {
-            let { body: e } = t,
-                { verification_request_id: E, verification_webview_url: n } = e;
-            _.h.dispatch({
-                type: "SAFETY_HUB_REQUEST_AUTOMATED_UNDERAGE_APPEAL_SUCCESS",
-                verificationRequestId: E,
-                verificationWebviewUrl: n,
-            });
-        })
-        .catch((t) => {
-            _.h.dispatch({
-                type: "SAFETY_HUB_REQUEST_AUTOMATED_UNDERAGE_APPEAL_FAILURE",
-                error: t?.body?.message ?? "Unknown error",
-            });
+    let t = a.default.getSuspendedUserToken(),
+        i = A.Rsh.SAFETY_HUB_REQUEST_SUSPENDED_AGE_VERIFICATION,
+        E = n.Bo.post({ url: i, body: { token: t, from_classification_id: e }, rejectWithError: (0, n.fT)() });
+    await E.then((e) => {
+        let { body: t } = e,
+            { verification_request_id: i, verification_webview_url: n } = t;
+        _.h.dispatch({
+            type: "SAFETY_HUB_REQUEST_AUTOMATED_UNDERAGE_APPEAL_SUCCESS",
+            verificationRequestId: i,
+            verificationWebviewUrl: n,
         });
+    }).catch((e) => {
+        _.h.dispatch({
+            type: "SAFETY_HUB_REQUEST_AUTOMATED_UNDERAGE_APPEAL_FAILURE",
+            error: e?.body?.message ?? "Unknown error",
+        });
+    });
 }
-async function c() {
+async function u() {
     _.h.dispatch({ type: "SAFETY_HUB_CHECK_AUTOMATED_UNDERAGE_APPEAL_START" });
-    let t = A.default.getSuspendedUserToken(),
-        e = l.A.getAgeCheckAttempts(),
-        E = T.Rsh.SAFETY_HUB_CHECK_SUSPENDED_AGE_VERIFICATION,
-        i = n.Bo.post({ url: E, body: { token: t }, rejectWithError: (0, n.fT)() });
-    await i
-        .then((t) => {
-            let { body: E } = t,
-                { success: n } = E;
-            !n && e < r.ti && setTimeout(() => c(), r.Eb),
-                _.h.dispatch({ type: "SAFETY_HUB_CHECK_AUTOMATED_UNDERAGE_APPEAL_SUCCESS", success: n });
-        })
-        .catch((t) => {
-            _.h.dispatch({
-                type: "SAFETY_HUB_CHECK_AUTOMATED_UNDERAGE_APPEAL_FAILURE",
-                error: t?.body?.message ?? "Unknown error",
-            });
+    let e = a.default.getSuspendedUserToken(),
+        t = r.A.getAgeCheckAttempts(),
+        i = A.Rsh.SAFETY_HUB_CHECK_SUSPENDED_AGE_VERIFICATION,
+        E = n.Bo.post({ url: i, body: { token: e }, rejectWithError: (0, n.fT)() });
+    await E.then((e) => {
+        let { body: i } = e,
+            { success: n } = i;
+        !n && t < l.ti && setTimeout(() => u(), l.Eb),
+            _.h.dispatch({ type: "SAFETY_HUB_CHECK_AUTOMATED_UNDERAGE_APPEAL_SUCCESS", success: n });
+    }).catch((e) => {
+        _.h.dispatch({
+            type: "SAFETY_HUB_CHECK_AUTOMATED_UNDERAGE_APPEAL_FAILURE",
+            error: e?.body?.message ?? "Unknown error",
         });
+    });
 }
