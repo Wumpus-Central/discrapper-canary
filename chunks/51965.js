@@ -10,7 +10,7 @@ function d(e) {
     let t = (0, l.N)(),
         i =
             (t?.reason ?? null) === a.ON.TRIAL_USER_NOT_ELIGIBLE
-                ? o.intl.string(o.t.yxMJHw)
+                ? o.intl.string(o.t["2S/5mX"])
                 : o.intl.string(o.t.GcPSts);
     return t?.state === a.zE.BLOCK_CLAIM
         ? (0, s.jsx)(n.m, {
@@ -20,7 +20,7 @@ function d(e) {
                   fullWidth: e.fullWidth,
                   variant: "overlay-primary",
                   size: e.size,
-                  text: o.intl.string(o.t["1N0dxa"]),
+                  text: o.intl.string(o.t.rJbFM3),
                   disabled: !0,
               }),
           })
