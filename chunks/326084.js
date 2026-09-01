@@ -14,6 +14,7 @@ var d = n(38405),
         (((i = {})[(i.REDEEMED = 1)] = "REDEEMED"),
         (i[(i.PENDING = 2)] = "PENDING"),
         (i[(i.CONVERTED = 3)] = "CONVERTED"),
+        (i[(i.REFERRER_REWARD_GRANTED = 4)] = "REFERRER_REWARD_GRANTED"),
         i),
     _ = (((r = {})[(r.SUCCESS = 1)] = "SUCCESS"), (r[(r.FAIL = 2)] = "FAIL"), r);
 let E = new (class {
