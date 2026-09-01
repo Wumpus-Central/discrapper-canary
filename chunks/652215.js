@@ -2586,6 +2586,7 @@ var iY =
         (eo.PREMIUM_UPSELL_SOUNDBOARD_EVERYWHERE = "Premium Upsell Modal - Soundboard Everywhere"),
         (eo.PREMIUM_UPSELL_ANIMATED_EMOJI = "Premium Upsell Modal - Animated Emoji"),
         (eo.PREMIUM_UPSELL_EMOJI_EVERYWHERE = "Premium Upsell Modal - Emoji Everywhere"),
+        (eo.PREMIUM_UPSELL_STICKERS_EVERYWHERE = "Premium Upsell Modal - Stickers Everywhere"),
         (eo.PREMIUM_UPSELL_FILE_UPLOAD = "Premium Upsell Modal - Larger File Uploads"),
         (eo.PREMIUM_UPSELL_CLIENT_THEMES = "Premium Upsell Modal - Client Themes"),
         (eo.PREMIUM_UPSELL_APP_ICONS = "Premium Upsell Modal - App Icons"),
