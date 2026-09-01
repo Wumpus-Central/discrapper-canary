@@ -1,15 +1,5 @@
 "use strict";
-n.d(t, {
-    iY: () => ee,
-    br: () => ei,
-    rL: () => X,
-    Ay: () => Q,
-    $9: () => et,
-    l7: () => en,
-    tl: () => q,
-    ts: () => J,
-    st: () => G,
-}),
+n.d(t, { br: () => en, rL: () => X, Ay: () => Q, $9: () => ee, l7: () => et, tl: () => q, ts: () => J, st: () => G }),
     n(321073);
 var i = n(492462),
     r = n(567243),
@@ -90,7 +80,7 @@ function q(e) {
     return z(F, e) ?? z(V, e) ?? z(B, e) ?? z(H, e) ?? z(j, e);
 }
 function Z(e) {
-    let t = en(e);
+    let t = et(e);
     if (null == t || null == t.pathname)
         return {
             url: null,
@@ -105,7 +95,7 @@ function Z(e) {
 }
 function X(e) {
     if (e.includes("\\")) {
-        let t = en(e);
+        let t = et(e);
         if (null == t) return !1;
         if ($(x, t)) return !0;
         if ([F, V, B, H, j].some((e) => $(e, t))) return t.pathname?.toUpperCase().includes(u.I.INVITE) ?? !1;
@@ -230,21 +220,16 @@ function J(e) {
 }
 function ee(e) {
     let t = Z(e),
-        n = t?.primaryHostRemainingPath?.match(P);
-    return n?.[1] ?? null;
-}
-function et(e) {
-    let t = Z(e),
         n = t?.primaryHostRemainingPath?.match(b);
     return n?.[1] ?? null;
 }
-function en(e) {
+function et(e) {
     try {
         return (0, r.parse)(e);
     } catch (e) {
         return null;
     }
 }
-function ei(e) {
+function en(e) {
     return Q(e)[0];
 }

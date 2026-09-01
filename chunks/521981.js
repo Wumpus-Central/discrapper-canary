@@ -1,15 +1,14 @@
-t.d(e, { ko: () => h, Ay: () => f, Le: () => w, Tz: () => A, jp: () => k });
+t.d(e, { ko: () => p, Ay: () => h, Le: () => y, Tz: () => f, jp: () => w });
 var o = t(46054);
 t(321073), t(380610);
 var l = t(721779);
 t(100392);
-var i = t(168543),
-    a = t(659674),
-    r = t(38405),
-    s = t(652215);
-let u = new Set([s.Auw.IMAGE, s.Auw.GIFV]),
-    d = new Set(["strong", "em", "u", "text", "inlineCode", "s", "spoiler"]);
-function c(n) {
+var i = t(659674),
+    a = t(38405),
+    r = t(652215);
+let s = new Set([r.Auw.IMAGE, r.Auw.GIFV]),
+    u = new Set(["strong", "em", "u", "text", "inlineCode", "s", "spoiler"]);
+function d(n) {
     if (
         n.some(
             (n) =>
@@ -33,25 +32,22 @@ function c(n) {
         n
     );
 }
-function p(n, e) {
-    if (n instanceof Array) return n.some((n) => p(n, e));
+function c(n, e) {
+    if (n instanceof Array) return n.some((n) => c(n, e));
     let t = e(n);
     return null != t
         ? t
         : n.content instanceof Array
-          ? p(n.content, e)
-          : n.items instanceof Array && n.items.some((n) => p(n, e));
+          ? c(n.content, e)
+          : n.items instanceof Array && n.items.some((n) => c(n, e));
 }
 function m(n) {
-    return p(n, (n) =>
-        "spoiler" === n.type ? p(n, (n) => "link" === n.type || "attachmentLink" === n.type || null) : null,
+    return c(n, (n) =>
+        "spoiler" === n.type ? c(n, (n) => "link" === n.type || "attachmentLink" === n.type || null) : null,
     );
 }
-function y(n) {
-    return "link" === n.type && null != n.target && null != (0, l.iY)(n.target);
-}
-function h(n, e) {
-    let t = w({ channelId: n.channel_id, messageId: n.id, authorId: n.author?.id, renderOptions: e }),
+function p(n, e) {
+    let t = y({ channelId: n.channel_id, messageId: n.id, authorId: n.author?.id, renderOptions: e }),
         o = null != n.webhookId;
     return {
         ...t,
@@ -61,7 +57,7 @@ function h(n, e) {
         soundboardSounds: n.soundboardSounds ?? [],
     };
 }
-function w(n) {
+function y(n) {
     let { channelId: e, messageId: t, authorId: o, renderOptions: l } = n;
     return {
         channelId: e,
@@ -89,117 +85,111 @@ function w(n) {
         disablePressableChannelMention: !!l.disablePressableChannelMention,
     };
 }
-function f(n) {
+function h(n) {
     let e = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
     return (function (n, e, t) {
         let {
                 toAST: o = !1,
-                hideSimpleEmbedContent: p = !0,
-                formatInline: w = !1,
-                postProcessor: f,
-                contentMessage: k,
+                hideSimpleEmbedContent: c = !0,
+                formatInline: y = !1,
+                postProcessor: h,
+                contentMessage: w,
             } = t,
+            f = !1,
             A = !1,
-            g = !1,
-            b = (k ?? e).content,
-            L = n(b, !0, h(e, t), (n, t, h) => {
-                let { ast: L, hasSpoilerEmbeds: I } = (function (n) {
-                    var e, t, o, p;
-                    let h,
+            k = (w ?? e).content,
+            g = n(k, !0, p(e, t), (n, t, p) => {
+                let { ast: g, hasSpoilerEmbeds: b } = (function (n) {
+                    var e, t, o;
+                    let c,
                         {
-                            ast: w,
-                            inline: f,
-                            hasBailedAst: k,
-                            message: A,
-                            contentMessage: g,
-                            messageContent: b,
-                            hideSimpleEmbedContent: L,
-                            formatInline: I,
-                            toAST: E,
+                            ast: p,
+                            inline: y,
+                            hasBailedAst: h,
+                            message: w,
+                            contentMessage: f,
+                            messageContent: A,
+                            hideSimpleEmbedContent: k,
+                            formatInline: g,
+                            toAST: b,
                         } = n,
-                        M = Array.isArray(w) ? w : [w],
-                        C = !1;
+                        L = Array.isArray(p) ? p : [p],
+                        I = !1;
                     return (
-                        k && (M = [{ type: "text", content: b, originalMatch: { index: 0, 0: b } }]),
-                        L &&
-                            (M = (function (n, e) {
+                        h && (L = [{ type: "text", content: A, originalMatch: { index: 0, 0: A } }]),
+                        k &&
+                            (L = (function (n, e) {
                                 if (1 !== n.length || 1 !== e.length) return n;
                                 let t = n[0],
                                     o = e[0];
                                 return ("link" === t.type || "attachmentLink" === t.type) &&
-                                    u.has(o.type) &&
-                                    (0, a.NV)(o)
+                                    s.has(o.type) &&
+                                    (0, i.NV)(o)
                                     ? []
                                     : n;
-                            })(M, (g ?? A).embeds)),
-                        I ||
-                            A.type === s.lAJ.MEDIA_MENTION_MESSAGE ||
-                            ((e = M),
-                            (M = f
-                                ? c(e)
+                            })(L, (f ?? w).embeds)),
+                        g ||
+                            w.type === r.lAJ.MEDIA_MENTION_MESSAGE ||
+                            ((e = L),
+                            (L = y
+                                ? d(e)
                                 : ("paragraph" === e[0].type &&
                                       e[0].content instanceof Array &&
-                                      (e[0].content = c(e[0].content)),
+                                      (e[0].content = d(e[0].content)),
                                   e))),
-                        (h = (t = M).some((n) => "link" !== n.type)),
-                        (M =
-                            !(o = M =
-                                (M = t.filter((n) => {
-                                    let e = "link" === n.type,
-                                        t = null != n.target ? (0, l.ts)(n.target) : null;
-                                    return !(e && null != t && !h);
-                                })).filter((n) => {
-                                    let e = "link" === n.type,
-                                        t = null != n.target && null != (0, l.$9)(n.target);
-                                    return !(e && t);
-                                })).some(y) ||
-                            o.some((n) => "link" !== n.type) ||
-                            !(0, i.l)("MarkupPostProcessors")
-                                ? o
-                                : o.filter((n) => !y(n))),
-                        (g ?? A).embeds.length > 0 &&
-                            ((p = M),
-                            (C = f
-                                ? m(p)
-                                : "paragraph" === p[0].type && p[0].content instanceof Array && m(p[0].content))),
-                        I &&
-                            (M = (function n(e) {
+                        (c = (t = L).some((n) => "link" !== n.type)),
+                        (L = (L = t.filter((n) => {
+                            let e = "link" === n.type,
+                                t = null != n.target ? (0, l.ts)(n.target) : null;
+                            return !(e && null != t && !c);
+                        })).filter((n) => {
+                            let e = "link" === n.type,
+                                t = null != n.target && null != (0, l.$9)(n.target);
+                            return !(e && t);
+                        })),
+                        (f ?? w).embeds.length > 0 &&
+                            ((o = L),
+                            (I = y
+                                ? m(o)
+                                : "paragraph" === o[0].type && o[0].content instanceof Array && m(o[0].content))),
+                        g &&
+                            (L = (function n(e) {
                                 return (
                                     e.forEach((e) => {
-                                        d.has(e.type) &&
+                                        u.has(e.type) &&
                                             null != e.content &&
                                             (Array.isArray(e.content)
                                                 ? n(e.content)
                                                 : "string" == typeof e.content
                                                   ? (e.content = e.content.replace(/\n/g, " "))
-                                                  : r.A.captureMessage(
+                                                  : a.A.captureMessage(
                                                         `AST node type:${e.type} with content typeof ${typeof e.content}. Keys ${Object.keys(e)}`,
                                                     ));
                                     }),
                                     e
                                 );
-                            })(M)),
-                        { ast: M, hasSpoilerEmbeds: C }
+                            })(L)),
+                        { ast: L, hasSpoilerEmbeds: I }
                     );
                 })({
                     ast: n,
                     inline: t,
-                    hasBailedAst: (g = h ?? !1),
+                    hasBailedAst: (A = p ?? !1),
                     message: e,
-                    contentMessage: k,
-                    messageContent: b,
-                    hideSimpleEmbedContent: p,
-                    formatInline: w,
+                    contentMessage: w,
+                    messageContent: k,
+                    hideSimpleEmbedContent: c,
+                    formatInline: y,
                     toAST: o,
                 });
-                A = I;
-                let E = L;
-                return null != f && (E = f(E, t)), E;
+                f = b;
+                let L = g;
+                return null != h && (L = h(L, t)), L;
             });
-        return { hasSpoilerEmbeds: A, hasBailedAst: g, content: L };
+        return { hasSpoilerEmbeds: f, hasBailedAst: A, content: g };
     })(e.formatInline ? o.A.parseInlineReply : o.A.parse, n, e);
 }
-function k(n, e) {
+function w(n, e) {
     let t = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
     return (function (n, e) {
         let t = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
@@ -233,7 +223,7 @@ function k(n, e) {
         );
     })(n, e, t);
 }
-function A(n, e, t) {
+function f(n, e, t) {
     return (0, o.A.parseAutoModerationSystemMessage)(
         n,
         !0,
