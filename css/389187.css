@@ -147,10 +147,6 @@
 }
 
 .themeContainer__7f9c0 {
-    --custom-profile-frame-layer-scale: calc(300/var(--custom-profile-frame-container-width))
-}
-
-.themeContainer__7f9c0.custom-user-profile-theme {
     --custom-profile-frame-layer-scale: calc(304/var(--custom-profile-frame-container-width))
 }
 
@@ -316,4 +312,4 @@
     width: 80%
 }
 
-/*# sourceMappingURL=389187.18bdccb03f2d44fe.css.map*/
+/*# sourceMappingURL=389187.536bbf09746e6aa6.css.map*/

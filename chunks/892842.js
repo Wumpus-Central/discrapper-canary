@@ -140,7 +140,8 @@ new I("2026-02-android-fresco-cache", "Android Fresco Cache", 3),
     new _(
         "2026-08-android-rn-reparenting-flag",
         "RN Flag, was false on RN 0.81 and true in RN 0.86, suspect of causing RMLE regressions",
-    );
+    ),
+    new I("2026-08-ios-objc-composed-image-cache", "iOS ObjC Composed Image Cache", 3);
 let p = !1;
 function T() {
     return p;

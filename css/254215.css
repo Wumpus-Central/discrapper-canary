@@ -71,17 +71,26 @@ html:not(.chat-input) .inputInner_b1f01d {
     margin-inline-start: -90px
 }
 
-.user-profile-popout .container_b1f01d.status_b1f01d,
-.user-profile-sidebar.user-profile-sidebar-redesign .container_b1f01d.status_b1f01d {
+.user-profile-popout .container_b1f01d.status_b1f01d {
     margin-inline-start: -122px
 }
 
-.user-profile-popout .container_b1f01d.avatar_b1f01d,
-.user-profile-sidebar.user-profile-sidebar-redesign .container_b1f01d.avatar_b1f01d {
+.user-profile-popout .container_b1f01d.avatar_b1f01d {
     margin-inline-start: -32px
 }
 
-.user-profile-popout .container_b1f01d.activity_b1f01d,
+.user-profile-popout .container_b1f01d.activity_b1f01d {
+    margin-inline-start: -32px
+}
+
+.user-profile-sidebar.user-profile-sidebar-redesign .container_b1f01d.status_b1f01d {
+    margin-inline-start: -120px
+}
+
+.user-profile-sidebar.user-profile-sidebar-redesign .container_b1f01d.avatar_b1f01d {
+    margin-inline-start: -30px
+}
+
 .user-profile-sidebar.user-profile-sidebar-redesign .container_b1f01d.activity_b1f01d {
     margin-inline-start: -32px
 }
@@ -94,12 +103,4 @@ html:not(.chat-input) .inputInner_b1f01d {
     margin-inline-start: -30px
 }
 
-.user-profile-sidebar.user-profile-sidebar-redesign .container_b1f01d.customProfileTheme_b1f01d.status_b1f01d {
-    margin-inline-start: -120px
-}
-
-.user-profile-sidebar.user-profile-sidebar-redesign .container_b1f01d.customProfileTheme_b1f01d.avatar_b1f01d {
-    margin-inline-start: -30px
-}
-
-/*# sourceMappingURL=254215.e682dfb0d5f4875f.css.map*/
+/*# sourceMappingURL=254215.72349ef21121fc7e.css.map*/
