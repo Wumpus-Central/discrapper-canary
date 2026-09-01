@@ -1001,7 +1001,7 @@
 
 .heroBackground__6d3d8 {
     border-radius: inherit;
-    height: 100%;
+    height: 85%;
     inset-inline-start: 0;
     -webkit-mask-image: linear-gradient(180deg, #000 calc(100% - 16px), transparent);
     mask-image: linear-gradient(180deg, #000 calc(100% - 16px), transparent);
@@ -1098,4 +1098,4 @@
     color: var(--control-overlay-secondary-text-active)
 }
 
-/*# sourceMappingURL=376991.b62a3b3e565e8a9b.css.map*/
+/*# sourceMappingURL=376991.1e19c03e296c4edb.css.map*/
