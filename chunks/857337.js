@@ -19,9 +19,9 @@ var n = e(477900),
     S = e(375708);
 function k(l) {
     let { projectId: t, guildId: e, transitionState: k, onClose: C } = l,
-        j = (0, i.bG)([m.A], () => m.A.getProject(t), [t]),
+        j = (0, i.bG)([m.Ay], () => m.Ay.getProject(t), [t]),
         E = (0, i.yK)([x.A], () => (null != e ? x.A.getSortedRoles(e) : []), [e]),
-        A = a.useMemo(
+        y = a.useMemo(
             () =>
                 E.map((l) => ({
                     key: l.id,
@@ -32,11 +32,11 @@ function k(l) {
                 })),
             [E],
         ),
-        y = j?.collaborator_role_ids ?? [],
+        A = j?.collaborator_role_ids ?? [],
         [P] = a.useState(j?.name ?? ""),
         [_, T] = a.useState(P),
         [w, B] = a.useState(j?.flags ?? 0),
-        [q, H] = a.useState(() => [...y]),
+        [q, H] = a.useState(() => [...A]),
         [I, L] = a.useState(!1),
         [R, U] = a.useState(null),
         [V, M] = a.useState(null),
@@ -54,7 +54,7 @@ function k(l) {
                 if (l.length !== t.length) return !1;
                 let e = new Set(t);
                 return l.every((l) => e.has(l));
-            })(q, y),
+            })(q, A),
         Y = J || O || X,
         N = a.useCallback((l) => {
             T(l), U(null), W(null);
@@ -150,7 +150,7 @@ function k(l) {
                                       label: S.intl.string(v.default.fqvhf0),
                                       placeholder: S.intl.string(v.default.xEhUCx),
                                       value: q,
-                                      options: A,
+                                      options: y,
                                       maxOptionsVisible: 6,
                                       wrapTags: !0,
                                       disabled: I || !z,

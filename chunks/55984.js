@@ -36,8 +36,8 @@ function m(e) {
     });
 }
 i(321073);
-var b = i(866665),
-    y = i(408278),
+var y = i(866665),
+    b = i(408278),
     j = i(811893),
     C = i(70688),
     v = i(47294),
@@ -59,8 +59,8 @@ var M = i(574172),
     G = i(869146),
     O = i(976860),
     R = i(808728),
-    D = i(576705),
-    V = i(673724),
+    V = i(576705),
+    D = i(673724),
     z = i(972786),
     B = i(621466),
     F = i(453903),
@@ -163,10 +163,10 @@ function ee(e) {
             return (0, n.jsx)("div", {
                 ref: h,
                 className: Q.h,
-                children: (0, n.jsx)(b.m, {
+                children: (0, n.jsx)(y.m, {
                     text: g,
                     ariaHidden: !0,
-                    children: (0, n.jsx)(y.K, {
+                    children: (0, n.jsx)(b.K, {
                         "aria-label": g,
                         icon: q.MoreHorizontalIcon,
                         variant: "icon-only",
@@ -236,14 +236,14 @@ function eu(e) {
         }, [s]),
         A = (0, E.G)(),
         { remix: f, canRemix: I } =
-            ((l = null != c && null != d && ((0, z.P)(d) || (0, V.tr)(d))),
+            ((l = null != c && null != d && ((0, z.PV)(d) || (0, D.tr)(d))),
             {
                 remix: t.useCallback(() => {
                     null != c && null != d && (0, er.A)(d, c);
                 }, [c, d]),
                 canRemix: l,
             }),
-        m = null != d && (0, z.P)(d),
+        m = null != d && (0, z.PV)(d),
         P = null != c && null != d,
         w = t.useCallback(() => {
             null != c && null != d && (0, O.pX)(es.BVt.CHANNEL(c, ed.VV.VIBEGRATIONS, d.id));
@@ -269,7 +269,7 @@ function eu(e) {
                         if (null != i && i.id !== l) return es.BVt.CHANNEL(e, i.id);
                         let n = R.Ay.getFirstChannel(e, (e) => {
                             let { channel: i } = e;
-                            return i.id !== l && D.A.can(es.xBc.VIEW_CHANNEL, i);
+                            return i.id !== l && V.A.can(es.xBc.VIEW_CHANNEL, i);
                         });
                         return null != n ? es.BVt.CHANNEL(e, n.id) : es.BVt.FRIENDS;
                     })(c, (0, eo.h)(r)),
@@ -285,10 +285,10 @@ function eu(e) {
         X =
             null == u
                 ? null
-                : (0, n.jsx)(b.m, {
+                : (0, n.jsx)(y.m, {
                       text: W,
                       ariaHidden: !0,
-                      children: (0, n.jsx)(y.K, {
+                      children: (0, n.jsx)(b.K, {
                           "aria-label": Y.join(", "),
                           "aria-pressed": !0 === o,
                           icon: K,
@@ -314,10 +314,10 @@ function eu(e) {
             }),
             X,
             A
-                ? (0, n.jsx)(b.m, {
+                ? (0, n.jsx)(y.m, {
                       text: q,
                       ariaHidden: !0,
-                      children: (0, n.jsx)(y.K, {
+                      children: (0, n.jsx)(b.K, {
                           "aria-label": q,
                           icon: j.t,
                           variant: "icon-only",
@@ -326,10 +326,10 @@ function eu(e) {
                       }),
                   })
                 : null,
-            (0, n.jsx)(b.m, {
+            (0, n.jsx)(y.m, {
                 text: Z,
                 ariaHidden: !0,
-                children: (0, n.jsx)(y.K, {
+                children: (0, n.jsx)(b.K, {
                     "aria-label": Z,
                     icon: C.DoorExitIcon,
                     variant: "icon-only",
@@ -353,25 +353,25 @@ function eI(e) {
         f,
         x,
         { channel: I } = e,
-        b = (0, g.B9)(I.topic),
-        y =
+        y = (0, g.B9)(I.topic),
+        b =
             ((i = null != (l = (0, g.B9)(I?.topic))),
             (A = I?.guild_id ?? null),
-            (f = (0, a.bG)([o.A, D.A], () => {
+            (f = (0, a.bG)([o.A, V.A], () => {
                 let e = null != A ? o.A.getGuild(A) : null;
-                return null != e && D.A.can(es.xBc.MANAGE_GUILD, e);
+                return null != e && V.A.can(es.xBc.MANAGE_GUILD, e);
             }, [A])),
             (x = (0, a.yK)([eg.Ay], () => (null != A ? (eg.Ay.getSelfMember(A)?.roles ?? []) : []), [A])),
             t.useEffect(() => {
                 i && null != l && (0, eA.hF)(A ?? void 0);
             }, [i, l, A, f, x]),
-            (0, a.bG)([z.A], () => {
+            (0, a.bG)([z.Ay], () => {
                 if (null == l) return null;
-                let e = z.A.findProjectByApplicationId(l);
-                if (null == e || (0, z.P)(e)) return e;
+                let e = z.Ay.findProjectByApplicationId(l);
+                if (null == e || (0, z.PV)(e)) return e;
                 let i = null != A ? ep.default.castGuildIdAsEveryoneGuildRoleId(A) : null,
                     n = (e.collaborator_role_ids ?? []).some((e) => e === i || x.includes(e));
-                return e.guild_id === A && (0, V.XE)(e) && (f || n) ? e : null;
+                return e.guild_id === A && (0, D.XE)(e) && (f || n) ? e : null;
             }, [l, f, x, A])),
         j = (0, c.Ay)(I),
         C = (0, a.bG)([o.A], () => o.A.getGuild(I.guild_id), [I.guild_id]),
@@ -402,24 +402,24 @@ function eI(e) {
             activeMode: w,
             widgetApplicationId: S,
         } = (0, ef.q)({
-            applicationId: b ?? null,
-            previewApplicationId: y?.preview_application_id ?? null,
+            applicationId: y ?? null,
+            previewApplicationId: b?.preview_application_id ?? null,
             declaredActivity: !1,
-            installScope: y?.install_scope ?? null,
+            installScope: b?.install_scope ?? null,
         }),
         M = t.useMemo(() => ({ ...P, modes: null != w ? [w] : [], defaultMode: w, showModeSwitch: !1 }), [P, w]),
         G = t.useMemo(() => ({ type: eo.U4.APP_CHANNEL, channelId: I.id, guildId: I.guild_id ?? void 0 }), [I]);
-    if (null == b) return null;
+    if (null == y) return null;
     let O = (0, n.jsx)(m, {
         channel: I,
         channelName: j,
         guild: C,
         toolbar: (0, n.jsx)(eu, {
-            applicationId: b,
+            applicationId: y,
             surface: G,
             guildId: I.guild_id,
             channelId: I.id,
-            project: y ?? null,
+            project: b ?? null,
             chatOpen: v,
             onToggleChat: N,
         }),
@@ -433,9 +433,9 @@ function eI(e) {
                 availability: M,
                 activeMode: w,
                 widgetApplicationId: S,
-                projectId: y?.id ?? null,
-                previewApplicationId: y?.preview_application_id ?? null,
-                applicationId: b,
+                projectId: b?.id ?? null,
+                previewApplicationId: b?.preview_application_id ?? null,
+                applicationId: y,
                 surface: G,
                 header: O,
                 chatOpen: !1,

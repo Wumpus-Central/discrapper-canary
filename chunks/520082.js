@@ -20,8 +20,8 @@ var i = n(477900),
     A = n(688810),
     C = n(206828),
     v = n(486610),
-    b = n(531913),
-    y = n(417270),
+    y = n(531913),
+    b = n(417270),
     R = n(770818),
     N = n(375708),
     P = n(429913),
@@ -130,9 +130,9 @@ let H = Object.assign(
                 cta: B,
                 subtle: H = !1,
                 embedded: K = !1,
-                allowEditing: Y,
-                disableInteraction: q,
-                index: V,
+                allowEditing: V,
+                disableInteraction: Y,
+                index: q,
                 trailingContent: Z,
                 interactiveLinks: J = !1,
             } = e,
@@ -159,9 +159,9 @@ let H = Object.assign(
                         hasAlreadyLinked: I,
                         canStartAuthorization: j,
                         startAuthorization: v,
-                        token: b,
+                        token: y,
                     } = (0, C.RD)(f),
-                    { analyticsLocations: y } = (0, A.Ay)(E.A.USER_PROFILE_APPLICATION_WIDGET),
+                    { analyticsLocations: b } = (0, A.Ay)(E.A.USER_PROFILE_APPLICATION_WIDGET),
                     R = r.useCallback(() => {
                         j &&
                             (t({
@@ -170,18 +170,18 @@ let H = Object.assign(
                                     : "PRESS_APPLICATION_WIDGET_UNLINKED_CONNECT",
                                 applicationId: l.applicationId,
                             }),
-                            v({ analyticsLocations: y }));
-                    }, [j, I, v, t, l.applicationId, y]),
+                            v({ analyticsLocations: b }));
+                    }, [j, I, v, t, l.applicationId, b]),
                     N = null == s && p && !I && j,
                     w =
                         null == s &&
                         p &&
                         I &&
                         j &&
-                        null != b &&
-                        !Array.from(c._.APPLICATION_IDENTITIES_SCOPES).some((e) => b.scopes.includes(e)) &&
-                        !b.scopes.includes(c.F.SDK_SOCIAL_LAYER) &&
-                        !b.scopes.includes(c.F.SDK_SOCIAL_LAYER_PRESENCE),
+                        null != y &&
+                        !Array.from(c._.APPLICATION_IDENTITIES_SCOPES).some((e) => y.scopes.includes(e)) &&
+                        !y.scopes.includes(c.F.SDK_SOCIAL_LAYER) &&
+                        !y.scopes.includes(c.F.SDK_SOCIAL_LAYER_PRESENCE),
                     _ = (0, i.jsxs)(i.Fragment, {
                         children: [
                             null != h
@@ -207,7 +207,7 @@ let H = Object.assign(
                     headerTitle: S,
                 };
             })(e),
-            Q = (0, b.A)(h.id, m.applicationId),
+            Q = (0, y.A)(h.id, m.applicationId),
             $ =
                 ((t = m.applicationId),
                 (n = X.isCurrentUser),
@@ -219,17 +219,17 @@ let H = Object.assign(
                         (0, W.RZ)(_.A.getGuildsArray(), "useIsOwnedVibegrationsApplication").length > 0,
                     [n, t],
                 )),
-                (f = (0, d.bG)([L.A], () => L.A.getProjectsFetchState()?.type ?? null)),
+                (f = (0, d.bG)([L.Ay], () => L.Ay.getProjectsFetchState()?.type ?? null)),
                 r.useEffect(() => {
                     if (("success" === f && G.succeed(), l)) {
                         if (null == f) return void (0, S.hF)();
                         "error" !== f || G.pending || G.fail(() => (0, S.hF)());
                     }
                 }, [l, f]),
-                (0, d.bG)([L.A], () => {
+                (0, d.bG)([L.Ay], () => {
                     if (!l || null == t) return !1;
-                    let e = L.A.findProjectByApplicationId(t);
-                    return !!(null != e && (0, L.P)(e)) || (L.A.getProjectsFetchState()?.type !== "success" && null);
+                    let e = L.Ay.findProjectByApplicationId(t);
+                    return !!(null != e && (0, L.PV)(e)) || (L.Ay.getProjectsFetchState()?.type !== "success" && null);
                 }, [l, t])),
             ee = (function (e, t) {
                 let { pending: n, refresh: r } = (0, R.A)(e);
@@ -237,12 +237,12 @@ let H = Object.assign(
                     ? (0, i.jsx)(p.Dr, {
                           id: "application-widget-refresh",
                           label: N.intl.string(N.t.wzzjk9),
-                          leadingAccessory: { type: "icon", icon: y.RetryIcon },
+                          leadingAccessory: { type: "icon", icon: b.RetryIcon },
                           disabled: n,
                           action: r,
                       })
                     : null;
-            })(m.applicationId, !0 === $ && !0 !== q),
+            })(m.applicationId, !0 === $ && !0 !== Y),
             et =
                 J ||
                 (function (e) {
@@ -258,9 +258,9 @@ let H = Object.assign(
             : (0, i.jsxs)(M.A, {
                   userId: h.id,
                   widget: m,
-                  allowEditing: Y,
-                  disableInteraction: q,
-                  index: V,
+                  allowEditing: V,
+                  disableInteraction: Y,
+                  index: q,
                   trailingContent: Z,
                   className: a()(U.Y5, { [U.aK]: H, [U.F9]: K }),
                   headerClassName: U.JE,

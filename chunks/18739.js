@@ -194,7 +194,7 @@ function D(e, t) {
                 r.content,
                 r.nonce,
                 r.attachments?.map((e) => e.id),
-                E.A.getProject(e)?.name,
+                E.Ay.getProject(e)?.name,
             );
         } catch (t) {
             console.error("[vibegrations] queued send failed", t), G(e, t instanceof Error ? t.message : "send failed");
@@ -726,7 +726,7 @@ function Z(e, t, n) {
             i.content,
             i.nonce,
             i.attachments?.map((e) => e.id),
-            E.A.getProject(e)?.name,
+            E.Ay.getProject(e)?.name,
         );
     } catch (t) {
         console.error("[vibegrations] send failed", t), G(e, t instanceof Error ? t.message : "send failed");
@@ -998,7 +998,7 @@ function eb(e) {
 }
 class eN extends s.Ay.Store {
     initialize() {
-        this.waitFor(l.default, S.Ay, E.A);
+        this.waitFor(l.default, S.Ay, E.Ay);
     }
     getConnState(e) {
         return k.get(e) ?? "connecting";
@@ -1042,7 +1042,7 @@ let eO = [],
         },
         VIBEGRATIONS_PROJECTS_FETCH_SUCCESS: function (e) {
             let t = !1;
-            for (let e of Array.from(I.keys())) null == E.A.getProject(e) && F(e) && (t = !0);
+            for (let e of Array.from(I.keys())) null == E.Ay.getProject(e) && F(e) && (t = !0);
             if (!t) return !1;
         },
         LOGOUT: function () {

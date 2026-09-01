@@ -21,8 +21,8 @@ var i = n(636537),
     r = n(382483),
     a = n(627363),
     o = n(625180),
-    _ = n(91242),
-    u = n(673724),
+    u = n(91242),
+    _ = n(673724),
     c = n(927899),
     E = n(972786),
     d = n(652215),
@@ -38,18 +38,18 @@ function p(t, e, n) {
 }
 function I(t) {
     if (null != t)
-        for (let e of _.A.getAllFrames())
+        for (let e of u.A.getAllFrames())
             (0, s.x1)(e) && e.applicationId === t && !e.data.proxyTicketRefreshing && o.A.refreshProxyTicket(e.id);
 }
 function T(t) {
-    let e = E.A.getProject(t);
+    let e = E.Ay.getProject(t);
     null != e && (I(e.application_id), I(e.preview_application_id ?? null));
 }
 let R = null,
     A = null;
 async function S(t) {
     let e = t ?? null;
-    if (E.A.getProjectsFetchState()?.type === "loading") {
+    if (E.Ay.getProjectsFetchState()?.type === "loading") {
         null != e && e !== R && (A = e);
         return;
     }
@@ -90,7 +90,7 @@ async function f(t, e) {
 async function h(t) {
     let { body: e } = await i.Bo.post({
         url: d.Rsh.VIBEGRATIONS_PROJECTS,
-        body: { flags: u.A2.PUBLIC, ...t },
+        body: { flags: _.A2.PUBLIC, ...t },
         rejectWithError: !1,
     });
     return l.h.dispatch({ type: "VIBEGRATIONS_PROJECT_CREATE_SUCCESS", project: e }), e.id;
@@ -129,8 +129,8 @@ function N(t, e) {
 async function B(t, e) {
     let { isPreview: n } = e,
         { bot_permissions_changed: i, integration_installed: l, project: o } = (await f(t)).body,
-        _ = n ? o.preview_application_id : o.application_id;
-    null != _ && (await (0, a.TA)(_), await (0, r.un)(_, { force: !0 }).catch(() => {}), (n && (!l || i)) || I(_)),
+        u = n ? o.preview_application_id : o.application_id;
+    null != u && (await (0, a.TA)(u), await (0, r.un)(u, { force: !0 }).catch(() => {}), (n && (!l || i)) || I(u)),
         (0, c.qs)(t, { isPreview: n });
 }
 function G(t, e) {

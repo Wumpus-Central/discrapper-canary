@@ -16,7 +16,7 @@ function m() {
     h ||
         ((h = !0),
         o.Ay.addChangeListener(_),
-        u.A.addChangeListener(_),
+        u.Ay.addChangeListener(_),
         l.A.addChangeListener(_),
         s.A.addChangeListener(_),
         (0, d.FQ)(_),
@@ -30,7 +30,7 @@ function _() {
     for (let t of new Set([...o.Ay.getActivityOrderedProjectIds(), ...(0, d.k)()])) {
         if (!o.Ay.isThinking(t) && !(0, d.RW)(t)) continue;
         let n = (function (e) {
-            let t = u.A.getProject(e)?.preview_application_id;
+            let t = u.Ay.getProject(e)?.preview_application_id;
             if (null == t) return null;
             let n = (0, f.VA)(t, f.sd);
             return (0, f.x1)(l.A.getFrame(n)) ? n : null;

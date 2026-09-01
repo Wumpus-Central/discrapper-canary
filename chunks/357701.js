@@ -4056,7 +4056,7 @@ var sU = n(152367),
     sV = n(295813);
 function sw(e) {
     let { guild: t, selected: n } = e,
-        l = (0, u.bG)([sD.A], () => sD.A.getSelectedProjectId(t.id), [t.id]),
+        l = (0, u.bG)([sD.Ay], () => sD.Ay.getSelectedProjectId(t.id), [t.id]),
         i = (0, u.bG)([sP.Ay], () => sP.Ay.getChannelId(), []),
         r = (0, u.bG)([P.A], () => P.A.getGuildId(), []);
     return (0, s.jsx)(ed.G, {

@@ -155,7 +155,7 @@ function G(e) {
                     }
             })(e),
             (function (e) {
-                let t = p.A.getProject(e);
+                let t = p.Ay.getProject(e);
                 if (
                     null == t ||
                     f.A.areTurnNotificationsDisabled() ||
@@ -166,7 +166,7 @@ function G(e) {
                     return;
                 let n = !u.A.isSoundDisabled("message1"),
                     l = d.A.getGuildId(),
-                    i = null != l && p.A.getSelectedProjectId(l) === e ? l : null,
+                    i = null != l && p.Ay.getSelectedProjectId(l) === e ? l : null,
                     A = null != i && a.Ay.getChannelId() === h.VV.VIBEGRATIONS && f.A.isWindowFocused(),
                     v = i ?? t.guild_id ?? t.preview_guild_id,
                     I = (function (e) {
@@ -220,7 +220,7 @@ function H(e) {
 }
 class q extends l.Ay.Store {
     initialize() {
-        this.waitFor(r.A, u.A, a.Ay, d.A, c.A, p.A);
+        this.waitFor(r.A, u.A, a.Ay, d.A, c.A, p.Ay);
     }
     getMessages(e) {
         return I.get(e) ?? O;
@@ -473,7 +473,7 @@ let j = new q(i.h, {
     VIBEGRATIONS_PROJECTS_FETCH_SUCCESS: function (e) {
         let t = new Set([...I.keys(), ...T.keys(), ...E.keys(), ...b.keys()]),
             n = !1;
-        for (let e of t) null == p.A.getProject(e) && H(e) && (n = !0);
+        for (let e of t) null == p.Ay.getProject(e) && H(e) && (n = !0);
         if (!n) return !1;
     },
 });

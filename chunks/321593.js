@@ -34,10 +34,10 @@ function g(t) {
 function p(t) {
     let { guildId: i } = t,
         e = (0, l.bG)(
-            [u.Ay, d.A],
+            [u.Ay, d.Ay],
             () =>
                 u.Ay.getActivityOrderedProjectIds().find(
-                    (t) => (0, a.X0)(d.A.getProject(t), i) && u.Ay.isThinking(t),
+                    (t) => (0, a.X0)(d.Ay.getProject(t), i) && u.Ay.isThinking(t),
                 ) ?? null,
             [i],
         );

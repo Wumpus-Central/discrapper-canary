@@ -18,9 +18,9 @@ var n = l(477900),
     v = l(948230),
     N = l(408278),
     b = l(663341),
-    A = l(980707),
-    I = l(477782),
-    y = l(834730),
+    y = l(980707),
+    A = l(477782),
+    I = l(834730),
     E = l(323384),
     S = l(289873),
     k = l(821609),
@@ -38,7 +38,7 @@ var n = l(477900),
 function V(e) {
     let { line: t } = e,
         { text: l, phase: i } = (0, w.Q)(t),
-        a = (0, n.jsx)(y.E, {
+        a = (0, n.jsx)(I.E, {
             tag: "span",
             variant: "text-sm/normal",
             color: "currentColor",
@@ -143,7 +143,7 @@ function ea(e) {
         { completed: l, total: i } = W(t);
     return 0 === i
         ? null
-        : (0, n.jsx)(y.E, {
+        : (0, n.jsx)(I.E, {
               tag: "span",
               variant: "text-xs/medium",
               color: "text-default",
@@ -197,7 +197,7 @@ function er(e) {
                     (0, n.jsxs)("div", {
                         className: en.fw,
                         children: [
-                            (0, n.jsx)(y.E, {
+                            (0, n.jsx)(I.E, {
                                 variant: "text-md/semibold",
                                 color: "text-strong",
                                 className: en.j1,
@@ -206,7 +206,7 @@ function er(e) {
                             (0, n.jsxs)("div", {
                                 className: en.lk,
                                 children: [
-                                    (0, n.jsx)(y.E, {
+                                    (0, n.jsx)(I.E, {
                                         variant: "text-sm/normal",
                                         color: "text-muted",
                                         className: en.L5,
@@ -255,12 +255,12 @@ function eo(e) {
         ? (0, n.jsxs)("div", {
               className: en.wk,
               children: [
-                  (0, n.jsx)(y.E, {
+                  (0, n.jsx)(I.E, {
                       variant: "text-sm/semibold",
                       color: "text-strong",
                       children: el.intl.string(et.default.qSQH7H),
                   }),
-                  (0, n.jsx)(y.E, {
+                  (0, n.jsx)(I.E, {
                       variant: "text-sm/normal",
                       color: "text-subtle",
                       children: el.intl.string(et.default.I92Gjf),
@@ -270,12 +270,12 @@ function eo(e) {
         : (0, n.jsxs)("div", {
               className: en.p$,
               children: [
-                  (0, n.jsx)(y.E, {
+                  (0, n.jsx)(I.E, {
                       variant: "text-sm/semibold",
                       color: "text-strong",
                       children: el.intl.string(et.default.qSQH7H),
                   }),
-                  (0, n.jsx)(y.E, {
+                  (0, n.jsx)(I.E, {
                       variant: "text-sm/normal",
                       color: "text-subtle",
                       children: el.intl.formatToPlainString(et.default["8NmOZ5"], { count: t.length }),
@@ -294,7 +294,7 @@ function eo(e) {
                                       },
                                       children: [
                                           (0, n.jsx)(T.Ay, { guild: e, iconSize: 32, className: en.$f }),
-                                          (0, n.jsx)(y.E, {
+                                          (0, n.jsx)(I.E, {
                                               variant: "text-sm/medium",
                                               color: "text-strong",
                                               className: en.qL,
@@ -315,7 +315,7 @@ function ec(e) {
         a = (function (e) {
             let [t, l] = i.useState(0),
                 { entries: n, nextExpiry: a } = (0, r.bG)(
-                    [L.A, m.Ay, H.A, q.Bt],
+                    [L.Ay, m.Ay, H.A, q.Bt],
                     () =>
                         (function (e) {
                             let t = Date.now(),
@@ -361,10 +361,10 @@ function ec(e) {
                                     })(e, d),
                                 });
                             }
-                            for (let e of L.A.getOwnedProjects()) r(e);
+                            for (let e of L.Ay.getOwnedProjects()) r(e);
                             for (let e of Object.values(H.A.getGuilds()))
-                                if (L.A.hasFetchedGuildProjects(e.id) && n(e.id))
-                                    for (let t of L.A.getSharedProjects(e.id)) r(t);
+                                if (L.Ay.hasFetchedGuildProjects(e.id) && n(e.id))
+                                    for (let t of L.Ay.getSharedProjects(e.id)) r(t);
                             return {
                                 entries: [...a].sort((e, t) => {
                                     let l = B[e.activity] - B[t.activity];
@@ -388,7 +388,7 @@ function ec(e) {
                 n
             );
         })("VibegrationsProjectList"),
-        s = (0, r.bG)([L.A], () => L.A.getProjectsFetchState()),
+        s = (0, r.bG)([L.Ay], () => L.Ay.getProjectsFetchState()),
         d = (0, r.bG)([R.A], () => R.A.getGuildId()),
         o = t.find((e) => e.id === d)?.id ?? t[0]?.id ?? null,
         c = a.filter((e) => "idle" !== e.activity),
@@ -399,7 +399,7 @@ function ec(e) {
                   className: en.wk,
                   children: [
                       (0, n.jsx)(S.y, {}),
-                      (0, n.jsx)(y.E, {
+                      (0, n.jsx)(I.E, {
                           variant: "text-sm/normal",
                           color: "text-subtle",
                           children: el.intl.string(et.default["/aUeR9"]),
@@ -410,7 +410,7 @@ function ec(e) {
               ? (0, n.jsxs)("div", {
                     className: en.wk,
                     children: [
-                        (0, n.jsx)(y.E, {
+                        (0, n.jsx)(I.E, {
                             variant: "text-sm/normal",
                             color: "text-subtle",
                             children: el.intl.string(et.default["IN/HRP"]),
@@ -482,24 +482,24 @@ function em(e) {
 function ex(e) {
     let { guilds: t, onNavigate: l, onClose: i } = e,
         a = el.intl.string(et.default.qbAREO);
-    return (0, n.jsx)(A.W, {
+    return (0, n.jsx)(y.W, {
         "data-menu-migrated": !0,
         navId: "vibegrations-create",
         "aria-label": a,
         onClose: i,
         onSelect: i,
-        children: (0, n.jsx)(I.rX, {
+        children: (0, n.jsx)(A.rX, {
             label: a,
             children:
                 0 === t.length
-                    ? (0, n.jsx)(I.Dr, {
+                    ? (0, n.jsx)(A.Dr, {
                           id: "vibegrations-create-empty",
                           disabled: !0,
                           label: el.intl.string(et.default["g/BU5S"]),
                       })
                     : t.map((e) =>
                           (0, n.jsx)(
-                              I.Dr,
+                              A.Dr,
                               {
                                   id: `vibegrations-create-${e.id}`,
                                   label: e.name,

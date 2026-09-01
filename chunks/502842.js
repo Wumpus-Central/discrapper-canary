@@ -1456,7 +1456,7 @@ if (
     n.e("859864").then(n.t.bind(n, 122123, 19));
 let e2 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 new eB.A().log(
-    `[BUILD INFO] Release Channel: ${e2}, Build Number: 605113, Version Hash: 9eded9a92a5be2ac01495948b1a8bb384b73d0a5`,
+    `[BUILD INFO] Release Channel: ${e2}, Build Number: 605220, Version Hash: 91498805c9b2d066b3f59c59c7b74a646cfa83fc`,
 ),
     D.A.setTags({ appContext: G.QCW }),
     eI.A.initBasic(),
@@ -4229,7 +4229,7 @@ let rP = (0, nX.Fe)({
                 n.e("407755"),
                 n.e("993720"),
                 n.e("654658"),
-                n.e("987310"),
+                n.e("235292"),
                 n.e("764596"),
                 n.e("169987"),
                 n.e("443184"),
@@ -21071,7 +21071,7 @@ let Nh = "isHideDevBanner",
                     className: ta()(NA.Wz, NA.mr),
                     children: [
                         (0, O.jsx)(NE, { className: NA.Kk }),
-                        tT.intl.format(tT.t.uyrfYF, { buildNumber: "605113" }),
+                        tT.intl.format(tT.t.uyrfYF, { buildNumber: "605220" }),
                         (0, O.jsx)(r, {}),
                     ],
                 })
@@ -29753,7 +29753,7 @@ function R8() {
 function R9() {
     return (
         RJ(
-            [nn.Ay, lq.Ay, rA.A, X.default, rf.A, RX.A],
+            [nn.Ay, lq.Ay, rA.A, X.default, rf.A, RX.Ay],
             () => {
                 let e = nn.Ay.getVoiceChannelId(),
                     t = nn.Ay.getChannelId(),
@@ -29766,7 +29766,7 @@ function R9() {
                     o = (0, lI.Vq)(n) ? lq.Ay.getSelfEmbeddedActivityForLocation(n) : null,
                     d = rA.A.getMainFrame(),
                     c = (0, rT.h)(d?.surface),
-                    u = null == c && RX.A.isVibegrationsProjectApplication(d?.applicationId),
+                    u = null == c && RX.Ay.isVibegrationsProjectApplication(d?.applicationId),
                     _ = (null != c && (0, r2.kg)(rf.A.getChannel(c), "ActivitySounds")) || u;
                 return {
                     connectedActivityLocation: n,
@@ -46522,7 +46522,7 @@ let x8 = (0, tV.Fe)({
             n.e("61849"),
             n.e("993720"),
             n.e("654658"),
-            n.e("987310"),
+            n.e("235292"),
             n.e("764596"),
             n.e("847214"),
             n.e("233049"),

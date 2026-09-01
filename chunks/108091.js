@@ -4609,8 +4609,8 @@ let at = ["all", "preview", "stable", "web"],
     });
 function an(e) {
     let { projectId: t } = e,
-        l = (0, k.bG)([nB.A], () => nB.A.getLogs(t), [t]),
-        n = (0, k.bG)([nB.A], () => nB.A.getHistoryState(t, "logs")),
+        l = (0, k.bG)([nB.Ay], () => nB.Ay.getLogs(t), [t]),
+        n = (0, k.bG)([nB.Ay], () => nB.Ay.getHistoryState(t, "logs")),
         [r, s] = i.useState("all"),
         [o, u] = i.useState(""),
         d = i.useMemo(() => {
@@ -5020,7 +5020,7 @@ function ah(e) {
                 last_turn_usage: nz.getLastTurnUsage(t),
                 last_compaction: nz.getLastCompaction(t),
                 last_compaction_decline: nz.getLastCompactionDecline(t),
-                logs: nB.A.getLogs(t),
+                logs: nB.Ay.getLogs(t),
             };
             (0, nL.C)(JSON.stringify(e, null, 2), () =>
                 (0, nI.P0)((0, nT.o)(P.intl.string(_.default.sDSDiO), nM.Ck.SUCCESS)),

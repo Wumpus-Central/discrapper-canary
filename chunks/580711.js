@@ -37,7 +37,7 @@ function c(t) {
                 null != l &&
                     r.default.track(u.HAw.VIBEGRATIONS_FEEDBACK, {
                         project_id: e,
-                        application_id: o.A.getProject(e)?.application_id ?? null,
+                        application_id: o.Ay.getProject(e)?.application_id ?? null,
                         rating: l,
                         reason: n?.value ?? null,
                         feedback: p,
