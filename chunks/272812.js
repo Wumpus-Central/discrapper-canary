@@ -11,6 +11,7 @@ let o = r.forwardRef(function (e, t) {
         style: l,
         ref: t,
         "data-selenium-video-tile": u,
+        "data-call-tile": "",
         children: n,
     });
 });
