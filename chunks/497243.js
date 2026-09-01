@@ -1,1 +1,1 @@
-e.exports = { n: "panel_ec5c8a", r: "body_ec5c8a" };
+e.exports = { nd: "panel_ec5c8a", rf: "body_ec5c8a", vR: "tabs_ec5c8a" };
