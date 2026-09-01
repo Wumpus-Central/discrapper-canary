@@ -7,7 +7,7 @@ n.d(t, {
     fu: () => K,
     cS: () => ef,
     R7: () => Q,
-    Ay: () => eO,
+    Ay: () => ev,
     aF: () => eA,
     Xk: () => e_,
     JI: () => ew,
@@ -146,9 +146,9 @@ let I = new Map(),
     k = new Map(),
     b = new Map(),
     N = new Set(),
-    R = new Map(),
-    v = new Map();
-function O(e, t) {
+    O = new Map(),
+    R = new Map();
+function v(e, t) {
     o.h.dispatch({ type: "VIBEGRATIONS_CHAT_CONN_STATE", projectId: e, connState: t });
 }
 let P = { location: "connection", code: d.xA.SEND_FAILED },
@@ -162,18 +162,18 @@ function G(e, t) {
     }),
         (0, d.Z0)(e, { ...n, message: t });
 }
-function H(e) {
+function B(e) {
     return `optimistic:${e}`;
 }
 let U = new Map();
-function B(e, t) {
+function H(e, t) {
     let { content: n, nonce: r, attachments: s } = t;
     U.set(r, l.default.getCurrentUser()?.id),
         o.h.dispatch({
             type: "VIBEGRATIONS_CHAT_MESSAGE_APPEND",
             projectId: e,
             content: n,
-            id: H(r),
+            id: B(r),
             userId: l.default.getCurrentUser()?.id,
             timestamp: new Date().toISOString(),
             attachments: s,
@@ -182,13 +182,13 @@ function B(e, t) {
 let $ = { steered: !0, queued: !0, restarting: !0, answered: !0 };
 function V(e, t, n) {
     let r = t.pendingSends;
-    for (let s of ((t.pendingSends = []), r)) B(e, s), G(e, n);
+    for (let s of ((t.pendingSends = []), r)) H(e, s), G(e, n);
 }
 function D(e, t) {
     if (!0 === b.get(e)) return;
     let n = t.pendingSends;
     for (let r of ((t.pendingSends = []), n)) {
-        B(e, r);
+        H(e, r);
         try {
             t.ws.sendUserMessage(
                 r.content,
@@ -305,7 +305,7 @@ async function W(e, t) {
                             (l = t),
                             en(l);
                         let i = n.pendingEvents;
-                        for (let r of ((n.pendingEvents = []), O(t, "open"), i)) e(t, n, r);
+                        for (let r of ((n.pendingEvents = []), v(t, "open"), i)) e(t, n, r);
                         let a = n.pendingModelSettings;
                         if (((n.pendingModelSettings = null), null != a))
                             try {
@@ -328,7 +328,7 @@ async function W(e, t) {
                                 projectId: t,
                                 content: r.content,
                                 id: r.id,
-                                ...(s && null != r.nonce ? { optimisticId: H(r.nonce) } : {}),
+                                ...(s && null != r.nonce ? { optimisticId: B(r.nonce) } : {}),
                                 userId: r.user_id,
                                 timestamp: r.ts,
                                 attachments: r.attachments,
@@ -408,6 +408,31 @@ async function W(e, t) {
                                     type: "VIBEGRATIONS_CHAT_COMPACTING_SET",
                                     projectId: t,
                                     compacting: "start" === r.phase,
+                                });
+                        else if ("debug_compaction_declined" === r.kind)
+                            null != r.projected &&
+                                null != r.threshold &&
+                                o.h.dispatch({
+                                    type: "VIBEGRATIONS_DEBUG_COMPACTION_DECLINED",
+                                    projectId: t,
+                                    promptCeiling: r.prompt_ceiling ?? 0,
+                                    threshold: r.threshold,
+                                    projected: r.projected,
+                                    headroom: r.headroom ?? r.threshold - r.projected,
+                                    retainedMessages: r.retained_messages ?? 0,
+                                    observedAt: new Date().toISOString(),
+                                });
+                        else if ("debug_compaction_report" === r.kind)
+                            null != r.tokens_before &&
+                                null != r.tokens_after &&
+                                o.h.dispatch({
+                                    type: "VIBEGRATIONS_DEBUG_COMPACTION_REPORT",
+                                    projectId: t,
+                                    tokensBefore: r.tokens_before,
+                                    tokensAfter: r.tokens_after,
+                                    retainedMessages: r.retained_messages ?? 0,
+                                    promptCeiling: r.prompt_ceiling ?? 0,
+                                    observedAt: new Date().toISOString(),
                                 });
                         else if ("todos" === r.kind) {
                             let e = r.items ?? [];
@@ -616,10 +641,10 @@ async function W(e, t) {
                 })(e, t, n),
             onClose: () => {
                 (A(t, "Connection closed before the publish result arrived"), g(e), t.disposed)
-                    ? O(e, "closed")
+                    ? v(e, "closed")
                     : t.helloSeen
-                      ? ((t.reconnectPending = !0), O(e, "connecting"), t.backoff.fail(() => J(e)))
-                      : (O(e, "closed"),
+                      ? ((t.reconnectPending = !0), v(e, "connecting"), t.backoff.fail(() => J(e)))
+                      : (v(e, "closed"),
                         V(e, t, "Connection closed before the message was sent"),
                         (t.pendingModelSettings = null));
             },
@@ -629,7 +654,7 @@ async function W(e, t) {
         });
     } catch (n) {
         if ((console.error("[vibegrations] ws open failed", n), t.disposed)) return;
-        O(e, "failed"),
+        v(e, "failed"),
             V(e, t, n instanceof Error ? n.message : "ws open failed"),
             (t.pendingModelSettings = null),
             A(t, "Connection failed before the publish result arrived"),
@@ -660,7 +685,7 @@ function J(e) {
         (n.helloSeen = !1),
         (n.disposed = !1),
         (n.reconnectPending = !1),
-        O(e, "connecting"),
+        v(e, "connecting"),
         W(e, n);
 }
 function F(e) {
@@ -677,7 +702,7 @@ function F(e) {
         et.delete(t),
         u.A.releasePreviewControl(e),
         g(e),
-        O(e, "closed"),
+        v(e, "closed"),
         !0)
     );
 }
@@ -694,7 +719,7 @@ function Z(e, t, n) {
     let i = { content: r, nonce: (0, a.m)(), attachments: s },
         o = I.get(e);
     if (null != o && ("connecting" === k.get(e) || o.reconnectPending)) return void o.pendingSends.push(i);
-    B(e, i);
+    H(e, i);
     try {
         if (null == o) throw Error("Not connected");
         o.ws.sendUserMessage(
@@ -982,17 +1007,17 @@ class eN extends s.Ay.Store {
         return b.get(e) ?? !1;
     }
     getModelSettings(e) {
-        return R.get(e) ?? null;
+        return O.get(e) ?? null;
     }
     getSettings(e) {
-        return v.get(e) ?? null;
+        return R.get(e) ?? null;
     }
     getDeclaredConnections(e) {
-        return v.get(e)?.connections ?? eR;
+        return R.get(e)?.connections ?? eO;
     }
 }
-let eR = [],
-    ev = new eN(o.h, {
+let eO = [],
+    eR = new eN(o.h, {
         VIBEGRATIONS_CHAT_CONN_STATE: function (e) {
             let { projectId: t, connState: n } = e;
             if (k.get(t) === n) return !1;
@@ -1005,11 +1030,11 @@ let eR = [],
         },
         VIBEGRATIONS_MODEL_SETTINGS_SET: function (e) {
             let { projectId: t, settings: n, choices: r } = e;
-            R.set(t, { settings: n, choices: r });
+            O.set(t, { settings: n, choices: r });
         },
         VIBEGRATIONS_SETTINGS_SET: function (e) {
             let { projectId: t, settings: n } = e;
-            v.set(t, n);
+            R.set(t, n);
         },
         VIBEGRATIONS_PROJECT_DELETE_SUCCESS: function (e) {
             let { projectId: t } = e;
@@ -1026,4 +1051,4 @@ let eR = [],
             b.clear(), U.clear(), es.clear();
         },
     }),
-    eO = 221552 == n.j ? ev : null;
+    ev = 221552 == n.j ? eR : null;
