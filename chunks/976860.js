@@ -1,24 +1,24 @@
 "use strict";
 let i, r, a;
 n.d(t, {
-    EL: () => T,
-    JK: () => g,
-    MX: () => R,
-    PR: () => S,
-    SB: () => O,
+    EL: () => m,
+    JK: () => S,
+    MX: () => L,
+    PR: () => N,
+    SB: () => R,
     TX: () => h,
-    UC: () => N,
-    aX: () => L,
-    bG: () => m,
-    m: () => C,
-    pX: () => f,
-    sY: () => y,
-    uh: () => p,
+    UC: () => C,
+    aX: () => y,
+    bG: () => g,
+    m: () => O,
+    pX: () => p,
+    sY: () => D,
+    uh: () => T,
 }),
-    n(321073),
     n(323874),
     n(14289),
-    n(35956);
+    n(35956),
+    n(321073);
 var s = n(830845),
     l = n(626584),
     o = n(625494),
@@ -52,41 +52,48 @@ function I(e, t) {
     );
 }
 function f(e, t) {
+    return null == e || "" === e || e === t ? "" : e.startsWith(t) ? e : t + e;
+}
+function p(e, t) {
+    let n;
     if (I(e, "assign")) return;
+    let s = new URL(e, `https:${window.GLOBAL_ENV.WEBAPP_ENDPOINT}`),
+        l = { pathname: s.pathname, search: s.search, hash: s.hash, ...t };
     u.log(`transitionTo - Transitioning to ${e}`);
-    let n = t?.source,
-        s = t?.sourceLocationStack;
-    if (null == t) i.push(e);
-    else {
-        let n = new URL(e, `https:${window.GLOBAL_ENV.WEBAPP_ENDPOINT}`);
-        i.push({ pathname: n.pathname, search: n.search, hash: n.hash, ...t });
-    }
-    (r = n), (a = s);
+    let o = t?.source,
+        d = t?.sourceLocationStack;
+    (n = i.location).pathname === l.pathname && n.search === f(l.search, "?") && n.hash === f(l.hash, "#")
+        ? i.replace(l)
+        : null == t
+          ? i.push(e)
+          : i.push(l),
+        (r = o),
+        (a = d);
 }
-function p(e, t, n, i) {
+function T(e, t, n, i) {
     u.log(`transitionToGuild - Transitioning to ${JSON.stringify({ guildId: e, channelId: t, messageId: n })}`),
-        f(c.BVt.CHANNEL(e, t, n), i);
+        p(c.BVt.CHANNEL(e, t, n), i);
 }
-function T() {
+function m() {
     return null != r && d.n.has(r);
 }
-function m(e, t, n) {
+function g(e, t, n) {
     I(e, "replace") ||
         (u.log(`Replacing route with ${e}`), "string" == typeof e ? i.replace(e, t) : i.replace(e), (r = n));
 }
-function g() {
+function S() {
     return i;
 }
-function S() {
+function N() {
     return r;
 }
-function N() {
+function C() {
     return a;
 }
-function C(e) {
+function O(e) {
     return null == e && (e = i.location.pathname ?? ""), !e.startsWith(c.BVt.HANDOFF);
 }
-function O(e) {
+function R(e) {
     if ((null == e && (e = i.location.pathname ?? ""), e.startsWith(c.BVt.LOGIN))) return c.S3d.LOGIN;
     if (e.startsWith(c.BVt.REGISTER)) return c.S3d.REGISTER;
     if (e.startsWith(c.BVt.INVITE(""))) return c.S3d.INVITE;
@@ -104,12 +111,12 @@ function O(e) {
     else if (e.startsWith(c.BVt.ACCOUNT_REVERT(""))) return c.S3d.ACCOUNT_REVERT;
     return e;
 }
-function R() {
+function L() {
     return E;
 }
-function L() {
+function y() {
     h() && ((r = null), i.goBack());
 }
-function y() {
+function D() {
     h() && ((r = null), i.goForward());
 }
