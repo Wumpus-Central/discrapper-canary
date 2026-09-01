@@ -216,7 +216,7 @@
 }
 
 .media__41ea0 {
-    border-radius: var(--radius-md);
+    border-radius: var(--radius-sm);
     max-width: 100%;
     -o-object-fit: contain;
     object-fit: contain
@@ -596,4 +596,4 @@
     border-inline-start: 1px solid var(--border-subtle)
 }
 
-/*# sourceMappingURL=911680.7827d0c255da9b3e.css.map*/
+/*# sourceMappingURL=911680.cea30151b4319535.css.map*/
