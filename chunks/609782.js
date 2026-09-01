@@ -1,5 +1,9 @@
-i.d(t, { ie: () => o, w0: () => n });
-var r = i(70283);
+"use strict";
+n.d(t, { ie: () => _, w0: () => o, I: () => c });
+var i = n(70283),
+    r = n(305003),
+    a = n(854232),
+    s = n(518477);
 let l = {
     staff: 22,
     staff_hidden: 22,
@@ -37,13 +41,20 @@ let l = {
     april_fools_2026: 15,
     orb_profile_badge: 16,
 };
-function n(e) {
+function o(e) {
     let t = l[e];
     if (null != t) return t;
-    let i = r.$[e.toUpperCase()];
-    return "number" == typeof i ? i : void 0;
+    let n = i.$[e.toUpperCase()];
+    return "number" == typeof n ? n : void 0;
+}
+let d = new Map([
+    [i.$.PREMIUM_TENURE, a.K],
+    [i.$.ORB_PROFILE, r.A.ORB_PROFILE_BADGE],
+]);
+function c(e) {
+    return d.get(e) ?? (0, s.BM)(e);
 }
 let u = new Set(Object.values(l));
-function o(e) {
+function _(e) {
     return u.has(e);
 }

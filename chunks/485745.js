@@ -1,11 +1,15 @@
 "use strict";
-n.d(t, { A: () => s, b: () => l });
+n.d(t, { A: () => l, b: () => o });
 var i = n(17928),
-    r = n(836602),
-    a = n(61881);
-function s(e) {
-    return (0, i.bG)([a.A, r.A], () => a.A.hasUnsavedChanges() || (!e && r.A.hasUnsavedChanges()));
-}
+    r = n(234e3),
+    a = n(836602),
+    s = n(61881);
 function l(e) {
-    return a.A.hasUnsavedChanges() || (!e && r.A.hasUnsavedChanges());
+    return (0, i.bG)(
+        [s.A, a.A],
+        () => s.A.hasUnsavedChanges() || (0, r.gz)(a.A.getPendingChanges()) || (!e && a.A.hasUnsavedChanges()),
+    );
+}
+function o(e) {
+    return s.A.hasUnsavedChanges() || (0, r.gz)(a.A.getPendingChanges()) || (!e && a.A.hasUnsavedChanges());
 }
