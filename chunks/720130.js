@@ -1,0 +1,13 @@
+var n =
+    (this && this.__importDefault) ||
+    function (e) {
+        return e && e.__esModule ? e : { default: e };
+    };
+Object.defineProperty(t, "__esModule", { value: !0 });
+let a = n(r(67326));
+class i extends a.default {
+    patternBetween() {
+        return /^\s*(\u304b\u3089|\uff0d|\u30fc|-|\uff5e|~)\s*$/i;
+    }
+}
+t.default = i;

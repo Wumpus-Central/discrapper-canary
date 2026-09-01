@@ -3697,6 +3697,7 @@ var ry =
         (eP.CHOICE_LOADING = "CHOICE_LOADING"),
         (eP.LABEL = "LABEL"),
         (eP.GAME_MENTION = "GAME_MENTION"),
+        (eP.TIMESTAMP_MENTION = "TIMESTAMP_MENTION"),
         eP);
 let rv = Object.freeze({
     FONT_SIZE_DEFAULT: 16,

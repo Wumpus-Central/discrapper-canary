@@ -2,7 +2,7 @@ n.r(t), n.d(t, { default: () => b, messagesLoader: () => d });
 let { createLoader: h } = n(173875),
     d = h(
         {
-            bg: () => n.e("519253").then(n.t.bind(n, 837511, 19)),
+            bg: () => n.e("519253").then(n.t.bind(n, 59892, 19)),
             cs: () => n.e("740486").then(n.t.bind(n, 756133, 19)),
             da: () => n.e("185057").then(n.t.bind(n, 449208, 19)),
             de: () => n.e("51045").then(n.t.bind(n, 509380, 19)),
