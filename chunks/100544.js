@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { CT: () => o, W6: () => l, WM: () => u, XY: () => d, g6: () => s, j_: () => c });
+n.d(t, { CT: () => o, W6: () => l, WM: () => u, XY: () => d, g6: () => s, j_: () => c, ug: () => _ });
 var i,
     r,
     a,
@@ -74,3 +74,4 @@ var u =
     a);
 Object.freeze({ START: { x: 0, y: 0 }, END: { x: 1, y: 0 } }),
     Object.freeze({ START: { x: 0, y: 0 }, END: { x: 0, y: 1 } });
+let _ = /(\t|\s)/;
