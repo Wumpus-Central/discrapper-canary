@@ -44,7 +44,7 @@
 }
 
 .orbWalletNitroUpsellCard__89f5f {
-    background: radial-gradient(80% 60% at 50% 100%, color-mix(in srgb, var(--expressive-gradient-nitro-pink-start) 55%, transparent) 0, color-mix(in srgb, var(--expressive-gradient-nitro-pink-start) 0%, transparent) 70%, transparent 100%), var(--background-mod-muted)
+    background: radial-gradient(125% 125% at 10% 120%, color-mix(in srgb, var(--expressive-gradient-nitro-pink-start) 65%, transparent) 0, color-mix(in srgb, var(--expressive-gradient-nitro-pink-start) 26%, transparent) 45%, color-mix(in srgb, var(--expressive-gradient-nitro-pink-start) 8%, transparent) 78%, transparent 100%), radial-gradient(115% 140% at 82% 115%, color-mix(in srgb, var(--expressive-gradient-nitro-pink-end) 60%, transparent) 0, color-mix(in srgb, var(--expressive-gradient-nitro-pink-end) 24%, transparent) 45%, color-mix(in srgb, var(--expressive-gradient-nitro-pink-end) 7%, transparent) 80%, transparent 100%), var(--background-mod-muted)
 }
 
 .placeholderChallengesCard__583ca {
@@ -86,4 +86,4 @@
     visibility: visible
 }
 
-/*# sourceMappingURL=3aacc97e10341408.css.map*/
+/*# sourceMappingURL=5bfb2c14f94d8633.css.map*/
