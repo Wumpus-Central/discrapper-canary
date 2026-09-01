@@ -1,10 +1,10 @@
-a.r(t), a.d(t, { playgroundConfig: () => R, guildSpaceCollection: () => P });
+a.r(t), a.d(t, { playgroundConfig: () => I, guildSpaceCollection: () => k });
 var l = a(477900),
     r = a(582128),
     s = a(503698),
-    o = a.n(s),
+    i = a.n(s),
     n = a(834730),
-    i = a(872188),
+    o = a(872188),
     d = a(450284);
 let c = {
     title: "Server Hub Publishing",
@@ -16,9 +16,9 @@ let c = {
             component: function (e) {
                 let { width: t, outcome: a } = e,
                     [s, c] = r.useState(!1),
-                    [u, h] = r.useState(a);
-                u !== a && (h(a), c(!1));
-                let p = r.useCallback(() => {
+                    [u, p] = r.useState(a);
+                u !== a && (p(a), c(!1));
+                let h = r.useCallback(() => {
                     switch (a) {
                         case "success":
                             return c(!0), Promise.resolve();
@@ -29,7 +29,7 @@ let c = {
                     }
                 }, [a]);
                 return (0, l.jsx)("div", {
-                    className: o()(d.frame, d[t]),
+                    className: i()(d.frame, d[t]),
                     children: s
                         ? (0, l.jsx)(n.E, {
                               variant: "text-sm/normal",
@@ -37,7 +37,7 @@ let c = {
                               children:
                                   "Published \u2014 the real notice unmounts here, and the tab appears for members.",
                           })
-                        : (0, l.jsx)(i.A, { onPublish: p }),
+                        : (0, l.jsx)(o.A, { onPublish: h }),
                 });
             },
             controls: {
@@ -65,10 +65,11 @@ let c = {
     ],
 };
 var u = a(228366),
-    h = a(593673),
-    p = a(529609);
-let m = 0;
-function g(e, t, a, l) {
+    p = a(593673),
+    h = a(529609),
+    m = a(845021);
+let g = 0;
+function v(e, t, a, l) {
     let r = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {};
     return {
         id: e,
@@ -76,36 +77,46 @@ function g(e, t, a, l) {
         default_title: null,
         position: { column: a, order: l },
         config: { type: t, ...r },
-        requires_hydration: t === h.a.LEADERBOARD,
+        requires_hydration: t === p.a.LEADERBOARD,
         locked: !1,
     };
 }
 var b = a(81253);
-let v = [
-        g("left-2", h.a.LEADERBOARD, 0, 1, { heading: "Top chatters this week" }),
-        g("right-1", h.a.LEADERBOARD, 1, 0, { heading: "Top boosters" }),
-        g("left-1", h.a.IMAGE_TEXT, 0, 0, {
+let _ = [
+        v("left-2", p.a.LEADERBOARD, 0, 1, { heading: "Top chatters this week" }),
+        v("right-1", p.a.LEADERBOARD, 1, 0, { heading: "Top boosters" }),
+        v("left-1", p.a.IMAGE_TEXT, 0, 0, {
             title: "Welcome to the server",
             body: "Drop in, say hi, and check the pinned posts for the rules and event schedule.",
             imageUrl: "https://placehold.co/640x180",
             imageAlt: "Server banner placeholder",
         }),
-        g("right-2", h.a.IMAGE_TEXT, 1, 1, { title: "Events", body: "Game night every Friday." }),
+        v("right-2", p.a.IMAGE_TEXT, 1, 1, { title: "Events", body: "Game night every Friday." }),
     ],
-    f = v
-        .filter((e) => {
-            let { requires_hydration: t } = e;
-            return t;
-        })
-        .map((e) => {
-            let { id: t } = e;
-            return t;
-        }),
-    y = {
+    y = _.filter((e) => {
+        let { requires_hydration: t } = e;
+        return t;
+    }).map((e) => {
+        let { id: t } = e;
+        return t;
+    }),
+    f = {
+        stat: m.R.GAMING_LEADERBOARD_STAT_HOURS_PLAYED,
+        week_start_ts: 1756512e3,
+        next_stat: m.R.GAMING_LEADERBOARD_STAT_DAYS_PLAYED,
+        previous_winner: "2",
+        streak_count: 3,
         entries: [
-            { id: "1", name: "wumpus", score: 4821 },
-            { id: "2", name: "clyde", score: 3960 },
-            { id: "3", name: "nelly", score: 2715 },
+            { user_id: "1", name: "wumpus", value: 4821, rank: 1, application_ids: ["1"], time_played_seconds: 8400 },
+            {
+                user_id: "2",
+                name: "clyde",
+                value: 3960,
+                rank: 2,
+                application_ids: ["1", "2"],
+                time_played_seconds: 6200,
+            },
+            { user_id: "3", name: "nelly", value: 2715, rank: 3, application_ids: ["2"], time_played_seconds: 4100 },
         ],
     },
     w = {
@@ -121,13 +132,13 @@ let v = [
                         n =
                             ((t = `guild-space-story-${s}`),
                             r.useEffect(() => {
-                                let e = m++;
+                                let e = g++;
                                 if (
                                     (u.h.dispatch({
                                         type: "GUILD_SPACE_HYDRATE_START",
                                         guildId: t,
                                         requestId: e,
-                                        widgetIds: f,
+                                        widgetIds: y,
                                     }),
                                     "loading" !== s)
                                 ) {
@@ -142,17 +153,17 @@ let v = [
                                         type: "GUILD_SPACE_HYDRATE_SUCCESS",
                                         guildId: t,
                                         requestId: e,
-                                        widgets: f.map((e) => ({
+                                        widgets: y.map((e) => ({
                                             id: e,
-                                            data: "success" === s ? { type: h.a.LEADERBOARD, ...y } : null,
+                                            data: "success" === s ? { type: p.a.LEADERBOARD, ...f } : null,
                                         })),
                                     });
                                 }
                             }, [t, s]),
                             t);
                     return (0, l.jsx)("div", {
-                        className: o()(b.frame, b[a]),
-                        children: (0, l.jsx)(p.A, { guildId: n, widgets: v }),
+                        className: i()(b.frame, b[a]),
+                        children: (0, l.jsx)(h.A, { guildId: n, widgets: _ }),
                     });
                 },
                 controls: {
@@ -184,19 +195,20 @@ let v = [
         ],
     };
 var E = a(539888),
-    x = a(546184);
-function S(e) {
+    A = a(546184);
+function x(e) {
     let { label: t, className: a, children: r } = e;
     return (0, l.jsxs)("div", {
-        className: `${x.Gt} ${a}`,
+        className: `${A.Gt} ${a}`,
         children: [(0, l.jsx)(n.E, { variant: "text-xs/medium", color: "text-muted", children: t }), r],
     });
 }
-function A(e) {
-    let { mode: t, hydration: a, type: s, initialConfig: o, successData: n } = e,
-        [i, d] = r.useState(o),
+function S(e) {
+    let { mode: t, hydration: a, type: s, initialConfig: i, successData: n } = e,
+        [o, d] = r.useState(i),
         c = (0, l.jsx)(E.P, {
-            widget: { id: "1", type: s, config: i },
+            guildId: "widget-slot-story-guild",
+            widget: { id: "1", type: s, config: o },
             guildSpaceMode: t,
             hydration: (function (e, t) {
                 switch (e) {
@@ -212,27 +224,46 @@ function A(e) {
             onCommitConfig: d,
         });
     return (0, l.jsxs)("div", {
-        className: x.Zp,
+        className: A.Zp,
         children: [
-            (0, l.jsx)(S, { label: "Narrow column (380px)", className: x.sc, children: c }),
-            (0, l.jsx)(S, { label: "Wide column (685px)", className: x.U, children: c }),
+            (0, l.jsx)(x, { label: "Narrow column (380px)", className: A.sc, children: c }),
+            (0, l.jsx)(x, { label: "Wide column (685px)", className: A.U, children: c }),
         ],
     });
 }
-let T = {
+let D = {
         text: "Drop in, say hi, and check the pinned posts for the rules and event schedule.",
         image_hash: "some_hash",
     },
-    _ = { heading: "Top chatters this week" },
-    D = {
+    R = {},
+    T = {
+        stat: m.R.GAMING_LEADERBOARD_STAT_HOURS_PLAYED,
+        week_start_ts: 1756512e3,
+        next_stat: m.R.GAMING_LEADERBOARD_STAT_DAYS_PLAYED,
+        previous_winner: "2",
+        streak_count: 3,
         entries: [
-            { id: "1", name: "wumpus", score: 4821 },
-            { id: "2", name: "clyde", score: 3960 },
-            { id: "3", name: "nelly", score: 2715 },
-            { id: "4", name: "a_very_long_username_that_truncates", score: 1204 },
+            { user_id: "1", name: "wumpus", value: 4821, rank: 1, application_ids: ["1"], time_played_seconds: 8400 },
+            {
+                user_id: "2",
+                name: "clyde",
+                value: 3960,
+                rank: 2,
+                application_ids: ["1", "2"],
+                time_played_seconds: 6200,
+            },
+            { user_id: "3", name: "nelly", value: 2715, rank: 3, application_ids: ["2"], time_played_seconds: 4100 },
+            {
+                user_id: "4",
+                name: "a_very_long_username_that_truncates",
+                value: 1204,
+                rank: 4,
+                application_ids: ["2"],
+                time_played_seconds: 2900,
+            },
         ],
     },
-    P = {
+    k = {
         id: "guild-space",
         name: "Server Hub",
         groups: [
@@ -246,11 +277,11 @@ let T = {
                         id: "guild-space-widget-slot-image-text",
                         docs: "ImageText reference widget (no hydration) across view/edit and each mock hydration state. In edit mode the pencil opens the framework-owned Edit modal; Save commits config through onCommitConfig, Cancel/close discards.",
                         component: function (e) {
-                            return (0, l.jsx)(A, {
+                            return (0, l.jsx)(S, {
                                 ...e,
-                                type: h.a.IMAGE_TEXT,
+                                type: p.a.IMAGE_TEXT,
                                 title: "Image + Text",
-                                initialConfig: T,
+                                initialConfig: D,
                                 successData: void 0,
                             });
                         },
@@ -283,12 +314,12 @@ let T = {
                         id: "guild-space-widget-slot-leaderboard",
                         docs: "Leaderboard reference widget (hydrated) rendering content from the mock data prop on success, and the widget-owned loading/error states otherwise. The pencil opens the framework-owned Edit modal for its config.",
                         component: function (e) {
-                            return (0, l.jsx)(A, {
+                            return (0, l.jsx)(S, {
                                 ...e,
-                                type: h.a.LEADERBOARD,
+                                type: p.a.LEADERBOARD,
                                 title: "Leaderboard",
-                                initialConfig: _,
-                                successData: D,
+                                initialConfig: R,
+                                successData: T,
                             });
                         },
                         controls: {
@@ -320,4 +351,4 @@ let T = {
         ],
         tags: ["Server Hub", "Widgets", "GuildSpace", "Publish"],
     },
-    R = { playgroundBaseUrl: "guild-space", collections: [P] };
+    I = { playgroundBaseUrl: "guild-space", collections: [k] };
