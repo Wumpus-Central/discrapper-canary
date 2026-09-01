@@ -40,7 +40,7 @@ var C = n(12351),
     U = n(234320),
     w = n(625494),
     G = n(975571),
-    x = n(820785),
+    x = n(484734),
     k = n(615300),
     F = n(451988),
     V = n(844222),
@@ -857,6 +857,7 @@ class et extends r.PureComponent {
                     case B.rbe.GUILD_ANNOUNCEMENT:
                     case B.rbe.GUILD_FORUM:
                     case B.rbe.GUILD_MEDIA:
+                    case B.rbe.GUILD_APP:
                         return (0, T.L3)(e, async () => {
                             let { default: e } = await Promise.all([
                                 n.e("926132"),

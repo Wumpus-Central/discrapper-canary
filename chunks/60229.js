@@ -16,4 +16,5 @@ e.exports = {
     S3: "roleName__0ab2c",
     ON: "searchBar__0ab2c",
     O6: "removeButtonContainer__0ab2c",
+    B2: "appChannelPermissionsNotice__0ab2c",
 };

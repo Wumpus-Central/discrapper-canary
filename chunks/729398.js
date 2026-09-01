@@ -463,10 +463,11 @@ function eL(e) {
                                       n.e("993199"),
                                       n.e("819193"),
                                       n.e("507775"),
+                                      n.e("662068"),
                                       n.e("358608"),
-                                      n.e("528034"),
+                                      n.e("221500"),
                                       n.e("637038"),
-                                  ]).then(n.bind(n, 333369));
+                                  ]).then(n.bind(n, 684343));
                                   return (n) =>
                                       (0, i.jsx)(e, { ...n, channelType: eu.rbe.GUILD_STAGE_VOICE, guildId: t });
                               });
@@ -816,9 +817,9 @@ var e0 = n(789645),
     e7 = n(842241),
     e9 = n(279208),
     e5 = n(747007),
-    e3 = n(710358),
-    e4 = n(958590),
-    e8 = n(174459),
+    e4 = n(710358),
+    e8 = n(958590),
+    e3 = n(174459),
     e2 = n(957565),
     e6 = n(673707);
 let { INVITE_OPTIONS_7_DAYS: te, INVITE_OPTIONS_UNLIMITED: tt } = I.Ay;
@@ -828,9 +829,9 @@ function tn(e) {
         r = (0, a.bG)([C.Ay], () => (null != l ? C.Ay.getDefaultChannel(l)?.id : null), [l]),
         s = (0, a.bG)([b.A], () => b.A.getGuild(l), [l]),
         { channel_id: d, id: u } = n ?? {},
-        c = (0, a.bG)([e4.A], () => {
+        c = (0, a.bG)([e8.A], () => {
             let e = d ?? r;
-            return null == e ? null : e4.A.getInvite(e);
+            return null == e ? null : e8.A.getInvite(e);
         }, [d, r]);
     if (null == n) return t(), null;
     let o = s?.vanityURLCode ?? c?.code,
@@ -848,7 +849,7 @@ function tn(e) {
                 "aria-label": ec.intl.string(ec.t.cpT0Cq),
                 children: (0, i.jsx)(e0.P, { size: "md", color: "currentColor" }),
             }),
-            (0, i.jsx)(e3.A, {
+            (0, i.jsx)(e4.A, {
                 children: (0, i.jsx)("div", {
                     className: e6.zc,
                     children: (0, i.jsx)(e1.CalendarIcon, {
@@ -882,7 +883,7 @@ function tn(e) {
                             if (null == n || h) return;
                             (0, e2.C)(e);
                             let t = (0, P.dy)(n.entity_type);
-                            e8.default.track(eu.HAw.COPY_INSTANT_INVITE, {
+                            e3.default.track(eu.HAw.COPY_INSTANT_INVITE, {
                                 server: n.guild_id,
                                 channel: d,
                                 channel_type: t,

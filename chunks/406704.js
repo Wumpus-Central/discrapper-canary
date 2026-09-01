@@ -62,7 +62,7 @@ function g(e, t) {
 }
 function S(e) {
     let t = (0, s.bG)([h.A], () => h.A.can(a.kg(p.xBc.CREATE_PRIVATE_THREADS), e), [e]);
-    return e.type === p.rbe.GUILD_TEXT && C(t, e);
+    return (e.type === p.rbe.GUILD_TEXT || e.type === p.rbe.GUILD_APP) && C(t, e);
 }
 function N(e) {
     let t = m(e),

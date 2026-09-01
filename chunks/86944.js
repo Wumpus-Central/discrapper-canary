@@ -26,7 +26,7 @@ function R(e, l, t, s) {
             let r = c.rT(e, g, l ?? null, t, (e) => T(s, e));
             return 0 === r.length && "" === s.trim() && 1 === g.length && (r = c.Vl()), r;
         }, [g, s, e, l, t, R]),
-        y = r.useMemo(() => (null == e ? [] : c.Lq(M, l ?? null, e, t, (e) => T(s, e))), [M, s, e, l, t]);
+        y = r.useMemo(() => (null == e ? [] : c.Lq(M, l ?? null, e, t, { filter: (e) => T(s, e) })), [M, s, e, l, t]);
     return (
         r.useEffect(() => {
             null != e && o.A.requestMembers(e.id, d(s), p.$N);

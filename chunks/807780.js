@@ -528,9 +528,10 @@ function ey(e) {
                 let { default: e } = await Promise.all([
                     t.e("778799"),
                     t.e("507775"),
+                    t.e("662068"),
                     t.e("358608"),
-                    t.e("528034"),
-                ]).then(t.bind(t, 333369));
+                    t.e("221500"),
+                ]).then(t.bind(t, 684343));
                 return (t) => (0, l.jsx)(e, { ...t, channelType: null, guildId: n });
             });
         }, [n]),
@@ -599,8 +600,8 @@ var ew = t(202776),
     e5 = t(591552),
     e6 = t(961973),
     e9 = t(435558),
-    e7 = t.n(e9),
-    e2 = t(665260),
+    e2 = t.n(e9),
+    e7 = t(665260),
     e8 = t(355097);
 function e3(e) {
     K.h.dispatch({ type: "CLEAR_PENDING_CHANNEL_AND_ROLE_UPDATES", guildId: e });
@@ -622,8 +623,8 @@ function nn(e) {
                                 s = [];
                             if (e.singleSelect && t) {
                                 let t = e.options.find((e) => l.includes(e.id));
-                                (i = e7().difference(n.roleIds ?? [], t?.roleIds ?? [])),
-                                    (s = e7().difference(t?.roleIds ?? [], n.roleIds ?? []));
+                                (i = e2().difference(n.roleIds ?? [], t?.roleIds ?? [])),
+                                    (s = e2().difference(t?.roleIds ?? [], n.roleIds ?? []));
                             } else if (t) (i = n.roleIds ?? []), (s = []);
                             else {
                                 let t = e.options.filter((e) => l.includes(e.id)),
@@ -636,7 +637,7 @@ function nn(e) {
                                         .map((e) => e.roleIds)
                                         .flat()
                                         .filter(eQ.Vq);
-                                (i = []), (s = e7().difference(r, d));
+                                (i = []), (s = e2().difference(r, d));
                             }
                             return { addedRoleIds: i, removedRoleIds: s };
                         })(n, t, l, i),
@@ -646,8 +647,8 @@ function nn(e) {
                                 r = [];
                             if (t.singleSelect && i) {
                                 let e = t.options.find((e) => s.includes(e.id));
-                                (a = e7().difference(l.channelIds ?? [], e?.channelIds ?? [])),
-                                    (r = e7().difference(e?.channelIds ?? [], l.channelIds ?? []));
+                                (a = e2().difference(l.channelIds ?? [], e?.channelIds ?? [])),
+                                    (r = e2().difference(e?.channelIds ?? [], l.channelIds ?? []));
                             } else if (i) (a = l.channelIds ?? []), (r = []);
                             else {
                                 let e = t.options.filter((e) => s.includes(e.id)),
@@ -660,7 +661,7 @@ function nn(e) {
                                         .map((e) => e.channelIds)
                                         .flat()
                                         .filter(eQ.Vq);
-                                (a = []), (r = e7().difference(i, d));
+                                (a = []), (r = e2().difference(i, d));
                             }
                             return (
                                 (0, ee.cE)(n) && a.push(...e5.A.getDefaultChannelIds(n)),
@@ -669,11 +670,11 @@ function nn(e) {
                         })({ guildId: e, prompt: n, option: t, selected: l, responses: i }),
                         c = r.reduce((n, t) => {
                             let l = Q.Ay.getChannelIdFlags(e, t);
-                            return (n[t] = { flags: (0, e2.lA)(l, e8.vv.OPT_IN_ENABLED, !0) }), n;
+                            return (n[t] = { flags: (0, e7.lA)(l, e8.vv.OPT_IN_ENABLED, !0) }), n;
                         }, {}),
                         o = d.reduce((n, t) => {
                             let l = Q.Ay.getChannelIdFlags(e, t);
-                            return (n[t] = { flags: (0, e2.lA)(l, e8.vv.OPT_IN_ENABLED, !1) }), n;
+                            return (n[t] = { flags: (0, e7.lA)(l, e8.vv.OPT_IN_ENABLED, !1) }), n;
                         }, {}),
                         u = { ...c, ...o };
                     e1.A.selectOption(e, n.id, t.id, l),

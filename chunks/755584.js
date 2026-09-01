@@ -1,7 +1,7 @@
 r.d(t, { A: () => A }), r(938796);
 var i = r(562708),
-    a = r(636537),
-    n = r(933681),
+    n = r(636537),
+    a = r(933681),
     o = r(228366),
     l = r(568185),
     d = r(543465),
@@ -22,41 +22,46 @@ let A = {
             parentId: N,
             skuId: y,
             branchId: b,
-            flags: C,
-            availableTags: L,
-            gameId: T,
+            applicationId: C,
+            flags: L,
+            availableTags: T,
+            gameId: I,
         } = e;
         o.h.dispatch({ type: "CREATE_CHANNEL_MODAL_SUBMIT", guildId: t, channelType: r });
-        let k = { type: r, name: A, permission_overwrites: E };
+        let g = { type: r, name: A, permission_overwrites: E };
         if (
-            (null != m && m !== c.gp3 && (k.bitrate = m),
-            null != u && u > 0 && (k.user_limit = u),
-            null != N && (k.parent_id = N),
-            null != C && (k.flags = C),
-            null != L &&
-                L.length > 0 &&
-                (k.available_tags = L.map((e) => ({
+            (null != m && m !== c.gp3 && (g.bitrate = m),
+            null != u && u > 0 && (g.user_limit = u),
+            null != N && (g.parent_id = N),
+            null != L && (g.flags = L),
+            null != T &&
+                T.length > 0 &&
+                (g.available_tags = T.map((e) => ({
                     name: e.name,
                     emoji_id: e.emojiId,
                     emoji_name: e.emojiName,
                     moderated: e.moderated,
                 }))),
-            null != T && (k.game_id = T),
+            null != I && (g.game_id = I),
             r === c.rbe.GUILD_STORE)
         ) {
             if (null == y) throw Error("Unexpected missing SKU");
-            (k.sku_id = y), (k.branch_id = b);
+            (g.sku_id = y), (g.branch_id = b);
+        }
+        if (r === c.rbe.GUILD_APP) {
+            if (null == C) throw Error("Unexpected missing application");
+            g.application_id = C;
         }
         return s.A.post({
             url: c.Rsh.GUILD_CHANNELS(t),
-            body: k,
+            body: g,
             oldFormErrors: !0,
             trackedActionData: {
                 event: i.NetworkActionNames.CHANNEL_CREATE,
                 properties: (e) =>
-                    (0, n.e0)({ is_private: E.length > 0, channel_id: e?.body?.id, channel_type: e?.body?.type }),
+                    (0, a.e0)({ is_private: E.length > 0, channel_id: e?.body?.id, channel_type: e?.body?.type }),
             },
-            rejectWithError: (0, a.fT)(),
+            rejectWithError: (0, n.fT)(),
         }).then(
             (e) => (
                 d.Ay.isOptInEnabled(t) &&
@@ -76,8 +81,8 @@ let A = {
             oldFormErrors: !0,
             trackedActionData: {
                 event: i.NetworkActionNames.CHANNEL_CREATE,
-                properties: (e) => (0, n.e0)({ is_private: !0, channel_id: e?.body?.id, channel_type: e?.body?.type }),
+                properties: (e) => (0, a.e0)({ is_private: !0, channel_id: e?.body?.id, channel_type: e?.body?.type }),
             },
-            rejectWithError: (0, a.fT)(),
+            rejectWithError: (0, n.fT)(),
         }),
 };

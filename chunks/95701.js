@@ -2,45 +2,45 @@
 n.d(t, {
     A_: () => m,
     B4: () => et,
-    Do: () => D,
-    Gw: () => b,
-    IY: () => q,
-    JT: () => K,
-    LE: () => Z,
-    Le: () => V,
+    Do: () => v,
+    Gw: () => M,
+    IY: () => Z,
+    JT: () => $,
+    LE: () => X,
+    Le: () => B,
     Lt: () => eN,
-    MK: () => P,
-    OU: () => R,
+    MK: () => U,
+    OU: () => L,
     OY: () => eR,
-    QE: () => y,
+    QE: () => D,
     TA: () => eo,
     UE: () => eO,
+    XD: () => C,
     YB: () => eE,
-    ZE: () => X,
-    Z_: () => Y,
-    ay: () => L,
-    bk: () => $,
+    Z_: () => K,
+    ay: () => y,
+    bk: () => z,
     cq: () => eS,
     createChannelRecord: () => eD,
-    fT: () => j,
-    gV: () => x,
-    ig: () => F,
+    fT: () => W,
+    gV: () => k,
+    ig: () => V,
     jb: () => eA,
     k: () => J,
-    k3: () => U,
+    k3: () => w,
     ke: () => S,
     nA: () => ef,
     nb: () => Q,
     oH: () => N,
     oh: () => ey,
     p6: () => ee,
-    pQ: () => w,
+    pQ: () => G,
     pd: () => ed,
     tr: () => T,
-    uL: () => C,
-    wE: () => H,
-    xR: () => z,
-    zy: () => O,
+    uL: () => O,
+    wE: () => j,
+    xR: () => q,
+    zy: () => R,
 }),
     n(938796);
 var i = n(435558),
@@ -68,6 +68,7 @@ let p = new Set([
     I.rbe.GUILD_DIRECTORY,
     I.rbe.GUILD_FORUM,
     I.rbe.GUILD_MEDIA,
+    I.rbe.GUILD_APP,
     I.rbe.DM,
     I.rbe.GROUP_DM,
 ]);
@@ -91,6 +92,7 @@ let m = new Set([
         I.rbe.GUILD_MEDIA,
         I.rbe.GUILD_SPACE,
         I.rbe.MEDIA_THREAD,
+        I.rbe.GUILD_APP,
     ]),
     g = new Set([
         I.rbe.GUILD_TEXT,
@@ -98,6 +100,7 @@ let m = new Set([
         I.rbe.ANNOUNCEMENT_THREAD,
         I.rbe.PUBLIC_THREAD,
         I.rbe.PRIVATE_THREAD,
+        I.rbe.GUILD_APP,
     ]);
 function S(e) {
     return g.has(e);
@@ -109,8 +112,10 @@ let N = new Set([
         I.rbe.GUILD_MEDIA,
         I.rbe.GUILD_VOICE,
         I.rbe.GUILD_STAGE_VOICE,
+        I.rbe.GUILD_APP,
     ]),
-    C = new Set([
+    C = new Set([I.rbe.GUILD_TEXT]),
+    O = new Set([
         I.rbe.GUILD_TEXT,
         I.rbe.GUILD_VOICE,
         I.rbe.GUILD_STAGE_VOICE,
@@ -124,29 +129,30 @@ let N = new Set([
         I.rbe.GUILD_FORUM,
         I.rbe.GUILD_MEDIA,
         I.rbe.GUILD_SPACE,
+        I.rbe.GUILD_APP,
     ]);
-function O(e) {
-    return C.has(e);
+function R(e) {
+    return O.has(e);
 }
-I.rbe.GUILD_TEXT, I.rbe.GUILD_ANNOUNCEMENT, I.rbe.GUILD_FORUM, I.rbe.GUILD_MEDIA;
-let R = new Set([I.rbe.GUILD_VOICE, I.rbe.GUILD_STAGE_VOICE]);
-function L(e) {
-    return "SELECTABLE" !== e && R.has(e);
-}
+I.rbe.GUILD_TEXT, I.rbe.GUILD_ANNOUNCEMENT, I.rbe.GUILD_FORUM, I.rbe.GUILD_MEDIA, I.rbe.GUILD_APP;
+let L = new Set([I.rbe.GUILD_VOICE, I.rbe.GUILD_STAGE_VOICE]);
 function y(e) {
+    return "SELECTABLE" !== e && L.has(e);
+}
+function D(e) {
     var t;
-    return L(e) || ((t = e), B.has(t));
+    return y(e) || ((t = e), H.has(t));
 }
-let D = new Set([I.rbe.GUILD_STAGE_VOICE]),
-    v = new Set([I.rbe.DM, I.rbe.GROUP_DM]);
-function b(e) {
-    return v.has(e);
+let v = new Set([I.rbe.GUILD_STAGE_VOICE]),
+    b = new Set([I.rbe.DM, I.rbe.GROUP_DM]);
+function M(e) {
+    return b.has(e);
 }
-let M = new Set([I.rbe.GROUP_DM]);
-function P(e) {
-    return M.has(e);
+let P = new Set([I.rbe.GROUP_DM]);
+function U(e) {
+    return P.has(e);
 }
-let U = new Set([
+let w = new Set([
     I.rbe.DM,
     I.rbe.GROUP_DM,
     I.rbe.GUILD_TEXT,
@@ -154,11 +160,12 @@ let U = new Set([
     I.rbe.ANNOUNCEMENT_THREAD,
     I.rbe.PUBLIC_THREAD,
     I.rbe.PRIVATE_THREAD,
+    I.rbe.GUILD_APP,
 ]);
-function w(e) {
-    return U.has(e);
+function G(e) {
+    return w.has(e);
 }
-let G = new Set([
+let x = new Set([
     I.rbe.DM,
     I.rbe.GROUP_DM,
     I.rbe.GUILD_VOICE,
@@ -166,10 +173,10 @@ let G = new Set([
     I.rbe.PUBLIC_THREAD,
     I.rbe.PRIVATE_THREAD,
 ]);
-function x(e) {
-    return G.has(e);
+function k(e) {
+    return x.has(e);
 }
-let k = new Set([
+let F = new Set([
     I.rbe.GUILD_TEXT,
     I.rbe.GUILD_ANNOUNCEMENT,
     I.rbe.ANNOUNCEMENT_THREAD,
@@ -178,19 +185,20 @@ let k = new Set([
     I.rbe.GUILD_DIRECTORY,
     I.rbe.GUILD_FORUM,
     I.rbe.GUILD_MEDIA,
+    I.rbe.GUILD_APP,
     I.rbe.DM,
     I.rbe.GROUP_DM,
 ]);
-function F(e) {
-    return k.has(e);
+function V(e) {
+    return F.has(e);
 }
-let V = new Set([I.rbe.ANNOUNCEMENT_THREAD, I.rbe.PUBLIC_THREAD, I.rbe.PRIVATE_THREAD, I.rbe.MEDIA_THREAD]),
-    B = new Set([I.rbe.PUBLIC_THREAD, I.rbe.PRIVATE_THREAD]),
-    H = new Set([I.rbe.GUILD_TEXT, I.rbe.GUILD_ANNOUNCEMENT, I.rbe.GUILD_FORUM, I.rbe.GUILD_MEDIA]);
-function j(e) {
-    return V.has(e);
+let B = new Set([I.rbe.ANNOUNCEMENT_THREAD, I.rbe.PUBLIC_THREAD, I.rbe.PRIVATE_THREAD, I.rbe.MEDIA_THREAD]),
+    H = new Set([I.rbe.PUBLIC_THREAD, I.rbe.PRIVATE_THREAD]),
+    j = new Set([I.rbe.GUILD_TEXT, I.rbe.GUILD_ANNOUNCEMENT, I.rbe.GUILD_FORUM, I.rbe.GUILD_MEDIA, I.rbe.GUILD_APP]);
+function W(e) {
+    return B.has(e);
 }
-let W = new Set([
+let Y = new Set([
     I.rbe.DM,
     I.rbe.GROUP_DM,
     I.rbe.GUILD_TEXT,
@@ -203,11 +211,12 @@ let W = new Set([
     I.rbe.GUILD_DIRECTORY,
     I.rbe.GUILD_VOICE,
     I.rbe.GUILD_STAGE_VOICE,
+    I.rbe.GUILD_APP,
 ]);
-function Y(e) {
-    return W.has(e);
+function K(e) {
+    return Y.has(e);
 }
-let K = new Set([
+let $ = new Set([
         I.rbe.GUILD_TEXT,
         I.rbe.GUILD_ANNOUNCEMENT,
         I.rbe.GUILD_STORE,
@@ -219,8 +228,9 @@ let K = new Set([
         I.rbe.GUILD_DIRECTORY,
         I.rbe.GUILD_FORUM,
         I.rbe.GUILD_MEDIA,
+        I.rbe.GUILD_APP,
     ]),
-    $ = new Set([
+    z = new Set([
         I.rbe.GUILD_ANNOUNCEMENT,
         I.rbe.GUILD_CATEGORY,
         I.rbe.GUILD_STORE,
@@ -230,23 +240,18 @@ let K = new Set([
         I.rbe.GUILD_DIRECTORY,
         I.rbe.GUILD_FORUM,
         I.rbe.GUILD_MEDIA,
+        I.rbe.GUILD_APP,
     ]),
-    z = new Set([I.rbe.GUILD_TEXT, I.rbe.GUILD_ANNOUNCEMENT]),
-    q = new Set([I.rbe.GUILD_TEXT, I.rbe.GUILD_ANNOUNCEMENT, I.rbe.GUILD_FORUM, I.rbe.GUILD_MEDIA]),
-    Z = new Set([
+    q = new Set([I.rbe.GUILD_TEXT, I.rbe.GUILD_ANNOUNCEMENT]),
+    Z = new Set([I.rbe.GUILD_TEXT, I.rbe.GUILD_ANNOUNCEMENT, I.rbe.GUILD_FORUM, I.rbe.GUILD_MEDIA, I.rbe.GUILD_APP]),
+    X = new Set([
         I.rbe.GUILD_TEXT,
         I.rbe.GUILD_ANNOUNCEMENT,
         I.rbe.GUILD_FORUM,
         I.rbe.GUILD_MEDIA,
         I.rbe.GUILD_VOICE,
         I.rbe.GUILD_STAGE_VOICE,
-    ]),
-    X = new Set([
-        I.rbe.GUILD_ANNOUNCEMENT,
-        I.rbe.GUILD_TEXT,
-        I.rbe.GUILD_FORUM,
-        I.rbe.GUILD_MEDIA,
-        I.rbe.ANNOUNCEMENT_THREAD,
+        I.rbe.GUILD_APP,
     ]),
     Q = new Set([
         I.rbe.GUILD_TEXT,
@@ -257,10 +262,17 @@ let K = new Set([
         I.rbe.PRIVATE_THREAD,
         I.rbe.GUILD_VOICE,
         I.rbe.GUILD_STAGE_VOICE,
+        I.rbe.GUILD_APP,
     ]),
     J = new Set([I.rbe.PUBLIC_THREAD, I.rbe.PRIVATE_THREAD, I.rbe.GUILD_VOICE, I.rbe.GUILD_STAGE_VOICE]),
     ee = new Set([I.rbe.GUILD_TEXT, I.rbe.GUILD_FORUM, I.rbe.GUILD_MEDIA]),
-    et = new Set([I.rbe.GUILD_TEXT, I.rbe.GUILD_CATEGORY, I.rbe.GUILD_FORUM, I.rbe.GUILD_ANNOUNCEMENT]);
+    et = new Set([
+        I.rbe.GUILD_TEXT,
+        I.rbe.GUILD_CATEGORY,
+        I.rbe.GUILD_FORUM,
+        I.rbe.GUILD_ANNOUNCEMENT,
+        I.rbe.GUILD_APP,
+    ]);
 function en(e) {
     let t = {};
     return (
@@ -288,14 +300,14 @@ function er(e) {
 function ea(e) {
     return null != e ? { id: e.id, name: e.name } : void 0;
 }
-I.rbe.GUILD_TEXT, I.rbe.GUILD_ANNOUNCEMENT, I.rbe.GUILD_FORUM, I.rbe.GUILD_VOICE;
+I.rbe.GUILD_TEXT, I.rbe.GUILD_ANNOUNCEMENT, I.rbe.GUILD_FORUM, I.rbe.GUILD_VOICE, I.rbe.GUILD_APP;
 let es = c.kg(I.xBc.CONNECT, I.xBc.VIEW_CHANNEL),
     el = I.hVb.CONNECT | I.hVb.VIEW_CHANNEL;
 function eo(e) {
-    return L(e) ? es : I.xBc.VIEW_CHANNEL;
+    return y(e) ? es : I.xBc.VIEW_CHANNEL;
 }
 function ed(e) {
-    return L(e) ? el : I.hVb.VIEW_CHANNEL;
+    return y(e) ? el : I.hVb.VIEW_CHANNEL;
 }
 class ec {
     id;
@@ -420,16 +432,16 @@ class eE extends ec {
         return this.nsfw;
     }
     isManaged() {
-        return null != this.application_id;
+        return I.kvI.APPLICATION_MANAGEABLE.has(this.type) && null != this.application_id;
     }
     isPrivate() {
-        return b(this.type);
+        return M(this.type);
     }
     isGroupDM() {
         return this.type === I.rbe.GROUP_DM;
     }
     isMultiUserDM() {
-        return P(this.type);
+        return U(this.type);
     }
     isDM() {
         return this.type === I.rbe.DM;
@@ -447,7 +459,7 @@ class eE extends ec {
         return this.hasFlag(f.lx.IS_SCHEDULED_FOR_DELETION);
     }
     isArchivedLockedThread() {
-        return V.has(this.type) && this.threadMetadata?.archived === !0 && this.threadMetadata?.locked === !0;
+        return B.has(this.type) && this.threadMetadata?.archived === !0 && this.threadMetadata?.locked === !0;
     }
     isForumPost() {
         return (
@@ -466,10 +478,10 @@ class eE extends ec {
         return this.type === I.rbe.GUILD_CATEGORY;
     }
     isVocal() {
-        return x(this.type);
+        return k(this.type);
     }
     isGuildVocal() {
-        return L(this.type);
+        return y(this.type);
     }
     isGuildVocalOrThread() {
         return this.isGuildVocal() || this.isVocalThread();
@@ -487,7 +499,7 @@ class eE extends ec {
         return this.isGuildStageVoice();
     }
     isThread() {
-        return j(this.type);
+        return W(this.type);
     }
     isAnnouncementThread() {
         return this.type === I.rbe.ANNOUNCEMENT_THREAD;
@@ -1049,6 +1061,7 @@ let eC = {
     [I.rbe.GUILD_FORUM]: ep.fromServer,
     [I.rbe.GUILD_MEDIA]: ep.fromServer,
     [I.rbe.GUILD_SPACE]: eI.fromServer,
+    [I.rbe.GUILD_APP]: eI.fromServer,
 };
 function eO(e, t) {
     return (eC[e.type ?? I.rbe.GUILD_TEXT] ?? eA.fromServer)(e, t);
@@ -1073,6 +1086,7 @@ let eL = {
     [I.rbe.GUILD_FORUM]: ep,
     [I.rbe.GUILD_MEDIA]: ep,
     [I.rbe.GUILD_SPACE]: class extends eI {},
+    [I.rbe.GUILD_APP]: class extends eI {},
 };
 function ey(e) {
     let t = eL[e.type ?? I.rbe.GUILD_TEXT] ?? eA;

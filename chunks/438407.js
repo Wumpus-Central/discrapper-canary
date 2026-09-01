@@ -16,11 +16,11 @@ var l = n(477900),
     I = n(734057),
     N = n(317525),
     G = n(287809),
-    O = n(871237),
+    O = n(147036),
     S = n(403362),
     m = n(240248),
-    R = n(427262),
-    D = n(555067),
+    D = n(427262),
+    R = n(555067),
     h = n(652215),
     L = n(375708),
     C = n(165259);
@@ -28,7 +28,7 @@ let M = { [h.RWi.CREATE]: C.typeCreate, [h.RWi.UPDATE]: C.typeUpdate, [h.RWi.DEL
 function x(e) {
     let { applicationId: t } = e,
         n = (0, g.h)(t);
-    return null == n ? null : (0, l.jsx)(_.E, { variant: "text-md/normal", children: n.name });
+    return (0, l.jsx)("strong", { children: n?.name ?? t });
 }
 function U(e, t) {
     return (0, l.jsx)("div", { className: C.colorHook, style: { backgroundColor: t } }, e);
@@ -87,7 +87,7 @@ function p(e) {
                 let u = 0,
                     g = t.changes
                         .flatMap((a) => {
-                            if (D.shouldNotRenderChangeDetail(t, a)) return null;
+                            if (R.shouldNotRenderChangeDetail(t, a)) return null;
                             let { oldValue: i, newValue: s } = (() => {
                                     if (
                                         (t.action === h.F_X.CHANNEL_UPDATE || t.action === h.F_X.CHANNEL_CREATE) &&
@@ -109,8 +109,8 @@ function p(e) {
                                     }
                                     return t.action === h.F_X.GUILD_UPDATE && a.key === h.gGk.OWNER_ID
                                         ? {
-                                              oldValue: R.Ay.getUserTag(a.oldValue, { mode: "username" }),
-                                              newValue: R.Ay.getUserTag(a.newValue, { mode: "username" }),
+                                              oldValue: D.Ay.getUserTag(a.oldValue, { mode: "username" }),
+                                              newValue: D.Ay.getUserTag(a.newValue, { mode: "username" }),
                                           }
                                         : a;
                                 })(),
@@ -144,7 +144,7 @@ function p(e) {
                                                           "div",
                                                           {
                                                               className: C.subListItem,
-                                                              children: D.getStringForPermission(e, t),
+                                                              children: R.getStringForPermission(e, t),
                                                           },
                                                           n,
                                                       ),
@@ -165,7 +165,7 @@ function p(e) {
                                                             "div",
                                                             {
                                                                 className: C.subListItem,
-                                                                children: D.getStringForRemovedChannelFlag(e),
+                                                                children: R.getStringForRemovedChannelFlag(e),
                                                             },
                                                             e,
                                                         ),
@@ -178,7 +178,7 @@ function p(e) {
                                                             "div",
                                                             {
                                                                 className: C.subListItem,
-                                                                children: D.getStringForAddedChannelFlag(e),
+                                                                children: R.getStringForAddedChannelFlag(e),
                                                             },
                                                             e,
                                                         ),
@@ -557,12 +557,12 @@ function p(e) {
                                                         })
                                                     );
                                                 case h.gGk.RESOURCE_CHANNELS:
-                                                    let R, D, M, x, U, p;
+                                                    let D, R, M, x, U, p;
                                                     return (
-                                                        (R = (r = a ?? []).map((e) => e.channel_id)),
-                                                        (D = i.map((e) => e.channel_id)),
-                                                        (M = E().difference(D, R)),
-                                                        (x = E().difference(R, D)),
+                                                        (D = (r = a ?? []).map((e) => e.channel_id)),
+                                                        (R = i.map((e) => e.channel_id)),
+                                                        (M = E().difference(R, D)),
+                                                        (x = E().difference(D, R)),
                                                         (U = i.filter((e) => M.includes(e.channel_id))),
                                                         (p = r.filter((e) => x.includes(e.channel_id))),
                                                         (0, l.jsxs)("ul", {
@@ -679,6 +679,8 @@ function p(e) {
                                     newEmojiHook: (e, t) => (0, l.jsx)(A.A, { emojiId: E }, t),
                                     applicationHook: (e, t) =>
                                         (0, l.jsx)(x, { applicationId: s?.application_id ?? E?.application_id }, t),
+                                    oldApplicationHook: (e, t) => (0, l.jsx)(x, { applicationId: s }, t),
+                                    newApplicationHook: (e, t) => (0, l.jsx)(x, { applicationId: E }, t),
                                 });
                                 return null == o
                                     ? null
@@ -732,5 +734,5 @@ function p(e) {
             },
             [t, n, a, s],
         );
-    return r.useMemo(() => u(D.getChangeStrings(t)), [u, t]);
+    return r.useMemo(() => u(R.getChangeStrings(t)), [u, t]);
 }

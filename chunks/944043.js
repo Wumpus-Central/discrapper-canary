@@ -267,14 +267,28 @@ function Q(e, t, n) {
 }
 function J(e, t, n, i) {
     switch (e.type) {
-        case W.rbe.GUILD_ANNOUNCEMENT:
-        case W.rbe.GUILD_TEXT:
-            return t;
         case W.rbe.GROUP_DM:
             return n;
         case W.rbe.DM:
-        default:
             return i;
+        case W.rbe.GUILD_TEXT:
+        case W.rbe.GUILD_ANNOUNCEMENT:
+        case W.rbe.GUILD_APP:
+        case W.rbe.GUILD_FORUM:
+        case W.rbe.GUILD_MEDIA:
+        case W.rbe.GUILD_VOICE:
+        case W.rbe.GUILD_STAGE_VOICE:
+        case W.rbe.ANNOUNCEMENT_THREAD:
+        case W.rbe.PUBLIC_THREAD:
+        case W.rbe.PRIVATE_THREAD:
+        case W.rbe.MEDIA_THREAD:
+        case W.rbe.GUILD_CATEGORY:
+        case W.rbe.GUILD_STORE:
+        case W.rbe.GUILD_DIRECTORY:
+        case W.rbe.GUILD_SPACE:
+        case W.rbe.UNKNOWN:
+        default:
+            return t;
     }
 }
 function ee(e, t, n) {
@@ -284,6 +298,7 @@ function ee(e, t, n) {
     switch (e.type) {
         case W.rbe.GUILD_ANNOUNCEMENT:
         case W.rbe.GUILD_TEXT:
+        case W.rbe.GUILD_APP:
         case W.rbe.GUILD_VOICE:
         case W.rbe.ANNOUNCEMENT_THREAD:
         case W.rbe.PUBLIC_THREAD:

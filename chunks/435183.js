@@ -42,6 +42,7 @@ function c(e) {
         defaultTagSetting: C,
         iconEmoji: p,
         themeColor: L,
+        applicationId: g,
     } = e;
     l.h.dispatch({
         type: "CHANNEL_SETTINGS_UPDATE",
@@ -68,6 +69,7 @@ function c(e) {
         defaultTagSetting: C,
         iconEmoji: p,
         themeColor: L,
+        applicationId: g,
     });
 }
 async function T(e, t) {
@@ -97,8 +99,9 @@ async function T(e, t) {
             defaultTagSetting: R,
             iconEmoji: U,
             themeColor: G,
+            applicationId: j,
         } = t,
-        j = u.A.getChannel(e);
+        D = u.A.getChannel(e);
     return (
         l.h.dispatch({ type: "CHANNEL_SETTINGS_SUBMIT" }),
         await a.A.unarchiveThreadIfNecessary(e),
@@ -137,14 +140,15 @@ async function T(e, t) {
                 default_tag_setting: R,
                 icon_emoji: null != U ? { id: U.id, name: U.name } : null === U ? null : void 0,
                 theme_color: G,
+                application_id: j,
             },
             oldFormErrors: !0,
             rejectWithError: (0, r.fT)(),
         }).then(
             (t) => {
                 l.h.dispatch({ type: "CHANNEL_SETTINGS_SUBMIT_SUCCESS", channelId: e });
-                let n = j?.getGuildId();
-                return null == n || j?.isThread() || i.A.checkGuildTemplateDirty(n), t;
+                let n = D?.getGuildId();
+                return null == n || D?.isThread() || i.A.checkGuildTemplateDirty(n), t;
             },
             (e) => (l.h.dispatch({ type: "CHANNEL_SETTINGS_SUBMIT_FAILURE", errors: e.body }), e),
         )

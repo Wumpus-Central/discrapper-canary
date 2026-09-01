@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => g }), n(321073);
+n.d(t, { A: () => N }), n(321073);
 var i = n(17928),
     r = n(228366),
     a = n(395671);
@@ -9,61 +9,67 @@ let s = [],
     d = new Map(),
     c = new Map(),
     u = new Map(),
-    _ = new Set(),
-    E = { botUserIdToAppUsage: {} };
-function A(e) {
+    _ = new Map(),
+    E = new Set(),
+    A = { botUserIdToAppUsage: {} };
+function h(e) {
     let t = l.get(e.id);
-    c.set(e.id, Date.now());
+    u.set(e.id, Date.now());
     let n = e;
     for (let i of (null != t && (n = t.mergeFromApplicationUpdate(e)),
     l.set(e.id, n),
-    d.set(e.name.toLowerCase(), n),
+    c.set(e.name.toLowerCase(), n),
     e.aliases))
-        d.set(i.toLowerCase(), n);
+        c.set(i.toLowerCase(), n);
     if (null != e.linkedGames)
         for (let t of e.linkedGames)
             null != t.application &&
-                A(t.application instanceof a.Ay ? t.application : a.Ay.createFromServer(t.application));
-    u.delete(e.id);
+                h(t.application instanceof a.Ay ? t.application : a.Ay.createFromServer(t.application));
+    _.delete(e.id);
 }
-function h(e) {
+function I(e) {
     let {
         wishlistData: { applications: t },
     } = e;
     if (null == t || 0 === t.length) return !1;
-    for (let e of t) A(e);
-}
-function I(e) {
-    A(a.Ay.createFromServer(e));
+    for (let e of t) h(e);
 }
 function f(e) {
+    h(a.Ay.createFromServer(e));
+}
+function p(e) {
     let { userId: t, applicationId: n } = e,
-        i = E.botUserIdToAppUsage[t];
+        i = A.botUserIdToAppUsage[t];
     null == i
-        ? (E.botUserIdToAppUsage[t] = { applicationId: n, lastUsedMs: Date.now() })
-        : (E.botUserIdToAppUsage[t] = { applicationId: n, lastUsedMs: i.lastUsedMs });
+        ? (A.botUserIdToAppUsage[t] = { applicationId: n, lastUsedMs: Date.now() })
+        : (A.botUserIdToAppUsage[t] = { applicationId: n, lastUsedMs: i.lastUsedMs });
     let r = new Map();
-    for (let [e, t] of Object.entries(E.botUserIdToAppUsage)) r.set(e, t);
+    for (let [e, t] of Object.entries(A.botUserIdToAppUsage)) r.set(e, t);
     let a = Array.from(r.entries()).sort((e, t) => t[1].lastUsedMs - e[1].lastUsedMs);
     for (let e = 0; e < a.length; e++)
         if (e >= 10) {
             let t = a[e][0];
-            delete E.botUserIdToAppUsage[t];
+            delete A.botUserIdToAppUsage[t];
         }
 }
-function p(e) {
+function T(e) {
     let { applications: t } = e;
     if (0 === t.length) return !1;
-    for (let e of t) A(a.Ay.createFromServer(e));
+    for (let e of t) h(a.Ay.createFromServer(e));
     return !0;
 }
-function T(e) {
+function m(e) {
     let { entitlements: t } = e,
         n = !1;
-    for (let { sku: e } of t) e?.application != null && (A(a.Ay.createFromServer(e.application)), (n = !0));
+    for (let { sku: e } of t) e?.application != null && (h(a.Ay.createFromServer(e.application)), (n = !0));
     return n;
 }
-class m extends i.Ay.PersistedStore {
+function g(e) {
+    let { guildId: t } = e;
+    if (!d.has(t)) return !1;
+    d.delete(t);
+}
+class S extends i.Ay.PersistedStore {
     static displayName = "ApplicationStore";
     static persistKey = "ApplicationStore";
     initialize(e) {
@@ -76,11 +82,11 @@ class m extends i.Ay.PersistedStore {
                     i.length > 0 &&
                     "number" == typeof r &&
                     r > 0 &&
-                    (E.botUserIdToAppUsage[t] = { applicationId: i, lastUsedMs: r });
+                    (A.botUserIdToAppUsage[t] = { applicationId: i, lastUsedMs: r });
             }
     }
     getState() {
-        return E;
+        return A;
     }
     _getAllApplications() {
         return Array.from(l.values());
@@ -93,122 +99,137 @@ class m extends i.Ay.PersistedStore {
     getGuildApplicationIds(e) {
         return null == e ? s : (o.get(e) ?? s);
     }
+    getGuildEmbeddedApplications(e, t) {
+        if (null != e) return d.get(e)?.get(t);
+    }
     getApplication(e) {
         if (null != e) return l.get(e);
     }
     getApplicationByName(e) {
         if (null == e) return;
         let t = e.toLowerCase();
-        return d.has(t) ? d.get(t) : void 0;
+        return c.has(t) ? c.get(t) : void 0;
     }
     getApplicationLastUpdated(e) {
-        return c.get(e);
+        return u.get(e);
     }
     isFetchingApplication(e) {
-        return !0 === u.get(e);
+        return !0 === _.get(e);
     }
     isHydrated(e) {
-        return _.has(e);
+        return E.has(e);
     }
     didFetchingApplicationFail(e) {
-        return !1 === u.get(e);
+        return !1 === _.get(e);
     }
     getFetchingOrFailedFetchingIds() {
-        return Array.from(u.keys());
+        return Array.from(_.keys());
     }
     getAppIdForBotUserId(e) {
-        if (null != e) return E.botUserIdToAppUsage[e]?.applicationId;
+        if (null != e) return A.botUserIdToAppUsage[e]?.applicationId;
     }
 }
-let g = new m(r.h, {
+let N = new S(r.h, {
     LOGOUT: function () {
-        l.clear(), o.clear(), d.clear(), c.clear(), u.clear(), _.clear();
+        l.clear(), o.clear(), d.clear(), c.clear(), u.clear(), _.clear(), E.clear();
     },
     OVERLAY_INITIALIZE: function (e) {
         let { applications: t } = e;
-        for (let e of t) A(new a.Ay(e));
+        for (let e of t) h(new a.Ay(e));
     },
     APPLICATION_FETCH: function (e) {
         let { applicationId: t } = e,
-            n = u.get(t);
-        return u.set(t, !0), !0 !== n;
+            n = _.get(t);
+        return _.set(t, !0), !0 !== n;
     },
     APPLICATION_FETCH_SUCCESS: function (e) {
         let { application: t, isHydrated: n } = e;
-        !0 === n && _.add(t.id), I(t);
+        !0 === n && E.add(t.id), f(t);
     },
     APPLICATION_FETCH_FAIL: function (e) {
         let { applicationId: t } = e,
-            n = u.get(t);
-        return u.set(t, !1), !1 !== n;
+            n = _.get(t);
+        return _.set(t, !1), !1 !== n;
     },
     APPLICATIONS_FETCH: function (e) {
         let { applicationIds: t } = e,
             n = !1;
         for (let e of t) {
-            let t = u.get(e);
-            u.set(e, !0), (n = !0 !== t);
+            let t = _.get(e);
+            _.set(e, !0), (n = !0 !== t);
         }
         return n;
     },
     APPLICATIONS_FETCH_SUCCESS: function (e) {
         let { applications: t, isHydrated: n } = e;
-        for (let e of t) !0 === n && _.add(e.id), A(a.Ay.createFromServer(e));
+        for (let e of t) !0 === n && E.add(e.id), h(a.Ay.createFromServer(e));
     },
     APPLICATIONS_FETCH_FAIL: function (e) {
         let { applicationIds: t } = e,
             n = !1;
         for (let e of t) {
-            let t = u.get(e);
-            u.set(e, !1), (n = !1 !== t);
+            let t = _.get(e);
+            _.set(e, !1), (n = !1 !== t);
         }
         return n;
     },
     APPLICATION_UPDATE: function (e) {
         let { application: t } = e;
-        I(t);
+        f(t);
     },
-    APPLICATION_SUBSCRIPTIONS_FETCH_ENTITLEMENTS_SUCCESS: T,
-    ENTITLEMENTS_FETCH_FOR_USER_SUCCESS: T,
-    ENTITLEMENTS_GIFTABLE_FETCH_SUCCESS: T,
+    APPLICATION_SUBSCRIPTIONS_FETCH_ENTITLEMENTS_SUCCESS: m,
+    ENTITLEMENTS_FETCH_FOR_USER_SUCCESS: m,
+    ENTITLEMENTS_GIFTABLE_FETCH_SUCCESS: m,
     GUILD_APPLICATIONS_FETCH_SUCCESS: function (e) {
         let { guildId: t, applications: n } = e,
             i = [];
-        for (let e of n) i.push(e.id), A(a.Ay.createFromServer(e));
+        for (let e of n) i.push(e.id), h(a.Ay.createFromServer(e));
         o.set(t, i);
     },
+    GUILD_EMBEDDED_APPLICATIONS_FETCH_SUCCESS: function (e) {
+        let { guildId: t, surface: n, items: i } = e,
+            r = [];
+        for (let { application: e, status: t } of i)
+            r.push({ applicationId: e.id, status: t }), h(a.Ay.createFromServer(e));
+        let s = d.get(t);
+        null == s && ((s = new Map()), d.set(t, s)), s.set(n, r);
+    },
+    GUILD_INTEGRATIONS_UPDATE: g,
+    INTEGRATION_CREATE: g,
+    INTEGRATION_UPDATE: g,
+    INTEGRATION_DELETE: g,
     BILLING_PAYMENTS_FETCH_SUCCESS: function (e) {
         let { payments: t } = e,
             n = new Set();
         for (let e of t) {
             let t = e.sku?.application;
-            null == t || n.has(t.id) || A(a.Ay.createFromServer(t));
+            null == t || n.has(t.id) || h(a.Ay.createFromServer(t));
         }
         return n.size > 0;
     },
     PAYMENT_UPDATE: function (e) {
         let { payment: t } = e;
         if (t.sku?.application == null) return !1;
-        A(a.Ay.createFromServer(t.sku.application));
+        h(a.Ay.createFromServer(t.sku.application));
     },
     INVITE_RESOLVE_SUCCESS: function (e) {
         let { invite: t } = e;
         if (null == t.target_application) return !1;
-        A(a.Ay.createFromServer(t.target_application));
+        h(a.Ay.createFromServer(t.target_application));
     },
     GIFT_CODE_RESOLVE_SUCCESS: function (e) {
         let { giftCode: t } = e;
         if (t.store_listing?.sku.application == null) return !1;
-        A(a.Ay.createFromServer(t.store_listing.sku.application));
+        h(a.Ay.createFromServer(t.store_listing.sku.application));
     },
     LIBRARY_FETCH_SUCCESS: function (e) {
         let { libraryApplications: t } = e;
-        for (let e of t) A(a.Ay.createFromServer(e.application));
+        for (let e of t) h(a.Ay.createFromServer(e.application));
     },
     STORE_LISTING_FETCH_SUCCESS: function (e) {
         let { storeListing: t } = e;
         if (null == t.sku.application) return !1;
-        A(a.Ay.createFromServer(t.sku.application));
+        h(a.Ay.createFromServer(t.sku.application));
     },
     LOAD_MESSAGES_SUCCESS: function (e) {
         let { messages: t } = e;
@@ -217,7 +238,7 @@ let g = new m(r.h, {
             return (
                 (t = e),
                 void t.attachments?.forEach((e) => {
-                    null != e.application && A(a.Ay.createFromServer(e.application));
+                    null != e.application && h(a.Ay.createFromServer(e.application));
                 })
             );
         });
@@ -225,48 +246,48 @@ let g = new m(r.h, {
     USER_PROFILE_FETCH_SUCCESS: function (e) {
         let { userProfile: t } = e,
             { user: n, application: i } = t;
-        n.bot && null != i && f({ userId: n.id, applicationId: i.id });
+        n.bot && null != i && p({ userId: n.id, applicationId: i.id });
     },
     APP_DM_OPEN: function (e) {
         let { botUserId: t } = e,
-            n = E.botUserIdToAppUsage[t];
-        null != n && (E.botUserIdToAppUsage[t] = { ...n, lastUsedMs: Date.now() });
+            n = A.botUserIdToAppUsage[t];
+        null != n && (A.botUserIdToAppUsage[t] = { ...n, lastUsedMs: Date.now() });
     },
     USER_AUTHORIZED_APPS_UPDATE: function (e) {
         for (let t of Object.values(e.tokens)) {
             if (null == t) continue;
-            A(a.Ay.createFromServer(t.application));
+            h(a.Ay.createFromServer(t.application));
             let e = t.application.bot;
-            null != e && f({ userId: e.id, applicationId: t.application.id });
+            null != e && p({ userId: e.id, applicationId: t.application.id });
         }
     },
     LOAD_NOTIFICATION_CENTER_ITEMS_SUCCESS: function (e) {
         e.items.forEach((e) => {
-            null != e.application && A(a.Ay.createFromServer(e.application));
+            null != e.application && h(a.Ay.createFromServer(e.application));
         });
     },
     OAUTH2_TOKEN_CREATE: function (e) {
         let { application: t } = e;
-        A(a.Ay.createFromServer(t));
+        h(a.Ay.createFromServer(t));
     },
-    WISHLIST_FETCH_SUCCESS: h,
-    WISHLIST_ADD_SKU_SUCCESS: h,
-    WISHLIST_REMOVE_SKU_SUCCESS: h,
+    WISHLIST_FETCH_SUCCESS: I,
+    WISHLIST_ADD_SKU_SUCCESS: I,
+    WISHLIST_REMOVE_SKU_SUCCESS: I,
     SOCIAL_LAYER_STOREFRONT_LOAD_SUCCESS: function (e) {
         let {
             storefront: { application: t },
         } = e;
         if (null == t) return !1;
-        A(t);
+        h(t);
     },
     WISHLIST_RECOMMENDATIONS_FETCH_SUCCESS: function (e) {
         let {
             data: { applications: t },
         } = e;
         if (null == t || 0 === t.length) return !1;
-        for (let e of t) A(e);
+        for (let e of t) h(e);
     },
-    APPLICATION_WIDGET_CONFIG_FEATURED_FETCH_SUCCESS: p,
-    APPLICATION_WIDGET_CONFIG_DEVELOPER_FETCH_SUCCESS: p,
-    APPLICATION_WIDGET_CONFIG_FETCH_SUCCESS: p,
+    APPLICATION_WIDGET_CONFIG_FEATURED_FETCH_SUCCESS: T,
+    APPLICATION_WIDGET_CONFIG_DEVELOPER_FETCH_SUCCESS: T,
+    APPLICATION_WIDGET_CONFIG_FETCH_SUCCESS: T,
 });

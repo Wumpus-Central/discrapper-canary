@@ -4444,6 +4444,22 @@
     }
   },
   {
+    "kind": "guild",
+    "name": "2026-07-app-channels",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
     "name": "2026-07-attachment-image-ladder",
     "kind": "user",
     "defaultConfig": null,

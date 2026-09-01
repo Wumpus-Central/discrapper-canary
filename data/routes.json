@@ -378,6 +378,7 @@
   "SEARCH_TABS_DMS": "/users/@me/messages/search/tabs",
   "CHANGELOG_MESSAGES": "/changelogs/@me/messages",
   "GUILD_APPLICATIONS": "/guilds/:param/applications",
+  "GUILD_EMBEDDED_APPLICATIONS": "/guilds/:param/embedded-applications",
   "APPLIED_GUILD_BOOSTS_FOR_GUILD": "/guilds/:param/premium/subscriptions",
   "APPLIED_GUILD_BOOST": "/guilds/:param/premium/subscriptions/:param",
   "APPLIED_GUILD_BOOST_COOLDOWN": "/users/@me/guilds/premium/subscriptions/cooldown",

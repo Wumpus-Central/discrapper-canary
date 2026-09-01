@@ -48,6 +48,7 @@ function h(e, t, n) {
         case d.rbe.GUILD_TEXT:
         case d.rbe.GUILD_FORUM:
         case d.rbe.GUILD_MEDIA:
+        case d.rbe.GUILD_APP:
             if (i) return `#${a}`;
             return a;
         case d.rbe.GUILD_CATEGORY:
@@ -57,11 +58,16 @@ function h(e, t, n) {
         case d.rbe.PUBLIC_THREAD:
         case d.rbe.PRIVATE_THREAD:
         case d.rbe.ANNOUNCEMENT_THREAD:
+        case d.rbe.MEDIA_THREAD:
         case d.rbe.GUILD_VOICE:
         case d.rbe.GUILD_STAGE_VOICE:
             if (r) return `#"${I(a)}"`;
             if (i && e.isThread()) return `"${a}"`;
             return a;
+        case d.rbe.GUILD_STORE:
+        case d.rbe.GUILD_DIRECTORY:
+        case d.rbe.GUILD_SPACE:
+        case d.rbe.UNKNOWN:
         default:
             return a;
     }

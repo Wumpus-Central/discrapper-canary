@@ -47,6 +47,18 @@ let u = {
                 ).body;
             return a.h.dispatch({ type: "APPLICATIONS_FETCH_SUCCESS", applications: i }), i;
         },
+        async getEmbeddedApplicationsForGuild(e, t, n) {
+            let { items: i } = (
+                await r.Bo.get({
+                    url: d.Rsh.GUILD_EMBEDDED_APPLICATIONS(e),
+                    query: { channel_id: n, surface: t },
+                    rejectWithError: (0, r.fT)(),
+                })
+            ).body;
+            return (
+                a.h.dispatch({ type: "GUILD_EMBEDDED_APPLICATIONS_FETCH_SUCCESS", guildId: e, surface: t, items: i }), i
+            );
+        },
         async transferApplication(e) {
             let { applicationId: t, teamId: n } = e,
                 i = (
@@ -99,7 +111,10 @@ let u = {
     },
     _ = (0, i.UT)(o.A, {
         getQueryId: d.fic.APPLICATIONS,
-        get: (e) => (null != e && o.A.isHydrated(e) ? (o.A.getApplication(e) ?? null) : null),
+        get: function (e) {
+            let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+            return null != e && (t || o.A.isHydrated(e)) ? (o.A.getApplication(e) ?? null) : null;
+        },
         load: (e) => (null != e ? c(e, !1).then(d.tEg) : Promise.resolve()),
         getIsLoading: (e) => null != e && o.A.isFetchingApplication(e),
     });

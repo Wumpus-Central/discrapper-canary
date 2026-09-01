@@ -1,31 +1,25 @@
 "use strict";
 n.d(t, {
-    Jz: () => v,
-    we: () => L,
+    CG: () => O,
     DJ: () => x,
-    n: () => w,
-    fK: () => b,
+    IP: () => y,
+    Jg: () => M,
+    Jz: () => v,
     Pd: () => D,
     QG: () => P,
-    n3: () => R,
-    IP: () => y,
-    vJ: () => U,
     af: () => G,
-    Jg: () => M,
-    CG: () => O,
-    an: () => a,
+    an: () => a.A,
+    fK: () => b,
+    n: () => w,
+    n3: () => R,
+    vJ: () => U,
+    we: () => L,
 }),
     n(321073);
 var i = n(136722),
-    r = n(155718);
-function a(e) {
-    return e
-        .replace(/[\s-~]+/g, "-")
-        .replace(/^-+/, "")
-        .replace(/[\\'!"#$%&()*+,./:;<=>?@[\]^`{|}~]/g, "")
-        .toLowerCase();
-}
-var s = n(669715),
+    r = n(155718),
+    a = n(842937),
+    s = n(669715),
     l = n(461715),
     o = n(105530),
     d = n(95701),
@@ -150,6 +144,19 @@ function M(e) {
             return T.intl.string(T.t["P1/Erq"]);
         case f.rbe.GUILD_CATEGORY:
             return T.intl.string(T.t.vHCZwr);
+        case f.rbe.PRIVATE_THREAD:
+            return T.intl.string(T.t.F1zyvU);
+        case f.rbe.ANNOUNCEMENT_THREAD:
+        case f.rbe.PUBLIC_THREAD:
+        case f.rbe.MEDIA_THREAD:
+            return T.intl.string(T.t["7Xm5QI"]);
+        case f.rbe.GUILD_APP:
+            return T.intl.string(T.t.ZkcrC2);
+        case f.rbe.GUILD_DIRECTORY:
+        case f.rbe.LOBBY:
+        case f.rbe.DM_SDK:
+        case f.rbe.GUILD_SPACE:
+        case f.rbe.UNKNOWN:
         default:
             return null;
     }
@@ -168,6 +175,7 @@ function P(e) {
     if (e.type === f.rbe.GUILD_MEDIA) return t ? "media-nsfw" : "media";
     else if (e.type === f.rbe.GUILD_ANNOUNCEMENT)
         return t ? "announcement-nsfw" : n ? "announcement-spoiler" : "announcement";
+    else if (e.type === f.rbe.GUILD_APP) return t ? "app-nsfw" : n ? "app-spoiler" : "app";
     else if (d.k3.has(e.type)) return t ? "text-nsfw" : n ? "text-spoiler" : "text";
 }
 function U(e) {
@@ -207,6 +215,7 @@ function x(e) {
         case f.rbe.GUILD_TEXT:
         case f.rbe.GUILD_FORUM:
         case f.rbe.GUILD_MEDIA:
+        case f.rbe.GUILD_APP:
             return f.liQ.GUILD_CHANNEL;
         case f.rbe.GROUP_DM:
         case f.rbe.DM:

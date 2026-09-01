@@ -1178,6 +1178,9 @@ eV(
     eF(["INTEGRATION_CREATE"], (e) => {
         eH({ type: "INTEGRATION_CREATE", application: e.application, guildId: e.guild_id });
     }),
+    eF(["INTEGRATION_UPDATE"], (e) => {
+        eH({ type: "INTEGRATION_UPDATE", application: e.application, guildId: e.guild_id });
+    }),
     eF(["INTEGRATION_DELETE"], (e) => {
         eH({ type: "INTEGRATION_DELETE", applicationId: e.application_id, guildId: e.guild_id });
     }),

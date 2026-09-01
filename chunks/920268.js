@@ -9,6 +9,7 @@ let l = [
         s.rbe.GUILD_VOICE,
         s.rbe.GUILD_ANNOUNCEMENT,
         s.rbe.GUILD_FORUM,
+        s.rbe.GUILD_APP,
         s.rbe.PUBLIC_THREAD,
         s.rbe.PRIVATE_THREAD,
     ],

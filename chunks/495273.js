@@ -1,23 +1,23 @@
 n.d(e, {
-    Ae: () => H,
-    B4: () => A,
+    Ae: () => k,
+    B4: () => I,
     C$: () => L,
     D4: () => $,
-    Lq: () => D,
-    M2: () => R,
-    N8: () => y,
+    Lq: () => U,
+    M2: () => M,
+    N8: () => m,
     Vl: () => O,
     Wi: () => v,
     es: () => B,
     ld: () => Y,
     n0: () => W,
-    rT: () => M,
-    ro: () => P,
-    tP: () => k,
-    uB: () => V,
-    uX: () => w,
+    rT: () => y,
+    ro: () => b,
+    tP: () => V,
+    uB: () => H,
+    uX: () => R,
     uh: () => h,
-    vV: () => b,
+    vV: () => D,
 }),
     n(321073);
 var r = n(136722),
@@ -25,75 +25,75 @@ var r = n(136722),
     l = n(155718),
     u = n(95701),
     s = n(260509),
-    o = n(34457),
-    a = n(696451),
+    a = n(34457),
+    o = n(696451),
     d = n(287809),
-    T = n(871237),
+    T = n(147036),
     c = n(403362),
-    f = n(7864),
-    E = n(488926),
-    S = n(935208),
-    p = n(427262),
-    N = n(719366),
-    I = n(652215),
-    g = n(375708);
-function _(t) {
-    return (0, o._m)(t, I.xBc.ADMINISTRATOR);
+    E = n(7864),
+    f = n(488926),
+    N = n(935208),
+    A = n(427262),
+    S = n(719366),
+    _ = n(652215),
+    p = n(375708);
+function g(t) {
+    return (0, a._m)(t, _.xBc.ADMINISTRATOR);
 }
-function A(t) {
+function I(t) {
     let e = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-        n = _(t) ? N.T6.ADMINISTRATOR : N.T6.ROLE;
+        n = g(t) ? S.T6.ADMINISTRATOR : S.T6.ROLE;
     return {
         rowType: n,
-        colorString: t.colorString ?? I.TpD,
+        colorString: t.colorString ?? _.TpD,
         name: t.name,
         id: t.id,
-        disabled: _(t) || e,
+        disabled: g(t) || e,
         key: `${n}:${t.id}`,
         tags: t.tags,
     };
 }
 function h(t, e) {
-    let n = +!_(t),
-        r = +!_(e);
-    return n !== r ? n - r : (0, f.AT)(t, e);
+    let n = +!g(t),
+        r = +!g(e);
+    return n !== r ? n - r : (0, E.AT)(t, e);
 }
 function O() {
-    let t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : g.intl.string(g.t["gnsna/"]);
-    return [{ rowType: N.T6.EMPTY_STATE, colorString: I.TpD, name: t, disabled: !0, id: "EMPTY_STATE" }];
+    let t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : p.intl.string(p.t["gnsna/"]);
+    return [{ rowType: S.T6.EMPTY_STATE, colorString: _.TpD, name: t, disabled: !0, id: "EMPTY_STATE" }];
 }
-function m(t, e, n, i) {
+function P(t, e, n, i) {
     let l = d.default.getCurrentUser();
     if (null == l) return !1;
     if (null == t) return l.id !== e;
     let u = t.permissionOverwrites[e];
     return i?.[e] != null && (u = i[e]), null == u || !r.zy(u.allow, n);
 }
-function y(t, e) {
-    return S.default.castGuildIdAsEveryoneGuildRoleId(t) === e;
+function m(t, e) {
+    return N.default.castGuildIdAsEveryoneGuildRoleId(t) === e;
+}
+function y(t, e, n, r) {
+    let i = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : () => !0;
+    return e
+        .filter((t) => !g(t) && P(n, t.id, r) && !(0, a.Oy)(t) && i(t.name))
+        .sort(h)
+        .map((t) => I(t));
 }
 function M(t, e, n, r) {
     let i = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : () => !0;
     return e
-        .filter((t) => !_(t) && m(n, t.id, r) && !(0, o.Oy)(t) && i(t.name))
+        .filter((t) => !g(t) && P(n, t.id, r) && !(0, a.Oy)(t) && i(t.name))
         .sort(h)
-        .map((t) => A(t));
+        .map((t) => I(t, (0, a._m)(t, r)));
 }
-function R(t, e, n, r) {
-    let i = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : () => !0;
-    return e
-        .filter((t) => !_(t) && m(n, t.id, r) && !(0, o.Oy)(t) && i(t.name))
-        .sort(h)
-        .map((t) => A(t, (0, o._m)(t, r)));
-}
-function w(t, e, n, r, i) {
+function R(t, e, n, r, i) {
     let l = [];
     return 0 ===
         (l = e
-            .filter((t) => _(t) || (!m(n, t.id, r, i) && !(0, o.Oy)(t)))
+            .filter((t) => g(t) || (!P(n, t.id, r, i) && !(0, a.Oy)(t)))
             .sort(h)
-            .map((t) => A(t))).length
-        ? O(g.intl.string(g.t.nZfHsf))
+            .map((t) => I(t))).length
+        ? O(p.intl.string(p.t.nZfHsf))
         : l;
 }
 function L(t, e, n, i, l) {
@@ -102,103 +102,110 @@ function L(t, e, n, i, l) {
         (u = e
             .filter(
                 (t) =>
-                    _(t) ||
-                    (!m(n, t.id, i, l) && !(0, o.Oy)(t)) ||
+                    g(t) ||
+                    (!P(n, t.id, i, l) && !(0, a.Oy)(t)) ||
                     r.zy(r.kg(t.permissions, n.permissionOverwrites[t.id]?.allow), i),
             )
             .sort(h)
-            .map((t) => A(t, (0, o._m)(t, i)))).length
-        ? O(g.intl.string(g.t.nZfHsf))
+            .map((t) => I(t, (0, a._m)(t, i)))).length
+        ? O(p.intl.string(p.t.nZfHsf))
         : u;
 }
-function G(t, e) {
-    return a.Ay.getNick(e.id, t.id) ?? p.Ay.getName(t);
+function w(t, e) {
+    return o.Ay.getNick(e.id, t.id) ?? A.Ay.getName(t);
 }
-function C(t, e) {
-    let n = (0, s.bM)(e, t) ? N.T6.OWNER : N.T6.MEMBER;
+function C(t, e, n) {
+    let r = n === t.id ? S.T6.APP_CHANNEL_APP : (0, s.bM)(e, t) ? S.T6.OWNER : S.T6.MEMBER;
     return {
-        rowType: n,
-        name: G(t, e),
-        username: p.Ay.getUserTag(t),
+        rowType: r,
+        name: w(t, e),
+        username: A.Ay.getUserTag(t),
         id: t.id,
         avatarURL: t.getAvatarURL(e.id, 24),
         bot: t.bot,
         verifiedBot: t.isVerifiedBot(),
-        disabled: (0, s.bM)(e, t),
-        key: `${n}:${t.id}`,
+        disabled: (0, s.bM)(e, t) || r === S.T6.APP_CHANNEL_APP,
+        key: `${r}:${t.id}`,
     };
 }
-function U(t, e) {
+function G(t, e) {
     return t.rowType !== e.rowType
         ? t.rowType - e.rowType
         : t.name.toLocaleLowerCase().localeCompare(e.name.toLocaleLowerCase());
 }
-function D(t, e, n, r) {
-    let i = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : () => !0;
+function U(t, e, n, r) {
+    let { filter: i = () => !0, appChannelBotUserId: l } =
+        arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {};
     return t
         .map(d.default.getUser)
         .filter(c.Vq)
-        .filter((t) => !(0, s.bM)(n, t) && m(e, t.id, r) && (i(G(t, n)) || i(t.username) || i(t.discriminator)))
-        .map((t) => C(t, n))
-        .sort(U);
+        .filter((t) => !(0, s.bM)(n, t) && P(e, t.id, r) && (i(w(t, n)) || i(t.username) || i(t.discriminator)))
+        .map((t) => C(t, n, l))
+        .sort(G);
 }
-function v(t, e, n, r, i) {
+function v(t, e, n, r) {
+    let { permissionUpdates: i, appChannelBotUserId: l } =
+        arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {};
     return t
         .map(d.default.getUser)
         .filter(c.Vq)
-        .filter((t) => !m(e, t.id, r, i) || (0, s.bM)(n, t))
-        .map((t) => C(t, n))
-        .sort(U);
+        .filter((t) => !P(e, t.id, r, i) || (0, s.bM)(n, t))
+        .map((t) => C(t, n, l))
+        .sort(G);
 }
-function b(t, e) {
+function D(t, e) {
     switch (t) {
-        case N.T6.ROLE:
-            return g.intl.string(g.t.ZxoFOG);
-        case N.T6.OWNER:
-            return g.intl.string(g.t.NWhYJg);
-        case N.T6.ADMINISTRATOR:
-            return g.intl.string(g.t["dwlcc+"]);
-        case N.T6.MEMBER:
-            return e ? g.intl.string(g.t.UAJxZi) : null;
-        case N.T6.USER:
-            return g.intl.string(g.t.KD6OJJ);
-        case N.T6.GUILD:
-            return g.intl.string(g.t["5qyruI"]);
-        case N.T6.EMPTY_STATE:
+        case S.T6.ROLE:
+            return p.intl.string(p.t.ZxoFOG);
+        case S.T6.OWNER:
+            return p.intl.string(p.t.NWhYJg);
+        case S.T6.ADMINISTRATOR:
+            return p.intl.string(p.t["dwlcc+"]);
+        case S.T6.MEMBER:
+            return e ? p.intl.string(p.t.UAJxZi) : null;
+        case S.T6.APP_CHANNEL_APP:
+            return p.intl.string(p.t["z2/ML4"]);
+        case S.T6.USER:
+            return p.intl.string(p.t.KD6OJJ);
+        case S.T6.GUILD:
+            return p.intl.string(p.t["5qyruI"]);
+        case S.T6.EMPTY_STATE:
             return null;
     }
 }
-function P(t) {
+function b(t) {
     switch (t) {
-        case N.T6.ROLE:
-            return g.intl.string(g.t["Gzc/a8"]);
-        case N.T6.OWNER:
-            return g.intl.string(g.t.icuNBM);
-        case N.T6.ADMINISTRATOR:
-            return g.intl.string(g.t.eTmN5a);
-        case N.T6.MEMBER:
-            return g.intl.string(g.t["Gzc/a8"]);
-        case N.T6.EMPTY_STATE:
+        case S.T6.ROLE:
+            return p.intl.string(p.t["Gzc/a8"]);
+        case S.T6.OWNER:
+            return p.intl.string(p.t.icuNBM);
+        case S.T6.ADMINISTRATOR:
+            return p.intl.string(p.t.eTmN5a);
+        case S.T6.MEMBER:
+            return p.intl.string(p.t["Gzc/a8"]);
+        case S.T6.APP_CHANNEL_APP:
+            return p.intl.string(p.t.v05vEp);
+        case S.T6.EMPTY_STATE:
         default:
             return null;
     }
 }
 function B(t, e, n) {
     let i = t.permissionOverwrites[t.guild_id];
-    null == i && (i = E.xT(t.guild_id));
+    null == i && (i = f.xT(t.guild_id));
     let l = { ...i };
     return (l.deny = r.TF(l.deny, e)), (l.allow = r.TF(l.allow, e)), n || (l.deny = r.WQ(l.deny, e)), l;
 }
-function V(t, e, n) {
+function H(t, e, n) {
     let r = B(t, e, n);
     (0, i.LA)(t, r.id, r.allow, r.deny);
 }
-function k(t, e) {
+function V(t, e) {
     let n = d.default.getCurrentUser();
     if (null == n) return;
     let u = t.permissionOverwrites[n.id];
     if (null == u) {
-        let u = { id: n.id, type: l.r2.MEMBER, allow: r.WQ(E.x3, e), deny: E.x3 };
+        let u = { id: n.id, type: l.r2.MEMBER, allow: r.WQ(f.x3, e), deny: f.x3 };
         return (0, i.R$)(t.id, [u], !0);
     }
     {
@@ -206,25 +213,26 @@ function k(t, e) {
         return (n = r.WQ(n, e)), (0, i.LA)(t, u.id, n, l);
     }
 }
-function H(t, e) {
+function k(t, e) {
     if (null == t) return !1;
     let n = t.permissionOverwrites[t.guild_id];
     return e?.[t.guild_id] != null && (n = e[t.guild_id]), null != n && r.zy(n.deny, t.accessPermissions);
 }
 function W(t, e, n) {
-    return t === I.rbe.GUILD_TEXT || t === I.rbe.GUILD_ANNOUNCEMENT
+    return t === _.rbe.GUILD_TEXT || t === _.rbe.GUILD_ANNOUNCEMENT || t === _.rbe.GUILD_APP
         ? e
-        : (!(0, u.ay)(t) && t !== I.rbe.GUILD_CATEGORY) || (e && n);
+        : (!(0, u.ay)(t) && t !== _.rbe.GUILD_CATEGORY) || (e && n);
 }
 function Y(t) {
     switch (t) {
-        case I.rbe.GUILD_TEXT:
-        case I.rbe.GUILD_ANNOUNCEMENT:
-            return g.intl.format(g.t.ZDtA0T, {});
-        case I.rbe.GUILD_VOICE:
-            return g.intl.format(g.t.iZAMty, {});
-        case I.rbe.GUILD_CATEGORY:
-            return g.intl.format(g.t.PhnARV, {});
+        case _.rbe.GUILD_TEXT:
+        case _.rbe.GUILD_ANNOUNCEMENT:
+        case _.rbe.GUILD_APP:
+            return p.intl.format(p.t.ZDtA0T, {});
+        case _.rbe.GUILD_VOICE:
+            return p.intl.format(p.t.iZAMty, {});
+        case _.rbe.GUILD_CATEGORY:
+            return p.intl.format(p.t.PhnARV, {});
         default:
             return null;
     }
@@ -236,9 +244,9 @@ function $(t, e) {
             let { row: r } = t;
             null != r.id &&
                 "" !== r.id &&
-                (r.rowType === N.T6.ROLE
+                (r.rowType === S.T6.ROLE
                     ? n.push((0, T.we)(r.id, e))
-                    : r.rowType === N.T6.MEMBER && n.push((0, T.n3)(r.id, e)));
+                    : r.rowType === S.T6.MEMBER && n.push((0, T.n3)(r.id, e)));
         }),
         n
     );

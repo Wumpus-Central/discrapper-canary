@@ -1527,6 +1527,7 @@ let nM = "",
         SEARCH_TABS_DMS: "/users/@me/messages/search/tabs",
         CHANGELOG_MESSAGES: "/changelogs/@me/messages",
         GUILD_APPLICATIONS: (e) => `/guilds/${e}/applications`,
+        GUILD_EMBEDDED_APPLICATIONS: (e) => `/guilds/${e}/embedded-applications`,
         APPLIED_GUILD_BOOSTS_FOR_GUILD: (e) => `/guilds/${e}/premium/subscriptions`,
         APPLIED_GUILD_BOOST: (e, t) => `/guilds/${e}/premium/subscriptions/${t}`,
         APPLIED_GUILD_BOOST_COOLDOWN: "/users/@me/guilds/premium/subscriptions/cooldown",
@@ -6356,6 +6357,7 @@ var aX =
     aQ = (((tb = {}).LOADING = "LOADING"), (tb.ERROR = "ERROR"), (tb.READY = "READY"), tb);
 let aJ = Object.freeze({
         APPLICATIONS: (e) => (null != e ? `applications/${e}` : null),
+        GUILD_EMBEDDED_APPLICATIONS: (e, t) => (null != t ? `guild-embedded-applications/${t}/${e}` : null),
         APP_PREMIUM_BUTTON: (e) => (null != e ? `premium-button/${e}` : null),
         CUSTOM_ACTIVITY_LINK: (e, t) => (null != e && null != t ? `custom-activity-links/${e}/${t}` : null),
         SKU: (e) => (null != e ? `sku/${e}` : null),

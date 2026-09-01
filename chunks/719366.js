@@ -6,7 +6,7 @@ r(582128);
 var c = r(834730),
     l = r(695366),
     s = r(375708);
-function a(t, e) {
+function _(t, e) {
     return (0, E.jsxs)(
         c.E,
         {
@@ -18,7 +18,7 @@ function a(t, e) {
         e,
     );
 }
-function _(t, e) {
+function a(t, e) {
     return (0, E.jsxs)(
         c.E,
         {
@@ -41,6 +41,7 @@ var A = r(780964),
         (i[(i.MEMBER = 4)] = "MEMBER"),
         (i[(i.USER = 5)] = "USER"),
         (i[(i.GUILD = 6)] = "GUILD"),
+        (i[(i.APP_CHANNEL_APP = 7)] = "APP_CHANNEL_APP"),
         i),
     G =
         (((n = {})[(n.ROLES = 0)] = "ROLES"),
@@ -132,7 +133,7 @@ function u(t, e, i) {
                         return s.t.IjeLuu;
                     case T.rbe.GUILD_FORUM:
                         return i?.createPostsDisabled && !t.isMediaChannel()
-                            ? s.intl.format(s.t.zlXUVY, { warningHook: a })
+                            ? s.intl.format(s.t.zlXUVY, { warningHook: _ })
                             : s.t.LG9VAi;
                     case T.rbe.GUILD_MEDIA:
                         return s.t.LG9VAi;
@@ -142,7 +143,7 @@ function u(t, e, i) {
                         });
                     case T.rbe.GUILD_VOICE:
                         return i?.sendMessagesDisabled
-                            ? s.intl.format(s.t.Q1rwpr, { warningHook: _ })
+                            ? s.intl.format(s.t.Q1rwpr, { warningHook: a })
                             : s.intl.string(s.t.WQ6zpT);
                     default:
                         return s.t.WQ6zpT;
@@ -229,7 +230,7 @@ function u(t, e, i) {
                         return s.t["cJRv/g"];
                     case T.rbe.GUILD_VOICE:
                         return i?.readMessageHistoryDisabled
-                            ? s.intl.format(s.t.Rx4pbJ, { warningHook: _ })
+                            ? s.intl.format(s.t.Rx4pbJ, { warningHook: a })
                             : s.intl.string(s.t.cuMfH0);
                     case T.rbe.GUILD_FORUM:
                     case T.rbe.GUILD_MEDIA:

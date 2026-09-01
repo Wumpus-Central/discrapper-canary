@@ -47,6 +47,7 @@ let v = g.XlH.CLOSED,
         "defaultTagSetting",
         "iconEmoji",
         "themeColor",
+        "application_id",
     ];
 function D(e, t, n) {
     switch (e) {
@@ -249,6 +250,7 @@ let k = new F(h.h, {
                 defaultTagSetting: C,
                 iconEmoji: p,
                 themeColor: L,
+                applicationId: g,
             } = e;
             if (null == a) return !1;
             null != t && (a = a.set("name", t)),
@@ -274,6 +276,7 @@ let k = new F(h.h, {
                 null != A && (a = a.set("defaultForumLayout", A)),
                 void 0 !== p && (a = a.set("iconEmoji", p)),
                 null != L && (a = a.set("themeColor", L)),
+                null != g && (a = a.set("application_id", g)),
                 P();
         },
         CHANNEL_SETTINGS_SET_SECTION: b,
