@@ -175,7 +175,12 @@ function X(e) {
                 (function (e, t) {
                     let { skuId: n, paymentSourceType: i, isGift: r } = t;
                     return e === c.C.SLAYER_STOREFRONT_CHECKOUT
-                        ? (0, l.jsx)(H.EB, { paymentSourceType: i, skuId: n, isGift: r })
+                        ? (0, l.jsx)(H.EB, {
+                              paymentSourceType: i,
+                              skuId: n,
+                              isGift: r,
+                              hasSeparateAccountLinkNotice: !0,
+                          })
                         : (0, l.jsx)(H.T3, { paymentSourceType: i });
                 })(n, { skuId: f.id, paymentSourceType: a, isGift: s }),
             [n, f.id, a, s],
