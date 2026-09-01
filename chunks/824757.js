@@ -6,6 +6,8 @@ e.exports = {
     p_: "list_af6837",
     Aw: "listItem_af6837",
     uX: "commandRow_af6837",
+    a9: "sectionLabel_af6837",
+    bk: "designNote_af6837",
     xX: "design_af6837",
     sN: "designImage_af6837",
     Ip: "chips_af6837",

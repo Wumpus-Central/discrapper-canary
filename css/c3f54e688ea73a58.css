@@ -894,6 +894,25 @@
     min-width: 0
 }
 
+.sectionLabel_af6837 {
+    align-items: center;
+    display: flex;
+    gap: var(--space-4);
+    min-width: 0
+}
+
+.designNote_af6837 {
+    align-items: center;
+    border-radius: var(--radius-round);
+    color: var(--icon-muted);
+    display: inline-flex
+}
+
+.designNote_af6837:focus-visible,
+.designNote_af6837:hover {
+    color: var(--icon-default)
+}
+
 .design_af6837 {
     aspect-ratio: 3/2;
     background: var(--background-base-lower);
@@ -2648,4 +2667,4 @@
     padding: var(--space-12)
 }
 
-/*# sourceMappingURL=2314925c9e0b59fa.css.map*/
+/*# sourceMappingURL=c3f54e688ea73a58.css.map*/
