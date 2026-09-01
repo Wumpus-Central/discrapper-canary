@@ -430,8 +430,8 @@ let e3 = (0, eQ.L_)((e, t, n) => ["null", ...t, ...e, e0, eS.sFm.E3_SERVER_DISCO
         });
     });
 n(667532);
-var e6 = n(868285),
-    e4 = n(763827),
+var e4 = n(868285),
+    e6 = n(763827),
     e7 = n(221877),
     e8 = n(778712),
     e9 = n(812993),
@@ -776,7 +776,7 @@ let tp = s.forwardRef(function (e, t) {
     let n = e.channel.id,
         i = (0, ti.Ay)(e.channel),
         r = (0, _.Vd)(n, 2),
-        s = (0, A.bG)([e4.A], () => e4.A.getChannelId(), []),
+        s = (0, A.bG)([e6.A], () => e6.A.getChannelId(), []),
         l = (0, A.bG)([y.A], () => y.A.getMode(n), [n]),
         o = (0, A.bG)([j.A], () => j.A.getAllApplicationStreamsForChannel(n).length > 0),
         d = (0, A.bG)([em.Ay], () => em.Ay.getVoiceStatesForChannel(e.channel).length > 0, [e.channel]),
@@ -809,9 +809,9 @@ function tT() {
     (0, A.bG)([W.A], () => W.A.getPrivateChannelsVersion());
     let e = W.A.getMutablePrivateChannels(),
         t = (0, A.yK)([eK.A], () => eK.A.getUnreadPrivateChannelIds()),
-        { selectedVoiceGuildId: n, selectedVoiceChannelId: i } = (0, A.cf)([e4.A], () => ({
-            selectedVoiceGuildId: e4.A.getGuildId(),
-            selectedVoiceChannelId: e4.A.getChannelId(),
+        { selectedVoiceGuildId: n, selectedVoiceChannelId: i } = (0, A.cf)([e6.A], () => ({
+            selectedVoiceGuildId: e6.A.getGuildId(),
+            selectedVoiceChannelId: e6.A.getChannelId(),
         })),
         r = t.map((t) => {
             let n = e[t];
@@ -826,7 +826,7 @@ function tT() {
             "aria-label": es.intl.string(es.t.YUU0RF),
             gap: "xs",
             hidden: r.length < 1,
-            children: (0, a.jsx)(e6.F, { component: s.Fragment, children: r }),
+            children: (0, a.jsx)(e4.F, { component: s.Fragment, children: r }),
         })
     );
 }
@@ -1168,8 +1168,8 @@ function t3(e) {
     });
 }
 var t5 = n(696292),
-    t6 = n(836480),
-    t4 = n(533129),
+    t4 = n(836480),
+    t6 = n(533129),
     t7 = n(726845),
     t8 = n(837057),
     t9 = n(310419),
@@ -1179,7 +1179,7 @@ var t5 = n(696292),
 let ni = s.forwardRef(function (e, t) {
     let { selected: n, onClick: i, questId: r, className: l } = e,
         o = s.useCallback(() => {
-            (0, t4.WL)({ source: ne.GlobalDiscoveryAnalyticsLocations.GUILDS_BAR_ICON });
+            (0, t6.WL)({ source: ne.GlobalDiscoveryAnalyticsLocations.GUILDS_BAR_ICON });
             let e = void 0 !== r ? ne.GlobalDiscoveryTab.QUESTS : t7.A.getField("selectedTab");
             switch (e) {
                 case ne.GlobalDiscoveryTab.QUESTS:
@@ -1215,7 +1215,7 @@ let ni = s.forwardRef(function (e, t) {
         },
         selected: n,
         tooltip: es.intl.string(es.t["4nEZLk"]),
-        icon: t6.CompassIcon,
+        icon: t4.CompassIcon,
     });
 });
 var nr = n(506774),
@@ -1532,8 +1532,8 @@ function n1(e) {
 var n2 = n(114329),
     n3 = n(937067);
 let n5 = (0, nW.xI)(nV.A.FOLDER_ITEM_ANIMATION_DURATION),
-    n6 = (0, e7.animated)(p.B),
-    n4 = s.memo(function (e) {
+    n4 = (0, e7.animated)(p.B),
+    n6 = s.memo(function (e) {
         var t;
         let n,
             i,
@@ -1656,7 +1656,7 @@ let n5 = (0, nW.xI)(nV.A.FOLDER_ITEM_ANIMATION_DURATION),
                     return (
                         t &&
                         (0, a.jsx)(
-                            n6,
+                            n4,
                             {
                                 id: z,
                                 role: "group",
@@ -1707,13 +1707,13 @@ let n8 = s.memo(function (e) {
             return `${i.join(", ")}${i.length < t.length ? ", ..." : ""}`;
         })(I),
         R =
-            ((t = (0, A.bG)([e4.A], () => e4.A.getGuildId())),
+            ((t = (0, A.bG)([e6.A], () => e6.A.getGuildId())),
             (i = I.children.map((e) => e.id)),
             (r = null != t && i.includes(t)),
             (l = !1),
             (o = !1),
             (d = !1),
-            (c = (0, A.bG)([e4.A], () => e4.A.getChannelId())),
+            (c = (0, A.bG)([e6.A], () => e6.A.getChannelId())),
             (_ = null != (u = (0, n7.A)()?.guild_id) && i.includes(u)),
             (E = (0, A.bG)([K.A], () => null != c && K.A.hasVideo(c), [c])),
             (h = (0, A.bG)([j.A], () => j.A.getCurrentUserActiveStream())),
@@ -1744,7 +1744,7 @@ let n8 = s.memo(function (e) {
             },
             [p, T, m, D, L],
         );
-    return (0, a.jsx)(n4, {
+    return (0, a.jsx)(n6, {
         ...f,
         folderNode: I,
         expanded: C,
@@ -2667,16 +2667,17 @@ function iJ(e, t) {
             n.e("892471"),
             n.e("943780"),
             n.e("720590"),
+            n.e("174630"),
             n.e("884601"),
             n.e("31267"),
             n.e("480830"),
             n.e("451224"),
             n.e("179745"),
+            n.e("448948"),
             n.e("334409"),
             n.e("280854"),
             n.e("335395"),
             n.e("981004"),
-            n.e("174630"),
             n.e("428967"),
             n.e("692215"),
             n.e("886246"),
@@ -2684,10 +2685,10 @@ function iJ(e, t) {
             n.e("146844"),
             n.e("163235"),
             n.e("94983"),
+            n.e("588070"),
             n.e("859546"),
             n.e("486672"),
             n.e("75029"),
-            n.e("448948"),
             n.e("963244"),
             n.e("632756"),
             n.e("564850"),
@@ -3148,8 +3149,8 @@ let i2 = s.memo(function (e) {
 });
 var i3 = n(922016),
     i5 = n(297264),
-    i6 = n(821609),
-    i4 = n(339350),
+    i4 = n(821609),
+    i6 = n(339350),
     i7 = n(475743),
     i8 = n(624458),
     i9 = n(408213),
@@ -3227,7 +3228,7 @@ function ra(e) {
                                                 }),
                                             ],
                                         }),
-                                        (0, a.jsx)(i6.$, {
+                                        (0, a.jsx)(i4.$, {
                                             variant: "primary",
                                             size: "sm",
                                             text: es.intl.string(es.t["4r+amb"]),
@@ -3278,7 +3279,7 @@ function rs(e) {
         ? null
         : (0, a.jsx)(ra, {
               onActivate: t,
-              children: (0, a.jsx)(n4, {
+              children: (0, a.jsx)(n6, {
                   folderNode: c,
                   expanded: n,
                   selected: u,
@@ -3290,7 +3291,7 @@ function rs(e) {
                   folderButtonSize: "icon",
                   folderButtonContent: (0, a.jsx)("div", {
                       className: rr.rH,
-                      children: (0, a.jsx)(i4.Q, { size: "sm", color: "currentColor" }),
+                      children: (0, a.jsx)(i6.Q, { size: "sm", color: "currentColor" }),
                   }),
                   renderChildNode: function (e, t, n) {
                       return e.type !== eH.PJ.GUILD

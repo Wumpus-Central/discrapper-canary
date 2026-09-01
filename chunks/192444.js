@@ -38,7 +38,18 @@ let d = (0, a.mj)({
     kind: "user",
     defaultConfig: { enabled: !1 },
     variations: { 1: { enabled: !0 } },
-});
+}),
+    (0, a.mj)({
+        name: "2026-08-bounties-ctr-experiment-1",
+        kind: "user",
+        defaultConfig: { enabled: !1, variant: 0 },
+        variations: {
+            0: { enabled: !1, variant: 0 },
+            1: { enabled: !0, variant: 1 },
+            2: { enabled: !0, variant: 2 },
+            3: { enabled: !0, variant: 3 },
+        },
+    });
 let C = (0, a.mj)({
     name: "2026-07-ios-attribution",
     kind: "user",
