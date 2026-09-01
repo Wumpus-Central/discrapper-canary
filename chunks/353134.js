@@ -1,8 +1,8 @@
 s.d(a, { A: () => r });
-var t = s(728639);
+var t = s(807853);
 async function r() {
     let e = await p(),
-        [a, r] = await Promise.all([(0, t.LM)(new URL(s(260501), s.b)), (0, t.LM)(new URL(s(658775), s.b))]),
+        [a, r] = await Promise.all([(0, t.LM)(new URL(s(79445), s.b)), (0, t.LM)(new URL(s(531031), s.b))]),
         i = await e({ wasmBinary: a }),
         g = await i.loadWebAssemblyModule(r, { loadAsync: !0 });
     return new n(i, g);
@@ -111,7 +111,7 @@ class g {
             this.#t(
                 "parse-failed",
                 (e, a) => this.grammar.runtime.abi.arborium_rt_parse_utf16(this.id, e, a),
-                (e) => (0 === e.length ? { spans: [], injections: [], timed_out: !1 } : JSON.parse(e)),
+                (e) => (0 === e.length ? { spans: [], injections: [], fuel_used: 0, out_of_fuel: !1 } : JSON.parse(e)),
             )
         );
     }
@@ -122,9 +122,16 @@ class g {
                 "highlight-failed",
                 (e, s) => this.grammar.runtime.abi.arborium_rt_highlight_to_spans_utf16(this.id, a, e, s),
                 (e) =>
-                    0 === e.length ? { spans: [], missing_injections: [], timed_out_languages: [] } : JSON.parse(e),
+                    0 === e.length
+                        ? { spans: [], missing_injections: [], out_of_fuel_languages: [], fuel_used: 0 }
+                        : JSON.parse(e),
             );
-        return { spans: s.spans, missingInjections: s.missing_injections, timedOutLanguages: s.timed_out_languages };
+        return {
+            spans: s.spans,
+            missingInjections: s.missing_injections,
+            outOfFuelLanguages: s.out_of_fuel_languages,
+            fuelUsed: s.fuel_used,
+        };
     }
     highlightToHtml(e = {}) {
         this.#a();
@@ -148,9 +155,17 @@ class g {
             let e = this.#t(
                 "highlight-failed",
                 (e, s) => this.grammar.runtime.abi.arborium_rt_highlight_to_html(this.id, a, n, g, p, e, s),
-                (e) => (0 === e.length ? { html: "", missing_injections: [], timed_out_languages: [] } : JSON.parse(e)),
+                (e) =>
+                    0 === e.length
+                        ? { html: "", missing_injections: [], out_of_fuel_languages: [], fuel_used: 0 }
+                        : JSON.parse(e),
             );
-            return { html: e.html, missingInjections: e.missing_injections, timedOutLanguages: e.timed_out_languages };
+            return {
+                html: e.html,
+                missingInjections: e.missing_injections,
+                outOfFuelLanguages: e.out_of_fuel_languages,
+                fuelUsed: e.fuel_used,
+            };
         } finally {
             g && r._free(g);
         }
@@ -185,5 +200,5 @@ class g {
     }
 }
 async function p() {
-    return (await s.e("532914").then(s.bind(s, 184009))).default;
+    return (await s.e("379098").then(s.bind(s, 623777))).default;
 }
