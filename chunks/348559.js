@@ -1,63 +1,65 @@
-s.d(e, { default: () => S });
+s.d(e, { default: () => p });
 var i = s(477900),
     n = s(582128),
-    r = s(189213),
+    r = s(323889),
+    a = s(189213),
     l = s(834730),
     c = s(664121),
-    a = s(998445),
-    o = s(950305),
-    u = s(687966),
-    d = s(885386),
-    m = s(975571),
-    g = s(738822),
-    x = s(651892),
-    h = s(792620),
-    T = s(652215),
+    o = s(998445),
+    u = s(950305),
+    d = s(687966),
+    m = s(885386),
+    g = s(975571),
+    x = s(738822),
+    h = s(651892),
+    T = s(792620),
+    E = s(652215),
     f = s(375708),
-    E = s(738541);
-function S(t) {
-    let { transitionState: e, onClose: s, questContent: c, quest: a, returnRef: o } = t,
-        u = d.H1.useSetting(),
-        S = (function (t) {
+    S = s(738541);
+function p(t) {
+    let { transitionState: e, onClose: s, questContent: c, quest: o, returnRef: u } = t,
+        d = m.H1.useSetting(),
+        p = (function (t) {
             switch (t) {
-                case g.uF.QUEST_BAR:
-                case g.uF.QUEST_BAR_V2:
+                case x.uF.QUEST_BAR:
+                case x.uF.QUEST_BAR_V2:
                     return { location: !0, age: !0, activity: !0 };
-                case g.uF.ACTIVITY_PANEL:
-                case g.uF.QUESTS_EMBED:
-                case g.uF.QUEST_LIVE_STREAM:
+                case x.uF.ACTIVITY_PANEL:
+                case x.uF.QUESTS_EMBED:
+                case x.uF.QUEST_LIVE_STREAM:
                     return { activity: !0 };
                 default:
                     return;
             }
         })(c),
-        p = n.useMemo(
+        C = n.useMemo(
             () =>
-                (0, x.JM)({
-                    isTargetedDisclosure: null != S,
-                    isContextualDisclosure: u,
-                    gamePublisher: a.config.messages.gamePublisher,
-                    gameTitle: a.config.messages.gameTitle,
-                    cosponsorName: a.config.cosponsorMetadata?.name,
-                    isVideoQuest: (0, h.vv)(a),
+                (0, h.JM)({
+                    adCreativeType: r.p.QUEST,
+                    isTargetedDisclosure: null != p,
+                    isContextualDisclosure: d,
+                    gamePublisher: o.config.messages.gamePublisher,
+                    gameTitle: o.config.messages.gameTitle,
+                    cosponsorName: o.config.cosponsorMetadata?.name,
+                    isVideoQuest: (0, T.vv)(o),
                 }),
-            [a, S, u],
+            [o, p, d],
         );
-    return (0, i.jsxs)(r.Modal, {
+    return (0, i.jsxs)(a.Modal, {
         size: "sm",
         transitionState: e,
         onClose: s,
-        returnRef: o,
+        returnRef: u,
         title: f.intl.string(f.t.GcsZKJ),
         actions: [{ onClick: () => s(), text: f.intl.string(f.t.cpT0Cq) }],
         children: [
-            (0, i.jsx)(l.E, { variant: "text-sm/medium", color: "text-default", className: E.gt, children: p }),
-            (0, i.jsx)(j, { targetedTraits: S, isContextualDisclosure: u }),
+            (0, i.jsx)(l.E, { variant: "text-sm/medium", color: "text-default", className: S.gt, children: C }),
+            (0, i.jsx)(j, { targetedTraits: p, isContextualDisclosure: d }),
             (0, i.jsx)(l.E, {
                 variant: "text-xs/medium",
                 color: "text-muted",
                 children: f.intl.format(f.t.tzq9Wa, {
-                    privacySettingsUrl: m.A.getArticleURL(T.MVz.QUESTS_PRIVACY_CONTROLS),
+                    privacySettingsUrl: g.A.getArticleURL(E.MVz.QUESTS_PRIVACY_CONTROLS),
                 }),
             }),
         ],
@@ -68,25 +70,25 @@ function j(t) {
     if (null == e) return null;
     if (s)
         return (0, i.jsx)("ul", {
-            className: E.OK,
-            children: (0, i.jsx)(p, { icon: c.R, children: f.intl.string(f.t["2bL0wT"]) }),
+            className: S.OK,
+            children: (0, i.jsx)(C, { icon: c.R, children: f.intl.string(f.t["2bL0wT"]) }),
         });
-    let { location: n, age: r, activity: l } = e;
+    let { location: n, age: r, activity: a } = e;
     return (0, i.jsxs)("ul", {
-        className: E.OK,
+        className: S.OK,
         children: [
-            n && (0, i.jsx)(p, { icon: a.GlobeEarthIcon, children: f.intl.string(f.t.xQSdPv) }),
-            r && (0, i.jsx)(p, { icon: o.UserIcon, children: f.intl.string(f.t.mYt7hQ) }),
-            l && (0, i.jsx)(p, { icon: u.GameControllerIcon, children: f.intl.string(f.t.XAsWxQ) }),
+            n && (0, i.jsx)(C, { icon: o.GlobeEarthIcon, children: f.intl.string(f.t.xQSdPv) }),
+            r && (0, i.jsx)(C, { icon: u.UserIcon, children: f.intl.string(f.t.mYt7hQ) }),
+            a && (0, i.jsx)(C, { icon: d.GameControllerIcon, children: f.intl.string(f.t.XAsWxQ) }),
         ],
     });
 }
-function p(t) {
+function C(t) {
     let { icon: e, children: s } = t;
     return (0, i.jsxs)(l.E, {
         variant: "text-sm/medium",
         tag: "li",
-        className: E.hD,
+        className: S.hD,
         children: [(0, i.jsx)(e, { size: "xs", color: "currentColor" }), s],
     });
 }

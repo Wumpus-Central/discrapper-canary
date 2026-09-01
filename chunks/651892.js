@@ -1,14 +1,14 @@
 "use strict";
 n.d(t, {
-    JM: () => _,
-    Js: () => A,
-    Jx: () => f,
-    Xm: () => p,
+    JM: () => E,
+    Js: () => h,
+    Jx: () => p,
+    Xm: () => T,
     YT: () => u,
-    fx: () => I,
-    up: () => h,
-    wr: () => E,
-    xv: () => T,
+    fx: () => f,
+    up: () => I,
+    wr: () => A,
+    xv: () => m,
 });
 var i = n(323889),
     r = n(274670),
@@ -34,31 +34,39 @@ function u(e) {
     }
     return c.intl.formatToPlainString(c.t.EQa7os, { questName: t.config.messages.questName });
 }
-function _(e) {
-    let {
-        isTargetedDisclosure: t,
-        isContextualDisclosure: n,
-        isVideoQuest: i,
-        gamePublisher: r,
-        gameTitle: a,
-        cosponsorName: s,
-    } = e;
-    if (t) {
-        if (n) return c.intl.string(c.t.nPg6f1);
-        let e =
-            null == s
-                ? c.intl.formatToPlainString(c.t.Piihy1, { gamePublisher: r })
-                : c.intl.formatToPlainString(c.t.DV47Gy, { gamePublisher: r, cosponsorName: s });
-        return `${e} ${c.intl.string(c.t.fEbrT8)}`;
-    }
-    return i
-        ? c.intl.formatToPlainString(c.t.zDHY3s, { gamePublisher: r })
-        : c.intl.formatToPlainString(c.t.euizJY, { gamePublisher: r, gameTitle: a });
-}
+let _ = {
+    [i.p.QUEST]: { signals: c.t.fEbrT8, contextualSignals: c.t.nPg6f1 },
+    [i.p.BOUNTY]: { signals: c.t.Wx2B4V, contextualSignals: c.t.f7iZVO },
+};
 function E(e) {
-    return e.config.ctaConfig.buttonLabel;
+    let {
+            adCreativeType: t,
+            isTargetedDisclosure: n,
+            isContextualDisclosure: r,
+            isVideoQuest: a,
+            gamePublisher: s,
+            gameTitle: l,
+            cosponsorName: o,
+        } = e,
+        d = _[t];
+    if (n) {
+        if (r) return c.intl.string(d.contextualSignals);
+        let e =
+            null == o
+                ? c.intl.formatToPlainString(c.t.Piihy1, { gamePublisher: s })
+                : c.intl.formatToPlainString(c.t.DV47Gy, { gamePublisher: s, cosponsorName: o });
+        return `${e} ${c.intl.string(d.signals)}`;
+    }
+    return t !== i.p.QUEST
+        ? c.intl.string(d.signals)
+        : a
+          ? c.intl.formatToPlainString(c.t.zDHY3s, { gamePublisher: s })
+          : c.intl.formatToPlainString(c.t.euizJY, { gamePublisher: s, gameTitle: l ?? "" });
 }
 function A(e) {
+    return e.config.ctaConfig.buttonLabel;
+}
+function h(e) {
     switch (e) {
         case d.kL.SUGGESTED:
             return c.intl.string(c.t.gBfXPZ);
@@ -70,7 +78,7 @@ function A(e) {
             return c.intl.string(c.t["BB+2tX"]);
     }
 }
-function h(e) {
+function I(e) {
     switch (e) {
         case d.BQ.VIRTUAL_CURRENCY:
             return c.intl.string(c.t.ElYQFS);
@@ -84,7 +92,7 @@ function h(e) {
             return c.intl.string(c.t["1nJR4p"]);
     }
 }
-function I(e) {
+function f(e) {
     switch (e) {
         case "reward":
             return c.intl.string(c.t.vjLqAU);
@@ -92,10 +100,10 @@ function I(e) {
             return c.intl.string(c.t.Hufmss);
     }
 }
-function f(e) {
+function p(e) {
     return e.ctaConfig.link;
 }
-function p(e, t) {
+function T(e, t) {
     let { ctaContent: n } = t;
     (0, l.E5)(l.kI.STEP_2_CLICKED_INTERNAL, "copy_share_link")
         ? (0, r.r)({
@@ -118,7 +126,7 @@ function p(e, t) {
           }),
         (0, s.C)(`${location.protocol}//${location.host}/quests/${e}`);
 }
-function T(e) {
+function m(e) {
     if (0 === e.rewardsConfig.rewards.length) throw Error(`Quest ${e.id} has no rewards configured`);
     return e.rewardsConfig.rewards[0];
 }
