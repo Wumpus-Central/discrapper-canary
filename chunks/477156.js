@@ -202,7 +202,7 @@ var ep = s(830012);
 s(393431), s(532706), s(42231), s(232424), s(949626), s(767709), s(65162), s(508300);
 var em = s(344390),
     ej = s(742459),
-    eg = s(183208);
+    eg = s(780907);
 async function ev() {
     let e = _.Ay.getRunningGames();
     return (
@@ -1405,8 +1405,8 @@ var eX = s(843402),
     eJ = s(290805),
     eK = s(971276),
     e1 = s(639214),
-    e2 = s(205434);
-function e0(e, t, s, i) {
+    e0 = s(205434);
+function e2(e, t, s, i) {
     let l = (0, M.isWindows)() ? (0, G.A)(_.Ay, R.A) : null,
         r = _.Ay.getRunningGames(),
         n = s?.split(":")[1],
@@ -1424,7 +1424,7 @@ function e5(e) {
         ? (0, i.jsx)(p.k, { size: "xs" })
         : t.id.startsWith(d.fS.WINDOW)
           ? null != t.icon && "" !== t.icon
-              ? (0, i.jsx)("img", { src: t.icon, className: e2.pI, alt: "" })
+              ? (0, i.jsx)("img", { src: t.icon, className: e0.pI, alt: "" })
               : (0, i.jsx)(h.W, { size: "xs" })
           : (0, i.jsx)(x.VideoIcon, { size: "xs" });
 }
@@ -1433,18 +1433,18 @@ function e3(e) {
         { url: a, name: c } = t;
     return (0, i.jsxs)(P.D, {
         onClick: () => l(t),
-        className: n()(e2.sP, { [e2.Lv]: s }),
+        className: n()(e0.sP, { [e0.Lv]: s }),
         children: [
             (0, i.jsx)("div", {
-                className: e2.ji,
+                className: e0.ji,
                 children: (0, i.jsxs)("div", {
-                    className: e2.KG,
+                    className: e0.KG,
                     children: [
-                        (0, i.jsx)("img", { src: a, className: e2.f5, alt: "" }),
+                        (0, i.jsx)("img", { src: a, className: e0.f5, alt: "" }),
                         (0, i.jsx)("div", {
-                            className: e2.qe,
+                            className: e0.qe,
                             children: (0, i.jsx)("div", {
-                                className: e2.K3,
+                                className: e0.K3,
                                 children: (0, i.jsx)(F.E, {
                                     variant: "text-sm/medium",
                                     color: "currentColor",
@@ -1456,10 +1456,10 @@ function e3(e) {
                 }),
             }),
             (0, i.jsxs)("div", {
-                className: e2.Uw,
+                className: e0.Uw,
                 children: [
                     (0, i.jsx)(e5, { source: t }),
-                    (0, i.jsx)(F.E, { variant: "text-sm/medium", className: e2.VZ, children: c }),
+                    (0, i.jsx)(F.E, { variant: "text-sm/medium", className: e0.VZ, children: c }),
                 ],
             }),
         ],
@@ -1503,7 +1503,7 @@ function e4(e) {
                 return null;
             }, [s, t, j, n]));
     l.useEffect(() => ((0, eX.a2)(), eX.e0), []);
-    let A = l.useMemo(() => [...n].sort((e, t) => e0(t, S?.source.id, p, v) - e0(e, S?.source.id, p, v)), [S, n, p, v]);
+    let A = l.useMemo(() => [...n].sort((e, t) => e2(t, S?.source.id, p, v) - e2(e, S?.source.id, p, v)), [S, n, p, v]);
     if (h) {
         if (!1 === m) {
             let e = !1;
@@ -1512,10 +1512,10 @@ function e4(e) {
                 e = !eJ.M || "0.0.0" === t || c().satisfies(t, "0.0.363");
             }
             return (0, i.jsxs)("div", {
-                className: e2.Ye,
+                className: e0.Ye,
                 children: [
                     (0, i.jsxs)(F.E, {
-                        className: e2.kc,
+                        className: e0.kc,
                         variant: "text-md/normal",
                         color: "text-feedback-critical",
                         children: [
@@ -1534,13 +1534,13 @@ function e4(e) {
                 ],
             });
         }
-        return (0, i.jsx)("div", { className: e2.Lq, children: (0, i.jsx)(eh.y, {}) });
+        return (0, i.jsx)("div", { className: e0.Lq, children: (0, i.jsx)(eh.y, {}) });
     }
     let y = [];
     return ((y = f === d.fS.WINDOW ? A : f === d.fS.SCREEN ? o : a), f === d.fS.CAMERA && 0 === y.length)
         ? (0, i.jsx)(e7, {})
         : (0, i.jsx)("div", {
-              className: e2.zr,
+              className: e0.zr,
               children: y.map((e) =>
                   (0, i.jsx)(
                       e3,
@@ -1557,19 +1557,19 @@ function e4(e) {
 }
 function e7() {
     return (0, i.jsxs)("div", {
-        className: e2.p$,
+        className: e0.p$,
         children: [
-            (0, i.jsx)(x.VideoIcon, { size: "md", color: V.A.colors.ICON_MUTED, className: e2.Dw }),
+            (0, i.jsx)(x.VideoIcon, { size: "md", color: V.A.colors.ICON_MUTED, className: e0.Dw }),
             (0, i.jsx)(F.E, {
                 variant: "text-lg/medium",
                 color: "text-strong",
-                className: e2.jU,
+                className: e0.jU,
                 children: ec.intl.string(ea.default["/z3YaZ"]),
             }),
             (0, i.jsx)(F.E, {
                 variant: "text-sm/medium",
                 color: "text-subtle",
-                className: e2.C3,
+                className: e0.C3,
                 children: ec.intl.string(ea.default.agwSGA),
             }),
             (0, i.jsx)(F.E, {

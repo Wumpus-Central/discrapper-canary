@@ -7,13 +7,13 @@ var l = n(661531),
 function a(e) {
     let { size: t = "md", width: n, height: a, color: o = l.A.colors.ICON_STRONG, colorClass: d = "", ...c } = e,
         u = (0, s.J)(t),
-        A = u?.width ?? n,
-        h = u?.height ?? a;
+        h = u?.width ?? n,
+        A = u?.height ?? a;
     return (0, i.jsxs)("svg", {
         ...(0, r.A)(c),
         xmlns: "http://www.w3.org/2000/svg",
-        width: A,
-        height: h,
+        width: h,
+        height: A,
         fill: "none",
         viewBox: "0 0 24 24",
         children: [

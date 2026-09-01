@@ -1,4 +1,4 @@
-l.d(n, { A: () => N });
+l.d(n, { A: () => b });
 var t = l(477900),
     i = l(582128),
     s = l(503698),
@@ -6,8 +6,8 @@ var t = l(477900),
     a = l(621466),
     c = l(192308),
     o = l(939249),
-    d = l(834730),
-    u = l(442433),
+    u = l(834730),
+    d = l(442433),
     h = l(46054),
     x = l(742589),
     m = l(375708),
@@ -37,7 +37,7 @@ class E extends i.Component {
     };
     handleContextMenu = (e) => {
         let { channel: n, guild: i } = this.props;
-        (0, u.L3)(e, async () => {
+        (0, d.L3)(e, async () => {
             let { default: e } = await Promise.all([
                 l.e("926132"),
                 l.e("391763"),
@@ -81,7 +81,7 @@ class E extends i.Component {
                                   className: A.h8,
                               }),
                               null == e.linkedLobby || n
-                                  ? (0, t.jsx)(d.E, {
+                                  ? (0, t.jsx)(u.E, {
                                         tag: "span",
                                         color: "none",
                                         variant: "text-sm/medium",
@@ -95,4 +95,4 @@ class E extends i.Component {
             : null;
     }
 }
-let N = E;
+let b = E;

@@ -6,14 +6,14 @@ var i = n(477900),
     a = n(307301),
     o = n(834730);
 n(321073);
-var c = n(477782),
-    d = n(980707),
+var d = n(477782),
+    c = n(980707),
     u = n(753437),
     g = n(375708),
     m = n(382701);
 let x = l.memo(function (e) {
     let { currentTags: t, onTagSelect: n, onNoneSelect: l, onClose: s } = e;
-    return (0, i.jsx)(d.W, {
+    return (0, i.jsx)(c.W, {
         "data-menu-migrated-auto": !0,
         navId: "widget-game-tags",
         "aria-label": g.intl.string(g.t.r6EJOu),
@@ -28,7 +28,7 @@ let x = l.memo(function (e) {
                     a.type === u.me.RADIO &&
                         s.push(
                             (0, i.jsx)(
-                                c.iD,
+                                d.iD,
                                 {
                                     id: `${r}-none`,
                                     group: r,
@@ -45,7 +45,7 @@ let x = l.memo(function (e) {
                             (a.type === u.me.RADIO
                                 ? s.push(
                                       (0, i.jsx)(
-                                          c.iD,
+                                          d.iD,
                                           {
                                               id: e,
                                               group: r,
@@ -58,19 +58,19 @@ let x = l.memo(function (e) {
                                   )
                                 : s.push(
                                       (0, i.jsx)(
-                                          c.sL,
+                                          d.sL,
                                           { id: e, label: l.getText(), checked: t.includes(e), action: () => n(e, !1) },
                                           e,
                                       ),
                                   ));
                     }),
                     s);
-            return (0, i.jsx)(c.rX, { label: a.getLabel(), children: o }, r);
+            return (0, i.jsx)(d.rX, { label: a.getLabel(), children: o }, r);
         }),
     });
 });
 function f(e) {
-    let { tags: t, onTagsChange: n, onOpen: c, onClose: d, variant: f = "default", ref: h } = e,
+    let { tags: t, onTagsChange: n, onOpen: d, onClose: c, variant: f = "default", ref: h } = e,
         p = "filled" === f,
         I = (0, l.useRef)(null),
         j = (0, l.useMemo)(() => (null != t ? t : []), [t]),
@@ -105,8 +105,8 @@ function f(e) {
         targetElementRef: I,
         position: "right",
         align: "top",
-        onRequestOpen: c,
-        onRequestClose: d,
+        onRequestOpen: d,
+        onRequestClose: c,
         renderPopout: (e) => {
             let { closePopout: t } = e;
             return (0, i.jsx)(x, { currentTags: j, onTagSelect: A, onNoneSelect: E, onClose: t });

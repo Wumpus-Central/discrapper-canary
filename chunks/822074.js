@@ -34,8 +34,8 @@ function S(e, t) {
 var N = n(521732);
 let v = {},
     _ = {},
-    j = {},
-    T = [],
+    T = {},
+    j = [],
     b = {},
     R = { status: "ok", lastRequest: null, lastResponse: null },
     O = [],
@@ -81,7 +81,7 @@ class k extends u.Ay.PersistedStore {
         return null != r && r.channelId === e && null != r.summaryId ? this.findSummary(e, r?.summaryId) : null;
     }
     summaryFeedback(e) {
-        return null == e ? null : j[e.id];
+        return null == e ? null : T[e.id];
     }
     isFetching(e, t) {
         return null != t ? _[e]?.summaryId === t : _[e]?.fetching === !0;
@@ -102,7 +102,7 @@ class k extends u.Ay.PersistedStore {
         return !n?.fetching && 0 === i;
     }
     channelAffinities() {
-        return T;
+        return j;
     }
     channelAffinitiesById() {
         return b;
@@ -121,7 +121,7 @@ class k extends u.Ay.PersistedStore {
             s = [];
         return (
             t && (s = s.concat(O)),
-            n && (s = s.concat(T.map((e) => e.channel_id))),
+            n && (s = s.concat(j.map((e) => e.channel_id))),
             l &&
                 (s = s.filter((e) => {
                     let t = p.A.getChannel(e);
@@ -214,7 +214,7 @@ let w = new k(c.h, {
     },
     SET_SUMMARY_FEEDBACK(e) {
         let { summary: t, rating: n } = e;
-        null != n ? (j[t.id] = n) : delete j[t.id];
+        null != n ? (T[t.id] = n) : delete T[t.id];
     },
     REQUEST_CHANNEL_AFFINITIES() {
         R = { ...R, status: "fetching", lastRequest: Date.now() };
@@ -222,10 +222,10 @@ let w = new k(c.h, {
     RECEIVE_CHANNEL_AFFINITIES(e) {
         let { affinities: t, error: n } = e;
         if (null != n) {
-            (T = []), (b = {}), (R = { ...R, status: "error", lastResponse: Date.now() });
+            (j = []), (b = {}), (R = { ...R, status: "error", lastResponse: Date.now() });
             return;
         }
-        (T = t ?? []),
+        (j = t ?? []),
             (b = t?.reduce((e, t) => ((e[t.channel_id] = t.affinity), e), {}) ?? {}),
             (R = { ...R, status: "ok", lastResponse: Date.now() });
     },

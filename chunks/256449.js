@@ -8,7 +8,7 @@ n.d(t, {
     ZO: () => v,
     Zq: () => O,
     _c: () => N,
-    ln: () => T,
+    ln: () => j,
     pD: () => M,
 }),
     n(321073),
@@ -127,13 +127,13 @@ function _() {
         (0, p.YB)();
     }, []);
 }
-let j = [];
-function T() {
+let T = [];
+function j() {
     let e = (0, r.k)();
-    return e.favoriteStickers?.stickerIds ?? j;
+    return e.favoriteStickers?.stickerIds ?? T;
 }
 function b() {
-    let e = T();
+    let e = j();
     return (0, i.yK)(
         [x.A],
         () => e.map((e) => x.A.getStickerById(e)).filter((e) => null != e && (!(0, E.Xw)(e) || (0, E.Y4)(e))),
@@ -145,7 +145,7 @@ function R() {
         t,
         n =
             ((e = (0, r.k)()),
-            (t = j),
+            (t = T),
             e?.stickerFrecency?.stickers != null && (t = Object.keys(e?.stickerFrecency?.stickers)),
             t);
     return (0, i.yK)([x.A], () => n.map((e) => x.A.getStickerById(e)).filter((e) => void 0 !== e), [n]);

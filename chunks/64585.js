@@ -8,8 +8,8 @@ var i = n(228366),
     d = n(309010),
     c = n(741961),
     u = n(3137),
-    A = n(559908),
-    h = n(652215);
+    h = n(559908),
+    A = n(652215);
 let E = (0, r.aN)("poggermode_applause", s.A.getSoundpack()),
     g = !1,
     C = !1,
@@ -34,7 +34,7 @@ function N() {
 }
 class L extends l.A {
     _initialize() {
-        A.Ay.addChangeListener(this.startAudio),
+        h.Ay.addChangeListener(this.startAudio),
             i.h.subscribe("RTC_CONNECTION_STATE", this.setVolume),
             i.h.subscribe("TYPING_STOP", this.stopAudio),
             i.h.subscribe("TYPING_STOP_LOCAL", this.stopAudio),
@@ -42,7 +42,7 @@ class L extends l.A {
             i.h.subscribe("POGGERMODE_SETTINGS_UPDATE", this.stopAudio);
     }
     _terminate() {
-        A.Ay.removeChangeListener(this.startAudio),
+        h.Ay.removeChangeListener(this.startAudio),
             i.h.unsubscribe("RTC_CONNECTION_STATE", this.setVolume),
             i.h.unsubscribe("TYPING_STOP", this.stopAudio),
             i.h.unsubscribe("TYPING_STOP_LOCAL", this.stopAudio),
@@ -52,7 +52,7 @@ class L extends l.A {
     }
     setVolume(e) {
         let { state: t } = e;
-        t === h.S7L.RTC_CONNECTED ? (E.volume = 0.1) : (E.volume = 1);
+        t === A.S7L.RTC_CONNECTED ? (E.volume = 0.1) : (E.volume = 1);
     }
     handleTypingStop(e) {
         let { userId: t } = e;
@@ -67,7 +67,7 @@ class L extends l.A {
         if (null == e) return;
         let t = a.default.getId(),
             n = c.A.isTyping(e, t),
-            i = A.Ay.getUserCombo(t, e),
+            i = h.Ay.getUserCombo(t, e),
             l = i?.multiplier ?? 1;
         n && l >= 7 ? g || (E.loop(), (g = !0)) : T();
     }

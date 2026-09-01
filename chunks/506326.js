@@ -45,8 +45,8 @@ var l,
     N = n(432017),
     v = n(246913),
     _ = n(291747),
-    j = n(417270),
-    T = n(768622),
+    T = n(417270),
+    j = n(768622),
     b = n(369606),
     R = n(825860),
     O = n(605323),
@@ -192,7 +192,7 @@ function ei(e) {
     if (null == s) return null;
     let r = (0, F.us)(s);
     return (0, i.jsx)($, {
-        Icon: j.RetryIcon,
+        Icon: T.RetryIcon,
         showTooltip: !l,
         tooltipText: r,
         text: l ? r : W.intl.string(W.t.adnLsB),
@@ -204,7 +204,7 @@ function es(e) {
         l = (0, F.iy)(t);
     return (0, F.BZ)(t)
         ? (0, i.jsx)($, {
-              Icon: T.g,
+              Icon: j.g,
               showTooltip: 0 === n,
               text: W.intl.formatToPlainString(W.t["Klie/P"], { days: l }),
               tooltipText: W.intl.formatToPlainString(W.t.PwMe0s, { days: l }),

@@ -195,7 +195,7 @@ function v(e, t) {
                                                     l = [],
                                                     i = 0,
                                                     s = 0;
-                                                for (j.lastIndex = 0; null != (t = j.exec(e)); ) {
+                                                for (T.lastIndex = 0; null != (t = T.exec(e)); ) {
                                                     let r = t.index + t[0].length,
                                                         a = L(e.substring(s, t.index)).length,
                                                         o = l.filter((e) => null != e);
@@ -206,7 +206,7 @@ function v(e, t) {
                                                         a > 0 && (i += a),
                                                         null != t[1])
                                                     ) {
-                                                        let e = T.get(t[1]);
+                                                        let e = j.get(t[1]);
                                                         l.push(e ?? null);
                                                     } else l.pop();
                                                     s = r;
@@ -297,9 +297,9 @@ function v(e, t) {
     );
 }
 let _ = /(?:<span class="([^"]*)">)|(?:<\/span>)/g,
-    j = /(?:<(a-[a-z]{1,2})>)|(?:<\/a-[a-z]{1,2}>)/g,
-    T = new Map();
-for (let [e, t] of Object.entries(A)) e.startsWith("a-") && null != t && T.set(e, t);
+    T = /(?:<(a-[a-z]{1,2})>)|(?:<\/a-[a-z]{1,2}>)/g,
+    j = new Map();
+for (let [e, t] of Object.entries(A)) e.startsWith("a-") && null != t && j.set(e, t);
 let b = { max: 1 / 0, maxAge: +d.A.Millis.MINUTE, updateAgeOnGet: !0 },
     R = new (i())(b),
     O = new (i())(b),

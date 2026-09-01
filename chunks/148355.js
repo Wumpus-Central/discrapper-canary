@@ -26,8 +26,8 @@ function v(e) {
     return e.preventDefault();
 }
 let _ = { tension: 1100, friction: 40 },
-    j = { tension: 1600, friction: 60 };
-function T(e, t) {
+    T = { tension: 1600, friction: 60 };
+function j(e, t) {
     return i.cloneElement(e, {
         "data-type": "sticker",
         "data-id": t.id,
@@ -91,22 +91,22 @@ function O(e) {
         [I, v] = i.useState(!1),
         _ = i.useRef(!1);
     _.current = t && c;
-    let j = null == a ? (0, y.zg)(r) : a;
-    return (o()(null != j, `Unable to determine sticker asset URL. Sticker ID: ${r.id}`),
+    let T = null == a ? (0, y.zg)(r) : a;
+    return (o()(null != T, `Unable to determine sticker asset URL. Sticker ID: ${r.id}`),
     i.useEffect(() => {
-        if (null == g.current || null == j) return;
+        if (null == g.current || null == T) return;
         let e = Math.min(2, (0, x.mZ)());
         (g.current.width = s * e), (g.current.height = s * e);
         let t = !1;
         return (
             (async function () {
-                if (null == j) return;
+                if (null == T) return;
                 let { default: e } = await Promise.all([n.e("570716"), n.e("709330")]).then(n.bind(n, 140521));
                 null != g.current &&
                     ((A.current = new e({
                         canvas: g.current,
                         animationId: r.id,
-                        assetUrl: j,
+                        assetUrl: T,
                         assetData: u,
                         onInitialDraw: () => {
                             t || C(!1);
@@ -121,12 +121,12 @@ function O(e) {
                 A.current?.drop(), (A.current = null), (t = !0);
             }
         );
-    }, [j, s, r.id, u, p]),
+    }, [T, s, r.id, u, p]),
     i.useEffect(() => {
         let e;
         t || (e = 0), A.current?.setState(t && c, e);
     }, [r, t, c]),
-    null == j)
+    null == T)
         ? null
         : (0, l.jsx)("div", {
               role: "img",
@@ -139,7 +139,7 @@ function O(e) {
                   maskAsset: h,
                   size: s,
                   withLoadingIndicator: f,
-                  children: T((0, l.jsx)("canvas", { className: N.ex, ref: g }), r),
+                  children: j((0, l.jsx)("canvas", { className: N.ex, ref: g }), r),
               }),
           });
 }
@@ -164,7 +164,7 @@ let M = (e) => {
             _ = i.useCallback(() => {
                 x(!1);
             }, []),
-            j = i.useCallback(() => {
+            T = i.useCallback(() => {
                 E(!0);
             }, []);
         return (i.useEffect(() => {
@@ -192,13 +192,13 @@ let M = (e) => {
                           maskAsset: u,
                           size: a,
                           withLoadingIndicator: h,
-                          children: T(
+                          children: j(
                               (0, l.jsx)("img", {
                                   className: N.r3,
                                   alt: b(n),
                                   src: S,
                                   draggable: !1,
-                                  onError: j,
+                                  onError: T,
                                   onLoad: _,
                                   onContextMenu: v,
                                   ref: I,
@@ -225,7 +225,7 @@ let M = (e) => {
             C = (0, f.p)(r, { ref: x, from: E, enter: { transform: "scale(1)", opacity: 1 }, leave: E, config: _ }),
             I = i.useRef(null),
             y = (0, p.z)(
-                { ref: I, transform: r || h ? "translateY(0)" : "translateY(-25px)", opacity: +!!r, config: j },
+                { ref: I, transform: r || h ? "translateY(0)" : "translateY(-25px)", opacity: +!!r, config: T },
                 "animate-always",
             );
         return (

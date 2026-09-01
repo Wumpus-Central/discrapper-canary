@@ -1,1 +1,1 @@
-t.exports = { o: "quoteText_a3ced8" };
+e.exports = { o: "quoteText_a3ced8" };

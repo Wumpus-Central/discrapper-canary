@@ -1,4 +1,4 @@
-n.d(t, { TX: () => o, yV: () => d });
+n.d(t, { TX: () => o, yV: () => c });
 var i = n(477900),
     l = n(582128),
     s = n(95477),
@@ -13,7 +13,7 @@ function o(e) {
         { isEditing: t, inputRef: n, ...i }
     );
 }
-function c(e) {
+function d(e) {
     let {
         inputRef: t,
         label: n,
@@ -21,8 +21,8 @@ function c(e) {
         onChange: r,
         onKeyDown: a,
         maxLength: o,
-        placeholder: c,
-        trailing: d,
+        placeholder: d,
+        trailing: c,
         error: u,
         helperText: g,
         spellCheck: m,
@@ -35,21 +35,21 @@ function c(e) {
         onChange: r,
         onKeyDown: a,
         maxLength: o,
-        placeholder: c,
-        trailing: d,
+        placeholder: d,
+        trailing: c,
         error: u,
         helperText: g,
         spellCheck: m,
     });
 }
-function d(e) {
+function c(e) {
     let {
             isEditing: t,
             committedValue: n,
             editedValue: l,
             setEditedValue: s,
             editButtonRef: o,
-            handleStartEditing: d,
+            handleStartEditing: c,
             wrapperRef: u,
             onBlur: g,
             onContainerKeyDown: m,
@@ -83,7 +83,7 @@ function d(e) {
         placeholder: p,
         editButtonRef: o,
         editButtonAriaLabel: I,
-        onStartEditing: d,
+        onStartEditing: c,
         className: b,
         growWidth: N,
         removeVerticalPadding: k,
@@ -93,7 +93,7 @@ function d(e) {
         disabled: T,
         textVariant: y,
         textColor: R,
-        input: (0, i.jsx)(c, {
+        input: (0, i.jsx)(d, {
             inputRef: x,
             label: j,
             value: l,

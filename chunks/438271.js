@@ -21,8 +21,8 @@ var i,
     E = n(375708),
     C = n(622061),
     v = (((i = {}).DENY = "DENY"), (i.PASSTHROUGH = "PASSTHROUGH"), (i.ALLOW = "ALLOW"), i);
-let I = Object.keys(v);
-function T(e) {
+let T = Object.keys(v);
+function I(e) {
     let { value: t = "PASSTHROUGH", onChange: n, labelledBy: i, disabled: s = !1, id: a, permissionName: r } = e,
         { ref: o, ...c } = (0, A._u)({ orientation: "horizontal", isDisabled: s, labelledBy: i });
     return (0, l.jsx)("div", {
@@ -30,7 +30,7 @@ function T(e) {
         ref: o,
         id: a,
         ...c,
-        children: I.map((e) =>
+        children: T.map((e) =>
             (0, l.jsx)(
                 S,
                 {
@@ -70,7 +70,7 @@ function S(e) {
         children: (0, l.jsx)(t, { color: "currentColor", size: "xs" }),
     });
 }
-T.Types = v;
+I.Types = v;
 var y = n(452027);
 function k(e) {
     let { value: t, onChange: n, disabled: i, permissionName: s, ...a } = e;
@@ -79,7 +79,7 @@ function k(e) {
         disabled: i,
         layout: "horizontal",
         children: (e) =>
-            (0, l.jsx)(T, {
+            (0, l.jsx)(I, {
                 value: t,
                 onChange: n,
                 disabled: i,
@@ -89,7 +89,7 @@ function k(e) {
             }),
     });
 }
-T.Types, (k.Types = T.Types);
+I.Types, (k.Types = I.Types);
 var O = n(659262);
 class L extends s.PureComponent {
     getOverwriteValue(e) {

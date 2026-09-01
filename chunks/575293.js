@@ -24,8 +24,8 @@ var l = n(477900),
     N = n(374084),
     v = n(101611),
     _ = n(473529),
-    j = n(111487),
-    T = n(652215),
+    T = n(111487),
+    j = n(652215),
     b = n(375708),
     R = n(160639);
 let O = { compact: 58, cozy: 74, default: 64 };
@@ -50,10 +50,10 @@ function L(e) {
         s = (0, o.bG)([C.A], () => C.A.getChannel(t));
     if (null == s) return null;
     let r = (0, A.gU)(s) ?? c.N;
-    return (0, l.jsx)(j.A, {
+    return (0, l.jsx)(T.A, {
         emojiId: n,
         emojiName: i,
-        size: j.g.MEDIUM,
+        size: T.g.MEDIUM,
         defaultComponent: (0, l.jsx)(r, { className: R.p }),
     });
 }
@@ -65,28 +65,28 @@ function k(e) {
         I = c?.actionType === N.NewMemberActionTypes.VIEW,
         y = (0, d.r)(h.A.colors.WHITE),
         _ = O[(0, E.C)()],
-        [j, T] = i.useState(!1),
+        [T, j] = i.useState(!1),
         [k] = i.useState(new a.A.Value(0)),
         [w] = i.useState(new a.A.Value(0));
     i.useEffect(() => {
         x
             ? a.A.timing(k, { toValue: 0, duration: C ? 1 : 350, easing: a.A.Easing.quad, delay: 500 * !I }).start(() =>
-                  T(!0),
+                  j(!0),
               )
             : a.A.timing(k, { toValue: 1, duration: C ? 1 : 350, easing: a.A.Easing.quad, delay: 400 }).start();
     }, [x, k, I, C]),
         i.useEffect(() => {
-            x && j && a.A.timing(w, { toValue: 1, duration: 350 * !C, easing: a.A.Easing.quad, delay: 400 }).start();
-        }, [x, w, j, C]);
+            x && T && a.A.timing(w, { toValue: 1, duration: 350 * !C, easing: a.A.Easing.quad, delay: 400 }).start();
+        }, [x, w, T, C]);
     let P = i.useCallback(() => {
         null != A && (0, S.qo)(t, A.channelId);
     }, [t, A]);
-    return null == c || (I && !j)
+    return null == c || (I && !T)
         ? null
         : (0, l.jsx)("div", {
               className: r()(R.kL, s),
               children:
-                  j && null != A
+                  T && null != A
                       ? (0, l.jsx)(a.A.div, {
                             style: { marginBottom: w.interpolate({ inputRange: [0, 1], outputRange: [-_, 0] }) },
                             children: (0, l.jsxs)(m.D, {
@@ -159,6 +159,6 @@ function w(e) {
         s = (0, _.d)(t),
         r = (0, o.bG)([I.Ay], () => I.Ay.getSelfMember(t)?.isPending === !0),
         a = (0, v.jY)(t),
-        u = (0, o.bG)([y.A], () => y.A.getGuild(t)?.features.has(T.GuildFeatures.GUILD_SERVER_GUIDE));
+        u = (0, o.bG)([y.A], () => y.A.getGuild(t)?.features.has(j.GuildFeatures.GUILD_SERVER_GUIDE));
     return a || r || !s || !u ? null : (0, l.jsx)(k, { guildId: t, channel: n, className: i });
 }

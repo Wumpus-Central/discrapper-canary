@@ -16,8 +16,8 @@ function o(e) {
             onInteractionStart: u,
             onInteractionEnd: f,
             className: m,
-            fillClassName: E,
-            overlay: g,
+            fillClassName: g,
+            overlay: E,
         } = e,
         p = {
             "--custom-cutout-radius": `${c.radius}px`,
@@ -28,11 +28,11 @@ function o(e) {
         className: r()(i.vK, m),
         style: { height: o, width: d ?? "100%" },
         children: (0, a.jsxs)("div", {
-            className: r()(i.GS, E),
+            className: r()(i.GS, g),
             style: { ...p, backgroundImage: null != t && "" !== t ? `url(${t})` : void 0, backgroundColor: n },
             onMouseMove: u,
             onMouseLeave: f,
-            children: [l && (0, a.jsx)(s.A, { className: i.pH }), g],
+            children: [l && (0, a.jsx)(s.A, { className: i.pH }), E],
         }),
     });
 }

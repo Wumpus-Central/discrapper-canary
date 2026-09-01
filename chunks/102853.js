@@ -3,7 +3,7 @@ n.d(t, { l: () => U });
 var l = n(582128),
     i = n(17928),
     s = n(308368),
-    r = n(183208),
+    r = n(780907),
     a = n(730852),
     o = n(212245),
     u = n(933958),
@@ -24,8 +24,8 @@ var l = n(582128),
     N = n(498642),
     v = n(71393),
     _ = n(480595),
-    j = n(576705),
-    T = n(994500),
+    T = n(576705),
+    j = n(994500),
     b = n(309010),
     R = n(461213),
     O = n(287809),
@@ -76,7 +76,7 @@ function U(e) {
         en = (0, I.h)(Z),
         el = (0, S.x)(en),
         ei = (0, g.vG)({ userId: G.id, activity: n, channelId: $, application: en }),
-        es = (0, i.bG)([m.A, v.A, N.A, T.A, b.Ay, f.A, j.A, _.A, R.A, u.Ay], () =>
+        es = (0, i.bG)([m.A, v.A, N.A, j.A, b.Ay, f.A, T.A, _.A, R.A, u.Ay], () =>
             null != U
                 ? ei === g.Gy.CAN_JOIN
                     ? p.o.CAN_JOIN
@@ -91,10 +91,10 @@ function U(e) {
                       ChannelStore: m.A,
                       GuildStore: v.A,
                       GuildMemberCountStore: N.A,
-                      RelationshipStore: T.A,
+                      RelationshipStore: j.A,
                       SelectedChannelStore: b.Ay,
                       VoiceStateStore: f.A,
-                      PermissionStore: j.A,
+                      PermissionStore: T.A,
                       LocalActivityStore: _.A,
                       SelfPresenceStore: R.A,
                       EmbeddedActivitiesStore: u.Ay,

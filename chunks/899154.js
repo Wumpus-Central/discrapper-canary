@@ -1,9 +1,9 @@
 l.d(t, { q: () => c });
 var n = l(582128),
     a = l(598748),
-    i = l(17928),
-    r = l(294323),
-    s = l(627363),
+    r = l(17928),
+    s = l(294323),
+    i = l(627363),
     o = l(207371),
     u = l(280450),
     d = l(675210);
@@ -19,22 +19,22 @@ function c(e) {
         [x, p] = n.useState(t);
     x !== t && (p(t), g(null));
     let v = null != l && l === t ? l : null,
-        j = (0, i.bG)([u.default], () => u.default.getId()),
-        { applicationWidgetConfig: b } = (0, r.A)(j, v ?? void 0),
+        j = (0, r.bG)([u.default], () => u.default.getId()),
+        { applicationWidgetConfig: b } = (0, s.A)(j, v ?? void 0),
         y = b?.surfaces,
-        A =
+        k =
             null != v &&
             (0, d.yZ)({
                 widgetTop: y?.[a.m.WIDGET_TOP] != null,
                 widgetBottom: y?.[a.m.WIDGET_BOTTOM] != null,
                 miniProfile: y?.[a.m.MINI_PROFILE] != null,
             }).hasAny,
-        { data: k } = (0, s.YY)(l ?? void 0),
-        N = null != l && k?.bot?.id != null,
-        { data: w, isLoading: S } = (0, s.YY)(t ?? void 0),
+        { data: N } = (0, i.YY)(l ?? void 0),
+        A = null != l && N?.bot?.id != null,
+        { data: w, isLoading: S } = (0, i.YY)(t ?? void 0),
         C = c || (0, o.x)(w),
         E = null != t && S,
-        I = (0, d.Xm)({ installScope: m, hasFrame: C, hasProfileWidget: A, hasBotDm: N, ownerAuthorizationRevoked: f });
+        I = (0, d.Xm)({ installScope: m, hasFrame: C, hasProfileWidget: k, hasBotDm: A, ownerAuthorizationRevoked: f });
     return {
         availability: I,
         isResolving: E,

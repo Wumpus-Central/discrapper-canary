@@ -1,4 +1,4 @@
-n.d(t, { A: () => A });
+n.d(t, { A: () => h });
 var i = n(17928),
     l = n(228366),
     r = n(280450),
@@ -25,7 +25,7 @@ class u extends i.Ay.PersistedStore {
         return c.unlockedAchievements[e] ?? null;
     }
 }
-let A = new u(l.h, {
+let h = new u(l.h, {
     POGGERMODE_ACHIEVEMENT_UNLOCK: function (e) {
         let { achievementId: t } = e;
         if (!a.A.isEnabled()) return !1;

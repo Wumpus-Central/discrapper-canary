@@ -24,8 +24,8 @@ var l = n(477900),
     N = n(861382),
     v = n(355622),
     _ = n(820066),
-    j = n(696451),
-    T = n(576705),
+    T = n(696451),
+    j = n(576705),
     b = n(351906),
     R = n(287809),
     O = n(31498),
@@ -46,15 +46,15 @@ let V = i.forwardRef(function (e, t) {
             let { channel: l, type: s } = e,
                 [r, a] = i.useState(() => (0, O.Ur)()),
                 u = (0, y.A)(),
-                c = (0, o.bG)([j.Ay, R.default], () => {
+                c = (0, o.bG)([T.Ay, R.default], () => {
                     let e = R.default.getCurrentUser();
-                    return (null != l.guild_id && null != e ? j.Ay.getMember(l.guild_id, e.id)?.isPending : null) ?? !1;
+                    return (null != l.guild_id && null != e ? T.Ay.getMember(l.guild_id, e.id)?.isPending : null) ?? !1;
                 }),
                 { canMentionEveryone: d, hidePersonalInformation: h } = (0, o.cf)(
-                    [T.A, b.A],
+                    [j.A, b.A],
                     () => ({
                         canMentionEveryone:
-                            l.isPrivate() || c || s === v.oU.RULES_INPUT || T.A.can(w.xBc.MENTION_EVERYONE, l),
+                            l.isPrivate() || c || s === v.oU.RULES_INPUT || j.A.can(w.xBc.MENTION_EVERYONE, l),
                         hidePersonalInformation: b.A.hidePersonalInformation,
                     }),
                     [l, s, c],

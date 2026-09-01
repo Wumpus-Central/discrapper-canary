@@ -51,8 +51,8 @@ let E = function (e) {
             categoryHeight: N,
             onScroll: v,
             renderCategoryListItem: _,
-            rowCountBySection: j,
-            renderSection: T,
+            rowCountBySection: T,
+            renderSection: j,
             navId: b,
             itemIdPrefix: R,
         } = e,
@@ -147,7 +147,7 @@ let E = function (e) {
                     onNavigateNextAtEnd: N,
                     onNavigatePreviousAtStart: v,
                 }),
-                j = _.setFocus;
+                T = _.setFocus;
             return (
                 i.useEffect(() => {
                     if (!u || a < 0 || a >= r) return;
@@ -156,13 +156,13 @@ let E = function (e) {
                     let t = 0,
                         i = requestAnimationFrame(() => {
                             t = requestAnimationFrame(() => {
-                                (g.current = a), j(l(a));
+                                (g.current = a), T(l(a));
                             });
                         });
                     return () => {
                         cancelAnimationFrame(i), cancelAnimationFrame(t);
                     };
-                }, [a, n, u, l, j, r]),
+                }, [a, n, u, l, T, r]),
                 _
             );
         })({
@@ -208,8 +208,8 @@ let E = function (e) {
             rowCount: y,
             rowHeight: U,
             hideScrollbar: !0,
-            rowCountBySection: j,
-            renderSection: T,
+            rowCountBySection: T,
+            renderSection: j,
             role: M ? "none presentation" : void 0,
         }),
         V = (0, l.jsxs)("div", {

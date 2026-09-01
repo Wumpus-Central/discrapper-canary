@@ -9,8 +9,8 @@ var l = n(17928),
     d = n(403581),
     c = n(297264),
     u = n(821609),
-    A = n(725807),
-    h = n(212168),
+    h = n(725807),
+    A = n(212168),
     E = n(780964),
     g = n(766075),
     C = n(287809),
@@ -31,9 +31,9 @@ function L(e) {
                   ? S.intl.string(S.t.f2qjw5)
                   : S.intl.string(S.t.SblICW),
         O = _.Ay.canUseCustomCallSounds(m);
-    return (0, i.jsxs)(h.A, {
+    return (0, i.jsxs)(A.A, {
         isShown: !0,
-        type: h.i.PREMIUM,
+        type: A.i.PREMIUM,
         className: N.ne,
         backgroundClassName: N.u4,
         children: [
@@ -61,7 +61,7 @@ function L(e) {
                       text: S.intl.string(S.t.RzWDqY),
                       fullWidth: !0,
                   })
-                : (0, i.jsx)(A.A, {
+                : (0, i.jsx)(h.A, {
                       textOptions: { textOverride: S.intl.string(S.t.pj0XBN) },
                       subscriptionTier: p.pe.TIER_2,
                       premiumModalAnalyticsLocation: {

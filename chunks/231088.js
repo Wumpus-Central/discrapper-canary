@@ -5,8 +5,8 @@ var i = n(477900),
     r = n.n(s),
     a = n(621466),
     o = n(219869),
-    c = n(17928),
-    d = n(866665),
+    d = n(17928),
+    c = n(866665),
     u = n(695366),
     g = n(738188),
     m = n(834730),
@@ -16,16 +16,16 @@ var i = n(477900),
 function p(e) {
     let { value: t, onCommit: n, disabled: i = !1 } = e,
         [s, r] = l.useState("idle"),
-        [o, d] = l.useState(t),
+        [o, c] = l.useState(t),
         u = "editing" === s && !i,
-        g = (0, c.bG)([f.Ay], () => f.Ay.useReducedMotion),
+        g = (0, d.bG)([f.Ay], () => f.Ay.useReducedMotion),
         m = l.useRef(null),
         x = l.useRef(null),
         h = l.useRef(null),
         p = l.useRef(!1),
         I = l.useRef(!0),
         j = l.useCallback(() => {
-            (I.current = !1), d(t), r("editing");
+            (I.current = !1), c(t), r("editing");
         }, [t]),
         A = l.useRef(o);
     l.useLayoutEffect(() => {
@@ -75,7 +75,7 @@ function p(e) {
         isEditing: u,
         committedValue: t,
         editedValue: o,
-        setEditedValue: d,
+        setEditedValue: c,
         editButtonRef: m,
         wrapperRef: x,
         inputRef: h,
@@ -95,7 +95,7 @@ function I(e) {
             className: h.L7,
             children: (0, i.jsx)(o.T, { ...n, size: "sm", variant: "input-accessory" }),
         });
-    return null == t ? l : (0, i.jsx)(d.m, { text: t, ariaHidden: !0, children: l });
+    return null == t ? l : (0, i.jsx)(c.m, { text: t, ariaHidden: !0, children: l });
 }
 function j(e) {
     let { id: t, message: n, type: l } = e,
@@ -115,8 +115,8 @@ function A(e) {
             preview: n,
             placeholder: s,
             input: o,
-            editButtonRef: c,
-            editButtonAriaLabel: d,
+            editButtonRef: d,
+            editButtonAriaLabel: c,
             onStartEditing: u,
             variant: g = "default",
             trailing: f,
@@ -172,8 +172,8 @@ function A(e) {
                 : n,
             !N &&
                 (0, i.jsx)(x.D, {
-                    innerRef: c,
-                    "aria-label": d,
+                    innerRef: d,
+                    "aria-label": c,
                     "aria-describedby": V,
                     "aria-expanded": !1,
                     onClick: (e) => {

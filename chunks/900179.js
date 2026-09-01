@@ -1,4 +1,4 @@
-n.d(t, { A: () => A });
+n.d(t, { A: () => x });
 var a = n(477900),
     l = n(582128),
     r = n(503698),
@@ -10,18 +10,18 @@ var a = n(477900),
     u = n(140735),
     f = n(707554),
     m = n(297264),
-    E = n(834730),
-    g = n(915089),
+    g = n(834730),
+    E = n(915089),
     p = n(94343),
     b = n(716804),
     h = n(161185);
 let _ = Object.fromEntries(Object.keys(d.A.colors).map((e) => [o()(e), e]));
-function x(e) {
+function A(e) {
     let { icon: t, size: n = "xxs", tooltip: l } = e,
         r = (0, a.jsx)(t, { size: n, color: "currentColor", className: h.yK, "aria-hidden": !0 });
     return null == l ? r : (0, a.jsx)(c.m, { text: l, asContainer: !0, children: r });
 }
-function A(e) {
+function x(e) {
     let {
             children: t,
             heading: n,
@@ -29,23 +29,23 @@ function A(e) {
             headingVariant: i = "text-xs/semibold",
             headingColor: o = "text-default",
             headingIcon: c,
-            hideHeading: A = !1,
-            introText: R,
-            className: v,
+            hideHeading: x = !1,
+            introText: v,
+            className: R,
             scrollTargetId: N,
         } = e,
-        I = (0, g.GV)(),
-        T = l.useRef(null),
-        j = (0, b.g)(),
-        C = null != N && j === N;
-    (0, p.A)(T, C);
-    let S = "function" == typeof c ? { icon: c } : c;
+        I = (0, E.GV)(),
+        j = l.useRef(null),
+        T = (0, b.g)(),
+        y = null != N && T === N;
+    (0, p.A)(j, y);
+    let C = "function" == typeof c ? { icon: c } : c;
     return (0, a.jsxs)("section", {
-        ref: C ? T : void 0,
-        className: s()(h.uW, v),
+        ref: y ? j : void 0,
+        className: s()(h.uW, R),
         "aria-labelledby": I,
         children: [
-            A
+            x
                 ? (0, a.jsx)(u.A, { children: (0, a.jsx)(f.H, { id: I, children: n }) })
                 : (0, a.jsxs)("div", {
                       className: h.so,
@@ -61,10 +61,10 @@ function A(e) {
                                       id: I,
                                       children: n,
                                   }),
-                                  null != S && (0, a.jsx)(x, { ...S }),
+                                  null != C && (0, a.jsx)(A, { ...C }),
                               ],
                           }),
-                          null != R && (0, a.jsx)(E.E, { variant: "text-xs/normal", children: R }),
+                          null != v && (0, a.jsx)(g.E, { variant: "text-xs/normal", children: v }),
                       ],
                   }),
             (0, a.jsx)(f.F, { children: t }),

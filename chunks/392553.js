@@ -24,8 +24,8 @@ var l = n(477900),
     N = n(579940),
     v = n(734057),
     _ = n(573163),
-    j = n(531685),
-    T = n(365971);
+    T = n(531685),
+    j = n(365971);
 function b(e) {
     let t = _.Ay.getChannelIdsForWindowId(e)[0];
     return null == t ? null : (v.A.getChannel(t) ?? null);
@@ -417,8 +417,8 @@ let eE = i.forwardRef(function (e, t) {
             required: N,
             textAreaPaddingClassName: v,
             onChange: _,
-            onPaste: j,
-            onResize: T,
+            onPaste: T,
+            onResize: j,
             onFocus: b,
             onBlur: R,
             onKeyDown: O,
@@ -439,8 +439,8 @@ let eE = i.forwardRef(function (e, t) {
             "aria-owns": eN,
             "aria-expanded": ev,
             "aria-haspopup": e_,
-            "aria-activedescendant": ej,
-            "aria-controls": eT,
+            "aria-activedescendant": eT,
+            "aria-controls": ej,
             "aria-invalid": eb,
             "aria-describedby": eR,
             "aria-labelledby": eO,
@@ -711,15 +711,15 @@ let eE = i.forwardRef(function (e, t) {
             let e = s.current;
             if (null == e) return;
             let t = e.offsetHeight;
-            n.current !== t && (null != eL.current && (eL.current.style.height = `${t}px`), (n.current = t), T?.(t));
-        }, [eL, T])),
-        (0, er.g)(s, o, [o, eF, T], eo),
+            n.current !== t && (null != eL.current && (eL.current.style.height = `${t}px`), (n.current = t), j?.(t));
+        }, [eL, j])),
+        (0, er.g)(s, o, [o, eF, j], eo),
         i.useLayoutEffect(() => {
             let e = Q.rL.findDocumentOrShadowRoot(eF).defaultView;
             if (e?.ResizeObserver == null) return;
             let t = eu(eF);
-            null != t && ((n.current = t.offsetHeight), T?.(n.current));
-        }, [eL, eF, T]);
+            null != t && ((n.current = t.offsetHeight), j?.(n.current));
+        }, [eL, eF, j]);
     let { handleKeyDown: eW, handleKeyUp: eK } = (function (e) {
             let {
                 editor: t,
@@ -817,10 +817,10 @@ let eE = i.forwardRef(function (e, t) {
                 (e) => {
                     if (eD) return !0;
                     if (!0 === e.defaultPrevented) return !1;
-                    let t = j(e);
+                    let t = T(e);
                     return t && (e.preventDefault(), e.stopPropagation()), t;
                 },
-                [eD, j],
+                [eD, T],
             )),
             (c = i.useCallback(
                 (e) => {
@@ -970,8 +970,8 @@ let eE = i.forwardRef(function (e, t) {
                     "aria-owns": eN,
                     "aria-haspopup": e_,
                     "aria-expanded": ev,
-                    "aria-activedescendant": ej,
-                    "aria-controls": eT,
+                    "aria-activedescendant": eT,
+                    "aria-controls": ej,
                     "aria-labelledby": eO,
                     "aria-describedby": eR,
                     "aria-invalid": eb,
@@ -1166,18 +1166,18 @@ class ey extends i.Component {
                 "aria-describedby": N,
                 "aria-labelledby": v,
                 accessibilityLabel: _,
-                showValueWhenDisabled: j,
+                showValueWhenDisabled: T,
             } = this.props,
-            { submitting: T, popup: b } = this.state,
+            { submitting: j, popup: b } = this.state,
             R = {
                 channel: d,
-                className: r()(x, eC.Tg, { [eC.w5]: m, [eC.Rr]: n || T }),
+                className: r()(x, eC.Tg, { [eC.w5]: m, [eC.Rr]: n || j }),
                 id: A,
                 placeholder: this.getPlaceholder(),
                 required: C,
                 accessibilityLabel: _,
                 disabled: n || !1,
-                submitting: T,
+                submitting: j,
                 isEdit: h === y.oU.EDIT,
                 onFocus: this.handleFocus,
                 onBlur: this.handleBlur,
@@ -1217,12 +1217,12 @@ class ey extends i.Component {
                       ref: this.ref,
                       ...R,
                       type: h,
-                      value: n && !j ? this._emptyRichValue : t,
+                      value: n && !T ? this._emptyRichValue : t,
                       canUseCommands: h.commands?.enabled,
                       canOnlyUseTextCommands: g,
                       onSubmitFailure: c,
                   })
-                : (0, l.jsx)(G, { ref: this.ref, ...R, value: n && !j ? "" : e });
+                : (0, l.jsx)(G, { ref: this.ref, ...R, value: n && !T ? "" : e });
         return (0, l.jsxs)(l.Fragment, {
             children: [
                 (0, l.jsx)(E.EG, { event: P.jej.INSERT_TEXT, handler: this.handleInsertText }),
@@ -1268,15 +1268,15 @@ class ey extends i.Component {
                 null != n
                     ? (function (e) {
                           if (null == e) return null;
-                          let t = (0, T.Q2)(e);
+                          let t = (0, j.Q2)(e);
                           return null == t ? null : b(t);
                       })(n)
                     : null,
-            c = null == (t = j.A.getFocusedWindowId()) ? null : b(t),
+            c = null == (t = T.A.getFocusedWindowId()) ? null : b(t),
             g = !(function (e, t) {
                 if (null == e || null == t) return !1;
-                let n = (0, T.Q2)(e);
-                return n === (0, T.Q2)(t) && null != n;
+                let n = (0, j.Q2)(e);
+                return n === (0, j.Q2)(t) && null != n;
             })(n, this._getEditorWindow())
                 ? (u ?? c ?? l)
                 : l;

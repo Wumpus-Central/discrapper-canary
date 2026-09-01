@@ -43,8 +43,8 @@ var l,
     N = n(334738),
     v = n(192308),
     _ = n(267102),
-    j = n(619517),
-    T = n(256905),
+    T = n(619517),
+    j = n(256905),
     b = n(536763),
     R = n(218394);
 class O extends s.PureComponent {
@@ -55,7 +55,7 @@ class O extends s.PureComponent {
     };
     modalContext = (0, v.modalContextFromAppContext)(this.props.appContext);
     onCloseImage = () => {
-        (0, v.closeModal)(T.K, this.modalContext);
+        (0, v.closeModal)(j.K, this.modalContext);
     };
     onZoom = (e, t) => {
         let { zoomThumbnailPlaceholder: n, trigger: l } = t;
@@ -76,7 +76,7 @@ class O extends s.PureComponent {
             originalContentType: x,
         } = this.props;
         (0, c.vq)(e.currentTarget) && e.currentTarget.blur(),
-            (0, T.R)({
+            (0, j.R)({
                 onClose: this.onCloseImage,
                 items: [
                     {
@@ -103,7 +103,7 @@ class O extends s.PureComponent {
     };
     render() {
         let { appContext: e, isWindowFocused: t, ...n } = this.props;
-        return (0, i.jsx)(j.Ay, { ...n, onZoom: this.onZoom, onMouseEnter: this.onMouseEnter, shouldAnimate: t });
+        return (0, i.jsx)(T.Ay, { ...n, onZoom: this.onZoom, onMouseEnter: this.onMouseEnter, shouldAnimate: t });
     }
 }
 function M(e) {
@@ -569,8 +569,8 @@ var ey = n(863922),
     eN = n(534890),
     ev = n(442433),
     e_ = n(640708),
-    ej = n(941971),
-    eT = n(707539),
+    eT = n(941971),
+    ej = n(707539),
     eb = n(576705),
     eR = n(573163),
     eO = n(340833),
@@ -664,7 +664,7 @@ var eK = n(652215),
 function eY(e) {
     let { summary: t, channel: l, members: r, guildId: a, unread: o, onClick: u } = e,
         [c, m] = s.useState(!1),
-        f = (0, eT.aK)(eL.default.extractTimestamp(t.startId)),
+        f = (0, ej.aK)(eL.default.extractTimestamp(t.startId)),
         p = (0, d.bG)([eS.A], () => eS.A.summaryFeedback(t));
     function g(e, n) {
         e.stopPropagation(), (0, ek.A)({ summary: t, channel: l, rating: n });
@@ -683,7 +683,7 @@ function eY(e) {
         onMouseEnter: () => m(!0),
         onMouseLeave: () => m(!1),
         children: [
-            (0, i.jsx)(ej.A, { hovered: c, unread: o, className: eZ.dM }),
+            (0, i.jsx)(eT.A, { hovered: c, unread: o, className: eZ.dM }),
             (0, i.jsx)("div", {
                 className: eZ.uV,
                 children: (0, i.jsxs)("div", {
@@ -982,8 +982,8 @@ function tm(e) {
             lastBackgroundFillColor: N,
             backgroundFillColor: v,
             lastActiveFillColor: _,
-            activeFillColor: j,
-            lastInactiveFillColor: T,
+            activeFillColor: T,
+            lastInactiveFillColor: j,
             inactiveFillColor: b,
         } = (function (e, t) {
             let n = (0, e4.r)(e6.A.colors.BACKGROUND_MOD_MUTED).hex(),
@@ -1052,9 +1052,9 @@ function tm(e) {
                             constrainMin: !0,
                         });
                     i.fill();
-                    let [h, m] = th(T, b, n, y.current);
+                    let [h, m] = th(j, b, n, y.current);
                     r = r || m;
-                    let [f, g] = th(_, j, n, y.current);
+                    let [f, g] = th(_, T, n, y.current);
                     r = r || g;
                     for (let e = 0; e < s.length; e++) {
                         let t = s[e],
@@ -1078,7 +1078,7 @@ function tm(e) {
                     null != e && cancelAnimationFrame(e);
                 }
             );
-        }, [p, S, E, g, o, u, c, d, N, v, _, j, T, b]);
+        }, [p, S, E, g, o, u, c, d, N, v, _, T, j, b]);
     let [, M] = (function (e) {
         let { ref: t, onDrag: n, onDragStart: l, onDragEnd: i } = e,
             [r, a] = s.useState(!1);
@@ -1150,7 +1150,7 @@ let tx = s.memo(function (e) {
         y = (0, d.bG)([e1.Ay], () => e1.Ay.getPlaybackRate(e1.k0.VOICE_MESSAGE)),
         [S, N] = s.useState(I > 0),
         [v, _] = s.useState(I),
-        [j, T] = s.useState(c),
+        [T, j] = s.useState(c),
         [b, R] = s.useState(!1),
         [O, M] = s.useState(!1),
         [L, k] = s.useState(!1),
@@ -1166,7 +1166,7 @@ let tx = s.memo(function (e) {
         }, []),
         W = s.useCallback((e) => {
             let t = e.currentTarget.duration;
-            isNaN(t) || T(t);
+            isNaN(t) || j(t);
         }, []),
         K = s.useCallback(
             (e) => {
@@ -1210,14 +1210,14 @@ let tx = s.memo(function (e) {
             k(!0);
         }, []),
         Q = s.useCallback(() => {
-            k(!1), v === j && z(), K(v);
-        }, [v, j, z, K]),
+            k(!1), v === T && z(), K(v);
+        }, [v, T, z, K]),
         ee = s.useCallback(
             (e) => {
                 let t = C.current;
-                null == j || null == t || (Y(e * j), clearTimeout(F.current), (F.current = void 0));
+                null == T || null == t || (Y(e * T), clearTimeout(F.current), (F.current = void 0));
             },
-            [j, Y],
+            [T, Y],
         );
     s.useEffect(() => {
         !S && O && N(!0);
@@ -1253,7 +1253,7 @@ let tx = s.memo(function (e) {
                         l = et.current;
                     n?.(t, null != l ? (e - l) / 1e3 : 0), K(t), (et.current = null);
                 }
-        }, [O, n, j, K]),
+        }, [O, n, T, K]),
         s.useEffect(() => {
             let e;
             return (
@@ -1336,14 +1336,14 @@ let tx = s.memo(function (e) {
                 className: tf.ou,
                 waveform: u,
                 currentTime: v,
-                duration: j ?? 1,
+                duration: T ?? 1,
                 playing: O,
                 played: S,
                 onDrag: ee,
                 onDragStart: X,
                 onDragEnd: Q,
             }),
-            (0, i.jsx)(tg, { played: S, currentTime: v, duration: j }),
+            (0, i.jsx)(tg, { played: S, currentTime: v, duration: T }),
             (0, i.jsx)(x.D, {
                 className: tf.LJ,
                 onClick: () => {
@@ -1387,12 +1387,12 @@ var tA = n(287809),
     tN = n(650583),
     tv = n(959760);
 let t_ = { delay: 300, position: "top" };
-function tj(e) {
+function tT(e) {
     return (t) => {
         e?.(t), (0, tI.ls)(t);
     };
 }
-function tT(e) {
+function tj(e) {
     return (t) => {
         e?.(t), (0, tI.y5)(t);
     };
@@ -1470,8 +1470,8 @@ function tO(e) {
             reducedSizeAltTextButton: p,
             ...g
         } = e,
-        x = tj(t),
-        A = tT(n);
+        x = tT(t),
+        A = tj(n);
     (l = null == l ? tI.v1 : l), (r = null == r ? tI.uj : r);
     let [E, C] = s.useState(!0),
         I = f === ty.dG.MOSAIC || !0 === m,
@@ -1525,8 +1525,8 @@ function tL(e) {
             renderAdjacentContent: o,
             ...u
         } = e,
-        c = tj(t),
-        d = tT(l);
+        c = tT(t),
+        d = tj(l);
     return (
         (n = null == n ? tI.v1 : n),
         (0, i.jsxs)(s.Fragment, {
@@ -1550,8 +1550,8 @@ function tL(e) {
 }
 function tk(e) {
     let { onVolumeChange: t, volume: n, onMute: l, ...s } = e,
-        r = tj(t),
-        a = tT(l);
+        r = tT(t),
+        a = tj(l);
     return (n = null == n ? tI.v1 : n), (0, i.jsx)(tx, { ...s, onVolumeChange: r, onMute: a, volume: n });
 }
 function tw(e) {
@@ -1765,9 +1765,9 @@ function tB(e) {
         [p, g] = s.useState(null),
         v = s.useRef(null),
         _ = (0, d.yK)([eS.A], () => eS.A.summaries(t.id) ?? [], [t]),
-        j = (0, w.Ay)(_);
+        T = (0, w.Ay)(_);
     s.useEffect(() => {
-        u().isEqual(j, _) ||
+        u().isEqual(T, _) ||
             tC.default.track(eK.HAw.SUMMARIES_TOPICS_PILL_VIEWED, {
                 num_summaries: _.length,
                 message_counts: _.map((e) => e.count),
@@ -1778,8 +1778,8 @@ function tB(e) {
                 channel_id: t.id,
                 channel_type: t.type,
             });
-    }, [_, j, t.guild_id, t.id, t.type]);
-    let T = (0, d.bG)(
+    }, [_, T, t.guild_id, t.id, t.type]);
+    let j = (0, d.bG)(
             [tA.default],
             () => _?.map((e) => e.people?.map((e) => tA.default.getUser(e) ?? null).filter(eU.Vq)) ?? [],
             [_],
@@ -1908,8 +1908,8 @@ function tB(e) {
             [B],
         );
     let W = s.useMemo(
-            () => (0, i.jsx)(eq, { channel: t, summaries: _, summariesMembers: T, selectTopic: F, setOpen: H }),
-            [_, T, F, H, t],
+            () => (0, i.jsx)(eq, { channel: t, summaries: _, summariesMembers: j, selectTopic: F, setOpen: H }),
+            [_, j, F, H, t],
         ),
         K = s.useCallback(() => {
             let e = eR.Ay.ackMessageId(t.id);
@@ -2052,9 +2052,9 @@ function tK(e) {
             tW,
         ),
         _ = (0, d.bG)([eS.A], () => eS.A.visibleSummaryIndex()) ?? -1,
-        j = A?.[_]?.topic;
-    null == j && null == r && A?.length >= 1 && (j = A[0]?.topic);
-    let T = s.useMemo(() => u().get(A, _ - 1), [_, A]),
+        T = A?.[_]?.topic;
+    null == T && null == r && A?.length >= 1 && (T = A[0]?.topic);
+    let j = s.useMemo(() => u().get(A, _ - 1), [_, A]),
         b = s.useMemo(() => u().get(A, _ + 1), [_, A]),
         R = s.useMemo(
             () =>
@@ -2188,7 +2188,7 @@ function tK(e) {
     if (!(0, d.bG)([eS.A], () => eS.A.shouldShowTopicsBar())) return null;
     let z = ec.intl.string(ec.t["38qwgO"]);
     return (
-        A.length > 0 && (z = "" === j || null == j ? ec.intl.string(ec.t.DwnFuG) : j),
+        A.length > 0 && (z = "" === T || null == T ? ec.intl.string(ec.t.DwnFuG) : T),
         l
             ? null
             : (0, i.jsxs)("div", {
@@ -2236,7 +2236,7 @@ function tK(e) {
                                       (0, i.jsx)(x.D, {
                                           "aria-label": ec.intl.string(ec.t["58KOoF"]),
                                           onClick: F,
-                                          className: a()(tv.ZMY, tv.mtW, { [tv.jfO]: null == T }),
+                                          className: a()(tv.ZMY, tv.mtW, { [tv.jfO]: null == j }),
                                           children: (0, i.jsx)(tE.A, {
                                               width: 16,
                                               height: 16,

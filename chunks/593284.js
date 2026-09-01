@@ -24,8 +24,8 @@ var l = n(477900),
     N = n(176201),
     v = n(676608),
     _ = n(342296),
-    j = n(260509),
-    T = n(734057),
+    T = n(260509),
+    j = n(734057),
     b = n(696451),
     R = n(317525),
     O = n(71393),
@@ -39,7 +39,7 @@ function D(e) {
         u = i.useRef(null),
         c = (0, o.bG)([O.A], () => O.A.getGuild(s)?.ownerId, [s]),
         d = (0, o.bG)([M.default], () => M.default.getUser(t.userId), [t.userId]),
-        h = (0, o.bG)([T.A], () => T.A.getChannel(r), [r]);
+        h = (0, o.bG)([j.A], () => j.A.getChannel(r), [r]);
     return null == d || null == h
         ? null
         : (0, l.jsx)(
@@ -164,7 +164,7 @@ function U(e) {
     let h = (0, I.A)(s),
         m = (0, o.bG)([O.A], () => {
             let e = O.A.getGuild(s);
-            return null == e ? null : (0, j.af)(e);
+            return null == e ? null : (0, T.af)(e);
         }, [s]),
         f = (0, o.yK)([b.Ay, M.default], () => {
             let e = b.Ay.getMembers(s),
@@ -219,21 +219,21 @@ function G(e) {
         C = !c && null != p && !(0, N.Qv)(p),
         I = C && "dot" === f,
         _ = C && "username" === f,
-        j = E && null != p ? p.colorStrings : null,
-        T = i.useRef(null);
+        T = E && null != p ? p.colorStrings : null,
+        j = i.useRef(null);
     function b(e) {
         return (0, l.jsxs)(S.A, {
-            ref: T,
+            ref: j,
             className: w.Dz,
             color: _ ? p.color : null,
-            roleColors: _ ? j : null,
+            roleColors: _ ? T : null,
             ...e,
             children: [
                 I &&
                     null != p.color &&
                     (0, l.jsx)(d.W, {
                         color: (0, a.Hl)(p.color),
-                        colors: j,
+                        colors: T,
                         className: P.m,
                         background: !1,
                         tooltip: !1,
@@ -247,7 +247,7 @@ function G(e) {
         : (0, l.jsx)(A.f5, {
               value: m,
               children: (0, l.jsx)(h.Y, {
-                  targetElementRef: T,
+                  targetElementRef: j,
                   preload: async () => {
                       null != t && (await (0, y.a)(r, t));
                   },

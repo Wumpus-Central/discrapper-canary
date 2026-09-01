@@ -24,8 +24,8 @@ var A = n(442433),
     N = n(95561),
     v = n(688810),
     _ = n(941726),
-    j = n(449582),
-    T = n(900797),
+    T = n(449582),
+    j = n(900797),
     b = n(847374),
     R = n(320448),
     O = n(939249),
@@ -77,7 +77,7 @@ let F = i.memo(function (e) {
                         o <= 3 && !u
                             ? null
                             : ((t = u
-                                  ? (0, l.jsx)(T.t, { className: G.wT })
+                                  ? (0, l.jsx)(j.t, { className: G.wT })
                                   : a
                                     ? (0, l.jsx)(b.a, { className: G.wT })
                                     : (0, l.jsx)(R._, { className: G.wT })),
@@ -143,8 +143,8 @@ var ep = n(915089),
     eN = n(309010),
     ev = n(741961),
     e_ = n(287809),
-    ej = n(977997),
-    eT = n(625494),
+    eT = n(977997),
+    ej = n(625494),
     eb = n(403362),
     eR = n(427262),
     eO = n(19575),
@@ -173,8 +173,8 @@ let eL = eO.Ay.getEnableHardwareAcceleration(),
                 nameplate: v,
                 ..._
             } = e,
-            j = i.useRef(null),
-            [T, b] = i.useState(!1),
+            T = i.useRef(null),
+            [j, b] = i.useState(!1),
             R = null != N ? new Date(N) : null,
             O = i.useCallback(
                 (e) => {
@@ -249,7 +249,7 @@ let eL = eO.Ay.getEnableHardwareAcceleration(),
                                 n.e("717334"),
                                 n.e("184841"),
                             ]).then(n.bind(n, 107632)),
-                            t = ej.A.isInChannel(eN.Ay.getVoiceChannelId(), c.id);
+                            t = eT.A.isInChannel(eN.Ay.getVoiceChannelId(), c.id);
                         return (n) => (0, l.jsx)(e, { ...n, user: c, guildId: x, channel: g, showMediaItems: t });
                     });
                 },
@@ -258,8 +258,8 @@ let eL = eO.Ay.getEnableHardwareAcceleration(),
             M = i.useCallback(() => {
                 let e = `@${eR.Ay.getUserTag(c, { decoration: "never" })}`,
                     t = `<@${c.id}>`;
-                eT._.dispatch(D.jej.TEXTAREA_FOCUS, { channelId: g.id }),
-                    eT._.dispatchToLastSubscribed(D.jej.INSERT_TEXT, { plainText: e, rawText: t }),
+                ej._.dispatch(D.jej.TEXTAREA_FOCUS, { channelId: g.id }),
+                    ej._.dispatchToLastSubscribed(D.jej.INSERT_TEXT, { plainText: e, rawText: t }),
                     C.A.startTyping(g.id);
             }, [c, g.id]),
             L = i.useCallback(
@@ -274,7 +274,7 @@ let eL = eO.Ay.getEnableHardwareAcceleration(),
                 [x],
             );
         return (0, l.jsx)(eC.A, {
-            targetElementRef: j,
+            targetElementRef: T,
             user: c,
             guildId: x,
             channelId: g.id,
@@ -282,14 +282,14 @@ let eL = eO.Ay.getEnableHardwareAcceleration(),
             position: d.Fr ? "window_center" : "left",
             spacing: 16,
             onShiftClick: M,
-            shouldShow: T,
+            shouldShow: j,
             onRequestClose: () => {
                 b(!1);
             },
             children: (e) => {
                 let { onClick: n, onMouseDown: i, ...a } = e;
                 return (0, l.jsx)(I.A, {
-                    ref: j,
+                    ref: T,
                     className: V.Dc,
                     onContextMenu: O,
                     shouldAnimateStatus: eL,
@@ -310,14 +310,14 @@ let eL = eO.Ay.getEnableHardwareAcceleration(),
                     isMobile: y,
                     isVR: S,
                     onClickPremiumGuildIcon: L,
-                    selected: T,
+                    selected: j,
                     itemProps: _,
                     nameplate: v,
                     onClick: (e) => {
                         e.shiftKey ? M?.() : b((e) => !e);
                     },
                     onMouseDown: (e) => {
-                        T ? e.stopPropagation() : i?.(e);
+                        j ? e.stopPropagation() : i?.(e);
                     },
                     ...a,
                 });
@@ -331,7 +331,7 @@ let eL = eO.Ay.getEnableHardwareAcceleration(),
             o = (0, h.bG)([ev.A], () => ev.A.isTyping(i.id, s.id)),
             c = (0, h.bG)([e_.default], () => e_.default.getCurrentUser()),
             d = (0, h.bG)([ey.A], () => (null != t ? ey.A.getRole(i.guild_id, t)?.name : void 0), [i, t]),
-            m = (0, j.r)({ user: s, guildId: i.guild_id });
+            m = (0, T.r)({ user: s, guildId: i.guild_id });
         return (0, l.jsx)(ew, { ...n, ...a, isTyping: o, currentUser: c, colorRoleName: d, nameplate: m });
     }),
     eD = i.memo(function (e) {
@@ -777,7 +777,7 @@ function eV(e) {
                 S = i.useRef(c),
                 N = i.useRef(void 0),
                 v = i.useRef({ impressionCappedEntryIds: d }),
-                j = i.useCallback(
+                T = i.useCallback(
                     (e) => {
                         let t = Math.floor(e / B.bG),
                             n = Math.min(I?.length ?? 0, t);
@@ -819,7 +819,7 @@ function eV(e) {
                     ),
                     [u, s, r, m, f, x],
                 ),
-                { groups: A, rows: E, version: C, updateMaxRowSeen: j }
+                { groups: A, rows: E, version: C, updateMaxRowSeen: T }
             );
         })({ memberStoreProps: o, channelId: t.id, guildId: t.guild_id }),
         g = i.useRef(null),
@@ -870,7 +870,7 @@ function eV(e) {
                 }),
             [],
         ),
-        j = (0, c.Ay)({ id: `members-${t.id}`, setFocus: C, isEnabled: a, scrollToStart: I, scrollToEnd: N });
+        T = (0, c.Ay)({ id: `members-${t.id}`, setFocus: C, isEnabled: a, scrollToStart: I, scrollToEnd: N });
     return (0, l.jsx)(v.f5, {
         value: s,
         children: (0, l.jsx)("div", {
@@ -878,7 +878,7 @@ function eV(e) {
             tabIndex: -1,
             className: r()(V.kL, n),
             children: (0, l.jsx)(u.hD, {
-                navigator: j,
+                navigator: T,
                 children: (0, l.jsx)(eG, {
                     ...e,
                     ...o,

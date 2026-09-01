@@ -21,8 +21,8 @@ var i = n(477900),
     E = n(201275),
     C = n(657048),
     v = n(734057),
-    I = n(696451),
-    T = n(317525),
+    T = n(696451),
+    I = n(317525),
     S = n(994500),
     y = n(351906),
     k = n(287809),
@@ -49,7 +49,7 @@ function M(e) {
         case f.RA.ROLE:
             return (0, i.jsx)(P, { guild: t, id: s, isLocked: r, lockTooltipText: c, openEntryContextMenu: u });
         case f.RA.USER:
-            return (0, i.jsx)(G, { guild: t, id: s, isLocked: r, lockTooltipText: c, openEntryContextMenu: u });
+            return (0, i.jsx)(W, { guild: t, id: s, isLocked: r, lockTooltipText: c, openEntryContextMenu: u });
     }
 }
 function _(e) {
@@ -92,13 +92,13 @@ function _(e) {
                   null != x
                       ? (0, i.jsxs)(u.E, { className: R.Tc, variant: "text-sm/normal", children: ["(", x, ")"] })
                       : null,
-                  s ? (0, i.jsx)(W, { tooltipText: r }) : null,
+                  s ? (0, i.jsx)(G, { tooltipText: r }) : null,
               ],
           });
 }
 function P(e) {
     let { guild: t, id: s, isLocked: r, lockTooltipText: o } = e,
-        d = (0, c.bG)([T.A], () => T.A.getRole(t.id, s)),
+        d = (0, c.bG)([I.A], () => I.A.getRole(t.id, s)),
         g = (0, E.$7)({ guildId: t.id, roleId: s, size: 24 }),
         h = l.useCallback(
             (e) => {
@@ -132,14 +132,14 @@ function P(e) {
                       variant: "text-md/normal",
                       children: d.name,
                   }),
-                  r ? (0, i.jsx)(W, { tooltipText: o }) : null,
+                  r ? (0, i.jsx)(G, { tooltipText: o }) : null,
               ],
           });
 }
-function G(e) {
+function W(e) {
     let { guild: t, id: n, isLocked: l, lockTooltipText: s, openEntryContextMenu: a } = e,
         r = (0, c.bG)([k.default], () => k.default.getUser(n)),
-        o = (0, c.bG)([I.Ay], () => I.Ay.getMember(t.id, n)?.nick, [t.id, n]),
+        o = (0, c.bG)([T.Ay], () => T.Ay.getMember(t.id, n)?.nick, [t.id, n]),
         d = (0, c.bG)([y.A], () => y.A.hidePersonalInformation);
     return null == r
         ? null
@@ -162,11 +162,11 @@ function G(e) {
                   d
                       ? null
                       : (0, i.jsx)(u.E, { className: R.Tc, variant: "text-sm/normal", children: O.Ay.getUserTag(r) }),
-                  l ? (0, i.jsx)(W, { tooltipText: s }) : null,
+                  l ? (0, i.jsx)(G, { tooltipText: s }) : null,
               ],
           });
 }
-function W(e) {
+function G(e) {
     let { tooltipText: t } = e;
     return (0, i.jsx)(x.m, {
         text: t,

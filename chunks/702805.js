@@ -1,4 +1,4 @@
-n.d(e, { E: () => o, G9: () => s, LA: () => u, R$: () => d, Ts: () => a, lS: () => T });
+n.d(e, { E: () => a, G9: () => s, LA: () => u, R$: () => d, Ts: () => o, lS: () => T });
 var r = n(228366),
     i = n(60868),
     l = n(308528);
@@ -10,10 +10,10 @@ async function u(t, e, n, l) {
 function s(t) {
     r.h.dispatch({ type: "CHANNEL_SETTINGS_PERMISSIONS_SELECT_PERMISSION", id: t });
 }
-function o(t) {
+function a(t) {
     r.h.dispatch({ type: "CHANNEL_SETTINGS_PERMISSIONS_SET_ADVANCED_MODE", advancedMode: t });
 }
-function a() {
+function o() {
     r.h.dispatch({ type: "CHANNEL_SETTINGS_PERMISSIONS_INIT" });
 }
 function d(t, e, n) {

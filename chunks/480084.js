@@ -31,8 +31,8 @@ let S = function () {
 var N = n(112107),
     v = n(930101),
     _ = n(976860),
-    j = n(302031),
-    T = n(157941),
+    T = n(302031),
+    j = n(157941),
     b = n(696451),
     R = n(317525),
     O = n(71393),
@@ -190,15 +190,15 @@ function eS() {
 var eN = n(881140),
     ev = n(746080),
     e_ = n(165648),
-    ej = n(969490);
-let eT = { display: "inline" };
+    eT = n(969490);
+let ej = { display: "inline" };
 function eb(e) {
     return e.stopPropagation();
 }
 function eR(e) {
     return {
         ...e,
-        react: (t, n, i) => (0, l.jsx)("span", { style: eT, onClick: eb, children: e.react(t, n, i) }, i.key),
+        react: (t, n, i) => (0, l.jsx)("span", { style: ej, onClick: eb, children: e.react(t, n, i) }, i.key),
     };
 }
 function eO(e) {
@@ -239,7 +239,7 @@ let eM = {
     codeBlock: {
         react(e, t, i) {
             function s() {
-                return (0, l.jsx)("code", { className: r()(ej.kw, "hljs"), children: (0, L.t)(e, t, i) });
+                return (0, l.jsx)("code", { className: r()(eT.kw, "hljs"), children: (0, L.t)(e, t, i) });
             }
             return (0, l.jsx)(
                 "pre",
@@ -250,11 +250,11 @@ let eM = {
                             M.p5
                                 ? (0, l.jsx)("div", { className: e_.lB, children: (0, l.jsx)(eO, { text: e.content }) })
                                 : null,
-                            (0, l.jsx)(T.l, {
+                            (0, l.jsx)(j.l, {
                                 location: "MarkupReactRules",
                                 code: e.content,
                                 lang: e.lang,
-                                className: r()(ej.kw, "hljs"),
+                                className: r()(eT.kw, "hljs"),
                                 children: (0, l.jsx)(f.c2, {
                                     createPromise: () =>
                                         Promise.all([n.e("818449"), n.e("175134")]).then(n.bind(n, 981776)),
@@ -267,7 +267,7 @@ let eM = {
                                             return null == n
                                                 ? s()
                                                 : (0, l.jsx)("code", {
-                                                      className: r()(ej.kw, "hljs", n.language),
+                                                      className: r()(eT.kw, "hljs", n.language),
                                                       dangerouslySetInnerHTML: { __html: n.value },
                                                   });
                                         }
@@ -290,9 +290,9 @@ let eM = {
     spoiler: {
         react: (e, t, n) =>
             (0, l.jsx)(
-                j.Ay,
+                T.Ay,
                 {
-                    type: j.Ay.Types.TEXT,
+                    type: T.Ay.Types.TEXT,
                     inline: n.formatInline,
                     renderTextElement: (e, t) =>
                         null == e || e.type !== m.A || t ? e : i.cloneElement(e, { tabIndex: -1 }),

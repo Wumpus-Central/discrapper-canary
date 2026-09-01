@@ -46,7 +46,7 @@ function _(e) {
               }),
     });
 }
-function j(e) {
+function T(e) {
     let { reason: t = C.Oc.SPOILER, className: n, isSingleMosaicItem: l = !1 } = e;
     switch (t) {
         case C.Oc.SPOILER:
@@ -61,7 +61,7 @@ function j(e) {
             return (0, I.xb)(t);
     }
 }
-function T(e) {
+function j(e) {
     let { obscureReason: t, isVisible: n, handleToggleObscurity: l, obscurityControlClassName: s } = e;
     return t !== C.Oc.EXPLICIT_CONTENT && t !== C.Oc.GORE_CONTENT && t !== C.Oc.SELF_HARM_CONTENT
         ? null
@@ -133,11 +133,11 @@ class R extends s.PureComponent {
                               role: f ? "presentation" : "button",
                               tabIndex: f ? -1 : 0,
                               children: [
-                                  f ? null : (0, i.jsx)(j, { reason: r, isSingleMosaicItem: o }),
+                                  f ? null : (0, i.jsx)(T, { reason: r, isSingleMosaicItem: o }),
                                   (0, i.jsx)("div", { "aria-hidden": !f, className: S.Qu, children: e(!f) }),
                                   c
                                       ? null
-                                      : (0, i.jsx)(T, {
+                                      : (0, i.jsx)(j, {
                                             obscureReason: r,
                                             isVisible: h,
                                             handleToggleObscurity: this.handleToggleObscurity,
@@ -154,7 +154,7 @@ class R extends s.PureComponent {
                               role: f ? "presentation" : "button",
                               tabIndex: f ? -1 : 0,
                               children: [
-                                  f || t ? null : (0, i.jsx)(j, { reason: r, isSingleMosaicItem: o }),
+                                  f || t ? null : (0, i.jsx)(T, { reason: r, isSingleMosaicItem: o }),
                                   (0, i.jsx)("div", { "aria-hidden": !f, className: S.Qu, children: e(!f) }),
                               ],
                           });
@@ -185,11 +185,11 @@ class R extends s.PureComponent {
                           role: h ? "presentation" : "button",
                           tabIndex: h ? -1 : 0,
                           children: [
-                              h ? null : (0, i.jsx)(j, { reason: r, isSingleMosaicItem: l }),
+                              h ? null : (0, i.jsx)(T, { reason: r, isSingleMosaicItem: l }),
                               (0, i.jsx)("div", { "aria-hidden": !h, className: S.Qu, children: e(!h) }),
                               o
                                   ? null
-                                  : (0, i.jsx)(T, {
+                                  : (0, i.jsx)(j, {
                                         obscureReason: r,
                                         isVisible: u,
                                         handleToggleObscurity: this.handleToggleObscurity,
@@ -206,7 +206,7 @@ class R extends s.PureComponent {
                           role: h ? "presentation" : "button",
                           tabIndex: h ? -1 : 0,
                           children: [
-                              h ? null : (0, i.jsx)(j, { reason: r, className: S.E6 }),
+                              h ? null : (0, i.jsx)(T, { reason: r, className: S.E6 }),
                               (0, i.jsx)("div", { "aria-hidden": !h, children: e(!h) }),
                           ],
                       });

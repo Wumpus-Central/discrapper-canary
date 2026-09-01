@@ -1,29 +1,29 @@
-t.d(e, { B: () => r });
-var s = t(477900);
+t.d(e, { B: () => n });
+var a = t(477900);
 t(582128);
-var a = t(661531),
+var s = t(661531),
     i = t(996682),
-    n = t(27989);
-function r(l) {
+    r = t(27989);
+function n(l) {
     let {
             size: e = "md",
             width: t,
-            height: r,
-            color: c = a.A.colors.INTERACTIVE_ICON_DEFAULT,
+            height: n,
+            color: c = s.A.colors.INTERACTIVE_ICON_DEFAULT,
             colorClass: h = "",
             ...o
         } = l,
-        d = (0, n.J)(e),
+        d = (0, r.J)(e),
         v = d?.width ?? t,
-        f = d?.height ?? r;
-    return (0, s.jsx)("svg", {
+        f = d?.height ?? n;
+    return (0, a.jsx)("svg", {
         ...(0, i.A)(o),
         xmlns: "http://www.w3.org/2000/svg",
         width: v,
         height: f,
         fill: "none",
         viewBox: "0 0 24 24",
-        children: (0, s.jsx)("path", {
+        children: (0, a.jsx)("path", {
             fill: "string" == typeof c ? c : c.css,
             fillRule: "evenodd",
             d: "M15 2a3 3 0 0 1 3 3v12H5.5a1.5 1.5 0 0 0 0 3h14a.5.5 0 0 0 .5-.5V5h1a1 1 0 0 1 1 1v15a1 1 0 0 1-1 1H5a3 3 0 0 1-3-3V5a3 3 0 0 1 3-3h10Zm-.3 5.7a1 1 0 0 0-1.4-1.4L9 10.58l-2.3-2.3a1 1 0 0 0-1.4 1.42l3 3a1 1 0 0 0 1.4 0l5-5Z",

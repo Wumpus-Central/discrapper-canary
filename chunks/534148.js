@@ -22,8 +22,8 @@ var i,
     C = n(803378);
 n(321073), n(667532);
 var v = n(47167),
-    I = n(808728),
-    T = n(994500),
+    T = n(808728),
+    I = n(994500),
     S = n(287809),
     y = n(633334),
     k = n(652215),
@@ -39,11 +39,11 @@ function P(e) {
     let t = [e.username];
     return e?.nick != null && t.push(e.nick), { id: e.id, names: t };
 }
-function G(e) {
+function W(e) {
     return { id: e.id, names: [e.name] };
 }
 n(172879);
-var W = n(43105),
+var G = n(43105),
     D = n(834730),
     U = n(939249),
     B = n(241326),
@@ -57,9 +57,9 @@ var W = n(43105),
     Q = n(935208),
     J = n(53656),
     Z = n(200662),
-    $ = n(739174),
-    X = n(503698),
-    ee = n.n(X),
+    X = n(739174),
+    $ = n(503698),
+    ee = n.n($),
     et = n(785007),
     en = n(933832),
     ei = n(789645),
@@ -239,7 +239,7 @@ function ed(e) {
                 }),
             }),
         }),
-        E = (0, l.jsx)(W.A, {
+        E = (0, l.jsx)(G.A, {
             targetElementRef: j,
             title: O.intl.string(O.t.ufFDiC),
             body: O.intl.format(O.t.pW4Crz, {
@@ -259,7 +259,7 @@ function ed(e) {
             children: [
                 (0, l.jsx)("div", {
                     className: eo.MB,
-                    children: (0, l.jsx)($.A, { guild: n, id: o.id, type: o.type, isLocked: A, lockTooltipText: t }),
+                    children: (0, l.jsx)(X.A, { guild: n, id: o.id, type: o.type, isLocked: A, lockTooltipText: t }),
                 }),
                 (0, l.jsxs)("div", {
                     className: eo.ev,
@@ -302,8 +302,8 @@ function ef(e) {
             commandId: i,
             guildId: a,
             inModal: v,
-            editedTargetPermissions: I,
-            originalApplicationPermissions: T,
+            editedTargetPermissions: T,
+            originalApplicationPermissions: I,
             originalCommandPermissions: S,
             selectedPermissionCount: y,
         } = e,
@@ -319,20 +319,20 @@ function ef(e) {
                     PermissionStore: N.A,
                     guild: e,
                     selfMember: t,
-                    applicationLevelPermissions: T,
+                    applicationLevelPermissions: I,
                     commandLevelPermissions: S,
                     defaultMemberPermissions: L?.defaultMemberPermissions,
                 })
             );
-        }, [a, L, T, S]),
+        }, [a, L, I, S]),
         M = i ?? t,
         [_, P] = s.useMemo(() => {
             let e = {},
                 t = {};
-            for (let [n, i] of Object.entries(I)) i.type === x.RA.CHANNEL ? (e[n] = i) : (t[n] = i);
+            for (let [n, i] of Object.entries(T)) i.type === x.RA.CHANNEL ? (e[n] = i) : (t[n] = i);
             return [e, t];
-        }, [I]),
-        G = s.useCallback(
+        }, [T]),
+        W = s.useCallback(
             (e) => {
                 let t = j.A.getGuild(a),
                     n = f.Ay.getSelfMember(a);
@@ -344,22 +344,22 @@ function ef(e) {
                               PermissionStore: N.A,
                               guild: t,
                               selfMember: n,
-                              applicationLevelPermissions: T,
+                              applicationLevelPermissions: I,
                               commandLevelPermissions: e,
                               defaultMemberPermissions: L?.defaultMemberPermissions,
                           })
                         : (0, p.zl)({ PermissionStore: N.A, guild: t, selfMember: n, applicationLevelPermissions: e }))
                 );
             },
-            [a, L, i, T],
+            [a, L, i, I],
         ),
-        W = s.useCallback(
+        G = s.useCallback(
             (e, t) => {
                 let n,
                     i,
                     l = null;
                 if (0 !== t.length) {
-                    let e = I[t[0]];
+                    let e = T[t[0]];
                     if (e.type === x.RA.USER) i = eh.REMOVE_SELF;
                     else {
                         let t = e.id;
@@ -397,15 +397,15 @@ function ef(e) {
                     },
                 });
             },
-            [a, I],
+            [a, T],
         ),
         D = s.useCallback(
             (e, n) => {
                 let i = {};
-                for (let [e, t] of Object.entries(I)) i[e] = { id: t.id, permission: t.permission, type: t.type };
-                ((i = Object.assign(i, e)), n.length > 0 && (i = r().omit(i, n)), G(i)) ? E.T0(t, M, i) : W(e, n);
+                for (let [e, t] of Object.entries(T)) i[e] = { id: t.id, permission: t.permission, type: t.type };
+                ((i = Object.assign(i, e)), n.length > 0 && (i = r().omit(i, n)), W(i)) ? E.T0(t, M, i) : G(e, n);
             },
-            [t, I, M, G, W],
+            [t, T, M, W, G],
         ),
         U = s.useCallback(() => {
             let e = Object.keys(_);
@@ -551,12 +551,12 @@ function ef(e) {
 function eb(e) {
     let t = (function (e) {
         let t = s.useMemo(() => {
-                let t = I.Ay.getChannels(e),
-                    n = [...t[I.I6]];
-                n.push(...t[I.vM].filter((e) => e.channel.isGuildVocal()));
+                let t = T.Ay.getChannels(e),
+                    n = [...t[T.I6]];
+                n.push(...t[T.vM].filter((e) => e.channel.isGuildVocal()));
                 let i = n.map((e) => ({
                     id: e.channel.id,
-                    name: (0, v.m1)(e.channel, S.default, T.A),
+                    name: (0, v.m1)(e.channel, S.default, I.A),
                     canManage: N.A.can(k.xBc.MANAGE_ROLES, e.channel),
                 }));
                 return i.unshift({ id: (0, p.Ap)(e), name: O.intl.string(O.t["7YqSGx"]), canManage: !0 }), i;
@@ -607,7 +607,7 @@ function ej(e) {
                 var t;
                 let n = (t = d).startsWith("@") ? t.substr(1) : t,
                     i = d.startsWith("@") ? o.filter((t) => t.id === e) : o;
-                return { members: (0, y.I)(r, P, n), roles: (0, y.I)(i, G, n) };
+                return { members: (0, y.I)(r, P, n), roles: (0, y.I)(i, W, n) };
             }, [e, r, d, o]);
         return { query: d, results: m, setQuery: u, unfilteredCount: m.members.length + m.roles.length };
     })(e);

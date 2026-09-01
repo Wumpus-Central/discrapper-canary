@@ -1335,7 +1335,7 @@ function t1(e) {
         })
     );
 }
-var t2 = n(871237),
+var t2 = n(147036),
     t3 = n(36889);
 function t5(e) {
     let { giftIntentType: t, recipientUser: n, channel: i } = e;

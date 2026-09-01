@@ -246,19 +246,19 @@ var y = n(462180),
     N = n(778712),
     v = n(571694),
     _ = n(548118),
-    j = n(366811),
-    T = n(734057),
+    T = n(366811),
+    j = n(734057),
     b = n(71393),
     R = n(287809),
     O = n(486020),
     M = n(316386);
 function L() {
-    let { guildId: e, channelId: t } = (0, j.A)((e) => {
+    let { guildId: e, channelId: t } = (0, T.A)((e) => {
             let { guildId: t, channelId: n } = e;
             return { guildId: t, channelId: n };
         }, y.x),
         n = (0, c.bG)([b.A], () => b.A.getGuild(e)),
-        i = (0, c.bG)([T.A], () => (null == n ? T.A.getChannel(t) : null)),
+        i = (0, c.bG)([j.A], () => (null == n ? j.A.getChannel(t) : null)),
         s = (0, c.bG)([R.default], () => R.default.getCurrentUser()),
         r = null != i ? (0, v.Y)(i) : null,
         a = null != s ? s.getAvatarURL(e, 80) : O.vI["0"],

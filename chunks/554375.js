@@ -78,21 +78,21 @@ async function _(e) {
         throw new u.A(e);
     }
 }
-function j(e) {
+function T(e) {
     if (g.A.totalUnavailableGuilds > 0 || !f.A.isConnected()) return e;
     let t = e.map((e) => d.Ay.getCustomEmojiById(e) ?? h.Ay.getByName(e)).filter(x.Vq);
     return [...(0, m.A)(t).keys()];
 }
-function T(e) {
+function j(e) {
     return null == e ? null : (e.id ?? h.Ay.convertSurrogateToBase(e.surrogates)?.name ?? e.name);
 }
 function b(e) {
-    let t = T(e);
+    let t = j(e);
     null != t &&
         p.bW.updateAsync(
             "favoriteEmojis",
             (e) =>
-                ((e.emojis = j(e.emojis)), i().size(e.emojis) >= 250)
+                ((e.emojis = T(e.emojis)), i().size(e.emojis) >= 250)
                     ? (A.A.show({
                           title: I.intl.string(I.t["+XYXtZ"]),
                           body: I.intl.formatToPlainString(I.t.JaIyFi, { count: 250 }),
@@ -103,12 +103,12 @@ function b(e) {
         );
 }
 function R(e) {
-    let t = T(e);
+    let t = j(e);
     null != t &&
         p.bW.updateAsync(
             "favoriteEmojis",
             (e) => {
-                if (((e.emojis = j(e.emojis)), !e.emojis.includes(t))) return !1;
+                if (((e.emojis = T(e.emojis)), !e.emojis.includes(t))) return !1;
                 e.emojis = e.emojis.filter((e) => t !== e);
             },
             C.Sb.INFREQUENT_USER_ACTION,

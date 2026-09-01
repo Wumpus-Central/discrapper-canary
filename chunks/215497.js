@@ -37,7 +37,7 @@ let A = s.forwardRef(function (e, t) {
         } = e,
         N = s.useRef(null),
         { onFocus: v, ..._ } = (0, o.rm)(n),
-        { handleFocus: j, handleBlur: T } = (function (e) {
+        { handleFocus: T, handleBlur: j } = (function (e) {
             let [t, n] = (0, s.useState)(!1);
             return {
                 handleFocus: (0, s.useCallback)(
@@ -61,8 +61,8 @@ let A = s.forwardRef(function (e, t) {
     return (0, i.jsx)(u.vN, {
         children: (0, i.jsx)("li", {
             ..._,
-            onFocus: j,
-            onBlur: T,
+            onFocus: T,
+            onBlur: j,
             onClick: function (e) {
                 if (0 === e.detail && null != N.current) {
                     let e = N.current.querySelector('[role="button"], button');

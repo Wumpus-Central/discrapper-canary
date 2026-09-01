@@ -37,8 +37,8 @@ function I(e) {
                         N,
                         v,
                         _,
-                        j,
                         T,
+                        j,
                         b,
                         R,
                         O,
@@ -86,7 +86,7 @@ function I(e) {
                                 ),
                         )),
                         (_ = (0, c.A)(N)),
-                        (j = i.useMemo(
+                        (T = i.useMemo(
                             () =>
                                 Object.fromEntries(
                                     _.filter(x.Vq)
@@ -99,11 +99,11 @@ function I(e) {
                                 ),
                             [k, _],
                         )),
-                        (T = i.useMemo(
-                            () => [...new Set(S.filter((e) => e.extra.application_id in j).map((e) => e.author_id))],
-                            [S, j],
+                        (j = i.useMemo(
+                            () => [...new Set(S.filter((e) => e.extra.application_id in T).map((e) => e.author_id))],
+                            [S, T],
                         )),
-                        { widgetApps: j, userIdsWhoMightHaveWidgetData: T, isFetchingApplications: v }),
+                        { widgetApps: T, userIdsWhoMightHaveWidgetData: j, isFetchingApplications: v }),
                         { identitiesByUserId: G, isLoadingIdentities: V } =
                             ((b = (0, a.cf)([h.A], () =>
                                 Object.fromEntries(D.map((e) => [e, h.A.getUserIdentities(e)]).filter(x.QE)),

@@ -19,8 +19,8 @@ var l,
     O = n(287809),
     S = n(985925),
     m = n(221877),
-    R = n(66455),
-    D = n(844222),
+    D = n(66455),
+    R = n(844222),
     h = n(866323),
     L = n(475743),
     C = n(775121),
@@ -339,8 +339,8 @@ var eO =
         l),
     eS = n(189552),
     em = n(555067),
-    eR = n(438407),
-    eD = n(967144),
+    eD = n(438407),
+    eR = n(967144),
     eh = n(562153),
     eL = n(881636),
     eC = n(278037);
@@ -389,7 +389,7 @@ function ef(e) {
             (n = (0, ei.bG)([e_.default], () => e_.default.locale)),
             i.useMemo(() => new Date(eg.default.extractTimestamp(t)).toLocaleDateString(n, eG), [t, n])),
         T = (0, ei.bG)([ed.Ay], () => (null != l.userId ? ed.Ay.getMember(r, l.userId) : null), [r, l.userId]),
-        I = (0, eD.gn)(T?.guildId, T?.userId, T?.colorStrings ?? null),
+        I = (0, eR.gn)(T?.guildId, T?.userId, T?.colorStrings ?? null),
         N = i.useCallback(
             (e) => (t) => {
                 t.preventDefault(), t.stopPropagation(), null != e && (0, eS.Ko)(e, u);
@@ -492,7 +492,7 @@ function ef(e) {
                             variant: "text-sm/normal",
                             color: "text-muted",
                             tag: "span",
-                            children: (0, a.jsx)(eR.r, {
+                            children: (0, a.jsx)(eD.r, {
                                 log: l,
                                 guild: s,
                                 onContentClick: () => {},
@@ -1153,8 +1153,8 @@ let tm = i.memo(function (e) {
               ],
           });
 });
-var tR = n(953822),
-    tD = n(60270),
+var tD = n(953822),
+    tR = n(60270),
     th = n(576470),
     tL = n(316031),
     tC = n(157347);
@@ -1181,7 +1181,7 @@ function tM(e) {
                   children: [
                       null != r &&
                           (0, a.jsx)(eM, {
-                              icon: (0, a.jsx)(tR.E, { size: "custom", color: "currentColor", width: 16, height: 16 }),
+                              icon: (0, a.jsx)(tD.E, { size: "custom", color: "currentColor", width: 16, height: 16 }),
                               name: (0, a.jsx)(eE.E, {
                                   variant: "text-sm/semibold",
                                   color: "text-default",
@@ -1196,7 +1196,7 @@ function tM(e) {
                       u &&
                           null != o &&
                           (0, a.jsx)(eM, {
-                              icon: (0, a.jsx)(tD.g, { size: "custom", color: "currentColor", width: 16, height: 16 }),
+                              icon: (0, a.jsx)(tR.g, { size: "custom", color: "currentColor", width: 16, height: 16 }),
                               name: (0, a.jsx)(eE.E, {
                                   variant: "text-sm/semibold",
                                   color: "text-default",
@@ -1465,7 +1465,7 @@ function tF(e) {
                     G.current && I(!1);
                 });
         }, [A, S, d]),
-        R = (0, a.jsx)(f.D, {
+        D = (0, a.jsx)(f.D, {
             className: E()(b.F3, { [b.r9]: g }),
             "aria-label": j.intl.string(j.t.wzzjk9),
             "aria-disabled": g,
@@ -1479,7 +1479,7 @@ function tF(e) {
         : (0, a.jsxs)("div", {
               className: E()(b.kL, r),
               children: [
-                  (0, a.jsx)(tk, { onClose: s, trailingAction: R }),
+                  (0, a.jsx)(tk, { onClose: s, trailingAction: D }),
                   (0, a.jsxs)(U.Ip, {
                       className: b.WH,
                       children: [
@@ -1597,13 +1597,13 @@ function tW(e) {
         let e = c?.details.scrollOffset;
         null != e && o.current?.scrollTo({ to: e, animate: !1 });
     });
-    let R = i.useCallback((e, t, n) => {
+    let D = i.useCallback((e, t, n) => {
             let l = o.current;
             if (null == l) return;
             let r = l.getScrollerState().scrollTop - e;
             l.scrollTo({ to: r, animate: t, callback: n });
         }, []),
-        D = i.useCallback(
+        R = i.useCallback(
             (e) => {
                 null == c ||
                     ((_.current = e.target.scrollTop),
@@ -1615,7 +1615,7 @@ function tW(e) {
             },
             [n, t, c, d],
         ),
-        h = (0, y.throttle)(D, 300),
+        h = (0, y.throttle)(R, 300),
         C = i.useCallback(
             (e) => {
                 if (null == c) return;
@@ -1705,7 +1705,7 @@ function tW(e) {
                                     renderEmbeds: !0,
                                     blockCount: k,
                                     ignoreCount: F,
-                                    scrollTo: R,
+                                    scrollTo: D,
                                     onPageChange: C,
                                     onBlockedResultsClick: f,
                                     paginationTotalCount: G,
@@ -1878,10 +1878,10 @@ function t1(e) {
             },
             [S],
         ),
-        R = i.useCallback(() => {
+        D = i.useCallback(() => {
             I(""), G("");
         }, []),
-        D = i.useMemo(() => {
+        R = i.useMemo(() => {
             if (null == o || null == A || null == c) return null;
             if (0 === d) return (0, a.jsx)(eE.E, { variant: "text-sm/normal", children: j.intl.string(j.t.DEBGqA) });
             let e = [];
@@ -1965,11 +1965,11 @@ function t1(e) {
                                         query: T,
                                         placeholder: j.intl.string(j.t["yD9+dN"]),
                                         onChange: m,
-                                        onClear: R,
+                                        onClear: D,
                                         autoComplete: "off",
                                         inputProps: { autoCapitalize: "none", autoCorrect: "off", spellCheck: "false" },
                                     }),
-                                    D,
+                                    R,
                                 ],
                             }),
                         }),
@@ -1998,8 +1998,8 @@ function t3(e) {
         o = E?.details.modViewPanel ?? P.g.INFO,
         c = (0, L.Ay)(t),
         _ = null == o ? null : o === P.g.INFO ? "backwards" : "forwards",
-        d = (0, R.A)(_),
-        { reducedMotion: A } = i.useContext(D.C),
+        d = (0, D.A)(_),
+        { reducedMotion: A } = i.useContext(R.C),
         g = i.useCallback(
             (e) => {
                 null != E && (0, x.z)(n, t, E.baseChannelId, { modViewPanel: e });
@@ -2263,7 +2263,7 @@ function nN(e) {
                                   modReportId: s,
                               });
                     },
-                    children: (0, a.jsx)(tD.g, {
+                    children: (0, a.jsx)(tR.g, {
                         size: "custom",
                         width: 24,
                         height: 24,
@@ -2302,16 +2302,16 @@ function nG(e) {
 }
 var nO = n(409861);
 function nS(e) {
-    let { userId: t, guildId: n, onClose: l, className: r, infoPanelClassName: s, style: m, moderatorReportId: R } = e,
-        D = (0, S.q)(n),
+    let { userId: t, guildId: n, onClose: l, className: r, infoPanelClassName: s, style: m, moderatorReportId: D } = e,
+        R = (0, S.q)(n),
         h = (0, u.bG)([O.default], () => O.default.getUser(t), [t]),
         [L, C] = i.useState(null == h),
         { analyticsLocations: M } = (0, g.Ay)(A.A.GUILD_MEMBER_MOD_VIEW),
         x = (0, I.Ay)(t, n),
         U = (0, _.Ay)();
     return (i.useEffect(() => {
-        D || l();
-    }, [D, l]),
+        R || l();
+    }, [R, l]),
     i.useEffect(() => {
         null != h && C(!1);
     }, [h]),
@@ -2332,7 +2332,7 @@ function nS(e) {
             }
         );
     }, [n, t, l]),
-    D)
+    R)
         ? L || null == h
             ? (0, a.jsx)("div", {
                   className: E()(nO.so, nO.g4, r),
@@ -2357,7 +2357,7 @@ function nS(e) {
                           children: (0, a.jsxs)("div", {
                               className: nO.WH,
                               children: [
-                                  (0, a.jsx)(nG, { userId: t, guildId: n, onClose: l, moderatorReportId: R }),
+                                  (0, a.jsx)(nG, { userId: t, guildId: n, onClose: l, moderatorReportId: D }),
                                   (0, a.jsx)(t3, { userId: t, guildId: n, onClose: l, className: s }),
                               ],
                           }),

@@ -36,21 +36,21 @@ function p(e) {
             S(!1);
         }, []),
         _ = "username" === t,
-        j = null != u && null != u.primaryColor && null != u.secondaryColor,
-        T = _ && j,
+        T = null != u && null != u.primaryColor && null != u.secondaryColor,
+        j = _ && T,
         {
             gradientStyle: b,
             gradientClassname: R,
             gradientGlowClassname: O,
         } = (0, h.v5)({ colorStrings: u, roleStyle: "username", animateGradient: x || y || I?.animate }),
         M = (0, h.CR)(n),
-        L = { className: r()(f.UU, g, E, { [f.Xh]: _, [R]: T }), children: M },
+        L = { className: r()(f.UU, g, E, { [f.Xh]: _, [R]: j }), children: M },
         k = { className: r()(f.lD, O, E), children: n },
         w =
             "dot" === t
                 ? (0, l.jsx)(m.W, {
                       color: s,
-                      colors: j ? u : null,
+                      colors: T ? u : null,
                       name: o,
                       className: "left" === d ? f.Hf : f.WN,
                       hoverOverride: x || y || I?.animate,
@@ -64,12 +64,12 @@ function p(e) {
             "left" === d && w,
             (0, l.jsxs)("span", {
                 className: r()(f.VW, { [f.mO]: C }),
-                style: { color: _ && !j && null != s ? s : void 0, ...(T ? b : {}) },
+                style: { color: _ && !T && null != s ? s : void 0, ...(j ? b : {}) },
                 children: [
                     null != A
                         ? (0, l.jsx)(a.E, { tag: "span", color: "currentColor", variant: A, ...L })
                         : (0, l.jsx)("span", { ...L }),
-                    T &&
+                    j &&
                         (null != A
                             ? (0, l.jsx)(a.E, {
                                   tag: "span",

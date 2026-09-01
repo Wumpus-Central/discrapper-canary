@@ -47,8 +47,8 @@ var m = n(604121),
     N = n(982240),
     v = n(611881),
     _ = n(788833),
-    j = n(40493),
-    T = n(43105),
+    T = n(40493),
+    j = n(43105),
     b = n(975732),
     R = n(287809),
     O = n(427262),
@@ -63,7 +63,7 @@ function P(e) {
     return (0, l.jsxs)(l.Fragment, {
         children: [
             (0, l.jsx)("div", { ref: u, children: a }),
-            (0, l.jsx)(T.A, {
+            (0, l.jsx)(j.A, {
                 targetElementRef: u,
                 shouldShow: !0,
                 position: "top",
@@ -100,7 +100,7 @@ function D(e) {
     return (0, l.jsxs)(l.Fragment, {
         children: [
             (0, l.jsx)("div", { ref: a, children: r }),
-            (0, l.jsx)(T.A, {
+            (0, l.jsx)(j.A, {
                 targetElementRef: a,
                 shouldShow: !0,
                 position: "top",
@@ -217,7 +217,7 @@ let J = i.memo(function (e) {
                 ? null
                 : e.properties.properties.giftIcon;
         }),
-        T = (0, o.bG)([G.A], () => {
+        j = (0, o.bG)([G.A], () => {
             let e = G.A.getMarketingComponentByType(a.C.GIFT_ICON_COACHMARK);
             return null == e || "giftIconCoachmark" !== e.properties.properties.oneofKind
                 ? null
@@ -233,7 +233,7 @@ let J = i.memo(function (e) {
         }, [k]),
         P = !(0, H.uJ)(x?.boxAnimationUrl) || !(0, H.uJ)(x?.trinketAnimationUrl),
         D = (0, o.bG)([G.A], () => G.A.getGiftPromotion()?.id),
-        V = null != T && !t && !h && f >= z && null != D,
+        V = null != j && !t && !h && f >= z && null != D,
         [B, K] = (0, C.Cc)(V ? u.M.GIFTING_PROMOTION_DESKTOP_FIRST_TIME_COACHMARK : null, D ?? ""),
         Z = null != B,
         { showGiftingBadgeCoachmark: Y, markGiftingBadgeCoachmarkAsDismissed: J } = (function (e) {
@@ -291,11 +291,11 @@ let J = i.memo(function (e) {
             d(!1);
         },
         children: Z
-            ? (0, l.jsx)(j.A, {
+            ? (0, l.jsx)(T.A, {
                   onComplete: () => d(!1),
                   onCheckItOutClick: X,
                   markAsDismissed: K,
-                  coachmarkConfig: T,
+                  coachmarkConfig: j,
                   children: et,
               })
             : Y

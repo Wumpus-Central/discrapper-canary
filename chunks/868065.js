@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Hp: () => j, UA: () => v, ZB: () => T, Zp: () => N, dM: () => b, eG: () => S, ik: () => R });
+n.d(t, { Hp: () => T, UA: () => v, ZB: () => j, Zp: () => N, dM: () => b, eG: () => S, ik: () => R });
 var l = n(477900);
 n(582128);
 var i = n(503698),
@@ -59,14 +59,14 @@ function _(e) {
         }),
     });
 }
-function j(e) {
+function T(e) {
     let { guildId: t, channelId: n, entry: i, maxAvatars: s = 3 } = e,
         a = i.author_id,
         o = (0, r.bG)([A.default], () => A.default.getUser(a)),
         { displayParticipants: h, participant1: m, participant2: S, numOtherParticipants: N } = (0, C.A)(i, s),
         v = (0, r.bG)([g.Ay], () => g.Ay.getMember(t, a)),
-        j = (0, f.a)({ displayNameStyles: o?.displayNameStyles }),
-        T = (0, r.bG)([x.A], () => (v?.colorRoleId != null ? x.A.getRole(t, v.colorRoleId)?.name : void 0), [t, v]),
+        T = (0, f.a)({ displayNameStyles: o?.displayNameStyles }),
+        j = (0, r.bG)([x.A], () => (v?.colorRoleId != null ? x.A.getRole(t, v.colorRoleId)?.name : void 0), [t, v]),
         b = (0, p.gn)(t, a, v?.colorStrings ?? null);
     if (null == o) return null;
     let R = v?.colorString,
@@ -77,11 +77,11 @@ function j(e) {
             (0, l.jsx)(_, { users: h, guildId: t, "aria-hidden": !0 }),
             (0, l.jsx)(u.g, {
                 colorString: R ?? null,
-                roleName: T,
+                roleName: j,
                 colorStrings: b,
                 name: O,
                 className: y.nT,
-                displayNameStylesFont: j,
+                displayNameStylesFont: T,
                 "aria-hidden": !0,
             }),
             N > 0
@@ -109,7 +109,7 @@ function j(e) {
         ],
     });
 }
-function T(e) {
+function j(e) {
     let { children: t } = e;
     return (0, l.jsx)(h.D, {
         color: "text-default",

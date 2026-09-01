@@ -8,8 +8,8 @@ var i = n(310953),
     d = n(885386),
     c = n(189081),
     u = n(839067),
-    A = n(645959),
-    h = n(403362),
+    h = n(645959),
+    A = n(403362),
     E = n(265422),
     g = n(652215),
     C = n(746080);
@@ -24,7 +24,7 @@ let _ = () => {
         g.BVt.COLLECTIBLES_SHOP,
         d.dm.getSetting() ? g.BVt.FAMILY_CENTER : null,
         g.BVt.QUEST_HOME,
-    ].filter(h.Vq);
+    ].filter(A.Vq);
 };
 function I() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
@@ -33,7 +33,7 @@ function I() {
         !(function (e) {
             var t, n;
             let { channelId: i, path: l, basePath: r } = o.A.getState(),
-                s = A.A.getPrivateChannelIds(),
+                s = h.A.getPrivateChannelIds(),
                 a = __OVERLAY__ ? s : [..._(), ...s],
                 d =
                     (null == i ? ((t = l ?? r), _().findIndex((e) => t.startsWith(e))) : null != i ? a.indexOf(i) : 0) +

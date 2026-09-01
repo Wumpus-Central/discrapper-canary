@@ -8,8 +8,8 @@ var i = n(582128),
     d = n(773669),
     c = n(252424),
     u = n(158045),
-    A = n(580630),
-    h = n(615396),
+    h = n(580630),
+    A = n(615396),
     E = n(202541),
     g = n(652215),
     C = n(375708);
@@ -36,7 +36,7 @@ function _(e) {
                       return null == i ? null : { yearlyPlanId: i, skuId: (0, u.mH)(n) };
                   })(e)
                 : null,
-        p = (0, h.zz)(T?.yearlyPlanId ?? null),
+        p = (0, A.zz)(T?.yearlyPlanId ?? null),
         S = e?.paymentSourceId ?? void 0,
         { priceOptions: N } = (0, o.A)({
             activeSubscription: e ?? null,
@@ -50,7 +50,7 @@ function _(e) {
         if (null == t) return null;
         let n = (0, s.LQ)(t.amount, t.currency);
         if (null == n || n <= 0) return null;
-        let i = (0, A.$g)(n, t.currency, { maximumFractionDigits: 0 }),
+        let i = (0, h.$g)(n, t.currency, { maximumFractionDigits: 0 }),
             l = (0, u.L_)({ planId: p.id, priceOptions: N, subscriptionPlan: p }),
             r = null != l ? (0, c.l9)(I, l / 100) : null,
             a = null != r ? C.intl.formatToPlainString(C.t.IAybsG, { discount: r }) : void 0;

@@ -24,8 +24,8 @@ var l,
     N = n(926972),
     v = n(885386),
     _ = n(862482),
-    j = n(821609),
-    T = n(66834),
+    T = n(821609),
+    j = n(66834),
     b = n(624793),
     R = n(639245),
     O = n(966245),
@@ -51,7 +51,7 @@ function B(e) {
         r = s.useCallback(async () => {
             if ((n(), null != t))
                 try {
-                    await T.A.joinGuild(t), T.A.transitionToGuildSync(t);
+                    await j.A.joinGuild(t), j.A.transitionToGuildSync(t);
                 } catch {}
         }, [n, t]);
     return l === G.GET_NITRO
@@ -66,7 +66,7 @@ function B(e) {
               textOptions: { textOverride: U.intl.string(U.t.pj0XBN) },
           })
         : l === G.JOIN_GUILD
-          ? (0, i.jsx)(j.$, {
+          ? (0, i.jsx)(T.$, {
                 variant: "primary",
                 size: "sm",
                 text: U.intl.string(U.t.riu2R5),
@@ -99,7 +99,7 @@ function W(e) {
                     _(!1), f();
                 }));
     }, [f, y, a.guildId, a.soundId]);
-    let { buttonType: j, description: T } =
+    let { buttonType: T, description: j } =
             ((t = "0" === a.guildId),
             (n = (0, o.bG)([I.default], () => S.Ay.canUseSoundboardEverywhere(I.default.getCurrentUser()))),
             (l = (0, N.tj)({ location: "useSoundmojiGuildInfoData" })),
@@ -146,7 +146,7 @@ function W(e) {
                         .exhaustive();
                 }, [t, A, n, x, r, l]),
             }),
-        P = j === G.JOIN_GUILD,
+        P = T === G.JOIN_GUILD,
         V = !p && v,
         F = s.useMemo(
             () => (x ? b.GO.createFromGuildRecord(g) : null != A ? b.GO.createFromDiscoverableGuild(A) : void 0),
@@ -169,7 +169,7 @@ function W(e) {
                                       isSoundmoji: !0,
                                       onSelectItem: () => {},
                                   }),
-                                  (0, i.jsx)(d.E, { variant: "text-sm/normal", children: T }),
+                                  (0, i.jsx)(d.E, { variant: "text-sm/normal", children: j }),
                               ],
                           }),
                           null != F &&
@@ -191,7 +191,7 @@ function W(e) {
                                               closePopout: h,
                                           }),
                                       }),
-                                      (0, i.jsx)(B, { buttonType: j, discoverableGuildId: A?.id, closePopout: h }),
+                                      (0, i.jsx)(B, { buttonType: T, discoverableGuildId: A?.id, closePopout: h }),
                                   ],
                               }),
                       ],

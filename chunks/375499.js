@@ -37,7 +37,7 @@ function v(e) {
             ...y
         } = e,
         [v, _] = i.useState(!1),
-        [j, T] = i.useState(50),
+        [T, j] = i.useState(50),
         b = v || s,
         R = (0, E.t)(S, "emojiButton", b ? "Hovered" : "Normal"),
         O = (function (e) {
@@ -47,12 +47,12 @@ function v(e) {
                 "--custom-emoji-sprite-row": Math.floor(e / 20),
                 "--custom-emoji-sprite-col": e % 20,
             };
-        })(j, A),
+        })(T, A),
         M = i.useCallback(() => {
             if (b) return;
             let e = Math.floor(77 * Math.random());
-            _(!0), T(e), (0, x.K)(I.EmojiInteractionPoint.EmojiButtonMouseEntered);
-        }, [b, _, T]),
+            _(!0), j(e), (0, x.K)(I.EmojiInteractionPoint.EmojiButtonMouseEntered);
+        }, [b, _, j]),
         L = i.useCallback(() => {
             _(!1);
         }, [_]),
@@ -117,9 +117,9 @@ function _(e) {
             ...N
         } = e,
         _ = (0, o.bG)([p.Ay], () => p.Ay.useReducedMotion),
-        j = (0, A.k0)(),
-        [T, b] = (0, g.kn)(j ? [u.M.TRIAL_NUX_EMOJI_BUTTON] : [], void 0, !0),
-        R = I && T === u.M.TRIAL_NUX_EMOJI_BUTTON,
+        T = (0, A.k0)(),
+        [j, b] = (0, g.kn)(T ? [u.M.TRIAL_NUX_EMOJI_BUTTON] : [], void 0, !0),
+        R = I && j === u.M.TRIAL_NUX_EMOJI_BUTTON,
         O = !a && R,
         M = i.useRef(null),
         L = x ?? M;

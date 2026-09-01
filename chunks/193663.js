@@ -29,16 +29,16 @@ let m = function (e) {
         innerClassName: N,
         wrapContent: v,
         highlighted: _,
-        focusProps: j,
-        ...T
+        focusProps: T,
+        ...j
     } = e;
-    (T.className = r()(T.className, h.kL, {
+    (j.className = r()(j.className, h.kL, {
         [h.wH]: E,
         [h.mr]: _,
         [S ?? ""]: E,
         [h.vk]: !E && (null != I || null != x),
     })),
-        (T["aria-selected"] = T["aria-selected"] ?? E);
+        (j["aria-selected"] = j["aria-selected"] ?? E);
     let b = i.useRef(null),
         R = (0, l.jsxs)("div", {
             className: r()(h.sn, { [h.EY]: null != m }),
@@ -69,10 +69,10 @@ let m = function (e) {
         });
     return null != I
         ? (0, l.jsx)(o.vN, {
-              ...j,
-              children: (0, l.jsx)(a.N_, { to: I, onClick: x, ...T, role: "listitem", ref: t, children: R }),
+              ...T,
+              children: (0, l.jsx)(a.N_, { to: I, onClick: x, ...j, role: "listitem", ref: t, children: R }),
           })
         : null != x
-          ? (0, l.jsx)(u.D, { onClick: x, focusProps: j, ...T, role: "listitem", innerRef: t, children: R })
-          : (0, l.jsx)(o.vN, { ...j, children: (0, l.jsx)("div", { ...T, role: "listitem", ref: t, children: R }) });
+          ? (0, l.jsx)(u.D, { onClick: x, focusProps: T, ...j, role: "listitem", innerRef: t, children: R })
+          : (0, l.jsx)(o.vN, { ...T, children: (0, l.jsx)("div", { ...j, role: "listitem", ref: t, children: R }) });
 };

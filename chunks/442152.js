@@ -24,8 +24,8 @@ var l = n(477900),
     N = n(750506),
     v = n(267102),
     _ = n(926972),
-    j = n(930946),
-    T = n(256449),
+    T = n(930946),
+    j = n(256449),
     b = n(750385),
     R = n(649852),
     O = n.n(R),
@@ -83,7 +83,7 @@ let eg = (0, z.xI)(L.A.STICKERS_CONSTANTS_STICKER_CATEGORY_LIST_PADDING),
             s = i.useRef(null),
             [a, o] = i.useState(!0),
             u = U.bM.useStore((e) => e.activeCategoryIndex),
-            c = (0, T.pD)(n),
+            c = (0, j.pD)(n),
             {
                 firstStandardStickerCategoryIndex: d,
                 firstStandardStickerCategoryOffsetTop: h,
@@ -283,8 +283,8 @@ let eg = (0, z.xI)(L.A.STICKERS_CONSTANTS_STICKER_CATEGORY_LIST_PADDING),
         });
     };
 var e_ = n(297264),
-    ej = n(834730),
-    eT = n(10392),
+    eT = n(834730),
+    ej = n(10392),
     eb = n(82498),
     eR = n(724651),
     eO = n(811611),
@@ -322,7 +322,7 @@ var ew = n(823894),
     eD = n(768857);
 function eU(e) {
     let { className: t, onClose: n } = e;
-    (0, T.XQ)();
+    (0, j.XQ)();
     let { analyticsLocations: s } = (0, D.Ay)(P.A.EMPTY_STATE),
         a = (0, d.yK)([b.A], () => ew.vX.map((e) => b.A.getStickerById(e)));
     i.useEffect(() => {
@@ -331,7 +331,7 @@ function eU(e) {
             source: { section: eh.JJy.EMPTY_STICKER_PICKER_UPSELL },
             location_stack: s,
         }),
-            (0, eT.sq)(eh.U7l.PREMIUM_UPSELL_VIEWED, s, () => (0, eb.uq)(eP.e.EMPTY_STICKER_PICKER_UPSELL));
+            (0, ej.sq)(eh.U7l.PREMIUM_UPSELL_VIEWED, s, () => (0, eb.uq)(eP.e.EMPTY_STICKER_PICKER_UPSELL));
     }, [s]);
     let o = (0, H.V)(),
         u = (0, eR.O)(),
@@ -355,7 +355,7 @@ function eU(e) {
                               variant: "heading-xl/semibold",
                               children: ef.intl.string(ef.t.HEm04J),
                           }),
-                          (0, l.jsx)(ej.E, {
+                          (0, l.jsx)(eT.E, {
                               className: eD.VA,
                               color: "text-default",
                               variant: "text-md/normal",
@@ -413,7 +413,7 @@ let eX = function (e) {
                   onKeyDown: (e) => e.stopPropagation(),
                   children: [
                       (0, l.jsx)(eW.v, { size: "md", color: "currentColor", className: e$.Kk }),
-                      (0, l.jsx)(ej.E, {
+                      (0, l.jsx)(eT.E, {
                           color: "interactive-text-default",
                           className: e$.rf,
                           variant: "text-sm/normal",
@@ -445,7 +445,7 @@ let eX = function (e) {
                           width: 20,
                           height: 20,
                       }),
-                      (0, l.jsx)(ej.E, {
+                      (0, l.jsx)(eT.E, {
                           color: "interactive-text-default",
                           className: e$.rf,
                           variant: "text-sm/normal",
@@ -548,9 +548,9 @@ let tn = i.memo(function (e) {
             enlargeOnInteraction: N = !1,
             channel: v,
             currentUser: _,
-            checkSendability: j = !0,
+            checkSendability: T = !0,
         } = e,
-        { location: T } = (0, w.p)(),
+        { location: j } = (0, w.p)(),
         b = y + 2 * I,
         R = i.useMemo(
             () => ({
@@ -591,7 +591,7 @@ let tn = i.memo(function (e) {
                                     e.type === ee.op.CREATE_STICKER &&
                                         (K.default.track(eh.HAw.OPEN_MODAL, {
                                             type: eh.JJy.CREATE_STICKER_MODAL,
-                                            location: T,
+                                            location: j,
                                         }),
                                         (0, m.openModalLazy)(async () => {
                                             let { default: t } = await Promise.all([
@@ -622,7 +622,7 @@ let tn = i.memo(function (e) {
                                             className: tt.Kk,
                                         }),
                                     }),
-                                    (0, l.jsx)(ej.E, {
+                                    (0, l.jsx)(eT.E, {
                                         color: "interactive-text-active",
                                         variant: "text-xs/normal",
                                         children: ef.intl.string(ef.t["+nEuqr"]),
@@ -673,7 +673,7 @@ let tn = i.memo(function (e) {
                                                 [tt.ot]:
                                                     N && !u && null != d && -1 !== d.rowIndex && -1 !== d.columnIndex,
                                                 [tt.Q$]: c,
-                                                [tt.No]: j && !(0, X.G7)(e.sticker, _, v),
+                                                [tt.No]: T && !(0, X.G7)(e.sticker, _, v),
                                             }),
                                             disableAnimation: !u && !s,
                                             enlargeOnInteraction: N,
@@ -721,7 +721,7 @@ function tI(e) {
                 {
                     className: tl.x_,
                     onClick: () => t(e),
-                    children: (0, l.jsx)(ej.E, { variant: "text-sm/normal", color: "text-default", children: e }),
+                    children: (0, l.jsx)(eT.E, { variant: "text-sm/normal", color: "text-default", children: e }),
                 },
                 e,
             ),
@@ -753,8 +753,8 @@ let ty = i.forwardRef(function (e, t) {
             v = (0, G.RQ)((e) => e.searchQuery),
             _ = (0, d.bG)([b.A], () => b.A.getPremiumPacks()),
             {
-                renderRow: j,
-                renderSection: T,
+                renderRow: T,
+                renderSection: j,
                 renderSectionFooter: R,
                 sectionFooterHeight: O,
                 renderSectionHeader: L,
@@ -853,8 +853,8 @@ let ty = i.forwardRef(function (e, t) {
                         },
                         [f, a, o, u, c, h, m, I, y, n, s, x, A, C],
                     ),
-                    j = i.useCallback((e, t) => (0, l.jsx)("div", { children: t }, e), []),
-                    T = i.useCallback(
+                    T = i.useCallback((e, t) => (0, l.jsx)("div", { children: t }, e), []),
+                    j = i.useCallback(
                         function (e) {
                             let { isStickerPack: n = !0 } =
                                     arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
@@ -906,7 +906,7 @@ let ty = i.forwardRef(function (e, t) {
                                             }),
                                             icon: (0, l.jsx)(el.StarIcon, { size: "xs", color: "currentColor" }),
                                             isCollapsed: t.has(n.id),
-                                            onClick: () => T(n.id, { isStickerPack: !1 }),
+                                            onClick: () => j(n.id, { isStickerPack: !1 }),
                                             children: n.name,
                                         },
                                         `header-${n.id}`,
@@ -921,7 +921,7 @@ let ty = i.forwardRef(function (e, t) {
                                             }),
                                             icon: (0, l.jsx)(ei.ClockIcon, { size: "xs", color: "currentColor" }),
                                             isCollapsed: t.has(n.id),
-                                            onClick: () => T(n.id, { isStickerPack: !1 }),
+                                            onClick: () => j(n.id, { isStickerPack: !1 }),
                                             children: n.name,
                                         },
                                         `header-${n.id}`,
@@ -939,7 +939,7 @@ let ty = i.forwardRef(function (e, t) {
                                             }),
                                             icon: (0, l.jsx)(ea.A, { guild: e, height: 16, width: 16 }),
                                             isCollapsed: t.has(e.id),
-                                            onClick: () => T(e.id),
+                                            onClick: () => j(e.id),
                                             children: e.name,
                                         },
                                         `h${e.id}`,
@@ -961,7 +961,7 @@ let ty = i.forwardRef(function (e, t) {
                                                 sticker: (0, ec.Id)(e),
                                             }),
                                             isCollapsed: t.has(e.id),
-                                            onClick: () => T(e.id),
+                                            onClick: () => j(e.id),
                                             children: e.name,
                                         },
                                         `h${e.id}`,
@@ -969,7 +969,7 @@ let ty = i.forwardRef(function (e, t) {
                                 }
                             }
                         },
-                        [t, p, T, g],
+                        [t, p, j, g],
                     ),
                     O = i.useCallback(
                         (e) => {
@@ -983,7 +983,7 @@ let ty = i.forwardRef(function (e, t) {
                     );
                 return {
                     renderRow: _,
-                    renderSection: j,
+                    renderSection: T,
                     renderSectionHeader: R,
                     sectionHeaderHeight: O,
                     renderSectionFooter: i.useCallback(
@@ -1090,8 +1090,8 @@ let ty = i.forwardRef(function (e, t) {
                                   role: "none presentation",
                                   listPadding: null != r ? tA : tx,
                                   onScroll: F,
-                                  renderRow: j,
-                                  renderSection: null == r ? T : void 0,
+                                  renderRow: T,
+                                  renderSection: null == r ? j : void 0,
                                   renderSectionHeader: L,
                                   renderSectionFooter: R,
                                   rowCount: f,
@@ -1117,9 +1117,9 @@ let ty = i.forwardRef(function (e, t) {
 var tN = n(602034),
     tv = n(683438),
     t_ = n(909802);
-let tj = i.forwardRef(function (e, t) {
+let tT = i.forwardRef(function (e, t) {
     let { onKeyDown: n, stickersListRef: s, channel: r } = e,
-        a = (0, T.ZO)(r),
+        a = (0, j.ZO)(r),
         o = i.useRef(null),
         { searchQuery: u, isSearchSuggestion: c } = (0, G.RQ)(
             (e) => ({ searchQuery: e.searchQuery, isSearchSuggestion: e.isSearchSuggestion }),
@@ -1167,7 +1167,7 @@ let tj = i.forwardRef(function (e, t) {
     );
 });
 n(321073);
-var tT = n(802842),
+var tj = n(802842),
     tb = n(789645),
     tR = n(964486),
     tO = n(158045),
@@ -1185,7 +1185,7 @@ function tw(e) {
             type: eP.e.STICKER_PICKER_UPSELL,
             location_stack: n,
         }),
-            (0, eT.sq)(eh.U7l.PREMIUM_UPSELL_VIEWED, n, () => (0, eb.uq)(eP.e.STICKER_PICKER_UPSELL));
+            (0, ej.sq)(eh.U7l.PREMIUM_UPSELL_VIEWED, n, () => (0, eb.uq)(eP.e.STICKER_PICKER_UPSELL));
     }, [n]);
     let s = (0, i.useRef)(null);
     (0, tR.Ay)(() => {
@@ -1218,13 +1218,13 @@ function tw(e) {
                 : (0, l.jsxs)(l.Fragment, {
                       children: [
                           (0, l.jsx)("img", { className: tM.Tn, src: tL, alt: ef.intl.string(ef.t.do7AoM) }),
-                          (0, l.jsx)(ej.E, {
+                          (0, l.jsx)(eT.E, {
                               className: tM.ex,
                               color: "text-strong",
                               variant: "text-lg/semibold",
                               children: ef.intl.string(ef.t.jJG1pl),
                           }),
-                          (0, l.jsx)(ej.E, {
+                          (0, l.jsx)(eT.E, {
                               className: tM.GR,
                               variant: "text-md/normal",
                               children: ef.intl.format(ef.t.jt7JX6, { onClick: t }),
@@ -1264,7 +1264,7 @@ let tD = (0, z.xI)(L.A.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
             [E, C] = (0, G.RQ)((e) => [e.searchQuery, e.isSearchSuggestion], M.x),
             I = i.useRef("");
         i.useImperativeHandle(t, () => ({ onPickerOpen: ep }));
-        let y = (0, T.pD)(r),
+        let y = (0, j.pD)(r),
             S = 0 === y.filter((e) => e.type !== ee.Z2.EMPTY_GUILD_UPSELL).length,
             N = (0, V.oV)({
                 gridWrapperRef: p,
@@ -1275,7 +1275,7 @@ let tD = (0, z.xI)(L.A.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
             }),
             v = B.tP.useSetting(),
             _ = i.useMemo(() => new Set(v), [v]),
-            j = (0, d.bG)([W.default], () => W.default.getCurrentUser()),
+            T = (0, d.bG)([W.default], () => W.default.getCurrentUser()),
             R = i.useMemo(
                 () =>
                     (function (e, t, n) {
@@ -1283,7 +1283,7 @@ let tD = (0, z.xI)(L.A.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                         let l = [],
                             i = [];
                         return (
-                            tT.Ay.queryStickers([e], !0)
+                            tj.Ay.queryStickers([e], !0)
                                 .map((e) => {
                                     let { sticker: t } = e;
                                     return t;
@@ -1294,11 +1294,11 @@ let tD = (0, z.xI)(L.A.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                                 }),
                             { sendable: l, sendableWithPremium: i }
                         );
-                    })(E, j, r),
-                [E, j, r],
+                    })(E, T, r),
+                [E, T, r],
             ),
-            O = (0, T.Gc)(),
-            L = (0, T.UT)(),
+            O = (0, j.Gc)(),
+            L = (0, j.UT)(),
             k = (0, d.cf)([b.A], () => b.A.getAllGuildStickers()),
             { sendable: z = [], sendableWithPremium: Z = [] } = R ?? {},
             Y = z.length + Z.length,
@@ -1315,7 +1315,7 @@ let tD = (0, z.xI)(L.A.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                 stickersGrid: er,
                 gutterWidth: ea,
                 columnCounts: eo,
-            } = (0, T._c)({
+            } = (0, j._c)({
                 filteredStickers: R,
                 stickersCategories: y,
                 collapsedStickersCategories: _,
@@ -1420,12 +1420,12 @@ let tD = (0, z.xI)(L.A.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                                 break;
                             case ee.op.STICKER: {
                                 if (null == e.sticker) break;
-                                let t = (0, X.W$)(e.sticker, j, r);
+                                let t = (0, X.W$)(e.sticker, T, r);
                                 t === X.Ux.SENDABLE ? q(e) : t === X.Ux.SENDABLE_WITH_PREMIUM && $(!0);
                             }
                         }
                     },
-                    [c, j, r, q],
+                    [c, T, r, q],
                 ),
                 store: U.bM,
                 setInspectedStickerPosition: U.bM.setInspectedExpressionPosition,
@@ -1469,7 +1469,7 @@ let tD = (0, z.xI)(L.A.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                 !(f && S) &&
                     (0, l.jsx)("div", {
                         className: tP.wx,
-                        children: (0, l.jsx)(tj, { ref: x, onKeyDown: em, stickersListRef: g, channel: r }),
+                        children: (0, l.jsx)(tT, { ref: x, onKeyDown: em, stickersListRef: g, channel: r }),
                     }),
                 S
                     ? (0, l.jsx)(eU, { className: tP.p$, onClose: o })
@@ -1510,7 +1510,7 @@ let tD = (0, z.xI)(L.A.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
     }),
     tZ = i.forwardRef(function (e, t) {
         return (
-            (0, T.XQ)(),
+            (0, j.XQ)(),
             (0, l.jsx)("div", {
                 className: tP.iE,
                 id: ew.GX,
@@ -1625,7 +1625,7 @@ let t1 = 498 + tX.as.MEDIUM,
                 orientation: "left" === k ? E.R.HORIZONTAL_RIGHT : E.R.HORIZONTAL_LEFT,
             }),
             K = (0, G.RQ)((e) => e.activeView),
-            z = (0, T.ZO)(O),
+            z = (0, j.ZO)(O),
             { renderWindow: Z, windowDispatch: Y } = i.useContext(v.Ay),
             q = (0, d.bG)([b.A], () => !b.A.hasLoadedStickerPacks),
             J = (0, _.tj)({ location: "expression_picker" }),
@@ -1848,7 +1848,7 @@ let t1 = 498 + tX.as.MEDIUM,
                                               K === em.kx.SOUNDBOARD
                                                   ? (0, l.jsx)("div", {
                                                         className: t0.z,
-                                                        children: (0, l.jsx)(j.A, {
+                                                        children: (0, l.jsx)(T.A, {
                                                             guildId: O.guild_id,
                                                             channel: O,
                                                             containerWidth: B,

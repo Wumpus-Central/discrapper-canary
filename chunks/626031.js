@@ -1,4 +1,4 @@
-n.d(t, { A: () => N, t: () => v });
+n.d(t, { A: () => _, t: () => v });
 var a = n(477900),
     l = n(582128),
     s = n(503698),
@@ -33,7 +33,7 @@ function v(e) {
         g = (0, u.Ay)(x) ?? 0,
         E = (0, l.useMemo)(() => (null === m ? Math.max(g, x) : Math.max(x, m)), [g, x, m]),
         v = `${h ? 0 : E}ch`,
-        { marginClassName: N, textAlignClassName: _ } = (0, l.useMemo)(
+        { marginClassName: _, textAlignClassName: p } = (0, l.useMemo)(
             () =>
                 "left" === s
                     ? { marginClassName: f.v6, textAlignClassName: f.Sc }
@@ -43,7 +43,7 @@ function v(e) {
     return (0, a.jsx)(c.E, {
         variant: n,
         color: i,
-        className: r()(f.SP, h ? void 0 : N, _, o),
+        className: r()(f.SP, h ? void 0 : _, p, o),
         style: { width: v, opacity: h ? "0" : 1 },
         children: h
             ? null
@@ -79,12 +79,12 @@ let b = (e) => {
         }, [t, s]);
         let v = t ?? 0,
             b = x.current ?? v,
-            { duration: N, delay: _ } = (0, m.v)(v - b, { targetTime: c, isRenderedWithoutLottieAnimation: u }),
-            { number: j } = (0, o.z)({
+            { duration: _, delay: p } = (0, m.v)(v - b, { targetTime: c, isRenderedWithoutLottieAnimation: u }),
+            { number: N } = (0, o.z)({
                 from: { number: x.current ?? v },
                 number: v,
-                config: { mass: 1, tension: 20, friction: 10, duration: N },
-                delay: _,
+                config: { mass: 1, tension: 20, friction: 10, duration: _ },
+                delay: p,
                 onStart: () => {
                     n(A(b));
                 },
@@ -99,10 +99,10 @@ let b = (e) => {
                     n(A(v)), (x.current = v);
                 },
             }),
-            S = A(Math.max(t ?? 0, j.get()));
+            j = A(Math.max(t ?? 0, N.get()));
         return (0, a.jsx)(i.animated.div, {
-            style: { width: `calc(${S}ch)` },
-            children: j.to((e) => `${e.toFixed(0)}`),
+            style: { width: `calc(${j}ch)` },
+            children: N.to((e) => `${e.toFixed(0)}`),
         });
     },
-    N = v;
+    _ = v;

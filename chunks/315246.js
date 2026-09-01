@@ -22,8 +22,8 @@ function I(e) {
     let { user: t, guildId: n, channel: I, entry: y, onSelect: S, disableGameProfileLinks: N } = e,
         v = i.useRef(null),
         _ = i.useContext(x.Jd),
-        j = (0, p.A)({ userId: t.id, guildId: n, channelId: I?.id, onAction: _ }),
-        T = (0, h.A)({ id: t.id, label: A.intl.string(A.t["/AXYnE"]) }),
+        T = (0, p.A)({ userId: t.id, guildId: n, channelId: I?.id, onAction: _ }),
+        j = (0, h.A)({ id: t.id, label: A.intl.string(A.t["/AXYnE"]) }),
         b = "application_id" in y.extra ? y.extra.application_id : null,
         R = (0, h.A)({ id: b, label: A.intl.string(A.t["FfCL+6"]) }),
         O = (0, g.zD)(y),
@@ -53,7 +53,7 @@ function I(e) {
                     children: [
                         (0, l.jsxs)(a.rX, {
                             children: [
-                                j,
+                                T,
                                 null != M &&
                                     (0, l.jsx)(a.Dr, {
                                         id: "game-profile",
@@ -64,7 +64,7 @@ function I(e) {
                                     }),
                             ],
                         }),
-                        (0, l.jsxs)(a.rX, { children: [T, R] }),
+                        (0, l.jsxs)(a.rX, { children: [j, R] }),
                     ],
                 }),
             });

@@ -4793,7 +4793,7 @@ function lM() {
 var lL = a(691540),
     lP = a(97483),
     lU = a(123292),
-    lG = a(183208),
+    lG = a(780907),
     lB = a(56562);
 let lF = [
     { label: "Wuthering Waves", value: "1247227126416146462" },

@@ -80,8 +80,8 @@ let p = {
                 onBlur: N,
                 pulse: v,
                 sparkle: _,
-                notification: j,
-                "aria-label": T,
+                notification: T,
+                "aria-label": j,
                 "aria-expanded": b,
                 "aria-haspopup": R,
                 "aria-controls": O,
@@ -90,7 +90,7 @@ let p = {
             L = (0, o.p)(null != x, { ...p, keys: (e) => (e ? "children" : "icon") });
         function k(e) {
             let { component: t } = e;
-            return null != j
+            return null != T
                 ? (0, l.jsxs)("div", {
                       className: f.IO,
                       children: [
@@ -108,7 +108,7 @@ let p = {
         }
         return (0, l.jsxs)(u.D, {
             innerRef: t,
-            "aria-label": T,
+            "aria-label": j,
             "aria-expanded": b,
             "aria-haspopup": R,
             "aria-controls": O,

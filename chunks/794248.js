@@ -129,19 +129,19 @@ function _(e) {
         ],
     });
 }
-var j = n(170118);
-function T(e) {
+var T = n(170118);
+function j(e) {
     let { small: t = !1 } = e,
         { surfaceConfig: n, resolveFieldValue: l } = en(),
         s = l(n.components.contained_image?.fields.image, [N.o.MEDIA]);
     return (0, i.jsx)(_, {
         small: t,
         image: (0, i.jsx)("div", {
-            className: j.ZS,
+            className: T.ZS,
             children:
                 null != s
-                    ? (0, i.jsx)("img", { alt: "", src: s.media.url, className: j.Sl })
-                    : (0, i.jsx)(S, { className: j.h2 }),
+                    ? (0, i.jsx)("img", { alt: "", src: s.media.url, className: T.Sl })
+                    : (0, i.jsx)(S, { className: T.h2 }),
         }),
     });
 }
@@ -506,7 +506,7 @@ let el = {
     [a.m.ACTIVITY_ACCESSORY]: { [o.ACTIVITY_ACCESSORY_STAT]: (e) => (0, i.jsx)(I, { ...e }) },
     [a.m.ADD_WIDGET_PREVIEW]: {
         [o.ADD_WIDGET_PREVIEW_HERO]: (e) => (0, i.jsx)(M, { ...e }),
-        [o.ADD_WIDGET_PREVIEW_CONTAINED]: (e) => (0, i.jsx)(T, { ...e }),
+        [o.ADD_WIDGET_PREVIEW_CONTAINED]: (e) => (0, i.jsx)(j, { ...e }),
     },
 };
 function ei(e) {

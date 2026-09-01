@@ -68,8 +68,8 @@ let g = i().once(() =>
             ...c,
         ),
     ),
-    j = { text: a.Ay.RULES.text },
-    T = i().once(() => s.aV(m())),
+    T = { text: a.Ay.RULES.text },
+    j = i().once(() => s.aV(m())),
     b = i().once(() => s.aV(g())),
     R = i().once(() => s.aV(x())),
     O = i().once(() => s.aV(A())),
@@ -102,12 +102,12 @@ let g = i().once(() =>
         get notifCenterV2MessagePreviewRules() {
             return _();
         },
-        lockscreenWidgetMessageRules: j,
+        lockscreenWidgetMessageRules: T,
         astParserFor: s.X,
         reactParserFor: s.aV,
         parse: function () {
             for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
-            return T()(...t);
+            return j()(...t);
         },
         parseTopic: (e, t, n, l) => b()(e, t, { allowLinks: !0, allowGameMentions: !0, ...n }, l),
         parseTruncatedTopic: (e, t, n, l) => R()(e, t, { allowLinks: !0, allowGameMentions: !0, ...n }, l),

@@ -50,7 +50,7 @@ function N(e) {
                   }),
                   (0, l.jsx)("div", { className: r()(S.yF, s) }),
                   !n?.disableBlockQuotes &&
-                      (0, l.jsx)(j, {
+                      (0, l.jsx)(T, {
                           slateEditor: t,
                           blockType: "blockQuote",
                           children: (0, l.jsx)(m.c, { size: "md", color: "currentColor", className: r()(S.Kk, i) }),
@@ -151,18 +151,18 @@ let v = i.forwardRef(function (e, t) {
             };
         }, [s, c, n]),
         [y, v] = i.useState(0),
-        [_, j] = i.useState(0);
+        [_, T] = i.useState(0);
     if (
         (i.useLayoutEffect(() => {
             if (null == E || null == C || null == u.current) return;
             let e = u.current.getBoundingClientRect();
-            j(e.width / 2), v(e.height + 12);
+            T(e.width / 2), v(e.height + 12);
         }, [E, C]),
         null == E || null == C)
     )
         return null;
-    let T = n();
-    return null == T
+    let j = n();
+    return null == j
         ? null
         : (0, l.jsx)(x.Ay, {
               children: (0, l.jsx)("div", {
@@ -176,7 +176,7 @@ let v = i.forwardRef(function (e, t) {
                   onMouseUp: (e) => {
                       e.stopPropagation();
                   },
-                  children: (0, l.jsx)(N, { slateEditor: T, options: r }),
+                  children: (0, l.jsx)(N, { slateEditor: j, options: r }),
               }),
           });
 });
@@ -214,7 +214,7 @@ function _(e) {
         }),
     });
 }
-function j(e) {
+function T(e) {
     let { blockType: t, slateEditor: n, children: i } = e,
         s = null != n ? I.VW.getCurrentBlock(n) : null,
         r = null != s && I.AS.isType(s[0], t);

@@ -21,8 +21,8 @@ var i = n(477900),
     E = n(695366),
     C = n(404778),
     v = n(289873),
-    I = n(396478),
-    T = n(376728),
+    T = n(396478),
+    I = n(376728),
     S = n(579872),
     y = n(414079),
     k = n(297413),
@@ -33,8 +33,8 @@ var i = n(477900),
     M = n(47167),
     _ = n(576470),
     P = n(235986),
-    G = n(769015),
-    W = n(834409),
+    W = n(769015),
+    G = n(834409),
     D = n(671576),
     U = n(1310),
     B = n(939249),
@@ -84,8 +84,8 @@ var Y = n(526132),
     Q = n(734057),
     J = n(317525),
     Z = n(994500),
-    $ = n(287809),
-    X = n(347951),
+    X = n(287809),
+    $ = n(347951),
     ee = n(825484),
     et = n(770178),
     en = n(970433);
@@ -170,7 +170,7 @@ function eo(e) {
                                 (0, i.jsx)(p.E, {
                                     variant: "text-xs/normal",
                                     color: "text-default",
-                                    children: (0, M.m1)(s, $.default, Z.A, !0),
+                                    children: (0, M.m1)(s, X.default, Z.A, !0),
                                 }),
                         ],
                     }),
@@ -254,14 +254,14 @@ function ec(e) {
         roles: c,
         guildId: r,
         onRevokeInvite: function () {
-            T.Ay.revokeInvite(t);
+            I.Ay.revokeInvite(t);
         },
     });
 }
 function ed(e) {
     let { applicationId: t, channel: l, showChannel: s = !1, inviteDisabled: a = !1 } = e,
         r = (0, R.h)(t),
-        o = (0, g.bG)([$.default], () => $.default.getUser(l.linkedLobby?.linked_by)),
+        o = (0, g.bG)([X.default], () => X.default.getUser(l.linkedLobby?.linked_by)),
         c = (0, Y.e)(l);
     return (0, i.jsx)(eo, {
         isDisabled: a,
@@ -271,7 +271,7 @@ function ed(e) {
         inviteSource: (0, i.jsxs)("div", {
             className: es._z,
             children: [
-                (0, i.jsx)(G.A, { game: r, size: G.M.XXSMALL }),
+                (0, i.jsx)(W.A, { game: r, size: W.M.XXSMALL }),
                 (0, i.jsx)(p.E, { className: es.PD, variant: "text-sm/normal", children: r?.name }),
             ],
         }),
@@ -302,8 +302,8 @@ function eu(e) {
     } = e;
     o()(null != s, "guild is required");
     let A = (0, w.Ay)(),
-        f = (0, X.Fi)(s),
-        T = (0, X.Wr)(s),
+        f = (0, $.Fi)(s),
+        I = (0, $.Wr)(s),
         S = l.useMemo(
             () =>
                 null == t || x
@@ -329,7 +329,7 @@ function eu(e) {
         },
         [R, M] = l.useState(62),
         _ = () => {
-            let e = { source: W.Eo.GUILD_SETTINGS };
+            let e = { source: G.Eo.GUILD_SETTINGS };
             (0, b.openModalLazy)(async () => (t) => (0, i.jsx)(D.default, { ...t, guildId: s.id, analyticsData: e }));
         };
     return (0, i.jsx)(O.ic, {
@@ -341,16 +341,16 @@ function eu(e) {
                     return (0, i.jsx)(
                         "div",
                         {
-                            children: (0, i.jsxs)(I.pp, {
+                            children: (0, i.jsxs)(T.pp, {
                                 theme: A,
                                 children: [
-                                    (0, i.jsx)(I.G8, {
+                                    (0, i.jsx)(T.G8, {
                                         darkSrc: n(774125),
                                         lightSrc: n(151803),
                                         width: 256,
                                         height: 130,
                                     }),
-                                    (0, i.jsx)(I.SG, {
+                                    (0, i.jsx)(T.SG, {
                                         note: V.intl.string(V.t.F53CAc),
                                         children: V.intl.string(V.t["+nLJkZ"]),
                                     }),
@@ -439,12 +439,12 @@ function eu(e) {
                             children: [
                                 (0, i.jsx)(N.$, {
                                     size: "sm",
-                                    variant: T ? "primary" : "critical-primary",
-                                    text: T ? V.intl.string(V.t["/dbw3H"]) : V.intl.string(V.t.Uwsjn6),
+                                    variant: I ? "primary" : "critical-primary",
+                                    text: I ? V.intl.string(V.t["/dbw3H"]) : V.intl.string(V.t.Uwsjn6),
                                     onClick: _,
                                     disabled: !f,
                                 }),
-                                T &&
+                                I &&
                                     (0, i.jsxs)("div", {
                                         className: es.TJ,
                                         children: [
@@ -474,7 +474,7 @@ function eu(e) {
                         onShowDisableInvites: _,
                         onShowInviteModal: L,
                         hasInviteDisabledPermission: f,
-                        invitesDisabled: T,
+                        invitesDisabled: I,
                         canCreateInvites: r,
                     },
                     "actions-v2",
@@ -487,7 +487,7 @@ function eu(e) {
                     case "invite":
                         return (0, i.jsx)(
                             ec,
-                            { hide: a, invite: e.data, showChannel: m, inviteDisabled: T },
+                            { hide: a, invite: e.data, showChannel: m, inviteDisabled: I },
                             e.data.code,
                         );
                     case "channel":
@@ -497,7 +497,7 @@ function eu(e) {
                                 applicationId: e.data.linkedLobby?.application_id,
                                 channel: e.data,
                                 showChannel: m,
-                                inviteDisabled: T,
+                                inviteDisabled: I,
                             },
                             e.data.id,
                         );

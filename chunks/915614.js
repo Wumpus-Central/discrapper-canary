@@ -1,4 +1,4 @@
-n.d(t, { A: () => N, o: () => v });
+n.d(t, { A: () => N, o: () => R });
 var a = n(477900),
     l = n(582128),
     r = n(503698),
@@ -10,56 +10,56 @@ var a = n(477900),
     u = n(778712),
     f = n(654107),
     m = n(450373),
-    E = n(885386),
-    g = n(531685),
+    g = n(885386),
+    E = n(531685),
     p = n(486020),
     b = n(837529),
     h = n(686189),
     _ = n(714719),
-    x = n(859161),
-    A = n(985253),
-    R = n(565890);
-function v(e) {
+    A = n(859161),
+    x = n(985253),
+    v = n(565890);
+function R(e) {
     let {
             user: t,
             displayProfile: n,
             guildId: r,
-            pendingBanner: A,
-            overlay: v,
+            pendingBanner: x,
+            overlay: R,
             className: N,
             avatarSize: I,
-            avatarOffsetX: T,
-            avatarOffsetY: j,
-            bannerWidth: C,
-            bannerHeight: S,
-            themePadding: y,
+            avatarOffsetX: j,
+            avatarOffsetY: T,
+            bannerWidth: y,
+            bannerHeight: C,
+            themePadding: S,
             pendingAccentColor: D,
             animateOnHoverOrFocusOnly: M = !1,
         } = e,
         [O, P] = l.useState(!1),
-        U = (0, o.bG)([g.A], () => g.A.isFocused()),
-        B = E.kt.getSetting(),
-        k = (0, b.Nx)(),
-        { bannerSrc: G, status: w } = (0, h.A)({
+        U = (0, o.bG)([E.A], () => E.A.isFocused()),
+        B = g.kt.getSetting(),
+        G = (0, b.Nx)(),
+        { bannerSrc: k, status: w } = (0, h.A)({
             displayProfile: n,
-            pendingBanner: A,
-            size: C,
+            pendingBanner: x,
+            size: y,
             canAnimate: M || !B ? O : U,
         }),
-        L = k ? null : (G ?? null),
+        L = G ? null : (k ?? null),
         H = (0, c.r)(d.A.unsafe_rawColors.PRIMARY_800).hex(),
         V = t.getAvatarURL(r, (0, u.FT)(I)),
         $ = (0, i.LX)((0, f.Ay)(V, H, !1)),
         F = (0, m.A)(D ?? n?.primaryColor ?? $).hex,
-        X = { align: "start", insetStart: T - y, insetBottom: j + y, radius: (0, x.A)(I) };
+        z = { align: "start", insetStart: j - S, insetBottom: T + S, radius: (0, A.A)(I) };
     return (0, a.jsx)(_.A, {
-        fillClassName: s()(R.v, N),
+        fillClassName: s()(v.v, N),
         bannerSrc: L,
-        backgroundColor: "COMPLETE" === w || k ? F : d.A.unsafe_rawColors.PRIMARY_800.css,
+        backgroundColor: "COMPLETE" === w || G ? F : d.A.unsafe_rawColors.PRIMARY_800.css,
         showGifTag: !B && (0, p.o4)(L),
-        height: S,
-        cutout: X,
-        overlay: v,
+        height: C,
+        cutout: z,
+        overlay: R,
         onInteractionStart: () => P(!0),
         onInteractionEnd: () => P(!1),
     });
@@ -73,8 +73,8 @@ function N(e) {
             specOverrides: s,
             ...i
         } = e,
-        o = A.T[t],
+        o = x.T[t],
         d = null != s ? { ...o, ...s } : o,
         c = !(0, b.Qq)() && (r || l?.canUsePremiumProfileCustomization || !1);
-    return (0, a.jsx)(v, { ...i, ...d, user: n, displayProfile: l, themePadding: c ? d.themePadding : 0 });
+    return (0, a.jsx)(R, { ...i, ...d, user: n, displayProfile: l, themePadding: c ? d.themePadding : 0 });
 }

@@ -24,8 +24,8 @@ var l = n(477900),
     N = n(545442),
     v = n(922016),
     _ = n(565645),
-    j = n(730134),
-    T = n(775602),
+    T = n(730134),
+    j = n(775602),
     b = n(47167),
     R = n(442247),
     O = n(569926),
@@ -45,7 +45,7 @@ var H = n(734057),
     W = n(994500),
     K = n(351906),
     z = n(287809),
-    Z = n(871237),
+    Z = n(147036),
     Y = n(562153),
     q = n(427262),
     J = n(375708),
@@ -84,7 +84,7 @@ function et(e) {
             __unsupportedReactNodeAsText: (0, l.jsxs)("div", {
                 className: $.fX,
                 children: [
-                    (0, l.jsx)(j.A, { user: s, animate: !0, size: y._3.SIZE_16, className: $.my }),
+                    (0, l.jsx)(T.A, { user: s, animate: !0, size: y._3.SIZE_16, className: $.my }),
                     q.Ay.getUserTag(s, { mode: "username", identifiable: r ? "never" : "always" }),
                     (0, l.jsx)("span", { className: $.D2, children: e }),
                 ],
@@ -101,7 +101,7 @@ function et(e) {
 function en(e) {
     let { id: t, guildId: n, channelId: s } = e,
         r = (0, C.bG)([B.A], () => (null != n ? B.A.getRole(n, t) : void 0)),
-        a = (0, C.bG)([T.Ay], () => T.Ay.roleStyle),
+        a = (0, C.bG)([j.Ay], () => j.Ay.roleStyle),
         o = (0, F.X_)(n, r, r?.colorStrings),
         u = i.useRef(null);
     if (null == r) return (0, l.jsxs)("span", { children: ["@", J.intl.string(J.t["YV4F/n"])] });

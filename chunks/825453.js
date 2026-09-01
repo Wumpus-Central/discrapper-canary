@@ -40,9 +40,9 @@ function N(e, t, n) {
         E = (0, o.bG)([f.A], () => (null == n ? f.A.getEditedApplication() : f.A.getEditedCommand()?.permissions), [n]),
         C = n ?? t,
         v = null != n ? N : a,
-        I = i.useMemo(() => E ?? { ...(v ?? {}) }, [E, v]),
-        T = i.useMemo(() => Object.keys(I).length, [I]),
-        S = i.useMemo(() => (null == v || null == I ? null : !r().isEqual(v, I)), [v, I]);
+        T = i.useMemo(() => E ?? { ...(v ?? {}) }, [E, v]),
+        I = i.useMemo(() => Object.keys(T).length, [T]),
+        S = i.useMemo(() => (null == v || null == T ? null : !r().isEqual(v, T)), [v, T]);
     return (
         i.useEffect(() => {
             C === t && (S ? c.A.startEditingCommandPermissions(C) : c.A.stopEditingCommandPermissions(C));
@@ -147,9 +147,9 @@ function N(e, t, n) {
                     }
                     return s;
                 }, [N, n, l, r, t, E, C]);
-            })(e, I),
+            })(e, T),
             hasChanges: S,
-            selectedPermissionCount: T,
+            selectedPermissionCount: I,
         }
     );
 }

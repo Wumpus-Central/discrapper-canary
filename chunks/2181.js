@@ -24,8 +24,8 @@ var l = n(477900),
     N = n(732280),
     v = n(369805),
     _ = n(862990),
-    j = n(632150),
-    T = n(792656),
+    T = n(632150),
+    j = n(792656),
     b = n(202541),
     R = n(652215),
     O = n(109447),
@@ -108,7 +108,7 @@ function w(e) {
                                         W &&
                                         (0, l.jsx)("div", {
                                             className: L.Zr,
-                                            children: (0, l.jsx)(j.A, { subtitle: M.intl.string(O.default.BkJYQ5) }),
+                                            children: (0, l.jsx)(T.A, { subtitle: M.intl.string(O.default.BkJYQ5) }),
                                         }),
                                 ],
                             }),
@@ -133,7 +133,7 @@ function w(e) {
                                             text: M.intl.string(M.t.ZnqyZ2),
                                             fullWidth: !0,
                                         }),
-                                        (0, l.jsx)(T.A, {
+                                        (0, l.jsx)(j.A, {
                                             premiumModalAnalyticsLocation: { section: w, object: R.ZSU.BUTTON_CTA },
                                             subscriptionTier: b.pe.TIER_2,
                                             onClick: () => {

@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Ay: () => _, Hq: () => T, l$: () => j, o6: () => v, wK: () => b });
+n.d(t, { Ay: () => _, Hq: () => j, l$: () => T, o6: () => v, wK: () => b });
 var l,
     i = n(308528),
     s = n(155718),
@@ -50,7 +50,7 @@ function _(e) {
             let { embeddedActivity: t } = e;
             return m.id === t.applicationId;
         }),
-        v = T({ context: n, applicationId: m.id }),
+        v = j({ context: n, applicationId: m.id }),
         _ = b({
             application: t.application,
             context: n,
@@ -61,7 +61,7 @@ function _(e) {
             commandOrigin: c,
             source: h,
         }),
-        R = j(m, t.activity);
+        R = T(m, t.activity);
     return {
         imageBackground: y,
         videoUrl: S,
@@ -72,12 +72,12 @@ function _(e) {
         staffReleasePhase: R,
     };
 }
-function j(e, t) {
+function T(e, t) {
     if (!((0, o.n)(e, S.gfo.EMBEDDED_RELEASED) || (0, o.n)(e, S.gfo.EMBEDDED_FIRST_PARTY))) return;
     let n = t.client_platform_config[(0, x.A)((0, d.getOS)())].release_phase;
     return y.qG.includes(n) ? n.replace("_", " ").replace(/(^\w|\s\w)/g, (e) => e.toUpperCase()) : void 0;
 }
-function T(e) {
+function j(e) {
     let { context: t, applicationId: n, fetchesApplication: l = !0 } = e,
         i = 0,
         s = "channel" === t.type ? t.channel : void 0,
@@ -110,9 +110,9 @@ function b(e) {
             onConfirmActivityLaunchChecksAlertOpen: y,
         } = e,
         S = t?.id ?? "",
-        v = T({ context: l, applicationId: S, fetchesApplication: A }),
+        v = j({ context: l, applicationId: S, fetchesApplication: A }),
         { analyticsLocations: _ } = (0, r.Ay)(),
-        j = (0, E.A)(),
+        T = (0, E.A)(),
         b = (0, c.x)(t);
     if (null == t)
         return () => {
@@ -166,7 +166,7 @@ function b(e) {
         case 2:
             return () => {
                 h.Ay.isLaunchingActivity() ||
-                    (null != j && a.leaveActivity({ location: j.location, applicationId: S }),
+                    (null != T && a.leaveActivity({ location: T.location, applicationId: S }),
                     o?.({ applicationId: S }));
             };
     }

@@ -8,8 +8,8 @@ var i = n(477900),
     d = n(927018),
     c = n(503698),
     u = n.n(c),
-    A = n(939249),
-    h = n(834730),
+    h = n(939249),
+    A = n(834730),
     E = n(64585),
     g = n(906688),
     C = n(857015);
@@ -82,7 +82,7 @@ function I(e) {
         };
     }, []);
     let T = null != c && n,
-        p = T ? A.D : "div";
+        p = T ? h.D : "div";
     return (0, i.jsxs)(p, {
         className: u()(C.kL, T && C.b),
         onClick: function () {
@@ -96,8 +96,8 @@ function I(e) {
             (0, i.jsxs)("div", {
                 className: C.__invalid_nameContainer,
                 children: [
-                    (0, i.jsx)(h.E, { variant: "text-md/semibold", color: "text-strong", children: r() }),
-                    (0, i.jsx)(h.E, {
+                    (0, i.jsx)(A.E, { variant: "text-md/semibold", color: "text-strong", children: r() }),
+                    (0, i.jsx)(A.E, {
                         variant: "text-xs/medium",
                         color: "text-default",
                         children: o && !n ? "?????" : s(),

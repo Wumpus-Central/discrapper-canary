@@ -21,8 +21,8 @@ function p(e) {
             primaryAction: b,
             secondaryAction: h,
             isEmphasized: _ = !1,
-            a11yAnnounceOnShow: x,
-            a11yAnnounceOnHide: A,
+            a11yAnnounceOnShow: A,
+            a11yAnnounceOnHide: x,
         } = e,
         v = (0, o.bG)([m.Ay], () => m.Ay.useReducedMotion),
         R = l.useRef(null);
@@ -39,7 +39,7 @@ function p(e) {
             leave: { opacity: 0, y: 80 * !v },
             onRest: (e, t) => {
                 if (!e.finished) return;
-                let n = t.item ? x : A;
+                let n = t.item ? A : x;
                 null != R.current && clearTimeout(R.current),
                     null != n
                         ? (R.current = setTimeout(() => {

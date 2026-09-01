@@ -1,4 +1,4 @@
-n.d(t, { US: () => R, BD: () => D, X8: () => y, mH: () => v });
+n.d(t, { US: () => R, BD: () => y, X8: () => D, mH: () => v });
 var i = n(477900);
 n(582128);
 var l = n(435558),
@@ -9,8 +9,8 @@ var l = n(435558),
     d = n(808728),
     c = n(967198),
     u = n(711014),
-    A = n(645959),
-    h = n(625494),
+    h = n(645959),
+    A = n(625494),
     E = n(265422),
     g = n(652215),
     C = n(790782);
@@ -18,7 +18,7 @@ function _(e, t) {
     return [
         { resourceId: e, type: C.P.GUILD_EVENT },
         ...(e === g.ME
-            ? A.A.getPrivateChannelIds()
+            ? h.A.getPrivateChannelIds()
             : (0, a.A)(e, { withVoiceChannels: t, withCurrentVoiceChannel: !0 }).map((e) => e.id)),
     ];
 }
@@ -26,7 +26,7 @@ let I = r().throttle(function (e, t) {
     var l;
     let r,
         a,
-        A,
+        h,
         {
             channelPredicate: C = () => !0,
             guildPredicate: I = () => !0,
@@ -46,11 +46,11 @@ let I = r().throttle(function (e, t) {
         O = _(N, S),
         b = O.indexOf(L) + e;
     for (; null != N && "" !== N; ) {
-        if (((A = O[b]), I(N)))
-            for (; null != A && "" !== A; ) {
-                if ("string" == typeof A) {
-                    if (C(N, A)) return (0, E.i)(N, A, !1, p(N, A));
-                } else if ("object" == typeof A && T(A.resourceId, A.type))
+        if (((h = O[b]), I(N)))
+            for (; null != h && "" !== h; ) {
+                if ("string" == typeof h) {
+                    if (C(N, h)) return (0, E.i)(N, h, !1, p(N, h));
+                } else if ("object" == typeof h && T(h.resourceId, h.type))
                     return (
                         N !== c.A.getGuildId() && (0, E.i)(N, d.Ay.getDefaultChannel(N)?.id),
                         (0, s.openModalLazy)(async () => {
@@ -82,12 +82,12 @@ let I = r().throttle(function (e, t) {
                             return (t) => (0, i.jsx)(e, { ...t, guildId: N });
                         })
                     );
-                (b += e), (A = O[b]);
+                (b += e), (h = O[b]);
             }
         if (((f += e), null == (N = m[f]) || "" === N)) break;
         (O = _(N, S)), (b = e < 0 ? O.length - 1 : 0);
     }
-    h._.dispatch(g.jej.SHAKE_APP, { duration: 200, intensity: 2 });
+    A._.dispatch(g.jej.SHAKE_APP, { duration: 200, intensity: 2 });
 }, g.ugG);
 var T = n(455234),
     p = n(95701),
@@ -149,12 +149,12 @@ let f = (e, t) => {
         },
     },
     U = (e, t) => N.Ay.getMentionCount(t) > 0,
-    D = {
+    y = {
         binds: ["mod+shift+alt+down"],
         comboKeysBindGlobal: !0,
         action: () => (I(1, { channelPredicate: U, ensureChatIsVisible: b, withVoiceChannels: !0 }), !1),
     },
-    y = {
+    D = {
         binds: ["mod+shift+alt+up"],
         comboKeysBindGlobal: !0,
         action: () => (I(-1, { channelPredicate: U, ensureChatIsVisible: b, withVoiceChannels: !0 }), !1),

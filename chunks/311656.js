@@ -1,9 +1,9 @@
 l.d(t, { A: () => p });
 var n = l(477900),
     a = l(582128),
-    i = l(834730),
-    r = l(691885),
-    s = l(922016),
+    r = l(834730),
+    s = l(691885),
+    i = l(922016),
     o = l(866665),
     u = l(939249),
     d = l(783977);
@@ -19,14 +19,14 @@ var f = l(295813),
     h = l(375708),
     g = l(752065);
 function x(e) {
-    let { title: t, modelChoices: l, thinkingChoices: s, value: o, disabled: u, onChange: d } = e,
+    let { title: t, modelChoices: l, thinkingChoices: i, value: o, disabled: u, onChange: d } = e,
         x = a.useMemo(() => l.map((e) => ({ id: e.id, label: e.label, value: e.id, description: m[e.provider] })), [l]),
-        p = a.useMemo(() => s.map((e) => ({ id: e, label: c[e] ?? e, value: e })), [s]);
+        p = a.useMemo(() => i.map((e) => ({ id: e, label: c[e] ?? e, value: e })), [i]);
     return (0, n.jsxs)("div", {
         className: g.uW,
         children: [
-            (0, n.jsx)(i.E, { variant: "text-sm/semibold", color: "text-default", children: t }),
-            (0, n.jsx)(r.l, {
+            (0, n.jsx)(r.E, { variant: "text-sm/semibold", color: "text-default", children: t }),
+            (0, n.jsx)(s.l, {
                 label: h.intl.string(f.default["9FRudW"]),
                 options: x,
                 value: o.model,
@@ -35,7 +35,7 @@ function x(e) {
                 disabled: u,
                 fullWidth: !0,
             }),
-            (0, n.jsx)(r.l, {
+            (0, n.jsx)(s.l, {
                 label: h.intl.string(f.default["4AsQHS"]),
                 options: p,
                 value: o.thinking,
@@ -48,19 +48,19 @@ function x(e) {
     });
 }
 function p(e) {
-    let { settings: t, choices: l, disabled: r, onChange: c, className: m, icon: p } = e,
+    let { settings: t, choices: l, disabled: s, onChange: c, className: m, icon: p } = e,
         v = a.useRef(null),
         [j, b] = a.useState(null),
-        [y, A] = a.useState(t);
-    t !== y && (A(t), b(null));
-    let k = j ?? t,
-        N = a.useCallback(
+        [y, k] = a.useState(t);
+    t !== y && (k(t), b(null));
+    let N = j ?? t,
+        A = a.useCallback(
             (e) => {
                 b(e), c(e);
             },
             [c],
         );
-    return (0, n.jsx)(s.Y, {
+    return (0, n.jsx)(i.Y, {
         targetElementRef: v,
         position: "top",
         align: "right",
@@ -74,19 +74,19 @@ function p(e) {
                         title: h.intl.string(f.default.ISmynF),
                         modelChoices: l.main,
                         thinkingChoices: l.thinking,
-                        value: k.main,
-                        disabled: r,
-                        onChange: (e) => N({ ...k, main: e }),
+                        value: N.main,
+                        disabled: s,
+                        onChange: (e) => A({ ...N, main: e }),
                     }),
                     (0, n.jsx)(x, {
                         title: h.intl.string(f.default.hdt1ph),
                         modelChoices: l.subagent,
                         thinkingChoices: l.thinking,
-                        value: k.subagent,
-                        disabled: r,
-                        onChange: (e) => N({ ...k, subagent: e }),
+                        value: N.subagent,
+                        disabled: s,
+                        onChange: (e) => A({ ...N, subagent: e }),
                     }),
-                    (0, n.jsx)(i.E, {
+                    (0, n.jsx)(r.E, {
                         variant: "text-xs/normal",
                         color: "text-muted",
                         children: h.intl.string(f.default.ICU5aW),

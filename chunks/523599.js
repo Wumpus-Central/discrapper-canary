@@ -33,8 +33,8 @@ let g = a.kg(
     O = [],
     S = [],
     m = [],
-    R = [],
     D = [],
+    R = [],
     h = !0,
     L = !1,
     C = !1,
@@ -170,10 +170,10 @@ class v extends i.Ay.Store {
         return m;
     }
     get threads() {
-        return R;
+        return D;
     }
     get applicationCommands() {
-        return D;
+        return R;
     }
     get isInitialLoading() {
         return h;
@@ -224,8 +224,8 @@ let b = new v(s.h, {
             (O = e.webhooks),
             (S = e.guildScheduledEvents),
             (m = e.automodRules ?? []),
-            (R = e.threads),
-            (D = e.applicationCommands),
+            (D = e.threads),
+            (R = e.applicationCommands),
             e.logs.length < A.$jw && (M = !1);
     },
     AUDIT_LOG_FETCH_FAIL: function () {
@@ -251,8 +251,8 @@ let b = new v(s.h, {
             (O = l),
             (S = r),
             (m = a),
-            (R = i),
-            (D = s),
+            (D = i),
+            (R = s),
             (0 === t.length || t.length < A.$jw) && (M = !1),
             t.length > 0)
         ) {
@@ -293,6 +293,6 @@ let b = new v(s.h, {
             (O = []),
             (S = []),
             (m = []),
-            (R = []);
+            (D = []);
     },
 });

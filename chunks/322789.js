@@ -24,8 +24,8 @@ var l = n(477900),
     N = n(868065),
     v = n(424994),
     _ = n(518477),
-    j = n(375708),
-    T = n(273783),
+    T = n(375708),
+    j = n(273783),
     b = n(804779);
 let R = [S.iq, S.Zc, S.Xy, S.$X, S.tR, S.K7, S.fg, S.sp, S.MK],
     O = i.memo(function (e) {
@@ -56,7 +56,7 @@ let R = [S.iq, S.Zc, S.Xy, S.$X, S.tR, S.K7, S.fg, S.sp, S.MK],
                 },
                 { onOpened: () => L(v.PA.OPENED_GAME_PROFILE) },
             ),
-            V = j.intl.formatToPlainString(j.t["9sZWVp"], { gameName: t.extra.game_name }),
+            V = T.intl.formatToPlainString(T.t["9sZWVp"], { gameName: t.extra.game_name }),
             F = (0, l.jsx)(y.V, {
                 alt: k?.text ?? k?.alt,
                 src: k?.src,
@@ -79,7 +79,7 @@ let R = [S.iq, S.Zc, S.Xy, S.$X, S.tR, S.K7, S.fg, S.sp, S.MK],
                                 (0, l.jsxs)(N.UA, {
                                     children: [
                                         (0, l.jsx)(N.Hp, { entry: t, channelId: n.id, guildId: n.guild_id }),
-                                        null != G ? (0, l.jsx)(I.A, { className: T.N4, onClick: G, children: H }) : H,
+                                        null != G ? (0, l.jsx)(I.A, { className: j.N4, onClick: G, children: H }) : H,
                                         (0, l.jsx)(S.mG, {
                                             location: S.N5.CARD,
                                             children: R.map((e, n) => (0, l.jsx)(e, { entry: t, hovered: O }, n)),
@@ -87,7 +87,7 @@ let R = [S.iq, S.Zc, S.Xy, S.$X, S.tR, S.K7, S.fg, S.sp, S.MK],
                                     ],
                                 }),
                                 null != G
-                                    ? (0, l.jsx)(a.D, { className: T.vi, onClick: G, "aria-label": V, children: F })
+                                    ? (0, l.jsx)(a.D, { className: j.vi, onClick: G, "aria-label": V, children: F })
                                     : F,
                             ],
                         }),
@@ -97,22 +97,22 @@ let R = [S.iq, S.Zc, S.Xy, S.$X, S.tR, S.K7, S.fg, S.sp, S.MK],
                         children: [
                             (0, l.jsx)(N.ik, {}),
                             (0, l.jsxs)(N.dM, {
-                                className: T.DK,
+                                className: j.DK,
                                 children: [
                                     (0, l.jsxs)("div", {
-                                        className: T.tJ,
+                                        className: j.tJ,
                                         children: [
                                             (0, l.jsx)(o.h, { color: u.A.colors.ICON_SUBTLE, size: "xxs" }),
                                             (0, l.jsx)(c.E, {
                                                 variant: "text-xs/normal",
                                                 color: "text-subtle",
-                                                children: j.intl.string(j.t["5HiF2i"]),
+                                                children: T.intl.string(T.t["5HiF2i"]),
                                             }),
                                         ],
                                     }),
                                     U === r.M.CLOUD_PLAY_NEW_BADGE &&
                                         (0, l.jsx)(d.Lp, {
-                                            text: j.intl.string(j.t.y2b7CA),
+                                            text: T.intl.string(T.t.y2b7CA),
                                             color: u.A.colors.BACKGROUND_BRAND.css,
                                         }),
                                 ],
@@ -125,7 +125,7 @@ let R = [S.iq, S.Zc, S.Xy, S.$X, S.tR, S.K7, S.fg, S.sp, S.MK],
                         userId: t.author_id,
                         widgetApplicationId: t.applicationWidgetPreview.widgetApplicationId,
                         hasWidget: t.applicationWidgetPreview.hasWidget,
-                        className: T.AB,
+                        className: j.AB,
                         compactViewMore: !0,
                         onClickViewMore: () => {
                             L(v.PA.APPLICATION_WIDGET_PREVIEW_VIEW_MORE),

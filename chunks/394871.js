@@ -76,8 +76,8 @@ function S(e) {
 var N = n(748562),
     v = n(47167),
     _ = n(734057),
-    j = n(864436),
-    T = n(200041),
+    T = n(864436),
+    j = n(200041),
     b = n(375708);
 function R(e) {
     let {
@@ -98,8 +98,8 @@ function R(e) {
         g = null != p ? p : b.intl.string(b.t.eXan7B),
         x = null != f ? `${g} (${f})` : g,
         A = h ? x : g;
-    return (0, l.jsx)(T.A, {
-        icon: a ? void 0 : (0, l.jsx)(j.A, { icon: N.U, className: r }),
+    return (0, l.jsx)(j.A, {
+        icon: a ? void 0 : (0, l.jsx)(T.A, { icon: N.U, className: r }),
         text: A,
         tooltipText: c ? void 0 : x,
         textVariant: i,
@@ -172,7 +172,7 @@ function U(e) {
                   : b.intl.string(b.t.msxteM),
         f = null != h ? `${m} (${h})` : m,
         p = c ? f : m;
-    return (0, l.jsx)(T.A, {
+    return (0, l.jsx)(j.A, {
         icon: (0, l.jsx)(D.A, { size: "custom", color: d, channel: t, className: r()(A.Kk, s) }),
         text: p,
         tooltipText: o ? void 0 : f,
@@ -213,8 +213,8 @@ function F(e) {
     } = e;
     (0, h.A)(t?.id);
     let _ = s?.discoverable !== !1 ? s : null,
-        j = (0, m.AO)(_),
-        T = i.useMemo(() => {
+        T = (0, m.AO)(_),
+        j = i.useMemo(() => {
             let e = n?.find((e) => {
                 let { type: t } = e;
                 return t === P.$pd.CUSTOM_STATUS;
@@ -224,13 +224,13 @@ function F(e) {
             return null == ("" === t ? null : t) && null == e.emoji ? null : e;
         }, [n]),
         b = (0, f.Uk)("ActivityStatus"),
-        O = i.useMemo(() => (null != T, null), [T, b]),
+        O = i.useMemo(() => (null != j, null), [j, b]),
         M = i.useMemo(
             () =>
                 (0, a.uniqWith)(
                     n?.filter((e) => {
                         let { type: t, name: n } = e;
-                        return t !== P.$pd.CUSTOM_STATUS && t !== P.$pd.HANG_STATUS && n !== j?.name;
+                        return t !== P.$pd.CUSTOM_STATUS && t !== P.$pd.HANG_STATUS && n !== T?.name;
                     }) ?? [],
                     (e, t) =>
                         (null != e.application_id &&
@@ -238,17 +238,17 @@ function F(e) {
                             e.application_id === t.application_id) ||
                         (null != e.name && null != t.name && e.name === t.name),
                 ),
-            [n, j?.name],
+            [n, T?.name],
         ),
-        w = n?.find((e) => e.name === j?.name),
+        w = n?.find((e) => e.name === T?.name),
         D = t?.bot === !0,
         F = (0, u.bG)([C.A], () => C.A.isBlockedOrIgnored(t?.id)),
-        H = T?.state != null,
+        H = j?.state != null,
         B = null != _,
         W = !B && null != o,
         K = M.length + (B || W ? 1 : 0),
         z = K > 1,
-        Z = T?.state != null && "xs" === x;
+        Z = j?.state != null && "xs" === x;
     if (F) return null;
     function Y() {
         let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
@@ -333,7 +333,7 @@ function F(e) {
                   null == O
                       ? null
                       : (0, l.jsx)(E, {
-                            customStatusActivity: T,
+                            customStatusActivity: j,
                             textSize: x,
                             animateEmoji: I,
                             hideEmoji: N,
@@ -352,11 +352,11 @@ function F(e) {
               className: $,
               children: [
                   J(),
-                  null != T && K > 0 && (0, l.jsx)(V, { textVariant: `text-${x}/normal`, className: p }),
-                  null == T
+                  null != j && K > 0 && (0, l.jsx)(V, { textVariant: `text-${x}/normal`, className: p }),
+                  null == j
                       ? null
                       : (0, l.jsx)(L, {
-                            customStatusActivity: T,
+                            customStatusActivity: j,
                             textSize: x,
                             animateEmoji: I,
                             hideEmoji: N,

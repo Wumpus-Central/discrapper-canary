@@ -5,8 +5,8 @@ var i = n(477900),
     r = n(939249),
     a = n(789645),
     o = n(753437),
-    c = n(375708),
-    d = n(382701);
+    d = n(375708),
+    c = n(382701);
 function u(e) {
     let { tag: t, variant: n = "default", onRemove: u, className: g, removeButtonClassName: m, ref: x } = e,
         f = (0, o.W3)(t);
@@ -14,7 +14,7 @@ function u(e) {
     let { getText: h, icon: p } = f,
         I = "filled" === n;
     return (0, i.jsxs)("li", {
-        className: g ?? (I ? d.zE : d.Tc),
+        className: g ?? (I ? c.zE : c.Tc),
         ref: x,
         children: [
             (0, i.jsx)(p, { size: "xxs", color: I ? "currentColor" : void 0 }),
@@ -25,12 +25,12 @@ function u(e) {
             }),
             null != u &&
                 (0, i.jsx)(s.m, {
-                    text: c.intl.string(c.t.Otv9fP),
+                    text: d.intl.string(d.t.Otv9fP),
                     ariaHidden: !0,
                     children: (0, i.jsx)(r.D, {
                         onClick: u,
-                        className: m ?? (I ? d.to : d.DT),
-                        "aria-label": c.intl.formatToPlainString(c.t.GCn1ne, { tag: h() }),
+                        className: m ?? (I ? c.to : c.DT),
+                        "aria-label": d.intl.formatToPlainString(d.t.GCn1ne, { tag: h() }),
                         children: (0, i.jsx)(a.P, { size: "xxs", color: "currentColor" }),
                     }),
                 }),

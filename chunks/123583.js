@@ -24,8 +24,8 @@ var l = n(477900),
     N = n(500049),
     v = n(598071),
     _ = n(60809),
-    j = n(375708),
-    T = n(215837);
+    T = n(375708),
+    j = n(215837);
 let b = i.forwardRef(function (e, t) {
         let { type: n, channelId: s } = e,
             a = (0, r.bG)(
@@ -50,13 +50,13 @@ let b = i.forwardRef(function (e, t) {
             }, [a, n, s, c]),
             m = (0, l.jsx)(o, { size: "refresh_sm", color: "currentColor" });
         return (0, l.jsx)("div", {
-            className: A()(T.UD, _.KG),
+            className: A()(j.UD, _.KG),
             ref: t,
             children: (0, l.jsx)(E.D, {
                 tabIndex: 0,
-                className: A()(T.x6, { [T.rK]: a }),
+                className: A()(j.x6, { [j.rK]: a }),
                 onClick: h,
-                "aria-label": j.intl.string(j.t.erHFxI),
+                "aria-label": T.intl.string(T.t.erHFxI),
                 "aria-expanded": a,
                 "aria-haspopup": "dialog",
                 focusProps: { offset: { top: 4, bottom: 4, left: -4, right: -4 } },
@@ -135,7 +135,7 @@ let Y = i.memo(
         if (n) return null;
         let S = d === G.kx.GIF && h === s && f === a.id;
         return (0, l.jsx)(W.m, {
-            text: j.intl.string(c ? j.t.mE2e8A : j.t.nffuyb),
+            text: T.intl.string(c ? T.t.mE2e8A : T.t.nffuyb),
             shouldShow: c,
             forceOpen: c,
             children: (0, l.jsx)("div", {
@@ -150,7 +150,7 @@ let Y = i.memo(
                     },
                     isActive: S,
                     pulse: o,
-                    "aria-label": j.intl.string(j.t.PtVpk2),
+                    "aria-label": T.intl.string(T.t.PtVpk2),
                     "aria-expanded": S,
                     "aria-haspopup": "dialog",
                     "aria-controls": m,
@@ -179,7 +179,7 @@ let X = i.memo(function (e) {
                         disabled: n,
                         isActive: !1,
                         noHover: n,
-                        "aria-label": j.intl.string(j.t.oeb1vg),
+                        "aria-label": T.intl.string(T.t.oeb1vg),
                         children: (0, l.jsx)(J.SendMessageIcon, { size: "xs", color: "currentColor", className: $.AO }),
                     }),
                 }),
@@ -245,7 +245,7 @@ let ee = { click: { name: "click", start: 0, duration: 66 }, hover: { name: "hov
                               E(), y();
                           },
                           isActive: x,
-                          "aria-label": j.intl.string(j.t.rZpidU),
+                          "aria-label": T.intl.string(T.t.rZpidU),
                           "aria-expanded": x,
                           "aria-haspopup": "dialog",
                           "aria-controls": f,
@@ -275,8 +275,8 @@ let ee = { click: { name: "click", start: 0, duration: 66 }, hover: { name: "hov
                 isStickerButtonEnabled: o.Ay.isStickerButtonEnabled,
             })),
             _ = v.isSubmitButtonEnabled,
-            j = !N || v.isAppsButtonEnabled,
-            T = !N || v.isEmojiButtonEnabled,
+            T = !N || v.isAppsButtonEnabled,
+            j = !N || v.isEmojiButtonEnabled,
             b = !N || v.isGifButtonEnabled,
             w = !N || v.isStickerButtonEnabled,
             P =
@@ -343,9 +343,9 @@ let ee = { click: { name: "click", start: 0, duration: 66 }, hover: { name: "hov
             !S &&
             J &&
             (y || S
-                ? T && B.push((0, l.jsx)(F, { disabled: A, type: x, channelId: E.id }, "emoji"))
+                ? j && B.push((0, l.jsx)(F, { disabled: A, type: x, channelId: E.id }, "emoji"))
                 : B.push((0, l.jsx)(H.A, { disabled: A, type: x, channel: E }, "expression"))),
-        z && j && B.push((0, l.jsx)(R, { channelId: E.id, type: x }, "appLauncher")),
+        z && T && B.push((0, l.jsx)(R, { channelId: E.id, type: x }, "appLauncher")),
         Z && B.push((0, l.jsx)(X, { onClick: C, disabled: A || P }, "submit")),
         0 === B.length)
             ? null

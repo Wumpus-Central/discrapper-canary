@@ -95,8 +95,8 @@ let N = (e) => {
             messageId: S,
         } = e,
         N = (0, x.n)(),
-        [_, j] = i.useState(String(Date.now())),
-        [T, b] = i.useState(!1),
+        [_, T] = i.useState(String(Date.now())),
+        [j, b] = i.useState(!1),
         [R, O] = i.useState(!1),
         M = i.useRef(null);
     function L(e) {
@@ -138,7 +138,7 @@ let N = (e) => {
                       }
                     : void 0,
                 onMouseLeave: () => {
-                    T && (f.default.track(A.HAw.CLOSE_POPOUT, { nonce: k }), b(!1));
+                    j && (f.default.track(A.HAw.CLOSE_POPOUT, { nonce: k }), b(!1));
                 },
                 tag: "span",
                 tabIndex: h ? 0 : -1,
@@ -159,7 +159,7 @@ let N = (e) => {
               nudgeAlignIntoViewport: !0,
               position: "right",
               renderPopout: function (e) {
-                  return (0, l.jsx)(p.iP, { ...e, node: t, refreshPositionKey: () => j(String(Date.now())), nonce: k });
+                  return (0, l.jsx)(p.iP, { ...e, node: t, refreshPositionKey: () => T(String(Date.now())), nonce: k });
               },
               positionKey: _,
               targetElementRef: M,

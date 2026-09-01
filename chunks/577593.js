@@ -22,7 +22,7 @@ var l = s(477900),
     E = s(722868),
     O = s(716804),
     y = s(718019),
-    S = s(907654),
+    S = s(988895),
     C = s(915614),
     T = s(559506),
     P = s(946356),
@@ -548,7 +548,7 @@ var e7 = s(186272),
     e9 = s(996988),
     e1 = s(985253),
     e2 = s(174217);
-function e6(e) {
+function e8(e) {
     let {
             user: i,
             currentUser: s,
@@ -709,7 +709,7 @@ function e6(e) {
         }),
     });
 }
-var e8 = s(480335),
+var e6 = s(480335),
     e4 = s(713517),
     ie = s(35241);
 function ii(e) {
@@ -853,7 +853,7 @@ function ii(e) {
                             ],
                         }),
                     }),
-                    O?.profileEffect != null && (0, l.jsx)(e8.A, { skuId: O?.profileEffect?.skuId, isHovering: V }),
+                    O?.profileEffect != null && (0, l.jsx)(e6.A, { skuId: O?.profileEffect?.skuId, isHovering: V }),
                 ],
             }),
         }),
@@ -1011,6 +1011,6 @@ function ig(e) {
         : u.isNonUserBot()
           ? (0, l.jsx)(ii, { ...s })
           : u.bot
-            ? (0, l.jsx)(e6, { ...s })
+            ? (0, l.jsx)(e8, { ...s })
             : (0, l.jsx)(ip.A, { ...s });
 }

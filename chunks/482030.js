@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Ch: () => j, hg: () => T, dn: () => _, SD: () => v });
+n.d(t, { Ch: () => T, hg: () => j, dn: () => _, SD: () => v });
 var l = n(582128),
     i = n(435558),
     s = n.n(i),
@@ -72,12 +72,12 @@ function _(e) {
             );
         })((0, u.Hq)({ context: t, applicationId: n.id, fetchesApplication: x })),
         _ = (0, r.bG)([E.A], () => E.A.entrypoint()),
-        j = l.useMemo(() => {
+        T = l.useMemo(() => {
             if ("channel" !== t.type) return n.bot?.id ?? (0, h.Sx)(t, n.id).descriptor?.botId;
         }, [t, n.id, n.bot]),
-        T = (0, u.wK)({
+        j = (0, u.wK)({
             application: n,
-            botUserIdForAppDM: j,
+            botUserIdForAppDM: T,
             embeddedActivitiesManager: c.A,
             context: t,
             locationObject: N.location,
@@ -105,10 +105,10 @@ function _(e) {
         v === u.o6.JOIN
             ? ((b = "active"), (R = y.intl.string(y.t.d9PsMj)))
             : v !== u.o6.LEAVE || g || ((b = "critical-primary"), (R = y.intl.string(y.t["Hi1/aQ"]))),
-        { onActivityItemSelected: T, activityAction: v, buttonVariant: b, buttonText: R }
+        { onActivityItemSelected: j, activityAction: v, buttonVariant: b, buttonText: R }
     );
 }
-function j(e, t) {
+function T(e, t) {
     let n = E.A.entrypoint(),
         s = l.useMemo(
             () =>
@@ -125,6 +125,6 @@ function j(e, t) {
         null != e && s(e, n);
     }, [e, t, n, s]);
 }
-function T(e) {
+function j(e) {
     x._.dispatchToLastSubscribed(I.jej.OPEN_APP_LAUNCHER, { applicationId: e });
 }

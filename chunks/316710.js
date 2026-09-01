@@ -48,16 +48,16 @@ function b(e, t, l) {
         );
     let v = (0, A.A)(e, t);
     null != v && b.push(v);
-    let I = (0, h.A)({ id: t.id, label: f.intl.string(f.t.sMsaLg) });
-    if ((null != I && b.push(I), !s && !E && !C)) {
-        async function T() {
+    let T = (0, h.A)({ id: t.id, label: f.intl.string(f.t.sMsaLg) });
+    if ((null != T && b.push(T), !s && !E && !C)) {
+        async function I() {
             j && (await (0, g.qK)(e.id, t.id, [])), m.A.deleteRole(e.id, t.id);
         }
         let l = N
             ? () => {
                   (0, d.openModalLazy)(async () => {
                       let { default: e } = await n.e("154915").then(n.bind(n, 360494));
-                      return (n) => (0, i.jsx)(e, { ...n, roleName: t.name, onConfirmDelete: T });
+                      return (n) => (0, i.jsx)(e, { ...n, roleName: t.name, onConfirmDelete: I });
                   });
               }
             : () => {
@@ -66,7 +66,7 @@ function b(e, t, l) {
                       subtitle: f.intl.format(f.t["9+nrUS"], { name: t.name }),
                       confirmText: f.intl.string(f.t.oyYWHE),
                       cancelText: f.intl.string(f.t["ETE/oC"]),
-                      onConfirm: T,
+                      onConfirm: I,
                   });
               };
         b.push(

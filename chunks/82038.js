@@ -8,8 +8,8 @@ var i = n(621466),
     d = n(625494),
     c = n(350535),
     u = n(652215);
-let A = new Set(["PageDown", "PageUp", "Home", "End", "ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight"]),
-    h = new Set([
+let h = new Set(["PageDown", "PageUp", "Home", "End", "ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight"]),
+    A = new Set([
         "Alt",
         "AltGraph",
         "CapsLock",
@@ -88,7 +88,7 @@ let A = new Set(["PageDown", "PageUp", "Home", "End", "ArrowUp", "ArrowDown", "A
         binds: ["any-character"],
         keydown(e, t) {
             let n = (0, i.BF)(e)?.activeElement;
-            if ((0, i.Cw)(n) || l.rx.isActive() || h.has(t) || E.has(t) || g.has(t)) return !1;
+            if ((0, i.Cw)(n) || l.rx.isActive() || A.has(t) || E.has(t) || g.has(t)) return !1;
             let C = null != n && "BODY" === n.tagName;
             if (
                 (r.Ay.keyboardModeEnabled && !C && !/^[a-zA-Z0-9]$/.test(t)) ||
@@ -111,7 +111,7 @@ let A = new Set(["PageDown", "PageUp", "Home", "End", "ArrowUp", "ArrowDown", "A
                         .some((t) => t.map((e) => e.keyCode).includes(e.keyCode))) ||
                 e.metaKey ||
                 e.ctrlKey ||
-                A.has(t)
+                h.has(t)
             )
                 return !1;
             let _ = "Enter" === t && !e.shiftKey && !e.altKey;

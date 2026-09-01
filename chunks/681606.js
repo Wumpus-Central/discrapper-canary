@@ -269,7 +269,7 @@ function L(e) {
     });
 }
 var U = n(65412),
-    G = n(862706);
+    G = n(384939);
 function k(e, t) {
     return G.m.create({ contentIdentifier: e, properties: t });
 }
@@ -346,8 +346,8 @@ let F = "playground-announcement-modal",
                                     n.e("896137"),
                                     n.e("979630"),
                                     n.e("3131"),
-                                    n.e("220287"),
                                     n.e("918024"),
+                                    n.e("220287"),
                                     n.e("647177"),
                                     n.e("169201"),
                                     n.e("111527"),

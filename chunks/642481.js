@@ -10,15 +10,15 @@ var a = n(477900),
     u = n(297264),
     f = n(834730),
     m = n(353795),
-    E = n(239027);
-function g(e) {
+    g = n(239027);
+function E(e) {
     let { title: t, body: n } = e;
     return (0, a.jsxs)("div", {
-        className: E.header,
+        className: g.header,
         children: [
-            (0, a.jsx)(u.D, { variant: "heading-md/semibold", className: E.title, children: t }),
+            (0, a.jsx)(u.D, { variant: "heading-md/semibold", className: g.title, children: t }),
             (0, a.jsx)("div", {
-                className: E.headerBody,
+                className: g.headerBody,
                 children: (0, a.jsx)(f.E, { variant: "text-sm/normal", color: "none", children: n }),
             }),
         ],
@@ -35,20 +35,20 @@ function p(e) {
             onRequestClose: b,
             position: h,
             caretConfig: _,
-            scrollBehavior: x,
-            showCloseButton: A = !0,
-            isCaretHoverable: R = !1,
-            shouldTrapFocus: v = !1,
+            scrollBehavior: A,
+            showCloseButton: x = !0,
+            isCaretHoverable: v = !1,
+            shouldTrapFocus: R = !1,
             returnRef: N,
             onNudgeChange: I,
-            ...T
+            ...j
         } = e,
-        [j, C] = l.useState(h ?? "top");
+        [T, y] = l.useState(h ?? "top");
     l.useEffect(() => {
-        null != h && C(h);
+        null != h && y(h);
     }, [h]);
-    let S = l.useMemo(() => ({ align: _?.align ?? "center", customOffset: _?.customOffset }), [_]),
-        y = l.useCallback(() => {
+    let C = l.useMemo(() => ({ align: _?.align ?? "center", customOffset: _?.customOffset }), [_]),
+        S = l.useCallback(() => {
             b?.();
         }, [b]),
         D = l.useCallback(
@@ -58,26 +58,26 @@ function p(e) {
             [b],
         ),
         M = l.useCallback((e) => {
-            C(e);
+            y(e);
         }, []),
-        O = R ? E.caretHoverable : void 0,
+        O = v ? g.caretHoverable : void 0,
         P = {
-            targetElementRef: T.targetElementRef,
-            shouldShow: T.shouldShow,
-            hasVideo: T.hasVideo,
-            position: j,
-            caretConfig: S,
-            onRequestClose: y,
+            targetElementRef: j.targetElementRef,
+            shouldShow: j.shouldShow,
+            hasVideo: j.hasVideo,
+            position: T,
+            caretConfig: C,
+            onRequestClose: S,
             gradientColor: p,
             onPositionChange: M,
             onNudgeChange: I,
-            scrollBehavior: x,
-            modal: v,
+            scrollBehavior: A,
+            modal: R,
             returnRef: N,
             gradientOffsetBottom: 0,
             experimental_ignoreModalClicks: !1,
-            ...("edge" === T.alignmentStrategy
-                ? { alignmentStrategy: "edge", align: T.align }
+            ...("edge" === j.alignmentStrategy
+                ? { alignmentStrategy: "edge", align: j.align }
                 : { alignmentStrategy: "trigger-center" }),
         };
     return (0, a.jsx)(i.x, {
@@ -85,18 +85,18 @@ function p(e) {
         children: (0, a.jsxs)("div", {
             "data-mana-component": "popover",
             children: [
-                A && (0, a.jsx)(c.q, { onClick: D, variant: null != p ? "color-mix" : void 0 }),
+                x && (0, a.jsx)(c.q, { onClick: D, variant: null != p ? "color-mix" : void 0 }),
                 null != r &&
                     (0, a.jsx)("div", {
-                        className: s()(E.graphic, { [E[`graphic--${u}`]]: null != u }),
+                        className: s()(g.graphic, { [g[`graphic--${u}`]]: null != u }),
                         children: (0, a.jsx)(m.v, {
                             ...r,
                             aspectRatio: r.aspectRatio ?? ("sm" === u ? "2/1" : "16/9"),
                         }),
                     }),
-                (0, a.jsx)(g, { title: t, body: n }),
-                null != f && f.length > 0 ? (0, a.jsx)(o.Z, { actions: f, className: E.actionBar }) : null,
-                null != S && (0, a.jsx)(d.F, { className: O }),
+                (0, a.jsx)(E, { title: t, body: n }),
+                null != f && f.length > 0 ? (0, a.jsx)(o.Z, { actions: f, className: g.actionBar }) : null,
+                null != C && (0, a.jsx)(d.F, { className: O }),
             ],
         }),
     });

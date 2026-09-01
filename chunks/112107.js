@@ -42,17 +42,17 @@ var S = n(209932),
     N = n(807348),
     v = n(805945),
     _ = n(734057),
-    j = n(375708),
-    T = n(701144);
+    T = n(375708),
+    j = n(701144);
 function b(e) {
     let { playSound: t } = e;
     return (0, l.jsxs)(o.D, {
         title: "Risky Click",
         tag: "span",
         onClick: t,
-        className: T.Ls,
+        className: j.Ls,
         children: [
-            (0, l.jsx)(u.H, { size: "md", color: "currentColor", className: T.uA }),
+            (0, l.jsx)(u.H, { size: "md", color: "currentColor", className: j.uA }),
             (0, l.jsx)("span", { children: "Unknown" }),
         ],
     });
@@ -65,21 +65,21 @@ function R(e) {
     return i
         ? null == n
             ? (0, l.jsx)(b, {})
-            : (0, l.jsx)(O, { className: T.wg, isPlaying: s, playSound: r, sound: n })
+            : (0, l.jsx)(O, { className: j.wg, isPlaying: s, playSound: r, sound: n })
         : null;
 }
 function O(e) {
     let { className: t, sound: n, playSound: i, isPlaying: s } = e,
         a = n?.emojiId != null || n?.emojiName != null,
-        u = j.intl.formatToPlainString(j.t.tuMUJ2, { emojiName: n?.emojiName, soundName: n?.name });
+        u = T.intl.formatToPlainString(T.t.tuMUJ2, { emojiName: n?.emojiName, soundName: n?.name });
     return (0, h.X)({ location: "SoundboardMentionInline" })
         ? (0, l.jsxs)(o.D, {
               "aria-label": u,
               tag: "span",
               onClick: i,
-              className: r()(T.Ls, T.oR, { [T.he]: !0 === s }, t),
+              className: r()(j.Ls, j.oR, { [j.he]: !0 === s }, t),
               children: [
-                  a && (0, l.jsx)(d.A, { emojiId: n?.emojiId, emojiName: n?.emojiName, className: T.JS }),
+                  a && (0, l.jsx)(d.A, { emojiId: n?.emojiId, emojiName: n?.emojiName, className: j.JS }),
                   (0, l.jsx)("span", { children: ` ${n?.name} ` }),
               ],
           })
@@ -94,26 +94,26 @@ let M = function (e) {
         x = (0, h.X)({ location: "SoundboardMention" }),
         A = i.useRef(null),
         { isPlaying: C, playSound: I } = y(m, g),
-        j = i.useCallback(async () => {
+        T = i.useCallback(async () => {
             (await I()) && A.current?.addAnimation();
         }, [I]);
     return x
         ? null == m
-            ? (0, l.jsx)(b, { playSound: j })
+            ? (0, l.jsx)(b, { playSound: T })
             : o && !u
               ? (0, l.jsx)(
                     v.Ay,
                     {
-                        containerClassName: T.Ti,
-                        className: T.UX,
+                        containerClassName: j.Ti,
+                        className: j.UX,
                         sound: m,
                         channel: g,
-                        onSelectItem: j,
+                        onSelectItem: T,
                         isPlayingSoundOverride: C,
                         isSoundmoji: !0,
                         buttonOverlay: N.If.SOUNDMOJI,
-                        tooltipClassName: T.YL,
-                        tooltipContentClassName: T.R3,
+                        tooltipClassName: j.YL,
+                        tooltipContentClassName: j.R3,
                         tooltipOverride: (0, l.jsx)(p.WE, { sound: m }),
                         soundmojiVisualEffectRef: A,
                     },
@@ -125,7 +125,7 @@ let M = function (e) {
                     __unsupportedReactNodeAsText: (0, l.jsx)(p.WE, { sound: m }),
                     position: "top",
                     delay: 500,
-                    children: (0, l.jsx)("span", { children: (0, l.jsx)(O, { sound: m, playSound: j, isPlaying: C }) }),
+                    children: (0, l.jsx)("span", { children: (0, l.jsx)(O, { sound: m, playSound: T, isPlaying: C }) }),
                 })
         : null;
 };

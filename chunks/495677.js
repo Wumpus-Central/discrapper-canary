@@ -298,7 +298,7 @@ var ey = l(663417),
     eA = l(625903),
     eE = l(365199),
     ew = l(770818),
-    ek = l(871237),
+    ek = l(147036),
     eI = l(957565),
     eS = l(557875),
     eR = l(869369),
@@ -684,10 +684,10 @@ var eQ = l(584936),
     e0 = l(675210),
     e2 = l(165610),
     e1 = l(352978);
-function e8(e) {
+function e6(e) {
     return (0, i.jsx)(m.ChatIcon, { ...e, size: "custom", width: 20, height: 20 });
 }
-function e6(e) {
+function e8(e) {
     return (0, i.jsx)(p.u, { ...e, size: "custom", width: 20, height: 20 });
 }
 function e9(e) {
@@ -1087,7 +1087,7 @@ function e7(e) {
                                   text: eC,
                                   ariaHidden: !0,
                                   children: (0, i.jsx)(C.K, {
-                                      icon: ey ? e9 : e6,
+                                      icon: ey ? e9 : e8,
                                       size: "sm",
                                       variant: "icon-only",
                                       "aria-label": eC,
@@ -1113,7 +1113,7 @@ function e7(e) {
                                   text: eg,
                                   ariaHidden: !0,
                                   children: (0, i.jsx)(C.K, {
-                                      icon: e8,
+                                      icon: e6,
                                       size: "sm",
                                       variant: "icon-only",
                                       "aria-label": eg,

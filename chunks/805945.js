@@ -24,8 +24,8 @@ var l = n(477900),
     N = n(21161),
     v = n(850992),
     _ = n(319993),
-    j = n(435558),
-    T = n(132500),
+    T = n(435558),
+    j = n(132500),
     b = n(104142),
     R = n(407781),
     O = n(287809),
@@ -43,8 +43,8 @@ let k = i.forwardRef(function (e, t) {
                 let e = (0, b.Br)({ id: n.emojiId, name: n.emojiName ?? "", animated: !1 }),
                     t = null != n.emojiId,
                     l = M.B.PREMIUM,
-                    i = (0, j.random)(b.Bf[l].length, !1),
-                    s = { id: (0, T.A)(), animationId: i, animationType: l, shouldResize: t, url: e, userId: r.id };
+                    i = (0, T.random)(b.Bf[l].length, !1),
+                    s = { id: (0, j.A)(), animationId: i, animationType: l, shouldResize: t, url: e, userId: r.id };
                 c((e) => [...e, s]);
             }
         }, [a, d, h, r, n]);
@@ -127,8 +127,8 @@ let $ = i.forwardRef(function (e, t) {
             sound: f,
             channel: p,
             containerClassName: S,
-            className: j,
-            focused: T,
+            className: T,
+            focused: j,
             forceSecondaryActions: b = !1,
             interactive: R = !0,
             enableSecondaryActions: M = !1,
@@ -178,8 +178,8 @@ let $ = i.forwardRef(function (e, t) {
         eN = null != eo || null != eu,
         ev = !(0, F.Ir)(ec, f, p) && !el,
         e_ = b || (M && !ev),
-        ej = v.LW.useStore().bottomPosition ?? 0,
-        eT = eg.current?.getBoundingClientRect().bottom ?? 0,
+        eT = v.LW.useStore().bottomPosition ?? 0,
+        ej = eg.current?.getBoundingClientRect().bottom ?? 0,
         [eb, eR] = i.useState(!1),
         eO = i.useCallback(() => {
             eR(!0);
@@ -261,7 +261,7 @@ let $ = i.forwardRef(function (e, t) {
             (0, l.jsx)(d.m, {
                 "aria-label": null != es ? f.name : void 0,
                 __unsupportedReactNodeAsText: es ?? f.name,
-                position: eT + 50 > ej ? "top" : "bottom",
+                position: ej + 50 > eT ? "top" : "bottom",
                 shouldShow: !eb,
                 delay: 500,
                 children: (0, l.jsxs)(C.s, {
@@ -278,9 +278,9 @@ let $ = i.forwardRef(function (e, t) {
                             [Y.$9]: !R && !b,
                             [Y.Au]: ev && !b,
                             [Y.fx]: !R && b,
-                            [Y.in]: R && T,
+                            [Y.in]: R && j,
                         },
-                        j,
+                        T,
                     ),
                     onClick: (e) => {
                         ek?.(e);

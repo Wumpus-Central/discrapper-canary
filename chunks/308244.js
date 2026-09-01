@@ -1,4 +1,4 @@
-n.d(t, { E: () => A, A: () => x });
+n.d(t, { E: () => x, A: () => A });
 var a = n(477900),
     l = n(582128),
     r = n(503698),
@@ -12,7 +12,7 @@ var a = n(477900),
 function m() {
     d.default.track(u.HAw.CHANGE_LOG_CTA_CLICKED, { cta_type: "profile_bio", target: c.Do });
 }
-function E() {
+function g() {
     return (0, a.jsxs)(a.Fragment, {
         children: [
             (0, a.jsx)("span", { children: f.intl.string(f.t.OJmNR9) }),
@@ -31,12 +31,12 @@ function E() {
         ],
     });
 }
-var g = n(311016),
+var E = n(311016),
     p = n(692051),
     b = n(713804),
     h = n(900179),
     _ = n(165648);
-function x(e) {
+function A(e) {
     let {
             userBio: t,
             className: n,
@@ -48,7 +48,7 @@ function x(e) {
             userId: f,
         } = e,
         m = l.useMemo(
-            () => ((0, g.A)(f) ? (0, a.jsx)(E, {}) : null == t || "" === t ? null : (0, b.parseBioReact)(t)),
+            () => ((0, E.A)(f) ? (0, a.jsx)(g, {}) : null == t || "" === t ? null : (0, b.parseBioReact)(t)),
             [f, t],
         );
     return null == m
@@ -66,9 +66,9 @@ function x(e) {
               }),
           });
 }
-function A(e) {
+function x(e) {
     let { userBio: t, userId: n } = e;
-    return (0, g.A)(n) || (null != t && "" !== t)
-        ? (0, a.jsx)(h.A, { heading: f.intl.string(f.t.ZzAR2Y), hideHeading: !0, children: (0, a.jsx)(x, { ...e }) })
+    return (0, E.A)(n) || (null != t && "" !== t)
+        ? (0, a.jsx)(h.A, { heading: f.intl.string(f.t.ZzAR2Y), hideHeading: !0, children: (0, a.jsx)(A, { ...e }) })
         : null;
 }
