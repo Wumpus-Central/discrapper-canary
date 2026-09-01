@@ -19,41 +19,39 @@ var a = i(477900),
     C = i(174755),
     j = i(290863),
     p = i(19575),
-    I = i(956705),
-    N = i(854627),
-    b = i(939496),
-    _ = i(652215),
-    E = i(996988),
-    S = i(135650);
-let k = u._3.SIZE_40,
-    F = p.Ay.getEnableHardwareAcceleration();
+    I = i(854627),
+    N = i(939496),
+    b = i(652215),
+    _ = i(996988),
+    E = i(135650);
+let S = u._3.SIZE_40,
+    k = p.Ay.getEnableHardwareAcceleration();
 function y(e) {
     let { user: s, status: t, guildId: u, channelId: p, onSelect: y } = e,
-        { theme: L, themeType: U } = (0, b.E)(),
-        w = n.useMemo(() => s.isNonUserBot() || (0, v.c)(s, p), [s, p]),
-        { activities: D, isMobileOnline: R } = (0, r.cf)([j.A], () => ({
+        { theme: F, themeType: L } = (0, N.E)(),
+        D = n.useMemo(() => s.isNonUserBot() || (0, v.c)(s, p), [s, p]),
+        { activities: U, isMobileOnline: w } = (0, r.cf)([j.A], () => ({
             activities: j.A.getActivities(s.id),
             isMobileOnline: j.A.isMobileOnline(s.id),
         })),
         T = (0, x.A)(s.id),
-        { voiceChannel: P } = (0, h.Ay)({ userId: s.id, guildId: u }),
-        z = (0, I.r)("UserProfileMutualFriendRow"),
-        [H, O] = n.useState(!1),
+        { voiceChannel: R } = (0, h.Ay)({ userId: s.id, guildId: u }),
+        [z, P] = n.useState(!1),
         {
-            avatarSrc: K,
-            avatarDecorationSrc: W,
-            eventHandlers: B,
-        } = (0, N.A)({ userId: s.id, guildId: u, size: k, animateOnHover: !H }),
-        V = F && z ? o.Js : o.eu,
-        Y = n.useRef(null),
-        Z = (0, M.r)({ user: s, guildId: u }),
-        G = z ? Z : null,
-        Q = n.useCallback(() => O(!0), []),
-        J = n.useCallback(() => O(!1), []);
+            avatarSrc: H,
+            avatarDecorationSrc: O,
+            eventHandlers: K,
+        } = (0, I.A)({ userId: s.id, guildId: u, size: S, animateOnHover: !z }),
+        W = k ? o.Js : o.eu,
+        B = n.useRef(null),
+        V = (0, M.r)({ user: s, guildId: u }),
+        Y = n.useCallback(() => P(!0), []),
+        Z = n.useCallback(() => P(!1), []);
     return (0, a.jsxs)(c.D, {
-        ...(z ? { onMouseEnter: Q, onMouseLeave: J } : {}),
-        focusProps: U === E.d.MODAL_V2 ? { offset: { top: 4, right: 4, left: 4 } } : { offset: { right: 8 } },
-        className: l()(S.nM, { [S.EY]: null != G }),
+        onMouseEnter: Y,
+        onMouseLeave: Z,
+        focusProps: L === _.d.MODAL_V2 ? { offset: { top: 4, right: 4, left: 4 } } : { offset: { right: 8 } },
+        className: l()(E.nM, { [E.EY]: null != V }),
         onClick: y,
         onContextMenu: function (e) {
             (0, A.L3)(e, async () => {
@@ -85,33 +83,33 @@ function y(e) {
             });
         },
         children: [
-            (0, a.jsx)(C.A, { nameplate: H ? G : null, hovered: H, content: Y, placement: g.u.MUTUAL_FRIENDS_LIST }),
+            (0, a.jsx)(C.A, { nameplate: z ? V : null, hovered: z, content: B, placement: g.u.MUTUAL_FRIENDS_LIST }),
             (0, a.jsxs)("div", {
-                ref: Y,
-                className: S.Qs,
+                ref: B,
+                className: E.Qs,
                 children: [
-                    (0, a.jsx)(V, {
-                        ...(z ? B : {}),
-                        src: K,
-                        avatarDecoration: z ? W : void 0,
+                    (0, a.jsx)(W, {
+                        ...K,
+                        src: H,
+                        avatarDecoration: O,
                         "aria-label": s.username,
-                        size: k,
-                        status: w ? _.clD.UNKNOWN : t,
-                        statusBackdropColor: w ? void 0 : (0, d.C$)(L),
-                        isMobile: R,
-                        className: S.my,
+                        size: S,
+                        status: D ? b.clD.UNKNOWN : t,
+                        statusBackdropColor: D ? void 0 : (0, d.C$)(F),
+                        isMobile: w,
+                        className: E.my,
                     }),
                     (0, a.jsxs)("div", {
-                        className: S.zH,
+                        className: E.zH,
                         children: [
                             (0, a.jsx)(f.A, {
                                 user: s,
-                                className: S.Tc,
-                                usernameClass: S.QC,
-                                discriminatorClass: S.D2,
-                                showGuildTag: z,
+                                className: E.Tc,
+                                usernameClass: E.QC,
+                                discriminatorClass: E.D2,
+                                showGuildTag: !0,
                             }),
-                            (0, a.jsx)(m.A, { user: s, activities: D, applicationStream: T, voiceChannel: P }),
+                            (0, a.jsx)(m.A, { user: s, activities: U, applicationStream: T, voiceChannel: R }),
                         ],
                     }),
                 ],
