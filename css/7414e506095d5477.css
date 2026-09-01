@@ -1058,17 +1058,18 @@
     box-decoration-break: clone
 }
 
-.item__97796[data-status=completed] .text__97796 {
+.itemCompleted__97796 .text__97796 {
     background-size: 100% 2px
 }
 
-.item__97796[data-status=completed] .textCell__97796 {
+.itemCompleted__97796 .textCell__97796 {
     opacity: .5
 }
 
 .marker__97796 {
     background: transparent;
-    border: 1px solid var(--border-muted);
+    border: 1px solid transparent;
+    border-radius: var(--radius-xs);
     box-sizing: border-box;
     display: grid;
     flex-shrink: 0;
@@ -1077,44 +1078,37 @@
     width: var(--space-20)
 }
 
-.marker__97796,
-.marker__97796:before {
-    border-radius: var(--radius-xs)
+.marker__97796:not(.markerInProgress__97796) {
+    border-color: var(--border-muted)
 }
 
-.marker__97796:before {
-    background: var(--checkbox-icon-active);
-    content: "";
-    grid-area: 1/1;
-    height: var(--space-8);
-    opacity: 0;
-    transform: scale(.8);
-    width: var(--space-8)
+.markerCheck__97796,
+.markerSpinner__97796 {
+    grid-area: 1/1
 }
 
-.marker__97796[data-status=in_progress] {
-    background: color-mix(in oklab, var(--background-brand) 30%, transparent);
-    border-color: var(--checkbox-border-selected-default)
+.markerSpinner__97796 {
+    height: 20px;
+    transform: scale(.625);
+    width: 20px
 }
 
-.marker__97796[data-status=in_progress]:before {
-    opacity: 1;
-    transform: scale(1)
+.marker__97796 .markerSpinnerPath__97796 {
+    stroke: var(--checkbox-icon-active)
 }
 
-.marker__97796[data-status=completed] {
+.marker__97796.markerCompleted__97796 {
     background: var(--checkbox-background-selected-default);
     border-color: var(--checkbox-border-selected-default)
 }
 
 .markerCheck__97796 {
-    grid-area: 1/1;
     height: 10px;
     overflow: visible;
     width: 10px
 }
 
-.markerCheck__97796 path {
+.markerCheckPath__97796 {
     fill: none;
     stroke: var(--checkbox-icon-active);
     stroke-width: 1.5;
@@ -1124,7 +1118,7 @@
     stroke-dashoffset: 15
 }
 
-.marker__97796[data-status=completed] .markerCheck__97796 path {
+.markerCompleted__97796 .markerCheckPath__97796 {
     stroke-dashoffset: 0
 }
 
@@ -1192,23 +1186,19 @@
     transition: background-color .2s ease-out, border-color .2s ease-out
 }
 
-.full-motion .marker__97796:before {
-    transition: opacity .2s ease-out, transform .2s ease-out
-}
-
 .full-motion .text__97796 {
     transition: background-size .3s ease-out
 }
 
-.full-motion .marker__97796[data-status=completed] {
+.full-motion .markerCompleted__97796 {
     transition: background-color .15s cubic-bezier(.22, 1, .36, 1), border-color .15s cubic-bezier(.22, 1, .36, 1)
 }
 
-.full-motion .markerCheck__97796 path {
+.full-motion .markerCheckPath__97796 {
     transition: stroke-dashoffset .15s cubic-bezier(.22, 1, .36, 1)
 }
 
-.full-motion .marker__97796[data-status=completed] .markerCheck__97796 path {
+.full-motion .markerCompleted__97796 .markerCheckPath__97796 {
     transition: stroke-dashoffset .35s cubic-bezier(.22, 1, .36, 1)
 }
 
@@ -2667,4 +2657,4 @@
     padding: var(--space-12)
 }
 
-/*# sourceMappingURL=c3f54e688ea73a58.css.map*/
+/*# sourceMappingURL=7414e506095d5477.css.map*/
