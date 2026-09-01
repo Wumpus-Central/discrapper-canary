@@ -81,10 +81,7 @@ let m = [
         { id: "gpt-5.6-luna", label: "GPT-5.6 Luna", provider: "openai" },
     ],
     g = { main: m, subagent: m, thinking: ["low", "medium", "high", "xhigh", "max"] },
-    S = {
-        main: { model: "claude-opus-5", thinking: "high" },
-        subagent: { model: "claude-sonnet-5", thinking: "medium" },
-    },
+    S = { main: { model: "gpt-5.6-sol", thinking: "high" }, subagent: { model: "gpt-5.6-luna", thinking: "high" } },
     N = [
         { id: "workers-ai/@cf/moonshotai/kimi-k2.6", label: "Kimi K2.6", provider: "workers-ai" },
         { id: "workers-ai/@cf/zai-org/glm-5.2", label: "GLM 5.2", provider: "workers-ai" },

@@ -2657,4 +2657,21 @@
     padding: var(--space-12)
 }
 
-/*# sourceMappingURL=7414e506095d5477.css.map*/
+.callRow__3ff54 {
+    align-items: baseline;
+    display: grid;
+    gap: var(--space-8);
+    grid-template-columns: 56px minmax(0, 1fr) auto
+}
+
+.callTime__3ff54 {
+    font-variant-numeric: tabular-nums
+}
+
+.callModel__3ff54 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+/*# sourceMappingURL=dd16b943fa9b2aa1.css.map*/
