@@ -1,4 +1,4 @@
-i.d(e, { A: () => K });
+i.d(e, { A: () => Z });
 var s = i(477900),
     n = i(582128),
     a = i(189213),
@@ -11,8 +11,8 @@ var s = i(477900),
     u = i(73473),
     x = i(617986),
     f = i(323889),
-    h = i(731355),
-    g = i(366010),
+    g = i(731355),
+    h = i(366010),
     j = i(297264),
     v = i(825484),
     N = i(408278),
@@ -38,7 +38,7 @@ var s = i(477900),
 function q(t) {
     let { quest: e, sourceQuestContent: i, onLoadComplete: a, preCtaClick: l } = t,
         r = (0, E.Ay)(),
-        o = (0, g.M)(r) ? R.NJ.DARK : R.NJ.LIGHT,
+        o = (0, h.M)(r) ? R.NJ.DARK : R.NJ.LIGHT,
         d = (0, _.wW)(),
         u = (0, _.go)(),
         x = (0, I.E0)(e.config);
@@ -55,7 +55,7 @@ function q(t) {
             let t = e.config.ctaConfig?.subtitle;
             return null != t
                 ? t
-                : (0, I.pv)(e.config) !== h.Z.GAMEPLAY ||
+                : (0, I.pv)(e.config) !== g.Z.GAMEPLAY ||
                     e.config.features.includes(P.Li.NON_GAMING_PLAY_QUEST) ||
                     (0, I.ui)(e)
                   ? O.intl.string(O.t.y8Xf3k)
@@ -94,8 +94,8 @@ function q(t) {
                 children: (t) =>
                     (0, s.jsx)(W.A, {
                         quest: e,
-                        imageSize: { width: P.i$ * P.K, height: P.ls * P.K },
-                        containerClassName: S.WQ,
+                        imageSize: (0, W.k)(),
+                        variant: "modalPanel",
                         isInteracting: !0,
                         assetRef: t,
                     }),
@@ -198,15 +198,15 @@ function Y(t) {
         }),
     });
 }
-function K(t) {
+function Z(t) {
     let {
             quest: e,
             sourceQuestContent: i,
             transitionState: a,
             onClose: c,
             rewardContent: f,
-            isRewardContentLoading: h,
-            rewardContentHasError: g,
+            isRewardContentLoading: g,
+            rewardContentHasError: h,
             location: j,
         } = t,
         v = m.uF.REWARD_MODAL,
@@ -219,8 +219,8 @@ function K(t) {
             }
             (await (0, x.f7)(e.config.ctaConfig?.link)) && (c(), (0, o.closeAllModals)());
         }, [e.config.ctaConfig?.link, c, p]);
-    if (g) return (0, s.jsx)(Y, { onClose: c, transitionState: a });
-    let y = h || N;
+    if (h) return (0, s.jsx)(Y, { onClose: c, transitionState: a });
+    let y = g || N;
     return (0, s.jsx)(u.R, {
         questOrQuests: e,
         questContent: v,

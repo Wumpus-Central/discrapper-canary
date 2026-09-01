@@ -29,36 +29,26 @@
 
 .heroAssetWrapper_b5b7aa {
     align-items: center;
-    border-radius: 8px 8px 0 0;
     display: flex;
     height: 100%;
-    inset-inline-start: 0;
     justify-content: center;
-    overflow: hidden;
+    overflow: hidden
+}
+
+.heroAssetWrapper_b5b7aa,
+.overlay_b5b7aa {
+    border-radius: 8px 8px 0 0;
+    inset-inline-start: 0;
     position: absolute;
     top: 0;
     width: 100%;
     z-index: 1
 }
 
-.heroAssetCont_b5b7aa,
 .overlay_b5b7aa {
-    aspect-ratio: 1320/370
-}
-
-.overlay_b5b7aa {
+    aspect-ratio: 1320/370;
     background: linear-gradient(to top, var(--background-surface-high) 0, color-mix(in oklab, var(--background-surface-high) 95%, transparent) 20.31%, transparent 100%);
-    border-radius: 8px 8px 0 0;
-    inset-inline-start: 0;
-    max-height: 150px;
-    position: absolute;
-    top: 0;
-    z-index: 1
-}
-
-.heroImage_b5b7aa,
-.overlay_b5b7aa {
-    width: 100%
+    max-height: 150px
 }
 
 .topRow_b5b7aa {
@@ -224,4 +214,4 @@
     margin-top: 40px
 }
 
-/*# sourceMappingURL=529366.19e94579776564cd.css.map*/
+/*# sourceMappingURL=529366.ad90c9728204b6ec.css.map*/

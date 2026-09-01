@@ -6,17 +6,6 @@
     position: relative
 }
 
-.heroDisplay_d03433 {
-    -webkit-mask-image: linear-gradient(180deg, #000 0, transparent);
-    mask-image: linear-gradient(180deg, #000 0, transparent);
-    max-height: 190px;
-    -o-object-fit: cover;
-    object-fit: cover;
-    pointer-events: none;
-    position: relative;
-    width: 100%
-}
-
 .partnerLogotypeContainer_d03433 {
     align-items: center;
     display: flex;
@@ -84,17 +73,6 @@
     flex-direction: column;
     height: 100%;
     position: relative
-}
-
-.heroDisplayContainer__3a1f6.heroDisplayContainer__3a1f6 {
-    -webkit-mask-image: linear-gradient(180deg, #000 0, transparent);
-    mask-image: linear-gradient(180deg, #000 0, transparent);
-    max-height: 190px;
-    -o-object-fit: cover;
-    object-fit: cover;
-    pointer-events: none;
-    position: relative;
-    width: 100%
 }
 
 .partnerLogotypeContainer__3a1f6 {
@@ -431,4 +409,4 @@
     margin-top: auto
 }
 
-/*# sourceMappingURL=953840.4397d90392b1fae4.css.map*/
+/*# sourceMappingURL=953840.18d5c56f7ee644ab.css.map*/

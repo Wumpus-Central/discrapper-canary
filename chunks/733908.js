@@ -1,6 +1,5 @@
 e.exports = {
     kL: "container_d03433",
-    jF: "heroDisplay_d03433",
     Lt: "partnerLogotypeContainer_d03433",
     a$: "partnerLogotype_d03433",
     Th: "partnerContentContainer_d03433",

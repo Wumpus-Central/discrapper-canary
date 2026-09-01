@@ -17,8 +17,8 @@ var m = n(221877),
     f = n(885574),
     j = n(661531),
     g = n(834730),
-    N = n(123292),
-    v = n(331322),
+    v = n(123292),
+    N = n(331322),
     A = n(508770),
     O = n(866665),
     S = n(939249),
@@ -52,7 +52,7 @@ function X(t) {
         { ref: o, height: u = 0 } = (0, Q.Ay)([r]),
         d = e.userStatus?.completedAt != null,
         x = (0, c.Vn)(e),
-        { type: C, hints: v } = i.useMemo(
+        { type: C, hints: N } = i.useMemo(
             () =>
                 d || x
                     ? { type: 2, hints: [] }
@@ -81,12 +81,12 @@ function X(t) {
                         (0, s.jsx)(g.E, {
                             variant: "text-xs/medium",
                             color: l ? "text-muted" : "text-overlay-light",
-                            children: v.at(0),
+                            children: N.at(0),
                         }),
                     ],
                 }),
                 0 === C &&
-                    (0, s.jsx)(N.Q, {
+                    (0, s.jsx)(v.Q, {
                         text: V.intl.string(V.t["yKJi+/"]),
                         onClick: () => (0, M.i)({ quest: e, sourceQuestContent: a }),
                         variant: "always-white",
@@ -111,7 +111,7 @@ function $(t) {
         h = (0, D.IO)(e),
         E = (0, T.Ay)(),
         f = ((0, C.M)(E) ? G.NJ8.DARK : G.NJ8.LIGHT) === G.NJ8.DARK,
-        N = (0, c.LS)(e),
+        v = (0, c.LS)(e),
         Q = e.userStatus?.claimedAt != null,
         w = (0, c.S5)(e.config.expiresAt, { month: "numeric", day: "numeric" }),
         M = e.userStatus?.enrolledAt != null,
@@ -152,8 +152,7 @@ function $(t) {
                     isInteracting: n,
                     hideAssets: !r,
                     imageSize: { width: 1320, height: 370 },
-                    containerClassName: W.l1,
-                    imageClassName: W.c8,
+                    variant: "banner",
                 }),
             }),
             (0, s.jsx)("div", { className: W.Lw }),
@@ -167,7 +166,7 @@ function $(t) {
                                 className: W.mY,
                                 children: [
                                     (tt || e.preview) &&
-                                        (0, s.jsxs)(v.B, {
+                                        (0, s.jsxs)(N.B, {
                                             className: W.Bv,
                                             direction: "horizontal",
                                             fullWidth: !1,
@@ -283,7 +282,7 @@ function $(t) {
                                             }),
                                         ],
                                     }),
-                                    N || Q
+                                    v || Q
                                         ? null
                                         : (0, s.jsx)(g.E, {
                                               className: W.xK,
@@ -324,8 +323,8 @@ var Y = n(604121),
     tf = n(414499),
     tj = n(971649),
     tg = n(651892),
-    tN = n(901406),
-    tv = n(814793),
+    tv = n(901406),
+    tN = n(814793),
     tA = n(657113),
     tO = n(79545),
     tS = n(190107),
@@ -418,7 +417,7 @@ function tq(t) {
             return {
                 externalLinkCta: (0, tg.wr)(e),
                 handleOpenExternalLink: i.useCallback(() => {
-                    (0, tN.pu)(e, {
+                    (0, tv.pu)(e, {
                         content: n,
                         ctaContent: _.Cy.OPEN_GAME_LINK,
                         impressionId: l(),
@@ -452,10 +451,10 @@ function tL(t) {
                     return !0;
                 case tO.UA.CLAIMED:
                 case tO.UA.COMPLETED:
-                    return (0, D.vv)(e) || (0, tv.vA)(e);
+                    return (0, D.vv)(e) || (0, tN.vA)(e);
                 case tO.UA.INCOMPLETE:
                 case tO.UA.ENROLLED:
-                    return (0, D.vv)(e) || (0, tv.vA)(e) || (0, D.I6)(e);
+                    return (0, D.vv)(e) || (0, tN.vA)(e) || (0, D.I6)(e);
                 case tO.UA.UNENROLLED:
                     return !0;
                 default:
@@ -623,7 +622,7 @@ function tD(t) {
                   className: tp.kL,
                   children: (0, s.jsx)(tw, { quest: e, content: n, sourceQuestContent: a }),
               })
-            : (u === tO.UA.COMPLETED || u === tO.UA.CLAIMED) && (0, tv.vA)(e)
+            : (u === tO.UA.COMPLETED || u === tO.UA.CLAIMED) && (0, tN.vA)(e)
               ? (0, s.jsx)("div", {
                     className: tp.kL,
                     children: (0, s.jsx)(tT, {
@@ -664,10 +663,10 @@ function tU(t) {
         E = i.useRef(null),
         f = (0, tl.z)(),
         j = (0, c.SD)(e, f),
-        N = f === ta.MA.NITRO && j,
-        v = (0, r.bG)([tn.default], () => tn.default.getCurrentUser()),
-        A = (0, tr.mq)(e.config, v),
-        O = (0, tr.mH)(e.config, v),
+        v = f === ta.MA.NITRO && j,
+        N = (0, r.bG)([tn.default], () => tn.default.getCurrentUser()),
+        A = (0, tr.mq)(e.config, N),
+        O = (0, tr.mH)(e.config, N),
         S = e.userStatus?.enrolledAt != null,
         { ref: p, scrollHeight: I } = (0, Q.wR)(),
         y = null != I && I > 104,
@@ -677,7 +676,7 @@ function tU(t) {
         L = e.userStatus?.claimedAt != null,
         _ = (0, tr.ks)(e.config),
         M = e.userStatus?.orbQuantityClaimed ?? (0, tr._Z)(e.config),
-        P = (0, tr.wo)(e.config, v),
+        P = (0, tr.wo)(e.config, N),
         U = (0, D.I6)(e),
         { completedRatio: R, completedRatioDisplay: k } = (0, c.O9)(e, U),
         z = (0, ti.A9)(e, x, tS.rE.QUEST_HOME_DESKTOP, tt.GameProfileSources.QuestHome, E),
@@ -743,7 +742,7 @@ function tU(t) {
         className: tM.kL,
         ref: E,
         children: [
-            (0, s.jsx)(to.A, { visible: N, glow: !0 }),
+            (0, s.jsx)(to.A, { visible: v, glow: !0 }),
             (0, s.jsxs)(m.animated.div, {
                 style: { maxHeight: q.to([0, 1], [104, (I ?? 0) + 12]) },
                 className: tM.z,
@@ -871,8 +870,8 @@ function tF(t) {
         [f, j] = i.useState(!1),
         g = (0, c.aC)(e),
         {
-            handleHoverStart: N,
-            handleHoverEnd: v,
+            handleHoverStart: v,
+            handleHoverEnd: N,
             isEventWithinParent: A,
         } = (0, tk.B)({ quest: e, questContent: o, contentPosition: u, rowIndex: d, sourceQuestContent: h }),
         O = i.useContext(x.X),
@@ -888,16 +887,16 @@ function tF(t) {
         "aria-labelledby": E,
         className: a()(tz.k, n),
         onMouseEnter: () => {
-            j(!0), N();
+            j(!0), v();
         },
         onMouseLeave: () => {
-            j(!1), v();
+            j(!1), N();
         },
         onFocus: (t) => {
-            A(t) || (j(!0), N());
+            A(t) || (j(!0), v());
         },
         onBlur: (t) => {
-            A(t) || (j(!1), v());
+            A(t) || (j(!1), N());
         },
         children: [
             (0, s.jsx)($, {
