@@ -742,7 +742,7 @@ function eJ(e) {
                                                         n.e("948720"),
                                                         n.e("988003"),
                                                         n.e("710575"),
-                                                        n.e("317087"),
+                                                        n.e("28927"),
                                                         n.e("881379"),
                                                         n.e("154630"),
                                                         n.e("521574"),
@@ -944,8 +944,8 @@ var e8 = n(34188),
     e7 = n(700623),
     e4 = n(177953),
     e5 = n(825484),
-    e3 = n(512950),
-    e9 = n(900797),
+    e9 = n(512950),
+    e3 = n(900797),
     e6 = n(847374),
     te = n(10716),
     tt = n(702841),
@@ -1328,9 +1328,9 @@ function tO(e) {
                   ],
               })
             : s && !i && (0, I.Ag)(n)
-              ? (0, r.jsx)(e3.p, {
+              ? (0, r.jsx)(e9.p, {
                     className: tv.ai,
-                    messageType: e3.Y.WARNING,
+                    messageType: e9.Y.WARNING,
                     children: et.intl.format(et.t["s/3hjE"], {}),
                 })
               : null
@@ -1393,7 +1393,7 @@ function tM(e) {
                               children: h ? et.intl.string(et.t.u4YJ8g) : et.intl.string(et.t["N/tajD"]),
                           }),
                           h
-                              ? (0, r.jsx)(e9.t, { size: "sm", color: e_.A.colors.TEXT_BRAND })
+                              ? (0, r.jsx)(e3.t, { size: "sm", color: e_.A.colors.TEXT_BRAND })
                               : (0, r.jsx)(e6.a, { size: "sm", color: e_.A.colors.TEXT_BRAND }),
                       ],
                   })
@@ -1506,7 +1506,7 @@ var tQ = n(111042),
     t7 = n(935208),
     t4 = n(630248),
     t5 = n(355097);
-function t3(e, t) {
+function t9(e, t) {
     o.useEffect(() => {
         t8.bW.loadIfUncached(t5.oD.FRECENCY_AND_FAVORITES_SETTINGS);
     }, []);
@@ -1550,7 +1550,7 @@ function t3(e, t) {
         return [...s.filter((e) => e.id === a), ...s.filter((e) => e.id !== a)];
     }, [s, l, n, t]);
 }
-var t9 = n(457408),
+var t3 = n(457408),
     t6 = n(712440),
     ne = n(733110),
     nt = n(228366);
@@ -2222,12 +2222,12 @@ function n5(e, t) {
     let n = t4.A.getScoreWithoutLoadingLatest(e.id);
     return t4.A.getScoreWithoutLoadingLatest(t.id) - n;
 }
-function n3(e, t) {
+function n9(e, t) {
     let n = (0, I.lq)(e),
         l = (0, I.lq)(t);
     return (0, g.RF)(n, l);
 }
-function n9(e, t) {
+function n3(e, t) {
     return (0, g.RF)(e.displayName, t.displayName);
 }
 n(827669);
@@ -2561,7 +2561,7 @@ function lm(e) {
                                 let n = $.Ay.getScoreWithoutLoadingLatest(u, e);
                                 return $.Ay.getScoreWithoutLoadingLatest(u, t) - n;
                             }),
-                            n9,
+                            n3,
                         ],
                     });
                 }, [s, c, l, t, n]),
@@ -2650,7 +2650,7 @@ function lm(e) {
                                 return t?.includes(c.toLocaleLowerCase()) ?? !1;
                             }),
                         ],
-                        sortComparers: [n5, n3],
+                        sortComparers: [n5, n9],
                     });
                 }, [a, r, i, t, n, m, p]),
                 x = A.length > 0,
@@ -3154,11 +3154,11 @@ function lv(e) {
                             let e = [];
                             return c && e.push(ns.gq), e;
                         }, [c]),
-                        u = t3(r, a),
+                        u = t9(r, a),
                         m = (0, A.bG)([eF.default], () => eF.default.getCurrentUser()?.nsfwAllowed);
                     return o.useMemo(() => {
                         function e(e) {
-                            return !(!1 === m && (0, t9.A)(e.id));
+                            return !(!1 === m && (0, t3.A)(e.id));
                         }
                         return l
                             ? u
@@ -3333,7 +3333,7 @@ function lS(e) {
                         }, new Set()),
                     [s],
                 ),
-                c = t3(
+                c = t9(
                     o.useMemo(
                         () =>
                             Object.values(l.result?.sections ?? {})
@@ -3355,7 +3355,7 @@ function lS(e) {
                                     return t;
                                 }),
                             )
-                            .filter((e) => !(!1 === i && (0, t9.A)(e.id)))
+                            .filter((e) => !(!1 === i && (0, t3.A)(e.id)))
                             .map((e) => ({ application: e })),
                     [i, c],
                 ),

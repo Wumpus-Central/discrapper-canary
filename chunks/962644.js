@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { LI: () => g, Ay: () => S, BE: () => f, Ak: () => p, hS: () => m, b8: () => T });
+n.d(t, { LI: () => m, Ay: () => g, BE: () => f, Ak: () => p, b8: () => T });
 var i,
     r = (((i = {})[(i.DESKTOP = 0)] = "DESKTOP"), (i[(i.MOBILE = 1)] = "MOBILE"), i),
     a = n(636537),
@@ -45,22 +45,10 @@ async function T() {
         l.h.dispatch({ type: "ACTIVE_PROMOTIONS_FETCH_FAIL" });
     }
 }
-async function m() {
-    if (!A.A.isFetchingActiveBogoPromotion)
-        try {
-            l.h.dispatch({ type: "ACTIVE_BOGO_PROMOTION_FETCH" });
-            let e = (
-                await a.Bo.get({ url: I.Rsh.BOGO_PROMOTIONS, query: { locale: d.default.locale }, rejectWithError: !0 })
-            ).body;
-            l.h.dispatch({ type: "ACTIVE_BOGO_PROMOTION_FETCH_SUCCESS", activePromotion: u.A.createFromServer(e) });
-        } catch (e) {
-            l.h.dispatch({ type: "ACTIVE_BOGO_PROMOTION_FETCH_FAIL" });
-        }
-}
-function g(e) {
+function m(e) {
     l.h.dispatch({ type: "CLAIMED_OUTBOUND_PROMOTION_CODE_ADD", claimedOutboundPromotionCode: e });
 }
-let S = {
+let g = {
     fetchActivePromotions: T,
     fetchClaimedOutboundPromotionCodes: async function () {
         try {
@@ -77,7 +65,7 @@ let S = {
             l.h.dispatch({ type: "CLAIMED_OUTBOUND_PROMOTION_CODES_FETCH_FAIL" });
         }
     },
-    addClaimedOutboundPromotionCode: g,
+    addClaimedOutboundPromotionCode: m,
     dismissOutboundPromotionNotice: function () {
         l.h.dispatch({ type: "OUTBOUND_PROMOTION_NOTICE_DISMISS" });
         let e = A.A.lastDismissedOutboundPromotionStartDate;
@@ -93,5 +81,20 @@ let S = {
     markOutboundPromotionsSeen() {
         l.h.dispatch({ type: "OUTBOUND_PROMOTIONS_SEEN" });
     },
-    fetchActiveBogoPromotion: m,
+    fetchActiveBogoPromotion: async function () {
+        if (!A.A.isFetchingActiveBogoPromotion)
+            try {
+                l.h.dispatch({ type: "ACTIVE_BOGO_PROMOTION_FETCH" });
+                let e = (
+                    await a.Bo.get({
+                        url: I.Rsh.BOGO_PROMOTIONS,
+                        query: { locale: d.default.locale },
+                        rejectWithError: !0,
+                    })
+                ).body;
+                l.h.dispatch({ type: "ACTIVE_BOGO_PROMOTION_FETCH_SUCCESS", activePromotion: u.A.createFromServer(e) });
+            } catch (e) {
+                l.h.dispatch({ type: "ACTIVE_BOGO_PROMOTION_FETCH_FAIL" });
+            }
+    },
 };

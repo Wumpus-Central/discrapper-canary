@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Hp: () => o, cx: () => c, dw: () => d });
+n.d(t, { Hp: () => o, dw: () => d });
 var i = n(600975),
     r = n(945810),
     a = n(477421);
@@ -25,10 +25,5 @@ function o() {
 function d() {
     let { paymentsBlocked: e } = s.useExperiment({ location: "dc120b_3" }, { autoTrackExposure: !1 }),
         { enabled: t } = l.useConfig({ location: "dc120b_3" });
-    return e || t;
-}
-function c() {
-    let { paymentsBlocked: e } = s.getCurrentConfig({ location: "1ee357_1" }, { autoTrackExposure: !1 }),
-        { enabled: t } = l.getConfig({ location: "1ee357_1" });
     return e || t;
 }
