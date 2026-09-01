@@ -66,7 +66,7 @@ function X(e) {
             (0, L.L3)(
                 e,
                 async () => {
-                    let { default: e } = await n.e("787847").then(n.bind(n, 842810));
+                    let { default: e } = await Promise.all([n.e("918024"), n.e("787847")]).then(n.bind(n, 842810));
                     return (n) => (0, a.jsx)(e, { ...n, badge: t, onClosePopout: s });
                 },
                 { onClose: () => d(!1) },

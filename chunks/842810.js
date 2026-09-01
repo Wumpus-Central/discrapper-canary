@@ -1,58 +1,89 @@
-n.d(i, { default: () => _ });
-var a = n(477900),
-    d = n(582128),
-    t = n(980707),
+n.d(i, { default: () => m });
+var t = n(477900),
+    a = n(582128),
+    d = n(980707),
     o = n(477782),
-    r = n(885574),
-    s = n(952270),
-    l = n(442433),
-    c = n(643056),
-    g = n(988341),
-    u = n(234e3),
-    b = n(327791),
-    h = n(470739),
+    s = n(885574),
+    l = n(548411),
+    r = n(554830),
+    c = n(952270),
+    g = n(442433),
+    b = n(643056),
+    u = n(988341),
+    h = n(234e3),
+    f = n(327791),
+    x = n(470739),
     p = n(577931),
-    C = n(375708);
-function _(e) {
-    let { badge: i, onClosePopout: n, onSelect: _ } = e,
-        { tenureBadgeHideable: f } = c.A.useConfig({ location: "BadgeCustomizationContextMenu" }),
-        I = d.useMemo(() => (0, g.jg)({ tenureBadgeHideable: f }), [f]),
-        { reorderableBadges: x, hiddenBadges: m } = (0, p.A)(),
-        j = (0, b.A)(),
-        B = I.has(i.badge_id);
-    return (0, a.jsx)(t.W, {
+    _ = n(375708);
+function m(e) {
+    let { badge: i, onClosePopout: n, onSelect: m } = e,
+        { reorderableBadges: C, hiddenBadges: j } = (0, p.A)(),
+        { tenureBadgeHideable: B } = b.A.useConfig({ location: "BadgeCustomizationContextMenu" }),
+        I = a.useMemo(() => (0, u.jg)({ tenureBadgeHideable: B }), [B]),
+        v = (0, f.A)(),
+        k = I.has(i.badge_id),
+        w = a.useMemo(
+            () =>
+                C.map((e) => {
+                    let { badge_id: i } = e;
+                    return i;
+                }),
+            [C],
+        ),
+        D = w.indexOf(i.badge_id),
+        L = v && -1 !== D,
+        A = 0 === D,
+        M = D === w.length - 1;
+    return (0, t.jsx)(d.W, {
         navId: "badge-customization-context",
-        onClose: l.Z_,
-        "aria-label": C.intl.string(C.t["2ia+9V"]),
-        onSelect: _,
-        children: (0, a.jsxs)(o.rX, {
+        onClose: g.Z_,
+        "aria-label": _.intl.string(_.t["2ia+9V"]),
+        onSelect: m,
+        children: (0, t.jsxs)(o.rX, {
             children: [
-                (0, a.jsx)(o.Dr, {
+                (0, t.jsx)(o.Dr, {
                     id: "view-badge-details",
-                    iconLeft: r.CircleInformationIcon,
-                    label: C.intl.string(C.t["2ia+9V"]),
+                    iconLeft: s.CircleInformationIcon,
+                    label: _.intl.string(_.t["2ia+9V"]),
                     action: function () {
-                        n(), (0, h._)({ initialBadgeId: i.badge_id, viewingCurrentUserBadges: !0 });
+                        n(), (0, x._)({ initialBadgeId: i.badge_id, viewingCurrentUserBadges: !0 });
                     },
                 }),
-                !B &&
-                    (0, a.jsx)(o.Dr, {
-                        id: "hide-badge",
-                        iconLeft: s.EyeSlashIcon,
-                        label: C.intl.string(C.t.xSWJPo),
+                L &&
+                    !A &&
+                    (0, t.jsx)(o.Dr, {
+                        id: "move-badge-to-front",
+                        iconLeft: l.Z,
+                        label: _.intl.string(_.t.BpXa17),
                         action: function () {
-                            (0, u.RC)({
+                            (0, h.hB)((0, h.i1)(w, D, 0));
+                        },
+                    }),
+                L &&
+                    !M &&
+                    (0, t.jsx)(o.Dr, {
+                        id: "move-badge-to-back",
+                        iconLeft: r.K,
+                        label: _.intl.string(_.t["4/7x+3"]),
+                        action: function () {
+                            (0, h.hB)((0, h.i1)(w, D, w.length - 1));
+                        },
+                    }),
+                !k &&
+                    (0, t.jsx)(o.Dr, {
+                        id: "hide-badge",
+                        iconLeft: c.EyeSlashIcon,
+                        label: _.intl.string(_.t.xSWJPo),
+                        action: function () {
+                            (0, h.RC)({
                                 badgeId: i.badge_id,
                                 hidden: !0,
-                                reorderableBadgeIds: x.map((e) => {
+                                reorderableBadgeIds: w,
+                                hiddenBadgeIds: j.map((e) => {
                                     let { badge_id: i } = e;
                                     return i;
                                 }),
-                                hiddenBadgeIds: m.map((e) => {
-                                    let { badge_id: i } = e;
-                                    return i;
-                                }),
-                                canReorder: j,
+                                canReorder: v,
                             });
                         },
                     }),

@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Jp: () => u, RC: () => c, Rr: () => A, S0: () => E, gz: () => _ }), n(321073);
+n.d(t, { Jp: () => _, RC: () => u, Rr: () => h, S0: () => A, gz: () => E, hB: () => c, i1: () => f }), n(321073);
 var i = n(70283),
     r = n(228366),
     a = n(287809),
@@ -22,38 +22,36 @@ function d() {
     return { displayOrder: t, hiddenBadges: n };
 }
 function c(e) {
-    var t, n, i, a;
-    let s,
-        l,
-        o,
-        c,
-        { badgeId: u, hidden: _, reorderableBadgeIds: E, hiddenBadgeIds: A, canReorder: h } = e;
-    h &&
-        ((t = _ ? E.filter((e) => e !== u) : [...E, u]),
-        (l = null != (s = d()) && ((n = s.displayOrder), t.length === n.length && t.every((e, t) => e === n[t]))),
+    var t;
+    let n = d(),
+        i = null != n && ((t = n.displayOrder), e.length === t.length && e.every((e, n) => e === t[n]));
+    r.h.dispatch({ type: "USER_PROFILE_SETTINGS_SET_PENDING_CHANGES", pendingBadgeDisplayOrder: i ? void 0 : [...e] });
+}
+function u(e) {
+    var t, n;
+    let i,
+        a,
+        { badgeId: s, hidden: l, reorderableBadgeIds: o, hiddenBadgeIds: u, canReorder: _ } = e;
+    _ && c(l ? o.filter((e) => e !== s) : [...o, s]),
+        (t = l ? [...u, s] : u.filter((e) => e !== s)),
+        (a = null != (i = d()) && ((n = i.hiddenBadges), t.length === n.size && t.every((e) => n.has(e)))),
         r.h.dispatch({
             type: "USER_PROFILE_SETTINGS_SET_PENDING_CHANGES",
-            pendingBadgeDisplayOrder: l ? void 0 : [...t],
-        })),
-        (i = _ ? [...A, u] : A.filter((e) => e !== u)),
-        (c = null != (o = d()) && ((a = o.hiddenBadges), i.length === a.size && i.every((e) => a.has(e)))),
-        r.h.dispatch({
-            type: "USER_PROFILE_SETTINGS_SET_PENDING_CHANGES",
-            pendingBadgeHiddenBadges: c ? void 0 : [...i],
+            pendingBadgeHiddenBadges: a ? void 0 : [...t],
         });
 }
-function u() {
+function _() {
     r.h.dispatch({
         type: "USER_PROFILE_SETTINGS_SET_PENDING_CHANGES",
         pendingBadgeDisplayOrder: void 0,
         pendingBadgeHiddenBadges: void 0,
     });
 }
-function _(e) {
+function E(e) {
     let { pendingBadgeDisplayOrder: t, pendingBadgeHiddenBadges: n } = e;
     return void 0 !== t || void 0 !== n;
 }
-function E(e, t) {
+function A(e, t) {
     let { pendingBadgeDisplayOrder: n, pendingBadgeHiddenBadges: i } = t,
         r = null != i ? new Set(i) : null,
         a = null == r ? [...e] : e.map((e) => ((0, o.A)(e.badge_id) ? e : { ...e, hidden: r.has(e.badge_id) }));
@@ -68,13 +66,13 @@ function E(e, t) {
     }
     return [...s, ...d, ...l.values()];
 }
-function A(e, t, n) {
+function h(e, t, n) {
     let { pendingBadgeDisplayOrder: r, pendingBadgeHiddenBadges: a } = n;
-    if (null == a) return h(e, n);
+    if (null == a) return I(e, n);
     let s = new Set(e.map((e) => (0, l.w0)(e.id))),
         o = new Set(a),
         d = new Set(r ?? []);
-    return h(
+    return I(
         [
             ...e,
             ...t
@@ -94,7 +92,7 @@ function A(e, t, n) {
         n,
     );
 }
-function h(e, t) {
+function I(e, t) {
     let { pendingBadgeDisplayOrder: n, pendingBadgeHiddenBadges: i } = t;
     if (null == n && null == i) return [...e];
     let r = null != i ? new Set(i) : null,
@@ -118,4 +116,10 @@ function h(e, t) {
         null != t && (c.push(t), d.delete(e));
     }
     return [...s, ...c, ...d.values()];
+}
+function f(e, t, n) {
+    if (t === n || t < 0 || t >= e.length) return e;
+    let i = [...e],
+        [r] = i.splice(t, 1);
+    return i.splice(Math.min(Math.max(n, 0), i.length), 0, r), i;
 }
