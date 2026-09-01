@@ -1,0 +1,159 @@
+.placeholder_b8a14e {
+    align-items: center;
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    gap: var(--space-8);
+    justify-content: center;
+    padding: var(--space-16);
+    text-align: center
+}
+
+.inlineError_b8a14e,
+.truncated_b8a14e {
+    padding: var(--space-4) var(--space-8)
+}
+
+.inlineError_b8a14e {
+    align-items: center;
+    border-bottom: 1px solid var(--border-feedback-critical);
+    display: flex;
+    flex: 0 0 auto;
+    gap: var(--space-8);
+    justify-content: space-between
+}
+
+.logsControls_fe4825 {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-8)
+}
+
+.logsSearch_fe4825 {
+    flex: 1 1 160px;
+    min-width: 120px
+}
+
+.logsTab_fe4825 {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: var(--space-8);
+    min-height: 0;
+    padding: var(--space-12)
+}
+
+.logsPanel_fe4825 {
+    background: var(--background-base-low);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-sm);
+    flex: 1;
+    font-family: var(--font-code);
+    line-height: 1.45;
+    min-height: 0;
+    padding: var(--space-8)
+}
+
+.logRow_fe4825 {
+    align-items: baseline;
+    border-top: 1px solid var(--border-subtle);
+    display: grid;
+    gap: var(--space-8);
+    grid-template-columns: 64px 48px minmax(0, 1fr);
+    padding: calc(var(--space-4)/2) 0;
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    user-select: text
+}
+
+.logRow_fe4825:first-child {
+    border-top: 0
+}
+
+.logTime_fe4825 {
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap
+}
+
+.logLevel_fe4825 {
+    text-transform: uppercase;
+    white-space: nowrap
+}
+
+.logBody_fe4825 {
+    min-width: 0;
+    overflow-wrap: anywhere;
+    white-space: pre-wrap
+}
+
+.logJsonToggle_fe4825 {
+    align-items: center;
+    background: var(--background-base-lowest);
+    border-radius: var(--radius-xs);
+    color: var(--text-muted);
+    display: inline-flex;
+    gap: calc(var(--space-4)/2);
+    padding: 0 var(--space-4);
+    vertical-align: middle
+}
+
+.logJsonToggle_fe4825:focus-visible,
+.logJsonToggle_fe4825:hover {
+    background: var(--interactive-background-hover);
+    color: var(--text-default)
+}
+
+.logJson_fe4825 {
+    margin-top: var(--space-4);
+    overflow-wrap: anywhere;
+    padding: var(--space-4) var(--space-8);
+    white-space: pre-wrap
+}
+
+.logBadge_fe4825,
+.logJson_fe4825 {
+    background: var(--background-base-lowest);
+    border-radius: var(--radius-sm)
+}
+
+.logBadge_fe4825 {
+    margin-inline-end: var(--space-4);
+    padding: 0 var(--space-4);
+    text-transform: uppercase
+}
+
+.panel_ec5c8a {
+    flex: 1;
+    flex-direction: column
+}
+
+.body_ec5c8a,
+.panel_ec5c8a {
+    display: flex;
+    min-height: 0
+}
+
+.body_ec5c8a {
+    flex: 1 1 auto;
+    flex-direction: column;
+    position: relative
+}
+
+.body_ec5c8a:before {
+    box-shadow: var(--elevation-low);
+    content: "";
+    display: block;
+    height: 1px;
+    position: absolute;
+    top: -1px;
+    inset-inline: 0;
+    pointer-events: none;
+    z-index: 1
+}
+
+.tabs_ec5c8a {
+    padding: var(--space-12) var(--space-12) 0
+}
+
+/*# sourceMappingURL=05e5929b52ac86c9.css.map*/
