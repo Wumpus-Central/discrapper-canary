@@ -887,18 +887,36 @@
 
 .commandRow_af6837 {
     align-items: baseline;
+    display: flex;
+    flex-wrap: wrap;
     gap: var(--space-8);
     max-width: 100%;
     min-width: 0
 }
 
-.chips_af6837,
-.commandRow_af6837 {
-    display: flex;
-    flex-wrap: wrap
+.design_af6837 {
+    aspect-ratio: 3/2;
+    background: var(--background-base-lower);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-sm);
+    overflow: hidden
+}
+
+.design_af6837,
+.designImage_af6837 {
+    display: block;
+    width: 100%
+}
+
+.designImage_af6837 {
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover
 }
 
 .chips_af6837 {
+    display: flex;
+    flex-wrap: wrap;
     gap: var(--space-4)
 }
 
@@ -2630,4 +2648,4 @@
     padding: var(--space-12)
 }
 
-/*# sourceMappingURL=85aa420b7fadb6f2.css.map*/
+/*# sourceMappingURL=2314925c9e0b59fa.css.map*/
