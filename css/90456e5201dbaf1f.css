@@ -65,6 +65,11 @@
     transform: scale(calc(1 - 4/var(--custom-tile-width)))
 }
 
+.enable-forced-colors .tileButton__4e9aa:after {
+    border: 1px solid ButtonText;
+    box-shadow: none
+}
+
 .disabled__4e9aa {
     opacity: .5;
     pointer-events: none
@@ -150,4 +155,20 @@
     transition: opacity .1s ease-in
 }
 
-/*# sourceMappingURL=b48a9f32ec42b35a.css.map*/
+.overlayIconPrimaryColor__4e9aa {
+    fill: var(--icon-strong)
+}
+
+.enable-forced-colors .overlayIconPrimaryColor__4e9aa {
+    fill: ButtonText
+}
+
+.overlayIconSecondaryColor__4e9aa {
+    fill: var(--icon-invert)
+}
+
+.enable-forced-colors .overlayIconSecondaryColor__4e9aa {
+    fill: ButtonFace
+}
+
+/*# sourceMappingURL=90456e5201dbaf1f.css.map*/

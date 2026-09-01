@@ -875,7 +875,7 @@ function nI(e) {
     let { displayName: l, displayNameStyles: n, shouldAnimate: i = !1 } = e;
     return (0, t.jsx)("div", {
         "aria-hidden": !0,
-        className: nA.M,
+        className: a()(nA.MC, { [nA.Xn]: null != n }),
         children:
             null != n
                 ? (0, t.jsx)(eE.E, {
@@ -889,7 +889,7 @@ function nI(e) {
                           loop: !0,
                       }),
                   })
-                : (0, t.jsx)(eE.E, { variant: nb, className: nA.W, color: "text-muted", children: l }),
+                : (0, t.jsx)(eE.E, { variant: nb, className: nA.kr, children: l }),
     });
 }
 function ny(e) {
@@ -946,21 +946,21 @@ function nC(e) {
 var nN = n(450232),
     nE = n(89851);
 function nP(e) {
-    let { heading: l, children: n, disabled: i = !1, showNitroIcon: r = !1, badge: a } = e;
+    let { heading: l, children: n, disabled: i = !1, showNitroIcon: r = !1, badge: s } = e;
     return (0, t.jsxs)("div", {
         className: nE.Os,
         children: [
             (0, t.jsxs)("div", {
-                className: nE.Pf,
+                className: a()(nE.Pf, { [nE.r9]: i }),
                 children: [
                     (0, t.jsx)(lW.D, {
                         className: nE.DV,
                         variant: "text-sm/medium",
-                        color: i ? "text-muted" : "text-strong",
+                        color: "currentColor",
                         children: l,
                     }),
-                    r && (0, t.jsx)(nN.A, { className: nE.IX, size: "xs", color: "strong", disabled: i }),
-                    null != a && (0, t.jsx)("span", { className: nE.ot, children: a }),
+                    r && (0, t.jsx)(nN.A, { className: nE.IX, size: "xs", color: "inherit", disabled: i }),
+                    null != s && (0, t.jsx)("span", { className: nE.ot, children: s }),
                 ],
             }),
             n,

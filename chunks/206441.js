@@ -16,6 +16,7 @@ class u extends a.A {
     price;
     total;
     addOnPlans;
+    discount;
     static createFromServer(e) {
         return new u({
             id: e.id,
@@ -23,6 +24,7 @@ class u extends a.A {
             price: e.price,
             total: e.total,
             addOnPlans: e.add_on_plans ?? [],
+            discount: e.discount ?? null,
         });
     }
     constructor(e) {
@@ -31,7 +33,8 @@ class u extends a.A {
             (this.quantity = e.quantity),
             (this.price = e.price),
             (this.total = e.total),
-            (this.addOnPlans = e.addOnPlans ?? []);
+            (this.addOnPlans = e.addOnPlans ?? []),
+            (this.discount = e.discount ?? null);
     }
     getPlanQuantities() {
         let e = new Map([[this.id, this.quantity]]);

@@ -6,6 +6,10 @@
     position: absolute
 }
 
+.enable-forced-colors .emptyPreview_e3aa7b:after {
+    border-color: GrayText
+}
+
 .fadeInAvatarImg_e3aa7b {
     animation: fadeIn_e3aa7b .5s
 }
@@ -200,4 +204,4 @@
     border-color: GrayText
 }
 
-/*# sourceMappingURL=973ea9dbff90ef57.css.map*/
+/*# sourceMappingURL=3ee5233a8da681c2.css.map*/

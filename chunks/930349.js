@@ -1,4 +1,4 @@
-l.d(n, { A: () => A, Y: () => b });
+l.d(n, { A: () => b, Y: () => m });
 var t = l(477900),
     a = l(582128),
     r = l(503698),
@@ -8,28 +8,27 @@ var t = l(477900),
     o = l(417270),
     d = l(939249),
     c = l(245604),
-    g = l(661531),
-    v = l(866665),
-    f = l(713517),
-    h = l(375708),
-    p = l(779447);
-function m() {
-    return (0, t.jsx)("div", { className: p.overlay });
+    g = l(866665),
+    v = l(713517),
+    f = l(375708),
+    h = l(779447);
+function p() {
+    return (0, t.jsx)("div", { className: h.overlay });
 }
-let b = a.forwardRef(function (e, n) {
-    let { variant: l, disabled: a = !1, isInteracting: r = !1, children: d, deleteButton: c, hasError: g = !1 } = e,
-        f = c?.type === "remove" ? h.intl.string(h.t.N86XcP) : h.intl.string(h.t.wgIPss);
+let m = a.forwardRef(function (e, n) {
+    let { variant: l, disabled: a = !1, isInteracting: r = !1, children: d, deleteButton: c, hasError: v = !1 } = e,
+        p = c?.type === "remove" ? f.intl.string(f.t.N86XcP) : f.intl.string(f.t.wgIPss);
     return (0, t.jsxs)("div", {
         ref: n,
-        className: i()(p.tile, p[l], { [p.disabled]: a, [p.isInteracting]: r, [p.hasError]: g }),
+        className: i()(h.tile, h[l], { [h.disabled]: a, [h.isInteracting]: r, [h.hasError]: v }),
         children: [
             d,
             !a &&
                 null != c &&
                 (0, t.jsx)("div", {
-                    className: i()(p.deleteButtonWrapper, { [p.resetButton]: "reset" === c.type }),
-                    children: (0, t.jsx)(v.m, {
-                        text: f,
+                    className: i()(h.deleteButtonWrapper, { [h.resetButton]: "reset" === c.type }),
+                    children: (0, t.jsx)(g.m, {
+                        text: p,
                         ariaHidden: !0,
                         children: (0, t.jsx)(s.K, {
                             "aria-label": c.accessibleLabel,
@@ -43,7 +42,7 @@ let b = a.forwardRef(function (e, n) {
         ],
     });
 });
-function A(e) {
+function b(e) {
     let {
             variant: n,
             onClick: l,
@@ -51,59 +50,59 @@ function A(e) {
             accessibleValue: s,
             renderPreview: u,
             showOverlayOnHover: o = !1,
-            disabled: v = !1,
-            buttonRef: A,
-            affordance: I,
-            errorMessageId: C,
-            ...x
+            disabled: g = !1,
+            buttonRef: b,
+            affordance: A,
+            errorMessageId: I,
+            ...C
         } = e,
-        k = "add" === I,
+        x = "add" === A,
         y = a.useRef(null),
-        { isHoveringOrFocusing: N } = (0, f.A)(y),
-        j = N && !v,
-        E = a.useRef(null),
-        P = A ?? E,
-        w =
-            null != I && "add" !== I
+        { isHoveringOrFocusing: k } = (0, v.A)(y),
+        N = k && !g,
+        j = a.useRef(null),
+        E = b ?? j,
+        P =
+            null != A && "add" !== A
                 ? {
-                      ...I,
+                      ...A,
                       onClick: () => {
-                          I.onClick(), P.current?.focus();
+                          A.onClick(), E.current?.focus();
                       },
                   }
                 : void 0;
-    return (0, t.jsx)(b, {
+    return (0, t.jsx)(m, {
         ref: y,
         variant: n,
-        disabled: v,
-        isInteracting: j,
-        deleteButton: w,
-        hasError: null != C,
+        disabled: g,
+        isInteracting: N,
+        deleteButton: P,
+        hasError: null != I,
         children: (0, t.jsxs)(d.D, {
-            innerRef: P,
-            className: p.tileButton,
-            "aria-label": h.intl.formatToPlainString(h.t["E+mIJ+"], { label: r, value: s }),
-            onClick: v ? void 0 : l,
-            "aria-disabled": v,
-            "aria-invalid": null != C || void 0,
-            "aria-describedby": C,
-            "aria-errormessage": C,
-            tabIndex: v ? -1 : 0,
-            ...x,
+            innerRef: E,
+            className: h.tileButton,
+            "aria-label": f.intl.formatToPlainString(f.t["E+mIJ+"], { label: r, value: s }),
+            onClick: g ? void 0 : l,
+            "aria-disabled": g,
+            "aria-invalid": null != I || void 0,
+            "aria-describedby": I,
+            "aria-errormessage": I,
+            tabIndex: g ? -1 : 0,
+            ...C,
             children: [
-                (0, t.jsx)("div", { className: p.content, children: u(j) }),
-                o && !v && (0, t.jsx)(m, {}),
-                k &&
+                (0, t.jsx)("div", { className: h.content, children: u(N) }),
+                o && !g && (0, t.jsx)(p, {}),
+                x &&
                     (0, t.jsx)("div", {
-                        className: i()(p.iconContainer, {
-                            [p.iconAlignCenter]: "square" === n || "full-height-bar" === n,
-                            [p.iconAlignRight]: "bar" === n,
+                        className: i()(h.iconContainer, {
+                            [h.iconAlignCenter]: "square" === n || "full-height-bar" === n,
+                            [h.iconAlignRight]: "bar" === n,
                         }),
                         children: (0, t.jsx)(c.U, {
                             size: "md",
-                            color: g.A.colors.ICON_STRONG,
-                            secondaryColor: g.A.colors.ICON_INVERT,
-                            className: p.overlayIcon,
+                            className: h.overlayIcon,
+                            colorClass: h.overlayIconPrimaryColor,
+                            secondaryColorClass: h.overlayIconSecondaryColor,
                         }),
                     }),
             ],

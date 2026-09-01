@@ -79,6 +79,10 @@
     position: absolute
 }
 
+.enable-forced-colors .emptyPreview_e8605d:after {
+    border-color: GrayText
+}
+
 .gradient_f11c9b {
     align-items: center;
     border-radius: inherit;
@@ -89,6 +93,12 @@
     justify-content: space-between;
     overflow: hidden;
     position: absolute
+}
+
+.enable-forced-colors .gradient_f11c9b {
+    border: 1px solid ButtonText;
+    box-shadow: none;
+    forced-color-adjust: none
 }
 
 .swatchButton_f11c9b {
@@ -132,6 +142,13 @@
 
 .swatchInner_f11c9b.isLowContrast_f11c9b {
     box-shadow: inset 0 0 0 1px var(--neutral-33), 0 0 0 1px var(--neutral-33), var(--shadow-high)
+}
+
+.enable-forced-colors .swatchInner_f11c9b {
+    border-color: ButtonText;
+    box-shadow: none;
+    forced-color-adjust: none;
+    outline: 2px solid ButtonFace
 }
 
 .full-motion .swatchButton_f11c9b .swatchInner_f11c9b {
@@ -257,4 +274,4 @@
     padding: var(--space-16)
 }
 
-/*# sourceMappingURL=727d0e578ab415a3.css.map*/
+/*# sourceMappingURL=decaccbca4a9c705.css.map*/

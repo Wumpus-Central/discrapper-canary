@@ -1,4 +1,4 @@
-t.r(
+r.r(
     (a.exports = {
         tile: "tile__4e9aa",
         square: "square__4e9aa",
@@ -16,5 +16,7 @@ t.r(
         deleteButtonWrapper: "deleteButtonWrapper__4e9aa",
         resetButton: "resetButton__4e9aa",
         overlayIcon: "overlayIcon__4e9aa",
+        overlayIconPrimaryColor: "overlayIconPrimaryColor__4e9aa",
+        overlayIconSecondaryColor: "overlayIconSecondaryColor__4e9aa",
     }),
 );
