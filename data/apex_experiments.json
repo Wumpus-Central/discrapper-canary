@@ -1573,8 +1573,7 @@
     "name": "2026-03-arborium-highlight",
     "kind": "user",
     "defaultConfig": {
-      "enabled": false,
-      "preferNative": false
+      "enabled": false
     },
     "variations": {
       "0": {
@@ -1582,12 +1581,7 @@
         "variant": 0
       },
       "1": {
-        "enabled": true,
-        "preferNative": false
-      },
-      "2": {
-        "enabled": true,
-        "preferNative": true
+        "enabled": true
       }
     }
   },

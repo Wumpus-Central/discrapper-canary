@@ -6,7 +6,7 @@ var l = n(635377),
     r = n.n(s),
     a = n(941426),
     o = n(157941),
-    u = n(386239),
+    u = n(938855),
     c = n(768947),
     d = n(927813),
     h = n(38405),
@@ -27,8 +27,7 @@ function N(e) {
         i = !1,
         s = !1;
     function r(t) {
-        let { preferNative: n } = o.L.getConfig({ location: "syntaxHighlightCodeBlocks" });
-        (0, u.W9)(t, n)
+        (0, u.W9)(t)
             .then((t) => {
                 null != t &&
                     (s ||
@@ -144,52 +143,52 @@ function v(e, t) {
                 n.push(l);
         return (
             (function (e, t) {
-                let { enabled: n, preferNative: l } = o.L.getConfig({ location: "syntaxHighlightCodeBlocks" }),
-                    i = [],
-                    s = !1;
-                for (let a of e) {
-                    let o = a === e[e.length - 1];
+                let { enabled: n } = o.L.getConfig({ location: "syntaxHighlightCodeBlocks" }),
+                    l = [],
+                    i = !1;
+                for (let s of e) {
+                    let a = s === e[e.length - 1];
                     if (
-                        (a.closesCodeBlock || o) &&
-                        (s && o && !a.closesCodeBlock && i.push(a), (s = !1), i.length > 0)
+                        (s.closesCodeBlock || a) &&
+                        (i && a && !s.closesCodeBlock && l.push(s), (i = !1), l.length > 0)
                     ) {
-                        let e = i.map((e) => (0, f.IQ)(e.blockEntry[0])).join("\n"),
-                            s = i[0].lang;
-                        if (null != s && n)
-                            !(function (e, t, n, l, i) {
-                                let s = (function (e, t, n, l, i) {
-                                    let s,
-                                        a = (0, c.py)(t);
-                                    if (null == a) return null;
-                                    let o = (0, u.F)(a, l);
-                                    if (null == o) return i?.(a), null;
-                                    let d = r()(`${a}\0${e}\0${o.backend}`),
-                                        m = O.get(d);
-                                    if (null != m && m.length === n) return m;
-                                    if (M.has(d)) return null;
+                        let e = l.map((e) => (0, f.IQ)(e.blockEntry[0])).join("\n"),
+                            i = l[0].lang;
+                        if (null != i && n)
+                            !(function (e, t, n, l) {
+                                let i = (function (e, t, n, l) {
+                                    let i,
+                                        s = (0, c.py)(t);
+                                    if (null == s) return null;
+                                    let a = (0, u.F)(s);
+                                    if (null == a) return l?.(s), null;
+                                    let o = r()(`${s}\0${e}`),
+                                        d = O.get(o);
+                                    if (null != d && d.length === n) return d;
+                                    if (M.has(o)) return null;
                                     for (let t of e.split("\n")) if (t.length > 1e3) return null;
-                                    let f = e.endsWith("\n")
+                                    let m = e.endsWith("\n")
                                         ? e
                                         : `${e}
 `;
                                     try {
-                                        let e = o.highlightToHtml(f);
-                                        if (((s = e.html), null != i)) for (let t of e.missingInjections) i(t);
+                                        let e = a.highlightToHtml(m);
+                                        if (((i = e.html), null != l)) for (let t of e.missingInjections) l(t);
                                     } catch (e) {
                                         return (
-                                            M.set(d, !0),
+                                            M.set(o, !0),
                                             h.A.captureException(e instanceof Error ? e : Error(String(e)), {
                                                 tags: { app_context: "syntax_highlighting" },
-                                                extra: { lang: a, surface: "editor" },
+                                                extra: { lang: s, surface: "editor" },
                                             }),
                                             null
                                         );
                                     }
-                                    let p = s.endsWith("\n") ? s.slice(0, -1).split("\n") : s.split("\n");
-                                    if (p.length !== n) return null;
-                                    let g = [];
+                                    let f = i.endsWith("\n") ? i.slice(0, -1).split("\n") : i.split("\n");
+                                    if (f.length !== n) return null;
+                                    let p = [];
                                     for (let e = 0; e < n; e++)
-                                        g.push(
+                                        p.push(
                                             (function (e) {
                                                 let t,
                                                     n = [],
@@ -218,15 +217,15 @@ function v(e, t) {
                                                     r > 0 && a.length > 0 && n.push({ types: a, start: i, end: i + r }),
                                                     n
                                                 );
-                                            })(p[e]),
+                                            })(f[e]),
                                         );
-                                    return O.set(d, g), g;
-                                })(e, t, n.length, l, i);
-                                if (null != s) for (let e = 0; e < n.length; e++) n[e].hljsTypes = s[e];
+                                    return O.set(o, p), p;
+                                })(e, t, n.length, l);
+                                if (null != i) for (let e = 0; e < n.length; e++) n[e].hljsTypes = i[e];
                                 else for (let e = 0; e < n.length; e++) n[e].hljsTypes = [];
-                            })(e, s, i, l, t);
-                        else if (null == s || null == y || y.hasLanguage(s)) {
-                            if (null != s && null != y && y.hasLanguage(s)) {
+                            })(e, i, l, t);
+                        else if (null == i || null == y || y.hasLanguage(i)) {
+                            if (null != i && null != y && y.hasLanguage(i)) {
                                 let t = (function (e, t) {
                                     if (null == y) return null;
                                     let n = `${e}-${t}`,
@@ -236,11 +235,11 @@ function v(e, t) {
                                     if (null == i || i.illegal) return null;
                                     let s = i.value.split("\n");
                                     return R.set(n, s), s;
-                                })(e, s);
-                                if (null != t && t.length === i.length) {
+                                })(e, i);
+                                if (null != t && t.length === l.length) {
                                     let e = [];
-                                    for (let n = 0; n < i.length; n++) {
-                                        let l,
+                                    for (let n = 0; n < l.length; n++) {
+                                        let i,
                                             s = t[n]
                                                 .replace(/&amp;/g, "&")
                                                 .replace(/&lt;/g, "<")
@@ -250,27 +249,27 @@ function v(e, t) {
                                             r = [],
                                             a = 0,
                                             o = 0;
-                                        for (; null != (l = _.exec(s)); ) {
-                                            let t = l.index + l[0].length,
-                                                n = l.index - o;
-                                            l.index > o &&
+                                        for (; null != (i = _.exec(s)); ) {
+                                            let t = i.index + i[0].length,
+                                                n = i.index - o;
+                                            i.index > o &&
                                                 (e.length > 0 && r.push({ types: [...e], start: a, end: a + n }),
                                                 (a += n)),
-                                                "</span>" === l[0] ? e.pop() : e.push(l[1]),
+                                                "</span>" === i[0] ? e.pop() : e.push(i[1]),
                                                 (o = t);
                                         }
                                         if (e.length > 0) {
                                             let t = s.length - o;
                                             r.push({ types: [...e], start: a, end: a + t });
                                         }
-                                        i[n].hljsTypes = r;
+                                        l[n].hljsTypes = r;
                                     }
-                                } else for (let e = 0; e < i.length; e++) i[e].hljsTypes = null;
+                                } else for (let e = 0; e < l.length; e++) l[e].hljsTypes = null;
                             }
-                        } else for (let e = 0; e < i.length; e++) i[e].hljsTypes = [];
-                        i = [];
+                        } else for (let e = 0; e < l.length; e++) l[e].hljsTypes = [];
+                        l = [];
                     }
-                    s && i.push(a), a.opensCodeBlock && (s = !0);
+                    i && l.push(s), s.opensCodeBlock && (i = !0);
                 }
             })(n, t),
             n

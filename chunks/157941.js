@@ -10,11 +10,11 @@ let a = n.lazy(() =>
     s = (0, i.mj)({
         name: "2026-03-arborium-highlight",
         kind: "user",
-        defaultConfig: { enabled: !1, preferNative: !1 },
-        variations: { 1: { enabled: !0, preferNative: !1 }, 2: { enabled: !0, preferNative: !0 } },
+        defaultConfig: { enabled: !1 },
+        variations: { 1: { enabled: !0 } },
     });
 function d(e) {
     let { children: t, location: l, ...i } = e,
-        { enabled: d, preferNative: o } = s.useConfig({ location: l });
-    return d ? (0, r.jsx)(n.Suspense, { fallback: t, children: (0, r.jsx)(a, { ...i, preferNative: o }) }) : t;
+        { enabled: d } = s.useConfig({ location: l });
+    return d ? (0, r.jsx)(n.Suspense, { fallback: t, children: (0, r.jsx)(a, { ...i }) }) : t;
 }

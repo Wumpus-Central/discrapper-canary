@@ -1,17 +1,17 @@
-l.d(t, { No: () => b, OY: () => y, ph: () => w, py: () => j });
+l.d(t, { No: () => b, OY: () => y, ph: () => w, py: () => d });
 var r = l(582128),
-    n = l(875538),
-    s = l(635377),
-    a = l.n(s),
+    s = l(875538),
+    n = l(635377),
+    a = l.n(n),
     c = l(181370),
-    i = l.n(c),
-    o = l(52133),
-    h = l(38405),
-    u = l(386239);
-let p = /^[a-z0-9_+\-.#]+$/,
-    m = new (a())({ max: 256 }),
+    o = l.n(c),
+    p = l(52133),
+    i = l(38405),
+    h = l(938855);
+let m = /^[a-z0-9_+\-.#]+$/,
+    u = new (a())({ max: 256 }),
     f = new (a())({ max: 256 }),
-    d = {
+    j = {
         h: "cpp",
         hpp: "cpp",
         cc: "cpp",
@@ -141,26 +141,25 @@ let p = /^[a-z0-9_+\-.#]+$/,
         "julia-repl": "julia",
         jldoctest: "julia",
     },
-    g = new Set([...Object.keys(n.pb), "ansi"]),
-    b = new Set([...g, ...Object.keys(d)]);
-function j(e) {
+    g = new Set([...Object.keys(s.pb), "ansi"]),
+    b = new Set([...g, ...Object.keys(j)]);
+function d(e) {
     if (null == e) return;
     let t = e.toLowerCase();
-    if (!p.test(t)) return;
+    if (!m.test(t)) return;
     if (g.has(t)) return t;
-    let l = d[t];
+    let l = j[t];
     if (null != l && g.has(l)) return l;
 }
 function y(e, t) {
-    let l = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-        n = r.use((0, u.W9)(e ?? "", l)),
-        s = r.useMemo(() => i()(`${e}\0${t}\0${n?.backend ?? ""}`), [e, t, n]),
-        a = r.useCallback(
+    let l = r.use((0, h.W9)(e ?? "")),
+        s = r.useMemo(() => o()(`${e}\0${t}`), [e, t]),
+        n = r.useCallback(
             function () {
-                let l,
-                    r = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-                if (!r) {
-                    let e = m.get(s);
+                let r,
+                    n = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+                if (!n) {
+                    let e = u.get(s);
                     if (null != e) return e;
                 }
                 if (
@@ -168,7 +167,7 @@ function y(e, t) {
                         for (let t of e.split("\n")) if (t.length > 1e3) return !1;
                         return !0;
                     })(t) ||
-                    null == n ||
+                    null == l ||
                     f.has(s)
                 )
                     return;
@@ -177,35 +176,35 @@ function y(e, t) {
                     : `${t}
 `;
                 try {
-                    l = n.highlightToHtml(a);
+                    r = l.highlightToHtml(a);
                 } catch (t) {
                     f.set(s, !0),
-                        h.A.captureException(t instanceof Error ? t : Error(String(t)), {
+                        i.A.captureException(t instanceof Error ? t : Error(String(t)), {
                             tags: { app_context: "syntax_highlighting" },
                             extra: { lang: e },
                         });
                     return;
                 }
-                return m.set(s, l), l;
+                return u.set(s, r), r;
             },
-            [s, t, n, e],
+            [s, t, l, e],
         ),
-        [c, p] = r.useState(a);
+        [a, c] = r.useState(n);
     return (
         r.useEffect(() => {
-            p(a());
-        }, [a]),
+            c(n());
+        }, [n]),
         r.useEffect(() => {
-            let e = c?.missingInjections;
+            let e = a?.missingInjections;
             if (null == e || 0 === e.length) return;
             let t = !1;
-            for (let r of e)
-                (0, u.W9)(r, l).then(() => {
+            for (let l of e)
+                (0, h.W9)(l).then(() => {
                     t ||
-                        p((e) => {
-                            let t = a(!0);
+                        c((e) => {
+                            let t = n(!0);
                             return null == t ||
-                                (null != e && e.html === t.html && (0, o.v)(e.missingInjections, t.missingInjections))
+                                (null != e && e.html === t.html && (0, p.v)(e.missingInjections, t.missingInjections))
                                 ? e
                                 : t;
                         });
@@ -213,8 +212,8 @@ function y(e, t) {
             return () => {
                 t = !0;
             };
-        }, [s, a, c?.missingInjections, l]),
-        c?.html ?? null
+        }, [s, n, a?.missingInjections]),
+        a?.html ?? null
     );
 }
 let x = null,
@@ -222,6 +221,6 @@ let x = null,
 function w(e) {
     x ??= l.e("401180").then(l.t.bind(l, 628759, 23));
     let { default: t } = r.use(x),
-        [n] = r.useState(() => new t({ escapeXML: !0, fg: "var(--text-default)", bg: "transparent", colors: v }));
-    return r.useMemo(() => n.toHtml(e), [n, e]);
+        [s] = r.useState(() => new t({ escapeXML: !0, fg: "var(--text-default)", bg: "transparent", colors: v }));
+    return r.useMemo(() => s.toHtml(e), [s, e]);
 }
