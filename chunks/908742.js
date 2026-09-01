@@ -3752,8 +3752,9 @@ let lg = function (e) {
         { useNewTile: n } = G.aD.useConfig({ location: tN.rE.QUEST_HOME_DESKTOP }),
         { variant: l } = G.Mk.useConfig({ location: tN.rE.QUEST_HOME_DESKTOP }),
         a = i.useRef(null),
-        o = l === G.d.LARGE_MASK_MARGIN,
-        u = nC(a, eW(s, o), 20, 3);
+        u = l === G.d.LARGE_MASK_MARGIN,
+        c = n ? 12 : 20,
+        d = nC(a, eW(s, u), c, 3);
     return (0, r.jsxs)(_.B, {
         gap: 16,
         direction: "vertical",
@@ -3792,11 +3793,11 @@ let lg = function (e) {
                 : (0, r.jsx)("div", {
                       className: lf.Vg,
                       style: {
-                          "--custom-quest-search-tile-min-width": `${eW(s, o)}px`,
-                          "--custom-quest-grid-gap": "20px",
+                          "--custom-quest-search-tile-min-width": `${eW(s, u)}px`,
+                          "--custom-quest-grid-gap": `${c}px`,
                       },
                       children:
-                          null !== u &&
+                          null !== d &&
                           t.map((e, t) =>
                               n
                                   ? (0, r.jsx)(
@@ -3807,8 +3808,8 @@ let lg = function (e) {
                                                 questId: e,
                                                 questContent: es.uF.QUEST_HOME_SEARCH_RESULT,
                                                 contentPosition: t,
-                                                rowIndex: Math.floor(t / u),
-                                                className: lf.d,
+                                                rowIndex: Math.floor(t / d),
+                                                className: o()(lf.d, lf.hS),
                                                 sourceQuestContent: es.uF.QUEST_HOME_SEARCH_RESULT,
                                             }),
                                         },
@@ -3821,7 +3822,7 @@ let lg = function (e) {
                                             questId: e,
                                             questContent: es.uF.QUEST_HOME_SEARCH_RESULT,
                                             contentPosition: t,
-                                            rowIndex: Math.floor(t / u),
+                                            rowIndex: Math.floor(t / d),
                                             className: lf.d,
                                             sourceQuestContent: es.uF.QUEST_HOME_SEARCH_RESULT,
                                         },
