@@ -1,4 +1,4 @@
-n.d(t, { n0: () => M, xs: () => k });
+n.d(t, { n0: () => M, xs: () => Q });
 var i = n(477900),
     r = n(582128),
     s = n(132500),
@@ -382,7 +382,7 @@ class R {
     })();
 }
 let M = r.createContext(void 0);
-function k(e) {
+function Q(e) {
     let { visible: t, visibleChanged: n, focused: s, reference: a, focusedChanged: d, sourceQuestContent: c } = e,
         C = (0, y.iY)(e),
         f = e.adCreativeType === o.p.QUEST ? void 0 : e.relatedQuestId,

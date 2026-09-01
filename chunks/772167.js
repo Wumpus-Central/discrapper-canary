@@ -19,8 +19,8 @@ var s,
     v = i(914410),
     _ = i(363195),
     j = i(174459),
-    R = i(58703),
-    E = i(975571),
+    E = i(58703),
+    R = i(975571),
     P = i(38405),
     A = i(149995),
     y = i(398523),
@@ -235,8 +235,8 @@ function H() {
     };
 }
 function V() {
-    let e = (0, R.N5)(),
-        t = (0, R.P6)();
+    let e = (0, E.N5)(),
+        t = (0, E.P6)();
     return (0, n.jsxs)("div", {
         className: `${D.G9} ${D.sQ}`,
         children: [
@@ -384,7 +384,7 @@ function K(e) {
             analyticsLocations: C = [],
         } = e,
         [v, j] = r.useState(a.code),
-        [R, P] = r.useState(!1),
+        [E, P] = r.useState(!1),
         A =
             ((t = a.partnerId),
             (i = (0, h.bG)([_.A], () => (0, l.M)(_.A.theme))),
@@ -415,9 +415,9 @@ function K(e) {
                                             (0, n.jsx)(f.D, {
                                                 variant: "heading-sm/medium",
                                                 color: "text-subtle",
-                                                children: R
+                                                children: E
                                                     ? B.intl.format(B.t.i2EuFO, {
-                                                          helpdeskArticle: E.A.getArticleURL(S.MVz.RECURRING_PROMOTION),
+                                                          helpdeskArticle: R.A.getArticleURL(S.MVz.RECURRING_PROMOTION),
                                                       })
                                                     : y
                                                       ? a.body
@@ -431,7 +431,7 @@ function K(e) {
                                                     color: "text-subtle",
                                                     children: B.intl.format(a.bodyNote, {
                                                         partnerName: O.CD[a.partnerId].label,
-                                                        helpdeskArticle: E.A.getArticleURL(S.MVz.RECURRING_PROMOTION),
+                                                        helpdeskArticle: R.A.getArticleURL(S.MVz.RECURRING_PROMOTION),
                                                     }),
                                                 }),
                                         ],
@@ -442,7 +442,7 @@ function K(e) {
                                 (0, n.jsx)(G, {
                                     recurrence: a,
                                     canBeClaimed: y,
-                                    hasClaimError: R,
+                                    hasClaimError: E,
                                     setCode: j,
                                     setHasClaimError: P,
                                     analyticsLocations: C,
@@ -471,7 +471,7 @@ function K(e) {
                     children: (0, n.jsx)(G, {
                         recurrence: a,
                         canBeClaimed: y,
-                        hasClaimError: R,
+                        hasClaimError: E,
                         setCode: j,
                         setHasClaimError: P,
                         className: D.qx,

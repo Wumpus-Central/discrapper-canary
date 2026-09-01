@@ -9,13 +9,13 @@ var l = n(477900),
     d = n(43990),
     c = n(717421),
     m = n(713608),
-    p = n(918715),
-    g = n(661531),
-    h = n(271520),
+    g = n(918715),
+    h = n(661531),
+    p = n(271520),
     f = n(762555),
     x = n(711918),
-    I = n(375708),
-    C = n(328115);
+    C = n(375708),
+    I = n(328115);
 function A(e) {
     let {
         leftPx: t,
@@ -24,8 +24,8 @@ function A(e) {
         isAnimated: a,
         index: c,
         activated: m,
-        expansionSpring: p,
-        icon: h,
+        expansionSpring: g,
+        icon: p,
         tooltip: f,
     } = e;
     return (0, l.jsx)(u.m, {
@@ -35,20 +35,20 @@ function A(e) {
             theme: o.NJ.MIDNIGHT,
             children: (e) =>
                 (0, l.jsx)(r.animated.div, {
-                    className: s()(C.z, e),
+                    className: s()(I.z, e),
                     onMouseEnter: () => i(c),
                     onMouseLeave: () => i(null),
                     style: {
-                        left: a ? p.to((e) => t - e) : t,
+                        left: a ? g.to((e) => t - e) : t,
                         right: n,
-                        width: a ? p.to((e) => `${j + 2 * e}px`) : j,
-                        height: a ? p.to((e) => `${j + 2 * e}px`) : j,
+                        width: a ? g.to((e) => `${j + 2 * e}px`) : j,
+                        height: a ? g.to((e) => `${j + 2 * e}px`) : j,
                     },
-                    children: (0, l.jsx)(h, {
+                    children: (0, l.jsx)(p, {
                         size: "custom",
                         width: "100%",
                         height: "100%",
-                        color: m ? g.A.colors.INTERACTIVE_ICON_ACTIVE : g.A.colors.INTERACTIVE_ICON_DEFAULT,
+                        color: m ? h.A.colors.INTERACTIVE_ICON_ACTIVE : h.A.colors.INTERACTIVE_ICON_DEFAULT,
                     }),
                 }),
         }),
@@ -72,10 +72,10 @@ function _(e) {
             },
             [r],
         ),
-        u = h.A.useConfig({ location: "useClipTimelineIndicators" }).enableGameEventsOnPlayer,
+        u = p.A.useConfig({ location: "useClipTimelineIndicators" }).enableGameEventsOnPlayer,
         d = i.useMemo(() => (u ? e.filter((e) => null != e.game) : []), [e, u]),
-        g = i.useMemo(() => d.map((e, t) => ({ index: t, timeSec: e.timestamp_ms / 1e3, widthPx: j, gapPx: 4 })), [d]),
-        C = i.useCallback(
+        h = i.useMemo(() => d.map((e, t) => ({ index: t, timeSec: e.timestamp_ms / 1e3, widthPx: j, gapPx: 4 })), [d]),
+        I = i.useCallback(
             (e, n) => {
                 let i,
                     a,
@@ -85,13 +85,13 @@ function _(e) {
                 let c = n > e.leftPx;
                 switch (u.game.type) {
                     case f.Q_.MULTIKILL:
-                        (a = I.intl.string(x.default.PMLPER)), (i = m.q);
+                        (a = C.intl.string(x.default.PMLPER)), (i = m.q);
                         break;
                     case f.Q_.KILL:
-                        (i = m.q), (a = I.intl.string(x.default.fYdqnM));
+                        (i = m.q), (a = C.intl.string(x.default.fYdqnM));
                         break;
                     case f.Q_.DEATH:
-                        (i = p.V), (a = I.intl.string(x.default.MhIx41));
+                        (i = g.V), (a = C.intl.string(x.default.MhIx41));
                 }
                 return null == i || null == a
                     ? null
@@ -108,5 +108,5 @@ function _(e) {
             },
             [t, d, o, s],
         );
-    return { indicators: g, animatingIndex: t, expansionSpring: s, hoverExpansionPx: 4, renderIndicator: C };
+    return { indicators: h, animatingIndex: t, expansionSpring: s, hoverExpansionPx: 4, renderIndicator: I };
 }

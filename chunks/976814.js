@@ -1,12 +1,12 @@
-n.d(t, { A: () => i });
-var l = n(477900);
-n(582128);
-var a = n(192308);
+l.d(t, { A: () => i });
+var n = l(477900);
+l(582128);
+var a = l(192308);
 function i(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
     (0, a.openModalLazy)(async () => {
-        let { default: a } = await Promise.all([n.e("668351"), n.e("700579")]).then(n.bind(n, 451310));
-        return (n) =>
-            (0, l.jsx)(a, { ...n, projectId: e, scopeKeys: t.scopeKeys, note: t.note, notifyAgent: t.notifyAgent });
+        let { default: a } = await Promise.all([l.e("668351"), l.e("700579")]).then(l.bind(l, 451310));
+        return (l) =>
+            (0, n.jsx)(a, { ...l, projectId: e, scopeKeys: t.scopeKeys, note: t.note, notifyAgent: t.notifyAgent });
     });
 }

@@ -2189,7 +2189,7 @@ function s0(e) {
             children: [
                 (0, r.jsx)(sx.A, {
                     showPlaceholder: !M,
-                    width: 600,
+                    width: 800,
                     height: 450,
                     className: sZ.Tv,
                     children: (0, r.jsx)(eu.N, {
@@ -2210,7 +2210,7 @@ function s0(e) {
                                       className: o()(sZ.Tv, sZ.gJ, { [sZ.C7]: g }),
                                   }
                                 : void 0,
-                        imageSize: { width: 600, height: 450 },
+                        imageSize: { width: 800, height: 450 },
                         showVideo: v,
                     }),
                 }),

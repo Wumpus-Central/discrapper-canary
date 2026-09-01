@@ -51,7 +51,7 @@ function Q(e) {
     let { idea: t, installScope: l, submitting: n } = e;
     return n ? "submitting" : "" === t.trim() ? "idea" : null == l ? "scope" : null;
 }
-var $ = l(829088),
+var $ = l(108091),
     J = l(922016),
     ee = l(980707),
     et = l(477782),

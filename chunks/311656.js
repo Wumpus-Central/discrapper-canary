@@ -1,12 +1,12 @@
-n.d(t, { A: () => x });
-var l = n(477900),
-    a = n(582128),
-    i = n(834730),
-    r = n(691885),
-    s = n(922016),
-    o = n(866665),
-    u = n(939249),
-    d = n(783977);
+l.d(t, { A: () => p });
+var n = l(477900),
+    a = l(582128),
+    i = l(834730),
+    r = l(691885),
+    s = l(922016),
+    o = l(866665),
+    u = l(939249),
+    d = l(783977);
 let c = { low: "Low", medium: "Medium", high: "High", xhigh: "Extra high", max: "Max" },
     m = {
         anthropic: "Anthropic",
@@ -15,29 +15,29 @@ let c = { low: "Low", medium: "Medium", high: "High", xhigh: "Extra high", max: 
         xai: "xAI (dev)",
         moonshotai: "Moonshot AI (dev)",
     };
-var h = n(295813),
-    f = n(375708),
-    g = n(752065);
-function p(e) {
-    let { title: t, modelChoices: n, thinkingChoices: s, value: o, disabled: u, onChange: d } = e,
-        p = a.useMemo(() => n.map((e) => ({ id: e.id, label: e.label, value: e.id, description: m[e.provider] })), [n]),
-        x = a.useMemo(() => s.map((e) => ({ id: e, label: c[e] ?? e, value: e })), [s]);
-    return (0, l.jsxs)("div", {
+var f = l(295813),
+    h = l(375708),
+    g = l(752065);
+function x(e) {
+    let { title: t, modelChoices: l, thinkingChoices: s, value: o, disabled: u, onChange: d } = e,
+        x = a.useMemo(() => l.map((e) => ({ id: e.id, label: e.label, value: e.id, description: m[e.provider] })), [l]),
+        p = a.useMemo(() => s.map((e) => ({ id: e, label: c[e] ?? e, value: e })), [s]);
+    return (0, n.jsxs)("div", {
         className: g.uW,
         children: [
-            (0, l.jsx)(i.E, { variant: "text-sm/semibold", color: "text-default", children: t }),
-            (0, l.jsx)(r.l, {
-                label: f.intl.string(h.default["9FRudW"]),
-                options: p,
+            (0, n.jsx)(i.E, { variant: "text-sm/semibold", color: "text-default", children: t }),
+            (0, n.jsx)(r.l, {
+                label: h.intl.string(f.default["9FRudW"]),
+                options: x,
                 value: o.model,
                 onSelectionChange: (e) => d({ ...o, model: e }),
                 selectionMode: "single",
                 disabled: u,
                 fullWidth: !0,
             }),
-            (0, l.jsx)(r.l, {
-                label: f.intl.string(h.default["4AsQHS"]),
-                options: x,
+            (0, n.jsx)(r.l, {
+                label: h.intl.string(f.default["4AsQHS"]),
+                options: p,
                 value: o.thinking,
                 onSelectionChange: (e) => d({ ...o, thinking: e }),
                 selectionMode: "single",
@@ -47,62 +47,62 @@ function p(e) {
         ],
     });
 }
-function x(e) {
-    let { settings: t, choices: n, disabled: r, onChange: c, className: m, icon: x } = e,
+function p(e) {
+    let { settings: t, choices: l, disabled: r, onChange: c, className: m, icon: p } = e,
         v = a.useRef(null),
         [j, b] = a.useState(null),
         [y, A] = a.useState(t);
     t !== y && (A(t), b(null));
     let k = j ?? t,
-        w = a.useCallback(
+        N = a.useCallback(
             (e) => {
                 b(e), c(e);
             },
             [c],
         );
-    return (0, l.jsx)(s.Y, {
+    return (0, n.jsx)(s.Y, {
         targetElementRef: v,
         position: "top",
         align: "right",
         renderPopout: () =>
-            (0, l.jsxs)("div", {
+            (0, n.jsxs)("div", {
                 className: g.nd,
                 role: "dialog",
-                "aria-label": f.intl.string(h.default["2NWMqY"]),
+                "aria-label": h.intl.string(f.default["2NWMqY"]),
                 children: [
-                    (0, l.jsx)(p, {
-                        title: f.intl.string(h.default.ISmynF),
-                        modelChoices: n.main,
-                        thinkingChoices: n.thinking,
+                    (0, n.jsx)(x, {
+                        title: h.intl.string(f.default.ISmynF),
+                        modelChoices: l.main,
+                        thinkingChoices: l.thinking,
                         value: k.main,
                         disabled: r,
-                        onChange: (e) => w({ ...k, main: e }),
+                        onChange: (e) => N({ ...k, main: e }),
                     }),
-                    (0, l.jsx)(p, {
-                        title: f.intl.string(h.default.hdt1ph),
-                        modelChoices: n.subagent,
-                        thinkingChoices: n.thinking,
+                    (0, n.jsx)(x, {
+                        title: h.intl.string(f.default.hdt1ph),
+                        modelChoices: l.subagent,
+                        thinkingChoices: l.thinking,
                         value: k.subagent,
                         disabled: r,
-                        onChange: (e) => w({ ...k, subagent: e }),
+                        onChange: (e) => N({ ...k, subagent: e }),
                     }),
-                    (0, l.jsx)(i.E, {
+                    (0, n.jsx)(i.E, {
                         variant: "text-xs/normal",
                         color: "text-muted",
-                        children: f.intl.string(h.default.ICU5aW),
+                        children: h.intl.string(f.default.ICU5aW),
                     }),
                 ],
             }),
         children: (e) =>
-            (0, l.jsx)(o.m, {
-                text: f.intl.string(h.default.COVYeS),
+            (0, n.jsx)(o.m, {
+                text: h.intl.string(f.default.COVYeS),
                 ariaHidden: !0,
-                children: (0, l.jsx)(u.D, {
+                children: (0, n.jsx)(u.D, {
                     innerRef: v,
                     className: m ?? g.hZ,
-                    "aria-label": f.intl.string(h.default.COVYeS),
+                    "aria-label": h.intl.string(f.default.COVYeS),
                     ...e,
-                    children: x ?? (0, l.jsx)(d.R, { size: "xxs", color: "currentColor", "aria-hidden": !0 }),
+                    children: p ?? (0, n.jsx)(d.R, { size: "xxs", color: "currentColor", "aria-hidden": !0 }),
                 }),
             }),
     });

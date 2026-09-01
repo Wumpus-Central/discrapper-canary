@@ -1,15 +1,15 @@
-n.d(t, { Qg: () => o, Qs: () => r, Xm: () => i, yZ: () => s });
-var l = n(148853);
+l.d(t, { Qg: () => o, Qs: () => r, Xm: () => i, yZ: () => s });
+var n = l(148853);
 let a = { frame: (e) => e.hasFrame, widget: (e) => e.hasProfileWidget, bot: (e) => !0 === e.hasBotDm };
 function i(e) {
-    let t = l.uZ.filter((t) => a[t](e));
+    let t = n.uZ.filter((t) => a[t](e));
     return {
         modes: t,
         defaultMode: t[0] ?? null,
         showModeSwitch: t.length > 1,
         profileState: (function (e) {
-            let { installScope: t, ownerAuthorizationRevoked: n } = e;
-            return "user" === t && !0 === n ? "unavailable-authorization-revoked" : "available";
+            let { installScope: t, ownerAuthorizationRevoked: l } = e;
+            return "user" === t && !0 === l ? "unavailable-authorization-revoked" : "available";
         })(e),
     };
 }
@@ -18,10 +18,10 @@ function r(e, t) {
 }
 function s(e) {
     let t = e.widgetTop && e.widgetBottom,
-        n = e.miniProfile;
-    return { hasMainCard: t, hasPopoutCard: n, hasAny: t || n };
+        l = e.miniProfile;
+    return { hasMainCard: t, hasPopoutCard: l, hasAny: t || l };
 }
 function o(e) {
-    let { installScope: t, previewReady: n, integrationInstalled: l, botPermissionsChanged: a } = e;
-    return !!n && null != l && (!!a || ("user" !== t && !l));
+    let { installScope: t, previewReady: l, integrationInstalled: n, botPermissionsChanged: a } = e;
+    return !!l && null != n && (!!a || ("user" !== t && !n));
 }

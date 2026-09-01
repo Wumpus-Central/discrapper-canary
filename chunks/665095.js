@@ -24,18 +24,18 @@ var i = n(477900),
     j = n(297264),
     N = n(834730),
     S = n(700525),
-    y = n(975571),
-    b = n(652215),
+    b = n(975571),
+    y = n(652215),
     M = n(375708),
     R = n(690807);
-let O = y.A.getArticleURL(b.MVz.VERIFICATION_FAQ);
-class P extends l.PureComponent {
-    static defaultProps = { types: [b.Fz7.CAPTCHA], onCaptchaVerify: b.tEg, onLogout: b.tEg };
+let O = b.A.getArticleURL(y.MVz.VERIFICATION_FAQ);
+class k extends l.PureComponent {
+    static defaultProps = { types: [y.Fz7.CAPTCHA], onCaptchaVerify: y.tEg, onLogout: y.tEg };
     renderFields() {
         let { types: e, captchaKey: t, theme: n, onCaptchaVerify: l } = this.props;
         return (0, i.jsx)(i.Fragment, {
             children: e.map((e) =>
-                e === b.Fz7.CAPTCHA
+                e === y.Fz7.CAPTCHA
                     ? (0, i.jsx)(S.A, { onVerify: l, theme: n }, t)
                     : (0, i.jsx)(_.$, { onClick: () => this.handleClick(e), text: v.A.getButtonTitle(e) }, e),
             ),
@@ -112,7 +112,7 @@ class P extends l.PureComponent {
                                 (0, i.jsx)(N.E, {
                                     variant: "text-sm/semibold",
                                     className: R.qr,
-                                    children: M.intl.format(M.t.WL51ZR, { supportURL: y.A.getSubmitRequestURL() }),
+                                    children: M.intl.format(M.t.WL51ZR, { supportURL: b.A.getSubmitRequestURL() }),
                                 }),
                                 (0, i.jsx)("div", { className: E()(R.qr, R.mf), children: "\u2022" }),
                                 (0, i.jsx)(N.E, {
@@ -132,7 +132,7 @@ class P extends l.PureComponent {
         t?.(e);
     };
 }
-var k = n(87404),
+var P = n(87404),
     w = n(53516);
 function L() {
     let { action: e, theme: t } = (0, s.cf)([x.A, A.A], () => ({ action: x.A.getAction(), theme: A.A.theme })),
@@ -148,7 +148,7 @@ function L() {
                     );
                     return (t) => (0, i.jsx)(e, { ...t });
                 },
-                { modalKey: k.H1, Layer: g.Ay },
+                { modalKey: P.H1, Layer: g.Ay },
             );
     }
     return (
@@ -171,8 +171,8 @@ function L() {
             [],
         ),
         l.useEffect(() => {
-            _?.[0] === b.Fz7.PHONE &&
-                C?.[0] === b.Fz7.EMAIL &&
+            _?.[0] === y.Fz7.PHONE &&
+                C?.[0] === y.Fz7.EMAIL &&
                 (0, o.openModalLazy)(
                     async () => {
                         let { default: e } = await Promise.all([n.e("844331"), n.e("410919")]).then(n.bind(n, 556506));
@@ -184,15 +184,15 @@ function L() {
                                 confirmText: M.intl.string(M.t["3oK4qw"]),
                             });
                     },
-                    { modalKey: k.Pr, Layer: g.Ay, onCloseCallback: I },
+                    { modalKey: P.Pr, Layer: g.Ay, onCloseCallback: I },
                 );
         }, [C, _]),
-        (0, i.jsx)(P, {
+        (0, i.jsx)(k, {
             types: C,
             captchaKey: E,
             onCaptchaVerify: function (e) {
                 r.Bo.post({
-                    url: b.Rsh.CAPTCHA,
+                    url: y.Rsh.CAPTCHA,
                     body: { captcha_key: e },
                     oldFormErrors: !0,
                     rejectWithError: !0,
@@ -202,7 +202,7 @@ function L() {
             },
             theme: t,
             onClick: (e) => {
-                e === b.Fz7.EMAIL_OR_PHONE || e === b.Fz7.EMAIL || e === b.Fz7.REVERIFY_EMAIL
+                e === y.Fz7.EMAIL_OR_PHONE || e === y.Fz7.EMAIL || e === y.Fz7.REVERIFY_EMAIL
                     ? I()
                     : (0, o.openModalLazy)(
                           async () => {

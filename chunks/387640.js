@@ -19,8 +19,8 @@ var s,
     v = i(206835),
     _ = i(192444),
     j = i(216934),
-    R = i(591179),
-    E = i(462463),
+    E = i(591179),
+    R = i(462463),
     P = i(780964),
     A = i(766075),
     y = i(166403),
@@ -109,8 +109,8 @@ var ep = i(576765),
 let ev = function () {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
         { analyticsLocations: t } = (0, f.Ay)(p.A.PREMIUM_MARKETING_BENTO_BOX),
-        s = (0, R.X)("useBentoBoxes"),
-        n = (0, E.A)({ analyticsLocations: t }),
+        s = (0, E.X)("useBentoBoxes"),
+        n = (0, R.A)({ analyticsLocations: t }),
         r = (0, l.useCallback)(() => {
             (0, g.A)($.BVt.NITRO_HOME, { search: (0, o.stringify)({ perk: M.CALL_OF_DUTY_3PP_CARD_ID }) });
         }, []),
@@ -128,7 +128,7 @@ let ev = function () {
         { shouldShowBonusOrbsUX: ex, multiplier: ev } = (0, _.lk)(q.rE.NITRO_HOME_MARKETING),
         e_ = l.useRef(null),
         ej = (0, x.b)("bento_box"),
-        eR = {
+        eE = {
             premiumGroup: { thumbnail: el, assetUrl: el },
             serverProfiles: {
                 thumbnail: "/assets/27e5bfe55cd9ceac.png",
@@ -190,8 +190,8 @@ let ev = function () {
             callOfDuty: { thumbnail: em, assetUrl: em },
             threePPromotions: { thumbnail: ej ? (0, a.jsx)(V, { ref: e_ }) : eo, assetUrl: ej ? void 0 : eo },
         },
-        eE = (0, w.Y)({ location: "bento_box" }),
-        eP = (0, L.A)(!eE),
+        eR = (0, w.Y)({ location: "bento_box" }),
+        eP = (0, L.A)(!eR),
         eA = (0, c.bG)([y.A], () => y.A.getPremiumTypeSubscription()),
         ey = null != eA && (0, T.Nc)(eA),
         eN = {
@@ -201,48 +201,48 @@ let ev = function () {
                 description: es.intl.string(es.t.HMSHeH),
                 descriptionCta: es.intl.string(es.t.jVcuVY),
                 onClick: s ? n : k,
-                previewImage: eR.serverProfiles.thumbnail,
-                videoUrl: eR.serverProfiles.assetUrl,
+                previewImage: eE.serverProfiles.thumbnail,
+                videoUrl: eE.serverProfiles.assetUrl,
             },
             referralProgram: {
                 name: "referralProgram",
                 title: es.intl.string(es.t.tPY4o9),
                 description: es.intl.format(es.t.jRPQUH, { learnMoreLink: eg }),
-                previewImage: eR.referralProgram.thumbnail,
-                videoUrl: eR.referralProgram.assetUrl,
+                previewImage: eE.referralProgram.thumbnail,
+                videoUrl: eE.referralProgram.assetUrl,
             },
             customThemes: {
                 name: "customThemes",
                 title: es.intl.string(en.default.XokIHM),
                 description: es.intl.string(en.default["7esQMC"]),
                 descriptionCta: es.intl.string(es.t.jVcuVY),
-                previewImage: eR.customThemes.thumbnail,
+                previewImage: eE.customThemes.thumbnail,
                 onClick: () => {
                     (0, b.nf)(b.HP.CUSTOM_THEME);
                 },
-                videoUrl: eR.customThemes.assetUrl,
+                videoUrl: eE.customThemes.assetUrl,
             },
             displayNameStyles: {
                 name: "displayNameStyles",
                 title: es.intl.string(er.default.ABtBDQ),
                 description: es.intl.string(er.default.MFNXZh),
                 descriptionCta: es.intl.string(es.t.jVcuVY),
-                previewImage: eR.displayNameStyles.thumbnail,
+                previewImage: eE.displayNameStyles.thumbnail,
                 onClick: s ? n : B,
-                videoUrl: eR.displayNameStyles.assetUrl,
+                videoUrl: eE.displayNameStyles.assetUrl,
             },
             premiumGroup: {
                 name: "premiumGroup",
                 title: es.intl.formatToPlainString(et.default.VFEDDB, { premiumGroupProductName: (0, X.DP)() }),
                 description:
-                    eE && null != eP
+                    eR && null != eP
                         ? es.intl.formatToPlainString(et.default.vmvhN5, { pricePerPerson: eP, totalMember: X.LM })
                         : es.intl.formatToPlainString(et.default.WudmR3, {
                               totalSeats: X.aw,
                               premiumGroupProductName: (0, X.DP)(),
                           }),
-                previewImage: eR.premiumGroup.thumbnail,
-                videoUrl: eR.premiumGroup.assetUrl,
+                previewImage: eE.premiumGroup.thumbnail,
+                videoUrl: eE.premiumGroup.assetUrl,
                 actions: [
                     {
                         variant: "primary",
@@ -275,44 +275,44 @@ let ev = function () {
                 title: es.intl.string(es.t.Ij3Zmv),
                 description: es.intl.string(es.t.UsOUxY),
                 descriptionCta: es.intl.string(es.t.jVcuVY),
-                previewImage: eR.showYourStyle.thumbnail,
+                previewImage: eE.showYourStyle.thumbnail,
                 onClick: s ? n : k,
-                videoUrl: eR.showYourStyle.assetUrl,
+                videoUrl: eE.showYourStyle.assetUrl,
             },
             yourSpace: {
                 name: "yourSpace",
                 title: es.intl.string(es.t.Wme3nX),
                 description: es.intl.string(es.t["/aAIqV"]),
                 descriptionCta: es.intl.string(es.t.jVcuVY),
-                previewImage: eR.yourSpace.thumbnail,
+                previewImage: eE.yourSpace.thumbnail,
                 onClick: function () {
                     {
                         let { openUserSettings: e } = i(766075);
                         e(P.X.APPEARANCE_THEME_CATEGORY, { analyticsLocations: t });
                     }
                 },
-                videoUrl: eR.yourSpace.assetUrl,
+                videoUrl: eE.yourSpace.assetUrl,
             },
             emojis: {
                 name: "emojis",
                 title: es.intl.string(es.t.zY5PPb),
                 description: es.intl.string(es.t.R5Xag2),
-                previewImage: eR.emojis.thumbnail,
-                videoUrl: eR.emojis.assetUrl,
+                previewImage: eE.emojis.thumbnail,
+                videoUrl: eE.emojis.assetUrl,
             },
             noLimits: {
                 name: "noLimits",
                 title: es.intl.string(es.t["6b3ydG"]),
                 description: es.intl.string(es.t["Y+IJyg"]),
-                previewImage: eR.noLimits.thumbnail,
-                videoUrl: eR.noLimits.assetUrl,
+                previewImage: eE.noLimits.thumbnail,
+                videoUrl: eE.noLimits.assetUrl,
             },
             callOfDuty: {
                 name: "callOfDuty",
                 title: es.intl.string(Q.default.sB5V0c),
                 description: es.intl.formatToPlainString(Q.default["RuZS+B"], { validDates: (0, O.a1)() }),
-                previewImage: eR.callOfDuty.thumbnail,
-                videoUrl: eR.callOfDuty.assetUrl,
+                previewImage: eE.callOfDuty.thumbnail,
+                videoUrl: eE.callOfDuty.assetUrl,
                 containerClassName: ea.callOfDutyGradient,
                 actions: [
                     {
@@ -334,8 +334,8 @@ let ev = function () {
                 title: ej ? es.intl.string(es.t.E4U4SS) : es.intl.string(ee.default.OlObRa),
                 description: ej ? es.intl.string(es.t["B4uSy/"]) : es.intl.string(ee.default["8Gl8gP"]),
                 descriptionCta: ej ? es.intl.string(es.t.RzWDqY) : es.intl.string(ee.default.HINTfJ),
-                previewImage: eR.threePPromotions.thumbnail,
-                videoUrl: eR.threePPromotions.assetUrl,
+                previewImage: eE.threePPromotions.thumbnail,
+                videoUrl: eE.threePPromotions.assetUrl,
                 onClick: () =>
                     (0, S.u)({
                         analyticsLocations: t,
@@ -354,9 +354,9 @@ let ev = function () {
                 onClick: () => {
                     window.open(I.A.getArticleURL($.MVz.ORBS_REWARDS_FAQ), "_blank");
                 },
-                previewImage: eR.orbRewards.thumbnail,
+                previewImage: eE.orbRewards.thumbnail,
                 previewImageStyle: "overlay",
-                backgroundVideoUrl: eR.orbRewards.assetUrl,
+                backgroundVideoUrl: eE.orbRewards.assetUrl,
                 badgeText: ej ? void 0 : es.intl.string(es.t.oW0eUd).toLocaleUpperCase(),
                 badgeVariant: "expressive",
             },
@@ -367,8 +367,8 @@ let ev = function () {
                 descriptionCta: es.intl.string(es.t.jVcuVY),
                 onClick: () => (0, j.m)({ fromContent: d.u.NITRO_HOME_PERK_CARD }),
                 badgeVariant: "expressive",
-                previewImage: eR.orbMultiplier.thumbnail,
-                videoUrl: eR.orbMultiplier.assetUrl,
+                previewImage: eE.orbMultiplier.thumbnail,
+                videoUrl: eE.orbMultiplier.assetUrl,
             },
             combinedOrbs: {
                 name: "combinedOrbs",
@@ -378,8 +378,8 @@ let ev = function () {
                 onClick: () => (0, j.m)({ fromContent: d.u.NITRO_HOME_PERK_CARD }),
                 badgeText: ej ? void 0 : es.intl.string(es.t.oW0eUd).toLocaleUpperCase(),
                 badgeVariant: "expressive",
-                previewImage: eR.combinedOrbs.thumbnail,
-                videoUrl: eR.combinedOrbs.assetUrl,
+                previewImage: eE.combinedOrbs.thumbnail,
+                videoUrl: eE.combinedOrbs.assetUrl,
             },
         };
     function eI(e) {

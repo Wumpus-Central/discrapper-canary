@@ -19,10 +19,10 @@ var s = i(477900),
     v = i(139286),
     _ = i(531260),
     j = i(914410),
-    R = i(174459),
-    E = i(872725),
+    E = i(174459),
+    R = i(872725),
     P = i(721157),
-    A = i(555393),
+    A = i(815987),
     y = i(51965),
     N = i(465794),
     I = i(202541),
@@ -71,7 +71,7 @@ function M(e) {
     let eu = n.useMemo(
             () =>
                 (0, l.debounce)(() => {
-                    R.default.track(T.HAw.PREMIUM_MARKETING_WHAT_IS_NEW_CARD_HOVERED, {
+                    E.default.track(T.HAw.PREMIUM_MARKETING_WHAT_IS_NEW_CARD_HOVERED, {
                         card_type: (0, l.snakeCase)(i),
                         partner: er?.thirdPartyPartner ?? null,
                     });
@@ -81,7 +81,7 @@ function M(e) {
         em = n.useCallback(() => {
             null != Z &&
                 (Z(),
-                R.default.track(T.HAw.PERK_DISCOVERABILITY_CARD_CTA_CLICKED, {
+                E.default.track(T.HAw.PERK_DISCOVERABILITY_CARD_CTA_CLICKED, {
                     card_type: (0, l.snakeCase)(i),
                     function_name: (0, l.snakeCase)(Z.name),
                 }));
@@ -100,7 +100,7 @@ function M(e) {
     return (0, s.jsx)(c.N, {
         theme: eb ? T.NJ8.DARKER : void 0,
         children: (e) =>
-            (0, s.jsxs)(E.A, {
+            (0, s.jsxs)(R.A, {
                 id: t,
                 tabIndex: ei,
                 onMouseEnter: eu,

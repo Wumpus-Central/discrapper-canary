@@ -1,39 +1,39 @@
-i.d(e, {
-    CW: () => P,
+n.d(e, {
+    CW: () => C,
     Eo: () => T,
-    GG: () => L,
-    HV: () => D,
+    GG: () => D,
+    HV: () => V,
     I$: () => G,
     Is: () => p,
-    M7: () => y,
-    Ru: () => g,
-    U1: () => h,
-    Zq: () => V,
+    M7: () => P,
+    Ru: () => y,
+    U1: () => f,
+    Zq: () => L,
     dm: () => N,
-    gA: () => f,
+    gA: () => h,
     hF: () => S,
-    oB: () => C,
+    oB: () => g,
     tZ: () => B,
     xx: () => w,
 });
-var n = i(636537),
-    l = i(228366),
-    r = i(382483),
-    a = i(627363),
-    o = i(625180),
-    _ = i(91242),
-    c = i(673724),
-    E = i(927899),
-    u = i(972786),
-    d = i(652215),
-    s = i(165610);
-function p(t, e, i) {
-    (0, E.Z0)(t, {
+var i = n(636537),
+    l = n(228366),
+    r = n(382483),
+    a = n(627363),
+    o = n(625180),
+    _ = n(91242),
+    u = n(673724),
+    c = n(927899),
+    E = n(972786),
+    d = n(652215),
+    s = n(165610);
+function p(t, e, n) {
+    (0, c.Z0)(t, {
         location: "publish",
-        code: E.xA.PUBLISH_FAILED,
-        message: `publish${i ? "-preview" : ""} failed`,
+        code: c.xA.PUBLISH_FAILED,
+        message: `publish${n ? "-preview" : ""} failed`,
         details: e,
-        isPreview: i,
+        isPreview: n,
     });
 }
 function I(t) {
@@ -42,42 +42,42 @@ function I(t) {
             (0, s.x1)(e) && e.applicationId === t && !e.data.proxyTicketRefreshing && o.A.refreshProxyTicket(e.id);
 }
 function T(t) {
-    let e = u.A.getProject(t);
+    let e = E.A.getProject(t);
     null != e && (I(e.application_id), I(e.preview_application_id ?? null));
 }
 let R = null,
     A = null;
 async function S(t) {
     let e = t ?? null;
-    if (u.A.getProjectsFetchState()?.type === "loading") {
+    if (E.A.getProjectsFetchState()?.type === "loading") {
         null != e && e !== R && (A = e);
         return;
     }
     (R = e), l.h.dispatch({ type: "VIBEGRATIONS_PROJECTS_FETCH_START" });
     try {
-        let { body: i } = await n.Bo.get({
+        let { body: n } = await i.Bo.get({
             url: d.Rsh.VIBEGRATIONS_PROJECTS,
             query: null != t ? { guild_id: t } : void 0,
             rejectWithError: !0,
         });
-        l.h.dispatch({ type: "VIBEGRATIONS_PROJECTS_FETCH_SUCCESS", projects: i, guildId: e });
+        l.h.dispatch({ type: "VIBEGRATIONS_PROJECTS_FETCH_SUCCESS", projects: n, guildId: e });
     } catch {
         l.h.dispatch({ type: "VIBEGRATIONS_PROJECTS_FETCH_FAIL" });
     }
-    let i = A;
-    (A = null), null != i && i !== e && S(i);
+    let n = A;
+    (A = null), null != n && n !== e && S(n);
 }
-async function h(t, e) {
-    let i = await n.Bo.get({ url: d.Rsh.VIBEGRATIONS_PROJECT(t), rejectWithError: !1, signal: e });
-    if (e?.aborted !== !0 && i.ok) {
+async function f(t, e) {
+    let n = await i.Bo.get({ url: d.Rsh.VIBEGRATIONS_PROJECT(t), rejectWithError: !1, signal: e });
+    if (e?.aborted !== !0 && n.ok) {
         var r;
-        l.h.dispatch({ type: "VIBEGRATIONS_PROJECT_UPDATE_SUCCESS", project: i.body.project }),
+        l.h.dispatch({ type: "VIBEGRATIONS_PROJECT_UPDATE_SUCCESS", project: n.body.project }),
             (r = {
-                bot_permissions_changed: i.body.bot_permissions_changed,
-                integration_installed: i.body.integration_installed,
-                preview_ready: i.body.preview_ready,
-                has_activity: i.body.has_activity,
-                owner_authorization_revoked: i.body.owner_authorization_revoked,
+                bot_permissions_changed: n.body.bot_permissions_changed,
+                integration_installed: n.body.integration_installed,
+                preview_ready: n.body.preview_ready,
+                has_activity: n.body.has_activity,
+                owner_authorization_revoked: n.body.owner_authorization_revoked,
             }),
             l.h.dispatch({
                 type: "VIBEGRATIONS_PROJECT_INTEGRATION_STATUS_UPDATE",
@@ -85,63 +85,63 @@ async function h(t, e) {
                 integrationStatus: r,
             });
     }
-    return i;
+    return n;
 }
-async function f(t) {
-    let { body: e } = await n.Bo.post({
+async function h(t) {
+    let { body: e } = await i.Bo.post({
         url: d.Rsh.VIBEGRATIONS_PROJECTS,
-        body: { flags: c.A2.PUBLIC, ...t },
+        body: { flags: u.A2.PUBLIC, ...t },
         rejectWithError: !1,
     });
     return l.h.dispatch({ type: "VIBEGRATIONS_PROJECT_CREATE_SUCCESS", project: e }), e.id;
 }
 async function O(t, e) {
-    let i = await n.Bo.patch({ url: d.Rsh.VIBEGRATIONS_PROJECT(t), body: e, rejectWithError: !1 });
-    return i.ok && l.h.dispatch({ type: "VIBEGRATIONS_PROJECT_UPDATE_SUCCESS", project: i.body }), i;
+    let n = await i.Bo.patch({ url: d.Rsh.VIBEGRATIONS_PROJECT(t), body: e, rejectWithError: !1 });
+    return n.ok && l.h.dispatch({ type: "VIBEGRATIONS_PROJECT_UPDATE_SUCCESS", project: n.body }), n;
 }
-function C(t, e) {
+function g(t, e) {
     return O(t, { name: e });
 }
-function P(t, e) {
+function C(t, e) {
     return O(t, e);
 }
-async function g(t, e) {
-    let i = await O(t, { icon: e });
-    if (i.ok) {
-        let t = i.body.preview_application_id;
+async function y(t, e) {
+    let n = await O(t, { icon: e });
+    if (n.ok) {
+        let t = n.body.preview_application_id;
         if (null != t)
             try {
                 await (0, a.TA)(t);
             } catch {}
     }
-    return i;
+    return n;
 }
-function y(t, e) {
+function P(t, e) {
     return O(t, e);
 }
 async function w(t) {
-    let e = await n.Bo.del({ url: d.Rsh.VIBEGRATIONS_PROJECT(t), rejectWithError: !1 });
+    let e = await i.Bo.del({ url: d.Rsh.VIBEGRATIONS_PROJECT(t), rejectWithError: !1 });
     return l.h.dispatch({ type: "VIBEGRATIONS_PROJECT_DELETE_SUCCESS", projectId: t }), e;
 }
 function N(t, e) {
     l.h.dispatch({ type: "VIBEGRATIONS_PROJECT_SELECT", guildId: t, projectId: e });
 }
 async function B(t, e) {
-    let { isPreview: i } = e,
-        { bot_permissions_changed: n, integration_installed: l, project: o } = (await h(t)).body,
-        _ = i ? o.preview_application_id : o.application_id;
-    null != _ && (await (0, a.TA)(_), await (0, r.un)(_, { force: !0 }).catch(() => {}), (i && (!l || n)) || I(_)),
-        (0, E.qs)(t, { isPreview: i });
+    let { isPreview: n } = e,
+        { bot_permissions_changed: i, integration_installed: l, project: o } = (await f(t)).body,
+        _ = n ? o.preview_application_id : o.application_id;
+    null != _ && (await (0, a.TA)(_), await (0, r.un)(_, { force: !0 }).catch(() => {}), (n && (!l || i)) || I(_)),
+        (0, c.qs)(t, { isPreview: n });
 }
 function G(t, e) {
     l.h.dispatch({ type: "VIBEGRATIONS_COMPOSER_DRAFT_SET", projectId: t, draft: e });
 }
-function V(t) {
+function L(t) {
     l.h.dispatch({ type: "VIBEGRATIONS_CHAT_SIDEBAR_WIDTH_SET", width: t });
 }
-function D(t) {
+function V(t) {
     l.h.dispatch({ type: "VIBEGRATIONS_BUILDER_PREVIEW_APPLICATION_SET", applicationId: t });
 }
-function L(t) {
+function D(t) {
     l.h.dispatch({ type: "VIBEGRATIONS_BUILDER_PREVIEW_MOBILE_SET", enabled: t });
 }

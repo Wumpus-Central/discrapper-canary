@@ -1,24 +1,24 @@
-n.d(t, { q: () => c });
-var l = n(582128),
-    a = n(598748),
-    i = n(17928),
-    r = n(294323),
-    s = n(627363),
-    o = n(207371),
-    u = n(280450),
-    d = n(675210);
+l.d(t, { q: () => c });
+var n = l(582128),
+    a = l(598748),
+    i = l(17928),
+    r = l(294323),
+    s = l(627363),
+    o = l(207371),
+    u = l(280450),
+    d = l(675210);
 function c(e) {
     let {
             applicationId: t,
-            previewApplicationId: n,
+            previewApplicationId: l,
             declaredActivity: c,
             installScope: m,
-            ownerAuthorizationRevoked: h,
+            ownerAuthorizationRevoked: f,
         } = e,
-        [f, g] = l.useState(null),
-        [p, x] = l.useState(t);
-    p !== t && (x(t), g(null));
-    let v = null != n && n === t ? n : null,
+        [h, g] = n.useState(null),
+        [x, p] = n.useState(t);
+    x !== t && (p(t), g(null));
+    let v = null != l && l === t ? l : null,
         j = (0, i.bG)([u.default], () => u.default.getId()),
         { applicationWidgetConfig: b } = (0, r.A)(j, v ?? void 0),
         y = b?.surfaces,
@@ -29,16 +29,16 @@ function c(e) {
                 widgetBottom: y?.[a.m.WIDGET_BOTTOM] != null,
                 miniProfile: y?.[a.m.MINI_PROFILE] != null,
             }).hasAny,
-        { data: k } = (0, s.YY)(n ?? void 0),
-        w = null != n && k?.bot?.id != null,
-        { data: N, isLoading: C } = (0, s.YY)(t ?? void 0),
-        S = c || (0, o.x)(N),
-        I = null != t && C,
-        E = (0, d.Xm)({ installScope: m, hasFrame: S, hasProfileWidget: A, hasBotDm: w, ownerAuthorizationRevoked: h });
+        { data: k } = (0, s.YY)(l ?? void 0),
+        N = null != l && k?.bot?.id != null,
+        { data: w, isLoading: S } = (0, s.YY)(t ?? void 0),
+        C = c || (0, o.x)(w),
+        E = null != t && S,
+        I = (0, d.Xm)({ installScope: m, hasFrame: C, hasProfileWidget: A, hasBotDm: N, ownerAuthorizationRevoked: f });
     return {
-        availability: E,
-        isResolving: I,
-        activeMode: I ? null : (0, d.Qs)(f, E),
+        availability: I,
+        isResolving: E,
+        activeMode: E ? null : (0, d.Qs)(h, I),
         setMode: g,
         widgetApplicationId: v,
     };

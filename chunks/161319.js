@@ -19,8 +19,8 @@ var s = i(477900),
     v = i(412260),
     _ = i(593687),
     j = i(772167),
-    R = i(294219),
-    E = i(202541),
+    E = i(294219),
+    R = i(202541),
     P = i(652215),
     A = i(375708),
     y = i(341973);
@@ -70,7 +70,7 @@ function O(e) {
         { transitionState: n, onClose: r, partnerIds: c, isLocked: u } = e,
         { promotionsLoaded: p, claimedOutboundPromotionCodeMap: O } = (0, C.y7)(),
         w = (0, d.yK)([v.A], () => v.A.outboundRecurringPromotions),
-        M = (0, R.G)(c, { isLockedCardView: u });
+        M = (0, E.G)(c, { isLockedCardView: u });
     if (!1 === p) return (0, s.jsx)(l.y, {});
     let L = (function (e) {
         let { promotions: t, codesByPromotion: i, partnerIds: s } = e,
@@ -110,7 +110,7 @@ function O(e) {
         preview: (function () {
             if (!0 === u)
                 return (0, s.jsx)(h.A, {
-                    subscriptionTier: E.pe.TIER_2,
+                    subscriptionTier: R.pe.TIER_2,
                     fullWidth: !0,
                     onClick: () => {
                         r();

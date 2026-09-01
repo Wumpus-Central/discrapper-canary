@@ -1,1 +1,1 @@
-e.exports = { o: "block_cee34d", y: "announcer_cee34d" };
+c.exports = { o: "block_cee34d", y: "announcer_cee34d" };

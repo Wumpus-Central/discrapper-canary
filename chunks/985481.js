@@ -1,51 +1,51 @@
-E.d(e, { CI: () => u, LJ: () => S, XK: () => o, y5: () => U });
-var n = E(582128),
-    _ = E(17928),
-    i = E(935208),
-    A = E(308645),
-    l = E(739010),
-    a = E(207913),
-    r = E(393033),
-    T = E(239093);
-function s() {
-    return (0, _.yK)([a.A], () => a.A.getClassifications()).sort(
-        (t, e) => i.default.extractTimestamp(e.id) - i.default.extractTimestamp(t.id),
+i.d(t, { CI: () => T, LJ: () => c, XK: () => S, y5: () => d });
+var n = i(582128),
+    _ = i(17928),
+    E = i(935208),
+    a = i(308645),
+    r = i(739010),
+    s = i(207913),
+    l = i(393033),
+    A = i(239093);
+function o() {
+    return (0, _.yK)([s.A], () => s.A.getClassifications()).sort(
+        (e, t) => E.default.extractTimestamp(t.id) - E.default.extractTimestamp(e.id),
     );
 }
-function S(t) {
-    let e,
-        E = (0, _.bG)([a.A], () => a.A.getClassification(t)),
-        i = (0, _.bG)([a.A], () => a.A.getClassificationRequestState(t)),
-        s = (0, _.bG)([a.A], () => a.A.getIsDsaEligible()),
-        S = (0, _.bG)([a.A], () => a.A.getIsAppealEligible());
+function c(e) {
+    let t,
+        i = (0, _.bG)([s.A], () => s.A.getClassification(e)),
+        E = (0, _.bG)([s.A], () => s.A.getClassificationRequestState(e)),
+        o = (0, _.bG)([s.A], () => s.A.getIsDsaEligible()),
+        c = (0, _.bG)([s.A], () => s.A.getIsAppealEligible());
     return (
-        (e = (0, r._g)(E)
-            ? E.guild_metadata?.member_type === l.Z9.OWNER
-                ? T.w$.GUILD_OWNER
-                : T.w$.GUILD_MEMBER
-            : T.w$.USER),
+        (t = (0, l._g)(i)
+            ? i.guild_metadata?.member_type === r.Z9.OWNER
+                ? A.w$.GUILD_OWNER
+                : A.w$.GUILD_MEMBER
+            : A.w$.USER),
         n.useEffect(() => {
-            void 0 === E && null == i && A.hH(t);
-        }, [t, E, i]),
+            void 0 === i && null == E && a.hH(e);
+        }, [e, i, E]),
         {
-            classification: E,
-            classificationRequestState: i,
-            isDsaEligible: s,
-            isAppealEligible: S && null != E && null == E.appeal_status,
-            violationType: e,
+            classification: i,
+            classificationRequestState: E,
+            isDsaEligible: o,
+            isAppealEligible: c && null != i && null == i.appeal_status,
+            violationType: t,
         }
     );
 }
-function u() {
-    let t = s(),
-        e = new Date();
-    return t.filter((t) => new Date(t.max_expiration_time) > e);
+function T() {
+    let e = o(),
+        t = new Date();
+    return e.filter((e) => new Date(e.max_expiration_time) > t);
 }
-function o() {
-    let t = s(),
-        e = new Date();
-    return t.filter((t) => new Date(t.max_expiration_time) <= e);
+function S() {
+    let e = o(),
+        t = new Date();
+    return e.filter((e) => new Date(e.max_expiration_time) <= t);
 }
-function U() {
-    return (0, _.bG)([a.A], () => a.A.getAppealSignal());
+function d() {
+    return (0, _.bG)([s.A], () => s.A.getAppealSignal());
 }
