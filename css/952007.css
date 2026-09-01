@@ -9024,98 +9024,26 @@
 
 @font-face {
     font-display: swap;
-    font-family: ABC Ginto Nord Discord;
+    font-family: ABC Ginto Discord Nord;
     font-style: normal;
     font-weight: 700;
-    src: url(/assets/bb673ee29d9d9269.woff2) format("woff2")
+    src: url(/assets/f83f3e7b5185847e.woff2) format("woff2")
 }
 
 @font-face {
     font-display: swap;
-    font-family: ABC Ginto Nord Discord;
+    font-family: ABC Ginto Discord Nord;
     font-style: italic;
     font-weight: 700;
-    src: url(/assets/1a1e4ba0da23278e.woff2) format("woff2")
+    src: url(/assets/404896f5b47121de.woff2) format("woff2")
 }
 
 @font-face {
     font-display: swap;
-    font-family: ABC Ginto Normal;
-    font-style: normal;
-    font-weight: 300;
-    src: url(/assets/2d538acdbc2eb6b8.woff2) format("woff2")
-}
-
-@font-face {
-    font-display: swap;
-    font-family: ABC Ginto Normal;
+    font-family: ABC Ginto Discord Nord;
     font-style: italic;
-    font-weight: 300;
-    src: url(/assets/6897c8395199e044.woff2) format("woff2")
-}
-
-@font-face {
-    font-display: swap;
-    font-family: ABC Ginto Normal;
-    font-style: normal;
-    font-weight: 400;
-    src: url(/assets/89cc835cf102bf12.woff2) format("woff2")
-}
-
-@font-face {
-    font-display: swap;
-    font-family: ABC Ginto Normal;
-    font-style: italic;
-    font-weight: 400;
-    src: url(/assets/9e78b20620cb79ff.woff2) format("woff2")
-}
-
-@font-face {
-    font-display: swap;
-    font-family: ABC Ginto Normal;
-    font-style: normal;
-    font-weight: 500;
-    src: url(/assets/094adef82c637a3c.woff2) format("woff2")
-}
-
-@font-face {
-    font-display: swap;
-    font-family: ABC Ginto Normal;
-    font-style: italic;
-    font-weight: 500;
-    src: url(/assets/5b3d873665de628f.woff2) format("woff2")
-}
-
-@font-face {
-    font-display: swap;
-    font-family: ABC Ginto Normal;
-    font-style: normal;
-    font-weight: 700;
-    src: url(/assets/a893ac26791508c7.woff2) format("woff2")
-}
-
-@font-face {
-    font-display: swap;
-    font-family: ABC Ginto Normal;
-    font-style: italic;
-    font-weight: 700;
-    src: url(/assets/5a4f9cc740b6d92b.woff2) format("woff2")
-}
-
-@font-face {
-    font-display: swap;
-    font-family: ABC Ginto Normal;
-    font-style: normal;
-    font-weight: 800;
-    src: url(/assets/908064caebce5abe.woff2) format("woff2")
-}
-
-@font-face {
-    font-display: swap;
-    font-family: ABC Ginto Normal;
-    font-style: italic;
-    font-weight: 800;
-    src: url(/assets/f2d2cc13894d7060.woff2) format("woff2")
+    font-weight: 900;
+    src: url(/assets/09aa0c6f7bc0b851.woff2) format("woff2")
 }
 
 @font-face {
@@ -9123,7 +9051,7 @@
     font-family: ABC Ginto Discord;
     font-style: normal;
     font-weight: 400;
-    src: url(/assets/bd0f5c73464e9717.woff2) format("woff2")
+    src: url(/assets/4fde9afc66b16d4c.woff2) format("woff2")
 }
 
 @font-face {
@@ -9131,7 +9059,7 @@
     font-family: ABC Ginto Discord;
     font-style: normal;
     font-weight: 500;
-    src: url(/assets/a47177db4e543b05.woff2) format("woff2")
+    src: url(/assets/272d1732b4e01ec5.woff2) format("woff2")
 }
 
 @font-face {
@@ -9461,7 +9389,7 @@
     --font-clan-body: Fraunces, "gg sans", serif, "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     --font-clan-signature: Corinthia, "gg sans", cursive, "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     --font-display-marketing: "ABC Ginto Discord", "gg sans", serif, "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    --font-display-marketing-header: "ABC Ginto Nord Discord", "gg sans", serif, "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif
+    --font-display-marketing-header: "ABC Ginto Discord Nord", "gg sans", serif, "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif
 }
 
 :root:lang(bg),
@@ -9474,7 +9402,7 @@
     --font-clan-body: Fraunces, "gg sans", serif, "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     --font-clan-signature: Corinthia, "gg sans", cursive, "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     --font-display-marketing: "ABC Ginto Discord", "gg sans", serif, "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    --font-display-marketing-header: "ABC Ginto Nord Discord", "gg sans", serif, "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif
+    --font-display-marketing-header: "ABC Ginto Discord Nord", "gg sans", serif, "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif
 }
 
 :root:lang(ko) {
@@ -9484,7 +9412,7 @@
     --font-clan-body: Fraunces, "gg sans", serif, "Apple SD Gothic Neo", NanumBarunGothic, "맑은 고딕", "Malgun Gothic", Gulim, 굴림, Dotum, 돋움, "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     --font-clan-signature: Corinthia, "gg sans", cursive, "Apple SD Gothic Neo", NanumBarunGothic, "맑은 고딕", "Malgun Gothic", Gulim, 굴림, Dotum, 돋움, "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     --font-display-marketing: "ABC Ginto Discord", "gg sans", serif, "Apple SD Gothic Neo", NanumBarunGothic, "맑은 고딕", "Malgun Gothic", Gulim, 굴림, Dotum, 돋움, "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    --font-display-marketing-header: "ABC Ginto Nord Discord", "gg sans", serif, "Apple SD Gothic Neo", NanumBarunGothic, "맑은 고딕", "Malgun Gothic", Gulim, 굴림, Dotum, 돋움, "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif
+    --font-display-marketing-header: "ABC Ginto Discord Nord", "gg sans", serif, "Apple SD Gothic Neo", NanumBarunGothic, "맑은 고딕", "Malgun Gothic", Gulim, 굴림, Dotum, 돋움, "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif
 }
 
 :root:lang(ja) {
@@ -9494,7 +9422,7 @@
     --font-clan-body: Fraunces, "gg sans", serif, "Hiragino Sans", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", メイリオ, Meiryo, Osaka, "MS PGothic", "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     --font-clan-signature: Corinthia, "gg sans", cursive, "Hiragino Sans", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", メイリオ, Meiryo, Osaka, "MS PGothic", "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     --font-display-marketing: "ABC Ginto Discord", "gg sans", serif, "Hiragino Sans", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", メイリオ, Meiryo, Osaka, "MS PGothic", "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    --font-display-marketing-header: "ABC Ginto Nord Discord", "gg sans", serif, "Hiragino Sans", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", メイリオ, Meiryo, Osaka, "MS PGothic", "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif
+    --font-display-marketing-header: "ABC Ginto Discord Nord", "gg sans", serif, "Hiragino Sans", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", メイリオ, Meiryo, Osaka, "MS PGothic", "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif
 }
 
 :root:lang(zh-CN) {
@@ -9504,7 +9432,7 @@
     --font-clan-body: Fraunces, "gg sans", serif, "Microsoft YaHei New", 微软雅黑, "Microsoft Yahei", "Microsoft JhengHei", 宋体, SimSun, "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     --font-clan-signature: Corinthia, "gg sans", cursive, "Microsoft YaHei New", 微软雅黑, "Microsoft Yahei", "Microsoft JhengHei", 宋体, SimSun, "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     --font-display-marketing: "ABC Ginto Discord", "gg sans", serif, "Microsoft YaHei New", 微软雅黑, "Microsoft Yahei", "Microsoft JhengHei", 宋体, SimSun, "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    --font-display-marketing-header: "ABC Ginto Nord Discord", "gg sans", serif, "Microsoft YaHei New", 微软雅黑, "Microsoft Yahei", "Microsoft JhengHei", 宋体, SimSun, "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif
+    --font-display-marketing-header: "ABC Ginto Discord Nord", "gg sans", serif, "Microsoft YaHei New", 微软雅黑, "Microsoft Yahei", "Microsoft JhengHei", 宋体, SimSun, "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif
 }
 
 :root:lang(zh-TW) {
@@ -9514,7 +9442,7 @@
     --font-clan-body: Fraunces, "gg sans", serif, "Microsoft JhengHei", 微軟正黑體, "Microsoft JhengHei UI", "Microsoft YaHei", 微軟雅黑, 宋体, SimSun, "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     --font-clan-signature: Corinthia, "gg sans", cursive, "Microsoft JhengHei", 微軟正黑體, "Microsoft JhengHei UI", "Microsoft YaHei", 微軟雅黑, 宋体, SimSun, "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     --font-display-marketing: "ABC Ginto Discord", "gg sans", serif, "Microsoft JhengHei", 微軟正黑體, "Microsoft JhengHei UI", "Microsoft YaHei", 微軟雅黑, 宋体, SimSun, "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    --font-display-marketing-header: "ABC Ginto Nord Discord", "gg sans", serif, "Microsoft JhengHei", 微軟正黑體, "Microsoft JhengHei UI", "Microsoft YaHei", 微軟雅黑, 宋体, SimSun, "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif
+    --font-display-marketing-header: "ABC Ginto Discord Nord", "gg sans", serif, "Microsoft JhengHei", 微軟正黑體, "Microsoft JhengHei UI", "Microsoft YaHei", 微軟雅黑, 宋体, SimSun, "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif
 }
 
 :root {
@@ -9918,4 +9846,4 @@
     --motion-spring-subtle-duration: 598ms
 }
 
-/*# sourceMappingURL=952007.86f038d6888e2976.css.map*/
+/*# sourceMappingURL=952007.682125464edabd16.css.map*/
