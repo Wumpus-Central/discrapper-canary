@@ -8,11 +8,23 @@ var i = n(636537),
     o = n(256964),
     d = n(652215);
 let c = +s.A.Millis.HOUR,
-    u = new Set(
-        [window.GLOBAL_ENV.CDN_HOST, window.GLOBAL_ENV.MEDIA_PROXY_ENDPOINT?.substring(2)].map(r.K).filter(Boolean),
-    );
+    u = [window.GLOBAL_ENV.CDN_HOST, window.GLOBAL_ENV.MEDIA_PROXY_ENDPOINT?.substring(2)]
+        .map(r.K)
+        .filter((e) => null != e && "" !== e);
 function _(e) {
-    return u.has(e.hostname) || !1;
+    return (
+        u.some((t) =>
+            (function (e, t) {
+                if (e === t || e.endsWith(`.${t}`)) return !0;
+                let n = t.indexOf("."),
+                    i = e.indexOf(".");
+                if (-1 === n || -1 === i || e.substring(i + 1) !== t.substring(n + 1)) return !1;
+                let r = e.substring(0, i),
+                    a = `${t.substring(0, n)}-`;
+                return r.startsWith(a) && r.length > a.length;
+            })(e.hostname, t),
+        ) || !1
+    );
 }
 function E(e) {
     let t = Array.from(o.p).some((t) => e.pathname.startsWith(t));
