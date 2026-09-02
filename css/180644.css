@@ -223,6 +223,11 @@
     width: var(--custom-modal-v2-width)
 }
 
+.enable-forced-colors .layoutContainer__9c3be {
+    outline: 2px solid CanvasText;
+    outline-offset: -1px
+}
+
 @media (min-width:929px) {
     .layoutContainer__9c3be.editingPanelEnabled__9c3be {
         grid-template-columns: 0 1fr
@@ -246,6 +251,22 @@
         --custom-modal-v2-max-width: calc(100vw - var(--space-48)*2);
         --custom-modal-v2-profile-width: min(max(300px, calc(45.5vw - (var(--custom-modal-v2-editing-panel-width) + 2*var(--space-48))*0.455)), 400px);
         grid-template-columns: var(--custom-modal-v2-editing-panel-width) 1fr
+    }
+}
+
+@media (min-height:785px) and (min-width:929px) {
+    .layoutContainer__9c3be {
+        border-radius: var(--radius-lg)
+    }
+
+    .layoutContainer__9c3be.editingPanelExpanded__9c3be {
+        border-radius: 0
+    }
+}
+
+@media (min-height:785px) and (min-width:1169px) {
+    .layoutContainer__9c3be.editingPanelExpanded__9c3be {
+        border-radius: var(--radius-lg)
     }
 }
 
@@ -635,4 +656,4 @@
     margin-top: 4px
 }
 
-/*# sourceMappingURL=180644.43794493c9a6647e.css.map*/
+/*# sourceMappingURL=180644.5d19479a4d22707b.css.map*/

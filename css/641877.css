@@ -1970,6 +1970,7 @@
 }
 
 .noticeText__2dc08 {
+    color: var(--text-strong);
     flex: 1;
     overflow: hidden
 }
@@ -1978,6 +1979,20 @@
     display: flex;
     flex-shrink: 0;
     gap: var(--space-8)
+}
+
+.enable-forced-colors .content__2dc08.emphasized__2dc08 {
+    background-color: Highlight;
+    border-color: Highlight;
+    forced-color-adjust: none
+}
+
+.enable-forced-colors .content__2dc08.emphasized__2dc08:before {
+    display: none
+}
+
+.enable-forced-colors .content__2dc08.emphasized__2dc08 .noticeText__2dc08 {
+    color: HighlightText
 }
 
 .container__8061a {
@@ -2051,4 +2066,4 @@
     object-fit: contain
 }
 
-/*# sourceMappingURL=641877.93516df52c7aec2b.css.map*/
+/*# sourceMappingURL=641877.db9a099c4fef1dcb.css.map*/

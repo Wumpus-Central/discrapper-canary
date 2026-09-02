@@ -1945,6 +1945,10 @@
     width: 4px
 }
 
+.enable-forced-colors .dotSpacer__26b1f {
+    background-color: CanvasText
+}
+
 .guildTag__26b1f.guildTag__26b1f {
     background: transparent;
     border: 1px solid var(--user-profile-border);
@@ -1984,4 +1988,19 @@
     background-color: var(--opacity-white-40)
 }
 
-/*# sourceMappingURL=866212.3c98206534172be2.css.map*/
+.enable-forced-colors .displayName__26b1f {
+    color: CanvasText;
+    forced-color-adjust: none
+}
+
+.enable-forced-colors .clickable__26b1f .displayName__26b1f {
+    forced-color-adjust: auto
+}
+
+.enable-forced-colors .clickable__26b1f:focus-visible .displayName__26b1f,
+.enable-forced-colors .clickable__26b1f:hover .displayName__26b1f {
+    color: CanvasText;
+    forced-color-adjust: none
+}
+
+/*# sourceMappingURL=866212.95630cd6416a251b.css.map*/

@@ -58,7 +58,7 @@ function p(e) {
                           children: [
                               (0, a.jsx)(u.E, {
                                   variant: "text-sm/normal",
-                                  color: "text-strong",
+                                  color: "none",
                                   id: r,
                                   className: g.ut,
                                   children: p,

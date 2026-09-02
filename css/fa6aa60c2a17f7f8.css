@@ -28,6 +28,10 @@
     transition: color .15s ease-out
 }
 
+.enable-forced-colors .addConnectionButton__9bfb9 {
+    color: ButtonText
+}
+
 .connection__9bfb9 {
     display: flex;
     gap: 8px
@@ -118,4 +122,4 @@
     color: var(--text-default)
 }
 
-/*# sourceMappingURL=639a574509f56578.css.map*/
+/*# sourceMappingURL=fa6aa60c2a17f7f8.css.map*/

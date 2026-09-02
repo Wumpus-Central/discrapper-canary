@@ -81,16 +81,20 @@
 }
 
 .discordIcon_c4eb81 {
-    color: var(--interactive-text-default);
+    color: var(--text-subtle);
     height: 16px;
     width: 16px
 }
 
 .divider_c4eb81 {
-    background-color: var(--interactive-text-default);
+    background-color: var(--text-subtle);
     border-radius: 50%;
     height: 4px;
     width: 4px
+}
+
+.enable-forced-colors .divider_c4eb81 {
+    background-color: CanvasText
 }
 
 .footer__272c7 {
@@ -312,4 +316,4 @@
     width: 80%
 }
 
-/*# sourceMappingURL=389187.536bbf09746e6aa6.css.map*/
+/*# sourceMappingURL=389187.cd517c55648cc9b9.css.map*/
