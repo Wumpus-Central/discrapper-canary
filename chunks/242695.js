@@ -1,5 +1,6 @@
 a.exports = {
     kL: "container_da8ac7",
+    vk: "clickable_da8ac7",
     Qs: "content_da8ac7",
     dx: "bottomSubText_da8ac7",
     wx: "header_da8ac7",

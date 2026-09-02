@@ -14,7 +14,7 @@ var l = n(477900),
     h = n(558620),
     f = n(206441),
     E = n(652215),
-    S = n(477729),
+    S = n(583741),
     y = n(375708);
 class I {
     isTrial;
@@ -153,12 +153,13 @@ function A(e) {
                       })
                     : (0, l.jsx)(o._, {
                           handlePaymentSourceAdd: n,
+                          handleStepChange: R,
                           planGroup: v,
                           verifiedTrialId: P,
                           reviewWarningMessage: e.reviewWarningMessage,
                       });
             },
-            [w, v, P, e.reviewWarningMessage, x, L],
+            [w, v, P, e.reviewWarningMessage, x, L, R],
         ),
         D = null != r ? r.id : void 0,
         G = i.useMemo(() => ({ user_trial_offer_id: D }), [D]),

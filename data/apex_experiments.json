@@ -5156,6 +5156,28 @@
     }
   },
   {
+    "name": "2026-07-smag-nitro-gifting-lightning-checkout",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false,
+      "premiumSkuToPlan": null
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true,
+        "premiumSkuToPlan": null
+      },
+      "2": {
+        "enabled": true,
+        "premiumSkuToPlan": null
+      }
+    }
+  },
+  {
     "name": "2026-07-social-layer-storefront-spend-orbs-banner-copy",
     "kind": "user",
     "defaultConfig": {

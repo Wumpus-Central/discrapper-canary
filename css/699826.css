@@ -28,6 +28,11 @@
     margin-bottom: var(--space-24)
 }
 
+.editText__5292b {
+    color: var(--text-brand);
+    padding-inline-start: var(--space-6)
+}
+
 .paymentRestrictionBannerContainer__52623 {
     align-items: center;
     border-radius: 4px;
@@ -90,4 +95,4 @@
     border: 0 !important
 }
 
-/*# sourceMappingURL=278115.bc48000ad5176a90.css.map*/
+/*# sourceMappingURL=699826.bdf3fd5a31ad21d5.css.map*/

@@ -49,7 +49,15 @@
     align-items: center;
     display: flex;
     gap: var(--space-12);
-    width: 100%
+    width: auto
+}
+
+.container_da8ac7.clickable_da8ac7 {
+    cursor: pointer
+}
+
+.container_da8ac7.clickable_da8ac7:hover [data-underline-on-hover] {
+    text-decoration: underline
 }
 
 .content_da8ac7 {
@@ -193,4 +201,4 @@
     width: 64px
 }
 
-/*# sourceMappingURL=472847.8a7259b441ef29a8.css.map*/
+/*# sourceMappingURL=472847.630df38635c195d3.css.map*/

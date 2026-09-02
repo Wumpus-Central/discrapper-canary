@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { $: () => p });
+n.d(t, { $: () => g });
 var l = n(582128),
     i = n(532794),
     s = n(594832),
@@ -97,7 +97,7 @@ function o(e) {
                 n.e("153302"),
                 n.e("836576"),
                 n.e("253453"),
-                n.e("278115"),
+                n.e("699826"),
                 n.e("923981"),
                 n.e("750370"),
                 n.e("972281"),
@@ -267,103 +267,104 @@ function o(e) {
 var u = n(611881),
     c = n(945810);
 let d = (0, c.mj)({
-        name: "2026-02-gifting-modal-redesign",
-        kind: "user",
-        defaultConfig: { enabled: !1 },
-        variations: { 1: { enabled: !0 } },
-    }),
-    h = (0, c.mj)({
-        name: "2026-02-non-dm-gifting-modal-redesign",
-        kind: "user",
-        defaultConfig: { enabled: !1 },
-        variations: { 1: { enabled: !0 } },
-    });
-var m = n(990820),
-    f = n(202541);
-function p(e) {
+    name: "2026-02-gifting-modal-redesign",
+    kind: "user",
+    defaultConfig: { enabled: !1 },
+    variations: { 1: { enabled: !0 } },
+});
+var h = n(56815);
+let m = (0, c.mj)({
+    name: "2026-02-non-dm-gifting-modal-redesign",
+    kind: "user",
+    defaultConfig: { enabled: !1 },
+    variations: { 1: { enabled: !0 } },
+});
+var f = n(990820),
+    p = n(202541);
+function g(e) {
     let {
             giftRecipient: t,
             analyticsLocations: n,
             analyticsObject: r,
             wishlistAnalyticsObject: a,
             premiumAnalyticsObject: c,
-            analyticsLocation: p,
-            giftMessage: g,
-            subscriptionTier: x,
-            location: A,
+            analyticsLocation: g,
+            giftMessage: x,
+            subscriptionTier: A,
+            location: E,
         } = e,
-        { enabled: E } = d.useConfig({ location: A }),
-        { enabled: C } = h.useConfig({ location: A }),
-        I = (0, u.F5)(A),
-        y = (0, s.tA)({ isGift: !0, giftRecipient: t }),
-        S = E && null != t,
-        N = C && null == t,
-        v = S || N,
-        _ = y && null != t;
+        { enabled: C } = d.useConfig({ location: E }),
+        { enabled: I } = m.useConfig({ location: E }),
+        y = (0, u.F5)(E),
+        S = (0, s.tA)({ isGift: !0, giftRecipient: t }),
+        N = C && null != t,
+        v = I && null == t,
+        _ = N || v,
+        T = S && null != t;
     return {
         openGiftModal: l.useCallback(() => {
-            null != x
+            null != A
                 ? (0, i.A)({
                       isGift: !0,
                       giftRecipient: t ?? void 0,
-                      initialPlanId: null,
-                      subscriptionTier: x,
+                      subscriptionTier: A,
                       analyticsLocations: n,
-                      analyticsLocation: p,
+                      analyticsLocation: g,
                       analyticsObject: c ?? r,
-                      giftMessage: g,
+                      giftMessage: x,
+                      ...(0, h.Dv)(A, !0, E),
                   })
-                : I
-                  ? _
+                : y
+                  ? T
                       ? o({
                             giftRecipient: t,
                             analyticsLocations: n,
-                            analyticsLocation: p,
+                            analyticsLocation: g,
                             analyticsObject: a ?? r,
-                            giftMessage: g,
+                            giftMessage: x,
                         })
-                      : (0, m.A)({
+                      : (0, f.A)({
                             giftRecipient: t ?? void 0,
                             analyticsLocations: n,
-                            analyticsLocation: p,
+                            analyticsLocation: g,
                             analyticsObject: a ?? r,
-                            giftMessage: g,
+                            giftMessage: x,
                         })
-                  : S && null != t
-                    ? (0, m.A)({
+                  : N && null != t
+                    ? (0, f.A)({
                           giftRecipient: t,
                           analyticsLocations: n,
-                          analyticsLocation: p,
+                          analyticsLocation: g,
                           analyticsObject: a ?? r,
-                          giftMessage: g,
+                          giftMessage: x,
                       })
-                    : N
-                      ? (0, m.A)({
+                    : v
+                      ? (0, f.A)({
                             analyticsLocations: n,
-                            analyticsLocation: p,
+                            analyticsLocation: g,
                             analyticsObject: a ?? r,
-                            giftMessage: g,
-                            giftingOrigin: f.vQ.GUILD_CHANNEL,
+                            giftMessage: x,
+                            giftingOrigin: p.vQ.GUILD_CHANNEL,
                         })
-                      : _ && null != t
+                      : T && null != t
                         ? o({
                               giftRecipient: t,
                               analyticsLocations: n,
-                              analyticsLocation: p,
+                              analyticsLocation: g,
                               analyticsObject: a ?? r,
-                              giftMessage: g,
+                              giftMessage: x,
                           })
                         : (0, i.A)({
                               isGift: !0,
                               giftRecipient: t ?? void 0,
                               initialPlanId: null,
                               analyticsLocations: n,
-                              analyticsLocation: p,
+                              analyticsLocation: g,
                               analyticsObject: c ?? r,
-                              giftMessage: g,
+                              giftMessage: x,
                           });
-        }, [I, S, N, _, t, n, p, r, a, c, g, x]),
-        shouldShowWishlistModal: _,
-        shouldShowGiftSelectionModal: v,
+        }, [y, N, v, T, t, n, g, r, a, c, x, A, E]),
+        shouldShowWishlistModal: T,
+        shouldShowGiftSelectionModal: _,
     };
 }
