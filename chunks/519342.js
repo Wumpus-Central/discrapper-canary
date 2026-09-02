@@ -23,15 +23,15 @@ var i = n(477900),
     v = n(480890),
     E = n(450149),
     b = n(607407),
-    T = n(776231),
-    _ = n(267102),
-    R = n(326567),
-    S = n(51082),
+    _ = n(776231),
+    T = n(267102),
+    S = n(326567),
+    R = n(51082),
     L = n(616356),
     O = n(734057),
     P = n(309010),
-    w = n(287809),
-    M = n(977997),
+    M = n(287809),
+    w = n(977997),
     U = n(531685),
     D = n(562153),
     V = n(446243),
@@ -39,17 +39,17 @@ var i = n(477900),
     G = n(538638),
     B = n(558076),
     F = n(360729),
-    H = n(856660),
-    z = n(544299),
+    z = n(856660),
+    H = n(544299),
     W = n(996752),
     $ = n(610274),
     Y = n(655413),
     K = n(360627),
-    X = n(884863),
-    q = n(761583),
+    q = n(884863),
+    X = n(739820),
     Z = n(806931),
     Q = n(190460),
-    J = n(1195),
+    J = n(270103),
     ee = n(375708),
     et = n(832770);
 let en = 16 / 9;
@@ -106,19 +106,19 @@ function el(e) {
             posturesEnabled: W,
             seat: K,
         } = e,
-        en = (0, _.Us)(),
-        el = (0, d.bG)([w.default], () => w.default.getUser(t)),
-        ea = (0, d.bG)([w.default], () => w.default.getCurrentUser()?.id === t),
-        { isMenuOpen: es, setMenuOpen: er } = l.useContext(H.t),
+        en = (0, T.Us)(),
+        el = (0, d.bG)([M.default], () => M.default.getUser(t)),
+        ea = (0, d.bG)([M.default], () => M.default.getCurrentUser()?.id === t),
+        { isMenuOpen: es, setMenuOpen: er } = l.useContext(z.t),
         eo = !!ea && es,
         ec = (0, d.bG)([O.A], () => O.A.getChannel(n)?.guild_id),
-        ed = (0, d.bG)([M.A], () => M.A.getVoiceState(ec, t)),
+        ed = (0, d.bG)([w.A], () => w.A.getVoiceState(ec, t)),
         eu = (0, d.bG)([L.A], () => L.A.getStreamForUser(t, ec)),
         eh = (0, C.A)({ userId: t }),
         ep = (0, d.bG)([U.A], () => U.A.isFocused()),
         em = (0, D.tx)(ec, n, el),
         eA = (0, d.bG)([B.A], () => B.A.getRoom(n)?.background ?? o.I.DEFAULT),
-        { seats: ef } = q.iX[eA],
+        { seats: ef } = X.iX[eA],
         ex =
             null != K && K !== c.x.UNSET
                 ? ef[K]
@@ -136,7 +136,7 @@ function el(e) {
             let e = j.A.getParticipant(n, t);
             return (0, Z.Xw)(e) ? e : null;
         }),
-        eN = (0, S.y9)(eI ?? void 0),
+        eN = (0, R.y9)(eI ?? void 0),
         ev = ej && eN && null != eI,
         eE = l.useCallback(() => {
             null != ec &&
@@ -147,36 +147,36 @@ function el(e) {
             (e) => {
                 let t = O.A.getChannel(n);
                 if (null != ec && null != el && null != t)
-                    return (0, R.r)(e, el, t, { context: en }, (e, t) =>
+                    return (0, S.r)(e, el, t, { context: en }, (e, t) =>
                         (0, v.s)(e, y.A.GUILD_ROOM, { tileType: Z.qs.USER, targetUserId: el.id })(t),
                     );
             },
             [ec, el, n, en],
         ),
-        eT = l.useCallback(() => {
+        e_ = l.useCallback(() => {
             null != ec && (0, k.EB)({ guildId: ec, channelId: n, interactionType: "hovered" });
         }, [ec, n]),
-        e_ = (ea && W) || ev,
-        eR = W ? $.x.find((e) => e.id === E) : null,
-        eS =
+        eT = (ea && W) || ev,
+        eS = W ? $.x.find((e) => e.id === E) : null,
+        eR =
             null != ex
-                ? ee.intl.formatToPlainString(eR?.userLabel ?? J.default["4bL+KW"], {
+                ? ee.intl.formatToPlainString(eS?.userLabel ?? J.default["4bL+KW"], {
                       username: em,
                       seatLabel: ex.getLabel(),
                   })
                 : em,
         eL = ed?.isVoiceDeafened()
-            ? ee.intl.formatToPlainString(ee.t["9hDjai"], { username: eS })
+            ? ee.intl.formatToPlainString(ee.t["9hDjai"], { username: eR })
             : ed?.isVoiceMuted()
-              ? ee.intl.formatToPlainString(ee.t.Hd1oVG, { username: eS })
-              : eS,
-        eO = (0, z.Sb)({ position: { x: a, y: u }, targetLabel: eL }),
+              ? ee.intl.formatToPlainString(ee.t.Hd1oVG, { username: eR })
+              : eR,
+        eO = (0, H.Sb)({ position: { x: a, y: u }, targetLabel: eL }),
         eP = null != eO;
     if (null == el || null == ec) return null;
-    let ew = (0, m.Kj)(F),
-        eM = ew.status + 2 * ew.offset,
-        eU = eR?.src,
-        eD = (0, T.kr)(Math.ceil(b * Q.Xq) * (0, T.mZ)()),
+    let eM = (0, m.Kj)(F),
+        ew = eM.status + 2 * eM.offset,
+        eU = eS?.src,
+        eD = (0, _.kr)(Math.ceil(b * Q.Xq) * (0, _.mZ)()),
         eV = null != eU ? `${eU}?width=${eD}&height=${eD}` : null,
         ek = ev
             ? (0, i.jsx)(N.A, {
@@ -189,16 +189,16 @@ function el(e) {
                   ringing: !1,
                   className: ex?.dim ? et.r3 : void 0,
                   avatarDecoration: eV,
-                  avatarClassName: s()(et.Cy, eR?.avatarClassName),
+                  avatarClassName: s()(et.Cy, eS?.avatarClassName),
                   renderIcon:
                       null != eu
                           ? () =>
                                 (0, i.jsx)("div", {
                                     className: et.Sl,
-                                    style: { width: eM, height: eM },
+                                    style: { width: ew, height: ew },
                                     children: (0, i.jsx)(A.U, {
                                         color: h.A.colors.WHITE,
-                                        style: { width: ew.status, height: ew.status },
+                                        style: { width: eM.status, height: eM.status },
                                     }),
                                 })
                           : void 0,
@@ -218,16 +218,16 @@ function el(e) {
                   ringing: !1,
                   className: ex?.dim ? et.r3 : void 0,
                   avatarDecoration: eV,
-                  avatarClassName: eR?.avatarClassName,
+                  avatarClassName: eS?.avatarClassName,
                   renderIcon:
                       null != eu
                           ? () =>
                                 (0, i.jsx)("div", {
                                     className: et.Sl,
-                                    style: { width: eM, height: eM },
+                                    style: { width: ew, height: ew },
                                     children: (0, i.jsx)(A.U, {
                                         color: h.A.colors.WHITE,
-                                        style: { width: ew.status, height: ew.status },
+                                        style: { width: eM.status, height: eM.status },
                                     }),
                                 })
                           : void 0,
@@ -241,7 +241,7 @@ function el(e) {
         let e = (0, i.jsx)(x.D, {
             "aria-label": eL,
             className: et.KI,
-            onMouseEnter: eT,
+            onMouseEnter: e_,
             onClick: eE,
             onContextMenu: eb,
             ...eO,
@@ -249,7 +249,7 @@ function el(e) {
         });
         return (0, i.jsx)(r.animated.div, {
             role: "listitem",
-            className: s()(et.f1, { [et.hY]: e_ }),
+            className: s()(et.f1, { [et.hY]: eT }),
             style: eG,
             children: null != eu ? (0, i.jsx)(ei, { title: em, stream: eu, shouldShow: !eP, children: e }) : e,
         });
@@ -258,24 +258,24 @@ function el(e) {
         eF = (0, i.jsx)(x.D, {
             "aria-label": eL,
             className: et.KI,
-            onMouseEnter: eT,
+            onMouseEnter: e_,
             onClick: eE,
             onContextMenu: eb,
             ...eO,
             children: eB,
         }),
-        eH = eg && ea ? 500 : 100;
+        ez = eg && ea ? 500 : 100;
     return (0, i.jsx)(r.animated.div, {
         role: "listitem",
-        className: s()(et.f1, { [et.hY]: e_ }),
+        className: s()(et.f1, { [et.hY]: eT }),
         style: eG,
         children: ea
-            ? (0, i.jsxs)(X.O, {
+            ? (0, i.jsxs)(q.O, {
                   isOpen: eo,
                   onOpenChange: er,
                   placement: a > 50 ? "left" : "right",
                   children: [
-                      (0, i.jsx)(X.O.Trigger, {
+                      (0, i.jsx)(q.O.Trigger, {
                           children: (e) => {
                               let { ref: t, onClick: n, ...l } = e,
                                   a = (0, i.jsx)(x.D, {
@@ -283,7 +283,7 @@ function el(e) {
                                       "aria-label": eL,
                                       className: s()(et.KI, et.hZ, { [et.qS]: eo }),
                                       innerRef: t,
-                                      onMouseEnter: eT,
+                                      onMouseEnter: e_,
                                       onClick: () => {
                                           n(), eE();
                                       },
@@ -293,15 +293,15 @@ function el(e) {
                                   });
                               return null != eu
                                   ? (0, i.jsx)(ei, { title: em, stream: eu, shouldShow: !eo && !eP, children: a })
-                                  : (0, i.jsx)(Y.A, { name: em, shouldShow: !eo && !eP, delay: eH, children: a });
+                                  : (0, i.jsx)(Y.A, { name: em, shouldShow: !eo && !eP, delay: ez, children: a });
                           },
                       }),
-                      (0, i.jsx)(X.O.Popup, {
+                      (0, i.jsx)(q.O.Popup, {
                           "aria-label": ee.intl.string(J.default.LTAf2V),
                           children: $.x.map((e) => {
                               let t = e.icon;
                               return (0, i.jsx)(
-                                  X.O.Item,
+                                  q.O.Item,
                                   {
                                       text: ee.intl.string(e.label),
                                       icon: t,
@@ -323,14 +323,14 @@ function el(e) {
               })
             : null != eu
               ? (0, i.jsx)(ei, { title: em, stream: eu, shouldShow: !eP, children: eF })
-              : (0, i.jsx)(Y.A, { name: em, shouldShow: !eP, delay: eH, children: eF }),
+              : (0, i.jsx)(Y.A, { name: em, shouldShow: !eP, delay: ez, children: eF }),
     });
 }
 function ea(e) {
     let { channelId: t, guildId: n, users: l, numericAvatarSize: a, avatarSize: s } = e,
         { posturesEnabled: r } = (0, F.mf)({ guildId: n, location: "GuildRoomUserList" }),
         u = (0, d.bG)([B.A], () => B.A.getRoom(t)?.background ?? o.I.DEFAULT),
-        { seats: h } = q.iX[u];
+        { seats: h } = X.iX[u];
     return (0, i.jsx)("div", {
         role: "list",
         "aria-label": ee.intl.string(J.default.xn1EI9),

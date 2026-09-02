@@ -92,7 +92,7 @@ function O(e) {
     });
 }
 var B = a(975571),
-    V = a(641641),
+    V = a(25525),
     R = a(427629);
 function U(e) {
     let { powerup: s } = e;

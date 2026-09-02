@@ -10,7 +10,7 @@ var e = i(477900),
     u = i(93055),
     f = i(17839),
     h = i(928424),
-    p = i(266361),
+    p = i(22277),
     b = i(375708);
 function x(t) {
     let { navId: a, onClose: x = s.Z_, onSelect: _ } = t,

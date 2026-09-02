@@ -29,7 +29,7 @@ function D(e, t, l) {
         d = { size: (0, S.kr)(500 * (0, S.mZ)()) };
     return "jpg" === i && (d.quality = "lossless"), (r += `?${v.stringify(d)}`);
 }
-var y = l(125075),
+var y = l(61567),
     C = l(375708),
     b = l(868602),
     N = l(834730),

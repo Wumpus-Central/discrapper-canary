@@ -17,7 +17,7 @@ var i = n(477900),
     g = n(421773),
     C = n(363195),
     y = n(809369),
-    j = n(1195),
+    j = n(270103),
     I = n(375708),
     N = n(531281);
 function v(e) {
@@ -59,25 +59,25 @@ function v(e) {
 function E(e) {
     let { title: t, image: n, shouldShow: a = !0, forceOpen: d = !1, spacing: h, className: p, children: E } = e,
         b = l.useId(),
-        T = l.useRef(null),
-        _ = (0, r.bG)([C.A], () => C.A.theme),
-        { isHovered: R, setIsHovered: S, onMouseEnter: L, onMouseLeave: O } = (0, g.A)(100, 100);
+        _ = l.useRef(null),
+        T = (0, r.bG)([C.A], () => C.A.theme),
+        { isHovered: S, setIsHovered: R, onMouseEnter: L, onMouseLeave: O } = (0, g.A)(100, 100);
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(m.Y, {
-                targetElementRef: T,
-                shouldShow: a && (R || d),
+                targetElementRef: _,
+                shouldShow: a && (S || d),
                 position: "top",
                 align: "center",
                 spacing: h + 10,
                 animation: m.Y.Animation.FADE,
-                onRequestClose: () => S(!1),
+                onRequestClose: () => R(!1),
                 renderPopout: (l) => {
                     let { closePopout: a, setPopoutRef: r, position: d, nudge: u } = l;
                     return (0, i.jsx)(o.e.Provider, {
                         value: { position: d ?? "top", caretConfig: { align: "custom", customOffset: u } },
                         children: (0, i.jsx)(A.N, {
-                            theme: _,
+                            theme: T,
                             children: (l) =>
                                 e.clickable
                                     ? (0, i.jsx)(f.D, {
@@ -107,7 +107,7 @@ function E(e) {
                 },
                 children: (e) =>
                     (0, i.jsx)("div", {
-                        ref: T,
+                        ref: _,
                         onMouseEnter: L,
                         onMouseLeave: O,
                         onFocus: L,

@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Ic: () => l, PQ: () => d, wH: () => o });
+n.d(t, { EQ: () => d, Ic: () => l, PQ: () => c, wH: () => o });
 var i = n(871633),
     r = n(760751),
     a = n(723702);
@@ -33,7 +33,10 @@ function o(e) {
         rawExePath: t,
     };
 }
-function d(e, t) {
+function d(e, t, n) {
+    return t && null != n ? JSON.stringify({ detected_game_id: n }) : (0, i.MT)(e);
+}
+function c(e, t) {
     if (null == e || null == t) return !1;
     let n = s(e),
         i = (0, a.getPlatformName)();

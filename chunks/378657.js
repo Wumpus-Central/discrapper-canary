@@ -42,11 +42,11 @@ function G(e) {
     }, [t?.entitlements]);
 }
 var T = l(375708),
-    k = l(641641),
+    k = l(25525),
     D = l(144977),
     O = l(628049),
     V = l(568065),
-    U = l(632847),
+    U = l(394107),
     M = l(929729),
     W = l(517826);
 function B(e) {
@@ -793,18 +793,18 @@ function e0(e) {
         ],
     });
 }
-var e1 = l(690118);
-function e6(e) {
+var e5 = l(690118);
+function e1(e) {
     let { guildId: t } = e,
         l = (0, s.bG)([c.A], () => c.A.getGuild(t)),
         { available: i, spent: r, total: o } = (0, eB.A)(t),
         a = (0, j.c)("GuildPowerupsBoostInfoContainerAdmin");
     if (null != l)
         return (0, n.jsxs)("div", {
-            className: e1.kL,
+            className: e5.kL,
             children: [
                 (0, n.jsxs)("div", {
-                    className: e1.N1,
+                    className: e5.N1,
                     children: [
                         (0, n.jsx)(E.E, {
                             variant: a ? "experimental/heading-sm/semibold" : "eyebrow",
@@ -812,7 +812,7 @@ function e6(e) {
                             children: T.intl.string(k.default.hjvcLO),
                         }),
                         (0, n.jsx)(E.E, {
-                            className: e1.C2,
+                            className: e5.C2,
                             variant: a ? "experimental/body-sm/medium" : "text-xs/semibold",
                             children: T.intl.format(k.default.fXE30d, {
                                 helpDeskArticle: eq.A.getArticleURL(eA.MVz.GUILD_BOOSTING_FAQ),
@@ -821,7 +821,7 @@ function e6(e) {
                     ],
                 }),
                 (0, n.jsxs)("div", {
-                    className: e1.hQ,
+                    className: e5.hQ,
                     children: [
                         (0, n.jsx)(e0, { count: i, type: V.yG.AVAILABLE }),
                         (0, n.jsx)(e0, { count: r, type: V.yG.SPENT }),
@@ -829,7 +829,7 @@ function e6(e) {
                     ],
                 }),
                 (0, n.jsx)(eZ.A, {
-                    className: e1.S6,
+                    className: e5.S6,
                     guild: l,
                     analyticsLocation: {
                         page: eA.liQ.GUILD_POWERUPS_OVERVIEW,
@@ -838,7 +838,7 @@ function e6(e) {
                     color: eQ.XD.CUSTOM,
                     size: eQ.lO.LARGE,
                     icon: (0, n.jsx)(f._, {
-                        className: e1.Ng,
+                        className: e5.Ng,
                         size: "sm",
                         color: C.A.unsafe_rawColors.GUILD_BOOSTING_PINK,
                     }),
@@ -846,12 +846,12 @@ function e6(e) {
             ],
         });
 }
-var e9 = l(97808),
-    e8 = l(778712),
-    e5 = l(463930),
+var e6 = l(97808),
+    e9 = l(778712),
+    e8 = l(463930),
     e3 = l(730134),
-    e4 = l(906199),
-    e2 = l(483625),
+    e2 = l(906199),
+    e4 = l(483625),
     e7 = l(854627),
     te = l(696451),
     tt = l(317525),
@@ -859,7 +859,7 @@ var e9 = l(97808),
     tn = l(562153),
     ti = l(19575),
     tr = l(985827);
-let ts = ti.Ay.getEnableHardwareAcceleration() ? e9.Js : e3.A;
+let ts = ti.Ay.getEnableHardwareAcceleration() ? e6.Js : e3.A;
 function to(e) {
     let { guildId: t } = e,
         l = (0, s.bG)([c.A], () => c.A.getGuild(t)),
@@ -873,7 +873,7 @@ function to(e) {
             avatarDecorationSrc: m,
             avatarSrc: p,
             eventHandlers: x,
-        } = (0, e7.A)({ userId: r?.id, guildId: t, size: e8._3.SIZE_40, animateOnHover: !d }),
+        } = (0, e7.A)({ userId: r?.id, guildId: t, size: e9._3.SIZE_40, animateOnHover: !d }),
         A = (0, j.c)("GuildPowerupsBoostInfoContainerMember");
     return null == l || null == a || null == r
         ? null
@@ -892,7 +892,7 @@ function to(e) {
                               variant: A ? "text-sm/normal" : "text-sm/medium",
                               children: T.intl.format(u ? k.default["7fWTg4"] : k.default["7PXeeQ"], {
                                   onClick: () => {
-                                      (0, e4.K4)({
+                                      (0, e2.K4)({
                                           guildId: t,
                                           location: {
                                               section: eA.JJy.GUILD_POWERUPS_OVERVIEW_SIDEBAR,
@@ -906,17 +906,17 @@ function to(e) {
                   }),
                   null != i &&
                       !u &&
-                      (0, n.jsx)(e2.V, {
+                      (0, n.jsx)(e4.V, {
                           avatar: (0, n.jsx)(ts, {
                               ...x,
                               user: r,
                               src: p,
                               avatarDecoration: m,
-                              size: e8._3.SIZE_40,
+                              size: e9._3.SIZE_40,
                               "aria-hidden": !0,
                               animate: !0,
                           }),
-                          username: (0, n.jsx)(e5.g, {
+                          username: (0, n.jsx)(e8.g, {
                               variant: "text-md/semibold",
                               name: tn.Ay.getName(t, null, r),
                               colorString: i.colorString,
@@ -1007,7 +1007,7 @@ function tA(e) {
                             shouldShow: !0,
                             asContainer: !0,
                             delay: 1e3,
-                            children: (0, n.jsx)(e5.g, {
+                            children: (0, n.jsx)(e8.g, {
                                 variant: "text-md/semibold",
                                 name: o,
                                 colorString: a ?? null,
@@ -1396,7 +1396,7 @@ function tI(e) {
                               children: [
                                   U
                                       ? (0, n.jsxs)(n.Fragment, {
-                                            children: [(0, n.jsx)(e6, { guildId: P }), (0, n.jsx)(eJ, { guildId: P })],
+                                            children: [(0, n.jsx)(e1, { guildId: P }), (0, n.jsx)(eJ, { guildId: P })],
                                         })
                                       : (0, n.jsxs)("div", {
                                             className: tv.CG,

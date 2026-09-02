@@ -1,40 +1,60 @@
 "use strict";
-n.d(t, { A: () => A });
-var i = n(780907),
-    r = n(110782),
-    a = n(439372),
-    s = n(569926),
-    l = n(760751),
-    o = n(189081),
-    d = n(927813),
-    c = n(403362),
-    u = n(723702),
-    _ = n(953384);
-class E extends a.A {
+n.d(t, { A: () => p });
+var i = n(228366),
+    r = n(780907),
+    a = n(110782),
+    s = n(439372),
+    l = n(627363),
+    o = n(569926),
+    d = n(760751),
+    c = n(189081),
+    u = n(480595),
+    _ = n(927813),
+    E = n(403362),
+    A = n(723702),
+    h = n(953384),
+    I = n(952818);
+class f extends s.A {
     intervalId;
     nonGameIntervalId;
     actions = {
         POST_CONNECTION_OPEN: () => this.handlePostConnectionOpen(),
-        RUNNING_GAMES_CHANGE: (e) => this.fetchRunningGameRecords(e),
+        RUNNING_GAMES_CHANGE: (e) => {
+            this.fetchRunningGameRecords(e), this.prefetchSdkApplications();
+        },
+        LOCAL_ACTIVITY_UPDATE: () =>
+            i.h.wait(() => {
+                this.prefetchSdkApplications();
+            }),
     };
     fetchRunningGameRecords(e) {
-        let t = e.games.map((e) => e.id ?? l.A.findGame(e)?.id).filter(c.Vq);
-        0 !== t.length && s.I.fetchMany(...t.map((e) => [e]));
+        let t = e.games.map((e) => e.id ?? d.A.findGame(e)?.id).filter(E.Vq);
+        0 !== t.length && o.I.fetchMany(...t.map((e) => [e]));
+    }
+    prefetchSdkApplications() {
+        let e = new Set();
+        for (let t of I.Ay.getRunningGames()) {
+            let n = u.A.getApplicationIdForPID(t.pid);
+            null != n && e.add(n);
+        }
+        if (0 === e.size) return;
+        let t = [...e].map((e) => [e]);
+        l.YY.fetchMany(...t);
     }
     handlePostConnectionOpen() {
-        (0, u.isDesktop)() && !o.A.fetched && (0, r.Yq)(),
-            i.Ay.getDetectableGames(),
-            i.Ay.getDetectableBlocklist(),
+        (0, A.isDesktop)() && !c.A.fetched && (0, a.Yq)(),
+            r.Ay.getDetectableGames(),
+            r.Ay.getDetectableBlocklist(),
             (this.intervalId = setInterval(
                 () => {
-                    i.Ay.getDetectableGames(), i.Ay.getDetectableBlocklist();
+                    r.Ay.getDetectableGames(), r.Ay.getDetectableBlocklist();
                 },
-                l.A.detectableGamesTtl + Math.random() * d.A.Millis.HOUR,
+                d.A.detectableGamesTtl + Math.random() * _.A.Millis.HOUR,
             )),
-            i.Ay.getDetectableNonGames(),
+            r.Ay.getDetectableNonGames(),
             (this.nonGameIntervalId = setInterval(
-                i.Ay.getDetectableNonGames,
-                _.A.ttl + Math.random() * d.A.Millis.HOUR,
+                r.Ay.getDetectableNonGames,
+                h.A.ttl + Math.random() * _.A.Millis.HOUR,
             ));
     }
     _terminate() {
@@ -43,4 +63,4 @@ class E extends a.A {
                 (clearInterval(this.nonGameIntervalId), (this.nonGameIntervalId = void 0));
     }
 }
-let A = new E();
+let p = new f();

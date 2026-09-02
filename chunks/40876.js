@@ -655,7 +655,7 @@ let r = {
         neverLoadBeforeConnectionOpen: !0,
     },
     DetectableGamesManager: {
-        actions: ["POST_CONNECTION_OPEN", "RUNNING_GAMES_CHANGE"],
+        actions: ["POST_CONNECTION_OPEN", "RUNNING_GAMES_CHANGE", "LOCAL_ACTIVITY_UPDATE"],
         inlineRequire: () => n(296797).A,
         neverLoadBeforeConnectionOpen: !0,
     },
@@ -671,6 +671,8 @@ let r = {
             "QUESTS_ENROLL_SUCCESS",
             "RUNNING_GAMES_CHANGE",
             "RUNNING_NON_GAMES_CHANGE",
+            "LOCAL_ACTIVITY_UPDATE",
+            "RPC_APP_DISCONNECTED",
             "QUESTS_FETCH_CURRENT_QUESTS_SUCCESS",
             "STREAM_START",
             "STREAM_CREATE",
@@ -683,6 +685,8 @@ let r = {
             "EMBEDDED_ACTIVITY_UPDATE_V2",
             "QUESTS_PREVIEW_UPDATE_SUCCESS",
             "QUEST_APPLICATION_START_TIMER",
+            "GAME_FETCH_SUCCESS",
+            "APPLICATIONS_FETCH_SUCCESS",
         ],
         inlineRequire: () => n(378187).A,
         neverLoadBeforeConnectionOpen: !0,
@@ -733,6 +737,9 @@ let r = {
     },
     RunningGameHeartbeatManager: {
         actions: [
+            "APPLICATIONS_FETCH_SUCCESS",
+            "GAMES_DATABASE_UPDATE",
+            "LOCAL_ACTIVITY_UPDATE",
             "RUNNING_GAMES_CHANGE",
             "LOGOUT",
             "POST_CONNECTION_OPEN",

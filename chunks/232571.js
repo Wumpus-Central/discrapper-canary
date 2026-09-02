@@ -12,7 +12,7 @@ var i = n(477900),
     p = n(558076),
     m = n(544299),
     A = n(996752),
-    f = n(1195),
+    f = n(270103),
     x = n(375708),
     g = n(781505);
 function C() {
@@ -62,7 +62,7 @@ function y(e) {
                 .some((e) => e.seat === N || (e.position?.x === n && e.position?.y === y)),
         ),
         b = (0, s.bG)([c.A], () => c.A.getChannel(t)?.guild_id),
-        T = l.useCallback(async () => {
+        _ = l.useCallback(async () => {
             null != b &&
                 (v
                     ? (0, u.AQ)(b, t, { user_position: { x: n, y }, user_seat: N }).catch((e) =>
@@ -70,22 +70,22 @@ function y(e) {
                       )
                     : ((0, u.TJ)({ x: n, y }, N), (await (0, o.A)({ channelId: t })) || (0, u.Ys)()));
         }, [v, b, t, n, y, N]),
-        _ = (0, m.Sb)({
+        T = (0, m.Sb)({
             position: { x: n, y },
             targetLabel: x.intl.formatToPlainString(f.default.NYm6Cb, { seatLabel: j }),
         });
     if (E || null == b) return null;
-    let { numericAvatarSize: R } = (0, A.F)(I),
-        S = 1.2 * Math.max(R, 24);
+    let { numericAvatarSize: S } = (0, A.F)(I),
+        R = 1.2 * Math.max(S, 24);
     return (0, i.jsx)(r.m, {
-        text: v || null != _ ? null : x.intl.string(x.t["96ANUN"]),
+        text: v || null != T ? null : x.intl.string(x.t["96ANUN"]),
         children: (0, i.jsx)(a.D, {
             role: "listitem",
             "aria-label": j,
             className: g.am,
-            style: { width: S, height: S, left: `calc(${n}% - ${S / 2}px)`, top: `calc(${y}% - ${S / 2}px)` },
-            onClick: T,
-            ..._,
+            style: { width: R, height: R, left: `calc(${n}% - ${R / 2}px)`, top: `calc(${y}% - ${R / 2}px)` },
+            onClick: _,
+            ...T,
             children: (0, i.jsx)(C, {}),
         }),
     });

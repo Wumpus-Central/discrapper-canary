@@ -23,15 +23,15 @@ var i = n(477900),
     v = n(611371),
     E = n(769015),
     b = n(208971),
-    T = n(446243),
-    _ = n(920639),
-    R = n(558076),
-    S = n(360729),
+    _ = n(446243),
+    T = n(920639),
+    S = n(558076),
+    R = n(360729),
     L = n(508654),
     O = n(974930),
     P = n(961314),
-    w = n(58736),
-    M = n(742589),
+    M = n(58736),
+    w = n(742589),
     U = n(376352),
     D = n(353428),
     V = n(46054),
@@ -39,14 +39,14 @@ var i = n(477900),
     G = n(665691),
     B = n(241756),
     F = n(198052),
-    H = n(532622),
-    z = n(416528),
+    z = n(532622),
+    H = n(416528),
     W = n(136523),
     $ = n(806931),
     Y = n(375708),
-    K = n(1195),
-    X = n(776811),
-    q = n(165648);
+    K = n(270103),
+    q = n(776811),
+    X = n(165648);
 function Z(e) {
     let { user: t, channel: n, stream: l, color: a } = e,
         s = (0, B.A)(n, t, l);
@@ -54,7 +54,7 @@ function Z(e) {
         ? null
         : (0, i.jsxs)(i.Fragment, {
               children: [
-                  (0, i.jsx)(x.A, { className: X.my, size: o._3.SIZE_24, user: t, animate: !1 }),
+                  (0, i.jsx)(x.A, { className: q.my, size: o._3.SIZE_24, user: t, animate: !1 }),
                   (0, i.jsx)(c.E, { variant: "text-md/medium", color: a, lineClamp: 1, children: s }),
               ],
           });
@@ -69,10 +69,10 @@ function Q(e) {
         null != n &&
             (t = (0, i.jsxs)(i.Fragment, {
                 children: [
-                    (0, i.jsx)(w.Ay.Divider, { className: X.yF }),
-                    (0, i.jsx)(E.A, { game: n, className: X.RI }),
+                    (0, i.jsx)(M.Ay.Divider, { className: q.yF }),
+                    (0, i.jsx)(E.A, { game: n, className: q.RI }),
                     (0, i.jsx)(c.E, {
-                        className: X.W$,
+                        className: q.W$,
                         variant: "text-md/normal",
                         color: "none",
                         children: (0, g.A)(n.name),
@@ -84,19 +84,19 @@ function Q(e) {
             n = l.stream;
         t = (0, i.jsxs)(i.Fragment, {
             children: [
-                (0, i.jsx)(w.Ay.Divider, { className: X.yF }),
+                (0, i.jsx)(M.Ay.Divider, { className: q.yF }),
                 (0, i.jsx)(Z, { user: e, channel: a, stream: n, color: "text-strong" }),
                 (0, i.jsx)(U.F, { user: e, stream: n, channel: a }),
             ],
         });
     } else o && (t = (0, i.jsx)(P.A, { guildEvent: s, recurrenceId: r }));
-    return (0, i.jsx)("div", { className: X.kL, children: t });
+    return (0, i.jsx)("div", { className: q.kL, children: t });
 }
 function J(e) {
     let { channel: t, guild: a, appContext: o, inCall: x, isChatOpen: g, exitFullScreen: E, guildRoomVisible: L } = e,
         O = (0, r.bG)([F.A], () => F.A.getSelectedParticipant(t.id), [t.id]),
-        { enabled: P } = (0, S.mf)({ guildId: a?.id, location: "ChannelCallHeader" }),
-        U = (0, r.bG)([R.A], () => R.A.getVideoOverlayVisibility()),
+        { enabled: P } = (0, R.mf)({ guildId: a?.id, location: "ChannelCallHeader" }),
+        U = (0, r.bG)([S.A], () => S.A.getVideoOverlayVisibility()),
         B = P && !L,
         Z = (0, j.Ay)(t),
         J = B ? Y.intl.string(K.default.f7g0DK) : L ? `${Z} \xb7 ${Y.intl.string(K.default.wRLmM0)}` : Z,
@@ -106,17 +106,17 @@ function J(e) {
     t.isDM() ? (en = Y.intl.string(Y.t.jN2DfZ)) : t.isGroupDM() && (en = Y.intl.string(Y.t["e5y+gm"]));
     let ei = (0, b.G)((0, I.l)(t)),
         el = t.isGuildVoice() && x && null != ei && ei.length > 0,
-        ea = (0, H.Ay)(t),
+        ea = (0, z.Ay)(t),
         es = el
             ? (0, i.jsx)("div", {
-                  className: X.Ke,
+                  className: q.Ke,
                   children: (0, i.jsx)(u.m, {
                       text: Y.intl.string(Y.t.Mgpxiw),
                       delay: 500,
                       position: "bottom",
                       shouldShow: ea,
                       children: (0, i.jsxs)(h.D, {
-                          className: s()(X.WH, { [X.BI]: ea }),
+                          className: s()(q.WH, { [q.BI]: ea }),
                           onClick: ea
                               ? function () {
                                     (0, m.openModalLazy)(
@@ -131,14 +131,14 @@ function J(e) {
                           children: [
                               (0, i.jsx)(c.E, {
                                   variant: "text-xs/normal",
-                                  className: s()(X.Gh, q.PT, { [X.BI]: ea }),
+                                  className: s()(q.Gh, X.PT, { [q.BI]: ea }),
                                   children: V.A.parseVoiceChannelStatus(ei, !0, { channelId: t.id }),
                               }),
                               ea &&
                                   (0, i.jsx)(p.PencilIcon, {
                                       size: "custom",
                                       color: "currentColor",
-                                      className: s()(X.rD, X.BI),
+                                      className: s()(q.rD, q.BI),
                                       width: 14,
                                       height: 14,
                                   }),
@@ -151,9 +151,9 @@ function J(e) {
         eo = l.useCallback(() => {
             B &&
                 (U
-                    ? (0, T.UV)(!1, t.id)
-                    : ((0, T.zD)(t.id),
-                      (0, _.yt)({
+                    ? (0, _.UV)(!1, t.id)
+                    : ((0, _.zD)(t.id),
+                      (0, T.yt)({
                           channelId: t.id,
                           guildId: t.guild_id,
                           location: C.A.CHANNEL_CALL,
@@ -161,16 +161,16 @@ function J(e) {
                       })));
         }, [B, t.id, t.guild_id, U]);
     return (0, i.jsxs)("div", {
-        className: X.SC,
+        className: q.SC,
         children: [
-            (0, i.jsxs)(w.Ay, {
-                onDoubleClick: M.I,
+            (0, i.jsxs)(M.Ay, {
+                onDoubleClick: w.I,
                 transparent: !0,
-                className: X.jr,
-                innerClassName: X.gi,
-                toolbarClassName: X.KE,
+                className: q.jr,
+                innerClassName: q.gi,
+                toolbarClassName: q.KE,
                 childrenBottom: es,
-                toolbar: (0, i.jsx)(z.A, {
+                toolbar: (0, i.jsx)(H.A, {
                     channel: t,
                     appContext: o,
                     inCall: x,
@@ -182,20 +182,20 @@ function J(e) {
                     guildRoomVideoOverlayVisible: U,
                 }),
                 children: [
-                    (0, i.jsx)(w.Ay.Title, {
-                        wrapperClassName: X.DD,
+                    (0, i.jsx)(M.Ay.Title, {
+                        wrapperClassName: q.DD,
                         onClick: B ? eo : void 0,
                         children: (0, i.jsxs)(i.Fragment, {
                             children: [
                                 null != ee
-                                    ? (0, i.jsx)(w.Ay.ChannelIcon, {
+                                    ? (0, i.jsx)(M.Ay.ChannelIcon, {
                                           icon: ee,
                                           "aria-label": en,
                                           color: B ? "white" : void 0,
                                       })
                                     : null,
                                 J,
-                                P && (0, i.jsx)(v.A, { className: X.vW }),
+                                P && (0, i.jsx)(v.A, { className: q.vW }),
                                 er &&
                                     (0, i.jsx)(u.m, {
                                         text: Y.intl.string(Y.t.QyZ4Td),
@@ -203,7 +203,7 @@ function J(e) {
                                             size: "xs",
                                             "aria-label": Y.intl.string(Y.t.VHXh8a),
                                             color: f.A.colors.INTERACTIVE_TEXT_DEFAULT,
-                                            className: X.vW,
+                                            className: q.vW,
                                         }),
                                     }),
                             ],

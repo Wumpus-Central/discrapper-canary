@@ -52,7 +52,7 @@ let i = {
 };
 var r = n(821578),
     a = n(750459),
-    s = n(1195),
+    s = n(270103),
     l = n(375708);
 let o =
     "https://cdn.discordapp.com/assets/content/7de81684192bd2bffb15960bbbd0c800452981c3c68d45da1eab9bd11d4354ac.png";

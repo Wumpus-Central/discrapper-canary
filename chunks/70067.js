@@ -12,7 +12,7 @@ var a = n(17928),
     h = n(544299),
     p = n(932453),
     m = n(652215),
-    A = n(1195),
+    A = n(270103),
     f = n(375708);
 function x(e) {
     let { channelId: t, asset: n, position: x, width: g } = e,

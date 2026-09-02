@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => x }), n(321073), n(938796);
+n.d(t, { A: () => B }), n(321073), n(938796);
 var i = n(812729),
     r = n.n(i),
     a = n(435558),
@@ -46,8 +46,12 @@ var m = n(155718),
     b = n(652215);
 let M = [],
     P = {},
-    U = null;
-function w() {
+    U = {},
+    w = 0,
+    G = {},
+    x = {},
+    k = null;
+function F() {
     let e = [],
         t = N.G2.getSetting();
     null != t &&
@@ -70,8 +74,8 @@ function w() {
             n = null;
         e?.pid != null && (n = t.find((t) => t.pid === e.pid) ?? null),
             null == n && e?.id != null && (n = t.find((t) => t.id === e.id) ?? null),
-            null != n ? (null == U && (U = n.start ?? Date.now()), (o = n)) : (U = null);
-    } else U = null;
+            null != n ? (null == k && (k = n.start ?? Date.now()), (o = n)) : (k = null);
+    } else k = null;
     let d =
             null != o &&
             null != o.name &&
@@ -100,17 +104,17 @@ function w() {
             type: b.$pd.PLAYING,
             name: o.name,
             application_id: o.id ?? t?.id,
-            timestamps: { start: U ?? o.start },
+            timestamps: { start: k ?? o.start },
             ...(0, g.CO)(o),
         });
     }
     let u = S.A.getActivity();
     null != u && e.push({ type: b.$pd.LISTENING, ...u }), r()(M, e) || (M = e);
 }
-class G extends o.Ay.Store {
+class V extends o.Ay.Store {
     static displayName = "LocalActivityStore";
     initialize() {
-        this.waitFor(_.A, O.A, R.A, c.Ay, y.A, T, L.A, A.Ay, D.Ay, v.A, S.A, C.A), this.syncWith([T], () => w());
+        this.waitFor(_.A, O.A, R.A, c.Ay, y.A, T, L.A, A.Ay, D.Ay, v.A, S.A, C.A), this.syncWith([T], () => F());
     }
     getActivities() {
         return M;
@@ -134,34 +138,56 @@ class G extends o.Ay.Store {
         for (let [t, n] of Object.values(P)) if (t === e) return n;
         return null;
     }
+    getApplicationIdForPID(e) {
+        let t = x[e];
+        for (let [n, [i, r]] of Object.entries(U))
+            if (i === e) {
+                let e = G[n];
+                if (null == t || e === t) return r;
+            }
+    }
 }
-let x = new G(d.h, {
-    ROBLOX_SUBGAME_UPDATE: w,
-    ROBLOX_SUBGAME_APPLICATION_FETCH_SUCCESS: w,
+let B = new V(d.h, {
+    ROBLOX_SUBGAME_UPDATE: F,
+    ROBLOX_SUBGAME_APPLICATION_FETCH_SUCCESS: F,
     OVERLAY_INITIALIZE: function (e) {
         let { localActivities: t } = e;
-        (P = { ...t }), w();
+        (P = { ...t }), F();
     },
     START_SESSION: function () {
-        (P = {}), w();
+        (P = {}), (U = {}), (w = 0), (G = {}), (x = {}), F();
     },
     LOCAL_ACTIVITY_UPDATE: function (e) {
-        let { socketId: t, pid: n, activity: i, partyPrivacy: a } = e;
-        if (r()(P[t], [n, i, a])) return !1;
-        null != i ? (P[t] = [n, i, a]) : delete P[t], w();
+        let { socketId: t, pid: n, applicationId: i, activity: a, partyPrivacy: s } = e,
+            l = G[t];
+        null == l && ((l = ++w), (G[t] = l));
+        let o = !1;
+        if (null != n) {
+            let e = x[n],
+                t = null != e && Object.keys(U).some((t) => G[t] === e);
+            (null == e || l >= e || !t) && ((o = l !== e), (x[n] = l));
+        }
+        let d = null == a ? null == P[t] : r()(P[t], [n, a, s]),
+            c = null == i || r()(U[t], [n, i]);
+        if (d && c && !o) return !1;
+        null != i && (U[t] = [n, i]), null != a ? (P[t] = [n, a, s]) : delete P[t], F();
+    },
+    RPC_APP_CONNECTED: function (e) {
+        let { socketId: t } = e;
+        G[t] = ++w;
     },
     RPC_APP_DISCONNECTED: function (e) {
         let { socketId: t } = e;
-        delete P[t], w();
+        delete P[t], delete U[t], F();
     },
-    RUNNING_GAMES_CHANGE: w,
-    LIBRARY_APPLICATION_FLAGS_UPDATE_SUCCESS: w,
-    SPOTIFY_PLAYER_STATE: w,
-    SPOTIFY_PLAYER_PLAY: w,
-    STREAMING_UPDATE: w,
-    USER_CONNECTIONS_UPDATE: w,
-    STREAM_START: w,
-    STREAM_STOP: w,
+    RUNNING_GAMES_CHANGE: F,
+    LIBRARY_APPLICATION_FLAGS_UPDATE_SUCCESS: F,
+    SPOTIFY_PLAYER_STATE: F,
+    SPOTIFY_PLAYER_PLAY: F,
+    STREAMING_UPDATE: F,
+    USER_CONNECTIONS_UPDATE: F,
+    STREAM_START: F,
+    STREAM_STOP: F,
     USER_SETTINGS_PROTO_UPDATE: function () {
         !(function () {
             let e = {},
@@ -179,8 +205,8 @@ let x = new G(d.h, {
             }
             t && (P = e);
         })(),
-            w();
+            F();
     },
-    EMBEDDED_ACTIVITY_CLOSE: w,
-    RUNNING_GAME_TOGGLE_DETECTION: w,
+    EMBEDDED_ACTIVITY_CLOSE: F,
+    RUNNING_GAME_TOGGLE_DETECTION: F,
 });

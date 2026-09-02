@@ -1,5 +1,5 @@
 l.d(t, { kZ: () => i, uZ: () => r, z3: () => o });
-var n = l(295813),
+var n = l(50617),
     a = l(375708);
 let r = ["frame", "widget", "bot"],
     s = { frame: n.default.TI6dfu, widget: n.default.zshJSX, bot: n.default.bBkuBd };

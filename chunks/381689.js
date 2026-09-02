@@ -9,8 +9,8 @@ var i = n(691540),
     d = n(427262),
     c = n(835002),
     u = n(375708),
-    _ = n(800121),
-    E = n(544482);
+    _ = n(841365),
+    E = n(39470);
 function A(e, t, n) {
     let i = l.default.getUser(t),
         r = s.A.getChannel(n),

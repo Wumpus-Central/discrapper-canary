@@ -15,7 +15,7 @@ let c = { low: "Low", medium: "Medium", high: "High", xhigh: "Extra high", max: 
         xai: "xAI (dev)",
         moonshotai: "Moonshot AI (dev)",
     };
-var f = l(295813),
+var f = l(50617),
     h = l(375708),
     g = l(752065);
 function x(e) {

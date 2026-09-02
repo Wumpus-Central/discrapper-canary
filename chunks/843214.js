@@ -12,7 +12,7 @@ var r = a(821609),
     c = a(689906),
     m = a(743569),
     f = a(568065),
-    g = a(641641),
+    g = a(25525),
     k = a(375708);
 function I(e) {
     let { guildId: t, powerup: a, onClose: r, ...n } = e,
