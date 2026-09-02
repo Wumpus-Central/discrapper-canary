@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => P });
+n.d(t, { A: () => w });
 var i = n(962929),
     r = n.n(i),
     a = n(17928),
@@ -32,7 +32,26 @@ function b(e) {
     let {} = e;
     (O = ""), (L = null), (y = !1);
 }
-class M extends a.Ay.Store {
+let M = {
+    [o.aC.PENDING]: o.qN.LOADING,
+    [o.aC.UNBANNED]: o.qN.VERIFIED,
+    [o.aC.VERIFIED_OTHER_VIOLATIONS_REMAIN]: o.qN.VERIFIED_OTHER_VIOLATIONS_REMAIN,
+    [o.aC.UNDERAGE]: o.qN.UNDERAGE,
+    [o.aC.UNDERAGE_MANUAL_REVIEW]: o.qN.UNDERAGE_MANUAL_REVIEW,
+};
+function P() {
+    (_ = !1),
+        (d = {}),
+        (u = { state: l.PN.ALL_GOOD }),
+        (h = null),
+        (S = o.Iv.DIDNT_VIOLATE_POLICY),
+        (N = ""),
+        (p = []),
+        (D = o.qN.NONE),
+        (R = 0),
+        (v = null);
+}
+class U extends a.Ay.Store {
     static displayName = "SafetyHubStore";
     isFetching() {
         return _;
@@ -104,7 +123,7 @@ class M extends a.Ay.Store {
         return R;
     }
 }
-let P = new M(s.h, {
+let w = new U(s.h, {
     SAFETY_HUB_FETCH_START: function (e) {
         _ = !0;
     },
@@ -196,17 +215,18 @@ let P = new M(s.h, {
         let { success: t } = e;
         (D = t ? o.qN.SUCCESS : R < o.ti ? o.qN.LOADING : o.qN.FAILURE), (v = null);
     },
+    SAFETY_HUB_CHECK_AUTOMATED_UNDERAGE_APPEAL_SUCCESS_V2: function (e) {
+        let { status: t } = e;
+        (D = M[t]), (v = null);
+    },
     SAFETY_HUB_CHECK_AUTOMATED_UNDERAGE_APPEAL_FAILURE: function (e) {
         let { error: t } = e;
         (D = o.qN.ERROR), (v = t);
     },
-    LOGOUT: function () {
-        (_ = !1),
-            (d = {}),
-            (u = { state: l.PN.ALL_GOOD }),
-            (h = null),
-            (S = o.Iv.DIDNT_VIOLATE_POLICY),
-            (N = ""),
-            (p = []);
+    SAFETY_HUB_RESET_AGE_CHECK_STATUS: function (e) {
+        let {} = e;
+        (D = o.qN.NONE), (R = 0), (v = null);
     },
+    LOGOUT: P,
+    LOGIN_SUSPENDED_USER: P,
 });
