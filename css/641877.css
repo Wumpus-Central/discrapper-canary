@@ -2034,6 +2034,32 @@
     cursor: pointer
 }
 
+.overflowSlot__8061a {
+    align-items: center;
+    box-sizing: border-box;
+    color: var(--text-default);
+    display: flex;
+    height: 20px;
+    justify-content: center;
+    min-width: 20px;
+    padding: 0 2px;
+    position: relative
+}
+
+.overflowButton__8061a {
+    background: none
+}
+
+.hiddenCount__8061a {
+    visibility: hidden
+}
+
+.editIcon__8061a {
+    inset: 0;
+    margin: auto;
+    position: absolute
+}
+
 .badge__8061a {
     background-position: 50%;
     background-repeat: no-repeat;
@@ -2066,4 +2092,4 @@
     object-fit: contain
 }
 
-/*# sourceMappingURL=641877.55b229c5a6391c66.css.map*/
+/*# sourceMappingURL=641877.39df59de943350a9.css.map*/

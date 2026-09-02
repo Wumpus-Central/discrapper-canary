@@ -4,7 +4,7 @@
     inset-inline-end: var(--space-8);
     inset-inline-start: 0;
     max-height: var(--custom-compact-bar-height);
-    z-index: 1
+    z-index: 2
 }
 
 .compactBarBackground__8e688,
@@ -211,4 +211,4 @@
     width: 100%
 }
 
-/*# sourceMappingURL=5815e79335922c79.css.map*/
+/*# sourceMappingURL=610a77be6588e8b9.css.map*/
