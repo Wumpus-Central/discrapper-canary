@@ -16,17 +16,6 @@
     text-align: center
 }
 
-.badges_b4a4b2 {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    padding: var(--space-8) var(--space-16) 0
-}
-
-.badges_b4a4b2:empty {
-    display: none
-}
-
 .componentEmbedContainer__6e6eb {
     margin-top: 8px;
     position: relative
@@ -278,4 +267,4 @@
     padding: var(--space-4)
 }
 
-/*# sourceMappingURL=631323.735c755a363486aa.css.map*/
+/*# sourceMappingURL=631323.ee7a264e9313d399.css.map*/

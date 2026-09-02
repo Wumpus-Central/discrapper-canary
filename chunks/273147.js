@@ -78,7 +78,7 @@ var U = n(213994),
     w = n(402860),
     H = n(375708),
     V = n(820555);
-function F(e) {
+function B(e) {
     let { userId: t, guildId: n, channelId: l } = e;
     return (0, i.jsx)("div", {
         className: V.k,
@@ -93,7 +93,7 @@ function F(e) {
         }),
     });
 }
-var B = n(332757);
+var F = n(332757);
 let z = c.Ay.getEnableHardwareAcceleration() ? s.Js : s.eu,
     J = a._3.SIZE_96,
     K = {
@@ -109,7 +109,7 @@ function Y(e) {
             channelId: s,
             avatarSize: J,
         });
-    return (0, i.jsx)("div", { className: B.H, children: (0, i.jsx)(z, { ...a, ...r }) });
+    return (0, i.jsx)("div", { className: F.H, children: (0, i.jsx)(z, { ...a, ...r }) });
 }
 function W(e) {
     let { userId: t, guildId: n, channelId: s, headingRef: a } = e,
@@ -136,13 +136,10 @@ function W(e) {
                       contextGuildId: n ?? void 0,
                       displayName: A,
                       pronouns: u?.pronouns,
-                      className: B.eF,
+                      className: F.e,
+                      trailing: (0, i.jsx)(m.A, { displayProfile: u, themeType: O.d.EMBED }),
                   }),
-                  (0, i.jsx)("div", {
-                      className: B.jp,
-                      children: (0, i.jsx)(m.A, { displayProfile: u, themeType: O.d.EMBED }),
-                  }),
-                  (0, i.jsx)(F, { userId: t, guildId: n, channelId: s }),
+                  (0, i.jsx)(B, { userId: t, guildId: n, channelId: s }),
               ],
           });
 }
