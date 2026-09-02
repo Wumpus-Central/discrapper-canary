@@ -702,8 +702,8 @@ function ed(e) {
         })),
         A = null != I && null != p[I] ? p[I]?.type : null,
         P = i.useMemo(
-            () => ({ payment_source_id: I, payment_gateway: g, payment_source_type: A, checkout_flow: h }),
-            [I, g, A, h],
+            () => ({ payment_source_id: I, payment_gateway: g, payment_source_type: A, checkout_flow: h, is_gift: E }),
+            [I, g, A, h, E],
         ),
         v = (0, r.Db)(),
         x = (0, u.BQ)();

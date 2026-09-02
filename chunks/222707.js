@@ -6,9 +6,10 @@ var l = n(531260),
     s = n(375708),
     o = n(109447);
 function u(e) {
-    let { fractionalPremiumInfo: t, selectedPlanId: n, planGroup: l, premiumSubscription: a, isGift: s } = e,
-        o = null != a && null != n && (0, i.Ge)(a, n, l);
-    return t.isFractionalPremiumActive && (null == a || o) && !s && null != n && r.JM.has(n);
+    let { fractionalPremiumInfo: t, selectedPlanId: n, planGroup: l, premiumSubscription: a, isGift: s } = e;
+    if (s || null == n) return !1;
+    let o = null == a || (0, i.Ge)(a, n, l);
+    return t.isFractionalPremiumActive && o && r.JM.has(n);
 }
 function c(e) {
     let {
