@@ -26,12 +26,12 @@ var i = t(477900),
     y = t(74135),
     C = t(460442),
     x = t(699976),
-    b = t(652215),
-    D = t(518477),
-    U = t(375708),
-    j = t(964164),
-    R = t(880465);
-let T = x.Z.SIZE_90;
+    D = t(652215),
+    U = t(518477),
+    b = t(375708),
+    R = t(964164),
+    T = t(880465);
+let j = x.Z.SIZE_90;
 function O(e) {
     let {
             sku: s,
@@ -53,12 +53,12 @@ function O(e) {
         y = l.useCallback(() => {
             S({
                 wishlistId: g,
-                action: D.Mq.WISHLIST_ITEM_CLICKED,
+                action: U.Mq.WISHLIST_ITEM_CLICKED,
                 skuId: s.id,
                 productLines: new Set([s.productLine]),
             }),
                 w?.surface != null &&
-                    k.default.track(b.HAw.WISHLIST_ITEM_CLICKED, {
+                    k.default.track(D.HAw.WISHLIST_ITEM_CLICKED, {
                         sku_id: s.id,
                         wishlist_id: g,
                         wishlist_owner_id: w.wishlistOwnerId,
@@ -79,9 +79,9 @@ function O(e) {
             sku: s,
             user: t,
             guildId: n,
-            spec: T,
-            cardStyle: a()(j.Nr, o),
-            skuPreviewStyle: a()(j.ev, r),
+            spec: j,
+            cardStyle: a()(R.Nr, o),
+            skuPreviewStyle: a()(R.ev, r),
             onHoverOrFocusChange: m,
             onClick: y,
             "aria-label": f,
@@ -106,18 +106,18 @@ function G(e) {
             if (!I) {
                 S(!0);
                 try {
-                    await A.A.addSkuToWishlist(s.id, t), c?.(), o?.({ tabSection: D.RP.WISHLIST });
+                    await A.A.addSkuToWishlist(s.id, t), c?.(), o?.({ tabSection: U.RP.WISHLIST });
                 } catch (e) {
-                    (0, p.P0)((0, f.o)(U.intl.string(U.t.F8FvUy), g.Ck.FAILURE)),
-                        h.O.announce(U.intl.string(U.t.F8FvUy));
+                    (0, p.P0)((0, f.o)(b.intl.string(b.t.F8FvUy), g.Ck.FAILURE)),
+                        h.O.announce(b.intl.string(b.t.F8FvUy));
                 } finally {
                     S(!1);
                 }
             }
         }, [s, t, I, o, c]),
-        M = l.useMemo(() => a()({ [j.zW]: n || I }, r), [n, I, r]);
+        M = l.useMemo(() => a()({ [R.zW]: n || I }, r), [n, I, r]);
     return (0, i.jsxs)(O, {
-        "aria-label": U.intl.formatToPlainString(U.t.xRjJBe, { productName: (0, _.T)(s) }),
+        "aria-label": b.intl.formatToPlainString(b.t.xRjJBe, { productName: (0, _.T)(s) }),
         sku: s,
         wishlistOwner: u,
         skuPreviewStyle: M,
@@ -134,7 +134,7 @@ function F(e) {
     return (0, i.jsx)(G, {
         sku: s,
         analyticsLocations: n,
-        promotion: null != a ? (0, i.jsx)(y.s, { spec: T, icon: a.Icon, tooltipText: a.tooltip }) : null,
+        promotion: null != a ? (0, i.jsx)(y.s, { spec: j, icon: a.Icon, tooltipText: a.tooltip }) : null,
         ...l,
     });
 }
@@ -148,26 +148,26 @@ function N(e) {
                 case m.R.PROFILE_FRAME:
                     return;
                 case m.R.AVATAR_DECORATION:
-                    return j.ML;
+                    return R.ML;
                 default:
-                    return a()(j.ML, j.ZY);
+                    return a()(R.ML, R.ZY);
             }
         }, [s?.tenantMetadata?.collectibles?.type]);
     return (0, i.jsx)(G, { sku: s, skuPreviewStyle: n, ...t });
 }
 function P(e) {
     let { sku: s, ...t } = e;
-    return (0, i.jsx)(G, { sku: s, skuPreviewStyle: R.MO, ...t });
+    return (0, i.jsx)(G, { sku: s, skuPreviewStyle: T.MO, ...t });
 }
 function H(e) {
     let { sku: s, ...t } = e,
         [n, a] = l.useState(!1);
     switch (s.productLine) {
-        case b.EZt.SOCIAL_LAYER_GAME_ITEM:
+        case D.EZt.SOCIAL_LAYER_GAME_ITEM:
             return (0, i.jsx)(F, { sku: s, isHoveringOrFocusing: n, setIsHoveringOrFocusing: a, ...t });
-        case b.EZt.COLLECTIBLES:
+        case D.EZt.COLLECTIBLES:
             return (0, i.jsx)(N, { sku: s, isHoveringOrFocusing: n, setIsHoveringOrFocusing: a, ...t });
-        case b.EZt.PREMIUM:
+        case D.EZt.PREMIUM:
             return (0, i.jsx)(P, { sku: s, isHoveringOrFocusing: n, setIsHoveringOrFocusing: a, ...t });
         default:
             return null;

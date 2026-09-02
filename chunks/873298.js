@@ -255,7 +255,7 @@ class es extends b.G {
             { no: 10, name: "game_library", kind: "message", T: () => eq },
             { no: 11, name: "status", kind: "message", T: () => eX },
             { no: 12, name: "localization", kind: "message", T: () => e1 },
-            { no: 13, name: "appearance", kind: "message", T: () => e6 },
+            { no: 13, name: "appearance", kind: "message", T: () => e4 },
             { no: 14, name: "guild_folders", kind: "message", T: () => tt },
             { no: 15, name: "favorites", kind: "message", T: () => ta },
             { no: 16, name: "audio_context_settings", kind: "message", T: () => tu },
@@ -322,7 +322,7 @@ class es extends b.G {
                     r.localization = e1.internalBinaryRead(e, e.uint32(), n, r.localization);
                     break;
                 case 13:
-                    r.appearance = e6.internalBinaryRead(e, e.uint32(), n, r.appearance);
+                    r.appearance = e4.internalBinaryRead(e, e.uint32(), n, r.appearance);
                     break;
                 case 14:
                     r.guildFolders = tt.internalBinaryRead(e, e.uint32(), n, r.guildFolders);
@@ -386,7 +386,7 @@ class es extends b.G {
             e.gameLibrary && eq.internalBinaryWrite(e.gameLibrary, t.tag(10, y.O0.LengthDelimited).fork(), n).join(),
             e.status && eX.internalBinaryWrite(e.status, t.tag(11, y.O0.LengthDelimited).fork(), n).join(),
             e.localization && e1.internalBinaryWrite(e.localization, t.tag(12, y.O0.LengthDelimited).fork(), n).join(),
-            e.appearance && e6.internalBinaryWrite(e.appearance, t.tag(13, y.O0.LengthDelimited).fork(), n).join(),
+            e.appearance && e4.internalBinaryWrite(e.appearance, t.tag(13, y.O0.LengthDelimited).fork(), n).join(),
             e.guildFolders && tt.internalBinaryWrite(e.guildFolders, t.tag(14, y.O0.LengthDelimited).fork(), n).join(),
             e.favorites && ta.internalBinaryWrite(e.favorites, t.tag(15, y.O0.LengthDelimited).fork(), n).join(),
             e.audioContextSettings &&
@@ -3058,8 +3058,8 @@ class e5 extends b.G {
         return !1 !== i && (!0 == i ? y.f$.onWrite : i)(this.typeName, e, t), t;
     }
 }
-let e6 = new e5();
-class e4 extends b.G {
+let e4 = new e5();
+class e6 extends b.G {
     constructor() {
         super("discord_protos.discord_users.v1.CustomUserThemeSettings", [
             { no: 1, name: "colors", kind: "scalar", repeat: 2, T: 9 },
@@ -3119,7 +3119,7 @@ class e4 extends b.G {
         return !1 !== i && (!0 == i ? y.f$.onWrite : i)(this.typeName, e, t), t;
     }
 }
-let e7 = new e4();
+let e7 = new e6();
 class e8 extends b.G {
     constructor() {
         super("discord_protos.discord_users.v1.ClientThemeSettings", [

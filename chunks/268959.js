@@ -1,4 +1,4 @@
-n.d(t, { A: () => y, s: () => k });
+n.d(t, { A: () => y, s: () => b });
 var r = n(477900);
 n(582128);
 var i = n(503698),
@@ -13,16 +13,16 @@ var i = n(503698),
     g = n(287809),
     I = n(158045),
     _ = n(590180),
-    C = n(298072),
-    A = n(993408),
-    f = n(13875),
+    f = n(298072),
+    C = n(993408),
+    A = n(13875),
     m = n(466459),
     E = n(623373),
     h = n(561769),
     v = n(57020),
     x = n(375708),
     R = n(31005);
-function k(e) {
+function b(e) {
     let { className: t } = e;
     return (0, r.jsx)(o.m, {
         text: x.intl.string(x.t.dCou7i),
@@ -38,16 +38,16 @@ function k(e) {
         }),
     });
 }
-function b(e) {
+function k(e) {
     let { product: t, badgeOverride: n, productBadgeOverride: i, className: o, prioritizedCurrency: c } = e,
-        { isPurchased: C, isPartiallyOwnedBundle: b } = (0, m.h)(t),
-        y = (0, A.G0)(t),
+        { isPurchased: f, isPartiallyOwnedBundle: k } = (0, m.h)(t),
+        y = (0, C.G0)(t),
         S = (0, a.bG)([_.A], () => _.A.getCategoryForProduct(t.skuId)),
-        L = S?.unpublishedAt != null ? (0, A.WU)(S.unpublishedAt) : null,
-        O = (0, a.bG)([g.default], () => g.default.getCurrentUser()),
-        T = I.Ay.canUseShopDiscounts(O),
-        { isOrbExclusive: j } = (0, v.F)({ product: t, hasShopDiscount: T, prioritizedCurrency: c }),
-        P = (0, f.Do)("ProductCardBadgeInner") && t.type === l.R.PROFILE_FRAME,
+        L = S?.unpublishedAt != null ? (0, C.WU)(S.unpublishedAt) : null,
+        T = (0, a.bG)([g.default], () => g.default.getCurrentUser()),
+        O = I.Ay.canUseShopDiscounts(T),
+        { isOrbExclusive: j } = (0, v.F)({ product: t, hasShopDiscount: O, prioritizedCurrency: c }),
+        P = (0, A.Do)("ProductCardBadgeInner") && t.type === l.R.PROFILE_FRAME,
         V = n;
     if (
         (null == V &&
@@ -57,9 +57,9 @@ function b(e) {
                   ? (V = h.AW.BADGE_OVERRIDE)
                   : (0, E.JQ)(t)
                     ? (V = h.AW.DYNAMIC)
-                    : (0, A.HF)(S?.unpublishedAt)
+                    : (0, C.HF)(S?.unpublishedAt)
                       ? (V = h.AW.LIMITED_TIME)
-                      : !b && !C && (0, A.aT)(t.skuId)
+                      : !k && !f && (0, C.aT)(t.skuId)
                         ? (V = h.AW.NEW)
                         : j
                           ? (V = h.AW.ORBS_EXCLUSIVE)
@@ -74,7 +74,7 @@ function b(e) {
             className: s()(o, R.$l),
             children: (0, r.jsx)(d.t, { size: "sm", color: "currentColor" }),
         });
-    if (V === h.AW.DYNAMIC) return (0, r.jsx)(k, { className: o });
+    if (V === h.AW.DYNAMIC) return (0, r.jsx)(b, { className: o });
     if (V === h.AW.ORBS_EXCLUSIVE)
         return (0, r.jsx)(u.Lp, {
             disableColor: !0,
@@ -107,10 +107,10 @@ function b(e) {
 let y = function (e) {
     let { skuId: t, badgeOverride: n, className: i, prioritizedCurrency: s } = e,
         l = (0, h.Vm)(t),
-        a = (0, C.Q)(l);
+        a = (0, f.Q)(l);
     if (null == l || l.hideBadge) return null;
     let o = (0, E.rb)(l, a);
-    return (0, r.jsx)(b, {
+    return (0, r.jsx)(k, {
         product: o,
         badgeOverride: n,
         productBadgeOverride: l.badgeOverride,

@@ -10,15 +10,15 @@ n.d(t, {
     pT: () => e0,
     UH: () => e4,
     $P: () => e5,
-    YW: () => eQ,
-    zW: () => ej,
+    YW: () => ek,
+    zW: () => eX,
     NC: () => eT,
     Hv: () => eO,
-    j$: () => ek,
+    j$: () => eQ,
     fc: () => eL,
     SD: () => e_,
     aC: () => eF,
-    FA: () => eX,
+    FA: () => ej,
     LS: () => eg,
     p5: () => ez,
     Ns: () => e3,
@@ -79,7 +79,7 @@ var S = n(27620),
     L = n(975571),
     R = n(252424),
     M = n(723702),
-    Q = n(158045);
+    k = n(158045);
 n(323874),
     n(14289),
     n(35956),
@@ -92,7 +92,7 @@ n(323874),
     n(390595),
     n(544180),
     n(265704);
-var k = n(710969),
+var Q = n(710969),
     D = n(652215),
     q = n(178540),
     U = n(396813),
@@ -273,8 +273,8 @@ var K = n(291749),
 n(590202);
 var W = n(971649),
     Y = n(651892),
-    X = n(639214),
-    j = n(576761),
+    j = n(639214),
+    X = n(576761),
     J = n(901406),
     z = n(801365),
     Z = n(792620),
@@ -323,7 +323,7 @@ function ea(e, t, n, i) {
         s = t.id === en.aJ,
         o = r && e.userStatus?.completedAt == null;
     if (o !== (s && t.userStatus?.completedAt == null)) return o ? es : 1;
-    let a = !(0, k.Ic)(e),
+    let a = !(0, Q.Ic)(e),
         l = e.userStatus?.claimedAt != null,
         u = t.userStatus?.claimedAt != null,
         d = e.userStatus?.enrolledAt != null,
@@ -475,8 +475,8 @@ function em(e) {
                 }
             })(r)),
             function (e, n) {
-                let r = !(0, k.Ic)(e);
-                return !(0, k.Ic)(n) !== r ? (r ? es : 1) : t(e, n, i, l);
+                let r = !(0, Q.Ic)(e);
+                return !(0, Q.Ic)(n) !== r ? (r ? es : 1) : t(e, n, i, l);
             });
     return o.sort(d);
 }
@@ -580,7 +580,7 @@ function eI(e) {
         h = [];
     for (let t of "all" === e ? T : p) {
         let n = m.get(t),
-            i = null != n && "all" === e && d.removeExpiredQuests && (0, k.Ic)(n) && !(0, k.GR)(n.userStatus);
+            i = null != n && "all" === e && d.removeExpiredQuests && (0, Q.Ic)(n) && !(0, Q.GR)(n.userStatus);
         null == n || i || h.push(n);
     }
     return { quests: h, excludedQuests: C, isFetchingCurrentQuests: f, hasFetched: E };
@@ -600,7 +600,7 @@ function e_(e, t) {
     let n = eg(e),
         i = (0, z.ks)(e.config),
         r = (0, z.KK)(e.config),
-        s = t !== j.MA.INELIGIBLE;
+        s = t !== X.MA.INELIGIBLE;
     return !n && i && r && s;
 }
 function eS(e) {
@@ -692,16 +692,16 @@ function eM(e) {
     }, [e]);
     return (0, _.A)(t);
 }
-function eQ(e) {
+function ek(e) {
     let t = (0, A.bG)([G.A], () => G.A.quests),
         n = eM(Array.from(t.values())),
         i = o.useMemo(() => {
             let n = (0, ee.$e)(t, en.zO);
-            return (0, X.BM)(n, e);
+            return (0, j.BM)(n, e);
         }, [e, t, n]);
     return eg(i) ? null : i;
 }
-function ek(e) {
+function eQ(e) {
     return o.useMemo(
         () => ({
             handleComplete: () => (0, U.Yb)(e),
@@ -922,14 +922,14 @@ function eY(e, t) {
         return (0, K.tW)(n, K.fY.COSPONSOR_LOGO_TYPE, e);
     }, [i, t, n]);
 }
-function eX(e) {
+function ej(e) {
     let t = (0, A.bG)([N.default], () => N.default.getCurrentUser()),
         n = (0, z.mq)(e, t),
         i = (0, z.k5)(e),
         r = (0, z.$5)(e),
         s = (0, z.Y7)(e),
         o = (0, z.JX)(e),
-        a = (0, Q.TW)(t, ei.PremiumTypes.TIER_2);
+        a = (0, k.TW)(t, ei.PremiumTypes.TIER_2);
     if (null == i) return er.intl.formatToPlainString(er.t.l9uXL8, { decorationName: n });
     let l = er.intl.formatToPlainString(er.t.o97tNn, { rewardName: n }),
         u = er.intl.formatToPlainString(er.t.PkyRZo, { rewardName: n, expirationDate: r }),
@@ -945,7 +945,7 @@ function eX(e) {
               : c
         : er.intl.formatToPlainString(er.t.tTlItm, { duration: i, decorationName: n });
 }
-function ej(e) {
+function eX(e) {
     let t = (0, Z.TP)(e);
     return { launchInGameActivity: (0, p.A)({ applicationId: t }) };
 }
@@ -956,7 +956,7 @@ function ez() {
     return eJ();
 }
 function eZ(e) {
-    let t = e?.userStatus != null && (0, k.gO)(e.userStatus, B.uF.ACTIVITY_PANEL),
+    let t = e?.userStatus != null && (0, Q.gO)(e.userStatus, B.uF.ACTIVITY_PANEL),
         n = eg(e ?? null),
         i = e?.userStatus?.claimedAt != null,
         r = (0, A.bG)([G.A], () => null != G.A.questEnrollmentBlockedUntil, []);
@@ -1013,7 +1013,7 @@ function e8(e) {
         let e = n
             .map((e) => t.get(e))
             .filter(w.Vq)
-            .filter((e) => !(0, k.Ic)(e));
+            .filter((e) => !(0, Q.Ic)(e));
         return e.length <= 1 ? { shelfQuests: [], isShelfEnabled: !1 } : { shelfQuests: e, isShelfEnabled: !0 };
     }, [t, n]);
 }

@@ -1,67 +1,67 @@
-i.d(e, { A: () => o });
-var n = i(158390),
-    l = i(17928),
-    a = i(228366),
-    r = i(927813);
-let s = r.A.Millis.SECOND,
-    c = r.A.Millis.MINUTE,
-    d = {};
-class u extends l.Ay.Store {
+l.d(t, { A: () => o });
+var i = l(158390),
+    n = l(17928),
+    a = l(228366),
+    s = l(927813);
+let r = s.A.Millis.SECOND,
+    d = s.A.Millis.MINUTE,
+    c = {};
+class u extends n.Ay.Store {
     static displayName = "GuildSpaceStore";
-    getSpace(t) {
-        return d[t]?.space;
+    getSpace(e) {
+        return c[e]?.space;
     }
-    getFetchStatus(t) {
-        return d[t]?.fetchStatus ?? "idle";
+    getFetchStatus(e) {
+        return c[e]?.fetchStatus ?? "idle";
     }
-    isInBackoff(t) {
-        return d[t]?.backoff?.pending === !0;
+    isInBackoff(e) {
+        return c[e]?.backoff?.pending === !0;
     }
 }
 let o = new u(a.h, {
-    GUILD_SPACE_FETCH_START: function (t) {
-        let e,
-            { guildId: i, requestId: n } = t,
-            l = (null == (e = d[i]) && ((e = { fetchStatus: "idle" }), (d[i] = e)), e);
-        (l.fetchStatus = "loading"), (l.activeFetchRequestId = n);
+    GUILD_SPACE_FETCH_START: function (e) {
+        let t,
+            { guildId: l, requestId: i } = e,
+            n = (null == (t = c[l]) && ((t = { fetchStatus: "idle" }), (c[l] = t)), t);
+        (n.fetchStatus = "loading"), (n.activeFetchRequestId = i);
     },
-    GUILD_SPACE_FETCH_SUCCESS: function (t) {
-        let { guildId: e, requestId: i, space: n } = t,
-            l = d[e];
-        if (l?.activeFetchRequestId !== i) return !1;
-        delete l.activeFetchRequestId, (l.space = n), (l.fetchStatus = "success"), l.backoff?.succeed();
-    },
-    GUILD_SPACE_FETCH_FAILURE: function (t) {
-        let { guildId: e, requestId: i, retryable: l } = t,
-            r = d[e];
-        if (r?.activeFetchRequestId !== i) return !1;
-        delete r.activeFetchRequestId,
-            (r.fetchStatus = "error"),
-            l &&
-                (null == r.backoff && (r.backoff = new n.A(s, c, !0)),
-                r.backoff.pending ||
-                    r.backoff.fail(() => a.h.dispatch({ type: "GUILD_SPACE_FETCH_BACKOFF_EXPIRED", guildId: e })));
-    },
-    GUILD_SPACE_FETCH_BACKOFF_EXPIRED: function (t) {
-        let { guildId: e } = t,
-            i = d[e];
-        if (i?.fetchStatus !== "error") return !1;
-        i.backoff?.cancel(), (i.fetchStatus = "idle");
-    },
-    GUILD_SPACE_UPDATE_SUCCESS: function (t) {
-        let { guildId: e, space: i } = t,
-            n = d[e];
-        if (null == n) return !1;
+    GUILD_SPACE_FETCH_SUCCESS: function (e) {
+        let { guildId: t, requestId: l, space: i } = e,
+            n = c[t];
+        if (n?.activeFetchRequestId !== l) return !1;
         delete n.activeFetchRequestId, (n.space = i), (n.fetchStatus = "success"), n.backoff?.succeed();
     },
-    GUILD_DELETE: function (t) {
+    GUILD_SPACE_FETCH_FAILURE: function (e) {
+        let { guildId: t, requestId: l, retryable: n } = e,
+            s = c[t];
+        if (s?.activeFetchRequestId !== l) return !1;
+        delete s.activeFetchRequestId,
+            (s.fetchStatus = "error"),
+            n &&
+                (null == s.backoff && (s.backoff = new i.A(r, d, !0)),
+                s.backoff.pending ||
+                    s.backoff.fail(() => a.h.dispatch({ type: "GUILD_SPACE_FETCH_BACKOFF_EXPIRED", guildId: t })));
+    },
+    GUILD_SPACE_FETCH_BACKOFF_EXPIRED: function (e) {
+        let { guildId: t } = e,
+            l = c[t];
+        if (l?.fetchStatus !== "error") return !1;
+        l.backoff?.cancel(), (l.fetchStatus = "idle");
+    },
+    GUILD_SPACE_UPDATE_SUCCESS: function (e) {
+        let { guildId: t, space: l } = e,
+            i = c[t];
+        if (null == i) return !1;
+        delete i.activeFetchRequestId, (i.space = l), (i.fetchStatus = "success"), i.backoff?.succeed();
+    },
+    GUILD_DELETE: function (e) {
         let {
-            guild: { id: e, unavailable: i },
-        } = t;
-        if (i) return !1;
-        d[e]?.backoff?.cancel(), delete d[e];
+            guild: { id: t, unavailable: l },
+        } = e;
+        if (l) return !1;
+        c[t]?.backoff?.cancel(), delete c[t];
     },
     LOGOUT: function () {
-        Object.values(d).forEach((t) => t?.backoff?.cancel()), (d = {});
+        Object.values(c).forEach((e) => e?.backoff?.cancel()), (c = {});
     },
 });

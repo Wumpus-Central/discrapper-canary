@@ -1,7 +1,7 @@
-i.d(e, { K: () => a });
-var n = i(17928),
-    l = i(960960);
-function a(t, e) {
-    let i = (0, n.bG)([l.A], () => l.A.getWidget(t, e.type)?.boost_price ?? null, [t, e.type]);
-    return e.locked ? { boostPrice: i } : void 0;
+l.d(t, { K: () => a });
+var i = l(17928),
+    n = l(960960);
+function a(e, t) {
+    let l = (0, i.bG)([n.A], () => n.A.getWidget(e, t.type)?.boost_price ?? null, [e, t.type]);
+    return t.locked ? { boostPrice: l } : void 0;
 }

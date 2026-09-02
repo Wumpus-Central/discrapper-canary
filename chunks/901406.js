@@ -8,7 +8,7 @@ n.d(t, {
     _Q: () => D,
     b6: () => q,
     bg: () => b,
-    pu: () => k,
+    pu: () => Q,
     se: () => U,
     v0: () => w,
 }),
@@ -115,12 +115,12 @@ function M(e) {
     }
     return null;
 }
-function Q(e) {
+function k(e) {
     let t,
         { link: n, directLink: i, inlineStoreParams: r, trackOverlayEvent: s, getIosAttribution: o } = e;
     (t = T.OO.getConfig({ location: "quest_open_game_link" }).enabled), (0, l.A)(n);
 }
-function k(e, t) {
+function Q(e, t) {
     let n,
         i,
         o,
@@ -166,7 +166,7 @@ function k(e, t) {
     let { impressionId: f } = t,
         E = null != f ? (0, c.vV)(e.config.ctaConfig?.ios?.iosAppId != null, t.sourceQuestContent, e.id) : null;
     m._.dispatch(g.jej.QUEST_GAME_LINK_OPENED),
-        Q({
+        k({
             link: a,
             directLink: l,
             inlineStoreParams:
@@ -214,7 +214,7 @@ function D(e, t) {
         m._.dispatch(g.jej.QUEST_GAME_LINK_OPENED);
     let { impressionId: a } = t,
         l = null != a ? (0, c.vV)(r.ios?.iosAppId != null, t.sourceQuestContent, n) : null;
-    Q({
+    k({
         link: s,
         directLink: o,
         inlineStoreParams: M(r),

@@ -217,12 +217,12 @@ let w = !0,
     R = !0,
     O = !1,
     P = !1;
-function M() {
+function k() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
     w && (e || (_ !== y.m3P.ONLINE && _ !== y.m3P.ADD_FRIEND)) && !G && ((w = !1), (G = !0), l.A.fetchRelationships());
 }
-function k() {
-    if (((w = !0), R ? (G = !1) : M(), (x = x.reset()), O)) return;
+function M() {
+    if (((w = !0), R ? (G = !1) : k(), (x = x.reset()), O)) return;
     let e = x.getRelationshipCounts();
     _ = 0 === e[y.eA$.FRIEND] ? (0 !== e[y.eA$.PENDING_INCOMING] ? y.m3P.PENDING : y.m3P.ADD_FRIEND) : y.m3P.ONLINE;
 }
@@ -244,7 +244,7 @@ class b extends a.Ay.Store {
             this.syncWith([A.Ay], F),
             this.syncWith([g.default], T(v)),
             this.syncWith([I.A, m.A], T(C)),
-            k();
+            M();
     }
     getState() {
         return { fetching: G, section: _, rows: x };
@@ -255,10 +255,10 @@ class b extends a.Ay.Store {
 }
 let j = new b(r.h, {
     CONNECTION_OPEN: function () {
-        k(), (P = !0);
+        M(), (P = !0);
     },
     FRIENDS_SET_SECTION: function (e) {
-        (_ = e.section), M();
+        (_ = e.section), k();
     },
     CHANNEL_SELECT: function (e) {
         let { channelId: t } = e;

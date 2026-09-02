@@ -1,43 +1,43 @@
-i.d(e, { A: () => c });
-var n = i(17928),
-    l = i(228366);
+l.d(t, { A: () => d });
+var i = l(17928),
+    n = l(228366);
 let a = {};
-function r(t) {
-    let e = a[t];
-    return null == e && ((e = { fetchStatus: "idle" }), (a[t] = e)), e;
+function s(e) {
+    let t = a[e];
+    return null == t && ((t = { fetchStatus: "idle" }), (a[e] = t)), t;
 }
-class s extends n.Ay.Store {
+class r extends i.Ay.Store {
     static displayName = "GuildSpaceCatalogStore";
-    getWidgets(t) {
-        return a[t]?.widgets;
+    getWidgets(e) {
+        return a[e]?.widgets;
     }
-    getWidget(t, e) {
-        return a[t]?.widgets?.find((t) => t.type === e);
+    getWidget(e, t) {
+        return a[e]?.widgets?.find((e) => e.type === t);
     }
-    getFetchStatus(t) {
-        return a[t]?.fetchStatus ?? "idle";
+    getFetchStatus(e) {
+        return a[e]?.fetchStatus ?? "idle";
     }
 }
-let c = new s(l.h, {
-    GUILD_SPACE_CATALOG_FETCH_START: function (t) {
-        let { guildId: e } = t;
-        r(e).fetchStatus = "loading";
+let d = new r(n.h, {
+    GUILD_SPACE_CATALOG_FETCH_START: function (e) {
+        let { guildId: t } = e;
+        s(t).fetchStatus = "loading";
     },
-    GUILD_SPACE_CATALOG_FETCH_SUCCESS: function (t) {
-        let { guildId: e, widgets: i } = t,
-            n = r(e);
-        (n.widgets = i), (n.fetchStatus = "success");
+    GUILD_SPACE_CATALOG_FETCH_SUCCESS: function (e) {
+        let { guildId: t, widgets: l } = e,
+            i = s(t);
+        (i.widgets = l), (i.fetchStatus = "success");
     },
-    GUILD_SPACE_CATALOG_FETCH_FAILURE: function (t) {
-        let { guildId: e } = t;
-        r(e).fetchStatus = "error";
+    GUILD_SPACE_CATALOG_FETCH_FAILURE: function (e) {
+        let { guildId: t } = e;
+        s(t).fetchStatus = "error";
     },
-    GUILD_DELETE: function (t) {
+    GUILD_DELETE: function (e) {
         let {
-            guild: { id: e, unavailable: i },
-        } = t;
-        if (i || null == a[e]) return !1;
-        delete a[e];
+            guild: { id: t, unavailable: l },
+        } = e;
+        if (l || null == a[t]) return !1;
+        delete a[t];
     },
     LOGOUT: function () {
         a = {};

@@ -207,7 +207,7 @@ var ev = s(502572),
     eD = s(786300),
     eM = s(975571),
     eO = s(158045),
-    eL = s(960851),
+    eL = s(725018),
     ek = s(89366),
     eU = s(724651),
     eG = s(732280),
@@ -2048,7 +2048,7 @@ function sz(e) {
     let { alt: t, ariaLabel: s, ariaHidden: i, role: n, width: a = 288, height: l = 162 } = e;
     return (0, c.jsx)("img", {
         style: { width: a, height: l },
-        src: "https://cdn.discordapp.com/assets/content/9e73d749eeeee0e8008dcfb5bff16cf020c1949a5be67336a1bffe80c011ebaf.svg",
+        src: "https://cdn.discordapp.com/assets/content/a0a5fdb2c9735632e0cadb26af7aa33929c63981e559ef0337cacced2cab2d09.svg",
         alt: t,
         "aria-label": s,
         "aria-hidden": i,
@@ -2261,7 +2261,7 @@ function id(e) {
 }
 var iu = s(975807),
     im = s(95035),
-    ig = s(862990),
+    ig = s(989790),
     ix = s(88001),
     ip = s(109447),
     ih = s(817577);

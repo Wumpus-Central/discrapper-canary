@@ -14,8 +14,8 @@ function p(e, t) {
         g = (0, i.bG)([o.A], () => o.A.getProduct(e)),
         I = (0, c.i)(),
         _ = l.Ay.canUseShopDiscounts(I),
-        C = r.useRef(null),
-        A = r.useCallback(() => {
+        f = r.useRef(null),
+        C = r.useCallback(() => {
             let r = null != g ? (0, u.Br)(g, _, !1) : null,
                 i = null != g ? (0, u.c7)(g, _, !1) : void 0;
             s.default.track(d.HAw.COLLECTIBLES_TILE_IMPRESSION, {
@@ -32,24 +32,24 @@ function p(e, t) {
                 category_position: p?.categoryPosition,
             });
         }, [p?.sessionId, p?.categoryPosition, p?.pageCategory, p?.pageSection, p?.tilePosition, _, t, g, e, n]),
-        f = r.useCallback(
+        A = r.useCallback(
             (e) => {
                 e
-                    ? null === C.current &&
-                      (C.current = setTimeout(() => {
-                          A(), (C.current = null);
+                    ? null === f.current &&
+                      (f.current = setTimeout(() => {
+                          C(), (f.current = null);
                       }, 1e3))
-                    : null !== C.current && (clearTimeout(C.current), (C.current = null));
+                    : null !== f.current && (clearTimeout(f.current), (f.current = null));
             },
-            [A],
+            [C],
         );
     return (
         r.useEffect(
             () => () => {
-                null !== C.current && (clearTimeout(C.current), (C.current = null));
+                null !== f.current && (clearTimeout(f.current), (f.current = null));
             },
             [e],
         ),
-        { handleCardVisibilityChange: f }
+        { handleCardVisibilityChange: A }
     );
 }

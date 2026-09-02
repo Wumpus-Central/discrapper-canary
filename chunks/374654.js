@@ -22,8 +22,8 @@ function x(e) {
     let n = (0, A.getCollectiblesItemAssetUrl)({ skuId: e.skuId, assetFormat: A.CollectiblesItemAssetFormat.STATIC });
     null != n && (0, I.NN)(n).catch(() => {});
 }
-var k = l(375708),
-    y = l(352497),
+var y = l(375708),
+    k = l(352497),
     N = l(249360);
 function j(e) {
     let {
@@ -40,21 +40,21 @@ function j(e) {
         p = (0, s.bG)([h.A], () => h.A.getPendingChanges(l ?? null).pendingDisplayNameStyles),
         A = (0, s.bG)([h.A], () => h.A.getPendingChanges(null).pendingPrimaryGuildId),
         I = (0, s.bG)([h.A], () => h.A.getPendingChanges(l ?? null).pendingAvatar),
-        k = (function (e) {
+        y = (function (e) {
             let { enabled: n, isInteracting: l } = e,
                 { categories: t, purchases: r } = (0, b.Ay)({ stalePurchasesOK: !0 }),
                 i = a.useMemo(() => (0, m.zd)(r, t), [r, t]),
                 s = (0, C.A)({ enabled: n, isInteracting: l, items: i, preload: x });
             return null != s ? { skuId: s.skuId, asset: s.asset, label: s.label, palette: s.palette } : null;
         })({ enabled: u && !o && !g, isInteracting: c }),
-        j = null != k;
+        j = null != y;
     return (0, t.jsx)("div", {
-        className: i()(y.M, { [N.O]: j }),
+        className: i()(k.M, { [N.O]: j }),
         "aria-hidden": !0,
         children: (0, t.jsx)(d.A, {
             user: n,
             guildId: l ?? void 0,
-            nameplate: j ? k : r,
+            nameplate: j ? y : r,
             showPlaceholderUser: (u && !o) || !c,
             isHighlighted: c,
             pendingGlobalName: v,
@@ -75,15 +75,15 @@ function E(e) {
         I = void 0 !== m,
         C = null === m || (!I && null == A),
         x = d && null != b,
-        y = (0, v.lw)({ pendingValue: m, userValue: b, guildValue: h, guildId: l ?? void 0 }),
-        { product: N } = (0, o.q)(y?.skuId),
+        k = (0, v.lw)({ pendingValue: m, userValue: b, guildValue: h, guildId: l ?? void 0 }),
+        { product: N } = (0, o.q)(k?.skuId),
         E = I ? null != m : null != A,
         P =
-            null != y && E
+            null != k && E
                 ? {
                       onClick: () => (0, f.p)({ guildId: l ?? void 0, nameplate: null }),
                       type: x ? "reset" : "remove",
-                      accessibleLabel: k.intl.string(x ? k.t.neYqhR : k.t["9zwziY"]),
+                      accessibleLabel: y.intl.string(x ? y.t.neYqhR : y.t["9zwziY"]),
                   }
                 : void 0,
         w = a.useCallback(() => {
@@ -93,15 +93,15 @@ function E(e) {
         affordance: C && !x ? "add" : P,
         variant: "bar",
         onClick: w,
-        accessibleLabel: k.intl.string(k.t.x5CoXR),
+        accessibleLabel: y.intl.string(y.t.x5CoXR),
         accessibleValue: (function (e) {
             let { nameplatePreview: n, productName: l, hasPendingSelection: t } = e;
             return null == n
-                ? k.intl.string(k.t["3Xph0/"])
+                ? y.intl.string(y.t["3Xph0/"])
                 : null != l && "" !== l
                   ? l
-                  : k.intl.string(t ? k.t.mo1Huz : k.t.s9kNKK);
-        })({ nameplatePreview: y, productName: (0, g.VG)(N), hasPendingSelection: null != m }),
+                  : y.intl.string(t ? y.t.mo1Huz : y.t.s9kNKK);
+        })({ nameplatePreview: k, productName: (0, g.VG)(N), hasPendingSelection: null != m }),
         "aria-haspopup": "dialog",
         disabled: r,
         errorMessageId: i,
@@ -109,7 +109,7 @@ function E(e) {
             (0, t.jsx)(j, {
                 user: n,
                 guildId: l,
-                nameplatePreview: y,
+                nameplatePreview: k,
                 isEmpty: C,
                 hasMainProfileFallback: x,
                 isInteracting: e,

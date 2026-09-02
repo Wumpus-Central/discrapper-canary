@@ -53,9 +53,9 @@ function B(e) {
             handleProgress: W,
             handleResetDismissibilityClick: Q,
             handleResetStatusClick: Z,
-            handleOverridePreviewClick: z,
+            handleOverridePreviewClick: $,
         } = (0, M.j$)(e.quest.id),
-        $ = (0, M.do)({
+        z = (0, M.do)({
             quest: e.quest,
             content: e.questContent,
             ctaContent: h.Cy.CONTEXT_MENU_OPEN_GAME_LINK,
@@ -88,9 +88,9 @@ function B(e) {
                     id: "delivery",
                     label: "Show in Quest Bar",
                     checked: t?.id === e.quest.id,
-                    action: () => z(p.uF.QUEST_BAR_V2),
+                    action: () => $(p.uF.QUEST_BAR_V2),
                 }),
-            [z, e.quest.id, t?.id],
+            [$, e.quest.id, t?.id],
         ),
         el = l.useMemo(
             () =>
@@ -98,9 +98,9 @@ function B(e) {
                     id: "activity-panel",
                     label: "Show in Activity Panel",
                     checked: n?.id === e.quest.id,
-                    action: () => z(p.uF.ACTIVITY_PANEL),
+                    action: () => $(p.uF.ACTIVITY_PANEL),
                 }),
-            [z, e.quest.id, n?.id],
+            [$, e.quest.id, n?.id],
         ),
         er = l.useMemo(
             () =>
@@ -108,9 +108,9 @@ function B(e) {
                     id: "channel-call-header",
                     label: "Show in Voice Channel Header",
                     checked: T?.id === e.quest.id,
-                    action: () => z(p.uF.QUEST_LIVE_STREAM),
+                    action: () => $(p.uF.QUEST_LIVE_STREAM),
                 }),
-            [z, e.quest.id, T?.id],
+            [$, e.quest.id, T?.id],
         ),
         es = l.useMemo(
             () =>
@@ -118,9 +118,9 @@ function B(e) {
                     id: "members-list",
                     label: "Show in Members List",
                     checked: O?.id === e.quest.id,
-                    action: () => z(p.uF.MEMBERS_LIST),
+                    action: () => $(p.uF.MEMBERS_LIST),
                 }),
-            [z, e.quest.id, O?.id],
+            [$, e.quest.id, O?.id],
         ),
         ea = l.useCallback(() => {
             (0, S.pX)(q.BVt.QUEST_PREVIEW_TOOL_2(e.quest.id));
@@ -143,7 +143,7 @@ function B(e) {
                         (0, i.jsx)(c.Dr, {
                             id: "play-game",
                             label: V,
-                            action: $,
+                            action: z,
                             icon: _.W,
                             leadingAccessory: { type: "icon", icon: _.W },
                         }),

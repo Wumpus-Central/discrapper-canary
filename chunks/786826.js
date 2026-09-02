@@ -19,26 +19,26 @@ var t = l(477900),
     I = l(655098),
     C = l(323350),
     x = l(135261),
-    k = l(35277),
-    y = l(820066),
+    y = l(35277),
+    k = l(820066),
     N = l(702483),
     j = l(490682),
     E = l(683167),
     P = l(375499),
     w = l(267889),
-    R = l(267102),
-    S = l(363195),
+    S = l(267102),
+    R = l(363195),
     D = l(885386),
     M = l(95701),
     L = l(652215),
     T = l(551483),
     G = l(307731),
-    O = l(569622),
-    V = l(465410);
+    V = l(569622),
+    O = l(465410);
 let z = (0, M.createChannelRecord)({ id: "1", type: L.rbe.DM });
-function _(e) {
+function B(e) {
     let { editor: n, pickerIntention: l, containerClassName: r } = e,
-        s = (0, g.bG)([S.A], () => S.A.theme),
+        s = (0, g.bG)([R.A], () => R.A.theme),
         u = a.useRef(null),
         o = a.useCallback(
             (e, l) => {
@@ -50,12 +50,12 @@ function _(e) {
                             a = n.originalName ?? n.name ?? "",
                             r = `:${n.name}:`,
                             i = null != n.id ? `<${t}:${a.replace(/:/g, "")}:${n.id}>` : null,
-                            s = y.VW.areStylesDisabled(e) || null == i ? r : i;
+                            s = k.VW.areStylesDisabled(e) || null == i ? r : i;
                         A.o.withSingleEntry(e, () => {
-                            k.b.insertText(e, s + (l ? " " : ""));
+                            y.b.insertText(e, s + (l ? " " : ""));
                         });
                     })(n, t, a),
-                    y.VW.focus(n)),
+                    k.VW.focus(n)),
                     a && l();
             },
             [n],
@@ -83,7 +83,7 @@ function _(e) {
             [o, l, s],
         );
     return (0, t.jsx)("div", {
-        className: i()(O.S0, r),
+        className: i()(V.S0, r),
         onMouseDown: (e) => e.preventDefault(),
         children: (0, t.jsx)(f.Y, {
             targetElementRef: u,
@@ -93,12 +93,12 @@ function _(e) {
             align: "right",
             children: (e, n) => {
                 let { isShown: l } = n;
-                return (0, t.jsx)(P.A, { ...e, ref: u, active: l, tabIndex: 0, className: O.Z8 });
+                return (0, t.jsx)(P.A, { ...e, ref: u, active: l, tabIndex: 0, className: V.Z8 });
             },
         }),
     });
 }
-function B(e) {
+function H(e) {
     let { editor: n, pickerIntention: l } = e,
         [, r] = a.useState(n.selection);
     return (
@@ -114,13 +114,13 @@ function B(e) {
             );
         }, [n]),
         (0, t.jsxs)("div", {
-            className: O.aL,
+            className: V.aL,
             onMouseDown: (e) => e.preventDefault(),
-            children: [(0, t.jsx)(x.P, { slateEditor: n }), (0, t.jsx)(_, { editor: n, pickerIntention: l })],
+            children: [(0, t.jsx)(x.P, { slateEditor: n }), (0, t.jsx)(B, { editor: n, pickerIntention: l })],
         })
     );
 }
-function H(e) {
+function _(e) {
     let {
             editor: n,
             toolbarVariant: l,
@@ -137,11 +137,11 @@ function H(e) {
             ariaLabelledByProp: A,
         } = e,
         C = a.useContext(o._),
-        y = C?.errorMessageId != null,
+        k = C?.errorMessageId != null,
         E = a.useRef(null),
         P = a.useRef(null),
         w = a.useCallback(() => n, [n]),
-        R = a.useCallback((e) => [...(0, j.A)(n, e, void 0), ...(0, N.A)(n, e)], [n]);
+        S = a.useCallback((e) => [...(0, j.A)(n, e, void 0), ...(0, N.A)(n, e)], [n]);
     return (
         a.useEffect(() => {
             if ("floating" !== l) return;
@@ -160,30 +160,30 @@ function H(e) {
                 "floating" === l && (0, t.jsx)(x.A, { ref: E, getSlateEditor: w, containerRef: P }),
                 (0, t.jsx)(d.vN, {
                     children: (0, t.jsxs)("div", {
-                        className: i()(O.I6, { [O.mq]: "static" === l }),
-                        "data-error": y || void 0,
+                        className: i()(V.I6, { [V.mq]: "static" === l }),
+                        "data-error": k || void 0,
                         "data-disabled": s || void 0,
                         children: [
-                            "static" === l && !s && (0, t.jsx)(B, { editor: n, pickerIntention: f }),
+                            "static" === l && !s && (0, t.jsx)(H, { editor: n, pickerIntention: f }),
                             (0, t.jsx)("div", {
                                 ref: P,
-                                className: i()(O.XG, V.yL),
+                                className: i()(V.XG, O.yL),
                                 style: { "--custom-rich-text-area-rows": v },
                                 onMouseDown: (e) => {
                                     e.target === e.currentTarget &&
-                                        (e.preventDefault(), k.b.resetSelectionToEditorEnd(n), u.rL.focus(n));
+                                        (e.preventDefault(), y.b.resetSelectionToEditorEnd(n), u.rL.focus(n));
                                 },
                                 onScroll: () => E.current?.hide(),
                                 children: (0, t.jsx)(I.A, {
                                     id: C?.controlId,
-                                    containerClassName: O.RZ,
-                                    className: O.EN,
+                                    containerClassName: V.RZ,
+                                    className: V.EN,
                                     editor: n,
                                     placeholder: r,
                                     readOnly: s,
                                     canFocus: !s,
                                     autoFocus: c,
-                                    decorate: R,
+                                    decorate: S,
                                     onChange: h,
                                     onKeyDown: p,
                                     onFocus: m,
@@ -191,13 +191,13 @@ function H(e) {
                                     "aria-labelledby": A ?? C?.labelId,
                                     "aria-describedby": C?.describedById,
                                     "aria-errormessage": C?.errorMessageId,
-                                    "aria-invalid": y || void 0,
+                                    "aria-invalid": k || void 0,
                                     "aria-required": g || void 0,
                                 }),
                             }),
                             "floating" === l &&
                                 !s &&
-                                (0, t.jsx)(_, { editor: n, pickerIntention: f, containerClassName: O.C7 }),
+                                (0, t.jsx)(B, { editor: n, pickerIntention: f, containerClassName: V.C7 }),
                         ],
                     }),
                 }),
@@ -219,14 +219,14 @@ function F(e) {
             toolbarVariant: A = "floating",
             editorRef: I,
             onChange: x,
-            onKeyDown: y,
+            onKeyDown: k,
             onFocus: N,
             onBlur: j,
             "aria-labelledby": P,
             ...w
         } = e,
-        S = (function (e) {
-            let n = a.useContext(R.Ay),
+        R = (function (e) {
+            let n = a.useContext(S.Ay),
                 l = D.SI.useSetting(),
                 [t] = a.useState(() => {
                     let t = (0, s.ie)();
@@ -258,21 +258,21 @@ function F(e) {
             );
         })(n),
         [M, L] = a.useState(n),
-        [O, V] = a.useState(() => S.children.length);
+        [V, O] = a.useState(() => R.children.length);
     a.useImperativeHandle(
         I,
         () => ({
             focus(e) {
-                k.b.resetSelectionToEditorEnd(S), u.rL.toDOMNode(S, S).focus(e);
+                y.b.resetSelectionToEditorEnd(R), u.rL.toDOMNode(R, R).focus(e);
             },
             blur() {
-                u.rL.toDOMNode(S, S).blur();
+                u.rL.toDOMNode(R, R).blur();
             },
         }),
-        [S],
+        [R],
     );
-    let { fieldProps: _ } = (0, c.n)(w),
-        { disabled: B, required: F } = _,
+    let { fieldProps: B } = (0, c.n)(w),
+        { disabled: H, required: F } = B,
         {
             setShouldValidate: K,
             errorMessage: q,
@@ -283,35 +283,35 @@ function F(e) {
     let Y = a.useCallback(
         (e) => {
             let n = (0, C.WO)(e, { mode: "raw" });
-            n !== W.current && (L(n), K(!0), x?.(n)), d && V(e.length);
+            n !== W.current && (L(n), K(!0), x?.(n)), d && O(e.length);
         },
         [d, x, K],
     );
     a.useEffect(() => {
         n !== W.current &&
-            ((S.children = (0, b.x7)(n)),
-            (S.selection = { anchor: T.K, focus: T.K }),
-            S.onChange(),
+            ((R.children = (0, b.x7)(n)),
+            (R.selection = { anchor: T.K, focus: T.K }),
+            R.onChange(),
             L(n),
-            d && V(S.children.length));
-    }, [d, n, S]);
-    let U = d ? Math.max(o, Math.min(O, 15)) : o,
+            d && O(R.children.length));
+    }, [d, n, R]);
+    let U = d ? Math.max(o, Math.min(V, 15)) : o,
         $ = null != i ? (0, t.jsx)(p.n, { value: M, maxLength: i }) : null;
     return (0, t.jsx)(c.D, {
-        ..._,
+        ...B,
         trailingAuxiliaryContent: $,
         errorMessage: X ? q : void 0,
-        children: (0, t.jsx)(H, {
-            editor: S,
+        children: (0, t.jsx)(_, {
+            editor: R,
             toolbarVariant: A,
             placeholder: l,
-            readOnly: B,
+            readOnly: H,
             autoFocus: g,
             required: F,
             rows: U,
             pickerIntention: f,
             onChangeValue: Y,
-            onKeyDown: y,
+            onKeyDown: k,
             onFocus: N,
             onBlur: j,
             ariaLabelledByProp: P,
