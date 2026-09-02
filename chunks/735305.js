@@ -22,14 +22,14 @@ function I(e) {
             initialPlanId: n,
             breadcrumbSteps: l,
             handleStepChange: I,
-            onReturn: g,
-            continueSessionToInitialStep: A,
+            onReturn: A,
+            continueSessionToInitialStep: g,
         } = e,
         { paymentSources: P } = (0, a.j)(),
         {
             selectedSkuId: v,
-            setPurchaseState: x,
-            contextMetadata: _,
+            setPurchaseState: _,
+            contextMetadata: x,
             paymentSourceId: T,
             setPaymentSourceId: N,
             purchaseError: b,
@@ -51,7 +51,7 @@ function I(e) {
         { step: w } = (0, u.Ay)(),
         { isGift: U } = (0, h.Pv)(),
         D = {
-            ...(0, m._V)(),
+            ...(0, m._)(),
             paymentSources: P,
             paymentSourceId: T,
             setPaymentSourceId: N,
@@ -62,7 +62,7 @@ function I(e) {
             isGift: U,
         },
         G =
-            g ??
+            A ??
             function () {
                 I(Object.values(P).length < 1 && null == n ? f.pn.PLAN_SELECT : f.pn.REVIEW, {
                     trackedFromStep: f.pn.PAYMENT_ELEMENT,
@@ -83,7 +83,7 @@ function I(e) {
         onReturn: L ? void 0 : G,
         onComplete: (e) => {
             f.l_.has(e)
-                ? (x(E.h.COMPLETED), I(f.pn.CONFIRM, { trackedFromStep: e }))
+                ? (_(E.h.COMPLETED), I(f.pn.CONFIRM, { trackedFromStep: e }))
                 : I(f.pn.REVIEW, { trackedFromStep: e });
         },
         onStepChange: (e) => {
@@ -94,13 +94,13 @@ function I(e) {
                 from_step: n,
                 to_step: l,
                 step_duration_ms: i - F,
-                flow_duration_ms: i - _.startTime,
+                flow_duration_ms: i - x.startTime,
             });
         },
         isEligibleForTrial: k,
         allowDesktopRedirectPurchase:
             (0, C.isDesktop)() && null != v && [y.pe.TIER_0, y.pe.TIER_2].includes(v) && !U && null == R,
-        continueSessionToInitialStep: A,
+        continueSessionToInitialStep: g,
         shouldUseManaModal: !0,
     });
 }

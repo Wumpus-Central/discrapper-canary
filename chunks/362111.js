@@ -21,7 +21,7 @@ function A(e) {
             initialStep: E = d.pn.PAYMENT_ELEMENT,
             overwriteSubscriptionPaymentSource: h = !1,
         } = e,
-        S = (0, c._V)(),
+        S = (0, c._)(),
         T = (0, c.Y)({
             paymentModalArgs: S,
             initialStep: E,
