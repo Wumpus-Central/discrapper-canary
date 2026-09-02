@@ -1,6 +1,6 @@
 "use strict";
 let i, r, a, s, l, o, d, c, u, _, E, A, h, I, f, p, T, m, g, S, N, C, O, R, L;
-n.d(t, { A: () => en });
+n.d(t, { A: () => ei });
 var y = n(435558),
     D = n(412703),
     v = n(440703),
@@ -43,10 +43,10 @@ function K() {
         (f = new Set()),
         (N = new Map()),
         (C = new Map()),
-        Q(),
+        J(),
         (O = null),
         (R = null),
-        J(),
+        ee(),
         (L = new Map()),
         (Y = new Map());
 }
@@ -87,14 +87,18 @@ function X(e) {
     let t = new Set(A);
     t.delete(e), (A = t);
 }
-function Q() {
-    null != j && (clearTimeout(j), (j = null));
+function Q(e) {
+    let { adCreativeId: t } = e;
+    X(t);
 }
 function J() {
+    null != j && (clearTimeout(j), (j = null));
+}
+function ee() {
     null != W && (clearTimeout(W), (W = null));
 }
 K();
-class ee extends b.Ay.Store {
+class et extends b.Ay.Store {
     static displayName = "QuestStore";
     get quests() {
         return l;
@@ -191,9 +195,9 @@ class ee extends b.Ay.Store {
         return N;
     }
 }
-let et = new ee(M.h, {
+let en = new et(M.h, {
         LOGOUT: function () {
-            Q(), J(), K(), x.Ay.getState().clearState(), w.A.getState().reset();
+            J(), ee(), K(), x.Ay.getState().clearState(), w.A.getState().reset();
         },
         QUESTS_FETCH_CURRENT_QUESTS_BEGIN: function () {
             i = !0;
@@ -223,7 +227,7 @@ let et = new ee(M.h, {
             for (let e of ((o = new Map()), n)) o.set(e.id, e);
             for (let e of L?.values()) l.has(e.id) || (l.set(e.id, e), _.set(e.id, (0, F.Ic)(e)));
             (C = _),
-                Q(),
+                J(),
                 (function e() {
                     let t, n;
                     (t = !1),
@@ -231,7 +235,7 @@ let et = new ee(M.h, {
                         l.forEach((e, i) => {
                             !0 !== n.get(i) && ((0, F.Ic)(e) ? (n.set(i, !0), (t = !0)) : n.has(i) || n.set(i, !1));
                         }),
-                        t && ((C = n), et.emitChange());
+                        t && ((C = n), en.emitChange());
                     let i = (0, F.v1)(Array.from(l.values()));
                     if (null == i) return;
                     let r = Math.max(5e3, i - Date.now() + 2e3);
@@ -243,12 +247,12 @@ let et = new ee(M.h, {
                 (O = null != r ? new Date(r) : null),
                 (R = null != a ? new Date(a) : null),
                 (function () {
-                    if ((J(), null == R)) return;
+                    if ((ee(), null == R)) return;
                     let e = R.getTime() - Date.now();
                     e > 864e6 ||
                         (W = setTimeout(
                             () => {
-                                (W = null), (R = null), et.emitChange();
+                                (W = null), (R = null), en.emitChange();
                             },
                             Math.max(e, 0),
                         ));
@@ -395,11 +399,15 @@ let et = new ee(M.h, {
             let { questId: t } = e;
             X(t);
         },
-        AD_CONTENT_DISMISS: function (e) {
+        AD_CONTENT_DISMISS_BEGIN: function (e) {
             let { adCreativeId: t } = e,
-                n = new Set(h);
-            n.add(t), (h = n);
+                n = new Set(A);
+            n.add(t), (A = n);
+            let i = new Set(h);
+            i.add(t), (h = i);
         },
+        AD_CONTENT_DISMISS_SUCCESS: Q,
+        AD_CONTENT_DISMISS_FAILURE: Q,
         QUESTS_USER_STATUS_UPDATE: function (e) {
             let { user_status: t } = e,
                 n = (0, k.L)({ location: B.rE.QUESTS_STORE });
@@ -457,4 +465,4 @@ let et = new ee(M.h, {
             O = null != t ? new Date(t) : null;
         },
     }),
-    en = et;
+    ei = en;

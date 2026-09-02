@@ -857,6 +857,7 @@
   "QUESTS_GET_DECISIONS": "/quests/get-decisions",
   "QUESTS_CREATIVE_PREVIEW": "/quests/preview",
   "QUESTS_CREATIVES_CLAIM_REWARD": "/quests/creatives/:param/claim-reward",
+  "QUESTS_CREATIVES_DISMISS": "/quests/creatives/:param/dismiss",
   "QUESTS_APP_STORE_METADATA": "/quests/appstore-metadata",
   "GAME_ANNOUNCEMENTS": "/games/:param/announcements",
   "GUILD_ROOM": "/guilds/:param/rooms/:param",
