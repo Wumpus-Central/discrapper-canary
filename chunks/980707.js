@@ -491,7 +491,7 @@ function er(e) {
     );
     return (0, r.jsxs)(w.D, {
         innerRef: m,
-        className: l()(D.item, D.checkboxContainer, D.labelContainer, M[t], I, {
+        className: l()(D.item, D.checkboxContainer, D.labelContainer, Z.nM, M[t], I, {
             [D.disabled]: _,
             [D.focused]: E,
             [f ?? ""]: E,
@@ -500,6 +500,7 @@ function er(e) {
         ...A,
         "aria-checked": s,
         "aria-disabled": _,
+        "data-marquee-active": E,
         children: [
             T
                 ? null != u && (0, r.jsx)(z, { accessory: u, isFocused: E })
@@ -557,11 +558,12 @@ function es(e) {
     );
     return (0, r.jsxs)(w.D, {
         innerRef: p,
-        className: l()(D.item, D.labelContainer, M[t], { [D.disabled]: _, [D.focused]: E }),
+        className: l()(D.item, D.labelContainer, Z.nM, M[t], { [D.disabled]: _, [D.focused]: E }),
         onClick: _ ? void 0 : T,
         ...A,
         "aria-checked": s,
         "aria-disabled": _,
+        "data-marquee-active": E,
         children: [
             f
                 ? null != u && (0, r.jsx)(z, { accessory: u, isFocused: E })
