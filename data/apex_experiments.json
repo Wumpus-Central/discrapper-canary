@@ -917,25 +917,6 @@
     }
   },
   {
-    "kind": "user",
-    "name": "2026-01-profile-updates-notification",
-    "defaultConfig": {
-      "showSettingsToggle": false
-    },
-    "variations": {
-      "0": {
-        "enabled": false,
-        "variant": 0
-      },
-      "1": {
-        "showSettingsToggle": true
-      },
-      "2": {
-        "showSettingsToggle": true
-      }
-    }
-  },
-  {
     "name": "2026-01-voice-dares-v0",
     "kind": "user",
     "defaultConfig": {
