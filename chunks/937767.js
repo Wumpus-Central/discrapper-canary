@@ -34,7 +34,7 @@ let o = {
                     n.e("311802"),
                     n.e("229787"),
                     n.e("698965"),
-                    n.e("934771"),
+                    n.e("931319"),
                     n.e("882073"),
                     n.e("797558"),
                     n.e("691994"),
@@ -87,7 +87,7 @@ let o = {
     react(e, t, n) {
         let { userId: i, channelId: a, parsedUserId: o, roleId: u, roleName: c, viewingChannelId: d } = e;
         return null == i && (null != u || "@everyone" === c || "@here" === c)
-            ? (0, l.jsx)(s.A, { inlinePreview: n.formatInline, ...e, children: t(e.content, n) }, n.key)
+            ? (0, l.jsx)(s.A, { inlinePreview: n.noStyleAndInteraction, ...e, children: t(e.content, n) }, n.key)
             : (0, l.jsx)(
                   r.A,
                   {
