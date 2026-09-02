@@ -1459,7 +1459,7 @@ if (
     n.e("859864").then(n.t.bind(n, 122123, 19));
 let e2 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 new eB.A().log(
-    `[BUILD INFO] Release Channel: ${e2}, Build Number: 606349, Version Hash: ac9a35d3fa08854091a878027a19df65bce35563`,
+    `[BUILD INFO] Release Channel: ${e2}, Build Number: 606378, Version Hash: ccfe1f7710a3639b0ff8f034195c1f55309bc075`,
 ),
     D.A.setTags({ appContext: G.QCW }),
     eI.A.initBasic(),
@@ -21077,7 +21077,7 @@ let NA = "isHideDevBanner",
                     className: ta()(NE.Wz, NE.mr),
                     children: [
                         (0, O.jsx)(N_, { className: NE.Kk }),
-                        tT.intl.format(tT.t.uyrfYF, { buildNumber: "606349" }),
+                        tT.intl.format(tT.t.uyrfYF, { buildNumber: "606378" }),
                         (0, O.jsx)(r, {}),
                     ],
                 })
@@ -41204,8 +41204,8 @@ let P7 = {
                                         n.e("944727"),
                                         n.e("118577"),
                                         n.e("39404"),
-                                        n.e("476229"),
-                                    ]).then(n.bind(n, 477156));
+                                        n.e("82001"),
+                                    ]).then(n.bind(n, 266536));
                                     return (t) => (0, O.jsx)(e, { ...t, analyticsLocations: [nT.A.RPC] });
                                 }));
             },

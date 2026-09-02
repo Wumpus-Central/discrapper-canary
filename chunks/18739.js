@@ -37,7 +37,7 @@ var r = n(158390),
     a = n(287809),
     l = n(948230),
     c = n(927899),
-    d = n(105810);
+    d = n(692200);
 class u {
     socket = null;
     open(e) {
@@ -217,6 +217,7 @@ async function M(e, t, n) {
         r = await d.A.relayPreviewCapture(e, n.id, {
             probe: n.probe,
             spec: n.spec,
+            build: n.build,
             onAccepted: async () => (t.ws.sendCaptureAck(n.id, "accepted"), await f(e, n.id)),
         });
     } catch (e) {

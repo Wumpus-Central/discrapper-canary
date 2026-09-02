@@ -86,10 +86,11 @@ function T(e) {
                                                     n.e("725241"),
                                                     n.e("118577"),
                                                     n.e("39404"),
-                                                    n.e("476229"),
+                                                    n.e("82001"),
                                                     n.e("191782"),
+                                                    n.e("763612"),
                                                     n.e("190088"),
-                                                ]).then(n.bind(n, 477156));
+                                                ]).then(n.bind(n, 266536));
                                                 return (t) => (0, i.jsx)(e, { ...t, analyticsLocations: G });
                                             }));
                               },

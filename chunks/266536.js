@@ -191,14 +191,9 @@ function ef() {
         ],
     });
 }
-var eh = s(289873);
-let ex = (0, s(945810).mj)({
-    name: "2026-05-screenshare-picker-wgc",
-    kind: "user",
-    defaultConfig: { enabled: !1 },
-    variations: { 1: { enabled: !0 } },
-});
-var ep = s(830012);
+var eh = s(289873),
+    ex = s(475735),
+    ep = s(830012);
 s(393431), s(532706), s(42231), s(232424), s(949626), s(767709), s(65162), s(508300);
 var em = s(344390),
     ej = s(742459),
@@ -243,7 +238,7 @@ async function eC(e) {
     let s,
         { width: i, height: l, types: r = [d.fS.CAMERA, d.fS.SCREEN, d.fS.WINDOW] } = e,
         n = I.Ay.getVideoDevices(),
-        a = ex.getConfig({ location: "fetchSources" }).enabled,
+        a = ex.O.getConfig({ location: "fetchSources" }).enabled,
         c = (0, ej.A)(I.Ay.getMediaEngine(), a, r, { width: i, height: l }),
         o = ev(),
         u = await o,
@@ -403,7 +398,7 @@ function eP() {
                 if (null != t) {
                     try {
                         let e = I.Ay.getMediaEngine(),
-                            i = ex.getConfig({ location: "GoLiveModalConfirmContent" }).enabled,
+                            i = ex.O.getConfig({ location: "GoLiveModalConfirmContent" }).enabled,
                             l = await e.getSingleWindowPreview(t, 960, 540, i);
                         if (null != l) {
                             s(l.url), n(!1);
