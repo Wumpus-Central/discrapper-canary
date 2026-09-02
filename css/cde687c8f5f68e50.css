@@ -288,6 +288,7 @@
     display: flex;
     flex: 1;
     flex-direction: row;
+    gap: var(--space-8);
     inset: 0 var(--space-8);
     justify-content: space-between;
     position: absolute;
@@ -298,15 +299,23 @@
     align-items: center;
     display: flex;
     flex-direction: row;
-    gap: 2px
+    gap: 2px;
+    min-width: 0
 }
 
 .text__0d0f9 {
-    color: var(--text-default)
+    color: var(--text-default);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
 }
 
 .boostCountText__0d0f9 {
     opacity: .7
+}
+
+.caret__0d0f9 {
+    flex-shrink: 0
 }
 
 .progress__0d0f9 {
@@ -686,4 +695,4 @@
     background-color: var(--app-frame-border)
 }
 
-/*# sourceMappingURL=edfd326052d5938c.css.map*/
+/*# sourceMappingURL=cde687c8f5f68e50.css.map*/

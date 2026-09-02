@@ -761,7 +761,7 @@ let ti = r.forwardRef((e, t) => {
                                     width: 12,
                                     height: 12,
                                     direction: e8.A.Directions.RIGHT,
-                                    className: eH()(tl.Qq, tl.ue),
+                                    className: eH()(tl.Qq, tl.ue, tl.OW),
                                 }),
                             ],
                         }),

@@ -8,5 +8,6 @@ _.exports = {
     FS: "textContainer__0d0f9",
     Ui: "textContentContainer__0d0f9",
     Qq: "text__0d0f9",
+    OW: "caret__0d0f9",
     mu: "progressLow__0d0f9",
 };
