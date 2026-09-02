@@ -140,8 +140,11 @@ let T = {
     k = new (o())(L),
     w = new (o())(L);
 function P(e, t, n, l, s) {
-    let { content: r, type: a, originalMatch: o } = n;
-    switch ((i()(null != o, "Slate: originalMatch must be set " + JSON.stringify(n, void 0, 2)), a)) {
+    let { content: r, type: a } = n,
+        o = null == n.originalMatch && "text" === a && "string" == typeof r;
+    o && A.warn(`Slate: parser bailed out past MAX_PARSE_DEPTH, rendering ${r.length} chars as plain text`);
+    let u = o ? [r] : n.originalMatch;
+    switch ((i()(null != u, "Slate: originalMatch must be set " + JSON.stringify(n, void 0, 2)), a)) {
         case "newline":
         case "br":
         case "paragraph":
@@ -150,14 +153,14 @@ function P(e, t, n, l, s) {
             return V(e, t, r || "", l, s);
         case "emoji":
         case "customEmoji":
-            if ((t.startsWith(o[0], l) || (l = K(e, t, l, t.length)), t.startsWith(o[0], l)))
-                return H({ result: e, sourceText: t, text: o[0], originalStart: l, attributes: [a], data: n });
-            throw Error(`Slate: Unable to find emoji: ${o[0]} in ${t} at ${l}`);
+            if ((t.startsWith(u[0], l) || (l = K(e, t, l, t.length)), t.startsWith(u[0], l)))
+                return H({ result: e, sourceText: t, text: u[0], originalStart: l, attributes: [a], data: n });
+            throw Error(`Slate: Unable to find emoji: ${u[0]} in ${t} at ${l}`);
         case "soundboard":
             return H({
                 result: e,
                 sourceText: t,
-                text: o[0],
+                text: u[0],
                 originalStart: l,
                 attributes: [a],
                 data: { guildId: n.guildId, soundId: n.soundId },
@@ -171,7 +174,7 @@ function P(e, t, n, l, s) {
             let { text: s, id: r } = n;
             if (null != s)
                 return (
-                    i()(s === o[0], "Slate: text mentions must exactly match the regex match"),
+                    i()(s === u[0], "Slate: text mentions must exactly match the regex match"),
                     H({
                         result: e,
                         sourceText: t,
@@ -181,30 +184,30 @@ function P(e, t, n, l, s) {
                         data: { text: s },
                     })
                 );
-            return H({ result: e, sourceText: t, text: o[0], originalStart: l, attributes: [a], data: { id: r } });
+            return H({ result: e, sourceText: t, text: u[0], originalStart: l, attributes: [a], data: { id: r } });
         }
         case "staticRouteLink":
-            let { id: u, itemId: c } = n;
+            let { id: c, itemId: d } = n;
             return H({
                 result: e,
                 sourceText: t,
-                text: o[0],
+                text: u[0],
                 originalStart: l,
                 attributes: [a],
-                data: { id: u, itemId: c },
+                data: { id: c, itemId: d },
             });
         case "gameMention":
             return H({
                 result: e,
                 sourceText: t,
-                text: o[0],
+                text: u[0],
                 originalStart: l,
                 attributes: [a],
                 data: { id: n.gameId },
             });
         case "timestamp":
         case "timestampMentionInput":
-            return H({ result: e, sourceText: t, text: o[0], originalStart: l, attributes: [a], data: n });
+            return H({ result: e, sourceText: t, text: u[0], originalStart: l, attributes: [a], data: n });
         case "em":
         case "autolink":
         case "mailto":
@@ -228,8 +231,8 @@ function P(e, t, n, l, s) {
                     let i = E["link" === t ? "url" : t];
                     if ("inlineStyle" === i.type) return i;
                     throw Error("Slate: rule must be an inlineStyle");
-                })(t, a, l, o),
-                u = D({
+                })(t, a, l, u),
+                o = D({
                     attribute: "syntaxBefore",
                     content: r,
                     currentAttributes: s,
@@ -244,7 +247,7 @@ function P(e, t, n, l, s) {
                     type: a,
                 });
             return (
-                (l = F({ result: e, sourceText: t, syntaxCharacters: n, pos: l, attributes: u })),
+                (l = F({ result: e, sourceText: t, syntaxCharacters: n, pos: l, attributes: o })),
                 s.push(a),
                 (l = V(e, t, r ?? "", l, s)),
                 s.pop(),
