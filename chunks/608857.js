@@ -14,6 +14,7 @@ function s(e) {
                         {
                             status: "saved",
                             key: e.id,
+                            gameId: e.gameId,
                             videoURL: e.videoURL,
                             thumbnailURL: e.thumbnailURL,
                             title: e.title,
@@ -26,6 +27,7 @@ function s(e) {
                           {
                               status: "pending",
                               key: e.id,
+                              gameId: e.gameId,
                               localClipId: e.localClipId,
                               thumbnail: a.clip.thumbnail,
                               title: e.title,

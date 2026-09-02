@@ -244,11 +244,30 @@
 .tile_afbdeb {
     border: 1px solid var(--border-subtle);
     box-shadow: 0 3px 12px 0 rgba(0, 0, 0, .16);
+    box-sizing: border-box;
     overflow: hidden
 }
 
+.full-motion .filmstrip_afbdeb .tile_afbdeb :is(img, video) {
+    transition: transform .6s cubic-bezier(.16, 1, .3, 1)
+}
+
+.full-motion .filmstrip_afbdeb .tile_afbdeb:hover :is(img, video) {
+    transform: scale(1.1)
+}
+
 .selected_afbdeb {
-    border-color: var(--border-strong)
+    border-color: transparent;
+    box-shadow: inset 0 0 0 2px var(--border-strong), 0 3px 12px 0 rgba(0, 0, 0, .16);
+    padding: var(--space-4)
+}
+
+.selected_afbdeb .tileMedia_afbdeb {
+    border-radius: calc(var(--radius-sm) - var(--space-4))
+}
+
+.full-motion .filmstrip_afbdeb .selected_afbdeb:hover :is(img, video) {
+    transform: scale(1)
 }
 
 .tileMedia_afbdeb {
@@ -335,4 +354,4 @@
     transition: color .15s ease-out, border-color .15s ease-out
 }
 
-/*# sourceMappingURL=103b0db603ad4f8d.css.map*/
+/*# sourceMappingURL=eb9d22aaad43b76f.css.map*/

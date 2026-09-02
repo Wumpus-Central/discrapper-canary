@@ -1,8 +1,10 @@
-a.d(t, { A: () => r });
-var l = a(256905);
-let i = { width: 1920, height: 1080 };
-async function n(e) {
-    if (null == e) return i;
+a.d(t, { A: () => c });
+var l = a(256905),
+    i = a(625494),
+    n = a(652215);
+let s = { width: 1920, height: 1080 };
+async function r(e) {
+    if (null == e) return s;
     try {
         let { width: t, height: a } = await new Promise((t, a) => {
             let l = new Image();
@@ -10,19 +12,29 @@ async function n(e) {
                 (l.onerror = () => a(Error("measureImage: the image failed to load"))),
                 (l.src = e);
         });
-        return t > 0 && a > 0 ? { width: t, height: a } : i;
+        return t > 0 && a > 0 ? { width: t, height: a } : s;
     } catch {
-        return i;
+        return s;
     }
 }
-async function s(e) {
-    let { videoURL: t, thumbnailURL: a, title: l } = e,
-        { width: i, height: s } = await n(a);
-    return { type: "VIDEO", url: t, proxyUrl: t, poster: a, width: i, height: s, alt: l };
+async function o(e, t) {
+    let { videoURL: a, thumbnailURL: l, title: s } = e,
+        { width: o, height: c } = await r(l);
+    return {
+        type: "VIDEO",
+        url: a,
+        proxyUrl: a,
+        poster: l,
+        width: o,
+        height: c,
+        alt: s,
+        onEnded: t ? () => i._.dispatch(n.jej.MODAL_CAROUSEL_NEXT) : void 0,
+    };
 }
-async function r(e) {
+async function c(e) {
     let { clips: t, startingIndex: a } = e;
     if (0 === t.length) return;
-    let i = await Promise.all(t.map(s));
-    (0, l.R)({ location: "user_profile_widget_clip", items: i, startingIndex: a, shouldHideMediaOptions: !0 });
+    let i = t.length > 1,
+        n = await Promise.all(t.map((e) => o(e, i)));
+    (0, l.R)({ location: "user_profile_widget_clip", items: n, startingIndex: a, shouldHideMediaOptions: !0 });
 }

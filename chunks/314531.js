@@ -25,32 +25,37 @@ function u(e) {
 }
 var p = a(579460);
 function m(e) {
-    let { item: t, ringSize: a, isPlaying: n = !1, className: o } = e,
-        c = i.useRef(null),
-        d = "exporting" === t.status || "uploading" === t.status,
-        m = s()(p.Gt, { [p.ob]: d });
+    let { item: t, ringSize: a, isPlaying: n = !1, isMuted: o = !0, fit: c = "cover", onEnded: d, className: m } = e,
+        g = i.useRef(null),
+        h = "exporting" === t.status || "uploading" === t.status,
+        v = s()(p.Gt, { [p.ob]: h, [p.k6]: "contain" === c });
     return (
         i.useEffect(() => {
-            let e = c.current;
+            let e = g.current;
+            null != e && (e.muted = o);
+        }, [o]),
+        i.useEffect(() => {
+            let e = g.current;
             null != e && (n ? e.play().catch(() => {}) : e.pause());
-        }, [n]),
+        }, [n, t.key]),
         (0, l.jsxs)("div", {
-            className: s()(p.$_, o),
+            className: s()(p.$_, m),
             children: [
                 "saved" === t.status
                     ? null != t.videoURL
                         ? (0, l.jsx)(r.A, {
-                              ref: c,
+                              ref: g,
                               src: t.videoURL,
                               poster: t.thumbnailURL,
                               preload: "none",
                               muted: !0,
-                              loop: !0,
-                              className: m,
+                              loop: null == d,
+                              onEnded: d,
+                              className: v,
                           })
                         : null
-                    : (0, l.jsx)("img", { src: t.thumbnail, alt: "", className: m, loading: "lazy" }),
-                d && (0, l.jsx)(u, { item: t, size: a }),
+                    : (0, l.jsx)("img", { src: t.thumbnail, alt: "", className: v, loading: "lazy" }),
+                h && (0, l.jsx)(u, { item: t, size: a }),
             ],
         })
     );
