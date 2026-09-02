@@ -57,11 +57,11 @@ function c(e) {
             onInputKeyDown: f,
             preview: h,
             placeholder: p,
-            editButtonAriaLabel: I,
-            label: j,
+            editButtonAriaLabel: j,
+            label: I,
             size: A = "default",
-            maxLength: E,
-            error: v,
+            maxLength: v,
+            error: E,
             warning: C,
             trailing: S,
             className: b,
@@ -73,8 +73,8 @@ function c(e) {
             spellCheck: w,
         } = e,
         L =
-            (null != E && (t ? l : n).length > E ? a.intl.formatToPlainString(a.t.ICT5S6, { maxLength: E }) : void 0) ??
-            v,
+            (null != v && (t ? l : n).length > v ? a.intl.formatToPlainString(a.t.ICT5S6, { maxLength: v }) : void 0) ??
+            E,
         O = "compact" === A ? { variant: "compact" } : { variant: "default", trailing: S };
     return (0, i.jsx)(r.ZL, {
         ...O,
@@ -82,7 +82,7 @@ function c(e) {
         preview: h,
         placeholder: p,
         editButtonRef: o,
-        editButtonAriaLabel: I,
+        editButtonAriaLabel: j,
         onStartEditing: c,
         className: b,
         growWidth: N,
@@ -95,11 +95,11 @@ function c(e) {
         textColor: R,
         input: (0, i.jsx)(d, {
             inputRef: x,
-            label: j,
+            label: I,
             value: l,
             onChange: s,
             onKeyDown: f,
-            maxLength: E,
+            maxLength: v,
             placeholder: p,
             trailing: S,
             error: L,

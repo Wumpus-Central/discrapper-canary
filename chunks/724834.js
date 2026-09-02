@@ -14,11 +14,11 @@ var i = n(477900),
     f = n(56815),
     h = n(317560),
     p = n(99161),
-    I = n(183555),
-    j = n(402860),
+    j = n(183555),
+    I = n(402860),
     A = n(384377),
-    E = n(287809),
-    v = n(661492),
+    v = n(287809),
+    E = n(661492),
     C = n(111085),
     S = n(212387),
     b = n(590180),
@@ -122,10 +122,10 @@ function M(e) {
             specificProductOrVariant: m,
             isPurchased: x,
         } = (0, N.z)({ userId: a, product: n, location: l, onError: s }),
-        f = (0, v.q)(m),
+        f = (0, E.q)(m),
         h = x && !o,
         p = !f || h,
-        I = F(f && h ? L.intl.string(L.t.nKA6v8) : void 0);
+        j = F(f && h ? L.intl.string(L.t.nKA6v8) : void 0);
     return (0, i.jsx)("div", {
         className: O.U,
         style: P(t),
@@ -138,7 +138,7 @@ function M(e) {
             isBusy: c,
             isFirstTimeWishlister: u,
             onClick: g,
-            tooltipConfig: I,
+            tooltipConfig: j,
             ...r,
         }),
     });
@@ -198,8 +198,8 @@ function Q(e) {
             isHoveringOrFocusing: f,
             setIsHoveringOrFocusing: h,
             onDetailsClick: p,
-            onPurchaseClick: j,
-            wishlistId: E,
+            onPurchaseClick: I,
+            wishlistId: v,
             isItemOwned: C,
             cardBackdrop: b,
         } = e,
@@ -221,27 +221,27 @@ function Q(e) {
                 N.current(!1);
             }
         }, []);
-    let { trackUserProfileWishlistAction: k } = (0, I.NJ)(),
+    let { trackUserProfileWishlistAction: k } = (0, j.NJ)(),
         y = l.useCallback(() => {
-            null != E &&
+            null != v &&
                 (k({
-                    wishlistId: E,
+                    wishlistId: v,
                     action: Y.Mq.WISHLIST_ITEM_CLICKED,
                     skuId: t.sku.id,
                     productLines: new Set([t.sku.productLine]),
                 }),
                 p());
-        }, [p, t.sku, E, k]),
+        }, [p, t.sku, v, k]),
         R = l.useCallback(() => {
-            null != E &&
+            null != v &&
                 (k({
-                    wishlistId: E,
+                    wishlistId: v,
                     action: Y.Mq.WISHLIST_ITEM_CLICKED,
                     skuId: t.sku.id,
                     productLines: new Set([t.sku.productLine]),
                 }),
-                j());
-        }, [j, t.sku, E, k]),
+                I());
+        }, [I, t.sku, v, k]),
         w = l.useCallback(() => {
             (0, A.XA)(Y.jM.SOMETHING_WENT_WRONG), o.O.announce(L.intl.string(L.t.F8FvUy));
         }, []),
@@ -270,14 +270,14 @@ function Q(e) {
                 onHoverOrFocusChange: h,
                 onClick: P,
                 "aria-label": G
-                    ? (0, v.T)(t.sku)
-                    : L.intl.formatToPlainString(L.t.ZBB4Ty, { productName: (0, v.T)(t.sku) }),
+                    ? (0, E.T)(t.sku)
+                    : L.intl.formatToPlainString(L.t.ZBB4Ty, { productName: (0, E.T)(t.sku) }),
                 children: [
                     b,
                     D && (0, i.jsx)(V.A, { spec: J, onClick: _, isHoveringOrFocusing: f, label: M, icon: U }),
                     C && (0, i.jsx)(H.gS, { isHoveringOrFocusing: f }),
                     n.id === a.id &&
-                        null != E &&
+                        null != v &&
                         (0, i.jsx)(W, {
                             sku: t.sku,
                             isCardHovered: f,
@@ -377,7 +377,7 @@ function et(e) {
             ...d
         } = e,
         c = l.useCallback(() => {
-            if (n) return void (0, x.x)(j.closeUserProfileModal);
+            if (n) return void (0, x.x)(I.closeUserProfileModal);
             let e = s.id === r.id,
                 i = t.skuId;
             (0, m.A)({
@@ -409,7 +409,7 @@ function en(e) {
             ...(r ?? []),
             t.sku?.productLine === w.EZt.SOCIAL_LAYER_GAME_ITEM ? c.A.SLAYER_STOREFRONT_WISHLIST_ITEM_CARD : [],
         ),
-        g = (0, d.bG)([E.default], () => E.default.getCurrentUser()),
+        g = (0, d.bG)([v.default], () => v.default.getCurrentUser()),
         [m, x] = l.useState(!1),
         f = (0, d.bG)([C.A], () => C.A.hasSentGift(t.skuId, n.id), [n, t.skuId]),
         h = l.useMemo(

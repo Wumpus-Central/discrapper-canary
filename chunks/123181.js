@@ -72,12 +72,12 @@ let x = l.memo(function (e) {
 function f(e) {
     let { tags: t, onTagsChange: n, onOpen: d, onClose: c, variant: f = "default", ref: h } = e,
         p = "filled" === f,
-        I = (0, l.useRef)(null),
-        j = (0, l.useMemo)(() => (null != t ? t : []), [t]),
+        j = (0, l.useRef)(null),
+        I = (0, l.useMemo)(() => (null != t ? t : []), [t]),
         A = (0, l.useCallback)(
             function (e) {
                 let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-                    i = new Set(j),
+                    i = new Set(I),
                     l = "added";
                 if (t) {
                     let t = Object.values(u.Pb).find((t) => t.tags.includes(e));
@@ -89,34 +89,34 @@ function f(e) {
                 } else i.has(e) ? (i.delete(e), (l = "removed")) : i.add(e);
                 n(Array.from(i), l);
             },
-            [j, n],
+            [I, n],
         ),
-        E = (0, l.useCallback)(
+        v = (0, l.useCallback)(
             (e) => {
-                let t = new Set(j);
+                let t = new Set(I);
                 e.forEach((e) => {
                     t.delete(e);
                 }),
                     n(Array.from(t), "removed");
             },
-            [j, n],
+            [I, n],
         );
     return (0, i.jsx)(s.Y, {
-        targetElementRef: I,
+        targetElementRef: j,
         position: "right",
         align: "top",
         onRequestOpen: d,
         onRequestClose: c,
         renderPopout: (e) => {
             let { closePopout: t } = e;
-            return (0, i.jsx)(x, { currentTags: j, onTagSelect: A, onNoneSelect: E, onClose: t });
+            return (0, i.jsx)(x, { currentTags: I, onTagSelect: A, onNoneSelect: v, onClose: t });
         },
         children: (e) =>
             (0, i.jsx)("div", {
                 ref: (e) => (
-                    null != e && ((I.current = e), (h.current = e)),
+                    null != e && ((j.current = e), (h.current = e)),
                     () => {
-                        (I.current = null), (h.current = null);
+                        (j.current = null), (h.current = null);
                     }
                 ),
                 children: (0, i.jsxs)(r.D, {

@@ -8,8 +8,8 @@ var a = n(477900),
     d = n(866323),
     c = n(765178),
     u = n(834730),
-    f = n(821609),
-    m = n(775602),
+    m = n(821609),
+    f = n(775602),
     g = n(485038);
 let E = "data-prevents-popout-dismiss";
 function p(e) {
@@ -24,12 +24,12 @@ function p(e) {
             a11yAnnounceOnShow: _,
             a11yAnnounceOnHide: A,
         } = e,
-        v = (0, o.bG)([m.Ay], () => m.Ay.useReducedMotion),
-        R = l.useRef(null);
+        v = (0, o.bG)([f.Ay], () => f.Ay.useReducedMotion),
+        N = l.useRef(null);
     return (
         l.useEffect(
             () => () => {
-                null != R.current && clearTimeout(R.current);
+                null != N.current && clearTimeout(N.current);
             },
             [],
         ),
@@ -40,12 +40,12 @@ function p(e) {
             onRest: (e, t) => {
                 if (!e.finished) return;
                 let n = t.item ? _ : A;
-                null != R.current && clearTimeout(R.current),
+                null != N.current && clearTimeout(N.current),
                     null != n
-                        ? (R.current = setTimeout(() => {
-                              (R.current = null), c.O.announce(n);
+                        ? (N.current = setTimeout(() => {
+                              (N.current = null), c.O.announce(n);
                           }, 300))
-                        : (R.current = null);
+                        : (N.current = null);
             },
         })((e, n) =>
             n
@@ -66,8 +66,8 @@ function p(e) {
                               (0, a.jsxs)("div", {
                                   className: g.o1,
                                   children: [
-                                      (0, a.jsx)(f.$, { variant: "secondary", size: "sm", ...h }),
-                                      (0, a.jsx)(f.$, { variant: "primary", size: "sm", ...b }),
+                                      (0, a.jsx)(m.$, { variant: "secondary", size: "sm", ...h }),
+                                      (0, a.jsx)(m.$, { variant: "primary", size: "sm", ...b }),
                                   ],
                               }),
                           ],

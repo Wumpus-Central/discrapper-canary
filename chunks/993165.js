@@ -15,33 +15,33 @@ function m(e) {
         [x, f] = l.useState(null),
         [h] = l.useState(r.B$),
         p = l.useRef(h),
-        I = (0, d.A)((e) => {
+        j = (0, d.A)((e) => {
             m(e);
         }),
-        j = l.useCallback(() => {
+        I = l.useCallback(() => {
             m(c);
         }, []),
         A = l.useCallback(() => p.current, []),
-        E = (0, s.bG)([a.default], () => o.Ay.canUsePremiumProfileCustomization(a.default.getCurrentUser())),
-        v = E ? c : n,
-        C = !E && x?.id === "premiumTryItOut",
+        v = (0, s.bG)([a.default], () => o.Ay.canUsePremiumProfileCustomization(a.default.getCurrentUser())),
+        E = v ? c : n,
+        C = !v && x?.id === "premiumTryItOut",
         S = l.useCallback(() => {
-            f(v);
-        }, [v]),
+            f(E);
+        }, [E]),
         b = l.useCallback((e) => {
             p.current = e;
         }, []),
         T = l.useMemo(
             () => ({
-                selectedPanel: v,
+                selectedPanel: E,
                 readyPanel: x,
                 handlePanelTransitionComplete: S,
-                navigate: I,
-                goBack: j,
+                navigate: j,
+                goBack: I,
                 getCurrentPreset: A,
                 cachePreset: b,
             }),
-            [v, x, S, I, j, A, b],
+            [E, x, S, j, I, A, b],
         );
     return (0, i.jsx)(g.Provider, { value: C, children: (0, i.jsx)(u.Provider, { value: T, children: t }) });
 }

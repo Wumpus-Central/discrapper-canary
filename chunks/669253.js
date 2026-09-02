@@ -14,14 +14,14 @@ var i = n(477900),
     f = n(206697),
     h = n(874402),
     p = n(570002),
-    I = n(202541),
-    j = n(375708);
+    j = n(202541),
+    I = n(375708);
 function A() {
     let e = (0, g.YW)(),
         { goBack: t } = (0, g.pA)(),
-        n = (0, p.A)(j.intl.string(j.t.pj0XBN));
+        n = (0, p.A)(I.intl.string(I.t.pj0XBN));
     return (0, i.jsx)(x.A, {
-        subscriptionTier: I.pe.TIER_2,
+        subscriptionTier: j.pe.TIER_2,
         onSubscribeModalClose: (e) => {
             e && (0, f.T)();
         },
@@ -30,17 +30,17 @@ function A() {
             return (0, i.jsx)(h.$, {
                 isVisible: e,
                 labelId: "premium-try-it-out-footer-bar-label",
-                noticeText: j.intl.string(j.t.X0ir7L),
-                a11yAnnounceOnShow: j.intl.string(j.t.X0ir7L),
-                a11yAnnounceOnHide: j.intl.string(j.t.ZcyFYa),
-                secondaryAction: { text: j.intl.string(j.t.V3S9WW), onClick: t },
+                noticeText: I.intl.string(I.t.X0ir7L),
+                a11yAnnounceOnShow: I.intl.string(I.t.X0ir7L),
+                a11yAnnounceOnHide: I.intl.string(I.t.ZcyFYa),
+                secondaryAction: { text: I.intl.string(I.t.V3S9WW), onClick: t },
                 primaryAction: { text: n, onClick: s, icon: m.t, variant: "expressive" },
             });
         },
     });
 }
-var E = n(803306),
-    v = n(631670),
+var v = n(803306),
+    E = n(631670),
     C = n(682618),
     S = n(636537),
     b = n(228366),
@@ -95,7 +95,7 @@ function B(e) {
         })(),
         p = (0, u.X)("UserProfileModalV2SaveBar"),
         {
-            hasUnsavedProfileChanges: I,
+            hasUnsavedProfileChanges: j,
             canSubmitProfileChanges: A,
             hasBadgeChangesToSave: S,
         } = (0, a.cf)([M.A], () => ({
@@ -103,7 +103,7 @@ function B(e) {
             canSubmitProfileChanges: M.A.canSubmit(),
             hasBadgeChangesToSave: (0, y.gz)(M.A.getPendingChanges()),
         })),
-        b = p && I,
+        b = p && j,
         T = x || b || S,
         B = !(x && !f) && (!p || A),
         z = l.useCallback(() => {
@@ -118,7 +118,7 @@ function B(e) {
                     n = await k({ displayOrder: t.pendingBadgeDisplayOrder, hiddenBadges: t.pendingBadgeHiddenBadges });
                 if (n) {
                     let e = L.default.getCurrentUser()?.id;
-                    null != e && (await (0, E.fetchProfile)(e).catch(() => {})), await (0, C.RS)(), (0, y.Jp)();
+                    null != e && (await (0, v.fetchProfile)(e).catch(() => {})), await (0, C.RS)(), (0, y.Jp)();
                 }
                 e = n;
             }
@@ -129,7 +129,7 @@ function B(e) {
                             n = (0, P.Sk)(t),
                             i = (0, P.yX)(t);
                         if (Object.keys(n).length > 0) {
-                            let i = await (0, v._L)(n);
+                            let i = await (0, E._L)(n);
                             (e = e && (i?.ok ?? !1)),
                                 i?.ok &&
                                     (void 0 !== t.pendingAvatar &&
@@ -138,7 +138,7 @@ function B(e) {
                                             avatarId: n.avatarId,
                                             avatarAssetOrigin: t.pendingAvatar?.assetOrigin,
                                         }),
-                                    (0, v.pZ)());
+                                    (0, E.pZ)());
                         }
                         if (Object.keys(i).length > 0) {
                             let { bannerOriginalMd5: t, ...n } = i,
@@ -160,7 +160,7 @@ function B(e) {
                                             avatarId: i.avatarId,
                                             avatarAssetOrigin: n.pendingAvatar?.assetOrigin,
                                         }),
-                                    (0, v.pZ)());
+                                    (0, E.pZ)());
                         }
                         if (Object.keys(l).length > 0) {
                             let { bannerOriginalMd5: n, ...i } = l,
@@ -173,7 +173,7 @@ function B(e) {
                         let { primaryGuildId: t } = n;
                         if (void 0 !== t) {
                             let n = await (0, w.m)(t, null !== t);
-                            (e = e && (n?.ok ?? !1)), n?.ok && (0, v.fw)();
+                            (e = e && (n?.ok ?? !1)), n?.ok && (0, E.fw)();
                         }
                     }
                 } catch {
@@ -193,7 +193,7 @@ function B(e) {
                 } catch {
                     e = !1;
                 }
-            e ? (0, v.x8)() : (0, H.XA)(V.jM.PROFILE_SAVE_GENERIC_FAILURE), d(!1);
+            e ? (0, E.x8)() : (0, H.XA)(V.jM.PROFILE_SAVE_GENERIC_FAILURE), d(!1);
         }, [p, b, S, x, c, g, m, n, t]);
     return (
         l.useEffect(() => {
@@ -216,11 +216,11 @@ function B(e) {
             preventsPopoutDismiss: !0,
             isVisible: T,
             labelId: "user-profile-save-reset-toolbar-label",
-            noticeText: j.intl.string(j.t["/lQiX/"]),
+            noticeText: I.intl.string(I.t["/lQiX/"]),
             isEmphasized: s,
-            a11yAnnounceOnShow: j.intl.string(j.t["0Y/qkL"]),
-            secondaryAction: { text: j.intl.string(j.t.yBZMsQ), onClick: z, disabled: !T || o },
-            primaryAction: { text: j.intl.string(j.t["R3BPH+"]), onClick: X, loading: o, disabled: !B || !T },
+            a11yAnnounceOnShow: I.intl.string(I.t["0Y/qkL"]),
+            secondaryAction: { text: I.intl.string(I.t.yBZMsQ), onClick: z, disabled: !T || o },
+            primaryAction: { text: I.intl.string(I.t["R3BPH+"]), onClick: X, loading: o, disabled: !B || !T },
         })
     );
 }

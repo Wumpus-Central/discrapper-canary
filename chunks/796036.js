@@ -1,69 +1,69 @@
-n.d(t, { h: () => w, s: () => m });
-var l = n(91242),
-    i = n(812901),
-    r = n(649248),
+n.d(t, { h: () => m, s: () => w });
+var i = n(91242),
+    r = n(812901),
+    l = n(649248),
     s = n(805332),
     o = n(783791),
-    u = n(972786),
-    a = n(120426),
+    a = n(972786),
+    u = n(120426),
     d = n(985451),
     c = n(171936),
     f = n(165610),
-    p = n(600732);
-let g = new Map(),
-    h = !1;
-function m() {
-    h ||
-        ((h = !0),
+    h = n(600732);
+let p = new Map(),
+    g = !1;
+function w() {
+    g ||
+        ((g = !0),
         o.Ay.addChangeListener(_),
-        u.Ay.addChangeListener(_),
-        l.A.addChangeListener(_),
+        a.Ay.addChangeListener(_),
+        i.A.addChangeListener(_),
         s.A.addChangeListener(_),
         (0, d.FQ)(_),
         _());
 }
-function w(e) {
-    return g.has(e);
+function m(e) {
+    return p.has(e);
 }
 function _() {
     let e = new Map();
     for (let t of new Set([...o.Ay.getActivityOrderedProjectIds(), ...(0, d.k)()])) {
         if (!o.Ay.isThinking(t) && !(0, d.RW)(t)) continue;
         let n = (function (e) {
-            let t = u.Ay.getProject(e)?.preview_application_id;
+            let t = a.Ay.getProject(e)?.preview_application_id;
             if (null == t) return null;
             let n = (0, f.VA)(t, f.sd);
-            return (0, f.x1)(l.A.getFrame(n)) ? n : null;
+            return (0, f.x1)(i.A.getFrame(n)) ? n : null;
         })(t);
         null != n && e.set(t, n);
     }
-    for (let [l, i] of [...g]) {
+    for (let [i, r] of [...p]) {
         var t, n;
-        e.get(l) !== i.frameId &&
-            ((t = l),
-            (n = i),
-            g.delete(t),
+        e.get(i) !== r.frameId &&
+            ((t = i),
+            (n = r),
+            p.delete(t),
             n.unregisterLookup(),
-            r.A.removeFrameTarget(n.frameId, n.element),
+            l.A.removeFrameTarget(n.frameId, n.element),
             n.element.remove());
     }
     for (let [t, n] of e)
-        g.has(t) ||
+        p.has(t) ||
             (function (e, t) {
                 let n = document.createElement("div");
-                (n.className = p.tF),
+                (n.className = h.tF),
                     n.setAttribute("inert", ""),
                     n.setAttribute("aria-hidden", "true"),
-                    A(n, s.A.isBuilderPreviewMobile()),
+                    v(n, s.A.isBuilderPreviewMobile()),
                     document.body.appendChild(n);
-                let l = { frameId: t, element: n, unregisterLookup: () => {} };
-                g.set(e, l),
-                    (l.unregisterLookup = (0, c.mn)(e, () => (0, a.F)(n, t))),
-                    r.A.registerFrameTarget(t, n, i.A.Backstage);
+                let i = { frameId: t, element: n, unregisterLookup: () => {} };
+                p.set(e, i),
+                    (i.unregisterLookup = (0, c.mn)(e, () => (0, u.F)(n, t))),
+                    l.A.registerFrameTarget(t, n, r.A.Backstage);
             })(t, n);
-    let h = s.A.isBuilderPreviewMobile();
-    for (let e of g.values()) A(e.element, h);
+    let g = s.A.isBuilderPreviewMobile();
+    for (let e of p.values()) v(e.element, g);
 }
-function A(e, t) {
-    e.classList.toggle(p.lZ, t), e.classList.toggle(p.L_, !t);
+function v(e, t) {
+    e.classList.toggle(h.lZ, t), e.classList.toggle(h.L_, !t);
 }

@@ -1,56 +1,56 @@
-n.d(t, { W: () => r, f: () => l }), n(323874), n(14289), n(35956);
-class l extends Error {
+n.d(t, { W: () => l, f: () => i }), n(323874), n(14289), n(35956);
+class i extends Error {
     constructor(e, t) {
         super(`preview frame did not answer ${e} within ${t}ms`), (this.name = "PreviewFrameCallTimeout");
     }
 }
-function i(e, t, n) {
+function r(e, t, n) {
     return "object" == typeof e && null != e && e.type === t && e.id === n;
 }
-function r(e, t, n, r) {
+function l(e, t, n, l) {
     let o = e.contentWindow;
     if (null == o) return Promise.reject(Error("preview frame not ready"));
-    let u = (function (e) {
+    let a = (function (e) {
         try {
             return new URL(e.src, window.location.href).origin;
         } catch {
             return null;
         }
     })(e);
-    if (null == u) return Promise.reject(Error("preview frame has no resolvable origin"));
-    let a = `vibegrations-${t}`,
-        d = `${a}-result`,
-        c = `${a}-ack`,
-        f = r.sourceMatch ?? "window",
-        p = r.id ?? `${t}-${++s}-${Date.now()}`;
-    return new Promise((s, g) => {
-        let h = 0,
-            m = o,
-            w = window.setTimeout(() => {
-                v(), g(new l(t, r.timeoutMs));
-            }, r.timeoutMs),
-            _ = null != r.retryMs ? window.setInterval(I, r.retryMs) : null;
-        function A() {
+    if (null == a) return Promise.reject(Error("preview frame has no resolvable origin"));
+    let u = `vibegrations-${t}`,
+        d = `${u}-result`,
+        c = `${u}-ack`,
+        f = l.sourceMatch ?? "window",
+        h = l.id ?? `${t}-${++s}-${Date.now()}`;
+    return new Promise((s, p) => {
+        let g = 0,
+            w = o,
+            m = window.setTimeout(() => {
+                b(), p(new i(t, l.timeoutMs));
+            }, l.timeoutMs),
+            _ = null != l.retryMs ? window.setInterval(A, l.retryMs) : null;
+        function v() {
             null != _ && window.clearInterval(_);
         }
-        function v() {
-            window.clearTimeout(w), A(), window.removeEventListener("message", T);
+        function b() {
+            window.clearTimeout(m), v(), window.removeEventListener("message", I);
         }
-        function I() {
-            (h += 1) > 1 &&
+        function A() {
+            (g += 1) > 1 &&
                 console.debug("[vibegrations] re-offering call to the preview frame", {
-                    call: r.label ?? t,
-                    id: p,
-                    attempt: h,
+                    call: l.label ?? t,
+                    id: h,
+                    attempt: g,
                 });
-            let l = { type: a, id: p, ...n };
-            (m = e.contentWindow), e.contentWindow?.postMessage(l, u);
+            let i = { type: u, id: h, ...n };
+            (w = e.contentWindow), e.contentWindow?.postMessage(i, a);
         }
-        function T(e) {
-            ("window" === f ? e.source !== m : e.origin !== u) ||
-                (i(e.data, c, p) ? A() : i(e.data, d, p) && (v(), s(e.data)));
+        function I(e) {
+            ("window" === f ? e.source !== w : e.origin !== a) ||
+                (r(e.data, c, h) ? v() : r(e.data, d, h) && (b(), s(e.data)));
         }
-        window.addEventListener("message", T), I();
+        window.addEventListener("message", I), A();
     });
 }
 let s = 0;

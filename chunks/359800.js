@@ -4,8 +4,8 @@ var i = n(477900),
     l = n(192308),
     s = n(691540),
     a = n(97483),
-    o = n(475743),
-    u = n(942370),
+    u = n(475743),
+    o = n(942370),
     c = n(211850),
     d = n(375708);
 let f = "in-game-auth-check-modal";
@@ -19,7 +19,7 @@ function m(e, t) {
                 A(!0);
                 let a = e(...r);
                 return (
-                    a === u._.RPC &&
+                    a === o._.RPC &&
                         m &&
                         (0, l.openModalLazy)(
                             async () => {
@@ -33,7 +33,7 @@ function m(e, t) {
             },
             [e, A, m],
         ),
-        _ = (0, o.Ay)(t);
+        _ = (0, u.Ay)(t);
     return (
         r.useEffect(() => {
             if (E && !1 === _ && !0 === t) {

@@ -8,8 +8,8 @@ var a = n(477900),
     d = n(798618),
     c = n(916845),
     u = n(297264),
-    f = n(834730),
-    m = n(353795),
+    m = n(834730),
+    f = n(353795),
     g = n(239027);
 function E(e) {
     let { title: t, body: n } = e;
@@ -19,7 +19,7 @@ function E(e) {
             (0, a.jsx)(u.D, { variant: "heading-md/semibold", className: g.title, children: t }),
             (0, a.jsx)("div", {
                 className: g.headerBody,
-                children: (0, a.jsx)(f.E, { variant: "text-sm/normal", color: "none", children: n }),
+                children: (0, a.jsx)(m.E, { variant: "text-sm/normal", color: "none", children: n }),
             }),
         ],
     });
@@ -30,7 +30,7 @@ function p(e) {
             body: n,
             graphic: r,
             size: u = "md",
-            actions: f,
+            actions: m,
             gradientColor: p,
             onRequestClose: b,
             position: h,
@@ -38,8 +38,8 @@ function p(e) {
             scrollBehavior: _,
             showCloseButton: A = !0,
             isCaretHoverable: v = !1,
-            shouldTrapFocus: R = !1,
-            returnRef: N,
+            shouldTrapFocus: N = !1,
+            returnRef: R,
             onNudgeChange: I,
             ...j
         } = e,
@@ -72,8 +72,8 @@ function p(e) {
             onPositionChange: M,
             onNudgeChange: I,
             scrollBehavior: _,
-            modal: R,
-            returnRef: N,
+            modal: N,
+            returnRef: R,
             gradientOffsetBottom: 0,
             experimental_ignoreModalClicks: !1,
             ...("edge" === j.alignmentStrategy
@@ -89,13 +89,13 @@ function p(e) {
                 null != r &&
                     (0, a.jsx)("div", {
                         className: s()(g.graphic, { [g[`graphic--${u}`]]: null != u }),
-                        children: (0, a.jsx)(m.v, {
+                        children: (0, a.jsx)(f.v, {
                             ...r,
                             aspectRatio: r.aspectRatio ?? ("sm" === u ? "2/1" : "16/9"),
                         }),
                     }),
                 (0, a.jsx)(E, { title: t, body: n }),
-                null != f && f.length > 0 ? (0, a.jsx)(o.Z, { actions: f, className: g.actionBar }) : null,
+                null != m && m.length > 0 ? (0, a.jsx)(o.Z, { actions: m, className: g.actionBar }) : null,
                 null != C && (0, a.jsx)(d.F, { className: P }),
             ],
         }),

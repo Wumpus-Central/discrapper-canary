@@ -1,4 +1,4 @@
-a.d(t, { A: () => k, N: () => U });
+a.d(t, { A: () => E, N: () => U });
 var l = a(477900),
     i = a(582128),
     n = a(503698),
@@ -16,31 +16,31 @@ var l = a(477900),
     f = a(885386),
     x = a(486020),
     j = a(652215);
-function w(e, t) {
+function A(e, t) {
     let { animated: a = !1 } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
         l = window.GLOBAL_ENV.CDN_HOST ?? j.f34,
         i = `https://${l}/widget-assets/${e}/${t}`,
         n = x.QB ? "webp" : a ? "gif" : "png";
     return `${i}?format=${n}&animated=${a}`;
 }
-var A = a(458499),
-    N = a(375708),
+var N = a(458499),
+    w = a(375708),
     y = a(842730);
-function b(e, t, a) {
+function I(e, t, a) {
     let l = f.kt.useSetting(),
         [n, s] = i.useState(!1),
         r = i.useCallback(() => s(!0), []),
         o = i.useCallback(() => s(!1), []),
         c = a && null != t && !("localDataUri" in t) && t.isAnimated && !l;
     return (i.useEffect(() => {
-        !c || null == t || "localDataUri" in t || (new Image().src = w(e, t.fileId, { animated: !0 }));
+        !c || null == t || "localDataUri" in t || (new Image().src = A(e, t.fileId, { animated: !0 }));
     }, [c, e, t]),
     null == t)
         ? { src: void 0, showGifTag: !1, onMouseMove: r, onMouseLeave: o, isHovering: n }
         : "localDataUri" in t
           ? { src: t.localDataUri, showGifTag: !1, onMouseMove: r, onMouseLeave: o, isHovering: n }
           : {
-                src: w(e, t.fileId, { animated: a && t.isAnimated && (l || n) }),
+                src: A(e, t.fileId, { animated: a && t.isAnimated && (l || n) }),
                 showGifTag: c,
                 isHovering: n,
                 onMouseMove: r,
@@ -49,7 +49,7 @@ function b(e, t, a) {
 }
 function U(e) {
     let { className: t, userId: a, image: i, canAnimate: n = !0 } = e,
-        { src: r, showGifTag: o, onMouseMove: c, onMouseLeave: d } = b(a, i, n);
+        { src: r, showGifTag: o, onMouseMove: c, onMouseLeave: d } = I(a, i, n);
     return "localDataUri" in i
         ? (0, l.jsx)("div", { className: t, children: (0, l.jsx)("img", { className: y.Sl, alt: "", src: r }) })
         : (0, l.jsxs)("div", {
@@ -62,13 +62,13 @@ function U(e) {
               ],
           });
 }
-function I(e) {
+function b(e) {
     let { canEdit: t, isHovering: a } = e;
     return (0, l.jsx)("div", {
         className: y.qf,
         children: t
             ? (0, l.jsx)(r.m, {
-                  text: N.intl.string(N.t["MsUY/S"]),
+                  text: w.intl.string(w.t["MsUY/S"]),
                   forceOpen: a,
                   ariaHidden: !0,
                   children: (0, l.jsx)(o.X, { className: y.Dm, size: "md" }),
@@ -86,27 +86,27 @@ function C(e) {
             canAnimate: f = !0,
             cropAndUpload: x,
             editVariant: j,
-            lastEdit: w,
+            lastEdit: A,
         } = e,
-        { src: U, showGifTag: C, onMouseMove: k, onMouseLeave: L, isHovering: R } = b(a, n, f),
-        E = o ?? U,
+        { src: U, showGifTag: C, onMouseMove: E, onMouseLeave: k, isHovering: L } = I(a, n, f),
+        R = o ?? U,
         M = i.useRef(null),
         S = r ?? M,
         D = i.useRef(null);
-    function H() {
+    function _() {
         S.current?.activateUploadDialogue();
     }
-    let _ = null != w && null != E && null == o;
+    let H = null != A && null != R && null == o;
     return (0, l.jsx)(c.vN, {
         within: !0,
         children: (0, l.jsxs)("div", {
             className: s()(y.kL, t),
-            onMouseMove: k,
-            onMouseLeave: L,
+            onMouseMove: E,
+            onMouseLeave: k,
             children: [
-                null != E
-                    ? (0, l.jsx)("img", { alt: "", src: E, className: y.Sl })
-                    : (0, l.jsx)(I, { canEdit: !0, isHovering: "tooltip" === j && R }),
+                null != R
+                    ? (0, l.jsx)("img", { alt: "", src: R, className: y.Sl })
+                    : (0, l.jsx)(b, { canEdit: !0, isHovering: "tooltip" === j && L }),
                 null != o
                     ? (0, l.jsx)("div", {
                           className: y.ob,
@@ -115,7 +115,7 @@ function C(e) {
                     : C
                       ? (0, l.jsx)(h.A, { className: y.pH })
                       : null,
-                "overlay" === j && null != E && null == o
+                "overlay" === j && null != R && null == o
                     ? (0, l.jsx)("div", {
                           className: y.HU,
                           "aria-hidden": !0,
@@ -124,22 +124,22 @@ function C(e) {
                     : null,
                 (0, l.jsx)(v.Ay, {
                     ref: S,
-                    tabIndex: _ ? -1 : 0,
-                    className: _ ? y.YZ : void 0,
-                    "aria-hidden": _,
+                    tabIndex: H ? -1 : 0,
+                    className: H ? y.YZ : void 0,
+                    "aria-hidden": H,
                     onChange: x,
                     multiple: !1,
-                    "aria-label": N.intl.string(N.t["MsUY/S"]),
+                    "aria-label": w.intl.string(w.t["MsUY/S"]),
                     title: "",
                 }),
-                _ && null != w
+                H && null != A
                     ? (0, l.jsx)(m.Y, {
                           targetElementRef: D,
                           position: "bottom",
                           disablePointerEvents: !1,
                           renderPopout: (e) => {
                               let { closePopout: t } = e;
-                              return (0, l.jsx)(A.A, { lastEdit: w, cropAndUpload: x, onChangeImage: H, onClose: t });
+                              return (0, l.jsx)(N.A, { lastEdit: A, cropAndUpload: x, onChangeImage: _, onClose: t });
                           },
                           children: (e) =>
                               (0, l.jsx)(g.D, {
@@ -147,7 +147,7 @@ function C(e) {
                                   innerRef: D,
                                   className: y.Eq,
                                   "aria-haspopup": "menu",
-                                  "aria-label": N.intl.string(N.t.RWkUzH),
+                                  "aria-label": w.intl.string(w.t.RWkUzH),
                               }),
                       })
                     : null,
@@ -155,7 +155,7 @@ function C(e) {
         }),
     });
 }
-function k(e) {
+function E(e) {
     let {
         className: t,
         canEdit: a,
@@ -181,6 +181,6 @@ function k(e) {
               lastEdit: u,
           })
         : null == n
-          ? (0, l.jsx)("div", { className: t, children: (0, l.jsx)(I, { canEdit: !1, isHovering: !1 }) })
+          ? (0, l.jsx)("div", { className: t, children: (0, l.jsx)(b, { canEdit: !1, isHovering: !1 }) })
           : (0, l.jsx)(U, { className: t, userId: i, image: n, canAnimate: o });
 }

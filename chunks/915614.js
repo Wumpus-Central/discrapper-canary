@@ -1,4 +1,4 @@
-n.d(t, { A: () => N, o: () => R });
+n.d(t, { A: () => R, o: () => N });
 var a = n(477900),
     l = n(582128),
     r = n(503698),
@@ -8,8 +8,8 @@ var a = n(477900),
     d = n(661531),
     c = n(602853),
     u = n(778712),
-    f = n(654107),
-    m = n(450373),
+    m = n(654107),
+    f = n(450373),
     g = n(885386),
     E = n(531685),
     p = n(486020),
@@ -19,14 +19,14 @@ var a = n(477900),
     _ = n(859161),
     A = n(207634),
     v = n(565890);
-function R(e) {
+function N(e) {
     let {
             user: t,
             displayProfile: n,
             guildId: r,
             pendingBanner: A,
-            overlay: R,
-            className: N,
+            overlay: N,
+            className: R,
             avatarSize: I,
             avatarOffsetX: j,
             avatarOffsetY: T,
@@ -39,32 +39,32 @@ function R(e) {
         [P, O] = l.useState(!1),
         U = (0, o.bG)([E.A], () => E.A.isFocused()),
         B = g.kt.getSetting(),
-        G = (0, b.Nx)(),
-        { bannerSrc: k, status: w } = (0, h.A)({
+        k = (0, b.Nx)(),
+        { bannerSrc: G, status: w } = (0, h.A)({
             displayProfile: n,
             pendingBanner: A,
             size: y,
             canAnimate: M || !B ? P : U,
         }),
-        L = G ? null : (k ?? null),
+        L = k ? null : (G ?? null),
         H = (0, c.r)(d.A.unsafe_rawColors.PRIMARY_800).hex(),
         V = t.getAvatarURL(r, (0, u.FT)(I)),
-        $ = (0, i.LX)((0, f.Ay)(V, H, !1)),
-        F = (0, m.A)(D ?? n?.primaryColor ?? $).hex,
+        $ = (0, i.LX)((0, m.Ay)(V, H, !1)),
+        F = (0, f.A)(D ?? n?.primaryColor ?? $).hex,
         z = { align: "start", insetStart: j - S, insetBottom: T + S, radius: (0, _.A)(I) };
     return (0, a.jsx)(x.A, {
-        fillClassName: s()(v.v, N),
+        fillClassName: s()(v.v, R),
         bannerSrc: L,
-        backgroundColor: "COMPLETE" === w || G ? F : d.A.unsafe_rawColors.PRIMARY_800.css,
+        backgroundColor: "COMPLETE" === w || k ? F : d.A.unsafe_rawColors.PRIMARY_800.css,
         showGifTag: !B && (0, p.o4)(L),
         height: C,
         cutout: z,
-        overlay: R,
+        overlay: N,
         onInteractionStart: () => O(!0),
         onInteractionEnd: () => O(!1),
     });
 }
-function N(e) {
+function R(e) {
     let {
             themeType: t,
             user: n,
@@ -76,5 +76,5 @@ function N(e) {
         o = A.T[t],
         d = null != s ? { ...o, ...s } : o,
         c = !(0, b.Qq)() && (r || l?.canUsePremiumProfileCustomization || !1);
-    return (0, a.jsx)(R, { ...i, ...d, user: n, displayProfile: l, themePadding: c ? d.themePadding : 0 });
+    return (0, a.jsx)(N, { ...i, ...d, user: n, displayProfile: l, themePadding: c ? d.themePadding : 0 });
 }

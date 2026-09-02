@@ -6,13 +6,13 @@ n.d(t, {
     VL: () => G,
     T0: () => L,
     UY: () => H,
-    yp: () => B,
+    yp: () => F,
     Yq: () => U,
     r4: () => w,
     Ck: () => J,
     Am: () => V,
     Jo: () => P,
-    ri: () => F,
+    ri: () => B,
     m: () => R,
     Ge: () => D,
 }),
@@ -204,7 +204,7 @@ function V(e, t) {
         [e, t],
     );
 }
-function F(e, t) {
+function B(e, t) {
     let { id: n } = e,
         { id: i } = t;
     return l.useCallback(
@@ -214,7 +214,7 @@ function F(e, t) {
         [i, n],
     );
 }
-function B(e) {
+function F(e) {
     let { groupId: t, message: n, defaultValue: i } = e,
         s = n.author.id,
         a = `${t}:${s}`,
