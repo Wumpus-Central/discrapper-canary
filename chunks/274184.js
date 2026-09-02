@@ -155,7 +155,7 @@ let U = new P(d.h, {
     SURVEY_OVERRIDE: function (e) {
         let { id: t, isActionTriggered: n } = e;
         if (n) {
-            N = t;
+            (N = t), null != t && delete T.hiddenSurveys[t];
             return;
         }
         (N = null), (T.surveyOverride = t), null != t && delete T.hiddenSurveys[t], (0, c.BC)(T.surveyOverride, !0);
