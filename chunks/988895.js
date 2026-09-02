@@ -701,6 +701,7 @@ function eL(e) {
               position: "bottom",
               align: "left",
               spacing: 4,
+              positionKey: `${t.length}`,
               scrollBehavior: "close",
               shouldShow: Q,
               onRequestClose: (e) => {
