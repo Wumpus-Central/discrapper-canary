@@ -166,6 +166,7 @@ let R = {
     [I.HAw.LIBDISCORE_SLOW_TIMERS]: { throttlePeriod: 36e5, throttleKeys: () => [] },
     [I.HAw.VIDEO_STREAM_ZOOM_CHANGED]: { throttlePeriod: 1e3, throttleKeys: () => [] },
     [I.HAw.CACHE_STATS_RECORDED]: { throttlePeriod: 9e5, throttleKeys: () => [] },
+    [I.HAw.TYPING_INDICATOR_STYLE_SEEN]: { throttlePeriod: 864e5, throttleKeys: () => [] },
 };
 function L(e) {
     return "string" == typeof e
