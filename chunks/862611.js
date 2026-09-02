@@ -4,8 +4,8 @@ var i,
     l = n(582128),
     s = n(323889),
     a = n(17928),
-    o = n(453903),
-    u = n(462887),
+    u = n(453903),
+    o = n(462887),
     c = n(834730),
     d = n(939249),
     f = n(789645),
@@ -20,8 +20,8 @@ var i,
     I = n(921138),
     N = n(459746),
     h = n(311043),
-    L = n(569926),
-    p = n(363195),
+    p = n(569926),
+    L = n(363195),
     R = n(174459),
     v = n(738822),
     G = n(104886),
@@ -40,8 +40,8 @@ function j(e) {
         n,
         i,
         { quest: l, onClose: s } = e,
-        o = (0, a.bG)([p.A], () => p.A.getState().theme),
-        m = (0, u.M)(o) ? q.NJ8.DARK : q.NJ8.LIGHT;
+        u = (0, a.bG)([L.A], () => L.A.getState().theme),
+        m = (0, o.M)(u) ? q.NJ8.DARK : q.NJ8.LIGHT;
     return (0, r.jsxs)("div", {
         className: U.N1,
         children: [
@@ -93,13 +93,13 @@ function j(e) {
     });
 }
 function Q(e) {
-    let { quest: t, game: i, sourceQuestContent: o, onGameProfileModalOpen: u, onGameProfileModalClose: c } = e,
+    let { quest: t, game: i, sourceQuestContent: u, onGameProfileModalOpen: o, onGameProfileModalClose: c } = e,
         f = (0, x.Ut)(),
         E = (0, M.go)(),
         S = (0, a.bG)([A.Ay], () => A.Ay.useReducedMotion),
         I = l.useRef(null),
         h = null != i.gameRecord;
-    function L() {
+    function p() {
         (0, G.E5)(G.kI.STEP_3_CLICKED_EXTERNAL, "game_sheet_external")
             ? (0, C.r)({
                   type: _.F.CLICK_EXTERNAL_ADVERTISER_CTA,
@@ -107,16 +107,16 @@ function Q(e) {
                   adCreativeId: t.id,
                   questContentCTA: P.Cy.GAME_STORE_OPEN_GAME_LINK,
                   surfaceId: v.uF.SPONSORED_QUEST_SHEET,
-                  sourceQuestContent: o,
+                  sourceQuestContent: u,
               })
             : f({
                   questId: t.id,
                   questContent: v.uF.SPONSORED_QUEST_SHEET,
                   questContentCTA: P.Cy.GAME_STORE_OPEN_GAME_LINK,
-                  sourceQuestContent: o,
+                  sourceQuestContent: u,
               });
     }
-    async function p() {
+    async function L() {
         h &&
             ((0, G.E5)(G.kI.STEP_2_CLICKED_INTERNAL, "game_sheet_application")
                 ? (0, C.r)({
@@ -125,14 +125,14 @@ function Q(e) {
                       adCreativeId: t.id,
                       questContentCTA: P.Cy.GAME_PROFILE_OPEN,
                       surfaceId: v.uF.SPONSORED_QUEST_SHEET,
-                      sourceQuestContent: o,
+                      sourceQuestContent: u,
                       impressionId: E,
                   })
                 : f({
                       questId: t.id,
                       questContent: v.uF.SPONSORED_QUEST_SHEET,
                       questContentCTA: P.Cy.GAME_PROFILE_OPEN,
-                      sourceQuestContent: o,
+                      sourceQuestContent: u,
                   }),
             await (0, m.openModalLazy)(
                 async () => {
@@ -615,7 +615,6 @@ function Q(e) {
                         n.e("209729"),
                         n.e("174016"),
                         n.e("918024"),
-                        n.e("736926"),
                         n.e("221856"),
                         n.e("187796"),
                         n.e("474907"),
@@ -644,6 +643,7 @@ function Q(e) {
                         n.e("501962"),
                         n.e("507406"),
                         n.e("893767"),
+                        n.e("736926"),
                         n.e("536973"),
                         n.e("631951"),
                         n.e("921041"),
@@ -656,13 +656,13 @@ function Q(e) {
                         (0, r.jsx)(e, {
                             gameId: i.gameId,
                             source: T.GameProfileSources.GameSheet,
-                            trackExternalAction: L,
+                            trackExternalAction: p,
                             ...t,
                         });
                 },
                 { onCloseCallback: c },
             ),
-            u());
+            o());
     }
     let R = l.useCallback(
             (e) => {
@@ -683,7 +683,7 @@ function Q(e) {
         text: i.name,
         children: (0, r.jsx)(d.D, {
             className: U.zR,
-            onClick: p,
+            onClick: L,
             onMouseMove: R,
             onMouseLeave: O,
             children: (0, r.jsx)("div", {
@@ -731,14 +731,14 @@ function F(e) {
         quest: t,
         applications: i,
         onClose: s,
-        sourceQuestContent: o,
-        impressionRef: u,
+        sourceQuestContent: u,
+        impressionRef: o,
         onGameProfileModalOpen: c,
         onGameProfileModalClose: d,
     } = e;
     (0, S.A)(i);
     let f = l.useMemo(() => i, [i]);
-    (0, L.x)(f);
+    (0, p.x)(f);
     let g = (0, a.bG)([h.A], () => f.some((e) => h.A.isFetching(e))),
         E = (0, a.bG)([h.A], () => f.some((e) => h.A.didFetchingFail(e))),
         A = (0, a.yK)([h.A], () =>
@@ -785,7 +785,7 @@ function F(e) {
         ? null
         : (0, r.jsxs)("div", {
               ref: (e) => {
-                  u.current = e;
+                  o.current = e;
               },
               className: U.kL,
               children: [
@@ -799,7 +799,7 @@ function F(e) {
                                   {
                                       quest: t,
                                       game: e,
-                                      sourceQuestContent: o,
+                                      sourceQuestContent: u,
                                       onGameProfileModalOpen: c,
                                       onGameProfileModalClose: d,
                                   },
@@ -818,7 +818,7 @@ function X(e) {
             applications: n,
             children: i,
             onGameSheetOpened: a,
-            onGameSheetClosed: u,
+            onGameSheetClosed: o,
             quest: c,
             sourceQuestContent: d,
             impressionRef: f,
@@ -832,7 +832,7 @@ function X(e) {
     function h() {
         g(!0);
     }
-    function L() {
+    function p() {
         g(!1);
     }
     return (0, r.jsx)(E.Y, {
@@ -847,7 +847,7 @@ function X(e) {
                 sourceQuestContent: d,
                 impressionRef: f,
                 onGameProfileModalOpen: h,
-                onGameProfileModalClose: L,
+                onGameProfileModalClose: p,
             });
         },
         onRequestOpen: function () {
@@ -870,8 +870,8 @@ function X(e) {
                       });
         },
         onRequestClose: function () {
-            if (m) return o.o;
-            u?.();
+            if (m) return u.o;
+            o?.();
         },
         position: I ? "right" : "top",
         align: I ? "bottom" : void 0,

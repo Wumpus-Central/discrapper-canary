@@ -310,7 +310,7 @@ function X(e) {
 }
 var ee = n(408278),
     et = n(834040),
-    en = n(663341),
+    en = n(499373),
     el = n(503698),
     ei = n.n(el),
     er = n(346689);
@@ -341,7 +341,17 @@ function ea(e) {
 var es = n(649102);
 function eo(e) {
     let { unitPrice: t } = e,
-        { quantity: n, setQuantity: i } = (0, h.t4)((e) => ({ quantity: e.quantity, setQuantity: e.setQuantity }));
+        { quantity: n, setQuantity: r } = (0, h.t4)((e) => ({ quantity: e.quantity, setQuantity: e.setQuantity })),
+        [a, s] = i.useState(n);
+    i.useEffect(() => {
+        s(n);
+    }, [n]);
+    let o = "number" == typeof a,
+        u = !o || a <= h.y0,
+        c = !o || a >= 50;
+    function m(e) {
+        s(e), r(e);
+    }
     return (0, l.jsxs)("div", {
         className: es.kL,
         children: [
@@ -362,30 +372,46 @@ function eo(e) {
                         "aria-label": N.intl.string(Z.default.WnnzG7),
                         children: [
                             (0, l.jsx)(ee.K, {
-                                size: "sm",
                                 variant: "secondary",
+                                size: "md",
                                 icon: et.MinusIcon,
-                                onClick: () => i(n - 1),
+                                onClick: () => {
+                                    u || m(a - 1);
+                                },
                                 "aria-label": N.intl.string(N.t["k+ohJm"]),
-                                disabled: n <= h.y0,
+                                disabled: u,
                             }),
                             (0, l.jsx)("div", {
-                                className: es.$5,
-                                "aria-live": "polite",
-                                children: (0, l.jsx)(d.E, {
-                                    tag: "span",
-                                    variant: "heading-xl/semibold",
-                                    color: "text-default",
-                                    children: n,
+                                className: es.t3,
+                                children: (0, l.jsx)("input", {
+                                    className: es.Ax,
+                                    "aria-label": N.intl.string(Z.default.WnnzG7),
+                                    inputMode: "numeric",
+                                    value: `${a}`,
+                                    onChange: (e) =>
+                                        (function (e) {
+                                            if ("" === e) return void s(e);
+                                            let t = parseInt(e, 10);
+                                            if (!isNaN(t)) {
+                                                if (t <= h.y0) return void m(h.y0);
+                                                if (t >= 50) return void m(50);
+                                                m(t);
+                                            }
+                                        })(e.currentTarget.value),
+                                    onBlur: function () {
+                                        "" === a && s(n);
+                                    },
                                 }),
                             }),
                             (0, l.jsx)(ee.K, {
-                                size: "sm",
                                 variant: "secondary",
-                                icon: en.PlusLargeIcon,
-                                onClick: () => i(n + 1),
+                                size: "md",
+                                icon: en.T,
+                                onClick: () => {
+                                    c || m(a + 1);
+                                },
                                 "aria-label": N.intl.string(N.t.w8Sc4B),
-                                disabled: n >= 50,
+                                disabled: c,
                             }),
                         ],
                     }),

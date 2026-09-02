@@ -481,18 +481,46 @@
 }
 
 .stepper_a87199 {
-    align-items: center;
-    border: 1px solid var(--border-subtle);
-    border-radius: var(--radius-lg);
-    display: flex;
-    gap: var(--space-8);
-    padding: var(--space-6)
+    gap: var(--space-4)
 }
 
-.quantityValue_a87199 {
-    display: flex;
+.quantityInputWrapper_a87199,
+.stepper_a87199 {
+    align-items: center;
+    display: flex
+}
+
+.quantityInputWrapper_a87199 {
+    background-color: var(--input-background-default);
+    border: 1px solid var(--input-border-default);
+    border-radius: var(--radius-sm);
+    box-sizing: border-box;
+    height: 40px;
     justify-content: center;
-    min-width: var(--space-32)
+    transition: border-color .1s ease;
+    width: 40px
+}
+
+.quantityInputWrapper_a87199:focus-within {
+    border-color: var(--input-border-active);
+    outline: 2px solid var(--input-border-active);
+    outline-offset: -2px
+}
+
+.quantityInput_a87199 {
+    background: transparent;
+    border: 0;
+    color: var(--input-text-default);
+    font-size: 16px;
+    height: 100%;
+    line-height: 20px;
+    padding: 0;
+    text-align: center;
+    width: 100%
+}
+
+.quantityInput_a87199:focus {
+    outline: none
 }
 
 .planOption_b13085 {
@@ -767,4 +795,4 @@
     justify-content: center
 }
 
-/*# sourceMappingURL=590994.9cbea8979f387b65.css.map*/
+/*# sourceMappingURL=590994.7f4cdfcc8b7f151c.css.map*/
