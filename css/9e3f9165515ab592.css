@@ -114,9 +114,14 @@
 }
 
 .notificationBadge_a3e8db {
+    background-color: var(--background-brand);
+    border-radius: 50%;
+    height: 8px;
     inset-inline-end: -4.5px;
+    outline: 2px solid var(--background-base-lower);
     position: absolute;
-    top: -4px
+    top: -4px;
+    width: 8px
 }
 
-/*# sourceMappingURL=d5c7c0fd6389748f.css.map*/
+/*# sourceMappingURL=9e3f9165515ab592.css.map*/

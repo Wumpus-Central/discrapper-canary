@@ -111,7 +111,7 @@ let v = function (e) {
 };
 var b = n(375708);
 function _() {
-    return (0, a.jsx)("img", { className: x.V8, src: n(324292), alt: "" });
+    return (0, a.jsx)("div", { className: x.V8 });
 }
 let p = (0, l.forwardRef)(function (e, t) {
     let {
