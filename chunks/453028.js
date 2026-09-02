@@ -751,10 +751,10 @@ let nA = new Set([
     e5.CO.KRISP_INIT_ERROR_WEIGHT_32K,
     e5.CO.KRISP_INIT_ERROR_WEIGHT_VAD,
 ]);
-function nh(e) {
+function nh(e, t) {
     if (
         (e4.warn(`Voice processing error: ${e}`),
-        (0, V.QW)({ type: V.iy.NOISE_CANCELLER_ERROR, underlyingError: nE(e) }),
+        (0, V.QW)({ type: V.iy.NOISE_CANCELLER_ERROR, underlyingError: nE(e), voiceProcessingErrorDetails: t }),
         eU.default.track(ew.HAw.VOICE_PROCESSING, { noise_canceller_error: e }),
         nA.has(e))
     ) {

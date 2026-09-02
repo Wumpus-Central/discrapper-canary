@@ -411,26 +411,27 @@ class J extends r.A {
                     B = "audioOutputDeviceName" in t ? t.audioOutputDeviceName : void 0,
                     H = "videoDeviceName" in t ? t.videoDeviceName : void 0,
                     j = "userId" in t ? t.userId : void 0,
-                    W = null != o ? (0, h.Iy)(o) : null,
-                    Y = null != o ? N.A.getRTCConnection(o) : null,
-                    K = null != o ? Y : g.A.getRTCConnection(),
-                    $ = null != o ? Y?.analyticsContext?.streamApplication : null,
-                    { resolution: z, fps: q } = p.A.getState(),
-                    { gameName: Z, gameId: X, exe: Q, distributor: J } = (0, A.wH)($),
-                    ee = r.isErrorOutbound,
-                    et = c ?? y.x.DEFAULT,
-                    en = null != W ? W.ownerId : j,
-                    ei = null != Y ? Y?.getVoiceParticipantType() : ee ? "sender" : "receiver",
-                    er = K?.getMediaEngineConnectionId() ?? null;
+                    W = "voiceProcessingErrorDetails" in t ? t.voiceProcessingErrorDetails : void 0,
+                    Y = null != o ? (0, h.Iy)(o) : null,
+                    K = null != o ? N.A.getRTCConnection(o) : null,
+                    $ = null != o ? K : g.A.getRTCConnection(),
+                    z = null != o ? K?.analyticsContext?.streamApplication : null,
+                    { resolution: q, fps: Z } = p.A.getState(),
+                    { gameName: X, gameId: Q, exe: J, distributor: ee } = (0, A.wH)(z),
+                    et = r.isErrorOutbound,
+                    en = c ?? y.x.DEFAULT,
+                    ei = null != Y ? Y.ownerId : j,
+                    er = null != K ? K?.getVoiceParticipantType() : et ? "sender" : "receiver",
+                    ea = $?.getMediaEngineConnectionId() ?? null;
                 (n =
-                    null != o && null != W
-                        ? ee
-                            ? K?.getOutboundStats()?.find((e) => e.quality === y.Y4)
-                            : K?.getInboundStats(W.ownerId)
-                        : ee
-                          ? (u().maxBy(K?.getOutboundStats() ?? [], (e) => e.num_frames) ?? null)
-                          : null != en
-                            ? K?.getInboundStats(en)
+                    null != o && null != Y
+                        ? et
+                            ? $?.getOutboundStats()?.find((e) => e.quality === y.Y4)
+                            : $?.getInboundStats(Y.ownerId)
+                        : et
+                          ? (u().maxBy($?.getOutboundStats() ?? [], (e) => e.num_frames) ?? null)
+                          : null != ei
+                            ? $?.getInboundStats(ei)
                             : null),
                     (0, f.w)().then((t) => {
                         let i = {
@@ -445,36 +446,40 @@ class J extends r.A {
                             channel_type: s?.type ?? null,
                             rtc_connection_id: w ?? null,
                             media_session_id: U ?? g.A.getMediaSessionId() ?? null,
-                            parent_media_session_id: Y?.parentMediaSessionId ?? null,
+                            parent_media_session_id: K?.parentMediaSessionId ?? null,
                             context: c ?? null,
                             voice_backend_version: g.A.getRTCConnection()?.getVoiceVersion() ?? null,
                             rtc_worker_backend_version: g.A.getRTCConnection()?.getRtcWorkerVersion() ?? null,
                             guild_region: S.A.getRegion(g.A.getHostname()) ?? null,
                             hostname: g.A.getHostname() ?? null,
-                            duration: K?.getDurationSeconds() ?? null,
-                            participant_type: ei ?? null,
+                            duration: $?.getDurationSeconds() ?? null,
+                            participant_type: er ?? null,
                             num_frames: n?.num_frames ?? 0,
                             num_packets: n?.num_packets ?? 0,
                             num_bytes: n?.num_bytes ?? 0,
-                            num_packets_lost: b(ee, er, en)?.packetsLost ?? 0,
-                            video_codec: G ?? (0, _.aV)(b(ee, er, en)?.codec.name) ?? null,
-                            video_encoder: x ?? (0, _.kZ)(D(er)?.encoderImplementationName) ?? null,
-                            video_decoder: k ?? (0, _.s7)(v(er, en)?.decoderImplementationName) ?? null,
+                            num_packets_lost: b(et, ea, ei)?.packetsLost ?? 0,
+                            video_codec: G ?? (0, _.aV)(b(et, ea, ei)?.codec.name) ?? null,
+                            video_encoder: x ?? (0, _.kZ)(D(ea)?.encoderImplementationName) ?? null,
+                            video_decoder: k ?? (0, _.s7)(v(ea, ei)?.decoderImplementationName) ?? null,
                             audio_capture_sample_rate_mismatch_percent: F ?? null,
                             audio_capture_processing_sample_rate:
-                                I.A.getConnectionStats(er)?.stats.rtp.outbound.find((e) => "audio" === e.type)
+                                I.A.getConnectionStats(ea)?.stats.rtp.outbound.find((e) => "audio" === e.type)
                                     ?.currentSampleRate ?? null,
+                            voice_processing_process_time_us: W?.processTimeUs ?? null,
+                            voice_processing_frame_count: W?.frameCount ?? null,
+                            voice_processing_sample_rate: W?.sampleRate ?? null,
+                            voice_processing_setup_count: W?.setupCount ?? null,
                             incoming_video_stopped_for_occlusion: !E.X.isIncomingVideoEnabled(),
-                            bitrate: b(ee, er, en)?.bitrate ?? null,
-                            target_bitrate: ee ? (D(er)?.bitrateTarget ?? null) : null,
-                            fps: (ee ? (D(et)?.frameRateEncode ?? null) : (v(et, en)?.frameRateDecode ?? null)) ?? null,
-                            target_fps: et === y.x.STREAM && ee ? q : null,
-                            sender_user_id: W?.ownerId ?? null,
-                            stream_region: Y?.getRegion() ?? null,
-                            stream_source_type: ee ? (Y?.analyticsContext?.streamSourceType ?? null) : null,
-                            num_stream_viewers: Y?.analyticsContext?.numViewers ?? null,
-                            video_input_resolution_height: ee ? (z ?? null) : null,
-                            video_input_frame_rate: ee ? (q ?? null) : null,
+                            bitrate: b(et, ea, ei)?.bitrate ?? null,
+                            target_bitrate: et ? (D(ea)?.bitrateTarget ?? null) : null,
+                            fps: (et ? (D(en)?.frameRateEncode ?? null) : (v(en, ei)?.frameRateDecode ?? null)) ?? null,
+                            target_fps: en === y.x.STREAM && et ? Z : null,
+                            sender_user_id: Y?.ownerId ?? null,
+                            stream_region: K?.getRegion() ?? null,
+                            stream_source_type: et ? (K?.analyticsContext?.streamSourceType ?? null) : null,
+                            num_stream_viewers: K?.analyticsContext?.numViewers ?? null,
+                            video_input_resolution_height: et ? (q ?? null) : null,
+                            video_input_frame_rate: et ? (Z ?? null) : null,
                             screenshare_capture_method: (function (e) {
                                 let t = I.A.getConnectionStats(e),
                                     n = I.A.getLastConnectionStats(e);
@@ -499,11 +504,11 @@ class J extends r.A {
                                     a = null;
                                 for (let [e, t] of Object.entries(i)) t > r && ((r = t), (a = e));
                                 return r > 0 ? a : null;
-                            })(er),
-                            share_application_name: Z ?? null,
-                            share_application_id: X ?? null,
-                            share_application_executable: Q ?? null,
-                            share_application_distributor: J ?? null,
+                            })(ea),
+                            share_application_name: X ?? null,
+                            share_application_id: Q ?? null,
+                            share_application_executable: J ?? null,
+                            share_application_distributor: ee ?? null,
                             cpu_brand: t?.cpu_brand ?? null,
                             cpu_vendor: t?.cpu_vendor ?? null,
                             cpu_memory: t?.cpu_memory ?? null,
@@ -518,9 +523,9 @@ class J extends r.A {
                             cpu_usage: R.A.getCurrentCPUUsagePercent() ?? null,
                             memory_usage: R.A.getCurrentMemoryUsageKB() ?? null,
                             outbound_bitrate_estimate:
-                                I.A.getConnectionStats(er)?.stats.transport.outboundBitrateEstimate ?? null,
+                                I.A.getConnectionStats(ea)?.stats.transport.outboundBitrateEstimate ?? null,
                             inbound_bitrate_estimate:
-                                I.A.getConnectionStats(er)?.stats.transport.inboundBitrateEstimate ?? null,
+                                I.A.getConnectionStats(ea)?.stats.transport.inboundBitrateEstimate ?? null,
                             hardware_enabled: m.Ay.getHardwareEncoding(),
                             audio_input_device_name: V ?? m.Ay.getInputDevices()[m.Ay.getInputDeviceId()]?.name,
                             audio_output_device_name: B ?? m.Ay.getOutputDevices()[m.Ay.getOutputDeviceId()]?.name,
