@@ -16,9 +16,9 @@ var s,
     f = n(837381),
     j = n(17928),
     p = n(866665),
-    v = n(689175),
-    y = n(695366),
-    N = n(661531),
+    N = n(689175),
+    v = n(695366),
+    y = n(661531),
     C = n(297264),
     I = n(825484),
     S = n(408278),
@@ -138,8 +138,8 @@ function eo(e) {
                                   children: (0, a.jsx)(U.hV, {
                                       count: s,
                                       color: r
-                                          ? N.A.colors.BACKGROUND_MOD_STRONG.css
-                                          : N.A.colors.BACKGROUND_FEEDBACK_NOTIFICATION.css,
+                                          ? y.A.colors.BACKGROUND_MOD_STRONG.css
+                                          : y.A.colors.BACKGROUND_FEEDBACK_NOTIFICATION.css,
                                   }),
                               })
                             : null,
@@ -194,7 +194,7 @@ function em(e) {
         className: ei.h5,
         children: [
             "error" === t
-                ? (0, a.jsx)(y.E, { size: "xs", color: "currentColor", className: ei.ik })
+                ? (0, a.jsx)(v.E, { size: "xs", color: "currentColor", className: ei.ik })
                 : (0, a.jsx)(z.ClockIcon, { size: "xs", color: "currentColor" }),
             (0, a.jsx)(H.E, { variant: "text-sm/medium", color: "text-subtle", children: n }),
         ],
@@ -206,20 +206,20 @@ var eg = n(642213),
     ef = n(576705),
     ej = n(927813),
     ep = n(269073),
-    ev = n(164684),
-    ey = n(704456),
-    eN = n(85109);
+    eN = n(164684),
+    ev = n(704456),
+    ey = n(85109);
 n(321073);
 var eC = n(403362),
     eI = n(216623);
 function eS(e) {
     switch (e) {
         case m.Yf.BOOKMARK:
-            return eN.A.getMessageBookmarks();
+            return ey.A.getMessageBookmarks();
         case m.Yf.REMINDER:
-            return eN.A.getMessageReminders();
+            return ey.A.getMessageReminders();
         default:
-            return eN.A.getSavedMessages();
+            return ey.A.getSavedMessages();
     }
 }
 function eE(e) {
@@ -435,7 +435,7 @@ function e$(e) {
 }
 function eq(e) {
     let { reminder: t, throttledNow: n } = e,
-        { dueInText: s, isOverdue: l } = (0, ey.Ce)({ dueAt: t?.saveData.dueAt, now: n, type: ey.kh.SHORT });
+        { dueInText: s, isOverdue: l } = (0, ev.Ce)({ dueAt: t?.saveData.dueAt, now: n, type: ev.kh.SHORT });
     return null == t.saveData.dueAt || null == s ? null : (0, a.jsx)(em, { type: l ? "error" : "normal", text: s });
 }
 var eQ = n(294002),
@@ -448,14 +448,14 @@ function e7(e) {
         s = (function () {
             let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : m.Yf.ALL,
                 [t, n] = i.useState(() => eE(e)),
-                s = i.useRef(eN.A.getIsStale());
+                s = i.useRef(ey.A.getIsStale());
             return (
                 i.useEffect(() => {
-                    let t = eN.A.getLastChanged();
+                    let t = ey.A.getLastChanged();
                     function l() {
-                        let l = eN.A.getLastChanged();
+                        let l = ey.A.getLastChanged();
                         if (t !== l) {
-                            if (((t = l), s.current && !eN.A.getIsStale())) {
+                            if (((t = l), s.current && !ey.A.getIsStale())) {
                                 (s.current = !1), n(eE(e));
                                 return;
                             }
@@ -469,16 +469,16 @@ function e7(e) {
                         }
                     }
                     return (
-                        eN.A.addChangeListener(l),
+                        ey.A.addChangeListener(l),
                         () => {
-                            eN.A.removeChangeListener(l);
+                            ey.A.removeChangeListener(l);
                         }
                     );
                 }, [e]),
                 i.useEffect(() => {
                     (0, eI.AX)();
                 }, []),
-                (0, j.yK)([eN.A], () => t.map((e) => eN.A.getSavedMessage(e.channelId, e.messageId)).filter(eC.Vq))
+                (0, j.yK)([ey.A], () => t.map((e) => ey.A.getSavedMessage(e.channelId, e.messageId)).filter(eC.Vq))
             );
         })(n),
         l = n === m.Yf.REMINDER,
@@ -494,7 +494,7 @@ function e7(e) {
             properties: {
                 tab_type: n,
                 total_count: s.length,
-                overdue_count: eN.A.getOverdueMessageReminderCount(),
+                overdue_count: ey.A.getOverdueMessageReminderCount(),
                 nitro_upsell_bar_shown: o && !c,
                 nitro_roadblock_upsell_bar_shown: o && c,
             },
@@ -524,7 +524,7 @@ function e7(e) {
                           children: (0, a.jsx)(f.PR, {
                               children: (e) => {
                                   let { ref: n, ...l } = e;
-                                  return (0, a.jsx)(v.Ch, {
+                                  return (0, a.jsx)(N.Ch, {
                                       ref: (e) => {
                                           (h.current = e), (n.current = e?.getScrollerNode() ?? null);
                                       },
@@ -553,10 +553,10 @@ function e7(e) {
 }
 function e8(e) {
     let { savedMessage: t, closePopout: n, throttledNow: s } = e,
-        l = (0, ey.vr)(t),
+        l = (0, ev.vr)(t),
         r = i.useCallback(
             async (e) => {
-                await (0, ey.le)(t, l),
+                await (0, ev.le)(t, l),
                     e.shiftKey || n(),
                     L.A.trackJump(t.saveData.channelId, t.saveData.messageId, null != t.saveData.dueAt ? e2 : e3);
             },
@@ -607,7 +607,7 @@ function e8(e) {
                       children: [
                           (0, a.jsx)("div", {
                               className: eQ.Bx,
-                              children: (0, a.jsx)(y.E, { size: "xxs", color: N.A.colors.INTERACTIVE_TEXT_ACTIVE }),
+                              children: (0, a.jsx)(v.E, { size: "xxs", color: y.A.colors.INTERACTIVE_TEXT_ACTIVE }),
                           }),
                           (0, a.jsx)(C.D, {
                               variant: "text-md/semibold",
@@ -630,7 +630,7 @@ function e8(e) {
                               "aria-label": ea.intl.string(null != t.saveData.dueAt ? ea.t["a6gcZ/"] : ea.t.SvXS1Z),
                               size: "sm",
                               icon: E.P,
-                              onClick: () => (0, ev.x)(t.saveData),
+                              onClick: () => (0, eN.x)(t.saveData),
                           }),
                       }),
                   }),
@@ -686,7 +686,7 @@ function e6(e) {
                     "aria-label": i,
                     size: "sm",
                     icon: E.P,
-                    onClick: () => (0, ev.x)(t.saveData),
+                    onClick: () => (0, eN.x)(t.saveData),
                 }),
             }),
         ],
@@ -721,7 +721,7 @@ function td(e) {
             },
             children: [
                 (0, a.jsx)(tn.$, { size: "xs", color: "currentColor" }),
-                (0, a.jsx)(U.hV, { count: n, color: N.A.colors.BACKGROUND_MOD_STRONG.css }),
+                n > 0 && (0, a.jsx)(U.hV, { count: n, color: y.A.colors.BACKGROUND_MOD_STRONG.css, className: tr.D }),
             ],
         }),
     });
@@ -811,9 +811,9 @@ function tf() {
 }
 var tj = n(481613),
     tp = n.n(tj),
-    tv = n(621466),
-    ty = n(289873),
-    tN = n(821609),
+    tN = n(621466),
+    tv = n(289873),
+    ty = n(821609),
     tC = n(228366),
     tI = n(964486),
     tS = n(775602),
@@ -1089,9 +1089,9 @@ var nt = n(536637),
     nf = n(279306),
     nj = n(837528),
     np = n(754459),
-    nv = n(432433),
-    ny = n(824556),
-    nN = n(715628),
+    nN = n(432433),
+    nv = n(824556),
+    ny = n(715628),
     nC = n(752636),
     nI = n(352043),
     nS = n(268719),
@@ -1122,20 +1122,20 @@ let nL = i.memo(function e(t) {
         A = eA.X6.useSetting(),
         f = eA.hD.useSetting(),
         p = eA.rs.useSetting(),
-        v = eA.kt.useSetting(),
-        y = (0, ni.S)((l.editedTimestamp ?? l.timestamp).valueOf()),
-        N = (0, nr.A)(s?.id),
+        N = eA.kt.useSetting(),
+        v = (0, ni.S)((l.editedTimestamp ?? l.timestamp).valueOf()),
+        y = (0, nr.A)(s?.id),
         { disableReactionCreates: C } = (0, ng.A)(s),
         { setPopout: I } = (0, np.A)(l.id, nR.Fd),
-        S = (0, nj.VL)(l, s, I, N),
+        S = (0, nj.VL)(l, s, I, y),
         {
             content: E,
             hasSpoilerEmbeds: M,
             hasBailedAst: R,
-        } = (0, nv.A)(l, {
+        } = (0, nN.A)(l, {
             hideSimpleEmbedContent: f && p,
-            allowList: y,
-            allowHeading: y,
+            allowList: v,
+            allowHeading: v,
             allowLinks: !0,
             previewLinkTarget: !0,
         }),
@@ -1146,7 +1146,7 @@ let nL = i.memo(function e(t) {
         ),
         L = l.type === ez.lAJ.THREAD_STARTER_MESSAGE && g.state === nc.a.LOADED && null != x,
         T = !L && void 0 === n,
-        k = (0, ny.A)({ message: l, channel: s, announcementEnabled: T }),
+        k = (0, nv.A)({ message: l, channel: s, announcementEnabled: T }),
         D = (0, na.P)(l),
         O = (0, nu._f)(l.id, l.channel_id),
         F = (0, nd.A)(l),
@@ -1177,17 +1177,17 @@ let nL = i.memo(function e(t) {
                     inlineAttachmentMedia: A,
                     inlineEmbedMedia: f,
                     renderEmbeds: p,
-                    gifAutoPlay: v,
+                    gifAutoPlay: N,
                     poll: F,
-                    showListsAndHeaders: y,
-                    showMaskedLinks: y,
-                    shouldHideMediaOptions: N,
+                    showListsAndHeaders: v,
+                    showMaskedLinks: v,
+                    shouldHideMediaOptions: y,
                     enabledContentHarmTypeFlags: D,
                     ctaButtonType: O,
                     onMediaItemContextMenu: S,
                 }),
                 childrenExecutedCommand: (0, nS.A)(l, s, i),
-                childrenMessageContent: (0, nN.A)(t, E),
+                childrenMessageContent: (0, ny.A)(t, E),
                 childrenSystemMessage: (0, nI.A)(t),
                 onContextMenu: c,
                 onClick: o,
@@ -1225,7 +1225,7 @@ function nO(e) {
             l(!0), n(e);
         },
         children: s
-            ? (0, a.jsx)(ty.y, { type: ty.y.Type.PULSING_ELLIPSIS })
+            ? (0, a.jsx)(tv.y, { type: tv.y.Type.PULSING_ELLIPSIS })
             : (0, a.jsx)(H.E, { variant: "text-xs/medium", className: nD.Q, children: ea.intl.string(ea.t.k5WiPf) }),
     });
 }
@@ -1662,7 +1662,7 @@ function se(e) {
                     "view-all",
                 ),
             ),
-        0 === r.length && (r = [(0, a.jsx)(ty.y, {}, "spinner")]),
+        0 === r.length && (r = [(0, a.jsx)(tv.y, {}, "spinner")]),
         (0, a.jsx)("div", { className: n6.DZ, children: r })
     );
 }
@@ -1875,7 +1875,7 @@ function sr(e) {
                 [r, t]
             );
         })(g),
-        { loadState: y, channels: N } = A,
+        { loadState: v, channels: y } = A,
         { maybeLoadMore: C } = p,
         I = (0, j.bG)([tS.Ay], () => tS.Ay.messageGroupSpacing);
     return ((t = g),
@@ -1911,8 +1911,8 @@ function sr(e) {
     i.useEffect(() => {
         function e(e) {
             if ((0, ek.hasAnyModalOpen)()) return;
-            let t = (0, tv.BF)(e)?.activeElement;
-            (0, tv.Cw)(t) ||
+            let t = (0, tN.BF)(e)?.activeElement;
+            (0, tN.Cw)(t) ||
                 (((0, tM.isMac)() || (0, tM.isMacWeb)() ? e.metaKey : e.ctrlKey) &&
                     !e.shiftKey &&
                     !e.altKey &&
@@ -1943,7 +1943,7 @@ function sr(e) {
             }
         ),
     ),
-    0 === N.length)
+    0 === y.length)
         ? (0, a.jsx)(t_, {
               Icon: e5.InboxIcon,
               header: ea.intl.string(ea.t["6XMM+D"]),
@@ -1954,12 +1954,12 @@ function sr(e) {
               children: (0, a.jsx)(f.PR, {
                   children: (e) => {
                       let { ref: t, ...n } = e;
-                      return (0, a.jsxs)(v.Ch, {
+                      return (0, a.jsxs)(N.Ch, {
                           ref: (e) => {
                               (g.current = e), (t.current = e?.getScrollerNode() ?? null);
                           },
                           ...n,
-                          onScroll: y === nQ.Done ? void 0 : C,
+                          onScroll: v === nQ.Done ? void 0 : C,
                           className: d()(e0.XG, `group-spacing-${I}`),
                           children: [
                               u ? (0, a.jsx)(sd, { setSeenTutorial: h }) : null,
@@ -2021,8 +2021,8 @@ function sr(e) {
                                           o
                                       );
                                   });
-                              })(N, p, o),
-                              y === nQ.Done ? null : (0, a.jsx)(ty.y, { className: sa.u1 }),
+                              })(y, p, o),
+                              v === nQ.Done ? null : (0, a.jsx)(tv.y, { className: sa.u1 }),
                           ],
                       });
                   },
@@ -2053,7 +2053,7 @@ function sd(e) {
                     (0, a.jsx)("div", {
                         "data-button-hoisted-classname-wrapper": !0,
                         className: sa.dh,
-                        children: (0, a.jsx)(tN.$, {
+                        children: (0, a.jsx)(ty.$, {
                             variant: "primary",
                             size: "sm",
                             text: ea.intl.string(ea.t["+IrDzN"]),
@@ -2081,7 +2081,7 @@ function sh(e) {
     let { tab: t, setTab: n, closePopout: s } = e,
         l = (0, ep.jv)("RecentsPopout"),
         i = (0, tt.Sc)(),
-        r = (0, e4.bG)([eN.A], () => eN.A.getOverdueMessageReminderCount());
+        r = (0, e4.bG)([ey.A], () => ey.A.getOverdueMessageReminderCount());
     return (0, a.jsxs)("div", {
         className: su.wx,
         children: [
@@ -2177,7 +2177,7 @@ var sg = n(935063),
     sf = n(356622);
 let sj = { offset: { left: 4, right: -12 } },
     sp = "Recent Mentions";
-function sv(e, t) {
+function sN(e, t) {
     tm.A.fetchRecentMentions({
         before: t,
         limit: ez.Ue3,
@@ -2186,7 +2186,7 @@ function sv(e, t) {
         everyone: tx.Ay.everyoneFilter,
     });
 }
-function sy(e) {
+function sv(e) {
     let { onJump: t } = e,
         n = i.useRef(null),
         s = (0, T.A)("recents", n);
@@ -2212,11 +2212,11 @@ function sy(e) {
         x = (0, sx.Ay)(h);
     i.useEffect(() => {
         tx.Ay.hasLoadedEver
-            ? ((null != m && o !== m) || (null != g && u !== g) || (null != x && h !== x)) && sv(l)
-            : sv(l);
+            ? ((null != m && o !== m) || (null != g && u !== g) || (null != x && h !== x)) && sN(l)
+            : sN(l);
     }, [m, o, g, u, x, h, l]),
         (0, tI.Ay)(() => {
-            r?.some(nK.$r) && (tm.A.clearMentions(), sv(l));
+            r?.some(nK.$r) && (tm.A.clearMentions(), sN(l));
         }),
         (0, tI.l0)(() => {
             tm.A.truncateMentions(ez.Ue3);
@@ -2227,10 +2227,10 @@ function sy(e) {
             e.scrollHeight - e.scrollTop - e.offsetHeight < 250 &&
             d &&
             !c &&
-            sv(l, null != r && r.length > 0 ? r[r.length - 1].id : null);
+            sN(l, null != r && r.length > 0 ? r[r.length - 1].id : null);
     }, [d, c, l, r]);
     return null == r || (c && 0 === r.length)
-        ? (0, a.jsx)("div", { className: e0.Lq, children: (0, a.jsx)(ty.y, {}) })
+        ? (0, a.jsx)("div", { className: e0.Lq, children: (0, a.jsx)(tv.y, {}) })
         : 0 === r.length
           ? (0, a.jsx)(t_, { Icon: sg.X, header: ea.intl.string(ea.t.bgDz74), tip: ea.intl.string(ea.t.NS15vk) })
           : (0, a.jsx)(f.hD, {
@@ -2238,7 +2238,7 @@ function sy(e) {
                 children: (0, a.jsx)(f.PR, {
                     children: (e) => {
                         let { ref: s, ...i } = e;
-                        return (0, a.jsxs)(v.Ch, {
+                        return (0, a.jsxs)(N.Ch, {
                             ref: (e) => {
                                 (n.current = e), (s.current = e?.getScrollerNode() ?? null);
                             },
@@ -2246,19 +2246,19 @@ function sy(e) {
                             onScroll: d ? A : void 0,
                             ...i,
                             children: [
-                                r.map((e) => (0, a.jsx)(sN, { message: e, onJump: t }, e.id)),
+                                r.map((e) => (0, a.jsx)(sy, { message: e, onJump: t }, e.id)),
                                 c
-                                    ? (0, a.jsx)("div", { className: e0.Lq, children: (0, a.jsx)(ty.y, {}) })
+                                    ? (0, a.jsx)("div", { className: e0.Lq, children: (0, a.jsx)(tv.y, {}) })
                                     : d
                                       ? (0, a.jsx)("div", {
                                             className: sf.u,
-                                            children: (0, a.jsx)(tN.$, {
+                                            children: (0, a.jsx)(ty.$, {
                                                 variant: "secondary",
                                                 size: "sm",
                                                 fullWidth: !0,
                                                 text: ea.intl.string(ea.t.XBlaiC),
                                                 onClick: () =>
-                                                    sv(l, null != r && r.length > 0 ? r[r.length - 1].id : null),
+                                                    sN(l, null != r && r.length > 0 ? r[r.length - 1].id : null),
                                             }),
                                         })
                                       : null,
@@ -2268,7 +2268,7 @@ function sy(e) {
                 }),
             });
 }
-function sN(e) {
+function sy(e) {
     let { message: t, onJump: n } = e;
     if (null == t) return null;
     let s = Q.A.getChannel(t.channel_id);
@@ -2472,7 +2472,7 @@ function sJ(e) {
         u = i.useRef(null),
         h = (0, T.A)("scheduled-messages", u);
     return ((0, eg.xN)(u), (0, eg.yW)(sz), s)
-        ? (0, a.jsx)("div", { className: e0.Lq, children: (0, a.jsx)(ty.y, {}) })
+        ? (0, a.jsx)("div", { className: e0.Lq, children: (0, a.jsx)(tv.y, {}) })
         : 0 === r.length
           ? (0, a.jsx)(sk, {})
           : (0, a.jsxs)("div", {
@@ -2483,7 +2483,7 @@ function sJ(e) {
                         children: (0, a.jsx)(f.PR, {
                             children: (e) => {
                                 let { ref: n, ...s } = e;
-                                return (0, a.jsx)(v.Ch, {
+                                return (0, a.jsx)(N.Ch, {
                                     className: e0.XG,
                                     ref: (e) => {
                                         (u.current = e), (n.current = e?.getScrollerNode() ?? null);
@@ -2613,7 +2613,7 @@ let sY = i.memo(function (e) {
                           }),
                       }),
                       s
-                          ? (0, a.jsx)(ty.y, { className: e0.Lq })
+                          ? (0, a.jsx)(tv.y, { className: e0.Lq })
                           : (0, a.jsxs)(a.Fragment, {
                                 children: [
                                     (0, a.jsx)(
@@ -2666,7 +2666,7 @@ function sV(e) {
                 children: [
                     (0, a.jsx)("div", {
                         className: sH.V2,
-                        children: (0, a.jsx)(y.E, { size: "xxs", color: N.A.colors.INTERACTIVE_TEXT_ACTIVE }),
+                        children: (0, a.jsx)(v.E, { size: "xxs", color: y.A.colors.INTERACTIVE_TEXT_ACTIVE }),
                     }),
                     (0, a.jsx)(C.D, {
                         variant: "text-md/semibold",
@@ -2717,7 +2717,7 @@ function sZ(e) {
                     component: (0, a.jsx)(sh, { tab: s, setTab: l, closePopout: i }),
                     children:
                         s === o.Y2.MENTIONS
-                            ? (0, a.jsx)(sy, { onJump: r })
+                            ? (0, a.jsx)(sv, { onJump: r })
                             : A && s === o.Y2.BOOKMARKS
                               ? (0, a.jsx)(e7, { closePopout: i, type: m.Yf.BOOKMARK }, "bookmarks")
                               : A && s === o.Y2.REMINDERS

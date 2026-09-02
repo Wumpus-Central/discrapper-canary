@@ -185,6 +185,10 @@
     color: var(--interactive-text-active)
 }
 
+.numberBadge_c7a32c {
+    color: var(--text-default)
+}
+
 .container__319e1 {
     align-items: center;
     display: flex;
@@ -247,4 +251,4 @@
     overflow: hidden
 }
 
-/*# sourceMappingURL=4ac8b43310a39244.css.map*/
+/*# sourceMappingURL=68bc9c5c4169d7df.css.map*/
