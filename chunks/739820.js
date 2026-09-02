@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { iX: () => f, bf: () => A });
+n.d(t, { iX: () => p, bf: () => h });
 let i = {
     0: [
         { x: 13.6, y: 56.8 },
@@ -53,127 +53,130 @@ let i = {
 var r = n(821578),
     a = n(750459),
     s = n(1195),
-    l = n(375708),
-    o = n(880872),
-    d = n(849351),
-    c = n(572316),
-    u = n(192063);
-let _ =
+    l = n(375708);
+let o =
+    "https://cdn.discordapp.com/assets/content/7de81684192bd2bffb15960bbbd0c800452981c3c68d45da1eab9bd11d4354ac.png";
+var d = n(880872),
+    c = n(849351),
+    u = n(572316),
+    _ = n(192063);
+let E =
         "https://cdn.discordapp.com/assets/content/8e37993ad6f8ec19df3a8b32fc1d3c7957fe1e2e8f1c81f6d9d6f7fbe6fec34b.webp",
-    E = 5 / 219;
-function A(e, t) {
-    let n = 2 * E;
+    A = 5 / 219;
+function h(e, t) {
+    let n = 2 * A;
     return t && (n *= e), 1 + n;
 }
-function h(e, t) {
+function I(e, t) {
     return () => l.intl.formatToPlainString(s.default.crFI7e, { seatType: l.intl.string(e), number: t });
 }
-function I(e, t) {
+function f(e, t) {
     return () =>
         l.intl.formatToPlainString(s.default.LFdLjz, { seatType: l.intl.string(e), position: l.intl.string(t) });
 }
-let f = {
+let p = {
     [r.I.DEFAULT]: {
         background:
-            "https://cdn.discordapp.com/assets/content/320ae17d126cb2f82102cd73f82afb31e27736a64a866ea95c590adde3b73a70.webp",
-        backgroundBlurred: _,
-        aspectRatio: 4096 / 2997,
+            "https://cdn.discordapp.com/assets/content/115cd3793681c8ac2115ad228f6b572346ddfda52ca2b403fe8397554e19aed0.webp",
+        backgroundBlurred: E,
+        aspectRatio: 4384 / 3208,
         getName: () => l.intl.formatToPlainString(s.default["3xb4VY"], { number: 1 }),
         seats: {
-            [a.x.SEAT_1]: { name: "PC_SEAT_1", getLabel: h(s.default.ytIYuY, 1), position: i[r.I.DEFAULT][0] },
-            [a.x.SEAT_2]: { name: "PC_SEAT_2", getLabel: h(s.default.ytIYuY, 2), position: i[r.I.DEFAULT][1] },
-            [a.x.SEAT_3]: { name: "PC_SEAT_3", getLabel: h(s.default.ytIYuY, 3), position: i[r.I.DEFAULT][2] },
+            [a.x.SEAT_1]: { name: "PC_SEAT_1", getLabel: I(s.default.ytIYuY, 1), position: i[r.I.DEFAULT][0] },
+            [a.x.SEAT_2]: { name: "PC_SEAT_2", getLabel: I(s.default.ytIYuY, 2), position: i[r.I.DEFAULT][1] },
+            [a.x.SEAT_3]: { name: "PC_SEAT_3", getLabel: I(s.default.ytIYuY, 3), position: i[r.I.DEFAULT][2] },
             [a.x.SEAT_4]: {
                 name: "DUO_SEAT_1",
-                getLabel: I(s.default.p7JgFM, s.default.YpJ7QS),
+                getLabel: f(s.default.p7JgFM, s.default.YpJ7QS),
                 position: i[r.I.DEFAULT][3],
             },
             [a.x.SEAT_5]: {
                 name: "DUO_SEAT_2",
-                getLabel: I(s.default.p7JgFM, s.default.wxkoLF),
+                getLabel: f(s.default.p7JgFM, s.default.wxkoLF),
                 position: i[r.I.DEFAULT][4],
             },
             [a.x.SEAT_6]: {
                 name: "DUO_SEAT_STANDING_1",
-                getLabel: I(s.default.p7JgFM, s.default.Qt29nt),
+                getLabel: f(s.default.p7JgFM, s.default.Qt29nt),
                 position: i[r.I.DEFAULT][5],
             },
             [a.x.SEAT_7]: {
                 name: "MAIN_COUCH_SEAT_1",
-                getLabel: I(s.default.wjBOG8, s.default.lQKxC5),
+                getLabel: f(s.default.wjBOG8, s.default.lQKxC5),
                 position: i[r.I.DEFAULT][6],
             },
             [a.x.SEAT_8]: {
                 name: "MAIN_COUCH_SEAT_2",
-                getLabel: I(s.default.wjBOG8, s.default.WMBV4i),
+                getLabel: f(s.default.wjBOG8, s.default.WMBV4i),
                 position: i[r.I.DEFAULT][7],
             },
             [a.x.SEAT_9]: {
                 name: "MAIN_COUCH_SEAT_3",
-                getLabel: I(s.default.wjBOG8, s.default["yG+xS0"]),
+                getLabel: f(s.default.wjBOG8, s.default["yG+xS0"]),
                 position: i[r.I.DEFAULT][8],
             },
             [a.x.SEAT_10]: {
                 name: "MAIN_COUCH_SEAT_4",
-                getLabel: I(s.default.wjBOG8, s.default["5ZigwU"]),
+                getLabel: f(s.default.wjBOG8, s.default["5ZigwU"]),
                 position: i[r.I.DEFAULT][9],
             },
             [a.x.SEAT_11]: {
                 name: "MAIN_COUCH_SEAT_5",
-                getLabel: I(s.default.wjBOG8, s.default.iVfA9i),
+                getLabel: f(s.default.wjBOG8, s.default.iVfA9i),
                 position: i[r.I.DEFAULT][10],
             },
             [a.x.SEAT_12]: {
                 name: "SIDE_GROUP_SEAT_1",
-                getLabel: h(s.default["C+LGlh"], 1),
+                getLabel: I(s.default["C+LGlh"], 1),
                 position: i[r.I.DEFAULT][11],
             },
             [a.x.SEAT_13]: {
                 name: "SIDE_GROUP_SEAT_2",
-                getLabel: h(s.default["C+LGlh"], 2),
+                getLabel: I(s.default["C+LGlh"], 2),
                 position: i[r.I.DEFAULT][12],
             },
             [a.x.SEAT_14]: {
                 name: "SIDE_GROUP_SEAT_3",
-                getLabel: h(s.default["C+LGlh"], 3),
+                getLabel: I(s.default["C+LGlh"], 3),
                 position: i[r.I.DEFAULT][13],
             },
             [a.x.SEAT_15]: {
                 name: "SIDE_GROUP_SEAT_STANDING_1",
-                getLabel: I(s.default["C+LGlh"], s.default.Qt29nt),
+                getLabel: f(s.default["C+LGlh"], s.default.Qt29nt),
                 position: i[r.I.DEFAULT][14],
             },
             [a.x.SEAT_16]: {
                 name: "BACKROOM_SEAT_1",
-                getLabel: h(s.default.lkzfot, 1),
+                getLabel: I(s.default.lkzfot, 1),
                 position: i[r.I.DEFAULT][15],
                 dim: !0,
             },
             [a.x.SEAT_17]: {
                 name: "BACKROOM_SEAT_2",
-                getLabel: h(s.default.lkzfot, 2),
+                getLabel: I(s.default.lkzfot, 2),
                 position: i[r.I.DEFAULT][16],
                 dim: !0,
             },
             [a.x.SEAT_18]: {
                 name: "BACKROOM_SEAT_3",
-                getLabel: h(s.default.lkzfot, 3),
+                getLabel: I(s.default.lkzfot, 3),
                 position: i[r.I.DEFAULT][17],
                 dim: !0,
             },
-            [a.x.SEAT_19]: { name: "RAFTERS_SEAT_1", getLabel: h(s.default.IE3e0y, 1), position: i[r.I.DEFAULT][18] },
-            [a.x.SEAT_20]: { name: "RAFTERS_SEAT_2", getLabel: h(s.default.IE3e0y, 2), position: i[r.I.DEFAULT][19] },
-            [a.x.SEAT_21]: { name: "RAFTERS_SEAT_3", getLabel: h(s.default.IE3e0y, 3), position: i[r.I.DEFAULT][20] },
-            [a.x.SEAT_22]: { name: "PC_SEAT_4", getLabel: h(s.default.ytIYuY, 4), position: i[r.I.DEFAULT][21] },
+            [a.x.SEAT_19]: { name: "RAFTERS_SEAT_1", getLabel: I(s.default.IE3e0y, 1), position: i[r.I.DEFAULT][18] },
+            [a.x.SEAT_20]: { name: "RAFTERS_SEAT_2", getLabel: I(s.default.IE3e0y, 2), position: i[r.I.DEFAULT][19] },
+            [a.x.SEAT_21]: { name: "RAFTERS_SEAT_3", getLabel: I(s.default.IE3e0y, 3), position: i[r.I.DEFAULT][20] },
+            [a.x.SEAT_22]: { name: "PC_SEAT_4", getLabel: I(s.default.ytIYuY, 4), position: i[r.I.DEFAULT][21] },
         },
         plants: [
-            { plantDeadAsset: o.A, plantDyingAsset: d.A, plantLiveAsset: c.A, plantVaseAsset: u.A, x: 45.57, y: 50.62 },
+            { plantDeadAsset: d.A, plantDyingAsset: c.A, plantLiveAsset: u.A, plantVaseAsset: _.A, x: 45.57, y: 50.62 },
         ],
         duck: {
             asset: "https://cdn.discordapp.com/assets/content/d9d44ce10fed728c82dc6c0b3b5aa0fdc8123f119ce8a9ac6e41b995e4e599c4.png",
             position: { x: 67.3, y: 45 },
             width: 4.8,
         },
+        notePad: { asset: o, position: { x: 81.5, y: 84.5 }, width: 4 },
         screen: {
             topLeft: { x: 56.8, y: 16.15 },
             topRight: { x: 75.85, y: 23 },
@@ -183,106 +186,106 @@ let f = {
     },
     [r.I.LIVING_ROOM_2]: {
         background:
-            "https://cdn.discordapp.com/assets/content/9a75f9f447e65236ae9e8fc5b203f8a2c5c148020c6d678bb3ac02f8b23c916c.jpg",
-        backgroundBlurred: _,
-        aspectRatio: 1057 / 819,
+            "https://cdn.discordapp.com/assets/content/57484075eadcb2b2e48de8d41457552634a2f8b7f280f903d9322804fbda494c.webp",
+        backgroundBlurred: E,
+        aspectRatio: 4384 / 3400,
         getName: () => l.intl.formatToPlainString(s.default["3xb4VY"], { number: 2 }),
         seats: {
-            [a.x.SEAT_1]: { name: "PC_SEAT_1", getLabel: h(s.default.ytIYuY, 1), position: i[r.I.LIVING_ROOM_2][0] },
-            [a.x.SEAT_2]: { name: "PC_SEAT_2", getLabel: h(s.default.ytIYuY, 2), position: i[r.I.LIVING_ROOM_2][1] },
-            [a.x.SEAT_3]: { name: "PC_SEAT_3", getLabel: h(s.default.ytIYuY, 3), position: i[r.I.LIVING_ROOM_2][2] },
+            [a.x.SEAT_1]: { name: "PC_SEAT_1", getLabel: I(s.default.ytIYuY, 1), position: i[r.I.LIVING_ROOM_2][0] },
+            [a.x.SEAT_2]: { name: "PC_SEAT_2", getLabel: I(s.default.ytIYuY, 2), position: i[r.I.LIVING_ROOM_2][1] },
+            [a.x.SEAT_3]: { name: "PC_SEAT_3", getLabel: I(s.default.ytIYuY, 3), position: i[r.I.LIVING_ROOM_2][2] },
             [a.x.SEAT_4]: {
                 name: "DUO_SEAT_1",
-                getLabel: I(s.default.p7JgFM, s.default.YpJ7QS),
+                getLabel: f(s.default.p7JgFM, s.default.YpJ7QS),
                 position: i[r.I.LIVING_ROOM_2][3],
             },
             [a.x.SEAT_5]: {
                 name: "DUO_SEAT_2",
-                getLabel: I(s.default.p7JgFM, s.default.wxkoLF),
+                getLabel: f(s.default.p7JgFM, s.default.wxkoLF),
                 position: i[r.I.LIVING_ROOM_2][4],
             },
             [a.x.SEAT_6]: {
                 name: "DUO_SEAT_STANDING_1",
-                getLabel: I(s.default.p7JgFM, s.default.Qt29nt),
+                getLabel: f(s.default.p7JgFM, s.default.Qt29nt),
                 position: i[r.I.LIVING_ROOM_2][5],
             },
             [a.x.SEAT_7]: {
                 name: "MAIN_COUCH_SEAT_1",
-                getLabel: I(s.default.wjBOG8, s.default.lQKxC5),
+                getLabel: f(s.default.wjBOG8, s.default.lQKxC5),
                 position: i[r.I.LIVING_ROOM_2][6],
             },
             [a.x.SEAT_8]: {
                 name: "MAIN_COUCH_SEAT_2",
-                getLabel: I(s.default.wjBOG8, s.default.WMBV4i),
+                getLabel: f(s.default.wjBOG8, s.default.WMBV4i),
                 position: i[r.I.LIVING_ROOM_2][7],
             },
             [a.x.SEAT_9]: {
                 name: "MAIN_COUCH_SEAT_3",
-                getLabel: I(s.default.wjBOG8, s.default["yG+xS0"]),
+                getLabel: f(s.default.wjBOG8, s.default["yG+xS0"]),
                 position: i[r.I.LIVING_ROOM_2][8],
             },
             [a.x.SEAT_10]: {
                 name: "MAIN_COUCH_SEAT_4",
-                getLabel: I(s.default.wjBOG8, s.default["5ZigwU"]),
+                getLabel: f(s.default.wjBOG8, s.default["5ZigwU"]),
                 position: i[r.I.LIVING_ROOM_2][9],
             },
             [a.x.SEAT_11]: {
                 name: "MAIN_COUCH_SEAT_5",
-                getLabel: I(s.default.wjBOG8, s.default.iVfA9i),
+                getLabel: f(s.default.wjBOG8, s.default.iVfA9i),
                 position: i[r.I.LIVING_ROOM_2][10],
             },
             [a.x.SEAT_12]: {
                 name: "SIDE_GROUP_SEAT_1",
-                getLabel: h(s.default["C+LGlh"], 1),
+                getLabel: I(s.default["C+LGlh"], 1),
                 position: i[r.I.LIVING_ROOM_2][11],
             },
             [a.x.SEAT_13]: {
                 name: "SIDE_GROUP_SEAT_2",
-                getLabel: h(s.default["C+LGlh"], 2),
+                getLabel: I(s.default["C+LGlh"], 2),
                 position: i[r.I.LIVING_ROOM_2][12],
             },
             [a.x.SEAT_14]: {
                 name: "SIDE_GROUP_SEAT_3",
-                getLabel: h(s.default["C+LGlh"], 3),
+                getLabel: I(s.default["C+LGlh"], 3),
                 position: i[r.I.LIVING_ROOM_2][13],
             },
             [a.x.SEAT_15]: {
                 name: "SIDE_GROUP_SEAT_STANDING_1",
-                getLabel: I(s.default["C+LGlh"], s.default.Qt29nt),
+                getLabel: f(s.default["C+LGlh"], s.default.Qt29nt),
                 position: i[r.I.LIVING_ROOM_2][14],
             },
             [a.x.SEAT_16]: {
                 name: "BACKROOM_SEAT_1",
-                getLabel: h(s.default.lkzfot, 1),
+                getLabel: I(s.default.lkzfot, 1),
                 position: i[r.I.LIVING_ROOM_2][15],
             },
             [a.x.SEAT_17]: {
                 name: "BACKROOM_SEAT_2",
-                getLabel: h(s.default.lkzfot, 2),
+                getLabel: I(s.default.lkzfot, 2),
                 position: i[r.I.LIVING_ROOM_2][16],
                 dim: !0,
             },
             [a.x.SEAT_18]: {
                 name: "BACKROOM_SEAT_3",
-                getLabel: h(s.default.lkzfot, 3),
+                getLabel: I(s.default.lkzfot, 3),
                 position: i[r.I.LIVING_ROOM_2][17],
             },
             [a.x.SEAT_19]: {
                 name: "RAFTERS_SEAT_1",
-                getLabel: h(s.default.IE3e0y, 1),
+                getLabel: I(s.default.IE3e0y, 1),
                 position: i[r.I.LIVING_ROOM_2][18],
             },
             [a.x.SEAT_20]: {
                 name: "RAFTERS_SEAT_2",
-                getLabel: h(s.default.IE3e0y, 2),
+                getLabel: I(s.default.IE3e0y, 2),
                 position: i[r.I.LIVING_ROOM_2][19],
             },
             [a.x.SEAT_21]: {
                 name: "RAFTERS_SEAT_3",
-                getLabel: h(s.default.IE3e0y, 3),
+                getLabel: I(s.default.IE3e0y, 3),
                 position: i[r.I.LIVING_ROOM_2][20],
             },
-            [a.x.SEAT_22]: { name: "PC_SEAT_4", getLabel: h(s.default.ytIYuY, 4), position: i[r.I.LIVING_ROOM_2][21] },
+            [a.x.SEAT_22]: { name: "PC_SEAT_4", getLabel: I(s.default.ytIYuY, 4), position: i[r.I.LIVING_ROOM_2][21] },
         },
         plants: [
             {
@@ -303,6 +306,7 @@ let f = {
             position: { x: 64.6, y: 58.5 },
             width: 4.8,
         },
+        notePad: { asset: o, position: { x: 69, y: 78.5 }, width: 4 },
         screen: {
             topLeft: { x: 51.85, y: 33.5 },
             topRight: { x: 69.15, y: 40.5 },

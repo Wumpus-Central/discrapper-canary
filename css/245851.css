@@ -501,7 +501,7 @@
     min-width: 100px
 }
 
-.duck__2dee0 {
+.image_e0ee8c {
     height: 100%;
     -o-object-fit: contain;
     object-fit: contain;
@@ -509,32 +509,38 @@
     width: 100%
 }
 
-.quackButton__2dee0:hover .duck__2dee0 {
-    filter: brightness(110%)
-}
-
-.quackButton__2dee0:not(.disabled__2dee0):active .duck__2dee0 {
-    transform: scale(95%)
-}
-
-.duckContainer__2dee0,
-.quackButton__2dee0 {
+.button_e0ee8c,
+.container_e0ee8c {
     position: absolute;
     transform: translate(-50%, -50%)
 }
 
-.quackButton__2dee0 {
+.button_e0ee8c {
     background: transparent;
-    border-radius: 50%;
+    border-radius: var(--radius-sm);
     cursor: pointer
 }
 
-.quackButton__2dee0.disabled__2dee0 {
+.button_e0ee8c:focus-visible .image_e0ee8c,
+.button_e0ee8c:hover .image_e0ee8c {
+    filter: brightness(110%)
+}
+
+.button_e0ee8c:not(.disabled_e0ee8c):active .image_e0ee8c {
+    transform: scale(95%)
+}
+
+.button_e0ee8c.disabled_e0ee8c {
     cursor: default
 }
 
-.quackButton__2dee0.disabled__2dee0:hover .duck__2dee0 {
+.button_e0ee8c.disabled_e0ee8c:focus-visible .image_e0ee8c,
+.button_e0ee8c.disabled_e0ee8c:hover .image_e0ee8c {
     filter: none
+}
+
+.round__2dee0 {
+    border-radius: 50%
 }
 
 .container_fae5e9 {
@@ -575,4 +581,4 @@
     transition: opacity .2s ease
 }
 
-/*# sourceMappingURL=524101.6445d4fe9ebe178d.css.map*/
+/*# sourceMappingURL=245851.67dd5621b4da0e9a.css.map*/

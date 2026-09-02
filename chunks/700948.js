@@ -1,4 +1,4 @@
-n.d(t, { A: () => L });
+n.d(t, { A: () => O });
 var i = n(477900),
     l = n(582128),
     a = n(503698),
@@ -22,41 +22,43 @@ var i = n(477900),
     N = n(519342),
     v = n(241215),
     E = n(207274),
-    b = n(956480),
-    T = n(761583),
-    _ = n(1195),
+    b = n(70067),
+    _ = n(956480),
+    T = n(739820),
+    S = n(1195),
     R = n(375708),
-    S = n(923932);
-function L(e) {
+    L = n(923932);
+function O(e) {
     let { channelId: t, popoutType: n, idle: a } = e,
-        L = (0, u.bG)([f.A], () => f.A.getRoom(t)?.background ?? d.I.DEFAULT),
+        O = (0, u.bG)([f.A], () => f.A.getRoom(t)?.background ?? d.I.DEFAULT),
         {
-            background: O,
-            backgroundBlurred: P,
+            background: P,
+            backgroundBlurred: M,
             seats: w,
-            aspectRatio: M,
-            plants: U,
-            duck: D,
-            screen: V,
-            getName: k,
-        } = T.iX[L],
-        { width: G = 0, height: B = 0, ref: F } = (0, c.Ay)(),
-        H = G / B > M,
-        z = H ? B * M : G,
-        W = (0, u.bG)([f.A], () => f.A.getVideoOverlayVisibility()),
-        $ = W ? (0, T.bf)(M, H) : 1,
-        Y = l.useRef(null),
-        K = l.useRef(null),
-        X = (0, u.bG)([f.A], () => f.A.getRoomUsers(t)),
-        q = (0, u.bG)([f.A], () => f.A.getNotes(t)),
-        Z = X.size,
-        Q = Math.max(0, Object.values(w).length - X.size),
-        J = U.length + +(null != D) + q.length,
-        [ee, et] = l.useState(!1),
-        en = l.useMemo(() => ({ isMenuOpen: ee, setMenuOpen: et }), [ee, et]);
-    (0, b.A)(t, X, q);
-    let ei = (0, g.Y1)(t),
-        el = R.intl.string(ei ? _.default.F9DcvR : _.default["sV/+Cu"]);
+            aspectRatio: U,
+            plants: D,
+            duck: V,
+            notePad: k,
+            screen: G,
+            getName: B,
+        } = T.iX[O],
+        { width: F = 0, height: z = 0, ref: H } = (0, c.Ay)(),
+        W = F / z > U,
+        $ = W ? z * U : F,
+        Y = (0, u.bG)([f.A], () => f.A.getVideoOverlayVisibility()),
+        K = Y ? (0, T.bf)(U, W) : 1,
+        q = l.useRef(null),
+        X = l.useRef(null),
+        Z = (0, u.bG)([f.A], () => f.A.getRoomUsers(t)),
+        Q = (0, u.bG)([f.A], () => f.A.getNotes(t)),
+        J = Z.size,
+        ee = Math.max(0, Object.values(w).length - Z.size),
+        et = D.length + +(null != V) + +(null != k) + Q.length,
+        [en, ei] = l.useState(!1),
+        el = l.useMemo(() => ({ isMenuOpen: en, setMenuOpen: ei }), [en, ei]);
+    (0, _.A)(t, Z, Q);
+    let ea = (0, g.Y1)(t),
+        es = R.intl.string(ea ? S.default.F9DcvR : S.default["sV/+Cu"]);
     return (
         l.useEffect(() => {
             (0, A.zR)({ channelId: t });
@@ -67,54 +69,54 @@ function L(e) {
             e || null == n || (0, m.z5)(n, t);
         }, [t]),
         (0, i.jsxs)("div", {
-            className: S.kL,
+            className: L.kL,
             style: {
-                backgroundImage: `url(${W ? P : O})`,
-                backgroundSize: H ? `auto ${100 * $}%` : `${100 * $}% auto`,
+                backgroundImage: `url(${Y ? M : P})`,
+                backgroundSize: W ? `auto ${100 * K}%` : `${100 * K}% auto`,
             },
-            ref: F,
+            ref: H,
             role: "region",
-            "aria-label": k(),
+            "aria-label": B(),
             children: [
-                W
+                Y
                     ? (0, i.jsx)(v.A, {
                           channelId: t,
                           popoutType: n,
-                          width: G,
-                          height: B,
+                          width: F,
+                          height: z,
                           idle: a,
                           onClose: () => (0, m.UV)(!1, t),
                       })
                     : (0, i.jsxs)(i.Fragment, {
                           children: [
                               (0, i.jsx)(o.s, {
-                                  children: R.intl.formatToPlainString(_.default["/l5Wn+"], {
-                                      seatedCount: Z,
-                                      openSeatCount: Q,
-                                      objectCount: J,
+                                  children: R.intl.formatToPlainString(S.default["/l5Wn+"], {
+                                      seatedCount: J,
+                                      openSeatCount: ee,
+                                      objectCount: et,
                                   }),
                               }),
                               (0, i.jsx)("div", {
-                                  className: s()(S.hk, { [S.Nb]: H }),
-                                  style: { aspectRatio: M },
-                                  ref: Y,
+                                  className: s()(L.hk, { [L.Nb]: W }),
+                                  style: { aspectRatio: U },
+                                  ref: q,
                                   children: (0, i.jsx)(x.t.Provider, {
-                                      value: en,
+                                      value: el,
                                       children: (0, i.jsx)(g.bE, {
                                           channelId: t,
-                                          containerRef: K,
-                                          roomWidth: z,
+                                          containerRef: X,
+                                          roomWidth: $,
                                           children: (0, i.jsxs)(h.xp, {
-                                              containerRef: Y,
+                                              containerRef: q,
                                               children: [
-                                                  (0, i.jsx)(j.A, { channelId: t, corners: V, roomWidth: z }),
+                                                  (0, i.jsx)(j.A, { channelId: t, corners: G, roomWidth: $ }),
                                                   (0, i.jsxs)("div", {
-                                                      ref: K,
+                                                      ref: X,
                                                       children: [
-                                                          (0, i.jsx)(N.A, { channelId: t, roomWidth: z }),
+                                                          (0, i.jsx)(N.A, { channelId: t, roomWidth: $ }),
                                                           (0, i.jsx)("div", {
                                                               role: "list",
-                                                              "aria-label": el,
+                                                              "aria-label": es,
                                                               children: Object.entries(w).map((e) => {
                                                                   let [n, l] = e;
                                                                   return (0, i.jsx)(
@@ -124,7 +126,7 @@ function L(e) {
                                                                           x: l.position.x,
                                                                           y: l.position.y,
                                                                           label: l.getLabel(),
-                                                                          roomWidth: z,
+                                                                          roomWidth: $,
                                                                           seat: parseInt(n),
                                                                       },
                                                                       n,
@@ -133,21 +135,28 @@ function L(e) {
                                                           }),
                                                           (0, i.jsxs)("div", {
                                                               role: "list",
-                                                              "aria-label": R.intl.string(_.default.JYlbK5),
+                                                              "aria-label": R.intl.string(S.default.JYlbK5),
                                                               children: [
                                                                   (0, i.jsx)(y.A, {
                                                                       channelId: t,
-                                                                      plantConfig: U,
-                                                                      roomWidth: z,
+                                                                      plantConfig: D,
+                                                                      roomWidth: $,
                                                                   }),
-                                                                  null != D &&
+                                                                  null != V &&
                                                                       (0, i.jsx)(E.A, {
                                                                           channelId: t,
-                                                                          position: D.position,
+                                                                          position: V.position,
+                                                                      }),
+                                                                  null != k &&
+                                                                      (0, i.jsx)(b.A, {
+                                                                          channelId: t,
+                                                                          asset: k.asset,
+                                                                          position: k.position,
+                                                                          width: k.width,
                                                                       }),
                                                               ],
                                                           }),
-                                                          (0, i.jsx)(C.A, { channelId: t, roomWidth: z }),
+                                                          (0, i.jsx)(C.A, { channelId: t, roomWidth: $ }),
                                                       ],
                                                   }),
                                               ],
@@ -157,7 +166,7 @@ function L(e) {
                               }),
                           ],
                       }),
-                (0, i.jsx)("div", { className: s()(S.N5, { [S.ns]: ee }), "aria-hidden": !0 }),
+                (0, i.jsx)("div", { className: s()(L.N5, { [L.ns]: en }), "aria-hidden": !0 }),
             ],
         })
     );

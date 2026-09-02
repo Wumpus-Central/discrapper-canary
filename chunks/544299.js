@@ -1,129 +1,127 @@
-t.d(n, { FE: () => T, Sb: () => N, Y1: () => j, bE: () => b });
-var l = t(477900),
-    i = t(582128),
-    a = t(17928),
-    s = t(765178),
-    r = t(315710),
-    o = t(834730),
-    c = t(775602),
-    u = t(625494),
-    d = t(446243),
-    A = t(558076),
-    m = t(743943),
-    h = t(652215),
-    C = t(1195),
-    f = t(375708),
-    E = t(107465);
-function p(e) {
+n.d(t, { Sb: () => v, Y1: () => N, bE: () => E });
+var i = n(477900),
+    l = n(582128),
+    a = n(17928),
+    s = n(765178),
+    r = n(315710),
+    o = n(834730),
+    c = n(775602),
+    d = n(625494),
+    u = n(446243),
+    h = n(558076),
+    p = n(743943),
+    m = n(652215),
+    A = n(1195),
+    f = n(375708),
+    x = n(107465);
+function g(e) {
     return Math.min(100, Math.max(0, e));
 }
-function g() {
+function C() {
     let e = (2 * Math.random() - 1) * 5;
     return 0.5 > Math.random() ? { x: 5, y: e } : { x: e, y: -5 };
 }
-function x(e, n) {
-    return { x: p(e.x + n.x), y: p(e.y + n.y) };
+function y(e, t) {
+    return { x: g(e.x + t.x), y: g(e.y + t.y) };
 }
-let I = i.createContext(null),
-    v = new Set();
-function T(e) {
-    return v.delete(e);
-}
-function _(e) {
-    return (0, a.bG)([A.A], () => {
-        let n = A.A.getPendingNote(e);
-        return null != n && null == n.position;
+let j = l.createContext(null);
+function I(e) {
+    return (0, a.bG)([h.A], () => {
+        let t = h.A.getPendingNote(e);
+        return null != t && null == t.position;
     });
 }
-function j(e) {
-    let n = _(e),
-        t = (0, a.bG)([c.Ay], () => c.Ay.keyboardModeEnabled);
-    return n && t;
-}
 function N(e) {
-    let { position: n, targetLabel: t } = e,
-        l = i.useContext(I),
-        { x: a, y: s } = n;
-    return i.useMemo(
+    let t = I(e),
+        n = (0, a.bG)([c.Ay], () => c.Ay.keyboardModeEnabled);
+    return t && n;
+}
+function v(e) {
+    let { position: t, targetLabel: n } = e,
+        i = l.useContext(j),
+        { x: a, y: s } = t;
+    return l.useMemo(
         () =>
-            null == l
+            null == i
                 ? null
                 : {
-                      "aria-label": f.intl.formatToPlainString(C.default.NBm6jz, { targetLabel: t }),
-                      "aria-describedby": l.descriptionId,
-                      onFocus: () => l.setPreviewTarget({ x: a, y: s }),
-                      onClick: () => l.placeNextTo({ x: a, y: s }),
+                      "aria-label": f.intl.formatToPlainString(A.default.NBm6jz, { targetLabel: n }),
+                      "aria-describedby": i.descriptionId,
+                      onFocus: () => i.setPreviewTarget({ x: a, y: s }),
+                      onClick: () => i.placeNextTo({ x: a, y: s }),
                   },
-        [l, t, a, s],
+        [i, n, a, s],
     );
 }
-function b(e) {
-    let { channelId: n, containerRef: t, roomWidth: a, children: c } = e,
-        p = _(n),
-        T = j(n),
-        N = i.useId(),
-        [b, S] = i.useState(null),
-        O = i.useRef(null);
-    T || null == b || S(null),
-        i.useEffect(() => {
-            if (p)
+function E(e) {
+    let { channelId: t, containerRef: n, roomWidth: a, children: c } = e,
+        g = I(t),
+        v = N(t),
+        E = l.useId(),
+        [b, _] = l.useState(null),
+        T = l.useRef(null);
+    v || null == b || _(null),
+        l.useEffect(() => {
+            if (g)
                 return (
-                    v.delete(n),
-                    u._.subscribe(h.jej.GUILD_ROOM_NOTE_PLACEMENT_CANCEL, e),
+                    d._.subscribe(m.jej.GUILD_ROOM_NOTE_PLACEMENT_CANCEL, e),
                     () => {
-                        u._.unsubscribe(h.jej.GUILD_ROOM_NOTE_PLACEMENT_CANCEL, e);
+                        d._.unsubscribe(m.jej.GUILD_ROOM_NOTE_PLACEMENT_CANCEL, e);
                     }
                 );
             function e() {
-                v.add(n), (0, d.HW)(n), s.O.announce(f.intl.string(C.default.bUGP71), "assertive");
+                (0, u.HW)(t), s.O.announce(f.intl.string(A.default.bUGP71), "assertive");
             }
-        }, [p, n]),
-        i.useEffect(() => {
-            if (T)
+        }, [g, t]),
+        l.useEffect(() => {
+            if (v)
                 return () => {
-                    O.current = null;
+                    T.current = null;
                 };
-        }, [T]);
-    let y = i.useMemo(
+        }, [v]),
+        l.useEffect(() => {
+            v && n.current?.querySelector('[tabindex]:not([tabindex="-1"])')?.focus();
+        }, [v, n]);
+    let S = l.useMemo(
         () =>
-            T
+            v
                 ? {
-                      descriptionId: N,
+                      descriptionId: E,
                       setPreviewTarget: (e) => {
-                          let n = O.current ?? g();
-                          (O.current = n), S(x(e, n));
+                          let t = T.current ?? C();
+                          (T.current = t), _(y(e, t));
                       },
                       placeNextTo: (e) => {
-                          let t = A.A.getPendingNote(n);
-                          if (null == t || null != t.position) return;
-                          let l = O.current ?? g();
-                          (O.current = l), (0, d.Dr)(n, x(e, l));
+                          let n = h.A.getPendingNote(t);
+                          if (null == n || null != n.position) return;
+                          let i = T.current ?? C();
+                          (T.current = i), (0, u.Dr)(t, y(e, i));
                       },
                   }
                 : null,
-        [T, N, n],
+        [v, E, t],
     );
-    return (0, l.jsxs)(I.Provider, {
-        value: y,
+    return (0, i.jsxs)(j.Provider, {
+        value: S,
         children: [
-            T &&
-                (0, l.jsx)(r.Ok, {
-                    containerRef: t,
+            v &&
+                (0, i.jsx)(r.Ok, {
+                    containerRef: n,
                     keyboardModeEnabled: !1,
-                    children: (0, l.jsx)("div", {
-                        className: E.a,
-                        children: (0, l.jsx)("div", {
-                            className: E.G,
-                            id: N,
-                            children: (0, l.jsx)(o.E, {
+                    children: (0, i.jsx)("div", {
+                        className: x.a,
+                        children: (0, i.jsx)("div", {
+                            className: x.G,
+                            id: E,
+                            children: (0, i.jsx)(o.E, {
                                 variant: "text-sm/medium",
-                                children: f.intl.string(C.default.xyO7AD),
+                                children: f.intl.string(A.default.xyO7AD),
                             }),
                         }),
                     }),
                 }),
             c,
-            null != b && (0, l.jsx)(m.A, { position: b, roomWidth: a }),
+            null != b && (0, i.jsx)(p.A, { position: b, roomWidth: a }),
         ],
     });
 }
