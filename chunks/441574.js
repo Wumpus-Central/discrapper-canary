@@ -1445,6 +1445,7 @@ class el extends O.G {
             { no: 11, name: "collectibles", kind: "message", T: () => em },
             { no: 12, name: "safety_state", kind: "message", T: () => H },
             { no: 13, name: "display_name_styles", kind: "message", T: () => eA },
+            { no: 14, name: "vad_colors", kind: "message", T: () => tr },
         ]);
     }
     create(e) {
@@ -1497,6 +1498,9 @@ class el extends O.G {
                 case 13:
                     r.displayNameStyles = eA.internalBinaryRead(e, e.uint32(), n, r.displayNameStyles);
                     break;
+                case 14:
+                    r.vadColors = tr.internalBinaryRead(e, e.uint32(), n, r.vadColors);
+                    break;
                 default:
                     let a = n.readUnknownField;
                     if ("throw" === a)
@@ -1521,7 +1525,8 @@ class el extends O.G {
             e.collectibles && em.internalBinaryWrite(e.collectibles, t.tag(11, S.O0.LengthDelimited).fork(), n).join(),
             e.safetyState && H.internalBinaryWrite(e.safetyState, t.tag(12, S.O0.LengthDelimited).fork(), n).join(),
             e.displayNameStyles &&
-                eA.internalBinaryWrite(e.displayNameStyles, t.tag(13, S.O0.LengthDelimited).fork(), n).join();
+                eA.internalBinaryWrite(e.displayNameStyles, t.tag(13, S.O0.LengthDelimited).fork(), n).join(),
+            e.vadColors && tr.internalBinaryWrite(e.vadColors, t.tag(14, S.O0.LengthDelimited).fork(), n).join();
         let i = n.writeUnknownFields;
         return !1 !== i && (!0 == i ? S.f$.onWrite : i)(this.typeName, e, t), t;
     }
@@ -2382,6 +2387,7 @@ class eF extends O.G {
             { no: 18, name: "anonymization_info", kind: "message", T: () => ek },
             { no: 19, name: "typing_indicator_style", kind: "message", T: () => eI },
             { no: 20, name: "disable_staff_discount", kind: "scalar", T: 8 },
+            { no: 21, name: "vad_colors", kind: "message", T: () => tr },
         ]);
     }
     create(e) {
@@ -2463,6 +2469,9 @@ class eF extends O.G {
                     break;
                 case 20:
                     r.disableStaffDiscount = e.bool();
+                    break;
+                case 21:
+                    r.vadColors = tr.internalBinaryRead(e, e.uint32(), n, r.vadColors);
                     break;
                 default:
                     let a = n.readUnknownField;
@@ -2578,7 +2587,8 @@ class eF extends O.G {
                 ek.internalBinaryWrite(e.anonymizationInfo, t.tag(18, S.O0.LengthDelimited).fork(), n).join(),
             e.typingIndicatorStyle &&
                 eI.internalBinaryWrite(e.typingIndicatorStyle, t.tag(19, S.O0.LengthDelimited).fork(), n).join(),
-            !1 !== e.disableStaffDiscount && t.tag(20, S.O0.Varint).bool(e.disableStaffDiscount);
+            !1 !== e.disableStaffDiscount && t.tag(20, S.O0.Varint).bool(e.disableStaffDiscount),
+            e.vadColors && tr.internalBinaryWrite(e.vadColors, t.tag(21, S.O0.LengthDelimited).fork(), n).join();
         let i = n.writeUnknownFields;
         return !1 !== i && (!0 == i ? S.f$.onWrite : i)(this.typeName, e, t), t;
     }
@@ -3400,3 +3410,44 @@ class tt extends O.G {
     }
 }
 let tn = new tt();
+class ti extends O.G {
+    constructor() {
+        super("discord_protos.users.v1.VadColors", [{ no: 1, name: "colors", kind: "scalar", repeat: 1, T: 13 }]);
+    }
+    create(e) {
+        let t = { colors: [] };
+        return (
+            globalThis.Object.defineProperty(t, C.$, { enumerable: !1, value: this }),
+            void 0 !== e && (0, N.x)(this, t, e),
+            t
+        );
+    }
+    internalBinaryRead(e, t, n, i) {
+        let r = i ?? this.create(),
+            a = e.pos + t;
+        for (; e.pos < a; ) {
+            let [t, i] = e.tag();
+            if (1 === t)
+                if (i === S.O0.LengthDelimited) for (let t = e.int32() + e.pos; e.pos < t; ) r.colors.push(e.uint32());
+                else r.colors.push(e.uint32());
+            else {
+                let a = n.readUnknownField;
+                if ("throw" === a)
+                    throw new globalThis.Error(`Unknown field ${t} (wire type ${i}) for ${this.typeName}`);
+                let s = e.skip(i);
+                !1 !== a && (!0 === a ? S.f$.onRead : a)(this.typeName, r, t, i, s);
+            }
+        }
+        return r;
+    }
+    internalBinaryWrite(e, t, n) {
+        if (e.colors.length) {
+            t.tag(1, S.O0.LengthDelimited).fork();
+            for (let n = 0; n < e.colors.length; n++) t.uint32(e.colors[n]);
+            t.join();
+        }
+        let i = n.writeUnknownFields;
+        return !1 !== i && (!0 == i ? S.f$.onWrite : i)(this.typeName, e, t), t;
+    }
+}
+let tr = new ti();
