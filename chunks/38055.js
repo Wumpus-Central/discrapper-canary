@@ -57,10 +57,10 @@ function A(e) {
         }),
     });
 }
-let E = function () {
-    let e = i.useRef(null);
+let E = function (e) {
+    let t = i.useRef(null);
     return (0, l.jsx)(d.Y, {
-        targetElementRef: e,
+        targetElementRef: t,
         animation: d.Y.Animation.NONE,
         position: "bottom",
         align: "right",
@@ -68,13 +68,14 @@ let E = function () {
             let { closePopout: t } = e;
             return (0, l.jsx)(A, { closePopout: t });
         },
-        children: (t) =>
+        children: (n) =>
             (0, l.jsx)(h.D, {
-                ...t,
-                innerRef: e,
+                ...n,
+                ...e,
+                innerRef: t,
                 "aria-label": x.intl.string(x.t.w2jvOf),
                 onClick: (e) => {
-                    e.stopPropagation(), t.onClick(e);
+                    e.stopPropagation(), n.onClick(e);
                 },
                 style: { width: "12px", height: "12px", display: "flex" },
                 children: (0, l.jsx)(m.SettingsIcon, { size: "xxs" }),
