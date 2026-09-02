@@ -1,10 +1,10 @@
-n.d(t, { Xv: () => c, Z0: () => p, qs: () => E, xA: () => u });
+n.d(e, { Xv: () => c, Z0: () => p, qs: () => E, xA: () => a });
 var l = n(587895),
     r = n(174459),
     i = n(972786),
     o = n(683180),
-    a = n(652215);
-let u = {
+    u = n(652215);
+let a = {
     BUILD_FAILED: "BUILD_FAILED",
     HEALTHCHECK_FAILED: "HEALTHCHECK_FAILED",
     AGENT_ERROR: "AGENT_ERROR",
@@ -14,50 +14,67 @@ let u = {
     RUNTIME_FRAME_ERROR: "RUNTIME_FRAME_ERROR",
     RUNTIME_WORKER_ERROR: "RUNTIME_WORKER_ERROR",
 };
-function s(e) {
-    return null == e || "" === e ? null : e.slice(0, 256);
+function s(t) {
+    return null == t || "" === t ? null : t.slice(0, 256);
 }
-function d(e) {
-    let t = i.Ay.getProject(e);
+function _(t) {
+    let e = i.Ay.getProject(t);
     return {
-        project_id: e,
-        project_name: s(t?.name),
-        application_id: t?.application_id ?? null,
-        preview_application_id: t?.preview_application_id ?? null,
+        project_id: t,
+        project_name: s(e?.name),
+        application_id: e?.application_id ?? null,
+        preview_application_id: e?.preview_application_id ?? null,
     };
 }
-function _(e, t) {
-    let n = i.Ay.getProject(e),
-        l = (t ? n?.preview_guild_id : n?.guild_id) ?? null,
-        r = (t ? n?.preview_application_id : n?.application_id) ?? null;
+function d(t, e) {
+    let n = i.Ay.getProject(t),
+        l = (e ? n?.preview_guild_id : n?.guild_id) ?? null,
+        r = (e ? n?.preview_application_id : n?.application_id) ?? null;
     return { guild_id: l, channel_id: null != l && null != r ? (0, o.SH)(l, r) : null };
 }
-function c(e, t) {
-    r.default.track(a.HAw.VIBEGRATION_TURN_RESULTED, {
-        ...d(e),
-        turn_result: t.result ?? null,
-        turn_summary: s(t.detail ?? t.summary),
-        turn_cost: t.cost_usd ?? null,
+function c(t, e) {
+    var n;
+    r.default.track(u.HAw.VIBEGRATION_TURN_RESULTED, {
+        ..._(t),
+        turn_result: e.result ?? null,
+        turn_summary: s(e.detail ?? e.summary),
+        turn_cost: e.cost_usd ?? null,
+        ...(null == (n = e.tokens)
+            ? {
+                  turn_input_tokens: null,
+                  turn_output_tokens: null,
+                  turn_cache_write_tokens: null,
+                  turn_cache_read_tokens: null,
+                  turn_total_tokens: null,
+              }
+            : {
+                  turn_input_tokens: n.input_tokens,
+                  turn_output_tokens: n.output_tokens,
+                  turn_cache_write_tokens: n.cache_creation_input_tokens,
+                  turn_cache_read_tokens: n.cache_read_input_tokens,
+                  turn_total_tokens:
+                      n.input_tokens + n.output_tokens + n.cache_creation_input_tokens + n.cache_read_input_tokens,
+              }),
     });
 }
-function E(e, t) {
-    let { isPreview: n } = t,
-        i = d(e),
+function E(t, e) {
+    let { isPreview: n } = e,
+        i = _(t),
         o = n ? i.preview_application_id : i.application_id,
-        u = null != o ? l.A.getApplication(o) : null;
-    r.default.track(a.HAw.VIBEGRATION_DEPLOYED, {
+        a = null != o ? l.A.getApplication(o) : null;
+    r.default.track(u.HAw.VIBEGRATION_DEPLOYED, {
         ...i,
-        project_summary: s(u?.description),
+        project_summary: s(a?.description),
         is_preview: n,
-        ..._(e, n),
+        ...d(t, n),
     });
 }
-function p(e, t) {
-    let { location: n, code: l, message: i, details: o, isPreview: u = !0 } = t;
-    r.default.track(a.HAw.VIBEGRATION_ERRORED, {
-        ...d(e),
-        is_preview: u,
-        ..._(e, u),
+function p(t, e) {
+    let { location: n, code: l, message: i, details: o, isPreview: a = !0 } = e;
+    r.default.track(u.HAw.VIBEGRATION_ERRORED, {
+        ..._(t),
+        is_preview: a,
+        ...d(t, a),
         error_location: n,
         error_code: l,
         error_message: s(i),
