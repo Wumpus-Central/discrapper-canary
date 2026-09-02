@@ -11,8 +11,8 @@ var s = t(477900),
     m = t(821609),
     x = t(939249),
     h = t(597770),
-    p = t(366010),
-    b = t(192308),
+    b = t(366010),
+    p = t(192308),
     j = t(289873),
     _ = t(34188),
     N = t(358618),
@@ -34,9 +34,9 @@ var s = t(477900),
     P = t(371794),
     U = t(871123),
     H = t(733391),
-    Y = t(832163),
-    w = t(429635),
-    G = t(69236),
+    G = t(832163),
+    Y = t(429635),
+    w = t(69236),
     B = t(31969),
     M = t(44724);
 t(321073);
@@ -146,7 +146,7 @@ function em(e) {
     m !== l && (x(l), m?.type === "image" && l?.type === "image" && m.src !== l.src ? u(m.src) : u(null));
     let h = n.useCallback(() => u(null), []);
     if (null == l) return null;
-    let p = {
+    let b = {
         background: o,
         backgroundImage: null != l.backgroundSrc ? `url(${l.backgroundSrc})` : void 0,
         backgroundSize: "cover",
@@ -160,7 +160,7 @@ function em(e) {
                   "div",
                   {
                       className: `${ec.h4} ${ec.nR}`,
-                      style: p,
+                      style: b,
                       children: (0, s.jsx)(
                           er.rr,
                           {
@@ -190,7 +190,7 @@ function em(e) {
               className: i ?? ec.kL,
               children: (0, s.jsxs)("div", {
                   className: ec.h4,
-                  style: p,
+                  style: b,
                   children: [
                       (0, s.jsx)("img", { src: l.src, alt: r, className: ec.Sl }, l.src),
                       null != d && !c && (0, s.jsx)("img", { src: d, alt: "", className: ec.Ve, onAnimationEnd: h }, d),
@@ -200,17 +200,17 @@ function em(e) {
 }
 var ex = t(821707),
     eh = t(320448),
-    ep = t(403581),
-    eb = t(532794),
+    eb = t(403581),
+    ep = t(532794),
     ej = t(910200),
     e_ = t(202541),
     eN = t(680649),
     eg = t(456902);
 function eC(e) {
     let { orbsGate: l, onTrackClickNitroUpsell: t, applicationId: i, analyticsLocations: r } = e,
-        o = (0, a.bG)([Y.A], () => Y.A.getConfigForApplicationId(i)),
+        o = (0, a.bG)([G.A], () => G.A.getConfigForApplicationId(i)),
         c = n.useCallback(() => {
-            t(), (0, eb.A)({ subscriptionTier: e_.pe.TIER_2, analyticsLocations: r, applicationId: i });
+            t(), (0, ep.A)({ subscriptionTier: e_.pe.TIER_2, analyticsLocations: r, applicationId: i });
         }, [r, i, t]);
     return "HIDDEN" === l
         ? null
@@ -219,7 +219,7 @@ function eC(e) {
                 className: eg.L,
                 onClick: c,
                 children: (0, s.jsx)(ej.Ay, {
-                    Icon: ep.t,
+                    Icon: eb.t,
                     gradientColor: "nitro-pink",
                     tooltip: $.intl.string(eN.default.XwadDC),
                     text: $.intl.string(eN.default.cg95CA),
@@ -227,7 +227,7 @@ function eC(e) {
                 }),
             })
           : (0, s.jsx)(ej.O0, {
-                Icon: ep.t,
+                Icon: eb.t,
                 text: $.intl.string(eN.default.cg95CA),
                 endDatetime: o?.promotionEndDatetime,
                 gradientColor: "nitro-pink",
@@ -325,13 +325,13 @@ function eR(e) {
             trackPDPClick: o,
             analyticsLocations: c,
             orbPrice: u,
-            orbsGate: p,
-            formattedPrice: b,
+            orbsGate: b,
+            formattedPrice: p,
         } = e,
         j = l.id,
-        _ = (0, a.bG)([Y.A], () => Y.A.getNormalizedSKUEligibility(j), [j]),
-        N = _ && "CAN_CHECKOUT" === p,
-        g = b.discountedPrice ?? b.normalPrice,
+        _ = (0, a.bG)([G.A], () => G.A.getNormalizedSKUEligibility(j), [j]),
+        N = _ && "CAN_CHECKOUT" === b,
+        g = p.discountedPrice ?? p.normalPrice,
         C = n.useCallback(() => {
             o(eA.Jq.BUY_BUTTON),
                 (0, J.a)(
@@ -370,7 +370,7 @@ function eR(e) {
         }, [o]),
         O = _
             ? (0, s.jsx)(el, {
-                  orbsGate: p,
+                  orbsGate: b,
                   orbPrice: u,
                   onCheckout: v,
                   onTrackEarnMoreOrbs: T,
@@ -464,14 +464,14 @@ function eU(e) {
     n.useEffect(() => {
         null != c && (0, H.iR)(u, c);
     }, [u, c]);
-    let W = (0, w.A)({ applicationId: u }),
-        K = (0, a.bG)([Y.A], () => Y.A.getSkuAssets()),
+    let W = (0, Y.A)({ applicationId: u }),
+        K = (0, a.bG)([G.A], () => G.A.getSkuAssets()),
         Q = (0, a.bG)([D.A], () => D.A.isFetchingForSKU(c)),
-        Z = (0, p.M)((0, I.Ay)()),
+        Z = (0, b.M)((0, I.Ay)()),
         [ee, el] = n.useState(!0),
         et = (0, O.A)({ skuId: c }),
         es = (0, T.JL)({ sku: et }),
-        { state: en, isReady: ei } = (0, G.we)({
+        { state: en, isReady: ei } = (0, w.we)({
             orbPriceAmount: es?.amount,
             applicationId: u,
             location: "product_details_modal",
@@ -521,16 +521,16 @@ function eU(e) {
             [et, u, K],
         ),
         [eu, ex] = n.useState(null),
-        [eh, ep] = n.useState(!1);
+        [eh, eb] = n.useState(!1);
     n.useEffect(() => {
         if (null == eu) return;
         let e = new ResizeObserver(() => {
-            ep(eu.scrollHeight > eu.clientHeight);
+            eb(eu.scrollHeight > eu.clientHeight);
         });
         return e.observe(eu), () => e.disconnect();
     }, [eu]);
-    let eb = ea < ed.length ? ea : 0,
-        ej = ec[eb] ?? null,
+    let ep = ea < ed.length ? ea : 0,
+        ej = ec[ep] ?? null,
         e_ = ed.length > 1,
         eN = ed.some((e) => "video" === e.type);
     (0, y.pE)(),
@@ -593,13 +593,13 @@ function eU(e) {
         eH = n.useCallback(() => {
             eg(eA.Jq.WISHLIST_BUTTON);
         }, [eg]),
-        eY = n.useCallback(() => {
+        eG = n.useCallback(() => {
             (0, M.G)({ applicationId: u });
         }, [u]),
-        ew = n.useCallback(() => {
-            eg(eA.Jq.VISIT_SHOP), (0, b.closeAllModals)(), null != l ? l() : (0, M.default)({ applicationId: u });
+        eY = n.useCallback(() => {
+            eg(eA.Jq.VISIT_SHOP), (0, p.closeAllModals)(), null != l ? l() : (0, M.default)({ applicationId: u });
         }, [u, eg, l]),
-        eG = n.useCallback(() => {
+        ew = n.useCallback(() => {
             el(!ee), eg(eA.Jq.MUTE_BUTTON);
         }, [ee, eg]),
         eB = (0, B.F)("pdp", { applicationId: u, skuId: c }),
@@ -620,6 +620,7 @@ function eU(e) {
             returnRef: i,
             children: (0, s.jsx)(o.$m, {
                 className: ev.jE,
+                scrollbarGutter: !1,
                 children: (0, s.jsxs)("div", {
                     className: ev.nr,
                     children: [
@@ -648,7 +649,7 @@ function eU(e) {
                                                           children: (0, s.jsx)(V, {
                                                               mediaItems: ed,
                                                               labels: ec.map((e) => e.label),
-                                                              selectedIndex: eb,
+                                                              selectedIndex: ep,
                                                               onSelectIndex: eD,
                                                           }),
                                                       }),
@@ -711,11 +712,11 @@ function eU(e) {
                         (0, s.jsxs)("div", {
                             className: ev.il,
                             children: [
-                                (0, s.jsx)(em, { item: ed[eb], isMuted: ee, alt: ej?.label ?? et.name }),
+                                (0, s.jsx)(em, { item: ed[ep], isMuted: ee, alt: ej?.label ?? et.name }),
                                 !m &&
                                     (0, s.jsxs)(eL, {
-                                        onClick: ew,
-                                        onMouseDown: eY,
+                                        onClick: eY,
+                                        onMouseDown: eG,
                                         ariaLabel: $.intl.string($.t["+v/1Dk"]),
                                         className: ev.gW,
                                         children: [
@@ -746,7 +747,7 @@ function eU(e) {
                                         }),
                                         eN &&
                                             (0, s.jsx)(eL, {
-                                                onClick: eG,
+                                                onClick: ew,
                                                 ariaLabel: ee ? $.intl.string($.t.YqAjXy) : $.intl.string($.t.w4m945),
                                                 children: ee
                                                     ? (0, s.jsx)(N._, { size: "refresh_sm", color: "currentColor" })
