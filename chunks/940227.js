@@ -248,7 +248,7 @@ let $ = "2026-03-surface-direct-renderer",
 var q = n(53857),
     Z = n(734057),
     X = n(71393),
-    Q = n(453028),
+    Q = n(45630),
     J = n(763827),
     ee = n(412780),
     et = n(873985),
@@ -3049,7 +3049,7 @@ class tu extends p.A {
     sendSpeaking(e, t) {
         let n = this._socket;
         if (null == n || !this.shouldSendSpeaking(e, t)) return;
-        let i = Q.Ay.getPacketDelay();
+        let i = Q.Ay.getPacketDelay(this.context);
         n.speaking(e, i, t);
     }
     sendVideo(e, t, n, i) {

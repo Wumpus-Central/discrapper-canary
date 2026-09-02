@@ -6024,5 +6024,21 @@
         "showOnRTCHover": true
       }
     }
+  },
+  {
+    "name": "2026-09-stream-zero-vad-leading",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
   }
 ]

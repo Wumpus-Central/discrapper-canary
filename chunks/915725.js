@@ -127,7 +127,7 @@ class Y extends s.Ay.DeviceSettingsStore {
         (e) => ({ ...e, clipsSettings: { ...e.clipsSettings, decoupledClipsEnabled: V.decoupledClipsEnabled } }),
         (e) => ({ ...e, hardwareClassificationForDecoupled: e.hardwareClassificationForDecoupled ?? null }),
         (e) => {
-            let t = n(453028).Ay.getHardwareEncoding();
+            let t = n(45630).Ay.getHardwareEncoding();
             return {
                 ...e,
                 clipsSettings: {
