@@ -1,14 +1,13 @@
-"use strict";
-let i;
-n.d(t, { J: () => a, n: () => s });
+let n;
+E.d(t, { J: () => i, n: () => _ });
 let r = "__d6gp33cibjs";
 try {
-    (i = window.localStorage), null == i && ((i = window[r]), delete window[r]);
+    (n = window.localStorage), null == n && ((n = window[r]), delete window[r]);
 } catch (e) {}
 try {
     null != window.localStorage && (window[r] = window.localStorage), delete window.localStorage;
 } catch (e) {}
-class a {
+class i {
     storage;
     constructor() {
         this.storage = {};
@@ -41,47 +40,47 @@ class a {
         return Promise.resolve(this.get(e));
     }
 }
-let s = !(function () {
+let _ = !(function () {
     let e = "test";
     try {
-        return i.setItem(e, e), i.removeItem(e), !0;
+        return n.setItem(e, e), n.removeItem(e), !0;
     } catch (e) {
         return !1;
     }
 })()
-    ? new a()
+    ? new i()
     : new (class {
           get(e, t) {
-              let n = i.getItem(e);
-              if (null != n)
+              let E = n.getItem(e);
+              if (null != E)
                   try {
-                      n = JSON.parse(n);
+                      E = JSON.parse(E);
                   } catch (e) {
-                      n = t;
+                      E = t;
                   }
-              else n = t;
-              return n;
+              else E = t;
+              return E;
           }
           set(e, t) {
-              i.setItem(e, JSON.stringify(t));
+              n.setItem(e, JSON.stringify(t));
           }
           remove(e) {
-              i.removeItem(e);
+              n.removeItem(e);
           }
           clear() {
-              i.clear();
+              n.clear();
           }
           stringify() {
-              return JSON.stringify(i || {});
+              return JSON.stringify(n || {});
           }
           asyncGetRaw(e, t) {
-              return Promise.resolve(i.getItem(e));
+              return Promise.resolve(n.getItem(e));
           }
           getRaw(e) {
-              return i.getItem(e);
+              return n.getItem(e);
           }
           setRaw(e, t) {
-              i.setItem(e, t);
+              n.setItem(e, t);
           }
           getAfterRefresh(e) {
               return Promise.resolve(this.get(e));

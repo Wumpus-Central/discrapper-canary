@@ -270,9 +270,9 @@ var eB = n(636585),
     e2 = n(22869),
     e3 = n(623671),
     e8 = n(428249),
-    e5 = n(327098),
-    e7 = n(576757),
-    e6 = n(202195),
+    e6 = n(327098),
+    e5 = n(576757),
+    e7 = n(202195),
     e4 = n(140651),
     e9 = n(43105),
     te = n(131607),
@@ -456,7 +456,7 @@ let tx = (0, ey.Fe)({
                 n.e("836576"),
                 n.e("253453"),
                 n.e("82937"),
-                n.e("278115"),
+                n.e("699826"),
                 n.e("923981"),
                 n.e("750370"),
                 n.e("972281"),
@@ -482,6 +482,9 @@ let tx = (0, ey.Fe)({
                 n.e("348567"),
                 n.e("900277"),
                 n.e("127962"),
+                n.e("974660"),
+                n.e("736207"),
+                n.e("806827"),
                 n.e("161282"),
                 n.e("863232"),
                 n.e("364827"),
@@ -551,6 +554,7 @@ let tx = (0, ey.Fe)({
                 n.e("928662"),
                 n.e("306306"),
                 n.e("920282"),
+                n.e("963584"),
                 n.e("654282"),
                 n.e("77473"),
                 n.e("363618"),
@@ -573,6 +577,7 @@ let tx = (0, ey.Fe)({
                 n.e("488990"),
                 n.e("509793"),
                 n.e("143549"),
+                n.e("509856"),
                 n.e("11301"),
                 n.e("948720"),
                 n.e("988003"),
@@ -654,7 +659,7 @@ function ty(e) {
         [_, T] = i.useState(!1),
         { voiceBar: j, joinVoiceButton: b } = (function (e) {
             let { channel: t, entry: n, onVoiceChannelPreview: s } = e,
-                { streamPreviewUrl: r, channel: a } = (0, e6.A)(n),
+                { streamPreviewUrl: r, channel: a } = (0, e7.A)(n),
                 o = (0, eE.Ay)(a),
                 { needSubscriptionToAccess: c } = (0, eR.A)(t?.id),
                 h = (0, u.bG)([eK.A], () => (null != a ? eK.A.getGuild(a.guild_id) : void 0)),
@@ -782,7 +787,7 @@ function ty(e) {
                       }),
             };
         })({ channel: o, entry: m, onVoiceChannelPreview: x }),
-        { embeddedActivity: R } = (0, e5.A)(m),
+        { embeddedActivity: R } = (0, e6.A)(m),
         O =
             ((t = R),
             (n = (0, u.bG)([eK.A], () => eK.A.getGuild((0, es.D)(t?.location)))),
@@ -1041,9 +1046,9 @@ let tS = (e) => {
 function tN(e) {
     let { channel: t, userDescription: n, entry: i, disableGameProfileLinks: s, onUserPopoutClosed: r } = e,
         a = t?.guild_id,
-        { displayParticipants: o, participant1: c, participant2: d, numOtherParticipants: h } = (0, e7.A)(i, 3),
+        { displayParticipants: o, participant1: c, participant2: d, numOtherParticipants: h } = (0, e5.A)(i, 3),
         m = (0, u.bG)([g.default], () => g.default.getUser(i.author_id)),
-        { streamPreviewUrl: f } = (0, e6.A)(i),
+        { streamPreviewUrl: f } = (0, e7.A)(i),
         p = [c, d];
     return (0, l.jsxs)("div", {
         className: tg.MH,
@@ -1252,7 +1257,7 @@ function tT(e) {
             { onOpened: () => m?.(tm.PA.OPENED_GAME_PROFILE) },
         ),
         y = A ? I : void 0,
-        { activity: S, activityApplication: N, fallbackApplication: v } = (0, e5.A)(x),
+        { activity: S, activityApplication: N, fallbackApplication: v } = (0, e6.A)(x),
         { largeImage: _, smallImage: T } = (0, e0.D8)(S, N ?? v),
         { largeImage: j } = (0, e0.nO)({ entry: x, trackingSource: "memberlist_streaming_content_popout" }),
         b = (0, eL.w)({ location: "content_inventory" }),
@@ -1487,7 +1492,7 @@ let tq = [...tR.n, M.Yq],
                 trackRankingItemInteraction: o,
             } = e,
             { user: u, details: c, appName: d, activity: h, embeddedActivity: m } = (0, tj.u)(n),
-            { streamPreviewUrl: f, stream: p } = (0, e6.A)(n),
+            { streamPreviewUrl: f, stream: p } = (0, e7.A)(n),
             g = n.extra.platform,
             x = n.extra.application_id,
             A = null != g ? tJ[g] : null,
@@ -1659,9 +1664,9 @@ n(321073);
 var t2 = n(205327),
     t3 = n(52133),
     t8 = n(835723),
-    t5 = n(172710),
-    t7 = n(655116),
-    t6 = n(763758),
+    t6 = n(172710),
+    t5 = n(655116),
+    t7 = n(763758),
     t4 = n(286617),
     t9 = n(533207),
     ne = n(280450),
@@ -1707,8 +1712,8 @@ function na(e) {
         { activity: d, currentEntry: h, artist: m, title: f, user: p } = (0, t1.u7)(r),
         g = tZ(em.fg2.SPOTIFY),
         x = (0, u.bG)(
-            [t7.A, ne.default],
-            () => (d?.type === em.$pd.LISTENING && null != p ? (0, t4.A)(t7.A, ne.default, p, d) : void 0),
+            [t5.A, ne.default],
+            () => (d?.type === em.$pd.LISTENING && null != p ? (0, t4.A)(t5.A, ne.default, p, d) : void 0),
             [d, p],
             t3.A,
         );
@@ -1717,20 +1722,20 @@ function na(e) {
         E = [];
     h.media.provider === t2.X.SPOTIFY &&
         ((n = () => {
-            (0, t5.Mp)(d);
+            (0, t6.Mp)(d);
         }),
         (i = () => {
-            (0, t5.QX)(d, p.id);
+            (0, t6.QX)(d, p.id);
         }),
         (t = () => {
-            null != g ? g() : (0, t5.Mp)(d);
+            null != g ? g() : (0, t6.Mp)(d);
         }),
-        (A = (0, l.jsx)(t6.A, {
+        (A = (0, l.jsx)(t7.A, {
             artists: m,
             canOpen: null != d.sync_id,
             linkClassName: tg.zA,
             onOpenSpotifyArtist: function (e) {
-                null != d && null != p && (0, t5.mN)(d, p.id, e);
+                null != d && null != p && (0, t6.mN)(d, p.id, e);
             },
         })),
         x?.syncDisabled === !1 &&

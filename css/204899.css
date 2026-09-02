@@ -37,6 +37,68 @@
     grid-template-columns: repeat(6, calc(var(--custom-badge-tile-size)*1px))
 }
 
+.dragTarget_f18413 {
+    cursor: grab;
+    position: relative
+}
+
+.dragTarget_f18413:active {
+    cursor: grabbing
+}
+
+.dragHandle_f18413 {
+    align-items: center;
+    display: flex;
+    inset: 0;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    z-index: 1
+}
+
+.dragHandle_f18413:focus-visible {
+    opacity: 1
+}
+
+.isDragging_f18413 {
+    opacity: .15
+}
+
+.dragPreview_f18413 {
+    border-radius: var(--radius-sm);
+    box-shadow: var(--shadow-high);
+    height: calc(var(--custom-badge-tile-size)*1px);
+    inset-block-start: 0;
+    inset-inline-start: 0;
+    opacity: .85;
+    pointer-events: none;
+    position: fixed;
+    width: calc(var(--custom-badge-tile-size)*1px);
+    will-change: transform;
+    z-index: 1000
+}
+
+.dropIndicatorAfter_f18413:after,
+.dropIndicatorBefore_f18413:before {
+    background-color: var(--icon-strong);
+    border-radius: 4px;
+    bottom: 0;
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    width: 2px
+}
+
+.dropIndicatorBefore_f18413:before {
+    inset-inline-start: calc(var(--space-xs)/-2 - 1px)
+}
+
+.dropIndicatorAfter_f18413:after {
+    inset-inline-end: calc(var(--space-xs)/-2 - 1px)
+}
+
 .badgeTileContainer_f18413 {
     height: calc(var(--custom-badge-tile-size)*1px);
     position: relative;
@@ -130,4 +192,4 @@
     width: 20px
 }
 
-/*# sourceMappingURL=204899.7b9b9e6fda75a703.css.map*/
+/*# sourceMappingURL=204899.a070ef47ebbcd3ce.css.map*/
