@@ -217,21 +217,23 @@
 }
 
 .spoilerMarkdownContent__299eb pre {
-    pointer-events: all;
+    pointer-events: all
+}
+
+.spoilerMarkdownContent__299eb pre>div {
     position: relative
 }
 
-.spoilerMarkdownContent__299eb pre:before {
+.spoilerMarkdownContent__299eb pre>div:before {
     background-color: var(--__current--spoiler-background-color);
     border-radius: var(--radius-xs);
     color: var(--__current--spoiler-text-color);
     content: "";
-    height: 100%;
-    position: absolute;
-    width: 100%
+    inset: 0;
+    position: absolute
 }
 
-.enable-forced-colors .spoilerMarkdownContent__299eb pre:before {
+.enable-forced-colors .spoilerMarkdownContent__299eb pre>div:before {
     border: 1px solid var(--__current--spoiler-border-color)
 }
 
@@ -316,4 +318,4 @@
     transition: background-color .2s ease-in-out
 }
 
-/*# sourceMappingURL=880150.fca43d0a99f01d56.css.map*/
+/*# sourceMappingURL=880150.8851b0be092dc53b.css.map*/
