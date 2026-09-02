@@ -113,7 +113,12 @@ function R(e, t) {
                                 (!E && A?.integration_types?.includes(l.b.GUILD_INSTALL)) ||
                                 (I && A?.inputType !== c.y$.BUILT_IN_TEXT && A?.inputType !== c.y$.BUILT_IN_INTEGRATION)
                             )
-                                return null != h && O(t, a.id, A, !0), null;
+                                return (
+                                    null != h
+                                        ? O(t, a.id, A, !0)
+                                        : null != A && r.Gf({ channelId: a.id, command: null, section: null }),
+                                    null
+                                );
                             if (null != h) {
                                 if (N.VW.isEditorEmpty(t) || null == A) return O(t, a.id, A, !1), null;
                                 let e = `/${h.displayName}`;
