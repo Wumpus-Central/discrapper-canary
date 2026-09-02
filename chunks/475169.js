@@ -1,1 +1,1 @@
-h.exports = { Jj: "hangTightNotice_fb42a1", qf: "hangTightIcon_fb42a1", e4: "hangTightContent_fb42a1" };
+t.exports = { lm: "notice_fb42a1", EP: "noticeIcon_fb42a1", qZ: "noticeContent_fb42a1" };
