@@ -51,6 +51,8 @@ function A() {
             return { duration: 1, percentage: 40, discountId: t };
         case p.xH:
             return { duration: 3, percentage: 30, discountId: t };
+        case p.sC:
+            return { duration: 1, percentage: 30, discountId: t };
         default:
             return;
     }
