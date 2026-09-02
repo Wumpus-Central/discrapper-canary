@@ -430,8 +430,8 @@ let e3 = (0, eQ.L_)((e, t, n) => ["null", ...t, ...e, e0, eS.sFm.E3_SERVER_DISCO
         });
     });
 n(667532);
-var e4 = n(868285),
-    e6 = n(763827),
+var e6 = n(868285),
+    e4 = n(763827),
     e7 = n(221877),
     e8 = n(778712),
     e9 = n(812993),
@@ -648,24 +648,24 @@ class tf extends s.PureComponent {
                       n.e("708757"),
                       n.e("993103"),
                       n.e("585968"),
+                      n.e("393336"),
                       n.e("776273"),
                       n.e("893190"),
                       n.e("391763"),
                       n.e("571210"),
-                      n.e("189673"),
                       n.e("88342"),
+                      n.e("189673"),
                       n.e("955557"),
-                      n.e("229787"),
                       n.e("311802"),
+                      n.e("229787"),
                       n.e("698965"),
                       n.e("882073"),
                       n.e("797558"),
                       n.e("691994"),
-                      n.e("576665"),
                       n.e("235313"),
+                      n.e("576665"),
                       n.e("474610"),
                       n.e("436564"),
-                      n.e("170955"),
                       n.e("947502"),
                       n.e("245996"),
                       n.e("700792"),
@@ -690,10 +690,10 @@ class tf extends s.PureComponent {
                   let { default: e } = await Promise.all([
                       n.e("926132"),
                       n.e("146652"),
+                      n.e("393336"),
                       n.e("893190"),
                       n.e("391763"),
                       n.e("955557"),
-                      n.e("170955"),
                       n.e("947502"),
                       n.e("965789"),
                       n.e("368530"),
@@ -776,7 +776,7 @@ let tp = s.forwardRef(function (e, t) {
     let n = e.channel.id,
         i = (0, ti.Ay)(e.channel),
         r = (0, _.Vd)(n, 2),
-        s = (0, A.bG)([e6.A], () => e6.A.getChannelId(), []),
+        s = (0, A.bG)([e4.A], () => e4.A.getChannelId(), []),
         l = (0, A.bG)([y.A], () => y.A.getMode(n), [n]),
         o = (0, A.bG)([j.A], () => j.A.getAllApplicationStreamsForChannel(n).length > 0),
         d = (0, A.bG)([em.Ay], () => em.Ay.getVoiceStatesForChannel(e.channel).length > 0, [e.channel]),
@@ -809,9 +809,9 @@ function tT() {
     (0, A.bG)([W.A], () => W.A.getPrivateChannelsVersion());
     let e = W.A.getMutablePrivateChannels(),
         t = (0, A.yK)([eK.A], () => eK.A.getUnreadPrivateChannelIds()),
-        { selectedVoiceGuildId: n, selectedVoiceChannelId: i } = (0, A.cf)([e6.A], () => ({
-            selectedVoiceGuildId: e6.A.getGuildId(),
-            selectedVoiceChannelId: e6.A.getChannelId(),
+        { selectedVoiceGuildId: n, selectedVoiceChannelId: i } = (0, A.cf)([e4.A], () => ({
+            selectedVoiceGuildId: e4.A.getGuildId(),
+            selectedVoiceChannelId: e4.A.getChannelId(),
         })),
         r = t.map((t) => {
             let n = e[t];
@@ -826,7 +826,7 @@ function tT() {
             "aria-label": es.intl.string(es.t.YUU0RF),
             gap: "xs",
             hidden: r.length < 1,
-            children: (0, a.jsx)(e4.F, { component: s.Fragment, children: r }),
+            children: (0, a.jsx)(e6.F, { component: s.Fragment, children: r }),
         })
     );
 }
@@ -1168,8 +1168,8 @@ function t3(e) {
     });
 }
 var t5 = n(696292),
-    t4 = n(836480),
-    t6 = n(533129),
+    t6 = n(836480),
+    t4 = n(533129),
     t7 = n(726845),
     t8 = n(837057),
     t9 = n(310419),
@@ -1179,7 +1179,7 @@ var t5 = n(696292),
 let ni = s.forwardRef(function (e, t) {
     let { selected: n, onClick: i, questId: r, className: l } = e,
         o = s.useCallback(() => {
-            (0, t6.WL)({ source: ne.GlobalDiscoveryAnalyticsLocations.GUILDS_BAR_ICON });
+            (0, t4.WL)({ source: ne.GlobalDiscoveryAnalyticsLocations.GUILDS_BAR_ICON });
             let e = void 0 !== r ? ne.GlobalDiscoveryTab.QUESTS : t7.A.getField("selectedTab");
             switch (e) {
                 case ne.GlobalDiscoveryTab.QUESTS:
@@ -1215,7 +1215,7 @@ let ni = s.forwardRef(function (e, t) {
         },
         selected: n,
         tooltip: es.intl.string(es.t["4nEZLk"]),
-        icon: t4.CompassIcon,
+        icon: t6.CompassIcon,
     });
 });
 var nr = n(506774),
@@ -1532,8 +1532,8 @@ function n1(e) {
 var n2 = n(114329),
     n3 = n(937067);
 let n5 = (0, nW.xI)(nV.A.FOLDER_ITEM_ANIMATION_DURATION),
-    n4 = (0, e7.animated)(p.B),
-    n6 = s.memo(function (e) {
+    n6 = (0, e7.animated)(p.B),
+    n4 = s.memo(function (e) {
         var t;
         let n,
             i,
@@ -1656,7 +1656,7 @@ let n5 = (0, nW.xI)(nV.A.FOLDER_ITEM_ANIMATION_DURATION),
                     return (
                         t &&
                         (0, a.jsx)(
-                            n4,
+                            n6,
                             {
                                 id: z,
                                 role: "group",
@@ -1707,13 +1707,13 @@ let n8 = s.memo(function (e) {
             return `${i.join(", ")}${i.length < t.length ? ", ..." : ""}`;
         })(I),
         R =
-            ((t = (0, A.bG)([e6.A], () => e6.A.getGuildId())),
+            ((t = (0, A.bG)([e4.A], () => e4.A.getGuildId())),
             (i = I.children.map((e) => e.id)),
             (r = null != t && i.includes(t)),
             (l = !1),
             (o = !1),
             (d = !1),
-            (c = (0, A.bG)([e6.A], () => e6.A.getChannelId())),
+            (c = (0, A.bG)([e4.A], () => e4.A.getChannelId())),
             (_ = null != (u = (0, n7.A)()?.guild_id) && i.includes(u)),
             (E = (0, A.bG)([K.A], () => null != c && K.A.hasVideo(c), [c])),
             (h = (0, A.bG)([j.A], () => j.A.getCurrentUserActiveStream())),
@@ -1744,7 +1744,7 @@ let n8 = s.memo(function (e) {
             },
             [p, T, m, D, L],
         );
-    return (0, a.jsx)(n6, {
+    return (0, a.jsx)(n4, {
         ...f,
         folderNode: I,
         expanded: C,
@@ -2304,7 +2304,7 @@ function iJ(e, t) {
             n.e("3942"),
             n.e("766811"),
             n.e("295570"),
-            n.e("686117"),
+            n.e("301850"),
             n.e("936875"),
             n.e("862179"),
             n.e("722784"),
@@ -2317,7 +2317,8 @@ function iJ(e, t) {
             n.e("618416"),
             n.e("706073"),
             n.e("227512"),
-            n.e("923108"),
+            n.e("262564"),
+            n.e("71866"),
             n.e("891473"),
             n.e("414571"),
             n.e("1955"),
@@ -2596,6 +2597,7 @@ function iJ(e, t) {
             n.e("708757"),
             n.e("993103"),
             n.e("585968"),
+            n.e("393336"),
             n.e("481647"),
             n.e("776273"),
             n.e("428367"),
@@ -2603,11 +2605,11 @@ function iJ(e, t) {
             n.e("407170"),
             n.e("140402"),
             n.e("811310"),
-            n.e("391763"),
             n.e("21921"),
             n.e("572963"),
             n.e("752511"),
             n.e("307575"),
+            n.e("391763"),
             n.e("554241"),
             n.e("724303"),
             n.e("521930"),
@@ -2656,6 +2658,7 @@ function iJ(e, t) {
             n.e("817989"),
             n.e("934771"),
             n.e("37977"),
+            n.e("720590"),
             n.e("691671"),
             n.e("147626"),
             n.e("795596"),
@@ -2665,7 +2668,6 @@ function iJ(e, t) {
             n.e("553984"),
             n.e("892471"),
             n.e("943780"),
-            n.e("720590"),
             n.e("174630"),
             n.e("884601"),
             n.e("31267"),
@@ -2731,53 +2733,52 @@ function iJ(e, t) {
             n.e("368062"),
             n.e("793438"),
             n.e("709371"),
-            n.e("845437"),
+            n.e("310235"),
             n.e("474610"),
+            n.e("987478"),
             n.e("844780"),
             n.e("939171"),
-            n.e("987478"),
-            n.e("170955"),
+            n.e("444567"),
             n.e("883952"),
             n.e("229666"),
             n.e("589916"),
-            n.e("460773"),
-            n.e("444567"),
-            n.e("208018"),
             n.e("665927"),
-            n.e("968763"),
-            n.e("159957"),
+            n.e("460773"),
             n.e("253320"),
             n.e("458273"),
+            n.e("208018"),
             n.e("606949"),
+            n.e("968763"),
             n.e("820930"),
-            n.e("309004"),
+            n.e("159957"),
             n.e("599976"),
             n.e("26001"),
             n.e("414591"),
             n.e("652111"),
             n.e("119454"),
-            n.e("449145"),
             n.e("434786"),
+            n.e("309004"),
             n.e("615109"),
             n.e("294607"),
-            n.e("203930"),
             n.e("982730"),
             n.e("708536"),
-            n.e("903663"),
             n.e("457458"),
-            n.e("338601"),
+            n.e("449145"),
             n.e("506045"),
-            n.e("201243"),
             n.e("618706"),
-            n.e("430997"),
+            n.e("203930"),
             n.e("800872"),
-            n.e("728136"),
+            n.e("903663"),
             n.e("259797"),
             n.e("452531"),
+            n.e("338601"),
+            n.e("201243"),
             n.e("368530"),
-            n.e("136894"),
-            n.e("215920"),
+            n.e("430997"),
+            n.e("728136"),
+            n.e("769495"),
             n.e("275859"),
+            n.e("215920"),
             n.e("216084"),
             n.e("978046"),
             n.e("127659"),
@@ -3148,8 +3149,8 @@ let i2 = s.memo(function (e) {
 });
 var i3 = n(922016),
     i5 = n(297264),
-    i4 = n(821609),
-    i6 = n(339350),
+    i6 = n(821609),
+    i4 = n(339350),
     i7 = n(475743),
     i8 = n(624458),
     i9 = n(408213),
@@ -3227,7 +3228,7 @@ function ra(e) {
                                                 }),
                                             ],
                                         }),
-                                        (0, a.jsx)(i4.$, {
+                                        (0, a.jsx)(i6.$, {
                                             variant: "primary",
                                             size: "sm",
                                             text: es.intl.string(es.t["4r+amb"]),
@@ -3278,7 +3279,7 @@ function rs(e) {
         ? null
         : (0, a.jsx)(ra, {
               onActivate: t,
-              children: (0, a.jsx)(n6, {
+              children: (0, a.jsx)(n4, {
                   folderNode: c,
                   expanded: n,
                   selected: u,
@@ -3290,7 +3291,7 @@ function rs(e) {
                   folderButtonSize: "icon",
                   folderButtonContent: (0, a.jsx)("div", {
                       className: rr.rH,
-                      children: (0, a.jsx)(i6.Q, { size: "sm", color: "currentColor" }),
+                      children: (0, a.jsx)(i4.Q, { size: "sm", color: "currentColor" }),
                   }),
                   renderChildNode: function (e, t, n) {
                       return e.type !== eH.PJ.GUILD

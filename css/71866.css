@@ -1,26 +1,3 @@
-.normalStylesDefault_a1443c {
-    --custom-poll-style-vote-background: var(--background-base-lowest);
-    --custom-poll-style-vote-percentage: var(--interactive-background-active);
-    --custom-poll-style-label: var(--text-default);
-    --custom-poll-style-border: transparent
-}
-
-.normalStylesImageOnlyAnswers_a1443c {
-    --custom-poll-style-image-background: var(--polls-normal-image-background)
-}
-
-.victorStyles_a1443c {
-    --custom-poll-style-vote-percentage: var(--polls-victor-fill);
-    --custom-poll-style-image-background: var(--background-feedback-warning);
-    --custom-poll-style-border: var(--status-positive)
-}
-
-.votedStyles_a1443c {
-    --custom-poll-style-vote-percentage: var(--polls-voted-fill);
-    --custom-poll-style-image-background: var(--background-feedback-positive);
-    --custom-poll-style-border: var(--control-brand-foreground)
-}
-
 .embed__98ba8 {
     align-self: start;
     border-radius: var(--radius-md);
@@ -179,4 +156,4 @@
     text-align: center
 }
 
-/*# sourceMappingURL=923108.2d4f67c0d5f528b5.css.map*/
+/*# sourceMappingURL=71866.956f9d9eecc36631.css.map*/
