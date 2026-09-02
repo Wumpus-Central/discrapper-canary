@@ -5982,6 +5982,22 @@
     }
   },
   {
+    "name": "2026-09-profile-link-fetch",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
     "kind": "user",
     "name": "2026-09-soundboard-quick-action",
     "defaultConfig": {
