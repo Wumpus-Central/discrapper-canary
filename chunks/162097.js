@@ -1,55 +1,55 @@
-n.d(t, { b: () => v });
+n.d(t, { b: () => A });
 var a = n(477900),
     l = n(582128),
     s = n(503698),
     r = n.n(s),
     i = n(821609),
-    c = n(834730),
-    o = n(28863),
-    u = n(303136),
+    u = n(834730),
+    c = n(28863),
+    o = n(303136),
     d = n(975571),
-    h = n(318346),
-    m = n(652215),
-    C = n(375708),
-    x = n(492931),
-    f = n(503928),
-    g = n(268920),
-    E = n(633217);
-function A() {
+    m = n(318346),
+    f = n(652215),
+    x = n(375708),
+    h = n(492931),
+    j = n(503928),
+    k = n(268920),
+    v = n(633217);
+function g() {
     return (0, a.jsx)("div", {
-        className: x.s,
-        children: (0, a.jsx)(u.A, { src: E.A, fallbackImage: g.A, className: x.Cb }),
+        className: h.s,
+        children: (0, a.jsx)(o.A, { src: v.A, fallbackImage: k.A, className: h.Cb }),
     });
 }
-function v(e) {
+function A(e) {
     let {
             ctaText: t,
             ctaOnClick: n,
             analyticsPage: s,
-            linkPreText: u = C.intl.string(C.t["5qZv9E"]),
-            linkText: g = C.intl.string(C.t.XRdyjz),
+            linkPreText: o = x.intl.string(x.t["5qZv9E"]),
+            linkText: k = x.intl.string(x.t.XRdyjz),
         } = e,
-        E = l.useCallback(() => {
+        v = l.useCallback(() => {
             null != s &&
-                (0, h.Y)({ pageType: s, sectionType: m.JJy.ORBS_BALANCE_MENU, ctaObject: m.ZSU.ORBS_LEARN_MORE_LINK });
+                (0, m.Y)({ pageType: s, sectionType: f.JJy.ORBS_BALANCE_MENU, ctaObject: f.ZSU.ORBS_LEARN_MORE_LINK });
         }, [s]);
     return (0, a.jsxs)("div", {
-        className: r()(x.kL, f.O),
+        className: r()(h.kL, j.O),
         children: [
-            (0, a.jsx)(A, {}),
+            (0, a.jsx)(g, {}),
             (0, a.jsx)(i.$, { text: t, variant: "primary", size: "sm", onClick: n, fullWidth: !0 }),
             (0, a.jsxs)("div", {
-                className: x.kx,
+                className: h.kx,
                 children: [
-                    void 0 !== u &&
-                        (0, a.jsxs)(c.E, { variant: "text-xs/normal", className: x.D5, children: [u, "\xa0"] }),
-                    (0, a.jsx)(o.Anchor, {
+                    void 0 !== o &&
+                        (0, a.jsxs)(u.E, { variant: "text-xs/normal", className: h.D5, children: [o, "\xa0"] }),
+                    (0, a.jsx)(c.Anchor, {
                         target: "_blank",
                         rel: "author",
-                        href: d.A.getArticleURL(m.MVz.ORBS_FAQ),
-                        className: x.CU,
-                        onClick: E,
-                        children: g,
+                        href: d.A.getArticleURL(f.MVz.ORBS_FAQ),
+                        className: h.CU,
+                        onClick: v,
+                        children: k,
                     }),
                 ],
             }),

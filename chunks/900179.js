@@ -37,11 +37,11 @@ function A(e) {
         I = (0, E.GV)(),
         j = l.useRef(null),
         T = (0, b.g)(),
-        y = null != R && T === R;
-    (0, p.A)(j, y);
-    let C = "function" == typeof c ? { icon: c } : c;
+        C = null != R && T === R;
+    (0, p.A)(j, C);
+    let y = "function" == typeof c ? { icon: c } : c;
     return (0, a.jsxs)("section", {
-        ref: y ? j : void 0,
+        ref: C ? j : void 0,
         className: s()(h.uW, N),
         "aria-labelledby": I,
         children: [
@@ -61,7 +61,7 @@ function A(e) {
                                       id: I,
                                       children: n,
                                   }),
-                                  null != C && (0, a.jsx)(_, { ...C }),
+                                  null != y && (0, a.jsx)(_, { ...y }),
                               ],
                           }),
                           null != v && (0, a.jsx)(g.E, { variant: "text-xs/normal", children: v }),

@@ -1,10 +1,10 @@
-l.d(t, { kZ: () => i, uZ: () => r, z3: () => o });
+l.d(t, { kZ: () => s, uZ: () => r, z3: () => o });
 var n = l(50617),
     a = l(375708);
 let r = ["frame", "widget", "bot"],
-    s = { frame: n.default.TI6dfu, widget: n.default.zshJSX, bot: n.default.bBkuBd };
-function i(e) {
-    return a.intl.string(s[e]);
+    i = { frame: n.default.TI6dfu, widget: n.default.zshJSX, bot: n.default.bBkuBd };
+function s(e) {
+    return a.intl.string(i[e]);
 }
 function o(e) {
     return `vibegrations-preview-mode-panel-${e}`;

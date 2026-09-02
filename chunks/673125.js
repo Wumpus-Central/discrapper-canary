@@ -1,4 +1,4 @@
-n.d(t, { A: () => d });
+n.d(t, { A: () => u });
 var a = n(17928),
     l = n(228366),
     s = n(124861),
@@ -25,7 +25,7 @@ function o() {
         achievementUnreadState: null,
     };
 }
-class u extends a.Ay.Store {
+class h extends a.Ay.Store {
     static displayName = "OrbChallengesStore";
     state = o();
     constructor() {
@@ -132,4 +132,4 @@ class u extends a.Ay.Store {
         return this.state.fetchChallengesError;
     }
 }
-let d = new u();
+let u = new h();

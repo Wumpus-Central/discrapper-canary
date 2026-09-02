@@ -1,4 +1,4 @@
-l.d(t, { Qg: () => o, Qs: () => s, Xm: () => r, yZ: () => i });
+l.d(t, { Qg: () => o, Qs: () => i, Xm: () => r, yZ: () => s });
 var n = l(148853);
 let a = { frame: (e) => e.hasFrame, widget: (e) => e.hasProfileWidget, bot: (e) => !0 === e.hasBotDm };
 function r(e) {
@@ -13,10 +13,10 @@ function r(e) {
         })(e),
     };
 }
-function s(e, t) {
+function i(e, t) {
     return null != e && t.modes.includes(e) ? e : t.defaultMode;
 }
-function i(e) {
+function s(e) {
     let t = e.widgetTop && e.widgetBottom,
         l = e.miniProfile;
     return { hasMainCard: t, hasPopoutCard: l, hasAny: t || l };

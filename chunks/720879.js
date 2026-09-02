@@ -28,7 +28,7 @@ function c(e) {
         I = "opening-keyboard" === _ || "open-keyboard" === _,
         j = "open-mouse" === _ || "open-keyboard" === _,
         T = (x.keyboardModeEnabled || I) && null != b,
-        [y, C] = l.useState(0),
+        [C, y] = l.useState(0),
         S = (function (e) {
             let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 200,
                 n = arguments.length > 2 ? arguments[2] : void 0,
@@ -125,7 +125,7 @@ function c(e) {
             [b, M],
         ),
         G = l.useCallback((e) => {
-            C(e);
+            y(e);
         }, []);
     return (0, a.jsxs)("div", {
         onMouseEnter: P,
@@ -149,7 +149,7 @@ function c(e) {
                 shouldTrapFocus: T,
                 returnRef: T ? n : void 0,
                 isCaretHoverable: !0,
-                caretConfig: { align: "custom", customOffset: y },
+                caretConfig: { align: "custom", customOffset: C },
                 onNudgeChange: G,
                 onRequestClose: (e) => {
                     M(null != e && (0, i.sg)(e));

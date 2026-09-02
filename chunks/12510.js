@@ -1,4 +1,4 @@
-n.d(t, { Od: () => c, Xz: () => i, eX: () => u, pu: () => o });
+n.d(t, { Od: () => c, Xz: () => i, eX: () => h, pu: () => o });
 var a = n(636537),
     l = n(228366),
     s = n(913122),
@@ -41,7 +41,7 @@ async function o() {
         return;
     }
 }
-async function u() {
+async function h() {
     l.h.dispatch({ type: "ORB_CHALLENGES_UNREAD_ACK" });
     try {
         let e = await a.Bo.post({ url: r.Rsh.ORB_USER_CHALLENGES_UNREAD_STATE_ACK, rejectWithError: !1 });

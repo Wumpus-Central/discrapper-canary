@@ -1,4 +1,4 @@
-n.d(t, { K: () => T, A: () => y });
+n.d(t, { K: () => T, A: () => C });
 var a = n(477900);
 n(582128);
 var l = n(503698),
@@ -61,8 +61,8 @@ function T(e) {
             rarity: A,
             isAnimated: v = !1,
             targetElementRef: T,
-            onShow: y,
-            position: C = "top",
+            onShow: C,
+            position: y = "top",
             shouldShow: S,
         } = e,
         D = v && null == _,
@@ -71,7 +71,7 @@ function T(e) {
             isVisible: P,
             targetElementRef: O,
             trigger: U,
-        } = (0, o.D)({ children: t, targetElementRef: T, delay: I.In, onTooltipShow: y, shouldShow: S }),
+        } = (0, o.D)({ children: t, targetElementRef: T, delay: I.In, onTooltipShow: C, shouldShow: S }),
         B = null != A && A !== s.x.COMMON,
         k = (0, a.jsxs)("div", {
             className: j.Qs,
@@ -129,7 +129,7 @@ function T(e) {
                           isRendered: !0,
                           targetElementRef: O,
                           content: k,
-                          position: C,
+                          position: y,
                           align: "center",
                           animationStyle: e,
                           positionKey: (0, E.Xj)(n),
@@ -139,4 +139,4 @@ function T(e) {
         );
     return (0, a.jsxs)(a.Fragment, { children: [U, (0, a.jsx)(i.A, { id: M, children: G }), w] });
 }
-let y = T;
+let C = T;

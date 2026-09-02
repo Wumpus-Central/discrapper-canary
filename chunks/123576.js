@@ -1,1 +1,1 @@
-e.exports = { y: "placeholderChallengesCard__583ca" };
+r.exports = { y: "placeholderChallengesCard__583ca" };

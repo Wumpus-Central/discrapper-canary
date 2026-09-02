@@ -81,7 +81,7 @@ let ev = (0, d.FT)(eh.T[ex.d.MODAL_V2].avatarSize),
 var eb = n(716804),
     ej = n(679492),
     eI = n(718019),
-    ey = n(988895),
+    ey = n(461116),
     eC = n(915614),
     eN = n(744753),
     eE = n(834730);
@@ -202,8 +202,8 @@ var eJ = n(403581),
     e1 = n(83013),
     e2 = n(81400),
     e3 = n(84540),
-    e5 = n(290386),
-    e7 = n(621466),
+    e7 = n(290386),
+    e5 = n(621466),
     e8 = n(231088),
     e9 = n(786826);
 function e6(e) {
@@ -291,7 +291,7 @@ function ln(e) {
         g = d?.guildId != null,
         m = d?.guildId ?? null,
         f = W.Ay.canUsePremiumProfileCustomization(c),
-        p = (0, e5.U)({ location: "user_profile_modal_edit" }),
+        p = (0, e7.U)({ location: "user_profile_modal_edit" }),
         {
             value: x,
             previewValue: h,
@@ -327,7 +327,7 @@ function ln(e) {
                 if (!l) return;
                 let e = n.current?.ownerDocument ?? document;
                 function i(e) {
-                    (0, e7.vq)(e.target) && !a(e.target) && t();
+                    (0, e5.vq)(e.target) && !a(e.target) && t();
                 }
                 return e.addEventListener("mousedown", i), () => e.removeEventListener("mousedown", i);
             }, [l, n, a, t]);
@@ -335,7 +335,7 @@ function ln(e) {
                 (e) => {
                     if (!l) return;
                     let i = e.relatedTarget;
-                    !(0, e7.vq)(i) || a(i) || (null == e6(n.current) && t());
+                    !(0, e5.vq)(i) || a(i) || (null == e6(n.current) && t());
                 },
                 [l, a, t, n],
             );
@@ -724,11 +724,11 @@ let l2 = (0, l1.mj)({
             2: { enabled: !0, showPresetName: !1, clientThemeAdaptedColorsEnabled: !0 },
         },
     });
-function l5(e) {
+function l7(e) {
     let { location: l } = e;
     return l3.useConfig({ location: l });
 }
-var l7 = n(487233),
+var l5 = n(487233),
     l8 = n(120386),
     l9 = n(317097),
     l6 = n(602853),
@@ -1187,19 +1187,19 @@ function n1(e) {
 }
 var n2 = n(684732),
     n3 = n(498596),
-    n5 = n(871524);
-function n7(e) {
+    n7 = n(871524);
+function n5(e) {
     let { primaryColor: l, secondaryColor: n, children: i } = e,
         r = `linear-gradient(to bottom, ${(0, l9.Hl)(l)}, ${(0, l9.Hl)(n)})`;
-    return (0, t.jsx)("div", { className: n5.D7, style: { background: r }, children: i });
+    return (0, t.jsx)("div", { className: n7.D7, style: { background: r }, children: i });
 }
 function n8(e) {
     let { color: l } = e,
         n = (0, l9.Hl)(l),
         i = (0, l9.bJ)(l, 0xffffff) < n3.Tr.NonText;
     return (0, t.jsx)("div", {
-        className: n5.OS,
-        children: (0, t.jsx)("div", { className: a()(n5.Hy, { [n5.rY]: i }), style: { backgroundColor: n } }),
+        className: n7.OS,
+        children: (0, t.jsx)("div", { className: a()(n7.Hy, { [n7.rY]: i }), style: { backgroundColor: n } }),
     });
 }
 function n9(e) {
@@ -1208,7 +1208,7 @@ function n9(e) {
     return (0, t.jsx)(eV.D, {
         ...s,
         innerRef: a ?? o,
-        className: n5.Dh,
+        className: n7.Dh,
         onClick: n ? void 0 : r,
         "aria-disabled": n,
         tabIndex: n ? -1 : 0,
@@ -1279,7 +1279,7 @@ function n4(e) {
         variant: u,
         disabled: o,
         deleteButton: b,
-        children: (0, t.jsxs)(n7, {
+        children: (0, t.jsxs)(n5, {
             primaryColor: l,
             secondaryColor: n,
             children: [
@@ -1626,7 +1626,7 @@ function tR(e) {
         o = eY.intl.formatToPlainString(eY.t.xOnm4z, { colorLabel: (0, l9.Hl)(a) });
     return (0, t.jsx)(nn.Y, {
         variant: "full-height-bar",
-        children: (0, t.jsxs)(n7, {
+        children: (0, t.jsxs)(n5, {
             primaryColor: r,
             secondaryColor: a,
             children: [
@@ -2096,17 +2096,17 @@ var t0 = n(462887),
     t1 = n(765178),
     t2 = n(461797),
     t3 = n(469054),
-    t5 = n(601298);
-function t7() {
+    t7 = n(601298);
+function t5() {
     let { preset: e, setPreset: l } = (0, lF.RQ)(),
-        { clientThemeAdaptedColorsEnabled: n } = l5({ location: "useRandomPremiumTryItOutPreset" }),
+        { clientThemeAdaptedColorsEnabled: n } = l7({ location: "useRandomPremiumTryItOutPreset" }),
         t = (0, nO.Ay)(),
         r = (0, t0.q)(t),
         a = i.useCallback(
             (e) => {
                 let l = (0, t2.Wt)(e);
                 (0, tT.w5)({
-                    banner: (0, t5.X)({
+                    banner: (0, t7.X)({
                         assetOrigin: t3.E.NEW_ASSET,
                         imageUri: l.getBannerSrc(!1),
                         staticImageUri: l.getBannerSrc(!0),
@@ -2238,7 +2238,7 @@ function ic(e) {
         heading: eY.intl.string(eY.t["50Nwpc"]),
         disabled: i,
         children: [
-            (0, t.jsx)(l7.A, { user: l, guildId: n, disabled: i, errorMessageId: null != r ? ie : void 0 }),
+            (0, t.jsx)(l5.A, { user: l, guildId: n, disabled: i, errorMessageId: null != r ? ie : void 0 }),
             (0, t.jsx)(l8.A, { user: l, guildId: n, disabled: i, errorMessageId: null != a ? il : void 0 }),
             (0, t.jsx)(nk, { id: ie, message: (0, l0.d3)(r) }),
             (0, t.jsx)(nk, { id: il, message: a }),
@@ -2306,7 +2306,7 @@ function iv(e) {
         n = tm(),
         { navigate: i } = (0, lF.pA)();
     return (
-        t7(),
+        t5(),
         (0, t.jsxs)("div", {
             role: "group",
             "aria-labelledby": ih,
@@ -2350,7 +2350,7 @@ function iA(e) {
             onSelectGuildId: c,
         } = e,
         g = (0, s.bG)([V.A], () => V.A.hidePersonalInformation),
-        { enabled: m } = l5({ location: "DefaultEditingPanelView" }),
+        { enabled: m } = l7({ location: "DefaultEditingPanelView" }),
         f = (0, t8.A)(c),
         p = null != i,
         x = W.Ay.canUsePremiumProfileCustomization(l),
@@ -2496,8 +2496,8 @@ var iy = n(477155),
     iP = n(145934);
 let ik = "shuffle-options-a11y-description";
 function iT() {
-    let { preset: e, onShuffle: l } = t7(),
-        { showPresetName: n } = l5({ location: "TryItOutShufflePreset" }),
+    let { preset: e, onShuffle: l } = t5(),
+        { showPresetName: n } = l7({ location: "TryItOutShufflePreset" }),
         { presetName: r, presetHeader: a } = i.useMemo(() => {
             let l = (0, t2.Wt)(e);
             return { presetName: l.getName(), presetHeader: l.getPreviewThumbnailSrc() };
@@ -2831,14 +2831,14 @@ function i1(e) {
 }
 var i2 = n(568602),
     i3 = n(625494),
-    i5 = n(61881);
-function i7(e) {
+    i7 = n(61881);
+function i5(e) {
     let { children: l } = e,
         [n, r] = i.useState(!1),
         [a, o] = i.useState(1.4),
         d = i.useRef(null),
         u = i.useRef(1.4),
-        c = (0, s.bG)([i5.A, ep.A], () => i5.A.hasUnsavedChanges() || ep.A.hasUnsavedChanges());
+        c = (0, s.bG)([i7.A, ep.A], () => i7.A.hasUnsavedChanges() || ep.A.hasUnsavedChanges());
     i.useEffect(() => {
         c || (u.current = 1.4);
     }, [c]);
@@ -3725,11 +3725,11 @@ var r$ = n(913453),
     r1 = n(447538);
 let r2 = (e) => e * (2 - e),
     r3 = { "compact-sm": { avatarOffsetX: 16 }, "compact-xs": { avatarSize: d._3.SIZE_96, avatarOffsetX: 16 } };
-function r5(e) {
+function r7(e) {
     let { type: l, anchor: n } = e;
     return "staple" !== l || "bottom" !== n;
 }
-function r7(e) {
+function r5(e) {
     let { displayProfile: l, pendingBanner: n } = e;
     if ((0, el.Nx)()) return null;
     let i = l?.getPreviewBanner(n, !1, 1024);
@@ -4017,7 +4017,7 @@ function r9(e) {
                 ],
             }),
             (0, t.jsx)(r8, { displayProfile: p, profileEffectOverride: E, isHovering: W }),
-            null != P && (0, t.jsx)(k.A, { frame: P, filterLayer: r5, fadeIn: T }),
+            null != P && (0, t.jsx)(k.A, { frame: P, filterLayer: r7, fadeIn: T }),
         ],
     });
 }
@@ -4300,9 +4300,9 @@ function r4(e) {
         e2 = (0, X.Ay)(l.id, J);
     (0, D.A)(eJ, e2, iH.R7.MODAL_V2);
     let e3 = void 0 !== e_ ? e_?.skuId : e2?.profileFrame?.skuId,
-        e5 = (0, E.A)(e3, "UserProfileModalV2"),
-        e7 = (0, N.A)(e3),
-        { profileFrameStyle: e8, profileFrameClassName: e9 } = (0, T.A)(e5);
+        e7 = (0, E.A)(e3, "UserProfileModalV2"),
+        e5 = (0, N.A)(e3),
+        { profileFrameStyle: e8, profileFrameClassName: e9 } = (0, T.A)(e7);
     (0, P.A)({ skuId: e2?.profileFrame?.skuId, openedAt: _, context: eQ, analyticsLocations: eJ });
     let e6 = (0, s.bG)([U.default], () => W.Ay.canUsePremiumProfileCustomization(U.default.getCurrentUser())),
         e4 = ea || ($ && null != e2 && e6),
@@ -4334,7 +4334,7 @@ function r4(e) {
                         "aria-labelledby": ll,
                         parentComponent: "UserProfileModalV2",
                         children: [
-                            (0, t.jsx)(i7, {
+                            (0, t.jsx)(i5, {
                                 children: (0, t.jsxs)("div", {
                                     className: a()(r1.layoutContainer, e9, {
                                         [r1.editingPanelEnabled]: eu,
@@ -4404,7 +4404,7 @@ function r4(e) {
                                                     isPrivate: e2?.private === !0,
                                                     forceShowPremium: e4,
                                                     children: [
-                                                        (0, t.jsx)(r7, { displayProfile: e2, pendingBanner: ek }),
+                                                        (0, t.jsx)(r5, { displayProfile: e2, pendingBanner: ek }),
                                                         e2?.private === !0 && (0, t.jsx)(eR.A, {}),
                                                         !eI && (0, t.jsx)(rt, { className: r1.noticeContainer }),
                                                         eK &&
@@ -4451,8 +4451,8 @@ function r4(e) {
                                                                     bannerOverride: ek,
                                                                     accentColorOverride: eT,
                                                                     profileEffectOverride: eO,
-                                                                    profileFrame: e5,
-                                                                    fadeInProfileFrame: e7,
+                                                                    profileFrame: e7,
+                                                                    fadeInProfileFrame: e5,
                                                                     editingMode: eC,
                                                                     isLoading: ee,
                                                                 }),

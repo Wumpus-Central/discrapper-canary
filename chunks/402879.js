@@ -1,8 +1,8 @@
-l.d(t, { F: () => s }), l(323874), l(14289), l(35956);
+l.d(t, { F: () => i }), l(323874), l(14289), l(35956);
 var n = l(77729),
     a = l(723702),
     r = l(264572).Buffer;
-async function s(e, t) {
+async function i(e, t) {
     if (a.isPlatformEmbedded) {
         let l = r.from(await e.arrayBuffer());
         if ("function" == typeof n.A.fileManager.saveWithDialog2) await n.A.fileManager.saveWithDialog2(l, t);

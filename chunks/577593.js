@@ -22,7 +22,7 @@ var l = s(477900),
     E = s(722868),
     O = s(716804),
     y = s(718019),
-    S = s(988895),
+    S = s(461116),
     C = s(915614),
     T = s(559506),
     P = s(946356),
@@ -545,10 +545,10 @@ function e5(e) {
           });
 }
 var e7 = s(186272),
-    e9 = s(996988),
-    e1 = s(207634),
+    e1 = s(996988),
+    e9 = s(207634),
     e2 = s(174217);
-function e8(e) {
+function e6(e) {
     let {
             user: i,
             currentUser: s,
@@ -618,14 +618,14 @@ function e8(e) {
                         children: (0, l.jsxs)(P.A, {
                             user: i,
                             displayProfile: Y,
-                            themeType: e9.d.MODAL,
+                            themeType: e1.d.MODAL,
                             children: [
                                 (0, l.jsx)(_.A, {
                                     children: (0, l.jsx)(D.A, { user: i, guildId: H, viewProfileItem: ee }),
                                 }),
                                 (0, l.jsxs)("div", {
                                     children: [
-                                        (0, l.jsx)(C.A, { user: i, displayProfile: Y, themeType: e9.d.MODAL }),
+                                        (0, l.jsx)(C.A, { user: i, displayProfile: Y, themeType: e1.d.MODAL }),
                                         (0, l.jsxs)("div", {
                                             className: e2.El,
                                             children: [
@@ -634,14 +634,14 @@ function e8(e) {
                                                     displayProfile: Y,
                                                     guildId: H,
                                                     channelId: r,
-                                                    avatarSize: e1.T[e9.d.MODAL].avatarSize,
+                                                    avatarSize: e9.T[e1.d.MODAL].avatarSize,
                                                     onOpenAvatar: J,
                                                 }),
                                                 (0, l.jsx)(M.A, {
                                                     user: i,
                                                     guildId: H,
                                                     channelId: r,
-                                                    themeType: e9.d.MODAL,
+                                                    themeType: e1.d.MODAL,
                                                     hasEntered: B === h.ip.ENTERED,
                                                     onCloseProfile: z,
                                                     disableToolbar: !0,
@@ -686,7 +686,7 @@ function e8(e) {
                                             pronouns: Y?.pronouns,
                                             trailing: (0, l.jsx)(S.A, {
                                                 displayProfile: Y,
-                                                themeType: e9.d.MODAL,
+                                                themeType: e1.d.MODAL,
                                                 onClose: z,
                                             }),
                                         }),
@@ -709,7 +709,7 @@ function e8(e) {
         }),
     });
 }
-var e6 = s(480335),
+var e8 = s(480335),
     e4 = s(713517),
     ie = s(35241);
 function ii(e) {
@@ -769,13 +769,13 @@ function ii(e) {
                         children: (0, l.jsxs)(P.A, {
                             user: i,
                             displayProfile: O,
-                            themeType: e9.d.MODAL,
+                            themeType: e1.d.MODAL,
                             ref: O?.profileEffect != null ? F : void 0,
                             children: [
                                 (0, l.jsx)(_.A, { children: (0, l.jsx)(ie.A, { user: i }) }),
                                 (0, l.jsxs)("div", {
                                     children: [
-                                        (0, l.jsx)(C.A, { user: i, displayProfile: O, themeType: e9.d.MODAL }),
+                                        (0, l.jsx)(C.A, { user: i, displayProfile: O, themeType: e1.d.MODAL }),
                                         (0, l.jsx)("div", {
                                             className: e2.El,
                                             children: (0, l.jsx)(y.A, {
@@ -783,7 +783,7 @@ function ii(e) {
                                                 displayProfile: O,
                                                 guildId: E,
                                                 channelId: t,
-                                                avatarSize: e1.T[e9.d.MODAL].avatarSize,
+                                                avatarSize: e9.T[e1.d.MODAL].avatarSize,
                                                 onOpenAvatar: D,
                                             }),
                                         }),
@@ -801,7 +801,7 @@ function ii(e) {
                                             pronouns: O?.pronouns,
                                             trailing: (0, l.jsx)(S.A, {
                                                 displayProfile: O,
-                                                themeType: e9.d.MODAL,
+                                                themeType: e1.d.MODAL,
                                                 onClose: h,
                                             }),
                                         }),
@@ -853,7 +853,7 @@ function ii(e) {
                             ],
                         }),
                     }),
-                    O?.profileEffect != null && (0, l.jsx)(e6.A, { skuId: O?.profileEffect?.skuId, isHovering: V }),
+                    O?.profileEffect != null && (0, l.jsx)(e8.A, { skuId: O?.profileEffect?.skuId, isHovering: V }),
                 ],
             }),
         }),
@@ -917,7 +917,7 @@ function im(e) {
                     className: il()(iI.A7, ij.BK),
                     user: i,
                     displayProfile: O,
-                    themeType: e9.d.MODAL_V2,
+                    themeType: e1.d.MODAL_V2,
                     children: [
                         (0, l.jsx)("div", { className: iI.Oo, children: (0, l.jsx)(ih.A, { onClose: c }) }),
                         (0, l.jsx)("div", { className: ij.Tp }),
@@ -1011,6 +1011,6 @@ function ig(e) {
         : u.isNonUserBot()
           ? (0, l.jsx)(ii, { ...s })
           : u.bot
-            ? (0, l.jsx)(e8, { ...s })
+            ? (0, l.jsx)(e6, { ...s })
             : (0, l.jsx)(ip.A, { ...s });
 }
