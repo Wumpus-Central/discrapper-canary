@@ -92,39 +92,42 @@ async function g(e, t, n) {
             s.h.dispatch(i);
         let r = await a.Bo.post({ url: I.Rsh.GUILD_ROOM_UPDATE(e, t), body: n, rejectWithError: !0 }),
             l = (0, A.S)(r.body);
-        if (
-            e !== t &&
-            (n?.user_position != null &&
-                (0, c.U8)({
-                    channelId: t,
-                    update: { updateType: "position", updateReason: "user_selected", position: n.user_position },
-                }),
-            n?.user_status_id != null &&
-                (0, c.U8)({
-                    channelId: t,
-                    update: { updateType: "status_id", updateReason: "user_selected", statusId: n.user_status_id },
-                }),
-            n?.user_status_text != null &&
-                (0, c.U8)({
-                    channelId: t,
-                    update: {
-                        updateType: "status_text",
-                        updateReason: "user_selected",
-                        statusText: n.user_status_text,
-                    },
-                }),
-            n?.user_position != null)
-        ) {
-            let i = l.users.get(o.default.getId());
-            null != i &&
-                (0, c.Yv)({
-                    guildId: e,
-                    channelId: t,
-                    actualSeatPosition: i.position,
-                    targetSeatPosition: n.user_position,
-                    actualSeatId: i.seat,
-                    targetSeatId: n.user_seat,
-                });
+        if (e !== t) {
+            if (
+                (n?.user_position != null &&
+                    (0, c.U8)({
+                        channelId: t,
+                        update: { updateType: "position", updateReason: "user_selected", position: n.user_position },
+                    }),
+                n?.user_status_id != null &&
+                    (0, c.U8)({
+                        channelId: t,
+                        update: { updateType: "status_id", updateReason: "user_selected", statusId: n.user_status_id },
+                    }),
+                n?.user_status_text != null &&
+                    (0, c.U8)({
+                        channelId: t,
+                        update: {
+                            updateType: "status_text",
+                            updateReason: "user_selected",
+                            statusText: n.user_status_text,
+                        },
+                    }),
+                n?.user_position != null)
+            ) {
+                let i = l.users.get(o.default.getId());
+                null != i &&
+                    (0, c.Yv)({
+                        guildId: e,
+                        channelId: t,
+                        actualSeatPosition: i.position,
+                        targetSeatPosition: n.user_position,
+                        actualSeatId: i.seat,
+                        targetSeatId: n.user_seat,
+                    });
+            }
+            n?.background != null &&
+                (0, c.JF)({ guildId: e, channelId: t, update: { updateType: "background", background: n.background } });
         }
     } catch (t) {
         throw (

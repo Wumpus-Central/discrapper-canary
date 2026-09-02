@@ -5443,6 +5443,7 @@ var rb =
         (ew.GUILD_ROOM_USER_DISCONNECTED = "guild_room_user_disconnected"),
         (ew.GUILD_ROOM_USER_UPDATED = "guild_room_user_updated"),
         (ew.GUILD_ROOM_SETTINGS_UPDATE = "guild_room_settings_update"),
+        (ew.GUILD_ROOM_UPDATED = "guild_room_updated"),
         (ew.APP_TRANSACTION_ID_SYNCED = "app_transaction_id_synced"),
         (ew.PARENTAL_CONSENT_CHECKED = "parental_consent_checked"),
         (ew.PARENTAL_CONSENT_WARNING_BANNER_TAPPED = "parental_consent_warning_banner_tapped"),

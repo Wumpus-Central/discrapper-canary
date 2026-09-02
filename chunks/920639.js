@@ -2,6 +2,7 @@
 n.d(t, {
     E2: () => g,
     EB: () => m,
+    JF: () => O,
     Ql: () => h,
     U8: () => C,
     Yv: () => T,
@@ -146,6 +147,19 @@ function C(e) {
                     case "status_text":
                         return { ...t, status_text: e.statusText };
                 }
+            })(t),
+            ...e,
+        });
+    });
+}
+function O(e) {
+    let { update: t, ...n } = e;
+    A(n.channelId, (e) => {
+        r.Ay.trackWithMetadata(_.HAw.GUILD_ROOM_UPDATED, {
+            ...E(n),
+            ...(function (e) {
+                let t = { update_type: e.updateType };
+                if ("background" === e.updateType) return { ...t, background: e.background };
             })(t),
             ...e,
         });
