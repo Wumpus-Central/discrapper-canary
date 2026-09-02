@@ -20,9 +20,9 @@ function p(e) {
             noticeText: p,
             primaryAction: b,
             secondaryAction: h,
-            isEmphasized: _ = !1,
-            a11yAnnounceOnShow: A,
-            a11yAnnounceOnHide: x,
+            isEmphasized: x = !1,
+            a11yAnnounceOnShow: _,
+            a11yAnnounceOnHide: A,
         } = e,
         v = (0, o.bG)([m.Ay], () => m.Ay.useReducedMotion),
         R = l.useRef(null);
@@ -39,7 +39,7 @@ function p(e) {
             leave: { opacity: 0, y: 80 * !v },
             onRest: (e, t) => {
                 if (!e.finished) return;
-                let n = t.item ? A : x;
+                let n = t.item ? _ : A;
                 null != R.current && clearTimeout(R.current),
                     null != n
                         ? (R.current = setTimeout(() => {
@@ -53,7 +53,7 @@ function p(e) {
                       style: e,
                       children: (0, a.jsxs)("footer", {
                           ...(!0 === t ? { [E]: "" } : null),
-                          className: s()(g.Qs, { [g.hO]: _ }),
+                          className: s()(g.Qs, { [g.hO]: x }),
                           "aria-labelledby": r,
                           children: [
                               (0, a.jsx)(u.E, {

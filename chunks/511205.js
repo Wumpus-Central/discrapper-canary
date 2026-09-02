@@ -64,12 +64,12 @@ function h(e) {
         ),
         E = v + 1,
         b = E * I + (E - 1) * 8 <= f,
-        T = Math.floor(I / c) + 8,
-        _ = Math.max(0, y - T * N) / 2;
+        _ = Math.floor(I / c) + 8,
+        T = Math.max(0, y - _ * N) / 2;
     return (0, i.jsx)(r.A, {
         fade: !0,
         className: t,
-        listPadding: [h + _, 0, p + _ - 8, 8],
+        listPadding: [h + T, 0, p + T - 8, 8],
         renderRow: function (e) {
             let t = e * v;
             return (0, i.jsx)(
@@ -98,7 +98,7 @@ function h(e) {
         },
         rowCount: N,
         rowCountBySection: [N],
-        rowHeight: T,
+        rowHeight: _,
         onResize: A,
     });
 }

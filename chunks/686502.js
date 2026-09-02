@@ -23,15 +23,15 @@ var i = n(477900),
     v = n(793574),
     E = n(688810),
     b = n(975412),
-    T = n(392054),
-    _ = n(826673),
-    R = n(757293),
-    S = n(174459),
+    _ = n(392054),
+    T = n(826673),
+    S = n(757293),
+    R = n(174459),
     L = n(272812),
     O = n(652215),
     P = n(375708),
-    w = n(253802),
-    M = n(867010);
+    M = n(253802),
+    w = n(867010);
 function U(e) {
     let {
         channel: t,
@@ -54,7 +54,7 @@ function D(e) {
     return (0, i.jsx)(E.f5, {
         value: a,
         children: (0, i.jsxs)(L.A, {
-            className: w.zr,
+            className: M.zr,
             children: [
                 (0, i.jsx)(c.m, {
                     asContainer: !0,
@@ -67,9 +67,9 @@ function D(e) {
                                 analyticsLocation: r,
                             });
                         },
-                        className: w.F1,
+                        className: M.F1,
                         children: (0, i.jsx)("div", {
-                            className: w.zc,
+                            className: M.zc,
                             children: (0, i.jsx)(u.k, { size: "custom", color: "currentColor", width: 40, height: 40 }),
                         }),
                     }),
@@ -79,11 +79,11 @@ function D(e) {
                     children: (e) =>
                         (0, i.jsx)(d.D, {
                             onClick: l,
-                            className: s()(e, w.lg),
+                            className: s()(e, M.lg),
                             children: (0, i.jsx)(p.a, {
                                 size: "md",
                                 color: "currentColor",
-                                className: w.yP,
+                                className: M.yP,
                                 secondaryColor: o.A.colors.INTERACTIVE_TEXT_DEFAULT.css,
                             }),
                         }),
@@ -95,7 +95,7 @@ function D(e) {
 function V(e) {
     let { channel: t, guild: a, inPopout: r, activitiesEnabled: o = !0 } = e;
     l.useEffect(() => {
-        S.default.track(O.HAw.VC_TILE_ACTIVITIES_ENTRY_POINT_VIEWED, {
+        R.default.track(O.HAw.VC_TILE_ACTIVITIES_ENTRY_POINT_VIEWED, {
             tile_type: "activity invite",
             n_participants: 1,
         });
@@ -131,9 +131,9 @@ function V(e) {
             theme: O.NJ8.MIDNIGHT,
             children: (e) =>
                 (0, i.jsxs)(L.A, {
-                    className: s()(w.zr, w.co, e),
+                    className: s()(M.zr, M.co, e),
                     children: [
-                        (0, i.jsx)("img", { src: M, className: w.Qw, alt: "" }),
+                        (0, i.jsx)("img", { src: w, className: M.Qw, alt: "" }),
                         (0, i.jsxs)(f.e, {
                             justify: "center",
                             align: "center",
@@ -161,7 +161,7 @@ function V(e) {
 function k(e) {
     let { channel: t, guild: n, handleClose: a, width: o, userParticipantCount: c } = e;
     (0, j.Ay)(() => {
-        S.default.track(O.HAw.VC_TILE_ACTIVITIES_ENTRY_POINT_VIEWED, {
+        R.default.track(O.HAw.VC_TILE_ACTIVITIES_ENTRY_POINT_VIEWED, {
             tile_type: "activity suggestion",
             n_participants: c,
         });
@@ -172,17 +172,17 @@ function k(e) {
     return (0, i.jsx)(E.f5, {
         value: h,
         children: (0, i.jsxs)(L.A, {
-            className: w.zr,
+            className: M.zr,
             children: [
                 o > 300
                     ? (0, i.jsx)(C.E, {
-                          className: w.R_,
+                          className: M.R_,
                           variant: o > 550 ? "text-md/semibold" : "text-sm/semibold",
                           children: P.intl.string(P.t["7BKMcG"]),
                       })
                     : null,
                 (0, i.jsx)("div", {
-                    className: s()(w.Di, { [w.qy]: o <= 300 }),
+                    className: s()(M.Di, { [M.qy]: o <= 300 }),
                     children: u.map((e) =>
                         (0, i.jsx)(
                             N.C,
@@ -190,39 +190,39 @@ function k(e) {
                                 context: p,
                                 activityItem: e,
                                 aspectRatio: N.C.AspectRatio.SIXTEEN_BY_NINE,
-                                animatedDivClass: w.KU,
-                                commandOrigin: T.iw.VOICE_TILE_ACTIVITY_SUGGESTIONS,
+                                animatedDivClass: M.KU,
+                                commandOrigin: _.iw.VOICE_TILE_ACTIVITY_SUGGESTIONS,
                             },
                             e.application.id,
                         ),
                     ),
                 }),
                 (0, i.jsxs)(d.D, {
-                    className: w.HI,
+                    className: M.HI,
                     onClick: function () {
-                        S.default.track(O.HAw.VC_TILE_ACTIVITIES_ENTRY_POINT_CLOSED, {
+                        R.default.track(O.HAw.VC_TILE_ACTIVITIES_ENTRY_POINT_CLOSED, {
                             tile_type: "activity suggestion",
                             close_type: "permanent",
                             n_participants: c,
                         }),
-                            (0, _.Dr)(r.M.VC_TILE_ACTIVITIES_ENTRY_POINT);
+                            (0, T.Dr)(r.M.VC_TILE_ACTIVITIES_ENTRY_POINT);
                     },
                     children: [
-                        (0, i.jsx)(R.A, {}),
+                        (0, i.jsx)(S.A, {}),
                         (0, i.jsx)(C.E, { variant: "text-sm/medium", children: P.intl.string(P.t["5E9SB9"]) }),
                     ],
                 }),
                 (0, i.jsx)(d.D, {
-                    className: w.cG,
+                    className: M.cG,
                     onClick: function () {
-                        S.default.track(O.HAw.VC_TILE_ACTIVITIES_ENTRY_POINT_CLOSED, {
+                        R.default.track(O.HAw.VC_TILE_ACTIVITIES_ENTRY_POINT_CLOSED, {
                             tile_type: "activity suggestion",
                             close_type: "temporary",
                             n_participants: c,
                         }),
                             a();
                     },
-                    children: (0, i.jsx)(y.P, { size: "md", color: "currentColor", className: w.b }),
+                    children: (0, i.jsx)(y.P, { size: "md", color: "currentColor", className: M.b }),
                 }),
             ],
         }),

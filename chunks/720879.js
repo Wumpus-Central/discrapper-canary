@@ -20,14 +20,14 @@ function c(e) {
             actions: b,
             gradientColor: h,
         } = e,
-        _ = l.useContext(r.C),
-        [A, x] = l.useState("closed"),
+        x = l.useContext(r.C),
+        [_, A] = l.useState("closed"),
         v = l.useRef(null),
         R = l.useRef(!1),
-        N = "opening-mouse" === A || "open-mouse" === A,
-        I = "opening-keyboard" === A || "open-keyboard" === A,
-        j = "open-mouse" === A || "open-keyboard" === A,
-        T = (_.keyboardModeEnabled || I) && null != b,
+        N = "opening-mouse" === _ || "open-mouse" === _,
+        I = "opening-keyboard" === _ || "open-keyboard" === _,
+        j = "open-mouse" === _ || "open-keyboard" === _,
+        T = (x.keyboardModeEnabled || I) && null != b,
         [y, C] = l.useState(0),
         S = (function (e) {
             let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 200,
@@ -46,60 +46,60 @@ function c(e) {
                 }, [e, t, n]),
                 a
             );
-        })(n, c, A),
+        })(n, c, _),
         D = l.useCallback(() => {
             null != v.current && (clearTimeout(v.current), (v.current = null));
         }, []),
         M = l.useCallback(
             (e) => {
-                e && (R.current = !0), D(), x("closing");
+                e && (R.current = !0), D(), A("closing");
             },
             [D],
         );
     l.useEffect(() => D, [D]);
-    let O = l.useCallback(() => {
-            ("closed" === A || "closing" === A) && (D(), x("opening-mouse"));
-        }, [D, A]),
-        P = l.useCallback(() => {
+    let P = l.useCallback(() => {
+            ("closed" === _ || "closing" === _) && (D(), A("opening-mouse"));
+        }, [D, _]),
+        O = l.useCallback(() => {
             N && M(!1);
         }, [M, N]),
         U = l.useCallback(() => {
-            if (R.current || !s.Ay.keyboardModeEnabled || ("closed" !== A && "closing" !== A)) {
+            if (R.current || !s.Ay.keyboardModeEnabled || ("closed" !== _ && "closing" !== _)) {
                 R.current = !1;
                 return;
             }
-            D(), x("opening-keyboard");
-        }, [D, A]),
+            D(), A("opening-keyboard");
+        }, [D, _]),
         B = l.useCallback(() => {
-            (T && "opening-keyboard" !== A) || M(!1);
-        }, [M, A, T]);
+            (T && "opening-keyboard" !== _) || M(!1);
+        }, [M, _, T]);
     l.useEffect(() => {
-        if ("opening-mouse" === A)
+        if ("opening-mouse" === _)
             return (
                 (v.current = window.setTimeout(() => {
-                    (v.current = null), x("open-mouse"), f?.();
+                    (v.current = null), A("open-mouse"), f?.();
                 }, u)),
                 D
             );
-    }, [A, u, f, D]),
+    }, [_, u, f, D]),
         l.useEffect(() => {
-            if ("opening-keyboard" === A)
+            if ("opening-keyboard" === _)
                 return (
                     (v.current = window.setTimeout(() => {
-                        (v.current = null), x("open-keyboard"), f?.();
+                        (v.current = null), A("open-keyboard"), f?.();
                     }, u)),
                     D
                 );
-        }, [A, u, f, D]),
+        }, [_, u, f, D]),
         l.useEffect(() => {
-            if ("closing" === A)
+            if ("closing" === _)
                 return (
                     (v.current = window.setTimeout(() => {
-                        (v.current = null), x("closed");
+                        (v.current = null), A("closed");
                     }, 200)),
                     D
                 );
-        }, [A, D]),
+        }, [_, D]),
         l.useEffect(() => {
             if (j)
                 return (
@@ -128,8 +128,8 @@ function c(e) {
             C(e);
         }, []);
     return (0, a.jsxs)("div", {
-        onMouseEnter: O,
-        onMouseLeave: P,
+        onMouseEnter: P,
+        onMouseLeave: O,
         onFocus: U,
         onBlur: B,
         children: [

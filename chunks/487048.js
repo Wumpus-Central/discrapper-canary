@@ -63,25 +63,25 @@ function C(e) {
         }, [n]),
         { ref: N, width: v, height: E } = (0, r.Ay)(),
         b = l.useMemo(() => (null == v || null == E ? null : (0, p.t)(I, v, E, g)), [I, v, E]),
-        T = Math.min(48, Math.max(20, 0.025 * a)),
-        _ = (0, o.yK)([d.A, u.default], () => {
+        _ = Math.min(48, Math.max(20, 0.025 * a)),
+        T = (0, o.yK)([d.A, u.default], () => {
             if ((0, c.F2)(t)) return [];
             let e = u.default.getId();
             return d.A.getAllApplicationStreamsForChannel(t).sort(
                 (t, n) => Number(t.ownerId === e) - Number(n.ownerId === e),
             );
         }),
-        R = (0, h.Y1)(t),
-        S = l.useMemo(() => (null == E ? 0 : -(((I.topLeft.y + I.topRight.y) / 2 / 100) * E)), [I, E]);
+        S = (0, h.Y1)(t),
+        R = l.useMemo(() => (null == E ? 0 : -(((I.topLeft.y + I.topRight.y) / 2 / 100) * E)), [I, E]);
     return (0, i.jsxs)("div", {
         ref: N,
         className: x.nj,
-        inert: R,
+        inert: S,
         style: { left: `${C.left}%`, top: `${C.top}%`, width: `${C.width}%`, height: `${C.height}%`, clipPath: y },
         children: [
-            _.length > 0 && null != b && null != v
-                ? (0, i.jsx)(f.A, { streams: _, fit: b, tooltipSpacing: S, containerWidthPx: v })
-                : (0, i.jsx)(A.A, { channelId: t, center: j, iconSize: T }),
+            T.length > 0 && null != b && null != v
+                ? (0, i.jsx)(f.A, { streams: T, fit: b, tooltipSpacing: R, containerWidthPx: v })
+                : (0, i.jsx)(A.A, { channelId: t, center: j, iconSize: _ }),
             (0, i.jsx)(m.A, { className: s()(x.MQ, x.zq) }),
         ],
     });

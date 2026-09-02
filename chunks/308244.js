@@ -1,4 +1,4 @@
-n.d(t, { E: () => x, A: () => A });
+n.d(t, { E: () => A, A: () => _ });
 var a = n(477900),
     l = n(582128),
     r = n(503698),
@@ -35,8 +35,8 @@ var E = n(311016),
     p = n(692051),
     b = n(713804),
     h = n(900179),
-    _ = n(165648);
-function A(e) {
+    x = n(165648);
+function _(e) {
     let {
             userBio: t,
             className: n,
@@ -54,7 +54,7 @@ function A(e) {
     return null == m
         ? null
         : (0, a.jsx)("div", {
-              className: s()(n, _.PT),
+              className: s()(n, x.PT),
               children: (0, a.jsx)(i.E, {
                   variant: "text-sm/normal",
                   lineClamp: c ? d : void 0,
@@ -66,9 +66,9 @@ function A(e) {
               }),
           });
 }
-function x(e) {
+function A(e) {
     let { userBio: t, userId: n } = e;
     return (0, E.A)(n) || (null != t && "" !== t)
-        ? (0, a.jsx)(h.A, { heading: f.intl.string(f.t.ZzAR2Y), hideHeading: !0, children: (0, a.jsx)(A, { ...e }) })
+        ? (0, a.jsx)(h.A, { heading: f.intl.string(f.t.ZzAR2Y), hideHeading: !0, children: (0, a.jsx)(_, { ...e }) })
         : null;
 }

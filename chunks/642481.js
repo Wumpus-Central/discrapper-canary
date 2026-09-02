@@ -34,9 +34,9 @@ function p(e) {
             gradientColor: p,
             onRequestClose: b,
             position: h,
-            caretConfig: _,
-            scrollBehavior: A,
-            showCloseButton: x = !0,
+            caretConfig: x,
+            scrollBehavior: _,
+            showCloseButton: A = !0,
             isCaretHoverable: v = !1,
             shouldTrapFocus: R = !1,
             returnRef: N,
@@ -47,7 +47,7 @@ function p(e) {
     l.useEffect(() => {
         null != h && y(h);
     }, [h]);
-    let C = l.useMemo(() => ({ align: _?.align ?? "center", customOffset: _?.customOffset }), [_]),
+    let C = l.useMemo(() => ({ align: x?.align ?? "center", customOffset: x?.customOffset }), [x]),
         S = l.useCallback(() => {
             b?.();
         }, [b]),
@@ -60,8 +60,8 @@ function p(e) {
         M = l.useCallback((e) => {
             y(e);
         }, []),
-        O = v ? g.caretHoverable : void 0,
-        P = {
+        P = v ? g.caretHoverable : void 0,
+        O = {
             targetElementRef: j.targetElementRef,
             shouldShow: j.shouldShow,
             hasVideo: j.hasVideo,
@@ -71,7 +71,7 @@ function p(e) {
             gradientColor: p,
             onPositionChange: M,
             onNudgeChange: I,
-            scrollBehavior: A,
+            scrollBehavior: _,
             modal: R,
             returnRef: N,
             gradientOffsetBottom: 0,
@@ -81,11 +81,11 @@ function p(e) {
                 : { alignmentStrategy: "trigger-center" }),
         };
     return (0, a.jsx)(i.x, {
-        ...P,
+        ...O,
         children: (0, a.jsxs)("div", {
             "data-mana-component": "popover",
             children: [
-                x && (0, a.jsx)(c.q, { onClick: D, variant: null != p ? "color-mix" : void 0 }),
+                A && (0, a.jsx)(c.q, { onClick: D, variant: null != p ? "color-mix" : void 0 }),
                 null != r &&
                     (0, a.jsx)("div", {
                         className: s()(g.graphic, { [g[`graphic--${u}`]]: null != u }),
@@ -96,7 +96,7 @@ function p(e) {
                     }),
                 (0, a.jsx)(E, { title: t, body: n }),
                 null != f && f.length > 0 ? (0, a.jsx)(o.Z, { actions: f, className: g.actionBar }) : null,
-                null != C && (0, a.jsx)(d.F, { className: O }),
+                null != C && (0, a.jsx)(d.F, { className: P }),
             ],
         }),
     });

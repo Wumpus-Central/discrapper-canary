@@ -63,7 +63,7 @@ Object.defineProperty(t, "Meridiem", {
             return u.Weekday;
         },
     });
-let l = n(r(973477)),
+let l = n(r(195858)),
     d = n(r(232415)),
     c = n(r(521556)),
     m = n(r(354887)),

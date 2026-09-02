@@ -611,9 +611,9 @@ var eZ = n(554146),
     e2 = n(826673),
     e3 = n(182922),
     e8 = n(532624),
-    e7 = n(531685),
-    e5 = n(723702),
-    e6 = n(350535),
+    e5 = n(531685),
+    e6 = n(723702),
+    e7 = n(350535),
     e4 = n(115023);
 function e9(e) {
     let { soundboardSound: t, closePicker: i } = e,
@@ -621,7 +621,7 @@ function e9(e) {
         r = (0, h.bG)([p.A], () => null != t && p.A.isFavoriteSound(t.soundId)),
         a = (0, h.bG)([em.A], () => em.A.getGuild(t?.guildId)),
         o = (0, h.bG)([e1.Ay], () => e1.Ay.useReducedMotion, []),
-        u = (0, h.bG)([e7.A], () => e7.A.isFocused()),
+        u = (0, h.bG)([e5.A], () => e5.A.isFocused()),
         c = (0, h.bG)([e8.Ay], () => e8.Ay.getKeybindForAction(eS.hCu.SOUNDBOARD_HOLD));
     if (null != t && s.length > 0)
         return (0, l.jsx)(e3.A, {
@@ -648,9 +648,9 @@ function e9(e) {
     }
     let f = (0, e2.k8)(eZ.M.SOUNDBOARD_KEYBIND_TIP),
         g =
-            null != c && (0, e5.isWindows)() && !f
+            null != c && (0, e6.isWindows)() && !f
                 ? eU.intl.format(eU.t.udMTth, {
-                      keybind: (0, e6.dI)(c.shortcut, !0),
+                      keybind: (0, e7.dI)(c.shortcut, !0),
                       openSettingsHook: (e, t) => (0, l.jsx)(eJ.Anchor, { onClick: m, children: e }, t),
                   })
                 : null;
@@ -1261,7 +1261,7 @@ function tg(e) {
             [eP, eG, eV, ew.length],
         ),
         e8 = i.useCallback((e) => ev((0, eu.lG)(e, X, V, s, M)), [s, V, X, M]),
-        e7 = i.useCallback(
+        e5 = i.useCallback(
             (e) => {
                 (0, T.L3)(e, async () => {
                     let { default: e } = await n.e("811562").then(n.bind(n, 666801));
@@ -1270,7 +1270,7 @@ function tg(e) {
             },
             [M],
         ),
-        e5 = i.useCallback(
+        e6 = i.useCallback(
             () =>
                 v
                     ? (0, l.jsx)(J.Gq, {
@@ -1283,13 +1283,13 @@ function tg(e) {
                     : (0, l.jsx)(S.D, {
                           tabIndex: 0,
                           className: tu.Jm,
-                          onClick: e7,
+                          onClick: e5,
                           "aria-label": eU.intl.string(eU.t.kbFsAD),
                           children: (0, l.jsx)(tp, { className: tu.By }),
                       }),
-            [v, e7],
+            [v, e5],
         ),
-        e6 = i.useCallback(
+        e7 = i.useCallback(
             (e) =>
                 (0, l.jsx)(ez, {
                     soundboardListRef: e,
@@ -1376,8 +1376,8 @@ function tg(e) {
                     renderSectionHeader: e2,
                     renderSectionFooter: e3,
                     renderSection: e1,
-                    renderCategoryList: e6,
-                    renderHeaderAccessories: e5,
+                    renderCategoryList: e7,
+                    renderHeaderAccessories: e6,
                     rowHeight: 48,
                     sectionHeaderHeight: eQ,
                     sectionFooterHeight: e0,

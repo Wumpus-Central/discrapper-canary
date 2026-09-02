@@ -60,7 +60,7 @@ async function p(e, t) {
 var g = i(652215),
     b = i(670455),
     v = i(375708),
-    f = i(249938);
+    f = i(175398);
 function y(e) {
     let { onClose: t, transitionState: c, analyticsData: y } = e,
         { surveyEmojiKind: E } = d.A.useConfig({ location: "VoiceCallFeedback" }),
@@ -126,7 +126,7 @@ function y(e) {
                         l.getConfig({ location: "VoiceCallFeedbackModal" }).muteTutorialEnabled
                     )
                         return void (0, o.openModalLazy)(async () => {
-                            let { default: e } = await Promise.all([i.e("735186"), i.e("21226"), i.e("141737")]).then(
+                            let { default: e } = await Promise.all([i.e("979102"), i.e("21226"), i.e("141737")]).then(
                                 i.bind(i, 36304),
                             );
                             return (t) => (0, n.jsx)(e, { ...t });

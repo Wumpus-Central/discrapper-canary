@@ -1,7 +1,7 @@
 l.d(t, { A: () => s });
 var n = l(477900),
     a = l(192308),
-    i = l(539572);
+    i = l(406064);
 function s(e, t) {
     let { clips: s, onBeforeDelete: r, onAfterDelete: o } = t;
     if (e?.shiftKey) {

@@ -16,9 +16,9 @@ var l = n(503698),
     p = n(534400),
     b = n(436921),
     h = n(518477),
-    _ = n(375708),
-    A = n(956495);
-let x = { sm: "heading-lg/bold", lg: "heading-xl/semibold" };
+    x = n(375708),
+    _ = n(956495);
+let A = { sm: "heading-lg/bold", lg: "heading-xl/semibold" };
 function v(e) {
     let {
             user: t,
@@ -31,7 +31,7 @@ function v(e) {
             className: u,
         } = e,
         f = (0, m.A)({ userId: t.id, guildId: n, pendingDisplayNameStyles: o }),
-        p = x[i];
+        p = A[i];
     return null != f
         ? (0, a.jsx)(s.E, {
               variant: p,
@@ -40,7 +40,7 @@ function v(e) {
                   userName: l,
                   displayNameStyles: f,
                   effectDisplayType: g.G.ANIMATED,
-                  textClassName: A.QC,
+                  textClassName: _.QC,
                   shouldWrap: !0,
                   loop: !0,
                   inProfile: !0,
@@ -48,7 +48,7 @@ function v(e) {
                   appendedInlineContent: null != c ? (0, a.jsxs)(a.Fragment, { children: [" ", c] }) : null,
               }),
           })
-        : (0, a.jsxs)(s.E, { className: r()(A.QC, A.O2, u), variant: p, children: [l, " ", c] });
+        : (0, a.jsxs)(s.E, { className: r()(_.QC, _.O2, u), variant: p, children: [l, " ", c] });
 }
 function R(e) {
     let {
@@ -61,7 +61,7 @@ function R(e) {
             onClickDisplayName: c,
         } = e,
         m = (0, u.r)(t),
-        g = null != m ? (0, a.jsx)(f.A, { type: m, verified: t.isVerifiedBot(), className: A.AO }) : null,
+        g = null != m ? (0, a.jsx)(f.A, { type: m, verified: t.isVerifiedBot(), className: _.AO }) : null,
         E = (0, a.jsx)(v, {
             user: t,
             guildId: n,
@@ -72,27 +72,27 @@ function R(e) {
             displayNameTrailing: g,
         });
     return (0, a.jsxs)("div", {
-        className: r()(A.K$, "lg" === o && A.lg),
+        className: r()(_.K$, "lg" === o && _.lg),
         children: [
-            null != c ? (0, a.jsx)(i.D, { onClick: c, className: A.vk, children: E }) : E,
-            null != s && !1 !== s && (0, a.jsx)("div", { className: A.MU, children: s }),
+            null != c ? (0, a.jsx)(i.D, { onClick: c, className: _.vk, children: E }) : E,
+            null != s && !1 !== s && (0, a.jsx)("div", { className: _.MU, children: s }),
         ],
     });
 }
 function N(e) {
     let { pronouns: t, className: n } = e;
     return (0, a.jsxs)(s.E, {
-        className: r()(A.hI, n),
+        className: r()(_.hI, n),
         variant: "text-sm/medium",
         color: "text-strong",
         children: [
-            (0, a.jsx)(o.A, { tag: "span", children: _.intl.formatToPlainString(_.t["DRI+T7"], { pronouns: t }) }),
+            (0, a.jsx)(o.A, { tag: "span", children: x.intl.formatToPlainString(x.t["DRI+T7"], { pronouns: t }) }),
             (0, a.jsx)("span", { "aria-hidden": "true", children: t }),
         ],
     });
 }
 function I() {
-    return (0, a.jsx)("div", { "aria-hidden": "true", className: A.SC });
+    return (0, a.jsx)("div", { "aria-hidden": "true", className: _.SC });
 }
 function j(e) {
     let {
@@ -106,7 +106,7 @@ function j(e) {
             onClose: g,
         } = e,
         E = (0, b.j)({ location: "UserProfileUserInfo" }),
-        x = null != s && s.length > 0,
+        A = null != s && s.length > 0,
         v = (0, u.r)(t),
         R = t.isProvisional
             ? null
@@ -114,24 +114,24 @@ function j(e) {
                   user: t,
                   usernameIcon: n,
                   forceUsername: !0,
-                  className: A.a1,
-                  usernameClass: A.eb,
-                  discriminatorClass: A.sw,
+                  className: _.a1,
+                  usernameClass: _.eb,
+                  discriminatorClass: _.sw,
                   hideBotTag: !0,
               });
     return (0, a.jsxs)("div", {
-        className: r()(A.AK, { [A.j6]: x, [A.w2]: null != v }),
+        className: r()(_.AK, { [_.j6]: A, [_.w2]: null != v }),
         children: [
-            null != R && null != l ? (0, a.jsx)(i.D, { onClick: l, className: A.vk, children: R }) : R,
-            x &&
+            null != R && null != l ? (0, a.jsx)(i.D, { onClick: l, className: _.vk, children: R }) : R,
+            A &&
                 (0, a.jsxs)(a.Fragment, {
                     children: [
                         (0, a.jsx)(I, {}),
                         (0, a.jsx)(d.m, {
-                            text: _.intl.string(_.t.GI2A8C),
+                            text: x.intl.string(x.t.GI2A8C),
                             delay: h.In,
                             ariaHidden: !0,
-                            children: (0, a.jsx)("span", { className: A.Ez, children: (0, a.jsx)(N, { pronouns: s }) }),
+                            children: (0, a.jsx)("span", { className: _.Ez, children: (0, a.jsx)(N, { pronouns: s }) }),
                         }),
                     ],
                 }),
@@ -141,7 +141,7 @@ function j(e) {
                 contextGuildId: f,
                 onClose: g,
                 textVariant: E ? "text-xs/normal" : "text-xs/semibold",
-                className: E ? A.Bb : A.Mp,
+                className: E ? _.Bb : _.Mp,
             }),
             m,
         ],

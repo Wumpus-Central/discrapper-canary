@@ -1,8 +1,8 @@
 t.d(n, { h: () => o });
 var l = t(477900),
     i = t(582128),
-    a = t(416696),
-    s = t(204651),
+    s = t(416696),
+    a = t(204651),
     r = t(375708);
 function o(e) {
     let n,
@@ -16,9 +16,9 @@ function o(e) {
             onMouseLeave: m,
             renderNUXHighlight: h,
             buttonRef: C,
-            ...f
+            ...E
         } = e,
-        E = d ? s.l : s.A;
+        p = d ? a.l : a.A;
     t = c
         ? u
             ? r.intl.string(r.t.S5anIc)
@@ -26,24 +26,24 @@ function o(e) {
         : o
           ? r.intl.string(r.t.fjBNo1)
           : r.intl.string(r.t.uQn9B8);
-    let { Component: p, events: g, play: x } = (0, a.c)(c ? "disable" : "enable");
+    let { Component: g, events: f, play: x } = (0, s.c)(c ? "disable" : "enable");
     return (
         i.useEffect(() => () => x(), [c, x]),
-        (0, l.jsx)(E, {
+        (0, l.jsx)(p, {
             buttonRef: C,
             isTrayButton: !0,
             label: t,
             disabled: !o,
-            iconComponent: p,
+            iconComponent: g,
             isActive: c,
             color: (h ? (n = "premiumGradient") : c && (n = "green"), n),
             onMouseEnter: (e) => {
-                A?.(e), g.onMouseEnter();
+                A?.(e), f.onMouseEnter();
             },
             onMouseLeave: (e) => {
-                m?.(e), g.onMouseLeave();
+                m?.(e), f.onMouseLeave();
             },
-            ...f,
+            ...E,
         })
     );
 }

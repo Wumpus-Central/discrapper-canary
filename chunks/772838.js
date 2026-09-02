@@ -1,30 +1,30 @@
-i.d(s, { W: () => l });
-var t = i(477900);
-i(582128);
-var a = i(661531),
-    d = i(996682),
-    h = i(27989);
-function l(e) {
+t.d(l, { W: () => s });
+var n = t(477900);
+t(582128);
+var i = t(661531),
+    r = t(996682),
+    a = t(27989);
+function s(e) {
     let {
-            size: s = "md",
-            width: i,
-            height: l,
-            color: n = a.A.colors.INTERACTIVE_ICON_DEFAULT,
+            size: l = "md",
+            width: t,
+            height: s,
+            color: o = i.A.colors.INTERACTIVE_ICON_DEFAULT,
             colorClass: c = "",
-            ...o
+            ...d
         } = e,
-        p = (0, h.J)(s),
-        r = p?.width ?? i,
-        w = p?.height ?? l;
-    return (0, t.jsx)("svg", {
-        ...(0, d.A)(o),
+        u = (0, a.J)(l),
+        h = u?.width ?? t,
+        g = u?.height ?? s;
+    return (0, n.jsx)("svg", {
+        ...(0, r.A)(d),
         xmlns: "http://www.w3.org/2000/svg",
-        width: r,
-        height: w,
+        width: h,
+        height: g,
         fill: "none",
         viewBox: "0 0 24 24",
-        children: (0, t.jsx)("path", {
-            fill: "string" == typeof n ? n : n.css,
+        children: (0, n.jsx)("path", {
+            fill: "string" == typeof o ? o : o.css,
             fillRule: "evenodd",
             d: "M6 4a2 2 0 1 0 4 0 2 2 0 0 0-4 0Zm0 8a2 2 0 1 0 4 0 2 2 0 0 0-4 0Zm2 10a2 2 0 1 1 0-4 2 2 0 0 1 0 4Zm6-18a2 2 0 1 0 4 0 2 2 0 0 0-4 0Zm2 10a2 2 0 1 1 0-4 2 2 0 0 1 0 4Zm-2 6a2 2 0 1 0 4 0 2 2 0 0 0-4 0Z",
             clipRule: "evenodd",

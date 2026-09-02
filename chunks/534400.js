@@ -14,7 +14,7 @@ var s = n(477900),
     x = n(685073),
     h = n(743981),
     f = n(375708),
-    j = n(811967),
+    j = n(545067),
     C = n(830840);
 let N = t.memo(function (e) {
         let { src: a, className: n, size: l = h.Sl.SIZE_16 } = e,

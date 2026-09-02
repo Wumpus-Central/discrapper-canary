@@ -1,8 +1,8 @@
 t.d(n, { A: () => h });
 var l = t(477900),
     i = t(582128),
-    a = t(503698),
-    s = t.n(a),
+    s = t(503698),
+    a = t.n(s),
     r = t(815021),
     o = t(939249),
     c = t(297264),
@@ -14,31 +14,31 @@ function h(e) {
     let {
             className: n,
             iconContainerClassName: t,
-            icon: a,
+            icon: s,
             title: h,
             description: C,
-            userCount: f,
-            onClick: E,
-            highlight: p,
-            onDismiss: g,
+            userCount: E,
+            onClick: p,
+            highlight: g,
+            onDismiss: f,
         } = e,
         x = i.useCallback(
             (e) => {
-                e.stopPropagation(), g?.();
+                e.stopPropagation(), f?.();
             },
-            [g],
+            [f],
         );
     return (0, l.jsxs)(o.D, {
-        className: s()(m.kL, n, null != p && { [m.U6]: p }),
-        onClick: E,
+        className: a()(m.kL, n, null != g && { [m.U6]: g }),
+        onClick: p,
         children: [
-            (0, l.jsx)("div", { className: s()(m.Kk, t), children: a }),
+            (0, l.jsx)("div", { className: a()(m.Kk, t), children: s }),
             (0, l.jsxs)("div", {
                 className: m.FS,
                 children: [
                     (0, l.jsx)(c.D, { variant: "heading-md/semibold", color: "text-strong", children: h }),
                     (0, l.jsx)(u.E, { variant: "text-xs/normal", color: "text-strong", className: m.mG, children: C }),
-                    null != f && f > 0
+                    null != E && E > 0
                         ? (0, l.jsxs)(l.Fragment, {
                               children: [
                                   (0, l.jsx)(u.E, {
@@ -51,14 +51,14 @@ function h(e) {
                                       variant: "text-xs/normal",
                                       color: "text-strong",
                                       className: m.mG,
-                                      children: A.intl.format(A.t.NywdIj, { count: f }),
+                                      children: A.intl.format(A.t.NywdIj, { count: E }),
                                   }),
                               ],
                           })
                         : null,
                 ],
             }),
-            null != g
+            null != f
                 ? (0, l.jsx)("div", { className: m.r, children: (0, l.jsx)(r.J, { size: "xs", onClick: x }) })
                 : (0, l.jsx)(d._, { size: "xs", color: "currentColor", className: m.OW }),
         ],

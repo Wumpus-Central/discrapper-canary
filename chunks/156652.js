@@ -1,9 +1,9 @@
 t.d(n, { A: () => C, x: () => m });
 var l,
     i = t(477900),
-    a = t(582128),
-    s = t(503698),
-    r = t.n(s),
+    s = t(582128),
+    a = t(503698),
+    r = t.n(a),
     o = t(259678),
     c = t(765671),
     u = t(401685),
@@ -15,13 +15,13 @@ function h(e) {
             disableGradients: n = !1,
             renderHeader: t,
             renderBottomLeft: l,
-            renderBottomCenter: s,
+            renderBottomCenter: a,
             renderBottomRight: r,
             renderCenter: d,
         } = e,
-        m = a.useRef(null),
+        m = s.useRef(null),
         { width: h, ref: C } = (0, c.Ay)(),
-        f = (0, u.bf)(h);
+        E = (0, u.bf)(h);
     return (0, i.jsx)(o.xp, {
         containerRef: m,
         children: (0, i.jsxs)("div", {
@@ -33,13 +33,13 @@ function h(e) {
                 (0, i.jsx)("div", { className: A.K1, children: t?.() }),
                 d?.(),
                 (0, i.jsx)(u.Ay.Provider, {
-                    value: f,
+                    value: E,
                     children: (0, i.jsxs)("div", {
                         className: A.q6,
                         ref: C,
                         children: [
                             (0, i.jsx)("div", { className: A.i$, children: l?.() }),
-                            (0, i.jsx)("div", { className: A.Kz, children: s?.() }),
+                            (0, i.jsx)("div", { className: A.Kz, children: a?.() }),
                             (0, i.jsx)("div", { className: A.He, children: r?.() }),
                         ],
                     }),
@@ -53,24 +53,24 @@ function C(e) {
         screenMessage: n,
         onDoubleClick: t,
         onActive: l,
-        onForceIdle: a,
-        idle: s,
+        onForceIdle: s,
+        idle: a,
         children: o,
         renderChatToasts: c,
         renderVoiceChannelEffects: u,
         style: m,
         hideControls: C = !1,
-        ...f
+        ...E
     } = e;
     return (0, i.jsxs)("div", {
-        className: r()(A.zr, { [A.N7]: s }),
+        className: r()(A.zr, { [A.N7]: a }),
         style: m,
         onMouseMove: l,
         onMouseDown: l,
-        onMouseLeave: a,
+        onMouseLeave: s,
         onDoubleClick: t,
         children: [
-            !C && (0, i.jsx)(h, { ...f }),
+            !C && (0, i.jsx)(h, { ...E }),
             o,
             null != n ? (0, i.jsx)(d.A, { size: "large", ...n }) : null,
             c?.(),

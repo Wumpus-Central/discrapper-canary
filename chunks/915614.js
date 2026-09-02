@@ -15,16 +15,16 @@ var a = n(477900),
     p = n(486020),
     b = n(837529),
     h = n(686189),
-    _ = n(714719),
-    A = n(859161),
-    x = n(985253),
+    x = n(714719),
+    _ = n(859161),
+    A = n(207634),
     v = n(565890);
 function R(e) {
     let {
             user: t,
             displayProfile: n,
             guildId: r,
-            pendingBanner: x,
+            pendingBanner: A,
             overlay: R,
             className: N,
             avatarSize: I,
@@ -36,23 +36,23 @@ function R(e) {
             pendingAccentColor: D,
             animateOnHoverOrFocusOnly: M = !1,
         } = e,
-        [O, P] = l.useState(!1),
+        [P, O] = l.useState(!1),
         U = (0, o.bG)([E.A], () => E.A.isFocused()),
         B = g.kt.getSetting(),
         G = (0, b.Nx)(),
         { bannerSrc: k, status: w } = (0, h.A)({
             displayProfile: n,
-            pendingBanner: x,
+            pendingBanner: A,
             size: y,
-            canAnimate: M || !B ? O : U,
+            canAnimate: M || !B ? P : U,
         }),
         L = G ? null : (k ?? null),
         H = (0, c.r)(d.A.unsafe_rawColors.PRIMARY_800).hex(),
         V = t.getAvatarURL(r, (0, u.FT)(I)),
         $ = (0, i.LX)((0, f.Ay)(V, H, !1)),
         F = (0, m.A)(D ?? n?.primaryColor ?? $).hex,
-        z = { align: "start", insetStart: j - S, insetBottom: T + S, radius: (0, A.A)(I) };
-    return (0, a.jsx)(_.A, {
+        z = { align: "start", insetStart: j - S, insetBottom: T + S, radius: (0, _.A)(I) };
+    return (0, a.jsx)(x.A, {
         fillClassName: s()(v.v, N),
         bannerSrc: L,
         backgroundColor: "COMPLETE" === w || G ? F : d.A.unsafe_rawColors.PRIMARY_800.css,
@@ -60,8 +60,8 @@ function R(e) {
         height: C,
         cutout: z,
         overlay: R,
-        onInteractionStart: () => P(!0),
-        onInteractionEnd: () => P(!1),
+        onInteractionStart: () => O(!0),
+        onInteractionEnd: () => O(!1),
     });
 }
 function N(e) {
@@ -73,7 +73,7 @@ function N(e) {
             specOverrides: s,
             ...i
         } = e,
-        o = x.T[t],
+        o = A.T[t],
         d = null != s ? { ...o, ...s } : o,
         c = !(0, b.Qq)() && (r || l?.canUsePremiumProfileCustomization || !1);
     return (0, a.jsx)(R, { ...i, ...d, user: n, displayProfile: l, themePadding: c ? d.themePadding : 0 });

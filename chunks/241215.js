@@ -1,4 +1,4 @@
-n.d(t, { A: () => _ });
+n.d(t, { A: () => T });
 var i = n(477900),
     l = n(582128),
     a = n(621466),
@@ -23,14 +23,14 @@ var i = n(477900),
     v = n(889426),
     E = n(652215),
     b = n(806931),
-    T = n(527133);
-let _ = function (e) {
-    let { channelId: t, popoutType: n, width: _, height: R, idle: S, onClose: L } = e,
+    _ = n(527133);
+let T = function (e) {
+    let { channelId: t, popoutType: n, width: T, height: S, idle: R, onClose: L } = e,
         O = (0, m.Us)(),
         P = (0, s.bG)([d.A], () => d.A.getSelectedParticipant(t)),
-        w = (0, s.bG)([x.A], () => x.A.getChannel(t)),
-        M = (0, s.bG)([g.A], () => g.A.getGuild(w?.getGuildId())),
-        U = (0, s.bG)([y.Ay], () => null != w && y.Ay.getVoiceChannelId() === w.id),
+        M = (0, s.bG)([x.A], () => x.A.getChannel(t)),
+        w = (0, s.bG)([g.A], () => g.A.getGuild(M?.getGuildId())),
+        U = (0, s.bG)([y.Ay], () => null != M && y.Ay.getVoiceChannelId() === M.id),
         {
             participants: D,
             filteredParticipants: V,
@@ -39,7 +39,7 @@ let _ = function (e) {
             layout: B,
             participantsOpen: F,
         } = (0, s.cf)([d.A], () => {
-            let e = null != w ? d.A.getLayout(w.id, O) : E.DUB.NORMAL;
+            let e = null != M ? d.A.getLayout(M.id, O) : E.DUB.NORMAL;
             return {
                 participants: d.A.getParticipants(t),
                 filteredParticipants: d.A.getFilteredParticipants(t),
@@ -49,9 +49,9 @@ let _ = function (e) {
                 participantsOpen: d.A.getParticipantsOpen(t),
             };
         }),
-        H = (0, s.bG)([u.default], () => u.default.getAwaitingRemoteSessionInfo());
+        z = (0, s.bG)([u.default], () => u.default.getAwaitingRemoteSessionInfo());
     return ((0, l.useEffect)(() => {
-        if (null != w)
+        if (null != M)
             return (
                 I._.subscribe(E.jej.GUILD_ROOM_VIDEO_OVERLAY_CLOSE, e),
                 () => {
@@ -59,43 +59,43 @@ let _ = function (e) {
                 }
             );
         function e() {
-            null != w && (0, N.UV)(!1, t);
+            null != M && (0, N.UV)(!1, t);
         }
-    }, [w, t]),
-    null == w)
+    }, [M, t]),
+    null == M)
         ? null
         : (0, i.jsx)(r.D, {
-              style: { width: _, height: R },
-              className: T.Lw,
+              style: { width: T, height: S },
+              className: _.Lw,
               onClick: function (e) {
-                  null == w || ((0, a.vq)(e.target, Element) && null != e.target.closest("[data-call-tile]")) || L();
+                  null == M || ((0, a.vq)(e.target, Element) && null != e.target.closest("[data-call-tile]")) || L();
               },
               tabIndex: -1,
               "aria-hidden": !0,
               children: (0, i.jsx)(A.A, {
                   inCall: U,
-                  channel: w,
+                  channel: M,
                   hasConnectPermission: !0,
-                  guild: M,
+                  guild: w,
                   participants: D,
                   filteredParticipants: V,
                   participantsVersion: k,
                   selectedParticipant: U && G === E._Of.VIDEO ? P : null,
                   layout: B,
-                  idle: S,
+                  idle: R,
                   mode: G,
                   onSelectParticipant: function (e, t) {
-                      if (null != w) {
+                      if (null != M) {
                           if (
                               (0, b.Ay)(e) &&
-                              (0, p.eo)(w, j.A, g.A, C.A, u.default)[0] &&
+                              (0, p.eo)(M, j.A, g.A, C.A, u.default)[0] &&
                               0 ===
                                   f.A.getAllActiveStreams().filter(
                                       (t) => (0, h._z)(t) === e.id && t.state !== E.XYD.ENDED,
                                   ).length
                           )
                               return void (0, c.A9)((0, h.Iy)(e.id), { forceMultiple: t.shiftKey });
-                          P?.id === e.id ? o.A.selectParticipant(w.id, null) : o.A.selectParticipant(w.id, e.id);
+                          P?.id === e.id ? o.A.selectParticipant(M.id, null) : o.A.selectParticipant(M.id, e.id);
                       }
                   },
                   onContextMenuParticipant: function (e, n, i, l) {
@@ -111,8 +111,8 @@ let _ = function (e) {
                   },
                   showParticipants: F,
                   popoutType: n,
-                  awaitingRemoteSessionInfo: H,
-                  callContainerDimensions: { width: _, height: R },
+                  awaitingRemoteSessionInfo: z,
+                  callContainerDimensions: { width: T, height: S },
               }),
           });
 };

@@ -19,7 +19,7 @@ var a = l(477900),
     v = l(347378),
     E = l(606423),
     S = l(652215);
-function T(e) {
+function C(e) {
     let {
             transitionState: t,
             onClose: l,
@@ -35,10 +35,10 @@ function T(e) {
             activeStep: x,
         } = e,
         { analyticsLocations: f } = (0, h.Ay)(b.A.USER_SETTINGS),
-        [y, v] = n.useState(C(x));
+        [y, v] = n.useState(T(x));
     return (
         (0, n.useEffect)(() => {
-            v(C(x));
+            v(T(x));
         }, [x]),
         (0, a.jsx)(g.CancellationContext.Provider, {
             value: {
@@ -77,7 +77,7 @@ function T(e) {
         })
     );
 }
-function C(e) {
+function T(e) {
     switch (e) {
         case d.g.DISCOUNT_APPLIED:
             return (0, a.jsx)(y.V, {});
@@ -105,7 +105,7 @@ let P = () => {
             let e = new Date();
             return e.setMonth(e.getMonth() + 1), e;
         }),
-        [C, P] = n.useState(null),
+        [T, P] = n.useState(null),
         [k, R] = n.useState(!1),
         [M, N] = n.useState(!1),
         [D, O] = n.useState(!1);
@@ -154,7 +154,7 @@ let P = () => {
         (0, n.useEffect)(() => {
             [d.g.CONFIRM_DISCOUNT, d.g.DISCOUNT_APPLIED].includes(l) && null === b && h(_()),
                 l === d.g.PREVIEW &&
-                    null === C &&
+                    null === T &&
                     P(
                         new m.A({
                             id: "",
@@ -185,13 +185,13 @@ let P = () => {
                             status: S.lT7.PAID,
                         }),
                     ),
-                l !== d.g.PREVIEW && null !== C && P(null);
-        }, [l, b, v, x, C]);
+                l !== d.g.PREVIEW && null !== T && P(null);
+        }, [l, b, v, x, T]);
     let V = n.useCallback(async () => {
         O(!0),
             await (0, i.openModalLazy)(
                 async () => (t) =>
-                    (0, a.jsx)(T, {
+                    (0, a.jsx)(C, {
                         ...t,
                         onClose: () => {
                             t.onClose(), O(!1);
@@ -199,7 +199,7 @@ let P = () => {
                         premiumType: e,
                         churnDiscount: b,
                         planId: x,
-                        renewalInvoice: C,
+                        renewalInvoice: T,
                         renewalInvoiceDetails: { intervalType: A.WT.MONTH, intervalCount: 1 },
                         errorOnCancel: k,
                         errorOnRedeem: M,
@@ -231,7 +231,7 @@ let P = () => {
                         },
                     }),
             );
-    }, [e, b, x, C, k, M, l, v]);
+    }, [e, b, x, T, k, M, l, v]);
     return (
         (0, n.useEffect)(() => {
             D && V();

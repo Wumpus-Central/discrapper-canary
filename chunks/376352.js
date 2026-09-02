@@ -23,15 +23,15 @@ var i = n(477900),
     v = n(692969),
     E = n(738250),
     b = n(834757),
-    T = n(548118),
-    _ = n(832163),
-    R = n(852105),
-    S = n(280450),
+    _ = n(548118),
+    T = n(832163),
+    S = n(852105),
+    R = n(280450),
     L = n(240248),
     O = n(49999),
     P = n(818348),
-    w = n(375708),
-    M = n(472344);
+    M = n(375708),
+    w = n(472344);
 function U(e) {
     let [t, n] = (0, j.RF)(e, (0, y.c)(e), void 0, !0);
     return [t === e, n];
@@ -49,16 +49,16 @@ function D(e) {
         "aria-haspopup": m,
     } = e;
     return (0, i.jsxs)("div", {
-        className: s()(t, M.kL),
+        className: s()(t, w.kL),
         ref: n,
         children: [
             (0, i.jsxs)(c.D, {
-                className: M.BQ,
+                className: w.BQ,
                 onClick: h,
                 "aria-expanded": p,
                 "aria-haspopup": m,
                 children: [
-                    null != l && (0, i.jsx)("div", { className: s()(M.zc, { [M.RT]: a }), children: l }),
+                    null != l && (0, i.jsx)("div", { className: s()(w.zc, { [w.RT]: a }), children: l }),
                     (0, i.jsx)(d.E, { variant: "text-sm/normal", color: "text-strong", lineClamp: 1, children: r }),
                 ],
             }),
@@ -71,15 +71,15 @@ function V(e) {
         { gameId: l, gameRecord: a } = (0, E.A)({ applicationId: n }),
         r = (0, v.A)({ gameId: l ?? void 0, source: I.GameProfileSources.VcHeaderActivity });
     if (null == r) return null;
-    let o = a?.getIconURL(T.iu.MEDIUM),
+    let o = a?.getIconURL(_.iu.MEDIUM),
         c = (0, L.uJ)(o)
-            ? (0, i.jsx)(h.GameControllerIcon, { className: M.Kk })
-            : (0, i.jsx)("img", { className: M.Kk, src: o, alt: "", "aria-hidden": !0 });
+            ? (0, i.jsx)(h.GameControllerIcon, { className: w.Kk })
+            : (0, i.jsx)("img", { className: w.Kk, src: o, alt: "", "aria-hidden": !0 });
     return (0, i.jsx)(D, {
-        className: s()(t, M.LM),
+        className: s()(t, w.LM),
         icon: c,
         isAppIcon: !(0, L.uJ)(o),
-        text: w.intl.string(w.t.f7aVGn),
+        text: M.intl.string(M.t.f7aVGn),
         onClick: r,
     });
 }
@@ -89,7 +89,7 @@ function k(e) {
         [c, d] = l.useState(!1),
         u = (0, b.AO)(a),
         y = u?.id,
-        j = (0, r.bG)([_.A], () => _.A.getDetectableIdsToApplicationIds()),
+        j = (0, r.bG)([T.A], () => T.A.getDetectableIdsToApplicationIds()),
         I = null != y ? j[y] : null,
         v = (0, C.h)(I),
         E = (0, N.E)({ location: "SocialLayerCommerceStreamHeader" }),
@@ -99,24 +99,24 @@ function k(e) {
             isLoading: G,
             applicationWidgetConfig: B,
             profileApplicationWidget: F,
-            userApplicationIdentity: H,
+            userApplicationIdentity: z,
         } = (0, g.A)(n.id, L),
-        z = (0, r.bG)([S.default], () => S.default.getId()),
+        H = (0, r.bG)([R.default], () => R.default.getId()),
         W = l.useRef(null),
         [$, Y] = U(o.M.SLAYER_STOREFRONT_VC_GIFTING_STREAM_HEADER_NEW_BADGE),
-        [K, X] = U(o.M.SLAYER_STOREFRONT_VC_GIFTING_PANEL_APP_WIDGET_CTA),
-        { hasAlreadyLinked: q, canStartAuthorization: Z, fetched: Q } = (0, x.RD)(z === n.id ? k : null),
-        J = z === n.id && Z && !Q,
+        [K, q] = U(o.M.SLAYER_STOREFRONT_VC_GIFTING_PANEL_APP_WIDGET_CTA),
+        { hasAlreadyLinked: X, canStartAuthorization: Z, fetched: Q } = (0, x.RD)(H === n.id ? k : null),
+        J = H === n.id && Z && !Q,
         ee = l.useCallback(() => {
             d(!1);
         }, []),
         et = l.useCallback(() => {
-            X(O.i.USER_DISMISS);
-        }, [X]),
-        en = K && null != B && (q || Z),
+            q(O.i.USER_DISMISS);
+        }, [q]),
+        en = K && null != B && (X || Z),
         ei = null != F || en,
         { rankIconUrl: el, rankText: ea } =
-            ((t = H?.profile),
+            ((t = z?.profile),
             l.useMemo(() => {
                 if (null == t || "1346069614634864772" !== L) return {};
                 let e = t.data?.primary?.rank_name;
@@ -131,20 +131,20 @@ function k(e) {
         } = l.useMemo(() => {
             if (!E && (null == v || null == I)) return { isAppIcon: !1 };
             if (ei && null != L) {
-                let e = el ?? k?.getIconURL(T.iu.SMALL),
+                let e = el ?? k?.getIconURL(_.iu.SMALL),
                     t = null != e && null == el,
                     l =
                         null != e
-                            ? (0, i.jsx)("img", { className: M.Kk, src: e, alt: "", "aria-hidden": !0 })
-                            : (0, i.jsx)(h.GameControllerIcon, { className: M.Kk });
+                            ? (0, i.jsx)("img", { className: w.Kk, src: e, alt: "", "aria-hidden": !0 })
+                            : (0, i.jsx)(h.GameControllerIcon, { className: w.Kk });
                 return {
                     isAppIcon: t,
                     icon: l,
-                    text: ea ?? w.intl.string(w.t["9njbm2"]),
+                    text: ea ?? M.intl.string(M.t["9njbm2"]),
                     renderPopout: function (e) {
                         return null == L
                             ? null
-                            : (0, i.jsx)(R.V, {
+                            : (0, i.jsx)(S.V, {
                                   className: e,
                                   userId: n.id,
                                   channel: s,
@@ -159,9 +159,9 @@ function k(e) {
             }
             if (null == v || null == I) return { isAppIcon: !1 };
             let { icon: e, text: t } =
-                z === n.id
-                    ? { icon: (0, i.jsx)(p.U, { className: M.Kk }), text: w.intl.string(w.t.e6S76Q) }
-                    : { icon: (0, i.jsx)(m.GiftIcon, { className: M.Kk }), text: w.intl.string(w.t["8ZzYIv"]) };
+                H === n.id
+                    ? { icon: (0, i.jsx)(p.U, { className: w.Kk }), text: M.intl.string(M.t.e6S76Q) }
+                    : { icon: (0, i.jsx)(m.GiftIcon, { className: w.Kk }), text: M.intl.string(M.t["8ZzYIv"]) };
             return {
                 isAppIcon: !1,
                 icon: e,
@@ -169,11 +169,11 @@ function k(e) {
                 renderPopout: function (e) {
                     return null == I
                         ? null
-                        : (0, i.jsx)(R.Z, { className: e, userId: n.id, channel: s, applicationId: I, onClose: ee });
+                        : (0, i.jsx)(S.Z, { className: e, userId: n.id, channel: s, applicationId: I, onClose: ee });
                 },
                 positionKey: "feature-card-version",
             };
-        }, [E, ei, L, k, v, I, z, n.id, s, ee, K, et, el, ea]);
+        }, [E, ei, L, k, v, I, H, n.id, s, ee, K, et, el, ea]);
     return G || J || (null == ec && !E)
         ? null
         : (0, i.jsx)(A.N, {

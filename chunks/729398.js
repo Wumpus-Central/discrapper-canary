@@ -460,7 +460,7 @@ function eL(e) {
                                       n.e("208018"),
                                       n.e("988003"),
                                       n.e("120379"),
-                                      n.e("993199"),
+                                      n.e("824547"),
                                       n.e("819193"),
                                       n.e("507775"),
                                       n.e("662068"),
@@ -819,8 +819,8 @@ var e0 = n(789645),
     e5 = n(747007),
     e4 = n(710358),
     e8 = n(958590),
-    e3 = n(174459),
-    e2 = n(957565),
+    e2 = n(174459),
+    e3 = n(957565),
     e6 = n(673707);
 let { INVITE_OPTIONS_7_DAYS: te, INVITE_OPTIONS_UNLIMITED: tt } = I.Ay;
 function tn(e) {
@@ -881,9 +881,9 @@ function tn(e) {
                         autoFocus: !1,
                         onCopy: function (e) {
                             if (null == n || h) return;
-                            (0, e2.C)(e);
+                            (0, e3.C)(e);
                             let t = (0, P.dy)(n.entity_type);
-                            e3.default.track(eu.HAw.COPY_INSTANT_INVITE, {
+                            e2.default.track(eu.HAw.COPY_INSTANT_INVITE, {
                                 server: n.guild_id,
                                 channel: d,
                                 channel_type: t,

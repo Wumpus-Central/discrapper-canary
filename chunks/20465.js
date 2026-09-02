@@ -1,8 +1,8 @@
 t.d(n, { A: () => D, R: () => M });
 var l = t(477900),
     i = t(582128),
-    a = t(503698),
-    s = t.n(a),
+    s = t(503698),
+    a = t.n(s),
     r = t(435558),
     o = t(221877),
     c = t(17928),
@@ -12,32 +12,32 @@ var l = t(477900),
     m = t(228366),
     h = t(367513),
     C = t(148494),
-    f = t(386467),
-    E = t(521981),
-    p = t(763754),
-    g = t(308334),
+    E = t(386467),
+    p = t(521981),
+    g = t(763754),
+    f = t(308334),
     x = t(516287),
     I = t(68935),
-    v = t(148355),
-    T = t(232835),
+    T = t(148355),
+    v = t(232835),
     _ = t(994500),
     j = t(486020),
     N = t(927813),
-    b = t(403362),
-    S = t(240248),
+    S = t(403362),
+    b = t(240248),
     O = t(652215),
     y = t(838541),
     R = t(538347);
 let M = 10 * N.A.Millis.SECOND;
 function L(e) {
     let { message: n } = e,
-        { isBlocked: t, isIgnored: a } = (0, c.cf)(
+        { isBlocked: t, isIgnored: s } = (0, c.cf)(
             [_.A],
             () => ({ isBlocked: _.A.isBlockedForMessage(n), isIgnored: _.A.isIgnoredForMessage(n) }),
             [n],
         ),
-        r = (0, p.X4)(n),
-        o = i.useContext(f.A),
+        r = (0, g.X4)(n),
+        o = i.useContext(E.A),
         [d, A] = i.useState(!1),
         m = i.useCallback(
             (e) => {
@@ -47,17 +47,17 @@ function L(e) {
             },
             [n.channel_id, n.id],
         ),
-        T = (0, S.uJ)(n.content) ? null : (0, E.Ay)(n, { allowGameMentions: !0 }).content,
+        v = (0, b.uJ)(n.content) ? null : (0, p.Ay)(n, { allowGameMentions: !0 }).content,
         {
             contentPlaceholder: N,
-            renderedContent: b,
+            renderedContent: S,
             trailingIcon: O,
             leadingIcon: M,
-        } = (0, g.o)(n, T, t, a, R.BK, { trailingIconClass: R.sl, leadingIconClass: R.aG, iconSize: y.eJ }),
+        } = (0, f.o)(n, v, t, s, R.BK, { trailingIconClass: R.sl, leadingIconClass: R.aG, iconSize: y.eJ }),
         L = (0, I.o6)(n),
         D =
             L.length > 0
-                ? L.map((e) => (0, l.jsx)(v.A, { className: R.yI, size: 128, sticker: e, isInteracting: d }, e.id))
+                ? L.map((e) => (0, l.jsx)(T.A, { className: R.yI, size: 128, sticker: e, isInteracting: d }, e.id))
                 : null;
     return (0, l.jsx)(x.x, {
         value: d,
@@ -72,10 +72,10 @@ function L(e) {
             onClick: m,
             children: [
                 (0, l.jsxs)("div", {
-                    className: s()(R.kn, { [R.mK]: n.mentioned }),
+                    className: a()(R.kn, { [R.mK]: n.mentioned }),
                     children: [
                         null != D ? null : M,
-                        b ?? D ?? (0, l.jsx)("span", { children: N }),
+                        S ?? D ?? (0, l.jsx)("span", { children: N }),
                         null != D ? null : O,
                     ],
                 }),
@@ -93,10 +93,10 @@ function L(e) {
 }
 function D(e) {
     let { channelId: n, className: t } = e,
-        [a, u] = i.useState(!1),
+        [s, u] = i.useState(!1),
         { toastsHidden: h, toastMessages: C } = (function (e) {
-            let { channelId: n, isFrozen: t, count: l, lingerMs: a } = e,
-                [s, r] = i.useState([]),
+            let { channelId: n, isFrozen: t, count: l, lingerMs: s } = e,
+                [a, r] = i.useState([]),
                 [o, u] = i.useState(!1),
                 d = i.useRef(null),
                 A = i.useRef(void 0),
@@ -113,7 +113,7 @@ function D(e) {
                         l.type === O.lAJ.STAGE_SPEAKER ||
                         l.type === O.lAJ.STAGE_RAISE_HAND ||
                         i ||
-                        (clearTimeout(A.current), (A.current = setTimeout(h, a)), r((e) => [...e, l.id]));
+                        (clearTimeout(A.current), (A.current = setTimeout(h, s)), r((e) => [...e, l.id]));
                 }
                 return (
                     m.h.subscribe("MESSAGE_CREATE", e),
@@ -121,7 +121,7 @@ function D(e) {
                         m.h.unsubscribe("MESSAGE_CREATE", e);
                     }
                 );
-            }, [n, h, l, a]),
+            }, [n, h, l, s]),
                 i.useEffect(
                     () => () => {
                         clearTimeout(A.current);
@@ -129,39 +129,39 @@ function D(e) {
                     [],
                 ),
                 i.useEffect(() => {
-                    s.length > 3 &&
+                    a.length > 3 &&
                         r((e) => {
                             let n = e.length - 3;
                             return [...e.slice(n)];
                         });
-                }, [s]),
-                t && null == d.current ? (d.current = s) : t || null == d.current || (d.current = null);
-            let C = d.current ?? s;
+                }, [a]),
+                t && null == d.current ? (d.current = a) : t || null == d.current || (d.current = null);
+            let C = d.current ?? a;
             return {
                 toastsHidden: o,
-                toastMessages: (0, c.yK)([T.A], () => C.map((e) => T.A.getMessage(n, e)), [n, C]).filter(b.Vq),
+                toastMessages: (0, c.yK)([v.A], () => C.map((e) => v.A.getMessage(n, e)), [n, C]).filter(S.Vq),
             };
-        })({ channelId: n, isFrozen: a, count: 3, lingerMs: M }),
-        f = i.useRef({}),
-        [E, p] = i.useState({}),
-        g = i.useCallback((e, n) => {
-            null == n ? delete f.current[e] : (f.current[e] = n);
+        })({ channelId: n, isFrozen: s, count: 3, lingerMs: M }),
+        E = i.useRef({}),
+        [p, g] = i.useState({}),
+        f = i.useCallback((e, n) => {
+            null == n ? delete E.current[e] : (E.current[e] = n);
         }, []),
-        x = i.useRef(E);
+        x = i.useRef(p);
     i.useLayoutEffect(() => {
-        x.current = E;
+        x.current = p;
     }),
         i.useLayoutEffect(() => {
             let e = {},
                 n = 0;
             for (let t of C) {
-                let l = f.current[t.id] ?? 0;
+                let l = E.current[t.id] ?? 0;
                 (e[t.id] = n), (n += l + 8);
             }
-            (0, r.isEqual)(e, x.current) || p(e);
+            (0, r.isEqual)(e, x.current) || g(e);
         }, [C]);
-    let I = C.map((e) => ({ message: e, height: f.current[e.id], y: E[e.id] })),
-        v = (0, d.p)(I, {
+    let I = C.map((e) => ({ message: e, height: E.current[e.id], y: p[e.id] })),
+        T = (0, d.p)(I, {
             keys: (e) => e.message.id,
             from: () => ({ opacity: 0 }),
             enter: (e) => {
@@ -181,16 +181,16 @@ function D(e) {
         theme: O.NJ8.DARK,
         children: (e) =>
             (0, l.jsx)("div", {
-                className: s()(t, e),
+                className: a()(t, e),
                 onMouseEnter: () => {
                     u(!0);
                 },
                 onMouseLeave: () => {
                     u(!1);
                 },
-                children: v((e, n) =>
+                children: T((e, n) =>
                     (0, l.jsx)(o.animated.div, {
-                        ref: (e) => g(n.message.id, null != e ? e.offsetHeight : null),
+                        ref: (e) => f(n.message.id, null != e ? e.offsetHeight : null),
                         className: R.T_,
                         style: e,
                         children: (0, l.jsx)(L, { message: n.message }),

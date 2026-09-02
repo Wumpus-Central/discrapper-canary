@@ -1,15 +1,15 @@
 t.d(n, { f: () => d });
 var l = t(477900),
     i = t(582128),
-    a = t(17928),
-    s = t(477782),
+    s = t(17928),
+    a = t(477782),
     r = t(534963),
     o = t(470710),
     c = t(717518),
     u = t(375708);
 function d(e) {
-    let n = (0, a.bG)([o.A], () => o.A.getCall(e), [e]),
-        t = (0, a.bG)([c.A], () => c.A.getRegions(null));
+    let n = (0, s.bG)([o.A], () => o.A.getCall(e), [e]),
+        t = (0, s.bG)([c.A], () => c.A.getRegions(null));
     i.useEffect(() => {
         null == t && r.A.fetchRegions(null);
     }, [t]);
@@ -36,7 +36,7 @@ function d(e) {
                     : t.map((e) => {
                           let { id: n, name: t } = e;
                           return (0, l.jsx)(
-                              s.iD,
+                              a.iD,
                               {
                                   id: `region-${n}`,
                                   group: "region-select",
@@ -49,5 +49,5 @@ function d(e) {
                       }),
             [t, d, A],
         );
-    return (0, l.jsx)(s.Dr, { id: "region-select", label: u.intl.string(u.t.w8gMqh), subtext: d.name, children: m });
+    return (0, l.jsx)(a.Dr, { id: "region-select", label: u.intl.string(u.t.w8gMqh), subtext: d.name, children: m });
 }

@@ -457,7 +457,7 @@ function e$(e) {
     });
 }
 var e0 = s(717877);
-function e5(e) {
+function e3(e) {
     let { section: i, user: s, currentUser: n, displayProfile: t, guildId: d, channelId: r, onClose: a } = e;
     return i === ex.RP.ACTIVITY
         ? (0, l.jsx)(eU, { user: s, currentUser: n, guildId: d, onClose: a })
@@ -471,7 +471,7 @@ function e5(e) {
                 ? (0, l.jsx)(em, { user: s, displayProfile: t, guildId: d, onClose: a })
                 : (0, l.jsx)(ew, { user: s, displayProfile: t, onClose: a });
 }
-function e3(e) {
+function e5(e) {
     let {
             user: i,
             currentUser: s,
@@ -532,7 +532,7 @@ function e3(e) {
                           );
                       }),
                   }),
-                  (0, l.jsx)(e5, {
+                  (0, l.jsx)(e3, {
                       items: r,
                       section: A,
                       user: i,
@@ -546,7 +546,7 @@ function e3(e) {
 }
 var e7 = s(186272),
     e9 = s(996988),
-    e1 = s(985253),
+    e1 = s(207634),
     e2 = s(174217);
 function e8(e) {
     let {
@@ -690,7 +690,7 @@ function e8(e) {
                                                 onClose: z,
                                             }),
                                         }),
-                                        (0, l.jsx)(e3, {
+                                        (0, l.jsx)(e5, {
                                             user: i,
                                             currentUser: s,
                                             displayProfile: Y,

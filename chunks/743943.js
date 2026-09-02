@@ -1,22 +1,22 @@
-t.d(n, { A: () => c });
-var l = t(477900),
-    i = t(582128),
-    a = t(221877),
-    s = t(717421),
-    r = t(781137),
-    o = t(812597);
+n.d(t, { A: () => c });
+var i = n(477900),
+    l = n(582128),
+    a = n(221877),
+    s = n(717421),
+    r = n(781137),
+    o = n(812597);
 function c(e) {
-    let { position: n, roomWidth: t } = e,
-        [c, u] = (0, s.z)(() => ({ x: n.x, y: n.y, config: { clamp: !0, tension: 1200, friction: 40, mass: 0.4 } }));
+    let { position: t, roomWidth: n } = e,
+        [c, d] = (0, s.z)(() => ({ x: t.x, y: t.y, config: { clamp: !0, tension: 1200, friction: 40, mass: 0.4 } }));
     return (
-        (0, i.useEffect)(() => {
-            u({ x: n.x, y: n.y });
-        }, [n.x, n.y, u]),
-        (0, l.jsx)(a.animated.div, {
+        (0, l.useEffect)(() => {
+            d({ x: t.x, y: t.y });
+        }, [t.x, t.y, d]),
+        (0, i.jsx)(a.animated.div, {
             "aria-hidden": !0,
             className: o.V,
             style: { left: c.x.to((e) => `${e}%`), top: c.y.to((e) => `${e}%`) },
-            children: (0, l.jsx)(r.A, { roomWidth: t }),
+            children: (0, i.jsx)(r.A, { roomWidth: n }),
         })
     );
 }

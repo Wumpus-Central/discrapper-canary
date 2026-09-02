@@ -107,7 +107,7 @@ function $() {
 }
 var w = a(628049),
     B = a(652215),
-    q = a(632847),
+    q = a(394107),
     z = a(375708);
 function O(e) {
     let { guildId: s } = e,

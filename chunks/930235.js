@@ -106,14 +106,14 @@ function p(e, t) {
         y,
         b,
         m,
-        D,
         I,
+        D,
         S = (0, f.I)(e, t);
     (0, l.V)(
         !S.begin,
         "useDrag::spec.begin was deprecated in v14. Replace spec.begin() with spec.item(). (see more here - https://react-dnd.github.io/react-dnd/docs/api/use-drag)",
     );
-    var k =
+    var O =
             ((r = (0, s.u)()),
             (0, o.useMemo)(
                 function () {
@@ -121,7 +121,7 @@ function p(e, t) {
                 },
                 [r],
             )),
-        O =
+        k =
             ((a = S.options),
             (u = S.previewOptions),
             (p = (0, s.u)()),
@@ -160,9 +160,9 @@ function p(e, t) {
         (b = (0, s.u)()),
         (m = (0, o.useMemo)(
             function () {
-                return new c(S, k, O);
+                return new c(S, O, k);
             },
-            [k, O],
+            [O, k],
         )),
         (0, o.useEffect)(
             function () {
@@ -170,8 +170,8 @@ function p(e, t) {
             },
             [S],
         ),
-        (D = m),
-        (I = (0, o.useMemo)(
+        (I = m),
+        (D = (0, o.useMemo)(
             function () {
                 var e = S.type;
                 return (0, l.V)(null != e, "spec.type must be defined"), e;
@@ -180,12 +180,12 @@ function p(e, t) {
         )),
         (0, i.E)(
             function () {
-                if (null != I) {
+                if (null != D) {
                     var e,
                         t =
                             (function (e) {
                                 if (Array.isArray(e)) return e;
-                            })((e = (0, n.V)(I, D, b))) ||
+                            })((e = (0, n.V)(D, I, b))) ||
                             (function (e) {
                                 var t,
                                     r,
@@ -235,24 +235,24 @@ function p(e, t) {
                             })(),
                         r = t[0],
                         i = t[1];
-                    return k.receiveHandlerId(r), O.receiveHandlerId(r), i;
+                    return O.receiveHandlerId(r), k.receiveHandlerId(r), i;
                 }
             },
-            [b, k, O, D, I],
+            [b, O, k, I, D],
         ),
         [
-            (0, v.j)(S.collect, k, O),
+            (0, v.j)(S.collect, O, k),
             (0, o.useMemo)(
                 function () {
-                    return O.hooks.dragSource();
+                    return k.hooks.dragSource();
                 },
-                [O],
+                [k],
             ),
             (0, o.useMemo)(
                 function () {
-                    return O.hooks.dragPreview();
+                    return k.hooks.dragPreview();
                 },
-                [O],
+                [k],
             ),
         ]
     );

@@ -1,8 +1,8 @@
 t.d(n, { A: () => C });
 var l = t(477900),
     i = t(582128),
-    a = t(922016),
-    s = t(365199),
+    s = t(922016),
+    a = t(365199),
     r = t(688810),
     o = t(592982),
     c = t(384059),
@@ -14,9 +14,9 @@ var l = t(477900),
 let C = function (e) {
     let { channel: n, remoteMode: t = !1 } = e,
         { parentAnalyticsLocation: C } = (0, r.Ay)(),
-        f = i.useRef(null);
-    return (0, l.jsx)(a.Y, {
-        targetElementRef: f,
+        E = i.useRef(null);
+    return (0, l.jsx)(s.Y, {
+        targetElementRef: E,
         renderPopout: (e) => {
             let { closePopout: i } = e;
             return (0, l.jsx)(d.A, {
@@ -30,19 +30,19 @@ let C = function (e) {
         },
         align: "right",
         position: "top",
-        animation: a.Y.Animation.FADE,
+        animation: s.Y.Animation.FADE,
         spacing: 16,
         children: (e, n) => {
             let { onClick: t } = e,
                 { isShown: i } = n;
             return (0, l.jsx)(A.l, {
-                ref: f,
+                ref: E,
                 isTrayButton: !0,
                 onClick: (e) => {
                     (0, c.X)(C, c.O.MORE), t(e);
                 },
                 label: h.intl.string(h.t.PdRCRg),
-                iconComponent: s.MoreHorizontalIcon,
+                iconComponent: a.MoreHorizontalIcon,
                 color: "primaryDark",
                 isActive: i,
             });

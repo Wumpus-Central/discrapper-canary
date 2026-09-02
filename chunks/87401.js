@@ -1,36 +1,36 @@
 t.d(n, { A: () => o });
 var l = t(17928),
     i = t(228366),
-    a = t(988794);
-let s = {};
+    s = t(988794);
+let a = {};
 class r extends l.Ay.PersistedStore {
     static displayName = "EventBannerStore";
     static persistKey = "EventBanner";
     initialize(e) {
-        null != e && (s = e.dismissedEventIds ?? {});
+        null != e && (a = e.dismissedEventIds ?? {});
     }
     isEventDismissed(e) {
-        return null != s[e];
+        return null != a[e];
     }
     getState() {
-        return { dismissedEventIds: s };
+        return { dismissedEventIds: a };
     }
 }
 let o = new r(i.h, {
     EVENT_BANNER_DISMISS: function (e) {
         let { eventId: n } = e;
-        s = { ...s, [n]: !0 };
+        a = { ...a, [n]: !0 };
     },
     GUILD_SCHEDULED_EVENT_UPDATE: function (e) {
         let { guildScheduledEvent: n } = e;
-        if ((n.status !== a.XG.CANCELED && n.status !== a.XG.COMPLETED) || null == s[n.id]) return !1;
-        let t = { ...s };
-        delete t[n.id], (s = t);
+        if ((n.status !== s.XG.CANCELED && n.status !== s.XG.COMPLETED) || null == a[n.id]) return !1;
+        let t = { ...a };
+        delete t[n.id], (a = t);
     },
     GUILD_SCHEDULED_EVENT_DELETE: function (e) {
         let { guildScheduledEvent: n } = e;
-        if (null == s[n.id]) return !1;
-        let t = { ...s };
-        delete t[n.id], (s = t);
+        if (null == a[n.id]) return !1;
+        let t = { ...a };
+        delete t[n.id], (a = t);
     },
 });

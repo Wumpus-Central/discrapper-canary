@@ -29,24 +29,24 @@ function C(e) {
         v = l.useRef(null),
         E = null == C.getGuildId() ? 70 : 50,
         b = (0, r.bG)([h.A], () => h.A.pipWidth(A.R8.CAMERA_PREVIEW)),
-        T = y.length,
-        _ = b * T + 8 * (T - 1),
-        R = l.useMemo(
+        _ = y.length,
+        T = b * _ + 8 * (_ - 1),
+        S = l.useMemo(
             () => ({
-                minWidth: A.mn[A.R8.CAMERA_PREVIEW] * T + 8 * (T - 1),
-                maxWidth: A.cF[A.R8.CAMERA_PREVIEW] * T + 8 * (T - 1),
+                minWidth: A.mn[A.R8.CAMERA_PREVIEW] * _ + 8 * (_ - 1),
+                maxWidth: A.cF[A.R8.CAMERA_PREVIEW] * _ + 8 * (_ - 1),
             }),
-            [T],
+            [_],
         );
     l.useLayoutEffect(() => {
         v.current?.ensureIsInPosition();
     }, [y.length]);
-    let S = l.useCallback(
+    let R = l.useCallback(
             (e) => {
-                let t = 0 === T ? e : (e - 8 * (T - 1)) / T;
+                let t = 0 === _ ? e : (e - 8 * (_ - 1)) / _;
                 c.EB(t, A.R8.CAMERA_PREVIEW);
             },
-            [T],
+            [_],
         ),
         L = l.useCallback(
             (e, t) => {
@@ -59,17 +59,17 @@ function C(e) {
         children: (0, i.jsx)(u.S, {
             position: I,
             id: 0,
-            width: _,
+            width: T,
             ref: v,
             onMove: L,
-            onResize: S,
+            onResize: R,
             maxX: t,
             maxY: a,
             edgeOffsetTop: E,
             edgeOffsetBottom: 70,
             edgeOffsetLeft: 16,
             edgeOffsetRight: 16,
-            resizeConfig: R,
+            resizeConfig: S,
             children: (0, i.jsx)("div", {
                 className: f.iA,
                 children: y.map((e) =>

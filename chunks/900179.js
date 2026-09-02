@@ -1,4 +1,4 @@
-n.d(t, { A: () => x });
+n.d(t, { A: () => A });
 var a = n(477900),
     l = n(582128),
     r = n(503698),
@@ -15,13 +15,13 @@ var a = n(477900),
     p = n(94343),
     b = n(716804),
     h = n(161185);
-let _ = Object.fromEntries(Object.keys(d.A.colors).map((e) => [o()(e), e]));
-function A(e) {
+let x = Object.fromEntries(Object.keys(d.A.colors).map((e) => [o()(e), e]));
+function _(e) {
     let { icon: t, size: n = "xxs", tooltip: l } = e,
         r = (0, a.jsx)(t, { size: n, color: "currentColor", className: h.yK, "aria-hidden": !0 });
     return null == l ? r : (0, a.jsx)(c.m, { text: l, asContainer: !0, children: r });
 }
-function x(e) {
+function A(e) {
     let {
             children: t,
             heading: n,
@@ -29,7 +29,7 @@ function x(e) {
             headingVariant: i = "text-xs/semibold",
             headingColor: o = "text-default",
             headingIcon: c,
-            hideHeading: x = !1,
+            hideHeading: A = !1,
             introText: v,
             className: R,
             scrollTargetId: N,
@@ -45,14 +45,14 @@ function x(e) {
         className: s()(h.uW, R),
         "aria-labelledby": I,
         children: [
-            x
+            A
                 ? (0, a.jsx)(u.A, { children: (0, a.jsx)(f.H, { id: I, children: n }) })
                 : (0, a.jsxs)("div", {
                       className: h.so,
                       children: [
                           (0, a.jsxs)("div", {
                               className: h.wx,
-                              style: { color: d.A.colors[_[o]]?.css },
+                              style: { color: d.A.colors[x[o]]?.css },
                               children: [
                                   (0, a.jsx)(m.D, {
                                       variant: i,
@@ -61,7 +61,7 @@ function x(e) {
                                       id: I,
                                       children: n,
                                   }),
-                                  null != C && (0, a.jsx)(A, { ...C }),
+                                  null != C && (0, a.jsx)(_, { ...C }),
                               ],
                           }),
                           null != v && (0, a.jsx)(g.E, { variant: "text-xs/normal", children: v }),
