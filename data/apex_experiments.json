@@ -3962,36 +3962,6 @@
     }
   },
   {
-    "name": "2026-06-ml-offer-creation-ui-upgrade",
-    "kind": "user",
-    "defaultConfig": {
-      "badgeStyle": null,
-      "surface": null
-    },
-    "variations": {
-      "0": {
-        "enabled": false,
-        "variant": 0
-      },
-      "1": {
-        "badgeStyle": null,
-        "surface": null
-      },
-      "2": {
-        "badgeStyle": null,
-        "surface": null
-      },
-      "3": {
-        "badgeStyle": null,
-        "surface": null
-      },
-      "4": {
-        "badgeStyle": null,
-        "surface": null
-      }
-    }
-  },
-  {
     "name": "2026-06-mobile-server-tag",
     "kind": "user",
     "defaultConfig": {

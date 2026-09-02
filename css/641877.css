@@ -2014,24 +2014,24 @@
     background: var(--background-mod-subtle);
     border: 1px solid var(--border-muted);
     border-radius: var(--radius-sm);
-    padding: 1px 3px
+    padding: 1px 3px;
+    transition: background .1s ease-in-out
 }
 
 .custom-user-profile-theme.theme-light .managed__8061a {
     background: var(--opacity-white-24)
 }
 
-.customizable__8061a {
-    cursor: pointer;
-    transition: background .1s ease-in-out
-}
-
-.customizable__8061a:hover {
+.managed__8061a:hover {
     background: var(--background-mod-strong)
 }
 
-.custom-user-profile-theme.theme-light .customizable__8061a:hover {
+.custom-user-profile-theme.theme-light .managed__8061a:hover {
     background: var(--opacity-white-40)
+}
+
+.customizable__8061a {
+    cursor: pointer
 }
 
 .badge__8061a {
@@ -2066,4 +2066,4 @@
     object-fit: contain
 }
 
-/*# sourceMappingURL=641877.db9a099c4fef1dcb.css.map*/
+/*# sourceMappingURL=641877.55b229c5a6391c66.css.map*/
