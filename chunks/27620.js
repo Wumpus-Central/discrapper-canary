@@ -23,14 +23,15 @@ var r = n(636537),
     c = n(880652),
     u = n(652215);
 async function _(e, t) {
-    if (!(s.Ay.shouldAllowSurveyAction() && i[e] >= 100 * Math.random())) return;
-    let n = { action_type: e };
-    null != t && (n.metadata = t);
+    let n = s.Ay.getActionTriggeredSurveyOverride() ?? void 0;
+    if (!(s.Ay.shouldAllowSurveyAction() && i[e] >= 100 * Math.random()) && null == n) return;
+    let l = { action_type: e };
+    null != t && (l.metadata = t);
     try {
         let e = await r.Bo.post({
             url: u.Rsh.EMBEDDED_SURVEY_ACTION,
-            query: { force_survey_id: s.Ay.getActionTriggeredSurveyOverride() ?? void 0 },
-            body: n,
+            query: { force_survey_id: n },
+            body: l,
             rejectWithError: !0,
         });
         a.h.dispatch({ type: "SURVEY_FETCHED", survey: e?.body?.survey, isActionTriggered: !0 });
