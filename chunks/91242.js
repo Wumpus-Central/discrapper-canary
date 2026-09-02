@@ -42,19 +42,19 @@ let A = new E(r.h, {
             r === s.sV.MAIN && (c = n);
     },
     FRAME_LAUNCH: function (e) {
-        let { frameId: t, proxyTicket: n } = e,
-            i = d.get(t);
-        if (null == i) return;
-        let r = (0, a.Ay)(i.applicationId);
-        if (null == r) {
+        let { frameId: t, proxyTicket: n, customId: i, referrerId: r } = e,
+            o = d.get(t);
+        if (null == o) return;
+        let u = (0, a.Ay)(o.applicationId);
+        if (null == u) {
             d.delete(t), c === t && (c = null);
             return;
         }
         d.set(t, {
-            ...i,
+            ...o,
             state: "launched",
             data: {
-                url: r,
+                url: u,
                 connectedSince: Date.now(),
                 layoutMode: s.y0.FOCUSED,
                 activityPanelMode: l.Gd.PANEL,
@@ -64,6 +64,8 @@ let A = new E(r.h, {
                 pipOrientationLock: null,
                 prefersPictureInPictureOnNavigateAway: !1,
                 iframeId: null,
+                customId: i,
+                referrerId: r,
             },
         });
     },

@@ -107,7 +107,7 @@ async function el(e) {
             let { close: e } = n(574172);
             e(et.MLl.ACTIVITY_POPOUT);
         }
-        if ((!0 !== g && R.A.clearMainFrameSlot(), (0, Q.y)({ applicationId: i })))
+        if ((!0 !== g && R.A.clearMainFrameSlot(), (0, Q.y)({ applicationId: i, customId: f, referrerId: I })))
             return (
                 (0, q.j$)(i, {
                     isStart: a,

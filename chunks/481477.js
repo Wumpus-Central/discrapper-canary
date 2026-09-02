@@ -1,4 +1,4 @@
-n.r(t), n.d(t, { default: () => eh });
+n.r(t), n.d(t, { default: () => ey });
 var i = n(477900),
     l = n(17928),
     a = n(627363),
@@ -391,19 +391,25 @@ function es() {
     return (0, i.jsx)(eo, { activity: e, isLoading: a, renderHeader: r, renderActivityIFrameWithLoadedData: s });
 }
 var ec = n(625180),
-    ed = n(809871);
-function eu(e) {
+    ed = n(37042),
+    eu = n(809871);
+function em(e) {
     let { frame: t, application: n } = e,
         l = o.useCallback(async () => {
-            await ec.A.refreshProxyTicket(t.id), ed.A.popInFrame();
+            await ec.A.refreshProxyTicket(t.id), eu.A.popInFrame();
         }, [t.id]);
     return (0, i.jsx)(el, { application: n, isRichPresenceInvite: !0, onConfirmClosePopout: l, channelId: void 0 });
 }
-var em = n(165610),
-    ep = n(360469);
-function eA(e) {
+var ep = n(165610),
+    eA = n(360469);
+function ex(e) {
     let { frame: t, application: n } = e,
-        l = { instance_id: "example-cl-instance", platform: ep.vu.DESKTOP, discord_proxy_ticket: t.data.proxyTicket };
+        l = {
+            instance_id: "example-cl-instance",
+            platform: eA.vu.DESKTOP,
+            discord_proxy_ticket: t.data.proxyTicket,
+            ...(0, ed.A)(t.data),
+        };
     return (0, i.jsx)(u, {
         application: n,
         queryParams: l,
@@ -413,34 +419,34 @@ function eA(e) {
         onGuestReload: () => ec.A.setFramePrefersPictureInPictureOnNavigateAway(t.id, !1),
     });
 }
-function ex() {
-    let e = (0, l.bG)([r.A], () => (0, em.ny)(r.A.getMainFrame())),
+function eI() {
+    let e = (0, l.bG)([r.A], () => (0, ep.ny)(r.A.getMainFrame())),
         t = e?.data.proxyTicketRefreshing ?? !1;
     return (0, i.jsx)(eo, {
         activity: e,
         isLoading: t,
         renderHeader: (e) => {
             let { activity: t, application: n } = e;
-            return (0, i.jsx)(eu, { frame: t, application: n });
+            return (0, i.jsx)(em, { frame: t, application: n });
         },
         renderActivityIFrameWithLoadedData: (e) => {
             let { activity: t, application: n } = e;
-            return (0, i.jsx)(eA, { frame: t, application: n });
+            return (0, i.jsx)(ex, { frame: t, application: n });
         },
     });
 }
-var eI = n(979186),
-    ef = n(620148);
-function eh(e) {
+var ef = n(979186),
+    eh = n(620148);
+function ey(e) {
     let { windowKey: t } = e,
-        n = (0, ef.A)(),
+        n = (0, eh.A)(),
         o = (0, l.bG)([r.A], () => r.A.getMainFrame()),
         { data: s } = (0, a.YY)(o?.applicationId),
         c = n?.name ?? s?.name ?? M.intl.string(M.t.IC5Ann);
-    return (0, i.jsx)(eI.A, {
+    return (0, i.jsx)(ef.A, {
         withTitleBar: !0,
         windowKey: t,
         title: c,
-        children: null != n ? (0, i.jsx)(es, {}) : (0, i.jsx)(ex, {}),
+        children: null != n ? (0, i.jsx)(es, {}) : (0, i.jsx)(eI, {}),
     });
 }
