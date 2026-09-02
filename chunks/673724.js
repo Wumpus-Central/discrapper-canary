@@ -11,11 +11,10 @@ n.d(t, {
     ZJ: () => T,
     a7: () => d,
     aM: () => c,
-    hk: () => S,
     sj: () => u,
     sq: () => i,
     tr: () => s,
-    wF: () => C,
+    wF: () => N,
     wU: () => E,
     wV: () => A,
     x5: () => p,
@@ -81,8 +80,7 @@ let m = [
         { id: "gpt-5.6-luna", label: "GPT-5.6 Luna", provider: "openai" },
     ],
     g = { main: m, subagent: m, thinking: ["low", "medium", "high", "xhigh", "max"] },
-    S = { main: { model: "gpt-5.6-sol", thinking: "high" }, subagent: { model: "gpt-5.6-luna", thinking: "high" } },
-    N = [
+    S = [
         { id: "workers-ai/@cf/moonshotai/kimi-k2.6", label: "Kimi K2.6", provider: "workers-ai" },
         { id: "workers-ai/@cf/zai-org/glm-5.2", label: "GLM 5.2", provider: "workers-ai" },
         { id: "workers-ai/@cf/nvidia/nemotron-3-120b-a12b", label: "Nemotron 3 Super 120B", provider: "workers-ai" },
@@ -90,4 +88,4 @@ let m = [
         { id: "xai/grok-4.6", label: "Grok 4.6", provider: "xai" },
         { id: "workers-ai/@cf/zai-org/glm-4.7-flash", label: "GLM 4.7 Flash", provider: "workers-ai" },
     ],
-    C = { main: N, subagent: N, thinking: g.thinking };
+    N = { main: S, subagent: S, thinking: g.thinking };
