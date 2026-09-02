@@ -96,6 +96,47 @@
     background: linear-gradient(90deg, rgba(133, 71, 198, .5), rgba(184, 69, 193, .5) 50.24%, rgba(171, 93, 138, .5))
 }
 
+.note__2ef07 {
+    font-size: 12px;
+    margin-top: 20px;
+    position: relative
+}
+
+.note__2ef07~.note__2ef07 {
+    margin-top: 8px
+}
+
+.icon__2ef07 {
+    flex-shrink: 0;
+    margin-inline-end: 8px
+}
+
+.large__2ef07 {
+    height: 20px;
+    width: 20px
+}
+
+.small__2ef07 {
+    height: 14px;
+    width: 14px
+}
+
+.colorWarning__2ef07 {
+    color: var(--yellow-300)
+}
+
+.colorError__2ef07 {
+    color: var(--text-feedback-critical)
+}
+
+.colorPrimary__2ef07 {
+    color: var(--text-muted)
+}
+
+.colorSecondary__2ef07 {
+    color: var(--text-default)
+}
+
 .paymentNote__56a21 {
     background-color: var(--modal-background);
     margin: 0;
@@ -156,4 +197,4 @@
     margin: 0
 }
 
-/*# sourceMappingURL=742752.0d5ad2ff4fe9b168.css.map*/
+/*# sourceMappingURL=73946.873cb5c8a5cf2edd.css.map*/

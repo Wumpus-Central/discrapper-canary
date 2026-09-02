@@ -8,7 +8,7 @@ var l = n(284009),
     o = n(632088),
     u = n(626797),
     d = n(166532),
-    c = n(469155),
+    c = n(306775),
     g = n(375708),
     m = n(998973);
 function A(e) {
@@ -36,14 +36,13 @@ function A(e) {
             onStepChange: () => {},
             header: (0, i.jsx)(r.rQ, { title: g.intl.string(g.t.eQ2bLp) }),
             analyticsLocation: n,
-            hideBreadcrumbs: !0,
             toastContent: A,
             overwriteSubscriptionPaymentSource: h,
         });
     return (0, i.jsx)(a.d, {
         transitionState: t,
         onClose: l,
-        size: "sm",
+        size: "md",
         "aria-label": g.intl.string(g.t.eQ2bLp),
         contentOutsideContainer: (0, i.jsx)(o.A, {}),
         children: (0, i.jsx)("form", {

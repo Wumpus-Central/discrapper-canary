@@ -216,6 +216,49 @@
     color: var(--text-default)
 }
 
+.bodyWrapper_e210ec {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    height: 100%;
+    min-height: 0;
+    position: relative
+}
+
+.errorBlockWrapper_e210ec {
+    padding-bottom: 16px
+}
+
+.errorBlockWrapperLegacy_e210ec {
+    padding: 16px
+}
+
+.paymentNote_e210ec {
+    padding: 0 16px
+}
+
+.loadingBlock_e210ec {
+    height: 192px
+}
+
+.sequencer_e210ec,
+.sequencerStatic_e210ec {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column
+}
+
+.sequencerStatic_e210ec {
+    flex: 1 1 auto
+}
+
+.sequencerAnimatedNode_e210ec {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    min-height: 0
+}
+
 .container_ceece4 {
     --custom-payment-element-min-height: 430px
 }
@@ -309,4 +352,4 @@
     margin-top: 16px
 }
 
-/*# sourceMappingURL=686099.a58ebabc8c50cc22.css.map*/
+/*# sourceMappingURL=697284.9f03064675054da5.css.map*/

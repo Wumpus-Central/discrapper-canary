@@ -27,8 +27,8 @@ var a,
     v = l(228366),
     E = l(830382),
     S = l(73825),
-    T = l(626797),
-    C = l(951305),
+    C = l(626797),
+    T = l(951305),
     j = l(491057),
     A = l(424171),
     I = l(97352),
@@ -93,7 +93,7 @@ function M(e) {
         } = e,
         h = `${a}-${n}-${c}`;
     return (0, s.jsx)(
-        T.M,
+        C.M,
         {
             stepConfigs: d,
             applicationId: l,
@@ -104,7 +104,7 @@ function M(e) {
             excludeSubscriptionPlansBySKU: p,
             overrideCustomCheckoutFlow: b ? _.uH.DEV_STORYBOOK_CHECKOUT : void 0,
             children: (0, s.jsx)(j.Qt, {
-                children: (0, s.jsx)(C.dX, {
+                children: (0, s.jsx)(T.dX, {
                     isGift: n,
                     children: (0, s.jsx)(
                         A.q,
@@ -130,7 +130,7 @@ var N = l(652215);
 let D = [
     {
         key: m.pn.ADD_PAYMENT_STEPS,
-        renderStep: (e) => (0, s.jsx)(b.x, { ...e, breadcrumbSteps: [m.pn.ADD_PAYMENT_STEPS], onReturn: () => {} }),
+        renderStep: (e) => (0, s.jsx)(b.x, { ...e, onReturn: () => {} }),
         options: { renderHeader: !0 },
     },
     {
@@ -345,8 +345,8 @@ var Z = l(488428),
     ev = l(162093),
     eE = l(4630),
     eS = l(482132),
-    eT = l(532794),
-    eC = l(216678),
+    eC = l(532794),
+    eT = l(216678),
     ej = l(194509),
     eA = l(511484),
     eI = l(794400),
@@ -354,7 +354,7 @@ var Z = l(488428),
     e_ = l(71393),
     ek = l(166403),
     eR = l(202541),
-    eM = l(127898);
+    eM = l(731094);
 function eN(e) {
     let { selectedGuildForGuildSub: t } = e,
         l = (0, eg.uk)(t?.id)[0];
@@ -430,8 +430,8 @@ let eL = {
                     [b, h] = u.useState(""),
                     [x, g] = u.useState({ plan_id: eR.gD.PREMIUM_MONTH_TIER_2, gift: "true" }),
                     v = "true" !== x.gift && null != i,
-                    [E, T] = u.useState(r.length > 0 ? r[0].value : null),
-                    { analyticsLocations: C } = (0, p.Ay)(c.A.PAYMENT_FLOW_TEST_PAGE),
+                    [E, C] = u.useState(r.length > 0 ? r[0].value : null),
+                    { analyticsLocations: T } = (0, p.Ay)(c.A.PAYMENT_FLOW_TEST_PAGE),
                     [j, A] = u.useState(""),
                     [I, P] = u.useState(N.dJq),
                     { balance: _, isFetching: k, error: R } = (0, eP.W)(),
@@ -440,7 +440,7 @@ let eL = {
                     [w, B] = u.useState(""),
                     [$, W] = u.useState(N.dJq);
                 return (0, s.jsx)(p.f5, {
-                    value: C,
+                    value: T,
                     children: (0, s.jsx)(el.Ip, {
                         className: U.XG,
                         children: (0, s.jsxs)(ea.B, {
@@ -495,7 +495,7 @@ let eL = {
                                         (0, s.jsx)(G.$, {
                                             variant: "primary",
                                             text: "Select Plan",
-                                            onClick: () => (0, eT.A)({ subscriptionTier: l, analyticsLocations: C }),
+                                            onClick: () => (0, eC.A)({ subscriptionTier: l, analyticsLocations: T }),
                                         }),
                                     ],
                                 }),
@@ -666,7 +666,7 @@ let eL = {
                                             label: "Premium Server Subscription For",
                                             value: E,
                                             options: r,
-                                            onSelectionChange: T,
+                                            onSelectionChange: C,
                                             selectionMode: "single",
                                             fullWidth: !0,
                                         }),
@@ -746,10 +746,10 @@ let eL = {
                                                     variant: "primary",
                                                     text: "Open Premium Apps Payment Modal for SKU",
                                                     onClick: () =>
-                                                        (0, eC.q)({
+                                                        (0, eT.q)({
                                                             applicationId: w,
                                                             skuId: $,
-                                                            analyticsLocations: C,
+                                                            analyticsLocations: T,
                                                             checkoutFlow: em.CL.PREMIUM_APPS_OTP_CHECKOUT,
                                                         }),
                                                 }),
@@ -859,13 +859,13 @@ let eL = {
                                                     };
                                                     return await Promise.resolve((a) => {
                                                         let { onClose: i, transitionState: r } = a;
-                                                        return (0, s.jsx)(T.M, {
+                                                        return (0, s.jsx)(C.M, {
                                                             activeSubscription: null,
                                                             stepConfigs: n,
                                                             skuIDs: [],
                                                             errorHandlingBehavior: l,
                                                             onErrorReported: t,
-                                                            children: (0, s.jsx)(C.dX, {
+                                                            children: (0, s.jsx)(T.dX, {
                                                                 isGift: !1,
                                                                 children: (0, s.jsx)(A.q, {
                                                                     transitionState: r,
@@ -1430,8 +1430,8 @@ let tg = {
 var tv = l(624716),
     tE = l(872725);
 let tS = { name: "Expressive Progress", component: tc.A, id: "expressive-progress", controls: {} },
-    tT = { name: "Tab Tooltip", component: tv.A, id: "tab-tooltip", controls: {} },
-    tC = {
+    tC = { name: "Tab Tooltip", component: tv.A, id: "tab-tooltip", controls: {} },
+    tT = {
         title: "Nitro Components",
         stories: [
             {
@@ -1679,7 +1679,7 @@ let tS = { name: "Expressive Progress", component: tc.A, id: "expressive-progres
                                 props: { src: v, alt: E, ...e },
                             };
                         }, [a, v, E, r, o, d, c]),
-                        T = {
+                        C = {
                             title: t,
                             body: l,
                             graphic: S,
@@ -1710,12 +1710,12 @@ let tS = { name: "Expressive Progress", component: tc.A, id: "expressive-progres
                                 children: [
                                     (0, s.jsx)(ty.L, {
                                         targetElementRef: x,
-                                        ...T,
+                                        ...C,
                                         children: (0, s.jsx)(G.$, { buttonRef: x, variant: "primary", text: "Left" }),
                                     }),
                                     (0, s.jsx)(ty.L, {
                                         targetElementRef: y,
-                                        ...T,
+                                        ...C,
                                         children: (0, s.jsx)(G.$, { buttonRef: y, variant: "primary", text: "Right" }),
                                     }),
                                 ],
@@ -1798,7 +1798,7 @@ let tS = { name: "Expressive Progress", component: tc.A, id: "expressive-progres
                     },
                 },
             },
-            tT,
+            tC,
         ],
     };
 var tj = l(691540),
@@ -2146,7 +2146,7 @@ let t0 = {
     id: "deep-link-test",
     component: function (e) {
         let { deepLinkUrl: t } = e;
-        return (0, s.jsx)(T.M, {
+        return (0, s.jsx)(C.M, {
             stepConfigs: [],
             skuIDs: [],
             activeSubscription: null,
@@ -2817,8 +2817,8 @@ var lg = l(503698),
     lv = l.n(lg),
     lE = l(683071),
     lS = l(942340),
-    lT = l(211528),
-    lC = l(206441),
+    lC = l(211528),
+    lT = l(206441),
     lj = l(783327),
     lA = l(626584),
     lI = l(667648),
@@ -2845,7 +2845,7 @@ function lM(e) {
 }
 function lN(e) {
     let { children: t, stepConfigs: l, bodyClassName: a } = e;
-    return (0, s.jsx)(T.M, {
+    return (0, s.jsx)(C.M, {
         stepConfigs: l,
         skuIDs: [],
         activeSubscription: null,
@@ -2879,7 +2879,7 @@ function lL() {
 }
 function lw(e) {
     let [t, l] = u.useState(0);
-    return (0, s.jsx)(T.M, {
+    return (0, s.jsx)(C.M, {
         activeSubscription: null,
         stepConfigs: [],
         skuIDs: [],
@@ -2899,7 +2899,7 @@ function lU(e) {
             forceRemount: c,
         } = e,
         p = (0, lj.S)(),
-        { setLinkWalletEnabled: b, linkWalletEnabled: h } = (0, lC.t4)((e) => ({
+        { setLinkWalletEnabled: b, linkWalletEnabled: h } = (0, lT.t4)((e) => ({
             setLinkWalletEnabled: e.setLinkWalletEnabled,
             linkWalletEnabled: e.linkWalletEnabled,
         }));
@@ -2959,19 +2959,19 @@ function lU(e) {
                                           "stripe-address-element" === d
                                               ? (0, s.jsx)("div", {
                                                     className: U.R,
-                                                    children: (0, s.jsx)(lT.Wf, {
+                                                    children: (0, s.jsx)(lC.Wf, {
                                                         ...x,
                                                         customPaymentMethodIdsToSourceTypes: E,
                                                         step: m.pn.PAYMENT_ELEMENT,
                                                     }),
                                                 })
-                                              : (0, s.jsx)(lT.Wf, {
+                                              : (0, s.jsx)(lC.Wf, {
                                                     ...x,
                                                     customPaymentMethodIdsToSourceTypes: E,
                                                     step: m.pn.PAYMENT_ELEMENT,
                                                 }),
                                           ("joined-payment-address-elements" === d || "stripe-address-element" === d) &&
-                                              (0, s.jsx)(lT.KS, {
+                                              (0, s.jsx)(lC.KS, {
                                                   ...f,
                                                   billingAddressInfo: {
                                                       email: "",
@@ -3204,8 +3204,8 @@ let l0 = {
                     item2Amount: v,
                     item2FormatWithoutRate: E,
                     hasDiscount: S,
-                    discountLabel: T,
-                    discountAmount: C,
+                    discountLabel: C,
+                    discountAmount: T,
                 } = e,
                 j = p
                     ? [
@@ -3229,7 +3229,7 @@ let l0 = {
                                     },
                                 ]
                               : []),
-                          ...(S ? [{ id: 3, label: T, amount: C }] : []),
+                          ...(S ? [{ id: 3, label: C, amount: T }] : []),
                       ]
                     : [];
             return (0, s.jsx)("div", {
@@ -3838,7 +3838,7 @@ let au = ["Revenue Storybook", "Revenue Playground"],
                     {
                         name: "Order SKU",
                         component: function () {
-                            return (0, s.jsx)(T.M, {
+                            return (0, s.jsx)(C.M, {
                                 stepConfigs: [],
                                 skuIDs: [],
                                 activeSubscription: null,
@@ -3852,7 +3852,7 @@ let au = ["Revenue Storybook", "Revenue Playground"],
                         name: "Stripe Components",
                         id: "stripe-components",
                         component: function () {
-                            return (0, s.jsx)(T.M, {
+                            return (0, s.jsx)(C.M, {
                                 stepConfigs: [],
                                 skuIDs: [],
                                 activeSubscription: null,
@@ -3990,7 +3990,7 @@ let au = ["Revenue Storybook", "Revenue Playground"],
         id: "nitro",
         name: "Nitro",
         groups: [
-            tC,
+            tT,
             { title: "Marketing Home", stories: [tN] },
             tw,
             {

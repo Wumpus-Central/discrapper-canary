@@ -1,4 +1,4 @@
-n.d(t, { Ir: () => I, ZC: () => p, l_: () => d, ou: () => m, pn: () => u, zT: () => S });
+n.d(t, { Ir: () => p, l_: () => d, ou: () => I, pn: () => u, zT: () => S });
 var a,
     r = n(582128),
     s = n(913122),
@@ -6,8 +6,8 @@ var a,
     o = n(626584),
     l = n(739508),
     c = n(566980),
-    _ = n(375708);
-let E = new o.A("PaymentSteps");
+    E = n(375708);
+let _ = new o.A("PaymentSteps");
 var u =
     (((a = {}).PAYMENT_ELEMENT = "payment_element"),
     (a.CREDIT_CARD_INFORMATION = "credit_card_information"),
@@ -40,53 +40,42 @@ var u =
     (a.SELECT_FREE_SKU = "select_free_sku"),
     a);
 let d = new Set([
-        "awaiting_browser_checkout",
-        "awaiting_browser_checkout_google_pay",
-        "awaiting_browser_checkout_apple_pay",
-    ]),
-    p = new Set([
-        "credit_card_information",
-        "paypal_information",
-        "venmo_information",
-        "cash_app_information",
-        "address",
-        "claim_free_sku",
-        "sku_preview",
-        "premium_upsell",
-        "przelewy24_information",
-    ]);
-function I(e) {
+    "awaiting_browser_checkout",
+    "awaiting_browser_checkout_google_pay",
+    "awaiting_browser_checkout_apple_pay",
+]);
+function p(e) {
     switch (e) {
         case "plan_select":
-            return _.intl.string(_.t["r+SebU"]);
+            return E.intl.string(E.t["r+SebU"]);
         case "awaiting_purchase_token_auth":
         case "review":
-            return _.intl.string(_.t.QBnNHq);
+            return E.intl.string(E.t.QBnNHq);
         case "shop":
-            return _.intl.string(_.t.xj9ooX);
+            return E.intl.string(E.t.xj9ooX);
         case "add_payment_steps":
         case "payment_element":
-            return _.intl.string(_.t.Sb6wI1);
+            return E.intl.string(E.t.Sb6wI1);
         case "credit_card_information":
-            return _.intl.string(_.t.yMPCXL);
+            return E.intl.string(E.t.yMPCXL);
         case "address":
-            return _.intl.string(_.t["50Auo2"]);
+            return E.intl.string(E.t["50Auo2"]);
         case "paypal_information":
-            return _.intl.string(_.t.RVHDnH);
+            return E.intl.string(E.t.RVHDnH);
         case "venmo_information":
-            return _.intl.string(_.t.bzQdwW);
+            return E.intl.string(E.t.bzQdwW);
         case "przelewy24_information":
-            return _.intl.string(_.t.BW0R4v);
+            return E.intl.string(E.t.BW0R4v);
         case "cash_app_information":
-            return _.intl.string(_.t.Gz1fyE);
+            return E.intl.string(E.t.Gz1fyE);
         case "gift_customization":
-            return _.intl.string(_.t.R0vK0N);
+            return E.intl.string(E.t.R0vK0N);
     }
     throw new i.v({ message: `Unexpected step: ${e}`, extraSentryInformation: { step: e } });
 }
-function m(e) {
+function I(e) {
     if (null != e) {
-        if (!(e instanceof s.Ey)) throw (E.error(e), (0, l.pM)(e), Error("Unexpected error type"));
+        if (!(e instanceof s.Ey)) throw (_.error(e), (0, l.pM)(e), Error("Unexpected error type"));
         if (e.hasCardError()) return "credit_card_information";
         if (e.hasAddressError()) return "address";
     }
