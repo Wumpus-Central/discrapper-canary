@@ -602,9 +602,10 @@ function eo(e) {
     let b = S.flatMap((e) => e.data.map((t) => ({ ...t, section: e.section })));
     if (u === y.M.COMMAND_ONLY || u === y.M.COMMAND_OR_APPLICATION) {
         let e = t.context,
-            n = g.A.getGuild(t?.context?.guild_id);
-        _.commands.useFrecency && f.bW.loadIfNecessary();
-        let i = null != e ? { channel: e, guild: n } : void 0;
+            n = g.A.getGuild(t?.context?.guild_id),
+            i = S.some((e) => e.section.id !== P.Ik.BUILT_IN && e.data.length > 0);
+        _.commands.useFrecency && i && f.bW.loadIfNecessary();
+        let r = null != e ? { channel: e, guild: n } : void 0;
         b.sort((e, t) => {
             if (_.commands.useScore) {
                 let n = e.score ?? 0,
@@ -612,9 +613,9 @@ function eo(e) {
                 if (n !== i) return n - i;
             }
             if (_.commands.useFrecency) {
-                let n = R.Ay.getScoreWithoutLoadingLatest(i, e),
-                    r = R.Ay.getScoreWithoutLoadingLatest(i, t);
-                if (n !== r) return r - n;
+                let n = R.Ay.getScoreWithoutLoadingLatest(r, e),
+                    i = R.Ay.getScoreWithoutLoadingLatest(r, t);
+                if (n !== i) return i - n;
             }
             return eh(e.displayName, t.displayName);
         });
