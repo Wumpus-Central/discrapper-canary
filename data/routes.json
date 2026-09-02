@@ -837,7 +837,7 @@
   "ORB_USER_CHALLENGES_LIST": "/users/@me/achievements/list?reward_type=orbs",
   "ORB_USER_CHALLENGE_CLAIM": "/users/@me/achievements/:param/claim",
   "ORB_USER_CHALLENGES_UNREAD_STATE": "/users/@me/achievements/unread-state",
-  "ORB_USER_CHALLENGES_UNREAD_STATE_ACK": "/users/@me/achievements/unread-state/ack",
+  "ORB_USER_CHALLENGES_UNREAD_STATE_ACK": "/users/@me/achievements/unread-ack",
   "IGNORE_USER": "/users/@me/relationships/:param/ignore",
   "SCHEDULED_MESSAGES": "/users/@me/scheduled-messages",
   "SCHEDULED_MESSAGE": "/users/@me/scheduled-messages/:param",
