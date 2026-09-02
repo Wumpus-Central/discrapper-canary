@@ -9,28 +9,28 @@ var i = n(228366),
     d = n(288254),
     c = n(734057),
     u = n(45630),
-    _ = n(309010),
-    E = n(967198),
-    A = n(132500),
-    h = n(192308),
-    I = n(890615),
-    f = n(51758),
-    p = n(776781),
-    T = n(96566),
-    m = n(712711),
-    g = n(95561),
-    S = n(329551),
-    N = n(912630),
-    C = n(965162),
-    O = n(763827),
-    R = n(287809),
-    L = n(53857),
-    y = n(71393),
-    D = n(834942),
-    v = n(576705),
-    b = n(977997),
-    M = n(147036),
-    P = n(652215);
+    _ = n(132500),
+    E = n(192308),
+    A = n(890615),
+    h = n(51758),
+    I = n(776781),
+    f = n(96566),
+    p = n(712711),
+    T = n(95561),
+    m = n(329551),
+    g = n(912630),
+    S = n(965162),
+    N = n(763827),
+    C = n(309010),
+    O = n(287809),
+    R = n(53857),
+    L = n(71393),
+    y = n(834942),
+    D = n(576705),
+    v = n(977997),
+    b = n(147036);
+let M = { fromGuildId: void 0, fromChannelId: void 0 };
+var P = n(652215);
 let U = {
     selectChannel(e) {
         let {
@@ -42,8 +42,7 @@ let U = {
                 skipMessageFetch: l,
                 opensChannel: o,
             } = e,
-            d = E.A.getGuildId() ?? null,
-            c = _.Ay.getChannelId(d, !1) ?? null;
+            { fromGuildId: d, fromChannelId: c } = M;
         i.h.dispatch({
             type: "CHANNEL_SELECT",
             guildId: t === P.ME ? null : t,
@@ -65,9 +64,9 @@ let U = {
             a = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
             s = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {},
             l = c.A.getChannel(e),
-            E = l?.getGuildId();
+            M = l?.getGuildId();
         l?.isGuildVocalOrThread() && ((0, r.qR)(l) || (0, d.BV)(l))
-            ? (0, o.pX)(P.BVt.CHANNEL(E, e))
+            ? (0, o.pX)(P.BVt.CHANNEL(M, e))
             : u.Ay.isSupported() &&
               (null != e && u.Ay.getMediaEngine().interact(),
               (function (e, t) {
@@ -76,13 +75,13 @@ let U = {
                       { lockVoiceStateForResume: s = !1, bypassIdleUpdate: l = !1 } =
                           arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {},
                       o = c.A.getChannel(e),
-                      d = b.A.getCurrentClientVoiceChannelId(t ?? null) === e,
-                      E = null != o ? D.A.getCheck(o.guild_id) : null;
-                  if (!(null != t && (0, f.V)(t)) && (null == E || E.canChat || (0, p.pC)(o))) {
+                      d = v.A.getCurrentClientVoiceChannelId(t ?? null) === e,
+                      M = null != o ? y.A.getCheck(o.guild_id) : null;
+                  if (!(null != t && (0, h.V)(t)) && (null == M || M.canChat || (0, I.pC)(o))) {
                       if (null != o && !d) {
-                          let e = (0, M.Pd)(o, b.A, y.A);
-                          if (e && o.isGuildStageVoice() && (0, T.xn)(o.id))
-                              return (0, h.openModalLazy)(async () => {
+                          let e = (0, b.Pd)(o, v.A, L.A);
+                          if (e && o.isGuildStageVoice() && (0, f.xn)(o.id))
+                              return (0, E.openModalLazy)(async () => {
                                   let { default: e } = await Promise.all([
                                       n.e("63092"),
                                       n.e("392028"),
@@ -110,44 +109,44 @@ let U = {
                                   return (t) => e({ channel: o, ...t });
                               });
                           if (e)
-                              return (0, h.openModalLazy)(async () => {
+                              return (0, E.openModalLazy)(async () => {
                                   let { default: e } = await n.e("354207").then(n.bind(n, 361698));
                                   return (t) => e(t);
                               });
-                          if (!(0, I.A)(o, v.A)) return;
+                          if (!(0, A.A)(o, D.A)) return;
                       }
-                      r && (0, m.PX)(),
+                      r && (0, p.PX)(),
                           (function (e, t, n) {
-                              let r = _.Ay.getVoiceChannelId(),
+                              let r = C.Ay.getVoiceChannelId(),
                                   a = c.A.getChannel(r);
                               if (null == t && null != r && null != a) {
                                   let t,
                                       r,
                                       s =
-                                          ((t = O.A.getRTCConnection()),
+                                          ((t = N.A.getRTCConnection()),
                                           (r = t?.getVoiceDurationStats()),
                                           {
                                               channel_id: a.id,
                                               channel_type: a.type,
                                               guild_id: a.getGuildId(),
-                                              rtc_connection_id: O.A.getRTCConnectionId(),
-                                              duration: O.A.getDuration(),
-                                              media_session_id: O.A.getMediaSessionId(),
-                                              ...(0, g.JK)(O.A.getGuildId(), O.A.getChannelId(), n),
+                                              rtc_connection_id: N.A.getRTCConnectionId(),
+                                              duration: N.A.getDuration(),
+                                              media_session_id: N.A.getMediaSessionId(),
+                                              ...(0, T.JK)(N.A.getGuildId(), N.A.getChannelId(), n),
                                               duration_muted_ms: r?.duration_muted_ms ?? null,
-                                              output_audio_route_type: L.A.getCurrentRouteType(),
+                                              output_audio_route_type: R.A.getCurrentRouteType(),
                                           });
-                                  if ((e(), N.A.hasUsedBackgroundInCall)) {
+                                  if ((e(), g.A.hasUsedBackgroundInCall)) {
                                       let e,
                                           t = {
                                               ...s,
-                                              ...((e = (0, S.i)(R.default.getCurrentUser())),
+                                              ...((e = (0, m.i)(O.default.getCurrentUser())),
                                               {
                                                   video_device_name:
                                                       u.Ay.getVideoDevices()[u.Ay.getVideoDeviceId()]?.name,
                                                   video_hardware_scaling_enabled: u.Ay.getHardwareEncoding(),
-                                                  video_effect_type: (0, C.wC)(e),
-                                                  video_effect_detail: (0, C._V)(e),
+                                                  video_effect_type: (0, S.wC)(e),
+                                                  video_effect_detail: (0, S._V)(e),
                                               }),
                                           };
                                       i.h.dispatch({ type: "VIDEO_BACKGROUND_SHOW_FEEDBACK", analyticsData: t });
@@ -155,12 +154,12 @@ let U = {
                               } else e();
                           })(
                               function () {
-                                  let n = (0, A.A)();
+                                  let n = (0, _.A)();
                                   i.h.dispatch({
                                       type: "VOICE_CHANNEL_SELECT",
                                       guildId: t,
                                       channelId: e,
-                                      currentVoiceChannelId: _.Ay.getVoiceChannelId(),
+                                      currentVoiceChannelId: C.Ay.getVoiceChannelId(),
                                       video: r,
                                       stream: a,
                                       lockVoiceStateForResume: s,
@@ -172,7 +171,7 @@ let U = {
                               r,
                           );
                   }
-              })(e, E, t, a, s));
+              })(e, M, t, a, s));
     },
     disconnect() {
         let e = s.default.getRemoteSessionId();
