@@ -22,14 +22,14 @@ function E(e) {
             renderStepBody: S,
             resolveInternalState: y,
             resolveTenantReviewButtonProps: I,
-            handleStepChange: g,
-            openInvoiceId: A,
+            handleStepChange: A,
+            openInvoiceId: g,
             analyticsData: P,
             analyticsLocation: v,
         } = e,
         {
-            paymentSourceId: x,
-            purchasePreviewError: _,
+            paymentSourceId: _,
+            purchasePreviewError: x,
             customCheckoutFlow: T,
             contextMetadata: N,
             purchaseError: b,
@@ -53,14 +53,14 @@ function E(e) {
     let k = i.useRef(null),
         { paymentSources: w } = (0, m.j)(),
         U = (0, C.sw)(),
-        D = (0, c.W)(w, x),
+        D = (0, c.W)(w, _),
         G = i.useMemo(() => {
-            if (null == x) return !1;
+            if (null == _) return !1;
             if (!O) return !0;
-            let e = M.find((e) => e.id === x);
+            let e = M.find((e) => e.id === _);
             return null != e && !e.enabled;
-        }, [M, O, x]),
-        F = (0, s.iB)({ checkoutPaymentSources: M, paymentSourceId: x, location: "CheckoutBaseReviewStep" }),
+        }, [M, O, _]),
+        F = (0, s.iB)({ checkoutPaymentSources: M, paymentSourceId: _, location: "CheckoutBaseReviewStep" }),
         { disablePurchase: B } = i.useMemo(() => {
             let e = { disablePurchase: F || T === f.uH.DEV_STORYBOOK_CHECKOUT };
             return null != y
@@ -68,14 +68,14 @@ function E(e) {
                       { ...e },
                       {
                           paymentSource: D,
-                          paymentSourceId: x,
+                          paymentSourceId: _,
                           isSelectedPaymentSourceDisabled: G,
                           invoicePreview: U,
-                          purchasePreviewError: _,
+                          purchasePreviewError: x,
                       },
                   )
                 : e;
-        }, [y, D, x, G, U, _, F, T]);
+        }, [y, D, _, G, U, x, F, T]);
     i.useEffect(() => {
         null != b && null != k.current && k.current.scrollIntoView({ behavior: "smooth" });
     }, [b]);
@@ -84,9 +84,9 @@ function E(e) {
         }, [j, n]),
         W = i.useCallback(
             (e) => {
-                R(e?.linkWalletEnabled ?? !0), g(o.pn.ADD_PAYMENT_STEPS);
+                R(e?.linkWalletEnabled ?? !0), A(o.pn.ADD_PAYMENT_STEPS);
             },
-            [g, R],
+            [A, R],
         ),
         Y = i.useMemo(() => S({ handlePaymentSourceAdd: W }), [S, W]),
         V = (0, l.jsx)(d.U, {
@@ -97,8 +97,8 @@ function E(e) {
             disablePurchase: B,
             analyticsLocation: v,
             baseAnalyticsData: P,
-            openInvoiceId: A,
-            handleStepChange: g,
+            openInvoiceId: g,
+            handleStepChange: A,
             postPurchaseStep: o.pn.CONFIRM,
             backButtonEligible: r,
             metadata: E,

@@ -1,7 +1,7 @@
 r.d(t, {
     $P: () => x,
-    H9: () => C,
-    Qh: () => v,
+    H9: () => v,
+    Qh: () => C,
     Se: () => T,
     Tr: () => M,
     V$: () => G,
@@ -32,7 +32,7 @@ var n = r(435558),
     _ = r(355097),
     y = r(375708);
 let S = /-/g;
-function v(e) {
+function C(e) {
     let t = null != e ? { [e]: 1 } : {};
     u.Ay.trackWithMetadata(E.HAw.SEARCH_STARTED, {
         search_type: E.I4_.GIF,
@@ -42,7 +42,7 @@ function v(e) {
         gif_provider: c.jQ,
     });
 }
-function C(e, t) {
+function v(e, t) {
     let { startTime: r, ...n } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
         s = { offset: 0, limit: null, totalResults: e.length },
         l = (0, f.QL)(p.A.getAnalyticsID(), t, { ...s, ...n, results: e.length }),
@@ -51,7 +51,7 @@ function C(e, t) {
 }
 function A(e, t, r) {
     let n = Date.now();
-    v(t),
+    C(t),
         i.Bo.get({
             url: E.Rsh.GIFS_SEARCH,
             query: { q: e, media_format: p.A.getSelectedFormat(), locale: h.default.locale, limit: r },
@@ -60,7 +60,7 @@ function A(e, t, r) {
         }).then(
             (s) => {
                 let l = s.body;
-                C(l, t, { startTime: n, limit: r }),
+                v(l, t, { startTime: n, limit: r }),
                     o.h.dispatch({ type: "GIF_PICKER_QUERY_SUCCESS", query: e, items: l });
             },
             () => o.h.dispatch({ type: "GIF_PICKER_QUERY_FAILURE", query: e }),
@@ -116,7 +116,7 @@ function D() {
 }
 function j(e) {
     let t = Date.now();
-    v(E.dD.TRENDING_GIFS),
+    C(E.dD.TRENDING_GIFS),
         i.Bo.get({
             url: E.Rsh.GIFS_TRENDING_GIFS,
             query: { media_format: p.A.getSelectedFormat(), locale: h.default.locale, limit: e },
@@ -125,7 +125,7 @@ function j(e) {
         }).then(
             (r) => {
                 let { body: n } = r;
-                C(n, E.dD.TRENDING_GIFS, { startTime: t, limit: e }),
+                v(n, E.dD.TRENDING_GIFS, { startTime: t, limit: e }),
                     o.h.dispatch({ type: "GIF_PICKER_QUERY_SUCCESS", items: n });
             },
             () => {

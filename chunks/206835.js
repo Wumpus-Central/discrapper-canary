@@ -18,7 +18,7 @@ function c() {
         if (o) {
             let t = r.default.getCurrentUser();
             if (null != t) {
-                let { openUserProfileModal: s } = l(975732);
+                let { openUserProfileModal: s } = l(402860);
                 s({ userId: t.id, guildId: e?.id, sourceAnalyticsLocations: c });
                 return;
             }

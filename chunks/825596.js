@@ -1,4 +1,4 @@
-n.d(t, { A: () => O, i: () => M });
+n.d(t, { A: () => O, i: () => k });
 var i = n(477900),
     l = n(582128),
     s = n(503698),
@@ -11,8 +11,8 @@ var i = n(477900),
     m = n(922016),
     h = n(939249),
     g = n(530005),
-    p = n(890856),
-    A = n(297264),
+    A = n(890856),
+    p = n(297264),
     x = n(696986),
     f = n(834730),
     E = n(442433),
@@ -55,8 +55,8 @@ function b() {
     });
 }
 var R = n(818348),
-    L = n(402805);
-function k(e) {
+    M = n(402805);
+function L(e) {
     let {
         showEditProduct: t,
         showUnpublishProduct: n,
@@ -66,15 +66,15 @@ function k(e) {
         showReportProduct: m,
         onEditProduct: h,
         onUnpublishProduct: g,
-        onDeleteProduct: p,
-        onCopyLink: A,
+        onDeleteProduct: A,
+        onCopyLink: p,
         onTestDownload: x,
         onReportProduct: f,
         closePopout: E,
         onSelect: I,
     } = e;
     return (0, i.jsx)("div", {
-        className: L.li,
+        className: M.li,
         children: (0, i.jsxs)(r.W, {
             "data-menu-migrated": !0,
             navId: "guild-product-context",
@@ -98,7 +98,7 @@ function k(e) {
                                 label: j.intl.string(j.t.XR26uj),
                                 icon: d.LinkIcon,
                                 leadingAccessory: { type: "icon", icon: d.LinkIcon },
-                                action: A,
+                                action: p,
                             }),
                         s &&
                             (0, i.jsx)(o.Dr, {
@@ -123,7 +123,7 @@ function k(e) {
                                 id: "guild-product-delete",
                                 label: j.intl.string(j.t.zWjqvB),
                                 color: "danger",
-                                action: p,
+                                action: A,
                             }),
                     ],
                 }),
@@ -141,7 +141,7 @@ function k(e) {
         }),
     });
 }
-function M(e) {
+function k(e) {
     let {
             product: t,
             guildId: n,
@@ -152,8 +152,8 @@ function M(e) {
             showDeleteProduct: c,
             showReportProduct: d,
             onEditProduct: u,
-            onUnpublishProduct: p,
-            onDeleteProduct: A,
+            onUnpublishProduct: A,
+            onDeleteProduct: p,
             onCopyProductLink: x,
             onTestDownload: f,
             onReportProduct: E,
@@ -170,7 +170,7 @@ function M(e) {
             spacing: -8,
             animation: m.Y.Animation.FADE,
             renderPopout: (e) =>
-                (0, i.jsx)(k, {
+                (0, i.jsx)(L, {
                     ...e,
                     guildId: n,
                     productId: t.id,
@@ -181,8 +181,8 @@ function M(e) {
                     showReportProduct: d,
                     showDeleteProduct: c,
                     onEditProduct: u,
-                    onUnpublishProduct: p,
-                    onDeleteProduct: A,
+                    onUnpublishProduct: A,
+                    onDeleteProduct: p,
                     onCopyLink: x,
                     onTestDownload: f,
                     onReportProduct: E,
@@ -195,11 +195,11 @@ function M(e) {
                     "aria-label": j.intl.formatToPlainString(j.t.RtqjeB, { productName: t.name }),
                     "aria-haspopup": "listbox",
                     "aria-expanded": l,
-                    className: L.hC,
+                    className: M.hC,
                     children: (0, i.jsx)(g.F, {
                         size: "md",
                         color: "currentColor",
-                        className: L.Su,
+                        className: M.Su,
                         "aria-hidden": !0,
                     }),
                 });
@@ -221,14 +221,14 @@ function O(e) {
         u = (0, I.R)(t, 600),
         m = null !== t.price_tier ? (0, C.$g)(t.price_tier, R.Yr.USD) : void 0,
         h = (0, _.z)(t);
-    return (0, i.jsxs)(p.s, {
+    return (0, i.jsxs)(A.s, {
         tag: "article",
-        className: a()(L.gc, L.Um, { [L.r9]: d }),
+        className: a()(M.gc, M.Um, { [M.r9]: d }),
         onClick: d ? void 0 : l,
         onContextMenu: function (e) {
             (0, E.L3)(e, () =>
                 Promise.resolve((e) =>
-                    (0, i.jsx)(k, {
+                    (0, i.jsx)(L, {
                         ...e,
                         closePopout: E.Z_,
                         guildId: n,
@@ -251,28 +251,28 @@ function O(e) {
         },
         "aria-label": j.intl.formatToPlainString(j.t["X/yAKs"], { productName: t.name }),
         children: [
-            (0, i.jsx)("img", { alt: "", src: u, className: L.K_ }),
+            (0, i.jsx)("img", { alt: "", src: u, className: M.K_ }),
             (0, i.jsxs)("div", {
-                className: L.aG,
+                className: M.aG,
                 children: [
                     (0, i.jsxs)("div", {
-                        className: L.jb,
+                        className: M.jb,
                         children: [
-                            (0, i.jsx)(A.D, {
+                            (0, i.jsx)(p.D, {
                                 variant: "text-md/semibold",
                                 color: "text-strong",
-                                className: L.tZ,
+                                className: M.tZ,
                                 children: t.name,
                             }),
                             (0, i.jsx)(x.h, { size: 8 }),
                             (0, i.jsxs)("div", {
-                                className: L.MS,
+                                className: M.MS,
                                 children: [
                                     (0, i.jsx)(f.E, { variant: "text-md/normal", color: "text-default", children: m }),
                                     null != h
                                         ? (0, i.jsxs)(i.Fragment, {
                                               children: [
-                                                  (0, i.jsx)("div", { className: L.zk }),
+                                                  (0, i.jsx)("div", { className: M.zk }),
                                                   (0, i.jsx)(f.E, {
                                                       variant: "text-md/normal",
                                                       color: "text-default",
@@ -288,7 +288,7 @@ function O(e) {
                         ],
                     }),
                     !d &&
-                        (0, i.jsx)(M, {
+                        (0, i.jsx)(k, {
                             product: t,
                             guildId: n,
                             showEditProduct: !0,

@@ -11,7 +11,7 @@ var i = n(477900),
     m = n(29814),
     h = n(46054);
 let g = d().omit(m.Ay.RULES, ["codeBlock", "heading"]),
-    p = {
+    A = {
         ...u.A,
         parse: function (e, t, n) {
             let i = u.A.parse(e, t, n),
@@ -19,8 +19,8 @@ let g = d().omit(m.Ay.RULES, ["codeBlock", "heading"]),
             return { ...i, level: l };
         },
     },
-    A = h.A.combineAndInjectMentionRule(g, [h.A.createReactRules(h.A.defaultReactRuleOptions), { header: p }]),
-    x = h.A.reactParserFor(A);
+    p = h.A.combineAndInjectMentionRule(g, [h.A.createReactRules(h.A.defaultReactRuleOptions), { header: A }]),
+    x = h.A.reactParserFor(p);
 var f = n(199014),
     E = n(165648);
 function I(e) {

@@ -283,7 +283,7 @@ var en = n(163126),
     ei = n(688810),
     el = n(913453),
     es = n(229187),
-    er = n(975732),
+    er = n(402860),
     ea = n(503062),
     eo = n(393213);
 function ed(e) {
@@ -492,7 +492,7 @@ let e2 = l.memo(function (e) {
           })
         : (0, i.jsx)("li", { children: m });
 });
-function e7(e) {
+function e3(e) {
     var t;
     let { items: n, profileOwner: s, guildId: r, showEditingControls: a } = e,
         o = eW.default.getCurrentUser(),
@@ -549,13 +549,13 @@ function e7(e) {
     });
     return a ? (0, i.jsx)(e0.B, { emptyListFallbackRef: null, children: p }) : p;
 }
-function e3(e) {
+function e7(e) {
     let t = eW.default.getCurrentUser()?.id,
         n = null != t && t !== e.profileOwner.id;
     return (0, i.jsx)(eZ.h, {
         isGifting: n,
         location: "UserProfileModalV2WishlistGrid",
-        children: (0, i.jsx)(e7, { ...e }),
+        children: (0, i.jsx)(e3, { ...e }),
     });
 }
 var e5 = n(815021),
@@ -1140,7 +1140,7 @@ function ty(e) {
                               handleOpenGameShop: E,
                               handleAddNitroToWishlist: (0, eU.C3)(u, tv.pe.TIER_2) ? void 0 : v,
                           }),
-                          (0, i.jsx)(e3, { items: u.items, profileOwner: t, guildId: n, showEditingControls: c }),
+                          (0, i.jsx)(e7, { items: u.items, profileOwner: t, guildId: n, showEditingControls: c }),
                       ],
                   }),
             c &&

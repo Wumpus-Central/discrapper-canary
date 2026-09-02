@@ -17,13 +17,13 @@ var l = n(477900),
     S = n(558620),
     y = n(669510),
     I = n(683071),
-    g = n(834730),
-    A = n(212739);
+    A = n(834730),
+    g = n(212739);
 n(216238);
 var P = n(202541),
     v = n(763430),
-    x = n(375708),
-    _ = n(580194),
+    _ = n(375708),
+    x = n(580194),
     T = n(732280),
     N = n(73663),
     b = n(815545),
@@ -52,13 +52,13 @@ function B(e) {
             hideCurrencySelect: r,
             disabled: a,
             hasEntitlements: s,
-            label: o = x.intl.string(x.t["u+Cw58"]),
+            label: o = _.intl.string(_.t["u+Cw58"]),
             location: u = "PremiumSubscriptionReview",
         } = e,
         { paymentGatewayRestrictions: d } = (0, c.Y)(),
         m = i.useMemo(
             () => ({
-                newPaymentMethodOptionLabel: s && !n ? x.intl.string(x.t.IGU7El) : null,
+                newPaymentMethodOptionLabel: s && !n ? _.intl.string(_.t.IGU7El) : null,
                 isTrial: n,
                 paymentGatewayRestrictions: d,
             }),
@@ -90,15 +90,15 @@ function K(e) {
                       alt: "",
                       src: "https://cdn.discordapp.com/assets/content/b6d1d954e5c9ccfd2356d7af86ca2a4a59717635cc6f558f731edb2e6046b25c.png",
                   }),
-                  title: (0, l.jsx)(g.E, {
+                  title: (0, l.jsx)(A.E, {
                       variant: "text-md/medium",
                       color: "text-strong",
-                      children: x.intl.formatToPlainString(x.t.vXqqUc, { orbCount: 5e3 }),
+                      children: _.intl.formatToPlainString(_.t.vXqqUc, { orbCount: 5e3 }),
                   }),
-                  body: (0, l.jsx)(g.E, {
+                  body: (0, l.jsx)(A.E, {
                       variant: "text-sm/medium",
                       color: "text-muted",
-                      children: x.intl.string(x.t.Ev7DO6),
+                      children: _.intl.string(_.t.Ev7DO6),
                   }),
               }),
           })
@@ -179,16 +179,16 @@ function $(e) {
                         { isGift: y } = (0, C.Pv)(),
                         {
                             subscriptionPlan: I,
-                            purchaseDisabled: g,
-                            newItems: A,
+                            purchaseDisabled: A,
+                            newItems: g,
                             preventInvoiceFetch: P,
                         } = (0, f.TP)({ selectedPlanId: t, priceOptions: n }),
                         {
                             universalInvoiceRequestParams: v,
-                            checkoutInvoiceRequestParams: x,
-                            renewalInvoiceRequestParams: _,
+                            checkoutInvoiceRequestParams: _,
+                            renewalInvoiceRequestParams: x,
                         } = (0, f.jq)({
-                            items: A,
+                            items: g,
                             preventFetch: P,
                             priceOptions: n,
                             trialId: l,
@@ -201,10 +201,10 @@ function $(e) {
                                           type: "premium_one_time_gift_purchase_invoice",
                                           params: { ...v, skuId: s, subscriptionPlanId: t, quantity: p },
                                       }
-                                    : { type: "subscription_checkout_invoice", params: x },
-                            [v, x, y, t, s, p],
+                                    : { type: "subscription_checkout_invoice", params: _ },
+                            [v, _, y, t, s, p],
                         ),
-                        N = i.useMemo(() => (y ? null : { type: "subscription_renewal_invoice", params: _ }), [_, y]);
+                        N = i.useMemo(() => (y ? null : { type: "subscription_renewal_invoice", params: x }), [x, y]);
                     i.useEffect(() => {
                         o(T);
                     }, [T, o]),
@@ -231,7 +231,7 @@ function $(e) {
                         discriminatedInvoicePreview: O,
                         proratedInvoicePreview: b,
                         renewalInvoicePreview: m,
-                        purchaseDisabled: g,
+                        purchaseDisabled: A,
                         invoiceError: R,
                         subscriptionPeriodEnd: L,
                     };
@@ -249,13 +249,13 @@ function $(e) {
         { giftRecipient: eE, selectedGiftingPromotionRewards: eS } = (0, C.Pv)(),
         ey = J && (0, R.Ik)(eE),
         eI = (0, h.t4)((e) => e.getIsInOneStepSubscriptionCheckout({ isTrial: ec })) && !eu && !ee,
-        eg = U?.guild_id ?? void 0,
-        eA = (0, a.A)({ forceFetch: !1, excludeReverseTrial: !1, excludeReverseTrialFromCountdown: !0 }),
+        eA = U?.guild_id ?? void 0,
+        eg = (0, a.A)({ forceFetch: !1, excludeReverseTrial: !1, excludeReverseTrialFromCountdown: !0 }),
         { paymentSources: eP } = (0, c.j)(),
         {
             hasEntitlements: ev,
-            paymentSourceType: ex,
-            isPrepaid: e_,
+            paymentSourceType: e_,
+            isPrepaid: ex,
             paymentSourceOptionalWarningCopy: eT,
         } = (function (e) {
             let { subscriptionPlan: t, paymentSources: n } = e,
@@ -268,7 +268,7 @@ function $(e) {
                 o = (0, M.J$)(l.paymentSourceId),
                 { hasEntitlements: u, entitlements: c } = (0, j.X)(t.id, r),
                 d = i.useMemo(
-                    () => (u && null == a ? x.intl.format(x.t["2wPRSF"], { months: c.length }) : null),
+                    () => (u && null == a ? _.intl.format(_.t["2wPRSF"], { months: c.length }) : null),
                     [u, a, c],
                 );
             return {
@@ -285,7 +285,7 @@ function $(e) {
             [ef, eN],
         ),
         ej = (0, l.jsx)(B, {
-            label: x.intl.string(x.t["u+Cw58"]),
+            label: _.intl.string(_.t["u+Cw58"]),
             handlePaymentSourceAdd: F,
             isTrial: ec,
             hideCurrencySelect: eb,
@@ -295,7 +295,7 @@ function $(e) {
         eR = (0, T.V)($),
         { copy: eM, daysCount: eO, userTrialOffer: eL } = (0, N.O8)(),
         ek = (0, w.pt)({
-            fractionalPremiumInfo: eA,
+            fractionalPremiumInfo: eg,
             selectedPlanId: er,
             planGroup: n,
             premiumSubscription: X,
@@ -305,45 +305,45 @@ function $(e) {
         eU = (0, M.L_)({ planId: ei.id, isGift: !0, priceOptions: Y, subscriptionPlan: ei }),
         eD = i.useMemo(() => {
             if (null != eU && ew)
-                return { headerBadgeText: x.intl.formatToPlainString(Q.default["Mi5BH/"], { percentOff: eU }) };
+                return { headerBadgeText: _.intl.formatToPlainString(Q.default["Mi5BH/"], { percentOff: eU }) };
         }, [eU, ew]),
         eG = (0, L.Fe)(eD),
         eF = i.useMemo(() => {
             if (null != ed && ed.type === d.u$.PREMIUM_WITH_TRIAL && null != eL)
-                return (0, l.jsx)(G, { text: x.intl.format(Q.default.IAsfR5, { daysCount: eO }) });
+                return (0, l.jsx)(G, { text: _.intl.format(Q.default.IAsfR5, { daysCount: eO }) });
             if (null != ef && eb) {
                 let e = ef.discount,
                     t = e.intervalCount;
                 if (e.intervalType === P.Ff.MONTH)
                     return (0, l.jsx)(G, {
-                        text: x.intl.format(Q.default.wCkwJf, { percentOff: e.amount, intervalCount: t }),
+                        text: _.intl.format(Q.default.wCkwJf, { percentOff: e.amount, intervalCount: t }),
                     });
                 if (e.intervalType === P.Ff.YEAR)
-                    return (0, l.jsx)(G, { text: x.intl.format(Q.default["tUzT/U"], { percentOff: e.amount }) });
+                    return (0, l.jsx)(G, { text: _.intl.format(Q.default["tUzT/U"], { percentOff: e.amount }) });
             }
             return ew && null != eU
-                ? (0, l.jsx)(G, { text: x.intl.format(Q.default["7sYIBL"], { savingsPercent: eU }) })
+                ? (0, l.jsx)(G, { text: _.intl.format(Q.default["7sYIBL"], { savingsPercent: eU }) })
                 : null;
         }, [eL, eb, ef, eO, ed, eU, ew]),
         eB = (function (e) {
             let { skuId: t, isGift: n } = e,
-                r = (0, A.O)();
+                r = (0, g.O)();
             return i.useMemo(
                 () =>
                     n || t !== P.pe.TIER_2 || !1 === r
                         ? null
                         : (0, l.jsx)(I.w, {
                               type: "info",
-                              children: (0, l.jsx)(g.E, {
+                              children: (0, l.jsx)(A.E, {
                                   variant: "text-sm/medium",
-                                  children: x.intl.format(v.default.Urtyu9, { days: 7 }),
+                                  children: _.intl.format(v.default.Urtyu9, { days: 7 }),
                               }),
                           }),
                 [n, t, r],
             );
         })({ skuId: ei.skuId, isGift: J }),
         eH = (0, O.i)({ planSkuId: ei.skuId, invoice: eN }),
-        eW = (0, _.Mq)(ei) && eS.includes(r.a.SUMMER_2026_GOGO_FAKE_SKU_ID),
+        eW = (0, x.Mq)(ei) && eS.includes(r.a.SUMMER_2026_GOGO_FAKE_SKU_ID),
         eY = i.useMemo(() => {
             let e = eF ?? eH ?? null;
             return eW ? (0, l.jsx)(K, { fallback: e }) : e;
@@ -356,7 +356,7 @@ function $(e) {
                 ek
                     ? e.push({
                           directContent: (0, l.jsx)(H.l, {
-                              fractionalPremiumInfo: eA,
+                              fractionalPremiumInfo: eg,
                               isEligibleForTrial: ea,
                               trialPeriodCopy: eM,
                               subscriptionPeriodEnd: em,
@@ -367,7 +367,7 @@ function $(e) {
                 null != eB && e.push({ directContent: eB, key: "xbox-perks-notice" }),
                 e.length > 0 ? e : null
             );
-        }, [D, eT, ek, eA, ea, eM, em, eu, eB]),
+        }, [D, eT, ek, eg, ea, eM, em, eu, eB]),
         eK = null != ed ? ed.invoicePreview : null,
         { priceOptions: eZ, planPricesLoading: eq } = (0, M.Pr)(Y, eK, V),
         ez = {
@@ -397,13 +397,13 @@ function $(e) {
                 : (0, l.jsx)(o.k, {
                       discriminatedInvoicePreview: ed,
                       subscriptionPlan: ei,
-                      isPrepaidPaymentSource: e_,
+                      isPrepaidPaymentSource: ex,
                       subscriptionTrial: eQ,
                       isCustomGift: ey,
                   }),
         eJ = null;
     if (
-        !e_ &&
+        !ex &&
         (d.ME.has(ed.type) || ed.type === d.u$.PREMIUM_WITH_TRIAL) &&
         "renewalInvoicePreview" in ed &&
         null != ed.renewalInvoicePreview
@@ -411,7 +411,7 @@ function $(e) {
         let e = (0, z.Gj)(ed.invoicePreview, ed.renewalInvoicePreview, eQ, {
             discountOffer: ef,
             isSubscriptionUpdate: null != X,
-            fractionalPremiumInfo: eA,
+            fractionalPremiumInfo: eg,
         });
         eJ = (0, l.jsx)(y._, { ...e, defaultExpanded: en });
     }
@@ -422,19 +422,19 @@ function $(e) {
                   invoicePreview: ed.invoicePreview,
                   storeListing: eh,
                   subscriptionPlan: ei,
-                  isPrepaidPaymentSource: e_,
+                  isPrepaidPaymentSource: ex,
                   giftRecipient: eE,
                   isPremiumGroupPurchase: eu,
-                  guildId: eg,
+                  guildId: eA,
               }),
         e0 = (0, l.jsx)(H.P, {
             activeSubscription: X,
             isTrial: ec,
             plan: ei,
             isGift: J,
-            paymentSourceType: ex,
+            paymentSourceType: e_,
             discriminatedInvoicePreview: ed,
-            fractionalPremiumInfo: eA,
+            fractionalPremiumInfo: eg,
         }),
         e1 =
             ed.type === d.u$.PREMIUM_WITH_TRIAL
@@ -447,6 +447,6 @@ function $(e) {
         invoiceSummaryContent: e$,
         legalContent: e0,
         invoiceTotalDueValue: e1,
-        invoiceTotalDueLabel: J ? x.intl.string(Q.default.Zxav97) : x.intl.string(Q.default.R0cZsM),
+        invoiceTotalDueLabel: J ? _.intl.string(Q.default.Zxav97) : _.intl.string(Q.default.R0cZsM),
     });
 }

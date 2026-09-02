@@ -179,8 +179,8 @@ function y(e) {
         { enabled: y } = (0, o.c)({ location: u }),
         {
             pendingPaymentSourceId: I,
-            hasInitialPaymentSourceSeed: g,
-            hasAddedPaymentSourceThisSession: A,
+            hasInitialPaymentSourceSeed: A,
+            hasAddedPaymentSourceThisSession: g,
         } = (0, a.t4)((e) => ({
             pendingPaymentSourceId: e.pendingPaymentSourceId,
             hasInitialPaymentSourceSeed: null != e.initialPaymentSourceId,
@@ -192,12 +192,12 @@ function y(e) {
                 ? { dropdownPaymentSources: e, giftCardWallet: (0, c.N)(i) }
                 : { dropdownPaymentSources: e, giftCardWallet: null };
         }, [i, y]),
-        [x, _] = l.useState(null),
+        [_, x] = l.useState(null),
         T = null != v && r === v.id,
         N = l.useMemo(
             () =>
-                null != x ? x : m({ giftCardWallet: null, dropdownPaymentSources: P, subscriptionPaymentSourceId: S }),
-            [P, S, x],
+                null != _ ? _ : m({ giftCardWallet: null, dropdownPaymentSources: P, subscriptionPaymentSourceId: S }),
+            [P, S, _],
         ),
         b = l.useMemo(() => (T ? N : (r ?? null)), [N, T, r]),
         j = l.useMemo(
@@ -210,10 +210,10 @@ function y(e) {
                 pendingPaymentSourceId: I,
                 paymentSourceId: r,
                 giftCardsEnabled: y,
-                hasInitialPaymentSourceSeed: g,
-                hasAddedPaymentSourceThisSession: A,
+                hasInitialPaymentSourceSeed: A,
+                hasAddedPaymentSourceThisSession: g,
             }),
-            [i, P, S, v, E, I, r, y, g, A],
+            [i, P, S, v, E, I, r, y, A, g],
         );
     (t = l.useRef(!1)),
         (n = l.useMemo(() => new p(j), [j])),
@@ -238,7 +238,7 @@ function y(e) {
         M = l.useCallback(
             (e) => {
                 if (e && null != v) {
-                    r !== v.id && _(r ?? null), s(v.id);
+                    r !== v.id && x(r ?? null), s(v.id);
                     return;
                 }
                 s(N);

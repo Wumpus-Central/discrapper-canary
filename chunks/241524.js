@@ -1,17 +1,17 @@
-s.d(t, { A: () => i });
-var a = s(582128),
-    c = s(267102);
-function i(e) {
-    let { renderWindow: t } = (0, a.useContext)(c.Ay),
-        [s, i] = (0, a.useState)(() => t.matchMedia(e)?.matches ?? !1);
+e.d(n, { A: () => a });
+var i = e(582128),
+    r = e(267102);
+function a(t) {
+    let { renderWindow: n } = (0, i.useContext)(r.Ay),
+        [e, a] = (0, i.useState)(() => n.matchMedia(t)?.matches ?? !1);
     return (
-        (0, a.useEffect)(() => {
-            let s = t.matchMedia(e);
-            function a(e) {
-                i(e?.matches ?? !1);
+        (0, i.useEffect)(() => {
+            let e = n.matchMedia(t);
+            function i(t) {
+                a(t?.matches ?? !1);
             }
-            return a(s), s?.addListener(a), () => s?.removeListener(a);
-        }, [e, t]),
-        s
+            return i(e), e?.addListener(i), () => e?.removeListener(i);
+        }, [t, n]),
+        e
     );
 }

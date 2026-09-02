@@ -11,8 +11,8 @@ var i = n(477900),
     m = n(960538),
     h = n(17928),
     g = n(606096),
-    p = n(997146),
-    A = n(866665),
+    A = n(997146),
+    p = n(866665),
     x = n(228366),
     f = n(280450),
     E = n(956703),
@@ -82,17 +82,17 @@ let b = new y(x.h, {
     },
 });
 var R = n(738125),
-    L = n(554146),
-    k = n(43105),
-    M = n(826673),
+    M = n(554146),
+    L = n(43105),
+    k = n(826673),
     O = n(367727),
     P = n(49999),
     D = n(375708),
     U = n(936037);
-let G = L.M.FOR_LATER_REACTION_COACHMARK;
+let G = M.M.FOR_LATER_REACTION_COACHMARK;
 function w(e) {
     let { targetElementRef: t, onDismiss: n } = e;
-    return (0, i.jsx)(k.A, {
+    return (0, i.jsx)(L.A, {
         targetElementRef: t,
         gradientColor: "purple",
         position: "top",
@@ -109,8 +109,8 @@ function w(e) {
 }
 var H = n(519222),
     V = n(356974),
-    B = n(988626);
-function F(e) {
+    F = n(988626);
+function B(e) {
     let { message: t, channel: n, useChatFontScaling: s, className: r } = e,
         c = (0, _.jv)("message_reactions"),
         d = (0, h.bG)([v.A], () => v.A.getSavedMessage(n.id, t.id)),
@@ -119,7 +119,7 @@ function F(e) {
         x = (0, h.bG)([b], () => b.isNudging(n.id, t.id)),
         E = l.useRef(null),
         { isCoachmarkVisible: I, dismissCoachmark: C } = (function (e) {
-            let t = (0, M.HX)(G),
+            let t = (0, k.HX)(G),
                 n = (0, h.bG)([v.A], () => v.A.getSavedMessageCount() > 0),
                 i = e && !t && !n,
                 [s, a] = l.useState(!1);
@@ -127,7 +127,7 @@ function F(e) {
             let [r, o] = l.useState(!1),
                 c = e && !r && (i || s),
                 d = l.useCallback((e) => {
-                    (0, M.Dr)(G, { dismissAction: e });
+                    (0, k.Dr)(G, { dismissAction: e });
                 }, []),
                 u = l.useCallback(
                     (e) => {
@@ -147,11 +147,11 @@ function F(e) {
         })(x);
     if ((!(0, h.bG)([b], () => b.hasRecentlyReacted(n.id, t.id)) && !u) || !c || t.author.id === f.default.getId() || m)
         return null;
-    let N = s ? B : V,
-        j = u ? g.BookmarkIcon : p.c;
+    let N = s ? F : V,
+        j = u ? g.BookmarkIcon : A.c;
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)(A.m, {
+            (0, i.jsx)(p.m, {
                 asContainer: !0,
                 text: u ? D.intl.string(D.t.LHUP9D) : D.intl.string(D.t["9p3D9p"]),
                 children: (0, i.jsx)(o.D, {
@@ -174,8 +174,8 @@ var z = n(860227),
     K = n(317097),
     Y = n(565645),
     W = n(114166),
-    Z = n(891734),
-    X = n(815807),
+    X = n(891734),
+    Z = n(815807),
     q = n(831688);
 let Q = l.memo(function (e) {
         let t,
@@ -190,15 +190,15 @@ let Q = l.memo(function (e) {
                 burst_count: m,
                 burst_colors: h,
                 readOnly: g,
-                isLurking: p,
-                isPendingMember: A,
+                isLurking: A,
+                isPendingMember: p,
                 type: x,
                 emojiSize: f,
             } = e,
             E = x === u.v.BURST,
-            I = (0, X.IN)(c, d, x),
-            C = (0, Z.g)(E && null != h ? h : []),
-            _ = l ? B : V,
+            I = (0, Z.IN)(c, d, x),
+            C = (0, X.g)(E && null != h ? h : []),
+            _ = l ? F : V,
             v = E ? m : o,
             N = (0, W.x)(v, q.$),
             j = {};
@@ -209,7 +209,7 @@ let Q = l.memo(function (e) {
         }
         let T = { minWidth: N, color: t, borderColor: n };
         return (0, i.jsxs)("div", {
-            className: a()(_.reaction, _.reactionInner, r, { [_.reactionMe]: I, [_.reactionReadOnly]: g && !p && !A }),
+            className: a()(_.reaction, _.reactionInner, r, { [_.reactionMe]: I, [_.reactionReadOnly]: g && !A && !p }),
             style: j,
             children: [
                 (0, i.jsx)(Y.A, { emojiId: s.id, emojiName: s.name, size: f, animated: E && s.animated }),
@@ -270,15 +270,15 @@ class et extends l.PureComponent {
                 isForumToolbar: u,
                 channel: h,
                 className: g,
-                reactionClassName: p,
-                useChatFontScaling: A,
+                reactionClassName: A,
+                useChatFontScaling: p,
                 forceHideReactionCreates: x,
                 remainingReactions: f,
                 combinedReactions: E,
                 visibleReactionsCount: I,
             } = this.props,
             { disableTransitionAppear: C } = this.state,
-            _ = A ? B : V;
+            _ = p ? F : V;
         return I > 0
             ? (0, i.jsxs)(r.F, {
                   component: "div",
@@ -295,15 +295,15 @@ class et extends l.PureComponent {
                           isLurking: l,
                           isPendingMember: s,
                           isForumToolbar: u,
-                          useChatFontScaling: A,
-                          className: p,
+                          useChatFontScaling: p,
+                          className: A,
                       }),
                       f > 0 &&
                           (0, i.jsx)(o.D, {
                               onClick: (t) => {
                                   t.stopPropagation(), (0, d.$)(e);
                               },
-                              className: a()(_.reaction, p, _.remainingReactions),
+                              className: a()(_.reaction, A, _.remainingReactions),
                               "aria-label": D.intl.string(D.t.lfIHs4),
                               children: (0, i.jsxs)(c.E, {
                                   className: _.reactionInner,
@@ -313,8 +313,8 @@ class et extends l.PureComponent {
                           }),
                       !t &&
                           !x &&
-                          (0, i.jsx)(m.t, { message: e, channel: h, useChatFontScaling: A, className: _.forceShow }),
-                      !u && (0, i.jsx)(F, { message: e, channel: h, useChatFontScaling: A }),
+                          (0, i.jsx)(m.t, { message: e, channel: h, useChatFontScaling: p, className: _.forceShow }),
+                      !u && (0, i.jsx)(B, { message: e, channel: h, useChatFontScaling: p }),
                   ],
               })
             : null;

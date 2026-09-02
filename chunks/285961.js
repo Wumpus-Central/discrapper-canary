@@ -1,4 +1,4 @@
-r.d(t, { d5: () => V, Ay: () => W, uG: () => U });
+r.d(t, { d5: () => V, Ay: () => H, uG: () => U });
 var n = r(477900),
     s = r(582128),
     l = r(503698),
@@ -36,8 +36,8 @@ var c = r(803805),
     _ = r(497685),
     y = r(25277),
     S = r(537652),
-    v = r(267102),
-    C = r(679164),
+    C = r(267102),
+    v = r(679164),
     A = r(439401),
     w = r(957565),
     x = r(998218),
@@ -135,10 +135,10 @@ class U extends s.PureComponent {
                   src:
                       ((t =
                           null != (e = x.A.toURLSafe(r)) &&
-                          (C.BX(e) || C.i(e)) &&
+                          (v.BX(e) || v.i(e)) &&
                           e.pathname.toLowerCase().endsWith(".gif")),
                       null != e &&
-                      (((C.BX(e) || C.i(e)) &&
+                      (((v.BX(e) || v.i(e)) &&
                           (e.pathname.toLowerCase().endsWith(".webp") || e.pathname.toLowerCase().endsWith(".avif"))) ||
                           t)
                           ? (t && e.searchParams.set("format", "webp"),
@@ -425,7 +425,7 @@ class O extends s.PureComponent {
     }
 }
 function V() {
-    let { renderWindow: e } = s.useContext(v.Ay),
+    let { renderWindow: e } = s.useContext(C.Ay),
         t = e.document,
         [r] = s.useState(
             () =>
@@ -461,7 +461,7 @@ function V() {
         );
     return { imagePool: r, videoPool: n };
 }
-let W = function (e) {
+let H = function (e) {
     let t = V();
     return (0, n.jsx)(O, { ...e, ...t });
 };

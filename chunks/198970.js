@@ -166,12 +166,12 @@ let y = [
     I = u.A.map((e) => ({ id: e.alpha2, value: e.alpha2, label: e.name })).filter(
         (e) => "KP" !== e.value && "SY" !== e.value,
     ),
-    g = Object.freeze(I.reduce((e, t) => ({ ...e, [t.label.toLowerCase()]: t.value }), {})),
-    A = (0, C.Ld)(),
+    A = Object.freeze(I.reduce((e, t) => ({ ...e, [t.label.toLowerCase()]: t.value }), {})),
+    g = (0, C.Ld)(),
     P = (0, C.Ld)(),
     v = (0, C.Ld)(),
-    x = (0, C.Ld)(),
     _ = (0, C.Ld)(),
+    x = (0, C.Ld)(),
     T = (0, C.Ld)(),
     N = (0, C.Ld)();
 var b =
@@ -191,7 +191,7 @@ let R = { US: c, CA: s },
     M = { US: d, CA: o },
     O = (e, t) => ({
         name: "name",
-        id: A,
+        id: g,
         title: () => E.intl.string(E.t.vyuULb),
         autoComplete: "name",
         getClassNameForLayout: (e) =>
@@ -242,7 +242,7 @@ let R = { US: c, CA: s },
                         let l = t.target.value;
                         if (null == n) return;
                         let i = l.toLowerCase();
-                        i in g && n(g[i], e.name);
+                        i in A && n(A[i], e.name);
                     },
                     onSelectionChange: (t) => {
                         null != n && n(t, e.name);
@@ -273,7 +273,7 @@ let R = { US: c, CA: s },
     }),
     w = (e, t) => ({
         name: "line2",
-        id: x,
+        id: _,
         title: () => E.intl.string(E.t.i2Z0gI),
         placeholder: () => E.intl.string(E.t.fKLoNo),
         autoComplete: "address-line2",
@@ -293,7 +293,7 @@ let R = { US: c, CA: s },
     }),
     U = (e, t) => ({
         name: "city",
-        id: _,
+        id: x,
         title: () => E.intl.string(E.t.bUSWlw),
         autoComplete: "address-level2",
         placeholder: () => E.intl.string(E.t["5rRx31"]),

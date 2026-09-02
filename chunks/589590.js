@@ -1,7 +1,7 @@
-n.d(t, { A: () => s });
+n.d(t, { A: () => r });
 var l = n(435558),
     i = n(842901);
-let s = (0, l.memoize)(
+let r = (0, l.memoize)(
     function (e) {
         let { theme: t, layoutType: n } = e;
         return (0, i.E)(t, n);

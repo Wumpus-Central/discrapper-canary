@@ -1,4 +1,4 @@
-n.d(t, { G: () => g, H: () => p });
+n.d(t, { G: () => g, H: () => A });
 var i = n(477900),
     l = n(582128),
     s = n(866665),
@@ -44,7 +44,7 @@ function g(e) {
             })({ skuId: t, product: s, productName: a, tab: r, source: h });
     }, [t, s, a, r, h, g]);
 }
-function p(e) {
+function A(e) {
     let t = g(e);
     return (0, i.jsx)(s.m, {
         text: h.intl.string(h.t.RDE0Sc),

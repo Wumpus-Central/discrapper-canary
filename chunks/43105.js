@@ -1,4 +1,4 @@
-n.d(t, { A: () => p, h: () => _ });
+n.d(t, { A: () => h, h: () => _ });
 var a = n(477900),
     r = n(582128),
     l = n(503698),
@@ -9,13 +9,13 @@ var a = n(477900),
     d = n(798618),
     u = n(916845),
     m = n(627330),
-    h = n(489387);
-function p(e) {
+    p = n(489387);
+function h(e) {
     let {
             title: t,
             body: n,
             badge: l,
-            graphic: p,
+            graphic: h,
             size: _ = "md",
             actions: g,
             textLink: f,
@@ -24,10 +24,10 @@ function p(e) {
             popoverRef: v,
             position: b,
             caretConfig: I,
-            scrollBehavior: C,
-            ...S
+            scrollBehavior: S,
+            ...k
         } = e,
-        k = r.useCallback(
+        C = r.useCallback(
             (e, t) => {
                 x?.(t);
             },
@@ -36,32 +36,32 @@ function p(e) {
         y = r.useCallback(() => {
             x?.("user:explicit");
         }, [x]),
-        A = {
-            targetElementRef: S.targetElementRef,
-            shouldShow: S.shouldShow,
-            hasVideo: S.hasVideo,
+        M = {
+            targetElementRef: k.targetElementRef,
+            shouldShow: k.shouldShow,
+            hasVideo: k.hasVideo,
             position: b,
             caretConfig: I,
-            onRequestClose: k,
+            onRequestClose: C,
             gradientColor: E,
-            scrollBehavior: C,
-            ...("edge" === S.alignmentStrategy
-                ? { alignmentStrategy: "edge", align: S.align }
+            scrollBehavior: S,
+            ...("edge" === k.alignmentStrategy
+                ? { alignmentStrategy: "edge", align: k.align }
                 : { alignmentStrategy: "trigger-center" }),
         };
     return (0, a.jsx)(o.x, {
-        ...A,
+        ...M,
         children: (0, a.jsxs)("div", {
             ref: v,
             "data-mana-component": "popover",
             children: [
                 (0, a.jsx)(u.q, { onClick: y, variant: null != E ? "color-mix" : void 0 }),
-                null != p &&
+                null != h &&
                     (0, a.jsx)("div", {
-                        className: i()(h.graphic, { [h[`graphic--${_}`]]: null != _ }),
+                        className: i()(p.graphic, { [p[`graphic--${_}`]]: null != _ }),
                         children: (0, a.jsx)(s.v, {
-                            ...p,
-                            aspectRatio: p.aspectRatio ?? ("sm" === _ ? "2/1" : "16/9"),
+                            ...h,
+                            aspectRatio: h.aspectRatio ?? ("sm" === _ ? "2/1" : "16/9"),
                         }),
                     }),
                 (0, a.jsx)(m.D, { title: t, body: n, badge: l, textLink: f }),
@@ -71,4 +71,4 @@ function p(e) {
         }),
     });
 }
-let _ = 221552 == n.j ? p : null;
+let _ = 221552 == n.j ? h : null;

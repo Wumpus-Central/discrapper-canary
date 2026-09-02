@@ -17,27 +17,27 @@ var l = n(477900),
     S = n(237412),
     y = n(45938),
     I = n(951305),
-    g = n(166532),
-    A = n(652215),
+    A = n(166532),
+    g = n(652215),
     P = n(202541),
     v = n(375708),
-    x = n(894575);
-function _(e) {
+    _ = n(894575);
+function x(e) {
     let { onClose: t } = e,
         { selectedSkuId: n, purchaseState: d } = (0, m.t4)((e) => ({
             selectedSkuId: e.selectedSkuId,
             purchaseState: e.purchaseState,
         })),
         f = (0, r.bG)([C.A], () => C.A.isDisplayingWowMomentConfirmation),
-        { isPremium: _, isPremiumGroupPurchase: T, isEligibleForTrial: N, isEligibleForDiscount: b } = (0, o.i)(),
+        { isPremium: x, isPremiumGroupPurchase: T, isEligibleForTrial: N, isEligibleForDiscount: b } = (0, o.i)(),
         j = (0, c.S3)(),
         R = (0, u.s2)(),
         { isGift: M, selectedGiftStyle: O, giftRecipient: L } = (0, I.Pv)(),
         k = (0, h.p)("PremiumUnifiedCheckoutCustomHeader"),
-        w = j?.productLine === A.EZt.COLLECTIBLES,
-        U = j?.productLine === A.EZt.SOCIAL_LAYER_GAME_ITEM,
-        D = M && (0, y.Ik)(L) && R === g.pn.CONFIRM && null != O && !w && !U,
-        G = [g.pn.SKU_SELECT, g.pn.SELECT_FREE_SKU],
+        w = j?.productLine === g.EZt.COLLECTIBLES,
+        U = j?.productLine === g.EZt.SOCIAL_LAYER_GAME_ITEM,
+        D = M && (0, y.Ik)(L) && R === A.pn.CONFIRM && null != O && !w && !U,
+        G = [A.pn.SKU_SELECT, A.pn.SELECT_FREE_SKU],
         F = null != R && !G.includes(R) && null != n,
         B = i.useCallback(() => t(!1), [t]);
     return i.useMemo(() => {
@@ -46,7 +46,7 @@ function _(e) {
         return (
             D
                 ? (e = (0, l.jsxs)("div", {
-                      className: x.kL,
+                      className: _.kL,
                       children: [
                           (0, l.jsx)("div", {
                               "aria-hidden": !0,
@@ -54,10 +54,10 @@ function _(e) {
                               children: (0, l.jsx)(E.A, {
                                   defaultAnimationState: p.oA.LOOP,
                                   giftStyle: O,
-                                  className: x.qq,
+                                  className: _.qq,
                               }),
                           }),
-                          (0, l.jsx)(a.s_, { onClick: B, className: x.b, "data-migration-pending": !0 }),
+                          (0, l.jsx)(a.s_, { onClick: B, className: _.b, "data-migration-pending": !0 }),
                       ],
                   }))
                 : k
@@ -75,14 +75,14 @@ function _(e) {
                                   isGift: M,
                                   giftRecipient: L,
                                   isEligibleForTrial: N,
-                                  enablePremiumBrandRefresh: _,
+                                  enablePremiumBrandRefresh: x,
                                   isDisplayingWowMomentConfirmation: f,
                                   isPremiumGroupPurchase: T,
                               })
                             : (0, l.jsx)(s.rQ, { title: v.intl.string(v.t.q9EGps) })),
             e
         );
-    }, [O, B, d, n, R, N, b, D, k, F, M, L, _, f, T]);
+    }, [O, B, d, n, R, N, b, D, k, F, M, L, x, f, T]);
 }
 function T(e) {
     let { premiumDiscountPercent: t, isPremiumDiscountAppliedToCheckoutInvoice: n } = (0, m.t4)((e) => ({
@@ -113,5 +113,5 @@ function N() {
 }
 function b(e) {
     let { isGift: t } = (0, I.Pv)();
-    return e.step !== g.pn.PLAN_SELECT || t ? (0, l.jsx)(_, { ...e }) : (0, l.jsx)(N, {});
+    return e.step !== A.pn.PLAN_SELECT || t ? (0, l.jsx)(x, { ...e }) : (0, l.jsx)(N, {});
 }

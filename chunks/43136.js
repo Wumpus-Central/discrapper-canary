@@ -1,4 +1,4 @@
-n.d(t, { A: () => L, C: () => R });
+n.d(t, { A: () => M, C: () => R });
 var i = n(477900),
     l = n(582128),
     s = n(284009),
@@ -11,8 +11,8 @@ if (221552 == n.j) var u = n(297264);
 var m = n(241524),
     h = n(289397),
     g = n(607470),
-    p = n(548118),
-    A = n(428558),
+    A = n(548118),
+    p = n(428558),
     x = n(885386),
     f = n(696451),
     E = n(287809),
@@ -41,7 +41,7 @@ function R(e) {
     let { coverImageAsset: t, isPreview: n = !1 } = e,
         l = x.kt.useSetting(),
         s = (0, _.j)() && l,
-        [a, r] = (0, A.A)(t, s),
+        [a, r] = (0, p.A)(t, s),
         o = s
             ? (0, i.jsx)(g.A, {
                   autoPlay: !0,
@@ -62,7 +62,7 @@ function R(e) {
         children: null == r || n ? o : (0, i.jsx)("img", { src: r, alt: "", className: y.N4 }),
     });
 }
-function L(e) {
+function M(e) {
     let { guild: t, subscriptionsSettings: n } = e,
         s = t.id,
         { nickname: o, nickcolor: g } = (0, r.cf)([f.Ay, E.default], () => {
@@ -71,24 +71,24 @@ function L(e) {
             let t = f.Ay.getMember(s, e.id);
             return { nickname: t?.nick ?? C.Ay.getName(e), nickcolor: t?.colorString ?? void 0 };
         }, [s]),
-        { isTruncated: A, ExpandableTextContainer: x } = (0, v.e)(),
+        { isTruncated: p, ExpandableTextContainer: x } = (0, v.e)(),
         I = (n?.description?.trim().length ?? 0) > 0,
-        [_, L] = l.useState(1),
-        k = (0, m.A)("(max-width: 1439px)"),
-        { selectedTab: M, isPhantomPreview: O } = (0, N.k)(),
-        P = M === j.B.GUILD_PRODUCTS_PREVIEW ? S.intl.string(S.t["LvXy/H"]) : S.intl.string(S.t.XyqKh8),
+        [_, M] = l.useState(1),
+        L = (0, m.A)("(max-width: 1439px)"),
+        { selectedTab: k, isPhantomPreview: O } = (0, N.k)(),
+        P = k === j.B.GUILD_PRODUCTS_PREVIEW ? S.intl.string(S.t["LvXy/H"]) : S.intl.string(S.t.XyqKh8),
         D = I
             ? (0, i.jsxs)(i.Fragment, {
                   children: [
                       (0, i.jsx)(x, {
-                          lineClamp: k || 2 === _ ? 2 : 3,
+                          lineClamp: L || 2 === _ ? 2 : 3,
                           children: (0, i.jsx)(c.E, {
                               variant: "text-sm/normal",
                               color: "text-default",
                               children: n?.description,
                           }),
                       }),
-                      A &&
+                      p &&
                           (0, i.jsxs)(i.Fragment, {
                               children: [
                                   (0, i.jsx)(d.h, { size: 4 }),
@@ -113,9 +113,9 @@ function L(e) {
                 className: y.op,
                 children: [
                     (0, i.jsx)("div", {
-                        children: (0, i.jsx)(p.Ay, {
+                        children: (0, i.jsx)(A.Ay, {
                             guild: t,
-                            size: p.Ay.Sizes.LARGER,
+                            size: A.Ay.Sizes.LARGER,
                             iconSrc:
                                 null == t.icon || O
                                     ? (0, h.n)("server_products/storefront/default-guild-icon.jpg")
@@ -127,7 +127,7 @@ function L(e) {
                         children: [
                             (0, i.jsx)("div", {
                                 ref: (e) => {
-                                    null != e && e.clientHeight > 30 && L(2);
+                                    null != e && e.clientHeight > 30 && M(2);
                                 },
                                 children: (0, i.jsx)(u.D, {
                                     variant: "heading-xl/semibold",

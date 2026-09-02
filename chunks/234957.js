@@ -18,7 +18,7 @@ let m = l.memo(function (e) {
                     : null,
             [h],
         ),
-        { isReplyAuthorBlocked: p, isReplyAuthorIgnored: A } = (0, s.cf)(
+        { isReplyAuthorBlocked: A, isReplyAuthorIgnored: p } = (0, s.cf)(
             [r.A],
             () => ({
                 isReplyAuthorBlocked: null != h && r.A.isBlockedForMessage(h),
@@ -36,8 +36,8 @@ let m = l.memo(function (e) {
         referencedMessage: u,
         content: g,
         compact: m,
-        isReplyAuthorBlocked: p,
-        isReplyAuthorIgnored: A,
+        isReplyAuthorBlocked: A,
+        isReplyAuthorIgnored: p,
         isReplySpineClickable: !1,
         showReplySpine: !0,
     });

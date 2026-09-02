@@ -10,7 +10,7 @@ var l = n(503698),
     d = n(996988),
     u = n(768590);
 function m(e) {
-    let { user: t, displayProfile: n, size: l, headingText: m, className: h, style: g, headingRef: p, children: A } = e,
+    let { user: t, displayProfile: n, size: l, headingText: m, className: h, style: g, headingRef: A, children: p } = e,
         x = (0, o.GV)();
     return (0, i.jsx)(c.A, {
         user: t,
@@ -22,8 +22,8 @@ function m(e) {
             "aria-labelledby": x,
             className: s()(u.article, h),
             children: [
-                (0, i.jsx)(a.A, { children: (0, i.jsx)(r.H, { ref: p, tabIndex: -1, id: x, children: m }) }),
-                (0, i.jsx)(r.F, { children: A }),
+                (0, i.jsx)(a.A, { children: (0, i.jsx)(r.H, { ref: A, tabIndex: -1, id: x, children: m }) }),
+                (0, i.jsx)(r.F, { children: p }),
             ],
         }),
     });

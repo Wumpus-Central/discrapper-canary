@@ -12,8 +12,8 @@ var l = n(503698),
     m = n(696986),
     h = n(890856),
     g = n(915089),
-    p = n(839656),
-    A = n(724609),
+    A = n(839656),
+    p = n(724609),
     x = n(411342),
     f = n(375708),
     E = n(442182);
@@ -41,7 +41,7 @@ function I(e) {
                         }),
                     ],
                 }),
-            n && (0, i.jsx)("div", { className: E.vW, children: (0, i.jsx)(A.k, {}) }),
+            n && (0, i.jsx)("div", { className: E.vW, children: (0, i.jsx)(p.k, {}) }),
         ],
     });
 }
@@ -75,7 +75,7 @@ function _(e) {
             formattedPrice: a,
             role: o,
             ctaComponent: c,
-            shouldShowFullDescriptionButton: A = !0,
+            shouldShowFullDescriptionButton: p = !0,
             onShowFullDescription: _,
             productType: v,
             onTapCard: N,
@@ -85,17 +85,17 @@ function _(e) {
             lineClamp: y = 1,
             cardWidth: b = 332,
             cardHeight: R,
-            thumbnailHeight: L = 187,
-            descriptionTextVariant: k = "text-sm/normal",
-            isDraft: M = !1,
+            thumbnailHeight: M = 187,
+            descriptionTextVariant: L = "text-sm/normal",
+            isDraft: k = !1,
         } = e,
         O = (0, g.Ld)(),
         P = (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)(I, {
-                    showDraftBadge: M,
+                    showDraftBadge: k,
                     hidePurchaseToUnlockBadge: !0,
-                    children: (0, i.jsx)("img", { alt: "", src: t, className: E.K_, style: { height: L } }),
+                    children: (0, i.jsx)("img", { alt: "", src: t, className: E.K_, style: { height: M } }),
                 }),
                 (0, i.jsxs)("div", {
                     className: E.MS,
@@ -111,14 +111,14 @@ function _(e) {
                                     children: n,
                                 }),
                                 (0, i.jsx)(u.M, {
-                                    children: (0, i.jsx)(p.A, {
-                                        variant: k,
+                                    children: (0, i.jsx)(A.A, {
+                                        variant: L,
                                         color: "text-muted",
                                         lineClamp: y,
                                         text: l,
                                     }),
                                 }),
-                                A && (0, i.jsx)(C, { onShowFullDescription: _, variant: k }),
+                                p && (0, i.jsx)(C, { onShowFullDescription: _, variant: L }),
                                 S || null == o || "" === o.name
                                     ? null
                                     : (0, i.jsxs)(i.Fragment, {

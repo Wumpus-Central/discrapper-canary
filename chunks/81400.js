@@ -54,7 +54,7 @@ function b(t) {
             f.nc_.PROFILE_CUSTOMIZATION;
             let t = _.Eq.GUILD;
             if ((g ? (0, u.V2)(E.id) : (t = _.Eq.USER_PROFILE), N)) {
-                let { openUserProfileModal: t } = l(975732);
+                let { openUserProfileModal: t } = l(402860);
                 t({ userId: a.default.getId(), guildId: E.id, sourceAnalyticsLocations: o });
             } else {
                 let { openUserSettings: e } = l(766075);

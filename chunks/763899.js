@@ -11,14 +11,14 @@ var i = n(477900),
 let m = function (e) {
     let { channel: t, message: n, hideParty: m, hideInviteEmbedBanner: h } = e,
         { analyticsLocations: g } = (0, a.Ay)(s.A.INVITE_EMBED),
-        p =
+        A =
             null != n.application
                 ? c.Ay.createFromServer(n.application)
                 : null != n.activity && null != n.activity.party_id && (0, u.pH)(n.activity.party_id)
                   ? d.HT
                   : void 0,
-        { data: A } = (0, r.YY)(n.application?.id),
-        x = A ?? p;
+        { data: p } = (0, r.YY)(n.application?.id),
+        x = p ?? A;
     return null == x
         ? null
         : (0, i.jsx)(o.c, {

@@ -846,7 +846,7 @@ function e2() {
         [n, i] = (0, e0.kn)(e && t ? [eQ.M.USER_PROFILE_PERSONAL_WIDGET_COACHMARK] : []);
     return [n === eQ.M.USER_PROFILE_PERSONAL_WIDGET_COACHMARK, i];
 }
-function e7(e) {
+function e3(e) {
     let { targetElementRef: t, isVisible: n, markAsDismissed: l } = e,
         { trackUserProfileEditAction: s } = (0, eq.NJ)();
     return n
@@ -880,7 +880,7 @@ function e7(e) {
           })
         : null;
 }
-var e3 = n(410453);
+var e7 = n(410453);
 function e5(e) {
     let { buttonRef: t, isCoachmarkVisible: n, markCoachmarkAsDismissed: s } = e,
         { trackUserProfileEditAction: r } = (0, eq.NJ)(),
@@ -929,10 +929,10 @@ function e4(e) {
                 );
         }, [s, c, u]);
     return (0, i.jsxs)("div", {
-        className: r()(e3.w, t),
+        className: r()(e7.w, t),
         children: [
             (0, i.jsx)(d.E, {
-                className: e3.D,
+                className: e7.D,
                 variant: "text-xs/semibold",
                 color: "text-subtle",
                 children: V.intl.string(V.t.OYlggR),
@@ -946,7 +946,7 @@ function e4(e) {
                 onClick: m,
                 buttonRef: a,
             }),
-            (0, i.jsx)(e7, { targetElementRef: g ? o : a, isVisible: c, markAsDismissed: u }),
+            (0, i.jsx)(e3, { targetElementRef: g ? o : a, isVisible: c, markAsDismissed: u }),
         ],
     });
 }
@@ -1681,8 +1681,8 @@ var t$ = n(128988),
     t1 = n(321191),
     t8 = n(896170),
     t2 = n(453318),
-    t7 = n(321108),
-    t3 = n(383329),
+    t3 = n(321108),
+    t7 = n(383329),
     t5 = n(67710);
 function t4(e) {
     let { widgetType: t, widget: n, onAddGame: s, children: r, ...a } = e,
@@ -1690,10 +1690,10 @@ function t4(e) {
         { trackUserProfileEditAction: d } = (0, eq.NJ)(),
         [c, u] = l.useState(""),
         g = l.useRef(""),
-        { options: m, matchSorterOptions: x } = (0, t3.R)({ query: c }),
+        { options: m, matchSorterOptions: x } = (0, t7.R)({ query: c }),
         f = c.trim().length > 0,
         { gameIds: h, onAddGame: p } = y(t),
-        I = (0, t7.A)(h),
+        I = (0, t3.A)(h),
         j = l.useCallback(
             (e) => {
                 (0, W.ew)({ widgetType: t, game: { gameId: e } }),
@@ -2300,7 +2300,7 @@ function nW(e) {
                             ),
                         ),
                     }),
-                !c && (0, i.jsx)(e7, { targetElementRef: o, isVisible: u, markAsDismissed: g }),
+                !c && (0, i.jsx)(e3, { targetElementRef: o, isVisible: u, markAsDismissed: g }),
             ],
         })
     );

@@ -2,17 +2,17 @@ i.d(e, { A: () => p });
 var r = i(477900);
 i(582128);
 var o = i(503698),
-    n = i.n(o),
-    l = i(554146),
+    l = i.n(o),
+    n = i(554146),
     s = i(406810),
     a = i(834730),
     c = i(826673),
     u = i(375708),
     d = i(328368);
 function p() {
-    return (0, c.k8)(l.M.BOGO_2025_NITRO_TAB_BADGE)
+    return (0, c.k8)(n.M.BOGO_2025_NITRO_TAB_BADGE)
         ? (0, r.jsxs)("div", {
-              className: n()(d.Fg, d.Hh, {}),
+              className: l()(d.Fg, d.Hh, {}),
               children: [
                   (0, r.jsx)(s.ClockIcon, {
                       size: "custom",
@@ -30,7 +30,7 @@ function p() {
               ],
           })
         : (0, r.jsx)("div", {
-              className: n()(d.Fg, d.N4),
+              className: l()(d.Fg, d.N4),
               children: (0, r.jsx)(a.E, {
                   variant: "eyebrow",
                   color: "text-overlay-light",

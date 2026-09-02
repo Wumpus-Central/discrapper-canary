@@ -1,4 +1,4 @@
-e.exports = {
+_.exports = {
     iE: "wrapper__30359",
     c8: "heroImage__30359",
     b: "closeButton__30359",

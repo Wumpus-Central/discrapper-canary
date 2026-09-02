@@ -21,8 +21,8 @@ function S(e) {
         })(e),
         { step: r, stepConfigs: s } = (0, m.Ay)(),
         { setBodyNode: S, setFooterNode: y, setModalOverlayNode: I } = (0, p.Gm)(),
-        g = (0, u.bG)([h.A], () => h.A.isDisplayingWowMomentConfirmation),
-        { setReadySlideId: A, unifiedCheckoutFlow: P } = (0, C.t4)((e) => ({
+        A = (0, u.bG)([h.A], () => h.A.isDisplayingWowMomentConfirmation),
+        { setReadySlideId: g, unifiedCheckoutFlow: P } = (0, C.t4)((e) => ({
             setReadySlideId: e.setReadySlideId,
             unifiedCheckoutFlow: e.unifiedCheckoutFlow,
         })),
@@ -37,8 +37,8 @@ function S(e) {
             message: "Unknown step for current payment flow (PaymentModalStep)",
             extraSentryInformation: { stepConfig: v, step: r, unifiedCheckoutFlow: P, stepConfigs: s },
         });
-    let x = v?.options?.hideSlider ?? !1,
-        _ = v?.options?.hideDefaultModalBody ?? !1,
+    let _ = v?.options?.hideSlider ?? !1,
+        x = v?.options?.hideDefaultModalBody ?? !1,
         T = v?.options?.sliderBodyClassName,
         N = r === f.pn.REVIEW,
         b = i.useCallback(
@@ -51,21 +51,21 @@ function S(e) {
         children: [
             (v?.options?.renderHeader ?? !0) ? t : null,
             v.renderStep(n),
-            null == r || x
+            null == r || _
                 ? null
                 : (0, l.jsxs)(l.Fragment, {
                       children: [
-                          _
+                          x
                               ? null
                               : (0, l.jsx)(o.c, {
                                     children: (0, l.jsx)(c.t, {
                                         shouldUseMediaQueriesForSizing: !0,
                                         activeSlide: r,
                                         centered: !1,
-                                        onSlideReady: (e) => A(e),
+                                        onSlideReady: (e) => g(e),
                                         width: "100%",
                                         disableDefaultTransformStyling: N,
-                                        overflow: g ? "visible" : void 0,
+                                        overflow: A ? "visible" : void 0,
                                         children: s
                                             .filter((e) => null != e.key)
                                             .map((e) =>

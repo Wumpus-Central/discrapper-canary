@@ -1,10 +1,10 @@
-i.d(t, { Ay: () => u, t$: () => d });
+i.d(t, { Ay: () => h, t$: () => d });
 var s = i(17928),
     n = i(734057),
     r = i(576705),
-    l = i(977997),
-    a = i(818348);
-let c = { ChannelStore: n.A, PermissionStore: r.A, VoiceStateStore: l.A },
+    a = i(977997),
+    l = i(818348);
+let c = { ChannelStore: n.A, PermissionStore: r.A, VoiceStateStore: a.A },
     o = Object.freeze({ voiceState: void 0, voiceChannel: void 0 });
 function d(e) {
     let { userId: t, guildId: i } = e,
@@ -26,16 +26,16 @@ function d(e) {
     return !(function (e) {
         let { voiceState: t, voiceChannel: i } = e,
             s = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : c;
-        return null != t && (i?.isPrivate() || s.PermissionStore.can(a.xB.VIEW_CHANNEL, i));
+        return null != t && (i?.isPrivate() || s.PermissionStore.can(l.xB.VIEW_CHANNEL, i));
     })({ voiceState: n, voiceChannel: r }, s)
         ? o
         : { voiceState: n, voiceChannel: r };
 }
-function u(e) {
+function h(e) {
     let { userId: t, guildId: i } = e;
     return (0, s.cf)(
-        [n.A, r.A, l.A],
-        () => d({ userId: t, guildId: i }, { ChannelStore: n.A, PermissionStore: r.A, VoiceStateStore: l.A }),
+        [n.A, r.A, a.A],
+        () => d({ userId: t, guildId: i }, { ChannelStore: n.A, PermissionStore: r.A, VoiceStateStore: a.A }),
         [i, t],
     );
 }

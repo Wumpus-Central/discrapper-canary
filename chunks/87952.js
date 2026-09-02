@@ -1,15 +1,15 @@
 n.d(t, { A: () => o });
-var l = n(582128),
-    r = n(739508),
+var r = n(582128),
+    l = n(739508),
     i = n(71532);
 function o() {
-    let [e, t] = l.useState(null);
+    let [e, t] = r.useState(null);
     return (
-        l.useEffect(() => {
+        r.useEffect(() => {
             (0, i.Cv)()
                 .then((e) => t(e))
                 .catch((e) => {
-                    (0, r.pM)(e);
+                    (0, l.pM)(e);
                 });
         }, []),
         e

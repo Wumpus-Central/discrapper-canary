@@ -610,7 +610,7 @@ function Q(e) {
     {
         let { default: e } = n(830543),
             { default: r } = n(408166),
-            { closeUserProfileModal: a } = n(975732);
+            { closeUserProfileModal: a } = n(402860);
         J(i), e(), a(), r(), (0, _.pX)(null != t ? U.BVt.COLLECTIBLES_SHOP_WITH_TAB(t) : U.BVt.COLLECTIBLES_SHOP);
     }
 }

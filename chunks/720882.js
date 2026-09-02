@@ -162,10 +162,10 @@ var eK = n(110384),
     eQ = n(865116),
     e0 = n(131607),
     e8 = n(928658),
-    e2 = n(400528),
-    e6 = n(892340),
-    e7 = n(715757),
-    e1 = n(967198),
+    e6 = n(400528),
+    e2 = n(892340),
+    e1 = n(715757),
+    e7 = n(967198),
     e5 = n(287809),
     e9 = n(628691),
     e3 = n(49999),
@@ -195,7 +195,7 @@ var tm = n(534890),
     t_ = n(966327),
     tI = n(597929),
     tS = n(548118),
-    tj = n(975732),
+    tj = n(402860),
     tD = n(260509),
     tM = n(889227),
     tC = n(734057),
@@ -299,10 +299,10 @@ function tP(e) {
             channel: tQ,
             mediaItem: t0,
             textSelection: t8,
-            favoriteableType: t2,
-            favoriteableId: t6,
-            favoriteableName: t7,
-            itemHref: t1,
+            favoriteableType: t6,
+            favoriteableId: t2,
+            favoriteableName: t1,
+            itemHref: t7,
             itemSrc: t5,
             itemSafeSrc: t9,
             itemTextContent: t3,
@@ -873,8 +873,8 @@ function tP(e) {
                   })),
         nN = (0, ef.A)(tY, tQ),
         nR =
-            ((tX = (0, x.bG)([e1.A], () => e1.A.getGuildId())),
-            (tq = (0, e7.Qo)(tX)),
+            ((tX = (0, x.bG)([e7.A], () => e7.A.getGuildId())),
+            (tq = (0, e1.Qo)(tX)),
             (0, e9.ul)(tY)
                 ? (0, l.jsx)(s.Dr, {
                       id: "report",
@@ -899,8 +899,8 @@ function tP(e) {
                   })
                 : null),
         nk = (function (e) {
-            let t = (0, x.bG)([e2.A], () => e2.A.hasReportedMessage(e.channel_id, e.id)),
-                n = (0, e6.KB)(e),
+            let t = (0, x.bG)([e6.A], () => e6.A.hasReportedMessage(e.channel_id, e.id)),
+                n = (0, e2.KB)(e),
                 i = n ? [eJ.M.REPORT_TO_MOD_NEW_TAG] : [],
                 [a, r] = (0, e0.kn)(i);
             return ((0, eY.l0)(() => {
@@ -921,7 +921,7 @@ function tP(e) {
                   })
                 : null;
         })(tY),
-        nw = (0, eM.A)({ type: t2, id: t6, name: t7 }),
+        nw = (0, eM.A)({ type: t6, id: t2, name: t1 }),
         nP = (function (e, t) {
             let { perGuildMaxCount: n } = U.i$[H],
                 { isLoading: i, saveRule: r, errorMessage: o } = (0, w.S)(),
@@ -1093,7 +1093,7 @@ function tP(e) {
                       action: t$,
                   })
                 : null),
-        nz = (0, f.A)(t1 ?? t5, t3, tY, { shouldHideMediaOptions: na }),
+        nz = (0, f.A)(t7 ?? t5, t3, tY, { shouldHideMediaOptions: na }),
         nH = (0, A.A)({ id: tY.id, label: j.intl.string(j.t.zBoHlf), shiftId: `${tY.channel_id}-${tY.id}` }),
         nK = (function (e) {
             let { messageId: t, itemId: n, type: i, imageSrc: r } = e,
@@ -1156,7 +1156,7 @@ function tP(e) {
                         }),
                 ],
             });
-        })({ messageId: tY.id, itemId: t6, type: t2, imageSrc: t5 }),
+        })({ messageId: tY.id, itemId: t2, type: t6, imageSrc: t5 }),
         nV = (0, l.jsx)(s.rX, { children: nK ?? nH }),
         nW = (0, l.jsxs)(s.rX, { children: [nw, nP, nB, nF, nX, nq] });
     return (0, l.jsxs)(o.W, {

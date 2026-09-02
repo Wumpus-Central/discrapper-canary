@@ -50,8 +50,8 @@ let g = function () {
         ],
     });
 };
-var p = n(589022),
-    A = n(734057),
+var A = n(589022),
+    p = n(734057),
     x = n(287809),
     f = n(943667);
 function E(e, t) {
@@ -66,10 +66,10 @@ function E(e, t) {
     s()(null != n, "renderUserGuildPopout: user should never be null");
     let l = x.default.getCurrentUser();
     s()(null != l, "renderUserGuildPopout: currentUser should never be null");
-    let o = A.A.getChannel(t.channel_id);
+    let o = p.A.getChannel(t.channel_id);
     return (
         s()(null != o, "renderUserGuildPopout: channel should never be null"),
-        (0, i.jsx)(p.A, {
+        (0, i.jsx)(A.A, {
             ...e,
             user: n,
             currentUser: l,

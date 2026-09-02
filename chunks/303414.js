@@ -1825,8 +1825,8 @@ class e3 {
 }
 n(938796);
 var e5 = n(143236),
-    e4 = n(873985),
-    e6 = n(935208),
+    e6 = n(873985),
+    e4 = n(935208),
     e7 =
         (((s = {})[(s.DISPATCH = 0)] = "DISPATCH"),
         (s[(s.HEARTBEAT = 1)] = "HEARTBEAT"),
@@ -1878,7 +1878,7 @@ class e8 extends e5.EventEmitter {
                 flags: d = 0,
             } = e,
             c = { guild_id: t, channel_id: n, self_mute: i, self_deaf: r, self_video: a, flags: d };
-        null != n && e4.A.shouldIncludePreferredRegion() && ((c.preferred_region = s), (c.preferred_regions = l)),
+        null != n && e6.A.shouldIncludePreferredRegion() && ((c.preferred_region = s), (c.preferred_regions = l)),
             null != o && (c.tracks = o?.map((e) => ({ type: e.type, rid: e.rid, quality: e.quality }))),
             this.send(e7.VOICE_STATE_UPDATE, c);
     }
@@ -1896,7 +1896,7 @@ class e8 extends e5.EventEmitter {
     updateGuildSubscriptions(e) {
         let t = {},
             n = 0;
-        e6.default.keys(e).forEach((i) => {
+        e4.default.keys(e).forEach((i) => {
             let r = e[i],
                 a = JSON.stringify([i, r]).length;
             n + a > 15360 && (this.send(e7.GUILD_SUBSCRIPTIONS_BULK, { subscriptions: t }), (t = {}), (n = 0)),

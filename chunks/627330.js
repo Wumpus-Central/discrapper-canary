@@ -9,7 +9,7 @@ var a = n(477900),
     d = n(489387);
 function u(e) {
     let { title: t, body: n, badge: r, className: i, textLink: u } = e,
-        p = u?.external ?? !0;
+        h = u?.external ?? !0;
     return (0, a.jsxs)("div", {
         className: l()(d.header, i),
         children: [
@@ -19,13 +19,13 @@ function u(e) {
                     (0, a.jsx)(s.D, { variant: "heading-md/semibold", className: d.title, children: t }),
                 ],
             }),
-            (0, a.jsx)(h, { body: n }),
+            (0, a.jsx)(p, { body: n }),
             null != u &&
                 (0, a.jsx)(o.Anchor, {
                     onClick: u.onClick,
                     href: u.link,
-                    target: p && null != u.link ? "_blank" : void 0,
-                    rel: p && null != u.link ? "noopener noreferrer" : void 0,
+                    target: h && null != u.link ? "_blank" : void 0,
+                    rel: h && null != u.link ? "noopener noreferrer" : void 0,
                     children: (0, a.jsx)(c.E, { variant: "text-sm/normal", className: d.footerLink, children: u.text }),
                 }),
         ],
@@ -37,7 +37,7 @@ function m(e) {
     let n = (0, i.U)(t);
     return (0, a.jsx)("div", { className: d.badgeContainer, children: (0, a.jsx)(i.E, { variant: "brand", ...n }) });
 }
-function h(e) {
+function p(e) {
     let { body: t } = e;
     if (null == t) return null;
     let n = Array.isArray(t) ? t : [t];

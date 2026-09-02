@@ -204,8 +204,8 @@ function v(e, t, v, P, T) {
                                             let { default: a } = await Promise.all([
                                                 i.e("142753"),
                                                 i.e("253335"),
-                                                i.e("268582"),
                                                 i.e("691671"),
+                                                i.e("268582"),
                                                 i.e("140243"),
                                             ]).then(i.bind(i, 547166));
                                             return (i) => (0, n.jsx)(a, { ...i, location: P, guildId: t, user: e });
@@ -226,8 +226,8 @@ function v(e, t, v, P, T) {
                                             let { default: a } = await Promise.all([
                                                 i.e("142753"),
                                                 i.e("420282"),
-                                                i.e("268582"),
                                                 i.e("691671"),
+                                                i.e("268582"),
                                                 i.e("802504"),
                                             ]).then(i.bind(i, 333179));
                                             return (i) => (0, n.jsx)(a, { ...i, location: P, guildId: t, user: e });

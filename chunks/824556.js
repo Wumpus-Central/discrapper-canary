@@ -19,14 +19,14 @@ function d(e) {
             t.hasFlag(c.pr7.IS_CROSSPOST) &&
             null != n.guild_id,
         g = n.type === s.r.GUILD_ANNOUNCEMENT && m,
-        p = d && !t.hasFlag(c.pr7.EPHEMERAL) && (h || g),
-        A = u && !t.hasFlag(c.pr7.EPHEMERAL) && t.hasFlag(c.pr7.IS_GUILD_OFFICIAL),
+        A = d && !t.hasFlag(c.pr7.EPHEMERAL) && (h || g),
+        p = u && !t.hasFlag(c.pr7.EPHEMERAL) && t.hasFlag(c.pr7.IS_GUILD_OFFICIAL),
         x = h && null != t.messageReference ? t.messageReference.message_id : t.id,
         f = h && null != t.messageReference ? t.messageReference.channel_id : n.id,
         E = h && t.messageReference?.guild_id != null ? t.messageReference.guild_id : n.guild_id,
         I = i.useCallback(
             (e) => {
-                p &&
+                A &&
                     (e
                         ? o.A.handleMessageBecameVisible({
                               type: o.K.ANNOUNCEMENT,
@@ -37,7 +37,7 @@ function d(e) {
                               sourceGuildId: E,
                           })
                         : o.A.handleMessageLostVisibility(x, o.K.ANNOUNCEMENT)),
-                    A &&
+                    p &&
                         (e
                             ? o.A.handleMessageBecameVisible({
                                   type: o.K.OFFICIAL_MESSAGE,
@@ -47,21 +47,21 @@ function d(e) {
                               })
                             : o.A.handleMessageLostVisibility(t.id, o.K.OFFICIAL_MESSAGE));
             },
-            [p, A, x, t.id, n.id, n.guild_id, f, E],
+            [A, p, x, t.id, n.id, n.guild_id, f, E],
         );
     return (
         i.useEffect(() => {
-            if (p)
+            if (A)
                 return () => {
                     o.A.handleMessageLostVisibility(x, o.K.ANNOUNCEMENT);
                 };
-        }, [p, x]),
+        }, [A, x]),
         i.useEffect(() => {
-            if (A)
+            if (p)
                 return () => {
                     o.A.handleMessageLostVisibility(t.id, o.K.OFFICIAL_MESSAGE);
                 };
-        }, [A, t.id]),
-        (0, l.K)(I, 0, p || A)
+        }, [p, t.id]),
+        (0, l.K)(I, 0, A || p)
     );
 }

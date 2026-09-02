@@ -1,19 +1,19 @@
 n.d(t, { A: () => r });
-var i = n(477900),
-    l = n(676091);
+var l = n(477900),
+    i = n(676091);
 function r(e) {
     let { children: t, actions: n } = e;
-    return (0, i.jsx)("div", {
-        className: l.Nr,
-        children: (0, i.jsxs)("div", {
-            className: l.FG,
+    return (0, l.jsx)("div", {
+        className: i.Nr,
+        children: (0, l.jsxs)("div", {
+            className: i.FG,
             children: [
                 t,
                 null != n &&
-                    (0, i.jsxs)(i.Fragment, {
+                    (0, l.jsxs)(l.Fragment, {
                         children: [
-                            (0, i.jsx)("div", { className: l.yF }),
-                            (0, i.jsx)("div", { className: l.fH, children: n }),
+                            (0, l.jsx)("div", { className: i.yF }),
+                            (0, l.jsx)("div", { className: i.fH, children: n }),
                         ],
                     }),
             ],

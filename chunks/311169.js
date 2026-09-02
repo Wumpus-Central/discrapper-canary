@@ -1,1 +1,1 @@
-a.exports = { Y: "anchor__15c30" };
+p.exports = { Y: "anchor__15c30" };

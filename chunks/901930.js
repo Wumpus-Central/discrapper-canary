@@ -1,63 +1,63 @@
-n.d(t, { A: () => I, j: () => S });
-var l = n(477900),
-    r = n(582128),
+n.d(t, { A: () => N, j: () => S });
+var r = n(477900),
+    l = n(582128),
     i = n(192308),
-    o = n(28863),
+    s = n(28863),
     u = n(683071),
-    s = n(308528),
+    o = n(308528),
     a = n(913122),
     c = n(136857),
     d = n(211083),
-    C = n(655857),
-    E = n(206441),
-    h = n(834981),
-    _ = n(975571),
-    A = n(166532),
-    p = n(652215),
-    f = n(375708);
+    E = n(655857),
+    h = n(206441),
+    A = n(834981),
+    f = n(975571),
+    g = n(166532),
+    _ = n(652215),
+    C = n(375708);
 function S(e) {
     let { planError: t } = e,
         { paymentError: n } = (0, d.o)(),
-        { dropdownCurrencies: u } = (0, C.Jn)(),
-        { purchaseError: S, purchasePreviewError: I } = (0, E.t4)((e) => ({
+        { dropdownCurrencies: u } = (0, E.Jn)(),
+        { purchaseError: S, purchasePreviewError: N } = (0, h.t4)((e) => ({
             purchaseError: e.purchaseError,
             purchasePreviewError: e.purchasePreviewError,
         })),
-        g = null;
-    null != I ? (g = I) : null != n && null == (0, A.ou)(n) ? (g = n) : null != S ? (g = S) : null != t && (g = t);
-    let N = (0, h.vx)(),
-        T = r.useCallback(() => {
-            (0, i.closeAllModals)(), s.A.openPrivateChannel({ recipientIds: N });
-        }, [N]),
-        m = u.length > 1,
-        R = null != g ? g.message : "";
+        p = null;
+    null != N ? (p = N) : null != n && null == (0, g.ou)(n) ? (p = n) : null != S ? (p = S) : null != t && (p = t);
+    let I = (0, A.vx)(),
+        m = l.useCallback(() => {
+            (0, i.closeAllModals)(), o.A.openPrivateChannel({ recipientIds: I });
+        }, [I]),
+        L = u.length > 1,
+        x = null != p ? p.message : "";
     if (
-        null != g &&
-        g instanceof a.Ey &&
-        (g.code === c.tG.CARD_DECLINED && m && (R += ` ${f.intl.string(f.t.iWvwQS)}`),
-        g.code === c.tG.INVALID_GIFT_REDEMPTION_FRAUD_REJECTED && (R = f.intl.string(f.t.ypuSd8)),
-        g.code === p.t02.BILLING_NON_REFUNDABLE_PAYMENT_SOURCE && (R = f.intl.string(f.t.mXMmWE)),
-        g.code === c.tG.INVALID_CURRENCY_FOR_PAYMENT_SOURCE && (R = f.intl.string(f.t.mC1Fjz)),
-        (g.code === c.tG.BILLING_SPENDING_LIMIT_REACHED || g.code === c.tG.BILLING_SPENDING_LIMIT_WILL_EXCEED) &&
-            (R = f.intl.format(f.t["mv/fF2"], {
+        null != p &&
+        p instanceof a.Ey &&
+        (p.code === c.tG.CARD_DECLINED && L && (x += ` ${C.intl.string(C.t.iWvwQS)}`),
+        p.code === c.tG.INVALID_GIFT_REDEMPTION_FRAUD_REJECTED && (x = C.intl.string(C.t.ypuSd8)),
+        p.code === _.t02.BILLING_NON_REFUNDABLE_PAYMENT_SOURCE && (x = C.intl.string(C.t.mXMmWE)),
+        p.code === c.tG.INVALID_CURRENCY_FOR_PAYMENT_SOURCE && (x = C.intl.string(C.t.mC1Fjz)),
+        (p.code === c.tG.BILLING_SPENDING_LIMIT_REACHED || p.code === c.tG.BILLING_SPENDING_LIMIT_WILL_EXCEED) &&
+            (x = C.intl.format(C.t["mv/fF2"], {
                 guardianHook: (e, t) =>
-                    N.length > 0
-                        ? (0, l.jsx)(o.Anchor, { onClick: T, children: e }, t)
-                        : (0, l.jsx)(r.Fragment, { children: e }, t),
+                    I.length > 0
+                        ? (0, r.jsx)(s.Anchor, { onClick: m, children: e }, t)
+                        : (0, r.jsx)(l.Fragment, { children: e }, t),
             })),
-        g.code === c.tG.INVALID_BILLING_ADDRESS)
+        p.code === c.tG.INVALID_BILLING_ADDRESS)
     ) {
-        let e = f.intl.format(f.t.BPDKoA, {
-            helpdeskArticle: _.A.getArticleURL(p.MVz.BILLING).concat(p.bNI.INVALID_BILLING_ADDRESS),
+        let e = C.intl.format(C.t.BPDKoA, {
+            helpdeskArticle: f.A.getArticleURL(_.MVz.BILLING).concat(_.bNI.INVALID_BILLING_ADDRESS),
         });
-        R = (0, l.jsxs)(l.Fragment, { children: [f.intl.string(f.t["yVIm/G"]), " ", e] });
+        x = (0, r.jsxs)(r.Fragment, { children: [C.intl.string(C.t["yVIm/G"]), " ", e] });
     }
-    return { error: g, errorMessage: R };
+    return { error: p, errorMessage: x };
 }
-function I(e) {
-    let { planError: t, purchaseErrorBlockRef: n, className: r } = e,
-        { error: i, errorMessage: o } = S({ planError: t });
+function N(e) {
+    let { planError: t, purchaseErrorBlockRef: n, className: l } = e,
+        { error: i, errorMessage: s } = S({ planError: t });
     return null == i
         ? null
-        : (0, l.jsx)("div", { ref: n, className: r, children: (0, l.jsx)(u.w, { type: "critical", children: o }) });
+        : (0, r.jsx)("div", { ref: n, className: l, children: (0, r.jsx)(u.w, { type: "critical", children: s }) });
 }

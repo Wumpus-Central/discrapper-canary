@@ -1,19 +1,19 @@
-i.d(t, { A: () => a });
+i.d(t, { A: () => l });
 var s = i(582128),
     n = i(17928),
     r = i(885386),
-    l = i(994500);
-function a(e) {
+    a = i(994500);
+function l(e) {
     let t = r.j0.useSetting(),
-        { isBlocked: i, isIgnored: a } = (0, n.cf)([l.A], () => ({
-            isBlocked: l.A.isBlocked(e),
-            isIgnored: l.A.isIgnored(e),
+        { isBlocked: i, isIgnored: l } = (0, n.cf)([a.A], () => ({
+            isBlocked: a.A.isBlocked(e),
+            isIgnored: a.A.isIgnored(e),
         })),
-        [c, o] = (0, s.useState)(i || a);
+        [c, o] = (0, s.useState)(i || l);
     return (
-        (0, s.useEffect)(() => o(i || a), [i, a]),
+        (0, s.useEffect)(() => o(i || l), [i, l]),
         [
-            c && !(a && t),
+            c && !(l && t),
             (0, s.useCallback)(() => {
                 o(!1);
             }, []),

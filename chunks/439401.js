@@ -16,15 +16,15 @@ var n = r(477900),
     I = r(47299);
 let R = s.memo(function (e) {
     let { width: t, height: r, src: l, gifSrc: R, url: E, format: _, className: y } = e,
-        [S, v] = s.useState(!1),
-        C = (0, h.km)((0, d.xo)(E)),
-        A = C ? f.intl.string(f.t["5/NS74"]) : f.intl.string(f.t.nIH0v8),
-        w = C ? a.StarIcon : o.y;
+        [S, C] = s.useState(!1),
+        v = (0, h.km)((0, d.xo)(E)),
+        A = v ? f.intl.string(f.t["5/NS74"]) : f.intl.string(f.t.nIH0v8),
+        w = v ? a.StarIcon : o.y;
     function x(e) {
         e.preventDefault(),
             e.stopPropagation(),
-            v(!0),
-            C
+            C(!0),
+            v
                 ? (0, d.Tr)(E)
                 : ((0, d.wg)({ url: E, src: l, gifSrc: R, width: t, height: r, format: _ }),
                   m._.dispatch(p.jej.FAVORITE_GIF));
@@ -33,7 +33,7 @@ let R = s.memo(function (e) {
         s.useEffect(() => {
             if (!S) return;
             let e = setTimeout(() => {
-                v(!1);
+                C(!1);
             }, 500);
             return () => clearTimeout(e);
         }, [S]),
@@ -42,7 +42,7 @@ let R = s.memo(function (e) {
             children: (0, n.jsx)(c.D, {
                 "aria-label": A,
                 ignoreKeyPress: !0,
-                className: i()(y, I.jj, { [I.wH]: C, [I.TV]: S }),
+                className: i()(y, I.jj, { [I.wH]: v, [I.TV]: S }),
                 onMouseDown: (e) => e.preventDefault(),
                 onClick: x,
                 onKeyDown: function (e) {

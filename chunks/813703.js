@@ -19,8 +19,8 @@ var n = r(477900),
     _ = r.n(E),
     y = r(803805),
     S = r(661531),
-    v = r(27232),
-    C = r(555704),
+    C = r(27232),
+    v = r(555704),
     A = r(92008),
     w = r(25277),
     x = r(583613),
@@ -116,7 +116,7 @@ class V extends s.PureComponent {
             return {
                 type: b.dD.FAVORITES,
                 name: M.intl.string(M.t.y3LQCG),
-                icon: v.StarIcon,
+                icon: C.StarIcon,
                 src: null != t ? t.src : "https://media.giphy.com/media/1TOSaJsWtnhe0/giphy.gif",
                 format: t?.format ?? y.TL.IMAGE,
             };
@@ -159,7 +159,7 @@ class V extends s.PureComponent {
                 (0, n.jsxs)("div", {
                     className: U.O1,
                     children: [
-                        r === b.dD.TRENDING_GIFS ? (0, n.jsx)(C.U, { className: U.Yl, color: "currentColor" }) : null,
+                        r === b.dD.TRENDING_GIFS ? (0, n.jsx)(v.U, { className: U.Yl, color: "currentColor" }) : null,
                         (0, n.jsx)("span", { className: U.yb, children: t }),
                     ],
                 }),
@@ -226,13 +226,13 @@ class V extends s.PureComponent {
         });
     }
 }
-function W(e) {
+function H(e) {
     let t = (0, a.bG)([f.A], () => f.A.getTrendingCategories()),
         r = (0, I.rM)(),
         s = (0, L.d5)();
     return (0, n.jsx)(V, { ...e, ...s, trendingCategories: t, favorites: r });
 }
-var H = r(732139),
+var W = r(732139),
     Q = r(650583),
     K = r(986531);
 function q(e) {
@@ -373,7 +373,7 @@ class B extends s.PureComponent {
             } = this.props,
             { resultType: d } = this.state;
         return null == d
-            ? (0, n.jsx)(W, { className: e, hideFavoritesTile: c, onSelectItem: this.handleSelectItem })
+            ? (0, n.jsx)(H, { className: e, hideFavoritesTile: c, onSelectItem: this.handleSelectItem })
             : (0, n.jsx)(L.Ay, {
                   className: e,
                   data:
@@ -402,9 +402,9 @@ class B extends s.PureComponent {
     render() {
         let { className: e, forwardedRef: t } = this.props;
         return (0, n.jsxs)("div", {
-            id: H.ni,
+            id: W.ni,
             role: "tabpanel",
-            "aria-labelledby": H.g9,
+            "aria-labelledby": W.g9,
             className: i()(K.kL, e),
             onClick: q,
             ref: t,

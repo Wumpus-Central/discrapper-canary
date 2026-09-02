@@ -5,7 +5,7 @@ var i = n(477900),
     r = n(91242),
     o = n(582128),
     s = n(536246),
-    c = n(835228),
+    c = n(162802),
     d = n(355361);
 function u(e) {
     let { application: t, queryParams: n, url: l, onIframeMount: a, onIframeUnmount: r, onGuestReload: o } = e;

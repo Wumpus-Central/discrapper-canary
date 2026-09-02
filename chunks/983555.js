@@ -319,7 +319,7 @@ function $(e) {
             return (e) => (
                 e?.preventDefault(),
                 Promise.resolve()
-                    .then(n.bind(n, 975732))
+                    .then(n.bind(n, 402860))
                     .then((e) => {
                         let { openUserProfileModal: n } = e;
                         n({ userId: t, sourceAnalyticsLocations: a });

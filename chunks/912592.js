@@ -1,25 +1,25 @@
-i.d(t, { InboxIcon: () => a });
+i.d(t, { InboxIcon: () => l });
 var s = i(477900);
 i(582128);
 var n = i(661531);
 if (221552 == i.j) var r = i(996682);
-if (221552 == i.j) var l = i(27989);
-function a(e) {
+if (221552 == i.j) var a = i(27989);
+function l(e) {
     let {
             size: t = "md",
             width: i,
-            height: a,
+            height: l,
             color: c = n.A.colors.INTERACTIVE_ICON_DEFAULT,
             colorClass: o = "",
             ...d
         } = e,
-        u = (0, l.J)(t),
-        h = u?.width ?? i,
-        j = u?.height ?? a;
+        h = (0, a.J)(t),
+        u = h?.width ?? i,
+        j = h?.height ?? l;
     return (0, s.jsx)("svg", {
         ...(0, r.A)(d),
         xmlns: "http://www.w3.org/2000/svg",
-        width: h,
+        width: u,
         height: j,
         fill: "none",
         viewBox: "0 0 24 24",

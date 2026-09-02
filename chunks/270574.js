@@ -1,41 +1,41 @@
-i.d(t, { A: () => o, v: () => a.nu });
-var s = i(477900);
-i(582128);
-var n = i(503698),
-    r = i.n(n),
-    l = i(709066),
-    a = i(705751),
-    c = i(646810);
-let o = function (e) {
+l.d(s, { A: () => d, v: () => t.nu });
+var n = l(477900);
+l(582128);
+var i = l(503698),
+    a = l.n(i),
+    r = l(709066),
+    t = l(705751),
+    o = l(646810);
+let d = function (e) {
     let {
-        name: t,
-        discriminator: i,
-        invertBotTagColor: n,
-        nameColor: a,
-        className: o,
-        botType: d,
-        usernameClass: u,
-        discriminatorClass: h,
-        botClass: j,
-        botVerified: x = !1,
-        style: v,
-        useRemSizes: m = !1,
-        usernameIcon: f,
-        guildTag: N,
+        name: s,
+        discriminator: l,
+        invertBotTagColor: i,
+        nameColor: t,
+        className: d,
+        botType: u,
+        usernameClass: c,
+        discriminatorClass: m,
+        botClass: p,
+        botVerified: y = !1,
+        style: f,
+        useRemSizes: h = !1,
+        usernameIcon: v,
+        guildTag: j,
     } = e;
-    return (0, s.jsxs)("div", {
-        className: r()(o, c.oM),
-        style: v,
+    return (0, n.jsxs)("div", {
+        className: a()(d, o.oM),
+        style: f,
         children: [
-            (0, s.jsxs)("span", {
-                className: r()(c.Xh, u),
-                style: null != a ? { color: a } : void 0,
-                children: [f, t],
+            (0, n.jsxs)("span", {
+                className: a()(o.Xh, c),
+                style: null != t ? { color: t } : void 0,
+                children: [v, s],
             }),
-            N,
-            null != i ? (0, s.jsxs)("span", { className: h ?? void 0, children: ["#", i] }) : null,
-            null != d
-                ? (0, s.jsx)(l.A, { type: d, invertColor: n, className: r()(j, c.Od), verified: x, useRemSizes: m })
+            j,
+            null != l ? (0, n.jsxs)("span", { className: m ?? void 0, children: ["#", l] }) : null,
+            null != u
+                ? (0, n.jsx)(r.A, { type: u, invertColor: i, className: a()(p, o.Od), verified: y, useRemSizes: h })
                 : null,
         ],
     });

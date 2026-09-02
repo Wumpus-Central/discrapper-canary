@@ -17,12 +17,12 @@ var l = n(477900),
     S = n(629042),
     y = n(1076),
     I = n(151115),
-    g = n(812095),
-    A = n(287809),
+    A = n(812095),
+    g = n(287809),
     P = n(486020),
     v = n(158045),
-    x = n(580630),
-    _ = n(240248),
+    _ = n(580630),
+    x = n(240248),
     T = n(951305),
     N = n(284009),
     b = n.n(N),
@@ -97,7 +97,7 @@ function $(e) {
         r =
             null != n
                 ? (function (e) {
-                      let t = A.default.getCurrentUser(),
+                      let t = g.default.getCurrentUser(),
                           n = v.Ay.canUseShopDiscounts(t),
                           l = (0, f.xM)(t),
                           i = (0, f.WD)(e, { hasShopDiscount: n, discount: (0, f.fT)(e, n) });
@@ -147,7 +147,7 @@ function X(e) {
         {
             sku: f,
             application: y,
-            eligiblePaymentGateways: A,
+            eligiblePaymentGateways: g,
             disabled: P,
         } = (function () {
             let { selectedSkuId: e, purchaseState: t } = (0, h.t4)((e) => ({
@@ -222,7 +222,7 @@ function X(e) {
                 }, [d]),
             };
         })({ sku: f, application: y, isGift: s }),
-        K = i.useMemo(() => ({ paymentGatewayRestrictions: A, shouldUseUnifiedCheckoutUI: !0 }), [A]),
+        K = i.useMemo(() => ({ paymentGatewayRestrictions: g, shouldUseUnifiedCheckoutUI: !0 }), [g]),
         Z = (0, l.jsx)(d.N, {
             label: F.intl.string(F.t["u+Cw58"]),
             location: "OneTimePurchaseReviewStepBody",
@@ -254,7 +254,7 @@ function X(e) {
                                     currency: n.currency,
                                     defaultExpanded: null != e,
                                 },
-                                priceText: (0, x.$g)(i, n.currency),
+                                priceText: (0, _.$g)(i, n.currency),
                                 discount: e,
                             }
                         );
@@ -278,7 +278,7 @@ function X(e) {
                         : (0, l.jsx)(q, { ...t })
             );
         }, [n, f, y, C, et]),
-        ei = i.useMemo(() => (null != r ? (0, x.$g)(r.total, r.currency) : void 0), [r]),
+        ei = i.useMemo(() => (null != r ? (0, _.$g)(r.total, r.currency) : void 0), [r]),
         er = (0, E.A)(),
         ea = i.useMemo(
             () =>
@@ -290,11 +290,11 @@ function X(e) {
                             t = e?.tenantMetadata?.collectibles?.reward?.checkout?.offerNotice,
                             n = e?.tenantMetadata?.collectibles?.reward?.flavor,
                             i = t?.text;
-                        return (0, _.uJ)(i)
+                        return (0, x.uJ)(i)
                             ? null
                             : (0, l.jsx)(u.J, {
                                   Icon: (0, I.sj)(t?.icon),
-                                  text: (0, g.U)(i),
+                                  text: (0, A.U)(i),
                                   gradientColor: (0, I.lx)(n),
                               });
                     }

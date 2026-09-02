@@ -1,4 +1,4 @@
-n.d(t, { F: () => h });
+n.d(t, { F: () => p });
 var a = n(477900),
     r = n(582128),
     l = n(503698),
@@ -52,20 +52,20 @@ function m(e) {
         n = t / 2 - 12;
     return Math.max(-n, Math.min(n, e));
 }
-function h(e) {
+function p(e) {
     let { className: t } = e,
         n = r.useContext(s.e);
     if (null == n) throw Error("PopoverCaret must be used within a BasePopover");
     let { position: l, caretConfig: o } = n,
-        h = (0, d.g)(l),
-        { align: p, customOffset: _ } = o,
+        p = (0, d.g)(l),
+        { align: h, customOffset: _ } = o,
         g =
-            "custom" === p && void 0 !== _
+            "custom" === h && void 0 !== _
                 ? {
-                      "--custom-caret-offset-x": ["top", "bottom"].includes(h) ? `${m(_)}px` : "0px",
-                      "--custom-caret-offset-y": ["left", "right"].includes(h) ? `${m(_)}px` : "0px",
+                      "--custom-caret-offset-x": ["top", "bottom"].includes(p) ? `${m(_)}px` : "0px",
+                      "--custom-caret-offset-y": ["left", "right"].includes(p) ? `${m(_)}px` : "0px",
                   }
                 : void 0,
-        f = i()(u.caret, u[`caret--${h}`], u[`caret--${p}`], t);
+        f = i()(u.caret, u[`caret--${p}`], u[`caret--${h}`], t);
     return (0, a.jsx)("div", { className: f, style: g, children: (0, a.jsx)(c, {}) });
 }

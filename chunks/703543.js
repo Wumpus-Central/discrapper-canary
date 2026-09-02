@@ -1,4 +1,4 @@
-n.d(t, { A: () => p });
+n.d(t, { A: () => A });
 var i = n(284009),
     l = n.n(i),
     s = n(702841),
@@ -11,15 +11,15 @@ var i = n(284009),
     m = n(529427),
     h = n(179499),
     g = n(375708);
-function p(e) {
+function A(e) {
     let { guildId: t, guildProductListingId: n, sourceAnalyticsLocations: i } = e,
-        p = (0, s.bG)([o.A], () => o.A.getGuildProduct(n)),
-        A = (0, s.bG)([a.A], () => a.A.getGuild(t), [t]),
+        A = (0, s.bG)([o.A], () => o.A.getGuildProduct(n)),
+        p = (0, s.bG)([a.A], () => a.A.getGuild(t), [t]),
         x = (0, h.A)({ guildId: t, productId: n });
-    return (l()(null != A, "guild cannot be null"), l()(null != p, "guildProductListing cannot be null"), (0, r.BB)(A))
+    return (l()(null != p, "guild cannot be null"), l()(null != A, "guildProductListing cannot be null"), (0, r.BB)(p))
         ? { variant: "primary", text: g.intl.string(g.t.xUi3BL), disabled: !0 }
-        : p.has_entitlement
-          ? null != p.attachments
+        : A.has_entitlement
+          ? null != A.attachments
               ? x
               : { variant: "secondary", text: g.intl.string(g.t.RcTOGF), disabled: !0 }
           : {
@@ -27,8 +27,8 @@ function p(e) {
                 text: g.intl.string(g.t.xUi3BL),
                 onClick: function () {
                     return (
-                        l()(null != A, "guild cannot be null"),
-                        l()(null != p, "guildProductListing cannot be null"),
+                        l()(null != p, "guild cannot be null"),
+                        l()(null != A, "guildProductListing cannot be null"),
                         (function (e) {
                             let { guildProductListing: t, guildId: n, sourceAnalyticsLocations: i } = e,
                                 l = t.id;
@@ -45,7 +45,7 @@ function p(e) {
                                         },
                                     },
                                 });
-                        })({ guildProductListing: p, guildId: A.id, sourceAnalyticsLocations: i })
+                        })({ guildProductListing: A, guildId: p.id, sourceAnalyticsLocations: i })
                     );
                 },
             };

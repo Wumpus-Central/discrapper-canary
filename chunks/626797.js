@@ -20,7 +20,7 @@ function I(e, t) {
     let { paymentSources: n, eligiblePaymentGateways: l } = t;
     return !!(null != e && e in n && (null == l || 0 === l.length || l.includes(n[e].paymentGateway)));
 }
-function g(e) {
+function A(e) {
     let {
         isGift: t,
         activeSubscription: n,
@@ -39,7 +39,7 @@ function g(e) {
     }
     return l;
 }
-let A = (e) => {
+let g = (e) => {
     let {
             isGift: t,
             activeSubscription: n,
@@ -67,7 +67,7 @@ let A = (e) => {
                     return;
                 }
                 u(
-                    g({
+                    A({
                         isGift: t,
                         activeSubscription: n,
                         defaultPaymentSourceId: l,
@@ -130,16 +130,16 @@ function v(e) {
         null
     );
 }
-var x = n(800342),
-    _ = n(328968),
+var _ = n(800342),
+    x = n(328968),
     T = n(202541);
 function N() {
     let e = (0, d.t4)((e) => e.skuIds),
         t = i.useMemo(() => e.filter((e) => !T.oz.includes(e)), [e]),
-        n = (0, f.bG)([_.A], () => t.filter((e) => null == _.A.getForSKU(e) && !_.A.isFetchingForSKU(e)), [t]);
+        n = (0, f.bG)([x.A], () => t.filter((e) => null == x.A.getForSKU(e) && !x.A.isFetchingForSKU(e)), [t]);
     return (
         i.useEffect(() => {
-            for (let e of n) (0, x.QB)(e);
+            for (let e of n) (0, _.QB)(e);
         }, [n]),
         null
     );
@@ -518,8 +518,8 @@ function eo(e) {
         {
             initialCheckoutPaymentSourceId: S,
             defaultPaymentSourceId: P,
-            eligiblePaymentGateways: x,
-            hasFetchedPaymentSources: _,
+            eligiblePaymentGateways: _,
+            hasFetchedPaymentSources: x,
             paymentSources: T,
             hasPaymentSources: b,
         } = (function (e) {
@@ -547,7 +547,7 @@ function eo(e) {
                         e,
                     )
                         ? (e.initialPaymentSourceId ?? null)
-                        : (g(e) ?? null);
+                        : (A(e) ?? null);
                 }, [n, l, u, s, c, r]),
                 defaultPaymentSourceId: u,
                 eligiblePaymentGateways: s,
@@ -567,7 +567,7 @@ function eo(e) {
                 startingPremiumSubscriptionPlanId: null != r.activeSubscription ? r.activeSubscription?.planId : null,
             };
             return (
-                _ && (e.startedPaymentFlowWithPaymentSources = b),
+                x && (e.startedPaymentFlowWithPaymentSources = b),
                 (0, d.y$)({
                     checkoutInitParameters: r,
                     startingValues: e,
@@ -596,18 +596,18 @@ function eo(e) {
     return (0, l.jsxs)(d.Ni, {
         value: j,
         children: [
-            (0, l.jsx)(v, { hasFetchedPaymentSources: _, hasPaymentSources: b }),
+            (0, l.jsx)(v, { hasFetchedPaymentSources: x, hasPaymentSources: b }),
             (0, l.jsx)(ea, {}),
             (0, l.jsx)(X, {}),
             (0, l.jsx)(el, {}),
             (0, l.jsx)(K, {}),
             (0, l.jsx)(ee, {}),
-            (0, l.jsx)(A, {
+            (0, l.jsx)(g, {
                 isGift: r.isGift,
                 activeSubscription: r.activeSubscription,
                 defaultPaymentSourceId: P,
-                eligiblePaymentGateways: x,
-                hasFetchedPaymentSources: _,
+                eligiblePaymentGateways: _,
+                hasFetchedPaymentSources: x,
                 paymentSources: T,
                 initialPaymentSourceId: r.initialPaymentSourceId,
             }),
@@ -689,7 +689,7 @@ function ed(e) {
             selectedSkuId: S,
             selectedPlanId: y,
             paymentSourceId: I,
-            paymentGateway: g,
+            paymentGateway: A,
         } = (0, d.t4)((e) => ({
             contextMetadata: e.contextMetadata,
             unifiedCheckoutFlow: e.unifiedCheckoutFlow,
@@ -700,13 +700,13 @@ function ed(e) {
             paymentSourceId: e.paymentSourceId,
             paymentGateway: e.paymentGateway,
         })),
-        A = null != I && null != p[I] ? p[I]?.type : null,
+        g = null != I && null != p[I] ? p[I]?.type : null,
         P = i.useMemo(
-            () => ({ payment_source_id: I, payment_gateway: g, payment_source_type: A, checkout_flow: h, is_gift: E }),
-            [I, g, A, h, E],
+            () => ({ payment_source_id: I, payment_gateway: A, payment_source_type: g, checkout_flow: h, is_gift: E }),
+            [I, A, g, h, E],
         ),
         v = (0, r.Db)(),
-        x = (0, u.BQ)();
+        _ = (0, u.BQ)();
     return (0, l.jsx)(c.yv, {
         children: (0, l.jsx)(eu.R, {
             children: (0, l.jsx)(s.j, {
@@ -719,7 +719,7 @@ function ed(e) {
                 isGift: E,
                 skuIds: a,
                 purchaseType: f,
-                checkoutStepsHistory: x,
+                checkoutStepsHistory: _,
                 additionalAnalyticsData: P,
                 children: m,
             }),

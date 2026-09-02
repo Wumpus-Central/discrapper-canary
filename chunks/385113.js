@@ -1,19 +1,19 @@
-i.d(t, { A: () => f, e: () => l });
+i.d(t, { A: () => m, e: () => a });
 var s,
     n = i(17928),
     r = i(228366),
-    l =
+    a =
         (((s = {}).NOT_FETCHED = "NOT_FETCHED"),
         (s.FETCHING = "FETCHING"),
         (s.SUCCESS = "SUCCESS"),
         (s.FAILURE = "FAILURE"),
         s);
-let a = [],
+let l = [],
     c = {},
     o = {},
     d = "NOT_FETCHED",
-    u = [],
-    h = "NOT_FETCHED",
+    h = [],
+    u = "NOT_FETCHED",
     j = [];
 function x(e) {
     if (0 !== Object.keys(e).length) {
@@ -26,15 +26,15 @@ function x(e) {
     }
 }
 function v() {
-    (c = {}), (o = {}), (d = "NOT_FETCHED"), (u = []), (h = "NOT_FETCHED"), (j = []);
+    (c = {}), (o = {}), (d = "NOT_FETCHED"), (h = []), (u = "NOT_FETCHED"), (j = []);
 }
-class m extends n.Ay.Store {
+class f extends n.Ay.Store {
     static displayName = "ApplicationWidgetConfigStore";
     getConfig(e) {
         return c[e]?.[0] ?? void 0;
     }
     getConfigs(e) {
-        return c[e] ?? a;
+        return c[e] ?? l;
     }
     getFetchState(e) {
         return o[e] ?? "NOT_FETCHED";
@@ -43,38 +43,38 @@ class m extends n.Ay.Store {
         return d;
     }
     getDeveloperFetchState() {
-        return h;
+        return u;
     }
     getAllConfigsByApplication() {
         return c;
     }
     getFeaturedApplicationIds() {
-        return u;
+        return h;
     }
     getDeveloperApplicationIds() {
         return j;
     }
 }
-let f = new m(r.h, {
+let m = new f(r.h, {
     LOGOUT: v,
     APPLICATION_WIDGET_CONFIG_DEBUG_RESET: v,
     APPLICATION_WIDGET_CONFIG_FEATURED_FETCH_START: function (e) {
         d = "FETCHING";
     },
     APPLICATION_WIDGET_CONFIG_FEATURED_FETCH_SUCCESS: function (e) {
-        (d = "SUCCESS"), (u = Object.keys(e.configs)), x(e.configs);
+        (d = "SUCCESS"), (h = Object.keys(e.configs)), x(e.configs);
     },
     APPLICATION_WIDGET_CONFIG_FEATURED_FETCH_FAILURE: function () {
         d = "FAILURE";
     },
     APPLICATION_WIDGET_CONFIG_DEVELOPER_FETCH_START: function () {
-        h = "FETCHING";
+        u = "FETCHING";
     },
     APPLICATION_WIDGET_CONFIG_DEVELOPER_FETCH_SUCCESS: function (e) {
-        (h = "SUCCESS"), (j = Object.keys(e.configs)), x(e.configs);
+        (u = "SUCCESS"), (j = Object.keys(e.configs)), x(e.configs);
     },
     APPLICATION_WIDGET_CONFIG_DEVELOPER_FETCH_FAILURE: function () {
-        h = "FAILURE";
+        u = "FAILURE";
     },
     APPLICATION_WIDGET_CONFIG_FETCH_START: function (e) {
         o = { ...o, [e.applicationId]: "FETCHING" };

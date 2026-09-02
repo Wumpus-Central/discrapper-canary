@@ -1952,7 +1952,7 @@ function n0(e) {
 }
 var n1 = n(615300),
     n3 = n(259678),
-    n2 = n(975732),
+    n2 = n(402860),
     n5 = n(487565);
 let n8 = function (e) {
     let { userId: t, children: n, isLast: r, className: a } = e,

@@ -1,4 +1,4 @@
-t.d(l, { e: () => p });
+t.d(l, { e: () => b });
 var s = t(477900),
     n = t(582128),
     i = t(403581),
@@ -11,19 +11,19 @@ var s = t(477900),
     m = t(910200),
     x = t(202541),
     h = t(873417);
-function p(e) {
-    let { promotion: l, applicationId: t, analyticsLocations: p, onUpsellClick: b } = e,
+function b(e) {
+    let { promotion: l, applicationId: t, analyticsLocations: b, onUpsellClick: p } = e,
         j = (0, d.Pc)(l),
         _ = null != l.reward ? null : i.t,
         N = n.useCallback(() => {
-            b(),
+            p(),
                 (0, o.A)({
                     subscriptionTier: x.pe.TIER_2,
                     applicationId: t,
-                    analyticsLocations: p,
+                    analyticsLocations: b,
                     ...(0, c.zl)(l.rewardRequirements),
                 });
-        }, [b, t, p, l.rewardRequirements]);
+        }, [p, t, b, l.rewardRequirements]);
     return null != l.endsAt && null == (0, u.ZH)(l.endsAt)
         ? null
         : "nitro" !== l.flavor
