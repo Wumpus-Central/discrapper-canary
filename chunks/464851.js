@@ -9,4 +9,5 @@ f.exports = {
     wH: "selected_fc3ff7",
     TG: "loadingBody_fc3ff7",
     u1: "spinner_fc3ff7",
+    rf: "body_fc3ff7",
 };

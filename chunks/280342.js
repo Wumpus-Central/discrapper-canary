@@ -13,8 +13,8 @@ var i = n(477900),
     x = n(761508),
     h = n(761929),
     p = n(429913),
-    g = n(793943),
-    v = n(409626),
+    v = n(793943),
+    g = n(409626),
     A = n(692969),
     j = n(147964),
     D = n(834730),
@@ -26,8 +26,8 @@ var i = n(477900),
     y = n(688810),
     L = n(206828),
     _ = n(487431),
-    k = n(712440),
-    N = n(134861),
+    N = n(712440),
+    k = n(134861),
     w = n(942370),
     G = n(375708),
     S = n(211850),
@@ -43,8 +43,8 @@ function I(e) {
             connectionApp: r,
             debug: { isSubscribedToAuthorizeRequest: o, oauth2Token: c, hasConnectionEntrypointUrl: u, validFlows: m },
         } = (0, L.RD)(t, { debug: !0 }),
-        f = (0, b.bG)([N.A], () => N.A.isConnected(t.id)),
-        x = (0, A.A)({ applicationId: t.id, source: v.GameProfileSources.DevTools, trackEntryPointImpression: !1 }),
+        f = (0, b.bG)([k.A], () => k.A.isConnected(t.id)),
+        x = (0, A.A)({ applicationId: t.id, source: g.GameProfileSources.DevTools, trackEntryPointImpression: !1 }),
         h = (0, b.bG)([E.Ay], () => E.Ay.getSelfEmbeddedActivities());
     return (0, i.jsxs)(i.Fragment, {
         children: [
@@ -124,7 +124,7 @@ function I(e) {
                         (0, i.jsx)(O.$, {
                             variant: "secondary",
                             onClick: () => {
-                                k.A.delete(c.id);
+                                N.A.delete(c.id);
                                 let e = h.get(t.id);
                                 null != e &&
                                     R.A.leaveActivity({ location: e.location, applicationId: t.id, showFeedback: !1 });
@@ -169,10 +169,10 @@ function T(e) {
 function P() {
     var e;
     let t = (0, p.h)(j.A.testModeApplicationId),
-        n = (0, g.fy)(),
+        n = (0, v.fy)(),
         s = l.useRef(!1),
         f = n.metadata,
-        h = (0, A.A)({ applicationId: t?.id, source: v.GameProfileSources.DevTools, trackEntryPointImpression: !1 });
+        h = (0, A.A)({ applicationId: t?.id, source: g.GameProfileSources.DevTools, trackEntryPointImpression: !1 });
     l.useEffect(() => {
         f?.shouldAutoOpenGameProfile !== !0 || null == h || s.current || ((s.current = !0), h());
     }, [f, h]);
@@ -207,7 +207,7 @@ function P() {
                         variant: "icon-only",
                         icon: c.U,
                         "aria-label": "Close",
-                        onClick: () => (0, g.Jp)(),
+                        onClick: () => (0, v.Jp)(),
                     }),
             ],
         });
@@ -249,7 +249,7 @@ function P() {
                                           ),
                                       }),
                                   }),
-                                  L?.render({ application: t }),
+                                  (0, i.jsx)("div", { className: V.rf, children: L?.render({ application: t }) }),
                               ],
                           }))
                         : (0, i.jsxs)(i.Fragment, {
